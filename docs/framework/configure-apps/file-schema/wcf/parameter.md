@@ -2,12 +2,12 @@
 title: <parameter>
 ms.date: 03/30/2017
 ms.assetid: 0fb41e2d-64f7-44ab-993e-05892eac6d82
-ms.openlocfilehash: 8b14dc1908ef3a06549154f70efb2d4e5cb10076
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 22ef3c3c6d23d6c68c27d6b5d1ed35b7c9910d48
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289437"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230800"
 ---
 # <a name="parameter"></a>\<parameter>
 선언된 형식이 제네릭 형식이면 제네릭 매개 변수를 지정합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "55289437"
 |특성|설명|  
 |---------------|-----------------|  
 |인덱스입니다.|선언된 형식이 제네릭 형식이면 알려진 형식을 반환하는 제네릭 매개 변수를 지정합니다.|  
-|형식|serialization 및 deserialization에 사용되는 알려진 형식을 설명하는 문자열입니다.|  
+|type|serialization 및 deserialization에 사용되는 알려진 형식을 설명하는 문자열입니다.|  
   
 ## <a name="index-attribute"></a>index 특성  
   
@@ -60,6 +60,7 @@ ms.locfileid: "55289437"
  이 구성 요소는 두 가지 특성을 동시에 가질 수 없습니다. 두 가지 특성이 모두 설정되면 <xref:System.Configuration.ConfigurationErrorsException>이 발생합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - [데이터 계약 알려진 형식](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
 - [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)

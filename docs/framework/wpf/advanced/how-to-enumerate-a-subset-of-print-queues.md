@@ -9,12 +9,12 @@ helpviewer_keywords:
 - enumerating [WPF], subset of print queues
 - print queues [WPF], enumerating subset of
 ms.assetid: cc4a1b5b-d46f-4c5e-bc26-22c226e4bee0
-ms.openlocfilehash: 7cdd0ebeb03d078a952dd9ffe4d2ed7590417054
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: adcfff0196bd0430ec1ae563fbd5489062de11f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359486"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217187"
 ---
 # <a name="how-to-enumerate-a-subset-of-print-queues"></a>방법: 인쇄 큐의 하위 집합 열거
 회사 전체 집합이 프린터를 관리 하는 정보 기술 (IT) 전문가 직면 하는 일반적인 상황 특정 특성을 가진 프린터 목록을 생성 하는 것입니다. 이 기능을 제공 합니다 <xref:System.Printing.PrintServer.GetPrintQueues%2A> 메서드를 <xref:System.Printing.PrintServer> 개체 및 <xref:System.Printing.EnumeratedPrintQueueTypes> 열거형입니다.  
@@ -35,6 +35,7 @@ ms.locfileid: "57359486"
  함으로써이 예제를 확장할 수는 `foreach` 각 인쇄 큐를 통해 단계를 추가로 수행 하는 루프 차단 합니다. 예를 들어, 있습니다 수 숨기 루프 호출 함으로써 양면 인쇄를 지원 하지 않는 프린터 각 인쇄 대기열의 <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> 메서드와 이루어지는의 존재에 대 한 반환된 값을 테스트 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Printing.PrintServer.GetPrintQueues%2A>
 - <xref:System.Printing.PrintServer>
 - <xref:System.Printing.LocalPrintServer>

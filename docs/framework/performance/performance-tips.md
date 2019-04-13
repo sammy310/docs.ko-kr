@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c2969551bef279e6b13d2b08ff7f0e4711a80794
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c825ccc15ff7eeb736169f7ae120b4a3692ffe39
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219245"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216472"
 ---
 # <a name="net-performance-tips"></a>.NET 성능 팁
 *성능*이라는 용어는 일반적으로 프로그램의 실행 속도를 나타냅니다. 경우에 따라 소스 코드에서 특정 기본 규칙을 따라 실행 속도를 높일 수 있습니다. 일부 프로그램에서는 코드를 자세히 검사하고 프로파일러를 사용하여 최대한 빠르게 실행 중인지 확인하는 작업을 해야 합니다. 다른 프로그램에서는 코드가 작성된 대로 만족스럽게 실행되므로 이러한 최적화를 수행하지 않아도 됩니다. 이 문서에서는 성능이 떨어질 수 있는 몇 가지 일반적인 영역과 성능 향상 팁 및 추가 성능 항목에 대한 링크를 나열합니다. 성능 계획 및 측정에 대한 자세한 내용은 [성능](../../../docs/framework/performance/index.md)을 참조하세요.  
@@ -36,13 +36,14 @@ ms.locfileid: "56219245"
   
 -   [가비지 수집기 기본 및 성능 힌트](https://go.microsoft.com/fwlink/?LinkId=99296)  
   
--   [.NET 애플리케이션에서의 성능 팁과 요량](https://go.microsoft.com/fwlink/?LinkId=99297)  
+-   [성능 팁과 요령.NET 응용 프로그램에서](https://go.microsoft.com/fwlink/?LinkId=99297)  
 
--   [Rico Mariani의 성능 정보](https://go.microsoft.com/fwlink/?LinkId=115679)  
+-   [Rico Mariani의 Performance Tidbits](https://go.microsoft.com/fwlink/?LinkId=115679)  
 
 -   [Vance Morrison의 블로그](https://blogs.msdn.microsoft.com/vancem/)
   
 ## <a name="see-also"></a>참고자료
+
 - [성능](../../../docs/framework/performance/index.md)
 - [Visual Basic 프로그래밍 가이드](../../visual-basic/programming-guide/index.md)
 - [C# 프로그래밍 가이드](../../csharp/programming-guide/index.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd6d6d9e192fdf43ba9436cda54920bdeba9ab64
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6ba411114bfb853e06c83adb42713d43f1452d9c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279177"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135072"
 ---
 # <a name="etwenable-element"></a>\<etwEnable > 요소
 공용 언어 런타임 이벤트에 대해 ETW(Windows용 이벤트 추적)를 사용하도록 설정할지를 지정합니다.  
@@ -71,6 +71,7 @@ ms.locfileid: "55279177"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [.NET Framework 로깅 제어](../../../../../docs/framework/performance/controlling-logging.md)

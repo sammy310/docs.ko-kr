@@ -9,12 +9,12 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-ms.openlocfilehash: e8a2f00458614367bbb661dd8ff74e88069d2dc0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53080975c03430a6c05bf72f58610b328430a3c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646921"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118029"
 ---
 # <a name="data-contract-versioning"></a>데이터 계약 버전 관리
 응용 프로그램이 발전하면서 서비스가 사용하는 데이터 계약을 변경해야 할 수도 있습니다. 이 항목에서는 데이터 계약의 버전 관리 방법에 대해 설명합니다. 이 항목에서는 데이터 계약 버전 관리 메커니즘에 대해 설명합니다. 전체 개요 및 규정적 버전 관리 지침에 대 한 참조 [모범 사례: Data Contract Versioning](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)합니다.  
@@ -116,6 +116,7 @@ ms.locfileid: "54646921"
 기본적으로 컬렉션 콘텐츠 중 데이터 계약 변경(예: 정수 목록에서 문자열 목록으로 변경)은 주요 변경 사항입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>

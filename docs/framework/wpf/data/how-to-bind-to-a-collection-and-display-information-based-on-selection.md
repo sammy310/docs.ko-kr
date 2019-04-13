@@ -1,5 +1,5 @@
 ---
-title: '방법: 선택에 따라 수집 및 표시 정보에 바인딩'
+title: '방법: 선택 영역에 따라 컬렉션 및 표시 정보에 바인딩'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - data binding [WPF], selecting data for views
 - data binding [WPF], binding to collections
 ms.assetid: 952a7d76-dd29-49e5-86f5-32c4530e70eb
-ms.openlocfilehash: 5ceda723ad982fc788e8d0b81e6cf92975790682
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bb7d4c89e63982a3052857dcb50d04d36d9517dd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360396"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314395"
 ---
-# <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>방법: 선택에 따라 수집 및 표시 정보에 바인딩
+# <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>방법: 선택 영역에 따라 컬렉션 및 표시 정보에 바인딩
 간단한 마스터-세부 시나리오에 데이터 바인딩된 <xref:System.Windows.Controls.ItemsControl> 와 같은 <xref:System.Windows.Controls.ListBox>합니다. 선택한 항목에 대 한 자세한 정보를 표시할 사용자 선택에 따라 있습니다. 이 예제에서는이 시나리오를 구현 하는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
@@ -36,9 +36,9 @@ ms.locfileid: "57360396"
   
  이 예제에서 주의 해야 할 두 가지 사항은 다음과 같습니다.  
   
-1.  합니다 <xref:System.Windows.Controls.ListBox> 하며 <xref:System.Windows.Controls.ContentControl> 동일한 소스에 바인딩합니다. <xref:System.Windows.Data.Binding.Path%2A> 두 바인딩은 모두의 속성에는 두 컨트롤의 전체 컬렉션 개체에 바인딩하는 때문에 지정 되지 않은 합니다.  
+1. 합니다 <xref:System.Windows.Controls.ListBox> 하며 <xref:System.Windows.Controls.ContentControl> 동일한 소스에 바인딩합니다. <xref:System.Windows.Data.Binding.Path%2A> 두 바인딩은 모두의 속성에는 두 컨트롤의 전체 컬렉션 개체에 바인딩하는 때문에 지정 되지 않은 합니다.  
   
-2.  설정 해야 합니다 <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> 속성을 `true` 이 작업을 수행 하려면. 이 속성을 설정 하면 선택한 항목으로 항상 설정 되어 있는지를 <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>입니다. 또는 경우는 <xref:System.Windows.Controls.ListBox> 에서 데이터를 가져오는 <xref:System.Windows.Data.CollectionViewSource>, 선택 및 통화 자동으로 동기화 합니다.  
+2. 설정 해야 합니다 <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> 속성을 `true` 이 작업을 수행 하려면. 이 속성을 설정 하면 선택한 항목으로 항상 설정 되어 있는지를 <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>입니다. 또는 경우는 <xref:System.Windows.Controls.ListBox> 에서 데이터를 가져오는 <xref:System.Windows.Data.CollectionViewSource>, 선택 및 통화 자동으로 동기화 합니다.  
   
  합니다 `Person` 재정의 클래스를 `ToString` 메서드는 다음과 같이 합니다. 기본적으로 <xref:System.Windows.Controls.ListBox> 호출 `ToString` 바인딩된 컬렉션에 있는 각 개체의 문자열 표현을 표시 합니다. 이유는 각 `Person` 첫 번째 이름으로 표시 되는 <xref:System.Windows.Controls.ListBox>합니다.  
   
@@ -46,8 +46,9 @@ ms.locfileid: "57360396"
  [!code-vb[CollectionBinding#ToString](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CollectionBinding/VisualBasic/Person.vb#tostring)]  
   
 ## <a name="see-also"></a>참고자료
-- [계층적 데이터에 마스터-세부 패턴 사용](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)
-- [계층적 XML 데이터에 마스터-세부 패턴 사용](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
+
+- [계층적 데이터에서 마스터-세부 정보 패턴 사용](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)
+- [계층적 XML 데이터에서 마스터-세부 정보 패턴 사용](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
 - [데이터 바인딩 개요](data-binding-overview.md)
 - [데이터 템플릿 개요](data-templating-overview.md)
 - [방법 항목](data-binding-how-to-topics.md)

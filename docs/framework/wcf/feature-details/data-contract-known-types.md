@@ -9,12 +9,12 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-ms.openlocfilehash: d215d4b8adcf3e4892c00be1629f92b657496780
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bedf35544454a32ff13856a072779cd70723e989
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705312"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129625"
 ---
 # <a name="data-contract-known-types"></a>데이터 계약 알려진 형식
 <xref:System.Runtime.Serialization.KnownTypeAttribute> 클래스를 사용하면 고려 사항에 포함해야 하는 형식을 deserialization을 수행하는 동안 미리 지정할 수 있습니다. 작업 예제는 [Known Types](../../../../docs/framework/wcf/samples/known-types.md) 예제를 참조하십시오.  
@@ -168,11 +168,12 @@ ms.locfileid: "54705312"
  앞의 구성 파일에서는 `MyCompany.Library.Shape` 라는 데이터 계약 형식이 `MyCompany.Library.Circle` 을 알려진 형식으로 포함하도록 선언되었습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.Serialization.KnownTypeAttribute>
 - <xref:System.Collections.Hashtable>
 - <xref:System.Object>
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.DataContractSerializer.KnownTypes%2A>
-- [알려진 형식](../../../../docs/framework/wcf/samples/known-types.md)
+- [알려진 유형](../../../../docs/framework/wcf/samples/known-types.md)
 - [데이터 계약 동등성](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
 - [서비스 계약 디자인](../../../../docs/framework/wcf/designing-service-contracts.md)

@@ -2,12 +2,12 @@
 title: WCF에서 사용되는 보안 개념
 ms.date: 03/30/2017
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-ms.openlocfilehash: 2dd820d4b6ba38f194074465ac7c1f40289fd928
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ef2b9c104fa15de17a769c9ca9354e5cef085bf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541796"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295551"
 ---
 # <a name="security-concepts-used-in-wcf"></a>WCF에서 사용되는 보안 개념
 Windows Communication Foundation (WCF) 보안 개념을 이미 사용 중인 빌드 및 다양 한 보안 인프라에 배포 합니다.  
@@ -34,18 +34,19 @@ Windows Communication Foundation (WCF) 보안 개념을 이미 사용 중인 빌
 ## <a name="access-control-mechanisms"></a>Access Control 메커니즘  
  WCF에서는 서비스 또는 작업에 대한 액세스를 제어하는 여러 방법을 제공합니다. 다음과 같은 방법이 포함됩니다.  
   
-1.  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
+1. <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
   
-2.  ASP.NET 멤버 자격 공급자  
+2. ASP.NET 멤버 자격 공급자  
   
-3.  ASP.NET 역할 공급자  
+3. ASP.NET 역할 공급자  
   
-4.  권한 부여 관리자  
+4. 권한 부여 관리자  
   
-5.  ID 모델  
+5. ID 모델  
   
  이러한 항목 참조에 대 한 자세한 내용은 [Access Control 메커니즘](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server appfabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server AppFabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

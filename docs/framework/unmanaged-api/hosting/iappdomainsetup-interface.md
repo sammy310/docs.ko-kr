@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef967039450c77b5927d501de63d53a245c90be0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bbde873481aea9de94862117a99079301965f33c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509833"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220073"
 ---
 # <a name="iappdomainsetup-interface"></a>IAppDomainSetup 인터페이스
 구성 하려면 호스트를 허용 하는 속성을 제공를 <xref:System.AppDomain?displayProperty=nameWithType> 유형을 호출 하기 전에 [icorruntimehost:: Createdomainex](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) 메서드를 만듭니다.  
@@ -56,6 +56,7 @@ ms.locfileid: "54509833"
  **.NET Framework 버전:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.AppDomain>
 - <xref:System.AppDomainSetup>
 - <xref:System.IAppDomainSetup>

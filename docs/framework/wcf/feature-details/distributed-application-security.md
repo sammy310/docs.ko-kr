@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 15663b4acc78f89a40fbbc364debfc6de45d8e6c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e447cd5ccf84e49ff384bd3591884404736d04f8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709431"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132062"
 ---
 # <a name="distributed-application-security"></a>분산 응용 프로그램 보안
 Windows Communication Foundation (WCF) 보안 세 가지 주요 기능 영역으로 나뉩니다: 전송 보안, 액세스 제어 및 감사 합니다. 전송 보안은 무결성, 기밀성 및 인증을 제공합니다. 전송 보안은 전송 보안, 메시지 보안, `TransportWithMessageCredential` 중 하나를 통해 제공됩니다.  
@@ -29,7 +29,7 @@ Windows Communication Foundation (WCF) 보안 세 가지 주요 기능 영역으
 ## <a name="integrity-confidentiality-and-authentication"></a>무결성, 기밀성 및 인증  
  세 함수(무결성, 기밀성, 인증)를 총칭하여 전송 보안이라고 합니다. 전송 보안은 분산 응용 프로그램에 대한 위협을 줄이는 데 도움이 되는 함수를 제공합니다. 다음 표에서는 전송 보안을 구성하는 세 함수에 대해 간략하게 설명합니다.  
   
-|기능|설명|  
+|함수|설명|  
 |--------------|-----------------|  
 |무결성|*무결성* 데이터를 완전 하 고 정확 하 고, 다른 한 점에서 트래버스 및 여러 행위자가 읽은 후에 특히 보장 됩니다. 무결성은 데이터 변조 방지를 위해 유지되어야 하며, 일반적으로 메시지에 대한 디지털 서명을 통해 수행됩니다.|  
 |기밀성|*기밀성* 의도 한 판독기 이외의 모든 사용자 메시지를 읽지 않은 않는다는 보장 됩니다. 예를 들어, 인터넷을 통해 전송되는 신용 카드 번호를 기밀로 유지해야 합니다. 기밀성은 대개 공개 키/개인 키 스키마를 사용하는 데이터 암호화를 통해 제공됩니다.|  
@@ -95,7 +95,8 @@ Windows Communication Foundation (WCF) 보안 세 가지 주요 기능 영역으
  메시지 보안 모드에서는 초기 협상 과정에서 서비스 자격 증명을 클라이언트와 교환하도록 전송 보안을 수행할 수도 있습니다. 협상을 사용하도록 설정하려면 <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> 속성을 `true`로 설정합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [엔드포인트 만들기 개요](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [시스템 제공 바인딩](../../../../docs/framework/wcf/system-provided-bindings.md)
 - [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server appfabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server AppFabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

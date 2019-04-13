@@ -2,12 +2,12 @@
 title: WCF 웹 HTTP 오류 처리
 ms.date: 03/30/2017
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-ms.openlocfilehash: c331d70a69740a9830cafb5cafdfcf1de14b541b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 834c642e36e1551081dbe1f14529ed7596df1360
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499250"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152700"
 ---
 # <a name="wcf-web-http-error-handling"></a>WCF 웹 HTTP 오류 처리
 Windows Communication Foundation (WCF) 웹 HTTP 오류 처리를 사용 하는 HTTP 상태 코드를 지정 하 고 작업 (예를 들어, XML 또는 JSON)으로 동일한 형식을 사용 하 여 오류 정보를 반환 하는 WCF 웹 HTTP 서비스에서 오류를 반환할 수 있습니다.  
@@ -23,7 +23,7 @@ Public string Operation1()
 }  
 ```  
   
- 다음 예제에서는 HTTP 상태 코드와 추가 정보를 사용자 정의 형식에 반환하는 방법에 대해 설명합니다. `MyErrorDetail`은 발생한 오류에 대한 추가 정보를 포함하는 사용자 정의 형식입니다.  
+ 다음 예제에서는 HTTP 상태 코드와 추가 정보를 사용자 정의 형식에 반환하는 방법에 대해 설명합니다. `MyErrorDetail` 발생 한 오류에 대 한 추가 정보를 포함 하는 사용자 정의 형식이입니다.  
   
 ```  
 Public string Operation2()  
@@ -47,9 +47,10 @@ Public string Operation2()
   
  이러한 값 영향을 줄 지는 작업의 서식 지정 하는 방법에 대 한 자세한 내용은 참조 하세요. [WCF 웹 HTTP 형식 지정](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)합니다.  
   
- <xref:System.ServiceModel.Web.WebFaultException>은 <xref:System.ServiceModel.FaultException>이므로 SOAP 엔드포인트와 웹 HTTP 엔드포인트를 둘 다 노출하는 서비스의 오류 예외 프로그래밍 모델로 사용될 수 있습니다.  
+ <xref:System.ServiceModel.Web.WebFaultException> 가 <xref:System.ServiceModel.FaultException> 하므로 사용할 수 오류 예외 프로그래밍 모델로 웹 HTTP 끝점 뿐 아니라 SOAP 끝점을 노출 하는 서비스 및 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [WCF 웹 HTTP 프로그래밍 모델](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
 - [WCF 웹 HTTP 형식 지정](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)
 - [오류 정의 및 지정](../../../../docs/framework/wcf/defining-and-specifying-faults.md)

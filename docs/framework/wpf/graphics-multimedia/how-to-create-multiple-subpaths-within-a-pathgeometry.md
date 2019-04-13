@@ -6,12 +6,12 @@ helpviewer_keywords:
 - graphics [WPF], subpaths
 - subpaths [WPF]
 ms.assetid: 104a862c-dde2-4e62-ac87-80660dd1681c
-ms.openlocfilehash: 0b57d0441c1aa9d5972af1f1c6b989aacba7f87f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 286075448cd6a343f8a7b15b2b5005f840f68e1d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353372"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111750"
 ---
 # <a name="how-to-create-multiple-subpaths-within-a-pathgeometry"></a>방법: PathGeometry 내에 다중 하위 경로 만들기
 이 예제에서 여러 하위 경로를 만드는 방법을 보여 줍니다는 <xref:System.Windows.Media.PathGeometry>합니다. 다중 하위 경로 만들려면, 한 <xref:System.Windows.Media.PathFigure> 각 하위 경로 대 한 합니다.  
@@ -28,4 +28,5 @@ ms.locfileid: "57353372"
  (이 특성 구문은 실제로 만들어지는 참고를 <xref:System.Windows.Media.StreamGeometry>, 가벼운 버전의는 <xref:System.Windows.Media.PathGeometry>합니다. 자세한 내용은 [경로 태그 구문](path-markup-syntax.md) 페이지를 참조하세요.)  
   
 ## <a name="see-also"></a>참고자료
+
 - [Geometry 개요](geometry-overview.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - context menus [Windows Forms], ContextMenu component
 - shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 49d6398f-d3c4-4679-84fa-1de07b68b05e
-ms.openlocfilehash: 7da0522dae00608ead356484a31d219a67ec4ba9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2acbcc9197a630a993471c22e572a4f3ed682c64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545675"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090565"
 ---
 # <a name="contextmenu-component-overview-windows-forms"></a>ContextMenu 구성 요소 개요(Windows Forms)
 > [!IMPORTANT]
@@ -27,6 +27,7 @@ ms.locfileid: "54545675"
  키 속성을 <xref:System.Windows.Forms.ContextMenu> 구성 요소를 <xref:System.Windows.Forms.Menu.MenuItems%2A> 속성입니다. 프로그래밍 방식으로 작성 하 여 메뉴 항목을 추가할 수 있습니다 <xref:System.Windows.Forms.MenuItem> 개체에 추가 하 여 <xref:System.Windows.Forms.Menu.MenuItemCollection> 바로 가기 메뉴. 바로 가기 메뉴 항목에에서는 일반적으로 다른 메뉴에서 가져온 것, 때문에 가장 자주 항목을 추가한 바로 가기 메뉴에 복사 하 여 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ContextMenu>
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

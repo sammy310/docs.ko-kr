@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-ms.openlocfilehash: ebbc53f2962c99bc31f998f1afcb4316f3ea81f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d55c85ae0af567c5af0fd421b612809eaf5bb789
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674705"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318431"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>N 계층 응용 프로그램에서 데이터 검색 및 CUD 작업(LINQ to SQL)
 Customers 또는 Orders와 같은 엔터티 개체를 네트워크상의 클라이언트로 serialize하면 해당 엔터티가 원래 데이터 컨텍스트에서 분리됩니다. 데이터 컨텍스트에서는 분리된 엔터티 개체에 대해서는 변경 내용이나 다른 개체와의 관계를 더 이상 추적하지 않습니다. 이러한 특징은 클라이언트에서 데이터를 읽기만 하는 경우에는 문제가 되지 않습니다. 또한 클라이언트가 데이터베이스에 새 행을 추가할 수 있게 하는 것도 비교적 간단합니다. 그러나 응용 프로그램에서 클라이언트가 데이터를 업데이트하거나 삭제해야 하는 경우에는 <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>를 호출하기 전에 새 데이터 컨텍스트에 엔터티를 연결해야 합니다. 또한 원래 값을 기준으로 낙관적 동시성 검사를 사용하는 경우에는 어떤 방법으로든 데이터베이스에 원래 엔터티와 수정된 엔터티를 모두 제공해야 합니다. `Attach` 메서드는 분리된 엔터티를 새 데이터 컨텍스트에 연결하기 위해 제공됩니다.  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 엔터티 대신 프록시 개체를 serialize하는 경우에도 데이터베이스에 데이터를 전송하려면 DAL(데이터 액세스 계층)에서 엔터티를 만들어 새 <xref:System.Data.Linq.DataContext?displayProperty=nameWithType>에 연결해야 합니다.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 엔터티가 serialize되는 방법은 고려하지 않습니다. 사용 하는 방법에 대 한 자세한 내용은 합니다 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Windows Communication Foundation (WCF)를 사용 하 여 직렬화 할 수 있는 클래스를 생성 하려면 SQLMetal 도구를 살펴보고 [방법: 엔터티를 직렬화 할 수 있도록 설정](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)합니다.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 엔터티가 serialize 되는 방법은 합니다. 사용 하는 방법에 대 한 자세한 내용은 합니다 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Windows Communication Foundation (WCF)를 사용 하 여 직렬화 할 수 있는 클래스를 생성 하려면 SQLMetal 도구를 살펴보고 [방법: 엔터티를 직렬화 할 수 있도록 설정](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)합니다.  
   
 > [!NOTE]
 >  `Attach` 메서드는 새 엔터티 또는 deserialize된 엔터티에 대해서만 호출해야 합니다. 엔터티는 serialization을 통해서만 원래 데이터 컨텍스트로부터 분리될 수 있습니다. 이전 데이터 컨텍스트에서 지연 로더가 있는 분리되지 않은 엔터티를 새 데이터 컨텍스트에 연결하려고 하면 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 예외를 throw합니다. 서로 다른 두 데이터 컨텍스트의 지연 로더가 있는 엔터티에 대해 삽입, 업데이트 및 삭제 작업을 수행하면 예기치 않은 결과가 발생할 수 있습니다. 지연된 로더에 대 한 자세한 내용은 참조 하세요. [즉시 로드 비교 지연](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)합니다.  
@@ -208,7 +208,7 @@ public void DeleteOrder(Order order)
 ```  
   
 ## <a name="updating-data"></a>데이터 업데이트  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 낙관적 동시성이 사용되는 다음과 같은 시나리오에서 업데이트를 지원합니다.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 낙관적 동시성을 포함 하는 이러한 시나리오에서 업데이트를 지원 합니다.  
   
 -   타임스탬프 또는 RowVersion 번호를 기반으로 하는 낙관적 동시성  
   
@@ -394,11 +394,11 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
 ### <a name="state"></a>상태  
  엔터티 개체를 <xref:System.Data.Linq.DataContext> 인스턴스에 연결하면 개체가 `PossiblyModified` 상태가 됩니다. 다음과 같은 세 가지 방법을 사용하여 연결된 개체를 강제로 `Modified` 상태로 만들 수 있습니다.  
   
-1.  개체를 수정되지 않은 상태로 연결한 다음 필드를 직접 수정합니다.  
+1. 개체를 수정되지 않은 상태로 연결한 다음 필드를 직접 수정합니다.  
   
-2.  개체의 현재 인스턴스와 원래 인스턴스를 사용하는 <xref:System.Data.Linq.Table%601.Attach%2A> 오버로드와 연결합니다. 이렇게 하면 이전 값과 새 값이 변경 추적기에 제공되므로 변경된 필드를 자동으로 인식할 수 있습니다.  
+2. 개체의 현재 인스턴스와 원래 인스턴스를 사용하는 <xref:System.Data.Linq.Table%601.Attach%2A> 오버로드와 연결합니다. 이렇게 하면 이전 값과 새 값이 변경 추적기에 제공되므로 변경된 필드를 자동으로 인식할 수 있습니다.  
   
-3.  true로 설정된 두 번째 부울 매개 변수를 사용하는 <xref:System.Data.Linq.Table%601.Attach%2A> 오버로드와 연결합니다. 이렇게 하면 원래 값을 제공하지 않고도 수정된 개체를 변경 추적기에서 인식할 수 있습니다. 이 방법을 사용하려면 개체에 버전/타임스탬프 필드가 있어야 합니다.  
+3. true로 설정된 두 번째 부울 매개 변수를 사용하는 <xref:System.Data.Linq.Table%601.Attach%2A> 오버로드와 연결합니다. 이렇게 하면 원래 값을 제공하지 않고도 수정된 개체를 변경 추적기에서 인식할 수 있습니다. 이 방법을 사용하려면 개체에 버전/타임스탬프 필드가 있어야 합니다.  
   
  자세한 내용은 [개체 상태 및 변경 내용 추적](../../../../../../docs/framework/data/adonet/sql/linq/object-states-and-change-tracking.md)합니다.  
   
@@ -407,5 +407,6 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
  개체의 `IEnumerable` 집합과 연결하면 기존 키가 있을 경우 <xref:System.Data.Linq.DuplicateKeyException>이 throw되고 나머지 개체는 연결되지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [LINQ to SQL을 사용한 N 계층 및 원격 응용 프로그램](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)
 - [배경 정보](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

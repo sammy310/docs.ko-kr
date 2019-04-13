@@ -9,18 +9,16 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-ms.openlocfilehash: 3589ba1d13c4ec57cfcec8c52b61556344e8def2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c065b06e7542913ae7fb495a0f69ff09dc4238b9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368339"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325516"
 ---
 # <a name="drawing-objects-overview"></a>Drawing 개체 개요
 이 항목에서는 소개 <xref:System.Windows.Media.Drawing> 개체 및 도형, 비트맵, 텍스트 및 미디어를 효율적으로 그리는 데 사용 하는 방법에 설명 합니다. 사용 하 여 <xref:System.Windows.Media.Drawing> 클립 아트를 만들 때 개체를 사용 하 여 그리는 <xref:System.Windows.Media.DrawingBrush>를 사용 하 여 또는 <xref:System.Windows.Media.Visual> 개체.  
-  
- 
-  
+
 <a name="whatisadrawingsection"></a>   
 ## <a name="what-is-a-drawing-object"></a>그리기 개체란?  
  <xref:System.Windows.Media.Drawing> 도형, 비트맵, 비디오 또는 텍스트 줄 같은 보이는 콘텐츠를 설명 하는 개체입니다. 그리기 형식마다 다른 콘텐츠 형식을 설명합니다. 다음은 여러 그리기 개체 형식을 보여 주는 목록입니다.  
@@ -96,27 +94,27 @@ GeometryDrawing
   
  직접 만들지 않고 미디어를 재생 하려면 <xref:System.Windows.Media.MediaTimeline>, 다음 단계를 수행 합니다.  
   
-1.  <xref:System.Windows.Media.MediaPlayer> 개체를 만듭니다.  
+1. <xref:System.Windows.Media.MediaPlayer> 개체를 만듭니다.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline1)]  
   
-2.  사용 된 <xref:System.Windows.Media.MediaPlayer.Open%2A> 미디어 파일을 로드 하는 방법입니다.  
+2. 사용 된 <xref:System.Windows.Media.MediaPlayer.Open%2A> 미디어 파일을 로드 하는 방법입니다.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline2](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline2)]  
   
-3.  <xref:System.Windows.Media.VideoDrawing>를 만듭니다.  
+3. <xref:System.Windows.Media.VideoDrawing>를 만듭니다.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline3](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline3)]  
   
-4.  크기 및 설정 하 여 미디어를 그릴 위치를 지정 합니다 <xref:System.Windows.Media.VideoDrawing.Rect%2A> 의 속성을 <xref:System.Windows.Media.VideoDrawing>입니다.  
+4. 크기 및 설정 하 여 미디어를 그릴 위치를 지정 합니다 <xref:System.Windows.Media.VideoDrawing.Rect%2A> 의 속성을 <xref:System.Windows.Media.VideoDrawing>입니다.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline4](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline4)]  
   
-5.  설정 합니다 <xref:System.Windows.Media.VideoDrawing.Player%2A> 의 속성을 <xref:System.Windows.Media.VideoDrawing> 사용 하 여를 <xref:System.Windows.Media.MediaPlayer> 만든.  
+5. 설정 합니다 <xref:System.Windows.Media.VideoDrawing.Player%2A> 의 속성을 <xref:System.Windows.Media.VideoDrawing> 사용 하 여를 <xref:System.Windows.Media.MediaPlayer> 만든.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline5](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline5)]  
   
-6.  사용 하 여는 <xref:System.Windows.Media.MediaPlayer.Play%2A> 메서드의 <xref:System.Windows.Media.MediaPlayer> 미디어 재생을 시작 합니다.  
+6. 사용 하 여는 <xref:System.Windows.Media.MediaPlayer.Play%2A> 메서드의 <xref:System.Windows.Media.MediaPlayer> 미디어 재생을 시작 합니다.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline6](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline6)]  
   
@@ -126,19 +124,19 @@ GeometryDrawing
   
  미디어에 대해 추가 타이밍 제어 권한을 사용 하 여는 <xref:System.Windows.Media.MediaTimeline> 사용 하 여 합니다 <xref:System.Windows.Media.MediaPlayer> 및 <xref:System.Windows.Media.VideoDrawing> 개체입니다. <xref:System.Windows.Media.MediaTimeline> 여 비디오 반복 여부를 지정할 수 있습니다. 사용 하는 <xref:System.Windows.Media.MediaTimeline> 사용 하 여는 <xref:System.Windows.Media.VideoDrawing>, 다음 단계를 수행:  
   
-1.  선언 된 <xref:System.Windows.Media.MediaTimeline> 고 해당 타이밍 동작을 설정 합니다.  
+1. 선언 된 <xref:System.Windows.Media.MediaTimeline> 고 해당 타이밍 동작을 설정 합니다.  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline1)]  
   
-2.  만들기는 <xref:System.Windows.Media.MediaClock> 에서 <xref:System.Windows.Media.MediaTimeline>합니다.  
+2. 만들기는 <xref:System.Windows.Media.MediaClock> 에서 <xref:System.Windows.Media.MediaTimeline>합니다.  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline2](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline2)]  
   
-3.  만들기를 <xref:System.Windows.Media.MediaPlayer> 사용 하는 <xref:System.Windows.Media.MediaClock> 설정 하려면 해당 <xref:System.Windows.Media.MediaPlayer.Clock%2A> 속성.  
+3. 만들기를 <xref:System.Windows.Media.MediaPlayer> 사용 하는 <xref:System.Windows.Media.MediaClock> 설정 하려면 해당 <xref:System.Windows.Media.MediaPlayer.Clock%2A> 속성.  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline3](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline3)]  
   
-4.  만들기를 <xref:System.Windows.Media.VideoDrawing> 할당 및는 <xref:System.Windows.Media.MediaPlayer> 에 <xref:System.Windows.Media.VideoDrawing.Player%2A> 의 속성은 <xref:System.Windows.Media.VideoDrawing>합니다.  
+4. 만들기를 <xref:System.Windows.Media.VideoDrawing> 할당 및는 <xref:System.Windows.Media.MediaPlayer> 에 <xref:System.Windows.Media.VideoDrawing.Player%2A> 의 속성은 <xref:System.Windows.Media.VideoDrawing>합니다.  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline4](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline4)]  
   
@@ -234,9 +232,10 @@ DrawingBrush에 GeometryDrawing 사용
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMRetrieveDrawings](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/EnumerateDrawingsExample.xaml.cs#graphicsmmretrievedrawings)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.DrawingGroup>
-- [2차원 그래픽 및 이미징](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [2D 그래픽 및 이미징](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [이미지, 그림 및 시각적 표시로 그리기](painting-with-images-drawings-and-visuals.md)
 - [Geometry 개요](geometry-overview.md)
 - [WPF에서 Shape 및 기본 그리기 개요](shapes-and-basic-drawing-in-wpf-overview.md)

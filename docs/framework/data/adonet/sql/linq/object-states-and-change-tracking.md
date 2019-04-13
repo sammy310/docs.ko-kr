@@ -2,12 +2,12 @@
 title: 개체 상태 및 변경 내용 추적
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
-ms.openlocfilehash: 89e9f44a6cd3579a5ef9cc2078609ca26e0d2ae5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 63b04d3a4b6e48594e9664833a6e539d62bbab0e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683312"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191157"
 ---
 # <a name="object-states-and-change-tracking"></a>개체 상태 및 변경 내용 추적
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개체는 항상 일부에 참여할 *상태*합니다. 예를 들어, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 새 개체를 만들 경우 개체는 `Unchanged` 상태입니다. 직접 만든 새 개체는 <xref:System.Data.Linq.DataContext>에 알려져 있지 않으며 `Untracked` 상태입니다. <xref:System.Data.Linq.DataContext.SubmitChanges%2A>를 실행하고 나면 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에 알려진 모든 개체는 `Unchanged` 상태가 됩니다. 유일한 예외는 데이터베이스에서 삭제된 개체로 이러한 개체는 `Deleted` 상태이고 해당 <xref:System.Data.Linq.DataContext> 인스턴스에서 사용할 수 없습니다.  
@@ -19,7 +19,7 @@ ms.locfileid: "54683312"
 |-----------|-----------------|  
 |`Untracked`|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에 의해 추적되지 않는 개체입니다. 여기에는 다음과 같은 예가 포함됩니다.<br /><br /> -현재 통해 쿼리되지 않은 개체 <xref:System.Data.Linq.DataContext> (예: 새로 만든된 개체).<br />Deserialization을 통해 만든-개체<br />-다른 통해 쿼리할 개체 <xref:System.Data.Linq.DataContext>합니다.|  
 |`Unchanged`|현재 <xref:System.Data.Linq.DataContext>를 사용하여 검색되었으며 만들어진 이후 수정된 것으로 알려지지 않은 개체입니다.|  
-|`PossiblyModified`|상태인 개체 *연결 된* 에 <xref:System.Data.Linq.DataContext>합니다. 자세한 내용은 [데이터 검색 및 CUD 작업에서 N 계층 애플리케이션 (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md)합니다.|  
+|`PossiblyModified`|상태인 개체 *연결 된* 에 <xref:System.Data.Linq.DataContext>합니다. 자세한 내용은 [데이터 검색 및 CUD 작업에서 N 계층 응용 프로그램 (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md)합니다.|  
 |`ToBeInserted`|현재 <xref:System.Data.Linq.DataContext>를 사용하여 검색되지 않은 개체입니다. 이로 인해 `INSERT` 동안 데이터베이스에 <xref:System.Data.Linq.DataContext.SubmitChanges%2A>가 발생합니다.|  
 |`ToBeUpdated`|검색된 이후로 수정되었다는 것이 알려진 개체입니다. 이로 인해 `UPDATE` 동안 데이터베이스에 <xref:System.Data.Linq.DataContext.SubmitChanges%2A>가 발생합니다.|  
 |`ToBeDeleted`|삭제되도록 표시된 개체이며 이로 인해 `DELETE` 동안 데이터베이스에 <xref:System.Data.Linq.DataContext.SubmitChanges%2A>가 발생합니다.|  
@@ -34,9 +34,9 @@ ms.locfileid: "54683312"
 >  `Table`에 추가된 개체는 ID 캐시에 없습니다. ID 캐시는 데이터베이스에서 검색된 개체만 반영합니다. <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> 호출 이후 <xref:System.Data.Linq.DataContext.SubmitChanges%2A>가 완료될 때까지 추가된 엔터티는 데이터베이스에 대한 쿼리에 표시되지 않습니다.  
   
 ## <a name="deleting-objects"></a>개체 삭제  
- 적절한 `o`에서 <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>(o)을 호출하여 추적된 개체 <xref:System.Data.Linq.Table%601>를 삭제 대상으로 표시합니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 <xref:System.Data.Linq.EntitySet%601>에서 개체를 제거하는 것을 업데이트 작업으로 간주하며 해당 외래 키 값이 null로 설정됩니다. 작업의 대상(`o`)은 해당 테이블에서 삭제되지 않습니다. 예를 들어, `cust.Orders.DeleteOnSubmit(ord)`는 외래 키 `cust`를 null로 설정하여 `ord` 및 `ord.CustomerID` 간의 관계를 끊는 업데이트를 나타냅니다. 이로 인해 `ord`에 해당하는 행이 삭제되지는 않습니다.  
+ 적절한 `o`에서 <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>(o)을 호출하여 추적된 개체 <xref:System.Data.Linq.Table%601>를 삭제 대상으로 표시합니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개체 제거를 고려를 <xref:System.Data.Linq.EntitySet%601> 업데이트로 작업과 해당 외래 키 값 설정 되어 null로 합니다. 작업의 대상(`o`)은 해당 테이블에서 삭제되지 않습니다. 예를 들어, `cust.Orders.DeleteOnSubmit(ord)`는 외래 키 `cust`를 null로 설정하여 `ord` 및 `ord.CustomerID` 간의 관계를 끊는 업데이트를 나타냅니다. 이로 인해 `ord`에 해당하는 행이 삭제되지는 않습니다.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 개체가 해당 테이블에서 삭제될 때(<xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>) 다음 작업을 처리합니다.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개체 삭제 되 면 다음 작업을 수행 (<xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>) 해당 테이블에서:  
   
 -   <xref:System.Data.Linq.DataContext.SubmitChanges%2A>가 호출될 경우 `DELETE` 작업이 해당 개체에 대해 수행됩니다.  
   
@@ -63,5 +63,6 @@ ms.locfileid: "54683312"
  필수 참조와 해당 외래 키를 둘 다 업데이트할 경우 서로 일치하는지 확인해야 합니다. <xref:System.InvalidOperationException>를 호출할 때 두 항목이 동기화되지 않은 경우 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 예외가 throw됩니다. 외래 키 값 변경을 통해 기본 행 업데이트에 충분히 영향을 줄 수 있지만 개체 그래프의 연결과 관계의 양방향 일관성을 유지 관리하기 위해 참조를 변경해야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [배경 정보](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
 - [삽입, 업데이트 및 삭제 작업](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)

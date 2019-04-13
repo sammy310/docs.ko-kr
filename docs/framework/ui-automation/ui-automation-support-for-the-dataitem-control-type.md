@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Data Item control type
 - control types, Data Item
 ms.assetid: 181708fd-2595-4c43-9abd-75811627d64c
-ms.openlocfilehash: ebc5f9a5b50766b9a49a9772469f8ae731f3aa4c
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 6263d7777becc1042cf477503c7f68af29fa7f4c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679400"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125213"
 ---
 # <a name="ui-automation-support-for-the-dataitem-control-type"></a>DataItem 컨트롤 형식에 대한 UI 자동화 지원
 > [!NOTE]
@@ -27,7 +27,7 @@ ms.locfileid: "57679400"
 ## <a name="required-ui-automation-tree-structure"></a>필요한 UI 자동화 트리 구조  
  다음 표는 데이터 항목 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다. 에 대 한 자세한 내용은 합니다 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리를 참조 하십시오 [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)합니다.  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 - 컨트롤 뷰|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리-콘텐츠 뷰|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리-컨트롤 뷰|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리-콘텐츠 뷰|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
 |DataItem<br /><br /> -다릅니다 (0 개 이상, 계층 구조로 구조화할 수 있음)|DataItem<br /><br /> -다릅니다 (0 개 이상, 계층 구조로 구조화할 수 있음)|  
   
@@ -76,21 +76,21 @@ ms.locfileid: "57679400"
 ## <a name="required-ui-automation-events"></a>필요한 UI 자동화 이벤트  
  다음 표에서는 모든 데이터 항목 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 나열하여 보여 줍니다. 이벤트에 대한 자세한 내용은 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)를 참조하세요.  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|Support(지원)|노트|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트(event)|Support(지원)|노트|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 속성 변경 이벤트.|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 속성 변경 이벤트.|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 속성 변경 이벤트.|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> 속성 변경 이벤트.|필수|없음|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 속성 변경 이벤트입니다.|필수|없음|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 속성 변경 이벤트입니다.|필수|없음|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 속성 변경 이벤트입니다.|필수|없음|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> 속성 변경 이벤트입니다.|필수|없음|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|필수|없음|  
 |<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|종속|없음|  
-|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> 속성 변경 이벤트.|종속|없음|  
+|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> 속성 변경 이벤트입니다.|종속|없음|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|필수|없음|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|필수|없음|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|필수|없음|  
-|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> 속성 변경 이벤트.|종속|없음|  
-|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 속성 변경 이벤트.|종속|없음|  
+|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> 속성 변경 이벤트입니다.|종속|없음|  
+|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 속성 변경 이벤트입니다.|종속|없음|  
   
 <a name="Data_Item_Control_Type_Example"></a>   
 ## <a name="dataitem-control-type-example"></a>DataItem 컨트롤 형식 예제  
@@ -100,13 +100,14 @@ ms.locfileid: "57679400"
   
  다음은 데이터 항목 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 보기입니다. 각 자동화 요소에 대한 컨트롤 패턴은 괄호 안에 표시됩니다. Group "Contoso"는 Data Grid 호스트 컨트롤 표의 일부이기도 합니다.  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 - 컨트롤 뷰|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리-콘텐츠 뷰|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리-컨트롤 뷰|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리-콘텐츠 뷰|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
 |-그룹 "Contoso" (Table, Grid)<br />-DataItem "계정 Receivable.doc" (TableItem, GridItem SelectionItem, 호출)<br />-"Accounts Receivable.doc" 이미지<br />--"Name" ("Accounts Receivable.doc" TableItem, GridItem, 값)을 편집 하는 중<br />-"수정한 날짜" edit (TableItem, GridItem, 값 "2006 년 8 월 25 오후 3시 29분")<br />--"크기" (GridItem, TableItem, 값 "11.0 KB)를 편집 하는 중<br />-DataItem "계정 Payable.doc" (TableItem, GridItem SelectionItem, 호출)<br />-   ...|-그룹 "Contoso" (Table, Grid)<br />-DataItem "계정 Receivable.doc" (TableItem, GridItem SelectionItem, 호출)<br />-"Accounts Receivable.doc" 이미지<br />--"Name" ("Accounts Receivable.doc" TableItem, GridItem, 값)을 편집 하는 중<br />-"수정한 날짜" edit (TableItem, GridItem, 값 "2006 년 8 월 25 오후 3시 29분")<br />--"크기" (GridItem, TableItem, 값 "11.0 KB)를 편집 하는 중<br />-DataItem "계정 Payable.doc" (TableItem, GridItem SelectionItem, 호출)<br />-   …|  
   
  표가 선택 가능한 항목의 목록을 나타내는 경우, 해당 UI 요소는 DataItem 컨트롤 형식이 아닌 ListItem 컨트롤 형식을 사용하여 노출할 수 있습니다. 앞의 예에서, Group("Contoso") 아래의 DataItem 요소("Accounts Receivable.doc" 및 "Accounts Payable.doc")는 SelectionItem 컨트롤 패턴을 이미 지원하기 때문에 ListItem 컨트롤 형식으로 노출하여 개선할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Automation.ControlType.DataItem>
 - [UI 자동화 컨트롤 형식 개요](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
 - [UI 자동화 개요](../../../docs/framework/ui-automation/ui-automation-overview.md)

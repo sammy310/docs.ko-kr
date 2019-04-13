@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-ms.openlocfilehash: e0a81915d35bc382cb4f51ec6d26a429c8a759c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c64bdb0cf60fff2dad49c3ffc48629c53abecad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594930"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210674"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>계약 및 서비스에서 오류 지정 및 처리
 Windows Communication Foundation (WCF) 응용 프로그램 관리 되는 예외 개체를 SOAP 오류 개체를 SOAP 오류 개체를 관리 되는 예외 개체에 매핑하여 오류 상황을 처리 합니다. 이 단원의 항목에서는 사용자 지정 SOAP 오류와 같은 오류 조건을 노출하도록 계약을 디자인하는 방법, 이러한 오류를 서비스 구현의 일부로 반환하는 방법 및 클라이언트가 이러한 오류를 catch하는 방법에 대해 설명합니다.  
@@ -56,6 +56,7 @@ Windows Communication Foundation (WCF) 응용 프로그램 관리 되는 예외 
  오류 계약을 deserialize할 때 WCF에서는 먼저 SOAP 메시지의 오류 계약 이름과 일치하는 오류 계약 형식을 찾으려고 시도합니다. 정확히 일치하는 것을 찾을 수 없으면 알파벳 순서로 정렬된 사용 가능한 오류 계약 목록에서 호환되는 형식을 검색합니다. 두 오류 계약이 호환되는 형식인 경우(예: 한 계약이 다른 계약의 서브클래스인 경우) 잘못된 형식이 오류를 deserialize하는 데 사용될 수 있습니다. 이 문제는 오류 계약이 이름, 네임스페이스 및 동작을 지정하지 않은 경우에만 발생합니다. 이 문제가 발생하지 않도록 하려면 항상 이름, 네임스페이스 및 동작 특성을 지정하여 오류 계약을 정규화합니다. 또한 공유 기본 클래스에서 파생되는 많은 관련 오류 계약을 정의한 경우 `[DataMember(IsRequired=true)]`를 사용하여 모든 새 멤버를 표시해야 합니다. 이 `IsRequired` 특성에 대한 자세한 내용은 <xref:System.Runtime.Serialization.DataMemberAttribute>를 참조하십시오. 이렇게 하면 기본 클래스가 호환되는 형식이 될 수 없으며 오류가 올바른 파생 형식으로 deserialize됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.FaultException>
 - <xref:System.ServiceModel.FaultContractAttribute>
 - <xref:System.ServiceModel.FaultException>

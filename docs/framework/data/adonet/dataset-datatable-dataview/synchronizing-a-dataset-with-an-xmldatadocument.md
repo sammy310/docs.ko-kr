@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
-ms.openlocfilehash: ef0518bfd53ea5696c9369fe78e4ceccd3c6260c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4682d60e213ad57308143b2c7ea06d123daf61d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708131"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133733"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>XmlDataDocument로 데이터 집합 동기화
 이 단원에서는 <xref:System.Data.DataSet>와 동기화된 강력한 형식의 <xref:System.Xml.XmlDataDocument>을 사용하여 구매 주문을 처리하는 한 가지 단계를 보여 줍니다. 다음 예제에서는 한 **데이터 집합** 소스 XML 문서의 일부만 일치 하는 스키마가 최소화 된 합니다. 예제에서는 사용를 **XmlDataDocument** 소스 XML 문서의 신뢰도 유지 하기 위해 사용 하도록 설정 합니다 **데이터 집합** XML 문서의 하위 집합을 노출 하는 데 사용할 합니다.  
@@ -232,5 +232,6 @@ public class Sample
 ```  
   
 ## <a name="see-also"></a>참고자료
-- [데이터 세트 및 XmlDataDocument 동기화](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
+
+- [데이터 집합 및 XmlDataDocument 동기화](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

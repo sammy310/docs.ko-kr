@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f553870399a8f2ddb78e01d27a7f7e5bd32d786b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ccfe83707b6354c42a4c3c81e911918b2ea79ec4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57473996"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108916"
 ---
 # <a name="icordebugmodule3createreaderforinmemorysymbols-method"></a>ICorDebugModule3::CreateReaderForInMemorySymbols 메서드
 동적 모듈에 대 한 디버그 기호 판독기를 만듭니다.  
@@ -72,6 +72,7 @@ HRESULT CreateReaderForInMemorySymbols (
  **.NET framework 버전:** 4.5, 4, 3.5 SP1  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICorDebugRemoteTarget 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
 - [ICorDebug 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
 

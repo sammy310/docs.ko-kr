@@ -1,5 +1,5 @@
 ---
-title: '방법: 뷰에서 데이터 필터링'
+title: '방법: 보기에서 데이터 필터링'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - filtering data in views [WPF]
 - data binding [WPF], filtering data in views
 ms.assetid: c76e8606-4cc4-45a8-9110-e2ec66dc6afd
-ms.openlocfilehash: 51f95834556153448d416157460cf63da0d409e1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a31c07e6be26f67cc29813a14745ecf4a83ab98a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373948"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147474"
 ---
-# <a name="how-to-filter-data-in-a-view"></a>방법: 뷰에서 데이터 필터링
+# <a name="how-to-filter-data-in-a-view"></a>방법: 보기에서 데이터 필터링
 이 예에서는 뷰에서 데이터를 필터링 하는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
@@ -48,8 +48,9 @@ ms.locfileid: "57373948"
  [!code-vb[DataBindingLab#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#5)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Data.CollectionView.CanFilter%2A>
 - <xref:System.Windows.Data.BindingListCollectionView.CustomFilter%2A>
 - [데이터 바인딩 개요](data-binding-overview.md)
-- [뷰의 데이터 정렬](how-to-sort-data-in-a-view.md)
+- [보기에서 데이터 정렬](how-to-sort-data-in-a-view.md)
 - [방법 항목](data-binding-how-to-topics.md)

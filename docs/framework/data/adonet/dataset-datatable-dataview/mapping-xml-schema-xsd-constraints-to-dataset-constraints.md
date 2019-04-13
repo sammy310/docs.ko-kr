@@ -2,12 +2,12 @@
 title: 데이터 집합 제약 조건에 XSD(XML 스키마) 제약 조건 매핑
 ms.date: 03/30/2017
 ms.assetid: 3d0d1a4b-9104-434f-ac04-6c01ab5716b5
-ms.openlocfilehash: 8addcf564bda969d404694171a2af3dd277ff22b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a1690e99aeaeb7ed9c85fd28697ae22d34bb2018
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657339"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115650"
 ---
 # <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a>데이터 집합 제약 조건에 XSD(XML 스키마) 제약 조건 매핑
 XSD(XML 스키마 정의 언어)를 사용하여 요소와 특성에서 제약 조건을 지정할 수 있습니다. 관계형 스키마에 XML 스키마를 매핑하는 경우는 <xref:System.Data.DataSet>, XML 스키마 제약 조건을 테이블 및 열 내에서 적절 한 관계형 제약 조건에 매핑되는 **데이터 집합**합니다.  
@@ -27,21 +27,22 @@ XSD(XML 스키마 정의 언어)를 사용하여 요소와 특성에서 제약 �
  매핑 프로세스 내에서 만든 테이블에 적절 한 제약 조건으로 이러한 스키마 제약 조건을 변환 합니다 **데이터 집합**합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [데이터 세트 제약 조건에 고유 XSD(XML 스키마) 제약 조건 매핑](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-unique-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [데이터 집합 제약 조건에 고유 XSD(XML 스키마) 제약 조건 매핑](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-unique-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  unique 제약 조건을 만드는 데 사용 하는 XML 스키마 요소에 설명 합니다는 **데이터 집합**합니다.  
   
- [데이터 세트 제약 조건에 키 XSD(XML 스키마) 제약 조건 매핑](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-key-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [데이터 집합 제약 조건에 키 XSD(XML 스키마) 제약 조건 매핑](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-key-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  키 제약 조건 (고유 제약 조건 null 값이 허용 되지 않습니다)를 만드는 데 사용 하는 XML 스키마 요소에 설명 된 **데이터 집합**합니다.  
   
- [데이터 세트 제약 조건에 keyref XSD(XML 스키마) 제약 조건 매핑](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-keyref-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [데이터 집합 제약 조건에 keyref XSD(XML 스키마) 제약 조건 매핑](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-keyref-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  Keyref (외래 키) 제약 조건을 만드는 데 사용 하는 XML 스키마 요소에 설명 합니다는 **데이터 집합**합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [XML 스키마에서 데이터 세트 관계형 구조 파생(XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ [XML 스키마에서 데이터 집합 관계형 구조 파생(XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
  관계형 구조 또는 스키마를 설명 합니다는 **데이터 집합** XSD 스키마에서 만들어집니다.  
   
- [XSD(XML 스키마)에서 데이터 세트 관계 생성](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [XSD(XML 스키마)에서 데이터 집합 관계 생성](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
  테이블 열 간의 관계를 만드는 데 사용 하는 XML 스키마 요소에 설명 합니다는 **데이터 집합**합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

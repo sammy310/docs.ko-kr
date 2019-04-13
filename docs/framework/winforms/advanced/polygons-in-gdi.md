@@ -9,12 +9,12 @@ helpviewer_keywords:
 - drawing [Windows Forms], polygons
 - GDI+, polygons
 ms.assetid: a72213d2-d69a-4c2b-a75c-be7b20390c13
-ms.openlocfilehash: cffbee5f73b9fe92e2f1f3c7eff2f2336d9123a5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2b1e3d387e4d056d9187c54dcef560544206c370
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710084"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132628"
 ---
 # <a name="polygons-in-gdi"></a>GDI+의 다각형
 다각형은 3 개 이상의 직선 면을 사용 하 여 닫힌된 도형입니다. 예를 들어 삼각형 세 변을 사용 하 여 다각형, 사각형은 네 면을 사용 하 여 다각형 이며 오각형 5 면을 사용 하 여 다각형입니다. 다음 그림에서는 여러 다각형을 보여 줍니다.  
@@ -32,6 +32,7 @@ ms.locfileid: "57710084"
  ![Polygon](./media/aboutgdip02-art08.gif "Aboutgdip02_art08")  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - [선, 곡선 및 도형](lines-curves-and-shapes.md)

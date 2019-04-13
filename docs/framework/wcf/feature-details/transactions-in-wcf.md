@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF, using transactions
 - Windows Communication Foundation, using transactions
 ms.assetid: 1e8d04dd-b7cf-41e7-8560-54b4381beb0f
-ms.openlocfilehash: 51dffe626aa873e4dc737d21946b61ea00eb5202
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 367abc45b9383a77ba2917030316bda17b4be98c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559907"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074120"
 ---
 # <a name="transactions-in-wcf"></a>WCF에서 트랜잭션
 Windows Communication Foundation (WCF) 트랜잭션 기능에는 여러 구성 요소를 데이터 작업을 동시에 참여할 수 있습니다. 이 단원의 항목에서는 이 기능에 대해 자세히 설명합니다.  
@@ -34,4 +34,5 @@ Windows Communication Foundation (WCF) 트랜잭션 기능에는 여러 구성 �
  [기본 WCF 프로그래밍](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - [신뢰할 수 있는 세션 개요](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)

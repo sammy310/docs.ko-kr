@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: 357fad55c3c47a5697df7887f251074238a5ff4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29d1e5ae494b2fff4e13886159bb937041152382
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498240"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209478"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>데이터 집합에서 XPath 쿼리 수행
 동기화 관계 <xref:System.Data.DataSet> 및 <xref:System.Xml.XmlDataDocument> XML을 활용할 수 있습니다와 같은 서비스 XML Path Language (XPath) 쿼리를 액세스 하는 합니다 **XmlDataDocument** 특정 기능을 수행할 수 있습니다 액세스할 때 보다 더 편리 하 게 합니다 **데이터 집합** 직접. 예를 들어, 사용 하는 대신를 **선택** 메서드를 <xref:System.Data.DataTable> 다른 테이블에 관계를 탐색 하는 **데이터 집합**에서 XPath 쿼리를 수행할 수 있습니다는 **XmlDataDocument**  와 동기화 된 합니다 **데이터 집합**, 형태로 XML 요소의 목록을 가져오려면는 <xref:System.Xml.XmlNodeList>합니다. 노드를 **XmlNodeList**로 캐스팅 <xref:System.Xml.XmlElement> 노드를 전달할 수 있습니다 합니다 **GetRowFromElement** 메서드의 **XmlDataDocument**일치 하는 반환 하려는 경우 <xref:System.Data.DataRow> 동기화 된 테이블의 행에 대 한 참조가 **데이터 집합**합니다.  
@@ -102,5 +102,6 @@ foreach (XmlNode xmlNode in nodeList)
 ```  
   
 ## <a name="see-also"></a>참고자료
-- [데이터 세트 및 XmlDataDocument 동기화](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
+
+- [데이터 집합 및 XmlDataDocument 동기화](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

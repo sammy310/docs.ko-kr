@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: ca67a01d8f1bc76773a7794169e93d026fe222d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3945d4fc92bea2c4212da0507618203603ae8aba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717966"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191330"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities에서 알려진 문제 및 고려 사항
 이 단원에서는 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 쿼리와 관련하여 알려진 문제에 대한 정보를 제공합니다.  
   
--   [LINQ 쿼리는 캐시할 수 없습니다.](#LINQQueriesThatAreNotCached)  
+-   [캐시할 수 없는 LINQ 쿼리](#LINQQueriesThatAreNotCached)  
   
 -   [순서 정보 손실](#OrderingInfoLost)  
   
--   [부호 없는 정수 지원 되지 않음](#UnsignedIntsUnsupported)  
+-   [부호 없는 정수 지원되지 않음](#UnsignedIntsUnsupported)  
   
 -   [형식 변환 오류](#TypeConversionErrors)  
   
--   [지원 되지 않는 스칼라가 아닌 변수 참조](#RefNonScalarClosures)  
+-   [스칼라가 아닌 변수 참조는 지원되지 않음](#RefNonScalarClosures)  
   
--   [SQL Server 2000 사용 하 여 중첩된 쿼리가 실패할 수 있습니다.](#NestedQueriesSQL2000)  
+-   [SQL Server 2000에서 중첩 쿼리가 실패할 수 있음](#NestedQueriesSQL2000)  
   
 -   [익명 형식으로 프로젝션](#ProjectToAnonymousType)  
   
@@ -80,4 +80,5 @@ ms.locfileid: "54717966"
  [!code-vb[DP L2E Conceptual Examples#ProjToAnonType2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#projtoanontype2)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)

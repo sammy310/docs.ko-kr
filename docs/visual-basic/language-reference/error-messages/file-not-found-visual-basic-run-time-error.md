@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID53
 ms.assetid: 57addb16-6f9a-444d-8af8-dda52431daca
-ms.openlocfilehash: 2cd5bba135284ba72eed595fdfc548cfea63ff70
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: cac84c3fa549760ee92601bbb07a379ea102b6dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821896"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333966"
 ---
 # <a name="file-not-found-visual-basic-run-time-error"></a>파일을 찾을 수 없습니다(Visual Basic 런타임 오류).
 파일을 찾을 수 없습니다 지정 합니다. 오류에는 다음과 같은 가능한 원인을 있습니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "58821896"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-1.  파일 이름 및 경로 지정의 맞춤법을 확인 합니다.  
+1. 파일 이름 및 경로 지정의 맞춤법을 확인 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

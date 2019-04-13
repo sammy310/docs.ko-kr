@@ -2,12 +2,12 @@
 title: 형식 생성(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
-ms.openlocfilehash: 917c59a6602ce0313b91ba78fd59d11596f86e9f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53aa7fcc82a476c8b8bd87b059e08bee6741c0d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718587"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073782"
 ---
 # <a name="constructing-types-entity-sql"></a>형식 생성(Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 세 가지 종류의 생성자를 제공 합니다: 행 생성자, 명명 된 형식 생성자 및 컬렉션 생성자입니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "54718587"
  자세한 내용은 [MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md)합니다.  
   
 ## <a name="named-type-constructors-namedtype-initializers"></a>명명된 형식 생성자(NamedType 이니셜라이저)  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서 형식 생성자(이니셜라이저)는 명명된 복합 형식과 엔터티 형식 인스턴스를 만들 수 있습니다. 예를 들어, 다음 식은 `Person` 형식의 인스턴스를 만듭니다.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 엔터티 형식과 형식 생성자 (이니셜라이저) 명명 된 복합 형식의 인스턴스를 만들 수 있습니다. 예를 들어, 다음 식은 `Person` 형식의 인스턴스를 만듭니다.  
   
  `Person("abc", 12)`  
   
@@ -64,6 +64,7 @@ ms.locfileid: "54718587"
  자세한 내용은 [명명 된 형식 생성자](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [Entity SQL 개요](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
 - [형식 시스템](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)

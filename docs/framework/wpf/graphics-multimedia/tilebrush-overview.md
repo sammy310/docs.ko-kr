@@ -8,17 +8,16 @@ helpviewer_keywords:
 - TileBrush [WPF]
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
-ms.openlocfilehash: 8013bacf6c4d33ce89fc287e625ce8c8fb6c3ef0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a610acfef416a978ab8ecd9a561a135ecf3611cc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369944"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125305"
 ---
 # <a name="tilebrush-overview"></a>TileBrush 개요
 <xref:System.Windows.Media.TileBrush> 개체를 사용 하면 다양 한 이미지를 사용 하 여 영역을 그리는 방법에 대 한 제어를 사용 하 여 얻게 <xref:System.Windows.Media.Drawing>, 또는 <xref:System.Windows.Media.Visual>합니다. 이 항목에서는 사용 하는 방법에 설명 합니다 <xref:System.Windows.Media.TileBrush> 더 잘 제어 하는 방법에 대 한 기능을 <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, 또는 <xref:System.Windows.Media.VisualBrush> 영역을 그립니다.  
-  
-  
+
 <a name="prerequisite"></a>   
 ## <a name="prerequisites"></a>전제 조건  
  이 항목을 이해 하려면의 기본 기능을 사용 하는 방법을 이해 하는 데 도움이 되는 <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, 또는 <xref:System.Windows.Media.VisualBrush> 클래스입니다. 이러한 형식에 대 한 소개를 참조 하세요. 합니다 [이미지, 그림 및 시각적 표시로 그리기](painting-with-images-drawings-and-visuals.md)합니다.  
@@ -122,6 +121,7 @@ TileMode가 Tile인 TileBrush의 구성 요소
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilingexample.vb#graphicsmmflipxyexample)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.ImageBrush>
 - <xref:System.Windows.Media.DrawingBrush>
 - <xref:System.Windows.Media.VisualBrush>

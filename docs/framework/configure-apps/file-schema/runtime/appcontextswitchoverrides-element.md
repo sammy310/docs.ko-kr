@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a8593dbc8a419048950a852a02057f40f80d992a
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 1bc4cd94d3acd37244e1d5b882612e4b1da91b90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58024575"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136463"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > 요소
 <xref:System.AppContext> 클래스에 사용되는 스위치를 하나 이상 정의하여 새 기능의 옵트아웃 메커니즘을 제공합니다.  
@@ -65,10 +65,10 @@ ms.locfileid: "58024575"
 |스위치 이름|설명|도입|  
 |-----------------|-----------------|----------------|  
 |`Switch.MS.Internal.`<br/>`DoNotApplyLayoutRoundingToMarginsAndBorderThickness`|Windows Presentation Foundation 컨트롤 레이아웃에 대 한 레거시 알고리즘을 사용 하는지 여부를 제어 합니다. 자세한 내용은 [완화: WPF 레이아웃](../../../migration-guide/mitigation-wpf-layout.md)합니다.|.NET Framework 4.6|  
-|`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|한 PackageDigitalSignatureManager 서명 패키지 부분에 사용 되는 기본 알고리즘은 SHA1 또는 SHA256 여부를 제어 합니다.<br>문제로 충돌 sha1, SHA256을 좋습니다.|.NET Framework 4.7.1|
+|`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|한 PackageDigitalSignatureManager 서명 패키지 부분에 사용 되는 기본 알고리즘은 SHA1 또는 SHA256 여부를 제어 합니다.<br>SHA1 관련 충돌 문제로 인해 SHA256을 사용하는 것이 좋습니다.|.NET Framework 4.7.1|
 |`Switch.System.Activities.`<br/>`UseMD5CryptoServiceProviderForWFDebugger`|로 설정 하면 `false`, FIPS가 활성화 하는 경우 Visual Studio를 사용 하 여 XAML 기반 워크플로 프로젝트를 디버깅할 수 있습니다. 없으면를 <xref:System.NullReferenceException> System.Activities 어셈블리의 메서드 호출에서 throw 됩니다.|.NET Framework 4.7|
 |`Switch.System.Activities.`<br/>`UseMD5ForWFDebugger`|디버거에서 워크플로 인스턴스에 대 한 체크섬 MD5 또는 SHA1 사용 하는지 여부를 제어 합니다. | .NET Framework 4.7|
-|`Switch.System.Activities.`<br/>`UseSHA1HashForDebuggerSymbols`|워크플로 체크섬 해시.NET Framework 4.7의 기본값으로 도입 SHA1 알고리즘을 사용 하는지 여부를 제어 (`true`)를 사용 하는지 여부 또는.NET Framework 4.8에서 기본적으로 도입 된 기본 SHA256 알고리즘 (`false`).<br>문제로 충돌 sha1, SHA256을 좋습니다.|.NET Framework 4.8|
+|`Switch.System.Activities.`<br/>`UseSHA1HashForDebuggerSymbols`|워크플로 체크섬 해시.NET Framework 4.7의 기본값으로 도입 SHA1 알고리즘을 사용 하는지 여부를 제어 (`true`)를 사용 하는지 여부 또는.NET Framework 4.8에서 기본적으로 도입 된 기본 SHA256 알고리즘 (`false`).<br>SHA1 관련 충돌 문제로 인해 SHA256을 사용하는 것이 좋습니다.|.NET Framework 4.8|
 |`Switch.System.Diagnostics.`<br/>`IgnorePortablePDBsInStackTraces`|원본 파일 및 줄 정보를 포함할 수 이식 가능한 Pdb를 사용 하는 경우 스택 추적 가져오기 하는 여부를 제어 합니다. `false` 소스 파일 및 줄 정보를 포함 하려면 그렇지 않으면 `true`합니다.|.NET Framework 4.7.2|
 |`Switch.System.Drawing.`<br/>`DontSupportPngFramesInIcons`|컨트롤 여부를 <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> 메서드에서 예외를 throw 때는 <xref:System.Drawing.Icon> 개체에 PNG 프레임이 있는 합니다. 자세한 내용은 [완화: 아이콘 개체의 PNG 프레임](../../../migration-guide/mitigation-png-frames-in-icon-objects.md)합니다.|.NET Framework 4.6|
 |`Switch.System.Drawing.Text.`<br/>`DoNotRemoveGdiFontsResourcesFromFontCollection`|결정 여부 <xref:System.Drawing.Text.PrivateFontCollection?displayProperty=nameWithType> 사용 하 여 컬렉션에 추가 될 때 개체가 제대로 삭제 됩니다는 <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile(System.String)?displayProperty=nameWithType> 메서드. `true` 레거시 동작을 유지 하려면 `false` 모든 개인 글꼴 개체의 삭제 합니다. |.NET Framework 4.7.2|
@@ -96,8 +96,8 @@ ms.locfileid: "58024575"
 |`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|컨트롤 여부는 <xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType> 새 개체를 설정 하는 생성자 <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType> 기존 개체 참조를 사용 하 여 속성입니다. 자세한 내용은 [완화: ClaimsIdentity 생성자](../../../migration-guide/mitigation-claimsidentity-constructor.md)합니다.|.NET Framework 4.6.2|  
 |`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|컨트롤 여부를 다시 사용 하려고 합니다는 <xref:System.Security.Cryptography.AesCryptoServiceProvider> decryptor throw를 <xref:System.Security.Cryptography.CryptographicException>입니다. 자세한 내용은 [AesCryptoServiceProvider 암호 해독 기가 재사용 가능 변환을 제공](../../../migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform)합니다.|.NET Framework 4.6.2|
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|컨트롤 여부를 값을 [cspparameters.parentwindowhandle에](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle) 속성은는 [IntPtr](xref:System.IntPtr) 나타내는 창에 메모리 위치 처리 또는 창 핸들 (HWND) 인지는. 자세한 내용은 [완화: Cspparameters.parentwindowhandle에 HWND 필요](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value)합니다. |.NET Framework 4.7|   
-|`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|일부 SignedCMS 작업에 대 한 기본값은 SHA1 또는 SHA256 여부를 결정 합니다.<br>문제로 충돌 sha1, SHA256을 좋습니다.|.NET Framework 4.7.1|
-|`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|일부 SignedXML 작업에 대 한 기본값은 SHA1 또는 SHA256 여부를 결정 합니다.<br>문제로 충돌 sha1, SHA256을 좋습니다.|.NET Framework 4.7.1|
+|`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|일부 SignedCMS 작업에 대 한 기본값은 SHA1 또는 SHA256 여부를 결정 합니다.<br>SHA1 관련 충돌 문제로 인해 SHA256을 사용하는 것이 좋습니다.|.NET Framework 4.7.1|
+|`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|일부 SignedXML 작업에 대 한 기본값은 SHA1 또는 SHA256 여부를 결정 합니다.<br>SHA1 관련 충돌 문제로 인해 SHA256을 사용하는 것이 좋습니다.|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|결정 하는지 여부를 `TransportWithMessageCredential` 보안 모드에서는 메시지를 부호 없는 "to" 헤더가 합니다. 이 옵트인 스위치입니다. 자세한 내용은 [.NET Framework 4.6.1의에서 런타임 변경 내용](../../../migration-guide/runtime/4.5.2-4.6.1.md#windows-communication-foundation-wcf)합니다.|.NET Framework 4.6.1| 
 |`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|컨트롤 여부를 합니다 <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})> 생성자에서 throw를 <xref:System.ArgumentException> 요소 중 하나 이면 `null`합니다.|.NET Framework 4.7.1| 
 |`Switch.System.ServiceModel.`<br />`DisableCngCertificates`|CSG 키 저장소 공급자를 예외를 throw X509를 사용 하려고 인증서를 사용 하 여 여부를 결정 합니다. 자세한 내용은 [WCF 전송 보안에서 CNG를 사용 하 여 저장 한 인증서 지원](../../../migration-guide/retargeting/4.6.1-4.6.2.md#wcf-transport-security-supports-certificates-stored-using-cng)합니다.|.NET Framework 4.6.1|
@@ -105,8 +105,8 @@ ms.locfileid: "58024575"
 |`Switch.System.ServiceModel.`<br/>`DisableOperationContextAsyncFlow`|재진입 서비스의 인스턴스는 단일 실행 스레드를 한 번에 제한에서 발생 하는 교착 상태를 처리 합니다.|.NET Framework 4.6.2|
 |`Switch.System.ServiceModel.`<br/>`DisableUsingServicePointManagerSecurityProtocols`|와 함께 `Switch.System.Net.DontEnableSchUseStrongCrypto`, WCF 메시지 보안에서 TLS 1.1 및 TLS 1.2를 사용 하는지를 결정 합니다.|.NET Framework 4.7 |    
 |`Switch.System.ServiceModel.`<br/>`DontEnableSystemDefaultTlsVersions`|값 `false` 에서 운영 체제가 프로토콜을 선택 하도록 허용 하는 기본 구성을 설정 합니다. 값 `true` 기본으로 사용할 수 있는 가장 높은 프로토콜을 설정 합니다. (에서도 다운로드 가능 서비스 이전 프레임 워크 버전의 분기)|.NET Framework 4.7.1|
-|`Switch.System.ServiceModel.`<br/>`UseSha1InMsmqEncryptionAlgorithm`|SHA1 또는 SHA256 서명 알고리즘 WCF에서 MSMQ 메시지에 대 한 기본 메시지 인지 확인 합니다.<br>문제로 충돌 sha1, SHA256을 좋습니다.|.NET Framework 4.7.1|
-|`Switch.System.ServiceModel.`<br/>`UseSha1InPipeConnectionGetHashAlgorithm`|WCF는 SHA1 또는 SHA256 해시를 명명 된 파이프에 대 한 임의 이름을 생성을 사용 하는지 여부를 제어 합니다.<br>문제로 충돌 sha1, SHA256을 좋습니다.|.NET Framework 4.7.1|
+|`Switch.System.ServiceModel.`<br/>`UseSha1InMsmqEncryptionAlgorithm`|SHA1 또는 SHA256 서명 알고리즘 WCF에서 MSMQ 메시지에 대 한 기본 메시지 인지 확인 합니다.<br>SHA1 관련 충돌 문제로 인해 SHA256을 사용하는 것이 좋습니다.|.NET Framework 4.7.1|
+|`Switch.System.ServiceModel.`<br/>`UseSha1InPipeConnectionGetHashAlgorithm`|WCF는 SHA1 또는 SHA256 해시를 명명 된 파이프에 대 한 임의 이름을 생성을 사용 하는지 여부를 제어 합니다.<br>SHA1 관련 충돌 문제로 인해 SHA256을 사용하는 것이 좋습니다.|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.Internals`<br/>`IncludeNullExceptionMessageInETWTrace`|발생시킬지 여부를 제어 하는 [NullReferenceException](xref:System.NullReferenceException) 예외 메시지가 null 인 경우.|.NET Framework 4.7|  
 |`Switch.System.ServiceProcess.`<br/>`DontThrowExceptionsOnStart`|서비스 시작 시 throw 된 예외는 호출자에 게 전파 하는지 여부를 제어 합니다 <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType> 메서드.|.NET Framework 4.7.1|
 |`Switch.System.Uri.`<br/>`DontEnableStrictRFC3986ReservedCharacterSets`|때로는 디코딩되는 특정 백분율로 인코딩된 문자를 왼쪽 일관 되 게 인코딩할 이제는 지 여부를 결정 합니다. 하는 경우 `true`,이 고, 그렇지 않으면 디코딩된 `false`합니다.|.NET Framework 4.7.2|
@@ -122,7 +122,7 @@ ms.locfileid: "58024575"
 |`Switch.System.Windows.Forms.`<br/>`UseLegacyContextMenuStripSourceControlValue`|결정 여부는 <xref:System.Windows.Forms.ContextMenuStrip.SourceControl?displayProperty=nameWithType> 속성에서 중첩 된 메뉴를 열면 원본 제어를 반환 합니다 <xref:System.Windows.Forms.ToolStripMenuItem> 컨트롤입니다. `true` 반환할 `null`, 레거시 동작입니다. `false` 소스 제어를 반환 합니다.|.NET Framework 4.7.2|
 |`Switch.System.Windows.Forms.UseLegacyToolTipDisplay`|도구 설명 호출 지원 비활성화 되었는지 여부를 제어 (`true`) 또는 설정 (`false`). 도구 설명 호출 지원을 사용 하도록 설정 하 여 정의 하는 레거시 접근성 기능 있어야 `Switch.UseLegacyAccessibilityFeatures`, `Switch.UseLegacyAccessibilityFeatures.2`, 및 `Switch.UseLegacyAccessibilityFeatures.3` 모두 사용할 수 없게 (로 `false`).|.NET Framework 4.8|
 |`Switch.System.Windows.Input.Stylus.`<br/>`EnablePointerSupport`|선택적인 지 여부를 결정 `WM_POINTER`-기반된 터치/스타일러스 스택 WPF 응용 프로그램에서 사용 가능 합니다. 자세한 내용은 [완화: 포인터 기반 터치 및 스타일러스 지원](../../../migration-guide/mitigation-pointer-based-touch-and-stylus-support.md)|.NET Framework 4.7|
-|`Switch.System.Windows.Markup.`<br/>`DoNotUseSha256ForMarkupCompilerChecksumAlgorithm`|SHA256 체크섬에 사용 되는 기본 해시 알고리즘 인지 확인 (`false`) 또는 SHA1 (`true`).<br>문제로 충돌 sha1, SHA256을 좋습니다.|.NET Framework 4.7.2|
+|`Switch.System.Windows.Markup.`<br/>`DoNotUseSha256ForMarkupCompilerChecksumAlgorithm`|SHA256 체크섬에 사용 되는 기본 해시 알고리즘 인지 확인 (`false`) 또는 SHA1 (`true`).<br>SHA1 관련 충돌 문제로 인해 SHA256을 사용하는 것이 좋습니다.|.NET Framework 4.7.2|
 |`Switch.System.Windows.Media.ImageSourceConverter.`<br/>`OverrideExceptionWithNullReferenceException`|레거시 있는지 여부를 제어 [NullReferenceException](xref:System.NullReferenceException) 대신 예외의 원인을 더 구체적으로 나타내는 예외가 throw 됩니다 (같은 [DirectoryNotFoundException](xref:System.IO.DirectoryNotFoundException) 또는 [ FileNotFoundException](xref:System.IO.FileNotFoundException)합니다. 처리에 의존 하는 코드에서 사용 하 여 위한 것은 [NullReferenceException](xref:System.NullReferenceException)합니다. | .NET Framework 4.7 |
 |`Switch.System.Workflow.ComponentModel.`<br/>`UseLegacyHashForXomlFileChecksum`|MD5 알고리즘을 사용할 수 빌드 워크플로 프로젝트의에서 XOML 파일의 체크섬 해시 있는지 여부를 제어 (`true`),.NET Framework 4.8에 기본값으로 도입 SHA256 알고리즘을 사용 하는지 또는 합니다.<br>MD5 사용 하 여 충돌 문제로 SHA256을 좋습니다.|.NET Framework 4.8|
 |`Switch.System.Workflow.Runtime.`<br/>`UseLegacyHashForSqlTrackingCacheKey`|체크섬 해시 SqlTrackingService에 의해 MD5 알고리즘을 사용 하는지 여부를 제어 (`true`) 캐시 된 문자열에 대 한.NET Framework 4.8에 기본값으로 도입 SHA256 알고리즘을 사용 하는지 여부 또는 합니다.<br>MD5 사용 하 여 충돌 문제로 SHA256을 좋습니다.|.NET Framework 4.8|
@@ -175,6 +175,7 @@ ms.locfileid: "58024575"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.AppContext?displayProperty=nameWithType>
 - [\<런타임 > 요소](runtime-element.md)
-- [\<configuration> 요소](../configuration-element.md)
+- [\<구성 > 요소](../configuration-element.md)

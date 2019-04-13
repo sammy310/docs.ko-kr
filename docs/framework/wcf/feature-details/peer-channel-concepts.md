@@ -2,12 +2,12 @@
 title: 피어 채널 개념
 ms.date: 03/30/2017
 ms.assetid: 379c2c0b-a44f-4423-9480-4739e7f18614
-ms.openlocfilehash: 471a6425f4a67cbe15d174b410f4be4fbeba785c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8955f6ab18e7fddac2f99b30be38532781c7ae21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551906"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140949"
 ---
 # <a name="peer-channel-concepts"></a>피어 채널 개념
 Windows Communication Foundation (WCF) 피어 채널을 구성 하는 개념을 간략하게 설명이 합니다.  
@@ -22,4 +22,5 @@ Windows Communication Foundation (WCF) 피어 채널을 구성 하는 개념을 
  [피어 확인자](../../../../docs/framework/wcf/feature-details/peer-resolvers.md):  피어 이름 확인 프로토콜 (PRNP) 및 기타 사용자 지정 해결 프로그램 사용에 설명 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [피어 채널 응용 프로그램 빌드](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

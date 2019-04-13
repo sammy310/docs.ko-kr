@@ -2,12 +2,12 @@
 title: SQL Server 이진 및 큰 값 데이터
 ms.date: 03/30/2017
 ms.assetid: e00827b3-7511-4b2d-91d7-851ca86cc6b5
-ms.openlocfilehash: f6bd62d2e9d2f87947e01b7964c5d151690b62bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b7a3f16726d6363cd702fb912bb7be281a25000
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643036"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192968"
 ---
 # <a name="sql-server-binary-and-large-value-data"></a>SQL Server 이진 및 큰 값 데이터
 SQL Server에서는 `max`, `varchar` 및 `nvarchar` 데이터 형식의 저장소 용량을 확장하는 `varbinary` 지정자를 지원합니다. `varchar(max)`를 `nvarchar(max)`, 및 `varbinary(max)` 이라고 *큰 값 데이터 형식*합니다. 큰 값 데이터 형식을 사용하면 데이터를 최대 2^31-1바이트까지 저장할 수 있습니다.  
@@ -22,6 +22,7 @@ SQL Server에서는 `max`, `varchar` 및 `nvarchar` 데이터 형식의 저장�
  FILESTREAM 특성을 사용하여 SQL Server 2008에 저장된 큰 값 데이터로 작업하는 방법에 대해 설명합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [SQL Server 데이터 형식 및 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
 - [ADO.NET에서 SQL Server 데이터 작업](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
 - [ADO.NET에서 데이터 검색 및 수정](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)

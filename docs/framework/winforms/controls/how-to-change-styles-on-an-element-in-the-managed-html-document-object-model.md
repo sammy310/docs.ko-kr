@@ -1,5 +1,5 @@
 ---
-title: '방법: 관리 되는 HTML 문서 개체 모델의 요소에에서 대 한 스타일 변경'
+title: '방법: 관리형 HTML 문서 개체 모델에서 요소의 스타일 변경'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - managed HTML DOM [Windows Forms], changing styles on elements
 ms.assetid: 154e8d9f-3e2d-4e8b-a6f3-c85a070e9cc1
-ms.openlocfilehash: a1abfaeab735746edbf089d576dc6f56dc4a6eea
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 804041991199dd2722e3a0f38800bafd8933bbab
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712775"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333667"
 ---
-# <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>방법: 관리 되는 HTML 문서 개체 모델의 요소에에서 대 한 스타일 변경
+# <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>방법: 관리형 HTML 문서 개체 모델에서 요소의 스타일 변경
 
 모양을 제어 하는 문서 및 해당 요소의 html에서 스타일을 사용할 수 있습니다. <xref:System.Windows.Forms.HtmlDocument> 및 <xref:System.Windows.Forms.HtmlElement> 지원 <xref:System.Windows.Forms.HtmlElement.Style%2A> 스타일 문자열의 형식은 사용 하는 속성:
 
@@ -68,7 +68,7 @@ ms.locfileid: "57712775"
      [!code-csharp[ManagedDOMStyles#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/Form1.cs#2)]
      [!code-vb[ManagedDOMStyles#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/Form1.vb#2)]  
   
-7.  프로젝트를 실행합니다. 커서를 첫 번째 실행 `DIV` 코드의 결과를 관찰 합니다.  
+7. 프로젝트를 실행합니다. 커서를 첫 번째 실행 `DIV` 코드의 결과를 관찰 합니다.  
   
 ## <a name="example"></a>예제  
  다음 코드 예제에 대 한 전체 코드를 보여 줍니다.는 `StyleGenerator` 기존 스타일 값을 구문 분석 하는 클래스 지원 추가, 변경 및 스타일을 제거 하 고 요청 된 변경 내용으로 새 스타일 값을 반환 합니다.  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: 01b150d70c07897f8217ed6958e3654aa28fdf51
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 55925b0f007b1be2f5d46ffc0854601f483b2e2d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971795"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333836"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>방법: 프로시저 (Visual Basic)에 대 한 매개 변수를 정의 합니다.
 A *매개 변수* 호출 코드를 호출할 때 프로시저에 값을 전달할 수 있습니다. 동일한 방식으로 변수를 선언 하면 해당 이름 및 데이터 형식을 지정 하는 프로시저에 대 한 각 매개 변수를 선언 합니다. 전달 메커니즘을 지정할 수도 있습니다 및 선택적 매개 변수 인지 합니다.  
@@ -22,17 +22,17 @@ A *매개 변수* 호출 코드를 호출할 때 프로시저에 값을 전달�
   
 ### <a name="to-define-a-procedure-parameter"></a>프로시저 매개 변수를 정의 하려면  
   
-1.  프로시저 선언에서 매개 변수 이름이 다른 매개 변수에서 쉼표로 구분 되는 프로시저의 매개 변수 목록에 추가 합니다.  
+1. 프로시저 선언에서 매개 변수 이름이 다른 매개 변수에서 쉼표로 구분 되는 프로시저의 매개 변수 목록에 추가 합니다.  
   
-2.  매개 변수의 데이터 형식을 결정 합니다.  
+2. 매개 변수의 데이터 형식을 결정 합니다.  
   
-3.  매개 변수 이름 뒤에 `As` 절 데이터 형식을 지정 합니다.  
+3. 매개 변수 이름 뒤에 `As` 절 데이터 형식을 지정 합니다.  
   
-4.  매개 변수에 대해 원하는 전달 메커니즘을 결정 합니다. 일반적으로 호출 코드에서 해당 값을 변경할 수 하는 절차를 하려는 경우가 아니면 값으로 매개 변수를 전달 합니다.  
+4. 매개 변수에 대해 원하는 전달 메커니즘을 결정 합니다. 일반적으로 호출 코드에서 해당 값을 변경할 수 하는 절차를 하려는 경우가 아니면 값으로 매개 변수를 전달 합니다.  
   
-5.  매개 변수 이름 앞에 야 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) 하거나 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) 전달 메커니즘을 지정 합니다. 자세한 내용은 [차이점 간의 값과 By Reference 인수를 전달](./differences-between-passing-an-argument-by-value-and-by-reference.md)합니다.  
+5. 매개 변수 이름 앞에 야 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) 하거나 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) 전달 메커니즘을 지정 합니다. 자세한 내용은 [차이점 간의 값과 By Reference 인수를 전달](./differences-between-passing-an-argument-by-value-and-by-reference.md)합니다.  
   
-6.  매개 변수가 선택적 이면 전달 메커니즘을 앞에 야 [선택 사항](../../../../visual-basic/language-reference/modifiers/optional.md) 등호를 사용 하 여 매개 변수 데이터 형식에 따라 (`=`) 및 기본 값입니다.  
+6. 매개 변수가 선택적 이면 전달 메커니즘을 앞에 야 [선택 사항](../../../../visual-basic/language-reference/modifiers/optional.md) 등호를 사용 하 여 매개 변수 데이터 형식에 따라 (`=`) 및 기본 값입니다.  
   
      개요를 정의 하는 다음 예제는 `Sub` 세 개의 매개 변수를 사용 하 여 프로시저입니다. 처음 두 개는 필수 되며 세 번째 옵션입니다. 매개 변수 선언 매개 변수 목록에 쉼표로 구분 됩니다.  
   
@@ -55,11 +55,11 @@ A *매개 변수* 호출 코드를 호출할 때 프로시저에 값을 전달�
 ## <a name="see-also"></a>참고자료
 
 - [절차](./index.md)
-- [Sub 프로시저](./sub-procedures.md)
-- [Function 프로시저](./function-procedures.md)
+- [하위 프로시저](./sub-procedures.md)
+- [함수 프로시저](./function-procedures.md)
 - [방법: 프로시저에 인수 전달](./how-to-pass-arguments-to-a-procedure.md)
 - [값 또는 참조로 인수 전달](./passing-arguments-by-value-and-by-reference.md)
 - [재귀 프로시저](./recursive-procedures.md)
 - [프로시저 오버로딩](./procedure-overloading.md)
 - [개체 및 클래스](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [개체 지향 프로그래밍(Visual Basic)](../../concepts/object-oriented-programming.md)
+- [개체 지향 프로그래밍 (Visual Basic)](../../concepts/object-oriented-programming.md)

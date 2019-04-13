@@ -9,12 +9,12 @@ helpviewer_keywords:
 - antialiasing [Windows Forms], smoothing modes
 - GDI+, antialiasing
 ms.assetid: 810da1a4-c136-4abf-88df-68e49efdd8d4
-ms.openlocfilehash: 6ea49c591b43d3f70bfd39058fd5ee256c537ec2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cbc9033f18f1ab255862c8f8e2891aa9b68cf8d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725014"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078500"
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>선과 곡선의 앤티 앨리어싱
 사용 하는 경우 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 선을 그릴 시작 지점 및 끝 줄의 지점 제공 되지만 줄에 각 픽셀에 대 한 정보를 제공할 필요가 없습니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 특정 디스플레이 장치에 선을 표시 하려면 어떤 픽셀이 켜 집니다 결정할 디스플레이 드라이버 소프트웨어와 함께 작동 합니다.  
@@ -45,6 +45,7 @@ ms.locfileid: "57725014"
  [!code-vb[LinesCurvesAndShapes#81](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#81)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Drawing.Drawing2D.SmoothingMode?displayProperty=nameWithType>
 - [선, 곡선 및 도형](lines-curves-and-shapes.md)
 - [방법: 텍스트에 앤티 앨리어싱 사용](how-to-use-antialiasing-with-text.md)

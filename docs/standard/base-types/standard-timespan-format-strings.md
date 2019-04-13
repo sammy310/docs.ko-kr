@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15c357533c9f25a2f29da9a9b5cab185712f02f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1bf7424c8aa2ae816340f6fa641e5c79a56ae0dc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634924"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834129"
 ---
 # <a name="standard-timespan-format-strings"></a>표준 TimeSpan 서식 문자열
 <a name="Top"></a> 표준 <xref:System.TimeSpan> 형식 문자열은 단일 형식 지정자를 사용하여 서식 지정 작업으로 생성되는 <xref:System.TimeSpan> 값의 텍스트 표현을 정의합니다. 공백을 포함하여 문자가 두 개 이상 포함된 형식 문자열은 사용자 지정 <xref:System.TimeSpan> 형식 문자열로 해석됩니다. 자세한 내용은 [사용자 지정 TimeSpan 서식 문자열](../../../docs/standard/base-types/custom-timespan-format-strings.md)을 참조하세요.  
@@ -43,9 +43,9 @@ ms.locfileid: "54634924"
   
 |형식 지정자|name|설명|예제|  
 |----------------------|----------|-----------------|--------------|  
-|"c"|상수(고정) 형식|이 지정자는 문화권을 구분하지 않으며 형식은 `[-][d’.’]hh’:’mm’:’ss[‘.’fffffff]`입니다.<br /><br /> "t" 및 "T" 형식 문자열은 같은 결과를 생성합니다.<br /><br /> 추가 정보: [상수("c") 형식 지정자](#Constant).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
-|"g"|일반 약식|이 지정자는 필요한 내용만 출력하고 문화권을 구분하며 형식은 `[-][d’:’]h’:’mm’:’ss[.FFFFFFF]`입니다.<br /><br /> 추가 정보: [일반 약식("g") 형식 지정자](#GeneralShort).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5(en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5(fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599(en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599(fr-FR)|  
-|"G"|일반 긴 형식|이 지정자는 항상 일 수와 7자리 소수 자릿수를 출력하고 문화권을 구분하며 형식은 `[-]d’:’hh’:’mm’:’ss.fffffff`입니다.<br /><br /> 추가 정보: [일반 긴("G") 형식 지정자](#GeneralLong).|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000(en-US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000(fr-FR)|  
+|"c"|상수(고정) 형식|이 지정자는 문화권을 구분하지 않으며 형식은 `[-][d'.']hh':'mm':'ss['.'fffffff]`입니다.<br /><br /> "t" 및 "T" 형식 문자열은 같은 결과를 생성합니다.<br /><br /> 추가 정보: [상수("c") 형식 지정자](#Constant).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
+|"g"|일반 약식|이 지정자는 필요한 내용만 출력하고 문화권을 구분하며 형식은 `[-][d':']h':'mm':'ss[.FFFFFFF]`입니다.<br /><br /> 추가 정보: [일반 약식("g") 형식 지정자](#GeneralShort).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5(en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5(fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599(en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599(fr-FR)|  
+|"G"|일반 긴 형식|이 지정자는 항상 일 수와 7자리 소수 자릿수를 출력하고 문화권을 구분하며 형식은 `[-]d':'hh':'mm':'ss.fffffff`입니다.<br /><br /> 추가 정보: [일반 긴("G") 형식 지정자](#GeneralLong).|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000(en-US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000(fr-FR)|  
   
 <a name="Constant"></a>   
 ## <a name="the-constant-c-format-specifier"></a>상수("c") 형식 지정자  

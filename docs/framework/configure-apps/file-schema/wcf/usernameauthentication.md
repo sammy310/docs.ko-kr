@@ -2,12 +2,12 @@
 title: <userNameAuthentication>
 ms.date: 03/30/2017
 ms.assetid: 24d8b398-770f-418f-ba23-c4325419cfa6
-ms.openlocfilehash: 05aa326c50823810caee5d6552af4d50424251dd
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5a4cf8d429198b889f2bb362294ba3841c814b26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55274024"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083147"
 ---
 # <a name="usernameauthentication"></a>\<userNameAuthentication>
 사용자 이름 및 암호에 따라 서비스의 자격 증명을 지정합니다.  
@@ -61,6 +61,7 @@ ms.locfileid: "55274024"
  사용자 이름/암호에 대한 Windows 인증을 사용하기 위해 구성된 서비스에서 사용하는 바인딩이 없으면 로그온 토큰의 캐싱과 관련된 설정이 무시됩니다. 이것에는 `cacheLogonTokenLifetime`, `cacheLogonTokens` 및 `maxCacheLogonTokens`가 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.UserNameServiceElement>
 - <xref:System.ServiceModel.Description.ServiceCredentials.UserNameAuthentication%2A>
 - <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential>

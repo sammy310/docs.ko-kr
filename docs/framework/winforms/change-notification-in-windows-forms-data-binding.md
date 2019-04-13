@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms, data binding
 - Windows Forms, adding change notification for data binding
 ms.assetid: b5b10f90-0585-41d9-a377-409835262a92
-ms.openlocfilehash: cea6cab76a12d6dbfdc741b426b67859e0e5141e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 559cdee1cce84df1c4b838e249d11ba235a0c636
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713421"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097579"
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Windows Forms 데이터 바인딩의 변경 알림
 Windows Forms 데이터 바인딩의 가장 중요 한 개념 중 하나인 *변경 알림*합니다. 데이터 소스와 바인딩되는 컨트롤에 항상 최신 데이터를 갖도록 변경 알림 데이터 바인딩에 대 한 추가 해야 합니다. 구체적으로 바인딩된 컨트롤에 대 한 알림을 해당 데이터 원본에 대 한 변경 내용을 확인 하려는 하 고 데이터 소스 컨트롤의 바인딩된 속성에 대 한 변경 내용을 알립니다.  
@@ -33,6 +33,7 @@ Windows Forms 데이터 바인딩의 가장 중요 한 개념 중 하나인 *변
  마지막으로, 컨트롤에서 노출 해야 합니다는 *PropertyName*Changed 이벤트 데이터에 바인딩되도록 디자인 된 각 속성에 대 한 합니다. 컨트롤 속성에 변경 내용은 바인딩된 데이터 원본에 전파 됩니다. 자세한 내용은 [방법: PropertyNameChanged 패턴 적용](how-to-apply-the-propertynamechanged-pattern.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.ComponentModel.INotifyPropertyChanged>
 - <xref:System.ComponentModel.BindingList%601>

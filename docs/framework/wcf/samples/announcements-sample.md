@@ -2,12 +2,12 @@
 title: 알림 샘플
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
-ms.openlocfilehash: 91422d9b625339236e3d8d09683deba18a24c9d4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 895043976fd39ac0057c8dbc1c7daf0394393984
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814213"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333979"
 ---
 # <a name="announcements-sample"></a>알림 샘플
 이 샘플에서는 검색 기능의 알림 기능을 사용하는 방법을 보여 줍니다. 서비스에서는 알림을 사용하여 서비스에 대한 메타데이터가 들어 있는 알림 메시지를 보낼 수 있습니다. 기본적으로 서비스가 시작될 때는 Hello 알림이 보내지고 서비스가 종료될 때는 Bye 알림이 보내집니다. 이러한 알림은 멀티캐스트하거나 지점 간에 보낼 수 있습니다. 이 샘플은 서비스와 클라이언트에 해당하는 두 개의 프로젝트로 구성되어 있습니다.  
@@ -68,15 +68,15 @@ static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
   
 #### <a name="to-use-this-sample"></a>이 샘플을 사용하려면  
   
-1.  이 샘플에서는 HTTP 끝점을 사용 하며이 샘플을 적절 한 URL Acl을 실행 하려면 추가 되어야 합니다 참조 [HTTP 및 HTTPS 구성](https://go.microsoft.com/fwlink/?LinkId=70353) 세부 정보에 대 한 합니다. 높은 권한으로 다음 명령을 실행하면 적절한 ACL이 추가됩니다. 명령이 지정한 대로 작동하지 않는 경우 다음 인수의 도메인과 사용자 이름을 대체할 수 있습니다. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. 이 샘플에서는 HTTP 끝점을 사용 하며이 샘플을 적절 한 URL Acl을 실행 하려면 추가 되어야 합니다 참조 [HTTP 및 HTTPS 구성](https://go.microsoft.com/fwlink/?LinkId=70353) 세부 정보에 대 한 합니다. 높은 권한으로 다음 명령을 실행하면 적절한 ACL이 추가됩니다. 명령이 지정한 대로 작동하지 않는 경우 다음 인수의 도메인과 사용자 이름을 대체할 수 있습니다. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  솔루션을 빌드합니다.  
+2. 솔루션을 빌드합니다.  
   
-3.  client.exe 응용 프로그램을 실행합니다.  
+3. client.exe 응용 프로그램을 실행합니다.  
   
-4.  service.exe 응용 프로그램을 실행합니다. 그러면 클라이언트에서는 온라인 알림을 받습니다.  
+4. service.exe 응용 프로그램을 실행합니다. 그러면 클라이언트에서는 온라인 알림을 받습니다.  
   
-5.  service.exe 응용 프로그램을 닫습니다. 그러면 클라이언트에서는 오프라인 알림을 받습니다.  
+5. service.exe 응용 프로그램을 닫습니다. 그러면 클라이언트에서는 오프라인 알림을 받습니다.  
   
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
@@ -86,4 +86,3 @@ static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
 >  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Announcements`  
-  

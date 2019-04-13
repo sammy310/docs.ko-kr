@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: abae0e25f506b930fdb257cea7afab87a630ee0a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9503c12da9e98fbd43f3904aad25c5d10655cec2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466714"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075563"
 ---
 # <a name="icordebugnativeframe2ischild-method"></a>ICorDebugNativeFrame2::IsChild 메서드
 현재 프레임 자식 프레임 인지 확인 합니다.  
@@ -44,7 +44,7 @@ HRESULT IsChild([out] BOOL * pIsChild);
 |-------------|-----------------|  
 |S_OK|자식 상태가 반환 되었습니다.|  
 |E_FAIL|자식 상태를 반환 하지 못했습니다.|  
-|E_INVALIDARG|`pIsChild`가 null입니다.|  
+|E_INVALIDARG|`pIsChild` null입니다.|  
   
 ## <a name="exceptions"></a>예외  
   
@@ -61,6 +61,7 @@ HRESULT IsChild([out] BOOL * pIsChild);
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICorDebugNativeFrame2 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)

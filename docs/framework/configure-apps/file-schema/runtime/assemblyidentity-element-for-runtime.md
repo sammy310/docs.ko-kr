@@ -1,5 +1,5 @@
 ---
-title: <assemblyIdentity>에 대한 <runtime> 요소
+title: <assemblyIdentity> 에 대 한 요소 <runtime>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/assemblyIdentity
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - container tags, <assemblyIdentity> element
 - assemblyIdentity element
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
-ms.openlocfilehash: 6f05f1f395156e149e73c1081e486b5285c2b599
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: d5766b76f18dce441cb260887a753dcf64642a6f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277500"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098704"
 ---
 # <a name="assemblyidentity-element-for-runtime"></a>\<assemblyIdentity > 요소에 대 한 \<런타임 >
 어셈블리에 대 한 식별 정보를 포함합니다.  
@@ -120,6 +120,7 @@ culture="assembly culture"/>
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [어셈블리 버전 리디렉션](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

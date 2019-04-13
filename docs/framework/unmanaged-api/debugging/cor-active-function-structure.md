@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5adf43bd68db449e465ffe3517c9eb9d41a5c18a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c0400da0cd29d642a1be42be7e2b22213ae54b94
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502054"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121773"
 ---
 # <a name="coractivefunction-structure"></a>COR_ACTIVE_FUNCTION 구조체
 스레드 프레임에서 현재 활성 상태인 함수에 대한 정보를 포함합니다. 이 구조체를 사용 합니다 [ICorDebugThread2::GetActiveFunctions](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md) 메서드.  
@@ -58,5 +58,6 @@ typedef struct  _COR_ACTIVE_FUNCTION {
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [디버깅 구조체](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)

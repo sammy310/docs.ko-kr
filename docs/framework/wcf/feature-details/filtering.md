@@ -2,12 +2,12 @@
 title: 필터링
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-ms.openlocfilehash: 735fd4252bb1740c149659f6c6fe81f18285914a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7051e69f6a38d536251c26365a634d4ffbc46f1b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626110"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339595"
 ---
 # <a name="filtering"></a>필터링
 Windows Communication Foundation (WCF) 필터링 시스템 선언적 필터를 사용 메시지를 일치 시키고 운영 결정을 내릴 수 있습니다. 필터를 사용하여 메시지 일부를 검사하고 메시지를 통해 수행할 작업을 결정할 수 있습니다. 예를 들어, 큐 프로세스에서는 XPath 1.0 쿼리를 사용하여 알려진 헤더의 우선 순위 요소를 검사함으로써 메시지를 큐의 앞으로 이동할지 여부를 결정할 수 있습니다.  
@@ -42,7 +42,7 @@ Windows Communication Foundation (WCF) 필터링 시스템 선언적 필터를 �
   
 ### <a name="prefix-endpoint-address-filters"></a>접두사 엔드포인트 주소 필터  
   
-1.  <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>는 메시지 URI의 접두사에 위치할 수 있는 일치를 제외하고 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> 필터와 동일하게 작동합니다. 예를 들어 주소를 지정 하는 필터 `http://www.adatum.com` 주소가 지정 된 메시지를 일치 `http://www.adatum.com/userA`합니다.  
+1. <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>는 메시지 URI의 접두사에 위치할 수 있는 일치를 제외하고 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> 필터와 동일하게 작동합니다. 예를 들어 주소를 지정 하는 필터 `http://www.adatum.com` 주소가 지정 된 메시지를 일치 `http://www.adatum.com/userA`합니다.  
   
 ### <a name="xpath-message-filters"></a>XPath 메시지 필터  
  <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>는 XPath 식을 사용하여 XML 문서에 특정 요소, 특성, 텍스트 또는 기타 XML 구문을 포함할지 여부를 결정합니다. 필터는 엄격한 XPath의 하위 집합에 대해 매우 효율적으로 최적화됩니다. XML 경로 언어에 설명 되어는 [W3C XML Path Language 1.0 사양](https://go.microsoft.com/fwlink/?LinkId=94779)합니다.  
@@ -84,4 +84,5 @@ Windows Communication Foundation (WCF) 필터링 시스템 선언적 필터를 �
 -   `EndpointAddress`에 지정된 대로 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>의 나머지 엔드포인트 매개 변수.  
   
 ## <a name="see-also"></a>참고자료
+
 - [데이터 전송 및 Serialization](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)

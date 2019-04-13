@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c3cccb94268264217a1e6a1b5def71c6c433b820
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a68aac2a92a0569e288da858e4a4e4695fd5eaa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614785"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193917"
 ---
 # <a name="invalidcercall-mda"></a>invalidCERCall MDA
 `invalidCERCall` MDA(관리 디버깅 도우미)는 안정성 계약 또는 지나치게 약한 계약이 없는 메서드에 대한 호출이 CER(제약이 있는 실행 영역) 그래프 내에 있으면 활성화됩니다. 약한 계약은 가장 나쁜 사례 상태 손상이 호출에 전달된 인스턴스보다 큰 범위에 관련됨을 선언하는 계약입니다. 즉, <xref:System.AppDomain> 또는 프로세스 상태가 손상될 수 있거나 CER 내에서 호출될 때 결과가 항상 결정적으로 계산 가능한 것은 아닙니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "54614785"
   
  `Method 'MethodWithCer', while executing within a constrained execution region, makes a call at IL offset 0x000C to 'MethodWithWeakContract', which does not have a sufficiently strong reliability contract and might cause non-deterministic results.`  
   
-## <a name="configuration"></a>구성하기  
+## <a name="configuration"></a>구성  
   
 ```xml  
 <mdaConfig>  
@@ -55,6 +55,7 @@ ms.locfileid: "54614785"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution>
 - [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

@@ -5,27 +5,27 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-ms.openlocfilehash: 8754049e493ab23b1e7b01d0f315b00bdebf0378
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: fc2b7ed2004b842116d051b393f00506428def61
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841422"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344548"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>방법: 람다 식 (Visual Basic) 만들기
 A *람다 식* 은 함수 또는 서브루틴에 이름이 없습니다입니다. 람다 식은 대리자 형식이 유효한 모든 곳에서 사용할 수 있습니다.  
   
 ### <a name="to-create-a-single-line-lambda-expression-function"></a>한 줄 람다 식 함수를 만들려면  
   
-1.  대리자 형식을 사용할 수 있는 모든 상황에서 키워드를 입력 `Function`다음 예제와 같이:  
+1. 대리자 형식을 사용할 수 있는 모든 상황에서 키워드를 입력 `Function`다음 예제와 같이:  
   
-     `Dim add1 =`  `Function`  
+     `Dim add1 =`   `Function`  
   
-2.  괄호로 직후 `Function`, 함수의 매개 변수를 입력 합니다. 뒤에 이름을 지정 하지 않으면 확인 `Function`합니다.  
+2. 괄호로 직후 `Function`, 함수의 매개 변수를 입력 합니다. 뒤에 이름을 지정 하지 않으면 확인 `Function`합니다.  
   
-     `Dim add1 = Function`  `(num As Integer)`  
+     `Dim add1 = Function`   `(num As Integer)`  
   
-3.  매개 변수 목록 다음 함수의 본문으로 단일 식을 입력 합니다. 식이 계산 되는 값에는 함수가 반환한 값이입니다. 사용 하지 않는 것을 `As` 반환 형식을 지정 하는 절.  
+3. 매개 변수 목록 다음 함수의 본문으로 단일 식을 입력 합니다. 식이 계산 되는 값에는 함수가 반환한 값이입니다. 사용 하지 않는 것을 `As` 반환 형식을 지정 하는 절.  
   
      [!code-vb[VbVbalrLambdas#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#1)]  
   
@@ -33,21 +33,21 @@ A *람다 식* 은 함수 또는 서브루틴에 이름이 없습니다입니다
   
      [!code-vb[VbVbalrLambdas#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#2)]  
   
-4.  또는 동일한 결과 다음 예제에서 수행 됩니다.  
+4. 또는 동일한 결과 다음 예제에서 수행 됩니다.  
   
      [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
 ### <a name="to-create-a-single-line-lambda-expression-subroutine"></a>한 줄 람다 식 서브루틴을 만들려면  
   
-1.  대리자 형식을 사용할 수 있는 모든 상황에서 키워드를 입력 `Sub`다음 예제에서와 같이 합니다.  
+1. 대리자 형식을 사용할 수 있는 모든 상황에서 키워드를 입력 `Sub`다음 예제에서와 같이 합니다.  
   
-     `Dim add1 =`  `Sub`  
+     `Dim add1 =`   `Sub`  
   
-2.  괄호로 직후 `Sub`, 서브루틴의 매개 변수를 입력 합니다. 뒤에 이름을 지정 하지 않으면 확인 `Sub`합니다.  
+2. 괄호로 직후 `Sub`, 서브루틴의 매개 변수를 입력 합니다. 뒤에 이름을 지정 하지 않으면 확인 `Sub`합니다.  
   
-     `Dim add1 = Sub`  `(msg As String)`  
+     `Dim add1 = Sub`   `(msg As String)`  
   
-3.  매개 변수 목록에 다음 서브루틴의 본문으로 단일 문을 입력 합니다.  
+3. 매개 변수 목록에 다음 서브루틴의 본문으로 단일 문을 입력 합니다.  
   
      [!code-vb[VbVbalrLambdas#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#17)]  
   
@@ -57,17 +57,17 @@ A *람다 식* 은 함수 또는 서브루틴에 이름이 없습니다입니다
   
 ### <a name="to-create-a-multiline-lambda-expression-function"></a>여러 줄 람다 식 함수를 만들려면  
   
-1.  대리자 형식을 사용할 수 있는 모든 상황에서 키워드를 입력 `Function`다음 예제에서와 같이 합니다.  
+1. 대리자 형식을 사용할 수 있는 모든 상황에서 키워드를 입력 `Function`다음 예제에서와 같이 합니다.  
   
-     `Dim add1 =`  `Function`  
+     `Dim add1 =`   `Function`  
   
-2.  괄호로 직후 `Function`, 함수의 매개 변수를 입력 합니다. 뒤에 이름을 지정 하지 않으면 확인 `Function`합니다.  
+2. 괄호로 직후 `Function`, 함수의 매개 변수를 입력 합니다. 뒤에 이름을 지정 하지 않으면 확인 `Function`합니다.  
   
-     `Dim add1 = Function`  `(index As Integer)`  
+     `Dim add1 = Function`   `(index As Integer)`  
   
-3.  Enter 키를 누릅니다. `End Function` 문을 자동으로 추가 됩니다.  
+3. Enter 키를 누릅니다. `End Function` 문을 자동으로 추가 됩니다.  
   
-4.  함수의 본문 내에서 식을 만들고 값을 반환 하려면 다음 코드를 추가 합니다. 사용 하지 않는 것을 `As` 반환 형식을 지정 하는 절.  
+4. 함수의 본문 내에서 식을 만들고 값을 반환 하려면 다음 코드를 추가 합니다. 사용 하지 않는 것을 `As` 반환 형식을 지정 하는 절.  
   
      [!code-vb[VbVbalrLambdas#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#19)]  
   
@@ -77,17 +77,17 @@ A *람다 식* 은 함수 또는 서브루틴에 이름이 없습니다입니다
   
 ### <a name="to-create-a-multiline-lambda-expression-subroutine"></a>여러 줄 람다 식 서브루틴을 만들려면  
   
-1.  대리자 형식을 사용할 수 있는 모든 상황에서 키워드를 입력 `Sub`다음 예제에서와 같이:  
+1. 대리자 형식을 사용할 수 있는 모든 상황에서 키워드를 입력 `Sub`다음 예제에서와 같이:  
   
-     `Dim add1 =`  `Sub`  
+     `Dim add1 =`   `Sub`  
   
-2.  괄호로 직후 `Sub`, 서브루틴의 매개 변수를 입력 합니다. 뒤에 이름을 지정 하지 않으면 확인 `Sub`합니다.  
+2. 괄호로 직후 `Sub`, 서브루틴의 매개 변수를 입력 합니다. 뒤에 이름을 지정 하지 않으면 확인 `Sub`합니다.  
   
      `Dim add1 = Sub`  `(msg As String)`  
   
-3.  Enter 키를 누릅니다. `End Sub` 문을 자동으로 추가 됩니다.  
+3. Enter 키를 누릅니다. `End Sub` 문을 자동으로 추가 됩니다.  
   
-4.  함수의 본문 내에서 서브루틴 호출 될 때 실행한 다음 코드를 추가 합니다.  
+4. 함수의 본문 내에서 서브루틴 호출 될 때 실행한 다음 코드를 추가 합니다.  
   
      [!code-vb[VbVbalrLambdas#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#21)]  
   

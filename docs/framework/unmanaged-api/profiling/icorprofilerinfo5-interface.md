@@ -12,12 +12,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e55d52b3ba3bb2b932627ca364ed8f6084fcf26
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b249605833e8fbd219495ab92bebc2eff6177eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536466"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094257"
 ---
 # <a name="icorprofilerinfo5-interface"></a>ICorProfilerInfo5 인터페이스
 [.NET Framework 4.5.2 이상 버전에서 지원됨]  
@@ -42,4 +42,5 @@ ms.locfileid: "54536466"
  **.NET Framework 버전:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

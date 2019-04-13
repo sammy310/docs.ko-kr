@@ -1,5 +1,5 @@
 ---
-title: <defaultProxy> 요소(네트워크 설정)
+title: <defaultProxy> 요소 (네트워크 설정)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultProxy
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-ms.openlocfilehash: 9d9e96296cb764d3fbb3cdcd561e036f9ad6aa2b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ce08dadb0fb7b986c0573b1514f9ecbbe2961c3a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257215"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228349"
 ---
 # <a name="defaultproxy-element-network-settings"></a>\<defaultProxy > 요소 (네트워크 설정)
 HTTP(Hypertext Transfer Protocol) 프록시 서버를 구성합니다.  
@@ -49,8 +49,8 @@ HTTP(Hypertext Transfer Protocol) 프록시 서버를 구성합니다.
 |**요소**|**설명**|  
 |-----------------|---------------------|  
 |[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|프록시를 사용하지 않는 주소를 설명하는 정규식 집합을 제공합니다.|  
-|[module](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|응용 프로그램에 새 프록시 모듈을 추가합니다.|  
-|[proxy](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|프록시 서버를 정의합니다.|  
+|[name](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|응용 프로그램에 새 프록시 모듈을 추가합니다.|  
+|[프록시](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|프록시 서버를 정의합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -87,5 +87,6 @@ HTTP(Hypertext Transfer Protocol) 프록시 서버를 구성합니다.
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [네트워크 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

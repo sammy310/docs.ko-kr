@@ -1,5 +1,5 @@
 ---
-title: '방법: 바인딩 지우기'
+title: '방법: 바인딩 정리'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - clearing bindings [WPF]
 - data binding [WPF], clearing bindings
 ms.assetid: 73962a93-32a9-4bcd-9240-bcfbb239093a
-ms.openlocfilehash: 8bffc34864a2bf929bcbed09f16eac282e1ba2a5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8140928d44555e399ddf4ebd73407a251ad3cffe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360231"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101421"
 ---
-# <a name="how-to-clear-bindings"></a>방법: 바인딩 지우기
+# <a name="how-to-clear-bindings"></a>방법: 바인딩 정리
 이 예에서는 개체에서 바인딩을 지우는 방법을 보여줍니다.  
   
 ## <a name="example"></a>예제  
@@ -30,6 +30,7 @@ ms.locfileid: "57360231"
  개체의 모든 가능한 속성에서 바인딩을 지우려면를 사용 하 여 <xref:System.Windows.Data.BindingOperations.ClearAllBindings%2A>입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Data.BindingOperations>
 - [데이터 바인딩 개요](data-binding-overview.md)
 - [방법 항목](data-binding-how-to-topics.md)

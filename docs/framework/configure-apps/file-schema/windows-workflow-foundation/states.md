@@ -3,12 +3,12 @@ title: <states>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: ebea5e7c-ad58-43c5-8f2d-cca25ae1b721
-ms.openlocfilehash: 018ea20342475de40a8392a9272724e37902ecb9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 30cb2efa4c00c8b292a8ace6a03306d6ac76a7f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257722"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073124"
 ---
 # <a name="states"></a>\<states>
 추적 레코드가 만들어질 때 추적된 워크플로 인스턴스에서 구독된 상태의 컬렉션을 나타냅니다.  
@@ -72,11 +72,11 @@ ms.locfileid: "55257722"
 |Idle|워크플로 인스턴스가 유휴 상태입니다.|  
 |Persisted|워크플로 인스턴스가 지속되었습니다.|  
 |Resumed|워크플로 인스턴스가 다시 시작되었습니다.|  
-|시작됨|워크플로 인스턴스가 시작되었습니다.|  
+|Started|워크플로 인스턴스가 시작되었습니다.|  
 |UnhandledException|워크플로 인스턴스에서 처리되지 않은 예외가 발생했습니다.|  
 |Unloaded|워크플로 인스턴스가 언로드되었습니다.|  
 |Canceled|워크플로 인스턴스가 취소되었습니다.|  
-|일시 중단됨|워크플로 인스턴스가 일시 중단된 경우|  
+|Suspended|워크플로 인스턴스가 일시 중단된 경우|  
 |Terminated|워크플로 인스턴스가 종료됩니다.|  
 |Unsuspended|워크플로 인스턴스의 일시 중단이 해제됩니다.|  
   
@@ -94,6 +94,7 @@ ms.locfileid: "55257722"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>

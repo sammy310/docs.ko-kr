@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ed45c3975c58331490f89d8ca705f080d01d74e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7a538f14e7dbf24a94343f364201e968bffa757f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466806"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158927"
 ---
 # <a name="icorruntimehostcreatedomainex-method"></a>ICorRuntimeHost::CreateDomainEx 메서드
 응용 프로그램 도메인을 만듭니다. 호출자가 형식의 인터페이스 포인터를 받을 <xref:System._AppDomain>, 형식 인스턴스에 <xref:System.AppDomain?displayProperty=nameWithType>합니다. 이 메서드는 호출자가 반환 된 추가 기능을 구성 하려면 IAppDomainSetup 인스턴스를 전달 하도록 허용 <xref:System._AppDomain> 인스턴스.  
@@ -73,6 +73,7 @@ HRESULT CreateDomainEx (
  **.NET framework 버전:** 1.0, 1.1  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
 - <xref:System.IAppDomainSetup?displayProperty=nameWithType>

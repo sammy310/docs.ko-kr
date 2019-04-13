@@ -11,12 +11,12 @@ helpviewer_keywords:
 - user input [Windows Forms], controlling
 - text [Windows Forms], controls for input
 ms.assetid: df60565e-5447-4110-92a6-be1f6ff5faa3
-ms.openlocfilehash: 9633f2f871d08b70d6286f510a9ba5cac78ae529
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ff9a0edb44a95f5853edf711e0a1559e3b2e3b15
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703083"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342469"
 ---
 # <a name="walkthrough-working-with-the-maskedtextbox-control"></a>연습: MaskedTextBox 컨트롤 사용
 이 연습에서 설명하는 작업은 다음과 같습니다.  
@@ -31,15 +31,15 @@ ms.locfileid: "57703083"
   
 #### <a name="to-add-a-maskedtextbox-control-to-your-form"></a>MaskedTextBox 컨트롤을 폼에 추가 하려면  
   
-1.  배치 하려는 폼을 엽니다는 <xref:System.Windows.Forms.MaskedTextBox> 제어 합니다.  
+1. 배치 하려는 폼을 엽니다는 <xref:System.Windows.Forms.MaskedTextBox> 제어 합니다.  
   
-2.  끌어서를 <xref:System.Windows.Forms.MaskedTextBox> 에서 제어 합니다 **도구 상자** 폼에 있습니다.  
+2. 끌어서를 <xref:System.Windows.Forms.MaskedTextBox> 에서 제어 합니다 **도구 상자** 폼에 있습니다.  
   
-3.  선택한 컨트롤을 마우스 오른쪽 단추로 클릭 **속성**합니다. 에 **속성** 창에서 합니다 **마스크** 속성을 클릭 합니다 **...**  속성 이름 옆에 있는 (줄임표) 단추입니다.  
+3. 선택한 컨트롤을 마우스 오른쪽 단추로 클릭 **속성**합니다. 에 **속성** 창에서 합니다 **마스크** 속성을 클릭 합니다 **...**  속성 이름 옆에 있는 (줄임표) 단추입니다.  
   
-4.  에 **입력 마스크** 대화 상자에서를 **짧은 날짜** 마스크 및 클릭 **확인**합니다.  
+4. 에 **입력 마스크** 대화 상자에서를 **짧은 날짜** 마스크 및 클릭 **확인**합니다.  
   
-5.  에 **속성** 창 집합 합니다 <xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A> 속성을 `true`입니다. 이 사용자가 마스크 정의 위반 하는 문자를 입력 하려고 할 때마다 사운드를 짧은 경고음을 발생 합니다.  
+5. 에 **속성** 창 집합 합니다 <xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A> 속성을 `true`입니다. 이 사용자가 마스크 정의 위반 하는 문자를 입력 하려고 할 때마다 사운드를 짧은 경고음을 발생 합니다.  
   
  마스크 속성을 지 원하는 문자 요약이의 설명 섹션을 참조 하세요.를 <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> 속성입니다.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "57703083"
   
 #### <a name="add-a-balloon-tip-for-rejected-mask-input"></a>거부 된 마스크 입력에 대 한 풍선 추가  
   
-1.  반환 합니다 **도구 상자** 추가 <xref:System.Windows.Forms.ToolTip> 폼에.  
+1. 반환 합니다 **도구 상자** 추가 <xref:System.Windows.Forms.ToolTip> 폼에.  
   
-2.  이벤트 처리기를 만들 합니다 <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> 이벤트를 발생 시키는 <xref:System.Windows.Forms.ToolTip> 입력된 오류가 발생 하는 경우. 풍선 5 초 또는 사용자가 클릭 될 때까지 표시 됩니다.  
+2. 이벤트 처리기를 만들 합니다 <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> 이벤트를 발생 시키는 <xref:System.Windows.Forms.ToolTip> 입력된 오류가 발생 하는 경우. 풍선 5 초 또는 사용자가 클릭 될 때까지 표시 됩니다.  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -82,7 +82,7 @@ ms.locfileid: "57703083"
   
 #### <a name="add-a-balloon-tip-for-invalid-data-types"></a>잘못 된 데이터 형식에 대 한 풍선 추가  
   
-1.  폼의 <xref:System.Windows.Forms.Form.Load> 이벤트 처리기를 할당을 <xref:System.Type> 나타내는 개체입니다는 <xref:System.DateTime> 를 입력 합니다 <xref:System.Windows.Forms.MaskedTextBox> 컨트롤의 <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> 속성:  
+1. 폼의 <xref:System.Windows.Forms.Form.Load> 이벤트 처리기를 할당을 <xref:System.Type> 나타내는 개체입니다는 <xref:System.DateTime> 를 입력 합니다 <xref:System.Windows.Forms.MaskedTextBox> 컨트롤의 <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> 속성:  
   
     ```csharp  
     private void Form1_Load(Object sender, EventArgs e)  
@@ -100,7 +100,7 @@ ms.locfileid: "57703083"
     End Sub  
     ```  
   
-2.  <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> 이벤트에 대한 이벤트 처리기를 추가합니다.  
+2. <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> 이벤트에 대한 이벤트 처리기를 추가합니다.  
   
     ```csharp  
     public void maskedTextBox1_TypeValidationCompleted(object sender, TypeValidationEventArgs e)  
@@ -125,5 +125,6 @@ ms.locfileid: "57703083"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.MaskedTextBox>
 - [MaskedTextBox 컨트롤](maskedtextbox-control-windows-forms.md)

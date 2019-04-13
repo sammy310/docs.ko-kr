@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 767508e51660a161a7a6ff0b168a46178d66be99
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 59420cfd29c3228aece9fc5ae02b950db6099ea0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474148"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218474"
 ---
 # <a name="isymunmanageddocumentgetsourcerange-method"></a>ISymUnmanagedDocument::GetSourceRange 메서드
 지정 된 버퍼에 지정된 된 포함된 된 소스 범위를 반환합니다. 버퍼는 소스를 포함할 수 있는 크기 여야 합니다.  
@@ -67,4 +67,5 @@ HRESULT GetSourceRange(
  메서드가 성공 하면 S_OK입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [ISymUnmanagedDocument 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a7e454c15ddfa977a6d06921a5d80a6c05dca92f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: a68e061c6def61746ee65f8a25818f8dbcd785b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973576"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159733"
 ---
 # <a name="icordebugbreakpoint-interface"></a>ICorDebugBreakpoint 인터페이스
 
@@ -52,4 +52,5 @@ ms.locfileid: "56973576"
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

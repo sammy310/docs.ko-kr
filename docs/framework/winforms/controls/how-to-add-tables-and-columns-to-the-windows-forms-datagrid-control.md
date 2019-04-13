@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms DataGrid 컨트롤에 테이블과 열 추가'
+title: '방법: Windows Forms DataGrid 컨트롤에 테이블 및 열 추가'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 2fe661b9-aa06-49b9-a314-a0d3cbfdcb4d
-ms.openlocfilehash: e222227d6283555fa4ec25fe1e5d8e661296034f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cc364f3609f8041378b0b03b8e1bc8f312fade18
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709161"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319913"
 ---
-# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control"></a>방법: Windows Forms DataGrid 컨트롤에 테이블과 열 추가
+# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control"></a>방법: Windows Forms DataGrid 컨트롤에 테이블 및 열 추가
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.  
   
@@ -25,12 +25,12 @@ ms.locfileid: "57709161"
   
 ### <a name="to-add-a-table-and-column-to-a-datagrid-programmatically"></a>테이블 및 열을 DataGrid에 프로그래밍 방식으로 추가 하려면  
   
-1.  테이블의 데이터를 표시 하려면 먼저 바인딩해야 합니다 <xref:System.Windows.Forms.DataGrid> 데이터 집합에는 컨트롤입니다. 자세한 내용은 [방법: 데이터 소스에 Windows Forms DataGrid 컨트롤 바인딩](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)합니다.  
+1. 테이블의 데이터를 표시 하려면 먼저 바인딩해야 합니다 <xref:System.Windows.Forms.DataGrid> 데이터 집합에는 컨트롤입니다. 자세한 내용은 [방법: 데이터 소스에 Windows Forms DataGrid 컨트롤 바인딩](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)합니다.  
   
     > [!CAUTION]
     >  열 스타일을 프로그래밍 방식으로 지정할 때 항상 만들기 **DataGridColumnStyle** 개체에 추가 하는 **GridColumnStylesCollection** 개체를 추가 하기 전에  **DataGridTableStyle** 개체를 **GridTableStylesCollection** 개체입니다. 빈을 추가 하는 경우 **DataGridTableStyle** 개체를 컬렉션에 **DataGridColumnStyle** 개체를 자동으로 생성 됩니다. 새로 추가 하려고 하면 예외가 throw 될 따라서 **DataGridColumnStyle** 중복을 사용 하 여 개체 **MappingName** 값을 **GridColumnStylesCollection**개체입니다.  
   
-2.  새 테이블 스타일을 선언 하 고 해당 매핑을 이름을 설정 합니다.  
+2. 새 테이블 스타일을 선언 하 고 해당 매핑을 이름을 설정 합니다.  
   
     ```vb  
     Dim ts1 As New DataGridTableStyle()  
@@ -47,7 +47,7 @@ ms.locfileid: "57709161"
     ts1->MappingName = S"Customers";  
     ```  
   
-3.  새 열 스타일을 선언 하 고 해당 매핑 이름 및 기타 속성을 설정 합니다.  
+3. 새 열 스타일을 선언 하 고 해당 매핑 이름 및 기타 속성을 설정 합니다.  
   
     ```vb  
     Dim myDataCol As New DataGridBoolColumn()  
@@ -67,7 +67,7 @@ ms.locfileid: "57709161"
     myDataCol->MappingName = "Current";  
     ```  
   
-4.  호출을 **추가** 메서드는 **GridColumnStylesCollection** 열 테이블 스타일을 추가 하는 개체  
+4. 호출을 **추가** 메서드는 **GridColumnStylesCollection** 열 테이블 스타일을 추가 하는 개체  
   
     ```vb  
     ts1.GridColumnStyles.Add(myDataCol)  
@@ -81,7 +81,7 @@ ms.locfileid: "57709161"
     ts1->GridColumnStyles->Add(myDataCol);  
     ```  
   
-5.  호출을 **추가** 메서드는 **GridTableStylesCollection** 데이터 표에 테이블 스타일을 추가 하는 개체입니다.  
+5. 호출을 **추가** 메서드는 **GridTableStylesCollection** 데이터 표에 테이블 스타일을 추가 하는 개체입니다.  
   
     ```vb  
     DataGrid1.TableStyles.Add(ts1)  
@@ -96,5 +96,6 @@ ms.locfileid: "57709161"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [DataGrid 컨트롤](datagrid-control-windows-forms.md)
-- [방법: Windows Forms DataGrid 컨트롤에서 열 숨기기 또는 삭제](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [방법: Windows Forms DataGrid 컨트롤에서 열 삭제 또는 숨기기](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

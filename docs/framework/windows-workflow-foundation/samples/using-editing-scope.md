@@ -2,12 +2,12 @@
 title: 편집 범위 사용
 ms.date: 03/30/2017
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
-ms.openlocfilehash: 268849c584c235a21a0818baa60f119cf8e49305
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 6417e51a29215ce2da22fa4c655642a5fe9b7d18
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43749050"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308629"
 ---
 # <a name="using-editing-scope"></a>편집 범위 사용
 이 샘플에서는 단일 원자 단위에서 실행 취소될 수 있도록 일련의 변경 내용을 일괄 처리하는 방법을 보여 줍니다. 기본적으로 활동 디자이너 작성자가 수행하는 동작은 실행 취소/다시 실행 시스템에 자동으로 통합됩니다.  
@@ -24,15 +24,15 @@ ms.locfileid: "43749050"
   
 ## <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1.  샘플을 빌드하고 실행한 다음 왼쪽의 단추를 사용하여 워크플로를 수정합니다.  
+1. 샘플을 빌드하고 실행한 다음 왼쪽의 단추를 사용하여 워크플로를 수정합니다.  
   
-2.  클릭 **편집 범위 열기**합니다.  
+2. 클릭 **편집 범위 열기**합니다.  
   
     1.  이 명령은 편집 범위를 만들어 편집 스택에 푸시하는 <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>를 호출합니다.  
   
     2.  그러면 선택한 <xref:System.Activities.Presentation.Model.ModelItem>에 세 개의 활동이 추가됩니다. <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>를 사용하여 편집 범위를 열지 않았다면 디자이너 캔버스에 세 개의 새 활동이 나타납니다. 이 작업은 <xref:System.Activities.Presentation.Model.EditingScope> 내에서 여전히 보류 중이므로 디자이너가 아직 업데이트되지 않았습니다.  
   
-3.  키를 눌러 **편집 범위 닫기** 편집 범위를 커밋할 수 있습니다. 그러면 디자이너에 세 개의 활동이 나타납니다.  
+3. 키를 눌러 **편집 범위 닫기** 편집 범위를 커밋할 수 있습니다. 그러면 디자이너에 세 개의 활동이 나타납니다.  
   
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
-ms.openlocfilehash: c5e6d26fd665fa750b5608002d7abc938075a6ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a4550e4c914dcdbc9908e766c67a2efa53e6e9e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663039"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339387"
 ---
 # <a name="how-to-set-the-security-mode"></a>방법: 보안 모드 설정
 Windows Communication Foundation (WCF) 보안에 가장 미리 정의 된 바인딩에서 발견 되는 세 가지 일반 보안 모드: 전송, 메시지 및 "메시지 자격 증명을 사용 하 여 전송 합니다." 두 개의 추가 모드는 두 바인딩에만 해당됩니다. 즉, "전송-자격 증명만" 모드는 <xref:System.ServiceModel.BasicHttpBinding>에서 사용되고, "모두" 모드는 <xref:System.ServiceModel.NetMsmqBinding>에서 사용됩니다. 그러나 이 항목에서는 세 가지 일반 보안 모드(<xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message>, <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>)에 대해 중점적으로 설명합니다.  
@@ -25,9 +25,9 @@ Windows Communication Foundation (WCF) 보안에 가장 미리 정의 된 바인
   
 ### <a name="to-set-the-security-mode-in-code"></a>코드에서 보안 모드를 설정하려면  
   
-1.  사용 중인 바인딩 클래스의 인스턴스를 만듭니다. 목록을 미리 정의 된 바인딩에 대해서 [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)합니다. 이 예제에서는 <xref:System.ServiceModel.WSHttpBinding> 클래스의 인스턴스를 만듭니다.  
+1. 사용 중인 바인딩 클래스의 인스턴스를 만듭니다. 목록을 미리 정의 된 바인딩에 대해서 [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)합니다. 이 예제에서는 <xref:System.ServiceModel.WSHttpBinding> 클래스의 인스턴스를 만듭니다.  
   
-2.  `Mode` 속성에서 반환하는 개체의 `Security` 속성을 설정합니다.  
+2. `Mode` 속성에서 반환하는 개체의 `Security` 속성을 설정합니다.  
   
      [!code-csharp[c_SettingSecurityMode#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#1)]
      [!code-vb[c_SettingSecurityMode#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#1)]  
@@ -42,7 +42,7 @@ Windows Communication Foundation (WCF) 보안에 가장 미리 정의 된 바인
      [!code-csharp[c_SettingSecurityMode#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#3)]
      [!code-vb[c_SettingSecurityMode#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#3)]  
   
-3.  다음 코드에 표시된 것처럼 바인딩의 생성자에서 모드를 설정할 수도 있습니다.  
+3. 다음 코드에 표시된 것처럼 바인딩의 생성자에서 모드를 설정할 수도 있습니다.  
   
      [!code-csharp[c_SettingSecurityMode#4](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#4)]
      [!code-vb[c_SettingSecurityMode#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#4)]  
@@ -52,35 +52,35 @@ Windows Communication Foundation (WCF) 보안에 가장 미리 정의 된 바인
   
 #### <a name="to-set-the-clientcredentialtype-property-for-transport-mode"></a>전송 모드에 대해 ClientCredentialType 속성을 설정하려면  
   
-1.  바인딩의 인스턴스를 만듭니다.  
+1. 바인딩의 인스턴스를 만듭니다.  
   
-2.  `Mode` 속성을 `Transport`으로 설정합니다.  
+2. `Mode` 속성을 `Transport`으로 설정합니다.  
   
-3.  `ClientCredential` 속성을 적절한 값으로 설정합니다. 다음 코드에서는 속성을 `Windows`로 설정합니다.  
+3. `ClientCredential` 속성을 적절한 값으로 설정합니다. 다음 코드에서는 속성을 `Windows`로 설정합니다.  
   
      [!code-csharp[c_SettingSecurityMode#5](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#5)]
      [!code-vb[c_SettingSecurityMode#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#5)]  
   
 #### <a name="to-set-the-clientcredentialtype-property-for-message-mode"></a>메시지 모드에 대해 ClientCredentialType 속성을 설정하려면  
   
-1.  바인딩의 인스턴스를 만듭니다.  
+1. 바인딩의 인스턴스를 만듭니다.  
   
-2.  `Mode` 속성을 `Message`으로 설정합니다.  
+2. `Mode` 속성을 `Message`으로 설정합니다.  
   
-3.  `ClientCredential` 속성을 적절한 값으로 설정합니다. 다음 코드에서는 속성을 `Certificate`로 설정합니다.  
+3. `ClientCredential` 속성을 적절한 값으로 설정합니다. 다음 코드에서는 속성을 `Certificate`로 설정합니다.  
   
      [!code-csharp[c_SettingSecurityMode#6](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#6)]
      [!code-vb[c_SettingSecurityMode#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#6)]  
   
 #### <a name="to-set-the-mode-and-clientcredentialtype-property-in-configuration"></a>구성에서 모드 및 ClientCredentialType 속성을 설정하려면  
   
-1.  적절 한 바인딩 요소를 추가 합니다 [ \<바인딩 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) 구성 파일의 요소입니다. 다음 예제에서는 추가 된 [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) 요소입니다.  
+1. 적절 한 바인딩 요소를 추가 합니다 [ \<바인딩 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) 구성 파일의 요소입니다. 다음 예제에서는 추가 된 [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) 요소입니다.  
   
-2.  추가 된 `<binding>` 요소 집합과 해당 `name` 특성을 적절 한 값으로.  
+2. 추가 된 `<binding>` 요소 집합과 해당 `name` 특성을 적절 한 값으로.  
   
-3.  `<security>` 요소를 추가하고 `mode` 특성을 `Message`, `Transport` 또는 `TransportWithMessageCredential`로 설정합니다.  
+3. `<security>` 요소를 추가하고 `mode` 특성을 `Message`, `Transport` 또는 `TransportWithMessageCredential`로 설정합니다.  
   
-4.  모드를 `Transport`로 설정한 경우 `<transport>` 요소를 추가하고 `clientCredential` 특성을 적절한 값으로 설정합니다.  
+4. 모드를 `Transport`로 설정한 경우 `<transport>` 요소를 추가하고 `clientCredential` 특성을 적절한 값으로 설정합니다.  
   
      다음 예제에서는 모드를 "`Transport"`로 설정한 다음 `clientCredentialType` 요소의 `<transport>` 특성을 "`Windows"`로 설정합니다.  
   
@@ -114,8 +114,9 @@ Windows Communication Foundation (WCF) 보안에 가장 미리 정의 된 바인
  자세한 내용은 [방법: 전송 보안과 메시지 자격 증명을 사용 하 여](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)입니다.  
   
 ## <a name="see-also"></a>참고자료
-- [방법: SSL 인증서로 포트 구성](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
-- [방법: 사용 하 여 전송 보안 및 메시지 자격 증명](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
+
+- [방법: SSL 인증서를 사용하여 포트 구성](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [방법: 전송 보안 및 메시지 자격 증명 사용](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
 - [전송 보안](../../../docs/framework/wcf/feature-details/transport-security.md)
 - [메시지 보안](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
 - [보안 개요](../../../docs/framework/wcf/feature-details/security-overview.md)

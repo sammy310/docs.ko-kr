@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
-ms.openlocfilehash: b09b50d2db277d6aec325fb9305890f8e5be581c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2aed766e6b2da7ebaf7b5b863375ee95b99eb159
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658902"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330339"
 ---
 # <a name="securitybindingelement-authentication-modes"></a>SecurityBindingElement 인증 모드
 Windows Communication Foundation (WCF)는 클라이언트 및 서비스 인증 서로 몇 가지 모드를 제공 합니다. <xref:System.ServiceModel.Channels.SecurityBindingElement> 클래스에 정적 메서드를 사용하거나 구성을 통해 이러한 인증 모드의 보안 바인딩 요소를 만들 수 있습니다. 이 항목에서는 18가지의 인증 모드에 대해 간단히 설명합니다.  
@@ -22,13 +22,13 @@ Windows Communication Foundation (WCF)는 클라이언트 및 서비스 인증 �
   
 #### <a name="to-set-the-authentication-mode-in-configuration"></a>구성 파일에 인증 모드를 설정하려면  
   
-1.  에 [ \<바인딩 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) 요소에 추가 [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)합니다.  
+1. 에 [ \<바인딩 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) 요소에 추가 [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)합니다.  
   
-2.  자식 요소를 추가 하는 [ \<바인딩 >](../../../../docs/framework/misc/binding.md) 요소를 `<customBinding>` 요소.  
+2. 자식 요소를 추가 하는 [ \<바인딩 >](../../../../docs/framework/misc/binding.md) 요소를 `<customBinding>` 요소.  
   
-3.  `<security>` 요소를 `<binding>` 요소에 추가합니다.  
+3. `<security>` 요소를 `<binding>` 요소에 추가합니다.  
   
-4.  `authenticationMode` 특성을 아래 설명된 값 중 하나로 설정합니다. 예를 들어 다음 코드에서는 모드를 `AnonymousForCertificate`로 설정합니다.  
+4. `authenticationMode` 특성을 아래 설명된 값 중 하나로 설정합니다. 예를 들어 다음 코드에서는 모드를 `AnonymousForCertificate`로 설정합니다.  
   
     ```xml  
     <bindings>  
@@ -42,14 +42,14 @@ Windows Communication Foundation (WCF)는 클라이언트 및 서비스 인증 �
   
 #### <a name="to-set-the-mode-programmatically"></a>프로그래밍 방식으로 모드를 설정하려면  
   
-1.  반환 형식을<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>, <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> 또는 <xref:System.ServiceModel.Channels.SecurityBindingElement> 중에서 선택합니다.  
+1. 반환 형식을<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>, <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> 또는 <xref:System.ServiceModel.Channels.SecurityBindingElement> 중에서 선택합니다.  
   
-2.  <xref:System.ServiceModel.Channels.SecurityBindingElement> 클래스의 적절한 정적 메서드를 호출합니다. 예를 들어 다음 코드에서는 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateAnonymousForCertificateBindingElement%2A> 메서드를 호출합니다.  
+2. <xref:System.ServiceModel.Channels.SecurityBindingElement> 클래스의 적절한 정적 메서드를 호출합니다. 예를 들어 다음 코드에서는 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateAnonymousForCertificateBindingElement%2A> 메서드를 호출합니다.  
   
      [!code-csharp[c_CustomBindingsAuthMode#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombindingsauthmode/cs/source.cs#3)]
      [!code-vb[c_CustomBindingsAuthMode#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombindingsauthmode/vb/source.vb#3)]  
   
-3.  바인딩 요소를 사용하여 사용자 지정 바인딩을 만듭니다. 자세한 내용은 [사용자 지정 바인딩](../../../../docs/framework/wcf/extending/custom-bindings.md)합니다.  
+3. 바인딩 요소를 사용하여 사용자 지정 바인딩을 만듭니다. 자세한 내용은 [사용자 지정 바인딩](../../../../docs/framework/wcf/extending/custom-bindings.md)합니다.  
   
 ## <a name="mode-descriptions"></a>모드 설명  
   
@@ -121,5 +121,6 @@ Windows Communication Foundation (WCF)는 클라이언트 및 서비스 인증 �
  이 인증 모드에서 클라이언트는 메시지 서명에 의해 서명된 토큰인 서명된 지원 토큰으로 SOAP 계층에 표시되는 사용자 이름 토큰을 사용하여 인증합니다. 서비스는 전송 계층에서 X.509 인증서를 사용하여 인증됩니다. 보안 바인딩 요소는 `TransportSecurityBindingElement` 메서드에서 반환된 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameOverTransportBindingElement%2A>입니다. 또는 `authenticationMode` 특성을 `UserNameOverTransport`로 설정합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
-- [방법: 지정된 된 인증 모드에 대 한 SecurityBindingElement 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+- [방법: 지정된 인증 모드에 대한 SecurityBindingElement 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

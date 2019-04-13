@@ -7,12 +7,12 @@ helpviewer_keywords:
 - animation [WPF], media playback with
 - media [WPF], playback with animations
 ms.assetid: 8982b7b7-1c6c-4b24-8801-b328862975f5
-ms.openlocfilehash: 0dc39d08ef17a628675018c17602623f2efd0173
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 200f9d62c67a02088fe5a5789cdb41a04837d430
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372908"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079905"
 ---
 # <a name="how-to-play-media-with-animations"></a>방법: 애니메이션이 있는 미디어 재생
 사용 하 여 동시 미디어 및 애니메이션을 재생 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.MediaTimeline> 하 고 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 클래스를 같은 <xref:System.Windows.Media.Animation.Storyboard>합니다.  
@@ -25,6 +25,7 @@ ms.locfileid: "57372908"
  [!code-xaml[MediaGallery_snippet#MediaTimelinePlusAnimationExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/MediaGallery_snippet/CSharp/MediaTimelinePlusAnimationExample.xaml#mediatimelineplusanimationexamplewholepage)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.MediaTimeline>
 - <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>
 - <xref:System.Windows.Media.Animation.Storyboard>

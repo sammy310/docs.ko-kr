@@ -2,21 +2,21 @@
 title: Async (Visual Basic) 앱에서 재입력 처리
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 151cdcb841a7a67ba0bf8f5560d3f6baf999c365
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0913a8b422d8ea3d6b38680a26bac143087dd2c8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374892"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324788"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Async (Visual Basic) 앱에서 재입력 처리
 앱에 비동기 코드를 포함하는 경우 완료되기 전에 비동기 작업을 다시 입력하는 것을 나타내는 재입력을 고려하고 방지할 수 있어야 합니다. 재입력 가능성을 식별하고 처리하지 못하면 예기치 않은 결과가 발생할 수 있습니다.  
   
  **항목 내용**  
   
--   [재입력 인식](#BKMK_RecognizingReentrancy)  
+-   [재진입 인식](#BKMK_RecognizingReentrancy)  
   
--   [재입력 처리](#BKMK_HandlingReentrancy)  
+-   [재진입 처리](#BKMK_HandlingReentrancy)  
   
     -   [시작 단추 사용 안 함](#BKMK_DisableTheStartButton)  
   
@@ -24,7 +24,7 @@ ms.locfileid: "57374892"
   
     -   [여러 작업을 실행하고 출력을 큐 대기](#BKMK_RunMultipleOperations)  
   
--   [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)  
+-   [예제 응용 프로그램 검토 및 실행](#BKMD_SettingUpTheExample)  
   
 > [!NOTE]
 >  예제를 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.  
@@ -136,7 +136,7 @@ End Sub
   
  이 시나리오를 설정하려면 [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)에서 제공하는 기본 코드를 다음과 같이 변경합니다. [Async Samples: .NET 데스크톱 앱의 재입력](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)에서 압축 파일을 다운로드합니다. 이 프로젝트의 이름은 CancelAndRestart입니다.  
   
-1.  모든 메서드에 대한 범위 내에 있는 <xref:System.Threading.CancellationTokenSource> 변수 `cts`를 선언합니다.  
+1. 모든 메서드에 대한 범위 내에 있는 <xref:System.Threading.CancellationTokenSource> 변수 `cts`를 선언합니다.  
   
     ```vb  
     Class MainWindow // Or Class MainPage  
@@ -145,7 +145,7 @@ End Sub
         Dim cts As CancellationTokenSource  
     ```  
   
-2.  `StartButton_Click`에서 작업이 이미 진행 중인지 확인합니다. 경우 값 `cts` 는 `Nothing`, 없습니다 작업이 이미 활성화 되어 있습니다. 값이 아닌 경우 `Nothing`, 이미 실행 중인 작업이 취소 됩니다.  
+2. `StartButton_Click`에서 작업이 이미 진행 중인지 확인합니다. 경우 값 `cts` 는 `Nothing`, 없습니다 작업이 이미 활성화 되어 있습니다. 값이 아닌 경우 `Nothing`, 이미 실행 중인 작업이 취소 됩니다.  
   
     ```vb  
     ' *** If a download process is already underway, cancel it.  
@@ -154,7 +154,7 @@ End Sub
     End If  
     ```  
   
-3.  `cts`를 현재 프로세스를 나타내는 다른 값으로 설정합니다.  
+3. `cts`를 현재 프로세스를 나타내는 다른 값으로 설정합니다.  
   
     ```vb  
     ' *** Now set cts to cancel the current process if the button is chosen again.  
@@ -162,7 +162,7 @@ End Sub
     cts = newCTS  
     ```  
   
-4.  끝 `StartButton_Click`의 값을 설정 하므로, 현재 프로세스가 완료 되 `cts` 돌아가기 `Nothing`합니다.  
+4. 끝 `StartButton_Click`의 값을 설정 하므로, 현재 프로세스가 완료 되 `cts` 돌아가기 `Nothing`합니다.  
   
     ```vb  
     ' *** When the process completes, signal that another process can proceed.  
@@ -412,9 +412,9 @@ End Sub
 #### <a name="the-accessthewebasync-method"></a>AccessTheWebAsync 메서드  
  이 예제에서는 `AccessTheWebAsync`를 두 개의 메서드로 분할합니다. 첫 번째 메서드 `AccessTheWebAsync`는 그룹에 대해 모든 다운로드 작업을 시작하고 `pendingWork`를 설정하여 표시 프로세스를 제어합니다. 이 메서드는 LINQ(통합 언어 쿼리) 쿼리 및 <xref:System.Linq.Enumerable.ToArray%2A>를 사용하여 모든 다운로드 작업을 동시에 시작합니다.  
   
- 그런 다음 `AccessTheWebAsync`는 `FinishOneGroupAsync`를 호출하여 각 다운로드가 완료될 때까지 대기하고 해당 길이를 표시합니다.  
+ `AccessTheWebAsync` 그런 다음 호출 `FinishOneGroupAsync` 각 다운로드 완료 되기를 기다립니다. 및 해당 길이 표시 합니다.  
   
- `FinishOneGroupAsync`는 `AccessTheWebAsync`의 `pendingWork`에 할당되는 작업을 반환합니다. 해당 값은 작업이 완료되기 전에 다른 작업에 의한 중단을 방지합니다.  
+ `FinishOneGroupAsync` 에 할당 된 작업 반환 `pendingWork` 에서 `AccessTheWebAsync`합니다. 해당 값은 작업이 완료되기 전에 다른 작업에 의한 중단을 방지합니다.  
   
 ```vb  
 Private Async Function AccessTheWebAsync(grp As Char) As Task(Of Char)  
@@ -535,42 +535,42 @@ End Function
   
 ### <a name="BKMK_DownloadingTheApp"></a> 앱 다운로드  
   
-1.  [Async Samples: .NET 데스크톱 앱의 재입력](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)에서 압축 파일을 다운로드합니다.  
+1. [Async Samples: .NET 데스크톱 앱의 재입력](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)에서 압축 파일을 다운로드합니다.  
   
-2.  다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.  
+2. 다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.  
   
-3.  메뉴 모음에서 **파일**, **열기**, **프로젝트/솔루션**을 선택합니다.  
+3. 메뉴 모음에서 **파일**, **열기**, **프로젝트/솔루션**을 선택합니다.  
   
-4.  압축을 푼 샘플 코드가 저장된 폴더로 이동한 다음 솔루션(.sln) 파일을 엽니다.  
+4. 압축을 푼 샘플 코드가 저장된 폴더로 이동한 다음 솔루션(.sln) 파일을 엽니다.  
   
-5.  **솔루션 탐색기**에서 실행하려는 프로젝트의 바로 가기 메뉴를 연 후 **StartUpProject로 설정**을 선택합니다.  
+5. **솔루션 탐색기**에서 실행하려는 프로젝트의 바로 가기 메뉴를 연 후 **StartUpProject로 설정**을 선택합니다.  
   
-6.  CTRL+F5를 선택하여 프로젝트를 빌드하고 실행합니다.  
+6. CTRL+F5를 선택하여 프로젝트를 빌드하고 실행합니다.  
   
 ### <a name="BKMK_BuildingTheApp"></a> 앱 빌드  
  다음 섹션에서는 예제를 WPF 앱으로 빌드하는 코드를 제공합니다.  
   
 ##### <a name="to-build-a-wpf-app"></a>WPF 응용 프로그램을 빌드하려면  
   
-1.  Visual Studio를 시작합니다.  
+1. Visual Studio를 시작합니다.  
   
-2.  메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 차례로 선택합니다.  
+2. 메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 차례로 선택합니다.  
   
      **새 프로젝트** 대화 상자가 열립니다.  
   
-3.  에 **설치 된 템플릿** 창 확장 **Visual Basic**를 차례로 확장 **Windows**합니다.  
+3. 에 **설치 된 템플릿** 창 확장 **Visual Basic**를 차례로 확장 **Windows**합니다.  
   
-4.  프로젝트 형식 목록에서 **WPF 애플리케이션**을 선택합니다.  
+4. 프로젝트 형식 목록에서 **WPF 애플리케이션**을 선택합니다.  
   
-5.  프로젝트 이름을 `WebsiteDownloadWPF`로 지정한 다음 **확인** 단추를 선택합니다.  
+5. 프로젝트 이름을 `WebsiteDownloadWPF`로 지정한 다음 **확인** 단추를 선택합니다.  
   
      **솔루션 탐색기**에 새 프로젝트가 표시됩니다.  
   
-6.  Visual Studio 코드 편집기에서 **MainWindow.xaml** 탭을 선택합니다.  
+6. Visual Studio 코드 편집기에서 **MainWindow.xaml** 탭을 선택합니다.  
   
      탭이 표시되지 않는 경우 **솔루션 탐색기**에서 MainWindow.xaml의 바로 가기 메뉴를 열고 **코드 보기**를 선택합니다.  
   
-7.  MainWindow.xaml의 **XAML** 보기에서 코드를 다음 코드로 바꿉니다.  
+7. MainWindow.xaml의 **XAML** 보기에서 코드를 다음 코드로 바꿉니다.  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -590,7 +590,7 @@ End Function
   
      텍스트 상자와 단추가 포함된 간단한 창이 MainWindow.xaml의 **디자인** 보기에 나타납니다.  
   
-8.  <xref:System.Net.Http>에 대한 참조를 추가합니다.  
+8. <xref:System.Net.Http>에 대한 참조를 추가합니다.  
   
 9. **솔루션 탐색기**, MainWindow.xaml.vb에 대 한 바로 가기 메뉴를 열고 선택한 후 **코드 보기**합니다.  
   

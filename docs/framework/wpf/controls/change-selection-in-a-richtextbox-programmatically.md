@@ -8,12 +8,12 @@ helpviewer_keywords:
 - changing selections in a text box [WPF]
 - changing selections in a RichTextBox [WPF]
 ms.assetid: f1213205-1ad7-4cd2-b115-460173cc5aa3
-ms.openlocfilehash: a85dc4baa8a59d25f577996c541a422bbe2af24e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b8acfe7cde1fe5dae96cd6324f75c5b146be9ec9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367078"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096228"
 ---
 # <a name="change-selection-in-a-richtextbox-programmatically"></a>프로그래밍 방식으로 RichTextBox의 선택 변경
 현재 선택 영역을 프로그래밍 방식으로 변경 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.RichTextBox>합니다. 이 옵션을이 선택 사용자의 사용자 인터페이스를 사용 하 여 콘텐츠를 선택한 경우와 동일 합니다.  
@@ -30,5 +30,6 @@ ms.locfileid: "57367078"
  [!code-vb[RichTextBoxMiscSnippets_snip#ChangeSelectionProgrammaticalyCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/VisualBasic/ChangeSelectionProgrammaticaly.xaml.vb#changeselectionprogrammaticalycodeexamplewholepage)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [RichTextBox 개요](richtextbox-overview.md)
 - [TextBox 개요](textbox-overview.md)

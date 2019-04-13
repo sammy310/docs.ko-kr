@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], timing of source updates
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
-ms.openlocfilehash: 28c1e0e23247cfaf48343bf10bb79c4862623fb6
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: 5272a19f69b3caf80fd7d5187c9a6a386cd44621
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055133"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143275"
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>방법: TextBox 텍스트가 소스를 업데이트하는 시점 제어
 이 항목에서는 사용 하는 방법을 설명 합니다 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 바인딩 소스 업데이트의 타이밍을 제어 하는 속성입니다. 항목을 사용 하는 <xref:System.Windows.Controls.TextBox> 예를 들어 제어 합니다.  
@@ -46,4 +46,5 @@ ms.locfileid: "59055133"
 >  합니다 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 속성 소스 업데이트를 사용 하 여 처리 이므로 관련이 <xref:System.Windows.Data.BindingMode.TwoWay> 또는 <xref:System.Windows.Data.BindingMode.OneWayToSource> 바인딩. 에 대 한 <xref:System.Windows.Data.BindingMode.TwoWay> 및 <xref:System.Windows.Data.BindingMode.OneWayToSource> 바인딩 작업에 원본 개체 속성 변경 알림을 제공 합니다. 자세한 내용은 이 항목에 제시된 샘플을 참조하세요. 또한 [속성 변경 알림 구현](how-to-implement-property-change-notification.md)을 참조할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [방법 항목](data-binding-how-to-topics.md)

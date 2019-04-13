@@ -12,12 +12,12 @@ helpviewer_keywords:
 - examples [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
-ms.openlocfilehash: 7310557bad7e845c4b193debdefba68db2e1d116
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 55ca52390cd6c5d5af4a764ea4438d8ce935dfbb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708208"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191902"
 ---
 # <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>방법: Windows Forms DataGrid 컨트롤에서 클릭에 응답
 > [!NOTE]
@@ -141,5 +141,6 @@ ms.locfileid: "57708208"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [DataGrid 컨트롤](datagrid-control-windows-forms.md)
-- [방법: 런타임에 Windows Forms DataGrid 컨트롤에서 표시 된 데이터 변경](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [방법: 런타임에 Windows Forms DataGrid 컨트롤에 표시되는 데이터 변경](change-displayed-data-at-run-time-wf-datagrid-control.md)

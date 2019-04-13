@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: e6e65b1a75d7a80caff3e7cbacdb9dd706e46cdf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 80c9a77494be95365899c6a25435fcfc5d2a7293
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815572"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175021"
 ---
 # <a name="operator-procedures-visual-basic"></a>연산자 프로시저(Visual Basic)
 연산자 프로시저는 일련의 표준 연산자의 동작을 정의 하는 Visual Basic 문 (같은 `*`, `<>`, 또는 `And`) 클래스 또는 구조체 정의에 있습니다. 또한이 호출 됩니다 *연산자 오버 로드*합니다.  
@@ -78,17 +78,16 @@ ms.locfileid: "58815572"
  다음 예제에서는 일반적인 호출을 `+` 에 정의 된 운영자 `veryLong`합니다.  
   
  [!code-vb[VbVbcnProcedures#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#24)]  
-  
-  
+
 ## <a name="see-also"></a>참고자료
 
 - [절차](./index.md)
-- [Sub 프로시저](./sub-procedures.md)
-- [Function 프로시저](./function-procedures.md)
+- [하위 프로시저](./sub-procedures.md)
+- [함수 프로시저](./function-procedures.md)
 - [속성 프로시저](./property-procedures.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
-- [Operator 문](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [방법: 연산자 정의](./how-to-define-an-operator.md)
-- [방법: 변환 연산자를 정의 합니다.](./how-to-define-a-conversion-operator.md)
+- [방법: 변환 연산자 정의](./how-to-define-a-conversion-operator.md)
 - [방법: 연산자 프로시저 호출](./how-to-call-an-operator-procedure.md)
-- [방법: 연산자를 정의 하는 클래스를 사용 합니다.](./how-to-use-a-class-that-defines-operators.md)
+- [방법: 연산자를 정의하는 클래스 사용](./how-to-use-a-class-that-defines-operators.md)

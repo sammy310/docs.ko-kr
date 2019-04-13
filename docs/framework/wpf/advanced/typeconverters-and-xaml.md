@@ -4,18 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-ms.openlocfilehash: 7f42bb6e4333fcb5e83ee4b95e404230424b317f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ec6eaadae1dd7a7db84538c24e396a14db1a65a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352713"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164991"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverter 및 XAML
 이 항목에서는 문자열에서 형식 변환의 용도를 일반 XAML 언어 기능으로 소개합니다. .NET framework에서 <xref:System.ComponentModel.TypeConverter> 클래스 XAML 특성 사용에서 속성 값으로 사용할 수 있는 관리 되는 사용자 지정 클래스 구현의 일부로 특정 용도로 사용 됩니다. 적용 해야 할 수는 사용자 지정 클래스를 작성 하는 경우 XAML 설정할 수 있는 특성 값으로 사용할 수 있으려면 클래스의 인스턴스를 <xref:System.ComponentModel.TypeConverterAttribute> 클래스에 사용자 지정 작성 <xref:System.ComponentModel.TypeConverter> 클래스 중 하나 또는 둘 다.  
-  
 
-  
 ## <a name="type-conversion-concepts"></a>형식 변환 개념  
   
 ### <a name="xaml-and-string-values"></a>XAML 및 문자열 값  
@@ -73,7 +71,7 @@ ms.locfileid: "57352713"
   
  다음으로 가장 중요 한 메서드는 <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>합니다. (예를 들어 저장 되는 경우 파일로 XAML에) 응용 프로그램 태그 표현으로 변환 하는 경우, <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> 는 태그 표현 생성을 담당 합니다. 이 경우 코드는 XAML에 대 한 중요 한 경로가 전달 하는 경우는 `destinationType` 의 <xref:System.String> 합니다.  
   
- <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> 및 <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> 은 서비스에서 <xref:System.ComponentModel.TypeConverter> 구현의 기능을 쿼리할 때 사용되는 지원 메서드입니다. 변환기의 동일한 변환 메서드에서 지원하는 형식 관련 케이스에 대해 `true` 를 반환하려면 이러한 메서드를 구현해야 합니다. XAML 용도에서는 일반적으로 <xref:System.String> 형식을 의미합니다.  
+ <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> 및 <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> 서비스의 기능을 쿼리할 때 사용 되는 지원 메서드입니다는 <xref:System.ComponentModel.TypeConverter> 구현 합니다. 변환기의 동일한 변환 메서드에서 지원하는 형식 관련 케이스에 대해 `true` 를 반환하려면 이러한 메서드를 구현해야 합니다. XAML 용도에서는 일반적으로 <xref:System.String> 형식을 의미합니다.  
   
 ### <a name="culture-information-and-type-converters-for-xaml"></a>XAML에 대한 문화권 정보 및 형식 변환기  
  각 <xref:System.ComponentModel.TypeConverter> 구현에서는 변환에 유효한 문자열 구성 요소 자체 해석할 및 수를 사용 하거나 무시할 수도 있습니다 매개 변수로 전달 된 형식 설명 합니다. 문화권 및 XAML 형식 변환과 관련하여 중요한 고려 사항이 있습니다. XAML에서는 지역화 가능 문자열을 특성 값으로 사용할 수 있습니다. 그러나 해당 지역화 가능 문자열을 특정 문화권 요구 사항이 있는 형식 변환기 입력으로 사용할 수는 없습니다. XAML 특성 값에 대한 형식 변환기에는 `en-US` 문화권을 사용하는 고정 언어 구문 분석 동작이 반드시 포함되기 때문입니다. 이러한 제한의 디자인상 이유에 대한 자세한 내용은 XAML 언어 사양([\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525))을 참조하세요.  
@@ -89,7 +87,7 @@ ms.locfileid: "57352713"
 >  중괄호 문자, 특히 {를 문자열 형식의 가능한 요소로 사용하지 마세요. 이러한 문자는 태그 확장명 시퀀스의 시작 및 종료로 예약되어 있습니다.  
   
 ### <a name="implementing-convertto"></a>ConvertTo 구현  
- <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> 는 serialization 지원에 잠재적으로 사용됩니다. <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> 를 통해 사용자 지정 형식 및 해당 형식 변환기에 대해 Serialization을 지원하는 것은 절대적인 요구 사항이 아닙니다. 그러나 컨트롤을 구현하거나 클래스의 디자인 또는 기능의 일부로 serialization을 사용하는 경우에는 <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>를 구현해야 합니다.  
+ <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> serialization 지원에 잠재적으로 사용 됩니다. <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> 를 통해 사용자 지정 형식 및 해당 형식 변환기에 대해 Serialization을 지원하는 것은 절대적인 요구 사항이 아닙니다. 그러나 컨트롤을 구현하거나 클래스의 디자인 또는 기능의 일부로 serialization을 사용하는 경우에는 <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>를 구현해야 합니다.  
   
  으로 사용할 수는 <xref:System.ComponentModel.TypeConverter> XAML을 지 원하는 구현 합니다 <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> 해당 변환기에 대 한 방법으로 지원 되는 형식 (또는 값)의 인스턴스를 허용 해야 합니다 `value` 매개 변수입니다. 경우는 `destinationType` 매개 변수가 <xref:System.String>, 반환된 된 개체는으로 캐스트 될 수 있어야 합니다. 그런 다음 <xref:System.String>합니다. 반환된 문자열은 `value`의 직렬화된 값을 나타내야 합니다. 이상적으로 선택한 serialization 형식은 해당 문자열에 전달 된 경우 동일한 값을 생성할 수 있어야 합니다 <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> 정보가 크게 손실 없이, 동일한 변환기의 구현입니다.  
   
@@ -110,7 +108,8 @@ ms.locfileid: "57352713"
  또한 속성별로 형식 변환기를 제공할 수 있습니다. 적용 하는 대신 한 [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> 클래스 정의에 속성 정의에 적용 (기본 정의 하지는 `get` / `set` 그 구현). 속성의 형식은 사용자 지정 형식 변환기에서 처리되는 형식과 일치해야 합니다. XAML 프로세서에서 해당 속성의 값을 처리할 때 이 특성을 적용하면 입력 문자열을 처리하고 개체 인스턴스를 반환할 수 있습니다. 속성별 형식 변환기 기술은 Microsoft.NET Framework 또는 일부 다른 라이브러리에서 클래스 정의 제어할 수 없습니다 하 고 적용할 수 없습니다. 속성 형식을 사용 하려는 경우에 특히 유용는 <xref:System.ComponentModel.TypeConverterAttribute> 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ComponentModel.TypeConverter>
 - [XAML 개요(WPF)](xaml-overview-wpf.md)
-- [태그 확장 및 WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [태그 확장명 및 WPF XAML](markup-extensions-and-wpf-xaml.md)
 - [XAML 구문 정보](xaml-syntax-in-detail.md)

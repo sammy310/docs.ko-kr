@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-ms.openlocfilehash: e12b4967a84797432ec30cdc88863f8530ea9afd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68890a5d86d2781e3c8079c86e941144e3796ea6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620528"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228590"
 ---
 # <a name="importing-schema-to-generate-classes"></a>스키마를 가져와 클래스 생성
 Windows Communication Foundation (WCF)를 사용 하 여 사용할 수 있는 스키마에서 클래스를 생성 하려면 사용 된 <xref:System.Runtime.Serialization.XsdDataContractImporter> 클래스입니다. 이 항목에서는 프로세스와 변형에 대해 설명합니다.  
@@ -37,7 +37,7 @@ Windows Communication Foundation (WCF)를 사용 하 여 사용할 수 있는 �
   
      가장 간단한 오버로드는 `XmlSchemaSet`를 사용하고 익명 형식을 포함하여 해당 스키마 집합에 있는 모든 형식을 가져옵니다. 기타 오버로드를 사용하면 XSD 형식이나 가져올 형식 목록을 <xref:System.Xml.XmlQualifiedName> 또는 `XmlQualifiedName` 개체 컬렉션 형태로 지정할 수 있습니다. 이 경우 지정된 형식만 가져옵니다. 오버로드는 <xref:System.Xml.Schema.XmlSchemaElement>에서 특정 요소를 가져오는 `XmlSchemaSet` 및 연결된 형식(익명 형식인지 여부에 관계없이)을 사용합니다. 이 오버로드는 이 요소에 대해 생성된 형식의 데이터 계약 이름을 나타내는 `XmlQualifiedName`을 반환합니다.  
   
-     `Import` 메서드를 여러 번 호출하면 동일한 `CodeCompileUnit`에 여러 항목이 추가됩니다. 형식이 이미 있으면 `CodeCompileUnit`에 생성되지 않습니다. `Import` 개체를 여러 개 사용하는 대신 동일한 `XsdDataContractImporter`에서 `XsdDataContractImporter`를 여러 번 호출합니다. 중복 형식이 생성되지 않도록 하려면 이 방법을 사용하는 것이 좋습니다.  
+     `Import` 메서드를 여러 번 호출하면 동일한 `CodeCompileUnit`에 여러 항목이 추가됩니다. 형식이 이미 있으면 `CodeCompileUnit` 에 생성되지 않습니다. `Import` 개체를 여러 개 사용하는 대신 동일한 `XsdDataContractImporter`에서 `XsdDataContractImporter`를 여러 번 호출합니다. 중복 형식이 생성되지 않도록 하려면 이 방법을 사용하는 것이 좋습니다.  
   
     > [!NOTE]
     > 가져오기 중 오류가 발생하면 `CodeCompileUnit`는 예기치 않은 상태가 됩니다. 실패한 가져오기에서 생성된 `CodeCompileUnit`를 사용하면 보안상 취약해질 수 있습니다.  
@@ -52,7 +52,7 @@ Windows Communication Foundation (WCF)를 사용 하 여 사용할 수 있는 �
   
  일반적으로 public 형식은 private 필드 및 일치하는 공용 데이터 멤버 속성을 사용하여 스키마에서 생성됩니다. 대신 내부 형식을 생성하려면 <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> 속성을 `true`로 설정합니다.  
   
- 다음 예제에서는 <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> 속성이 `true.`로 설정된 경우 내부 클래스로 변환되는 스키마를 보여 줍니다.  
+ 다음 예제에서는 내부 변형 되는 스키마 클래스는 <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> 속성 `true.`  
   
  [!code-csharp[c_SchemaImportExport#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#2)]
  [!code-vb[c_SchemaImportExport#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#2)]  
@@ -175,11 +175,12 @@ Windows Communication Foundation (WCF)를 사용 하 여 사용할 수 있는 �
 #### <a name="import-options-advanced-options"></a>가져오기 옵션: 고급 옵션  
  다음은 고급 가져오기 옵션입니다.  
   
--   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> 속성. 생성된 클래스에 대한 코드를 생성하는 데 사용할 <xref:System.CodeDom.Compiler.CodeDomProvider>를 지정합니다. 가져오기 메커니즘은 <xref:System.CodeDom.Compiler.CodeDomProvider>에서 지원하지 않는 기능을 피하려고 합니다. <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>를 설정하지 않으면 전체 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 기능 집합이 제한 없이 사용됩니다.  
+-   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> 속성의 값에 따라 달라집니다. 생성된 클래스에 대한 코드를 생성하는 데 사용할 <xref:System.CodeDom.Compiler.CodeDomProvider>를 지정합니다. 가져오기 메커니즘은 <xref:System.CodeDom.Compiler.CodeDomProvider>에서 지원하지 않는 기능을 피하려고 합니다. <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>를 설정하지 않으면 전체 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 기능 집합이 제한 없이 사용됩니다.  
   
--   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> 속성. 이 속성을 사용하여 <xref:System.Runtime.Serialization.IDataContractSurrogate> 구현을 지정할 수 있습니다. <xref:System.Runtime.Serialization.IDataContractSurrogate>는 가져오기 프로세스를 사용자 지정합니다. 자세한 내용은 [데이터 계약 서로게이트](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)합니다. 기본적으로 서로게이트는 사용되지 않습니다.  
+-   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> 속성의 값에 따라 달라집니다. 이 속성을 사용하여 <xref:System.Runtime.Serialization.IDataContractSurrogate> 구현을 지정할 수 있습니다. <xref:System.Runtime.Serialization.IDataContractSurrogate>는 가져오기 프로세스를 사용자 지정합니다. 자세한 내용은 [데이터 계약 서로게이트](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)합니다. 기본적으로 서로게이트는 사용되지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.XsdDataContractImporter>
 - <xref:System.Runtime.Serialization.XsdDataContractExporter>

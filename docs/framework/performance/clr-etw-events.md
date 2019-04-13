@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d64ee6942d9397ceb45b812ef3c26179fac9b2b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb7520518497b244be8be3751ca8a3063a02717a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540301"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135865"
 ---
 # <a name="clr-etw-events"></a>CLR ETW 이벤트
 이 섹션의 항목은 ETW(Windows용 이벤트 추적) 이벤트를 설명합니다. 각 이벤트에는 연결된 키워드 및 수준이 있으며, [CLR ETW 키워드 및 수준](../../../docs/framework/performance/clr-etw-keywords-and-levels.md) 항목에서 설명합니다. CLR에는 이벤트에 대한 두 개의 공급자가 있습니다.  
@@ -62,6 +62,7 @@ ms.locfileid: "54540301"
  이벤트가 발생한 이후 스택 추적을 생성하기 위해 다른 이벤트와 함께 사용되는 정보를 캡처합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [디버깅을 향상 시키기 및 ETW를 사용한 성능 조정](https://go.microsoft.com/fwlink/?LinkId=179696)
 - [Windows 성능 블로그](https://go.microsoft.com/fwlink/?LinkId=179509)
 - [.NET Framework 로깅 제어](../../../docs/framework/performance/controlling-logging.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - x:Array [XAML Services]
 - XAML [XAML Services], x:Array markup extension
 ms.assetid: c5358e14-d24c-44c7-b5eb-6062a4fd981c
-ms.openlocfilehash: 4d528039245e2720f78e8817e1752d88ca94e6e0
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 4f4e26eb3e5ccaf66b2173c7fc9952375c5f2a58
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58047887"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139141"
 ---
 # <a name="xarray-markup-extension"></a>x:Array 태그 확장
 XAML 태그 확장을 통해 개체의 배열에 대 한 일반 지원을 제공합니다. 이에 해당 합니다 `x:ArrayExtension` [MS XAML]에서 XAML 형식입니다.  
@@ -44,7 +44,7 @@ XAML 태그 확장을 통해 개체의 배열에 대 한 일반 지원을 제공
   
  `x:Array` 자세한 내용은 위한 일반 XAML 언어 확장성입니다. 하지만 `x:Array` XAML 구조적된 속성 내용으로 XAML에서 지 원하는 컬렉션을 사용 하는 특정 속성 값을 지정 하는 데 유용할 수 있습니다. 예를 들어의 콘텐츠를 지정할 수 있습니다는 <xref:System.Collections.IEnumerable> 속성과 `x:Array` 사용 합니다.  
   
- `x:Array`은 태그 확장입니다. 태그 확장은 특성 값을 리터럴 값 또는 처리기 이름이 아닌 다른 값이 되도록 이스케이프해야 하는 요구 사항이 있는 경우 일반적으로 구현되며 이러한 요구 사항은 특정 형식 또는 속성에 형식 변환기를 배치하는 것보다 더 포괄적입니다. `x:Array` 이므로 부분적으로 해당 규칙의 예외는 대체 특성 값 처리를 제공 하는 대신 `x:Array` 의 내부 텍스트 내용을 처리 대안을 제공 합니다. 이 동작을 통해 배열에 그룹화 되어; 명명 된 배열에 액세스 하 여 코드 숨김의 뒷부분에 나오는 참조 기존 콘텐츠 모델에서 지원 될 수 있는 형식 호출할 수 있습니다 <xref:System.Array> 메서드 개별 배열 항목을 가져옵니다.  
+ `x:Array` 태그 확장입니다. 태그 확장은 특성 값을 리터럴 값 또는 처리기 이름이 아닌 다른 값이 되도록 이스케이프해야 하는 요구 사항이 있는 경우 일반적으로 구현되며 이러한 요구 사항은 특정 형식 또는 속성에 형식 변환기를 배치하는 것보다 더 포괄적입니다. `x:Array` 이므로 부분적으로 해당 규칙의 예외는 대체 특성 값 처리를 제공 하는 대신 `x:Array` 의 내부 텍스트 내용을 처리 대안을 제공 합니다. 이 동작을 통해 배열에 그룹화 되어; 명명 된 배열에 액세스 하 여 코드 숨김의 뒷부분에 나오는 참조 기존 콘텐츠 모델에서 지원 될 수 있는 형식 호출할 수 있습니다 <xref:System.Array> 메서드 개별 배열 항목을 가져옵니다.  
   
  XAML의 모든 태그 확장 사용은 중괄호 ({,} `)` 는 XAML 프로세서는 태그 확장 특성 값을 처리 해야 한다는 것을 인식 하는 규칙은 특성 구문에서 합니다. 태그 확장에에서 대 한 자세한 내용은 참조 하세요. [Type Converters and Markup Extensions for XAML](type-converters-and-markup-extensions-for-xaml.md)합니다.  
   
@@ -70,5 +70,6 @@ XAML 태그 확장을 통해 개체의 배열에 대 한 일반 지원을 제공
  배열 요소로 사용 되는 사용자 지정 형식에 대 한 클래스는 XAML 개체 요소로 인스턴스화되는 것에 대 한 요구 사항을 지원도 해야 합니다. 자세한 내용은 [XAML 및 WPF에 대 한 사용자 지정 클래스](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [태그 확장 및 WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+
+- [태그 확장명 및 WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
 - [WPF에서 System.Xaml로 마이그레이션된 형식](types-migrated-from-wpf-to-system-xaml.md)

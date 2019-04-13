@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f22927b388a62ee6025c987bb107b2dfd51da0e3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 8307960166cfc668a577431d688c439f0f794be2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488996"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072430"
 ---
 # <a name="setmanifestfile-method"></a>SetManifestFile 메서드
 지정 하거나 어셈블리를 만들 때 링커에서 사용 하는 매니페스트 파일을 다시 설정할 수 있습니다.  
@@ -49,6 +49,7 @@ HRESULT SetManifestFile(
  ALink.h 필요  
   
 ## <a name="see-also"></a>참고자료
+
 - [IALink3 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
 - [IALink 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)

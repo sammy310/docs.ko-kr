@@ -1,5 +1,5 @@
 ---
-title: '방법: AnimationClock을 사용하여 속성에 애니메이션 효과 적용'
+title: '방법: AnimationClock을 사용하여 속성에 애니메이션 효과 주기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], with AnimationClocks
 - AnimationClocks [WPF]
 ms.assetid: e6542021-714c-4675-9567-04f1c7380834
-ms.openlocfilehash: d93f1eb352aef4f5e74512a8deeb0ec3fe7943c0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4fa9efc593461d26eabaee5e2f62c1a17da1b543
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357185"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201366"
 ---
-# <a name="how-to-animate-a-property-by-using-an-animationclock"></a>방법: AnimationClock을 사용하여 속성에 애니메이션 효과 적용
+# <a name="how-to-animate-a-property-by-using-an-animationclock"></a>방법: AnimationClock을 사용하여 속성에 애니메이션 효과 주기
 이 예제에 사용 하는 방법을 보여 줍니다 <xref:System.Windows.Media.Animation.Clock> 속성 애니메이션을 적용 하는 개체입니다.  
   
  종속성 속성에 애니메이션을 적용하는 방법에는 다음 세 가지가 있습니다.  
@@ -37,6 +37,7 @@ ms.locfileid: "57357185"
  대화형으로 제어 하는 방법을 보여 주는 예는 <xref:System.Windows.Media.Animation.Clock> 시작 되 면 참조 [대화형으로 Clock 제어](how-to-interactively-control-a-clock.md)입니다.  
   
 ## <a name="see-also"></a>참고자료
-- [Storyboard를 사용하여 속성에 애니메이션 효과 주기](how-to-animate-a-property-by-using-a-storyboard.md)
-- [Storyboard를 사용하지 않고 속성에 애니메이션 효과 주기](how-to-animate-a-property-without-using-a-storyboard.md)
+
+- [스토리보드를 사용하여 속성에 애니메이션 효과 주기](how-to-animate-a-property-by-using-a-storyboard.md)
+- [스토리보드를 사용하지 않고 속성에 애니메이션 효과 주기](how-to-animate-a-property-without-using-a-storyboard.md)
 - [속성 애니메이션 기술 개요](property-animation-techniques-overview.md)

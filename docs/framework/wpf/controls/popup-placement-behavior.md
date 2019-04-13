@@ -7,21 +7,19 @@ helpviewer_keywords:
 - placing popups [WPF]
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
-ms.openlocfilehash: 449ec3ff30bb4650c32d3f6b9743b5d1a31ad0de
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 911c2064e34ed8d0a341ffd9a52f852eab677e0a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679517"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161502"
 ---
 # <a name="popup-placement-behavior"></a>Popup 배치 동작
 <xref:System.Windows.Controls.Primitives.Popup> 컨트롤 응용 프로그램 위에 떠 있는 별도 창에서 콘텐츠를 표시 합니다. 위치를 지정할 수 있습니다는 <xref:System.Windows.Controls.Primitives.Popup> 컨트롤, 마우스를 또는 사용 하 여 화면을 기준으로 합니다 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, 및 <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> 속성입니다.  이러한 속성의 위치를 지정 하는 유연성을 제공 하기 위해 함께 작동 합니다 <xref:System.Windows.Controls.Primitives.Popup>합니다.  
   
 > [!NOTE]
 >  합니다 <xref:System.Windows.Controls.ToolTip> 고 <xref:System.Windows.Controls.ContextMenu> 클래스 또한 이러한 5 개의 속성을 정의 하 고 유사 하 게 동작 합니다.  
-  
 
-  
 <a name="Positioning"></a>   
 ## <a name="positioning-the-popup"></a>Popup 위치 지정  
  배치를 <xref:System.Windows.Controls.Primitives.Popup> 기준으로 수는 <xref:System.Windows.UIElement> 또는 전체 화면.  다음 예제에서는 네 개를 만듭니다 <xref:System.Windows.Controls.Primitives.Popup> 기준으로 하는 컨트롤을 <xref:System.Windows.UIElement>-이 경우 이미지에서. 모든는 <xref:System.Windows.Controls.Primitives.Popup> 컨트롤을 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 속성이로 설정 `image1`, 하지만 각 <xref:System.Windows.Controls.Primitives.Popup> 배치 속성에 대 한 다른 값.  
@@ -58,8 +56,7 @@ ms.locfileid: "57679517"
  다음 그림에서는 합니다 <xref:System.Windows.Controls.Primitives.Popup> 기준으로 배치 된는 <xref:System.Windows.Controls.Canvas>합니다.  
   
  ![Placementtarget이 없는 popup 컨트롤](./media/popup-placement-behavior/popup-placement-no-placement-target.png "placementtarget이 없는 팝업 합니다.")  
-  
-  
+
  다음 예제에서는 <xref:System.Windows.Controls.Primitives.Popup> 의 자식인을 <xref:System.Windows.Controls.Canvas>, 이번 합니다 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 로 설정 되어 `ellipse1`이므로 아래 팝업이 표시 되는 <xref:System.Windows.Shapes.Ellipse>합니다.  
   
  [!code-xaml[PopupPositionSnippet#2](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#2)]  
@@ -81,8 +78,7 @@ ms.locfileid: "57679517"
  다음 그림에서는 이전 예제의 결과를 보여 줍니다.  
   
  ![팝업 및 placementrectangle](./media/popup-placement-behavior/popup-placement-placement-rectangle.png "와 placementrectangle 팝업 합니다.")  
-  
-  
+
 ### <a name="target-origin-and-popup-alignment-point"></a>대상 원점 및 Popup 맞춤 지점  
  *대상 원점* 및 *Popup 맞춤 지점*은 각각 대상 영역 및 Popup에서 위치 지정에 사용되는 참조 지점입니다. 사용할 수는 <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> 고 <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> 대상 영역에서 popup을 오프셋할 속성입니다.  합니다 <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> 고 <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> 대상 원점 및 popup 맞춤 지점을 기준으로 합니다. 값을 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 속성 대상 원점 및 popup 맞춤 지점이 있는 위치를 결정 합니다.  
   
@@ -174,8 +170,7 @@ ms.locfileid: "57679517"
  다음 그림에서는 아래쪽 화면 가장자리의 일부나 전부를 숨기는 경우는 <xref:System.Windows.Controls.Primitives.Popup>, 팝업 맞춤 지점은의 왼쪽 아래 모서리를 <xref:System.Windows.Controls.Primitives.Popup>합니다.  
   
  ![아래쪽 화면 가장자리로 인 한 새로운 맞춤 지점](./media/popup-placement-behavior/popup-placement-relative-point-screen-edge.png "Popup이 화면의 아래쪽 가장자리와 만나고 popup 맞춤 지점을 변경 합니다.")  
- 
-  
+
  다음 그림에서는 때 합니다 <xref:System.Windows.Controls.Primitives.Popup> 숨겨져 오른쪽 화면 가장자리와 만나고 popup 맞춤 지점을의 오른쪽 위 모서리를 <xref:System.Windows.Controls.Primitives.Popup>합니다.  
   
  ![화면 가장자리로 인 한 새로운 팝업 맞춤 지점](./media/popup-placement-behavior/popup-placement-relative-point-right-screen-edge.png "Popup이 화면의 오른쪽 가장자리와 만나고 popup 맞춤 지점을 변경 합니다.")    
@@ -196,8 +191,7 @@ ms.locfileid: "57679517"
  다음 그림을 보여 줍니다 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 됩니다 <xref:System.Windows.Controls.Primitives.PlacementMode.Right> 및 <xref:System.Windows.Controls.Primitives.Popup> 오른쪽 화면 가장자리와 만나는 대상 원점은 대상 영역의 왼쪽 위 모퉁이 이며 팝업 맞춤 지점의 오른쪽 위 모서리를 <xref:System.Windows.Controls.Primitives.Popup>.  
   
  ![오른쪽 화면 가장자리로 인 한 새로운 맞춤 지점](./media/popup-placement-behavior/popup-placement-right-screen-edge.png "Placement가 Right이 고 popup 화면의 오른쪽 가장자리와 합니다.")  
-  
-  
+
  다음 그림을 보여 줍니다 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 됩니다 <xref:System.Windows.Controls.Primitives.PlacementMode.Top> 및 <xref:System.Windows.Controls.Primitives.Popup> 위쪽 화면 가장자리와 만나는 대상 원점은 대상 영역의 왼쪽 아래 모서리 이며 팝업 맞춤 지점의 왼쪽 위 모퉁이 <xref:System.Windows.Controls.Primitives.Popup>.  
   
  ![위쪽 화면 가장자리로 인 한 새로운 맞춤 지점](./media/popup-placement-behavior/popup-placement-top-screen-edge.png "Placement가 Top 임 및 popup 화면의 위쪽 가장자리입니다.")  
@@ -210,4 +204,5 @@ ms.locfileid: "57679517"
  대상 원점 및 popup 맞춤 지점을 설정 하 여 사용자 지정할 수 있습니다 합니다 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> 속성을 <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>입니다. 그런 다음 정의 <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> 에 대 한 가능한 배치 지점 및 기본 축을 (기본 설정의 순서로)의 집합을 반환 하는 대리자는 <xref:System.Windows.Controls.Primitives.Popup>합니다. 가장 큰 부분을 표시 하는 지점이 <xref:System.Windows.Controls.Primitives.Popup> 을 선택 합니다.  위치를 <xref:System.Windows.Controls.Primitives.Popup> 하는 경우 자동으로 조정 됩니다는 <xref:System.Windows.Controls.Primitives.Popup> 화면의 가장자리에 의해 숨겨집니다. 예제를 보려면 [사용자 지정 팝업 위치 지정](how-to-specify-a-custom-popup-position.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
-- [Popup Placement Sample](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS)(Popup 배치 샘플)
+
+- [Popup 배치 샘플](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS)

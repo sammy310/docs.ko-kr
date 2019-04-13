@@ -8,34 +8,32 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: 2007ee7680707cd1cc9628cc3900ca1068db8678
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bb35a4d47f583aad710e178bdb12cb9adf6321e0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368729"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340024"
 ---
 # <a name="control-authoring-overview"></a>컨트롤 제작 개요
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 컨트롤 모델의 확장성 덕분에 새 컨트롤을 만들 필요성이 상당히 줄어들었습니다. 그러나 어떤 경우에는 여전히 사용자 지정 컨트롤을 만들어야 할 수 있습니다. 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 사용자 지정 컨트롤과 다양한 컨트롤 제작 모델을 만들 필요성을 최소화시키는 기능에 대해 설명합니다. 또한 새 컨트롤을 만드는 방법을 설명합니다.  
-  
- 
-  
+
 <a name="when_to_write_a_new_control"></a>   
 ## <a name="alternatives-to-writing-a-new-control"></a>새 컨트롤 작성에 대한 대안  
  지금까지 기존 컨트롤에서 사용자 지정 환경을 구현하려고 하면 배경색, 테두리 너비 및 글꼴 크기와 같은 컨트롤의 표준 속성을 변경하는 것으로 제한되어 있었습니다. 미리 정의된 이러한 매개 변수 이상으로 컨트롤의 모양이나 동작을 확장하려면 일반적으로 기존 컨트롤에서 상속받게 하고 컨트롤 그리기를 담당하는 메서드를 재정의하여 새 컨트롤을 만들어야 했습니다.  여전히 옵션이기는 하지만 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 사용하면 풍부한 콘텐츠 모델, 스타일, 템플릿 및 트리거를 사용하여 기존 컨트롤을 사용자 지정할 수 있습니다. 다음 목록에는 새 컨트롤을 만들지 않고 이러한 기능을 사용하여 사용자 지정 및 일관된 환경을 만드는 예제가 나와 있습니다.  
   
--   **풍부한 콘텐츠.** 많은 표준 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤이 풍부한 콘텐츠를 지원합니다. 예를 들어의 content 속성을 <xref:System.Windows.Controls.Button> 형식입니다 <xref:System.Object>, 이론적에 아무 것도 표시할 수 있습니다를 <xref:System.Windows.Controls.Button>.  단추 이미지와 텍스트를 표시 하도록 이미지를 추가할 수 있습니다 및 <xref:System.Windows.Controls.TextBlock> 에 <xref:System.Windows.Controls.StackPanel> 할당를 <xref:System.Windows.Controls.StackPanel> 에 <xref:System.Windows.Controls.ContentControl.Content%2A> 속성. 이러한 컨트롤은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 시각적 요소와 임의의 데이터를 표시할 수 있기 때문에 복잡한 시각화를 지원하기 위해 새 컨트롤을 만들거나 기존 컨트롤을 수정할 필요성이 적습니다. 콘텐츠 모델에 대 한 자세한 내용은 <xref:System.Windows.Controls.Button> 다른 콘텐츠 모델 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 참조 하십시오 [WPF 콘텐츠 모델](wpf-content-model.md)합니다.  
+-   **풍부한 콘텐츠입니다.** 많은 표준 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤이 풍부한 콘텐츠를 지원합니다. 예를 들어의 content 속성을 <xref:System.Windows.Controls.Button> 형식입니다 <xref:System.Object>, 이론적에 아무 것도 표시할 수 있습니다를 <xref:System.Windows.Controls.Button>.  단추 이미지와 텍스트를 표시 하도록 이미지를 추가할 수 있습니다 및 <xref:System.Windows.Controls.TextBlock> 에 <xref:System.Windows.Controls.StackPanel> 할당를 <xref:System.Windows.Controls.StackPanel> 에 <xref:System.Windows.Controls.ContentControl.Content%2A> 속성. 이러한 컨트롤은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 시각적 요소와 임의의 데이터를 표시할 수 있기 때문에 복잡한 시각화를 지원하기 위해 새 컨트롤을 만들거나 기존 컨트롤을 수정할 필요성이 적습니다. 콘텐츠 모델에 대 한 자세한 내용은 <xref:System.Windows.Controls.Button> 다른 콘텐츠 모델 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 참조 하십시오 [WPF 콘텐츠 모델](wpf-content-model.md)합니다.  
   
--   **스타일.** <xref:System.Windows.Style> 은 컨트롤의 속성을 나타내는 값의 컬렉션입니다. 스타일을 사용하면 새 컨트롤을 작성하지 않고도 원하는 컨트롤 모양과 동작을 재사용 가능한 표현으로 만들 수 있습니다. 예를 들어, 모든 것을 가정 하면 <xref:System.Windows.Controls.TextBlock> 컨트롤 14 글꼴 크기를 사용 하 여 빨간색, Arial 글꼴에 있습니다. 스타일을 리소스로 만들고 이에 따라 적절한 속성을 설정할 수 있습니다. 다음 모든 <xref:System.Windows.Controls.TextBlock> 응용 프로그램에 추가한 모양이 동일 해야 합니다.  
+-   **스타일입니다.** <xref:System.Windows.Style> 은 컨트롤의 속성을 나타내는 값의 컬렉션입니다. 스타일을 사용하면 새 컨트롤을 작성하지 않고도 원하는 컨트롤 모양과 동작을 재사용 가능한 표현으로 만들 수 있습니다. 예를 들어, 모든 것을 가정 하면 <xref:System.Windows.Controls.TextBlock> 컨트롤 14 글꼴 크기를 사용 하 여 빨간색, Arial 글꼴에 있습니다. 스타일을 리소스로 만들고 이에 따라 적절한 속성을 설정할 수 있습니다. 다음 모든 <xref:System.Windows.Controls.TextBlock> 응용 프로그램에 추가한 모양이 동일 해야 합니다.  
   
--   **데이터 템플릿.** <xref:System.Windows.DataTemplate> 데이터 컨트롤에 표시 되는 방식을 사용자 지정할 수 있습니다. 예를 들어, 한 <xref:System.Windows.DataTemplate> 에서 데이터를 표시 하는 방법을 지정할 수는 <xref:System.Windows.Controls.ListBox>합니다.  이에 대한 예제는 [데이터 템플릿 개요](../data/data-templating-overview.md)를 참조하세요.  데이터의 모양 사용자 지정 하는 것 외에도 <xref:System.Windows.DataTemplate> 제공 하는 다양 한 사용자 지정 Ui에서 UI 요소를 포함할 수 있습니다.  사용 하 여 예를 들어를 <xref:System.Windows.DataTemplate>를 만들 수 있습니다를 <xref:System.Windows.Controls.ComboBox> 각 항목에 포함 하는 확인란 합니다.  
+-   **데이터 템플릿입니다.** <xref:System.Windows.DataTemplate> 데이터 컨트롤에 표시 되는 방식을 사용자 지정할 수 있습니다. 예를 들어, 한 <xref:System.Windows.DataTemplate> 에서 데이터를 표시 하는 방법을 지정할 수는 <xref:System.Windows.Controls.ListBox>합니다.  이에 대한 예제는 [데이터 템플릿 개요](../data/data-templating-overview.md)를 참조하세요.  데이터의 모양 사용자 지정 하는 것 외에도 <xref:System.Windows.DataTemplate> 제공 하는 다양 한 사용자 지정 Ui에서 UI 요소를 포함할 수 있습니다.  사용 하 여 예를 들어를 <xref:System.Windows.DataTemplate>를 만들 수 있습니다를 <xref:System.Windows.Controls.ComboBox> 각 항목에 포함 하는 확인란 합니다.  
   
--   **컨트롤 템플릿.** 많은 컨트롤 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 사용을 <xref:System.Windows.Controls.ControlTemplate> 컨트롤의 구조 및 컨트롤의 기능에서 컨트롤의 모양을 분리 하는 모양을 정의할 수 있습니다. 다시 정의 하 여 컨트롤의 모양을 대폭 변경할 수 있습니다 해당 <xref:System.Windows.Controls.ControlTemplate>합니다.  예를 들어 신호등 모양의 컨트롤이 필요하다고 가정해 보겠습니다. 이 컨트롤에는 간단한 사용자 인터페이스 및 기능이 있습니다.  컨트롤은 세 개의 원으로, 한 번에 하나씩만 불을 켤 수 있습니다. 약간의 리플렉션을 후는 알 수 있습니다는 <xref:System.Windows.Controls.RadioButton> 한 번만의 기본 모양을 하나만 선택 된 기능을 제공 합니다 <xref:System.Windows.Controls.RadioButton> 신호등에서 등과 같습니다.  때문에 합니다 <xref:System.Windows.Controls.RadioButton> 해당 모양을 정의 하는 컨트롤 템플릿을 사용 재정의 하기 쉽습니다는 <xref:System.Windows.Controls.ControlTemplate> 컨트롤의 요구 사항에 맞게 라디오 단추를 사용 하 여 신호등을 확인 하 합니다.  
+-   **컨트롤 템플릿입니다.** 많은 컨트롤 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 사용을 <xref:System.Windows.Controls.ControlTemplate> 컨트롤의 구조 및 컨트롤의 기능에서 컨트롤의 모양을 분리 하는 모양을 정의할 수 있습니다. 다시 정의 하 여 컨트롤의 모양을 대폭 변경할 수 있습니다 해당 <xref:System.Windows.Controls.ControlTemplate>합니다.  예를 들어 신호등 모양의 컨트롤이 필요하다고 가정해 보겠습니다. 이 컨트롤에는 간단한 사용자 인터페이스 및 기능이 있습니다.  컨트롤은 세 개의 원으로, 한 번에 하나씩만 불을 켤 수 있습니다. 약간의 리플렉션을 후는 알 수 있습니다는 <xref:System.Windows.Controls.RadioButton> 한 번만의 기본 모양을 하나만 선택 된 기능을 제공 합니다 <xref:System.Windows.Controls.RadioButton> 신호등에서 등과 같습니다.  때문에 합니다 <xref:System.Windows.Controls.RadioButton> 해당 모양을 정의 하는 컨트롤 템플릿을 사용 재정의 하기 쉽습니다는 <xref:System.Windows.Controls.ControlTemplate> 컨트롤의 요구 사항에 맞게 라디오 단추를 사용 하 여 신호등을 확인 하 합니다.  
   
     > [!NOTE]
     >  하지만 <xref:System.Windows.Controls.RadioButton> 사용할 수는 <xref:System.Windows.DataTemplate>, <xref:System.Windows.DataTemplate> 이 예제의 충분 하지 않습니다.  <xref:System.Windows.DataTemplate> 콘텐츠 컨트롤의 모양을 정의 합니다. 경우는 <xref:System.Windows.Controls.RadioButton>, 콘텐츠를 나타내는 원의 오른쪽에 나타나는 모든 여부를 <xref:System.Windows.Controls.RadioButton> 선택 합니다.  신호등의 예제에서 라디오 버튼은 "불을 켤 수 있는" 원이어야 합니다. 신호등의 모양 요구 사항은의 기본 모양을 다르기 때문에 <xref:System.Windows.Controls.RadioButton>, 다시 정의 하는 데 필요한 것은 <xref:System.Windows.Controls.ControlTemplate>.  일반적을 <xref:System.Windows.DataTemplate> 컨트롤 및 콘텐츠 (또는 데이터)의 정의 <xref:System.Windows.Controls.ControlTemplate> 컨트롤 구성 되는 방식을 정의 하기 위해 사용 됩니다.  
   
--   **트리거.** <xref:System.Windows.Trigger> 동적으로 새 컨트롤을 만들지 않고 컨트롤의 동작과 모양을 변경할 수 있습니다. 예를 들어, 여러 개의 <xref:System.Windows.Controls.ListBox> 응용 프로그램에서 컨트롤의 각 항목에 들고 <xref:System.Windows.Controls.ListBox> 되며 굵은 빨간색 선택 하는 경우에 합니다. 직감을에서 상속 되는 클래스를 만드는 것 <xref:System.Windows.Controls.ListBox> 시키고 합니다 <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> 더 나은 방법은 선택한 항목의 모양을 변경 하는 방법은의 스타일에 트리거를 추가 하는 것을 <xref:System.Windows.Controls.ListBoxItem> 의 모양을 변경 하는 선택한 항목입니다. 트리거를 사용하면 속성 값을 변경하거나 속성 값을 기반으로 작업을 수행할 수 있습니다. <xref:System.Windows.EventTrigger> 이벤트가 발생할 때 작업을 수행할 수 있습니다.  
+-   **트리거합니다.** <xref:System.Windows.Trigger> 동적으로 새 컨트롤을 만들지 않고 컨트롤의 동작과 모양을 변경할 수 있습니다. 예를 들어, 여러 개의 <xref:System.Windows.Controls.ListBox> 응용 프로그램에서 컨트롤의 각 항목에 들고 <xref:System.Windows.Controls.ListBox> 되며 굵은 빨간색 선택 하는 경우에 합니다. 직감을에서 상속 되는 클래스를 만드는 것 <xref:System.Windows.Controls.ListBox> 시키고 합니다 <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> 더 나은 방법은 선택한 항목의 모양을 변경 하는 방법은의 스타일에 트리거를 추가 하는 것을 <xref:System.Windows.Controls.ListBoxItem> 의 모양을 변경 하는 선택한 항목입니다. 트리거를 사용하면 속성 값을 변경하거나 속성 값을 기반으로 작업을 수행할 수 있습니다. <xref:System.Windows.EventTrigger> 이벤트가 발생할 때 작업을 수행할 수 있습니다.  
   
  스타일, 템플릿 및 트리거에 대한 자세한 내용은 [스타일 지정 및 템플릿](styling-and-templating.md)을 참조하세요.  
   
@@ -43,7 +41,7 @@ ms.locfileid: "57368729"
   
 <a name="models_for_control_authoring"></a>   
 ## <a name="models-for-control-authoring"></a>컨트롤 제작 모델  
- 풍부한 콘텐츠 모델, 스타일, 템플릿 및 트리거를 사용하면 새 컨트롤을 만들어야 하는 필요성이 최소화됩니다. 그러나 새 컨트롤을 만들어야 한다면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 다양한 컨트롤 제작 모델을 이해하는 것이 중요합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 컨트롤을 만들기 위해 세 가지 일반적인 모델을 제공하며 각 모델은 서로 다른 일련의 기능과 유연성 수준을 제공합니다. 세 가지 모델에 대 한 기본 클래스 <xref:System.Windows.Controls.UserControl>하십시오 <xref:System.Windows.Controls.Control>, 및 <xref:System.Windows.FrameworkElement>합니다.  
+ 풍부한 콘텐츠 모델, 스타일, 템플릿 및 트리거를 사용하면 새 컨트롤을 만들어야 하는 필요성이 최소화됩니다. 그러나 새 컨트롤을 만들어야 한다면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 다양한 컨트롤 제작 모델을 이해하는 것이 중요합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 다양 한 기능 및 유연성 수준을 제공 하는 각 컨트롤을 만들기 위한 세 가지 일반 모델을 제공 합니다. 세 가지 모델에 대 한 기본 클래스 <xref:System.Windows.Controls.UserControl>하십시오 <xref:System.Windows.Controls.Control>, 및 <xref:System.Windows.FrameworkElement>합니다.  
   
 ### <a name="deriving-from-usercontrol"></a>UserControl에서 파생  
  컨트롤을 만드는 가장 간단한 방법은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에서 파생 하는 것 <xref:System.Windows.Controls.UserControl>입니다. 상속 하는 컨트롤을 빌드할 때 <xref:System.Windows.Controls.UserControl>, 기존 구성 요소를 추가 합니다 <xref:System.Windows.Controls.UserControl>구성 요소 이름을 지정 하 고 이벤트 처리기에서 참조, [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]합니다. 그런 다음 코드에서 명명된 요소를 참조하고 이벤트 처리기를 정의할 수 있습니다. 이 개발 모델은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 애플리케이션 개발에 사용된 모델과 매우 유사합니다.  
@@ -114,7 +112,7 @@ ms.locfileid: "57368729"
   
 -   속성의 `get` 및 `set` 접근자를 구현하여 종속성 속성을 등록하는 데 사용된 이름과 동일한 이름인 `Value`라는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 래퍼 속성을 정의합니다. 합니다 `get` 하 고 `set` 접근자 에서만 호출할 <xref:System.Windows.DependencyObject.GetValue%2A> 및 <xref:System.Windows.DependencyObject.SetValue%2A> 각각. 것이 좋습니다는 종속성 속성의 접근자 추가 논리가 포함 되지 때문에 클라이언트와 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 접근자 및 호출을 무시할 수 있습니다 <xref:System.Windows.DependencyObject.GetValue%2A> 및 <xref:System.Windows.DependencyObject.SetValue%2A> 직접. 예를 들어 속성이 데이터 소스에 바인딩되면 해당 속성의 `set` 접근자가 호출되지 않습니다.  Get에 논리를 추가 하는 대신 set 접근자를 사용 하 여 합니다 <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.CoerceValueCallback>, 및 <xref:System.Windows.PropertyChangedCallback> 응답할 변경 되 면 값을 확인 하는 대리자입니다.  이 콜백에 대한 자세한 내용은 [종속성 속성 콜백 및 유효성 검사](../advanced/dependency-property-callbacks-and-validation.md)를 참조하세요.  
   
--   메서드를 정의 합니다 <xref:System.Windows.CoerceValueCallback> 라는 `CoerceValue`합니다. `CoerceValue`는 `Value`가 `MinValue`보다 크거나 같고 `MaxValue`보다 작거나 같도록 합니다.  
+-   메서드를 정의 합니다 <xref:System.Windows.CoerceValueCallback> 라는 `CoerceValue`합니다. `CoerceValue` 되도록 `Value` 크거나 같음 `MinValue` 보다 작거나 같음 `MaxValue`합니다.  
   
 -   메서드를 정의 합니다 <xref:System.Windows.PropertyChangedCallback>명명 된 `OnValueChanged`합니다. `OnValueChanged` 만듭니다는 <xref:System.Windows.RoutedPropertyChangedEventArgs%601> 개체를 발생 시킬 준비를 `ValueChanged` 라우트된 이벤트입니다. 라우트된 이벤트는 다음 섹션에서 설명합니다.  
   
@@ -184,7 +182,7 @@ ms.locfileid: "57368729"
   
 -   `Set`*PropertyName* 및 `Get`*PropertyName*이라는 `public` `static` CLR 메서드 쌍을 구현합니다. 두 메서드 모두에서 파생 된 클래스를 허용 해야 <xref:System.Windows.DependencyProperty> 첫 번째 인수로 합니다. `Set`*PropertyName* 메서드는 그 형식이 속성의 등록된 데이터 형식과 일치하는 인수도 수락합니다. `Get`*PropertyName* 메서드는 동일한 형식의 값을 반환해야 합니다. `Set`*PropertyName* 메서드가 누락된 경우 속성이 읽기 전용으로 표시됩니다.  
   
--   `Set` *PropertyName* 및 `Get` *PropertyName* 직접 라우팅해야 합니다 <xref:System.Windows.DependencyObject.GetValue%2A> 및 <xref:System.Windows.DependencyObject.SetValue%2A> 각각의 대상 종속성 메서드 개체입니다. 디자이너는 메서드 래퍼를 통해 호출하거나 대상 종속성 개체를 직접 호출하여 연결된 속성에 액세스할 수 있습니다.  
+-   `Set` **PropertyName* 및 `Get` *PropertyName* 직접 라우팅해야 합니다 <xref:System.Windows.DependencyObject.GetValue%2A> 및 <xref:System.Windows.DependencyObject.SetValue%2A> 각각의 대상 종속성 메서드 개체입니다.D디자이너는 메서드 래퍼를 통해 호출하거나 대상 종속성 개체를 직접 호출하여 연결된 속성에 액세스할 수 있습니다.  
   
  연결된 속성에 대한 자세한 내용은 [연결된 속성 개요](../advanced/attached-properties-overview.md)를 참조하세요.  
   
@@ -193,15 +191,15 @@ ms.locfileid: "57368729"
   
  애플리케이션이 리소스를 찾을 때 다음 순서로 세 가지 수준을 조사합니다.  
   
-1.  요소 수준  
+1. 요소 수준  
   
      시스템이 리소스를 참조하는 요소로 시작한 다음 루트 요소에 도달할 때까지 논리 부모 등의 리소스를 검색합니다.  
   
-2.  애플리케이션 수준  
+2. 애플리케이션 수준  
   
      정의 된 리소스는 <xref:System.Windows.Application> 개체입니다.  
   
-3.  테마 수준  
+3. 테마 수준  
   
      테마 수준 사전은 Themes라는 하위 폴더에 저장됩니다.  Themes 폴더의 파일은 테마에 해당합니다.  예를 들어 Aero.NormalColor.xaml, Luna.NormalColor.xaml, Royale.NormalColor.xaml 등이 있을 수 있습니다.  generic.xaml이라는 파일이 있을 수도 있습니다.  시스템이 테마 수준에서 리소스를 찾으면 먼저 테마별 파일에서 찾은 다음 generic.xaml에서 찾습니다.  
   
@@ -229,7 +227,7 @@ ms.locfileid: "57368729"
  [!code-csharp[SharedResources#4](~/samples/snippets/csharp/VS_Snippets_Wpf/SharedResources/CS/ShapeResizer.xaml.cs#4)]  
   
 #### <a name="defining-resources-at-the-theme-level"></a>테마 수준에서 리소스 정의  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 사용하면 다양한 Windows 테마를 위한 리소스를 만들 수 있습니다.  컨트롤 작성자는 특정 테마의 리소스를 정의하여 사용 중인 테마에 따라 컨트롤의 모양을 변경할 수 있습니다. 모양의 예를 들어를 <xref:System.Windows.Controls.Button> Windows 클래식에서 테마 (Windows 2000의 기본 테마)에서 다릅니다를 <xref:System.Windows.Controls.Button> Windows Luna 테마 (Windows XP의 기본 테마) 때문에 <xref:System.Windows.Controls.Button> 다른을 사용 하 여 <xref:System.Windows.Controls.ControlTemplate> 각 테마입니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 다양 한 Windows 테마에 대 한 리소스를 만들 수 있습니다.  컨트롤 작성자는 특정 테마의 리소스를 정의하여 사용 중인 테마에 따라 컨트롤의 모양을 변경할 수 있습니다. 모양의 예를 들어를 <xref:System.Windows.Controls.Button> Windows 클래식에서 테마 (Windows 2000의 기본 테마)에서 다릅니다를 <xref:System.Windows.Controls.Button> Windows Luna 테마 (Windows XP의 기본 테마) 때문에 <xref:System.Windows.Controls.Button> 다른을 사용 하 여 <xref:System.Windows.Controls.ControlTemplate> 각 테마입니다.  
   
  테마와 관련된 리소스는 특정 파일 이름의 리소스 사전에 보관됩니다. 이러한 파일은 컨트롤이 포함된 폴더의 하위 폴더인 `Themes`라는 폴더에 있어야 합니다. 다음 표에는 각 파일과 관련된 리소스 사전 파일과 테마가 나와 있습니다.  
   
@@ -269,6 +267,7 @@ ms.locfileid: "57368729"
  [!code-vb[CustomControlNumericUpDown#ThemesSection](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/my project/assemblyinfo.vb#themessection)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [Visual Studio에서 XAML 디자인](/visualstudio/designers/designing-xaml-in-visual-studio)
 - [WPF의 Pack URI](../app-development/pack-uris-in-wpf.md)
 - [컨트롤 사용자 지정](control-customization.md)

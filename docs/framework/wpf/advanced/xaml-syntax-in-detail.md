@@ -29,18 +29,16 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: ecea2575503ad8fe4ff8a190a417bae75a7b31f7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bf4118c6e811f409715b7b6684851b8b3e8bbb25
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367962"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298892"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 구문 정보
 이 항목에서는 XAML 구문 요소에 설명 하는 데 사용 되는 용어를 정의 합니다. 이러한 용어는 특히 및 XAML 또는 System.Xaml 수준에서 XAML 언어 지원을 사용 하도록 설정 하는 기본 XAML 개념을 사용 하는 다른 프레임 워크에 대 한 WPF 설명서에 대 한 모두이 문서의 나머지 부분에서 자주 사용 됩니다. 이 항목에서는 확장 항목에 도입 하는 기본 용어 [XAML 개요 (WPF)](xaml-overview-wpf.md)합니다.  
-  
 
-  
 <a name="the_xaml_language_specification"></a>   
 ## <a name="the-xaml-language-specification"></a>XAML 언어 사양  
  또한 여기에 정의 된 XAML 구문 용어 정의 되었거나 XAML 언어 사양 내에서 참조 합니다. XAML은 XML 기반 언어 및 또는 XML 구조적 규칙에 따라 확장 합니다. 일부의 용어를 공유 하거나 XML 언어 또는 XML 문서 개체 모델을 설명 하는 경우 일반적으로 사용 되는 용어를 기반으로 합니다.  
@@ -101,11 +99,11 @@ ms.locfileid: "57367962"
   
  특성 값을 다음 중 하나에 의해 채워집니다.이 처리 순서를 사용 하 여:  
   
-1.  XAML 프로세서는 중괄호 또는에서 파생 되는 개체 요소를 발견할 경우 <xref:System.Windows.Markup.MarkupExtension>, 다음 참조 된 태그 확장의 값을 문자열로 처리 하는 대신 먼저 평가 됩니다 및 태그 확장에 의해 반환 된 개체를 사용 하 여으로 값입니다. 대부분의 경우에서 태그 확장에서 반환 되는 개체에 기존 개체 또는 런타임까지 평가 지연 하는 새로 인스턴스화된 개체가 아닌 식에 대 한 참조 됩니다.  
+1. XAML 프로세서는 중괄호 또는에서 파생 되는 개체 요소를 발견할 경우 <xref:System.Windows.Markup.MarkupExtension>, 다음 참조 된 태그 확장의 값을 문자열로 처리 하는 대신 먼저 평가 됩니다 및 태그 확장에 의해 반환 된 개체를 사용 하 여으로 값입니다. 대부분의 경우에서 태그 확장에서 반환 되는 개체에 기존 개체 또는 런타임까지 평가 지연 하는 새로 인스턴스화된 개체가 아닌 식에 대 한 참조 됩니다.  
   
-2.  속성 선언 되 면 특성이 사용 된 <xref:System.ComponentModel.TypeConverter>, 해당 속성의 값 형식 선언 또는 특성이 사용 된 <xref:System.ComponentModel.TypeConverter>특성의 문자열 값으로 변환 입력 유형 변환기에 제출 되 고 변환기가 반환 됩니다는 새 개체 인스턴스입니다.  
+2. 속성 선언 되 면 특성이 사용 된 <xref:System.ComponentModel.TypeConverter>, 해당 속성의 값 형식 선언 또는 특성이 사용 된 <xref:System.ComponentModel.TypeConverter>특성의 문자열 값으로 변환 입력 유형 변환기에 제출 되 고 변환기가 반환 됩니다는 새 개체 인스턴스입니다.  
   
-3.  없는 경우 없는 <xref:System.ComponentModel.TypeConverter>, 속성 형식으로의 직접 변환을 시도 합니다. 이 최종 단계는 XAML 언어 기본 형식 또는 명명 된 상수 (다음 파서가 일치 하는 값에 액세스) 열거형의 이름 확인 간의 파서 네이티브 값을 직접 변환입니다.  
+3. 없는 경우 없는 <xref:System.ComponentModel.TypeConverter>, 속성 형식으로의 직접 변환을 시도 합니다. 이 최종 단계는 XAML 언어 기본 형식 또는 명명 된 상수 (다음 파서가 일치 하는 값에 액세스) 열거형의 이름 확인 간의 파서 네이티브 값을 직접 변환입니다.  
   
 #### <a name="enumeration-attribute-values"></a>열거형 특성 값  
  XAML의 열거형에서 처리 하는 본질적으로 XAML 파서 및 열거형의 명명 된 상수 중 하나의 문자열 이름을 지정 하 여 열거형의 멤버를 지정 해야 합니다.  
@@ -316,8 +314,9 @@ ms.locfileid: "57367962"
  마찬가지로 하지만 *typeName*. *memberName* 특성에 대 한 폼 *baseTypeName*. *memberName* 는 태그에서 잘못 된 스타일 및 사용 하지 않아야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [XAML 개요(WPF)](xaml-overview-wpf.md)
-- [XAML Namespace (x:) 언어 기능](../../xaml-services/xaml-namespace-x-language-features.md)
+- [XAML 네임스페이스(x:) 언어 기능](../../xaml-services/xaml-namespace-x-language-features.md)
 - [WPF XAML 확장](wpf-xaml-extensions.md)
 - [종속성 속성 개요](dependency-properties-overview.md)
 - [TypeConverter 및 XAML](typeconverters-and-xaml.md)

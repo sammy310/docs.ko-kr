@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: c39401e5-b5fc-4439-8f31-ed640f7ce6ed
-ms.openlocfilehash: ee2449ff905bfdacaeeee4cc244db1ce50e00104
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e6aee5ea36c0315d5b01ae2734d17c9e7dab8e93
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824311"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341857"
 ---
 # <a name="how-to-put-a-value-in-a-property-visual-basic"></a>방법: 속성 (Visual Basic) 값 입력
 대입문의 왼쪽에 속성 이름을 입력 하 여 속성에 값을 저장 합니다.  
@@ -22,27 +22,27 @@ ms.locfileid: "58824311"
   
 ### <a name="to-store-a-value-in-a-property"></a>속성에 값을 저장 하려면  
   
-1.  대입문의 왼쪽에 속성 이름을 사용 합니다.  
+1. 대입문의 왼쪽에 속성 이름을 사용 합니다.  
   
      다음 예제에서는 Visual Basic의 값을 설정 `TimeOfDay` 암시적으로 호출 정오에 속성 해당 `Set` 프로시저입니다.  
   
      [!code-vb[VbVbcnProcedures#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#11)]  
   
-2.  속성 인수를 사용 하는 경우에 속성 이름을 괄호로 묶어 인수 목록에 따릅니다. 인수가 없는 경우에 필요에 따라 괄호를 생략할 수 있습니다.  
+2. 속성 인수를 사용 하는 경우에 속성 이름을 괄호로 묶어 인수 목록에 따릅니다. 인수가 없는 경우에 필요에 따라 괄호를 생략할 수 있습니다.  
   
-3.  쉼표로 구분 하 여 괄호 안에 인수 목록의 인수를 배치 합니다. 속성은 해당 매개 변수 정의 동일한 순서로 인수를 지정 해야 합니다.  
+3. 쉼표로 구분 하 여 괄호 안에 인수 목록의 인수를 배치 합니다. 속성은 해당 매개 변수 정의 동일한 순서로 인수를 지정 해야 합니다.  
   
-4.  대입문의 오른쪽에 생성 된 값을 속성에 저장 됩니다.  
+4. 대입문의 오른쪽에 생성 된 값을 속성에 저장 됩니다.  
   
 ## <a name="see-also"></a>참고자료
 
 - <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>
 - [속성 프로시저](./property-procedures.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
-- [Property 문](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md)
 - [Visual Basic에서 속성과 변수의 차이점](./differences-between-properties-and-variables.md)
 - [방법: 속성 만들기](./how-to-create-a-property.md)
-- [방법: 액세스 수준이 혼합된 된 속성 선언](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [방법: 액세스 수준이 혼합된 속성 선언](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [방법: 속성 프로시저 호출](./how-to-call-a-property-procedure.md)
 - [방법: 선언 및 Visual Basic의 기본 속성을 호출](./how-to-declare-and-call-a-default-property.md)
 - [방법: 속성에서 값 가져오기](./how-to-get-a-value-from-a-property.md)

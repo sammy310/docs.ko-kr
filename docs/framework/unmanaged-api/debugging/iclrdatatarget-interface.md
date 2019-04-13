@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11eb49347caacbfa92493e9ac20f1c8cb5c706e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ed3cb62b56e80a7fe4ea54b43ac9f4a28b8d102
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745027"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100251"
 ---
 # <a name="iclrdatatarget-interface"></a>ICLRDataTarget 인터페이스
 CLR (공용 언어 런타임)의 대상 항목과 상호 작용 하기 위한 메서드를 제공합니다.  
@@ -55,5 +55,6 @@ CLR (공용 언어 런타임)의 대상 항목과 상호 작용 하기 위한 �
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICLRDataTarget2 인터페이스](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

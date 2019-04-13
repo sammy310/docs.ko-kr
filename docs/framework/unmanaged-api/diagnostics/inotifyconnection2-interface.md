@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4c39797c720cdfcab58d64caf05e65c6b623325d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f61f8c77799bbc7a993683421eeee4fd7277d4a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561155"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167520"
 ---
 # <a name="inotifyconnection2-interface"></a>INotifyConnection2 인터페이스
 등록 및 연결 알림 소스를 등록 취소에 대 한 메서드를 선언 합니다.  
@@ -37,6 +37,7 @@ ms.locfileid: "54561155"
  **헤더:** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>참고자료
+
 - [INotifySink2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
 - [INotifySource2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
 - [진단 기호 저장소 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

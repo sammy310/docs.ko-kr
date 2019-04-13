@@ -6,17 +6,16 @@ helpviewer_keywords:
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-ms.openlocfilehash: 0a2db2392c2380a397da42474a311449c8fdf9fb
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 96a0a5feaf14a7f040402681e90fba8f9766324b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412164"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199039"
 ---
 # <a name="sample-opentype-font-pack"></a>샘플 OpenType 글꼴 팩
 이 항목에서는 [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]를 통해 배포되는 샘플 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴을 간략하게 설명합니다. 샘플 글꼴은 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 애플리케이션에서 사용될 수 있는 확장 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 기능을 지원합니다.  
-  
-  
+
 <a name="overview"></a>   
 ## <a name="fonts-in-the-opentype-font-pack"></a>OpenType 글꼴 팩의 글꼴  
  [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램을 만드는 데 사용할 수 있는 샘플 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴 집합을 제공합니다. 샘플 글꼴은 Ascender Corporation으로부터 사용 허가를 받아 제공됩니다. 이러한 글꼴은 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 서식을 통해 정의된 총 기능의 하위 집합만 구현합니다. 다음 테이블에는 샘플 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴의 이름이 나와 있습니다.  
@@ -53,6 +52,7 @@ Lindsey 글꼴 표시
  애플리케이션에서 글꼴을 사용할 수 있는 두 가지 방법이 있습니다. 어셈블리 내에 리소스로 포함되지 않은 프로젝트 콘텐츠 항목으로 애플리케이션에 글꼴을 추가할 수 있습니다. 또는 애플리케이션의 어셈블리 파일에 포함된 프로젝트 리소스 항목으로 애플리케이션에 글꼴을 추가할 수 있습니다. 자세한 내용은 [애플리케이션과 함께 글꼴 패키징](packaging-fonts-with-applications.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Documents.Typography>
 - [OpenType 글꼴 기능](opentype-font-features.md)
-- [응용 프로그램과 함께 글꼴 패키징](packaging-fonts-with-applications.md)
+- [애플리케이션과 함께 글꼴 패키징](packaging-fonts-with-applications.md)

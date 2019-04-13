@@ -2,12 +2,12 @@
 title: 메시지 로깅에 대한 보안 고려 사항
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: 0bee1543a6c29dc34abcb2af08ee520923766175
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 372449c816f32ee30b89bf4ba2e46f82c56b3228
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732000"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170666"
 ---
 # <a name="security-concerns-for-message-logging"></a>메시지 로깅에 대한 보안 고려 사항
 이 항목에서는 메시지 로깅에 의해 생성된 이벤트뿐 아니라 중요한 데이터가 메시지 로그에서 노출되지 않도록 보호하는 방법에 대해 설명합니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "54732000"
   
  다음 팁은 로그 파일의 내용이 실수로 노출되지 않도록 보호하는 데 도움이 될 수 있습니다.  
   
--   로그 파일이 웹 호스트 및 자체 호스트 시나리오 둘 다에서 ACL(Access Control 목록)을 통해 보호되는지 확인합니다.  
+-   로그 파일이 웹 호스트 및 자체 호스트 시나리오 둘 다에서 ACL(액세스 제어 목록)을 통해 보호되는지 확인합니다.  
   
 -   웹 요청을 사용하여 쉽게 제공될 수 없는 파일 확장명을 선택합니다. 예를 들어 .xml 파일 확장명을 사용하는 것은 안전하지 않습니다. 제공될 수 있는 확장명 목록을 보기 위해 IIS(인터넷 정보 서비스) 관리 설명서를 확인할 수 있습니다.  
   
@@ -110,5 +110,6 @@ ms.locfileid: "54732000"
  이러한 이벤트는 Windows에 포함된 이벤트 뷰어 도구에서 볼 수 있습니다. 이 대 한 자세한 내용은 참조 하세요. [이벤트 로깅](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [메시지 로깅](../../../../docs/framework/wcf/diagnostics/message-logging.md)
 - [보안 고려 사항 및 추적에 대한 유용한 정보](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)

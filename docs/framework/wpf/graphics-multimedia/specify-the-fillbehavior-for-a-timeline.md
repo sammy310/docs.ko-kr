@@ -1,18 +1,18 @@
 ---
-title: '방법: 활성 기간이 끝난 Timeline의 FillBehavior 지정'
+title: '방법: 활성 기간 끝에 도달한 Timeline에 대한 FillBehavior 지정'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - FillBehavior property for inactive timelines [WPF]
 - Timelines [WPF], FillBehavior property
 ms.assetid: db805f59-d513-4dac-af15-47005dae3199
-ms.openlocfilehash: 1d6a3ec38a6488d997ce5a4734cc095446354070
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9f03c5b8d4585c32e0a9f119649dd15a23523033
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358134"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091127"
 ---
-# <a name="how-to-specify-the-fillbehavior-for-a-timeline-that-has-reached-the-end-of-its-active-period"></a>방법: 활성 기간이 끝난 Timeline의 FillBehavior 지정
+# <a name="how-to-specify-the-fillbehavior-for-a-timeline-that-has-reached-the-end-of-its-active-period"></a>방법: 활성 기간 끝에 도달한 Timeline에 대한 FillBehavior 지정
 지정 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 비활성에 대 한 <xref:System.Windows.Media.Animation.Timeline> 의 애니메이션된 속성입니다.  
   
 ## <a name="example"></a>예제  
@@ -27,6 +27,7 @@ ms.locfileid: "57358134"
  전체 샘플을 참조 하세요 [애니메이션 예제 갤러리](https://go.microsoft.com/fwlink/?LinkID=159969)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.Animation.DoubleAnimation>
 - <xref:System.Windows.FrameworkElement.Width%2A>
 - <xref:System.Windows.Media.Animation.Timeline>

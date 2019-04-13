@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - mouse [Windows Forms], capture
 ms.assetid: 8911d4b0-a4f8-4f93-8246-371aebd27d0c
-ms.openlocfilehash: afb58df99ea30f5e7e6ab5b9156af195d273c44d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 30432c6978f60cc9ad47d5df5dafc7aa45229f3b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712710"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151647"
 ---
 # <a name="mouse-capture-in-windows-forms"></a>Windows Forms의 마우스 캡처
 *마우스 캡처* 컨트롤 명령의 모든 마우스 입력을 받는 시점을 나타냅니다. 컨트롤이 마우스를 캡처, 포인터의 테두리 내 있는지 여부에 관계 없이 마우스 입력을 받습니다.  
@@ -22,4 +22,5 @@ ms.locfileid: "57712710"
  전경 창이 마우스를 캡처할 수 있습니다. 배경 창이 마우스를 캡처할 때 창 창의 표시 영역 내에서 마우스 포인터가 있을 때 발생 하는 마우스 이벤트의 메시지를 받습니다. 또한 전경 창이 마우스를 캡처한 경우에 여전히 클릭할 수 다른 창 전경으로 상태로 전환 합니다. 마우스를 캡처한 바로 가기 키 작동 하지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Forms 애플리케이션의 마우스 입력](mouse-input-in-a-windows-forms-application.md)

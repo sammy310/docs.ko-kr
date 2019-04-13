@@ -2,22 +2,19 @@
 title: 컴파일러 옵션
 description: 사용 하 여 F# 의 컴파일을 제어 하는 컴파일러 명령줄 옵션에 F# 앱 및 라이브러리입니다.
 ms.date: 12/10/2018
-ms.openlocfilehash: d8e4331bcacd7082d7560ddc6fcadb4ce2b61cf8
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: fa639fe37ed336ad9f990e01bf2645c5a86498e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "53614495"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089759"
 ---
 # <a name="compiler-options"></a>컴파일러 옵션
 
 에 대 한 컴파일러 명령줄 옵션에 설명 합니다 F# 컴파일러, fsc.exe 합니다. 프로젝트 속성을 설정 하 여 컴파일 환경을 제어할 수도 있습니다.
 
-
 ## <a name="compiler-options-listed-alphabetically"></a>컴파일러 옵션 사전순 목록
 다음 표에서 컴파일러 옵션 사전순 목록입니다. 일부는 F# 컴파일러 옵션은 비슷합니다는 C# 컴파일러 옵션입니다. 경우에 대 한 링크 하는 경우는 C# 컴파일러 옵션 항목에서 제공 됩니다.
-
-
 
 |컴파일러 옵션|설명|
 |---------------|-----------|

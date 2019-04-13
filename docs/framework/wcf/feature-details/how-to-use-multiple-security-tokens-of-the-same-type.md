@@ -2,12 +2,12 @@
 title: '방법: 동일한 형식의 여러 보안 토큰 사용'
 ms.date: 03/30/2017
 ms.assetid: cf179f48-4ed4-4caa-86a5-ef8eecc231cd
-ms.openlocfilehash: a532d40d8c31894c63a382ecad0cbcf8b42e3a66
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 7de5d52587e1796ecfa05048024f8847a555655c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303766"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309279"
 ---
 # <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>방법: 동일한 형식의 여러 보안 토큰 사용
 -   [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0의 경우 클라이언트 메시지에 지정된 형식의 토큰을 하나만 포함할 수 있었지만, 이제 클라이언트 메시지에 특정 형식의 여러 토큰을 포함할 수 있습니다. 이 항목에서는 동일한 형식의 토큰을 클라이언트 메시지에 여러 개 포함하는 방법을 보여 줍니다.  
@@ -16,31 +16,31 @@ ms.locfileid: "56303766"
   
 ### <a name="to-use-multiple-security-tokens-of-the-same-type"></a>동일한 형식의 보안 토큰을 여러 개 사용하려면  
   
-1.  바인딩 요소로 채울 빈 바인딩 요소 컬렉션을 만듭니다.  
+1. 바인딩 요소로 채울 빈 바인딩 요소 컬렉션을 만듭니다.  
   
      [!code-csharp[C_CustomBinding#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#9)]  
   
-2.  <xref:System.ServiceModel.Channels.SecurityBindingElement>를 호출하여 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>를 만듭니다.  
+2. <xref:System.ServiceModel.Channels.SecurityBindingElement>를 호출하여 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>를 만듭니다.  
   
      [!code-csharp[C_CustomBinding#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#10)]  
   
-3.  <xref:System.ServiceModel.Security.Tokens.SupportingTokenParameters> 컬렉션을 만듭니다.  
+3. <xref:System.ServiceModel.Security.Tokens.SupportingTokenParameters> 컬렉션을 만듭니다.  
   
      [!code-csharp[C_CustomBinding#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#11)]  
   
-4.  컬렉션에 SAML 토큰을 추가합니다.  
+4. 컬렉션에 SAML 토큰을 추가합니다.  
   
      [!code-csharp[C_CustomBinding#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#12)]  
   
-5.  <xref:System.ServiceModel.Channels.SecurityBindingElement>에 컬렉션을 추가합니다.  
+5. <xref:System.ServiceModel.Channels.SecurityBindingElement>에 컬렉션을 추가합니다.  
   
      [!code-csharp[C_CustomBinding#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#13)]  
   
-6.  바인딩 요소 컬렉션에 바인딩 요소를 추가합니다.  
+6. 바인딩 요소 컬렉션에 바인딩 요소를 추가합니다.  
   
      [!code-csharp[C_CustomBinding#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#14)]  
   
-7.  바인딩 요소 컬렉션에서 만들어진 새로운 사용자 지정 바인딩을 반환합니다.  
+7. 바인딩 요소 컬렉션에서 만들어진 새로운 사용자 지정 바인딩을 반환합니다.  
   
      [!code-csharp[C_CustomBinding#15](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#15)]  
   

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05c95d47d57525aa2aebe16d536b771042600000
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 193232ce1006a9cf209db9330343386404948440
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509729"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168287"
 ---
 # <a name="icordebug-interface"></a>ICorDebug 인터페이스
 공용 언어 런타임 (CLR) 환경에서 응용 프로그램을 디버그 하는 데 사용할 수 있는 방법을 제공 합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "54509729"
 |[DebugActiveProcess 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebug-debugactiveprocess-method.md)|기존 프로세스에 디버거를 연결 합니다.|  
 |[EnumerateProcesses 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebug-enumerateprocesses-method.md)|디버그 중인 프로세스에 대 한 열거자를 가져옵니다.|  
 |[GetProcess 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebug-getprocess-method.md)|지정 된 프로세스 ID 사용 하 여 "ICorDebugProcess" 개체를 반환합니다.|  
-|[Initialize 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebug-initialize-method.md)|`ICorDebug` 개체를 초기화합니다.|  
+|[Initialize 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebug-initialize-method.md)|초기화는 `ICorDebug` 개체입니다.|  
 |[SetManagedHandler 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebug-setmanagedhandler-method.md)|관리 되는 이벤트에 대 한 이벤트 처리기 개체를 지정합니다.|  
 |[SetUnmanagedHandler 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebug-setunmanagedhandler-method.md)|관리 되지 않는 이벤트에 대 한 이벤트 처리기 개체를 지정합니다.|  
 |[Terminate 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md)|종료는 `ICorDebug` 개체입니다.|  
@@ -61,4 +61,5 @@ ms.locfileid: "54509729"
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

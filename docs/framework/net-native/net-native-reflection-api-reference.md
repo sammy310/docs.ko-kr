@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35dcabcf65af1634533edfba1e300a8746bc97ec
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 031ec811315f4a9d9f1f73d34e32236d2cf27729
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221370"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169080"
 ---
 # <a name="net-native-reflection-api-reference"></a>.NET 네이티브 리플렉션 API 참조
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 세 가지 새 예외 형식이 포함 됩니다. [System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)하십시오 [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), 및 [System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) . 세 가지 예외 형식 모두에 대해 다음 사항을 확인하세요.  
@@ -47,6 +47,7 @@ ms.locfileid: "56221370"
  이 네임스페이스의 다른 형식에 대한 설명서는 .NET Framework 설명서 집합에서 <xref:System.Runtime.CompilerServices> 를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [MissingInteropDataException 클래스](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)
 - [MissingMetadataException 클래스](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)
 - [MissingRuntimeArtifactException 클래스](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - custom error messages [WPF]
 ms.assetid: e55180fc-35bb-4f80-a136-772b5eb3e4e5
-ms.openlocfilehash: af51a0d76ac080017f58ac8fc3acca86c23fb480
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 30084143949d2243fd310448c52e6b861505ad66
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474867"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191252"
 ---
 # <a name="getcustomui"></a>GetCustomUI
 구현 하는 경우 호스트에서 사용자 지정 진행률 및 오류 메시지를 가져오려는 PresentationHost.exe에서 호출 됩니다.  
@@ -46,4 +46,5 @@ HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgres
  이 함수는 PresentationHost의 초기화 중에 한 번 호출 됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [IWpfHostSupport](iwpfhostsupport.md)

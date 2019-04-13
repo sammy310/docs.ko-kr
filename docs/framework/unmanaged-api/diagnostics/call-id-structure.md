@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 204c2dfbf28f95c1b8c2d2c1b757730e64a8e91d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b6fa729b131d12b2825a2def700fd918ce8acc40
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503705"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220177"
 ---
 # <a name="callid-structure"></a>CALL_ID 구조체
 디버거에 호출 되는 함수에 대 한 정보를 제공 합니다. 참조 된 [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) 자세한 정보에 대 한 인터페이스입니다.  
@@ -55,5 +55,6 @@ typedef struct tagCALL_ID
  **헤더:** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>참고자료
+
 - [INotifySink2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
 - [진단 기호 저장소 구조체](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

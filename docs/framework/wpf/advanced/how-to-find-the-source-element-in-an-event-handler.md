@@ -1,5 +1,5 @@
 ---
-title: '방법: 이벤트 처리기에서 소스 요소 찾기'
+title: '방법: 이벤트 처리기에서 원본 요소 찾기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - source element in event handlers [WPF]
 - event handlers [WPF], finding source element in
 ms.assetid: 85f71c5a-b714-4c65-9711-7d905c2bbe98
-ms.openlocfilehash: 8c1ff53e5af1ddfda17328291c5e22b57a8fe0e2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9a49878c9ad8313903df4506796998fd43e2e749
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359469"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104561"
 ---
-# <a name="how-to-find-the-source-element-in-an-event-handler"></a>방법: 이벤트 처리기에서 소스 요소 찾기
+# <a name="how-to-find-the-source-element-in-an-event-handler"></a>방법: 이벤트 처리기에서 원본 요소 찾기
 이 예제에서는 이벤트 처리기에서 소스 요소를 찾는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
@@ -27,6 +27,7 @@ ms.locfileid: "57359469"
  [!code-vb[RoutedEventSource#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventSource/VisualBasic/default.xaml.vb#handler)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.RoutedEventArgs>
 - [라우트된 이벤트 개요](routed-events-overview.md)
 - [방법 항목](events-how-to-topics.md)

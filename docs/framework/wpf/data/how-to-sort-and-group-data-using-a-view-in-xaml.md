@@ -1,5 +1,5 @@
 ---
-title: '방법: XAML에서 뷰를 사용하여 데이터 정렬 및 그룹화'
+title: '방법: XAML에서 보기를 사용하여 데이터 정렬 및 그룹화'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [WPF], grouping data in views in XAML
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - views [WPF], sorting data
 - views [WPF], grouping data
 ms.assetid: 145c8c3f-dbdd-4d0d-816f-90b35eba7eda
-ms.openlocfilehash: 01cbd113502c3f953bd701930df6db090844fefa
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ca4439b574264ebebfda745f0765f750099bc95f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351426"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144523"
 ---
-# <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a>방법: XAML에서 뷰를 사용하여 데이터 정렬 및 그룹화
+# <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a>방법: XAML에서 보기를 사용하여 데이터 정렬 및 그룹화
 이 예제에서 데이터 컬렉션의 뷰를 만드는 방법을 보여 줍니다 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]합니다. 뷰 그룹화, 정렬, 필터링의 기능 및 현재 항목의 개념을 허용 합니다.  
   
 ## <a name="example"></a>예제  
@@ -39,7 +39,8 @@ ms.locfileid: "57351426"
  [!code-xaml[CollectionViewSource#Attribute](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#attribute)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Data.CollectionViewSource>
-- [데이터 수집의 기본 뷰 가져오기](how-to-get-the-default-view-of-a-data-collection.md)
+- [데이터 컬렉션의 기본 보기 가져오기](how-to-get-the-default-view-of-a-data-collection.md)
 - [데이터 바인딩 개요](data-binding-overview.md)
 - [방법 항목](data-binding-how-to-topics.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
-ms.openlocfilehash: 2152398cecccdf1f949baf30217b7f5ac19ae22f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 911c13b2a24c1906fe3da787460209f12296c993
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527135"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337125"
 ---
 # <a name="how-to-specify-a-service-binding-in-configuration"></a>방법: 구성에서 서비스 바인딩 지정
 이 예제에서 `ICalculator` 계약이 기본 계산기 서비스에 대해 정의되고, 서비스가 `CalculatorService` 클래스에 구현된 다음 해당 엔드포인트가 Web.config 파일에 구성됩니다. 여기서 서비스는 <xref:System.ServiceModel.BasicHttpBinding>을 사용하는 것으로 지정됩니다. 구성 대신 코드를 사용 하 여이 서비스를 구성 하는 방법에 대 한 참조 [방법: 코드에서 서비스 바인딩 지정](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)합니다.  
@@ -23,12 +23,12 @@ ms.locfileid: "54527135"
   
 ### <a name="to-specify-the-basichttpbinding-to-use-to-configure-the-service"></a>서비스를 구성하는 데 사용할 BasicHttpBinding을 지정하려면  
   
-1.  서비스 유형에 대한 서비스 계약을 정의합니다.  
+1. 서비스 유형에 대한 서비스 계약을 정의합니다.  
   
      [!code-csharp[C_HowTo_ConfigureServiceBinding#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureservicebinding/cs/source.cs#1)]
      [!code-vb[C_HowTo_ConfigureServiceBinding#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_configureservicebinding/vb/source.vb#1)]  
   
-2.  서비스 클래스에 서비스 계약을 구현합니다.  
+2. 서비스 클래스에 서비스 계약을 구현합니다.  
   
      [!code-csharp[C_HowTo_ConfigureServiceBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureservicebinding/cs/source.cs#2)]
      [!code-vb[C_HowTo_ConfigureServiceBinding#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_configureservicebinding/vb/source.vb#2)]  
@@ -36,7 +36,7 @@ ms.locfileid: "54527135"
     > [!NOTE]
     >  주소 또는 바인딩 정보는 서비스 구현 내에 지정되지 않습니다. 또한 구성 파일에서 해당 정보를 가져오기 위해 코드를 쓰지 않아도 됩니다.  
   
-3.  Web.config 파일을 만들어 `CalculatorService`을 사용하는 <xref:System.ServiceModel.WSHttpBinding>에 대한 엔드포인트를 구성합니다.  
+3. Web.config 파일을 만들어 `CalculatorService`을 사용하는 <xref:System.ServiceModel.WSHttpBinding>에 대한 엔드포인트를 구성합니다.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -73,7 +73,7 @@ ms.locfileid: "54527135"
     </configuration>  
     ```  
   
-4.  다음 줄이 포함된 Service.svc 파일을 만든 다음 IIS(인터넷 정보 서비스) 가상 디렉터리에 넣습니다.  
+4. 다음 줄이 포함된 Service.svc 파일을 만든 다음 IIS(인터넷 정보 서비스) 가상 디렉터리에 넣습니다.  
   
     ```  
     <%@ServiceHost language=c# Service="CalculatorService" %>   
@@ -81,7 +81,7 @@ ms.locfileid: "54527135"
   
 ### <a name="to-modify-the-default-values-of-the-binding-properties"></a>바인딩 속성의 기본값을 수정하려면  
   
-1.  기본 속성 값 중 하나를 수정 하는 <xref:System.ServiceModel.WSHttpBinding>, 새 바인딩 구성 이름- `<binding name="Binding1">` 내는 [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) 요소의 특성에 대 한 새 값을 설정 하 고는 이 바인딩 요소에 대 한 바인딩입니다. 예를 들어 기본 열기 및 닫기 시간 제한 값을 1분에서 2분으로 변경하려면 구성 파일에 다음을 추가합니다.  
+1. 기본 속성 값 중 하나를 수정 하는 <xref:System.ServiceModel.WSHttpBinding>, 새 바인딩 구성 이름- `<binding name="Binding1">` 내는 [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) 요소의 특성에 대 한 새 값을 설정 하 고는 이 바인딩 요소에 대 한 바인딩입니다. 예를 들어 기본 열기 및 닫기 시간 제한 값을 1분에서 2분으로 변경하려면 구성 파일에 다음을 추가합니다.  
   
     ```xml  
     <wsHttpBinding>  
@@ -93,5 +93,6 @@ ms.locfileid: "54527135"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [엔드포인트 주소 지정](../../../docs/framework/wcf/specifying-an-endpoint-address.md)

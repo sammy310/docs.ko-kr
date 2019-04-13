@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-ms.openlocfilehash: a8822c9a26db445080668b1b493803369ccbae4d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 14180f0326b38872f5d1b112c3d9a87022fb79e9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714816"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328064"
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>방법: (Windows Forms) 문자열에 인용 부호 넣기
 경우에 따라 텍스트의 문자열에 따옴표(" ")를 배치하려고 합니다. 예를 들어:  
@@ -26,7 +26,7 @@ ms.locfileid: "57714816"
   
 ### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>코드의 문자열에 따옴표를 배치하려면  
   
-1.  Visual basic의 경우를 포함 하는 인용 부호로 행에 두 개의 따옴표를 삽입 합니다. 시각적 개체의 C# 하 고 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], 이스케이프 시퀀스를 삽입 \\"로 포함 된 큰따옴표를 표시 합니다. 예를 들어 위의 문자열을 만들려면 다음 코드를 사용합니다.  
+1. Visual basic의 경우를 포함 하는 인용 부호로 행에 두 개의 따옴표를 삽입 합니다. 시각적 개체의 C# 하 고 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], 이스케이프 시퀀스를 삽입 \\"로 포함 된 큰따옴표를 표시 합니다. 예를 들어 위의 문자열을 만들려면 다음 코드를 사용합니다.  
   
     ```vb  
     Private Sub InsertQuote()  
@@ -50,7 +50,7 @@ ms.locfileid: "57714816"
   
      또는  
   
-2.  따옴표에 대한 ASCII 또는 유니코드 문자를 삽입합니다. Visual basic에서는 ASCII 문자 (34)를 사용 합니다. 시각적 개체의 C#, 유니코드 문자 (\u0022)를 사용 합니다.  
+2. 따옴표에 대한 ASCII 또는 유니코드 문자를 삽입합니다. Visual basic에서는 ASCII 문자 (34)를 사용 합니다. 시각적 개체의 C#, 유니코드 문자 (\u0022)를 사용 합니다.  
   
     ```vb  
     Private Sub InsertAscii()  
@@ -69,7 +69,7 @@ ms.locfileid: "57714816"
   
      또는  
   
-3.  문자에 대한 상수를 정의하고 필요한 부분에 사용할 수도 있습니다.  
+3. 문자에 대한 상수를 정의하고 필요한 부분에 사용할 수도 있습니다.  
   
     ```vb  
     Const quote As String = """"  
@@ -89,12 +89,13 @@ ms.locfileid: "57714816"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.TextBox>
 - <xref:Microsoft.VisualBasic.ControlChars.Quote>
 - [TextBox 컨트롤 개요](textbox-control-overview-windows-forms.md)
-- [방법: Windows Forms TextBox 컨트롤의 삽입 지점 제어](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [방법: Windows Forms TextBox 컨트롤을 사용 하 여 암호 텍스트 상자 만들기](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [방법: Windows Forms TextBox 컨트롤에서 삽입 지점 제어](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [방법: Windows Forms TextBox 컨트롤을 사용하여 암호 텍스트 상자 만들기](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
 - [방법: 읽기 전용 텍스트 상자 만들기](how-to-create-a-read-only-text-box-windows-forms.md)
-- [방법: Windows Forms TextBox 컨트롤에서 텍스트를 선택 합니다.](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [방법: Windows Forms TextBox 컨트롤에서 여러 줄 보기](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [방법: Windows Forms TextBox 컨트롤에서 텍스트 선택](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [방법: Windows Forms TextBox 컨트롤에서 여러 줄 표시](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [TextBox 컨트롤](textbox-control-windows-forms.md)

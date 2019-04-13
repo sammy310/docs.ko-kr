@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69dea1adb2d751b44f6c8bc529353ff78cad60ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b149a9b8ee41f5e196fd69258044f9b6563cb99
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54673048"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217876"
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed MDA
 <xref:System.Runtime.InteropServices.SafeHandle> 또는 <xref:System.Runtime.InteropServices.CriticalHandle>에서 파생된 클래스의 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 메서드가 `false`를 반환하면 `releaseHandleFailed` MDA(관리 디버깅 도우미)가 활성화되고 개발자에게 알립니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "54673048"
 ## <a name="cause"></a>원인  
  사용자는 <xref:System.Runtime.InteropServices.SafeHandle> 또는 <xref:System.Runtime.InteropServices.CriticalHandle>에서 파생된 클래스를 만드는 경우 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 메서드의 구현을 제공해야 합니다. 따라서 이 상황은 개별 리소스와 관련이 있습니다. 그러나 요구 사항은 다음과 같습니다.  
   
--   <xref:System.Runtime.InteropServices.SafeHandle> 및 <xref:System.Runtime.InteropServices.CriticalHandle> 유형은 중요한 프로세스 리소스를 둘러싼 래퍼를 나타냅니다. 메모리 누수로 인해 시간이 지나면 프로세스를 사용할 수 없게 됩니다.  
+-   <xref:System.Runtime.InteropServices.SafeHandle> 및 <xref:System.Runtime.InteropServices.CriticalHandle> 유형은 중요 한 프로세스 리소스에 대 한 래퍼를 나타냅니다. 메모리 누수로 인해 시간이 지나면 프로세스를 사용할 수 없게 됩니다.  
   
 -   <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 메서드가 해당 기능을 수행해야 합니다. 프로세스에서 이러한 리소스를 획득한 후 해제하는 방법은 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>뿐입니다. 따라서 실패는 리소스 누수를 의미합니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "54673048"
   
 -   <xref:System.Runtime.InteropServices.SafeHandle>을 유효한 원시 핸들 값으로 초기화하는 데 사용되는 코드가 핸들을 소유하고 있는지 확인합니다. 기본 생성자에서 `ownsHandle` 매개 변수를 `false`로 설정하지 않고 코드가 소유하지 않는 핸들을 중심으로 <xref:System.Runtime.InteropServices.SafeHandle>을 형성하는 경우 <xref:System.Runtime.InteropServices.SafeHandle> 및 실제 핸들 소유자 모두 핸들을 닫으려고 하여 <xref:System.Runtime.InteropServices.SafeHandle>이 경합에서 지면 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>에서 오류가 발생합니다.  
   
--   <xref:System.Runtime.InteropServices.SafeHandle>이 응용 프로그램 도메인 간에 마샬링되는 경우 사용 중인 <xref:System.Runtime.InteropServices.SafeHandle> 파생이 직렬화 가능으로 표시되었는지 확인합니다. 드물기는 하지만 <xref:System.Runtime.InteropServices.SafeHandle>에서 파생된 클래스가 직렬화 가능으로 설정된 경우 <xref:System.Runtime.Serialization.ISerializable> 인터페이스를 구현하거나 직렬화 프로세스를 수동으로 제어하는 다른 기술 중 하나를 사용해야 합니다. 이 작업은 기본 직렬화 작업이 묶인 원시 핸들 값의 비트 복제본을 만들어 두 개의 <xref:System.Runtime.InteropServices.SafeHandle> 인스턴스가 동일한 핸들을 소유하고 있다고 생각하게 만들기 때문에 필요합니다. 일부 지점에서 둘 다 동일한 핸들에 대해 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>을 호출하려고 합니다. 두 번째 <xref:System.Runtime.InteropServices.SafeHandle>이 실패합니다. <xref:System.Runtime.InteropServices.SafeHandle>을 직렬화할 때의 올바른 작업 과정은 네이티브 핸들 형식에 대해 `DuplicateHandle` 함수나 비슷한 함수를 호출하여 별개의 올바른 핸들 복사본을 만드는 것입니다. 핸들 형식이 이 작업을 지원하지 않는 경우 래핑하는 <xref:System.Runtime.InteropServices.SafeHandle> 형식을 직렬화 가능으로 설정할 수 없습니다.  
+-   <xref:System.Runtime.InteropServices.SafeHandle>이 응용 프로그램 도메인 간에 마샬링되는 경우 사용 중인 <xref:System.Runtime.InteropServices.SafeHandle> 파생이 직렬화 가능으로 표시되었는지 확인합니다. 드물기는 하지만 <xref:System.Runtime.InteropServices.SafeHandle>에서 파생된 클래스가 deserialization 가능으로 설정된 경우 <xref:System.Runtime.Serialization.ISerializable> 인터페이스를 구현하거나 deserialization 프로세스를 수동으로 제어하는 다른 기술 중 하나를 사용해야 합니다. 이 작업은 기본 직렬화 작업이 묶인 원시 핸들 값의 비트 복제본을 만들어 두 개의 <xref:System.Runtime.InteropServices.SafeHandle> 인스턴스가 동일한 핸들을 소유하고 있다고 생각하게 만들기 때문에 필요합니다. 일부 지점에서 둘 다 동일한 핸들에 대해 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>을 호출하려고 합니다. 두 번째 <xref:System.Runtime.InteropServices.SafeHandle>이 실패합니다. <xref:System.Runtime.InteropServices.SafeHandle>을 직렬화할 때의 올바른 작업 과정은 네이티브 핸들 형식에 대해 `DuplicateHandle` 함수나 비슷한 함수를 호출하여 별개의 올바른 핸들 복사본을 만드는 것입니다. 핸들 형식이 이 작업을 지원하지 않는 경우 래핑하는 <xref:System.Runtime.InteropServices.SafeHandle> 형식을 직렬화 가능으로 설정할 수 없습니다.  
   
 -   핸들을 해제하는 데 사용된 네이티브 루틴(예: `CloseHandle` 함수)에 디버거 중단점을 배치하면 핸들이 일찍 닫혀 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 메서드를 최종 호출할 때 오류가 발생하는 위치를 추적할 수 있습니다. 이 작업은 이러한 루틴이 종종 처리하는 많은 트래픽으로 인해 스트레스 시나리오나 중간 규모의 기능 테스트에서도 불가능할 수 있습니다. 호출자 ID 또는 전체 스택 추적과 해제되는 핸들의 값을 캡처하기 위해 네이티브 해제 메서드를 호출하는 코드를 계측하면 도움이 될 수도 있습니다.  핸들 값을 이 MDA에서 보고한 값과 비교할 수 있습니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "54673048"
  이 MDA는 CLR에 아무런 영향을 미치지 않습니다.  
   
 ## <a name="output"></a>출력  
- <xref:System.Runtime.InteropServices.SafeHandle> 또는 <xref:System.Runtime.InteropServices.CriticalHandle>이 핸들을 제대로 해제하지 못했음을 나타내는 메시지입니다. 예를 들면 다음과 같습니다.  
+ <xref:System.Runtime.InteropServices.SafeHandle> 또는 <xref:System.Runtime.InteropServices.CriticalHandle>이 핸들을 제대로 해제하지 못했음을 나타내는 메시지입니다. 예를 들어:  
   
 ```  
 "A SafeHandle or CriticalHandle of type 'MyBrokenSafeHandle'   
@@ -63,7 +63,7 @@ another means (such as extracting the handle using DangerousGetHandle
 and closing it directly or building another SafeHandle around it."  
 ```  
   
-## <a name="configuration"></a>구성하기  
+## <a name="configuration"></a>구성  
   
 ```xml  
 <mdaConfig>  
@@ -91,6 +91,7 @@ bool ReleaseHandle()
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)
+- [Interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)

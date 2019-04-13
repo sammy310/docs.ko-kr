@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 670a7653-dac6-4171-98ee-d669e3adf4b2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 460d6781405b6042262d50e1aa79ee8c77f781a7
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e5cddf34f1a6277e966901c9692bff63e26a3b8e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489725"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136736"
 ---
 # <a name="isymunmanagedasyncmethodisasyncmethod-method"></a>ISymUnmanagedAsyncMethod::IsAsyncMethod 메서드
 경우 메서드가 async 정보 여부를 확인 합니다.  
@@ -29,10 +29,11 @@ HRESULT IsAsyncMethod(    [out, retval] BOOL* pRetVal);
 |`pRetVal`||  
   
 ## <a name="return-value"></a>반환 값  
- `HRESULT`을 반환합니다.  
+ `HRESULT`를 반환합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>참고자료
+
 - [ISymUnmanagedAsyncMethod 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethod-interface.md)

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
-ms.openlocfilehash: 078102da95222d45bec82269edf1eb8e40866408
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a02520ab7d1196b8071bda752ae30896958f372
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713139"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105419"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>CommittableTransaction을 사용하여 명시적 트랜잭션 구현
-<xref:System.Transactions.CommittableTransaction> 클래스를 암시적으로 사용하는 경우와 달리 <xref:System.Transactions.TransactionScope> 클래스는 애플리케이션이 트랜잭션을 사용할 수 있는 명시적 방법을 제공합니다. 이 클래스는 여러 함수 호출이나 여러 스레드 호출에 같은 트랜잭션을 사용하려는 응용 프로그램에 유용합니다. <xref:System.Transactions.TransactionScope> 클래스와 달리 응용 프로그램 작성기에서 특별히 <xref:System.Transactions.CommittableTransaction.Commit%2A> 및 <xref:System.Transactions.Transaction.Rollback%2A> 메서드를 호출하여 트랜잭션을 커밋하거나 중단해야 합니다.  
+<xref:System.Transactions.CommittableTransaction> 클래스를 암시적으로 사용하는 경우와 달리 <xref:System.Transactions.TransactionScope> 클래스는 응용 프로그램이 트랜잭션을 사용할 수 있는 명시적 방법을 제공합니다. 이 클래스는 여러 함수 호출이나 여러 스레드 호출에 같은 트랜잭션을 사용하려는 응용 프로그램에 유용합니다. <xref:System.Transactions.TransactionScope> 클래스와 달리 응용 프로그램 작성기에서 특별히 <xref:System.Transactions.CommittableTransaction.Commit%2A> 및 <xref:System.Transactions.Transaction.Rollback%2A> 메서드를 호출하여 트랜잭션을 커밋하거나 중단해야 합니다.  
   
 ## <a name="overview-of-the-committabletransaction-class"></a>CommittableTransaction 클래스 개요  
  <xref:System.Transactions.CommittableTransaction> 클래스는 <xref:System.Transactions.Transaction> 클래스에서 파생되므로 후자의 모든 기능을 제공합니다. <xref:System.Transactions.Transaction.Rollback%2A> 개체의 롤백에 사용할 수도 있는 <xref:System.Transactions.Transaction> 클래스의 <xref:System.Transactions.CommittableTransaction> 메서드는 특히 유용합니다.  
@@ -86,5 +86,6 @@ void OnCommitted(IAsyncResult asyncResult)
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [트랜잭션 범위를 사용하여 암시적 트랜잭션 구현](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)
-- [트랜잭션 처리](../../../../docs/framework/data/transactions/index.md)
+- [트랜잭션 처리 ](../../../../docs/framework/data/transactions/index.md)

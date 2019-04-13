@@ -5,12 +5,12 @@ helpviewer_keywords:
 - authentication [WCF]
 - security [WCF], authentication
 ms.assetid: 9254d873-843d-4c6e-bea4-8184ac3e44f4
-ms.openlocfilehash: 22bfd7edf0ca0e9eb57e63c168c783f25782d607
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ebff66e185bdca75a0150b22a16392bfd08892d3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523924"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165488"
 ---
 # <a name="authentication-in-wcf"></a>WCF에서 권한 부여
 다음 항목에는 Windows Communication Foundation (WCF) 예를 들어 인증을 제공 하는, Windows 인증, X.509 인증서 및 사용자 이름 및 암호에 여러 다른 메커니즘을 보여 줍니다.  
@@ -19,7 +19,7 @@ ms.locfileid: "54523924"
  [방법: ASP.NET 멤버 자격 공급자 사용](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)  
  ASP.NET 기능에는 멤버 자격 및 역할 공급자, 인증에 필요한 사용자 이름/암호 쌍을 저장할 데이터베이스 및 권한 부여를 위한 사용자 역할이 포함되어 있습니다. 이 항목에서는 WCF 서비스가 동일한 데이터베이스를 사용 하 여 인증 하 고 사용자 권한을 부여 하는 방법을 설명 합니다.  
   
- [방법: 사용자 지정 사용자 이름 및 암호 유효성 검사기 사용](../../../../docs/framework/wcf/feature-details/how-to-use-a-custom-user-name-and-password-validator.md)  
+ [방법: 사용자 지정 사용자 이름 및 암호에 대한 유효성 검사기 사용](../../../../docs/framework/wcf/feature-details/how-to-use-a-custom-user-name-and-password-validator.md)  
  사용자 지정 사용자 이름/암호 유효성 검사기를 통합하는 방법에 대해 보여 줍니다.  
   
  [서비스 ID 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
@@ -38,5 +38,6 @@ ms.locfileid: "54523924"
  [일반적인 보안 시나리오](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server appfabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server AppFabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

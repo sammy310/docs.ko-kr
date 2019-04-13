@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99b996cf848de968d71cc1d325d3bbda7bd5386f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81f4d5219865bf7f7c9e6d284d74d0c249729dfc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715555"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194424"
 ---
 # <a name="spawnderivedclass-function"></a>SpawnDerivedClass 함수
 지정된 개체에서 새로 파생된 클래스 개체를 만듭니다.    
@@ -61,8 +61,8 @@ HRESULT SpawnDerivedClass (
 | `WBEM_E_FAILED` | 0x80041001 | 일반 오류가 발생이 했습니다. |
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | 클래스는 인스턴스를 생성 하는 등 잘못 된 작업 요청 되었습니다. |
 | `WBEM_E_INCOMPLETE_CLASS` | 완전히 원본 클래스 정의 되었거나 새 파생된 클래스는 허용 되지 않습니다 있도록 Windows 관리를 사용 하 여 등록 합니다. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 메모리가 부족하여 작업을 완료할 수 없는 경우 |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass`가 `null`인 경우 |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 메모리가 부족 하 여 작업을 완료할 수 없습니다. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` `null`합니다. |
 | `WBEM_S_NO_ERROR` | 0 | 함수 호출이 성공 했습니다.  |
   
 ## <a name="remarks"></a>설명
@@ -81,4 +81,5 @@ HRESULT SpawnDerivedClass (
  **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>참고자료
-- [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)
+
+- [WMI 및 성능 카운터(관리되지 않는 API 참조)](index.md)

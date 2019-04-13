@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Canvas control [WPF], creating
 - Canvas control [WPF], using
 ms.assetid: 420b9487-9a15-477c-9489-a22a4dec7779
-ms.openlocfilehash: 13ed32195621350284530da78544e026ed341658
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 33b98024699a88f56d27b7e5ab8d5216c906e7ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360383"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190771"
 ---
 # <a name="how-to-create-and-use-a-canvas"></a>방법: 캔버스 만들기 및 사용
 다음 예제는 <xref:System.Windows.Controls.Canvas> 컨트롤 클래스 인스턴스의 생성 및 사용법에 관한 예제입니다.  
@@ -29,11 +29,12 @@ ms.locfileid: "57360383"
  [!code-vb[CanvasCode#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasCode/VisualBasic/canvas_vb.vb#1)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.Canvas>
 - <xref:System.Windows.Controls.TextBlock>
 - <xref:System.Windows.Controls.Canvas.SetTop%2A>
 - <xref:System.Windows.Controls.Canvas.SetLeft%2A>
 - <xref:System.Windows.Controls.Canvas.Top%2A>
 - <xref:System.Windows.Controls.Canvas.Left%2A>
-- [패널 개요](panels-overview.md)
+- [Panel 개요](panels-overview.md)
 - [방법 항목](canvas-how-to-topics.md)

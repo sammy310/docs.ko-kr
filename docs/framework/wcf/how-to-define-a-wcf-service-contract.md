@@ -7,12 +7,12 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
-ms.openlocfilehash: f93ef787c74a4581d45c24c5a704cc5fb044bd46
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: a1908339460191fcb81d03d45c56dd57b2cf4c4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409967"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228395"
 ---
 # <a name="tutorial-define-a-windows-communication-foundation-service-contract"></a>자습서: Windows Communication Foundation 서비스 계약 정의
 
@@ -28,7 +28,6 @@ WCF 서비스를 만든 경우 첫 번째 작업 서비스 계약을 정의 하�
 > [!div class="checklist"]
 > - 만들기는 **WCF 서비스 라이브러리** 프로젝트입니다.
 > - 서비스 계약 인터페이스를 정의 합니다.
-
 
 ## <a name="create-a-wcf-service-library-project-and-define-a-service-contract-interface"></a>WCF 서비스 라이브러리 프로젝트를 만들고 서비스 계약 인터페이스를 정의 합니다.
 
@@ -54,7 +53,6 @@ WCF 서비스를 만든 경우 첫 번째 작업 서비스 계약을 정의 하�
 
       > [!NOTE]
       > Visual Basic 개발자 환경 설정을 사용 하 여 Visual Studio를 설치한 경우 솔루션을 숨길 수 있습니다. 이 경우 선택 **옵션** 에서 합니다 **도구** 메뉴에서 선택한 **프로젝트 및 솔루션** > **일반** 에서 합니다 **옵션** 창입니다. 선택 **솔루션 항상 표시**합니다. 또한 확인 **만들어질 때 새 프로젝트 저장** 을 선택 합니다.
-
 
 3. **솔루션 탐색기**오픈 합니다 **IService1.cs** 또는 **IService1.vb** 파일과 해당 코드를 다음 코드로 바꿉니다.
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0eeaf0bd347b7aa6fe47387282a5237cf91a5f59
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c0788c05edace2142d348c679c73aa1b4404ce75
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281972"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137854"
 ---
 # <a name="assembly-element-net-native"></a>\<어셈블리 > 요소 (.NET 네이티브)
 지정된 어셈블리의 모든 형식에 런타임 리플렉션 정책을 적용합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "55281972"
   
 |값|설명|  
 |-----------|-----------------|  
-|*assembly_name*|파일 확장명이 없는 어셈블리의 단순한 이름입니다. 이 특성은 <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> 속성에 해당합니다. 예를 들어 Extensions.dll 어셈블리의 이름은 "Extensions"입니다.<br /><br /> 리터럴 문자열 `*Application*`을 지정하여 어셈블리 로드 여부에 관계없이 앱 패키지의 모든 어셈블리에 정책을 적용할 수도 있습니다. `*Application*`을 사용하는 경우 정책이 .NET Framework 어셈블리에 적용되지 않습니다.|  
+|*assembly_name*|파일 확장명이 없는 어셈블리의 단순한 이름입니다. 이 특성은 <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> 속성에 해당합니다. 예를 들어 Extensions.dll 어셈블리의 이름은 "Extensions"입니다.<br /><br /> 리터럴 문자열 `*Application*`을 지정하여 어셈블리 로드 여부에 관계없이 앱 패키지의 모든 어셈블리에 정책을 적용할 수도 있습니다. `*Application*` .NET Framework 어셈블리에 정책을 적용 하지 않습니다.|  
   
 ## <a name="all-other-attributes"></a>기타 모든 특성  
   
@@ -65,7 +65,7 @@ ms.locfileid: "55281972"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|자식 네임스페이스의 모든 형식에 리플렉션 정책을 적용합니다.|  
+|[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|자식 네임스페이스의 모든 형식에 리플렉션 정책을 적용합니다.|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|형식에 리플렉션 정책을 적용합니다.|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|생성된 제네릭 형식에 리플렉션 정책을 적용합니다.|  
   
@@ -73,7 +73,7 @@ ms.locfileid: "55281972"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|런타임에 해당 메타데이터를 리플렉션에 사용할 수 있는 응용 프로그램 수준 형식 및 형식 멤버에 대한 컨테이너로 사용됩니다. [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) 요소는 `<Assembly>` 요소를 포함하지 않을 수도 있고 하나 이상 포함할 수도 있습니다.|  
+|[\<응용 프로그램 >](../../../docs/framework/net-native/application-element-net-native.md)|런타임에 해당 메타데이터를 리플렉션에 사용할 수 있는 응용 프로그램 수준 형식 및 형식 멤버에 대한 컨테이너로 사용됩니다. [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) 요소는 `<Assembly>` 요소를 포함하지 않을 수도 있고 하나 이상 포함할 수도 있습니다.|  
 |[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|런타임에 해당 메타데이터를 리플렉션에 사용할 수 있는 형식 및 형식 멤버가 포함된 어셈블리를 정의합니다. [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 요소는 `<Assembly>` 요소를 포함하지 않을 수도 있고 하나 포함할 수도 있습니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -92,6 +92,7 @@ ms.locfileid: "55281972"
  `Activate`, `Browse`, `Dynamic` 및 `Serialize` 특성은 모두 선택적 항목입니다. 그러나 `<Assembly>` 요소는 이러한 특성을 하나 이상 포함해야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [런타임 지시문 정책 설정](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
 - [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [런타임 지시문 요소](../../../docs/framework/net-native/runtime-directive-elements.md)

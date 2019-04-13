@@ -1,5 +1,5 @@
 ---
-title: '방법: 사용자 지정 패널 요소 만들기'
+title: '방법: 사용자 지정 Panel 요소 만들기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Panel control [WPF]
 - custom Panel elements [WPF]
 ms.assetid: e0df4f1e-8c07-4e86-89a3-e22acfffdc2a
-ms.openlocfilehash: 2e778adfb79a64c8f248992aee92de9471906129
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d4fc9d76ada9f27bd52619280b323691af9382c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368703"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139570"
 ---
-# <a name="how-to-create-a-custom-panel-element"></a>방법: 사용자 지정 패널 요소 만들기
+# <a name="how-to-create-a-custom-panel-element"></a>방법: 사용자 지정 Panel 요소 만들기
 ## <a name="example"></a>예제  
  기본 레이아웃 동작을 재정의 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.Panel> 요소에서 파생 되는 사용자 지정 레이아웃 요소를 만들고 <xref:System.Windows.Controls.Panel>합니다.  
   
@@ -29,6 +29,7 @@ ms.locfileid: "57368703"
  [!code-vb[PlotPanel#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PlotPanel/VisualBasic/PlotPanel.vb#1)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.Panel>
-- [패널 개요](panels-overview.md)
+- [Panel 개요](panels-overview.md)
 - [사용자 지정 콘텐츠 줄 바꿈 패널 샘플 만들기](https://go.microsoft.com/fwlink/?LinkID=159979)

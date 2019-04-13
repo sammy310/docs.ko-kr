@@ -3,12 +3,12 @@ title: Visual Studio 2012용 ID 및 액세스 도구
 ms.date: 03/30/2017
 ms.assetid: 87b8f8f2-4074-44fd-9fd6-08278e877390
 author: BrucePerlerMS
-ms.openlocfilehash: a1b5456f9081d807a3c9e29e1010cbfbf91e637f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9216298889637780e79d1bfc7ac060458c745968
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678553"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170120"
 ---
 # <a name="identity-and-access-tool-for-visual-studio-2012"></a>Visual Studio 2012용 ID 및 액세스 도구
 이 항목에서는 Visual Studio 11에 대한 새로운 ID 및 액세스 도구에 대해 설명합니다. 다음 URL에서이 도구를 다운로드할 수 있습니다: [ https://go.microsoft.com/fwlink/?LinkID=245849 ](https://go.microsoft.com/fwlink/?LinkID=245849) 에서 직접 또는 확장 관리자에서 직접 "id"를 검색 하 여 Visual Studio 11 내에서.  
@@ -28,4 +28,5 @@ ms.locfileid: "54678553"
 -   사용 하려는 모든 id 공급자에 대 한 간단한 확인란 목록과 사용 하 여 Windows Azure 서비스 ACS (Access Control) 기능을 활용 하는 도구: Facebook, Google, Live ID, yahoo!, OpenID 공급자 및 Ws-federation 공급자입니다. ID 공급자를 선택하고, 확인을 클릭한 후 F5 키를 클릭하면 응용 프로그램과 ACS가 자동으로 구성되고 테스트 응용 프로그램이 ACS를 인식하게 됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [WIF 기능](../../../docs/framework/security/wif-features.md)

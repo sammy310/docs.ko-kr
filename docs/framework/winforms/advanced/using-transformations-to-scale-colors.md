@@ -8,12 +8,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], for scaling colors
 - colors [Windows Forms], scaling
 ms.assetid: df23c887-7fd6-4b15-ad94-e30b5bd4b849
-ms.openlocfilehash: 9255dd4adba19bfef1332e5e3dfa463ee96f43f0
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 9c8f2392137d04f56096120cec64b60c42c47419
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653992"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107987"
 ---
 # <a name="using-transformations-to-scale-colors"></a>변형을 사용하여 색의 비율 조정
 배율 조정 변환 이상의 숫자로 된 네 가지 구성 요소를 곱합니다. 크기 조정 여부를 나타내는 색 매트릭스 항목은 다음 표에 제공 됩니다.  
@@ -64,6 +64,7 @@ ms.locfileid: "58653992"
 |(1, 0, 1, 1)|(0.75, 0, 0.5, 1)|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
 - [Windows Forms의 그래픽 및 그리기](graphics-and-drawing-in-windows-forms.md)

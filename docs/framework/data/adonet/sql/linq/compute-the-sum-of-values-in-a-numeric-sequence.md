@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 24e335b0-984e-4825-8721-0a91b533b7c3
-ms.openlocfilehash: 699211e8e573f03935b5406f1759e6c3834718f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f66b996a0e688205d61f5fca476c0335616ee38
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713161"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143574"
 ---
 # <a name="compute-the-sum-of-values-in-a-numeric-sequence"></a>숫자 시퀀스에서 값의 합계 계산
 <xref:System.Linq.Enumerable.Sum%2A> 연산자를 사용하여 시퀀스의 숫자 값의 합을 계산합니다.  
@@ -40,5 +40,6 @@ ms.locfileid: "54713161"
  [!code-vb[DLinqQueryExamples#13](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#13)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [집계 쿼리](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
 - [샘플 데이터베이스 다운로드](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - cryptographySettings element
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-ms.openlocfilehash: 11f07bbf5de04edc98a5a5bc0ba07f1629763a9f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ec3a5a73caa901a21e22dbec7500af9153e01ef4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258710"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164140"
 ---
 # <a name="cryptographysettings-element"></a>\<cryptographySettings > 요소
 암호화 설정이 포함되어 있습니다.  
@@ -77,6 +77,7 @@ ms.locfileid: "55258710"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [암호화 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
+- [암호화 서비스](../../../../../docs/standard/security/cryptographic-services.md)

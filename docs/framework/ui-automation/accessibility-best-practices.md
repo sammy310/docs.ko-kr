@@ -5,12 +5,12 @@ helpviewer_keywords:
 - best practices for accessibility
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
-ms.openlocfilehash: e320d47562ea5018a20a82ab555ec7f2db018c40
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a20ecb8fb8d2ea4efdd244c3460dc9c07e22b538
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676137"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074237"
 ---
 # <a name="accessibility-best-practices"></a>액세스 가능성에 대한 유용한 정보
 > [!NOTE]
@@ -24,7 +24,7 @@ ms.locfileid: "57676137"
   
 <a name="Enable_Programmatic_Access_to_all_UI_Elements_and_Text"></a>   
 ### <a name="enable-programmatic-access-to-all-ui-elements-and-text"></a>모든 UI 요소 및 텍스트에 대해 프로그래밍 방식 액세스 사용  
- [!INCLUDE[TLA#tla_ui#initcap](../../../includes/tlasharptla-uisharpinitcap-md.md)] 요소는 프로그래밍 방식 액세스를 사용하도록 설정합니다. [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]가 표준 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 컨트롤이면 프로그래밍 방식 액세스 지원이 컨트롤에 포함됩니다. 공용 컨트롤에서 서브클래싱된 컨트롤이나 컨트롤에서 서브클래싱된 컨트롤과 같은 사용자 지정 컨트롤이면 <xref:System.Windows.Automation.Peers.AutomationPeer> 구현에서 수정해야 할 수 있는 영역이 있는지 확인해야 합니다.  
+ [!INCLUDE[TLA#tla_ui#initcap](../../../includes/tlasharptla-uisharpinitcap-md.md)] 요소는 프로그래밍 방식 액세스를 사용 해야 합니다. [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]가 표준 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 컨트롤이면 프로그래밍 방식 액세스 지원이 컨트롤에 포함됩니다. 공용 컨트롤에서 서브클래싱된 컨트롤이나 컨트롤에서 서브클래싱된 컨트롤과 같은 사용자 지정 컨트롤이면 <xref:System.Windows.Automation.Peers.AutomationPeer> 구현에서 수정해야 할 수 있는 영역이 있는지 확인해야 합니다.  
   
  이 모범 사례를 따르면 [!INCLUDE[TLA2#tla_at](../../../includes/tla2sharptla-at-md.md)] 공급업체에서 제품 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]의 요소를 식별 및 조작할 수 있습니다.  
   
@@ -131,6 +131,7 @@ ms.locfileid: "57676137"
  디바이스 독립적 호출을 사용하면 키보드 기능과 마우스 기능이 동일해지고 [!INCLUDE[TLA2#tla_at](../../../includes/tla2sharptla-at-md.md)] 에 대한 필요한 정보와 함께 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]을(를) 제공합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Automation.Peers>
 - [테마 및 UI 자동화 지원 샘플이 있는 NumericUpDown 사용자 지정 컨트롤](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771573(v=vs.90))
 - [키보드 사용자 인터페이스 디자인에 대한 지침](https://docs.microsoft.com/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)

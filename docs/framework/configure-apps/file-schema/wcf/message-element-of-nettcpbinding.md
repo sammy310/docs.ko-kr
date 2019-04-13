@@ -2,12 +2,12 @@
 title: <message> 요소 <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
-ms.openlocfilehash: 09ff567e73791151350288f6e5ddb5f9aff36e80
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ac6977a8422055f998c7ed932c853992b7809911
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276928"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161020"
 ---
 # <a name="message-element-of-nettcpbinding"></a>\<메시지 > 요소의 \<netTcpBinding >
 구성 된 끝점에 대 한 메시지 수준 보안 요구 사항 형식을 정의 합니다 [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)합니다.  
@@ -33,8 +33,8 @@ ms.locfileid: "55276928"
   
 |특성|설명|  
 |---------------|-----------------|  
-|`algorithmSuite`|메시지 암호화 및 키 래핑 알고리즘을 설정합니다. 알고리즘과 키 크기는 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 클래스로 결정됩니다. 이러한 알고리즘은 WS-SecurityPolicy(Security Policy Language) 사양에 지정된 알고리즘에 매핑됩니다.<br /><br /> 다음 표에서는 가능한 값이 나와 있습니다. 기본값은 `Basic256`입니다.<br /><br /> 서비스 바인딩에서 기본값과 같지 않은 `algorithmSuite` 값을 지정하는 경우 Svcutil.exe을 사용하여 구성 파일을 생성하면 파일이 제대로 생성되지 않으므로 구성 파일을 수동으로 편집하여 이 특성을 원하는 값으로 설정해야 합니다.|  
-|`clientCredentialType`|메시지 기반 보안을 사용하여 클라이언트 인증을 수행할 때 사용되는 자격 증명의 형식을 지정합니다. 다음 표에서는 가능한 값이 나와 있습니다. 기본값은 `UserName`입니다. 이 특성은 <xref:System.ServiceModel.MessageCredentialType> 형식입니다.|  
+|`algorithmSuite`|메시지 암호화 및 키 래핑 알고리즘을 설정합니다. 알고리즘과 키 크기는 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 클래스로 결정됩니다. 이러한 알고리즘은 WS-SecurityPolicy(Security Policy Language) 사양에 지정된 알고리즘에 매핑됩니다.<br /><br /> 가능한 값은 다음 표에 나와 있습니다. 기본값은 `Basic256`입니다.<br /><br /> 서비스 바인딩에서 기본값과 같지 않은 `algorithmSuite` 값을 지정하는 경우 Svcutil.exe을 사용하여 구성 파일을 생성하면 파일이 제대로 생성되지 않으므로 구성 파일을 수동으로 편집하여 이 특성을 원하는 값으로 설정해야 합니다.|  
+|`clientCredentialType`|메시지 기반 보안을 사용하여 클라이언트 인증을 수행할 때 사용되는 자격 증명의 형식을 지정합니다. 가능한 값은 다음 표에 나와 있습니다. 기본값은 `UserName`입니다. 이 특성은 <xref:System.ServiceModel.MessageCredentialType> 형식입니다.|  
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite 특성  
   
@@ -80,6 +80,7 @@ ms.locfileid: "55276928"
  Message는 SOAP 메시지 무결성 및 기밀성과 통신 피어의 상호 인증을 위해 메시지 수준 보안을 사용합니다. 바인딩에서 이 보안 모드를 선택하면 채널 스택이 메시지 보안 바인딩 요소로 구성되고 SOAP 메시지가 WS-Security* 표준에 따라 보안됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.MessageSecurityOverTcp>
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.NetTcpSecurity.Message%2A>

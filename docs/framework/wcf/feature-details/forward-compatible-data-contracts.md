@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], forward compatibility
 ms.assetid: 413c9044-26f8-4ecb-968c-18495ea52cd9
-ms.openlocfilehash: 732c47b03c2769a6147c3c812ddd6e81dab11a55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90d9409d7e41ddda99caf24ebe0e249ee04723d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695649"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095895"
 ---
 # <a name="forward-compatible-data-contracts"></a>이후 버전과 호환되는 데이터 계약
 Windows 통신 Foundation (WCF) 데이터 계약 시스템은 계약 하는 기능 줄 바꿈하지 않는 방법으로 시간이 지남에 따라 발전할 수 있습니다. 즉, 이전 버전의 데이터 계약을 가진 클라이언트가 새 버전의 동일한 데이터 계약을 가진 서비스와 통신할 수 있거나, 새 버전의 데이터 계약을 가진 클라이언트가 이전 버전의 동일한 데이터 계약과 통신할 수 있습니다. 자세한 내용은 참조 하세요. [모범 사례: Data Contract Versioning](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)합니다.  
@@ -42,6 +42,7 @@ Windows 통신 Foundation (WCF) 데이터 계약 시스템은 계약 하는 기�
  라운드트립 기능은 `ignoreExtensionDataObject` 생성자에서 `true`를 <xref:System.Runtime.Serialization.DataContractSerializer>로 설정하거나 <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A>에서 `true` 속성을 <xref:System.ServiceModel.ServiceBehaviorAttribute>로 설정하여 해제할 수 있습니다. 이 기능을 해제하면 deserializer가 <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> 속성을 채우지 않고, serializer가 속성의 콘텐츠를 내보내지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.Serialization.IExtensibleDataObject>
 - <xref:System.Runtime.Serialization.ExtensionDataObject>
 - [데이터 계약 버전 관리](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)

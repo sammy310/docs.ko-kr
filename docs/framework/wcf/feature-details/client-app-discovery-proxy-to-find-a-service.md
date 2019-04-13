@@ -1,33 +1,33 @@
 ---
-title: '방법: 검색 프록시를 사용 하 여 서비스를 검색 하는 클라이언트 응용 프로그램 구현'
+title: '방법: 검색 프록시를 사용하여 서비스를 찾는 클라이언트 애플리케이션 구현'
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-ms.openlocfilehash: 3f78ad8436ae1132eb48057f027d10ef191a6ad9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12b3fa03a1f259df8ee8c970463fa9ccee7267fa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745308"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321005"
 ---
-# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>방법: 검색 프록시를 사용 하 여 서비스를 검색 하는 클라이언트 응용 프로그램 구현
+# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>방법: 검색 프록시를 사용하여 서비스를 찾는 클라이언트 애플리케이션 구현
 이 항목은 검색 프록시를 구현하는 방법에 대해 설명하는 세 항목 중 세 번째 항목입니다. 이전 항목인 [방법: 검색 프록시에 등록할 검색 가능한 서비스 구현](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), 검색 프록시를 사용 하 여 자신을 등록 하는 WCF 서비스를 구현 합니다. 이 항목에서는 검색 프록시를 사용 하 여 WCF 서비스를 찾을 수 있는 WCF 클라이언트를 만듭니다.  
   
 ### <a name="implement-the-client"></a>클라이언트 구현  
   
-1.  `DiscoveryProxyExample` 솔루션에 `Client`라는 새 콘솔 응용 프로그램 프로젝트를 추가합니다.  
+1. `DiscoveryProxyExample` 솔루션에 `Client`라는 새 콘솔 응용 프로그램 프로젝트를 추가합니다.  
   
-2.  다음 어셈블리에 대한 참조를 추가합니다.  
+2. 다음 어셈블리에 대한 참조를 추가합니다.  
   
     1.  System.ServiceModel  
   
     2.  System.ServiceModel.Discovery  
   
-3.  이 항목 아래쪽의 GeneratedClient.cs를 이 프로젝트에 추가합니다.  
+3. 이 항목 아래쪽의 GeneratedClient.cs를 이 프로젝트에 추가합니다.  
   
     > [!NOTE]
     >  일반적으로 이 파일은 Svcutil.exe와 같은 도구를 사용하여 생성됩니다. 이 파일은 작업을 단순화하기 위해 이 항목에 제공됩니다.  
   
-4.  Program.cs 파일을 열고 다음 메서드를 추가합니다. 이 메서드는 엔드포인트 주소를 받고 이를 사용하여 서비스 클라이언트(프록시)를 초기화합니다.  
+4. Program.cs 파일을 열고 다음 메서드를 추가합니다. 이 메서드는 엔드포인트 주소를 받고 이를 사용하여 서비스 클라이언트(프록시)를 초기화합니다.  
   
     ```csharp  
     static void InvokeCalculatorService(EndpointAddress endpointAddress)  
@@ -62,7 +62,7 @@ ms.locfileid: "54745308"
     }  
     ```  
   
-5.  `Main` 메서드에 다음 코드를 추가합니다.  
+5. `Main` 메서드에 다음 코드를 추가합니다.  
   
     ```csharp  
     public static void Main()  
@@ -282,6 +282,7 @@ namespace Microsoft.Samples.Discovery
 ```  
   
 ## <a name="see-also"></a>참고자료
-- [WCF 검색 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+
+- [WCF Discovery 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
 - [방법: 검색 프록시 구현](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [방법: 검색 프록시에 등록할 검색 가능한 서비스를 구현 합니다.](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [방법: 검색 프록시에 등록할 검색 가능한 서비스 구현](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)

@@ -1,5 +1,5 @@
 ---
-title: '방법: ShowDialog 메서드로 Windows Form을 표시 하 여 COM Interop 지원'
+title: '방법: ShowDialog 메서드를 통해 Windows Form을 표시하여 COM Interop 지원'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [Windows Forms]
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: 87aac8ad-3c04-43b3-9b0c-d0b00df9ee74
-ms.openlocfilehash: 56ded3118d0961f38c77d3db4fc879eb241a7520
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 81220ad4c0bf00a38abfe7257d5fc61e92e8d885
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715440"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206449"
 ---
-# <a name="how-to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>방법: ShowDialog 메서드로 Windows Form을 표시 하 여 COM Interop 지원
+# <a name="how-to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>방법: ShowDialog 메서드를 통해 Windows Form을 표시하여 COM Interop 지원
 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> 메서드를 사용하여 만드는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 메시지 루프에 Windows Form에 표시하여 COM(구성 요소 개체 모델) 상호 운용성 문제를 해결할 수 있습니다.  
   
  폼이 COM 클라이언트 애플리케이션에서 제대로 작동하게 하려면 Windows Forms 메시지 루프에서 실행해야 합니다. 이렇게 하려면 다음 접근 방식 중 하나를 사용합니다.  
@@ -38,6 +38,7 @@ ms.locfileid: "57715440"
 -   <xref:System.Windows.Forms.Form.Show%2A?displayProperty=nameWithType> 메서드에 대한 모든 호출을 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 구성 요소의 <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 메서드에 대한 호출로 바꿉니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [.NET Framework 구성 요소를 COM에 노출](../../interop/exposing-dotnet-components-to-com.md)
-- [방법: 각 Windows Form을 별개의 스레드에서 표시 하 여 COM Interop 지원](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [방법: 각 Windows Form을 별개의 스레드에서 표시하여 COM Interop 지원](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
 - [Windows Forms 및 관리되지 않는 응용 프로그램](windows-forms-and-unmanaged-applications.md)

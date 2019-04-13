@@ -8,15 +8,15 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-ms.openlocfilehash: 50d85b74b523c8985bd0d3d407097a4f42cfeb60
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 90d0e2f3c6ebab070809a4813c87da3539fd14f1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654226"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337853"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>연습: WPF에서 Windows Forms 복합 컨트롤 호스팅
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 응용 프로그램을 만들기 위한 다양한 환경을 제공합니다. 그러나 상당한 투자 경우 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 코드 수 이상 다시 사용 하는 것이 효과적에서 해당 코드 중 일부에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램부터에서 다시 작성 하는 대신 합니다. 가장 일반적인 시나리오는 기존 Windows Forms 컨트롤을 사용 하는 경우입니다. 경우에 따라 이러한 컨트롤에 대한 소스 코드에 액세스하지 못할 수도 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이러한 컨트롤을 호스트 하는 간단한 절차를 제공 된 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다. 예를 들어 사용할 수 있습니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 대부분의 호스트에서 특수화 된 하면서 프로그래밍에 대 한 <xref:System.Windows.Forms.DataGridView> 컨트롤입니다.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램을 만들기 위한 풍부한 환경을 제공 합니다. 그러나 상당한 투자 경우 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 코드 수 이상 다시 사용 하는 것이 효과적에서 해당 코드 중 일부에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램부터에서 다시 작성 하는 대신 합니다. 가장 일반적인 시나리오는 기존 Windows Forms 컨트롤을 사용 하는 경우입니다. 경우에 따라 이러한 컨트롤에 대한 소스 코드에 액세스하지 못할 수도 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이러한 컨트롤을 호스트 하는 간단한 절차를 제공 된 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다. 예를 들어 사용할 수 있습니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 대부분의 호스트에서 특수화 된 하면서 프로그래밍에 대 한 <xref:System.Windows.Forms.DataGridView> 컨트롤입니다.  
   
  이 연습에서 데이터 입력을 수행 하는 Windows Forms 복합 컨트롤을 호스트 하는 응용 프로그램을 통해 안내를 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다. 복합 컨트롤은 DLL로 패키지됩니다. 이 일반적인 절차는 더 복잡한 애플리케이션 및 컨트롤로 확장할 수 있습니다. 이 연습에서 모양과 기능이 거의 동일 하 게 [연습: Windows Forms에서 WPF 복합 컨트롤 호스팅](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)합니다. 주요 차이점은 호스팅 시나리오가 반대라는 점입니다.  
   
@@ -44,17 +44,17 @@ ms.locfileid: "58654226"
 ### <a name="creating-the-project"></a>프로젝트 만들기  
  프로젝트를 시작하려면  
   
-1.  시작 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]를 열고 합니다 **새 프로젝트** 대화 상자.  
+1. 시작 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]를 열고 합니다 **새 프로젝트** 대화 상자.  
   
-2.  창 범주에서 선택 합니다 **Windows Forms 컨트롤 라이브러리** 템플릿.  
+2. 창 범주에서 선택 합니다 **Windows Forms 컨트롤 라이브러리** 템플릿.  
   
-3.  새 프로젝트의 이름을 `MyControls`로 지정합니다.  
+3. 새 프로젝트의 이름을 `MyControls`로 지정합니다.  
   
-4.  위치 지정 편리 하 게 명명된 된 최상위 폴더와 같은 `WpfHostingWindowsFormsControl`합니다. 나중에 이 폴더에 호스트 애플리케이션을 넣습니다.  
+4. 위치 지정 편리 하 게 명명된 된 최상위 폴더와 같은 `WpfHostingWindowsFormsControl`합니다. 나중에 이 폴더에 호스트 애플리케이션을 넣습니다.  
   
-5.  **확인**을 클릭해 프로젝트를 만듭니다. 기본 프로젝트 포함 이라는 단일 컨트롤이 `UserControl1`합니다.  
+5. **확인**을 클릭해 프로젝트를 만듭니다. 기본 프로젝트 포함 이라는 단일 컨트롤이 `UserControl1`합니다.  
   
-6.  솔루션 탐색기에서 이름을 바꿀 `UserControl1` 에 `MyControl1`입니다.  
+6. 솔루션 탐색기에서 이름을 바꿀 `UserControl1` 에 `MyControl1`입니다.  
   
  프로젝트에는 다음과 같은 시스템 DLL에 대한 참조가 있어야 합니다. 이러한 DLL이 기본적으로 포함되지 않은 경우 프로젝트에 추가합니다.  
   
@@ -112,19 +112,19 @@ ms.locfileid: "58654226"
 ### <a name="giving-the-assembly-a-strong-name-and-building-the-assembly"></a>어셈블리에 강력한 이름을 지정하고 어셈블리 빌드
  이 어셈블리에서 참조 하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램에 강력한 이름이 있어야 합니다. 강력한 이름을 만들려면 Sn.exe를 사용 하 여 키 파일을 만들고 프로젝트에 추가 합니다.
 
-1.  [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 명령 프롬프트를 엽니다. 이렇게 하려면 클릭 합니다 **시작** 메뉴를 선택한 후 **모든 프로그램/Microsoft Visual Studio 2010/Visual Studio Tools/Visual Studio 명령 프롬프트**합니다. 그러면 사용자 지정된 환경 변수가 있는 콘솔 창이 시작됩니다.
+1. [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 명령 프롬프트를 엽니다. 이렇게 하려면 클릭 합니다 **시작** 메뉴를 선택한 후 **모든 프로그램/Microsoft Visual Studio 2010/Visual Studio Tools/Visual Studio 명령 프롬프트**합니다. 그러면 사용자 지정된 환경 변수가 있는 콘솔 창이 시작됩니다.
 
-2.  명령 프롬프트를 사용 하 여는 `cd` 명령 프로젝트 폴더로 이동 합니다.
+2. 명령 프롬프트를 사용 하 여는 `cd` 명령 프로젝트 폴더로 이동 합니다.
 
-3.  다음 명령을 실행하여 MyControls.snk라는 키 파일을 생성합니다.
+3. 다음 명령을 실행하여 MyControls.snk라는 키 파일을 생성합니다.
 
     ```
     Sn.exe -k MyControls.snk
     ```
 
-4.  키 파일을 프로젝트에 포함 하려면 솔루션 탐색기에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 한 다음 클릭 **속성**합니다. 프로젝트 디자이너, 클릭 합니다 **서명** 탭을 선택 합니다 **어셈블리에 서명 합니다** 확인란을 선택 하 고 다음 키 파일을 찾습니다.
+4. 키 파일을 프로젝트에 포함 하려면 솔루션 탐색기에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 한 다음 클릭 **속성**합니다. 프로젝트 디자이너, 클릭 합니다 **서명** 탭을 선택 합니다 **어셈블리에 서명 합니다** 확인란을 선택 하 고 다음 키 파일을 찾습니다.
 
-5.  솔루션을 빌드합니다. 빌드하면 MyControls.dll이라는 DLL이 생성됩니다.
+5. 솔루션을 빌드합니다. 빌드하면 MyControls.dll이라는 DLL이 생성됩니다.
 
 ## <a name="implementing-the-wpf-host-application"></a>WPF 호스트 애플리케이션 구현
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 사용 하 여 응용 프로그램을 호스트 합니다 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 호스팅할 컨트롤에 `MyControl1`합니다. 응용 프로그램 처리를 `OnButtonClick` 컨트롤에서 데이터를 수신 하는 이벤트입니다. 또한 컬렉션을 사용 하면 컨트롤의 속성 중 일부를 변경할 수 있는 옵션 단추는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다. 다음 그림에서는 완료된 애플리케이션을 보여 줍니다.
@@ -136,25 +136,25 @@ ms.locfileid: "58654226"
 ### <a name="creating-the-project"></a>프로젝트 만들기
  프로젝트를 시작하려면
 
-1.  오픈 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]를 선택 하 고 **새 프로젝트**합니다.
+1. 오픈 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]를 선택 하 고 **새 프로젝트**합니다.
 
-2.  창 범주에서 선택 합니다 **WPF 응용 프로그램** 템플릿.
+2. 창 범주에서 선택 합니다 **WPF 응용 프로그램** 템플릿.
 
-3.  새 프로젝트의 이름을 `WpfHost`로 지정합니다.
+3. 새 프로젝트의 이름을 `WpfHost`로 지정합니다.
 
-4.  위치에는 MyControls 프로젝트를 포함하는 동일한 최상위 폴더를 지정합니다.
+4. 위치에는 MyControls 프로젝트를 포함하는 동일한 최상위 폴더를 지정합니다.
 
-5.  **확인**을 클릭해 프로젝트를 만듭니다.
+5. **확인**을 클릭해 프로젝트를 만듭니다.
 
  포함 된 DLL에 대 한 참조를 추가 해야 `MyControl1` 및 기타 어셈블리입니다.
 
-1.  솔루션 탐색기에서 프로젝트 이름을 마우스 오른쪽 단추로 누르고 **참조 추가**합니다.
+1. 솔루션 탐색기에서 프로젝트 이름을 마우스 오른쪽 단추로 누르고 **참조 추가**합니다.
 
-2.  클릭 합니다 **찾아보기** 탭 하 고 mycontrols.dll이 포함 된 폴더로 이동 합니다. 이 연습에서 이 폴더는 MyControls\bin\Debug입니다.
+2. 클릭 합니다 **찾아보기** 탭 하 고 mycontrols.dll이 포함 된 폴더로 이동 합니다. 이 연습에서 이 폴더는 MyControls\bin\Debug입니다.
 
-3.  Mycontrols.dll을 선택한 다음 클릭 **확인**합니다.
+3. Mycontrols.dll을 선택한 다음 클릭 **확인**합니다.
 
-4.  WindowsFormsIntegration.dll 이라는 WindowsFormsIntegration 어셈블리에 대 한 참조를 추가 합니다.
+4. WindowsFormsIntegration.dll 이라는 WindowsFormsIntegration 어셈블리에 대 한 참조를 추가 합니다.
 
 ### <a name="implementing-the-basic-layout"></a>기본 레이아웃 구현
  [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 호스트의 응용 프로그램은 MainWindow.xaml에서 구현 됩니다. 이 파일에 들어 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 레이아웃을 정의 하 고 Windows Forms 컨트롤을 호스트 하는 태그입니다. 애플리케이션은 세 가지 영역으로 구분됩니다.
@@ -239,6 +239,7 @@ using MyControls;
  애플리케이션을 빌드 및 실행합니다. Windows Forms 복합 컨트롤의 텍스트를 추가 하 고 클릭 **확인**합니다. 텍스트가 레이블에 나타납니다. 컨트롤에 대한 효과를 확인하려면 다른 라디오 단추를 클릭합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Visual Studio에서 XAML 디자인](/visualstudio/designers/designing-xaml-in-visual-studio)

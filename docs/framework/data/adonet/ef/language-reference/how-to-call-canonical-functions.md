@@ -1,18 +1,18 @@
 ---
-title: '방법: 정식 함수를 호출 합니다.'
+title: '방법: 호출 정식 함수'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b3d84873-7403-4957-8e20-b4ae39f50214
-ms.openlocfilehash: 33abf1a56750d6f13dabe773605ba1474ec75d45
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 6e555b3d896862db491b34e11564e70bbe2d15eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827307"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213157"
 ---
-# <a name="how-to-call-canonical-functions"></a>방법: 정식 함수를 호출 합니다.
+# <a name="how-to-call-canonical-functions"></a>방법: 호출 정식 함수
 <xref:System.Data.Objects.EntityFunctions> 클래스에는 LINQ to Entities 쿼리에 사용할 정식 함수를 노출하는 메서드가 포함되어 있습니다. 정식 함수에 대한 자세한 내용은 [정식 함수](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)를 참조하세요.  
   
 > [!NOTE]
@@ -35,5 +35,6 @@ ms.locfileid: "55827307"
  [!code-vb[DP L2E CanonicalAndStoreFunctions#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e canonicalandstorefunctions/vb/module1.vb#2)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [LINQ to Entities 쿼리에서 함수 호출](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)
 - [LINQ to Entities에서 쿼리](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

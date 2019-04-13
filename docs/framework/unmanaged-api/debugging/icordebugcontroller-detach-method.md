@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f2dae147f8667a73036dbcf873e2082996b2755
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85a9bde77f7c393756ec1d3e7d30b96392aa6a94
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666987"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151803"
 ---
 # <a name="icordebugcontrollerdetach-method"></a>ICorDebugController::Detach 메서드
 프로세스 또는 응용 프로그램 도메인에서 디버거를 분리합니다.  
@@ -48,4 +48,3 @@ HRESULT Detach ();
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
-

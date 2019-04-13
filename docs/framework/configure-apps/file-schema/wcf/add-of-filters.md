@@ -1,13 +1,13 @@
 ---
-title: <add>의 <filters>
+title: <add> / <filters>
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
-ms.openlocfilehash: 1340b70cf4656b764370a14955a2f4d6f6209fe4
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 399fc4e22a9253469a5494af61dac862e33814a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466025"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128702"
 ---
 # <a name="add-of-filters"></a>\<추가 >의 \<필터 >
 로깅할 메시지 종류를 지정하는 XPath 필터입니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "58466025"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<필터>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|로깅할 메시지 종류를 제어하는 데 사용되는 XPath 필터 컬렉션을 포함합니다.|  
+|[\<filters>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|로깅할 메시지 종류를 제어하는 데 사용되는 XPath 필터 컬렉션을 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
  필터는 전송 계층에서만 적용됩니다(`logMessagesAtTransportLevel` = `true`). 서비스 수준 및 잘못된 형식의 메시지 로깅은 필터의 영향을 받지 않습니다.  
@@ -71,6 +71,7 @@ ms.locfileid: "58466025"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.DiagnosticSection>
 - <xref:System.ServiceModel.Diagnostics>
 - <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>

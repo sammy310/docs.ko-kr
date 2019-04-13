@@ -2,12 +2,12 @@
 title: SQL Server에서 저장 프로시저에 서명
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: da7b21d725d301006288245c940e4367c3ce8568
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c2076294c0e06ec411ceb1f5b1238dc3d7eb304
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606824"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313920"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>SQL Server에서 저장 프로시저에 서명
  디지털 설명은 서명자의 개인 키로 암호화된 데이터 다이제스트입니다. 개인 키를 사용하면 디지털 서명이 소유자별로 고유하게 유지됩니다. 저장된 프로시저, (인라인 테이블 반환 함수)를 제외한 함수, 트리거 및 어셈블리를 서명할 수 있습니다.  
@@ -23,25 +23,25 @@ ms.locfileid: "54606824"
   
  두 가지 필수 단계는 모듈에 서명할 때는:  
   
-1.  Transact-SQL `CREATE CERTIFICATE [certificateName]` 문을 사용하여 인증서를 만듭니다. 이 문에는 시작 및 종료 날짜와 암호를 설정하기 위한 몇 가지 옵션이 있습니다. 기본 만료 날짜는 1 년입니다.  
+1. Transact-SQL `CREATE CERTIFICATE [certificateName]` 문을 사용하여 인증서를 만듭니다. 이 문에는 시작 및 종료 날짜와 암호를 설정하기 위한 몇 가지 옵션이 있습니다. 기본 만료 날짜는 1 년입니다.  
   
-1.  Transact-SQL `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]` 문을 사용하여 프로시저에 인증서로 서명합니다.  
+1. Transact-SQL `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]` 문을 사용하여 프로시저에 인증서로 서명합니다.  
 
 모듈 서명 된 후 하나 이상의 보안 주체는 인증서와 연결 해야 하는 추가 사용 권한을 보유 하기 위해 만들 수 해야 합니다.  
 
 모듈 추가 데이터베이스 수준 권한이 필요로 하는 경우:  
   
-1.  Transact-SQL `CREATE USER [userName] FROM CERTIFICATE [certificateName]` 문을 사용하여 해당 인증서와 연결된 데이터베이스 사용자를 만듭니다. 이 사용자는 데이터베이스에 존재 하며 로그인도 동일한 인증서에서 생성 된 경우가 아니면 로그인과 연결 아닙니다.  
+1. Transact-SQL `CREATE USER [userName] FROM CERTIFICATE [certificateName]` 문을 사용하여 해당 인증서와 연결된 데이터베이스 사용자를 만듭니다. 이 사용자는 데이터베이스에 존재 하며 로그인도 동일한 인증서에서 생성 된 경우가 아니면 로그인과 연결 아닙니다.  
   
-1.  인증서 사용자에 게 필요한 데이터베이스 수준 사용 권한을 부여 합니다.  
+1. 인증서 사용자에 게 필요한 데이터베이스 수준 사용 권한을 부여 합니다.  
   
 모듈 추가 서버 수준 권한이 필요 하는 경우:  
   
-1.  인증서를 복사 합니다 `master` 데이터베이스입니다.  
+1. 인증서를 복사 합니다 `master` 데이터베이스입니다.  
  
-1.  TRANSACT-SQL을 사용 하 여 해당 인증서와 연결 된 로그인을 만들려면 `CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]` 문입니다.  
+1. TRANSACT-SQL을 사용 하 여 해당 인증서와 연결 된 로그인을 만들려면 `CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]` 문입니다.  
   
-1.  인증서 로그인 필요한 서버 수준 사용 권한을 부여 합니다.  
+1. 인증서 로그인 필요한 서버 수준 사용 권한을 부여 합니다.  
   
 > [!NOTE]  
 >  인증서는 DENY 문을 사용하여 호출된 권한을 가진 사용자에게 권한을 부여할 수 없습니다. DENY는 항상 GRANT보다 높은 우선 순위를 갖기 때문에 호출자가 인증서 사용자에게 부여된 권한을 상속 받지 않도록 방지합니다.  
@@ -55,6 +55,7 @@ ms.locfileid: "54606824"
 |[인증서를 사용 하 여 저장된 프로시저에 서명](/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate) SQL Server 온라인 설명서의|인증서로 저장 프로시저에 서명하는 방법에 대한 자습서를 제공합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET 응용 프로그램 보안](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server 보안 개요](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [SQL Server의 응용 프로그램 보안 시나리오](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)

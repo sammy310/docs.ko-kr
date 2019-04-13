@@ -2,12 +2,12 @@
 title: SQL Server에서 인증
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 060d756306226ef34fb968a87425bc0d4ea545f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7fac0756da3bcc19ee6370468f0e0e65c428d35
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630933"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084039"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server에서 인증
 SQL Server에서는 Windows 인증 모드와 혼합 모드의 두 가지 인증 모드를 지원합니다.  
@@ -79,6 +79,7 @@ SQL Server에서는 Windows 인증 모드와 혼합 모드의 두 가지 인증 
 |[보안 주체](/sql/relational-databases/security/authentication-access/principals-database-engine)|로그인 및 SQL Server의 다른 보안 주체에 설명 합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET 응용 프로그램 보안](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server의 응용 프로그램 보안 시나리오](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [데이터 소스에 연결](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)

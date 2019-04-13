@@ -2,12 +2,12 @@
 title: 검색 라우터 서비스
 ms.date: 03/30/2017
 ms.assetid: 3d30af47-b24f-40e5-833a-24d77125c9e6
-ms.openlocfilehash: 9c0c409eb6cf3146a198b9f4bcd6d76660f5da36
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 166f6b9d1055e36f987e6b9a81fe69dc8bd548b9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509083"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318769"
 ---
 # <a name="discovery-router-service"></a>검색 라우터 서비스
 이 샘플에서는 검색 메시지를 다른 엔드포인트에 전달하는 방법을 보여 줍니다.  
@@ -22,13 +22,13 @@ ms.locfileid: "43509083"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1.  샘플을 빌드합니다.  
+1. 샘플을 빌드합니다.  
   
-2.  DiscoveryRouter 실행 파일을 실행합니다.  
+2. DiscoveryRouter 실행 파일을 실행합니다.  
   
-3.  빌드 디렉터리에서 서비스 실행 파일을 실행합니다.  
+3. 빌드 디렉터리에서 서비스 실행 파일을 실행합니다.  
   
-4.  클라이언트 실행 파일을 실행합니다. 그러면 클라이언트에서는 서비스를 찾습니다.  
+4. 클라이언트 실행 파일을 실행합니다. 그러면 클라이언트에서는 서비스를 찾습니다.  
   
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  

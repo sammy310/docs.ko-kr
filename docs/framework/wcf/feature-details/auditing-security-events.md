@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: a2349fa82b790182fa5d160bd29091c7524e2cea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d19c32994fdfc5587c06b979886f20ab2a04508
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622600"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101299"
 ---
 # <a name="auditing-security-events"></a>보안 이벤트 감사
 Windows Communication Foundation (WCF)를 사용 하 여 만든 응용 프로그램 감사 기능을 사용 하 여 보안 이벤트 (성공, 실패 또는 둘 다)를 기록할 수 있습니다. 이벤트는 Windows의 시스템 이벤트 로그에 기록되며 이벤트 뷰어를 사용하여 검사할 수 있습니다.  
@@ -32,7 +32,7 @@ Windows Communication Foundation (WCF)를 사용 하 여 만든 응용 프로그
   
  보안 로그에 기록하려면 `SeAuditPrivilege`가 필요합니다. 기본적으로 로컬 시스템 및 네트워크 서비스 계정에만 이 권한이 있습니다. 보안 로그 기능 `read` 및 `delete`를 관리하려면 `SeSecurityPrivilege`가 필요합니다. 기본적으로 관리자만 이 권한을 가집니다.  
   
- 반대로, 인증된 사용자는 응용 프로그램 로그를 읽고 쓸 수 있습니다. [!INCLUDE[wxp](../../../../includes/wxp-md.md)]는 기본적으로 감사 이벤트를 응용 프로그램 로그에 씁니다. 이 로그는 모든 인증된 사용자에게 표시되는 개인 정보를 포함할 수도 있습니다.  
+ 반대로, 인증된 사용자는 응용 프로그램 로그를 읽고 쓸 수 있습니다. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 기본적으로 감사 이벤트를 응용 프로그램 로그를 기록 합니다. 이 로그는 모든 인증된 사용자에게 표시되는 개인 정보를 포함할 수도 있습니다.  
   
 ## <a name="suppressing-audit-failures"></a>감사 실패 억제  
  또한 감사 중에 감사 실패를 억제할지 여부를 지정하는 옵션이 있습니다. 기본적으로 감사 실패는 응용 프로그램에 영향을 주지 않습니다. 그러나 필요한 경우 이 옵션을 `false`로 설정할 수 있습니다. 그러면 예외가 throw됩니다.  
@@ -53,7 +53,7 @@ Windows Communication Foundation (WCF)를 사용 하 여 만든 응용 프로그
   
  감사 이벤트를 기록 하는 응용 프로그램 설정의 예제를 참조 하세요. [방법: 보안 이벤트 감사](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)합니다.  
   
-### <a name="configuration"></a>구성하기  
+### <a name="configuration"></a>구성  
  구성 추가 하 여 감사 동작을 지정 하려면 사용할 수도 있습니다는 [ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) 아래를 [ \<동작 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)합니다. 아래에 요소를 추가 해야 합니다는 [ \<동작 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) 다음 코드와 같이 합니다.  
   
 ```xml  
@@ -88,7 +88,7 @@ Windows Communication Foundation (WCF)를 사용 하 여 만든 응용 프로그
 |시스템|응용 프로그램 로그|보안 로그|  
 |------------|---------------------|------------------|  
 |[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 이상|지원됨|지원 안 함|  
-|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] 및 [!INCLUDE[wv](../../../../includes/wv-md.md)]|지원됨|스레드 컨텍스트에 `SeAuditPrivilege`가 있어야 합니다.|  
+|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] 및 [!INCLUDE[wv](../../../../includes/wv-md.md)]|지원됨|스레드 컨텍스트에 있어야 합니다. `SeAuditPrivilege`|  
   
 #### <a name="other-factors"></a>기타 요소  
  다음 표에서는 운영 체제 이외에 로깅 사용을 제어하는 기타 설정에 대해 설명합니다.  
@@ -99,6 +99,7 @@ Windows Communication Foundation (WCF)를 사용 하 여 만든 응용 프로그
 |기본 사용자 경험|모든 인증된 사용자는 응용 프로그램 로그에 기록할 수 있으므로 응용 프로그램 프로세스를 위한 추가 권한 단계가 필요하지 않습니다.|응용 프로그램 프로세스(컨텍스트)에 `SeAuditPrivilege`가 있어야 합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
 - <xref:System.ServiceModel.AuditLogLocation>
 - [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
@@ -106,4 +107,4 @@ Windows Communication Foundation (WCF)를 사용 하 여 만든 응용 프로그
 - [방법: 보안 이벤트 감사](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
 - [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)
 - [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
-- [Windows Server appfabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server AppFabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

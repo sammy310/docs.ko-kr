@@ -8,12 +8,12 @@ helpviewer_keywords:
 - displaying a background image inside a text box to aid user input [WPF]
 - aid usability of a TextBox using a background image [WPF]
 ms.assetid: df89bdd8-a0fb-45e0-b312-dd53332d01a8
-ms.openlocfilehash: 5a2b48c6f580def98a47913c4909d0c57aca0974
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ef2536f03ba6ed08e27d2fcf30cd1f72df2cf460
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359422"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142417"
 ---
 # <a name="how-to-add-a-watermark-to-a-textbox"></a>방법: TextBox에 워터마크 추가
 다음 예제에서는의 유용성을 <xref:System.Windows.Controls.TextBox> 내부의 설명 배경 이미지를 표시 하 여는 <xref:System.Windows.Controls.TextBox> 이미지 제거 되는 시점까지 사용자가 텍스트를 입력 합니다. 또한 사용자가 입력을 제거 하는 경우 배경 이미지가 다시 복원 됩니다. 아래 그림을 참조 하세요.  
@@ -30,5 +30,6 @@ ms.locfileid: "57359422"
  [!code-vb[TextBoxMiscSnippets_snip#TextBoxBackgroundCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/visualbasic/textbox_with_background_image.xaml.vb#textboxbackgroundcodeexamplewholepage)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [TextBox 개요](textbox-overview.md)
 - [RichTextBox 개요](richtextbox-overview.md)

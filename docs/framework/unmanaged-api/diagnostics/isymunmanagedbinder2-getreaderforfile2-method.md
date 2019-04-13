@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 17d027f7308d5f512b443dc69be815c5402f0c13
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fed289b2776e8ac4a12969060cd16c6163ebed2f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648903"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091969"
 ---
 # <a name="isymunmanagedbinder2getreaderforfile2-method"></a>ISymUnmanagedBinder2::GetReaderForFile2 메서드
 지정 된 메타 데이터 인터페이스 및 파일 이름을 올바른 반환 [ISymUnmanagedReader](isymunmanagedreader-interface.md) 모듈과 관련 디버깅 기호를 읽는 인터페이스입니다.  
@@ -66,5 +66,6 @@ HRESULT GetReaderForFile2(
  이 버전의 메서드는 모듈 옆에 있는 오른쪽 이외의 영역에서 PDB 파일을 검색할 수 있습니다. 검색 정책을 결합 하 여 제어할 수 있습니다 [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)합니다. 예를 들어 `AllowReferencePathAccess | AllowSymbolServerAccess` pdb 기호 서버에서 실행 파일 옆에 있는 한 있지만 하거나 하지 않는 레지스트리 쿼리 실행 파일의 경로 사용 합니다. 경우는 `searchPath` 매개 변수를 제공, 해당 디렉터리 항상 검색 됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [ISymUnmanagedBinder2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)
 - [GetReaderForFile 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)

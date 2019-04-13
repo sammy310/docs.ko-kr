@@ -1,5 +1,5 @@
 ---
-title: '방법: 디자이너를 사용 하 여 ToolBar 컨트롤에 단추 추가'
+title: '방법: 디자이너를 사용하여 ToolBar 컨트롤에 단추 추가'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - toolbars [Windows Forms], adding buttons
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-ms.openlocfilehash: 86184fa92917c53d95da21732a7c52cdd08079ee
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 509aa0b03dbbb370384fb83e0d8e5471fc2cb819
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702843"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306198"
 ---
-# <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>방법: 디자이너를 사용 하 여 ToolBar 컨트롤에 단추 추가
+# <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>방법: 디자이너를 사용하여 ToolBar 컨트롤에 단추 추가
 > [!NOTE]
 >  <xref:System.Windows.Forms.ToolStrip> 컨트롤은 <xref:System.Windows.Forms.ToolBar> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.ToolBar> 컨트롤을 계속 유지하도록 선택할 수 있습니다.  
   
@@ -28,13 +28,13 @@ ms.locfileid: "57702843"
   
 ### <a name="to-add-buttons-at-design-time"></a>디자인 타임에 단추를 추가 하려면  
   
-1.  <xref:System.Windows.Forms.ToolBar> 컨트롤을 선택합니다.  
+1. <xref:System.Windows.Forms.ToolBar> 컨트롤을 선택합니다.  
   
-2.  에 **속성** 창 클릭 합니다 <xref:System.Windows.Forms.ToolBar.Buttons%2A> 속성을 선택 하 고 클릭 합니다 **줄임표** (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png " vbEllipsesButton")) 버튼을 클릭 하 여 **ToolBarButton 컬렉션 편집기**합니다.  
+2. 에 **속성** 창 클릭 합니다 <xref:System.Windows.Forms.ToolBar.Buttons%2A> 속성을 선택 하 고 클릭 합니다 **줄임표** (![VisualStudioEllipsesButton 스크린 샷](../media/vbellipsesbutton.png " vbEllipsesButton")) 버튼을 클릭 하 여 **ToolBarButton 컬렉션 편집기**합니다.  
   
-3.  사용 하 여는 **추가** 및 **제거** 단추를 추가 하거나 제거 하는 단추는 <xref:System.Windows.Forms.ToolBar> 제어 합니다.  
+3. 사용 하 여는 **추가** 및 **제거** 단추를 추가 하거나 제거 하는 단추는 <xref:System.Windows.Forms.ToolBar> 제어 합니다.  
   
-4.  개별 단추 속성을 구성 합니다 **속성** 편집기의 오른쪽 창에 표시 되는 창입니다. 다음 표에서 고려해 야 할 몇 가지 중요 한 속성을 보여 줍니다.  
+4. 개별 단추 속성을 구성 합니다 **속성** 편집기의 오른쪽 창에 표시 되는 창입니다. 다음 표에서 고려해 야 할 몇 가지 중요 한 속성을 보여 줍니다.  
   
     |속성|설명|  
     |--------------|-----------------|  
@@ -45,11 +45,12 @@ ms.locfileid: "57702843"
     |<xref:System.Windows.Forms.ToolBarButton.Text%2A>|단추에서 표시 되는 텍스트 문자열입니다.|  
     |<xref:System.Windows.Forms.ToolBarButton.ToolTipText%2A>|단추의 도구 설명으로 표시 되는 텍스트입니다.|  
   
-5.  클릭 **확인** 지정한 패널을 만들고 대화 상자를 닫습니다.  
+5. 클릭 **확인** 지정한 패널을 만들고 대화 상자를 닫습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ToolBar>
-- [방법: 도구 모음 단추의 아이콘 정의](how-to-define-an-icon-for-a-toolbar-button.md)
-- [방법: Toolbar 단추의 메뉴 이벤트 트리거](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [방법: 도구 모음 단추에 대한 아이콘 정의](how-to-define-an-icon-for-a-toolbar-button.md)
+- [방법: Toolbar 단추에 대한 메뉴 이벤트 트리거](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [ToolBar 컨트롤 개요](toolbar-control-overview-windows-forms.md)
 - [ToolBar 컨트롤](toolbar-control-windows-forms.md)

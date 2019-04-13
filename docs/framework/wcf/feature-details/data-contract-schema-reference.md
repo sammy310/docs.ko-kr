@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: decde09c2225da0af420813b477b86f4564d42f7
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: a4ddaaea2133a8adf5271628f442644194a7f453
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411800"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131939"
 ---
 # <a name="data-contract-schema-reference"></a>데이터 계약 스키마 참조
 이 항목에서는 XML serialization에 대한 CLR(공용 언어 런타임) 형식을 설명하기 위해 <xref:System.Runtime.Serialization.DataContractSerializer> 에서 사용하는 XSD(XML 스키마) 하위 집합에 대해 설명합니다.  
@@ -54,15 +54,15 @@ ms.locfileid: "58411800"
   
 |목차|스키마|  
 |--------------|------------|  
-|`include`|지원됩니다. `DataContractSerializer` 는 xs:include 및 xs:import를 지원합니다. 그러나 Svcutil.exe는 로컬 파일에서 메타데이터를 로드할 때 다음 `xs:include/@schemaLocation` 및 `xs:import/@location` 참조를 제한합니다. 이러한 경우 스키마 파일 목록은 `include` 가 아닌 out-of-band 메커니즘을 통해 전달해야 합니다. `include`된 스키마 문서는 무시됩니다.|  
+|`include`|지원됩니다. `DataContractSerializer` x를 지원 합니다: 포함 및 xs: import입니다. 그러나 Svcutil.exe는 로컬 파일에서 메타데이터를 로드할 때 다음 `xs:include/@schemaLocation` 및 `xs:import/@location` 참조를 제한합니다. 이러한 경우 스키마 파일 목록은 `include` 가 아닌 out-of-band 메커니즘을 통해 전달해야 합니다. `include`된 스키마 문서는 무시됩니다.|  
 |`redefine`|사용할 수 없습니다. 보안상의 이유로 `xs:redefine` 는 `DataContractSerializer` 을 사용할 수 없습니다. `x:redefine` 을 사용하려면 `schemaLocation` 을 따라야 합니다. 상황에 따라 DataContract를 사용하는 Svcutil.exe는 `schemaLocation`사용을 제한합니다.|  
-|`import`|지원됩니다. `DataContractSerializer` 는 `xs:include` 및 `xs:import`를 지원합니다. 그러나 Svcutil.exe는 로컬 파일에서 메타데이터를 로드할 때 다음 `xs:include/@schemaLocation` 및 `xs:import/@location` 참조를 제한합니다. 이러한 경우 스키마 파일 목록은 `include` 가 아닌 out-of-band 메커니즘을 통해 전달해야 합니다. `include`된 스키마 문서는 무시됩니다.|  
+|`import`|지원됩니다. `DataContractSerializer` 지원 `xs:include` 고 `xs:import`입니다. 그러나 Svcutil.exe는 로컬 파일에서 메타데이터를 로드할 때 다음 `xs:include/@schemaLocation` 및 `xs:import/@location` 참조를 제한합니다. 이러한 경우 스키마 파일 목록은 `include` 가 아닌 out-of-band 메커니즘을 통해 전달해야 합니다. `include`된 스키마 문서는 무시됩니다.|  
 |`simpleType`|지원됩니다. `xs:simpleType` 단원을 참조하십시오.|  
 |`complexType`|지원되며 데이터 계약으로 매핑됩니다. `xs:complexType` 단원을 참조하십시오.|  
-|`group`|무시됩니다. `DataContractSerializer` 는 `xs:group`, `xs:attributeGroup`및 `xs:attribute`사용을 지원하지 않습니다. 이러한 선언은 `xs:schema`의 자식으로 무시되며 `complexType` 또는 기타 지원되는 구문 내에서 참조할 수 없습니다.|  
-|`attributeGroup`|무시됩니다. `DataContractSerializer` 는 `xs:group`, `xs:attributeGroup`및 `xs:attribute`사용을 지원하지 않습니다. 이러한 선언은 `xs:schema`의 자식으로 무시되며 `complexType` 또는 기타 지원되는 구문 내에서 참조할 수 없습니다.|  
+|`group`|무시됩니다. `DataContractSerializer` 사용을 지원 하지 않습니다 `xs:group`하십시오 `xs:attributeGroup`, 및 `xs:attribute`합니다. 이러한 선언은 `xs:schema`의 자식으로 무시되며 `complexType` 또는 기타 지원되는 구문 내에서 참조할 수 없습니다.|  
+|`attributeGroup`|무시됩니다. `DataContractSerializer` 사용을 지원 하지 않습니다 `xs:group`하십시오 `xs:attributeGroup`, 및 `xs:attribute`합니다. 이러한 선언은 `xs:schema`의 자식으로 무시되며 `complexType` 또는 기타 지원되는 구문 내에서 참조할 수 없습니다.|  
 |`element`|지원됩니다. GED(전역 요소 선언)를 참조하십시오.|  
-|`attribute`|무시됩니다. `DataContractSerializer` 는 `xs:group`, `xs:attributeGroup`및 `xs:attribute`사용을 지원하지 않습니다. 이러한 선언은 `xs:schema`의 자식으로 무시되며 `complexType` 또는 기타 지원되는 구문 내에서 참조할 수 없습니다.|  
+|`attribute`|무시됩니다. `DataContractSerializer` 사용을 지원 하지 않습니다 `xs:group`하십시오 `xs:attributeGroup`, 및 `xs:attribute`합니다. 이러한 선언은 `xs:schema`의 자식으로 무시되며 `complexType` 또는 기타 지원되는 구문 내에서 참조할 수 없습니다.|  
 |`notation`|무시됩니다.|  
   
 ## <a name="complex-types--xscomplextype"></a>복합 형식 – \<xs:complexType >  
@@ -118,7 +118,7 @@ ms.locfileid: "58411800"
 ## <a name="elements--xselement"></a>요소 – \<xs: element >  
   
 ### <a name="general-information"></a>일반 정보  
- `<xs:element>` 는 다음과 같은 컨텍스트에서 발생할 수 있습니다.  
+ `<xs:element>` 다음 경우에 발생할 수 있습니다.  
   
 -   이 요소는 `<xs:sequence>`내에서 발생할 수 있으며, 일반(비컬렉션) 데이터 계약의 데이터 멤버에 대해 설명합니다. 이 경우 `maxOccurs` 특성은 1이어야 합니다. (값 0이 허용되지 않는 경우).  
   
@@ -329,7 +329,7 @@ public enum MyEnum
 ```  
   
 ### <a name="xslist"></a>\<xs:list>  
- `DataContractSerializer` 는 `System.FlagsAttribute` 로 표시된 열거형 형식을 `xs:list` 에서 파생된 `xs:string`에 매핑합니다. 다른 `xs:list` 변형은 지원되지 않습니다.  
+ `DataContractSerializer` 으로 표시 된 맵 열거형 형식 `System.FlagsAttribute` 하 `xs:list` 에서 파생 된 `xs:string`합니다. 다른 `xs:list` 변형은 지원되지 않습니다.  
   
 ### <a name="xslist-attributes"></a>\<xs: list >: 특성  
   
@@ -479,7 +479,7 @@ public class Employee : Person
 |`anySimpleType`|<xref:System.String>.|  
 |`duration`|<xref:System.TimeSpan>.|  
 |`dateTime`|<xref:System.DateTime>.|  
-|`dateTimeOffset`|오프셋의 경우<xref:System.DateTime> 및 <xref:System.TimeSpan> . 아래 DateTimeOffset Serialization을 참조하십시오.|  
+|`dateTimeOffset`|<xref:System.DateTime> 및 <xref:System.TimeSpan> 오프셋입니다. 아래 DateTimeOffset Serialization을 참조하십시오.|  
 |`time`|<xref:System.String>.|  
 |`date`|<xref:System.String>.|  
 |`gYearMonth`|<xref:System.String>.|  
@@ -488,7 +488,7 @@ public class Employee : Person
 |`gDay`|<xref:System.String>.|  
 |`gMonth`|<xref:System.String>.|  
 |`boolean`|<xref:System.Boolean>|  
-|`base64Binary`|<xref:System.Byte> 배열입니다.|  
+|`base64Binary`|<xref:System.Byte> 배열이 아닌 경우|  
 |`hexBinary`|<xref:System.String>.|  
 |`float`|<xref:System.Single>.|  
 |`double`|<xref:System.Double>.|  
@@ -523,7 +523,7 @@ public class Employee : Person
 |`positiveInteger`|<xref:System.Int64>.|  
   
 ## <a name="iserializable-types-mapping"></a>ISerializable 형식 매핑  
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 은 <xref:System.Runtime.Serialization.ISerializable> 버전 1.0에서 지속성이나 데이터 전송을 위해 개체를 serialize하는 일반 메커니즘으로 새로 추가되었습니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 을 구현하고 애플리케이션 간에 전달할 수 있는 다양한 `ISerializable` 형식이 있습니다. <xref:System.Runtime.Serialization.DataContractSerializer> 는 기본적으로 `ISerializable` 클래스에 대한 지원을 제공합니다. `DataContractSerializer` 는 형식의 QName(정규화된 이름)에 의해서만 달라지는 효율적인 속성 컬렉션인 `ISerializable` 구현 스키마 형식을 매핑합니다. 예를 들어, 합니다 `DataContractSerializer` 매핑합니다 <xref:System.Exception> 된 다음 XSD 형식에 `http://schemas.datacontract.org/2004/07/System` 네임 스페이스입니다.  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 은 <xref:System.Runtime.Serialization.ISerializable> 버전 1.0에서 지속성이나 데이터 전송을 위해 개체를 serialize하는 일반 메커니즘으로 새로 추가되었습니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 을 구현하고 애플리케이션 간에 전달할 수 있는 다양한 `ISerializable` 형식이 있습니다. <xref:System.Runtime.Serialization.DataContractSerializer> 기본적으로 지 `ISerializable` 클래스입니다. `DataContractSerializer` 는 형식의 QName(정규화된 이름)에 의해서만 달라지는 효율적인 속성 컬렉션인 `ISerializable` 구현 스키마 형식을 매핑합니다. 예를 들어, 합니다 `DataContractSerializer` 매핑합니다 <xref:System.Exception> 된 다음 XSD 형식에 `http://schemas.datacontract.org/2004/07/System` 네임 스페이스입니다.  
   
 ```xml  
 <xs:complexType name="Exception">  
@@ -609,14 +609,14 @@ public class Employee : Person
   
  다음 항목에 주의해야 합니다.  
   
--   `ser:char` 은 <xref:System.Char>형식의 유니코드 문자를 표시하기 위해 도입됩니다.  
+-   `ser:char` 형식의 유니코드 문자를 표현 하기 위해 도입 되었습니다 <xref:System.Char>합니다.  
   
 -   `valuespace` 의 `xs:duration` 는 <xref:System.TimeSpan>에 매핑될 수 있도록 정렬된 집합으로 축소됩니다.  
   
--   `FactoryType` 은 <xref:System.Runtime.Serialization.ISerializable>에서 파생된 형식에서 내보낸 스키마에서 사용됩니다.  
+-   `FactoryType` 파생 된 형식에서 내보낸 스키마는 <xref:System.Runtime.Serialization.ISerializable>합니다.  
   
 ## <a name="importing-non-datacontract-schemas"></a>DataContract가 아닌 스키마 가져오기  
- `DataContractSerializer` 에는 `ImportXmlTypes` XSD 프로필을 준수하지 않는 스키마를 가져올 수 있는 `DataContractSerializer` 옵션이 포함되어 있습니다. <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> 속성을 참조하십시오. 이 옵션을 `true` 로 설정하면 맞지 않는 스키마 형식을 허용하고, 이러한 형식을 다음 구현에 매핑하고, <xref:System.Xml.Serialization.IXmlSerializable> 이 <xref:System.Xml.XmlNode> 의 배열을 래핑할 수 있습니다(클래스 이름만 다름).  
+ `DataContractSerializer` 에 `ImportXmlTypes` 옵션을 준수 하지 않는 스키마를 가져올 수 있도록 합니다 `DataContractSerializer` XSD 프로필 (참조를 <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> 속성). 이 옵션을 `true` 로 설정하면 맞지 않는 스키마 형식을 허용하고, 이러한 형식을 다음 구현에 매핑하고, <xref:System.Xml.Serialization.IXmlSerializable> 이 <xref:System.Xml.XmlNode> 의 배열을 래핑할 수 있습니다(클래스 이름만 다름).  
   
 ```csharp  
 [GeneratedCodeAttribute("System.Runtime.Serialization", "3.0.0.0")]  
@@ -682,6 +682,7 @@ new XmlQualifiedName("Person","http://Microsoft.ServiceModel.Samples");
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>

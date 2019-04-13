@@ -2,12 +2,12 @@
 title: LINQ to SQL 사용을 위한 일반 단계
 ms.date: 03/30/2017
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
-ms.openlocfilehash: 32e81d08010f67b8eac19777a40826b18c440f83
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7c6257bc27728d101d64d07ffedb1e38bc994eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548013"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132849"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>LINQ to SQL 사용을 위한 일반 단계
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 응용 프로그램을 구현하려면 이 항목에 설명된 단계를 따릅니다. 대부분의 단계는 선택 사항이며 고유한 개체 모델을 기본 상태에서 사용할 수 있습니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "54548013"
 ### <a name="1-select-a-tool-to-create-the-model"></a>1. 모델을 만들기 위한 도구를 선택합니다.  
  모델을 만들기 위한 세 가지 도구를 사용할 수 있습니다.  
   
--   [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
+-   Component [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
   
      이 디자이너는 기존 데이터베이스에서 개체 모델을 만들기 위한 풍부한 사용자 인터페이스를 제공합니다. 이 도구는 Visual Studio IDE의 일부 이며 소형 또는 중형 데이터베이스에 가장 적합 합니다.  
   
@@ -82,6 +82,7 @@ ms.locfileid: "54548013"
  자세한 내용은 [디버깅 지원](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [시작](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
 - [개체 모델 만들기](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
 - [저장 프로시저](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

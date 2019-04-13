@@ -1,5 +1,5 @@
 ---
-title: '방법: ColorDialog 구성 요소를 사용 하 여 색상표 표시'
+title: '방법: ColorDialog 구성 요소를 사용하여 색상표 표시'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,23 +14,23 @@ helpviewer_keywords:
 - color palettes [Windows Forms], showing in ColorDialog component
 - colors [Windows Forms], showing palettes
 ms.assetid: ee050f61-dbc8-4436-ba22-51360981ab48
-ms.openlocfilehash: 35f6f81c2b13234b23b3b2295e45caf5f16abd9e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 587b2c3a502ec8a1cb2f4f7c0d981baa0f18ead6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708329"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298021"
 ---
-# <a name="how-to-show-a-color-palette-with-the-colordialog-component"></a>방법: ColorDialog 구성 요소를 사용 하 여 색상표 표시
+# <a name="how-to-show-a-color-palette-with-the-colordialog-component"></a>방법: ColorDialog 구성 요소를 사용하여 색상표 표시
 합니다 [ColorDialog](colordialog-component-windows-forms.md) 색상표를 표시 하 고 사용자가 선택한 색을 포함 하는 속성을 반환 하는 구성 요소입니다.  
   
 ### <a name="to-choose-a-color-using-the-colordialog-component"></a>ColorDialog 구성 요소를 사용 하 여 색을 선택 하려면  
   
-1.  사용 하 여 대화 상자를 표시 합니다 <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 메서드.  
+1. 사용 하 여 대화 상자를 표시 합니다 <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 메서드.  
   
-2.  사용 된 <xref:System.Windows.Forms.DialogResult> 속성 대화 상자를 닫은 방법을 확인 하려면.  
+2. 사용 된 <xref:System.Windows.Forms.DialogResult> 속성 대화 상자를 닫은 방법을 확인 하려면.  
   
-3.  사용 하 여 합니다 <xref:System.Windows.Forms.ColorDialog.Color%2A> 의 속성을 <xref:System.Windows.Forms.ColorDialog> 선택한 색을 설정 하려면 구성 요소입니다.  
+3. 사용 하 여 합니다 <xref:System.Windows.Forms.ColorDialog.Color%2A> 의 속성을 <xref:System.Windows.Forms.ColorDialog> 선택한 색을 설정 하려면 구성 요소입니다.  
   
      아래 예제에서는 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기가 열립니다는 <xref:System.Windows.Forms.ColorDialog> 구성 요소입니다. 색을 선택 하 고 사용자가 클릭할 **확인**, <xref:System.Windows.Forms.Button> 컨트롤의 배경 색 선택한 색으로 설정 됩니다. 이 예제에서는 폼에 가정를 <xref:System.Windows.Forms.Button> 컨트롤 및 <xref:System.Windows.Forms.ColorDialog> 구성 요소입니다.  
   
@@ -77,5 +77,6 @@ ms.locfileid: "57708329"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ColorDialog>
 - [ColorDialog 구성 요소](colordialog-component-windows-forms.md)

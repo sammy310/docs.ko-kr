@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31393
 ms.assetid: 2963cf3f-c527-4aa7-b67c-ee80b6d23186
-ms.openlocfilehash: 6d2edadc323994f7f25394321fb1aff18f7154c5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 017a2458562068727674bd3fd9cda8c33d989e8b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824275"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314622"
 ---
 # <a name="expression-has-the-type-typename-which-is-a-restricted-type-and-cannot-be-used-to-access-members-inherited-from-object-or-valuetype"></a>식의 형식은 '\<typename >'는 제한 된 형식 및 'Object' 또는 'ValueType'에서 상속 된 멤버 액세스에 사용할 수 없습니다.
 식 형식에 CLR (공용 언어 런타임)에서 넣을 수 없습니다. 계산 하지만 boxing 해야 하는 멤버에 액세스 합니다.  
@@ -25,11 +25,11 @@ ms.locfileid: "58824275"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-1.  제시된 형식으로 계산되는 식을 찾습니다.  
+1. 제시된 형식으로 계산되는 식을 찾습니다.  
   
-2.  상속 된 메서드를 호출 하려는 문의 일부를 찾습니다 <xref:System.Object> 또는 <xref:System.ValueType>합니다.  
+2. 상속 된 메서드를 호출 하려는 문의 일부를 찾습니다 <xref:System.Object> 또는 <xref:System.ValueType>합니다.  
   
-3.  메서드 호출을 방지 하려면 문을 다시 작성 합니다.  
+3. 메서드 호출을 방지 하려면 문을 다시 작성 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

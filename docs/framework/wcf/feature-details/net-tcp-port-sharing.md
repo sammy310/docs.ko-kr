@@ -5,12 +5,12 @@ helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-ms.openlocfilehash: e191dc62368fc9c16bd58efd30dd1a3769d2bb88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b04266b15f786e3a5a93ac1e9fff1754c397ccd4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540314"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073694"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP 포트 공유
 Windows Communication Foundation (WCF) 고성능 통신을 위한 새로운 TCP 기반 네트워크 프로토콜 (net.tcp://)를 제공합니다. WCF에는 또한 새 시스템 구성 요소인 net.tcp 포트를 여러 사용자 프로세스 간에 공유할 수 있도록는 Net.TCP Port Sharing Service를 소개 합니다.  
@@ -49,7 +49,8 @@ Windows Communication Foundation (WCF) 고성능 통신을 위한 새로운 TCP 
  Net.TCP Port Sharing Service에서는 응용 프로그램과 네트워크 간의 처리 계층을 제공하지만 포트 공유를 사용하는 응용 프로그램의 경우 네트워크에서 직접 수신 대기하고 있는 것처럼 보안이 설정되어 있어야 합니다. 특히 포트 공유를 사용하는 응용 프로그램은 응용 프로그램이 실행되는 프로세스 권한을 평가해야 합니다. 네트워크 통신에 필요한 프로세스 권한의 최소 집합으로 실행되는 기본 제공 Network Service 계정을 사용하여 응용 프로그램을 실행해 보세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Net.TCP Port Sharing Service 구성](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)
 - [호스팅](../../../../docs/framework/wcf/feature-details/hosting.md)
-- [방법: 포트 공유를 사용 하는 WCF 서비스를 구성 합니다.](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)
-- [방법: Net.TCP Port Sharing Service를 사용 하도록 설정](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)
+- [방법: 포트 공유를 사용하도록 WCF 서비스 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)
+- [방법: Net.TCP Port Sharing Service 사용](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: d03a9b79dc2c0ec61bbafe2ff09b5aba7fffc57b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e3d1c2b681e98dc7c45467683924dd4022eb377e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719249"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094036"
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>방법: Windows Forms에서 깜빡임을 줄이기 위한 픽셀 복사
 간단한 그래픽에 애니메이션을 적용 하면 깜박임을 또는 원치 않는 다른 시각 효과 사용자 경우가 발생할 수 있습니다. 이 문제를 제한 하는 한 가지 방법은 그림에서 "bitblt" 프로세스를 사용 하는 것입니다. Bitblt "비트 블록 전송" 색 데이터의 원본 영역을 픽셀에서 픽셀의 대상 사각형에입니다.  
@@ -63,6 +63,7 @@ private void Form1_Paint(System.Object sender,
  위의 코드는 폼의 실행은 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기 그래픽 양식을 다시 그려질 때 유지 되도록 합니다. 이와 같이 그래픽 관련 메서드를 호출 하지 마십시오는 <xref:System.Windows.Forms.Form.Load> 이벤트 처리기를 그린된 콘텐츠 비활성 폼 크기를 조정 하거나 다른 폼에 의해 가려지지 경우 때문에 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Drawing.CopyPixelOperation>
 - <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.OnPaint%2A?displayProperty=nameWithType>

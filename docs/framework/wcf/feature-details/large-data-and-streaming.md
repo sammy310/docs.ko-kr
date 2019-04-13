@@ -2,12 +2,12 @@
 title: 큰 데이터 및 스트리밍
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 8fa49f9da7caf9146f73017ec051381a8e9ef9e2
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 25ecc1db8218dfb49f591998140d86f551c5a0d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411059"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176334"
 ---
 # <a name="large-data-and-streaming"></a>큰 데이터 및 스트리밍
 Windows Communication Foundation (WCF)는 XML 기반 통신 인프라. 일반적으로 XML 데이터에 정의 된 표준 텍스트 형식으로 인코딩된 때문에 합니다 [XML 1.0 사양](https://go.microsoft.com/fwlink/?LinkId=94838)연결, 시스템 개발자와 설계자가 일반적으로 염려 하는 전송 된 메시지의 통신 사용량 (또는 크기)에서 네트워크 및 XML의 텍스트 기반 인코딩은 이진 데이터의 효율적인 전송에 대 한 특수 한 문제를 제기 합니다.  
@@ -112,8 +112,7 @@ class MyData
   
  MTOM의 경우 앞의 데이터 계약이 다음 규칙에 따라 serialize됩니다.  
   
--   
-  `binaryBuffer`가 `null`이 아니며 각각 Base64 인코딩에 비해 MTOM 구체화 오버헤드를 정당화하기에 충분한 데이터를 포함한 경우(MIME 헤더 등) 데이터는 구체화되어 메시지와 함께 이진 MIME 부분으로 전송됩니다. 임계값을 초과하지 않은 경우 데이터는 Base64로 인코딩됩니다.  
+-   `binaryBuffer`가 `null`이 아니며 각각 Base64 인코딩에 비해 MTOM 구체화 오버헤드를 정당화하기에 충분한 데이터를 포함한 경우(MIME 헤더 등) 데이터는 구체화되어 메시지와 함께 이진 MIME 부분으로 전송됩니다. 임계값을 초과하지 않은 경우 데이터는 Base64로 인코딩됩니다.  
   
 -   문자열과 이진이 아닌 다른 모든 형식은 크기에 관계없이 항상 메시지 본문 내의 문자열로 표현됩니다.  
   
@@ -146,8 +145,7 @@ class MyData
   
 -   <xref:System.ServiceModel.WebHttpBinding>  
   
- 
-  <xref:System.ServiceModel.NetTcpBinding> 및 <xref:System.ServiceModel.NetNamedPipeBinding>의 기본 전송에는 신뢰할 수 있는 고유한 배달 및 연결 기반 세션 지원이 있기 때문에 HTTP와 달리 이 두 바인딩은 실제로 이러한 제약 조건에 의해 최소한의 영향만 받습니다.  
+ <xref:System.ServiceModel.NetTcpBinding> 및 <xref:System.ServiceModel.NetNamedPipeBinding>의 기본 전송에는 신뢰할 수 있는 고유한 배달 및 연결 기반 세션 지원이 있기 때문에 HTTP와 달리 이 두 바인딩은 실제로 이러한 제약 조건에 의해 최소한의 영향만 받습니다.  
   
  스트리밍은 MSMQ(메시지 큐) 전송에서 사용할 수 없기 때문에 <xref:System.ServiceModel.NetMsmqBinding> 또는 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 클래스에서 사용할 수 없습니다. 다른 모든 전송에서는 대부분의 시나리오에 대해 실제 메시지 크기 제한이 없는 반면, 메시지 큐 전송에서는 메시지 크기가 제한된 버퍼링 데이터 전송만 지원합니다.  
   
@@ -175,7 +173,7 @@ class MyData
      …  
     <bindings>  
       <basicHttpBinding>  
-        <binding name="ExampleBinding" transferMode="Streaming"/>  
+        <binding name="ExampleBinding" transferMode="Streamed"/>  
       </basicHttpBinding>  
     </bindings>  
      …  
@@ -205,8 +203,7 @@ public interface IStreamedService
 }  
 ```  
   
- 위 예의 `Echo` 작업에서는 스트림을 받아서 반환하기 때문에 <xref:System.ServiceModel.TransferMode.Streamed>의 바인딩에서 사용해야 합니다. 
-  `RequestInfo` 작업의 경우 <xref:System.ServiceModel.TransferMode.StreamedResponse>가 <xref:System.IO.Stream>만 반환하기 때문에 가장 적절합니다. 단방향 작업은 <xref:System.ServiceModel.TransferMode.StreamedRequest>에 가장 적절합니다.  
+ 위 예의 `Echo` 작업에서는 스트림을 받아서 반환하기 때문에 <xref:System.ServiceModel.TransferMode.Streamed>의 바인딩에서 사용해야 합니다. `RequestInfo` 작업의 경우 <xref:System.ServiceModel.TransferMode.StreamedResponse>가 <xref:System.IO.Stream>만 반환하기 때문에 가장 적절합니다. 단방향 작업은 <xref:System.ServiceModel.TransferMode.StreamedRequest>에 가장 적절합니다.  
   
  다음 `Echo` 또는 `ProvideInfo` 작업에 두 번째 매개 변수를 추가하면 서비스 모델이 버퍼링 전략으로 돌아가며 스트림의 런타임 serialization 표현을 사용합니다. 입력 스트림 매개 변수가 하나인 작업만을 종단 간 요청 스트리밍에 사용할 수 있습니다.  
   
@@ -242,4 +239,5 @@ public class UploadStreamMessage
 >  버퍼링 또는 스트리밍 전송 중 어느 것을 사용할 것인지를 결정하는 것은 엔드포인트의 로컬 결정입니다. HTTP 전송의 경우 전송 모드는 연결 전체 또는 프록시 서버 및 다른 매개로 전파되지 않습니다. 서비스 인터페이스의 설명에 전송 모드 설정이 반영되지 않았습니다. 서비스에 WCF 클라이언트를 생성 한 후 스트리밍 전송 모드를 설정 하는 데 사용할 서비스 구성 파일을 편집 해야 합니다. TCP 및 명명된 파이프 전송의 경우에는 전송 모드가 정책 어설션으로 전파됩니다.  
   
 ## <a name="see-also"></a>참고자료
-- [방법: 스트리밍을 사용 하도록 설정](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+
+- [방법: 스트리밍 사용](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

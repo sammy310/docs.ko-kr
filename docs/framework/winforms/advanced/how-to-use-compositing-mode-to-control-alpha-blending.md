@@ -1,5 +1,5 @@
 ---
-title: '방법: 알파 혼합 조절 하려면 혼합 모드를 사용 합니다.'
+title: '방법: 혼합 모드를 사용하여 알파 혼합 조절'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - colors [Windows Forms], blending
 - colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
-ms.openlocfilehash: 1a5cf23890cd6183d92e33ec4e24f87c226e8ec3
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 15cb111a68cedaec011e88fa4916c292786d16b4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462866"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210700"
 ---
-# <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>방법: 알파 혼합 조절 하려면 혼합 모드를 사용 합니다.
+# <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>방법: 혼합 모드를 사용하여 알파 혼합 조절
 다음 특성을 가진 오프 스크린 비트맵을 만들려고 하는 상황이 있을 수 있습니다.  
   
 -   색의 알파 값을 255 보다 작은 경우  
@@ -54,8 +54,9 @@ ms.locfileid: "58462866"
  [!code-vb[System.Drawing.AlphaBlending#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#43)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- 앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.PaintEventArgs>의 매개 변수인 `e`<xref:System.Windows.Forms.PaintEventHandler>가 필요합니다.  
+ 앞의 예제는 Windows Forms에서 사용 하도록 설계 되었으며 필요 <xref:System.Windows.Forms.PaintEventArgs>`e`에서의 매개 변수인 <xref:System.Windows.Forms.PaintEventHandler>합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Drawing.Color.FromArgb%2A>
 - [선 및 채우기 알파 혼합](alpha-blending-lines-and-fills.md)

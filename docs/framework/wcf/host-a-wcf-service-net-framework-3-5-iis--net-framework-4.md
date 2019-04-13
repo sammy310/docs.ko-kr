@@ -1,16 +1,16 @@
 ---
-title: '방법: .NET Framework 4에서 실행되는 IIS에서 .NET Framework 3.5를 사용하여 작성한 WCF 서비스 호스팅'
+title: '방법: .NET Framework 4에서 실행되는 IIS에서 .NET Framework 3.5를 사용하여 작성된 WCF 서비스 호스트'
 ms.date: 03/30/2017
 ms.assetid: 9aabc785-068d-4d32-8841-3ef39308d8d6
-ms.openlocfilehash: 83343cef119f6c8b97fd8f1be50c229c64b10227
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d4f0cb584f7759a6fe52a4bec4306a7d714d3906
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499130"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331535"
 ---
-# <a name="how-to-host-a-wcf-service-written-with-net-framework-35-in-iis-running-under-net-framework-4"></a>방법: .NET Framework 4에서 실행되는 IIS에서 .NET Framework 3.5를 사용하여 작성한 WCF 서비스 호스팅
-로 작성 된 Windows Communication Foundation (WCF) 서비스를 호스트 하는 경우 [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] 실행 컴퓨터에서 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], 발생할 수 있습니다는 <xref:System.ServiceModel.ProtocolException> 다음 텍스트를 포함 합니다.  
+# <a name="how-to-host-a-wcf-service-written-with-net-framework-35-in-iis-running-under-net-framework-4"></a>방법: .NET Framework 4에서 실행되는 IIS에서 .NET Framework 3.5를 사용하여 작성된 WCF 서비스 호스트
+로 작성 된 Windows Communication Foundation (WCF) 서비스를 호스트할 때 [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] 실행 하는 컴퓨터에 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], 표시 될 수 있습니다는 <xref:System.ServiceModel.ProtocolException> 다음 텍스트를 포함 합니다.  
   
 ```Output  
 Unhandled Exception: System.ServiceModel.ProtocolException: The content type text/html; charset=utf-8 of the response message does not match the content type of the binding (application/soap+xml; charset=utf-8). If using a custom encoder, be sure that the IsContentTypeSupported method is implemented properly. The first 1024 bytes of the response were: '<html>    <head>        <title>The application domain or application pool is currently running version 4.0 or later of the .NET Framework. This can occur if IIS settings have been set to 4.0 or later for this Web application, or if you are using version 4.0 or later of the ASP.NET Web Development Server. The <compilation> element in the Web.config file for this Web application does not contain the required'targetFrameworkMoniker' attribute for this version of the .NET Framework (for example, '<compilation targetFrameworkMoniker=".NETFramework,Version=v4.0">'). Update the Web.config file with this attribute, or configure the Web application to use a different version of the .NET Framework.</title>...  
@@ -24,7 +24,7 @@ The application domain or application pool is currently running version 4.0 or l
   
  이러한 오류는 IIS가 실행되는 응용 프로그램 도메인에서 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]를 실행하고 있지만 WCF 서비스를 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]에서 실행해야 하는 경우 발생합니다. 이 항목에서는 서비스가 실행되도록 하는 데 필요한 수정 작업에 대해 설명합니다.  
   
- 다음 찾기는 <`compilers`> 요소와 값이 4.0 CompilerVersion 공급자 옵션을 변경 합니다. 기본적으로는 두 개의 <`compiler`> 아래의 요소는 <`compilers`> 요소입니다. 다음 예제와 같이 이 두 요소 모두에 대해 CompilerVersion 공급자 옵션을 업데이트해야 합니다.  
+ 다음 찾기는 <`compilers`> 요소 및 4.0 값 CompilerVersion 공급자 옵션 변경 합니다. 기본적으로 두 개의 <`compiler`> 요소는 <`compilers`> 요소입니다. 다음 예제와 같이 이 두 요소 모두에 대해 CompilerVersion 공급자 옵션을 업데이트해야 합니다.  
   
 ```xml  
 <system.codedom>  
@@ -46,9 +46,9 @@ The application domain or application pool is currently running version 4.0 or l
   
 ### <a name="add-the-required-targetframework-attribute"></a>필수 targetFramework 특성 추가  
   
-1.  서비스의 Web.config 파일을 열고를 찾습니다는 <`compilation`> 요소입니다.  
+1. 서비스의 Web.config 파일을 열고 검색할 합니다 <`compilation`> 요소입니다.  
   
-2.  추가 `targetFramework` 특성을 <`compilation`> 요소는 다음 예제와 같이 합니다.  
+2. 추가 된 `targetFramework` 특성을 <`compilation`> 다음 예제에서와 같이 요소입니다.  
   
     ```xml  
     <compilation debug="false"  
@@ -64,7 +64,7 @@ The application domain or application pool is currently running version 4.0 or l
           </compilation>  
     ```  
   
-3.  찾을 <`compilers`> 요소와 값이 4.0 CompilerVersion 공급자 옵션을 변경 합니다. 기본적으로는 두 개의 <`compiler`> 아래의 요소는 <`compilers`> 요소입니다. 다음 예제와 같이 이 두 요소 모두에 대해 CompilerVersion 공급자 옵션을 업데이트해야 합니다.  
+3. 찾을 합니다 <`compilers`> 요소 및 4.0 값 CompilerVersion 공급자 옵션 변경 합니다. 기본적으로 두 개의 <`compiler`> 요소는 <`compilers`> 요소입니다. 다음 예제와 같이 이 두 요소 모두에 대해 CompilerVersion 공급자 옵션을 업데이트해야 합니다.  
   
     ```xml  
     <system.codedom>  

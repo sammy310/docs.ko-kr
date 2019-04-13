@@ -2,12 +2,12 @@
 title: <serviceAuthorization> 요소
 ms.date: 03/30/2017
 ms.assetid: 18cddad5-ddcb-4839-a0ac-1d6f6ab783ca
-ms.openlocfilehash: c967993c3a3f7276cd3a9076741de202e1f4c343
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7099c5eca9cf28624153a705e4e16136628214a2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257852"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157347"
 ---
 # <a name="serviceauthorization-element"></a>\<serviceAuthorization > 요소
 서비스 작업에 대한 액세스 권한을 부여하는 설정을 지정합니다.  
@@ -96,10 +96,11 @@ ms.locfileid: "55257852"
  이 구성 요소를 사용 하 여 자세한 예제를 참조 하세요 [서비스 작업에 대 한 액세스 권한 부여](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md) 하 고 [권한 부여 정책](../../../../../docs/framework/wcf/samples/authorization-policy.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement>
 - <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>
 - [보안 동작](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [서비스 작업에 대한 액세스 승인](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)
-- [방법: 서비스에 대 한 사용자 지정 권한 부여 관리자 만들기](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
-- [방법: PrincipalPermissionAttribute 클래스를 사용 하 여 액세스 제한](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [Authorizing Access to Service Operations](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)
+- [방법: 서비스에 대한 사용자 지정 권한 부여 관리자 만들기](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [방법: PrincipalPermissionAttribute 클래스를 사용하여 액세스 제한](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
 - [권한 부여 정책](../../../../../docs/framework/wcf/samples/authorization-policy.md)

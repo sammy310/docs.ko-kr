@@ -1,17 +1,17 @@
 ---
-title: '방법: 끌어 온 GridView 열 머리글의 스타일 만들기'
+title: '방법: 끌어온 GridView 열 머리글에 대한 스타일 만들기'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListView controls [WPF], styling
 ms.assetid: 0b999645-0313-4b33-80b9-19ece08b5459
-ms.openlocfilehash: 442fff7a36a48d5df7ba9e07426e50f602cb93e8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: dbcdd38e0397b8e637aff962420a2959f33203df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357497"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090097"
 ---
-# <a name="how-to-create-a-style-for-a-dragged-gridview-column-header"></a>방법: 끌어 온 GridView 열 머리글의 스타일 만들기
+# <a name="how-to-create-a-style-for-a-dragged-gridview-column-header"></a>방법: 끌어온 GridView 열 머리글에 대한 스타일 만들기
 이 예제는 끌어 온된 모양의 변경 하는 방법을 보여 줍니다 <xref:System.Windows.Controls.GridViewColumnHeader> 사용자가 열의 위치를 변경 하는 경우.  
   
 ## <a name="example"></a>예제  
@@ -31,6 +31,7 @@ ms.locfileid: "57357497"
 [!code-xaml[ListViewHeaderRoleStyle#GVCHControlTemplateEnd](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHeaderRoleStyle/CS/Window1.xaml#gvchcontroltemplateend)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.GridViewColumnHeader>
 - <xref:System.Windows.Controls.GridViewColumnHeaderRole>
 - <xref:System.Windows.Controls.ListView>

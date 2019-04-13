@@ -2,12 +2,12 @@
 title: 전송 보안을 통해 가장 사용
 ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-ms.openlocfilehash: 803edee3e051c40a65ad63db620c65bcdbdcae50
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6209007b60effe5403caf3db8855f029d0c47a0e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532710"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151439"
 ---
 # <a name="using-impersonation-with-transport-security"></a>전송 보안을 통해 가장 사용
 *가장* 은 클라이언트의 id를 사용 하는 서버 응용 프로그램의 기능입니다. 리소스에 대한 액세스 확인 시 일반적으로 서비스는 가장을 사용합니다. 서버 응용 프로그램은 서비스 계정을 사용하여 실행하지만 서버가 클라이언트 연결을 수락할 경우, 클라이언트의 자격 증명을 사용하여 액세스 검사를 수행하도록 클라이언트를 가장합니다. 전송 보안은 자격 증명을 전달하고 이러한 자격 증명을 사용하여 통신에 보안을 설정하기 위한 메커니즘입니다. 이 항목에서는 가장 기능을 사용 하 여 Windows Communication Foundation (WCF)에서 전송 보안을 사용 하 여 설명 합니다. 메시지 보안을 사용 하는 가장에 대 한 자세한 내용은 참조 하세요. [위임 및 가장](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)합니다.  
@@ -55,6 +55,7 @@ ms.locfileid: "54532710"
  HTTP 전송에 대 한 자세한 내용은 참조 하세요. [전송 선택](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [위임 및 가장](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
 - [권한 부여](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
 - [방법: 서비스에서 클라이언트 가장](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)

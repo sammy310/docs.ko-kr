@@ -1,18 +1,18 @@
 ---
-title: '방법: 생성 된 SQL 표시'
+title: '방법: 생성된 SQL 표시'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
-ms.openlocfilehash: 9c293757b642f0a945097c4ea4299d97cadddbcc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8a69b3ae83d7f701428b3183f2b80e0d44a06537
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725690"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103625"
 ---
-# <a name="how-to-display-generated-sql"></a>방법: 생성 된 SQL 표시
+# <a name="how-to-display-generated-sql"></a>방법: 생성된 SQL 표시
 <xref:System.Data.Linq.DataContext.Log%2A> 속성을 사용하여 쿼리에 대해 생성된 SQL 코드를 보고 프로세스를 변경할 수 있습니다. 이러한 접근 방식은 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 기능을 이해하고 특정 문제를 디버깅하는 데 유용합니다.  
   
 ## <a name="example"></a>예제  
@@ -43,4 +43,5 @@ SEVES
  [!code-vb[DLinqDebuggingSupport#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#1)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [디버깅 지원](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)

@@ -3,12 +3,12 @@ title: <behaviors> 워크플로
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 3c6017b6-0c4f-4192-bd67-9515f5d1ec82
-ms.openlocfilehash: e61a2078c5989a3b100e77e6b2f753b0ee5dd934
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b7c5cf93a82ac88c25f9c478ad52cf41eb6f6d65
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271789"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129209"
 ---
 # <a name="behaviors-of-workflow"></a>\<동작 > 워크플로
 이 요소에 포함 된 **serviceBehaviors** 컬렉션입니다.  컬렉션의 각 요소는 워크플로 서비스에서 사용하는 동작 요소를 정의합니다. 각 동작 요소는 고유한으로 식별 되 **이름을** 특성입니다.  
@@ -43,6 +43,7 @@ ms.locfileid: "55271789"
 |[\<system.serviceModel>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)|모든 워크플로 구성 요소의 루트 요소입니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.BehaviorsSection>
 - <xref:System.ServiceModel.Configuration.ServiceBehaviorElementCollection>
 - <xref:System.ServiceModel.Configuration.ServiceBehaviorElement>

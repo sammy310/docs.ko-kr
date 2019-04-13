@@ -1,15 +1,15 @@
 ---
-title: '연습: 관계 간 쿼리 (C#)'
+title: '연습: 관계 간 쿼리(C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: a24d96c9d138f0dcd2f162dad474da01f49e45d2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bd3255b49676b61a99f8416ab71c217d342e799
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563667"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325373"
 ---
-# <a name="walkthrough-querying-across-relationships-c"></a>연습: 관계 간 쿼리 (C#)
+# <a name="walkthrough-querying-across-relationships-c"></a>연습: 관계 간 쿼리(C#)
 이 연습에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *연결* 데이터베이스에서 외래 키 관계를 나타내는입니다.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
@@ -40,7 +40,7 @@ ms.locfileid: "54563667"
 ## <a name="annotating-the-customer-class"></a>Customer 클래스에 주석 지정  
  이 단계에서는 `Customer` 클래스에 대한 관계를 나타내기 위해 `Order` 클래스에 주석을 지정합니다. 어느 방향으로든 관계를 정의하여 링크를 충분히 만들 수 있으므로 이 추가 작업이 반드시 필요한 것은 아닙니다. 그러나 이 주석을 추가하면 어느 방향으로나 개체를 쉽게 탐색할 수 있습니다.  
   
-#### <a name="to-annotate-the-customer-class"></a>Customer 클래스에 주석을 지정하려면  
+#### <a name="to-annotate-the-customer-class"></a>Customer 클래스에 주석을 달려면  
   
 -   `Customer` 클래스에 다음 코드를 입력하거나 붙여넣습니다.  
   
@@ -51,16 +51,16 @@ ms.locfileid: "54563667"
   
 #### <a name="to-access-order-objects-by-using-customer-objects"></a>Customer 개체를 사용하여 Order 개체에 액세스하려면  
   
-1.  다음 코드를 `Main` 메서드에 입력하거나 붙여넣어 이 메서드를 수정합니다.  
+1. 다음 코드를 `Main` 메서드에 입력하거나 붙여넣어 이 메서드를 수정합니다.  
   
      [!code-csharp[DLinqWalk2CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#3)]  
   
-2.  F5 키를 눌러 응용 프로그램을 디버깅합니다.  
+2. F5 키를 눌러 응용 프로그램을 디버깅합니다.  
   
     > [!NOTE]
     >  `db.Log = Console.Out;`을 주석으로 처리하여 콘솔 창에서 SQL 코드를 제거할 수 있습니다.  
   
-3.  콘솔 창에서 Enter 키를 눌러 디버깅을 중지합니다.  
+3. 콘솔 창에서 Enter 키를 눌러 디버깅을 중지합니다.  
   
 ## <a name="creating-a-strongly-typed-view-of-your-database"></a>강력한 형식의 데이터베이스 뷰 만들기  
  강력한 형식의 데이터베이스 뷰로 작업을 시작하는 것이 훨씬 더 쉽습니다. <xref:System.Data.Linq.DataContext> 개체를 강력한 형식으로 설정하면 <xref:System.Data.Linq.DataContext.GetTable%2A> 호출이 필요하지 않습니다. 강력한 형식의 <xref:System.Data.Linq.DataContext> 개체를 사용할 경우 모든 쿼리에서 강력한 형식의 테이블을 사용할 수 있습니다.  
@@ -69,24 +69,25 @@ ms.locfileid: "54563667"
   
 #### <a name="to-strongly-type-the-datacontext-object"></a>DataContext 개체를 강력한 형식으로 설정하려면  
   
-1.  `Customer` 클래스 선언 위에 다음 코드를 추가합니다.  
+1. `Customer` 클래스 선언 위에 다음 코드를 추가합니다.  
   
      [!code-csharp[DLinqWalk2CS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#4)]  
   
-2.  다음과 같이 강력한 형식의 `Main`를 사용하도록 <xref:System.Data.Linq.DataContext> 메서드를 수정합니다.  
+2. 다음과 같이 강력한 형식의 `Main`를 사용하도록 <xref:System.Data.Linq.DataContext> 메서드를 수정합니다.  
   
      [!code-csharp[DLinqWalk2CS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#5)]  
   
-3.  F5 키를 눌러 응용 프로그램을 디버깅합니다.  
+3. F5 키를 눌러 응용 프로그램을 디버깅합니다.  
   
      콘솔 창 출력은 다음과 같습니다.  
   
      `ID=WHITC`  
   
-4.  콘솔 창에서 Enter 키를 눌러 디버깅을 중지합니다.  
+4. 콘솔 창에서 Enter 키를 눌러 디버깅을 중지합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
  다음 연습 ([연습: 데이터 조작 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) 데이터를 조작 하는 방법을 보여 줍니다. 다음 연습에서는 이미 완료한 이 시리즈의 연습 두 개를 저장할 필요가 없습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [연습으로 학습](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

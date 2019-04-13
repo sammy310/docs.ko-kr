@@ -3,12 +3,12 @@ title: <customCookieHandler>
 ms.date: 03/30/2017
 ms.assetid: a03b153d-5ec6-4915-9031-6f0c3fd348be
 author: BrucePerlerMS
-ms.openlocfilehash: 752b1188fccb6f09cdcab6a50653abf26e8e2a53
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0129c63fe17b63889a77ea1a56c0d7e657def859
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288186"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224052"
 ---
 # <a name="customcookiehandler"></a>\<customCookieHandler>
 사용자 지정 쿠키 처리기 형식을 설정합니다. 이 요소를 사용할 수만 있습니다 경우 합니다 `mode` 특성을 `<cookieHandler>` 요소는 "Custom" 합니다. 사용자 지정 형식에서 파생 되어야 합니다는 <xref:System.IdentityModel.Services.CookieHandler> 클래스입니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "55288186"
   
 |특성|설명|  
 |---------------|-----------------|  
-|형식|파생 되는 사용자 지정 형식 지정을 <xref:System.IdentityModel.Services.CookieHandler> 클래스입니다. 지정 하는 방법에 대 한 자세한 내용은 합니다 `type` 특성을 참조 하십시오 [사용자 지정 형식 참조](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)합니다.|  
+|type|파생 되는 사용자 지정 형식 지정을 <xref:System.IdentityModel.Services.CookieHandler> 클래스입니다. 지정 하는 방법에 대 한 자세한 내용은 합니다 `type` 특성을 참조 하십시오 [사용자 지정 형식 참조](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -64,4 +64,5 @@ ms.locfileid: "55288186"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.IdentityModel.Services.CookieHandler>

@@ -8,17 +8,16 @@ helpviewer_keywords:
 - 3-D graphics [WPF]
 - graphics [WPF], 3-D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
-ms.openlocfilehash: 7f9f3d21d14a8eac862186a41bd8771cffb7375c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 79dc7a3578c395ae8cdf5933e1249441f97071a2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352869"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087991"
 ---
 # <a name="3-d-graphics-overview"></a>3차원 그래픽 개요
-<a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]의 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 기능을 사용하여 개발자는 태그 및 프로시저 코드로 3차원 그래픽을 그리고 변환하며 이러한 그래픽에 애니메이션 효과를 줄 수 있습니다. 개발자는 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] 및 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 그래픽을 결합하여 다양한 컨트롤을 만들거나, 복잡한 데이터 표시를 제공하거나, 애플리케이션 인터페이스의 사용자 환경을 개선할 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 지원은 모든 기능을 갖춘 게임 개발 플랫폼을 제공하기 위한 것은 아닙니다. 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 그래픽 시스템의 [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] 기능에 대해 간략하게 설명합니다.  
- 
-  
+<a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]의 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 기능을 사용하여 개발자는 태그 및 프로시저 코드로 3차원 그래픽을 그리고 변환하며 이러한 그래픽에 애니메이션 효과를 줄 수 있습니다. 개발자는 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] 및 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 그래픽을 결합하여 다양한 컨트롤을 만들거나, 복잡한 데이터 표시를 제공하거나, 애플리케이션 인터페이스의 사용자 환경을 개선할 수 있습니다. [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 지 원하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 갖춘 게임 개발 플랫폼을 제공 하도록 설계 되지 않았습니다. 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 그래픽 시스템의 [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] 기능에 대해 간략하게 설명합니다.  
+
 <a name="threed_in_2d"></a>   
 ## <a name="3-d-in-a-2-d-container"></a>2차원 컨테이너의 3차원  
  [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 그래픽 콘텐츠 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 요소에 캡슐화 되어 <xref:System.Windows.Controls.Viewport3D>, 2 차원 요소 구조에 참여할 수 있는 합니다. 그래픽 시스템 처리 <xref:System.Windows.Controls.Viewport3D> 의 다른 많은 요소 처럼 2 차원 시각적 요소로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]합니다. <xref:System.Windows.Controls.Viewport3D> 창으로 함수-뷰포트-3 차원 장면에 있습니다. 보다 정확히 말해 이는 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 장면이 프로젝션되는 표면입니다.  
@@ -170,6 +169,7 @@ ms.locfileid: "57352869"
  [!code-xaml[hostingwpfusercontrolinwf#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/HostingWpfUserControlInWf/ConeControl.xaml#1)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.Viewport3D>
 - <xref:System.Windows.Media.Media3D.PerspectiveCamera>
 - <xref:System.Windows.Media.Media3D.DirectionalLight>

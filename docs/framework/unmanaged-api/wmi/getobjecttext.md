@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3a7d606f64dfe1a1abfd3da930fd00957da90a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d34cb399ac0e8780c442eeb2e95cebfd0a22ca02
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583587"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208321"
 ---
 # <a name="getobjecttext-function"></a>GetObjectText 함수
 관리 되는 개체 형식 (MOF) 구문에서 개체의 텍스트 렌더링을 반환합니다.
@@ -60,8 +60,8 @@ HRESULT GetObjectText (
 |상수  |값  |설명  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 일반 오류가 발생이 했습니다. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 매개 변수가 잘못된 경우 |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 메모리가 부족하여 작업을 완료할 수 없는 경우 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 매개 변수가 잘못 되었습니다. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 메모리가 부족 하 여 작업을 완료할 수 없습니다. |
 |`WBEM_S_NO_ERROR` | 0 | 함수 호출이 성공 했습니다.  |
   
 ## <a name="remarks"></a>설명
@@ -85,4 +85,5 @@ HRESULT GetObjectText (
  **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>참고자료
-- [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)
+
+- [WMI 및 성능 카운터(관리되지 않는 API 참조)](index.md)

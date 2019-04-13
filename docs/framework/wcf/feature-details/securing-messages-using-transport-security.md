@@ -2,12 +2,12 @@
 title: 전송 보안을 사용하여 메시지에 보안 설정
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-ms.openlocfilehash: 354b014825b3282e494cf75637fb2434acdb2dbe
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: f32e932bb6616911baa8991cb46a5940c8d285ef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332349"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160890"
 ---
 # <a name="securing-messages-using-transport-security"></a>전송 보안을 사용하여 메시지에 보안 설정
 이 단원에서는 큐에 보내는 메시지를 보안 설정하는 데 사용할 수 있는 메시지 큐(MSMQ) 전송 보안에 대해 설명합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "56332349"
  전송 보안이 켜져 있는 경우 기본 설정은 <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>입니다.  
   
 #### <a name="windows-domain-authentication-mode"></a>Windows 도메인 인증 모드  
- Windows 보안을 사용하려면 Active Directory 통합이 필요합니다. <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>은 기본 전송 보안 모드입니다. 이 값으로 설정 하는 경우 WCF 채널 Windows SID를 MSMQ 메시지에 연결 하 고 Active Directory에서 가져온 내부 인증서를 사용 합니다. MSMQ에서는 메시지 보안을 위해 내부 인증서를 사용합니다. 수신 큐 관리자는 Active Directory를 사용하여 클라이언트를 인증하기 위해 일치하는 인증서를 검색하고, SID가 클라이언트의 인증서와 일치하는지도 확인합니다. `WindowsDomain` 인증 모드의 경우 내부에서 생성된 인증서, `Certificate` 인증 모드의 경우 외부에서 생성된 인증서가 메시지에 첨부되면 대상 큐가 필수 인증으로 표시되어 있지 않더라도 이 인증 단계가 실행됩니다.  
+ Windows 보안을 사용하려면 Active Directory 통합이 필요합니다. <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> 기본 전송 보안 모드가입니다. 이 값으로 설정 하는 경우 WCF 채널 Windows SID를 MSMQ 메시지에 연결 하 고 Active Directory에서 가져온 내부 인증서를 사용 합니다. MSMQ에서는 메시지 보안을 위해 내부 인증서를 사용합니다. 수신 큐 관리자는 Active Directory를 사용하여 클라이언트를 인증하기 위해 일치하는 인증서를 검색하고, SID가 클라이언트의 인증서와 일치하는지도 확인합니다. `WindowsDomain` 인증 모드의 경우 내부에서 생성된 인증서, `Certificate` 인증 모드의 경우 외부에서 생성된 인증서가 메시지에 첨부되면 대상 큐가 필수 인증으로 표시되어 있지 않더라도 이 인증 단계가 실행됩니다.  
   
 > [!NOTE]
 >  큐를 만들 때 큐에 메시지를 보내는 클라이언트의 인증이 필요함을 나타내려면 큐를 인증된 큐로 표시할 수 있습니다. 이렇게 하면 인증되지 않은 메시지는 큐에서 수락하지 않습니다.  
@@ -97,6 +97,7 @@ ms.locfileid: "56332349"
  지원되는 알고리즘은 `MD5`, `SHA1`, `SHA256` 및 `SHA512`입니다. 기본값은 `SHA1`입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [큐 개요](queues-overview.md)
 - [보안 개념](../../../../docs/framework/wcf/feature-details/security-concepts.md)
 - [서비스 및 클라이언트에 보안 설정](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

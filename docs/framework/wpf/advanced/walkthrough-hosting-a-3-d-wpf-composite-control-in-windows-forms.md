@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 - composite controls [WPF], hosting WPF in
 ms.assetid: 486369a9-606a-4a3b-b086-a06f2119c7b0
-ms.openlocfilehash: b1bd003c6a408e7455bb5c45e1f34a740fce67d1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e5b98a33f29759a81ba1cbc1fefbd45c0e5bf736
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367443"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330170"
 ---
 # <a name="walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms"></a>연습: Windows Forms에서 3-D WPF 복합 컨트롤 호스팅
 
@@ -38,11 +38,11 @@ ms.locfileid: "57367443"
 <a name="To_Create_the_UserControl"></a>
 ## <a name="create-the-usercontrol"></a>UserControl 만들기
 
-1.  만들기는 **WPF 사용자 정의 컨트롤 라이브러리** 라는 프로젝트 `HostingWpfUserControlInWf`합니다.
+1. 만들기는 **WPF 사용자 정의 컨트롤 라이브러리** 라는 프로젝트 `HostingWpfUserControlInWf`합니다.
 
-2.  Usercontrol1.xaml이에서 엽니다는 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]합니다.
+2. Usercontrol1.xaml이에서 엽니다는 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]합니다.
 
-3.  생성된 된 코드를 다음 코드로 바꿉니다.
+3. 생성된 된 코드를 다음 코드로 바꿉니다.
 
      [!code-xaml[HostingWpfUserControlInWf#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/HostingWpfUserControlInWf/ConeControl.xaml#1)]
 
@@ -51,11 +51,11 @@ ms.locfileid: "57367443"
 <a name="To_Create_the_Windows_Forms_Host_Project"></a>
 ## <a name="create-the-host-project"></a>호스트 프로젝트 만들기
 
-1.  추가 된 **WPF 앱 (.NET Framework)** 라는 프로젝트 `WpfUserControlHost` 솔루션입니다. 자세한 내용은 [연습: 내 첫 WPF 데스크톱 응용 프로그램](../getting-started/walkthrough-my-first-wpf-desktop-application.md)합니다.
+1. 추가 된 **WPF 앱 (.NET Framework)** 라는 프로젝트 `WpfUserControlHost` 솔루션입니다. 자세한 내용은 [연습: 내 첫 WPF 데스크톱 응용 프로그램](../getting-started/walkthrough-my-first-wpf-desktop-application.md)합니다.
 
-2.  **솔루션 탐색기**, WindowsFormsIntegration.dll 이라는 WindowsFormsIntegration 어셈블리에 대 한 참조를 추가 합니다.
+2. **솔루션 탐색기**, WindowsFormsIntegration.dll 이라는 WindowsFormsIntegration 어셈블리에 대 한 참조를 추가 합니다.
 
-3.  다음에 대 한 참조를 추가 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 어셈블리:
+3. 다음에 대 한 참조를 추가 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 어셈블리:
 
     -   PresentationCore
 
@@ -63,27 +63,27 @@ ms.locfileid: "57367443"
 
     -   WindowsBase
 
-4.  에 대 한 참조를 추가 합니다 `HostingWpfUserControlInWf` 프로젝트입니다.
+4. 에 대 한 참조를 추가 합니다 `HostingWpfUserControlInWf` 프로젝트입니다.
 
-5.  솔루션 탐색기에서 설정 된 `WpfUserControlHost` 프로젝트를 시작 프로젝트로 합니다.
+5. 솔루션 탐색기에서 설정 된 `WpfUserControlHost` 프로젝트를 시작 프로젝트로 합니다.
 
 <a name="To_Host_the_Windows_Presentation_Foundation"></a>
 ## <a name="host-the-usercontrol"></a>UserControl 호스트
 
-1.  Windows Forms 디자이너에서 Form1을 엽니다.
+1. Windows Forms 디자이너에서 Form1을 엽니다.
 
-2.  속성 창에서 클릭 **이벤트**를 차례로 두 번 클릭 합니다 <xref:System.Windows.Forms.Form.Load> 이벤트를 이벤트 처리기를 만듭니다.
+2. 속성 창에서 클릭 **이벤트**를 차례로 두 번 클릭 합니다 <xref:System.Windows.Forms.Form.Load> 이벤트를 이벤트 처리기를 만듭니다.
 
      새로 생성 된 코드 편집기가 열립니다 `Form1_Load` 이벤트 처리기입니다.
 
-3.  Form1.cs의 코드를 다음 코드로 바꿉니다.
+3. Form1.cs의 코드를 다음 코드로 바꿉니다.
 
      합니다 `Form1_Load` 이벤트 처리기의 인스턴스를 만듭니다 `UserControl1` 초기화를 추가 하 고는 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤의 자식 컨트롤 컬렉션입니다. <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤이 자식 컨트롤의 폼의 컬렉션에 추가 됩니다.
 
      [!code-csharp[HostingWpfUserControlInWf#10](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/WpfUserControlHost/Form1.cs#10)]
      [!code-vb[HostingWpfUserControlInWf#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HostingWpfUserControlInWf/VisualBasic/WpfUserControlHost/Form1.vb#10)]
 
-4.  **F5** 키를 눌러 응용 프로그램을 빌드하고 실행합니다.
+4. **F5** 키를 눌러 응용 프로그램을 빌드하고 실행합니다.
 
 ## <a name="see-also"></a>참고자료
 

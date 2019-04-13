@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab
-ms.openlocfilehash: 5fc987e37d9b33cd1640bb32423f62a7e74937f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7975e17bd957a822bf3d60d487eb928cee84bd28
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723500"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117211"
 ---
 # <a name="nesting-datarelations"></a>DataRelation 중첩
 데이터의 관계형 표현에서 각 테이블에는 열이나 열 집합을 사용하여 서로 연결시키는 행이 포함되어 있습니다. ADO.NET <xref:System.Data.DataSet>에서 각 테이블 사이의 관계는 <xref:System.Data.DataRelation>을 사용하여 구현됩니다. 만들 때를 **DataRelation**, 열의 부모-자식 관계는 관계를 통해서만 관리 됩니다. 테이블과 열은 별개의 엔터티입니다. XML에서 제공하는 데이터의 계층적 표현에서 부모-자식 관계는 중첩된 자식 요소를 포함하는 부모 요소에 의해 표현됩니다.  
@@ -59,7 +59,7 @@ DataRelation customerOrders = dataSet.Relations.Add(
   dataSet.Tables["Orders"].Columns["CustomerID"]);  
 ```  
   
- 때문에 **중첩** 의 속성을 **DataRelation** 개체 설정 되지 않은 **true** 이 대 한 **데이터 집합**, 자식 개체 중첩 되지 않은 부모 요소에 있는 경우이 **데이터 집합** XML 데이터로 표시 됩니다. XML 표현을 변형 된 **데이터 집합** 포함 된 관련 **데이터 집합**s 중첩 되지 않은 데이터 관계를 사용 하 여 성능이 저하 될 수 있습니다. 데이터 관계를 중첩하는 것이 좋습니다. 이 위해 설정 된 **중첩** 속성을 **true**합니다. 그런 다음 XSLT 스타일시트에서 하향 계층 구조적인 XPath 쿼리 식을 사용하여 데이터를 찾고 변형하는 코드를 작성합니다.  
+ 때문에 **중첩** 의 속성을 **DataRelation** 개체 설정 되지 않은 **true** 이 대 한 **데이터 집합**, 자식 개체 중첩 되지 않은 부모 요소에 있는 경우이 **데이터 집합** XML 데이터로 표시 됩니다. XML 표현을 변형 된 **데이터 집합** 포함 된 관련 **데이터 집합**s 중첩 되지 않은 데이터 관계를 사용 하 여 성능이 저하 될 수 있습니다. 데이터 관계를 중첩하는 것이 좋습니다. 이 위해 설정 된 **중첩** 속성을 **true**합니다. 그런 다음 XSLT 스타일시트에서 하향 계층 구조적인 XPath 쿼리 식을 사용하여 데이터를 찾고 변환하는 코드를 작성합니다.  
   
  다음 코드 예제에서는 호출의 결과로 **WriteXml** 에 **데이터 집합**합니다.  
   
@@ -132,7 +132,8 @@ customerOrders.Nested = true;
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [데이터 집합에서 XML 사용](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
 - [DataRelation 추가](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)
-- [DataSet, DataTable 및 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [DataSets, DataTables 및 DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

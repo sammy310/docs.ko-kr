@@ -1,36 +1,36 @@
 ---
-title: '방법: 워크플로 응용 프로그램에서 서비스에 액세스'
+title: '방법: 워크플로 애플리케이션에서 서비스 액세스'
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: 790f8f24ed8a6c3b7592fb8e78befc8ee5e2214d
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 178fb04244cb3e5075722877fdd3e2b5a92b8502
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185430"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309318"
 ---
-# <a name="how-to-access-a-service-from-a-workflow-application"></a>방법: 워크플로 응용 프로그램에서 서비스에 액세스
+# <a name="how-to-access-a-service-from-a-workflow-application"></a>방법: 워크플로 애플리케이션에서 서비스 액세스
 이 항목에서는 워크플로 콘솔 응용 프로그램에서 워크플로 서비스를 호출하는 방법에 대해 설명합니다. 완료에 종속 된 [방법: 메시징 작업을 사용 하 여 워크플로 서비스 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) 항목입니다. 이 항목에서는 워크플로 응용 프로그램에서 워크플로 서비스를 호출 하는 방법을 설명 합니다 하지만 동일한 방법은 워크플로 응용 프로그램에서 모든 Windows Communication Foundation (WCF) 서비스를 호출 하려면 사용할 수 있습니다.
 
 ### <a name="create-a-workflow-console-application-project"></a>워크플로 콘솔 응용 프로그램 프로젝트 만들기
 
-1.  Start Visual Studio 2012.
+1. Start Visual Studio 2012.
 
-2.  만든 MyWFService 프로젝트를 로드 합니다 [방법: 메시징 작업을 사용 하 여 워크플로 서비스 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) 항목입니다.
+2. 만든 MyWFService 프로젝트를 로드 합니다 [방법: 메시징 작업을 사용 하 여 워크플로 서비스 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) 항목입니다.
 
-3.  마우스 오른쪽 단추로 클릭 합니다 **MyWFService** 솔루션에는 **솔루션 탐색기** 선택한 **추가**, **새 프로젝트**합니다. 선택 **워크플로** 에 **설치 된 템플릿** 하 고 **워크플로 콘솔 응용 프로그램** 프로젝트 형식 목록에서. 다음 그림과 같이 프로젝트 이름을 MyWFClient로 지정하고 기본 위치를 사용합니다.
+3. 마우스 오른쪽 단추로 클릭 합니다 **MyWFService** 솔루션에는 **솔루션 탐색기** 선택한 **추가**, **새 프로젝트**합니다. 선택 **워크플로** 에 **설치 된 템플릿** 하 고 **워크플로 콘솔 응용 프로그램** 프로젝트 형식 목록에서. 다음 그림과 같이 프로젝트 이름을 MyWFClient로 지정하고 기본 위치를 사용합니다.
 
      ![새 프로젝트 추가 대화 상자](./media/how-to-access-a-service-from-a-workflow-application/add-new-project-dialog.jpg)
 
      클릭 합니다 **확인** 해제 하려면 단추를 **새 프로젝트 추가 대화 상자**합니다.
 
-4.  프로젝트가 만들어진 후 디자이너에서 Workflow1.xaml 파일이 열립니다. 클릭 합니다 **도구 상자** 이미 열고 압정을 도구 상자 창을 열어 없으면 도구 상자를 열려면 탭 합니다.
+4. 프로젝트가 만들어진 후 디자이너에서 Workflow1.xaml 파일이 열립니다. 클릭 합니다 **도구 상자** 이미 열고 압정을 도구 상자 창을 열어 없으면 도구 상자를 열려면 탭 합니다.
 
-5.  키를 눌러 **Ctrl**+**F5** 를 빌드하고 서비스를 시작 합니다. 이전과 마찬가지로 ASP.NET Development Server가 시작되고 Internet Explorer에 WCF 도움말 페이지가 표시됩니다. 이 페이지의 URI는 다음 단계에서도 사용됩니다.
+5. 키를 눌러 **Ctrl**+**F5** 를 빌드하고 서비스를 시작 합니다. 이전과 마찬가지로 ASP.NET Development Server가 시작되고 Internet Explorer에 WCF 도움말 페이지가 표시됩니다. 이 페이지의 URI는 다음 단계에서도 사용됩니다.
 
      ![WCF 도움말 페이지 및 URI를 표시 하는 IE](./media/how-to-access-a-service-from-a-workflow-application/ie-wcf-help-page-uri.jpg)
 
-6.  마우스 오른쪽 단추로 클릭 합니다 **MyWFClient** 프로젝트를 **솔루션 탐색기** 선택한 **추가** > **서비스 참조**합니다. 클릭 합니다 **Discover** 모든 서비스에 대 한 현재 솔루션을 검색 하는 단추입니다. 서비스 목록에서 Service1.xamlx 옆에 있는 삼각형을 클릭합니다. Service1 옆에 있는 삼각형을 클릭하여 Service1 서비스에 의해 구현되는 계약을 나열합니다. 확장을 **Service1** 에서 노드를 **Services** 목록입니다. Echo 작업에 표시 되는 **Operations** 다음 그림과에서 같이 목록입니다.
+6. 마우스 오른쪽 단추로 클릭 합니다 **MyWFClient** 프로젝트를 **솔루션 탐색기** 선택한 **추가** > **서비스 참조**합니다. 클릭 합니다 **Discover** 모든 서비스에 대 한 현재 솔루션을 검색 하는 단추입니다. 서비스 목록에서 Service1.xamlx 옆에 있는 삼각형을 클릭합니다. Service1 옆에 있는 삼각형을 클릭하여 Service1 서비스에 의해 구현되는 계약을 나열합니다. 확장을 **Service1** 에서 노드를 **Services** 목록입니다. Echo 작업에 표시 되는 **Operations** 다음 그림과에서 같이 목록입니다.
 
      ![서비스 참조 추가 대화 상자](./media/how-to-access-a-service-from-a-workflow-application/add-service-reference.jpg)
 
@@ -42,9 +42,9 @@ ms.locfileid: "58185430"
 
      ![도구 상자의 에코 작업](./media/how-to-access-a-service-from-a-workflow-application/echo-activity-toolbox.jpg)
 
-7.  디자이너 화면으로 <xref:System.Activities.Statements.Sequence> 작업을 끌어서 놓습니다. 아래에 있는 것은 **제어 흐름** 도구 상자의 섹션입니다.
+7. 디자이너 화면으로 <xref:System.Activities.Statements.Sequence> 작업을 끌어서 놓습니다. 아래에 있는 것은 **제어 흐름** 도구 상자의 섹션입니다.
 
-8.  사용 하 여 합니다 <xref:System.Activities.Statements.Sequence> 활동에 포커스를 클릭 합니다 **변수** 에 연결 하 고 이라는 문자열 변수를 추가 `inString`합니다. 기본값은 변수를 제공 `"Hello, world"` 이라는 문자열 변수 뿐만 아니라 `outString` 다음 다이어그램에 표시 된 대로 합니다.
+8. 사용 하 여 합니다 <xref:System.Activities.Statements.Sequence> 활동에 포커스를 클릭 합니다 **변수** 에 연결 하 고 이라는 문자열 변수를 추가 `inString`합니다. 기본값은 변수를 제공 `"Hello, world"` 이라는 문자열 변수 뿐만 아니라 `outString` 다음 다이어그램에 표시 된 대로 합니다.
 
      ![InString 변수를 추가합니다.](./media/how-to-access-a-service-from-a-workflow-application/add-instring-variable.jpg)
 
@@ -65,5 +65,5 @@ ms.locfileid: "58185430"
 ## <a name="see-also"></a>참고자료
 
 - [워크플로 서비스](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [방법: 메시징 활동을 사용 하 여 워크플로 서비스 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)
+- [방법: 메시징 활동을 사용하여 워크플로 서비스 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)
 - [웹 프로젝트의 워크플로에서 WCF 서비스 사용](https://go.microsoft.com/fwlink/?LinkId=207725)

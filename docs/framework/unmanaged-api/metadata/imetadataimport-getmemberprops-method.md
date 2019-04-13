@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fa1fa59bf3bb33e115989eae9095752eea00a041
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 83dec9b6ed3b1e538e0f1b7d13a33b8bdbc1cf54
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487644"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200807"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps 메서드
 이름, 이진 서명 및 상대 가상 주소를 포함 하 여 지정 된 멤버 정의 대 한 메타 데이터에 저장 된 정보를 가져옵니다는 <xref:System.Type> 지정 된 메타 데이터 토큰에서 참조 하는 멤버입니다. 간단한 도우미 메서드입니다.: 하는 경우 *mb* MethodDef, 이면 **GetMethodProps** 가 호출 되는 경우 *mb* 이면 한 FieldDef **GetFieldProps** 가 호출 됩니다. 이러한 세부 정보는 다른 방법을 참조 합니다. 
@@ -97,5 +97,6 @@ HRESULT GetMemberProps (
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

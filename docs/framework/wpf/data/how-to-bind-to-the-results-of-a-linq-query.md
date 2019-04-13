@@ -5,12 +5,12 @@ helpviewer_keywords:
 - running a LINQ query [WPF], bind to results
 - binding to LINQ query results [WPF]
 ms.assetid: ff2844d9-17ed-4ea6-aab1-5111af0bc684
-ms.openlocfilehash: 9be0f95824c97456b50996f9cd6f010442b523f2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5464ee9c59a7c99a83774a7535b9b3c422c1d2e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355950"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185902"
 ---
 # <a name="how-to-bind-to-the-results-of-a-linq-query"></a>방법: LINQ 쿼리 결과에 바인딩
 이 예제에서는 LINQ 쿼리를 실행 하 고 다음 결과에 바인딩하는 방법을 보여 줍니다.  
@@ -26,11 +26,12 @@ ms.locfileid: "57355950"
 [!code-csharp[LinqExample#Tasks](~/samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml.cs#tasks)]  
 [!code-csharp[LinqExample#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml.cs#handler)]  
   
- 때문에 두 번째 목록 상자를 컬렉션에 바인딩됩니다 해당 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 값으로 설정 되어 `{Binding}`입니다. 결과적으로, 반환된 된 컬렉션을 표시 합니다 (기준으로 합니다 `myTaskTemplate` <xref:System.Windows.DataTemplate>).  
+ 때문에 두 번째 목록 상자를 컬렉션에 바인딩됩니다 해당 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 값으로 설정 되어 `{Binding}`입니다. 결과적으로, 반환된 된 컬렉션을 표시 합니다 (기반는 `myTaskTemplate`<xref:System.Windows.DataTemplate>).  
   
 ## <a name="see-also"></a>참고자료
-- [XAML의 바인딩에 사용할 수 있는 데이터 만들기](how-to-make-data-available-for-binding-in-xaml.md)
-- [선택에 따라 수집 및 표시 정보에 바인딩](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
+
+- [XAML에서 바인딩에 사용할 수 있는 데이터 만들기](how-to-make-data-available-for-binding-in-xaml.md)
+- [선택 영역에 따라 컬렉션 및 표시 정보에 바인딩](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
 - [WPF 버전 4.5의 새로운 기능](../getting-started/whats-new.md)
 - [데이터 바인딩 개요](data-binding-overview.md)
 - [방법 항목](data-binding-how-to-topics.md)

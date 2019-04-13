@@ -2,12 +2,12 @@
 title: PII 보안 잠금
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 3537f50c8695838b69d1920cfd953c8b1196d830
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13ed280e9b7de2b205e0878761dbf97e168f06d3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699781"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326647"
 ---
 # <a name="pii-security-lockdown"></a>PII 보안 잠금
 이 샘플에 사용 하 여 Windows Communication Foundation (WCF) 서비스의 여러 보안 관련 기능을 제어 하는 방법을 보여 줍니다.  
@@ -41,11 +41,11 @@ ms.locfileid: "54699781"
   
 #### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>샘플의 Web.config에서 appSettings 섹션의 값을 암호화하려면  
   
-1.  시작->실행을 사용하여 명령 프롬프트를 엽니다. 입력 `cmd` 누릅니다 **확인**합니다.  
+1. 열기 시작을 사용 하 여 명령 프롬프트 실행->... 입력 `cmd` 누릅니다 **확인**합니다.  
   
-2.  `cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728` 명령을 실행하여 현재 .NET Framework 디렉터리로 이동합니다.  
+2. `cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728` 명령을 실행하여 현재 .NET Framework 디렉터리로 이동합니다.  
   
-3.  `aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"` 명령을 실행하여 Web.config 폴더에서 appSettings 구성 설정을 암호화합니다.  
+3. `aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"` 명령을 실행하여 Web.config 폴더에서 appSettings 구성 설정을 암호화합니다.  
   
  구성 파일의 섹션을 암호화 하는 방법에 대 한 자세한 내용은 ASP.NET 구성의 dpapi 방법은 참조 하 여 찾을 수 있습니다 ([Building Secure ASP.NET Applications: Authentication, Authorization, and Secure Communication](https://go.microsoft.com/fwlink/?LinkId=95137)) 및 ASP.NET 구성의 RSA의 사용 방법 ([방법: ASP.NET 2.0에서에서 구성 섹션 암호화 RSA를 사용 하 여](https://go.microsoft.com/fwlink/?LinkId=95138)).  
   
@@ -130,17 +130,18 @@ ms.locfileid: "54699781"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1.  수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
+1. 수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
   
-2.  필요한 경우 부모 노드가 추가되도록 Machine.config를 편집하여 `enableLoggingKnownPii` 특성을 `true`로 설정합니다.  
+2. 필요한 경우 부모 노드가 추가되도록 Machine.config를 편집하여 `enableLoggingKnownPii` 특성을 `true`로 설정합니다.  
   
-3.  C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.  
+3. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.  
   
-4.  단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
+4. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
   
 #### <a name="to-clean-up-the-sample"></a>샘플을 정리하려면  
   
-1.  Machine.config를 편집하여 `enableLoggingKnownPii` 특성을 `false`로 설정합니다.  
+1. Machine.config를 편집하여 `enableLoggingKnownPii` 특성을 `false`로 설정합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [AppFabric 모니터링 샘플](https://go.microsoft.com/fwlink/?LinkId=193959)

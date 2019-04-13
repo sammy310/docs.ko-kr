@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
-ms.openlocfilehash: fda5330ff75c1744f3ed9d4394e51b5efb737071
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 70dda68112d47d3e5a0609a5df7696920477c698
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374429"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210206"
 ---
 # <a name="planning-for-application-performance"></a>응용 프로그램 성능 계획
 성능 목표를 달성 하는 성공 성능 전략을 개발 하는 정도에 따라 달라 집니다. 계획은 모든 제품 개발의 첫 번째 단계입니다. 이 항목에서는 적절 한 성능을 전략을 개발 하기 위한 몇 가지 간단한 규칙을 설명 합니다.  
@@ -33,12 +33,13 @@ ms.locfileid: "57374429"
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤은 광범위 한 사용자 지정 컨트롤 동작을 변경 하지 않고도 모양의 있으므로 기본적으로 확장할 수 있습니다. 스타일, 데이터 템플릿 및 컨트롤 템플릿을 활용 하 여 만들기를 점차적으로 사용자 지정 가능한를 개선할 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 는 성능 요구 사항에 맞게 조정 합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [WPF 응용 프로그램 성능 최적화](optimizing-wpf-application-performance.md)
-- [하드웨어 이용](optimizing-performance-taking-advantage-of-hardware.md)
+
+- [WPF 애플리케이션 성능 최적화](optimizing-wpf-application-performance.md)
+- [하드웨어 활용](optimizing-performance-taking-advantage-of-hardware.md)
 - [레이아웃 및 디자인](optimizing-performance-layout-and-design.md)
-- [2차원 그래픽 및 이미징](optimizing-performance-2d-graphics-and-imaging.md)
+- [2D 그래픽 및 이미징](optimizing-performance-2d-graphics-and-imaging.md)
 - [개체 동작](optimizing-performance-object-behavior.md)
 - [애플리케이션 리소스](optimizing-performance-application-resources.md)
 - [텍스트](optimizing-performance-text.md)
 - [데이터 바인딩](optimizing-performance-data-binding.md)
-- [기타 성능 권장 사항](optimizing-performance-other-recommendations.md)
+- [기타 성능 추천 사항](optimizing-performance-other-recommendations.md)

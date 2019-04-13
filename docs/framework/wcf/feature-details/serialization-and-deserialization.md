@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: 7ddad36c05d9972b9fc613403b68b7c793b6701d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d9afa49525f03c06f94b1b7b704fb3d9caa9e19d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707575"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101818"
 ---
 # <a name="serialization-and-deserialization"></a>Serialization 및 Deserialization
 Windows Communication Foundation (WCF)는 새 serialization 엔진을 포함 합니다 <xref:System.Runtime.Serialization.DataContractSerializer>합니다. <xref:System.Runtime.Serialization.DataContractSerializer> 는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 개체를 XML로, XML을 .NET Framework 개체로 변환합니다. 이 항목에서는 serializer가 작동하는 방식에 대해 설명합니다.  
@@ -261,8 +261,9 @@ Windows Communication Foundation (WCF)는 새 serialization 엔진을 포함 합
  또한 `NetDataContractSerializer` 는 개체 그래프에 각 노드에 대한 전체 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식 및 어셈블리 이름을 출력하지 않습니다. 모호한 정보만을 출력하는데, 즉, 루트 개체 수준에서 다형적 경우에 대해 출력합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.NetDataContractSerializer>
 - <xref:System.Runtime.Serialization.XmlObjectSerializer>
-- [이진 serialization](../../../../docs/standard/serialization/binary-serialization.md)
-- [데이터 계약 직렬 변환기에서 지원하는 형식](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [이진 Serialization](../../../../docs/standard/serialization/binary-serialization.md)
+- [데이터 계약 Serializer에서 지원하는 형식](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

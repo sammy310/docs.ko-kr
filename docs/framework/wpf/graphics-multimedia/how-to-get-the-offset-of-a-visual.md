@@ -1,5 +1,5 @@
 ---
-title: '방법: 시각적 요소의 오프셋 가져오기'
+title: '방법: 시각적 개체의 오프셋 가져오기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - visual objects [WPF], retrieving offset values from
 - retrieving offset values from visual objects [WPF]
 ms.assetid: 889a1dd6-1b11-445a-b351-fbb04c53ee34
-ms.openlocfilehash: ea03f7b9c3fefde0efa3fa0daaa07a537618f37a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4787b771c7e59a8b033b9267079c068a5845a1e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374325"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093412"
 ---
-# <a name="how-to-get-the-offset-of-a-visual"></a>방법: 시각적 요소의 오프셋 가져오기
+# <a name="how-to-get-the-offset-of-a-visual"></a>방법: 시각적 개체의 오프셋 가져오기
 이러한 예제에는 해당 부모 또는 상위 항목 또는 하위 항목을 기준으로 하는 시각적 개체의 오프셋된 값을 검색 하는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
@@ -66,6 +66,7 @@ ms.locfileid: "57374325"
  오프셋을 고려 합니다 <xref:System.Windows.FrameworkElement.Margin%2A> 모든 개체에 대 한 값입니다. 이 예에서 <xref:System.Windows.Vector.X%2A> -4 이며, 및 <xref:System.Windows.Vector.Y%2A> -4 이며, 합니다. 부모 개체는 해당 자식 개체를 기준으로 오프셋 부정적인 되므로 오프셋된 값은 음수 값으로 지정 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - [WPF 그래픽 렌더링 개요](wpf-graphics-rendering-overview.md)

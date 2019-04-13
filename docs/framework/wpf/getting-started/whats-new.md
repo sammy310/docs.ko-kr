@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], what's new
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
-ms.openlocfilehash: 92f69d0f9ad962dff231308ed3f5d59a0d406792
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 03f785da018cacdec643fa196bdd0c6d5d7c7f70
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368170"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325828"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>WPF 버전 4.5의 새로운 기능
 <a name="introduction"></a> 이 항목에서는의 새로운 기능과 향상 된 기능에 대 한 정보가 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 4.5 버전입니다.  
@@ -56,9 +56,9 @@ ms.locfileid: "57368170"
 <a name="VirtualizingPanel"></a>   
 ## <a name="new-features-for-the-virtualizingpanel"></a>VirtualizingPanel의 새로운 기능  
   
-1.  지정할 수 있습니다 있는지 여부를 <xref:System.Windows.Controls.VirtualizingPanel>와 같은 <xref:System.Windows.Controls.VirtualizingStackPanel>를 사용 하 여 부분 항목을 표시는 <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> 연결 된 속성입니다. 하는 경우 <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> 로 설정 된 <xref:System.Windows.Controls.ScrollUnit.Item>는 <xref:System.Windows.Controls.VirtualizingPanel> 완전히 표시 되는 항목만 표시 됩니다. 하는 경우 <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> 로 설정 된 <xref:System.Windows.Controls.ScrollUnit.Pixel>는 <xref:System.Windows.Controls.VirtualizingPanel> 부분적으로 표시 된 항목을 표시할 수 있습니다.  
+1. 지정할 수 있습니다 있는지 여부를 <xref:System.Windows.Controls.VirtualizingPanel>와 같은 <xref:System.Windows.Controls.VirtualizingStackPanel>를 사용 하 여 부분 항목을 표시는 <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> 연결 된 속성입니다. 하는 경우 <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> 로 설정 된 <xref:System.Windows.Controls.ScrollUnit.Item>는 <xref:System.Windows.Controls.VirtualizingPanel> 완전히 표시 되는 항목만 표시 됩니다. 하는 경우 <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> 로 설정 된 <xref:System.Windows.Controls.ScrollUnit.Pixel>는 <xref:System.Windows.Controls.VirtualizingPanel> 부분적으로 표시 된 항목을 표시할 수 있습니다.  
   
-2.  뷰포트 전후 캐시의 크기를 지정할 수 있습니다 때 합니다 <xref:System.Windows.Controls.VirtualizingPanel> 이 사용 하 여 가상화는 <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A> 연결 된 속성입니다.  캐시는 항목이 가상화되지 않는 뷰포트 위 또는 아래 공간 양입니다.  캐시를 사용하면 뷰로 스크롤하는 동안 UI 요소가 생성되지 않도록 하여 성능을 향상시킬 수 있습니다. 캐시는 낮은 우선 순위에서 채워지므로 작업 중에는 애플리케이션이 응답하지 않게 됩니다. 합니다 <xref:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit%2A?displayProperty=nameWithType> 속성에서 사용 되는 측정 단위를 결정 <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A?displayProperty=nameWithType>합니다.  
+2. 뷰포트 전후 캐시의 크기를 지정할 수 있습니다 때 합니다 <xref:System.Windows.Controls.VirtualizingPanel> 이 사용 하 여 가상화는 <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A> 연결 된 속성입니다.  캐시는 항목이 가상화되지 않는 뷰포트 위 또는 아래 공간 양입니다.  캐시를 사용하면 뷰로 스크롤하는 동안 UI 요소가 생성되지 않도록 하여 성능을 향상시킬 수 있습니다. 캐시는 낮은 우선 순위에서 채워지므로 작업 중에는 애플리케이션이 응답하지 않게 됩니다. 합니다 <xref:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit%2A?displayProperty=nameWithType> 속성에서 사용 되는 측정 단위를 결정 <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A?displayProperty=nameWithType>합니다.  
   
 <a name="static_properties"></a>   
 ## <a name="binding-to-static-properties"></a>정적 속성에 바인딩  
@@ -86,11 +86,11 @@ ms.locfileid: "57368170"
 ## <a name="binding-to-types-that-implement-icustomtypeprovider"></a>ICustomTypeProvider를 구현하는 형식에 바인딩  
  WPF 데이터 바인딩을 구현 하는 개체를 지 원하는 <xref:System.Reflection.ICustomTypeProvider>, 사용자 지정 형식이 라고도 합니다.  다음과 같은 경우 사용자 지정 형식을 사용할 수 있습니다.  
   
-1.  로 <xref:System.Windows.PropertyPath> 데이터 바인딩에 있습니다. 예를 들어 합니다 <xref:System.Windows.Data.Binding.Path%2A> 의 속성을 <xref:System.Windows.Data.Binding> 사용자 지정 형식의 속성을 참조할 수 있습니다.  
+1. 로 <xref:System.Windows.PropertyPath> 데이터 바인딩에 있습니다. 예를 들어 합니다 <xref:System.Windows.Data.Binding.Path%2A> 의 속성을 <xref:System.Windows.Data.Binding> 사용자 지정 형식의 속성을 참조할 수 있습니다.  
   
-2.  값으로는 <xref:System.Windows.DataTemplate.DataType%2A> 속성입니다.  
+2. 값으로는 <xref:System.Windows.DataTemplate.DataType%2A> 속성입니다.  
   
-3.  자동으로 생성 된 열을 결정 하는 형식으로는 <xref:System.Windows.Controls.DataGrid>합니다.  
+3. 자동으로 생성 된 열을 결정 하는 형식으로는 <xref:System.Windows.Controls.DataGrid>합니다.  
   
 <a name="binding_state"></a>   
 ## <a name="retrieving-data-binding-information-from-a-binding-expression"></a>바인딩 식에서 데이터 바인딩 정보 검색  
@@ -126,4 +126,5 @@ ms.locfileid: "57368170"
  WPF 4.5에서는 이벤트에 대한 태그 확장을 지원합니다.  WPF는 이벤트에 사용될 태그 확장을 정의하지 않지만 타사에서 이벤트에 사용할 수 있는 태그 확장을 만들 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [.NET Framework의 새로운 기능](../../whats-new/index.md)

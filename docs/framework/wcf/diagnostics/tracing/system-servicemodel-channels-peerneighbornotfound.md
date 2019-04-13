@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.PeerNeighborNotFound
 ms.date: 03/30/2017
 ms.assetid: 0aeb51a1-b82f-4008-920c-8604c5cbf600
-ms.openlocfilehash: 58dfa566b7a4eb81ffa65f3c39636d88764773de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a2ced64640eda203b09f5f33c731b38cda6bbb15
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599493"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227234"
 ---
 # <a name="systemservicemodelchannelspeerneighbornotfound"></a>System.ServiceModel.Channels.PeerNeighborNotFound
 해당 환경이 환경 목록에 없으므로 환경에 대한 작업을 수행할 수 없습니다.  
@@ -16,6 +16,7 @@ ms.locfileid: "54599493"
  이 오류는 환경에 연결하거나 환경을 닫을 때 발생합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [추적을 사용하여 애플리케이션 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [추적을 사용하여 응용 프로그램 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [관리 및 진단](../../../../../docs/framework/wcf/diagnostics/index.md)

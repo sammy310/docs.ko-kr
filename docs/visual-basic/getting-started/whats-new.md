@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 539fa890a4a7b73c9e1744601d8613a246cb2240
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a676981a090d0ac02c1a1af4b0824d914d1e8fc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596815"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814018"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic의 새로운 기능
 
@@ -76,7 +76,7 @@ Visual Basic .NET의 첫 번째 릴리스
 - <xref:System.Math.Round(System.Double)?displayProperty=nameWithType>
 - <xref:System.Math.Truncate(System.Double)?displayProperty=nameWithType>
 
-이 최적화에는 코드를를 더 빠르게-많은 수의 정수 형식 변환 수행 하는 코드에 대 한 빠른 배까지 실행할 수 있습니다. 다음 예제에서는 이 최적화에 영향을 받는 몇 가지 간단한 메서드 호출을 보여줍니다.
+이렇게 최적화하면 다량의 정수 형식 변환을 수행하는 코드의 경우 코드 실행 속도가 최대 2배까지 더 빨라집니다. 다음 예제에서는 이 최적화에 영향을 받는 몇 가지 간단한 메서드 호출을 보여줍니다.
 
 ```vb
 Dim s As Single = 173.7619
@@ -253,4 +253,5 @@ End Interface
  이제 컴파일러에서 일반 오버로드 확인 규칙을 사용하여 호출하는 데 가장 적합한 `GetDetails`를 선택하며, 샘플에서와 같이 Visual Basic에서 인터페이스 관계를 선언할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [Visual Studio 2017의 새로운 기능](/visualstudio/ide/whats-new-in-visual-studio)

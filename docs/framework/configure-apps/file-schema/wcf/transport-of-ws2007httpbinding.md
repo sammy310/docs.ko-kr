@@ -1,13 +1,13 @@
 ---
-title: <transport>의 <ws2007HttpBinding>
+title: <transport> / <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: b8f84d0ed6c6248e72e3353675c9da96a0678ae6
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a1540b53d4af76141c1daee60a6bddbbecd9d6da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273308"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153870"
 ---
 # <a name="transport-of-ws2007httpbinding"></a>\<전송 >의 \<ws2007HttpBinding >
 HTTP 전송의 인증 설정을 정의합니다.  
@@ -73,6 +73,7 @@ HTTP 전송의 인증 설정을 정의합니다.
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|보안 기능을 나타내는 합니다 [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) 요소입니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.HttpTransportSecurity>
 - <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>

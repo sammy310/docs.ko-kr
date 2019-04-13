@@ -13,12 +13,12 @@ helpviewer_keywords:
 - gradient brushes
 - brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
-ms.openlocfilehash: fc6d6857e912ba14fca382eb49373655004534d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 683b5966f993ac3a69c8bf7c1233b6df3d65e19a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720945"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115312"
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>GDI+의 브러시 및 채워진 도형
 예: 사각형 또는 타원, 닫힌된 도형, 개요 및 내부 구성 됩니다. 펜으로 윤곽선 그려지고 내부 브러시를 사용 하 여 채워집니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 닫힌된 모양의 내부를 채우는 여러 브러시 클래스를 제공: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>를 <xref:System.Drawing.TextureBrush>를 <xref:System.Drawing.Drawing2D.LinearGradientBrush>, 및 <xref:System.Drawing.Drawing2D.PathGradientBrush>합니다. 이 클래스는 모두에서 상속 된 <xref:System.Drawing.Brush> 클래스입니다. 다음 그림에서는 사각형 단색 브러시를 사용 하 여 채워지고 타원 빗살 무늬 브러시를 사용 하 여 보여 줍니다.  
@@ -77,10 +77,11 @@ ms.locfileid: "57720945"
  ![셰이프를 채울](./media/aboutgdip02-art23.gif "AboutGdip02_Art23")  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Drawing.SolidBrush?displayProperty=nameWithType>
 - <xref:System.Drawing.Drawing2D.HatchBrush?displayProperty=nameWithType>
 - <xref:System.Drawing.TextureBrush?displayProperty=nameWithType>
 - <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=nameWithType>
 - [선, 곡선 및 도형](lines-curves-and-shapes.md)
-- [방법: Windows Form에 채워진된 사각형 그리기](how-to-draw-a-filled-rectangle-on-a-windows-form.md)
-- [방법: Windows Form에 채워진된 타원 그리기](how-to-draw-a-filled-ellipse-on-a-windows-form.md)
+- [방법: Windows Form에서 채워진 사각형 그리기](how-to-draw-a-filled-rectangle-on-a-windows-form.md)
+- [방법: Windows Form에서 채워진 타원 그리기](how-to-draw-a-filled-ellipse-on-a-windows-form.md)

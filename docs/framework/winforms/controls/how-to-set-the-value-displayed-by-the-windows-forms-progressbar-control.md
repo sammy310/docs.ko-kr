@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms ProgressBar 컨트롤에서 표시 되는 값 설정'
+title: '방법: Windows Forms ProgressBar 컨트롤에서 표시하는 값 설정'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], setting value displayed
 - progress controls [Windows Forms], setting value displayed
 ms.assetid: 0e5010ad-1e9a-4271-895e-5a3d24d37a26
-ms.openlocfilehash: a889d6e5cd40833353c1b294031621b7b289ac4d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 42a9e0f67f00c1a706b72ab0eeb522e99d8a8dfe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715895"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300478"
 ---
-# <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>방법: Windows Forms ProgressBar 컨트롤에서 표시 되는 값 설정
+# <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>방법: Windows Forms ProgressBar 컨트롤에서 표시하는 값 설정
 > [!IMPORTANT]
 >  <xref:System.Windows.Forms.ToolStripProgressBar> 컨트롤은 <xref:System.Windows.Forms.ProgressBar> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.ProgressBar> 컨트롤을 계속 유지하도록 선택할 수 있습니다.  
   
@@ -31,9 +31,9 @@ ms.locfileid: "57715895"
   
 ### <a name="to-set-the-progressbar-value-directly"></a>ProgressBar 값을 직접 설정 하려면  
   
-1.  설정 된 <xref:System.Windows.Forms.ProgressBar> 컨트롤의 <xref:System.Windows.Forms.ProgressBar.Minimum%2A> 고 <xref:System.Windows.Forms.ProgressBar.Maximum%2A> 값입니다.  
+1. 설정 된 <xref:System.Windows.Forms.ProgressBar> 컨트롤의 <xref:System.Windows.Forms.ProgressBar.Minimum%2A> 고 <xref:System.Windows.Forms.ProgressBar.Maximum%2A> 값입니다.  
   
-2.  코드에서 컨트롤의 설정 <xref:System.Windows.Forms.ProgressBar.Value%2A> 속성을 설정 하는 최소값과 최대값 사이의 정수 값입니다.  
+2. 코드에서 컨트롤의 설정 <xref:System.Windows.Forms.ProgressBar.Value%2A> 속성을 설정 하는 최소값과 최대값 사이의 정수 값입니다.  
   
     > [!NOTE]
     >  설정 하는 경우는 <xref:System.Windows.Forms.ProgressBar.Value%2A> 경계 외부에 의해 설정 된 속성을 <xref:System.Windows.Forms.ProgressBar.Minimum%2A> 및 <xref:System.Windows.Forms.ProgressBar.Maximum%2A> 속성, 컨트롤 throw는 <xref:System.ArgumentException> 예외.  
@@ -87,11 +87,11 @@ ms.locfileid: "57715895"
   
 ### <a name="to-increase-the-progress-bar-by-a-fixed-value"></a>고정된 값으로 진행률 표시줄을 증가 시키려면  
   
-1.  설정 된 <xref:System.Windows.Forms.ProgressBar> 컨트롤의 <xref:System.Windows.Forms.ProgressBar.Minimum%2A> 고 <xref:System.Windows.Forms.ProgressBar.Maximum%2A> 값입니다.  
+1. 설정 된 <xref:System.Windows.Forms.ProgressBar> 컨트롤의 <xref:System.Windows.Forms.ProgressBar.Minimum%2A> 고 <xref:System.Windows.Forms.ProgressBar.Maximum%2A> 값입니다.  
   
-2.  컨트롤의 설정 <xref:System.Windows.Forms.ProgressBar.Step%2A> 진행률 표시줄의 증가 크기를 나타내는 정수를 속성 값을 표시 합니다.  
+2. 컨트롤의 설정 <xref:System.Windows.Forms.ProgressBar.Step%2A> 진행률 표시줄의 증가 크기를 나타내는 정수를 속성 값을 표시 합니다.  
   
-3.  호출 된 <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> 에 설정 된 값으로 표시 되는 값을 변경 하는 방법의 <xref:System.Windows.Forms.ProgressBar.Step%2A> 속성입니다.  
+3. 호출 된 <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> 에 설정 된 값으로 표시 되는 값을 변경 하는 방법의 <xref:System.Windows.Forms.ProgressBar.Step%2A> 속성입니다.  
   
      다음 코드 예제는 진행률 표시줄 복사 작업에서 파일의 수를 유지할 수 있습니다 하는 방법을 보여 줍니다.  
   
@@ -153,9 +153,9 @@ ms.locfileid: "57715895"
   
 ### <a name="to-increase-the-progress-bar-by-a-dynamic-value"></a>동적 값으로 진행률 표시줄을 증가 시키려면  
   
-1.  설정 된 <xref:System.Windows.Forms.ProgressBar> 컨트롤의 <xref:System.Windows.Forms.ProgressBar.Minimum%2A> 고 <xref:System.Windows.Forms.ProgressBar.Maximum%2A> 값입니다.  
+1. 설정 된 <xref:System.Windows.Forms.ProgressBar> 컨트롤의 <xref:System.Windows.Forms.ProgressBar.Minimum%2A> 고 <xref:System.Windows.Forms.ProgressBar.Maximum%2A> 값입니다.  
   
-2.  호출 된 <xref:System.Windows.Forms.ProgressBar.Increment%2A> 지정한 정수로 표시 되는 값을 변경 하는 방법입니다.  
+2. 호출 된 <xref:System.Windows.Forms.ProgressBar.Increment%2A> 지정한 정수로 표시 되는 값을 변경 하는 방법입니다.  
   
      다음 코드 예제에서는 어떻게 복사 작업 동안 사용 된 디스크 공간의 양을 진행률 표시줄을 계산할 수를 보여 줍니다.  
   
@@ -225,6 +225,7 @@ ms.locfileid: "57715895"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ProgressBar>
 - <xref:System.Windows.Forms.ToolStripProgressBar>
 - [ProgressBar 컨트롤 개요](progressbar-control-overview-windows-forms.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f76b727511ad604c407fb2998a5ecea26f91c49
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 33ad221f2a05357484d0877b6306d78e3864eff6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481367"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120174"
 ---
 # <a name="icordebuggcreferenceenumnext-method"></a>ICorDebugGCReferenceEnum::Next 메서드
 지정 된 개수를 가져옵니다 [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) 가비지 수집 될 개체에 대 한 정보가 포함 된 인스턴스.  
@@ -44,8 +44,7 @@ HRESULT Next(
  [out] 각각 가리키는 포인터 배열을 [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) 가비지가 수집 되기를 개체의 루트를 나타내는 개체입니다.  
   
  pceltFetched  
- [out] 개수에 대 한 포인터 [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) 개체에 실제로 반환 된 `roots`합니다. 
-  `celt`가 1이면 이 값은 `null`일 수 있습니다.  
+ [out] 개수에 대 한 포인터 [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) 개체에 실제로 반환 된 `roots`합니다. `celt`가 1이면 이 값은 `null`일 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
   
@@ -59,5 +58,6 @@ HRESULT Next(
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICorDebugGCReferenceEnum 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

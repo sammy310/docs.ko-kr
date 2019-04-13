@@ -2,12 +2,12 @@
 title: <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: c1a5013a-9dd4-4a27-b114-795b8b323177
-ms.openlocfilehash: 8962a0c018442ed590b62e53ea8323d80e334df7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6765259f290047a4199a422b4ad0cced2ffee9ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55290097"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179831"
 ---
 # <a name="peertransport"></a>\<peerTransport>
 사용자 지정 바인딩에 대한 피어 전송을 정의합니다.  
@@ -58,6 +58,7 @@ ms.locfileid: "55290097"
  request/reply 작업이 있는 계약에서는 이 전송을 사용할 수 없습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.PeerTransportElement>
 - <xref:System.ServiceModel.Channels.PeerTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
@@ -65,6 +66,6 @@ ms.locfileid: "55290097"
 - [전송](../../../../../docs/framework/wcf/feature-details/transports.md)
 - [전송 선택](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
 - [바인딩](../../../../../docs/framework/wcf/bindings.md)
-- [바인딩 확장](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [바인딩 확장명](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], large data sets
 - virtual mode [Windows Forms], just-in-time data loading
 ms.assetid: c2a052b9-423c-4ff7-91dc-d8c7c79345f6
-ms.openlocfilehash: 44c985cef035e33e88ba246584efcb30fe0e9b97
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 641db19cc6493a20c9f9a34622f466e3623c32ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705560"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088654"
 ---
 # <a name="implementing-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤에서 Just-In-Time 데이터 로드를 사용하여 가상 모드 구현
 가상 모드 구현 하는 이유는 <xref:System.Windows.Forms.DataGridView> 컨트롤 필요할 때에 데이터를 검색 하는 것입니다. 이 이라고 *-just-in-time 데이터 로드*합니다.  
@@ -71,10 +71,11 @@ ms.locfileid: "57705560"
  응용 프로그램의 스크롤 성능 향상을 위해 로컬로 저장 된 데이터의 크기를 늘릴 수 있습니다. 그러나 시작 시간을 향상 시키려면 하지 않도록 해야 처음에 너무 많은 데이터를 로드 합니다. 수정 하려는 경우는 `Cache` 클래스를 저장할 수 있는 데이터 페이지 수를 늘립니다. 더 많은 데이터 페이지를 사용 하 여 스크롤의 효율성을 향상 시킬 수 있지만 서버 대기 시간 및 사용 가능한 대역폭에 따라 데이터 페이지에서 행의 이상적인 개수를 확인 해야 합니다. 더 작은 페이지를 사용 하 여 서버에 자주 액세스 하지만 요청 된 데이터를 반환 하는 시간이 적게 걸립니다. 대기 시간 보다 대역폭 문제에 대 한 자세한 내용은 인 경우에 더 큰 데이터 페이지를 사용 하는 것이 좋습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
 - [Windows Forms DataGridView 컨트롤의 성능 조정](performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 컨트롤의 크기를 조정하는 최선의 방법](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 컨트롤의 크기 조정에 대한 모범 사례](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView 컨트롤의 가상 모드](virtual-mode-in-the-windows-forms-datagridview-control.md)
 - [연습: Windows Forms DataGridView 컨트롤에서 가상 모드 구현](implementing-virtual-mode-wf-datagridview-control.md)
-- [방법: Windows Forms DataGridView 컨트롤에서-Just-in-time 데이터 로드를 사용 하 여 가상 모드 구현](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)
+- [방법: Windows Forms DataGridView 컨트롤에서 Just-In-Time 데이터 로드를 사용하여 가상 모드 구현](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)

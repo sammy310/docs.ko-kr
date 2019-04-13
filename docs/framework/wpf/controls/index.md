@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-ms.openlocfilehash: f4aeb3dd60186a4060f7825257c7adb274fc8b24
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5abafe1edfdbac1966a98d5eef28265e6504c868
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363152"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154416"
 ---
 # <a name="controls"></a>컨트롤
 <a name="introduction"></a>
@@ -95,16 +95,16 @@ ms.locfileid: "57363152"
   
 -   <xref:System.Windows.Controls.HeaderedItemsControl>-이 클래스에서 상속 된 클래스의 일부의 예로 <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.TreeViewItem>, 및 <xref:System.Windows.Controls.ToolBar>합니다.  
 
-  
  이러한 기본 클래스에 대 한 자세한 내용은 참조 하세요. [WPF 콘텐츠 모델](wpf-content-model.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [스타일 지정 및 템플릿](styling-and-templating.md)
-- [범주별 컨트롤](controls-by-category.md)
+- [컨트롤 범주](controls-by-category.md)
 - [컨트롤 라이브러리](control-library.md)
 - [데이터 템플릿 개요](../data/data-templating-overview.md)
 - [데이터 바인딩 개요](../data/data-binding-overview.md)
 - [입력](../advanced/input-wpf.md)
 - [명령 사용](../advanced/how-to-enable-a-command.md)
-- [연습: 사용자 지정 애니메이션된 단추 만들기](walkthroughs-create-a-custom-animated-button.md)
+- [연습: 사용자 지정 애니메이션 효과가 있는 단추 만들기](walkthroughs-create-a-custom-animated-button.md)
 - [컨트롤 사용자 지정](control-customization.md)

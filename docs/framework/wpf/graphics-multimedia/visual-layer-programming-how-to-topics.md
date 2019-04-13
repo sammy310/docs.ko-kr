@@ -8,25 +8,26 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: ac550423-60a3-43e6-a0bc-d65ef026e0cb
-ms.openlocfilehash: 0328b5da837fa11a6c2b7dba9ae761a1e88729bb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f41f9cf2b6deb30f5f1960cfab6e898f7032901e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376935"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142690"
 ---
 # <a name="visual-layer-programming-how-to-topics"></a>시각적 계층 프로그래밍 방법 항목
 이 섹션의에서 항목에서는 컴퍼지션 적중 테스트 및 하위 수준에 대 한 시각적 계층을 사용 하는 방법을 보여 줍니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [시각적 요소의 오프셋 가져오기](how-to-get-the-offset-of-a-visual.md)  
- [시각적 요소의 그리기 콘텐츠 열거](how-to-enumerate-drawing-content-of-a-visual.md)  
- [시각적 요소의 기하 도형 적중 테스트](how-to-hit-test-geometry-in-a-visual.md)  
+ [시각적 개체의 오프셋 가져오기](how-to-get-the-offset-of-a-visual.md)  
+ [시각적 개체의 그리기 콘텐츠 열거](how-to-enumerate-drawing-content-of-a-visual.md)  
+ [시각적 개체의 기하 도형 적중 테스트](how-to-hit-test-geometry-in-a-visual.md)  
  [기하 도형을 매개 변수로 사용하여 적중 테스트](how-to-hit-test-using-geometry-as-a-parameter.md)  
  [Win32 호스트 컨테이너를 사용하여 적중 테스트](how-to-hit-test-using-a-win32-host-container.md)  
  [CompositionTarget을 사용하여 프레임별 간격에 렌더링](how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - <xref:System.Windows.Media.DrawingVisual>

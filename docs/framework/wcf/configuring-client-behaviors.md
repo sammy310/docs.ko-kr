@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: df5b32fa-e73b-4e8e-b66f-357c748e0173
-ms.openlocfilehash: bf65844cda195847989d1eb8ef752fe87c9de22c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83fdc77bd17115f9952f2ca6c494ed0eb873cd9c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532199"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193657"
 ---
 # <a name="configuring-client-behaviors"></a>클라이언트 동작 구성
 두 가지 방법으로 동작을 구성 하는 Windows Communication Foundation (WCF):에 정의 된 동작 구성을 참조 하거나는 `<behavior>` 또는 프로그래밍 방식으로 호출을 클라이언트 응용 프로그램 구성 파일의 섹션 응용 프로그램입니다. 이 항목에서는 두 접근 방식 모두에 대해 설명합니다.  
@@ -52,4 +52,5 @@ ms.locfileid: "54532199"
  [!code-vb[ChannelFactoryBehaviors#10](../../../samples/snippets/visualbasic/VS_Snippets_CFX/channelfactorybehaviors/vb/client.vb#10)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)

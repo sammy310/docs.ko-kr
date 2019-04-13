@@ -2,12 +2,12 @@
 title: Net.TCP Port Sharing Service 구성
 ms.date: 03/30/2017
 ms.assetid: b6dd81fa-68b7-4e1b-868e-88e5901b7ea0
-ms.openlocfilehash: 9bc625f9e998f27b6227a5951f11c7d85220ae7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dbc27f0f15be41c5384d8a1f73f0226c3f0f83ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585525"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206813"
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>Net.TCP Port Sharing Service 구성
 Net.TCP 전송을 사용하는 자체 호스팅 서비스는 네트워크 통신에 사용되는 기본 TCP 소켓의 동작을 제어하는 `ListenBacklog` 및 `MaxPendingAccepts` 등 여러 고급 설정을 제어할 수 있습니다. 그러나 전송 바인딩이 기본적으로 활성화되는 포트 공유를 사용할 수 없도록 설정한 경우 각 소켓에 대한 이러한 설정은 바인딩 수준에서만 적용됩니다.  
@@ -62,4 +62,5 @@ Net.TCP 전송을 사용하는 자체 호스팅 서비스는 네트워크 통신
 >  기본 SMSvcHost.exe.config 파일은 사용자 지정 `etwProviderId`를 지정하여 SMSvcHost.exe 추적이 서비스 추적을 방해하지 않도록 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [\<net.tcp>](../../../../docs/framework/configure-apps/file-schema/wcf/net-tcp.md)

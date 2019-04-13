@@ -7,20 +7,19 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: f5d6ae2d21058e7e6dd9fa9736800237082766d1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0176ebffe82e60671ea66481b7d659004dc31477
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364751"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344925"
 ---
 # <a name="xaml-resources"></a>XAML 리소스
 리소스는 애플리케이션의 여러 위치에서 다시 사용할 수 있는 개체입니다. 리소스의 예로는 브러시와 스타일이 있습니다. 이 개요에서 리소스를 사용 하는 방법에 설명 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다. 또한 만들고 하 하거나 코드 서로 바꿔 코드를 사용 하 여 리소스에 액세스 하 고 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]입니다. 자세한 내용은 [리소스 및 코드](resources-and-code.md)합니다.  
   
 > [!NOTE]
 >  이 항목에서 설명 하는 리소스 파일은 리소스 파일에 설명 된 다르지 [WPF 응용 프로그램 리소스, 콘텐츠 및 데이터 파일](../app-development/wpf-application-resource-content-and-data-files.md) 포함 또는 연결 된 리소스에 설명 된 것과 다르며 [관리 응용 프로그램 리소스 (.NET)](/visualstudio/ide/managing-application-resources-dotnet)합니다.  
-  
-  
+
 <a name="usingresources"></a>   
 ## <a name="using-resources-in-xaml"></a>XAML의 리소스 사용  
  다음 예제에서는 정의 <xref:System.Windows.Media.SolidColorBrush> 페이지의 루트 요소에서 리소스로 합니다. 이 예제에서는 리소스를 참조 하 고 포함 하 여 여러 자식 요소의 속성을 설정 하는 데 사용을 <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Controls.TextBlock>, 및 <xref:System.Windows.Controls.Button>합니다.  
@@ -70,11 +69,11 @@ ms.locfileid: "57364751"
   
 #### <a name="static-resource-lookup-behavior"></a>정적 리소스 조회 동작  
   
-1.  조회 프로세스가 속성을 설정하는 요소를 통해 정의된 리소스 사전에서 요청된 키를 확인합니다.  
+1. 조회 프로세스가 속성을 설정하는 요소를 통해 정의된 리소스 사전에서 요청된 키를 확인합니다.  
   
-2.  그런 다음 조회 프로세스가 논리 트리를 상향식으로 통과하여 부모 요소와 해당 리소스 사전으로 이동합니다. 이 작업은 루트 요소에 도달할 때까지 계속됩니다.  
+2. 그런 다음 조회 프로세스가 논리 트리를 상향식으로 통과하여 부모 요소와 해당 리소스 사전으로 이동합니다. 이 작업은 루트 요소에 도달할 때까지 계속됩니다.  
   
-3.  다음으로 애플리케이션 리소스를 확인합니다. 응용 프로그램 리소스는 리소스 사전에서 정의한 내에서 리소스를 <xref:System.Windows.Application> 개체에 대 한 프로그램 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다.  
+3. 다음으로 애플리케이션 리소스를 확인합니다. 응용 프로그램 리소스는 리소스 사전에서 정의한 내에서 리소스를 <xref:System.Windows.Application> 개체에 대 한 프로그램 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다.  
   
  리소스 사전 내의 정적 리소스 참조는 리소스 참조 전에 사전순으로 이미 정의된 리소스를 참조해야 합니다. 전방 참조는 정적 리소스 참조로 확인할 수 없습니다. 따라서 정적 리소스 참조를 사용하는 경우, 리소스별 용도에 맞게 리소스를 각 리소스 사전의 시작 부분에 정의하도록 리소스 사전 구조를 디자인해야 합니다.  
   
@@ -102,19 +101,19 @@ ms.locfileid: "57364751"
 #### <a name="dynamic-resource-lookup-behavior"></a>동적 리소스 조회 동작  
  동적 리소스 참조에 대 한 리소스 조회 동작 호출 하는 경우 코드의 조회 동작과 유사 <xref:System.Windows.FrameworkElement.FindResource%2A> 또는 <xref:System.Windows.FrameworkElement.SetResourceReference%2A>합니다.  
   
-1.  조회 프로세스가 속성을 설정하는 요소를 통해 정의된 리소스 사전에서 요청된 키를 확인합니다.  
+1. 조회 프로세스가 속성을 설정하는 요소를 통해 정의된 리소스 사전에서 요청된 키를 확인합니다.  
   
     -   요소를 정의 하는 경우는 <xref:System.Windows.FrameworkElement.Style%2A> 속성을 <xref:System.Windows.Style.Resources%2A> 사전 내에서 <xref:System.Windows.Style> 확인란이 선택 되어.  
   
     -   요소를 정의 하는 경우는 <xref:System.Windows.Controls.Control.Template%2A> 속성을 <xref:System.Windows.FrameworkTemplate.Resources%2A> 사전 내에서 <xref:System.Windows.FrameworkTemplate> 확인란이 선택 되어.  
   
-2.  그런 다음 조회 프로세스가 논리 트리를 상향식으로 통과하여 부모 요소와 해당 리소스 사전으로 이동합니다. 이 작업은 루트 요소에 도달할 때까지 계속됩니다.  
+2. 그런 다음 조회 프로세스가 논리 트리를 상향식으로 통과하여 부모 요소와 해당 리소스 사전으로 이동합니다. 이 작업은 루트 요소에 도달할 때까지 계속됩니다.  
   
-3.  다음으로 애플리케이션 리소스를 확인합니다. 응용 프로그램 리소스는 리소스 사전에서 정의한 내에서 리소스를 <xref:System.Windows.Application> 개체에 대 한 프로그램 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다.  
+3. 다음으로 애플리케이션 리소스를 확인합니다. 응용 프로그램 리소스는 리소스 사전에서 정의한 내에서 리소스를 <xref:System.Windows.Application> 개체에 대 한 프로그램 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다.  
   
-4.  현재 활성 테마의 테마 리소스 사전을 확인합니다. 런타임 시 테마가 변경되면 값을 재평가합니다.  
+4. 현재 활성 테마의 테마 리소스 사전을 확인합니다. 런타임 시 테마가 변경되면 값을 재평가합니다.  
   
-5.  시스템 리소스를 확인합니다.  
+5. 시스템 리소스를 확인합니다.  
   
  예외 동작이 있는 경우 다음과 같이 다양합니다.  
   
@@ -129,7 +128,7 @@ ms.locfileid: "57364751"
   
 -   설정 되는 속성의 속성 이어야 합니다는 <xref:System.Windows.FrameworkElement> 또는 <xref:System.Windows.FrameworkContentElement>합니다. 속성에서 백업 해야 하는 <xref:System.Windows.DependencyProperty>합니다.  
   
--   내의 값에 대 한 참조 되는 <xref:System.Windows.Style> <xref:System.Windows.Setter>합니다.  
+-   내의 값에 대 한 참조는는 <xref:System.Windows.Style><xref:System.Windows.Setter>합니다.  
   
 -   설정 되는 속성의 속성 이어야 합니다는 <xref:System.Windows.Freezable> 값으로 제공 되는 <xref:System.Windows.FrameworkElement> 또는 <xref:System.Windows.FrameworkContentElement> 속성인 또는 <xref:System.Windows.Setter> 값입니다.  
   
@@ -145,7 +144,7 @@ ms.locfileid: "57364751"
   
  [!code-xaml[FEResourceSH_snip#ImplicitStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#implicitstyle)]  
   
- 스타일 실제로 키가: 암시적 키는 `typeof(` <xref:System.Windows.Controls.Button> `)`합니다. 태그를 지정할 수 있습니다는 <xref:System.Windows.Style.TargetType%2A> 형식으로 직접 이름 (또는 필요에 따라 사용할 수 있습니다 [{x: Type...}](../../xaml-services/x-type-markup-extension.md) 반환할는 <xref:System.Type>합니다.  
+ 스타일 실제로 키가: 암시적 키는 `typeof(`<xref:System.Windows.Controls.Button>`)`합니다. 태그를 지정할 수 있습니다는 <xref:System.Windows.Style.TargetType%2A> 형식으로 직접 이름 (또는 필요에 따라 사용할 수 있습니다 [{x: Type...}](../../xaml-services/x-type-markup-extension.md) 반환할는 <xref:System.Type>합니다.  
   
  사용 하는 기본 테마 스타일 메커니즘을 통해 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], 스타일의 런타임 스타일으로 적용 되지 않음을 <xref:System.Windows.Controls.Button> 페이지에서도 합니다 <xref:System.Windows.Controls.Button> 자체를 지정 하지 않습니다 해당 <xref:System.Windows.FrameworkElement.Style%2A> 속성 또는 특정 리소스 스타일에 대 한 참조입니다. 페이지에 정의 된 스타일은 테마 사전 스타일에는 동일한 키를 사용 하 여 테마 사전 스타일 보다 조회 시퀀스 앞 있습니다. 만 지정할 수 있습니다 `<Button>Hello</Button>` 어디에 페이지를 사용 하 여 정의 된 스타일 <xref:System.Windows.Style.TargetType%2A> 의 `Button` 해당 단추에 적용 됩니다. 동일한 형식 값을 사용 하 여 스타일을 명시적으로 키를 <xref:System.Windows.Style.TargetType%2A>에 있지만 태그에서 명확 하 게는 선택 사항입니다.  
   
@@ -154,11 +153,12 @@ ms.locfileid: "57364751"
  <xref:System.Windows.DataTemplate> 암시적 키가 있습니다. 에 대 한 암시적 키를 <xref:System.Windows.DataTemplate> 는 <xref:System.Windows.DataTemplate.DataType%2A> 속성 값입니다. <xref:System.Windows.DataTemplate.DataType%2A> 명시적으로 사용 하는 것이 아니라 형식의 이름으로 지정할 수도 있습니다 [{x: Type...} ](../../xaml-services/x-type-markup-extension.md). 자세한 내용은 참조 하세요 [데이터 템플릿 개요](../data/data-templating-overview.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.ResourceDictionary>
-- [응용 프로그램 리소스](optimizing-performance-application-resources.md)
+- [애플리케이션 리소스](optimizing-performance-application-resources.md)
 - [리소스 및 코드](resources-and-code.md)
 - [리소스 정의 및 참조](how-to-define-and-reference-a-resource.md)
-- [응용 프로그램 관리 개요](../app-development/application-management-overview.md)
+- [애플리케이션 관리 개요](../app-development/application-management-overview.md)
 - [x:Type 태그 확장](../../xaml-services/x-type-markup-extension.md)
 - [StaticResource 태그 확장](staticresource-markup-extension.md)
 - [DynamicResource 태그 확장](dynamicresource-markup-extension.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 47b59c7393d9d4e9cbdeaa1a2efd9965f969f985
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 179cfc5c0725934e21d7b89a2f8d4c934b049f78
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497797"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106057"
 ---
 # <a name="imetadataemitmerge-method"></a>IMetaDataEmit::병합 메서드
 병합할 범위의 목록에 지정된 된 가져온된 범위를 추가 합니다.  
@@ -60,5 +60,6 @@ HRESULT Merge (
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

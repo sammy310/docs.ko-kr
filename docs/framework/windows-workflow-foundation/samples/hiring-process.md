@@ -2,12 +2,12 @@
 title: 채용 프로세스
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 0420a174705c12384509bf1d8022d664d7cb354e
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: c6f542cef8e1417ed9c8d3a185252a91062e2161
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223223"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313153"
 ---
 # <a name="hiring-process"></a>채용 프로세스
 이 샘플에서는 워크플로 서비스로 호스트되는 두 개의 워크플로와 메시징 활동을 사용하여 비즈니스 프로세스를 구현하는 방법을 보여 줍니다. 이 워크플로는 Contoso, Inc라는 가상 회사의 IT 인프라 중 일부입니다.  
@@ -18,7 +18,7 @@ ms.locfileid: "54223223"
   
  이 샘플에서는 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]의 다음과 같은 기능을 보여 줍니다.  
   
--   비즈니스 프로세스를 모델링하기 위한 <xref:System.Activities.Statements.Flowchart> 및 <xref:System.Activities.Statements.Sequence> 워크플로  
+-   <xref:System.Activities.Statements.Flowchart> 및 <xref:System.Activities.Statements.Sequence> 비즈니스 프로세스를 모델링 하는 것에 대 한 워크플로.  
   
 -   워크플로 서비스  
   
@@ -38,9 +38,9 @@ ms.locfileid: "54223223"
   
 -   활동의 컴퍼지션  
   
--   <xref:System.Activities.Statements.Parallel> 활동  
+-   <xref:System.Activities.Statements.Parallel> 작업을 합니다.  
   
--   <xref:System.Activities.Statements.CancellationScope> 활동  
+-   <xref:System.Activities.Statements.CancellationScope> 작업입니다.  
   
 -   지속적인 타이머(<xref:System.Activities.Statements.Delay> 활동)  
   
@@ -60,9 +60,9 @@ ms.locfileid: "54223223"
 ## <a name="description-of-the-process"></a>프로세스 설명  
  Contoso, Inc.는 부서별 인원수를 엄격하게 통제하려고 합니다. 따라서 담당자가 새로운 채용 프로세스를 시작하려는 경우 항상 실제로 직원을 채용하기 전에 채용 요청 프로세스를 거쳐야 합니다. 채용 프로세스 요청(HiringRequestService 프로젝트에 정의)이라고 하는 이 프로세스는 다음 단계로 구성됩니다.  
   
-1.  담당자(요청자)가 채용 프로세스 요청을 시작합니다.  
+1. 담당자(요청자)가 채용 프로세스 요청을 시작합니다.  
   
-2.  요청자의 관리자가 요청을 승인해야 합니다.  
+2. 요청자의 관리자가 요청을 승인해야 합니다.  
   
     1.  관리자는 요청을 거부할 수 있습니다.  
   
@@ -72,13 +72,13 @@ ms.locfileid: "54223223"
   
     3.  관리자는 승인할 수 있습니다.  
   
-3.  요청자의 관리자가 승인한 후 부서 소유자가 요청을 승인해야 합니다.  
+3. 요청자의 관리자가 승인한 후 부서 소유자가 요청을 승인해야 합니다.  
   
     1.  부서 소유자는 거부할 수 있습니다.  
   
     2.  부서 소유자는 승인할 수 있습니다.  
   
-4.  부서 소유자가 승인하면 두 명의 HR 관리자나 CEO가 프로세스를 승인해야 합니다.  
+4. 부서 소유자가 승인하면 두 명의 HR 관리자나 CEO가 프로세스를 승인해야 합니다.  
   
     1.  프로세스는 수락 또는 거부 상태로 전환될 수 있습니다.  
   
@@ -86,16 +86,16 @@ ms.locfileid: "54223223"
   
  관리자가 신입 직원 채용을 승인하면 HR에서 적합한 후보를 찾아야 합니다. 이 프로세스는 두 번째 워크플로(ResumeRequestService.csproj에 정의된`ResumeRequest`)에 의해 수행됩니다. 이 워크플로는 채용 내용을 명시한 직원 모집 공고를 Contoso의 외부 채용 웹 사이트에 전송하는 프로세스를 정의하고, 지원자의 이력서를 받고, 직원 모집 상태를 모니터링합니다. 지원자는 마감 시한이 되거나 Contoso의 담당자가 삭제할 때까지 일정 기간 동안 지원할 수 있습니다. `ResumeRequest` 워크플로는 다음 단계로 구성됩니다.  
   
-1.  Contoso 담당자가 채용에 대한 정보와 마감 시한을 입력합니다. 담당자가 이 정보를 입력하면 직원 모집 웹 사이트에 모집 공고가 게시됩니다.  
+1. Contoso 담당자가 채용에 대한 정보와 마감 시한을 입력합니다. 담당자가 이 정보를 입력하면 직원 모집 웹 사이트에 모집 공고가 게시됩니다.  
   
-2.  정보를 게시하면 관심 있는 지원자는 이력서를 제출할 수 있습니다. 제출한 이력서는 직원 모집과 연결된 레코드에 저장됩니다.  
+2. 정보를 게시하면 관심 있는 지원자는 이력서를 제출할 수 있습니다. 제출한 이력서는 직원 모집과 연결된 레코드에 저장됩니다.  
   
-3.  지원자는 마감 시한이 되거나 Contoso HR 부서 담당자가 프로세스를 중지하여 모집 공고를 삭제할 때까지 이력서를 제출할 수 있습니다.  
+3. 지원자는 마감 시한이 되거나 Contoso HR 부서 담당자가 프로세스를 중지하여 모집 공고를 삭제할 때까지 이력서를 제출할 수 있습니다.  
   
 ## <a name="projects-in-the-sample"></a>샘플의 프로젝트  
  다음 표에서는 샘플 솔루션의 프로젝트를 보여 줍니다.  
   
-|Project|설명|  
+|프로젝트|설명|  
 |-------------|-----------------|  
 |ContosoHR|데이터 계약, 비즈니스 개체 및 리포지토리 클래스를 포함합니다.|  
 |HiringRequestService|채용 요청 프로세스 워크플로의 정의를 포함합니다.<br /><br /> 이 프로젝트는 워크플로(xaml 파일)를 서비스로 자체 호스트하는 콘솔 응용 프로그램으로 구현됩니다.|  
@@ -108,7 +108,7 @@ ms.locfileid: "54223223"
 ## <a name="feature-summary"></a>기능 요약  
  다음 표에는 이 샘플에서 각각의 기능이 사용되는 방식에 대한 설명이 나와 있습니다.  
   
-|기능|설명|Project|  
+|기능|설명|프로젝트|  
 |-------------|-----------------|-------------|  
 |Flowchart|비즈니스 프로세스는 순서도로 표현되며, 이 순서도 설명은 화이트보드에 비즈니스를 그리는 방식과 동일하게 프로세스를 표현합니다.|HiringRequestService|  
 |워크플로 서비스|프로세스 정의가 포함된 순서도는 서비스에서 호스트됩니다. 이 예에서는 서비스가 콘솔 응용 프로그램에서 호스트됩니다.|HiringRequestService|  
@@ -121,10 +121,10 @@ ms.locfileid: "54223223"
 |활동의 컴퍼지션|프로세스 정의는 <xref:System.Activities.Activity>의 자유 컴퍼지션을 사용합니다. 순서도에는 다른 활동과 함께 여러 개의 시퀀스 활동 및 병렬 활동이 포함되어 있습니다.|HiringRequestService|  
 |병렬 활동|-   <xref:System.Activities.Statements.ParallelForEach%601> (두 명의 HR 관리자의 승인 단계를 기다리는 중) 병렬로 CEO 및 HR 관리자의 수신함에 있는 등록에 사용 됩니다.<br />-   <xref:System.Activities.Statements.Parallel> 완료 됨 및 거부 된 단계에서 일부 정리 작업을 수행 하는 데 사용 됩니다.|HiringRequestService|  
 |모델 취소|순서도는 <xref:System.Activities.Statements.CancellationScope>를 사용하여 취소 동작을 만들며, 몇 가지 정리 작업을 수행합니다.|HiringRequestService|  
-|고객 지속성 참가자|`HiringRequestPersistenceParticipant`는 워크플로 변수의 데이터를 Contoso HR 데이터베이스에 저장된 테이블에 저장합니다.|HiringRequestService|  
-|워크플로 서비스|`ResumeRequestService`는 워크플로 서비스를 사용하여 구현됩니다. 워크플로 정의와 서비스 정보는 ResumeRequestService.xamlx에 포함되어 있습니다. 서비스는 지속성과 추적을 사용하도록 구성됩니다.|ResumeRequestService|  
-|지속적인 타이머|`ResumeRequestService`는 지속적인 타이머를 사용하여 직원 모집 공고 기간을 정의하며 직원 모집 공고는 마감 시한이 되면 마감됩니다.|ResumeRequestService|  
-|트랜잭션|<xref:System.Activities.Statements.TransactionScope>는 새 이력서를 받는 경우 몇 가지 활동 실행 내에서 데이터의 일관성을 유지하는 데 사용됩니다.|ResumeRequestService|  
+|고객 지속성 참가자|`HiringRequestPersistenceParticipant` 워크플로 변수에서 Contoso HR 데이터베이스에 저장 된 테이블에 데이터를 저장 합니다.|HiringRequestService|  
+|워크플로 서비스|`ResumeRequestService` 워크플로 서비스를 사용 하 여 구현 됩니다. 워크플로 정의와 서비스 정보는 ResumeRequestService.xamlx에 포함되어 있습니다. 서비스는 지속성과 추적을 사용하도록 구성됩니다.|ResumeRequestService|  
+|지속적인 타이머|`ResumeRequestService` 지 속성 타이머를 사용 하 여 직원 모집 공고 기간을 정의 (시간 제한이 만료 되 면 직원 모집 공고 닫혀).|ResumeRequestService|  
+|트랜잭션|<xref:System.Activities.Statements.TransactionScope> (새 이력서 수신) 하는 경우 일부의 활동 실행 내에서 데이터의 일관성을 유지 하는 데 사용 됩니다.|ResumeRequestService|  
 |트랜잭션|사용자 지정 지속성 참가자(`HiringRequestPersistenceParticipant`)와 사용자 지정 추적 참가자(`HistoryFileTrackingParticipant`)는 같은 트랜잭션을 사용합니다.|HiringRequestService|  
 |[!INCLUDE[wf1](../../../../includes/wf1-md.md)] 응용 프로그램에서 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]을 사용합니다.|두 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 응용 프로그램에서 워크플로에 액세스합니다.|InternalClient/CareersWebSite|  
   
@@ -137,87 +137,87 @@ ms.locfileid: "54223223"
   
 #### <a name="to-create-the-databases"></a>데이터베이스를 만들려면  
   
-1.  Visual Studio 용 개발자 명령 프롬프트를 엽니다.  
+1. Visual Studio 용 개발자 명령 프롬프트를 엽니다.  
   
-2.  샘플 폴더로 이동합니다.  
+2. 샘플 폴더로 이동합니다.  
   
-3.  Setup.cmd.를 실행합니다.  
+3. Setup.cmd.를 실행합니다.  
   
-4.  SQL Express에서 `ContosoHR` 및 `InstanceStore` 데이터베이스가 만들어졌는지 확인합니다.  
+4. SQL Express에서 `ContosoHR` 및 `InstanceStore` 데이터베이스가 만들어졌는지 확인합니다.  
   
 #### <a name="to-set-up-the-solution-for-execution"></a>실행할 솔루션을 설치하려면  
   
-1.  관리자 권한으로 Visual Studio를 실행합니다. HiringRequest.sln을 엽니다.  
+1. 관리자 권한으로 Visual Studio를 실행합니다. HiringRequest.sln을 엽니다.  
   
-2.  솔루션을 마우스 오른쪽 단추로 클릭 **솔루션 탐색기** 선택한 **속성**합니다.  
+2. 솔루션을 마우스 오른쪽 단추로 클릭 **솔루션 탐색기** 선택한 **속성**합니다.  
   
-3.  옵션을 선택 **여러 개의 시작 프로젝트** 설정 된 **CareersWebSite**를 **InternalClient**, **HiringRequestService**, 및 **ResumeRequestService** 하 **시작**합니다. 둡니다 **ContosoHR**를 **InboxService**, 및 **OrgService** None으로 합니다.  
+3. 옵션을 선택 **여러 개의 시작 프로젝트** 설정 된 **CareersWebSite**를 **InternalClient**, **HiringRequestService**, 및 **ResumeRequestService** 하 **시작**합니다. 둡니다 **ContosoHR**를 **InboxService**, 및 **OrgService** None으로 합니다.  
   
-4.  Ctrl+Shift+B를 눌러 솔루션을 빌드합니다. 빌드가 성공적으로 수행되었는지 확인합니다.  
+4. Ctrl+Shift+B를 눌러 솔루션을 빌드합니다. 빌드가 성공적으로 수행되었는지 확인합니다.  
   
 #### <a name="to-run-the-solution"></a>솔루션을 실행하려면  
   
-1.  솔루션을 빌드한 후 Ctrl+F5를 눌러 디버깅 없이 실행합니다. 모든 서비스가 시작되었는지 확인합니다.  
+1. 솔루션을 빌드한 후 Ctrl+F5를 눌러 디버깅 없이 실행합니다. 모든 서비스가 시작되었는지 확인합니다.  
   
-2.  마우스 오른쪽 단추로 클릭 **InternalClient** 한 다음 선택한 솔루션 **브라우저에서 보기**합니다. `InternalClient`의 기본 페이지가 표시됩니다. 서비스가 실행되고 있는지 확인한 다음 링크를 클릭합니다.  
+2. 마우스 오른쪽 단추로 클릭 **InternalClient** 한 다음 선택한 솔루션 **브라우저에서 보기**합니다. `InternalClient`의 기본 페이지가 표시됩니다. 서비스가 실행되고 있는지 확인한 다음 링크를 클릭합니다.  
   
-3.  합니다 **HiringRequest** 모듈이 표시 됩니다. 여기에서 자세히 설명된 시나리오를 따르면 됩니다.  
+3. 합니다 **HiringRequest** 모듈이 표시 됩니다. 여기에서 자세히 설명된 시나리오를 따르면 됩니다.  
   
-4.  `HiringRequest`가 완료되면 `ResumeRequest`를 시작할 수 있습니다. 여기에서 자세히 설명된 시나리오를 따르면 됩니다.  
+4. `HiringRequest`가 완료되면 `ResumeRequest`를 시작할 수 있습니다. 여기에서 자세히 설명된 시나리오를 따르면 됩니다.  
   
-5.  `ResumeRequest`가 게시되면 공용 웹 사이트인 Contoso 직원 채용 사이트에서 볼 수 있습니다. 직원 모집 공고 내용을 보고 지원하려면 직원 채용 사이트로 이동합니다.  
+5. `ResumeRequest`가 게시되면 공용 웹 사이트인 Contoso 직원 채용 사이트에서 볼 수 있습니다. 직원 모집 공고 내용을 보고 지원하려면 직원 채용 사이트로 이동합니다.  
   
-6.  마우스 오른쪽 단추로 클릭 **CareersWebSite** 선택한 솔루션 **브라우저에서 보기**합니다.  
+6. 마우스 오른쪽 단추로 클릭 **CareersWebSite** 선택한 솔루션 **브라우저에서 보기**합니다.  
   
-7.  로 다시 이동 합니다 `InternalClient` 마우스 오른쪽 단추로 클릭 하 여 **InternalClient** 솔루션에서 선택 하 고 **브라우저에서 보기**합니다.  
+7. 로 다시 이동 합니다 `InternalClient` 마우스 오른쪽 단추로 클릭 하 여 **InternalClient** 솔루션에서 선택 하 고 **브라우저에서 보기**합니다.  
   
-8.  로 이동 합니다 **JobPostings** 섹션을 클릭 하 여 합니다 **Job Postings** 수신함 최상위 메뉴에서 링크 합니다. 여기에서 자세히 설명된 시나리오를 따르면 됩니다.  
+8. 로 이동 합니다 **JobPostings** 섹션을 클릭 하 여 합니다 **Job Postings** 수신함 최상위 메뉴에서 링크 합니다. 여기에서 자세히 설명된 시나리오를 따르면 됩니다.  
   
 ## <a name="scenarios"></a>시나리오  
   
 ### <a name="hiring-request"></a>채용 요청  
   
-1.  Michael Alexander(소프트웨어 엔지니어)는 C# 업무 경력이 3년 이상인 Software Engineer in Test(SDET)를 엔지니어링 부서에 채용하기 위해 새로운 직무를 요청하려고 합니다.  
+1. Michael Alexander(소프트웨어 엔지니어)는 C# 업무 경력이 3년 이상인 Software Engineer in Test(SDET)를 엔지니어링 부서에 채용하기 위해 새로운 직무를 요청하려고 합니다.  
   
-2.  만들어진 요청 Michael의 받은 편지함에 표시 (클릭 **새로 고침** 요청이 표시 되지 않으면) Michael의 관리자 인 Peter Brehm의 승인을 대기 합니다.  
+2. 만들어진 요청 Michael의 받은 편지함에 표시 (클릭 **새로 고침** 요청이 표시 되지 않으면) Michael의 관리자 인 Peter Brehm의 승인을 대기 합니다.  
   
-3.  Peter는 Michael의 요청에 대한 조치를 취하려고 합니다. Peter는 직무에 C# 사용 경력이 3년이 아닌 5년 경력이 필요하다고 판단하고 자신의 의견을 다시 보내 검토하도록 합니다.  
+3. Peter는 Michael의 요청에 대한 조치를 취하려고 합니다. Peter는 직무에 C# 사용 경력이 3년이 아닌 5년 경력이 필요하다고 판단하고 자신의 의견을 다시 보내 검토하도록 합니다.  
   
-4.  Michael은 받은 편지함에서 관리자가 보낸 메시지를 확인하고 조치를 취하려고 합니다. Michael은 직무 요청 기록을 확인한 후 Peter의 의견에 동의합니다. Michael은 C# 경력 5년이 필요하다는 내용으로 설명을 수정하고 수정 내용을 수락합니다.  
+4. Michael은 받은 편지함에서 관리자가 보낸 메시지를 확인하고 조치를 취하려고 합니다. Michael은 직무 요청 기록을 확인한 후 Peter의 의견에 동의합니다. Michael은 C# 경력 5년이 필요하다는 내용으로 설명을 수정하고 수정 내용을 수락합니다.  
   
-5.  Peter는 Michael이 수정한 요청에 대한 조치를 취한 후 수락합니다. 이제 엔지니어링 부서 책임자인 Tsvi Reiter가 이 요청을 승인해야 합니다.  
+5. Peter는 Michael이 수정한 요청에 대한 조치를 취한 후 수락합니다. 이제 엔지니어링 부서 책임자인 Tsvi Reiter가 이 요청을 승인해야 합니다.  
   
-6.  Tsvi Reiter는 요청을 신속하게 처리하려고 하기 때문에 긴급 요청이라는 내용을 메모에 포함하고 요청을 수락합니다.  
+6. Tsvi Reiter는 요청을 신속하게 처리하려고 하기 때문에 긴급 요청이라는 내용을 메모에 포함하고 요청을 수락합니다.  
   
-7.  이제 두 명의 HR 관리자나 CEO가 요청을 승인해야 합니다. CEO인 Brian Richard Goldstein은 Tsvi의 긴급 요청을 확인한 후 요청을 수락하고 두 명의 HR 관리자의 승인을 건너뛰어 요청에 대한 조치를 취합니다.  
+7. 이제 두 명의 HR 관리자나 CEO가 요청을 승인해야 합니다. CEO인 Brian Richard Goldstein은 Tsvi의 긴급 요청을 확인한 후 요청을 수락하고 두 명의 HR 관리자의 승인을 건너뛰어 요청에 대한 조치를 취합니다.  
   
-8.  이제 이 요청은 Michael의 받은 편지함에서 제거되고 SDET 채용 프로세스가 시작되었습니다.  
+8. 이제 이 요청은 Michael의 받은 편지함에서 제거되고 SDET 채용 프로세스가 시작되었습니다.  
   
 ### <a name="start-resume-request"></a>이력서 요청 시작  
   
-1.  사용자를 적용할 수 있는 외부 웹 사이트에 게시 될 직무가 기다리고 이제 (클릭 하면 볼 수 있습니다 합니다 **Job Postings** 링크). 현재 직무를 종료하고 게시하는 HR 담당자가 직무에 대한 처리를 담당합니다.  
+1. 사용자를 적용할 수 있는 외부 웹 사이트에 게시 될 직무가 기다리고 이제 (클릭 하면 볼 수 있습니다 합니다 **Job Postings** 링크). 현재 직무를 종료하고 게시하는 HR 담당자가 직무에 대한 처리를 담당합니다.  
   
-2.  HR 직무를 편집 하려는 (클릭 하 여 합니다 **편집** 링크) 60 분의 제한 시간을 설정 하 여 (실제로 때문일 일 또는 주). 시간 제한을 통해 지정한 시간에 따라 외부 웹 사이트에서 직무를 중단할 수 있습니다.  
+2. HR 직무를 편집 하려는 (클릭 하 여 합니다 **편집** 링크) 60 분의 제한 시간을 설정 하 여 (실제로 때문일 일 또는 주). 시간 제한을 통해 지정한 시간에 따라 외부 웹 사이트에서 직무를 중단할 수 있습니다.  
   
-3.  편집한 직무를 저장 한 후에 표시 된 **Receiving Resumes** 탭 (새 작업 위치를 확인 하려면 웹 페이지 새로 고침).  
+3. 편집한 직무를 저장 한 후에 표시 된 **Receiving Resumes** 탭 (새 작업 위치를 확인 하려면 웹 페이지 새로 고침).  
   
 ### <a name="collecting-resumes"></a>이력서 접수  
   
-1.  외부 웹 사이트에 직무가 표시되어야 합니다. 구직하려는 지원자는 이 직무에 지원하고 이력서를 제출할 수 있습니다.  
+1. 외부 웹 사이트에 직무가 표시되어야 합니다. 구직하려는 지원자는 이 직무에 지원하고 이력서를 제출할 수 있습니다.  
   
-2.  Job Postings List 서비스로 돌아가면를 볼 수 있습니다"다시 시작" 지금 수집 된입니다.  
+2. Job Postings List 서비스로 돌아가면를 볼 수 있습니다"다시 시작" 지금 수집 된입니다.  
   
-3.  HR에서는 적합한 지원자를 찾은 때와 같은 경우 이력서 접수를 중지할 수도 있습니다.  
+3. HR에서는 적합한 지원자를 찾은 때와 같은 경우 이력서 접수를 중지할 수도 있습니다.  
   
 ## <a name="troubleshooting"></a>문제 해결  
   
-1.  관리자 권한으로 Visual Studio를 실행 하는 있는지 확인 합니다.  
+1. 관리자 권한으로 Visual Studio를 실행 하는 있는지 확인 합니다.  
   
-2.  솔루션이 제대로 빌드되지 않으면 다음 내용을 확인합니다.  
+2. 솔루션이 제대로 빌드되지 않으면 다음 내용을 확인합니다.  
   
     -   에 대 한 참조가 `ContosoHR` 에서 누락 되지 않았는지 여부는 `InternalClient` 또는 `CareersWebSite` 프로젝트입니다.  
   
-3.  솔루션이 제대로 실행되지 않으면 다음 내용을 확인합니다.  
+3. 솔루션이 제대로 실행되지 않으면 다음 내용을 확인합니다.  
   
     1.  모든 서비스가 실행되고 있는지 여부  
   
@@ -231,6 +231,6 @@ ms.locfileid: "54223223"
   
 ## <a name="uninstalling"></a>제거  
   
-1.  DbSetup 폴더에 있는 Cleanup.bat를 실행하여 SQL Server 인스턴스 저장소를 삭제합니다.  
+1. DbSetup 폴더에 있는 Cleanup.bat를 실행하여 SQL Server 인스턴스 저장소를 삭제합니다.  
   
-2.  하드 드라이브에서 소스 코드를 삭제합니다.
+2. 하드 드라이브에서 소스 코드를 삭제합니다.

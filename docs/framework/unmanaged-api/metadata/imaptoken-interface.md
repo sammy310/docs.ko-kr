@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 579f925498f6ded83c5e90137d04020e610599b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a50f8b13979426b8ea04f1952216afe5de337386
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716715"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111672"
 ---
 # <a name="imaptoken-interface"></a>IMapToken 인터페이스
 어셈블리 간의 매핑 기능을 제공합니다.  
@@ -45,4 +45,5 @@ ms.locfileid: "54716715"
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [메타데이터 인터페이스](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

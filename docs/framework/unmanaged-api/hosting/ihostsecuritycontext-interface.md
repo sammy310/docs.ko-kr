@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29499301260313ab796eee2be06a168f2ae48e4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9d71b7e1265110a70329377ce8ab7430e1943c49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712118"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124033"
 ---
 # <a name="ihostsecuritycontext-interface"></a>IHostSecurityContext 인터페이스
 CLR (공용 언어 런타임을) 호스트에서 구현 하는 보안 컨텍스트 정보를 유지할 수 있습니다.  
@@ -45,6 +45,7 @@ CLR (공용 언어 런타임을) 호스트에서 구현 하는 보안 컨텍스�
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICLRHostProtectionManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)
 - [IHostSecurityManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)
 - [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

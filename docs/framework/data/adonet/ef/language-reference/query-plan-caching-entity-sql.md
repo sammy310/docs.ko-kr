@@ -2,12 +2,12 @@
 title: 쿼리 계획 캐싱(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
-ms.openlocfilehash: 75c097d66ae23d32465b5a717ae627d35cdc003f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f042d46d9a601c1091e36f8d81ce8f933140b20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671137"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178180"
 ---
 # <a name="query-plan-caching-entity-sql"></a>쿼리 계획 캐싱(Entity SQL)
 쿼리 실행 시도가 있으면 쿼리 파이프라인에서는 항상 해당 쿼리가 이미 컴파일되어 사용 가능한지 알아보기 위해 쿼리 계획 캐시를 확인합니다. 사용 가능한 쿼리가 있으면 새 쿼리를 작성하지 않고 캐시된 계획을 재사용합니다. 쿼리 계획 캐시에 일치 항목이 없을 경우에는 쿼리를 컴파일하고 캐시합니다. 쿼리는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 텍스트 및 매개 변수 컬렉션(이름과 형식)으로 식별됩니다. 모든 텍스트 비교에서는 대/소문자가 구별됩니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "54671137"
   
 -   쿼리 텍스트가 상수 패턴이어야 하며, 가능한 한 상수 문자열 또는 리소스여야 합니다.  
   
--   사용자가 제공한 값을 전달해야 하는 경우 항상 <xref:System.Data.EntityClient.EntityParameter> 또는 <xref:System.Data.Objects.ObjectParameter>를 사용해야 합니다.  
+-   <xref:System.Data.EntityClient.EntityParameter> 또는 <xref:System.Data.Objects.ObjectParameter> 사용자가 제공한 값을 전달 해야 하는 경우 항상 사용 해야 합니다.  
   
  쿼리 계획 캐시에서 불필요하게 슬롯을 사용하는 다음 쿼리 패턴을 피해야 합니다.  
   
@@ -49,4 +49,5 @@ ms.locfileid: "54671137"
 -   주석 내부의 텍스트 변경  
   
 ## <a name="see-also"></a>참고자료
+
 - [Entity SQL 개요](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

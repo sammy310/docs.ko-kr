@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrNamedArgumentOnParamArray
 ms.assetid: ba35fb86-329a-4ceb-864b-045c07661482
-ms.openlocfilehash: 0f26794a8a309b190e1fac9d8374a12b1f636c78
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 155b42a104b30553e067aa4e0681ec565640bd5e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58041581"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340050"
 ---
 # <a name="named-arguments-cannot-match-paramarray-parameters"></a>명명된 인수는 ParamArray 매개 변수와 일치할 수 없습니다.
 매개 변수 배열이 값으로 전달되어야 합니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-1.  이름을 지정하는 대신 인수에 `ByVal`을 전달합니다.  
+1. 이름을 지정하는 대신 인수에 `ByVal`을 전달합니다.  
   
 ## <a name="see-also"></a>참고자료
 

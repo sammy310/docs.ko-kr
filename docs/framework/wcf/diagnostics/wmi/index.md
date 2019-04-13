@@ -2,12 +2,12 @@
 title: 진단에 Windows Management Instrumentation 사용
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: a5dae1479c9be7954b9eec1eed197f358eb48e4f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 9acb1b280248f8552680ea3fbba831b3de53b2c3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239516"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308590"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>진단에 Windows Management Instrumentation 사용
 Windows Communication Foundation (WCF) WCF Windows Management Instrumentation (WMI) 공급자를 통해 런타임으로 서비스 검사 데이터를 노출 합니다.  
@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF) WCF Windows Management Instrumentation (W
  이 구성 항목은 WMI 인터페이스를 노출합니다. 관리 응용 프로그램이 이 인터페이스를 통해 연결하여 응용 프로그램의 관리 계측에 액세스할 수 있습니다.  
   
 ## <a name="accessing-wmi-data"></a>WMI 데이터 액세스  
- 다양한 방식으로 WMI 데이터에 액세스할 수 있습니다. Microsoft Visual Basic 응용 프로그램, 스크립트, c + + 응용 프로그램에 대 한 WMI Api를 제공 하며 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]합니다. 자세한 내용은 [WMI를 사용 하 여](https://go.microsoft.com/fwlink/?LinkId=95183)입니다.  
+ 다양한 방식으로 WMI 데이터에 액세스할 수 있습니다. 스크립트를 Visual Basic 응용 프로그램에 대 한 WMI Api를 제공 하는 Microsoft C++ 응용 프로그램 및 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]합니다. 자세한 내용은 [WMI를 사용 하 여](https://go.microsoft.com/fwlink/?LinkId=95183)입니다.  
   
 > [!CAUTION]
 >  .NET Framework에서 제공한 메서드를 사용하여 WMI 데이터를 프로그래밍 방식으로 액세스하는 경우 그와 같은 메서드는 연결이 설정될 때 예외를 throw할 수 있습니다. 연결은 <xref:System.Management.ManagementObject> 인스턴스를 구성하는 동안에는 설정되지 않고, 실제 데이터 교환을 포함하는 첫 번째 요청에서 설정됩니다. 따라서 `try..catch` 블록을 사용하여 가능한 예외를 catch해야 합니다.  
@@ -56,26 +56,26 @@ Windows Communication Foundation (WCF) WCF Windows Management Instrumentation (W
   
  사용자 권한 수준을 수정하려면 다음 단계를 사용합니다.  
   
-1.  시작을 클릭 하 고 실행 한 다음 입력 **compmgmt.msc**합니다.  
+1. 시작을 클릭 하 고 실행 한 다음 입력 **compmgmt.msc**합니다.  
   
-2.  마우스 오른쪽 단추로 클릭 **서비스 및 응용 프로그램/W m i 컨트롤** 선택할 **속성**합니다.  
+2. 마우스 오른쪽 단추로 클릭 **서비스 및 응용 프로그램/W m i 컨트롤** 선택할 **속성**합니다.  
   
-3.  선택는 **보안** 탭으로 이동 하 고는 **Root/ServiceModel** 네임 스페이스. 클릭 합니다 **보안** 단추입니다.  
+3. 선택는 **보안** 탭으로 이동 하 고는 **Root/ServiceModel** 네임 스페이스. 클릭 합니다 **보안** 단추입니다.  
   
-4.  특정 그룹 또는 액세스를 제어 하 고 사용 하려는 사용자를 선택 합니다 **허용** 또는 **거부** 사용 권한을 구성 하려면 확인란을 선택 합니다.  
+4. 특정 그룹 또는 액세스를 제어 하 고 사용 하려는 사용자를 선택 합니다 **허용** 또는 **거부** 사용 권한을 구성 하려면 확인란을 선택 합니다.  
   
 ## <a name="granting-wcf-wmi-registration-permissions-to-additional-users"></a>추가 사용자에게 WCF WMI 등록 권한 부여  
  WCF는 “분리된 공급자”라고도 하는 in-process WMI 공급자를 호스트하여 "분리 된 공급자" 라고도 in-process WMI 공급자를 호스트 하 여 수행 합니다. 노출할 관리 데이터에 대해 이 공급자를 등록하는 계정에는 적절한 사용 권한이 있어야 합니다. Windows에서는 기본적으로 권한이 있는 소수의 계정 집합만이 분리된 공급자를 등록할 수 있습니다. 그러나 사용자는 대개 기본 집합에 포함되지 않은 계정에서 실행 중인 WCF 서비스의 WMI 데이터를 노출하려고 하므로 이는 문제가 됩니다.  
   
  이 권한을 제공하려면 관리자가 다음 사용 권한을 다음과 같은 순서로 추가 계정에 부여해야 합니다.  
   
-1.  WCF WMI 네임스페이스 액세스 권한  
+1. WCF WMI 네임스페이스 액세스 권한  
   
-2.  WCF 분리된 WMI 공급자 등록 권한  
+2. WCF 분리된 WMI 공급자 등록 권한  
   
 #### <a name="to-grant-wmi-namespace-access-permission"></a>WMI 네임스페이스 액세스 권한을 부여하려면  
   
-1.  다음 PowerShell 스크립트를 실행합니다.  
+1. 다음 PowerShell 스크립트를 실행합니다.  
   
     ```powershell  
     write-host ""  
@@ -122,7 +122,7 @@ Windows Communication Foundation (WCF) WCF Windows Management Instrumentation (W
   
 #### <a name="to-grant-provider-registration-access"></a>공급자 등록 권한을 부여하려면  
   
-1.  다음 PowerShell 스크립트를 실행합니다.  
+1. 다음 PowerShell 스크립트를 실행합니다.  
   
     ```powershell  
     write-host ""  
@@ -157,16 +157,16 @@ Whoami /user
   
  **%windir%\Program Files\WMI 도구\\**  
   
-1.  에 **네임 스페이스에 연결:** 창, 형식 **root\ServiceModel** 를 클릭 하 고 **확인 합니다.**  
+1. 에 **네임 스페이스에 연결:** 창, 형식 **root\ServiceModel** 를 클릭 하 고 **확인 합니다.**  
   
-2.  에 **WMI CIM Studio 로그인** 창 클릭 합니다 **옵션 >>** 창을 확장 하는 단추입니다. 선택 **패킷 개인 정보** 에 대 한 **인증 수준을**를 클릭 하 고 **확인**합니다.  
+2. 에 **WMI CIM Studio 로그인** 창 클릭 합니다 **옵션 >>** 창을 확장 하는 단추입니다. 선택 **패킷 개인 정보** 에 대 한 **인증 수준을**를 클릭 하 고 **확인**합니다.  
   
 ### <a name="windows-management-instrumentation-tester"></a>Windows Management Instrumentation Tester  
  이 도구는 Windows에 설치됩니다. 도구를 실행 하려면 입력 하 여 명령 콘솔을 시작 **cmd.exe** 에 **시작/실행** 대화 상자를 클릭 **확인**합니다. 그런 다음 입력 **wbemtest.exe** 명령 창에 있습니다. Windows Management Instrumentation Tester 도구가 시작됩니다.  
   
-1.  클릭 합니다 **Connect** 창의 오른쪽 위 모서리에서 단추입니다.  
+1. 클릭 합니다 **Connect** 창의 오른쪽 위 모서리에서 단추입니다.  
   
-2.  새 창에서 입력 **root\ServiceModel** 에 대 한 합니다 **Namespace** 필드에서 선택한 **패킷 개인 정보** 에 대 한 **인증 수준을**. **연결**을 클릭합니다.  
+2. 새 창에서 입력 **root\ServiceModel** 에 대 한 합니다 **Namespace** 필드에서 선택한 **패킷 개인 정보** 에 대 한 **인증 수준을**. **연결**을 클릭합니다.  
   
 ### <a name="using-managed-code"></a>관리 코드 사용  
  <xref:System.Management> 네임스페이스에서 제공한 클래스를 사용하여 원격 WMI 인스턴스를 프로그래밍 방식으로 액세스할 수도 있습니다. 다음 코드 샘플에서는 이를 수행하는 방법을 보여 줍니다.  

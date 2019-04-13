@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], overview
 ms.assetid: 1d37645e-086d-4d68-a358-f3c5b6e8205e
-ms.openlocfilehash: 38a0eec31c4a0910048a0ed674e997d685747862
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f9c903dd520f1aa85fc0577264288ecbc8c62a7f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664202"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111477"
 ---
 # <a name="metadata-architecture-overview"></a>메타데이터 아키텍처 개요
 Windows Communication Foundation (WCF) 내보내기, 게시, 검색 및 서비스 메타 데이터 가져오기에 대 한 다양 한 인프라를 제공 합니다. WCF 서비스 메타 데이터를 사용 하 여 Svcutil.exe와 같은 도구를 자동으로 서비스에 액세스 하기 위한 클라이언트 코드를 생성할 수 있도록 서비스의 끝점과 상호 작용 하는 방법을 설명 합니다.  
@@ -88,6 +88,7 @@ Windows Communication Foundation (WCF) 내보내기, 게시, 검색 및 서비�
  엔드포인트에 대한 바인딩이 변경된 경우 또는 같은 계약을 사용하지만 다른 바인딩이 있는 엔드포인트에 대한 채널을 만들려는 경우 서비스 엔드포인트에 대한 채널을 만드는 데 사용하는 바인딩을 동적으로 업데이트할 수 있습니다. <xref:System.ServiceModel.Description.MetadataResolver> 정적 클래스를 사용하여 특정 계약을 구현하는 서비스 엔드포인트에 대한 메타데이터를 런타임에 검색하고 가져올 수 있습니다. 그런 다음 가져온 <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> 개체를 사용하여 원하는 엔드포인트에 대한 클라이언트 또는 채널 팩터리를 만들 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Description>
 - [메타데이터 형식](../../../../docs/framework/wcf/feature-details/metadata-formats.md)
 - [메타데이터 내보내기 및 가져오기](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)

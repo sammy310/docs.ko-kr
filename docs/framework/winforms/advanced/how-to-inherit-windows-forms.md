@@ -9,12 +9,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 97964f64f1a846327b2d014088c22e53d85231e4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0d8799359a12b9bb64331d83df2500bede8c0ff2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720867"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314545"
 ---
 # <a name="how-to-inherit-windows-forms"></a>방법: Windows Forms 상속
 기본 폼에서 상속해서 새 Windows Forms를 만드는 것은 필요할 때마다 폼을 전체적으로 다시 만드는 프로세스를 거치지 않고 최선의 노력을 되풀이하는 편리한 방법입니다.  
@@ -25,9 +25,9 @@ ms.locfileid: "57720867"
   
 ### <a name="to-inherit-a-form-programmatically"></a>폼을 프로그래밍 방식으로 상속하려면 다음을 수행합니다.  
   
-1.  클래스에서 상속받을 폼이 포함된 네임스페이스에 대한 참조를 추가합니다.  
+1. 클래스에서 상속받을 폼이 포함된 네임스페이스에 대한 참조를 추가합니다.  
   
-2.  클래스 정의에서 상속받을 폼에 대한 참조를 추가합니다. 참조에는 폼이 들어 있는 네임스페이스, 마침표, 기본 폼 자체의 이름이 차례로 포함되어야 합니다.  
+2. 클래스 정의에서 상속받을 폼에 대한 참조를 추가합니다. 참조에는 폼이 들어 있는 네임스페이스, 마침표, 기본 폼 자체의 이름이 차례로 포함되어야 합니다.  
   
     ```vb  
     Public Class Form2  
@@ -41,8 +41,9 @@ ms.locfileid: "57720867"
  폼을 상속할 때 이벤트 처리기가 기본 클래스와 상속된 클래스에서 두 번 호출되는 문제가 발생할 수 있다는 점을 염두에 두어야 합니다. 이 문제를 방지하는 방법에 대한 자세한 내용은 [Visual Basic에서 상속된 이벤트 처리기 관련 문제 해결](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
-- [Inherits 문](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
+
+- [Inherits Statement](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
 - [Imports 문(.NET 네임스페이스 및 형식)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [using](~/docs/csharp/language-reference/keywords/using.md)
 - [기본 폼의 모양 수정 효과](effects-of-modifying-base-form-appearance.md)
-- [Windows Forms 시각적 개체 상속](windows-forms-visual-inheritance.md)
+- [Windows Forms 시각적 상속](windows-forms-visual-inheritance.md)

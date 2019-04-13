@@ -2,12 +2,12 @@
 title: WCF 웹 HTTP 프로그래밍 개체 모델
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: e15f616aa7ef9502176c5d508f8d8882e2a5bd47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f1772220ed5f425ec603fd8927f4617446d106eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739367"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096012"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>WCF 웹 HTTP 프로그래밍 개체 모델
 WCF 웹 HTTP 프로그래밍 모델을 통해 SOAP 없이 기본 HTTP 요청을 통해 Windows Communication Foundation (WCF) 웹 서비스를 노출 하는 개발자. WCF WEB HTTP 프로그래밍 모델은 기존 WCF 확장성 모델 위에 빌드됩니다. 다음과 같은 클래스를 정의합니다.  
@@ -74,16 +74,16 @@ WCF 웹 HTTP 프로그래밍 모델을 통해 SOAP 없이 기본 HTTP 요청을 
  <xref:System.UriTemplateTable> 클래스는 개발자가 선택한 개체에 바인딩된 <xref:System.UriTemplate> 개체의 관련 집합을 나타냅니다. 후보 URI(Uniform Resource Identifier)를 세트의 템플릿에 일치시키고 일치하는 템플릿과 연결된 데이터를 검색할 수 있습니다. <xref:System.UriTemplateTable> 매핑하는 데 내부적으로 WCF 웹 HTTP 프로그래밍 모델에서 특정 Uri 또는 Uri 그룹을 서비스 작업입니다.  
   
 ## <a name="webservicehost"></a>WebServiceHost  
- <xref:System.ServiceModel.Web.WebServiceHost>는 비SOAP 웹 스타일 서비스를 보다 쉽게 호스트할 수 있도록 <xref:System.ServiceModel.ServiceHost>를 확장합니다. <xref:System.ServiceModel.Web.WebServiceHost>는 서비스 설명에서 끝점을 찾지 못하는 경우 자동으로 서비스의 기본 주소에 기본 끝점을 만듭니다. 기본 HTTP 끝점을 만들 때 <xref:System.ServiceModel.Web.WebServiceHost>는 메타데이터 끝점이 기본 HTTP 끝점과 간섭하지 않도록 HTTP 도움말 페이지 및 WSDL(웹 서비스 기술 언어) GET 기능을 비활성화합니다. <xref:System.ServiceModel.Web.WebServiceHost>는 또한 <xref:System.ServiceModel.WebHttpBinding>을 사용하는 모든 엔드포인트에 필수 <xref:System.ServiceModel.Description.WebHttpBehavior>가 연결되어 있는지 확인합니다. 마지막으로<xref:System.ServiceModel.Web.WebServiceHost>는 보안 가상 디렉터리에서 사용될 때 연결된 IIS(인터넷 정보 서비스) 보안 설정과 함께 작동하도록 끝점의 바인딩을 자동으로 구성합니다.  
+ <xref:System.ServiceModel.Web.WebServiceHost> 확장 된 <xref:System.ServiceModel.ServiceHost> 비 SOAP 웹 스타일 서비스를 호스팅하려면 쉽게 수행할 수 있도록 합니다. <xref:System.ServiceModel.Web.WebServiceHost>는 서비스 설명에서 엔드포인트를 찾지 못하는 경우 자동으로 서비스의 기본 주소에 기본 엔드포인트를 만듭니다. 기본 HTTP 엔드포인트를 만들 때 <xref:System.ServiceModel.Web.WebServiceHost>는 메타데이터 엔드포인트가 기본 HTTP 엔드포인트와 간섭하지 않도록 HTTP 도움말 페이지 및 WSDL(웹 서비스 기술 언어) GET 기능을 비활성화합니다. <xref:System.ServiceModel.Web.WebServiceHost> 또한 사용 하는 모든 끝점을 통해 <xref:System.ServiceModel.WebHttpBinding> 에 게 필요한 <xref:System.ServiceModel.Description.WebHttpBehavior> 연결 합니다. 마지막으로<xref:System.ServiceModel.Web.WebServiceHost>는 보안 가상 디렉터리에서 사용될 때 연결된 IIS(인터넷 정보 서비스) 보안 설정과 함께 작동하도록 엔드포인트의 바인딩을 자동으로 구성합니다.  
   
 ## <a name="webservicehostfactory"></a>WebServiceHostFactory  
  <xref:System.ServiceModel.Activation.WebServiceHostFactory> 클래스는 서비스가 IIS(인터넷 정보 서비스) 또는 WAS(Windows Process Activation Service)에서 호스트될 때 동적으로 <xref:System.ServiceModel.Web.WebServiceHost>를 만드는 데 사용됩니다. 호스팅 응용 프로그램이 <xref:System.ServiceModel.Web.WebServiceHost>를 인스턴스화하는 자체 호스팅 서비스와 달리 IIS 또는 WAS에서 호스트되는 서비스는 이 클래스를 사용하여 서비스에 대한 <xref:System.ServiceModel.Web.WebServiceHost>를 만듭니다. <xref:System.ServiceModel.Activation.WebServiceHostFactory.CreateServiceHost%28System.Type%2CSystem.Uri%5B%5D%29> 메서드는 서비스에 대한 들어오는 요청을 수신할 때 호출됩니다.  
   
 ## <a name="webhttpbehavior"></a>WebHttpBehavior  
- <xref:System.ServiceModel.Description.WebHttpBehavior> 클래스는 서비스 모델 계층에서 웹 스타일 서비스 지원에 필요한 필수 포맷터, 작업 선택기 등을 제공합니다. 이 클래스는 <xref:System.ServiceModel.WebHttpBinding>과 함께 사용되는 끝점 동작으로 구현되며 각 끝점에 대해 포맷터와 작업 선택기를 지정하도록 허용하여 동일한 서비스 구현에서 SOAP 끝점과 POX 끝점을 모두 노출할 수 있습니다.  
+ <xref:System.ServiceModel.Description.WebHttpBehavior> 클래스는 서비스 모델 계층에서 웹 스타일 서비스 지원에 필요한 필수 포맷터, 작업 선택기 등을 제공합니다. 이 클래스는 <xref:System.ServiceModel.WebHttpBinding>과 함께 사용되는 엔드포인트 동작으로 구현되며 각 엔드포인트에 대해 포맷터와 작업 선택기를 지정하도록 허용하여 동일한 서비스 구현에서 SOAP 엔드포인트와 POX 엔드포인트를 모두 노출할 수 있습니다.  
   
 ### <a name="extending-webhttpbehavior"></a>WebHttpBehavior 확장  
- <xref:System.ServiceModel.Description.WebHttpBehavior>는 <xref:System.ServiceModel.Description.WebHttpBehavior.GetOperationSelector%28System.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29> 등과 같은 여러 가지 가상 메서드를 사용하여 확장할 수 있습니다. 개발자는 <xref:System.ServiceModel.Description.WebHttpBehavior>에서 클래스를 파생하고 이러한 메서드를 재정의하여 기본 동작을 사용자 지정할 수 있습니다.  
+ <xref:System.ServiceModel.Description.WebHttpBehavior> 다양 한 가상 메서드를 사용 하 여 확장 가능: <xref:System.ServiceModel.Description.WebHttpBehavior.GetOperationSelector%28System.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>합니다 <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, 및 <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>합니다. 개발자는 <xref:System.ServiceModel.Description.WebHttpBehavior>에서 클래스를 파생하고 이러한 메서드를 재정의하여 기본 동작을 사용자 지정할 수 있습니다.  
   
  <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>는 <xref:System.ServiceModel.Description.WebHttpBehavior>를 확장한 한 예입니다. <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> 브라우저 기반 ASP.NET AJAX 클라이언트로부터 HTTP 요청을 수신 하도록 Windows Communication Foundation (WCF) 끝점을 사용 하도록 설정 합니다. 합니다 [AJAX Service Using HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md) 은이 확장 지점을 사용 하는 예입니다.  
   
@@ -100,6 +100,7 @@ WCF 웹 HTTP 프로그래밍 모델을 통해 SOAP 없이 기본 HTTP 요청을 
  WCF 웹 HTTP 프로그래밍 모델을 지원 하지 않으므로 WS-* 프로토콜 WCF 웹 HTTP 프로그래밍 모델에 빌드된 웹 서비스를 보호 하는 유일한 방법은 SSL을 사용 하 여 서비스를 노출 하는 것입니다. SSL을 설정 하는 방법에 대 한 자세한 내용은 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 참조 [IIS에서 SSL을 구현 하는 방법](https://go.microsoft.com/fwlink/?LinkId=131613)  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>
 - <xref:System.ServiceModel.Web.WebInvokeAttribute>

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7fe5686f516f967ffd182788add643387cb8af9a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 05ce47953358b7025e30080fbbaf288a6c0e879d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57473970"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104599"
 ---
 # <a name="isymunmanageddocumentgetlanguage-method"></a>ISymUnmanagedDocument::GetLanguage 메서드
 이 문서의 언어 식별자를 가져옵니다.  
@@ -42,4 +42,5 @@ HRESULT GetLanguage(
  메서드가 성공 하면 S_OK입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [ISymUnmanagedDocument 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

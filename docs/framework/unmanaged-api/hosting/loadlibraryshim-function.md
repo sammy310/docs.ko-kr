@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf0aa035b78b582ede76f288443734c25e92a02c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 32aee404891bfad1aed2abc9ad84e43bcd002df5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466533"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084572"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim 함수
 지정된 된 버전의.NET Framework 재배포 가능 패키지에 포함 된 DLL 로드 합니다.  
@@ -75,4 +75,5 @@ HRESULT LoadLibraryShim (
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [사용되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

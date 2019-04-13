@@ -6,12 +6,12 @@ helpviewer_keywords:
 - graphics [WPF], rectangles
 - rectangles [WPF], drawing
 ms.assetid: beeb57ef-fab5-4446-a38a-1588f97b4c2f
-ms.openlocfilehash: 2734d5e808e8bc1f78c281e3fd6ab3c6ff12c58f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 261026b994b432565928b38ff1657115ff7cbe4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363750"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217356"
 ---
 # <a name="how-to-draw-a-rectangle"></a>방법: 사각형 그리기
 사용 하 여 사각형을 그리는 방법을 보여 주는이 예제는 <xref:System.Windows.Shapes.Rectangle> 요소입니다.  
@@ -30,6 +30,7 @@ ms.locfileid: "57363750"
  이 예제는 더 큰 샘플;의 일부 전체 샘플을 참조 하세요 [도형 요소 샘플](https://go.microsoft.com/fwlink/?LinkID=160037)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Shapes.Rectangle>
 - [도형 요소 샘플](https://go.microsoft.com/fwlink/?LinkID=160037)
 - [WPF에서 Shape 및 기본 그리기 개요](shapes-and-basic-drawing-in-wpf-overview.md)

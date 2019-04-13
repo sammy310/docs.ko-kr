@@ -12,18 +12,16 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-ms.openlocfilehash: 8586f09d5c12f732c63bccf4682edf94144fd47f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8f0b5109dd569791ca8f45dbe969b1c9e2f6407b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371673"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140857"
 ---
 # <a name="attached-events-overview"></a>연결된 이벤트 개요
-[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]은 *연결된 이벤트*라는 이벤트의 유형 및 언어 구성 요소를 정의합니다. 연결된 이벤트의 개념을 사용하면 실제로 정의하거나 이벤트를 상속하는 요소가 아닌 임의의 요소에 특정 이벤트의 핸들러를 추가할 수 있습니다. 이 경우 이벤트를 잠재적으로 발생시키는 개체나 인스턴스를 처리하는 대상이 정의하지 않으며 또는 그렇지 않으면 이벤트를 "소유"합니다.  
-  
- 
-  
+[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 언어 구성 요소를 호출 하는 이벤트 유형 정의 *연결 된 이벤트*합니다. 연결된 이벤트의 개념을 사용하면 실제로 정의하거나 이벤트를 상속하는 요소가 아닌 임의의 요소에 특정 이벤트의 핸들러를 추가할 수 있습니다. 이 경우 이벤트를 잠재적으로 발생시키는 개체나 인스턴스를 처리하는 대상이 정의하지 않으며 또는 그렇지 않으면 이벤트를 "소유"합니다.  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>전제 조건  
  이 항목에서는 [라우트된 이벤트 개요](routed-events-overview.md) 및 [XAML 개요(WPF)](xaml-overview-wpf.md)를 읽었다고 가정합니다.  
@@ -92,6 +90,7 @@ ms.locfileid: "57371673"
  그러나 기반 사용자 지정 연결 된 이벤트를 정의 하는 경우는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에 연결 된 이벤트 모델에 <xref:System.Windows.RoutedEvent>를 사용할 수 있습니다 <xref:System.Windows.UIElement.RaiseEvent%2A> 에서 연결 된 이벤트를 발생 시키는 <xref:System.Windows.UIElement> 또는 <xref:System.Windows.ContentElement>합니다. 이벤트 소스로 요소 트리의 특정 요소를 선언 하는 필요 (또는 연결 되지 않은) 라우트된 이벤트를 발생 시키기 해당 원본으로 보고 되는 <xref:System.Windows.UIElement.RaiseEvent%2A> 호출자입니다. 트리에서 소스로 보고되는 요소 판별은 서비스에 따라 다릅니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [라우트된 이벤트 개요](routed-events-overview.md)
 - [XAML 구문 정보](xaml-syntax-in-detail.md)
 - [WPF에 대한 XAML 및 사용자 지정 클래스](xaml-and-custom-classes-for-wpf.md)

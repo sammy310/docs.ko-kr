@@ -2,12 +2,12 @@
 title: Database Access Activities
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: db79f2d7605a71997ede134152b12395b9193f95
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 2463c3a87be7f7e248572d45e018b72661f4f8c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066092"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322604"
 ---
 # <a name="database-access-activities"></a>Database Access Activities
 데이터베이스 액세스 활동을 사용하여 워크플로 내에서 데이터베이스에 액세스할 수 있습니다. 이러한 활동을 검색 하거나 정보를 수정 하 고 사용 하 여 데이터베이스에 액세스 허용 [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081) 데이터베이스에 액세스할 수 있습니다.  
@@ -242,7 +242,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 |CommandType|실행할 <xref:System.Data.Common.DbCommand>의 형식입니다.|
 |Sql|실행할 SQL 명령입니다.|
 |매개 변수|SQL 쿼리의 매개 변수 컬렉션입니다.|
-|결과|쿼리가 실행된 후에 얻은 <xref:System.Data.DataSet>입니다.|
+|결과|<xref:System.Data.DataSet> 쿼리를 실행 한 후 가져옵니다.|
 
 ## <a name="configuring-connection-information"></a>연결 정보 구성
  모든 DbActivity는 동일한 구성 매개 변수를 공유합니다. 다음과 같은 두 가지 방법으로 DbActivity를 구성할 수 있습니다.
@@ -299,26 +299,26 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 
 ##### <a name="to-run-setupcmd"></a>Setup.cmd를 실행하려면
 
-1.  명령 프롬프트를 엽니다.
+1. 명령 프롬프트를 엽니다.
 
-2.  DbActivities 샘플 폴더로 이동합니다.
+2. DbActivities 샘플 폴더로 이동합니다.
 
-3.  "Setup.cmd"를 입력 하 고 ENTER 키를 누릅니다.
+3. "Setup.cmd"를 입력 하 고 ENTER 키를 누릅니다.
 
     > [!NOTE]
     >  Setup.cmd에서는 로컬 컴퓨터의 SqlExpress 인스턴스에 샘플을 설치합니다. 다른 SQL 서버 인스턴스에 샘플을 설치하려면 Setup.cmd를 새 인스턴스 이름으로 편집하세요.
 
 ##### <a name="to-uninstall-the-sample-database"></a>샘플 데이터베이스를 제거하려면
 
-1.  명령 프롬프트에서 샘플 폴더로 이동하여 Cleanup.cmd를 실행합니다.
+1. 명령 프롬프트에서 샘플 폴더로 이동하여 Cleanup.cmd를 실행합니다.
 
 ##### <a name="to-run-the-sample"></a>이 샘플을 실행하려면
 
-1.  Visual Studio 2010에서 솔루션을 열으십시오
+1. Visual Studio 2010에서 솔루션을 열으십시오
 
-2.  Ctrl+Shift+B를 눌러 솔루션을 컴파일합니다.
+2. Ctrl+Shift+B를 눌러 솔루션을 컴파일합니다.
 
-3.  Ctrl+F5를 눌러 샘플을 디버깅하지 않고 실행합니다.
+3. Ctrl+F5를 눌러 샘플을 디버깅하지 않고 실행합니다.
 
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  

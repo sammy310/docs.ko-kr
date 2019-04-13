@@ -1,5 +1,5 @@
 ---
-title: '방법: 선을 그리는 펜을 사용 합니다.'
+title: '방법: 펜을 사용하여 선 그리기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - pens [Windows Forms], drawing lines
 ms.assetid: 0828c331-a438-4bdd-a4d6-3ef1e59e8795
-ms.openlocfilehash: 3af91611eef4b97dc3461ad8cd7e36c7aa10a16f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8b4eb7684e15ffd5b0b528771490ba66f3b7bb45
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713369"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156522"
 ---
-# <a name="how-to-use-a-pen-to-draw-lines"></a>방법: 선을 그리는 펜을 사용 합니다.
+# <a name="how-to-use-a-pen-to-draw-lines"></a>방법: 펜을 사용하여 선 그리기
 필요한 줄을 그리려면를 <xref:System.Drawing.Graphics> 개체 및 <xref:System.Drawing.Pen> 개체입니다. <xref:System.Drawing.Graphics> 개체를 제공 합니다 <xref:System.Drawing.Graphics.DrawLine%2A> 메서드 및 <xref:System.Drawing.Pen> 개체 저장 되는 선의 색 및 두께 같은 기능입니다.  
   
 ## <a name="example"></a>예제  
@@ -25,9 +25,10 @@ ms.locfileid: "57713369"
  [!code-vb[System.Drawing.UsingAPen#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- 앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.PaintEventArgs> 이벤트 처리기의 매개 변수인 `e`<xref:System.Windows.Forms.Control.Paint>가 필요합니다.  
+ 앞의 예제는 Windows Forms에서 사용 하도록 설계 되었으며 필요 <xref:System.Windows.Forms.PaintEventArgs>`e`의 매개 변수는 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Drawing.Pen>
 - [펜을 사용하여 선과 도형 그리기](using-a-pen-to-draw-lines-and-shapes.md)
 - [GDI+의 펜, 선 및 사각형](pens-lines-and-rectangles-in-gdi.md)

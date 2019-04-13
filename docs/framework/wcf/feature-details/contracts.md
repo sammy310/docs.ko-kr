@@ -6,12 +6,12 @@ helpviewer_keywords:
 - contracts [WCF]
 - Windows Communication Foundation [WCF], contracts
 ms.assetid: c8364183-4ac1-480b-804a-c5e6c59a5d7d
-ms.openlocfilehash: ce9b03b1eae2a88a9e09449719b3a8e522409418
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0443e5b37e637351d6491c37ec443c93636460a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499303"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134890"
 ---
 # <a name="contracts"></a>계약
 이 섹션을 정의 하 고 Windows Communication Foundation (WCF) 계약을 구현 하는 방법을 보여 줍니다. 서비스 계약에서는 엔드포인트가 외부와 통신하는 내용을 지정합니다. 더 구체적으로 말하면, 단방향 및 이중 request/reply와 같은 기본 메시지 교환 패턴에 구성된 특정 메시지 집합에 대한 문입니다. 서비스 계약이 논리적으로 관련된 메시지 교환 집합인 경우 서비스 작업은 단일 메시지 교환이 됩니다. 예를 들어 `Hello` 작업에서는 호출자가 인사말을 알릴 수 있도록 단일 메시지를 수락해야 하며 작업 의례에 따라 메시지를 반환하거나 반환하지 않을 수 있습니다.  
@@ -66,6 +66,7 @@ ms.locfileid: "54499303"
  이러한 추가 요구 사항 프로세스는 디자인, 구현, 구성 및 Windows Communication Foundation (WCF) 서비스 응용 프로그램을 호스트 하는 동안 주의 해야 합니다. 예를 들어 세션 지원이 필요함을 계약에서 지정할 수 있습니다. 이 경우, 해당 계약 요구 사항을 지원하도록 바인딩을 구성해야 하며 그렇지 않으면 서비스 구현이 이루어지지 않습니다. 또는 통합 Windows 인증을 요구하는 서비스가 IIS(인터넷 정보 서비스)에서 호스트되는 경우 해당 서비스가 있는 웹 응용 프로그램에는 통합 Windows 인증을 사용하도록 설정되고 익명 지원은 해제되어야 합니다. 다른 유형의 서비스 호스트 응용 프로그램에 미치는 영향에 대 한 자세한 내용은 참조 하세요. [호스팅](../../../../docs/framework/wcf/feature-details/hosting.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [끝점: 주소, 바인딩 및 계약](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+
+- [엔드포인트: 주소, 바인딩 및 계약](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
 - [서비스 계약 디자인](../../../../docs/framework/wcf/designing-service-contracts.md)
 - [서비스 계약 구현](../../../../docs/framework/wcf/implementing-service-contracts.md)

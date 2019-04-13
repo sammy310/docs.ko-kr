@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], Booleans with key frames
 - key frames [WPF], animating Booleans with
 ms.assetid: 4b0fac96-6231-4fcf-9775-4dd673ddc785
-ms.openlocfilehash: 503e8ec8bdaf88bcba4093075b1e7216b7cd3746
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 59a72916721cccbe66f704253f148828fa8cd418
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361957"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175034"
 ---
 # <a name="how-to-animate-a-boolean-by-using-key-frames"></a>방법: 키 프레임을 사용하여 부울에 애니메이션 효과 주기
 이 예제에서는 부울 속성 값에 애니메이션 효과 <xref:System.Windows.Controls.Button> 키 프레임을 사용 하 여 제어 합니다.  
@@ -29,6 +29,7 @@ ms.locfileid: "57361957"
  전체 샘플을 보려면 [키 프레임 애니메이션 샘플](https://go.microsoft.com/fwlink/?LinkID=160012)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames>
 - <xref:System.Windows.UIElement.IsEnabled%2A>
 - <xref:System.Windows.Controls.Button>

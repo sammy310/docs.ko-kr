@@ -2,12 +2,12 @@
 title: Microsoft.Transactions.TransactionBridge.EnlistTransactionFailure
 ms.date: 03/30/2017
 ms.assetid: 1b9f5139-e122-4716-9ef7-2f38e1813993
-ms.openlocfilehash: 4f51777ae690178b83d353f72e63a6f2958b1592
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93c96d94aaeddeb7e7b04ea80645b8de95b0343e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674585"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143327"
 ---
 # <a name="microsofttransactionstransactionbridgeenlisttransactionfailure"></a>Microsoft.Transactions.TransactionBridge.EnlistTransactionFailure
 WS-AT 프로토콜 서비스가 제공된 코디네이션 컨텍스트를 사용하여 트랜잭션에 참여하지 못했습니다.  
@@ -19,6 +19,7 @@ WS-AT 프로토콜 서비스가 제공된 코디네이션 컨텍스트를 사용
  추적 메시지 내의 상태 문자열을 검사하여 실행 가능한 항목이 있는지 확인하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [추적을 사용하여 애플리케이션 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [추적을 사용하여 응용 프로그램 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [관리 및 진단](../../../../../docs/framework/wcf/diagnostics/index.md)

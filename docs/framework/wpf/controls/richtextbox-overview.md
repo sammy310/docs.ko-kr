@@ -8,22 +8,21 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF], about RichTextBox control
 ms.assetid: c94548b2-c1e9-4b62-b10c-dd8740eb23d8
-ms.openlocfilehash: 689094bda355f095c30d6cc2a462e6d0e630753b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9aa0d33b3cb2c15ba9c1cb7e7d7be9a3125f66d3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378199"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162713"
 ---
 # <a name="richtextbox-overview"></a>RichTextBox 개요
 <xref:System.Windows.Controls.RichTextBox> 컨트롤 표시 하거나 단락, 이미지, 테이블 등을 포함 한 유동 콘텐츠를 편집할 수 있습니다. 이 항목에서는 소개 합니다 <xref:System.Windows.Controls.TextBox> 클래스 및 둘 다에서 사용 하는 방법의 예가 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 및 C#.  
-  
-  
+
 <a name="textbox_or_richtextbox"></a>   
 ## <a name="textbox-or-richtextbox"></a>TextBox 또는 RichTextBox?  
  그러나 둘 다 <xref:System.Windows.Controls.RichTextBox> 고 <xref:System.Windows.Controls.TextBox> 텍스트를 편집할 수 있도록, 두 개의 서로 다른 시나리오에 사용 됩니다. <xref:System.Windows.Controls.RichTextBox> 서식 있는 텍스트, 이미지, 테이블 또는 기타 풍부한 콘텐츠를 편집 하려면 사용자에 대 한 필요한 경우에 것이 좋습니다. 예를 들어 이미지 문서 편집, 문서 또는 서식 지정 해야 하는 블로그, 등을 사용 하 여 훌륭하게 수행할는 <xref:System.Windows.Controls.RichTextBox>합니다. A <xref:System.Windows.Controls.TextBox> 적은 시스템 리소스를 필요는 <xref:System.Windows.Controls.RichTextBox> 하며만 텍스트로 해야 (즉, 가장 적합)을 편집할 때 이상적입니다. 참조 [TextBox 개요](textbox-overview.md) 대 한 자세한 내용은 <xref:System.Windows.Controls.TextBox>합니다. 아래 표에서의 주요 기능 <xref:System.Windows.Controls.TextBox> 고 <xref:System.Windows.Controls.RichTextBox>입니다.  
   
-|Control|실시간 맞춤법 검사|상황에 맞는 메뉴|서식 명령 등 <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (Ctr + B)|<xref:System.Windows.Documents.FlowDocument> 이미지, 단락, 테이블 등과 같은 콘텐츠입니다.|  
+|컨트롤|실시간 맞춤법 검사|상황에 맞는 메뉴|서식 명령 등 <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (Ctr + B)|<xref:System.Windows.Documents.FlowDocument> 이미지, 단락, 테이블 등과 같은 콘텐츠입니다.|  
 |-------------|------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Windows.Controls.TextBox>|예|예|아니요|아니요.|  
 |<xref:System.Windows.Controls.RichTextBox>|예|예|예|예|  
@@ -95,5 +94,6 @@ ms.locfileid: "57378199"
  [!code-vb[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/VisualBasic/SaveLoadPrintRTB.xaml.vb#saveloadprintrtbcodeexamplewholepage)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [방법 항목](richtextbox-how-to-topics.md)
 - [TextBox 개요](textbox-overview.md)

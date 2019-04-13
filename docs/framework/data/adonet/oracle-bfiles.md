@@ -2,12 +2,12 @@
 title: Oracle BFILE
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
-ms.openlocfilehash: 825cb9eb4bdb54509c8ca3c20db4dade8b3ece73
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bb9f7e67016cf4b1d467935fe302ab4a40edbfa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677240"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304469"
 ---
 # <a name="oracle-bfiles"></a>Oracle BFILE
 .NET Framework Data Provider for Oracle에는 Oracle <xref:System.Data.OracleClient.OracleBFile> 데이터 형식 작업에 사용되는 <xref:System.Data.OracleClient.OracleType.BFile> 클래스가 포함되어 있습니다.  
@@ -26,9 +26,9 @@ ms.locfileid: "54677240"
   
  NULL이 아닌 각 **OracleBFile** 개체가 기본 물리적 파일의 위치를 정의 하는 두 엔터티를 사용 하 여 연결 합니다.  
   
-1.  파일 시스템의 디렉터리에 대한 데이터베이스 별칭인 Oracle DIRECTORY 개체입니다.  
+1. 파일 시스템의 디렉터리에 대한 데이터베이스 별칭인 Oracle DIRECTORY 개체입니다.  
   
-2.  DIRECTORY 개체와 연관된 디렉터리에 위치하는 원본 파일 이름입니다.  
+2. DIRECTORY 개체와 연관된 디렉터리에 위치하는 원본 파일 이름입니다.  
   
 ## <a name="example"></a>예제  
  다음 C# 예제를 만드는 방법을 보여 줍니다.는 **BFILE** 다음의 형태로 검색 하 고 Oracle 테이블에 **OracleBFile** 개체입니다. 예제를 사용 하 여는 <xref:System.Data.OracleClient.OracleDataReader> 개체 및 **OracleBFile** **Seek** 하 고 **읽기** 메서드. 이 샘플을 사용 하려면 먼저 만들어야 라는 디렉터리를 참고 "c:\\\bfiles"와 "MyFile.jpg" Oracle 서버에 명명 된 파일입니다.  
@@ -87,5 +87,6 @@ public class Sample
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [Oracle 및 ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

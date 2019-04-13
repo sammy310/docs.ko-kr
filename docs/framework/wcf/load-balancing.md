@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: 2a0644ea17db2923f5729feda40f3b2bff364231
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a43546b9cbb95cd16c1d94372e786acd103ea0bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660751"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228642"
 ---
 # <a name="load-balancing"></a>부하 분산
 Windows Communication Foundation (WCF) 응용 프로그램의 용량을 늘리려면 하나의 방법은 부하 분산 된 서버 팜에 배포 하 여 확장할 것입니다. WCF 응용 프로그램으로 표준 부하 분산 기술을 Windows 네트워크 부하 분산과 같은 소프트웨어 부하 분산 장치를 포함 하 여 하드웨어 기반 부하 분산을 사용 하 여 부하가 분산 될 수 있습니다.  
@@ -92,4 +92,5 @@ Windows Communication Foundation (WCF) 응용 프로그램의 용량을 늘리�
  부하 분산 시나리오에서 성능을 최대화하려면 <xref:System.ServiceModel.NetTcpSecurity>(<xref:System.ServiceModel.SecurityMode.Transport> 또는 <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>)를 사용하는 것이 좋습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [인터넷 정보 서비스 호스팅을 위한 최선의 방법](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)

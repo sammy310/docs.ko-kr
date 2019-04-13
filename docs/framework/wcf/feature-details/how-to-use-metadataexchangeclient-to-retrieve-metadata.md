@@ -1,15 +1,15 @@
 ---
-title: '방법: MetadataExchangeClient를 사용 하 여 메타 데이터를 검색 합니다.'
+title: '방법: MetadataExchangeClient를 사용하여 메타데이터 검색'
 ms.date: 03/30/2017
 ms.assetid: 0754e9dc-13c5-45c2-81b5-f3da466e5a87
-ms.openlocfilehash: 8f99fcf8a355001908c31c383201da8db78c6d24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32acef65ee30d7b80b37c11bdd024e3c09a935ef
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708768"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327882"
 ---
-# <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>방법: MetadataExchangeClient를 사용 하 여 메타 데이터를 검색 합니다.
+# <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>방법: MetadataExchangeClient를 사용하여 메타데이터 검색
 WS-MetadataExchange(MEX) 프로토콜을 사용하여 메타데이터를 다운로드하려면 <xref:System.ServiceModel.Description.MetadataExchangeClient> 클래스를 사용합니다. 검색된 메타데이터 파일은 <xref:System.ServiceModel.Description.MetadataSet> 개체로 반환됩니다. 반환된 <xref:System.ServiceModel.Description.MetadataSet> 개체에는 <xref:System.ServiceModel.Description.MetadataSection> 개체의 컬렉션이 들어 있으며, 각 개체에는 특정 메타데이터 언어와 식별자가 포함되어 있습니다. 반환된 메타데이터는 파일로 작성할 수 있으며, 반환된 메타데이터에 WSDL(웹 서비스 기술 언어) 문서가 있는 경우에는 <xref:System.ServiceModel.Description.WsdlImporter>를 사용하여 메타데이터를 가져올 수 있습니다.  
   
  주소를 사용하는 <xref:System.ServiceModel.Description.MetadataExchangeClient> 생성자는 주소의 URI(Uniform Resource Identifier) 체계와 일치하는 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 정적 클래스의 바인딩을 사용합니다. 또는 사용할 바인딩을 명시적으로 지정할 수 있도록 하는 <xref:System.ServiceModel.Description.MetadataExchangeClient> 생성자를 사용할 수 있습니다. 지정된 바인딩을 사용하여 모든 메타데이터 참조를 확인할 수 있습니다.  
@@ -21,11 +21,11 @@ WS-MetadataExchange(MEX) 프로토콜을 사용하여 메타데이터를 다운�
   
 ### <a name="to-use-metadataexchangeclient-to-obtain-metadata"></a>MetadataExchangeClient를 사용하여 메타데이터를 가져오려면  
   
-1.  바인딩, 엔드포인트 구성 이름 또는 메타데이터의 주소를 명시적으로 지정하여 새로운 <xref:System.ServiceModel.Description.MetadataExchangeClient> 개체를 만듭니다.  
+1. 바인딩, 엔드포인트 구성 이름 또는 메타데이터의 주소를 명시적으로 지정하여 새로운 <xref:System.ServiceModel.Description.MetadataExchangeClient> 개체를 만듭니다.  
   
-2.  필요에 따라 <xref:System.ServiceModel.Description.MetadataExchangeClient>를 구성합니다. 예를 들어 메타데이터 요청 시 사용할 자격 증명을 지정하고, 확인할 메타데이터 참조 방법을 제어하며, 시간 제한을 초과하기 전에 메타데이터 요청 <xref:System.ServiceModel.Description.MetadataExchangeClient.OperationTimeout%2A> 속성을 설정할 수 있습니다.  
+2. 필요에 따라 <xref:System.ServiceModel.Description.MetadataExchangeClient>를 구성합니다. 예를 들어 메타데이터 요청 시 사용할 자격 증명을 지정하고, 확인할 메타데이터 참조 방법을 제어하며, 시간 제한을 초과하기 전에 메타데이터 요청 <xref:System.ServiceModel.Description.MetadataExchangeClient.OperationTimeout%2A> 속성을 설정할 수 있습니다.  
   
-3.  <xref:System.ServiceModel.Description.MetadataSet> 메서드 중 하나를 호출하여, 검색된 메타데이터가 들어 있는 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> 개체를 구합니다. <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> 생성 시 주소를 명시적으로 지정한 경우에는 인수를 사용하지 않는 <xref:System.ServiceModel.Description.MetadataExchangeClient> 오버로드만 사용할 수 있음에 유의하십시오.  
+3. <xref:System.ServiceModel.Description.MetadataSet> 메서드 중 하나를 호출하여, 검색된 메타데이터가 들어 있는 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> 개체를 구합니다. <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> 생성 시 주소를 명시적으로 지정한 경우에는 인수를 사용하지 않는 <xref:System.ServiceModel.Description.MetadataExchangeClient> 오버로드만 사용할 수 있음에 유의하십시오.  
   
 ## <a name="example"></a>예제  
  다음 코드 예제에서는 <xref:System.ServiceModel.Description.MetadataExchangeClient>를 사용하여 메타데이터 파일을 다운로드하고 열거하는 방법을 보여 줍니다.  
@@ -36,6 +36,7 @@ WS-MetadataExchange(MEX) 프로토콜을 사용하여 메타데이터를 다운�
  이 코드 예제를 컴파일하려면 System.ServiceModel.dll 어셈블리를 참조하여 <xref:System.ServiceModel.Description> 네임스페이스를 가져와야 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Description.MetadataResolver>
 - <xref:System.ServiceModel.Description.MetadataExchangeClient>
 - <xref:System.ServiceModel.Description.WsdlImporter>

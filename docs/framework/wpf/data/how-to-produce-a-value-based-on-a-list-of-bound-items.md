@@ -1,5 +1,5 @@
 ---
-title: '방법: 바인딩된 항목 목록을 기반으로 값 산출'
+title: '방법: 바인딩된 항목 목록을 기반으로 값 생성'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding [WPF], MultiBinding
 - Multibinding [WPF]
 ms.assetid: b3d06378-b511-4181-95aa-316d60c9229b
-ms.openlocfilehash: 77c832c1460749ced58e7a20af333c5ed9dd1555
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c2ec5ff26c89649294df266e790445e5aa5d08ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368127"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200521"
 ---
-# <a name="how-to-produce-a-value-based-on-a-list-of-bound-items"></a>방법: 바인딩된 항목 목록을 기반으로 값 산출
+# <a name="how-to-produce-a-value-based-on-a-list-of-bound-items"></a>방법: 바인딩된 항목 목록을 기반으로 값 생성
 <xref:System.Windows.Data.MultiBinding> 바인딩 대상 속성을 원본 속성의 목록을 바인딩하고 다음 제공 된 입력을 사용 하 여 값을 생성 하는 논리를 적용할 수 있습니다. 이 예제에 사용 하는 방법을 보여 줍니다. <xref:System.Windows.Data.MultiBinding>합니다.  
   
 ## <a name="example"></a>예제  
@@ -31,9 +31,10 @@ ms.locfileid: "57368127"
  [!code-csharp[MultiBinding#3](~/samples/snippets/csharp/VS_Snippets_Wpf/MultiBinding/CSharp/NameConverter.cs#3)]
  [!code-vb[MultiBinding#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MultiBinding/VisualBasic/NameConverter.vb#3)]  
   
- `NameConverter`는 <xref:System.Windows.Data.IMultiValueConverter> 인터페이스를 구현합니다. `NameConverter`은 개별 바인딩에서 값을 가져오고 값 개체 배열에 저장합니다. 순서를 <xref:System.Windows.Data.Binding> 요소 아래에 표시 된 <xref:System.Windows.Data.MultiBinding> 요소는 해당 값이 배열에 저장 되는 순서. 값을 <xref:System.Windows.Data.MultiBinding.ConverterParameter%2A> 특성의 매개 변수 인수에 의해 참조 되는 <xref:System.Windows.Data.MultiBinding.Converter%2A> 스위치 매개 변수 이름의 서식을 지정 하는 방법을 결정를 수행 하는 메서드를 합니다.  
+ `NameConverter` 구현 된 <xref:System.Windows.Data.IMultiValueConverter> 인터페이스입니다. `NameConverter` 개별 바인딩에서 값을 사용 하 여 값 개체 배열에 저장 합니다. 순서를 <xref:System.Windows.Data.Binding> 요소 아래에 표시 된 <xref:System.Windows.Data.MultiBinding> 요소는 해당 값이 배열에 저장 되는 순서. 값을 <xref:System.Windows.Data.MultiBinding.ConverterParameter%2A> 특성의 매개 변수 인수에 의해 참조 되는 <xref:System.Windows.Data.MultiBinding.Converter%2A> 스위치 매개 변수 이름의 서식을 지정 하는 방법을 결정를 수행 하는 메서드를 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [바인딩된 데이터 변환](how-to-convert-bound-data.md)
 - [데이터 바인딩 개요](data-binding-overview.md)
 - [방법 항목](data-binding-how-to-topics.md)

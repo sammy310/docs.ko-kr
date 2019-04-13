@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: cea3d57442d330b662335326c5b8ffd78d276ef2
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 51da86d6c0f565d1baa58452a661ccbaa321538c
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093751"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517319"
 ---
 # <a name="feed-customization-wcf-data-services"></a>피드 사용자 지정(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 사용 하 여는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 데이터 피드로 노출 합니다. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 데이터 피드의 Atom 및 개체 JSON (JavaScript Notation) 형식을 지원합니다. Atom 피드를 사용 하는 경우 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 같은 엔터티 및 관계를 HTTP 메시지의 본문에 포함 될 수 있는 XML 형식으로 데이터를 serialize 하는 표준 방법을 제공 합니다. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 엔터티에 포함 된 데이터 및 Atom 요소 간의 기본 엔터티 속성 매핑을 정의 합니다. 자세한 내용은 참조 하세요. [OData: Atom 형식](https://go.microsoft.com/fwlink/?LinkID=185794)합니다.  
@@ -33,11 +33,11 @@ ms.locfileid: "56093751"
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>Entity Framework 공급자를 사용하여 피드 사용자 지정  
  [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 공급자와 함께 사용된 데이터 모델은 .edmx 파일에 XML로 표현됩니다. 이 경우 사용자 지정 피드를 정의하는 특성은 데이터 모델의 엔터티 형식과 속성을 나타내는 `EntityType` 및 `Property` 요소에 추가됩니다. 이러한 피드 사용자 지정 특성에 정의 되지 않은 [ \[MC-CSDL\]: Conceptual Schema Definition File Format](https://go.microsoft.com/fwlink/?LinkId=159072), 형식인는 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 공급자 사용 하 여 데이터 모델을 정의 합니다. 따라서 `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`에 정의된 특정 스키마 네임스페이스에 피드 사용자 지정 특성을 선언해야 합니다. 다음 XML 조각은 `Property`, `Products` 및 `ProductName` 속성을 정의하는 `ReorderLevel` 엔터티 형식의 `UnitsInStock` 요소에 적용되는 피드 사용자 지정 특성을 보여 줍니다.  
   
- [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/northwind.csdl#edmfeedattributes)]  
+ [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/northwind.csdl#edmfeedattributes)]  
   
  이러한 특성은 `Products` 엔터티 집합에 대해 다음 사용자 지정 데이터 피드를 생성합니다. 사용자 지정 데이터 피드에서 `ProductName` 속성 값은 `author` 요소와 `ProductName` 속성 요소에 모두 표시되고, `UnitsInStock` 속성은 고유한 네임스페이스와 특성으로 `ReorderLevel` 속성을 사용하여 사용자 지정 요소에 표시됩니다.  
   
- [!code-xml[Astoria Custom Feeds#EdmFeedResultProduct](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/edmfeedresult.xml#edmfeedresultproduct)]  
+ [!code-xml[Astoria Custom Feeds#EdmFeedResultProduct](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/edmfeedresult.xml#edmfeedresultproduct)]  
   
  자세한 내용은 [방법: Entity Framework 공급자를 사용한 피드 사용자 지정](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md)합니다.  
   
@@ -65,12 +65,12 @@ ms.locfileid: "56093751"
 > [!NOTE]
 >  이 예제에 대 한 데이터 모델 항목에 정의 되어 [방법: 리플렉션 공급자를 사용 하 여 데이터 서비스를 만드는](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)합니다.  
   
- [!code-csharp[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria custom feeds/cs/orderitems.svc.cs#customorderfeed)]
- [!code-vb[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria custom feeds/vb/orderitems.svc.vb#customorderfeed)]  
+ [!code-csharp[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_custom_feeds/cs/orderitems.svc.cs#customorderfeed)]
+ [!code-vb[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_custom_feeds/vb/orderitems.svc.vb#customorderfeed)]  
   
  이러한 특성은 `Orders` 엔터티 집합에 대해 다음 사용자 지정 데이터 피드를 생성합니다. 이 사용자 지정 피드를는 `OrderId` 속성 값에만 표시 합니다 `title` 요소의 `entry` 및 `Customer` 속성 값에 모두 표시 됩니다는 `author` 요소와는 `Customer` 속성 요소:  
   
- [!code-xml[Astoria Custom Feeds#IQueryableFeedResult](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/iqueryablefeedresult.xml#iqueryablefeedresult)]  
+ [!code-xml[Astoria Custom Feeds#IQueryableFeedResult](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/iqueryablefeedresult.xml#iqueryablefeedresult)]  
   
  자세한 내용은 [방법: 리플렉션 공급자를 사용 하 여 피드 사용자 지정](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-the-reflection-provider-wcf-data-services.md)합니다.  
   
@@ -93,5 +93,6 @@ ms.locfileid: "56093751"
  자세한 내용은 [데이터 서비스 버전 관리](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [리플렉션 공급자](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)
 - [Entity Framework 공급자](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)

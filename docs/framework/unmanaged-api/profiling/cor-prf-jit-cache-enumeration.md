@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6aaa334c83aff18886c0c2db4462d6baaa4cd70f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0cdbe36403f830926d611ffdc655d82ea25ddeef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687416"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144796"
 ---
 # <a name="corprfjitcache-enumeration"></a>COR_PRF_JIT_CACHE 열거형
 캐시된 함수 검색의 결과를 나타냅니다.  
@@ -55,4 +55,5 @@ typedef enum {
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [프로파일링 열거형](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

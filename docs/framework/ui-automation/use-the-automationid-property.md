@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: 88e703d6cee608676be541961614403cf34a53c7
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 1f487e9d686ab82adb40cdc31aad68390fbdff3f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674837"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173097"
 ---
 # <a name="use-the-automationid-property"></a>AutomationID 속성 사용
 > [!NOTE]
@@ -22,16 +22,16 @@ ms.locfileid: "57674837"
   
  이 항목에는 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 를 사용하여 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 내에서 요소를 찾는 방법과 시기를 보여주는 시나리오와 샘플 코드가 있습니다.  
   
- <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 는 형제 항목에서 UI 자동화 요소를 고유하게 식별합니다. 컨트롤 식별과 관련된 속성 식별자에 대한 자세한 내용은 [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)를 참조하세요.  
+ <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 형제 항목에서 UI 자동화 요소를 고유 하 게 식별합니다. 컨트롤 식별과 관련된 속성 식별자에 대한 자세한 내용은 [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)를 참조하세요.  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 는 트리 전체에서 고유한 ID를 보장하지 않습니다. 일반적으로 컨테이너 및 범위 정보가 필요합니다. 예를 들어, 애플리케이션에는 여러 개의 최상위 메뉴가 있는 메뉴 컨트롤과 여러 개의 자식 메뉴 항목이 포함될 수 있습니다. 이러한 보조 메뉴 항목은 "Item1", "Item 2" 등과 같이 일반적인 체계로 식별되어 최상위 메뉴 항목에서 자식에 대한 중복 식별자가 허용될 수 있습니다.  
+>  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 트리 전체에서 고유한 id를 보장 하지 않습니다. 일반적으로 컨테이너 및 범위 정보가 유용 하 게 해야 합니다. 예를 들어, 애플리케이션에는 여러 개의 최상위 메뉴가 있는 메뉴 컨트롤과 여러 개의 자식 메뉴 항목이 포함될 수 있습니다. 이러한 보조 메뉴 항목은 "Item1", "Item 2" 등과 같이 일반적인 체계로 식별되어 최상위 메뉴 항목에서 자식에 대한 중복 식별자가 허용될 수 있습니다.  
   
 ## <a name="scenarios"></a>시나리오  
  주 UI 자동화 클라이언트 애플리케이션의 3가지 시나리오에서, <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 를 사용해야 요소를 검색할 때 정확하고 일관된 결과를 얻을 수 있다고 확인되었습니다.  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 는 최상위 응용 프로그램 창, ID 또는 x:Uid가 없는 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 컨트롤에서 파생된 UI 자동화 요소, 컨트롤 ID가 없는 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 컨트롤에서 파생된 UI 자동화 요소를 제외하고 컨트롤 뷰의 모든 UI 자동화 요소에서 지원됩니다.  
+>  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 최상위 응용 프로그램 창, UI 자동화 요소에서 파생 된 제외 하 고 컨트롤 뷰의 모든 UI 자동화 요소에서 지원 됩니다 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] ID 또는 X:uid가 및 UI 자동화 요소에서 파생 되지 않은 컨트롤 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 컨트롤 컨트롤 ID가 없습니다.  
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>검색 가능하고 고유한 AutomationID를 사용하여 UI 자동화 트리에서 특정 요소를 찾습니다.  
   
@@ -57,6 +57,7 @@ ms.locfileid: "57674837"
 -   특정 상황에서는 AutomationID가 형제 항목 간에서만 고유하기 때문에 UI 자동화 트리에서 여러 요소의 AutomationID 속성 값이 동일할 수 있습니다. 이러한 상황에서는 필요에 따라 최상위 항목을 기준으로 요소를 고유하게 식별할 수 있습니다. 예를 들어, 개발자가 자식 항목이 "Item1", "Item2" 등과 같은 순차적 AutomationID로 식별되는 여러 개의 자식 메뉴 항목과 함께 다수의 메뉴 항목이 있는 메뉴 모음을 제공할 수 있습니다. 이 경우, 필요에 따라 상위 항목 및 최상위 항목(필요한 경우)의 AutomationID와 함께 각 메뉴 항목의 AutomationID로 고유하게 식별할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>
 - [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
 - [속성 조건을 기반으로 UI 자동화 요소 찾기](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)

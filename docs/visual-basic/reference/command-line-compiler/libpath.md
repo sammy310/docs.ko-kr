@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /libpath compiler option [Visual Basic]
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
-ms.openlocfilehash: b8e28b821f6536ddb5c7612e8706e024dd79a0bd
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b7bfcb0f2034145822922126fe61efea8d8ef269
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58833319"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344210"
 ---
 # <a name="-libpath"></a>-libpath
 참조 된 어셈블리의 위치를 지정 합니다.  
@@ -33,13 +33,13 @@ ms.locfileid: "58833319"
   
  컴파일러는 정규화되지 않은 어셈블리 참조를 다음 순서대로 검색합니다.  
   
-1.  현재 작업 디렉터리입니다. 컴파일러가 호출되는 디렉터리입니다.  
+1. 현재 작업 디렉터리입니다. 컴파일러가 호출되는 디렉터리입니다.  
   
-2.  공용 언어 런타임 시스템 디렉터리입니다.  
+2. 공용 언어 런타임 시스템 디렉터리입니다.  
   
-3.  지정 된 디렉터리 `/libpath`합니다.  
+3. 지정 된 디렉터리 `/libpath`합니다.  
   
-4.  LIB 환경 변수로 지정된 디렉터리입니다.  
+4. LIB 환경 변수로 지정된 디렉터리입니다.  
   
  `-libpath` 가산적; 지정 옵션은 이전 값에 추가 되 면 보다 더 많은 것입니다.  
   

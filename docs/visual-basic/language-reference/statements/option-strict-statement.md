@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: adfac0eebc0d50ed3c8c523c0442636b05901c18
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8547e8e1eaf73b266d737e33acd79dd4ec539c6f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355131"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310189"
 ---
 # <a name="option-strict-statement"></a>Option Strict 문
 암시적 데이터 형식 변환을 확대 변환 으로만 제한 하 고 런타임에 바인딩을 허용 하지 않습니다.에 이어지는 암시적 형식 지정을 허용 하지 않습니다는 `Object` 형식입니다.  
@@ -69,9 +69,9 @@ Option Strict { On | Off }
   
 -   [+= 연산자](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
   
--   [\ 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
+-   [\ 연산자(Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
   
--   [/ = 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
+-   [/= 연산자(Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
 -   [Char 데이터 형식](../../../visual-basic/language-reference/data-types/char-data-type.md)  
   
@@ -96,8 +96,8 @@ Option Strict { On | Off }
   
 |데이터 형식 지정 여부|이니셜라이저 지정 여부|예제|결과|  
 |---|---|---|---|  
-|아니요|아니요|`Dim qty`|`Option Strict`가 off(기본값)이면 변수는 `Nothing`으로 설정됩니다.<br /><br /> `Option Strict`가 on이면 컴파일 타임 오류가 발생합니다.|  
-|아니요|예|`Dim qty = 5`|`Option Infer`가 on(기본값)이면 변수가 이니셜라이저의 데이터 형식을 사용합니다. 참조 [지역 형식 유추](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)합니다.<br /><br /> `Option Infer`가 off이고 `Option Strict`고 off이면 변수가 `Object`의 데이터 형식을 사용합니다.<br /><br /> `Option Infer`가 off이고 `Option Strict`는 on이면 컴파일 타임 오류가 발생합니다.|  
+|아니요|아니요|`Dim qty`|`Option Strict`가 off(기본값)이면 변수는 `Nothing`으로 설정됩니다.<br /><br /> `Option Strict`가 on이면 컴파일 시간 오류가 발생합니다.|  
+|아니요|예|`Dim qty = 5`|`Option Infer`가 on(기본값)이면 변수가 이니셜라이저의 데이터 형식을 사용합니다. 참조 [지역 형식 유추](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)합니다.<br /><br /> `Option Infer`가 off이고 `Option Strict`고 off이면 변수가 `Object`의 데이터 형식을 사용합니다.<br /><br /> `Option Infer`가 off이고 `Option Strict`는 on이면 컴파일 시간 오류가 발생합니다.|  
 |예|아니요|`Dim qty As Integer`|변수는 데이터 형식의 기본값으로 초기화됩니다. 자세한 내용은 [Dim 문](../../../visual-basic/language-reference/statements/dim-statement.md)합니다.|  
 |예|예|`Dim qty  As Integer = 5`|이니셜라이저의 데이터 형식을 지정한 데이터 형식으로 변환할 수 없으면 컴파일 시간 오류가 발생합니다.|  
   
@@ -109,9 +109,9 @@ Option Strict { On | Off }
 ### <a name="to-set-option-strict-in-the-ide"></a>IDE에서 Option Strict를 설정 하려면  
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
+1. **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
   
-2.  에 **컴파일** 탭의 값을 설정 합니다 **Option Strict** 상자입니다.  
+2. 에 **컴파일** 탭의 값을 설정 합니다 **Option Strict** 상자입니다.  
   
 ### <a name="conditions"></a> IDE에서 경고 구성을 설정 하려면  
  사용 하는 경우는 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 대신는 `Option Strict` 문을 제어할 수 추가 오류를 생성 하는 조건입니다. **경고 구성** 섹션을 **컴파일 페이지** 컴파일 타임 오류가 발생 하는 세 가지 조건에 해당 하는 설정이 때 `Option Strict` 켜져 합니다. 이러한 설정은 다음과 같습니다.  
@@ -153,7 +153,7 @@ Option Strict { On | Off }
   
 ## <a name="see-also"></a>참고자료
 
-- [확대 변환과 축소 변환](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [암시적 변환과 명시적 변환](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
 - [프로젝트 디자이너, 컴파일 페이지(Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
 - [Option Explicit 문](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
@@ -163,4 +163,4 @@ Option Strict { On | Off }
 - [완화된 대리자 변환](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
 - [Office 솔루션에서 런타임에 바인딩](/visualstudio/vsto/late-binding-in-office-solutions)
 - [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
-- [옵션 대화 상자, 프로젝트, Visual Basic 기본값](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+- [옵션 대화 상자, 프로젝트, VB 기본값](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

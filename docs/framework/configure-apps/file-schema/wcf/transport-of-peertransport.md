@@ -1,13 +1,13 @@
 ---
-title: <transport>의 <peerTransport>
+title: <transport> / <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
-ms.openlocfilehash: 3dbeda5d418c30f378515fa83979eaca289370f9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9b6f548515afbba5068659bd5c6f7f2b33f80cda
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284013"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076005"
 ---
 # <a name="transport-of-peertransport"></a>\<전송 >의 \<peerTransport >
 이 바인딩으로 구성된 피어에서 보낸 보안 메시지의 전송 형식을 지정합니다.  
@@ -57,6 +57,7 @@ ms.locfileid: "55284013"
  경우에이 요소는 설정의 mode 특성이 [ \<보안 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md) 로 설정 되어 `Transport` 또는 `TransportWithMessageCredential`합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>
 - <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>
 - <xref:System.ServiceModel.PeerTransportSecuritySettings>
@@ -65,6 +66,6 @@ ms.locfileid: "55284013"
 - [전송](../../../../../docs/framework/wcf/feature-details/transports.md)
 - [전송 선택](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
 - [바인딩](../../../../../docs/framework/wcf/bindings.md)
-- [바인딩 확장](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [바인딩 확장명](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

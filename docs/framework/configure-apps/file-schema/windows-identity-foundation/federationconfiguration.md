@@ -3,12 +3,12 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: befa74f02ccb0dde4448f36c0698feebaf6201ce
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e0ac3b663b2a65e00524fe0fba7997125721487c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55286405"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297489"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 구성 된 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) 및 <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM)를 사용 하 여 페더레이션 WS-페더레이션 프로토콜을 통해 인증 합니다. 구성 된 <xref:System.Security.Claims.ClaimsAuthorizationManager> 사용 하는 경우는 <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> 또는 <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> 클레임 기반 액세스 제어를 제공 하는 클래스입니다.  
@@ -58,13 +58,13 @@ ms.locfileid: "55286405"
   
  시나리오에 관계 없이 런타임에서 기본 페더레이션 구성을 로드합니다. 동작을 다음과 같이 정의 됩니다.  
   
-1.  없는 경우 없는 `<federationConfiguration>` 요소가 런타임에 페더레이션 구성을 만들고 기본 값으로 채웁니다. 이 기본 페더레이션 구성에는 기본 id 구성이 참조 합니다.  
+1. 없는 경우 없는 `<federationConfiguration>` 요소가 런타임에 페더레이션 구성을 만들고 기본 값으로 채웁니다. 이 기본 페더레이션 구성에는 기본 id 구성이 참조 합니다.  
   
-2.  경우 단일 `<federationConfiguration>` 요소가 이며 명명 되거나 명명 되지 않은 여부에 관계 없이 기본 페더레이션 구성 합니다. 하는 경우 해당 `identityConfiguration` 기본 id 구성이 참조이 고, 그렇지 않으면 특성을 지정 하면 명명 된 id 구성 참조 됩니다.  
+2. 경우 단일 `<federationConfiguration>` 요소가 이며 명명 되거나 명명 되지 않은 여부에 관계 없이 기본 페더레이션 구성 합니다. 하는 경우 해당 `identityConfiguration` 기본 id 구성이 참조이 고, 그렇지 않으면 특성을 지정 하면 명명 된 id 구성 참조 됩니다.  
   
-3.  명명 되지 않은 경우 `<federationConfiguration>` 요소가 있는지,이 요소는 기본 페더레이션 구성 합니다. 하는 경우 해당 `identityConfiguration` 기본 id 구성이 참조이 고, 그렇지 않으면 특성을 지정 하면 명명 된 id 구성 참조 됩니다.  
+3. 명명 되지 않은 경우 `<federationConfiguration>` 요소가 있는지,이 요소는 기본 페더레이션 구성 합니다. 하는 경우 해당 `identityConfiguration` 기본 id 구성이 참조이 고, 그렇지 않으면 특성을 지정 하면 명명 된 id 구성 참조 됩니다.  
   
-4.  여러 명명 `<federationConfiguration>` 요소가 존재 하 고 명명 되지 않은 없는 `<federationConfiguration>` 요소가, 예외가 throw 됩니다.  
+4. 여러 명명 `<federationConfiguration>` 요소가 존재 하 고 명명 되지 않은 없는 `<federationConfiguration>` 요소가, 예외가 throw 됩니다.  
   
  일반적으로 단일 `<federationConfiguration>` 섹션이 정의 되어 있습니다. 이 섹션에는 기본 페더레이션 구성입니다. 그러나 고유 하 게 명명 된 여러를 지정할 수 있습니다 `<federationConfiguration>` 요소이 경우 명명 되지 않은 것과 다른 페더레이션 구성을 로드 하려는 경우 제공 해야에 대 한 처리기를 합니다. <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated> 설정 하 고 이벤트를 <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> 처리기 내에서 속성을 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 적절 한 값으로 초기화 하는 개체 `<federationConfiguration>` 구성 파일의 요소입니다.  
   
@@ -92,6 +92,7 @@ ms.locfileid: "55286405"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>
 - <xref:System.IdentityModel.Services.SessionAuthenticationModule>
 - <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>

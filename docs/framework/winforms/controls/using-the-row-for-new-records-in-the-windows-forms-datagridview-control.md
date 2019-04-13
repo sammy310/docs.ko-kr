@@ -1,19 +1,19 @@
 ---
-title: Windows Forms DataGridView 컨트롤에서 새 레코드에 행 사용
+title: Windows Forms DataGridView 컨트롤에서 새 레코드에 대한 행 사용
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], adding rows for new records
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-ms.openlocfilehash: 041738ba375022be7c80526f25e5761314dffbf1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 67c87b28f04b028f329663d6cf8215370a00ef2f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703922"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184823"
 ---
-# <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤에서 새 레코드에 행 사용
+# <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤에서 새 레코드에 대한 행 사용
 사용 하는 경우는 <xref:System.Windows.Forms.DataGridView> 응용 프로그램에서 데이터 편집을 위해 종종 하려는 사용자에 게 데이터 저장소에 새 데이터 행을 추가 하는 기능을 제공 합니다. <xref:System.Windows.Forms.DataGridView> 컨트롤은 항상 마지막 행으로 표시 된 새 레코드에 대 한 행을 제공 하 여이 기능을 지원 합니다. 행 헤더에 별표 (*) 기호로 표시 됩니다. 다음 섹션에서는 설명 하는 몇 가지 새 레코드에 대 한 행을 사용 하 여 프로그램 사용 하도록 설정 하는 것이 좋습니다.  
   
 ## <a name="displaying-the-row-for-new-records"></a>새 레코드에 대 한 행을 표시합니다.  
@@ -58,7 +58,8 @@ ms.locfileid: "57703922"
  가상 모드 구현 하는 경우에 행의 추가 롤백할 시점 및 데이터 모델에 새 레코드에 대 한 행을 필요로 하는 시기를 추적 해야 합니다. 이 기능은 구현에 따라 달라 집니다 데이터 모델 및 해당 트랜잭션 의미 체계를 구현 예를 들어, 셀 또는 행 수준에서 커밋 범위 인지 합니다. 자세한 내용은 [Windows Forms DataGridView 컨트롤에서 가상 모드](virtual-mode-in-the-windows-forms-datagridview-control.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>
 - [Windows Forms DataGridView 컨트롤의 데이터 입력](data-entry-in-the-windows-forms-datagridview-control.md)
-- [방법: Windows Forms DataGridView 컨트롤에서 새 행에 기본값을 지정 합니다.](specify-default-values-for-new-rows-in-the-datagrid.md)
+- [방법: Windows Forms DataGridView 컨트롤에서 새 행에 대한 기본값 지정](specify-default-values-for-new-rows-in-the-datagrid.md)

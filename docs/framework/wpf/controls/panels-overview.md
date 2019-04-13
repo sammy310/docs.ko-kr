@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 2648296d01f0e237847fc16535b01dbd8e9c5b62
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 946e0f5ee90235498b8089732ae526ab6f35665c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377279"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157874"
 ---
 # <a name="panels-overview"></a>Panel 개요
 <xref:System.Windows.Controls.Panel> 요소는 요소의 렌더링을 제어 하는 구성 요소, 해당 크기와 차원, 위치, 자식 콘텐츠의 정렬 합니다. 합니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 다양 한 미리 정의 된 <xref:System.Windows.Controls.Panel> 사용자 지정을 작성할 수 있을 뿐만 아니라 요소 <xref:System.Windows.Controls.Panel> 요소입니다.  
@@ -81,7 +81,7 @@ ms.locfileid: "57377279"
   
  각 파생 <xref:System.Windows.Controls.Panel> 요소 크기 조정 제약을 다르게 처리 합니다. 이해 하는 방법을 <xref:System.Windows.Controls.Panel> 가로 또는 세로 방향으로 핸들 제약 조건은 예측 가능성이 더욱 뛰어난 레이아웃을 만들 수 있습니다.  
   
-|**패널 이름**|**x 차원**|**y 차원**|  
+|**패널 이름**|**x 축 방향**|**y 축 방향**|  
 |--------------------|----------------------|----------------------|  
 |<xref:System.Windows.Controls.Canvas>|콘텐츠로 제한됨|콘텐츠로 제한됨|  
 |<xref:System.Windows.Controls.DockPanel>|제한됨|제한됨|  
@@ -242,7 +242,7 @@ ms.locfileid: "57377279"
   
 <a name="Panels_global_localization"></a>   
 ## <a name="localizationglobalization-support"></a>지역화/세계화 지원  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 지역화 가능한 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 만들기에 유용한 다양한 기능을 지원합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 다양 한 기능이 도움이 되는 지역화할 수 있는 생성에서는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]합니다.  
   
  모든 패널 요소는 기본적으로 지원 합니다 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 동적으로 사용자의 로캘이나 언어 설정을 기반으로 하는 콘텐츠의 흐름에 사용할 수 있는 속성입니다. 자세한 내용은 <xref:System.Windows.FrameworkElement.FlowDirection%2A>을 참조하세요.  
   
@@ -253,10 +253,11 @@ ms.locfileid: "57377279"
  지역화 가능한 [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]가 포함된 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애플리케이션을 만드는 방법에 대한 자세한 내용은 [자동 레이아웃 사용 개요](../advanced/use-automatic-layout-overview.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [연습: 내 첫 WPF 데스크톱 애플리케이션](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
 - [WPF 레이아웃 갤러리 샘플](https://go.microsoft.com/fwlink/?LinkID=160054)
 - [레이아웃](../advanced/layout.md)
-- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)(WPF 컨트롤 갤러리 샘플)
+- [WPF 컨트롤 갤러리 샘플](https://go.microsoft.com/fwlink/?LinkID=160053)
 - [맞춤, 여백 및 안쪽 여백 개요](../advanced/alignment-margins-and-padding-overview.md)
 - [사용자 지정 콘텐츠 줄 바꿈 패널 샘플 만들기](https://go.microsoft.com/fwlink/?LinkID=159979)
 - [연결된 속성 개요](../advanced/attached-properties-overview.md)

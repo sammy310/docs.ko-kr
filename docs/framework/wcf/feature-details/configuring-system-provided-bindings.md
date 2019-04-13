@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-ms.openlocfilehash: 0e3dd33e740d7e9f0b59b8568b35a83303e8b592
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0dc213c2d25558dc447b49d2b2378f9aa72f80a2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517697"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172811"
 ---
 # <a name="configuring-system-provided-bindings"></a>시스템 제공 바인딩 구성
 바인딩은 엔드포인트와 통신할 때 사용할 통신 메커니즘을 지정하고 엔드포인트에 연결하는 방법을 나타냅니다. 바인딩 필수 통신 기능을 제공 하기 위해 Windows Communication Foundation (WCF) 채널 계층화 되는 방식을 정의 하는 요소로 구성 됩니다. 바인딩에는 다음 세 가지 형식의 요소가 있습니다.  
@@ -78,6 +78,7 @@ ms.locfileid: "54517697"
 |스트리밍|메시지 스트리밍이 지원되는지 여부를 지정합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [엔드포인트 만들기 개요](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [기본 WCF 프로그래밍](../../../../docs/framework/wcf/basic-wcf-programming.md)

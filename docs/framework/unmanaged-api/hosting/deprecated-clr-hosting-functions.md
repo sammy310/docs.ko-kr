@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 91fbbb35-e543-4814-b806-371cebae8c5a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 576b60293ed53448f3829fdcc9f89ad8508599af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa84ca0defd173563817673aad183a8b64226d41
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580905"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135812"
 ---
 # <a name="deprecated-clr-hosting-functions"></a>사용되지 않는 CLR 호스팅 함수
 이 섹션에서는 호스팅 API의 이전 버전에서 사용 되는 관리 되지 않는 전역 정적 함수를 설명 합니다.  
@@ -159,4 +159,5 @@ ms.locfileid: "54580905"
  관리 되는 모듈 이미지의 유효성을 검사 하 고 로드 된 후 운영 체제 로더에 알립니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [.NET Framework 4 호스팅 전역 정적 함수](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md)

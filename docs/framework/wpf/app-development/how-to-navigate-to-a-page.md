@@ -1,5 +1,5 @@
 ---
-title: '방법: 페이지로 이동'
+title: '방법: 페이지 탐색'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - pages [WPF], navigating to
 - navigation [WPF], to page
 ms.assetid: 2a556fc0-748b-417f-a58a-0d05a7afb66f
-ms.openlocfilehash: a5a0e7a8e7effac7c51f4dee92d30de56d60d90c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c8e808180682bfd97f397d8cadd1e4deafd7eb06
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369342"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141052"
 ---
-# <a name="how-to-navigate-to-a-page"></a>방법: 페이지로 이동
+# <a name="how-to-navigate-to-a-page"></a>방법: 페이지 탐색
 이 예제는 페이지를 탐색할 수 있습니다에서 여러 가지 방법으로 <xref:System.Windows.Navigation.NavigationWindow>합니다.  
   
 ## <a name="example"></a>예제  
@@ -32,6 +32,7 @@ ms.locfileid: "57369342"
 >  [!INCLUDE[TLA#tla_uri#initcap#plural](../../../../includes/tlasharptla-urisharpinitcapsharpplural-md.md)] 상대 또는 절대 수 있습니다. 자세한 내용은 [WPF의 Pack URI](pack-uris-in-wpf.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.Frame>
 - <xref:System.Windows.Controls.Page>
 - <xref:System.Windows.Navigation.NavigationService>

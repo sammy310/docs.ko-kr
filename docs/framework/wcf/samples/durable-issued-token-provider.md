@@ -2,12 +2,12 @@
 title: 영속 제공된 토큰 공급자
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 471e172589e578691d41690b0af7eff20e3234c9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f91f603e91b1f640ebe97229a1a433446cddb0cf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817216"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329754"
 ---
 # <a name="durable-issued-token-provider"></a>영속 제공된 토큰 공급자
 이 샘플에서는 사용자 지정 클라이언트가 발급한 토큰 공급자를 구현하는 방법을 보여 줍니다.  
@@ -114,7 +114,7 @@ ms.locfileid: "58817216"
   
 #### <a name="to-develop-a-custom-token-provider"></a>사용자 지정 토큰 공급자를 개발하려면  
   
-1.  사용자 지정 토큰 공급자를 작성합니다.  
+1. 사용자 지정 토큰 공급자를 작성합니다.  
   
      샘플에서는 캐시에서 검색한 보안 토큰을 반환하는 사용자 지정 토큰 공급자를 구현합니다.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "58817216"
     }  
     ```  
   
-2.  사용자 지정 보안 토큰 관리자를 씁니다.  
+2. 사용자 지정 보안 토큰 관리자를 씁니다.  
   
      <xref:System.IdentityModel.Selectors.SecurityTokenManager>는 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 메서드에서 전달되는 특정 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>에 대한 `CreateSecurityTokenProvider`를 만드는 데 사용됩니다. 또한 보안 토큰 관리자는 토큰 인증자와 토큰 serializer를 만드는 데 사용되지만 이 샘플에서는 설명하지 않습니다. 이 샘플에서 사용자 지정 보안 토큰 관리자는 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 클래스를 상속하며, 전달된 토큰 요구 사항에서 발급된 토큰이 필요함을 나타낼 때 사용자 지정 토큰 공급자를 반환하도록 `CreateSecurityTokenProvider` 메서드를 재정의합니다.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "58817216"
     }  
     ```  
   
-3.  사용자 지정 클라이언트 자격 증명을 씁니다.  
+3. 사용자 지정 클라이언트 자격 증명을 씁니다.  
   
      클라이언트 자격 증명 클래스는 클라이언트 프록시에 대해 구성된 자격 증명을 나타내는 데 사용되며 토큰 인증자, 토큰 공급자 및 토큰 serializer를 가져오는 데 사용되는 보안 토큰 관리자를 만듭니다.  
   
@@ -204,7 +204,7 @@ ms.locfileid: "58817216"
     }  
     ```  
   
-4.  토큰 캐시를 구현합니다. 이 샘플 구현에서는 특정 토큰 캐시의 소비자가 캐시와 상호 작용할 때 이용하는 추상 기본 클래스를 사용합니다.  
+4. 토큰 캐시를 구현합니다. 이 샘플 구현에서는 특정 토큰 캐시의 소비자가 캐시와 상호 작용할 때 이용하는 추상 기본 클래스를 사용합니다.  
   
     ```  
     public abstract class IssuedTokenCache  
@@ -233,17 +233,17 @@ ms.locfileid: "58817216"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1.  Setup.cmd 파일을 실행하여 필요한 인증서를 만듭니다.  
+1. Setup.cmd 파일을 실행하여 필요한 인증서를 만듭니다.  
   
-2.  지침에 따라 솔루션을 빌드하려면 [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다. 솔루션의 모든 프로젝트가 빌드되는지 확인합니다(Shared, RSTRSTR, Service, SecurityTokenService 및 Client).  
+2. 지침에 따라 솔루션을 빌드하려면 [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다. 솔루션의 모든 프로젝트가 빌드되는지 확인합니다(Shared, RSTRSTR, Service, SecurityTokenService 및 Client).  
   
-3.  Service.exe 및 SecurityTokenService.exe가 모두 관리자 권한으로 실행되는지 확인합니다.  
+3. Service.exe 및 SecurityTokenService.exe가 모두 관리자 권한으로 실행되는지 확인합니다.  
   
-4.  Client.exe를 실행합니다.  
+4. Client.exe를 실행합니다.  
   
 #### <a name="to-clean-up-after-the-sample"></a>샘플 실행 후 정리를 수행하려면  
   
-1.  샘플 실행을 완료했으면 샘플 폴더에서 Cleanup.cmd를 실행합니다.  
+1. 샘플 실행을 완료했으면 샘플 폴더에서 Cleanup.cmd를 실행합니다.  
   
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
@@ -253,4 +253,3 @@ ms.locfileid: "58817216"
 >  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\DurableIssuedTokenProvider`  
-  

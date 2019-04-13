@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 186f5618cce7a70bc4fab55616a0f8b08025a81f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c3bebe8eabd4d5fd5faec21e0b0efc408353bc2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542537"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197271"
 ---
 # <a name="ihostiocompletionmanager-interface"></a>IHostIoCompletionManager 인터페이스
 CLR (공용 언어 런타임) 호스트에서 제공 하는 I/O 완료 포트를 사용 하 여 상호 작용할 수 있도록 하는 메서드를 제공 합니다.  
@@ -55,4 +55,5 @@ CLR (공용 언어 런타임) 호스트에서 제공 하는 I/O 완료 포트를
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

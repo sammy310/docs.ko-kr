@@ -2,12 +2,12 @@
 title: 개발 및 배포 고려 사항
 ms.date: 03/30/2017
 ms.assetid: 535e6611-02de-484c-b5ff-6ffeed04d740
-ms.openlocfilehash: 31b9015ea898047dc346c9bf2ec4c8510e7e69b9
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: d0402fde61b1bfcdee6e0e8e435d35e59ad76b6f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826371"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169665"
 ---
 # <a name="development-and-deployment-considerations"></a>개발 및 배포 고려 사항
 이 단원의 항목에서는 ADO.NET Entity Framework를 기반으로 하는 응용 프로그램을 개발하거나 배포할 때 고려해야 할 문제를 다룹니다.  
@@ -22,6 +22,7 @@ ms.locfileid: "55826371"
  [배포 고려 사항](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)
 - [Entity Framework 개요](../../../../../docs/framework/data/adonet/ef/overview.md)
 - [시작](../../../../../docs/framework/data/adonet/ef/getting-started.md)

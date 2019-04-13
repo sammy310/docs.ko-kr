@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 586882ad7577c367576da9b32e6d3b8fe2f806c3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 52257b30b8172b80f968df25115956b6995c1552
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501216"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101590"
 ---
 # <a name="iclrruntimeinfoisloadable-method"></a>ICLRRuntimeInfo::IsLoadable 메서드
 이 인터페이스와 연결 된 런타임 고려 현재 프로세스에 로드할 수 있는지 여부를 나타내는 프로세스에 이미 로드 될 수 있는 다른 런타임과 합니다.  
@@ -44,7 +44,7 @@ HRESULT IsLoadable(
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_POINTER|`pbLoadable`가 null입니다.|  
+|E_POINTER|`pbLoadable` null입니다.|  
   
 ## <a name="remarks"></a>설명  
  다른 런타임 프로세스에 이미 로드 하 고이 인터페이스와 연결 된 런타임 in-process side-by-side-실행에 로드할 수 있습니다 `pbLoadable` 반환 `true`합니다. 두 개의 런타임 side-by-side-in-process로 실행할 수 없는 경우 `pbLoadable` 반환 `false`합니다. 예를 들어,는 CLR (공용 언어 런타임) 버전 4-side-by-side CLR 버전 2.0 사용 하 여 동일한 프로세스에서 또는 CLR 버전 1.1 실행할 수 있습니다. 그러나 CLR 버전 1.1 및 CLR 버전 2.0-병렬 처리를 실행할 수 없습니다.  
@@ -61,6 +61,7 @@ HRESULT IsLoadable(
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICLRRuntimeInfo 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
 - [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [호스팅](../../../../docs/framework/unmanaged-api/hosting/index.md)

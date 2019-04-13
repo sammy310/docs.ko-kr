@@ -1,13 +1,13 @@
 ---
-title: <security>의 <basicHttpBinding>
+title: <security> / <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 6432708d-5465-4bd9-bfc2-466742db99cb
-ms.openlocfilehash: 964f2bf9571cd3c3b8668c7ab5306fab89de2ab0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: f1e166bec2254ed6d2c306eaccfa13e9fba1d70d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261300"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118055"
 ---
 # <a name="security-of-basichttpbinding"></a>\<보안 >의 \<basicHttpBinding >
 보안 기능을 정의 합니다 [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)합니다.  
@@ -66,6 +66,7 @@ ms.locfileid: "55261300"
  기본적으로 SOAP 메시지의 보안이 유지되지 않고 클라이언트가 인증되지 않습니다. 이 요소를 사용하면 `basicHttpBinding` 요소에 대한 추가 보안 설정을 구성할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.BasicHttpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.BasicHttpBindingElement.Security%2A>
 - <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>

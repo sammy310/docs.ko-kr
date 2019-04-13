@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - RoutedCommand class [WPF], creating
 ms.assetid: aaf6979f-69ab-406f-979f-5766daa85fa0
-ms.openlocfilehash: 4119a762bd0db63108d08a9db9367e367adb6b58
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d433658a3039c262d2f682eff09df646d978018c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372089"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109046"
 ---
 # <a name="how-to-create-a-routedcommand"></a>방법: RoutedCommand 만들기
 이 예제에는 사용자 지정을 만드는 방법을 보여 줍니다 <xref:System.Windows.Input.RoutedCommand> 만들어 사용자 지정 명령을 구현 하는 방법과 <xref:System.Windows.Input.ExecutedRoutedEventHandler> 및 <xref:System.Windows.Input.CanExecuteRoutedEventHandler> 에 연결 하는 <xref:System.Windows.Input.CommandBinding>합니다.  명령에 대 한 자세한 내용은 참조는 [명령 개요](commanding-overview.md)합니다.  
@@ -48,5 +48,6 @@ ms.locfileid: "57372089"
  단추를 클릭할 때 합니다 <xref:System.Windows.Input.RoutedCommand.Execute%2A> 메서드를 사용자 지정 <xref:System.Windows.Input.RoutedCommand> 라고 합니다.  <xref:System.Windows.Input.RoutedCommand> 발생 합니다 <xref:System.Windows.Input.CommandManager.PreviewExecuted> 및 <xref:System.Windows.Input.CommandManager.Executed> 라우트된 이벤트입니다.  이러한 이벤트를 찾고 요소 트리를 탐색 한 <xref:System.Windows.Input.CommandBinding> 이 특정 명령에 대 한 합니다.  경우는 <xref:System.Windows.Input.CommandBinding> 발견 되는 <xref:System.Windows.Input.ExecutedRoutedEventHandler> 연관 <xref:System.Windows.Input.CommandBinding> 라고 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Input.RoutedCommand>
 - [명령 개요](commanding-overview.md)

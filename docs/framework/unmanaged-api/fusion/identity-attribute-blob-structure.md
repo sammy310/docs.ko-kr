@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb2c560f8f906f20de752e5dfad995e2082caaea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 074cca51cee2b0227e1d124f1d40a2ffc31e3c85
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654674"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314076"
 ---
 # <a name="identityattributeblob-structure"></a>IDENTITY_ATTRIBUTE_BLOB 구조체
 어셈블리에서 단일 특성에 대 한 정보를 포함 하 고 세 개의 구성 `DWORD`s입니다. 각 `DWORD` 에서 생성 되는 문자 버퍼 오프셋 합니다 `CurrentIntoBuffer` 메서드는 [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) 인터페이스  
@@ -49,13 +49,13 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
 ## <a name="sample"></a>샘플  
  다음 예제에서는 결과적으로 채워진에 몇 가지 기본 단계를 보여 줍니다. `IDENTITY_ATTRIBUTE_BLOB` 구조:  
   
-1.  가져올는 [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) 어셈블리에 대 한 합니다.  
+1. 가져올는 [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) 어셈블리에 대 한 합니다.  
   
-2.  호출 된 `IReferenceIdentity::EnumAttributes` 메서드를 가져오고,는 [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)합니다.  
+2. 호출 된 `IReferenceIdentity::EnumAttributes` 메서드를 가져오고,는 [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)합니다.  
   
-3.  문자 버퍼를 만들고로 캐스팅을 `IDENTITY_ATTRIBUTE_BLOB` 구조입니다.  
+3. 문자 버퍼를 만들고로 캐스팅을 `IDENTITY_ATTRIBUTE_BLOB` 구조입니다.  
   
-4.  호출 된 `CurrentIntoBuffer` 메서드는 `IEnumIDENTITY_ATTRIBUTE` 인터페이스입니다. 이 메서드는 특성을 복사 `Namespace`, `Name`, 및 `Value` 문자 버퍼입니다. 이러한 문자열에 대 한 세 가지 오프셋이에서 사용할 수 있게 됩니다는 `IDENTITY_ATTRIBUTE_BLOB` 구조입니다.  
+4. 호출 된 `CurrentIntoBuffer` 메서드는 `IEnumIDENTITY_ATTRIBUTE` 인터페이스입니다. 이 메서드는 특성을 복사 `Namespace`, `Name`, 및 `Value` 문자 버퍼입니다. 이러한 문자열에 대 한 세 가지 오프셋이에서 사용할 수 있게 됩니다는 `IDENTITY_ATTRIBUTE_BLOB` 구조입니다.  
   
 ```  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -243,6 +243,7 @@ Exit:
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [IReferenceIdentity 인터페이스](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
 - [IEnumIDENTITY_ATTRIBUTE 인터페이스](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
 - [IDENTITY_ATTRIBUTE 구조체](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)

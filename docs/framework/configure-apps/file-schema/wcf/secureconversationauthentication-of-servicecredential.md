@@ -1,13 +1,13 @@
 ---
-title: <secureConversationAuthentication>의 <serviceCredential>
+title: <secureConversationAuthentication> / <serviceCredential>
 ms.date: 03/30/2017
 ms.assetid: 0bd3fac7-befd-4a45-ba51-c200b33be0fd
-ms.openlocfilehash: 13e9312e4c4eade003fec77909a743009aa9bca7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: f35392b91d047c46e65ce433ef544b86cf6c88c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278527"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083701"
 ---
 # <a name="secureconversationauthentication-of-servicecredential"></a>\<secureConversationAuthentication >의 \<serviceCredential >
 보안 대화 서비스 설정을 지정합니다.  
@@ -47,6 +47,7 @@ ms.locfileid: "55278527"
  SCT(보안 컨텍스트 토큰) 쿠키 serialization을 위한 알려진 클레임 형식 목록과 쿠키 정보를 인코딩 및 보안할 인코더를 지정하려면 이 구성 요소를 사용합니다. SCT에 대한 자세한 내용은 <xref:System.ServiceModel.Security.SecureConversationServiceCredential>을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.SecureConversationServiceElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.SecureConversationAuthentication%2A>
 - <xref:System.ServiceModel.Description.ServiceCredentials.SecureConversationAuthentication%2A>

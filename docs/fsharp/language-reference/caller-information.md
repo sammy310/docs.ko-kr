@@ -2,12 +2,12 @@
 title: 호출자 정보
 description: 메서드에서 호출자 정보를 가져오려면 호출자 정보 인수 특성을 사용 하는 방법에 설명 합니다.
 ms.date: 04/25/2017
-ms.openlocfilehash: fd9ce204193ae7402a2e8cf3440cb831ac446af0
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: 13092df453b684d3ed4a93c842ea49c066157cb6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890308"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316156"
 ---
 # <a name="caller-information"></a>호출자 정보
 
@@ -28,24 +28,22 @@ ms.locfileid: "58890308"
 ```fsharp
 open System.Diagnostics
 open System.Runtime.CompilerServices
+open System.Runtime.InteropServices
 
 type Tracer() =
     member __.DoTrace(message: string,
-                      [<CallerMemberName>] ?memberName: string,
-                      [<CallerFilePath>] ?path: string,
-                      [<CallerLineNumber>] ?line: int) =
+                      [<CallerMemberName; Optional; DefaultParameterValue("")>] memberName: string,
+                      [<CallerFilePath; Optional; DefaultParameterValue("")>] path: string,
+                      [<CallerLineNumber; Optional; DefaultParameterValue(0)>] line: int) =
         Trace.WriteLine(sprintf "Message: %s" message)
-        match (memberName, path, line) with
-        | Some m, Some p, Some l ->
-            Trace.WriteLine(sprintf "Member name: %s" m)
-            Trace.WriteLine(sprintf "Source file path: %s" p)
-            Trace.WriteLine(sprintf "Source line number: %d" l)
-        | _,_,_ -> ()
+        Trace.WriteLine(sprintf "Member name: %s" memberName)
+        Trace.WriteLine(sprintf "Source file path: %s" path)
+        Trace.WriteLine(sprintf "Source line number: %d" line)
 ```
 
 ## <a name="remarks"></a>설명
 
-호출자 정보 특성은 선택적 매개 변수에 적용할 수 있습니다. 각 선택적 매개 변수에 대해 명시적 값을 제공 해야 합니다. 호출자 정보 특성을 사용 하면 컴파일러가 각 선택적 매개 변수에 호출자 정보 특성으로 데코 레이트 된 적절 한 값을 쓸.
+호출자 정보 특성은 선택적 매개 변수에 적용할 수 있습니다. 호출자 정보 특성을 사용 하면 컴파일러가 각 선택적 매개 변수에 호출자 정보 특성으로 데코 레이트 된 적절 한 값을 쓸.
 
 호출자 정보 값은 컴파일 시간에 리터럴로 중간 언어(IL) 내로 내보내집니다. 결과 달리 합니다 [StackTrace](/dotnet/api/system.diagnostics.stacktrace) 난독 처리 속성 예외를 결과 대 한 영향을 받지 않습니다.
 

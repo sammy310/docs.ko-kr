@@ -2,12 +2,12 @@
 title: DataTables
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
-ms.openlocfilehash: f0f429d7f28360fd76dfff0e7d4a4eba019e5acf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6509400d7f6633749155f778e3ba58ec6c27ec2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653253"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207320"
 ---
 # <a name="datatables"></a>DataTables
 <xref:System.Data.DataSet>은 테이블 컬렉션, 관계 및 제약 조건으로 구성되어 있습니다. Ado.net에서는 <xref:System.Data.DataTable> 개체에서 테이블을 나타내는 데 사용 되며를 **데이터 집합**합니다. A **DataTable** 메모리 내 관계형 데이터의 테이블 데이터가 로컬 합니다. 상주 하지만 Microsoft SQL Server를 사용 하 여 같은 데이터 원본에서 채울 수 있습니다 하는.NET 기반 응용 프로그램을 **DataAdapter** 자세한 내용은 참조 하십시오 [DataAdapter에서 DataSet 채우기](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md) .  
@@ -37,7 +37,7 @@ ms.locfileid: "54653253"
  [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
  ADO.NET 아키텍처 및 구성 요소에 대해 설명하고, 이를 사용하여 기존 데이터 소스에 액세스하고 응용 프로그램 데이터를 관리하는 방법을 설명합니다.  
   
- [DataSet, DataTable 및 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [DataSets, DataTables 및 DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  ADO.NET에 대 한 정보를 제공 **데이터 집합** 테이블 간의 관계를 만드는 방법을 포함 합니다.  
   
  <xref:System.Data.Constraint>  
@@ -56,4 +56,5 @@ ms.locfileid: "54653253"
  .NET Framework 클래스 라이브러리에 간략하게 포함 하 여는 **시스템** 네임 스페이스의 두 번째 수준 네임 스페이스와 **System.Data**합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

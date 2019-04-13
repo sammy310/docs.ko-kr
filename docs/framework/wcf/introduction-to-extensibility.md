@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], extensibility
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
-ms.openlocfilehash: 78a0410876016ef2d5249fe3b6a667cacc432320
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d7b9c811c557b10160c2581a59f5ebf72882bfd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654856"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147045"
 ---
 # <a name="introduction-to-extensibility"></a>확장성 소개
 Windows Communication Foundation (WCF) 응용 프로그램 모델은 대부분의 분산된 응용 프로그램의 통신 요구 사항 해결 하도록 설계 되었습니다. 그러나 기본 응용 프로그램 모델과 시스템 제공 구현이 지원되지 않습니다. WCF 확장성 모델의 전체 응용 프로그램 모델을 대체 지점에도 모든 수준에서 시스템 동작을 수정할 수 있도록 하 여 사용자 지정 시나리오를 지원 됩니다. 이 항목에서는 다양한 확장명 영역에 대해 간략하게 설명하고 각 영역에 대한 자세한 내용을 제공합니다.  
@@ -47,10 +47,11 @@ Windows Communication Foundation (WCF) 응용 프로그램 모델은 대부분�
 ### <a name="extending-the-channel-system"></a>채널 시스템 확장  
  채널 지원 사용자 지정 전송 또는 프로토콜 기능을 참조 하세요 [채널 계층 확장](../../../docs/framework/wcf/extending/extending-the-channel-layer.md)합니다.  
   
-### <a name="extending-the-service-hosting-system"></a>서비스 호스팅 시스템 확장명  
+### <a name="extending-the-service-hosting-system"></a>서비스 호스팅 시스템 확장  
  서비스 차원 응용 프로그램 모델을 수정하려면 <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType> 클래스를 확장해야 합니다. 자세한 내용은 [Extending ServiceHost 및 서비스 모델 계층](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)합니다.  
   
  호스팅 응용 프로그램 도메인과 서비스 호스트 간의 관계를 수정하려면 <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType> 클래스를 확장해야 합니다. 자세한 내용은 [호스트를 사용 하 여 ServiceHostFactory 확장](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [WCF 확장](../../../docs/framework/wcf/extending/index.md)

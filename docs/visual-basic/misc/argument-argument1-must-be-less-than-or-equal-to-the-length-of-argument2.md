@@ -4,21 +4,21 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_IndexLELength2
 ms.assetid: 10765f81-79c5-44c2-89c5-888253105b78
-ms.openlocfilehash: 858adaa2709872c6161d3de52cebd670c52960f1
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: dd090b20e2d32ce8313720cc3cb0d3ef9fd76e72
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58032259"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310345"
 ---
 # <a name="argument-argument1-must-be-less-than-or-equal-to-the-length-of-argument-argument2"></a>인수 '\<argument1 >' 인수의 길이 보다 작거나 같아야 '\<argument2 >'
 인수 길이가 두 번째 인수 길이에 의해 결정된 허용 한계를 초과합니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-1.  인수 값의 길이가 유효한 범위에 속하는지 확인합니다.  
+1. 인수 값의 길이가 유효한 범위에 속하는지 확인합니다.  
   
-2.  인수를 계산에서 제공하는 경우 계산에서 처리하는 값을 확인합니다.  
+2. 인수를 계산에서 제공하는 경우 계산에서 처리하는 값을 확인합니다.  
   
 ## <a name="see-also"></a>참고자료
 

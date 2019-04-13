@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 80833648-58a7-491a-8dc8-9a48e9bb3adc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11fc4bf6feb2a90c0b54c4410ed807c5b7e3eb5b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2fba970de6e5882d3cbe9be17b5b49be5a3e81aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501736"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171654"
 ---
 # <a name="icordebugmutabledatatargetwritevirtual-method"></a>ICorDebugMutableDataTarget::WriteVirtual 메서드
 대상 프로세스 주소 공간에 메모리를 씁니다.  
@@ -34,7 +34,7 @@ HRESULT WriteVirtual(
  [in] `pBuffer`의 바이트 수입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공하면 `S_OK`이고 실패하면 다른 `HRESULT`입니다.  
+ `S_OK` 성공 하면 다른 `HRESULT` 실패 합니다.  
   
 ## <a name="remarks"></a>설명  
  바이트를 쓸 수 없는 경우 대상 주소 공간의 바이트를 변경하지 않고 메서드 호출이 실패합니다. 그러지 않으면 대상이 일관성 없는 상태가 되어 이후 디버깅을 신뢰할 수 없습니다.  
@@ -49,5 +49,6 @@ HRESULT WriteVirtual(
  **.NET Framework 버전:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICorDebugMutableDataTarget 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-interface.md)
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

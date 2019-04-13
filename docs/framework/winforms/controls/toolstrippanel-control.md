@@ -8,15 +8,15 @@ helpviewer_keywords:
 - tool area [Windows Forms]
 - vertical space
 ms.assetid: aa47af39-1e71-40ee-bb75-2d2478f81bd0
-ms.openlocfilehash: 9982d7b1edde083d546681b37966358d2aac23bd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8dc45e1cedca6a4c73ada057168e0d3194bef741
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718495"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192279"
 ---
 # <a name="toolstrippanel-control"></a>ToolStripPanel 컨트롤
-`ToolStripPanel` 컨트롤은 <xref:System.Windows.Forms.ToolStripContainer>의 4개 패널 및 중앙 패널이 필요하지 않은 경우 <xref:System.Windows.Forms.ToolStrip> 컨트롤을 도킹 및 정렬할 때 도구 영역 내에서 가로 또는 세로 공간을 공유할 수 있게 해줍니다.  
+`ToolStripPanel` 컨트롤을 사용 하면 정렬 및 도킹 하는 경우 도구 영역 내에서 가로 또는 세로 공간 공유 <xref:System.Windows.Forms.ToolStrip> 때 않아도 4 개 패널 및 중앙 패널이 제어는 <xref:System.Windows.Forms.ToolStripContainer>합니다.  
   
  이 섹션의 항목에서는 `ToolStripPanel` 기능을 응용 프로그램에 빌드하는 데 사용할 수 있는 개념 및 기술을 설명합니다.  
   
@@ -25,8 +25,7 @@ ms.locfileid: "57718495"
  Windows Forms <xref:System.Windows.Forms.ToolStripContainer> 컨트롤의 용도와 주요 개념을 설명하는 항목을 제공합니다.  
   
  [방법: ToolStripPanels 조인](how-to-join-toolstrippanels.md)  
- 
-  <xref:System.Windows.Forms.ToolStrip> 컨트롤을 `ToolStripPanel`에 추가하는 방법을 보여 줍니다.  
+ <xref:System.Windows.Forms.ToolStrip> 컨트롤을 `ToolStripPanel`에 추가하는 방법을 보여 줍니다.  
   
  [방법: MDI에 ToolStripPanels 사용](how-to-use-toolstrippanels-for-mdi.md)  
  다중 문서 인터페이스 응용 프로그램에서 `ToolStripPanel` 컨트롤이 제공하는 유연성을 보여 줍니다.  
@@ -36,4 +35,5 @@ ms.locfileid: "57718495"
  <xref:System.Windows.Forms.ToolStripPanel> 컨트롤에 대한 참조 설명서를 제공합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)

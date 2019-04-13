@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: d037c062-a911-4949-b251-ccd3e48b1d17
-ms.openlocfilehash: 4fc083313c99b1b93db380bfbf6ddeacbc784dcb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a4480d54390aea2771e2939b0a0825f6c49c3564
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487410"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084976"
 ---
 # <a name="loadfromhistory-function-wpf-unmanaged-api-reference"></a>LoadFromHistory 함수 (F 관리 되지 않는 API 참조)
 이 API는 Windows Presentation Foundation (WPF) 인프라를 지원 하며 코드에서 직접 사용할 수 없습니다.  
@@ -48,4 +48,5 @@ HRESULT LoadFromHistory_export(
  **.NET framework 버전:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
-- [F 관리되지 않는 API 참조](wpf-unmanaged-api-reference.md)
+
+- [WPF 비관리형 API 참조](wpf-unmanaged-api-reference.md)

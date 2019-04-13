@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: a4606b73835087a406d989960d7a6e24ad218769
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: eda91ab6d81150749dc542139949fb92684c0fe1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362983"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316741"
 ---
 # <a name="key-frame-animations-overview"></a>키 프레임 애니메이션 개요
 이 항목에서는 키 프레임 애니메이션을 소개합니다. 키 프레임 애니메이션을 사용하면 두 개 이상의 대상 값을 사용하여 애니메이션 효과를 주고 애니메이션의 보간 방법을 제어할 수 있습니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "57362983"
   
  여기서 *\<Type>* 은 클래스가 애니메이션을 적용하는 값의 형식입니다.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 다음 키 프레임 애니메이션 클래스를 제공합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 다음 키 프레임 애니메이션 클래스를 제공합니다.  
   
 |속성 형식|해당 From/To/By 애니메이션 클래스|지원되는 보간 방법|  
 |-------------------|------------------------------------------------|-------------------------------------|  
@@ -259,9 +259,9 @@ ms.locfileid: "57362983"
   
  다음 목록에서는 키 프레임 애니메이션의 키 프레임에 대한 키 시간을 확인하는 절차를 설명합니다.  
   
-1.  확인할 <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> 값입니다.  
+1. 확인할 <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> 값입니다.  
   
-2.  키 프레임 애니메이션이 정방향 반복을 완료하는 데 걸리는 총 시간을 나타내는 애니메이션의 *총 보간 시간*을 확인합니다.  
+2. 키 프레임 애니메이션이 정방향 반복을 완료하는 데 걸리는 총 시간을 나타내는 애니메이션의 *총 보간 시간*을 확인합니다.  
   
     1.  경우 애니메이션의 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 아닙니다 <xref:System.Windows.Duration.Automatic%2A> 또는 <xref:System.Windows.Duration.Forever%2A>, 총 보간 시간은 애니메이션의 값인 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 속성입니다.  
   
@@ -269,21 +269,22 @@ ms.locfileid: "57362983"
   
     3.  이 값이 없으면 총 보간 시간은 1초입니다.  
   
-3.  총 보간 시간 값을 확인 하는 데 <xref:System.Windows.Media.Animation.KeyTimeType.Percent> <xref:System.Windows.Media.Animation.KeyTime> 값입니다.  
+3. 총 보간 시간 값을 확인 하는 데 <xref:System.Windows.Media.Animation.KeyTimeType.Percent> <xref:System.Windows.Media.Animation.KeyTime> 값입니다.  
   
-4.  이전 단계에서 확인하지 않은 경우 마지막 키 프레임을 확인합니다. 경우는 <xref:System.Windows.Media.Animation.KeyTime> 키 프레임은 마지막 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> 또는 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, 확인 된 시간은 총 보간 시간은 같게 됩니다.  
+4. 이전 단계에서 확인하지 않은 경우 마지막 키 프레임을 확인합니다. 경우는 <xref:System.Windows.Media.Animation.KeyTime> 키 프레임은 마지막 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> 또는 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, 확인 된 시간은 총 보간 시간은 같게 됩니다.  
   
      경우는 <xref:System.Windows.Media.Animation.KeyTime> 첫 번째 키 프레임은 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> 이 애니메이션에 두 개 키 프레임에서 해결 하 고 해당 <xref:System.Windows.Media.Animation.KeyTime> 하나만 키 프레임이 없으면 0입니다; 값 및 해당 <xref:System.Windows.Media.Animation.KeyTime> 값은 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, 총 해결 되었기 이전 단계에 설명 된 대로 보간 시간입니다.  
   
-5.  남은 해결할 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> 값: 각 학생은 사용할 수 있는 시간을 균등 하 게 요약 하는 합니다.  이 과정에서 unresolved <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> 값으로 일시적으로 처리 됩니다 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> 값 및 임시 해결 시간 가져오기.  
+5. 남은 해결할 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> 값: 각 학생은 사용할 수 있는 시간을 균등 하 게 요약 하는 합니다.  이 과정에서 unresolved <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> 값으로 일시적으로 처리 됩니다 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> 값 및 임시 해결 시간 가져오기.  
   
-6.  해결 합니다 <xref:System.Windows.Media.Animation.KeyTime> 갖는 키 프레임의 값 키 시간을 지정 하지 않으면 해결 된 선언으로 가장 가까운 키 프레임을 사용 하 여 <xref:System.Windows.Media.Animation.KeyTime> 값입니다.  
+6. 해결 합니다 <xref:System.Windows.Media.Animation.KeyTime> 갖는 키 프레임의 값 키 시간을 지정 하지 않으면 해결 된 선언으로 가장 가까운 키 프레임을 사용 하 여 <xref:System.Windows.Media.Animation.KeyTime> 값입니다.  
   
-7.  남은 해결할 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> 값입니다. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> 사용 된 <xref:System.Windows.Media.Animation.KeyTime> 값은 인접 키 프레임이 해당 해결된 시간을 결정 합니다.  이것은 이 키 프레임의 확인된 시간 동안 애니메이션의 속도가 일정한지 확인하기 위한 것입니다.  
+7. 남은 해결할 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> 값입니다. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> 사용 된 <xref:System.Windows.Media.Animation.KeyTime> 값은 인접 키 프레임이 해당 해결된 시간을 결정 합니다.  이것은 이 키 프레임의 확인된 시간 동안 애니메이션의 속도가 일정한지 확인하기 위한 것입니다.  
   
-8.  즉, 해결된 시간 (기본 키), 순서 및 (보조 키)를 선언 순서 대로 키 프레임 정렬, 확인 된 키 프레임을 기반으로 안정적인 정렬을 사용 <xref:System.Windows.Media.Animation.KeyTime> 값입니다.  
+8. 즉, 해결된 시간 (기본 키), 순서 및 (보조 키)를 선언 순서 대로 키 프레임 정렬, 확인 된 키 프레임을 기반으로 안정적인 정렬을 사용 <xref:System.Windows.Media.Animation.KeyTime> 값입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.Animation.KeyTime>
 - <xref:System.Windows.Media.Animation.KeySpline>
 - <xref:System.Windows.Media.Animation.Timeline>

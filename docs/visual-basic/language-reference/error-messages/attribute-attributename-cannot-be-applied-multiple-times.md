@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30663
 ms.assetid: 3760e7ff-7238-40a1-8676-77d858a64fc0
-ms.openlocfilehash: fe72e7a14723bcfa429ce80b15dbc22b256774aa
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: da4a766e2617308cb33b9673a88db9e7a954152a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843593"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304300"
 ---
 # <a name="attribute-attributename-cannot-be-applied-multiple-times"></a>특성 '\<attributename >' 여러 번 적용할 수 없습니다
 특성 한 번만 적용할 수 있습니다. `AttributeUsage` 특성 특성을 두 번 이상 적용할 수 있는지 여부를 결정 합니다.  
@@ -21,9 +21,9 @@ ms.locfileid: "58843593"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-1.  특성은 한 번만 적용 해야 합니다.  
+1. 특성은 한 번만 적용 해야 합니다.  
   
-2.  개발한 사용자 지정 특성을 사용 하는 경우 변경해 보십시오 해당 `AttributeUsage` 다음 예제에서와 마찬가지로 여러 특성 사용을 허용 하는 특성입니다.  
+2. 개발한 사용자 지정 특성을 사용 하는 경우 변경해 보십시오 해당 `AttributeUsage` 다음 예제에서와 마찬가지로 여러 특성 사용을 허용 하는 특성입니다.  
   
 ```vb  
 <AttributeUsage(AllowMultiple := True)>  

@@ -1,5 +1,5 @@
 ---
-title: '방법: 폼 수준에서 키보드 입력 처리'
+title: '방법: 양식 수준에서 키보드 입력 처리'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Windows Forms, handling keyboard input
 - keyboards [Windows Forms], form-level input
 ms.assetid: d7f8b390-dc91-42d2-ae0f-2ffa388127ad
-ms.openlocfilehash: 1b458287e5becf7f8da7cab676efdb2af1ab92b5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fbb6587dde53592a94887c1ea19562e06c15afe3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712411"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135169"
 ---
-# <a name="how-to-handle-keyboard-input-at-the-form-level"></a>방법: 폼 수준에서 키보드 입력 처리
+# <a name="how-to-handle-keyboard-input-at-the-form-level"></a>방법: 양식 수준에서 키보드 입력 처리
 Windows Forms에서는 메시지가 컨트롤에 도달하기 전에 폼 수준에서 키보드 메시지를 처리하는 기능을 제공합니다. 이 항목에서는 다음 작업을 수행하는 방법에 대해 설명합니다.  
   
 ### <a name="to-handle-a-keyboard-message-at-the-form-level"></a>폼 수준에서 키보드 메시지를 처리하려면 다음을 수행합니다.  
@@ -43,4 +43,5 @@ Windows Forms에서는 메시지가 컨트롤에 도달하기 전에 폼 수준�
  Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 내용은 [명령줄에서 빌드](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 하거나 [csc.exe를 사용한 명령줄 빌드](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다. 또한 새 프로젝트에 코드를 붙여 넣어 Visual Studio에서이 예제를 빌드할 수 있습니다.  
 
 ## <a name="see-also"></a>참고자료
+
 - [Windows Forms 응용 프로그램의 키보드 입력](keyboard-input-in-a-windows-forms-application.md)

@@ -12,12 +12,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb3f55a8a0ddff6c3202d15dc4704d443cabb44d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b17c7630160af78fe3163e6962b8fe085af1edc1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656949"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206618"
 ---
 # <a name="icordebugilframe4-interface"></a>ICorDebugILFrame4 인터페이스
 [.NET Framework 4.5.2 이상 버전에서 지원됨]  
@@ -45,5 +45,6 @@ ms.locfileid: "54656949"
  **.NET Framework 버전:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)

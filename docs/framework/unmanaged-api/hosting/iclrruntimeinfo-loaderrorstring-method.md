@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a565c19285b00c807ef6fbfc018a40467139638e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b485811b0e7d2f657ff2d2c1d7a2aa135e48a335
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466351"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154689"
 ---
 # <a name="iclrruntimeinfoloaderrorstring-method"></a>ICLRRuntimeInfo::LoadErrorString 메서드
 HRESULT 값을 지정된 된 문화권에 대 한 적절 한 오류 메시지를 변환 합니다.  
@@ -62,8 +62,8 @@ HRESULT LoadErrorString(
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_POINTER|`pcchBuffer`가 null입니다.|  
-|E_INVALIDARG|`pwzBuffer`가 null입니다.|  
+|E_POINTER|`pcchBuffer` null입니다.|  
+|E_INVALIDARG|`pwzBuffer` null입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
@@ -75,6 +75,7 @@ HRESULT LoadErrorString(
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICLRRuntimeInfo 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
 - [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [호스팅](../../../../docs/framework/unmanaged-api/hosting/index.md)

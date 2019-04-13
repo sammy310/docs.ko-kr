@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 159e9b3d81db5b416eb98e1b7587712ba14033c5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5c09f57ad805b4ba17b4bdafd3ced533199277a0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466976"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196686"
 ---
 # <a name="iclrruntimeinfogetruntimedirectory-method"></a>ICLRRuntimeInfo::GetRuntimeDirectory 메서드
 이 인터페이스와 연결 된 공용 언어 런타임 (CLR)의 설치 디렉터리를 가져옵니다.  
@@ -50,7 +50,7 @@ HRESULT GetRuntimeDirectory(
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_POINTER|`pwzBuffer` 또는 `pchBuffer`이 null입니다.|  
+|E_POINTER|`pwzBuffer` 또는 `pchBuffer` null입니다.|  
   
 ## <a name="remarks"></a>설명  
   
@@ -64,5 +64,6 @@ HRESULT GetRuntimeDirectory(
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICLRRuntimeInfo 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
 - [호스팅](../../../../docs/framework/unmanaged-api/hosting/index.md)

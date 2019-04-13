@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 96c2081e5ff5b716c2645fa44a24f12beaa0f8e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57f34ed1796f6fa411d31fca83baeff693f85d70
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585460"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137360"
 ---
 # <a name="ihostmemorymanager-interface"></a>IHostMemoryManager 인터페이스
 표준 Win32 가상 메모리 함수를 사용 하는 대신는 CLR (공용 언어 런타임) 호스트를 통해 가상 메모리 요청을 허용 하는 메서드를 제공 합니다.  
@@ -54,5 +54,6 @@ ms.locfileid: "54585460"
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [IHostMalloc 인터페이스](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)
 - [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

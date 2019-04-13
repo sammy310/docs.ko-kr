@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operands
 - expressions [Visual Basic]
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
-ms.openlocfilehash: 8de4eeaa22f83392bcb6bb79a1fea327281dfec9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b762c3002913cbd925579ef28f2aa01411976c32
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843749"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073652"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Visual Basic의 연산자 및 식
 *연산자*는 값을 가지는 하나 이상의 코드 요소에서 작업을 수행하는 코드 요소입니다. 값 요소는 변수, 상수, 리터럴, 속성을 포함하고 `Function` 및 `Operator` 프로시저와 식에서 반환됩니다.  
@@ -61,10 +61,9 @@ ms.locfileid: "58843749"
  [!code-vb[VbVbalrOperators#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#56)]  
   
  앞의 예제에서 Visual Basic 대입 연산자의 오른쪽 식의 작업을 수행 (`=`), 변수에 결과 값을 할당 한 다음 `x` 왼쪽에 있습니다. 식에 결합할 수 있는 연산자 수에는 실제로 제한이 없지만 예상하는 결과를 얻으려면 [Visual Basic의 연산자 우선 순위](../../../../visual-basic/language-reference/operators/operator-precedence.md)를 이해해야 합니다.  
-  
-  
+
 ## <a name="see-also"></a>참고자료
 
 - [연산자](../../../../visual-basic/language-reference/operators/index.md)
 - [연산자의 효율적 결합](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
-- [문(C++)](../../../../visual-basic/language-reference/statements/index.md)
+- [문](../../../../visual-basic/language-reference/statements/index.md)

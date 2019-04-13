@@ -2,12 +2,12 @@
 title: WCF의 큐
 ms.date: 03/30/2017
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-ms.openlocfilehash: fcdd38cf02157829bdc476cc289ea89ff8767487
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 502f1ad74cd4bd6294db11a3e48f4c41068704ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559468"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128767"
 ---
 # <a name="queuing-in-wcf"></a>WCF의 큐
 이 섹션에서는 대기 중인된 통신에서 Windows Communication Foundation (WCF)를 사용 하는 방법을 설명 합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "54559468"
   
 -   `ExactlyOnce`: 로 설정 하면 `true` 는 메시지를 배달 하는 경우 중복 되지 않습니다 (기본값), 대기 중인된 채널 확인 합니다. 또한 메시지가 손실되지 않습니다. 메시지를 전달할 수 없거나 메시지를 전달하기 전에 메시지 TTL(Time-To-Live)이 만료되면 실패 메시지가 배달 실패 이유와 함께 배달 못 한 편지 큐에 기록됩니다. `false`로 설정된 경우 대기 중인 채널에서 메시지를 전송하려고 시도합니다. 이 경우 필요에 따라 배달 못한 편지 큐를 선택할 수 있습니다.  
   
--   `Durable:` `true`(기본값)로 설정되어 있으면 대기 중인 채널에서 MSMQ를 통해 메시지를 디스크에 영구히 저장합니다. 따라서 MSMQ 서비스를 중지했다가 다시 시작하면 디스크에 있는 메시지가 대상 큐에 전송되거나 서비스에 전달됩니다. `false`로 설정되어 있으면 메시지가 임시 저장소에 저장되므로 MSMQ 서비스를 중지했다가 다시 시작하면 손실됩니다.  
+-   `Durable:` 로 설정 하면 `true` (기본값), 대기 중인된 채널은 MSMQ 메시지를 지속적으로 디스크에 저장 되도록 합니다. 따라서 MSMQ 서비스를 중지했다가 다시 시작하면 디스크에 있는 메시지가 대상 큐에 전송되거나 서비스에 전달됩니다. `false`로 설정되어 있으면 메시지가 임시 저장소에 저장되므로 MSMQ 서비스를 중지했다가 다시 시작하면 손실됩니다.  
   
  `ExactlyOnce` 신뢰할 수 있는 전송을 위해 MSMQ에 트랜잭션 큐가 필요합니다. 또한 MSMQ에서 트랜잭션 큐를 읽으려면 트랜잭션이 필요합니다. 따라서 `NetMsmqBinding`을 사용할 때 `ExactlyOnce`가 `true`로 설정되어 있는 경우 메시지를 보내거나 받으려면 트랜잭션이 필요합니다. 마찬가지로 `ExactlyOnce`가 `false`일 때의 임시 메시징의 경우와 마찬가지로 MSMQ에 비트랜잭션 큐가 있어야 가장 효율적입니다. 따라서 `ExactlyOnce`를 `false`로 설정하거나 durable을 `false`로 설정하면 트랜잭션을 사용하여 메시지를 보내거나 받을 수 없습니다.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "54559468"
   
  전송 보안 이외에 메시지 보안을 사용하여 실제 SOAP 메시지를 보안할 수 있습니다. 자세한 내용은 [메시지 보안을 사용 하 여 메시지 보안](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)합니다.  
   
- 또한 `MsmqTransportSecurity`는 `MsmqEncryptionAlgorithm` 및 `MsmqHashAlgorithm`의 두 가지 속성을 노출합니다. 이러한 속성은 메시지의 큐 간 전송 암호화와 서명 해시에 대해 선택하는 서로 다른 알고리즘의 열거형입니다.  
+ `MsmqTransportSecurity` 또한이 두 속성 노출 `MsmqEncryptionAlgorithm` 및 `MsmqHashAlgorithm`합니다. 이러한 속성은 메시지의 큐 간 전송 암호화와 서명 해시에 대해 선택하는 서로 다른 알고리즘의 열거형입니다.  
   
 #### <a name="other-properties"></a>기타 속성  
  이전 속성 외에도 다음과 같은 MSMQ별 속성이 바인딩에 노출됩니다.  
@@ -105,9 +105,9 @@ ms.locfileid: "54559468"
 ### <a name="sample-code"></a>샘플 코드  
  MSMQ를 사용하는 WCF 서비스를 작성하는 방법에 대한 단계별 지침은 다음 항목을 참조하세요.  
   
--   [방법: 메시지와 WCF 끝점 및 응용 프로그램 큐 메시지를 교환 합니다.](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+-   [방법: WCF 엔드포인트 및 메시지 큐 애플리케이션과 메시지 교환](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
   
--   [방법: 대기 중인 메시지와 WCF 끝점 교환](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+-   [방법: WCF 엔드포인트와 대기 중인 메시지 교환](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
   
  WCF에서 MSMQ 사용을 보여 주는 전체 코드 샘플은 다음 항목을 참조하세요.  
   
@@ -119,12 +119,13 @@ ms.locfileid: "54559468"
   
 -   [세션 및 큐](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
   
--   [양방향 통신](../../../../docs/framework/wcf/samples/two-way-communication.md) 
+-   [상호 통신](../../../../docs/framework/wcf/samples/two-way-communication.md) 
   
 -   [SRMP](../../../../docs/framework/wcf/samples/srmp.md)  
   
 -   [메시지 큐에 대한 메시지 보안](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - [서비스 엔드포인트 및 큐 주소 지정](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)
-- [대기 중인 애플리케이션 웹 호스팅](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+- [대기 중인 응용 프로그램 웹 호스팅](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

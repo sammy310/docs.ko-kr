@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], row sizing
 - data grids [Windows Forms], sizing options
 ms.assetid: a5620a9c-0d06-41e3-8934-c25ddb16c9e6
-ms.openlocfilehash: a236289939b9355e961ce1bfc9a7e0ff5349a95a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2f76bbca3d4b6e642c0eec2129c4a2abee752655
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717910"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197843"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 크기 조정 옵션
 <xref:System.Windows.Forms.DataGridView> 행, 열 및 헤더는 여러 가지 동작의 결과로 크기를 변경할 수 있습니다. 다음 표에서 이러한 상황을 보여 줍니다.  
@@ -128,6 +128,7 @@ ms.locfileid: "57717910"
  콘텐츠 기반 크기 조정에 대 한 유사한 값을 포함 하는 방법 및 크기 조정 속성에서 사용 하는 열거형입니다. 이러한 값을 사용 하 여 기본 설정된 크기를 계산 하는 셀이 사용 됩니다 제한할 수 있습니다. 모든 크기 조정 열거형에 대 한 이름이 표시 된 셀을 참조 하는 값이 있는 표시 된 행의 셀에는 계산을 제한 합니다. 행은 제외 하는 것은 대용량 행의를 사용 하 여 작업할 때 성능 저하를 방지 하는 데 유용 합니다. 또한 계산 헤더 또는 머리글이 아닌 셀에 셀 값을 제한할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A?displayProperty=nameWithType>
@@ -154,6 +155,6 @@ ms.locfileid: "57717910"
 - <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>
 - <xref:System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode>
 - <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>
-- [Windows Forms DataGridView 컨트롤의 열 및 행 크기 조정](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 컨트롤에서 열 및 행 크기 조정](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView 컨트롤의 열 채우기 모드](column-fill-mode-in-the-windows-forms-datagridview-control.md)
 - [방법: Windows Forms DataGridView 컨트롤의 크기 조정 모드 설정](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)

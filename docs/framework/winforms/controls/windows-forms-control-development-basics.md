@@ -6,12 +6,12 @@ helpviewer_keywords:
 - programming concepts [Windows Forms], Windows Forms controls
 - controls [Windows Forms], creating
 ms.assetid: 6277bb81-90f7-4c5b-9f4b-b02bb42dd316
-ms.openlocfilehash: 6a7009ead6ceba58c17579835d03254f259f8e51
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 21b8b08e56e8b4d48fb738b86247d3f04dc4150b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723066"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086444"
 ---
 # <a name="windows-forms-control-development-basics"></a>Windows Forms 컨트롤 개발 기본 사항
 Windows Forms 컨트롤에서 직접 또는 간접적으로 파생 된 클래스는 <xref:System.Windows.Forms.Control?displayProperty=nameWithType>합니다. 다음 목록에서는 Windows Forms 컨트롤 개발에 대 한 일반적인 시나리오를 설명 합니다.  
@@ -31,7 +31,8 @@ Windows Forms 컨트롤에서 직접 또는 간접적으로 파생 된 클래스
  Windows Forms 컨트롤에 대 한 기본 클래스 <xref:System.Windows.Forms.Control>, 클라이언트 쪽 Windows 기반 응용 프로그램에서 시각적 개체 표시에 필요한 연결을 제공 합니다. <xref:System.Windows.Forms.Control> 창 핸들, 메시지 라우팅을 처리와 마우스 및 키보드 이벤트 뿐만 아니라 다른 여러 가지 사용자 인터페이스 이벤트를 제공 합니다. 고급 레이아웃을 제공 하 고와 같은 시각적 개체 표시에 관련 된 속성을가지고 <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>를 <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, 등입니다. 또한 보안, 스레딩 지원 및 ActiveX 컨트롤을 사용 하 여 상호 운용성을 제공 합니다. 인프라의 상당 부분이 기본 클래스에서 제공되므로 비교적 쉽게 사용자 고유의 Windows Forms 컨트롤을 개발할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [방법: 간단한 Windows Forms 컨트롤 개발](how-to-develop-a-simple-windows-forms-control.md)
-- [합성 Windows Forms 컨트롤 개발](developing-a-composite-windows-forms-control.md)
+- [Windows Forms 복합 컨트롤 개발](developing-a-composite-windows-forms-control.md)
 - [방법: 진행률을 보여 주는 Windows Forms 컨트롤 만들기](how-to-create-a-windows-forms-control-that-shows-progress.md)
 - [사용자 지정 컨트롤의 종류](varieties-of-custom-controls.md)

@@ -1,5 +1,5 @@
 ---
-title: '방법: 시각적 요소를 이미지 파일로 인코딩'
+title: '방법: Visual을 이미지 파일에 인코딩'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - encoding image formats [WPF]
 - visuals [WPF], encoding to an image file
 ms.assetid: 2036385b-ea47-4d54-8027-5797f52c8149
-ms.openlocfilehash: 2d5da0bde243128bc0d7aa29bf865ca9bfbd1d9a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 872c19af0cfcf4fc980643c37e9a6028457c03b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355998"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096786"
 ---
-# <a name="how-to-encode-a-visual-to-an-image-file"></a>방법: 시각적 요소를 이미지 파일로 인코딩
+# <a name="how-to-encode-a-visual-to-an-image-file"></a>방법: Visual을 이미지 파일에 인코딩
 인코딩하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Visual> 개체를 사용 하 여 이미지 파일에는 <xref:System.Windows.Media.Imaging.RenderTargetBitmap> 및 <xref:System.Windows.Media.Imaging.PngBitmapEncoder>합니다.  
   
 ## <a name="example"></a>예제  
@@ -28,6 +28,7 @@ ms.locfileid: "57355998"
  A <xref:System.Windows.Media.Imaging.PngBitmapEncoder> 하지만 파생 된 모든이 예제에서 사용한 <xref:System.Windows.Media.Imaging.BitmapEncoder> 개체는 이미지 파일을 만드는 데 사용 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.DrawingContext>
 - [이미징 개요](imaging-overview.md)
 - [Drawing 개체 개요](drawing-objects-overview.md)

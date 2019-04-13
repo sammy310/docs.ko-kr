@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8ad7c9aba84a769cb4ea16a2d288b1a9b4f17ca5
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 2159199fc12ef83a6bf4a44841d71799e0dad4dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066014"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166181"
 ---
 # <a name="securing-method-access"></a>메서드 액세스 보안
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -241,4 +241,5 @@ class Implemented : ICanCastToMe
  언어 컴파일러에서 컴파일 오류 때문에 이 재정의가 차단되더라도 다른 컴파일러로 작성된 코드는 재정의될 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [보안 코딩 지침](../../../docs/standard/security/secure-coding-guidelines.md)

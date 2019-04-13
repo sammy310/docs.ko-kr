@@ -5,20 +5,18 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 12ca85132ca063471092078c6f54e23a57f574ae
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 575598f48b3cfdf636be78a9de6e0c9a7fd9c208
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846443"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079827"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF의 양방향 기능 개요
 다른 개발 플랫폼과 달리 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 혼합된 왼쪽에서 오른쪽을 오른쪽으로 동일한 문서에 데이터를 유지 하는 예를 들어, 양방향 콘텐츠의 신속한 개발을 지 원하는 많은 기능이 있습니다. 동시에, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 아랍어 및 히브리어 사용자와 같은 양방향 기능이 필요한 사용자를 위한 뛰어난 경험을 만듭니다.  
   
  다음 섹션에서는 최상의 양방향 콘텐츠 표시를 수행하는 방법을 보여주는 예제와 함께 다양한 양방향 기능을 설명합니다. 대부분의 샘플 사용 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]개념을 쉽게 적용할 수 있지만, C# 또는 Microsoft Visual Basic 코드입니다.  
-  
 
-  
 <a name="FlowDirection"></a>   
 ## <a name="flowdirection"></a>FlowDirection  
  콘텐츠 흐름 방향을 정의 하는 기본 속성을 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램은 <xref:System.Windows.FrameworkElement.FlowDirection%2A>합니다. 이 속성은 두 열거형 값 중 하나로 설정할 수 있습니다 <xref:System.Windows.FlowDirection.LeftToRight> 또는 <xref:System.Windows.FlowDirection.RightToLeft>합니다. 속성은 모든 사용 가능한 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에서 상속 되는 요소 <xref:System.Windows.FrameworkElement>합니다.  
@@ -43,7 +41,7 @@ ms.locfileid: "57846443"
   
  [!code-xaml[FlowDirection#FlowDirection](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDirection/CS/Window1.xaml#flowdirection)]  
   
- 최상위 <xref:System.Windows.Window> 에 <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection>이므로 그 안에 포함 된 모든 요소는 또한 동일한 상속 <xref:System.Windows.FrameworkElement.FlowDirection%2A>합니다. 지정 된 재정의 하는 요소에 대 한 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 두 번째 같은 명시적 방향 변경을 추가 해야 합니다 <xref:System.Windows.Controls.TextBlock> 를 변경 하는 이전 예제의 <xref:System.Windows.FlowDirection.LeftToRight>합니다. 없는 경우 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 정의 된 기본 <xref:System.Windows.FlowDirection.LeftToRight> 적용 됩니다.  
+ 최상위 <xref:System.Windows.Window> 에 <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection>이므로 그 안에 포함 된 모든 요소는 또한 동일한 상속 <xref:System.Windows.FrameworkElement.FlowDirection%2A>합니다. 지정 된 재정의 하는 요소에 대 한 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 두 번째 같은 명시적 방향 변경을 추가 해야 합니다 <xref:System.Windows.Controls.TextBlock> 를 변경 하는 이전 예제의 <xref:System.Windows.FlowDirection.LeftToRight>합니다. 없는 경우 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 정의 된 기본 <xref:System.Windows.FlowDirection.LeftToRight> 적용 됩니다.  
   
  다음 그림에는 이전 예제의 출력이 표시 됩니다.
 
@@ -116,7 +114,7 @@ ms.locfileid: "57846443"
     
  ![오른쪽에서 왼쪽된 그라데이션 사용 하 여 도구 모음을 보여 주는 그래픽.](./media/bidirectional-features-in-wpf-overview/toolbar-right-left-gradient.png)  
   
- 다음 예제에서는 그립니다를 <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.Controls.ToolBar>합니다. (그릴이 왼쪽에서 오른쪽으로 제거 합니다 <xref:System.Windows.FlowDirection> 특성을 <xref:System.Windows.Controls.ToolBar>합니다.  
+ 다음 예제에서는 그립니다는 <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.Controls.ToolBar>합니다. (그릴이 왼쪽에서 오른쪽으로 제거 합니다 <xref:System.Windows.FlowDirection> 특성을 <xref:System.Windows.Controls.ToolBar>합니다.  
   
  [!code-xaml[Gradient#Gradient](~/samples/snippets/csharp/VS_Snippets_Wpf/Gradient/CS/Window1.xaml#gradient)]  
   
@@ -124,7 +122,7 @@ ms.locfileid: "57846443"
 ### <a name="flowdirection-exceptions"></a>FlowDirection 예외  
  몇 가지 경우가 있는 <xref:System.Windows.FlowDirection> 예상 대로 작동 하지 않습니다. 이 섹션에서는 이러한 예외 중 두 가지를 설명합니다.  
   
- **Image**  
+ **이미지**  
   
  <xref:System.Windows.Controls.Image> 이미지를 표시 하는 컨트롤을 나타냅니다. [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 사용 될 수 있습니다를 <xref:System.Windows.Controls.Image.Source%2A> 정의 하는 속성을 [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] 의 <xref:System.Windows.Controls.Image> 표시할.  
   
@@ -142,9 +140,9 @@ ms.locfileid: "57846443"
   
  **경로**  
   
- 이외에 <xref:System.Windows.Controls.Image>, 다른 흥미로운 요소는 <xref:System.Windows.Shapes.Path>합니다. 경로는 일련의 연결된 선 및 곡선을 그릴 수 있는 개체입니다. 유사한 방식으로 동작 하는 <xref:System.Windows.Controls.Image> 에 대 한 해당 <xref:System.Windows.FlowDirection>예를 들어 해당 <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection> 의 가로 미러입니다 해당 <xref:System.Windows.FlowDirection.LeftToRight> 하나입니다. 그러나 달리를 <xref:System.Windows.Controls.Image>, <xref:System.Windows.Shapes.Path> 상속 해당 <xref:System.Windows.FlowDirection> 컨테이너 하나에서 않아도 명시적으로 지정 합니다.  
+ 이외에 <xref:System.Windows.Controls.Image>, 다른 흥미로운 요소는 <xref:System.Windows.Shapes.Path>합니다. 경로는 일련의 연결된 선 및 곡선을 그릴 수 있는 개체입니다. 유사한 방식으로 동작 하는 <xref:System.Windows.Controls.Image> 에 대 한 해당 <xref:System.Windows.FlowDirection>예를 들어 해당 <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection> 의 가로 미러입니다 해당 <xref:System.Windows.FlowDirection.LeftToRight> 하나입니다. 그러나 달리를 <xref:System.Windows.Controls.Image>, <xref:System.Windows.Shapes.Path> 상속 해당 <xref:System.Windows.FlowDirection> 컨테이너 하나에서 않아도 명시적으로 지정 합니다.  
   
- 다음 예제에서는 3개의 선을 사용하여 간단한 화살표를 그립니다. 첫 번째 화살표 상속 합니다 <xref:System.Windows.FlowDirection.RightToLeft> 흐름 방향을 <xref:System.Windows.Controls.StackPanel> 해당 시작점과 끝점은 오른쪽 루트에서 측정 됩니다 있도록 합니다. 명시적인 있는 두 번째 화살표 <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection> 오른쪽 에서도 시작 합니다. 그러나 세 번째 화살표는 왼쪽에 시작 루트가 있습니다. 그리기 참조 하는 방법은 <xref:System.Windows.Media.LineGeometry> 고 <xref:System.Windows.Media.GeometryGroup>입니다.  
+ 다음 예제에서는 3개의 선을 사용하여 간단한 화살표를 그립니다. 첫 번째 화살표 상속 합니다 <xref:System.Windows.FlowDirection.RightToLeft> 흐름 방향을 <xref:System.Windows.Controls.StackPanel> 해당 시작점과 끝점은 오른쪽 루트에서 측정 됩니다 있도록 합니다. 명시적인 있는 두 번째 화살표 <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection> 오른쪽 에서도 시작 합니다. 그러나 세 번째 화살표는 왼쪽에 시작 루트가 있습니다. 그리기 참조 하는 방법은 <xref:System.Windows.Media.LineGeometry> 고 <xref:System.Windows.Media.GeometryGroup>입니다.  
   
  [!code-xaml[Paths#Paths](~/samples/snippets/csharp/VS_Snippets_Wpf/Paths/CS/Window1.xaml#paths)]  
   
@@ -160,7 +158,7 @@ ms.locfileid: "57846443"
   
  이 응용 프로그램에서 다른 언어로 변환할 필요 없이 숫자 값을 처리할 수 있었습니다, 예를 들어 사용자 열 수는 [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)] 지역화 된 아랍어에서 스프레드시트 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 아랍어로 된 숫자를 참조 하며 엽니다 유럽 버전의 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 동일한 숫자의 유럽 표시를 표시 합니다. 보통 동일한 문서에서 숫자와 같이 표시되기 때문에 쉼표 구분 기호와 백분율 기호와 같은 다른 기호에도 필요합니다.  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 동일한 기능을 계속 유지하며 대체가 사용되는 시기와 방법을 사용자가 더 많이 제어할 수 있도록 이 기능에 대한 지원을 추가합니다. 이 기능은 모든 언어를 대상으로 하지만, 애플리케이션을 실행하는 다양한 문화권 때문에 특정 언어에 대한 숫자 모양을 애플리케이션 개발자가 지정하기 어려운 양방향 콘텐츠에서 더욱 유용합니다.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 동일한 전통 및 대체가 사용 되는 시기와 방법을 사용자가 더 많이 제어할 수 있도록이 기능에 대 한 지원을 추가 합니다. 이 기능은 모든 언어를 대상으로 하지만, 애플리케이션을 실행하는 다양한 문화권 때문에 특정 언어에 대한 숫자 모양을 애플리케이션 개발자가 지정하기 어려운 양방향 콘텐츠에서 더욱 유용합니다.  
   
  작동 하는 방법을 숫자 대체를 제어 하는 핵심 속성 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 되는 <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> 종속성 속성입니다. <xref:System.Windows.Media.NumberSubstitution> 클래스 텍스트의 숫자가 표시 하는 하는 방법을 지정 합니다. 동작을 정의하는 세 가지 공용 속성이 있습니다. 다음은 각 속성에 대한 요약입니다.  
   

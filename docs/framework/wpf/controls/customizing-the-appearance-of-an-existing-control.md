@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-ms.openlocfilehash: 5d4b16721dd8cabc5d662538274dcb82ab734cca
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b52a63a0531d71c784ef12f29049754f4a9efddb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375105"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098964"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정
 <a name="introduction"></a> <xref:System.Windows.Controls.ControlTemplate> 시각적 구조 및 컨트롤의 시각적 동작을 지정 합니다. 새 제공 하 여 컨트롤의 모양을 사용자 지정할 수 있습니다 <xref:System.Windows.Controls.ControlTemplate>합니다. 만들 때는 <xref:System.Windows.Controls.ControlTemplate>, 해당 기능을 변경 하지 않고 기존 컨트롤의 모양을 바꿉니다. 예를 들어, 만들 수 단추 응용 프로그램에서 기본 사각형 모양 대신 둥근 있지만 단추에서 여전히 발생을 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다.  
@@ -31,8 +31,7 @@ ms.locfileid: "57375105"
   
  ![빨간색 테두리가 있는 단추입니다. ](./media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
 사용자 지정 컨트롤 템플릿을 사용하고 마우스 포인터가 위에 놓여 있는 단추  
-  
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>전제 조건  
  이 항목에서는 [컨트롤](index.md)에 설명된 대로 컨트롤과 스타일을 만들고 사용하는 방법을 알고 있다고 가정합니다. 이 항목에서 설명한 개념에서 상속 되는 요소에 적용 합니다 <xref:System.Windows.Controls.Control> 클래스를 제외 하 고는 <xref:System.Windows.Controls.UserControl>합니다. 적용할 수 없습니다는 <xref:System.Windows.Controls.ControlTemplate> 에 <xref:System.Windows.Controls.UserControl>합니다.  
@@ -257,9 +256,10 @@ ms.locfileid: "57375105"
   
 <a name="complete_example"></a>   
 ## <a name="complete-example"></a>완성된 예제  
- 다음 예제에서는 전체 <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.ControlTemplate> 는이 항목에서 설명 합니다.  
+ 다음 예제에서는 전체 <xref:System.Windows.Controls.Button><xref:System.Windows.Controls.ControlTemplate> 는이 항목에서 설명 합니다.  
   
  [!code-xaml[VSMButtonTemplate#3](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [스타일 지정 및 템플릿](styling-and-templating.md)

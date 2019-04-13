@@ -1,5 +1,5 @@
 ---
-title: '방법: 데이터 소스에 Windows Forms DataGrid 컨트롤 바인딩'
+title: '방법: 데이터 원본에 Windows Forms DataGrid 컨트롤 바인딩'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - bound controls [Windows Forms]
 - data-bound controls [Windows Forms], DataGrid
 ms.assetid: 128cdb07-dfd3-4d60-9d6a-902847667c36
-ms.openlocfilehash: 5da74abb107bc93bff496a35ecfc7a1233e5a76d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 920a93894cc126f85bc6b618efbe6e9cedea4881
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702960"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332575"
 ---
-# <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>방법: 데이터 소스에 Windows Forms DataGrid 컨트롤 바인딩
+# <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>방법: 데이터 원본에 Windows Forms DataGrid 컨트롤 바인딩
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "57702960"
   
 ### <a name="to-data-bind-the-datagrid-control-programmatically"></a>데이터 바인딩할 DataGrid 컨트롤을 프로그래밍 방식으로  
   
-1.  데이터 집합을 채우는 코드를 작성 합니다.  
+1. 데이터 집합을 채우는 코드를 작성 합니다.  
   
      데이터 원본이 데이터 집합 또는 데이터 집합 테이블을 기반으로 데이터 뷰를 폼에 데이터 집합을 채우는 코드를 추가 합니다.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "57702960"
     dsCategories1->Merge(ws->GetCategories());  
     ```  
   
-2.  호출 된 <xref:System.Windows.Forms.DataGrid> 컨트롤의 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 메서드, 데이터 원본 및 데이터 멤버를 전달 합니다. 데이터 멤버를 명시적으로 전달 해야 하는 경우 빈 문자열을 전달 합니다.  
+2. 호출 된 <xref:System.Windows.Forms.DataGrid> 컨트롤의 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 메서드, 데이터 원본 및 데이터 멤버를 전달 합니다. 데이터 멤버를 명시적으로 전달 해야 하는 경우 빈 문자열을 전달 합니다.  
   
     > [!NOTE]
     >  컨트롤의 표는 처음에 바인딩하는 경우 설정할 수 있습니다 <xref:System.Windows.Forms.DataGrid.DataSource%2A> 고 <xref:System.Windows.Forms.DataGrid.DataMember%2A> 속성입니다. 그러나 설정 된 후 이러한 속성을 재설정할 수 없습니다. 따라서 것이 좋습니다는 항상 사용 하 여 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 메서드.  
@@ -101,10 +101,11 @@ ms.locfileid: "57702960"
     dataGrid1->SetDataBinding(dsCustomers1, "");  
     ```  
   
-3.  (선택 사항) 그리드로 해당 테이블 스타일과 열 스타일을 추가 합니다. 테이블 표시는 테이블 스타일이 없는 경우 최소한의 서식 지정 및 표시 하는 모든 열을 사용 하 여 있지만.  
+3. (선택 사항) 그리드로 해당 테이블 스타일과 열 스타일을 추가 합니다. 테이블 표시는 테이블 스타일이 없는 경우 최소한의 서식 지정 및 표시 하는 모든 열을 사용 하 여 있지만.  
   
 ## <a name="see-also"></a>참고자료
+
 - [DataGrid 컨트롤 개요](datagrid-control-overview-windows-forms.md)
-- [방법: Windows Forms DataGrid 컨트롤에 테이블과 열 추가](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [방법: Windows Forms DataGrid 컨트롤에 테이블 및 열 추가](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
 - [DataGrid 컨트롤](datagrid-control-windows-forms.md)
 - [Windows Forms 데이터 바인딩](../windows-forms-data-binding.md)

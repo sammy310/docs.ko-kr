@@ -15,12 +15,12 @@ helpviewer_keywords:
 - rectangles [Windows Forms], destination
 - images [Windows Forms], compression
 ms.assetid: ad5daf26-005f-45bc-a2af-e0e97777a21a
-ms.openlocfilehash: 311673c30283cdf3e0206d143daab8c01adc2bce
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c3cdb06e99770808461f9266fb5f07df9074149b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718794"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183731"
 ---
 # <a name="cropping-and-scaling-images-in-gdi"></a>GDI+에서 이미지 자르기 및 배율 조정
 사용할 수는 <xref:System.Drawing.Graphics.DrawImage%2A> 메서드는 <xref:System.Drawing.Graphics> 그리고 이미지 벡터 및 래스터 이미지를 배치 하는 클래스입니다. <xref:System.Drawing.Graphics.DrawImage%2A> 오버 로드 된 메서드인 이므로 여러 가지 인수를 사용 하 여 제공할 수 있습니다.  
@@ -47,5 +47,6 @@ ms.locfileid: "57718794"
  ![자르기 및 배율 조정](./media/aboutgdip03-art07.gif "AboutGdip03_Art07")  
   
 ## <a name="see-also"></a>참고자료
+
 - [이미지, 비트맵 및 메타파일](images-bitmaps-and-metafiles.md)
 - [이미지, 비트맵, 아이콘 및 메타파일 사용](working-with-images-bitmaps-icons-and-metafiles.md)

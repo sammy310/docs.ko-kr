@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b67fab5-1722-4d2b-bfc1-247a75f0f1ee
-ms.openlocfilehash: 847829f6b131a33cc5ff1ca77b10f7e756da920f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df03c68193a1068b4bdf0b6ed0923b3bbb8a046a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497081"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127714"
 ---
 # <a name="managing-dataviews"></a>데이터 보기 관리
 <xref:System.Data.DataViewManager>를 사용하여 <xref:System.Data.DataView>의 모든 테이블에 대한 뷰 설정을 관리할 수 있습니다. 여러 테이블에 바인딩하려는 컨트롤에 있는 경우 그리드와 같은 관계를 탐색 하는 **DataViewManager** 적합 합니다.  
@@ -120,9 +120,10 @@ grid.SetDataBinding(viewManager, "Customers");
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataViewManager>
 - <xref:System.Data.DataViewSetting>
 - <xref:System.Data.DataViewSettingCollection>
-- [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [데이터 보기](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

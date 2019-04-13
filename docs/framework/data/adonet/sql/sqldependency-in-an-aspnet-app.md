@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
-ms.openlocfilehash: 42eb0a417659776b2cd2fffa9d2fd62e58a4a176
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 67c1307bb18b3e86e05b56f4853a39f6831ab9cc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091996"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313595"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>ASP.NET 응용 프로그램에서 SqlDependency
 이 단원의 예제에서는 ASP.NET <xref:System.Data.SqlClient.SqlDependency> 개체를 활용하여 <xref:System.Web.Caching.SqlCacheDependency>를 간접적으로 사용하는 방법을 보여 줍니다. <xref:System.Web.Caching.SqlCacheDependency> 개체에서는 <xref:System.Data.SqlClient.SqlDependency>를 사용하여 알림을 수신하고 캐시를 올바르게 업데이트합니다.  
@@ -24,11 +24,11 @@ ms.locfileid: "56091996"
 ## <a name="creating-the-sample-application"></a>샘플 응용 프로그램 만들기  
  샘플 응용 프로그램을 만들고 실행하려면 다음 단계를 따르세요.  
   
-1.  새 ASP.NET 웹 사이트를 만듭니다.  
+1. 새 ASP.NET 웹 사이트를 만듭니다.  
   
-2.  <xref:System.Web.UI.WebControls.Label> 및 <xref:System.Web.UI.WebControls.GridView> 컨트롤을 Default.aspx 페이지에 추가합니다.  
+2. <xref:System.Web.UI.WebControls.Label> 및 <xref:System.Web.UI.WebControls.GridView> 컨트롤을 Default.aspx 페이지에 추가합니다.  
   
-3.  페이지의 클래스 모듈을 열고 다음 지시문을 추가합니다.  
+3. 페이지의 클래스 모듈을 열고 다음 지시문을 추가합니다.  
   
     ```vb  
     Option Strict On  
@@ -42,12 +42,12 @@ ms.locfileid: "56091996"
     using System.Web.Caching;  
     ```  
   
-4.  페이지의 `Page_Load` 이벤트에 다음 코드를 추가합니다.  
+4. 페이지의 `Page_Load` 이벤트에 다음 코드를 추가합니다.  
   
      [!code-csharp[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#1)]
      [!code-vb[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#1)]  
   
-5.  `GetConnectionString` 및 `GetSQL`의 두 가지 도우미 메서드를 추가합니다. 정의된 연결 문자열은 통합 보안을 사용합니다. 사용 중인 계정에 필요한 데이터베이스 권한이 올바르며 있는지 확인 해야 샘플 데이터베이스 **AdventureWorks**, 알림을 사용 하도록 설정 했습니다.
+5. `GetConnectionString` 및 `GetSQL`의 두 가지 도우미 메서드를 추가합니다. 정의된 연결 문자열은 통합 보안을 사용합니다. 사용 중인 계정에 필요한 데이터베이스 권한이 올바르며 있는지 확인 해야 샘플 데이터베이스 **AdventureWorks**, 알림을 사용 하도록 설정 했습니다.
   
      [!code-csharp[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#2)]
      [!code-vb[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#2)]  
@@ -58,5 +58,6 @@ ms.locfileid: "56091996"
  이제 Transact-SQL UPDATE 명령을 사용하여 데이터베이스의 데이터를 업데이트하고 페이지를 새로 고칩니다. 이제 표시된 시간을 보면 캐시가 데이터베이스의 새 데이터로 새로 고쳐졌음을 알 수 있습니다. 캐시가 업데이트되었지만 포스트백 이벤트가 발생할 때까지는 페이지에 표시된 시간이 변경되지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [SQL Server에서 쿼리 알림](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

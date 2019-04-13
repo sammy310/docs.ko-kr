@@ -5,14 +5,14 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ee50e943-9349-4c84-ab1c-c35d3ada1a9c
-ms.openlocfilehash: 9d72350c472ff68d8ee623d82096bdab0c88abb3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02d0417bc05f8585dc469d365089c8123d395f64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547120"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164517"
 ---
-# <a name="remote-vs-local-execution"></a>원격 쿼리 실행과 로컬 실행
+# <a name="remote-vs-local-execution"></a>원격 및 로컬 실행
 쿼리를 원격으로 실행할지(즉, 데이터베이스 엔진이 데이터베이스에 대해 쿼리 실행) 아니면 로컬로 실행할지(즉, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]이 로컬 캐시에 대해 쿼리 실행) 결정할 수 있습니다.  
   
 ## <a name="remote-execution"></a>원격 실행  
@@ -45,7 +45,8 @@ ms.locfileid: "54547120"
  이러한 두 기능은 대규모 컬렉션을 위한 원격 실행과 소규모 컬렉션 또는 완전한 컬렉션이 필요한 상황을 위한 로컬 실행이라는 옵션이 결합된 강력한 기능을 제공합니다. <xref:System.Linq.IQueryable>을 통해 원격 실행을 구현하고 메모리 내 <xref:System.Collections.Generic.IEnumerable%601> 컬렉션에 대해 로컬 실행을 구현합니다. 로컬 실행을 강제로 (즉, <xref:System.Collections.Generic.IEnumerable%601>)를 참조 하세요 [제네릭 IEnumerable로 형식 변환](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-type-to-a-generic-ienumerable.md)합니다.  
   
 ### <a name="queries-against-unordered-sets"></a>정렬되지 않은 집합에 대한 쿼리  
- 구현 하는 로컬 컬렉션 간의 차이점에 주의 <xref:System.Collections.Generic.List%601> 및에 대해 실행 하는 원격 쿼리를 제공 하는 컬렉션 *집합을 정렬 되지 않은* 관계형 데이터베이스에서입니다. 인덱스 값을 사용하는 메서드와 같은 <xref:System.Collections.Generic.List%601> 메서드에는 목록 의미 체계가 필요한데 이는 일반적으로 정렬되지 않은 집합에 대한 원격 쿼리를 통해 얻을 수 없습니다. 이와 같은 이유 때문에 이러한 메서드는 로컬 실행을 허용하기 위해 <xref:System.Data.Linq.EntitySet%601>을 암시적으로 로드합니다.  
+ 구현 하는 로컬 컬렉션 간의 차이점에 주의 <xref:System.Collections.Generic.List%601> 및에 대해 실행 하는 원격 쿼리를 제공 하는 컬렉션 *집합을 정렬 되지 않은* 관계형 데이터베이스에서입니다. <xref:System.Collections.Generic.List%601> 인덱스 값을 사용 하는 것과 같은 메서드는 일반적으로 정렬 되지 않은 집합에 대 한 원격 쿼리를 통해 얻을 수 없습니다는 목록 의미 체계가 필요 합니다. 이와 같은 이유 때문에 이러한 메서드는 로컬 실행을 허용하기 위해 <xref:System.Data.Linq.EntitySet%601>을 암시적으로 로드합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [쿼리 개념](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

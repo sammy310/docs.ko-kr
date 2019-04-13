@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-ms.openlocfilehash: 3c96275f3e5db24446b030ec007f23e9035242c8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3d420e5cb4d9e7f2ad6f8136b8dd33f5901326d2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703688"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095492"
 ---
 # <a name="data-binding-and-windows-forms"></a>데이터 바인딩 및 Windows Forms
 Windows Forms에서는 기존의 데이터 소스뿐 아니라 데이터를 포함하는 거의 모든 구조에 바인딩할 수 있습니다. 런타임에 계산하거나 파일에서 읽거나 다른 컨트롤의 값에서 파생하는 값 배열에 바인딩할 수 있습니다.  
@@ -48,13 +48,14 @@ Windows Forms에서는 기존의 데이터 소스뿐 아니라 데이터를 포�
   
 |시나리오|설명|  
 |--------------|-----------------|  
-|보고서|보고서를 사용하면 데이터를 인쇄된 문서에 유동적으로 표시 및 요약할 수 있습니다. 일반적으로는 데이터 소스의 선택한 콘텐츠를 화면이나 프린터에 인쇄하는 보고서를 만듭니다. 일반적인 보고서에는 목록, 송장, 요약 등이 포함됩니다. 항목은 보통 목록의 열로 서식이 지정되며 각 목록 항목 아래에는 하위 항목이 구성되지만 데이터에 가장 적합한 레이아웃을 선택해야 합니다.|  
+|보고|보고서를 사용하면 데이터를 인쇄된 문서에 유동적으로 표시 및 요약할 수 있습니다. 일반적으로는 데이터 소스의 선택한 콘텐츠를 화면이나 프린터에 인쇄하는 보고서를 만듭니다. 일반적인 보고서에는 목록, 송장, 요약 등이 포함됩니다. 항목은 보통 목록의 열로 서식이 지정되며 각 목록 항목 아래에는 하위 항목이 구성되지만 데이터에 가장 적합한 레이아웃을 선택해야 합니다.|  
 |데이터 입력|일반적으로는 데이터 입력 양식을 통해 많은 양의 관련 데이터를 입력하거나 사용자에게 정보를 표시합니다. 사용자는 텍스트 상자, 옵션 단추, 드롭다운 목록 및 확인란을 사용하여 정보를 입력하거나 항목을 선택할 수 있습니다. 그러면 정보가 전송되어 데이터베이스에 저장됩니다. 이 데이터베이스의 구조는 입력된 정보를 기반으로 합니다.|  
 |마스터/세부 관계|마스터/세부 응용 프로그램은 관련된 데이터를 확인하기 위한 하나의 형식입니다. 이 응용 프로그램에는 두 데이터 테이블이 관계로 연결됩니다. 기존의 비즈니스 예제에서는 "Customers" 테이블과 "Orders" 테이블 간의 관계가 고객과 해당 주문을 연결합니다. 두 개의 Windows Forms를 사용 하 여 마스터/세부 응용 프로그램을 만드는 방법에 대 한 자세한 내용은 <xref:System.Windows.Forms.DataGridView> 컨트롤을 참조 하세요. [방법: 두 개의 Windows Forms DataGridView 컨트롤을 사용 하 여 마스터/세부 폼 만들기](./controls/create-a-master-detail-form-using-two-datagridviews.md)|  
 |조회 테이블|또 다른 일반적인 데이터 표시/조작 시나리오는 테이블 조회입니다. <xref:System.Windows.Forms.ComboBox> 컨트롤은 대규모 데이터 표시의 일부분으로 데이터를 표시하고 조작하는 경우가 많습니다. 여기서 중요한 점은, <xref:System.Windows.Forms.ComboBox> 컨트롤에 표시되는 데이터와 데이터베이스에 기록되는 데이터가 다르다는 점입니다. 예를 들어 식료품점에서 구입할 수 있는 품목을 표시하는 <xref:System.Windows.Forms.ComboBox> 컨트롤을 사용하는 경우에는 빵, 우유, 계란 등의 제품 이름을 표시하는 경우가 많습니다. 그러나 데이터베이스 내의 정보를 쉽게 검색하고 데이터베이스를 표준화하기 위해 지정된 주문의 특정 품목 정보를 #501, #603 등의 품목 번호로 저장할 수 있습니다. 이처럼 폼에 있는 <xref:System.Windows.Forms.ComboBox> 컨트롤의 식료품 "이름"과 주문에 포함된 관련 항목 번호 간에는 암시적 연결이 설정됩니다. 그리고 이러한 연결이 테이블 조회의 핵심 요소입니다. 자세한 내용은 [방법: Windows Forms BindingSource 구성 요소를 사용 하 여 조회 테이블 만들기](./controls/how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component.md)합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.Binding>
 - [Windows Forms 데이터 바인딩](windows-forms-data-binding.md)
-- [방법: 데이터 소스에 Windows Forms DataGrid 컨트롤 바인딩](./controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [방법: 데이터 원본에 Windows Forms DataGrid 컨트롤 바인딩](./controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
 - [BindingSource 구성 요소](./controls/bindingsource-component.md)

@@ -1,13 +1,13 @@
 ---
-title: <windowsAuthentication>의 <serviceCredentials>
+title: <windowsAuthentication> / <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: e0709473-0997-4de3-8f49-783527309a48
-ms.openlocfilehash: f366c85f895356594cf8bd9049ca41c8fb458c4c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ffddbae7effabcdafdc2638d588bbbf3e42d2c2a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280960"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200391"
 ---
 # <a name="windowsauthentication-of-servicecredentials"></a>\<windowsAuthentication >의 \<serviceCredentials >
 Windows 서비스 자격 증명의 설정을 지정합니다.  
@@ -49,6 +49,7 @@ Windows 서비스 자격 증명의 설정을 지정합니다.
  `allowAnonymousLogons` 특성을 설정하여 익명 Windows 사용자 액세스를 허용할지 여부를 지정하려면 이 요소를 사용합니다. 또한 `includeWindowsGroups` 특성을 설정하여 사용자가 속한 그룹 정보를 AuthorizationContext에 포함시킬지 여부를 지정할 수 있습니다. `true`(기본 설정)로 설정되면 서비스에서 클라이언트가 속해 있는 Windows 그룹을 확인할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.WindowsServiceElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.WindowsAuthentication%2A>
 - <xref:System.ServiceModel.Description.ServiceCredentials.WindowsAuthentication%2A>

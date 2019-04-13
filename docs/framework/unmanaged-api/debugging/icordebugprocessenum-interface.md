@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e190c045a70daa04e58604b25ac398fb5a1648d0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3651a4be94fa624d0dd6ab64b8c3f8169945de0d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979569"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175320"
 ---
 # <a name="icordebugprocessenum-interface"></a>ICorDebugProcessEnum 인터페이스
 ICorDebugEnum 메서드를 구현 하 고 ICorDebugProcess 배열을 열거 합니다.  
@@ -47,4 +47,5 @@ ICorDebugEnum 메서드를 구현 하 고 ICorDebugProcess 배열을 열거 합�
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

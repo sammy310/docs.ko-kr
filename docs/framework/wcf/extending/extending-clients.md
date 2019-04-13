@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - proxy extensions [WCF]
 ms.assetid: 1328c61c-06e5-455f-9ebd-ceefb59d3867
-ms.openlocfilehash: 46f5b4b1a2721a07decb045cd3734ce6edaa0762
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99b4dd5e4acfce8bea4d3c2cae3a53152585675d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522039"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074757"
 ---
 # <a name="extending-clients"></a>클라이언트 확장
 호출 응용 프로그램에서 서비스 모델 계층은 응용 프로그램 코드의 메서드 호출을 아웃바운드 메시지로 변환하고, 이를 기본 채널에 제공하며, 결과를 다시 응용 프로그램 코드의 반환 값 및 out 매개 변수로 변환한 후 결과를 다시 호출자에게 반환하는 역할을 합니다. 서비스 모델 확장은 클라이언트 또는 디스패처 기능, 사용자 지정 동작, 메시지 및 매개 변수 가로채기 그리고 다른 확장명 기능이 포함된 통신 동작 및 기능 또는 실행을 수정하거나 구현합니다.  
@@ -115,7 +115,8 @@ ms.locfileid: "54522039"
  WCF 클라이언트에서 인터 셉 션을 보여 주는 예제를 보려면 [방법: 검사 매개 변수를 수정 하거나](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Dispatcher.ClientRuntime>
 - <xref:System.ServiceModel.Dispatcher.ClientOperation>
 - [방법: 클라이언트에서 메시지 검사 또는 수정](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)
-- [방법: 검사 하거나 매개 변수를 수정 합니다.](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
+- [방법: 매개 변수 검사 또는 수정](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)

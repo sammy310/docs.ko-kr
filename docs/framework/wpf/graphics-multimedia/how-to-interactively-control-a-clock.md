@@ -1,5 +1,5 @@
 ---
-title: '방법: 대화식으로 Clock 제어'
+title: '방법: 대화형 시계 제어'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controlling clocks interactively [WPF]
 - clocks [WPF], controlling interactively
 ms.assetid: d0b520e0-2f18-4cef-977f-2909e709548a
-ms.openlocfilehash: 6d3dbc8c39e63b46871b0cc88fbe8d5d51b63463
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 05989b6a03e03fb5723a70c9c36d5e32f9117049
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361657"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186591"
 ---
-# <a name="how-to-interactively-control-a-clock"></a>방법: 대화식으로 Clock 제어
+# <a name="how-to-interactively-control-a-clock"></a>방법: 대화형 시계 제어
 A <xref:System.Windows.Media.Animation.Clock> 개체의 <xref:System.Windows.Media.Animation.ClockController> 속성을 사용 하면 대화형으로 시작, 일시 중지, 다시 시작, 검색, 채우기 기간이 시계를 이동 하 고 시계를 중지 합니다. 타이밍 트리의 루트 클록만 대화형으로 제어할 수 있습니다.  
   
 > [!NOTE]
@@ -28,5 +28,6 @@ A <xref:System.Windows.Media.Animation.Clock> 개체의 <xref:System.Windows.Med
  [!code-vb[timingbehaviors_procedural_snip#GraphicsMMClockControllerExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/clockcontrollerexample.vb#graphicsmmclockcontrollerexample)]  
   
 ## <a name="see-also"></a>참고자료
-- [Storyboard를 사용하여 속성에 애니메이션 효과 주기](how-to-animate-a-property-by-using-a-storyboard.md)
+
+- [스토리보드를 사용하여 속성에 애니메이션 효과 주기](how-to-animate-a-property-by-using-a-storyboard.md)
 - [애니메이션 개요](animation-overview.md)

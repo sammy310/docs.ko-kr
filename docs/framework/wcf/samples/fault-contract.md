@@ -2,12 +2,12 @@
 title: 오류 계약
 ms.date: 03/30/2017
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
-ms.openlocfilehash: 64d02ae6b45cd0e538509d2c7186ac63b9844c14
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 21c4894b3927b6fdcf9aff16ea07020eeb073977
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840486"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317131"
 ---
 # <a name="fault-contract"></a>오류 계약
 Fault Contract 샘플은 오류 정보를 서비스에서 클라이언트로 전달하는 방법을 보여 줍니다. 샘플을 기반으로 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md), 내부 예외를 오류로 변환 하는 서비스에 추가 하는 일부 추가 코드를 사용 하 여 합니다. 클라이언트는 서비스에서 오류 조건을 강제하기 위해 0으로 나누기를 시도합니다.  
@@ -98,7 +98,7 @@ catch (FaultException<MathFault> e)
 }  
 ```  
   
- 서비스 구현의 세부 정보가 서비스의 보안 경계를 벗어나는 것을 방지하기 위해 기본적으로 예기치 않은 예외의 세부 정보는 클라이언트에게 보내지지 않습니다. `FaultContract`는 계약의 오류를 설명하고 특정 형식의 예외를 클라이언트에게 전송하기 적합한 것으로 표시하는 방법을 제공합니다. `FaultException<T>`는 오류를 소비자에게 보내기 위한 런타임 메커니즘을 제공합니다.  
+ 서비스 구현의 세부 정보가 서비스의 보안 경계를 벗어나는 것을 방지하기 위해 기본적으로 예기치 않은 예외의 세부 정보는 클라이언트에게 보내지지 않습니다. `FaultContract` 계약에서 오류를 설명 하 고 특정 유형의 클라이언트에 게 전송에 대 한 적절 한 예외를 표시 하는 방법을 제공 합니다. `FaultException<T>` 소비자에 게 오류 보내기 위한 런타임 메커니즘을 제공 합니다.  
   
  그러나 디버깅 시에 서비스 오류의 내부 정보를 확인하는 것이 유용합니다. 위에 설명된 보안 동작을 해제하려면 서버에서 처리되지 않은 모든 예외의 세부 정보를 클라이언트에게 보내는 오류에 포함해야 한다는 것을 지정합니다. 이렇게 하려면 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A>를 `true`로 설정합니다. 다음 샘플과 같이 구성이나 코드에서 이를 설정할 수 있습니다.  
   
@@ -121,11 +121,11 @@ catch (FaultException<MathFault> e)
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1.  수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
+1. 수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
   
-2.  C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.  
+2. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.  
   
-3.  단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
+3. 단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
   
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
@@ -135,4 +135,3 @@ catch (FaultException<MathFault> e)
 >  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Faults`  
-  

@@ -1,14 +1,14 @@
 ---
-title: <add>의 <participants>
+title: <add> / <participants>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 3c730850-6f8e-4102-acb8-8effb4e09463
-ms.openlocfilehash: 65b8a34250a22da79e900f6bee894b501c5ad6ba
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 291d1a006bc16769e36774dd9507017cb555e547
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368261"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079125"
 ---
 # <a name="add-of-participants"></a>\<추가 >의 \<참가자 >
 런타임에서 내보내지는 추적 레코드를 수신하는 추적 참가자를 직접 구성하고 구성된 방식대로 처리합니다. 여기에는 특정 출력(예: 파일, 콘솔, ETW)에 쓰기, 레코드 처리/집계 또는 필요한 기타 조합이 포함됩니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "57368261"
 |-------------|-----------------|  
 |name|추적 참가자의 이름을 지정하는 문자열입니다.|  
 |profileName|추적 참가자가 구독하는 추적 레코드를 정의하는 추적 프로필의 이름을 지정하는 문자열입니다.|  
-|형식|추적 참가자의 형식을 지정하는 문자열입니다.|  
+|type|추적 참가자의 형식을 지정하는 문자열입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -88,6 +88,7 @@ ms.locfileid: "57368261"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>
 - <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>
 - <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>

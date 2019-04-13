@@ -1,15 +1,15 @@
 ---
-title: < Thread_UseAllCpuGroups > 요소
+title: <Thread_UseAllCpuGroups> 요소
 ms.date: 03/30/2017
 ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95411f5adde07c0d00124b2793b495c7ed8f49ef
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 236953cc1a430a1dd2a2fbb633c7ef06e6ba200f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288940"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230839"
 ---
 # <a name="threaduseallcpugroups-element"></a>\<Thread_UseAllCpuGroups > 요소
 런타임이 모든 CPU 그룹에 관리되는 스레드를 배포할지를 지정합니다.  
@@ -68,6 +68,7 @@ ms.locfileid: "55288940"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [\<GCCpuGroup > 요소](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)

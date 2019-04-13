@@ -1,15 +1,15 @@
 ---
-title: serialize할 수 있는 형식
+title: 직렬화 가능 형식
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-ms.openlocfilehash: 0fe29d2eb2b50d2515d71745bc062255dbfb60ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44fc538ccb69296b91c94d2b9ae497be599c0c7e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608052"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160851"
 ---
-# <a name="serializable-types"></a>serialize할 수 있는 형식
+# <a name="serializable-types"></a>직렬화 가능 형식
 기본적으로 <xref:System.Runtime.Serialization.DataContractSerializer>는 모든 공개 형식을 serialize합니다. 이 경우 형식의 모든 공개 읽기/쓰기 속성과 필드가 serialize됩니다.  
   
  <xref:System.Runtime.Serialization.DataContractAttribute> 및 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 형식 및 멤버에 적용하여 기본 동작을 변경할 수 있습니다. 이 기능은 제어할 수 없거나 특성을 추가하도록 수정할 수 없는 형식이 있는 경우 유용할 수 있습니다. <xref:System.Runtime.Serialization.DataContractSerializer>는 이러한 "표시되지 않은" 형식을 인식합니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "54608052"
   
 -   읽기 전용 필드, `get` 또는 `set` 메서드가 없는 속성, 내부 또는 전용 `set` 또는 `get` 메서드가 있는 속성은 serialize되지 않습니다. 이러한 속성은 무시되고 예외가 throw되지 않습니다. get-only 컬렉션의 경우는 예외입니다.  
   
--   <xref:System.Xml.Serialization.XmlSerializer> 특성(`XmlElement`, `XmlAttribute`, `XmlIgnore`, `XmlInclude` 등)이 무시됩니다.  
+-   <xref:System.Xml.Serialization.XmlSerializer> 특성 (같은 `XmlElement`, `XmlAttribute`를 `XmlIgnore`, `XmlInclude`등)은 무시 됩니다.  
   
 -   지정된 형식에 <xref:System.Runtime.Serialization.DataContractAttribute> 특성을 적용하지 않는 경우 serializer는 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성이 적용되는 형식의 모든 멤버를 무시합니다.  
   
@@ -39,8 +39,9 @@ ms.locfileid: "54608052"
  표시되지 않은 형식(<xref:System.Runtime.Serialization.DataContractAttribute> 특성이 없는 형식)은 이러한 특성을 포함하는 형식에서 상속할 수 있지만 반대의 경우, 즉 특성을 포함하는 형식이 표시되지 않은 형식에서 상속할 수는 없습니다. 이 규칙은 주로 이전 버전의 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]로 작성된 코드와의 이전 버전 호환성을 보장하기 위해 적용됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [데이터 계약 직렬 변환기에서 지원하는 형식](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [데이터 계약 Serializer에서 지원하는 형식](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

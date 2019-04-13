@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 3a5f38d1-ebc8-44de-aaeb-2929f6e6b48f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11ae76a31480cf63a70738c6e416381fdfddbb78
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 854b58a1f57008326874b5e5ee60cc9e6297960b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271163"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085911"
 ---
 # <a name="netfx45cultureawarecomparergethashcodelongstrings-element"></a>\<NetFx45_CultureAwareComparerGetHashCode_LongStrings > 요소
 런타임이 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 메서드에 대한 해시 코드를 계산하기 위해 고정된 양의 메모리를 사용할지 여부를 지정합니다.  
@@ -62,6 +62,7 @@ ms.locfileid: "55271163"
 >  `<NetFx45_CultureAwareComparerGetHashCode_LongStrings>` 요소는 [!INCLUDE[win8](../../../../../includes/win8-md.md)] 이상의 버전에 사용되지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>
 - [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)

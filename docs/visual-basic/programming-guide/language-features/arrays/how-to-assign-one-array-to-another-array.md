@@ -6,21 +6,21 @@ helpviewer_keywords:
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: 834dad07ec1f4116aca72a184ccffc664d0a42ed
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 78497de3a9aea55320639c55a151a1260a960159
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835286"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303093"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>방법: 한 배열을 다른 배열 (Visual Basic) 할당
 배열 개체 이기 때문에 다른 개체 형식 처럼 대입 문에서 사용할 수 있습니다. 배열 변수 배열 요소 및 차수 및 길이 정보를 구성 하는 데이터 포인터를 보유 하 고 할당만이 포인터를 복사 합니다.  
   
 ### <a name="to-assign-one-array-to-another-array"></a>한 배열을 다른 배열에 할당 하려면  
   
-1.  두 배열의 동일한 차수 (차원 수)과 호환 되는 요소 데이터 형식을 확인 합니다.  
+1. 두 배열의 동일한 차수 (차원 수)과 호환 되는 요소 데이터 형식을 확인 합니다.  
   
-2.  소스 배열에서 대상 배열에 할당할 표준 대입문을 사용 합니다. 괄호를 사용 하 여 배열 이름 중 하나를 수행 하지 마세요.  
+2. 소스 배열에서 대상 배열에 할당할 표준 대입문을 사용 합니다. 괄호를 사용 하 여 배열 이름 중 하나를 수행 하지 마세요.  
   
     ```  
     Dim formArray() As System.Windows.Forms.Form  
@@ -47,4 +47,4 @@ ms.locfileid: "58835286"
 - [배열](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [배열 문제 해결](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
 - [Enum 문](../../../../visual-basic/language-reference/statements/enum-statement.md)
-- [배열 규칙](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
+- [배열 변환](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)

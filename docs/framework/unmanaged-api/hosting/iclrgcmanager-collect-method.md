@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2da0b3b7a8a7ae46050345aaf5fcfa65fa349ae5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1746527a2667676dfeab89e72874204460bcd33c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57477987"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126674"
 ---
 # <a name="iclrgcmanagercollect-method"></a>ICLRGCManager::Collect 메서드
 지정된 된 세대의 가비지 수집을 강제로 수행 합니다.  
@@ -63,8 +63,9 @@ HRESULT Collect (
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
-- [자동 메모리 관리](../../../../docs/standard/automatic-memory-management.md)
-- [가비지 수집](../../../../docs/standard/garbage-collection/index.md)
+
+- [Automatic Memory Management](../../../../docs/standard/automatic-memory-management.md)
+- [가비지 컬렉션](../../../../docs/standard/garbage-collection/index.md)
 - [ICLRControl 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [ICLRGCManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)
 - [CLR 호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)

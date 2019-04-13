@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: 3eb18a3e48c185d59879e86801a7df5e6080d7a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04526e8aea09b412de4d3a94f17938b02ad6527b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529163"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105276"
 ---
 # <a name="transport-security-overview"></a>전송 보안 개요
 전송 보안 메커니즘 Windows Communication Foundation (WCF)에서 바인딩 및 사용 하는 전송에 따라 달라 집니다. 예를 들어 <xref:System.ServiceModel.WSHttpBinding> 클래스를 사용할 경우 전송은 HTTP이며, 전송 보안을 위한 기본 메커니즘은 HTTPS라고 알려진 HTTP를 통한 SSL(Secure Sockets Layer)입니다. 이 항목에서는 WCF 시스템 제공 바인딩에 사용 되는 주요 전송 보안 메커니즘을 설명 합니다.  
@@ -19,7 +19,7 @@ ms.locfileid: "54529163"
 >  .NET Framework 3.5 이상에 SSL 보안을 사용 하는 경우 WCF 클라이언트를 인증서 저장소의 중간 인증서 모두를 사용 하 고 서비스의 인증서 체인 유효성 검사를 수행 하려면 SSL 협상 중에 받은 중간 인증서 인증서입니다. .NET Framework 3.0은 로컬 인증서 저장소에 설치된 중간 인증서만 사용합니다.  
   
 > [!WARNING]
->  전송 보안이 사용되는 경우에는 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 속성이 덮어쓰일 수 있습니다. 설정 하지 않도록 하는 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType> 에 <xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>입니다. <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>는 서비스 설명에 설정할 수 있는 서비스 동작입니다.  
+>  전송 보안이 사용되는 경우에는 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 속성이 덮어쓰일 수 있습니다. 설정 하지 않도록 하는 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType> 에 <xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>입니다. <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 서비스 설명에 설정할 수 있는 서비스 동작입니다.  
   
 ## <a name="basichttpbinding"></a>BasicHttpBinding  
  기본적으로 <xref:System.ServiceModel.BasicHttpBinding> 클래스는 보안을 제공하지 않습니다. 이 바인딩은 보안을 구현하지 않는 웹 서비스 공급자와의 상호 운용성을 위해 디자인되었습니다. 하지만 <xref:System.ServiceModel.BasicHttpSecurity.Mode%2A> 속성을 <xref:System.ServiceModel.BasicHttpSecurityMode.None> 이외의 값으로 설정하여 보안으로 전환할 수 있습니다. 전송 보안을 사용하려면 속성을 <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>로 설정합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "54529163"
   
  다음 단원에서는 기타 다른 클라이언트 자격 증명 형식에 대해 설명합니다.  
   
-#### <a name="basic"></a>기본  
+#### <a name="basic"></a>Basic  
  IIS의 기본 인증 방식입니다. 이 모드를 사용하려면 Windows 사용자 계정과 적절한 NTFS 파일 시스템 권한으로 IIS 서버를 구성해야 합니다. 에 대 한 자세한 내용은 [!INCLUDE[iis601](../../../../includes/iis601-md.md)]를 참조 하세요 [기본 인증 사용 및 영역 이름 구성](https://go.microsoft.com/fwlink/?LinkId=88592)합니다. 에 대 한 자세한 내용은 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]를 참조 하세요 [IIS 7.0 베타: 기본 인증 구성](https://go.microsoft.com/fwlink/?LinkId=88593)합니다.  
   
 #### <a name="certificate"></a>인증서  
@@ -121,4 +121,5 @@ ms.locfileid: "54529163"
  전체 전송의 메시지 큐 (이전에 MSMQ 라고 함)를 사용 하는 보안 참조 [전송 보안을 사용 하 여 메시지 보안](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [WCF 보안 프로그래밍](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

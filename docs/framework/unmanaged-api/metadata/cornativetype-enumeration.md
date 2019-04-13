@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15226e6efc468974c32c11adec48a35764bc8446
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf62000fd4ec5c8f3dea3fa7d560b3f9ead33fa7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612257"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113921"
 ---
 # <a name="cornativetype-enumeration"></a>CorNativeType 열거형
 관리되지 않는 네이티브 형식을 설명하는 값을 포함합니다.  
@@ -137,7 +137,7 @@ typedef enum CorNativeType {
 |`NATIVE_TYPE_ERROR`|COM Interop<br /><br /> 이 형식은 ELEMENT_TYPE_I4를 사용 하 여 VT_HRESULT 매핑됩니다.|  
 |`NATIVE_TYPE_IINSPECTABLE`|네이티브 `IInspectable` 형식입니다.|  
 |`NATIVE_TYPE_HSTRING`|네이티브 `HString`합니다.|  
-|`NATIVE_TYPE_MAX`|잘못된 값입니다.|  
+|`NATIVE_TYPE_MAX`|잘못 된 값입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
@@ -147,5 +147,6 @@ typedef enum CorNativeType {
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.InteropServices.UnmanagedType>
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

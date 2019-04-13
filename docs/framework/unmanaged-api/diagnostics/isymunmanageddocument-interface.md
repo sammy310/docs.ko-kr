@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b14333235882efb6da1ce011c109c67a1d149bf3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33213aced635549dd439cf679d89367a71baa7c7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584521"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168807"
 ---
 # <a name="isymunmanageddocument-interface"></a>ISymUnmanagedDocument 인터페이스
 기호 저장소가 참조하는 문서를 나타냅니다. 문서는 uniform resource locator (URL) 및 문서 형식 GUID에 따라 정의 됩니다. URL을 사용 하 여 저장 하는 방법에 관계 없이 문서를 찾을 수 있으며 문서 유형 GUID 수 있습니다. 문서 소스를 기호 저장소에 저장 하 고이 인터페이스를 통해 검색할 수 있습니다.  
@@ -42,4 +42,5 @@ ms.locfileid: "54584521"
 |[HasEmbeddedSource 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-hasembeddedsource-method.md)|반환 `true` 문서에 소스가 디버깅 기호;에 포함 되어 있으면 반환이 고, 그렇지 `false`합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [진단 기호 저장소 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

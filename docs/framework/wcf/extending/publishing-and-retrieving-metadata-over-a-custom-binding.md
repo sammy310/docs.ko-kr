@@ -2,12 +2,12 @@
 title: 사용자 지정 바인딩을 통해 메타데이터 게시 및 검색
 ms.date: 03/30/2017
 ms.assetid: 904e11b4-d90e-45c6-9ee5-c3472c90008c
-ms.openlocfilehash: 850f341e933e44d92f130dae90aff5b5c1a882b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33777358262465e9ecbadd75df8abf066bafcd01
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639551"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222980"
 ---
 # <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a>사용자 지정 바인딩을 통해 메타데이터 게시 및 검색
 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>에서는 메타데이터 엔드포인트를 서비스에 추가할 수 있도록 지원합니다. 이러한 메타 데이터 끝점에 있는 URL에 HTTP GET 요청에 응답할 수는 `?wsdl` querystring 및 Ws-metadataexchange (MEX) 사양에 정의 된 대로 Ws-transfer GET 요청을 합니다. MEX 엔드포인트는 <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType> 계약을 구현합니다.  
@@ -28,7 +28,8 @@ ms.locfileid: "54639551"
  사용자 지정 바인딩을 통해 메타데이터를 게시하는 경우 바인딩에서 메타데이터가 필요로 하는 보안 지원을 제공하는지 확인합니다. 예를 들어, 정보 공개를 방지하고 클라이언트에 메타데이터를 가져올 권한이 있는지 확인하려면 인증 및 암호화가 필요한 <xref:System.ServiceModel.Description.IMetadataExchange> 엔드포인트를 구성하여 메타데이터 및 응용 프로그램의 보안을 더욱 향상시킬 수 있습니다. 샘플 [사용자 지정 보안 메타 데이터 끝점](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) 이 시나리오를 보여 줍니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [서비스에 보안 설정](../../../../docs/framework/wcf/securing-services.md)
 - [WS-MetadataExchange 바인딩](../../../../docs/framework/wcf/extending/ws-metadataexchange-bindings.md)
-- [방법: 구성 사용자 지정 Ws-metadata Exchange 바인딩](../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)
-- [방법: 가 아닌-MEX 바인딩을 통해 메타 데이터를 검색 합니다.](../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)
+- [방법: 사용자 지정 WS-Metadata Exchange 바인딩 구성](../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)
+- [방법: MEX가 아닌 바인딩을 통해 메타데이터 검색](../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)

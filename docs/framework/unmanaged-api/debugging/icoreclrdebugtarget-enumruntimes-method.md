@@ -19,12 +19,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9b434edc10a7c11d738bd3fc10402ef3f83d9dc
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: afb31646d21ec7e15f79601f5fe83ea6ce44fa90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468272"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134682"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>ICoreClrDebugTarget::EnumRuntimes 메서드
 원격 컴퓨터에서 실행 중인 지정된 프로세스의 CLR(공용 언어 런타임)을 열거합니다.  
@@ -54,7 +54,7 @@ HRESULT EnumRuntimes (
  명령 실행 성공  
   
  S_FALSE  
- `dwInternalProcessID`가 컴퓨터에서 실행 중인 프로세스와 일치하지 않습니다. 프로세스가 종료된 것 같습니다. `pcRuntimes` 및 `ppRuntimes`가 null이 됩니다.  
+ `dwInternalProcessID` 일치 하지 않습니다 컴퓨터에서 실행 되는 모든 프로세스 아마도 프로세스가 종료 되었습니다. `pcRuntimes` 및 `ppRuntimes` null이 됩니다.  
   
  E_OUTOFMEMORY  
  `ppRuntimes`에 대해 충분한 메모리를 할당할 수 없습니다.  
@@ -75,4 +75,5 @@ HRESULT EnumRuntimes (
  **.NET framework 버전:** 3.5 SP1  
   
 ## <a name="see-also"></a>참고자료
+
 - [ICoreClrDebugTarget 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)

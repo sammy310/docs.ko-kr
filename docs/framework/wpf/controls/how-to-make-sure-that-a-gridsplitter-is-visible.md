@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - GridSplitter control [WPF], ensuring visibility of
 ms.assetid: 0a62a964-89c8-48f0-9023-5df721a8cf47
-ms.openlocfilehash: 0e1984241c07a69e2b350a61dc5873716c6fa5df
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b7543d14ba39d854b5a2c3f4d0d19b9a457ea89b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375690"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147149"
 ---
 # <a name="how-to-make-sure-that-a-gridsplitter-is-visible"></a>방법: GridSplitter 표시
 있는지 확인 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.GridSplitter> 컨트롤에서 다른 컨트롤에 의해 숨겨지지 않은 <xref:System.Windows.Controls.Grid>합니다.  
@@ -32,5 +32,6 @@ ms.locfileid: "57375690"
  [!code-xaml[GridSplitterSnips#GridSplitterMargin](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml#gridsplittermargin)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.GridSplitter>
 - [방법 항목](gridsplitter-how-to-topics.md)

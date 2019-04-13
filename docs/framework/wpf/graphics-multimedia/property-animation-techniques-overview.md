@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], methods for
 - properties [WPF], methods for animating
 ms.assetid: 74f61413-f8c0-4e75-bf04-951886426c8b
-ms.openlocfilehash: b03c450b84a376de5c5c7d3582c01a31bc417a11
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ebee350f69b5c5e4f9d38c452b9c87bf003528ee
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366779"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317911"
 ---
 # <a name="property-animation-techniques-overview"></a>속성 애니메이션 기술 개요
 이 항목에서는 storyboard, 로컬 애니메이션, 클록 및 프레임당 애니메이션 등, 속성에 애니메이션 효과를 주는 다양한 접근 방법을 설명합니다.  
@@ -42,13 +42,13 @@ ms.locfileid: "57366779"
   
  <xref:System.Windows.Media.Animation.Storyboard> 는 특수 한 유형의 컨테이너 <xref:System.Windows.Media.Animation.Timeline> 포함 된 애니메이션에 대 한 대상 정보를 제공 합니다. 애니메이션 효과 주려는 <xref:System.Windows.Media.Animation.Storyboard>, 다음 세 단계를 완료 합니다.  
   
-1.  선언 된 <xref:System.Windows.Media.Animation.Storyboard> 및 하나 이상의 애니메이션 합니다.  
+1. 선언 된 <xref:System.Windows.Media.Animation.Storyboard> 및 하나 이상의 애니메이션 합니다.  
   
-2.  사용 된 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 및 <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> 대상 개체를 지정 하는 속성 및 각 애니메이션의 속성을 연결 합니다.  
+2. 사용 된 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 및 <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> 대상 개체를 지정 하는 속성 및 각 애니메이션의 속성을 연결 합니다.  
   
-3.  (코드에만 해당) 정의 된 <xref:System.Windows.NameScope> 에 대 한는 <xref:System.Windows.FrameworkElement> 또는 <xref:System.Windows.FrameworkContentElement>합니다. 등록 된 애니메이션 효과를 줄 개체의 이름을 <xref:System.Windows.FrameworkElement> 또는 <xref:System.Windows.FrameworkContentElement>합니다.  
+3. (코드에만 해당) 정의 된 <xref:System.Windows.NameScope> 에 대 한는 <xref:System.Windows.FrameworkElement> 또는 <xref:System.Windows.FrameworkContentElement>합니다. 등록 된 애니메이션 효과를 줄 개체의 이름을 <xref:System.Windows.FrameworkElement> 또는 <xref:System.Windows.FrameworkContentElement>합니다.  
   
-4.  시작 된 <xref:System.Windows.Media.Animation.Storyboard>합니다.  
+4. 시작 된 <xref:System.Windows.Media.Animation.Storyboard>합니다.  
   
  시작을 <xref:System.Windows.Media.Animation.Storyboard> 애니메이션 효과 주는 속성에 애니메이션을 적용 하 고 시작 합니다. 시작 하는 방법은 두 가지를 <xref:System.Windows.Media.Animation.Storyboard>: 사용할 수는 <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 에서 제공 하는 메서드는 <xref:System.Windows.Media.Animation.Storyboard> 클래스를 사용할 수 있습니다를 <xref:System.Windows.Media.Animation.BeginStoryboard> 작업. 애니메이션을 적용 하는 유일한 방법은 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 사용 하는 것을 <xref:System.Windows.Media.Animation.BeginStoryboard> 작업 합니다. A <xref:System.Windows.Media.Animation.BeginStoryboard> 작업에서 사용할 수는 <xref:System.Windows.EventTrigger>, 속성 <xref:System.Windows.Trigger>, 또는 <xref:System.Windows.DataTrigger>.  
   
@@ -56,10 +56,10 @@ ms.locfileid: "57366779"
   
 |storyboard 시작 방법...|인스턴스별|스타일|컨트롤 템플릿|데이터 템플릿|예제|  
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> 및 <xref:System.Windows.EventTrigger>|예|예|예|예|[Storyboard를 사용하여 속성에 애니메이션 효과 주기](how-to-animate-a-property-by-using-a-storyboard.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> 속성 <xref:System.Windows.Trigger>|아니요|예|예|예|[속성 값이 변경될 때 애니메이션 트리거](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> 및 <xref:System.Windows.EventTrigger>|예|예|예|예|[스토리보드를 사용하여 속성에 애니메이션 효과 주기](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> 속성 <xref:System.Windows.Trigger>|아니요|예|예|예|[속성 값 변경 시 애니메이션 트리거](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> 및 <xref:System.Windows.DataTrigger>|아니요|예|예|예|[방법: 데이터가 변경 될 때 애니메이션 트리거](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
-|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 메서드|예|아니요|아니요|아니요|[Storyboard를 사용하여 속성에 애니메이션 효과 주기](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 메서드|예|아니요|아니요|아니요|[스토리보드를 사용하여 속성에 애니메이션 효과 주기](how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  에 대 한 자세한 내용은 <xref:System.Windows.Media.Animation.Storyboard> 개체를 참조 합니다 [Storyboard 개요](storyboards-overview.md)합니다.  
   
@@ -70,9 +70,9 @@ ms.locfileid: "57366779"
   
  로컬 애니메이션을 사용하여 애니메이션 효과를 주려면 다음 단계를 완료합니다.  
   
-1.  만들기는 <xref:System.Windows.Media.Animation.AnimationTimeline> 개체입니다.  
+1. 만들기는 <xref:System.Windows.Media.Animation.AnimationTimeline> 개체입니다.  
   
-2.  사용 하 여는 <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> 적용할 애니메이션 효과 주려는 개체의 메서드는 <xref:System.Windows.Media.Animation.AnimationTimeline> 지정 하는 속성입니다.  
+2. 사용 하 여는 <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> 적용할 애니메이션 효과 주려는 개체의 메서드는 <xref:System.Windows.Media.Animation.AnimationTimeline> 지정 하는 속성입니다.  
   
  다음 예제에서는 너비 및 배경색 색에 애니메이션을 적용 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.Button>합니다.  
   
@@ -87,11 +87,11 @@ ms.locfileid: "57366779"
   
  단일 적용할 <xref:System.Windows.Media.Animation.Clock> 속성에 다음 단계를 완료 합니다.  
   
-1.  만들기는 <xref:System.Windows.Media.Animation.AnimationTimeline> 개체입니다.  
+1. 만들기는 <xref:System.Windows.Media.Animation.AnimationTimeline> 개체입니다.  
   
-2.  사용 하 여는 <xref:System.Windows.Media.Animation.AnimationTimeline.CreateClock%2A> 메서드를 <xref:System.Windows.Media.Animation.AnimationTimeline> 만들려는 <xref:System.Windows.Media.Animation.AnimationClock>.  
+2. 사용 하 여는 <xref:System.Windows.Media.Animation.AnimationTimeline.CreateClock%2A> 메서드를 <xref:System.Windows.Media.Animation.AnimationTimeline> 만들려는 <xref:System.Windows.Media.Animation.AnimationClock>.  
   
-3.  사용 하 여는 <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A> 적용할 애니메이션 효과 주려는 개체의 메서드는 <xref:System.Windows.Media.Animation.AnimationClock> 지정할 속성입니다.  
+3. 사용 하 여는 <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A> 적용할 애니메이션 효과 주려는 개체의 메서드는 <xref:System.Windows.Media.Animation.AnimationClock> 지정할 속성입니다.  
   
  다음 예제에서는 만드는 방법을 보여 줍니다는 <xref:System.Windows.Media.Animation.AnimationClock> 두 개의 비슷한 속성에 적용 합니다.  
   
@@ -100,11 +100,11 @@ ms.locfileid: "57366779"
   
  타이밍 트리를 만들고 속성에 애니메이션 효과를 주는 데 사용하려면 다음 단계를 완료합니다.  
   
-1.  사용 하 여 <xref:System.Windows.Media.Animation.ParallelTimeline> 고 <xref:System.Windows.Media.Animation.AnimationTimeline> 타이밍 트리를 만드는 개체입니다.  
+1. 사용 하 여 <xref:System.Windows.Media.Animation.ParallelTimeline> 고 <xref:System.Windows.Media.Animation.AnimationTimeline> 타이밍 트리를 만드는 개체입니다.  
   
-2.  사용 하 여는 <xref:System.Windows.Media.Animation.TimelineGroup.CreateClock%2A> 루트 <xref:System.Windows.Media.Animation.ParallelTimeline> 만들려는 <xref:System.Windows.Media.Animation.ClockGroup>합니다.  
+2. 사용 하 여는 <xref:System.Windows.Media.Animation.TimelineGroup.CreateClock%2A> 루트 <xref:System.Windows.Media.Animation.ParallelTimeline> 만들려는 <xref:System.Windows.Media.Animation.ClockGroup>합니다.  
   
-3.  반복 합니다 <xref:System.Windows.Media.Animation.ClockGroup.Children%2A> 의 <xref:System.Windows.Media.Animation.ClockGroup> 자식 적용 <xref:System.Windows.Media.Animation.Clock> 개체입니다. 각 <xref:System.Windows.Media.Animation.AnimationClock> 자식을 사용 하 여는 <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A> 적용할 애니메이션 효과 주려는 개체의 메서드는 <xref:System.Windows.Media.Animation.AnimationClock> 지정할 속성  
+3. 반복 합니다 <xref:System.Windows.Media.Animation.ClockGroup.Children%2A> 의 <xref:System.Windows.Media.Animation.ClockGroup> 자식 적용 <xref:System.Windows.Media.Animation.Clock> 개체입니다. 각 <xref:System.Windows.Media.Animation.AnimationClock> 자식을 사용 하 여는 <xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A> 적용할 애니메이션 효과 주려는 개체의 메서드는 <xref:System.Windows.Media.Animation.AnimationClock> 지정할 속성  
   
  클록 개체에 대한 자세한 내용은 [애니메이션 및 타이밍 시스템 개요](animation-and-timing-system-overview.md)를 참조하세요.  
   
@@ -122,6 +122,7 @@ ms.locfileid: "57366779"
  자세한 내용은 참조는 <xref:System.Windows.Media.CompositionTarget.Rendering> 페이지입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [애니메이션 개요](animation-overview.md)
 - [Storyboard 개요](storyboards-overview.md)
 - [애니메이션 및 타이밍 시스템 개요](animation-and-timing-system-overview.md)

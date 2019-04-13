@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - claims [WCF], and tokens
 ms.assetid: eff167f3-33f8-483d-a950-aa3e9f97a189
-ms.openlocfilehash: 21172ccda5f5f8070d81726d5f4dc6f9d80ab071
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 223b86310d90c877df15a99c90a0a72ea780734a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569003"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076265"
 ---
 # <a name="claims-and-tokens"></a>클레임 및 토큰
 이 항목에서는 Windows Communication Foundation (WCF) 지원 되는 기본 토큰 으로부터 만드는 다양 한 클레임 형식을 설명 합니다.  
@@ -65,6 +65,7 @@ ms.locfileid: "54569003"
  없으면 합니다 `ClaimSet` 클라이언트 자격 증명에서 생성 하는 개체에 클레임을 포함을 `Right` 의 `Identity,` 그런 다음 <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> 속성에서 반환 `true`합니다. 그런 클레임이 하나 이상 있는 경우 `IsAnonymous` 속성은 `false`를 반환합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.IdentityModel.Claims.ClaimSet>
 - <xref:System.IdentityModel.Claims.Claim>
 - <xref:System.IdentityModel.Claims.Rights>

@@ -2,12 +2,12 @@
 title: Windows 서비스 응용 프로그램에서의 호스팅
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: 52c62ef1be7dafc97c5cf958f30444e47f900e92
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8e50c39955f9ab72dfa1d52cbc37ab90f1ab0a8a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621978"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335370"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Windows 서비스 응용 프로그램에서의 호스팅
 Windows 서비스(이전의 Windows NT 서비스)에서는 장기 실행되는 실행 파일에 있어야 하는 응용 프로그램에 특히 적합한 프로세스 모델을 제공하지만 사용자 인터페이스 폼을 표시하지 않습니다. Windows 서비스 응용 프로그램의 프로세스 수명은 Windows 서비스 응용 프로그램을 시작, 중지 및 일지 중지할 수 있도록 해 주는 SCM(서비스 제어 관리자)이 관리합니다. "무중단" 응용 프로그램에 적합 한 호스팅 환경을 쉽게 컴퓨터를 시작할 때 자동으로 시작 하는 Windows 서비스 프로세스를 구성할 수 있습니다. Windows 서비스 응용 프로그램에 대 한 자세한 내용은 참조 하세요. [Windows 서비스 응용 프로그램](https://go.microsoft.com/fwlink/?LinkId=89450)합니다.  
@@ -24,9 +24,9 @@ Windows 서비스(이전의 Windows NT 서비스)에서는 장기 실행되는 �
   
 ### <a name="to-host-wcf-inside-of-a-windows-service-application"></a>Windows 서비스 응용 프로그램 대신 WCF를 호스트하려면  
   
-1.  Windows 서비스 응용 프로그램을 만듭니다. <xref:System.ServiceProcess> 네임스페이스에 있는 클래스를 사용하여 관리 코드에서 Windows 서비스 응용 프로그램을 작성할 수 있습니다. 이 응용 프로그램에는 <xref:System.ServiceProcess.ServiceBase>에서 상속된 하나의 클래스가 있어야 합니다.  
+1. Windows 서비스 응용 프로그램을 만듭니다. <xref:System.ServiceProcess> 네임스페이스에 있는 클래스를 사용하여 관리 코드에서 Windows 서비스 응용 프로그램을 작성할 수 있습니다. 이 응용 프로그램에는 <xref:System.ServiceProcess.ServiceBase>에서 상속된 하나의 클래스가 있어야 합니다.  
   
-2.  WCF 서비스의 수명을 Windows 서비스 응용 프로그램의 수명에 연결 합니다. 일반적으로 WCF 서비스 호스팅 서비스가 시작 될 때 활성화, 호스팅 서비스가 중지 되 고 WCF 서비스에서 오류가 발생 하는 경우에 호스팅 프로세스를 종료 하는 경우 메시지에 대 한 수신 대기를 중지 하는 Windows 서비스 응용 프로그램에서 호스트 해야 합니다. 이렇게 하려면 다음을 수행합니다.  
+2. WCF 서비스의 수명을 Windows 서비스 응용 프로그램의 수명에 연결 합니다. 일반적으로 WCF 서비스 호스팅 서비스가 시작 될 때 활성화, 호스팅 서비스가 중지 되 고 WCF 서비스에서 오류가 발생 하는 경우에 호스팅 프로세스를 종료 하는 경우 메시지에 대 한 수신 대기를 중지 하는 Windows 서비스 응용 프로그램에서 호스트 해야 합니다. 이렇게 하려면 다음을 수행합니다.  
   
     -   <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29>를 재정의하여 <xref:System.ServiceModel.ServiceHost>의 인스턴스를 하나 이상 엽니다. 단일 Windows 서비스 응용 프로그램을 시작 하 고 그룹으로 중지 하는 여러 개의 WCF 서비스를 호스트할 수 있습니다.  
   
@@ -37,9 +37,10 @@ Windows 서비스(이전의 Windows NT 서비스)에서는 장기 실행되는 �
      WCF 서비스를 호스팅하는 Windows 서비스 응용 프로그램 배포 되 고 WCF 사용 하지 않는 Windows 서비스 응용 프로그램으로 동일한 방식으로 관리 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceProcess>
 - [연습: 구성 요소 디자이너에서 Windows 서비스 응용 프로그램 만들기](https://go.microsoft.com/fwlink/?LinkId=94875)
-- [방법: Host a WCF Service in a Managed Windows Service](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
+- [방법: 관리형 Windows 서비스에서 WCF 서비스 호스팅](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
 - [Windows Service 호스트](../../../../docs/framework/wcf/samples/windows-service-host.md)
-- [서비스 애플리케이션 프로그래밍 아키텍처](https://go.microsoft.com/fwlink/?LinkId=94876)
+- [서비스 응용 프로그램 프로그래밍 아키텍처](https://go.microsoft.com/fwlink/?LinkId=94876)
 - [Windows Server App Fabric 호스팅 기능](https://go.microsoft.com/fwlink/?LinkId=201276)

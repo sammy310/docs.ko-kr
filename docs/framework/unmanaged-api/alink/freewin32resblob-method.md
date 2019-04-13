@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e52984e12f22486212f0a2ec02d452a77242400e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 196a57b3e919ea4ccbc0b91e5b6f281ad3c30b62
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57491830"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118159"
 ---
 # <a name="freewin32resblob-method"></a>FreeWin32ResBlob 메서드
 Win32 리소스 blob와 연결 된 리소스를 해제합니다.  
@@ -45,6 +45,7 @@ HRESULT FreeWin32ResBlob(
  Alink.h 필요  
   
 ## <a name="see-also"></a>참고자료
+
 - [IALink 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

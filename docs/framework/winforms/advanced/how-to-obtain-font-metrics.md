@@ -1,5 +1,5 @@
 ---
-title: '방법: 글꼴 메트릭 얻기'
+title: '방법: 글꼴 메트릭 가져오기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - fonts [Windows Forms], obtaining metrics
 - font metrics [Windows Forms], obtaining
 ms.assetid: ff7c0616-67f7-4fa2-84ee-b8d642f2b09b
-ms.openlocfilehash: c1701b07958509e663f0ac651471e82a60120618
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 24cada3962339cae0608bbe01e070a0b8e256e73
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723376"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119056"
 ---
-# <a name="how-to-obtain-font-metrics"></a>방법: 글꼴 메트릭 얻기
+# <a name="how-to-obtain-font-metrics"></a>방법: 글꼴 메트릭 가져오기
 <xref:System.Drawing.FontFamily> 클래스는 특정 제품군/스타일 조합에 대 한 다양 한 메트릭을 검색 하는 메서드를 제공 합니다.  
   
 -   <xref:System.Drawing.FontFamily.GetEmHeight%2A>(FontStyle)  
@@ -53,8 +53,9 @@ ms.locfileid: "57723376"
  [!code-vb[System.Drawing.FontsAndText#71](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#71)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- 앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.PaintEventHandler>의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`가 필요합니다.  
+ 앞의 예제는 Windows Forms에서 사용 하도록 설계 되었으며 필요 <xref:System.Windows.Forms.PaintEventArgs> `e`의 매개 변수인 <xref:System.Windows.Forms.PaintEventHandler>합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Forms의 그래픽 및 그리기](graphics-and-drawing-in-windows-forms.md)
 - [글꼴 및 텍스트 사용](using-fonts-and-text.md)

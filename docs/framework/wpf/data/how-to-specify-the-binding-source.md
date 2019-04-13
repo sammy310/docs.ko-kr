@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 55d47757-2648-4a52-987f-b767953f168c
-ms.openlocfilehash: 105924fec2956f2f74a2a574ee62f71a37df9366
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8c866502300c50e00f1393b9e3fb64099f027c43
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356723"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222304"
 ---
 # <a name="how-to-specify-the-binding-source"></a>방법: 바인딩 소스 지정
 데이터 바인딩에서 바인딩 소스 개체는 데이터를 가져온 개체를 참조합니다. 이 항목에서는 바인딩 소스를 지정하는 여러 가지 방법을 설명합니다.  
@@ -44,6 +44,7 @@ ms.locfileid: "57356723"
 |<xref:System.Windows.Data.Binding.ElementName%2A>|바인딩할 요소를 나타내는 문자열을 지정합니다. 이는 애플리케이션에서 다른 요소의 속성에 바인딩하려고 할 때 유용합니다. 예를 들어 사용 하려는 경우를 <xref:System.Windows.Controls.Slider> 응용 프로그램에서 다른 컨트롤의 높이 제어 하 바인딩하려는 경우 또는 <xref:System.Windows.Controls.ContentControl.Content%2A> 컨트롤을 <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> 의 속성에 <xref:System.Windows.Controls.ListBox> 컨트롤. 자세한 내용은 <xref:System.Windows.Data.Binding.ElementName%2A>을 참조하세요.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.FrameworkElement.DataContext%2A?displayProperty=nameWithType>
 - <xref:System.Windows.FrameworkContentElement.DataContext%2A?displayProperty=nameWithType>
 - [속성 값 상속](../advanced/property-value-inheritance.md)

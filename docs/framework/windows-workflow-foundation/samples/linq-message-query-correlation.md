@@ -2,12 +2,12 @@
 title: LINQ 메시지 쿼리 상관 관계
 ms.date: 03/30/2017
 ms.assetid: b746872e-57b1-4514-b337-53398a0e0deb
-ms.openlocfilehash: 7881140f2926bc27073a0be425a63566f313b50c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: cc13696cfd8eb2dcdf22fdc067518c8bd55ca32d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855987"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327674"
 ---
 # <a name="linq-message-query-correlation"></a>LINQ 메시지 쿼리 상관 관계
 이 샘플에서는 시스템에서 제공하는 <xref:System.ServiceModel.Dispatcher.MessageQuery> 대신 사용자 지정 <xref:System.ServiceModel.XPathMessageQuery> 구현을 사용하여 내용 기반 상관 관계를 만드는 방법을 보여 줍니다.  
@@ -20,19 +20,19 @@ ms.locfileid: "43855987"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1.  이 샘플에서는 HTTP 엔드포인트를 사용하여 워크플로 서비스를 노출합니다. 이 샘플을 적절 한 URL Acl을 실행 하려면 추가 되어야 합니다 (참조 [HTTP 및 HTTPS 구성](https://go.microsoft.com/fwlink/?LinkId=70353) 세부 정보에 대 한), 관리자 권한으로 Visual Studio를 실행 하거나 적절 한 Acl을 추가 하려면 관리자 권한 프롬프트에서 다음 명령을 실행 하 여 합니다. 도메인과 사용자 이름이 대체되었는지 확인합니다.  
+1. 이 샘플에서는 HTTP 엔드포인트를 사용하여 워크플로 서비스를 노출합니다. 이 샘플을 적절 한 URL Acl을 실행 하려면 추가 되어야 합니다 (참조 [HTTP 및 HTTPS 구성](https://go.microsoft.com/fwlink/?LinkId=70353) 세부 정보에 대 한), 관리자 권한으로 Visual Studio를 실행 하거나 적절 한 Acl을 추가 하려면 관리자 권한 프롬프트에서 다음 명령을 실행 하 여 합니다. 도메인과 사용자 이름이 대체되었는지 확인합니다.  
   
     ```  
     netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%  
     ```  
   
-2.  URL ACL이 추가되었으면 다음 단계를 사용합니다.  
+2. URL ACL이 추가되었으면 다음 단계를 사용합니다.  
   
     1.  솔루션을 빌드합니다.  
   
     2.  솔루션을 마우스 오른쪽 단추로 클릭 하 고 선택 하 여 여러 개의 시작 프로젝트 설정 **시작 프로젝트 설정**합니다. 추가 **서비스** 하 고 **클라이언트** (해당 순서) 대로 여러 시작 프로젝트로 합니다.  
   
-    3.  응용 프로그램을 실행합니다. 주문서를 보내고 구매 주문서 ID를 받은 다음 주문을 확인하는 워크플로가 클라이언트 콘솔에 표시됩니다. 처리 중인 요청이 서비스 창에 표시됩니다.  
+    3.  애플리케이션을 실행합니다. 주문서를 보내고 구매 주문서 ID를 받은 다음 주문을 확인하는 워크플로가 클라이언트 콘솔에 표시됩니다. 처리 중인 요청이 서비스 창에 표시됩니다.  
   
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  

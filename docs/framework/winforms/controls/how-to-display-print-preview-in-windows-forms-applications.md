@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows에서 인쇄 미리 보기 표시 Forms 응용 프로그램'
+title: '방법: Windows Forms 애플리케이션에서 인쇄 미리 보기 표시'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview
 - examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
-ms.openlocfilehash: 13510086edb13ff54f5551296c1b64c51873f649
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 22247c941eff575f0f3e5683e46376054ba13bb5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715362"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154364"
 ---
-# <a name="how-to-display-print-preview-in-windows-forms-applications"></a>방법: Windows에서 인쇄 미리 보기 표시 Forms 응용 프로그램
+# <a name="how-to-display-print-preview-in-windows-forms-applications"></a>방법: Windows Forms 애플리케이션에서 인쇄 미리 보기 표시
 사용할 수는 <xref:System.Windows.Forms.PrintPreviewDialog> 컨트롤 사용자가 인쇄 되기 전에 문서를 자주 표시할 수 있도록 합니다.  
   
  이 작업을 수행 하려면 인스턴스를 지정 해야 합니다 <xref:System.Drawing.Printing.PrintDocument> 클래스 인쇄할 문서입니다. 사용 하 여 인쇄 미리 보기를 사용 하는 방법에 대 한 자세한 내용은 합니다 <xref:System.Drawing.Printing.PrintDocument> 구성 요소 참조 [방법: 인쇄 미리 보기를 사용 하 여 Windows Forms의 인쇄](../advanced/how-to-print-in-windows-forms-using-print-preview.md)합니다.  
@@ -82,6 +82,7 @@ ms.locfileid: "57715362"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [PrintDocument 구성 요소](printdocument-component-windows-forms.md)
 - [PrintPreviewDialog 컨트롤](printpreviewdialog-control-windows-forms.md)
 - [Windows Forms 인쇄 지원](../advanced/windows-forms-print-support.md)

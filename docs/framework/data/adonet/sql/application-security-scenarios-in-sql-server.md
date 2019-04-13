@@ -2,12 +2,12 @@
 title: SQL Server의 응용 프로그램 보안 시나리오
 ms.date: 03/30/2017
 ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
-ms.openlocfilehash: 42afe27c11eadff935e162128b3d5f18c1cba8a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96c9f48cbf2e2ade2ff1688573a83fd86d613f2c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687455"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130164"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>SQL Server의 응용 프로그램 보안 시나리오
 안전한 SQL Server 클라이언트 응용 프로그램을 만드는 방법이 정확하게 한 가지만 존재하지는 않습니다. 모든 응용 프로그램은 요구 사항, 배포 환경 및 사용자 집단에 따라 고유합니다. 초기에 배포했을 때에는 비교적 안전했던 응용 프로그램도 시간이 지남에 따라 안전하지 못할 수 있습니다. 앞으로 생길 수 있는 위협을 정확히 예측하는 것은 불가능합니다.  
@@ -18,7 +18,7 @@ ms.locfileid: "54687455"
  개발자는 보안 위협, 이에 직면하기 위해 제공하는 도구 및 자초한 보안 허점을 피하는 방법을 이해해야 합니다. 한 연결 부분이 손상되면 전체 강도에 영향을 미친다는 점에서 보안은 체인에 비유할 수 있습니다. 다음 표에는 일반적인 보안 위협이 들어 있으며 이 단원의 항목에서 보다 상세히 설명됩니다.  
   
 ### <a name="sql-injection"></a>SQL 삽입  
- SQL 삽입은 악의적 사용자가 유효한 입력 대신 Transact-SQL 문을 입력하는 데 사용하는 프로세스입니다. 입력이 유효성 검사를 거치지 않고 서버로 직접 전달되고 우연히 응용 프로그램에서 삽입된 코드를 실행하면 공격으로 인해 데이터가 손상되거나 파괴될 수 있습니다.  저장 프로시저와 매개 변수화된 명령을 사용하면 동적 SQL을 방지하고 모든 사용자에 대한 권한을 제한하므로 SQL Server 삽입 공격을 막을 수 있습니다.  
+ SQL 삽입은 악의적 사용자가 유효한 입력 대신 Transact-SQL 문을 입력하는 데 사용하는 프로세스입니다. 입력이 유효성 검사를 거치지 않고 서버로 직접 전달되고 우연히 응용 프로그램에서 삽입된 코드를 실행하면 공격으로 인해 데이터가 손상되거나 제거될 수 있습니다.  저장 프로시저와 매개 변수화된 명령을 사용하면 동적 SQL을 방지하고 모든 사용자에 대한 권한을 제한하므로 SQL Server 삽입 공격을 막을 수 있습니다.  
   
 ### <a name="elevation-of-privilege"></a>권한 높이기  
  권한 높이기 공격은 사용자가 소유자 또는 관리자와 같이 신뢰할 수 있는 계정 권한이 있는 것처럼 가정할 때 발생합니다. 항상 최소 권한 사용자 계정에서 실행해야 하고 반드시 필요한 권한만 할당하세요. 실행 코드에 대해서는 관리자 또는 소유자 계정을 사용하지 마세요. 그러면 공격이 성공하더라도 발생할 수 있는 손상 정도가 제한됩니다. 추가 권한이 필요한 작업을 수행하는 경우 작업 기간 동안에만 프로시저 서명 또는 가장을 사용하세요. 인증서를 사용하여 저장 프로시저에 서명하거나 가장을 사용하여 임시로 권한을 할당할 수 있습니다.  
@@ -50,13 +50,14 @@ ms.locfileid: "54687455"
  [SQL Server에서 행 수준 권한 부여](../../../../../docs/framework/data/adonet/sql/granting-row-level-permissions-in-sql-server.md)  
  데이터 액세스를 제한하는 낮은 수준의 권한을 구현하는 방법에 대해 설명합니다.  
   
- [SQL Server에서 애플리케이션 역할 만들기](../../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)  
+ [SQL Server에서 응용 프로그램 역할 만들기](../../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)  
  응용 프로그램 역할의 특성과 기능에 대해 설명합니다.  
   
- [SQL Server에서 데이터베이스 간 액세스 활성화](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
+ [SQL Server에서 데이터베이스간 액세스 활성화](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
  보안을 위협하지 않고 데이터베이스 간 액세스를 허용하는 방법에 대해 설명합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [SQL Server 보안](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [SQL Server 보안 개요](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [ADO.NET 응용 프로그램 보안](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)

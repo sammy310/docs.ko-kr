@@ -1,19 +1,19 @@
 ---
-title: '방법: XMLData Provider 및 XPath 쿼리를 사용하여 XML 데이터에 바인딩'
+title: '방법: XMLDataProvider 및 XPath 쿼리를 사용하여 XML 데이터에 바인딩'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XmlDataProvider [WPF], binding to XML data
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: 9a6869b84746081df7917aca32042002b8b044c5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f6cd09279cf23d3273e7a4083950a5f42714c8bf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371348"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097228"
 ---
-# <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>방법: XMLData Provider 및 XPath 쿼리를 사용하여 XML 데이터에 바인딩
+# <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>방법: XMLDataProvider 및 XPath 쿼리를 사용하여 XML 데이터에 바인딩
 이 예제에 바인딩하는 방법을 보여 줍니다 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 사용 하 여 데이터를 <xref:System.Windows.Data.XmlDataProvider>입니다.  
   
  사용 하 여는 <xref:System.Windows.Data.XmlDataProvider>의 기본 응용 프로그램에서 데이터 바인딩을 통해 액세스할 수 있는 데이터의 임의 트리 일 수 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 노드. 즉,는 <xref:System.Windows.Data.XmlDataProvider> 의 모든 트리를 사용 하는 편리한 방법을 제공 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 를 바인딩 소스로 노드.  
@@ -36,13 +36,13 @@ ms.locfileid: "57371348"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 **XPath** 속성은 XmlNode.SelectNodes 메서드를 통해 처리됩니다. **XPath** 쿼리를 수정하여 다른 결과를 얻을 수 있습니다. 다음은 몇 가지 예는 <xref:System.Windows.Data.Binding.XPath%2A> 바인딩된 쿼리 <xref:System.Windows.Controls.ListBox> 이전 예제에서:  
   
--   `XPath="Book[1]"`은 첫 번째 책 요소를 반환합니다(“작동 중인 XML”). **XPath** 색인은 0이 아니라 1을 기반으로 합니다.  
+-   `XPath="Book[1]"` 첫 번째 책 요소 ("중인 XML")를 반환 합니다. **XPath** 색인은 0이 아니라 1을 기반으로 합니다.  
   
--   `XPath="Book[@*]"`에서는 모든 특성이 있는 모든 책 요소를 반환합니다.  
+-   `XPath="Book[@*]"` 특성이 포함 된 모든 책 요소를 반환 합니다.  
   
--   `XPath="Book[last()-1]"`은 끝에서 두 번째인 책 요소를 반환합니다(“Microsoft .NET 소개”).  
+-   `XPath="Book[last()-1]"` 두 번째 book 요소 ("Microsoft.NET 소개")가 마지막으로 돌아갈 것입니다.  
   
--   `XPath="*[position()>3]"`에서는 처음 3개를 제외한 모든 책 요소를 반환합니다.  
+-   `XPath="*[position()>3]"` 처음 3 개를 제외 하 고 책 요소의 모든 반환 됩니다.  
   
  실행 하는 경우는 **XPath** 반환 쿼리는 <xref:System.Xml.XmlNode> 또는 XmlNodes 목록을 합니다. <xref:System.Xml.XmlNode> [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 개체를 사용할 수 있습니다 합니다 <xref:System.Windows.Data.Binding.Path%2A> 바인딩할 속성은 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 속성. 이전 예를 다시 살펴보겠습니다. 예제의 나머지 동일 하 게 유지 하 고 변경 하면 합니다 <xref:System.Windows.Controls.TextBlock> 바인딩을 다음과 같이 표시 됩니다에 반환된 된 XmlNodes의 이름을 합니다 <xref:System.Windows.Controls.ListBox>합니다. 이 경우 반환된 모든 노드의 이름은 "*Book*"입니다.  
   
@@ -59,9 +59,10 @@ ms.locfileid: "57371348"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Data.ObjectDataProvider>
 - [XDocument, XElement 또는 LINQ for XML 쿼리 결과에 바인딩](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)
-- [계층적 XML 데이터에 마스터-세부 패턴 사용](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
+- [계층적 XML 데이터에서 마스터-세부 정보 패턴 사용](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
 - [바인딩 소스 개요](binding-sources-overview.md)
 - [데이터 바인딩 개요](data-binding-overview.md)
 - [방법 항목](data-binding-how-to-topics.md)

@@ -2,12 +2,12 @@
 title: ADO.NET에서 데이터 검색 및 수정
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: ab6aa30708140aed2f5f325c3dae9f543937fac8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf26cd216b456e912dbaf0019114ea8e60b439a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556433"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097626"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>ADO.NET에서 데이터 검색 및 수정
 데이터베이스 응용 프로그램의 기본 기능은 데이터 소스에 연결하여 포함된 데이터를 검색하는 것입니다. ADO.NET의.NET Framework 데이터 공급자를 사용 하 여 데이터 검색 뿐 아니라 명령을 실행할 수 있는 응용 프로그램 및 데이터 원본 간의 다리 역할을 **DataReader** 또는 **DataAdapter** . 모든 데이터베이스 응용 프로그램의 한 가지 핵심 기능은 데이터베이스에 저장된 데이터를 업데이트하는 것입니다. Ado.net에서 데이터를 업데이트 하는 중 사용 하는 것은 **DataAdapter** 및 <xref:System.Data.DataSet>, 및 **명령** 개체 및이 포함 될 수도 있습니다 트랜잭션을 사용 하 여 합니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "54556433"
  [명령 및 매개 변수](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  명령 및 명령 작성기를 만드는 방법, 매개 변수를 구성하는 방법 및 명령을 실행하여 데이터를 검색하고 수정하는 방법에 대한 항목을 제공합니다.  
   
- [DataAdapter 및 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [DataAdapters 및 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  DataReaders, DataAdapters, 매개 변수, DataAdapter 이벤트 처리 및 배치 작업 수행 방법을 설명하는 항목을 제공합니다.  
   
  [트랜잭션 및 동시성](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
@@ -43,7 +43,7 @@ ms.locfileid: "54556433"
  [데이터베이스 스키마 정보 검색](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
  데이터 소스에서 사용 가능한 데이터베이스나 카탈로그, 데이터베이스의 테이블 및 뷰를 비롯하여 테이블에 대한 제약 조건 및 기타 스키마 정보를 가져오는 방법을 설명합니다.  
   
- [DbProviderFactory](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
+ [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  공급자 팩터리 모델에 대해 설명하고 `System.Data.Common` 네임스페이스의 기본 클래스를 사용하는 방법을 보여 줍니다.  
   
  [ADO.NET의 데이터 추적](../../../../docs/framework/data/adonet/data-tracing.md)  
@@ -59,8 +59,9 @@ ms.locfileid: "54556433"
  응용 프로그램을 작성할 해당 스트림 데이터에서 SQL Server 없이 완전히 메모리에 로드 하는 방법을 설명 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET에서 데이터 형식 매핑](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
-- [DataSet, DataTable 및 DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [DataSets, DataTables 및 DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [ADO.NET 응용 프로그램 보안](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server 및 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

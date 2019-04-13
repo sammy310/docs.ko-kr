@@ -1,19 +1,19 @@
 ---
-title: 데이터 계약 Serializer
+title: 데이터 계약 직렬 변환기
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], serializer
 - WCF, data
 - DataContractSerializer
 ms.assetid: 3d64837e-0a0c-4cc8-90ff-a5c6f313c63a
-ms.openlocfilehash: 3dc9119cdf4473e3923fd24d3f444eed9cae0220
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eba12a38ee852dcdc08f27bc9e3cb02332fd7071
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676135"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199533"
 ---
-# <a name="data-contract-serializer"></a>데이터 계약 Serializer
+# <a name="data-contract-serializer"></a>데이터 계약 직렬 변환기
 Windows Communication Foundation (WCF) 인프라를 사용 하 여 <xref:System.Runtime.Serialization.DataContractSerializer> 클래스를 기본 serializer로 합니다. 이 단원의 항목에서는 클래스를 독립 실행형 serializer로 사용하기 위한 자세한 정보를 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
@@ -38,5 +38,6 @@ Windows Communication Foundation (WCF) 인프라를 사용 하 여 <xref:System.
  [데이터 전송 및 Serialization](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - [데이터 계약 스키마 참조](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
 - [서비스 계약에서 데이터 전송 지정](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML 2009 [XAML Services]
 - XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
-ms.openlocfilehash: 6de103d9b5b59ec1a47098e44e07ee95a3db166e
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 05f811cd0d95f7605963dae851430fb6bf0e9f7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58039575"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162282"
 ---
 # <a name="xaml-2009-language-features"></a>XAML 2009 언어 기능
 XAML 2009는 기존 XAML 언어 사양을 확장하는 새 XAML 언어 기능의 약식 용어입니다. XAML 2009에서는 여러 가지 새로운 지시문과 구문이 도입되었습니다. 여기에 포함 됩니다는 [X:arguments 지시문](x-arguments-directive.md); [X:factorymethod 지시문](x-factorymethod-directive.md); [X:reference 태그 확장명](x-reference-markup-extension.md), [X:typearguments 지시문 ](x-typearguments-directive.md); 공용 언어 기본 형식에 대 한 기본 제공 형식 (예를 들어 `x:Char`).  
@@ -33,4 +33,5 @@ XAML 2009는 기존 XAML 언어 사양을 확장하는 새 XAML 언어 기능의
  이벤트에서 지원하는 특성에 대해 XAML 2006에서는 태그 컴파일이 필요하다고 가정하고 이벤트를 태그 컴파일에 제출합니다. XAML 2009에서는 XAML의 런타임 구문 분석 및 로드 시까지 이벤트 연결을 지연하는, 태그 확장과 유사한 태그 폼을 지원합니다. 그러나 WPF UI에 대한 XAML 시나리오 및 WPF 애플리케이션에서는 일반적으로 이 기능을 사용하지 않습니다. WPF 및 XAML 2006 구현에서는 대부분의 이벤트 특성 처리에 대해 <xref:System.Windows.UIElement> 수준에서 정의된 라우트된 이벤트에 대한 이벤트 처리기 연결 및 해당 태그 컴파일러 단계의 조합을 사용합니다. 또한 태그 컴파일러는 빌드 작업에서 태그 컴파일러가 사용됨을 선언하는 XAML에 있는 모든 이벤트 특성을 전처리합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [XAML 개요(WPF)](../wpf/advanced/xaml-overview-wpf.md)

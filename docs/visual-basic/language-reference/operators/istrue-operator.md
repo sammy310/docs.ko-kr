@@ -7,12 +7,12 @@ helpviewer_keywords:
 - IsTrue operator [Visual Basic]
 - OrElse operator [Visual Basic]
 ms.assetid: b6cec0f2-61b1-4331-a7f0-4d07ee3179d6
-ms.openlocfilehash: cb8ad8cb4a1ec13611edfcc3de7f4b7eb33fc553
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 6c5ec6d953d174b525dee7ad3034d2d01ae4950f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829930"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344951"
 ---
 # <a name="istrue-operator-visual-basic"></a>IsTrue 연산자(Visual Basic)
 식이 인지 결정 `True`합니다.  
@@ -24,15 +24,15 @@ ms.locfileid: "58829930"
 ## <a name="compiler-use-of-istrue"></a>IsTrue 컴파일러 사용  
  클래스 또는 구조체를 정의한 경우에 해당 형식에서 변수의 사용할 수 있습니다는 `For`, `If`를 `Else If`, 또는 `While` 문, 또는 `When` 절. 이렇게 하면 컴파일러 형식으로 변환 하는 연산자가 필요는 `Boolean` 값 조건을 테스트할 수 있도록 합니다. 다음 순서 대로 연산자를 적절 한 검색 됩니다.  
   
-1.  클래스 또는 구조체에서 확대 변환 연산자 `Boolean`합니다.  
+1. 클래스 또는 구조체에서 확대 변환 연산자 `Boolean`합니다.  
   
-2.  클래스 또는 구조체에서 확대 변환 연산자 `Boolean?`합니다.  
+2. 클래스 또는 구조체에서 확대 변환 연산자 `Boolean?`합니다.  
   
-3.  `IsTrue` 클래스 또는 구조체에서 연산자입니다.  
+3. `IsTrue` 클래스 또는 구조체에서 연산자입니다.  
   
-4.  로 축소 변환 `Boolean?` 변환에서 포함 하지 않는 `Boolean` 에 `Boolean?`입니다.  
+4. 로 축소 변환 `Boolean?` 변환에서 포함 하지 않는 `Boolean` 에 `Boolean?`입니다.  
   
-5.  클래스 또는 구조체에서 축소 변환 연산자 `Boolean`합니다.  
+5. 클래스 또는 구조체에서 축소 변환 연산자 `Boolean`합니다.  
   
  으로 변환이 정의 하지 않은 경우 `Boolean` 요소나 `IsTrue` 연산자, 컴파일러에서 오류를 알립니다.  
   

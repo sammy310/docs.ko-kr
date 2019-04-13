@@ -8,12 +8,12 @@ helpviewer_keywords:
 - headers [WPF], customizing
 - GridView view mode [WPF], customizing column headers
 ms.assetid: 74835674-a39e-4ab5-9418-ad7f6ab7b956
-ms.openlocfilehash: 6e5cf8a8b280a539feb73a54defbb0cd8c2c0f79
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 83643d8acea706bad439683702e4228d240b97bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366649"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090324"
 ---
 # <a name="gridview-column-header-styles-and-templates-overview"></a>GridView 열 머리글 스타일 및 템플릿 개요
 이 개요의 열 머리글을 사용자 지정 하는 데 사용 하는 속성에 대 한 우선 순위에 설명 합니다 <xref:System.Windows.Controls.GridView> 의 보기 모드를 <xref:System.Windows.Controls.ListView> 제어 합니다.  
@@ -29,13 +29,14 @@ ms.locfileid: "57366649"
 |-|-|-|-|  
 |**클래스**|<xref:System.Windows.Controls.GridView>|<xref:System.Windows.Controls.GridViewColumn>|<xref:System.Windows.Controls.GridViewColumnHeader>|  
 |**상황에 맞는 메뉴 속성**|<xref:System.Windows.Controls.GridView.ColumnHeaderContextMenu%2A>|적용할 수 없음|<xref:System.Windows.FrameworkElement.ContextMenu%2A>|  
-|**ToolTip**<br /><br /> **속성**|<xref:System.Windows.Controls.GridView.ColumnHeaderToolTip%2A>|적용할 수 없음|<xref:System.Windows.FrameworkElement.ToolTip%2A>|  
+|**도구 설명**<br /><br /> **속성**|<xref:System.Windows.Controls.GridView.ColumnHeaderToolTip%2A>|적용할 수 없음|<xref:System.Windows.FrameworkElement.ToolTip%2A>|  
 |**헤더 템플릿**<br /><br /> **속성**|<xref:System.Windows.Controls.GridView.ColumnHeaderTemplate%2A> <sup>1</sup>/<br /><br /> <xref:System.Windows.Controls.GridView.ColumnHeaderTemplateSelector%2A>|<xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A> <sup>1</sup>/<br /><br /> <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A>|<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> <sup>1</sup>/<br /><br /> <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A>|  
 |**스타일 속성**|<xref:System.Windows.Controls.GridView.ColumnHeaderContainerStyle%2A>|<xref:System.Windows.Controls.GridViewColumn.HeaderContainerStyle%2A>|<xref:System.Windows.FrameworkElement.Style%2A>|  
   
  <sup>1</sup>에 대 한 **헤더 템플릿 속성**템플릿을 템플릿 선택기 속성, 템플릿 속성은 우선 순위를 설정 하는 경우. 예를 들어, 모두 설정 하면를 <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> 및 <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> 속성을 <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> 속성이 우선 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [방법 항목](listview-how-to-topics.md)
 - [ListView 개요](listview-overview.md)
 - [GridView 개요](gridview-overview.md)

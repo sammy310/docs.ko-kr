@@ -1,5 +1,5 @@
 ---
-title: '방법: 색 매트릭스를 사용 하 여 이미지에 알파 값 설정'
+title: '방법: 색 매트릭스를 사용하여 이미지에 알파 값 설정'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - matrices [Windows Forms], alpha values
 - bitmaps [Windows Forms], using color matrices for semi-transparent
 ms.assetid: a27121e6-f7e9-4c09-84e2-f05aa9d2a1bb
-ms.openlocfilehash: 9e102f51d00953d05ed1d217a345e32178676ffe
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 79937f0801a790d4ff1ab327aaaf45ef1b881827
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716337"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199546"
 ---
-# <a name="how-to-use-a-color-matrix-to-set-alpha-values-in-images"></a>방법: 색 매트릭스를 사용 하 여 이미지에 알파 값 설정
+# <a name="how-to-use-a-color-matrix-to-set-alpha-values-in-images"></a>방법: 색 매트릭스를 사용하여 이미지에 알파 값 설정
 합니다 <xref:System.Drawing.Bitmap> 클래스 (에서 상속 되는 <xref:System.Drawing.Image> 클래스) 및 <xref:System.Drawing.Imaging.ImageAttributes> 가져오고 픽셀 값을 설정 하기 위한 기능을 제공 하는 클래스입니다. 사용할 수는 <xref:System.Drawing.Imaging.ImageAttributes> 알파를 수정 하는 클래스는 전체 이미지에 대 한 값 또는 호출할 수 있습니다 합니다 <xref:System.Drawing.Bitmap.SetPixel%2A> 메서드의 <xref:System.Drawing.Bitmap> 개별 픽셀 값을 수정 하는 클래스입니다.  
   
 ## <a name="example"></a>예제  
@@ -33,8 +33,9 @@ ms.locfileid: "57716337"
  [!code-vb[System.Drawing.AlphaBlending#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#21)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- 앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.PaintEventArgs>의 매개 변수인 `e`<xref:System.Windows.Forms.PaintEventHandler>가 필요합니다.  
+ 앞의 예제는 Windows Forms에서 사용 하도록 설계 되었으며 필요 <xref:System.Windows.Forms.PaintEventArgs>`e`에서의 매개 변수인 <xref:System.Windows.Forms.PaintEventHandler>합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Forms의 그래픽 및 그리기](graphics-and-drawing-in-windows-forms.md)
 - [선 및 채우기 알파 혼합](alpha-blending-lines-and-fills.md)

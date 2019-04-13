@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d45a8bdebb296a33862f018308a7ef876e0cd64c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef621d1cbbd04421b392e64f5507fcbe23860465
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572359"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105744"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR ETW 키워드 및 수준
 <a name="top"></a> 범주 및 수준별로 ETW(Windows용 이벤트 추적) 이벤트를 필터링할 수 있습니다. 이벤트 [CLR ETW 키워드](#keywords)를 통해 범주별로 이벤트를 필터링할 수 있습니다. 런타임 및 런다운 공급자를 위해 여러 키워드를 조합하여 사용할 수 있습니다. [이벤트 수준](#levels) 은 플래그로 식별됩니다.  
@@ -95,12 +95,12 @@ ms.locfileid: "54572359"
   
 |키워드 및 플래그|애플리케이션 도메인, 어셈블리, 모듈 DCStart/DCEnd 이벤트|메서드 DCStart/DCEnd 이벤트(동적 메서드 이벤트 포함)|  
 |------------------------|----------------------------------------------------------------|----------------------------------------------------------------------|  
-|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|`DCStart` 이벤트|없음|  
-|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|`DCEnd` 이벤트|없음|  
-|`JITKeyword` +<br /><br /> `StartRundownKeyword`|없음|`DCStart` 이벤트|  
-|`JITKeyword` +<br /><br /> `EndRundownKeyword`|없음|`DCEnd` 이벤트|  
-|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|없음|`DCStart` 이벤트|  
-|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|없음|`DCEnd` 이벤트|  
+|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|`DCStart` 이벤트입니다.|없음|  
+|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|`DCEnd` 이벤트입니다.|없음|  
+|`JITKeyword` +<br /><br /> `StartRundownKeyword`|없음|`DCStart` 이벤트입니다.|  
+|`JITKeyword` +<br /><br /> `EndRundownKeyword`|없음|`DCEnd` 이벤트입니다.|  
+|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|없음|`DCStart` 이벤트입니다.|  
+|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|없음|`DCEnd` 이벤트입니다.|  
   
  [맨 위로 이동](#top)  
   
@@ -123,6 +123,7 @@ ms.locfileid: "54572359"
  0x0 - LogAlways  
   
 ## <a name="see-also"></a>참고자료
+
 - [CLR ETW 공급자](../../../docs/framework/performance/clr-etw-providers.md)
 - [CLR ETW 이벤트](../../../docs/framework/performance/clr-etw-events.md)
 - [공용 언어 런타임의 ETW 이벤트](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

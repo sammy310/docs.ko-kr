@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_SingleInstanceCantConnect
 ms.assetid: 7c2c0cee-02a1-4157-be03-39d18e18408f
-ms.openlocfilehash: 241ad5b9986e78f88ab5ca39bc73f7372162ba76
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 7ffa9b185e16cfdf8223ce84e77d1a0e1fa67f65
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58037509"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322656"
 ---
 # <a name="this-single-instance-application-could-not-connect-to-the-original-instance"></a>이 단일 인스턴스 애플리케이션을 원본 인스턴스에 연결할 수 없습니다.
 이 단일 인스턴스 애플리케이션을 원본 인스턴스에 연결할 수 없습니다. 이 문제가 발생할 수 있는 몇 가지 원인은 다음과 같습니다.  
@@ -22,15 +22,15 @@ ms.locfileid: "58037509"
   
 ## <a name="to-correct-this-error-when-developing-the-application"></a>애플리케이션을 개발할 때 이 오류를 해결하려면  
   
-1.  애플리케이션이 응답하지 않는 상태로 전환되지 않는지 확인합니다.  
+1. 애플리케이션이 응답하지 않는 상태로 전환되지 않는지 확인합니다.  
   
-2.  애플리케이션에 커널 개체를 만들 수 있는 권한이 있는지 확인합니다.  
+2. 애플리케이션에 커널 개체를 만들 수 있는 권한이 있는지 확인합니다.  
   
-3.  애플리케이션의 원래 인스턴스를 다시 시작합니다.  
+3. 애플리케이션의 원래 인스턴스를 다시 시작합니다.  
   
-4.  컴퓨터를 다시 시작하여 원래 인스턴스 애플리케이션에 연결하는 데 필요한 리소스를 사용 중일 수 있는 프로세스를 지웁니다.  
+4. 컴퓨터를 다시 시작하여 원래 인스턴스 애플리케이션에 연결하는 데 필요한 리소스를 사용 중일 수 있는 프로세스를 지웁니다.  
   
-5.  오류가 발생한 상황을 파악하여 Microsoft 기술 지원 서비스에 전화로 문의합니다.  
+5. 오류가 발생한 상황을 파악하여 Microsoft 기술 지원 서비스에 전화로 문의합니다.  
   
 ## <a name="see-also"></a>참고자료
 

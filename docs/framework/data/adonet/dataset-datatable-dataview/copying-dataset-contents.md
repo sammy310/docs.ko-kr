@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
-ms.openlocfilehash: b4edc1bbf1448fc86df76ed9f790a924a563647b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb2a172ac4e6a0ce4852f4c7cf7044583d9ab6c4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700314"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077772"
 ---
 # <a name="copying-dataset-contents"></a>데이터 집합 콘텐츠 복사
 복사본을 만들 수 있습니다는 <xref:System.Data.DataSet> 원래 데이터는 영향을 주지 않고 데이터로 작업 하거나 사용할 수 있도록 데이터의 하위 집합으로는 **데이터 집합**합니다. 복사 하는 경우는 **데이터 집합**를 할 수 있습니다.  
@@ -95,7 +95,8 @@ foreach (DataRow copyRow in copyRows)
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>
-- [DataSet, DataTable 및 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [DataSets, DataTables 및 DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

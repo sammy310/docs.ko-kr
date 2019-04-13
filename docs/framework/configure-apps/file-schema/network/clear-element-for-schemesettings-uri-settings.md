@@ -1,13 +1,13 @@
 ---
-title: schemeSettings에 대한 <clear> 요소(URI 설정)
+title: <clear> SchemeSettings (Uri 설정)에 대 한
 ms.date: 03/30/2017
 ms.assetid: 65098332-ce61-4542-ab8d-e7dc0257d31f
-ms.openlocfilehash: 5bb97fbe04cbd3bba85113200abe6495639bab87
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 132506dc15335b738fcdb026f4d31429bc45a228
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287107"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082687"
 ---
 # <a name="clear-element-for-schemesettings-uri-settings"></a>\<지우기 > schemeSettings (Uri 설정)에 대 한
 모든 기존 구성표 설정을 지웁니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "55287107"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<schemeSettings> 요소 (URI 설정)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|특정 체계에 대해 <xref:System.Uri>가 구문 분석되는 방법을 지정합니다.|  
+|[\<schemeSettings > 요소 (Uri 설정)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|특정 체계에 대해 <xref:System.Uri>가 구문 분석되는 방법을 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
  기본적으로 <xref:System.Uri?displayProperty=nameWithType> 클래스 이스케이프 해제 백분율로 인코딩된 경로 압축을 실행 하기 전에 경로 구분 기호입니다. 다음과 같은 공격에 대 한 보안 메커니즘으로 구현 되었습니다.  
@@ -71,6 +71,7 @@ ms.locfileid: "55287107"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>

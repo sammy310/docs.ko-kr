@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd3813d977f94db4168da8c888485b323f4072ad
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2a49252d00f75b4d0b6325aeae0aab22f8ada5e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471279"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191382"
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies 함수
 두 어셈블리가 강력한 이름 서명에 의해서만 다른지 여부를 결정합니다.  
@@ -72,5 +72,6 @@ BOOLEAN StrongNameCompareAssemblies (
  경우는 `StrongNameCompareAssemblies` 함수가 성공적으로 완료으로 호출 되지 않으면 합니다 [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) 마지막 생성 된 오류를 검색 하는 함수입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [StrongNameCompareAssemblies 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md)
 - [ICLRStrongName 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

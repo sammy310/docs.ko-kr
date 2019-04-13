@@ -10,21 +10,21 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: e609fbff29d058c04a839a5dcb79aab16a518298
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 79eae4d37c056fc95ac73c78e00dd1a2b68bcd24
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709053"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324203"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>방법: 그리는 데 필요한 그래픽 개체 만들기
 선과 셰이프를 그릴 수 있습니다, 전에 텍스트를 렌더링 되거나 표시 및 사용 하 여 이미지 조작 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]을 만들어야을 <xref:System.Drawing.Graphics> 개체입니다. 합니다 <xref:System.Drawing.Graphics> 개체가 나타내는 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 그리기 화면, 및는 그래픽 이미지를 만드는 데 사용 되는 개체입니다.  
   
  그래픽 작업에 두 단계가 있습니다.  
   
-1.  만들기는 <xref:System.Drawing.Graphics> 개체입니다.  
+1. 만들기는 <xref:System.Drawing.Graphics> 개체입니다.  
   
-2.  사용 하는 <xref:System.Drawing.Graphics> 선과 도형 그리기, 텍스트를 렌더링 하거나 이미지를 조작 하는 개체입니다.  
+2. 사용 하는 <xref:System.Drawing.Graphics> 선과 도형 그리기, 텍스트를 렌더링 하거나 이미지를 조작 하는 개체입니다.  
   
 ## <a name="creating-a-graphics-object"></a>그래픽 개체 만들기  
  다양 한 방법에서에서 graphics 개체를 만들 수 있습니다.  
@@ -48,11 +48,11 @@ ms.locfileid: "57709053"
   
 #### <a name="to-obtain-a-reference-to-a-graphics-object-from-the-painteventargs-in-the-paint-event"></a>Paint 이벤트에 PaintEventArgs에서 Graphics 개체에 대 한 참조를 가져오려면  
   
-1.  선언 된 <xref:System.Drawing.Graphics> 개체입니다.  
+1. 선언 된 <xref:System.Drawing.Graphics> 개체입니다.  
   
-2.  변수 참조를 할당 합니다 <xref:System.Drawing.Graphics> 개체의 일부로 전달 되는 <xref:System.Windows.Forms.PaintEventArgs>합니다.  
+2. 변수 참조를 할당 합니다 <xref:System.Drawing.Graphics> 개체의 일부로 전달 되는 <xref:System.Windows.Forms.PaintEventArgs>합니다.  
   
-3.  폼 이나 컨트롤을 그리는 코드를 삽입 합니다.  
+3. 폼 이나 컨트롤을 그리는 코드를 삽입 합니다.  
   
      다음 예제에서는 참조 하는 방법을 보여 줍니다는 <xref:System.Drawing.Graphics> 에서 개체를 <xref:System.Windows.Forms.PaintEventArgs> 에 <xref:System.Windows.Forms.Control.Paint> 이벤트:  
   
@@ -165,13 +165,14 @@ ms.locfileid: "57709053"
   
     |렌더링|참조|  
     |---------------|---------|  
-    |선|[방법: Windows Form에 선 그리기](how-to-draw-a-line-on-a-windows-form.md)|  
+    |선|[방법: Windows Form에서 선 그리기](how-to-draw-a-line-on-a-windows-form.md)|  
     |도형|[방법: 윤곽선이 있는 도형 그리기](how-to-draw-an-outlined-shape.md)|  
-    |텍스트|[방법: Windows Form에 텍스트 그리기](how-to-draw-text-on-a-windows-form.md)|  
-    |이미지|[방법: GDI +를 사용 하 여 이미지를 렌더링 합니다.](how-to-render-images-with-gdi.md)|  
+    |텍스트|[방법: Windows Form에서 텍스트 그리기](how-to-draw-text-on-a-windows-form.md)|  
+    |이미지|[방법: GDI+를 사용하여 이미지 렌더링](how-to-render-images-with-gdi.md)|  
   
 ## <a name="see-also"></a>참고자료
+
 - [그래픽 프로그래밍 시작](getting-started-with-graphics-programming.md)
 - [Windows Forms의 그래픽 및 그리기](graphics-and-drawing-in-windows-forms.md)
 - [선, 곡선 및 도형](lines-curves-and-shapes.md)
-- [방법: GDI +를 사용 하 여 이미지를 렌더링 합니다.](how-to-render-images-with-gdi.md)
+- [방법: GDI+를 사용하여 이미지 렌더링](how-to-render-images-with-gdi.md)

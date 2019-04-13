@@ -1,5 +1,5 @@
 ---
-title: '방법: 자동 크기 조정 없이 성능 향상'
+title: '방법: 자동 배율 조정 없이 성능 향상'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - images [Windows Forms], using without automatic scaling
 - performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
-ms.openlocfilehash: 8580bd2212a025edddada9e47b0dc2b6195b53c7
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 49ec491308cc6a9fd81e74bff213029389137b88
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653797"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163594"
 ---
-# <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>방법: 자동 크기 조정 없이 성능 향상
+# <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>방법: 자동 배율 조정 없이 성능 향상
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 그릴 때, 성능 저하가 발생 하는 이미지를 확장 자동으로 수 있습니다. 대상 사각형의 크기를 전달 하 여 이미지의 크기 조정은 제어할 수는 또는 <xref:System.Drawing.Graphics.DrawImage%2A> 메서드.  
   
  다음을 호출 하는 예를 들어를 <xref:System.Drawing.Graphics.DrawImage%2A> 의 왼쪽 위 모퉁이 지정 하는 메서드 (50, 30) 하지만 대상 사각형을 지정 하지 않습니다.  
@@ -41,5 +41,6 @@ ms.locfileid: "58653797"
  앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`가 필요합니다. Texture.jpg을 이미지 이름 및 시스템에 유효한 경로 바꿉니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [이미지, 비트맵 및 메타파일](images-bitmaps-and-metafiles.md)
 - [이미지, 비트맵, 아이콘 및 메타파일 사용](working-with-images-bitmaps-icons-and-metafiles.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fbe0459824499aba86c908012f038256f9923513
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 724db8c5c8dbb5bf3ff8bc7202a60397180b7b38
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496695"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183393"
 ---
 # <a name="icordebugcontrollerstop-method"></a>ICorDebugController::Stop 메서드
 프로세스에서 관리 되는 코드를 실행 하는 모든 스레드에서 동시에 중지를 수행 합니다.  
@@ -57,4 +57,3 @@ HRESULT Stop (
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
-

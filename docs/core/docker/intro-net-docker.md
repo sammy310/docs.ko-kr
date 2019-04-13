@@ -1,196 +1,73 @@
 ---
 title: Docker 소개
 description: 이 문서에서는 .NET Core 애플리케이션 컨텍스트에서 Docker를 소개하고 간략하게 설명합니다.
-ms.date: 11/06/2017
+ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: b2640a1cea4d77158b7d9ed6ec63cf36d9e1f9cd
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 725d8301a27f1109c85a89945f0fb8403e255ab4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676280"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817257"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 및 Docker 소개
 
-이 문서에서는 Docker에서의 .NET 작업을 소개하고 관련 개념적 배경을 제공합니다.
+.NET Core는 Docker 컨테이너에서 쉽게 실행할 수 있습니다. 컨테이너는 호스트 시스템의 나머지 부분에서 애플리케이션을 격리한 채 커널만 공유하고 애플리케이션에 제공된 리소스를 사용하도록 지원하는 경량 방식을 제공합니다. Docker에 익숙하지 않은 경우에는 Docker의 [개요 문서](https://docs.docker.com/engine/docker-overview/)를 읽어 보는 것이 좋습니다.
 
-## <a name="docker-packaging-your-apps-to-deploy-and-run-anywhere"></a>Docker: 앱을 패키지하여 어디서나 배포 및 실행
+Docker를 설치하는 방법에 대한 자세한 내용은 [Docker Desktop: Community Edition](https://www.docker.com/products/docker-desktop)의 다운로드 페이지를 참조하세요.
 
-[Docker](../../standard/microservices-architecture/container-docker-introduction/docker-defined.md)는 개발자 및 관리자가 [컨테이너](https://www.docker.com/what-container)라는 느슨하게 격리된 환경에서 [이미지](https://docs.docker.com/glossary/?term=image)를 빌드하고, 분산 애플리케이션을 제공 및 실행할 수 있게 해주는 개방형 플랫폼입니다. 이 접근 방식을 통해 개발, QA 및 프로덕션 환경 간에 효율적으로 애플리케이션 수명 주기를 관리할 수 있습니다.
- 
-[Docker 플랫폼](https://docs.docker.com/engine/docker-overview/#the-docker-platform)에서는 [Docker 엔진](https://docs.docker.com/engine/docker-overview/#docker-engine)을 사용하여 신속하게 앱을 만들고 [Dockerfile](https://docs.docker.com/glossary/?term=Dockerfile) 형식으로 작성된 다음 [계층화된 컨테이너](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/#container-and-layers)에서 배포 및 실행되는 파일을 사용하여 만들어진 [Docker 이미지](https://docs.docker.com/glossary/?term=image)로 패키지합니다.
+## <a name="docker-basics"></a>Docker 기본 사항
 
-고유한 [계층화된 이미지](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/#images-and-layers)를 dockerfile로 만들거나 [레지스트리](https://docs.docker.com/glossary/?term=registry)의 기존 dockerfile(예: [Docker Hub](https://docs.docker.com/glossary/?term=Docker%20Hub))을 사용할 수 있습니다.
+익숙해져야 하는 몇 가지 개념이 있습니다. Docker 클라이언트에는 이미지 및 컨테이너를 관리하는 데 사용하는 명령줄 인터페이스 프로그램이 있습니다. 앞에서 언급한 대로 시간을 내 [Docker 개요](https://docs.docker.com/engine/docker-overview/) 문서를 읽어 봐야 합니다. 
 
-[Docker 컨테이너, 이미지 및 레지스트리 간의 관계](../../standard/microservices-architecture/container-docker-introduction/docker-containers-images-registries.md)는 [컨테이너화된 애플리케이션이나 마이크로 서비스를 설계 및 빌드](../../standard/microservices-architecture/architect-microservice-container-applications/index.md)할 때 중요한 개념입니다. 이 접근 방식은 개발과 배포 간의 시간을 크게 줄여 줍니다.
+### <a name="images"></a>이미지
 
-### <a name="further-reading-and-watching"></a>추가 읽기(및 보기) 정보
+이미지는 컨테이너의 기본을 형성하는 파일 시스템 변경 사항의 정렬된 컬렉션입니다. 이미지는 읽기 전용이며 이미지에는 상태가 없습니다. 많은 경우, 이미지는 다른 이미지를 기반으로 하지만, 일부 사용자 지정이 사용됩니다. 예를 들어 애플리케이션을 위한 새 이미지를 생성하는 경우 이미 .NET Core 런타임이 포함된 기존 이미지를 기반으로 하게 됩니다.
 
-* [Windows 기반 컨테이너: 엔터프라이즈급 제어 기능을 통한 최신 앱 개발](https://www.youtube.com/watch?v=Ryx3o0rD5lY&feature=youtu.be)
-* [Docker overview](https://docs.docker.com/engine/docker-overview/)(Docker 개요)
-* [Windows 컨테이너의 Dockerfile](/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile)
-* [Best practices for writing Dockerfiles](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/)(Dockerfile 작성에 대한 모범 사례)
-* [.NET Core 애플리케이션에 대한 Docker 이미지 작성](../docker/building-net-docker-images.md)
+컨테이너는 이미지에서 생성되므로, 이미지는 컨테이너가 시작될 때 실행되는 실행 매개 변수(예: 시작 실행 파일) 세트를 가집니다.
 
+### <a name="containers"></a>컨테이너
 
-### <a name="getting-net-docker-images"></a>.NET Docker 이미지 가져오기
+컨테이너는 실행 가능한 이미지 인스턴스입니다. 이미지를 빌드할 때 애플리케이션 및 종속성을 배포하며 그런 다음, 여러 컨테이너를 각각 서로 격리된 상태로 인스턴스화할 수 있습니다. 각 컨테이너 인스턴스에는 고유한 파일 시스템, 메모리 및 네트워크 인터페이스가 있습니다.
 
-공식 .NET Docker 이미지는 Microsoft에서 만들고 최적화합니다. 이러한 이미지는 Docker Hub의 Microsoft 리포지토리에서 공개적으로 사용할 수 있습니다. 각 리포지토리에는 .NET 버전 및 OS 버전에 따라 여러 이미지가 포함될 수 있습니다. 이미지 리포지토리 대부분은 특정 프레임워크 버전과 OS(Linux 배포 또는 Windows 버전)를 모두 선택하는 데 도움이 되는 광범위한 태그 지정을 제공합니다.
+### <a name="registries"></a>레지스트리
 
-## <a name="scenario-based-guidance"></a>시나리오 기반 지침
+컨테이너 레지스트리는 이미지 리포지토리의 컬렉션입니다. 레지스트리 이미지를 기반으로 한 이미지를 만들 수 있습니다. 레지스트리의 이미지에서 곧바로 컨테이너를 생성할 수 있습니다. [Docker 컨테이너, 이미지 및 레지스트리 간의 관계](../../standard/microservices-architecture/container-docker-introduction/docker-containers-images-registries.md)는 [컨테이너화된 애플리케이션이나 마이크로 서비스를 설계 및 빌드](../../standard/microservices-architecture/architect-microservice-container-applications/index.md)할 때 중요한 개념입니다. 이 접근 방식은 개발과 배포 간의 시간을 크게 줄여 줍니다.
 
-.NET 리포지토리에 대한 Microsoft의 의도는 특정 시나리오나 워크로드를 나타내는 세분화되고 집중된 리포지토리를 제공하는 것입니다.
+Docker에는 [Docker 허브](https://hub.docker.com/)에서 호스트하는, 사용 가능한 공용 레지스트리가 있습니다. [.NET Core 관련 이미지](https://hub.docker.com/_/microsoft-dotnet-core/)는 Docker 허브에 나열됩니다. 
 
-`microsoft/aspnetcore` 이미지는 Docker의 ASP.NET Core 앱에 최적화되어 있으므로 컨테이너를 빠르게 시작할 수 있습니다.
+MCR(Microsoft 컨테이너 레지스트리)은 Microsoft가 제공하는 컨테이너 이미지의 공식 소스입니다. MCR은 Azure CDN에서 빌드되어 글로벌 복제 이미지를 제공합니다. 그러나 MCR은 공용 웹 사이트가 없으며, Microsoft가 제공하는 컨테이너 이미지에 대해 배우는 기본적인 방법은 [Microsoft Docker 허브 페이지](https://hub.docker.com/_/microsoft-dotnet-core/)를 통하는 것입니다.
 
-.NET Core 이미지(`microsoft/dotnet`)는 .NET Core를 기반으로 하는 콘솔 앱을 위한 것입니다. 예를 들어 일괄 처리 프로세스, Azure WebJobs 및 기타 콘솔 시나리오는 최적화된 .NET Core 이미지를 사용해야 합니다.
+### <a name="dockerfile"></a>Dockerfile
 
-Docker 및 .NET 애플리케이션 사용에 대한 가장 명확한 수평적 시나리오는 프로덕션 배포 및 호스팅에 대한 것입니다. 프로덕션은 한 가지 시나리오일 뿐이며, 다른 시나리오도 동일하게 유용한 것으로 판명되었습니다. 이러한 시나리오는 .NET에만 국한된 것이 아니라, 대부분의 개발자 플랫폼에 적용됩니다.
+**Dockerfile**은 이미지를 생성하는 명령 세트를 정의하는 파일입니다. **Dockerfile**의 각 명령은 이미지에 계층을 생성합니다. 대부분의 경우 이미지를 다시 빌드할 때는 변경된 계층만 다시 빌드됩니다. **Dockerfile**은 다른 사용자에게 배포할 수 있으며, 그러면 생성할 때와 동일한 방식으로 새 이미지를 다시 생성할 수 있습니다. 이 기능을 사용하여 이미지를 생성하는 방법에 대한 ‘명령’을 배포할 수 있지만, 이미지를 배포하는 기본 방법은 레지스트리에 이미지를 게시하는 것입니다.
 
-* **저마찰 설치** - 로컬 설치 없이 .NET을 사용해 볼 수 있습니다. .NET이 포함된 Docker 이미지를 다운로드하기만 하면 됩니다.
+## <a name="net-core-images"></a>.NET Core 이미지
 
-* **컨테이너에서 개발** - 일관된 환경에서 개발하여 개발 환경과 프로덕션 환경을 유사하게 만들 수 있습니다(개발자 컴퓨터의 전역 상태와 같은 문제 방지). Visual Studio Tools for Docker를 통해 Visual Studio에서 직접 컨테이너를 시작할 수도 있습니다.
+공식 .NET Core Docker 이미지는 MCR(Microsoft 컨테이너 레지스트리)에 게시되며 [Microsoft .NET Core Docker 허브 리포지토리](https://hub.docker.com/_/microsoft-dotnet-core/)에서 찾을 수 있습니다. 각 리포지토리에는 사용할 수 있는 .NET(SDK 또는 Runtime)과 OS가 다양하게 조합된 이미지가 포함되어 있습니다. 
 
-* **컨테이너에서 테스트** - 컨테이너에서 테스트하여 잘못 구성된 환경이나 마지막 테스트에서 남겨진 기타 변경 내용으로 인한 실패를 줄일 수 있습니다.
+Microsoft는 특정 시나리오를 위한 맞춤형 이미지를 제공합니다. 예를 들어 [ASP.NET Core 리포지토리](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/)는 프로덕션에서 ASP.NET Core 앱을 실행하기 위해 빌드된 이미지를 제공합니다.
 
-* **컨테이너에서 빌드** - 컨테이너에서 코드를 빌드하여 여러 환경에 대해 공유 빌드 컴퓨터를 올바르게 구성할 필요 없이, 대신 “BYOC”(Bring Your Own Container) 접근 방식으로 넘어갈 수 있습니다.
+## <a name="azure-services"></a>Azure 서비스
 
-* **모든 환경에서 배포** - 모든 환경을 통해 이미지를 배포할 수 있습니다. 이 접근 방식을 사용하면 구성 차이로 인한 실패가 줄어듭니다(일반적으로 외부 구성을 통해 이미지 동작 변경(예: 삽입된 환경 변수)).
+다양한 Azure 서비스에서 컨테이너를 지원합니다. 애플리케이션을 위한 Docker 이미지를 생성하여 다음 서비스 중 하나에 배포합니다.
 
-Docker 컨테이너 개발을 위해 .NET Core와 .NET Framework 중에서 결정하는 데 대한 [일반적인 지침](../../standard/microservices-architecture/net-core-net-framework-containers/general-guidance.md)입니다.
+* [AKS(Azure Kubernetes Service)](https://azure.microsoft.com/services/kubernetes-service/)\
+Kubernetes를 사용하여 Linux 컨테이너를 확장 및 오케스트레이션합니다.
 
-### <a name="common-docker-development-scenarios"></a>일반적인 Docker 개발 시나리오
+* [Azure App Service](https://azure.microsoft.com/services/app-service/containers/)\
+PaaS 환경에서 Linux 컨테이너를 사용하여 웹앱 또는 API를 배포합니다.
 
-#### <a name="net-core"></a>.NET Core
+* [Azure Batch](https://azure.microsoft.com/services/batch/)\
+컨테이너를 사용하여 반복적인 컴퓨팅 작업을 실행합니다.
 
-**.NET Core 리소스**
+* [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)\
+Windows Server 컨테이너를 사용하여 .NET 애플리케이션 및 마이크로 서비스를 이동하고 전환하고 현대화합니다.
 
- 관심 있는 시나리오에 맞는 .NET Core 샘플을 선택하세요. 모든 샘플 지침은 Windows, Linux 또는 macOS 호스트에서 Windows 또는 Linux Docker 이미지를 대상으로 하는 방법을 설명합니다.
-
-샘플에서는 .NET Core 2.0을 사용합니다. 이러한 샘플에서는 해당하는 경우 Docker [다단계 빌드](https://github.com/dotnet/announcements/issues/18) 및 [다중 아키텍처 태그](https://github.com/dotnet/announcements/issues/14)를 사용합니다.
-
-* [DockerHub의 .NET Core 이미지](https://hub.docker.com/r/microsoft/dotnet/)
-
-* [Dockerize a .NET Core application](https://docs.docker.com/engine/examples/dotnetcore/)(.NET Core 애플리케이션 Docker화)
-
-* 이 .NET Core Docker 샘플은 [.NET Core 개발 프로세스에서 Docker를 사용](https://github.com/dotnet/dotnet-docker-samples/tree/master/dotnetapp-dev)하는 방법을 보여 줍니다. 샘플은 Linux 컨테이너와 Windows 컨테이너 둘 다에서 작동합니다.
-
-* 이 .NET Core Docker 샘플은 [프로덕션용 .NET Core 앱에 대한 Docker 이미지를 빌드](https://github.com/dotnet/dotnet-docker-samples/tree/master/dotnetapp-prod)하는 것과 관련한 모범 사례 패턴을 보여 줍니다. 샘플은 Linux 컨테이너와 Windows 컨테이너 둘 다에서 작동합니다.
-
-* 이 [.NET Core Docker 샘플](https://github.com/dotnet/dotnet-docker-samples/tree/master/dotnetapp-selfcontained)은 [자체 포함된 .NET Core 애플리케이션](../deploying/index.md)에 대한 Docker 이미지를 빌드하는 것과 관련한 모범 사례 패턴을 보여 줍니다. [컨테이너 간에 기본 이미지 공유](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/)의 이점이 없는 가장 작은 프로덕션 컨테이너에 사용됩니다. 그러나 하위 Docker 계층은 공유할 수 있습니다.
-
-#### <a name="arm32--raspberry-pi"></a>ARM32/Raspberry Pi
-
-* [.NET Core 런타임 ARM32 빌드 공지 사항](https://github.com/dotnet/announcements/issues/29)
-
-* [DockerHub의 ARM32/Raspberry Pi .NET Core 이미지](https://hub.docker.com/r/microsoft/dotnet/)
-
-* [GitHub의 ARM32/Raspberry Pi .NET Core Docker 샘플](https://github.com/dotnet/dotnet-docker-samples#arm32--raspberry-pi)
-
-#### <a name="net-framework"></a>.NET Framework
-
-* [DockerHub의 .NET Framework 이미지](https://hub.docker.com/r/microsoft/dotnet-framework/)
-
-이 리포지토리에는 다양한 .NET Framework Docker 구성을 보여 주는 샘플이 포함되어 있습니다. 이러한 이미지를 고유한 Docker 이미지의 기반으로 사용할 수 있습니다.
-
-**.NET Framework 4.7**
-
-[dotnet-framework:4.7 샘플](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.7)은 [.NET Framework 4.7](../../framework/whats-new/index.md#v47)의 기본 “Hello World” 사용을 보여 줍니다. 이 샘플은 [.NET Framework 4.7 Docker 이미지](https://github.com/Microsoft/dotnet-framework-docker-samples/blob/master/dotnetapp-4.7/Dockerfile)를 사용하여 앱을 빌드하고 배포하는 방법을 보여 줍니다.
-
-**.NET Framework 4.6.2**
-
-[dotnet-framework:4.6.2 샘플](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.6.2)은 [.NET Framework 4.6.2](../../framework/whats-new/index.md#v462)의 기본 “Hello World” 사용을 보여 줍니다. 이 샘플은 [.NET Framework 4.6.2 Docker 이미지](https://github.com/Microsoft/dotnet-framework-docker-samples/blob/master/dotnetapp-4.6.2/Dockerfile)를 사용하여 앱을 빌드하고 배포하는 방법을 보여 줍니다.
-
-**.NET Framework 3.5**
-
- [dotnet-framework:3.5 샘플](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-3.5)은 [.NET Framework 3.5](https://github.com/Microsoft/dotnet-framework-docker-samples/blob/master/dotnetapp-3.5/dotnetapp-3.5/Dockerfile)의 기본 “Hello World” 사용을 보여 줍니다. 이 샘플은 Docker에서 .NET Framework 3.5를 사용하여 프로젝트를 빌드하고 배포하는 방법을 보여 줍니다.
-
-#### <a name="aspnet-core"></a>ASP.NET Core
-
-* [이 ASP.NET Core Docker 샘플](https://github.com/dotnet/dotnet-docker-samples/tree/master/aspnetapp)은 프로덕션용 ASP.NET Core 앱에 대한 Docker 이미지를 빌드하는 것과 관련한 모범 사례 패턴을 보여 줍니다. 샘플은 Linux 컨테이너와 Windows 컨테이너 둘 다에서 작동합니다.
-
-* [DockerHub의 ASP.NET Core 이미지](https://hub.docker.com/r/microsoft/aspnetcore-build/)
-
-* [GitHub의 ASP.NET Core 이미지](https://github.com/aspnet/aspnet-docker)
-
-#### <a name="aspnet-framework"></a>ASP.NET Framework
-
-* [DockerHub의 ASP.NET Framework 이미지](https://hub.docker.com/r/microsoft/aspnet/)
-
-* [.NET Framework 4.6.2의 ASP.NET Web Forms 앱 샘플](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/aspnetapp)
-
-#### <a name="windows-communication-framework-wcf"></a>WCF(Windows Communication Framework)
-
-* [DockerHub의 WCF(Windows Communication Framework) 이미지](https://hub.docker.com/r/microsoft/wcf/)
-
-* [GitHub의 WCF(Windows Communication Framework) 이미지](https://github.com/microsoft/wcf-docker)
-
-* [.NET Framework 4.6.2를 사용하는 WCF(Windows Communication Framework) Docker 샘플](https://github.com/Microsoft/wcf-docker-samples)
-
-#### <a name="internet-information-server-iis"></a>IIS(Internet Information Server)
-
-* [DockerHub의 IIS(Internet Information Server) 이미지](https://hub.docker.com/r/microsoft/iis/)
-
-* [GitHub의 IIS(Internet Information Server) 이미지](https://github.com/microsoft/iis-docker)
-
-### <a name="interact-with-other-microsoft-stack-container-images"></a>다른 Microsoft 스택 컨테이너 이미지와 상호 작용
-
-#### <a name="microsoft-sql-server"></a>Microsoft SQL Server
-
-* [Docker 빠른 시작을 통해 Linux 2017용 Microsoft SQL Server 컨테이너 이미지 실행](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
-
-* [DockerHub의 Linux용 Microsoft SQL Server 이미지](https://hub.docker.com/r/microsoft/mssql-server-linux/)
-
-* [DockerHub의 Windows 컨테이너용 Microsoft SQL Server Express Edition 이미지](https://hub.docker.com/r/microsoft/mssql-server-windows-express/)
-
-* [DockerHub의 Windows 컨테이너용 Microsoft SQL Server Developer Edition 이미지](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)
-
-#### <a name="azure-devops-services-agent"></a>Azure DevOps Services 에이전트
-
-* [DockerHub에 있는 Azure DevOps Services 에이전트 이미지](https://hub.docker.com/r/microsoft/vsts-agent/)
-
-* [GitHub에 있는 Azure DevOps Services 에이전트 이미지](https://github.com/Microsoft/vsts-agent-docker)
-
-#### <a name="operations-management-suite-oms-linux-agent"></a>OMS(Operations Management Suite) Linux 에이전트
-
-* [OMS(Operations Management Suite) Linux 에이전트 개요](https://github.com/Microsoft/OMS-Agent-for-Linux/blob/master/docs/Docker-Instructions.md)
-
-* [DockerHub의 OMS(Operations Management Suite) 이미지](https://hub.docker.com/r/microsoft/oms/)
-
-* [GitHub의 OMS(Operations Management Suite) 이미지](https://github.com/Microsoft/OMS-docker)
-
-#### <a name="microsoft-azure-command-line-interface-cli"></a>Microsoft Azure CLI(명령줄 인터페이스)
-
-* [DockerHub의 Microsoft Azure CLI(명령줄 인터페이스) 이미지](https://hub.docker.com/r/microsoft/azure-cli/) 
-
-* [GitHub의 Microsoft Azure CLI(명령줄 인터페이스) 이미지](https://github.com/Azure/azure-cli#Docker)
-
-> [!NOTE]
-> Azure 구독이 없는 경우 무료 30일 계정에 [오늘 등록](https://azure.microsoft.com/free/?b=16.48)하고 Azure 크레딧 $200를 받아 원하는 조합의 Azure 서비스를 사용해 보세요.
-
-#### <a name="microsoft-azure-cosmos-db-emulator-windows-containers-only"></a>Microsoft Azure Cosmos DB 에뮬레이터(Windows 컨테이너만 해당)
-
-* [DockerHub의 Microsoft Azure Cosmos DB 에뮬레이터 이미지](https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator) 
-
-* [로컬 개발 및 테스트에 Azure Cosmos DB 에뮬레이터 사용](/azure/cosmos-db/local-emulator#developing-with-the-emulator)
-
-## <a name="exploring-the-rich-docker-development-ecosystem"></a>풍부한 Docker 개발 에코시스템 살펴보기
-
-Docker 플랫폼 및 다양한 Docker 이미지에 대해 알아보았으므로, 다음 단계는 풍부한 Docker 에코시스템을 살펴보는 것입니다. 다음 링크는 Microsoft 도구가 컨테이너 개발을 보완하는 방법을 보여 줍니다.
-
-* [Using .NET and Docker together](https://devblogs.microsoft.com/dotnet/using-net-and-docker-together/)(.NET 및 Docker 함께 사용)
-* [다중 컨테이너 및 마이크로 서비스 기반 .NET 애플리케이션 디자인 및 개발](../../standard/microservices-architecture/multi-container-microservice-net-applications/index.md)
-* [Visual Studio Code Docker 확장](https://code.visualstudio.com/docs/languages/dockerfile)
-* [Azure Service Fabric 사용 방법 알아보기](/azure/service-fabric/index)
-* [Service Fabric Getting Started Sample](https://azure.microsoft.com/resources/samples/service-fabric-dotnet-getting-started/)(Service Fabric 시작 샘플)
-* [Windows 컨테이너의 혜택](/virtualization/windowscontainers/about/index#video-overview)
-* [Visual Studio Docker 도구로 작업](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker)
-* [Azure Container Registry의 Docker 이미지를 Azure Container Instances에 배포](https://blogs.msdn.microsoft.com/stevelasker/2017/07/28/deploying-docker-images-from-the-azure-container-registry-to-azure-container-instances/)
-* [Debugging with Visual Studio Code](https://code.visualstudio.com/docs/nodejs/debugging-recipes#_nodejs-typescript-docker-container)(Visual Studio Code를 사용한 디버깅)
-* [클라우드에서 Mac용 Visual Studio, 컨테이너 및 서버리스 코드에 익숙해지기](https://blogs.msdn.microsoft.com/visualstudio/2017/08/31/hands-on-with-visual-studio-for-mac-containers-serverless-code-in-the-cloud/#comments)
-* [Getting Started with Docker and Visual Studio for Mac Lab](https://github.com/Microsoft/vs4mac-labs/tree/master/Docker/Getting-Started)(Docker 및 Mac용 Visual Studio 랩 시작)
+* [Azure Container Registry](https://azure.microsoft.com/services/container-registry/)\
+모든 형식의 Azure 배포에서 컨테이너 이미지 저장 및 관리합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-* [.NET Core와 Docker 기본 사항 알아보기](docker-basics-dotnet-core.md)
-* [.NET Core Docker 이미지 작성](building-net-docker-images.md)
+* [.NET Core 애플리케이션을 컨테이너화하는 방법 알아보기](build-docker-netcore-container.md)
+* [ASP.NET Core 마이크로 서비스 알아보기 자습서 확인해 보기](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)

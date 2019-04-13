@@ -2,13 +2,19 @@
 title: 관리 및 진단
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'Windows Communication Foundation, diagnostics'
-  - 'Windows Communication Foundation, administration'
-  - 'diagnostics [WCF]'
-  - 'WCF, diagnostics'
-  - 'administration [WCF]'
-  - 'WCF, administration'
+- Windows Communication Foundation, diagnostics
+- Windows Communication Foundation, administration
+- diagnostics [WCF]
+- WCF, diagnostics
+- administration [WCF]
+- WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
+ms.openlocfilehash: 351d133215343e07e849ad1045eba601dd8cce56
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092282"
 ---
 # <a name="administration-and-diagnostics"></a>관리 및 진단
 Windows Communication Foundation (WCF) 다양 한 응용 프로그램 수명의 여러 단계를 모니터링 하는 데 도움이 되는 기능을 제공 합니다. 예를 들어 구성을 사용하여 배포 시 서비스와 클라이언트를 설정할 수 있습니다. WCF에는 다양 한 응용 프로그램의 성능을 측정할 수 있도록 성능 카운터가 포함 됩니다. 또한 WCF WCF Windows Management Instrumentation (WMI) 공급자를 통해 런타임으로 서비스 검사 데이터를 노출합니다. 응용 프로그램이 실패하거나 실행을 잘못 시작할 때 이벤트 로그를 사용하여 중요한 이벤트가 발생했는지 여부를 확인할 수 있습니다. 메시지 로깅 및 추적을 사용하여 응용 프로그램의 종단 간에 발생한 이벤트를 확인할 수도 있습니다. 이러한 기능에는 개발자와 IT 전문가 모두 제대로 작동 하지 않을 때 WCF 응용 프로그램 문제를 해결 하려면 지원 합니다.  
@@ -34,7 +40,8 @@ Windows Communication Foundation (WCF) 다양 한 응용 프로그램 수명의 
  WCF는 또한 쉽게 작성, 배포 및 WCF 응용 프로그램을 관리할 수 있도록 여러 GUI 및 명령줄 도구를 제공 합니다. 자세한 내용은 [Windows Communication Foundation 도구](../../../../docs/framework/wcf/tools.md)합니다. 예를 들어 사용할 수 있습니다 합니다 [Configuration Editor 도구 (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) 를 만들고 XML을 직접 편집 하는 대신 마법사를 사용 하는 WCF 구성 설정을 편집 합니다. 사용할 수도 있습니다는 [Service Trace Viewer 도구 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) 를 보고 하 고 그룹을 진단할 수 있도록 추적 메시지를 필터링, 복구 및 WCF 서비스를 사용 하 여 문제를 확인 합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [애플리케이션 구성](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)
+
+- [응용 프로그램 구성](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)
 - [서비스 배포](../../../../docs/framework/wcf/diagnostics/deploying-services.md)
 - [예외 참조](../../../../docs/framework/wcf/diagnostics/exceptions-reference/index.md)
 - [이벤트 로깅](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
@@ -43,6 +50,6 @@ Windows Communication Foundation (WCF) 다양 한 응용 프로그램 수명의 
 - [Service Trace Viewer 도구(SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [ServiceModel 등록 도구](../../../../docs/framework/wcf/diagnostics/servicemodel-registration-tool.md)
 - [추적](../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [진단에 WMI(Windows Management Instrumentation) 사용](../../../../docs/framework/wcf/diagnostics/wmi/index.md)
+- [진단에 Windows Management Instrumentation 사용](../../../../docs/framework/wcf/diagnostics/wmi/index.md)
 - [성능 카운터](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)
 - [Windows Communication Foundation 도구](../../../../docs/framework/wcf/tools.md)

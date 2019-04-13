@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID452
 ms.assetid: 7459562b-cd4f-4590-95e0-6126ae3589a5
-ms.openlocfilehash: f3207c2cc237ae22c295c2b3ed56f18601625226
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 28f78161e14604c1f59872801855ccc918faec58
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822276"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299256"
 ---
 # <a name="ordinal-is-not-valid"></a>서수가 잘못되었습니다.
 프로시저 이름 대신 숫자를 사용 하는 동적 연결 라이브러리 (DLL)를 호출 하 여 표시를 사용 하는 `#num` 구문입니다. 이 오류는 다음과 같은 가능한 원인을:  
@@ -22,11 +22,11 @@ ms.locfileid: "58822276"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-1.  식이 올바른 숫자를 나타내는 있는지 확인 하거나 이름으로 프로시저를 호출 합니다.  
+1. 식이 올바른 숫자를 나타내는 있는지 확인 하거나 이름으로 프로시저를 호출 합니다.  
   
-2.  했는지 `#num` DLL에서 함수를 잘못 식별 합니다.  
+2. 했는지 `#num` DLL에서 함수를 잘못 식별 합니다.  
   
-3.  코드를 주석으로 처리 하 여 문제를 일으키는 프로시저 호출을 격리 합니다. 쓰기를 `Declare` 문을 프로시저를 한 형식 라이브러리 공급 업체에 문제를 보고 합니다.  
+3. 코드를 주석으로 처리 하 여 문제를 일으키는 프로시저 호출을 격리 합니다. 쓰기를 `Declare` 문을 프로시저를 한 형식 라이브러리 공급 업체에 문제를 보고 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

@@ -1,17 +1,17 @@
 ---
-title: '방법: 템플릿을 사용하여 GridView 사용 ListView의 스타일 지정'
+title: '방법: 템플릿을 사용하여 GridView를 사용하는 ListView의 스타일 지정'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListView controls [WPF], styling
 ms.assetid: 94bf964b-96c8-4bdf-a0c3-f5271b7cb565
-ms.openlocfilehash: baef8bdee73d8493ba406f5eef1e3e3676680704
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1caa652c4a2a3a7d0a8d40fe703df7a3e8038c9b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355768"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147097"
 ---
-# <a name="how-to-use-templates-to-style-a-listview-that-uses-gridview"></a>방법: 템플릿을 사용하여 GridView 사용 ListView의 스타일 지정
+# <a name="how-to-use-templates-to-style-a-listview-that-uses-gridview"></a>방법: 템플릿을 사용하여 GridView를 사용하는 ListView의 스타일 지정
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.DataTemplate> 및 <xref:System.Windows.Style> 의 모양을 지정 하는 개체를 <xref:System.Windows.Controls.ListView> 사용 하는 컨트롤을 <xref:System.Windows.Controls.GridView> 보기 모드입니다.  
   
 ## <a name="example"></a>예제  
@@ -36,6 +36,7 @@ ms.locfileid: "57355768"
  [!code-xaml[ListViewTemplate#CellTemplateProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#celltemplateproperty)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
 - [GridView 개요](gridview-overview.md)

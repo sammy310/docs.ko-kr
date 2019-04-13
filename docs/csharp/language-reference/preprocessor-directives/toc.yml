@@ -14,13 +14,13 @@ items:
     href: preprocessor-define.md
   - name: '#undef'
     href: preprocessor-undef.md
-  - name: '#경고'
+  - name: '#warning'
     href: preprocessor-warning.md
-  - name: '#오류'
+  - name: '#error'
     href: preprocessor-error.md
   - name: '#line'
     href: preprocessor-line.md
-  - name: '#지역'
+  - name: '#region'
     href: preprocessor-region.md
   - name: '#endregion'
     href: preprocessor-endregion.md

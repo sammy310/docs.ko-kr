@@ -10,17 +10,16 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: 705e91923f6ab38f7dce83e511027102112539f3
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: a61031c36dea84449ad07175287bf834544df886
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125436"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129092"
 ---
 # <a name="drawing-formatted-text"></a>서식 있는 텍스트 그리기
 이 항목에서는의 기능 개요를 제공 합니다 <xref:System.Windows.Media.FormattedText> 개체입니다. 이 개체는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 애플리케이션에서 텍스트를 그리기 위한 하위 수준의 컨트롤을 제공합니다.  
-  
-  
+
 ## <a name="technology-overview"></a>기술 개요  
  <xref:System.Windows.Media.FormattedText> 개체는 각 문자를 텍스트에 서식을 지정할 수 개별적으로 여러 줄 텍스트를 그릴 수 있습니다. 다음 예에서는 여러 서식이 적용된 텍스트를 보여줍니다.  
   
@@ -30,7 +29,7 @@ ms.locfileid: "58125436"
 >  [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] API에서 마이그레이션하는 개발자를 위해 [Win32 마이그레이션](#win32_migration) 섹션의 테이블에는 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText 플래그와 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]의 거의 동급 플래그가 나열되어 있습니다.  
   
 ### <a name="reasons-for-using-formatted-text"></a>서식 있는 텍스트를 사용하는 이유  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 화면에 텍스트를 그리는 데 사용하는 여러 컨트롤이 포함되어 있습니다. 각 컨트롤은 다른 시나리오를 대상으로 하며 고유 기능 및 제한 사항 목록을 가지고 있습니다. 일반적으로 <xref:System.Windows.Controls.TextBlock> 제한 된 텍스트 지원이의 간략 한 문장과 같이 필요한 경우 요소를 사용 해야는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]합니다. <xref:System.Windows.Controls.Label> 최소 텍스트 지원이 필요할 때 사용할 수 있습니다. 자세한 내용은 [WPF의 문서](documents-in-wpf.md)를 참조하세요.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 화면에 텍스트를 그리기 위한 여러 컨트롤이 포함 되어 있습니다. 각 컨트롤은 다른 시나리오를 대상으로 하며 고유 기능 및 제한 사항 목록을 가지고 있습니다. 일반적으로 <xref:System.Windows.Controls.TextBlock> 제한 된 텍스트 지원이의 간략 한 문장과 같이 필요한 경우 요소를 사용 해야는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]합니다. <xref:System.Windows.Controls.Label> 최소 텍스트 지원이 필요할 때 사용할 수 있습니다. 자세한 내용은 [WPF의 문서](documents-in-wpf.md)를 참조하세요.  
   
  합니다 <xref:System.Windows.Media.FormattedText> 서식 지정 기능 보다 우수한 텍스트를 제공 하는 개체 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 텍스트 컨트롤 텍스트를 장식 요소로 사용 하려는 경우에 유용할 수 있습니다. 자세한 내용은 다음에 있는 [서식 있는 텍스트를 기하 도형으로 변환](#converting_formatted_text) 섹션을 참조하세요.  
   
@@ -117,6 +116,7 @@ ms.locfileid: "58125436"
 |DT_WORD_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|사용 된 <xref:System.Windows.Media.FormattedText.Trimming%2A> 속성 값을 사용 하 여 <xref:System.Windows.TextTrimming.WordEllipsis>입니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.FormattedText>
 - [WPF의 문서](documents-in-wpf.md)
 - [WPF의 입력 체계](typography-in-wpf.md)

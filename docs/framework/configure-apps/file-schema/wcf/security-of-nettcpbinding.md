@@ -1,13 +1,13 @@
 ---
-title: <security>의 <netTcpBinding>
+title: <security> / <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 286cd191-4fd5-4c4e-a223-9c71cf7fdead
-ms.openlocfilehash: be3417296a401c002e59487cd4903e15e6301a63
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3fd850862172ad2b9bd58cd01d332028ff76462a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279801"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199078"
 ---
 # <a name="security-of-nettcpbinding"></a>\<보안 >의 \<netTcpBinding >
 바인딩에 대한 보안 설정을 정의합니다.  
@@ -68,6 +68,7 @@ ms.locfileid: "55279801"
  이 구성 요소는 `netTcpBinding`의 보안 사양을 제공합니다. 이것은 시스템 간 통신에 적합한 안전하고, 신뢰할 수 있으며, 최적화된 바인딩입니다. 기본적으로 메시지 배달을 위한 TCP, 메시지 보안 및 인증을 위한 Windows 보안, 안정성을 위한 WS-Reliable Messaging 및 이진 메시지 인코딩을 지원하는 런타임 통신 스택을 생성합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.NetTcpSecurity>
 - <xref:System.ServiceModel.NetTcpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetTcpBindingElement.Security%2A>

@@ -1,17 +1,17 @@
 ---
-title: '방법: 등록 없이 Windows Communication Foundation 서비스 모니커 사용'
+title: '방법: 등록하지 않고 Windows Communication Foundation 서비스 모니커 사용'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], service monikers without registration
 ms.assetid: ee3cf5c0-24f0-4ae7-81da-73a60de4a1a8
-ms.openlocfilehash: 3ce388da75711ab1378ce59575c067cf828089e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be4798663d0b39301ec496df45a4a7a5bf9c88e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615279"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203979"
 ---
-# <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>방법: 등록 없이 Windows Communication Foundation 서비스 모니커 사용
+# <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>방법: 등록하지 않고 Windows Communication Foundation 서비스 모니커 사용
 연결 하 고 Windows Communication Foundation (WCF) 서비스와 통신을 WCF 클라이언트 응용 프로그램 서비스 주소, 바인딩 구성 및 서비스 계약 세부 정보가 있어야 합니다.  
   
  일반적으로 WCF 서비스 모니커에 필수 특성 형식의 이전 등록을 통해 필수 계약 가져오지만 적합 하지 않은 경우 있을 수 있습니다. 등록 대신 모니커는 `wsdl` 매개 변수 사용, 메타데이터 교환 또는 `mexAddress` 매개 변수 사용을 통해 계약 정의를 WSDL(웹 서비스 기술 언어) 문서의 형태로 가져올 수 있습니다.  
@@ -58,4 +58,5 @@ binding=WSHttpBinding_IAffiliate, bindingNamespace=http://tempuri.org/
 >  모니커 형식이 잘못되었거나 서비스를 사용할 수 없는 경우 `GetObject`를 호출하면 "구문이 잘못되었습니다."라는 오류가 반환됩니다. 이 오류가 발생하면 사용하고 있는 모니커가 올바르고 서비스를 사용할 수 있는지 확인하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [방법: 서비스 모니커 등록 및 구성](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

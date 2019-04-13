@@ -2,12 +2,12 @@
 title: 서비스 버전 관리
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: 62c8641e69ea461c3bf56b911c25b4894f63abe9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27d54cdf6f49bd9433f43290c97706af81d98b6b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649247"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122410"
 ---
 # <a name="service-versioning"></a>서비스 버전 관리
 서비스 및 서비스가 노출하는 엔드포인트는 비즈니스 요구의 변경, 정보 기술의 요구 사항 또는 다른 문제 해결 등의 다양한 이유 때문에 최초로 배포된 후, 수명 동안 여러 차례에 걸쳐 변경되어야 할 수 있습니다. 각 변경 작업에는 새 버전의 서비스가 도입됩니다. 이 항목에서는 Windows Communication Foundation (WCF)에서 버전 관리를 고려 하는 방법에 설명 합니다.  
@@ -176,6 +176,7 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
  서비스 계약이 업데이트되어 `PurchaseOrderV2`의 측면에서 작성되는 새 작업을 포함할 수 있습니다. `IPurchaseOrderV1`의 측면에서 작성된 기존 비즈니스 논리라도 `PurchaseOrderV2`에 대한 작업을 계속할 수 있으며, `OrderDate` 속성을 필요로 하는 새 비즈니스 논리도 `IPurchaseOrderV2`의 측면에서 작성될 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>

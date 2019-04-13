@@ -5,12 +5,12 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: 74c4e10e8f28fb00a5528c1ab860b88d0caa4303
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 5df6d39bef137bd4005316eac252ca0952df5e7f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58408758"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098782"
 ---
 # <a name="use-automatic-layout-overview"></a>자동 레이아웃 사용 개요
 이 항목에서는 개발자가 작성 하는 방법에 대 한 지침을 소개 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램을 지역화할 수 있는 [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]합니다. 과거에는 UI의 지역화는 시간이 오래 걸리는 프로세스 였습니다. 에 대 한 UI를 조정 하는 각 언어는 픽셀 단위 조정이 필요 합니다. 적합 한 설계 및 코딩 표준을 사용 하 여 오늘 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] 는 작은 크기 조정 및 위치 조정 작업을 생성할 수 있습니다. 보다 쉽게 크기 및 위치가 변경 될 수 있는 응용 프로그램을 작성 하는 방법을 자동 레이아웃 이라고 하며 사용 하 여 구현할 수 있습니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 디자인.  
@@ -107,6 +107,7 @@ ms.locfileid: "58408758"
  **참고** 전체 코드 샘플을 보려면 [그리드 간 공유 크기 조정 속성](../controls/how-to-share-sizing-properties-between-grids.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - [WPF의 전역화](globalization-for-wpf.md)
 - [자동 레이아웃을 사용하여 단추 만들기](how-to-use-automatic-layout-to-create-a-button.md)
-- [자동 레이아웃에 그리드 사용](how-to-use-a-grid-for-automatic-layout.md)
+- [자동 레이아웃에 눈금 사용](how-to-use-a-grid-for-automatic-layout.md)

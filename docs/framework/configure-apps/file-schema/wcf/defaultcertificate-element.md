@@ -2,12 +2,12 @@
 title: <defaultCertificate> 요소
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-ms.openlocfilehash: 2f1e17d6c6517e72c1a2ec8e001d857c0d2aa7af
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c94531d10b7c0ef5ca0ee1f2d5683d0a259a2537
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275667"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100602"
 ---
 # <a name="defaultcertificate-element"></a>\<defaultCertificate > 요소
 서비스 또는 STS가 협상 프로토콜을 통해 인증서를 제공하지 않을 때 사용할 X.509 인증서를 지정합니다.  
@@ -99,6 +99,7 @@ endpointBehaviors 섹션
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.X509DefaultServiceCertificateElement>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.DefaultCertificate%2A>

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - merged resource dictionaries [WPF]
 - dictionaries [WPF], merged resources
 ms.assetid: d159531f-05d4-49fd-b951-c332de51e5bc
-ms.openlocfilehash: ae6c8dc3669ed46165f3d78e78735187ebbc3776
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 17dd8e0c02d71fc7e72800fc578866188d03060e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377049"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097241"
 ---
 # <a name="merged-resource-dictionaries"></a>병합된 리소스 사전
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 리소스에서는 병합된 리소스 사전 기능을 지원합니다. 이 기능을 사용하면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애플리케이션의 리소스 부분을 컴파일된 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 애플리케이션 외부에서 정의할 수 있습니다. 그런 다음 리소스를 애플리케이션 간에 공유하고 지역화를 위해 더욱 간편하게 격리할 수도 있습니다.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 리소스는 병합 된 리소스 사전 기능을 지원합니다. 이 기능을 사용하면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애플리케이션의 리소스 부분을 컴파일된 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 애플리케이션 외부에서 정의할 수 있습니다. 그런 다음 리소스를 애플리케이션 간에 공유하고 지역화를 위해 더욱 간편하게 격리할 수도 있습니다.  
   
 ## <a name="introducing-a-merged-resource-dictionary"></a>병합된 리소스 사전 도입  
  태그에서 다음 구문을 사용하여 병합된 리소스 사전을 페이지에 도입할 수 있습니다.  
@@ -52,7 +52,8 @@ ms.locfileid: "57377049"
  지역화해야 하는 리소스를 기본 사전에 병합된 사전으로 격리하고 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 사용 완화로 보관하는 경우 이러한 파일을 별도로 지역화할 수 있습니다. 이 기술은 위성 리소스 어셈블리를 지역화하는 것에 비해 간단합니다. 자세한 내용은 [WPF 세계화 및 지역화 개요](wpf-globalization-and-localization-overview.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.ResourceDictionary>
 - [XAML 리소스](xaml-resources.md)
 - [리소스 및 코드](resources-and-code.md)
-- [WPF 응용 프로그램 리소스, 콘텐츠 및 데이터 파일](../app-development/wpf-application-resource-content-and-data-files.md)
+- [WPF 애플리케이션 리소스, 콘텐츠 및 데이터 파일](../app-development/wpf-application-resource-content-and-data-files.md)
