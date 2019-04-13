@@ -1,6 +1,6 @@
 ---
-title: 클라우드에서 DevOps 도구와 CI/CD 파이프라인을 사용하여 앱의 생병주기 최신화
-description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 클라우드에서 DevOps 도구와 CI/CD 파이프라인를 사용하여 앱의 생명주기 최신화
+title: 클라우드에서 DevOps 도구와 CI/CD 파이프라인을 사용하여 앱의 수명 주기 최신화
+description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 클라우드에서 DevOps 도구와 CI/CD 파이프라인를 사용하여 앱의 수명 주기 최신화
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
@@ -11,11 +11,11 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 12/10/2018
 ms.locfileid: "53128182"
 ---
-# <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>클라우드에서 DevOps 도구와 CI/CD 파이프라인를 사용하여 앱의 생명주기 최신화
+# <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>클라우드에서 DevOps 도구와 CI/CD 파이프라인을 사용하여 앱의 수명 주기 최신화
 
-오늘날의 비즈니스는 시장에서 경쟁력을 갖기 위해 빠른 속도로 혁신해야 합니다. 높은 수준의 최신 응용 프로그램을 제공하려면 이러한 혁신을 주기적으로 구현하기 위해 중요한 DevOps 도구와 프로세스가 필요합니다. 적절한 DevOps 도구를 사용하여 개발자는 지속적인 배포를 간소화 하고 사용자에게 혁신적인 응용 프로그램을 보다 신속하게 전달할 수 있습니다.
+오늘날의 비즈니스는 시장에서 경쟁력을 갖기 위해 빠른 속도로 혁신해야 합니다. 높은 수준의 최신 응용 프로그램을 제공하려면 이러한 혁신을 주기적으로 구현하기 위해 중요한 DevOps 도구와 프로세스가 필요합니다. 적절한 DevOps 도구를 사용하여 개발자는 지속적인 배포를 간소화하고 사용자에게 혁신적인 응용 프로그램을 보다 신속하게 전달할 수 있습니다.
 
-지속적인 통합과 배포 방법이 잘 정립되더라도 콘테이너를 도입하거나 특히 다중 컨테이너 응용 프로그램을 사용하여 작업하는 경우에는 새로운 고려 사항이 발생합게 됩니다.
+지속적인 통합과 배포 방법이 잘 정립되더라도 컨테이너를 도입하는 경우, 특히 다중 컨테이너 응용 프로그램을 사용하여 작업하는 경우에는 새로운 고려 사항이 발생하게 됩니다.
 
 Azure DevOps 서비스는 다양 한 공식 Azure DevOps 서비스 배포 작업을 통해 환경에 다중 컨테이너 응용 프로그램의 지속적인 통합 및 배포를 지원합니다.
 
