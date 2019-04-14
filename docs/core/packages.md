@@ -4,12 +4,12 @@ description: 패키지, 메타패키지 및 프레임워크 용어에 관해 알
 author: richlander
 ms.date: 06/20/2016
 ms.custom: seodec18
-ms.openlocfilehash: 25247972346fb181279414a762d73d2f3218f0e0
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: a03a4961b116b05468ac6c6ce5e648c07a77b7f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168821"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090500"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>패키지, 메타패키지 및 프레임워크
 
@@ -35,7 +35,7 @@ ms.locfileid: "53168821"
 - [System.Runtime](https://www.nuget.org/packages/System.Runtime) - 가장 기본적인 .NET Core 패키지로, <xref:System.Object>, <xref:System.String>, <xref:System.Array>, <xref:System.Action> 및 <xref:System.Collections.Generic.IList%601>를 포함합니다.
 - [System.Collections](https://www.nuget.org/packages/System.Collections) - 주로 제네릭 컬렉션 집합으로, <xref:System.Collections.Generic.List%601> 및 <xref:System.Collections.Generic.Dictionary%602>를 포함합니다.
 - [System.Net.Http](https://www.nuget.org/packages/System.Net.Http) - HTTP 네트워크 통신에 대한 형식의 집합으로, <xref:System.Net.Http.HttpClient> 및 <xref:System.Net.Http.HttpResponseMessage>를 포함합니다.
-- [System.IO.FileSystem](https://www.nuget.org/packages/System.IO.FileSystem) - 로컬 및 네트워크 디스크 기본 저장소에 대한 읽기 및 쓰기를 위한 형식의 집합으로, <xref:System.IO.File> 및 <xref:System.IO.Directory>를 포함합니다.
+- [System.IO.FileSystem](https://www.nuget.org/packages/System.IO.FileSystem) - 로컬 또는 네트워크 디스크 기반 스토리지에 대한 읽기 및 쓰기를 위한 형식 집합으로, <xref:System.IO.File> 및 <xref:System.IO.Directory>를 포함합니다.
 - [System.Linq](https://www.nuget.org/packages/System.Linq) - 개체 쿼리를 위한 형식 집합으로, `Enumerable` 및 <xref:System.Linq.ILookup%602>를 포함합니다.
 - [System.Reflection](https://www.nuget.org/packages/System.Reflection) - 형식의 로드, 검사 및 활성화를 위한 형식의 집합으로, <xref:System.Reflection.Assembly>, <xref:System.Reflection.TypeInfo> 및 <xref:System.Reflection.MethodInfo>를 포함합니다.
 
@@ -97,7 +97,6 @@ ms.locfileid: "53168821"
 프레임워크와 패키지 간에 양방향 관계가 있습니다. 첫 번째 부분은 특정 프레임워크(예: `netstandard1.3`)에 사용 가능한 API를 정의하는 것입니다. `netstandard1.3`(또는 `netstandard1.0`과 같은 호환되는 프레임워크)을 대상으로 하는 패키지는 `netstandard1.3`에 사용 가능한 API를 정의합니다. 순환 정의처럼 들릴 수 있지만 그렇지 않습니다. "패키지 기반" 덕분에 프레임워크의 API 정의는 패키지에서 옵니다. 프레임워크 자체는 API를 정의하지 않습니다.
 
 관계의 두 번째 부분은 자산 선택입니다. 패키지는 여러 프레임워크에 대한 자산을 포함할 수 있습니다. 패키지 및/또는 메타패키지 집합에 대한 참조를 고려하여, 프레임워크는 어떤 자산을 선택할지를 결정해야 합니다(예: `net46` 또는 `netstandard1.3`). 올바른 자산을 선택하는 것이 중요합니다. 예를 들어 한 `net46` 자산은 .NET Framework 4.0 또는 .NET Core 1.0과 호환될 것 같지 않습니다.
-
 
 다음 이미지에서 이 관계를 볼 수 있습니다. *API*는 *프레임워크*를 대상으로 하고 정의합니다. *프레임워크*는 *자산 선택*에 사용됩니다. *자산*은 API를 제공합니다.
 
