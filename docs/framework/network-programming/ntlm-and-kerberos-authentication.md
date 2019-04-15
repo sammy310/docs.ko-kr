@@ -19,15 +19,15 @@ helpviewer_keywords:
 - classes [.NET Framework], authentication
 - client authentication, NTLM
 ms.assetid: 9ef65560-f596-4469-bcce-f4d5407b55cd
-ms.openlocfilehash: 4b93bce3560aaf5e0c888324e74129b5cb62262e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2efb2d25e1b7566e3405a699be1795b37d549091
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515838"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183367"
 ---
-# <a name="ntlm-and-kerberos-authentication"></a><span data-ttu-id="1788c-102">NTLM 및 Kerberos 인증</span><span class="sxs-lookup"><span data-stu-id="1788c-102">NTLM and Kerberos Authentication</span></span>
-<span data-ttu-id="1788c-103">기본 NTLM 인증 및 Kerberos 인증에서는 호출 애플리케이션과 연결된 Microsoft Windows NT 사용자 자격 증명을 사용하여 서버에 인증을 시도합니다.</span><span class="sxs-lookup"><span data-stu-id="1788c-103">Default NTLM authentication and Kerberos authentication use the Microsoft Windows NT user credentials associated with the calling application to attempt authentication with the server.</span></span> <span data-ttu-id="1788c-104">기본이 아닌 NTLM 인증을 사용할 때, 다음 예제에 표시된 대로 애플리케이션에서 인증 형식을 NTLM으로 설정하고 <xref:System.Net.NetworkCredential> 개체를 사용하여 호스트에 사용자 이름, 암호 및 도메인을 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="1788c-104">When using non-default NTLM authentication, the application sets the authentication type to NTLM and uses a <xref:System.Net.NetworkCredential> object to pass the user name, password, and domain to the host, as shown in the following example.</span></span>  
+# <a name="ntlm-and-kerberos-authentication"></a><span data-ttu-id="47adb-102">NTLM 및 Kerberos 인증</span><span class="sxs-lookup"><span data-stu-id="47adb-102">NTLM and Kerberos Authentication</span></span>
+<span data-ttu-id="47adb-103">기본 NTLM 인증 및 Kerberos 인증에서는 호출 애플리케이션과 연결된 Microsoft Windows NT 사용자 자격 증명을 사용하여 서버에 인증을 시도합니다.</span><span class="sxs-lookup"><span data-stu-id="47adb-103">Default NTLM authentication and Kerberos authentication use the Microsoft Windows NT user credentials associated with the calling application to attempt authentication with the server.</span></span> <span data-ttu-id="47adb-104">기본이 아닌 NTLM 인증을 사용할 때, 다음 예제에 표시된 대로 애플리케이션에서 인증 형식을 NTLM으로 설정하고 <xref:System.Net.NetworkCredential> 개체를 사용하여 호스트에 사용자 이름, 암호 및 도메인을 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="47adb-104">When using non-default NTLM authentication, the application sets the authentication type to NTLM and uses a <xref:System.Net.NetworkCredential> object to pass the user name, password, and domain to the host, as shown in the following example.</span></span>  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  
@@ -43,7 +43,7 @@ WReq.Credentials =
     new NetworkCredential(UserName, SecurelyStoredPassword, Domain);  
 ```  
   
- <span data-ttu-id="1788c-105">애플리케이션 사용자의 자격 증명을 사용하여 인터넷 서비스에 연결해야 하는 애플리케이션에서는 다음 예제에 표시된 대로 사용자의 기본 자격 증명을 사용하여 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1788c-105">Applications that need to connect to Internet services using the credentials of the application user can do so with the user's default credentials, as shown in the following example.</span></span>  
+ <span data-ttu-id="47adb-105">애플리케이션 사용자의 자격 증명을 사용하여 인터넷 서비스에 연결해야 하는 애플리케이션에서는 다음 예제에 표시된 대로 사용자의 기본 자격 증명을 사용하여 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="47adb-105">Applications that need to connect to Internet services using the credentials of the application user can do so with the user's default credentials, as shown in the following example.</span></span>  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  
@@ -57,11 +57,12 @@ WebRequest WReq = WebRequest.Create (MyURI);
 WReq.Credentials = CredentialCache.DefaultCredentials;  
 ```  
   
- <span data-ttu-id="1788c-106">협상 인증 모듈을 통해 원격 서버에서 NTLM 또는 Kerberos 인증을 사용하는지 판별하고 적절한 응답을 전송합니다.</span><span class="sxs-lookup"><span data-stu-id="1788c-106">The negotiate authentication module determines whether the remote server is using NTLM or Kerberos authentication, and sends the appropriate response.</span></span>  
+ <span data-ttu-id="47adb-106">협상 인증 모듈을 통해 원격 서버에서 NTLM 또는 Kerberos 인증을 사용하는지 판별하고 적절한 응답을 전송합니다.</span><span class="sxs-lookup"><span data-stu-id="47adb-106">The negotiate authentication module determines whether the remote server is using NTLM or Kerberos authentication, and sends the appropriate response.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="1788c-107">NTLM 인증은 프록시 서버를 통해 작동하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="1788c-107">NTLM authentication does not work through a proxy server.</span></span>  
+>  <span data-ttu-id="47adb-107">NTLM 인증은 프록시 서버를 통해 작동하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="47adb-107">NTLM authentication does not work through a proxy server.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1788c-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="1788c-108">See also</span></span>
-- [<span data-ttu-id="1788c-109">기본 인증 및 다이제스트 인증</span><span class="sxs-lookup"><span data-stu-id="1788c-109">Basic and Digest Authentication</span></span>](../../../docs/framework/network-programming/basic-and-digest-authentication.md)
-- [<span data-ttu-id="1788c-110">인터넷 인증</span><span class="sxs-lookup"><span data-stu-id="1788c-110">Internet Authentication</span></span>](../../../docs/framework/network-programming/internet-authentication.md)
+## <a name="see-also"></a><span data-ttu-id="47adb-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="47adb-108">See also</span></span>
+
+- [<span data-ttu-id="47adb-109">기본 인증 및 다이제스트 인증</span><span class="sxs-lookup"><span data-stu-id="47adb-109">Basic and Digest Authentication</span></span>](../../../docs/framework/network-programming/basic-and-digest-authentication.md)
+- [<span data-ttu-id="47adb-110">인터넷 인증</span><span class="sxs-lookup"><span data-stu-id="47adb-110">Internet Authentication</span></span>](../../../docs/framework/network-programming/internet-authentication.md)
