@@ -13,12 +13,12 @@ helpviewer_keywords:
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
 author: ghogen
-ms.openlocfilehash: ff3eb0dd27f097899fc19f57142034ffd2bb382a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dfcfb7370ffd59a50cf6d0b01e84e581ddc6fc52
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660143"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306523"
 ---
 # <a name="how-to-log-information-about-services"></a>방법: 서비스에 대한 정보 로깅
 기본적으로 모든 Windows 서비스 프로젝트는 애플리케이션 이벤트 로그와 상호 작용하고 이 로그에 정보 및 예외를 작성할 수 있습니다. <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 속성을 사용하여 애플리케이션에서 이 기능을 표시할지 여부를 나타냅니다. 기본적으로, 로깅은 Windows 서비스 프로젝트 템플릿으로 만드는 모든 서비스에 대해 사용 설정됩니다. <xref:System.Diagnostics.EventLog> 클래스의 정적 형식을 사용하면 <xref:System.Diagnostics.EventLog> 구성 요소의 인스턴스를 만들거나 소스를 수동으로 등록하지 않고도 로그에 서비스 정보를 작성할 수 있습니다.  
@@ -46,18 +46,18 @@ ms.locfileid: "54660143"
   
 ### <a name="to-set-up-logging-to-a-custom-log"></a>사용자 지정 로그에 로깅을 설정하려면  
   
-1.  <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 속성을 `false`으로 설정합니다.  
+1. <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 속성을 `false`으로 설정합니다.  
   
     > [!NOTE]
     >  사용자 지정 로그를 사용하려면 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 를 false로 설정해야 합니다.  
   
-2.  Windows 서비스 애플리케이션에서 <xref:System.Diagnostics.EventLog> 구성 요소의 인스턴스를 설정합니다.  
+2. Windows 서비스 애플리케이션에서 <xref:System.Diagnostics.EventLog> 구성 요소의 인스턴스를 설정합니다.  
   
-3.  <xref:System.Diagnostics.EventLog.CreateEventSource%2A> 메서드를 호출하고 만들려는 로그 파일의 이름과 소스 문자열을 지정하여 사용자 지정 로그를 만듭니다.  
+3. <xref:System.Diagnostics.EventLog.CreateEventSource%2A> 메서드를 호출하고 만들려는 로그 파일의 이름과 소스 문자열을 지정하여 사용자 지정 로그를 만듭니다.  
   
-4.  <xref:System.Diagnostics.EventLog.Source%2A> 구성 요소 인스턴스의 <xref:System.Diagnostics.EventLog> 속성을 3단계에서 만든 소스 문자열로 설정합니다.  
+4. <xref:System.Diagnostics.EventLog.Source%2A> 구성 요소 인스턴스의 <xref:System.Diagnostics.EventLog> 속성을 3단계에서 만든 소스 문자열로 설정합니다.  
   
-5.  <xref:System.Diagnostics.EventLog.WriteEntry%2A> 구성 요소 인스턴스의 <xref:System.Diagnostics.EventLog> 메서드에 액세스하여 항목을 작성합니다.  
+5. <xref:System.Diagnostics.EventLog.WriteEntry%2A> 구성 요소 인스턴스의 <xref:System.Diagnostics.EventLog> 메서드에 액세스하여 항목을 작성합니다.  
   
      다음 코드에서는 사용자 지정 로그에 로깅을 설정하는 방법을 보여줍니다.  
   
@@ -70,4 +70,5 @@ ms.locfileid: "54660143"
     [!code-vb[VbRadconService#15](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#15)]  
   
 ## <a name="see-also"></a>참고 항목
-- [Windows 서비스 애플리케이션 소개](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+
+- [Windows 서비스 응용 프로그램 소개](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)

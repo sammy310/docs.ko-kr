@@ -7,31 +7,31 @@ helpviewer_keywords:
 - reading text files [Visual Basic], comma-delimited
 - text files [Visual Basic], reading
 ms.assetid: a8413fe4-0dba-49c8-8692-44fb67a9ec4f
-ms.openlocfilehash: 27a832dc5851393b8d655996e3f052cb3d759c7c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f241a8fcb971cfcd94cb32f0b3c0273552954349
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835442"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314206"
 ---
 # <a name="how-to-read-from-comma-delimited-text-files-in-visual-basic"></a>방법: Visual Basic에서 쉼표로 구분된 텍스트 파일 읽기
 `TextFieldParser` 개체는 로그와 같은 구조적 텍스트 파일을 쉽고 효율적으로 구문 분석하는 방법을 제공합니다. `TextFieldType` 속성은 구분된 파일인지 또는 고정 너비 텍스트 필드가 있는 파일인지를 정의합니다.  
   
 ### <a name="to-parse-a-comma-delimited-text-file"></a>쉼표로 구분된 텍스트 파일을 구문 분석하려면  
   
-1.  새 `TextFieldParser`를 만듭니다. 다음 코드는 `MyReader`라는 `TextFieldParser`를 만들고 `test.txt` 파일을 엽니다.  
+1. 새 `TextFieldParser`를 만듭니다. 다음 코드는 `MyReader`라는 `TextFieldParser`를 만들고 `test.txt` 파일을 엽니다.  
   
      [!code-vb[VbFileIORead#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#15)]  
   
-2.  `TextField` 형식과 구분 기호를 정의합니다. 다음 코드는 `TextFieldType` 속성을 `Delimited`로, 구분 기호를 ","로 정의합니다.  
+2. `TextField` 형식과 구분 기호를 정의합니다. 다음 코드는 `TextFieldType` 속성을 `Delimited`로, 구분 기호를 ","로 정의합니다.  
   
      [!code-vb[VbFileIORead#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#16)]  
   
-3.  파일의 필드를 반복합니다. 손상된 줄이 있는 경우 오류를 보고하고 구문 분석을 계속합니다. 다음 코드는 파일을 반복하면서 각 필드를 차례로 표시하고 형식이 잘못된 필드를 모두 보고합니다.  
+3. 파일의 필드를 반복합니다. 손상된 줄이 있는 경우 오류를 보고하고 구문 분석을 계속합니다. 다음 코드는 파일을 반복하면서 각 필드를 차례로 표시하고 형식이 잘못된 필드를 모두 보고합니다.  
   
      [!code-vb[VbFileIORead#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#17)]  
   
-4.  `End While` 및 `End Using`을 사용하여 `While` 및 `Using` 블록을 닫습니다.  
+4. `End While` 및 `End Using`을 사용하여 `While` 및 `Using` 블록을 닫습니다.  
   
      [!code-vb[VbFileIORead#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#18)]  
   

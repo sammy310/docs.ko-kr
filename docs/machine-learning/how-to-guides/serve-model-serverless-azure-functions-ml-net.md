@@ -3,12 +3,12 @@ title: Azure Functions에 ML.NET 모델 배포
 description: Azure Functions를 사용하여 인터넷을 통해 예측하기 위한 ML.NET 감정 분석 기계 학습 모델 제공
 ms.date: 03/08/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: db29e37660665b02ab93a07b37418f0c4c20a608
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: 4681b37da64097dd8e537b4c956917277ecff96b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788647"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330638"
 ---
 # <a name="how-to-use-mlnet-model-in-azure-functions"></a>방법: Azure Functions에서 ML.NET 모델 사용
 
@@ -21,7 +21,7 @@ ms.locfileid: "57788647"
 
 ## <a name="prerequisites"></a>전제 조건
 
-- “.NET Core 플랫폼 간 개발” 워크로드 및 “Azure 개발”이 설치된 [Visual Studio 2017 15.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). 
+- “.NET Core 플랫폼 간 개발” 워크로드 및 “Azure 개발”이 설치된 [Visual Studio 2017 15.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017). 
 - [Azure Functions 도구](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
 - PowerShell
 - 미리 학습된 모델입니다. 

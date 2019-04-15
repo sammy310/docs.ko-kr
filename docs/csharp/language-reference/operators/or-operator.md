@@ -9,12 +9,12 @@ helpviewer_keywords:
 - '| operator [C#]'
 - binary operator (|) [C#]
 ms.assetid: 82d6bb78-54c8-40bf-b679-531180ddaf70
-ms.openlocfilehash: 185ea3aabff4794ec08cca541773dbec3574ab4b
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 38f8e21dbd07868441e0c4fbb6074f9897905222
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333514"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312880"
 ---
 # <a name="-operator-c-reference"></a>| 연산자(C# 참조)
 
@@ -22,7 +22,7 @@ ms.locfileid: "54333514"
 
 ## <a name="remarks"></a>주의
 
-이진 `|` 연산자는 [기존 OR 연산자](conditional-or-operator.md) `||`와 달리 첫 번째 연산자의 값에 상관없이 두 피연산자를 모두 계산합니다.
+이진 `|` 연산자는 [기존 OR 연산자](boolean-logical-operators.md#conditional-logical-or-operator-) `||`와 달리 첫 번째 연산자의 값에 상관없이 두 피연산자를 모두 계산합니다.
 
 사용자 정의 형식은 `|` 연산자를 오버로드할 수 있습니다([operator](../keywords/operator.md) 참조).
 

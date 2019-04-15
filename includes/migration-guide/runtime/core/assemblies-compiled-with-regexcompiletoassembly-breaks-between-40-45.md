@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 69b25db88c7580787bbb47fb0902b6bb072f8dde
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235737"
+---
 ### <a name="assemblies-compiled-with-regexcompiletoassembly-breaks-between-40-and-45"></a>Regex.CompileToAssembly로 컴파일된 어셈블리가 4.0과 4.5 사이에서 중단됩니다.
 
 |   |   |
@@ -8,4 +16,3 @@
 |버전|4.5|
 |형식|런타임|
 |영향을 받는 API|<ul><li><xref:System.Text.RegularExpressions.Regex.CompileToAssembly(System.Text.RegularExpressions.RegexCompilationInfo[],System.Reflection.AssemblyName)?displayProperty=nameWithType></li><li><xref:System.Text.RegularExpressions.Regex.CompileToAssembly(System.Text.RegularExpressions.RegexCompilationInfo[],System.Reflection.AssemblyName,System.Reflection.Emit.CustomAttributeBuilder[])?displayProperty=nameWithType></li><li><xref:System.Text.RegularExpressions.Regex.CompileToAssembly(System.Text.RegularExpressions.RegexCompilationInfo[],System.Reflection.AssemblyName,System.Reflection.Emit.CustomAttributeBuilder[],System.String)?displayProperty=nameWithType></li></ul>|
-

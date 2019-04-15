@@ -7,12 +7,12 @@ helpviewer_keywords:
 - property grids [Visual Basic], creating for user settings
 - property grids
 ms.assetid: b0bc737e-50d1-43d1-a6df-268db6e6f91c
-ms.openlocfilehash: 20c475fd7bd4b2cec6c6e10182a88a43fa7c56f1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 5f4b962762aeecea65748c5456bc4a2d75595d4f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843048"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311619"
 ---
 # <a name="how-to-create-property-grids-for-user-settings-in-visual-basic"></a>방법: Visual Basic에서 사용자 설정의 속성 표 만들기
 <xref:System.Windows.Forms.PropertyGrid> 컨트롤을 `My.Settings` 개체의 사용자 설정 속성으로 채워 사용자 설정에 대한 속성 표를 만들 수 있습니다.  
@@ -29,17 +29,17 @@ ms.locfileid: "58843048"
   
 ### <a name="to-add-a-user-setting-property-grid"></a>사용자 설정 속성 표를 추가하려면  
   
-1.  **도구 상자**에서 애플리케이션의 디자인 화면(여기서는 `Form1`)으로 **PropertyGrid** 컨트롤을 추가합니다.  
+1. **도구 상자**에서 애플리케이션의 디자인 화면(여기서는 `Form1`)으로 **PropertyGrid** 컨트롤을 추가합니다.  
   
      속성 표 컨트롤의 기본 이름은 `PropertyGrid1`입니다.  
   
-2.  `Form1`의 디자인 화면을 두 번 클릭하여 양식 로드 이벤트 처리기에 대한 코드를 엽니다.  
+2. `Form1`의 디자인 화면을 두 번 클릭하여 양식 로드 이벤트 처리기에 대한 코드를 엽니다.  
   
-3.  `My.Settings` 개체를 속성 표에 대해 선택된 개체로 설정합니다.  
+3. `My.Settings` 개체를 속성 표에 대해 선택된 개체로 설정합니다.  
   
      [!code-vb[VbVbalrMyResources#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#11)]  
   
-4.  사용자 설정만 표시하도록 속성 표를 구성합니다.  
+4. 사용자 설정만 표시하도록 속성 표를 구성합니다.  
   
      [!code-vb[VbVbalrMyResources#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#12)]  
   

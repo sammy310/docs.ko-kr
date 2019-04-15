@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a0b63e27a3eceb80d42d43eea321b0dc757ad69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5cbda9c160b99bf5648c670a67d39b245f031645
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688868"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319874"
 ---
 # <a name="enhanced-strong-naming"></a>향상된 강력한 이름 지정
 강력한 이름 시그니처는 어셈블리를 식별하기 위한 .NET Framework의 ID 메커니즘입니다. 일반적으로 작성기(서명자)에서 수신자(검증 도구)로 전달되는 데이터의 무결성을 검사하는 데 사용되는 공개 키 디지털 시그니처입니다. 이 시그니처는 어셈블리의 고유 ID로 사용되고 어셈블리에 대한 참조가 모호하지 않은지 확인합니다. 어셈블리는 빌드 프로세스의 일부로 서명되고 나서 로드 시 확인됩니다.  
@@ -41,25 +41,25 @@ ms.locfileid: "54688868"
 ### <a name="signing-with-sha-2-without-key-migration"></a>키 마이그레이션 없이 SHA-2로 서명  
  강력한 이름 시그니처를 마이그레이션하지 않고 어셈블리에 서명하려면 명령 프롬프트 창에서 다음 명령을 실행합니다.  
   
-1.  새 ID 키를 생성합니다(필요한 경우).  
+1. 새 ID 키를 생성합니다(필요한 경우).  
   
     ```  
     sn -k IdentityKey.snk  
     ```  
   
-2.  ID 공개 키를 추출하고 이 키로 서명할 때 SHA-2 알고리즘이 사용되도록 지정합니다.  
+2. ID 공개 키를 추출하고 이 키로 서명할 때 SHA-2 알고리즘이 사용되도록 지정합니다.  
   
     ```  
     sn -p IdentityKey.snk IdentityPubKey.snk sha256  
     ```  
   
-3.  ID 공개 키 파일을 사용하여 어셈블리 서명을 연기합니다.  
+3. ID 공개 키 파일을 사용하여 어셈블리 서명을 연기합니다.  
   
     ```  
     csc MyAssembly.cs /keyfile:IdentityPubKey.snk /delaySign+  
     ```  
   
-4.  전체 ID 키 쌍으로 어셈블리에 다시 서명합니다.  
+4. 전체 ID 키 쌍으로 어셈블리에 다시 서명합니다.  
   
     ```  
     sn -Ra MyAssembly.exe IdentityKey.snk  
@@ -68,26 +68,26 @@ ms.locfileid: "54688868"
 ### <a name="signing-with-sha-2-with-key-migration"></a>키 마이그레이션을 사용하여 SHA-2로 서명  
  마이그레이션된 강력한 이름 시그니처를 사용하여 어셈블리에 서명하려면 명령 프롬프트 창에서 다음 명령을 실행합니다.  
   
-1.  ID 및 시그니처 키 쌍을 생성합니다(필요한 경우).  
+1. ID 및 시그니처 키 쌍을 생성합니다(필요한 경우).  
   
     ```  
     sn -k IdentityKey.snk  
     sn -k SignatureKey.snk  
     ```  
   
-2.  시그니처 공개 키를 추출하고 이 키로 서명할 때 SHA-2 알고리즘이 사용되도록 지정합니다.  
+2. 시그니처 공개 키를 추출하고 이 키로 서명할 때 SHA-2 알고리즘이 사용되도록 지정합니다.  
   
     ```  
     sn -p SignatureKey.snk SignaturePubKey.snk sha256  
     ```  
   
-3.  연대 시그니처를 생성하는 해시 알고리즘을 확인하는 ID 공개 키를 추출합니다.  
+3. 연대 시그니처를 생성하는 해시 알고리즘을 확인하는 ID 공개 키를 추출합니다.  
   
     ```  
     sn -p IdentityKey.snk IdentityPubKey.snk  
     ```  
   
-4.  <xref:System.Reflection.AssemblySignatureKeyAttribute> 특성에 대한 매개 변수를 생성하고 특성을 어셈블리에 연결합니다.  
+4. <xref:System.Reflection.AssemblySignatureKeyAttribute> 특성에 대한 매개 변수를 생성하고 특성을 어셈블리에 연결합니다.  
   
     ```  
     sn -a IdentityPubKey.snk IdentityKey.snk SignaturePubKey.snk  
@@ -121,17 +121,18 @@ ms.locfileid: "54688868"
     )]
     ```
   
-5.  ID 공개 키를 사용하여 어셈블리 서명을 연기합니다.  
+5. ID 공개 키를 사용하여 어셈블리 서명을 연기합니다.  
   
     ```  
     csc MyAssembly.cs /keyfile:IdentityPubKey.snk /delaySign+  
     ```  
   
-6.  시그니처 키 쌍으로 어셈블리에 완전히 서명합니다.  
+6. 시그니처 키 쌍으로 어셈블리에 완전히 서명합니다.  
   
     ```  
     sn -Ra MyAssembly.exe SignatureKey.snk  
     ```  
   
 ## <a name="see-also"></a>참고 항목
+
 - [강력한 이름의 어셈블리 만들기 및 사용](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

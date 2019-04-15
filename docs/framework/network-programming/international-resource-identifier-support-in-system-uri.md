@@ -2,12 +2,12 @@
 title: System.Uri의 국가별 리소스 식별자 지원
 ms.date: 03/30/2017
 ms.assetid: b5e994c3-3535-4aff-8e1b-b69be22e9a22
-ms.openlocfilehash: 56d31b13b94b68719c355335a0598ab8b11d1ecc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 589c49859592cba55cb5110fe65fdc49e451f478
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651073"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230787"
 ---
 # <a name="international-resource-identifier-support-in-systemuri"></a>System.Uri의 국가별 리소스 식별자 지원
 <xref:System.Uri?displayProperty=nameWithType> 클래스는 IRI(International Resource Identifier) 및 IDN(Internationalized Domain Names)을 통해 확장되었습니다. 이러한 향상된 기능은 .NET Framework 3.5, 3.0 SP1 및 2.0 SP1에서 사용할 수 있습니다.  
@@ -44,6 +44,7 @@ ms.locfileid: "54651073"
  <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType> 및 <xref:System.Configuration.IdnElement?displayProperty=nameWithType> 구성 클래스에 대한 구성 설정은 첫 번째 <xref:System.Uri?displayProperty=nameWithType> 클래스가 생성될 때 한 번 판독됩니다. 해당 시점 후의 구성 설정 변경 내용은 무시됩니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
 - <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType>
 - <xref:System.Uri?displayProperty=nameWithType>

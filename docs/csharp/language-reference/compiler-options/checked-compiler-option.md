@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -checked compiler option [C#]
 - /checked compiler option [C#]
 ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
-ms.openlocfilehash: 44a86a2e1ab9346280f655d4ee75e7282c6c9cd5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 814e8f3aa7130c6a64e7e27951854bed7b7cbe6c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578389"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333940"
 ---
 # <a name="-checked-c-compiler-options"></a>-checked(C# 컴파일러 옵션)
 **-checked** 옵션은 데이터 형식 범위를 벗어나고 [checked](../../../csharp/language-reference/keywords/checked.md) 또는 [unchecked](../../../csharp/language-reference/keywords/unchecked.md) 키워드의 범위 내에 없는 값을 생성하는 정수 산술 문이 런타임 예외를 일으킬지 여부를 지정합니다.  
@@ -35,13 +35,13 @@ ms.locfileid: "54578389"
  
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
-1.  프로젝트 **속성** 페이지를 엽니다. 자세한 내용은 [프로젝트 디자이너, 빌드 페이지(C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)를 참조하세요.  
+1. 프로젝트 **속성** 페이지를 엽니다. 자세한 내용은 [프로젝트 디자이너, 빌드 페이지(C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)를 참조하세요.  
   
-2.  **빌드** 속성 페이지를 클릭합니다.  
+2. **빌드** 속성 페이지를 클릭합니다.  
   
-3.  **고급** 단추를 클릭합니다.  
+3. **고급** 단추를 클릭합니다.  
   
-4.  **산술 연산 오버플로/언더플로 확인** 속성을 수정합니다.  
+4. **산술 연산 오버플로/언더플로 확인** 속성을 수정합니다.  
   
  프로그래밍 방식으로 이 컴파일러 옵션에 액세스하려면 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>를 참조하세요.  
   

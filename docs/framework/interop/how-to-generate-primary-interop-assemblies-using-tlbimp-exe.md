@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1136dd3220b189d60b4972410ce0ce6657d07cd
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: a944cf87783c59c21bffc9c48a18237c9fe6cdec
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218985"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295499"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>방법: Tlbimp.exe를 사용하여 주 Interop 어셈블리 생성
 주 interop 어셈블리를 생성하는 다음 두 가지 방법이 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "56218985"
   
 ### <a name="to-generate-a-primary-interop-assembly-using-tlbimpexe"></a>Tlbimp.exe를 사용하여 주 Interop 어셈블리를 생성하려면  
   
-1.  명령 프롬프트에서 다음을 입력합니다.  
+1. 명령 프롬프트에서 다음을 입력합니다.  
   
      **tlbimp** *tlbfile*  **/primary /keyfile:** *filename* **/out:** *assemblyname*  
   
@@ -48,7 +48,7 @@ ms.locfileid: "56218985"
   
  여러 버전의 형식 라이브러리를 래핑할 수도 있습니다. 자세한 내용은 [방법: 여러 버전의 형식 라이브러리 래핑](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/1565h6hc(v=vs.100))을 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 COM 형식 라이브러리 `LibUtil.tlb`를 가져오고 키 파일 `CompanyA.snk`를 사용하여 강력한 이름으로 `LibUtil.dll` 어셈블리에 서명합니다. 이 예제에서는 특정 네임스페이스 이름을 생략하여 기본 네임스페이스 `LibUtil`을 생성합니다.  
   
 ```  
@@ -61,12 +61,12 @@ tlbimp LibUtil.tlb /primary /keyfile:CompanyA.snk /out:LibUtil.dll
 tlbimp LibUtil.tlb /primary /keyfile:CompanyA.snk /namespace:CompanyA.LibUtil /out:CompanyA.LibUtil.dll  
 ```  
   
- 다음 예제에서는 `CompanyA.LibUtil.dll`을 참조하는 `MyLib.tlb`를 가져오고 키 파일 `CompanyB.snk`를 사용하여 강력한 이름으로 `CompanyB.MyLib.dll` 어셈블리에 서명합니다. 
-  `CompanyB.MyLib` 네임스페이스에서 기본 네임스페이스 이름을 재정의합니다.  
+ 다음 예제에서는 `CompanyA.LibUtil.dll`을 참조하는 `MyLib.tlb`를 가져오고 키 파일 `CompanyB.snk`를 사용하여 강력한 이름으로 `CompanyB.MyLib.dll` 어셈블리에 서명합니다. `CompanyB.MyLib` 네임스페이스에서 기본 네임스페이스 이름을 재정의합니다.  
   
 ```  
 tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /reference:CompanyA.LibUtil.dll /out:CompanyB.MyLib.dll  
 ```  
   
 ## <a name="see-also"></a>참고 항목
+
 - [방법: 주 Interop 어셈블리 등록](../../../docs/framework/interop/how-to-register-primary-interop-assemblies.md)

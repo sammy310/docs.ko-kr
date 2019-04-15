@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 7d0ceb0cddc49722d7122e4fde6149fe1ea86208
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 0b2af8c41bc6411d2665d2cf37bd48040fc8d8dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545470"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307475"
 ---
 # <a name="operators-c-programming-guide"></a>연산자(C# 프로그래밍 가이드)
 
@@ -63,7 +63,7 @@ C#에서 *연산자* 는 식 또는 문에서 하나 이상의 *피연산자* �
 |----------------|-----------------|  
 |[+](../../../csharp/language-reference/operators/addition-operator.md)x|클레임|  
 |[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|부정|  
-|[\!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|논리 부정|  
+|[\!](../../../csharp/language-reference/operators/boolean-logical-operators.md#logical-negation-operator-)x|논리 부정|  
 |[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|비트 부정 연산|  
 |[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)x|전위 증가|  
 |[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)x|전위 감소|  
@@ -107,7 +107,7 @@ C#에서 *연산자* 는 식 또는 문에서 하나 이상의 *피연산자* �
 |식|설명|  
 |----------------|-----------------|  
 |x [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) y|Equal|  
-|x [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|같지 않음|  
+|x [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|다음과 같지 않음|  
   
  **논리, 조건 및 null 연산자**  
   
@@ -116,8 +116,8 @@ C#에서 *연산자* 는 식 또는 문에서 하나 이상의 *피연산자* �
 |논리적 AND|x [&](../../../csharp/language-reference/operators/and-operator.md) y|정수 비트 AND, 부울 논리곱 AND|  
 |논리 XOR|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|정수 비트 XOR, 부울 논리곱 XOR|  
 |논리적 OR|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|정수 비트 OR, 부울 논리곱 OR|  
-|조건부 AND|x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y|x가 true인 경우에만 y를 계산합니다.|  
-|조건부 OR|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|x가 false인 경우에만 y를 계산합니다.|  
+|조건부 AND|x [&&](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) y|x가 true인 경우에만 y를 계산합니다.|  
+|조건부 OR|x [&#124;&#124;](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) y|x가 false인 경우에만 y를 계산합니다.|  
 |Null 결합|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) y|x가 null인 경우 y로 계산하고, 그렇지 않으면 x로 계산합니다.|  
 |조건|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y : z|x가 true이면 y로 계산되고 false이면 z로 계산됩니다.|  
   
@@ -178,4 +178,4 @@ a = (b = c);
 ## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [문, 식, 연산자](../../../csharp/programming-guide/statements-expressions-operators/index.md)
+- [문, 식 및 연산자](../../../csharp/programming-guide/statements-expressions-operators/index.md)

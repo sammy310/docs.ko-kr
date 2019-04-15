@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e7ef42bab2d7567741a433cbcacf10a5e689f6a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 46865e398c3868e21b743cf45f42e8b9063a0cbe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43867935"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298917"
 ---
 # <a name="plinq-data-sample"></a>PLINQ 데이터 샘플
 이 샘플에는 고객, 제품, 주문 및 주문 세부 정보의 메모리 내 컬렉션으로 변환되는 메서드와 함께 .csv 형식의 예제 데이터가 포함되어 있습니다. PLINQ를 사용하여 더 실험해 보기 위해 다른 특정 항목의 코드 예제를 이 항목의 코드에 붙여넣고 `Main` 메서드에서 호출할 수 있습니다. 또한 사용자만의 PLINQ 쿼리에 이 데이터를 사용할 수도 있습니다.  
@@ -27,13 +27,13 @@ ms.locfileid: "43867935"
   
 ### <a name="to-set-up-this-sample"></a>이 샘플을 설치하려면  
   
-1.  Visual Basic 또는 Visual C# 콘솔 응용 프로그램 프로젝트를 만듭니다.  
+1. Visual Basic 또는 Visual C# 콘솔 애플리케이션 프로젝트를 만듭니다.  
   
-2.  다음 단계를 따르는 코드를 사용하여 Module1.vb 또는 Program.cs의 내용을 바꿉니다.  
+2. 다음 단계를 따르는 코드를 사용하여 Module1.vb 또는 Program.cs의 내용을 바꿉니다.  
   
-3.  **프로젝트** 메뉴에서 **새 항목 추가**를 클릭합니다. **텍스트 파일**을 선택한 다음, **확인**을 클릭합니다. 이 항목의 데이터를 복사한 다음, 새 텍스트 파일에 붙여넣습니다. **파일** 메뉴에서 **저장**을 클릭하고 Plinqdata.csv 파일 이름을 지정한 다음, 소스 코드 파일이 포함된 폴더에 저장합니다.  
+3. **프로젝트** 메뉴에서 **새 항목 추가**를 클릭합니다. **텍스트 파일**을 선택한 다음, **확인**을 클릭합니다. 이 항목의 데이터를 복사한 다음, 새 텍스트 파일에 붙여넣습니다. **파일** 메뉴에서 **저장**을 클릭하고 Plinqdata.csv 파일 이름을 지정한 다음, 소스 코드 파일이 포함된 폴더에 저장합니다.  
   
-4.  F5 키를 눌러 프로젝트가 제대로 빌드되어 실행되는지 확인합니다. 콘솔 창에 다음 출력이 표시됩니다.  
+4. F5 키를 눌러 프로젝트가 제대로 빌드되어 실행되는지 확인합니다. 콘솔 창에 다음 출력이 표시됩니다.  
   
     ```  
     Customer count: 50  

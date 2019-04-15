@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 2278d82d5362fe217ca4bce02a052d4b440843c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236678"
+---
 ### <a name="aspnet-mvc-now-escapes-spaces-in-strings-passed-in-via-route-parameters"></a>ASP.NET MVC가 이제 경로 매개 변수를 통해 전달된 문자열에 있는 공백을 이스케이프함
 
 |   |   |
@@ -8,4 +16,3 @@
 |버전|4.5.2|
 |형식|런타임|
 |영향을 받는 API|<ul><li><xref:System.Web.Mvc.RouteAttribute.%23ctor(System.String)?displayProperty=nameWithType></li></ul>|
-

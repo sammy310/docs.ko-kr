@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb537950ce240d77282551f847b637a77792a264
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 764b0d535413fc1e5e23a2e47221789aa807ff38
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645238"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321733"
 ---
 # <a name="accessing-custom-attributes"></a>사용자 지정 특성 액세스
 특성이 프로그램 요소와 연결된 후 리플렉션을 사용하여 특성의 존재 및 값을 쿼리할 수 있습니다. .NET Framework 버전 1.0 및 1.1에서 사용자 지정 특성은 실행 컨텍스트에서 검사됩니다. .NET Framework 버전 2.0에서는 실행을 위해 로드할 수 없는 코드를 검사하는 데 사용할 수 있는 새로운 로드 컨텍스트인 리플렉션 전용 컨텍스트를 제공합니다.  
@@ -56,13 +56,13 @@ public class LocalizationExtenderProvider
   
  런타임에서 **GetLanguage** 메서드에 연결된 public 사용자 지정 특성 유형 <xref:System.ComponentModel.DescriptionAttribute>에 대한 사용자 지정 특성을 검색하려고 시도하는 경우에는 다음 작업을 수행합니다.  
   
-1.  런타임은 **Type.GetCustomAttributes**(*type* 형식)에 대한 형식 인수 **DescriptionAttribute**가 public이고 이에 따라 표시되고 액세스 가능한지 확인합니다.  
+1. 런타임은 **Type.GetCustomAttributes**(*type* 형식)에 대한 형식 인수 **DescriptionAttribute**가 public이고 이에 따라 표시되고 액세스 가능한지 확인합니다.  
   
-2.  런타임은 **DescriptionAttribute**에서 파생된 사용자 정의 형식 **MyDescriptionAttribute**가 **GetLanguage**() 메서드에 연결된 경우 **System.Web.DLL** 어셈블리 내에서 표시되고 액세스 가능한지 확인합니다.  
+2. 런타임은 **DescriptionAttribute**에서 파생된 사용자 정의 형식 **MyDescriptionAttribute**가 **GetLanguage**() 메서드에 연결된 경우 **System.Web.DLL** 어셈블리 내에서 표시되고 액세스 가능한지 확인합니다.  
   
-3.  런타임은 **MyDescriptionAttribute**의 생성자가 **System.Web.DLL** 어셈블리 내에서 표시되고 액세스 가능한지 확인합니다.  
+3. 런타임은 **MyDescriptionAttribute**의 생성자가 **System.Web.DLL** 어셈블리 내에서 표시되고 액세스 가능한지 확인합니다.  
   
-4.  런타임은 사용자 지정 특성 매개 변수를 사용하여 **MyDescriptionAttribute**의 생성자를 호출하고 새 개체를 호출자로 반환합니다.  
+4. 런타임은 사용자 지정 특성 매개 변수를 사용하여 **MyDescriptionAttribute**의 생성자를 호출하고 새 개체를 호출자로 반환합니다.  
   
  사용자 지정 특성 리플렉션 모델에서는 형식이 정의된 어셈블리 외부에서 사용자 정의 형식의 인스턴스가 누수될 수 있습니다. 이것은 **RuntimeMethodInfo** 개체의 배열을 반환하는 <xref:System.Type.GetMethods%2A?displayProperty=nameWithType>와 같이 사용자 정의 형식의 인스턴스를 반환하는 런타임 시스템 라이브러리의 멤버와 다르지 않습니다. 클라이언트가 사용자 정의 사용자 지정 특성 유형 관련 정보를 검색하지 않게 하려면 유형의 멤버를 public이 아닌 멤버로 정의합니다.  
   
@@ -73,6 +73,7 @@ public class LocalizationExtenderProvider
  [!code-vb[CustomAttributeData#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source2.vb#2)]  
   
 ## <a name="see-also"></a>참고 항목
+
 - <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>
 - [형식 정보 보기](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)

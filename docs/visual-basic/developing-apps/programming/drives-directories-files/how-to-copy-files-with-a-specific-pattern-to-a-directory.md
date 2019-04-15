@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: f205d2ad-bbe5-4d55-8a40-acda21aa82dd
-ms.openlocfilehash: 184742ef03343eaff644c0f3f803e2acec8854eb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 437a7058abd9ae167fcde15d4bddbe69bc64b7e0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837106"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310774"
 ---
 # <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>방법: Visual Basic에서 특정 패턴의 파일을 디렉터리에 복사
 <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> 메서드는 파일의 경로 이름을 나타내는 읽기 전용 문자열 컬렉션을 반환합니다. `wildCards` 매개 변수를 사용하여 특정 패턴을 지정할 수 있습니다.  
@@ -23,15 +23,15 @@ ms.locfileid: "58837106"
   
 ### <a name="to-copy-files-with-a-specific-pattern-to-a-directory"></a>특정 패턴의 파일을 디렉터리로 복사하려면  
   
-1.  `GetFiles` 메서드를 사용하여 파일 목록을 반환합니다. 이 예제에서는 지정된 디렉터리에 있는 .rtf 파일을 모두 반환합니다.  
+1. `GetFiles` 메서드를 사용하여 파일 목록을 반환합니다. 이 예제에서는 지정된 디렉터리에 있는 .rtf 파일을 모두 반환합니다.  
   
      [!code-vb[VbFileIOMisc#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#36)]  
   
-2.  `CopyFile` 메서드를 사용하여 파일을 복사합니다. 이 예제에서는 `testdirectory`라는 디렉터리로 파일을 복사합니다.  
+2. `CopyFile` 메서드를 사용하여 파일을 복사합니다. 이 예제에서는 `testdirectory`라는 디렉터리로 파일을 복사합니다.  
   
      [!code-vb[VbVbcnMyFileSystem#88](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#88)]  
   
-3.  `For` 문으로 `Next` 문을 닫습니다.  
+3. `For` 문으로 `Next` 문을 닫습니다.  
   
      [!code-vb[VbVbcnMyFileSystem#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#89)]  
   
@@ -63,4 +63,4 @@ ms.locfileid: "58837106"
 - <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>
 - [방법: 특정 패턴의 하위 디렉터리 찾기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
 - [문제 해결: 텍스트 파일 읽기 및 쓰기](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
-- [방법: 디렉터리에 있는 파일의 컬렉션 가져오기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+- [방법: 디렉터리의 파일 컬렉션 가져오기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)

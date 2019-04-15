@@ -8,12 +8,12 @@ helpviewer_keywords:
 - target compiler options [C#], /target:library
 - /target compiler options [C#], /target:library
 ms.assetid: c5670e88-2126-47c1-8d1c-217923837d17
-ms.openlocfilehash: 0bdf8d95004ca11e3d6b9b27568f7310a802a28b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e0935965e9225ab524290429803fe4c9ccc80c6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542446"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313647"
 ---
 # <a name="-targetlibrary-c-compiler-options"></a>-target:library(C# 컴파일러 옵션)
 **-target:library** 옵션을 사용하면 컴파일러가 실행 파일(EXE) 대신 DLL(동적 연결 라이브러리)을 만듭니다.  
@@ -35,11 +35,11 @@ ms.locfileid: "54542446"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
-1.  프로젝트 **속성** 페이지를 엽니다.  
+1. 프로젝트 **속성** 페이지를 엽니다.  
   
-2.  **애플리케이션** 속성 페이지를 클릭합니다.  
+2. **애플리케이션** 속성 페이지를 클릭합니다.  
   
-3.  **출력 형식** 속성을 수정합니다.  
+3. **출력 형식** 속성을 수정합니다.  
   
  이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>을 참조하세요.  
   

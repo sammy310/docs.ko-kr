@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 47406da0e916451f5941f1acce7a3c46f5ed0df5
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: feae645fdb06d5a578832e0b18981668c42d4ad1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760254"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236474"
 ---
 ### <a name="cspparametersparentwindowhandle-now-expects-hwnd-value"></a>이제 CspParameters.ParentWindowHandle에 HWND 값 필요
 
@@ -16,4 +16,3 @@ ms.locfileid: "58760254"
 |버전|4.7|
 |형식|대상 변경|
 |영향을 받는 API|<ul><li><xref:System.Security.Cryptography.CspParameters.ParentWindowHandle?displayProperty=nameWithType></li></ul>|
-

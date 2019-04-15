@@ -2,12 +2,12 @@
 title: 피어 투 피어 공동 작업
 ms.date: 03/30/2017
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-ms.openlocfilehash: 81900cac9bf3c4d2fb247c36f00d4aa8413944f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 91e9179fc426934e78a1e0223c9bffafe5efbef1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590542"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225302"
 ---
 # <a name="peer-to-peer-collaboration"></a>피어 투 피어 공동 작업
 
@@ -40,5 +40,6 @@ ms.locfileid: "54590542"
  Active Directory 도메인에서 도메인 컨트롤러는 Kerberos를 사용하여 인증 서비스를 제공합니다. 서버 없는 피어 환경에서 피어는 자체 인증을 제공해야 합니다. 피어 투 피어 네트워킹의 경우 노드는 CA 역할을 수행할 수 있으므로, 각 피어의 신뢰할 수 있는 루트 저장소에서 루트 인증서의 요구 사항을 제거합니다. 인증은 X.509 인증서 형식의 자체 서명된 인증서를 사용하여 제공됩니다. 이러한 인증서는 공개 키/개인 키 쌍을 생성하고 개인 키를 사용하여 서명된 인증서를 생성하는 각 피어가 만듭니다. 자체 서명된 인증서는 피어 엔터티에 대한 정보를 제공하고 인증을 위해 사용됩니다. X.509 인증과 마찬가지로 피어 네트워킹 인증은 신뢰할 수 있는 공개 키로 다시 추적되는 일련의 인증서를 사용합니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - <xref:System.Net.PeerToPeer.Collaboration>
 - [System.Net.PeerToPeer.Collaboration 네임스페이스 정보](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)

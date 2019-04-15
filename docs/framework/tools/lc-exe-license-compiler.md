@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 527a0bc6591dc4146ec94b2a46777d6ca533ec74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c4432d94372ce10ee9ecdf6e441eda3318a20d7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601699"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298970"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe(라이선스 컴파일러)
 라이선스 컴파일러를 사용하면 라이선스 정보가 들어 있는 텍스트 파일을 읽고, 공용 언어 런타임 실행 파일에 리소스로 포함될 수 있는 바이너리 파일을 생성할 수 있습니다.  
@@ -52,19 +52,19 @@ ms.locfileid: "54601699"
   
 ## <a name="example"></a>예제  
   
-1.  `HostApp.exe`라는 애플리케이션의 `Samples.DLL`에 들어 있는 라이선스가 있는 컨트롤 `MyCompany.Samples.LicControl1`을 사용하는 경우 다음 내용이 들어 있는 `HostAppLic.txt`를 만들 수 있습니다.  
+1. `HostApp.exe`라는 애플리케이션의 `Samples.DLL`에 들어 있는 라이선스가 있는 컨트롤 `MyCompany.Samples.LicControl1`을 사용하는 경우 다음 내용이 들어 있는 `HostAppLic.txt`를 만들 수 있습니다.  
   
     ```  
     MyCompany.Samples.LicControl1, Samples.DLL  
     ```  
   
-2.  다음 명령을 사용하여 `HostApp.exe.licenses`라는 .licenses 파일을 만듭니다.  
+2. 다음 명령을 사용하여 `HostApp.exe.licenses`라는 .licenses 파일을 만듭니다.  
   
     ```  
     lc /target:HostApp.exe /complist:hostapplic.txt /i:Samples.DLL /outdir:c:\bindir  
     ```  
   
-3.  해당 .licenses 파일을 리소스로 포함하는 `HostApp.exe`를 빌드합니다. C# 애플리케이션을 빌드하는 경우에는 다음 명령을 사용하여 해당 애플리케이션을 빌드합니다.  
+3. 해당 .licenses 파일을 리소스로 포함하는 `HostApp.exe`를 빌드합니다. C# 애플리케이션을 빌드하는 경우에는 다음 명령을 사용하여 해당 애플리케이션을 빌드합니다.  
   
     ```  
     csc /res:HostApp.exe.licenses /out:HostApp.exe *.cs  
@@ -93,6 +93,7 @@ lc @response.rsp
 ```  
   
 ## <a name="see-also"></a>참고 항목
+
 - [도구](../../../docs/framework/tools/index.md)
 - [Al.exe(어셈블리 링커)](../../../docs/framework/tools/al-exe-assembly-linker.md)
 - [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -baseaddress compiler option [C#]
 - /baseaddress compiler option [C#]
 ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
-ms.openlocfilehash: 6ff29a7a204cb8f20f2f67946d5d1ed9c976e7aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa76e3d1d30e394f28b5112e45fc72229e9a78fc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694583"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295785"
 ---
 # <a name="-baseaddress-c-compiler-options"></a>-baseaddress(C# 컴파일러 옵션)
 **-baseaddress** 옵션을 사용하면 DLL을 로드할 기본 기준 주소를 지정할 수 있습니다. 이 옵션을 사용하는 시기와 이유에 대한 자세한 내용은 [Larry Osterman's WebLog](https://blogs.msdn.microsoft.com/larryosterman/2004/07/06/why-should-i-even-bother-to-use-dlls-in-my-system/)를 참조하세요.  
@@ -37,13 +37,13 @@ ms.locfileid: "54694583"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
-1.  프로젝트 **속성** 페이지를 엽니다.  
+1. 프로젝트 **속성** 페이지를 엽니다.  
   
-2.  **빌드** 속성 페이지를 클릭합니다.  
+2. **빌드** 속성 페이지를 클릭합니다.  
   
-3.  **고급** 단추를 클릭합니다.  
+3. **고급** 단추를 클릭합니다.  
   
-4.  **DLL 기준 주소** 속성을 수정합니다.  
+4. **DLL 기준 주소** 속성을 수정합니다.  
   
      프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.BaseAddress%2A>를 참조하세요.  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b9cb36c3ab7096e048905e56136f0de62a65bdc
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 1c9a14c2ea2d7d817aacca1fa25b04ac643f16bf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221097"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296656"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe(Windows 리소스 지역화 편집기)
 
@@ -106,9 +106,9 @@ Winres.exe에는 다음 기능과 특징이 있습니다.
 
 ### <a name="to-localize-a-resx-or-resources-file-associated-with-a-form"></a>폼과 연결된 .resx 또는 .resources 파일을 지역화하려면
 
-1.  개발자 명령 프롬프트에 `winres`를 입력하여 Winres.exe를 실행합니다.
+1. 개발자 명령 프롬프트에 `winres`를 입력하여 Winres.exe를 실행합니다.
 
-2.  지역화할 폼에 대한 기본 리소스를 열려면 **파일** 메뉴에서 **열기** 명령을 클릭하고 파일로 이동하여 파일을 엽니다.
+2. 지역화할 폼에 대한 기본 리소스를 열려면 **파일** 메뉴에서 **열기** 명령을 클릭하고 파일로 이동하여 파일을 엽니다.
 
      또는
 
@@ -129,11 +129,11 @@ Winres.exe에는 다음 기능과 특징이 있습니다.
     > [!NOTE]
     > 편집할 리소스가 있는 폼이 상속된 폼인 경우에는 상속된 폼을 포함하는 어셈블리와 상속하는(파생된) 폼을 포함하는 어셈블리가 모두 GAC(전역 어셈블리 캐시)에 등록되어 있거나 WinRes.exe와 동일한 디렉터리에 있어야 합니다. .NET Framework 구성 요소를 GAC에 설치하는 자세한 내용은 [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)를 참조하세요.
 
-3.  폼에서 컨트롤을 선택하고 <xref:System.Windows.Forms.Control.Text%2A> 및 기타 속성을 변경하여 지역화된 문화권 및 언어를 반영합니다. 지역화된 텍스트에 맞게 필요한 만큼 컨트롤을 이동하거나 크기를 조정합니다.
+3. 폼에서 컨트롤을 선택하고 <xref:System.Windows.Forms.Control.Text%2A> 및 기타 속성을 변경하여 지역화된 문화권 및 언어를 반영합니다. 지역화된 텍스트에 맞게 필요한 만큼 컨트롤을 이동하거나 크기를 조정합니다.
 
-4.  .resx 또는 .resources 파일의 지역화된 버전을 저장하려면 **저장** 아이콘 또는 **파일** 메뉴에 있는 동일한 명령을 클릭합니다. **문화권 선택** 창이 표시됩니다.
+4. .resx 또는 .resources 파일의 지역화된 버전을 저장하려면 **저장** 아이콘 또는 **파일** 메뉴에 있는 동일한 명령을 클릭합니다. **문화권 선택** 창이 표시됩니다.
 
-5.  문화권 및 파일 모드를 적절히 선택한 다음 **확인**을 클릭합니다.
+5. 문화권 및 파일 모드를 적절히 선택한 다음 **확인**을 클릭합니다.
 
    도구는 지역화된 리소스 파일에 대해 런타임에서 예상하는 명명 규칙을 사용하여 파일을 저장합니다. 예를 들어, `TestApp.resources`를 독일어(독일)로 지역화하는 경우 이 도구는 파일을 `TestApp.de-DE.resources`로 저장하고 `TestApp.resx`를 독일어(독일)로 지역화하는 경우 `TestApp.de-DE.resx`로 저장합니다. 리소스 명명 규칙에 대한 자세한 내용은 [리소스 패키지 및 배포](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)를 참조하세요. 런타임에서 사용하는 미리 정의된 문화권 이름의 목록은 <xref:System.Globalization.CultureInfo> 클래스를 참조하세요.
 
@@ -145,5 +145,5 @@ Winres.exe에는 다음 기능과 특징이 있습니다.
 - <xref:System.Resources.ResourceReader>
 - <xref:System.Resources.ResourceWriter>
 - [도구](../../../docs/framework/tools/index.md)
-- [데스크톱 앱의 리소스](../../../docs/framework/resources/index.md)
+- [데스크톱 응용 프로그램의 리소스](../../../docs/framework/resources/index.md)
 - [전역화 및 지역화](../../../docs/standard/globalization-localization/index.md)

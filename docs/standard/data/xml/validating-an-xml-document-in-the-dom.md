@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5688559bcadea309bb0ddb4b156f94540e7be624
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd60916302877692ac011e6c0743fae40a10dd34
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664332"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298424"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>DOM에서의 XML 문서 유효성 검사
 기본적으로 <xref:System.Xml.XmlDocument> 클래스는 기본적으로 DOM(문서 개체 모델)에서 XSD(XML 스키마 정의 언어) 스키마 또는 DTD(문서 종류 정의)에 대해 XML의 유효성을 검사하지 않으며 XML이 제대로 구성되었는지만 확인합니다.  
@@ -29,15 +29,15 @@ ms.locfileid: "54664332"
 ### <a name="creating-an-xml-schema-validating-xmlreader"></a>XML 스키마의 유효성을 검사하는 XmlReader 만들기  
  XML 스키마의 유효성을 검사하는 <xref:System.Xml.XmlReader>를 만들려면 다음 단계를 수행합니다.  
   
-1.  새 <xref:System.Xml.XmlReaderSettings> 인스턴스를 생성합니다.  
+1. 새 <xref:System.Xml.XmlReaderSettings> 인스턴스를 생성합니다.  
   
-2.  XML 스키마를 <xref:System.Xml.XmlReaderSettings.Schemas%2A> 인스턴스의 <xref:System.Xml.XmlReaderSettings> 속성에 추가합니다.  
+2. XML 스키마를 <xref:System.Xml.XmlReaderSettings.Schemas%2A> 인스턴스의 <xref:System.Xml.XmlReaderSettings> 속성에 추가합니다.  
   
-3.  `Schema`를 <xref:System.Xml.XmlReaderSettings.ValidationType%2A>으로 지정합니다.  
+3. `Schema`를 <xref:System.Xml.XmlReaderSettings.ValidationType%2A>으로 지정합니다.  
   
-4.  필요에 따라 유효성 검사 중에 발생하는 스키마 유효성 검사 오류 및 경고를 처리하는 <xref:System.Xml.XmlReaderSettings.ValidationFlags%2A> 및 <xref:System.Xml.XmlReaderSettings.ValidationEventHandler>를 지정할 수도 있습니다.  
+4. 필요에 따라 유효성 검사 중에 발생하는 스키마 유효성 검사 오류 및 경고를 처리하는 <xref:System.Xml.XmlReaderSettings.ValidationFlags%2A> 및 <xref:System.Xml.XmlReaderSettings.ValidationEventHandler>를 지정할 수도 있습니다.  
   
-5.  마지막으로 XML 문서와 함께 <xref:System.Xml.XmlReaderSettings> 개체를 <xref:System.Xml.XmlReader.Create%2A> 클래스의 <xref:System.Xml.XmlReader> 메서드에 전달하여 스키마의 유효성을 검사하는 <xref:System.Xml.XmlReader>를 만듭니다.  
+5. 마지막으로 XML 문서와 함께 <xref:System.Xml.XmlReaderSettings> 개체를 <xref:System.Xml.XmlReader.Create%2A> 클래스의 <xref:System.Xml.XmlReader> 메서드에 전달하여 스키마의 유효성을 검사하는 <xref:System.Xml.XmlReader>를 만듭니다.  
   
 ### <a name="example"></a>예제  
  다음 코드 예제에서는 스키마의 유효성을 검사하는 <xref:System.Xml.XmlReader>가 DOM에 로드된 XML 데이터의 유효성을 검사합니다. 또한 XML 문서를 잘못 수정하고 이 문서의 유효성을 다시 검사하므로 스키마 유효성 검사 오류가 발생합니다. 마지막으로 오류 중 하나를 수정한 다음 XML 문서의 일부에 대한 유효성을 부분적으로 검사합니다.  
@@ -89,4 +89,4 @@ ms.locfileid: "54664332"
 - <xref:System.Xml.Schema.ValidationEventHandler>
 - <xref:System.Xml.XmlReaderSettings>
 - [DOM 모델을 사용하여 XML 데이터 처리](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)
-- [XML 스키마 사용](../../../../docs/standard/data/xml/working-with-xml-schemas.md)
+- [XML 스키마 작업](../../../../docs/standard/data/xml/working-with-xml-schemas.md)

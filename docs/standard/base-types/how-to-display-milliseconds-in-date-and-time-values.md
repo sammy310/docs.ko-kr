@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3678c687817c4c93508d95c3d4b7453eadee32e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3950b7a8cf107fc06240f56e5f95eca4e6882251
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643769"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314934"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>방법: 날짜 및 시간 값의 밀리초 표시
 <xref:System.DateTime.ToString?displayProperty=nameWithType>과 같은 기본 날짜 및 시간 서식 지정 메서드에는 시간 값의 시, 분, 초가 포함되지만 밀리초 구성 요소는 제외됩니다. 이 항목에서는 형식이 지정된 날짜 및 시간 문자열에 날짜 및 시간의 밀리초 구성 요소를 포함하는 방법을 보여 줍니다.  
   
 ### <a name="to-display-the-millisecond-component-of-a-datetime-value"></a>DateTime 값의 밀리초 구성 요소를 표시하려면  
   
-1.  날짜의 문자열 표현에 대한 작업을 하는 경우에는 정적 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 메서드를 사용하여 해당 표현을 <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> 또는 <xref:System.DateTimeOffset.Parse%28System.String%29?displayProperty=nameWithType> 값으로 변환합니다.  
+1. 날짜의 문자열 표현에 대한 작업을 하는 경우에는 정적 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 메서드를 사용하여 해당 표현을 <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> 또는 <xref:System.DateTimeOffset.Parse%28System.String%29?displayProperty=nameWithType> 값으로 변환합니다.  
   
-2.  시간 밀리초 구성 요소의 문자열 표현을 추출하려면 날짜 및 시간 값의 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 또는 <xref:System.DateTimeOffset.ToString%2A> 메서드를 호출하고 `fff` 또는 `FFF` 사용자 지정 형식 패턴을 단독으로 또는 다른 사용자 지정 형식 지정자와 함께 `format` 매개 변수로 전달합니다.  
+2. 시간 밀리초 구성 요소의 문자열 표현을 추출하려면 날짜 및 시간 값의 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 또는 <xref:System.DateTimeOffset.ToString%2A> 메서드를 호출하고 `fff` 또는 `FFF` 사용자 지정 형식 패턴을 단독으로 또는 다른 사용자 지정 형식 지정자와 함께 `format` 매개 변수로 전달합니다.  
   
 ## <a name="example"></a>예제  
  이 예제에서는 <xref:System.DateTime> 및 <xref:System.DateTimeOffset> 값의 밀리초 구성 요소를 단독으로 그리고 긴 날짜 및 시간 문자열에 포함하여 콘솔에 표시합니다.  

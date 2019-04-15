@@ -1,6 +1,6 @@
 ---
-title: 시작 F# Visual Studio에서
-description: 사용 하는 방법을 알아봅니다 F# Visual Studio를 사용 하 여 합니다.
+title: Visual Studio에서 F# 시작
+description: Visual Studio에서 F#을 사용하는 방법을 알아봅니다.
 ms.date: 07/03/2018
 ms.openlocfilehash: 020e5d32b3aa5d5a2195c19d70d8fe684fbd56ef
 ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
@@ -9,31 +9,31 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/09/2019
 ms.locfileid: "59331912"
 ---
-# <a name="get-started-with-f-in-visual-studio"></a>시작 F# Visual Studio에서
+# <a name="get-started-with-f-in-visual-studio"></a>Visual Studio에서 F# 시작
 
-F#시각적 개체 및 F# 도구는 Visual Studio IDE에서 지원 됩니다.
+F#과 Visual F# 도구가 Visual Studio IDE에서 지원됩니다.
 
-시작 하려면 했는지 [Visual Studio와 함께 설치 F# ](install-fsharp.md#install-f-with-visual-studio)합니다.
+시작하기 위해서는 [F#이 설치된 Visual Studio](install-fsharp.md#install-f-with-visual-studio)가 있어야 합니다.
 
 ## <a name="creating-a-console-application"></a>콘솔 응용 프로그램 만들기
 
-Visual Studio에서 가장 기본적인 프로젝트 중 하나에 콘솔 응용 프로그램입니다.  방법은 다음과 같습니다.  Visual Studio가 열리면:
+Visual Studio에서 가장 기본적인 프로젝트 중 하나가 콘솔 응용 프로그램입니다.  방법은 다음과 같습니다.  Visual Studio를 열고
 
-1. 에 **파일** 메뉴에서 **새로 만들기**를 선택한 후 **프로젝트**합니다.
+1. **파일** 메뉴에서 **새로 만들기**를 선택한 후 **프로젝트**를 선택합니다.
 
 2. 새 프로젝트에서 대화 상자에서 아래 **템플릿을**, 표시 되어야 **시각적 F#** .  이 옵션을 표시 하려면 선택는 F# 템플릿.
 
-3. 선택 **.NET Core 콘솔 앱** 하거나 **콘솔 앱**합니다.
+3. **.NET Core 콘솔 앱**이나 **콘솔 앱**을 선택합니다.
 
-3. 선택 된 **네** 만들기 단추를 F# 프로젝트!  이제는 F# 솔루션 탐색기에서 프로젝트입니다.
+3. F# 프로젝트를 만들기 위해 **확인** 버튼을 클릭힙니다.  이제 솔루션 탐색기에서 F# 프로젝트를 확인할 수 있습니다.
 
 ## <a name="writing-your-code"></a>코드 작성
 
-보겠습니다 먼저 일부 코드를 작성 하 여 시작 하세요.  했는지를 `Program.fs` 파일 열려 있는 경우 및 다음 해당 콘텐츠를 다음으로 바꿉니다.
+먼저 코드 작성으로 시작하세요.  `Program.fs` 파일을 열고 다음 내용으로 변경합니다.
 
 [!code-fsharp[HelloSquare](../../../samples/snippets/fsharp/getting-started/hello-square.fs)]
 
-이전 코드 샘플에서는 함수 `square` 명명 된 입력을 가져와서는 정의한 `x` 을 단독으로 곱합니다.  때문에 F# 사용 하 여 [Typeinference](../language-reference/type-inference.md), 형식의 `x` 지정할 필요가 없습니다.  F# 컴파일러 곱하기 유효 형식에 대 한 이해 및 형식을 할당 합니다 `x` 하는 방법에 따라 `square` 라고 합니다.  위로 가져가면 `square`, 다음과 같이 표시 됩니다.
+이 코드 샘플에서는 입력으로 `x`를 가져와 같은 값으로 곱셈하도록 정의된 `square`함수가 정의되어 있습니다.  F#에서는 [형식 추정](../language-reference/type-inference.md)을 사용하기 때문에 `x`의 형식을 지정할 필요가 없습니다.  F# 컴파일러는 곱셈이 유효한 형식을 이해하고 `square`가 호출되는 방식에 따라 `x`에 형식을 할당합니다.  `square` 위로 마우스를 가져가면 다음과 같이 표시됩니다.
 
 ```
 val square: x:int -> int
@@ -41,9 +41,9 @@ val square: x:int -> int
 
 이 함수 형식 시그니처 라고 합니다.  다음과 같이 읽을 수 있습니다. "정사각형은 명명 된 정수를 사용 하는 함수 x는 정수를 생성 하 고".  컴파일러 했습니다 보면 `square` 를 `int` 형식 곱하기에서 제네릭 없기 때문에 이것이-지금은 *모든* 형식 이지만 대신 제네릭 형식의 폐쇄형 집합입니다.  F# 선택 하는 컴파일러 `int` 지금은 지점 하지만 조정 됩니다 형식 시그니처 호출 하는 경우 `square` 다른 입력 형식에 같은 `float`합니다.
 
-다른 함수를 `main`, 정의 된으로 데코 레이트 된는 `EntryPoint` 하기가 특성은 F# 컴파일러는 프로그램 실행을 시작 해야 합니다.  다른 동일한 규칙을 따릅니다 [C 스타일 프로그래밍 언어](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B), 여기서이 함수에 명령줄 인수를 전달할 수 있습니다 및 정수 코드가 반환 됩니다 (일반적으로 `0`).
+그 밖에 `main` 함수가 정의되고 F# 컴파일러에게 프로그램 수행이 시작되는 곳이라는 것을 알려주는 `EntryPoint`속성이 데코레이트되었습니다.  함수에 명령줄 인수를 전달하고 정수 코드를 반환(일반적으로 `0`)하는 [C 스타일 프로그래밍 언어](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B)와 동일한 규칙을 따릅니다.
 
-이 함수를 호출 하는 것은 `square` 의 인수를 사용 하 여 함수 `12`합니다.  F# 컴파일러에는 다음 형식의 할당 `square` 되도록 `int -> int` (사용 하는 함수,는 `int` 생성 및는 `int`).  에 대 한 호출 `printfn` 은 형식 문자열에 지정 된 해당 하는 매개 변수를 C 스타일 프로그래밍 언어와 유사한 형식 문자열을 사용 하는 서식이 지정 된 인쇄 기능 및 다음 결과 새 줄을 출력 합니다.
+이 함수에서는 인수로 `12`를 사용하여 `square` 함수를 호출합니다.  F# 컴파일러에는 `square`의 형식을 `int -> int`가 되도록 할당합니다(즉, `int`로 `int`를 생성하는 함수).  `printfn` 호출은 서식이 지정된 출력기능으로, C 스타일 프로그래밍 언어와 유사한 형식 문자열(형식 문자열의 서식이 지정된 매개 변수)을 사용하고 결과와 새로운 라인을 출력합니다.
 
 ## <a name="running-your-code"></a>코드 실행
 

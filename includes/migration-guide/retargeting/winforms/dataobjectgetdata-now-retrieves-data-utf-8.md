@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: e39b4e85b47902babac7a22a93aa64c2f86ef01f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236729"
+---
 ### <a name="dataobjectgetdata-now-retrieves-data-as-utf-8"></a>DataObject.GetData가 이제 데이터를 UTF-8로 검색
 
 |   |   |
@@ -8,4 +16,3 @@
 |버전|4.5.2|
 |형식|대상 변경|
 |영향을 받는 API|<ul><li><xref:System.Windows.DataObject.GetData(System.String)?displayProperty=nameWithType></li><li><xref:System.Windows.DataObject.GetData(System.Type)?displayProperty=nameWithType></li><li><xref:System.Windows.DataObject.GetData(System.String,System.Boolean)?displayProperty=nameWithType></li></ul>|
-

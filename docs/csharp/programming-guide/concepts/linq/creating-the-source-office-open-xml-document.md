@@ -2,12 +2,12 @@
 title: 원본 Office Open XML 문서 만들기(C#)
 ms.date: 07/20/2015
 ms.assetid: 653c8cdb-73be-4dc2-927f-924cfb4ed9ed
-ms.openlocfilehash: 0fe5463ae95374542482f768eee2bc694e2c5dd1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b36d119eb2da7445649b8db1132b7deea2c684c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635847"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322396"
 ---
 # <a name="creating-the-source-office-open-xml-document-c"></a>원본 Office Open XML 문서 만들기(C#)
 이 항목에서는 이 자습서의 다른 예제에서 사용하는 Office Open XML WordprocessingML 문서를 만드는 방법을 보여 줍니다. 이러한 지침을 따르는 경우 출력은 각 예제에서 제공되는 출력과 일치합니다.  
@@ -20,9 +20,9 @@ ms.locfileid: "54635847"
   
 #### <a name="to-create-the-wordprocessingml-document"></a>WordprocessingML 문서를 만들려면  
   
-1.  Microsoft Word 문서를 새로 만듭니다.  
+1. Microsoft Word 문서를 새로 만듭니다.  
   
-2.  다음 텍스트를 새 문서에 붙여 넣습니다.  
+2. 다음 텍스트를 새 문서에 붙여 넣습니다.  
   
     ```  
     Parsing WordprocessingML with LINQ to XML  
@@ -42,13 +42,13 @@ ms.locfileid: "54635847"
     Hello World  
     ```  
   
-3.  "제목 1" 스타일로 첫 번째 줄의 서식을 지정합니다.  
+3. "제목 1" 스타일로 첫 번째 줄의 서식을 지정합니다.  
   
-4.  C# 코드가 포함된 줄을 선택합니다. 첫 번째 줄은 `using` 키워드로 시작합니다. 마지막 줄은 마지막 닫는 괄호입니다. courier 글꼴로 줄의 서식을 지정합니다. 새 스타일로 줄의 서식을 지정한 다음 새 스타일의 이름을 "Code"로 지정합니다.  
+4. C# 코드가 포함된 줄을 선택합니다. 첫 번째 줄은 `using` 키워드로 시작합니다. 마지막 줄은 마지막 닫는 괄호입니다. courier 글꼴로 줄의 서식을 지정합니다. 새 스타일로 줄의 서식을 지정한 다음 새 스타일의 이름을 "Code"로 지정합니다.  
   
-5.  마지막으로 출력이 포함된 전체 줄을 선택하고 `Code` 스타일로 서식을 지정합니다.  
+5. 마지막으로 출력이 포함된 전체 줄을 선택하고 `Code` 스타일로 서식을 지정합니다.  
   
-6.  문서를 저장하고 SampleDoc.docx로 이름을 지정합니다.  
+6. 문서를 저장하고 SampleDoc.docx로 이름을 지정합니다.  
   
     > [!NOTE]
     >  Microsoft Word 2003을 사용하는 경우 **파일 형식** 드롭다운 목록에서 **Word 2007 문서**를 선택합니다.  

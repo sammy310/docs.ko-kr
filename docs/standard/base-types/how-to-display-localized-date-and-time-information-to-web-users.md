@@ -15,51 +15,51 @@ dev_langs:
 - vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d46b2634096cf71701458ca7ecb6f66a01ebffbe
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: e97bc095332e626d79561ab5fdc7bad531e3ba31
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857660"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320160"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>방법: 웹 사용자에게 지역화된 날짜 및 시간 정보 표시
 웹 페이지는 전 세계 어디에서든 표시될 수 있으므로 날짜 및 시간 값의 구문 분석 및 서식 지정 작업은 사용자와 상호 작용할 때 기본 형식(대체로 웹 서버의 현지 문화권 형식임)을 사용해서는 안 됩니다. 대신 사용자가 입력한 날짜 및 시간 문자열을 처리하는 Web Forms는 사용자의 기본 설정 문화권을 사용하여 문자열을 구문 분석해야 합니다. 마찬가지로 날짜 및 시간 데이터는 사용자의 문화권을 따르는 형식으로 사용자에게 표시되어야 합니다. 이 항목에서는 프로젝션의 형식을 제어하는 방법을 보여 줍니다.  
   
 ## <a name="to-parse-date-and-time-strings-input-by-the-user"></a>사용자가 입력한 날짜 및 시간 문자열을 구문 분석하려면  
   
-1.  <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> 속성에서 반환한 문자열 배열이 채워졌는지 여부를 파악합니다. 배열이 채워져 있지 않으면 6단계를 진행합니다.  
+1. <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> 속성에서 반환한 문자열 배열이 채워졌는지 여부를 파악합니다. 배열이 채워져 있지 않으면 6단계를 진행합니다.  
   
-2.  <xref:System.Web.HttpRequest.UserLanguages%2A> 속성에서 반환한 문자열 배열이 채워져 있는 경우 첫 번째 요소를 검색합니다. 첫 번째 요소는 사용자의 기본 설정 언어 및 지역을 나타냅니다.  
+2. <xref:System.Web.HttpRequest.UserLanguages%2A> 속성에서 반환한 문자열 배열이 채워져 있는 경우 첫 번째 요소를 검색합니다. 첫 번째 요소는 사용자의 기본 설정 언어 및 지역을 나타냅니다.  
   
-3.  <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 생성자를 호출하여 사용자의 기본 설정 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 개체를 인스턴스화합니다.  
+3. <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 생성자를 호출하여 사용자의 기본 설정 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 개체를 인스턴스화합니다.  
   
-4.  <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 형식의 `TryParse` 또는 `Parse` 메서드를 호출하여 변환을 시도합니다. `TryParse` 또는 `Parse` 메서드의 오버로드를 `provider` 매개 변수와 함께 사용하고, 다음 중 하나를 전달합니다.  
+4. <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 형식의 `TryParse` 또는 `Parse` 메서드를 호출하여 변환을 시도합니다. `TryParse` 또는 `Parse` 메서드의 오버로드를 `provider` 매개 변수와 함께 사용하고, 다음 중 하나를 전달합니다.  
   
     -   3단계에서 생성한 <xref:System.Globalization.CultureInfo> 개체  
   
     -   3단계에서 생성한 <xref:System.Globalization.CultureInfo> 개체의 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> 속성에서 반환하는 <xref:System.Globalization.DateTimeFormatInfo> 개체  
   
-5.  변환에 실패하는 경우 <xref:System.Web.HttpRequest.UserLanguages%2A> 속성에서 반환한 문자열 배열의 나머지 요소 각각에 대해 2~4단계를 반복합니다.  
+5. 변환에 실패하는 경우 <xref:System.Web.HttpRequest.UserLanguages%2A> 속성에서 반환한 문자열 배열의 나머지 요소 각각에 대해 2~4단계를 반복합니다.  
   
-6.  여전히 변환에 실패하거나 <xref:System.Web.HttpRequest.UserLanguages%2A> 속성에서 반환한 문자열 배열이 비어 있는 경우 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 속성에서 반환하는 고정 문화권을 사용하여 문자열을 구문 분석합니다.  
+6. 여전히 변환에 실패하거나 <xref:System.Web.HttpRequest.UserLanguages%2A> 속성에서 반환한 문자열 배열이 비어 있는 경우 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 속성에서 반환하는 고정 문화권을 사용하여 문자열을 구문 분석합니다.  
   
 ## <a name="to-parse-the-local-date-and-time-of-the-users-request"></a>사용자 요청의 로컬 날짜 및 시간을 구문 분석하려면  
   
-1.  웹 폼에 <xref:System.Web.UI.WebControls.HiddenField> 컨트롤을 추가합니다.  
+1. 웹 폼에 <xref:System.Web.UI.WebControls.HiddenField> 컨트롤을 추가합니다.  
   
-2.  현재 날짜 및 시간과 로컬 표준 시간대 오프셋을 UTC(협정 세계시)에서 <xref:System.Web.UI.WebControls.HiddenField.Value%2A> 속성으로 작성하여 `Submit` 단추의 `onClick` 이벤트를 처리하는 JavaScript 함수를 만듭니다. 구분 기호(예: 세미콜론)를 사용하여 문자열의 두 구성 요소를 구분합니다.  
+2. 현재 날짜 및 시간과 로컬 표준 시간대 오프셋을 UTC(협정 세계시)에서 <xref:System.Web.UI.WebControls.HiddenField.Value%2A> 속성으로 작성하여 `Submit` 단추의 `onClick` 이벤트를 처리하는 JavaScript 함수를 만듭니다. 구분 기호(예: 세미콜론)를 사용하여 문자열의 두 구성 요소를 구분합니다.  
   
-3.  스크립트의 텍스트를 <xref:System.Web.UI.ClientScriptManager.RegisterClientScriptBlock%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Boolean%29?displayProperty=nameWithType> 메서드에 전달하여 웹 폼의 <xref:System.Web.UI.Control.PreRender> 이벤트를 사용해 HTML 출력 스트림에 함수를 삽입합니다.  
+3. 스크립트의 텍스트를 <xref:System.Web.UI.ClientScriptManager.RegisterClientScriptBlock%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Boolean%29?displayProperty=nameWithType> 메서드에 전달하여 웹 폼의 <xref:System.Web.UI.Control.PreRender> 이벤트를 사용해 HTML 출력 스트림에 함수를 삽입합니다.  
   
-4.  `Submit` 단추의 `OnClientClick` 특성에 JavaScript 함수의 이름을 제공하여 이벤트 처리기를 `Submit` 단추의 `onClick` 이벤트에 연결합니다.  
+4. `Submit` 단추의 `OnClientClick` 특성에 JavaScript 함수의 이름을 제공하여 이벤트 처리기를 `Submit` 단추의 `onClick` 이벤트에 연결합니다.  
   
-5.  `Submit` 단추의 <xref:System.Web.UI.WebControls.Button.Click> 이벤트에 대한 처리기를 만듭니다.  
+5. `Submit` 단추의 <xref:System.Web.UI.WebControls.Button.Click> 이벤트에 대한 처리기를 만듭니다.  
   
-6.  이벤트 처리기에서, <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> 속성으로 반환된 문자열 배열이 채워졌는지 여부를 파악합니다. 문자열 배열이 채워져 있지 않으면 14단계로 진행합니다.  
+6. 이벤트 처리기에서, <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> 속성으로 반환된 문자열 배열이 채워졌는지 여부를 파악합니다. 문자열 배열이 채워져 있지 않으면 14단계로 진행합니다.  
   
-7.  <xref:System.Web.HttpRequest.UserLanguages%2A> 속성에서 반환한 문자열 배열이 채워져 있는 경우 첫 번째 요소를 검색합니다. 첫 번째 요소는 사용자의 기본 설정 언어 및 지역을 나타냅니다.  
+7. <xref:System.Web.HttpRequest.UserLanguages%2A> 속성에서 반환한 문자열 배열이 채워져 있는 경우 첫 번째 요소를 검색합니다. 첫 번째 요소는 사용자의 기본 설정 언어 및 지역을 나타냅니다.  
   
-8.  <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 생성자를 호출하여 사용자의 기본 설정 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 개체를 인스턴스화합니다.  
+8. <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 생성자를 호출하여 사용자의 기본 설정 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 개체를 인스턴스화합니다.  
   
 9. <xref:System.Web.UI.WebControls.HiddenField.Value%2A> 속성에 할당된 문자열을 <xref:System.String.Split%2A> 메서드에 전달하여 사용자 로컬 날짜 및 시간의 문자열 표현과 사용자 로컬 표준 시간대 오프셋의 문자열 표현을 별도의 배열 요소에 저장합니다.  
   

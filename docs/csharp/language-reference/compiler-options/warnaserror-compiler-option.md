@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -warnaserror compiler option [C#]
 - warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
-ms.openlocfilehash: b208f6e4e768e400af203117d185944be285cb72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ae555c2e049e687f508e62b5b46fd8a744e827f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634612"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329105"
 ---
 # <a name="-warnaserror-c-compiler-options"></a>-warnaserror(C# 컴파일러 옵션)
 **-warnaserror+** 옵션은 모든 경고를 오류로 처리합니다.  
@@ -35,11 +35,11 @@ ms.locfileid: "54634612"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
-1.  프로젝트 **속성** 페이지를 엽니다.  
+1. 프로젝트 **속성** 페이지를 엽니다.  
   
-2.  **빌드** 속성 페이지를 클릭합니다.  
+2. **빌드** 속성 페이지를 클릭합니다.  
   
-3.  **경고를 오류로 처리** 속성을 수정합니다.  
+3. **경고를 오류로 처리** 속성을 수정합니다.  
   
  프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors>를 참조하세요.  
   

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 6cc1c65a95238e758f99090794f5e50b830d9667
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235667"
+---
 ### <a name="systemactivities-is-now-aptca"></a>System.Activities는 이제 APTCA
 
 |   |   |
@@ -7,4 +15,3 @@
 |범위|Microsoft Edge|
 |버전|4.5|
 |형식|런타임|
-

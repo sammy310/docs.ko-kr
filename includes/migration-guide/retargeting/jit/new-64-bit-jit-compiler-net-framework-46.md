@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5aa37169ae0e5c5e6b88aae5ceb5d758286c3d3a
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: a9363750f8090434d0c304039330eff88e4748d7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761106"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234485"
 ---
 ### <a name="new-64-bit-jit-compiler-in-the-net-framework-46"></a>.NET Framework 4.6의 새로운 64비트 JIT 컴파일러
 
@@ -15,4 +15,3 @@ ms.locfileid: "58761106"
 |범위|Microsoft Edge|
 |버전|4.6|
 |형식|대상 변경|
-

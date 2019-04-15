@@ -4,12 +4,12 @@ description: 감정 예측을 통해 적절한 작업을 수행하는 방법을 
 ms.date: 03/07/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: c5373f63927ff39e7c819cd1fc0bc2bec1843b3e
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 202edc5127388df2397053d5703d33a39046374f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921119"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303117"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>자습서: 감정 분석 이진 분류 시나리오에서 ML.NET 사용
 
@@ -39,7 +39,7 @@ ms.locfileid: "58921119"
 
 ## <a name="prerequisites"></a>전제 조건
 
-* “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2017 15.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
+* “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2017 15.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017).
 
 * [UCI Sentiment Labeled Sentences 데이터 세트 zip 파일](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)
 

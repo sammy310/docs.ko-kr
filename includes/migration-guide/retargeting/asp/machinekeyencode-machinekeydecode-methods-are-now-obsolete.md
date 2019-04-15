@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 77e04333ed2b9a5ca8b900c1355fb5b12957772d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234708"
+---
 ### <a name="machinekeyencode-and-machinekeydecode-methods-are-now-obsolete"></a>MachineKey.Encode 및 MachineKey.Decode 메서드는 사용되지 않음
 
 |   |   |
@@ -8,4 +16,3 @@
 |버전|4.5|
 |형식|대상 변경|
 |영향을 받는 API|<ul><li><xref:System.Web.Security.MachineKey.Encode(System.Byte[],System.Web.Security.MachineKeyProtection)?displayProperty=nameWithType></li><li><xref:System.Web.Security.MachineKey.Decode(System.String,System.Web.Security.MachineKeyProtection)?displayProperty=nameWithType></li></ul>|
-

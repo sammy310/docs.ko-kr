@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 7344fddbc61d47d4ca735808f0b92f63e33e15a3
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: e73fe48467ede501bae0ddd9362d9d55b3ca998b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760865"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234076"
 ---
 ### <a name="winforms-domain-upbutton-and-downbutton-actions-are-in-sync-now"></a>WinForm의 도메인 UpButton 및 DownButton 작업이 지금 동기화됨
 
@@ -16,4 +16,3 @@ ms.locfileid: "58760865"
 |버전|4.7.2|
 |형식|대상 변경|
 |영향을 받는 API|<ul><li><xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType></li><li><xref:System.Windows.Forms.DomainUpDown.DownButton?displayProperty=nameWithType></li></ul>|
-
