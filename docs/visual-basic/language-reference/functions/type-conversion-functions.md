@@ -81,12 +81,12 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-ms.openlocfilehash: 2b750f41343a4a68e29af6055815efd1e6470252
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 56dad921b2900061dbe2db0d8f1faaf759641f87
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816267"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148137"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>형식 변환 함수(Visual Basic)
 이러한 함수는 변환 코드가 식을 계산 하는 코드의 일부인 즉 인라인으로 컴파일됩니다. 때때로 성능을 향상 시키는 변환을 수행 하는 프로시저에 대 한 호출이 있습니다. 각 함수는 식에서 특정 데이터 형식으로 강제 변환합니다.  
@@ -129,7 +129,7 @@ CUShort(expression)
 |`CDec`|[Decimal 데이터 형식](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|+ /-79228162514264337593543950335-즉, 소수 자릿수가 없는 숫자입니다. 소수 자릿수가 28 숫자 범위는 + /-7.9228162514264337593543950335 사이입니다. 가장 작은 가능한 0이 아닌 숫자는 0.0000000000000000000000000001 (+ 1E-28).|  
 |`CInt`|[Integer 데이터 형식](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32.MinValue?displayProperty=nameWithType> (-2147483648)부터 <xref:System.Int32.MaxValue?displayProperty=nameWithType> (2147483647); 소수 부분이 반올림 됩니다.<sup> 1</sup> <br/><br/>Visual Basic 15.8부터 Visual Basic을 사용 하 여 정수 변환 부동 소수점의 성능을 최적화 합니다 `CInt` 함수를 참조 하세요 합니다 [주의](#remarks) 자세한 내용은 섹션입니다. 참조를 [CInt 예제](#cint-example) 섹션 예입니다. |  
 |`CLng`|[Long 데이터 형식](../../../visual-basic/language-reference/data-types/long-data-type.md)|<xref:System.Int64.MinValue?displayProperty=nameWithType> (-9223372036854775808)부터 <xref:System.Int64.MaxValue?displayProperty=nameWithType> (9223372036854775807); 소수 부분이 반올림 됩니다.<sup> 1</sup><br/><br/>Visual Basic 15.8부터 Visual Basic을 사용 하 여 64 비트 정수로 변환 하는 부동 소수점의 성능을 최적화 합니다 `CLng` 함수를 참조 하세요 합니다 [주의](#remarks) 자세한 내용은 섹션입니다. 참조를 [CInt 예제](#cint-example) 섹션 예입니다.|  
-|`CObj`|[Object 데이터 형식](../../../visual-basic/language-reference/data-types/object-data-type.md)|모든 유효한 식입니다.|  
+|`CObj`|[Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md)|모든 유효한 식입니다.|  
 |`CSByte`|[SByte 데이터 형식](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte.MinValue?displayProperty=nameWithType> (-128)를 통해 <xref:System.SByte.MaxValue?displayProperty=nameWithType> (127); 소수 부분이 반올림 됩니다.<sup> 1</sup><br/><br/>Visual Basic 15.8부터 Visual Basic을 사용 하 여 부호 있는 바이트 변환 부동 소수점의 성능을 최적화 합니다 `CSByte` 함수를 참조 하세요 합니다 [주의](#remarks) 자세한 내용은 섹션입니다. 참조를 [CInt 예제](#cint-example) 섹션 예입니다.|  
 |`CShort`|[Short 데이터 형식](../../../visual-basic/language-reference/data-types/short-data-type.md)|<xref:System.Int16.MinValue?displayProperty=nameWithType> (-32768)부터 <xref:System.Int16.MaxValue?displayProperty=nameWithType> (32767); 소수 부분이 반올림 됩니다.<sup> 1</sup><br/><br/>Visual Basic 15.8부터 Visual Basic을 사용 하 여 16 비트 정수로 변환 하는 부동 소수점의 성능을 최적화 합니다 `CShort` 함수를 참조 하세요 합니다 [주의](#remarks) 자세한 내용은 섹션입니다. 참조를 [CInt 예제](#cint-example) 섹션 예입니다.|  
 |`CSng`|[Single 데이터 형식](../../../visual-basic/language-reference/data-types/single-data-type.md)|-3.402823E + 38에서-1.401298E-45 음수 값이 있습니다. 1.401298E-45 3.402823E + 38 양수 값에 대 한 합니다.|  
@@ -142,7 +142,6 @@ CUShort(expression)
   
 ## <a name="remarks"></a>설명  
  일반적으로 사용 해야는 Visual Basic 형식 변환 함수는.NET Framework 메서드 보다 우선적으로 같은 `ToString()`하거나에서 <xref:System.Convert> 클래스 또는 개별 형식 구조체 또는 클래스에서. Visual Basic 함수는 Visual Basic 코드를 사용 하 여 최적의 상호 작용을 위해 설계 되었습니다 및 더 간결 하 고 읽기 쉽게 소스 코드 할 수도 있습니다. 또한.NET Framework 변환 메서드를 생성 하지 않을 경우 Visual Basic 함수 예를 들어 변환 하는 경우와 동일한 결과 `Boolean` 에 `Integer`입니다. 자세한 내용은 [데이터 형식 문제 해결](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)합니다.  
-
 
 Visual Basic 15.8부터 부동으로 소수점을 정수로 변환의 성능을 최적화 된 전달 하는 경우는 <xref:System.Single> 또는 <xref:System.Double> 정수 변환 함수 중 하나에 다음과 같은 방법으로 반환 되는 값 (`CByte`합니다 `CShort`, `CInt`, `CLng`, `CSByte`, `CUShort`, `CUInt`, `CULng`):
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
-ms.openlocfilehash: fb7c04ac6c24648dfb2a8cfa5e01bf97c6b0b3be
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: fb400b113e3f3305f5b724734b2bf9aa9425d03f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841695"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311528"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>방법: 변수 (Visual Basic)의 사용 가능성 제어
 지정 하 여 변수의 사용 가능성 제어 해당 *액세스 수준*합니다. 액세스 수준 변수에 쓰거나 읽을 수 있는 코드를 결정 합니다.  
@@ -31,25 +31,25 @@ ms.locfileid: "58841695"
   
 #### <a name="to-make-a-variable-accessible-only-from-within-its-module-class-or-structure"></a>변수를 해당 모듈, 클래스 또는 구조체 내 에서만 액세스할 수 있도록 하려면  
   
-1.  위치는 [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md) 모듈, 클래스 또는 구조체 내 서 다른 프로시저 외부 변수에 대 한 합니다.  
+1. 위치는 [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md) 모듈, 클래스 또는 구조체 내 서 다른 프로시저 외부 변수에 대 한 합니다.  
   
-2.  포함 된 [개인](../../../../visual-basic/language-reference/modifiers/private.md) 키워드를 `Dim` 문.  
+2. 포함 된 [개인](../../../../visual-basic/language-reference/modifiers/private.md) 키워드를 `Dim` 문.  
   
      읽거나 아닌 하지만 모듈, 클래스 또는 구조체 내에서 변수를 쓸 수 밖에 있습니다.  
   
 #### <a name="to-make-a-variable-accessible-from-any-code-that-can-see-it"></a>변수를 볼 수 있는 모든 코드에서 액세스할 수 있도록 하려면  
   
-1.  멤버 변수를 배치 합니다 `Dim` 모듈, 클래스 또는 구조체 내 서 다른 프로시저 외부 변수에 대 한 문을 합니다.  
+1. 멤버 변수를 배치 합니다 `Dim` 모듈, 클래스 또는 구조체 내 서 다른 프로시저 외부 변수에 대 한 문을 합니다.  
   
-2.  포함 된 [공용](../../../../visual-basic/language-reference/modifiers/public.md) 키워드를 `Dim` 문.  
+2. 포함 된 [공용](../../../../visual-basic/language-reference/modifiers/public.md) 키워드를 `Dim` 문.  
   
      읽기 또는 어셈블리를 사용 하 여 상호 운용 하는 코드에서 변수를 작성할 수 있습니다.  
   
  또는  
   
-1.  지역 변수를 배치 합니다 `Dim` 문을 프로시저 내에서 변수에 대 한 합니다.  
+1. 지역 변수를 배치 합니다 `Dim` 문을 프로시저 내에서 변수에 대 한 합니다.  
   
-2.  포함 되지 않습니다 합니다 `Public` 키워드는 `Dim` 문입니다.  
+2. 포함 되지 않습니다 합니다 `Public` 키워드는 `Dim` 문입니다.  
   
      읽기 또는 프로시저 내에서 아무 곳 이나 있지만 아닌에서 변수를 쓸 수 밖에 있습니다.  
   
@@ -58,17 +58,17 @@ ms.locfileid: "58841695"
   
 #### <a name="to-make-a-variable-accessible-only-from-within-its-class-and-any-derived-classes"></a>변수를 해당 클래스와 모든 파생된 클래스 내 에서만 액세스할 수 있도록 하려면  
   
-1.  위치는 `Dim` 클래스 내부 이지만 다른 프로시저 외부 변수에 대 한 문입니다.  
+1. 위치는 `Dim` 클래스 내부 이지만 다른 프로시저 외부 변수에 대 한 문입니다.  
   
-2.  포함 된 [보호 된](../../../../visual-basic/language-reference/modifiers/protected.md) 키워드를 `Dim` 문.  
+2. 포함 된 [보호 된](../../../../visual-basic/language-reference/modifiers/protected.md) 키워드를 `Dim` 문.  
   
      읽거나,에서 파생 된 클래스 내에서 뿐만 아니라 해당 클래스에서 변수를 쓸 수 파생 체인의 모든 클래스 외부입니다.  
   
 #### <a name="to-make-a-variable-accessible-only-from-within-the-same-assembly"></a>변수를 동일한 어셈블리 내 에서만 액세스할 수 있도록 하려면  
   
-1.  위치는 `Dim` 모듈, 클래스 또는 구조체 내 서 다른 프로시저 외부 변수에 대 한 문입니다.  
+1. 위치는 `Dim` 모듈, 클래스 또는 구조체 내 서 다른 프로시저 외부 변수에 대 한 문입니다.  
   
-2.  포함 된 [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) 키워드를 `Dim` 문.  
+2. 포함 된 [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) 키워드를 `Dim` 문.  
   
      읽거나 아닌 하지만 동일한 어셈블리의 코드 뿐만 아니라 모듈, 클래스 또는 구조체 내에서 변수를 쓸 수 어셈블리 외부에 있습니다.  
   
@@ -90,7 +90,7 @@ Private numberForMeOnly As Integer
 
 - [Visual Basic의 액세스 수준](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md)
-- [공용](../../../../visual-basic/language-reference/modifiers/public.md)
+- [Public](../../../../visual-basic/language-reference/modifiers/public.md)
 - [보호됨](../../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)
-- [전용](../../../../visual-basic/language-reference/modifiers/private.md)
+- [Private](../../../../visual-basic/language-reference/modifiers/private.md)

@@ -2,12 +2,12 @@
 title: Discovery Security 샘플
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: c77bedbea3d9002b24556d240d5b788fe6c53d67
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e956b9f8162d55891233a3ab664b05658d50eeab
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815202"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318405"
 ---
 # <a name="discovery-security-sample"></a>Discovery Security 샘플
 검색 사양에서는 검색 프로세스에 참여하는 엔드포인트를 보호하도록 요구하지 않습니다. 그러나 검색 메시지의 보안을 강화하면 메시지 변경, 서비스 거부, 재생, 스푸핑 같은 다양한 형식의 공격을 완화할 수 있습니다. 이 샘플에서는 WS-Discovery 사양의 8.2단원에 설명된 압축 서명 형식을 사용하여 메시지 서명을 컴퓨팅 및 확인하는 사용자 지정 채널을 구현합니다. 샘플 모두 지원 합니다 [2005 검색 사양](https://go.microsoft.com/fwlink/?LinkId=177912) 하며 [1.1 버전](https://go.microsoft.com/fwlink/?LinkId=179677)합니다.  
@@ -60,11 +60,11 @@ ms.locfileid: "58815202"
   
 #### <a name="to-use-this-sample"></a>이 샘플을 사용하려면  
   
-1.  Visual Studio 용 개발자 명령 프롬프트에서 Setup.bat 스크립트를 실행 합니다. 이 샘플에서는 인증서를 사용하여 메시지를 서명하고 확인합니다. 이 스크립트에서는 Makecert.exe를 사용하여 인증서를 만든 다음 Certmgr.exe를 사용하여 인증서를 설치합니다. 이 스크립트는 관리자 권한으로 실행해야 합니다.  
+1. Visual Studio 용 개발자 명령 프롬프트에서 Setup.bat 스크립트를 실행 합니다. 이 샘플에서는 인증서를 사용하여 메시지를 서명하고 확인합니다. 이 스크립트에서는 Makecert.exe를 사용하여 인증서를 만든 다음 Certmgr.exe를 사용하여 인증서를 설치합니다. 이 스크립트는 관리자 권한으로 실행해야 합니다.  
   
-2.  을 빌드하고 샘플을 실행 하려면 Visual Studio에서 Security.sln 파일을 열고 선택한 **모두 다시 빌드**합니다. 여러 프로젝트를 시작 하도록 솔루션 속성을 업데이트 합니다: 선택 **시작** DiscoverySecureChannels 제외한 모든 프로젝트에 대 한 합니다. 솔루션을 정상적으로 실행합니다.  
+2. 을 빌드하고 샘플을 실행 하려면 Visual Studio에서 Security.sln 파일을 열고 선택한 **모두 다시 빌드**합니다. 여러 프로젝트를 시작 하도록 솔루션 속성을 업데이트 합니다: 선택 **시작** DiscoverySecureChannels 제외한 모든 프로젝트에 대 한 합니다. 솔루션을 정상적으로 실행합니다.  
   
-3.  샘플을 사용하여 작업을 수행한 후 이 샘플에 대해 만들어진 인증서를 제거하는 Cleanup.bat 스크립트를 실행합니다.  
+3. 샘플을 사용하여 작업을 수행한 후 이 샘플에 대해 만들어진 인증서를 제거하는 Cleanup.bat 스크립트를 실행합니다.  
   
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
@@ -74,4 +74,3 @@ ms.locfileid: "58815202"
 >  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  
-  

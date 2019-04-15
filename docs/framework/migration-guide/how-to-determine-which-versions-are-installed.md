@@ -1,6 +1,6 @@
 ---
 title: '방법: 설치된 .NET Framework 버전 확인'
-ms.date: 03/18/2019
+ms.date: 04/02/2019
 dev_langs:
 - csharp
 - vb
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9c4ad3ca5694457637a82a36c8db4534df43a9d7
-ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
+ms.openlocfilehash: 364d28d5df8e284445d825fbbeb963c54b7b9e27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58504433"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176308"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>방법: 설치된 .NET Framework 버전 확인
 
@@ -37,7 +37,6 @@ ms.locfileid: "58504433"
 >
 > 자세한 내용은 [.NET Framework 버전 및 종속성](versions-and-dependencies.md)을 참조하십시오.
 
-
 컴퓨터에 설치된 .NET Framework 버전 목록을 보려면 레지스트리에 액세스 합니다. 또는 레지스트리 편집기를 사용하여 레지스트리를 확인하거나 코드로 레지스트리를 쿼리합니다.
  
 - 최신 .NET Framework 버전 찾기(4.5 이상): 
@@ -54,7 +53,6 @@ ms.locfileid: "58504433"
 - [코드를 사용하여 Environment 클래스 쿼리](#clr_b)  
 
 .NET Framework의 버전별로 설치된 업데이트를 검색하는 방법에 대한 자세한 내용은 [방법: 설치된 .NET Framework 업데이트 확인](how-to-determine-which-net-framework-updates-are-installed.md). 
-  
 
 ## <a name="find-newer-net-framework-versions-45-and-later"></a>최신 .NET Framework 버전 찾기(4.5 이상)
 
@@ -68,17 +66,13 @@ ms.locfileid: "58504433"
 2. 레지스트리 편집기에서 다음 하위 키를 엽니다. **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full**. **전체**하위 키가 없으면 .NET Framework 4.5 이상이 설치되어 있지 않은 것입니다.
 
     > [!NOTE]
-    > 레지스트리의**NET Framework Setup**폴더는 마침표로 시작하지 않습니다.
+    > 레지스트리의 **NET Framework Setup** 폴더는 마침표로 시작하지 ‘않습니다’.
 
 3. **릴리스**라는 DWORD 항목을 확인합니다. 릴리스 DWORD가 있으면 컴퓨터에 .NET Framework 4.5 이상이 설치된 것입니다. 그 값은 특정 버전의 .NET Framework에 대응되는 릴리스 키입니다. 예를 들어, 다음 그림에서 **릴리스**항목은 *378389*로, 이것은 .NET Framework 4.5.의 릴리스 키입니다. 
 
      ![.NET Framework 4.5에 대한 레지스트리 항목](media/clr-installdir.png ".NET Framework 4.5에 대한 레지스트리 항목")
 
-다음 표에서는 각 .NET Framework 버전의 **릴리스** 항목의 최솟값을 보여줍니다. 이 값은 다음과 같이 사용할 수 있습니다.
-
-- 최소 .NET Framework 버전이 설치되었는지 확인하려면, 레지스트리에서 확인한 **릴리스** DWORD 값이 표에 있는 값보다 *크거나 같은지* 살펴봅니다. 예를 들어, 애플리케이션에 .NET Framework 4.7 이상이 필요한 경우, 릴리스 키 값이 최소 *460798*이어야 합니다.
-
-- 여러 버전을 테스트하려면 최신 .NET Framework 버전부터 시작하고 역으로 버전을 줄여가며 하나씩 테스트합니다.
+다음 표에는 .NET Framework 4.5 이상 버전의 각 운영 체제상의 **릴리스** DWORD가 나와 있습니다.
 
 [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
 
@@ -86,18 +80,23 @@ ms.locfileid: "58504433"
 
 |.NET Framework 버전|릴리스 DWORD의 값|
 |--------------------------------|-------------|
-|.NET Framework 4.5|378389|
-|.NET Framework 4.5.1|378675|
-|.NET Framework 4.5.2|379893|
-|.NET Framework 4.6|393295|
-|.NET Framework 4.6.1|394254|
-|.NET Framework 4.6.2|394802|
-|.NET Framework 4.7|460798|
-|.NET Framework 4.7.1|461308|
-|.NET Framework 4.7.2|461808|
+|.NET Framework 4.5|모든 Windows 운영 체제: 378389|
+|.NET Framework 4.5.1|Windows 8.1 및 Windows Server 2012 R2: 378675<br />다른 모든 Windows 운영 체제: 378758|
+|.NET Framework 4.5.2|모든 Windows 운영 체제: 379893|
+|.NET Framework 4.6|Windows 10: 393295<br />다른 모든 Windows 운영 체제: 393297|
+|.NET Framework 4.6.1|Windows 10 11월 업데이트 운영 체제: 394254<br />다른 모든 Windows 운영 체제(Windows 10 포함): 394271|
+|.NET Framework 4.6.2|Windows 10 1주년 업데이트 및 Windows Server 2016: 394802<br />다른 모든 Windows 운영 체제(다른 Windows 10 운영 체제 포함): 394806|
+|.NET Framework 4.7|Windows 10 Creators Update: 460798<br />다른 모든 Windows 운영 체제(다른 Windows 10 운영 체제 포함): 460805| 
+|.NET Framework 4.7.1|Windows 10 Fall Creators Update 및 Windows Server, 버전 1709: 461308<br/>다른 모든 Windows 운영 체제(다른 Windows 10 운영 체제 포함): 461310|
+|.NET Framework 4.7.2|Windows 10 2018년 4월 업데이트 및 Windows Server, 버전 1803: 461808<br/>Windows 10 2018년 4월 업데이트 및 Windows Server, 버전 1803 이외의 모든 Windows 운영 체제: 461814|  
 
-특정 Windows 운영 체제 버전용 .NET Framework의 릴리스 키를 모두 확인하려면 [.NET Framework 릴리스 키 및 Windows 운영 체제 버전](release-keys-and-os-versions.md)을 참조하세요.
+이 값은 다음과 같이 사용할 수 있습니다.
 
+- 특정 버전의 .NET Framework가 특정 버전의 Windows 운영 체제에 설치되어 있는지 여부를 확인하려면 **릴리스** DWORD 값이 표에 나열된 값과 ‘동일한지’ 테스트하세요. 예를 들어 .NET Framework 4.6이 Windows 10 시스템에 있는지 확인하려면 **릴리스** 값이 393295와 ‘같은지’ 테스트합니다.
+
+- 최하 버전의 .NET Framework가 있는지 확인하려면 해당 버전에 대해 더 작은 **릴리스** DWORD 값을 사용하세요. 예를 들어 애플리케이션이 .NET Framework 4.6 이상 버전에서 실행되는 경우 393295과 ‘같거나 이보다 큰’ **릴리스** DWORD 값을 테스트합니다. 각 .NET Framework 버전에 대한 최소 **릴리스** DWORD 값만 나열하는 표를 보려면 [.NET Framework 4.5 이상 버전에서 릴리스 DWORD의 최솟값](minimum-release-dword.md)을 참조하세요.
+
+- 여러 버전을 테스트하려면 최신 .NET Framework 버전의 더 작은 DWORD 값과 ‘같거나 이보다 큰’ 값을 테스트한 후 연속적인 각 이전 버전에 대해 더 작은 DWORD 값과 비교하세요. 예를 들어 애플리케이션에 .NET Framework 4.7 이상이 필요하고 특정 버전의 .NET Framework를 확인하려는 경우 461808(또는 .NET Framework 4.7.2의 경우는 더 작은 DWORD 값)과 ‘같거나 이보다 큰’ **릴리스** DWORD 값을 테스트하여 시작합니다. 그런 다음, 이 **릴리스** DWORD 값을 이후의 각 .NET Framework 버전에 대한 더 작은 값과 비교합니다. 각 .NET Framework 버전에 대한 최소 **릴리스** DWORD 값만 나열하는 표를 보려면 [.NET Framework 4.5 이상 버전에서 릴리스 DWORD의 최솟값](minimum-release-dword.md)을 참조하세요.
 
 <a name="net_d"></a> 
 ### <a name="find-net-framework-versions-45-and-later-with-code"></a>코드를 사용하여 .NET Framework 버전 4.5 이상 찾기
@@ -170,7 +169,6 @@ ms.locfileid: "58504433"
 [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed1.cs)]
 [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed1.vb)]
 
-
 ## <a name="find-clr-versions"></a>CLR 버전 찾기
   
 <a name="clr_a"></a> 
@@ -207,8 +205,6 @@ ms.locfileid: "58504433"
    - 부 릴리스 식별자(예:버전 4.0의 경우 *0*)를 가져오고 <xref:System.Version.Minor%2A?displayProperty=nameWithType>속성을 사용합니다.
 
    - 전체 버전 문자열(예를 들어*4.0.30319.18010*)에는 <xref:System.Version.ToString%2A?displayProperty=nameWithType>메서드를 사용합니다. 메서드는 코드를 실행 하는 런타임 버전을 반영하는 단일 값을 반환합니다. 이는 컴퓨터에 설치된 어셈블리 버전이나 다른 런타임 버전은 반환하지 않습니다.
-
-
 
 다음 예제에서는 <xref:System.Environment.Version%2A?displayProperty=nameWithType>속성을 사용하여 CLR 버전 정보를 검색합니다.
 

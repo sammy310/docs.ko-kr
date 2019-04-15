@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-ms.openlocfilehash: 1529d4d62004becca4495d96fa893da20caa3954
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 06513fc44782c78d2d69b82130542949519c0107
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709677"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158446"
 ---
 # <a name="user-drawn-controls"></a>사용자가 그린 컨트롤
 .NET Framework 사용자 지정 컨트롤을 쉽게 개발할 수 있는 기능을 제공 합니다. 표준 컨트롤 코드 함께 바인딩된 집합이 인 사용자 컨트롤을 만들 수 있습니다 또는 등록부터 고유한 컨트롤을 디자인할 수 있습니다. 기존 컨트롤에서 상속 되는 컨트롤을 만들고의 고유 기능에 추가 상속을 사용할 수 있습니다. 어떤 방법을 사용 하는.NET Framework를 만들면 모든 컨트롤에 대 한 사용자 지정 그래픽 인터페이스를 그릴를 제공 합니다.  
@@ -76,6 +76,7 @@ SetStyle(ControlStyles.ResizeRedraw, true);
 >  사용 된 <xref:System.Windows.Forms.Control.Region%2A?displayProperty=nameWithType> 사각형이 아닌 컨트롤을 구현 하는 속성입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.Control.Region%2A>
 - <xref:System.Windows.Forms.ControlStyles>
 - <xref:System.Drawing.Graphics>

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7b8551c8b82ca880d989a1b58411f9555a9feb4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 87170035df47e7605d25531df4b0759bf121ad80
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59079138"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325711"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>방법: 추적 스위치 만들기, 초기화 및 구성
 추적 스위치를 사용하여 추적 출력을 활성화, 비활성화 및 필터링할 수 있습니다.  
@@ -31,9 +31,9 @@ ms.locfileid: "59079138"
   
 #### <a name="to-create-and-initialize-a-trace-switch"></a>추적 스위치를 만들고 초기화하려면  
   
-1.  스위치를 <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> 형식 또는 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> 형식으로 정의하고 스위치의 이름과 설명을 설정합니다.  
+1. 스위치를 <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> 형식 또는 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> 형식으로 정의하고 스위치의 이름과 설명을 설정합니다.  
   
-2.  추적 스위치를 구성합니다. 자세한 내용은 [추적 스위치 구성](#configure)을 참조하세요.  
+2. 추적 스위치를 구성합니다. 자세한 내용은 [추적 스위치 구성](#configure)을 참조하세요.  
   
      다음 코드에서는 각 형식당 하나씩, 두 개의 스위치를 만듭니다.  
   
@@ -71,9 +71,9 @@ ms.locfileid: "59079138"
   
 #### <a name="to-configure-trace-switches"></a>추적 스위치를 구성 하려면  
   
-1.  추적 스위치를 사용하려면 [추적 스위치 만들기 및 초기화](#create) 섹션의 설명대로 추적 스위치를 만들고 코드에 배치해야 합니다.  
+1. 추적 스위치를 사용하려면 [추적 스위치 만들기 및 초기화](#create) 섹션의 설명대로 추적 스위치를 만들고 코드에 배치해야 합니다.  
   
-2.  프로젝트에 구성 파일(app.config 또는 Web.config)이 없는 경우 **프로젝트** 메뉴에서 **새 항목 추가**를 선택합니다.  
+2. 프로젝트에 구성 파일(app.config 또는 Web.config)이 없는 경우 **프로젝트** 메뉴에서 **새 항목 추가**를 선택합니다.  
   
     -   **Visual Basic:** 에 **새 항목 추가** 대화 상자에서 **응용 프로그램 구성 파일**합니다.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "59079138"
   
          프로젝트를 컴파일하면 app.config 파일이 프로젝트 출력 폴더에 복사되고 이름이 *applicationname*.exe.config로 바뀝니다.  
   
-3.  `<configuration>` 태그 뒤, `</configuration>` 태그 앞에 적절한 XML을 추가하여 스위치를 구성합니다. 다음 예제에서는 **DisplayName** 속성이 `DataMessageSwitch`인 **BooleanSwitch** 및 **DisplayName** 속성이 `TraceLevelSwitch`인 **TraceSwitch**를 보여 줍니다.  
+3. `<configuration>` 태그 뒤, `</configuration>` 태그 앞에 적절한 XML을 추가하여 스위치를 구성합니다. 다음 예제에서는 **DisplayName** 속성이 `DataMessageSwitch`인 **BooleanSwitch** 및 **DisplayName** 속성이 `TraceLevelSwitch`인 **TraceSwitch**를 보여 줍니다.  
   
     ```xml  
     <system.diagnostics>  
@@ -101,11 +101,11 @@ ms.locfileid: "59079138"
   
      이 구성에서는 두 스위치가 모두 해제되어 있습니다.  
   
-4.  이전 예제에 표시된 `DataMessagesSwitch`와 같은 **BooleanSwitch**를 설정해야 하는 경우 **Value**를 0이 아닌 임의의 정수로 변경합니다.  
+4. 이전 예제에 표시된 `DataMessagesSwitch`와 같은 **BooleanSwitch**를 설정해야 하는 경우 **Value**를 0이 아닌 임의의 정수로 변경합니다.  
   
-5.  이전 예제에 표시된 `TraceLevelSwitch`와 같은 **TraceSwitch**를 설정해야 하는 경우 **Value**를 적절한 수준 설정(1-4)으로 변경합니다.  
+5. 이전 예제에 표시된 `TraceLevelSwitch`와 같은 **TraceSwitch**를 설정해야 하는 경우 **Value**를 적절한 수준 설정(1-4)으로 변경합니다.  
   
-6.  최종 사용자가 스위치를 적절하게 구성하기 위해 변경할 값을 명확하게 이해할 수 있도록 .config 파일에 주석을 추가합니다.  
+6. 최종 사용자가 스위치를 적절하게 구성하기 위해 변경할 값을 명확하게 이해할 수 있도록 .config 파일에 주석을 추가합니다.  
   
      다음 예제에서는 주석을 포함하는 최종 코드의 모양을 보여 줍니다.  
   

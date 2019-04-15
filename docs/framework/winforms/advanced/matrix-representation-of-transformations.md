@@ -1,5 +1,5 @@
 ---
-title: 매트릭스에 의한 변환 표시
+title: 변환에 대한 매트릭스 표현
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - transformations [Windows Forms], translation
 - affine transformations
 ms.assetid: 0659fe00-9e0c-41c4-9118-016f2404c905
-ms.openlocfilehash: 1f98dac8b9d14cac01e109627d40fe01c37c6954
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c87be8eaf715e373da75dd8f91889b0e396dba0d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720828"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172785"
 ---
-# <a name="matrix-representation-of-transformations"></a>매트릭스에 의한 변환 표시
+# <a name="matrix-representation-of-transformations"></a>변환에 대한 매트릭스 표현
 m × n 행렬은 행 m과 n 열으로 정렬 하는 숫자 집합입니다. 다음 그림에서는 몇 가지 매트릭스를 보여 줍니다.  
   
  ![Transformations](./media/aboutgdip05-art04.gif "AboutGdip05_art04")  
@@ -104,5 +104,6 @@ m × n 행렬은 행 m과 n 열으로 정렬 하는 숫자 집합입니다. 다�
  ![Transformations](./media/aboutgdip05-art13.gif "AboutGdip05_art13")  
   
 ## <a name="see-also"></a>참고자료
-- [좌표계 및 변형](coordinate-systems-and-transformations.md)
-- [관리 GDI+에서 변형 사용](using-transformations-in-managed-gdi.md)
+
+- [좌표계 및 변환](coordinate-systems-and-transformations.md)
+- [관리형 GDI+에서 변환 사용](using-transformations-in-managed-gdi.md)

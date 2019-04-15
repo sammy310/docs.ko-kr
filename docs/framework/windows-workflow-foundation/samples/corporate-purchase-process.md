@@ -2,12 +2,12 @@
 title: 기업 구매 프로세스
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 511250b8e9c08268ddf917e19fd99281149af08a
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 346d4b58d8d59c416fbdd51f5fbe02b54f9e078f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442245"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313335"
 ---
 # <a name="corporate-purchase-process"></a>기업 구매 프로세스
 이 샘플에서는 최상의 제안을 자동으로 선택하는 구매 프로세스를 기반으로 매우 기본적인 RFP(제안 요청서)를 만드는 방법을 보여 줍니다. 여기에서는 <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> 및 <xref:System.Activities.Statements.ForEach%601>과 사용자 지정 활동을 결합하여 이 프로세스를 나타내는 워크플로를 만듭니다.
@@ -50,25 +50,25 @@ ms.locfileid: "56442245"
 ## <a name="description-of-the-process"></a>프로세스 설명  
  이 샘플에는 일반적인 회사에 대 한 공급 업체에서 제안서를 수집 하는 Windows WF (Workflow Foundation) 프로그램의 구현을 보여 줍니다.  
   
-1.  X라는 회사의 직원이 RFP(제안 요청서)를 만듭니다.  
+1. X라는 회사의 직원이 RFP(제안 요청서)를 만듭니다.  
   
     1.  이 직원이 RFP 제목과 설명을 입력합니다.  
   
     2.  제안서를 제출하도록 요청할 공급업체를 선택합니다.  
   
-2.  직원이 제안서를 제출합니다.  
+2. 직원이 제안서를 제출합니다.  
   
     1.  워크플로의 인스턴스가 만들어집니다.  
   
     2.  모든 공급업체에서 제안서를 제출할 때까지 워크플로가 대기 상태를 유지합니다.  
   
-3.  제안서를 모두 받고 나면 접수된 모든 제안서를 하나씩 돌아가며 워크플로를 실행하고 최상의 제안서 하나를 선택합니다.  
+3. 제안서를 모두 받고 나면 접수된 모든 제안서를 하나씩 돌아가며 워크플로를 실행하고 최상의 제안서 하나를 선택합니다.  
   
     1.  각 공급업체에는 저마다의 평판이 있습니다. 이 샘플에서는 평판 목록을 VendorRepository.cs에 저장합니다.  
   
     2.  제안서의 최종 금액은 (공급업체가 제시한 금액) * (공급업체에 대해 기록된 평판) / 100으로 계산됩니다.  
   
-4.  맨 처음 요청자는 제출된 제안서를 모두 볼 수 있습니다. 최상의 제안이 보고서의 특정 섹션에 표시됩니다.  
+4. 맨 처음 요청자는 제출된 제안서를 모두 볼 수 있습니다. 최상의 제안이 보고서의 특정 섹션에 표시됩니다.  
   
 ## <a name="process-definition"></a>프로세스 정의  
  이 샘플의 핵심 논리에는 <xref:System.Activities.Statements.ParallelForEach%601> 활동이 사용됩니다. 이 활동에서는 책갈피를 만드는 사용자 지정 활동을 사용하여 각 공급업체의 제안서를 기다린 다음 <xref:System.Activities.Statements.InvokeMethod> 활동을 사용하여 공급업체 제안서를 RFP로 등록합니다.  
@@ -78,9 +78,9 @@ ms.locfileid: "56442245"
 ## <a name="projects-in-this-sample"></a>이 샘플의 프로젝트  
  이 샘플에는 다음 프로젝트가 포함되어 있습니다.  
   
-|Project|설명|  
+|프로젝트|설명|  
 |-------------|-----------------|  
-|Common|프로세스 내에 사용되는 엔터티 개체(제안 요청서, 공급업체 및 공급업체 제안서)입니다.|  
+|공용|프로세스 내에 사용되는 엔터티 개체(제안 요청서, 공급업체 및 공급업체 제안서)입니다.|  
 |WfDefinition|구매 프로세스 워크플로의 인스턴스를 만들고 사용하기 위해 클라이언트 응용 프로그램에 사용되는 프로세스([!INCLUDE[wf1](../../../../includes/wf1-md.md)] 프로그램)와 호스트(`PurchaseProcessHost`)에 대한 정의입니다.|  
 |WebClient|사용자가 구매 프로세스의 인스턴스를 만들고 여기에 참가할 수 있도록 하는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 클라이언트 응용 프로그램입니다. 이 응용 프로그램에서는 워크플로 엔진과 상호 작용하기 위해 사용자 지정하여 만든 호스트를 사용합니다.|  
 |WinFormsClient|사용자가 구매 프로세스의 인스턴스를 만들고 여기에 참가할 수 있도록 하는 Windows Forms 클라이언트 응용 프로그램입니다. 이 응용 프로그램에서는 워크플로 엔진과 상호 작용하기 위해 사용자 지정하여 만든 호스트를 사용합니다.|  
@@ -99,7 +99,7 @@ ms.locfileid: "56442245"
 |XmlPersistenceParticipant.cs|제안 요청의 인스턴스를 XML 파일에 저장하는 사용자 지정 <xref:System.Activities.Persistence.PersistenceParticipant>입니다.|  
 |AsyncResult.cs / CompletedAsyncResult.cs|지속성 구성 요소의 비동기 패턴을 구현하기 위한 도우미 클래스입니다.|  
   
-### <a name="common"></a>Common  
+### <a name="common"></a>공용  
  다음 표에는 Common 프로젝트의 주요 클래스에 대한 설명이 나와 있습니다.  
   
 |클래스|설명|  
@@ -111,7 +111,7 @@ ms.locfileid: "56442245"
 |RfpRepository|제안 요청서의 리포지토리입니다. 이 구현에는 스키마화된 지속성에 의해 생성된 제안 요청서의 XML 파일을 쿼리하기 위한 Linq to XML 사용이 포함됩니다. |  
 |IOHelper|이 클래스는 모든 I/O 관련 문제(폴더, 경로 등)를 처리합니다.|  
   
-### <a name="web-client"></a>WebClient  
+### <a name="web-client"></a>웹 클라이언트  
  다음 표에는 WebClient 프로젝트의 주요 웹 페이지에 대한 설명이 나와 있습니다.  
   
 |파일|설명|  
@@ -143,15 +143,15 @@ ms.locfileid: "56442245"
   
 #### <a name="to-use-this-sample"></a>이 샘플을 사용하려면  
   
-1.  PurchaseProcess.sln 솔루션 파일을 열고 Visual Studio 2010을 사용 합니다.  
+1. PurchaseProcess.sln 솔루션 파일을 열고 Visual Studio 2010을 사용 합니다.  
   
-2.  웹 클라이언트 프로젝트를 실행 하려면 엽니다 **솔루션 탐색기** 마우스 오른쪽 단추로 클릭 합니다 **웹 클라이언트** 프로젝트입니다. 선택 **시작 프로젝트로 설정**합니다.  
+2. 웹 클라이언트 프로젝트를 실행 하려면 엽니다 **솔루션 탐색기** 마우스 오른쪽 단추로 클릭 합니다 **웹 클라이언트** 프로젝트입니다. 선택 **시작 프로젝트로 설정**합니다.  
   
-3.  Winformsclient 프로젝트를 실행 하려면 엽니다 **솔루션 탐색기** 마우스 오른쪽 단추로 클릭 합니다 **WinForms 클라이언트** 프로젝트입니다. 선택 **시작 프로젝트로 설정**합니다.  
+3. Winformsclient 프로젝트를 실행 하려면 엽니다 **솔루션 탐색기** 마우스 오른쪽 단추로 클릭 합니다 **WinForms 클라이언트** 프로젝트입니다. 선택 **시작 프로젝트로 설정**합니다.  
   
-4.  Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.  
+4. Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.  
   
-5.  Ctrl+F5를 눌러 솔루션을 실행합니다.  
+5. Ctrl+F5를 눌러 솔루션을 실행합니다.  
   
 ### <a name="web-client-options"></a>웹 클라이언트 옵션  
   

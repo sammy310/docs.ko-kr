@@ -1,5 +1,5 @@
 ---
-title: '방법: IIS에서 실행되는 WCF Data Services 개발'
+title: '방법: IIS에서 실행되는 WCF Data Service 개발'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,29 +9,29 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: af81e65dfd4661d62d7aa4a3e6075be312765cb7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 78e8c3cacd89f88cbfa062cb30e5b3474c2614ca
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201075"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517840"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>방법: IIS에서 실행 되는 WCF 데이터 서비스 개발
 
 이 항목에서는 WCF Data Services를 사용 하 여 인터넷 정보 서비스 (IIS)에서 실행 중인 ASP.NET 웹 응용 프로그램에서 호스트 되는 Northwind 샘플 데이터베이스를 기반으로 하는 데이터 서비스를 만드는 방법을 보여 줍니다. ASP.NET Development Server에서 실행 되는 ASP.NET 웹 응용 프로그램으로 동일한 Northwind 데이터 서비스를 만드는 방법의 예제를 참조 합니다 [WCF Data Services 퀵 스타트](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)합니다.
 
 > [!NOTE]
-> Northwind 데이터 서비스를 만들려면 로컬 컴퓨터에 Northwind 샘플 데이터베이스를 설치해야 합니다. 이 샘플 데이터베이스를 다운로드 하려면 다운로드 페이지를 참조 하세요 [SQL Server 용 샘플 데이터베이스](https://go.microsoft.com/fwlink/?linkid=24758)합니다.
+> Northwind 데이터 서비스를 만들려면 로컬 컴퓨터에 Northwind 샘플 데이터베이스를 설치해야 합니다. 이 샘플 데이터베이스를 다운로드하려면 [SQL Server용 샘플 데이터베이스](https://go.microsoft.com/fwlink/?linkid=24758)다운로드 페이지를 참조하세요.
 
  이 항목에서는 Entity Framework 공급자를 사용하여 데이터 서비스를 만드는 방법을 보여 줍니다. 다른 데이터 서비스 공급자를 사용할 수 있습니다. 자세한 내용은 [데이터 서비스 공급자](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)합니다.
 
- 서비스를 만든 후 데이터 서비스 리소스에 대한 액세스 권한을 명시적으로 부여해야 합니다. 자세한 내용은 [방법: 데이터 서비스에 대 한 액세스 사용](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md)합니다.
+ 서비스를 만든 후 데이터 서비스 리소스에 대한 액세스 권한을 명시적으로 부여해야 합니다. 자세한 내용은 [방법: 데이터 서비스에 액세스할 수 있도록](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md)입니다.
 
 ## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a>IIS에서 실행 되는 ASP.NET 웹 응용 프로그램 만들기
 
 1. Visual Studio에서에 **파일** 메뉴에서 **새로 만들기** > **프로젝트**합니다.
 
-2. 에 **새 프로젝트** 대화 상자를 선택 합니다 **설치 됨** > [**Visual C#** 또는 **Visual Basic**] > **웹** 범주입니다.
+2. 에 **새 프로젝트** 대화 상자를 선택 합니다 **설치 됨** > [**Visual C#**  또는 **Visual Basic**] > **웹**  범주입니다.
 
 3. 선택 된 **ASP.NET 웹 응용 프로그램** 템플릿.
 
@@ -132,7 +132,7 @@ ms.locfileid: "47201075"
 
 5. 다음 단계 중 하나를 수행 하 여 데이터 모델 데이터베이스에 연결 하 고 클릭 **다음**:
 
-    -   데이터베이스 연결이 이미 구성 되어 없으면 클릭 **새 연결** 새 연결을 만듭니다. 자세한 내용은 [방법: SQL Server 데이터베이스에 대 한 연결 만들기](https://go.microsoft.com/fwlink/?LinkId=123631)합니다. 이 SQL Server 인스턴스에는 Northwind 샘플 데이터베이스가 연결되어 있어야 합니다.
+    -   데이터베이스 연결이 이미 구성 되어 없으면 클릭 **새 연결** 새 연결을 만듭니다. 자세한 내용은 [방법: SQL Server 데이터베이스에 연결을 만들](https://go.microsoft.com/fwlink/?LinkId=123631)합니다. 이 SQL Server 인스턴스에는 Northwind 샘플 데이터베이스가 연결되어 있어야 합니다.
 
          \- 또는 -
 
@@ -140,7 +140,7 @@ ms.locfileid: "47201075"
 
 6. 마법사의 마지막 페이지에서 데이터베이스의 모든 테이블에 대한 확인란을 선택하고 뷰 및 저장 프로시저에 대한 확인란의 선택을 취소합니다.
 
-7. 클릭 **완료** 마법사를 닫습니다.
+7. **마침** 을 클릭하여 마법사를 닫습니다.
 
 ## <a name="create-the-data-service"></a>데이터 서비스 만들기
 
@@ -159,8 +159,8 @@ ms.locfileid: "47201075"
 
 4. 데이터 서비스 코드에서 데이터 서비스를 정의하는 클래스 정의의 `/* TODO: put your data source class name here */` 주석을 데이터 모델의 엔터티 컨테이너인 형식(이 경우 `NorthwindEntities`)으로 바꿉니다. 클래스 정의는 다음과 같이 나타납니다.
 
-     [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart service/cs/northwind.svc.cs#servicedefinition)]
-     [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart service/vb/northwind.svc.vb#servicedefinition)]
+     [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#servicedefinition)]
+     [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#servicedefinition)]
 
 ## <a name="see-also"></a>참고자료
 

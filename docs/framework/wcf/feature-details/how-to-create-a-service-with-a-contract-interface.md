@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7b6803f6-d6f9-4cc2-9f1b-6f4c920475d5
-ms.openlocfilehash: c31a954d659b3f686f8b9780276a4719064e60cc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0aa5429d771aeda0b392b89ec4cc1a07de30973f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59128715"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298541"
 ---
 # <a name="how-to-create-a-service-with-a-contract-interface"></a>방법: Contract 인터페이스를 사용하여 서비스 만들기
 Windows Communication Foundation (WCF) 계약을 만들려면 인터페이스를 사용 하는 것이 좋습니다. 이 계약은 서비스에서 제공하는 작업에 액세스하는 데 필요한 메시지 컬렉션과 구조를 지정합니다. 이 인터페이스는 <xref:System.ServiceModel.ServiceContractAttribute> 클래스를 인터페이스에 적용하고 <xref:System.ServiceModel.OperationContractAttribute> 클래스를 노출할 메서드에 적용하여 입력 및 출력 형식을 정의합니다.  
@@ -19,13 +19,13 @@ Windows Communication Foundation (WCF) 계약을 만들려면 인터페이스를
   
 ### <a name="creating-a-wcf-contract-with-an-interface"></a>인터페이스로 WCF 계약 만들기  
   
-1.  Visual Basic을 사용 하 여 새 인터페이스를 만들 C#, 또는 기타 공용 언어 런타임 언어입니다.  
+1. Visual Basic을 사용 하 여 새 인터페이스를 만들 C#, 또는 기타 공용 언어 런타임 언어입니다.  
   
-2.  인터페이스에 <xref:System.ServiceModel.ServiceContractAttribute> 클래스를 적용합니다.  
+2. 인터페이스에 <xref:System.ServiceModel.ServiceContractAttribute> 클래스를 적용합니다.  
   
-3.  인터페이스에 메서드를 정의합니다.  
+3. 인터페이스에 메서드를 정의합니다.  
   
-4.  적용 된 <xref:System.ServiceModel.OperationContractAttribute> 고 공개 WCF 계약의 일부로 노출 해야 하는 각 메서드에 클래스입니다.  
+4. 적용 된 <xref:System.ServiceModel.OperationContractAttribute> 고 공개 WCF 계약의 일부로 노출 해야 하는 각 메서드에 클래스입니다.  
   
 ## <a name="example"></a>예제  
  다음 코드 예제에서는 서비스 계약을 정의하는 인터페이스를 보여 줍니다.  

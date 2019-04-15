@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed8aaa12e91654dcf0b688b14d7d2f38bc9096ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6f70b4c67de892c3b66a0099dae9f618a99b3f1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677751"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314115"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>방법: 첫째 예외 알림 받기
 <xref:System.AppDomain> 클래스의 <xref:System.AppDomain.FirstChanceException> 이벤트를 사용하면 공용 언어 런타임이 예외 처리기 검색을 시작하기 전에 예외가 throw되었다는 알림을 받을 수 있습니다.
@@ -31,17 +31,17 @@ ms.locfileid: "54677751"
 
 #### <a name="to-demonstrate-first-chance-exception-notifications-in-the-default-application-domain"></a>기본 애플리케이션 도메인에서 첫째 예외 알림을 보여 주려면
 
-1.  람다 함수를 사용하여 <xref:System.AppDomain.FirstChanceException> 이벤트에 대한 이벤트 처리기를 정의하고 이벤트에 연결합니다. 이 예제에서 이벤트 처리기는 이벤트가 처리된 애플리케이션 도메인의 이름 및 해당 예외의 <xref:System.Exception.Message%2A> 속성을 출력합니다.
+1. 람다 함수를 사용하여 <xref:System.AppDomain.FirstChanceException> 이벤트에 대한 이벤트 처리기를 정의하고 이벤트에 연결합니다. 이 예제에서 이벤트 처리기는 이벤트가 처리된 애플리케이션 도메인의 이름 및 해당 예외의 <xref:System.Exception.Message%2A> 속성을 출력합니다.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto_simple#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/cs/example.cs#2)]
      [!code-vb[System.AppDomain.FirstChanceException_howto_simple#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#2)]
 
-2.  예외를 throw 및 catch합니다. 런타임에서 예외 처리기를 찾기 전에 <xref:System.AppDomain.FirstChanceException> 이벤트가 발생하고 메시지를 표시합니다. 이 메시지 다음에는 예외 처리기에 의해 표시되는 메시지가 옵니다.
+2. 예외를 throw 및 catch합니다. 런타임에서 예외 처리기를 찾기 전에 <xref:System.AppDomain.FirstChanceException> 이벤트가 발생하고 메시지를 표시합니다. 이 메시지 다음에는 예외 처리기에 의해 표시되는 메시지가 옵니다.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto_simple#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/cs/example.cs#3)]
      [!code-vb[System.AppDomain.FirstChanceException_howto_simple#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#3)]
 
-3.  예외를 throw하지만 catch하지 않습니다. 런타임에서 예외 처리기를 찾기 전에 <xref:System.AppDomain.FirstChanceException> 이벤트가 발생하고 메시지를 표시합니다. 예외 처리기가 없으므로 애플리케이션이 종료됩니다.
+3. 예외를 throw하지만 catch하지 않습니다. 런타임에서 예외 처리기를 찾기 전에 <xref:System.AppDomain.FirstChanceException> 이벤트가 발생하고 메시지를 표시합니다. 예외 처리기가 없으므로 애플리케이션이 종료됩니다.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto_simple#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/cs/example.cs#4)]
      [!code-vb[System.AppDomain.FirstChanceException_howto_simple#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#4)]
@@ -56,12 +56,12 @@ ms.locfileid: "54677751"
 
 #### <a name="to-receive-first-chance-exception-notifications-in-an-application-domain-that-you-create"></a>직접 만든 애플리케이션 도메인에서 첫째 예외 알림을 받으려면
 
-1.  <xref:System.AppDomain.FirstChanceException> 이벤트에 대한 이벤트 처리기를 정의합니다. 이 예제에서는 이벤트가 처리된 애플리케이션 도메인의 이름 및 해당 예외의 `static` 속성을 출력하는 `Shared` 메서드(Visual Basic에서는 <xref:System.Exception.Message%2A> 메서드)를 사용합니다.
+1. <xref:System.AppDomain.FirstChanceException> 이벤트에 대한 이벤트 처리기를 정의합니다. 이 예제에서는 이벤트가 처리된 애플리케이션 도메인의 이름 및 해당 예외의 `static` 속성을 출력하는 `Shared` 메서드(Visual Basic에서는 <xref:System.Exception.Message%2A> 메서드)를 사용합니다.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#3)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#3)]
 
-2.  애플리케이션 도메인을 만들고 해당 애플리케이션 도메인에 대한 <xref:System.AppDomain.FirstChanceException> 이벤트에 이벤트 처리기를 추가합니다. 이 예제에서 애플리케이션 도메인의 이름은 `AD1`입니다.
+2. 애플리케이션 도메인을 만들고 해당 애플리케이션 도메인에 대한 <xref:System.AppDomain.FirstChanceException> 이벤트에 이벤트 처리기를 추가합니다. 이 예제에서 애플리케이션 도메인의 이름은 `AD1`입니다.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#2)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#2)]
@@ -70,17 +70,17 @@ ms.locfileid: "54677751"
 
 #### <a name="to-demonstrate-first-chance-exception-notifications-in-the-application-domain"></a>애플리케이션 도메인에서 첫째 예외 알림을 보여 주려면
 
-1.  이전 절차에서 만든 애플리케이션 도메인에 `Worker` 개체를 만듭니다. 이 문서의 끝에 있는 전체 예제와 같이 `Worker` 클래스는 public이어야 하고 <xref:System.MarshalByRefObject>에서 파생되어야 합니다.
+1. 이전 절차에서 만든 애플리케이션 도메인에 `Worker` 개체를 만듭니다. 이 문서의 끝에 있는 전체 예제와 같이 `Worker` 클래스는 public이어야 하고 <xref:System.MarshalByRefObject>에서 파생되어야 합니다.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#4)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#4)]
 
-2.  예외를 throw하는 `Worker` 개체의 메서드를 호출합니다. 이 예제에서는 `Thrower` 메서드가 두 번 호출됩니다. 첫 번째 호출에서는 메서드 인수가 `true`이므로 메서드가 자체 예외를 catch합니다. 두 번째 호출에서는 인수가 `false`이며, `Main()` 메서드가 기본 애플리케이션 도메인에서 예외를 catch합니다.
+2. 예외를 throw하는 `Worker` 개체의 메서드를 호출합니다. 이 예제에서는 `Thrower` 메서드가 두 번 호출됩니다. 첫 번째 호출에서는 메서드 인수가 `true`이므로 메서드가 자체 예외를 catch합니다. 두 번째 호출에서는 인수가 `false`이며, `Main()` 메서드가 기본 애플리케이션 도메인에서 예외를 catch합니다.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#6)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#6)]
 
-3.  `Thrower` 메서드에 코드를 배치하여 메서드가 자체 예외를 처리하는지 여부를 제어합니다.
+3. `Thrower` 메서드에 코드를 배치하여 메서드가 자체 예외를 처리하는지 여부를 제어합니다.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#5)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#5)]
@@ -103,4 +103,5 @@ ms.locfileid: "54677751"
 -   이 예제는 명령줄 애플리케이션입니다. Visual Studio에서 이 코드를 컴파일하고 실행하려면 `Main()`의 끝에 C# 코드 `Console.ReadLine();`(Visual Basic에서는 `Console.ReadLine()`)을 추가하여 출력을 읽기 전에 명령 창이 닫히지 않도록 합니다.
 
 ## <a name="see-also"></a>참고 항목
+
 - <xref:System.AppDomain.FirstChanceException>

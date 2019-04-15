@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataFormats class [WPF]
 - DataObject class [WPF]
 ms.assetid: 5967d557-1867-420f-a524-ae3af78402da
-ms.openlocfilehash: 483491ea7408c1df57f31b4b984116b085ea50ba
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9dc195ece60739cf0c137a2893c9e9150e0d4d3f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367546"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312061"
 ---
 # <a name="data-and-data-objects"></a>데이터 및 데이터 개체
 끌어서 놓기 작업의 일부로 전송 되는 데이터는 데이터 개체에 저장 됩니다.  개념적으로, 데이터 개체의 다음 쌍을 하나 이상의 구성 됩니다.  
@@ -87,11 +87,11 @@ ms.locfileid: "57367546"
 ### <a name="removing-data-from-a-data-object"></a>데이터 개체에서 데이터를 제거합니다.  
  데이터 개체에서 데이터를 직접 제거할 수 없습니다.  데이터를 데이터 개체에서를 효과적으로 제거 하려면 다음이 단계를 수행 합니다.  
   
-1.  보존 하기 원하는 데이터만 포함 될 새 데이터 개체를 만듭니다.  
+1. 보존 하기 원하는 데이터만 포함 될 새 데이터 개체를 만듭니다.  
   
-2.  "복사본" 새 데이터 개체에 이전 데이터 개체에서 원하는 데이터입니다.  데이터를 복사할 중 하나를 사용 합니다 <xref:System.Windows.DataObject.GetData%2A> 검색 하는 메서드는 <xref:System.Object> 원시 데이터를 포함 하 고 다음 중 하나를 사용 하 여는 <xref:System.Windows.DataObject.SetData%2A> 새 데이터 개체에 데이터를 추가 하는 방법입니다.  
+2. "복사본" 새 데이터 개체에 이전 데이터 개체에서 원하는 데이터입니다.  데이터를 복사할 중 하나를 사용 합니다 <xref:System.Windows.DataObject.GetData%2A> 검색 하는 메서드는 <xref:System.Object> 원시 데이터를 포함 하 고 다음 중 하나를 사용 하 여는 <xref:System.Windows.DataObject.SetData%2A> 새 데이터 개체에 데이터를 추가 하는 방법입니다.  
   
-3.  이전 데이터 개체를 새 인덱스로 대체 합니다.  
+3. 이전 데이터 개체를 새 인덱스로 대체 합니다.  
   
 > [!NOTE]
 >  <xref:System.Windows.DataObject.SetData%2A> 경우에 데이터 및 데이터 형식을 정확 하 게 한 이전 호출 동일 데이터를 대체 하지는 않으면 메서드는 데이터 개체에만 데이터를 추가 합니다. 호출 <xref:System.Windows.DataObject.SetData%2A> 동일한 데이터 및 데이터에 대해 두 번 형식 데이터 개체에 두 번 표시 되는 데이터/데이터 형식에 발생 합니다.

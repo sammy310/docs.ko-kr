@@ -3,12 +3,12 @@ title: <workflowInstanceManagement>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 63ac89ba-c844-4ae2-96ae-cd752a90a109
-ms.openlocfilehash: baa1ccbe0accd2db701fac9ef53cdc6357713c5d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 98bc1b24da6e65a11a39d133057c1bb55b003a58
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257423"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191616"
 ---
 # <a name="workflowinstancemanagement"></a>\<workflowInstanceManagement>
 지속성 예외, 처리되지 않은 예외 동작 및 유휴 동작을 비롯하여 워크플로 인스턴스 실행 방법을 제어하는 설정을 지정할 수 있는 서비스 동작입니다.  
@@ -50,5 +50,6 @@ ms.locfileid: "55257423"
 |[\<동작 >의 \<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|동작 요소를 지정합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Activities.Description.WorkflowInstanceManagementBehavior>
 - <xref:System.ServiceModel.Activities.Configuration.WorkflowInstanceManagementElement>

@@ -1,5 +1,5 @@
 ---
-title: <httpWebRequest> 요소(네트워크 설정)
+title: <httpWebRequest> 요소 (네트워크 설정)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/httpWebRequest
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <httpWebRequest> element
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
-ms.openlocfilehash: f19c39922105cebe179dd9f26fdc6beac8ddc0ef
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 722b2f726c9085f6dee6bad82044da3011b98702
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268277"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169301"
 ---
 # <a name="httpwebrequest-element-network-settings"></a>\<httpWebRequest > 요소 (네트워크 설정)
 웹 요청 매개 변수를 지정합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "55268277"
   
 |**요소**|**설명**|  
 |-----------------|---------------------|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<xref:System.Net> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.|  
+|[설정](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<xref:System.Net> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.|  
   
 ## <a name="remarks"></a>설명  
  기본적으로.NET Framework URI 구문 분석에 대 한 RFC 2616 엄격 하 게 적용합니다. 일부 서버 응답 하면는 허용 되지 않는 필드에 제어 문자를 포함할 수 있습니다 합니다 <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> throw 하는 메서드를 <xref:System.Net.WebException>입니다. 하는 경우 **useUnsafeHeaderParsing** 로 설정 된 **true**, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> 있지만 경우에 throw 하지 것입니다, 응용 프로그램은 여러 형태의 URI 구문 분석 공격에 취약 하 게 됩니다. 가장 적합 한 솔루션 응답 제어 문자가 포함 되지 않습니다 있도록 서버를 변경 하는 것입니다.  
@@ -77,5 +77,6 @@ ms.locfileid: "55268277"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>
 - [네트워크 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - base forms
 - inheritance [Windows Forms], forms
 ms.assetid: 1c3f2b29-a05c-4c6f-aa1a-4e66b94f343a
-ms.openlocfilehash: a253fef2bc7220d13c0ca373a38a5bf2f5842415
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6c87b3d29a1c55b2a7517da78a1951d94676dd68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715557"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164491"
 ---
 # <a name="effects-of-modifying-a-base-forms-appearance"></a>기본 폼의 모양 수정 효과
 애플리케이션을 개발하는 동안 프로젝트(또는 다른 프로젝트)에 있는 다른 양식을 상속하는 기본 양식의 모양을 변경해야 합니다.  
@@ -26,6 +26,7 @@ ms.locfileid: "57715557"
  런타임 시 기본 양식에 대한 수정은 이미 인스턴스화된 상속된 양식에 아무 영향도 미치지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [base](~/docs/csharp/language-reference/keywords/base.md)
 - [방법: Windows Forms 상속](how-to-inherit-windows-forms.md)
-- [Windows Forms 시각적 개체 상속](windows-forms-visual-inheritance.md)
+- [Windows Forms 시각적 상속](windows-forms-visual-inheritance.md)

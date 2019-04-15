@@ -2,12 +2,12 @@
 title: 전송 보안
 ms.date: 03/30/2017
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
-ms.openlocfilehash: f9cb184c1fae3088f6bc682e4e54c63f201ac8c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 036c3db96a14b6e2be299380f495f54436b5c87d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559933"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218968"
 ---
 # <a name="transport-security"></a>전송 보안
 선택한 바인딩에 따라 전송 보안에서 Windows Communication Foundation (WCF)에 따라 달라 집니다. 바인딩이 구현하는 전송은 실제 보안 메커니즘을 결정합니다. 이 단원의 항목에서는 구현된 메커니즘 및 해당 옵션에 대해 설명합니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "54559933"
  [전송 보안을 통해 가장 사용](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
  전송 보안 모드를 사용하여 수행할 수 있는 5가지 가장 수준에 대해 설명합니다.  
   
- [방법: SSL 인증서로 포트 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
+ [방법: SSL 인증서를 사용하여 포트 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
  SSL(전송) 보안용 X.509 인증서가 있는 컴퓨터에서의 포트 구성 기본 사항에 대해 설명합니다.  
   
 ## <a name="reference"></a>참조  
@@ -39,4 +39,5 @@ ms.locfileid: "54559933"
  [서비스 및 클라이언트에 보안 설정](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - [WCF 보안 프로그래밍](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

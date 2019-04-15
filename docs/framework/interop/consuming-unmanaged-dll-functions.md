@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50bfcf5c27236ca704a24f49128becfbee716c21
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: f2b2d5a935c2608b2315633538fc93dd62595558
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463087"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340037"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>관리되지 않는 DLL 함수 사용
 플랫폼 호출은 Windows API의 함수와 같이 DLL(동적 연결 라이브러리)에서 구현된 관리되지 않는 함수를 관리 코드가 호출할 수 있도록 하는 서비스입니다. 이 서비스는 내보낸 함수를 찾아서 호출하고 필요에 따라 상호 운용 경계를 가로질러 인수(정수, 문자열, 배열, 구조체 등)를 마샬링합니다.  
@@ -29,15 +29,15 @@ ms.locfileid: "58463087"
   
 #### <a name="to-consume-exported-dll-functions"></a>내보낸 DLL 함수를 사용하려면 다음을 수행합니다.  
   
-1.  [DLL에서 함수를 식별합니다](../../../docs/framework/interop/identifying-functions-in-dlls.md).  
+1. [DLL에서 함수를 식별합니다](../../../docs/framework/interop/identifying-functions-in-dlls.md).  
   
      최소한 함수 이름 및 함수가 포함된 DLL 이름을 지정해야 합니다.  
   
-2.  [DLL 함수가 포함된 클래스를 만듭니다](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md).  
+2. [DLL 함수가 포함된 클래스를 만듭니다](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md).  
   
      기존 클래스를 사용하거나, 각 관리되지 않는 함수에 대한 개별 클래스를 만들거나, 관련 관리되지 않는 함수 집합을 포함하는 클래스 하나를 만들 수 있습니다.  
   
-3.  [관리 코드에서 프로토타입을 만듭니다](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).  
+3. [관리 코드에서 프로토타입을 만듭니다](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).  
   
      [Visual Basic] **Declare** 문을 **Function** 및 **Lib** 키워드와 함께 사용합니다. 드물지만 **DllImportAttribute**를 **Shared Function** 키워드와 함께 사용할 수 있습니다. 이러한 경우에 대해서는 이 섹션의 뒷부분에서 설명합니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "58463087"
   
      [C++] **DllImportAttribute**를 사용하여 DLL 및 함수를 식별합니다. **extern “C”** 를 사용하여 래퍼 메서드 또는 함수를 표시합니다.  
   
-4.  [DLL 함수를 호출합니다](../../../docs/framework/interop/calling-a-dll-function.md).  
+4. [DLL 함수를 호출합니다](../../../docs/framework/interop/calling-a-dll-function.md).  
   
      다른 관리되는 메서드에서 호출하는 것처럼 관리되는 클래스에서 메서드를 호출합니다. [구조체 전달](../../../docs/framework/interop/passing-structures.md) 및 [콜백 함수 구현](../../../docs/framework/interop/callback-functions.md)은 특별한 경우입니다.  
   
@@ -58,20 +58,21 @@ ms.locfileid: "58463087"
   
  플랫폼 호출이 관리되지 않는 함수를 호출할 때 다음 작업 시퀀스를 수행합니다.  
   
-1.  함수가 포함된 DLL을 찾습니다.  
+1. 함수가 포함된 DLL을 찾습니다.  
   
-2.  DLL을 메모리로 로드합니다.  
+2. DLL을 메모리로 로드합니다.  
   
-3.  메모리에서 함수를 찾고 인수를 스택에 넣어 필요에 따라 데이터를 마샬링합니다.  
+3. 메모리에서 함수를 찾고 인수를 스택에 넣어 필요에 따라 데이터를 마샬링합니다.  
   
     > [!NOTE]
     >  DLL을 찾아서 로드하고 메모리에서 함수의 주소를 찾는 작업은 함수에 대한 첫 번째 호출에서만 수행됩니다.  
   
-4.  컨트롤을 관리되지 않는 함수에 전송합니다.  
+4. 컨트롤을 관리되지 않는 함수에 전송합니다.  
   
  플랫폼 호출은 관리되지 않는 함수에서 생성된 예외를 관리되는 호출자로 throw합니다.
 
 ## <a name="see-also"></a>참고 항목
+
 - [비관리 코드와의 상호 운용](../../../docs/framework/interop/index.md)
 - [플랫폼 호출 예제](../../../docs/framework/interop/platform-invoke-examples.md)
-- [interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)
+- [Interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)

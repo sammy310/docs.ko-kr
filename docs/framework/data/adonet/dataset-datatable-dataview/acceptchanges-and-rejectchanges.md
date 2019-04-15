@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e2d1a6fe-31f9-4b83-9728-06c406a3394e
-ms.openlocfilehash: 84381a9a71ae85baad618684ebf783039456854f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bbcc666b99c2bade479e5ee51750b043c820845d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538390"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172902"
 ---
 # <a name="acceptchanges-and-rejectchanges"></a>AcceptChanges 및 RejectChanges
 데이터에 대 한 변경 내용의 정확성을 확인 한 후는 <xref:System.Data.DataTable>를 사용 하 여 변경 내용을 적용할 수 있습니다 합니다 <xref:System.Data.DataRow.AcceptChanges%2A> 메서드의 <xref:System.Data.DataRow>, <xref:System.Data.DataTable>, 또는 <xref:System.Data.DataSet>로 설정 됩니다는 **현재** 행 값을 **원래** 값을 설정 합니다 합니다 **RowState** 속성을 **Unchanged**합니다. 수락 하거나 거부 하는 변경 내용을 모두 지웁니다 **RowError** 정보와 집합 합니다 **HasErrors** 속성을 **false**합니다. 또한, 변경 사항을 승인하거나 거부하면 데이터 소스에서 데이터를 업데이트하는 데도 영향을 줄 수 있습니다. 자세한 내용은 [Dataadapter 사용 하 여 데이터 원본 업데이트](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)합니다.  
@@ -57,6 +57,7 @@ workTable.AcceptChanges();
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>

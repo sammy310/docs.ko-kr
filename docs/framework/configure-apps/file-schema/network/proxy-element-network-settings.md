@@ -1,5 +1,5 @@
 ---
-title: <proxy> 요소(네트워크 설정)
+title: <proxy> 요소 (네트워크 설정)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/proxy
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-ms.openlocfilehash: a6c6d85d8ec1b79f6b3ddf53af0a4b289289dd6a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 8df9bbf2615776c2e023f03401785da95b2226eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256865"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204824"
 ---
 # <a name="proxy-element-network-settings"></a>\<프록시 > 요소 (네트워크 설정)
 프록시 서버를 정의합니다.  
@@ -42,8 +42,8 @@ ms.locfileid: "55256865"
   
 |**특성**|**설명**|  
 |-------------------|---------------------|  
-|`autoDetect`|프록시를 자동으로 검색할지 여부를 지정합니다. 기본값은 `unspecified`입니다.|  
-|`bypassonlocal`|로컬 리소스에 프록시가 사용되지 않는지 여부를 지정합니다. 로컬 서버를 포함 하는 로컬 리소스 (`http://localhost`, `http://loopback`, 또는 `http://127.0.0.1`) 및 마침표가 없는 URI (`http://webserver`). 기본값은 `unspecified`입니다.|  
+|`autoDetect`|프록시를 자동으로 검색 하는지 여부를 지정 합니다. 기본값은 `unspecified`입니다.|  
+|`bypassonlocal`|로컬 리소스에 대 한 프록시를 바이패스 하는지 여부를 지정 합니다. 로컬 서버를 포함 하는 로컬 리소스 (`http://localhost`, `http://loopback`, 또는 `http://127.0.0.1`) 및 마침표가 없는 URI (`http://webserver`). 기본값은 `unspecified`입니다.|  
 |`proxyaddress`|프록시를 사용 하는 URI를 지정 합니다.|  
 |`scriptLocation`|구성 스크립트의 위치를 지정 합니다. 사용 하지 마십시오는 `bypassonlocal` 이 특성을 사용 하 여 특성입니다. |  
 |`usesystemdefault`|Internet Explorer 프록시 설정을 사용할지 여부를 지정 합니다. 경우 설정 `true`, 후속 특성에는 Internet Explorer 프록시 설정이 무시 됩니다. 기본값은 `unspecified`입니다.|  
@@ -91,5 +91,6 @@ ms.locfileid: "55256865"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [네트워크 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

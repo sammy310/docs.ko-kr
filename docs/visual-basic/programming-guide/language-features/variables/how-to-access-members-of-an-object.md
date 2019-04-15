@@ -5,12 +5,12 @@ helpviewer_keywords:
 - members [Visual Basic], accessing
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
-ms.openlocfilehash: 2b7e600a23ed326fe3e914957b4e698bc34c6135
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: de00e428cc3d9d7a5688e853b0ff4295fec5b3e9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819655"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322760"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>방법: 개체 (Visual Basic)의 멤버에 액세스
 개체 변수에 개체를 참조 하는 경우, 해당 메서드, 속성, 필드 및 이벤트와 같은 경우 해당 개체의 멤버를 사용 하려는 경우가 많습니다. 예를 들어 만든 후 새 <xref:System.Windows.Forms.Form> 개체를 설정 하려는 경우 해당 <xref:System.Windows.Forms.Control.Text%2A> 속성 또는 호출 해당 <xref:System.Windows.Forms.Control.Focus%2A> 메서드.  
@@ -33,7 +33,7 @@ ms.locfileid: "58819655"
   
 #### <a name="to-access-members-of-an-object-for-which-you-know-the-type-at-compile-time"></a>유형을 컴파일 시간에 알 수 있는 개체의 멤버에 액세스  
   
-1.  변수에 할당 하려는 개체의 형식으로 개체 변수를 선언 합니다.  
+1. 변수에 할당 하려는 개체의 형식으로 개체 변수를 선언 합니다.  
   
     ```  
     Dim extraForm As System.Windows.Forms.Form  
@@ -41,7 +41,7 @@ ms.locfileid: "58819655"
   
      사용 하 여 `Option Strict On`에 할당할 수 있습니다 <xref:System.Windows.Forms.Form> 개체 (에서 파생 된 형식의 개체 또는 <xref:System.Windows.Forms.Form>)를 `extraForm`입니다. 클래스 또는 구조체를 확대 정의한 경우 `CType` 변환할 <xref:System.Windows.Forms.Form>, 해당 클래스를 할당 하거나 구조체 수도 `extraForm`합니다.  
   
-2.  멤버 액세스 연산자를 사용 하 여 (`.`) 간의 개체 변수 이름과 멤버 이름입니다.  
+2. 멤버 액세스 연산자를 사용 하 여 (`.`) 간의 개체 변수 이름과 멤버 이름입니다.  
   
     ```  
     extraForm.Show()  
@@ -54,7 +54,7 @@ ms.locfileid: "58819655"
   
 #### <a name="to-access-members-of-an-object-for-which-you-do-not-know-the-type-at-compile-time"></a>모르는 형식이 컴파일 타임에 개체의 멤버에 액세스  
   
-1.  개체 변수를 선언 합니다 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)합니다. (으로 변수 선언 `Object` 으로 선언 하는 것과 같습니다 <xref:System.Object?displayProperty=nameWithType>.)  
+1. 개체 변수를 선언 합니다 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)합니다. (으로 변수 선언 `Object` 으로 선언 하는 것과 같습니다 <xref:System.Object?displayProperty=nameWithType>.)  
   
     ```  
     Dim someControl As Object  
@@ -62,7 +62,7 @@ ms.locfileid: "58819655"
   
      사용 하 여 `Option Strict On`에 정의 된 멤버에만 액세스할 수 있습니다는 <xref:System.Object> 클래스입니다.  
   
-2.  멤버 액세스 연산자를 사용 하 여 (`.`) 간의 개체 변수 이름과 멤버 이름입니다.  
+2. 멤버 액세스 연산자를 사용 하 여 (`.`) 간의 개체 변수 이름과 멤버 이름입니다.  
   
     ```  
     someControl.GetType()  
@@ -77,5 +77,5 @@ ms.locfileid: "58819655"
 - <xref:System.MemberAccessException>
 - [개체 변수](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [개체 변수 선언](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [Object 데이터 형식](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Option Strict 문](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

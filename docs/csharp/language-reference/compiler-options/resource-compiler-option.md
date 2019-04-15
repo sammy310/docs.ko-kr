@@ -11,12 +11,12 @@ helpviewer_keywords:
 - res compiler option [C#]
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
-ms.openlocfilehash: 056207185f89aa219faf1b721598d372394e1061
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed9f4648ae632786ce860ce2c02637977f709c55
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725703"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302571"
 ---
 # <a name="-resource-c-compiler-options"></a>-resource(C# 컴파일러 옵션)
 출력 파일에 지정된 리소스를 포함합니다.  
@@ -50,13 +50,13 @@ ms.locfileid: "54725703"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
-1.  프로젝트에 리소스 파일을 추가합니다.  
+1. 프로젝트에 리소스 파일을 추가합니다.  
   
-2.  **솔루션 탐색기**에서 포함할 파일을 선택합니다.  
+2. **솔루션 탐색기**에서 포함할 파일을 선택합니다.  
   
-3.  **속성** 창에서 파일에 대한 **빌드 작업**을 선택합니다.  
+3. **속성** 창에서 파일에 대한 **빌드 작업**을 선택합니다.  
   
-4.  **빌드 작업**을 **포함 리소스**로 설정합니다.  
+4. **빌드 작업**을 **포함 리소스**로 설정합니다.  
   
  이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.FileProperties2.BuildAction%2A>을 참조하십시오.  
   

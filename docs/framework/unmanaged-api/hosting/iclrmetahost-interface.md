@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b52b12df9953dbafaeebfe223313288de0e559b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a1b189b79a02f04b7f795ff2524441f12b053cec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584050"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143951"
 ---
 # <a name="iclrmetahost-interface"></a>ICLRMetaHost 인터페이스
 해당 버전 번호를 기준으로 CLR (공용 언어 런타임)의 특정 버전을 반환, 모든 설치 된 Clr list, 지정된 된 프로세스에 로드 되는 모든 런타임 목록, 어셈블리로 컴파일, 프로세스를 종료 하는 데 CLR 버전을 검색 하는 메서드를 제공 합니다. 깨끗 한 런타임이 종료 및 레거시 API 바인딩을 쿼리 합니다.  
@@ -57,5 +57,6 @@ HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHost,
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [호스팅](../../../../docs/framework/unmanaged-api/hosting/index.md)

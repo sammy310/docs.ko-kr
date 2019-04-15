@@ -1,5 +1,5 @@
 ---
-title: '연습: WindowsFormsHost 요소를 사용 하 여 속성 매핑'
+title: '연습: WindowsFormsHost 요소를 사용하여 속성 매핑'
 ms.date: 08/18/2018
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
-ms.openlocfilehash: 86a7a8a937b9407690d7f1981b91857d1b44ded1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: edd9d6f698ba27cacb5e9a5eecab43f58d47b8e1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373883"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296526"
 ---
-# <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>연습: WindowsFormsHost 요소를 사용 하 여 속성 매핑
+# <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>연습: WindowsFormsHost 요소를 사용하여 속성 매핑
 
 이 연습에서는 사용 하는 방법을 보여 줍니다.는 <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A> 매핑할 속성을 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성이 해당 속성에 호스트 된 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 제어 합니다.
 
@@ -45,11 +45,11 @@ ms.locfileid: "57373883"
 
 ## <a name="create-and-set-up-the-project"></a>만들고 프로젝트 설정
 
-1.  만들기는 **WPF 앱** 라는 프로젝트 `PropertyMappingWithWfhSample`합니다.
+1. 만들기는 **WPF 앱** 라는 프로젝트 `PropertyMappingWithWfhSample`합니다.
 
-2.  **솔루션 탐색기**, WindowsFormsIntegration.dll 이라는 WindowsFormsIntegration 어셈블리에 대 한 참조를 추가 합니다.
+2. **솔루션 탐색기**, WindowsFormsIntegration.dll 이라는 WindowsFormsIntegration 어셈블리에 대 한 참조를 추가 합니다.
 
-3.  **솔루션 탐색기**, System.Drawing 및 System.Windows.Forms 어셈블리에 대 한 참조를 추가 합니다.
+3. **솔루션 탐색기**, System.Drawing 및 System.Windows.Forms 어셈블리에 대 한 참조를 추가 합니다.
 
 ## <a name="defining-the-application-layout"></a>애플리케이션 레이아웃 정의
 
@@ -57,15 +57,15 @@ ms.locfileid: "57373883"
 
 ### <a name="to-define-the-application-layout"></a>애플리케이션 레이아웃을 정의하려면
 
-1.  Window1.xaml을 엽니다는 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]합니다.
+1. Window1.xaml을 엽니다는 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]합니다.
 
-2.  기존 코드를 다음 코드로 바꿉니다.
+2. 기존 코드를 다음 코드로 바꿉니다.
 
      [!code-xaml[PropertyMappingWithWfhSample#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml#1)]
 
-3.  코드 편집기에서 Window1.xaml.cs를 엽니다.
+3. 코드 편집기에서 Window1.xaml.cs를 엽니다.
 
-4.  파일의 맨 위에서 다음 네임스페이스를 가져옵니다.
+4. 파일의 맨 위에서 다음 네임스페이스를 가져옵니다.
 
      [!code-csharp[PropertyMappingWithWfhSample#20](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#20)]
      [!code-vb[PropertyMappingWithWfhSample#20](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#20)]
@@ -83,7 +83,7 @@ ms.locfileid: "57373883"
 
      합니다 `AddClipMapping` 에 대 한 새 매핑을 추가 하는 메서드는 <xref:System.Windows.UIElement.Clip%2A> 속성입니다.
 
-     `OnClipChange` 메서드 변환 하는 <xref:System.Windows.UIElement.Clip%2A> 속성을 합니다 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Control.Region%2A> 속성.
+     `OnClipChange` 메서드 변환 하는 <xref:System.Windows.UIElement.Clip%2A> 속성을는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.Region%2A> 속성입니다.
 
      합니다 `Window1_SizeChanged` 창의 처리 <xref:System.Windows.FrameworkElement.SizeChanged> 이벤트 응용 프로그램 창에 맞게 클리핑 영역의 크기입니다.
 
@@ -113,7 +113,7 @@ ms.locfileid: "57373883"
 
      합니다 `ReplaceFlowDirectionMapping` 방법에 대 한 기본 매핑을 바꿉니다는 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 속성입니다.
 
-     `OnFlowDirectionChange` 메서드 변환 하는 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 속성을 합니다 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Control.RightToLeft%2A> 속성.
+     `OnFlowDirectionChange` 메서드 변환 하는 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 속성을는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.RightToLeft%2A> 속성입니다.
 
      `cb_CheckedChanged` 메서드 핸들을 <xref:System.Windows.Forms.CheckBox.CheckedChanged> 이벤트에는 <xref:System.Windows.Forms.CheckBox> 컨트롤입니다. 할당 된 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 속성의 값에 기반을 <xref:System.Windows.Forms.CheckBox.CheckState%2A> 속성
 
@@ -138,20 +138,20 @@ ms.locfileid: "57373883"
 
 ### <a name="to-initialize-your-property-mappings"></a>속성 매핑을 초기화하려면
 
-1.  다음 코드에 대 한 정의를 복사 합니다 `Window1` 클래스입니다.
+1. 다음 코드에 대 한 정의를 복사 합니다 `Window1` 클래스입니다.
 
      [!code-csharp[PropertyMappingWithWfhSample#11](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#11)]
      [!code-vb[PropertyMappingWithWfhSample#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#11)]
 
      `WindowLoaded` 메서드 핸들을 <xref:System.Windows.FrameworkElement.Loaded> 이벤트 하 고 다음과 같은 초기화를 수행 합니다.
 
-    -   만듭니다는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.CheckBox> 제어 합니다.
+    -   만듭니다는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.CheckBox> 제어 합니다.
 
     -   연습에서 이전에 정의한 메서드를 호출하여 속성 매핑을 설정합니다.
 
     -   매핑된 속성에 초기 값을 할당합니다.
 
-2.  **F5** 키를 눌러 응용 프로그램을 빌드하고 실행합니다. 효과 확인 하려면이 확인란을 클릭 합니다 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 매핑. 확인란을 클릭하면 레이아웃이 왼쪽에서 오른쪽으로의 방향을 반대로 바꿉니다.
+2. **F5** 키를 눌러 응용 프로그램을 빌드하고 실행합니다. 효과 확인 하려면이 확인란을 클릭 합니다 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 매핑. 확인란을 클릭하면 레이아웃이 왼쪽에서 오른쪽으로의 방향을 반대로 바꿉니다.
 
 ## <a name="see-also"></a>참고자료
 

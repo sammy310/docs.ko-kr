@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms, accessibility properties of controls
 - accessibility [Windows Forms], Windows Forms control properties
 ms.assetid: ad3567a6-313b-4708-9e15-f487a831f049
-ms.openlocfilehash: eee7499373809538355227633ab9a1a66aedb9ed
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b3f10fe472e449d39385facdbc716cba9b3f7382
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716402"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183783"
 ---
 # <a name="properties-on-windows-forms-controls-that-support-accessibility-guidelines"></a>내게 필요한 옵션 지침을 지원하는 Windows Forms 컨트롤의 속성
 표준 Windows Forms 도구 상자에서 컨트롤에 키보드 포커스 노출을 노출 및 화면 요소를 포함 하 여 내게 필요한 옵션 지침을 여러 지원 합니다.  
@@ -31,4 +31,5 @@ ms.locfileid: "57716402"
 |BackgroundImage|텍스트를 더 쉽게 읽을 수 있도록 하려면이 속성을 비워둡니다.|  
   
 ## <a name="see-also"></a>참고자료
-- [연습: 액세스할 수 있는 Windows 기반 응용 프로그램 만들기](walkthrough-creating-an-accessible-windows-based-application.md)
+
+- [연습: 내게 필요한 옵션이 지원되는 Windows 기반 애플리케이션 만들기](walkthrough-creating-an-accessible-windows-based-application.md)

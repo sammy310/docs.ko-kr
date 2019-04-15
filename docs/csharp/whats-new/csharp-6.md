@@ -2,12 +2,12 @@
 title: C# 6의 새로운 기능 - C# 가이드
 description: C# 버전 6의 새로운 기능을 알아봅니다.
 ms.date: 12/12/2018
-ms.openlocfilehash: 1c8c8003f81d4c15f2abdc26dc15849d88582843
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 478fd512f6b6facfce6d7f70f9691ce15e418d6e
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654577"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920677"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6의 새로운 기능
 
@@ -106,7 +106,7 @@ public class Student
 this.SomethingHappened?.Invoke(this, eventArgs);
 ```
 
-또한 왼쪽이 한 번만 계산되도록 하면 `?.` 왼쪽에서 메서드 호출을 포함한 모든 식을 사용할 수 있습니다.
+또한 왼쪽이 한 번만 계산되도록 하면 메서드 호출을 포함한 모든 식을 다음 연산자의 왼쪽에서 사용할 수 있습니다. `?.`
 
 ## <a name="string-interpolation"></a>문자열 보간
 
@@ -127,7 +127,7 @@ FormattableString str = $"Average grade is {s.Grades.Average()}";
 var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 ```
 
-문자열 보간을 시작하려면 [C#의 문자열 보간](../tutorials/intro-to-csharp/interpolated-strings.yml) 대화형 자습서, [문자열 보간](../language-reference/tokens/interpolated.md) 문서 및 [C#의 문자열 보간](../tutorials/string-interpolation.md) 자습서를 참조하세요.
+문자열 보간을 시작하려면 [C#의 문자열 보간](../tutorials/exploration/interpolated-strings.yml) 대화형 자습서, [문자열 보간](../language-reference/tokens/interpolated.md) 문서 및 [C#의 문자열 보간](../tutorials/string-interpolation.md) 자습서를 참조하세요.
 
 ## <a name="exception-filters"></a>예외 필터
 

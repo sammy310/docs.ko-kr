@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Matrix properties [WPF], animating with key frames
 - key frames [WPF], animating Matrix properties with
 ms.assetid: b851a4c7-ecb1-420e-9203-83e7afd037fd
-ms.openlocfilehash: 8cc94117cc26f44288835fd85c6ded429124d3c6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ff5320fa5b4441ae3e0f414b274ab9118b77ec50
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59107928"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336800"
 ---
 # <a name="how-to-animate-a-matrix-by-using-key-frames"></a>방법: 키 프레임을 사용하여 매트릭스에 애니메이션 효과 주기
 애니메이션을 적용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.MatrixTransform.Matrix%2A> 의 속성을 <xref:System.Windows.Media.MatrixTransform> 키 프레임을 사용 하 여 합니다.  
@@ -21,11 +21,11 @@ ms.locfileid: "59107928"
   
  이 애니메이션에 사용 하 여는 <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> 두 개의 키 프레임을 만들려면 클래스 및 해당를 사용 하 여 다음 작업을 수행 합니다.  
   
-1.  첫 번째 애니메이션 <xref:System.Windows.Media.Matrix> 첫 번째 0.2 초 동안. 변경 예제는 <xref:System.Windows.Media.Matrix.M11%2A> 및 <xref:System.Windows.Media.Matrix.M12%2A> 의 속성을 <xref:System.Windows.Media.Matrix>입니다. 이렇게이 변경 하면 단추를 늘어나고 기울어집니다. 예제도 변경 합니다 <xref:System.Windows.Media.Matrix.OffsetX%2A> 및 <xref:System.Windows.Media.Matrix.OffsetY%2A> 속성 단추 위치를 변경 되도록 합니다.  
+1. 첫 번째 애니메이션 <xref:System.Windows.Media.Matrix> 첫 번째 0.2 초 동안. 변경 예제는 <xref:System.Windows.Media.Matrix.M11%2A> 및 <xref:System.Windows.Media.Matrix.M12%2A> 의 속성을 <xref:System.Windows.Media.Matrix>입니다. 이렇게이 변경 하면 단추를 늘어나고 기울어집니다. 예제도 변경 합니다 <xref:System.Windows.Media.Matrix.OffsetX%2A> 및 <xref:System.Windows.Media.Matrix.OffsetY%2A> 속성 단추 위치를 변경 되도록 합니다.  
   
-2.  두 번째 애니메이션 <xref:System.Windows.Media.Matrix> 1.0 초에서. 단추는 단추는 더 이상 왜곡 또는 확장 하는 동안 다른 위치로 이동 합니다.  
+2. 두 번째 애니메이션 <xref:System.Windows.Media.Matrix> 1.0 초에서. 단추는 단추는 더 이상 왜곡 또는 확장 하는 동안 다른 위치로 이동 합니다.  
   
-3.  애니메이션을 무기한 반복 됩니다.  
+3. 애니메이션을 무기한 반복 됩니다.  
   
 > [!NOTE]
 >  파생 된 키 프레임을 <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> 개체 값 간에 갑작스러운 이동을 만듭니다, 즉, 애니메이션의 이동을 비정상적입니다.  

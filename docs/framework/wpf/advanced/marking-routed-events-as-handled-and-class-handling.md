@@ -17,18 +17,16 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-ms.openlocfilehash: 34bb8c1cde71f6280ae2924a82ddb2efb0efbdf2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8a21b5e69e8fb3f9781d862bd62b0db92073b1dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378841"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172109"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>라우트된 이벤트를 처리된 것으로 표시 및 클래스 처리
 라우트된 이벤트의 처리기는 이벤트 데이터 내에서 이벤트를 처리된 것으로 표시할 수 있습니다. 이벤트를 처리하면 경로가 효과적으로 단축됩니다. 클래스 처리는 라우트된 이벤트를 통해 지원되는 프로그래밍 개념입니다. 클래스 처리기는 클래스의 모든 인스턴스에서 가장 먼저 호출되는 처리기를 사용하여 라우트된 특정 이벤트를 클래스 수준에서 처리할 수 있습니다.  
-  
 
-  
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>전제 조건  
  이 항목에서는 [라우트된 이벤트 개요](routed-events-overview.md)에 소개된 개념에 대해 설명합니다.  
@@ -99,6 +97,7 @@ ms.locfileid: "57378841"
  두 번째 방법은 라우트된 이벤트의 터널링 버전과 버블링 버전의 쌍을 만드는 것으로, 입력 이벤트에 대해서만 사용할 수 있습니다. 이러한 라우트된 이벤트의 경우에는 미리 보기/터널링에 해당하는 라우트된 이벤트에 처리기를 대신 추가할 수 있습니다. 해당 라우트된 이벤트는 루트에서 시작하여 경로를 통해 터널링되므로 애플리케이션의 요소 트리에서 특정 상위 요소 수준에 미리 보기 처리기가 연결되었다고 가정할 경우, 단추 클래스 처리 코드가 이벤트를 대신 처리하지 않습니다. 이 접근 방식을 사용할 경우 미리 보기 이벤트를 처리된 것으로 표시할 때 주의해야 합니다. 예를 사용 하 여 지정 된 <xref:System.Windows.UIElement.PreviewMouseLeftButtonDown> 으로 이벤트를 표시 하는 경우에 루트 요소에서 처리 되 <xref:System.Windows.RoutedEventArgs.Handled%2A> 처리기 구현에는 실제로 표시 하지 않으려면는 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다. 일반적으로 이 동작은 사용하지 않는 것이 좋습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.EventManager>
 - [미리 보기 이벤트](preview-events.md)
 - [사용자 지정 라우트된 이벤트 만들기](how-to-create-a-custom-routed-event.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - painting [WPF], with images
 - brushes [WPF], painting with images
 ms.assetid: 3432c533-1fc7-492d-94ee-0b13d60125ae
-ms.openlocfilehash: c1db803aacad85ce90fec519b5eabdd8df7bb584
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2b88982e7a8d196c31869dc74aac636d78f68386
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369125"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207814"
 ---
 # <a name="how-to-paint-an-area-with-an-image"></a>방법: 이미지로 영역 그리기
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.ImageBrush> 이미지로 영역 그리기 클래스입니다. <xref:System.Windows.Media.ImageBrush> 표시 된 단일 이미지를 해당 <xref:System.Windows.Media.ImageBrush.ImageSource%2A> 속성입니다.  
@@ -36,4 +36,5 @@ ms.locfileid: "57369125"
  이 코드 예제는 제공 된 큰 예제의 일부는 <xref:System.Windows.Media.ImageBrush> 클래스입니다. 전체 샘플을 참조 하세요 [ImageBrush 샘플](https://go.microsoft.com/fwlink/?LinkID=160005)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [이미지, 그림 및 시각적 표시로 그리기](painting-with-images-drawings-and-visuals.md)

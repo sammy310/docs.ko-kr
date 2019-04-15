@@ -19,12 +19,12 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: ff1ba3563249cda786a12894c5e4b37442ed9d21
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d973ec68486ca46a38819ce9972c789b156d878b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722668"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096266"
 ---
 # <a name="common-type-system"></a>공용 형식 시스템
 공용 형식 시스템은 공용 언어 런타임에 형식을 선언하고 사용 및 관리하는 방법을 정의할 뿐 아니라 언어 간 통합에 대한 런타임 지원의 중요한 부분을 차지합니다. 공용 형식 시스템은 다음과 같은 기능을 수행합니다.  
@@ -165,9 +165,7 @@ ms.locfileid: "54722668"
   
 > [!NOTE]
 >  C#, C++ 및 Visual Basic에서는 이벤트 처리기 대리자에 대해 이러한 메서드를 사용할 필요가 없습니다. 이들 언어에서는 이벤트 처리기를 추가하고 제거하기 위한 구문을 제공합니다.  
-  
- 
-  
+
 <a name="type_definitions"></a>   
 ## <a name="type-definitions"></a>형식 정의  
  형식 정의에는 다음과 같은 요소가 포함됩니다.  
@@ -226,9 +224,7 @@ ms.locfileid: "54722668"
  형식은 다른 형식에서 값과 동작을 상속할 수 있습니다. 공용 형식 시스템에서는 둘 이상의 기본 형식에서 형식을 상속할 수 없습니다.  
   
  형식에서 구현할 수 있는 인터페이스의 수는 제한이 없습니다. 인터페이스를 구현하려면 형식에서 해당 인터페이스의 모든 가상 멤버를 구현해야 합니다. 가상 메서드는 파생된 형식에서 구현할 수 있으며 정적으로 또는 동적으로 호출할 수 있습니다.  
-  
-  
-  
+
 <a name="type_members"></a>   
 ## <a name="type-members"></a>형식 멤버  
  런타임을 사용하면 형식의 동작과 상태를 지정하는 형식의 멤버를 정의할 수 있습니다. 다음과 같은 형식 멤버가 있습니다.  
@@ -290,9 +286,7 @@ ms.locfileid: "54722668"
  중첩 형식은 다른 형식의 멤버인 형식을 나타냅니다. 중첩 형식은 포함하는 형식과 밀접하게 결합되어야 하고 일반 용도의 형식으로 사용하면 안 됩니다. 중첩 형식은 해당 선언 형식에서 중첩 형식의 인스턴스를 만들고 사용하며 중첩 형식의 사용이 공용 멤버에게 노출되지 않는 경우에 유용합니다.  
   
  중첩 형식은 일부 개발자에게 혼란을 줄 수 있으므로 불가피한 경우를 제외하고는 공개적으로 표시하지 않아야 합니다. 잘 디자인된 라이브러리에서 개발자는 개체를 인스턴스화하거나 변수를 선언할 때 중첩 형식을 거의 사용하지 않아야 합니다.  
-  
-  
-  
+
 <a name="characteristics_of_type_members"></a>   
 ## <a name="characteristics-of-type-members"></a>형식 멤버의 특성  
  공용 형식 시스템에서 형식 멤버는 다양한 특성을 가질 수 있지만 언어에서 이런 특성을 모두 지원할 필요는 없습니다. 다음 표에서는 멤버 특성에 대해 설명합니다.  

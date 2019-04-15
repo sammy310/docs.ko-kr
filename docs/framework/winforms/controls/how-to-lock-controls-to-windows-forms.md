@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms controls, locking
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-ms.openlocfilehash: ac02e825218f14f8479e67a79da0c86e1c9ffe11
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ac5fbf33564ed2dd1a030132a35b36164f777519
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59117925"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301700"
 ---
 # <a name="how-to-lock-controls-to-windows-forms"></a>방법: Windows Forms에서 컨트롤 잠금
 Windows 응용 프로그램의 사용자 인터페이스 (UI)를 디자인할 때 수행 하지 않도록 이동 하거나 다른 속성을 설정 하는 경우 크기를 조정할 수 있도록 올바르게 배치 되 면 컨트롤을 잠글 수 있습니다.  
@@ -22,7 +22,7 @@ Windows 응용 프로그램의 사용자 인터페이스 (UI)를 디자인할 �
   
 ### <a name="to-lock-a-control"></a>컨트롤을 잠그려면  
   
-1.  에 **속성** 창 클릭 합니다 **잠금** 속성을 선택 `true`합니다. (이름을 두 번의 속성 설정을 전환 합니다.)  
+1. 에 **속성** 창 클릭 합니다 **잠금** 속성을 선택 `true`합니다. (이름을 두 번의 속성 설정을 전환 합니다.)  
   
      또는 컨트롤을 마우스 오른쪽 단추로 클릭 하 고 선택 **잠금 컨트롤**합니다.  
   
@@ -31,20 +31,20 @@ Windows 응용 프로그램의 사용자 인터페이스 (UI)를 디자인할 �
   
 ### <a name="to-lock-all-the-controls-on-a-form"></a>양식의 모든 컨트롤을 잠그려면  
   
-1.  **형식** 메뉴 선택 **잠금 컨트롤**합니다.  
+1. **형식** 메뉴 선택 **잠금 컨트롤**합니다.  
   
     > [!NOTE]
     >  이 명령은 폼 컨트롤 이므로 폼의 크기를 뿐만 잠급니다.  
   
 ### <a name="to-unlock-all-locked-controls-on-a-form"></a>모두 잠금 해제 하려면 잠긴 폼의 컨트롤  
   
-1.  **형식** 메뉴 선택 **잠금 컨트롤**합니다.  
+1. **형식** 메뉴 선택 **잠금 컨트롤**합니다.  
   
      양식에서 이전에 잠긴된 모든 컨트롤은 이제 잠금 해제 합니다.  
   
 ### <a name="to-unlock-locked-controls-individually"></a>잠긴된 컨트롤을 개별적으로 잠금을 해제 하려면  
   
-1.  에 **속성** 창 클릭 합니다 **잠금** 속성을 선택 `false`합니다. (이름을 두 번의 속성 설정을 전환 합니다.)  
+1. 에 **속성** 창 클릭 합니다 **잠금** 속성을 선택 `false`합니다. (이름을 두 번의 속성 설정을 전환 합니다.)  
   
 ## <a name="see-also"></a>참고자료
 

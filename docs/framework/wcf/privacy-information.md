@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: f909b987da31a0a4af605d603d1c7b7a35615f19
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: e506908299109f94be6d190017b381fe7b4ee044
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333406"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151504"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 개인 정보 취급 방침
 Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할 것을 약속합니다. 버전 3.0, Windows Communication Foundation (WCF)를 사용 하 여 응용 프로그램을 빌드할 때 응용 프로그램의 최종 사용자가 개인 정보 보호를 달라질 수 있습니다. 예를 들어 응용 프로그램에서 사용자 연락처 정보를 명시적으로 수집하거나, 정보를 요청하거나 인터넷을 통해 정보를 웹 사이트로 보낼 수 있습니다. 응용 프로그램에 Microsoft 기술을 포함하는 경우 해당 기술의 동작이 개인 정보 보호에 영향을 줄 수 있습니다. WCF 보내지 않습니다 모든 정보를 Microsoft 응용 프로그램에서 우리에 게 보낼 사용자 또는 최종 사용자가 선택 하지 않으면.  
@@ -47,7 +47,7 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
 |데이터|스토리지|  
 |----------|-------------|  
 |사용자 이름, X.509 인증서, Kerberos 토큰, 자격 증명에 대한 참조 등의 프레젠테이션 자격 증명|Windows 인증서 저장소 등의 표준 Windows 자격 증명 관리 메커니즘|  
-|사용자 이름, 암호 등의 사용자 멤버 자격 정보|[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 멤버 자격 공급자|  
+|사용자 이름, 암호 등의 사용자 멤버 자격 정보|[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 멤버 자격 공급자입니다.|  
 |서비스를 클라이언트에 인증하는 데 사용되는 서비스에 대한 ID 정보|서비스의 끝점 주소|  
 |호출자 정보|감사 로그|  
   
@@ -402,5 +402,6 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
  WSDL(웹 서비스 기술 언어)에는 포트 정의가 들어 있습니다. 각 포트에는 끝점 주소와 응용 프로그램에서 사용하는 서비스를 나타내는 바인딩이 있습니다. 구성을 사용하여 WSDL 노출을 해제할 수 있습니다. 컴퓨터에는 정보가 보관되지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Communication Foundation](index.md)
 - [보안](../../../docs/framework/wcf/feature-details/security.md)

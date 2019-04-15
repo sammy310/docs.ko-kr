@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-ms.openlocfilehash: 3930453e2ba3594e19d8eb7c3dfbceb49c3a1e80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc08faba7edede3dd527b7c05fe47f6408e18a04
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540535"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151556"
 ---
 # <a name="how-to-configure-network-tracing"></a>방법: 네트워크 추적 구성
 애플리케이션 또는 컴퓨터 구성 파일은 형식과 네트워크 추적의 내용을 결정하는 설정을 유지합니다. 이 절차를 수행하기 전에 추적이 활성화되어야 합니다. 추적을 사용하는 방법에 대한 자세한 내용은 [네트워크 추적 사용](../../../docs/framework/network-programming/enabling-network-tracing.md)을 참조하세요.  
@@ -98,7 +98,8 @@ ms.locfileid: "54540535"
 |`Tracemode`|선택적 <xref:System.String> 특성입니다. 16진수 및 텍스트 형식으로 프로토콜 추적을 표시하려면 `includehex`로 설정합니다. 텍스트만 표시하려면 `protocolonly`로 설정합니다. 기본값은 `includehex`입니다.<br /><br /> 예제에 나타낸 것처럼, \<switches> 요소에 대해 이 특성을 설정해야 합니다. 이 특성이 \<source> 요소 아래의 요소에 대해 설정되어 있는 경우 예외가 throw됩니다.|  
   
 ## <a name="see-also"></a>참고 항목
+
 - [네트워크 추적 해석](../../../docs/framework/network-programming/interpreting-network-tracing.md)
 - [.NET Framework의 네트워크 추적](../../../docs/framework/network-programming/network-tracing.md)
 - [네트워크 추적 사용](../../../docs/framework/network-programming/enabling-network-tracing.md)
-- [애플리케이션 추적 및 조율](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [응용 프로그램 추적 및 조율](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

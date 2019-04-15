@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Canvas control [WPF], setting positioning properties
 ms.assetid: 1636b950-2b5a-4507-8a10-c5034cc58b1c
-ms.openlocfilehash: 9b280bf86f12b406582cb2f534edb85618515d76
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 06508e1198736ccb1cbda41641dff4bc634ef82b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356327"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194411"
 ---
 # <a name="how-to-get-or-set-canvas-positioning-properties"></a>방법: 캔버스 위치 지정 속성 가져오기 또는 설정
 위치 지정 메서드를 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.Canvas> 요소 자식 콘텐츠의 위치입니다. 콘텐츠를 사용 하 여이 예제는 <xref:System.Windows.Controls.ListBoxItem> 나타내는 위치 값 및 값의 인스턴스로 변환 <xref:System.Double>, 위치 지정에 대 한 필수 인수는 합니다. 값 다음 문자열로 다시 변환 되어에 텍스트로 표시 되는 <xref:System.Windows.Controls.TextBlock> 를 사용 하 여 요소를 <xref:System.Windows.Controls.Canvas.GetLeft%2A> 메서드.  
@@ -30,7 +30,8 @@ ms.locfileid: "57356327"
  [!code-vb[CanvasPositioningProperties#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasPositioningProperties/VisualBasic/Window1.xaml.vb#2)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.Canvas>
 - <xref:System.Windows.Controls.ListBoxItem>
 - <xref:System.Windows.LengthConverter>
-- [패널 개요](panels-overview.md)
+- [Panel 개요](panels-overview.md)

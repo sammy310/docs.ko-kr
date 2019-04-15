@@ -2,12 +2,12 @@
 title: 장기 실행 워크플로 서비스 만들기
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: 37d3accae017b6725eab5ebb3d7df6e1bc15a56a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ac0cb83ad428ce98a05fd0626fff835162ad0e41
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59109657"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301349"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>장기 실행 워크플로 서비스 만들기
 이 항목에서는 장기 실행 워크플로 서비스를 만드는 방법에 대해 설명합니다. 장기 실행 워크플로 서비스는 장기간 실행될 수 있습니다. 특정 지점에서 워크플로는 추가 정보를 기다리며 유휴 상태가 될 수 있습니다. 이 경우 워크플로는 SQL 데이터베이스에 유지되고 메모리에서 제거됩니다. 추가 정보를 사용할 수 있으면 워크플로 인스턴스가 다시 메모리에 로드되어 계속 실행됩니다.  이 시나리오에서는 매우 간단한 주문 시스템을 구현합니다.  클라이언트가 워크플로 서비스에 초기 메시지를 보내 주문을 시작하고, 워크플로 서비스는 주문 ID를 클라이언트에 반환합니다. 이 시점에서 워크플로 서비스가 클라이언트에서 다른 메시지를 기다리며 유휴 상태가 되고 SQL Server 데이터베이스에 유지됩니다.  클라이언트가 품목을 주문하기 위해 다음 메시지를 보내면 워크플로 서비스는 메모리에 다시 로드되고 주문 처리를 마칩니다. 코드 샘플에서 워크플로 서비스는 품목이 주문에 추가되었음을 나타내는 문자열을 반환합니다. 코드 샘플은 이 기술의 실제 응용 프로그램이라기보다는 장기 실행 워크플로 서비스를 보여 주는 간단한 샘플입니다. 이 항목을 Visual Studio 2012 프로젝트 및 솔루션을 만드는 방법을 알고 있다고 가정 합니다.
@@ -15,33 +15,33 @@ ms.locfileid: "59109657"
 ## <a name="prerequisites"></a>전제 조건
  이 연습을 사용하려면 다음 소프트웨어를 설치해야 합니다.
 
-1.  Microsoft SQL Server 2008
+1. Microsoft SQL Server 2008
 
-2.  Visual Studio 2012
+2. Visual Studio 2012
 
-3.  Microsoft  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
+3. Microsoft  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
 
-4.  WCF 및 Visual Studio 2012를 사용 하 여 알고 있으며 프로젝트/솔루션을 만드는 방법을 알고 있어야 합니다.
+4. WCF 및 Visual Studio 2012를 사용 하 여 알고 있으며 프로젝트/솔루션을 만드는 방법을 알고 있어야 합니다.
 
 ### <a name="to-setup-the-sql-database"></a>SQL 데이터베이스를 설정하려면
 
-1.  워크플로 서비스 인스턴스가 유지되려면 Microsoft SQL Server가 설치되어 있어야 하고 유지된 워크플로 인스턴스를 저장하도록 데이터베이스를 구성해야 합니다. 클릭 하 여 Microsoft SQL Management Studio를 실행 합니다 **시작** 단추를 선택 하 **프로그램도**, **Microsoft SQL Server 2008**, 및 **Microsoft SQL Management Studio**합니다.
+1. 워크플로 서비스 인스턴스가 유지되려면 Microsoft SQL Server가 설치되어 있어야 하고 유지된 워크플로 인스턴스를 저장하도록 데이터베이스를 구성해야 합니다. 클릭 하 여 Microsoft SQL Management Studio를 실행 합니다 **시작** 단추를 선택 하 **프로그램도**, **Microsoft SQL Server 2008**, 및 **Microsoft SQL Management Studio**합니다.
 
-2.  클릭 합니다 **Connect** SQL Server 인스턴스에 로그온 하는 단추
+2. 클릭 합니다 **Connect** SQL Server 인스턴스에 로그온 하는 단추
 
-3.  마우스 오른쪽 단추로 클릭 **데이터베이스** 트리 뷰 및 선택 **새 데이터베이스...** 라는 새 데이터베이스를 만들려면 `SQLPersistenceStore`합니다.
+3. 마우스 오른쪽 단추로 클릭 **데이터베이스** 트리 뷰 및 선택 **새 데이터베이스...** 라는 새 데이터베이스를 만들려면 `SQLPersistenceStore`합니다.
 
-4.  SQLPersistenceStore 데이터베이스의 C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en 디렉터리에 있는 SqlWorkflowInstanceStoreSchema.sql 스크립트 파일을 실행하여 필요한 데이터베이스 스키마를 설정합니다.
+4. SQLPersistenceStore 데이터베이스의 C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en 디렉터리에 있는 SqlWorkflowInstanceStoreSchema.sql 스크립트 파일을 실행하여 필요한 데이터베이스 스키마를 설정합니다.
 
-5.  SQLPersistenceStore 데이터베이스의 C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en 디렉터리에 있는 SqlWorkflowInstanceStoreLogic.sql 스크립트 파일을 실행하여 필요한 데이터베이스 논리를 설정합니다.
+5. SQLPersistenceStore 데이터베이스의 C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en 디렉터리에 있는 SqlWorkflowInstanceStoreLogic.sql 스크립트 파일을 실행하여 필요한 데이터베이스 논리를 설정합니다.
 
 ### <a name="to-create-the-web-hosted-workflow-service"></a>웹 호스팅 워크플로 서비스를 만들려면
 
-1.  빈 Visual Studio 2012 솔루션을 만들고, 이름을 `OrderProcessing`입니다.
+1. 빈 Visual Studio 2012 솔루션을 만들고, 이름을 `OrderProcessing`입니다.
 
-2.  `OrderService`라는 새 WCF 워크플로 서비스 응용 프로그램 프로젝트를 솔루션에 추가합니다.
+2. `OrderService`라는 새 WCF 워크플로 서비스 응용 프로그램 프로젝트를 솔루션에 추가합니다.
 
-3.  프로젝트 속성 대화 상자에서 선택 합니다 **웹** 탭 합니다.
+3. 프로젝트 속성 대화 상자에서 선택 합니다 **웹** 탭 합니다.
 
     1.  아래 **시작 작업** 선택 **특정 페이지** 지정 `Service1.xamlx`합니다.
 
@@ -56,16 +56,16 @@ ms.locfileid: "59109657"
 
          이러한 두 단계에서는 IIS에서 호스팅하도록 워크플로 서비스 프로젝트를 구성합니다.
 
-4.  엽니다 `Service1.xamlx` 것이 열려 없고 기존 삭제 하는 경우 **ReceiveRequest** 하 고 **SendResponse** 활동입니다.
+4. 엽니다 `Service1.xamlx` 것이 열려 없고 기존 삭제 하는 경우 **ReceiveRequest** 하 고 **SendResponse** 활동입니다.
 
-5.  선택 합니다 **순차 서비스** 활동을 클릭 합니다 **변수** 에 연결 하 고 다음 그림과에서 같이 변수를 추가 합니다. 이렇게 하면 워크플로 서비스에서 나중에 사용할 일부 변수가 추가됩니다.
+5. 선택 합니다 **순차 서비스** 활동을 클릭 합니다 **변수** 에 연결 하 고 다음 그림과에서 같이 변수를 추가 합니다. 이렇게 하면 워크플로 서비스에서 나중에 사용할 일부 변수가 추가됩니다.
 
     > [!NOTE]
     >  CorrelationHandle 변수 형식 드롭다운 목록에 없는 경우 선택 **형식에 대 한 찾아보기** 드롭다운 목록에서. 에 CorrelationHandle을 입력 합니다 **형식 이름을** 상자, 목록 상자에서 CorrelationHandle을 선택 및 클릭 **확인**합니다.
 
      ![변수 추가](./media/creating-a-long-running-workflow-service/add-variables-sequential-service-activity.gif "순차 서비스 작업에 변수를 추가 합니다.")
 
-6.  끌어서 놓기는 **ReceiveAndSendReply** 활동 템플릿을 합니다 **순차 서비스** 활동입니다. 이 활동 집합은 클라이언트에서 메시지를 받고 회신을 보냅니다.
+6. 끌어서 놓기는 **ReceiveAndSendReply** 활동 템플릿을 합니다 **순차 서비스** 활동입니다. 이 활동 집합은 클라이언트에서 메시지를 받고 회신을 보냅니다.
 
     1.  선택 된 **수신** 활동 하 고 다음 그림에 강조 표시 된 속성 집합입니다.
 
@@ -95,7 +95,7 @@ ms.locfileid: "59109657"
 
          ![상관 관계 이니셜라이저 추가](./media/creating-a-long-running-workflow-service/add-correlationinitializers.png "상관 관계 이니셜라이저를 추가 합니다.")
 
-7.  끌어서 놓기 다른 **ReceiveAndSendReply** 활동을 워크플로의 끝 (외부 합니다 **시퀀스** 첫 번째 포함 된 **수신** 및  **SendReply** 활동). 이 활동은 클라이언트에서 보낸 두 번째 메시지를 받고 응답합니다.
+7. 끌어서 놓기 다른 **ReceiveAndSendReply** 활동을 워크플로의 끝 (외부 합니다 **시퀀스** 첫 번째 포함 된 **수신** 및  **SendReply** 활동). 이 활동은 클라이언트에서 보낸 두 번째 메시지를 받고 응답합니다.
 
     1.  선택 된 **시퀀스** 포함 하는 새로 추가 된 **수신** 및 **SendReply** 활동 하 고를 **변수** 단추. 다음 그림에 강조 표시된 변수를 추가합니다.
 
@@ -131,7 +131,7 @@ ms.locfileid: "59109657"
 
              ![SendReply 활동에 대 한 데이터 바인딩 설정](./media/creating-a-long-running-workflow-service/set-property-for-sendreplytoadditem.gif "SendReplyToAddItem 활동에 대 한 속성을 설정 합니다.")
 
-8.  Web.config 파일을 열고 다음 요소에 추가 된 \<동작 > 섹션 워크플로 지 속성을 사용 하도록 설정 합니다.
+8. Web.config 파일을 열고 다음 요소에 추가 된 \<동작 > 섹션 워크플로 지 속성을 사용 하도록 설정 합니다.
 
     ```xml
     <sqlWorkflowInstanceStore connectionString="Data Source=your-machine\SQLExpress;Initial Catalog=SQLPersistenceStore;Integrated Security=True;Asynchronous Processing=True" instanceEncodingOption="None" instanceCompletionAction="DeleteAll" instanceLockedExceptionAction="BasicRetry" hostLockRenewalPeriod="00:00:30" runnableInstancesDetectionPeriod="00:00:02" />
@@ -145,17 +145,17 @@ ms.locfileid: "59109657"
 
 ### <a name="to-create-a-client-application-to-call-the-workflow-service"></a>클라이언트 응용 프로그램을 만들어 워크플로 서비스를 호출하려면
 
-1.  솔루션에 `OrderClient`라는 새 콘솔 응용 프로그램 프로젝트를 추가합니다.
+1. 솔루션에 `OrderClient`라는 새 콘솔 응용 프로그램 프로젝트를 추가합니다.
 
-2.  다음 어셈블리에 대한 참조를 `OrderClient` 프로젝트에 추가합니다.
+2. 다음 어셈블리에 대한 참조를 `OrderClient` 프로젝트에 추가합니다.
 
     1.  System.ServiceModel.dll
 
     2.  System.ServiceModel.Activities.dll
 
-3.  서비스 참조를 워크플로 서비스에 추가하고 `OrderService`를 네임스페이스로 지정합니다.
+3. 서비스 참조를 워크플로 서비스에 추가하고 `OrderService`를 네임스페이스로 지정합니다.
 
-4.  클라이언트 프로젝트의 `Main()` 메서드에서 다음 코드를 추가합니다.
+4. 클라이언트 프로젝트의 `Main()` 메서드에서 다음 코드를 추가합니다.
 
     ```
     static void Main(string[] args)
@@ -182,17 +182,17 @@ ms.locfileid: "59109657"
     }
     ```
 
-5.  솔루션을 빌드하고 `OrderClient` 응용 프로그램을 실행합니다. 클라이언트에서 다음 텍스트가 표시됩니다.
+5. 솔루션을 빌드하고 `OrderClient` 응용 프로그램을 실행합니다. 클라이언트에서 다음 텍스트가 표시됩니다.
 
     ```Output
     Sending start messageWorkflow service is idle...Press [ENTER] to send an add item message to reactivate the workflow service...
     ```
 
-6.  워크플로 서비스가 유지 되었는지 있는지를 확인 하려면로 이동 하 여 SQL Server Management Studio를 시작 합니다 **시작** 메뉴를 선택 하면 **모든 프로그램**, **Microsoft SQL Server 2008**하십시오 **SQL Server Management Studio**합니다.
+6. 워크플로 서비스가 유지 되었는지 있는지를 확인 하려면로 이동 하 여 SQL Server Management Studio를 시작 합니다 **시작** 메뉴를 선택 하면 **모든 프로그램**, **Microsoft SQL Server 2008**하십시오 **SQL Server Management Studio**합니다.
 
     1.  왼쪽 창에서 다음을 확장 합니다 **데이터베이스**, **SQLPersistenceStore**하십시오 **뷰** 마우스 오른쪽 단추로 클릭 **System.Activities.DurableInstancing.Instances**  선택한 **상위 1000 개의 행 선택**합니다. 에 **결과** 창 확인 나열 된 하나 이상의 인스턴스를 참조 하세요. 실행하는 동안 예외가 발생한 경우 이전 실행의 다른 인스턴스가 있을 수 있습니다. 마우스 오른쪽 단추로 클릭 하 여 기존 행을 삭제할 수 있습니다 **System.Activities.DurableInstancing.Instances** 를 선택 하 고 **편집 상위 200 개 행**를 누르면 합니다 **Execute** 단추를 결과 창에서 모든 행을 선택 하 고 선택 **삭제**합니다.  데이터베이스에 표시되는 인스턴스가 응용 프로그램에서 만든 인스턴스인지 확인하려면 클라이언트를 실행하기 전에 인스턴스 뷰가 비어 있는지 확인합니다. 클라이언트가 실행되고 있으면 쿼리(상위 1000개의 행 선택)를 다시 실행하고 새 인스턴스가 추가되었는지 확인합니다.
 
-7.  Enter 키를 눌러 워크플로 서비스에 품목 추가 메시지를 보냅니다. 클라이언트에서 다음 텍스트가 표시됩니다.
+7. Enter 키를 눌러 워크플로 서비스에 품목 추가 메시지를 보냅니다. 클라이언트에서 다음 텍스트가 표시됩니다.
 
     ```Output
     Sending add item messageService returned: Item added to orderPress any key to continue . . .

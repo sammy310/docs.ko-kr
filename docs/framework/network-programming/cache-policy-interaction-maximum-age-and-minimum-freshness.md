@@ -10,12 +10,12 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 6567d451-ecec-496c-95a3-a415b99ba52a
-ms.openlocfilehash: d5d368ac282eef8c29729f110d6d5f97b1479b47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93136d4c87463db7128a68957b243c1ef13a90eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538923"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174059"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-minimum-freshness"></a>캐시 정책 상호 작용 - 최대 보존 기간 및 최소 새로 고침
 최신 콘텐츠가 클라이언트 애플리케이션에 반환되도록 돕기 위해 클라이언트 캐시 정책 및 서버 유효성 재검사 요구 사항의 상호 작용 결과로 항상 가장 보수적인 캐시 정책이 생성됩니다. 이 항목의 모든 예제에서는 1월 1일에 캐시되었으며 1월 4일에 만료되는 리소스에 대한 캐시 정책을 보여 줍니다.  
@@ -29,6 +29,7 @@ ms.locfileid: "54538923"
 -   캐시 정책이 `maxAge` = 2일, `minFresh` = 2일을 설정하는 경우 `maxAge`에 따라 1월 3일까지 콘텐츠가 최신 상태입니다. `minFresh`에 따라 콘텐츠가 1월 2일까지 최신 상태입니다. 따라서 1월 2일에 콘텐츠 유효성을 재검사해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [네트워크 애플리케이션에 대한 캐시 관리](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [캐시 정책](../../../docs/framework/network-programming/cache-policy.md)
 - [위치 기반 캐시 정책](../../../docs/framework/network-programming/location-based-cache-policies.md)

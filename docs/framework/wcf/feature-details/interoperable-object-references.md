@@ -2,12 +2,12 @@
 title: 상호 운영 가능한 개체 참조
 ms.date: 03/30/2017
 ms.assetid: cb8da4c8-08ca-4220-a16b-e04c8f527f1b
-ms.openlocfilehash: 5d2f7d93544cafab7cfe5d8dcbb8a4c5d5c5b576
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cbbd5a34269a7c4a5c33d72487a02df21f2f0fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582425"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222707"
 ---
 # <a name="interoperable-object-references"></a>상호 운영 가능한 개체 참조
 기본적으로 <xref:System.Runtime.Serialization.DataContractSerializer>는 개체를 값으로 serialize합니다. <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> 속성을 사용하여 데이터 계약 Serializer에 해당 형식의 개체를 serialize할 때 개체 참조를 유지하도록 지시할 수 있습니다.  
@@ -95,6 +95,7 @@ public class SomeClass
  `IsReference`를 사용하면 메시지 라운드트립이 준수됩니다. 사용하지 않으면 스키마에서 형식이 생성될 때 해당 형식에 대해 XML로 다시 보내지는 스키마가 원래 가정된 스키마와 호환되지 않아도 됩니다. 즉, `id` 및 `ref` 특성이 serialize되었더라도 원래 스키마 때문에 이러한 특성 또는 모든 특성이 XML에서 발생하지 않았을 수 있습니다. 데이터 멤버에 `IsReference`가 적용되면 해당 멤버는 왕복될 때 계속해서 "참조 가능한" 것으로 인식됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.CollectionDataContractAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>

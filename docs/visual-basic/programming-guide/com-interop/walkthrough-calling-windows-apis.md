@@ -11,12 +11,12 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: 579da4b52a9a7c4c747a9ace390c04611207c94d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 8fd63c2abedcd416937e2c281486bdc1716a275f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822910"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332328"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>연습: Windows Api 호출 (Visual Basic)
 Windows Api는 Windows 운영 체제의 일부인 동적 연결 라이브러리 (Dll)입니다. 프로시저를 직접 작성 하기 어려운 경우 작업을 수행 하려면 사용할 수 있습니다. Windows 라는 함수를 제공 하는 예를 들어 `FlashWindowEx` 밝은 영역과 어두운 음영을 교대로 응용 프로그램의 제목 표시줄을 만들 수 있습니다.  
@@ -34,16 +34,16 @@ Windows Api는 Windows 운영 체제의 일부인 동적 연결 라이브러리 
   
 #### <a name="to-declare-a-dll-procedure"></a>DLL 프로시저를 선언 하려면  
   
-1.  를 호출 하려면 원하는 함수 및 인수, 인수 형식 이름을 확인 하 고 값 뿐만 아니라와 이름을 포함 하는 DLL의 위치를 반환 합니다.  
+1. 를 호출 하려면 원하는 함수 및 인수, 인수 형식 이름을 확인 하 고 값 뿐만 아니라와 이름을 포함 하는 DLL의 위치를 반환 합니다.  
   
     > [!NOTE]
     >  Windows Api에 대 한 자세한 내용은 플랫폼 SDK Windows API에서 Win32 SDK 설명서를 참조 하세요. Windows Api를 사용 하는 상수에 대 한 자세한 내용은 플랫폼 SDK에 포함 된 Windows.h 같은 헤더 파일을 검사 합니다.  
   
-2.  클릭 하 여 새 Windows 응용 프로그램 프로젝트를 엽니다 **새로 만들기** 에 **파일** 메뉴에서을 클릭 한 다음 **프로젝트**합니다. **새 프로젝트** 대화 상자가 나타납니다.  
+2. 클릭 하 여 새 Windows 응용 프로그램 프로젝트를 엽니다 **새로 만들기** 에 **파일** 메뉴에서을 클릭 한 다음 **프로젝트**합니다. **새 프로젝트** 대화 상자가 나타납니다.  
   
-3.  선택 **Windows 응용 프로그램** Visual Basic 프로젝트 템플릿 목록에서. 새 프로젝트가 표시 됩니다.  
+3. 선택 **Windows 응용 프로그램** Visual Basic 프로젝트 템플릿 목록에서. 새 프로젝트가 표시 됩니다.  
   
-4.  다음 추가 `Declare` 클래스 또는 모듈 DLL을 사용 하려는 함수:  
+4. 다음 추가 `Declare` 클래스 또는 모듈 DLL을 사용 하려는 함수:  
   
      [!code-vb[VbVbalrInterop#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#9)]  
   
@@ -71,38 +71,38 @@ Windows Api는 Windows 운영 체제의 일부인 동적 연결 라이브러리 
   
 ###### <a name="to-declare-constants-for-windows-api-calls"></a>Windows API 호출에 대 한 상수를 선언 하려면  
   
-1.  Windows 함수를 호출 하는 설명서를 참조 하세요. 이러한 상수에 대 한 숫자 값이 포함 된.h 파일의 이름과 상수를 사용 하 여 이름을 확인 합니다.  
+1. Windows 함수를 호출 하는 설명서를 참조 하세요. 이러한 상수에 대 한 숫자 값이 포함 된.h 파일의 이름과 상수를 사용 하 여 이름을 확인 합니다.  
   
-2.  헤더 (.h) 파일의 내용을 보려면 메모장과 같은 텍스트 편집기를 사용 하 고 사용 하는 상수를 사용 하 여 연결 된 값을 찾습니다. 예를 들어 합니다 `MessageBox` 상수를 사용 하는 API `MB_ICONQUESTION` 물음표 메시지 상자에 표시할 합니다. 에 대 한 정의 `MB_ICONQUESTION` WinUser.h 이며 다음과 같이 나타납니다.  
+2. 헤더 (.h) 파일의 내용을 보려면 메모장과 같은 텍스트 편집기를 사용 하 고 사용 하는 상수를 사용 하 여 연결 된 값을 찾습니다. 예를 들어 합니다 `MessageBox` 상수를 사용 하는 API `MB_ICONQUESTION` 물음표 메시지 상자에 표시할 합니다. 에 대 한 정의 `MB_ICONQUESTION` WinUser.h 이며 다음과 같이 나타납니다.  
   
      `#define MB_ICONQUESTION             0x00000020L`  
   
-3.  해당 추가 `Const` 문을 클래스 또는 모듈 이러한 상수를 응용 프로그램에 사용할 수 있도록 합니다. 예를 들어:  
+3. 해당 추가 `Const` 문을 클래스 또는 모듈 이러한 상수를 응용 프로그램에 사용할 수 있도록 합니다. 예를 들어:  
   
      [!code-vb[VbVbalrInterop#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#11)]  
   
 ###### <a name="to-call-the-dll-procedure"></a>DLL 프로시저를 호출 하려면  
   
-1.  이라는 단추가 추가 `Button1` 시작 프로젝트를 만들어 해당 코드를 보려면 두 번 클릭 합니다. 단추에 대 한 이벤트 처리기 표시 됩니다.  
+1. 이라는 단추가 추가 `Button1` 시작 프로젝트를 만들어 해당 코드를 보려면 두 번 클릭 합니다. 단추에 대 한 이벤트 처리기 표시 됩니다.  
   
-2.  코드를 추가 하 여 `Click` 프로시저를 호출 하 고 적절 한 인수를 제공 하려면 추가한 단추에 대 한 이벤트 처리기:  
+2. 코드를 추가 하 여 `Click` 프로시저를 호출 하 고 적절 한 인수를 제공 하려면 추가한 단추에 대 한 이벤트 처리기:  
   
      [!code-vb[VbVbalrInterop#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#12)]  
   
-3.  F5 키를 눌러 프로젝트를 실행 합니다. 둘 다와 함께 하는 메시지가 표시 됩니다 **예** 하 고 **No** 응답 단추입니다. 둘 중 하나를 클릭 합니다.  
+3. F5 키를 눌러 프로젝트를 실행 합니다. 둘 다와 함께 하는 메시지가 표시 됩니다 **예** 하 고 **No** 응답 단추입니다. 둘 중 하나를 클릭 합니다.  
   
 #### <a name="data-marshaling"></a>데이터 마샬링  
  Visual Basic에는 자동으로 매개 변수 및 Windows API 호출에 대 한 반환 값의 데이터 형식 변환 하지만 사용할 수는 `MarshalAs` API 필요로 하는 관리 되지 않는 데이터 형식을 명시적으로 지정 하는 특성입니다. Interop 마샬링 하는 방법에 대 한 자세한 내용은 참조 하세요. [Interop 마샬링](../../../framework/interop/interop-marshaling.md)합니다.  
   
 ###### <a name="to-use-declare-and-marshalas-in-an-api-call"></a>API 호출에 선언 하 고 MarshalAs를 사용 하려면  
   
-1.  데이터 형식에 해당 인수, 호출 하려는 함수의 이름을 확인 하 고 값을 반환 합니다.  
+1. 데이터 형식에 해당 인수, 호출 하려는 함수의 이름을 확인 하 고 값을 반환 합니다.  
   
-2.  에 대 한 액세스를 간소화 하는 `MarshalAs` 특성을 추가 `Imports` 클래스 또는 모듈의 경우 다음 예제와 같이 코드의 맨 위에 문:  
+2. 에 대 한 액세스를 간소화 하는 `MarshalAs` 특성을 추가 `Imports` 클래스 또는 모듈의 경우 다음 예제와 같이 코드의 맨 위에 문:  
   
      [!code-vb[VbVbalrInterop#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#13)]  
   
-3.  클래스 또는 모듈을 사용 하 고 적용 하는 함수 프로토타입이 가져온된 함수를 추가 합니다 `MarshalAs` 매개 변수에 특성 또는 값을 반환 합니다. 다음 예에서 형식을 예상 하는 API 호출은 `void*` 으로 마샬링될 `AsAny`:  
+3. 클래스 또는 모듈을 사용 하 고 적용 하는 함수 프로토타입이 가져온된 함수를 추가 합니다 `MarshalAs` 매개 변수에 특성 또는 값을 반환 합니다. 다음 예에서 형식을 예상 하는 API 호출은 `void*` 으로 마샬링될 `AsAny`:  
   
      [!code-vb[VbVbalrInterop#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#14)]  
   
@@ -113,27 +113,27 @@ Windows Api는 Windows 운영 체제의 일부인 동적 연결 라이브러리 
   
 #### <a name="to-call-a-windows-api-using-the-dllimport-attribute"></a>DllImport 특성을 사용 하 여 Windows API를 호출 하려면  
   
-1.  클릭 하 여 새 Windows 응용 프로그램 프로젝트를 엽니다 **새로 만들기** 에 **파일** 메뉴에서을 클릭 한 다음 **프로젝트**합니다. **새 프로젝트** 대화 상자가 나타납니다.  
+1. 클릭 하 여 새 Windows 응용 프로그램 프로젝트를 엽니다 **새로 만들기** 에 **파일** 메뉴에서을 클릭 한 다음 **프로젝트**합니다. **새 프로젝트** 대화 상자가 나타납니다.  
   
-2.  선택 **Windows 응용 프로그램** Visual Basic 프로젝트 템플릿 목록에서. 새 프로젝트가 표시 됩니다.  
+2. 선택 **Windows 응용 프로그램** Visual Basic 프로젝트 템플릿 목록에서. 새 프로젝트가 표시 됩니다.  
   
-3.  이라는 단추가 추가 `Button2` 시작 폼입니다.  
+3. 이라는 단추가 추가 `Button2` 시작 폼입니다.  
   
-4.  두 번 클릭 `Button2` 폼의 코드 보기를 엽니다.  
+4. 두 번 클릭 `Button2` 폼의 코드 보기를 엽니다.  
   
-5.  에 대 한 액세스를 간소화 하기 위해 `DllImport`, 추가 `Imports` 시작 폼 클래스에 대 한 코드의 맨 위에 문:  
+5. 에 대 한 액세스를 간소화 하기 위해 `DllImport`, 추가 `Imports` 시작 폼 클래스에 대 한 코드의 맨 위에 문:  
   
      [!code-vb[VbVbalrInterop#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#13)]  
   
-6.  위의 빈 함수를 선언 합니다 `End Class` 폼 및 함수 이름에 대 한 문을 `MoveFile`합니다.  
+6. 위의 빈 함수를 선언 합니다 `End Class` 폼 및 함수 이름에 대 한 문을 `MoveFile`합니다.  
   
-7.  적용 된 `Public` 하 고 `Shared` 함수 선언 및 매개 변수를 설정 하는 한정자 `MoveFile` Windows API 함수를 사용 하 여 인수를 기준으로:  
+7. 적용 된 `Public` 하 고 `Shared` 함수 선언 및 매개 변수를 설정 하는 한정자 `MoveFile` Windows API 함수를 사용 하 여 인수를 기준으로:  
   
      [!code-vb[VbVbalrInterop#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#16)]  
   
      함수 이름에는 제한이 유효한 프로시저; `DllImport` 특성 DLL의 이름을 지정 합니다. 또한 상호 운용성 마샬링 매개 변수를 처리 하 고 반환 값, Visual Studio는 데이터 형식에 데이터와 유사한를 선택할 수 있습니다는 API가 사용 됩니다.  
   
-8.  적용 된 `DllImport` 빈 함수에 특성입니다. 첫 번째 매개 변수 이름 및 호출 하는 함수를 포함 하는 DLL의 위치입니다. Windows 시스템 디렉터리에 있는 파일의 경로를 지정할 필요가 없습니다. 두 번째 매개 변수는 Windows API에서 함수 이름을 지정 하는 명명 된 인수입니다. 이 예는 `DllImport` 특성에 대 한 호출을 강제로 `MoveFile` 전달할 `MoveFileW` KERNEL32에서. DLL입니다. 합니다 `MoveFileW` 메서드는 경로에서 파일을 복사 `src` 경로에 `dst`입니다.  
+8. 적용 된 `DllImport` 빈 함수에 특성입니다. 첫 번째 매개 변수 이름 및 호출 하는 함수를 포함 하는 DLL의 위치입니다. Windows 시스템 디렉터리에 있는 파일의 경로를 지정할 필요가 없습니다. 두 번째 매개 변수는 Windows API에서 함수 이름을 지정 하는 명명 된 인수입니다. 이 예는 `DllImport` 특성에 대 한 호출을 강제로 `MoveFile` 전달할 `MoveFileW` KERNEL32에서. DLL입니다. 합니다 `MoveFileW` 메서드는 경로에서 파일을 복사 `src` 경로에 `dst`입니다.  
   
      [!code-vb[VbVbalrInterop#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#17)]  
   

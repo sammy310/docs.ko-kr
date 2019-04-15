@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17530537e6d74b247aaf8708efed28ef169f9d57
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9d50ece4b800b77ac0447d1f22f1929f5a38a7d9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491248"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306393"
 ---
 # <a name="runtime-profiling"></a>런타임 프로파일링
 프로파일링은 모든 개발 또는 배포 시나리오에서 성능 데이터를 수집하는 방법입니다. 이 섹션은 애플리케이션 성능에 대한 정보를 수집하려는 개발자 및 시스템 관리자를 위한 것입니다.  
@@ -28,19 +28,19 @@ ms.locfileid: "54491248"
   
 #### <a name="to-run-perfmonexe-on-windows-vista-and-later-versions"></a>Windows Vista 이상 버전에서 Perfmon.exe를 실행하려면  
   
-1.  명령 프롬프트에서 **perfmon**를 입력합니다. **성능 모니터** 콘솔이 나타납니다.  
+1. 명령 프롬프트에서 **perfmon**를 입력합니다. **성능 모니터** 콘솔이 나타납니다.  
   
-2.  **모니터링 도구** 폴더에서 **성능 모니터**를 클릭합니다.  
+2. **모니터링 도구** 폴더에서 **성능 모니터**를 클릭합니다.  
   
-3.  성능 모니터 도구 모음에서 **추가** 아이콘(더하기 기호)이 있는 경우 클릭합니다. 아이콘이 없는 경우 모니터 창을 마우스 오른쪽 단추로 클릭하고 **카운터 추가** 옵션을 선택합니다.  
+3. 성능 모니터 도구 모음에서 **추가** 아이콘(더하기 기호)이 있는 경우 클릭합니다. 아이콘이 없는 경우 모니터 창을 마우스 오른쪽 단추로 클릭하고 **카운터 추가** 옵션을 선택합니다.  
   
      그러면 **카운터 추가** 대화 상자가 열립니다. **사용 가능한 카운터** 목록 상자에 사용 가능한 성능 개체가 표시됩니다. 메모리 관리(**.NET CLR 메모리**), 상호 운용성(**.NET CLR Interop**), 예외 처리(**.NET CLR 예외**) 및 다중 스레딩(**.NET CLR LocksAndThreads**)에 대한 개체를 비롯한 .NET Framework 애플리케이션에 대해 다수의 미리 정의된 개체가 있습니다. 각 성능 개체에는 많은 개별 성능 카운터가 포함됩니다. 성능 모니터에서 사용할 수 있는 성능 카운터 목록은 [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)이 함께 설치된 .NET Framework 성능 카운터의 데이터를 그래픽으로 표시합니다.  
   
-4.  지원되는 개별 성능 카운터의 목록을 보려면 성능 개체의 이름 옆에 있는 확인란을 선택합니다.  
+4. 지원되는 개별 성능 카운터의 목록을 보려면 성능 개체의 이름 옆에 있는 확인란을 선택합니다.  
   
-5.  보려는 성능 카운터를 클릭합니다.  
+5. 보려는 성능 카운터를 클릭합니다.  
   
-6.  **선택한 개체의 인스턴스** 목록 상자에서 **\<All instances>** 를 클릭하여 공용 언어 런타임에 대한 성능 카운터를 전역적으로(시스템 전체에서) 모니터링하도록 지정합니다.  
+6. **선택한 개체의 인스턴스** 목록 상자에서 **\<All instances>** 를 클릭하여 공용 언어 런타임에 대한 성능 카운터를 전역적으로(시스템 전체에서) 모니터링하도록 지정합니다.  
   
      -또는-  
   
@@ -67,4 +67,5 @@ ms.locfileid: "54491248"
 |<xref:System.Diagnostics.PerformanceCounterType?displayProperty=nameWithType>|`NextValue` 에 대한 `PerformanceCounter`메서드를 계산하는 수식을 지정합니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - [성능 카운터](../../../docs/framework/debug-trace-profile/performance-counters.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 713913fa046fc1bef12b8849ac82e4399a8dc534
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f1a0fff266e964b506b2dc7c4030caa54abaa5ed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577583"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171823"
 ---
 # <a name="corpropertyattr-enumeration"></a>CorPropertyAttr 열거형
 속성의 메타데이터를 설명하는 값을 포함합니다.  
@@ -47,7 +47,7 @@ typedef enum CorPropertyAttr {
 |`prSpecialName`|속성이 특별 하 고 이름과 설명 하는지 지정 하는 방법입니다.|  
 |`prReservedMask`|공용 언어 런타임에서 내부 용도로 예약 되어 있습니다.|  
 |`prRTSpecialName`|공용 언어 런타임 메타 데이터 내부 Api 인코딩을 확인 하도록 속성 이름을 지정 합니다.|  
-|`prHasDefault`|속성이 기본값을 갖도록 지정합니다.|  
+|`prHasDefault`|속성 기본값을 갖도록 지정 합니다.|  
 |`prUnused`|사용되지 않습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
@@ -58,4 +58,5 @@ typedef enum CorPropertyAttr {
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

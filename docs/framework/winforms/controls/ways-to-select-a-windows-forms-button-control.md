@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Button control [Windows Forms], selecting
 ms.assetid: fe2fc058-5118-4f70-b264-6147d64a7a8d
-ms.openlocfilehash: 86ef0da37ec35b991557af97a97bc9ca3da2d68c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f2881646a05d257044c6461f822a4c35a225f8c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717260"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223292"
 ---
 # <a name="ways-to-select-a-windows-forms-button-control"></a>Windows Forms Button 컨트롤 선택 방법
 다음과 같은 방법으로 Windows Forms 단추를 선택할 수 있습니다.  
@@ -29,6 +29,7 @@ ms.locfileid: "57717260"
 -   호출 된 <xref:System.Windows.Forms.Button.PerformClick%2A> 메서드를 프로그래밍 방식으로 단추를 선택 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Button 컨트롤 개요](button-control-overview-windows-forms.md)
 - [방법: Windows Forms 단추 클릭에 응답](how-to-respond-to-windows-forms-button-clicks.md)
 - [Button 컨트롤](button-control-windows-forms.md)

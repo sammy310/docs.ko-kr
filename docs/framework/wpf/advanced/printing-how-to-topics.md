@@ -5,12 +5,12 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: b17ebd3d9128bff40274d905606f1265afd0207d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d5652c1f52d7cee4921d0c6b50973b494458ecd2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367832"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170185"
 ---
 # <a name="printing-how-to-topics"></a>인쇄 방법 항목
 이 섹션의에서 항목에서는 인쇄를 사용 하는 방법을 보여 줍니다 및 인쇄 시스템 관리 기능에 포함 된 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 뿐만 아니라 새 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 인쇄 경로입니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "57367832"
  [인쇄 작업 문제 진단](how-to-diagnose-problematic-print-job.md)  
  인쇄 대기열 및 인쇄 작업의 속성을 사용 하 여 인쇄 되지 않는 인쇄 작업을 진단 하기 위한 지침입니다.  
   
- [인쇄 작업을 현재 인쇄할 수 있는지 확인](how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md)  
+ [특정 시간에 인쇄 작업을 인쇄할 수 있는지 확인](how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md)  
  인쇄할 수 작업이 인쇄 대기열 및 인쇄 작업의 속성을 사용 하 여 프로그래밍 방식으로 시간을 결정 하는 것에 대 한 지침입니다.  
   
  [인쇄 큐의 하위 집합 열거](how-to-enumerate-a-subset-of-print-queues.md)  
@@ -44,6 +44,7 @@ ms.locfileid: "57367832"
  인쇄 티켓을 유효 하 고는 요청 하지 않는지 프린터에서 지원 되지 않는 모든 항목을 확인 하기 위한 지침입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Printing>
 - <xref:System.Printing.IndexedProperties>
 - <xref:System.Printing.Interop>

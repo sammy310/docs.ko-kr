@@ -15,12 +15,12 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-ms.openlocfilehash: 9ec1a003d981db99bec20778790fa4a3507ad0b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b17f5a7167eb539e04a19db797bc1b0cc6c5eaa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587962"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295460"
 ---
 # <a name="internet-authentication"></a>인터넷 인증
 <xref:System.Net> 클래스는 표준 인터넷 인증 방법인 기본, 다이제스트, 협상, NTLM 및 Kerberos 인증뿐 아니라 직접 만들 수 있는 사용자 지정 방법을 포함한 다양한 클라이언트 인증 메커니즘을 지원합니다.  
@@ -33,13 +33,14 @@ ms.locfileid: "54587962"
   
  인터넷 리소스가 인증을 요청하면 <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType> 메서드는 <xref:System.Net.WebRequest>를 자격 증명 요청과 함께 **AuthenticationManager**에 보냅니다. 그러면 요청이 다음 프로세스에 따라 인증됩니다.  
   
-1.  **AuthenticationManager**는 각 등록된 인증 모듈에서 모듈이 등록된 순서대로 <xref:System.Net.IAuthenticationModule.Authenticate%2A> 메서드를 호출합니다. **AuthenticationManager**는 **null**을 반환하지 않는 첫 번째 모듈을 사용하여 인증 프로세스를 수행합니다. 프로세스 세부 정보는 관련된 인증 모듈 형식에 따라 달라집니다.  
+1. **AuthenticationManager**는 각 등록된 인증 모듈에서 모듈이 등록된 순서대로 <xref:System.Net.IAuthenticationModule.Authenticate%2A> 메서드를 호출합니다. **AuthenticationManager**는 **null**을 반환하지 않는 첫 번째 모듈을 사용하여 인증 프로세스를 수행합니다. 프로세스 세부 정보는 관련된 인증 모듈 형식에 따라 달라집니다.  
   
-2.  인증 프로세스가 완료되면 인증 모듈은 <xref:System.Net.Authorization>을 인터넷 리소스에 액세스하는 데 필요한 정보가 포함된 **WebRequest**에 반환합니다.  
+2. 인증 프로세스가 완료되면 인증 모듈은 <xref:System.Net.Authorization>을 인터넷 리소스에 액세스하는 데 필요한 정보가 포함된 **WebRequest**에 반환합니다.  
   
  일부 인증 체계에서는 리소스에 대한 요청을 먼저 만들지 않고 사용자를 인증할 수 있습니다. 애플리케이션은 리소스에서 사용자를 사전 인증하여 서버에 대한 하나 이상의 왕복을 제거하는 방식으로 시간을 단축할 수 있습니다. 또는 나중에 사용자에게 더 빨리 응답할 수 있도록 프로그램 시작 중에 인증을 수행할 수 있습니다. 사전 인증을 사용하는 인증 체계는 <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> 속성을 **true**로 설정합니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [기본 인증 및 다이제스트 인증](../../../docs/framework/network-programming/basic-and-digest-authentication.md)
 - [NTLM 및 Kerberos 인증](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)
 - [네트워크 프로그래밍의 보안](../../../docs/framework/network-programming/security-in-network-programming.md)

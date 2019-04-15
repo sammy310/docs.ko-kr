@@ -9,20 +9,19 @@ helpviewer_keywords:
 - decision structures [Visual Basic]
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
-ms.openlocfilehash: 20b60fb425278dacb56ee5f888967554a1f76aeb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4a76b2565c343e69ac3c11441035a7682a8f08ec
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825380"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318938"
 ---
 # <a name="decision-structures-visual-basic"></a>판단 구조(Visual Basic)
 Visual Basic을 사용 하 여 조건을 테스트 하 고 해당 테스트의 결과 따라 다른 작업을 수행할 수 있습니다. True 또는 false 이면 식의 다양 한 값 또는 일련의 문 실행할 때 생성 되는 다양 한 예외에 대 한 조건을 테스트할 수 있습니다.  
   
  다음 그림에서는 조건이 true 인지 테스트 하 고 true 또는 false 인지에 따라 다른 작업을 수행 하는 의사 결정 구조를 보여 줍니다.  
   
- ![If의 순서도 중... 다음 중... 다른 생성](../../../../visual-basic/programming-guide/language-features/control-flow/media/ifthenelse.gif "IfThenElse")  
-조건이 true 및 false 하는 경우 다른 작업을 수행 합니다.  
+ ![순서도 경우... 다음 중... 다른 구문을 사용 합니다.](./media/decision-structures/if-then-else-construction.gif)  
   
 ## <a name="ifthenelse-construction"></a>다음과 같은 경우... 다음 중... 다른 생성  
  `If...Then...Else` 생성을 사용 하 여 하나 이상의 조건을 테스트 하 고 각 조건에 따라 하나 이상의 문을 실행할 수 있습니다. 조건을 테스트 하 고 다음과 같은 방법으로 작업을 수행할 수 있습니다.  
@@ -49,7 +48,7 @@ Visual Basic을 사용 하 여 조건을 테스트 하 고 해당 테스트의 �
 ## <a name="see-also"></a>참고자료
 
 - [제어 흐름](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
-- [루프 구조](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
-- [기타 제어 구조](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
-- [중첩 제어 구조](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
+- [루프 구조체](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [기타 제어 구조체](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
+- [중첩 제어 구조체](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
 - [If 연산자](../../../../visual-basic/language-reference/operators/if-operator.md)

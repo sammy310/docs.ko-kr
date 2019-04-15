@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
-ms.openlocfilehash: b56a421dd7b34bf006e1e6609bbb8ecc5f56e0bf
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9621f6a01ef4e30bf34b97df3d2c3033e9b62a23
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971262"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316026"
 ---
 # <a name="how-to-use-the-my-namespace-c-programming-guide"></a>방법: My 네임스페이스 사용(C# 프로그래밍 가이드)
 <xref:Microsoft.VisualBasic.MyServices> 네임스페이스(Visual Basic의 `My`)는 .NET Framework 클래스에 대한 쉽고 직관적인 액세스를 제공하여 컴퓨터, 애플리케이션, 설정, 리소스 등을 조작하는 코드를 작성할 수 있게 해줍니다. 원래 Visual Basic에서 사용하도록 설계되었지만 `MyServices` 네임스페이스는 C# 애플리케이션에서 사용할 수 있습니다.  
@@ -22,9 +22,9 @@ ms.locfileid: "56971262"
   
 #### <a name="to-add-a-reference-to-the-visual-basic-library"></a>Visual Basic 라이브러리에 대한 참조를 추가하려면  
   
-1.  **솔루션 탐색기**에서 **참조** 노드를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 선택합니다.  
+1. **솔루션 탐색기**에서 **참조** 노드를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 선택합니다.  
   
-2.  **참조** 대화 상자가 나타나면 목록 아래로 스크롤한 다음 Microsoft.VisualBasic.dll을 선택합니다.  
+2. **참조** 대화 상자가 나타나면 목록 아래로 스크롤한 다음 Microsoft.VisualBasic.dll을 선택합니다.  
   
      프로그램의 시작 부분에 있는 `using` 섹션에 다음 줄을 포함할 수도 있습니다.  
   

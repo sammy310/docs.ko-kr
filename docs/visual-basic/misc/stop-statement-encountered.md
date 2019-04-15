@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID999
 ms.assetid: 4ef7216c-761a-41dc-a20c-ba133f4f1d18
-ms.openlocfilehash: 0b30331ec01cb159ea3aaab0b914e9c86551eae0
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 32c7b9b18ca35f199ded45f650a72bfbb8434217
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58022352"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340453"
 ---
 # <a name="stop-statement-encountered"></a>Stop 문을 발견했습니다.
 실행을 중지하는 `Stop` 문을 발견했습니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-1.  `Stop` 문을 제거합니다.  
+1. `Stop` 문을 제거합니다.  
   
 ## <a name="see-also"></a>참고자료
 

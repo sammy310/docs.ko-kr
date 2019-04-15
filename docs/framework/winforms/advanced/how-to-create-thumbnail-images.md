@@ -1,5 +1,5 @@
 ---
-title: '방법: 축소판 이미지 만들기'
+title: '방법: 썸네일 이미지 만들기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: 3ed1fb6a9a7fc8e7ded6ae0e124ca7dcbf0f3c98
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b9afbac85dee90938e2bd55ebe19d3b02c0d66d5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716961"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341493"
 ---
-# <a name="how-to-create-thumbnail-images"></a>방법: 축소판 이미지 만들기
+# <a name="how-to-create-thumbnail-images"></a>방법: 썸네일 이미지 만들기
 축소판 그림 이미지를 이미지의 작은 버전이 있습니다. 호출 하 여 썸네일 이미지를 만들 수 있습니다 합니다 <xref:System.Drawing.Image.GetThumbnailImage%2A> 메서드는 <xref:System.Drawing.Image> 개체입니다.  
   
 ## <a name="example"></a>예제  
@@ -34,22 +34,23 @@ ms.locfileid: "57716961"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`가 필요합니다. 예제를 실행 하려면 다음이 단계를 수행 합니다.  
   
-1.  새 Windows Forms 애플리케이션을 만듭니다.  
+1. 새 Windows Forms 애플리케이션을 만듭니다.  
   
-2.  예제 코드를 양식에 추가 합니다.  
+2. 예제 코드를 양식에 추가 합니다.  
   
-3.  폼에 대 한 처리기를 만들고 <xref:System.Windows.Forms.Control.Paint> 이벤트  
+3. 폼에 대 한 처리기를 만들고 <xref:System.Windows.Forms.Control.Paint> 이벤트  
   
-4.  에 <xref:System.Windows.Forms.Control.Paint> 처리기를 호출 합니다 `GetThumbnail` 메서드와 전달 `e` 에 대 한 <xref:System.Windows.Forms.PaintEventArgs>합니다.  
+4. 에 <xref:System.Windows.Forms.Control.Paint> 처리기를 호출 합니다 `GetThumbnail` 메서드와 전달 `e` 에 대 한 <xref:System.Windows.Forms.PaintEventArgs>합니다.  
   
-5.  미리 보기를 확인 하려는 이미지 파일을 찾습니다.  
+5. 미리 보기를 확인 하려는 이미지 파일을 찾습니다.  
   
-6.  에 `GetThumbnail` 메서드, 경로 지정 하 고 파일 이름 이미지입니다.  
+6. 에 `GetThumbnail` 메서드, 경로 지정 하 고 파일 이름 이미지입니다.  
   
-7.  F5 키를 눌러 예제를 실행 합니다.  
+7. F5 키를 눌러 예제를 실행 합니다.  
   
      100 여 100 축소판 그림 이미지를 폼에 표시 됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [이미지, 비트맵 및 메타파일](images-bitmaps-and-metafiles.md)
 - [이미지, 비트맵, 아이콘 및 메타파일 사용](working-with-images-bitmaps-icons-and-metafiles.md)

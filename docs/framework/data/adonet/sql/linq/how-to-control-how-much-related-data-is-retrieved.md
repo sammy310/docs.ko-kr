@@ -1,18 +1,18 @@
 ---
-title: '방법: 검색 되는 관련된 데이터의 양을 제어합니다'
+title: '방법: 관련 데이터의 검색 양 제어'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: efdc203e-3da9-4477-815e-54f10c3d7c6c
-ms.openlocfilehash: 3b52e2cdefefce011be7d729569b76f919f9bb33
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd59c09185eab003274614dcc30393b060e6b7c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715610"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215445"
 ---
-# <a name="how-to-control-how-much-related-data-is-retrieved"></a>방법: 검색 되는 관련된 데이터의 양을 제어합니다
+# <a name="how-to-control-how-much-related-data-is-retrieved"></a>방법: 관련 데이터의 검색 양 제어
 <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> 메서드를 사용하여 동시에 검색되어야 하는 주 대상과 관련된 데이터를 지정합니다. 예를 들어 고객 주문에 대한 정보가 필요한 경우 <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>를 사용하여 주문 정보와 고객 정보가 검색되었는지 확인합니다. 이 접근 방법은 두 가지 정보에 대한 데이터베이스에서 원트립만의 결과입니다.  
   
 > [!NOTE]
@@ -25,4 +25,5 @@ ms.locfileid: "54715610"
  [!code-vb[System.Data.Linq.DataLoadOptions#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.dataloadoptions/vb/module1.vb#2)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [데이터베이스 쿼리](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 805ffd7f-8d1e-427e-a648-601ca8ec37a5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d75911c2087370cb9313c6694ce2630b80e635a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f81af76ed305fb614202c240e449adc62b310933
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686038"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189939"
 ---
 # <a name="mitigation-wpf-layout"></a>완화: WPF 레이아웃
 WPF 컨트롤의 레이아웃은 약간 변경될 수 있습니다.  
@@ -39,4 +39,5 @@ WPF 컨트롤의 레이아웃은 약간 변경될 수 있습니다.
 ```  
   
 ## <a name="see-also"></a>참고 항목
+
 - [대상 다시 지정 변경 내용](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)

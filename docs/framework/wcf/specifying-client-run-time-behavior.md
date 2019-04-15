@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-ms.openlocfilehash: 2f6879f5e46e62db29e482444d55680d39dd8ccc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f750978eaa617a5505bb27a1535797320a76b0d4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587179"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164374"
 ---
 # <a name="specifying-client-run-time-behavior"></a>클라이언트 런타임 동작 지정
 클라이언트 응용 프로그램에 맞게 런타임 동작을 수정 하려면 Windows Communication Foundation (WCF) 서비스와 마찬가지로 Windows Communication Foundation (WCF) 클라이언트를 구성할 수 있습니다. 세 가지 특성을 사용하여 클라이언트 런타임 동작을 지정할 수 있습니다. 이중 클라이언트 콜백 개체는 <xref:System.ServiceModel.CallbackBehaviorAttribute> 및 <xref:System.ServiceModel.Description.CallbackDebugBehavior> 특성을 사용하여 런타임 동작을 수정할 수 있습니다. 다른 특성인 <xref:System.ServiceModel.Description.ClientViaBehavior>는 논리 대상과 직접 네트워크 대상을 구분하는 데 사용할 수 있습니다. 또한 이중 클라이언트 콜백 형식은 서비스측 동작 중 일부를 사용할 수 있습니다. 자세한 내용은 [서비스 런타임 동작 지정](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)합니다.  
@@ -44,4 +44,5 @@ ms.locfileid: "54587179"
  <xref:System.ServiceModel.Description.ClientViaBehavior> 동작을 사용하여 전송 채널을 만들어야 하는 Uniform Resource Identifier를 지정할 수 있습니다. 직접 네트워크 대상이 메시지의 의도된 프로세서가 아닌 경우 이 동작을 사용합니다. 이 경우 호출 응용 프로그램에서 최종 대상을 알 필요가 없거나 대상 `Via` 헤더가 주소가 아닌 경우에 다중 홉 대화가 가능합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [서비스 런타임 동작 지정](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

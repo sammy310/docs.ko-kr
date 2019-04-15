@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, drag and drop operations
 - drag and drop [Windows Forms], Windows Forms
 ms.assetid: eb66f6bf-4a7d-4c2d-b276-40fefb2d3b6c
-ms.openlocfilehash: 664c78ce3fff9651acf6ad720360cdb077f23108
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f7551f28d07c9517865f60af99954eb40e57daa2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715245"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340726"
 ---
 # <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>연습: Windows Forms에서 끌어서 놓기 작업 수행
 Windows 기반 응용 프로그램 내에서 끌어서 놓기 작업을 수행 하는 일련의 이벤트를 가장 주목할 만한 처리 해야 합니다 <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, 및 <xref:System.Windows.Forms.Control.DragDrop> 이벤트입니다. 이러한 이벤트의 이벤트 인수에서 제공하는 정보를 사용하면 끌어서 놓기 작업을 쉽게 구현할 수 있습니다.  
@@ -28,7 +28,7 @@ Windows 기반 응용 프로그램 내에서 끌어서 놓기 작업을 수행 �
   
 #### <a name="to-start-a-drag-operation"></a>끌기 작업을 시작하려면  
   
-1.  에 <xref:System.Windows.Forms.Control.MouseDown> 끌기를 시작할를 사용 하 여 컨트롤에 대 한 이벤트를 `DoDragDrop` 끌 수 데이터를 설정 하는 방법 및 끌기 효과 허용된 해야 합니다. 자세한 내용은 <xref:System.Windows.Forms.DragEventArgs.Data%2A> 및 <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A>를 참조하세요.  
+1. 에 <xref:System.Windows.Forms.Control.MouseDown> 끌기를 시작할를 사용 하 여 컨트롤에 대 한 이벤트를 `DoDragDrop` 끌 수 데이터를 설정 하는 방법 및 끌기 효과 허용된 해야 합니다. 자세한 내용은 <xref:System.Windows.Forms.DragEventArgs.Data%2A> 및 <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A>를 참조하세요.  
   
      다음 예제에서는 끌기 작업을 시작하는 방법을 보여 줍니다. 끌기 시작 되는 컨트롤은는 <xref:System.Windows.Forms.Button> 컨트롤을 끌고 있는 데이터를 나타내는 문자열이 <xref:System.Windows.Forms.Control.Text%2A> 의 속성은 <xref:System.Windows.Forms.Button> 제어 및 허용 되는 효과 복사 또는 이동 합니다.  
   
@@ -57,9 +57,9 @@ Windows 기반 응용 프로그램 내에서 끌어서 놓기 작업을 수행 �
   
 #### <a name="to-perform-a-drop"></a>놓기 작업을 수행하려면  
   
-1.  설정 된 <xref:System.Windows.Forms.Control.AllowDrop%2A> 속성을 true로 합니다.  
+1. 설정 된 <xref:System.Windows.Forms.Control.AllowDrop%2A> 속성을 true로 합니다.  
   
-2.  에 `DragEnter` 놓기 작업이 발생 하는 컨트롤에 대 한 이벤트 끌고 있는 데이터 형식이 적합 한지 확인 (이 예제의 경우 <xref:System.Windows.Forms.Control.Text%2A>). 코드에 설정한 값으로 발생 하는 효과 <xref:System.Windows.Forms.DragDropEffects> 열거형입니다. 자세한 내용은 <xref:System.Windows.Forms.DragEventArgs.Effect%2A>을 참조하세요.  
+2. 에 `DragEnter` 놓기 작업이 발생 하는 컨트롤에 대 한 이벤트 끌고 있는 데이터 형식이 적합 한지 확인 (이 예제의 경우 <xref:System.Windows.Forms.Control.Text%2A>). 코드에 설정한 값으로 발생 하는 효과 <xref:System.Windows.Forms.DragDropEffects> 열거형입니다. 자세한 내용은 <xref:System.Windows.Forms.DragEventArgs.Effect%2A>을 참조하세요.  
   
     ```vb  
     Private Sub TextBox1_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles TextBox1.DragEnter  
@@ -85,7 +85,7 @@ Windows 기반 응용 프로그램 내에서 끌어서 놓기 작업을 수행 �
     > [!NOTE]
     >  사용자 고유의 정의할 수 있습니다 <xref:System.Windows.Forms.DataFormats> 으로 고유한 개체를 지정 하 여는 <xref:System.Object> 의 매개 변수는 <xref:System.Windows.Forms.DataObject.SetData%2A> 메서드. 이 작업을 수행할 때 지정된 개체는 직렬화(serialize)할 수 있어야 합니다. 자세한 내용은 <xref:System.Runtime.Serialization.ISerializable>을 참조하세요.  
   
-3.  에 <xref:System.Windows.Forms.Control.DragDrop> 놓기 작업이 발생 하는 여기서 사용 하 여 컨트롤에 대 한 이벤트를 <xref:System.Windows.Forms.DataObject.GetData%2A> 끌고 있는 데이터를 검색 하는 방법입니다. 자세한 내용은 <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>을 참조하세요.  
+3. 에 <xref:System.Windows.Forms.Control.DragDrop> 놓기 작업이 발생 하는 여기서 사용 하 여 컨트롤에 대 한 이벤트를 <xref:System.Windows.Forms.DataObject.GetData%2A> 끌고 있는 데이터를 검색 하는 방법입니다. 자세한 내용은 <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>을 참조하세요.  
   
      아래 예제에서는 <xref:System.Windows.Forms.TextBox> 컨트롤은 컨트롤 (놓기 작업이 발생 하는 위치) 위치로 끌 합니다. 코드 집합을 <xref:System.Windows.Forms.Control.Text%2A> 속성의는 <xref:System.Windows.Forms.TextBox> 끌고 있는 데이터 컨트롤입니다.  
   
@@ -107,6 +107,7 @@ Windows 기반 응용 프로그램 내에서 끌어서 놓기 작업을 수행 �
     >  또한 작업할 수 있습니다는 <xref:System.Windows.Forms.DragEventArgs.KeyState%2A> 속성인을 끌어서 놓기 작업 중에 누른 키에 따라 특정 효과가 발생 (예를 들어, 것이 표준 CTRL 키를 누를 때 끌어온된 데이터를 복사 하려면).  
   
 ## <a name="see-also"></a>참고자료
+
 - [방법: 클립보드에 데이터 추가](how-to-add-data-to-the-clipboard.md)
 - [방법: 클립보드에서 데이터 검색](how-to-retrieve-data-from-the-clipboard.md)
 - [끌어서 놓기 작업 및 클립보드 지원](drag-and-drop-operations-and-clipboard-support.md)

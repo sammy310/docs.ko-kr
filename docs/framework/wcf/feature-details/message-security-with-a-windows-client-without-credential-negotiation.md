@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-ms.openlocfilehash: 6b4414d56e22646e057e6b1999e15722244deda4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 43bc222bb69aafa3fa3492d79d35fbc492055ead
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59075171"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344834"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>자격 증명 협상 없이 Windows 클라이언트를 사용하는 메시지 보안
 다음 시나리오에는 Windows Communication Foundation (WCF) 클라이언트 및 Kerberos 프로토콜에 의해 보호 되는 서비스를 보여 줍니다.  
@@ -46,9 +46,9 @@ ms.locfileid: "59075171"
 > [!NOTE]
 >  Windows 자격 증명 형식을 협상 없이 사용하려면 서비스의 사용자 계정이 Active Directory 도메인에 등록된 SPN(서비스 사용자 이름)에 대한 액세스 권한이 있어야 합니다. 이 작업은  
   
-1.  `NetworkService` 또는 `LocalSystem` 계정을 사용하여 서비스를 실행합니다. WCF는 서비스의 메타 데이터 (웹 서비스 설명에서에서 끝점 서비스의 적절 한 SPN 요소를 자동으로 생성 이러한 계정이 컴퓨터 시스템을 Active Directory 도메인에 연결할 때 설정 된 SPN에 대 한 액세스를 수, 있으므로 언어 또는 WSDL)입니다.  
+1. `NetworkService` 또는 `LocalSystem` 계정을 사용하여 서비스를 실행합니다. WCF는 서비스의 메타 데이터 (웹 서비스 설명에서에서 끝점 서비스의 적절 한 SPN 요소를 자동으로 생성 이러한 계정이 컴퓨터 시스템을 Active Directory 도메인에 연결할 때 설정 된 SPN에 대 한 액세스를 수, 있으므로 언어 또는 WSDL)입니다.  
   
-2.  임의의 Active Directory 도메인 계정을 사용하여 서비스를 실행합니다. 이 경우 해당 도메인 계정에 대한 SPN을 설정해야 합니다. 그렇게 하는 한 가지 방법으로 Setspn.exe 유틸리티 도구를 사용합니다. SPN이 만들어지면 서비스의 계정에 대 한 메타 데이터 (WSDL)를 통해 서비스 클라이언트에 SPN을 게시 하는 WCF를 구성 합니다. 이 작업은 응용 프로그램 구성 파일이나 코드를 통해 노출된 엔드포인트에 대한 엔드포인트 ID를 설정하여 수행합니다. 다음 예제에서는 ID를 프로그래밍 방식으로 게시합니다.  
+2. 임의의 Active Directory 도메인 계정을 사용하여 서비스를 실행합니다. 이 경우 해당 도메인 계정에 대한 SPN을 설정해야 합니다. 그렇게 하는 한 가지 방법으로 Setspn.exe 유틸리티 도구를 사용합니다. SPN이 만들어지면 서비스의 계정에 대 한 메타 데이터 (WSDL)를 통해 서비스 클라이언트에 SPN을 게시 하는 WCF를 구성 합니다. 이 작업은 응용 프로그램 구성 파일이나 코드를 통해 노출된 엔드포인트에 대한 엔드포인트 ID를 설정하여 수행합니다. 다음 예제에서는 ID를 프로그래밍 방식으로 게시합니다.  
   
  Spn에 대 한 자세한 정보, Kerberos 프로토콜 및 Active Directory에 대 한 참조 [Kerberos 기술 보완에 대 한 Windows](https://go.microsoft.com/fwlink/?LinkId=88330)합니다. 끝점 id에 대 한 자세한 내용은 참조 하세요. [SecurityBindingElement 인증 모드](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)합니다.  
   

@@ -2,21 +2,21 @@
 title: WCF 오류 처리
 ms.date: 03/30/2017
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
-ms.openlocfilehash: 4fad317d8cb696b29d9c8e4e4d8209abc28410f8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d70edacd2447fbe0b0b6db42b93f699ce7c17003
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47235363"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306289"
 ---
 # <a name="wcf-error-handling"></a>WCF 오류 처리
 WCF 응용 프로그램에서 발생하는 오류는 다음 세 그룹 중 하나에 속합니다.  
   
-1.  통신 오류  
+1. 통신 오류  
   
-2.  프록시/채널 오류  
+2. 프록시/채널 오류  
   
-3.  응용 프로그램 오류  
+3. 응용 프로그램 오류  
   
  네트워크를 사용할 수 없거나, 클라이언트가 잘못된 주소를 사용하거나, 서비스 호스트가 들어오는 메시지를 수신하고 있지 않은 경우 통신 오류가 발생합니다. 이러한 유형의 오류는 클라이언트에 <xref:System.ServiceModel.CommunicationException> 또는 <xref:System.ServiceModel.CommunicationException> 파생 클래스로 반환됩니다.  
   
@@ -47,4 +47,4 @@ WCF 응용 프로그램에서 발생하는 오류는 다음 세 그룹 중 하�
   
 2. <xref:System.ServiceModel.ServiceHostBase.UnknownMessageReceived>
   
- 자세한 내용은 <xref:System.ServiceModel.ServiceHost>을 참조하세요.
+ 자세한 내용은 다음 항목을 참조하세요. <xref:System.ServiceModel.ServiceHost>

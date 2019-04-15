@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.openlocfilehash: adda1bd1f16a43087d43382f9b7476856f4bc5c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 864a9072b38054557b2583f505e6e7827c02d2de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692706"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180754"
 ---
 # <a name="handling-dataadapter-events"></a>DataAdapter 이벤트 처리
 ADO.NET <xref:System.Data.Common.DataAdapter>는 데이터 소스의 데이터가 변경되었을 때 응답하는 데 사용할 수 있는 세 가지 이벤트를 제공합니다. 다음 표에서는 `DataAdapter` 이벤트를 보여 줍니다.  
   
-|Event|설명|  
+|이벤트(event)|설명|  
 |-----------|-----------------|  
 |`RowUpdating`|`Update` 메서드 중 하나를 호출하여 행에 대해 UPDATE, INSERT 또는 DELETE 작업을 시작하려고 합니다.|  
 |`RowUpdated`|`Update` 메서드 중 하나를 호출하여 행에 대한 UPDATE, INSERT 또는 DELETE 작업을 완료합니다.|  
 |`FillError`|`Fill` 작업 중에 오류가 발생했습니다.|  
   
 ## <a name="rowupdating-and-rowupdated"></a>RowUpdating 및 RowUpdated  
- `RowUpdating`은 <xref:System.Data.DataSet>의 행 업데이트가 데이터 소스에서 처리되기 전에 발생합니다. `RowUpdated`는 `DataSet`의 행 업데이트가 데이터 소스에서 처리된 후에 발생합니다. 결과적으로 `RowUpdating`을 사용하면 업데이트가 발생하기 전에 업데이트 동작을 수정하거나, 업데이트가 발생할 경우 추가 처리 방법을 제공하거나, 업데이트된 행에 대한 참조를 유지하거나, 현재 업데이트를 취소하고 일괄 프로세스로 나중에 처리하도록 예약하는 것과 같은 작업을 수행할 수 있습니다. `RowUpdated`는 업데이트 중에 발생하는 오류와 예외에 응답하는 데 유용합니다. 재시도 논리 등은 물론이고 오류 정보도 `DataSet`에 추가할 수 있습니다.  
+ `RowUpdating` 행 업데이트 되기 전에 발생 합니다 <xref:System.Data.DataSet> 데이터 소스에서 처리 되었습니다. `RowUpdated` 행 업데이트가 된 후 발생 합니다 `DataSet` 데이터 소스에서 처리 되었습니다. 결과적으로 `RowUpdating`을 사용하면 업데이트가 발생하기 전에 업데이트 동작을 수정하거나, 업데이트가 발생할 경우 추가 처리 방법을 제공하거나, 업데이트된 행에 대한 참조를 유지하거나, 현재 업데이트를 취소하고 일괄 프로세스로 나중에 처리하도록 예약하는 것과 같은 작업을 수행할 수 있습니다. `RowUpdated` 오류 및 업데이트 하는 동안 발생 하는 예외에 응답 하는 데 유용 합니다. 재시도 논리 등은 물론이고 오류 정보도 `DataSet`에 추가할 수 있습니다.  
   
  <xref:System.Data.Common.RowUpdatingEventArgs> 및 <xref:System.Data.Common.RowUpdatedEventArgs> 이벤트로 전달되는 `RowUpdating` 및 `RowUpdated` 인수에는 업데이트를 수행하는 데 사용되는 `Command` 개체를 참조하는 `Command` 속성, 업데이트된 정보가 포함된 `Row` 개체를 참조하는 `DataRow` 속성, 수행되는 업데이트 형식을 나타내는 `StatementType` 속성, `TableMapping` 속성(해당되는 경우) 및 작업의 `Status` 속성이 있습니다.  
   
@@ -37,7 +37,7 @@ ADO.NET <xref:System.Data.Common.DataAdapter>는 데이터 소스의 데이터�
   
  `Status` 속성을 `ErrorsOccurred`로 설정하면 예외가 throw됩니다. `Errors` 속성을 설정하면 원하는 예외를 throw하도록 제어할 수 있습니다. `Status`에 대해 다른 값 중 하나를 사용하면 예외가 throw되지 않습니다.  
   
- 또한 `ContinueUpdateOnError` 속성을 사용하여 업데이트된 행의 오류를 처리할 수 있습니다. `true``DataAdapter.ContinueUpdateOnError`가 `RowError`인 경우 행을 업데이트한 결과로 예외가 throw되면 예외 텍스트가 특정 행의  정보에 배치되고 예외가 throw되지 않은 상태에서 계속 처리됩니다. 이렇게 하면 오류 발생 시 이에 응답할 수 있도록 하는 `RowUpdated``Update`와는 달리, 가 완료될 때 오류에 응답할 수 있습니다.  
+ 또한 `ContinueUpdateOnError` 속성을 사용하여 업데이트된 행의 오류를 처리할 수 있습니다.   `DataAdapter.ContinueUpdateOnError`가 `true`인 경우 행을 업데이트한 결과로 예외가 throw되면 예외 텍스트가 특정 행의 `RowError` 정보에 배치되고 예외가 throw되지 않은 상태에서 계속 처리됩니다. 이렇게 하면 오류 발생 시 이에 응답할 수 있도록 하는 `RowUpdated``Update`와는 달리, 가 완료될 때 오류에 응답할 수 있습니다.  
   
  다음 코드 샘플에서는 이벤트 처리기를 추가 및 제거하는 방법을 보여 줍니다. `RowUpdating` 이벤트 처리기는 타임스탬프를 사용하여 삭제된 모든 레코드의 로그를 기록합니다. `RowUpdated` 이벤트 처리기에 대 한 오류 정보를 추가 합니다 `RowError` 속성에 있는 행의는 `DataSet`, 예외를 표시 하지 않습니다 및 처리를 계속 (의 동작을 미러링 `ContinueUpdateOnError`  =  `true`).  
   
@@ -127,7 +127,7 @@ protected static void OnRowUpdated(
 ## <a name="fillerror"></a>FillError  
  `FillError``DataAdapter`는 `Fill` 작업 중에 오류가 발생하면  이벤트를 발생시킵니다. 이런 형식의 오류는 추가 중인 행의 데이터를 정밀도의 손실 없이 .NET Framework 형식으로 변환할 수 없을 때 흔히 발생합니다.  
   
- `DataTable``Fill` 작업 중에 오류가 발생하면 현재 행이 에 추가되지 않습니다. `Fill``FillError` 이벤트를 사용하여 오류를 해결하고 행을 추가하거나, 제외된 행을 무시하고  작업을 계속할 수 있습니다.  
+ `DataTable``Fill` 작업 중에 오류가 발생하면 현재 행이 에 추가되지 않습니다. `FillError` 이벤트를 사용하여 오류를 해결하고 행을 추가하거나, 제외된 행을 무시하고 `Fill` 작업을 계속할 수 있습니다.  
   
  `FillError``FillErrorEventArgs` 이벤트에 전달된 에는 오류에 응답하고 오류를 해결할 수 있는 몇 가지 속성이 포함될 수 있습니다. 다음 표에서는 `FillErrorEventArgs` 개체의 속성을 보여 줍니다.  
   
@@ -136,7 +136,7 @@ protected static void OnRowUpdated(
 |`Errors`|발생한 `Exception`입니다.|  
 |`DataTable`|오류가 발생했을 때 채워지고 있던 `DataTable` 개체입니다.|  
 |`Values`|오류가 발생했을 때 추가되고 있던 행의 값을 포함하는 개체 배열입니다. `Values` 배열의 서수 참조는 추가되고 있던 행의 열에 대한 서수 참조에 해당합니다. 예를 들어, `Values[0]`은 행의 첫째 열로 추가되고 있던 값입니다.|  
-|`Continue`|예외를 throw할 것인지 여부를 선택하도록 합니다. `false``Continue` 속성을 `Fill`로 설정하면 현재  작업이 중단되고 예외가 throw됩니다. `true``Continue`를 `Fill`로 설정하면 오류가 발생하더라도  작업이 계속됩니다.|  
+|`Continue`|예외를 throw할 것인지 여부를 선택하도록 합니다. `false``Continue` 속성을 `Fill`로 설정하면 현재  작업이 중단되고 예외가 throw됩니다.   `Continue`를 `true`로 설정하면 오류가 발생하더라도 `Fill` 작업이 계속됩니다.|  
   
  다음 코드 예제에서는 `FillError`의 `DataAdapter` 이벤트에 이벤트 처리기를 추가합니다. 이 예제에서는 `FillError` 이벤트 코드에서 정밀도가 손실될 가능성이 있는지 확인하여 예외에 응답할 수 있도록 합니다.  
   
@@ -187,8 +187,9 @@ protected static void FillError(object sender, FillErrorEventArgs args)
 ```  
   
 ## <a name="see-also"></a>참고자료
-- [DataAdapter 및 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [데이터 집합 이벤트 처리](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
+
+- [DataAdapters 및 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [데이터 세트 이벤트 처리](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
 - [DataTable 이벤트 처리](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
 - [이벤트](../../../../docs/standard/events/index.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

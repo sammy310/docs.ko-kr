@@ -9,12 +9,12 @@ helpviewer_keywords:
 - optionexplicit compiler option [Visual Basic]
 - -optionexplicit compiler option [Visual Basic]
 ms.assetid: 5d296ab3-bafe-4c4d-9887-78f162ed86c7
-ms.openlocfilehash: 4aca6e9c20dbce7aa8a94067c96fcf44329a6fe4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 54d438541e8840e4394b24b20b4f394ff8cdb820
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814876"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332393"
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
 컴파일러에서 오류를 보고 사용 하기 전에 선언 되지 않은 경우.  
@@ -34,11 +34,11 @@ ms.locfileid: "58814876"
   
 ### <a name="to-set--optionexplicit-in-the-visual-studio-ide"></a>-Optionexplicit Visual Studio IDE에서 설정 하려면  
   
-1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.   
+1. **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.   
   
-2.  **컴파일** 탭을 클릭합니다.  
+2. **컴파일** 탭을 클릭합니다.  
   
-3.  값을 수정 합니다 **Option Explicit** 상자입니다.  
+3. 값을 수정 합니다 **Option Explicit** 상자입니다.  
   
 ## <a name="example"></a>예제  
  다음 코드는 경우 `-optionexplicit-` 사용 됩니다.  
@@ -53,4 +53,4 @@ ms.locfileid: "58814876"
 - [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
 - [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [Option Explicit 문](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
-- [옵션 대화 상자, 프로젝트, Visual Basic 기본값](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+- [옵션 대화 상자, 프로젝트, VB 기본값](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

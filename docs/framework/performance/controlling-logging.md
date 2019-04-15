@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d3846e9e00158efbd4828053411b604dafc56e27
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 16ed4d86d64a6d3c569c7fd7ab9e9e3a3943f078
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091332"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312100"
 ---
 # <a name="controlling-net-framework-logging"></a>.NET Framework 로깅 제어
 ETW(Windows용 이벤트 추적)를 사용하여 CLR(공용 언어 런타임) 이벤트를 기록할 수 있습니다. 다음과 같은 도구를 사용하여 추적을 만들고 볼 수 있습니다.  
@@ -45,7 +45,7 @@ Provider                                 GUID
   
 #### <a name="to-capture-clr-etw-events-using-logman"></a>Logman을 사용하여 CLR ETW 이벤트를 캡처하려면  
   
-1.  명령 프롬프트에서 다음을 입력합니다.  
+1. 명령 프롬프트에서 다음을 입력합니다.  
   
      `logman start clrevents -p {e13c0d23-ccbc-4e12-931b-d9cc2eee27e4} 0x1CCBD 0x5 -ets -ct perf`  
   
@@ -61,7 +61,7 @@ Provider                                 GUID
   
     -   `-ct perf` 매개 변수는 `QueryPerformanceCounter` 함수를 사용하여 각 이벤트의 타임 스탬프를 로깅할 것임을 지정합니다.  
   
-2.  이벤트 로깅을 중지하려면 다음을 입력하십시오.  
+2. 이벤트 로깅을 중지하려면 다음을 입력하십시오.  
   
      `logman stop clrevents -ets`  
   
@@ -69,13 +69,13 @@ Provider                                 GUID
   
 #### <a name="to-capture-clr-etw-events-using-xperf"></a>Xperf를 사용하여 CLR ETW 이벤트를 캡처하려면  
   
-1.  명령 프롬프트에서 다음을 입력합니다.  
+1. 명령 프롬프트에서 다음을 입력합니다.  
   
      `xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:5 -f clrevents.etl`  
   
      여기서 GUID는 CLR ETW 공급자 GUID이고, `0x1CCBD:5`는 수준 5(verbose) 이하의 모든 내용을 추적합니다.  
   
-2.  추적을 중지하려면 다음을 입력하십시오.  
+2. 추적을 중지하려면 다음을 입력하십시오.  
   
      `Xperf -stop clr`  
   

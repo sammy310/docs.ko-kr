@@ -10,12 +10,12 @@ helpviewer_keywords:
 - status bars [Windows Forms], adding panels
 - StatusBar control [Windows Forms], adding panels
 ms.assetid: 835e3902-288c-4c38-9d69-0696d8695009
-ms.openlocfilehash: 0c7c843fd3b837cb221e055bd96f735fb5e9c4ed
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9d7a21ee686b0c6faa05f68f13eccc6a39d49164
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713291"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319861"
 ---
 # <a name="how-to-add-panels-to-a-statusbar-control"></a>방법: StatusBar 컨트롤에 패널 추가
 > [!IMPORTANT]
@@ -25,7 +25,7 @@ ms.locfileid: "57713291"
   
 ### <a name="to-add-panels-to-a-status-bar"></a>상태 표시줄 패널을 추가 하려면  
   
-1.  프로시저에서 상태 표시줄 패널 추가 하 여 만들기는 <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>합니다. 해당 항목이 있는 인덱스를 사용 하 여 개별 패널 전달에 대 한 속성 설정을 지정 합니다 <xref:System.Windows.Forms.StatusBar.Panels%2A> 속성입니다.  
+1. 프로시저에서 상태 표시줄 패널 추가 하 여 만들기는 <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>합니다. 해당 항목이 있는 인덱스를 사용 하 여 개별 패널 전달에 대 한 속성 설정을 지정 합니다 <xref:System.Windows.Forms.StatusBar.Panels%2A> 속성입니다.  
   
      다음 코드 예제는 아이콘의 위치 설정 된 경로 **내 문서** 폴더입니다. 이 폴더는 Windows 운영 체제를 실행 하는 대부분의 컴퓨터에 포함 되도록 알 수 없으므로이 위치가 사용 됩니다. 안전 하 게 응용 프로그램을 실행 하려면 사용자는 최소한의 시스템 액세스 수준에서는이 위치를 선택 합니다. 다음 예제에서는 사용 하 여 폼을 <xref:System.Windows.Forms.StatusBar> 이미 추가 된 컨트롤입니다.  
   
@@ -121,10 +121,11 @@ ms.locfileid: "57713291"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
 - [컬렉션 편집기 대화 상자](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xc4yyekt(v=vs.100))
-- [방법: 상태 표시줄 패널의 크기를 설정 합니다.](how-to-set-the-size-of-status-bar-panels.md)
+- [방법: 상태 표시줄 패널의 크기 설정](how-to-set-the-size-of-status-bar-panels.md)
 - [연습: 런타임에 상태 표시줄 정보 업데이트](walkthrough-updating-status-bar-information-at-run-time.md)
-- [방법: Windows Forms StatusBar 컨트롤에서 패널 클릭 확인](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [방법: Windows Forms StatusBar 컨트롤에서 클릭한 패널 확인](determine-which-panel-wf-statusbar-control-was-clicked.md)
 - [StatusBar 컨트롤 개요](statusbar-control-overview-windows-forms.md)

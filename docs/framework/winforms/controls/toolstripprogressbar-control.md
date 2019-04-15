@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], progress bars
 - progress controls [Windows Forms]
 ms.assetid: cb3eb0a8-60b1-483e-a03f-93b0b1351dae
-ms.openlocfilehash: 3b56d31cab84a43a488499748710355671980ad0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 03f078da96a48ed0f53697661cb2add1d6c01901
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711880"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158966"
 ---
 # <a name="toolstripprogressbar-control"></a>ToolStripProgressBar 컨트롤
 합니다 <xref:System.Windows.Forms.ToolStripProgressBar> 결합 <xref:System.Windows.Forms.ToolStrip> 렌더링 및 일반적인 프로세스 추적 기능을 사용 하 여 기능을 래프팅 (rafting).  
@@ -29,4 +29,5 @@ ms.locfileid: "57711880"
  <xref:System.Windows.Forms.ToolStripProgressBar> 컨트롤에 대한 참조 설명서를 제공합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)

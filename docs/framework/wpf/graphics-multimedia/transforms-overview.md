@@ -12,17 +12,16 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-ms.openlocfilehash: e3169a34f676d65a3af50bfc9177095c9996c1a2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6f7cbd91be83c96b25248f87ddc377159ba39b64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355651"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162206"
 ---
 # <a name="transforms-overview"></a>Transform 개요
 이 항목에서는 사용 하는 방법을 설명 합니다 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> 회전, 크기 조정, 이동 하는 클래스 (변환) 및 기울이기 <xref:System.Windows.FrameworkElement> 개체입니다.  
-  
-  
+
 <a name="whatIsATransformSection"></a>   
 ## <a name="what-is-a-transform"></a>변환이란?  
  <xref:System.Windows.Media.Transform> 매핑하거나 점을 하나의 좌표 공간에서 다른 좌표 공간으로 변환 하는 방법을 정의 합니다. 이 매핑은 변환에서 설명한 <xref:System.Windows.Media.Matrix>, 세 개의 열을 사용 하 여 3 개 행의 모음인 <xref:System.Double> 값입니다.  
@@ -150,7 +149,8 @@ ms.locfileid: "57355651"
  상속 하므로 합니다 <xref:System.Windows.Freezable> 클래스를 <xref:System.Windows.Media.Transform> 몇 가지 특별 한 기능을 제공 하는 클래스: <xref:System.Windows.Media.Transform> 로 개체를 선언할 수 있습니다 [리소스](../advanced/xaml-resources.md)개선 하기 위해 읽기 전용으로, 여러 개체 간에 공유 성능, 복제 하 고 스레드로부터 안전 합니다. 제공 하는 다양 한 기능에 대 한 자세한 내용은 <xref:System.Windows.Freezable> 개체를 참조 합니다 [Freezable 개체 개요](../advanced/freezable-objects-overview.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Matrix>
 - [방법 항목](transformations-how-to-topics.md)
-- [2차원 변환 샘플](https://go.microsoft.com/fwlink/?LinkID=158252)
+- [2 차원 변환 샘플](https://go.microsoft.com/fwlink/?LinkID=158252)

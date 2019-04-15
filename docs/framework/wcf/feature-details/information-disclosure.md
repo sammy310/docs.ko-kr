@@ -2,12 +2,12 @@
 title: 정보 공개
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-ms.openlocfilehash: 267e0dc656e05ed6f95eef1c75e40c07108a164e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b42faeb4043302e5e70379cc4e1de3cb8bd96af4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588247"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195906"
 ---
 # <a name="information-disclosure"></a>정보 공개
 정보 공개를 사용하여 공격자가 시스템에 대해 유용한 정보를 얻을 수 있습니다. 따라서 항상 노출하려는 정보의 내용과 악의가 있는 사용자가 사용해도 되는지 여부를 고려합니다. 다음은 가능한 정보 공개 공격을 나열하고 각 공격에 대한 완화 방안을 제공합니다.  
@@ -57,8 +57,9 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
  도메인을 지정했지만 엔드포인트 ID 기능을 사용하여 잘못된 서비스 사용자 이름을 지정하는 경우 NTLM이 사용됩니다. 끝점 id를 지정 하는 방법에 대 한 자세한 내용은 참조 하세요. [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [권한 상승](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [권한 높이기](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
 - [서비스 거부](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [변조](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [지원되지 않는 시나리오](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

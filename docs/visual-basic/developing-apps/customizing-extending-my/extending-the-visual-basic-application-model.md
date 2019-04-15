@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: aceb63d3cb9af75fa4eb32ed5bca5d65825704e8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 6ba3f29ad0ceef7f1ea9d102743df568a32c26c8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834714"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320147"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Visual Basic 애플리케이션 모델 확장
 재정의 하 여 응용 프로그램 모델 기능을 추가할 수 있습니다 합니다 `Overridable` 의 멤버는 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> 클래스입니다. 이 기술은 응용 프로그램 시작 및 종료 하는 대로 사용자 고유의 메서드 호출을 추가 및 응용 프로그램 모델의 동작을 사용자 지정할 수 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "58834714"
   
  응용 프로그램이 일반적인 응용 프로그램 (다중 인스턴스 응용 프로그램) 또는 단일 인스턴스 응용 프로그램을 첫 번째 인스턴스의 경우는 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> 메서드가 실행 되는 `Overridable` 다음 순서 대로 메서드:  
   
-1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A>. 기본적으로이 메서드 비주얼 스타일, 텍스트 표시 스타일 및 (응용 프로그램에는 Windows 인증 사용) 하는 경우 기본 응용 프로그램 스레드의 현재 보안 주체를 설정 및 호출 `ShowSplashScreen` 모두 `/nosplash` 도 `-nosplash` 로 사용 되는 명령줄 인수입니다.  
+1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A>. 기본적으로이 메서드 비주얼 스타일, 텍스트 표시 스타일 및 (응용 프로그램에는 Windows 인증 사용) 하는 경우 기본 응용 프로그램 스레드의 현재 보안 주체를 설정 및 호출 `ShowSplashScreen` 모두 `/nosplash` 도 `-nosplash` 로 사용 되는 명령줄 인수입니다.  
   
      이 함수에서 반환 하는 경우 응용 프로그램 시작 시퀀스 취소가 `False`합니다. 이 경우 응용 프로그램이 실행 되지 해야 하는 경우에 유용할 수 있습니다.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "58834714"
   
          기본적으로 이 메서드는 아무것도 수행하지 않습니다. Visual Basic에서 응용 프로그램에 대 한 시작 화면을 선택 하면 **프로젝트 디자이너**, 디자이너 재정의 합니다 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> 설정 하는 메서드를 사용 하 여 메서드를 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> 시작 화면 폼의 새 인스턴스 속성 .  
   
-2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>. 발생 시키기 위한 확장성 지점을 제공 합니다 `Startup` 이벤트입니다. 이 함수에서 반환 하는 경우 응용 프로그램 시작 시퀀스 중지 `False`합니다.  
+2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>. 발생 시키기 위한 확장성 지점을 제공 합니다 `Startup` 이벤트입니다. 이 함수에서 반환 하는 경우 응용 프로그램 시작 시퀀스 중지 `False`합니다.  
   
      기본적으로이 메서드는 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> 이벤트입니다. 이벤트 처리기를 설정 하는 경우를 <xref:System.ComponentModel.CancelEventArgs.Cancel> 이벤트 인수의 속성 `True`, 메서드가 반환 `False` 응용 프로그램 시작을 취소 합니다.  
   
-3.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun%2A>. 주 응용 프로그램 초기화가 완료 된 후 실행을 시작할 준비가 때의 시작점을 제공 합니다.  
+3. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun%2A>. 주 응용 프로그램 초기화가 완료 된 후 실행을 시작할 준비가 때의 시작점을 제공 합니다.  
   
      기본적으로 Windows Forms 메시지 루프에 들어가기 전에이 메서드를 호출 합니다 `OnCreateMainForm` (응용 프로그램의 기본 폼 만들려면) 및 `HideSplashScreen` (시작 화면 닫기)를 메서드:  
   
@@ -62,15 +62,15 @@ ms.locfileid: "58834714"
   
          기본적으로이 메서드는 시작 화면을 닫습니다.  
   
-4.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A>. 응용 프로그램의 다른 인스턴스가 시작 되 면 단일 인스턴스 응용 프로그램을 작동 하는 방법을 사용자가 지정 하는 방법을 제공 합니다.  
+4. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A>. 응용 프로그램의 다른 인스턴스가 시작 되 면 단일 인스턴스 응용 프로그램을 작동 하는 방법을 사용자가 지정 하는 방법을 제공 합니다.  
   
      기본적으로이 메서드는 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> 이벤트입니다.  
   
-5.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnShutdown%2A>. 발생 시키기 위한 확장성 지점을 제공 합니다 `Shutdown` 이벤트입니다. 이 메서드는 기본 응용 프로그램에서 처리 되지 않은 예외가 발생할 경우 실행 되지 않습니다.  
+5. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnShutdown%2A>. 발생 시키기 위한 확장성 지점을 제공 합니다 `Shutdown` 이벤트입니다. 이 메서드는 기본 응용 프로그램에서 처리 되지 않은 예외가 발생할 경우 실행 되지 않습니다.  
   
      기본적으로이 메서드는 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> 이벤트입니다.  
   
-6.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnUnhandledException%2A>. 위에 나열 된 방법 중 하나에서 처리 되지 않은 예외가 발생 하는 경우를 실행 합니다.  
+6. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnUnhandledException%2A>. 위에 나열 된 방법 중 하나에서 처리 되지 않은 예외가 발생 하는 경우를 실행 합니다.  
   
      기본적으로이 메서드는 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> 디버거 연결 되지 않은 응용 프로그램을 처리 하는 동안 이벤트를 `UnhandledException` 이벤트입니다.  
   
@@ -99,5 +99,5 @@ ms.locfileid: "58834714"
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
-- [Visual Basic 응용 프로그램 모델 개요](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)
-- [프로젝트 디자이너, 응용 프로그램 페이지(Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+- [Visual Basic 애플리케이션 모델 개요](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)
+- [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)

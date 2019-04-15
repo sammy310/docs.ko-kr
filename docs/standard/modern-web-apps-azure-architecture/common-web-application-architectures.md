@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 05d696f5cbceaedb35e3e4e97f8c4e89124d43dc
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 68f88d29a6c88f4ce261a0a2794035d43db1fc0c
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826735"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921106"
 ---
 # <a name="common-web-application-architectures"></a>일반 웹 애플리케이션 아키텍처
 
@@ -263,7 +263,7 @@ networks:
 `docker-compose.yml` 파일은 `Web` 프로젝트에서 `Dockerfile`을 참조합니다. `Dockerfile`은 사용할 기본 컨테이너 및 애플리케이션의 구성 방식을 지정하는 데 사용됩니다. `Web`' `Dockerfile`:
 
 ```
-FROM microsoft/dotnet:2.2-sdk AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
 WORKDIR /app
 
 COPY *.sln .
@@ -273,7 +273,7 @@ RUN dotnet restore
 
 RUN dotnet publish -c Release -o out
 
-FROM microsoft/dotnet:2.2-aspnetcore-runtime AS runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS runtime
 WORKDIR /app
 COPY --from=build /app/src/Web/out ./
 
@@ -300,7 +300,7 @@ Visual Studio를 사용하여 애플리케이션에 Docker 지원을 추가하�
 >   <https://deviq.com/repository-pattern/>
 > - **클린 아키텍처 솔루션 샘플**  
 >   <https://github.com/ardalis/cleanarchitecture>
-> - **마이크로 서비스 설계 전자책**  
+> - **마이크로 서비스 설계 eBook**  
 >   <https://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]

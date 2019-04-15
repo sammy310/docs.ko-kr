@@ -1,17 +1,17 @@
 ---
-title: '방법: ListView에서 트리거를 사용하여 선택한 항목의 스타일 지정'
+title: '방법: 트리거를 사용하여 ListView에서 선택한 항목의 스타일 지정'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListView controls [WPF], styling
 ms.assetid: 1e2bdce0-afe8-4507-9b18-f33de43de25a
-ms.openlocfilehash: 8c2d4adb2471c0f1891288573ce6b6460b20151d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ad64382b871bae9114a1e63257de3f8595376923
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367923"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145407"
 ---
-# <a name="how-to-use-triggers-to-style-selected-items-in-a-listview"></a>방법: ListView에서 트리거를 사용하여 선택한 항목의 스타일 지정
+# <a name="how-to-use-triggers-to-style-selected-items-in-a-listview"></a>방법: 트리거를 사용하여 ListView에서 선택한 항목의 스타일 지정
 정의 하는 방법을 보여 주는이 예제 <xref:System.Windows.Style.Triggers%2A> 에 대 한는 <xref:System.Windows.Controls.ListViewItem> 컨트롤 있도록 속성 값을 <xref:System.Windows.Controls.ListViewItem> 변경을 <xref:System.Windows.Style> 의 <xref:System.Windows.Controls.ListViewItem> 변경에 대 한 응답에서입니다.  
   
 ## <a name="example"></a>예제  
@@ -30,6 +30,7 @@ ms.locfileid: "57367923"
 [!code-xaml[ListViewChkBox#ListViewItemTriggersEnd](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewChkBox/CS/window1.xaml#listviewitemtriggersend)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.Control>
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>

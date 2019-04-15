@@ -2,8 +2,14 @@
 title: WCF에서 이벤트 로깅
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'event logging [WCF]'
+- event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
+ms.openlocfilehash: 2dd4f82e8a100074850b21d298e91dc5dc15c59d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175281"
 ---
 # <a name="event-logging-in-wcf"></a>WCF에서 이벤트 로깅
 Windows Communication Foundation (WCF)는 Windows 이벤트 로그에는 내부 이벤트를 추적합니다.  
@@ -42,5 +48,6 @@ Windows Communication Foundation (WCF)는 Windows 이벤트 로그에는 내부 
  "자세한 정보"를 클릭 하면 이벤트 뷰어에서 이벤트를 볼 때 이벤트 뷰어에서 인터넷을 통해 정보를 보낼 수 있습니다. 자세한 내용은 이벤트 뷰어 도움말을 참조하십시오.  
   
 ## <a name="see-also"></a>참고자료
+
 - [관리 및 진단](../../../../../docs/framework/wcf/diagnostics/index.md)
 - [이벤트 일반 참조](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

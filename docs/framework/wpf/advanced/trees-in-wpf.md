@@ -6,18 +6,16 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: 581bd29de07697794e1e752c02068d31db9e0de8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f9b507c874dfe0ab3feca19e7fcf79df5af93e10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354650"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197687"
 ---
 # <a name="trees-in-wpf"></a>WPF의 트리
-대부분의 기술에서 요소와 구성 요소는 트리 구조로 구성됩니다. 이 트리 구조에서 개발자는 트리의 개체 노드를 직접 조작하여 애플리케이션의 동작이나 렌더링에 영향을 줍니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서도 여러 가지 트리 구조 메타포를 사용하여 프로그램 요소 간의 관계를 정의합니다. 대부분 경우 WPF 개발자는 개념적으로 개체 트리 메타포를 고려하면서 코드로 애플리케이션을 만들거나 XAML로 애플리케이션의 일부를 정의할 수 있지만 XML DOM에서 사용할 수 있는 몇 가지 일반적인 개체 트리 조작 API 대신 특정 API를 호출하거나 특정 태그를 사용하여 이 작업을 수행합니다. WPF 트리 메타포 보기를 제공 하는 두 개의 도우미 클래스를 노출 <xref:System.Windows.LogicalTreeHelper> 고 <xref:System.Windows.Media.VisualTreeHelper>입니다. 또한 WPF 설명서에서는 시각적 트리와 논리 트리라는 용어를 사용하는데 이러한 동일한 트리는 특정 주요 WPF 기능의 동작을 이해하는 데 유용하기 때문입니다. 이 항목에서는 시각적 트리와 논리 트리가 나타내는 항목 정의 전체 개체 트리 개념과 이러한 트리 관계에 대해 설명 하 고 소개 <xref:System.Windows.LogicalTreeHelper> 고 <xref:System.Windows.Media.VisualTreeHelper>s입니다.  
-  
+대부분의 기술에서 요소와 구성 요소는 트리 구조로 구성됩니다. 이 트리 구조에서 개발자는 트리의 개체 노드를 직접 조작하여 애플리케이션의 동작이나 렌더링에 영향을 줍니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 또한 여러 트리 구조 메타포를 사용 하 여 프로그램 요소 간의 관계를 정의 합니다. 대부분 경우 WPF 개발자는 개념적으로 개체 트리 메타포를 고려하면서 코드로 애플리케이션을 만들거나 XAML로 애플리케이션의 일부를 정의할 수 있지만 XML DOM에서 사용할 수 있는 몇 가지 일반적인 개체 트리 조작 API 대신 특정 API를 호출하거나 특정 태그를 사용하여 이 작업을 수행합니다. WPF 트리 메타포 보기를 제공 하는 두 개의 도우미 클래스를 노출 <xref:System.Windows.LogicalTreeHelper> 고 <xref:System.Windows.Media.VisualTreeHelper>입니다. 또한 WPF 설명서에서는 시각적 트리와 논리 트리라는 용어를 사용하는데 이러한 동일한 트리는 특정 주요 WPF 기능의 동작을 이해하는 데 유용하기 때문입니다. 이 항목에서는 시각적 트리와 논리 트리가 나타내는 항목 정의 전체 개체 트리 개념과 이러한 트리 관계에 대해 설명 하 고 소개 <xref:System.Windows.LogicalTreeHelper> 고 <xref:System.Windows.Media.VisualTreeHelper>s입니다.  
 
-  
 <a name="element_tree"></a>   
 ## <a name="trees-in-wpf"></a>WPF의 트리  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 가장 완벽한 트리 구조는 개체 트리입니다. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서 응용 프로그램 페이지를 정의한 후 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]을 로드하는 경우 트리 구조는 태그에 있는 요소의 중첩 관계에 따라 만들어집니다. 코드에서 애플리케이션이나 애플리케이션 일부를 정의하는 경우 트리 구조는 지정된 개체에 대한 콘텐츠 모델을 구현하는 속성에 대해 속성 값을 할당하는 방법에 따라 만들어집니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 완벽한 트리 구조는 논리 트리와 시각적 트리라는 두 가지 방법으로 개념화하고 공용 API에 보고할 수 있습니다. 논리 트리와 시각적 트리의 구분이 항상 반드시 중요한 것은 아니지만 경우에 따라 특정 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 하위 시스템에서 문제를 발생시키고 태그나 코드에서 선택하는 항목에 영향을 줄 수 있습니다.  
@@ -87,6 +85,7 @@ ms.locfileid: "57354650"
  그러나 리소스 조회는 직접적인 논리 트리를 넘어 확장될 수도 있습니다. 애플리케이션 태그의 경우 리소스 조회가 애플리케이션 수준 리소스 사전까지 계속된 다음 정적 속성이나 키로 참조되는 테마 지원 및 시스템 값까지 계속될 수 있습니다. 테마 자체는 리소스 참조가 동적인 경우 테마 논리 트리 외부의 시스템 값을 참조할 수도 있습니다. 리소스 사전 및 조회 논리에 대한 자세한 내용은 [XAML 리소스](xaml-resources.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [입력 개요](input-overview.md)
 - [WPF 그래픽 렌더링 개요](../graphics-multimedia/wpf-graphics-rendering-overview.md)
 - [라우트된 이벤트 개요](routed-events-overview.md)

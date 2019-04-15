@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tab controls [Windows Forms], tab order
 - tab pages [Windows Forms], adding controls
 ms.assetid: 7ee734e1-e31e-4ed0-bbc0-a7e8a1f20fef
-ms.openlocfilehash: 609dfb93e2327ffd6013230cf5d54572e0f9b420
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f30db784a51c98aebaa8b95926bc8c62003ee390
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132713"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340973"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>방법: 디자이너를 사용하여 탭 페이지에 컨트롤 추가
 Windows Forms 사용 <xref:System.Windows.Forms.TabControl> 구성 된 방식으로 다른 컨트롤을 표시 하는 것입니다. 탭 페이지의 주요 부분에 그림을 표시 하려면 다음이 지침을 사용할 수 있습니다. 탭 페이지의 레이블 부분에 아이콘을 추가 하는 방법에 대 한 내용은 [방법: Windows Forms TabControl의 모양 변경](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)합니다.  
@@ -23,9 +23,9 @@ Windows Forms 사용 <xref:System.Windows.Forms.TabControl> 구성 된 방식으
   
 ### <a name="to-add-a-control-using-the-designer"></a>디자이너를 사용 하 여 컨트롤을 추가 하려면  
   
-1.  맨 위에 표시 되도록 적절 한 탭 페이지를 클릭 합니다.  
+1. 맨 위에 표시 되도록 적절 한 탭 페이지를 클릭 합니다.  
   
-2.  탭 페이지에 컨트롤을 그립니다.  
+2. 탭 페이지에 컨트롤을 그립니다.  
   
 ## <a name="see-also"></a>참고자료
 

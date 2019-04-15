@@ -2,12 +2,12 @@
 title: System.Net.PeerToPeer.Collaboration 네임스페이스 정보
 ms.date: 03/30/2017
 ms.assetid: b5d8c1c1-6844-4947-9759-c7f1b564bded
-ms.openlocfilehash: 5bb96e11cf51e7e5b37d895310fa9a113899f34c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a62b659472f6d05e61672fa603e8663d9946977e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570864"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127909"
 ---
 # <a name="about-the-systemnetpeertopeercollaboration-namespace"></a>System.Net.PeerToPeer.Collaboration 네임스페이스 정보
 <xref:System.Net.PeerToPeer.Collaboration> 네임스페이스는 피어 투 피어 공동 작업 인프라를 사용하여 피어 공동 작업 활동을 구현하는 데 사용되는 클래스 및 API를 제공합니다.  
@@ -40,4 +40,5 @@ ms.locfileid: "54570864"
  일반적인 P2P 애플리케이션은 공동 작업 기록 또는 화이트보드 작성을 위한 전화 회의, 서버가 없는 채팅 애플리케이션, 대화형 보급 알림, 온라인 게임 세션 등입니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - <xref:System.Net.PeerToPeer.Collaboration>

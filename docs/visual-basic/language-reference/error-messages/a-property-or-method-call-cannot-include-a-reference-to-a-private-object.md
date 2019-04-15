@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID98
 ms.assetid: 059b43e1-202d-4fa2-806b-7bad63c1e7ca
-ms.openlocfilehash: 0a8d6603bf5c97b966d29f000b21435cec8040d8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 04124ca044ad8dbff58f85230d7e10ea336d41e7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840954"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341480"
 ---
 # <a name="a-property-or-method-call-cannot-include-a-reference-to-a-private-object-either-as-an-argument-or-as-a-return-value"></a>속성 또는 메서드 호출에 인수 또는 반환 값으로서 private 개체에 대한 참조를 포함할 수 없습니다.
 이 오류의 가능한 원인:  
@@ -24,8 +24,8 @@ ms.locfileid: "58840954"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-1.  참조를 제거합니다.  
+1. 참조를 제거합니다.  
   
 ## <a name="see-also"></a>참고자료
 
-- [전용](../../../visual-basic/language-reference/modifiers/private.md)
+- [Private](../../../visual-basic/language-reference/modifiers/private.md)

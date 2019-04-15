@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-ms.openlocfilehash: 0bc7c9d09922b7fbef534e6b58389ca343cc1e13
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 012ad8e6229958575030ee820a3b0b79cc50facc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974395"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333914"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>방법: (Visual Basic) 프로시저에 인수 전달
 프로시저를 호출 하는 경우에 인수 목록 괄호로 묶어 프로시저 이름을 뒤에 있습니다. 프로시저에 정의 하는 모든 필수 매개 변수에 해당 하는 인수를 제공 하 고 인수를 선택적으로 제공할 수는 `Optional` 매개 변수입니다. 지정 하지 않으면 경우는 `Optional` 호출에서 매개 변수를 후속 인수를 제공 하는 경우 인수 목록에서 해당 위치를 표시 하려면 쉼표를 포함 해야 합니다.  
@@ -27,15 +27,15 @@ ms.locfileid: "56974395"
   
 ### <a name="to-pass-one-or-more-arguments-to-a-procedure"></a>프로시저에 하나 이상의 인수를 전달 하려면  
   
-1.  호출 문에서 괄호를 사용 하 여 프로시저 이름 뒤에.  
+1. 호출 문에서 괄호를 사용 하 여 프로시저 이름 뒤에.  
   
-2.  괄호 안에 인수 목록에 배치 합니다. 프로시저에 정의 필요한 각 매개 변수에 대 한 인수를 포함 하 고 쉼표를 사용 하 여 인수를 구분 합니다.  
+2. 괄호 안에 인수 목록에 배치 합니다. 프로시저에 정의 필요한 각 매개 변수에 대 한 인수를 포함 하 고 쉼표를 사용 하 여 인수를 구분 합니다.  
   
-3.  각 인수는 해당 매개 변수의 데이터 형식 변환할 프로시저 형식으로 계산 되는 유효한 식 정의 해야 합니다.  
+3. 각 인수는 해당 매개 변수의 데이터 형식 변환할 프로시저 형식으로 계산 되는 유효한 식 정의 해야 합니다.  
   
-4.  매개 변수가 정의 되어 있으면 [선택 사항](../../../../visual-basic/language-reference/modifiers/optional.md), 인수 목록에 포함 하거나 생략할 수 있습니다. 를 생략 하면 프로시저 매개 변수에 대해 정의 된 기본값을 사용 합니다.  
+4. 매개 변수가 정의 되어 있으면 [선택 사항](../../../../visual-basic/language-reference/modifiers/optional.md), 인수 목록에 포함 하거나 생략할 수 있습니다. 를 생략 하면 프로시저 매개 변수에 대해 정의 된 기본값을 사용 합니다.  
   
-5.  에 대 한 인수를 생략 하면는 `Optional` 매개 변수 및 매개 변수 목록 뒤에 다른 매개 변수가 있는, 인수 목록에 추가 쉼표는 생략 된 인수의 위치를 표시할 수 있습니다.  
+5. 에 대 한 인수를 생략 하면는 `Optional` 매개 변수 및 매개 변수 목록 뒤에 다른 매개 변수가 있는, 인수 목록에 추가 쉼표는 생략 된 인수의 위치를 표시할 수 있습니다.  
   
      다음 예제에서는 Visual Basic <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> 함수입니다.  
   
@@ -47,13 +47,13 @@ ms.locfileid: "56974395"
   
 ## <a name="see-also"></a>참고자료
 
-- [Sub 프로시저](./sub-procedures.md)
-- [Function 프로시저](./function-procedures.md)
+- [하위 프로시저](./sub-procedures.md)
+- [함수 프로시저](./function-procedures.md)
 - [속성 프로시저](./property-procedures.md)
 - [연산자 프로시저](./operator-procedures.md)
-- [방법: 프로시저의 매개 변수를 정의 합니다.](./how-to-define-a-parameter-for-a-procedure.md)
+- [방법: 프로시저의 매개 변수 정의](./how-to-define-a-parameter-for-a-procedure.md)
 - [값 또는 참조로 인수 전달](./passing-arguments-by-value-and-by-reference.md)
 - [재귀 프로시저](./recursive-procedures.md)
 - [프로시저 오버로딩](./procedure-overloading.md)
 - [개체 및 클래스](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [개체 지향 프로그래밍(Visual Basic)](../../concepts/object-oriented-programming.md)
+- [개체 지향 프로그래밍 (Visual Basic)](../../concepts/object-oriented-programming.md)

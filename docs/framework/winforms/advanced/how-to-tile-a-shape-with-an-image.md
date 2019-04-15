@@ -1,5 +1,5 @@
 ---
-title: '방법: 타일 이미지를 사용 하 여 도형'
+title: '방법: 이미지에 도형을 바둑판식으로 배열'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - shapes [Windows Forms], tiling with images
 - bitmaps [Windows Forms], filling shapes with
 ms.assetid: 6d407891-6e5c-4495-a546-3da5604e9fb8
-ms.openlocfilehash: d873ba717fa94852692ce395ef7da30c512aba59
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ad7b8737a63028e533cadfa6db56b063eb943f22
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719691"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221540"
 ---
-# <a name="how-to-tile-a-shape-with-an-image"></a>방법: 타일 이미지를 사용 하 여 도형
+# <a name="how-to-tile-a-shape-with-an-image"></a>방법: 이미지에 도형을 바둑판식으로 배열
 층에 맞게 서로 옆에 있는 타일을 배치할 수 있습니다, 처럼 채우기 (타일) 셰이프를 서로 옆에 있는 사각형 이미지에 배치할 수 있습니다. 도형의 내부를 타일을 질감 브러시를 사용 합니다. 생성 하는 경우는 <xref:System.Drawing.TextureBrush> 개체 생성자에 전달 하는 인수 중 하나는 <xref:System.Drawing.Image> 개체입니다. 질감 브러시를 사용 하 여 도형의 내부를 그리는 경우 셰이프가이 이미지의 복사본을 반복적된으로 채워집니다.  
   
  랩 모드 속성을 <xref:System.Drawing.TextureBrush> 개체는 사각형 그리드 안의 반복적으로 이미지 방향는 방법을 결정 합니다. 그리드에서 타일에 있는 모든 같은 방향으로 만들거나 다음 그리드 위치에서 대칭 이동 이미지를 만들 수 있습니다. 대칭 이동의 가로, 수 세로 축 또는 둘 다. 다음 예에서는 대칭 이동 하는 다양 한 유형의 바둑판식 배열을 보여 줍니다.  
@@ -61,4 +61,5 @@ ms.locfileid: "57719691"
  [!code-vb[System.Drawing.UsingABrush#34](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#34)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [브러시를 사용하여 도형 채우기](using-a-brush-to-fill-shapes.md)

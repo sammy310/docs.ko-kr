@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 886e2a81bab9fbf64668159b501a1d20180b9462
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e6018b5b06a138b38b7b97df280a3e4c4ea0512d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57503101"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208412"
 ---
 # <a name="functionenter-function"></a>FunctionEnter 함수
 컨트롤이 함수에 전달 되 고 있음을 프로파일러에 알립니다.  
@@ -64,6 +64,7 @@ void __stdcall FunctionEnter (
  **.NET framework 버전:** 1.1, 1.0  
   
 ## <a name="see-also"></a>참고자료
+
 - [FunctionEnter2 함수](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
 - [FunctionLeave2 함수](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
 - [FunctionTailcall2 함수](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)

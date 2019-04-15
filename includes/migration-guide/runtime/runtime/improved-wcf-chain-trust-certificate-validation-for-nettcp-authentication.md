@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e12ba8eb53e6725ebc2e1d87edff3a6a3ce2116b
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: 05116d80fcd6b75f366a2542ad2eadd5f434991c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "58467481"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236171"
 ---
 ### <a name="improved-wcf-chain-trust-certificate-validation-for-nettcp-certificate-authentication"></a>Net.Tcp 인증서 인증에 대한 개선된 WCF 체인 신뢰 인증서 유효성 검사
 
@@ -15,4 +15,3 @@ ms.locfileid: "58467481"
 |범위|부|
 |버전|4.7.2|
 |형식|런타임|
-

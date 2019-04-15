@@ -2,12 +2,12 @@
 title: <serviceDiscovery>
 ms.date: 03/30/2017
 ms.assetid: a3c68a4a-fc95-43c5-aacb-785936c0cf39
-ms.openlocfilehash: 564410fdc4085cc3ed14c394006551cddb028910
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 54a9833f56927568af711a103bd3831b767711e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373753"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209998"
 ---
 # <a name="servicediscovery"></a>\<serviceDiscovery>
 서비스 엔드포인트의 검색 기능을 지정합니다.  
@@ -86,4 +86,5 @@ ms.locfileid: "57373753"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>

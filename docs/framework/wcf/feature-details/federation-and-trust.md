@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - federation [WCF], and trust
 ms.assetid: 4bdec4f2-f8a2-4512-bdcf-14ef54b5877a
-ms.openlocfilehash: 1f0872c9aea11a54860fe3075d2756691590e0d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e1529db6cc52b6b8cc8881d2b2a35a754b4b311
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532424"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225341"
 ---
 # <a name="federation-and-trust"></a>페더레이션 및 트러스트
 이 항목에서는 페더레이션된 응용 프로그램, 신뢰 경계 및 구성 및 Windows Communication Foundation (WCF)에서 발급 된 토큰을 사용 하 여 관련 된 다양 한 측면을 설명 합니다.  
@@ -38,7 +38,8 @@ ms.locfileid: "54532424"
  발급된 토큰이 클라이언트에서 페더레이션 엔드포인트로 보낸 메시지에서 serialize되었는지 여부는 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InclusionMode%2A> 클래스의 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters> 속성을 설정하여 제어됩니다. 이 속성은 <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode> 열거형 값 중 하나로 설정할 수 있지만 대부분의 페더레이션 시나리오에서 유용하지 않습니다. `SecurityTokenInclusionMode.Never` 및 `SecurityTokenInclusionMode.AlwaysToInitiator` 값은 클라이언트가 보안 토큰 서비스에 의해 발급된 토큰에 대한 참조를 신뢰하는 상대에게 보내도록 합니다. 신뢰하는 상대가 발급된 토큰 복사본을 가지고 있지 않은 한 토큰 참조를 확인할 수 없기 때문에 인증이 실패합니다. WCF 취급 `SecurityTokenInclusionMode.Once` 동일 하 게 `SecurityTokenInclusionMode.AlwaysToRecipient`합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode>
-- [방법: 페더레이션된 클라이언트 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [방법: 페더레이션 클라이언트 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [방법: 페더레이션 서비스에서 자격 증명 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
 - [방법: WSFederationHttpBinding 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)

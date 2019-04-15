@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f453867f6b46265fdbf567b4374ddc64b4efe84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f60a4b56270318a05d0e5a480fdb56eb45593d5e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563899"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177738"
 ---
 # <a name="corgcthreadstats-structure"></a>COR_GC_THREAD_STATS 구조체
 가비지 수집과 관련 된 스레드 통계를 포함 합니다.  
@@ -55,5 +55,6 @@ typedef struct _COR_GC_THREAD_STATS {
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [호스팅 구조체](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
 - [IHostTask 인터페이스](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 95762cbda4a1a251dd64fd33b2815d474f1fe2b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f9bf0e309ec8c77d4b1d6afbf111e7eeae629ac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685219"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149736"
 ---
 # <a name="garbage-collection-etw-events"></a>가비지 컬렉션 ETW 이벤트
 <a name="top"></a> 이들 이벤트는 가비지 수집과 관련된 정보를 수집합니다. 가비지 수집 수행 횟수, 가비지 수집 중에 해제된 메모리 양 등을 판별하는 작업을 포함하여 진단과 디버깅에 도움이 됩니다.  
@@ -337,7 +337,7 @@ ms.locfileid: "54685219"
 |이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
 |`GCKeyword` (0x1)|정보(4)|  
-|`ThreadingKeyword`(0x10000)|정보(4)|  
+|`ThreadingKeyword` (0x10000)|정보(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
@@ -356,7 +356,7 @@ ms.locfileid: "54685219"
 |이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
 |`GCKeyword` (0x1)|정보(4)|  
-|`ThreadingKeyword`(0x10000)|정보(4)|  
+|`ThreadingKeyword` (0x10000)|정보(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
@@ -367,4 +367,5 @@ ms.locfileid: "54685219"
  이벤트 데이터가 없습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [CLR ETW 이벤트](../../../docs/framework/performance/clr-etw-events.md)

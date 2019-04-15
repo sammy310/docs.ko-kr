@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fce89a1c30525ef190cf7c24bcd54d3daa466df0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 804c8c9434983b12b0647395c49197bf5026239b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712498"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180988"
 ---
 # <a name="imetadatavalidate-interface"></a>IMetaDataValidate 인터페이스
 메타데이터 서명의 유효성을 검사할 메서드를 제공합니다.  
@@ -43,4 +43,5 @@ ms.locfileid: "54712498"
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [메타데이터 인터페이스](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

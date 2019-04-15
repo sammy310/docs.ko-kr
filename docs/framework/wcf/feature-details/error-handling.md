@@ -2,12 +2,12 @@
 title: 오류 처리
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: da2ae3db0ff0432a49fcbf6de674bfb730be1286
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 34f4f11176b3827ec3e4622944ffe02be5207df9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59136437"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300283"
 ---
 # <a name="error-handling"></a>오류 처리
 ## <a name="error-handling-in-windows-communication-foundation"></a>Windows Communication Foundation의 오류 처리  
@@ -34,15 +34,15 @@ ms.locfileid: "59136437"
   
  IErrorHandler를 사용하면 예외가 throw될 때의 응용 프로그램 동작을 명시적으로 제어할 수 있습니다. 다음 작업을 수행할 수 있습니다.  
   
-1.  클라이언트에 오류를 보낼지 여부를 결정합니다.  
+1. 클라이언트에 오류를 보낼지 여부를 결정합니다.  
   
-2.  예외를 오류로 바꿉니다.  
+2. 예외를 오류로 바꿉니다.  
   
-3.  오류를 다른 오류로 바꿉니다.  
+3. 오류를 다른 오류로 바꿉니다.  
   
-4.  로깅 또는 추적을 수행합니다.  
+4. 로깅 또는 추적을 수행합니다.  
   
-5.  다른 사용자 지정 작업을 수행합니다.  
+5. 다른 사용자 지정 작업을 수행합니다.  
   
  사용자 지정 오류 처리기를 서비스 채널 디스패처의 ErrorHandlers 속성에 추가하여 오류 처리기를 설치할 수 있습니다.  오류 처리기를 둘 이상 설치할 수 있으며 오류 처리기는 오류 처리기 컬렉션에 추가된 순서대로 호출됩니다.  
   

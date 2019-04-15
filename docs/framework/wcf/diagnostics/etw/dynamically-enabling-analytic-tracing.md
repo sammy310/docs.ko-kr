@@ -2,12 +2,12 @@
 title: 동적으로 분석 추적을 사용하도록 설정
 ms.date: 03/30/2017
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-ms.openlocfilehash: 42d238c704910c2406eb580c2ce102e5e84ed0f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 219561b1acd2259daad4c984dcf0b15517166c3f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719991"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197479"
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>동적으로 분석 추적을 사용하도록 설정
 Windows 운영 체제에 포함된 도구와 함께 ETW(Event Tracing for Windows)를 사용하여 추적을 동적으로 사용하거나 사용하지 않도록 설정할 수 있습니다. 모든 [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] Windows Communication Foundation (WCF) 서비스 분석 추적 활성화 및 비활성화 없이 동적으로 응용 프로그램의 Web.config 파일을 수정 하거나 서비스를 다시 시작 수 있습니다. 그러면 애플리케이션을 중지하지 않고도 추적 이벤트를 내보낼 수 있습니다.  
@@ -41,4 +41,5 @@ Windows 운영 체제에 포함된 도구와 함께 ETW(Event Tracing for Window
 |`WCFMessageLogging`|WCF 메시지 로깅 이벤트입니다.|  
   
 ## <a name="see-also"></a>참고자료
-- [WCF 서비스 및 Windows용 이벤트 추적](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)
+
+- [Windows용 WCF 서비스 및 이벤트 추척](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-ms.openlocfilehash: 2b72d972d679a47213c0d5ed4270d2c623d713ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9f3350e32c0fbff58678052d26be954d30d512a7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59082934"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301297"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms에서 다중 창 사용자 인터페이스 만들기
 다음 절차를 사용 하 여 Microsoft Outlook에서 사용 하는 비슷한 다중 창 사용자 인터페이스를 만듭니다는 **폴더** 목록에는 **메시지** 창 및 **미리보기** 창입니다. 이 정렬 폼에 컨트롤을 도킹을 통해 주로 수행 됩니다.  
@@ -27,17 +27,17 @@ ms.locfileid: "59082934"
   
 ### <a name="to-create-an-outlook-style-user-interface-at-design-time"></a>디자인 타임에 Outlook 스타일 사용자 인터페이스를 만들려면  
   
-1.  새 Windows 응용 프로그램 프로젝트를 만듭니다 (**파일** > **새로 만들기** > **프로젝트** > **Visual C#** 나 **Visual Basic** > **클래식 바탕 화면** > **Windows Forms 응용 프로그램**).  
+1. 새 Windows 응용 프로그램 프로젝트를 만듭니다 (**파일** > **새로 만들기** > **프로젝트** > **Visual C#** 나 **Visual Basic** > **클래식 바탕 화면** > **Windows Forms 응용 프로그램**).  
   
-2.  끌어서를 <xref:System.Windows.Forms.SplitContainer> 에서 제어 합니다 **도구 상자** 폼입니다. **속성** 창에서 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Fill>로 설정합니다.  
+2. 끌어서를 <xref:System.Windows.Forms.SplitContainer> 에서 제어 합니다 **도구 상자** 폼입니다. **속성** 창에서 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Fill>로 설정합니다.  
   
-3.  끌어서를 <xref:System.Windows.Forms.TreeView> 에서 제어 합니다 **도구 상자** 의 왼쪽 패널에는 <xref:System.Windows.Forms.SplitContainer> 제어 합니다. 에 **속성** 창에서 설정 합니다 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Left> 아래쪽 화살표를 클릭할 때 표시 되는 값 편집기의 왼쪽 패널을 클릭 하 여 합니다.  
+3. 끌어서를 <xref:System.Windows.Forms.TreeView> 에서 제어 합니다 **도구 상자** 의 왼쪽 패널에는 <xref:System.Windows.Forms.SplitContainer> 제어 합니다. 에 **속성** 창에서 설정 합니다 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Left> 아래쪽 화살표를 클릭할 때 표시 되는 값 편집기의 왼쪽 패널을 클릭 하 여 합니다.  
   
-4.  다른 <xref:System.Windows.Forms.SplitContainer> 에서 제어 합니다 **도구 상자**;의 오른쪽 패널에 배치 합니다 <xref:System.Windows.Forms.SplitContainer> 폼에 추가 된 컨트롤입니다. 에 **속성** 창에서 설정 합니다 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Fill> 및 <xref:System.Windows.Forms.SplitContainer.Orientation%2A> 속성을 <xref:System.Windows.Forms.Orientation.Horizontal>합니다.  
+4. 다른 <xref:System.Windows.Forms.SplitContainer> 에서 제어 합니다 **도구 상자**;의 오른쪽 패널에 배치 합니다 <xref:System.Windows.Forms.SplitContainer> 폼에 추가 된 컨트롤입니다. 에 **속성** 창에서 설정 합니다 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Fill> 및 <xref:System.Windows.Forms.SplitContainer.Orientation%2A> 속성을 <xref:System.Windows.Forms.Orientation.Horizontal>합니다.  
   
-5.  끌어서를 <xref:System.Windows.Forms.ListView> 에서 제어 합니다 **도구 상자** 초의 위 패널에 <xref:System.Windows.Forms.SplitContainer> 폼에 추가 된 컨트롤입니다. <xref:System.Windows.Forms.SplitContainer.Dock%2A> 컨트롤의 <xref:System.Windows.Forms.ListView> 속성을 <xref:System.Windows.Forms.DockStyle.Fill>로 설정합니다.  
+5. 끌어서를 <xref:System.Windows.Forms.ListView> 에서 제어 합니다 **도구 상자** 초의 위 패널에 <xref:System.Windows.Forms.SplitContainer> 폼에 추가 된 컨트롤입니다. <xref:System.Windows.Forms.SplitContainer.Dock%2A> 컨트롤의 <xref:System.Windows.Forms.ListView> 속성을 <xref:System.Windows.Forms.DockStyle.Fill>로 설정합니다.  
   
-6.  끌어서를 <xref:System.Windows.Forms.RichTextBox> 에서 제어 합니다 **도구 상자** 두 번째의 아래쪽 패널에 <xref:System.Windows.Forms.SplitContainer> 제어 합니다. <xref:System.Windows.Forms.SplitContainer.Dock%2A> 컨트롤의 <xref:System.Windows.Forms.RichTextBox> 속성을 <xref:System.Windows.Forms.DockStyle.Fill>로 설정합니다.  
+6. 끌어서를 <xref:System.Windows.Forms.RichTextBox> 에서 제어 합니다 **도구 상자** 두 번째의 아래쪽 패널에 <xref:System.Windows.Forms.SplitContainer> 제어 합니다. <xref:System.Windows.Forms.SplitContainer.Dock%2A> 컨트롤의 <xref:System.Windows.Forms.RichTextBox> 속성을 <xref:System.Windows.Forms.DockStyle.Fill>로 설정합니다.  
   
      이 시점에서 f5 키를 눌러 응용 프로그램을 실행 하는 경우 폼 비슷합니다 Microsoft Outlook의 세 부분으로 이루어진 사용자 인터페이스를 표시 합니다.  
   

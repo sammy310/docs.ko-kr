@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], obtaining
 ms.assetid: d53762fd-15ea-42dc-b0ea-6a6597aa23f7
-ms.openlocfilehash: 03ee861f7eba8b2ecee6b4697c5b475eacf78c89
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 21e9e0609ed63c4398f2df7ba718f8af17464b0a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59093906"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332484"
 ---
 # <a name="how-to-obtain-a-certificate-wcf"></a>방법: (WCF) 인증서 가져오기
 Windows Communication Foundation (WCF) 중 하나를 사용 하 여 X.509 인증서를 사용 하는 기능의 먼저 인증서를 받습니다.  
   
 ### <a name="to-obtain-an-x509-certificate"></a>X.509 인증서를 받으려면  
   
-1.  다음 중 하나를 선택합니다.  
+1. 다음 중 하나를 선택합니다.  
   
     -   VeriSign, Inc, 같은 인증 기관에서 인증서를 구입합니다.  
   

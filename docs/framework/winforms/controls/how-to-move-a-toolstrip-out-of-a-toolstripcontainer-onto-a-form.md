@@ -1,18 +1,18 @@
 ---
-title: '방법: 폼에 ToolStripContainer의 ToolStrip 이동'
+title: '방법: ToolStripContainer에서 양식으로 ToolStrip 이동'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], parenting to forms
 - Windows Forms, parenting ToolStrip controls
 ms.assetid: a1c94a7f-6fc5-4e4c-84cf-ff11dc573d33
-ms.openlocfilehash: 96fe863cee296ec292bf7010494af587d43fd8b3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9106a69ea9f28442da6e3270f7cf5abb9374b62d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708420"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335266"
 ---
-# <a name="how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a>방법: 폼에 ToolStripContainer의 ToolStrip 이동
+# <a name="how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a>방법: ToolStripContainer에서 양식으로 ToolStrip 이동
 이동 하려면 다음 절차는 <xref:System.Windows.Forms.ToolStrip> 개는 <xref:System.Windows.Forms.ToolStripContainer> 폼으로.  
   
 > [!NOTE]
@@ -20,17 +20,18 @@ ms.locfileid: "57708420"
   
 ### <a name="to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a>ToolStrip을 폼에 ToolStripContainer 외부로 이동 하려면  
   
-1.  <xref:System.Windows.Forms.ToolStrip>를 선택합니다.  
+1. <xref:System.Windows.Forms.ToolStrip>를 선택합니다.  
   
-2.  잘라내기를 <xref:System.Windows.Forms.ToolStrip> CTRL + X를 누르거나 마우스 오른쪽 단추로 클릭 하 여 <xref:System.Windows.Forms.ToolStrip> 선택한 **잘라내기** 상황에 맞는 메뉴에서.  
+2. 잘라내기를 <xref:System.Windows.Forms.ToolStrip> CTRL + X를 누르거나 마우스 오른쪽 단추로 클릭 하 여 <xref:System.Windows.Forms.ToolStrip> 선택한 **잘라내기** 상황에 맞는 메뉴에서.  
   
-3.  폼을 선택 합니다.  
+3. 폼을 선택 합니다.  
   
-4.  붙여넣기 합니다 <xref:System.Windows.Forms.ToolStrip> 에서 CTRL + V를 누르거나 선택할 **붙여넣기** 에서 합니다 **편집** 메뉴.  
+4. 붙여넣기 합니다 <xref:System.Windows.Forms.ToolStrip> 에서 CTRL + V를 누르거나 선택할 **붙여넣기** 에서 합니다 **편집** 메뉴.  
   
-5.  설정를 <xref:System.Windows.Forms.ToolStrip.Dock%2A> 의 속성을 <xref:System.Windows.Forms.ToolStrip> 에 **위쪽**합니다.  
+5. 설정를 <xref:System.Windows.Forms.ToolStrip.Dock%2A> 의 속성을 <xref:System.Windows.Forms.ToolStrip> 에 **위쪽**합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripContainer>
 - [ToolStrip 컨트롤 개요](toolstrip-control-overview-windows-forms.md)

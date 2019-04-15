@@ -2,12 +2,12 @@
 title: WCF 확장에 대한 사용자 지정 메타데이터 가져오기
 ms.date: 03/30/2017
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
-ms.openlocfilehash: 021790a256448d9c81e7a53a2845edf839ff3534
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 830829be98202c97a9fc2b34e31da25967292efb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090071"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339972"
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>WCF 확장에 대한 사용자 지정 메타데이터 가져오기
 Windows Communication Foundation (WCF), 메타 데이터 가져오기는 해당 메타 데이터의 서비스 또는 해당 구성 요소 부분의 추상적 표현을 생성 하는 과정입니다. 예를 들어 WCF 가져올 수 있습니다 <xref:System.ServiceModel.Description.ServiceEndpoint> 인스턴스를 <xref:System.ServiceModel.Channels.Binding> 인스턴스 또는 <xref:System.ServiceModel.Description.ContractDescription> WSDL에서 인스턴스를 서비스에 대 한 문서. Wcf에서 서비스 메타 데이터를 가져오려면의 구현을 사용 합니다 <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> 추상 클래스입니다. 파생 된 형식의 <xref:System.ServiceModel.Description.MetadataImporter> 클래스 가져오기 WCF의 논리를 Ws-policy를 활용 하는 메타 데이터 형식 가져오기에 대 한 지원을 구현 합니다.  
@@ -21,9 +21,9 @@ Windows Communication Foundation (WCF), 메타 데이터 가져오기는 해당 
   
  이 단원의 내용은 다음과 같습니다.  
   
-1.  설명과 코드를 생성하기 전에 WSDL 데이터를 사용자 지정 가져오기에 노출하는 <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> 인터페이스를 구현하고 사용하는 방법. 제공된 메타데이터 집합을 사용하면 수행된 설명 형식 및 코드 컴파일을 검사하거나 수정하는 데 이 인터페이스를 사용할 수 있습니다.  
+1. 설명과 코드를 생성하기 전에 WSDL 데이터를 사용자 지정 가져오기에 노출하는 <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> 인터페이스를 구현하고 사용하는 방법. 제공된 메타데이터 집합을 사용하면 수행된 설명 형식 및 코드 컴파일을 검사하거나 수정하는 데 이 인터페이스를 사용할 수 있습니다.  
   
-2.  설명 개체를 생성하기 전에 정책 어설션을 가져오기에 노출하는 <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> 인터페이스를 구현하고 사용하는 방법. 다운로드된 정책을 기반으로 바인딩 또는 계약을 검사하거나 수정하는 데 이 인터페이스를 사용할 수 있습니다.  
+2. 설명 개체를 생성하기 전에 정책 어설션을 가져오기에 노출하는 <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> 인터페이스를 구현하고 사용하는 방법. 다운로드된 정책을 기반으로 바인딩 또는 계약을 검사하거나 수정하는 데 이 인터페이스를 사용할 수 있습니다.  
   
  사용자 지정 WSDL 및 정책 어설션 내보내기에 대 한 자세한 내용은 참조 하세요. [사용자 지정 메타 데이터를 WCF 확장에 대 한 내보내기](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)합니다.  
   

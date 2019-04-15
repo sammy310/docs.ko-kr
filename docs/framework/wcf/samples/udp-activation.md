@@ -2,12 +2,12 @@
 title: UDP 활성화
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: 21599990aff1209729a151b4c5a8829e305a1e90
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6e19e92872c9b9344db7e787f0cd77e0a315f1a0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59088602"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337658"
 ---
 # <a name="udp-activation"></a>UDP 활성화
 이 샘플은 기반는 [전송 합니다. UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플입니다. 확장 된 [전송 합니다. UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플 Windows 프로세스 활성화 서비스 (WAS)를 사용한 프로세스 활성화를 지원 하도록 합니다.  
@@ -75,13 +75,13 @@ ms.locfileid: "59088602"
   
 #### <a name="to-set-up-this-sample"></a>이 샘플을 설치하려면  
   
-1.  다음 명령을 사용하여 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0을 설치합니다.  
+1. 다음 명령을 사용하여 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0을 설치합니다.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Windows Vista에서 프로젝트를 빌드합니다. 컴파일이 끝나면 빌드 후 단계에서 다음 작업을 수행합니다.  
+2. Windows Vista에서 프로젝트를 빌드합니다. 컴파일이 끝나면 빌드 후 단계에서 다음 작업을 수행합니다.  
   
     -   "Default Web Site" 사이트에 UDP 바인딩을 설치합니다.  
   
@@ -89,13 +89,13 @@ ms.locfileid: "59088602"
   
     -   또한 이 가상 응용 프로그램에 대해 "net.udp" 프로토콜을 사용하도록 설정합니다.  
   
-3.  사용자 인터페이스 응용 프로그램인 "WasNetActivator.exe"를 시작합니다. 클릭 합니다 **설치** 탭에서 다음 확인란을 확인 하 고 클릭 **설치** 설치:  
+3. 사용자 인터페이스 응용 프로그램인 "WasNetActivator.exe"를 시작합니다. 클릭 합니다 **설치** 탭에서 다음 확인란을 확인 하 고 클릭 **설치** 설치:  
   
     -   UDP Listener Adapter  
   
     -   UDP Protocol Handlers  
   
-4.  클릭 합니다 **활성화** 사용자 인터페이스 응용 프로그램 "WasNetActivator.exe"의 탭 합니다. 클릭 합니다 **시작** 수신기 어댑터를 시작 하는 단추입니다. 이제 프로그램을 실행할 준비가 되었습니다.  
+4. 클릭 합니다 **활성화** 사용자 인터페이스 응용 프로그램 "WasNetActivator.exe"의 탭 합니다. 클릭 합니다 **시작** 수신기 어댑터를 시작 하는 단추입니다. 이제 프로그램을 실행할 준비가 되었습니다.  
   
     > [!NOTE]
     >  이 샘플 사용을 마친 다음에는 Cleanup.bat를 실행하여 "Default Web Site"에서 net.udp 바인딩을 제거해야 합니다.  
@@ -113,15 +113,15 @@ ms.locfileid: "59088602"
   
 -   필요한 모든 요소가 올바르게 설치되었는지 확인합니다. 다음 단계에서는 샘플을 실행하는 방법을 설명합니다.  
   
-1.  다음과 같은 Windows 서비스가 시작되었는지 확인합니다.  
+1. 다음과 같은 Windows 서비스가 시작되었는지 확인합니다.  
   
     -   WAS(Windows Process Activation Service)  
   
     -   인터넷 정보 서비스 (IIS): W3SVC.  
   
-2.  그런 다음 활성기인 WasNetActivator.exe를 시작합니다. 아래는 **활성화** 탭에서 하나뿐인 프로토콜인 **UDP**, 드롭다운 목록에서에서 선택 된 합니다. 클릭 합니다 **시작** 활성기를 시작 하는 단추입니다.  
+2. 그런 다음 활성기인 WasNetActivator.exe를 시작합니다. 아래는 **활성화** 탭에서 하나뿐인 프로토콜인 **UDP**, 드롭다운 목록에서에서 선택 된 합니다. 클릭 합니다 **시작** 활성기를 시작 하는 단추입니다.  
   
-3.  활성기가 시작되었으면 명령 창에서 Client.exe를 실행하여 클라이언트 코드를 실행할 수 있습니다. 다음은 샘플 출력입니다.  
+3. 활성기가 시작되었으면 명령 창에서 Client.exe를 실행하여 클라이언트 코드를 실행할 수 있습니다. 다음은 샘플 출력입니다.  
   
     ```  
     Testing Udp Activation.  

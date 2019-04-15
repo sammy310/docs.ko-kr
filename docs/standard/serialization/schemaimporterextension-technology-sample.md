@@ -2,12 +2,12 @@
 title: SchemaImporterExtension 기술 샘플
 ms.date: 03/30/2017
 ms.assetid: 3f5eb78f-0ef6-433a-b095-3a63b1ce0bc9
-ms.openlocfilehash: 04e2b3f9fb1ea6f9bbb3c1e1886911cbacda7a62
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5027897bcf62e52dae5aab6090c01518a92636dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54633900"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298502"
 ---
 # <a name="schemaimporterextension-technology-sample"></a>SchemaImporterExtension 기술 샘플
 [샘플 다운로드](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/SchemaImporterExtension.zip.exe)  
@@ -16,25 +16,25 @@ ms.locfileid: "54633900"
   
 ### <a name="to-build-the-sample-using-the-command-prompt"></a>명령 프롬프트를 사용하여 샘플을 빌드하려면  
   
-1.  명령 프롬프트 창을 열고 샘플에 대한 언어별 하위 디렉터리 중 하나로 이동합니다.  
+1. 명령 프롬프트 창을 열고 샘플에 대한 언어별 하위 디렉터리 중 하나로 이동합니다.  
   
-2.  명령줄에 **msbuild.exe OrderSchemaImporterExtension.sln**을 입력합니다.  
+2. 명령줄에 **msbuild.exe OrderSchemaImporterExtension.sln**을 입력합니다.  
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>Visual Studio를 사용하여 샘플을 빌드하려면  
   
-1.  [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)]를 열고 샘플에 대한 언어별 하위 디렉터리 중 하나로 이동합니다.  
+1. [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)]를 열고 샘플에 대한 언어별 하위 디렉터리 중 하나로 이동합니다.  
   
-2.  OrderSchemaImporterExtension.sln의 아이콘을 두 번 클릭하여 Visual Studio에서 파일을 엽니다.  
+2. OrderSchemaImporterExtension.sln의 아이콘을 두 번 클릭하여 Visual Studio에서 파일을 엽니다.  
   
-3.  **빌드** 메뉴에서 **솔루션 빌드**를 클릭합니다.  
+3. **빌드** 메뉴에서 **솔루션 빌드**를 클릭합니다.  
   
  응용 프로그램이 기본 \bin 또는 \bin\Debug 디렉터리에 빌드됩니다.  
   
 ### <a name="to-run-the-sample"></a>이 샘플을 실행하려면  
   
-1.  명령 프롬프트를 사용하여 새 실행 파일이 있는 디렉터리로 이동합니다.  
+1. 명령 프롬프트를 사용하여 새 실행 파일이 있는 디렉터리로 이동합니다.  
   
-2.  명령줄에 **[exe name]** 을 입력합니다.  
+2. 명령줄에 **[exe name]** 을 입력합니다.  
   
 ## <a name="remarks"></a>설명  
  샘플의 이진 생성 및 등록 단계에 대한 자세한 내용은 소스 코드의 주석 및 build.proj 파일을 참조하십시오.  

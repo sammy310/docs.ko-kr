@@ -7,12 +7,12 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: 7fc4aed4d405729b64a2f7ba772cdd794df40f2a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a52daddaa8701ccca9bd9b5b4a48535a6ffa19ed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825099"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343560"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>방법: 선언 구조체 (Visual Basic)
 먼저 사용 하 여 구조체 선언을 [Structure 문](../../../../visual-basic/language-reference/statements/structure-statement.md)를 종료 하 고는 `End Structure` 문. 두 문 사이 선언 해야 하나 이상의 *요소*합니다. 모든 데이터 형식의 요소 수는 있지만 비공유 변수 또는 비공유, 비 사용자 정의 이벤트를 하나 이상 이어야 합니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "58825099"
   
 ### <a name="to-declare-a-structure"></a>구조체를 선언 하려면  
   
-1.  시작 및 끝 문장 구조를 만듭니다.  
+1. 시작 및 끝 문장 구조를 만듭니다.  
   
      사용 하 여 구조 액세스 수준을 지정할 수 있습니다는 [공용](../../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), 또는 [개인](../../../../visual-basic/language-reference/modifiers/private.md) 키워드 또는 있습니다 수 있도록 기본적으로 `Public`입니다.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "58825099"
     End Structure  
     ```  
   
-2.  구조체의 본문에 요소를 추가 합니다.  
+2. 구조체의 본문에 요소를 추가 합니다.  
   
      구조체에는 하나 이상의 요소가 있어야 합니다. 모든 요소를 선언 하 고에 대 한 액세스 수준을 지정 해야 합니다. 사용 하는 경우는 [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md) 접근성 기본값으로 키워드 없이 `Public`합니다.  
   

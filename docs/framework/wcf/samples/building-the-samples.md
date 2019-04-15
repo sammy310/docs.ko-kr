@@ -2,12 +2,12 @@
 title: Windows Communication Foundation 샘플 빌드
 ms.date: 03/30/2017
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-ms.openlocfilehash: b6b541b93661f3da656e36d65ef3f94d76cae0c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b1f1005e32687d2683f757d847d9fa19e098f290
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658873"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317859"
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 샘플 빌드
 
@@ -18,9 +18,9 @@ ms.locfileid: "54658873"
 
 ## <a name="to-build-the-sample-using-a-command-prompt"></a>명령 프롬프트를 사용하여 샘플을 빌드하려면
 
-1.  Visual Studio 용 개발자 명령 프롬프트를 열고 샘플을 설치한 디렉터리 위치 아래의 언어별 하위 디렉터리로 이동 합니다.
+1. Visual Studio 용 개발자 명령 프롬프트를 열고 샘플을 설치한 디렉터리 위치 아래의 언어별 하위 디렉터리로 이동 합니다.
 
-2.  형식 `msbuild` 명령줄에서. 클라이언트 프로그램 파일을 기본 제공 되 *client\bin* 하도록 서비스 프로그램 파일이 빌드되고 *service\bin*합니다. 인터넷 정보 서비스 (IIS)에서 호스트 되는 서비스 하는 경우 서비스 프로그램 파일에도 복사 합니다 *servicemodelsamples* 디렉터리 및 해당 *\bin* 하위 디렉터리입니다.
+2. 형식 `msbuild` 명령줄에서. 클라이언트 프로그램 파일을 기본 제공 되 *client\bin* 하도록 서비스 프로그램 파일이 빌드되고 *service\bin*합니다. 인터넷 정보 서비스 (IIS)에서 호스트 되는 서비스 하는 경우 서비스 프로그램 파일에도 복사 합니다 *servicemodelsamples* 디렉터리 및 해당 *\bin* 하위 디렉터리입니다.
 
 > [!NOTE]
 > Acl을 설정 해야 합니다 *%systemdrive%\inetpub\wwwroot* 권한을 부여 하려면 실행 중인 계정에 대 한 사용 권한을 수정 합니다. 그러지 않으면 일부 빌드 후 이벤트가 실패합니다. 또는 ACL을 그대로 두고 관리자로 SDK 명령 프롬프트를 실행할 수도 있습니다.
@@ -50,9 +50,9 @@ ms.locfileid: "54658873"
 
 ### <a name="to-regenerate-the-client-and-configuration-files"></a>클라이언트 및 구성 파일을 다시 생성하려면
 
-1.  SDK 명령 프롬프트를 열고 샘플을 설치한 디렉터리 위치 아래의 언어별 하위 디렉터리로 이동합니다.
+1. SDK 명령 프롬프트를 열고 샘플을 설치한 디렉터리 위치 아래의 언어별 하위 디렉터리로 이동합니다.
 
-2.  웹 호스팅 서비스의 경우 다음 명령을 사용합니다.
+2. 웹 호스팅 서비스의 경우 다음 명령을 사용합니다.
 
     ```
     svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /out:generatedClient.cs

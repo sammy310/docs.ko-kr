@@ -2,12 +2,12 @@
 title: 사용자 지정 복합 디자이너 - 워크플로 항목 프리젠터
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-ms.openlocfilehash: 4c1258a49ac3ef2227d520fe11f341819f8663a0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f3c7620f719b8412b6b34bda7be5d607dccda75f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089200"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311125"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>사용자 지정 복합 디자이너 - 워크플로 항목 프리젠터
 <xref:System.Activities.Presentation.WorkflowItemPresenter> 임의의 활동을 배치할 수 있는 "끌어 놓기 영역"을 만들 수 있도록 하는 WF 디자이너 프로그래밍 모델의 키 형식입니다. 이 샘플에서는 표시 이러한 "드롭 영역". "를 사용 하는 활동 디자이너를 빌드하는 방법을 보여 줍니다.
@@ -67,9 +67,9 @@ ms.locfileid: "59089200"
 
 #### <a name="to-setup-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면
 
-1.  Visual Studio 2010에서 솔루션을 엽니다.
+1. Visual Studio 2010에서 솔루션을 엽니다.
 
-2.  F5 키를 눌러 애플리케이션을 컴파일하고 실행합니다.
+2. F5 키를 눌러 애플리케이션을 컴파일하고 실행합니다.
 
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  

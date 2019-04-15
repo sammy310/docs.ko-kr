@@ -1,21 +1,24 @@
 ---
 title: Visual Studio에서 인식 되는 DPI를 사용 하지 않도록 설정
-description: HDPI 모니터에 Windows Forms 디자이너 및 DPI를 인식 하지 못하는 프로세스로 Visual Studio를 실행 하는 방법의 제한 사항에 설명 합니다.
-ms.date: 03/19/2019
+description: HDPI 모니터에 대 한 Windows Forms 디자이너의 제한 사항 및 DPI를 인식 하지 못하는 프로세스로 Visual Studio를 실행 하는 방법에 설명 합니다.
+ms.date: 04/05/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 73f2371c40facf8902958cce020a6f02047615ba
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.custom: seoapril2019
+ms.openlocfilehash: e52debea382033417afe0bd47f899af1666192bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633870"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181385"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Visual Studio에서 인식 되는 DPI를 사용 하지 않도록 설정
 
 Visual Studio는 dpi 인식 응용 프로그램에 자동으로 표시 배율을 즉 인치당입니다. 응용 프로그램에서 DPI에서 인식 되지 않으면 알 경우 운영 체제에 비트맵으로 응용 프로그램을 확장 합니다. 이 동작은 DPI 가상화를 라고도 합니다. 응용 프로그램이 여전히 100% 배율 조정 또는 96dpi에서 실행 되 고 있는지 것으로 생각 합니다.
+
+이 문서에서는 HDPI 모니터에 대 한 Windows Forms 디자이너의 제한 사항 및 DPI를 인식 하지 못하는 프로세스로 Visual Studio를 실행 하는 방법을 설명 합니다.
 
 ## <a name="windows-forms-designer-on-hdpi-monitors"></a>HDPI 모니터에 Windows Forms 디자이너
 
@@ -32,11 +35,15 @@ Visual Studio는 dpi 인식 응용 프로그램에 자동으로 표시 배율을
 > [!NOTE]
 > 이 정보 표시줄은 Visual Studio 2017 버전 15.8에서에서 도입 되었습니다.
 
-디자이너에서 작동 하지 않는 경우 폼의 레이아웃을 조정할 필요가 없습니다 정보 표시줄을 무시 하 고 다른 형식의 디자이너 또는 코드 편집기에서 작업을 계속할 수 있습니다. (할 수도 있습니다 [알림 사용 안 함](#disable-notifications) 표시할 정보 가로 막대형 계속 되지 않도록 합니다.) 만 **Windows Forms 디자이너** 영향을 받습니다. 작업할 필요가 없는 경우는 **Windows Forms 디자이너**, 다음 섹션에서는 도움이 [문제를 해결](#to-resolve-the-problem)합니다.
+디자이너에서 작동 하지 않는 경우 폼의 레이아웃을 조정할 필요가 없습니다 정보 표시줄을 무시 하 고 다른 형식의 디자이너 또는 코드 편집기에서 작업을 계속할 수 있습니다. (할 수도 있습니다 [알림 사용 안 함](#disable-notifications) 표시할 정보 가로 막대형 계속 되지 않도록 합니다.) 만 **Windows Forms 디자이너** 영향을 받습니다. 작업할 필요가 없는 경우는 **Windows Forms 디자이너**, 다음 섹션에서는 도움이 [문제를 해결](#to-resolve-the-display-problem)합니다.
 
-## <a name="to-resolve-the-problem"></a>문제를 해결 하려면
+## <a name="to-resolve-the-display-problem"></a>표시 문제를 해결 하려면
 
 표시 문제를 해결 하는 방법은 세 가지가 있습니다.
+
+1. [DPI를 인식 하지 못하는 프로세스로 Visual Studio를 다시 시작](#restart-visual-studio-as-a-dpi-unaware-process)
+2. [레지스트리 항목을 추가 합니다.](#add-a-registry-entry)
+3. [디스플레이 설정을 100%로 크기 조정 설정](#set-your-display-scaling-setting-to-100)
 
 ### <a name="restart-visual-studio-as-a-dpi-unaware-process"></a>DPI를 인식 하지 못하는 프로세스로 Visual Studio를 다시 시작
 

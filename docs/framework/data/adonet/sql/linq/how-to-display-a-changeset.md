@@ -1,18 +1,18 @@
 ---
-title: '방법: 변경 집합 표시'
+title: '방법: ChangeSet 표시'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 126e7245-c5a0-4ebf-800d-cc1fcf9cd0ab
-ms.openlocfilehash: e6030a48a773dcf985eee5c4c113b02386780707
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 92acee0d36634ea09c245418fcc7a8b97d208aa6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065819"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228635"
 ---
-# <a name="how-to-display-a-changeset"></a>방법: 변경 집합 표시
+# <a name="how-to-display-a-changeset"></a>방법: ChangeSet 표시
 <xref:System.Data.Linq.DataContext>을 사용하여 <xref:System.Data.Linq.DataContext.GetChangeSet%2A>에 의해 추적된 변경 내용을 볼 수 있습니다.  
   
 ## <a name="example"></a>예제  
@@ -52,4 +52,5 @@ Total changes: {Added: 0, Removed: 0, Modified: 8}
 ```
   
 ## <a name="see-also"></a>참고자료
+
 - [디버깅 지원](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)

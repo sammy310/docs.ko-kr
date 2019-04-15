@@ -15,12 +15,12 @@ helpviewer_keywords:
 - receiving data, Secure Sockets Layer
 - Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
-ms.openlocfilehash: 5d095d4cd6d8ee204b6d05a7674dee67c35e46c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0af2fa8bbe2efb2dc4fb3d1177c4950dcec87cf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694923"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135806"
 ---
 # <a name="using-secure-sockets-layer"></a>SSL(Secure Sockets Layer) 사용
 <xref:System.Net> 클래스는 SSL(Secure Sockets Layer)을 사용하여 여러 네트워크 프로토콜에 대한 연결을 암호화합니다.  
@@ -63,6 +63,7 @@ FtpWebResponse response = (FtpWebResponse)request.GetResponse();
 -   **System.Net** 네임스페이스에 대한 참조.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [네트워크 프로그래밍의 보안](../../../docs/framework/network-programming/security-in-network-programming.md)
 - [.NET Framework의 네트워크 프로그래밍](../../../docs/framework/network-programming/index.md)
 - [인증서 선택 및 유효성 검사](../../../docs/framework/network-programming/certificate-selection-and-validation.md)

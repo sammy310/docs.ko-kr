@@ -8,21 +8,21 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-ms.openlocfilehash: baf4e6cb3b2a40b1b792ae12e78cb9f878a738ff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b1eb24aaa9ed3bfede41fc5a9a80fcbdc9f749a6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124308"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302204"
 ---
 # <a name="overriding-the-onpaint-method"></a>OnPaint 메서드 재정의
 에 정의 된 이벤트를 재정의 하기 위한 기본 단계는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 동일 하 고 다음 목록에 요약 되어 있습니다.  
   
 #### <a name="to-override-an-inherited-event"></a>상속 된 이벤트를 재정의 하려면  
   
-1.  보호 된 재정의 `On` *EventName* 메서드.  
+1. 보호 된 재정의 `On` *EventName* 메서드.  
   
-2.  호출을 `On` *EventName* 기본 클래스에서 재정의 된 메서드의 `On` *EventName* 메서드를 등록 된 대리자가 이벤트를 받도록 합니다.  
+2. 호출을 `On` *EventName* 기본 클래스에서 재정의 된 메서드의 `On` *EventName* 메서드를 등록 된 대리자가 이벤트를 받도록 합니다.  
   
  합니다 <xref:System.Windows.Forms.Control.Paint> 이벤트는 모든 Windows Forms 컨트롤 재정의 해야 하기 때문에 여기에서 자세히 설명 되어 합니다 <xref:System.Windows.Forms.Control.Paint> 에서 상속 하는 이벤트 <xref:System.Windows.Forms.Control>합니다. 기본 <xref:System.Windows.Forms.Control> 클래스에서 파생된 된 컨트롤을 그릴 수 있도록 요구 하는 방법을 알 수 없습니다 및의 모든 그리기 논리를 제공 하지 않습니다는 <xref:System.Windows.Forms.Control.OnPaint%2A> 메서드. 합니다 <xref:System.Windows.Forms.Control.OnPaint%2A> 메서드의 <xref:System.Windows.Forms.Control> 디스패치 하기만 합니다 <xref:System.Windows.Forms.Control.Paint> 이벤트 등록 된 이벤트 수신기를 합니다.  
   

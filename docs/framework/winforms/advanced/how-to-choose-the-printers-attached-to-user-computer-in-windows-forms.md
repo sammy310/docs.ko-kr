@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms에서 사용자의 컴퓨터에 연결 된 프린터를 선택 합니다.'
+title: '방법: Windows Forms에서 사용자의 컴퓨터에 연결된 프린터 선택'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,21 +9,21 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-ms.openlocfilehash: 8c29a90cf4aa7380297cc2776123fb353b07d8c5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: efd65ff6417b1a63a7f87917c4d9a95dedc464ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702735"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318808"
 ---
-# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>방법: Windows Forms에서 사용자의 컴퓨터에 연결 된 프린터를 선택 합니다.
+# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>방법: Windows Forms에서 사용자의 컴퓨터에 연결된 프린터 선택
 사용자는 기본 프린터 이외의 프린터를 선택하는 경우가 많습니다. <xref:System.Windows.Forms.PrintDialog> 구성 요소를 사용하면 현재 설치된 프린터 중에서 사용자가 원하는 프린터를 선택하도록 할 수 있습니다. <xref:System.Windows.Forms.PrintDialog> 구성 요소를 통해 <xref:System.Windows.Forms.DialogResult> 구성 요소의 <xref:System.Windows.Forms.PrintDialog> 가 캡처되고 프린터 선택에 사용됩니다.  
   
  다음 절차에서는 텍스트 파일이 기본 프린터로 인쇄되도록 선택되었습니다. 그런 다음 <xref:System.Windows.Forms.PrintDialog> 클래스가 인스턴스화됩니다.  
   
 ### <a name="to-choose-a-printer-and-then-print-a-file"></a>프린터를 선택한 다음 파일을 인쇄하려면  
   
-1.  사용 하 여 사용할 프린터를 선택 합니다 <xref:System.Windows.Forms.PrintDialog> 구성 요소입니다.  
+1. 사용 하 여 사용할 프린터를 선택 합니다 <xref:System.Windows.Forms.PrintDialog> 구성 요소입니다.  
   
      다음 코드 예제에서는 두 이벤트가 처리되고 있습니다. 첫 번째에서는 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Click> 이벤트를 <xref:System.Windows.Forms.PrintDialog> 클래스가 인스턴스화되고 사용자가 선택한 프린터가 캡처됩니다는 <xref:System.Windows.Forms.DialogResult> 속성입니다.  
   
@@ -107,4 +107,5 @@ ms.locfileid: "57702735"
     ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Forms 인쇄 지원](windows-forms-print-support.md)

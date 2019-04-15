@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0778285ef1b5702bd79743038a1bd21ba04612d6
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 3cd5052dffcb059c240a310e0b89384f28409264
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761066"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234465"
 ---
 ### <a name="calls-to-systemwindowsinputpencontextdisable-on-touch-enabled-systems-may-throw-an-argumentexception"></a>터치 지원 시스템에서 System.Windows.Input.PenContext.Disable 호출하면 ArgumentException이 throw될 수 있음
 
@@ -15,4 +15,3 @@ ms.locfileid: "58761066"
 |범위|Microsoft Edge|
 |버전|4.6.1|
 |형식|대상 변경|
-

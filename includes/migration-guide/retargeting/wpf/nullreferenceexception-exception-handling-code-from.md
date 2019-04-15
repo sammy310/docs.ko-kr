@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: bae7d11f29609acddaf9f6391983176ccaa9ebcb
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: e4cf139d308a1c12425d966a84d59a0c3bb89712
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760315"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236454"
 ---
 ### <a name="nullreferenceexception-in-exception-handling-code-from-imagesourceconverterconvertfrom"></a>ImageSourceConverter.ConvertFrom의 예외 처리 코드에서 NullReferenceException이 발생
 
@@ -16,4 +16,3 @@ ms.locfileid: "58760315"
 |버전|4.7|
 |형식|대상 변경|
 |영향을 받는 API|<ul><li><xref:System.Windows.Media.ImageSourceConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)?displayProperty=nameWithType></li></ul>|
-

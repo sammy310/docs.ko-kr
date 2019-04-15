@@ -9,12 +9,12 @@ helpviewer_keywords:
 - task_core_add_class_handling_routed_properties [WPF]
 - class handlers [WPF], routed events
 ms.assetid: 15b7b06c-9112-4ee5-b30a-65d10c5c5df6
-ms.openlocfilehash: 8c973871336c3389161ce25ae52d2dfaef9c53a5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7b897954cbdab461dc0305c6290e67c1af5282c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361774"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224275"
 ---
 # <a name="how-to-add-class-handling-for-a-routed-event"></a>방법: 라우트된 이벤트에 대한 클래스 처리 추가
 클래스 처리기 또는 경로의 지정 된 모든 노드에서 인스턴스 처리기 라우트된 이벤트를 처리할 수 있습니다. 클래스 처리기는 먼저 호출 및 인스턴스 처리에서 이벤트를 억제 하는 기본 클래스를 소유 하는 이벤트에 다른 이벤트가 특정 동작을 소개 클래스 구현에서 사용할 수 있습니다. 이 예제에는 클래스 처리기를 구현 하는 것에 대 한 밀접 한 관련이 있는 두 가지 기술을 보여 줍니다.  
@@ -33,6 +33,7 @@ ms.locfileid: "57361774"
  [!code-vb[ClassHandling#StaticAndRegisterClassHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClassHandling/visualbasic/sdksamplelibrary/class1.vb#staticandregisterclasshandler)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.EventManager>
 - [라우트된 이벤트를 처리된 것으로 표시 및 클래스 처리](marking-routed-events-as-handled-and-class-handling.md)
 - [라우트된 이벤트 처리](how-to-handle-a-routed-event.md)

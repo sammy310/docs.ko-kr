@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b5c0b5dc2e001121ab54447bae4a5eed3290a580
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a73b2d8948c9a046fd77c02f1bcc87f5738105d9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597842"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304001"
 ---
 # <a name="how-to-build-a-single-file-assembly"></a>방법: 단일 파일 어셈블리 빌드
 
@@ -33,7 +33,7 @@ ms.locfileid: "54597842"
 
 ## <a name="to-create-an-assembly-with-an-exe-extension"></a>확장명이 .exe인 어셈블리를 만들려면
 
-1.  명령 프롬프트에 다음 명령을 입력합니다.
+1. 명령 프롬프트에 다음 명령을 입력합니다.
 
      \<*compiler command*> \<*module name*>
 
@@ -51,7 +51,7 @@ vbc myCode.vb
 
 ### <a name="to-create-an-assembly-with-an-exe-extension-and-specify-the-output-file-name"></a>확장명이 .exe인 어셈블리를 만들고 출력 파일 이름을 지정하려면
 
-1.  명령 프롬프트에 다음 명령을 입력합니다.
+1. 명령 프롬프트에 다음 명령을 입력합니다.
 
      \<*compiler command*> **/out:**\<*file name*> \<*module name*>
 
@@ -72,7 +72,7 @@ vbc -out:myAssembly.exe myCode.vb
 
 ### <a name="to-create-a-library-assembly"></a>라이브러리 어셈블리를 만들려면
 
-1.  명령 프롬프트에 다음 명령을 입력합니다.
+1. 명령 프롬프트에 다음 명령을 입력합니다.
 
      \<*compiler command*> **-t:library** \<*module name*>
 

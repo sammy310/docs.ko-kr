@@ -1,18 +1,18 @@
 ---
-title: '연습: 하이브리드 응용 프로그램 지역화'
+title: '연습: 하이브리드 애플리케이션 지역화'
 ms.date: 08/18/2018
 helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: 116a847d4f7b0591e823416cf5744e68d689c6ee
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 01530d4ae9779934948bbaff60fbbd392de6e701
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378082"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329299"
 ---
-# <a name="walkthrough-localizing-a-hybrid-application"></a>연습: 하이브리드 응용 프로그램 지역화
+# <a name="walkthrough-localizing-a-hybrid-application"></a>연습: 하이브리드 애플리케이션 지역화
 
 이 연습에서는 지역화 하는 방법을 보여 줍니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 의 요소를 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-기반 하이브리드 응용 프로그램입니다.
 
@@ -44,11 +44,11 @@ ms.locfileid: "57378082"
 
 ### <a name="to-create-the-host-project"></a>호스트 프로젝트 만들기
 
-1.  만들기는 **WPF 앱** 라는 프로젝트 `LocalizingWpfInWf`합니다.  (**파일** > **새** > **프로젝트** > **Visual C#** 또는 **Visual Basic**   >  **클래식 바탕 화면** > **WPF 응용 프로그램**).
+1. 만들기는 **WPF 앱** 라는 프로젝트 `LocalizingWpfInWf`합니다.  (**파일** > **새** > **프로젝트** > **Visual C#** 또는 **Visual Basic**   >  **클래식 바탕 화면** > **WPF 응용 프로그램**).
 
-2.  추가 된 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> 라는 요소가 `SimpleControl` 프로젝트에.
+2. 추가 된 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.UserControl> 라는 요소가 `SimpleControl` 프로젝트에.
 
-3.  사용 된 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤을는 `SimpleControl` 요소를 폼에 합니다. 자세한 내용은 [연습: Windows Forms에서 3-D WPF 복합 컨트롤 호스팅](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)합니다.
+3. 사용 된 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤을는 `SimpleControl` 요소를 폼에 합니다. 자세한 내용은 [연습: Windows Forms에서 3-D WPF 복합 컨트롤 호스팅](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)합니다.
 
 ## <a name="adding-localizable-content"></a>지역화 가능한 콘텐츠 추가
 
@@ -56,17 +56,17 @@ ms.locfileid: "57378082"
 
 ### <a name="to-add-localizable-content"></a>지역화 가능한 콘텐츠를 추가하려면
 
-1.  **솔루션 탐색기**를 두 번 클릭 **SimpleControl.xaml** 에서 열려는 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]합니다.
+1. **솔루션 탐색기**를 두 번 클릭 **SimpleControl.xaml** 에서 열려는 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]합니다.
 
-2.  내용을 설정 합니다 <xref:System.Windows.Controls.Button> 다음 코드를 사용 하 여 제어 합니다.
+2. 내용을 설정 합니다 <xref:System.Windows.Controls.Button> 다음 코드를 사용 하 여 제어 합니다.
 
      [!code-xaml[LocalizingWpfInWf#10](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl0.xaml#10)]
 
-3.  **솔루션 탐색기**를 두 번 클릭 **Form1** Windows Forms 디자이너에서 엽니다.
+3. **솔루션 탐색기**를 두 번 클릭 **Form1** Windows Forms 디자이너에서 엽니다.
 
-4.  엽니다는 **도구 상자** 두 번 클릭 하 고 **레이블** 양식에 레이블 컨트롤을 추가 하려면. <xref:System.Windows.Forms.Control.Text%2A> 속성의 값을 `"Hello"`로 설정합니다.
+4. 엽니다는 **도구 상자** 두 번 클릭 하 고 **레이블** 양식에 레이블 컨트롤을 추가 하려면. <xref:System.Windows.Forms.Control.Text%2A> 속성의 값을 `"Hello"`로 설정합니다.
 
-5.  **F5** 키를 눌러 응용 프로그램을 빌드하고 실행합니다.
+5. **F5** 키를 눌러 응용 프로그램을 빌드하고 실행합니다.
 
      모두를 `SimpleControl` 요소와 레이블 컨트롤에 텍스트 표시 **"Hello"** 합니다.
 
@@ -76,25 +76,25 @@ Windows Forms 디자이너에서는 위성 어셈블리에서 지역화를 사�
 
 ### <a name="to-enable-localization"></a>지역화를 사용하려면
 
-1.  **솔루션 탐색기**를 두 번 클릭 **Form1.cs** Windows Forms 디자이너에서 엽니다.
+1. **솔루션 탐색기**를 두 번 클릭 **Form1.cs** Windows Forms 디자이너에서 엽니다.
 
-2.  에 **속성** 창에서 폼의 값을 설정 **Localizable** 속성을 `true`입니다.
+2. 에 **속성** 창에서 폼의 값을 설정 **Localizable** 속성을 `true`입니다.
 
-3.  에 **속성** 창에서 값을 설정 합니다 **언어** 속성을 **스페인어 (스페인)** 합니다.
+3. 에 **속성** 창에서 값을 설정 합니다 **언어** 속성을 **스페인어 (스페인)** 합니다.
 
-4.  Windows Forms 디자이너에서 레이블 컨트롤을 선택합니다.
+4. Windows Forms 디자이너에서 레이블 컨트롤을 선택합니다.
 
-5.  에 **속성** 창에서 값을 설정 합니다 <xref:System.Windows.Forms.Control.Text%2A> 속성을 `"Hola"`입니다.
+5. 에 **속성** 창에서 값을 설정 합니다 <xref:System.Windows.Forms.Control.Text%2A> 속성을 `"Hola"`입니다.
 
      Form1.es-ES.resx라는 새 리소스 파일이 프로젝트에 추가됩니다.
 
-6.  **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 **Form1.cs** 누릅니다 **코드 보기** 하 여 코드 편집기에서 엽니다.
+6. **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 **Form1.cs** 누릅니다 **코드 보기** 하 여 코드 편집기에서 엽니다.
 
-7.  다음 코드를 복사 합니다 `Form1` 생성자를 호출 하기 전에 `InitializeComponent`입니다.
+7. 다음 코드를 복사 합니다 `Form1` 생성자를 호출 하기 전에 `InitializeComponent`입니다.
 
      [!code-csharp[LocalizingWpfInWf#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/Form1.cs#2)]
 
-8.  **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 **LocalizingWpfInWf** 누릅니다 **프로젝트 언로드**합니다.
+8. **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 **LocalizingWpfInWf** 누릅니다 **프로젝트 언로드**합니다.
 
      프로젝트 이름을 이라고 **(사용 불가)** 합니다.
 
@@ -118,19 +118,19 @@ Windows Forms 디자이너에서는 위성 어셈블리에서 지역화를 사�
 
 ### <a name="to-assign-resource-identifiers"></a>리소스 식별자를 할당하려면
 
-1.  시작 메뉴에서 Visual Studio 용 개발자 명령 프롬프트를 엽니다.
+1. 시작 메뉴에서 Visual Studio 용 개발자 명령 프롬프트를 엽니다.
 
-2.  다음 명령을 사용하여 지역화 가능한 콘텐츠에 리소스 식별자를 할당합니다.
+2. 다음 명령을 사용하여 지역화 가능한 콘텐츠에 리소스 식별자를 할당합니다.
 
     ```
     msbuild -t:updateuid LocalizingWpfInWf.csproj
     ```
 
-3.  **솔루션 탐색기**를 두 번 클릭 **SimpleControl.xaml** 하 여 코드 편집기에서 엽니다. 확인할 수 있습니다는 `msbuild` 명령에 추가 된 `Uid` 모든 요소에 특성입니다. 따라서 리소스 식별자 할당을 통해 지역화가 용이해집니다.
+3. **솔루션 탐색기**를 두 번 클릭 **SimpleControl.xaml** 하 여 코드 편집기에서 엽니다. 확인할 수 있습니다는 `msbuild` 명령에 추가 된 `Uid` 모든 요소에 특성입니다. 따라서 리소스 식별자 할당을 통해 지역화가 용이해집니다.
 
      [!code-xaml[LocalizingWpfInWf#20](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl.xaml#20)]
 
-4.  키를 눌러 **F6** 솔루션을 빌드합니다.
+4. 키를 눌러 **F6** 솔루션을 빌드합니다.
 
 ## <a name="using-locbaml-to-produce-a-satellite-assembly"></a>LocBaml을 사용하여 위성 어셈블리 생성
 
@@ -138,19 +138,19 @@ Windows Forms 디자이너에서는 위성 어셈블리에서 지역화를 사�
 
 ### <a name="to-produce-a-satellite-assembly"></a>위성 어셈블리를 생성하려면
 
-1.  LocBaml.exe를 프로젝트의 obj\Debug 폴더에 복사합니다. 자세한 내용은 [응용 프로그램 지역화](how-to-localize-an-application.md)합니다.
+1. LocBaml.exe를 프로젝트의 obj\Debug 폴더에 복사합니다. 자세한 내용은 [응용 프로그램 지역화](how-to-localize-an-application.md)합니다.
 
-2.  [명령 프롬프트] 창에서 다음 명령을 사용하여 리소스 문자열을 임시 파일로 추출합니다.
+2. [명령 프롬프트] 창에서 다음 명령을 사용하여 리소스 문자열을 임시 파일로 추출합니다.
 
     ```
     LocBaml /parse LocalizingWpfInWf.g.en-US.resources /out:temp.csv
     ```
 
-3.  Visual Studio 또는 다른 텍스트 편집기를 사용 하 여 temp.csv 파일을 엽니다. 문자열 대체 `"Hello"` 스페인어 번역 인를 사용 하 여 `"Hola"`입니다.
+3. Visual Studio 또는 다른 텍스트 편집기를 사용 하 여 temp.csv 파일을 엽니다. 문자열 대체 `"Hello"` 스페인어 번역 인를 사용 하 여 `"Hola"`입니다.
 
-4.  temp.csv 파일을 저장합니다.
+4. temp.csv 파일을 저장합니다.
 
-5.  다음 명령을 사용하여 지역화된 리소스 파일을 생성합니다.
+5. 다음 명령을 사용하여 지역화된 리소스 파일을 생성합니다.
 
     ```
     LocBaml /generate /trans:temp.csv LocalizingWpfInWf.g.en-US.resources /out:. /cul:es-ES
@@ -158,7 +158,7 @@ Windows Forms 디자이너에서는 위성 어셈블리에서 지역화를 사�
 
      LocalizingWpfInWf.g.es-ES.resources 파일이 obj\Debug 폴더에 만들어집니다.
 
-6.  다음 명령을 사용하여 지역화된 위성 어셈블리를 빌드합니다.
+6. 다음 명령을 사용하여 지역화된 위성 어셈블리를 빌드합니다.
 
     ```
     Al.exe /out:LocalizingWpfInWf.resources.dll /culture:es-ES /embed:LocalizingWpfInWf.Form1.es-ES.resources /embed:LocalizingWpfInWf.g.es-ES.resources
@@ -166,9 +166,9 @@ Windows Forms 디자이너에서는 위성 어셈블리에서 지역화를 사�
 
      LocalizingWpfInWf.resources.dll 파일이 obj\Debug 폴더에 만들어집니다.
 
-7.  LocalizingWpfInWf.resources.dll 파일을 프로젝트의 bin\Debug\es-ES 폴더에 복사합니다. 기존 파일을 바꿉니다.
+7. LocalizingWpfInWf.resources.dll 파일을 프로젝트의 bin\Debug\es-ES 폴더에 복사합니다. 기존 파일을 바꿉니다.
 
-8.  프로젝트의 bin\Debug 폴더에 있는 LocalizingWpfInWf.exe를 실행합니다. 애플리케이션을 다시 빌드하지 마세요. 다시 빌드하면 위성 어셈블리가 덮어 쓰입니다.
+8. 프로젝트의 bin\Debug 폴더에 있는 LocalizingWpfInWf.exe를 실행합니다. 애플리케이션을 다시 빌드하지 마세요. 다시 빌드하면 위성 어셈블리가 덮어 쓰입니다.
 
      애플리케이션에서 영어 문자열 대신 지역화된 문자열을 표시합니다.
 
@@ -176,6 +176,6 @@ Windows Forms 디자이너에서는 위성 어셈블리에서 지역화를 사�
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [응용 프로그램 지역화](how-to-localize-an-application.md)
+- [애플리케이션 지역화](how-to-localize-an-application.md)
 - [연습: Windows Forms 지역화](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100))
 - [Visual Studio에서 XAML 디자인](/visualstudio/designers/designing-xaml-in-visual-studio)

@@ -2,15 +2,15 @@
 title: ADO.NET 응용 프로그램 보안
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: 7429393df980757e5fea326489d84cec8b6c131a
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 32d3de15242aaf9cfacd9371289a5a0a675f884b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092243"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149385"
 ---
 # <a name="securing-adonet-applications"></a>ADO.NET 응용 프로그램 보안
-보안 ADO.NET 응용 프로그램을 작성하려면 사용자 입력의 유효성을 확인하지 않는 것과 같은 일반적인 코딩 문제를 피하는 것 외에도 여러 부분을 고려해야 합니다. 데이터에 액세스하는 응용 프로그램에는 공격자가 중요한 데이터를 검색, 조작 또는 파괴하는 데 악용할 수 있는 여러 잠재적인 오류 지점이 있습니다. 따라서 응용 프로그램 디자인 단계의 위협 모델링 과정에서부터 최종 배포와 진행 중인 유지 관리에 이르기까지 보안의 모든 측면을 이해해야 합니다.  
+보안 ADO.NET 응용 프로그램을 작성하려면 사용자 입력의 유효성을 확인하지 않는 것과 같은 일반적인 코딩 문제를 피하는 것 외에도 여러 부분을 고려해야 합니다. 데이터에 액세스하는 응용 프로그램에는 공격자가 중요한 데이터를 검색, 조작 또는 제거하는 데 악용할 수 있는 여러 잠재적인 오류 지점이 있습니다. 따라서 응용 프로그램 디자인 단계의 위협 모델링 과정에서부터 최종 배포와 진행 중인 유지 관리에 이르기까지 보안의 모든 측면을 이해해야 합니다.  
   
  .NET Framework에서는 데이터베이스 응용 프로그램을 보호하고 관리할 수 있는 여러 유용한 클래스, 서비스 및 도구를 제공합니다. CLR(공용 언어 런타임)은 관리 코드의 권한을 더 제한하는 CAS(코드 액세스 보안)를 사용하여 실행될 코드에 형식 안전 환경을 제공합니다. 다음 보안 데이터 액세스 코딩 연습에서는 잠재적인 공격자에 의해 발생할 수 있는 손상을 제한합니다.  
   
@@ -23,7 +23,7 @@ ms.locfileid: "56092243"
  [보안 데이터 액세스](../../../../docs/framework/data/adonet/secure-data-access.md)  
  안전한 데이터 소스의 데이터로 작업하는 방법에 대해 설명합니다.  
   
- [안전한 클라이언트 애플리케이션](../../../../docs/framework/data/adonet/secure-client-applications.md)  
+ [안전한 클라이언트 응용 프로그램](../../../../docs/framework/data/adonet/secure-client-applications.md)  
  클라이언트 응용 프로그램 보안을 위한 고려 사항에 대해 설명합니다.  
   
  [코드 액세스 보안 및 ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)  
@@ -52,5 +52,6 @@ ms.locfileid: "56092243"
  온라인 및 인쇄 작업에서 사용 가능한 외부 리소스의 링크를 제공합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

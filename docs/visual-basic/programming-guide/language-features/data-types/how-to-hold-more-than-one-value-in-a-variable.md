@@ -11,12 +11,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: f22888075184e0359daec1056af09132eaf772a5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e2e1648ea508ecdd744adb8d2a4f7fdbc1e586c4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825159"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332263"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>방법: 변수에 둘 이상의 값 (Visual Basic)
 변수를 선언 하면 둘 이상의 값을 보유 한 *복합 데이터 형식*합니다.  
@@ -25,9 +25,9 @@ ms.locfileid: "58825159"
   
 ### <a name="to-hold-more-than-one-value-in-a-variable"></a>변수에 둘 이상의 값을 보유할  
   
-1.  변수에 대 한 사용 하려면 복합 데이터 유형을 결정 합니다.  
+1. 변수에 대 한 사용 하려면 복합 데이터 유형을 결정 합니다.  
   
-2.  복합 데이터 형식이 이미 정의 되어 있지 않으면 정의 변수에서 사용할 수 있도록 합니다.  
+2. 복합 데이터 형식이 이미 정의 되어 있지 않으면 정의 변수에서 사용할 수 있도록 합니다.  
   
     -   정의 하는 구조체를 [Structure 문을](../../../../visual-basic/language-reference/statements/structure-statement.md)합니다.  
   
@@ -35,11 +35,11 @@ ms.locfileid: "58825159"
   
     -   클래스 정의 [Class 문](../../../../visual-basic/language-reference/statements/class-statement.md)합니다.  
   
-3.  사용 하 여 변수를 선언 된 `Dim` 문입니다.  
+3. 사용 하 여 변수를 선언 된 `Dim` 문입니다.  
   
-4.  변수 이름 뒤에 `As` 절.  
+4. 변수 이름 뒤에 `As` 절.  
   
-5.  수행 된 `As` 키워드와 적절 한 복합 데이터 형식의 이름 합니다.  
+5. 수행 된 `As` 키워드와 적절 한 복합 데이터 형식의 이름 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

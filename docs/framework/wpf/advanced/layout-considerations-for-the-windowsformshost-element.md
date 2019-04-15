@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: 891254ff44926a719bb0c124e5dc098fd3f3e82e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 93aaa8e21ef483fc21297e29189d86f93fbe138a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366545"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327856"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>WindowsFormsHost 요소에 대한 레이아웃 고려 사항
 이 항목에 설명 하는 방법을 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소와 상호 작용 하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 레이아웃 시스템입니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "57366545"
   
 -   경우에 따라 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤은 크기를 조정할 수 없거나 특정 차원으로만 크기를 조정할 수 있습니다. 예를 들어, 한 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.ComboBox> 컨트롤은 컨트롤의 글꼴 크기에 의해 정의 된 단일 높이 지원 합니다. 에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 여기서 요소가 세로로 확장 될 수, 호스트 된 동적 레이아웃 <xref:System.Windows.Forms.ComboBox> 예상 대로 컨트롤이 늘어나지 것입니다.  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤을 회전하거나 기울일 수 없습니다. 합니다 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소를 발생 시킵니다는 <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> 기울이기, 회전 변환을 적용 하는 경우에 이벤트입니다. 처리 하지 않는 경우는 <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> 이벤트는 <xref:System.InvalidOperationException> 발생 합니다.  
+-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤을 회전 하거나 기울일 수 수 없습니다. 합니다 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소를 발생 시킵니다는 <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> 기울이기, 회전 변환을 적용 하는 경우에 이벤트입니다. 처리 하지 않는 경우는 <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> 이벤트는 <xref:System.InvalidOperationException> 발생 합니다.  
   
 -   대부분의 경우 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤에 서는 비례하여 크기 조정을 지원하지 않습니다. 컨트롤의 전체 크기는 조정할 수 있지만, 컨트롤의 구성 요소와 자식 컨트롤의 크기가 예상대로 조정되지 않을 수 있습니다. 이 제한 사항은 각 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤에서 얼마나 효과적으로 크기 조정을 지원하는지에 따라 달라집니다. 또한 확장할 수 없으며 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 0 픽셀의 크기로 컨트롤입니다.  
   
@@ -84,13 +84,13 @@ ms.locfileid: "57366545"
 ### <a name="sizing-algorithm"></a>크기 조정 알고리즘  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소 다음 절차를 사용 하 여 호스트 된 컨트롤의 크기:  
   
-1.  합니다 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소를 재정의 합니다 <xref:System.Windows.FrameworkElement.MeasureOverride%2A> 및 <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> 메서드.  
+1. 합니다 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소를 재정의 합니다 <xref:System.Windows.FrameworkElement.MeasureOverride%2A> 및 <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> 메서드.  
   
-2.  호스팅된 컨트롤의 크기를 결정 하는 <xref:System.Windows.FrameworkElement.MeasureOverride%2A> 호스팅된 컨트롤의 메서드를 호출 <xref:System.Windows.Forms.Control.GetPreferredSize%2A> 제약 조건이 있는 메서드에 전달할 제약 조건에서 변환의 <xref:System.Windows.FrameworkElement.MeasureOverride%2A> 메서드.  
+2. 호스팅된 컨트롤의 크기를 결정 하는 <xref:System.Windows.FrameworkElement.MeasureOverride%2A> 호스팅된 컨트롤의 메서드를 호출 <xref:System.Windows.Forms.Control.GetPreferredSize%2A> 제약 조건이 있는 메서드에 전달할 제약 조건에서 변환의 <xref:System.Windows.FrameworkElement.MeasureOverride%2A> 메서드.  
   
-3.  <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> 메서드는 지정 된 크기 제약 조건에 호스트 된 컨트롤을 설정 하려고 시도 합니다.  
+3. <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> 메서드는 지정 된 크기 제약 조건에 호스트 된 컨트롤을 설정 하려고 시도 합니다.  
   
-4.  경우 호스팅된 컨트롤의 <xref:System.Windows.Forms.Control.Size%2A> 속성에 지정 된 제약 조건과 일치, 제약 조건에 호스트 된 컨트롤 크기가 조정 됩니다.  
+4. 경우 호스팅된 컨트롤의 <xref:System.Windows.Forms.Control.Size%2A> 속성에 지정 된 제약 조건과 일치, 제약 조건에 호스트 된 컨트롤 크기가 조정 됩니다.  
   
  경우는 <xref:System.Windows.Forms.Control.Size%2A> 속성이 지정된 된 제약 일치 하지 않습니다, 호스트 된 컨트롤에 연속 크기 조정을 지원 하지 않습니다. 예를 들어를 <xref:System.Windows.Forms.MonthCalendar> 컨트롤 불연속 크기만 허용 합니다. 이 컨트롤에 대 한 허용 되는 크기 높이 너비에 대 한 정수 (개월 수를 나타냄)으로 구성 됩니다. 이 같은 경우에는 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 다음과 같이 동작 합니다.  
   
@@ -99,9 +99,10 @@ ms.locfileid: "57366545"
 -   경우는 <xref:System.Windows.Forms.Control.Size%2A> 속성에 지정된 된 제약 보다 작은 크기를 반환 합니다 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 크기 값이 허용 하 고 값을 반환 합니다는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 레이아웃 시스템입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [연습: WPF에서 정렬 Windows Forms 컨트롤](walkthrough-arranging-windows-forms-controls-in-wpf.md)
+- [연습: WPF에서 Windows Forms 컨트롤 정렬](walkthrough-arranging-windows-forms-controls-in-wpf.md)
 - [WPF 샘플에서 정렬 Windows Forms 컨트롤](https://go.microsoft.com/fwlink/?LinkID=159971)
 - [Windows Forms 및 WPF 속성 매핑](windows-forms-and-wpf-property-mapping.md)
 - [마이그레이션 및 상호 운용성](migration-and-interoperability.md)

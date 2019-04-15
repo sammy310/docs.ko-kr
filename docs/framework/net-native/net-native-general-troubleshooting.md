@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ee8c5e17-35ea-48a1-8767-83298caac1e8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7717aba0fd3b3039dd77d301b10b044b5a044254
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f81ff8a347235ab1a765b4f41051dab2da786b89
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596659"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150776"
 ---
 # <a name="net-native-general-troubleshooting"></a>.NET 네이티브 일반 문제 해결
 이 항목에서는 [!INCLUDE[net_native](../../../includes/net-native-md.md)]를 사용하여 앱을 개발할 때 발생할 수 있는 잠재적인 문제를 해결하는 방법을 설명합니다.  
@@ -43,4 +43,5 @@ ms.locfileid: "54596659"
      자세한 내용은 [리플렉션 및 .NET 네이티브](../../../docs/framework/net-native/reflection-and-net-native.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows 스토어 앱을 .NET 네이티브로 마이그레이션](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)

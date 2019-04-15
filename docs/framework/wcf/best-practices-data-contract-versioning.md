@@ -7,12 +7,12 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: 9f92e731132eb564b893e3d34ccd322fbcd66ea7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cf3ae6f47f63c545edf3d65804daa049d4541788
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119004"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334928"
 ---
 # <a name="best-practices-data-contract-versioning"></a>모범 사례: 데이터 계약 버전 관리
 이 항목에서는 시간 경과에 따라 쉽게 발전할 수 있는 데이터 계약을 만드는 최선의 방법을 보여 줍니다. 데이터 계약에 대 한 자세한 내용은의 항목을 참조 하세요 [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md)합니다.  
@@ -50,21 +50,21 @@ ms.locfileid: "59119004"
   
  이전 버전이 필요한 경우에 새 버전의 형식을 보내거나 새 버전이 필요한 경우에 이전 버전의 형식을 보내려면 일부 지침을 정확하게 따라야 합니다. 다른 지침은 엄격하게 따르지 않아도 되지만 이후 스키마 버전 관리에서 영향을 받을 수 있으므로 여기에 나열되어 있습니다.  
   
-1.  형식 상속으로 데이터 계약의 버전을 관리하지 마세요. 이후 버전을 만들려면 기존 형식의 데이터 계약을 변경하거나 관련 없는 새 형식을 만듭니다.  
+1. 형식 상속으로 데이터 계약의 버전을 관리하지 마세요. 이후 버전을 만들려면 기존 형식의 데이터 계약을 변경하거나 관련 없는 새 형식을 만듭니다.  
   
-2.  상속이 버전 관리 메커니즘으로 사용되지 않으며 특정 규칙을 따르는 경우 데이터 계약에 상속을 사용할 수 있습니다. 형식이 특정 기본 형식에서 파생되는 경우 동일한 데이터 계약이 없으면 이후 버전에서 해당 형식이 다른 기본 형식에서 파생되게 하지 마세요. 단, 한 가지 예외가 있습니다. 데이터 계약 형식과 기본 형식 간의 계층 구조에 형식을 삽입할 수 있지만 계층 구조에 있는 가능한 모든 다른 형식 버전의 다른 멤버와 동일한 이름을 가진 데이터 멤버가 포함되지 않은 경우에만 삽입할 수 있습니다. 일반적으로 동일한 상속 계층 구조의 여러 수준에서 동일한 이름을 가진 데이터 멤버를 사용하면 심각한 버전 관리 문제가 발생할 수 있으므로 사용하지 않도록 해야 합니다.  
+2. 상속이 버전 관리 메커니즘으로 사용되지 않으며 특정 규칙을 따르는 경우 데이터 계약에 상속을 사용할 수 있습니다. 형식이 특정 기본 형식에서 파생되는 경우 동일한 데이터 계약이 없으면 이후 버전에서 해당 형식이 다른 기본 형식에서 파생되게 하지 마세요. 단, 한 가지 예외가 있습니다. 데이터 계약 형식과 기본 형식 간의 계층 구조에 형식을 삽입할 수 있지만 계층 구조에 있는 가능한 모든 다른 형식 버전의 다른 멤버와 동일한 이름을 가진 데이터 멤버가 포함되지 않은 경우에만 삽입할 수 있습니다. 일반적으로 동일한 상속 계층 구조의 여러 수준에서 동일한 이름을 가진 데이터 멤버를 사용하면 심각한 버전 관리 문제가 발생할 수 있으므로 사용하지 않도록 해야 합니다.  
   
-3.  데이터 계약의 첫 번째 버전부터 시작하여 항상 <xref:System.Runtime.Serialization.IExtensibleDataObject>를 구현하여 라운드트립을 활성화합니다. 자세한 내용은 [호환 가능한 데이터 계약](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)을 참조하세요. 이 인터페이스를 구현하지 않고 형식의 버전을 하나 이상 해제한 경우 형식의 다음 버전에서 구현합니다.  
+3. 데이터 계약의 첫 번째 버전부터 시작하여 항상 <xref:System.Runtime.Serialization.IExtensibleDataObject>를 구현하여 라운드트립을 활성화합니다. 자세한 내용은 [호환 가능한 데이터 계약](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)을 참조하세요. 이 인터페이스를 구현하지 않고 형식의 버전을 하나 이상 해제한 경우 형식의 다음 버전에서 구현합니다.  
   
-4.  이후 버전에서 데이터 계약 이름이나 네임스페이스를 변경하지 마세요. 데이터 계약의 원본으로 사용되는 형식의 이름이나 네임스페이스를 변경하는 경우 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>의 <xref:System.Runtime.Serialization.DataContractAttribute> 속성 같은 적절한 메커니즘을 사용하여 데이터 계약 이름과 네임스페이스를 유지해야 합니다. 이름 지정에 대 한 자세한 내용은 참조 하세요. [Data Contract Names](../../../docs/framework/wcf/feature-details/data-contract-names.md)합니다.  
+4. 이후 버전에서 데이터 계약 이름이나 네임스페이스를 변경하지 마세요. 데이터 계약의 원본으로 사용되는 형식의 이름이나 네임스페이스를 변경하는 경우 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>의 <xref:System.Runtime.Serialization.DataContractAttribute> 속성 같은 적절한 메커니즘을 사용하여 데이터 계약 이름과 네임스페이스를 유지해야 합니다. 이름 지정에 대 한 자세한 내용은 참조 하세요. [Data Contract Names](../../../docs/framework/wcf/feature-details/data-contract-names.md)합니다.  
   
-5.  이후 버전에서 데이터 멤버의 이름을 변경하지 마세요. 데이터 멤버의 원본으로 사용되는 필드, 속성 또는 이벤트의 이름을 변경하는 경우 `Name`의 <xref:System.Runtime.Serialization.DataMemberAttribute> 속성을 사용하여 기존 데이터 멤버 이름을 유지합니다.  
+5. 이후 버전에서 데이터 멤버의 이름을 변경하지 마세요. 데이터 멤버의 원본으로 사용되는 필드, 속성 또는 이벤트의 이름을 변경하는 경우 `Name`의 <xref:System.Runtime.Serialization.DataMemberAttribute> 속성을 사용하여 기존 데이터 멤버 이름을 유지합니다.  
   
-6.  이후 버전에서 데이터 멤버의 원본으로 사용되는 필드, 속성 또는 이벤트의 형식을 변경하지 마세요. 해당 데이터 멤버의 결과 데이터 계약이 변경됩니다. 필요한 데이터 계약을 확인하려면 인터페이스 형식이 <xref:System.Object>와 같다는 것에 주의합니다.  
+6. 이후 버전에서 데이터 멤버의 원본으로 사용되는 필드, 속성 또는 이벤트의 형식을 변경하지 마세요. 해당 데이터 멤버의 결과 데이터 계약이 변경됩니다. 필요한 데이터 계약을 확인하려면 인터페이스 형식이 <xref:System.Object>와 같다는 것에 주의합니다.  
   
-7.  이후 버전에서 <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> 특성의 <xref:System.Runtime.Serialization.DataMemberAttribute> 속성을 조정하여 기존 데이터 멤버의 순서를 변경하지 마세요.  
+7. 이후 버전에서 <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> 특성의 <xref:System.Runtime.Serialization.DataMemberAttribute> 속성을 조정하여 기존 데이터 멤버의 순서를 변경하지 마세요.  
   
-8.  이후 버전에서 새 데이터 멤버를 추가할 수 있습니다. 항상 다음 규칙을 따라야 합니다.  
+8. 이후 버전에서 새 데이터 멤버를 추가할 수 있습니다. 항상 다음 규칙을 따라야 합니다.  
   
     1.  <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 속성은 항상 기본값 `false`로 유지되어야 합니다.  
   

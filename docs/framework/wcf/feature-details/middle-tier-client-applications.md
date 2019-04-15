@@ -2,12 +2,12 @@
 title: 중간 계층 클라이언트 응용 프로그램
 ms.date: 03/30/2017
 ms.assetid: f9714a64-d0ae-4a98-bca0-5d370fdbd631
-ms.openlocfilehash: 457a215274c4804ac38958d8f840e8f4100a7be0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 667cc98f46b131fe91e17f3b1b16af429dc597ee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718899"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174085"
 ---
 # <a name="middle-tier-client-applications"></a>중간 계층 클라이언트 응용 프로그램
 이 항목에서는 Windows Communication Foundation (WCF)를 사용 하는 중간 계층 클라이언트 응용 프로그램에 관련 된 다양 한 문제를 설명 합니다.  
@@ -36,4 +36,5 @@ ms.locfileid: "54718899"
  또한 <xref:System.Xml.Serialization.XmlSerializer>를 사용하여 serialize할 수 있는 데이터 형식을 사용하는 클라이언트가 런타임에 해당 데이터 형식에 대한 serialization 코드를 생성하고 컴파일할 때 시작 성능이 저하될 수 있습니다. 이 시작 성능을 향상시킬 수 있습니다. 합니다 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 응용 프로그램에 대 한 컴파일된 어셈블리 로부터 필요한 serialization 코드를 생성 하 여 이러한 응용 프로그램의 시작 성능을 향상 시킬 수 있습니다. 자세한 내용은 [방법: 시작 시간의 WCF 클라이언트 응용 프로그램 개선 XmlSerializer를 사용 하 여](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [WCF 클라이언트를 사용하여 서비스 액세스](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-ms.openlocfilehash: 7e48e948b52cd512dba81d643fb6a42a2d90723f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 14180f0326b38872f5d1b112c3d9a87022fb79e9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59113206"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328064"
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>방법: (Windows Forms) 문자열에 인용 부호 넣기
 경우에 따라 텍스트의 문자열에 따옴표(" ")를 배치하려고 합니다. 예를 들어:  
@@ -26,7 +26,7 @@ ms.locfileid: "59113206"
   
 ### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>코드의 문자열에 따옴표를 배치하려면  
   
-1.  Visual basic의 경우를 포함 하는 인용 부호로 행에 두 개의 따옴표를 삽입 합니다. 시각적 개체의 C# 하 고 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], 이스케이프 시퀀스를 삽입 \\"로 포함 된 큰따옴표를 표시 합니다. 예를 들어 위의 문자열을 만들려면 다음 코드를 사용합니다.  
+1. Visual basic의 경우를 포함 하는 인용 부호로 행에 두 개의 따옴표를 삽입 합니다. 시각적 개체의 C# 하 고 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], 이스케이프 시퀀스를 삽입 \\"로 포함 된 큰따옴표를 표시 합니다. 예를 들어 위의 문자열을 만들려면 다음 코드를 사용합니다.  
   
     ```vb  
     Private Sub InsertQuote()  
@@ -50,7 +50,7 @@ ms.locfileid: "59113206"
   
      또는  
   
-2.  따옴표에 대한 ASCII 또는 유니코드 문자를 삽입합니다. Visual basic에서는 ASCII 문자 (34)를 사용 합니다. 시각적 개체의 C#, 유니코드 문자 (\u0022)를 사용 합니다.  
+2. 따옴표에 대한 ASCII 또는 유니코드 문자를 삽입합니다. Visual basic에서는 ASCII 문자 (34)를 사용 합니다. 시각적 개체의 C#, 유니코드 문자 (\u0022)를 사용 합니다.  
   
     ```vb  
     Private Sub InsertAscii()  
@@ -69,7 +69,7 @@ ms.locfileid: "59113206"
   
      또는  
   
-3.  문자에 대한 상수를 정의하고 필요한 부분에 사용할 수도 있습니다.  
+3. 문자에 대한 상수를 정의하고 필요한 부분에 사용할 수도 있습니다.  
   
     ```vb  
     Const quote As String = """"  

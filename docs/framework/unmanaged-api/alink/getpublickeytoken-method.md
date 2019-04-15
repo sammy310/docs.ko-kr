@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f0481cfc3fa88aeb6fd7cd6ba93554d426f8eb2e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0d1b28eadc9f09abff799f99d1d6012c98b1d3dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492051"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215770"
 ---
 # <a name="getpublickeytoken-method"></a>GetPublicKeyToken 메서드
 지정 된 키 파일 또는 키 컨테이너에 대 한 공개 키 토큰을 검색합니다.  
@@ -57,6 +57,7 @@ HRESULT GetPublicKeyToken(
  Alink.h가 필요합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [IALink2 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [IALink 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

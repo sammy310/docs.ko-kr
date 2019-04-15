@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 3b7fa5d22283f6f69e1f13ecd32e34a6700f32c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1b4451b11fed2fd138985824d5f139e192c51f45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115702"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331717"
 ---
 # <a name="working-with-certificates"></a>인증서 작업
 WCF(Windows Communication Foundation) 보안을 프로그래밍하려면 일반적으로 X.509 디지털 인증서를 사용하여 클라이언트 및 서버를 인증하고, 암호화하고, 메시지에 디지털 서명합니다. 이 항목에서는 X.509 디지털 인증서 기능과 WCF에서 인증서 기능을 사용하는 방법을 간략하게 설명하며, 이러한 개념을 자세히 설명하거나 WCF 및 인증서를 사용하여 일반 작업을 수행하는 방법을 보여 주는 항목에 대한 링크를 제공합니다.  
@@ -90,13 +90,13 @@ WCF(Windows Communication Foundation) 보안을 프로그래밍하려면 일반�
   
 #### <a name="to-build-a-chain-of-trust-with-the-new-selfsignedcertificate-cmdlet"></a>New-selfsignedcertificate cmdlet 사용 하 여 신뢰 체인을 만드는  
   
-1.  New-selfsignedcertificate cmdlet을 사용 하는 임시 루트 인증 기관 (자체 서명된) 인증서를 만듭니다. 개인 키를 디스크에 저장합니다.  
+1. New-selfsignedcertificate cmdlet을 사용 하는 임시 루트 인증 기관 (자체 서명된) 인증서를 만듭니다. 개인 키를 디스크에 저장합니다.  
   
-2.  새 인증서를 사용하여 공개 키가 들어 있는 다른 인증서를 발급합니다.  
+2. 새 인증서를 사용하여 공개 키가 들어 있는 다른 인증서를 발급합니다.  
   
-3.  루트 기관 인증서를 신뢰할 수 있는 루트 인증 기관 저장소로 가져옵니다.  
+3. 루트 기관 인증서를 신뢰할 수 있는 루트 인증 기관 저장소로 가져옵니다.  
   
-4.  단계별 지침을 참조 하세요. [방법: 개발 중 사용할 임시 인증서 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)합니다.  
+4. 단계별 지침을 참조 하세요. [방법: 개발 중 사용할 임시 인증서 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)합니다.  
   
 ## <a name="which-certificate-to-use"></a>사용할 인증서  
  인증서에 대한 일반적인 질문은 사용할 인증서와 그 이유에 대한 것입니다. 대답은 클라이언트를 프로그래밍하는지 서비스를 프로그래밍하는지에 따라 달라집니다. 다음 정보에서는 일반적인 지침을 제공하며 이러한 질문에 대한 세부적인 대답은 아닙니다.  

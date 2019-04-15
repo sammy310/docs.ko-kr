@@ -11,18 +11,16 @@ helpviewer_keywords:
 - dependency properties [WPF], callbacks
 - validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
-ms.openlocfilehash: ff7cbd995ba52f3cea712cb02b72f91d40422c33
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 95a40b4a357b1a601eced6c8e5214871b95fcbd2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363932"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219813"
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>종속성 속성 콜백 및 유효성 검사
 이 항목에서는 유효성 검사 확인, 속성의 유효 값이 변경될 때마다 호출되는 콜백, 값 결정에 대한 가능한 외부 영향 재정의 등 속성 관련 기능에 대체 사용자 지정 구현을 사용하여 종속성 속성을 만드는 방법에 대해 설명합니다. 또한 이 항목에서는 이러한 기술을 사용한 기본 속성 시스템 동작 확장이 적절한 시나리오에 대해서도 설명합니다.  
-  
-  
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>전제 조건  
  이 항목에서는 종속성 속성을 구현하는 기본 시나리오와 메타데이터가 사용자 지정 종속성 속성에 적용되는 방법을 이해하고 있다고 가정합니다. 컨텍스트는 [사용자 지정 종속성 속성](custom-dependency-properties.md) 및 [종속성 속성 메타데이터](dependency-property-metadata.md)를 참조하세요.  
@@ -81,6 +79,7 @@ ms.locfileid: "57363932"
  속성 시스템은 취급 <xref:System.Windows.CoerceValueCallback> 값을 반환 하는 <xref:System.Windows.DependencyProperty.UnsetValue> 특수 한 경우. 이 특별 한 경우 발생 하는 속성 변경 하는 의미는 <xref:System.Windows.CoerceValueCallback> 속성 시스템에서 거부 되 고 호출 하 고 속성 시스템 이전 속성 값을 대신 보고 해야 하는 합니다. 이 메커니즘은 비동기적으로 시작된 속성의 변경 내용이 현재 개체 상태에 여전히 유효한지 확인하고 유효하지 않을 경우 변경 내용을 무시하는 데 유용할 수 있습니다. 다른 가능한 시나리오에서는 보고할 값을 담당하는 속성 값 결정의 구성 요소에 따라 선택적으로 값을 무시할 수 있습니다. 이 위해 사용할 수 있습니다 합니다 <xref:System.Windows.DependencyProperty> 콜백 및 속성 식별자에 대 한 입력으로 전달 <xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>, 및 후 처리를 <xref:System.Windows.ValueSource>합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [종속성 속성 개요](dependency-properties-overview.md)
 - [종속성 속성 메타데이터](dependency-property-metadata.md)
 - [사용자 지정 종속성 속성](custom-dependency-properties.md)

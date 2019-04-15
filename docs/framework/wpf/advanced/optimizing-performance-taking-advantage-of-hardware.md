@@ -1,5 +1,5 @@
 ---
-title: '성능 최적화: 하드웨어 이용'
+title: '성능 최적화: 하드웨어 활용'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], performance
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: 1e0050dbf6ec5ade22e3f09ceee66f69826e56df
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 683804acf43065543fa5d4ffb1a5ecf7e5b4c49a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374260"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163178"
 ---
-# <a name="optimizing-performance-taking-advantage-of-hardware"></a>성능 최적화: 하드웨어 이용
+# <a name="optimizing-performance-taking-advantage-of-hardware"></a>성능 최적화: 하드웨어 활용
 내부 아키텍처 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 두 렌더링 파이프라인, 하드웨어 및 소프트웨어를 포함 합니다. 이 항목에서는 응용 프로그램의 성능 최적화에 대 한 결정을 내릴 수 있도록 이러한 렌더링 파이프라인에 대 한 정보를 제공 합니다.  
   
 ## <a name="hardware-rendering-pipeline"></a>하드웨어 렌더링 파이프라인  
@@ -55,12 +55,13 @@ ms.locfileid: "57374260"
  에 대 한 자세한 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 렌더링 계층을 참조 하세요 [그래픽 렌더링 계층](graphics-rendering-tiers.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
-- [WPF 응용 프로그램 성능 최적화](optimizing-wpf-application-performance.md)
+
+- [WPF 애플리케이션 성능 최적화](optimizing-wpf-application-performance.md)
 - [응용 프로그램 성능 계획](planning-for-application-performance.md)
 - [레이아웃 및 디자인](optimizing-performance-layout-and-design.md)
-- [2차원 그래픽 및 이미징](optimizing-performance-2d-graphics-and-imaging.md)
+- [2D 그래픽 및 이미징](optimizing-performance-2d-graphics-and-imaging.md)
 - [개체 동작](optimizing-performance-object-behavior.md)
 - [애플리케이션 리소스](optimizing-performance-application-resources.md)
 - [텍스트](optimizing-performance-text.md)
 - [데이터 바인딩](optimizing-performance-data-binding.md)
-- [기타 성능 권장 사항](optimizing-performance-other-recommendations.md)
+- [기타 성능 추천 사항](optimizing-performance-other-recommendations.md)

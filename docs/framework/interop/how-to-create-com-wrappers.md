@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 58b7ca910f8f8c751f03b25459bc83efb8086923
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c26c84ece1231a4e118144c163fa3e9c7619301
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540977"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324133"
 ---
 # <a name="how-to-create-com-wrappers"></a>방법: COM 래퍼 만들기
 
@@ -28,13 +28,13 @@ Visual Studio 2005에서 프로젝트에 COM 래퍼를 참조로 추가할 수 �
 
 ### <a name="to-create-a-runtime-callable-wrapper-using-visual-studio"></a>Visual Studio를 사용하여 런타임 호출 가능 래퍼를 만들려면
 
-1.  관리되는 애플리케이션에 대한 프로젝트를 엽니다.
+1. 관리되는 애플리케이션에 대한 프로젝트를 엽니다.
 
-2.  **프로젝트** 메뉴에서 **모든 파일 표시**를 클릭합니다.
+2. **프로젝트** 메뉴에서 **모든 파일 표시**를 클릭합니다.
 
-3.  **프로젝트** 메뉴에서 **참조 추가**를 클릭합니다.
+3. **프로젝트** 메뉴에서 **참조 추가**를 클릭합니다.
 
-4.  [참조 추가] 대화 상자에서 **COM** 탭을 클릭하고, 사용할 구성 요소를 선택하고, **확인**을 클릭합니다.
+4. [참조 추가] 대화 상자에서 **COM** 탭을 클릭하고, 사용할 구성 요소를 선택하고, **확인**을 클릭합니다.
 
      **솔루션 탐색기**에서 COM 구성 요소는 프로젝트의 참조 폴더에 추가됩니다.
 
@@ -53,15 +53,15 @@ Visual Studio 2005에서 프로젝트에 COM 래퍼를 참조로 추가할 수 �
   
 ### <a name="to-create-a-com-callable-wrapper-using-visual-studio"></a>Visual Studio를 사용하여 COM 호출 가능 래퍼를 만들려면  
   
-1.  네이티브 코드에서 실행할 관리되는 클래스에 대한 클래스 라이브러리 프로젝트를 만듭니다. 이 클래스에는 기본 생성자가 있어야 합니다.  
+1. 네이티브 코드에서 실행할 관리되는 클래스에 대한 클래스 라이브러리 프로젝트를 만듭니다. 이 클래스에는 기본 생성자가 있어야 합니다.  
   
      AssemblyInfo 파일에 어셈블리에 대한 전체 4개 부분 버전 번호가 있는지 확인합니다. Windows 레지스트리에서 버전을 유지 관리하려면 이 번호가 필요합니다. 버전 번호에 대한 자세한 내용은 [어셈블리 버전 관리](../../../docs/framework/app-domains/assembly-versioning.md)를 참조하세요.  
   
-2.  **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
+2. **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
   
-3.  **컴파일** 탭을 클릭합니다.  
+3. **컴파일** 탭을 클릭합니다.  
   
-4.  **COM interop 등록** 확인란을 선택합니다.  
+4. **COM interop 등록** 확인란을 선택합니다.  
   
  프로젝트를 빌드하면 COM interop에 대한 어셈블리가 자동으로 등록됩니다. Visual Studio 2005에서 네이티브 애플리케이션을 빌드할 경우 **프로젝트** 메뉴에서 **참조 추가**를 클릭하여 어셈블리를 사용할 수 있습니다.  
   
@@ -75,5 +75,5 @@ Visual Studio 2005에서 프로젝트에 COM 래퍼를 참조로 추가할 수 �
   
 ## <a name="see-also"></a>참고 항목
 
-- [런타임 호출 가능 래퍼](../../../docs/framework/interop/runtime-callable-wrapper.md)
-- [COM 호출 가능 래퍼](../../../docs/framework/interop/com-callable-wrapper.md)
+- [RCW](../../../docs/framework/interop/runtime-callable-wrapper.md)
+- [CCW](../../../docs/framework/interop/com-callable-wrapper.md)

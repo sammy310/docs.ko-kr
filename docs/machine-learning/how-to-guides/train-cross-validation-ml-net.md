@@ -3,12 +3,12 @@ title: 교차 유효성 검사를 사용하여 기계 학습 모델 학습 - ML.
 description: 모델의 예측에 대한 정확도 수준을 강화하기 위해 ML.NET에서 교차 유효성 검사를 사용하여 기계 학습 모델을 학습하는 방법 알아보기
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 7191d8bdbb9375dff6ccc7acb0aacab3cbef56a2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 9508835e613cf4f78d7f95a25cc98c3c3aade7ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676540"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231320"
 ---
 # <a name="train-a-machine-learning-model-using-cross-validation---mlnet"></a>교차 유효성 검사를 사용하여 기계 학습 모델 학습 - ML.NET
 
@@ -46,7 +46,6 @@ var reader = mlContext.Data.CreateTextLoader(
     // First line of the file is a header, not a data row.
     hasHeader: true
 );
-
 
 // Read the data.
 var data = reader.Read(dataPath);

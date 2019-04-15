@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - resource keys [WPF], SystemFonts class
 ms.assetid: 036ebea7-5677-4f60-8ba4-56c9f9d9b8bd
-ms.openlocfilehash: 8d354bb598da6912bfa34f611cb55d4dcd7920a5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e924f4c14d98380d9f4c0defe27d9f98c3293114
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352843"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148930"
 ---
 # <a name="how-to-use-system-fonts-keys"></a>방법: 시스템 글꼴 키 사용
 시스템 리소스는 개발자가 시스템 설정과 일관된 시각적 효과를 만들 수 있도록 몇 가지 시스템 메트릭을 리소스로 노출합니다. <xref:System.Windows.SystemFonts> 시스템 글꼴 값과 값에 바인딩되는 시스템 글꼴 리소스를 포함 하는 클래스인-예를 들어 <xref:System.Windows.SystemFonts.CaptionFontFamily%2A> 고 <xref:System.Windows.SystemFonts.CaptionFontFamilyKey%2A>입니다.  
@@ -25,6 +25,7 @@ ms.locfileid: "57352843"
  [!code-xaml[SystemRes_snip#FontDynamicResources](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/MyApp.xaml#fontdynamicresources)]  
   
 ## <a name="see-also"></a>참고자료
-- [시스템 브러시로 영역 그리기](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
+
+- [시스템 브러시로 영역 칠하기](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
 - [SystemParameters 사용](how-to-use-systemparameters.md)
 - [SystemFonts 사용](how-to-use-systemfonts.md)

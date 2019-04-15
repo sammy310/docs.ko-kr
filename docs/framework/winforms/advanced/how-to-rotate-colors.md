@@ -8,12 +8,12 @@ helpviewer_keywords:
 - colors [Windows Forms], rotating
 - examples [Windows Forms], rotating colors
 ms.assetid: e2e4c300-159c-4f4a-9b56-103b0f7cbc05
-ms.openlocfilehash: d3fa49e6129c93df93378fb2b607a87a5a0be087
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 241d2824fc2d87a0505eb6e790c865bfa7d8ef90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125891"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175541"
 ---
 # <a name="how-to-rotate-colors"></a>방법: 색 회전
 4 차원 색 공간에서 회전은 시각화 하기가 어렵습니다. 에서는 수 쉽게 동의 고정 색 구성 요소 중 하나를 유지 하 여 회전을 시각화 합니다. 1 자리 알파 구성 요소 (완전 불투명) 한다고 가정 합니다. 그런 다음 다음 그림에 나와 있는 것 처럼 빨강, 녹색 및 파랑 축이 있는 3 차원 색 공간을를 시각화할 수 있습니다 했습니다.  
@@ -45,9 +45,10 @@ ms.locfileid: "58125891"
  [!code-vb[System.Drawing.RotateColors#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RotateColors/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- 앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.PaintEventArgs> 이벤트 처리기의 매개 변수인 `e`<xref:System.Windows.Forms.Control.Paint>가 필요합니다. 대체 `RotationInput.bmp` 와 경로 시스템에서 사용할 이미지 파일 이름입니다.  
+ 앞의 예제는 Windows Forms에서 사용 하도록 설계 되었으며 필요 <xref:System.Windows.Forms.PaintEventArgs>`e`의 매개 변수는 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기입니다. 대체 `RotationInput.bmp` 와 경로 시스템에서 사용할 이미지 파일 이름입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
 - [Windows Forms의 그래픽 및 그리기](graphics-and-drawing-in-windows-forms.md)

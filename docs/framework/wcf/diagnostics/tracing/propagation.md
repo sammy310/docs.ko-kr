@@ -2,12 +2,12 @@
 title: 전파
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: 680f732fa4e75eb1eaa82a861f0a0021dc9c974c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: faa0e6ecb53963587e3fc253cd8beae1dc2c4bf5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686337"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154039"
 ---
 # <a name="propagation"></a>전파
 Windows Communication Foundation (WCF) 추적 모델의 동작 전파에 설명 합니다.  
@@ -77,6 +77,7 @@ Windows Communication Foundation (WCF) 추적 모델의 동작 전파에 설명 
  서로 다른 컴퓨터에서 실행되는 엔드포인트에서 이벤트를 동기화하기 위해 CorrelationId가 메시지에 전파되는 ActivityId 헤더에 추가됩니다. 도구에서 이 ID를 사용하여 클럭이 일치하지 않는 시스템 간의 이벤트를 동기화할 수 있습니다. 특히 Service Trace Viewer 도구는 이 ID를 사용하여 엔드포인트 간의 메시지 흐름을 표시합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [추적 구성](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [종단 간 추적 시나리오](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)

@@ -2,12 +2,12 @@
 title: '방법: ServiceContractGenerator에 대한 확장 쓰기'
 ms.date: 03/30/2017
 ms.assetid: 876ca823-bd16-4bdf-9e0f-02092df90e51
-ms.openlocfilehash: 104f65f76429701dbf02c1c7a5d737e50b080394
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c9e10efccf0d51e6b78aace1296d227a78a9f91d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59111594"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340622"
 ---
 # <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>방법: ServiceContractGenerator에 대한 확장 쓰기
 이 항목에서는 <xref:System.ServiceModel.Description.ServiceContractGenerator>에 대한 확장을 쓰는 방법에 대해 설명합니다. 이 작업을 수행하려면 작업 동작에 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> 인터페이스를 구현하거나 계약 동작에 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> 인터페이스를 구현합니다. 다음 항목에서는 계약 동작에서 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> 인터페이스를 구현하는 방법을 보여 줍니다.  
@@ -16,7 +16,7 @@ ms.locfileid: "59111594"
   
 ### <a name="to-write-an-extension-for-the-servicecontractgenerator"></a>ServiceContractGenerator에 대한 확장을 쓰려면  
   
-1.  <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>를 구현해야 합니다. 생성된 서비스 계약을 수정하려면 <xref:System.ServiceModel.Description.ServiceContractGenerationContext> 메서드로 전달된 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> 인스턴스를 사용합니다.  
+1. <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>를 구현해야 합니다. 생성된 서비스 계약을 수정하려면 <xref:System.ServiceModel.Description.ServiceContractGenerationContext> 메서드로 전달된 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> 인스턴스를 사용합니다.  
   
     ```  
     public void GenerateContract(ServiceContractGenerationContext context)  
@@ -26,7 +26,7 @@ ms.locfileid: "59111594"
     }  
     ```  
   
-2.  같은 클래스에서 <xref:System.ServiceModel.Description.IWsdlImportExtension>을 구현합니다. <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> 메서드는 가져온 <xref:System.ServiceModel.Description.ContractDescription> 인스턴스에 코드 생성 확장을 추가하여 특정 WSDL 확장(이 경우 WSDL 주석)을 처리할 수 있습니다.  
+2. 같은 클래스에서 <xref:System.ServiceModel.Description.IWsdlImportExtension>을 구현합니다. <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> 메서드는 가져온 <xref:System.ServiceModel.Description.ContractDescription> 인스턴스에 코드 생성 확장을 추가하여 특정 WSDL 확장(이 경우 WSDL 주석)을 처리할 수 있습니다.  
   
     ```  
     public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context)  
@@ -60,7 +60,7 @@ ms.locfileid: "59111594"
             }  
     ```  
   
-3.  클라이언트 구성에 WSDL 가져오기를 추가합니다.  
+3. 클라이언트 구성에 WSDL 가져오기를 추가합니다.  
   
     ```xml  
     <metadata>  
@@ -70,7 +70,7 @@ ms.locfileid: "59111594"
     </metadata>  
     ```  
   
-4.  클라이언트 코드에 `MetadataExchangeClient`를 만들고 `GetMetadata`를 호출합니다.  
+4. 클라이언트 코드에 `MetadataExchangeClient`를 만들고 `GetMetadata`를 호출합니다.  
   
     ```  
     MetadataExchangeClient mexClient = new MetadataExchangeClient(metadataAddress);  
@@ -78,13 +78,13 @@ ms.locfileid: "59111594"
     MetadataSet metaDocs = mexClient.GetMetadata();  
     ```  
   
-5.  `WsdlImporter`를 만들고 `ImportAllContracts`를 호출합니다.  
+5. `WsdlImporter`를 만들고 `ImportAllContracts`를 호출합니다.  
   
     ```  
     WsdlImporter importer = new WsdlImporter(metaDocs);            System.Collections.ObjectModel.Collection<ContractDescription> contracts = importer.ImportAllContracts();  
     ```  
   
-6.  `ServiceContractGenerator`를 만들고 각 계약에 대한 `GenerateServiceContractType`을 호출합니다.  
+6. `ServiceContractGenerator`를 만들고 각 계약에 대한 `GenerateServiceContractType`을 호출합니다.  
   
     ```  
     ServiceContractGenerator generator = new ServiceContractGenerator();  
@@ -96,7 +96,7 @@ ms.locfileid: "59111594"
        throw new Exception("There were errors during code compilation.");  
     ```  
   
-7.  <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> 구현 하는 지정된 된 계약에서 각 계약 동작에 대해 자동으로 호출 됩니다 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>합니다. 그런 다음 이 메서드는 전달된 <xref:System.ServiceModel.Description.ServiceContractGenerationContext>를 수정할 수 있습니다. 이 예제에서는 주석이 추가되었습니다.  
+7. <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> 구현 하는 지정된 된 계약에서 각 계약 동작에 대해 자동으로 호출 됩니다 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>합니다. 그런 다음 이 메서드는 전달된 <xref:System.ServiceModel.Description.ServiceContractGenerationContext>를 수정할 수 있습니다. 이 예제에서는 주석이 추가되었습니다.  
   
 ## <a name="see-also"></a>참고자료
 

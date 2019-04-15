@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-ms.openlocfilehash: f7e7139aeebea4441f851f7ed28484ba293e9c3a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ac98b5c576c065f8944714c72b492539e0d2f05
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543252"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330885"
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 사용
 많은 구성 요소가 비동기적으로 작업을 수행하는 옵션을 제공합니다. 예를 들어 <xref:System.Media.SoundPlayer> 및 <xref:System.Windows.Forms.PictureBox> 구성 요소를 사용하면 기본 스레드가 중단 없이 계속 실행되는 동안 사운드 및 이미지를 “배경”으로 로드할 수 있습니다.  
@@ -36,9 +36,9 @@ ms.locfileid: "54543252"
   
 ### <a name="to-enable-a-picturebox-control-to-asynchronously-load-an-image"></a>PictureBox 컨트롤을 사용하여 이미지를 비동기적으로 로드하게 하려면  
   
-1.  폼에서 <xref:System.Windows.Forms.PictureBox> 구성 요소의 인스턴스를 만듭니다.  
+1. 폼에서 <xref:System.Windows.Forms.PictureBox> 구성 요소의 인스턴스를 만듭니다.  
   
-2.  이벤트 처리기를 <xref:System.Windows.Forms.PictureBox.LoadCompleted> 이벤트에 할당합니다.  
+2. 이벤트 처리기를 <xref:System.Windows.Forms.PictureBox.LoadCompleted> 이벤트에 할당합니다.  
   
      여기에서 비동기 다운로드 중에 발생했을 수 있는 오류를 확인합니다. 여기에서 취소를 확인할 수도 있습니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "54543252"
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#5)]  
   
-3.  `loadButton` 및 `cancelLoadButton`이라는 두 개의 단추를 폼에 추가합니다. <xref:System.Windows.Forms.Control.Click> 이벤트 처리기를 추가하여 다운로드를 시작 및 취소합니다.  
+3. `loadButton` 및 `cancelLoadButton`이라는 두 개의 단추를 폼에 추가합니다. <xref:System.Windows.Forms.Control.Click> 이벤트 처리기를 추가하여 다운로드를 시작 및 취소합니다.  
   
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#3)]  
@@ -56,7 +56,7 @@ ms.locfileid: "54543252"
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#4)]  
   
-4.  응용 프로그램을 실행합니다.  
+4. 응용 프로그램을 실행합니다.  
   
      이미지 다운로드가 진행되면 폼을 자유롭게 이동하고, 최소화하고, 최대화할 수 있습니다.  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - automatic sizing
 - AutoSizeMode property
 ms.assetid: 9233e0c3-2fa6-405e-8701-959479b1250e
-ms.openlocfilehash: 46061108226feb83e821edb21dfce2a57bdd3ac7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 466edeee5f45ec72ef265ef4855049c7852641b0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708071"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164972"
 ---
 # <a name="autosize-behavior-in-the-tablelayoutpanel-control"></a>TableLayoutPanel 컨트롤의 AutoSize 동작
 ## <a name="distinct-autosize-behaviors"></a>고유 AutoSize 동작  
@@ -35,5 +35,6 @@ ms.locfileid: "57708071"
 |`true`|예외를 사용 하 여 이전 상호 작용 비슷합니다는 <xref:System.Windows.Forms.SizeType.Percent> 열 또는 행 자동 크기 조정 aspect를 획득 합니다.<br /><br /> 합니다 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤이 확장 가능한 공간을 만들려면 행 이나 열의 있도록 없는 열 또는 행 <xref:System.Windows.Forms.SizeType.Percent> 스타일 해당 콘텐츠를 자릅니다. 합니다 <xref:System.Windows.Forms.TableLayoutPanel> 비율에 따라 새 공간을 할당 하는 컨트롤을 <xref:System.Windows.Forms.ColumnStyle.Width%2A> 또는 <xref:System.Windows.Forms.RowStyle.Height%2A> 속성입니다.|  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - [TableLayoutPanel 컨트롤 개요](tablelayoutpanel-control-overview.md)

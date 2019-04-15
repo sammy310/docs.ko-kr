@@ -1,13 +1,13 @@
 ---
-title: <transport>의 <netTcpBinding>
+title: <transport> / <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: de1f87d8074bbf3d85f6092a4ac316f5fd20052c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 97139b6bea21e4d908c06f5210e54756865d3c46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355600"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217798"
 ---
 # <a name="transport-of-nettcpbinding"></a>\<전송 >의 \<netTcpBinding >
 구성 된 끝점에 대 한 메시지 수준 보안 요구 사항 형식을 정의 합니다 [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)합니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "57355600"
 |특성|설명|  
 |---------------|-----------------|  
 |clientCredentialType|선택 사항입니다. 전송 보안을 사용하여 클라이언트 인증을 수행할 때 사용되는 자격 증명의 형식을 지정합니다.<br /><br /> -기본값은 `Windows`합니다.<br />-이 특성은 형식 <xref:System.ServiceModel.TcpClientCredentialType>합니다.|  
-|protectionLevel|선택 사항입니다. TCP 전송의 수준에 보안을 정의합니다. 메시지 서명은 메시지 전송 과정에서 제3자가 메시지를 위조할 수 있는 위험을 줄입니다. 암호화는 전송 과정에서 데이터 수준의 개인 정보 보호를 제공합니다.<br /><br /> 기본값은 `EncryptAndSign`입니다.|  
+|protectionLevel|선택 사항입니다. TCP 전송의 수준에 보안을 정의합니다. 메시지에 서명하면 전송 중인 메시지를 제3자가 손상할 위험을 줄일 수 있습니다. 암호화는 전송 중에 데이터 수준에서 개인 정보를 보호합니다.<br /><br /> 기본값은 `EncryptAndSign`입니다.|  
 |sslProtocols|지원되는 SslProtocols를 지정하는 SslProtocols 열거형 플래그 값입니다. 기본값은 Tls&#124;Tls11&#124;Tls12 합니다.|  
 |policyEnforcement|이 열거형은 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>가 적용되는 경우를 지정합니다.<br /><br /> 1.  Never - 정책이 적용되지 않습니다(확장 보호가 사용되지 않음).<br />2.  WhenSupported – 클라이언트에서 확장 보호를 지원하는 경우에만 정책이 적용됩니다.<br />3.  Always – 정책이 항상 적용됩니다. 확장 보호를 지원하지 않는 클라이언트는 인증되지 않습니다.|  
   
@@ -80,6 +80,7 @@ ms.locfileid: "57355600"
  SOAP 메시지의 무결성 및 기밀성과 상호 인증을 위해 전송 보안을 사용합니다. 바인딩에서 이 보안 모드를 선택하면 보안 전송을 사용하여 채널 스택이 구성되고 Windows(협상) 또는 SSL over TCP 같은 전송 보안을 사용하여 SOAP 메시지가 보안됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.TcpTransportSecurity>
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.NetTcpSecurity.Transport%2A>

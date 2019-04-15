@@ -1,5 +1,5 @@
 ---
-title: '방법: 여러 컨트롤을 확인 동일한 데이터 소스에 바인딩된 동기화 된 상태로 유지'
+title: '방법: 동일한 데이터 소스에 바인딩된 여러 컨트롤의 동기화 상태가 유지되도록 설정'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controls [Windows Forms], binding multiple
 - controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
-ms.openlocfilehash: 01cec80c85beb64975648b2250c914fe04d3ac95
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8f7e59720420a845fa195b8c0fb078a8699a9bc3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721387"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170341"
 ---
-# <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>방법: 여러 컨트롤을 확인 동일한 데이터 소스에 바인딩된 동기화 된 상태로 유지
+# <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>방법: 동일한 데이터 소스에 바인딩된 여러 컨트롤의 동기화 상태가 유지되도록 설정
 Windows Forms에서 데이터 바인딩을 사용 하 여 작업을 하는 경우에 종종 여러 컨트롤은 동일한 데이터 소스에 바인딩됩니다. 일부 경우에는 컨트롤의 바인딩된 속성이 서로 데이터 소스를 사용 하 여 동기화 된 상태로 유지 되도록 추가 단계를 수행 해야 할 수도 있습니다. 이러한 단계는 두 가지 상황에서 필요 합니다.  
   
 -   데이터 소스를 구현 하지 않는 경우 <xref:System.ComponentModel.IBindingList>를 생성 하므로 <xref:System.ComponentModel.IBindingList.ListChanged> 유형의 이벤트 <xref:System.ComponentModel.ListChangedType.ItemChanged>합니다.  
@@ -41,7 +41,8 @@ Windows Forms에서 데이터 바인딩을 사용 하 여 작업을 하는 경�
 -   사용 하 여 폼을 <xref:System.Windows.Forms.Form.Load> 이벤트를 처리 하 고 호출 하는 `InitializeControlsAndDataSource` 폼의 예제에서 메서드 <xref:System.Windows.Forms.Form.Load> 이벤트 처리기입니다.  
   
 ## <a name="see-also"></a>참고자료
-- [방법: BindingSource 구성 요소를 사용 하 여 양식 간에 바인딩된 데이터 공유](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
+
+- [방법: BindingSource 구성 요소를 사용하여 양식 간에 바인딩된 데이터 공유](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
 - [Windows Forms 데이터 바인딩의 변경 알림](change-notification-in-windows-forms-data-binding.md)
 - [데이터 바인딩과 관련된 인터페이스](interfaces-related-to-data-binding.md)
 - [Windows Forms 데이터 바인딩](windows-forms-data-binding.md)

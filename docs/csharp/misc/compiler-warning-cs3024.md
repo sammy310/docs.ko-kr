@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CS3024
 ms.assetid: fef9db31-9a7f-42d5-ad37-3e7faf661f95
-ms.openlocfilehash: e49c131328f132ae6372167818d084df51ef6c78
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7515fdd7bc8f57890e3f1aac6303ed4607cc2249
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "56799463"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297295"
 ---
 # <a name="compiler-warning-cs3024"></a>컴파일러 경고 CS3024
 'type' 제약 조건 형식이 CLS 규격이 아닙니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "56799463"
   
 ### <a name="to-eliminate-this-warning"></a>이 경고를 제거하려면  
   
-1.  형식 제약 조건에 대해 CLS 규격 형식을 사용합니다.  
+1. 형식 제약 조건에 대해 CLS 규격 형식을 사용합니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 여러 위치에서 CS3024를 생성합니다.  

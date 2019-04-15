@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 11b36fa4636dd55e539c198a260dcf93da02a237
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b40ac5f49288f7b30018e0c8c727e3ce6b73ae8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728962"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199494"
 ---
 # <a name="corprfmisc-enumeration"></a>COR_PRF_MISC 열거형
 특수 식별자를 지정하는 상수 값을 포함합니다.  
@@ -54,4 +54,5 @@ typedef enum {
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [프로파일링 열거형](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

@@ -1,5 +1,5 @@
 ---
-title: '방법: 자르기 및 배율 이미지'
+title: '방법: 이미지 자르기 및 배율 조정'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - images [Windows Forms], cropping
 - images [Windows Forms], scaling
 ms.assetid: 053e3360-bca0-4b25-9afa-0e77a6f17b03
-ms.openlocfilehash: ff0567dca0fd86736e02a9dd827ec15df8bf2df8
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 4257431881565f9160f45795111d374cc680dedd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654499"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189907"
 ---
-# <a name="how-to-crop-and-scale-images"></a>방법: 자르기 및 배율 이미지
+# <a name="how-to-crop-and-scale-images"></a>방법: 이미지 자르기 및 배율 조정
 합니다 <xref:System.Drawing.Graphics> 클래스에는 일부의 <xref:System.Drawing.Graphics.DrawImage%2A> 메서드 중 일부는 자르기 및 배율 이미지를 사용할 수 있는 원본 및 대상 사각형 매개 변수가 있습니다.  
   
 ## <a name="example"></a>예제  
@@ -36,5 +36,6 @@ ms.locfileid: "58654499"
  앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`가 필요합니다. 바꿔야 `Apple.gif` 있는 이미지 파일 이름 및 경로 시스템에서 사용할 수 있는 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [이미지, 비트맵 및 메타파일](images-bitmaps-and-metafiles.md)
 - [이미지, 비트맵, 아이콘 및 메타파일 사용](working-with-images-bitmaps-icons-and-metafiles.md)

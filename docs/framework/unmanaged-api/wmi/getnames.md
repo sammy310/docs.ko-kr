@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0065b2cbbd17c5bb3dca6773951cdb8729e59fa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f664edf29e5d2f9ec4e523aa7f7b204cf999e01b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583563"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202653"
 ---
 # <a name="getnames-function"></a>GetNames 함수
 개체 속성의 하위 집합 또는 모든 이름을 검색합니다. 
@@ -69,7 +69,7 @@ HRESULT GetNames (
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 일반 오류가 발생이 했습니다. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 하나 이상의 매개 변수가 잘못 된 경우 또는 플래그 및 매개 변수는 잘못 된 조합이 지정 되었습니다. |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 메모리가 부족하여 작업을 완료할 수 없는 경우 |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 메모리가 부족 하 여 작업을 완료할 수 없습니다. |
 |`WBEM_S_NO_ERROR` | 0 | 함수 호출이 성공 했습니다.  |
   
 ## <a name="remarks"></a>설명
@@ -79,7 +79,6 @@ HRESULT GetNames (
 명명 된 반환 매개 변수 및 플래그의 조합으로 제어 됩니다. 예를 들어, 모든 속성의 이름 또는 키 속성의 이름만 함수가 반환할 수 있습니다.  기본 필터에 지정 된 된 `lFlags` 매개 변수 및 다른 매개 변수를 그에 따라 달라 집니다.
 
 플래그 값 `lFlags` 는 비트 필드
-
 
 로 전달 될 수 있는 플래그는 `lEnumFlags` 인수에 정의 된 비트 필드는 합니다 *WbemCli.h* 헤더 파일에서 정의할 수 상수로 코드.  다른 그룹의 모든 플래그를 사용 하 여 각 그룹에서 하나 이상의 플래그를 결합할 수 있습니다. 그러나 동일한 그룹의 플래그는 함께 사용할 수 없습니다. 
 
@@ -112,4 +111,5 @@ HRESULT GetNames (
  **.NET Framework 버전:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>참고자료
-- [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)
+
+- [WMI 및 성능 카운터(관리되지 않는 API 참조)](index.md)

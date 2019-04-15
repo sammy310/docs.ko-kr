@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: 49795235d489ebc70cec11332e6be4a9452bc21d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e0cd6837de626fa6bcd560811c6a70f7f6604daa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139258"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316169"
 ---
 # <a name="weak-event-patterns"></a>약한 이벤트 패턴
 응용 프로그램에서 있기 이벤트 소스에 연결 된 처리기를 조정 하 여 원본에 처리기를 연결 하는 수신기 개체를 사용 하 여 소멸 되지 것입니다. 이 경우 메모리 누수가 발생할 수 있습니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 특정 이벤트에 대 한 전용된 관리자 클래스를 제공 하 고 해당 이벤트에 대 한 수신기에서 인터페이스를 구현 하 여이 문제를 해결 하기 위해 사용할 수 있는 디자인 패턴을 소개 합니다. 이 디자인 패턴 이라고 합니다 *약한 이벤트 패턴*합니다.  
@@ -50,11 +50,11 @@ ms.locfileid: "59139258"
   
 ### <a name="using-an-existing-weak-event-manager-class"></a>기존 강력 하지 않은 이벤트 관리자 클래스를 사용 하 여  
   
-1.  관리자를 기존 약한 이벤트를 찾습니다.  
+1. 관리자를 기존 약한 이벤트를 찾습니다.  
   
      WPF와 함께 제공 되는 약한 이벤트 관리자의 목록, 참조의 상속 계층 구조는 <xref:System.Windows.WeakEventManager> 클래스입니다.  
   
-2.  일반 이벤트를 후크 하는 대신 새로운 약한 이벤트 관리자를 사용 합니다.  
+2. 일반 이벤트를 후크 하는 대신 새로운 약한 이벤트 관리자를 사용 합니다.  
   
      예를 들어 다음과 같이 코드 패턴을 사용 하 여 이벤트를 구독할 수 있습니다.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "59139258"
   
 ### <a name="using-the-generic-weak-event-manager-class"></a>제네릭 약한 이벤트 관리자 클래스를 사용 하 여  
   
-1.  제네릭 사용 <xref:System.Windows.WeakEventManager%602> 일반 이벤트를 후크 하는 대신 클래스입니다.  
+1. 제네릭 사용 <xref:System.Windows.WeakEventManager%602> 일반 이벤트를 후크 하는 대신 클래스입니다.  
   
      사용 하는 경우 <xref:System.Windows.WeakEventManager%602> 이벤트 수신기를 등록 이벤트 소스를 제공 하 고 <xref:System.EventArgs> 클래스 및 호출 형식 매개 변수 형식과 <xref:System.Windows.WeakEventManager%602.AddHandler%2A> 다음 코드 에서처럼:  
   
@@ -92,19 +92,19 @@ ms.locfileid: "59139258"
   
 ### <a name="creating-a-custom-weak-event-manager-class"></a>약한 이벤트 관리자 클래스를 사용자 지정 만들기  
   
-1.  다음 클래스 템플릿을 프로젝트에 복사 합니다.  
+1. 다음 클래스 템플릿을 프로젝트에 복사 합니다.  
   
      이 클래스에서 상속 된 <xref:System.Windows.WeakEventManager> 클래스입니다.  
   
      [!code-csharp[WeakEvents#WeakEventManagerTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/WeakEvents/CSharp/WeakEventManagerTemplate.cs#weakeventmanagertemplate)]  
   
-2.  대체는 `SomeEventWeakEventManager` 고유한 이름의 이름입니다.  
+2. 대체는 `SomeEventWeakEventManager` 고유한 이름의 이름입니다.  
   
-3.  이벤트에 대 한 해당 이름의 앞에서 설명한 3 개의 이름을 대체 합니다. (`SomeEvent`하십시오 `EventSource`, 및 `SomeEventEventArgs`)  
+3. 이벤트에 대 한 해당 이름의 앞에서 설명한 3 개의 이름을 대체 합니다. (`SomeEvent`하십시오 `EventSource`, 및 `SomeEventEventArgs`)  
   
-4.  관리 이벤트로 동일한 표시 약한 이벤트 관리자 클래스의 표시 여부 (공개 / 개인, 내부)을 설정 합니다.  
+4. 관리 이벤트로 동일한 표시 약한 이벤트 관리자 클래스의 표시 여부 (공개 / 개인, 내부)을 설정 합니다.  
   
-5.  일반 이벤트를 후크 하는 대신 새로운 약한 이벤트 관리자를 사용 합니다.  
+5. 일반 이벤트를 후크 하는 대신 새로운 약한 이벤트 관리자를 사용 합니다.  
   
      예를 들어 다음과 같이 코드 패턴을 사용 하 여 이벤트를 구독할 수 있습니다.  
   

@@ -2,12 +2,12 @@
 title: 자격 증명 형식 선택
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-ms.openlocfilehash: 27e1bc4b9e4209fafd0e3707ad6674eb5db6e451
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8aa959aa952e839039bebffddddd951fbc1eb0d4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577115"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167845"
 ---
 # <a name="selecting-a-credential-type"></a>자격 증명 형식 선택
 *자격 증명* 는 Windows Communication Foundation (WCF) 요청 된 id 또는 기능을 사용 하 여 데이터입니다. 예를 들어 여권은 정부에서 국가나 지역의 시민권을 입증하기 위해 발급하는 자격 증명입니다. Wcf에서 자격 증명에는 사용자 이름 토큰 및 X.509 인증서 등 다양 한 형식의 걸릴 수 있습니다. 이 항목에서는 자격 증명, wcf에서 사용 방법 및 응용 프로그램에 적합 한 자격 증명을 선택 하는 방법을 설명 합니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "54577115"
 |-------------|-----------------|  
 |없음|클라이언트가 자격 증명을 제공할 필요가 없음을 지정합니다. 익명 클라이언트로 변환됩니다.|  
 |Windows|Windows 자격 증명으로 설정된 보안 컨텍스트에서 SOAP 메시지 교환을 수행할 수 있습니다.|  
-|Username|서비스에서 사용자 이름 자격 증명을 사용하여 클라이언트를 인증하도록 요구할 수 있습니다. WCF 서명 생성, 데이터 암호화 등과 같은 사용자 이름의 암호화 작업을 허용 하지 않도록 하는 참고 합니다. WCF는 사용자 이름 자격 증명을 사용 하는 경우에 전송 보안을 보장 합니다.|  
+|사용자 이름|서비스에서 사용자 이름 자격 증명을 사용하여 클라이언트를 인증하도록 요구할 수 있습니다. WCF 서명 생성, 데이터 암호화 등과 같은 사용자 이름의 암호화 작업을 허용 하지 않도록 하는 참고 합니다. WCF는 사용자 이름 자격 증명을 사용 하는 경우에 전송 보안을 보장 합니다.|  
 |인증서|서비스에서 X.509 인증서를 사용하여 클라이언트를 인증하도록 요구할 수 있습니다.|  
 |Issued Token|보안 정책에 따라 구성된 사용자 지정 토큰 형식입니다. 기본 토큰 형식은 SAML(Security Assertions Markup Language)입니다. 토큰은 보안 토큰 서비스에 의해 발급됩니다. 자세한 내용은 [페더레이션 및 발급 된 토큰](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)합니다.|  
   
@@ -98,6 +98,7 @@ ms.locfileid: "54577115"
  자격 증명 및 보안 세션에 대 한 자세한 내용은 참조 하세요. [보안 세션에 대 한 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A?displayProperty=nameWithType>

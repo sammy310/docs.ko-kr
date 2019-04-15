@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: dbe96abebdc61fae469f7727673e6fcb93cbc739
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236668"
+---
 ### <a name="no-longer-able-to-set-enableviewstatemac-to-false"></a>더 이상 EnableViewStateMac를 false로 설정할 수 없음
 
 |   |   |
@@ -7,4 +15,3 @@
 |범위|주요함|
 |버전|4.5.2|
 |형식|런타임|
-

@@ -1,16 +1,16 @@
 ---
-title: '방법: WIF 추적을 사용하여 클레임 인식 응용 프로그램 및 서비스 디버그'
+title: '방법: WIF 추적을 사용하여 클레임 인식 애플리케이션 및 서비스 디버그'
 ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
-ms.openlocfilehash: 38e168fff9bc351b6239c41197348d24129a4747
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 43fa859aa84189817dffe74ecd72253ab9b82585
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453394"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321551"
 ---
-# <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>방법: WIF 추적을 사용하여 클레임 인식 응용 프로그램 및 서비스 디버그
+# <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>방법: WIF 추적을 사용하여 클레임 인식 애플리케이션 및 서비스 디버그
 ## <a name="applies-to"></a>적용 대상  
   
 -   Microsoft® Windows® Identity Foundation(WIF)  
@@ -59,9 +59,9 @@ ms.locfileid: "49453394"
   
 #### <a name="to-configure-wif-tracing-using-webconfig-configuration-file"></a>Web.config 구성 파일을 사용하여 WIF 추적을 구성하려면  
   
-1.  Visual Studio 편집기의 **솔루션 탐색기**에서 루트 **Web.config** 또는 **App.config** 구성 파일을 두 번 클릭하여 엽니다. 솔루션에 **Web.config** 또는 **App.config** 구성 파일이 없는 경우 **솔루션 탐색기**에서 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가**, **새 항목...** 을 차례로 클릭하여 추가합니다. **새 항목** 대화 상자의 목록에서 **App.config**에 대해 **응용 프로그램 구성 파일**을 선택하거나 **Web.config**에 대해 **웹 구성 파일**을 선택하고 **확인**을 클릭합니다.  
+1. Visual Studio 편집기의 **솔루션 탐색기**에서 루트 **Web.config** 또는 **App.config** 구성 파일을 두 번 클릭하여 엽니다. 솔루션에 **Web.config** 또는 **App.config** 구성 파일이 없는 경우 **솔루션 탐색기**에서 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가**, **새 항목...** 을 차례로 클릭하여 추가합니다. **새 항목** 대화 상자의 목록에서 **App.config**에 대해 **응용 프로그램 구성 파일**을 선택하거나 **Web.config**에 대해 **웹 구성 파일**을 선택하고 **확인**을 클릭합니다.  
   
-2.  구성 파일의 끝에 있는 **\<configuration>** 노드 내에 다음과 비슷한 구성 항목을 추가합니다.  
+2. 구성 파일의 끝에 있는 **\<configuration>** 노드 내에 다음과 비슷한 구성 항목을 추가합니다.  
   
     ```xml  
     <system.diagnostics>  
@@ -76,31 +76,31 @@ ms.locfileid: "49453394"
     </system.diagnostics>  
     ```  
   
-3.  위의 구성은 WIF에 자세한 추적 이벤트를 생성하고 *WIFTrace.e2e* 파일에 기록하도록 지시합니다. **switchValue** 스위치에 대한 값의 전체 목록은 [추적 구성](../wcf/diagnostics/tracing/configuring-tracing.md) 항목에 있는 추적 수준 표를 참조하세요.  
+3. 위의 구성은 WIF에 자세한 추적 이벤트를 생성하고 *WIFTrace.e2e* 파일에 기록하도록 지시합니다. 에 대 한 값의 전체 목록은 합니다 **switchValue** 전환 다음 항목에에서 나와 있는 추적 수준 표를 참조 하세요. [추적 구성](../wcf/diagnostics/tracing/configuring-tracing.md)합니다.  
   
 ## <a name="step-2--analyze-wif-trace-files-using-trace-viewer-tool"></a>2단계 - 추적 뷰어 도구를 사용하여 WIF 추적 파일 분석  
  이 단계에서는 추적 뷰어 도구(SvcTraceViewer.exe)를 사용하여 WIF 추적 로그를 분석합니다.  
   
 #### <a name="to-analyze-wif-trace-logs-using-trace-viewer-tool-svctraceviewerexe"></a>추적 뷰어 도구(SvcTraceViewer.exe)를 사용하여 WIF 추적 로그를 분석하려면  
   
-1.  추적 뷰어 도구(SvcTraceViewer.exe)는 Windows SDK의 일부로 제공됩니다. Windows SDK를 아직 설치하지 않은 경우 [Windows SDK](https://www.microsoft.com/download/en/details.aspx?id=8279)에서 다운로드할 수 있습니다.  
+1. 추적 뷰어 도구(SvcTraceViewer.exe)는 Windows SDK의 일부로 제공됩니다. Windows SDK를 아직 설치 하지 않은 경우 여기서 다운로드할 수 있습니다. [Windows SDK](https://www.microsoft.com/download/en/details.aspx?id=8279).  
   
-2.  추적 뷰어 도구(SvcTraceViewer.exe)를 실행합니다. 일반적으로 설치 경로의 **Bin** 폴더에서 사용할 수 있습니다.  
+2. 추적 뷰어 도구(SvcTraceViewer.exe)를 실행합니다. 일반적으로 설치 경로의 **Bin** 폴더에서 사용할 수 있습니다.  
   
-3.  메뉴에서 **파일**, **열기...** 옵션을 선택하거나 **Ctrl+O** 바로 가기를 사용하여 WIF 추적 로그 파일(예: WIFTrace.e2e)을 엽니다. 추적 로그 파일이 추적 뷰어 도구에서 열립니다.  
+3. 메뉴에서 **파일**, **열기...** 옵션을 선택하거나 **Ctrl+O** 바로 가기를 사용하여 WIF 추적 로그 파일(예: WIFTrace.e2e)을 엽니다. 추적 로그 파일이 추적 뷰어 도구에서 열립니다.  
   
-4.  **작업** 탭에서 항목을 검토합니다. 각 항목에는 작업 수, 기록된 추적 수, 작업 기간, 시작 및 종료 타임스탬프가 포함되어야 합니다.  
+4. **작업** 탭에서 항목을 검토합니다. 각 항목에는 작업 수, 기록된 추적 수, 작업 기간, 시작 및 종료 타임스탬프가 포함되어야 합니다.  
   
-5.  **작업** 탭을 클릭합니다. 자세한 추적 항목이 도구의 주 영역에 표시됩니다. 메뉴의 **수준** 드롭다운 목록을 사용하여 특정 추적 수준(**모두**, **경고**, **오류**, **정보** 등)을 필터링합니다.  
+5. **작업** 탭을 클릭합니다. 자세한 추적 항목이 도구의 주 영역에 표시됩니다. 사용 된 **수준** 예를 들어 특정 수준의 추적을 필터링 하려면 메뉴의 드롭다운 목록: **모든**, **경고**, **오류**하십시오 **정보**등.  
   
-6.  특정 추적 항목을 클릭하여 도구의 아래쪽 영역에서 세부 정보를 검토합니다. 해당 탭을 선택하여 **서식 있음** 및 **XML** 뷰에서 세부 정보를 볼 수 있습니다.  
+6. 특정 추적 항목을 클릭하여 도구의 아래쪽 영역에서 세부 정보를 검토합니다. 해당 탭을 선택하여 **서식 있음** 및 **XML** 뷰에서 세부 정보를 볼 수 있습니다.  
   
 ## <a name="step-3--identify-solutions-to-fix-wif-related-issues"></a>3단계 - WIF 관련 문제를 해결할 수 있는 솔루션 식별  
  이 단계에서는 WIF 추적 로그 및 추적 뷰어 도구를 사용하여 식별된 WIF 관련 문제에 대한 솔루션을 식별할 수 있습니다. 문제 해결을 위해 WIF 관련 예외를 잠재적인 솔루션이나 필수 작업에 매핑하는 일반적인 매핑을 간략하게 설명합니다.  
   
 #### <a name="to-identify-solutions-to-fix-wif-related-issues"></a>WIF 관련 문제를 해결할 수 있는 솔루션을 식별하려면  
   
-1.  WIF 예외 및 필수 작업이 포함된 다음 표를 검토하여 문제를 해결합니다.  
+1. WIF 예외 및 필수 작업이 포함된 다음 표를 검토하여 문제를 해결합니다.  
   
 |**오류 ID**|**오류 메시지**|**오류를 해결하는 데 필요한 작업**|  
 |-|-|-|  

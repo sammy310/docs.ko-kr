@@ -2,12 +2,12 @@
 title: WCF 분석 추적
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 6d4db9a8ec11e215ef18dcab6b7940526bc24927
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ed89bdbe2469a96f2a959c9fda8442e80b6f7ec
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54748144"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332315"
 ---
 # <a name="wcf-analytic-tracing"></a>WCF 분석 추적
 이 샘플에는 Windows Communication Foundation (WCF) ETW에 기록 하는 분석 추적 스트림에 고유한 추적 이벤트를 추가 하는 방법을 보여 줍니다. [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]합니다. 분석 추적은 성능을 크게 저하시키지 않으면서 서비스를 쉽게 확인할 수 있도록 하기 위한 것입니다. 이 샘플에 사용 하는 방법을 보여 줍니다는 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> WCF 서비스와 통합 하는 쓰기 이벤트에는 Api입니다.  
@@ -43,31 +43,31 @@ ms.locfileid: "54748144"
   
 #### <a name="to-use-this-sample"></a>이 샘플을 사용하려면  
   
-1.  WCFAnalyticTracingExtensibility.sln 솔루션 파일을 열고 Visual Studio 2012를 사용 합니다.  
+1. WCFAnalyticTracingExtensibility.sln 솔루션 파일을 열고 Visual Studio 2012를 사용 합니다.  
   
-2.  Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.  
+2. Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.  
   
-3.  Ctrl+F5를 눌러 솔루션을 실행합니다.  
+3. Ctrl+F5를 눌러 솔루션을 실행합니다.  
   
      웹 브라우저에서 클릭 **Calculator.svc**합니다. 서비스의 WSDL 문서에 대한 URI가 브라우저에 나타납니다. 이 URI를 복사합니다.  
   
-4.  WCF 테스트 클라이언트 (WcfTestClient.exe)를 실행 합니다.  
+4. WCF 테스트 클라이언트 (WcfTestClient.exe)를 실행 합니다.  
   
      WCF 테스트 클라이언트 (WcfTestClient.exe)에 위치한 `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`합니다. 기본 Visual Studio 2012 설치 디렉터리는 `C:\Program Files\Microsoft Visual Studio 10.0`합니다.  
   
-5.  WCF 테스트 클라이언트 내에서 선택 하 여 서비스를 추가할 **파일**를 차례로 **서비스 추가**합니다.  
+5. WCF 테스트 클라이언트 내에서 선택 하 여 서비스를 추가할 **파일**를 차례로 **서비스 추가**합니다.  
   
      입력 상자에 엔드포인트 주소를 추가합니다.  
   
-6.  클릭 **확인** 는 대화 상자를 닫습니다.  
+6. 클릭 **확인** 는 대화 상자를 닫습니다.  
   
      ICalculator 서비스가 아래 왼쪽된 창에서 추가 된 **내 서비스 프로젝트**합니다.  
   
-7.  이벤트 뷰어 애플리케이션을 엽니다.  
+7. 이벤트 뷰어 애플리케이션을 엽니다.  
   
      서비스를 호출 하기 전에 이벤트 뷰어를 시작 하 고 WCF 서비스에서 내보낸 추적 이벤트에 대 한 이벤트 로그에서이 수신 대기 하는지 확인 합니다.  
   
-8.  **시작** 메뉴에서 **관리 도구**를 차례로 **이벤트 뷰어**합니다. 사용 하도록 설정 합니다 **분석** 하 고 **디버그** 로그 합니다.  
+8. **시작** 메뉴에서 **관리 도구**를 차례로 **이벤트 뷰어**합니다. 사용 하도록 설정 합니다 **분석** 하 고 **디버그** 로그 합니다.  
   
 9. 이동할 이벤트 뷰어의 트리 뷰에서 **이벤트 뷰어**, **Applications and Services Logs**를 **Microsoft**를 **Windows**, 한 다음 **응용 프로그램 서버-응용 프로그램**합니다. 마우스 오른쪽 단추로 클릭 **응용 프로그램 서버-응용 프로그램**를 선택 **뷰**를 차례로 **분석 및 디버그 로그 표시**합니다.  
   
@@ -97,13 +97,13 @@ ms.locfileid: "54748144"
   
 #### <a name="to-clean-up-optional"></a>정리하려면(옵션)  
   
-1.  오픈 **이벤트 뷰어**합니다.  
+1. 오픈 **이벤트 뷰어**합니다.  
   
-2.  이동할 **이벤트 뷰어**를 **Applications and Services Logs**를 **Microsoft**를 **Windows**를 차례로  **응용 프로그램 서버-응용 프로그램**합니다. 마우스 오른쪽 단추로 클릭 **분석** 선택한 **로그 사용 안 함**합니다.  
+2. 이동할 **이벤트 뷰어**를 **Applications and Services Logs**를 **Microsoft**를 **Windows**를 차례로  **응용 프로그램 서버-응용 프로그램**합니다. 마우스 오른쪽 단추로 클릭 **분석** 선택한 **로그 사용 안 함**합니다.  
   
-3.  이동할 **이벤트 뷰어**, **Applications and Services Logs**합니다 **Microsoft**를 **Windows**,  **응용 프로그램 서버-응용 프로그램**, 차례로 **분석**합니다. 마우스 오른쪽 단추로 클릭 **분석** 선택한 **로그 지우기**합니다.  
+3. 이동할 **이벤트 뷰어**, **Applications and Services Logs**합니다 **Microsoft**를 **Windows**,  **응용 프로그램 서버-응용 프로그램**, 차례로 **분석**합니다. 마우스 오른쪽 단추로 클릭 **분석** 선택한 **로그 지우기**합니다.  
   
-4.  클릭 **의 선택을 취소** 이벤트의 선택을 취소 합니다.  
+4. 클릭 **의 선택을 취소** 이벤트의 선택을 취소 합니다.  
   
 ## <a name="known-issue"></a>알려진 문제  
  알려진 문제가 합니다 **이벤트 뷰어** ETW 이벤트가 디코딩되지 실패할 수 있습니다. 라는 오류 메시지가 표시 될 수 있습니다. "이벤트 ID에 대 한 설명을 \<id > 원본 Microsoft-Windows-응용 프로그램 서버-응용 프로그램을 찾을 수 없습니다. 이 이벤트를 발생시킨 구성 요소가 로컬 컴퓨터에 설치되어 있지 않거나 설치가 손상되었습니다. 설치 또는 로컬 컴퓨터의 구성 요소를 복구 합니다. " 이 오류가 발생 하는 경우 선택할 **새로 고침** 에서 합니다 **작업** 메뉴. 그러면 이벤트가 올바르게 디코딩됩니다.  
@@ -118,4 +118,5 @@ ms.locfileid: "54748144"
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTrace`  
   
 ## <a name="see-also"></a>참고자료
+
 - [AppFabric 모니터링 샘플](https://go.microsoft.com/fwlink/?LinkId=193959)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f927cece9997c78a75b1edecdb0a671203c3dd2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7486a094deab16ebbc05f19f1b652126479ce11c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646895"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183003"
 ---
 # <a name="iclroneventmanager-interface"></a>ICLROnEventManager 인터페이스
 등록 및 공용 언어 런타임 (CLR) 이벤트에 대 한 콜백을 등록 호스트를 사용할 수 있는 메서드를 제공 합니다.  
@@ -49,6 +49,7 @@ ms.locfileid: "54646895"
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [EClrEvent 열거형](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md)
 - [IActionOnCLREvent 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)
 - [ICLRControl 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)

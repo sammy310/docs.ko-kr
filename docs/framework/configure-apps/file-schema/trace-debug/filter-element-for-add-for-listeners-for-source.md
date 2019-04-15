@@ -1,5 +1,5 @@
 ---
-title: <filter>의 <add>에 대한 <listeners>의 <source> 요소
+title: <filter> 요소에 대 한 <add> 에 대 한 <listeners> 에 대 한 <source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#filter
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <filter> element for <add> for <listeners> for <source>
 - filter element for <add> for <listeners> for <source>
 ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
-ms.openlocfilehash: 7207e72c537e8338f8c646750016c9b6c810bf9a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3abfd0bdd40f98a9e4774677fc2cd5068c14333f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260582"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186734"
 ---
 # <a name="filter-element-for-add-for-listeners-for-source"></a>\<필터 > 요소에 대 한 \<추가 >에 대 한 \<수신기 >에 대 한 \<소스 >
 추적 소스의 `Listeners` 컬렉션에 있는 수신기에 필터를 추가합니다.  
@@ -91,6 +91,7 @@ ms.locfileid: "55260582"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.TraceListener.Filter%2A?displayProperty=nameWithType>

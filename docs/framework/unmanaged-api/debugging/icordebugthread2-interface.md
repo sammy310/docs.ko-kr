@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e162c114de013eed160a515dbc92fef47ea3327
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 82648714c375998e9daa1bb59cd9ebd9802b5794
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980505"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153935"
 ---
 # <a name="icordebugthread2-interface"></a>ICorDebugThread2 인터페이스
 ICorDebugThread 인터페이스를 논리적으로 확장으로 사용 됩니다.  
@@ -51,4 +51,5 @@ ICorDebugThread 인터페이스를 논리적으로 확장으로 사용 됩니다
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

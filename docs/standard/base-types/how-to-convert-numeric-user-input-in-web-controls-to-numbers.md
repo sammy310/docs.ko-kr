@@ -15,33 +15,33 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c66235d866bd7c276d049d9415015dd6f9aa9fb6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f732f5bf61ed65fe7e62d110494d874262e30fd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722363"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296162"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>방법: 웹 컨트롤의 숫자 사용자 입력을 숫자로 변환
 전 세계 어디서든 웹 페이지를 표시할 수 있으므로 사용자가 거의 무제한의 형식으로 숫자 데이터를 <xref:System.Web.UI.WebControls.TextBox> 컨트롤에 입력할 수 있습니다. 따라서 웹 페이지 사용자의 로캘 및 문화권을 확인하는 것이 매우 중요합니다. 사용자 입력을 구문 분석할 때 사용자의 로캘 및 문화권에 의해 정의된 서식 지정 규칙을 적용할 수 있습니다.  
   
 ### <a name="to-convert-numeric-input-from-a-web-textbox-control-to-a-number"></a>웹 TextBox 컨트롤의 숫자 입력을 숫자로 변환하려면  
   
-1.  <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> 속성에서 반환한 문자열 배열이 채워졌는지 여부를 파악합니다. 배열이 채워져 있지 않으면 6단계를 진행합니다.  
+1. <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> 속성에서 반환한 문자열 배열이 채워졌는지 여부를 파악합니다. 배열이 채워져 있지 않으면 6단계를 진행합니다.  
   
-2.  <xref:System.Web.HttpRequest.UserLanguages%2A> 속성에서 반환한 문자열 배열이 채워져 있는 경우 첫 번째 요소를 검색합니다. 첫 번째 요소는 사용자의 기본 설정 언어 및 지역을 나타냅니다.  
+2. <xref:System.Web.HttpRequest.UserLanguages%2A> 속성에서 반환한 문자열 배열이 채워져 있는 경우 첫 번째 요소를 검색합니다. 첫 번째 요소는 사용자의 기본 설정 언어 및 지역을 나타냅니다.  
   
-3.  <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 생성자를 호출하여 사용자의 기본 설정 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 개체를 인스턴스화합니다.  
+3. <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 생성자를 호출하여 사용자의 기본 설정 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 개체를 인스턴스화합니다.  
   
-4.  사용자 입력을 변환하려는 숫자 형식의 `TryParse` 또는 `Parse` 메서드를 호출합니다. `TryParse` 또는 `Parse` 메서드의 오버로드를 `provider` 매개 변수와 함께 사용하고, 다음 중 하나를 전달합니다.  
+4. 사용자 입력을 변환하려는 숫자 형식의 `TryParse` 또는 `Parse` 메서드를 호출합니다. `TryParse` 또는 `Parse` 메서드의 오버로드를 `provider` 매개 변수와 함께 사용하고, 다음 중 하나를 전달합니다.  
   
     -   3단계에서 생성한 <xref:System.Globalization.CultureInfo> 개체  
   
     -   3단계에서 생성한 <xref:System.Globalization.CultureInfo> 개체의 <xref:System.Globalization.CultureInfo.NumberFormat%2A> 속성에서 반환하는 <xref:System.Globalization.NumberFormatInfo> 개체  
   
-5.  변환에 실패하는 경우 <xref:System.Web.HttpRequest.UserLanguages%2A> 속성에서 반환한 문자열 배열의 나머지 요소 각각에 대해 2~4단계를 반복합니다.  
+5. 변환에 실패하는 경우 <xref:System.Web.HttpRequest.UserLanguages%2A> 속성에서 반환한 문자열 배열의 나머지 요소 각각에 대해 2~4단계를 반복합니다.  
   
-6.  여전히 변환에 실패하거나 <xref:System.Web.HttpRequest.UserLanguages%2A> 속성에서 반환한 문자열 배열이 비어 있는 경우 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 속성에서 반환하는 고정 문화권을 사용하여 문자열을 구문 분석합니다.  
+6. 여전히 변환에 실패하거나 <xref:System.Web.HttpRequest.UserLanguages%2A> 속성에서 반환한 문자열 배열이 비어 있는 경우 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 속성에서 반환하는 고정 문화권을 사용하여 문자열을 구문 분석합니다.  
   
 ## <a name="example"></a>예제  
  다음 예제는 사용자에게 <xref:System.Web.UI.WebControls.TextBox> 컨트롤에 숫자 값을 입력하도록 요청하고 이 값을 숫자로 변환하는 웹 폼의 완벽한 코드 숨김 페이지입니다. 해당 숫자는 원래 입력과 동일한 서식 지정 규칙을 사용하여 double로 처리되고 표시됩니다.  

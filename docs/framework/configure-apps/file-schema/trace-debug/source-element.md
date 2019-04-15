@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - <source> element
 - source element
-ms.openlocfilehash: a528e0f77efea6df7379a0f01495bc09d2ed0b24
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 8860f5d3ed7ee0c04d1e8afd7614f3f73b470808
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254485"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186552"
 ---
 # <a name="source-element"></a>\<소스 > 요소
 추적 메시지를 시작하는 추적 소스를 지정합니다.  
@@ -83,5 +83,6 @@ ms.locfileid: "55254485"
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - [추적 및 디버그 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
 - [추적 스위치](../../../../../docs/framework/debug-trace-profile/trace-switches.md)

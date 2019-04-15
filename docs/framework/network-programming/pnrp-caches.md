@@ -2,12 +2,12 @@
 title: PNRP 캐시
 ms.date: 03/30/2017
 ms.assetid: 270068d9-1b6b-4eb9-9e14-e02326bb88df
-ms.openlocfilehash: 375e193e618366b169d5c84073adb432cea3634c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cd1901e716cab9f1b47825a5d3ecdb071a58440
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736950"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182483"
 ---
 # <a name="pnrp-caches"></a>PNRP 캐시
 PNRP(피어 이름 확인 프로토콜) 캐시는 한 피어에서 유지 관리되며 알고리즘 방식으로 선택된 피어 엔드포인트의 로컬 컬렉션입니다.  
@@ -36,4 +36,5 @@ PNRP(피어 이름 확인 프로토콜) 캐시는 한 피어에서 유지 관리
  피어는 다른 피어에서 개체를 받도록 등록할 수 있습니다. 개체를 업데이트하면, 공동 작업 애플리케이션에 알림이 전달되고 새 개체가 애플리케이션의 모든 구독자에게 전달됩니다. 예를 들어 그룹 채팅 애플리케이션의 피어가 애플리케이션 정보를 받기 위해 등록할 수 있습니다. 그러면 모든 채팅 레코드를 애플리케이션 데이터로 전송합니다.  클라우드 내의 채팅 작업을 모니터링할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - <xref:System.Net.PeerToPeer>

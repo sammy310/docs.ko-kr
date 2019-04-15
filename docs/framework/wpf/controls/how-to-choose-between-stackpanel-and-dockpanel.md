@@ -1,5 +1,5 @@
 ---
-title: '방법: StackPanel과 DockPanel 중 선택'
+title: '방법: StackPanel 및 DockPanel 중에서 선택'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - StackPanel control [WPF], DockPanel control compared to
 - controls [WPF], StackPanel
 ms.assetid: f9239086-451f-42e6-81f7-ef89ef349742
-ms.openlocfilehash: 13353212589f99c9ad735761af60ab3eff6c9ad8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8338421dfb1bea856c15edf9d324cec955584f9f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357588"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206969"
 ---
-# <a name="how-to-choose-between-stackpanel-and-dockpanel"></a>방법: StackPanel과 DockPanel 중 선택
+# <a name="how-to-choose-between-stackpanel-and-dockpanel"></a>방법: StackPanel 및 DockPanel 중에서 선택
 사용할지 선택 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.StackPanel> 또는 <xref:System.Windows.Controls.DockPanel> 의 콘텐츠를 스택 하는 경우는 <xref:System.Windows.Controls.Panel>합니다.  
   
 ## <a name="example"></a>예제  
@@ -32,6 +32,7 @@ ms.locfileid: "57357588"
  [!code-xaml[StackPanelOvw4#1](~/samples/snippets/xaml/VS_Snippets_Wpf/StackPanelOvw4/XAML/default.xaml#1)]  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Controls.StackPanel>
 - <xref:System.Windows.Controls.DockPanel>
-- [패널 개요](panels-overview.md)
+- [Panel 개요](panels-overview.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: 42c87f7b427af775784f8bf1c49ecabde2572823
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b357ee12dce823e49e61171d21356ca36b74f7c5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59135787"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331808"
 ---
 # <a name="securing-clients"></a>클라이언트에 보안 설정
 Windows Communication Foundation (WCF), 서비스는 클라이언트에 대 한 보안 요구 사항을 지정합니다. 즉, 서비스는 사용할 보안 모드 및 클라이언트가 자격 증명을 제공해야 하는지 여부를 지정합니다. 따라서 클라이언트 보안 설정 프로세스는 간단합니다. 서비스에서 가져온 메타데이터를 사용하여(게시된 경우) 클라이언트를 빌드하면 됩니다. 메타데이터는 클라이언트를 구성하는 방법을 지정합니다. 서비스에서 클라이언트가 자격 증명을 제공해야 하는 경우 요구 사항에 맞는 자격 증명을 가져와야 합니다. 이 항목에서는 이 과정을 자세히 설명합니다. 보안 서비스를 만드는 방법에 대 한 자세한 내용은 참조 하세요. [Securing Services](../../../docs/framework/wcf/securing-services.md)합니다.  
@@ -33,9 +33,9 @@ Windows Communication Foundation (WCF), 서비스는 클라이언트에 대 한 
 ## <a name="setting-a-client-credential"></a>클라이언트 자격 증명 설정  
  클라이언트에 대한 클라이언트 자격 증명 설정은 다음 두 단계로 구성됩니다.  
   
-1.  확인 합니다 *클라이언트 자격 증명 유형* 서비스가 필요 합니다. 이 방법은 두 개의 메서드 중 하나에 의해 수행됩니다. 첫째로, 서비스 작성자의 설명서가 있는 경우 서비스에서 필요한 클라이언트 자격 증명 형식(있는 경우)을 지정해야 합니다. 둘째로, Svcutil.exe 도구로 생성된 구성 파일만 있는 경우 개별 바인딩을 검사하여 필요한 자격 증명 형식을 결정할 수 있습니다.  
+1. 확인 합니다 *클라이언트 자격 증명 유형* 서비스가 필요 합니다. 이 방법은 두 개의 메서드 중 하나에 의해 수행됩니다. 첫째로, 서비스 작성자의 설명서가 있는 경우 서비스에서 필요한 클라이언트 자격 증명 형식(있는 경우)을 지정해야 합니다. 둘째로, Svcutil.exe 도구로 생성된 구성 파일만 있는 경우 개별 바인딩을 검사하여 필요한 자격 증명 형식을 결정할 수 있습니다.  
   
-2.  실제 클라이언트 자격 증명을 지정합니다. 실제 클라이언트 자격 증명에서 호출 되는 *클라이언트 자격 증명 값* 유형을 구별 하기. 예를 들어, 클라이언트 자격 증명 형식이 인증서를 지정할 경우 서비스가 신뢰하는 인증 기관에서 발급한 X.509 인증서를 제공해야 합니다.  
+2. 실제 클라이언트 자격 증명을 지정합니다. 실제 클라이언트 자격 증명에서 호출 되는 *클라이언트 자격 증명 값* 유형을 구별 하기. 예를 들어, 클라이언트 자격 증명 형식이 인증서를 지정할 경우 서비스가 신뢰하는 인증 기관에서 발급한 X.509 인증서를 제공해야 합니다.  
   
 ### <a name="determining-the-client-credential-type"></a>클라이언트 자격 증명 형식 결정  
  Svcutil.exe 도구로 생성 된 파일을 검사 하는 구성이 있는 경우는 [ \<바인딩 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) 섹션 필요한 클라이언트 자격 증명 유형을 결정 합니다. 이 단원에는 보안 요구 사항을 지정하는 바인딩 요소가 나와 있습니다. 특히 검사는 \<보안 > 각 바인딩 요소입니다. 해당 요소에는 `mode` 특성이 포함되어 있으며, 이 특성은 세 가지 가능한 값 즉, `Message`, `Transport` 또는 `TransportWithMessageCredential` 중 하나로 설정할 수 있습니다. 특성 값은 모드를 결정하고 모드는 자식 요소 중 중요한 요소를 결정합니다.  

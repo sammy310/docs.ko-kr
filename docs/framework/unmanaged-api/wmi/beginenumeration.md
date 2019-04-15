@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11002ac57a37b3c9ab0badfab49bb9049b0dfa79
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4221dbea2b5ad98f889e04eb8a9b6d992b59066e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369294"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212299"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration 함수
 열거형의 시작 부분에 다시 열거자를 다시 설정합니다.  
@@ -97,7 +97,6 @@ HRESULT BeginEnumeration (
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 열거형 클래스 자체에서 수정 되거나 정의 되는 속성을 제한 합니다. |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 열거형 기본 클래스에서 상속 된 속성을 제한 합니다. |
 
-
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
@@ -107,4 +106,4 @@ HRESULT BeginEnumeration (
   
 ## <a name="see-also"></a>참고자료
 
-- [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)
+- [WMI 및 성능 카운터(관리되지 않는 API 참조)](index.md)

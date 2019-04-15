@@ -1,17 +1,17 @@
 ---
-title: '방법: COM + 서비스 모델 구성 도구를 사용 합니다.'
+title: '방법: COM+ 서비스 모델 구성 도구 사용'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 528e46a47daa6df865308592eb41658369a74b6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b330a727c0a4a20de13f43fd2844d0b745e5060
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736249"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322591"
 ---
-# <a name="how-to-use-the-com-service-model-configuration-tool"></a>방법: COM + 서비스 모델 구성 도구를 사용 합니다.
+# <a name="how-to-use-the-com-service-model-configuration-tool"></a>방법: COM+ 서비스 모델 구성 도구 사용
 적절한 호스팅 모드를 선택한 다음 COM+ 서비스 모델 구성 명령줄 도구(ComSvcConfig.exe)를 사용하여 웹 서비스로 노출될 응용 프로그램 인터페이스를 구성합니다.  
   
 > [!NOTE]
@@ -19,11 +19,11 @@ ms.locfileid: "54736249"
   
  Windows 7 컴퓨터에서 ComSvcConfig.exe를 사용하여 웹 서비스가 최신 서비스 모델 버전(현재 v4.5)을 사용하도록 구성하려면 다음 단계를 따르십시오.  
   
-1.  레지스트리 키 설정 `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` DWORD 값 0x00000001  
+1. 레지스트리 키 설정 `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` DWORD 값 0x00000001  
   
-2.  Comsvcconfig.exe를 실행합니다.  
+2. Comsvcconfig.exe를 실행합니다.  
   
-3.  1단계에서 추가한 레지스트리 키를 원래 값으로 되돌리거나, 원래 값이 없었던 경우에는 삭제합니다.  
+3. 1단계에서 추가한 레지스트리 키를 원래 값으로 되돌리거나, 원래 값이 없었던 경우에는 삭제합니다.  
   
 > [!IMPORTANT]
 >  이 레지스트리 키를 되돌리는 것은 중요합니다. 이 키는 호환성 키이므로 변경 내용을 되돌리지 않으면 컴퓨터에서 실행 중인 다른 .NET 응용 프로그램에 문제가 발생할 수 있습니다.  
@@ -110,4 +110,5 @@ ms.locfileid: "54736249"
     ```  
   
 ## <a name="see-also"></a>참고자료
-- [COM+ 애플리케이션과 통합 개요](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)
+
+- [COM+ 응용 프로그램과 통합 개요](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)

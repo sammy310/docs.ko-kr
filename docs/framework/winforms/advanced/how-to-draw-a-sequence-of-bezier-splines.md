@@ -8,12 +8,12 @@ helpviewer_keywords:
 - splines [Windows Forms], drawing Bezier
 - Bezier splines [Windows Forms], drawing sequence of
 ms.assetid: 37a0bedb-20c2-4cf0-91fa-a5509e826b30
-ms.openlocfilehash: 2b74b03137d5a450fb1e436a514877d1a17229ad
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 976787f5830282a581d05a9c24d1f83dceca4b25
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654252"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168157"
 ---
 # <a name="how-to-draw-a-sequence-of-b233zier-splines"></a>방법: B의 시퀀스를 그리는&#233;zier 스플라인
 사용할 수는 <xref:System.Drawing.Graphics.DrawBeziers%2A> 메서드는 <xref:System.Drawing.Graphics> 일련의 그리기 클래스에는 3 차원 곡선 스플라인 연결 합니다.  
@@ -32,6 +32,7 @@ ms.locfileid: "58654252"
  앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`가 필요합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Forms의 그래픽 및 그리기](graphics-and-drawing-in-windows-forms.md)
 - [GDI+의 3차원 곡선 스플라인](bezier-splines-in-gdi.md)
 - [곡선 구성 및 그리기](constructing-and-drawing-curves.md)

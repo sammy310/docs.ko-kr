@@ -1,5 +1,5 @@
 ---
-title: TableLayoutPanel 컨트롤에 대한 유용한 정보
+title: TableLayoutPanel 컨트롤에 대한 모범 사례
 ms.date: 03/30/2017
 helpviewer_keywords:
 - layout [Windows Forms]
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - sizing [Windows Forms], automatic
 - automatic sizing
 ms.assetid: b6706efb-d7a4-45ec-8cf4-08fa993e3afb
-ms.openlocfilehash: 6be6d0904d5b52e5188f0a5a16aaefa08265379c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57abf3527af146f1ce918bcabbc6a5a34bfb9b34
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674195"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222330"
 ---
-# <a name="best-practices-for-the-tablelayoutpanel-control"></a>TableLayoutPanel 컨트롤에 대한 유용한 정보
+# <a name="best-practices-for-the-tablelayoutpanel-control"></a>TableLayoutPanel 컨트롤에 대한 모범 사례
 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤에 Windows Forms에서 사용 하기 전에 신중 하 게 고려해 야 하는 강력한 레이아웃 기능을 제공 합니다.  
   
 ## <a name="recommendations"></a>권장 사항  
@@ -56,5 +56,6 @@ ms.locfileid: "54674195"
  <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤 Windows Forms 디자이너에서 시각적 상속을 지원 하지 않습니다. <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤 파생된 클래스에서 "잠겨 있음" 디자인 타임에 표시 됩니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - <xref:System.Windows.Forms.FlowLayoutPanel>

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], DatePicker
 - DatePicker control [WPF]
 ms.assetid: 619765c8-8d25-4315-aec2-79aea08fed9f
-ms.openlocfilehash: a135188b2c573a578aa5b6be4910e6d02471aee1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 555bf31b27ba233ffa54438077984b02b5e3084a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362255"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161342"
 ---
 # <a name="datepicker"></a>DatePicker
 합니다 <xref:System.Windows.Controls.DatePicker> 컨트롤을 사용 하면 사용자가 입력 하 여 두 텍스트 필드에 또는 드롭 다운을 사용 하 여 날짜를 선택할 <xref:System.Windows.Controls.Calendar> 제어 합니다.  
@@ -25,5 +25,6 @@ DatePicker 컨트롤
  사용자가 날짜를 설정 하는 텍스트 필드에 직접 입력할 수는 <xref:System.Windows.Controls.DatePicker.Text%2A> 속성입니다. 경우는 <xref:System.Windows.Controls.DatePicker> 는 유효한 날짜 입력된 된 문자열을 변환할 수 없습니다는 <xref:System.Windows.Controls.DatePicker.DateValidationError> 이벤트가 발생 합니다. 기본적으로이 인해는 예외에 대 한 이벤트 처리기 <xref:System.Windows.Controls.DatePicker.DateValidationError> 설정할 수는 <xref:System.Windows.Controls.DatePickerDateValidationErrorEventArgs.ThrowException%2A> 속성을 `false` 및 예외가 발생 하지 않게 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [컨트롤](index.md)
 - [스타일 지정 및 템플릿](styling-and-templating.md)

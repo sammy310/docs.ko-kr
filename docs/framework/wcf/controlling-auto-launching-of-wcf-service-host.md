@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 f1_keywords:
 - WcfOptions
 ms.assetid: 6abe5d34-519b-4cef-8f02-3c0a7f125585
-ms.openlocfilehash: f7f58a684449819fe945ad1ba5bff12f425c8294
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fa060e567fba9bb5e6344b2c8fc67fb639ad0f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712394"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228499"
 ---
 # <a name="controlling-auto-launching-of-wcf-service-host"></a>WCF 서비스 호스트 자동 시작 제어
 여러 프로젝트가 포함 된 동일한 Visual Studio 솔루션의 다른 프로젝트를 디버깅할 때 WCF 서비스 라이브러리 프로젝트의 경우 Windows Communication Foundation (WCF) 서비스 호스트 (WcfSvcHost.exe)의 자동 시작 기능을 제어할 수 있습니다.  
@@ -29,4 +29,5 @@ ms.locfileid: "54712394"
 -   배포 서비스 라이브러리 프로젝트  
   
 ## <a name="see-also"></a>참고자료
+
 - [WCF 서비스 호스트(WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-ms.openlocfilehash: 17b6fd604b5eca54d6323701dafdd38f9f6e7328
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a5d7c06502b66298d530d0180ffaf63862b9fc28
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59131023"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298346"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>사용자 지정 가능한 모양이 있는 컨트롤 만들기
 <a name="introduction"></a>
@@ -94,15 +94,15 @@ ms.locfileid: "59131023"
   
  다음 사례 컨트롤 누락 올바르게 응답 하면 <xref:System.Windows.FrameworkElement> 개체:  
   
-1.  설정 된 `x:Name` 각각에 대 한 특성 <xref:System.Windows.FrameworkElement> 코드에서 참조 해야 하는 합니다.  
+1. 설정 된 `x:Name` 각각에 대 한 특성 <xref:System.Windows.FrameworkElement> 코드에서 참조 해야 하는 합니다.  
   
-2.  각각에 대 한 개인 속성 정의 <xref:System.Windows.FrameworkElement> 상호 작용 해야 하는 합니다.  
+2. 각각에 대 한 개인 속성 정의 <xref:System.Windows.FrameworkElement> 상호 작용 해야 하는 합니다.  
   
-3.  구독 하 고 컨트롤에서 처리 하는 모든 이벤트를 구독 취소를 <xref:System.Windows.FrameworkElement> 속성의 set 접근자입니다.  
+3. 구독 하 고 컨트롤에서 처리 하는 모든 이벤트를 구독 취소를 <xref:System.Windows.FrameworkElement> 속성의 set 접근자입니다.  
   
-4.  설정 된 <xref:System.Windows.FrameworkElement> 에 정의 된 속성 2 단계는 <xref:System.Windows.FrameworkElement.OnApplyTemplate%2A> 메서드. 이 가능한 한 빨리는 <xref:System.Windows.FrameworkElement> 에 <xref:System.Windows.Controls.ControlTemplate> 컨트롤에 사용할 수입니다. 사용 하 여는 `x:Name` 의 <xref:System.Windows.FrameworkElement> 에서 가져오려는 <xref:System.Windows.Controls.ControlTemplate>합니다.  
+4. 설정 된 <xref:System.Windows.FrameworkElement> 에 정의 된 속성 2 단계는 <xref:System.Windows.FrameworkElement.OnApplyTemplate%2A> 메서드. 이 가능한 한 빨리는 <xref:System.Windows.FrameworkElement> 에 <xref:System.Windows.Controls.ControlTemplate> 컨트롤에 사용할 수입니다. 사용 하 여는 `x:Name` 의 <xref:System.Windows.FrameworkElement> 에서 가져오려는 <xref:System.Windows.Controls.ControlTemplate>합니다.  
   
-5.  있는지 여부를 확인 합니다 <xref:System.Windows.FrameworkElement> 아닙니다 `null` 해당 멤버에 액세스 하기 전에 합니다.  있으면 `null`, 오류를 보고 하지 않습니다.  
+5. 있는지 여부를 확인 합니다 <xref:System.Windows.FrameworkElement> 아닙니다 `null` 해당 멤버에 액세스 하기 전에 합니다.  있으면 `null`, 오류를 보고 하지 않습니다.  
   
  다음 예제에 나온 방법을 `NumericUpDown` 컨트롤이와 상호 작용 <xref:System.Windows.FrameworkElement> 앞의 목록에서 권장 사항에 따라 개체입니다.  
   

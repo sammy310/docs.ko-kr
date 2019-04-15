@@ -2,19 +2,19 @@
 title: 라우팅 소개
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: 12eb58c53749fb76da9352947f07df32e09bf5a2
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: d0f07d0dd171de428f7d556d84dfda04e35880b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409850"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158680"
 ---
 # <a name="routing-introduction"></a>라우팅 소개
 라우팅 서비스는 메시지 내용에 따라 메시지를 라우트할 수 있는 제네릭 플러그형 SOAP 매개자를 제공합니다. 라우팅 서비스를 사용하면 서비스 집계, 서비스 버전 관리, 우선 순위 라우팅 및 멀티캐스트 라우팅과 같은 시나리오를 구현할 수 있도록 하는 복합적인 라우팅 논리를 만들 수 있습니다. 또한 라우팅 서비스는 오류 처리 기능을 제공하므로 기본 대상 엔드포인트로 메시지를 보내는 중 오류가 발생할 경우 이 기능을 통해 메시지를 보낼 백업 엔드포인트 목록을 설정할 수 있습니다.  
   
  이 항목은 라우팅 서비스를 새로 접하는 사용자를 대상으로 하며 기본적인 구성과 라우팅 서비스의 호스팅에 대해 설명합니다.  
   
-## <a name="configuration"></a>구성하기  
+## <a name="configuration"></a>구성  
  라우팅 서비스는 클라이언트 응용 프로그램으로부터 메시지를 수신하여 이 메시지를 하나 이상의 대상 엔드포인트로 라우트하는 하나 이상의 서비스 엔드포인트를 노출하는 WCF 서비스로 구현됩니다. 이 서비스는 서비스에 의해 노출되는 서비스 엔드포인트에 적용되는 <xref:System.ServiceModel.Routing.RoutingBehavior>를 제공합니다. 이 동작은 서비스 작동 방식의 다양한 측면을 구성하는 데 사용됩니다. 에 지정 된 매개 변수를 구성 파일을 사용 하는 경우 구성 편의성을 위해 합니다 **RoutingBehavior**합니다. 코드 기반 시나리오에서 이러한 매개 변수는 수의 일부로 지정는 <xref:System.ServiceModel.Routing.RoutingConfiguration> 에 전달 될 수 있는 개체를 **RoutingBehavior**합니다.  
   
  이러한 동작은 시작 시 SOAP 메시지 처리를 수행하는 데 사용되는 <xref:System.ServiceModel.Routing.SoapProcessingBehavior>를 클라이언트 엔드포인트에 추가합니다. 그러면 라우팅 서비스가 필요한 다른 끝점에 메시지를 전송할 **MessageVersion** 를 통해 메시지를 수신한 끝점 보다 합니다. 합니다 **RoutingBehavior** 서비스 확장을 등록 합니다 <xref:System.ServiceModel.Routing.RoutingExtension>, 런타임에 라우팅 서비스 구성을 수정 하기 위한 액세스 지점을 제공 하는 합니다.  
@@ -152,7 +152,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
 > [!NOTE]
 >  기본적으로 라우팅 서비스는 메시지의 헤더만 평가합니다. 필터에서 메시지 본문에 액세스하도록 허용하려면 <xref:System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly%2A>를 `false`로 설정해야 합니다.  
   
- **멀티 캐스트**  
+ **멀티캐스트**  
   
  많은 라우팅 서비스 구성에서 하나의 특정 엔드포인트로만 메시지를 라우트하는 단독 필터 논리를 사용하지만 주어진 메시지를 여러 대상 엔드포인트로 라우트해야 하는 경우도 있습니다. 메시지를 여러 대상으로 멀티캐스트하려면 다음 조건이 충족되어야 합니다.  
   
@@ -402,6 +402,7 @@ using (ServiceHost serviceHost =
  라우팅 서비스에서 Windows 자격 증명 가장을 사용하려면 자격 증명과 서비스 둘 다를 구성해야 합니다. 클라이언트 자격 증명 개체(<xref:System.ServiceModel.Security.WindowsClientCredential>, <xref:System.ServiceModel.ChannelFactory>에서 액세스)는 가장을 허용하기 위해 반드시 설정해야 하는 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 속성을 정의합니다. 마지막으로, 서비스에서 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 동작을 구성해서 `ImpersonateCallerForAllOperations`를 `true`로 설정해야 합니다. 라우팅 서비스는 이 플래그를 사용하여 가장을 사용하는 메시지를 전달하기 위한 클라이언트를 만들지 여부를 결정합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [메시지 필터](message-filters.md)
 - [라우팅 계약](routing-contracts.md)
 - [필터 선택](choosing-a-filter.md)

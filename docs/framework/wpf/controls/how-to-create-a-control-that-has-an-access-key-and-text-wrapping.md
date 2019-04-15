@@ -1,5 +1,5 @@
 ---
-title: '방법: 선택키가 있고 텍스트 줄 바꿈을 사용하는 컨트롤 만들기'
+title: '방법: 선택키와 자동 줄 바꿈을 사용하는 컨트롤 만들기'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - access keys [WPF], control for
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - controls [WPF], access keys
 - text wrapping [WPF]
 ms.assetid: 205099d9-2551-4302-a25e-a15af9f67e04
-ms.openlocfilehash: e410b92f90f775471ef5d89365549ccd5bb7f085
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 48e439719afa2426b5d8f822c621080cdc32514e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361904"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174046"
 ---
-# <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>방법: 선택키가 있고 텍스트 줄 바꿈을 사용하는 컨트롤 만들기
+# <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>방법: 선택키와 자동 줄 바꿈을 사용하는 컨트롤 만들기
 이 예제에서는 선택키가 있고 텍스트 배치를 지원하는 컨트롤을 만드는 방법을 보여 줍니다. 이 예제에서는 사용을 <xref:System.Windows.Controls.Label> 컨트롤을 이러한 개념을 설명 합니다.  
   
 ## <a name="example"></a>예제  
@@ -26,7 +26,7 @@ ms.locfileid: "57361904"
   
  [!code-xaml[LabelSnippet#5](~/samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#5)]  
   
- **레이블에 선택키 및 텍스트 배치 추가**  
+ **레이블에 선택키가 있고 텍스트 배치 추가**  
   
  필요한 경우는 <xref:System.Windows.Controls.Label> 키 (니모닉)을 사용 하 여는 <xref:System.Windows.Controls.AccessText> 내에 있는 요소는 <xref:System.Windows.Controls.Label>합니다.  
   
@@ -37,4 +37,5 @@ ms.locfileid: "57361904"
  [!code-xaml[LabelSnippet#4](~/samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#4)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [방법: 레이블의 대상 속성 설정](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90))

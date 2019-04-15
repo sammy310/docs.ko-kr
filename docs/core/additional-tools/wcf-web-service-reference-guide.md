@@ -4,12 +4,12 @@ description: .NET Framework 프로젝트용 서비스 참조 추가와 유사하
 author: mlacouture
 ms.date: 04/19/2018
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 3566a92e05c03cc77e59a14e3b2521a1d6d0758a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3452a6a598e255dd9a32629d8ef0589b88f9c00f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245576"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197076"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>WCF Web Service Reference Provider 도구 사용
 
@@ -54,7 +54,6 @@ ms.locfileid: "53245576"
     
     3c. **다음** 단추를 클릭하면 **데이터 형식 옵션** 및 **클라이언트 옵션** 페이지가 열립니다. 또는 **마침** 단추를 클릭하고 기본 옵션을 사용합니다.
 
-
 4. **데이터 형식 옵션** 양식을 사용하여 생성된 서비스 참조 구성 설정을 구체화할 수 있습니다.
 
 ![.NET Core용 Visual Studio 데이터 형식 옵션 탭](./media/wcf-web-service-reference-guide/wcfcs-DataTypesPage.png)
@@ -65,7 +64,6 @@ ms.locfileid: "53245576"
 프로젝트 종속성 및 기타 시스템 성능 요소의 수에 따라 형식 정보가 로드되는 동안 지연이 있을 수 있습니다. **참조된 어셈블리의 형식 재사용** 확인란을 선택 하면 로드 중에 **마침** 단추가 비활성화됩니다.
 
 5. 완료했으면 **마침**을 클릭합니다.
-
 
 진행률을 표시하면서 도구가 다음을 수행합니다.
 

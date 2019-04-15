@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 295b150f6881a47b3816a93ac7a20382bc5c20c0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a4c77ade46d2401e2499a94504808efd94f79f93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500579"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152154"
 ---
 # <a name="getwin32resblob-method"></a>GetWin32ResBlob 메서드
 Win32 리소스 blob를 검색합니다. 어셈블리 옵션을 설정한 후이 메서드를 호출 합니다.  
@@ -65,6 +65,7 @@ HRESULT GetWin32ResBlob(
  Alink.h 필요  
   
 ## <a name="see-also"></a>참고자료
+
 - [IALink 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

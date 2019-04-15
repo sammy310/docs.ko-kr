@@ -15,12 +15,12 @@ helpviewer_keywords:
 - snaplines
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
-ms.openlocfilehash: 22225c97ec082022cb609e47d3cafcdcc052143d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a0b97073b2f9363a64bfc4a4ede7ffa69e2bce42
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132797"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334005"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>방법: Windows Forms에서 컨트롤 배치
 컨트롤의 위치, Windows Forms 디자이너를 사용 하거나 지정 된 <xref:System.Windows.Forms.Control.Location%2A> 속성입니다.  
@@ -37,9 +37,9 @@ ms.locfileid: "59132797"
   
 ### <a name="to-position-a-control-using-the-properties-window"></a>속성 창을 사용 하 여 컨트롤 위치  
   
-1.  배치 하려는 컨트롤을 클릭 합니다.  
+1. 배치 하려는 컨트롤을 클릭 합니다.  
   
-2.  에 **속성** 창에 대 한 형식 값을 <xref:System.Windows.Forms.Control.Location%2A> 속성을 해당 컨테이너 내의 컨트롤을 배치 하는 쉼표로 구분 된 합니다.  
+2. 에 **속성** 창에 대 한 형식 값을 <xref:System.Windows.Forms.Control.Location%2A> 속성을 해당 컨테이너 내의 컨트롤을 배치 하는 쉼표로 구분 된 합니다.  
   
      첫 번째 숫자 (X)가; 컨테이너의 왼쪽된 테두리의 거리 두 번째 숫자 (Y)는 픽셀 컨테이너 영역의 위쪽 테두리의 거리입니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "59132797"
   
 ### <a name="to-position-a-control-programmatically"></a>컨트롤을 프로그래밍 방식으로 배치 하려면  
   
-1.  설정 된 <xref:System.Windows.Forms.Control.Location%2A> 컨트롤의 속성을 <xref:System.Drawing.Point>입니다.  
+1. 설정 된 <xref:System.Windows.Forms.Control.Location%2A> 컨트롤의 속성을 <xref:System.Drawing.Point>입니다.  
   
     ```vb  
     Button1.Location = New Point(100, 100)  
@@ -62,7 +62,7 @@ ms.locfileid: "59132797"
     button1->Location = Point(100, 100);  
     ```  
   
-2.  컨트롤 위치의 X 좌표를 변경를 사용 하는 <xref:System.Windows.Forms.Control.Left%2A> 하위 속성입니다.  
+2. 컨트롤 위치의 X 좌표를 변경를 사용 하는 <xref:System.Windows.Forms.Control.Left%2A> 하위 속성입니다.  
   
     ```vb  
     Button1.Left = 300  
@@ -78,7 +78,7 @@ ms.locfileid: "59132797"
   
 ### <a name="to-increment-a-controls-location-programmatically"></a>컨트롤의 위치를 프로그래밍 방식으로 증가  
   
-1.  설정 된 <xref:System.Windows.Forms.Control.Left%2A> 하위 컨트롤의 X 좌표를 늘립니다.  
+1. 설정 된 <xref:System.Windows.Forms.Control.Left%2A> 하위 컨트롤의 X 좌표를 늘립니다.  
   
     ```vb  
     Button1.Left += 200  

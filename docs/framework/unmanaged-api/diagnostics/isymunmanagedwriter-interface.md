@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ff86e06194943a7b6a55087c5be60598ffe15cb4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4ac95cd5b79a2e1762fa9adf29d4d7926ab4ab7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661115"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150583"
 ---
 # <a name="isymunmanagedwriter-interface"></a>ISymUnmanagedWriter 인터페이스
 기호 작성기를 나타내며 문서 "," 시퀀스 위치 "," 어휘 범위 "및" 변수를 정의 하는 메서드를 제공 합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "54661115"
 |[OpenNamespace 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-opennamespace-method.md)|새 네임스페이스를 엽니다.|  
 |[OpenScope 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md)|현재 메서드에서 새 어휘 범위를 엽니다.|  
 |[RemapToken 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-remaptoken-method.md)|메타 데이터를 내보낼 때 메타 데이터 토큰을 다시 매핑할 된 기호 작성기를에 알립니다.|  
-|[SetMethodSourceRange 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setmethodsourcerange-method.md)|소스 파일 내에서 메서드의 실제 시작과 끝을 지정합니다.|  
+|[SetMethodSourceRange 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setmethodsourcerange-method.md)|True 이면 시작 및 끝 소스 파일 내의 메서드를 지정합니다.|  
 |[SetScopeRange 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setscoperange-method.md)|지정된 어휘 범위에 대한 오프셋 범위를 정의합니다.|  
 |[SetSymAttribute 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setsymattribute-method.md)|해당 이름을 기준으로 사용자 지정 특성을 정의 합니다.|  
 |[SetUserEntryPoint 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setuserentrypoint-method.md)|이 모듈에 대 한 진입점을 되는 사용자 정의 메서드를 지정 합니다.|  
@@ -59,6 +59,7 @@ ms.locfileid: "54661115"
  **헤더:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>참고자료
+
 - [진단 기호 저장소 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
 - [ISymUnmanagedWriter2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
 - [ISymUnmanagedWriter3 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)

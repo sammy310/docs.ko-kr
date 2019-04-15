@@ -10,12 +10,12 @@ helpviewer_keywords:
 - x:Code XAML directive element [XAML Services]
 - XAML [XAML Services], x:Code directive element
 ms.assetid: 87986b13-1a2e-4830-ae36-15f9dc5629e8
-ms.openlocfilehash: 8d0dbc03bb5eaedd89d5a6ce97d625a51507e820
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 7bb78b05be7b3edc4471bc276010eabd92a07a14
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58050604"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145238"
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>x:Code 내장 XAML 형식
 XAML 프로덕션 내에서 코드를 배치할 수 있습니다. 이러한 코드 XAML, 또는 런타임에 의해 해석 등 사용에 대 한 XAML 프로덕션의 왼쪽을 컴파일되지 않는 XAML 프로세서 구현 하 여 컴파일될 수 있습니다.  
@@ -49,6 +49,7 @@ XAML 프로덕션 내에서 코드를 배치할 수 있습니다. 이러한 코�
 -   Partial 클래스 CLR 네임 스페이스 외부 코드 엔터티에 대 한 참조는 모두 정규화 해야 합니다. 멤버 선언 되는 부분 클래스 재정의 가능한 멤버에 대 한 재정의 경우이 언어별 override 키워드를 사용 하 여 지정 해야 합니다. 멤버에 선언 된 경우 `x:Code` 범위는 XAML에서 생성 된 partial 클래스의 멤버와 충돌, 이러한 방식으로 컴파일러에서 충돌을 보고 하는 XAML 파일 컴파일 없거나 로드 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [x:Class 지시문](x-class-directive.md)
 - [WPF의 코드 숨김 및 XAML](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
 - [XAML 개요(WPF)](../wpf/advanced/xaml-overview-wpf.md)

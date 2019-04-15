@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - generics [XAML Services]
 ms.assetid: 835bfed7-585c-4216-ae67-b674edab8b92
-ms.openlocfilehash: 219c710e8552ae3291c2b144c6048f4ff6710540
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 9263edf18872f510f5f2f4e3e9cb793e45c5d0b8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58048910"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221602"
 ---
 # <a name="generics-in-xaml"></a>XAML의 제네릭
 System.Xaml에서 구현 될 때.NET Framework XAML 서비스 일반 CLR 형식을 사용 하 여에 대 한 지원을 제공 합니다. 이 지원은 포함 형식 인수로 제네릭의 제약 조건을 지정 하 고 적절 한 호출 하 여 제약 조건을 적용 `Add` 제네릭 컬렉션의 경우에 대 한 메서드. 이 항목에서는 사용 하 고 XAML의 제네릭 형식 참조의 측면을 설명 합니다.  
@@ -43,6 +43,7 @@ System.Xaml에서 구현 될 때.NET Framework XAML 서비스 일반 CLR 형식�
  Windows Workflow foundation에 대 한 사용자 지정 워크플로 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 일반 XAML 사용을 지원 하지 않습니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [x:TypeArguments 지시문](x-typearguments-directive.md)
 - [x:Class 지시문](x-class-directive.md)
 - [공용 XAML 언어 기본 형식에 대한 기본 제공 형식](built-in-types-for-common-xaml-language-primitives.md)

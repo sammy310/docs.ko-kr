@@ -9,28 +9,28 @@ helpviewer_keywords:
 - size [Windows Forms], controls
 - Windows Forms controls, size
 ms.assetid: d2dba441-a8c0-4705-b8e8-2e5d86d6e7ec
-ms.openlocfilehash: 598d3a6ea7f7cf6dc19cae5f55f49243d5d3ba31
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 17ce930a91d2eb3626e92898e00e67be4741cf56
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091748"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321603"
 ---
 # <a name="how-to-resize-controls-on-windows-forms"></a>방법: Windows Forms에서 컨트롤 크기 조정
 개별 컨트롤의 크기를 조정할 수 있고 같은 동일 하거나 다른 종류의 여러 컨트롤을 크기 조정할 수 <xref:System.Windows.Forms.Button> 고 <xref:System.Windows.Forms.GroupBox> 컨트롤입니다.  
   
 ### <a name="to-resize-a-control"></a>컨트롤의 크기를 조정 하려면  
   
-1.  크기를 조정할 수 및 8 개의 크기 조정 핸들 중 하나를 끌어 컨트롤을 클릭 합니다.  
+1. 크기를 조정할 수 및 8 개의 크기 조정 핸들 중 하나를 끌어 컨트롤을 클릭 합니다.  
   
     > [!NOTE]
     >  컨트롤을 선택 하 고 한 번에 제어 1 픽셀 크기를 조정 하려면 SHIFT 키를 누른 채 화살표 키를 누릅니다. 큰 증가 컨트롤의 크기를 조정 하려면 SHIFT 키를 누른 CTRL 키를 누른 채 아래쪽 또는 오른쪽 화살표 키를 누릅니다.  
   
 ### <a name="to-resize-multiple-controls-on-a-form"></a>양식의 여러 컨트롤의 크기를 조정 하려면  
   
-1.  CTRL 또는 SHIFT 키를 누른 채 크기를 조정 하려면 컨트롤을 선택 합니다. 선택한 첫 번째 컨트롤의 크기는 다른 컨트롤에 대해 사용 됩니다.  
+1. CTRL 또는 SHIFT 키를 누른 채 크기를 조정 하려면 컨트롤을 선택 합니다. 선택한 첫 번째 컨트롤의 크기는 다른 컨트롤에 대해 사용 됩니다.  
   
-2.  에 **형식** 메뉴 선택 **같은 크기로**, 네 가지 옵션 중 하나를 선택 합니다. 처음 세 명령은 선택한 첫 번째 컨트롤에 맞게 컨트롤의 크기를 변경 합니다.  
+2. 에 **형식** 메뉴 선택 **같은 크기로**, 네 가지 옵션 중 하나를 선택 합니다. 처음 세 명령은 선택한 첫 번째 컨트롤에 맞게 컨트롤의 크기를 변경 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

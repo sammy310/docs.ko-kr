@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c0a281b05f453b68495e6fa6fca45f3f36a204a3
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 5844dbc2c3c89baeb39b69f16846f92ac10e97f1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "50746606"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234468"
 ---
 ### <a name="xsd-schema-validation-now-correctly-detects-violations-of-unique-constraints-if-compound-keys-are-used-and-one-key-is-empty"></a>복합 키를 사용하고 하나의 키가 비어 있는 경우 XSD 스키마 유효성 검사는 이제 올바르게 UNIQUE 제약 조건 위반을 감지함
 
@@ -15,4 +15,3 @@ ms.locfileid: "50746606"
 |범위|Microsoft Edge|
 |버전|4.6|
 |형식|대상 변경|
-

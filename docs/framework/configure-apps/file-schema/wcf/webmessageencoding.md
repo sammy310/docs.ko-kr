@@ -2,12 +2,12 @@
 title: <webMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: e13f23d6894083c8b507bdb73bea897c4845300f
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 7221f19dd131dbd60ef1a61625633d54dfdbe85a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759647"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191746"
 ---
 # <a name="webmessageencoding"></a>\<webMessageEncoding>
 WCF(Windows Communication Foundation) 바인딩에 사용될 경우 일반 텍스트 XML, JSON(JavaScript Object Notation) 메시지 인코딩 및 "원시" 이진 콘텐츠를 읽고 쓸 수 있게 합니다.  
@@ -58,7 +58,7 @@ WCF(Windows Communication Foundation) 바인딩에 사용될 경우 일반 텍�
   
  바인딩 요소는 `writeEncoding` 특성을 사용하여 쓰기 문자 인코딩으로 구성할 수 있습니다. 제공된 <xref:System.Text.Encoding> 값은 JSON 및 텍스트 XML에 대한 쓰기 동작을 지정합니다. 읽기의 경우 유효한 모든 메시지 인코딩 및 텍스트 인코딩이 인식됩니다.  
   
- `maxReadPoolSize` 및 `maxWritePoolSize`를 사용하여 할당할 판독기 및 작성기의 최대 수를 각각 설정할 수도 있습니다. 기본적으로 64개의 판독기와 16개의 작성기가 할당됩니다.  
+ `maxReadPoolSize` 및 `maxWritePoolSize` 에 각각 할당할 판독기 및 작성기의 최대 수를 설정 하려면 사용할 수도 있습니다. 기본적으로 64개의 판독기와 16개의 작성기가 할당됩니다.  
   
  기본 복잡성 제약 조건을 사용 하 여 설정 됩니다는 [ \<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100)) 서비스 거부 (dos) 으로부터 보호 하기 위해 요소를 하려는 메시지 복잡성을 사용 하 여 끝점 처리 두려고 공격 리소스입니다.  
   
@@ -72,6 +72,7 @@ WCF(Windows Communication Foundation) 바인딩에 사용될 경우 일반 텍�
 ```  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.ServiceModel.Configuration.WebMessageEncodingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
@@ -79,6 +80,6 @@ WCF(Windows Communication Foundation) 바인딩에 사용될 경우 일반 텍�
 - [메시지 인코딩](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
 - [메시지 인코더 선택](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
 - [바인딩](../../../../../docs/framework/wcf/bindings.md)
-- [바인딩 확장](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [바인딩 확장명](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

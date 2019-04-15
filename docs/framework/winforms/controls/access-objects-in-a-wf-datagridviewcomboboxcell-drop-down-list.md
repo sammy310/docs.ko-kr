@@ -9,12 +9,12 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], in DataGridView control
 - combo boxes [Windows Forms], accessing objects in DataGridViewComboBoxCell drop-down lists
 ms.assetid: bcbe794a-d1fa-47f8-b5a3-5f085b32097d
-ms.openlocfilehash: 221774895fa5867ad6ec870f7e293c9366e442f3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 17b7c93effe9338a9e2d6cb207a948a956d9b666
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59080789"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334278"
 ---
 # <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>방법: Windows Forms DataGridViewComboBoxCell 드롭다운 목록에서 개체 액세스
 같은 합니다 <xref:System.Windows.Forms.ComboBox> 컨트롤을 <xref:System.Windows.Forms.DataGridViewComboBoxColumn> 및 <xref:System.Windows.Forms.DataGridViewComboBoxCell> 형식을 사용 하면 임의의 개체 드롭다운 목록에 추가할 수입니다. 이 기능을 사용 하 여 별도 컬렉션에서 해당 개체를 저장 하지 않고 드롭다운 목록에서 복잡 한 상태를 나타낼 수 있습니다.  
@@ -27,17 +27,17 @@ ms.locfileid: "59080789"
   
 ### <a name="to-add-business-objects-to-the-drop-down-list"></a>드롭다운 목록에 비즈니스 개체를 추가 하려면  
   
-1.  새 <xref:System.Windows.Forms.DataGridViewComboBoxColumn> 우 해당 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> 컬렉션입니다. 열을 설정할 수 또는 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A> 비즈니스 개체의 컬렉션에는 속성입니다. 그러나이 경우 추가할 수 없습니다 "할당 되지 않은" 드롭 다운 목록 컬렉션에서 해당 비즈니스 개체를 만들지 않고 합니다.  
+1. 새 <xref:System.Windows.Forms.DataGridViewComboBoxColumn> 우 해당 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> 컬렉션입니다. 열을 설정할 수 또는 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A> 비즈니스 개체의 컬렉션에는 속성입니다. 그러나이 경우 추가할 수 없습니다 "할당 되지 않은" 드롭 다운 목록 컬렉션에서 해당 비즈니스 개체를 만들지 않고 합니다.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#110](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#110)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#110](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#110)]  
   
-2.  <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> 및 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> 속성을 설정합니다. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> 드롭다운 목록에서 표시할 비즈니스 개체의 속성을 나타냅니다. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> 비즈니스 개체에 대 한 참조를 반환 하는 속성을 나타냅니다.  
+2. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> 및 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> 속성을 설정합니다. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> 드롭다운 목록에서 표시할 비즈니스 개체의 속성을 나타냅니다. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> 비즈니스 개체에 대 한 참조를 반환 하는 속성을 나타냅니다.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#115](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#115)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#115](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#115)]  
   
-3.  비즈니스 개체 형식 현재 인스턴스에 대 한 참조를 반환 하는 속성이 포함 되어 있는지 확인 합니다. 이 속성에 할당 된 값을 사용 하 여 이름은 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> 이전 단계에서 합니다.  
+3. 비즈니스 개체 형식 현재 인스턴스에 대 한 참조를 반환 하는 속성이 포함 되어 있는지 확인 합니다. 이 속성에 할당 된 값을 사용 하 여 이름은 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> 이전 단계에서 합니다.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#310](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#310)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#310](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#310)]  
@@ -54,11 +54,11 @@ ms.locfileid: "59080789"
   
  이 예제에서는의 동작을 보려면 다음 단계를 수행 합니다.  
   
-1.  할당을 변경 합니다 `Assigned To` 드롭 다운 목록에서 다른 값을 선택 하거나 CTRL + 0 콤보 상자 셀의 열입니다.  
+1. 할당을 변경 합니다 `Assigned To` 드롭 다운 목록에서 다른 값을 선택 하거나 CTRL + 0 콤보 상자 셀의 열입니다.  
   
-2.  클릭 `Generate Report` 에 현재 할당을 표시 합니다. 함을이 변경 된 `Assigned To` 열을 자동으로 업데이트는 `tasks` 컬렉션입니다.  
+2. 클릭 `Generate Report` 에 현재 할당을 표시 합니다. 함을이 변경 된 `Assigned To` 열을 자동으로 업데이트는 `tasks` 컬렉션입니다.  
   
-3.  클릭을 `Request Status` 를 호출 하려면 단추를 `RequestStatus` 현재 메서드의 `Employee` 해당 행에 대 한 개체입니다. 이 선택된 된 개체 성공적으로 검색 된 방법을 보여 줍니다.  
+3. 클릭을 `Request Status` 를 호출 하려면 단추를 `RequestStatus` 현재 메서드의 `Employee` 해당 행에 대 한 개체입니다. 이 선택된 된 개체 성공적으로 검색 된 방법을 보여 줍니다.  
   
  [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#000](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#000)]
  [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#000](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#000)]  

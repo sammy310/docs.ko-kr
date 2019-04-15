@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-ms.openlocfilehash: 9657d9ec23b0e67625521ee595bc693eb7b992a4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: db9b3d31ba9657d26c1fb76ce4002afad949a881
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843125"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301167"
 ---
 # <a name="-platform-visual-basic"></a>-플랫폼 (Visual Basic)
 출력 파일을 실행할 수 있는 CLR(공용 언어 런타임) 플랫폼 버전을 지정합니다.  
@@ -68,9 +68,9 @@ ms.locfileid: "58843125"
   
 ### <a name="to-set--platform-in-the-visual-studio-ide"></a>설정-Visual Studio IDE에서 플랫폼  
   
-1.  **솔루션 탐색기**, 프로젝트를 선택 엽니다 합니다 **프로젝트** 메뉴를 클릭 한 다음 **속성**합니다.  
+1. **솔루션 탐색기**, 프로젝트를 선택 엽니다 합니다 **프로젝트** 메뉴를 클릭 한 다음 **속성**합니다.  
   
-2.  에 **컴파일** 탭을 선택 하거나 선택을 취소 합니다 **32 비트 선호** 확인란을 또는 **대상 CPU** 목록에서 값을 선택 합니다.  
+2. 에 **컴파일** 탭을 선택 하거나 선택을 취소 합니다 **32 비트 선호** 확인란을 또는 **대상 CPU** 목록에서 값을 선택 합니다.  
   
      자세한 내용은 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)합니다.  
   
@@ -83,6 +83,6 @@ vbc -platform:x86 myFile.vb
   
 ## <a name="see-also"></a>참고자료
 
-- [/target (Visual Basic)](target.md)
+- [/target(Visual Basic)](target.md)
 - [Visual Basic 명령줄 컴파일러](index.md)
 - [샘플 컴파일 명령줄](sample-compilation-command-lines.md)

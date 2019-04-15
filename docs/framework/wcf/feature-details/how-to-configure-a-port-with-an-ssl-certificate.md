@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 533c329bed7b1cb9b07805032c839d3f5ff10634
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d709123895f361c1d2268a218b4163c8d195e1b4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139817"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345588"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>방법: SSL 인증서를 사용하여 포트 구성
 사용 하 여 자체 호스팅된 Windows Communication Foundation (WCF) 서비스를 만들 때의 <xref:System.ServiceModel.WSHttpBinding> 클래스를 사용 하 여 전송 보안, X.509 인증서로 포트를 구성 해야 합니다. 자체 호스트된 서비스를 만들지 않는 경우에는 IIS(인터넷 정보 서비스)에서 서비스를 호스트할 수 있습니다. 자세한 내용은 [HTTP 전송 보안](../../../../docs/framework/wcf/feature-details/http-transport-security.md)합니다.  
@@ -41,13 +41,13 @@ ms.locfileid: "59139817"
   
 ### <a name="to-determine-how-ports-are-configured"></a>포트의 구성 방법을 확인하려면  
   
-1.  [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)], HttpCfg.exe 도구를 사용 하 여 현재 포트 구성을 보려면를 사용 하 여는 **쿼리** 및 **ssl** 다음 예와에서 같이 전환 합니다.  
+1. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)], HttpCfg.exe 도구를 사용 하 여 현재 포트 구성을 보려면를 사용 하 여는 **쿼리** 및 **ssl** 다음 예와에서 같이 전환 합니다.  
   
     ```  
     httpcfg query ssl  
     ```  
   
-2.  [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 다음 예제와 같이 Netsh.exe 도구를 사용하여 현재 포트 구성을 봅니다.  
+2. [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 다음 예제와 같이 Netsh.exe 도구를 사용하여 현재 포트 구성을 봅니다.  
   
     ```  
     netsh http show sslcert  
@@ -55,17 +55,17 @@ ms.locfileid: "59139817"
   
 ### <a name="to-get-a-certificates-thumbprint"></a>인증서의 지문을 가져오려면  
   
-1.  인증서 MMC 스냅인을 사용하여 클라이언트 인증 용도의 X.509 인증서를 찾습니다. 자세한 내용은 [방법: MMC 스냅인을 사용 하 여 인증서 보기](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)합니다.  
+1. 인증서 MMC 스냅인을 사용하여 클라이언트 인증 용도의 X.509 인증서를 찾습니다. 자세한 내용은 [방법: MMC 스냅인을 사용 하 여 인증서 보기](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)합니다.  
   
-2.  인증서의 지문에 액세스합니다. 자세한 내용은 [방법: 인증서의 지문 검색](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)합니다.  
+2. 인증서의 지문에 액세스합니다. 자세한 내용은 [방법: 인증서의 지문 검색](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)합니다.  
   
-3.  인증서의 지문을 메모장 등의 텍스트 편집기에 복사합니다.  
+3. 인증서의 지문을 메모장 등의 텍스트 편집기에 복사합니다.  
   
-4.  16진수 문자 사이의 모든 공간을 제거합니다. 여기에 사용되는 방법 중 하나는 텍스트 편집기의 찾기 및 바꾸기 기능을 사용하여 각 공간을 null 문자로 바꾸는 것입니다.  
+4. 16진수 문자 사이의 모든 공간을 제거합니다. 여기에 사용되는 방법 중 하나는 텍스트 편집기의 찾기 및 바꾸기 기능을 사용하여 각 공간을 null 문자로 바꾸는 것입니다.  
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number"></a>SSL 인증서를 포트 번호에 바인딩하려면  
   
-1.  [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 SSL(Secure Sockets Layer) 저장소에 "set" 모드의 HttpCfg.exe 도구를 사용하여 인증서를 포트 번호에 바인딩합니다. 도구에서는 다음 예제처럼 지문을 사용하여 인증서를 식별합니다.  
+1. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 SSL(Secure Sockets Layer) 저장소에 "set" 모드의 HttpCfg.exe 도구를 사용하여 인증서를 포트 번호에 바인딩합니다. 도구에서는 다음 예제처럼 지문을 사용하여 인증서를 식별합니다.  
   
     ```  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
@@ -75,7 +75,7 @@ ms.locfileid: "59139817"
   
     -   합니다 **-h** 스위치는 인증서의 지문을 지정 합니다.  
   
-2.  [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 다음 예제와 같이 Netsh.exe 도구를 사용합니다.  
+2. [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 다음 예제와 같이 Netsh.exe 도구를 사용합니다.  
   
     ```  
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF}   
@@ -89,7 +89,7 @@ ms.locfileid: "59139817"
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>SSL 인증서를 포트 번호에 바인딩하고 클라이언트 인증서를 지원하려면  
   
-1.  [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 전송 계층에 X.509 인증서를 사용하여 인증하는 클라이언트를 지원하려면 위의 절차를 수행하되 다음 예제처럼 추가 명령줄 매개 변수를 HttpCfg.exe에 전달합니다.  
+1. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 전송 계층에 X.509 인증서를 사용하여 인증하는 클라이언트를 지원하려면 위의 절차를 수행하되 다음 예제처럼 추가 명령줄 매개 변수를 HttpCfg.exe에 전달합니다.  
   
     ```  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6 -f 2  
@@ -97,7 +97,7 @@ ms.locfileid: "59139817"
   
      합니다 **-f** 스위치는 구문이 `n` 여기서 n은 1에서 7 사이의 숫자입니다. 위의 예제와 같이 값 2를 사용하면 전송 계층에서 클라이언트 인증서가 활성화됩니다. 값 3을 사용하면 클라이언트 인증서가 활성화되고 해당 인증서가 Windows 계정에 매핑됩니다. 다른 값의 동작에 대한 자세한 내용은 HttpCfg.exe 도움말을 참조하세요.  
   
-2.  [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 전송 계층에서 X.509 인증서를 사용하여 인증하는 클라이언트를 지원하려면 위의 절차를 수행하되 다음 예제처럼 추가 매개 변수를 사용합니다.  
+2. [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 전송 계층에서 X.509 인증서를 사용하여 인증하는 클라이언트를 지원하려면 위의 절차를 수행하되 다음 예제처럼 추가 매개 변수를 사용합니다.  
   
     ```  
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF} clientcertnegotiation=enable  
@@ -105,19 +105,19 @@ ms.locfileid: "59139817"
   
 ### <a name="to-delete-an-ssl-certificate-from-a-port-number"></a>포트 번호에서 SSL 인증서를 삭제하려면  
   
-1.  HttpCfg.exe 또는 Netsh.exe 도구를 사용하여 컴퓨터에 있는 모든 바인딩의 포트와 지문을 표시합니다. 디스크에 대 한 정보를 인쇄 하려면 리디렉션 문자를 사용 하 여 ">" 다음 예제에서와 같이 합니다.  
+1. HttpCfg.exe 또는 Netsh.exe 도구를 사용하여 컴퓨터에 있는 모든 바인딩의 포트와 지문을 표시합니다. 디스크에 대 한 정보를 인쇄 하려면 리디렉션 문자를 사용 하 여 ">" 다음 예제에서와 같이 합니다.  
   
     ```  
     httpcfg query ssl>myMachinePorts.txt  
     ```  
   
-2.  [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 HttpCfg.exe 도구를 사용 하 여 합니다 **삭제** 및 **ssl** 키워드. 사용 하 여를 **-i** 스위치를 지정 합니다 `IP`:`port` 번호 및 **-h** 지문을 지정 하는 스위치.  
+2. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 HttpCfg.exe 도구를 사용 하 여 합니다 **삭제** 및 **ssl** 키워드. 사용 하 여를 **-i** 스위치를 지정 합니다 `IP`:`port` 번호 및 **-h** 지문을 지정 하는 스위치.  
   
     ```  
     httpcfg delete ssl -i 0.0.0.0:8005 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
     ```  
   
-3.  [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 다음 예제와 같이 Netsh.exe 도구를 사용합니다.  
+3. [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 다음 예제와 같이 Netsh.exe 도구를 사용합니다.  
   
     ```  
     Netsh http delete sslcert ipport=0.0.0.0:8005  

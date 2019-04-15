@@ -2,27 +2,27 @@
 title: 쿼리 지원
 ms.date: 03/30/2017
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
-ms.openlocfilehash: 2314a111cb4c4b82cacd91b7638ef0c8eaba5c3c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 30695fcd791a0d69c31a897068d69838c80c3957
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712012"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307953"
 ---
 # <a name="support-for-queries"></a>쿼리 지원
 SQL 워크플로 인스턴스 저장소는 잘 알려진 속성 집합을 저장소에 기록합니다. 사용자는 이러한 속성을 기반으로 인스턴스를 쿼리할 수 있습니다. 다음은 잘 알려진 일부 속성 목록입니다.  
   
--   **사이트 이름입니다.** 서비스를 포함하는 웹 사이트의 이름입니다.  
+-   **Site Name.** 서비스를 포함하는 웹 사이트의 이름입니다.  
   
--   **상대 응용 프로그램 경로입니다.** 웹 사이트에 상대적인 응용 프로그램 경로입니다.  
+-   **Relative Application Path.** 웹 사이트에 상대적인 응용 프로그램 경로입니다.  
   
--   **상대적인 서비스 경로입니다.** 응용 프로그램에 상대적인 서비스 경로입니다.  
+-   **Relative Service Path.** 응용 프로그램에 상대적인 서비스 경로입니다.  
   
--   **서비스 이름입니다.** 서비스의 이름입니다.  
+-   **Service Name.** 서비스의 이름입니다.  
   
--   **서비스 Namespace입니다.** 서비스에 사용되는 네임스페이스의 이름입니다.  
+-   **Service Namespace.** 서비스에 사용되는 네임스페이스의 이름입니다.  
   
--   **현재 컴퓨터입니다.**  
+-   **Current Machine.**  
   
 -   **컴퓨터를 마지막**합니다. 워크플로 서비스 인스턴스가 마지막으로 실행된 컴퓨터입니다.  
   
@@ -39,21 +39,21 @@ SQL 워크플로 인스턴스 저장소는 잘 알려진 속성 집합을 저장
 ### <a name="the-instances-view"></a>Instances 뷰  
  인스턴스 뷰에는 다음 필드가 포함됩니다.  
   
-1.  **ID**  
+1. **ID**  
   
-2.  **PendingTimer**  
+2. **PendingTimer**  
   
-3.  **CreationTime**  
+3. **CreationTime**  
   
-4.  **LastUpdatedTime**  
+4. **LastUpdatedTime**  
   
-5.  **ServiceDeploymentId**  
+5. **ServiceDeploymentId**  
   
-6.  **SuspensionExceptionName**  
+6. **SuspensionExceptionName**  
   
-7.  **SuspensionReason**  
+7. **SuspensionReason**  
   
-8.  **ActiveBookmarks**  
+8. **ActiveBookmarks**  
   
 9. **CurrentMachine**  
   
@@ -80,23 +80,23 @@ SQL 워크플로 인스턴스 저장소는 잘 알려진 속성 집합을 저장
 ### <a name="the-servicedeployments-view"></a>ServiceDeployments 뷰  
  ServiceDeployments 뷰에는 다음 필드가 포함됩니다.  
   
-1.  **SiteName**  
+1. **SiteName**  
   
-2.  **RelativeServicePath**  
+2. **RelativeServicePath**  
   
-3.  **RelativeApplicationPath**  
+3. **RelativeApplicationPath**  
   
-4.  **ServiceName**  
+4. **ServiceName**  
   
-5.  **ServiceNamespace**  
+5. **ServiceNamespace**  
   
 ### <a name="the-instancepromotedproperties-view"></a>InstancePromotedProperties 뷰  
  InstancePromotedProperties 뷰에는 다음 필드가 포함됩니다. 승격 된 속성에 대 한 내용은 참조는 [저장소 확장성](store-extensibility.md) 항목입니다.  
   
-1.  **InstanceId**  
+1. **InstanceId**  
   
-2.  **EncodingOption**  
+2. **EncodingOption**  
   
-3.  **PromotionName**  
+3. **PromotionName**  
   
-4.  **Value #** (필드 범위 **Value1** 하 **Value64**).
+4. **Value #** (필드 범위 **Value1** 하 **Value64**).

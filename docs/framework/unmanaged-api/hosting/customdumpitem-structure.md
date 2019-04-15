@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 930d56fcfe7cf0d2a128c2068e724b85a224b3fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9000f35e9a8f7ecc6c40cf0ef9c220fc9f4f9c10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568922"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185928"
 ---
 # <a name="customdumpitem-structure"></a>CustomDumpItem 구조체
 오류 보고에 사용자 지정 덤프에 추가할 항목을 설명 합니다.  
@@ -42,7 +42,7 @@ struct {
 |멤버|설명|  
 |------------|-----------------|  
 |`itemKind`|[ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) 추가할 항목의 종류를 나타내는 값입니다.|  
-|`pReserved`|현재 사용되지 않습니다. 공용 구조체에 추가 된 모든 항목 포인터 크기 보다 더 커야 합니다. 경우는 `struct` 는 필요한 별도로 할당 하며 가리키도록 합니다.|  
+|`pReserved`|현재 사용 되지 않습니다. 공용 구조체에 추가 된 모든 항목 포인터 크기 보다 더 커야 합니다. 경우는 `struct` 는 필요한 별도로 할당 하며 가리키도록 합니다.|  
   
 ## <a name="remarks"></a>설명  
  [Iclrerrorreportingmanager:: Begincustomdump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) 형식의 매개 변수 `CustomDumpItem`합니다.  
@@ -57,4 +57,5 @@ struct {
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [호스팅 구조체](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

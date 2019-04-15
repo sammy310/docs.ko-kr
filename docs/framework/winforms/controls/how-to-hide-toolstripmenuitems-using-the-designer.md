@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], hiding menu items in designer
 - menu items [Windows Forms], hiding
 ms.assetid: 8f1b057e-3d8a-4f11-88df-935f7b29a836
-ms.openlocfilehash: ddfbcbe78cdf8e5b0d126e82189589edef2be58a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 31c597a0e2cbf41484f19c8d4179823e9fb929ba
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59085690"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317677"
 ---
 # <a name="how-to-hide-toolstripmenuitems-using-the-designer"></a>방법: 디자이너를 사용하여 ToolStripMenuItems 숨기기
 메뉴 항목 숨기기는 응용 프로그램의 사용자 인터페이스 (UI)를 제어 하 고 사용자 명령을 제한 하는 방법입니다. 종종 전체 메뉴에 메뉴 항목을 모두 사용할 수 없는 경우 숨기려면 해야 합니다. 이 사용자에 대해 더 적은 방해 요소를 표시합니다. 또한 하려는 숨기고 메뉴 또는 메뉴 항목을 사용 하지 않도록 설정으로 숨기는 것 만으로도 사용자 바로 가기 키를 사용 하 여 메뉴 명령에 액세스 하는 것을 금지 하지 않습니다. 메뉴 항목을 사용 하지 않도록 설정 하는 방법은 참조 하세요. [방법: 디자이너를 사용 하 여 ToolStripMenuItems를 사용 하지 않도록 설정](how-to-disable-toolstripmenuitems-using-the-designer.md)합니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "59085690"
   
 ### <a name="to-hide-a-top-level-menu-and-its-submenu-items"></a>최상위 메뉴와 해당 하위 메뉴 항목을 숨기려면  
   
-1.  최상위 메뉴 항목을 선택 하 고 설정 해당 <xref:System.Windows.Forms.ToolStripItem.Visible%2A> 나 <xref:System.Windows.Forms.ToolStripItem.Available%2A> 속성을 `false`입니다.  
+1. 최상위 메뉴 항목을 선택 하 고 설정 해당 <xref:System.Windows.Forms.ToolStripItem.Visible%2A> 나 <xref:System.Windows.Forms.ToolStripItem.Available%2A> 속성을 `false`입니다.  
   
      최상위 메뉴 항목을 숨기려면 해당 메뉴에서 모든 메뉴 항목 숨겨집니다. 아닌 다른 위치를 클릭 하면 합니다 <xref:System.Windows.Forms.MenuStrip> 설정한 후 <xref:System.Windows.Forms.ToolStripItem.Visible%2A> 에 `false`, 전체 최상위 메뉴 항목 및 해당 하위 메뉴 항목 폼에 따라서 작업의 런타임 효과 보여주는에서 사라집니다. 디자인 타임에 숨겨진된 최상위 메뉴 항목을 표시 하려면 클릭 합니다 <xref:System.Windows.Forms.MenuStrip> 에 **구성 요소 트레이에**의 **문서 개요**, 또는 속성 표의 맨 위에 있는.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "59085690"
   
 ### <a name="to-hide-a-submenu-item"></a>하위 메뉴 항목을 숨기려면  
   
-1.  하위 메뉴 항목을 선택 하 고 설정 해당 <xref:System.Windows.Forms.ToolStripItem.Visible%2A> 속성을 `false`입니다.  
+1. 하위 메뉴 항목을 선택 하 고 설정 해당 <xref:System.Windows.Forms.ToolStripItem.Visible%2A> 속성을 `false`입니다.  
   
      하위 메뉴 항목을 숨길 때 추가 작업을 위해 쉽게 선택할 수 있도록 디자인 타임에 폼에 표시 유지 합니다. 이 런타임 시 실제로 표시 되지 것입니다.  
   

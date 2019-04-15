@@ -2,12 +2,12 @@
 title: WCF 서비스 호스트(WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: 6a8ed677ceaf9b86b67ec2558eb4e31c23d4c57e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d9a086b3a6ae0ece3b1b45161402ce058e1fb447
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505642"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193020"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF 서비스 호스트(WcfSvcHost.exe)
 Windows Communication Foundation (WCF) 서비스 호스트 (WcfSvcHost.exe)를 사용 하면 Visual Studio 디버거 (F5) 자동으로 호스팅하고 테스트할 구현한 서비스를 시작할 수 있습니다. 다음 찾기 및 잠재적인 오류를 해결 하려면 WCF 테스트 클라이언트 (WcfTestClient.exe) 또는 사용자 고유의 클라이언트를 사용 하는 서비스를 테스트할 수 있습니다.  
@@ -111,4 +111,5 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
  Netsh.exe에 대 한 자세한 내용은 참조 하세요. "[Netsh.exe 도구 및 명령줄 스위치를 사용 하는 방법을](https://go.microsoft.com/fwlink/?LinkId=97877)"입니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [WCF 테스트 클라이언트(WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
-ms.openlocfilehash: 7bc5f3fc1c87b8acbbfeb0bad0c7766c0a2ef1dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5044d39d1dc5d2fa7d2ce691cdda7075fa0e32a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688300"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151205"
 ---
 # <a name="schema-restrictions"></a>스키마 제한
 두 번째 선택적 매개 변수를 **GetSchema** 메서드는 스키마 정보의 양을 제한 하는 데 사용 되는 제한을 반환 되 고 전달 되는 **GetSchema** 문자열의 배열로 메서드 . 배열의 위치는 전달할 수 있는 값을 결정하며 이 위치는 제한 번호와 동일합니다.  
@@ -161,7 +161,7 @@ class Program
 |Catalog|@Catalog|TABLE_CATALOG|1|  
 |Owner|@Owner|TABLE_SCHEMA|2|  
 |표|@Table|TABLE_NAME|3|  
-|열|@Column|COLUMN_NAME|4|  
+|Column|@Column|COLUMN_NAME|4|  
   
 ### <a name="structuredtypemembers"></a>StructuredTypeMembers  
   
@@ -170,9 +170,9 @@ class Program
 |Catalog|@Catalog|TABLE_CATALOG|1|  
 |Owner|@Owner|TABLE_SCHEMA|2|  
 |표|@Table|TABLE_NAME|3|  
-|열|@Column|COLUMN_NAME|4|  
+|Column|@Column|COLUMN_NAME|4|  
   
-### <a name="views"></a>뷰  
+### <a name="views"></a>보기  
   
 |제한 이름|매개 변수 이름|제한 기본값|제한 번호|  
 |----------------------|--------------------|-------------------------|------------------------|  
@@ -187,7 +187,7 @@ class Program
 |Catalog|@Catalog|VIEW_CATALOG|1|  
 |Owner|@Owner|VIEW_SCHEMA|2|  
 |표|@Table|VIEW_NAME|3|  
-|열|@Column|COLUMN_NAME|4|  
+|Column|@Column|COLUMN_NAME|4|  
   
 ### <a name="procedureparameters"></a>ProcedureParameters  
   
@@ -215,9 +215,9 @@ class Program
 |Owner|@Owner|user_name()|2|  
 |표|@Table|o.name|3|  
 |ConstraintName|@ConstraintName|x.name|4|  
-|열|@Column|c.name|5|  
+|Column|@Column|c.name|5|  
   
-### <a name="indexes"></a>Indexes  
+### <a name="indexes"></a>인덱스  
   
 |제한 이름|매개 변수 이름|제한 기본값|제한 번호|  
 |----------------------|--------------------|-------------------------|------------------------|  
@@ -259,7 +259,8 @@ class Program
 |Catalog|@Catalog|TABLE_CATALOG|1|  
 |Owner|@Owner|TABLE_SCHEMA|2|  
 |표|@Table|TABLE_NAME|3|  
-|열|@Column|COLUMN_NAME|4|  
+|Column|@Column|COLUMN_NAME|4|  
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

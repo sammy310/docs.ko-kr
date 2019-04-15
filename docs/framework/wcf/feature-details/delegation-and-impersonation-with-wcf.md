@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: ab3f1dd633193dcf88401d097d6835e6894aaa5a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ec34c19da9cd642f5de51166bef0264c2e75c58c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122241"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345523"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>WCF를 통한 위임 및 가장
 *가장* 은 서비스에서 서비스 도메인 리소스에 대한 클라이언트 액세스를 제한하는 데 사용하는 일반적인 기술 서비스입니다. 서비스 도메인 리소스는 로컬 파일(가장)과 같은 시스템 리소스이거나 파일 공유(위임)와 같은 다른 시스템의 리소스일 수 있습니다. 샘플 응용 프로그램을 보려면 [클라이언트 가장](../../../../docs/framework/wcf/samples/impersonating-the-client.md)을 참조하세요. 가장을 사용 하는 방법의 예제를 참조 하세요. [방법: 서비스에서 클라이언트 가장](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)합니다.  
@@ -191,13 +191,13 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 ### <a name="how-to-configure-an-application-to-use-constrained-delegation"></a>한정된 위임을 사용하도록 애플리케이션을 구성하는 방법  
  한정된 위임을 사용하기 전에 발신자, 수신자 및 도메인 컨트롤러는 한정된 위임을 사용하도록 구성되어야 합니다. 다음 절차에서는 한정된 위임을 사용하는 단계를 보여 줍니다. 위임과 한정된 위임의 차이에 대한 자세한 내용은 간략하게 설명된 [Windows Server 2003 Kerberos Extensions](https://go.microsoft.com/fwlink/?LinkId=100194) 부분을 참조하십시오.  
   
-1.  도메인 컨트롤러에서 클라이언트 애플리케이션이 실행 중인 계정에 대해 **계정이 민감하여 위임할 수 없음** 확인란의 선택을 취소합니다.  
+1. 도메인 컨트롤러에서 클라이언트 애플리케이션이 실행 중인 계정에 대해 **계정이 민감하여 위임할 수 없음** 확인란의 선택을 취소합니다.  
   
-2.  도메인 컨트롤러에서 클라이언트 애플리케이션이 실행 중인 계정에 대해 **위임에 대해 계정을 신뢰할 수 있음** 확인란을 선택합니다.  
+2. 도메인 컨트롤러에서 클라이언트 애플리케이션이 실행 중인 계정에 대해 **위임에 대해 계정을 신뢰할 수 있음** 확인란을 선택합니다.  
   
-3.  도메인 컨트롤러에서 **위임용으로 이 컴퓨터 트러스트** 옵션을 클릭하여 위임을 위해 신뢰할 수 있도록 중간 계층의 컴퓨터를 구성합니다.  
+3. 도메인 컨트롤러에서 **위임용으로 이 컴퓨터 트러스트** 옵션을 클릭하여 위임을 위해 신뢰할 수 있도록 중간 계층의 컴퓨터를 구성합니다.  
   
-4.  도메인 컨트롤러에서 **지정한 서비스에 대한 위임용으로만 이 컴퓨터 트러스트** 옵션을 클릭하여 한정된 위임을 사용하도록 중간 계층의 컴퓨터를 구성합니다.  
+4. 도메인 컨트롤러에서 **지정한 서비스에 대한 위임용으로만 이 컴퓨터 트러스트** 옵션을 클릭하여 한정된 위임을 사용하도록 중간 계층의 컴퓨터를 구성합니다.  
   
  한정된 위임 구성에 대한 자세한 내용은 MSDN의 다음 항목을 참조하십시오.  
   

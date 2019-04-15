@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c34f531d-4b9b-4071-b2d7-342c402aa586
-ms.openlocfilehash: 69bdf4d23463cc07259a2b1de6b9efaa78f0f0de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57f51ada00bf24617ca3e295a010aae64f0aa849
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593760"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196140"
 ---
 # <a name="datarow-deletion"></a>DataRow 삭제
 두 가지 방법을 삭제 하는 데 사용할 수는 <xref:System.Data.DataRow> 에서 개체를 <xref:System.Data.DataTable> 개체:는 **제거** 메서드를 <xref:System.Data.DataRowCollection> 개체 및 <xref:System.Data.DataRow.Delete%2A> 메서드의 **DataRow**개체입니다. 반면 합니다 <xref:System.Data.DataRowCollection.Remove%2A> 메서드를 **DataRow** 에서 **DataRowCollection**, <xref:System.Data.DataRow.Delete%2A> 메서드는 삭제할 행을 표시만 합니다. 응용 프로그램 호출 때 실제 제거 합니다 **AcceptChanges** 메서드. <xref:System.Data.DataRow.Delete%2A>를 사용하면 행을 실제로 삭제하기 전에 삭제 표시된 행을 프로그래밍 방식으로 확인할 수 있습니다. 삭제 표시된 행의 <xref:System.Data.DataRow.RowState%2A> 속성은 <xref:System.Data.DataRow.Delete%2A>로 설정됩니다.  
   
- <xref:System.Data.DataRow.Delete%2A> 개체를 반복하는 동안에는 foreach 루프에서 <xref:System.Data.DataRowCollection.Remove%2A> 또는 <xref:System.Data.DataRowCollection>가 호출되지 않아야 합니다. <xref:System.Data.DataRow.Delete%2A> 또는 <xref:System.Data.DataRowCollection.Remove%2A>는 컬렉션의 상태를 수정하지 않습니다.  
+ <xref:System.Data.DataRow.Delete%2A> 개체를 반복하는 동안에는 foreach 루프에서 <xref:System.Data.DataRowCollection.Remove%2A> 또는 <xref:System.Data.DataRowCollection>가 호출되지 않아야 합니다. <xref:System.Data.DataRow.Delete%2A> 또는 <xref:System.Data.DataRowCollection.Remove%2A> 컬렉션의 상태를 수정 합니다.  
   
  사용 하는 경우는 <xref:System.Data.DataSet> 또는 **DataTable** 와 함께에서 **DataAdapter** 및 관계형 데이터 원본을 사용 하 여를 **삭제** 메서드를  **DataRow** 행을 제거 합니다. **삭제** 메서드는 해당 행을 표시 **Deleted** 에 **데이터 집합** 또는 **DataTable** 되지만 제거 되지는 않습니다. 대신, 합니다 **DataAdapter** 로 표시 된 행을 발견 하면 **삭제 됨**, 실행 해당 **DeleteCommand** 데이터 원본에서 행을 삭제 하는 방법. 행 후 영구적으로 제거할 수를 사용 하 여 **AcceptChanges** 메서드. 사용 하는 경우 **제거할** 행을 삭제 하려면 해당 행이 테이블에서 완전히 제거 되지만 **DataAdapter** 데이터 소스에서 행을 삭제 하지 것입니다.  
   
@@ -45,6 +45,7 @@ workRow.Delete();
 >  경우는 **RowState** 의 **DataRow** 은 **Added**, 테이블에만 추가 되었습니다 의미 및 것으로 표시 됩니다 **Deleted**, 것 테이블에서 제거 합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataRowCollection>
 - <xref:System.Data.DataTable>

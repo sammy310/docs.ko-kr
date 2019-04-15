@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, batch requests
 ms.assetid: 3b4db7df-bd33-43a1-8ea4-63a18e131f97
-ms.openlocfilehash: a917659092890c95dfd65ede358d9c4b5a0e62cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e5cd44ee7c3b2c2744e87ebf66973b637961893c
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59117912"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517579"
 ---
 # <a name="how-to-execute-queries-in-a-batch-wcf-data-services"></a>방법: 일괄 처리 (WCF Data Services)에서 쿼리를 실행 합니다.
 사용 하 여는 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 라이브러리를 단일 일괄 처리에서 데이터 서비스에 대해 둘 이상의 쿼리를 실행할 수 있습니다. 자세한 내용은 [일괄 처리 작업](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)합니다.  
@@ -22,8 +22,8 @@ ms.locfileid: "59117912"
 ## <a name="example"></a>예제  
  다음 예제에서는 Northwind 데이터 서비스에서 <xref:System.Data.Services.Client.DataServiceContext.ExecuteBatch%2A> 개체와 <xref:System.Data.Services.Client.DataServiceRequest%601> 개체를 모두 반환하는 쿼리가 포함된 `Customers` 개체 배열을 실행하는 `Products` 메서드를 호출하는 방법을 보여 줍니다. 반환된 <xref:System.Data.Services.Client.QueryOperationResponse%601>의 <xref:System.Data.Services.Client.DataServiceResponse> 개체 컬렉션이 열거되고 각 <xref:System.Data.Services.Client.QueryOperationResponse%601>에 포함되어 있는 개체 컬렉션도 열거됩니다.  
   
- [!code-csharp[Astoria Northwind Client#BatchQuery](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#batchquery)]
- [!code-vb[Astoria Northwind Client#BatchQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#batchquery)]  
+ [!code-csharp[Astoria Northwind Client#BatchQuery](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#batchquery)]
+ [!code-vb[Astoria Northwind Client#BatchQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#batchquery)]  
   
 ## <a name="see-also"></a>참고자료
 

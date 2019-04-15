@@ -2,12 +2,12 @@
 title: '방법: 서비스에서 ASP.NET 역할 공급자 사용'
 ms.date: 03/30/2017
 ms.assetid: 88d33a81-8ac7-48de-978c-5c5b1257951e
-ms.openlocfilehash: 0ad581a6967c759095d85d946a8557b47a075355
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f3fadc60645ef81d2683c63fda0ddd5bf24c982
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658236"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301141"
 ---
 # <a name="how-to-use-the-aspnet-role-provider-with-a-service"></a>방법: 서비스에서 ASP.NET 역할 공급자 사용
 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 역할 공급자는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 멤버 자격 공급자와 함께 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 개발자가 웹 사이트를 만들 수 있는 기능입니다. 이 웹 사이트에서 사용자는 사이트에 계정을 만들고 인증을 위해 역할을 할당받을 수 있습니다. 이 기능을 사용하여 사용자는 사이트에 계정을 설정하고 사이트 및 해당 서비스에 로그인하여 단독으로 액세스할 수 있습니다. 반면, Windows 보안의 경우 사용자에게는 Windows 도메인의 계정이 있어야 합니다. 대신 자신의 자격 증명(사용자 이름/암호 조합)을 제공하는 사용자가 사이트 및 해당 서비스를 사용할 수 있습니다.  
@@ -18,13 +18,13 @@ ms.locfileid: "54658236"
   
 ### <a name="to-configure-the-role-provider"></a>역할 공급자를 구성하려면  
   
-1.  Web.config 파일에 아래는 <`system.web`> 요소를 추가 <`roleManager`> 요소 집합과 해당 `enabled` 특성을 `true`입니다.  
+1. Web.config 파일에 아래는 <`system.web`> 요소를 추가 <`roleManager`> 요소 집합과 해당 `enabled` 특성을 `true`입니다.  
   
-2.  `defaultProvider` 특성을 `SqlRoleProvider`으로 설정합니다.  
+2. `defaultProvider` 특성을 `SqlRoleProvider`으로 설정합니다.  
   
-3.  에 자식 항목으로 <`roleManager`> 요소에 추가 <`providers`> 요소입니다.  
+3. 에 자식 항목으로 <`roleManager`> 요소에 추가 <`providers`> 요소입니다.  
   
-4.  에 자식 항목으로 <`providers`> 요소를 추가 <`add`> 요소는 다음 특성을 사용 하 여 적절 한 값으로 설정: `name`, `type`를 `connectionStringName`, 및 `applicationName`다음 예제에서와 같이 합니다.  
+4. 에 자식 항목으로 <`providers`> 요소를 추가 <`add`> 요소는 다음 특성을 사용 하 여 적절 한 값으로 설정: `name`, `type`를 `connectionStringName`, 및 `applicationName`다음 예제에서와 같이 합니다.  
   
     ```xml  
     <!-- Configure the Sql Role Provider. -->  
@@ -41,19 +41,19 @@ ms.locfileid: "54658236"
   
 ### <a name="to-configure-the-service-to-use-the-role-provider"></a>역할 공급자를 사용하도록 서비스를 구성하려면  
   
-1.  Web.config 파일에 추가 된 [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) 요소입니다.  
+1. Web.config 파일에 추가 된 [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) 요소입니다.  
   
-2.  추가 된 [ \<동작 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) 요소를 <`system.ServiceModel`> 요소.  
+2. 추가 된 [ \<동작 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) 요소를 <`system.ServiceModel`> 요소.  
   
-3.  추가 된 [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) 에 <`behaviors`> 요소.  
+3. 추가 된 [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) 에 <`behaviors`> 요소.  
   
-4.  추가 [ \<동작 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) 요소를 `name` 특성을 적절 한 값으로.  
+4. 추가 [ \<동작 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) 요소를 `name` 특성을 적절 한 값으로.  
   
-5.  추가 된 [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) 에 <`behavior`> 요소.  
+5. 추가 된 [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) 에 <`behavior`> 요소.  
   
-6.  `principalPermissionMode` 특성을 `UseAspNetRoles`으로 설정합니다.  
+6. `principalPermissionMode` 특성을 `UseAspNetRoles`으로 설정합니다.  
   
-7.  `roleProviderName` 특성을 `SqlRoleProvider`으로 설정합니다. 다음 예제에서는 구성의 단편을 보여 줍니다.  
+7. `roleProviderName` 특성을 `SqlRoleProvider`으로 설정합니다. 다음 예제에서는 구성의 단편을 보여 줍니다.  
   
     ```xml  
     <behaviors>  
@@ -67,5 +67,6 @@ ms.locfileid: "54658236"
     ```  
   
 ## <a name="see-also"></a>참고자료
-- [멤버 자격 및 역할 공급자](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)
+
+- [Membership and Role Provider](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)
 - [방법: ASP.NET 멤버 자격 공급자 사용](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)

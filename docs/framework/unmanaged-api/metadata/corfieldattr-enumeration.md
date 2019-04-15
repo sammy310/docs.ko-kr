@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b07388b7f7385e93a6ca891e8ea98a2ce69763c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 432e202eb8db105e8d56d3d36cdc8001bac5320c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576017"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182379"
 ---
 # <a name="corfieldattr-enumeration"></a>CorFieldAttr 열거형
 필드에 대한 메타데이터를 설명하는 값을 포함합니다.  
@@ -63,7 +63,7 @@ typedef enum CorFieldAttr {
 |멤버|설명|  
 |------------|-----------------|  
 |`fdFieldAccessMask`|내게 필요한 옵션 정보를 지정합니다.|  
-|`fdPrivateScope`|필드를 참조할 수 없도록 지정합니다.|  
+|`fdPrivateScope`|필드는 참조할 수 없음을 지정 합니다.|  
 |`fdPrivate`|필드에 해당 부모 형식에 의해서만 액세스할 수 있는지를 지정 합니다.|  
 |`fdFamANDAssem`|필드에 해당 어셈블리의 파생된 클래스에서 액세스할 수 있는지를 지정 합니다.|  
 |`fdAssembly`|필드에 해당 어셈블리의 모든 형식에서 액세스할 수 있는지를 지정 합니다.|  
@@ -79,7 +79,7 @@ typedef enum CorFieldAttr {
 |`fdReservedMask`|공용 언어 런타임에서 내부 용도로 예약 되어 있습니다.|  
 |`fdRTSpecialName`|공용 언어 런타임 메타 데이터 내부 Api 인코딩을 확인 하도록 이름을 지정 합니다.|  
 |`fdHasFieldMarshal`|필드에 마샬링 정보가 포함 되도록 지정 합니다.|  
-|`fdHasDefault`|필드가 기본값을 갖도록 지정합니다.|  
+|`fdHasDefault`|필드 기본값을 갖도록 지정 합니다.|  
 |`fdHasFieldRVA`|필드의 상대 가상 주소를 지정 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
@@ -90,4 +90,5 @@ typedef enum CorFieldAttr {
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

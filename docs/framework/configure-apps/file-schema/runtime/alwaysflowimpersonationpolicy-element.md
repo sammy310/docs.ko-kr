@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: ee622801-9e46-470b-85ab-88c4b1dd2ee1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce1928254699f4de41e92087c76be9bc3c249523
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ec411039363cfb118fee06dff88daf50bbc97a86
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59108045"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314778"
 ---
 # <a name="alwaysflowimpersonationpolicy-element"></a>\<alwaysFlowImpersonationPolicy > 요소
 가장을 수행하는 방법과 관계없이 Windows ID가 항상 비동기 지점 간을 흐르도록 지정합니다.  
@@ -62,11 +62,11 @@ ms.locfileid: "59108045"
   
  다른 두 가지 방법으로이 기본 동작을 변경할 수 있습니다.  
   
-1.  스레드별 기준 관리 되는 코드입니다.  
+1. 스레드별 기준 관리 되는 코드입니다.  
   
      스레드별 기준 흐름을 수정 하 여 무시할 수 있습니다는 <xref:System.Threading.ExecutionContext> 및 <xref:System.Security.SecurityContext> 를 사용 하 여 설정 합니다 <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>, <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType>, 또는 <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType> 메서드.  
   
-2.  로드 된 CLR (공용 언어 런타임) 관리 되지 않는 호스팅 인터페이스를 호출 합니다.  
+2. 로드 된 CLR (공용 언어 런타임) 관리 되지 않는 호스팅 인터페이스를 호출 합니다.  
   
      관리 되지 않는 호스팅 인터페이스 (대신 간단한 관리 되는 실행 파일)를 사용 하 여 CLR을 로드 하, 경우에 대 한 호출에서 특수 플래그를 지정할 수 있습니다 합니다 [CorBindToRuntimeEx 함수](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) 함수입니다. 전체 프로세스에 대 한 호환성 모드를 사용 하려면 다음을 설정 합니다 `flags` 에 대 한 매개 변수 [CorBindToRuntimeEx 함수](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) 에 `STARTUP_ALWAYSFLOW_IMPERSONATION`합니다.  
   

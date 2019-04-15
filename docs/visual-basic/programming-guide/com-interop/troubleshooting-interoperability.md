@@ -16,12 +16,12 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: 197361020ad8c6a88a5fc8617b8e24f420799e14
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 147c61badd680277480226b809df97d46b636c7d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377289"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341194"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>상호 운용성 문제 해결(Visual Basic)
 COM 및 관리 코드의 상호 운용 하는 경우는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], 다음과 같은 일반적인 문제 중 하나 이상을 발생할 수 있습니다.  
@@ -42,9 +42,9 @@ COM 및 관리 코드의 상호 운용 하는 경우는 [!INCLUDE[dnprdnshort](~
   
  이름 바꾸기 COM 개체의 소비자에 대 한 두 가지 문제가 발생할 수 있습니다.  
   
-1.  클라이언트에서 생성 된 메서드 이름을 예측할 수 없습니다.  
+1. 클라이언트에서 생성 된 메서드 이름을 예측할 수 없습니다.  
   
-2.  COM 개체로 노출 클래스에서 생성 된 메서드 이름에는 새 오버 로드 된 클래스 또는 해당 기본 클래스에 추가 되 면 변경할 수 있습니다. 이 버전 관리 문제가 발생할 수 있습니다.  
+2. COM 개체로 노출 클래스에서 생성 된 메서드 이름에는 새 오버 로드 된 클래스 또는 해당 기본 클래스에 추가 되 면 변경할 수 있습니다. 이 버전 관리 문제가 발생할 수 있습니다.  
   
  이 두 가지 문제를 해결 하기 위해 각 메서드를 COM 개체로 노출 될 개체를 개발 하는 경우 오버 로드를 사용 하는 대신 고유한 이름을 제공 합니다.  
   
@@ -91,7 +91,7 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
  이 예제에서는 예상 대로 오류가 발생 했습니다. 그러나 없이 동일한 예제를 시도 하는 경우는 `Try...Catch...Finally` 사용 하는 경우에 따라 오류 블록 무시 됩니다는 `OnError Resume Next` 문입니다. 오류를 처리 하지 않고 0으로 나누기 자동으로 실패합니다. 이러한 오류는 처리 되지 않은 예외 오류를 발생 하지 않습니다, 이므로 일부 형식의 COM 개체의 이벤트를 처리 하는 이벤트 처리기에서 예외 처리를 사용 하는 중요 합니다.  
   
 ### <a name="understanding-com-interop-errors"></a>COM interop 오류 이해  
- 오류를 처리 하지 interop 호출이 종종 정보만 제공 하는 오류를 생성 합니다. 가능 하면 구조화 된 오류 발생 시 문제에 대 한 자세한 정보를 제공 하려면 처리를 사용 합니다. 이 응용 프로그램을 디버깅할 때 특히 유용할 수 있습니다. 예를 들면,  
+ 오류를 처리 하지 interop 호출이 종종 정보만 제공 하는 오류를 생성 합니다. 가능 하면 구조화 된 오류 발생 시 문제에 대 한 자세한 정보를 제공 하려면 처리를 사용 합니다. 이 응용 프로그램을 디버깅할 때 특히 유용할 수 있습니다. 예를 들어:  
   
  [!code-vb[VbVbalrInterop#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#25)]  
   
@@ -133,5 +133,5 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 - [Tlbimp.exe(형식 라이브러리 가져오기)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
 - [Tlbexp.exe(형식 라이브러리 내보내기)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
 - [연습: COM 개체를 사용한 상속 구현](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
-- [Inherits 문](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [전역 어셈블리 캐시](../../../framework/app-domains/gac.md)

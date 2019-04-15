@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ink [WPF], custom-rendering
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
-ms.openlocfilehash: fead6e28949726bef46fe2be46e976fb47c3e9a3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b41ded25bd4eb704c6f0d67c8da1c0e6643cac5b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125660"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323722"
 ---
 # <a name="custom-rendering-ink"></a>잉크 렌더링 사용자 지정
 합니다 <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> 스트로크의 속성을 사용 하면 해당 크기, 색 및 셰이프 등 스트로크의 모양을 지정할 수 있습니다 하지만 어떤 모양을 사용자 지정 하려는 경우가 있을 수 있습니다 <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> 허용 합니다. 에어브러시, 오일 페인트 및 다른 많은 효과가 있는 모양을 렌더링하여 잉크 모양을 사용자 지정하려는 경우도 있을 수 있습니다. 사용자 지정을 구현 하 여 잉크 렌더링 사용자 지정 하는 Windows Presentation Foundation (WPF) 허용 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 고 <xref:System.Windows.Ink.Stroke> 개체입니다.  
@@ -37,11 +37,11 @@ ms.locfileid: "59125660"
   
  동적으로 잉크를 렌더링하는 경우 세 가지 클래스를 구현해야 합니다.  
   
-1.  **DynamicRenderer**: <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>에서 파생되는 클래스를 구현합니다. 이 클래스는 특수화 된 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 렌더링 하는 스트로크를 그릴 때. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 잉크 화면 처럼 응용 프로그램 사용자 인터페이스 (UI) 스레드가 차단 되는 경우에 잉크를 수집 하는 별도 스레드에서 렌더링을 수행 합니다. 스레딩 모델에 대한 자세한 내용은 [잉크 스레딩 모델](the-ink-threading-model.md)을 참조하세요. 스트로크 렌더링을 동적으로 사용자 지정 하려면 재정의 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> 메서드.  
+1. **DynamicRenderer**: <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>에서 파생되는 클래스를 구현합니다. 이 클래스는 특수화 된 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 렌더링 하는 스트로크를 그릴 때. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 잉크 화면 처럼 응용 프로그램 사용자 인터페이스 (UI) 스레드가 차단 되는 경우에 잉크를 수집 하는 별도 스레드에서 렌더링을 수행 합니다. 스레딩 모델에 대한 자세한 내용은 [잉크 스레딩 모델](the-ink-threading-model.md)을 참조하세요. 스트로크 렌더링을 동적으로 사용자 지정 하려면 재정의 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> 메서드.  
   
-2.  **스트로크**: <xref:System.Windows.Ink.Stroke>에서 파생되는 클래스를 구현합니다. 이 클래스는 정적으로 렌더링 합니다 <xref:System.Windows.Input.StylusPoint> 으로 변환한 후 데이터는 <xref:System.Windows.Ink.Stroke> 개체입니다. 재정의 <xref:System.Windows.Ink.Stroke.DrawCore%2A> 스트로크의 정적 렌더링과 해당 메서드는 동적 렌더링와 일치 합니다.  
+2. **스트로크**: <xref:System.Windows.Ink.Stroke>에서 파생되는 클래스를 구현합니다. 이 클래스는 정적으로 렌더링 합니다 <xref:System.Windows.Input.StylusPoint> 으로 변환한 후 데이터는 <xref:System.Windows.Ink.Stroke> 개체입니다. 재정의 <xref:System.Windows.Ink.Stroke.DrawCore%2A> 스트로크의 정적 렌더링과 해당 메서드는 동적 렌더링와 일치 합니다.  
   
-3.  **InkCanvas:** <xref:System.Windows.Controls.InkCanvas>에서 파생되는 클래스를 구현합니다. 사용자 지정 할당 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 에 <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> 속성입니다. 재정의 <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> 메서드를 사용자 지정 스트로크를 추가 하 고는 <xref:System.Windows.Controls.InkCanvas.Strokes%2A> 속성입니다. 이를 통해 잉크 모양이 일관되게 유지됩니다.  
+3. **InkCanvas:** <xref:System.Windows.Controls.InkCanvas>에서 파생되는 클래스를 구현합니다. 사용자 지정 할당 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 에 <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> 속성입니다. 재정의 <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> 메서드를 사용자 지정 스트로크를 추가 하 고는 <xref:System.Windows.Controls.InkCanvas.Strokes%2A> 속성입니다. 이를 통해 잉크 모양이 일관되게 유지됩니다.  
   
 <a name="ImplementingADynamicRenderer"></a>   
 ## <a name="implementing-a-dynamic-renderer"></a>동적 렌더러 구현  

@@ -2,12 +2,12 @@
 title: 연결 정보 보호
 ms.date: 03/30/2017
 ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4
-ms.openlocfilehash: 4c8992abc30690be8e9ef9c208b0a0bd3ddf6116
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: ccb039a79c76c31b905783b81710571d8c5ab82b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091957"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184446"
 ---
 # <a name="protecting-connection-information"></a>연결 정보 보호
 응용 프로그램 보안의 가장 중요한 목표 중 하나는 데이터 소스에 대한 액세스를 보호하는 것입니다. 연결 문자열을 안전하게 보호하지 않으면 이로 인해 보안상 취약한 부분이 생길 수 있습니다. 연결 정보를 일반 텍스트로 저장하거나 메모리에 유지하면 전체 시스템을 손상시킬 위험이 있습니다. 사용 하 여 소스 코드에 포함 된 연결 문자열을 읽을 수 있습니다 합니다 [Ildasm.exe (IL 디스어셈블러)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 컴파일된 어셈블리의 MSIL (Microsoft intermediate language)을 볼 수 있습니다.  
@@ -40,6 +40,7 @@ ms.locfileid: "56091957"
  연결 문자열을 구성 파일에 저장할 수도 있으며 그러면 연결 문자열을 응용 프로그램 코드에 포함할 필요가 없습니다. 구성 파일은 .NET Framework에 공통 요소 집합이 정의된 표준 XML 파일입니다. 구성 파일의 연결 문자열은 일반적으로 내부 저장 합니다  **\<connectionStrings >** 요소에는 **app.config** Windows 응용 프로그램의 경우 또는  **web.config** ASP.NET 응용 프로그램에 대 한 파일입니다. 자세한 내용은 대 한 기본 사항을 저장 하는 검색 및 구성 파일에서 연결 문자열을 암호화 참조 [연결 문자열 및 구성 파일](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
+
 - [ADO.NET 응용 프로그램 보안](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [보호 된 구성을 사용 하 여 구성 정보 암호화](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))
 - [.NET의 보안](../../../standard/security/index.md)

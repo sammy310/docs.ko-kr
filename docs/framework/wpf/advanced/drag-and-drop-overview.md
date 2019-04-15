@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: 4fb80f749e203c5763f0aa56af4cbf066c7ffa37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2b76c8fd3e2c6961b6ebdddc9b7ff9649f5196f4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139219"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301401"
 ---
 # <a name="drag-and-drop-overview"></a>끌어서 놓기 개요
 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 애플리케이션의 끌어서 놓기 지원에 대해 개괄적으로 설명합니다. 끌어서 놓기는 일반적으로 마우스(또는 다른 포인팅 디바이스)를 사용하여 하나 이상의 개체를 선택하고 이러한 개체를 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]에서 원하는 놓기 대상 위로 끌어서 놓는 데이터 전송 방법을 가리킵니다.  
@@ -181,11 +181,11 @@ ms.locfileid: "59139219"
   
  요소를 놓기 대상으로 지정하려면 해당 <xref:System.Windows.UIElement.AllowDrop%2A> 속성을 `true`로 설정합니다. 그러면 요소에서 놓기 대상 이벤트가 발생하여 처리할 수 있습니다. 끌어서 놓기 작업 중에 다음 이벤트 시퀀스가 놓기 대상에서 발생합니다.  
   
-1.  <xref:System.Windows.DragDrop.DragEnter>  
+1. <xref:System.Windows.DragDrop.DragEnter>  
   
-2.  <xref:System.Windows.DragDrop.DragOver>  
+2. <xref:System.Windows.DragDrop.DragOver>  
   
-3.  <xref:System.Windows.DragDrop.DragLeave> 또는 <xref:System.Windows.DragDrop.Drop>  
+3. <xref:System.Windows.DragDrop.DragLeave> 또는 <xref:System.Windows.DragDrop.Drop>  
   
  <xref:System.Windows.DragDrop.DragEnter> 이벤트는 데이터를 놓기 대상의 경계로 끌 때 발생합니다. 애플리케이션에 적절한 경우 일반적으로 이 이벤트를 처리하여 끌어서 놓기 작업의 효과 미리 보기를 제공합니다. <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 이벤트에서 <xref:System.Windows.DragDrop.DragEnter> 속성을 설정하지 마세요. <xref:System.Windows.DragDrop.DragOver> 이벤트를 덮어쓰게 됩니다.  
   

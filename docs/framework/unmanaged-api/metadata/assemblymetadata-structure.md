@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f988f95c28e6d2248882fb033b8d8c4d3c629229
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f0a9b9c149c86b4d9121275aa858dfdc0cdbac7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744195"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195165"
 ---
 # <a name="assemblymetadata-structure"></a>ASSEMBLYMETADATA 구조체
 해당 버전 및 해당 수준의 로캘, 프로세서 및 운영 체제에 대 한 지원 포함 한 참조 된 어셈블리에 대 한 정보를 포함 합니다.  
@@ -54,9 +54,9 @@ typedef struct {
 |`szLocale`|목록에 참조 된 어셈블리에서 지원 되는 로캘을 지정 세미콜론으로 구분 된 RFC1766 사양에 맞는 로캘 이름입니다. Null 값에는 로캘과 관련이 없음을 나타냅니다. **참고:**  .NET framework 버전 1.0 둘 이상의 로캘을 지정할 수 없습니다.|  
 |`cbLocale`|와이드 문자에서 크기 `szLocale`합니다.|  
 |`rdwProcessor`|참조 된 어셈블리에서 지원 되는 프로세서 유형에 대 한 Winnt.h에 정의 된 식별자의 배열입니다. NULL 값에는 프로세서 관련이 없음을 나타냅니다.|  
-|`ulProcessor`|`rdwProcessor` 배열의 길이입니다.|  
+|`ulProcessor`|길이 `rdwProcessor` 배열입니다.|  
 |`rOS`|배열을 [OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md) 참조 된 어셈블리에서 지원 되는 운영 체제를 지정 하는 인스턴스. NULL 값에는 운영 체제 관련이 없음을 나타냅니다.|  
-|`ulOS`|`rOS` 배열의 길이입니다.|  
+|`ulOS`|길이 `rOS` 배열입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
@@ -68,6 +68,7 @@ typedef struct {
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>참고자료
+
 - [메타데이터 구조체](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
 - [IMetaDataAssemblyEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
 - [OSINFO 구조체](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)

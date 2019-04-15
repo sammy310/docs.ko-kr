@@ -10,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed3129364d73d196b2e25b962b8c42325a144dfd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 08e5712db60fb09b48d6be9f35737c9a884d1ce8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642833"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324477"
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a>방법: 작업 및 해당 자식 취소
 이 예제는 다음 작업을 수행하는 방법을 보여줍니다.  
   
-1.  취소 가능한 작업을 만들고 시작합니다.  
+1. 취소 가능한 작업을 만들고 시작합니다.  
   
-2.  사용자 대리자에 그리고 선택적으로 작업 인스턴스에 취소 토큰을 전달합니다.  
+2. 사용자 대리자에 그리고 선택적으로 작업 인스턴스에 취소 토큰을 전달합니다.  
   
-3.  사용자 대리자의 취소 요청을 확인하고 이에 응답합니다.  
+3. 사용자 대리자의 취소 요청을 확인하고 이에 응답합니다.  
   
-4.  선택적으로 작업이 취소된 호출 스레드를 확인합니다.  
+4. 선택적으로 작업이 취소된 호출 스레드를 확인합니다.  
   
  호출 스레드가 작업을 강제로 종료하지 않으며, 취소가 요청되었다는 신호만 보냅니다. 작업이 이미 실행 중인 경우 사용자 대리자가 요청을 알리고 적절하게 응답해야 합니다. 작업 실행 전에 취소를 요청하면 사용자 대리자가 실행되지 않고 작업 개체가 Canceled 상태로 전환됩니다.  
   

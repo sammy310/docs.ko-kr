@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [WPF], Master-Detail data paradigm
 - Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
-ms.openlocfilehash: 3a17d6cd5b723dcde4d8dc7059c9f416308f73db
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e0bbb24b07fdc1c362e2be43d69d189defbc27a4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59082661"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346186"
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>방법: 계층적 데이터에서 마스터-세부 정보 패턴 사용
 이 예제에는 마스터-세부 시나리오를 구현 하는 방법을 보여 줍니다.  
@@ -27,9 +27,9 @@ ms.locfileid: "59082661"
   
  이 예제에서 주의 해야 할 두 가지 사항은 다음과 같습니다.  
   
-1.  세 가지 <xref:System.Windows.Controls.ListBox> 컨트롤 같은 소스에 바인딩합니다. 설정한 합니다 <xref:System.Windows.Data.Binding.Path%2A> 하려는 데이터의 수준을 지정에 대 한 바인딩 속성을 <xref:System.Windows.Controls.ListBox> 표시할 합니다.  
+1. 세 가지 <xref:System.Windows.Controls.ListBox> 컨트롤 같은 소스에 바인딩합니다. 설정한 합니다 <xref:System.Windows.Data.Binding.Path%2A> 하려는 데이터의 수준을 지정에 대 한 바인딩 속성을 <xref:System.Windows.Controls.ListBox> 표시할 합니다.  
   
-2.  설정 해야 합니다는 <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> 속성을 `true` 에 <xref:System.Windows.Controls.ListBox> 컨트롤의 추적 하는 선택 합니다. 이 속성을 설정 하면 선택한 항목으로 항상 설정 되어 있는지를 <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>입니다. 또는 경우는 <xref:System.Windows.Controls.ListBox> 에서 데이터를 가져오는 <xref:System.Windows.Data.CollectionViewSource>, 선택 및 통화 자동으로 동기화 합니다.  
+2. 설정 해야 합니다는 <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> 속성을 `true` 에 <xref:System.Windows.Controls.ListBox> 컨트롤의 추적 하는 선택 합니다. 이 속성을 설정 하면 선택한 항목으로 항상 설정 되어 있는지를 <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>입니다. 또는 경우는 <xref:System.Windows.Controls.ListBox> 에서 데이터를 가져오는 <xref:System.Windows.Data.CollectionViewSource>, 선택 및 통화 자동으로 동기화 합니다.  
   
  때 사용 하는 방법은 약간 다른 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터입니다. 예를 들어 참조 [계층적 XML 데이터에 마스터-세부 패턴 사용](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)합니다.  
   

@@ -2,12 +2,12 @@
 title: WCF 및 ASP.NET Web API
 ms.date: 03/30/2017
 ms.assetid: 08ceded3-fd9a-4467-9715-c4cbd9c7228e
-ms.openlocfilehash: 460c2d6d3acfd857c3f11db313a2ebb894a14cea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d805c09bef45932ba006a213343429ae7c9303df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697025"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192006"
 ---
 # <a name="wcf-and-aspnet-web-api"></a>WCF 및 ASP.NET Web API
 WCF는 서비스 기반 응용 프로그램을 빌드하기 위한 Microsoft의 통합 프로그래밍 모델이며, 이를 통해 개발자는 플랫폼 간에 통합되고 기존 투자와 상호 운용할 수 있는 안정적인 보안 트랜잭션된 솔루션을 빌드할 수 있습니다. [ASP.NET Web API](https://www.asp.net/web-api) 쉽고 광범위 한 브라우저 및 모바일 장치를 비롯 하 여 클라이언트를 연결 하는 HTTP 서비스를 구축할 수 있는 프레임 워크입니다. ASP.NET Web API는 .NET Framework에서 RESTful 응용 프로그램을 빌드하는 데 이상적인 플랫폼입니다. 이 항목에서는 요구 사항에 가장 적합한 기술을 결정하는 데 도움이 되는 몇 가지 지침을 제공합니다.  
@@ -27,5 +27,6 @@ WCF는 서비스 기반 응용 프로그램을 빌드하기 위한 Microsoft의 
  WCF를 사용 하 여 다양 한 전송 방식을 통해 액세스할 수 있는 안정적이 고 안전한 웹 서비스를 만듭니다. 광범위한 클라이언트에서 액세스할 수 있는 HTTP 기반 서비스를 만들려면 ASP.NET Web API를 사용하십시오. 새로운 REST 스타일의 서비스를 만들고 디자인하려는 경우에는 ASP.NET Web API를 사용하십시오. WCF도 REST 스타일의 서비스를 작성하기 위한 몇 가지 기능을 지원하지만, ASP.NET Web API에서는 REST를 보다 완전하게 지원하며 향후의 모든 REST 기능 개선 사항도 ASP.NET Web API에서 구현될 것입니다. 기존 WCF 서비스가 있고 추가 REST 엔드포인트를 노출하려는 경우에는 WCF와 <xref:System.ServiceModel.WebHttpBinding>을 사용하세요.  
   
 ## <a name="see-also"></a>참고자료
+
 - [Windows Communication Foundation 정의](../../../docs/framework/wcf/whats-wcf.md)
 - [기본적인 Windows Communication Foundation 개념](../../../docs/framework/wcf/fundamental-concepts.md)

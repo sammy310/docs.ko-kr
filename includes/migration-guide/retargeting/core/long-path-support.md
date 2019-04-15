@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 506218195417548880a9d8d10508a570a7769682
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235003"
+---
 ### <a name="long-path-support"></a>긴 경로 지원
 
 |   |   |
@@ -7,4 +15,3 @@
 |범위|부|
 |버전|4.6.2|
 |형식|대상 변경|
-

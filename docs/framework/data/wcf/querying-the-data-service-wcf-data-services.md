@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: da015fcd20745ef67831b7133242d66392f923e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: abae49e709fa2e77d641d991dd6e09cf82216732
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620411"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517293"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>데이터 서비스 쿼리(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 라이브러리를 사용하면 LINQ(Language-Integrated Query) 사용을 비롯한 익숙한 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 프로그래밍 패턴을 사용하여 데이터 서비스에 대해 쿼리를 실행할 수 있습니다. 클라이언트 라이브러리는 클라이언트에서 <xref:System.Data.Services.Client.DataServiceQuery%601> 클래스의 인스턴스로 정의된 쿼리를 HTTP GET 요청 메시지로 변환합니다. 라이브러리는 응답 메시지를 받고 클라이언트 데이터 서비스 클래스의 인스턴스로 변환 합니다. 이러한 클래스는 <xref:System.Data.Services.Client.DataServiceContext>가 속해 있는 <xref:System.Data.Services.Client.DataServiceQuery%601>에 의해 추적됩니다.  
@@ -38,8 +38,8 @@ ms.locfileid: "54620411"
   
  다음 쿼리를 실행하면 Northwind 데이터 서비스에 있는 모든 `Customers` 엔터티가 반환됩니다.  
   
- [!code-csharp[Astoria Northwind Client#GetAllCustomersSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getallcustomersspecific)]  
- [!code-vb[Astoria Northwind Client#GetAllCustomersSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getallcustomersspecific)]  
+ [!code-csharp[Astoria Northwind Client#GetAllCustomersSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getallcustomersspecific)]  
+ [!code-vb[Astoria Northwind Client#GetAllCustomersSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getallcustomersspecific)]  
   
  자세한 내용은 [방법: 데이터 서비스 쿼리 실행](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)합니다.  
   
@@ -48,8 +48,8 @@ ms.locfileid: "54620411"
 ## <a name="linq-queries"></a>LINQ 쿼리  
  때문에 합니다 <xref:System.Data.Services.Client.DataServiceQuery%601> 클래스가 구현 하는 <xref:System.Linq.IQueryable%601> LINQ로 정의 된 인터페이스는 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 라이브러리는 엔터티 집합 데이터에 대 한 LINQ 쿼리는 데이터 서비스에 대해 평가 되는 쿼리 식을 나타내는 URI로 변환할 수 있습니다 리소스입니다. 다음 예제는 운송료가 $30를 초과하는 <xref:System.Data.Services.Client.DataServiceQuery%601>를 반환하고 결과를 운송료순으로 정렬하는 이전 `Orders`와 동일한 LINQ 쿼리입니다.  
   
- [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addqueryoptionslinqspecific)]  
- [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addqueryoptionslinqspecific)]  
+ [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqspecific)]  
+ [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqspecific)]  
   
  이 LINQ 쿼리를 Northwind 기반에 대해 실행 되는 URI 다음 쿼리로 변환 [퀵 스타트](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) 데이터 서비스:  
   
@@ -65,13 +65,13 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 ## <a name="adding-query-options"></a>쿼리 옵션 추가  
  데이터 서비스 쿼리는 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에서 제공하는 모든 쿼리 옵션을 지원합니다. 쿼리 옵션을 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 인스턴스에 추가하려면 <xref:System.Data.Services.Client.DataServiceQuery%601> 메서드를 호출합니다. <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>은 원래 쿼리와 동일하지만 새 쿼리 옵션 집합이 포함된 새 <xref:System.Data.Services.Client.DataServiceQuery%601> 인스턴스를 반환합니다. 다음 쿼리를 실행하면 `Orders` 값으로 필터링되고 `Freight`를 기준으로 내림차순으로 정렬된 `OrderID`가 반환됩니다.  
   
- [!code-csharp[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addqueryoptionsspecific)]  
- [!code-vb[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addqueryoptionsspecific)]  
+ [!code-csharp[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionsspecific)]  
+ [!code-vb[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionsspecific)]  
   
  `$orderby` 쿼리 옵션을 사용하여 단일 속성에 따라 쿼리를 정렬하고 필터링할 수 있습니다. 다음 예제에서는 반환된 `Orders` 개체를 `Freight` 속성의 값에 따라 필터링하고 정렬합니다.  
   
- [!code-csharp[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#orderwithfilter)]
- [!code-vb[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#orderwithfilter)]  
+ [!code-csharp[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#orderwithfilter)]
+ [!code-vb[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#orderwithfilter)]  
   
  <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 메서드를 연속적으로 호출하여 복잡한 쿼리 식을 생성할 수 있습니다. 자세한 내용은 [방법: 데이터 서비스 쿼리에 쿼리 옵션 추가](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)합니다.  
   
@@ -84,16 +84,16 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 ## <a name="client-versus-server-execution"></a>클라이언트 및 서버 실행  
  클라이언트는 쿼리를 두 부분으로 실행합니다. 가능한 경우 쿼리의 식이 클라이언트에서 먼저 계산된 다음 URI 기반 쿼리가 생성되고 서비스의 데이터와 비교하여 평가되도록 데이터 서비스로 보내집니다. 다음 LINQ 쿼리를 살펴보세요.  
   
- [!code-csharp[Astoria Northwind Client#LinqQueryClientEvalSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#linqqueryclientevalspecific)]  
- [!code-vb[Astoria Northwind Client#LinqQueryClientEvalSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#linqqueryclientevalspecific)]  
+ [!code-csharp[Astoria Northwind Client#LinqQueryClientEvalSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqqueryclientevalspecific)]  
+ [!code-vb[Astoria Northwind Client#LinqQueryClientEvalSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#linqqueryclientevalspecific)]  
   
  이 예에서는 `(basePrice – (basePrice * discount))` 식이 클라이언트에서 계산됩니다.  이런 이유로, 데이터 서비스로 보내진 실제 쿼리 URI `http://localhost:12345/northwind.svc/Products()?$filter=(UnitPrice gt 90.00M) and substringof('bike',ProductName)`에는 필터 절의 `90`에 대해 계산된 10진수 값이 이미 포함됩니다. 부분 문자열 식을 포함하는 필터링 식의 다른 부분은 데이터 서비스에서 계산됩니다. 클라이언트에서 계산된 식은 CLR(공용 언어 런타임) 의미 체계를 따르지만 데이터 서비스로 보내지는 식은 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 프로토콜의 데이터 서비스 구현을 활용합니다.  또한 이와 같은 개별 계산으로 인해 클라이언트와 서비스가 서로 다른 시간대에 시간 기반의 계산을 수행하는 경우와 같은 예상치 못한 결과가 발생할 수도 있습니다.  
   
 ## <a name="query-responses"></a>쿼리 응답  
  <xref:System.Data.Services.Client.DataServiceQuery%601>를 실행하면 요청된 엔터티 형식의 <xref:System.Collections.Generic.IEnumerable%601>이 반환됩니다. 이 쿼리 결과는 다음 예제와 같이 <xref:System.Data.Services.Client.QueryOperationResponse%601> 개체로 캐스팅될 수 있습니다.  
   
- [!code-csharp[Astoria Northwind Client#GetResponseSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getresponsespecific)]
- [!code-vb[Astoria Northwind Client#GetResponseSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getresponsespecific)]  
+ [!code-csharp[Astoria Northwind Client#GetResponseSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getresponsespecific)]
+ [!code-vb[Astoria Northwind Client#GetResponseSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getresponsespecific)]  
   
  데이터 서비스의 엔터티를 나타내는 엔터티 형식 인스턴스는 개체 구체화라는 프로세스에 의해 클라이언트에서 만들어집니다. 자세한 내용은 [개체 구체화](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)합니다. <xref:System.Data.Services.Client.QueryOperationResponse%601> 개체는 <xref:System.Collections.Generic.IEnumerable%601>을 구현하여 쿼리 결과에 대한 액세스를 제공합니다.  
   
@@ -143,4 +143,5 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  [방법: 쿼리 결과 프로젝션](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)  
   
 ## <a name="see-also"></a>참고자료
+
 - [WCF Data Services 클라이언트 라이브러리](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
