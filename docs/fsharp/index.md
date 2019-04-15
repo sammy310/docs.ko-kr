@@ -22,19 +22,19 @@ F# 가이드에서는 F# 언어를 배우기 위한 많은 리소스를 제공�
 
 [Visual Studio에서 F# 시작하기](get-started/get-started-visual-studio.md)에서는 Windows 환경에서 작업 중이고 완전한 Visual Studio IDE(통합 개발 환경) 기능을 사용하려는 경우 적합합니다.
 
-[Mac용 Visual Studio에서 F#으로 시작](get-started/get-started-with-visual-studio-for-mac.md)에서는 macOS 환경에서 Visual Studio IDE를 사용하려면 해당 문서를 참고하십시오.
+[Mac용 Visual Studio에서 F#으로 시작](get-started/get-started-with-visual-studio-for-mac.md) macOS 환경에서 Visual Studio IDE 사용을 원한다면 해당 문서를 참고하세요.
 
-[Visual Studio Code에서 F# 시작하기](get-started/get-started-vscode.md)에서는 기능이 풍부하고 간단한 크로스 플랫폼의 IDE 환경을 원하는 경우 적합합니다.
+[Visual Studio Code에서 F# 시작하기](get-started/get-started-vscode.md)는 기능이 풍부하고 간단한 크로스 플랫폼의 IDE 환경을 원하는 경우 적합합니다.
 
-[F#으로 .NET Core CLI 시작](get-started/get-started-command-line.md)은 명령줄 도구를 사용하려면 해당 문서를 참고하십시오.
+[F#으로 .NET Core CLI 시작](get-started/get-started-command-line.md) 명령줄 도구를 사용하려면 해당 문서를 참고하세요.
 
-[F# 및 Xamarin 시작](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/)은 F#을 이용한 모바일 프로그래밍에 대한 문서입니다.
+[F# 및 Xamarin 시작](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/) F#을 이용한 모바일 프로그래밍에 대한 문서입니다.
 
 [Azure Notebook을 위한 F#](https://notebooks.azure.com/Microsoft/libraries/samples/html/FSharp%20for%20Azure%20Notebooks.ipynb)은  Jupyter Notebook에 호스트된 무료 F# 학습용 자습서입니다.
 
 ## <a name="references"></a>참조
 
-[F# 언어 참조](language-reference/index.md)는 모든 F# 언어 기능에 대한 공식적이고 포괄적인 참조 문서로, 각 문서는 구문을 설명하고 코드 샘플을 보여 줍니다. 목차에서 필터 표시줄을 사용하면 특정 문서를 검색할 수 있습니다. 특정 문서를 검색 하려면 필터 표시줄의 목차에서 사용할 수 있습니다.
+[F# 언어 참조](language-reference/index.md)는 모든 F# 언어 기능에 대한 공식적이고 포괄적인 참조 문서로, 각 문서는 구문을 설명하고 코드 샘플을 보여줍니다. 목차에서 필터 표시줄을 사용하면 특정 문서를 검색할 수 있습니다.
 
 [F# 핵심 라이브러리 참조](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference)는 F# 핵심 라이브러리 API 참조입니다.
 
@@ -52,9 +52,9 @@ F# 가이드에서는 F# 언어를 배우기 위한 많은 리소스를 제공�
 
 [F# 개발자를 위한 Visual Studio 2017의 새로운 기능](https://www.linkedin.com/learning/what-s-new-in-visual-studio-2017-for-f-sharp-for-developers)은 Visual Studio 2017에서 F#의 최신 기능의 일부를 보여주는 비디오 과정으로, F#을 처음 접하는 Visual Studio 개발자를 대상으로 합니다.
 
-## <a name="other-useful-resources"></a>그밖의 유용한 리소스
+## <a name="other-useful-resources"></a>그 밖의 유용한 리소스
 
-[F# 코드 조각 웹 사이트](http://www.fssnip.net)에는 완전 초보자용부터 고급자까지 F#에서 할 수 있는 많은 내용을 보여주는 방대한 코드 조각들이 있습니다.
+[F# 코드 조각 웹 사이트](http://www.fssnip.net)에는 완전 초보자용부터 고급 코드 조각까지 F#에서 할 수 있는 많은 것들을 보여주는 방대한 코드 조각들이 있습니다.
 
 [F# 소프트웨어 파운데이션 슬랙](https://fsharp.org/guides/slack/)은 초보자와 전문가 모두에게 좋은 매우 활발한 장소로, 세계 최고의 몇몇 F# 프로그래머들과 채팅이 가능합니다. 가입하실 것을 권장합니다.
 
