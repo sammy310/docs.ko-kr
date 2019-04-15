@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9c2a8eca3f4498906cf703ff3b8ffb7336ff7a1b
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: f4a5911787fa5f72be1dcd15c67b3f132c3f1110
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761073"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234432"
 ---
 ### <a name="icontobitmap-successfully-converts-icons-with-png-frames-into-bitmap-objects"></a>Icon.ToBitmap은 PNG 프레임이 있는 아이콘을 Bitmap 개체로 성공적으로 변환합니다.
 
@@ -16,4 +16,3 @@ ms.locfileid: "58761073"
 |버전|4.6|
 |형식|대상 변경|
 |영향을 받는 API|<ul><li><xref:System.Drawing.Icon.ToBitmap?displayProperty=nameWithType></li></ul>|
-

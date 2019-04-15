@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfe2be8784fd4baf6ce9e603da1c6e2388126b5a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 0ca01234bf7adaca1337053bbc2bbba0731be3cd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409330"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132043"
 ---
 # <a name="identifying-functions-in-dlls"></a>DLL 함수 식별
 DLL 함수 ID는 다음 요소로 구성됩니다.  
@@ -46,6 +46,7 @@ DLL 함수 ID는 다음 요소로 구성됩니다.
  Windows API에 대한 전체 설명서는 플랫폼 SDK를 참조하세요. 플랫폼 호출에서 사용되는 .NET 기반 선언을 생성하는 방법을 보여 주는 예제는 [플랫폼 호출을 사용하여 데이터 마샬링](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [관리되지 않는 DLL 함수 사용](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
 - [진입점 지정](../../../docs/framework/interop/specifying-an-entry-point.md)
 - [DLL 함수가 포함된 클래스 만들기](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)

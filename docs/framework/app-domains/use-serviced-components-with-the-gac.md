@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 3423e5d9-234c-4571-8161-e35f6d130128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60d42fa296585d26186a2e75a49c5b3cf761e846
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4bb09f827726f759383598d18fb80657a7e2ff04
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583248"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179064"
 ---
 # <a name="using-serviced-components-with-the-global-assembly-cache"></a>전역 어셈블리 캐시에서 서비스되는 구성 요소 사용
 서비스되는 구성 요소(관리 코드 COM+ 구성 요소)는 전역 어셈블리 캐시에 저장해야 합니다. 일부 시나리오에서 공용 언어 런타임과 COM+ 서비스에서 전역 어셈블리 캐시에 없는 서비스되는 구성 요소를 처리할 수 있지만, 다른 시나리오에서는 그렇게 할 수 없습니다. 다음 시나리오에서 이러한 예에 대해 설명합니다.  
@@ -26,5 +26,6 @@ ms.locfileid: "54583248"
 -   ASP.NET 애플리케이션에 있는 서비스되는 구성 요소의 경우 상황이 다릅니다. 서비스되는 구성 요소가 포함된 어셈블리를 애플리케이션 기준 위치의 bin 디렉터리에 저장하고 요청 시 등록을 사용하는 경우, ASP.NET에서 런타임의 섀도 기능을 사용하므로 다운로드 캐시에 어셈블리를 섀도 복사합니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [어셈블리 및 전역 어셈블리 캐시 사용](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
 - [Gacutil.exe(전역 어셈블리 캐시 도구)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)

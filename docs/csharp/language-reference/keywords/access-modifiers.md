@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
-ms.openlocfilehash: b70a4ac99b90e5112c64d25ab517ae6ba819542f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d87ea1ff18c4697a2c04f22cbf67720f21cbf459
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709760"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118133"
 ---
 # <a name="access-modifiers-c-reference"></a>액세스 한정자(C# 참조)
 액세스 한정자는 멤버 또는 형식의 선언된 접근성을 지정하는 데 사용되는 키워드입니다. 이 섹션에서는 다음 네 가지 액세스 한정자를 소개합니다.  
@@ -43,6 +43,7 @@ ms.locfileid: "54709760"
 -   [액세스 가능성 수준 사용에 대한 제한](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md): 선언된 접근성 수준 사용에 대한 제한 요약입니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [C# 참조](../../../csharp/language-reference/index.md)
 - [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
 - [C# 키워드](../../../csharp/language-reference/keywords/index.md)

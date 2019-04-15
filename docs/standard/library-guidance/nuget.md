@@ -4,12 +4,12 @@ description: .NET 라이브러리용 NuGet을 사용하여 패키지하는 모�
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: a721c642dd92eb299eef3b62fc845afa99f81ddc
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: e08629adb8074fdfb73865d2dc156cbf6e46ab9c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204615"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198181"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -119,7 +119,6 @@ NuGet.org는 자체 [기호 서버 리포지토리](/nuget/create-packages/symbo
 > 기호 패키지(`*.snupkg`)는 주 패키지 크기를 블로트하지 않고 NuGet 패키지를 디버그할 의도가 없는 개발자에게 복원 성능에 영향을 주지 않으면서 개발자에게 좋은 주문형 디버깅 환경을 제공합니다.
 >
 > 중요한 점은 기호 파일을 가져오기 위해 해당 IDE에서 NuGet 기호 서버를 찾아(한 번 설정으로) 구성해야 한다는 것입니다. Visual Studio 2019는 즉시 NuGet.org 기호 서버를 기본 옵션 중 하나로 제공할 계획입니다. 
-
 
 >[!div class="step-by-step"]
 >[이전](strong-naming.md)

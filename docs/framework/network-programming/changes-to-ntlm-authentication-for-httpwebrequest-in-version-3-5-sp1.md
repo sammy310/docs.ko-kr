@@ -2,12 +2,12 @@
 title: 버전 3.5 SP1에서 HttpWebRequest에 대한 NTLM 인증 변경 내용
 ms.date: 03/30/2017
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
-ms.openlocfilehash: 40e041f17a07e17aad3d5f10f7920b0466e2b1b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0105cc762696c54a65cd06b3ffcb5fb4c8530a41
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589560"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216719"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>버전 3.5 SP1에서 HttpWebRequest에 대한 NTLM 인증 변경 내용
 .NET Framework 버전 3.5 SP1 이상에서는 <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream> 및 System.Net 네임스페이스의 관련 클래스에 의해 Windows 통합 인증이 처리되는 방식에 영향을 미치는 보안 변경 사항이 적용되었습니다. 이러한 변경 내용은 NTLM 기반의 Windows 통합 인증이 사용되는 경우 이러한 클래스를 통해 웹 요청을 만들고 응답을 수신하는 애플리케이션에 영향을 줄 수 있습니다. 이 변경 내용은 Windows 통합 인증을 사용하도록 구성된 웹 서버 및 클라이언트 애플리케이션에 영향을 미칠 수 있습니다.  
@@ -51,6 +51,7 @@ ms.locfileid: "54589560"
  보안 수준이 낮은 해결 방법은 <https://support.microsoft.com/kb/896861>에 설명된 대로 루프백 검사를 사용하지 않도록 설정하는 것입니다. 이렇게 하면 리플렉션 공격에 대한 보호가 해제됩니다. 따라서 대체 이름 집합을 컴퓨터에서 실제로 사용할 것으로 예상되는 이름으로만 제한하는 것이 좋습니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>
 - <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType>
 - <xref:System.Net.HttpWebRequest.Host%2A?displayProperty=nameWithType>

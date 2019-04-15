@@ -15,12 +15,12 @@ helpviewer_keywords:
 - listening with sockets
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
-ms.openlocfilehash: 763d1106a289e4aa6530eb07971d6ffb7e6095b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c3d5a7d6040038eb6d768815b1ae9e8ad45c5810
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527850"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109956"
 ---
 # <a name="listening-with-sockets"></a>소켓으로 수신
 수신기 또는 서버 소켓에서 네트워크의 포트를 열고 클라이언트가 해당 포트에 연결할 때까지 기다립니다. 다른 네트워크 주소 패밀리 및 프로토콜이 있어도 이 예제에서는 TCP/IP 네트워크에 대한 원격 서비스를 만드는 방법을 보여 줍니다.  
@@ -60,6 +60,7 @@ listener.Listen(100);
  **Listen** 메서드는 연결 중인 클라이언트에 서버 사용 중 오류가 반환되기 전에 **Socket**에 대해 허용되는 보류 연결 수를 지정하는 단일 매개 변수를 사용합니다. 이 경우 클라이언트 번호 101에 서버 사용 중 응답이 반환되기 전에 최대 100개의 클라이언트를 연결 큐에 둡니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [동기 서버 소켓 사용](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
 - [비동기 서버 소켓 사용](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
 - [클라이언트 소켓 사용](../../../docs/framework/network-programming/using-client-sockets.md)

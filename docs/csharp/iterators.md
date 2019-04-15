@@ -3,12 +3,12 @@ title: 반복기
 description: 기본 제공 C# 반복기를 사용하는 방법 및 사용자 지정 반복기 메서드를 만드는 방법을 알아봅니다.
 ms.date: 06/20/2016
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: 37ed45fc563eacf0c6bf412dcfb28dbc6db2bb17
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: f1be4e9a8b67f0e71615c730af4316253224b888
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58126047"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155222"
 ---
 # <a name="iterators"></a>반복기
 
@@ -238,5 +238,3 @@ finally
 ```
 
 다행히도 이러한 세부 정보를 모두 기억할 필요가 없습니다. `foreach` 문에서 이러한 차이를 모두 처리합니다. 컴파일러는 이러한 구문에 대한 올바른 코드를 생성합니다. 
-
-

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6ddd7866-9804-4571-84de-83f5cc017a5a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fc265e4a7ceec291d645346bb012e2ed4600d22
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: 4cc9d592bc2030cdd17e7f87d7c5ac458dc01106
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890386"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124815"
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>콜백 메서드로 대리자 마샬링
 이 샘플에서는 함수 포인터가 필요한 관리되지 않는 함수에 대리자를 전달하는 방법을 보여 줍니다. 대리자는 메서드에 대한 참조를 보유할 수 있는 클래스이고 형식이 안전한 함수 포인터나 콜백 함수에 해당합니다.
@@ -53,6 +53,7 @@ Callback 샘플에서는 원래 함수 선언과 함께 표시되는 다음과 �
 [!code-vb[Conceptual.Interop.Marshaling#38](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/callback.vb#38)]
 
 ## <a name="see-also"></a>참고 항목
+
 - [기타 마샬링 샘플](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ss9sb93t(v=vs.100))
 - [플랫폼 호출 데이터 형식](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
 - [관리 코드에서 프로토타입 만들기](creating-prototypes-in-managed-code.md)

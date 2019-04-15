@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 97ca78e154eb25e863256e06caa119fe753bc344
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: abb89099c4c8a5d9c0e55ef8f357faf44e75b045
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761353"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234192"
 ---
 ### <a name="wpf-spell-checking-in-text-enabled-controls-will-not-work-in-windows-10-for-languages-not-in-the-oss-input-language-list"></a>텍스트 지원 컨트롤의 WPF 맞춤법 검사는 Windows 10에서 OS의 입력된 언어 목록에 없는 언어에 대해서는 작동하지 않습니다.
 
@@ -15,4 +15,3 @@ ms.locfileid: "58761353"
 |범위|Microsoft Edge|
 |버전|4.6|
 |형식|런타임|
-

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: 30b61a662170b87a557a1a2ea094301ba6401742
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6b3808a2d73070cc07b31eb0fca7ca9d6af8cdb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608681"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200547"
 ---
 # <a name="proxy-configuration"></a>프록시 구성
 프록시 서버는 리소스에 대한 클라이언트 요청을 처리합니다. 프록시는 해당 캐시에서 요청한 리소스를 반환하거나 리소스가 있는 서버로 요청을 전달할 수 있으며, 원격 서버로 전송되는 요청 수를 줄여 네트워크 성능을 개선할 수 있습니다. 프록시를 사용하여 리소스에 대한 액세스를 제한할 수도 있습니다.  
@@ -76,6 +76,7 @@ ms.locfileid: "54608681"
 ```  
   
 ## <a name="see-also"></a>참고 항목
+
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.GlobalProxySelection>
 - [자동 프록시 검색](../../../docs/framework/network-programming/automatic-proxy-detection.md)

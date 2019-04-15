@@ -2,12 +2,12 @@
 title: 피어 투 피어 네트워킹 시나리오
 ms.date: 03/30/2017
 ms.assetid: d23b1a64-2e08-4014-882a-c1dd766bdcc2
-ms.openlocfilehash: 7795bae8fa9ea6b5192f16dfe616c0bf5d543c80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c38f144fccd9376a09f50a735a692a0e7b9d22e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669005"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216836"
 ---
 # <a name="peer-to-peer-networking-scenarios"></a>피어 투 피어 네트워킹 시나리오
 피어 투 피어 네트워킹에서는 다음 시나리오를 사용하고 향상시킵니다.  
@@ -69,4 +69,5 @@ ms.locfileid: "54669005"
 -  
   
 ## <a name="see-also"></a>참고 항목
+
 - <xref:System.Net.PeerToPeer.Collaboration>

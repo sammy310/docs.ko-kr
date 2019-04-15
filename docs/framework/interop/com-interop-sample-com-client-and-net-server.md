@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a219cb2c-9fa2-4c90-9b26-939e0788f178
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc2cd6b59fe7d05e4973d8a9ece13d9ae7f91e7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a928dde8615589cbc8e502a9b5dd033beded4c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548549"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086756"
 ---
 # <a name="com-interop-sample-com-client-and-net-server"></a>COM Interop 샘플: COM 클라이언트 및 .NET 서버
 이 샘플에서는 담보 대출 계산을 수행하는 [COM 클라이언트](#cpconcominteropsamplecomclientnetserveranchor1) 및 [.NET 서버](#cpconcominteropsamplecomclientnetserveranchor2)의 상호 운용을 보여 줍니다. 이 예제에서 클라이언트는 관리되는 `Loan` 클래스 인스턴스를 만들고 호출한 다음 4개의 인수(4개 중 하나는 0임)를 인스턴스에 전달하고 계산 내용을 표시합니다. 이 샘플의 코드 예제는 이 섹션 전반에 표시됩니다.  
@@ -390,4 +390,5 @@ namespace LoanLib {
 ```  
   
 ## <a name="see-also"></a>참고 항목
+
 - [.NET Framework 구성 요소를 COM에 노출](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)

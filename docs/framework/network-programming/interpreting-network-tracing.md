@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text, network tracing output
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
-ms.openlocfilehash: 8813bf68ee2b354ed7fc5e981904b8e4b807c1be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00df193671255e7b40f5c4b86ee952a3e20e3a40
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576527"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177569"
 ---
 # <a name="interpreting-network-tracing"></a>네트워크 추적 해석
 네트워크 추적이 사용하도록 설정되면 추적 기능을 사용하여 애플리케이션이 다양한 <xref:System.Net> 클래스 멤버에 대해 실행하는 호출을 캡처할 수 있습니다. 이러한 호출의 출력은 다음 예제와 비슷할 수 있습니다.  
@@ -45,6 +45,7 @@ ms.locfileid: "54576527"
  `Connection: Close`  
   
 ## <a name="see-also"></a>참고 항목
+
 - [네트워크 추적 사용](../../../docs/framework/network-programming/enabling-network-tracing.md)
 - [방법: 네트워크 추적 구성](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)
 - [.NET Framework의 네트워크 추적](../../../docs/framework/network-programming/network-tracing.md)

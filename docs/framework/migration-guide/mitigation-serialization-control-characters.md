@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: e065d458-a128-44f2-9f17-66af9d5be954
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31f946fa01f3d6334011098d12483445159ce54a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3355841298e039652eb81918eac98186c1a1f833
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738120"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182125"
 ---
 # <a name="mitigation-serialization-of-control-characters-with-the-datacontractjsonserializer"></a>완화: DataContractJsonSerializer로 제어 문자 serialization
 
@@ -43,4 +43,5 @@ ms.locfileid: "54738120"
 ```
  
 ## <a name="see-also"></a>참고 항목
-- [.NET Framework 4.7.1의 대상 다시 지정 변경 내용](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
+
+- [.NET Framework 4.7의 변경 내용 대상 변경](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)

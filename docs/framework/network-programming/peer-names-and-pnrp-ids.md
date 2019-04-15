@@ -2,12 +2,12 @@
 title: 피어 이름 및 PNRP ID
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
-ms.openlocfilehash: 3f82d472e1f8913e2f518abbefa2bb6407d6f54c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7e92519bede478a5e26a88a56236f987c93c441
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690791"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173110"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>피어 이름 및 PNRP ID
 피어 이름은 통신의 엔드포인트를 나타내며, 컴퓨터, 사용자, 그룹, 서비스 또는 IPv6 주소로 확인될 수 있는 피어와 연결된 모든 항목이 될 수 있습니다. 피어 이름 확인 프로토콜(PNRP)은 클라우드 멤버를 확인하는 데 사용되는 PNRP ID를 만드는 데 통계적으로 고유한 피어 이름을 사용합니다.  
@@ -31,5 +31,6 @@ ms.locfileid: "54690791"
  이렇게 PNRP ID는 P2P ID와 서비스 위치가 조합된 형식이기 때문에 단일 컴퓨터에서 여러 PNRP ID를 등록할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - <xref:System.Net.PeerToPeer.PeerName>
 - <xref:System.Net.PeerToPeer>

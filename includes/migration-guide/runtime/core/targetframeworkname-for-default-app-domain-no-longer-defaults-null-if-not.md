@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f221f923381d874e1d9e8b420811a770d86f7578
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: cbe1b32fa40e509f620845866c7a584e37f49a80
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761370"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234235"
 ---
 ### <a name="targetframeworkname-for-default-app-domain-no-longer-defaults-to-null-if-not-set"></a>기본 앱 도메인에 대한 TargetFrameworkName을 설정하지 않으면 더 이상 null을 기본값으로 하지 않습니다
 
@@ -16,4 +16,3 @@ ms.locfileid: "58761370"
 |버전|4.6|
 |형식|런타임|
 |영향을 받는 API|<ul><li><xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=nameWithType></li></ul>|
-
