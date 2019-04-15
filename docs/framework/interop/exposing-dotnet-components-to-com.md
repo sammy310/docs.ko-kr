@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d90b3c23af39125d888824dbfabf798a3e73985
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: db0493f437d2546302a10bf52aebf326ea8a694c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218738"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345770"
 ---
 # <a name="exposing-net-framework-components-to-com"></a>.NET Framework 구성 요소를 COM에 노출
 .NET 형식을 작성하고 비관리 코드에서 해당 형식을 사용하는 것은 개발자들에게 독특한 활동입니다. 이 섹션에서는 COM 클라이언트와 통합되는 관리 코드를 작성하기 위한 몇 가지 팁을 설명합니다.  
@@ -34,22 +34,23 @@ ms.locfileid: "56218738"
   
 #### <a name="to-consume-a-managed-type-from-com"></a>COM에서 관리되는 형식을 사용하려면  
   
-1.  [COM에 어셈블리를 등록합니다](../../../docs/framework/interop/registering-assemblies-with-com.md).  
+1. [COM에 어셈블리를 등록합니다](../../../docs/framework/interop/registering-assemblies-with-com.md).  
   
      어셈블리의 형식(및 형식 라이브러리)은 디자인 타임에 등록되어야 합니다. 설치 관리자가 어셈블리를 등록하지 않으면 COM 개발자에게 Regasm.exe를 사용하도록 지시합니다.  
   
-2.  [COM에서 .NET 형식을 참조합니다](../../../docs/framework/interop/how-to-reference-net-types-from-com.md).  
+2. [COM에서 .NET 형식을 참조합니다](../../../docs/framework/interop/how-to-reference-net-types-from-com.md).  
   
      COM 개발자는 현재 사용하는 동일한 도구와 기술을 통해 어셈블리에서 형식을 참조할 수 있습니다.  
   
-3.  [.NET 개체를 호출합니다](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100)).  
+3. [.NET 개체를 호출합니다](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100)).  
   
      COM 개발자는 관리되는 형식에서 메서드를 호출하는 동일한 방법으로 .NET 개체에서 메서드를 호출할 수 있습니다. 예를 들어 COM **CoCreateInstance** API는 .NET 개체를 활성화합니다.  
   
-4.  [COM 액세스를 위해 애플리케이션을 배포합니다](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100)).  
+4. [COM 액세스를 위해 애플리케이션을 배포합니다](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100)).  
   
      강력한 이름의 어셈블리는 전역 어셈블리 캐시에 설치할 수 있고 게시자의 시그니처가 필요합니다. 강력한 이름이 아닌 어셈블리는 클라이언트의 애플리케이션 디렉터리에 설치해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [비관리 코드와의 상호 운용](../../../docs/framework/interop/index.md)
 - [COM Interop 샘플: COM 클라이언트 및 .NET 서버](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)

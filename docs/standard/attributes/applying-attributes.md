@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83fe9180e222dd71c9d94810e4eedbac398acad4
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 2a2e34d0544c8105b539d36a4231c6efb4df0ee5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836476"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337697"
 ---
 # <a name="applying-attributes"></a>특성 적용
 다음 프로세스를 사용하여 코드 요소에 특성을 적용합니다.  
   
-1.  새 특성을 정의하거나 .NET Framework에서 기존 특성의 네임스페이스를 가져와 이 특성을 사용합니다.  
+1. 새 특성을 정의하거나 .NET Framework에서 기존 특성의 네임스페이스를 가져와 이 특성을 사용합니다.  
   
-2.  코드 요소 바로 앞에 특성을 배치하여 이 요소에 해당 특성을 적용합니다.  
+2. 코드 요소 바로 앞에 특성을 배치하여 이 요소에 해당 특성을 적용합니다.  
   
      각 언어마다 고유한 특성 구문이 있습니다. C++ 및 C#의 경우 특성은 대괄호로 묶고, 공백으로 요소와 구분되며, 줄 바꿈 문자를 사용할 수 있습니다. Visual Basic의 경우 특성은 꺾쇠 괄호로 묶고, 같은 논리 줄에 있어야 합니다. 줄 바꿈이 필요하면 줄 연속 문자를 사용할 수 있습니다.
   
-3.  특성에 대한 위치 매개 변수와 명명된 매개 변수를 지정합니다.  
+3. 특성에 대한 위치 매개 변수와 명명된 매개 변수를 지정합니다.  
   
      위치 매개 변수는 필수 요소로서 명명된 매개 변수 앞에 와야 하며, 특성의 생성자 중 하나의 매개 변수에 해당합니다. 명명된 매개 변수는 선택적 요소이며, 특성의 읽기/쓰기 속성에 해당합니다. C++ 및 C#의 경우 각 선택적 매개 변수에 `name`=`value`를 지정합니다. 여기서 `name`은 속성의 이름입니다. Visual Basic의 경우 `name`:=`value`를 지정합니다.  
   

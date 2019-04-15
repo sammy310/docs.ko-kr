@@ -6,12 +6,12 @@ helpviewer_keywords:
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: 979b9ea58f69f83829c364966a9edeb9e0644309
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db66e8a264bc0381a2ff4689c4427047a158eb32
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494378"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336839"
 ---
 # <a name="how-to-start-services"></a>방법: 서비스 시작
 서비스가 설치되면 서비스를 시작해야 합니다. 시작하면 서비스 클래스의 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 메서드가 호출됩니다. 일반적으로 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 메서드는 서비스가 수행할 유용한 정의합니다. 시작된 후 서비스는 수동으로 일시 중지하거나 중지할 때까지 활성 상태로 유지됩니다.  
@@ -27,11 +27,11 @@ ms.locfileid: "54494378"
   
 ### <a name="to-specify-how-a-service-should-start"></a>서비스 시작 방식을 지정하려면  
   
-1.  서비스를 만든 후 서비스에 필요한 설치 관리자를 추가합니다. 자세한 내용은 [방법: 서비스 애플리케이션에 설치 관리자 추가](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)를 참조하세요.  
+1. 서비스를 만든 후 서비스에 필요한 설치 관리자를 추가합니다. 자세한 내용은 [방법: 서비스 애플리케이션에 설치 관리자 추가](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)를 참조하세요.  
   
-2.  디자이너에서 작업 중인 서비스에 대한 서비스 설치 관리자를 클릭합니다.  
+2. 디자이너에서 작업 중인 서비스에 대한 서비스 설치 관리자를 클릭합니다.  
   
-3.  **속성** 창에서 <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> 속성을 다음 중 하나로 설정합니다.  
+3. **속성** 창에서 <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> 속성을 다음 중 하나로 설정합니다.  
   
     |서비스 설치 시기|설정 값|  
     |----------------------------------|--------------------|  
@@ -48,15 +48,15 @@ ms.locfileid: "54494378"
   
 ### <a name="to-manually-start-a-service-from-server-explorer"></a>서버 탐색기에서 서비스를 수종으로 시작하려면  
   
-1.  **서버 탐색기**에서 원하는 서버가 아직 나열되지 않는 경우 추가합니다. 자세한 내용은 방법: 서버 탐색기/데이터베이스 탐색기 액세스 및 초기화를 참조하세요.  
+1. **서버 탐색기**에서 원하는 서버가 아직 나열되지 않는 경우 추가합니다. 자세한 내용은 방법: 서버 탐색기/데이터베이스 탐색기 액세스 및 초기화를 참조하세요.  
   
-2.  **서비스** 노드를 확장한 다음 시작할 서비스를 찾습니다.  
+2. **서비스** 노드를 확장한 다음 시작할 서비스를 찾습니다.  
   
-3.  서비스 이름을 마우스 오른쪽 단추로 클릭하고 **시작**을 클릭합니다.  
+3. 서비스 이름을 마우스 오른쪽 단추로 클릭하고 **시작**을 클릭합니다.  
   
 ### <a name="to-manually-start-a-service-from-services-control-manager"></a>서비스 제어 관리자에서 서비스를 수동으로 시작하려면  
   
-1.  다음 중 하나를 수행하여 **서비스 제어 관리자**를 엽니다.  
+1. 다음 중 하나를 수행하여 **서비스 제어 관리자**를 엽니다.  
   
     -   Windows XP 및 2000 Professional의 경우 바탕 화면에서 **내 컴퓨터**를 마우스 오른쪽 단추로 클릭한 다음, **관리**를 클릭합니다. 대화 상자가 나타나면 **서비스 및 애플리케이션** 노드를 확장합니다.  
   
@@ -69,15 +69,16 @@ ms.locfileid: "54494378"
   
      이제 창의 **서비스** 섹션에 서비스가 나타납니다.  
   
-2.  목록에서 서비스를 선택하고 마우스 오른쪽 단추로 클릭한 다음, **시작**을 클릭합니다.  
+2. 목록에서 서비스를 선택하고 마우스 오른쪽 단추로 클릭한 다음, **시작**을 클릭합니다.  
   
 ### <a name="to-manually-start-a-service-from-code"></a>코드에서 서비스를 수동으로 시작하려면  
   
-1.  <xref:System.ServiceProcess.ServiceController> 클래스의 인스턴스를 만들고 관리할 서비스와 상호 작용하도록 구성합니다.  
+1. <xref:System.ServiceProcess.ServiceController> 클래스의 인스턴스를 만들고 관리할 서비스와 상호 작용하도록 구성합니다.  
   
-2.  <xref:System.ServiceProcess.ServiceController.Start%2A> 메서드를 호출하여 서비스를 시작합니다.  
+2. <xref:System.ServiceProcess.ServiceController.Start%2A> 메서드를 호출하여 서비스를 시작합니다.  
   
 ## <a name="see-also"></a>참고 항목
-- [Windows 서비스 애플리케이션 소개](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+
+- [Windows 서비스 응용 프로그램 소개](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
 - [방법: Windows 서비스 만들기](../../../docs/framework/windows-services/how-to-create-windows-services.md)
 - [방법: 서비스 애플리케이션에 설치 관리자 추가](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

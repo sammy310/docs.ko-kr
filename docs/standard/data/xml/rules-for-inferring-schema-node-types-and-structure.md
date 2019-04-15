@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4153638e570bfdb7fe65e5c9cd285f56644fea3f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c2f28490203bcc4853bc6736ce7089f308bc275
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683666"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338711"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>스키마 노드 형식 및 구조 유추 규칙
 이 항목에서는 스키마 유추 과정에서 XML 문서의 노드 형식을 XSD(XML 스키마 정의 언어) 구조로 변환하는 방법을 설명합니다.  
@@ -18,21 +18,21 @@ ms.locfileid: "54683666"
 ## <a name="element-inference-rules"></a>요소 유추 규칙  
  이 단원에서는 요소 선언의 유추 규칙에 대해 설명합니다. 유추되는 8개의 요소 선언 구조는 다음과 같습니다.  
   
-1.  단순 형식 요소  
+1. 단순 형식 요소  
   
-2.  빈 요소  
+2. 빈 요소  
   
-3.  특성을 가진 빈 요소  
+3. 특성을 가진 빈 요소  
   
-4.  특성 및 단순 내용을 가진 요소  
+4. 특성 및 단순 내용을 가진 요소  
   
-5.  자식 요소 시퀀스를 가진 요소  
+5. 자식 요소 시퀀스를 가진 요소  
   
-6.  자식 요소 시퀀스와 특성을 가진 요소  
+6. 자식 요소 시퀀스와 특성을 가진 요소  
   
-7.  자식 요소 선택 시퀀스를 가진 요소  
+7. 자식 요소 선택 시퀀스를 가진 요소  
   
-8.  자식 요소 선택 시퀀스와 특성을 가진 요소  
+8. 자식 요소 선택 시퀀스와 특성을 가진 요소  
   
 > [!NOTE]
 >  모든 `complexType` 선언은 익명 형식으로 유추됩니다. 유추되는 요소 중 루트 요소만이 전역 요소이며, 기타 모든 요소는 로컬 요소입니다.  
