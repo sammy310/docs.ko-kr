@@ -16,18 +16,18 @@ F#은 정확하고 유지 보수가 쉬운 코드를 만들수 있는 함수형 
 F# 프로그래밍은 주로 유형 추론 및 일반화 된 유형 및 함수를 자동으로 정의하는 작업을 포함합니다. 따라서 프로그래밍의 세부 사항보다는 문제 도메인에 집중하고 데이터를 조작하는 데 집중할 수 있습니다.
 
 ```fsharp
-open System // System 네임 스페이스의 기능에 대한 액세스를 가져옵니다.
+open System // Gets access to functionality in System namespace.
 
-// 이름을 사용하여 인사말을 만드는 함수를 정의합니다.
+// Defines a function that takes a name and produces a greeting.
 let getGreeting name =
     sprintf "Hello, %s! Isn't F# great?" name
 
 [<EntryPoint>]
 let main args =
-    // 이름 목록을 정의 합니다. 
+    // Defines a list of names
     let names = [ "Don"; "Julia"; "Xi" ]
 
-    // 모든 이름을 사용한 인사말을 출력합니다!
+    // Prints a greeting for each name!
     names
     |> List.map getGreeting
     |> List.iter (fun greeting -> printfn "%s" greeting)
@@ -52,7 +52,7 @@ F#은 다음과 같은 다양한 기능이 있습니다.
 [Records](language-reference/records.md) 및 [Discriminated Unions](language-reference/discriminated-unions.md)와 같은 데이터 타입을 사용하면 복잡한 데이터와 도메인을 표현할 수 있습니다.
 
 ```fsharp
-// Records를 사용한 데이터 그룹
+// Group data with Records
 type SuccessfulWithdrawal = {
     Amount: decimal
     Balance: decimal
@@ -64,7 +64,7 @@ type FailedWithdrawal = {
     IsOverdraft: bool
 }
 
-// Discriminated Unions을 사용하여 하나 이상의 형식 데이터 표현
+// Use discriminated unions to represent data of 1 or more forms
 type WithdrawalResult =
     | Success of SuccessfulWithdrawal
     | InsufficientFunds of FailedWithdrawal
