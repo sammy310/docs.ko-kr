@@ -20,7 +20,7 @@ F# 가이드에서는 F# 언어를 배우기 위한 많은 리소스를 제공�
 
 [F# 둘러보기](tour.md)에서는 많은 코드 샘플과 함께 언어의 주요 기능에 대한 개요를 제공합니다. F# 핵심 기능이 실제로 쓰이는 방법에 관심이 있는 경우 권장됩니다.
 
-[Visual Studio에서 F# 시작하기](get-started/get-started-visual-studio.md)에서는 Windows 환경에서 작업 중이고 완전한 Visual Studio IDE(통합 개발 환경) 기능을 사용하려는 경우 적합합니다.
+[Visual Studio에서 F# 시작하기](get-started/get-started-visual-studio.md)는 Windows 환경에서 작업 중이고 완전한 Visual Studio IDE(통합 개발 환경) 기능을 사용하려는 경우 적합합니다.
 
 [Mac용 Visual Studio에서 F#으로 시작](get-started/get-started-with-visual-studio-for-mac.md)은 macOS 환경에서 Visual Studio IDE 사용하려는 경우 참고합니다.
 
@@ -60,7 +60,7 @@ F# 가이드에서는 F# 언어를 배우기 위한 많은 리소스를 제공�
 
 ## <a name="the-f-software-foundation"></a>F# 소프트웨어 파운데이션
 
-Microsoft는 F# 언어와 Visual Studio 도구의 주 개발자이지만, F#은 독립적인 F# 소프트웨어 파운데이션(FSSF) 재단의 지원을 받습니다.
+Microsoft는 F# 언어 및 Visual Studio 도구의 주 개발자이지만, F#은 독립적인 재단인 F# 소프트웨어 파운데이션(FSSF)의 지원을 받습니다.
 
 F# 소프트웨어 파운데이션의 임무는 F# 프로그래밍 언어를 홍보하고 보호하고 발전시키며, F# 프로그래머의 다양한 국제 커뮤니티의 성장을 지원하고 촉진시키는 것입니다.
 
