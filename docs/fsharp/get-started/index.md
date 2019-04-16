@@ -1,6 +1,6 @@
----
-title: 시작F#
-description: 시작 하는 방법을 확인 합니다 F# 프로그래밍 언어입니다.
+﻿---
+title: F# 시작
+description: F# 프로그래밍 언어를 시작하는 방법을 확인합니다.
 ms.date: 12/08/2018
 ms.openlocfilehash: df966d6537731650a5f2fcd795ad638ace1b059f
 ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
@@ -9,7 +9,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 02/28/2019
 ms.locfileid: "56971418"
 ---
-# <a name="get-started-with-f"></a>F #과 함께 시작\#
+# <a name="get-started-with-f"></a>F# 시작
 
 F#은 컴퓨터나 온라인으로 시작할 수 있습니다.
 
