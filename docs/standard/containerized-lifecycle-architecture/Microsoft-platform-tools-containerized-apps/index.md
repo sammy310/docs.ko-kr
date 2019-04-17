@@ -4,12 +4,12 @@ description: Docker 응용 프로그램 수명 주기를 지원 하기 위해 Mi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 811ebd46c97b53176bf8bb9e47a366575e273efb
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 8536703a520434c0e393c5f46005c2ac02d5d849
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680196"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672266"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Microsoft 플랫폼 및 컨테이너 화 된 앱에 대 한 도구를 소개
 
@@ -17,7 +17,7 @@ ms.locfileid: "57680196"
 
 그림 3-1 (응용 프로그램 개발, DevOps 인프라 프로세스 및 IT 관리 및 작업) 여러 팀에서 제공 하는 작업의 유형에 따라 분류 Docker 앱의 수명 주기에서 주요 사항 보여 줍니다. 일반적으로 기업에서 각 영역을 담당하는 "가상 사용자"의 프로필은 다릅니다. 기술도 마찬가지입니다.
 
-![Microsoft 도구입니다. 개발 및 설계 작업: Windows, VS 및 VS 코드를.NET Core, Azure Kubernetes Service에 대 한 docker 엔진입니다. 빌드/테스트/배송 워크 로드: Azure DevOps, Team Foundation Server에서 Docker CLI, Azure Kubernetes Service. 실행/모니터링/관리 작업: Application Insights, Azure 포털 Azure Kubernetes 서비스를 Service Fabric 다른 오 케 스트레이 터.](./media/image1.png)
+![Microsoft 도구입니다. 개발 및 설계 작업: Windows, VS 및 VS 코드를.NET Core, Azure Kubernetes Service에 대 한 docker 엔진입니다. 빌드/테스트/배송 워크 로드: Azure DevOps, Team Foundation Server에서 Docker CLI, Azure Kubernetes Service. 실행/모니터링/관리 작업: Azure Monitor, Azure 포털 Azure Kubernetes 서비스를 Service Fabric에서 다른 오 케 스트레이 터입니다.](./media/image1.png)
 
 **그림 3-1.** Microsoft 플랫폼 및 도구를 사용 하 여 컨테이너 화 된 Docker 응용 프로그램에 대 한 수명 주기에서 주요 사항
 
@@ -51,7 +51,7 @@ ms.locfileid: "57680196"
 
   - **오픈 소스 도구** 하므로 AKS는 오케스트레이션 엔진에 대 한 표준 API 끝점을 노출 하 고 가장 인기 있는 도구가 AKS와 호환 되는, 대부분의 경우 기본적으로 작동 합니다-시각화, 모니터링, 포함 명령줄 도구 및 사용 가능 해지면 향후 도구입니다.
 
-  - **Application Insights** 모든 각도의 프로덕션 환경 모니터링 하는 Azure의 soution 합니다. 응용 프로그램에서 시스템 생성 로그 데이터를 받을 수 있도록 방금 서비스에 해당 SDK를 설정 하 여 프로덕션 Docker 응용 프로그램을 모니터링할 수 있습니다.
+  - **Azure Monitor** 프로덕션 환경의 모든 각도 모니터링 하는 Azure의 솔루션입니다. 응용 프로그램에서 시스템 생성 로그 데이터를 받을 수 있도록 방금 서비스에 해당 SDK를 설정 하 여 프로덕션 Docker 응용 프로그램을 모니터링할 수 있습니다.
 
 따라서 Microsoft는 컨테이너화된 Docker 애플리케이션의 전체 수명 주기에 대한 완벽한 기반을 제공합니다. 그러나 *컬렉션의 제품 및 기술 필요에 따라 선택 하 고 기존 통합할 수 있도록 하는 도구 및 프로세스가*합니다. 광범위한 접근법의 유연성과 심층적인 기능의 강력함은 컨테이너화된 Docker 애플리케이션 개발 분야에서 Microsoft가 유리한 위치를 점할 수 있게 해줍니다.
 
