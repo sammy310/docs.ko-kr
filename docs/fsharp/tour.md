@@ -1,6 +1,6 @@
 ---
 title: F# 둘러보기
-description: F# 코드 샘플을 사용 하 여이 자습서에서 언어 프로그래밍의 주요 기능 중 일부를 검토 합니다.
+description: 이 자습서에서는 예제 코드를 사용하여 F# 프로그래밍 언어의 주요 기능을 살펴봅니다.
 ms.date: 11/06/2018
 ms.openlocfilehash: 4b3ec7fd2c42712440ea7d7045c560ab20390b45
 ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
@@ -9,19 +9,19 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 03/16/2019
 ms.locfileid: "58125579"
 ---
-# <a name="tour-of-f"></a>F 둘러보기\#
+# <a name="tour-of-f"></a>F\# 둘러보기
 
-F#에 대해 자세히 알아보려면 읽기 및 F# 코드를 작성 하는 가장 좋은 방법은 합니다. 이 문서는 F# 언어의 주요 기능 중 일부 둘러보기 프록시로 컴퓨터에서 실행할 수 있는 몇 가지 코드 조각을 제공 합니다. 개발 환경을 설정 하는 데 대 한 자세한 내용은 체크 아웃 [Getting Started](tutorials/getting-started/index.md)합니다.
+F#에 대해 자세히 이해하려면 F# 코드를 읽고 작성하는 방법이 가장 좋습니다. 이 문서에서는 F# 언어의 주요 기능 중 일부를 둘러보고 컴퓨터에서 실행할 수 있는 코드 조각을 제공합니다. 개발 환경 설정에 대한 자세한 내용은 [시작하기](tutorials/getting-started/index.md)를 참조하십시오.
 
-F#에 두 가지 기본 개념이 있습니다: 함수 및 형식입니다.  이 둘러보기가이 두 개념에 해당 하는 언어의 기능을 강조 됩니다.
+F#에 함수(function)와 유형(type)이라는 두 가지 기본 개념이 있습니다. 둘러보기에서는 이 두 가지 개념에 해당하는 언어의 기능을 강조합니다.
 
-## <a name="executing-the-code-online"></a>온라인에서 코드를 실행합니다.
+## <a name="executing-the-code-online"></a>온라인에서 코드 실행
 
-없는 경우 F# 컴퓨터에 설치를 실행할 수 있습니다 사용 하 여 온라인 샘플의 모든 합니다 [페이블 REPL](https://fable.io/repl/)합니다. 페이블 언어는 F# 브라우저에서 직접 실행 합니다. REPL에서 나오는 예제를 보려는 체크 아웃 **샘플 > 알아보기 > 둘러보기 F#**  페이블 REPL.의 왼쪽 메뉴 모음에서
+자신의 컴퓨터에 F#이 설치되어 있지 않은 경우 [Fable REPL](https://fable.io/repl/)을 사용하여 모든 예제 코드를 온라인에서 실행할 수 있습니다. Fable은 브라우저에서 직접 실행할 수 있는 F# 언어입니다. REPL 예제를 보려면 Fable REPL의 왼편 메뉴 모음에서 **Samples > Learn > Tour of F#**을 확인하세요.
 
-## <a name="functions-and-modules"></a>함수 및 모듈
+## <a name="functions-and-modules"></a>함수와 모듈
 
-F# 프로그램의 가장 기본적인 조각 ***functions*** 구조로 ***모듈***합니다.  [함수](language-reference/functions/index.md) 출력을 생성 하는 입력에 대해 작업을 수행 하 고 아래에 구성 됩니다 [모듈](language-reference/modules.md)는 F#에서 작업을 그룹화 하는 기본 방법입니다.  사용 하 여 정의 된 합니다 [ `let` 바인딩](language-reference/functions/let-bindings.md), 함수 이름을 지정 하 고 해당 인수를 정의 합니다.
+F# 프로그램의 가장 기본적인 부분은 ***모듈***로 구성된 ***함수***입니다. [함수](language-reference/functions/index.md)는 입력에 대한 작업으로 출력을 생성하고, F#에서 작업을 그룹화하는 기본 방식인 [모듈](language-reference/modules.md)로 구성됩니다. [`let` 바인딩](language-reference/functions/let-bindings.md)을 사용하여 정의하며, 함수 이름을 지정하고 해당 인수를 정의할 수 있습니다.
 
 [!code-fsharp[BasicFunctions](../../samples/snippets/fsharp/tour.fs#L101-L133)]
 
