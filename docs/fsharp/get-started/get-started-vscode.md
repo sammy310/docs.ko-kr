@@ -13,7 +13,7 @@ ms.locfileid: "57846573"
 
 [Visual Studio Code](https://code.visualstudio.com)에서 [Ionide 플러그인](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)을 사용하여 F# 코드를 작성하면 IntelliSense와 기본적인 코드 리팩토링이 가능한 경량이면서 다양한 플랫폼에서 사용할 수 있는 IDE(Integrated Development Environment) 환경을 얻을 수 있습니다. 이 플러그인을 더 자세히 알고 싶다면 [Ionide.io](http://ionide.io)를 방문합니다.
 
-시작하려면 [F#과 Ionide 플러그인의 설치](install-fsharp.md#install-f-with-visual-studio-code)가 올바르게 되어있는지 확인 합니다.
+시작하려면 [F#과 Ionide 플러그인의 설치](install-fsharp.md#install-f-with-visual-studio-code)가 올바르게 되어있는지 확인합니다.
 
 > [!NOTE]
 > Ionide는 플랫폼 간 호환성 문제가 발생할 수 있는 닷넷 코어가 아닌 .NET Framework F# 프로젝트를 생성합니다. **Linux** 또는 **OSX**에서 실행하는 경우 시작하기 쉬운 방법은 [명령줄 도구](https://docs.microsoft.com/en-us/dotnet/fsharp/get-started/get-started-command-line)를 사용하는 것입니다.
@@ -22,7 +22,7 @@ ms.locfileid: "57846573"
 
 새 F# 프로젝트를 생성하기 위해 새 폴더(원하는 이름을 지정할 수 있습니다)에서 Visual Studio Code를 엽니다.
 
-다음으로, 명령 팔레트를 열고(**보기 > 명령 팔레트**) 다음을 입력 합니다.
+다음으로, 명령 팔레트를 열고(**보기 > 명령 팔레트**) 다음을 입력합니다.
 
 ```
 > F# new project
@@ -31,7 +31,7 @@ ms.locfileid: "57846573"
 [FORGE](https://github.com/fsharp-editing/Forge) 프로젝트에 의해 동작합니다.
 
 > [!NOTE]
-> 템플릿 옵션을 보이지 않으면 명령 팔레트에서 다음 명령을 실행하여 템플릿을 새로 고쳐 보세요. `>F#: Refresh Project Templates`
+> 템플릿 옵션을 보이지 않으면 명령 팔레트에서 다음 명령을 실행하여 템플릿을 새로 고쳐보세요: `>F#: Refresh Project Templates`
 
 선택 "F#: 새 프로젝트 "를 눌러 **Enter**합니다. 이 프로젝트 템플릿을 선택 하는 다음 단계를 안내 합니다.
 
