@@ -19,9 +19,9 @@ F#을 컴퓨터에 처음 설치하거나 사용하는 방법은 여러가지가
 
 | OS | Visual Studio 선호 | Visual Studio Code 선호 | 명령줄 선호 |
 | -- |------------------------|--------------------------|-----------------------------|-------------------------|
-| Windows | [Visual Studio 시작](get-started-visual-studio.md) | [Visual Studio Code 및 Ionide 시작](get-started-vscode.md) | [.NET Core CLI를 사용 하 여 시작](get-started-command-line.md) |
-| macOS | [Mac 용 VS를 사용 하 여 시작](get-started-with-visual-studio-for-mac.md) | [Visual Studio Code 및 Ionide 시작](get-started-vscode.md) | [.NET Core CLI를 사용 하 여 시작](get-started-command-line.md) |
-| Linux | N/A | [Visual Studio Code 및 Ionide 시작](get-started-vscode.md) | [.NET Core CLI를 사용 하 여 시작](get-started-command-line.md) |
+| Windows | [Visual Studio 시작](get-started-visual-studio.md) | [Visual Studio Code 및 Ionide 시작](get-started-vscode.md) | [.NET Core CLI를 사용하여 시작](get-started-command-line.md) |
+| macOS | [Mac 용 VS를 사용하여 시작](get-started-with-visual-studio-for-mac.md) | [Visual Studio Code 및 Ionide 시작](get-started-vscode.md) | [.NET Core CLI를 사용하여 시작](get-started-command-line.md) |
+| Linux | N/A | [Visual Studio Code 및 Ionide 시작](get-started-vscode.md) | [.NET Core CLI를 사용하여 시작](get-started-command-line.md) |
 
 일반적으로 나머지보다 더 나은 방법이라고 정해진 것은 없습니다. 가장 원하는 방법을 확인하려면 모든 방법으로 컴퓨터에서 F#을 사용해보는 것이 좋습니다.
 
