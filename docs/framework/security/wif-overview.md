@@ -3,15 +3,15 @@ title: Windows Identity Foundation 4.5 개요
 ms.date: 03/30/2017
 ms.assetid: 5f723345-7270-49e2-b638-b3a34bd40517
 author: BrucePerlerMS
-ms.openlocfilehash: 41829bee3df3e47c0ccd712ecc9a314e5971aba0
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 6165dbf32b777a8d82e756f84ed2415d6ed3d774
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838990"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613033"
 ---
 # <a name="windows-identity-foundation-45-overview"></a>Windows Identity Foundation 4.5 개요
-Windows Identity Foundation 4.5는 응용 프로그램에서 클레임 기반 ID를 구현하기 위한 일련의 .NET Framework 클래스입니다. 이를 사용하면 클레임 인식 응용 프로그램과 서비스의 이점을 더욱 쉽게 활용할 수 있습니다. WIF 4.5는 .NET Framework 버전 4.5 이상을 사용하는 웹 서비스 또는 웹 응용 프로그램에서 사용할 수 있습니다. WIF는 개방형 표준에 따라 공유 산업 비전을 구현하는 Microsoft 페더레이션 ID 소프트웨어 제품군의 일부분일 뿐입니다. 페더레이션 ID는 [AD FS(Active Directory® Federation Services)](https://go.microsoft.com/fwlink/?LinkID=247516) 2.0, [Microsoft Azure ACS(Access Control Services)](https://go.microsoft.com/fwlink/?LinkID=247517) 및 WIF와 같은 세 가지 구성 요소로 구성됩니다. 이러한 세 가지 구성 요소가 모여 Microsoft의 새로운 클레임 기반 클라우드 ID 및 액세스 플랫폼의 핵심을 형성합니다.  
+Windows Identity Foundation 4.5는 응용 프로그램에서 클레임 기반 ID를 구현하기 위한 일련의 .NET Framework 클래스입니다. 이를 사용하면 클레임 인식 응용 프로그램과 서비스의 이점을 더욱 쉽게 활용할 수 있습니다. WIF 4.5는 .NET Framework 버전 4.5 이상을 사용하는 웹 서비스 또는 웹 응용 프로그램에서 사용할 수 있습니다. WIF는 개방형 표준에 따라 공유 산업 비전을 구현하는 Microsoft 페더레이션 ID 소프트웨어 제품군의 일부분일 뿐입니다. 페더레이션된 Id에는 세 가지 구성 요소가 구성 됩니다. [활성 Directory® Federation Services](https://go.microsoft.com/fwlink/?LinkID=247516) (AD FS) 2.0 [Windows Azure Access Control Services](https://go.microsoft.com/fwlink/?LinkID=247517) (ACS) 및 WIF 합니다. 이러한 세 가지 구성 요소가 모여 Microsoft의 새로운 클레임 기반 클라우드 ID 및 액세스 플랫폼의 핵심을 형성합니다.  
   
  WIF에 대 한 자세한 내용은 참조는 [Windows Identity Foundation 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=149009) msdn Security Developer Center에서. WIF를 사용 하 여 응용 프로그램 만들기 소개를 참조 하세요 [Windows Identity Foundation 프로그래밍](https://go.microsoft.com/fwlink/?LinkId=210158) Vittorio bertocci가 (Microsoft Press에서 게시) 합니다.  
   
@@ -28,7 +28,7 @@ Windows Identity Foundation 4.5는 응용 프로그램에서 클레임 기반 ID
   
      또한, 프레임워크에서 웹 브라우저 클라이언트를 활성화할 수 있도록 WS-Federation을 지원하는 STS를 빌드할 수 있습니다. 이러한 STS를 Passive STS라고도 합니다.  
   
--   클레임 기반 ID를 사용하여 응용 프로그램을 보호하고 여러 ID 공급자의 사용자를 수락할 수 있도록 하는 Visual Studio 11의 새로운 ID와 액세스 도구입니다. 다음 URL에서이 WIF 도구를 다운로드할 수 있습니다: [ https://go.microsoft.com/fwlink/?LinkID=245849 ](https://go.microsoft.com/fwlink/?LinkID=245849) 에서 직접 또는 확장 관리자에서 직접 "id"를 검색 하 여 Visual Studio 11 내에서. 자세한 내용은 [Visual Studio 2012용 ID 및 액세스 도구](../../../docs/framework/security/identity-and-access-tool-for-vs.md)를 참조하세요.  
+-   클레임 기반 ID를 사용하여 응용 프로그램을 보호하고 여러 ID 공급자의 사용자를 수락할 수 있도록 하는 Visual Studio 11의 새로운 ID와 액세스 도구입니다. 다음 URL에서이 WIF 도구를 다운로드할 수 있습니다: <https://go.microsoft.com/fwlink/?LinkID=245849> 에서 직접 또는 확장 관리자에서 직접 "id"를 검색 하 여 Visual Studio 11 내에서. 자세한 내용은 [Visual Studio 2012용 ID 및 액세스 도구](../../../docs/framework/security/identity-and-access-tool-for-vs.md)를 참조하세요.  
   
  WIF는 다음과 같은 주요 시나리오를 지원합니다.  
   

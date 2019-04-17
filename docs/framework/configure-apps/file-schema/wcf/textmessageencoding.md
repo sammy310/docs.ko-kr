@@ -2,12 +2,12 @@
 title: <textMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: e6d834d0-356e-45eb-b530-bbefbb9ec3f0
-ms.openlocfilehash: e9942ce3ccbec949160ee70dd103d3c1799bd44d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e6e6d1907d89a09a72594a836f2192e9ad9c4290
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186305"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59614118"
 ---
 # <a name="textmessageencoding"></a>\<textMessageEncoding>
 텍스트 기반 XML 메시지에 사용되는 문자 인코딩 및 메시지 버전 관리를 지정합니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "59186305"
 |---------------|-----------------|  
 |maxReadPoolSize|새 판독기를 할당하지 않고 동시에 읽을 수 있는 메시지 수를 지정하는 정수입니다. 풀 크기가 커지면 작업 집합이 커지는 단점이 있지만 동작이 많을 경우의 시스템 안정성이 높아집니다. 기본값은 64입니다.|  
 |maxWritePoolSize|새 작성기를 할당하지 않고 동시에 보낼 수 있는 메시지 수를 지정하는 정수입니다. 풀 크기가 커지면 작업 집합이 커지는 단점이 있지만 동작이 많을 경우의 시스템 안정성이 높아집니다. 기본값은 16입니다.|  
-|messageVersion|바인딩을 사용하여 보낸 메시지의 SOAP 버전을 지정합니다. 유효한 값은 다음과 같습니다.<br /><br /> -   Soap11Addressing10<br />-Soap12addressing10<br /><br /> 기본값은 Soap12Addressing10입니다. 이 특성은 <xref:System.ServiceModel.Channels.MessageVersion> 형식입니다.|  
+|messageVersion|바인딩을 사용하여 보낸 메시지의 SOAP 버전을 지정합니다. 유효한 값은 다음과 같습니다.<br /><br /> -   Soap11Addressing10<br />-Soap12addressing10<br />-   Soap11<br />-Soap12<br /><br />기본값은 Soap12Addressing10입니다. 이 특성은 <xref:System.ServiceModel.Channels.MessageVersion> 형식입니다.|  
 |writeEncoding|바인딩에서 메시지를 내보내는 데 사용되는 문자 집합 인코딩을 지정합니다. 유효한 값은 다음과 같습니다.<br /><br /> -   UnicodeFffeTextEncoding: 유니코드 BigEndian 인코딩<br />-   Utf16TextEncoding: 유니코드 인코딩<br />-   Utf8TextEncoding: 8 비트 인코딩<br /><br /> 기본값은 Utf8TextEncoding입니다. 이 특성은 <xref:System.Text.Encoding> 형식입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
@@ -74,6 +74,6 @@ ms.locfileid: "59186305"
 - [메시지 인코더 선택](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
 - [메시지 인코딩](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
 - [바인딩](../../../../../docs/framework/wcf/bindings.md)
-- [바인딩 확장명](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [바인딩 확장](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

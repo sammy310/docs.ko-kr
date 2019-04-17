@@ -16,21 +16,22 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8786892d591a98ddcd7f51eddf86fdbcf50f2197
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ff9ea8cdc8aea66b1dd1f54c8be881882f6e27f7
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59214873"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611538"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi 함수
+
 DCOM 통해 지정된 컴퓨터의 WMI 네임스페이스에 대한 연결을 만듭니다.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
 ## <a name="syntax"></a>구문
 
-```
+```cpp
 HRESULT ConnectServerWmi (
    [in] BSTR               strNetworkResource,
    [in] BSTR               strUser,
@@ -40,10 +41,11 @@ HRESULT ConnectServerWmi (
    [in] BSTR               strAuthority,
    [in] IWbemContext*      pCtx,
    [out] IWbemServices**   ppNamespace,
-   [in] DWORD              impLevel, 
+   [in] DWORD              impLevel,
    [in] DWORD              authLevel
 );
 ```
+
 ## <a name="parameters"></a>매개 변수
 
 `strNetworkResource`\
@@ -56,8 +58,8 @@ HRESULT ConnectServerWmi (
 [in] 유효한 포인터 `BSTR` 암호가 포함 된 합니다. `null` 현재 보안 컨텍스트를 나타냅니다. 빈 문자열 ("") 유효한 빈 암호를 나타냅니다.
 
 `strLocale`\
-[in] 유효한 포인터 `BSTR` 정보 검색에 대 한 올바른 로캘을 나타냅니다. Microsoft 로캘 식별자에 대 한 문자열의 형식은 "MS\_*xxx*", 여기서 *xxx* 로캘 식별자 (LCID)를 나타내는 16 진수 형식 문자열입니다. 잘못 된 로캘을 지정 되 면 메서드가 반환 `WBEM_E_INVALID_PARAMETER` 제외 하 고 Windows 7, 서버의 기본 로캘을 대신 사용 됩니다. 경우 ' null1에 현재 로캘을 사용 됩니다. 
- 
+[in] 유효한 포인터 `BSTR` 정보 검색에 대 한 올바른 로캘을 나타냅니다. Microsoft 로캘 식별자에 대 한 문자열의 형식은 "MS\_*xxx*", 여기서 *xxx* 로캘 식별자 (LCID)를 나타내는 16 진수 형식 문자열입니다. 잘못 된 로캘을 지정 되 면 메서드가 반환 `WBEM_E_INVALID_PARAMETER` 제외 하 고 Windows 7, 서버의 기본 로캘을 대신 사용 됩니다. 경우 ' null1에 현재 로캘을 사용 됩니다.
+
 `lSecurityFlags`\
 [in] 전달할 플래그를 `ConnectServerWmi` 메서드. 이 매개 변수에 대 한 영 (0) 값에 대 한 호출에서 결과 `ConnectServerWmi` 서버 연결 후에 반환 합니다. 이 응답 하지 무기한으로 손상 된 경우는 응용 프로그램에서 발생할 수 있습니다. 다른 유효한 값은:
 
@@ -76,7 +78,7 @@ HRESULT ConnectServerWmi (
 | NTLMDOMAIN:*도메인 이름* | NT LAN Manager 인증을 사용 하 고이 매개 변수는 NTLM 도메인 이름을 포함 합니다. |
 
 `pCtx`\
-[in] 이 매개 변수는 일반적으로 `null`입니다. 그렇지 않을 경우에 대 한 포인터를 [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) 개체가 하나 이상의 동적 클래스 공급자가 필요 합니다. 
+[in] 이 매개 변수는 일반적으로 `null`입니다. 그렇지 않을 경우에 대 한 포인터를 [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) 개체가 하나 이상의 동적 클래스 공급자가 필요 합니다.
 
 `ppNamespace`\
 [out] 함수가 반환할 때 수신에 대 한 포인터를 [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) 개체가 지정된 된 네임 스페이스에 연결 합니다. 가리키도록 설정 됩니다 `null` 오류가 발생 하는 경우.
@@ -116,4 +118,4 @@ HRESULT ConnectServerWmi (
 
 ## <a name="see-also"></a>참고자료
 
-- [WMI 및 성능 카운터(관리되지 않는 API 참조)](index.md)
+- [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)
