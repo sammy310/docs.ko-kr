@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 애플리케이션을 위한 .NET 마이크
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 8f2297121429acad4222f72ac4fea54e8469b215
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: f17acd6765de96bf8cec28c4e212733822fa0b73
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464673"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611109"
 ---
 # <a name="tackle-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>DDD 및 CQRS 패턴을 사용하여 마이크로 서비스에서 비즈니스 복잡성 처리
 
@@ -32,44 +32,44 @@ DDD는 다양한 학습 리소스 집합이 있는 큰 주제입니다. Eric Eva
 ##### <a name="ddd-domain-driven-design"></a>DDD(도메인 기반 디자인)
 
 - **Eric Evans. 도메인 언어** \
-  [https://domainlanguage.com/](https://domainlanguage.com/)
+  <https://domainlanguage.com/>
 
 - **Martin Fowler. 도메인 기반 디자인** \
-  [https://martinfowler.com/tags/domain%20driven%20design.html](https://martinfowler.com/tags/domain%20driven%20design.html)
+  <https://martinfowler.com/tags/domain%20driven%20design.html>
 
 - **Jimmy Bogard. 도메인 강화: 입문** \
-  [https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/](https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/)
+  <https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/>
 
 ##### <a name="ddd-books"></a>DDD 서적
 
 - **Eric Evans. 도메인 기반 디자인: 소프트웨어 핵심에서 복잡성 처리** \
-  [https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+  <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 - **Eric Evans. 도메인 기반 디자인 참조: 정의 및 패턴 요약** \
-  [https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/](https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/)
+  <https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/>
 
 - **Vaughn Vernon. 도메인 기반 디자인 구현** \
-  [https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
+  <https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/>
 
 - **Vaughn Vernon. 도메인 기반 디자인 핵심 정리** \
-  [https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/](https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/)
+  <https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/>
 
 - **Jimmy Nilsson. 도메인 기반 디자인 및 패턴 적용** \
-  [https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/](https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/)
+  <https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/>
 
 - **Cesar de la Torre. .NET을 사용한 N-레이어 도메인 지향 아키텍처 가이드** \
-  [https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/](https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/)
+  <https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/>
 
 - **Abel Avram 및 Floyd Marinescu. 신속한 도메인 기반 디자인** \
-  [https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/](https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/)
+  <https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/>
 
 - **Scott Millett, Nick Tune - 도메인 기반 디자인의 패턴, 원칙 및 사례** \
-  [http://www.wrox.com/WileyCDA/WroxTitle/Patterns-Principles-and-Practices-of-Domain-Driven-Design.productCd-1118714709.html](http://www.wrox.com/WileyCDA/WroxTitle/Patterns-Principles-and-Practices-of-Domain-Driven-Design.productCd-1118714709.html)
+  <http://www.wrox.com/WileyCDA/WroxTitle/Patterns-Principles-and-Practices-of-Domain-Driven-Design.productCd-1118714709.html>
 
 ##### <a name="ddd-training"></a>DDD 교육
 
 - **Julie Lerman 및 Steve Smith. 도메인 기반 디자인 기본 사항** \
-  [https://bit.ly/PS-DDD](https://bit.ly/PS-DDD)
+  <https://bit.ly/PS-DDD>
 
 >[!div class="step-by-step"]
 >[이전](../multi-container-microservice-net-applications/implement-api-gateways-with-ocelot.md)

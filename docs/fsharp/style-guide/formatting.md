@@ -2,12 +2,12 @@
 title: F#코드 서식 지정 지침
 description: 서식 지정에 대 한 지침을 알아보려면 F# 코드입니다.
 ms.date: 02/08/2019
-ms.openlocfilehash: 7cbd8e4dd1f58cd974a8a12fc8a8c9ee92c546b4
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 259d4bb2147d1fc8bc5d35d7ff2e3c34ec2185d0
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093621"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613826"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#코드 서식 지정 지침
 
@@ -74,7 +74,7 @@ let ( !> ) x f = f x
 let (!>) x f = f x
 ```
 
-로 시작 하는 모든 사용자 지정 연산자에 대 한 `*`, 컴파일러 모호성을 피하기 위해 정의의 시작 부분에 공백을 추가 해야 합니다. 이 인해 단일 공백 문자를 사용 하 여 모든 연산자의 정의 간단히 입력 하는 것이 좋습니다.
+로 시작 하는 모든 사용자 지정 연산자에 대 한 `*` 있는 둘 이상의 문자를 컴파일러 모호성을 피하기 위해 정의의 시작 부분에 공백을 추가 해야 합니다. 이 인해 단일 공백 문자를 사용 하 여 모든 연산자의 정의 단순히 입력 해야 하는 것이 좋습니다.
 
 ### <a name="surround-function-parameter-arrows-with-white-space"></a>주위에 공백 문자를 사용 하 여 함수 매개 변수 화살표
 
@@ -285,6 +285,7 @@ let update model msg =
     | 1 -> model + 1, []
     | _ -> model, [ msg ]
 ```
+
 요약 하자면, 괄호로 묶인 튜플 인스턴스화를 선호 하지만 패턴 일치 또는 반환 값에 대 한 튜플을 사용 하는 경우 괄호를 방지 하려면 세밀 하 게 간주 됩니다.
 
 ## <a name="formatting-discriminated-union-declarations"></a>구별 된 공용 구조체 선언 서식 지정
@@ -344,10 +345,10 @@ type PostalAddress =
     City: string
     Zip: string }
     member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
-    
+
 // Unusual in F#
 type PostalAddress =
-    { 
+    {
         Address: string
         City: string
         Zip: string
@@ -359,13 +360,13 @@ type PostalAddress =
 ```fsharp
 // Declaring additional members on PostalAddress
 type PostalAddress =
-    { 
+    {
         Address: string
         City: string
         Zip: string
     } with
     member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
-    
+
 type MyRecord =
     {
         SomeField: int
@@ -407,7 +408,7 @@ let rainbow =
         Boss8 = "Jeffrey"
         Lackeys = ["Zippy"; "George"; "Bungle"]
     }
-    
+
 type MyRecord =
     {
         SomeField: int
@@ -445,12 +446,12 @@ let rainbow2 =
 
 및로 레코드 지침을 사용 하 여 하려는 중괄호에 대 한 별도 줄을 염두에 두고 있고 하나의 범위에서 식 사용 하 여 오른쪽 들여쓰기입니다. 괄호가 없을 경우 선택적으로 값을 래핑 같은 특별 한 경우도 있습니다 할 경우 한 줄에 중괄호를 유지 하는 참고:
 
-```fsharp    
+```fsharp
 type S = { F1: int; F2: string }
 type State = { F:  S option }
 
 let state = { F = Some { F1 = 1; F2 = "Hello" } }
-let newState = 
+let newState =
     {
         state with
             F = Some {

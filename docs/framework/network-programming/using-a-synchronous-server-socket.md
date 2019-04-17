@@ -17,12 +17,12 @@ helpviewer_keywords:
 - sockets, synchronous server sockets
 - Internet, sockets
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
-ms.openlocfilehash: 2a4fd2f903f96a14d4a256ea68240e942ccd59eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 43e1d54d4e74b49fdf1a8997d1cc89492c9412bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614278"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117253"
 ---
 # <a name="using-a-synchronous-server-socket"></a>동기 서버 소켓 사용
 동기 서버 소켓은 소켓에 연결 요청이 수신될 때까지 애플리케이션 실행을 일시 중단합니다. 동기 서버 소켓은 네트워크를 작업에 많이 사용하는 애플리케이션에 적합하지 않지만 간단한 네트워크 애플리케이션에는 적합할 수 있습니다.  
@@ -76,6 +76,7 @@ handler.Close();
 ```  
   
 ## <a name="see-also"></a>참고 항목
+
 - [비동기 서버 소켓 사용](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
 - [동기 서버 소켓 예제](../../../docs/framework/network-programming/synchronous-server-socket-example.md)
 - [소켓으로 수신](../../../docs/framework/network-programming/listening-with-sockets.md)

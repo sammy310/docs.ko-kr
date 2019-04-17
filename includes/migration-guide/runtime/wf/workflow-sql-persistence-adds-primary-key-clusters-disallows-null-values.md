@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9e98d3bca645cf82bf4fe99160dd096b0e274ef7
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 566a3e0455b30e901b09be88b4256ffe67bdc2b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760441"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236239"
 ---
 ### <a name="workflow-sql-persistence-adds-primary-key-clusters-and-disallows-null-values-in-some-columns"></a>워크플로 SQL 지속성은 기본 키 클러스터를 추가하고 일부 열에서 null 값을 허용하지 않습니다.
 
@@ -15,4 +15,3 @@ ms.locfileid: "58760441"
 |범위|Microsoft Edge|
 |버전|4.7|
 |형식|런타임|
-

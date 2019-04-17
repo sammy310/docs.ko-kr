@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a4b8a03661650a3ef1d96b656798c3c3d39a5705
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 88d6c166acf9e9ab72c2713b575a8453779f70d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "58467072"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234263"
 ---
 ### <a name="attempting-a-tcpip-connection-to-a-sql-server-database-that-resolves-to-localhost-fails"></a>`localhost`로 확인된 SQL Server 데이터베이스에 대한 TCP/IP 연결 시도 실패
 
@@ -15,4 +15,3 @@ ms.locfileid: "58467072"
 |범위|부|
 |버전|4.6|
 |형식|런타임|
-

@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 500ed62c20036eb3cb78952504fbb0ff0f0c11dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1610322e33be81a109dec1cd1d189544a33b17d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636604"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095519"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>애플리케이션 도메인 및 어셈블리 방법 항목
 다음 섹션에는 애플리케이션 도메인 및 어셈블리를 사용한 프로그래밍에 대한 개념 설명서에 나오는 모든 방법 항목에 대한 링크가 있습니다.  
   
- **애플리케이션 도메인**  
+ **응용 프로그램 도메인**  
   
 -   [방법: 애플리케이션 도메인 만들기](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
   
@@ -54,4 +54,5 @@ ms.locfileid: "54636604"
 -   [방법: 어셈블리 콘텐츠 보기](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
   
 ## <a name="see-also"></a>참고 항목
+
 - [애플리케이션 도메인 및 어셈블리](../../../docs/framework/app-domains/index.md)

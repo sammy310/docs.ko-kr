@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-ms.openlocfilehash: fd73deb4682ec12b982740f6e9e9c1e38a5688a3
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 18734627e299c696e23bb0ec9bc63ed37fe3e601
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202433"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294979"
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a>방법: ToString 메서드 재정의(C# 프로그래밍 가이드)
 C#의 모든 클래스 또는 구조체는 <xref:System.Object> 클래스를 암시적으로 상속합니다. 따라서 C#의 모든 개체는 해당 개체의 문자열 표현을 반환하는 <xref:System.Object.ToString%2A> 메서드를 가져옵니다. 예를 들어 `int` 형식의 모든 변수에는 해당 내용을 문자열로 반환할 수 있도록 하는 `ToString` 메서드가 있습니다.  
@@ -27,13 +27,13 @@ C#의 모든 클래스 또는 구조체는 <xref:System.Object> 클래스를 암
   
 ### <a name="to-override-the-tostring-method-in-your-class-or-struct"></a>클래스 또는 구조체의 ToString 메서드를 재정의하려면  
   
-1.  다음 한정자 및 반환 형식으로 `ToString` 메서드를 선언합니다.  
+1. 다음 한정자 및 반환 형식으로 `ToString` 메서드를 선언합니다.  
   
     ```csharp  
     public override string ToString(){}  
     ```  
   
-2.  문자열을 반환하도록 메서드를 구현합니다.  
+2. 문자열을 반환하도록 메서드를 구현합니다.  
   
      다음 예제에서는 클래스의 특정 인스턴스와 관련된 데이터뿐 아니라 클래스의 이름을 반환합니다.  
   
@@ -53,4 +53,4 @@ C#의 모든 클래스 또는 구조체는 <xref:System.Object> 클래스를 암
 - [new](../../../csharp/language-reference/keywords/new.md)
 - [override](../../../csharp/language-reference/keywords/override.md)
 - [virtual](../../../csharp/language-reference/keywords/virtual.md)
-- [형식 서식 지정](../../../standard/base-types/formatting-types.md)
+- [형식의 서식 지정](../../../standard/base-types/formatting-types.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -keyfile compiler option [C#]
 - keyfile compiler option [C#]
 ms.assetid: 0815f9de-ace4-4e98-b4c6-13c55dea40c2
-ms.openlocfilehash: bd89a5fa58507528b2a70efde04ecd2a6f601b39
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e11cbca004aedd7d4f992abf2f766de4f4f5935
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605606"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344652"
 ---
 # <a name="-keyfile-c-compiler-options"></a>-keyfile(C# 컴파일러 옵션)
 암호화 키를 포함하는 파일 이름을 지정합니다.  
@@ -45,11 +45,11 @@ ms.locfileid: "54605606"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
-1.  프로젝트의 **속성** 페이지를 엽니다.  
+1. 프로젝트의 **속성** 페이지를 엽니다.  
   
-2.  **서명** 속성 페이지를 클릭합니다.  
+2. **서명** 속성 페이지를 클릭합니다.  
   
-3.  **강력한 이름 키 파일 선택** 속성을 수정합니다.  
+3. **강력한 이름 키 파일 선택** 속성을 수정합니다.  
   
  프로그래밍 방식으로 <xref:VSLangProj.ProjectProperties.AssemblyOriginatorKeyFile%2A>을 사용하여 이 컴파일러 옵션에 액세스할 수 있습니다.  
   

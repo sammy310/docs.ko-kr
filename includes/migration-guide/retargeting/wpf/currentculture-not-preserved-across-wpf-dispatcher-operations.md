@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: cce19d6c9afa5f5ce9bb17b5b5d92f2060a08414
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 190bca720504535cb54e498ca8da23fbb6634ad4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761113"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234478"
 ---
 ### <a name="currentculture-is-not-preserved-across-wpf-dispatcher-operations"></a>CurrentCulture는 WPF 발송자 작업 간에 유지되지 않습니다.
 
@@ -15,4 +15,3 @@ ms.locfileid: "58761113"
 |범위|부|
 |버전|4.6|
 |형식|대상 변경|
-

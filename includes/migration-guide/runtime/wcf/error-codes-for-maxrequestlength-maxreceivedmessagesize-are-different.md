@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: c9d6111edcfeec6852f23cc0768833de32e61022
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235551"
+---
 ### <a name="error-codes-for-maxrequestlength-or-maxreceivedmessagesize-are-different"></a>maxRequestLength 또는 maxReceivedMessageSize의 오류 코드가 다릅니다.
 
 |   |   |
@@ -7,4 +15,3 @@
 |범위|Microsoft Edge|
 |버전|4.5|
 |형식|런타임|
-

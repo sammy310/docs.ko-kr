@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 570cbd49fd8a8ea42d1c43ebe067a0d2d3f9dc27
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: 364d28d5df8e284445d825fbbeb963c54b7b9e27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055237"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176308"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>방법: 설치된 .NET Framework 버전 확인
 
@@ -37,7 +37,6 @@ ms.locfileid: "59055237"
 >
 > 자세한 내용은 [.NET Framework 버전 및 종속성](versions-and-dependencies.md)을 참조하십시오.
 
-
 컴퓨터에 설치된 .NET Framework 버전 목록을 보려면 레지스트리에 액세스 합니다. 또는 레지스트리 편집기를 사용하여 레지스트리를 확인하거나 코드로 레지스트리를 쿼리합니다.
  
 - 최신 .NET Framework 버전 찾기(4.5 이상): 
@@ -54,7 +53,6 @@ ms.locfileid: "59055237"
 - [코드를 사용하여 Environment 클래스 쿼리](#clr_b)  
 
 .NET Framework의 버전별로 설치된 업데이트를 검색하는 방법에 대한 자세한 내용은 [방법: 설치된 .NET Framework 업데이트 확인](how-to-determine-which-net-framework-updates-are-installed.md). 
-  
 
 ## <a name="find-newer-net-framework-versions-45-and-later"></a>최신 .NET Framework 버전 찾기(4.5 이상)
 
@@ -171,7 +169,6 @@ ms.locfileid: "59055237"
 [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed1.cs)]
 [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed1.vb)]
 
-
 ## <a name="find-clr-versions"></a>CLR 버전 찾기
   
 <a name="clr_a"></a> 
@@ -208,8 +205,6 @@ ms.locfileid: "59055237"
    - 부 릴리스 식별자(예:버전 4.0의 경우 *0*)를 가져오고 <xref:System.Version.Minor%2A?displayProperty=nameWithType>속성을 사용합니다.
 
    - 전체 버전 문자열(예를 들어*4.0.30319.18010*)에는 <xref:System.Version.ToString%2A?displayProperty=nameWithType>메서드를 사용합니다. 메서드는 코드를 실행 하는 런타임 버전을 반영하는 단일 값을 반환합니다. 이는 컴퓨터에 설치된 어셈블리 버전이나 다른 런타임 버전은 반환하지 않습니다.
-
-
 
 다음 예제에서는 <xref:System.Environment.Version%2A?displayProperty=nameWithType>속성을 사용하여 CLR 버전 정보를 검색합니다.
 

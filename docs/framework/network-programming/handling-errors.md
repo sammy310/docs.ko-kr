@@ -31,12 +31,12 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: 4e3bcf279ae3de066d1d1306a574c76fc95b2840
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26e2a25855485bdd19d30e8497d0f75b7d4432e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599783"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097163"
 ---
 # <a name="handling-errors"></a>오류 처리
 <xref:System.Net.WebRequest> 및 <xref:System.Net.WebResponse> 클래스는 시스템 예외(예: <xref:System.ArgumentException>) 및 웹 관련 예외(<xref:System.Net.WebRequest.GetResponse%2A> 메서드에서 throw된 <xref:System.Net.WebException>)를 둘 다 throw합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "54599783"
 |SendFailure|전체 요청을 원격 서버로 보낼 수 없습니다.|  
 |ServerProtocolViolation|서버 응답이 유효한 HTTP 응답이 아니었습니다.|  
 |성공|오류가 발생하지 않았습니다.|  
-|시간 제한|요청에 대해 설정된 시간 제한 내에 응답이 수신되지 않았습니다.|  
+|제한 시간|요청에 대해 설정된 시간 제한 내에 응답이 수신되지 않았습니다.|  
 |TrustFailure|서버 인증서를 유효성 검사할 수 없습니다.|  
 |MessageLengthLimitExceeded|요청을 보내거나 서버에서 응답을 받을 때 지정된 제한을 초과한 메시지를 받았습니다.|  
 |보류 중|내부 비동기 요청이 보류 중입니다.|  
@@ -168,5 +168,6 @@ End Try
  **SocketException**이 throw되면 **SocketException** 클래스는 마지막으로 발생한 운영 체제 소켓 오류로 <xref:System.Net.Sockets.SocketException.ErrorCode%2A> 속성을 설정합니다. 소켓 오류 코드에 대한 자세한 내용은 MSDN에서 Winsock 2.0 API 오류 코드 문서를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [예외 처리 기본 사항](../../../docs/standard/exceptions/exception-handling-fundamentals.md)
 - [데이터 요청](../../../docs/framework/network-programming/requesting-data.md)

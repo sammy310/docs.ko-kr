@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1c4de9d7-9aba-427a-8f38-0ab9bfb8f85e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8fa603381bec9d352eff705116c6dfc31380d523
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7b435c6050cbb73abab3cb5980632be55dd08d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573181"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118016"
 ---
 # <a name="mitigation-product-versioning"></a>완화: 제품 버전 관리
 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 및 이상에서, 제품 버전 관리가 .NET Framework(.NET Framework 4, 4.5, 4.5.1 및 4.5.2)의 이전 릴리스에서 변경되었습니다.  
@@ -40,5 +40,5 @@ ms.locfileid: "54573181"
 -   CLR 버전을 알아보려면 <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetSystemVersion%2A?displayProperty=nameWithType> 메서드를 호출합니다.   .NET Framework 4 및 해당 포인트 릴리스(.NET Framework 4.5, 4.5.1, 4.5.2, [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1, 4.6.2 및 4.7)에 대해 `v4.0.30319` 문자열을 반환합니다.  
   
 ## <a name="see-also"></a>참고 항목
-- [런타임 변경 내용](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
 
+- [런타임 변경 내용](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)

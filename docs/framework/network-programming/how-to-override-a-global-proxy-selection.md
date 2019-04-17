@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0da481a9-b414-4230-beb0-e3ceba882fe5
-ms.openlocfilehash: 6973503f12e0e60ee139c5cd7da09ab319d70218
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f822aa18b6eecaa1b1302ad6cc6b94f0b016e330
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592126"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127376"
 ---
 # <a name="how-to-override-a-global-proxy-selection"></a>방법: 글로벌 프록시 선택 재정의
 이 예제에서는 글로벌 프록시 선택을 포트 80의 `alternateproxy`라는 프록시 서버로 재정의하는 **WebRequest**를 `www.contoso.com`에 보냅니다.  
@@ -33,5 +33,6 @@ req.Proxy = New WebProxy("http://alternateproxy:80/")
 -   **System.Net** 네임스페이스에 대한 [`using` 지시문](~/docs/csharp/language-reference/keywords/using-directive.md)  
   
 ## <a name="see-also"></a>참고 항목
+
 - [애플리케이션 프로토콜 사용](../../../docs/framework/network-programming/using-application-protocols.md)
 - [프록시를 통해 인터넷 액세스](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)

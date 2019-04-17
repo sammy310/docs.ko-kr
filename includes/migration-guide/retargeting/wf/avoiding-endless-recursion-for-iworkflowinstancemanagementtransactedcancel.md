@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5850e3359dab6503d5745a2266c7bf77780e5cc0
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: f78f31f4328a45b5ef3f25cdf6eddac1b17fb6e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760886"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234067"
 ---
 ### <a name="avoiding-endless-recursion-for-iworkflowinstancemanagementtransactedcancel-and-iworkflowinstancemanagementtransactedterminate"></a>IWorkflowInstanceManagement.TransactedCancel 및 IWorkflowInstanceManagement.TransactedTerminate의 무한 재귀를 방지
 
@@ -15,4 +15,3 @@ ms.locfileid: "58760886"
 |범위|Microsoft Edge|
 |버전|4.7.2|
 |형식|대상 변경|
-

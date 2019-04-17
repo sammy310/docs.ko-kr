@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f8848c7e-f5c5-4d42-b86d-9951ff8f4146
-ms.openlocfilehash: da696e40248a077e6b8e32e077509bc8a0b589b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 107e57ca947012f5e2f65835d684f5e6068b3681
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619729"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176594"
 ---
 # <a name="how-to-access-http-specific-properties"></a>방법: HTTP 관련 속성에 액세스
 이 샘플은 HTTP **Keep-alive** 동작을 끄고 웹 서버에서 프로토콜 버전 번호를 가져오는 방법을 보여 줍니다.  
@@ -50,6 +50,7 @@ HttpWResp.Close();
 -   **System.Net** 네임스페이스에 대한 참조.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [프록시를 통해 인터넷 액세스](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
 - [애플리케이션 프로토콜 사용](../../../docs/framework/network-programming/using-application-protocols.md)
 - [HTTP](../../../docs/framework/network-programming/http.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-ms.openlocfilehash: f3ea4a323fa57a49499c4fa6dea43aa22c3475df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49920a46f1d970c3f00025c3dc3eb384c937aa99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677877"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319406"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib(C# 컴파일러 옵션)
 **-lib** 옵션은 [-reference(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 옵션을 통해 참조되는 어셈블리의 위치를 지정합니다.  
@@ -34,13 +34,13 @@ ms.locfileid: "54677877"
 ## <a name="remarks"></a>주의  
  컴파일러는 정규화되지 않은 어셈블리 참조를 다음 순서대로 검색합니다.  
   
-1.  현재 작업 디렉터리입니다. 컴파일러가 호출되는 디렉터리입니다.  
+1. 현재 작업 디렉터리입니다. 컴파일러가 호출되는 디렉터리입니다.  
   
-2.  공용 언어 런타임 시스템 디렉터리입니다.  
+2. 공용 언어 런타임 시스템 디렉터리입니다.  
   
-3.  **-lib**로 지정된 디렉터리입니다.  
+3. **-lib**로 지정된 디렉터리입니다.  
   
-4.  LIB 환경 변수로 지정된 디렉터리입니다.  
+4. LIB 환경 변수로 지정된 디렉터리입니다.  
   
  어셈블리 참조를 지정하려면 **-reference**를 사용합니다.  
   
@@ -52,11 +52,11 @@ ms.locfileid: "54677877"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다.  
+1. 프로젝트의 **속성 페이지** 대화 상자를 엽니다.  
   
-2.  **참조 경로** 속성 페이지를 클릭합니다.  
+2. **참조 경로** 속성 페이지를 클릭합니다.  
   
-3.  목록 상자 내용을 수정합니다.  
+3. 목록 상자 내용을 수정합니다.  
   
  이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>을 참조하세요.  
   

@@ -9,7 +9,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/09/2019
 ms.locfileid: "59331912"
 ---
-# <a name="get-started-with-f-in-visual-studio"></a>Visual Studio에서 F# 시작 
+# <a name="get-started-with-f-in-visual-studio"></a>Visual Studio에서 F# 시작
 
 F#과 Visual F# 도구가 Visual Studio IDE에서 지원됩니다.
 

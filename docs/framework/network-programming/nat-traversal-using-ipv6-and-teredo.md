@@ -2,12 +2,12 @@
 title: IPv6 및 Teredo를 사용하는 NAT 통과
 ms.date: 03/30/2017
 ms.assetid: 568cd245-3300-49ef-a995-d81bf845d961
-ms.openlocfilehash: 896c3f9036e76c37f5f6bf2950d3d2d2864b3f37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f617dc8912091576727b90da1e9efb9ebd5f9bda
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724367"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170772"
 ---
 # <a name="nat-traversal-using-ipv6-and-teredo"></a>IPv6 및 Teredo를 사용하는 NAT 통과
 NAT(Network Address Translation) 통과 지원을 제공하도록 개선되었습니다. 이러한 변경 사항은 IPv6 및 Teredo와 함께 사용하도록 설계되었지만, 다른 IP 터널링 기술에도 적용할 수 있습니다. 이러한 개선사항은 <xref:System.Net> 및 관련 네임스페이스의 클래스에 영향을 미칩니다.  
@@ -45,6 +45,7 @@ NAT(Network Address Translation) 통과 지원을 제공하도록 개선되었�
  <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> 및 관련 클래스를 사용하는 애플리케이션의 경우 <xref:System.Net.Sockets.Socket.GetSocketOption%2A> 및 <xref:System.Net.Sockets.Socket.SetSocketOption%2A> 메서드를 <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=nameWithType> 소켓 옵션과 함께 사용하여 NAT 통과를 쿼리, 사용 또는 사용하지 않게 설정할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - <xref:System.Net.IPAddress.IsIPv6Teredo%2A?displayProperty=nameWithType>
 - <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A?displayProperty=nameWithType>
 - <xref:System.Net.NetworkInformation.IPGlobalProperties.EndGetUnicastAddresses%2A?displayProperty=nameWithType>

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1e5ca80de113785904562ff1cef953de8a5a9460
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: c7ff34285220fd1e3c17503a8387104e91ec08b1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442141"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313660"
 ---
 # <a name="create-resource-files-for-net-apps"></a>.NET 앱의 리소스 파일 만들기
 
@@ -31,7 +31,7 @@ ms.locfileid: "56442141"
 
 - 프로그래밍 방식으로 이진 리소스(.resources) 파일을 만듭니다. 그다음에 언어 컴파일러를 사용하여 파일을 애플리케이션 실행 파일 또는 애플리케이션 라이브러리에 포함하거나, [어셈블리 링커(Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md)를 사용하여 위성 어셈블리에 포함할 수 있습니다. 자세한 내용은 [.resources 파일의 리소스](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles) 섹션을 참조하세요.
 
-- [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)를 사용하여 리소스 파일을 만들고 프로젝트에 포함합니다. Visual Studio에서는 리소스를 추가, 삭제 및 수정할 수 있는 리소스 편집기를 제공합니다. 컴파일 시간에 리소스 파일은 자동으로 이진 .resources 파일로 변환되고 애플리케이션 어셈블리 또는 위성 어셈블리에 포함됩니다. 자세한 내용은 [Visual Studio의 리소스 파일](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles) 섹션을 참조하세요.
+- [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)를 사용하여 리소스 파일을 만들고 프로젝트에 포함합니다. Visual Studio에서는 리소스를 추가, 삭제 및 수정할 수 있는 리소스 편집기를 제공합니다. 컴파일 시간에 리소스 파일은 자동으로 이진 .resources 파일로 변환되고 애플리케이션 어셈블리 또는 위성 어셈블리에 포함됩니다. 자세한 내용은 [Visual Studio의 리소스 파일](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles) 섹션을 참조하세요.
 
 <a name="TextFiles"></a>
 ## <a name="resources-in-text-files"></a>텍스트 파일의 리소스
@@ -172,7 +172,7 @@ csc greeting.cs -resource:GreetingResources.resources
 ```
 
 > [!IMPORTANT]
-> .resx 파일은 미리 정의된 형식의 잘 구성된(Well-Formed) XML로 구성되어야 하므로, 특히 .resx 파일에 문자열 이외의 리소스가 포함된 경우에는 .resx 파일을 수동으로 사용하지 않는 것이 좋습니다. 대신, [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)에서는 .resx 파일을 만들고 조작할 수 있는 투명한 인터페이스가 제공됩니다. 자세한 내용은 [Visual Studio의 리소스 파일](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles) 섹션을 참조하세요. 프로그래밍 방식으로 .resx 파일을 만들고 조작할 수도 있습니다. 자세한 내용은 [프로그래밍 방식으로 .resx 파일 작업](../../../docs/framework/resources/working-with-resx-files-programmatically.md)을 참조하세요.
+> .resx 파일은 미리 정의된 형식의 잘 구성된(Well-Formed) XML로 구성되어야 하므로, 특히 .resx 파일에 문자열 이외의 리소스가 포함된 경우에는 .resx 파일을 수동으로 사용하지 않는 것이 좋습니다. 대신, [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)에서는 .resx 파일을 만들고 조작할 수 있는 투명한 인터페이스가 제공됩니다. 자세한 내용은 [Visual Studio의 리소스 파일](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles) 섹션을 참조하세요. 프로그래밍 방식으로 .resx 파일을 만들고 조작할 수도 있습니다. 자세한 내용은 [프로그래밍 방식으로 .resx 파일 작업](../../../docs/framework/resources/working-with-resx-files-programmatically.md)을 참조하세요.
 
 <a name="ResourcesFiles"></a>
 ## <a name="resources-in-resources-files"></a>.resources 파일의 리소스
@@ -198,7 +198,7 @@ csc greeting.cs -resource:GreetingResources.resources
 <a name="VSResFiles"></a>
 ## <a name="resource-files-in-visual-studio"></a>Visual Studio의 리소스 파일
 
-[Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) 프로젝트에 리소스 파일을 추가하면 Visual Studio에서는 프로젝트 디렉터리에 .resx 파일을 만듭니다. Visual Studio에서는 문자열, 이미지 및 이진 개체를 추가할 수 있는 리소스 편집기를 제공합니다. 편집기는 정적 데이터만 처리하도록 디자인되어 있으므로 프로그래밍 개체를 저장하는 데는 사용할 수 없습니다. 프로그래밍 방식으로 개체 데이터를 .resx 파일 또는 .resources 파일에 써야 합니다. 자세한 내용은 [프로그래밍 방식으로 .resx 파일 작업](../../../docs/framework/resources/working-with-resx-files-programmatically.md) 섹션과 [.resources 파일의 리소스](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles) 섹션을 참조하세요.
+[Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 프로젝트에 리소스 파일을 추가하면 Visual Studio에서는 프로젝트 디렉터리에 .resx 파일을 만듭니다. Visual Studio에서는 문자열, 이미지 및 이진 개체를 추가할 수 있는 리소스 편집기를 제공합니다. 편집기는 정적 데이터만 처리하도록 디자인되어 있으므로 프로그래밍 개체를 저장하는 데는 사용할 수 없습니다. 프로그래밍 방식으로 개체 데이터를 .resx 파일 또는 .resources 파일에 써야 합니다. 자세한 내용은 [프로그래밍 방식으로 .resx 파일 작업](../../../docs/framework/resources/working-with-resx-files-programmatically.md) 섹션과 [.resources 파일의 리소스](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles) 섹션을 참조하세요.
 
 지역화된 리소스를 추가할 경우 기본 리소스 파일과 같은 루트 파일 이름을 리소스에 지정해야 합니다. 파일 이름에서 문화권도 지정해야 합니다. 예를 들어 Resources.resx 리소스 파일을 추가할 경우 Resources.en-US.resx 및 Resources.fr-FR.resx 리소스 파일을 만들어 각각 영어(미국) 및 프랑스어(프랑스) 문화권에 대한 지역화된 리소스를 저장할 수도 있습니다. 애플리케이션의 기본 문화권도 지정해야 합니다. 이 문화권의 리소스는 특정 문화권에 대한 지역화된 리소스를 찾을 수 없는 경우 사용됩니다. 기본 문화권을 지정하려면 Visual Studio의 솔루션 탐색기에서 애플리케이션을 가리키고, **어셈블리 정보**를 클릭하고, **중립 언어** 목록에서 적절한 언어/문화권을 선택합니다.
 
@@ -207,5 +207,5 @@ csc greeting.cs -resource:GreetingResources.resources
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Resources>
-- [데스크톱 앱의 리소스](../../../docs/framework/resources/index.md)
+- [데스크톱 응용 프로그램의 리소스](../../../docs/framework/resources/index.md)
 - [리소스 패키징 및 배포](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

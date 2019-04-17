@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows Service applications, troubleshooting
 ms.assetid: 45c48e2e-b97d-44bc-8896-14f328e0ce33
 author: ghogen
-ms.openlocfilehash: ecbaa3b2fb0e0fc85ed383385368617bf361f497
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: f75a2f33ecde408d2d8e2f2343197ba56c4b8c21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289439"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143821"
 ---
 # <a name="troubleshooting-service-application-wont-install"></a>문제 해결: 서비스 애플리케이션이 설치되지 않음
 서비스 애플리케이션이 올바로 설치되지 않으면 서비스 클래스의 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 속성이 해당 서비스의 설치 관리자에 표시된 값과 동일하게 설정되어 있는지 확인합니다. 서비스가 올바로 설치되려면 이 값이 두 인스턴스 모두에서 동일해야 합니다.  
@@ -26,4 +26,5 @@ ms.locfileid: "55289439"
  같은 이름의 다른 서비스가 이미 설치되어 있는지도 확인해야 합니다. 서비스 이름이 고유해야만 설치될 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목
-- [Windows 서비스 애플리케이션 소개](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+
+- [Windows 서비스 응용 프로그램 소개](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)

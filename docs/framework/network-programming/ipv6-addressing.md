@@ -26,12 +26,12 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-ms.openlocfilehash: 2da6622fbb15e7214f928d2471d32283b87bb2f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50df0e0710c1f722d4e769ad89b653f6a8d5e394
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54633854"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121955"
 ---
 # <a name="ipv6-addressing"></a>IPv6 주소 지정
 IPv6(인터넷 프로토콜 버전 6)에서 주소의 길이는 128비트입니다. 주소 공간이 이렇게 큰 하나의 이유는 사용 가능한 주소를 인터넷 토폴로지를 반영하는 라우팅 도메인 계층 구조로 세분화하기 위한 것입니다. 또 다른 이유는 디바이스를 네트워크에 연결하는 네트워크 어댑터(또는 인터페이스)의 주소를 매핑하기 위한 것입니다. IPv6은 최하위 수준인 네트워크 인터페이스 수준에서 주소를 확인하는 고유한 기능과 자동 구성 기능을 제공합니다.  
@@ -73,5 +73,6 @@ IPv6(인터넷 프로토콜 버전 6)에서 주소의 길이는 128비트입니�
  일반적으로 노드에는 항상 링크-로컬 주소가 포함됩니다. 사이트-로컬 주소 및 하나 이상의 전역 주소가 포함될 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [인터넷 프로토콜 버전 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
 - [소켓](../../../docs/framework/network-programming/sockets.md)

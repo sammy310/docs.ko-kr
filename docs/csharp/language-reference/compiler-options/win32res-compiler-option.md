@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -win32res compiler option [C#]
 - win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
-ms.openlocfilehash: 522d80ce6be277c048fa62cc1a7b077d8bb08bfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4026fcbd7dc2ef29c1e7ee01a0f37b3ff471b187
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544707"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322384"
 ---
 # <a name="-win32res-c-compiler-options"></a>-win32res(C# 컴파일러 옵션)
 **-win32res** 옵션은 출력 파일에 Win32 리소스를 삽입합니다.  
@@ -38,11 +38,11 @@ ms.locfileid: "54544707"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
-1.  프로젝트 **속성** 페이지를 엽니다.  
+1. 프로젝트 **속성** 페이지를 엽니다.  
   
-2.  **애플리케이션** 속성 페이지를 클릭합니다.  
+2. **애플리케이션** 속성 페이지를 클릭합니다.  
   
-3.  **리소스 파일** 단추를 클릭한 다음 콤보 상자를 사용하여 파일을 선택합니다.  
+3. **리소스 파일** 단추를 클릭한 다음 콤보 상자를 사용하여 파일을 선택합니다.  
   
 ## <a name="example"></a>예제  
  `in.cs`를 컴파일하고 Win32 리소스 파일 `rf.res`를 첨부하여 `in.exe`를 생성합니다.  

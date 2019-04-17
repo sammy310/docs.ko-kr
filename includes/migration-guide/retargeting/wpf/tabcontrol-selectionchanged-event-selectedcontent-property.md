@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e80748c183a10cac4ef66c96ab48458cd9baa806
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 923105114c9e8da02c61c842cc02bed1ead3eddc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "52742536"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236464"
 ---
 ### <a name="tabcontrol-selectionchanged-event-and-selectedcontent-property"></a>TabControl SelectionChanged 이벤트 및 SelectedContent 속성
 
@@ -16,4 +16,3 @@ ms.locfileid: "52742536"
 |버전|4.7.1|
 |형식|대상 변경|
 |영향을 받는 API|<ul><li><xref:System.Windows.Controls.TabControl.SelectedContent?displayProperty=nameWithType></li><li><xref:System.Windows.Controls.Primitives.Selector.SelectionChanged?displayProperty=nameWithType></li></ul>|
-

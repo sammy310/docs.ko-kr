@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9ad283af76085c228bedceb6db723a1d18b10210
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 71c81cf188fa4c2300661f10eb87e7ae00e031f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761116"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234505"
 ---
 ### <a name="etw-event-names-cannot-differ-only-by-a-start-or-stop-suffix"></a>ETW 이벤트 이름은 "Start" 또는 "Stop" 접미사만 다를 수 없음
 
@@ -15,4 +15,3 @@ ms.locfileid: "58761116"
 |범위|Microsoft Edge|
 |버전|4.6|
 |형식|대상 변경|
-

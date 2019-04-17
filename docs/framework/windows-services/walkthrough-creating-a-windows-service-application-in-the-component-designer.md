@@ -1,6 +1,6 @@
 ---
 title: '자습서: Windows 서비스 앱 만들기'
-ms.date: 03/14/2019
+ms.date: 03/27/2019
 dev_langs:
 - csharp
 - vb
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 786b9e28607cced0a15793415ff5fd470b559374
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 35ef113acffbebdcd4cb585970e575f17959f75b
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262495"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59518034"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>자습서: Windows 서비스 앱 만들기
 
@@ -59,7 +59,6 @@ ms.locfileid: "58262495"
 
 3. **파일** 메뉴에서 **모두 저장**을 선택합니다.
 
-
 ## <a name="add-features-to-the-service"></a>서비스에 기능 추가
 
 다음 섹션에서는 Windows 서비스에 사용자 지정 이벤트 로그를 추가합니다. Windows 서비스에 추가할 수 있는 구성 요소 종류의 한 예로 <xref:System.Diagnostics.EventLog> 구성 요소를 사용합니다.
@@ -74,21 +73,7 @@ ms.locfileid: "58262495"
 
 4. 사용자 지정 이벤트 로그를 정의합니다. C#에서는 기존 `MyNewService()` 생성자를 편집하고 Visual Basic에서는 `New()` 생성자를 추가합니다.
 
-   ```csharp
-   public MyNewService()
-   {
-        InitializeComponent();
-
-        eventLog1 = new EventLog();
-        if (!EventLog.SourceExists("MySource"))
-        {
-            EventLog.CreateEventSource("MySource", "MyNewLog");
-        }
-        eventLog1.Source = "MySource";
-        eventLog1.Log = "MyNewLog";
-    }
-   ```
-
+   [!code-csharp[VbRadconService#2](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#2)]
    [!code-vb[VbRadconService#2](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#2)]
 
 5. `using` 문을 **MyNewService.cs**에 추가하거나(없는 경우) <xref:System.Diagnostics?displayProperty=nameWithType> 네임스페이스에 대해서는 `Imports` 문을 **MyNewService.vb**에 추가합니다.
@@ -141,7 +126,6 @@ ms.locfileid: "58262495"
 
 2. `using` 문을 **MyNewService.cs**에 추가하거나 <xref:System.Timers?displayProperty=nameWithType> 네임스페이스에 대해서는 `Imports` 문을 **MyNewService.vb**에 추가합니다.
 
-
    ```csharp
    using System.Timers;
    ```
@@ -149,7 +133,6 @@ ms.locfileid: "58262495"
    ```vb
    Imports System.Timers
    ```
-
 
 3. `MyNewService` 클래스에서 `OnTimer` 메서드를 추가하여 <xref:System.Timers.Timer.Elapsed?displayProperty=nameWithType> 이벤트를 처리합니다.
 
@@ -185,10 +168,7 @@ ms.locfileid: "58262495"
 
 서비스가 중지될 때 이벤트 로그에 항목을 추가하는 코드 줄을 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 메서드에 삽입합니다.
 
-```csharp
-eventLog1.WriteEntry("In OnStop.");
-```
-
+[!code-csharp[VbRadconService#2](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#4)]
 [!code-vb[VbRadconService#4](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#4)]
 
 ### <a name="define-other-actions-for-the-service"></a>서비스의 다른 동작 정의
@@ -200,13 +180,11 @@ eventLog1.WriteEntry("In OnStop.");
 [!code-csharp[VbRadconService#5](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#5)]
 [!code-vb[VbRadconService#5](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#5)]
 
-
 ## <a name="set-service-status"></a>서비스 상태 설정
 
 서비스는 [서비스 제어 관리자](/windows/desktop/Services/service-control-manager)에 상태를 보고합니다. 따라서 사용자는 서비스가 정상적으로 작동 중인지를 확인할 수 있습니다. 기본적으로 <xref:System.ServiceProcess.ServiceBase>에서 상속되는 서비스는 SERVICE_STOPPED, SERVICE_PAUSED 및 SERVICE_RUNNING을 포함하여 제한된 상태 설정 세트를 보고합니다. 서비스를 시작하는 데 시간이 걸리는 경우에는 SERVICE_START_PENDING 상태를 보고하면 도움이 됩니다. 
 
 또한 Windows [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) 함수를 호출하는 코드를 추가하여 SERVICE_START_PENDING 및 SERVICE_STOP_PENDING 상태 설정을 구현할 수 있습니다.
-
 
 ### <a name="implement-service-pending-status"></a>서비스 보류 중 상태 구현
 
@@ -269,6 +247,9 @@ eventLog1.WriteEntry("In OnStop.");
         Public dwWaitHint As Long
     End Structure
     ```
+
+    > [!NOTE]
+    > 서비스 제어 관리자는 [SERVICE_STATUS 구조체](/windows/desktop/api/winsvc/ns-winsvc-_service_status)의 `dwWaitHint` 및 `dwCheckpoint` 멤버를 사용하여 Windows 서비스가 시작 또는 종료될 때까지 기다릴 시간을 결정합니다. `OnStart` 및 `OnStop` 메서드가 오랫동안 실행되는 경우 서비스는 증분된 `dwCheckPoint` 값을 포함하여 `SetServiceStatus`을(를) 다시 호출하여 시간을 더 요청할 수 있습니다.
 
 3. `MyNewService` 클래스에서 [플랫폼 호출](../interop/consuming-unmanaged-dll-functions.md)을 사용하여 [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) 함수를 선언합니다.
 
@@ -341,9 +322,6 @@ eventLog1.WriteEntry("In OnStop.");
     SetServiceStatus(Me.ServiceHandle, serviceStatus)    
     ```
 
-> [!NOTE]
-> 서비스 제어 관리자는 [SERVICE_STATUS 구조체](/windows/desktop/api/winsvc/ns-winsvc-_service_status)의 `dwWaitHint` 및 `dwCheckpoint` 멤버를 사용하여 Windows 서비스가 시작 또는 종료될 때까지 기다릴 시간을 결정합니다. `OnStart` 및 `OnStop` 메서드가 오랫동안 실행되는 경우 서비스는 증분된 `dwCheckPoint` 값을 포함하여 `SetServiceStatus`을(를) 다시 호출하여 시간을 더 요청할 수 있습니다.
-
 ## <a name="add-installers-to-the-service"></a>서비스에 설치 관리자 추가
 
 Windows 서비스를 실행하려면 해당 서비스를 설치해야 합니다. 그러면 서비스 제어 관리자에 서비스가 등록됩니다. 등록 정보를 처리하는 설치 관리자를 프로젝트에 추가합니다.
@@ -396,24 +374,8 @@ Windows 서비스에는 명령줄 인수나 시작 매개 변수를 사용할 �
 
 1. **Program.cs** 또는 **MyNewService.Designer.vb**를 선택한 다음, 바로 가기 메뉴에서 **코드 보기**를 선택합니다. `Main` 메서드에서 코드를 변경해 입력 매개 변수를 추가하고 서비스 생성자에게 전달합니다.
 
-   ```csharp
-   static void Main(string[] args)
-   {
-       ServiceBase[] ServicesToRun;
-       ServicesToRun = new ServiceBase[]
-       {
-           new MyNewService(args)
-       };
-       ServiceBase.Run(ServicesToRun);
-   }
-   ```
-
-   ```vb
-   Shared Sub Main(ByVal cmdArgs() As String)
-       Dim ServicesToRun() As System.ServiceProcess.ServiceBase = New System.ServiceProcess.ServiceBase() {New MyNewService(cmdArgs)}
-       System.ServiceProcess.ServiceBase.Run(ServicesToRun)
-   End Sub
-   ```
+   [!code-csharp[VbRadconService](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/Program-add-parameter.cs?highlight=1,6)]
+   [!code-vb[VbRadconService](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.Designer-add-parameter.vb?highlight=1-2)]
 
 2. **MyNewService.cs** 또는 **MyNewService.vb**에서 `MyNewService` 생성자를 변경하여 입력 매개 변수를 다름과 같이 처리합니다.
 
@@ -493,7 +455,6 @@ Windows 서비스에는 명령줄 인수나 시작 매개 변수를 사용할 �
    ```
 
    일반적으로 이 값에는 Windows 서비스에 대한 실행 파일의 전체 경로가 포함됩니다. 서비스를 올바르게 시작하려면 사용자는 경로와 개별 매개 변수에 따옴표를 사용해야 합니다. 사용자는 **ImagePath** 레지스트리 항목에서 매개 변수를 변경하여 Windows 서비스에 대한 시작 매개 변수를 변경할 수 있습니다. 그러나 프로그래밍 방식으로 값을 변경하고 관리 또는 구성 유틸리티를 사용하는 것과 같이 사용자에게 익숙한 방식으로 기능을 노출시키는 것이 더 나은 방식입니다.
-
 
 ## <a name="build-the-service"></a>서비스 빌드
 

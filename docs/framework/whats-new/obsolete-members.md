@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2881af41828425914c7644d04e07918ac6b97f06
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 075396ae070be5312fa7afe29e8bdf5fa81a3817
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921340"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185443"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>.NET Framework에서 사용되지 않는 멤버
 
@@ -800,5 +800,6 @@ ms.locfileid: "58921340"
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|`DynData` 레지스트리 키는 이 버전의 .NET Framework에서 지원되지 않는 Win9x에서만 작동합니다. 대신 `PerformanceData` 레지스트리 키를 사용하세요. 이 속성은 Framework의 이후 버전에서 제거됩니다.|  
   
 ## <a name="see-also"></a>참고 항목
+
 - [클래스 라이브러리의 사용되지 않는 기능](whats-obsolete.md)
 - [사용되지 않는 형식](obsolete-types.md)

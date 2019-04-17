@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
-ms.openlocfilehash: cf34b32a9d159c193f9ea1319afec073d62e8ca4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 736deb1a0c360163521b866a788f1ac077f74508
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722084"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172096"
 ---
 # <a name="asynchronous-client-socket-example"></a>비동기 클라이언트 소켓 예제
 다음 예제 프로그램에서는 서버에 연결하는 클라이언트를 만듭니다. 이 클라이언트는 비동기 소켓으로 빌드되므로 서버에서 응답을 반환하는 동안 클라이언트 애플리케이션의 실행이 일시 중단되지 않습니다. 애플리케이션은 서버에 문자열을 보낸 다음 서버에서 반환된 문자열을 콘솔에 표시합니다.  
@@ -322,6 +322,7 @@ public class AsynchronousClient {
 ```  
   
 ## <a name="see-also"></a>참고 항목
+
 - [비동기 서버 소켓 예제](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)
 - [동기 서버 소켓 사용](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
 - [소켓 코드 예제](../../../docs/framework/network-programming/socket-code-examples.md)

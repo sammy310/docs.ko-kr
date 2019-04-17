@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 9f1f41a7-2954-49d3-a2c0-62b6ef4d40ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a0b065fe488031329815f6ec38da9661fd19700d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c638531bd54f14c7e4b04a093deaec729db404ba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529936"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129638"
 ---
 # <a name="assembly-location"></a>어셈블리 위치
 어셈블리 위치에 따라 공용 언어 런타임이 참조 시 해당 위치를 찾을 수 있는지 여부가 결정되고 어셈블리를 다른 어셈블리와 공유할 수 있는지 여부도 결정될 수 있습니다. 다음 위치에 어셈블리를 배포할 수 있습니다.  
@@ -30,6 +30,7 @@ ms.locfileid: "54529936"
      HTTP 서버에 배포되는 어셈블리에는 강력한 이름이 있어야 합니다. 애플리케이션 구성 파일의 코드베이스 섹션에 있는 어셈블리를 가리킵니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [어셈블리 만들기](../../../docs/framework/app-domains/create-assemblies.md)
 - [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)
 - [런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4f92d773197c914a74dd7e9c18f5aab5309358ae
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 2ec5224b1ab16c05f6f942f6084f1ab105b71b0f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760890"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59233988"
 ---
 ### <a name="ensure-systemuri-uses-a-consistent-reserved-character-set"></a>System.Uri가 일관된 예약된 문자 집합을 사용하는지 확인합니다.
 
@@ -16,4 +16,3 @@ ms.locfileid: "58760890"
 |버전|4.7.2|
 |형식|대상 변경|
 |영향을 받는 API|<ul><li><xref:System.Uri?displayProperty=nameWithType></li></ul>|
-

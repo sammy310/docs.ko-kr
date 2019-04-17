@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: cbd599f7467c3b360bbe1c76a65abfdb840a1530
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236637"
+---
 ### <a name="wpf-spawns-a-wisptisexe-process-which-can-freeze-the-mouse"></a>WPF는 마우스를 고정할 수 있는 wisptis.exe 프로세스를 생성함
 
 |   |   |
@@ -7,4 +15,3 @@
 |범위|주요함|
 |버전|4.5.2|
 |형식|런타임|
-

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Deriving from WebResponse
 ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
-ms.openlocfilehash: f07e20bc3d81c328390ad5da43e55aab457a62a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bdb21b8aaf8deb39e3abd68a69a9a5a10247e6f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54598869"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226047"
 ---
 # <a name="deriving-from-webresponse"></a>WebResponse에서 파생
 <xref:System.Net.WebResponse> 클래스는 .NET Framework 플러그형 프로토콜 모델에 적합한 프로토콜별 응답을 만들기 위한 기본 메서드 및 속성을 제공하는 추상 기본 클래스입니다. <xref:System.Net.WebRequest> 클래스를 사용하여 리소스의 데이터를 요청하는 애플리케이션은 **WebResponse**로 응답을 받습니다. 프로토콜별 **WebResponse** 하위 항목은 **WebResponse** 클래스의 추상 멤버를 구현해야 합니다.  
@@ -39,6 +39,7 @@ ms.locfileid: "54598869"
  **GetResponseStream** 메서드에서 반환되는 스트림 인스턴스는 애플리케이션이 소유하고 **WebResponse**를 닫지 않고도 닫을 수 있습니다. 규칙에 따라 **WebResponse.Close** 메서드를 호출하면 **GetResponse**에서 반환된 스트림도 닫힙니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - <xref:System.Net.WebResponse>
 - <xref:System.Net.HttpWebResponse>
 - <xref:System.Net.FileWebResponse>

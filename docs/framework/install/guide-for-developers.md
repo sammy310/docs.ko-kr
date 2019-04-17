@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f52b34e6fb99b52e5775482dec3c59ed6738b31
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: ff1bc6f0aa29742f61129ff9acb9980658f118a4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920560"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327869"
 ---
 # <a name="install-the-net-framework-for-developers"></a>개발자용 .NET Framework 설치
 
@@ -107,7 +107,7 @@ Visual Studio에서 애플리케이션을 빌드하거나 명령줄에서 MSBuil
 
 웹 설치 관리자와 오프라인 설치 관리자 모두 x86 기반 컴퓨터 및 x64 기반 컴퓨터용으로 설계되었지만([시스템 요구 사항](~/docs/framework/get-started/system-requirements.md) 참조) Itanium 기반 컴퓨터는 지원하지 않습니다.
 
-1.  설치하려는 .NET Framework 버전의 다운로드 페이지를 엽니다.
+1. 설치하려는 .NET Framework 버전의 다운로드 페이지를 엽니다.
 
     - .NET Framework 4.7.2([웹 설치 관리자](https://go.microsoft.com/fwlink/?LinkId=863262) 또는 [오프라인 설치 관리자](https://go.microsoft.com/fwlink/p/?LinkId=863265))
 
@@ -163,7 +163,7 @@ Visual Studio에서 애플리케이션을 빌드하거나 명령줄에서 MSBuil
 > [!IMPORTANT]
 > 언어 팩에는 응용 프로그램을 실행하는 데 필요한 .NET Framework 구성 요소가 포함되지 않으므로 언어 팩을 설치하기 전에 웹 또는 오프라인 설치 관리자를 실행해야 합니다. 언어팩을 이미 설치한 경우 해당 언어 팩을 제거하고 .NET Framework를 설치한 다음 다시 언어 팩을 설치합니다.
 
-1.  설치된 .NET Framework 버전의 언어 팩 다운로드 페이지를 엽니다.
+1. 설치된 .NET Framework 버전의 언어 팩 다운로드 페이지를 엽니다.
 
     - [.NET Framework 4.7.2 언어 팩](https://go.microsoft.com/fwlink/?LinkID=863258)
 
@@ -183,9 +183,9 @@ Visual Studio에서 애플리케이션을 빌드하거나 명령줄에서 MSBuil
 
     - [.NET Framework 4.5 언어 팩](https://go.microsoft.com/fwlink/p/?LinkId=245451)
 
-2.  언어 목록에서 다운로드하려는 언어를 선택하고 페이지가 해당 언어로 다시 로드될 때까지 몇 초 동안 기다립니다.
+2. 언어 목록에서 다운로드하려는 언어를 선택하고 페이지가 해당 언어로 다시 로드될 때까지 몇 초 동안 기다립니다.
 
-3.  **다운로드**를 선택합니다.
+3. **다운로드**를 선택합니다.
 
 다음 표에서는 지원되는 언어 목록을 보여 줍니다.
 

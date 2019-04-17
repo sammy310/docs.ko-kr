@@ -4,16 +4,16 @@ description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 7776edd91f73aa6ca74b82ae4d144635bb6c36a4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: cd54861600127191b852e0a966baae6e0fe7914e
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147478"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613878"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>모니터링과 원격 분석을 사용하여 앱을 최신화
 
-프로덕션 환경에서 응용 프로그램을 실행 하는 경우에 응용 프로그램을 수행 하는 방법에 대 한 통찰력 있는 중요 합니다. 높은 수준에서 수행 하는 것? 사용자가 발생 하는 오류 또는 안정적이 고 신뢰할 수 있는 응용 프로그램은? 다양 한 성능 모니터링, 강력한 경고 및 대시보드 응용 프로그램 사용 가능 하 고 예상 대로 수행 되는지 확인 하는 데 필요 합니다. 또한 문제가 있는지 신속 하 게 확인, 얼마나 많은 고객이 영향을 받고 찾고 문제를 해결 하는 근본 원인 분석을 확인 하는 일을 할 수 해야 합니다.
+프로덕션 환경에서 응용 프로그램을 실행하는 경우 응용 프로그램 성능에 대한 통찰력이 중요합니다. 높은 수준으로 실행되고 있읍니까? 사용자에게 오류를 발생시키거나 아니면 안정적이고 신뢰할 수 있는 응용 프로그램입니까? 다양한 성능 모니터링과 강력한 알림, 대시보드가 있어야 응용 프로그램이 사용할 수 있고 기대한 대로 실행되는지 확인할 수 있습니다. 또한 문제가 있다면 신속하게 확인하여 얼마나 많은 고객이 영향을 받는지 확인하고, 문제를 찾아서 해결하기 위해 근본 원인을 분석하는 작업을 해야 합니다.
 
 ## <a name="monitor-your-application-with-application-insights"></a>Application Insights를 사용 하 여 응용 프로그램 모니터링
 
@@ -69,31 +69,31 @@ Log Analytics 컨테이너 모니터링 솔루션을 사용할 수 있습니다.
 
 -   **Microsoft Azure의 모니터링 개요**
 
-[https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview)
+<https://docs.microsoft.com/azure/azure-monitor/overview>
 
--   **Application Insights 란?**
+-   **Application Insights란?**
 
-[https://docs.microsoft.com/azure/application-insights/app-insights-overview](https://docs.microsoft.com/azure/application-insights/app-insights-overview)
+<https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview>
 
 -   **Log Analytics 란?**
 
-[https://docs.microsoft.com/azure/log-analytics/log-analytics-overview](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview)
+<https://docs.microsoft.com/azure/log-analytics/log-analytics-overview>
 
--   **Log Analytics의 컨테이너 모니터링 솔루션**
+-   **Azure Monitor의 컨테이너 모니터링 솔루션**
 
-[https://docs.microsoft.com/azure/log-analytics/log-analytics-containers](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers)
+<https://docs.microsoft.com/azure/azure-monitor/insights/containers>
 
 -   **Azure Monitor 개요**
 
-[https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)
+<https://docs.microsoft.com/azure/azure-monitor/overview>
 
 -   **Operations Management Suite (OMS) 란?**
 
-[https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview)
+<https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview>
 
 -   **OMS 사용 하 여 Service Fabric에서 Windows Server 컨테이너 모니터링**
 
-[https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver](https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver)
+<https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver>
 
 >[!div class="step-by-step"]
 >[이전](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)

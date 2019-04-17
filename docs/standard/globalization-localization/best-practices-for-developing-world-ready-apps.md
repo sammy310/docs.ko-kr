@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a42a568e7c3f3a1a5c84d2ceae49c262f77d275d
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: d96e223b85178c7f2784a523e5609057d1432488
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442492"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310540"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>지역화 대비 애플리케이션 개발을 위한 모범 사례
 
@@ -71,7 +71,7 @@ ms.locfileid: "56442492"
 
 8. <xref:System.Resources.ResourceManager?displayProperty=nameWithType> 클래스를 사용하여 문화권에 따라 리소스를 검색합니다.
 
-9. [Windows Forms 리소스 편집기(Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)를 사용하여 지역화할 수 있도록 [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)를 사용하여 Windows Forms 대화 상자를 만듭니다. Windows Forms 대화 상자는 직접 코딩하지 마십시오.
+9. [Windows Forms 리소스 편집기(Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)를 사용하여 지역화할 수 있도록 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)를 사용하여 Windows Forms 대화 상자를 만듭니다. Windows Forms 대화 상자는 직접 코딩하지 마십시오.
 
 10. 전문적인 지역화(번역) 작업을 준비합니다.
 
@@ -104,4 +104,4 @@ ms.locfileid: "56442492"
 ## <a name="see-also"></a>참고 항목
 
 - [전역화 및 지역화](../../../docs/standard/globalization-localization/index.md)
-- [데스크톱 앱의 리소스](../../../docs/framework/resources/index.md)
+- [데스크톱 응용 프로그램의 리소스](../../../docs/framework/resources/index.md)

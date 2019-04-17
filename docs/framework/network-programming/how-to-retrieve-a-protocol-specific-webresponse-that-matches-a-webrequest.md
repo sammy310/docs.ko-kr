@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d8c90785-f16b-42a5-8439-ed2f731b2ba8
-ms.openlocfilehash: 3b3b523d6248b3c61a0994728b035bc6f02d5cf1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fee2b725afbceef45b9651a7cd88a61b37952e32
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745352"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087380"
 ---
 # <a name="how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest"></a>방법: WebRequest와 일치하는 프로토콜 관련 WebResponse 검색
 이 예제에서는 WebRequest와 일치하는 프로토콜별 WebResponse를 검색하는 방법을 보여 줍니다.  
@@ -33,4 +33,5 @@ Dim resp As WebResponse = req.GetResponse()
 -   **System.Net** 네임스페이스에 대한 참조.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [데이터 요청](../../../docs/framework/network-programming/requesting-data.md)

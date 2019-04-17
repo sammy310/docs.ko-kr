@@ -2,21 +2,21 @@
 title: '방법: 서명되지 않은 Friend 어셈블리 만들기(C#)'
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 5b376266581def9bdd4315ccbee04b71b7c8bc08
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6bc2d807b3d1cf6c82a9ba6303139b9758581f35
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365063"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318236"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-c"></a>방법: 서명되지 않은 Friend 어셈블리 만들기(C#)
 이 예제에서는 서명되지 않은 어셈블리와 함께 friend 어셈블리를 사용하는 방법을 보여 줍니다.  
   
 ### <a name="to-create-an-assembly-and-a-friend-assembly"></a>어셈블리 및 friend 어셈블리를 만들려면  
   
-1.  명령 프롬프트를 엽니다.  
+1. 명령 프롬프트를 엽니다.  
   
-2.  다음 코드가 포함된 `friend_unsigned_A.`라는 C# 파일을 만듭니다. 코드에서는 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성을 사용하여 friend_unsigned_B를 friend 어셈블리로 선언합니다.  
+2. 다음 코드가 포함된 `friend_unsigned_A.`라는 C# 파일을 만듭니다. 코드에서는 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성을 사용하여 friend_unsigned_B를 friend 어셈블리로 선언합니다.  
   
     ```csharp  
     // friend_unsigned_A.cs  
@@ -46,13 +46,13 @@ ms.locfileid: "57365063"
     }  
     ```  
   
-3.  다음 명령을 사용하여 friend_unsigned_A를 컴파일하고 서명합니다.  
+3. 다음 명령을 사용하여 friend_unsigned_A를 컴파일하고 서명합니다.  
   
     ```csharp  
     csc /target:library friend_unsigned_A.cs  
     ```  
   
-4.  다음 코드가 포함된 `friend_unsigned_B`라는 C# 파일을 만듭니다. friend_unsigned_A는 friend_unsigned_B를 friend 어셈블리로 지정하기 때문에 friend_unsigned_B의 코드는 friend_unsigned_A의 `internal` 형식과 멤버에 액세스할 수 있습니다.  
+4. 다음 코드가 포함된 `friend_unsigned_B`라는 C# 파일을 만듭니다. friend_unsigned_A는 friend_unsigned_B를 friend 어셈블리로 지정하기 때문에 friend_unsigned_B의 코드는 friend_unsigned_A의 `internal` 형식과 멤버에 액세스할 수 있습니다.  
   
     ```csharp  
     // friend_unsigned_B.cs  
@@ -75,7 +75,7 @@ ms.locfileid: "57365063"
     }  
     ```  
   
-5.  다음 명령을 사용하여 friend_unsigned_B를 컴파일합니다.  
+5. 다음 명령을 사용하여 friend_unsigned_B를 컴파일합니다.  
   
     ```csharp  
     csc /r:friend_unsigned_A.dll /out:friend_unsigned_B.exe friend_unsigned_B.cs  
@@ -83,7 +83,7 @@ ms.locfileid: "57365063"
   
      컴파일러에서 생성된 어셈블리 이름은 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성에 전달된 friend 어셈블리 이름과 일치해야 합니다. `/out` 컴파일러 옵션을 사용하여 출력 어셈블리(.exe 또는 .dll)의 이름을 명시적으로 지정해야 합니다. 자세한 내용은 [/out(C# 컴파일러 옵션)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md)을 참조하세요.  
   
-6.  friend_unsigned_B.exe 파일을 실행합니다.  
+6. friend_unsigned_B.exe 파일을 실행합니다.  
   
      프로그램에서 두 개의 문자열 “Class1.Test” 및 “Class2.Test”가 출력됩니다.  
   

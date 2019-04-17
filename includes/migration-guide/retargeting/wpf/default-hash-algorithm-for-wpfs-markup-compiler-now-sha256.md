@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 63a38f33fef09577c5ed621727b8c38e4c7e1bdf
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 14b8930044381d1d86ec7984d36a5c3588eebd81
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760941"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59233997"
 ---
 ### <a name="the-default-hash-algorithm-for-wpfs-markup-compiler-is-now-sha256"></a>WPF의 마크업 컴파일러에 대한 기본 해시 알고리즘은 이제 SHA256
 
@@ -15,4 +15,3 @@ ms.locfileid: "58760941"
 |범위|투명|
 |버전|4.7.2|
 |형식|대상 변경|
-

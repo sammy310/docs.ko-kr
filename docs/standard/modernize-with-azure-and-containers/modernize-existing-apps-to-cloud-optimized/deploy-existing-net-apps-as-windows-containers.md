@@ -4,12 +4,12 @@ description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/29/2018
-ms.openlocfilehash: 9d84924317e7c6e3dd4386f851ee902e2b5a7caf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ad0da9f7f0412c14b5362e3f631a7aa4af1f8260
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216667"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611252"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>기존 .NET 앱을 Windows 컨테이너로 배포
 
@@ -93,14 +93,14 @@ Linux의 경우 공식 .NET Docker 이미지(예: Debian)에서 여러 배포판
 
 Dockerfile 파일에 이미지 이름을 추가한 경우 Windows.NET Framework 기반 컨테이너 이미지에 대 한 다음 예와 같이 태그를 사용 하 여 운영 체제 및 버전을 선택할 수 있습니다.
 
-> | **태그** | **시스템 및 버전** |
+> | **Tag** | **시스템 및 버전** |
 > |---|---|
 > | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET framework 4.x를 Windows Server Core |
 > | **microsoft/aspnet:4.x-windowsservercore** | .NET framework 4.x Windows Server Core에서 추가 ASP.NET 사용자 지정 |
 
 .NET Core (플랫폼 간 Linux 및 Windows 용)에 대 한 태그를 다음과 같이 보입니다.
 
-> | **태그** | **시스템 및 버전**
+> | **Tag** | **시스템 및 버전**
 > |---|---|
 > | **microsoft/dotnet:2.0.0-runtime** | .NET core 2.0 런타임 전용 linux |
 > | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET core 2.0 런타임 전용 Windows Nano Server에서 |
@@ -125,15 +125,15 @@ Hyper-v 격리 없이 Windows 컨테이너를 실행 하는 것은 런타임에 
 
 -   **Windows 컨테이너 설명서**
 
-    [https://docs.microsoft.com/virtualization/windowscontainers/](https://docs.microsoft.com/virtualization/windowscontainers/)
+    <https://docs.microsoft.com/virtualization/windowscontainers/>
 
 -   **Windows 컨테이너 기본 사항**
 
-    [https://docs.microsoft.com/virtualization/windowscontainers/about/](https://docs.microsoft.com/virtualization/windowscontainers/about/)
+    <https://docs.microsoft.com/virtualization/windowscontainers/about/>
 
 -   **인포 그래픽: Microsoft 및 컨테이너**
 
-    [https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf](https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf)
+    <https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf>
 
 ## <a name="the-container-ecosystem-in-azure"></a>Azure에서 컨테이너 에코 시스템
 

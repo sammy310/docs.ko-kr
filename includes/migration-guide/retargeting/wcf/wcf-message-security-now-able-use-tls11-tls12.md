@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3b7b50700541649a785fa9bbe3ecc56c2697fbfc
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 0a3dc43ebdc58d54675f2264a8ee56d9f4358cd8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760271"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236481"
 ---
 ### <a name="wcf-message-security-now-is-able-to-use-tls11-and-tls12"></a>WCF 메시지 보안이 이제 TLS1.1 및 TLS1.2를 사용할 수 있음
 
@@ -15,4 +15,3 @@ ms.locfileid: "58760271"
 |범위|Microsoft Edge|
 |버전|4.7|
 |형식|대상 변경|
-

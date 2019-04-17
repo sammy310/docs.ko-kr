@@ -2,12 +2,12 @@
 title: -target:winmdobj(C# 컴파일러 옵션)
 ms.date: 07/20/2015
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
-ms.openlocfilehash: 4000394a35c8990d3c5793c1313fc768a61c3271
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cc85bf582d737114bc0e621a9568bbb9acb791b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608968"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319302"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a>-target:winmdobj(C# 컴파일러 옵션)
 **-target:winmdobj** 컴파일러 옵션을 사용하는 경우 컴파일러는 사용자가 Windows 런타임 이진(.winmd) 파일로 변환할 수 있는 중간 .winmdobj 파일을 만듭니다. 그런 다음 관리되는 언어 프로그램뿐만 아니라 JavaScript 및 C++ 프로그램에서도 .winmd 파일을 사용할 수 있습니다.  
@@ -29,11 +29,11 @@ ms.locfileid: "54608968"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-ide-for-a-windows-store-app"></a>Windows 스토어 응용 프로그램용 Visual Studio IDE에서 이 컴파일러 옵션을 설정하려면  
   
-1.  **솔루션 탐색기**에서 프로젝트의 바로 가기 메뉴를 열고 **속성**을 선택합니다.  
+1. **솔루션 탐색기**에서 프로젝트의 바로 가기 메뉴를 열고 **속성**을 선택합니다.  
   
-2.  **애플리케이션** 탭을 선택합니다.  
+2. **애플리케이션** 탭을 선택합니다.  
   
-3.  **출력 형식** 목록에서 **WinMD 파일**을 선택합니다.  
+3. **출력 형식** 목록에서 **WinMD 파일**을 선택합니다.  
   
      **WinMD 파일** 옵션은 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 앱 템플릿에만 사용할 수 있습니다.  
   

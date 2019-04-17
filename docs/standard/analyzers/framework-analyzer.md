@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 562d85d47791ca253655dd05a1c9a268767ba949
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: cbd9bcdb12a423f54aa4ff82d88f07c20023c48f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634468"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197654"
 ---
 # <a name="the-net-framework-analyzer"></a>.NET Framework 분석기
 
@@ -114,7 +114,6 @@ serialize할 수 없는 형식의 인스턴스 필드가 serialize할 수 있는
 
 추가 정보: [A3075: XML의 안전하지 않은 DTD 처리](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
 
-
 ### <a name="ca5350-do-not-use-weak-cryptographic-algorithms"></a>CA5350: 취약한 암호화 알고리즘을 사용하지 마세요.
 
 공격이 발전할수록 암호화 알고리즘은 시간이 지남에 따라 저하됩니다. 해당 암호화 능력이 더욱 저하되면 이 암호화 알고리즘의 형식 및 애플리케이션에 따라 공격자가 암호화된 메시지를 읽거나, 암호화된 메시지를 조작하거나, 디지털 서명을 위조하거나, 해시된 콘텐츠를 조작하거나, 이 알고리즘을 기반으로 하는 모든 암호화 시스템을 손상시킬 수 있습니다. 암호화의 경우 키 길이가 128비트 이상인 AES 알고리즘(AES-256, AES-192 및 AES-128 허용 가능함)을 사용합니다. 해시의 경우 SHA-2 512, SHA-2 384 또는 SHA-2 256 등 SHA-2 제품군의 해시 함수를 사용합니다.
@@ -134,5 +133,3 @@ serialize할 수 없는 형식의 인스턴스 필드가 serialize할 수 있는
 **심각도:** 경고
 
 추가 정보: [CA5351: 손상된 암호화 알고리즘을 사용하지 마세요.](/visualstudio/code-quality/ca5351-do-not-use-broken-cryptographic-algorithms)
-
-

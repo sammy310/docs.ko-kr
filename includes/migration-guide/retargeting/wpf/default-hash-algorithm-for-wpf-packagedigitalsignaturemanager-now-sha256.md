@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 745e880db08c5fa7e5514a71758f7fbb042e7ef4
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 141e906077748795e0360cec450a54a9fd170dc9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760322"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236424"
 ---
 ### <a name="the-default-hash-algorithm-for-wpf-packagedigitalsignaturemanager-is-now-sha256"></a>WPF PackageDigitalSignatureManager의 기본 해시 알고리즘은 이제 SHA256입니다.
 
@@ -16,4 +16,3 @@ ms.locfileid: "58760322"
 |버전|4.7.1|
 |형식|대상 변경|
 |영향을 받는 API|<ul><li><xref:System.IO.Packaging.PackageDigitalSignatureManager.DefaultHashAlgorithm?displayProperty=nameWithType></li></ul>|
-

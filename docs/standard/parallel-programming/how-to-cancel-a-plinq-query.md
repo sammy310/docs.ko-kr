@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae227ace44ad379b0020a8a7dbbab190fe7d14e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80dc5f72bac436d4935c1697347d588b1a302f86
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604303"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305340"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>방법: PLINQ 쿼리 취소
 다음 예제는 PLINQ 쿼리를 취소하는 두 가지 방법을 보여줍니다. 첫 번째 예제에서는 주로 데이터 트래버스로 구성되는 쿼리를 취소하는 방법을 보여줍니다. 두 번째 예제에서는 계산을 많이 해야 하는 사용자 함수를 포함하는 쿼리를 취소하는 방법을 보여줍니다.  
@@ -34,9 +34,9 @@ ms.locfileid: "54604303"
   
  취소에 대한 일반 지침은 다음과 같습니다.  
   
-1.  사용자 대리자 취소를 수행하는 경우 외부 <xref:System.Threading.CancellationToken>에 대해 PLINQ에 알리고 <xref:System.OperationCanceledException>(externalCT)을 throw해야 합니다.  
+1. 사용자 대리자 취소를 수행하는 경우 외부 <xref:System.Threading.CancellationToken>에 대해 PLINQ에 알리고 <xref:System.OperationCanceledException>(externalCT)을 throw해야 합니다.  
   
-2.  취소가 발생하고 다른 예외가 throw되지 않으면 <xref:System.AggregateException>이 아닌 <xref:System.OperationCanceledException>을 처리해야 합니다.  
+2. 취소가 발생하고 다른 예외가 throw되지 않으면 <xref:System.AggregateException>이 아닌 <xref:System.OperationCanceledException>을 처리해야 합니다.  
   
 ## <a name="example"></a>예제  
  다음 예제는 사용자 코드에서 계산을 많이 해야 하는 경우 취소를 처리하는 방법을 보여줍니다.  

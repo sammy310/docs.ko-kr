@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, data binding
 ms.assetid: 40476b89-8941-4771-8d21-2fe430c85a9d
-ms.openlocfilehash: e00f46dfd9b2d1446f2c2a1ba1fdd2e5b0405c1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f55c9790b8300a1a3f26e031a17a0982638b562b
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59111011"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517423"
 ---
 # <a name="how-to-customize-data-binding-behaviors-wcf-data-services"></a>방법: 데이터 바인딩 (WCF Data Services) 동작을 사용자 지정
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 사용하면 바인딩 컬렉션에 개체가 추가 또는 제거되거나 속성 변경이 검색될 때 <xref:System.Data.Services.Client.DataServiceCollection%601>에서 호출하는 사용자 지정 논리를 제공할 수 있습니다. 이 사용자 지정 논리로 참조 하는 메서드를 그대로 제공 됩니다 <xref:System.Func%602> 의 값을 반환 하는 대리자 `false` 때 기본 동작이 수행 되어야 하는 사용자 지정 메서드가 완료 될 때 및 `true` 후속 처리의 경우는 이벤트는 중지 되어야 합니다.  
@@ -23,14 +23,14 @@ ms.locfileid: "59111011"
 ## <a name="example"></a>예제  
  XAML 파일에 대한 다음 코드 숨김 페이지에서는 바인딩 컬렉션에 바인딩된 데이터가 변경될 때 호출되는 사용자 지정 메서드를 사용하여 <xref:System.Data.Services.Client.DataServiceCollection%601>을 만듭니다. <xref:System.Collections.ObjectModel.ObservableCollection%601.CollectionChanged> 이벤트가 발생할 경우 제공된 메서드는 바인딩 컬렉션에서 제거된 항목이 데이터 서비스에서 삭제되지 않도록 합니다. <xref:System.Collections.ObjectModel.ObservableCollection%601.PropertyChanged> 이벤트가 발생할 경우 `ShipDate` 값의 유효성이 검사되어 이미 운송된 주문이 변경되지 않도록 합니다.  
   
- [!code-csharp[Astoria Northwind Client#WpfDataBindingCustom](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderscustom.xaml.cs#wpfdatabindingcustom)]
- [!code-vb[Astoria Northwind Client#WpfDataBindingCustom](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom.xaml.vb#wpfdatabindingcustom)]
- [!code-vb[Astoria Northwind Client#WpfDataBindingCustom](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom2.xaml.vb#wpfdatabindingcustom)]  
+ [!code-csharp[Astoria Northwind Client#WpfDataBindingCustom](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderscustom.xaml.cs#wpfdatabindingcustom)]
+ [!code-vb[Astoria Northwind Client#WpfDataBindingCustom](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderscustom.xaml.vb#wpfdatabindingcustom)]
+ [!code-vb[Astoria Northwind Client#WpfDataBindingCustom](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderscustom2.xaml.vb#wpfdatabindingcustom)]  
   
 ## <a name="example"></a>예제  
  다음 XAML에서는 이전 예제의 창을 정의합니다.  
   
- [!code-xaml[Astoria Northwind Client#WpfDataBindingCustomXaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom.xaml#wpfdatabindingcustomxaml)]  
+ [!code-xaml[Astoria Northwind Client#WpfDataBindingCustomXaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderscustom.xaml#wpfdatabindingcustomxaml)]  
   
 ## <a name="see-also"></a>참고자료
 

@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e2cf9e1b4349d83a378f6b17e8740c95546bbe4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 119c4c13c90aeca8c14d2725d927c38be32212a6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573967"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308720"
 ---
 # <a name="editing-xml-schemas"></a>XML 스키마 편집
 XML 스키마 편집 기능은 SOM(스키마 개체 모델)의 중요한 기능 중 하나입니다. SOM의 모든 pre-schema-compilation 속성을 사용하여 XML 스키마에서 기존 값을 변경할 수 있습니다. 그런 다음 XML 스키마를 다시 컴파일하여 변경 내용을 적용할 수 있습니다.  
@@ -27,19 +27,19 @@ XML 스키마 편집 기능은 SOM(스키마 개체 모델)의 중요한 기능 
 ### <a name="phonenumber-element-example"></a>PhoneNumber 요소 예제  
  이 첫 번째 코드 예제에서는 새 `PhoneNumber` 요소를 고객 스키마의 `Customer` 요소에 추가합니다. 이 코드 예제는 다음과 같은 단계로 고객 스키마를 편집합니다.  
   
-1.  고객 스키마를 새 <xref:System.Xml.Schema.XmlSchemaSet> 개체에 추가한 다음 컴파일합니다. 스키마를 읽거나 컴파일할 때 발생하는 모든 스키마 유효성 검사 경고 및 오류는 <xref:System.Xml.Schema.ValidationEventHandler> 대리자에서 처리됩니다.  
+1. 고객 스키마를 새 <xref:System.Xml.Schema.XmlSchemaSet> 개체에 추가한 다음 컴파일합니다. 스키마를 읽거나 컴파일할 때 발생하는 모든 스키마 유효성 검사 경고 및 오류는 <xref:System.Xml.Schema.ValidationEventHandler> 대리자에서 처리됩니다.  
   
-2.  <xref:System.Xml.Schema.XmlSchema> 속성을 반복하여 <xref:System.Xml.Schema.XmlSchemaSet>에서 컴파일된 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 개체를 검색합니다. 스키마가 컴파일되므로 PSCI(Post-Schema-Compilation-Infoset) 속성에 액세스할 수 있습니다.  
+2. <xref:System.Xml.Schema.XmlSchema> 속성을 반복하여 <xref:System.Xml.Schema.XmlSchemaSet>에서 컴파일된 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 개체를 검색합니다. 스키마가 컴파일되므로 PSCI(Post-Schema-Compilation-Infoset) 속성에 액세스할 수 있습니다.  
   
-3.  `PhoneNumber` 클래스를 사용하여 <xref:System.Xml.Schema.XmlSchemaElement> 요소를 만들고, `xs:string` 및 <xref:System.Xml.Schema.XmlSchemaSimpleType> 클래스를 사용하여 <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction> 단순 형식 제한을 만들고, 이 제한의 <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction.Facets%2A> 속성에 패턴 패싯을 추가하고 이 제한을 단순 형식의 <xref:System.Xml.Schema.XmlSchemaSimpleType.Content%2A> 속성에 추가하고 단순 형식을 <xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A> 요소의 `PhoneNumber`에 추가합니다.  
+3. `PhoneNumber` 클래스를 사용하여 <xref:System.Xml.Schema.XmlSchemaElement> 요소를 만들고, `xs:string` 및 <xref:System.Xml.Schema.XmlSchemaSimpleType> 클래스를 사용하여 <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction> 단순 형식 제한을 만들고, 이 제한의 <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction.Facets%2A> 속성에 패턴 패싯을 추가하고 이 제한을 단순 형식의 <xref:System.Xml.Schema.XmlSchemaSimpleType.Content%2A> 속성에 추가하고 단순 형식을 <xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A> 요소의 `PhoneNumber`에 추가합니다.  
   
-4.  post-schema-compilation <xref:System.Xml.Schema.XmlSchemaElement> 컬렉션의 <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> 컬렉션에서 각 <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>를 반복합니다.  
+4. post-schema-compilation <xref:System.Xml.Schema.XmlSchemaElement> 컬렉션의 <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> 컬렉션에서 각 <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>를 반복합니다.  
   
-5.  요소의 <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A>이 `"Customer"`인 경우 `Customer` 클래스를 사용하여 <xref:System.Xml.Schema.XmlSchemaComplexType> 요소의 복합 형식을 얻고 <xref:System.Xml.Schema.XmlSchemaSequence> 클래스를 사용하여 복합 형식의 sequence 파티클을 얻습니다.  
+5. 요소의 <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A>이 `"Customer"`인 경우 `Customer` 클래스를 사용하여 <xref:System.Xml.Schema.XmlSchemaComplexType> 요소의 복합 형식을 얻고 <xref:System.Xml.Schema.XmlSchemaSequence> 클래스를 사용하여 복합 형식의 sequence 파티클을 얻습니다.  
   
-6.  기존 `PhoneNumber` 및 `FirstName` 요소가 포함된 시퀀스의 pre-schema-compilation `LastName` 컬렉션을 사용하여 이 시퀀스에 새 <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A> 요소를 추가합니다.  
+6. 기존 `PhoneNumber` 및 `FirstName` 요소가 포함된 시퀀스의 pre-schema-compilation `LastName` 컬렉션을 사용하여 이 시퀀스에 새 <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A> 요소를 추가합니다.  
   
-7.  마지막으로, <xref:System.Xml.Schema.XmlSchema> 클래스의 <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> 및 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 메서드를 사용하여 수정된 <xref:System.Xml.Schema.XmlSchemaSet> 개체를 다시 처리하고 컴파일하여 콘솔에 작성합니다.  
+7. 마지막으로, <xref:System.Xml.Schema.XmlSchema> 클래스의 <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> 및 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 메서드를 사용하여 수정된 <xref:System.Xml.Schema.XmlSchemaSet> 개체를 다시 처리하고 컴파일하여 콘솔에 작성합니다.  
   
  다음은 전체 코드 예제입니다.  
   
@@ -76,34 +76,34 @@ XML 스키마 편집 기능은 SOM(스키마 개체 모델)의 중요한 기능 
   
  이 코드 예제는 다음과 같은 단계로 고객 스키마를 편집합니다.  
   
-1.  고객 스키마를 새 <xref:System.Xml.Schema.XmlSchemaSet> 개체에 추가한 다음 컴파일합니다. 스키마를 읽거나 컴파일할 때 발생하는 모든 스키마 유효성 검사 경고 및 오류는 <xref:System.Xml.Schema.ValidationEventHandler> 대리자에서 처리됩니다.  
+1. 고객 스키마를 새 <xref:System.Xml.Schema.XmlSchemaSet> 개체에 추가한 다음 컴파일합니다. 스키마를 읽거나 컴파일할 때 발생하는 모든 스키마 유효성 검사 경고 및 오류는 <xref:System.Xml.Schema.ValidationEventHandler> 대리자에서 처리됩니다.  
   
-2.  <xref:System.Xml.Schema.XmlSchema> 속성을 반복하여 <xref:System.Xml.Schema.XmlSchemaSet>에서 컴파일된 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 개체를 검색합니다. 스키마가 컴파일되므로 PSCI(Post-Schema-Compilation-Infoset) 속성에 액세스할 수 있습니다.  
+2. <xref:System.Xml.Schema.XmlSchema> 속성을 반복하여 <xref:System.Xml.Schema.XmlSchemaSet>에서 컴파일된 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 개체를 검색합니다. 스키마가 컴파일되므로 PSCI(Post-Schema-Compilation-Infoset) 속성에 액세스할 수 있습니다.  
   
-3.  `FirstName` 클래스를 사용하여 <xref:System.Xml.Schema.XmlSchemaComplexType> 요소에 대한 새 복합 형식을 만듭니다.  
+3. `FirstName` 클래스를 사용하여 <xref:System.Xml.Schema.XmlSchemaComplexType> 요소에 대한 새 복합 형식을 만듭니다.  
   
-4.  `xs:string` 및 <xref:System.Xml.Schema.XmlSchemaSimpleContent> 클래스를 사용하여 <xref:System.Xml.Schema.XmlSchemaSimpleContentExtension>의 기본 형식으로 새 단순 내용 확장을 만듭니다.  
+4. `xs:string` 및 <xref:System.Xml.Schema.XmlSchemaSimpleContent> 클래스를 사용하여 <xref:System.Xml.Schema.XmlSchemaSimpleContentExtension>의 기본 형식으로 새 단순 내용 확장을 만듭니다.  
   
-5.  `Title` 클래스를 사용하여 <xref:System.Xml.Schema.XmlSchemaAttribute>의 <xref:System.Xml.Schema.XmlSchemaAttribute.SchemaTypeName%2A>으로 새 `xs:string` 특성을 만들고 이 특성을 단순 내용 확장에 추가합니다.  
+5. `Title` 클래스를 사용하여 <xref:System.Xml.Schema.XmlSchemaAttribute>의 <xref:System.Xml.Schema.XmlSchemaAttribute.SchemaTypeName%2A>으로 새 `xs:string` 특성을 만들고 이 특성을 단순 내용 확장에 추가합니다.  
   
-6.  단순 내용의 내용 모델을 단순 내용 확장으로 설정하고 복합 형식의 내용 모델을 단순 내용으로 설정합니다.  
+6. 단순 내용의 내용 모델을 단순 내용 확장으로 설정하고 복합 형식의 내용 모델을 단순 내용으로 설정합니다.  
   
-7.  새 복합 형식을 pre-schema-compilation <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> 컬렉션에 추가합니다.  
+7. 새 복합 형식을 pre-schema-compilation <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> 컬렉션에 추가합니다.  
   
-8.  스키마 사전 컴파일 <xref:System.Xml.Schema.XmlSchemaObject> 컬렉션의 각 <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType>를 반복합니다.  
+8. 스키마 사전 컴파일 <xref:System.Xml.Schema.XmlSchemaObject> 컬렉션의 각 <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType>를 반복합니다.  
   
 > [!NOTE]
 >  `FirstName` 요소는 스키마에서 전역 요소가 아니므로 <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> 또는 <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> 컬렉션에서 사용할 수 없습니다. 이 코드 예제에서는 먼저 `FirstName` 요소를 찾아서 `Customer` 요소를 찾습니다.  
 >   
 >  첫 번째 코드 예제에서는 post-schema-compilation <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> 컬렉션을 사용하여 스키마를 통과했습니다. 이 샘플에서는 pre-schema-compilation <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> 컬렉션을 사용하여 스키마를 통과합니다. 두 컬렉션은 모두 스키마에서 전역 요소에 대한 액세스를 제공하지만 <xref:System.Xml.Schema.XmlSchema.Items%2A> 컬렉션을 반복하면 스키마에서 모든 전역 요소를 반복해야 하므로 시간이 더 많이 걸리며 PSCI 속성이 없습니다. <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.Attributes%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A?displayProperty=nameWithType> 등의 PSCI 컬렉션에서는 전역 요소, 특성 및 형식과 해당 PSCI 속성에 직접 액세스할 수 있습니다.  
   
-1.  <xref:System.Xml.Schema.XmlSchemaObject>가 <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A>이 `"Customer"`인 요소일 경우 `Customer` 클래스를 사용하여 <xref:System.Xml.Schema.XmlSchemaComplexType> 요소의 복합 형식을 얻고 <xref:System.Xml.Schema.XmlSchemaSequence> 클래스를 사용하여 복합 형식의 sequence 파티클을 얻습니다.  
+1. <xref:System.Xml.Schema.XmlSchemaObject>가 <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A>이 `"Customer"`인 요소일 경우 `Customer` 클래스를 사용하여 <xref:System.Xml.Schema.XmlSchemaComplexType> 요소의 복합 형식을 얻고 <xref:System.Xml.Schema.XmlSchemaSequence> 클래스를 사용하여 복합 형식의 sequence 파티클을 얻습니다.  
   
-2.  스키마 사전 컴파일 <xref:System.Xml.Schema.XmlSchemaParticle> 컬렉션의 각 <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType>를 반복합니다.  
+2. 스키마 사전 컴파일 <xref:System.Xml.Schema.XmlSchemaParticle> 컬렉션의 각 <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType>를 반복합니다.  
   
-3.  <xref:System.Xml.Schema.XmlSchemaParticle>이 <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A>이 `"FirstName"`인 요소일 경우 <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> 요소의 `FirstName`을 새 `FirstName` 복합 형식으로 설정합니다.  
+3. <xref:System.Xml.Schema.XmlSchemaParticle>이 <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A>이 `"FirstName"`인 요소일 경우 <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> 요소의 `FirstName`을 새 `FirstName` 복합 형식으로 설정합니다.  
   
-4.  마지막으로, <xref:System.Xml.Schema.XmlSchema> 클래스의 <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> 및 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 메서드를 사용하여 수정된 <xref:System.Xml.Schema.XmlSchemaSet> 개체를 다시 처리하고 컴파일하여 콘솔에 작성합니다.  
+4. 마지막으로, <xref:System.Xml.Schema.XmlSchema> 클래스의 <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> 및 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 메서드를 사용하여 수정된 <xref:System.Xml.Schema.XmlSchemaSet> 개체를 다시 처리하고 컴파일하여 콘솔에 작성합니다.  
   
  다음은 전체 코드 예제입니다.  
   

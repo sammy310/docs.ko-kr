@@ -11,12 +11,12 @@ helpviewer_keywords:
 - registry keys [Visual Basic], setting values
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
-ms.openlocfilehash: 6d9790d37812ff0ed4ac76049b6949901f7b5c58
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0cadff8b44c60041e2664b1d3b70830209014301
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835455"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312618"
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>방법: Visual Basic에서 레지스트리 키 만들기 및 해당 값 설정
 `My.Computer.Registry` 개체의 `CreateSubKey` 메서드를 사용하여 레지스트리 키를 만들 수 있습니다.  
@@ -31,11 +31,11 @@ ms.locfileid: "58835455"
   
 #### <a name="to-create-a-registry-key-and-set-a-value-in-it"></a>레지스트리 키를 만들고 키에 값을 설정하려면  
   
-1.  키를 배치할 하이브와 키 이름을 지정하여 `CreateSubkey` 메서드를 사용합니다. 이 예제에서는 HKEY_CURRENT_USER 아래에 레지스트리 키 `MyTestKey`를 만듭니다.  
+1. 키를 배치할 하이브와 키 이름을 지정하여 `CreateSubkey` 메서드를 사용합니다. 이 예제에서는 HKEY_CURRENT_USER 아래에 레지스트리 키 `MyTestKey`를 만듭니다.  
   
      [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]  
   
-2.  `SetValue` 메서드를 사용하여 값을 설정합니다. 이 예제에서는 문자열 값 "MyTestKeyValue"를 "This is a test value"로 설정합니다.  
+2. `SetValue` 메서드를 사용하여 값을 설정합니다. 이 예제에서는 문자열 값 "MyTestKeyValue"를 "This is a test value"로 설정합니다.  
   
      [!code-vb[VbResourceTasks#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#14)]  
   

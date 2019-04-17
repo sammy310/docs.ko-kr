@@ -2,12 +2,12 @@
 title: PNRP 클라우드
 ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
-ms.openlocfilehash: d91bf1b68b8446e2700b601d818c493b8edc1b82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 943cad880885a624c0ed0798738665c8bcd7036f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742200"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110047"
 ---
 # <a name="pnrp-clouds"></a>PNRP 클라우드
 PNRP “클라우드”는 네트워크를 통해 서로 통신할 수 있는 노드 집합을 나타냅니다. “클라우드”라는 용어는 “피어 메시” 및 “피어 투 피어 그래프”와 동의어입니다.  
@@ -32,5 +32,6 @@ PNRP “클라우드”는 네트워크를 통해 서로 통신할 수 있는 �
  클라우드 인스턴스를 만들거나 가져오고 나면 피어 이름을 등록하여 알려진 피어의 메시를 만들 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - <xref:System.Net.PeerToPeer.Cloud>
 - [피어 이름 확인 프로토콜](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)

@@ -21,7 +21,7 @@ Linux Docker 컨테이너를 사용하는 경우에는 이러한 오케스트레
 
 예를 들어, kubernetes에서 컨테이너 지원은 기본 클래스(일급 객체)이므로 kubernetes에서 Windows 컨테이너를 사용하는 것도 효과적입니다(2018년 초 ACS 미리 보기의 경우).
 
-중요 참고 사항: 진화 하 고 "자세한 PaaS" Kubernetes에 대 한 ACS (Azure Container Service)의 버전은 AKS (Azure Kubernetes Service), 단, Windows 컨테이너는 여전히 Q2 2018 년부터 지원 되지 않지만 곧 지원 될 예정입니다.
+중요 참고 사항: Kubernetes의 진화되고 '자세한 PaaS' ACS(Azure Container Service)의 버전은 AKS(Azure Kubernetes Service)입니다. Windows 컨테이너는 2018년 2분기에도 여전히 지원되지 않고 있지만 곧 지원될 예정입니다.
 
 >[!div class="step-by-step"]
 >[이전](when-to-deploy-windows-containers-to-service-fabric.md)

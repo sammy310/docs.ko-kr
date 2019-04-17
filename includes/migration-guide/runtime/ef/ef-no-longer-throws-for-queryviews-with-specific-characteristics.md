@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 705e1a22b8a5791c1103dd374a8bab19356cadfb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236636"
+---
 ### <a name="ef-no-longer-throws-for-queryviews-with-specific-characteristics"></a>EF는 더 이상 특정 특성을 가진 Queryview를 throw하지 않습니다.
 
 |   |   |
@@ -7,4 +15,3 @@
 |범위|Microsoft Edge|
 |버전|4.5.2|
 |형식|런타임|
-

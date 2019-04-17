@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 1d9841b9c8989a07820c75ac07940c90e5c0753e
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 2cd107dc92fd0fae89717c38840ce7ea44f3ac9a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760913"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234000"
 ---
 ### <a name="wpf-changing-a-primary-key-when-displaying-ado-data-in-a-masterdetail-scenario"></a>마스터/세부 정보 시나리오에서 ADO 데이터를 표시할 때 기본 키를 변경하는 WPF
 
@@ -15,4 +15,3 @@ ms.locfileid: "58760913"
 |범위|부|
 |버전|4.7.2|
 |형식|대상 변경|
-

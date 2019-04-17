@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Internet, requesting data
 - data requests, creating requests
 ms.assetid: faab683e-3f1e-4eee-b5e9-59f7245033d5
-ms.openlocfilehash: 07c15614f22409f427c6f75cd4ddb8cfa218beba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a4915796310e4f6899d833f20bc5260e0ee032b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706951"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171035"
 ---
 # <a name="creating-internet-requests"></a>인터넷 요청 만들기
 애플리케이션은 <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> 메서드를 통해 <xref:System.Net.WebRequest> 인스턴스를 만듭니다. 이것은 전달된 URI 구성표에 따라 **WebRequest**에서 파생된 클래스를 만드는 정적 메서드입니다.  
@@ -28,5 +28,6 @@ ms.locfileid: "54706951"
  다른 애플리케이션 수준 프로토콜을 사용하는 요청을 처리하기 위해 **WebRequest** 및 **WebResponse**에서 파생된 프로토콜별 클래스를 구현해야 합니다. 자세한 내용은 [플러그형 프로토콜 프로그래밍](../../../docs/framework/network-programming/programming-pluggable-protocols.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [방법: WebRequest 클래스를 사용하여 데이터 요청](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
 - [데이터 요청](../../../docs/framework/network-programming/requesting-data.md)
