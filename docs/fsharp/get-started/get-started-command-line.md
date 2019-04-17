@@ -11,25 +11,23 @@ ms.locfileid: "54152101"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>.NET Core CLI를 사용하여 F# 시작
 
-.NET Core CLI를 사용하여 모든 운영 체제(Windows나 macOs, Linux)에서 간단한 F# 다중 프로젝트 솔루션을 구축하는 방법을 알아봅니다 
-
-이 문서에서는 .NET Core CLI를 사용하여 모든 운영 체제 (Windows나 macOS, Linux)에서 F#을 시작하는 방법을 다룹니다. 콘솔 응용 프로그램에서 호출하는 클래스 라이브러리를 사용하여 다중 프로젝트 솔루션을 작성합니다.
+이 문서에서는 어떻게 시작할 수 있습니다 사용 하 여 F# .NET Core CLI를 사용 하 여 운영 체제 (Windows, macOS 또는 Linux). 콘솔 응용 프로그램에 의해 호출 되는 클래스 라이브러리를 사용 하 여 다중 프로젝트 솔루션 빌드를 거치게 됩니다.
 
 ## <a name="prerequisites"></a>전제 조건
 
-시작 하려면 최신[.NET Core SDK](https://www.microsoft.com/net/download/)를 설치해야 합니다.
+시작하려면 최신 [.NET Core SDK](https://www.microsoft.com/net/download/)를 설치해야 합니다.
 
 이 문서에서는 명령줄과 원하는 텍스트 편집기의 사용 방법을 알고 있다고 가정합니다. 아직 사용하고 있지 않은 경우라면, [Visual Studio Code](get-started-vscode.md)는 F#용 텍스트 편집기로 선택할 수 있는 훌륭한 옵션입니다.
 
 ## <a name="build-a-simple-multi-project-solution"></a>간단한 다중 프로젝트 솔루션 구축
 
-명령 프롬프트나 터미널을 열고 `FSNetCore`라는 새 솔루션 파일을 만들기위해 [dotnet new](../../core/tools/dotnet-new.md) 명령을 다음과 같이 사용합니다. 
+명령 프롬프트나 터미널을 열고 `FSNetCore`라는 새 솔루션 파일을 만들기 위해 [dotnet new](../../core/tools/dotnet-new.md) 명령을 다음과 같이 사용합니다. 
 
 ```console
 dotnet new sln -o FSNetCore
 ```
 
-이 명령을 실행하면 다음과 같은 디렉터리 구조가 생성 됩니다.
+위의 명령을 실행하면 다음과 같은 디렉터리 구조가 생성됩니다.
 
 ```console
 FSNetCore
