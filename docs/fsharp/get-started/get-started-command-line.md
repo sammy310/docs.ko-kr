@@ -1,6 +1,6 @@
 ---
-title: 명령줄 도구를 사용하여 F# 시작 
-description: .NET Core CLI를 사용하여 모든 운영 체제(Windows나 macOs, Linux)에서 간단한 F# 다중 프로젝트 솔루션을 구축하는 방법을 알아봅니다.  
+title: 시작 F# 명령줄 도구를 사용 하 여
+description: 간단한 다중 프로젝트 솔루션을 구축 하는 방법에 알아봅니다 F# .NET Core CLI를 사용 하 여 운영 체제 (Windows, macOs 또는 Linux).
 ms.date: 03/26/2018
 ms.openlocfilehash: bc9b223fcf133ffe8b19d5284dcbd3c14a426235
 ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
@@ -21,7 +21,7 @@ ms.locfileid: "54152101"
 
 ## <a name="build-a-simple-multi-project-solution"></a>간단한 다중 프로젝트 솔루션 구축
 
-명령 프롬프트나 터미널을 열고 `FSNetCore`라는 새 솔루션 파일을 만들기 위해 [dotnet new](../../core/tools/dotnet-new.md) 명령을 다음과 같이 사용합니다. 
+명령 프롬프트나 터미널을 열고 `FSNetCore`라는 새 솔루션 파일을 만들기 위해 [dotnet new](../../core/tools/dotnet-new.md) 명령을 다음과 같이 사용합니다.
 
 ```console
 dotnet new sln -o FSNetCore
@@ -44,7 +44,7 @@ FSNetCore
 dotnet new classlib -lang F# -o src/Library
 ```
 
-이전 명령을 실행 한 후 다음 디렉터리 구조가 생성 됩니다.
+위의 명령을 실행하면 다음과 같은 디렉터리 구조가 생성됩니다.
 
 ```console
 └── FSNetCore
@@ -88,7 +88,7 @@ dotnet sln add src/Library/Library.fsproj
 dotnet new console -lang F# -o src/App
 ```
 
-이전 명령을 실행 한 후 다음 디렉터리 구조가 생성 됩니다.
+위의 명령을 실행하면 다음과 같은 디렉터리 구조가 생성됩니다.
 
 ```console
 └── FSNetCore

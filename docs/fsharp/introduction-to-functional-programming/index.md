@@ -1,6 +1,6 @@
 ---
-title: F#의 함수형 프로그래밍 소개
-description: 함수형 프로그래밍의 기본 사항에 알아봅니다 F#입니다.
+title: F# 함수형 프로그래밍 소개
+description: F# 함수형 프로그래밍의 기본 사항에 대해 알아봅니다.
 ms.date: 10/29/2018
 ms.openlocfilehash: d4a9bb0cd826b41aca96e12e2bcb5aab80c18eb4
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -9,9 +9,9 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "25724480"
 ---
-# <a name="introduction-to-functional-programming-in-f"></a>F#의 함수형 프로그래밍 소개 #
+# <a name="introduction-to-functional-programming-in-f"></a>F# 함수형 프로그래밍 소개 #
 
-함수형 프로그래밍은 함수 및 변경할 수 없는 데이터의 사용을 강조 하는 프로그래밍 스타일입니다. 형식화 된 함수형 프로그래밍은 함수형 프로그래밍과 같은 정적 형식과 결합 된 경우 F#입니다. 일반적으로 다음과 같은 개념은 함수형 프로그래밍에 강조 됩니다.
+함수형 프로그래밍은 함수와 변경할 수 없는 데이터의 사용을 강조하는 프로그래밍 스타일입니다. 형식화된 함수형 프로그래밍은 함수형 프로그래밍이 F#과 같은 정적 형식과 결합된 경우입니다. 일반적으로 함수형 프로그래밍에서는 다음과 같은 개념이 강조됩니다.
 
 * 사용 하는 기본 구문 함수
 * 문 대신 식
