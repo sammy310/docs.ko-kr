@@ -17,7 +17,7 @@ F#에 함수(function)와 유형(type)이라는 두 가지 기본 개념이 있�
 
 ## <a name="executing-the-code-online"></a>온라인에서 코드 실행
 
-없는 경우 F# 컴퓨터에 설치를 실행할 수 있습니다 사용 하 여 온라인 샘플의 모든 합니다 [페이블 REPL](https://fable.io/repl/)합니다. 페이블 언어는 F# 브라우저에서 직접 실행 합니다. REPL에서 나오는 예제를 보려는 체크 아웃 **샘플 > 알아보기 > 둘러보기 F#**  페이블 REPL.의 왼쪽 메뉴 모음에서
+F#이 컴퓨터에 설치되지 않았다면 [Fable REPL](https://fable.io/repl/)을 사용하여 온라인의 모든 셈플을 실행할 수 없습니다. Fable에서는 브라우저에서 F# 언어를 직접 실행할 수 있습니다. REPL에서 다음에 나오는 예제를 보기위해서는 Fable REPL의 왼쪽 메뉴 바에서 **Samples > Learn > Tour of F#**를 확인하세요. 
 
 ## <a name="functions-and-modules"></a>함수와 모듈
 
