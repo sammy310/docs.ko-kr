@@ -20,8 +20,8 @@ ms.locfileid: "58186106"
 - **단일 모놀리식 앱:** Azure App Service를 선택합니다.
 - **N 계층 앱:** 단일 또는 몇 개의 백 엔드 서비스가 있다면 Azure Kubernetes Service(AKS)나 Service Fabric(SF), App Service와 같은 오케스트레이터를 선택합니다.
 - **Linux 마이크로 서비스:** AKS/Kubernetes를 선택합니다.
-- **Windows 마이크로 서비스: ** Service Fabric을 선택합니다.
-- **서버리스 functions 및 이벤트 처리기:** Azure 함수를 선택합니다.
+- **Windows 마이크로 서비스:** Service Fabric을 선택합니다
+- **서버리스 functions 및 이벤트 처리기:** Azure 함수를 선택합니다
 - **대규모 일괄 처리:** Azure Batch를 선택합니다.
 
 특정 응용 프로그램의 요구 사항과 특징에 따라 제품의 선택이 달라질 수 있으므로 이러한 권장 사항을 액면 그대로 받아들여서는 안됩니다. 처음에는 비슷한 형식으로 보일지라도 모든 응용 프로그램이 동일하지는 않습니다.

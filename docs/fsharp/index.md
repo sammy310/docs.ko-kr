@@ -30,11 +30,11 @@ F# 가이드에서는 F# 언어를 배우기 위한 많은 리소스를 제공�
 
 [F# 및 Xamarin 시작](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/)은 F#을 이용한 모바일 프로그래밍에 대한 문서입니다.
 
-[Azure Notebook을 위한 F#](https://notebooks.azure.com/Microsoft/libraries/samples/html/FSharp%20for%20Azure%20Notebooks.ipynb)은  Jupyter Notebook에 호스트된 무료 F# 학습용 자습서입니다.
+[Azure Notebook을 위한 F#](https://notebooks.azure.com/Microsoft/libraries/samples/html/FSharp%20for%20Azure%20Notebooks.ipynb)은 Jupyter Notebook에서 호스트된, F# 학습을 위한 무료 자습서입니다.
 
 ## <a name="references"></a>참조
 
-[F# 언어 참조](language-reference/index.md)는 모든 F# 언어 기능에 대한 공식적이고 포괄적인 참조 문서로, 각 문서는 구문을 설명하고 코드 샘플을 보여 줍니다. 목차에서 필터 표시줄을 사용하면 특정 문서를 검색할 수 있습니다. 특정 문서를 검색 하려면 필터 표시줄의 목차에서에서 사용할 수 있습니다.
+[F# 언어 참조](language-reference/index.md)는 모든 F# 언어 기능에 대한 공식적이고 포괄적인 참조 문서로, 각 문서는 구문을 설명하고 코드 샘플을 보여줍니다. 목차에서 필터 표시줄을 사용하면 특정 문서를 검색할 수 있습니다.
 
 [F# 핵심 라이브러리 참조](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference)는 F# 핵심 라이브러리 API 참조입니다.
 

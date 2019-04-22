@@ -7,10 +7,10 @@ helpviewer_keywords:
 - /win32icon compiler option [Visual Basic]
 ms.assetid: aecaab01-9353-46c5-941c-6edabd4eff92
 ms.openlocfilehash: e36e9187ab8c9c2b4950a66ff8ff3fc93adbd9c4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58821480"
 ---
 # <a name="-win32icon"></a>-win32icon
@@ -29,7 +29,7 @@ ms.locfileid: "58821480"
 |`filename`|출력 파일에 추가할.ico 파일입니다. 파일 이름을 따옴표로 묶습니다 ("")에 공백이 있는 경우.|  
   
 ## <a name="remarks"></a>설명  
- Microsoft Windows 리소스 컴파일러 (RC) 사용 하 여.ico 파일을 만들 수 있습니다. 리소스 컴파일러를 호출 하는 Visual c + + 프로그램을 컴파일하는 경우 .ico 파일은.rc 파일에서 생성 됩니다. 합니다 `-win32icon` 고 `-win32resource` 옵션은 상호 배타적입니다.  
+ Microsoft Windows 리소스 컴파일러 (RC) 사용 하 여.ico 파일을 만들 수 있습니다. 리소스 컴파일러를 호출 하는 시각적 개체를 컴파일할 때 C++ 프로그램; .ico 파일은.rc 파일에서 생성 됩니다. 합니다 `-win32icon` 고 `-win32resource` 옵션은 상호 배타적입니다.  
   
  참조 [-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) 참조를 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 리소스 파일 또는 [-리소스 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) 연결 하는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 리소스 파일입니다. 참조 [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) .res 파일을 가져옵니다.  
   

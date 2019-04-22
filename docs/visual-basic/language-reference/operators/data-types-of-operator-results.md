@@ -10,10 +10,10 @@ helpviewer_keywords:
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
 ms.openlocfilehash: 45dcc80ee791da1c2731ba32f0ebd34564faf806
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58814985"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>연산자 결과의 데이터 형식(Visual Basic)
@@ -146,7 +146,7 @@ Visual Basic에는 피연산자의 데이터 형식을 기반으로 하는 작�
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Not`|부울|SByte|Byte|Short|UShort|정수|UInteger|Long|ULong|  
+|`Not`|Boolean|SByte|Byte|Short|UShort|정수|UInteger|Long|ULong|  
   
  피연산자가 `Decimal`, `Single`를 `Double`, 또는 `String`, Visual Basic로 변환 하려고 `Long` 작업을 하 고 결과 데이터 형식은 하기 전에 `Long`입니다.  
   
@@ -156,7 +156,7 @@ Visual Basic에는 피연산자의 데이터 형식을 기반으로 하는 작�
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Boolean`|부울|SByte|Short|Short|정수|정수|Long|Long|Long|  
+|`Boolean`|Boolean|SByte|Short|Short|정수|정수|Long|Long|Long|  
 |`SByte`|SByte|SByte|Short|Short|정수|정수|Long|Long|Long|  
 |`Byte`|Short|Short|Byte|Short|UShort|정수|UInteger|Long|ULong|  
 |`Short`|Short|Short|Short|Short|정수|정수|Long|Long|Long|  

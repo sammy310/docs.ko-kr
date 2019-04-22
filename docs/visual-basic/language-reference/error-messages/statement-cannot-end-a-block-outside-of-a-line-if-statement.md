@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC32005
 ms.assetid: 4039f51b-e0ee-4789-a89b-45d06de06b5d
 ms.openlocfilehash: 85573099ec0a3f8a23c17bdf384c4c105f9157df
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58825796"
 ---
 # <a name="statement-cannot-end-a-block-outside-of-a-line-if-statement"></a>문이 'If' 문 줄 외부의 블록에서 끝날 수 없습니다.
