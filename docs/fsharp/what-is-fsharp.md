@@ -79,13 +79,13 @@ F# Record와 Discriminated Union는 기본적으로 null이 아니며 변경 불
 F#함수 실제로 선언하기 쉽고 강력합니다 [패턴 일치](language-reference/pattern-matching.md)와 함께 사용하면 컴파일러에 의해 적용되는 정확한 동작을 정의할 수 있습니다.
 
 ```fsharp
-// WithdrawalResult 반환
-let withdrawMoney amount = // 구현은 생략함
+// Returns a WithdrawalResult
+let withdrawMoney amount = // Implementation elided
 
 let handleWithdrawal amount =
     let w = withdrawMoney amount
 
-    // F# 컴파일러에서 모든 경우에 대해 계산을 실시함!
+    // The F# compiler enforces accounting for each case!
     match w with
     | Success s -> printfn "Successfully withdrew %f" s.Amount
     | InsufficientFunds f -> printfn "Failed: balance is %f" f.Balance
@@ -101,11 +101,11 @@ F#은 객체를 완벽하게 지원합니다. 객체는 데이터와 기능을 �
 
 ```fsharp
 type Set<[<EqualityConditionOn>] ‘T when ‘T: comparison>(elements: seq<'T>) =
-    member s.IsEmpty = // 구현은 생략함
-    member s.Contains (value) =// 구현은 생략함
-    member s.Add (value) = // 구현은 생략함
+    member s.IsEmpty = // Implementation elided
+    member s.Contains (value) =// Implementation elided
+    member s.Add (value) = // Implementation elided
     // ...
-    // 더 많은 구현을 생략함.
+    // Further Implementation elided
     // ...
     interface IEnumerable<‘T>
     interface IReadOnlyCollection<‘T>
