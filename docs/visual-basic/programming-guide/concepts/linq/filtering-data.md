@@ -3,30 +3,30 @@ title: 데이터 필터링 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7749519a-7edc-49fe-aef9-6a353864af6c
 ms.openlocfilehash: a673126d928a97bf522783e73fc254debe2a9de8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58837449"
 ---
-# <a name="filtering-data-visual-basic"></a><span data-ttu-id="fd7ca-102">데이터 필터링 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fd7ca-102">Filtering Data (Visual Basic)</span></span>
-<span data-ttu-id="fd7ca-103">필터링은 지정된 조건을 충족하는 요소만 포함하도록 결과 집합을 제한하는 작업을 가리킵니다.</span><span class="sxs-lookup"><span data-stu-id="fd7ca-103">Filtering refers to the operation of restricting the result set to contain only those elements that satisfy a specified condition.</span></span> <span data-ttu-id="fd7ca-104">필터링은 선택이라고도 합니다.</span><span class="sxs-lookup"><span data-stu-id="fd7ca-104">It is also known as selection.</span></span>  
+# <a name="filtering-data-visual-basic"></a><span data-ttu-id="ad52c-102">데이터 필터링 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ad52c-102">Filtering Data (Visual Basic)</span></span>
+<span data-ttu-id="ad52c-103">필터링은 지정된 조건을 충족하는 요소만 포함하도록 결과 집합을 제한하는 작업을 가리킵니다.</span><span class="sxs-lookup"><span data-stu-id="ad52c-103">Filtering refers to the operation of restricting the result set to contain only those elements that satisfy a specified condition.</span></span> <span data-ttu-id="ad52c-104">필터링은 선택이라고도 합니다.</span><span class="sxs-lookup"><span data-stu-id="ad52c-104">It is also known as selection.</span></span>  
   
- <span data-ttu-id="fd7ca-105">다음 그림에서는 문자 시퀀스를 필터링한 결과를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="fd7ca-105">The following illustration shows the results of filtering a sequence of characters.</span></span> <span data-ttu-id="fd7ca-106">필터링 작업에 대한 조건자는 문자가 'A'가 되도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="fd7ca-106">The predicate for the filtering operation specifies that the character must be 'A'.</span></span>  
+ <span data-ttu-id="ad52c-105">다음 그림에서는 문자 시퀀스를 필터링한 결과를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ad52c-105">The following illustration shows the results of filtering a sequence of characters.</span></span> <span data-ttu-id="ad52c-106">필터링 작업에 대한 조건자는 문자가 'A'가 되도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ad52c-106">The predicate for the filtering operation specifies that the character must be 'A'.</span></span>  
   
- ![LINQ 필터링 작업을 보여 주는 다이어그램](./media/filtering-data/linq-filter-operation.png)  
+ ![LINQ 필터링 작업을 보여주는 다이어그램](./media/filtering-data/linq-filter-operation.png)  
   
- <span data-ttu-id="fd7ca-108">선택을 수행하는 표준 쿼리 연산자 메서드는 다음 섹션에 나열됩니다.</span><span class="sxs-lookup"><span data-stu-id="fd7ca-108">The standard query operator methods that perform selection are listed in the following section.</span></span>  
+ <span data-ttu-id="ad52c-108">선택을 수행하는 표준 쿼리 연산자 메서드는 다음 섹션에 나열됩니다.</span><span class="sxs-lookup"><span data-stu-id="ad52c-108">The standard query operator methods that perform selection are listed in the following section.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="fd7ca-109">메서드</span><span class="sxs-lookup"><span data-stu-id="fd7ca-109">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="ad52c-109">메서드</span><span class="sxs-lookup"><span data-stu-id="ad52c-109">Methods</span></span>  
   
-|<span data-ttu-id="fd7ca-110">메서드 이름</span><span class="sxs-lookup"><span data-stu-id="fd7ca-110">Method Name</span></span>|<span data-ttu-id="fd7ca-111">설명</span><span class="sxs-lookup"><span data-stu-id="fd7ca-111">Description</span></span>|<span data-ttu-id="fd7ca-112">Visual Basic 쿼리 식 구문</span><span class="sxs-lookup"><span data-stu-id="fd7ca-112">Visual Basic Query Expression Syntax</span></span>|<span data-ttu-id="fd7ca-113">추가 정보</span><span class="sxs-lookup"><span data-stu-id="fd7ca-113">More Information</span></span>|  
+|<span data-ttu-id="ad52c-110">메서드 이름</span><span class="sxs-lookup"><span data-stu-id="ad52c-110">Method Name</span></span>|<span data-ttu-id="ad52c-111">설명</span><span class="sxs-lookup"><span data-stu-id="ad52c-111">Description</span></span>|<span data-ttu-id="ad52c-112">Visual Basic 쿼리 식 구문</span><span class="sxs-lookup"><span data-stu-id="ad52c-112">Visual Basic Query Expression Syntax</span></span>|<span data-ttu-id="ad52c-113">추가 정보</span><span class="sxs-lookup"><span data-stu-id="ad52c-113">More Information</span></span>|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|<span data-ttu-id="fd7ca-114">OfType</span><span class="sxs-lookup"><span data-stu-id="fd7ca-114">OfType</span></span>|<span data-ttu-id="fd7ca-115">지정된 형식으로 캐스트할 수 있는지 여부에 따라 값을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="fd7ca-115">Selects values, depending on their ability to be cast to a specified type.</span></span>|<span data-ttu-id="fd7ca-116">해당 사항 없음.</span><span class="sxs-lookup"><span data-stu-id="fd7ca-116">Not applicable.</span></span>|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
-|<span data-ttu-id="fd7ca-117">Where</span><span class="sxs-lookup"><span data-stu-id="fd7ca-117">Where</span></span>|<span data-ttu-id="fd7ca-118">조건자 함수를 기반으로 하는 값을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="fd7ca-118">Selects values that are based on a predicate function.</span></span>|`Where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="ad52c-114">OfType</span><span class="sxs-lookup"><span data-stu-id="ad52c-114">OfType</span></span>|<span data-ttu-id="ad52c-115">지정된 형식으로 캐스트할 수 있는지 여부에 따라 값을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="ad52c-115">Selects values, depending on their ability to be cast to a specified type.</span></span>|<span data-ttu-id="ad52c-116">해당 사항 없음.</span><span class="sxs-lookup"><span data-stu-id="ad52c-116">Not applicable.</span></span>|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="ad52c-117">Where</span><span class="sxs-lookup"><span data-stu-id="ad52c-117">Where</span></span>|<span data-ttu-id="ad52c-118">조건자 함수를 기반으로 하는 값을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="ad52c-118">Selects values that are based on a predicate function.</span></span>|`Where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|  
   
-## <a name="query-expression-syntax-example"></a><span data-ttu-id="fd7ca-119">쿼리 식 구문 예제</span><span class="sxs-lookup"><span data-stu-id="fd7ca-119">Query Expression Syntax Example</span></span>  
- <span data-ttu-id="fd7ca-120">다음 예제에서는 `Where` 특정 길이 해당 문자열 배열로 필터링 합니다.</span><span class="sxs-lookup"><span data-stu-id="fd7ca-120">The following example uses the `Where` to filter from an array those strings that have a specific length.</span></span>  
+## <a name="query-expression-syntax-example"></a><span data-ttu-id="ad52c-119">쿼리 식 구문 예제</span><span class="sxs-lookup"><span data-stu-id="ad52c-119">Query Expression Syntax Example</span></span>  
+ <span data-ttu-id="ad52c-120">다음 예제에서는 `Where` 특정 길이 해당 문자열 배열로 필터링 합니다.</span><span class="sxs-lookup"><span data-stu-id="ad52c-120">The following example uses the `Where` to filter from an array those strings that have a specific length.</span></span>  
   
 ```vb  
 Dim words() As String = {"the", "quick", "brown", "fox", "jumps"}  
@@ -49,12 +49,12 @@ MsgBox(sb.ToString())
 ' fox  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="fd7ca-121">참고자료</span><span class="sxs-lookup"><span data-stu-id="fd7ca-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ad52c-121">참고자료</span><span class="sxs-lookup"><span data-stu-id="ad52c-121">See also</span></span>
 
 - <xref:System.Linq>
-- [<span data-ttu-id="fd7ca-122">표준 쿼리 연산자 개요(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fd7ca-122">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [<span data-ttu-id="fd7ca-123">Where 절</span><span class="sxs-lookup"><span data-stu-id="fd7ca-123">Where Clause</span></span>](../../../../visual-basic/language-reference/queries/where-clause.md)
-- [<span data-ttu-id="fd7ca-124">방법: 쿼리 결과 필터링</span><span class="sxs-lookup"><span data-stu-id="fd7ca-124">How to: Filter Query Results</span></span>](../../../../visual-basic/programming-guide/language-features/linq/how-to-filter-query-results-by-using-linq.md)
-- [<span data-ttu-id="fd7ca-125">방법: 리플렉션 (LINQ) (Visual Basic)를 사용 하 여 어셈블리의 메타 데이터 쿼리</span><span class="sxs-lookup"><span data-stu-id="fd7ca-125">How to: Query An Assembly's Metadata with Reflection (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
-- [<span data-ttu-id="fd7ca-126">방법: 지정 된 특성 또는 이름 (Visual Basic)를 사용 하 여 파일에 대 한 쿼리</span><span class="sxs-lookup"><span data-stu-id="fd7ca-126">How to: Query for Files with a Specified Attribute or Name (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)
-- [<span data-ttu-id="fd7ca-127">방법: 데이터 정렬 또는 필터링 텍스트에서 단어 또는 필드 (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fd7ca-127">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [<span data-ttu-id="ad52c-122">표준 쿼리 연산자 개요(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ad52c-122">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [<span data-ttu-id="ad52c-123">Where 절</span><span class="sxs-lookup"><span data-stu-id="ad52c-123">Where Clause</span></span>](../../../../visual-basic/language-reference/queries/where-clause.md)
+- [<span data-ttu-id="ad52c-124">방법: 쿼리 결과 필터링</span><span class="sxs-lookup"><span data-stu-id="ad52c-124">How to: Filter Query Results</span></span>](../../../../visual-basic/programming-guide/language-features/linq/how-to-filter-query-results-by-using-linq.md)
+- [<span data-ttu-id="ad52c-125">방법: 리플렉션 (LINQ) (Visual Basic)를 사용 하 여 어셈블리의 메타 데이터 쿼리</span><span class="sxs-lookup"><span data-stu-id="ad52c-125">How to: Query An Assembly's Metadata with Reflection (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
+- [<span data-ttu-id="ad52c-126">방법: 지정 된 특성 또는 이름 (Visual Basic)를 사용 하 여 파일에 대 한 쿼리</span><span class="sxs-lookup"><span data-stu-id="ad52c-126">How to: Query for Files with a Specified Attribute or Name (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)
+- [<span data-ttu-id="ad52c-127">방법: 데이터 정렬 또는 필터링 텍스트에서 단어 또는 필드 (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ad52c-127">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

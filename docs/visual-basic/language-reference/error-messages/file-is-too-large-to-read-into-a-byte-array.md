@@ -3,22 +3,22 @@ title: 파일이 너무 커서 바이트 배열로 읽어 들일 수 없습니�
 ms.date: 07/20/2015
 ms.assetid: 686630a6-a439-46c7-8d7b-34613ae4c5d8
 ms.openlocfilehash: 0c7d35e08eeb42e35c4c40e47434a64393d829b1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58831516"
 ---
-# <a name="file-is-too-large-to-read-into-a-byte-array"></a><span data-ttu-id="ceb18-102">파일이 너무 커서 바이트 배열로 읽어 들일 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="ceb18-102">File is too large to read into a byte array</span></span>
-<span data-ttu-id="ceb18-103">바이트 배열로 읽어 들일 하려는 파일의 크기는 4GB를 초과 합니다.</span><span class="sxs-lookup"><span data-stu-id="ceb18-103">The size of the file you are attempting to read into a byte array exceeds 4 GB.</span></span> <span data-ttu-id="ceb18-104">`My.Computer.FileSystem.ReadAllBytes` 메서드는이 크기를 초과 하는 파일을 읽을 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="ceb18-104">The `My.Computer.FileSystem.ReadAllBytes` method cannot read a file that exceeds this size.</span></span>  
+# <a name="file-is-too-large-to-read-into-a-byte-array"></a><span data-ttu-id="ba939-102">파일이 너무 커서 바이트 배열로 읽어 들일 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="ba939-102">File is too large to read into a byte array</span></span>
+<span data-ttu-id="ba939-103">바이트 배열로 읽어 들일 하려는 파일의 크기는 4GB를 초과 합니다.</span><span class="sxs-lookup"><span data-stu-id="ba939-103">The size of the file you are attempting to read into a byte array exceeds 4 GB.</span></span> <span data-ttu-id="ba939-104">`My.Computer.FileSystem.ReadAllBytes` 메서드는이 크기를 초과 하는 파일을 읽을 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="ba939-104">The `My.Computer.FileSystem.ReadAllBytes` method cannot read a file that exceeds this size.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="ceb18-105">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="ceb18-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="ba939-105">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="ba939-105">To correct this error</span></span>  
   
--   <span data-ttu-id="ceb18-106">사용 된 <xref:System.IO.StreamReader> 파일을 읽을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ceb18-106">Use a <xref:System.IO.StreamReader> to read the file.</span></span> <span data-ttu-id="ceb18-107">자세한 내용은 [기본 사항의.NET Framework 파일 I/O 및 파일 시스템 (Visual Basic)](../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ceb18-107">For more information, see [Basics of .NET Framework File I/O and the File System (Visual Basic)](../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md).</span></span>  
+-   <span data-ttu-id="ba939-106">사용 된 <xref:System.IO.StreamReader> 파일을 읽을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ba939-106">Use a <xref:System.IO.StreamReader> to read the file.</span></span> <span data-ttu-id="ba939-107">자세한 내용은 [기본 사항의.NET Framework 파일 I/O 및 파일 시스템 (Visual Basic)](../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ba939-107">For more information, see [Basics of .NET Framework File I/O and the File System (Visual Basic)](../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ceb18-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="ceb18-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ba939-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="ba939-108">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllBytes%2A>
 - <xref:System.IO.StreamReader>
-- [<span data-ttu-id="ceb18-109">Visual Basic을 사용한 파일 액세스</span><span class="sxs-lookup"><span data-stu-id="ceb18-109">File Access with Visual Basic</span></span>](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)
-- [<span data-ttu-id="ceb18-110">방법: StreamReader 사용 하 여 파일에서 텍스트 읽기</span><span class="sxs-lookup"><span data-stu-id="ceb18-110">How to: Read Text from Files with a StreamReader</span></span>](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)
+- [<span data-ttu-id="ba939-109">Visual Basic을 사용한 파일 액세스</span><span class="sxs-lookup"><span data-stu-id="ba939-109">File Access with Visual Basic</span></span>](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)
+- [<span data-ttu-id="ba939-110">방법: StreamReader 사용 하 여 파일에서 텍스트 읽기</span><span class="sxs-lookup"><span data-stu-id="ba939-110">How to: Read Text from Files with a StreamReader</span></span>](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)

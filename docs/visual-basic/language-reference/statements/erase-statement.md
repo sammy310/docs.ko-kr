@@ -8,36 +8,36 @@ helpviewer_keywords:
 - Erase statement [Visual Basic]
 ms.assetid: 7a8133d7-b750-4d74-8b66-ba1dd9778d4b
 ms.openlocfilehash: bf3eb6476dc1485faeddab475f29e508175d3378
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58840408"
 ---
-# <a name="erase-statement-visual-basic"></a><span data-ttu-id="de7a7-102">Erase 문(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="de7a7-102">Erase Statement (Visual Basic)</span></span>
-<span data-ttu-id="de7a7-103">배열 변수를 해제 하 고 해당 요소에 사용 되는 메모리 할당을 취소 하는 데 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="de7a7-103">Used to release array variables and deallocate the memory used for their elements.</span></span>  
+# <a name="erase-statement-visual-basic"></a><span data-ttu-id="8fd8a-102">Erase 문(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8fd8a-102">Erase Statement (Visual Basic)</span></span>
+<span data-ttu-id="8fd8a-103">배열 변수를 해제 하 고 해당 요소에 사용 되는 메모리 할당을 취소 하는 데 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="8fd8a-103">Used to release array variables and deallocate the memory used for their elements.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="de7a7-104">구문</span><span class="sxs-lookup"><span data-stu-id="de7a7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8fd8a-104">구문</span><span class="sxs-lookup"><span data-stu-id="8fd8a-104">Syntax</span></span>  
   
 ```  
 Erase arraylist  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="de7a7-105">요소</span><span class="sxs-lookup"><span data-stu-id="de7a7-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="8fd8a-105">요소</span><span class="sxs-lookup"><span data-stu-id="8fd8a-105">Parts</span></span>  
  `arraylist`  
- <span data-ttu-id="de7a7-106">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="de7a7-106">Required.</span></span> <span data-ttu-id="de7a7-107">지울 배열 변수 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="de7a7-107">List of array variables to be erased.</span></span> <span data-ttu-id="de7a7-108">여러 변수는 쉼표로 구분됩니다.</span><span class="sxs-lookup"><span data-stu-id="de7a7-108">Multiple variables are separated by commas.</span></span>  
+ <span data-ttu-id="8fd8a-106">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="8fd8a-106">Required.</span></span> <span data-ttu-id="8fd8a-107">지울 배열 변수 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="8fd8a-107">List of array variables to be erased.</span></span> <span data-ttu-id="8fd8a-108">여러 변수는 쉼표로 구분됩니다.</span><span class="sxs-lookup"><span data-stu-id="8fd8a-108">Multiple variables are separated by commas.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="de7a7-109">설명</span><span class="sxs-lookup"><span data-stu-id="de7a7-109">Remarks</span></span>  
- <span data-ttu-id="de7a7-110">`Erase` 문을 프로시저 수준 에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="de7a7-110">The `Erase` statement can appear only at procedure level.</span></span> <span data-ttu-id="de7a7-111">즉, 클래스 또는 모듈 수준에 없습니다. 하지만 프로시저 내에서 배열을 릴리스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="de7a7-111">This means you can release arrays inside a procedure but not at class or module level.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8fd8a-109">설명</span><span class="sxs-lookup"><span data-stu-id="8fd8a-109">Remarks</span></span>  
+ <span data-ttu-id="8fd8a-110">`Erase` 문을 프로시저 수준 에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8fd8a-110">The `Erase` statement can appear only at procedure level.</span></span> <span data-ttu-id="8fd8a-111">즉, 클래스 또는 모듈 수준에 없습니다. 하지만 프로시저 내에서 배열을 릴리스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8fd8a-111">This means you can release arrays inside a procedure but not at class or module level.</span></span>  
   
- <span data-ttu-id="de7a7-112">합니다 `Erase` 할당과 문과 동일 `Nothing` 각 배열 변수에 합니다.</span><span class="sxs-lookup"><span data-stu-id="de7a7-112">The `Erase` statement is equivalent to assigning `Nothing` to each array variable.</span></span>  
+ <span data-ttu-id="8fd8a-112">합니다 `Erase` 할당과 문과 동일 `Nothing` 각 배열 변수에 합니다.</span><span class="sxs-lookup"><span data-stu-id="8fd8a-112">The `Erase` statement is equivalent to assigning `Nothing` to each array variable.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="de7a7-113">예제</span><span class="sxs-lookup"><span data-stu-id="de7a7-113">Example</span></span>  
- <span data-ttu-id="de7a7-114">다음 예제에서는 `Erase` 두 배열을 지우고 해당 메모리를 확보 하는 문 (1000 및 100 저장소 요소 각각).</span><span class="sxs-lookup"><span data-stu-id="de7a7-114">The following example uses the `Erase` statement to clear two arrays and free their memory (1000 and 100 storage elements, respectively).</span></span> <span data-ttu-id="de7a7-115">`ReDim` 문은 다음 3 차원 배열에 새 배열 인스턴스를 할당 합니다.</span><span class="sxs-lookup"><span data-stu-id="de7a7-115">The `ReDim` statement then assigns a new array instance to the three-dimensional array.</span></span>  
+## <a name="example"></a><span data-ttu-id="8fd8a-113">예제</span><span class="sxs-lookup"><span data-stu-id="8fd8a-113">Example</span></span>  
+ <span data-ttu-id="8fd8a-114">다음 예제에서는 `Erase` 두 배열을 지우고 해당 메모리를 확보 하는 문 (1000 및 100 저장소 요소 각각).</span><span class="sxs-lookup"><span data-stu-id="8fd8a-114">The following example uses the `Erase` statement to clear two arrays and free their memory (1000 and 100 storage elements, respectively).</span></span> <span data-ttu-id="8fd8a-115">`ReDim` 문은 다음 3 차원 배열에 새 배열 인스턴스를 할당 합니다.</span><span class="sxs-lookup"><span data-stu-id="8fd8a-115">The `ReDim` statement then assigns a new array instance to the three-dimensional array.</span></span>  
   
  [!code-vb[VbVbalrStatements#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#19)]  
   
-## <a name="see-also"></a><span data-ttu-id="de7a7-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="de7a7-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8fd8a-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="8fd8a-116">See also</span></span>
 
-- [<span data-ttu-id="de7a7-117">Nothing</span><span class="sxs-lookup"><span data-stu-id="de7a7-117">Nothing</span></span>](../../../visual-basic/language-reference/nothing.md)
-- [<span data-ttu-id="de7a7-118">ReDim 문</span><span class="sxs-lookup"><span data-stu-id="de7a7-118">ReDim Statement</span></span>](../../../visual-basic/language-reference/statements/redim-statement.md)
+- [<span data-ttu-id="8fd8a-117">Nothing</span><span class="sxs-lookup"><span data-stu-id="8fd8a-117">Nothing</span></span>](../../../visual-basic/language-reference/nothing.md)
+- [<span data-ttu-id="8fd8a-118">ReDim 문</span><span class="sxs-lookup"><span data-stu-id="8fd8a-118">ReDim Statement</span></span>](../../../visual-basic/language-reference/statements/redim-statement.md)

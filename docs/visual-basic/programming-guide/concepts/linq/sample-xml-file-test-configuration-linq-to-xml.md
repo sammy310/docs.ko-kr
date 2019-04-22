@@ -3,16 +3,16 @@ title: '샘플 XML 파일: 테스트 구성(LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 2e0e19f2-83e4-42ad-958a-6b3e34c9bf17
 ms.openlocfilehash: ef0df3ba2aa6d7628902cf59ff5fad4d29b017f1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58840915"
 ---
-# <a name="sample-xml-file-test-configuration-linq-to-xml"></a><span data-ttu-id="fd69c-102">샘플 XML 파일: 테스트 구성(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="fd69c-102">Sample XML File: Test Configuration (LINQ to XML)</span></span>
-<span data-ttu-id="fd69c-103">다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="fd69c-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="fd69c-104">이것은 테스트 구성 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="fd69c-104">This is a test configuration file.</span></span>  
+# <a name="sample-xml-file-test-configuration-linq-to-xml"></a><span data-ttu-id="52652-102">샘플 XML 파일: 테스트 구성(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="52652-102">Sample XML File: Test Configuration (LINQ to XML)</span></span>
+<span data-ttu-id="52652-103">다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="52652-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="52652-104">이것은 테스트 구성 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="52652-104">This is a test configuration file.</span></span>  
   
-## <a name="testconfigxml"></a><span data-ttu-id="fd69c-105">TestConfig.xml</span><span class="sxs-lookup"><span data-stu-id="fd69c-105">TestConfig.xml</span></span>  
+## <a name="testconfigxml"></a><span data-ttu-id="52652-105">TestConfig.xml</span><span class="sxs-lookup"><span data-stu-id="52652-105">TestConfig.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -56,6 +56,6 @@ ms.locfileid: "58840915"
 </Tests>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="fd69c-106">참고자료</span><span class="sxs-lookup"><span data-stu-id="fd69c-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="52652-106">참고자료</span><span class="sxs-lookup"><span data-stu-id="52652-106">See also</span></span>
 
-- [<span data-ttu-id="fd69c-107">샘플 XML 문서(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="fd69c-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [<span data-ttu-id="52652-107">샘플 XML 문서(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="52652-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

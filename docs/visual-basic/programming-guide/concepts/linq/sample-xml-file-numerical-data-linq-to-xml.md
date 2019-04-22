@@ -3,16 +3,16 @@ title: '샘플 XML 파일: 숫자 데이터(LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 5faef812-0006-4d84-9cf2-5746070e7fbf
 ms.openlocfilehash: 578ec2de69ae549e255fdafb98d3483f6330ce5d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58842683"
 ---
-# <a name="sample-xml-file-numerical-data-linq-to-xml"></a><span data-ttu-id="1b85b-102">샘플 XML 파일: 숫자 데이터(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="1b85b-102">Sample XML File: Numerical Data (LINQ to XML)</span></span>
-<span data-ttu-id="1b85b-103">다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="1b85b-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="1b85b-104">이 파일에는 합계 및 평균을 구하고 그룹화할 숫자 데이터가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1b85b-104">This file contains numerical data for summing, averaging, and grouping.</span></span>  
+# <a name="sample-xml-file-numerical-data-linq-to-xml"></a><span data-ttu-id="223fd-102">샘플 XML 파일: 숫자 데이터(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="223fd-102">Sample XML File: Numerical Data (LINQ to XML)</span></span>
+<span data-ttu-id="223fd-103">다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="223fd-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="223fd-104">이 파일에는 합계 및 평균을 구하고 그룹화할 숫자 데이터가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="223fd-104">This file contains numerical data for summing, averaging, and grouping.</span></span>  
   
-## <a name="dataxml"></a><span data-ttu-id="1b85b-105">Data.xml</span><span class="sxs-lookup"><span data-stu-id="1b85b-105">Data.xml</span></span>  
+## <a name="dataxml"></a><span data-ttu-id="223fd-105">Data.xml</span><span class="sxs-lookup"><span data-stu-id="223fd-105">Data.xml</span></span>  
   
 ```xml  
 <Root>  
@@ -55,6 +55,6 @@ ms.locfileid: "58842683"
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1b85b-106">참고자료</span><span class="sxs-lookup"><span data-stu-id="1b85b-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="223fd-106">참고자료</span><span class="sxs-lookup"><span data-stu-id="223fd-106">See also</span></span>
 
-- [<span data-ttu-id="1b85b-107">샘플 XML 문서(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="1b85b-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [<span data-ttu-id="223fd-107">샘플 XML 문서(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="223fd-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

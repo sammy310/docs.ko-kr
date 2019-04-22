@@ -8,21 +8,21 @@ helpviewer_keywords:
 - BC30033
 ms.assetid: 3d07f6d0-9a2f-49ca-94e8-1e354932e855
 ms.openlocfilehash: ea0469d623bab226d410b5cf1401d08fc60710cc
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58836222"
 ---
-# <a name="identifier-is-too-long"></a><span data-ttu-id="b0716-102">식별자가 너무 깁니다.</span><span class="sxs-lookup"><span data-stu-id="b0716-102">Identifier is too long</span></span>
-<span data-ttu-id="b0716-103">이름 또는 모든 프로그래밍 요소의 식별자는 1023 자로 제한 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b0716-103">The name, or identifier, of every programming element is limited to 1023 characters.</span></span> <span data-ttu-id="b0716-104">또한 정규화 된 이름을 1023 자를 초과할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b0716-104">In addition, a fully qualified name cannot exceed 1023 characters.</span></span> <span data-ttu-id="b0716-105">즉, 전체 식별자 문자열 (`<namespace>.<...>.<namespace>.<class>.<element>`) 멤버 액세스 연산자를 포함 하 여 긴 1,024 개 이상의 자를 수 없습니다 (`.`) 문자입니다.</span><span class="sxs-lookup"><span data-stu-id="b0716-105">This means that the entire identifier string (`<namespace>.<...>.<namespace>.<class>.<element>`) cannot be more than 1023 characters long, including the member-access operator (`.`) characters.</span></span>  
+# <a name="identifier-is-too-long"></a><span data-ttu-id="23b11-102">식별자가 너무 깁니다.</span><span class="sxs-lookup"><span data-stu-id="23b11-102">Identifier is too long</span></span>
+<span data-ttu-id="23b11-103">이름 또는 모든 프로그래밍 요소의 식별자는 1023 자로 제한 됩니다.</span><span class="sxs-lookup"><span data-stu-id="23b11-103">The name, or identifier, of every programming element is limited to 1023 characters.</span></span> <span data-ttu-id="23b11-104">또한 정규화 된 이름을 1023 자를 초과할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="23b11-104">In addition, a fully qualified name cannot exceed 1023 characters.</span></span> <span data-ttu-id="23b11-105">즉, 전체 식별자 문자열 (`<namespace>.<...>.<namespace>.<class>.<element>`) 멤버 액세스 연산자를 포함 하 여 긴 1,024 개 이상의 자를 수 없습니다 (`.`) 문자입니다.</span><span class="sxs-lookup"><span data-stu-id="23b11-105">This means that the entire identifier string (`<namespace>.<...>.<namespace>.<class>.<element>`) cannot be more than 1023 characters long, including the member-access operator (`.`) characters.</span></span>  
   
- <span data-ttu-id="b0716-106">**오류 ID:** BC30033</span><span class="sxs-lookup"><span data-stu-id="b0716-106">**Error ID:** BC30033</span></span>  
+ <span data-ttu-id="23b11-106">**오류 ID:** BC30033</span><span class="sxs-lookup"><span data-stu-id="23b11-106">**Error ID:** BC30033</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="b0716-107">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="b0716-107">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="23b11-107">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="23b11-107">To correct this error</span></span>  
   
--   <span data-ttu-id="b0716-108">식별자의 길이를 줄입니다.</span><span class="sxs-lookup"><span data-stu-id="b0716-108">Reduce the length of the identifier.</span></span>  
+-   <span data-ttu-id="23b11-108">식별자의 길이를 줄입니다.</span><span class="sxs-lookup"><span data-stu-id="23b11-108">Reduce the length of the identifier.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b0716-109">참고자료</span><span class="sxs-lookup"><span data-stu-id="b0716-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="23b11-109">참고자료</span><span class="sxs-lookup"><span data-stu-id="23b11-109">See also</span></span>
 
-- [<span data-ttu-id="b0716-110">선언 요소 이름</span><span class="sxs-lookup"><span data-stu-id="b0716-110">Declared Element Names</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [<span data-ttu-id="23b11-110">선언 요소 이름</span><span class="sxs-lookup"><span data-stu-id="23b11-110">Declared Element Names</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
