@@ -3,10 +3,10 @@ title: 부분 신뢰 기능 호환성
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
 ms.openlocfilehash: b0d9b7bd8bd5f33ca344ea5674d08507ced209f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124568"
 ---
 # <a name="partial-trust-feature-compatibility"></a>부분 신뢰 기능 호환성
@@ -28,7 +28,7 @@ Windows Communication Foundation (WCF) 부분 신뢰 환경에서 실행 하는 
   
 -   `[ServiceKnownType]` 특성을 사용할 때는 지정된 메서드가 `public`이어야 합니다.  
   
--   `[MessageContract]` 클래스와 해당 멤버 수 `public`입니다. `[MessageContract]` 클래스는 응용 프로그램 어셈블리에 정의되어 있는 경우 `internal` 일 수 있으며 `internal` 멤버를 포함할 수 있습니다.  
+-   `[MessageContract]` 클래스와 해당 멤버는 `public`이어야 합니다. `[MessageContract]` 클래스는 응용 프로그램 어셈블리에 정의되어 있는 경우 `internal` 일 수 있으며 `internal` 멤버를 포함할 수 있습니다.  
   
 ## <a name="system-provided-bindings"></a>시스템 제공 바인딩  
  <xref:System.ServiceModel.BasicHttpBinding> 및 <xref:System.ServiceModel.WebHttpBinding> 은 부분 신뢰 환경에서 완전히 지원됩니다. <xref:System.ServiceModel.WSHttpBinding> 은 전송 보안 모드에만 지원됩니다.  
@@ -119,7 +119,7 @@ Windows Communication Foundation (WCF) 부분 신뢰 환경에서 실행 하는 
   
 -   <xref:System.Runtime.Serialization>  
   
--   <xref:System.IdentityModel.Claims>를 <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>, 및 <xref:System.IdentityModel.Tokens>합니다.  
+-   <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>및 <xref:System.IdentityModel.Tokens>가 있습니다.  
   
  다음 추적 소스는 지원되지 않습니다.  
   

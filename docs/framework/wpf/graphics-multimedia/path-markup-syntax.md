@@ -8,10 +8,10 @@ helpviewer_keywords:
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
 ms.openlocfilehash: 32eefba26b5e04370599e4c97767b6662cfd1c13
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59082492"
 ---
 # <a name="path-markup-syntax"></a>경로 태그 구문
@@ -57,7 +57,7 @@ ms.locfileid: "59082492"
   
 |용어|설명|  
 |----------|-----------------|  
-|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> 지정 여부를 <xref:System.Windows.Media.StreamGeometry> 사용 하는 <xref:System.Windows.Media.FillRule.EvenOdd> 또는 <xref:System.Windows.Media.FillRule.Nonzero><xref:System.Windows.Media.PathGeometry.FillRule%2A>합니다.<br /><br /> -   `F0` 지정 된 <xref:System.Windows.Media.FillRule.EvenOdd> 채우기 규칙입니다.<br />-   `F1` 지정 된 <xref:System.Windows.Media.FillRule.Nonzero> 채우기 규칙입니다.<br /><br /> 하위 경로 기본 동작을 사용 하 여이 명령을 생략 <xref:System.Windows.Media.FillRule.EvenOdd>합니다. 이 명령을 지정하는 경우 맨 앞에 배치해야 합니다.|  
+|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> 지정 여부를 <xref:System.Windows.Media.StreamGeometry> 사용 하는 <xref:System.Windows.Media.FillRule.EvenOdd> 또는 <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>합니다.<br /><br /> -   `F0` 지정 된 <xref:System.Windows.Media.FillRule.EvenOdd> 채우기 규칙입니다.<br />-   `F1` 지정 된 <xref:System.Windows.Media.FillRule.Nonzero> 채우기 규칙입니다.<br /><br /> 하위 경로 기본 동작을 사용 하 여이 명령을 생략 <xref:System.Windows.Media.FillRule.EvenOdd>합니다. 이 명령을 지정하는 경우 맨 앞에 배치해야 합니다.|  
 |*figureDescription*|이동 명령, 그리기 명령 및 선택적 닫기 명령으로 구성된 그림입니다.<br /><br /> `moveCommand` `drawCommands`  `[` `closeCommand` `]`|  
 |*moveCommand*|그림의 시작점을 지정하는 이동 명령입니다. 참조 된 [이동 명령](#themovecommand) 섹션입니다.|  
 |*drawCommands*|그림의 콘텐츠를 설명하는 하나 이상의 그리기 명령입니다. 참조 된 [그리기 명령](#drawcommands) 섹션입니다.|  
@@ -97,7 +97,7 @@ ms.locfileid: "59082492"
 대문자 `L` 나타냅니다 `endPoint` 절대 값인지; 소문자 `l` 나타냅니다 `endPoint` 오프셋을 이전 지점으로 또는 (0, 0) 존재 하지 않는 경우.
 
 ### <a name="horizontal-line-command"></a>수평선 명령  
- 현재 점과 지정된 x 좌표 간에 수평선을 만듭니다. `H 90` 유효한 수평선 명령의 예입니다.
+ 현재 점과 지정된 x 좌표 간에 수평선을 만듭니다. `H 90`은 유효한 수평선 명령의 예입니다.
 
 |구문|  
 |------------|  
@@ -110,7 +110,7 @@ ms.locfileid: "59082492"
 대문자 `H` 나타냅니다 `x` 절대 값인지; 소문자 `h` 나타냅니다 `x` 오프셋을 이전 지점으로 또는 (0, 0) 존재 하지 않는 경우.
   
 ### <a name="vertical-line-command"></a>수직선 명령  
- 현재 점과 지정된 y 좌표 간에 수직선을 만듭니다. `v 90` 유효한 수직선 명령의 예입니다.
+ 현재 점과 지정된 y 좌표 간에 수직선을 만듭니다. `v 90`은 유효한 수직선 명령의 예입니다.
 
 |구문|  
 |------------|  
@@ -123,7 +123,7 @@ ms.locfileid: "59082492"
 대문자 `V` 나타냅니다 `y` 절대 값인지; 소문자 `v` 나타냅니다 `y` 오프셋을 이전 지점으로 또는 (0, 0) 존재 하지 않는 경우.  
     
 ### <a name="cubic-bezier-curve-command"></a>입방형 3차원 곡선 명령  
- 지정한 두 개의 제어점을 사용 하 여 현재 점과 지정 된 끝점 간에 입방 형 3 차원 곡선을 만듭니다 (`controlPoint`1 및 `controlPoint`2). `C 100,200 200,400 300,200` 유효한 곡선 명령의 예입니다.  
+ 지정한 두 개의 제어점을 사용 하 여 현재 점과 지정 된 끝점 간에 입방 형 3 차원 곡선을 만듭니다 (`controlPoint`1 및 `controlPoint`2). `C 100,200 200,400 300,200`은 유효한 곡선 명령의 예입니다.  
   
 |구문|  
 |------------|  
@@ -136,7 +136,7 @@ ms.locfileid: "59082492"
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> 곡선을 그릴 지점입니다.|  
   
 ### <a name="quadratic-bezier-curve-command"></a>정방형 3차원 곡선 명령  
- 지정 된 제어점을 사용 하 여 현재 점과 지정 된 끝점 간에 정방형 베 지 어 곡선을 만듭니다 (`controlPoint`). `q 100,200 300,200` 유효한 정방형 3 차원 곡선 명령의 예입니다.  
+ 지정 된 제어점을 사용 하 여 현재 점과 지정 된 끝점 간에 정방형 베 지 어 곡선을 만듭니다 (`controlPoint`). `q 100,200 300,200`은 유효한 정방형 3차원 곡선 명령의 예입니다.  
   
 |구문|  
 |------------|  

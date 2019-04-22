@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - long keyword [C#]
 ms.assetid: f9b24319-1f39-48be-a42b-d528ee28a7fd
-ms.openlocfilehash: a3c2dc725d5747c638acba9311ae78272cf63de0
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 997ce7399dc9742076932b213811abd1f847e60b
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186015"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613293"
 ---
 # <a name="long-c-reference"></a>long(C# 참조)
 
@@ -66,6 +66,7 @@ public static void SampleMethod(long l) {}
 SampleMethod(5);    // Calls the method with the int parameter
 SampleMethod(5L);   // Calls the method with the long parameter
 ```
+
 정수 리터럴에 접미사가 없는 경우 해당 형식은 값이 표현될 수 있는 다음 형식 중 첫 번째 형식입니다.
 
 1. [int](int.md)
@@ -103,7 +104,7 @@ long y = (long)3.0;   // OK: explicit conversion
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-자세한 내용은 [C# 언어 사양](../language-specification/index.md)의 [정수 형식](~/_csharplang/spec/types.md#integral-types)을 참조하세요. C# 언어 사양은 C# 구문 및 사용법에 대한 신뢰할 수 있는 소스입니다.
+자세한 내용은 [C# 언어 사양](../language-specification/index.md)의 [정수 형식](~/_csharplang/spec/types.md#integral-types)을 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
 
 ## <a name="see-also"></a>참고 항목
 

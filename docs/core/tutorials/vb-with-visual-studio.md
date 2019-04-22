@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 8b9d87922b543f97d4b36a37759d661298318e1e
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: faa801d8ded90b1a0f68eac1824e60ee6ba468a4
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2019
-ms.locfileid: "57846287"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612682"
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Visual Studio 2017에서 .NET Core SDK를 사용하여 Visual Basic Hello World 애플리케이션 빌드
 
@@ -31,7 +31,7 @@ ms.locfileid: "57846287"
 1. Visual Studio 2017을 시작합니다. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트**를 선택합니다. *새 프로젝트** 대화 상자에서 **Visual Basic** 노드와 **.NET Core** 노드를 차례로 선택합니다. 그런 다음 **콘솔 앱(.NET Core)** 프로젝트 템플릿을 선택합니다. **이름** 텍스트 상자에 "HelloWorld"를 입력합니다. **확인** 단추를 선택합니다.
 
    ![콘솔 앱이 선택된 새 프로젝트 대화 상자](./media/vb-with-visual-studio/visual-studio-new-project.png)
-   
+
 1. Visual Studio에서는 템플릿을 사용하여 프로젝트를 만듭니다. .NET Core용 Visual Basic 콘솔 애플리케이션 템플릿은 <xref:System.String> 배열을 인수로 사용하는 단일 메서드 `Main`으로 `Program` 클래스를 자동으로 정의합니다. `Main`은 애플리케이션 진입점으로, 애플리케이션을 시작할 때 런타임에 의해 자동으로 호출되는 메서드입니다. 애플리케이션이 시작될 때 제공되는 모든 명령줄 인수는 *args* 배열에서 사용할 수 있습니다.
 
    ![Visual Studio 및 새 HelloWorld 프로젝트](./media/vb-with-visual-studio/visual-studio-main-window.png)
@@ -44,6 +44,7 @@ ms.locfileid: "57846287"
    Console.Write("Press any key to continue...")
    Console.ReadKey(true)
    ```
+
    이 코드는 프로그램을 중지하려면 아무 키나 누르라는 메시지를 표시하며, 사용자가 아무 키나 누르면 프로그램이 일시 중지됩니다.
 
 1. 메뉴 모음에서 **빌드** > **솔루션 빌드**를 선택합니다. 이렇게 하면 프로그램이 IL(중간 언어)로 컴파일됩니다. 이 컴파일 결과는 JIT(Just-In-Time) 컴파일러에 의해 이진 코드로 변환됩니다.

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
 ms.openlocfilehash: d05e071b97c9a1f3043949a6619a187dd418f9b7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120980"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>트랜잭션 범위를 사용하여 암시적 트랜잭션 구현
@@ -121,7 +121,7 @@ using(TransactionScope scope1 = new TransactionScope())
 }  
 ```  
   
- 이 예제에서는 `scope1`를 사용하여 새 범위(<xref:System.Transactions.TransactionScopeOption.Required>)를 만드는 앰비언트 트랜잭션이 없는 코드 블록을 보여 줍니다. `scope1` 범위는 새 트랜잭션(Transaction A)을 만들 때 루트 범위이며 Transaction A를 앰비언트 트랜잭션으로 설정합니다. `Scope1` 다음 세 가지 개체를 추가로 만듭니다가 서로 <xref:System.Transactions.TransactionScopeOption> 값입니다. 예를 들어 `scope2`는 <xref:System.Transactions.TransactionScopeOption.Required>를 사용하여 만들어지고 앰비언트 트랜잭션이 있으므로 `scope1`에서 만든 첫 번째 트랜잭션에 참여합니다. `scope3`은 새 트랜잭션의 루트 범위이고 `scope4`에는 앰비언트 트랜잭션이 없습니다.  
+ 이 예제에서는 `scope1`를 사용하여 새 범위(<xref:System.Transactions.TransactionScopeOption.Required>)를 만드는 앰비언트 트랜잭션이 없는 코드 블록을 보여 줍니다. `scope1` 범위는 새 트랜잭션(Transaction A)을 만들 때 루트 범위이며 Transaction A를 앰비언트 트랜잭션으로 설정합니다. 그런 다음 `Scope1`은 각각 다른 <xref:System.Transactions.TransactionScopeOption> 값을 사용하여 세 개의 개체를 추가로 만듭니다. 예를 들어 `scope2`는 <xref:System.Transactions.TransactionScopeOption.Required>를 사용하여 만들어지고 앰비언트 트랜잭션이 있으므로 `scope1`에서 만든 첫 번째 트랜잭션에 참여합니다. `scope3`은 새 트랜잭션의 루트 범위이고 `scope4`에는 앰비언트 트랜잭션이 없습니다.  
   
  <xref:System.Transactions.TransactionScopeOption>의 기본값이며 가장 일반적으로 사용되는 값은 <xref:System.Transactions.TransactionScopeOption.Required>이고 다른 값은 각각 고유한 용도를 가집니다.  
   

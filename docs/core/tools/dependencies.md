@@ -3,12 +3,12 @@ title: .NET Core 도구에서 종속성 관리
 description: .NET Core 도구로 종속성을 관리하는 방법을 설명합니다.
 ms.date: 03/06/2017
 ms.custom: seodec18
-ms.openlocfilehash: 701100476b8b08aa4b0229bd0de30d02c54ddce9
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ef2de666ee3e6a06ab62f45afe3c624bbbb44ac4
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673875"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611928"
 ---
 # <a name="managing-dependencies-with-net-core-sdk-10"></a>.NET Core SDK 1.0으로 종속성 관리
 
@@ -46,6 +46,7 @@ MSBuild에 익숙한 경우 이미 존재하는 다른 참조 형식에 익숙�
 ```xml
 <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
 ```
+
 이렇게 되면 프로젝트를 저장하고 `dotnet restore` 명령을 실행하여 종속성을 설치합니다. 
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

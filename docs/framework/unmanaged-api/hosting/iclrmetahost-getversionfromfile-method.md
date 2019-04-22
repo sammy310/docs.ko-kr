@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2a6c7fd48269a3e8291a548b3e13efe5c8e70652
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150815"
 ---
 # <a name="iclrmetahostgetversionfromfile-method"></a>ICLRMetaHost::GetVersionFromFile 메서드
@@ -58,7 +58,7 @@ HRESULT GetVersionFromFile (
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_POINTER|`pwzbuffer` 또는 `pcchBuffer` null입니다.|  
+|E_POINTER|`pwzbuffer` 또는 `pcchBuffer`이 null입니다.|  
 |HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|버퍼가 너무 작습니다.|  
   
 ## <a name="requirements"></a>요구 사항  

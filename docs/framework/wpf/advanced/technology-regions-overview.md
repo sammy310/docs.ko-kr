@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Win32 code [WPF], window regions
 ms.assetid: b7cc350f-b9e2-48b1-be14-60f3d853222e
 ms.openlocfilehash: 911ba1474677f26a773ff63e958ba0ceedbefd0d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100979"
 ---
 # <a name="technology-regions-overview"></a>기술 영역 개요
@@ -44,19 +44,19 @@ ms.locfileid: "59100979"
  ![Interop 다이어그램](./media/migrationinteroparchitectarticle05.png "MigrationInteropArchitectArticle05")  
   
 ## <a name="transparency-and-top-level-windows"></a>투명도 및 최상위 창  
- Windows의 창 관리자는 실제로 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] HWND만 처리합니다. 따라서 모든 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Window> 는 HWND입니다. <xref:System.Windows.Window> HWND는 HWND에 대 한 일반 규칙을 준수 해야 합니다. 해당 HWND 내에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 코드는 전체 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]가 지원하는 모든 작업을 수행할 수 있습니다. 하지만 데스크톱에 있는 다른 HWND에 대한 상호 작용의 경우 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 처리 및 렌더링 규칙을 따라야 합니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 사각형이 아닌 창을 사용 하 여 지원 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]-HRGNs 사각형이 아닌 창 및 픽셀 별 알파에 대 한 합니다.  
+ Windows의 창 관리자는 실제로 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] HWND만 처리합니다. 따라서 모든 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Window> 는 HWND입니다. <xref:System.Windows.Window> HWND는 HWND에 대 한 일반 규칙을 준수 해야 합니다. 해당 HWND 내에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 코드는 전체 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]가 지원하는 모든 작업을 수행할 수 있습니다. 하지만 데스크톱에 있는 다른 HWND에 대한 상호 작용의 경우 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 처리 및 렌더링 규칙을 따라야 합니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]를 사용하여 사각형이 아닌 창을 지원합니다(사각형이 아닌 창인 경우 HRGN 및 픽셀별 알파인 경우 겹쳐진 창).  
   
- 상수 알파 및 색 키는 지원되지 않습니다.  [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 창 겹침된 기능은 플랫폼에 따라 다릅니다.  
+ 상수 알파 및 색 키는 지원되지 않습니다.  [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 창 겹침 기능은 플랫폼에 따라 달라집니다.  
   
  창 겹침의 경우 창의 모든 픽셀에 적용할 알파 값을 지정하여 전체 창을 반투명하게 만들 수 있습니다.  실제로 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]는 픽셀별 알파를 지원하지만, 이 모드에서는 대화 상자, 드롭다운을 포함된 모든 자식 HWND를 직접 그려야 하므로 이 기술은 실제 프로그램에서 사용하기 매우 어렵습니다.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Hrgn을 지원합니다. 그러나 관리 되지 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 이 기능에 대 한 합니다. 플랫폼을 사용할 수 있습니다를 호출 하 고 <xref:System.Windows.Interop.HwndSource> 관련 호출 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]합니다. 자세한 내용은 [관리 코드에서 네이티브 함수 호출](/cpp/dotnet/calling-native-functions-from-managed-code)을 참조하세요.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 HRGN을 지원하지만 이 기능에 대한 관리되는 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]가 없습니다. 플랫폼을 사용할 수 있습니다를 호출 하 고 <xref:System.Windows.Interop.HwndSource> 관련 호출 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]합니다. 자세한 내용은 [관리 코드에서 네이티브 함수 호출](/cpp/dotnet/calling-native-functions-from-managed-code)을 참조하세요.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 계층화 된 창에는 다른 운영 체제에서 다양 한 기능에 있습니다. 이는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 렌더링에 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]를 사용하고, 겹쳐진 창은 기본적으로 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 렌더링이 아닌 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 렌더링용으로 디자인되었기 때문입니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 창 겹침에는 다양한 운영 체제에 대한 여러 가지 기능이 포함됩니다. 이는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 렌더링에 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]를 사용하고, 겹쳐진 창은 기본적으로 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 렌더링이 아닌 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 렌더링용으로 디자인되었기 때문입니다.  
   
--   [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 지 원하는 하드웨어 가속 창 겹침을 [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)] 이상. [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)]에서 하드웨어 가속 창 겹침을 사용하려면 [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)]의 지원이 필요하므로 기능은 해당 컴퓨터의 [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] 버전에 따라 달라집니다.  
+-   [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)] 이상에서 하드웨어 가속 창 겹침을 지원합니다. [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)]에서 하드웨어 가속 창 겹침을 사용하려면 [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)]의 지원이 필요하므로 기능은 해당 컴퓨터의 [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] 버전에 따라 달라집니다.  
   
--   [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 때문에 투명 색상 키를 지원 하지 않습니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 하드웨어 가속 렌더링은 특히 경우 요청한 정확한 색을 렌더링 하도록 보장할 수 없습니다.  
+-   [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 투명색 키를 지원하지 않습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 특히 렌더링이 하드웨어 가속될 경우 요청한 정확한 색을 렌더링하도록 보장할 수 없기 때문입니다.  
   
 -   애플리케이션이 [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)]에서 실행될 경우 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 애플리케이션이 렌더링될 때 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 화면 위의 겹쳐진 창이 깜박입니다.  실제 렌더링 시퀀스는 [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)]가 겹쳐진 창을 숨기고 나서, [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]가 그린 다음, [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)]가 겹쳐진 창을 되돌리는 것입니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]가 아닌 겹쳐진 창에는 이 제한 사항이 없습니다.  
   
@@ -64,4 +64,4 @@ ms.locfileid: "59100979"
 
 - [WPF 및 Win32 상호 운용성](wpf-and-win32-interoperation.md)
 - [연습: Win32에서 WPF 시계 호스팅](walkthrough-hosting-a-wpf-clock-in-win32.md)
-- [WPF에서 Win32 콘텐츠 호스팅](hosting-win32-content-in-wpf.md)
+- [WPF에서 Win32 콘텐츠 호스트](hosting-win32-content-in-wpf.md)

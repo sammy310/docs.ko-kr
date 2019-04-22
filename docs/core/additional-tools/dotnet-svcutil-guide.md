@@ -4,12 +4,12 @@ description: .NET Framework 프로젝트용 WCF svcutil 도구와 유사하게, 
 author: mlacouture
 ms.date: 02/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: a1361c30e6b529d68dc93a65c645d31ca6c8e564
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: b5dfb84f19c3748daa303c828cbe881f1582eb76
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747238"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612821"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>.NET Core용 WCF dotnet-svcutil 도구
 
@@ -66,6 +66,7 @@ dotnet new web
 
 3. [`dotnet-svcutil` NuGet 패키지](https://nuget.org/packages/dotnet-svcutil)를 CLI 도구로 설치합니다.
 # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+
 ```console
 dotnet tool install --global dotnet-svcutil
 ```
@@ -89,14 +90,17 @@ dotnet restore
 
 4. 다음과 같이 _dotnet-svcutil_ 명령을 실행하여 웹 서비스 참조 파일을 생성합니다.
 # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+
 ```console
 dotnet-svcutil http://contoso.com/SayHello.svc
 ```
 
 # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+
 ```console
 dotnet svcutil http://contoso.com/SayHello.svc
 ```
+
 ---
 
 생성된 파일은 _HelloSvcutil/ServiceReference/Reference.cs_로 저장됩니다. 또한 _dotnet-svcutil_ 도구는 프록시 코드에 필요한 적절한 WCF 패키지를 프로젝트에 패키지 참조로 추가합니다.
@@ -149,14 +153,17 @@ dotnet run
 
 `dotnet-svcutil` 도구 매개 변수에 대한 자세한 설명을 보려면 다음과 같이 help 매개 변수를 전달하는 도구를 호출합니다.
 # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+
 ```console
 dotnet-svcutil --help
 ```
 
 # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+
 ```console
 dotnet svcutil --help
 ```
+
 ---
 
 ## <a name="feedback--questions"></a>사용자 의견 및 질문

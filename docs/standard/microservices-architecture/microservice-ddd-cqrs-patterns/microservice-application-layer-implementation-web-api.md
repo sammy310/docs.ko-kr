@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 72ed265284db9d112a0b1e3b966d206dd7f3d1cc
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 376b4eca99ed60a54831aa37099108692d8bac6d
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464894"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612162"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API를 사용하여 마이크로 서비스 에플리케이션 계층 구현
 
@@ -112,10 +112,10 @@ IoC 컨테이너에 형식을 등록할 때 가장 일반적인 패턴은 한 �
 #### <a name="additional-resources"></a>추가 자료
 
 - **Matthew King. Scrutor에 서비스 등록** \
-  [https://www.mking.net/blog/registering-services-with-scrutor](https://www.mking.net/blog/registering-services-with-scrutor)
+  <https://www.mking.net/blog/registering-services-with-scrutor>
 
 - **Kristian Hellang. Scrutor.** GitHub 리포지토리. \
-  [https://github.com/khellang/Scrutor](https://github.com/khellang/Scrutor)
+  <https://github.com/khellang/Scrutor>
 
 #### <a name="use-autofac-as-an-ioc-container"></a>IoC 컨테이너로 Autofac 사용
 
@@ -167,13 +167,13 @@ Autofac에는 [이름 규칙에 따라 어셈블리 및 등록 형식 검사](ht
 #### <a name="additional-resources"></a>추가 자료
 
 - **ASP.NET Core에서 종속성 주입 소개** \
-  [https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)
+  [https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection](/aspnet/core/fundamentals/dependency-injection)
 
 - **Autofac.** 공식 문서. \
-  [http://docs.autofac.org/en/latest/](http://docs.autofac.org/en/latest/)
+  <https://docs.autofac.org/en/latest/>
 
 - **ASP.NET Core IoC 컨테이너 서비스 수명과 Autofac IoC 컨테이너 인스턴스 범위 비교 - Cesar de la Torre.** \
-  [https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
+  <https://devblogs.microsoft.com/cesardelatorre/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/>
 
 ## <a name="implement-the-command-and-command-handler-patterns"></a>명령 및 명령 처리기 패턴 구현
 
@@ -397,19 +397,19 @@ public class CreateOrderCommandHandler
 #### <a name="additional-resources"></a>추가 자료
 
 - **Mark Seemann. 경계에서 애플리케이션은 개체 지향적이지 않음** \
-  [https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/](https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
+  <https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/>
 
 - **명령 및 이벤트** \
-  [http://cqrs.nu/Faq/commands-and-events](http://cqrs.nu/Faq/commands-and-events)
+  <http://cqrs.nu/Faq/commands-and-events>
 
 - **명령 처리기는 무엇을 수행하나요?** \
-  [http://cqrs.nu/Faq/command-handlers](http://cqrs.nu/Faq/command-handlers)
+  <http://cqrs.nu/Faq/command-handlers>
 
 - **Jimmy Bogard. 도메인 명령 패턴 - 처리기** \
-  [https://jimmybogard.com/domain-command-patterns-handlers/](https://jimmybogard.com/domain-command-patterns-handlers/)
+  <https://jimmybogard.com/domain-command-patterns-handlers/>
 
 - **Jimmy Bogard. 도메인 명령 패턴 - 유효성 검사** \
-  [https://jimmybogard.com/domain-command-patterns-validation/](https://jimmybogard.com/domain-command-patterns-validation/)
+  <https://jimmybogard.com/domain-command-patterns-validation/>
 
 ## <a name="the-command-process-pipeline-how-to-trigger-a-command-handler"></a>명령 프로세스 파이프라인: 명령 처리기를 트리거하는 방법
 
@@ -807,33 +807,33 @@ public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
 ##### <a name="mediatr-jimmy-bogard"></a>MediatR(Jimmy Bogard)
 
 - **MediatR.** GitHub 리포지토리. \
-  [https://github.com/jbogard/MediatR](https://github.com/jbogard/MediatR)
+  <https://github.com/jbogard/MediatR>
 
 - **MediatR 및 AutoMapper를 포함한 CQRS** \
-  [https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/](https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/)
+  <https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/>
 
 - **다이어트에 컨트롤러 넣기: POST 및 명령.** \
-  [https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/](https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/)
+  <https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/>
 
 - **중재자(mediator) 파이프라인으로 교차 편집 문제 해결** \
-  [https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/](https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/)
+  <https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/>
 
 - **CQRS 및 REST: 완벽한 일치 항목** \
-  [https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/](https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/)
+  <https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/>
 
 - **MediatR 파이프라인 예제** \
-  [https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/](https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/)
+  <https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/>
 
 - **MediatR 및 ASP.NET Core에 대한 수직 조각 테스트 설비** \
-  [https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/](https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/)
+  <https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/>
 
 - **Microsoft 종속성 주입에 대한 MediatR 확장이 릴리스됨** \
-  [https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/](https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/)
+  <https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/>
 
 ##### <a name="fluent-validation"></a>Fluent validation
 
 - **Jeremy Skinner. FluentValidation.** GitHub 리포지토리. \
-  [https://github.com/JeremySkinner/FluentValidation](https://github.com/JeremySkinner/FluentValidation)
+  <https://github.com/JeremySkinner/FluentValidation>
 
 > [!div class="step-by-step"]
 > [이전](microservice-application-layer-web-api-design.md)
