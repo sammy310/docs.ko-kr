@@ -3,10 +3,10 @@ title: C# 6의 새로운 기능 - C# 가이드
 description: C# 버전 6의 새로운 기능을 알아봅니다.
 ms.date: 12/12/2018
 ms.openlocfilehash: 478fd512f6b6facfce6d7f70f9691ce15e418d6e
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920677"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6의 새로운 기능
@@ -106,7 +106,7 @@ public class Student
 this.SomethingHappened?.Invoke(this, eventArgs);
 ```
 
-또한 왼쪽이 한 번만 계산되도록 하면 메서드 호출을 포함한 모든 식을 다음 연산자의 왼쪽에서 사용할 수 있습니다. `?.`
+또한 왼쪽이 한 번만 계산되도록 하면 `?.` 왼쪽에서 메서드 호출을 포함한 모든 식을 사용할 수 있습니다.
 
 ## <a name="string-interpolation"></a>문자열 보간
 

@@ -28,10 +28,10 @@ helpviewer_keywords:
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
 ms.openlocfilehash: fbb7b4e118598157e2005469f89831df50de6576
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58838341"
 ---
 # <a name="declare-statement"></a>Declare 문
@@ -87,7 +87,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
     > [!NOTE]
     >  대부분의 Dll에 진입점 이름은 대/소문자를 구분 하지 않습니다.  
   
--   **외부 프로시저 번호입니다.** 사용할 수 있습니다는 `Alias` 절을 외부 파일의 내보내기 테이블 내에서 진입점의 서 수를 지정 합니다. 먼저이를 위해서는 `aliasname` 숫자 기호를 사용 하 여 (`#`). 이 기능은 Visual Basic의 경우 외부 프로시저 이름이 있는 모든 문자를 허용 되지 않는 경우 또는 외부 파일 이름 없이 프로시저를 내보내는 경우에 유용할 수 있습니다.  
+-   **외부 프로시저 번호입니다.** 사용할 수 있습니다는 `Alias` 절을 외부 파일의 내보내기 테이블 내에서 진입점의 서 수를 지정 합니다. 먼저이를 위해서는 `aliasname` 숫자 기호를 사용 하 여 (`#`). 이 기능은 Visual basic의 경우 외부 프로시저 이름이 있는 모든 문자를 허용 되지 않는 경우 또는 외부 파일 이름 없이 프로시저를 내보내는 경우에 유용할 수 있습니다.  
   
 ## <a name="data-type-rules"></a>데이터 형식 규칙  
   
