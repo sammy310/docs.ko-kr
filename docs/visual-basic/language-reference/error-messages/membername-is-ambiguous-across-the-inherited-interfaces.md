@@ -8,20 +8,20 @@ helpviewer_keywords:
 - BC30685
 ms.assetid: 756add7a-23d5-4b4f-a48d-8297d6459c73
 ms.openlocfilehash: 4415608bcfca63b43b3d9ebf17ce622ccd418775
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58820859"
 ---
-# <a name="membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a><span data-ttu-id="7d79c-102">'\<membername >' 상속 된 인터페이스에서 모호\<interfacename1 >' 및 '\<interfacename2 >'</span><span class="sxs-lookup"><span data-stu-id="7d79c-102">'\<membername>' is ambiguous across the inherited interfaces '\<interfacename1>' and '\<interfacename2>'</span></span>
-<span data-ttu-id="7d79c-103">여러 인터페이스에서 동일한 이름의 두 개 이상의 멤버를 상속 하는 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="7d79c-103">The interface inherits two or more members with the same name from multiple interfaces.</span></span>  
+# <a name="membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a><span data-ttu-id="32f9a-102">'\<membername >' 상속 된 인터페이스에서 모호\<interfacename1 >' 및 '\<interfacename2 >'</span><span class="sxs-lookup"><span data-stu-id="32f9a-102">'\<membername>' is ambiguous across the inherited interfaces '\<interfacename1>' and '\<interfacename2>'</span></span>
+<span data-ttu-id="32f9a-103">여러 인터페이스에서 동일한 이름의 두 개 이상의 멤버를 상속 하는 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="32f9a-103">The interface inherits two or more members with the same name from multiple interfaces.</span></span>  
   
- <span data-ttu-id="7d79c-104">**오류 ID:** BC30685</span><span class="sxs-lookup"><span data-stu-id="7d79c-104">**Error ID:** BC30685</span></span>  
+ <span data-ttu-id="32f9a-104">**오류 ID:** BC30685</span><span class="sxs-lookup"><span data-stu-id="32f9a-104">**Error ID:** BC30685</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="7d79c-105">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="7d79c-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="32f9a-105">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="32f9a-105">To correct this error</span></span>  
   
--   <span data-ttu-id="7d79c-106">사용 하려는 기본 인터페이스 값 캐스팅 예를 들어:</span><span class="sxs-lookup"><span data-stu-id="7d79c-106">Cast the value to the base interface that you want to use; for example:</span></span>  
+-   <span data-ttu-id="32f9a-106">사용 하려는 기본 인터페이스 값 캐스팅 예를 들어:</span><span class="sxs-lookup"><span data-stu-id="32f9a-106">Cast the value to the base interface that you want to use; for example:</span></span>  
   
     ```  
     Interface Left  
@@ -46,6 +46,6 @@ ms.locfileid: "58820859"
     End Module  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="7d79c-107">참고자료</span><span class="sxs-lookup"><span data-stu-id="7d79c-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="32f9a-107">참고자료</span><span class="sxs-lookup"><span data-stu-id="32f9a-107">See also</span></span>
 
-- [<span data-ttu-id="7d79c-108">인터페이스</span><span class="sxs-lookup"><span data-stu-id="7d79c-108">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+- [<span data-ttu-id="32f9a-108">인터페이스</span><span class="sxs-lookup"><span data-stu-id="32f9a-108">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

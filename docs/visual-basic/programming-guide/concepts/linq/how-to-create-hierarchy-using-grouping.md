@@ -3,19 +3,19 @@ title: '방법: 그룹화 (Visual Basic)를 사용 하 여 계층을 만들려�
 ms.date: 07/20/2015
 ms.assetid: 4eb3ca6b-1aed-43de-b8b9-41c769c993f8
 ms.openlocfilehash: dea189d9d689cfba661fd84cb52f8e6658935a30
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58822897"
 ---
-# <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a><span data-ttu-id="c07dc-102">방법: 그룹화 (Visual Basic)를 사용 하 여 계층을 만들려면</span><span class="sxs-lookup"><span data-stu-id="c07dc-102">How to: Create Hierarchy Using Grouping (Visual Basic)</span></span>
-<span data-ttu-id="c07dc-103">이 예제에서는 데이터를 그룹화한 다음 그룹화에 따라 XML을 생성하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c07dc-103">This example shows how to group data, and then generate XML based on the grouping.</span></span>  
+# <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a><span data-ttu-id="ed1aa-102">방법: 그룹화 (Visual Basic)를 사용 하 여 계층을 만들려면</span><span class="sxs-lookup"><span data-stu-id="ed1aa-102">How to: Create Hierarchy Using Grouping (Visual Basic)</span></span>
+<span data-ttu-id="ed1aa-103">이 예제에서는 데이터를 그룹화한 다음 그룹화에 따라 XML을 생성하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ed1aa-103">This example shows how to group data, and then generate XML based on the grouping.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c07dc-104">예제</span><span class="sxs-lookup"><span data-stu-id="c07dc-104">Example</span></span>  
- <span data-ttu-id="c07dc-105">이 예제에서는 먼저 범주를 기준으로 데이터를 그룹화한 다음 XML 계층 구조가 그룹화를 반영하는 XML 파일을 새로 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="c07dc-105">This example first groups data by a category, then generates a new XML file in which the XML hierarchy reflects the grouping.</span></span>  
+## <a name="example"></a><span data-ttu-id="ed1aa-104">예제</span><span class="sxs-lookup"><span data-stu-id="ed1aa-104">Example</span></span>  
+ <span data-ttu-id="ed1aa-105">이 예제에서는 먼저 범주를 기준으로 데이터를 그룹화한 다음 XML 계층 구조가 그룹화를 반영하는 XML 파일을 새로 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1aa-105">This example first groups data by a category, then generates a new XML file in which the XML hierarchy reflects the grouping.</span></span>  
   
- <span data-ttu-id="c07dc-106">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 숫자 데이터(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="c07dc-106">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="ed1aa-106">이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 숫자 데이터(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="ed1aa-106">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim doc As XElement = XElement.Load("Data.xml")  
@@ -40,7 +40,7 @@ Dim newData As XElement = _
 Console.WriteLine(newData)  
 ```  
   
- <span data-ttu-id="c07dc-107">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="c07dc-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="ed1aa-107">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="ed1aa-107">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -79,6 +79,6 @@ Console.WriteLine(newData)
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c07dc-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="c07dc-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ed1aa-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="ed1aa-108">See also</span></span>
 
-- [<span data-ttu-id="c07dc-109">고급 쿼리 기술 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c07dc-109">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [<span data-ttu-id="ed1aa-109">고급 쿼리 기술 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ed1aa-109">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

@@ -2,23 +2,23 @@
 title: $ (Visual Basic 참조)
 ms.date: 10/31/2017
 ms.openlocfilehash: 1927e8277b0fdeda13d715b62c6e7cede28b3c52
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58821362"
 ---
-# <a name="-visual-basic-reference"></a><span data-ttu-id="3fb12-102">$ (Visual Basic 참조)</span><span class="sxs-lookup"><span data-stu-id="3fb12-102">$ (Visual Basic Reference)</span></span>
+# <a name="-visual-basic-reference"></a><span data-ttu-id="acf25-102">$ (Visual Basic 참조)</span><span class="sxs-lookup"><span data-stu-id="acf25-102">$ (Visual Basic Reference)</span></span>
 
-<span data-ttu-id="3fb12-103">문자열 리터럴을 [보간된 문자열](../../programming-guide/language-features/strings/interpolated-strings.md)로 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb12-103">Identifies a string literal as an [interpolated string](../../programming-guide/language-features/strings/interpolated-strings.md).</span></span> <span data-ttu-id="3fb12-104">보간된 문자열은 *보간된 식*과 함께 리터럴 텍스트를 포함하는 템플릿과 유사한 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="3fb12-104">An interpolated string is a template-like string that contains literal text along with *interpolated expressions*.</span></span> <span data-ttu-id="3fb12-105">예를 들어 대입문이나 메서드 호출에서 보간된 문자열이 확인되면 보간된 식이 결과 문자열의 해당 문자열 표현으로 바뀝니다.</span><span class="sxs-lookup"><span data-stu-id="3fb12-105">When the interpolated string is resolved, for example in an assignment statement or a method call, its interpolated expressions are replaced by their string representations in the result string.</span></span> <span data-ttu-id="3fb12-106">보간된 문자열은 .NET Framework에서 지원되는 [복합 형식 문자열](../../../standard/base-types/composite-format.md)을 대체합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb12-106">Interpolated strings are replacements for the [composite format strings](../../../standard/base-types/composite-format.md) supported by the .NET Framework.</span></span>
+<span data-ttu-id="acf25-103">문자열 리터럴을 [보간된 문자열](../../programming-guide/language-features/strings/interpolated-strings.md)로 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="acf25-103">Identifies a string literal as an [interpolated string](../../programming-guide/language-features/strings/interpolated-strings.md).</span></span> <span data-ttu-id="acf25-104">보간된 문자열은 *보간된 식*과 함께 리터럴 텍스트를 포함하는 템플릿과 유사한 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="acf25-104">An interpolated string is a template-like string that contains literal text along with *interpolated expressions*.</span></span> <span data-ttu-id="acf25-105">예를 들어 대입문이나 메서드 호출에서 보간된 문자열이 확인되면 보간된 식이 결과 문자열의 해당 문자열 표현으로 바뀝니다.</span><span class="sxs-lookup"><span data-stu-id="acf25-105">When the interpolated string is resolved, for example in an assignment statement or a method call, its interpolated expressions are replaced by their string representations in the result string.</span></span> <span data-ttu-id="acf25-106">보간된 문자열은 .NET Framework에서 지원되는 [복합 형식 문자열](../../../standard/base-types/composite-format.md)을 대체합니다.</span><span class="sxs-lookup"><span data-stu-id="acf25-106">Interpolated strings are replacements for the [composite format strings](../../../standard/base-types/composite-format.md) supported by the .NET Framework.</span></span>
 
-<span data-ttu-id="3fb12-107">다음 예제에서는 `$` 문자를 사용하여 보간된 문자열을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb12-107">The following example uses the `$` character to define an interpolated string.</span></span>
+<span data-ttu-id="acf25-107">다음 예제에서는 `$` 문자를 사용하여 보간된 문자열을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="acf25-107">The following example uses the `$` character to define an interpolated string.</span></span>
 
 [!CODE-vb[interpolated-string-symbol](../../../../samples/snippets/visualbasic/language-reference/special-characters/dollar-sign1.vb)]
 
-<span data-ttu-id="3fb12-108">보간된 문자열에 대한 자세한 내용은 [보간된 문자열](../../programming-guide/language-features/strings/interpolated-strings.md) 항목을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="3fb12-108">For more information on interpolated strings, see the [Interpolated Strings](../../programming-guide/language-features/strings/interpolated-strings.md) topic.</span></span>
+<span data-ttu-id="acf25-108">보간된 문자열에 대한 자세한 내용은 [보간된 문자열](../../programming-guide/language-features/strings/interpolated-strings.md) 항목을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="acf25-108">For more information on interpolated strings, see the [Interpolated Strings](../../programming-guide/language-features/strings/interpolated-strings.md) topic.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="3fb12-109">참고자료</span><span class="sxs-lookup"><span data-stu-id="3fb12-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="acf25-109">참고자료</span><span class="sxs-lookup"><span data-stu-id="acf25-109">See also</span></span>
 
-- [<span data-ttu-id="3fb12-110">Visual Basic 참조</span><span class="sxs-lookup"><span data-stu-id="3fb12-110">Visual Basic Reference</span></span>](../index.md)
-- [<span data-ttu-id="3fb12-111">Visual Basic 특수 문자</span><span class="sxs-lookup"><span data-stu-id="3fb12-111">Visual Basic Special Characters</span></span>](index.md)
+- [<span data-ttu-id="acf25-110">Visual Basic 참조</span><span class="sxs-lookup"><span data-stu-id="acf25-110">Visual Basic Reference</span></span>](../index.md)
+- [<span data-ttu-id="acf25-111">Visual Basic 특수 문자</span><span class="sxs-lookup"><span data-stu-id="acf25-111">Visual Basic Special Characters</span></span>](index.md)
