@@ -59,7 +59,7 @@ val addOne: x:int -> int
 이전 함수 `addOne`를 살펴봅니다. 다음과 같이 `addOne`의 본문은 표현식입니다.
 
 ```fsharp
-// 'x + 1'은 표현식 입니다!
+// 'x + 1' is an expression!
 let addOne x = x + 1
 ```
 
