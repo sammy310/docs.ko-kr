@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: be1ba87ae979911dd21647569725eafa2c80ffa6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59080730"
 ---
-# <a name="icordebugvariablehomeenumnext-method"></a><span data-ttu-id="776fc-102">ICorDebugVariableHomeEnum::Next 메서드</span><span class="sxs-lookup"><span data-stu-id="776fc-102">ICorDebugVariableHomeEnum::Next Method</span></span>
-<span data-ttu-id="776fc-103">지정 된 개수를 가져옵니다 [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) 지역 변수 및 함수에 인수에 대 한 정보를 포함 하는 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="776fc-103">Gets the specified number of [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instances that contain information about the local variables and arguments in a function.</span></span>  
+# <a name="icordebugvariablehomeenumnext-method"></a><span data-ttu-id="33ca0-102">ICorDebugVariableHomeEnum::Next 메서드</span><span class="sxs-lookup"><span data-stu-id="33ca0-102">ICorDebugVariableHomeEnum::Next Method</span></span>
+<span data-ttu-id="33ca0-103">지정 된 개수를 가져옵니다 [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) 지역 변수 및 함수에 인수에 대 한 정보를 포함 하는 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="33ca0-103">Gets the specified number of [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instances that contain information about the local variables and arguments in a function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="776fc-104">구문</span><span class="sxs-lookup"><span data-stu-id="776fc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="33ca0-104">구문</span><span class="sxs-lookup"><span data-stu-id="33ca0-104">Syntax</span></span>  
   
 ```  
 HRESULT Next(  
@@ -37,37 +37,37 @@ HRESULT Next(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="776fc-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="776fc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="33ca0-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="33ca0-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="776fc-106">[in] 검색할 개체 수입니다.</span><span class="sxs-lookup"><span data-stu-id="776fc-106">[in] The number of objects to be retrieved.</span></span>  
+ <span data-ttu-id="33ca0-106">[in] 검색할 개체 수입니다.</span><span class="sxs-lookup"><span data-stu-id="33ca0-106">[in] The number of objects to be retrieved.</span></span>  
   
  `homes`  
- <span data-ttu-id="776fc-107">각각 가리키는 포인터 배열을 [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) 로컬 변수 또는 함수의 인수에 대 한 정보를 제공 하는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="776fc-107">An array of pointers, each of which points to a [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) object that provides information about  a local variable or argument of a function.</span></span>  
+ <span data-ttu-id="33ca0-107">각각 가리키는 포인터 배열을 [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) 로컬 변수 또는 함수의 인수에 대 한 정보를 제공 하는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="33ca0-107">An array of pointers, each of which points to a [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) object that provides information about  a local variable or argument of a function.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="776fc-108">[out] 개체에 실제로 반환 된 인스턴스의 수입니다.</span><span class="sxs-lookup"><span data-stu-id="776fc-108">[out] The number of instances actually returned in objects.</span></span>  
+ <span data-ttu-id="33ca0-108">[out] 개체에 실제로 반환 된 인스턴스의 수입니다.</span><span class="sxs-lookup"><span data-stu-id="33ca0-108">[out] The number of instances actually returned in objects.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="776fc-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="776fc-109">Return Value</span></span>  
- <span data-ttu-id="776fc-110">메서드는 다음 값을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="776fc-110">The method returns the following values.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="33ca0-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="33ca0-109">Return Value</span></span>  
+ <span data-ttu-id="33ca0-110">메서드는 다음 값을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="33ca0-110">The method returns the following values.</span></span>  
   
-|<span data-ttu-id="776fc-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="776fc-111">HRESULT</span></span>|<span data-ttu-id="776fc-112">설명</span><span class="sxs-lookup"><span data-stu-id="776fc-112">Description</span></span>|  
+|<span data-ttu-id="33ca0-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="33ca0-111">HRESULT</span></span>|<span data-ttu-id="33ca0-112">설명</span><span class="sxs-lookup"><span data-stu-id="33ca0-112">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="776fc-113">메서드가 완료되었습니다.</span><span class="sxs-lookup"><span data-stu-id="776fc-113">The method completed successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="776fc-114">실제 인스턴스 수가 검색에 반영 된 대로 `pceltFetched`, 요청 된 인스턴스 수보다 작습니다.</span><span class="sxs-lookup"><span data-stu-id="776fc-114">The actual number of instances retrieved, as reflected in `pceltFetched`, is less than the number of instances requested.</span></span>|  
+|`S_OK`|<span data-ttu-id="33ca0-113">메서드가 완료되었습니다.</span><span class="sxs-lookup"><span data-stu-id="33ca0-113">The method completed successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="33ca0-114">실제 인스턴스 수가 검색에 반영 된 대로 `pceltFetched`, 요청 된 인스턴스 수보다 작습니다.</span><span class="sxs-lookup"><span data-stu-id="33ca0-114">The actual number of instances retrieved, as reflected in `pceltFetched`, is less than the number of instances requested.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="776fc-115">설명</span><span class="sxs-lookup"><span data-stu-id="776fc-115">Remarks</span></span>  
- <span data-ttu-id="776fc-116">합니다 [ICorDebugVariableHomeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md) 메서드는 최대 검색 `celt` 열거자의 현재 위치부터 시작 하는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="776fc-116">The [ICorDebugVariableHomeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md) method retrieves a maximum of  `celt` objects starting at the current position of the enumerator.</span></span> <span data-ttu-id="776fc-117">메서드는 반환 될 때 `pceltFetched` 검색 된 개체의 실제 수를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="776fc-117">When the method returns, `pceltFetched` contains the actual number of objects retrieved.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="33ca0-115">설명</span><span class="sxs-lookup"><span data-stu-id="33ca0-115">Remarks</span></span>  
+ <span data-ttu-id="33ca0-116">합니다 [ICorDebugVariableHomeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md) 메서드는 최대 검색 `celt` 열거자의 현재 위치부터 시작 하는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="33ca0-116">The [ICorDebugVariableHomeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md) method retrieves a maximum of  `celt` objects starting at the current position of the enumerator.</span></span> <span data-ttu-id="33ca0-117">메서드는 반환 될 때 `pceltFetched` 검색 된 개체의 실제 수를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="33ca0-117">When the method returns, `pceltFetched` contains the actual number of objects retrieved.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="776fc-118">요구 사항</span><span class="sxs-lookup"><span data-stu-id="776fc-118">Requirements</span></span>  
- <span data-ttu-id="776fc-119">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="776fc-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="33ca0-118">요구 사항</span><span class="sxs-lookup"><span data-stu-id="33ca0-118">Requirements</span></span>  
+ <span data-ttu-id="33ca0-119">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="33ca0-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="776fc-120">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="776fc-120">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="33ca0-120">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="33ca0-120">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="776fc-121">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="776fc-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="33ca0-121">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="33ca0-121">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="776fc-122">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="776fc-122">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ <span data-ttu-id="33ca0-122">**.NET Framework 버전:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="33ca0-122">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="776fc-123">참고자료</span><span class="sxs-lookup"><span data-stu-id="776fc-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="33ca0-123">참고자료</span><span class="sxs-lookup"><span data-stu-id="33ca0-123">See also</span></span>
 
-- [<span data-ttu-id="776fc-124">ICorDebugVariableHomeEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="776fc-124">ICorDebugVariableHomeEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)
-- [<span data-ttu-id="776fc-125">ICorDebugVariableHome 인터페이스</span><span class="sxs-lookup"><span data-stu-id="776fc-125">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+- [<span data-ttu-id="33ca0-124">ICorDebugVariableHomeEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="33ca0-124">ICorDebugVariableHomeEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)
+- [<span data-ttu-id="33ca0-125">ICorDebugVariableHome 인터페이스</span><span class="sxs-lookup"><span data-stu-id="33ca0-125">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
