@@ -10,10 +10,10 @@ ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: c825ccc15ff7eeb736169f7ae120b4a3692ffe39
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216472"
 ---
 # <a name="net-performance-tips"></a>.NET 성능 팁
@@ -36,9 +36,9 @@ ms.locfileid: "59216472"
   
 -   [가비지 수집기 기본 및 성능 힌트](https://go.microsoft.com/fwlink/?LinkId=99296)  
   
--   [성능 팁과 요령.NET 응용 프로그램에서](https://go.microsoft.com/fwlink/?LinkId=99297)  
+-   [.NET 애플리케이션에서의 성능 팁과 요량](https://go.microsoft.com/fwlink/?LinkId=99297)  
 
--   [Rico Mariani의 Performance Tidbits](https://go.microsoft.com/fwlink/?LinkId=115679)  
+-   [Rico Mariani의 성능 정보](https://go.microsoft.com/fwlink/?LinkId=115679)  
 
 -   [Vance Morrison의 블로그](https://blogs.msdn.microsoft.com/vancem/)
   

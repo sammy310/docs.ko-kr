@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4649663338efd0cc07b435991f90ba15843cc301
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5803ef1d174c3e3a5e8e18b130e6b7a0c65eac81
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496835"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59216348"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe(Windows 런타임 메타데이터 내보내기 도구)
 [!INCLUDE[wrt](../../../includes/wrt-md.md)] Metadata Export Tool(Winmdexp.exe)은 .NET Framework 모듈을 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 메타데이터가 포함되는 파일로 변환합니다. .NET Framework 어셈블리 및 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 메타데이터 파일이 같은 물리적 형식을 사용하지만 메타데이터 테이블의 내용에 차이가 있습니다. 즉, .NET Framework 어셈블리는 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 구성 요소로 자동으로 사용할 수 있습니다. .NET Framework 모듈을 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 구성 요소로 전환하는 프로세스를 *내보내기*라고 합니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 및 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]에서 결과 Windows 메타데이터(.winmd) 파일은 메타데이터와 구현이 모두 포함됩니다.  
@@ -51,6 +51,7 @@ winmdexp [options] winmdmodule
  C# 또는 Visual Basic으로 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램 또는 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 구성 요소를 쓸 때, .NET Framework는 지원을 제공하여 [!INCLUDE[wrt](../../../includes/wrt-md.md)]을 사용한 프로그램을 더 자연스럽게 만듭니다. 이 내용은 [Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md) 문서에서 설명합니다. 이 프로세스에서 몇 가지 자주 사용되는 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 형식이 .NET Framework 형식으로 매핑됩니다. Winmdexp.exe는 이 프로세스를 반대로 바꾸고 해당 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 형식을 사용하는 API 화면을 생성합니다. 예를 들어 <xref:System.Collections.Generic.IList%601> 인터페이스에서 구성된 형식은 [!INCLUDE[wrt](../../../includes/wrt-md.md)][IVector\<T>](https://go.microsoft.com/fwlink/p/?LinkId=251132) 인터페이스로 구성한 형식으로 매핑됩니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 - [C# 및 Visual Basic으로 Windows 런타임 구성 요소 만들기](https://go.microsoft.com/fwlink/p/?LinkID=238313)
 - [Winmdexp.exe 오류 메시지](../../../docs/framework/tools/winmdexp-exe-error-messages.md)

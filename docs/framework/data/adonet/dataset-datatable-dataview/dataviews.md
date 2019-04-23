@@ -3,10 +3,10 @@ title: 데이터 보기
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
 ms.openlocfilehash: aff4d6f648fa091130bfd9951f2a5001947b09a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215913"
 ---
 # <a name="dataviews"></a>데이터 보기
@@ -47,13 +47,13 @@ ms.locfileid: "59215913"
  [ASP.NET 웹 응용 프로그램](https://docs.microsoft.com/previous-versions/655cec97(v=vs.100))  
  ASP.NET 응용 프로그램, Web Forms 및 Web Services를 만들기 위한 개요 및 자세한 단계별 절차를 제공합니다.  
   
- [Windows 애플리케이션](https://docs.microsoft.com/previous-versions/ms184421(v=vs.100))  
+ [Windows 응용 프로그램](https://docs.microsoft.com/previous-versions/ms184421(v=vs.100))  
  Windows Forms 및 콘솔 응용 프로그램 작업에 대한 자세한 내용을 제공합니다.  
   
- [DataSets, DataTables 및 DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [DataSet, DataTable 및 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  에 대해 설명 합니다 **데이터 집합** 개체 및 사용 하 여 응용 프로그램 데이터를 관리 하는 방법을 합니다.  
   
- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
+ [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
  에 대해 설명 합니다 **DataTable** 개체와 사용 하 여 자체적으로 또는의 일부로 응용 프로그램 데이터를 관리 하는 방법을 **데이터 집합**합니다.  
   
  [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  

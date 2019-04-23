@@ -7,10 +7,10 @@ helpviewer_keywords:
 - UI Automation, Progress Bar control type
 ms.assetid: 302e778c-24b0-4789-814a-c8d37cf53a5f
 ms.openlocfilehash: 7a3347aa0fa272ea0b93ac2ad504943f37c65b2a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217733"
 ---
 # <a name="ui-automation-support-for-the-progressbar-control-type"></a>ProgressBar 컨트롤 형식에 대한 UI 자동화 지원
@@ -59,7 +59,7 @@ ms.locfileid: "59217733"
 |<xref:System.Windows.Automation.Provider.IValueProvider>|종속|진행률을 텍스트로 나타내는 진행률 표시줄 컨트롤은 <xref:System.Windows.Automation.Provider.IValueProvider>를 구현해야 합니다.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider.IsReadOnly%2A>|True|이 속성의 값은 항상 True입니다.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider.Value%2A>|메모를 참조하세요.|이 속성은 진행률 표시줄 컨트롤의 진행률을 텍스트로 노출합니다.|  
-|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|종속|숫자 범위를 사용 하는 진행률 표시줄 컨트롤을 구현 해야 합니다. <xref:System.Windows.Automation.Provider.IRangeValueProvider>|  
+|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|종속|숫자 범위를 사용하는 진행률 표시줄 컨트롤은 <xref:System.Windows.Automation.Provider.IRangeValueProvider>를 구현해야 합니다.|  
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider.Minimum%2A>|0.0|이 속성의 값은 컨트롤을 설정할 수 있는 가장 작은 값입니다.|  
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider.Maximum%2A>|100.0|이 속성의 값은 컨트롤을 설정할 수 있는 가장 큰 값입니다.|  
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider.SmallChange%2A>|NaN|진행률 표시줄 컨트롤은 읽기 전용이므로 이 속성이 필요하지 않습니다.|  
@@ -69,13 +69,13 @@ ms.locfileid: "59217733"
 ## <a name="required-ui-automation-events"></a>필요한 UI 자동화 이벤트  
  다음 표에서는 모든 진행률 표시줄 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 나열하여 보여 줍니다. 이벤트에 대한 자세한 내용은 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)를 참조하세요.  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트(event)|Support(지원)|노트|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|Support(지원)|노트|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 속성 변경 이벤트입니다.|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 속성 변경 이벤트입니다.|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 속성 변경 이벤트입니다.|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> 속성 변경 이벤트입니다.|필수|없음|  
-|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 속성 변경 이벤트입니다.|종속|없음|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 속성 변경 이벤트.|필수|없음|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 속성 변경 이벤트.|필수|없음|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 속성 변경 이벤트.|필수|없음|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> 속성 변경 이벤트.|필수|없음|  
+|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 속성 변경 이벤트.|종속|없음|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|필수|없음|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|필수|없음|  
   

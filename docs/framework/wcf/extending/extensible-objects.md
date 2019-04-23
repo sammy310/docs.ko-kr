@@ -5,10 +5,10 @@ helpviewer_keywords:
 - extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
 ms.openlocfilehash: 1af44f2394bbf27f9219831612b4e73d7a1759e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59220281"
 ---
 # <a name="extensible-objects"></a>확장 가능한 개체
@@ -19,7 +19,7 @@ ms.locfileid: "59220281"
   
  <xref:System.ServiceModel.IExtensibleObject%601> 인터페이스는 <xref:System.ServiceModel.IExtension%601> 개체가 해당 기능을 사용자 지정할 수 있도록 하는 형식에 의해 구현됩니다.  
   
- 확장 가능한 개체를 사용하면 <xref:System.ServiceModel.IExtension%601> 개체를 동적으로 집계할 수 있습니다. <xref:System.ServiceModel.IExtension%601> 개체는 다음 인터페이스로 구분 됩니다.  
+ 확장 가능한 개체를 사용하면 <xref:System.ServiceModel.IExtension%601> 개체를 동적으로 집계할 수 있습니다. <xref:System.ServiceModel.IExtension%601> 개체는 다음 인터페이스로 구분됩니다.  
   
 ```  
 public interface IExtension<T>  
@@ -30,11 +30,11 @@ where T : IExtensibleObject<T>
 }  
 ```  
   
- 형식 제한은 <xref:System.ServiceModel.IExtensibleObject%601>인 클래스에 대해서만 확장이 정의될 수 있도록 합니다. <xref:System.ServiceModel.IExtension%601.Attach%2A> 및 <xref:System.ServiceModel.IExtension%601.Detach%2A> 집계 또는 분배 알림을 제공 합니다.  
+ 형식 제한은 <xref:System.ServiceModel.IExtensibleObject%601>인 클래스에 대해서만 확장이 정의될 수 있도록 합니다. <xref:System.ServiceModel.IExtension%601.Attach%2A> 및 <xref:System.ServiceModel.IExtension%601.Detach%2A>는 집계 또는 분배 알림을 제공합니다.  
   
  구현에서 확장을 추가하고 소유자에서 제거할 수 있는 시기를 제한할 수 있습니다. 예를 들어 완전히 제거를 허용하지 않거나, 소유자 또는 확장이 특정 상태에 있을 때 확장 추가 또는 제거를 허용하지 않거나, 여러 소유자에 동시에 추가하는 것을 허용하지 않거나, 단일 추가 후에만 단일 제거를 허용할 수 있습니다.  
   
- <xref:System.ServiceModel.IExtension%601> 다른 표준 관리 되는 인터페이스와의 상호 작용을 의미 하지 않습니다. 특히 소유자 개체의 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 메서드는 일반적으로 확장을 분리하지 않습니다.  
+ <xref:System.ServiceModel.IExtension%601>에서는 다른 관리되는 표준 인터페이스와의 상호 작용을 나타내지 않습니다. 특히 소유자 개체의 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 메서드는 일반적으로 확장을 분리하지 않습니다.  
   
  확장명 컬렉션에 추가 되 면 <xref:System.ServiceModel.IExtension%601.Attach%2A> 컬렉션으로 이동 하기 전에 호출 됩니다. 컬렉션에서 확장 제거 되 면 <xref:System.ServiceModel.IExtension%601.Detach%2A> 제거 된 후 호출 됩니다. (적절 한 동기화를 가정할 경우) 하는 방법을 확장 수만 해당 하는 동안 컬렉션에서 발견 되 고 이것이 간의 <xref:System.ServiceModel.IExtension%601.Attach%2A> 고 <xref:System.ServiceModel.IExtension%601.Detach%2A>입니다.  
   
@@ -46,16 +46,16 @@ where T : IExtensibleObject<T>
   
  두 번째 시나리오에서는 <xref:System.ServiceModel.IExtension%601.Attach%2A> 및 <xref:System.ServiceModel.IExtension%601.Detach%2A> 속성을 사용하여 개체가 이벤트 등록, 상태 전환 감시 등의 사용자 지정 동작에 참여할 수 있게 합니다.  
   
- <xref:System.ServiceModel.IExtensionCollection%601> 인터페이스는 <xref:System.ServiceModel.IExtension%601>을 형식별로 검색할 수 있는 <xref:System.ServiceModel.IExtension%601> 개체의 컬렉션입니다. <xref:System.ServiceModel.IExtensionCollection%601.Find%2A?displayProperty=nameWithType> 반환 가장 최근에 추가 된 개체는 <xref:System.ServiceModel.IExtension%601> 해당 형식입니다.  
+ <xref:System.ServiceModel.IExtensionCollection%601> 인터페이스는 <xref:System.ServiceModel.IExtension%601>을 형식별로 검색할 수 있는 <xref:System.ServiceModel.IExtension%601> 개체의 컬렉션입니다. <xref:System.ServiceModel.IExtensionCollection%601.Find%2A?displayProperty=nameWithType>는 해당 형식의 <xref:System.ServiceModel.IExtension%601> 중에서 최근 추가된 개체만 반환합니다.  
   
 ### <a name="extensible-objects-in-windows-communication-foundation"></a>Windows Communication Foundation의 확장 가능한 개체  
  Windows Communication Foundation (WCF)에 네 개의 확장 가능한 개체:  
   
--   <xref:System.ServiceModel.ServiceHostBase> – 서비스의 호스트에 대 한 기본 클래스입니다.  이 클래스의 확장을 사용하여 <xref:System.ServiceModel.ServiceHostBase> 자체의 동작을 확장하거나 각 서비스의 상태를 저장할 수 있습니다.  
+-   <xref:System.ServiceModel.ServiceHostBase> – 서비스 호스트의 기본 클래스입니다.  이 클래스의 확장을 사용하여 <xref:System.ServiceModel.ServiceHostBase> 자체의 동작을 확장하거나 각 서비스의 상태를 저장할 수 있습니다.  
   
--   <xref:System.ServiceModel.InstanceContext> –이 클래스는 서비스 형식의 인스턴스를 서비스 런타임과 연결합니다.  인스턴스에 대한 정보와 <xref:System.ServiceModel.InstanceContext>의 포함 <xref:System.ServiceModel.ServiceHostBase>에 대한 참조가 들어 있습니다. 이 클래스의 확장을 사용하여 <xref:System.ServiceModel.InstanceContext>의 동작을 확장하거나 각 서비스의 상태를 저장할 수 있습니다.  
+-   <xref:System.ServiceModel.InstanceContext> – 이 클래스는 서비스 형식의 인스턴스를 서비스 런타임과 연결합니다.  인스턴스에 대한 정보와 <xref:System.ServiceModel.InstanceContext>의 포함 <xref:System.ServiceModel.ServiceHostBase>에 대한 참조가 들어 있습니다. 이 클래스의 확장을 사용하여 <xref:System.ServiceModel.InstanceContext>의 동작을 확장하거나 각 서비스의 상태를 저장할 수 있습니다.  
   
--   <xref:System.ServiceModel.OperationContext> –이 클래스는 런타임에서 각 작업에 대해 수집 하는 작업 정보를 나타냅니다.  여기에는 들어오는 메시지 헤더, 들어오는 메시지 속성, 들어오는 보안 ID, 기타 정보 등이 포함됩니다.  이 클래스의 확장은 <xref:System.ServiceModel.OperationContext>의 동작을 확장하거나 각 작업의 상태를 저장할 수 있습니다.  
+-   <xref:System.ServiceModel.OperationContext> – 이 클래스는 런타임에서 각 작업에 대해 수집하는 작업 정보를 나타냅니다.  여기에는 들어오는 메시지 헤더, 들어오는 메시지 속성, 들어오는 보안 ID, 기타 정보 등이 포함됩니다.  이 클래스의 확장은 <xref:System.ServiceModel.OperationContext>의 동작을 확장하거나 각 작업의 상태를 저장할 수 있습니다.  
   
 -   <xref:System.ServiceModel.IContextChannel> –이 인터페이스는 채널 및 프록시에서 WCF 런타임에 의해 작성에 대 한 각 상태 검사에 대 한 허용 합니다.  이 클래스의 확장은 <xref:System.ServiceModel.IClientChannel>의 동작을 확장하거나 이 동작을 사용하여 각 채널의 상태를 저장할 수 있습니다.  
   
