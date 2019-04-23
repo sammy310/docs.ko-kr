@@ -16,70 +16,70 @@ helpviewer_keywords:
 - execution [Visual Basic], stopping
 ms.assetid: 07018828-2d49-4cf5-a44b-19fb15d9efea
 ms.openlocfilehash: 3129824f6e4047420c422503cc366a1c8d28b7e7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326218"
 ---
-# <a name="walkthrough-defining-classes-visual-basic"></a><span data-ttu-id="e2188-102">연습: 정의 클래스 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e2188-102">Walkthrough: Defining Classes (Visual Basic)</span></span>
+# <a name="walkthrough-defining-classes-visual-basic"></a><span data-ttu-id="4c300-102">연습: 정의 클래스 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4c300-102">Walkthrough: Defining Classes (Visual Basic)</span></span>
 
-<span data-ttu-id="e2188-103">이 연습에는 개체를 만드는 데 사용할 수 있는 클래스를 정의 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e2188-103">This walkthrough demonstrates how to define classes, which you can then use to create objects.</span></span> <span data-ttu-id="e2188-104">또한 새 클래스에 속성 및 메서드를 추가 하는 방법을 표시 하 고 개체를 초기화 하는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="e2188-104">It also shows you how to add properties and methods to the new class, and demonstrates how to initialize an object.</span></span>  
+<span data-ttu-id="4c300-103">이 연습에는 개체를 만드는 데 사용할 수 있는 클래스를 정의 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4c300-103">This walkthrough demonstrates how to define classes, which you can then use to create objects.</span></span> <span data-ttu-id="4c300-104">또한 새 클래스에 속성 및 메서드를 추가 하는 방법을 표시 하 고 개체를 초기화 하는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c300-104">It also shows you how to add properties and methods to the new class, and demonstrates how to initialize an object.</span></span>  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="to-define-a-class"></a><span data-ttu-id="e2188-105">클래스를 정의 하려면</span><span class="sxs-lookup"><span data-stu-id="e2188-105">To define a class</span></span>
+## <a name="to-define-a-class"></a><span data-ttu-id="4c300-105">클래스를 정의 하려면</span><span class="sxs-lookup"><span data-stu-id="4c300-105">To define a class</span></span>
   
-1. <span data-ttu-id="e2188-106">클릭 하 여 프로젝트를 만듭니다 **새 프로젝트** 에 **파일** 메뉴.</span><span class="sxs-lookup"><span data-stu-id="e2188-106">Create a project by clicking **New Project** on the **File** menu.</span></span> <span data-ttu-id="e2188-107">**새 프로젝트** 대화 상자가 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="e2188-107">The **New Project** dialog box appears.</span></span>  
+1. <span data-ttu-id="4c300-106">클릭 하 여 프로젝트를 만듭니다 **새 프로젝트** 에 **파일** 메뉴.</span><span class="sxs-lookup"><span data-stu-id="4c300-106">Create a project by clicking **New Project** on the **File** menu.</span></span> <span data-ttu-id="4c300-107">**새 프로젝트** 대화 상자가 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="4c300-107">The **New Project** dialog box appears.</span></span>  
   
-2. <span data-ttu-id="e2188-108">새 프로젝트를 표시 하는 Visual Basic 프로젝트 템플릿 목록에서 Windows 응용 프로그램을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="e2188-108">Select Windows Application from the list of Visual Basic project templates to display the new project.</span></span>  
+2. <span data-ttu-id="4c300-108">새 프로젝트를 표시 하는 Visual Basic 프로젝트 템플릿 목록에서 Windows 응용 프로그램을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c300-108">Select Windows Application from the list of Visual Basic project templates to display the new project.</span></span>  
   
-3. <span data-ttu-id="e2188-109">새 클래스를 클릭 하 여 프로젝트에 추가할 **클래스 추가** 에 **프로젝트** 메뉴.</span><span class="sxs-lookup"><span data-stu-id="e2188-109">Add a new class to the project by clicking **Add Class** on the **Project** menu.</span></span> <span data-ttu-id="e2188-110">**새 항목 추가** 대화 상자가 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="e2188-110">The **Add New Item** dialog box appears.</span></span>  
+3. <span data-ttu-id="4c300-109">새 클래스를 클릭 하 여 프로젝트에 추가할 **클래스 추가** 에 **프로젝트** 메뉴.</span><span class="sxs-lookup"><span data-stu-id="4c300-109">Add a new class to the project by clicking **Add Class** on the **Project** menu.</span></span> <span data-ttu-id="4c300-110">**새 항목 추가** 대화 상자가 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="4c300-110">The **Add New Item** dialog box appears.</span></span>  
   
-4. <span data-ttu-id="e2188-111">선택 된 **클래스** 템플릿.</span><span class="sxs-lookup"><span data-stu-id="e2188-111">Select the **Class** template.</span></span>  
+4. <span data-ttu-id="4c300-111">선택 된 **클래스** 템플릿.</span><span class="sxs-lookup"><span data-stu-id="4c300-111">Select the **Class** template.</span></span>  
   
-5. <span data-ttu-id="e2188-112">새 클래스 이름을 `UserNameInfo.vb`를 클릭 하 고 **추가** 새 클래스에 대 한 코드를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="e2188-112">Name the new class `UserNameInfo.vb`, and then click **Add** to display the code for the new class.</span></span>  
+5. <span data-ttu-id="4c300-112">새 클래스 이름을 `UserNameInfo.vb`를 클릭 하 고 **추가** 새 클래스에 대 한 코드를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c300-112">Name the new class `UserNameInfo.vb`, and then click **Add** to display the code for the new class.</span></span>  
   
      [!code-vb[VbVbalrOOP#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#5)]
   
     > [!NOTE]
-    >  <span data-ttu-id="e2188-113">Visual Basic을 사용할 수 있습니다 **코드 편집기** 시작 폼에 입력 하 여 클래스를 추가 하는 `Class` 키워드 뒤에 새 클래스의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="e2188-113">You can use the Visual Basic **Code Editor** to add a class to your startup form by typing the `Class` keyword followed by the name of the new class.</span></span> <span data-ttu-id="e2188-114">합니다 **코드 편집기** 해당 제공 `End Class` 문이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2188-114">The **Code Editor** provides a corresponding `End Class` statement for you.</span></span>  
+    >  <span data-ttu-id="4c300-113">Visual Basic을 사용할 수 있습니다 **코드 편집기** 시작 폼에 입력 하 여 클래스를 추가 하는 `Class` 키워드 뒤에 새 클래스의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="4c300-113">You can use the Visual Basic **Code Editor** to add a class to your startup form by typing the `Class` keyword followed by the name of the new class.</span></span> <span data-ttu-id="4c300-114">합니다 **코드 편집기** 해당 제공 `End Class` 문이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4c300-114">The **Code Editor** provides a corresponding `End Class` statement for you.</span></span>  
   
-6. <span data-ttu-id="e2188-115">사이 다음 코드를 추가 하 여 클래스에 대 한 전용 필드를 정의 합니다 `Class` 고 `End Class` 문:</span><span class="sxs-lookup"><span data-stu-id="e2188-115">Define a private field for the class by adding the following code between the `Class` and `End Class` statements:</span></span>  
+6. <span data-ttu-id="4c300-115">사이 다음 코드를 추가 하 여 클래스에 대 한 전용 필드를 정의 합니다 `Class` 고 `End Class` 문:</span><span class="sxs-lookup"><span data-stu-id="4c300-115">Define a private field for the class by adding the following code between the `Class` and `End Class` statements:</span></span>  
   
      [!code-vb[VbVbalrOOP#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#7)]
   
-     <span data-ttu-id="e2188-116">로 필드를 선언 `Private` 클래스 내 에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2188-116">Declaring the field as `Private` means it can be used only within the class.</span></span> <span data-ttu-id="e2188-117">할 수 있습니다 필드 클래스 외부에서 사용할 수 있는 같은 액세스 한정자를 사용 하 여 `Public` 자세한 액세스를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="e2188-117">You can make fields available from outside a class by using access modifiers such as `Public` that provide more access.</span></span> <span data-ttu-id="e2188-118">자세한 내용은 [액세스 수준을 Visual Basic의](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="e2188-118">For more information, see [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>  
+     <span data-ttu-id="4c300-116">로 필드를 선언 `Private` 클래스 내 에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4c300-116">Declaring the field as `Private` means it can be used only within the class.</span></span> <span data-ttu-id="4c300-117">할 수 있습니다 필드 클래스 외부에서 사용할 수 있는 같은 액세스 한정자를 사용 하 여 `Public` 자세한 액세스를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c300-117">You can make fields available from outside a class by using access modifiers such as `Public` that provide more access.</span></span> <span data-ttu-id="4c300-118">자세한 내용은 [액세스 수준을 Visual Basic의](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="4c300-118">For more information, see [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>  
   
-7. <span data-ttu-id="e2188-119">다음 코드를 추가 하 여 클래스에 대 한 속성을 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="e2188-119">Define a property for the class by adding the following code:</span></span>  
+7. <span data-ttu-id="4c300-119">다음 코드를 추가 하 여 클래스에 대 한 속성을 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c300-119">Define a property for the class by adding the following code:</span></span>  
   
      [!code-vb[VbVbalrOOP#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#8)]
   
-8. <span data-ttu-id="e2188-120">다음 코드를 추가 하 여 클래스의 메서드를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="e2188-120">Define a method for the class by adding the following code:</span></span>  
+8. <span data-ttu-id="4c300-120">다음 코드를 추가 하 여 클래스의 메서드를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c300-120">Define a method for the class by adding the following code:</span></span>  
   
      [!code-vb[VbVbalrOOP#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#9)]
   
-9. <span data-ttu-id="e2188-121">프로시저를 추가 하 여 새 클래스에 대 한 매개 변수가 있는 생성자를 정의 `Sub New`:</span><span class="sxs-lookup"><span data-stu-id="e2188-121">Define a parameterized constructor for the new class by adding a procedure named `Sub New`:</span></span>  
+9. <span data-ttu-id="4c300-121">프로시저를 추가 하 여 새 클래스에 대 한 매개 변수가 있는 생성자를 정의 `Sub New`:</span><span class="sxs-lookup"><span data-stu-id="4c300-121">Define a parameterized constructor for the new class by adding a procedure named `Sub New`:</span></span>  
   
      [!code-vb[VbVbalrOOP#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#10)]
   
-     <span data-ttu-id="e2188-122">`Sub New` 생성자는이 클래스를 기반으로 개체를 만들 때 자동으로 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e2188-122">The `Sub New` constructor is called automatically when an object based on this class is created.</span></span> <span data-ttu-id="e2188-123">이 생성자는 사용자 이름을 사용 하는 필드의 값을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="e2188-123">This constructor sets the value of the field that holds the user name.</span></span>  
+     <span data-ttu-id="4c300-122">`Sub New` 생성자는이 클래스를 기반으로 개체를 만들 때 자동으로 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="4c300-122">The `Sub New` constructor is called automatically when an object based on this class is created.</span></span> <span data-ttu-id="4c300-123">이 생성자는 사용자 이름을 사용 하는 필드의 값을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c300-123">This constructor sets the value of the field that holds the user name.</span></span>  
   
-## <a name="to-create-a-button-to-test-the-class"></a><span data-ttu-id="e2188-124">클래스를 테스트 하려면 단추를 만들려면</span><span class="sxs-lookup"><span data-stu-id="e2188-124">To create a button to test the class</span></span>
+## <a name="to-create-a-button-to-test-the-class"></a><span data-ttu-id="4c300-124">클래스를 테스트 하려면 단추를 만들려면</span><span class="sxs-lookup"><span data-stu-id="4c300-124">To create a button to test the class</span></span>
   
-1. <span data-ttu-id="e2188-125">해당 이름을 마우스 오른쪽 단추로 클릭 하 여 디자인 모드로 시작 폼을 변경 **솔루션 탐색기** 클릭 한 다음 **뷰 디자이너**합니다.</span><span class="sxs-lookup"><span data-stu-id="e2188-125">Change the startup form to design mode by right-clicking its name in **Solution Explorer** and then clicking **View Designer**.</span></span> <span data-ttu-id="e2188-126">기본적으로 Windows 응용 프로그램 프로젝트에 대 한 시작 폼 Form1.vb 라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="e2188-126">By default, the startup form for Windows Application projects is named Form1.vb.</span></span> <span data-ttu-id="e2188-127">기본 폼 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e2188-127">The main form will then appear.</span></span>  
+1. <span data-ttu-id="4c300-125">해당 이름을 마우스 오른쪽 단추로 클릭 하 여 디자인 모드로 시작 폼을 변경 **솔루션 탐색기** 클릭 한 다음 **뷰 디자이너**합니다.</span><span class="sxs-lookup"><span data-stu-id="4c300-125">Change the startup form to design mode by right-clicking its name in **Solution Explorer** and then clicking **View Designer**.</span></span> <span data-ttu-id="4c300-126">기본적으로 Windows 응용 프로그램 프로젝트에 대 한 시작 폼 Form1.vb 라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c300-126">By default, the startup form for Windows Application projects is named Form1.vb.</span></span> <span data-ttu-id="4c300-127">기본 폼 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="4c300-127">The main form will then appear.</span></span>  
   
-2. <span data-ttu-id="e2188-128">기본 폼에 단추를 추가 하 고 코드를 표시 하려면 두 번 클릭 합니다 `Button1_Click` 이벤트 처리기입니다.</span><span class="sxs-lookup"><span data-stu-id="e2188-128">Add a button to the main form and double-click it to display the code for the `Button1_Click` event handler.</span></span> <span data-ttu-id="e2188-129">테스트 절차를 호출 하도록 다음 코드를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="e2188-129">Add the following code to call the test procedure:</span></span>  
+2. <span data-ttu-id="4c300-128">기본 폼에 단추를 추가 하 고 코드를 표시 하려면 두 번 클릭 합니다 `Button1_Click` 이벤트 처리기입니다.</span><span class="sxs-lookup"><span data-stu-id="4c300-128">Add a button to the main form and double-click it to display the code for the `Button1_Click` event handler.</span></span> <span data-ttu-id="4c300-129">테스트 절차를 호출 하도록 다음 코드를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c300-129">Add the following code to call the test procedure:</span></span>  
   
      [!code-vb[VbVbalrOOP#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#12)]
   
-## <a name="to-run-your-application"></a><span data-ttu-id="e2188-130">응용 프로그램을 실행하려면</span><span class="sxs-lookup"><span data-stu-id="e2188-130">To run your application</span></span>
+## <a name="to-run-your-application"></a><span data-ttu-id="4c300-130">응용 프로그램을 실행하려면</span><span class="sxs-lookup"><span data-stu-id="4c300-130">To run your application</span></span>
   
-1. <span data-ttu-id="e2188-131">F5 키를 눌러 응용 프로그램을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="e2188-131">Run your application by pressing F5.</span></span> <span data-ttu-id="e2188-132">테스트 프로시저를 호출 하려면 폼에서 단추를 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="e2188-132">Click the button on the form to call the test procedure.</span></span> <span data-ttu-id="e2188-133">원래 했다는 메시지가 표시 `UserName` "MOORE, BOBBY" 이므로 프로시저가 호출 된 `Capitalize` 개체의 메서드.</span><span class="sxs-lookup"><span data-stu-id="e2188-133">It displays a message stating that the original `UserName` is "MOORE, BOBBY", because the procedure called the `Capitalize` method of the object.</span></span>  
+1. <span data-ttu-id="4c300-131">F5 키를 눌러 응용 프로그램을 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c300-131">Run your application by pressing F5.</span></span> <span data-ttu-id="4c300-132">테스트 프로시저를 호출 하려면 폼에서 단추를 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c300-132">Click the button on the form to call the test procedure.</span></span> <span data-ttu-id="4c300-133">원래 했다는 메시지가 표시 `UserName` "MOORE, BOBBY" 이므로 프로시저가 호출 된 `Capitalize` 개체의 메서드.</span><span class="sxs-lookup"><span data-stu-id="4c300-133">It displays a message stating that the original `UserName` is "MOORE, BOBBY", because the procedure called the `Capitalize` method of the object.</span></span>  
   
-2. <span data-ttu-id="e2188-134">**확인**을 클릭하여 메시지 상자를 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="e2188-134">Click **OK** to dismiss the message box.</span></span> <span data-ttu-id="e2188-135">`Button1 Click` 의 값을 변경 하는 절차는 `UserName` 속성의 새 값을 알려 주는 메시지를 표시 합니다 `UserName` "Worden, Joe" 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e2188-135">The `Button1 Click` procedure changes the value of the `UserName` property and displays a message stating that the new value of `UserName` is "Worden, Joe".</span></span>  
+2. <span data-ttu-id="4c300-134">**확인**을 클릭하여 메시지 상자를 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="4c300-134">Click **OK** to dismiss the message box.</span></span> <span data-ttu-id="4c300-135">`Button1 Click` 의 값을 변경 하는 절차는 `UserName` 속성의 새 값을 알려 주는 메시지를 표시 합니다 `UserName` "Worden, Joe" 됩니다.</span><span class="sxs-lookup"><span data-stu-id="4c300-135">The `Button1 Click` procedure changes the value of the `UserName` property and displays a message stating that the new value of `UserName` is "Worden, Joe".</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e2188-136">참고자료</span><span class="sxs-lookup"><span data-stu-id="e2188-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4c300-136">참고자료</span><span class="sxs-lookup"><span data-stu-id="4c300-136">See also</span></span>
 
-- [<span data-ttu-id="e2188-137">개체 지향 프로그래밍 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e2188-137">Object-Oriented Programming (Visual Basic)</span></span>](../../concepts/object-oriented-programming.md)
-- [<span data-ttu-id="e2188-138">개체 및 클래스</span><span class="sxs-lookup"><span data-stu-id="e2188-138">Objects and Classes</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [<span data-ttu-id="4c300-137">개체 지향 프로그래밍(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4c300-137">Object-Oriented Programming (Visual Basic)</span></span>](../../concepts/object-oriented-programming.md)
+- [<span data-ttu-id="4c300-138">개체 및 클래스</span><span class="sxs-lookup"><span data-stu-id="4c300-138">Objects and Classes</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
