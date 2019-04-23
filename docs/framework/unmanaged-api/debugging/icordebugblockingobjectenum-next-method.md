@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 889c3bb2d5e0cd1feb9e592e667d47dedd4ede36
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59171147"
 ---
 # <a name="icordebugblockingobjectenumnext-method"></a>ICorDebugBlockingObjectEnum::Next 메서드
@@ -52,7 +52,7 @@ HRESULT Next([in] ULONG  celt,
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|S_FALSE|`pceltFetched` 같지 않음 `celt`합니다.|  
+|S_FALSE|`pceltFetched`이 `celt`와 다른 경우|  
   
 ## <a name="remarks"></a>설명  
  이 메서드가 함수는 일반적인 COM 열거자를 선호합니다.  

@@ -3,10 +3,10 @@ title: <httpsTransport>
 ms.date: 03/30/2017
 ms.assetid: f6ed4bc0-7e38-4348-9259-30bf61eb9435
 ms.openlocfilehash: c7e4dc540458bbfb69318d2f14cfa9776f444c55
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172824"
 ---
 # <a name="httpstransport"></a>\<httpsTransport>
@@ -82,6 +82,6 @@ ms.locfileid: "59172824"
 - [전송](../../../../../docs/framework/wcf/feature-details/transports.md)
 - [전송 선택](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
 - [바인딩](../../../../../docs/framework/wcf/bindings.md)
-- [바인딩 확장명](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [바인딩 확장](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

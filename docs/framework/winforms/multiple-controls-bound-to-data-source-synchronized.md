@@ -9,10 +9,10 @@ helpviewer_keywords:
 - controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
 ms.openlocfilehash: 8f7e59720420a845fa195b8c0fb078a8699a9bc3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170341"
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>방법: 동일한 데이터 소스에 바인딩된 여러 컨트롤의 동기화 상태가 유지되도록 설정
@@ -42,7 +42,7 @@ Windows Forms에서 데이터 바인딩을 사용 하 여 작업을 하는 경�
   
 ## <a name="see-also"></a>참고자료
 
-- [방법: BindingSource 구성 요소를 사용하여 양식 간에 바인딩된 데이터 공유](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
+- [방법: BindingSource 구성 요소를 사용 하 여 양식 간에 바인딩된 데이터 공유](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
 - [Windows Forms 데이터 바인딩의 변경 알림](change-notification-in-windows-forms-data-binding.md)
 - [데이터 바인딩과 관련된 인터페이스](interfaces-related-to-data-binding.md)
 - [Windows Forms 데이터 바인딩](windows-forms-data-binding.md)

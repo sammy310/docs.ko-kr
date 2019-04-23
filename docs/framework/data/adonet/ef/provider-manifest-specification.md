@@ -3,10 +3,10 @@ title: 공급자 매니페스트 지정
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
 ms.openlocfilehash: 3d396f6ecfc0eb4a884e4af0d84ef65d18c5586c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59169912"
 ---
 # <a name="provider-manifest-specification"></a>공급자 매니페스트 지정
@@ -266,7 +266,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |NiladicFunction|Boolean|아니요|False|함수가 매개 변수를 필요로 하지 않고 매개 변수 없이 호출되는 경우 True입니다.|  
 |ParameterType<br /><br /> 의미 체계|ParameterSemantics|아니요|AllowImplicit<br /><br /> 변환|쿼리 파이프라인에서 매개 변수 형식 대체를 처리할 방법에 대한 선택 항목:<br /><br /> -   ExactMatchOnly<br />-   AllowImplicitPromotion<br />-   AllowImplicitConversion|  
   
- **Parameters 노드**  
+ **매개 변수 노드**  
   
  각 함수에는 하나 이상의 Parameter 노드로 구성된 컬렉션이 있습니다.  
   

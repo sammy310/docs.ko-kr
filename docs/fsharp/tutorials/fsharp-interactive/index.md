@@ -3,10 +3,10 @@ title: F# Interactive(fsi.exe) 참조
 description: 에 대해 알아봅니다 하는 방법 F# Interactive (fsi.exe) 실행 하는 F# 대화형으로 나 콘솔에서 실행할 코드 F# 스크립트입니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: 9ec780ca51eaa5ae0aa791eb509d8ad0865dc26f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172265"
 ---
 # <a name="interactive-programming-with-f"></a>F # 사용한 대화형 프로그래밍\#
@@ -58,7 +58,7 @@ F# Interactive에서 스크립트를 실행할 때는 컴파일러에서 실행�
 |**#load**|소스 파일을 읽고 컴파일한 다음 실행합니다.|
 |**#quit**|F# Interactive 세션을 종료합니다.|
 |**#r**|어셈블리를 참조합니다.|
-|**#time ["on"&#124;"꺼짐"]**|**#time** 자체는 성능 정보 표시 여부를 전환합니다. 이 지시문을 사용하도록 설정하면 F# Interactive가 해석 및 실행되는 각 코드 섹션에 대해 실제 시간, CPU 시간 및 가비지 컬렉션 정보를 측정합니다.|
+|**#time ["on"&#124;"off"]**|**#time** 자체는 성능 정보 표시 여부를 전환합니다. 이 지시문을 사용하도록 설정하면 F# Interactive가 해석 및 실행되는 각 코드 섹션에 대해 실제 시간, CPU 시간 및 가비지 컬렉션 정보를 측정합니다.|
 
 F# Interactive에서 파일 또는 경로를 지정할 때는 문자열 리터럴이 필요합니다. 따라서 파일 및 경로를 따옴표로 묶어야 하며, 일반적인 이스케이프 문자가 적용됩니다. 또한 @ 문자를 사용하여 F# Interactive가 경로를 포함하는 문자열을 축자 문자열로 해석하도록 할 수 있습니다. 그러면 F# Interactive에서 이스케이프 문자를 무시합니다.
 

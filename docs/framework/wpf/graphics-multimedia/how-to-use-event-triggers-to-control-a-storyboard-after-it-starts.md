@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Storyboards [WPF], controlling after start
 ms.assetid: 3b115594-6a93-4972-b24d-61aa16f1c15f
 ms.openlocfilehash: d444349f8bc9236e1d15f484f35b1326c77e2425
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170653"
 ---
 # <a name="how-to-use-event-triggers-to-control-a-storyboard-after-it-starts"></a>방법: 스토리보드가 시작되면 이벤트 트리거를 사용하여 제어
@@ -47,6 +47,6 @@ ms.locfileid: "59170653"
 - <xref:System.Windows.Media.Animation.PauseStoryboard>
 - <xref:System.Windows.Media.Animation.StopStoryboard>
 - <xref:System.Windows.Media.Animation.SeekStoryboard>
-- [대화형 메서드를 사용하여 이미 시작된 스토리보드 제어](how-to-control-a-storyboard-after-it-starts.md)
+- [대화형 메서드를 사용하여 이미 시작된 Storyboard 제어](how-to-control-a-storyboard-after-it-starts.md)
 - [애니메이션 개요](animation-overview.md)
 - [Storyboard 개요](storyboards-overview.md)

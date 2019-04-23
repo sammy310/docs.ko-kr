@@ -3,10 +3,10 @@ title: 활동
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
 ms.openlocfilehash: b93960d4006499c935c27ee18e066d091632d3d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170211"
 ---
 # <a name="activity"></a>활동
@@ -38,9 +38,9 @@ ms.locfileid: "59170211"
 ## <a name="defining-the-scope-of-an-activity"></a>동작 범위 정의  
  동작은 디자인 타임에 정의되며 작업의 논리 단위를 나타냅니다. 동일한 동작 식별자로 내보낸 추적은 동일한 동작의 일부이므로 직접적으로 관련됩니다. 동작(요청)이 엔드포인트 경계를 넘나들 수 있기 때문에 동작에 대해 두 가지 범위가 정의됩니다.  
   
--   `Global` 응용 프로그램당 범위입니다. 이 범위에서는 동작이 128비트 gAId(Globally Unique Activity Identifier)에 의해 식별됩니다. gAid는 엔드포인트 간에 전파됩니다.  
+-   응용 프로그램별 `Global` 범위. 이 범위에서는 동작이 128비트 gAId(Globally Unique Activity Identifier)에 의해 식별됩니다. gAid는 엔드포인트 간에 전파됩니다.  
   
--   `Local` 범위, 끝점당입니다. 이 범위에서는 동작이 동작 추적 및 프로세스 ID를 내보내는 추적 소스 이름과 함께 gAId에 의해 식별됩니다. 이 세 가지가 로컬 동작 ID인 lAId를 구성합니다. lAId는 동작의 (로컬) 경계를 정의하는 데 사용합니다.  
+-   엔드포인트별 `Local` 범위. 이 범위에서는 동작이 동작 추적 및 프로세스 ID를 내보내는 추적 소스 이름과 함께 gAId에 의해 식별됩니다. 이 세 가지가 로컬 동작 ID인 lAId를 구성합니다. lAId는 동작의 (로컬) 경계를 정의하는 데 사용합니다.  
   
 ## <a name="trace-schema"></a>추적 스키마  
  추적은 Microsoft 플랫폼을 통해 스키마를 사용하여 내보낼 수 있습니다. 이때 "e2e"("종단" ("종단 간")에 대 한 자주 사용 되는 스키마입니다. 이 스키마에는 128비트 식별자(gAId), 추적 소스 이름 및 프로세스 ID가 포함됩니다. 관리 코드에서는 <xref:System.Diagnostics.XmlWriterTraceListener>가 E2E 스키마에서 추적을 내보냅니다.  

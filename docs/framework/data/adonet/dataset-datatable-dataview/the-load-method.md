@@ -5,10 +5,10 @@ dev_langs:
 - vb
 ms.assetid: e22e5812-89c6-41f0-9302-bb899a46dbff
 ms.openlocfilehash: 82f840ab7dd26a4888ebf024d696f2c70701eb18
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59173292"
 ---
 # <a name="the-load-method"></a>로드 메서드
@@ -21,7 +21,7 @@ ms.locfileid: "59173292"
 |LoadOption 값|설명|  
 |----------------------|-----------------|  
 |**OverwriteRow**|들어오는 행을가 같으면 **PrimaryKey** 에 이미 행 값을 **DataTable**의 **원래** 및 **현재** 각 값 열 들어오는 행의 값으로 바뀝니다. 및 **RowState** 속성이 **Unchanged**합니다.<br /><br /> 에 이미 존재 하지 않는 데이터 원본에서 행을 **DataTable** 와 함께 추가 되는 **RowState** 값 **Unchanged**.<br /><br /> 이 옵션에는 실제로 내용을 새로 고칩니다 합니다 **DataTable** 데이터 소스의 내용과 일치 하도록 합니다.|  
-|**PreserveCurrentValues(기본값)**|들어오는 행을가 같으면 **PrimaryKey** 에 이미 행 값을 **DataTable**의 **원래** 들어오는 행 및 합니다 내용의값이설정**현재** 값 변경 되지 않습니다.<br /><br /> 경우는 **RowState** 는 **Added** 또는 **Modified**로 설정 됩니다 **Modified**합니다.<br /><br /> 경우는 **RowState** 되었습니다 **Deleted**, 상태로 유지 됩니다 **삭제**합니다.<br /><br /> 에 이미 존재 하지 않는 데이터 원본에서 행을 **DataTable** 추가 되 면 및 **RowState** 로 설정 되어 **Unchanged**합니다.|  
+|**PreserveCurrentValues (기본값)**|들어오는 행을가 같으면 **PrimaryKey** 에 이미 행 값을 **DataTable**의 **원래** 들어오는 행 및 합니다 내용의값이설정**현재** 값 변경 되지 않습니다.<br /><br /> 경우는 **RowState** 는 **Added** 또는 **Modified**로 설정 됩니다 **Modified**합니다.<br /><br /> 경우는 **RowState** 되었습니다 **Deleted**, 상태로 유지 됩니다 **삭제**합니다.<br /><br /> 에 이미 존재 하지 않는 데이터 원본에서 행을 **DataTable** 추가 되 면 및 **RowState** 로 설정 되어 **Unchanged**합니다.|  
 |**UpdateCurrentValues**|들어오는 행을가 같으면 **PrimaryKey** 에 이미 행 값을 **DataTable**의 **현재** 값으로 복사 됩니다는 **원래**값 및 **현재** 들어오는 행의 내용에 값이 설정 됩니다.<br /><br /> 경우는 **RowState** 에 **DataTable** 되었습니다 **Added**, **RowState** 유지 됩니다 **Added**. 행으로 표시 된 **Modified** 또는 **Deleted**, **RowState** 는 **수정**합니다.<br /><br /> 에 이미 존재 하지 않는 데이터 원본에서 행을 **DataTable** 추가 되 면 및 **RowState** 로 설정 되어 **Added**합니다.|  
   
  다음 샘플에서는 합니다 **부하** 에 직원 생일 목록을 표시 하는 메서드는 **Northwind** 데이터베이스입니다.  

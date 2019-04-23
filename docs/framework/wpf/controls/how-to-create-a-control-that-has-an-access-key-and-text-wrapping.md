@@ -10,10 +10,10 @@ helpviewer_keywords:
 - text wrapping [WPF]
 ms.assetid: 205099d9-2551-4302-a25e-a15af9f67e04
 ms.openlocfilehash: 48e439719afa2426b5d8f822c621080cdc32514e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174046"
 ---
 # <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>방법: 선택키와 자동 줄 바꿈을 사용하는 컨트롤 만들기
@@ -26,7 +26,7 @@ ms.locfileid: "59174046"
   
  [!code-xaml[LabelSnippet#5](~/samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#5)]  
   
- **레이블에 선택키가 있고 텍스트 배치 추가**  
+ **레이블에 선택키 및 텍스트 배치 추가**  
   
  필요한 경우는 <xref:System.Windows.Controls.Label> 키 (니모닉)을 사용 하 여는 <xref:System.Windows.Controls.AccessText> 내에 있는 요소는 <xref:System.Windows.Controls.Label>합니다.  
   

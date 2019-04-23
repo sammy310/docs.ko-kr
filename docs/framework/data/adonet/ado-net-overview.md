@@ -3,10 +3,10 @@ title: ADO.NET 개요
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
 ms.openlocfilehash: 7ec3b5f4dd08a39f96ed28e6666fd4b00bced903
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170067"
 ---
 # <a name="adonet-overview"></a>ADO.NET 개요
@@ -35,7 +35,7 @@ ADO.NET은 OLE DB 및 ODBC를 통해 노출되는 데이터 소스, SQL Server �
  [.NET Framework 데이터 공급자](../../../../docs/framework/data/adonet/data-providers.md)  
  ADO.NET에 포함된 하나 이상의 .NET Framework 데이터 공급자에 대한 디자인 개요를 제공합니다.  
   
- [ADO.NET 데이터 집합](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
+ [ADO.NET 데이터 세트](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
  `DataSet` 디자인 및 구성 요소의 개요를 제공합니다.  
   
  [ADO.NET에서 Side-by-Side 실행](../../../../docs/framework/data/adonet/side-by-side-execution.md)  

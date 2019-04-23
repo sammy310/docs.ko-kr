@@ -9,10 +9,10 @@ helpviewer_keywords:
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
 ms.openlocfilehash: 0a53e9b9d23c03715bf3088a4ae8577a39527995
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59173617"
 ---
 # <a name="how-to-read-image-metadata"></a>방법: 이미지 메타데이터 읽기
@@ -40,7 +40,7 @@ ms.locfileid: "59173617"
   
 |숫자 값|설명|  
 |-------------------|-----------------|  
-|1|A `Byte`|  
+|1|`Byte`입니다.|  
 |2|배열을 `Byte` ASCII로 인코딩된 개체|  
 |3|16 비트 정수|  
 |4|32 비트 정수|  

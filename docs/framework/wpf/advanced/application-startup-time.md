@@ -9,10 +9,10 @@ helpviewer_keywords:
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
 ms.openlocfilehash: 72207861850875f08786401aacf7b911b2a5b1f6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59173032"
 ---
 # <a name="application-startup-time"></a>애플리케이션 시작 시간
@@ -65,7 +65,7 @@ WPF 애플리케이션을 시작하는 데 필요한 시간은 크게 다를 수
  Ngen과 JIT 모듈을 모두 사용하면 최악의 효과가 발생할 수 있습니다. 이는 mscorjit.dll을 로드해야 하고, JIT 컴파일러가 코드에서 작동하여 어셈블리의 메타데이터를 읽을 때 Ngen 이미지의 많은 페이지에 액세스해야 하기 때문입니다.  
   
 ### <a name="ngen-and-clickonce"></a>Ngen 및 ClickOnce  
- 애플리케이션 배포 계획에 따라서도 로드 시간이 달라질 수 있습니다. [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 응용 프로그램 배포는 Ngen을 지원 하지 않습니다. 애플리케이션에 Ngen.exe를 사용하려면 Windows Installer와 같은 다른 배포 메커니즘을 사용해야 합니다.  
+ 애플리케이션 배포 계획에 따라서도 로드 시간이 달라질 수 있습니다. [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 응용 프로그램 배포는 Ngen을 지원하지 않습니다. 애플리케이션에 Ngen.exe를 사용하려면 Windows Installer와 같은 다른 배포 메커니즘을 사용해야 합니다.  
   
  자세한 내용은 [Ngen.exe(네이티브 이미지 생성기)](../../tools/ngen-exe-native-image-generator.md)를 참조하세요.  
   
@@ -128,6 +128,6 @@ WPF 애플리케이션을 시작하는 데 필요한 시간은 크게 다를 수
 - <xref:System.AppDomain>
 - <xref:System.Resources.NeutralResourcesLanguageAttribute>
 - <xref:System.Resources.ResourceManager>
-- [WPF 애플리케이션에 시작 화면 추가](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
+- [WPF 응용 프로그램에 시작 화면 추가](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
 - [Ngen.exe(네이티브 이미지 생성기)](../../tools/ngen-exe-native-image-generator.md)
-- [\<generatePublisherEvidence > 요소](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)
+- [\<generatePublisherEvidence> 요소](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

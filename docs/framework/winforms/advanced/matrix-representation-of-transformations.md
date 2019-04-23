@@ -17,10 +17,10 @@ helpviewer_keywords:
 - affine transformations
 ms.assetid: 0659fe00-9e0c-41c4-9118-016f2404c905
 ms.openlocfilehash: c87be8eaf715e373da75dd8f91889b0e396dba0d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172785"
 ---
 # <a name="matrix-representation-of-transformations"></a>변환에 대한 매트릭스 표현
@@ -105,5 +105,5 @@ m × n 행렬은 행 m과 n 열으로 정렬 하는 숫자 집합입니다. 다�
   
 ## <a name="see-also"></a>참고자료
 
-- [좌표계 및 변환](coordinate-systems-and-transformations.md)
-- [관리형 GDI+에서 변환 사용](using-transformations-in-managed-gdi.md)
+- [좌표계 및 변형](coordinate-systems-and-transformations.md)
+- [관리 GDI+에서 변형 사용](using-transformations-in-managed-gdi.md)

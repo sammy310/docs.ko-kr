@@ -9,10 +9,10 @@ helpviewer_keywords:
 - drawing [Windows Forms], Bezier splines
 ms.assetid: f4f3fe30-f0a6-4743-ac91-11310cebea9f
 ms.openlocfilehash: ebb53e7df979a553ed4a44deba34345c9ecac772
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59171680"
 ---
 # <a name="how-to-draw-a-single-b233zier-spline"></a>방법: 단일 B를 그리는&#233;zier 스플라인
@@ -35,4 +35,4 @@ ms.locfileid: "59171680"
 
 - <xref:System.Drawing.Graphics.DrawBezier%2A>
 - [GDI+의 3차원 곡선 스플라인](bezier-splines-in-gdi.md)
-- [방법: 일련의 3차원 곡선 스플라인 그리기](how-to-draw-a-sequence-of-bezier-splines.md)
+- [방법: 일련의 3 차원 곡선 스플라인 그리기](how-to-draw-a-sequence-of-bezier-splines.md)
