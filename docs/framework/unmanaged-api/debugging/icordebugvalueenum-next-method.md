@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b24507c7cb0860fc04fa519c6bd95113483f629d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174215"
 ---
-# <a name="icordebugvalueenumnext-method"></a><span data-ttu-id="5015c-102">ICorDebugValueEnum::Next 메서드</span><span class="sxs-lookup"><span data-stu-id="5015c-102">ICorDebugValueEnum::Next Method</span></span>
-<span data-ttu-id="5015c-103">"ICorDebugValue" 인스턴스 수가 지정 된 현재 위치부터 시작 하는 열거형에서 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="5015c-103">Gets the specified number of "ICorDebugValue" instances from the enumeration, starting at the current position.</span></span>  
+# <a name="icordebugvalueenumnext-method"></a><span data-ttu-id="4a447-102">ICorDebugValueEnum::Next 메서드</span><span class="sxs-lookup"><span data-stu-id="4a447-102">ICorDebugValueEnum::Next Method</span></span>
+<span data-ttu-id="4a447-103">"ICorDebugValue" 인스턴스 수가 지정 된 현재 위치부터 시작 하는 열거형에서 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="4a447-103">Gets the specified number of "ICorDebugValue" instances from the enumeration, starting at the current position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5015c-104">구문</span><span class="sxs-lookup"><span data-stu-id="5015c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4a447-104">구문</span><span class="sxs-lookup"><span data-stu-id="4a447-104">Syntax</span></span>  
   
 ```  
 HRESULT Next (  
@@ -38,23 +38,23 @@ HRESULT Next (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5015c-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="5015c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4a447-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="4a447-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="5015c-106">[in] 수가 `ICorDebugValue` 인스턴스를 검색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5015c-106">[in] The number of `ICorDebugValue` instances to be retrieved.</span></span>  
+ <span data-ttu-id="4a447-106">[in] 수가 `ICorDebugValue` 인스턴스를 검색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4a447-106">[in] The number of `ICorDebugValue` instances to be retrieved.</span></span>  
   
  `values`  
- <span data-ttu-id="5015c-107">[out] 각각 가리키는 포인터 배열을 `ICorDebugValue` 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="5015c-107">[out] An array of pointers, each of which points to an `ICorDebugValue` object.</span></span>  
+ <span data-ttu-id="4a447-107">[out] 각각 가리키는 포인터 배열을 `ICorDebugValue` 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="4a447-107">[out] An array of pointers, each of which points to an `ICorDebugValue` object.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="5015c-108">[out] 개수에 대 한 포인터 `ICorDebugValue` 실제로 반환 된 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="5015c-108">[out] Pointer to the number of `ICorDebugValue` instances actually returned.</span></span> <span data-ttu-id="5015c-109">이 값은 null 일 수 있으면 `celt` 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="5015c-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="4a447-108">[out] 개수에 대 한 포인터 `ICorDebugValue` 실제로 반환 된 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="4a447-108">[out] Pointer to the number of `ICorDebugValue` instances actually returned.</span></span> <span data-ttu-id="4a447-109">이 값은 null 일 수 있으면 `celt` 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="4a447-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5015c-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5015c-110">Requirements</span></span>  
- <span data-ttu-id="5015c-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="5015c-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4a447-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4a447-110">Requirements</span></span>  
+ <span data-ttu-id="4a447-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="4a447-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5015c-112">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5015c-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="4a447-112">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4a447-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="5015c-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5015c-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4a447-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4a447-113">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="5015c-114">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="5015c-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="4a447-114">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4a447-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5015c-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="5015c-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4a447-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="4a447-115">See also</span></span>
