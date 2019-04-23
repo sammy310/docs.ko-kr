@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 44a2038af5d6ef46ad7cc661603e99b2f3dd67a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215926"
 ---
-# <a name="icorpublishappdomaingetid-method"></a><span data-ttu-id="9c84f-102">ICorPublishAppDomain::GetID 메서드</span><span class="sxs-lookup"><span data-stu-id="9c84f-102">ICorPublishAppDomain::GetID Method</span></span>
-<span data-ttu-id="9c84f-103">이 대 한 고유 식별자를 가져옵니다 [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9c84f-103">Gets the unique identifier for this [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).</span></span>  
+# <a name="icorpublishappdomaingetid-method"></a><span data-ttu-id="f3386-102">ICorPublishAppDomain::GetID 메서드</span><span class="sxs-lookup"><span data-stu-id="f3386-102">ICorPublishAppDomain::GetID Method</span></span>
+<span data-ttu-id="f3386-103">이 대 한 고유 식별자를 가져옵니다 [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="f3386-103">Gets the unique identifier for this [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9c84f-104">구문</span><span class="sxs-lookup"><span data-stu-id="9c84f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f3386-104">구문</span><span class="sxs-lookup"><span data-stu-id="f3386-104">Syntax</span></span>  
   
 ```  
 HRESULT GetID (  
@@ -35,22 +35,22 @@ HRESULT GetID (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9c84f-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="9c84f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f3386-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f3386-105">Parameters</span></span>  
  `puId`  
- <span data-ttu-id="9c84f-106">[out] 응용 프로그램 도메인의 식별자에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="9c84f-106">[out] A pointer to the identifier of the application domain.</span></span>  
+ <span data-ttu-id="f3386-106">[out] 응용 프로그램 도메인의 식별자에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="f3386-106">[out] A pointer to the identifier of the application domain.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9c84f-107">설명</span><span class="sxs-lookup"><span data-stu-id="9c84f-107">Remarks</span></span>  
- <span data-ttu-id="9c84f-108">식별자가 포함 하는 프로세스의 범위 내 에서만 고유 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c84f-108">The identifier is unique only in the scope of the containing process.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f3386-107">설명</span><span class="sxs-lookup"><span data-stu-id="f3386-107">Remarks</span></span>  
+ <span data-ttu-id="f3386-108">식별자가 포함 하는 프로세스의 범위 내 에서만 고유 합니다.</span><span class="sxs-lookup"><span data-stu-id="f3386-108">The identifier is unique only in the scope of the containing process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9c84f-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="9c84f-109">Requirements</span></span>  
- <span data-ttu-id="9c84f-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="9c84f-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f3386-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f3386-109">Requirements</span></span>  
+ <span data-ttu-id="f3386-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="f3386-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9c84f-111">**헤더:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="9c84f-111">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="f3386-111">**헤더:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="f3386-111">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="9c84f-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9c84f-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f3386-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f3386-112">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="9c84f-113">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="9c84f-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="f3386-113">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f3386-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9c84f-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="9c84f-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f3386-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="f3386-114">See also</span></span>
 
-- [<span data-ttu-id="9c84f-115">ICorPublishAppDomain 인터페이스</span><span class="sxs-lookup"><span data-stu-id="9c84f-115">ICorPublishAppDomain Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)
+- [<span data-ttu-id="f3386-115">ICorPublishAppDomain 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f3386-115">ICorPublishAppDomain Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)

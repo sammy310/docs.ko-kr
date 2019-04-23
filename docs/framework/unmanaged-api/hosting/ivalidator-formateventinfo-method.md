@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ecbecec86d81357000679ab50e12f06d91c9f50d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217083"
 ---
-# <a name="ivalidatorformateventinfo-method"></a><span data-ttu-id="97f93-102">IValidator::FormatEventInfo 메서드</span><span class="sxs-lookup"><span data-stu-id="97f93-102">IValidator::FormatEventInfo Method</span></span>
-<span data-ttu-id="97f93-103">지정 된 유효성 검사 오류에 해당 하는 오류 메시지를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="97f93-103">Gets the error message corresponding to the specified validation error.</span></span>  
+# <a name="ivalidatorformateventinfo-method"></a><span data-ttu-id="189af-102">IValidator::FormatEventInfo 메서드</span><span class="sxs-lookup"><span data-stu-id="189af-102">IValidator::FormatEventInfo Method</span></span>
+<span data-ttu-id="189af-103">지정 된 유효성 검사 오류에 해당 하는 오류 메시지를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="189af-103">Gets the error message corresponding to the specified validation error.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="97f93-104">구문</span><span class="sxs-lookup"><span data-stu-id="97f93-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="189af-104">구문</span><span class="sxs-lookup"><span data-stu-id="189af-104">Syntax</span></span>  
   
 ```  
 HRESULT FormatEventInfo(  
@@ -39,27 +39,27 @@ HRESULT FormatEventInfo(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="97f93-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="97f93-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="189af-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="189af-105">Parameters</span></span>  
  `hVECode`  
- <span data-ttu-id="97f93-106">[in] 유효성 검사 오류 처리기로 전달 된 HRESULT 값입니다.</span><span class="sxs-lookup"><span data-stu-id="97f93-106">[in] The HRESULT value that was passed to the validation error handler.</span></span>  
+ <span data-ttu-id="189af-106">[in] 유효성 검사 오류 처리기로 전달 된 HRESULT 값입니다.</span><span class="sxs-lookup"><span data-stu-id="189af-106">[in] The HRESULT value that was passed to the validation error handler.</span></span>  
   
  `Context`  
- <span data-ttu-id="97f93-107">[in] `VEContext` 유효성 검사 오류에 대 한 컨텍스트 정보를 포함 하는 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="97f93-107">[in] A `VEContext` instance that contains context information about the validation error.</span></span>  
+ <span data-ttu-id="189af-107">[in] `VEContext` 유효성 검사 오류에 대 한 컨텍스트 정보를 포함 하는 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="189af-107">[in] A `VEContext` instance that contains context information about the validation error.</span></span>  
   
  `msg`  
- <span data-ttu-id="97f93-108">[out에서] 반환 된 오류 메시지를 포함 하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="97f93-108">[in, out] A string that contains the returned error message.</span></span>  
+ <span data-ttu-id="189af-108">[out에서] 반환 된 오류 메시지를 포함 하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="189af-108">[in, out] A string that contains the returned error message.</span></span>  
   
  `ulMaxLength`  
- <span data-ttu-id="97f93-109">[in] 오류 메시지의 최대 길이입니다.</span><span class="sxs-lookup"><span data-stu-id="97f93-109">[in] The maximum length of the error message.</span></span>  
+ <span data-ttu-id="189af-109">[in] 오류 메시지의 최대 길이입니다.</span><span class="sxs-lookup"><span data-stu-id="189af-109">[in] The maximum length of the error message.</span></span>  
   
  `psa`  
- <span data-ttu-id="97f93-110">[in] 오류를 설명 하는 추가 매개 변수를 포함 하는 안전 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="97f93-110">[in] A safe array that contains additional parameters describing the error.</span></span>  
+ <span data-ttu-id="189af-110">[in] 오류를 설명 하는 추가 매개 변수를 포함 하는 안전 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="189af-110">[in] A safe array that contains additional parameters describing the error.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="97f93-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="97f93-111">Requirements</span></span>  
- <span data-ttu-id="97f93-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="97f93-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="189af-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="189af-111">Requirements</span></span>  
+ <span data-ttu-id="189af-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="189af-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="97f93-113">**헤더:** IValidator.idl, IValidator.h</span><span class="sxs-lookup"><span data-stu-id="97f93-113">**Header:** IValidator.idl, IValidator.h</span></span>  
+ <span data-ttu-id="189af-113">**헤더:** IValidator.idl, IValidator.h</span><span class="sxs-lookup"><span data-stu-id="189af-113">**Header:** IValidator.idl, IValidator.h</span></span>  
   
- <span data-ttu-id="97f93-114">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="97f93-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="189af-114">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="189af-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="97f93-115">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="97f93-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="189af-115">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="189af-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
