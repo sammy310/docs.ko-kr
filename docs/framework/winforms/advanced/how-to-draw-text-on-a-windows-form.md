@@ -10,29 +10,29 @@ helpviewer_keywords:
 - text [Windows Forms], drawing
 ms.assetid: 5d2447a9-21a1-4adc-b954-5516f2bb9b2c
 ms.openlocfilehash: ae7749deedba03f0a63bb74099d071d5da4fe27e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172980"
 ---
-# <a name="how-to-draw-text-on-a-windows-form"></a><span data-ttu-id="1345c-102">방법: Windows Form에서 텍스트 그리기</span><span class="sxs-lookup"><span data-stu-id="1345c-102">How to: Draw Text on a Windows Form</span></span>
-<span data-ttu-id="1345c-103">다음 코드 예제를 사용 하는 방법을 보여 줍니다 합니다 <xref:System.Drawing.Graphics.DrawString%2A> 메서드는 <xref:System.Drawing.Graphics> 폼에 텍스트를 그리는 합니다.</span><span class="sxs-lookup"><span data-stu-id="1345c-103">The following code example shows how to use the <xref:System.Drawing.Graphics.DrawString%2A> method of the <xref:System.Drawing.Graphics> to draw text on a form.</span></span> <span data-ttu-id="1345c-104">사용할 수 있습니다 <xref:System.Windows.Forms.TextRenderer> 폼에 텍스트를 그리기 위한 합니다.</span><span class="sxs-lookup"><span data-stu-id="1345c-104">Alternatively, you can use <xref:System.Windows.Forms.TextRenderer> for drawing text on a form.</span></span> <span data-ttu-id="1345c-105">자세한 내용은 [방법: GDI 사용 하 여 텍스트 그리기](how-to-draw-text-with-gdi.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="1345c-105">For more information, see [How to: Draw Text with GDI](how-to-draw-text-with-gdi.md).</span></span>  
+# <a name="how-to-draw-text-on-a-windows-form"></a><span data-ttu-id="abe63-102">방법: Windows Form에서 텍스트 그리기</span><span class="sxs-lookup"><span data-stu-id="abe63-102">How to: Draw Text on a Windows Form</span></span>
+<span data-ttu-id="abe63-103">다음 코드 예제를 사용 하는 방법을 보여 줍니다 합니다 <xref:System.Drawing.Graphics.DrawString%2A> 메서드는 <xref:System.Drawing.Graphics> 폼에 텍스트를 그리는 합니다.</span><span class="sxs-lookup"><span data-stu-id="abe63-103">The following code example shows how to use the <xref:System.Drawing.Graphics.DrawString%2A> method of the <xref:System.Drawing.Graphics> to draw text on a form.</span></span> <span data-ttu-id="abe63-104">사용할 수 있습니다 <xref:System.Windows.Forms.TextRenderer> 폼에 텍스트를 그리기 위한 합니다.</span><span class="sxs-lookup"><span data-stu-id="abe63-104">Alternatively, you can use <xref:System.Windows.Forms.TextRenderer> for drawing text on a form.</span></span> <span data-ttu-id="abe63-105">자세한 내용은 [방법: GDI 사용 하 여 텍스트 그리기](how-to-draw-text-with-gdi.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="abe63-105">For more information, see [How to: Draw Text with GDI](how-to-draw-text-with-gdi.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1345c-106">예제</span><span class="sxs-lookup"><span data-stu-id="1345c-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="abe63-106">예제</span><span class="sxs-lookup"><span data-stu-id="abe63-106">Example</span></span>  
  [!code-cpp[System.Drawing.ConceptualHowTos#7](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/cpp/form1.cpp#7)]
  [!code-csharp[System.Drawing.ConceptualHowTos#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/CS/form1.cs#7)]
  [!code-vb[System.Drawing.ConceptualHowTos#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/VB/form1.vb#7)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="1345c-107">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="1345c-107">Compiling the Code</span></span>  
- <span data-ttu-id="1345c-108">호출할 수 없습니다는 <xref:System.Drawing.Graphics.DrawString%2A> 의 메서드는 <xref:System.Windows.Forms.Form.Load> 이벤트 처리기입니다.</span><span class="sxs-lookup"><span data-stu-id="1345c-108">You cannot call the <xref:System.Drawing.Graphics.DrawString%2A> method in the <xref:System.Windows.Forms.Form.Load> event handler.</span></span> <span data-ttu-id="1345c-109">그려지는 콘텐츠 비활성 폼 크기가 조정 되거나 다른 양식으로 하는 경우.</span><span class="sxs-lookup"><span data-stu-id="1345c-109">The drawn content will not be redrawn if the form is resized or obscured by another form.</span></span> <span data-ttu-id="1345c-110">재정의 해야 하는 자동으로 다시 그리기 콘텐츠를 확인 하는 <xref:System.Windows.Forms.Control.OnPaint%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="1345c-110">To make your content automatically repaint, you should override the <xref:System.Windows.Forms.Control.OnPaint%2A> method.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="abe63-107">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="abe63-107">Compiling the Code</span></span>  
+ <span data-ttu-id="abe63-108">호출할 수 없습니다는 <xref:System.Drawing.Graphics.DrawString%2A> 의 메서드는 <xref:System.Windows.Forms.Form.Load> 이벤트 처리기입니다.</span><span class="sxs-lookup"><span data-stu-id="abe63-108">You cannot call the <xref:System.Drawing.Graphics.DrawString%2A> method in the <xref:System.Windows.Forms.Form.Load> event handler.</span></span> <span data-ttu-id="abe63-109">그려지는 콘텐츠 비활성 폼 크기가 조정 되거나 다른 양식으로 하는 경우.</span><span class="sxs-lookup"><span data-stu-id="abe63-109">The drawn content will not be redrawn if the form is resized or obscured by another form.</span></span> <span data-ttu-id="abe63-110">재정의 해야 하는 자동으로 다시 그리기 콘텐츠를 확인 하는 <xref:System.Windows.Forms.Control.OnPaint%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="abe63-110">To make your content automatically repaint, you should override the <xref:System.Windows.Forms.Control.OnPaint%2A> method.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="1345c-111">강력한 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="1345c-111">Robust Programming</span></span>  
- <span data-ttu-id="1345c-112">다음 조건에서 예외가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="1345c-112">The following conditions may cause an exception:</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="abe63-111">강력한 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="abe63-111">Robust Programming</span></span>  
+ <span data-ttu-id="abe63-112">다음 조건에서 예외가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="abe63-112">The following conditions may cause an exception:</span></span>  
   
--   <span data-ttu-id="1345c-113">Arial 글꼴이 설치 되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="1345c-113">The Arial font is not installed.</span></span>  
+-   <span data-ttu-id="abe63-113">Arial 글꼴이 설치 되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="abe63-113">The Arial font is not installed.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1345c-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="1345c-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="abe63-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="abe63-114">See also</span></span>
 
 - <xref:System.Drawing.Graphics.DrawString%2A>
 - <xref:System.Windows.Forms.TextRenderer.DrawText%2A>
@@ -40,5 +40,5 @@ ms.locfileid: "59172980"
 - <xref:System.Drawing.StringFormatFlags>
 - <xref:System.Windows.Forms.TextFormatFlags>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
-- [<span data-ttu-id="1345c-115">그래픽 프로그래밍 시작</span><span class="sxs-lookup"><span data-stu-id="1345c-115">Getting Started with Graphics Programming</span></span>](getting-started-with-graphics-programming.md)
-- [<span data-ttu-id="1345c-116">방법: GDI를 사용하여 텍스트 그리기</span><span class="sxs-lookup"><span data-stu-id="1345c-116">How to: Draw Text with GDI</span></span>](how-to-draw-text-with-gdi.md)
+- [<span data-ttu-id="abe63-115">그래픽 프로그래밍 시작</span><span class="sxs-lookup"><span data-stu-id="abe63-115">Getting Started with Graphics Programming</span></span>](getting-started-with-graphics-programming.md)
+- [<span data-ttu-id="abe63-116">방법: GDI 사용 하 여 텍스트 그리기</span><span class="sxs-lookup"><span data-stu-id="abe63-116">How to: Draw Text with GDI</span></span>](how-to-draw-text-with-gdi.md)
