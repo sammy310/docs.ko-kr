@@ -3,20 +3,20 @@ title: System.ServiceModel.CommunicationObjectFaultReason
 ms.date: 03/30/2017
 ms.assetid: d2530933-bfba-4b20-aba6-b1f99e97699d
 ms.openlocfilehash: 48718a42c48023ef288d5dc5e082cad604c9892d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59106407"
 ---
-# <a name="systemservicemodelcommunicationobjectfaultreason"></a><span data-ttu-id="9dd80-102">System.ServiceModel.CommunicationObjectFaultReason</span><span class="sxs-lookup"><span data-stu-id="9dd80-102">System.ServiceModel.CommunicationObjectFaultReason</span></span>
-<span data-ttu-id="9dd80-103">System.ServiceModel.CommunicationObjectFaultReason</span><span class="sxs-lookup"><span data-stu-id="9dd80-103">System.ServiceModel.CommunicationObjectFaultReason</span></span>  
+# <a name="systemservicemodelcommunicationobjectfaultreason"></a><span data-ttu-id="fe011-102">System.ServiceModel.CommunicationObjectFaultReason</span><span class="sxs-lookup"><span data-stu-id="fe011-102">System.ServiceModel.CommunicationObjectFaultReason</span></span>
+<span data-ttu-id="fe011-103">System.ServiceModel.CommunicationObjectFaultReason</span><span class="sxs-lookup"><span data-stu-id="fe011-103">System.ServiceModel.CommunicationObjectFaultReason</span></span>  
   
-## <a name="description"></a><span data-ttu-id="9dd80-104">설명</span><span class="sxs-lookup"><span data-stu-id="9dd80-104">Description</span></span>  
- <span data-ttu-id="9dd80-105">예외로 인해 통신 개체에 오류가 발생했습니다.</span><span class="sxs-lookup"><span data-stu-id="9dd80-105">A communication object faulted due to exception.</span></span>  
+## <a name="description"></a><span data-ttu-id="fe011-104">설명</span><span class="sxs-lookup"><span data-stu-id="fe011-104">Description</span></span>  
+ <span data-ttu-id="fe011-105">예외로 인해 통신 개체에 오류가 발생했습니다.</span><span class="sxs-lookup"><span data-stu-id="fe011-105">A communication object faulted due to exception.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9dd80-106">참고자료</span><span class="sxs-lookup"><span data-stu-id="9dd80-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fe011-106">참고자료</span><span class="sxs-lookup"><span data-stu-id="fe011-106">See also</span></span>
 
-- [<span data-ttu-id="9dd80-107">추적</span><span class="sxs-lookup"><span data-stu-id="9dd80-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="9dd80-108">추적을 사용하여 응용 프로그램 문제 해결</span><span class="sxs-lookup"><span data-stu-id="9dd80-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="9dd80-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="9dd80-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="fe011-107">추적</span><span class="sxs-lookup"><span data-stu-id="fe011-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="fe011-108">추적을 사용하여 애플리케이션 문제 해결</span><span class="sxs-lookup"><span data-stu-id="fe011-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="fe011-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="fe011-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

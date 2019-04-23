@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d9dda1fb38546138d52b5fe61754d5497e676c37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59113495"
 ---
-# <a name="imetadataimport2getpekind-method"></a><span data-ttu-id="79283-102">IMetaDataImport2::GetPEKind 메서드</span><span class="sxs-lookup"><span data-stu-id="79283-102">IMetaDataImport2::GetPEKind Method</span></span>
-<span data-ttu-id="79283-103">가져옵니다는 pe (이식 가능)에서 코드의 특성을 식별 하는 값 파일을 일반적으로 DLL 또는 EXE 파일을 현재 메타 데이터 범위에서 정의 됩니다.</span><span class="sxs-lookup"><span data-stu-id="79283-103">Gets a value identifying the nature of the code in the portable executable (PE) file, typically a DLL or EXE file, that is defined in the current metadata scope.</span></span>  
+# <a name="imetadataimport2getpekind-method"></a><span data-ttu-id="d35e4-102">IMetaDataImport2::GetPEKind 메서드</span><span class="sxs-lookup"><span data-stu-id="d35e4-102">IMetaDataImport2::GetPEKind Method</span></span>
+<span data-ttu-id="d35e4-103">가져옵니다는 pe (이식 가능)에서 코드의 특성을 식별 하는 값 파일을 일반적으로 DLL 또는 EXE 파일을 현재 메타 데이터 범위에서 정의 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d35e4-103">Gets a value identifying the nature of the code in the portable executable (PE) file, typically a DLL or EXE file, that is defined in the current metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="79283-104">구문</span><span class="sxs-lookup"><span data-stu-id="79283-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d35e4-104">구문</span><span class="sxs-lookup"><span data-stu-id="d35e4-104">Syntax</span></span>  
   
 ```  
 HRESULT GetPEKind (  
@@ -36,33 +36,33 @@ HRESULT GetPEKind (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="79283-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="79283-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d35e4-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d35e4-105">Parameters</span></span>  
  `pdwPEKind`  
- <span data-ttu-id="79283-106">[out] 값에 대 한 포인터를 [CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md) PE 파일을 설명 하는 열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="79283-106">[out] A pointer to a value of the [CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md) enumeration that describes the PE file.</span></span>  
+ <span data-ttu-id="d35e4-106">[out] 값에 대 한 포인터를 [CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md) PE 파일을 설명 하는 열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="d35e4-106">[out] A pointer to a value of the [CorPEKind](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md) enumeration that describes the PE file.</span></span>  
   
  `pdwMachine`  
- <span data-ttu-id="79283-107">[out] 컴퓨터의 아키텍처를 식별 하는 값에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="79283-107">[out] A pointer to a value that identifies the architecture of the machine.</span></span> <span data-ttu-id="79283-108">가능한 값은 다음 섹션을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="79283-108">See the next section for possible values.</span></span>  
+ <span data-ttu-id="d35e4-107">[out] 컴퓨터의 아키텍처를 식별 하는 값에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="d35e4-107">[out] A pointer to a value that identifies the architecture of the machine.</span></span> <span data-ttu-id="d35e4-108">가능한 값은 다음 섹션을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="d35e4-108">See the next section for possible values.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="79283-109">설명</span><span class="sxs-lookup"><span data-stu-id="79283-109">Remarks</span></span>  
- <span data-ttu-id="79283-110">참조 하는 값을 `pdwMachine` 매개 변수는 다음 중 하나일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="79283-110">The value referenced by the `pdwMachine` parameter can be one of the following.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d35e4-109">설명</span><span class="sxs-lookup"><span data-stu-id="d35e4-109">Remarks</span></span>  
+ <span data-ttu-id="d35e4-110">참조 하는 값을 `pdwMachine` 매개 변수는 다음 중 하나일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d35e4-110">The value referenced by the `pdwMachine` parameter can be one of the following.</span></span>  
   
-|<span data-ttu-id="79283-111">값</span><span class="sxs-lookup"><span data-stu-id="79283-111">Value</span></span>|<span data-ttu-id="79283-112">컴퓨터 아키텍처</span><span class="sxs-lookup"><span data-stu-id="79283-112">Machine architecture</span></span>|  
+|<span data-ttu-id="d35e4-111">값</span><span class="sxs-lookup"><span data-stu-id="d35e4-111">Value</span></span>|<span data-ttu-id="d35e4-112">컴퓨터 아키텍처</span><span class="sxs-lookup"><span data-stu-id="d35e4-112">Machine architecture</span></span>|  
 |-----------|--------------------------|  
-|<span data-ttu-id="79283-113">IMAGE_FILE_MACHINE_I386</span><span class="sxs-lookup"><span data-stu-id="79283-113">IMAGE_FILE_MACHINE_I386</span></span><br /><br /> <span data-ttu-id="79283-114">0x014C</span><span class="sxs-lookup"><span data-stu-id="79283-114">0x014C</span></span>|<span data-ttu-id="79283-115">x86</span><span class="sxs-lookup"><span data-stu-id="79283-115">x86</span></span>|  
-|<span data-ttu-id="79283-116">IMAGE_FILE_MACHINE_IA64</span><span class="sxs-lookup"><span data-stu-id="79283-116">IMAGE_FILE_MACHINE_IA64</span></span><br /><br /> <span data-ttu-id="79283-117">0x0200</span><span class="sxs-lookup"><span data-stu-id="79283-117">0x0200</span></span>|<span data-ttu-id="79283-118">Intel IPF</span><span class="sxs-lookup"><span data-stu-id="79283-118">Intel IPF</span></span>|  
-|<span data-ttu-id="79283-119">IMAGE_FILE_MACHINE_AMD64</span><span class="sxs-lookup"><span data-stu-id="79283-119">IMAGE_FILE_MACHINE_AMD64</span></span><br /><br /> <span data-ttu-id="79283-120">0x8664</span><span class="sxs-lookup"><span data-stu-id="79283-120">0x8664</span></span>|<span data-ttu-id="79283-121">X64</span><span class="sxs-lookup"><span data-stu-id="79283-121">x64</span></span>|  
+|<span data-ttu-id="d35e4-113">IMAGE_FILE_MACHINE_I386</span><span class="sxs-lookup"><span data-stu-id="d35e4-113">IMAGE_FILE_MACHINE_I386</span></span><br /><br /> <span data-ttu-id="d35e4-114">0x014C</span><span class="sxs-lookup"><span data-stu-id="d35e4-114">0x014C</span></span>|<span data-ttu-id="d35e4-115">x86</span><span class="sxs-lookup"><span data-stu-id="d35e4-115">x86</span></span>|  
+|<span data-ttu-id="d35e4-116">IMAGE_FILE_MACHINE_IA64</span><span class="sxs-lookup"><span data-stu-id="d35e4-116">IMAGE_FILE_MACHINE_IA64</span></span><br /><br /> <span data-ttu-id="d35e4-117">0x0200</span><span class="sxs-lookup"><span data-stu-id="d35e4-117">0x0200</span></span>|<span data-ttu-id="d35e4-118">Intel IPF</span><span class="sxs-lookup"><span data-stu-id="d35e4-118">Intel IPF</span></span>|  
+|<span data-ttu-id="d35e4-119">IMAGE_FILE_MACHINE_AMD64</span><span class="sxs-lookup"><span data-stu-id="d35e4-119">IMAGE_FILE_MACHINE_AMD64</span></span><br /><br /> <span data-ttu-id="d35e4-120">0x8664</span><span class="sxs-lookup"><span data-stu-id="d35e4-120">0x8664</span></span>|<span data-ttu-id="d35e4-121">X64</span><span class="sxs-lookup"><span data-stu-id="d35e4-121">x64</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="79283-122">요구 사항</span><span class="sxs-lookup"><span data-stu-id="79283-122">Requirements</span></span>  
- <span data-ttu-id="79283-123">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="79283-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d35e4-122">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d35e4-122">Requirements</span></span>  
+ <span data-ttu-id="d35e4-123">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="d35e4-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="79283-124">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="79283-124">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="d35e4-124">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="d35e4-124">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="79283-125">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="79283-125">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="d35e4-125">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="d35e4-125">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="79283-126">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="79283-126">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="d35e4-126">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d35e4-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="79283-127">참고자료</span><span class="sxs-lookup"><span data-stu-id="79283-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d35e4-127">참고자료</span><span class="sxs-lookup"><span data-stu-id="d35e4-127">See also</span></span>
 
-- [<span data-ttu-id="79283-128">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="79283-128">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [<span data-ttu-id="79283-129">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="79283-129">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="79283-130">CorPEKind 열거형</span><span class="sxs-lookup"><span data-stu-id="79283-130">CorPEKind Enumeration</span></span>](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)
+- [<span data-ttu-id="d35e4-128">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d35e4-128">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="d35e4-129">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d35e4-129">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="d35e4-130">CorPEKind 열거형</span><span class="sxs-lookup"><span data-stu-id="d35e4-130">CorPEKind Enumeration</span></span>](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)

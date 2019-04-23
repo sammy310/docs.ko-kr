@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5754968511f7b2db48f60b99748f10f5d27e8d21
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115689"
 ---
-# <a name="cordebugsetcontextflag-enumeration"></a><span data-ttu-id="eff4e-102">CorDebugSetContextFlag 열거형</span><span class="sxs-lookup"><span data-stu-id="eff4e-102">CorDebugSetContextFlag Enumeration</span></span>
-<span data-ttu-id="eff4e-103">컨텍스트가 스택의 활성(리프) 프레임에서 가져온 것인지 아니면 다른 프레임에서 해제하여 계산되었는지를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="eff4e-103">Indicates whether the context is from the active (or leaf) frame on the stack or has been computed by unwinding from another frame.</span></span>  
+# <a name="cordebugsetcontextflag-enumeration"></a><span data-ttu-id="01369-102">CorDebugSetContextFlag 열거형</span><span class="sxs-lookup"><span data-stu-id="01369-102">CorDebugSetContextFlag Enumeration</span></span>
+<span data-ttu-id="01369-103">컨텍스트가 스택의 활성(리프) 프레임에서 가져온 것인지 아니면 다른 프레임에서 해제하여 계산되었는지를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="01369-103">Indicates whether the context is from the active (or leaf) frame on the stack or has been computed by unwinding from another frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="eff4e-104">구문</span><span class="sxs-lookup"><span data-stu-id="eff4e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="01369-104">구문</span><span class="sxs-lookup"><span data-stu-id="01369-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugSetContextFlag  
@@ -36,26 +36,26 @@ typedef enum CorDebugSetContextFlag
 }  CorDebugSetContextFlag;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="eff4e-105">멤버</span><span class="sxs-lookup"><span data-stu-id="eff4e-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="01369-105">멤버</span><span class="sxs-lookup"><span data-stu-id="01369-105">Members</span></span>  
   
-|<span data-ttu-id="eff4e-106">멤버</span><span class="sxs-lookup"><span data-stu-id="eff4e-106">Member</span></span>|<span data-ttu-id="eff4e-107">설명</span><span class="sxs-lookup"><span data-stu-id="eff4e-107">Description</span></span>|  
+|<span data-ttu-id="01369-106">멤버</span><span class="sxs-lookup"><span data-stu-id="01369-106">Member</span></span>|<span data-ttu-id="01369-107">설명</span><span class="sxs-lookup"><span data-stu-id="01369-107">Description</span></span>|  
 |------------|-----------------|  
-|<span data-ttu-id="eff4e-108">SET_CONTEXT_FLAG_ACTIVE_FRAME</span><span class="sxs-lookup"><span data-stu-id="eff4e-108">SET_CONTEXT_FLAG_ACTIVE_FRAME</span></span>|<span data-ttu-id="eff4e-109">컨텍스트는 스레드의 현재 컨텍스트입니다.</span><span class="sxs-lookup"><span data-stu-id="eff4e-109">The context is the thread’s active context.</span></span>|  
-|<span data-ttu-id="eff4e-110">SET_CONTEXT_FLAG_UNWIND_FRAME</span><span class="sxs-lookup"><span data-stu-id="eff4e-110">SET_CONTEXT_FLAG_UNWIND_FRAME</span></span>|<span data-ttu-id="eff4e-111">컨텍스트는 다른 프레임에서 해제 하 여 계산 됩니다.</span><span class="sxs-lookup"><span data-stu-id="eff4e-111">The context has been computed by unwinding from another frame.</span></span>|  
+|<span data-ttu-id="01369-108">SET_CONTEXT_FLAG_ACTIVE_FRAME</span><span class="sxs-lookup"><span data-stu-id="01369-108">SET_CONTEXT_FLAG_ACTIVE_FRAME</span></span>|<span data-ttu-id="01369-109">컨텍스트는 스레드의 현재 컨텍스트입니다.</span><span class="sxs-lookup"><span data-stu-id="01369-109">The context is the thread’s active context.</span></span>|  
+|<span data-ttu-id="01369-110">SET_CONTEXT_FLAG_UNWIND_FRAME</span><span class="sxs-lookup"><span data-stu-id="01369-110">SET_CONTEXT_FLAG_UNWIND_FRAME</span></span>|<span data-ttu-id="01369-111">컨텍스트는 다른 프레임에서 해제 하 여 계산 됩니다.</span><span class="sxs-lookup"><span data-stu-id="01369-111">The context has been computed by unwinding from another frame.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="eff4e-112">설명</span><span class="sxs-lookup"><span data-stu-id="eff4e-112">Remarks</span></span>  
- `CorDebugSetContextFlag` <span data-ttu-id="eff4e-113">사용 되는 값을 제공 합니다 [icordebugstackwalk:: Setcontext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="eff4e-113">provides values that are used by the [ICorDebugStackWalk::SetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="01369-112">설명</span><span class="sxs-lookup"><span data-stu-id="01369-112">Remarks</span></span>  
+ <span data-ttu-id="01369-113">`CorDebugSetContextFlag` 사용 되는 값을 제공 합니다 [icordebugstackwalk:: Setcontext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="01369-113">`CorDebugSetContextFlag` provides values that are used by the [ICorDebugStackWalk::SetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="eff4e-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="eff4e-114">Requirements</span></span>  
- <span data-ttu-id="eff4e-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="eff4e-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="01369-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="01369-114">Requirements</span></span>  
+ <span data-ttu-id="01369-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="01369-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="eff4e-116">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="eff4e-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="01369-116">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="01369-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="eff4e-117">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="eff4e-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="01369-117">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="01369-117">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="eff4e-118">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="eff4e-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ <span data-ttu-id="01369-118">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="01369-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eff4e-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="eff4e-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="01369-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="01369-119">See also</span></span>
 
-- [<span data-ttu-id="eff4e-120">디버깅 열거형</span><span class="sxs-lookup"><span data-stu-id="eff4e-120">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
-- [<span data-ttu-id="eff4e-121">디버깅</span><span class="sxs-lookup"><span data-stu-id="eff4e-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="01369-120">디버깅 열거형</span><span class="sxs-lookup"><span data-stu-id="01369-120">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="01369-121">디버깅</span><span class="sxs-lookup"><span data-stu-id="01369-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
