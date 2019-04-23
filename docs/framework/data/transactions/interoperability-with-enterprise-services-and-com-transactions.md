@@ -3,10 +3,10 @@ title: 엔터프라이즈 서비스 및 COM+ 트랜잭션과의 상호 운용성
 ms.date: 03/30/2017
 ms.assetid: d0fd0d26-fe86-443b-b208-4d57d39fa4aa
 ms.openlocfilehash: 8b86a032e7cbc27332864c9cc96009f12b72c53d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301908"
 ---
 # <a name="interoperability-with-enterprise-services-and-com-transactions"></a>엔터프라이즈 서비스 및 COM+ 트랜잭션과의 상호 운용성
@@ -21,11 +21,11 @@ ms.locfileid: "59301908"
   
  <xref:System.Transactions.TransactionScope> 클래스는 <xref:System.Transactions.EnterpriseServicesInteropOption>을 매개 변수로 받아들이는 생성자를 제공합니다.  
   
- <xref:System.Transactions.EnterpriseServicesInteropOption.None>이름에서 알 수 있듯이 있다는 것을 의미 하지 상호 운용성 간의 <xref:System.EnterpriseServices> 컨텍스트와 트랜잭션 범위입니다. <xref:System.Transactions.TransactionScope>을 사용하여 <xref:System.Transactions.EnterpriseServicesInteropOption.None> 개체를 만든 후 <xref:System.Transactions.Transaction.Current%2A>를 변경하면 COM+ 컨텍스트에 변경 내용이 반영되지 않습니다. 마찬가지로 COM+ 컨텍스트에서 트랜잭션을 변경하면 <xref:System.Transactions.Transaction.Current%2A>에 변경 내용이 반영되지 않습니다. 추가 동기화 작업이 필요하지 않으므로 이는 <xref:System.Transactions>에 대한 가장 빠른 작업 모드입니다. <xref:System.Transactions.EnterpriseServicesInteropOption.None> 사용 하는 기본값이 <xref:System.Transactions.TransactionScope> 받아들이지 않는 모든 생성자를 사용 하 여 <xref:System.Transactions.EnterpriseServicesInteropOption> 매개 변수로 합니다.  
+ <xref:System.Transactions.EnterpriseServicesInteropOption.None>이름에서 알 수 있듯이 있다는 것을 의미 하지 상호 운용성 간의 <xref:System.EnterpriseServices> 컨텍스트와 트랜잭션 범위입니다. <xref:System.Transactions.TransactionScope>을 사용하여 <xref:System.Transactions.EnterpriseServicesInteropOption.None> 개체를 만든 후 <xref:System.Transactions.Transaction.Current%2A>를 변경하면 COM+ 컨텍스트에 변경 내용이 반영되지 않습니다. 마찬가지로 COM+ 컨텍스트에서 트랜잭션을 변경하면 <xref:System.Transactions.Transaction.Current%2A>에 변경 내용이 반영되지 않습니다. 추가 동기화 작업이 필요하지 않으므로 이는 <xref:System.Transactions>에 대한 가장 빠른 작업 모드입니다. <xref:System.Transactions.EnterpriseServicesInteropOption.None>은 <xref:System.Transactions.TransactionScope>을 매개 변수로 받아들이지 않는 모든 생성자와 관련해서 <xref:System.Transactions.EnterpriseServicesInteropOption>가 사용하는 기본값입니다.  
   
  <xref:System.EnterpriseServices> 트랜잭션을 앰비언트 트랜잭션과 결합하려면 <xref:System.Transactions.EnterpriseServicesInteropOption.Full> 또는 <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>을 사용해야 합니다. 두 개의 값은 모두 구성 요소가 없는 서비스라는 기능을 사용하므로 사용 시 Windows XP 서비스 팩 2 또는 Windows Server 2003에서 실행해야 합니다.  
   
- <xref:System.Transactions.EnterpriseServicesInteropOption.Full> 지정 하는 앰비언트 트랜잭션을 <xref:System.Transactions> 고 <xref:System.EnterpriseServices> 은 항상 동일 합니다. 그 결과 새 <xref:System.EnterpriseServices> 트랜잭션 컨텍스트를 만들고 <xref:System.Transactions.TransactionScope>에 대한 최신 트랜잭션을 적용하여 해당 컨텍스트의 최신 상태가 되도록 합니다. 이 경우 <xref:System.Transactions.Transaction.Current%2A>의 트랜잭션이 <xref:System.EnterpriseServices.ContextUtil.Transaction%2A>의 트랜잭션과 완전히 동기화됩니다. 이 값을 사용하면 새 COM+ 컨텍스트를 만들어야 할 수 있으므로 성능이 저하됩니다.  
+ <xref:System.Transactions.EnterpriseServicesInteropOption.Full>은 <xref:System.Transactions> 및 <xref:System.EnterpriseServices>에 대한 앰비언트 트랜잭션이 항상 같도록 지정합니다. 그 결과 새 <xref:System.EnterpriseServices> 트랜잭션 컨텍스트를 만들고 <xref:System.Transactions.TransactionScope>에 대한 최신 트랜잭션을 적용하여 해당 컨텍스트의 최신 상태가 되도록 합니다. 이 경우 <xref:System.Transactions.Transaction.Current%2A>의 트랜잭션이 <xref:System.EnterpriseServices.ContextUtil.Transaction%2A>의 트랜잭션과 완전히 동기화됩니다. 이 값을 사용하면 새 COM+ 컨텍스트를 만들어야 할 수 있으므로 성능이 저하됩니다.  
   
  <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> 다음 요구 사항을 지정합니다.  
   
@@ -53,11 +53,11 @@ ms.locfileid: "59301908"
   
 3. 새 트랜잭션을 만드는 경우 <xref:System.Transactions.EnterpriseServicesInteropOption>의 값에 따라 다음 작업이 수행됩니다.  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Full>: COM + 컨텍스트와 연결 된 트랜잭션이 만들어집니다.  
+    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Full>: COM+ 컨텍스트와 연결된 트랜잭션이 만들어집니다.  
   
     -   <xref:System.Transactions.EnterpriseServicesInteropOption.None>:는 <xref:System.Transactions> 트랜잭션이 만들어집니다.  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>: COM + 컨텍스트가 있으면 트랜잭션을 만들고 컨텍스트에 연결 합니다.  
+    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>: COM+ 컨텍스트가 있는 경우 트랜잭션이 만들어져 컨텍스트에 연결됩니다.  
   
  다음 표에서는 <xref:System.Transactions.EnterpriseServicesInteropOption> 열거를 사용하는 트랜잭션이 필요한 트랜잭션 범위 및 ES(Enterprise Services) 컨텍스트를 보여 줍니다.  
   

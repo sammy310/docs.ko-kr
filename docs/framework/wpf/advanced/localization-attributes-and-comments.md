@@ -6,14 +6,14 @@ helpviewer_keywords:
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
 ms.openlocfilehash: a9d01b7cebea845ad67d846af5b08f59977b8cd6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301856"
 ---
 # <a name="localization-attributes-and-comments"></a>지역화 특성 및 주석
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 지역화 주석은 속성 내 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 소스 코드, 지역화에 대 한 규칙과 힌트를 제공 하는 개발자가 제공 합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 두 가지 정보를 포함 하는 지역화 주석을: 지역화 가능성 특성 및 자유 형식 지역화 주석입니다. 지역화 가능성 특성은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 지역화 API가 사용하여 지역화할 리소스를 나타냅니다. 자유 형식 주석은 애플리케이션 작성자가 포함하려고 하는 정보입니다.  
+[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 소스 코드 내의 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 지역화 주석은 속성이며 개발자에 의해 제공되어 지역화에 대한 규칙과 힌트를 제공합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 지역화 주석에는 두 가지 정보 집합(지역화 가능성 특성 및 자유 형식 지역화 주석)이 포함됩니다. 지역화 가능성 특성은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 지역화 API가 사용하여 지역화할 리소스를 나타냅니다. 자유 형식 주석은 애플리케이션 작성자가 포함하려고 하는 정보입니다.  
 
 <a name="Localizer_Comments_"></a>   
 ## <a name="localization-comments"></a>지역화 주석  
@@ -101,5 +101,5 @@ ms.locfileid: "59301856"
 
 - [WPF의 전역화](globalization-for-wpf.md)
 - [자동 레이아웃을 사용하여 단추 만들기](how-to-use-automatic-layout-to-create-a-button.md)
-- [자동 레이아웃에 눈금 사용](how-to-use-a-grid-for-automatic-layout.md)
-- [애플리케이션 지역화](how-to-localize-an-application.md)
+- [자동 레이아웃에 그리드 사용](how-to-use-a-grid-for-automatic-layout.md)
+- [응용 프로그램 지역화](how-to-localize-an-application.md)

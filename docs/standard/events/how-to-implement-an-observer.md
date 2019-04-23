@@ -12,10 +12,10 @@ ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b410b9381246cef2e61086e333c4c5b07646a575
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301063"
 ---
 # <a name="how-to-implement-an-observer"></a>방법: 관찰자 구현
@@ -54,4 +54,4 @@ ms.locfileid: "59301063"
 - <xref:System.IObserver%601>
 - [관찰자 디자인 패턴](../../../docs/standard/events/observer-design-pattern.md)
 - [방법: 공급자 구현](../../../docs/standard/events/how-to-implement-a-provider.md)
-- [관찰자 디자인 패턴 모범 사례](../../../docs/standard/events/observer-design-pattern-best-practices.md)
+- [관찰자 디자인 패턴 유용한 정보](../../../docs/standard/events/observer-design-pattern-best-practices.md)

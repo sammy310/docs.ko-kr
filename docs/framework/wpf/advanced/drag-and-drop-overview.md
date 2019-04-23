@@ -13,10 +13,10 @@ helpviewer_keywords:
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
 ms.openlocfilehash: 2b76c8fd3e2c6961b6ebdddc9b7ff9649f5196f4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301401"
 ---
 # <a name="drag-and-drop-overview"></a>끌어서 놓기 개요
@@ -54,7 +54,7 @@ ms.locfileid: "59301401"
  끌어서 놓기 작업의 소스 및 대상은 UI 요소입니다. 그러나 실제로 전송되는 데이터는 일반적으로 시각적 표현이 없습니다. Windows 탐색기에서 파일을 끌 때 발생하는 것과 같이 끌어온 데이터의 시각적 표현을 제공하는 코드를 작성할 수 있습니다. 기본적으로 커서를 변경하여 끌어서 놓기 작업이 데이터에 주는 효과(예: 데이터가 이동 또는 복사되는지 여부)를 나타내 사용자에게 피드백을 제공합니다.  
   
 ### <a name="drag-and-drop-effects"></a>끌어서 놓기 효과  
- 끌어서 놓기 작업은 전송된 데이터에 여러 가지 효과를 줄 수 있습니다. 예를 들어 데이터를 복사하거나 데이터를 이동할 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 정의 <xref:System.Windows.DragDropEffects> 끌어서 놓기 작업의 효과 지정 하는 데 사용할 수 있는 열거형입니다. 끌기 소스의 <xref:System.Windows.DragDrop.DoDragDrop%2A> 메서드에서 소스가 허용하는 효과를 지정할 수 있습니다. 놓기 대상에서 <xref:System.Windows.DragEventArgs.Effects%2A> 클래스의 <xref:System.Windows.DragEventArgs> 속성에 대상의 의도한 효과를 지정할 수 있습니다. <xref:System.Windows.DragDrop.DragOver> 이벤트에 놓기 대상의 의도한 효과를 지정하는 경우 해당 정보가 <xref:System.Windows.DragDrop.GiveFeedback> 이벤트에서 끌기 소스로 다시 전달됩니다. 끌기 소스는 이 정보를 사용하여 놓기 대상이 데이터에 주려는 효과를 사용자에게 알립니다. 데이터를 놓을 때 놓기 대상은 <xref:System.Windows.DragDrop.Drop> 이벤트에 실제 효과를 지정합니다. 해당 정보는 <xref:System.Windows.DragDrop.DoDragDrop%2A> 메서드의 반환 값으로 끌기 소스에 다시 전달됩니다. 놓기 대상이 `allowedEffects`의 끌기 소스 목록에 없는 효과를 반환하는 경우 데이터 전송 없이 끌어서 놓기 작업이 취소됩니다.  
+ 끌어서 놓기 작업은 전송된 데이터에 여러 가지 효과를 줄 수 있습니다. 예를 들어 데이터를 복사하거나 데이터를 이동할 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 끌어서 놓기 작업의 효과를 지정하는 데 사용할 수 있는 <xref:System.Windows.DragDropEffects> 열거형을 정의합니다. 끌기 소스의 <xref:System.Windows.DragDrop.DoDragDrop%2A> 메서드에서 소스가 허용하는 효과를 지정할 수 있습니다. 놓기 대상에서 <xref:System.Windows.DragEventArgs.Effects%2A> 클래스의 <xref:System.Windows.DragEventArgs> 속성에 대상의 의도한 효과를 지정할 수 있습니다. <xref:System.Windows.DragDrop.DragOver> 이벤트에 놓기 대상의 의도한 효과를 지정하는 경우 해당 정보가 <xref:System.Windows.DragDrop.GiveFeedback> 이벤트에서 끌기 소스로 다시 전달됩니다. 끌기 소스는 이 정보를 사용하여 놓기 대상이 데이터에 주려는 효과를 사용자에게 알립니다. 데이터를 놓을 때 놓기 대상은 <xref:System.Windows.DragDrop.Drop> 이벤트에 실제 효과를 지정합니다. 해당 정보는 <xref:System.Windows.DragDrop.DoDragDrop%2A> 메서드의 반환 값으로 끌기 소스에 다시 전달됩니다. 놓기 대상이 `allowedEffects`의 끌기 소스 목록에 없는 효과를 반환하는 경우 데이터 전송 없이 끌어서 놓기 작업이 취소됩니다.  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 <xref:System.Windows.DragDropEffects> 값은 끌어서 놓기 작업의 효과와 관련해서 끌기 소스와 놓기 대상 간에 통신을 제공하는 데만 사용됩니다. 끌어서 놓기 작업의 실제 효과는 애플리케이션에서 적절한 코드를 작성하는지에 따라 달라집니다.  
   
@@ -146,11 +146,11 @@ ms.locfileid: "59301401"
   
  <xref:System.Windows.UIElement.MouseMove> 이벤트 처리기 내에서 <xref:System.Windows.DragDrop.DoDragDrop%2A> 메서드를 호출하여 끌어서 놓기 작업을 시작합니다. <xref:System.Windows.DragDrop.DoDragDrop%2A> 메서드는 다음 세 개의 매개 변수를 사용합니다.  
   
--   `dragSource` 전송 된 데이터의 소스인 종속성 개체에 대 한 – 참조 소스는 일반적으로 <xref:System.Windows.UIElement.MouseMove> 이벤트입니다.  
+-   `dragSource` - 전송된 데이터의 소스인 종속성 개체에 대한 참조입니다. 일반적으로 <xref:System.Windows.UIElement.MouseMove> 이벤트의 소스입니다.  
   
--   `data` -개체에 래핑되고 전송 된 데이터를 포함 하는 <xref:System.Windows.DataObject>합니다.  
+-   `data` - <xref:System.Windows.DataObject>에 래핑되고 전송된 데이터를 포함하는 개체입니다.  
   
--   `allowedEffects` -중 하나는 <xref:System.Windows.DragDropEffects> 끌어서 놓기 작업의 허용 되는 효과 지정 하는 열거형 값입니다.  
+-   `allowedEffects` - 끌어서 놓기 작업의 허용되는 효과를 지정하는 <xref:System.Windows.DragDropEffects> 열거형 값 중 하나입니다.  
   
  `data` 매개 변수를 통해 직렬화 가능한 개체를 전달할 수 있습니다. 데이터가 아직 <xref:System.Windows.DataObject>에 래핑되지 않은 경우 자동으로 새 <xref:System.Windows.DataObject>에 래핑됩니다. 여러 데이터 항목을 전달하려면 직접 <xref:System.Windows.DataObject>를 만들어 <xref:System.Windows.DragDrop.DoDragDrop%2A> 메서드에 전달해야 합니다. 자세한 내용은 [데이터 및 데이터 개체](data-and-data-objects.md)를 참조하세요.  
   
@@ -218,6 +218,6 @@ ms.locfileid: "59301401"
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.Clipboard>
-- [연습: 사용자 정의 컨트롤에서 끌어서 놓기 사용](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
+- [연습: 끌어서 놓기 사용자 컨트롤에서 사용](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
 - [방법 항목](drag-and-drop-how-to-topics.md)
 - [끌어서 놓기](drag-and-drop.md)

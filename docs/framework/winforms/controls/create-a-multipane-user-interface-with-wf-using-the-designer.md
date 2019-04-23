@@ -7,10 +7,10 @@ helpviewer_keywords:
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
 ms.openlocfilehash: 9f3350e32c0fbff58678052d26be954d30d512a7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301297"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms에서 다중 창 사용자 인터페이스 만들기

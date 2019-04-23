@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 192acf6fea0c6014aaf092077f8deaa844dfd2ec
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: a6d98abd446bfa1a5c214da31bc877ecb337e8f8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633805"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59301128"
 ---
 # <a name="arithmetic-operators-c-reference"></a>산술 연산자(C# 참조)
 
