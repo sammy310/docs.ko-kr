@@ -3,10 +3,10 @@ title: '방법: 새 형식 프로젝션 (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 8cfb24f5-89b2-4cfb-b85d-e7963f8f1845
 ms.openlocfilehash: a94180705674c8aee3ce45607f89fdbba1c873b7
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58834662"
 ---
 # <a name="how-to-project-a-new-type-linq-to-xml-visual-basic"></a>방법: 새 형식 프로젝션 (LINQ to XML) (Visual Basic)
@@ -43,7 +43,7 @@ Public Class Program
 End Class  
 ```  
   
- 이 예제에서는 [방법: (LINQ to XML)는 단일 자식 요소 검색 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md)합니다. 또한, 캐스트를 사용하여 `M:System.Xml.Linq.XElement.Element` 메서드에서 반환하는 요소의 값을 검색합니다.  
+ 이 예제에서는 `M:System.Xml.Linq.XElement.Element` 항목에 도입된 메서드를 사용합니다. [방법: (LINQ to XML)는 단일 자식 요소 검색 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md)합니다. 또한, 캐스트를 사용하여 `M:System.Xml.Linq.XElement.Element` 메서드에서 반환하는 요소의 값을 검색합니다.  
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
