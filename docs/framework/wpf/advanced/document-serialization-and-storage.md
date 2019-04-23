@@ -7,10 +7,10 @@ helpviewer_keywords:
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
 ms.openlocfilehash: dbc78db0a3b6763af5270840fc56af648c7c6efc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295902"
 ---
 # <a name="document-serialization-and-storage"></a>문서 serialization 및 스토리지
@@ -39,7 +39,7 @@ Microsoft.NET Framework는 만들고 고품질 문서를 표시 하기 위한 �
     -   사용자 지정 런타임 설정 및 옵션에 맞는 사용자 인터페이스 지원.  
   
 ### <a name="xps-print-path"></a>XPS 인쇄 경로  
- Microsoft.NET Framework [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 인쇄 경로 인쇄 출력을 통해 문서를 작성 하기 위한 확장 가능한 메커니즘을 제공 합니다.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 문서 파일 형식 모두로 역할 및에 대 한 기본 인쇄 스풀 형식은 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]합니다.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 문서를 직접 보낼 수 있습니다 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-중간 형식으로 변환할 필요 없이 호환 프린터입니다.  인쇄 경로 출력 옵션과 기능에 대한 추가 정보는 [인쇄 개요](printing-overview.md)를 참조하세요.  
+ Microsoft.NET Framework [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 인쇄 경로 인쇄 출력을 통해 문서를 작성 하기 위한 확장 가능한 메커니즘을 제공 합니다.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]는 문서 파일 형식으로 사용되며 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]의 기본 인쇄 스풀 형식이기도 합니다.  중간 형식으로 변환하지 않아도 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 문서를 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 호환 프린터로 직접 보낼 수 있습니다.  인쇄 경로 출력 옵션과 기능에 대한 추가 정보는 [인쇄 개요](printing-overview.md)를 참조하세요.  
   
 <a name="PluginSerializers"></a>   
 ## <a name="plug-in-serializers"></a>플러그 인 Serializer  
@@ -48,7 +48,7 @@ Microsoft.NET Framework는 만들고 고품질 문서를 표시 하기 위한 �
  플러그 인 serializer는 빌드 시 가능한 모든 형식에 맞게 직접 코딩할 필요가 없는 확장된 새로운 저장소 디자인과 파일 형식을 제공하여 애플리케이션 개발자를 지원합니다.  플러그 인 serializer는 사용자 지정 또는 독점 파일 형식에 맞게 시스템에서 액세스 가능한 플러그 인을 배포, 설치 및 업데이트하는 표준화된 방식을 제공하여 타사 개발자에게도 이점을 제공합니다.  
   
 ### <a name="using-a-plug-in-serializer"></a>플러그 인 Serializer 사용  
- 플러그 인 serializer는 사용하기가 쉽습니다.  합니다 <xref:System.Windows.Documents.Serialization.SerializerProvider> 클래스 열거는 <xref:System.Windows.Documents.Serialization.SerializerDescriptor> 시스템에 각 플러그 인 설치에 대 한 개체입니다.  <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A> 속성 현재 구성에 따라 설치 된 플러그 인을 필터링 하 고 serializer를 로드 및 응용 프로그램에서 사용할 수를 확인 합니다.  합니다 <xref:System.Windows.Documents.Serialization.SerializerDescriptor> 와 같은 다른 속성도 제공 <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A> 및 <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>, 응용 프로그램에서 사용 가능한 출력 형식에 대 한 serializer를 선택 하 라는 메시지를 하는 데 사용할 수 있는 합니다.  기본 플러그 인 serializer는 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 는.NET Framework와 함께 제공 되며 항상 열거 합니다.  사용자가 출력 형식으로, 선택는 <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> 메서드는 만드는 데는 <xref:System.Windows.Documents.Serialization.SerializerWriter> 특정 형식에 대 한 합니다.  <xref:System.Windows.Documents.Serialization.SerializerWriter><xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> 데이터 저장소에 문서 스트림을 출력할 메서드를 호출할 수 있습니다.  
+ 플러그 인 serializer는 사용하기가 쉽습니다.  합니다 <xref:System.Windows.Documents.Serialization.SerializerProvider> 클래스 열거는 <xref:System.Windows.Documents.Serialization.SerializerDescriptor> 시스템에 각 플러그 인 설치에 대 한 개체입니다.  <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A> 속성 현재 구성에 따라 설치 된 플러그 인을 필터링 하 고 serializer를 로드 및 응용 프로그램에서 사용할 수를 확인 합니다.  합니다 <xref:System.Windows.Documents.Serialization.SerializerDescriptor> 와 같은 다른 속성도 제공 <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A> 및 <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>, 응용 프로그램에서 사용 가능한 출력 형식에 대 한 serializer를 선택 하 라는 메시지를 하는 데 사용할 수 있는 합니다.  기본 플러그 인 serializer는 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 는.NET Framework와 함께 제공 되며 항상 열거 합니다.  사용자가 출력 형식으로, 선택는 <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> 메서드는 만드는 데는 <xref:System.Windows.Documents.Serialization.SerializerWriter> 특정 형식에 대 한 합니다.  <xref:System.Windows.Documents.Serialization.SerializerWriter>.<xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> 데이터 저장소에 문서 스트림을 출력할 메서드를 호출할 수 있습니다.  
   
  다음 예제를 사용 하는 응용 프로그램을 <xref:System.Windows.Documents.Serialization.SerializerProvider> "PlugInFileFilter" 속성에는 메서드.  Pluginfilefilter에서는 설치 된 플러그 인을 열거 하 고 사용 가능한 파일 옵션을 사용 하 여 필터 문자열을 작성 한 <xref:Microsoft.Win32.SaveFileDialog>합니다.  
   

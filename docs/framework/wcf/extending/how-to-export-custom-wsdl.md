@@ -3,10 +3,10 @@ title: '방법: 사용자 지정 WSDL 내보내기'
 ms.date: 03/30/2017
 ms.assetid: 5c1e4b58-b76b-472b-9635-2f80d42a0734
 ms.openlocfilehash: 725e1b27f36716002ad7cd05183181da9e05fa65
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296422"
 ---
 # <a name="how-to-export-custom-wsdl"></a>방법: 사용자 지정 WSDL 내보내기
@@ -16,7 +16,7 @@ ms.locfileid: "59296422"
   
 1. <xref:System.ServiceModel.Description.IWsdlExportExtension> 인터페이스를 구현합니다. <xref:System.ServiceModel.Description.IOperationBehavior>, <xref:System.ServiceModel.Description.IContractBehavior> 또는 <xref:System.ServiceModel.Description.IEndpointBehavior> 인터페이스를 구현하는 클래스에서 이 인터페이스를 구현할 수 있습니다. <xref:System.ServiceModel.Channels.BindingElement>에서 파생된 클래스에서 이 인터페이스를 구현할 수도 있습니다. 이 샘플에서는 <xref:System.ServiceModel.Description.IWsdlExportExtension>를 구현하는 특성 클래스에서 <xref:System.ServiceModel.Description.IContractBehavior>을 구현합니다.  
   
-2. <xref:System.ServiceModel.Description.IWsdlExportExtension> 두 메서드를 정의 <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29> 고 <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29>입니다. 이러한 메서드를 사용하면 <xref:System.ServiceModel.Description.WsdlContractConversionContext>에 정보를 추가하거나 수정할 수 있습니다. <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> 메서드에서 이 샘플은 <xref:System.ServiceModel.Description.OperationDescription> 개체 컬렉션을 검색한 다음 컬렉션을 반복하여 `WsdlDocumentationAttribute`를 검사합니다. 특성이 있으면 특성에 연결된 텍스트가 추출되고, 요약 요소가 생성되고, 이 요약 요소가 작업의 `DocumentationElement`에 추가됩니다.  
+2. <xref:System.ServiceModel.Description.IWsdlExportExtension>은 <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29> 및 <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29>의 두 메서드를 정의합니다. 이러한 메서드를 사용하면 <xref:System.ServiceModel.Description.WsdlContractConversionContext>에 정보를 추가하거나 수정할 수 있습니다. <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> 메서드에서 이 샘플은 <xref:System.ServiceModel.Description.OperationDescription> 개체 컬렉션을 검색한 다음 컬렉션을 반복하여 `WsdlDocumentationAttribute`를 검사합니다. 특성이 있으면 특성에 연결된 텍스트가 추출되고, 요약 요소가 생성되고, 이 요약 요소가 작업의 `DocumentationElement`에 추가됩니다.  
   
     ```  
             public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  

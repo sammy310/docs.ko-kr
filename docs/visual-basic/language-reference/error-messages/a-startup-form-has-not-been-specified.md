@@ -5,10 +5,10 @@ f1_keywords:
 - vbrAppModel_NoStartupForm
 ms.assetid: 8e04af49-4bef-49de-a7ec-e407e9873da7
 ms.openlocfilehash: 2bbae640ca65c95411cae24a9506fe2076b62cba
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296474"
 ---
 # <a name="a-startup-form-has-not-been-specified"></a>시작 폼이 지정되지 않았습니다.
@@ -29,4 +29,4 @@ ms.locfileid: "59296474"
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A>
-- [Visual Basic 애플리케이션 모델 개요](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)
+- [Visual Basic 응용 프로그램 모델 개요](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)

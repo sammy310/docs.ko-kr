@@ -21,10 +21,10 @@ helpviewer_keywords:
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
 ms.openlocfilehash: b4621da21200e6c9e2b174a0e2ba508a4f6bab92
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228200"
 ---
 # <a name="xml-character-entities-and-xaml"></a>XML 문자 엔터티 및 XAML
@@ -65,6 +65,6 @@ XAML은 특수 문자를 위해 XML에 정의된 문자 엔터티를 사용합�
 ## <a name="see-also"></a>참고자료
 
 - [XAML 개요(WPF)](../wpf/advanced/xaml-overview-wpf.md)
-- [태그 확장명 및 WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [태그 확장 및 WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
 - [XamlName 문법](xamlname-grammar.md)
-- [XAML의 공백 처리](whitespace-processing-in-xaml.md)
+- [공백에서 XAML 처리](whitespace-processing-in-xaml.md)

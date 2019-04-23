@@ -3,12 +3,12 @@ title: nullable 참조 형식을 사용하여 디자인
 description: 이 고급 자습서에서는 nullable 참조 형식을 소개합니다. 참조 값이 null일 수 있는 경우에 대한 디자인 의도를 표현하고 컴파일러가 null일 수 없는 경우를 적용하게 하는 방법을 알아봅니다.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 7f071dedd2e7a611b08a3fd37a7c0b3182be049b
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 97b41574b328c9f6bed60d4bf2943c7a726261d5
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846586"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59296149"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>자습서: nullable 참조 형식 및 nullable이 아닌 참조 형식을 사용하여 디자인 의도를 보다 명확하게 표현
 
@@ -24,7 +24,7 @@ C# 8에서는 nullable 값 형식이 값 형식을 보완하는 것과 동일한
 
 ## <a name="prerequisites"></a>전제 조건
 
-C# 8.0 베타 컴파일러를 포함하여 .NET Core를 실행하도록 머신을 설정해야 합니다. C# 8 베타 컴파일러는 [Visual Studio 2019 미리 보기 4](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) 또는 [.NET Core 3.0 미리 보기 3](https://dotnet.microsoft.com/download/dotnet-core/3.0)에서 사용할 수 있습니다.
+C# 8.0 베타 컴파일러를 포함하여 .NET Core를 실행하도록 머신을 설정해야 합니다. C# 8 베타 컴파일러는 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 또는 최신 [.NET Core 3.0 미리 보기](https://dotnet.microsoft.com/download/dotnet-core/3.0)에서 사용할 수 있습니다.
 
 이 자습서에서는 Visual Studio 또는 .NET Core CLI를 포함하여 C# 및 .NET에 익숙하다고 가정합니다.
 
@@ -45,7 +45,6 @@ Visual Studio 또는 `dotnet new console`을 사용하여 명령줄에서 새로
 
 > [!NOTE]
 > 미리 보기 모드가 아닌 C# 8 정식 출시 버전에서는 새로운 프로젝트 템플릿에 의해 `NullableContextOptions` 요소가 추가됩니다. 그때까지는 이 요소를 수동으로 추가해야 합니다.
-
 
 ### <a name="design-the-types-for-the-application"></a>애플리케이션의 형식 디자인
 

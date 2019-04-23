@@ -5,10 +5,10 @@ helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
 ms.openlocfilehash: 4c49e721ce4934c041b6636776c72db7839a1b1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228883"
 ---
 # <a name="denial-of-service"></a>서비스 거부
@@ -28,13 +28,13 @@ ms.locfileid: "59228883"
   
  완화: 다음 속성을 사용 합니다 <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> 클래스:  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>: 시간 제한의 최대 수를 제어 `SecurityContextToken`후에 서버에서 캐시 하는 `SPNego` 또는 `SSL` 협상 합니다.  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>: `SecurityContextToken` 또는 `SPNego` 협상 후에 서버에서 캐시하는 시간이 제한된 `SSL`의 최대 개수를 제어합니다.  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>:의 수명을 제어 합니다 `SecurityContextTokens` 는 다음 서버 문제 `SPNego` 또는 `SSL` 협상 합니다. 서버는 이 기간 동안 `SecurityContextToken`을 캐시합니다.  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>: `SecurityContextTokens` 또는 `SPNego` 협상 후에 서버에서 발급하는 `SSL`의 수명을 제어합니다. 서버는 이 기간 동안 `SecurityContextToken`을 캐시합니다.  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>: 응용 프로그램 메시지가 처리 되는 있지만 서버에서 설정 된 보안 대화의 최대 수를 제어 합니다. 이 할당량은 클라이언트가 서비스에서 보안 대화를 설정할 수 없도록 하여 서비스가 클라이언트별 상태를 유지 관리하게 하지만 사용하지는 않습니다.  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>: 서버에서 설정되었지만 응용 프로그램 메시지가 처리되지 않은 보안 대화의 최대 개수를 제어합니다. 이 할당량은 클라이언트가 서비스에서 보안 대화를 설정할 수 없도록 하여 서비스가 클라이언트별 상태를 유지 관리하게 하지만 사용하지는 않습니다.  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>: 서비스에서 보안 대화를 활성 상태로 유지 대화에 대 한 클라이언트에서 응용 프로그램 메시지를 받지 않고 최대 시간을 제어 합니다. 이 할당량은 클라이언트가 서비스에서 보안 대화를 설정할 수 없도록 하여 서비스가 클라이언트별 상태를 유지 관리하게 하지만 사용하지는 않습니다.  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>: 서비스가 대화를 위해 클라이언트로부터 응용 프로그램 메시지를 받지 않고 보안 대화를 활성 상태로 유지하는 최대 시간을 제어합니다. 이 할당량은 클라이언트가 서비스에서 보안 대화를 설정할 수 없도록 하여 서비스가 클라이언트별 상태를 유지 관리하게 하지만 사용하지는 않습니다.  
   
 ## <a name="wsdualhttpbinding-or-dual-custom-bindings-require-client-authentication"></a>WSDualHttpBinding 또는 이중 사용자 지정 바인딩에 클라이언트 인증이 필요함  
  기본적으로 <xref:System.ServiceModel.WSDualHttpBinding>은 보안을 사용합니다. 그러나 <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> 속성을 <xref:System.ServiceModel.MessageCredentialType.None>으로 설정하여 클라이언트 인증을 비활성화한 경우 악의적인 사용자가 제 3의 서비스에 대해 서비스 거부 공격을 발생시킬 수 있습니다. 이는 악의적인 클라이언트가 메시지 스트림을 제 3의 서비스로 보내도록 서비스에 지시할 수 있기 때문입니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "59228883"
 
 - [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [정보 공개](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [권한 높이기](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [권한 상승](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
 - [서비스 거부](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [재생 공격](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
 - [변조](../../../../docs/framework/wcf/feature-details/tampering.md)

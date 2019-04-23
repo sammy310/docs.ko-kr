@@ -9,10 +9,10 @@ helpviewer_keywords:
 - list boxes [Windows Forms], about list boxes
 ms.assetid: e6cff3ce-e2ba-458e-851f-299e8e9c8abf
 ms.openlocfilehash: 8ff23ff449bc3b90fbd51bab1d73f8a7268bee05
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59229058"
 ---
 # <a name="checkedlistbox-control-overview-windows-forms"></a>CheckedListBox 컨트롤 개요(Windows Forms)
@@ -26,5 +26,5 @@ Windows Forms <xref:System.Windows.Forms.CheckedListBox> 컨트롤을 <xref:Syst
 - <xref:System.Windows.Forms.CheckedListBox.Items%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.ListControl.DataSource%2A?displayProperty=nameWithType>
 - [ListBox 컨트롤 개요](listbox-control-overview-windows-forms.md)
-- [옵션 목록 표시에 사용하는 Windows Forms 컨트롤](windows-forms-controls-used-to-list-options.md)
+- [옵션 목록 표시에 사용된 Windows Forms 컨트롤](windows-forms-controls-used-to-list-options.md)
 - [방법: Windows Forms CheckedListBox 컨트롤에서 선택한 항목 확인](how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)

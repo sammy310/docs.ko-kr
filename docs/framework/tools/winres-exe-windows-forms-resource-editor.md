@@ -14,10 +14,10 @@ ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1c9a14c2ea2d7d817aacca1fa25b04ac643f16bf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296656"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe(Windows 리소스 지역화 편집기)
@@ -145,5 +145,5 @@ Winres.exe에는 다음 기능과 특징이 있습니다.
 - <xref:System.Resources.ResourceReader>
 - <xref:System.Resources.ResourceWriter>
 - [도구](../../../docs/framework/tools/index.md)
-- [데스크톱 응용 프로그램의 리소스](../../../docs/framework/resources/index.md)
+- [데스크톱 앱의 리소스](../../../docs/framework/resources/index.md)
 - [전역화 및 지역화](../../../docs/standard/globalization-localization/index.md)

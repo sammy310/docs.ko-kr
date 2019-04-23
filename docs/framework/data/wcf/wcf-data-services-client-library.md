@@ -7,10 +7,10 @@ helpviewer_keywords:
 - DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
 ms.openlocfilehash: 5d14a1be3cd40ace2e31fec6f44a86707e5c4476
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59230202"
 ---
 # <a name="wcf-data-services-client-library"></a>WCF Data Services 클라이언트 라이브러리
@@ -48,7 +48,7 @@ HTTP 요청을 보내고 데이터 서비스에서 반환하는 [!INCLUDE[ssODat
  [데이터 서비스 컨텍스트 관리](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)  
  클라이언트 라이브러리의 동작을 관리하는 옵션에 대해 설명합니다.  
   
- [이진 데이터 사용](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
+ [이진 데이터 작업](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
  데이터 서비스에서 데이터 스트림으로 반환하는 이진 데이터에 액세스하고 해당 데이터를 변경하는 방법에 대해 설명합니다.  
   
 ## <a name="see-also"></a>참고자료

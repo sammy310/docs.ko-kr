@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9300f67e75d40f041a4fba52f6742741ec9f91de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59187343"
 ---
 # <a name="iclrgcmanagergetstats-method"></a>ICLRGCManager::GetStats 메서드
@@ -74,10 +74,10 @@ pCLRGCManager->GetStats(&GCStats);
   
 ## <a name="see-also"></a>참고자료
 
-- [Automatic Memory Management](../../../../docs/standard/automatic-memory-management.md)
+- [자동 메모리 관리](../../../../docs/standard/automatic-memory-management.md)
 - [COR_GC_STATS 구조체](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
 - [COR_GC_STAT_TYPES 열거형](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)
-- [가비지 컬렉션](../../../../docs/standard/garbage-collection/index.md)
+- [가비지 수집](../../../../docs/standard/garbage-collection/index.md)
 - [ICLRControl 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [ICLRGCManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)
 - [CLR 호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)

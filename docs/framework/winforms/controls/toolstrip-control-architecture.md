@@ -5,10 +5,10 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
 ms.openlocfilehash: 91813928344f9210ce1383daa9ba7f765117833a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296214"
 ---
 # <a name="toolstrip-control-architecture"></a>ToolStrip 컨트롤 아키텍처
@@ -64,7 +64,7 @@ ms.locfileid: "59296214"
 -   <xref:System.Windows.Forms.ToolStripProgressBar>  
   
 ### <a name="contextmenustrip"></a>ContextMenuStrip  
- <xref:System.Windows.Forms.ContextMenuStrip> <xref:System.Windows.Forms.ContextMenu>를 대체합니다. 연결할 수는 <xref:System.Windows.Forms.ContextMenuStrip> 모든 컨트롤을 마우스 오른쪽 클릭 자동으로 표시 된 상황에 맞는 메뉴 (또는 바로 가기 메뉴). 표시할 수 있습니다는 <xref:System.Windows.Forms.ContextMenuStrip> 를 사용 하 여 프로그래밍 방식으로 <xref:System.Windows.Forms.ToolStripDropDown.Show%2A> 메서드. <xref:System.Windows.Forms.ContextMenuStrip> 취소할 수 있는 지원 <xref:System.Windows.Forms.ToolStripDropDown.Opening> 고 <xref:System.Windows.Forms.ToolStripDropDown.Closing> 동적 채우기 및 여러 원클릭 시나리오를 처리 하는 이벤트입니다. <xref:System.Windows.Forms.ContextMenuStrip> 이미지, 상태를 확인 하는 메뉴 항목, 텍스트, 액세스 키, 바로 가기 및 계단식 메뉴를 지원합니다.  
+ <xref:System.Windows.Forms.ContextMenuStrip>가 <xref:System.Windows.Forms.ContextMenu>를 대체합니다. 연결할 수는 <xref:System.Windows.Forms.ContextMenuStrip> 모든 컨트롤을 마우스 오른쪽 클릭 자동으로 표시 된 상황에 맞는 메뉴 (또는 바로 가기 메뉴). 표시할 수 있습니다는 <xref:System.Windows.Forms.ContextMenuStrip> 를 사용 하 여 프로그래밍 방식으로 <xref:System.Windows.Forms.ToolStripDropDown.Show%2A> 메서드. <xref:System.Windows.Forms.ContextMenuStrip> 취소할 수 있는 지원 <xref:System.Windows.Forms.ToolStripDropDown.Opening> 고 <xref:System.Windows.Forms.ToolStripDropDown.Closing> 동적 채우기 및 여러 원클릭 시나리오를 처리 하는 이벤트입니다. <xref:System.Windows.Forms.ContextMenuStrip> 이미지, 상태를 확인 하는 메뉴 항목, 텍스트, 액세스 키, 바로 가기 및 계단식 메뉴를 지원합니다.  
   
  다음 항목을 모두 사용 하 여 원활 하 게 작동 하도록 특별히 설계 된 <xref:System.Windows.Forms.ToolStripSystemRenderer> 고 <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 모든 방향에서. 에 대 한 디자인 타임에 기본적으로 사용할 수는 <xref:System.Windows.Forms.ContextMenuStrip> 제어 합니다.  
   
@@ -197,7 +197,7 @@ ms.locfileid: "59296214"
 ##### <a name="stack-layouts"></a>스택 레이아웃  
  양쪽 끝에서 서로 옆에 있는 항목을 정렬 하는 누적 된 <xref:System.Windows.Forms.ToolStrip>합니다. 다음은 스택 레이아웃을 설명합니다.  
   
--   <xref:System.Windows.Forms.ToolStripLayoutStyle.StackWithOverflow> 기본값은입니다. 이 설정을 사용 하면 합니다 <xref:System.Windows.Forms.ToolStrip> 에 따라 자동으로 해당 레이아웃을 변경 하기를 <xref:System.Windows.Forms.ToolStrip.Orientation%2A> 끌어서 도킹 시나리오를 처리 하는 속성입니다.  
+-   기본값은 <xref:System.Windows.Forms.ToolStripLayoutStyle.StackWithOverflow>입니다. 이 설정을 사용 하면 합니다 <xref:System.Windows.Forms.ToolStrip> 에 따라 자동으로 해당 레이아웃을 변경 하기를 <xref:System.Windows.Forms.ToolStrip.Orientation%2A> 끌어서 도킹 시나리오를 처리 하는 속성입니다.  
   
 -   <xref:System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow> 렌더링 된 <xref:System.Windows.Forms.ToolStrip> 세로로 서로 옆에 있는 항목입니다.  
   

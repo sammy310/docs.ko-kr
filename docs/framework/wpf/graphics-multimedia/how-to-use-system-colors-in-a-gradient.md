@@ -6,10 +6,10 @@ helpviewer_keywords:
 - system colors in gradients [WPF]
 ms.assetid: 11942e7e-6300-4b50-8ed1-f50e8d20e7d2
 ms.openlocfilehash: 55c99640907a0c372f8c7bbc50b9b45c9f15ef3c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59229442"
 ---
 # <a name="how-to-use-system-colors-in-a-gradient"></a>방법: 그라데이션에 시스템 색 사용
@@ -27,5 +27,5 @@ ms.locfileid: "59229442"
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.SystemColors>
-- [시스템 브러시로 영역 칠하기](how-to-paint-an-area-with-a-system-brush.md)
+- [시스템 브러시로 영역 그리기](how-to-paint-an-area-with-a-system-brush.md)
 - [단색 및 그라데이션을 사용한 그리기 개요](painting-with-solid-colors-and-gradients-overview.md)

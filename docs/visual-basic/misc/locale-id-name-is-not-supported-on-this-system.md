@@ -5,10 +5,10 @@ f1_keywords:
 - vbrArgument_LCIDNotSupported1
 ms.assetid: 62701434-0ac2-45b8-8b40-a9adc09ae6df
 ms.openlocfilehash: 8c0b09e9002c5ac340b63a973f478bbfc8fdae0f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296539"
 ---
 # <a name="locale-id-name-is-not-supported-on-this-system"></a>로캘 ID '\<이름 >'이 시스템에서 지원 되지 않습니다
@@ -21,4 +21,4 @@ ms.locfileid: "59296539"
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Globalization>
-- [.NET Framework 기반의 국가별 애플리케이션 소개](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
+- [.NET Framework 기반의 국가별 응용 프로그램 소개](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)

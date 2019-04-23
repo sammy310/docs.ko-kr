@@ -3,10 +3,10 @@ title: SQL Server 공용 언어 런타임 통합
 ms.date: 03/30/2017
 ms.assetid: c7a324c4-160d-44c2-b593-641af06eca61
 ms.openlocfilehash: fd043aa6c7e5b9246a36146e000e5cba9e090d3e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297502"
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>SQL Server 공용 언어 런타임 통합
@@ -18,7 +18,7 @@ SQL Server 2005에는 .NET Framework for Microsoft Windows의 CLR(공용 언어 
   
  **SQL Server 온라인 설명서**  
   
-1. [Common Language Runtime (CLR) Integration Programming Concepts](https://go.microsoft.com/fwlink/?LinkId=115240)  
+1. [공용 언어 런타임 (CLR) 통합 프로그래밍 개요](https://go.microsoft.com/fwlink/?LinkId=115240)  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [SQL Server CLR 통합 소개](../../../../../docs/framework/data/adonet/sql/introduction-to-sql-server-clr-integration.md)  

@@ -3,12 +3,12 @@ title: .NET Core 정보
 description: .NET Core에 대한 자세히 알아봅니다.
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: 6c76d5e80cba6947eb5a91fb31fc3e511970d165
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 87514b476124196c835e4b22154f9bbaca7482a5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675968"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296409"
 ---
 # <a name="about-net-core"></a>.NET Core 정보
 
@@ -24,7 +24,7 @@ ms.locfileid: "57675968"
 
 ## <a name="languages"></a>언어
 
-C#, Visual Basic 및 F# 언어를 사용하여 .NET Core에 대한 애플리케이션 및 라이브러리를 작성할 수 있습니다. 이러한 언어는 [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text 및 Vim을 비롯한 즐겨찾는 텍스트 편집기 및 IDE에 통합될 수 있습니다. 이 통합은 [OmniSharp](https://www.omnisharp.net/) 및 [Ionide](http://ionide.io) 프로젝트의 적합한 담당자에 의해 부분적으로 제공됩니다.
+C#, Visual Basic 및 F# 언어를 사용하여 .NET Core에 대한 애플리케이션 및 라이브러리를 작성할 수 있습니다. 이러한 언어는 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link), [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text 및 Vim을 비롯한 즐겨찾는 텍스트 편집기 및 IDE에 통합될 수 있습니다. 이 통합은 [OmniSharp](https://www.omnisharp.net/) 및 [Ionide](http://ionide.io) 프로젝트의 적합한 담당자에 의해 부분적으로 제공됩니다.
 
 ## <a name="apis"></a>API
 

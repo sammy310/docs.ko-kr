@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 4e81087431091dfa4d5432d5ea5e2b665be2b130
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774403"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234837"
 ---
 ### <a name="listtforeach-can-throw-exception-when-modifying-list-item"></a>List\<T>.ForEach는 목록 항목을 수정할 때 예외를 throw할 수 있음
 

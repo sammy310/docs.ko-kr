@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 2ea85959-e763-4669-8bd9-46a9dab894bd
 ms.openlocfilehash: 84c84cb8fc0ee484b09c69c72571a19c335b58f4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59230631"
 ---
 # <a name="defining-primary-keys"></a>기본 키 정의
@@ -69,5 +69,5 @@ workTable.PrimaryKey = keyColumn;
 
 - <xref:System.Data.DataTable>
 - [DataTable 스키마 정의](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
-- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

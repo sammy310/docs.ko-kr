@@ -12,10 +12,10 @@ ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d4088fe35d919cd579ed9f9a6275db8bb88300fe
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297527"
 ---
 # <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>방법: CodeDOM을 사용하여 XML 문서 파일 만들기
@@ -81,6 +81,6 @@ CodeDOM을 사용하여 XML 문서를 생성하는 코드를 만들 수 있습�
   
 ## <a name="see-also"></a>참고 항목
 
-- [XML로 코드 문서화](~/docs/visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
+- [코드를 XML로 문서화](~/docs/visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
 - [XML 문서 주석](~/docs/csharp/programming-guide/xmldoc/xml-documentation-comments.md)
 - [XML 문서](/cpp/ide/xml-documentation-visual-cpp)

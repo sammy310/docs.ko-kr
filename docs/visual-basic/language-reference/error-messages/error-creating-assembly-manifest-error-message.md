@@ -1,5 +1,5 @@
 ---
-title: 어셈블리 매니페스트를 만드는 오류. <error message>
+title: 어셈블리 매니페스트를 만드는 동안 오류가 발생했습니다. <error message>
 ms.date: 07/20/2015
 f1_keywords:
 - bc30140
@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30140
 ms.assetid: 1beb5aa0-7b79-4c85-946b-5c2d0a41d1d2
 ms.openlocfilehash: 0f67b772bab3104c00510954d01b200aadfa9e8a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296292"
 ---
 # <a name="error-creating-assembly-manifest-error-message"></a>어셈블리 매니페스트를 만드는 동안 오류 발생: \<오류 메시지 >
@@ -32,4 +32,4 @@ Visual Basic 컴파일러는 매니페스트를 사용 하 여 어셈블리를 �
 - [방법: 강력한 이름으로 어셈블리 서명](../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
 - [프로젝트 디자이너, 서명 페이지](/visualstudio/ide/reference/signing-page-project-designer)
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
-- [Talk to Us](/visualstudio/ide/talk-to-us)
+- [의견 보내기](/visualstudio/ide/talk-to-us)
