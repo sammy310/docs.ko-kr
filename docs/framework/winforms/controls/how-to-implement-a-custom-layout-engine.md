@@ -12,21 +12,21 @@ helpviewer_keywords:
 - FlowLayoutPanel control [Windows Forms], layout engine
 ms.assetid: f91aa91c-29f4-4089-95ca-5d48b774b00e
 ms.openlocfilehash: 8e5043e2b42b1e7449c6dab51691b6d57e28cd53
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59083376"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772697"
 ---
-# <a name="how-to-implement-a-custom-layout-engine"></a><span data-ttu-id="e64b9-102">방법: 사용자 지정 레이아웃 엔진 구현</span><span class="sxs-lookup"><span data-stu-id="e64b9-102">How to: Implement a Custom Layout Engine</span></span>
-<span data-ttu-id="e64b9-103">다음 코드 예제에서는 간단한 선형 레이아웃을 수행 하는 사용자 지정 레이아웃 엔진을 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e64b9-103">The following code example demonstrates how to create a custom layout engine that performs a simple flow layout.</span></span> <span data-ttu-id="e64b9-104">라는 패널 컨트롤을 구현 `DemoFlowPanel`를 재정의 하는 <xref:System.Windows.Forms.Control.LayoutEngine%2A> 의 인스턴스를 제공 하는 속성은 `DemoFlowLayout` 클래스.</span><span class="sxs-lookup"><span data-stu-id="e64b9-104">It implements a panel control named `DemoFlowPanel`, which overrides the <xref:System.Windows.Forms.Control.LayoutEngine%2A> property to provide an instance of the `DemoFlowLayout` class.</span></span>  
+# <a name="how-to-implement-a-custom-layout-engine"></a><span data-ttu-id="132e3-102">방법: 사용자 지정 레이아웃 엔진 구현</span><span class="sxs-lookup"><span data-stu-id="132e3-102">How to: Implement a Custom Layout Engine</span></span>
+<span data-ttu-id="132e3-103">다음 코드 예제에서는 간단한 선형 레이아웃을 수행 하는 사용자 지정 레이아웃 엔진을 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="132e3-103">The following code example demonstrates how to create a custom layout engine that performs a simple flow layout.</span></span> <span data-ttu-id="132e3-104">라는 패널 컨트롤을 구현 `DemoFlowPanel`를 재정의 하는 <xref:System.Windows.Forms.Control.LayoutEngine%2A> 의 인스턴스를 제공 하는 속성은 `DemoFlowLayout` 클래스.</span><span class="sxs-lookup"><span data-stu-id="132e3-104">It implements a panel control named `DemoFlowPanel`, which overrides the <xref:System.Windows.Forms.Control.LayoutEngine%2A> property to provide an instance of the `DemoFlowLayout` class.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e64b9-105">예제</span><span class="sxs-lookup"><span data-stu-id="e64b9-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="132e3-105">예제</span><span class="sxs-lookup"><span data-stu-id="132e3-105">Example</span></span>  
  [!code-cpp[System.Windows.Forms.Layout.LayoutEngine#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.Layout.LayoutEngine/cpp/DemoFlowLayout.cpp#1)]
  [!code-csharp[System.Windows.Forms.Layout.LayoutEngine#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Layout.LayoutEngine/CS/DemoFlowLayout.cs#1)]
  [!code-vb[System.Windows.Forms.Layout.LayoutEngine#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Layout.LayoutEngine/VB/DemoFlowLayout.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="e64b9-106">참고자료</span><span class="sxs-lookup"><span data-stu-id="e64b9-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="132e3-106">참고자료</span><span class="sxs-lookup"><span data-stu-id="132e3-106">See also</span></span>
 
 - <xref:System.Windows.Forms.Layout.LayoutEngine>
 - <xref:System.Windows.Forms.Control.LayoutEngine%2A?displayProperty=nameWithType>
