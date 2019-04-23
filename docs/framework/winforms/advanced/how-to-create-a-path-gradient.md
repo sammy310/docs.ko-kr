@@ -9,19 +9,21 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: 31a8c68f382f81da2acac363bba6c8822e535770
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a04465c31b160f97568ed88c434e7e3a5126ebb6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186097"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975756"
 ---
 # <a name="how-to-create-a-path-gradient"></a>방법: 경로 그라데이션 만들기
 <xref:System.Drawing.Drawing2D.PathGradientBrush> 클래스 점진적으로 색을 변경 하 여 셰이프를 입력 하는 방식을 사용자 지정할 수 있습니다. 예를 들어 경로의 센터에 대 한 한 가지 색 및 경로 경계에 다른 색을 지정할 수 있습니다. 또한 각 패스의 경계를 따라 여러 지점에 대 한 별도 색을 지정할 수 있습니다.  
   
 > [!NOTE]
->  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], 경로 일련의 선과 곡선에서 유지 관리는 <xref:System.Drawing.Drawing2D.GraphicsPath> 개체입니다. 에 대 한 자세한 내용은 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 경로 참조 하세요 [GDI +의 그래픽 경로](graphics-paths-in-gdi.md) 하 고 [Constructing 및 그리기 경로](constructing-and-drawing-paths.md)합니다.  
-  
+>  GDI +에서 경로 선 및 곡선에서 유지 관리의 시퀀스를 <xref:System.Drawing.Drawing2D.GraphicsPath> 개체입니다. GDI + 경로 대 한 자세한 내용은 참조 하세요. [GDI +의 그래픽 경로](graphics-paths-in-gdi.md) 하 고 [Constructing 및 그리기 경로](constructing-and-drawing-paths.md)합니다.  
+
+이 문서의 예제에서는 컨트롤에서 호출 되는 메서드는 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기입니다.  
+
 ### <a name="to-fill-an-ellipse-with-a-path-gradient"></a>타원을 채우도록 경로 그라데이션  
   
 -   다음 예제에서는 경로 그라데이션 브러시를 사용 하 여 타원을 채웁니다. 가운데 색은 파랑으로 설정 하 고 경계 색 바다색으로 설정 됩니다. 다음 그림은 채워진된 타원을 보여 줍니다.  
@@ -30,7 +32,7 @@ ms.locfileid: "59186097"
   
      기본적으로 경로 그라데이션 브러시를 경로의 경계 외부로 확장 되지 않습니다. 경로 그라데이션 브러시를 사용 하 여 경로 경계를 넘어 확장 하는 그림에 맞게 경로 외부 화면 영역의 채워지지 않습니다.  
   
-     다음 그림에서는 변경 하는 경우 어떻게 되나요 합니다 <xref:System.Drawing.Graphics.FillEllipse%2A> 에 다음 코드에서 호출 `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
+     다음 그림에서는 변경 하는 경우 어떻게 되나요 합니다 <xref:System.Drawing.Graphics.FillEllipse%2A?displayProperty=nameWithType> 에 다음 코드에서 호출 `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
   
      ![그라데이션 경로 경로 경계를 벗어나 확장입니다.](./media/how-to-create-a-path-gradient/gradient-path-extended-beyond-boundary.png)  
   

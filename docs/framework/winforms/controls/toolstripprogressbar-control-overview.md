@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ToolStripProgressBar control [Windows Forms], about ToolStripProgressBar control
 ms.assetid: ec3ab522-5fe4-4b4d-a551-bc19e84f4774
 ms.openlocfilehash: 380dabe2468ae3c7d9d7303498823d847a8d119e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162113"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59976354"
 ---
 # <a name="toolstripprogressbar-control-overview"></a>ToolStripProgressBar 컨트롤 개요
 합니다 <xref:System.Windows.Forms.ToolStripProgressBar> 래프팅 및 모든 렌더링 기능이 결합 <xref:System.Windows.Forms.ToolStrip> 일반적인 프로세스 추적 기능을 사용 하 여 컨트롤입니다. <xref:System.Windows.Forms.ToolStripProgressBar> 가장 일반적으로 호스팅하 <xref:System.Windows.Forms.StatusStrip>에 의해서도 자주를 <xref:System.Windows.Forms.ToolStrip>합니다.  
