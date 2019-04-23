@@ -7,26 +7,26 @@ helpviewer_keywords:
 - documents [WPF], features for
 ms.assetid: 7bf37ccb-5d09-4eae-9661-929582aeb259
 ms.openlocfilehash: 4dbe2e8257bfc92f354d032d7bb6e2ba7a693075
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59206943"
 ---
-# <a name="documents"></a><span data-ttu-id="7163c-102">문서</span><span class="sxs-lookup"><span data-stu-id="7163c-102">Documents</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="7163c-103">구성 요소 개발자가 고급 문서 기능 및 향상 된 읽기 환경을 사용 하 여 응용 프로그램을 빌드할 수 있는 다양 한 집합을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="7163c-103">provides a versatile set of components that enable developers to build applications with advanced document features and an improved reading experience.</span></span> <span data-ttu-id="7163c-104">고급 기능 및 품질 외에도 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 문서 패키징, 보안 및 스토리지를 위해 간소화된 관리 서비스도 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="7163c-104">In addition to enhanced capabilities and quality, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] also provides simplified management services for document packaging, security, and storage.</span></span>  
+# <a name="documents"></a><span data-ttu-id="1de96-102">문서</span><span class="sxs-lookup"><span data-stu-id="1de96-102">Documents</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="1de96-103">에서는 개발자가 고급 문서 기능 및 향상된 읽기 환경을 사용하여 응용 프로그램을 빌드할 수 있는 다양한 구성 요소 집합을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="1de96-103">provides a versatile set of components that enable developers to build applications with advanced document features and an improved reading experience.</span></span> <span data-ttu-id="1de96-104">고급 기능 및 품질 외에도 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 문서 패키징, 보안 및 스토리지를 위해 간소화된 관리 서비스도 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="1de96-104">In addition to enhanced capabilities and quality, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] also provides simplified management services for document packaging, security, and storage.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="7163c-105">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="7163c-105">In This Section</span></span>  
- [<span data-ttu-id="7163c-106">WPF의 문서</span><span class="sxs-lookup"><span data-stu-id="7163c-106">Documents in WPF</span></span>](documents-in-wpf.md)  
- [<span data-ttu-id="7163c-107">문서 serialization 및 스토리지</span><span class="sxs-lookup"><span data-stu-id="7163c-107">Document Serialization and Storage</span></span>](document-serialization-and-storage.md)  
- [<span data-ttu-id="7163c-108">주석</span><span class="sxs-lookup"><span data-stu-id="7163c-108">Annotations</span></span>](annotations.md)  
- [<span data-ttu-id="7163c-109">유동 콘텐츠</span><span class="sxs-lookup"><span data-stu-id="7163c-109">Flow Content</span></span>](flow-content.md)  
- [<span data-ttu-id="7163c-110">입력 체계</span><span class="sxs-lookup"><span data-stu-id="7163c-110">Typography</span></span>](typography.md)  
- [<span data-ttu-id="7163c-111">인쇄 및 인쇄 시스템 관리</span><span class="sxs-lookup"><span data-stu-id="7163c-111">Printing and Print System Management</span></span>](printing-and-print-system-management.md)  
+## <a name="in-this-section"></a><span data-ttu-id="1de96-105">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="1de96-105">In This Section</span></span>  
+ [<span data-ttu-id="1de96-106">WPF의 문서</span><span class="sxs-lookup"><span data-stu-id="1de96-106">Documents in WPF</span></span>](documents-in-wpf.md)  
+ [<span data-ttu-id="1de96-107">문서 serialization 및 저장소</span><span class="sxs-lookup"><span data-stu-id="1de96-107">Document Serialization and Storage</span></span>](document-serialization-and-storage.md)  
+ [<span data-ttu-id="1de96-108">주석</span><span class="sxs-lookup"><span data-stu-id="1de96-108">Annotations</span></span>](annotations.md)  
+ [<span data-ttu-id="1de96-109">유동 콘텐츠</span><span class="sxs-lookup"><span data-stu-id="1de96-109">Flow Content</span></span>](flow-content.md)  
+ [<span data-ttu-id="1de96-110">입력 체계</span><span class="sxs-lookup"><span data-stu-id="1de96-110">Typography</span></span>](typography.md)  
+ [<span data-ttu-id="1de96-111">인쇄 및 인쇄 시스템 관리</span><span class="sxs-lookup"><span data-stu-id="1de96-111">Printing and Print System Management</span></span>](printing-and-print-system-management.md)  
   
-## <a name="see-also"></a><span data-ttu-id="7163c-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="7163c-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1de96-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="1de96-112">See also</span></span>
 
 - <xref:System.Windows.Controls.DocumentViewer>
 - <xref:System.Windows.Documents.FlowDocument>
 - <xref:System.Windows.Xps>
-- [<span data-ttu-id="7163c-113">isXPS.exe(isXPS 규칙 도구)</span><span class="sxs-lookup"><span data-stu-id="7163c-113">isXPS.exe (isXPS Conformance Tool)</span></span>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))
+- <span data-ttu-id="1de96-113">[isXPS.exe(isXPS 규칙 도구)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="1de96-113">[isXPS.exe (isXPS Conformance Tool)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))</span></span>

@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8a673c98b11fbca5f66e9e1ae61f224448c20797
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207151"
 ---
-# <a name="corgcreferencetype-enumeration"></a><span data-ttu-id="0a2df-102">CorGCReferenceType 열거형</span><span class="sxs-lookup"><span data-stu-id="0a2df-102">CorGCReferenceType Enumeration</span></span>
-<span data-ttu-id="0a2df-103">가비지가 수집될 개체의 소스를 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="0a2df-103">Identifies the source of an object to be garbage-collected.</span></span>  
+# <a name="corgcreferencetype-enumeration"></a><span data-ttu-id="10a4f-102">CorGCReferenceType 열거형</span><span class="sxs-lookup"><span data-stu-id="10a4f-102">CorGCReferenceType Enumeration</span></span>
+<span data-ttu-id="10a4f-103">가비지가 수집될 개체의 소스를 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="10a4f-103">Identifies the source of an object to be garbage-collected.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0a2df-104">구문</span><span class="sxs-lookup"><span data-stu-id="0a2df-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="10a4f-104">구문</span><span class="sxs-lookup"><span data-stu-id="10a4f-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -48,40 +48,40 @@ typedef enum {
 } CorGCReferenceType  
 ```  
   
-## <a name="members"></a><span data-ttu-id="0a2df-105">멤버</span><span class="sxs-lookup"><span data-stu-id="0a2df-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="10a4f-105">멤버</span><span class="sxs-lookup"><span data-stu-id="10a4f-105">Members</span></span>  
   
-|<span data-ttu-id="0a2df-106">멤버 이름</span><span class="sxs-lookup"><span data-stu-id="0a2df-106">Member name</span></span>|<span data-ttu-id="0a2df-107">설명</span><span class="sxs-lookup"><span data-stu-id="0a2df-107">Description</span></span>|  
+|<span data-ttu-id="10a4f-106">멤버 이름</span><span class="sxs-lookup"><span data-stu-id="10a4f-106">Member name</span></span>|<span data-ttu-id="10a4f-107">설명</span><span class="sxs-lookup"><span data-stu-id="10a4f-107">Description</span></span>|  
 |-----------------|-----------------|  
-|`CorHandleStrong`|<span data-ttu-id="0a2df-108">개체 참조 테이블의 강력한 참조에 대한 핸들입니다.</span><span class="sxs-lookup"><span data-stu-id="0a2df-108">A handle to a strong reference from the object handle table.</span></span>|  
-|`CorHandleStrongPinning`|<span data-ttu-id="0a2df-109">개체 핸들 테이블의 고정 된 강력한 참조에 대 한 핸들입니다.</span><span class="sxs-lookup"><span data-stu-id="0a2df-109">A handle to a pinned strong reference from the object handle table.</span></span>|  
-|`CorHandleWeakShort`|<span data-ttu-id="0a2df-110">개체 핸들 테이블의 약한 참조에 대 한 핸들입니다.</span><span class="sxs-lookup"><span data-stu-id="0a2df-110">A handle to a weak reference from the object handle table.</span></span>|  
-|`CorHandleWeakRefCount`|<span data-ttu-id="0a2df-111">개체 핸들 테이블의 약한 참조 횟수가 계산 개체에 대 한 핸들입니다.</span><span class="sxs-lookup"><span data-stu-id="0a2df-111">A handle to a weak reference-counted object from the object handle table.</span></span>|  
-|`CorHandleStrongRefCount`|<span data-ttu-id="0a2df-112">개체 핸들 테이블의 참조 횟수가 계산 개체에 대 한 핸들입니다.</span><span class="sxs-lookup"><span data-stu-id="0a2df-112">A handle to a reference-counted object from the object handle table.</span></span>|  
-|`CorHandleStrongDependent`|<span data-ttu-id="0a2df-113">개체 핸들 테이블의 종속 개체에 대 한 핸들입니다.</span><span class="sxs-lookup"><span data-stu-id="0a2df-113">A handle to a dependent object from the object handle table.</span></span>|  
-|`CorHandleStrongAsyncPinned`|<span data-ttu-id="0a2df-114">개체 핸들 테이블의 비동기 고정된 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="0a2df-114">An asynchronous pinned object from the object handle table.</span></span>|  
-|`CorHandleStrongSizedByref`|<span data-ttu-id="0a2df-115">가비지 컬렉션 시 모든 개체 및 개체 루트의 집합 클로저의 대략적인 크기를 유지하는 강력한 핸들입니다. </span><span class="sxs-lookup"><span data-stu-id="0a2df-115">A strong handle that keeps an approximate size of the collective closure of all objects and object roots at garbage collection time.</span></span>|  
-|`CorReferenceStack`|<span data-ttu-id="0a2df-116">관리 되는 스택에서 참조입니다.</span><span class="sxs-lookup"><span data-stu-id="0a2df-116">A reference from the managed stack.</span></span>|  
-|`CorReferenceFinalizer`|<span data-ttu-id="0a2df-117">종료자 큐의 참조입니다.</span><span class="sxs-lookup"><span data-stu-id="0a2df-117">A reference from the finalizer queue.</span></span>|  
-|<span data-ttu-id="0a2df-118">CorHandleStrongOnly</span><span class="sxs-lookup"><span data-stu-id="0a2df-118">CorHandleStrongOnly</span></span>|<span data-ttu-id="0a2df-119">핸들 테이블의 강력한 참조만을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="0a2df-119">Return only strong references from the handle table.</span></span> <span data-ttu-id="0a2df-120">이 값은 사용 된 [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) 방법만 해당 합니다.</span><span class="sxs-lookup"><span data-stu-id="0a2df-120">This value is used by the [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) method only.</span></span>|  
-|`CorHandleWeakOnly`|<span data-ttu-id="0a2df-121">핸들 테이블의 약한 참조만을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="0a2df-121">Return only weak references from the handle table.</span></span> <span data-ttu-id="0a2df-122">이 값은 사용 된 [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) 방법만 해당 합니다.</span><span class="sxs-lookup"><span data-stu-id="0a2df-122">This value is used by the [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) method only.</span></span>|  
-|`CorHandleAll`|<span data-ttu-id="0a2df-123">핸들 테이블의 모든 참조를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="0a2df-123">Return all references from the handle table.</span></span> <span data-ttu-id="0a2df-124">이 값은 사용 된 [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) 방법만 해당 합니다.</span><span class="sxs-lookup"><span data-stu-id="0a2df-124">This value is used by the [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) method only.</span></span>|  
+|`CorHandleStrong`|<span data-ttu-id="10a4f-108">개체 참조 테이블의 강력한 참조에 대한 핸들입니다.</span><span class="sxs-lookup"><span data-stu-id="10a4f-108">A handle to a strong reference from the object handle table.</span></span>|  
+|`CorHandleStrongPinning`|<span data-ttu-id="10a4f-109">개체 핸들 테이블의 고정 된 강력한 참조에 대 한 핸들입니다.</span><span class="sxs-lookup"><span data-stu-id="10a4f-109">A handle to a pinned strong reference from the object handle table.</span></span>|  
+|`CorHandleWeakShort`|<span data-ttu-id="10a4f-110">개체 핸들 테이블의 약한 참조에 대 한 핸들입니다.</span><span class="sxs-lookup"><span data-stu-id="10a4f-110">A handle to a weak reference from the object handle table.</span></span>|  
+|`CorHandleWeakRefCount`|<span data-ttu-id="10a4f-111">개체 핸들 테이블의 약한 참조 횟수가 계산 개체에 대 한 핸들입니다.</span><span class="sxs-lookup"><span data-stu-id="10a4f-111">A handle to a weak reference-counted object from the object handle table.</span></span>|  
+|`CorHandleStrongRefCount`|<span data-ttu-id="10a4f-112">개체 핸들 테이블의 참조 횟수가 계산 개체에 대 한 핸들입니다.</span><span class="sxs-lookup"><span data-stu-id="10a4f-112">A handle to a reference-counted object from the object handle table.</span></span>|  
+|`CorHandleStrongDependent`|<span data-ttu-id="10a4f-113">개체 핸들 테이블의 종속 개체에 대 한 핸들입니다.</span><span class="sxs-lookup"><span data-stu-id="10a4f-113">A handle to a dependent object from the object handle table.</span></span>|  
+|`CorHandleStrongAsyncPinned`|<span data-ttu-id="10a4f-114">개체 핸들 테이블의 비동기 고정된 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="10a4f-114">An asynchronous pinned object from the object handle table.</span></span>|  
+|`CorHandleStrongSizedByref`|<span data-ttu-id="10a4f-115">가비지 컬렉션 시 모든 개체 및 개체 루트의 집합 클로저의 대략적인 크기를 유지하는 강력한 핸들입니다. </span><span class="sxs-lookup"><span data-stu-id="10a4f-115">A strong handle that keeps an approximate size of the collective closure of all objects and object roots at garbage collection time.</span></span>|  
+|`CorReferenceStack`|<span data-ttu-id="10a4f-116">관리 되는 스택에서 참조입니다.</span><span class="sxs-lookup"><span data-stu-id="10a4f-116">A reference from the managed stack.</span></span>|  
+|`CorReferenceFinalizer`|<span data-ttu-id="10a4f-117">종료자 큐의 참조입니다.</span><span class="sxs-lookup"><span data-stu-id="10a4f-117">A reference from the finalizer queue.</span></span>|  
+|<span data-ttu-id="10a4f-118">CorHandleStrongOnly</span><span class="sxs-lookup"><span data-stu-id="10a4f-118">CorHandleStrongOnly</span></span>|<span data-ttu-id="10a4f-119">핸들 테이블의 강력한 참조만을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="10a4f-119">Return only strong references from the handle table.</span></span> <span data-ttu-id="10a4f-120">이 값은 사용 된 [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) 방법만 해당 합니다.</span><span class="sxs-lookup"><span data-stu-id="10a4f-120">This value is used by the [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) method only.</span></span>|  
+|`CorHandleWeakOnly`|<span data-ttu-id="10a4f-121">핸들 테이블의 약한 참조만을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="10a4f-121">Return only weak references from the handle table.</span></span> <span data-ttu-id="10a4f-122">이 값은 사용 된 [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) 방법만 해당 합니다.</span><span class="sxs-lookup"><span data-stu-id="10a4f-122">This value is used by the [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) method only.</span></span>|  
+|`CorHandleAll`|<span data-ttu-id="10a4f-123">핸들 테이블의 모든 참조를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="10a4f-123">Return all references from the handle table.</span></span> <span data-ttu-id="10a4f-124">이 값은 사용 된 [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) 방법만 해당 합니다.</span><span class="sxs-lookup"><span data-stu-id="10a4f-124">This value is used by the [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) method only.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0a2df-125">설명</span><span class="sxs-lookup"><span data-stu-id="0a2df-125">Remarks</span></span>  
- <span data-ttu-id="0a2df-126">`CorGCReferenceType` 열거형은 다음과 같이 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="0a2df-126">The `CorGCReferenceType` enumeration is used as follows:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="10a4f-125">설명</span><span class="sxs-lookup"><span data-stu-id="10a4f-125">Remarks</span></span>  
+ <span data-ttu-id="10a4f-126">`CorGCReferenceType` 열거형은 다음과 같이 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="10a4f-126">The `CorGCReferenceType` enumeration is used as follows:</span></span>  
   
--   <span data-ttu-id="0a2df-127">값으로는 `type` 필드를 [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) 구조 참조 또는 핸들의 원본을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="0a2df-127">As the value of the `type` field of the [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) structure, it indicates the source of a reference or handle.</span></span>  
+-   <span data-ttu-id="10a4f-127">값으로는 `type` 필드를 [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) 구조 참조 또는 핸들의 원본을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="10a4f-127">As the value of the `type` field of the [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) structure, it indicates the source of a reference or handle.</span></span>  
   
--   <span data-ttu-id="0a2df-128">로 `types` 인수를 [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) 메서드를 열거에 포함 하는 핸들의 형식을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="0a2df-128">As the `types` argument to the [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) method, it specifies the types of handles to include in the enumeration.</span></span>  
+-   <span data-ttu-id="10a4f-128">로 `types` 인수를 [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) 메서드를 열거에 포함 하는 핸들의 형식을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="10a4f-128">As the `types` argument to the [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) method, it specifies the types of handles to include in the enumeration.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0a2df-129">요구 사항</span><span class="sxs-lookup"><span data-stu-id="0a2df-129">Requirements</span></span>  
- <span data-ttu-id="0a2df-130">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="0a2df-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="10a4f-129">요구 사항</span><span class="sxs-lookup"><span data-stu-id="10a4f-129">Requirements</span></span>  
+ <span data-ttu-id="10a4f-130">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="10a4f-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0a2df-131">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0a2df-131">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="10a4f-131">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="10a4f-131">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0a2df-132">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0a2df-132">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="10a4f-132">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="10a4f-132">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="0a2df-133">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="0a2df-133">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ <span data-ttu-id="10a4f-133">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="10a4f-133">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0a2df-134">참고자료</span><span class="sxs-lookup"><span data-stu-id="0a2df-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="10a4f-134">참고자료</span><span class="sxs-lookup"><span data-stu-id="10a4f-134">See also</span></span>
 
-- [<span data-ttu-id="0a2df-135">디버깅 열거형</span><span class="sxs-lookup"><span data-stu-id="0a2df-135">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="10a4f-135">디버깅 열거형</span><span class="sxs-lookup"><span data-stu-id="10a4f-135">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

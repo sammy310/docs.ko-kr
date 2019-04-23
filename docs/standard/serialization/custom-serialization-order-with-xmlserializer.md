@@ -3,40 +3,40 @@ title: XmlSerializer를 통한 사용자 지정 Serialization 순서
 ms.date: 03/30/2017
 ms.assetid: 975abd20-2a1d-42db-aed3-e898025ccce7
 ms.openlocfilehash: f63d460163c33c4253cf565a5755babc1030164f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295038"
 ---
-# <a name="custom-serialization-order-with-xmlserializer"></a><span data-ttu-id="f3fcb-102">XmlSerializer를 통한 사용자 지정 Serialization 순서</span><span class="sxs-lookup"><span data-stu-id="f3fcb-102">Custom Serialization Order With XmlSerializer</span></span>
-[<span data-ttu-id="f3fcb-103">샘플 다운로드</span><span class="sxs-lookup"><span data-stu-id="f3fcb-103">Download Sample</span></span>](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/CustomOrder.zip.exe)  
+# <a name="custom-serialization-order-with-xmlserializer"></a><span data-ttu-id="3b5ad-102">XmlSerializer를 통한 사용자 지정 Serialization 순서</span><span class="sxs-lookup"><span data-stu-id="3b5ad-102">Custom Serialization Order With XmlSerializer</span></span>
+[<span data-ttu-id="3b5ad-103">샘플 다운로드</span><span class="sxs-lookup"><span data-stu-id="3b5ad-103">Download Sample</span></span>](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/CustomOrder.zip.exe)  
   
- <span data-ttu-id="f3fcb-104">이 샘플에서는 XML serialization에서 serialize 및 deserialize되는 요소의 순서를 제어하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f3fcb-104">This sample shows how to control the order of serialized and deserialized elements for XML serialization.</span></span>  
+ <span data-ttu-id="3b5ad-104">이 샘플에서는 XML serialization에서 serialize 및 deserialize되는 요소의 순서를 제어하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3b5ad-104">This sample shows how to control the order of serialized and deserialized elements for XML serialization.</span></span>  
   
- <span data-ttu-id="f3fcb-105">serialization에 대한 자세한 내용은 build.proj 파일 및 소스 코드의 주석을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="f3fcb-105">Review comments in the source code and build.proj files for more information on serialization.</span></span>  
+ <span data-ttu-id="3b5ad-105">serialization에 대한 자세한 내용은 build.proj 파일 및 소스 코드의 주석을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="3b5ad-105">Review comments in the source code and build.proj files for more information on serialization.</span></span>  
   
-### <a name="to-build-the-sample-using-the-command-prompt"></a><span data-ttu-id="f3fcb-106">명령 프롬프트를 사용하여 샘플을 빌드하려면</span><span class="sxs-lookup"><span data-stu-id="f3fcb-106">To build the sample using the Command Prompt</span></span>  
+### <a name="to-build-the-sample-using-the-command-prompt"></a><span data-ttu-id="3b5ad-106">명령 프롬프트를 사용하여 샘플을 빌드하려면</span><span class="sxs-lookup"><span data-stu-id="3b5ad-106">To build the sample using the Command Prompt</span></span>  
   
-1. <span data-ttu-id="f3fcb-107">명령 프롬프트 창을 열고 샘플에 대한 언어별 하위 디렉터리 중 하나로 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="f3fcb-107">Open the Command Prompt window and navigate to one of the language-specific subdirectories for the sample.</span></span>  
+1. <span data-ttu-id="3b5ad-107">명령 프롬프트 창을 열고 샘플에 대한 언어별 하위 디렉터리 중 하나로 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="3b5ad-107">Open the Command Prompt window and navigate to one of the language-specific subdirectories for the sample.</span></span>  
   
-2. <span data-ttu-id="f3fcb-108">명령줄에 **msbuild CustomOrder.sln**을 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="f3fcb-108">Type **msbuild CustomOrder.sln** at the command line.</span></span>  
+2. <span data-ttu-id="3b5ad-108">명령줄에 **msbuild CustomOrder.sln**을 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="3b5ad-108">Type **msbuild CustomOrder.sln** at the command line.</span></span>  
   
-### <a name="to-build-the-sample-using-visual-studio"></a><span data-ttu-id="f3fcb-109">Visual Studio를 사용하여 샘플을 빌드하려면</span><span class="sxs-lookup"><span data-stu-id="f3fcb-109">To build the sample using Visual Studio</span></span>  
+### <a name="to-build-the-sample-using-visual-studio"></a><span data-ttu-id="3b5ad-109">Visual Studio를 사용하여 샘플을 빌드하려면</span><span class="sxs-lookup"><span data-stu-id="3b5ad-109">To build the sample using Visual Studio</span></span>  
   
-1. <span data-ttu-id="f3fcb-110">[!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)]를 열고 샘플에 대한 언어별 하위 디렉터리 중 하나로 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="f3fcb-110">Open [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] and navigate to one of the language-specific subdirectories for the sample.</span></span>  
+1. <span data-ttu-id="3b5ad-110">[!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)]를 열고 샘플에 대한 언어별 하위 디렉터리 중 하나로 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="3b5ad-110">Open [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] and navigate to one of the language-specific subdirectories for the sample.</span></span>  
   
-2. <span data-ttu-id="f3fcb-111">CustomOrder.sln의 아이콘을 두 번 클릭하여 Visual Studio에서 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="f3fcb-111">Double-click the icon for the CustomOrder.sln to open the file in Visual Studio.</span></span>  
+2. <span data-ttu-id="3b5ad-111">CustomOrder.sln의 아이콘을 두 번 클릭하여 Visual Studio에서 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="3b5ad-111">Double-click the icon for the CustomOrder.sln to open the file in Visual Studio.</span></span>  
   
-3. <span data-ttu-id="f3fcb-112">**빌드** 메뉴에서 **솔루션 빌드**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="f3fcb-112">In the **Build** menu, select **Build Solution**.</span></span>  
+3. <span data-ttu-id="3b5ad-112">**빌드** 메뉴에서 **솔루션 빌드**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="3b5ad-112">In the **Build** menu, select **Build Solution**.</span></span>  
   
-4. <span data-ttu-id="f3fcb-113">샘플 응용 프로그램이 기본 \bin 또는 \bin\Debug 하위 디렉터리에 빌드됩니다.</span><span class="sxs-lookup"><span data-stu-id="f3fcb-113">The sample application is built in the default \bin or \bin\Debug subdirectory.</span></span>  
+4. <span data-ttu-id="3b5ad-113">샘플 응용 프로그램이 기본 \bin 또는 \bin\Debug 하위 디렉터리에 빌드됩니다.</span><span class="sxs-lookup"><span data-stu-id="3b5ad-113">The sample application is built in the default \bin or \bin\Debug subdirectory.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f3fcb-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="f3fcb-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3b5ad-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="3b5ad-114">See also</span></span>
 
-- [<span data-ttu-id="f3fcb-115">기본 Serialization</span><span class="sxs-lookup"><span data-stu-id="f3fcb-115">Basic Serialization</span></span>](../../../docs/standard/serialization/basic-serialization.md)
-- [<span data-ttu-id="f3fcb-116">이진 Serialization</span><span class="sxs-lookup"><span data-stu-id="f3fcb-116">Binary Serialization</span></span>](../../../docs/standard/serialization/binary-serialization.md)
-- [<span data-ttu-id="f3fcb-117">특성을 사용하여 XML Serialization 제어</span><span class="sxs-lookup"><span data-stu-id="f3fcb-117">Controlling XML Serialization Using Attributes</span></span>](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
-- [<span data-ttu-id="f3fcb-118">XML Serialization 소개</span><span class="sxs-lookup"><span data-stu-id="f3fcb-118">Introducing XML Serialization</span></span>](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [<span data-ttu-id="f3fcb-119">Serialization</span><span class="sxs-lookup"><span data-stu-id="f3fcb-119">Serialization</span></span>](../../../docs/standard/serialization/index.md)
-- [<span data-ttu-id="f3fcb-120">XML 및 SOAP Serialization</span><span class="sxs-lookup"><span data-stu-id="f3fcb-120">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [<span data-ttu-id="3b5ad-115">기본 serialization</span><span class="sxs-lookup"><span data-stu-id="3b5ad-115">Basic Serialization</span></span>](../../../docs/standard/serialization/basic-serialization.md)
+- [<span data-ttu-id="3b5ad-116">이진 serialization</span><span class="sxs-lookup"><span data-stu-id="3b5ad-116">Binary Serialization</span></span>](../../../docs/standard/serialization/binary-serialization.md)
+- [<span data-ttu-id="3b5ad-117">특성을 사용하여 XML serialization 제어</span><span class="sxs-lookup"><span data-stu-id="3b5ad-117">Controlling XML Serialization Using Attributes</span></span>](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
+- [<span data-ttu-id="3b5ad-118">XML serialization 소개</span><span class="sxs-lookup"><span data-stu-id="3b5ad-118">Introducing XML Serialization</span></span>](../../../docs/standard/serialization/introducing-xml-serialization.md)
+- [<span data-ttu-id="3b5ad-119">serialization</span><span class="sxs-lookup"><span data-stu-id="3b5ad-119">Serialization</span></span>](../../../docs/standard/serialization/index.md)
+- [<span data-ttu-id="3b5ad-120">XML 및 SOAP serialization</span><span class="sxs-lookup"><span data-stu-id="3b5ad-120">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)

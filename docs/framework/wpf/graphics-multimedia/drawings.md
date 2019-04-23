@@ -14,23 +14,23 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 6ab1fe6b-3eed-4432-a248-b487e7234e5b
 ms.openlocfilehash: 975fafebe255d5ff4848fde2c0b0ff08b68d4f7b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59206410"
 ---
-# <a name="drawings"></a><span data-ttu-id="af3f5-102">Drawing</span><span class="sxs-lookup"><span data-stu-id="af3f5-102">Drawings</span></span>
-<xref:System.Windows.Media.Drawing> <span data-ttu-id="af3f5-103">개체는 도형, 이미지 또는 텍스트를 효율적으로 그리는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="af3f5-103">objects are used to efficiently draw shapes, images, or text.</span></span> <span data-ttu-id="af3f5-104">사용 하 여 그릴 때 사용 되는 그리기를 <xref:System.Windows.Media.DrawingBrush> 프로그래밍할 <xref:System.Windows.Media.Visual> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="af3f5-104">Drawings are used when painting with a <xref:System.Windows.Media.DrawingBrush> or programming with <xref:System.Windows.Media.Visual> objects.</span></span>  
+# <a name="drawings"></a><span data-ttu-id="16017-102">Drawing</span><span class="sxs-lookup"><span data-stu-id="16017-102">Drawings</span></span>
+<span data-ttu-id="16017-103"><xref:System.Windows.Media.Drawing> 개체는 도형, 이미지 또는 텍스트를 효율적으로 그리는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="16017-103"><xref:System.Windows.Media.Drawing> objects are used to efficiently draw shapes, images, or text.</span></span> <span data-ttu-id="16017-104">사용 하 여 그릴 때 사용 되는 그리기를 <xref:System.Windows.Media.DrawingBrush> 프로그래밍할 <xref:System.Windows.Media.Visual> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="16017-104">Drawings are used when painting with a <xref:System.Windows.Media.DrawingBrush> or programming with <xref:System.Windows.Media.Visual> objects.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="af3f5-105">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="af3f5-105">In This Section</span></span>  
- [<span data-ttu-id="af3f5-106">Drawing 개체 개요</span><span class="sxs-lookup"><span data-stu-id="af3f5-106">Drawing Objects Overview</span></span>](drawing-objects-overview.md)  
-  [<span data-ttu-id="af3f5-107">방법 항목</span><span class="sxs-lookup"><span data-stu-id="af3f5-107">How-to Topics</span></span>](drawings-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="16017-105">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="16017-105">In This Section</span></span>  
+ [<span data-ttu-id="16017-106">Drawing 개체 개요</span><span class="sxs-lookup"><span data-stu-id="16017-106">Drawing Objects Overview</span></span>](drawing-objects-overview.md)  
+  [<span data-ttu-id="16017-107">방법 항목</span><span class="sxs-lookup"><span data-stu-id="16017-107">How-to Topics</span></span>](drawings-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="af3f5-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="af3f5-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="16017-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="16017-108">See also</span></span>
 
 - <xref:System.Windows.Media.Drawing>
-- [<span data-ttu-id="af3f5-109">2D 그래픽 및 이미징</span><span class="sxs-lookup"><span data-stu-id="af3f5-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [<span data-ttu-id="af3f5-110">WPF 그래픽 렌더링 개요</span><span class="sxs-lookup"><span data-stu-id="af3f5-110">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="af3f5-111">WPF에서 Shape 및 기본 그리기 개요</span><span class="sxs-lookup"><span data-stu-id="af3f5-111">Shapes and Basic Drawing in WPF Overview</span></span>](shapes-and-basic-drawing-in-wpf-overview.md)
-- [<span data-ttu-id="af3f5-112">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="af3f5-112">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="16017-109">2차원 그래픽 및 이미징</span><span class="sxs-lookup"><span data-stu-id="16017-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [<span data-ttu-id="16017-110">WPF 그래픽 렌더링 개요</span><span class="sxs-lookup"><span data-stu-id="16017-110">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="16017-111">WPF에서 Shape 및 기본 그리기 개요</span><span class="sxs-lookup"><span data-stu-id="16017-111">Shapes and Basic Drawing in WPF Overview</span></span>](shapes-and-basic-drawing-in-wpf-overview.md)
+- [<span data-ttu-id="16017-112">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="16017-112">Graphics and Multimedia</span></span>](index.md)
