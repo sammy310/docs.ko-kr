@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
 ms.openlocfilehash: e3594db036edc3a6288b0373737c1ee26a691a57
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59341909"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>방법: Dispose 시스템 리소스 (Visual Basic)
@@ -48,8 +48,8 @@ ms.locfileid: "59341909"
 
 - <xref:System.Data.SqlClient.SqlConnection>
 - [제어 흐름](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
-- [판단 구조체](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
-- [루프 구조체](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
-- [기타 제어 구조체](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
-- [중첩 제어 구조체](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
+- [판단 구조](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
+- [루프 구조](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [기타 제어 구조](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
+- [중첩 제어 구조](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
 - [Using 문](../../../../visual-basic/language-reference/statements/using-statement.md)

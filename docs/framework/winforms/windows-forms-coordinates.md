@@ -8,11 +8,11 @@ helpviewer_keywords:
 - coordinates [Windows Forms], Windows Forms
 ms.assetid: cc06e61f-43b6-4408-a676-2542dcfcd96e
 ms.openlocfilehash: 6feabadff17538f4a7368c348f7b72226e2d678e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59116141"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59980657"
 ---
 # <a name="windows-forms-coordinates"></a>Windows Forms 좌표
 Windows 폼을 위한 좌표계 장치 좌표를 기준으로 하며 Windows Forms에서 그릴 때의 기본 단위는 장치 단위 (일반적으로 픽셀)입니다. 지점은 화면에서 오른쪽, 위쪽에서 아래쪽 증가 y 좌표를 증가 하는 x 좌표를 사용 하 여 x 및 y 좌표 쌍에 의해 설명 되어 있습니다. 화면을 기준으로 원본 위치의 클라이언트 또는 화면 좌표를 지정 하는 여부에 따라 달라 집니다.  

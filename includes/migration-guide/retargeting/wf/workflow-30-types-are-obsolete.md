@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 70acbb571921c5f72ecaa26b26136a77532ad220
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234826"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774458"
 ---
 ### <a name="workflow-30-types-are-obsolete"></a>워크플로 3.0 형식이 사용되지 않음
 

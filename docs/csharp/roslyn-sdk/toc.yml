@@ -1,48 +1,25 @@
-items:
 - name: .NET Compiler Platform SDK(Roslyn API)
   href: index.md
   items:
-  - name: 컴파일러 API 모델 이해
-    href: compiler-api-model.md
-  - name: 구문 작업
-    href: work-with-syntax.md
-  - name: 의미 체계 작업
-    href: work-with-semantics.md
-  - name: 작업 영역 작업
-    href: work-with-workspace.md
-  - name: 구문 시각화 도우미를 사용하여 코드 살펴보기
-    href: syntax-visualizer.md
-  - name: 빠른 시작
-    items:
-    - name: 구문 분석
-      href: get-started/syntax-analysis.md
-    - name: 의미 체계 분석
-      href: get-started/semantic-analysis.md
-    - name: 구문 변환
-      href: get-started/syntax-transformation.md
-  - name: 자습서
-    items:
-    - name: 첫 번째 분석기 및 코드 수정 빌드
-      href: tutorials/how-to-write-csharp-analyzer-code-fix.md
-    - name: 사용자 지정 분석기 및 코드 수정을 작성하기 시작
-  - name: 자습서
-    items:
-    - name: 첫 번째 분석기 빌드
-    - name: 첫 번째 코드 수정 빌드
-    - name: 분석기를 VSIX로 배포
-    - name: 분석기를 NuGet 패키지로 배포
-- name: 샘플
-  items:
-  - name: 비동기 패키지
-  - name: 콘솔 분류자
-  - name: 자동 속성으로 변환
-  - name: 솔루션 서식 지정
-  - name: 변경된 알림 속성 구현
-  - name: const 만들기
-  - name: 방법 가이드
-ms.openlocfilehash: cd4a028bc393f99ef3da5277430276b1094682a8
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470324"
+    - name: 컴파일러 API 모델 이해
+      href: compiler-api-model.md
+    - name: 구문 작업
+      href: work-with-syntax.md
+    - name: 의미 체계 작업
+      href: work-with-semantics.md
+    - name: 작업 영역 작업
+      href: work-with-workspace.md
+    - name: 구문 시각화 도우미를 사용하여 코드 살펴보기
+      href: syntax-visualizer.md
+    - name: 빠른 시작
+      items:
+        - name: 구문 분석
+          href: get-started/syntax-analysis.md
+        - name: 의미 체계 분석
+          href: get-started/semantic-analysis.md
+        - name: 구문 변환
+          href: get-started/syntax-transformation.md
+    - name: 자습서
+      items:
+        - name: 첫 번째 분석기 및 코드 수정 빌드
+          href: tutorials/how-to-write-csharp-analyzer-code-fix.md

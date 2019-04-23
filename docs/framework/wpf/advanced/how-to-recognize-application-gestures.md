@@ -9,11 +9,11 @@ helpviewer_keywords:
 - gestures [WPF], recognizing
 ms.assetid: d58b740f-5192-4a3e-af59-7aa162e6ca15
 ms.openlocfilehash: 647e7c9c1d785cebfdc362dc48511d865f3945dc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191512"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59767437"
 ---
 # <a name="how-to-recognize-application-gestures"></a>방법: 애플리케이션 제스처 인식
 다음 예제에서는 사용자 하면 잉크를 지우는 방법을 <xref:System.Windows.Ink.ApplicationGesture.ScratchOut> 제스처는 <xref:System.Windows.Controls.InkCanvas>합니다. 이 예에서는 가정를 <xref:System.Windows.Controls.InkCanvas>라는 `inkCanvas1`, XAML 파일에서 선언 됩니다.  
