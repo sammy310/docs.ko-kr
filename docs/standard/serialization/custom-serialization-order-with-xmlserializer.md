@@ -3,10 +3,10 @@ title: XmlSerializer를 통한 사용자 지정 Serialization 순서
 ms.date: 03/30/2017
 ms.assetid: 975abd20-2a1d-42db-aed3-e898025ccce7
 ms.openlocfilehash: f63d460163c33c4253cf565a5755babc1030164f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295038"
 ---
 # <a name="custom-serialization-order-with-xmlserializer"></a>XmlSerializer를 통한 사용자 지정 Serialization 순서
@@ -34,9 +34,9 @@ ms.locfileid: "59295038"
   
 ## <a name="see-also"></a>참고자료
 
-- [기본 Serialization](../../../docs/standard/serialization/basic-serialization.md)
-- [이진 Serialization](../../../docs/standard/serialization/binary-serialization.md)
-- [특성을 사용하여 XML Serialization 제어](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
-- [XML Serialization 소개](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [Serialization](../../../docs/standard/serialization/index.md)
-- [XML 및 SOAP Serialization](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [기본 serialization](../../../docs/standard/serialization/basic-serialization.md)
+- [이진 serialization](../../../docs/standard/serialization/binary-serialization.md)
+- [특성을 사용하여 XML serialization 제어](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
+- [XML serialization 소개](../../../docs/standard/serialization/introducing-xml-serialization.md)
+- [serialization](../../../docs/standard/serialization/index.md)
+- [XML 및 SOAP serialization](../../../docs/standard/serialization/xml-and-soap-serialization.md)

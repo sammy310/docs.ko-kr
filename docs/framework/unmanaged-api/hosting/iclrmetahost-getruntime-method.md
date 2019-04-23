@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8b71d0f29d770b2722b0dfaabc8b9667e524c99e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207606"
 ---
 # <a name="iclrmetahostgetruntime-method"></a>ICLRMetaHost::GetRuntime 메서드
@@ -58,7 +58,7 @@ HRESULT GetRuntime (
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_POINTER|`pwzVersion` 또는 `ppRuntime` null입니다.|  
+|E_POINTER|`pwzVersion` 또는 `ppRuntime`이 null입니다.|  
   
 ## <a name="remarks"></a>설명  
  이 메서드가 상호 작용 하는 일관 되 게 레거시 인터페이스를 사용 하 여 같은 합니다 [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) 사용 되지 않는 등의 인터페이스 및 레거시 기능 `CorBindTo*` 함수 (참조 [사용 되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) 호스팅 API는.NET Framework 2.0에서). 즉, 기존 API를 사용 하 여 로드 된 런타임을 새 API에 표시 되며 새 API를 사용 하 여 로드 된 런타임을 레거시 API에 표시 됩니다.  

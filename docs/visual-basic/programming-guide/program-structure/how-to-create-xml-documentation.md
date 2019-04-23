@@ -6,10 +6,10 @@ helpviewer_keywords:
 - XML documentation [Visual Basic], creating
 ms.assetid: 27b5b06c-09b9-496a-8245-f9542d846230
 ms.openlocfilehash: 95f6c5b23deadc16eb1e81f274e2cc5149598fb7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59294486"
 ---
 # <a name="how-to-create-xml-documentation-in-visual-basic"></a>방법: Visual Basic에서 XML 문서 만들기
@@ -38,6 +38,6 @@ ms.locfileid: "59294486"
   
 ## <a name="see-also"></a>참고자료
 
-- [XML로 코드 문서화](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
+- [코드를 XML로 문서화](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
 - [XML 주석 태그](../../../visual-basic/language-reference/xmldoc/index.md)
 - [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - object variables [Visual Basic], determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
 ms.openlocfilehash: aae053ae0473ed6ced0f28da3d5e5afc0be629df
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295041"
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>방법: 두 개체가 동일한 (Visual Basic) 여부를 확인합니다
@@ -52,10 +52,10 @@ Visual basic의 경우 두 변수가 메모리에서 동일한 클래스 인스�
   
 ## <a name="see-also"></a>참고자료
 
-- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object 데이터 형식](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [개체 변수](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [개체 변수 값](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
 - [Is 연산자](../../../../visual-basic/language-reference/operators/is-operator.md)
 - [IsNot 연산자](../../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [방법: 두 개체가 관련이 있는지 확인](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
+- [방법: 두 개체가 관련이 있는지 여부를 결정 합니다.](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
 - [Me, My, MyBase 및 MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

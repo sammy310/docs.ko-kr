@@ -6,10 +6,10 @@ helpviewer_keywords:
 - ActiveX controls, adding to Toolbox
 ms.assetid: ec675027-866f-4c05-aaf2-92fca5200f9a
 ms.openlocfilehash: 5950779e1f0d1e76b933b83135a8bf516161aced
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295083"
 ---
 # <a name="how-to-work-with-activex-controls-visual-basic"></a>방법: ActiveX 컨트롤 (Visual Basic)를 사용 하 여 작동 합니다.
@@ -34,6 +34,6 @@ ActiveX 컨트롤은 COM 구성 요소 또는 웹 페이지 또는 다른 사용
 
 - [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)
 - [방법: Windows Forms에 ActiveX 컨트롤 추가](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
-- [Aximp.exe (Windows Forms ActiveX 컨트롤 가져오기)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md)
+- [Aximp.exe(Windows Forms ActiveX 컨트롤 가져오기)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md)
 - [Windows Form에서 ActiveX 컨트롤을 호스팅할 때의 고려 사항](../../../framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)
 - [상호 운용성 문제 해결](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)

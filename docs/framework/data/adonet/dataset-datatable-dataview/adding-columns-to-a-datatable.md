@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
 ms.openlocfilehash: 2e7008f6693d7d76520a7ff6ae9172e28e4990c2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207008"
 ---
 # <a name="adding-columns-to-a-datatable"></a>DataTable에 열 추가
@@ -49,7 +49,7 @@ workTable.Columns.Add("Purchases", typeof(Double));
 > [!CAUTION]
 >  열은 열에 증분 기본 이름인 지정 된 열에 대 한 열 이름을 제공 하지 않으면,*N* "Column1"부터 추가 될 때에 **DataColumnCollection**합니다. 명명 규칙을 방지 하는 것이 좋습니다 "열*N*"에 있는 기존의 기본 열 이름과 충돌이 발생할 수 있습니다를 제공 하는 경우 열 이름을 제공 하는 이름 때문에 **DataColumnCollection**합니다. 이미 있는 이름을 입력하면 예외가 throw됩니다.  
   
- <xref:System.Xml.Linq.XElement>를 <xref:System.Data.DataColumn.DataType%2A>에서 <xref:System.Data.DataColumn>의 <xref:System.Data.DataTable>로 사용하는 경우 데이터를 읽을 때 XML serialization이 작동하지 않습니다. 예를 들어 <xref:System.Xml.XmlDocument> 메서드를 사용하여 `DataTable.WriteXml`를 작성하는 경우 XML에 대한 serialization 수행 시 <xref:System.Xml.Linq.XElement>에 추가 부모 노드가 있습니다. 이 문제를 해결하려면 <xref:System.Data.SqlTypes.SqlXml> 대신 <xref:System.Xml.Linq.XElement> 형식을 사용합니다. `ReadXml` 및 `WriteXml` 와 올바르게 작동 <xref:System.Data.SqlTypes.SqlXml>합니다.  
+ <xref:System.Xml.Linq.XElement>를 <xref:System.Data.DataColumn.DataType%2A>에서 <xref:System.Data.DataColumn>의 <xref:System.Data.DataTable>로 사용하는 경우 데이터를 읽을 때 XML serialization이 작동하지 않습니다. 예를 들어 <xref:System.Xml.XmlDocument> 메서드를 사용하여 `DataTable.WriteXml`를 작성하는 경우 XML에 대한 serialization 수행 시 <xref:System.Xml.Linq.XElement>에 추가 부모 노드가 있습니다. 이 문제를 해결하려면 <xref:System.Data.SqlTypes.SqlXml> 대신 <xref:System.Xml.Linq.XElement> 형식을 사용합니다. `ReadXml` 및 `WriteXml`이 <xref:System.Data.SqlTypes.SqlXml>와 올바르게 작동합니다.  
   
 ## <a name="see-also"></a>참고자료
 
@@ -57,5 +57,5 @@ workTable.Columns.Add("Purchases", typeof(Double));
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataTable>
 - [DataTable 스키마 정의](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
-- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

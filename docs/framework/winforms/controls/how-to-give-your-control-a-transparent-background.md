@@ -7,10 +7,10 @@ helpviewer_keywords:
 - transparency [Windows Forms], Windows Forms custom controls
 ms.assetid: 32433e63-f4e9-4305-9857-6de3edeb944a
 ms.openlocfilehash: 671075973793d7fbf0b70ce77428a0a632305b9c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59206098"
 ---
 # <a name="how-to-give-your-control-a-transparent-background"></a>방법: 컨트롤에 투명한 배경 적용
@@ -24,11 +24,11 @@ ms.locfileid: "59206098"
   
 ### <a name="to-give-your-control-a-transparent-backcolor"></a>컨트롤에 투명한 배경색을 적용하려면  
   
--   속성 창에서 선택 된 <xref:System.Windows.Forms.ButtonBase.BackColor%2A> 속성 설정 <xref:System.Drawing.Color.Transparent%2A>  
+-   속성 창에서 <xref:System.Windows.Forms.ButtonBase.BackColor%2A> 속성을 선택하고 <xref:System.Drawing.Color.Transparent%2A>으로 설정합니다.  
   
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Drawing.Color.FromArgb%2A>
 - [.NET Framework에서 사용자 지정 Windows Forms 컨트롤 개발](developing-custom-windows-forms-controls.md)
-- [관리형 그래픽 클래스 사용](../advanced/using-managed-graphics-classes.md)
+- [관리되는 그래픽 클래스 사용](../advanced/using-managed-graphics-classes.md)
 - [방법: 불투명 및 반투명 선 그리기](../advanced/how-to-draw-opaque-and-semitransparent-lines.md)
