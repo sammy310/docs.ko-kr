@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 589bd7b2132693c89dc10ae1a5c8d0bf52ed481e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59218994"
 ---
-# <a name="setassemblyprops-method"></a><span data-ttu-id="c20af-102">SetAssemblyProps 메서드</span><span class="sxs-lookup"><span data-stu-id="c20af-102">SetAssemblyProps Method</span></span>
-<span data-ttu-id="c20af-103">어셈블리 수준 속성을 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="c20af-103">Assigns assembly-level properties.</span></span>  
+# <a name="setassemblyprops-method"></a><span data-ttu-id="1d832-102">SetAssemblyProps 메서드</span><span class="sxs-lookup"><span data-stu-id="1d832-102">SetAssemblyProps Method</span></span>
+<span data-ttu-id="1d832-103">어셈블리 수준 속성을 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="1d832-103">Assigns assembly-level properties.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c20af-104">구문</span><span class="sxs-lookup"><span data-stu-id="c20af-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1d832-104">구문</span><span class="sxs-lookup"><span data-stu-id="1d832-104">Syntax</span></span>  
   
 ```  
 HRESULT SetAssemblyProps(  
@@ -37,27 +37,27 @@ HRESULT SetAssemblyProps(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c20af-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="c20af-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1d832-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="1d832-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="c20af-106">어셈블리의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="c20af-106">ID of the assembly.</span></span>  
+ <span data-ttu-id="1d832-106">어셈블리의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="1d832-106">ID of the assembly.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="c20af-107">속성을 정의 하는 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="c20af-107">File that defines the property.</span></span> <span data-ttu-id="c20af-108">NULL 일 수 `AssemblyID` 는 바인딩되지 않은 netmodule를 나타내지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c20af-108">Can be NULL if `AssemblyID` does not indicate an unbound netmodule.</span></span>  
+ <span data-ttu-id="1d832-107">속성을 정의 하는 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="1d832-107">File that defines the property.</span></span> <span data-ttu-id="1d832-108">NULL 일 수 `AssemblyID` 는 바인딩되지 않은 netmodule를 나타내지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="1d832-108">Can be NULL if `AssemblyID` does not indicate an unbound netmodule.</span></span>  
   
  `Option`  
- <span data-ttu-id="c20af-109">수정 하는 옵션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="c20af-109">Indicates the option to modify.</span></span>  
+ <span data-ttu-id="1d832-109">수정 하는 옵션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="1d832-109">Indicates the option to modify.</span></span>  
   
  `Value`  
- <span data-ttu-id="c20af-110">옵션의 새 값입니다.</span><span class="sxs-lookup"><span data-stu-id="c20af-110">New value of the option.</span></span>  
+ <span data-ttu-id="1d832-110">옵션의 새 값입니다.</span><span class="sxs-lookup"><span data-stu-id="1d832-110">New value of the option.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c20af-111">반환 값</span><span class="sxs-lookup"><span data-stu-id="c20af-111">Return Value</span></span>  
- <span data-ttu-id="c20af-112">메서드가 성공 하면 S_OK를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="c20af-112">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1d832-111">반환 값</span><span class="sxs-lookup"><span data-stu-id="1d832-111">Return Value</span></span>  
+ <span data-ttu-id="1d832-112">메서드가 성공 하면 S_OK를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="1d832-112">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c20af-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c20af-113">Requirements</span></span>  
- <span data-ttu-id="c20af-114">Alink.h가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="c20af-114">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1d832-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="1d832-113">Requirements</span></span>  
+ <span data-ttu-id="1d832-114">Alink.h가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="1d832-114">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c20af-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="c20af-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1d832-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="1d832-115">See also</span></span>
 
-- [<span data-ttu-id="c20af-116">IALink 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c20af-116">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="c20af-117">IALink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c20af-117">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="c20af-118">ALink API</span><span class="sxs-lookup"><span data-stu-id="c20af-118">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="1d832-116">IALink 인터페이스</span><span class="sxs-lookup"><span data-stu-id="1d832-116">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="1d832-117">IALink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="1d832-117">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="1d832-118">ALink API</span><span class="sxs-lookup"><span data-stu-id="1d832-118">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

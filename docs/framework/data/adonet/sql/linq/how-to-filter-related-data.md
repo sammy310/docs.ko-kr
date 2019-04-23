@@ -6,21 +6,21 @@ dev_langs:
 - vb
 ms.assetid: ec8b8f97-5d01-4f31-9b97-d1556df6a4bc
 ms.openlocfilehash: 3dbedfb7065ac4b1a570a3f6cdbcdcc2177f20cf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59218227"
 ---
-# <a name="how-to-filter-related-data"></a><span data-ttu-id="47387-102">방법: 관련 데이터 필터링</span><span class="sxs-lookup"><span data-stu-id="47387-102">How to: Filter Related Data</span></span>
-<span data-ttu-id="47387-103"><xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> 메서드를 사용하여 검색된 데이터의 양을 제한하기 위한 하위 쿼리를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="47387-103">Use the <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> method to specify sub-queries to limit the amount of retrieved data.</span></span>  
+# <a name="how-to-filter-related-data"></a><span data-ttu-id="e93dc-102">방법: 관련 데이터 필터링</span><span class="sxs-lookup"><span data-stu-id="e93dc-102">How to: Filter Related Data</span></span>
+<span data-ttu-id="e93dc-103"><xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> 메서드를 사용하여 검색된 데이터의 양을 제한하기 위한 하위 쿼리를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="e93dc-103">Use the <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> method to specify sub-queries to limit the amount of retrieved data.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="47387-104">예제</span><span class="sxs-lookup"><span data-stu-id="47387-104">Example</span></span>  
- <span data-ttu-id="47387-105">다음 예제에서 <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> 메서드는 `Orders`를 오늘 선적되지 되지 않은 것으로 제한합니다.</span><span class="sxs-lookup"><span data-stu-id="47387-105">In the following example, the <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> method limits the `Orders` retrieved to those that have not been shipped today.</span></span> <span data-ttu-id="47387-106">이 방법을 사용하지 않을 경우 한 개의 하위 집합만 필요한 경우에도 모든 `Orders`가 검색됩니다.</span><span class="sxs-lookup"><span data-stu-id="47387-106">Without this approach, all `Orders` would have been retrieved even though only a subset is desired.</span></span>  
+## <a name="example"></a><span data-ttu-id="e93dc-104">예제</span><span class="sxs-lookup"><span data-stu-id="e93dc-104">Example</span></span>  
+ <span data-ttu-id="e93dc-105">다음 예제에서 <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> 메서드는 `Orders`를 오늘 선적되지 되지 않은 것으로 제한합니다.</span><span class="sxs-lookup"><span data-stu-id="e93dc-105">In the following example, the <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> method limits the `Orders` retrieved to those that have not been shipped today.</span></span> <span data-ttu-id="e93dc-106">이 방법을 사용하지 않을 경우 한 개의 하위 집합만 필요한 경우에도 모든 `Orders`가 검색됩니다.</span><span class="sxs-lookup"><span data-stu-id="e93dc-106">Without this approach, all `Orders` would have been retrieved even though only a subset is desired.</span></span>  
   
  [!code-csharp[System.Data.Linq.DataLoadOptions#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/system.data.linq.dataloadoptions/cs/program.cs#1)]
  [!code-vb[System.Data.Linq.DataLoadOptions#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.dataloadoptions/vb/module1.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="47387-107">참고자료</span><span class="sxs-lookup"><span data-stu-id="47387-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e93dc-107">참고자료</span><span class="sxs-lookup"><span data-stu-id="e93dc-107">See also</span></span>
 
-- [<span data-ttu-id="47387-108">데이터베이스 쿼리</span><span class="sxs-lookup"><span data-stu-id="47387-108">Querying the Database</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+- [<span data-ttu-id="e93dc-108">데이터베이스 쿼리</span><span class="sxs-lookup"><span data-stu-id="e93dc-108">Querying the Database</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
