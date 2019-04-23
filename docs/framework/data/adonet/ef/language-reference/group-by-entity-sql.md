@@ -3,10 +3,10 @@ title: GROUP BY(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cf4f4972-4724-4945-ba44-943a08549139
 ms.openlocfilehash: 574d952e0183eb65c88864f2788eb7d698c9f2ec
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302948"
 ---
 # <a name="group-by-entity-sql"></a>GROUP BY(Entity SQL)
@@ -20,7 +20,7 @@ ms.locfileid: "59302948"
   
 ## <a name="arguments"></a>인수  
  `aliasedExpression`  
- 그룹화가 수행되는 유효한 쿼리 식입니다. `expression` 속성 또는 FROM 절에서 반환 되는 속성을 참조 하는 비 집계 식일 수 있습니다. GROUP BY 절의 모든 식은 같지 않음을 비교할 수 있는 형식으로 계산되어야 합니다. 이런 형식은 일반적으로 숫자, 문자열, 날짜와 같은 스칼라 기본 형식입니다. 컬렉션을 기준으로 그룹화할 수 없습니다.  
+ 그룹화가 수행되는 유효한 쿼리 식입니다. `expression` 은 속성일 수도 있고 FROM 절을 통해 반환되는 속성을 참조하는 비집계 식일 수도 있습니다. GROUP BY 절의 모든 식은 같지 않음을 비교할 수 있는 형식으로 계산되어야 합니다. 이런 형식은 일반적으로 숫자, 문자열, 날짜와 같은 스칼라 기본 형식입니다. 컬렉션을 기준으로 그룹화할 수 없습니다.  
   
 ## <a name="remarks"></a>설명  
  SELECT 절에 집계 함수가 포함 된 경우 \<select 목록 >, GROUP BY 각 그룹에 대 한 요약 값을 계산 합니다. GROUP BY가 지정된 경우, 선택 목록 내의 집계가 아닌 식에 있는 모든 속성 이름이 GROUP BY 목록에 포함되어야 하거나 아니면 GROUP BY 식이 선택 목록 식과 정확히 일치해야 합니다.  

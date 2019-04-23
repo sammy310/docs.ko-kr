@@ -3,10 +3,10 @@ title: '방법: 전용 스토리지 필드 지정'
 ms.date: 03/30/2017
 ms.assetid: 5a40e816-cc6e-43a0-b32a-9caaa0ab6912
 ms.openlocfilehash: 843b7ae8dbddb76e0e5fa33d3594a5655dbf1a37
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302454"
 ---
 # <a name="how-to-specify-private-storage-fields"></a>방법: 전용 스토리지 필드 지정
@@ -23,4 +23,4 @@ ms.locfileid: "59302454"
 ## <a name="see-also"></a>참고자료
 
 - [LINQ to SQL 개체 모델](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [방법: 코드 편집기를 사용하여 엔터티 클래스 사용자 지정](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [방법: 코드 편집기를 사용 하 여 엔터티 클래스 사용자 지정](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

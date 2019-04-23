@@ -17,10 +17,10 @@ helpviewer_keywords:
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
 ms.openlocfilehash: 891a9a4d092de35ceff2f5ceb6dbde77cf2ca2ce
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303143"
 ---
 # <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>방법: 자식 테이블에서 선택된 행이 올바른 위치에 유지되도록 설정
@@ -85,6 +85,6 @@ Windows Forms에서 데이터 바인딩을 사용할 때 부모/자식 또는 �
   
 ## <a name="see-also"></a>참고자료
 
-- [방법: 동일한 데이터 소스에 바인딩된 여러 컨트롤의 동기화 상태가 유지되도록 설정](multiple-controls-bound-to-data-source-synchronized.md)
+- [방법: 여러 컨트롤을 확인 동일한 데이터 소스에 바인딩된 동기화 된 상태로 유지](multiple-controls-bound-to-data-source-synchronized.md)
 - [BindingSource 구성 요소](./controls/bindingsource-component.md)
 - [데이터 바인딩 및 Windows Forms](data-binding-and-windows-forms.md)

@@ -5,10 +5,10 @@ f1_keywords:
 - vbrFinancial_CannotCalculateRate
 ms.assetid: 17d5c8eb-4716-4b72-977f-a640c02e630d
 ms.openlocfilehash: 86f32251bdbd782e348bbfeb7f0429905b230153
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302649"
 ---
 # <a name="cannot-calculate-rate-using-the-arguments-provided"></a>지정한 인수를 사용하여 비율을 계산할 수 없습니다.

@@ -3,10 +3,10 @@ title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
 ms.openlocfilehash: da9529da9b45fc8ac2fdf0b19d65634dd33450fc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304586"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
@@ -91,7 +91,7 @@ LINQ to Entities에서는 개발자가 Visual Basic 또는 Visual C#을 사용�
 ## <a name="see-also"></a>참고자료
 
 - [LINQ to Entities에서 알려진 문제 및 고려 사항](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
-- [언어 통합 쿼리 (LINQ)C#](../../../../../csharp/programming-guide/concepts/linq/index.md)
-- [언어 통합 쿼리 (LINQ)-Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [LINQ(Language-Integrated Query) - C#](../../../../../csharp/programming-guide/concepts/linq/index.md)
+- [LINQ(Language-Integrated Query) - Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [LINQ 및 ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)
 - [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)

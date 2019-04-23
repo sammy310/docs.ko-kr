@@ -22,10 +22,10 @@ helpviewer_keywords:
 - arguments [Visual Basic], type
 ms.assetid: 242dd2a6-86c4-4ce7-83f2-f2661803f752
 ms.openlocfilehash: c7fb4c95b6ef09508df57b3a0c08a651b122e251
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302403"
 ---
 # <a name="how-to-use-a-generic-class-visual-basic"></a>방법: 제네릭 클래스 (Visual Basic)를 사용 합니다.
@@ -52,5 +52,5 @@ ms.locfileid: "59302403"
 - [언어 독립성 및 언어 독립적 구성 요소](../../../../standard/language-independence-and-language-independent-components.md)
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
 - [Imports 문(.NET 네임스페이스 및 형식)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [방법: 다른 데이터 형식에 동일한 기능을 제공할 수 있는 클래스를 정의 합니다.](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)
+- [방법: 다른 데이터 형식에 동일한 기능을 제공할 수 있는 클래스 정의](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)
 - [반복기](../../../../visual-basic/programming-guide/concepts/iterators.md)

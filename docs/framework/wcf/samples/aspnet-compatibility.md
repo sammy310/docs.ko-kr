@@ -3,10 +3,10 @@ title: ASP.NET 호환성
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
 ms.openlocfilehash: 01381dc579f5ae3eadd2f913a0e09d7d259794a1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304224"
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET 호환성
@@ -129,4 +129,4 @@ Press <ENTER> to terminate client.
   
 ## <a name="see-also"></a>참고자료
 
-- [AppFabric 호스팅 및 지속성 샘플](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [AppFabric 호스팅 및 지 속성 샘플](https://go.microsoft.com/fwlink/?LinkId=193961)

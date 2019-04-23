@@ -3,10 +3,10 @@ title: 오류 처리 및 오류 보고에 대한 확장 제어
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
 ms.openlocfilehash: 4a12ab62a9ec25d207a88b041bcdf498eaff7228
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303208"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>오류 처리 및 오류 보고에 대한 확장 제어
@@ -19,7 +19,7 @@ ms.locfileid: "59303208"
   
  이 샘플에서 `CalculatorErrorHandler` 형식은 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 인터페이스를 구현합니다. 안에  
   
- <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> 메서드는 `CalculatorErrorHandler` c:\logs에 있는 Error.txt 텍스트 파일에 오류 로그를 기록 합니다. 샘플에서는 오류를 기록한 후 제거하지 않으므로 해당 오류를 클라이언트에 다시 보고할 수 있습니다.  
+ <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> 메서드에서 `CalculatorErrorHandler`는 c:\logs에 있는 Error.txt 텍스트 파일에 오류 로그를 기록합니다. 샘플에서는 오류를 기록한 후 제거하지 않으므로 해당 오류를 클라이언트에 다시 보고할 수 있습니다.  
   
 ```  
 public class CalculatorErrorHandler : IErrorHandler  

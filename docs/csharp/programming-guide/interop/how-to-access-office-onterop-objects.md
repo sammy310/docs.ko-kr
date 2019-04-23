@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: b928be1c4e291918b0d75d6efc40bb11cff91088
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 382ecb17654377e8d37e1b3a572ed84442d76b1a
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203537"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59303000"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>방법: Visual C# 기능을 사용하여 Office Interop 개체에 액세스(C# 프로그래밍 가이드)
 Visual C#에는 Office API 개체에 간편하게 액세스할 수 있는 기능이 있습니다. 새로운 기능에는 명명된 인수와 선택적 인수, `dynamic`이라는 새 형식 그리고 인수를 값 매개 변수처럼 COM 메서드의 참조 매개 변수로 전달하는 기능이 포함됩니다.  
@@ -30,65 +30,65 @@ Visual C#에는 Office API 개체에 간편하게 액세스할 수 있는 기능
   
 ## <a name="to-create-a-new-console-application"></a>새 콘솔 애플리케이션을 만들려면  
   
-1.  Visual Studio를 시작합니다.  
+1. Visual Studio를 시작합니다.  
   
-2.  **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다. **새 프로젝트** 대화 상자가 나타납니다.  
+2. **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다. **새 프로젝트** 대화 상자가 나타납니다.  
   
-3.  **설치된 템플릿** 창에서 **Visual C#** 을 확장한 다음 **Windows**를 클릭합니다.  
+3. **설치된 템플릿** 창에서 **Visual C#** 을 확장한 다음 **Windows**를 클릭합니다.  
   
-4.  **새 프로젝트** 대화 상자 위쪽에서 **.NET Framework 4** 이상 버전이 대상 프레임워크로 선택되어 있는지 확인합니다.  
+4. **새 프로젝트** 대화 상자 위쪽에서 **.NET Framework 4** 이상 버전이 대상 프레임워크로 선택되어 있는지 확인합니다.  
   
-5.  **템플릿** 창에서 **콘솔 애플리케이션**을 클릭합니다.  
+5. **템플릿** 창에서 **콘솔 애플리케이션**을 클릭합니다.  
   
-6.  **이름** 필드에 프로젝트의 이름을 입력합니다.  
+6. **이름** 필드에 프로젝트의 이름을 입력합니다.  
   
-7.  **확인**을 클릭합니다.  
+7. **확인**을 클릭합니다.  
   
      **솔루션 탐색기**에 새 프로젝트가 표시됩니다.  
   
 ## <a name="to-add-references"></a>참조를 추가하려면  
   
-1.  **솔루션 탐색기**에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 클릭합니다. **참조 추가** 대화 상자가 나타납니다.  
+1. **솔루션 탐색기**에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 클릭합니다. **참조 추가** 대화 상자가 나타납니다.  
   
-2.  **어셈블리** 페이지의 **구성 요소 이름** 목록에서 **Microsoft.Office.Interop.Word**를 선택하고 Ctrl 키를 누른 상태로 **Microsoft.Office.Interop.Excel**을 선택합니다.  이러한 어셈블리가 보이지 않으면 어셈블리가 설치되어 있으며 표시되는지를 확인해야 할 수 있습니다([방법: Office 주 Interop 어셈블리 설치](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies) 참조).  
+2. **어셈블리** 페이지의 **구성 요소 이름** 목록에서 **Microsoft.Office.Interop.Word**를 선택하고 Ctrl 키를 누른 상태로 **Microsoft.Office.Interop.Excel**을 선택합니다.  이러한 어셈블리가 보이지 않으면 어셈블리가 설치되어 있으며 표시되는지를 확인해야 할 수 있습니다([방법: Office 주 Interop 어셈블리 설치](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies) 참조).  
   
-3.  **확인**을 클릭합니다.  
+3. **확인**을 클릭합니다.  
   
 ## <a name="to-add-necessary-using-directives"></a>필요한 using 지시문을 추가하려면  
   
-1.  **솔루션 탐색기**에서 **Program.cs** 파일을 마우스 오른쪽 단추로 클릭하고 **코드 보기**를 클릭합니다.  
+1. **솔루션 탐색기**에서 **Program.cs** 파일을 마우스 오른쪽 단추로 클릭하고 **코드 보기**를 클릭합니다.  
   
-2.  다음 `using` 지시문을 코드 파일의 맨 위에 추가합니다.  
+2. 다음 `using` 지시문을 코드 파일의 맨 위에 추가합니다.  
   
      [!code-csharp[csProgGuideOfficeHowTo#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#1)]  
   
 ## <a name="to-create-a-list-of-bank-accounts"></a>은행 계좌 목록을 만들려면  
   
-1.  다음 클래스 정의를 **Program.cs**의 `Program` 클래스 아래에 붙여 넣습니다.  
+1. 다음 클래스 정의를 **Program.cs**의 `Program` 클래스 아래에 붙여 넣습니다.  
   
      [!code-csharp[csProgGuideOfficeHowTo#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#2)]  
   
-2.  다음 코드를 `Main` 메서드에 추가하여 계좌 두 개가 포함된 `bankAccounts` 목록을 만듭니다.  
+2. 다음 코드를 `Main` 메서드에 추가하여 계좌 두 개가 포함된 `bankAccounts` 목록을 만듭니다.  
   
      [!code-csharp[csProgGuideOfficeHowTo#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#3)]  
   
 ## <a name="to-declare-a-method-that-exports-account-information-to-excel"></a>계좌 정보를 Excel로 내보내는 메서드를 선언하려면  
   
-1.  다음 메서드를 `Program` 클래스에 추가하여 Excel 워크시트를 설정합니다.  
+1. 다음 메서드를 `Program` 클래스에 추가하여 Excel 워크시트를 설정합니다.  
   
      <xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A> 메서드에는 특정 템플릿을 지정하기 위한 선택적 매개 변수가 있습니다. [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]에서 새롭게 제공되는 선택적 매개 변수를 사용하면 매개 변수의 기본값을 사용하려는 경우 해당 매개 변수의 인수를 생략할 수 있습니다. 다음 코드에서는 인수가 전송되지 않으므로 `Add`는 기본 템플릿을 사용하며 새 통합 문서를 만듭니다. 이전 버전의 C#에서 이와 동일한 문을 사용하려면 자리 표시자 인수인 `ExcelApp.Workbooks.Add(Type.Missing)`를 사용해야 했습니다.  
   
      [!code-csharp[csProgGuideOfficeHowTo#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#4)]  
   
-2.  `DisplayInExcel` 끝에 다음 코드를 추가합니다. 이 코드는 워크시트 첫 번째 행의 처음 두 열에 값을 삽입합니다.  
+2. `DisplayInExcel` 끝에 다음 코드를 추가합니다. 이 코드는 워크시트 첫 번째 행의 처음 두 열에 값을 삽입합니다.  
   
      [!code-csharp[csProgGuideOfficeHowTo#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#5)]  
   
-3.  `DisplayInExcel` 끝에 다음 코드를 추가합니다. `foreach` 루프는 계좌 목록의 정보를 워크시트에서 연속 행의 처음 두 열에 삽입합니다.  
+3. `DisplayInExcel` 끝에 다음 코드를 추가합니다. `foreach` 루프는 계좌 목록의 정보를 워크시트에서 연속 행의 처음 두 열에 삽입합니다.  
   
      [!code-csharp[csProgGuideOfficeHowTo#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#7)]  
   
-4.  열 너비를 콘텐츠에 맞게 조정하려면 `DisplayInExcel` 끝에 다음 코드를 추가합니다.  
+4. 열 너비를 콘텐츠에 맞게 조정하려면 `DisplayInExcel` 끝에 다음 코드를 추가합니다.  
   
      [!code-csharp[csProgGuideOfficeHowTo#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#13)]  
   
@@ -100,17 +100,17 @@ Visual C#에는 Office API 개체에 간편하게 액세스할 수 있는 기능
   
 ## <a name="to-run-the-project"></a>프로젝트를 실행하려면  
   
-1.  `Main` 끝에 다음 줄을 추가합니다.  
+1. `Main` 끝에 다음 줄을 추가합니다.  
   
      [!code-csharp[csProgGuideOfficeHowTo#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#8)]  
   
-2.  Ctrl+F5를 누릅니다.  
+2. Ctrl+F5를 누릅니다.  
   
      두 계좌의 데이터가 포함된 Excel 워크시트가 표시됩니다.  
   
 ## <a name="to-add-a-word-document"></a>Word 문서를 추가하려면  
   
-1.  [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 이상 버전에서 Office 프로그래밍을 향상시키는 추가 방식을 설명하기 위해 다음 코드는 Word 애플리케이션을 열고 Excel 워크시트에 연결되는 아이콘을 만듭니다.  
+1. [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 이상 버전에서 Office 프로그래밍을 향상시키는 추가 방식을 설명하기 위해 다음 코드는 Word 애플리케이션을 열고 Excel 워크시트에 연결되는 아이콘을 만듭니다.  
   
      이 단계의 뒷부분에서 제공되는 `CreateIconInWordDoc` 메서드를 `Program` 클래스에 붙여 넣습니다. `CreateIconInWordDoc`는 명명된 인수와 선택적 인수를 사용하여 <xref:Microsoft.Office.Interop.Word.Documents.Add%2A> 및 <xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>에 대한 메서드 호출의 복잡성을 줄입니다. 이러한 호출에는 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]에 도입된 다른 두 가지 새 기능이 통합됩니다. 이러한 기능은 참조 매개 변수가 포함된 COM 메서드 호출을 간소화합니다. 그 중 첫 번째 기능은 인수를 값 매개 변수처럼 참조 매개 변수로 전달하는 것입니다. 즉, 각 참조 매개 변수에 대한 변수를 만들지 않고 직접 값을 보낼 수 있습니다. 컴파일러는 인수 값을 저장하기 위한 임시 변수를 생성하고 호출에서 값이 반환되면 해당 변수를 삭제합니다. 두 번째 기능은 인수 목록의 `ref` 키워드를 생략하는 것입니다.  
   
@@ -124,21 +124,21 @@ Visual C#에는 Office API 개체에 간편하게 액세스할 수 있는 기능
   
      [!code-csharp[csProgGuideOfficeHowTo#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#10)]  
   
-2.  `Main` 끝에 다음 문을 추가합니다.  
+2. `Main` 끝에 다음 문을 추가합니다.  
   
      [!code-csharp[csProgGuideOfficeHowTo#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#11)]  
   
-3.  `DisplayInExcel` 끝에 다음 문을 추가합니다. `Copy` 메서드는 클립보드에 워크시트를 추가합니다.  
+3. `DisplayInExcel` 끝에 다음 문을 추가합니다. `Copy` 메서드는 클립보드에 워크시트를 추가합니다.  
   
      [!code-csharp[csProgGuideOfficeHowTo#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#12)]  
   
-4.  Ctrl+F5를 누릅니다.  
+4. Ctrl+F5를 누릅니다.  
   
      아이콘이 포함된 Word 문서가 나타납니다. 아이콘을 두 번 클릭하여 워크시트를 포그라운드로 가져옵니다.  
   
 ## <a name="to-set-the-embed-interop-types-property"></a>Interop 형식 포함 속성을 설정하려면  
   
-1.  런타임에 PIA(주 interop 어셈블리)를 사용하지 않아도 되는 COM 형식을 호출할 때는 코드를 추가로 개선할 수 있습니다. PIA에 대한 종속성을 제거하면 버전을 독립적으로 실행할 수 있으며 보다 쉽게 배포할 수 있습니다. PIA를 사용하지 않는 프로그래밍의 장점에 대한 자세한 내용은 [연습: 관리되는 어셈블리의 형식 포함](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)을 참조하세요.  
+1. 런타임에 PIA(주 interop 어셈블리)를 사용하지 않아도 되는 COM 형식을 호출할 때는 코드를 추가로 개선할 수 있습니다. PIA에 대한 종속성을 제거하면 버전을 독립적으로 실행할 수 있으며 보다 쉽게 배포할 수 있습니다. PIA를 사용하지 않는 프로그래밍의 장점에 대한 자세한 내용은 [연습: 관리되는 어셈블리의 형식 포함](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)을 참조하세요.  
   
      또한 COM 메서드에서 사용해야 하며 반환되는 형식은 `dynamic`가 아닌 `Object` 형식을 사용하여 표시할 수 있으므로 프로그램이 더욱 쉬워집니다. `dynamic` 형식이 포함된 변수는 런타임까지 평가되지 않으므로 명시적 캐스팅을 수행할 필요가 없습니다. 자세한 내용은 [dynamic 형식 사용](../../../csharp/programming-guide/types/using-type-dynamic.md)을 참조하세요.  
   
@@ -146,15 +146,15 @@ Visual C#에는 Office API 개체에 간편하게 액세스할 수 있는 기능
   
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]  
   
-2.  형식 정보를 포함하는 대신 기본값을 변경하여 PIA를 사용하려면 **솔루션 탐색기**에서 **참조** 노드를 확장하고 **Microsoft.Office.Interop.Excel** 또는 **Microsoft.Office.Interop.Word**를 선택합니다.  
+2. 형식 정보를 포함하는 대신 기본값을 변경하여 PIA를 사용하려면 **솔루션 탐색기**에서 **참조** 노드를 확장하고 **Microsoft.Office.Interop.Excel** 또는 **Microsoft.Office.Interop.Word**를 선택합니다.  
   
-3.  **속성** 창이 보이지 않으면 **F4**키를 누릅니다.  
+3. **속성** 창이 보이지 않으면 **F4**키를 누릅니다.  
   
-4.  속성 목록에서 **Interop 형식 포함**을 찾은 다음 해당 값을 **False**로 변경합니다. 마찬가지로 명령 프롬프트에서 [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 대신 [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 컴파일러 옵션을 사용하여 컴파일할 수 있습니다.  
+4. 속성 목록에서 **Interop 형식 포함**을 찾은 다음 해당 값을 **False**로 변경합니다. 마찬가지로 명령 프롬프트에서 [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 대신 [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 컴파일러 옵션을 사용하여 컴파일할 수 있습니다.  
   
 ## <a name="to-add-additional-formatting-to-the-table"></a>표에 서식을 더 추가하려면  
   
-1.  `AutoFit`에서 `DisplayInExcel`에 대한 두 호출을 다음 문으로 바꿉니다.  
+1. `AutoFit`에서 `DisplayInExcel`에 대한 두 호출을 다음 문으로 바꿉니다.  
   
      [!code-csharp[csProgGuideOfficeHowTo#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#15)]  
   
@@ -162,9 +162,9 @@ Visual C#에는 Office API 개체에 간편하게 액세스할 수 있는 기능
   
      [!code-csharp[csProgGuideOfficeHowTo#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#16)]  
   
-2.  결과를 보려면 CTRL+F5를 누릅니다. 기타 서식은 <xref:Microsoft.Office.Interop.Excel.XlRangeAutoFormat> 열거형에 나열됩니다.  
+2. 결과를 보려면 CTRL+F5를 누릅니다. 기타 서식은 <xref:Microsoft.Office.Interop.Excel.XlRangeAutoFormat> 열거형에 나열됩니다.  
   
-3.  1단계의 문을 다음 코드와 비교합니다. 이 코드는 [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] 이하 버전에 필요한 인수를 보여 줍니다.  
+3. 1단계의 문을 다음 코드와 비교합니다. 이 코드는 [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] 이하 버전에 필요한 인수를 보여 줍니다.  
   
      [!code-csharp[csProgGuideOfficeHowTo#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#17)]  
   

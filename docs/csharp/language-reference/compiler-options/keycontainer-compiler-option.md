@@ -8,12 +8,12 @@ helpviewer_keywords:
 - keycontainer compiler option [C#]
 - -keycontainer compiler option [C#]
 ms.assetid: b3982b6d-2382-4f7e-bebd-ce98eaa30763
-ms.openlocfilehash: 06a714bf9140ac793e8d853183047ca7255d565e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cf51bccc98f04c38149ec821b7064a4844d7e804
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728991"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59302779"
 ---
 # <a name="-keycontainer-c-compiler-options"></a>-keycontainer(C# 컴파일러 옵션)
 암호화 키 컨테이너의 이름을 지정합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "54728991"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
-1.  이 컴파일러 옵션은 Visual Studio 개발 환경에서 사용할 수 없습니다.  
+1. 이 컴파일러 옵션은 Visual Studio 개발 환경에서 사용할 수 없습니다.  
   
  프로그래밍 방식으로 <xref:VSLangProj.ProjectProperties.AssemblyKeyContainerName%2A>을 사용하여 이 컴파일러 옵션에 액세스할 수 있습니다.  
   

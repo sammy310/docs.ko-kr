@@ -10,10 +10,10 @@ helpviewer_keywords:
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
 ms.openlocfilehash: 4014bef2e0c27a0f6a684bc1ed95019f392062a5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302714"
 ---
 # <a name="determining-object-type-visual-basic"></a>개체 형식 확인(Visual Basic)
@@ -48,7 +48,7 @@ ms.locfileid: "59302714"
 
 - <xref:Microsoft.VisualBasic.Information.TypeName%2A>
 - [문자열 이름을 사용하여 속성 또는 메서드 호출](../../../../visual-basic/programming-guide/language-features/early-late-binding/calling-a-property-or-method-using-a-string-name.md)
-- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object 데이터 형식](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [If...Then...Else 문](../../../../visual-basic/language-reference/statements/if-then-else-statement.md)
 - [String 데이터 형식](../../../../visual-basic/language-reference/data-types/string-data-type.md)
 - [Integer 데이터 형식](../../../../visual-basic/language-reference/data-types/integer-data-type.md)

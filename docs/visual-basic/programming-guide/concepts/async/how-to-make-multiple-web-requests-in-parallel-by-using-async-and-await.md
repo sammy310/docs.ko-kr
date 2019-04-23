@@ -3,10 +3,10 @@ title: '방법: 비동기를 사용 하 여 병렬로 여러 웹 요청 만들�
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
 ms.openlocfilehash: c799fa83c0157019961da6adcf89b6ab6f906763
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303468"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>방법: 비동기를 사용 하 여 병렬로 여러 웹 요청 만들기 및 Await (Visual Basic)
@@ -68,9 +68,9 @@ Dim result = Await myTask
   
 3. 프로젝트에 다음과 같은 지원 메서드를 추가합니다.  
   
-    -   `ProcessURLAsync` 사용 하는 <xref:System.Net.Http.HttpClient> 바이트 배열로 웹 사이트의 콘텐츠를 다운로드 하는 방법입니다. 그런 다음 지원 메서드 `ProcessURLAsync`는 배열의 길이를 표시하고 반환합니다.  
+    -   `ProcessURLAsync`는 <xref:System.Net.Http.HttpClient> 메서드를 사용하여 웹 사이트 내용을 바이트 배열로 다운로드합니다. 그런 다음 지원 메서드 `ProcessURLAsync`는 배열의 길이를 표시하고 반환합니다.  
   
-    -   `DisplayResults` 각 URL에 대 한 바이트 배열의 바이트 수를 표시합니다. 이 표시는 각 작업의 다운로드가 완료된 시간을 보여 줍니다.  
+    -   `DisplayResults`에 각 URL에 대한 바이트 배열의 바이트 수가 표시됩니다. 이 표시는 각 작업의 다운로드가 완료된 시간을 보여 줍니다.  
   
      다음 메서드를 복사한 후 붙여넣습니다는 `startButton_Click` MainWindow.xaml.vb의 이벤트 처리기입니다.  
   

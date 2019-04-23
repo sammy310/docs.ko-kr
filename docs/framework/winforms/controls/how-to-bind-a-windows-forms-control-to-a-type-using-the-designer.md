@@ -7,10 +7,10 @@ helpviewer_keywords:
 - types [Windows Forms], binding controls to
 ms.assetid: 5ab984b5-c2d0-4638-a572-1c84013e8746
 ms.openlocfilehash: b298efb0494994659673f9bf9893b667f7eb0f8c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304215"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>방법: 디자이너를 사용하여 형식에 Windows Forms 컨트롤 바인딩
@@ -54,5 +54,5 @@ ms.locfileid: "59304215"
 ## <a name="see-also"></a>참고자료
 
 - [BindingSource 구성 요소](bindingsource-component.md)
-- [방법: 형식에 Windows Forms 컨트롤 바인딩](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [방법: 형식에는 Windows Forms 컨트롤 바인딩](how-to-bind-a-windows-forms-control-to-a-type.md)
 - [Visual Studio에서 데이터에 컨트롤 바인딩](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)
