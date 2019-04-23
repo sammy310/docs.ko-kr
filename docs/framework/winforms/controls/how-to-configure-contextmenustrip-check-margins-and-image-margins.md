@@ -10,10 +10,10 @@ helpviewer_keywords:
 - margins [Windows Forms], setting check and image in Windows Forms ContextMenuStrips
 ms.assetid: 3391c4c2-0c9e-4aa4-9492-13ff7644bdf2
 ms.openlocfilehash: 0e78ed960904baaead8e8d23b51c97cf2edfd4ee
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59189647"
 ---
 # <a name="how-to-configure-contextmenustrip-check-margins-and-image-margins"></a>방법: ContextMenuStrip 선택 여백 및 이미지 여백 구성
@@ -39,4 +39,4 @@ ms.locfileid: "59189647"
 - <xref:System.Windows.Forms.ContextMenuStrip>
 - <xref:System.Windows.Forms.ToolStripDropDown>
 - [ToolStrip 컨트롤](toolstrip-control-windows-forms.md)
-- [방법: ContextMenuStrip 컨트롤에서 선택 여백 및 이미지 여백 사용](how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)
+- [방법: 선택 여백 및 ContextMenuStrip 컨트롤에서 이미지 여백 사용](how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)

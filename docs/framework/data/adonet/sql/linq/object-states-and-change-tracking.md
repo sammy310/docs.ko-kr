@@ -3,10 +3,10 @@ title: 개체 상태 및 변경 내용 추적
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
 ms.openlocfilehash: 63b04d3a4b6e48594e9664833a6e539d62bbab0e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191157"
 ---
 # <a name="object-states-and-change-tracking"></a>개체 상태 및 변경 내용 추적
@@ -34,9 +34,9 @@ ms.locfileid: "59191157"
 >  `Table`에 추가된 개체는 ID 캐시에 없습니다. ID 캐시는 데이터베이스에서 검색된 개체만 반영합니다. <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> 호출 이후 <xref:System.Data.Linq.DataContext.SubmitChanges%2A>가 완료될 때까지 추가된 엔터티는 데이터베이스에 대한 쿼리에 표시되지 않습니다.  
   
 ## <a name="deleting-objects"></a>개체 삭제  
- 적절한 `o`에서 <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>(o)을 호출하여 추적된 개체 <xref:System.Data.Linq.Table%601>를 삭제 대상으로 표시합니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개체 제거를 고려를 <xref:System.Data.Linq.EntitySet%601> 업데이트로 작업과 해당 외래 키 값 설정 되어 null로 합니다. 작업의 대상(`o`)은 해당 테이블에서 삭제되지 않습니다. 예를 들어, `cust.Orders.DeleteOnSubmit(ord)`는 외래 키 `cust`를 null로 설정하여 `ord` 및 `ord.CustomerID` 간의 관계를 끊는 업데이트를 나타냅니다. 이로 인해 `ord`에 해당하는 행이 삭제되지는 않습니다.  
+ 적절한 `o`에서 <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>(o)을 호출하여 추적된 개체 <xref:System.Data.Linq.Table%601>를 삭제 대상으로 표시합니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 <xref:System.Data.Linq.EntitySet%601>에서 개체를 제거하는 것을 업데이트 작업으로 간주하며 해당 외래 키 값이 null로 설정됩니다. 작업의 대상(`o`)은 해당 테이블에서 삭제되지 않습니다. 예를 들어, `cust.Orders.DeleteOnSubmit(ord)`는 외래 키 `cust`를 null로 설정하여 `ord` 및 `ord.CustomerID` 간의 관계를 끊는 업데이트를 나타냅니다. 이로 인해 `ord`에 해당하는 행이 삭제되지는 않습니다.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개체 삭제 되 면 다음 작업을 수행 (<xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>) 해당 테이블에서:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 개체가 해당 테이블에서 삭제될 때(<xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>) 다음 작업을 처리합니다.  
   
 -   <xref:System.Data.Linq.DataContext.SubmitChanges%2A>가 호출될 경우 `DELETE` 작업이 해당 개체에 대해 수행됩니다.  
   

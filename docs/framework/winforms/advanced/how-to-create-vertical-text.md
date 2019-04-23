@@ -11,10 +11,10 @@ helpviewer_keywords:
 - vertical text [Windows Forms], drawing
 ms.assetid: 50c69046-4188-47d9-b949-cc2610ffd337
 ms.openlocfilehash: 75f5d8faa4dc4b7e022cd6de2e6db49f4fa9030c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59190225"
 ---
 # <a name="how-to-create-vertical-text"></a>방법: 세로 텍스트 만들기
@@ -32,8 +32,8 @@ ms.locfileid: "59190225"
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
   
--   앞의 예제는 Windows Forms에서 사용 하도록 설계 되었으며 필요 <xref:System.Windows.Forms.PaintEventArgs>`e` 에서의 매개 변수인 <xref:System.Windows.Forms.PaintEventHandler>합니다.  
+-   앞의 예제는 Windows Forms에서 사용 하도록 설계 되었으며 필요 <xref:System.Windows.Forms.PaintEventArgs> `e` 의 매개 변수인 <xref:System.Windows.Forms.PaintEventHandler>합니다.  
   
 ## <a name="see-also"></a>참고자료
 
-- [방법: GDI를 사용하여 텍스트 그리기](how-to-draw-text-with-gdi.md)
+- [방법: GDI 사용 하 여 텍스트 그리기](how-to-draw-text-with-gdi.md)

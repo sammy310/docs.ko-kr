@@ -3,10 +3,10 @@ title: DataAdapters 및 DataReaders
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
 ms.openlocfilehash: af1d44b1e320557ab7906ce65dbeb5415b5c09dd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59189692"
 ---
 # <a name="dataadapters-and-datareaders"></a>DataAdapters 및 DataReaders
@@ -20,7 +20,7 @@ ADO.NET을 사용할 수 있습니다 **DataReader** 데이터베이스에서 �
  [DataReader를 사용하여 데이터 검색](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)  
  ADO.NET에 설명 합니다 **DataReader** 개체 및 사용 데이터 소스에서 결과 스트림을 반환 하는 방법입니다.  
   
- [DataAdapter에서 DataSet 채우기](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
+ [DataAdapter에서 데이터 집합 채우기](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
  `DataSet`를 사용하여 테이블, 열 및 행으로 `DataAdapter`을 채우는 방법을 설명합니다.  
   
  [DataAdapter 매개 변수](../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
@@ -35,7 +35,7 @@ ADO.NET을 사용할 수 있습니다 **DataReader** 데이터베이스에서 �
  [쿼리 결과를 통해 페이징](../../../../docs/framework/data/adonet/paging-through-a-query-result.md)  
  쿼리 결과를 데이터 페이지로 보는 예제를 제공합니다.  
   
- [DataAdapters로 데이터 원본 업데이트](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
+ [DataAdapter로 데이터 원본 업데이트](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  `DataAdapter`를 사용하여 `DataSet`의 변경 내용을 데이터베이스에 적용하는 방법을 설명합니다.  
   
  [DataAdapter 이벤트 처리](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)  
@@ -49,5 +49,5 @@ ADO.NET을 사용할 수 있습니다 **DataReader** 데이터베이스에서 �
 - [데이터 소스에 연결](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [명령 및 매개 변수](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [트랜잭션 및 동시성](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
-- [DataSets, DataTables 및 DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [DataSet, DataTable 및 DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

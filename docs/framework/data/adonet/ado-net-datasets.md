@@ -3,10 +3,10 @@ title: ADO.NET 데이터 집합
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
 ms.openlocfilehash: 50e8e8f5e4b3ee2f5a41cb9dad11b5e701135d9e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59190940"
 ---
 # <a name="adonet-datasets"></a>ADO.NET 데이터 집합
@@ -41,13 +41,13 @@ DataSet 개체 모델
  합니다 **데이터 집합**를 **DataTable**, 및 **DataColumn** 모두를 **ExtendedProperties** 속성입니다. **ExtendedProperties** 되는 **PropertyCollection** 결과 집합을 생성 하는 SELECT 문이나 데이터가 생성 된 시간 등의 사용자 지정 정보를 배치할 수 있습니다. 합니다 **ExtendedProperties** 컬렉션에 대 한 스키마 정보를 함께 유지 되는 **데이터 집합**합니다.  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 데이터 집합에 저장 하는 연결 되지 않은 데이터에 대 한 통합 언어 쿼리 기능을 제공 합니다. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] standard를 사용 하 여 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 구문을 Visual Studio IDE를 사용 하는 경우 컴파일 타임 구문 검사, 정적 입력 및 IntelliSense 지원을 제공 합니다.  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]에서는 데이터 집합에 저장되어 있는 연결되지 않은 데이터에 대한 통합 언어 쿼리 기능을 제공합니다. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] standard를 사용 하 여 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 구문을 Visual Studio IDE를 사용 하는 경우 컴파일 타임 구문 검사, 정적 입력 및 IntelliSense 지원을 제공 합니다.  
   
  자세한 내용은 [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
 
 - [ADO.NET 개요](../../../../docs/framework/data/adonet/ado-net-overview.md)
-- [DataSets, DataTables 및 DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [DataSet, DataTable 및 DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [ADO.NET에서 데이터 검색 및 수정](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
