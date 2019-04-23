@@ -3,31 +3,31 @@ title: 사용자 지정 복합 디자이너 - 워크플로 항목 프리젠터
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
 ms.openlocfilehash: f3c7620f719b8412b6b34bda7be5d607dccda75f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311125"
 ---
-# <a name="custom-composite-designers---workflow-item-presenter"></a><span data-ttu-id="e8ba2-102">사용자 지정 복합 디자이너 - 워크플로 항목 프리젠터</span><span class="sxs-lookup"><span data-stu-id="e8ba2-102">Custom Composite Designers - Workflow Item Presenter</span></span>
-<span data-ttu-id="e8ba2-103"><xref:System.Activities.Presentation.WorkflowItemPresenter> 임의의 활동을 배치할 수 있는 "끌어 놓기 영역"을 만들 수 있도록 하는 WF 디자이너 프로그래밍 모델의 키 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="e8ba2-103">The <xref:System.Activities.Presentation.WorkflowItemPresenter> is a key type in the WF designer programming model that allows for the creation of a "drop zone" where an arbitrary activity can be placed.</span></span> <span data-ttu-id="e8ba2-104">이 샘플에서는 표시 이러한 "드롭 영역". "를 사용 하는 활동 디자이너를 빌드하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e8ba2-104">This sample shows how to build an activity designer that surfaces such a "drop zone."</span></span>
+# <a name="custom-composite-designers---workflow-item-presenter"></a><span data-ttu-id="b776b-102">사용자 지정 복합 디자이너 - 워크플로 항목 프리젠터</span><span class="sxs-lookup"><span data-stu-id="b776b-102">Custom Composite Designers - Workflow Item Presenter</span></span>
+<span data-ttu-id="b776b-103"><xref:System.Activities.Presentation.WorkflowItemPresenter> 임의의 활동을 배치할 수 있는 "끌어 놓기 영역"을 만들 수 있도록 하는 WF 디자이너 프로그래밍 모델의 키 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="b776b-103">The <xref:System.Activities.Presentation.WorkflowItemPresenter> is a key type in the WF designer programming model that allows for the creation of a "drop zone" where an arbitrary activity can be placed.</span></span> <span data-ttu-id="b776b-104">이 샘플에서는 표시 이러한 "드롭 영역". "를 사용 하는 활동 디자이너를 빌드하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b776b-104">This sample shows how to build an activity designer that surfaces such a "drop zone."</span></span>
 
- <span data-ttu-id="e8ba2-105">이 샘플에서는 다음 작업을 수행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e8ba2-105">This sample demonstrates:</span></span>
+ <span data-ttu-id="b776b-105">이 샘플에서는 다음 작업을 수행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b776b-105">This sample demonstrates:</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="e8ba2-106">세부 항목</span><span class="sxs-lookup"><span data-stu-id="e8ba2-106">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="b776b-106">세부 항목</span><span class="sxs-lookup"><span data-stu-id="b776b-106">Demonstrates</span></span>
 
--   <span data-ttu-id="e8ba2-107"><xref:System.Activities.Presentation.WorkflowItemPresenter>를 사용하여 사용자 지정 활동 디자이너 만들기</span><span class="sxs-lookup"><span data-stu-id="e8ba2-107">Creating a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span></span>
+-   <span data-ttu-id="b776b-107"><xref:System.Activities.Presentation.WorkflowItemPresenter>를 사용하여 사용자 지정 활동 디자이너 만들기</span><span class="sxs-lookup"><span data-stu-id="b776b-107">Creating a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span></span>
 
--   <span data-ttu-id="e8ba2-108">메타데이터 저장소를 사용하여 사용자 지정 디자이너 등록</span><span class="sxs-lookup"><span data-stu-id="e8ba2-108">Registering the custom designer using the metadata store.</span></span>
+-   <span data-ttu-id="b776b-108">메타데이터 저장소를 사용하여 사용자 지정 디자이너 등록</span><span class="sxs-lookup"><span data-stu-id="b776b-108">Registering the custom designer using the metadata store.</span></span>
 
--   <span data-ttu-id="e8ba2-109">다시 호스트된 도구 상자를 선언적으로 또는 명령적으로 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="e8ba2-109">Programming the rehosted toolbox declaratively and imperatively.</span></span>
+-   <span data-ttu-id="b776b-109">다시 호스트된 도구 상자를 선언적으로 또는 명령적으로 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="b776b-109">Programming the rehosted toolbox declaratively and imperatively.</span></span>
 
-## <a name="sample-details"></a><span data-ttu-id="e8ba2-110">샘플 세부 정보</span><span class="sxs-lookup"><span data-stu-id="e8ba2-110">Sample Details</span></span>
- <span data-ttu-id="e8ba2-111">이 샘플의 코드는 다음을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e8ba2-111">The code for this sample shows:</span></span>
+## <a name="sample-details"></a><span data-ttu-id="b776b-110">샘플 세부 정보</span><span class="sxs-lookup"><span data-stu-id="b776b-110">Sample Details</span></span>
+ <span data-ttu-id="b776b-111">이 샘플의 코드는 다음을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b776b-111">The code for this sample shows:</span></span>
 
--   <span data-ttu-id="e8ba2-112">`SimpleNativeActivity` 클래스에 대해 사용자 지정 활동 디자이너가 빌드됩니다.</span><span class="sxs-lookup"><span data-stu-id="e8ba2-112">The custom activity designer is built for the `SimpleNativeActivity` class.</span></span>
+-   <span data-ttu-id="b776b-112">`SimpleNativeActivity` 클래스에 대해 사용자 지정 활동 디자이너가 빌드됩니다.</span><span class="sxs-lookup"><span data-stu-id="b776b-112">The custom activity designer is built for the `SimpleNativeActivity` class.</span></span>
 
--   <span data-ttu-id="e8ba2-113"><xref:System.Activities.Presentation.WorkflowItemPresenter>를 사용하여 사용자 지정 활동 디자이너를 만드는 방법</span><span class="sxs-lookup"><span data-stu-id="e8ba2-113">The creation of a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span></span>
+-   <span data-ttu-id="b776b-113"><xref:System.Activities.Presentation.WorkflowItemPresenter>를 사용하여 사용자 지정 활동 디자이너를 만드는 방법</span><span class="sxs-lookup"><span data-stu-id="b776b-113">The creation of a custom activity designer with a <xref:System.Activities.Presentation.WorkflowItemPresenter>.</span></span>
 
 ```xaml
 <sap:ActivityDesigner x:Class="Microsoft.Samples.UsingWorkflowItemPresenter.SimpleNativeDesigner"
@@ -63,24 +63,24 @@ ms.locfileid: "59311125"
 </sap:ActivityDesigner>
 ```
 
- <span data-ttu-id="e8ba2-114">WPF 데이터 바인딩을 사용하여 `ModelItem.Body`에 바인딩합니다.</span><span class="sxs-lookup"><span data-stu-id="e8ba2-114">Note the use of WPF data binding to bind to `ModelItem.Body`.</span></span> `ModelItem` <span data-ttu-id="e8ba2-115">속성 켜져 <xref:System.Activities.Presentation.ActivityDesigner> 은 디자이너가 사용 될,이 경우 기본 개체를 나타내는 **SimpleNativeActivity**합니다.</span><span class="sxs-lookup"><span data-stu-id="e8ba2-115">is the property on <xref:System.Activities.Presentation.ActivityDesigner> that refers to the underlying object the designer is being used for, in this case, **SimpleNativeActivity**.</span></span>
+ <span data-ttu-id="b776b-114">WPF 데이터 바인딩을 사용하여 `ModelItem.Body`에 바인딩합니다.</span><span class="sxs-lookup"><span data-stu-id="b776b-114">Note the use of WPF data binding to bind to `ModelItem.Body`.</span></span> <span data-ttu-id="b776b-115">`ModelItem` 속성 켜져 <xref:System.Activities.Presentation.ActivityDesigner> 은 디자이너가 사용 될,이 경우 기본 개체를 나타내는 **SimpleNativeActivity**합니다.</span><span class="sxs-lookup"><span data-stu-id="b776b-115">`ModelItem` is the property on <xref:System.Activities.Presentation.ActivityDesigner> that refers to the underlying object the designer is being used for, in this case, **SimpleNativeActivity**.</span></span>
 
-#### <a name="to-setup-build-and-run-the-sample"></a><span data-ttu-id="e8ba2-116">샘플을 설치, 빌드 및 실행하려면</span><span class="sxs-lookup"><span data-stu-id="e8ba2-116">To setup, build, and run the sample</span></span>
+#### <a name="to-setup-build-and-run-the-sample"></a><span data-ttu-id="b776b-116">샘플을 설치, 빌드 및 실행하려면</span><span class="sxs-lookup"><span data-stu-id="b776b-116">To setup, build, and run the sample</span></span>
 
-1. <span data-ttu-id="e8ba2-117">Visual Studio 2010에서 솔루션을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="e8ba2-117">Open the solution in Visual Studio 2010.</span></span>
+1. <span data-ttu-id="b776b-117">Visual Studio 2010에서 솔루션을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="b776b-117">Open the solution in Visual Studio 2010.</span></span>
 
-2. <span data-ttu-id="e8ba2-118">F5 키를 눌러 애플리케이션을 컴파일하고 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="e8ba2-118">Press F5 to compile and run the application.</span></span>
+2. <span data-ttu-id="b776b-118">F5 키를 눌러 애플리케이션을 컴파일하고 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="b776b-118">Press F5 to compile and run the application.</span></span>
 
 > [!IMPORTANT]
->  <span data-ttu-id="e8ba2-119">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e8ba2-119">The samples may already be installed on your machine.</span></span> <span data-ttu-id="e8ba2-120">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="e8ba2-120">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="b776b-119">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b776b-119">The samples may already be installed on your machine.</span></span> <span data-ttu-id="b776b-120">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="b776b-120">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="e8ba2-121">이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플.</span><span class="sxs-lookup"><span data-stu-id="e8ba2-121">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="e8ba2-122">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e8ba2-122">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="b776b-121">이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플.</span><span class="sxs-lookup"><span data-stu-id="b776b-121">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="b776b-122">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b776b-122">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`  
   
-## <a name="see-also"></a><span data-ttu-id="e8ba2-123">참고자료</span><span class="sxs-lookup"><span data-stu-id="e8ba2-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b776b-123">참고자료</span><span class="sxs-lookup"><span data-stu-id="b776b-123">See also</span></span>
 
 - <xref:System.Activities.Presentation.WorkflowItemPresenter>
-- [<span data-ttu-id="e8ba2-124">Workflow Designer로 응용 프로그램 개발</span><span class="sxs-lookup"><span data-stu-id="e8ba2-124">Developing Applications with the Workflow Designer</span></span>](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
+- [<span data-ttu-id="b776b-124">워크플로 디자이너로 응용 프로그램 개발</span><span class="sxs-lookup"><span data-stu-id="b776b-124">Developing Applications with the Workflow Designer</span></span>](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
