@@ -3,10 +3,10 @@ title: '방법: 열을 타임스탬프 또는 버전 열로 표현'
 ms.date: 03/30/2017
 ms.assetid: 5afd5ce8-1d20-4bc3-a34f-49d95449f493
 ms.openlocfilehash: db73bf4880d8f5556247f7b037fca24b0ddc56d6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297891"
 ---
 # <a name="how-to-represent-columns-as-timestamp-or-version-columns"></a>방법: 열을 타임스탬프 또는 버전 열로 표현
@@ -23,5 +23,5 @@ ms.locfileid: "59297891"
 ## <a name="see-also"></a>참고자료
 
 - [LINQ to SQL 개체 모델](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [방법: 동시성 충돌을 테스트할 멤버 지정](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)
-- [방법: 코드 편집기를 사용하여 엔터티 클래스 사용자 지정](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [방법: 동시성 충돌에 테스트할 멤버를 지정 합니다.](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)
+- [방법: 코드 편집기를 사용 하 여 엔터티 클래스 사용자 지정](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

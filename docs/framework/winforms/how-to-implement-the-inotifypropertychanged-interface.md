@@ -8,10 +8,10 @@ helpviewer_keywords:
 - INotifyPropertyChanged interface [Windows Forms], implementing
 ms.assetid: eac428af-b43b-46ac-80d9-1a5f88658725
 ms.openlocfilehash: cfdfb22fd854a8f630243e0f612761c71cb778d8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225601"
 ---
 # <a name="how-to-implement-the-inotifypropertychanged-interface"></a>방법: INotifyPropertyChanged 인터페이스 구현
@@ -25,5 +25,5 @@ ms.locfileid: "59225601"
 
 - [방법: PropertyNameChanged 패턴 적용](how-to-apply-the-propertynamechanged-pattern.md)
 - [Windows Forms 데이터 바인딩](windows-forms-data-binding.md)
-- [방법: BindingSource 및 INotifyPropertyChanged 인터페이스를 사용하여 변경 알림 발생](./controls/raise-change-notifications--bindingsource.md)
+- [방법: BindingSource와 INotifyPropertyChanged 인터페이스를 사용 하 여 변경 알림 발생](./controls/raise-change-notifications--bindingsource.md)
 - [Windows Forms 데이터 바인딩의 변경 알림](change-notification-in-windows-forms-data-binding.md)

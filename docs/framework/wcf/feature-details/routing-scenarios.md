@@ -5,10 +5,10 @@ helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
 ms.openlocfilehash: fa5d588211cfe40cde9e9db3161a931e3287cd39
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59223829"
 ---
 # <a name="routing-scenarios"></a>라우팅 시나리오
@@ -68,7 +68,7 @@ ms.locfileid: "59223829"
 ### <a name="in-this-section"></a>섹션 내용  
  [방법: 서비스 버전 관리](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
   
- [방법: 서비스 데이터 분할](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
+ [방법: 서비스 데이터 분](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
   
  [방법: 동적 업데이트](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
   

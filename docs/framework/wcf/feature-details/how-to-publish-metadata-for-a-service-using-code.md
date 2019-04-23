@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 51407e6d-4d87-42d5-be7c-9887b8652006
 ms.openlocfilehash: 870142724321629d6dbeccd4118b814283901776
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297969"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-code"></a>방법: 코드를 사용하여 서비스에 대한 메타데이터 게시
@@ -43,7 +43,7 @@ Windows Communication Foundation (WCF) 서비스에 대 한 메타 데이터 게
      [!code-csharp[htPublishMetadataCode#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#4)]
      [!code-vb[htPublishMetadataCode#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#4)]  
   
-4. 설정 된 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> 속성 `true.`  
+4. <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> 속성을 `true.`로 설정합니다.  
   
      [!code-csharp[htPublishMetadataCode#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#5)]
      [!code-vb[htPublishMetadataCode#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#5)]  
@@ -88,8 +88,8 @@ Windows Communication Foundation (WCF) 서비스에 대 한 메타 데이터 게
   
 ## <a name="see-also"></a>참고자료
 
-- [방법: 관리형 애플리케이션에서 WCF 서비스 호스트](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [방법: 관리 되는 응용 프로그램에서 WCF 서비스 호스팅](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
 - [자체 호스팅](../../../../docs/framework/wcf/samples/self-host.md)
 - [메타데이터 아키텍처 개요](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [메타데이터 사용](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [방법: 구성 파일을 사용하여 서비스에 대한 메타데이터 게시](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [방법: 구성 파일을 사용 하는 서비스의 메타 데이터 게시](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)

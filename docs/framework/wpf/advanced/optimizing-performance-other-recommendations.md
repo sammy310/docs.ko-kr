@@ -12,10 +12,10 @@ helpviewer_keywords:
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
 ms.openlocfilehash: 56d3e3cad09b46090a11b884f3ac590e8d4ba23a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224288"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>성능 최적화: 기타 권장 사항
@@ -75,9 +75,9 @@ ms.locfileid: "59224288"
 ## <a name="see-also"></a>참고자료
 
 - [응용 프로그램 성능 계획](planning-for-application-performance.md)
-- [하드웨어 활용](optimizing-performance-taking-advantage-of-hardware.md)
+- [하드웨어 이용](optimizing-performance-taking-advantage-of-hardware.md)
 - [레이아웃 및 디자인](optimizing-performance-layout-and-design.md)
-- [2D 그래픽 및 이미징](optimizing-performance-2d-graphics-and-imaging.md)
+- [2차원 그래픽 및 이미징](optimizing-performance-2d-graphics-and-imaging.md)
 - [개체 동작](optimizing-performance-object-behavior.md)
 - [애플리케이션 리소스](optimizing-performance-application-resources.md)
 - [텍스트](optimizing-performance-text.md)

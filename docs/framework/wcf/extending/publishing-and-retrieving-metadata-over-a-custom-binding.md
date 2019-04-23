@@ -3,10 +3,10 @@ title: 사용자 지정 바인딩을 통해 메타데이터 게시 및 검색
 ms.date: 03/30/2017
 ms.assetid: 904e11b4-d90e-45c6-9ee5-c3472c90008c
 ms.openlocfilehash: 33777358262465e9ecbadd75df8abf066bafcd01
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222980"
 ---
 # <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a>사용자 지정 바인딩을 통해 메타데이터 게시 및 검색
@@ -31,5 +31,5 @@ ms.locfileid: "59222980"
 
 - [서비스에 보안 설정](../../../../docs/framework/wcf/securing-services.md)
 - [WS-MetadataExchange 바인딩](../../../../docs/framework/wcf/extending/ws-metadataexchange-bindings.md)
-- [방법: 사용자 지정 WS-Metadata Exchange 바인딩 구성](../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)
-- [방법: MEX가 아닌 바인딩을 통해 메타데이터 검색](../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)
+- [방법: 구성 사용자 지정 Ws-metadata Exchange 바인딩](../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)
+- [방법: 가 아닌-MEX 바인딩을 통해 메타 데이터를 검색 합니다.](../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)

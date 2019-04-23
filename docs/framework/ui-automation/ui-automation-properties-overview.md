@@ -6,10 +6,10 @@ helpviewer_keywords:
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
 ms.openlocfilehash: 9028f9f99ee22dd480d817bc8aa94c7113a15c9d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59223006"
 ---
 # <a name="ui-automation-properties-overview"></a>UI 자동화 속성 개요
@@ -28,9 +28,9 @@ ms.locfileid: "59223006"
 ## <a name="property-identifiers"></a>속성 식별자  
  모든 속성은 숫자 및 이름으로 식별됩니다. 속성의 이름은 디버깅 및 진단용으로만 사용됩니다. 공급자는 숫자 [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] 를 사용하여 들어오는 속성 요청을 식별합니다. 그러나 클라이언트 애플리케이션은 숫자 및 이름 캡슐화하는 <xref:System.Windows.Automation.AutomationProperty>만 사용하여 검색하려는 속성을 식별합니다.  
   
- <xref:System.Windows.Automation.AutomationProperty> 특정 속성을 나타내는 개체는 다양 한 클래스에 필드로 사용할 수 있습니다. 보안상의 이유로, UI 자동화 공급자는 Uiautomationtypes.dll에 포함된 별도의 클래스 집합에서 이러한 개체를 가져옵니다.  
+ 특정 속성을 나타내는<xref:System.Windows.Automation.AutomationProperty> 개체는 다양한 클래스에 필드로 사용할 수 있습니다. 보안상의 이유로, UI 자동화 공급자는 Uiautomationtypes.dll에 포함된 별도의 클래스 집합에서 이러한 개체를 가져옵니다.  
   
- 다음 표에서 속성을 포함 하는 클래스에 의해 분류 된 <xref:System.Windows.Automation.AutomationProperty>[!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)]합니다.  
+ 다음 표에서는 <xref:System.Windows.Automation.AutomationProperty>[!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)]를 참조하세요.  
   
 |속성의 종류|클라이언트가 ID를 가져오는 위치|공급자 ID를 가져오는 위치|  
 |-------------------------|--------------------------|----------------------------|  
@@ -137,7 +137,7 @@ ms.locfileid: "59223006"
   
 <a name="Localization"></a>   
 ## <a name="localization"></a>지역화  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 공급자는 운영 체제의 언어에서 다음 속성을 표시 해야 합니다.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 공급자는 운영 체제의 언어에 다음과 같은 속성을 제공해야 합니다.  
   
 -   <xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>  
   

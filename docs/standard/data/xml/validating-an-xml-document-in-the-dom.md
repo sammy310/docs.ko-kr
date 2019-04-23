@@ -10,10 +10,10 @@ ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fd60916302877692ac011e6c0743fae40a10dd34
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298424"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>DOM에서의 XML 문서 유효성 검사
@@ -89,4 +89,4 @@ ms.locfileid: "59298424"
 - <xref:System.Xml.Schema.ValidationEventHandler>
 - <xref:System.Xml.XmlReaderSettings>
 - [DOM 모델을 사용하여 XML 데이터 처리](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)
-- [XML 스키마 작업](../../../../docs/standard/data/xml/working-with-xml-schemas.md)
+- [XML 스키마 사용](../../../../docs/standard/data/xml/working-with-xml-schemas.md)

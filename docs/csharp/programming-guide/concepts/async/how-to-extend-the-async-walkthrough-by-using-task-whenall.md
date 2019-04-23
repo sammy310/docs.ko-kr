@@ -2,15 +2,15 @@
 title: '방법: Task.WhenAll을 사용하여 비동기 연습 확장(C#)'
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-ms.openlocfilehash: 6143dfa43227f35eb8c74b386bee96ccec696a4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9710e5f31b9d01c5151b548c1b642293122d44b3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631804"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59297956"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>방법: Task.WhenAll을 사용하여 비동기 연습 확장(C#)
-<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 메서드를 사용하여 [연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)에서 비동기 솔루션의 성능을 개선할 수 있습니다. 이 메서드는 작업 컬렉션으로 표시되는 여러 개의 비동기 작업을 비동기적으로 기다립니다.  
+ 메서드를 사용하여 [연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)에서 비동기 솔루션의 성능을 개선할 수 있습니다. 이 메서드는 작업 컬렉션으로 표시되는 여러 개의 비동기 작업을 비동기적으로 기다립니다.  
   
  연습에서 웹 사이트 다운로드 속도가 각기 다른 것을 보셨을 것입니다. 때로는 웹 사이트 중 하나가 매우 느려 나머지 다운로드가 모두 지연됩니다. 연습에서 빌드하는 비동기 솔루션을 실행하는 경우 대기하지 않으려면 프로그램을 쉽게 종료할 수 있지만, 동시에 모든 다운로드를 시작한 후 더 빠른 다운로드는 지연되는 다운로드를 기다리지 않고 계속되도록 하는 것이 더 낫습니다.  
   
@@ -23,7 +23,7 @@ ms.locfileid: "54631804"
   
 ### <a name="to-add-taskwhenall-to-your-geturlcontentsasync-solution"></a>GetURLContentsAsync 솔루션에 Task.WhenAll을 추가하려면  
   
-1.  `ProcessURLAsync` 메서드를 [연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)에서 개발된 첫 번째 애플리케이션에 추가합니다.  
+1. `ProcessURLAsync` 메서드를 [연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)에서 개발된 첫 번째 애플리케이션에 추가합니다.  
   
     -   [개발자 코드 샘플](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)에서 코드를 다운로드한 경우 AsyncWalkthrough 프로젝트를 열고 MainWindow.xaml.cs 파일에 `ProcessURLAsync`를 추가합니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "54631804"
     }  
     ```  
   
-2.  다음 코드와 같이 `SumPageSizesAsync`의 `foreach` 루프를 주석으로 처리하거나 삭제합니다.  
+2. 다음 코드와 같이 `SumPageSizesAsync`의 `foreach` 루프를 주석으로 처리하거나 삭제합니다.  
   
     ```csharp  
     //var total = 0;  
@@ -61,7 +61,7 @@ ms.locfileid: "54631804"
     //}  
     ```  
   
-3.  작업 컬렉션을 만듭니다. 다음 코드는 <xref:System.Linq.Enumerable.ToArray%2A> 메서드가 실행할 때 각 웹 사이트의 내용을 다운로드하는 작업 컬렉션을 만드는 [쿼리](../../../../csharp/programming-guide/concepts/linq/index.md)를 정의합니다. 작업은 쿼리가 평가될 때 시작됩니다.  
+3. 작업 컬렉션을 만듭니다. 다음 코드는 <xref:System.Linq.Enumerable.ToArray%2A> 메서드가 실행할 때 각 웹 사이트의 내용을 다운로드하는 작업 컬렉션을 만드는 [쿼리](../../../../csharp/programming-guide/concepts/linq/index.md)를 정의합니다. 작업은 쿼리가 평가될 때 시작됩니다.  
   
      `SumPageSizesAsync` 메서드의 `urlList` 선언 뒤에 다음 코드를 추가합니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "54631804"
     Task<int>[] downloadTasks = downloadTasksQuery.ToArray();  
     ```  
   
-4.  작업 컬렉션 `downloadTasks`에서 `Task.WhenAll`을 적용합니다. `Task.WhenAll`은 작업 컬렉션의 모든 작업이 완료될 때 완료되는 단일 작업을 반환합니다.  
+4. 작업 컬렉션 `downloadTasks`에서 `Task.WhenAll`을 적용합니다. `Task.WhenAll`은 작업 컬렉션의 모든 작업이 완료될 때 완료되는 단일 작업을 반환합니다.  
   
      다음 예제에서 `await` 식은 `WhenAll`이 반환하는 단일 작업이 완료될 때까지 기다립니다. 식은 각 정수가 다운로드된 웹 사이트의 길이인 정수 배열로 평가됩니다. 이전 단계에서 추가한 코드 뒤의 `SumPageSizesAsync`에 다음 코드를 추가합니다.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "54631804"
     //int[] lengths = await whenAllTask;  
     ```  
   
-5.  마지막으로, <xref:System.Linq.Enumerable.Sum%2A> 메서드를 사용하여 모든 웹 사이트의 길이 합계를 계산합니다. `SumPageSizesAsync`에 다음 줄을 추가합니다.  
+5. 마지막으로, <xref:System.Linq.Enumerable.Sum%2A> 메서드를 사용하여 모든 웹 사이트의 길이 합계를 계산합니다. `SumPageSizesAsync`에 다음 줄을 추가합니다.  
   
     ```csharp  
     int total = lengths.Sum();  
@@ -95,7 +95,7 @@ ms.locfileid: "54631804"
   
 ### <a name="to-add-taskwhenall-to-the-httpclientgetbytearrayasync-solution"></a>HttpClient.GetByteArrayAsync 솔루션에 Task.WhenAll을 추가하려면  
   
-1.  `ProcessURLAsync`의 다음 버전을 [연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)에서 개발된 두 번째 애플리케이션에 추가합니다.  
+1. `ProcessURLAsync`의 다음 버전을 [연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)에서 개발된 두 번째 애플리케이션에 추가합니다.  
   
     -   [개발자 코드 샘플](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)에서 코드를 다운로드한 경우 AsyncWalkthrough_HttpClient 프로젝트를 열고 MainWindow.xaml.cs 파일에 `ProcessURLAsync`를 추가합니다.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "54631804"
     }  
     ```  
   
-2.  다음 코드와 같이 `SumPageSizesAsync`의 `For Each` 또는 `foreach` 루프를 주석으로 처리하거나 삭제합니다.  
+2. 다음 코드와 같이 `SumPageSizesAsync`의 `For Each` 또는 `foreach` 루프를 주석으로 처리하거나 삭제합니다.  
   
     ```csharp  
     //var total = 0;  
@@ -136,7 +136,7 @@ ms.locfileid: "54631804"
     //}  
     ```  
   
-3.  <xref:System.Linq.Enumerable.ToArray%2A> 메서드에서 실행할 때 각 웹 사이트의 내용을 다운로드하는 작업 컬렉션을 만드는 [쿼리](../../../../csharp/programming-guide/concepts/linq/index.md)를 정의합니다. 작업은 쿼리가 평가될 때 시작됩니다.  
+3. <xref:System.Linq.Enumerable.ToArray%2A> 메서드에서 실행할 때 각 웹 사이트의 내용을 다운로드하는 작업 컬렉션을 만드는 [쿼리](../../../../csharp/programming-guide/concepts/linq/index.md)를 정의합니다. 작업은 쿼리가 평가될 때 시작됩니다.  
   
      `SumPageSizesAsync` 메서드의 `client` 및 `urlList` 선언 뒤에 다음 코드를 추가합니다.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "54631804"
     Task<int>[] downloadTasks = downloadTasksQuery.ToArray();  
     ```  
   
-4.  작업 컬렉션 `downloadTasks`에서 `Task.WhenAll`을 적용합니다. `Task.WhenAll`은 작업 컬렉션의 모든 작업이 완료될 때 완료되는 단일 작업을 반환합니다.  
+4. 작업 컬렉션 `downloadTasks`에서 `Task.WhenAll`을 적용합니다. `Task.WhenAll`은 작업 컬렉션의 모든 작업이 완료될 때 완료되는 단일 작업을 반환합니다.  
   
      다음 예제에서 `await` 식은 `WhenAll`이 반환하는 단일 작업이 완료될 때까지 기다립니다. 완료되면 `await` 식은 각 정수가 다운로드된 웹 사이트의 길이인 정수 배열로 평가됩니다. 이전 단계에서 추가한 코드 뒤의 `SumPageSizesAsync`에 다음 코드를 추가합니다.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "54631804"
     //int[] lengths = await whenAllTask;  
     ```  
   
-5.  마지막으로, <xref:System.Linq.Enumerable.Sum%2A> 메서드를 사용하여 모든 웹 사이트의 길이 합계를 가져옵니다. `SumPageSizesAsync`에 다음 줄을 추가합니다.  
+5. 마지막으로, <xref:System.Linq.Enumerable.Sum%2A> 메서드를 사용하여 모든 웹 사이트의 길이 합계를 가져옵니다. `SumPageSizesAsync`에 다음 줄을 추가합니다.  
   
     ```csharp  
     int total = lengths.Sum();

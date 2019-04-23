@@ -3,17 +3,17 @@ title: '방법: 채널 보안 자격 증명 지정'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
 ms.openlocfilehash: 0bfbb71ade3822b9f504c2f89a41145ce0d435f6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297982"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>방법: 채널 보안 자격 증명 지정
 Windows Communication Foundation (WCF) 서비스 모니커는 COM 응용 프로그램이 WCF 서비스를 호출할 수 있습니다. 대부분의 WCF 서비스 클라이언트를 인증 및 권한 부여에 대 한 자격 증명을 지정 해야 합니다. WCF 클라이언트에서 WCF 서비스를 호출할 때 응용 프로그램 구성 파일 또는 관리 코드에서 이러한 자격 증명을 지정할 수 있습니다. COM 응용 프로그램에서 WCF 서비스를 호출할 때 사용할 수는 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 인터페이스 자격 증명을 지정 합니다. 이 항목에서는 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 인터페이스를 사용하여 자격 증명을 지정하는 다양한 방식을 설명합니다.  
   
 > [!NOTE]
->  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> IDispatch 기반 인터페이스 이며 Visual Studio 환경에서 IntelliSense 기능이 제공 되지 않습니다.  
+>  <xref:System.ServiceModel.ComIntegration.IChannelCredentials>는 IDispatch 기반 인터페이스이며 Visual Studio 환경에서는 IntelliSense 기능을 가져오지 않습니다.  
   
  이 문서에 정의 된 WCF 서비스를 사용 합니다는 [메시지 보안 샘플](../../../../docs/framework/wcf/samples/message-security-sample.md)합니다.  
   
@@ -50,7 +50,7 @@ Windows Communication Foundation (WCF) 서비스 모니커는 COM 응용 프로�
   
 7. Visual Basic 응용 프로그램을 실행하고 결과를 확인합니다.  
   
-     Visual Basic 응용 프로그램에 메시지 상자가 나타나며 Add(3, 4)를 호출한 결과가 표시됩니다. <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> 또는 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29> 대신 사용할 수도 있습니다 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> 클라이언트 인증서를 설정 하려면:  
+     Visual Basic 응용 프로그램에 메시지 상자가 나타나며 Add(3, 4)를 호출한 결과가 표시됩니다. <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> 또는 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29>을 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> 대신 사용하여 클라이언트 인증서를 설정할 수도 있습니다.  
   
     ```  
     monikerProxy.ChannelCredentials.SetClientCertificateFromFile "C:\MyClientCert.pfx", "password", "DefaultKeySet"  
@@ -135,6 +135,6 @@ Windows Communication Foundation (WCF) 서비스 모니커는 COM 응용 프로�
 
 - [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)
 - [방법: 페더레이션 서비스에서 자격 증명 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [방법: 페더레이션 클라이언트 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [방법: 페더레이션된 클라이언트 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [메시지 보안](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
 - [바인딩 및 보안](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

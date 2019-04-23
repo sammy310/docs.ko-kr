@@ -3,10 +3,10 @@ title: 추적 레코드
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
 ms.openlocfilehash: 46b52f6b774d1d692c0e7dec400d369428a9607e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298359"
 ---
 # <a name="tracking-records"></a>추적 레코드
@@ -50,15 +50,15 @@ ms.locfileid: "59298359"
   
  예를 들어 추적 레코드를 다음 순서로 내보내는 <xref:System.Activities.Statements.Sequence> 작업을 포함하는 간단한 <xref:System.Activities.Statements.WriteLine> 활동이 있습니다.  
   
-1. <xref:System.Activities.Tracking.WorkflowInstanceRecord> 워크플로 시작 중임을 나타냅니다.  
+1. <xref:System.Activities.Tracking.WorkflowInstanceRecord>는 워크플로가 시작되었음을 나타냅니다.  
   
-2. <xref:System.Activities.Tracking.ActivityScheduledRecord> 활동이 예약 되었음을 나타냅니다. 이 경우 <xref:System.Activities.Statements.Sequence> 활동입니다.  
+2. <xref:System.Activities.Tracking.ActivityScheduledRecord>는 활동이 예약되어 있음을 나타냅니다. 이 경우 <xref:System.Activities.Statements.Sequence> 활동입니다.  
   
-3. <xref:System.Activities.Tracking.ActivityScheduledRecord> 나타냅니다는 <xref:System.Activities.Statements.WriteLine> 활동입니다.  
+3. <xref:System.Activities.Tracking.ActivityScheduledRecord>는 <xref:System.Activities.Statements.WriteLine> 활동을 나타냅니다.  
   
 4. 두 가지 활동의 완료를 나타내는 두 <xref:System.Activities.Tracking.ActivityStateRecord> 레코드가 있습니다.  
   
-5. <xref:System.Activities.Tracking.WorkflowInstanceRecord> 워크플로가 완료 되었음을 나타냅니다.  
+5. <xref:System.Activities.Tracking.WorkflowInstanceRecord>는 워크플로가 완료되었음을 나타냅니다.  
   
 ## <a name="see-also"></a>참고자료
 

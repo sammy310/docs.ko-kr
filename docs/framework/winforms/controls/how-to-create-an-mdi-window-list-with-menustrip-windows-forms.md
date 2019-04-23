@@ -9,10 +9,10 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], creating window lists
 ms.assetid: 04fb414b-811f-4a83-aab6-b4a24646dec5
 ms.openlocfilehash: ec0d8af81e320bea3d9d69305f91bd56666ba7cc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299646"
 ---
 # <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>방법: MenuStrip (Windows Forms)이 포함 된 MDI 창 목록 만들기
@@ -30,11 +30,11 @@ ms.locfileid: "59299646"
   
 4. `&File` 메뉴 항목에 하위 메뉴 항목을 추가하고 해당 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 속성을 `&Open`로 설정합니다.  
   
-5. 설정를 <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> 의 속성을 <xref:System.Windows.Forms.MenuStrip> 에 `&Window`<xref:System.Windows.Forms.ToolStripMenuItem>.  
+5. 설정를 <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> 의 속성을 <xref:System.Windows.Forms.MenuStrip> 에 `&Window` <xref:System.Windows.Forms.ToolStripMenuItem>.  
   
 6. 프로젝트에 폼을 추가 하 고 추가할 원하는 컨트롤 등 다른 <xref:System.Windows.Forms.MenuStrip>합니다.  
   
-7. 이벤트 처리기를 만듭니다는 <xref:System.Windows.Forms.Control.Click> 의 이벤트는 `&New`<xref:System.Windows.Forms.ToolStripMenuItem>합니다.  
+7. `&New`<xref:System.Windows.Forms.ToolStripMenuItem>의 <xref:System.Windows.Forms.Control.Click> 이벤트에 대한 이벤트 처리기를 만듭니다.  
   
 8. 이벤트 처리기 내에서 만들고의 새 인스턴스를 표시 하려면 다음과 비슷한 코드를 삽입 `Form2` MDI 자식으로 `Form1`입니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "59299646"
     }  
     ```  
   
-9. 다음과 같은 코드를 배치 합니다 `&New`<xref:System.Windows.Forms.ToolStripMenuItem> 이벤트 처리기를 등록 합니다.  
+9. 다음과 같은 코드를 배치 합니다 `&New` <xref:System.Windows.Forms.ToolStripMenuItem> 이벤트 처리기를 등록 합니다.  
   
     ```vb  
     Private Sub newToolStripMenuItem_Click(sender As Object, e As _  
@@ -83,6 +83,6 @@ ms.locfileid: "59299646"
   
 ## <a name="see-also"></a>참고자료
 
-- [방법: MDI 부모 양식 만들기](../advanced/how-to-create-mdi-parent-forms.md)
-- [방법: MDI 자식 양식 만들기](../advanced/how-to-create-mdi-child-forms.md)
+- [방법: MDI 부모 폼 만들기](../advanced/how-to-create-mdi-parent-forms.md)
+- [방법: MDI 자식 폼 만들기](../advanced/how-to-create-mdi-child-forms.md)
 - [MenuStrip 컨트롤](menustrip-control-windows-forms.md)

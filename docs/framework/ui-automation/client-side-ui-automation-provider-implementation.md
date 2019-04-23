@@ -7,19 +7,19 @@ helpviewer_keywords:
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
 ms.openlocfilehash: e68cf69830aef88f46ff2e288c5aad548db39bdc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224470"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>클라이언트 쪽 UI 자동화 공급자 구현
 > [!NOTE]
 >  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 최신 정보에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]를 참조 하세요 [Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746)합니다.  
   
- [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] , [!INCLUDE[TLA#tla_ms](../../../includes/tlasharptla-ms-md.md)] , 및 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]를 포함하여 서로 다른 여러 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]프레임워크가 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]운영 체제 내에서 사용 중입니다. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 클라이언트 UI 요소에 대 한 정보를 표시합니다. 그러나 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 자체는 이러한 프레임워크에 있는 여러 형식의 컨트롤과 컨트롤에서 정보를 추출하는 데 필요한 기술은 인식하지 않습니다. 대신, 이 작업은 공급자라고 하는 개체가 담당합니다. 공급자는 특정 컨트롤에서 정보를 추출하고 이 정보를 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 전달한 다음 일관된 방식으로 클라이언트에게 제공합니다.  
+ [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] , [!INCLUDE[TLA#tla_ms](../../../includes/tlasharptla-ms-md.md)] , 및 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]를 포함하여 서로 다른 여러 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]프레임워크가 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]운영 체제 내에서 사용 중입니다. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 이 UI 요소에 대한 정보를 클라이언트에 노출합니다. 그러나 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 자체는 이러한 프레임워크에 있는 여러 형식의 컨트롤과 컨트롤에서 정보를 추출하는 데 필요한 기술은 인식하지 않습니다. 대신, 이 작업은 공급자라고 하는 개체가 담당합니다. 공급자는 특정 컨트롤에서 정보를 추출하고 이 정보를 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 전달한 다음 일관된 방식으로 클라이언트에게 제공합니다.  
   
- 공급자는 서버쪽 또는 클라이언트쪽에 존재할 수 있습니다. 서버쪽 공급자는 컨트롤 자체에서 구현됩니다. [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 요소 수로 작성 된 모든 타사 컨트롤 공급자 구현 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 유의 해야 합니다.  
+ 공급자는 서버쪽 또는 클라이언트쪽에 존재할 수 있습니다. 서버쪽 공급자는 컨트롤 자체에서 구현됩니다. [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 으로 작성된 모든 타사 컨트롤에 유의하여 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요소가 공급자를 구현합니다.  
   
  그러나 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 및 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 에 있는 컨트롤과 같은 이전의 컨트롤은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]을 직접 지원하지 않습니다. 이러한 컨트롤은 클라이언트 프로세스에 존재하며 크로스 프로세스 통신을 사용하여(예: 컨트롤에서 창 메시지 모니터링) 컨트롤에 대한 정보를 얻는 공급자가 대신 제공합니다. 이러한 클라이언트쪽 공급자를 프록시라고도 합니다.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "59224470"
   
 <a name="Distributing_Client-Side_Providers"></a>   
 ## <a name="distributing-client-side-providers"></a>클라이언트쪽 공급자 배포  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 관리 코드 어셈블리에서 클라이언트쪽 공급자를 찾으려고 시도 합니다. 이 어셈블리의 네임스페이스 이름은 어셈블리와 동일해야 합니다. 예를 들어, ContosoProxies.dll이라는 어셈블리에는 ContosoProxies 네임스페이스가 포함됩니다. 네임스페이스 내에서 <xref:UIAutomationClientsideProviders.UIAutomationClientSideProviders> 클래스를 만듭니다. 정적 <xref:UIAutomationClientsideProviders.UIAutomationClientSideProviders.ClientSideProviderDescriptionTable> 필드의 구현에서, 공급자를 설명하는 <xref:System.Windows.Automation.ClientSideProviderDescription> 구조의 배열을 만듭니다.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이 관리 코드 어셈블리에서 클라이언트쪽 공급자를 찾아야 합니다. 이 어셈블리의 네임스페이스 이름은 어셈블리와 동일해야 합니다. 예를 들어, ContosoProxies.dll이라는 어셈블리에는 ContosoProxies 네임스페이스가 포함됩니다. 네임스페이스 내에서 <xref:UIAutomationClientsideProviders.UIAutomationClientSideProviders> 클래스를 만듭니다. 정적 <xref:UIAutomationClientsideProviders.UIAutomationClientSideProviders.ClientSideProviderDescriptionTable> 필드의 구현에서, 공급자를 설명하는 <xref:System.Windows.Automation.ClientSideProviderDescription> 구조의 배열을 만듭니다.  
   
 <a name="Registering_and_Configuring_Client-Side_Providers"></a>   
 ## <a name="registering-and-configuring-client-side-providers"></a>클라이언트쪽 공급자 등록 및 구성  
@@ -52,4 +52,4 @@ ms.locfileid: "59224470"
 ## <a name="see-also"></a>참고자료
 
 - [클라이언트 쪽 UI 자동화 공급자 만들기](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)
-- [클라이언트 애플리케이션에서 UI 자동화 공급자 구현](../../../docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md)
+- [클라이언트 응용 프로그램에서 UI 자동화 공급자 구현](../../../docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md)

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - federation [WCF], and trust
 ms.assetid: 4bdec4f2-f8a2-4512-bdcf-14ef54b5877a
 ms.openlocfilehash: 4e1529db6cc52b6b8cc8881d2b2a35a754b4b311
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225341"
 ---
 # <a name="federation-and-trust"></a>페더레이션 및 트러스트
@@ -40,6 +40,6 @@ ms.locfileid: "59225341"
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode>
-- [방법: 페더레이션 클라이언트 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [방법: 페더레이션된 클라이언트 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [방법: 페더레이션 서비스에서 자격 증명 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
 - [방법: WSFederationHttpBinding 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)

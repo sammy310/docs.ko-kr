@@ -6,10 +6,10 @@ helpviewer_keywords:
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
 ms.openlocfilehash: a88822d6aed5af04ecf7deffe6936cfc4ebe296e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225952"
 ---
 # <a name="ui-automation-tree-overview"></a>UI 자동화 트리 개요
@@ -32,7 +32,7 @@ ms.locfileid: "59225952"
   
  UI 자동화 공급자는 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty> 및 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty> 속성을 포함하여 요소의 속성을 정의하여 필터링을 지원합니다.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 3 개의 기본 뷰를 제공합니다. 이러한 뷰는 수행된 필터링의 형식에 따라 정의되며, 뷰의 범위는 응용 프로그램에서 정의됩니다. 또한 응용 프로그램은 속성에 다른 필터를 적용할 수 있습니다(예: 컨트롤 뷰에서 활성화된 컨트롤만 포함되도록 필터링).  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]은 3개의 기본 뷰를 제공합니다. 이러한 뷰는 수행된 필터링의 형식에 따라 정의되며, 뷰의 범위는 응용 프로그램에서 정의됩니다. 또한 응용 프로그램은 속성에 다른 필터를 적용할 수 있습니다(예: 컨트롤 뷰에서 활성화된 컨트롤만 포함되도록 필터링).  
   
 <a name="uiautomation_raw_view"></a>   
 ### <a name="raw-view"></a>Raw 뷰  

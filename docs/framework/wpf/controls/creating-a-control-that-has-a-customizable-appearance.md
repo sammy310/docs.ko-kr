@@ -14,10 +14,10 @@ helpviewer_keywords:
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
 ms.openlocfilehash: a5d7c06502b66298d530d0180ffaf63862b9fc28
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298346"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>사용자 지정 가능한 모양이 있는 컨트롤 만들기
@@ -37,7 +37,7 @@ ms.locfileid: "59298346"
   
  이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   
--   [전제 조건](#prerequisites)  
+-   [필수 조건](#prerequisites)  
   
 -   [파트 및 상태 모델](#parts_and_states_model)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "59298346"
   
 -   [컨트롤 계약을 제공합니다.](#providing_the_control_contract)  
   
--   [완성된 예제](#complete_example)  
+-   [전체 예제](#complete_example)  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>전제 조건  
@@ -121,7 +121,7 @@ ms.locfileid: "59298346"
 ### <a name="use-the-visualstatemanager-to-manage-states"></a>상태를 관리 하는 VisualStateManager 사용  
  <xref:System.Windows.VisualStateManager> 컨트롤의 상태를 추적 하며 상태를 전환 하는 데 필요한 논리를 수행 합니다. 추가 하는 경우 <xref:System.Windows.VisualState> 개체를 <xref:System.Windows.Controls.ControlTemplate>, 추가할를 <xref:System.Windows.VisualStateGroup> 추가 <xref:System.Windows.VisualStateGroup> 에 <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> 연결 된 속성 있도록는 <xref:System.Windows.VisualStateManager> 에 대 한 액세스 권한이 합니다.  
   
- 다음 예제에서는 이전 예제를 보여 주는 반복 합니다 <xref:System.Windows.VisualState> 에 해당 하는 개체를 `Positive` 및 `Negative` 컨트롤의 상태입니다. <xref:System.Windows.Media.Animation.Storyboard> 에 `Negative`<xref:System.Windows.VisualState> 설정 합니다 <xref:System.Windows.Controls.TextBlock.Foreground%2A> 의 <xref:System.Windows.Controls.TextBlock> 빨간색.   경우는 `NumericUpDown` 컨트롤이 합니다 `Negative` 상태에서 스토리 보드를 `Negative` 상태가 시작.  그런 다음 <xref:System.Windows.Media.Animation.Storyboard> 에 `Negative` 컨트롤에 반환 될 때 중지 상태는 `Positive` 상태입니다.  `Positive`<xref:System.Windows.VisualState> 포함할 필요가 없습니다를 <xref:System.Windows.Media.Animation.Storyboard> 때문에 때를 <xref:System.Windows.Media.Animation.Storyboard> 에 대 한 합니다 `Negative` 중지 되 면는 <xref:System.Windows.Controls.TextBlock.Foreground%2A> 원래 색을 반환 합니다.  
+ 다음 예제에서는 이전 예제를 보여 주는 반복 합니다 <xref:System.Windows.VisualState> 에 해당 하는 개체를 `Positive` 및 `Negative` 컨트롤의 상태입니다. <xref:System.Windows.Media.Animation.Storyboard> 에 `Negative` <xref:System.Windows.VisualState> 설정 합니다 <xref:System.Windows.Controls.TextBlock.Foreground%2A> 의 <xref:System.Windows.Controls.TextBlock> 빨간색.   경우는 `NumericUpDown` 컨트롤이 합니다 `Negative` 상태에서 스토리 보드를 `Negative` 상태가 시작.  그런 다음 <xref:System.Windows.Media.Animation.Storyboard> 에 `Negative` 컨트롤에 반환 될 때 중지 상태는 `Positive` 상태입니다.  `Positive` <xref:System.Windows.VisualState> 포함할 필요가 없습니다를 <xref:System.Windows.Media.Animation.Storyboard> 때문에 때를 <xref:System.Windows.Media.Animation.Storyboard> 에 대 한 합니다 `Negative` 중지 되 면는 <xref:System.Windows.Controls.TextBlock.Foreground%2A> 원래 색을 반환 합니다.  
   
  [!code-xaml[VSMCustomControl#ValueStates](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#valuestates)]  
   
@@ -156,7 +156,7 @@ ms.locfileid: "59298346"
   
  상태 이름을 전달 하는 경우 <xref:System.Windows.VisualStateManager.GoToState%2A> 컨트롤이 있는 경우 이미 해당 상태를 <xref:System.Windows.VisualStateManager.GoToState%2A> 컨트롤의 현재 상태를 확인할 필요가 있으므로, 아무 작업도 수행 합니다.  예를 들어 경우 `Value` 음수가에서 다른 음수 이면에 대 한 스토리 보드로 변경 합니다 `Negative` 상태는 중단 되지 않습니다 및 사용자 컨트롤의 변경 표시 되지 것입니다.  
   
- 합니다 <xref:System.Windows.VisualStateManager> 사용 하 여 <xref:System.Windows.VisualStateGroup> 개체를 호출할 때 종료 상태를 확인 하려면 <xref:System.Windows.VisualStateManager.GoToState%2A>합니다. 각각에 대 한 한 상태의 컨트롤은 항상 <xref:System.Windows.VisualStateGroup> 에 정의 된 해당 <xref:System.Windows.Controls.ControlTemplate> 와 같은 다른 상태로 전환 될 때 상태를 그대로 남겨 두기 <xref:System.Windows.VisualStateGroup>합니다. 예를 들어를 <xref:System.Windows.Controls.ControlTemplate> 의 `NumericUpDown` 컨트롤을 정의 합니다 `Positive` 및 `Negative`<xref:System.Windows.VisualState> 개체를 <xref:System.Windows.VisualStateGroup> 및 `Focused` 및 `Unfocused`<xref:System.Windows.VisualState> 다른 개체입니다. (볼 수 있습니다는 `Focused` 및 `Unfocused`<xref:System.Windows.VisualState> 에 정의 된를 [전체 예제](#complete_example) 컨트롤에서 이동 하는 경우이 항목의 섹션을 `Positive` 상태는 `Negative` 상태 아니면 그 반대의 경우에 컨트롤 상태를 유지 중 하나는 `Focused` 또는 `Unfocused` 상태입니다.  
+ 합니다 <xref:System.Windows.VisualStateManager> 사용 하 여 <xref:System.Windows.VisualStateGroup> 개체를 호출할 때 종료 상태를 확인 하려면 <xref:System.Windows.VisualStateManager.GoToState%2A>합니다. 각각에 대 한 한 상태의 컨트롤은 항상 <xref:System.Windows.VisualStateGroup> 에 정의 된 해당 <xref:System.Windows.Controls.ControlTemplate> 와 같은 다른 상태로 전환 될 때 상태를 그대로 남겨 두기 <xref:System.Windows.VisualStateGroup>합니다. 예를 들어를 <xref:System.Windows.Controls.ControlTemplate> 의 `NumericUpDown` 컨트롤을 정의 합니다 `Positive` 및 `Negative` <xref:System.Windows.VisualState> 개체를 <xref:System.Windows.VisualStateGroup> 및 `Focused` 및 `Unfocused` <xref:System.Windows.VisualState> 다른 개체입니다. (볼 수 있습니다는 `Focused` 및 `Unfocused` <xref:System.Windows.VisualState> 에 정의 된를 [전체 예제](#complete_example) 컨트롤에서 이동 하는 경우이 항목의 섹션을 `Positive` 상태를 `Negative` 상태 또는 그 반대의 경우는 컨트롤에서 유지 합니다 `Focused` 또는 `Unfocused` 상태입니다.  
   
  세 가지 일반적인 위치는 컨트롤의 상태는 변경 될 수 있습니다.  
   

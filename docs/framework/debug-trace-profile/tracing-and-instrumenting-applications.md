@@ -16,10 +16,10 @@ ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6749f54db106bffaba57b7cb77cb13808175af3a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298911"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>응용 프로그램 추적 및 조율
@@ -123,7 +123,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 |메서드|출력|  
 |------------|------------|  
 |**Assert**|지정된 텍스트 또는 지정되지 않은 경우 호출 스택입니다. **Assert** 문에서 인수로 지정된 조건이 **false**인 경우에만 출력이 기록됩니다.|  
-|**실패**|지정된 텍스트 또는 지정되지 않은 경우 호출 스택입니다.|  
+|**Fail**|지정된 텍스트 또는 지정되지 않은 경우 호출 스택입니다.|  
 |**Write**|지정된 텍스트입니다.|  
 |**WriteIf**|**WriteIf** 문에서 인수로 지정된 조건이 충족되는 경우 지정된 텍스트입니다.|  
 |**WriteLine**|지정된 텍스트와 캐리지 리턴입니다.|  
@@ -146,11 +146,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.TraceSource>
 - [코드 계약](../../../docs/framework/debug-trace-profile/code-contracts.md)
-- [C#, F# 및 Visual Basic 프로젝트 형식](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)
-- [방법: 애플리케이션 코드에 추적 문 추가](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [방법: 추적 및 디버그를 사용하여 조건부 컴파일](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
-- [방법: 추적 스위치 만들기, 초기화 및 구성](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
-- [방법: 추적 소스 만들기 및 초기화](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
+- [C#, F#, and Visual Basic Project Types](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)(C#, F# 및 Visual Basic 프로젝트 형식)
+- [방법: 응용 프로그램 코드에 Trace 문 추가](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [방법: 추적 및 디버그를 사용한 조건부 컴파일](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [방법: 만들기, 초기화 및 추적 스위치 구성](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [방법: 추적 소스 생성 및 초기화](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
 - [방법: 추적 수신기와 함께 TraceSource 및 필터 사용](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)
 - [추적 수신기](../../../docs/framework/debug-trace-profile/trace-listeners.md)
 - [추적 스위치](../../../docs/framework/debug-trace-profile/trace-switches.md)

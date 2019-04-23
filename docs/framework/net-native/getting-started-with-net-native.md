@@ -5,10 +5,10 @@ ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f72a1d6a10c5899a02019bf826dc3cc9d5457bed
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298476"
 ---
 # <a name="getting-started-with-net-native"></a>.NET 네이티브 시작
@@ -49,7 +49,7 @@ ms.locfileid: "59298476"
   
  런타임 지시문 파일은 앱에서 런타임에 필요한 메타데이터를 정의하는 데 사용됩니다. 일부 경우에는 파일의 기본 버전이 적절할 수도 있습니다. 그러나 serialization 또는 리플렉션을 사용하는 일부 코드는 런타임 지시문 파일에서 추가 항목을 필요로 할 수 있습니다.  
   
- **Serialization**  
+ **serialization**  
  직렬 변환기에는 두 가지 범주가 있으며 두 범주 모두 런타임 지시문 파일에 추가 항목이 필요합니다.  
   
 -   리플렉션을 기반으로 하지 않는 serializer. <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, <xref:System.Xml.Serialization.XmlSerializer> 클래스와 같이 .NET Framework 클래스 라이브러리에 포함된 serializer는 리플렉션을 사용하지 않습니다. 그러나 serialize 또는 deserialize할 개체에 따라 코드를 생성해야 합니다.  자세한 내용은 [Serialization and Metadata](../../../docs/framework/net-native/serialization-and-metadata.md)의 "Microsoft 직렬 변환기" 섹션을 참조하세요.  
@@ -106,7 +106,7 @@ ms.locfileid: "59298476"
   
  앱을 테스트할 때 발생하는 예외 및 기타 문제를 처리하는 몇 가지 구체적인 예제는 다음 항목을 참조하세요.  
   
--   [예제: 데이터를 바인딩하는 경우 예외 처리](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
+-   [예제: 데이터를 바인딩하는 경우 예외를 처리](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
   
 -   [예제: 동적 프로그래밍 문제 해결](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
   

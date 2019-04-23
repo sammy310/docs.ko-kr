@@ -3,10 +3,10 @@ title: 상태 시스템 워크플로
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
 ms.openlocfilehash: 85d7fff680b11428173dc2684b30bf2b1f46640b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222993"
 ---
 # <a name="state-machine-workflows"></a>상태 시스템 워크플로
@@ -104,6 +104,6 @@ ms.locfileid: "59222993"
 
 - [방법: 상태 시스템 워크플로 만들기](how-to-create-a-state-machine-workflow.md)
 - [StateMachine 활동 디자이너](/visualstudio/workflow-designer/statemachine-activity-designer)
-- [상태 활동 디자이너](/visualstudio/workflow-designer/state-activity-designer)
+- [State 활동 디자이너](/visualstudio/workflow-designer/state-activity-designer)
 - [FinalState 활동 디자이너](/visualstudio/workflow-designer/finalstate-activity-designer)
-- [전환 활동 디자이너](/visualstudio/workflow-designer/transition-activity-designer)
+- [Transition 활동 디자이너](/visualstudio/workflow-designer/transition-activity-designer)

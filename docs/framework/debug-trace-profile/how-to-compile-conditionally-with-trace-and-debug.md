@@ -13,10 +13,10 @@ ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a010b2ee1de17741b2d0bdd6e7c50d5f602256ac
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298580"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>방법: 추적 및 디버그를 사용하여 조건부 컴파일
@@ -98,9 +98,9 @@ ms.locfileid: "59298580"
 ## <a name="see-also"></a>참고자료
 
 - [응용 프로그램 추적 및 조율](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [방법: 추적 스위치 만들기, 초기화 및 구성](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [방법: 만들기, 초기화 및 추적 스위치 구성](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
 - [추적 스위치](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [추적 수신기](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-- [방법: 애플리케이션 코드에 추적 문 추가](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [방법: 응용 프로그램 코드에 Trace 문 추가](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [방법: Visual Studio 명령줄에 필요한 환경 변수 설정](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
 - [방법: 명령줄 컴파일러 호출](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

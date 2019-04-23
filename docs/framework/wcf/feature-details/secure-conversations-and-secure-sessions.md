@@ -3,10 +3,10 @@ title: 보안 대화 및 보안 세션
 ms.date: 03/30/2017
 ms.assetid: 48cb104a-532d-40ae-aa57-769dae103fda
 ms.openlocfilehash: 9b2c22d6db5a773bfb3f3a41e458b530fc889d71
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224405"
 ---
 # <a name="secure-conversations-and-secure-sessions"></a>보안 대화 및 보안 세션

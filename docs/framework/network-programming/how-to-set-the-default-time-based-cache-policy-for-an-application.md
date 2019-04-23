@@ -9,21 +9,21 @@ helpviewer_keywords:
 - cache [.NET Framework], time-based policies
 - default time-based cache policy
 ms.assetid: 6bfce066-a2e7-4add-a05e-85c12ec9f07f
-ms.openlocfilehash: d40b0ffbe514429ed24eaa5d0c2ce2d52c80d37d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99f9905109a4deabe3cfb2e3616913e84f565cb7
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608955"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59299126"
 ---
 # <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>방법: 애플리케이션의 기본 시간 기반 캐시 정책 설정
 기본 시간 기반 캐시 정책을 사용하면 [IETF(Internet Engineering Task Force)](https://www.ietf.org/) 웹 사이트에서 제공되는 RFC 2616의 섹션 13 및 14에 정의된 캐시 동작 및 캐시된 리소스와 함께 전송된 헤더를 통해 정의된 캐시 동작이 애플리케이션에 나타날 수 있습니다. 이것은 대부분의 애플리케이션에서 적절한 캐시 동작입니다.  
   
 ### <a name="to-set-the-default-automatic-policy-for-an-application"></a>애플리케이션에 대한 기본 자동 정책을 설정하려면  
   
-1.  기본 시간 기반 정책 개체를 만듭니다.  
+1. 기본 시간 기반 정책 개체를 만듭니다.  
   
-2.  정책 개체를 애플리케이션 도메인의 기본값으로 설정합니다.  
+2. 정책 개체를 애플리케이션 도메인의 기본값으로 설정합니다.  
   
 ## <a name="example"></a>예제  
  이 섹션의 두 가지 예제는 동일한 정책을 생성합니다.  
@@ -63,6 +63,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목
+
 - [네트워크 애플리케이션에 대한 캐시 관리](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [캐시 정책](../../../docs/framework/network-programming/cache-policy.md)
 - [위치 기반 캐시 정책](../../../docs/framework/network-programming/location-based-cache-policies.md)

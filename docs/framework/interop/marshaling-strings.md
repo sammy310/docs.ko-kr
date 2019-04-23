@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e21b078b-70fb-4905-be26-c097ab2433ff
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4640d37ad6c30746e203c26c2c1cd71eb70e7579
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 0db33d59d1fc1c19e07567108970db77059cebb7
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218569"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59223032"
 ---
 # <a name="marshaling-strings"></a>문자열 마샬링
 플랫폼 호출은 문자열 매개 변수를 복사하고 필요한 경우 .NET Framework 형식(유니코드)을 관리되지 않는 형식(ANSI)으로 변환합니다. 관리되는 문자열은 변경할 수 없으므로 함수가 반환할 때 플랫폼 호출을 통해 해당 문자열을 관리되지 않는 메모리에서 관리되는 메모리로 다시 복사하지 않습니다.  
@@ -39,6 +39,7 @@ ms.locfileid: "56218569"
 |값 형식 문자열을 포함하는 구조체의 배열.|문자열을 포함하는 구조체의 배열을 만들고 배열을 값으로 전달합니다.|[배열](marshaling-different-types-of-arrays.md)|  
   
 ## <a name="see-also"></a>참고 항목
+
 - [플랫폼 호출을 사용하여 데이터 마샬링](marshaling-data-with-platform-invoke.md)
 - [클래스, 구조체 및 공용 구조체 마샬링](marshaling-classes-structures-and-unions.md)
 - [여러 형식의 배열 마샬링](marshaling-different-types-of-arrays.md)
