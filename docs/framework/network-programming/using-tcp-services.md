@@ -16,14 +16,15 @@ helpviewer_keywords:
 - protocols, TCP
 - Internet, TCP
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
-ms.openlocfilehash: 6c792c8d819d17d1fc32fedeeacdacbbb1624d95
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d9b3c9975c4d10649bdecd6f63cf362a2b2a2738
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125621"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611954"
 ---
 # <a name="using-tcp-services"></a>TCP 서비스 사용
+
 <xref:System.Net.Sockets.TcpClient> 클래스는 TCP를 사용하여 인터넷 리소스의 데이터를 요청합니다. **TcpClient**의 메서드 및 속성은 TCP를 사용하여 데이터를 요청 및 수신하는 <xref:System.Net.Sockets.Socket>을 만들기 위한 세부 정보를 추상화합니다. 원격 디바이스에 대한 연결은 스트림으로 표현되므로 .NET Framework 스트림 처리 기법을 사용하여 데이터를 읽고 쓸 수 있습니다.  
   
  TCP 프로토콜은 원격 엔드포인트에 연결한 후 해당 연결을 사용하여 데이터 패킷을 주고받습니다. TCP는 데이터 패킷이 엔드포인트로 전송되고 도착 시 올바른 순서로 어셈블되도록 합니다.  
@@ -100,7 +101,7 @@ public class TcpTimeClient {
 }  
 ```  
   
- <xref:System.Net.Sockets.TcpListener> TCP 포트에서 들어오는 요청을 모니터링한 다음, 클라이언트에 대한 연결을 관리하는 **Socket** 또는 **TcpClient**를 만드는 데 사용됩니다. <xref:System.Net.Sockets.TcpListener.Start%2A> 메서드는 수신 대기를 사용하도록 설정하고, <xref:System.Net.Sockets.TcpListener.Stop%2A> 메서드는 포트에서 수신 대기를 사용하지 않도록 설정합니다. <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> 메서드는 들어오는 연결 요청을 허용하고 **TcpClient**를 만들어 요청을 처리하며, <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> 메서드는 들어오는 연결 요청을 허용하고 **Socket**을 만들어 요청을 처리합니다.  
+ <xref:System.Net.Sockets.TcpListener>는 TCP 포트에서 들어오는 요청을 모니터링한 다음 클라이언트에 대한 연결을 관리하는 **Socket** 또는 **TcpClient**를 만드는 데 사용됩니다. <xref:System.Net.Sockets.TcpListener.Start%2A> 메서드는 수신 대기를 사용하도록 설정하고, <xref:System.Net.Sockets.TcpListener.Stop%2A> 메서드는 포트에서 수신 대기를 사용하지 않도록 설정합니다. <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> 메서드는 들어오는 연결 요청을 허용하고 **TcpClient**를 만들어 요청을 처리하며, <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> 메서드는 들어오는 연결 요청을 허용하고 **Socket**을 만들어 요청을 처리합니다.  
   
  다음 예제에서는 **TcpListener**를 사용해서 네트워크 시간 서버를 만들어 TCP 포트 13을 모니터링하는 방법을 보여 줍니다. 들어오는 연결 요청이 허용되면 시간 서버가 호스트 서버의 현재 날짜 및 시간을 사용하여 응답합니다.  
   
@@ -192,6 +193,4 @@ public class TcpTimeServer {
     }  
   
 }  
-```  
-  
-## <a name="see-also"></a>참고 항목
+```

@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 1c943ac93e629da069b594291cd55a952e18742c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 353e50de65f21930ebe0bef9e239e1e333403676
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464400"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612045"
 ---
 # <a name="domain-events-design-and-implementation"></a>도메인 이벤트: 디자인 및 구현
 
@@ -347,37 +347,37 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 ## <a name="additional-resources"></a>추가 자료
 
 - **Greg Young. 도메인 이벤트란?** \
-  [http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/](http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/)
+  <http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/>
 
 - **Jan Stenberg. 도메인 이벤트 및 최종 일관성** \
-  [https://www.infoq.com/news/2015/09/domain-events-consistency](https://www.infoq.com/news/2015/09/domain-events-consistency)
+  <https://www.infoq.com/news/2015/09/domain-events-consistency>
 
 - **Jimmy Bogard. 더 나은 도메인 이벤트 패턴** \
-  [https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
+  <https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/>
 
 - **Vaughn Vernon. Effective Aggregate Design Part II: Making Aggregates Work Together** \(효과적인 집계 설계 2부: 집합체가 함께 작동하도록 만들기)에서 다음과 같이 언급하고 있습니다.
   [https://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
 - **Jimmy Bogard. Strengthening your domain: Domain Events** \(도메인 강화: 도메인 이벤트)
-  [https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)
+  <https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/>
 
 - **Tony Truong. 도메인 이벤트 패턴 예제** \
-  [https://www.tonytruong.net/domain-events-pattern-example/](https://www.tonytruong.net/domain-events-pattern-example/)
+  <https://www.tonytruong.net/domain-events-pattern-example/>
 
 - **Udi Dahan. 완벽하게 캡슐화된 도메인 모델을 만드는 방법** \
-  [http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
+  <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
 - **Udi Dahan. 도메인 이벤트 - 테이크 2** \
-  [http://udidahan.com/2008/08/25/domain-events-take-2/](http://udidahan.com/2008/08/25/domain-events-take-2/%20)
+  <http://udidahan.com/2008/08/25/domain-events-take-2/>
 
 - **Udi Dahan. 도메인 이벤트 - 구원** \
-  [http://udidahan.com/2009/06/14/domain-events-salvation/](http://udidahan.com/2009/06/14/domain-events-salvation/)
+  <http://udidahan.com/2009/06/14/domain-events-salvation/>
 
 - **Jan Kronquist. 도메인 이벤트를 게시하지 말고 반환하라!** \
-  [https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/](https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/)
+  <https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/>
 
 - **Cesar de la Torre. Domain Events vs. DDD 및 마이크로 서비스 아키텍처의 통합 이벤트** \
-  [https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/](https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/)
+  <https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/>
 
 >[!div class="step-by-step"]
 >[이전](client-side-validation.md)
