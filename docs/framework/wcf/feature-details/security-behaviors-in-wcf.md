@@ -3,10 +3,10 @@ title: WCF의 보안 동작
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
 ms.openlocfilehash: d1bffef127fe295aa41b1287da1c7104464ae0bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180065"
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF의 보안 동작
@@ -220,4 +220,4 @@ Windows Communication Foundation (WCF), 동작 서비스 수준 또는 끝점 �
 ## <a name="see-also"></a>참고자료
 
 - [감사](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
-- [Windows Server AppFabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server appfabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
