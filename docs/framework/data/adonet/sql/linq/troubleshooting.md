@@ -3,10 +3,10 @@ title: 문제 해결
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
 ms.openlocfilehash: 27b7eef345dd8ec6c4f5e319818b6b002717f049
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105484"
 ---
 # <a name="troubleshooting"></a>문제 해결
@@ -15,7 +15,7 @@ ms.locfileid: "59105484"
  추가 문제를 해결 [Frequently Asked Questions](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)합니다.  
   
 ## <a name="unsupported-standard-query-operators"></a>지원되지 않는 표준 쿼리 연산자  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 모든 표준 쿼리 연산자 메서드를 지원 하지 않습니다 (예를 들어 <xref:System.Linq.Enumerable.ElementAt%2A>). 그 결과 프로젝트를 컴파일할 때 런타임 오류가 발생할 수 있습니다. 자세한 내용은 [표준 쿼리 연산자 변환](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)합니다.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 모든 표준 쿼리 연산자 메서드(예: <xref:System.Linq.Enumerable.ElementAt%2A>)를 지원하지 않습니다. 그 결과 프로젝트를 컴파일할 때 런타임 오류가 발생할 수 있습니다. 자세한 내용은 [표준 쿼리 연산자 변환](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)합니다.  
   
 ## <a name="memory-issues"></a>메모리 문제  
  쿼리 메모리 내 컬렉션을 포함 하는 경우 및 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601>, 쿼리를 메모리에 두 컬렉션 지정 되는 순서에 따라 실행 될 수 있습니다. 쿼리를 메모리 내에서 실행해야 할 경우에는 데이터베이스 테이블의 데이터를 가져와야 합니다.  
@@ -26,10 +26,10 @@ ms.locfileid: "59105484"
  입력 파일 이름을 지정하려면 이름을 명령줄에 입력 파일로 추가합니다. **/conn** 옵션을 사용하여 연결 문자열에 파일 이름을 포함할 수는 없습니다. 자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요.  
   
 ## <a name="class-library-projects"></a>클래스 라이브러리 프로젝트  
- [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]에서는 프로젝트의 `app.config` 파일에 연결 문자열을 만듭니다. 클래스 라이브러리 프로젝트에는 `app.config` 파일이 사용되지 않으며 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 디자인 타임 파일에 제공 된 연결 문자열을 사용 합니다. 따라서 `app.config`에서 값을 변경해도 응용 프로그램에서 연결하는 데이터베이스가 변경되지 않습니다.  
+ [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]에서는 프로젝트의 `app.config` 파일에 연결 문자열을 만듭니다. 클래스 라이브러리 프로젝트에는 `app.config` 파일이 사용되지 않으며 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 디자인 타임 파일에 제공되는 연결 문자열을 사용합니다. 따라서 `app.config`에서 값을 변경해도 응용 프로그램에서 연결하는 데이터베이스가 변경되지 않습니다.  
   
 ## <a name="cascade-delete"></a>하위 삭제  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 하위 삭제 작업을 인식 하거나 지원 하지 않습니다. 제약 조건이 있는 테이블의 행을 삭제하려면 다음 작업 중 하나를 수행해야 합니다.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 하위 삭제 작업을 지원하거나 인식하지 않습니다. 제약 조건이 있는 테이블의 행을 삭제하려면 다음 작업 중 하나를 수행해야 합니다.  
   
 -   데이터베이스의 외래 키 제약 조건에 `ON DELETE CASCADE` 규칙을 설정합니다.  
   

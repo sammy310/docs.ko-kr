@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f8952b34781045089945e7e72e179e88300b5fdd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59103352"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>ICorDebugManagedCallback2::Exception 메서드
@@ -66,7 +66,7 @@ HRESULT Exception (
   
  특정 프레임 및 오프셋 하 여 결정 됩니다는 `dwEventType` 다음과 같은 매개 변수:  
   
-|값 `dwEventType`|값 `pFrame`|값 `nOffset`|  
+|`dwEventType`의 값|`pFrame`의 값|`nOffset`의 값|  
 |----------------------------|-----------------------|------------------------|  
 |DEBUG_EXCEPTION_FIRST_CHANCE|예외를 발생 시킨 프레임입니다.|프레임에 명령 포인터입니다.|  
 |DEBUG_EXCEPTION_USER_FIRST_CHANCE|예외가 throw 된 지점과 가장 가까운 사용자 코드 프레임입니다.|프레임에 명령 포인터입니다.|  

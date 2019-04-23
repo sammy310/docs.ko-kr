@@ -6,10 +6,10 @@ helpviewer_keywords:
 - graphics [Windows Forms], about graphics
 ms.assetid: a602aef8-a8c8-4c36-9816-74e7bad96a68
 ms.openlocfilehash: a95086645771de61cfc859e34b225992bc16eac9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59103937"
 ---
 # <a name="overview-of-graphics"></a>그래픽 개요
@@ -28,7 +28,7 @@ ms.locfileid: "59103937"
   
 -   <xref:System.Drawing.Printing>  
   
- 그래픽 장치 인터페이스를 사용 하 여 같은 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], 특정 디스플레이 장치의 세부 정보를 염려 하지 않고 화면 또는 프린터에 정보를 표시할 수 있습니다. 프로그래머가 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 클래스에서 제공하는 메서드를 호출합니다. 이러한 메서드가 다시 특정 장치 드라이버에 대한 적절한 호출을 수행합니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 그래픽 하드웨어에서 응용 프로그램을 분리 합니다. 이 프로그래머가 장치 독립적인 응용 프로그램을 만들 수는 것입니다.  
+ 그래픽 장치 인터페이스를 사용 하 여 같은 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], 특정 디스플레이 장치의 세부 정보를 염려 하지 않고 화면 또는 프린터에 정보를 표시할 수 있습니다. 프로그래머가 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 클래스에서 제공하는 메서드를 호출합니다. 이러한 메서드가 다시 특정 장치 드라이버에 대한 적절한 호출을 수행합니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]는 그래픽 하드웨어에서 응용 프로그램을 분리합니다. 이 프로그래머가 장치 독립적인 응용 프로그램을 만들 수는 것입니다.  
   
 ## <a name="see-also"></a>참고자료
 

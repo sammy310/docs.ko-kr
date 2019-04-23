@@ -10,10 +10,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], selecting cells
 ms.assetid: 82cffcad-8b30-4897-bddb-c3a79d751b83
 ms.openlocfilehash: 1836fbc1887082ca685c49bef2bc42bdb167578f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105858"
 ---
 # <a name="selection-and-clipboard-use-with-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤에서 선택 및 클립보드 사용
@@ -29,7 +29,7 @@ ms.locfileid: "59105858"
  [방법: Windows Forms DataGridView 컨트롤에서 선택한 셀, 행 및 열 가져오기](selected-cells-rows-and-columns-datagridview.md)  
  선택한 셀, 행 및 열 컬렉션을 사용 하는 방법을 설명 합니다.  
   
- [방법: 사용자가 Windows Forms DataGridView 컨트롤에서 여러 셀을 클립보드에 복사할 수 있도록 설정](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
+ [방법: Windows Forms DataGridView 컨트롤에서 여러 셀을 클립보드에 복사 하는 사용자를 사용 하도록 설정](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
  컨트롤의 클립보드 지원을 사용 하도록 설정 하는 방법에 설명 합니다.  
   
 ## <a name="reference"></a>참조  
@@ -54,4 +54,4 @@ ms.locfileid: "59105858"
 ## <a name="see-also"></a>참고자료
 
 - [DataGridView 컨트롤](datagridview-control-windows-forms.md)
-- [Windows Forms DataGridView 컨트롤의 기본 키보드 및 마우스 처리](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 컨트롤에서의 기본 키보드 및 마우스 처리](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)

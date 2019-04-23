@@ -3,14 +3,14 @@ title: 집계 함수(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
 ms.openlocfilehash: 113c19078feeca24a0817e52f8eb0d04537b0684
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59104925"
 ---
 # <a name="aggregate-functions-entity-sql"></a>집계 함수(Entity SQL)
-집계는 컬렉션을 그룹 작업의 일부분인 스칼라로 압축하는 언어 구문입니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 집계는 두 가지 형태로 제공 합니다.  
+집계는 컬렉션을 그룹 작업의 일부분인 스칼라로 압축하는 언어 구문입니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 집계의 형식은 다음 두 가지입니다.  
   
 -   [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 식의 어디서 나 사용할 수 있는 컬렉션 함수. 이 함수는 프로젝션의 집계 함수를 사용하며 컬렉션에 대한 해당 동작을 예측합니다. 컬렉션 함수는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서 집계를 지정하는 데 주로 사용되는 모드입니다.  
   

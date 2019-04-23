@@ -10,10 +10,10 @@ ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ef621d1cbbd04421b392e64f5507fcbe23860465
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105744"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR ETW 키워드 및 수준
@@ -95,12 +95,12 @@ ms.locfileid: "59105744"
   
 |키워드 및 플래그|애플리케이션 도메인, 어셈블리, 모듈 DCStart/DCEnd 이벤트|메서드 DCStart/DCEnd 이벤트(동적 메서드 이벤트 포함)|  
 |------------------------|----------------------------------------------------------------|----------------------------------------------------------------------|  
-|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|`DCStart` 이벤트입니다.|없음|  
-|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|`DCEnd` 이벤트입니다.|없음|  
-|`JITKeyword` +<br /><br /> `StartRundownKeyword`|없음|`DCStart` 이벤트입니다.|  
-|`JITKeyword` +<br /><br /> `EndRundownKeyword`|없음|`DCEnd` 이벤트입니다.|  
-|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|없음|`DCStart` 이벤트입니다.|  
-|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|없음|`DCEnd` 이벤트입니다.|  
+|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|`DCStart` 이벤트|없음|  
+|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|`DCEnd` 이벤트|없음|  
+|`JITKeyword` +<br /><br /> `StartRundownKeyword`|없음|`DCStart` 이벤트|  
+|`JITKeyword` +<br /><br /> `EndRundownKeyword`|없음|`DCEnd` 이벤트|  
+|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|없음|`DCStart` 이벤트|  
+|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|없음|`DCEnd` 이벤트|  
   
  [맨 위로 이동](#top)  
   

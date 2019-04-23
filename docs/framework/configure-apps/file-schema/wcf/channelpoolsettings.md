@@ -3,10 +3,10 @@ title: <channelPoolSettings>
 ms.date: 03/30/2017
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
 ms.openlocfilehash: ca1f680e2de67984dfcec49b3d262799000a2625
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102585"
 ---
 # <a name="channelpoolsettings"></a>\<channelPoolSettings>
@@ -50,7 +50,7 @@ ms.locfileid: "59102585"
 ## <a name="remarks"></a>설명  
  할당량은 과도한 리소스 소비를 방지하기 위한 정책 메커니즘으로 사용됩니다. 할당량은 악의적이거나 의도하지 않은 DOS(서비스 거부) 공격을 방지합니다. 사용자 지정 채널에서 채널 할당량을 설정할 때 이 요소를 사용합니다.  
   
- `ChannelPoolSettings` 세 가지 할당량을 지정합니다.  
+ `ChannelPoolSettings`는 다음 세 가지 할당량을 지정합니다.  
   
 -   `idleTimeout` 할당량을 사용하면 장기간 동안 제한된 리소스를 사용하는 서버에 대한 DOS(서비스 거부) 공격을 줄일 수 있습니다. 클라이언트에서 정확한 값을 설정하면 서비스 연결 안정성을 높일 수 있습니다. 기본값은 신중하고 적당한 리소스 할당을 기준으로 합니다. 이 값은 개발 환경 및 소규모 설치 시나리오에 적합합니다. 설치로 인해 리소스가 부족해지거나 추가 리소스를 사용할 수 있더라도 연결이 제한되는 경우 서비스 관리자는 이 값을 검토해야 합니다.  
   
@@ -67,6 +67,6 @@ ms.locfileid: "59102585"
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [\<oneWay>](../../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)
 - [바인딩](../../../../../docs/framework/wcf/bindings.md)
-- [바인딩 확장명](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [바인딩 확장](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

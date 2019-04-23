@@ -8,10 +8,10 @@ helpviewer_keywords:
 - examples [Windows Forms], double-buffered graphics
 ms.assetid: 4f6fef99-0972-436e-9d73-0167e4033f71
 ms.openlocfilehash: 20ec03e6b84110f7ea00c134dc18b23f233c5f58
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59103443"
 ---
 # <a name="double-buffered-graphics"></a>이중 버퍼링 그래픽
@@ -37,7 +37,7 @@ ms.locfileid: "59103443"
 - <xref:System.Drawing.BufferedGraphics>
 - <xref:System.Drawing.BufferedGraphicsContext>
 - <xref:System.Drawing.BufferedGraphicsManager>
-- [방법: 버퍼링된 그래픽 수동 렌더링](how-to-manually-render-buffered-graphics.md)
-- [방법: 양식과 컨트롤에 이중 버퍼링을 사용하여 그래픽 깜빡임 줄이기](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
-- [방법: 버퍼링된 그래픽 수동 관리](how-to-manually-manage-buffered-graphics.md)
+- [방법: 버퍼링 된 그래픽 수동 렌더링](how-to-manually-render-buffered-graphics.md)
+- [방법: 폼 및 컨트롤에 이중 버퍼링 사용 하 여 그래픽 깜빡임 줄이기](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
+- [방법: 버퍼링 된 그래픽 수동 관리](how-to-manually-manage-buffered-graphics.md)
 - [Windows Forms의 그래픽 및 그리기](graphics-and-drawing-in-windows-forms.md)

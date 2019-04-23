@@ -3,10 +3,10 @@ title: SQL Server에서 데이터 암호화
 ms.date: 03/30/2017
 ms.assetid: 83b992f7-b351-4678-b4b9-f4ffd58134cc
 ms.openlocfilehash: 1acb720b8a4f8beb27bb1a5236efdb6f2bb44383
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102169"
 ---
 # <a name="data-encryption-in-sql-server"></a>SQL Server에서 데이터 암호화
@@ -26,7 +26,7 @@ SQL Server에는 인증서, 비대칭 키 또는 대칭 키를 사용하여 데�
   
 |리소스|설명|  
 |-|-|  
-|[SQL Server Encryption](/sql/relational-databases/security/encryption/sql-server-encryption)|SQL Server의 암호화에 대해 간략하게 설명합니다. 이 항목에서는 추가 문서에 대 한 링크를 포함합니다.|  
+|[SQL Server 암호화](/sql/relational-databases/security/encryption/sql-server-encryption)|SQL Server의 암호화에 대해 간략하게 설명합니다. 이 항목에서는 추가 문서에 대 한 링크를 포함합니다.|  
 |[암호화 계층](/sql/relational-databases/security/encryption/encryption-hierarchy)|SQL Server의 암호화에 대해 간략하게 설명합니다. 이 항목에서는 추가 문서에 대 한 링크를 제공합니다.|  
   
 ## <a name="see-also"></a>참고자료
@@ -35,6 +35,6 @@ SQL Server에는 인증서, 비대칭 키 또는 대칭 키를 사용하여 데�
 - [SQL Server의 응용 프로그램 보안 시나리오](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [SQL Server에서 인증](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
 - [SQL Server의 서버 및 데이터베이스 역할](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)
-- [SQL Server에서 소유권 및 사용자와 스키마 분리](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
+- [SQL Server에서 소유권 및 사용자 스키마 분리](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
 - [SQL Server에서 권한 부여 및 권한](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
