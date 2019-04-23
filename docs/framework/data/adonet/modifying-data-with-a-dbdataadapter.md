@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
 ms.openlocfilehash: 3038e35947cd8f97266d374a367a77380df440dd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59158875"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>DbDataAdapter로 데이터 수정
@@ -44,7 +44,7 @@ ms.locfileid: "59158875"
   
 ## <a name="see-also"></a>참고자료
 
-- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
+- [DbProviderFactory](../../../../docs/framework/data/adonet/dbproviderfactories.md)
 - [DbProviderFactory 가져오기](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
 - [DbConnection, DbCommand 및 DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -3,10 +3,10 @@ title: 전송 보안을 사용하여 메시지에 보안 설정
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
 ms.openlocfilehash: f32e932bb6616911baa8991cb46a5940c8d285ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59160890"
 ---
 # <a name="securing-messages-using-transport-security"></a>전송 보안을 사용하여 메시지에 보안 설정
@@ -50,7 +50,7 @@ ms.locfileid: "59160890"
  전송 보안이 켜져 있는 경우 기본 설정은 <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>입니다.  
   
 #### <a name="windows-domain-authentication-mode"></a>Windows 도메인 인증 모드  
- Windows 보안을 사용하려면 Active Directory 통합이 필요합니다. <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> 기본 전송 보안 모드가입니다. 이 값으로 설정 하는 경우 WCF 채널 Windows SID를 MSMQ 메시지에 연결 하 고 Active Directory에서 가져온 내부 인증서를 사용 합니다. MSMQ에서는 메시지 보안을 위해 내부 인증서를 사용합니다. 수신 큐 관리자는 Active Directory를 사용하여 클라이언트를 인증하기 위해 일치하는 인증서를 검색하고, SID가 클라이언트의 인증서와 일치하는지도 확인합니다. `WindowsDomain` 인증 모드의 경우 내부에서 생성된 인증서, `Certificate` 인증 모드의 경우 외부에서 생성된 인증서가 메시지에 첨부되면 대상 큐가 필수 인증으로 표시되어 있지 않더라도 이 인증 단계가 실행됩니다.  
+ Windows 보안을 사용하려면 Active Directory 통합이 필요합니다. <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>은 기본 전송 보안 모드입니다. 이 값으로 설정 하는 경우 WCF 채널 Windows SID를 MSMQ 메시지에 연결 하 고 Active Directory에서 가져온 내부 인증서를 사용 합니다. MSMQ에서는 메시지 보안을 위해 내부 인증서를 사용합니다. 수신 큐 관리자는 Active Directory를 사용하여 클라이언트를 인증하기 위해 일치하는 인증서를 검색하고, SID가 클라이언트의 인증서와 일치하는지도 확인합니다. `WindowsDomain` 인증 모드의 경우 내부에서 생성된 인증서, `Certificate` 인증 모드의 경우 외부에서 생성된 인증서가 메시지에 첨부되면 대상 큐가 필수 인증으로 표시되어 있지 않더라도 이 인증 단계가 실행됩니다.  
   
 > [!NOTE]
 >  큐를 만들 때 큐에 메시지를 보내는 클라이언트의 인증이 필요함을 나타내려면 큐를 인증된 큐로 표시할 수 있습니다. 이렇게 하면 인증되지 않은 메시지는 큐에서 수락하지 않습니다.  

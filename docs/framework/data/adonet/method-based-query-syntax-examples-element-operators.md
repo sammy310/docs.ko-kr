@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: eedf2fbd-f407-4f62-bb1a-c00eb001b1dd
 ms.openlocfilehash: 49a2665240f5f35e0d4937e55c39eccf04b1444d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157250"
 ---
 # <a name="method-based-query-syntax-examples-element-operators-linq-to-dataset"></a>메서드 기반 쿼리 구문 예제: 요소 연산자 (LINQ to DataSet)
@@ -44,7 +44,7 @@ ms.locfileid: "59157250"
   
 ## <a name="see-also"></a>참고자료
 
-- [데이터를 데이터 집합에 로드](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+- [데이터를 데이터 세트에 로드](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
 - [LINQ to DataSet 예제](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
 - [표준 쿼리 연산자 개요(C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [표준 쿼리 연산자 개요 (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [표준 쿼리 연산자 개요(Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

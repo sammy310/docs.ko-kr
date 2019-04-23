@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
 ms.openlocfilehash: caf9a66e8c42fb80955539aa9d3eb32179309004
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157458"
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>시스템 제공 상호 운용성 바인딩에서 지원하는 웹 서비스 프로토콜
@@ -26,8 +26,8 @@ Windows Communication Foundation (WCF)는 일련의 웹 서비스 사양으로 �
   
 |범주|프로토콜|사양 및 사용|  
 |--------------|--------------|-----------------------------|  
-|전송|HTTP 1.1|[HTTP 1.1](https://go.microsoft.com/fwlink/?LinkId=84048)<br /><br /> `BasicHttpBinding`하십시오 `WSHttpBinding`, 및 `WS2007HttpBinding` HTTP 및 HTTPS 전송을 사용 합니다.|  
-|메시징|MTOM|[MTOM](https://go.microsoft.com/fwlink/?LinkId=95326)<br /><br /> `basicHttpBinding`를 `wsHttpBinding`, 및 `ws2007HttpBinding` 전송 최적화 메커니즘 MTOM (Message)를 지원 합니다. 기본적으로 사용되지 않으며 MTOM을 사용하려면 `messageEncoding` 특성을 `"Mtom"`으로 설정하십시오.<br /><br /> 예제:<br /><br /> `<wsHttpBinding> <binding messageEncoding="Mtom"/> </wsHttpBinding>`|  
+|전송|HTTP 1.1|[HTTP 1.1](https://go.microsoft.com/fwlink/?LinkId=84048)<br /><br /> `BasicHttpBinding`, `WSHttpBinding` 및 `WS2007HttpBinding`은 HTTP 및 HTTPS 전송을 사용합니다.|  
+|메시징|MTOM|[MTOM](https://go.microsoft.com/fwlink/?LinkId=95326)<br /><br /> `basicHttpBinding`, `wsHttpBinding` 및 `ws2007HttpBinding`은 MTOM(Message-Transmission Optimization Mechanism)을 지원합니다. 기본적으로 사용되지 않으며 MTOM을 사용하려면 `messageEncoding` 특성을 `"Mtom"`으로 설정하십시오.<br /><br /> 예제:<br /><br /> `<wsHttpBinding> <binding messageEncoding="Mtom"/> </wsHttpBinding>`|  
 |메타데이터|WSDL 1.1|[WSDL 1.1](https://go.microsoft.com/fwlink/?LinkId=94859)<br /><br /> WCF 웹 서비스 설명 언어 (WSDL)를 사용 하 여 서비스 설명.|  
 |메타데이터|WS-Policy|[WS-Policy](https://go.microsoft.com/fwlink/?LinkId=94864)<br /><br /> WCF는 서비스 요구 사항 및 기능을 설명 하는 Ws-policy 사양을 도메인별 어설션과 함께 사용 합니다.|  
 |메타데이터|WS-Policy 1.5|[WS-Policy 1.5](https://go.microsoft.com/fwlink/?LinkId=95327)<br /><br /> WCF는 서비스 요구 사항 및 기능을 설명 하는 Ws-policy 사양을 도메인별 어설션과 함께 사용 합니다.|  
@@ -40,19 +40,19 @@ Windows Communication Foundation (WCF)는 일련의 웹 서비스 사양으로 �
 |--------------|--------------|-----------------------------|  
 |메시징|SOAP 1.1|[SOAP 1.1](https://go.microsoft.com/fwlink/?LinkId=90520)<br /><br /> Basic Profile 1.1에 따라 `basicHttpBinding` 요소는 SOAP 1.1 메시지 프로토콜을 구현합니다.|  
 |보안|WSS SOAP Message Security 1.0|[WSS SOAP Message Security 1.0](https://go.microsoft.com/fwlink/?LinkId=94684)<br /><br /> 기본 보안 프로필에 따라 `basicHttpBinding` 요소는 사용자 이름/암호 및 X.509 기반 보안을 위해 WSS(Web Services Security) SOAP Message Security 1.0 사양을 구현합니다.<br /><br /> `<basicHttpBinding> <binding name="Binding1"> <security mode="TransportWithMessageCredential &#124;                     "Message" .../> </binding> </basicHttpBinding>`|  
-|보안|WSS SOAP Message Security UsernameToken Profile 1.0|[WSS SOAP Message Security UsernameToken Profile 1.0](https://go.microsoft.com/fwlink/?LinkId=95334)<br /><br /> `<basicHttpBinding> <binding name="Binding1"> <security mode="TransportWithMessageCredential"> <transport clientCredentialType="Basic"/> </security> </basicHttpBinding>`|  
+|보안|WSS SOAP Message Security UsernameToken Profile 1.0|[WSS SOAP 메시지 Security UsernameToken Profile 1.0](https://go.microsoft.com/fwlink/?LinkId=95334)<br /><br /> `<basicHttpBinding> <binding name="Binding1"> <security mode="TransportWithMessageCredential"> <transport clientCredentialType="Basic"/> </security> </basicHttpBinding>`|  
 |보안|WSS SOAP 메시지 보안 X.509 인증서 토큰 프로필 1.0|[WSS SOAP 메시지 보안 X.509 인증서 토큰 프로필 1.0](https://go.microsoft.com/fwlink/?LinkId=95335)<br /><br /> `<basicHttpBinding>   <security mode="Message"> <message clientCredentialType="Certificate"/> </security> </basicHttpBinding>`|  
   
 ### <a name="wshttpbinding-ws2007httpbinding-and-wsdualhttpbinding"></a>wsHttpBinding, ws2007HttpBinding 및 wsDualHttpBinding  
   
 |범주|프로토콜|사양 및 사용|  
 |--------------|--------------|-----------------------------|  
-|메시징|SOAP 1.2|[Primer](https://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Messaging framework](https://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Adjuncts (including HTTP binding)](https://go.microsoft.com/fwlink/?LinkId=95329)|  
-|메시징|WS-Addressing 2005/08|[Web Services Addressing 1.0 - Core](https://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Web Services Addressing 1.0 - SOAP](https://go.microsoft.com/fwlink/?LinkId=95330)<br /><br /> `wsHttpBinding`, `ws2007HttpBinding` 및 `wsDualHttpBinding`은 W3C(World Wide Web Consortium) WS-Addressing 권장 사항을 구현하여 비동기 메시징, 메시지 상관 관계 및 전송 중립적 주소 지정 메커니즘을 사용할 수 있습니다.<br /><br /> WS-* 규격에서 WS-Addressing 헤더의 암호화를 허용하지만 WCF는 이를 지원하지 않습니다.|  
+|메시징|SOAP 1.2|[입문서](https://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [메시징 프레임 워크](https://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Adjuncts (HTTP 바인딩을 포함)](https://go.microsoft.com/fwlink/?LinkId=95329)|  
+|메시징|WS-Addressing 2005/08|[웹 서비스 주소 지정 1.0-Core](https://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [웹 서비스 주소 지정 1.0-SOAP](https://go.microsoft.com/fwlink/?LinkId=95330)<br /><br /> `wsHttpBinding`, `ws2007HttpBinding` 및 `wsDualHttpBinding`은 W3C(World Wide Web Consortium) WS-Addressing 권장 사항을 구현하여 비동기 메시징, 메시지 상관 관계 및 전송 중립적 주소 지정 메커니즘을 사용할 수 있습니다.<br /><br /> WS-* 규격에서 WS-Addressing 헤더의 암호화를 허용하지만 WCF는 이를 지원하지 않습니다.|  
 |메시징|WS-Addressing 1.0 - Metadata|[Ws-addressing 1.0 Metadata](https://www.w3.org/2007/05/addressing/metadata) 이 프로토콜에 대 한 지원이 있습니다 (기본값) 1.2 ServiceMetadata 동작에서 정책 버전을 설정 하 여 설정 된 경우 wsdl 설명이 Ws-addressing wsdl과 호환 됩니다. 사용 하 여 1.5 있습니다, wsdl 설명이 ws-addressing 메타 데이터와 호환 됩니다.<br /><br /> WS-* 규격에서 WS-Addressing 헤더의 암호화를 허용하지만 WCF는 이를 지원하지 않습니다.|  
 |보안|WSS SOAP Message Security 1.0|[WSS SOAP Message Security 1.0](https://go.microsoft.com/fwlink/?LinkId=94684)<br /><br /> `securityMode` 특성이 "wsSecurityOverHttp"(기본값)로 설정되어 있고 매개 변수가 `wsSecurity` 자식 요소를 사용하여 구성되어 있을 경우 사용합니다.<br /><br /> `<wsHttpBinding>   <binding name="myBinding">      <security mode="Message" .../>   </binding> </wsHttpBinding>`|  
-|보안|WSS SOAP 메시지 보안 UsernameToken Profile 1.1|[WSS SOAP Message Security UsernameToken Profile 1.0](https://go.microsoft.com/fwlink/?LinkId=95331)<br /><br /> `wsSecurity` 요소의 `authenticationMode` 특성이 "Username"으로 설정된 경우 사용합니다.<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="UserName        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security> </binding> </wsHttpBinding>`|  
-|보안|WSS SOAP Message Security X.509 Certificate Token Profile 1.1|[WSS SOAP Message Security X.509 Certificate Token Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=95332)<br /><br /> `wsSecurity` 요소의 `authenticationMode` 특성이 "Username", "Certificate" 또는 "None"으로 설정된 경우 메시지 보호를 위해 사용합니다. 또한 `wsSecurity` 요소의 `authenticationMode` 특성이 "Certificate"으로 설정된 경우 클라이언트 인증을 위해 이를 사용합니다.<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="Certificate"        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security>   </binding> </wsHttpBinding>`|  
+|보안|WSS SOAP 메시지 보안 UsernameToken Profile 1.1|[WSS SOAP 메시지 Security UsernameToken Profile 1.0](https://go.microsoft.com/fwlink/?LinkId=95331)<br /><br /> `wsSecurity` 요소의 `authenticationMode` 특성이 "Username"으로 설정된 경우 사용합니다.<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="UserName        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security> </binding> </wsHttpBinding>`|  
+|보안|WSS SOAP Message Security X.509 Certificate Token Profile 1.1|[WSS SOAP 메시지 보안 X.509 인증서 토큰 프로필 1.1](https://go.microsoft.com/fwlink/?LinkId=95332)<br /><br /> `wsSecurity` 요소의 `authenticationMode` 특성이 "Username", "Certificate" 또는 "None"으로 설정된 경우 메시지 보호를 위해 사용합니다. 또한 `wsSecurity` 요소의 `authenticationMode` 특성이 "Certificate"으로 설정된 경우 클라이언트 인증을 위해 이를 사용합니다.<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="Certificate"        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security>   </binding> </wsHttpBinding>`|  
 |보안|WSS SOAP Message Security Kerberos Token Profile 1.1|[WSS SOAP 메시지 Security Kerberos Token Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=95333)<br /><br /> `wsSecurity` 요소의 `authenticationMode` 특성이 "Windows"로 설정된 경우 인증 및 메시지 보호를 위해 사용합니다.<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="Windows"        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security>   </binding> </wsHttpBinding>`|  
 |보안|WS-SecureConversation|[WS-SecureConversation](https://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> `security/@mode` 특성이 "Message"로 설정되어 있고 `message/@establishSecurityContext` 특성이 "true"(기본값)로 설정된 경우 보안 세션을 제공하기 위해 사용합니다.|  
 |보안|WS-Trust|[WS-Trust](https://go.microsoft.com/fwlink/?LinkId=95318)<br /><br /> WS-SecureConversation에 의해 사용됩니다(위 참조).|  
@@ -63,7 +63,7 @@ Windows Communication Foundation (WCF)는 일련의 웹 서비스 사양으로 �
 ## <a name="wsfederationhttpbinding-and-ws2007federationhttpbinding"></a>wsFederationHttpBinding 및 ws2007FederationHttpBinding  
  합니다 [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) 하 고 [ \<ws2007FederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) 요소가 있는 세 번째 페더레이션된 시나리오를 지원 하기 위해 도입 된 당사자는 클라이언트를 인증 하는 데 토큰을 발급 합니다. `wsHttpBinding`에서 사용하는 프로토콜과 함께 `wsFederationHttpBinding`에서 사용합니다.  
   
--   `WS-Trust` 에 대 한 토큰 발급 합니다.  
+-   토큰 발급에 대한 `WS-Trust`입니다.  
   
 -   가장 일반적으로 발급되는 토큰 형식에 대한 WSS SAML(Security Assertions Markup Language) Token Profile 1.0 및 1.1입니다.  
   
@@ -94,8 +94,8 @@ Windows Communication Foundation (WCF)는 일련의 웹 서비스 사양으로 �
 |범주|프로토콜|사양 및 사용|  
 |--------------|--------------|-----------------------------|  
 |전송|HTTP 1.1|[HTTP 1.1](https://go.microsoft.com/fwlink/?LinkId=84048)|  
-|메시징|SOAP 1.2|[Primer](https://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Messaging framework](https://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Adjuncts (including HTTP binding)](https://go.microsoft.com/fwlink/?LinkId=95329)|  
-|메시징|WS-Addressing 2005/08|[Web Services Addressing 1.0 - Core](https://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Web Services Addressing 1.0 - SOAP](https://go.microsoft.com/fwlink/?LinkId=95330)|  
+|메시징|SOAP 1.2|[입문서](https://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [메시징 프레임 워크](https://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Adjuncts (HTTP 바인딩을 포함)](https://go.microsoft.com/fwlink/?LinkId=95329)|  
+|메시징|WS-Addressing 2005/08|[웹 서비스 주소 지정 1.0-Core](https://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [웹 서비스 주소 지정 1.0-SOAP](https://go.microsoft.com/fwlink/?LinkId=95330)|  
 |메타데이터|WS-MetadataExchange|[WS-MetadataExchange](https://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> WCF는 XML 스키마, WSDL 및 Ws-policy를 검색 하려면 Ws-metadataexchange를 구현 합니다.|  
   
 ### <a name="mexhttpsbinding"></a>mexHttpsBinding  
@@ -104,8 +104,8 @@ Windows Communication Foundation (WCF)는 일련의 웹 서비스 사양으로 �
 |범주|프로토콜|사양 및 사용|  
 |--------------|--------------|-----------------------------|  
 |전송|HTTP 1.1|[HTTP 1.1](https://go.microsoft.com/fwlink/?LinkId=84048)<br /><br /> 전송 보안을 사용합니다.|  
-|메시징|SOAP 1.2|[Primer](https://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Messaging framework](https://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Adjuncts (including HTTP binding)](https://go.microsoft.com/fwlink/?LinkId=95329)|  
-|메시징|WS-Addressing 2005/08|[Web Services Addressing 1.0 - Core](https://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Web Services Addressing 1.0 - SOAP](https://go.microsoft.com/fwlink/?LinkId=95330)|  
+|메시징|SOAP 1.2|[입문서](https://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [메시징 프레임 워크](https://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Adjuncts (HTTP 바인딩을 포함)](https://go.microsoft.com/fwlink/?LinkId=95329)|  
+|메시징|WS-Addressing 2005/08|[웹 서비스 주소 지정 1.0-Core](https://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [웹 서비스 주소 지정 1.0-SOAP](https://go.microsoft.com/fwlink/?LinkId=95330)|  
 |메타데이터|WS-MetadataExchange|[WS-MetadataExchange](https://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> WCF는 XML 스키마, WSDL 및 Ws-policy를 검색 하려면 Ws-metadataexchange를 구현 합니다.|  
   
 ## <a name="see-also"></a>참고자료

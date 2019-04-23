@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Dock values [WPF], getting
 ms.assetid: fcf4ab8a-c7cd-4835-8d04-de1c999ab4a8
 ms.openlocfilehash: fb6c8a7d62aa09a6e1d82cb4079d1425a7f39f8c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59160742"
 ---
 # <a name="how-to-get-or-set-a-dock-value"></a>방법: Dock 값 가져오기 또는 설정
@@ -29,4 +29,4 @@ ms.locfileid: "59160742"
 - <xref:System.Windows.Controls.DockPanel>
 - <xref:System.Windows.Controls.DockPanel.GetDock%2A>
 - <xref:System.Windows.Controls.DockPanel.SetDock%2A>
-- [Panel 개요](panels-overview.md)
+- [패널 개요](panels-overview.md)

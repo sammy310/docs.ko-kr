@@ -6,10 +6,10 @@ helpviewer_keywords:
 - WCF, COM+ integration
 ms.assetid: 7717c6c2-85fc-418b-a8ed-bad8e61cec5c
 ms.openlocfilehash: 6d0967355e64640e0fd5c81f04a5bf4f33c7b3f7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59158667"
 ---
 # <a name="com-service-model-configuration-tool-comsvcconfigexe"></a>COM+ 서비스 모델 구성 도구(ComSvcConfig.exe)
@@ -46,7 +46,7 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
 |------------|-----------------|  
 |`/application:` \<*ApplicationID* &#124; *ApplicationName*\>|구성할 COM+ 응용 프로그램을 지정합니다.<br /><br /> 약식은 `/a`입니다.|  
 |`/contract:` \<*ClassID* &#124; *ProgID* &#124; \*하십시오*InterfaceID* &#124; *InterfaceName*    &#124; \*\>|서비스의 계약으로 구성할 COM+ 구성 요소 및 인터페이스를 지정합니다.<br /><br /> 약식은 `/c`입니다.<br /><br /> 하지만 와일드 카드 문자 (\*) 구성 요소 및 인터페이스 이름을 지정할 때 사용할 수 있습니다 것이 좋습니다, 사용 하지 않는를 원하지 않은 인터페이스가 노출 될 수 있으므로 합니다.|  
-|`/hosting:` \<*complus* &#124; *되었습니다* \>|COM+ 호스팅 모드 또는 웹 호스팅 모드를 사용할지 지정합니다.<br /><br /> 약식은 `/h`입니다.<br /><br /> COM+ 호스팅 모드를 사용하려면 COM+ 응용 프로그램을 명시적으로 활성화해야 합니다. 웹 호스팅 모드를 사용하면 필요에 따라 COM+ 응용 프로그램을 자동으로 활성화할 수 있습니다. COM+ 응용 프로그램이 라이브러리 응용 프로그램인 경우 IIS(인터넷 정보 서비스) 프로세스에서 실행됩니다. COM+ 응용 프로그램이 서버 응용 프로그램인 경우 Dllhost.exe 프로세스에서 실행됩니다.|  
+|`/hosting:` \<*complus* &#124; *되었습니다*\>|COM+ 호스팅 모드 또는 웹 호스팅 모드를 사용할지 지정합니다.<br /><br /> 약식은 `/h`입니다.<br /><br /> COM+ 호스팅 모드를 사용하려면 COM+ 응용 프로그램을 명시적으로 활성화해야 합니다. 웹 호스팅 모드를 사용하면 필요에 따라 COM+ 응용 프로그램을 자동으로 활성화할 수 있습니다. COM+ 응용 프로그램이 라이브러리 응용 프로그램인 경우 IIS(인터넷 정보 서비스) 프로세스에서 실행됩니다. COM+ 응용 프로그램이 서버 응용 프로그램인 경우 Dllhost.exe 프로세스에서 실행됩니다.|  
 |`/webSite:` \<*WebsiteName*\>|웹 호스팅 모드를 사용할 때 호스팅할 웹 사이트를 지정합니다. `/hosting` 플래그를 참조하십시오.<br /><br /> 약식은 `/w`입니다.<br /><br /> 웹 사이트가 지정되지 않은 경우에는 기본 웹 사이트가 사용됩니다.|  
 |`/webDirectory:` \<*WebDirectoryName*\>|웹 호스팅을 사용할 때 호스팅할 가상 디렉터리를 지정합니다. `/hosting` 플래그를 참조하십시오.<br /><br /> 약식은 `/d`입니다.|  
 |`/mex`|서비스에서 계약 정의를 검색하려는 클라이언트를 지원하기 위해 기본 서비스 구성에 MEX(메타데이터 교환) 서비스 엔드포인트를 추가합니다.<br /><br /> 약식은 `/x`입니다.|  
@@ -96,4 +96,4 @@ ComSvcConfig.exe /list /application:OnlineStore /hosting:complus
   
 ## <a name="see-also"></a>참고자료
 
-- [방법: COM+ 서비스 모델 구성 도구 사용](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)
+- [방법: COM + 서비스 모델 구성 도구를 사용 합니다.](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)

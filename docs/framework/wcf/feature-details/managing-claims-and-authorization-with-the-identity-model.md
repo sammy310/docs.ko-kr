@@ -9,10 +9,10 @@ helpviewer_keywords:
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
 ms.openlocfilehash: 568fb1c2a18cfde5b15b844754f4356af0a576a3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155092"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>ID 모델을 사용하여 클레임 및 권한 부여 관리
@@ -177,6 +177,6 @@ ms.locfileid: "59155092"
 - [방법: 사용자 지정 클레임 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
 - [방법: 클레임 비교](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
 - [방법: 사용자 지정 권한 부여 정책 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)
-- [방법: 서비스에 대한 사용자 지정 권한 부여 관리자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [방법: 서비스에 대 한 사용자 지정 권한 부여 관리자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
 - [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [권한 부여](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)

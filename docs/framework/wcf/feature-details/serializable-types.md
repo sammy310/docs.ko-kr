@@ -3,10 +3,10 @@ title: 직렬화 가능 형식
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
 ms.openlocfilehash: 44fc538ccb69296b91c94d2b9ae497be599c0c7e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59160851"
 ---
 # <a name="serializable-types"></a>직렬화 가능 형식
@@ -27,7 +27,7 @@ ms.locfileid: "59160851"
   
 -   읽기 전용 필드, `get` 또는 `set` 메서드가 없는 속성, 내부 또는 전용 `set` 또는 `get` 메서드가 있는 속성은 serialize되지 않습니다. 이러한 속성은 무시되고 예외가 throw되지 않습니다. get-only 컬렉션의 경우는 예외입니다.  
   
--   <xref:System.Xml.Serialization.XmlSerializer> 특성 (같은 `XmlElement`, `XmlAttribute`를 `XmlIgnore`, `XmlInclude`등)은 무시 됩니다.  
+-   <xref:System.Xml.Serialization.XmlSerializer> 특성(`XmlElement`, `XmlAttribute`, `XmlIgnore`, `XmlInclude` 등)이 무시됩니다.  
   
 -   지정된 형식에 <xref:System.Runtime.Serialization.DataContractAttribute> 특성을 적용하지 않는 경우 serializer는 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성이 적용되는 형식의 모든 멤버를 무시합니다.  
   
@@ -44,4 +44,4 @@ ms.locfileid: "59160851"
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [데이터 계약 Serializer에서 지원하는 형식](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [데이터 계약 직렬 변환기에서 지원하는 형식](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

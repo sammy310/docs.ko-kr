@@ -9,10 +9,10 @@ helpviewer_keywords:
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
 ms.openlocfilehash: c004560a0b7ab367fbf4fbb48b0e8d8b63f3d8f4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59156002"
 ---
 # <a name="templatebinding-markup-extension"></a>TemplateBinding 태그 확장
@@ -34,7 +34,7 @@ ms.locfileid: "59156002"
   
 |||  
 |-|-|  
-|`propertyName`|<xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> setter 구문에 설정할 속성입니다.|  
+|`propertyName`|setter 구문에 설정할 속성의 <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType>입니다.|  
 |`sourceProperty`|템플릿을 기반으로 만들 형식에 존재하는 또 다른 종속성 속성이며 해당 <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType>으로 지정됩니다.<br /><br /> 또는<br /><br /> 템플릿을 기반으로 만들 대상 형식과는 다른 형식으로 정의되는 "점으로 구분된" 속성 이름이며 실제로는 <xref:System.Windows.PropertyPath>입니다. 참조 [PropertyPath XAML 구문](propertypath-xaml-syntax.md)합니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -46,9 +46,9 @@ ms.locfileid: "59156002"
   
  특성 구문은 이러한 태그 확장에 가장 많이 사용되는 구문입니다. `TemplateBinding` 식별자 문자열 다음에 나오는 문자열 토큰은 기본 <xref:System.Windows.TemplateBindingExtension.Property%2A> 확장 클래스의 <xref:System.Windows.TemplateBindingExtension> 값으로 할당됩니다.  
   
- 다른 요소 구문도 가능하지만 실제 환경에서 적용하지 않으므로 표시하지 않았습니다. `TemplateBinding` 식 평가 사용 하 여 setter 내에서 값을 채우는 데 사용 되 고에 대 한 개체 요소 구문을 사용 하 여 `TemplateBinding` 맞게 `<Setter.Property>` 속성 요소 구문은 번거롭습니다.  
+ 다른 요소 구문도 가능하지만 실제 환경에서 적용하지 않으므로 표시하지 않았습니다. `TemplateBinding`은 평가된 식을 사용하여 setter 내에 값을 채우는 데 사용됩니다. `TemplateBinding`에 대한 개체 요소 구문을 사용하여 `<Setter.Property>` 속성 요소 구문을 채우는 경우 작업이 번거롭습니다.  
   
- `TemplateBinding` 지정 하는 자세한 특성 사용 구문에 사용할 수는 <xref:System.Windows.TemplateBindingExtension.Property%2A> 속성으로 속성 = 값 쌍:  
+ `TemplateBinding` 속성을 다음과 같이 속성=값 쌍으로 지정하는 자세한 특성 사용 구문에도 <xref:System.Windows.TemplateBindingExtension.Property%2A>을 사용할 수 있습니다.  
   
 ```xml  
 <object property="{TemplateBinding Property=sourceProperty}" .../>  
@@ -58,7 +58,7 @@ ms.locfileid: "59156002"
   
  에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML 프로세서 구현에서이 태그 확장에 대 한 처리는 정의한는 <xref:System.Windows.TemplateBindingExtension> 클래스입니다.  
   
- `TemplateBinding` 태그 확장입니다. 태그 확장은 특성 값을 리터럴 값 또는 처리기 이름이 아닌 다른 값이 되도록 이스케이프해야 하는 요구 사항이 있는 경우 일반적으로 구현되며 이러한 요구 사항은 특정 형식 또는 속성에 형식 변환기를 배치하는 것보다 더 포괄적입니다. XAML 사용의 모든 태그 확장을 `{` 고 `}` XAML 프로세서는 태그 확장이 특성을 처리 해야 한다는 것을 인식 하는 규칙은 특성 구문에서 문자입니다. 자세한 내용은 [태그 확장 및 WPF XAML](markup-extensions-and-wpf-xaml.md)을 참조하세요.  
+ `TemplateBinding`은 태그 확장입니다. 태그 확장은 특성 값을 리터럴 값 또는 처리기 이름이 아닌 다른 값이 되도록 이스케이프해야 하는 요구 사항이 있는 경우 일반적으로 구현되며 이러한 요구 사항은 특정 형식 또는 속성에 형식 변환기를 배치하는 것보다 더 포괄적입니다. XAML 사용의 모든 태그 확장을 `{` 고 `}` XAML 프로세서는 태그 확장이 특성을 처리 해야 한다는 것을 인식 하는 규칙은 특성 구문에서 문자입니다. 자세한 내용은 [태그 확장 및 WPF XAML](markup-extensions-and-wpf-xaml.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
 
@@ -66,6 +66,6 @@ ms.locfileid: "59156002"
 - <xref:System.Windows.Controls.ControlTemplate>
 - [스타일 지정 및 템플릿](../controls/styling-and-templating.md)
 - [XAML 개요(WPF)](xaml-overview-wpf.md)
-- [태그 확장명 및 WPF XAML](markup-extensions-and-wpf-xaml.md)
-- [RelativeSource MarkupExtension](relativesource-markupextension.md)
+- [태그 확장 및 WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [RelativeSource 태그 확장](relativesource-markupextension.md)
 - [Binding 태그 확장](binding-markup-extension.md)
