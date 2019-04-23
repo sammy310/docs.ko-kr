@@ -9,10 +9,10 @@ helpviewer_keywords:
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
 ms.openlocfilehash: febea73ddbc45276f97835eb4af7ee0d0d68dda5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59095272"
 ---
 # <a name="systemnet-element-network-settings"></a>\<system.Net > 요소 (네트워크 설정)
@@ -43,14 +43,14 @@ ms.locfileid: "59095272"
 |[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|HTTP(Hypertext Transfer Protocol) 프록시 서버를 구성합니다.|  
 |[mailSettings](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|단순 메일 전송 프로토콜 (SMTP) 메일 보내기 옵션을 구성 합니다.|  
 |[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|네트워크 요청에 대 한 캐싱 메커니즘을 제어합니다.|  
-|[설정](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|클래스에 대 한 기본 네트워크 옵션을 구성 합니다 <xref:System.Net> 및 관련 자식 네임 스페이스입니다.|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|클래스에 대 한 기본 네트워크 옵션을 구성 합니다 <xref:System.Net> 및 관련 자식 네임 스페이스입니다.|  
 |[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|인터넷 호스트의 정보를 요청 하는 데는 모듈을 지정 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
 |**요소**|**설명**|  
 |-----------------|---------------------|  
-|[구성](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|모든 네임 스페이스에 대 한 설정을 포함합니다.|  
+|[configuration](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|모든 네임 스페이스에 대 한 설정을 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
  합니다 [ \<system.net >](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) 요소에는 클래스에 대 한 설정이 포함 되어 있습니다.는 <xref:System.Net> 및 관련 자식 네임 스페이스입니다. 설정을 인증 모듈, 연결 관리, 메일 설정, 프록시 서버 및 인터넷 호스트에서 정보를 받는 데 인터넷 요청 모듈을 구성합니다.  

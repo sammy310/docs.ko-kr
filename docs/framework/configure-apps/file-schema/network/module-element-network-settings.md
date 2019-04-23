@@ -1,5 +1,5 @@
 ---
-title: <module> 요소 (네트워크 설정)
+title: <module> 요소(네트워크 설정)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#module
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - <module> element
 ms.assetid: 10318725-9666-4d65-ab61-b94c64e59f13
 ms.openlocfilehash: 0d108f2350d82666e3dc24f0f6854fe64ea4755f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59084117"
 ---
 # <a name="module-element-network-settings"></a>\<모듈 > 요소 (네트워크 설정)

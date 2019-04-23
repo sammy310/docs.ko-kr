@@ -6,10 +6,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], customization
 ms.assetid: 01ea5d4c-a736-4596-b0e9-a67a1b86e15f
 ms.openlocfilehash: ab8d1f07c608aca4f14f5e73860f8c3e263a4610
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091384"
 ---
 # <a name="customizing-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤 사용자 지정
@@ -24,13 +24,13 @@ ms.locfileid: "59091384"
  [방법: Windows Forms DataGridView 컨트롤에서 행 모양 사용자 지정](customize-the-appearance-of-rows-in-the-datagrid.md)  
  처리 하는 방법에 설명 합니다 <xref:System.Windows.Forms.DataGridView.RowPrePaint> 및 <xref:System.Windows.Forms.DataGridView.RowPostPaint> 여러 열으로 확장 하기 위해 사용자 지정, 그라데이션 배경이 있는 행을 그리기 및 콘텐츠는 이벤트입니다.  
   
- [방법: 동작 및 모양을 확장하여 Windows Forms DataGridView 컨트롤에서 셀 및 열 사용자 지정](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)  
+ [방법: Windows Forms DataGridView 컨트롤에서 셀 및 열은 동작과 모양을 확장 하 여 사용자 지정](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)  
  파생 된 사용자 지정 형식을 만드는 방법을 설명 합니다 `DataGridViewCell` 고 `DataGridViewColumn` 에 마우스 포인터가 있을 때 셀을 강조 표시 하기 위해.  
   
- [방법: Windows Forms DataGridView 컨트롤에서 단추 열의 단추를 사용하지 않도록 설정](disable-buttons-in-a-button-column-in-the-datagrid.md)  
+ [방법: Windows Forms DataGridView 컨트롤의 단추 열에서 단추를 사용 하지 않도록 설정](disable-buttons-in-a-button-column-in-the-datagrid.md)  
  파생 된 사용자 지정 형식을 만드는 방법을 설명 합니다 <xref:System.Windows.Forms.DataGridViewButtonCell> 및 <xref:System.Windows.Forms.DataGridViewButtonColumn> 단추 열에서 비활성화 된 단추를 표시 하기 위해.  
   
- [방법: Windows Forms DataGridView 셀에서 컨트롤 호스팅](how-to-host-controls-in-windows-forms-datagridview-cells.md)  
+ [방법: Windows Forms DataGridView 셀에서 컨트롤을 호스트](how-to-host-controls-in-windows-forms-datagridview-cells.md)  
  구현 하는 방법에 설명 합니다 `IDataGridViewEditingControl` 인터페이스에서 파생 된 사용자 지정 형식을 만들고 `DataGridViewCell` 및 `DataGridViewColumn` 표시 하기 위해를 <xref:System.Windows.Forms.DateTimePicker> 셀 편집 모드에 있을 때이 컨트롤입니다.  
   
 ## <a name="reference"></a>참조  
@@ -50,7 +50,7 @@ ms.locfileid: "59091384"
  에 대 한 참조 설명서를 제공 합니다 <xref:System.Windows.Forms.IDataGridViewEditingControl> 인터페이스입니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [Windows Forms DataGridView 컨트롤에서 기본 형식 및 스타일 지정](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView 컨트롤의 기본 형식 및 스타일 지정](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
  컨트롤의 기본 모양과 셀 데이터의 표시 형식을 수정하는 방법을 설명하는 항목을 제공합니다.  
   
 ## <a name="see-also"></a>참고자료

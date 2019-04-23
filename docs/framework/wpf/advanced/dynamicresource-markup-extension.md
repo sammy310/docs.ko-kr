@@ -9,10 +9,10 @@ helpviewer_keywords:
 - DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
 ms.openlocfilehash: d07816718ebee2507f1888cffb70e6f8037bb996
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091410"
 ---
 # <a name="dynamicresource-markup-extension"></a>DynamicResource 태그 확장
@@ -60,18 +60,17 @@ ms.locfileid: "59091410"
   
  `DynamicResource` 개체 요소 구문에서 사용할 수 있습니다. 이 경우 값을 지정 하는 <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> 속성이 필요 합니다.  
   
- `DynamicResource` 지정 하는 자세한 특성 사용 구문에 사용할 수는 <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> 속성으로 속성 = 값 쌍:  
+ `DynamicResource` 속성을 다음과 같이 속성=값 쌍으로 지정하는 자세한 특성 사용 구문에도 <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A>을 사용할 수 있습니다.  
   
 ```xml  
 <object property="{DynamicResource ResourceKey=key}" .../>  
 ```  
   
- 자세한 정보 표시는 대개 설정 가능한 속성이 둘 이상이거나 일부 속성이 선택 사항인 확장의 경우에 유용합니다. 
-          `DynamicResource`에는 설정 가능한 속성이 하나뿐이고 이 속성은 필수적 속성이므로 자세한 정보 표시를 사용하지 않는 것이 일반적입니다.  
+ 자세한 정보 표시는 대개 설정 가능한 속성이 둘 이상이거나 일부 속성이 선택 사항인 확장의 경우에 유용합니다. `DynamicResource`에는 설정 가능한 속성이 하나뿐이고 이 속성은 필수적 속성이므로 자세한 정보 표시를 사용하지 않는 것이 일반적입니다.  
   
  에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서 구현에서이 태그 확장에 대 한 처리는 정의한는 <xref:System.Windows.DynamicResourceExtension> 클래스입니다.  
   
- `DynamicResource` 태그 확장입니다. 태그 확장은 특성 값을 리터럴 값 또는 처리기 이름이 아닌 다른 값이 되도록 이스케이프해야 하는 요구 사항이 있는 경우 일반적으로 구현되며 이러한 요구 사항은 특정 형식 또는 속성에 형식 변환기를 배치하는 것보다 더 포괄적입니다. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]의 모든 태그 확장은 특성 구문에서 { 및 } 문자를 사용합니다. 이러한 문자는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서가 태그 확장이 특성을 처리해야 함을 인식하는 데 사용되는 규칙입니다. 자세한 내용은 [태그 확장 및 WPF XAML](markup-extensions-and-wpf-xaml.md)을 참조하세요.  
+ `DynamicResource`은 태그 확장입니다. 태그 확장은 특성 값을 리터럴 값 또는 처리기 이름이 아닌 다른 값이 되도록 이스케이프해야 하는 요구 사항이 있는 경우 일반적으로 구현되며 이러한 요구 사항은 특정 형식 또는 속성에 형식 변환기를 배치하는 것보다 더 포괄적입니다. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]의 모든 태그 확장은 특성 구문에서 { 및 } 문자를 사용합니다. 이러한 문자는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서가 태그 확장이 특성을 처리해야 함을 인식하는 데 사용되는 규칙입니다. 자세한 내용은 [태그 확장 및 WPF XAML](markup-extensions-and-wpf-xaml.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
 
@@ -79,6 +78,6 @@ ms.locfileid: "59091410"
 - [리소스 및 코드](resources-and-code.md)
 - [x:Key 지시문](../../xaml-services/x-key-directive.md)
 - [XAML 개요(WPF)](xaml-overview-wpf.md)
-- [태그 확장명 및 WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [태그 확장 및 WPF XAML](markup-extensions-and-wpf-xaml.md)
 - [StaticResource 태그 확장](staticresource-markup-extension.md)
-- [태그 확장명 및 WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [태그 확장 및 WPF XAML](markup-extensions-and-wpf-xaml.md)

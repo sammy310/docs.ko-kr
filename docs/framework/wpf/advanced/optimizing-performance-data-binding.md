@@ -6,14 +6,14 @@ helpviewer_keywords:
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
 ms.openlocfilehash: ac7ca815bedf180c8a680840f585d08f7018d6ab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087835"
 ---
 # <a name="optimizing-performance-data-binding"></a>성능 최적화: 데이터 바인딩
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 데이터 바인딩 응용 프로그램 데이터와 상호 작용을 간단 하 고 일관적인 방법을 제공 합니다. 다양한 데이터 소스에서 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체 및 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]의 형태로 데이터에 요소를 바인딩할 수 있습니다.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 데이터 바인딩은 응용 프로그램이 데이터를 제공하고 상호 작용할 수 있는 간단하고 일관된 방법을 제공합니다. 다양한 데이터 소스에서 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체 및 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]의 형태로 데이터에 요소를 바인딩할 수 있습니다.  
   
  이 항목에서는 데이터 바인딩과 관련된 성능 권장 사항을 제공합니다.  
 
@@ -35,7 +35,7 @@ ms.locfileid: "59087835"
   
  아래 표에서 데이터 바인딩의 속도 비교 합니다 <xref:System.Windows.Controls.TextBlock.Text%2A> 하나 천 속성 <xref:System.Windows.Controls.TextBlock> 이러한 세 가지 메서드를 사용 하 여 요소입니다.  
   
-|**TextBlock의 Text 속성 바인딩**|**바인딩 시간 (ms)**|**렌더링 시간--바인딩 (ms)를 포함 합니다.**|  
+|**TextBlock의 Text 속성 바인딩 대상**|**바인딩 시간(ms)**|**렌더링 시간 -- 바인딩 시간 포함(ms)**|  
 |--------------------------------------------------|-----------------------------|--------------------------------------------------|  
 |[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체의 속성|115|314|  
 |속성에는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 구현 하는 개체 <xref:System.ComponentModel.INotifyPropertyChanged>|115|305|  
@@ -45,7 +45,7 @@ ms.locfileid: "59087835"
 ## <a name="binding-to-large-clr-objects"></a>대형 CLR 개체에 바인딩  
  수천 개의 속성이 포함된 단일 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체에 데이터 바인딩하는 경우 성능에 상당한 영향을 미칩니다. 이 단일 개체를 적은 수의 속성을 포함하는 여러 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체로 나누어 이러한 영향을 최소화할 수 있습니다. 아래 표에서는 하나의 큰 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체와 여러 개의 작은 개체에 데이터 바인딩할 때의 바인딩 시간과 렌더링 시간을 비교해서 보여 줍니다.  
   
-|**데이터 바인딩 1000 개의 TextBlock 개체**|**바인딩 시간 (ms)**|**렌더링 시간--바인딩 (ms)를 포함 합니다.**|  
+|**1000개의 TextBlock 개체 데이터 바인딩 대상**|**바인딩 시간(ms)**|**렌더링 시간 -- 바인딩 시간 포함(ms)**|  
 |---------------------------------------------|-----------------------------|--------------------------------------------------|  
 |1000개의 속성이 있는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체|950|1200|  
 |하나의 속성이 있는 1000개의 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체|115|314|  
@@ -58,7 +58,7 @@ ms.locfileid: "59087835"
   
  업데이트 하는 데 걸리는 시간을 보여 줍니다 아래 표는 <xref:System.Windows.Controls.ListBox> (UI 가상화를 해제)으로 하나의 항목이 추가 되는 경우. 첫 번째 행의 수를 경과 된 시간을 나타내는 경우는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.Collections.Generic.List%601> 개체에 바인딩된 <xref:System.Windows.Controls.ListBox> 요소의 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>합니다. 두 번째 행의 수를 경과 된 시간을 나타내는 경우는 <xref:System.Collections.ObjectModel.ObservableCollection%601> 바인딩되는 <xref:System.Windows.Controls.ListBox> 요소의 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>합니다. 사용 하 여 상당한 시간이 절약 메모를 <xref:System.Collections.ObjectModel.ObservableCollection%601> 데이터 바인딩 전략입니다.  
   
-|**ItemsSource 데이터 바인딩**|**업데이트 1에 대 한 시간 (ms) 항목**|  
+|**ItemsSource 데이터 바인딩 대상**|**1개 항목의 업데이트 시간(ms)**|  
 |--------------------------------------|---------------------------------------|  
 |에 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.Collections.Generic.List%601> 개체|1656|  
 |에 <xref:System.Collections.ObjectModel.ObservableCollection%601>|20|  
@@ -69,18 +69,18 @@ ms.locfileid: "59087835"
   
 <a name="Do_not_Convert_CLR_objects_to_Xml_Just_For_Data_Binding"></a>   
 ## <a name="do-not-convert-clr-objects-to-xml-just-for-data-binding"></a>데이터 바인딩만을 위해 CLR 개체를 XML로 변환 안 함  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 데이터에 바인딩할 수 있습니다 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 콘텐츠; 하지만 데이터 바인딩을 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 콘텐츠 데이터 바인딩 보다 느립니다. [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체입니다. 데이터 바인딩만을 위해 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체 데이터를 XML로 변환하지 마세요.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 콘텐츠에 데이터 바인딩할 수 있지만 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 콘텐츠의 데이터 바인딩은 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체의 데이터 바인딩보다 느립니다. 데이터 바인딩만을 위해 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체 데이터를 XML로 변환하지 마세요.  
   
 ## <a name="see-also"></a>참고자료
 
-- [WPF 애플리케이션 성능 최적화](optimizing-wpf-application-performance.md)
-- [응용 프로그램 성능 계획](planning-for-application-performance.md)
-- [하드웨어 활용](optimizing-performance-taking-advantage-of-hardware.md)
+- [WPF 응용 프로그램 성능 최적화](optimizing-wpf-application-performance.md)
+- [애플리케이션 성능 계획](planning-for-application-performance.md)
+- [하드웨어 이용](optimizing-performance-taking-advantage-of-hardware.md)
 - [레이아웃 및 디자인](optimizing-performance-layout-and-design.md)
-- [2D 그래픽 및 이미징](optimizing-performance-2d-graphics-and-imaging.md)
+- [2차원 그래픽 및 이미징](optimizing-performance-2d-graphics-and-imaging.md)
 - [개체 동작](optimizing-performance-object-behavior.md)
 - [애플리케이션 리소스](optimizing-performance-application-resources.md)
 - [텍스트](optimizing-performance-text.md)
-- [기타 성능 추천 사항](optimizing-performance-other-recommendations.md)
+- [기타 성능 권장 사항](optimizing-performance-other-recommendations.md)
 - [데이터 바인딩 개요](../data/data-binding-overview.md)
-- [연습: WPF 애플리케이션에서 애플리케이션 데이터 캐싱](walkthrough-caching-application-data-in-a-wpf-application.md)
+- [연습: WPF 응용 프로그램에서 응용 프로그램 데이터 캐싱](walkthrough-caching-application-data-in-a-wpf-application.md)

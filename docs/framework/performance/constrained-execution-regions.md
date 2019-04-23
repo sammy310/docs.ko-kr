@@ -8,10 +8,10 @@ ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d4c1d07e2469a36c4b8e1ef7b8d90a80a3530ae3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097176"
 ---
 # <a name="constrained-execution-regions"></a>제약이 있는 실행 영역
@@ -70,14 +70,14 @@ CER(제약이 있는 실행 영역)은 신뢰할 수 있는 관리 코드를 작
   
 -   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance>. 예외 조건에서 메서드가 상태 손상을 현재 인스턴스로 제한하도록 보장합니다.  
   
--   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>를 예외 조건에서 CLR을 보장 하지 않습니다; 상태 일관성 즉, 조건이 프로세스를 손상 될 수 있습니다.  
+-   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>. 예외 조건에서 CLR은 상태 일관성에 관한 보장을 하지 않습니다. 즉, 조건이 프로세스를 손상시킬 수 있습니다.  
   
 -   <xref:System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState>. 예외 조건에서 메서드가 상태를 손상시키지 않도록 보장합니다.  
   
 ## <a name="reliability-trycatchfinally"></a>안전성 try/catch/finally  
  안전성 `try/catch/finally`는 관리되지 않는 버전과 동일한 수준의 예측 가능성 보장을 사용하는 예외 처리 메커니즘입니다. `catch/finally` 블록은 CER입니다. 블록에 있는 메서드의 경우 사전 준비가 필요하고 중단할 수 없어야 합니다.  
   
- .NET Framework 버전 2.0에서 코드는 try 블록 바로 전에 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>를 호출하여 try를 신뢰할 수 있음을 런타임에 알립니다. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> 가 멤버인 <xref:System.Runtime.CompilerServices.RuntimeHelpers>, 컴파일러 지원 클래스인 합니다. 컴파일러를 통해 가성을 보류하여 직접 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>를 호출합니다.  
+ .NET Framework 버전 2.0에서 코드는 try 블록 바로 전에 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>를 호출하여 try를 신뢰할 수 있음을 런타임에 알립니다. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>는 컴파일러 지원 클래스인 <xref:System.Runtime.CompilerServices.RuntimeHelpers>의 멤버입니다. 컴파일러를 통해 가성을 보류하여 직접 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>를 호출합니다.  
   
 ## <a name="noninterruptible-regions"></a>중단할 수 없는 영역  
  중단할 수 없는 영역은 명령 집합을 CER로 그룹화합니다.  
@@ -102,11 +102,11 @@ CER(제약이 있는 실행 영역)은 신뢰할 수 있는 관리 코드를 작
   
 -   리플렉션을 통한 메서드 호출.  
   
--   <xref:System.Threading.Monitor.Enter%2A> <xref:System.IO.FileStream.Lock%2A>를 예로 들 수 있습니다.  
+-   <xref:System.Threading.Monitor.Enter%2A> 또는 <xref:System.IO.FileStream.Lock%2A>  
   
 -   보안 검사. 링크 요청만 수행하지 않습니다.  
   
--   <xref:System.Reflection.Emit.OpCodes.Isinst> 및 <xref:System.Reflection.Emit.OpCodes.Castclass> COM 개체 및 프록시  
+-   COM 개체 및 프록시에 대한 <xref:System.Reflection.Emit.OpCodes.Isinst> 및 <xref:System.Reflection.Emit.OpCodes.Castclass>  
   
 -   투명 프록시에 대한 필드 가져오기 또는 설정.  
   
@@ -116,4 +116,4 @@ CER(제약이 있는 실행 영역)은 신뢰할 수 있는 관리 코드를 작
   
 ## <a name="see-also"></a>참고자료
 
-- [최선의 안정성 구현 방법](../../../docs/framework/performance/reliability-best-practices.md)
+- [안전성 모범 사례](../../../docs/framework/performance/reliability-best-practices.md)

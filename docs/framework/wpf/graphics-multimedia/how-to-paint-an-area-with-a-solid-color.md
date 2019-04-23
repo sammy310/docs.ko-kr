@@ -7,10 +7,10 @@ helpviewer_keywords:
 - painting [WPF], with solid colors
 ms.assetid: 5d27d8a7-4bd7-4063-bdf3-2c5c0f19f9d3
 ms.openlocfilehash: c85ba72c858d155f29875bb944824db1c44ffaab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086847"
 ---
 # <a name="how-to-paint-an-area-with-a-solid-color"></a>방법: 단색으로 영역 칠하기
@@ -19,7 +19,7 @@ ms.locfileid: "59086847"
  다음 예제에서는 이러한 각 기법을를 그릴 때 사용 된 <xref:System.Windows.Shapes.Rectangle> 파란색입니다.  
   
 ## <a name="example"></a>예제  
- **미리 정의 된 브러시를 사용 하 여**  
+ **미리 정의된 브러시 사용**  
   
  다음 예제에서는 미리 정의 된 브러시를 사용 하 여 <xref:System.Windows.Media.Brushes.Blue%2A> 에 파란색 사각형을 그립니다.  
   
@@ -27,7 +27,7 @@ ms.locfileid: "59086847"
   
  [!code-csharp[brushsamples_procedural_snip#_graphicsmm_PredefinedBrush1](~/samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_procedural_snip/CSharp/SolidColorBrushExample.cs#_graphicsmm_predefinedbrush1)]  
   
- **16 진수 표기법을 사용 하 여**  
+ **16진수 표기법 사용**  
   
  다음 예제에서는 8자리 16진수 표기법을 사용하여 파란색 사각형을 그립니다.  
   

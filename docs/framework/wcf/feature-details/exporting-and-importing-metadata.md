@@ -5,10 +5,10 @@ helpviewer_keywords:
 - metadata [WCF], exporting and importing
 ms.assetid: 614a75bb-e0b0-4c95-b6d8-02cb5e5ddb38
 ms.openlocfilehash: 39b964584cde42e6569da35f8653042f6d7432cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091943"
 ---
 # <a name="exporting-and-importing-metadata"></a>메타데이터 내보내기 및 가져오기
@@ -48,16 +48,16 @@ Windows Communication Foundation (WCF), 서비스 끝점을 설명 하 고 있�
  <xref:System.ServiceModel.Description.WsdlExporter> 형식은 내보내기 프로세스 중에 catch된 예외를 다시 throw합니다. 이러한 예외는 `Errors` 속성에서 오류로 캡처되지 않습니다. <xref:System.ServiceModel.Description.WsdlExporter>가 예외를 throw하면 오류 상태에 있게 되므로 다시 사용할 수 없습니다. 작업에서 와일드카드 동작을 사용해서 작업을 내보낼 수 없는 경우와 중복 바인딩 이름이 발생하는 경우, <xref:System.ServiceModel.Description.WsdlExporter>가 경고를 해당 `Errors` 속성에 추가합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [방법: 서비스 엔드포인트로 메타데이터 가져오기](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
+ [방법: 서비스 끝점으로 메타 데이터 가져오기](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
  다운로드한 메타데이터를 설명 개체로 가져오는 방법에 대해 설명합니다.  
   
- [방법: 서비스 엔드포인트에서 메타데이터 내보내기](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
+ [방법: 서비스 끝점에서 메타 데이터 내보내기](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
  설명 개체를 메타데이터로 내보내는 방법에 대해 설명합니다.  
   
  [ServiceDescription 및 WSDL 참조](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
  설명 개체와 WSDL 간 매핑에 대해 설명합니다.  
   
- [방법: Svcutil.exe를 사용하여 컴파일된 서비스 코드에서 메타데이터 내보내기](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
+ [방법: Svcutil.exe를 사용 하 여 컴파일된 서비스 코드에서 메타 데이터를 내보내려면](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
  Svcutil.exe를 사용하여 컴파일된 어셈블리에 있는 서비스, 계약 및 데이터 형식에 대한 메타데이터를 내보내는 방법에 대해 설명합니다.  
   
  [데이터 계약 스키마 참조](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  

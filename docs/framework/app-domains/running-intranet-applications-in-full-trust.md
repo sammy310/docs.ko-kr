@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ee13c0a8-ab02-49f7-b8fb-9eab16c6c4f0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dca1ddd1c7f13dd1ed00d06c30aa7e91acfc43ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8731e90a66c20f06e8afcd7458349cbc0b93484
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554532"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59084105"
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>완전 신뢰 모드에서 인트라넷 애플리케이션 실행
 .NET Framework 버전 3.5 SP1(서비스 팩 1)부터 애플리케이션 및 해당 라이브러리 어셈블리를 네트워크 공유에서 완전 신뢰 어셈블리로 실행할 수 있습니다. <xref:System.Security.SecurityZone.MyComputer> 영역 증거가 인트라넷의 공유에서 로드된 어셈블리에 자동으로 추가됩니다. 이 증거는 컴퓨터에 있는 어셈블리와 동일한 권한 부여 집합(일반적으로 완전 신뢰)을 해당 어셈블리에 제공합니다. 이 기능은 호스트에서 실행되도록 설계된 애플리케이션 또는 ClickOnce 애플리케이션에는 적용되지 않습니다.  
@@ -35,4 +35,5 @@ ms.locfileid: "54554532"
 -   64비트 컴퓨터에서는 시스템 레지스트리의 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework 키 아래에 하위 키를 만듭니다. 키 이름 LegacyMyComputerZone, DWORD 값 1을 사용합니다. HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework 키 아래에 동일한 하위 키를 만듭니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [어셈블리를 사용한 프로그래밍](../../../docs/framework/app-domains/programming-with-assemblies.md)

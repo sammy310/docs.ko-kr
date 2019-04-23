@@ -16,10 +16,10 @@ helpviewer_keywords:
 - transformations [Windows Forms], world
 ms.assetid: c61ff50a-eb1d-4e6c-83cd-f7e9764cfa9f
 ms.openlocfilehash: 765df4bcd3cef83e624ad8b11676696b95f7d035
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089304"
 ---
 # <a name="types-of-coordinate-systems"></a>좌표계 형식
@@ -96,5 +96,5 @@ ms.locfileid: "59089304"
   
 ## <a name="see-also"></a>참고자료
 
-- [좌표계 및 변환](coordinate-systems-and-transformations.md)
-- [변환에 대한 매트릭스 표현](matrix-representation-of-transformations.md)
+- [좌표계 및 변형](coordinate-systems-and-transformations.md)
+- [매트릭스에 의한 변형 표시](matrix-representation-of-transformations.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Panel control [Windows Forms], about Panel control
 ms.assetid: b6b83636-2c39-4dad-89d6-f0fa41049a74
 ms.openlocfilehash: d4976b3725d04162ac10242c486f57c4d2598769
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086366"
 ---
 # <a name="panel-control-overview-windows-forms"></a>Panel 컨트롤 개요(Windows Forms)
@@ -27,5 +27,5 @@ Windows Forms <xref:System.Windows.Forms.Panel> 컨트롤은 다른 컨트롤에
 
 - <xref:System.Windows.Forms.Panel>
 - [GroupBox 컨트롤](groupbox-control-windows-forms.md)
-- [방법: 디자이너를 사용하여 Windows Forms 패널 컨트롤에서 컨트롤 그룹화](group-controls-with-wf-panel-control-using-the-designer.md)
-- [방법: 디자이너를 사용하여 Windows Forms 패널 배경 설정](how-to-set-the-background-of-a-windows-forms-panel-using-the-designer.md)
+- [방법: 디자이너를 사용 하 여 Windows Forms 패널 컨트롤을 사용 하 여 그룹 컨트롤](group-controls-with-wf-panel-control-using-the-designer.md)
+- [방법: 디자이너를 사용 하 여 Windows Forms 패널의 배경 설정](how-to-set-the-background-of-a-windows-forms-panel-using-the-designer.md)

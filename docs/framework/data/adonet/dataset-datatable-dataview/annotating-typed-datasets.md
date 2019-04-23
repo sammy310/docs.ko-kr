@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
 ms.openlocfilehash: d8a1a12a4d8ab5e6f4b0fe6ad6c2a3759aa65aa9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59085131"
 ---
 # <a name="annotating-typed-datasets"></a>형식화된 데이터 집합에 주석 지정
@@ -55,7 +55,7 @@ ms.locfileid: "59085131"
   
 |nullValue 값|설명|  
 |---------------------|-----------------|  
-|*Replacement Value*|반환될 값을 지정합니다. 반환되는 값은 요소의 형식과 일치해야 합니다. 예를 들어, `nullValue="0"`을 사용하여 null 정수 필드에 0을 반환합니다.|  
+|*대체 값*|반환될 값을 지정합니다. 반환되는 값은 요소의 형식과 일치해야 합니다. 예를 들어, `nullValue="0"`을 사용하여 null 정수 필드에 0을 반환합니다.|  
 |**_throw**|예외를 throw합니다. 이 값이 기본값입니다.|  
 |**_null**|기본 형식이 발견되면 null 참조를 반환하거나 예외를 throw합니다.|  
 |**_empty**|문자열의 경우 반환 **String.Empty**, 그렇지 않으면 빈 생성자에서 만든 개체를 반환 합니다. 기본 형식이 발견되면 예외를 throw합니다.|  
@@ -69,7 +69,7 @@ ms.locfileid: "59085131"
 |**DataRowCollection**|TableName|typedPlural|  
 |**DataRow**|TableNameRow|typedName|  
 |**DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
-|**속성**|PropertyName|typedName|  
+|**Property**|PropertyName|typedName|  
 |**자식** 접근자|GetChildTableNameRows|typedChildren|  
 |**부모** 접근자|TableNameRow|typedParent|  
 |**데이터 집합** 이벤트|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
@@ -227,5 +227,5 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataSet>
 - [형식화된 데이터 집합](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)
-- [DataSets, DataTables 및 DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [DataSet, DataTable 및 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

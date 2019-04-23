@@ -9,10 +9,10 @@ helpviewer_keywords:
 - DataTemplate [WPF]
 ms.assetid: bfcd564e-5e9e-451e-8641-a9b5c3cfac90
 ms.openlocfilehash: de5a4937feabdb4486d9dcf9d5e5bfddd2356690
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089188"
 ---
 # <a name="how-to-find-datatemplate-generated-elements"></a>방법: DataTemplate에서 생성된 요소 찾기
@@ -39,7 +39,7 @@ ms.locfileid: "59089188"
   
 ## <a name="see-also"></a>참고자료
 
-- [방법: ControlTemplate에서 생성된 요소 찾기](../controls/how-to-find-controltemplate-generated-elements.md)
+- [방법: ControlTemplate에서 생성 된 요소 찾기](../controls/how-to-find-controltemplate-generated-elements.md)
 - [데이터 바인딩 개요](data-binding-overview.md)
 - [방법 항목](data-binding-how-to-topics.md)
 - [스타일 지정 및 템플릿](../controls/styling-and-templating.md)

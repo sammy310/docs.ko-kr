@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: a16e4a4d-6a5b-45db-8635-19570e4572ae
 ms.openlocfilehash: c84229dc1c32217099eb7ed8b90accc04cc66148
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097410"
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>DbProviderFactory 가져오기
@@ -97,7 +97,7 @@ ms.locfileid: "59097410"
   
 ## <a name="see-also"></a>참고자료
 
-- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
+- [DbProviderFactory](../../../../docs/framework/data/adonet/dbproviderfactories.md)
 - [연결 문자열](../../../../docs/framework/data/adonet/connection-strings.md)
 - [구성 클래스 사용](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100))
 - [ADO.NET 개요](ado-net-overview.md)

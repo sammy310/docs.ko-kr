@@ -1,12 +1,12 @@
 ---
-title: <schemeSettings> 요소 (Uri 설정)
+title: <schemeSettings> 요소(URI 설정)
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
 ms.openlocfilehash: 8dc505d8a9de4e8939372af61b23652551c36530
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59094237"
 ---
 # <a name="schemesettings-element-uri-settings"></a>\<schemeSettings > 요소 (Uri 설정)
@@ -34,7 +34,7 @@ ms.locfileid: "59094237"
 |**요소**|**설명**|  
 |-----------------|---------------------|  
 |[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-schemesettings-uri-settings.md)|스키마 이름에 대 한 스키마 설정을 추가합니다.|  
-|[지우기](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-schemesettings-uri-settings.md)|모든 기존 구성표 설정을 지웁니다.|  
+|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-schemesettings-uri-settings.md)|모든 기존 구성표 설정을 지웁니다.|  
 |[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-schemesettings-uri-settings.md)|스키마 이름에 대 한 스키마 설정을 제거합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  

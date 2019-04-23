@@ -7,10 +7,10 @@ helpviewer_keywords:
 - controls [Windows Forms], creating
 ms.assetid: 6277bb81-90f7-4c5b-9f4b-b02bb42dd316
 ms.openlocfilehash: 21b8b08e56e8b4d48fb738b86247d3f04dc4150b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086444"
 ---
 # <a name="windows-forms-control-development-basics"></a>Windows Forms 컨트롤 개발 기본 사항
@@ -33,6 +33,6 @@ Windows Forms 컨트롤에서 직접 또는 간접적으로 파생 된 클래스
 ## <a name="see-also"></a>참고자료
 
 - [방법: 간단한 Windows Forms 컨트롤 개발](how-to-develop-a-simple-windows-forms-control.md)
-- [Windows Forms 복합 컨트롤 개발](developing-a-composite-windows-forms-control.md)
+- [합성 Windows Forms 컨트롤 개발](developing-a-composite-windows-forms-control.md)
 - [방법: 진행률을 보여 주는 Windows Forms 컨트롤 만들기](how-to-create-a-windows-forms-control-that-shows-progress.md)
 - [사용자 지정 컨트롤의 종류](varieties-of-custom-controls.md)
