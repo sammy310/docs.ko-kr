@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cf83124af5ced7bb6458564430ceb319ce7d680a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59099159"
 ---
-# <a name="icordebugmanagedcallbacklogmessage-method"></a><span data-ttu-id="4a70e-102">ICorDebugManagedCallback::LogMessage 메서드</span><span class="sxs-lookup"><span data-stu-id="4a70e-102">ICorDebugManagedCallback::LogMessage Method</span></span>
-<span data-ttu-id="4a70e-103">공용 언어 런타임 (CLR) 관리 되는 스레드에서의 메서드를 호출에 디버거에 알립니다는 <xref:System.Diagnostics.EventLog> 클래스는 이벤트를 기록 합니다.</span><span class="sxs-lookup"><span data-stu-id="4a70e-103">Notifies the debugger that a common language runtime (CLR) managed thread has called a method in the <xref:System.Diagnostics.EventLog> class to log an event.</span></span>  
+# <a name="icordebugmanagedcallbacklogmessage-method"></a><span data-ttu-id="582e8-102">ICorDebugManagedCallback::LogMessage 메서드</span><span class="sxs-lookup"><span data-stu-id="582e8-102">ICorDebugManagedCallback::LogMessage Method</span></span>
+<span data-ttu-id="582e8-103">공용 언어 런타임 (CLR) 관리 되는 스레드에서의 메서드를 호출에 디버거에 알립니다는 <xref:System.Diagnostics.EventLog> 클래스는 이벤트를 기록 합니다.</span><span class="sxs-lookup"><span data-stu-id="582e8-103">Notifies the debugger that a common language runtime (CLR) managed thread has called a method in the <xref:System.Diagnostics.EventLog> class to log an event.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4a70e-104">구문</span><span class="sxs-lookup"><span data-stu-id="4a70e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="582e8-104">구문</span><span class="sxs-lookup"><span data-stu-id="582e8-104">Syntax</span></span>  
   
 ```  
 HRESULT LogMessage (  
@@ -39,31 +39,31 @@ HRESULT LogMessage (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4a70e-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="4a70e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="582e8-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="582e8-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="4a70e-106">[in] 이벤트를 기록 하는 관리 되는 스레드를 포함 하는 응용 프로그램 도메인을 나타내는 ICorDebugAppDomain 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="4a70e-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the managed thread that logged the event.</span></span>  
+ <span data-ttu-id="582e8-106">[in] 이벤트를 기록 하는 관리 되는 스레드를 포함 하는 응용 프로그램 도메인을 나타내는 ICorDebugAppDomain 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="582e8-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain containing the managed thread that logged the event.</span></span>  
   
  `pThread`  
- <span data-ttu-id="4a70e-107">[in] 관리 되는 스레드를 나타내는 ICorDebugThread 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="4a70e-107">[in] A pointer to an ICorDebugThread object that represents the managed thread.</span></span>  
+ <span data-ttu-id="582e8-107">[in] 관리 되는 스레드를 나타내는 ICorDebugThread 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="582e8-107">[in] A pointer to an ICorDebugThread object that represents the managed thread.</span></span>  
   
  `lLevel`  
- <span data-ttu-id="4a70e-108">[in] 값을 [LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md) 이벤트 로그에 기록 된 설명이 포함 된 메시지의 심각도 나타내는 열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="4a70e-108">[in] A value of the [LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md) enumeration that indicates the severity level of the descriptive message that was written to the event log.</span></span>  
+ <span data-ttu-id="582e8-108">[in] 값을 [LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md) 이벤트 로그에 기록 된 설명이 포함 된 메시지의 심각도 나타내는 열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="582e8-108">[in] A value of the [LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md) enumeration that indicates the severity level of the descriptive message that was written to the event log.</span></span>  
   
  `pLogSwitchName`  
- <span data-ttu-id="4a70e-109">[in] 추적 스위치의 이름에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="4a70e-109">[in] A pointer to the name of the tracing switch.</span></span>  
+ <span data-ttu-id="582e8-109">[in] 추적 스위치의 이름에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="582e8-109">[in] A pointer to the name of the tracing switch.</span></span>  
   
  `pMessage`  
- <span data-ttu-id="4a70e-110">[in] 이벤트 로그에 기록 된 메시지에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="4a70e-110">[in] A pointer to the message that was written to the event log.</span></span>  
+ <span data-ttu-id="582e8-110">[in] 이벤트 로그에 기록 된 메시지에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="582e8-110">[in] A pointer to the message that was written to the event log.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4a70e-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4a70e-111">Requirements</span></span>  
- <span data-ttu-id="4a70e-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="4a70e-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="582e8-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="582e8-111">Requirements</span></span>  
+ <span data-ttu-id="582e8-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="582e8-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4a70e-113">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4a70e-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="582e8-113">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="582e8-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="4a70e-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4a70e-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="582e8-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="582e8-114">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="4a70e-115">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="4a70e-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="582e8-115">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="582e8-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4a70e-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="4a70e-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="582e8-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="582e8-116">See also</span></span>
 
-- [<span data-ttu-id="4a70e-117">ICorDebugManagedCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4a70e-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="582e8-117">ICorDebugManagedCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="582e8-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
