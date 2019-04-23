@@ -5,27 +5,27 @@ f1_keywords:
 - vbrID7
 ms.assetid: 96cc12e1-d40a-425f-b365-1ac39e5ddcb0
 ms.openlocfilehash: cbd9ae0945b89df8c5eb04fa6c1fe2bed22aef2d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319328"
 ---
-# <a name="out-of-memory-visual-basic-run-time-error"></a><span data-ttu-id="ac13f-102">메모리가 부족합니다(Visual Basic 런타임 오류).</span><span class="sxs-lookup"><span data-stu-id="ac13f-102">Out of memory (Visual Basic Run-Time Error)</span></span>
-<span data-ttu-id="ac13f-103">사용 가능한 것보다 더 많은 메모리가 필요했습니다.</span><span class="sxs-lookup"><span data-stu-id="ac13f-103">More memory was required than is available.</span></span>  
+# <a name="out-of-memory-visual-basic-run-time-error"></a><span data-ttu-id="6484f-102">메모리가 부족합니다(Visual Basic 런타임 오류).</span><span class="sxs-lookup"><span data-stu-id="6484f-102">Out of memory (Visual Basic Run-Time Error)</span></span>
+<span data-ttu-id="6484f-103">사용 가능한 것보다 더 많은 메모리가 필요했습니다.</span><span class="sxs-lookup"><span data-stu-id="6484f-103">More memory was required than is available.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="ac13f-104">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="ac13f-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="6484f-104">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="6484f-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="ac13f-105">열려 있는 불필요한 애플리케이션, 문서 또는 소스 파일을 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="ac13f-105">Close unnecessary applications, documents, or source files that are open.</span></span>  
+1. <span data-ttu-id="6484f-105">열려 있는 불필요한 애플리케이션, 문서 또는 소스 파일을 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="6484f-105">Close unnecessary applications, documents, or source files that are open.</span></span>  
   
-2. <span data-ttu-id="ac13f-106">큰 모듈 또는 프로시저를 더 작은 모듈 또는 프로시저로 나눕니다.</span><span class="sxs-lookup"><span data-stu-id="ac13f-106">Break large modules or procedures into smaller ones.</span></span>  
+2. <span data-ttu-id="6484f-106">큰 모듈 또는 프로시저를 더 작은 모듈 또는 프로시저로 나눕니다.</span><span class="sxs-lookup"><span data-stu-id="6484f-106">Break large modules or procedures into smaller ones.</span></span>  
   
-3. <span data-ttu-id="ac13f-107">TSR(Terminate-and-Stay-Resident) 프로그램을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="ac13f-107">Eliminate terminate-and-stay-resident programs.</span></span>  
+3. <span data-ttu-id="6484f-107">TSR(Terminate-and-Stay-Resident) 프로그램을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="6484f-107">Eliminate terminate-and-stay-resident programs.</span></span>  
   
-4. <span data-ttu-id="ac13f-108">불필요한 디바이스 드라이버를 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="ac13f-108">Eliminate unnecessary device drivers.</span></span>  
+4. <span data-ttu-id="6484f-108">불필요한 디바이스 드라이버를 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="6484f-108">Eliminate unnecessary device drivers.</span></span>  
   
-5. <span data-ttu-id="ac13f-109">공용 변수 수를 줄입니다.</span><span class="sxs-lookup"><span data-stu-id="ac13f-109">Reduce the number of public variables.</span></span>  
+5. <span data-ttu-id="6484f-109">공용 변수 수를 줄입니다.</span><span class="sxs-lookup"><span data-stu-id="6484f-109">Reduce the number of public variables.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ac13f-110">참고자료</span><span class="sxs-lookup"><span data-stu-id="ac13f-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6484f-110">참고자료</span><span class="sxs-lookup"><span data-stu-id="6484f-110">See also</span></span>
 
-- [<span data-ttu-id="ac13f-111">오류 형식</span><span class="sxs-lookup"><span data-stu-id="ac13f-111">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="6484f-111">오류 형식</span><span class="sxs-lookup"><span data-stu-id="6484f-111">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
