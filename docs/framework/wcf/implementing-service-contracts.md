@@ -5,10 +5,10 @@ helpviewer_keywords:
 - implementing service contracts [WCF]
 ms.assetid: aefb6f56-47e3-4f24-ab0a-9bc07bf9885f
 ms.openlocfilehash: 766e0c4d30a4fa0eed9ce154ca932f5371a43211
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59196322"
 ---
 # <a name="implementing-service-contracts"></a>서비스 계약 구현
@@ -60,6 +60,6 @@ class MathService
 ## <a name="see-also"></a>참고자료
 
 - [서비스 디자인 및 구현](../../../docs/framework/wcf/designing-and-implementing-services.md)
-- [방법: Contract 클래스를 사용하여 서비스 만들기](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)
-- [방법: Contract 인터페이스를 사용하여 서비스 만들기](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)
+- [방법: 서비스 계약 클래스를 사용 하 여 만들기](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)
+- [방법: 서비스 계약 인터페이스를 사용 하 여 만들기](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)
 - [서비스 런타임 동작 지정](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

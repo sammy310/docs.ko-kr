@@ -9,10 +9,10 @@ helpviewer_keywords:
 - tabs [Windows Forms], drawn text
 ms.assetid: 64878f98-39ba-4303-b63f-0859ab682eeb
 ms.openlocfilehash: 68dbebfc4fab773fe749f9443d0c61883099d2ab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197492"
 ---
 # <a name="how-to-set-tab-stops-in-drawn-text"></a>방법: 그린 텍스트에 탭 정지 설정
@@ -40,4 +40,4 @@ ms.locfileid: "59197492"
 ## <a name="see-also"></a>참고자료
 
 - [글꼴 및 텍스트 사용](using-fonts-and-text.md)
-- [방법: GDI를 사용하여 텍스트 그리기](how-to-draw-text-with-gdi.md)
+- [방법: GDI 사용 하 여 텍스트 그리기](how-to-draw-text-with-gdi.md)

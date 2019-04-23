@@ -21,10 +21,10 @@ helpviewer_keywords:
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
 ms.openlocfilehash: 34bf38a59e4f2b1f975cf1836973d24d8a3bae32
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304739"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid 컨트롤 개요(Windows Forms)
@@ -104,7 +104,7 @@ ms.locfileid: "59304739"
 
  ![DataGrid 컨트롤에 포함 된 개체를 보여 주는 다이어그램입니다.](./media/datagrid-control-overview-windows-forms/visual-basic-columns.gif)  
   
- 테이블 스타일과 열 스타일은 해당 `MappingName` 속성을 적절한 <xref:System.Data.DataTable.TableName%2A> 및 <xref:System.Data.DataColumn.ColumnName%2A> 속성으로 설정하여 <xref:System.Data.DataTable> 개체 및 <xref:System.Data.DataColumn> 개체와 동기화됩니다. 유효한 데이터 소스에 바인딩된 <xref:System.Windows.Forms.DataGrid> 컨트롤에 열 스타일이 없는 <xref:System.Windows.Forms.DataGridTableStyle>이 추가되고 해당 테이블 스타일의 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 속성이 유효한 <xref:System.Data.DataTable.TableName%2A> 속성으로 설정된 경우 해당 테이블 스타일에 대한 <xref:System.Windows.Forms.DataGridColumnStyle> 개체 컬렉션이 생성됩니다. <xref:System.Data.DataTable>의 <xref:System.Data.DataTable.Columns%2A> 컬렉션에서 발견된 각 <xref:System.Data.DataColumn>에 해당하는 <xref:System.Windows.Forms.DataGridColumnStyle>이 <xref:System.Windows.Forms.GridColumnStylesCollection>에 추가됩니다. <xref:System.Windows.Forms.GridColumnStylesCollection> 통해 액세스할 수는 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 의 속성을 <xref:System.Windows.Forms.DataGridTableStyle>입니다. <xref:System.Windows.Forms.GridColumnStylesCollection>의 <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> 또는 <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> 메서드를 사용하여 표 형태 창에서 열을 추가하거나 삭제할 수 있습니다. 자세한 내용은 [방법: 테이블을 추가 하 고 열에는 Windows Forms DataGrid 컨트롤](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md) 고 [방법: 열 삭제 또는 숨기기에는 Windows Forms DataGrid 컨트롤](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)합니다.  
+ 테이블 스타일과 열 스타일은 해당 `MappingName` 속성을 적절한 <xref:System.Data.DataTable.TableName%2A> 및 <xref:System.Data.DataColumn.ColumnName%2A> 속성으로 설정하여 <xref:System.Data.DataTable> 개체 및 <xref:System.Data.DataColumn> 개체와 동기화됩니다. 유효한 데이터 소스에 바인딩된 <xref:System.Windows.Forms.DataGrid> 컨트롤에 열 스타일이 없는 <xref:System.Windows.Forms.DataGridTableStyle>이 추가되고 해당 테이블 스타일의 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 속성이 유효한 <xref:System.Data.DataTable.TableName%2A> 속성으로 설정된 경우 해당 테이블 스타일에 대한 <xref:System.Windows.Forms.DataGridColumnStyle> 개체 컬렉션이 생성됩니다. <xref:System.Data.DataTable>의 <xref:System.Data.DataTable.Columns%2A> 컬렉션에서 발견된 각 <xref:System.Data.DataColumn>에 해당하는 <xref:System.Windows.Forms.DataGridColumnStyle>이 <xref:System.Windows.Forms.GridColumnStylesCollection>에 추가됩니다. <xref:System.Windows.Forms.GridColumnStylesCollection>은 <xref:System.Windows.Forms.DataGridTableStyle>의 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 속성을 통해 액세스됩니다. <xref:System.Windows.Forms.GridColumnStylesCollection>의 <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> 또는 <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> 메서드를 사용하여 표 형태 창에서 열을 추가하거나 삭제할 수 있습니다. 자세한 내용은 [방법: 테이블을 추가 하 고 열에는 Windows Forms DataGrid 컨트롤](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md) 고 [방법: 열 삭제 또는 숨기기에는 Windows Forms DataGrid 컨트롤](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)합니다.  
   
  열 형식 컬렉션은 풍부한 형식 지정 및 편집 기능을 통해 <xref:System.Windows.Forms.DataGridColumnStyle> 클래스를 확장합니다. 모든 열 형식이 <xref:System.Windows.Forms.DataGridColumnStyle> 기본 클래스에서 상속합니다. 생성되는 클래스는 <xref:System.Web.UI.WebControls.DataGridColumn>의 기반이 되는 <xref:System.Data.DataColumn>의 <xref:System.Data.DataColumn.DataType%2A> 속성에 따라 달라집니다. 예를 들어 해당 <xref:System.Data.DataColumn.DataType%2A> 속성이 <xref:System.Boolean>으로 설정된 <xref:System.Data.DataColumn>은 <xref:System.Windows.Forms.DataGridBoolColumn>에 연결됩니다. 다음 표에서는 이러한 열 형식을 각각 설명합니다.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "59304739"
 ## <a name="see-also"></a>참고자료
 
 - [DataGrid 컨트롤](datagrid-control-windows-forms.md)
-- [방법: 데이터 원본에 Windows Forms DataGrid 컨트롤 바인딩](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
-- [방법: Windows Forms DataGrid 컨트롤에 테이블 및 열 추가](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
-- [방법: Windows Forms DataGrid 컨트롤에서 열 삭제 또는 숨기기](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [방법: 데이터 소스에 Windows Forms DataGrid 컨트롤 바인딩](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [방법: Windows Forms DataGrid 컨트롤에 테이블과 열 추가](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [방법: Windows Forms DataGrid 컨트롤에서 열 숨기기 또는 삭제](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
 - [방법: Windows Forms DataGrid 컨트롤 서식 지정](how-to-format-the-windows-forms-datagrid-control.md)

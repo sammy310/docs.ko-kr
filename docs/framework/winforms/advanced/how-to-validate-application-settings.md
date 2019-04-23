@@ -10,10 +10,10 @@ helpviewer_keywords:
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
 ms.openlocfilehash: b7aba4935756fc218a1fadaa1dd9f20a5bc3034f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317892"
 ---
 # <a name="how-to-validate-application-settings"></a>방법: 애플리케이션 설정 업데이트
@@ -163,4 +163,4 @@ ms.locfileid: "59317892"
 ## <a name="see-also"></a>참고자료
 
 - [Windows Forms에서 이벤트 처리기 만들기](../creating-event-handlers-in-windows-forms.md)
-- [방법: 애플리케이션 설정 만들기](how-to-create-application-settings.md)
+- [방법: 응용 프로그램 설정 만들기](how-to-create-application-settings.md)

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
 ms.openlocfilehash: 3cf75fc6221364704379eb23d308481c34e6c0d6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316455"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>방법: 무한 개수의 매개 변수 (Visual Basic)를 사용 하는 프로시저 오버 로드
@@ -62,6 +62,6 @@ ms.locfileid: "59316455"
 - [프로시저 오버로딩](./procedure-overloading.md)
 - [프로시저 문제 해결](./troubleshooting-procedures.md)
 - [방법: 여러 버전의 프로시저 정의](./how-to-define-multiple-versions-of-a-procedure.md)
-- [방법: 오버로드된 프로시저 호출](./how-to-call-an-overloaded-procedure.md)
-- [방법: 선택적 매개 변수를 사용하는 프로시저 오버로드](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [Overload Resolution](./overload-resolution.md)
+- [방법: 오버 로드 된 프로시저 호출](./how-to-call-an-overloaded-procedure.md)
+- [방법: 선택적 매개 변수를 사용 하는 프로시저 오버 로드](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [오버로드 확인](./overload-resolution.md)

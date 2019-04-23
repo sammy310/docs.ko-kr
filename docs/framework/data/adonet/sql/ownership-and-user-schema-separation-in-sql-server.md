@@ -3,10 +3,10 @@ title: SQL Server에서 소유권 및 사용자와 스키마 분리
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
 ms.openlocfilehash: b56a2c6f1211a11d2aa55de0cc101f6b90f7f83d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59221862"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>SQL Server에서 소유권 및 사용자와 스키마 분리
@@ -55,7 +55,7 @@ Server.Database.DatabaseSchema.DatabaseObject
   
 |리소스|설명|  
 |--------------|-----------------|  
-|[사용자 스키마 분리](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|사용자 스키마 분리에서 도입된 변경 내용을 설명합니다. 새 동작, 소유권에 대한 영향, 카탈로그 뷰 및 권한이 포함되어 있습니다.|  
+|[사용자와 스키마 분리](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|사용자 스키마 분리에서 도입된 변경 내용을 설명합니다. 새 동작, 소유권에 대한 영향, 카탈로그 뷰 및 권한이 포함되어 있습니다.|  
   
 ## <a name="see-also"></a>참고자료
 

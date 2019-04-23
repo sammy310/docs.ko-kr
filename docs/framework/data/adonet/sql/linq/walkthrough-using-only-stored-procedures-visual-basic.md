@@ -5,10 +5,10 @@ dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
 ms.openlocfilehash: 1527e3b4b614d4e700ae0c2c0fc555e14c7bc8d2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314830"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>연습: 저장 프로시저만 사용(Visual Basic)
@@ -105,7 +105,7 @@ ms.locfileid: "59314830"
   
 1. **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 **Form1.vb**를 클릭 하 고 **코드 보기**합니다.  
   
-     `Class Form1` 코드 편집기에 표시 됩니다.  
+     `Class Form1`이 코드 편집기에 나타납니다.  
   
 2. 다음 코드를 `Form1` 코드 블록에 입력합니다.  
   

@@ -6,12 +6,12 @@ ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: 5e468641efd4627c887d9a980fc4ed1129196e20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef7c9c18d303131b5a1c0156be820e1d475e7ec1
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658249"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59306653"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>nullable 형식 사용(C# 프로그래밍 가이드)
 
@@ -66,6 +66,9 @@ nullable이 아닌 값 형식이 해당 nullable 형식으로 암시적으로 �
 미리 정의된 단항 및 이항 연산자와 값 형식에 대해 존재하는 모든 사용자 정의 연산자는 nullable 형식에도 사용할 수 있습니다. 이러한 연산자는 하나 또는 두 개의 피연산자가 Null인 경우 Null 값을 생성하고, 그렇지 않으면 연산자는 포함된 값을 사용하여 결과를 계산합니다. 예:  
   
 [!code-csharp[operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#7)]
+
+> [!NOTE]
+> `|` 형식의 경우 미리 정의된 `bool?` 및 `&` 연산자는 이 섹션에서 설명된 규칙을 따르지 않습니다. 연산자 평가의 결과는 피연산자 중 하나가 Null인 경우에도 Null이 아닐 수 있습니다. 자세한 내용은 [부울 논리 연산자](../../language-reference/operators/boolean-logical-operators.md) 문서의 [Nullable 부울 논리 연산자](../../language-reference/operators/boolean-logical-operators.md#nullable-boolean-logical-operators) 섹션을 참조하세요.
   
 관계 연산자(`<`, `>`, `<=`, `>=`)의 경우 하나 또는 두 개의 피연산자가 Null인 경우 결과는 `false`입니다. 특정 비교(예: `<=`)에서는 `false`를 반환하고 그 반대의 비교(`>`)에서는 `true`를 반환한다고 가정하지 마십시오. 다음 예제에서는 10이
 
@@ -75,6 +78,8 @@ nullable이 아닌 값 형식이 해당 nullable 형식으로 암시적으로 �
 [!code-csharp-interactive[relational and equality operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#8)]
   
 또한 위의 예제에서는 둘 다 Null인 두 nullable 형식의 같음 비교는 `true`로 계산되는 것을 보여줍니다.
+
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [리프트 연산자](~/_csharplang/spec/expressions.md#lifted-operators) 섹션을 참조하세요.
 
 ## <a name="boxing-and-unboxing"></a>boxing 및 unboxing
 
@@ -87,29 +92,6 @@ nullable 값 형식은 다음 규칙에 따라 [boxed](../types/boxing-and-unbox
 
 [!code-csharp-interactive[boxing and unboxing](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#9)]
 
-## <a name="the-bool-type"></a>bool? 형식
-
-`bool?` nullable 형식은 세 가지 값 [true](../../language-reference/keywords/true-literal.md), [false](../../language-reference/keywords/false-literal.md) 및 [null](../../language-reference/keywords/null.md)을 포함할 수 있습니다. `bool?` 형식은 SQL에서 사용되는 부울 변수 형식과 유사합니다. `&` 및 `|` 연산자에 의해 생성된 결과가 SQL의 삼중값 부울 형식과 일치하도록 다음과 같은 미리 정의된 연산자가 제공됩니다.
-
-- `bool? operator &(bool? x, bool? y)`  
-- `bool? operator |(bool? x, bool? y)`  
-  
-이러한 연산자의 의미 체계는 다음 표에서 정의됩니다.  
-  
-|x|y|x&y|x&#124;y|  
-|-------|-------|---------|--------------|  
-|true|true|true|true|  
-|true|False|false|true|  
-|true|null|null|true|  
-|False|true|False|true|  
-|False|False|False|False|  
-|False|null|False|null|  
-|null|true|null|true|  
-|null|False|False|null|  
-|null|null|null|null|  
-
-이러한 두 연산자는 [연산자](#operators) 섹션에서 설명된 규칙을 따르지 않습니다. 연산자 평가의 결과는 피연산자 중 하나가 Null인 경우에도 Null이 아닐 수 있습니다.
-  
 ## <a name="see-also"></a>참고 항목
 
 - [Nullable 형식](index.md)

@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: add7b803c413f8d9ba913d5dcc1a21bbd0c5bd48
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235015"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804523"
 ---
 ### <a name="deadlock-may-result-when-using-reentrant-services"></a>재진입 서비스를 사용할 때 교착 상태가 발생할 수 있습니다.
 

@@ -3,10 +3,10 @@ title: SerializationBinder를 사용하여 serialization 및 deserialization 제
 ms.date: 03/30/2017
 ms.assetid: ba8dcecf-acc7-467c-939d-021bbac797d4
 ms.openlocfilehash: cb2476b55a965e326e492c3c0b77f0be65b2b290
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59198532"
 ---
 # <a name="controlling-serialization-and-deserialization-with-serializationbinder"></a>SerializationBinder를 사용하여 serialization 및 deserialization 제어
@@ -16,7 +16,7 @@ serialization 도중에, 포맷터는 올바른 형식 및 버전의 개체 인�
 >  이 기능은 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 또는 <xref:System.Runtime.Serialization.NetDataContractSerializer>를 사용할 때만 사용할 수 있습니다.  
   
 ## <a name="using-serializationbinder"></a>SerializationBinder 사용  
- <xref:System.Runtime.Serialization.SerializationBinder> serialization 및 deserialization 중에 사용 되는 실제 형식을 제어 하는 추상 클래스 사용 됩니다. serialization 및 deserialization 중에 사용되는 형식을 제어하려면 <xref:System.Runtime.Serialization.SerializationBinder>에서 클래스를 파생시키고 <xref:System.Runtime.Serialization.SerializationBinder.BindToName(System.Type,System.String@,System.String@)> 및 <xref:System.Runtime.Serialization.SerializationBinder.BindToType(System.String,System.String)> 메서드를 재정의합니다. <xref:System.Runtime.Serialization.SerializationBinder.BindToName(System.Type,System.String@,System.String@)> 메서드는 <xref:System.Type>을 받아서 어셈블리 및 형식 이름을 반환합니다. <xref:System.Runtime.Serialization.SerializationBinder.BindToType(System.String,System.String)> 메서드는 어셈블리 및 형식 이름을 받아서 <xref:System.Type>을 반환합니다.  
+ <xref:System.Runtime.Serialization.SerializationBinder>는 serialization 및 deserialization 중에 사용되는 실제 형식을 제어하는 데 사용되는 추상 클래스입니다. serialization 및 deserialization 중에 사용되는 형식을 제어하려면 <xref:System.Runtime.Serialization.SerializationBinder>에서 클래스를 파생시키고 <xref:System.Runtime.Serialization.SerializationBinder.BindToName(System.Type,System.String@,System.String@)> 및 <xref:System.Runtime.Serialization.SerializationBinder.BindToType(System.String,System.String)> 메서드를 재정의합니다. <xref:System.Runtime.Serialization.SerializationBinder.BindToName(System.Type,System.String@,System.String@)> 메서드는 <xref:System.Type>을 받아서 어셈블리 및 형식 이름을 반환합니다. <xref:System.Runtime.Serialization.SerializationBinder.BindToType(System.String,System.String)> 메서드는 어셈블리 및 형식 이름을 받아서 <xref:System.Type>을 반환합니다.  
   
 ## <a name="see-also"></a>참고자료
 

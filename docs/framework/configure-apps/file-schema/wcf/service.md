@@ -3,10 +3,10 @@ title: <service>
 ms.date: 03/30/2017
 ms.assetid: 13123dd6-c4a9-4a04-a984-df184b851788
 ms.openlocfilehash: 68bddc01b02d9885b3f0fc4c2cbc5c3249de03f4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197960"
 ---
 # <a name="service"></a>\<service>
@@ -32,7 +32,7 @@ ms.locfileid: "59197960"
 |특성|설명|  
 |---------------|-----------------|  
 |behaviorConfiguration|서비스 인스턴스화에 사용할 동작의 동작 이름을 포함하는 문자열입니다. 동작 이름은 서비스가 정의된 지점의 범위에 속해야 합니다. 기본값은 빈 문자열입니다.|  
-|name|인스턴스화할 서비스 형식을 지정하는 필수 문자열 특성입니다. 이 설정은 유효한 형식을 사용해야 하며, 형식 이어야 합니다. `Namespace.Class.`|  
+|name|인스턴스화할 서비스 형식을 지정하는 필수 문자열 특성입니다. 이 설정은 유효한 형식을 사용해야 하며, Namespace.Class`Namespace.Class.` 형식이어야 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   

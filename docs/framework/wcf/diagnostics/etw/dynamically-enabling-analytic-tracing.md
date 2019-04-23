@@ -3,10 +3,10 @@ title: 동적으로 분석 추적을 사용하도록 설정
 ms.date: 03/30/2017
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
 ms.openlocfilehash: 219561b1acd2259daad4c984dcf0b15517166c3f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197479"
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>동적으로 분석 추적을 사용하도록 설정
@@ -42,4 +42,4 @@ Windows 운영 체제에 포함된 도구와 함께 ETW(Event Tracing for Window
   
 ## <a name="see-also"></a>참고자료
 
-- [Windows용 WCF 서비스 및 이벤트 추척](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)
+- [WCF 서비스 및 Windows용 이벤트 추적](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)

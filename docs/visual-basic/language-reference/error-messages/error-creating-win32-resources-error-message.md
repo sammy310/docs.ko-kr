@@ -1,5 +1,5 @@
 ---
-title: 'Win32 리소스를 만드는 오류: <error message>'
+title: Win32 리소스를 만드는 동안 오류가 발생했습니다. <error message>
 ms.date: 07/20/2015
 f1_keywords:
 - bc30136
@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30136
 ms.assetid: 05a813e4-9d65-4ce8-be8f-7ca20bbba2af
 ms.openlocfilehash: 19572e3a20c3d9392560d434bebb8f70ca144297
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304846"
 ---
 # <a name="error-creating-win32-resources-error-message"></a>Win32 리소스를 만드는 동안 오류 발생: \<오류 메시지 >
@@ -28,4 +28,4 @@ Visual Basic 컴파일러는 매니페스트를 사용 하 여 어셈블리를 �
 ## <a name="see-also"></a>참고자료
 
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
-- [Talk to Us](/visualstudio/ide/talk-to-us)
+- [의견 보내기](/visualstudio/ide/talk-to-us)

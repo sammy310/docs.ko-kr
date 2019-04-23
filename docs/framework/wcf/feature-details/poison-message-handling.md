@@ -3,10 +3,10 @@ title: 포이즌 메시지 처리
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
 ms.openlocfilehash: fe748ac40f03ed22cacb254ab464a6caf3d27a8c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305028"
 ---
 # <a name="poison-message-handling"></a>포이즌 메시지 처리
@@ -21,9 +21,9 @@ A *포이즌 메시지* 응용 프로그램에 배달 시도 최대 횟수를 �
   
 -   `ReceiveRetryCount`. 응용 프로그램 큐에서 응용 프로그램으로 메시지 전달을 다시 시도하는 최대 횟수를 나타내는 정수 값입니다. 기본값은 5입니다. 이 값은 데이터베이스의 임시 교착 상태처럼 문제 해결을 즉시 다시 시도하는 경우 충분합니다.  
   
--   `MaxRetryCycles`. 최대 재시도 주기 수를 나타내는 정수 값입니다. 재시도 주기는 응용 프로그램 큐에서 재시도 하위 큐로 메시지를 전송하고, 구성 가능한 지연 시간 이후 재시도 하위 큐에서 전달을 다시 시도할 응용 프로그램 큐로 메시지를 다시 전송하는 것으로 구성됩니다. 기본값은 2입니다. [!INCLUDE[wv](../../../../includes/wv-md.md)]에서는 메시지가 최대 (`ReceiveRetryCount` +1) * (`MaxRetryCycles` + 1)회까지 시도됩니다. `MaxRetryCycles` 무시 됩니다 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 고 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]입니다.  
+-   `MaxRetryCycles`. 최대 재시도 주기 수를 나타내는 정수 값입니다. 재시도 주기는 응용 프로그램 큐에서 재시도 하위 큐로 메시지를 전송하고, 구성 가능한 지연 시간 이후 재시도 하위 큐에서 전달을 다시 시도할 응용 프로그램 큐로 메시지를 다시 전송하는 것으로 구성됩니다. 기본값은 2입니다. [!INCLUDE[wv](../../../../includes/wv-md.md)]에서는 메시지가 최대 (`ReceiveRetryCount` +1) * (`MaxRetryCycles` + 1)회까지 시도됩니다. `MaxRetryCycles`는 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 무시됩니다.  
   
--   `RetryCycleDelay`. 재시도 주기 사이의 지연 시간입니다. 기본값은 30분입니다. `MaxRetryCycles` 및 `RetryCycleDelay` 함께 정기적인 지연 시간 이후 재시도 문제를 해결 하 고 문제를 해결 하는 메커니즘을 제공 합니다. 예를 들면, 이 핸들은 SQL Server의 보류 중인 트랜잭션 커밋에 설정된 잠긴 행을 처리합니다.  
+-   `RetryCycleDelay`. 재시도 주기 사이의 지연 시간입니다. 기본값은 30분입니다. `MaxRetryCycles` 및 `RetryCycleDelay`는 함께 정기적인 지연 시간 이후 재시도로 문제를 해결하는 문제 해결 메커니즘을 제공합니다. 예를 들면, 이 핸들은 SQL Server의 보류 중인 트랜잭션 커밋에 설정된 잠긴 행을 처리합니다.  
   
 -   `ReceiveErrorHandling`. 최대 재시도 횟수만큼 시도한 후에 전달하지 못한 메시지에 대해 수행할 작업을 나타내는 열거입니다. 이 값은 Fault, Drop, Reject 및 Move일 수 있습니다. 기본 옵션은 Fault입니다.  
   
@@ -92,7 +92,7 @@ A *포이즌 메시지* 응용 프로그램에 배달 시도 최대 횟수를 �
  메시지가 포이즌 메시지가 되고 일괄 처리에 포함되면 전체 일괄 처리가 롤백되고 채널이 한 번에 하나의 메시지를 반환합니다. 일괄 처리 하는 방법에 대 한 자세한 내용은 참조 하세요. [트랜잭션에서 메시지 일괄 처리](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
   
 ## <a name="poison-message-handling-for-messages-in-a-poison-queue"></a>포이즌 큐의 메시지에 대한 포이즌 메시지 처리  
- 메시지가 포이즌 메시지 큐에 놓이면 포이즌 메시지 처리가 종료되지 않습니다. 포이즌 메시지 큐의 메시지를 읽고 처리해야 합니다. 최종 포이즌 하위 큐에서 메시지를 읽을 때 포이즌 메시지 처리 설정의 하위 집합을 사용할 수 있습니다. `ReceiveRetryCount` 및 `ReceiveErrorHandling` 설정을 적용할 수 있습니다. `ReceiveErrorHandling`은 Drop, Reject 또는 Fault로 설정할 수 있습니다. `MaxRetryCycles` 무시 됩니다 하는 경우 예외가 throw 되 고 `ReceiveErrorHandling` Move로 설정 합니다.  
+ 메시지가 포이즌 메시지 큐에 놓이면 포이즌 메시지 처리가 종료되지 않습니다. 포이즌 메시지 큐의 메시지를 읽고 처리해야 합니다. 최종 포이즌 하위 큐에서 메시지를 읽을 때 포이즌 메시지 처리 설정의 하위 집합을 사용할 수 있습니다. `ReceiveRetryCount` 및 `ReceiveErrorHandling` 설정을 적용할 수 있습니다. `ReceiveErrorHandling`은 Drop, Reject 또는 Fault로 설정할 수 있습니다. `MaxRetryCycles`이 Move로 설정되면 `ReceiveErrorHandling`가 무시되고 예외가 throw됩니다.  
   
 ## <a name="windows-vista-windows-server-2003-and-windows-xp-differences"></a>Windows Vista, Windows Server 2003 및 Windows XP의 차이점  
  앞에서 설명한 대로 포이즌 메시지 처리 설정의 일부만 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에 적용됩니다. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 및 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 메시지 큐의 주요 차이점은 포이즌 메시지 처리와 관련된 것입니다.  

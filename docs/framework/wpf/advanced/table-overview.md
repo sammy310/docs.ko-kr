@@ -10,10 +10,10 @@ helpviewer_keywords:
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
 ms.openlocfilehash: 6485aa9f2094b734f796ff38a33f4e0d3434e004
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317664"
 ---
 # <a name="table-overview"></a>테이블 개요
@@ -178,6 +178,6 @@ ms.locfileid: "59317664"
 ## <a name="see-also"></a>참고자료
 
 - [유동 문서 개요](flow-document-overview.md)
-- [XAML을 사용하여 테이블 정의](how-to-define-a-table-with-xaml.md)
+- [XAML로 테이블 정의](how-to-define-a-table-with-xaml.md)
 - [WPF의 문서](documents-in-wpf.md)
 - [유동 콘텐츠 요소 사용](how-to-use-flow-content-elements.md)

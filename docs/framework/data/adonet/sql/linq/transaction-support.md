@@ -3,10 +3,10 @@ title: 트랜잭션 지원
 ms.date: 03/30/2017
 ms.assetid: 8cceb26e-8d36-4365-8967-58e2e89e0187
 ms.openlocfilehash: 519ddab069cf3c4ca1ccfa7b203769b8102db844
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59196165"
 ---
 # <a name="transaction-support"></a>트랜잭션 지원
@@ -26,4 +26,4 @@ ms.locfileid: "59196165"
 ## <a name="see-also"></a>참고자료
 
 - [배경 정보](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [방법: 트랜잭션을 사용하여 대괄호로 묶은 데이터 전송](../../../../../../docs/framework/data/adonet/sql/linq/how-to-bracket-data-submissions-by-using-transactions.md)
+- [방법: 트랜잭션을 사용 하 여 대괄호 데이터 전송](../../../../../../docs/framework/data/adonet/sql/linq/how-to-bracket-data-submissions-by-using-transactions.md)

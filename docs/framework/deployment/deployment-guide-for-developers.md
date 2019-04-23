@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9298bb758c205c1ef577942aca6b107828e8e139
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: f71cebc164e7b324dc847c67d3e0e49e856c11c7
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675915"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59306536"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>개발자를 위한 .NET Framework 배포 가이드
 이 항목에서는 앱과 함께 .NET Framework 4.5에서 [!INCLUDE[net_current](../../../includes/net-current-version.md)]까지의 모든 .NET Framework 버전을 설치하려는 개발자를 위한 정보를 제공합니다.
@@ -117,23 +117,23 @@ ClickOnce, InstallAware, InstallShield 또는 WiX를 사용하여 앱을 배포�
 
  Visual Studio에서 ClickOnce 배포를 선택하고 .NET Framework에 대한 종속성을 추가합니다.
 
-1.  게시하려는 응용 프로그램 프로젝트를 엽니다.
+1. 게시하려는 응용 프로그램 프로젝트를 엽니다.
 
-2.  솔루션 탐색기에서 프로젝트의 바로 가기 메뉴를 열고 **속성**을 선택합니다.
+2. 솔루션 탐색기에서 프로젝트의 바로 가기 메뉴를 열고 **속성**을 선택합니다.
 
-3.  **게시** 창을 선택합니다.
+3. **게시** 창을 선택합니다.
 
-4.  **필수 구성 요소** 단추를 선택합니다.
+4. **필수 구성 요소** 단추를 선택합니다.
 
-5.  **필수 구성 요소** 대화 상자에서 **필수 구성 요소를 설치하기 위한 설치 프로그램 만들기** 확인란이 선택되어 있는지 확인합니다.
+5. **필수 구성 요소** 대화 상자에서 **필수 구성 요소를 설치하기 위한 설치 프로그램 만들기** 확인란이 선택되어 있는지 확인합니다.
 
-6.  필수 구성 요소 목록에서 프로젝트를 빌드하는 데 사용한 .NET Framework 버전을 찾아서 선택합니다.
+6. 필수 구성 요소 목록에서 프로젝트를 빌드하는 데 사용한 .NET Framework 버전을 찾아서 선택합니다.
 
-7.  필수 구성 요소의 소스 위치를 지정하는 옵션을 선택한 다음 **확인**을 선택합니다.
+7. 필수 구성 요소의 소스 위치를 지정하는 옵션을 선택한 다음 **확인**을 선택합니다.
 
      .NET Framework 다운로드 위치의 URL을 제공하는 경우 Microsoft 다운로드 센터 사이트 또는 자체 사이트를 지정할 수 있습니다. 재배포 가능 패키지를 자체 서버에 배치하려면 패키지가 웹 설치 관리자가 아닌 오프라인 설치 관리자여야 합니다. Microsoft 다운로드 센터에 있는 웹 설치 관리자에만 연결할 수 있습니다. URL은 사용자 응용 프로그램을 배포할 CD를 지정할 수도 있습니다.
 
-8.  **속성 페이지** 대화 상자에서 **확인**을 선택합니다.
+8. **속성 페이지** 대화 상자에서 **확인**을 선택합니다.
 
 <a name="installaware"></a> 
 ### <a name="installaware-deployment"></a>InstallAware 배포
@@ -142,19 +142,19 @@ InstallAware는 단일 소스에서 Windows 앱(APPX), Windows Installer(MSI), �
 ### <a name="installshield-deployment"></a>InstallShield 배포
  Visual Studio에서 InstallShield 배포를 선택하고 .NET Framework에 대한 종속성을 추가합니다.
 
-1.  Visual Studio 메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 선택합니다.
+1. Visual Studio 메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 선택합니다.
 
-2.  **새 프로젝트** 대화 상자의 왼쪽 창에서 **기타 프로젝트 형식**, **설치 및 배포**, **InstallShield LE**를 선택합니다.
+2. **새 프로젝트** 대화 상자의 왼쪽 창에서 **기타 프로젝트 형식**, **설치 및 배포**, **InstallShield LE**를 선택합니다.
 
-3.  **이름** 상자에 프로젝트 이름을 입력한 다음 **확인**을 선택합니다.
+3. **이름** 상자에 프로젝트 이름을 입력한 다음 **확인**을 선택합니다.
 
-4.  설치 및 배포 프로젝트를 처음으로 만들 경우 **InstallShield로 이동** 또는 **InstallShield Limited Edition 사용**을 선택하여 사용 중인 Microsoft Visual Studio 버전의 InstallShield Limited Edition을 다운로드합니다. Visual Studio를 다시 시작합니다.
+4. 설치 및 배포 프로젝트를 처음으로 만들 경우 **InstallShield로 이동** 또는 **InstallShield Limited Edition 사용**을 선택하여 사용 중인 Microsoft Visual Studio 버전의 InstallShield Limited Edition을 다운로드합니다. Visual Studio를 다시 시작합니다.
 
-5.  **프로젝트 도우미** 마법사로 이동한 다음 **애플리케이션 파일** 을 선택하여 프로젝트 출력을 추가합니다. 이 마법사를 사용하여 다른 프로젝트 특성을 구성할 수 있습니다.
+5. **프로젝트 도우미** 마법사로 이동한 다음 **애플리케이션 파일** 을 선택하여 프로젝트 출력을 추가합니다. 이 마법사를 사용하여 다른 프로젝트 특성을 구성할 수 있습니다.
 
-6.  **설치 요구 사항** 으로 이동한 다음 운영 체제 및 설치할 .NET Framework의 버전을 선택합니다.
+6. **설치 요구 사항** 으로 이동한 다음 운영 체제 및 설치할 .NET Framework의 버전을 선택합니다.
 
-7.  설치 프로젝트에 대한 바로 가기 메뉴를 열고 **빌드**를 선택합니다.
+7. 설치 프로젝트에 대한 바로 가기 메뉴를 열고 **빌드**를 선택합니다.
  
 <a name="wix"></a> 
 ### <a name="windows-installer-xml-wix-deployment"></a>WiX(Windows Installer XML) 배포
@@ -403,6 +403,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductNa
 |3082|스페인어 - 스페인(현대 정렬)|es|
 
 ## <a name="see-also"></a>참고 항목
+
 - [관리자를 위한 배포 가이드](../../../docs/framework/deployment/guide-for-administrators.md)
 - [시스템 요구 사항](../../../docs/framework/get-started/system-requirements.md)
 - [개발자용 .NET Framework 설치](../../../docs/framework/install/guide-for-developers.md)

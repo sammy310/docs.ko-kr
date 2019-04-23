@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 335647f899c79eff22e313fa40b2e2a73e7cfff0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235682"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804514"
 ---
 ### <a name="wf-serializes-expressionsliteralt-datetimes-differently-now-breaks-custom-xaml-parsers"></a>WF가 Expressions.Literal\<T> DateTimes를 직렬화합니다(사용자 지정 XAML 파서 중단).
 

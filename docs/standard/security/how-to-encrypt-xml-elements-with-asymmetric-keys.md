@@ -20,10 +20,10 @@ ms.assetid: a164ba4f-e596-4bbe-a9ca-f214fe89ed48
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ec5d42bd003f6fb6a79bbd71beb8c88efa4e84c2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318028"
 ---
 # <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>방법: 비대칭 키를 사용하여 XML 요소 암호화
@@ -145,4 +145,4 @@ ms.locfileid: "59318028"
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Security.Cryptography.Xml>
-- [방법: 비대칭 키를 사용하여 XML 요소 해독](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md)
+- [방법: 비대칭 키로 XML 요소 해독](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md)

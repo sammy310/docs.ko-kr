@@ -6,10 +6,10 @@ helpviewer_keywords:
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
 ms.openlocfilehash: 69a5caef8bab45503b9f34422de8c2ba2e7f01ff
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317300"
 ---
 # <a name="application-settings-for-custom-controls"></a>사용자 지정 컨트롤에 대한 애플리케이션 설정
@@ -49,4 +49,4 @@ ms.locfileid: "59317300"
 
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.IPersistComponentSettings>
-- [애플리케이션 설정 아키텍처](application-settings-architecture.md)
+- [응용 프로그램 설정 아키텍처](application-settings-architecture.md)

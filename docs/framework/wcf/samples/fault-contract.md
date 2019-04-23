@@ -3,10 +3,10 @@ title: 오류 계약
 ms.date: 03/30/2017
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
 ms.openlocfilehash: 21c4894b3927b6fdcf9aff16ea07020eeb073977
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317131"
 ---
 # <a name="fault-contract"></a>오류 계약
@@ -98,7 +98,7 @@ catch (FaultException<MathFault> e)
 }  
 ```  
   
- 서비스 구현의 세부 정보가 서비스의 보안 경계를 벗어나는 것을 방지하기 위해 기본적으로 예기치 않은 예외의 세부 정보는 클라이언트에게 보내지지 않습니다. `FaultContract` 계약에서 오류를 설명 하 고 특정 유형의 클라이언트에 게 전송에 대 한 적절 한 예외를 표시 하는 방법을 제공 합니다. `FaultException<T>` 소비자에 게 오류 보내기 위한 런타임 메커니즘을 제공 합니다.  
+ 서비스 구현의 세부 정보가 서비스의 보안 경계를 벗어나는 것을 방지하기 위해 기본적으로 예기치 않은 예외의 세부 정보는 클라이언트에게 보내지지 않습니다. `FaultContract`는 계약의 오류를 설명하고 특정 형식의 예외를 클라이언트에게 전송하기 적합한 것으로 표시하는 방법을 제공합니다. `FaultException<T>`는 오류를 소비자에게 보내기 위한 런타임 메커니즘을 제공합니다.  
   
  그러나 디버깅 시에 서비스 오류의 내부 정보를 확인하는 것이 유용합니다. 위에 설명된 보안 동작을 해제하려면 서버에서 처리되지 않은 모든 예외의 세부 정보를 클라이언트에게 보내는 오류에 포함해야 한다는 것을 지정합니다. 이렇게 하려면 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A>를 `true`로 설정합니다. 다음 샘플과 같이 구성이나 코드에서 이를 설정할 수 있습니다.  
   

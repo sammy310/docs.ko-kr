@@ -5,10 +5,10 @@ f1_keywords:
 - vbrForLoop_CommonType2
 ms.assetid: ce400fe1-5edd-4aee-94d8-530be03cfd9a
 ms.openlocfilehash: 676632f55eb0dcc88eaa6d3b50167bb9e6c2b30e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314440"
 ---
 # <a name="cannot-convert-start-value-of-type-type1-and-step-value-of-type-type2-to-a-common-type"></a>형식의 시작 값을 변환할 수 없습니다. '\<type1 >' 형식의 단계 값 및 '\<type2 >'을 공용 형식

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
 ms.openlocfilehash: 0cc1ac9adf40948a5109b37336d45a2be833e54f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317209"
 ---
 # <a name="optimizing-performance-text"></a>성능 최적화: 텍스트
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 텍스트 콘텐츠를 사용 하 여 풍부한 기능의 프레젠테이션 지원 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 컨트롤입니다. 일반적으로 세 가지 계층으로 텍스트 렌더링을 나눌 수 있습니다.  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 다양한 기능의 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 컨트롤을 사용하여 텍스트 콘텐츠를 표시할 수 있습니다. 일반적으로 세 가지 계층으로 텍스트 렌더링을 나눌 수 있습니다.  
   
 1. 사용 하 여 <xref:System.Windows.Documents.Glyphs> 및 <xref:System.Windows.Media.GlyphRun> 개체를 직접.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "59317209"
   
 -   인쇄 시나리오  
   
-    -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 장치 프린터 언어로 합니다.  
+    -   장치 프린터 언어로서의 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]  
   
     -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
   
@@ -74,7 +74,7 @@ ms.locfileid: "59317209"
   
 <a name="FlowDocument_TextBlock_Label"></a>   
 ## <a name="flowdocument-textblock-and-label-controls"></a>FlowDocument, TextBlock 및 Label 컨트롤  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 화면에 텍스트를 그리기 위한 여러 컨트롤이 포함 되어 있습니다. 각 컨트롤은 다른 시나리오를 대상으로 하며 고유 기능 및 제한 사항 목록을 가지고 있습니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 화면에 텍스트를 그리는 데 사용하는 여러 컨트롤이 포함되어 있습니다. 각 컨트롤은 다른 시나리오를 대상으로 하며 고유 기능 및 제한 사항 목록을 가지고 있습니다.  
   
 ### <a name="flowdocument-impacts-performance-more-than-textblock-or-label"></a>FlowDocument가 TextBlock 또는 Label 이외의 성능에 미치는 영향  
  일반적으로 <xref:System.Windows.Controls.TextBlock> 제한 된 텍스트 지원이의 간략 한 문장과 같이 필요한 경우 요소를 사용 해야는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]합니다. <xref:System.Windows.Controls.Label> 최소 텍스트 지원이 필요할 때 사용할 수 있습니다. 합니다 <xref:System.Windows.Documents.FlowDocument> 요소는 콘텐츠의 풍부한 표현을 지 원하는 재배치 문서용 컨테이너 있고 따라서를 사용 하 여 보다 성능에 큰 영향을 <xref:System.Windows.Controls.TextBlock> 또는 <xref:System.Windows.Controls.Label> 컨트롤입니다.  
@@ -97,7 +97,7 @@ ms.locfileid: "59317209"
   
  다음 표에서 1000을 표시 하는 비용을 보여 줍니다 <xref:System.Windows.Controls.TextBlock> 개체와 명시적인 없는 <xref:System.Windows.Documents.Run>합니다.  
   
-|**TextBlock 형식**|**만든 시간 (ms)**|**렌더링 시간 (ms)**|  
+|**TextBlock 형식**|**만든 시간(ms)**|**렌더링 시간(ms)**|  
 |------------------------|------------------------------|----------------------------|  
 |Run 설정 텍스트 속성|146|540|  
 |TextBlock 설정 텍스트 속성|43|453|  
@@ -107,7 +107,7 @@ ms.locfileid: "59317209"
   
  이 문제에 대한 해결책은 간단합니다. 경우는 <xref:System.Windows.Controls.Label> 사용자 지정으로 설정 되지 않은 <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> 값을 대체 합니다 <xref:System.Windows.Controls.Label> 사용 하 여를 <xref:System.Windows.Controls.TextBlock> 및 데이터 바인딩 해당 <xref:System.Windows.Controls.TextBlock.Text%2A> 속성 소스 문자열을 합니다.  
   
-|**데이터 바인딩된 속성**|**업데이트 시간 (ms)**|  
+|**데이터 바인딩된 속성**|**업데이트 시간(ms)**|  
 |-----------------------------|----------------------------|  
 |Label.Content|835|  
 |TextBlock.Text|242|  
@@ -142,14 +142,14 @@ ms.locfileid: "59317209"
   
  다음 표에서 1000을 표시 하는 성능 비용 <xref:System.Windows.Documents.Hyperlink> 와 밑줄이 있거나 없는 요소입니다.  
   
-|**하이퍼링크**|**만든 시간 (ms)**|**렌더링 시간 (ms)**|  
+|**하이퍼링크**|**만든 시간(ms)**|**렌더링 시간(ms)**|  
 |-------------------|------------------------------|----------------------------|  
 |밑줄 있음|289|1130|  
 |밑줄 없음|299|776|  
   
 <a name="Text_Formatting_Features"></a>   
 ## <a name="text-formatting-features"></a>텍스트 서식 지정 기능  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 서비스를 자동 하이픈 넣기 등 서식 있는 텍스트를 제공 합니다. 이러한 서비스는 애플리케이션 성능에 영향을 줄 수 있으며 필요한 경우에만 사용해야 합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 자동 하이픈 넣기 등 서식 있는 텍스트 서식 지정 서비스를 제공합니다. 이러한 서비스는 애플리케이션 성능에 영향을 줄 수 있으며 필요한 경우에만 사용해야 합니다.  
   
 ### <a name="avoid-unnecessary-use-of-hyphenation"></a>불필요한 하이픈 넣기 사용 안 함  
  자동 하이픈 넣기가 줄의 텍스트에 대 한 하이픈 중단점을 찾아서 추가 중단 위치를 줄 수 있습니다 <xref:System.Windows.Controls.TextBlock> 고 <xref:System.Windows.Documents.FlowDocument> 개체입니다. 기본적으로 이러한 개체에서는 자동 하이픈 넣기 기능이 사용하지 않도록 설정됩니다. 개체의 IsHyphenationEnabled 속성을 `true`로 설정하여 이 기능을 사용하도록 설정할 수 있습니다. 그러나 이 기능을 사용하면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 [!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)] 상호 운용성이 시작되어 애플리케이션 성능에 영향을 미칠 수 있습니다. 꼭 필요한 경우가 아니면 자동 하이픈 넣기를 사용하지 않는 것이 좋습니다.  
@@ -162,12 +162,12 @@ ms.locfileid: "59317209"
   
 ## <a name="see-also"></a>참고자료
 
-- [WPF 애플리케이션 성능 최적화](optimizing-wpf-application-performance.md)
-- [응용 프로그램 성능 계획](planning-for-application-performance.md)
-- [하드웨어 활용](optimizing-performance-taking-advantage-of-hardware.md)
+- [WPF 응용 프로그램 성능 최적화](optimizing-wpf-application-performance.md)
+- [애플리케이션 성능 계획](planning-for-application-performance.md)
+- [하드웨어 이용](optimizing-performance-taking-advantage-of-hardware.md)
 - [레이아웃 및 디자인](optimizing-performance-layout-and-design.md)
-- [2D 그래픽 및 이미징](optimizing-performance-2d-graphics-and-imaging.md)
+- [2차원 그래픽 및 이미징](optimizing-performance-2d-graphics-and-imaging.md)
 - [개체 동작](optimizing-performance-object-behavior.md)
-- [애플리케이션 리소스](optimizing-performance-application-resources.md)
+- [응용 프로그램 리소스](optimizing-performance-application-resources.md)
 - [데이터 바인딩](optimizing-performance-data-binding.md)
-- [기타 성능 추천 사항](optimizing-performance-other-recommendations.md)
+- [기타 성능 권장 사항](optimizing-performance-other-recommendations.md)
