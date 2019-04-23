@@ -7,28 +7,28 @@ helpviewer_keywords:
 - typography [WPF], how-to topics
 ms.assetid: 82d50325-7cb2-4975-aea3-027c00e6bbfc
 ms.openlocfilehash: f5d54b892f61bfb1804b3c4c561533e5aa549d0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209744"
 ---
-# <a name="typography-how-to-topics"></a><span data-ttu-id="4ba10-102">입력 체계 방법 항목</span><span class="sxs-lookup"><span data-stu-id="4ba10-102">Typography How-to Topics</span></span>
-<span data-ttu-id="4ba10-103">이 섹션의에서 항목에서는 사용 하는 방법에 설명 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 풍부한 기능의 프레젠테이션 응용 프로그램의 텍스트에 대 한 지원.</span><span class="sxs-lookup"><span data-stu-id="4ba10-103">The topics in this section describe how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] support for rich presentation of text in your applications.</span></span>  
+# <a name="typography-how-to-topics"></a><span data-ttu-id="29247-102">입력 체계 방법 항목</span><span class="sxs-lookup"><span data-stu-id="29247-102">Typography How-to Topics</span></span>
+<span data-ttu-id="29247-103">이 섹션의에서 항목에서는 사용 하는 방법에 설명 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 풍부한 기능의 프레젠테이션 응용 프로그램의 텍스트에 대 한 지원.</span><span class="sxs-lookup"><span data-stu-id="29247-103">The topics in this section describe how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] support for rich presentation of text in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4ba10-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="4ba10-104">In This Section</span></span>  
- [<span data-ttu-id="4ba10-105">텍스트 장식 만들기</span><span class="sxs-lookup"><span data-stu-id="4ba10-105">Create a Text Decoration</span></span>](how-to-create-a-text-decoration.md)  
- [<span data-ttu-id="4ba10-106">하이퍼링크에 밑줄을 표시할지 여부 지정</span><span class="sxs-lookup"><span data-stu-id="4ba10-106">Specify Whether a Hyperlink is Underlined</span></span>](how-to-specify-whether-a-hyperlink-is-underlined.md)  
- [<span data-ttu-id="4ba10-107">텍스트에 변환 적용</span><span class="sxs-lookup"><span data-stu-id="4ba10-107">Apply Transforms to Text</span></span>](how-to-apply-transforms-to-text.md)  
- [<span data-ttu-id="4ba10-108">텍스트에 애니메이션 적용</span><span class="sxs-lookup"><span data-stu-id="4ba10-108">Apply Animations to Text</span></span>](how-to-apply-animations-to-text.md)  
- [<span data-ttu-id="4ba10-109">그림자가 적용된 텍스트 만들기</span><span class="sxs-lookup"><span data-stu-id="4ba10-109">Create Text with a Shadow</span></span>](how-to-create-text-with-a-shadow.md)  
- [<span data-ttu-id="4ba10-110">윤곽선이 있는 텍스트 만들기</span><span class="sxs-lookup"><span data-stu-id="4ba10-110">Create Outlined Text</span></span>](how-to-create-outlined-text.md)  
- [<span data-ttu-id="4ba10-111">컨트롤의 배경에 텍스트 그리기</span><span class="sxs-lookup"><span data-stu-id="4ba10-111">Draw Text to a Control's Background</span></span>](how-to-draw-text-to-a-control-background.md)  
- [<span data-ttu-id="4ba10-112">시각적 개체에 텍스트 그리기</span><span class="sxs-lookup"><span data-stu-id="4ba10-112">Draw Text to a Visual</span></span>](how-to-draw-text-to-a-visual.md)  
- [<span data-ttu-id="4ba10-113">XAML의 특수 문자 사용</span><span class="sxs-lookup"><span data-stu-id="4ba10-113">Use Special Characters in XAML</span></span>](how-to-use-special-characters-in-xaml.md)  
+## <a name="in-this-section"></a><span data-ttu-id="29247-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="29247-104">In This Section</span></span>  
+ [<span data-ttu-id="29247-105">텍스트 장식 만들기</span><span class="sxs-lookup"><span data-stu-id="29247-105">Create a Text Decoration</span></span>](how-to-create-a-text-decoration.md)  
+ [<span data-ttu-id="29247-106">하이퍼링크에 밑줄이 그어지는지 여부 지정</span><span class="sxs-lookup"><span data-stu-id="29247-106">Specify Whether a Hyperlink is Underlined</span></span>](how-to-specify-whether-a-hyperlink-is-underlined.md)  
+ [<span data-ttu-id="29247-107">텍스트에 변환 적용</span><span class="sxs-lookup"><span data-stu-id="29247-107">Apply Transforms to Text</span></span>](how-to-apply-transforms-to-text.md)  
+ [<span data-ttu-id="29247-108">텍스트에 애니메이션 적용</span><span class="sxs-lookup"><span data-stu-id="29247-108">Apply Animations to Text</span></span>](how-to-apply-animations-to-text.md)  
+ [<span data-ttu-id="29247-109">그림자가 적용된 텍스트 만들기</span><span class="sxs-lookup"><span data-stu-id="29247-109">Create Text with a Shadow</span></span>](how-to-create-text-with-a-shadow.md)  
+ [<span data-ttu-id="29247-110">윤곽선이 있는 텍스트 만들기</span><span class="sxs-lookup"><span data-stu-id="29247-110">Create Outlined Text</span></span>](how-to-create-outlined-text.md)  
+ [<span data-ttu-id="29247-111">컨트롤의 배경에 텍스트 그리기</span><span class="sxs-lookup"><span data-stu-id="29247-111">Draw Text to a Control's Background</span></span>](how-to-draw-text-to-a-control-background.md)  
+ [<span data-ttu-id="29247-112">시각적 요소에 텍스트 그리기</span><span class="sxs-lookup"><span data-stu-id="29247-112">Draw Text to a Visual</span></span>](how-to-draw-text-to-a-visual.md)  
+ [<span data-ttu-id="29247-113">XAML에서 특수 문자 사용</span><span class="sxs-lookup"><span data-stu-id="29247-113">Use Special Characters in XAML</span></span>](how-to-use-special-characters-in-xaml.md)  
   
-## <a name="see-also"></a><span data-ttu-id="4ba10-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="4ba10-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="29247-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="29247-114">See also</span></span>
 
 - <xref:System.Windows.Documents.Typography>
-- [<span data-ttu-id="4ba10-115">WPF의 문서</span><span class="sxs-lookup"><span data-stu-id="4ba10-115">Documents in WPF</span></span>](documents-in-wpf.md)
-- [<span data-ttu-id="4ba10-116">OpenType 글꼴 기능</span><span class="sxs-lookup"><span data-stu-id="4ba10-116">OpenType Font Features</span></span>](opentype-font-features.md)
+- [<span data-ttu-id="29247-115">WPF의 문서</span><span class="sxs-lookup"><span data-stu-id="29247-115">Documents in WPF</span></span>](documents-in-wpf.md)
+- [<span data-ttu-id="29247-116">OpenType 글꼴 기능</span><span class="sxs-lookup"><span data-stu-id="29247-116">OpenType Font Features</span></span>](opentype-font-features.md)
