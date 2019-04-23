@@ -3,10 +3,10 @@ title: 지원되지 않는 시나리오
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
 ms.openlocfilehash: 12012f3e0c0c3b0d10c5faebfb2de881f5de3917
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178778"
 ---
 # <a name="unsupported-scenarios"></a>지원되지 않는 시나리오
@@ -75,7 +75,7 @@ ms.locfileid: "59178778"
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>ASP.NET 가장 및 ASP.NET 호환성을 사용해야 하는 경우 메시지 보안 실패  
  WCF는 클라이언트 인증을 방해할 수 있으므로 다음 설정 조합을 지원 하지 않습니다.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 가장이 사용 됩니다. 설정 하 여 Web.config 파일에 이렇게 합니다 `impersonate` 특성을 <`identity`> 요소를 `true`합니다.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 가장이 사용됩니다. 설정 하 여 Web.config 파일에 이렇게 합니다 `impersonate` 특성을 <`identity`> 요소를 `true`합니다.  
   
 -   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 호환성 모드를 설정 하 여 사용 합니다 `aspNetCompatibilityEnabled` 특성을 [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) 를 `true`.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "59178778"
 
 - [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [정보 공개](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [권한 높이기](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [권한 상승](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
 - [서비스 거부](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [변조](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [재생 공격](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

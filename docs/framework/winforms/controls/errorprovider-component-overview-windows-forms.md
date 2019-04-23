@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms], about ErrorProvider component
 ms.assetid: ced189f2-b5c8-46a7-a6f1-37f5af95dc99
 ms.openlocfilehash: 485e7a17073d72618b9599113179cddde748e697
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59181183"
 ---
 # <a name="errorprovider-component-overview-windows-forms"></a>ErrorProvider 구성 요소 개요(Windows Forms)
@@ -29,5 +29,5 @@ Windows Forms [ErrorProvider](errorprovider-component-windows-forms.md) 폼 이�
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.Forms.ErrorProvider>
-- [방법: Windows Forms ErrorProvider 구성 요소를 사용하여 DataSet 내의 오류 보기](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
-- [방법: Windows Forms ErrorProvider 구성 요소를 사용하여 양식 유효성 오류 아이콘 표시](display-error-icons-for-form-validation-with-wf-errorprovider.md)
+- [방법: Windows Forms ErrorProvider 구성 요소를 사용 하 여 데이터 집합에 있는 오류 보기](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
+- [방법: Windows Forms ErrorProvider 구성 요소를 사용 하 여 폼 유효성에 대 한 오류 아이콘 표시](display-error-icons-for-form-validation-with-wf-errorprovider.md)

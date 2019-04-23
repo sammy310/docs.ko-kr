@@ -5,10 +5,10 @@ helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
 ms.openlocfilehash: be9c0e26574a15279ce89af2c7862abaa8713360
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164439"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>.NET Framework XAML 서비스에서 사용할 사용자 지정 형식 정의
@@ -70,7 +70,7 @@ ms.locfileid: "59164439"
 #### <a name="the-getpropertyname-accessor"></a>GetPropertyName 접근자  
  `Get`*PropertyName* 접근자에 대한 서명은 다음과 같아야 합니다.  
   
- `public static object Get` *PropertyName* `(object`  `target` `)`  
+ `public static object Get`*PropertyName* `(object`  `target` `)`  
   
 -   구현에서 보다 구체적인 형식으로 `target` 개체를 지정할 수 있습니다. 범위에 연결 가능 멤버를 사용 하는 데 사용할 수 있습니다. 원하는 범위를 벗어나는 사용량에는 XAML 구문 분석 오류가 발생 한 후 표시 되는 잘못 된 캐스팅 예외가 throw 됩니다. 매개 변수 이름을 `target` 요구 되지 않지만 라는 `target` 대부분의 구현에서 규칙에 따라 합니다.  
   

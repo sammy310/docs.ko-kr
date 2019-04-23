@@ -13,10 +13,10 @@ helpviewer_keywords:
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
 ms.openlocfilehash: c0fcbc8054272356c39ba7925041ecef05a0322c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165271"
 ---
 # <a name="binding-declarations-overview"></a>바인딩 선언 개요
@@ -34,7 +34,7 @@ ms.locfileid: "59165271"
   
 <a name="MarkupExtensionSyntax"></a>   
 ### <a name="markup-extension-usage"></a>태그 확장 사용  
- <xref:System.Windows.Data.Binding> 태그 확장입니다. 바인딩 확장을 사용하여 바인딩을 선언할 때 선언은 `Binding` 키워드 뒤에 일련의 절이 쉼표(,)로 구분된 형태로 구성됩니다. 바인딩 선언의 절 순서는 중요하지 않으며 수많은 조합이 가능합니다. 절을 *이름*=*값* 위치 쌍 *이름* 이름인 합니다 <xref:System.Windows.Data.Binding> 속성 및 *값* 는 속성에 대해 설정 하는 값입니다.  
+ <xref:System.Windows.Data.Binding>은 태그 확장입니다. 바인딩 확장을 사용하여 바인딩을 선언할 때 선언은 `Binding` 키워드 뒤에 일련의 절이 쉼표(,)로 구분된 형태로 구성됩니다. 바인딩 선언의 절 순서는 중요하지 않으며 수많은 조합이 가능합니다. 절을 *이름*=*값* 위치 쌍 *이름* 이름인 합니다 <xref:System.Windows.Data.Binding> 속성 및 *값* 는 속성에 대해 설정 하는 값입니다.  
   
  태그에서 바인딩 선언 문자열을 만들 때는 대상 개체의 특정 종속성 속성에 연결해야 합니다. 다음 예제에서는 바인딩하는 방법을 보여줍니다 합니다 <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> 속성 바인딩 확장을 사용 하 여, 지정 하는 <xref:System.Windows.Data.Binding.Source%2A> 및 <xref:System.Windows.Data.Binding.Path%2A> 속성.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "59165271"
   
 -   속성의 인덱서는 인덱서가 적용되는 속성 이름 뒤에 대괄호로 묶어서 지정할 수 있습니다. 예를 들어 `Path=ShoppingCart[0]` 절은 속성의 내부 인덱싱에서 리터럴 문자열 "0"을 처리하는 방법에 해당하는 인덱스에 대한 바인딩을 설정합니다. 중첩된 인덱서도 지원됩니다.  
   
--   인덱서 및 하위 속성 함께 사용할 수 있습니다는 `Path` 절 예를 들어, `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`  
+-   `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`와 같이 `Path` 절에서 인덱서와 하위 속성을 혼합할 수 있습니다.  
   
 -   여러 인덱서 매개 변수를 쉼표(,)로 구분하여 인덱서 안에 포함할 수 있습니다. 각 매개 변수의 형식은 괄호를 사용하여 지정할 수 있습니다. 예를 들어 `Path="[(sys:Int32)42,(sys:Int32)24]"`를 사용할 수 있으며 여기서 `sys`는 `System` 네임스페이스에 매핑됩니다.  
   
