@@ -11,24 +11,24 @@ helpviewer_keywords:
 - printing [Visual Basic], in Windows applications
 ms.assetid: 03342b90-9cfe-40b2-838b-b479a13c5dea
 ms.openlocfilehash: 816da93218e20f73f16c14769ed1a549dd3d8eb3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335409"
 ---
-# <a name="how-to-create-standard-windows-forms-print-jobs"></a><span data-ttu-id="67a68-102">방법: 표준 Windows Forms 인쇄 작업 만들기</span><span class="sxs-lookup"><span data-stu-id="67a68-102">How to: Create Standard Windows Forms Print Jobs</span></span>
-<span data-ttu-id="67a68-103">Windows Forms의 인쇄의 기반은는 <xref:System.Drawing.Printing.PrintDocument> 구성 요소-구체적으로 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="67a68-103">The foundation of printing in Windows Forms is the <xref:System.Drawing.Printing.PrintDocument> component—more specifically, the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event.</span></span> <span data-ttu-id="67a68-104">처리 하는 코드를 작성 하 여는 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 이벤트 인쇄 대상 및 인쇄 하는 방법을 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="67a68-104">By writing code to handle the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event, you can specify what to print and how to print it.</span></span>  
+# <a name="how-to-create-standard-windows-forms-print-jobs"></a><span data-ttu-id="4b2d4-102">방법: 표준 Windows Forms 인쇄 작업 만들기</span><span class="sxs-lookup"><span data-stu-id="4b2d4-102">How to: Create Standard Windows Forms Print Jobs</span></span>
+<span data-ttu-id="4b2d4-103">Windows Forms의 인쇄의 기반은는 <xref:System.Drawing.Printing.PrintDocument> 구성 요소-구체적으로 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="4b2d4-103">The foundation of printing in Windows Forms is the <xref:System.Drawing.Printing.PrintDocument> component—more specifically, the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event.</span></span> <span data-ttu-id="4b2d4-104">처리 하는 코드를 작성 하 여는 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 이벤트 인쇄 대상 및 인쇄 하는 방법을 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4b2d4-104">By writing code to handle the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event, you can specify what to print and how to print it.</span></span>  
   
-### <a name="to-create-a-print-job"></a><span data-ttu-id="67a68-105">인쇄 작업을 만들려면</span><span class="sxs-lookup"><span data-stu-id="67a68-105">To create a print job</span></span>  
+### <a name="to-create-a-print-job"></a><span data-ttu-id="4b2d4-105">인쇄 작업을 만들려면</span><span class="sxs-lookup"><span data-stu-id="4b2d4-105">To create a print job</span></span>  
   
-1. <span data-ttu-id="67a68-106">추가 된 <xref:System.Drawing.Printing.PrintDocument> 폼에 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="67a68-106">Add a <xref:System.Drawing.Printing.PrintDocument> component to your form.</span></span>  
+1. <span data-ttu-id="4b2d4-106">추가 된 <xref:System.Drawing.Printing.PrintDocument> 폼에 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="4b2d4-106">Add a <xref:System.Drawing.Printing.PrintDocument> component to your form.</span></span>  
   
-2. <span data-ttu-id="67a68-107"><xref:System.Drawing.Printing.PrintDocument.PrintPage> 이벤트를 처리할 코드를 작성합니다.</span><span class="sxs-lookup"><span data-stu-id="67a68-107">Write code to handle the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event.</span></span>  
+2. <span data-ttu-id="4b2d4-107"><xref:System.Drawing.Printing.PrintDocument.PrintPage> 이벤트를 처리할 코드를 작성합니다.</span><span class="sxs-lookup"><span data-stu-id="4b2d4-107">Write code to handle the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event.</span></span>  
   
-     <span data-ttu-id="67a68-108">고유한 인쇄 논리를 코딩 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="67a68-108">You will have to code your own printing logic.</span></span> <span data-ttu-id="67a68-109">또한 인쇄할 재질을 지정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="67a68-109">Additionally, you will have to specify the material to be printed.</span></span>  
+     <span data-ttu-id="4b2d4-108">고유한 인쇄 논리를 코딩 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b2d4-108">You will have to code your own printing logic.</span></span> <span data-ttu-id="4b2d4-109">또한 인쇄할 재질을 지정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b2d4-109">Additionally, you will have to specify the material to be printed.</span></span>  
   
-     <span data-ttu-id="67a68-110">다음 코드 예제에서 빨간색 사각형 모양의 샘플 그래픽의 만들어집니다는 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 인쇄 자료로 작동 하도록 이벤트 처리기입니다.</span><span class="sxs-lookup"><span data-stu-id="67a68-110">In the following code example, a sample graphic in the shape of a red rectangle is created in the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event handler to act as material to be printed.</span></span>  
+     <span data-ttu-id="4b2d4-110">다음 코드 예제에서 빨간색 사각형 모양의 샘플 그래픽의 만들어집니다는 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 인쇄 자료로 작동 하도록 이벤트 처리기입니다.</span><span class="sxs-lookup"><span data-stu-id="4b2d4-110">In the following code example, a sample graphic in the shape of a red rectangle is created in the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event handler to act as material to be printed.</span></span>  
   
     ```vb  
     Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage  
@@ -55,7 +55,7 @@ ms.locfileid: "59335409"
        }  
     ```  
   
-     <span data-ttu-id="67a68-111">(Visual C# 및 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 이벤트 처리기를 등록 하려면 폼의 생성자에 다음 코드를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="67a68-111">(Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="4b2d4-111">(Visual C# 및 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 이벤트 처리기를 등록 하려면 폼의 생성자에 다음 코드를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b2d4-111">(Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.printDocument1.PrintPage += new  
@@ -69,14 +69,14 @@ ms.locfileid: "59335409"
        (this, &Form1::printDocument1_PrintPage);  
     ```  
   
-     <span data-ttu-id="67a68-112">에 대 한 코드를 작성할 수도 있습니다는 <xref:System.Drawing.Printing.PrintDocument.BeginPrint> 및 <xref:System.Drawing.Printing.PrintDocument.EndPrint> 이벤트를 포함 하 여 페이지의 총 수를 나타내는 인쇄를 정수는 각 페이지 출력으로 감소 합니다.</span><span class="sxs-lookup"><span data-stu-id="67a68-112">You may also want to write code for the <xref:System.Drawing.Printing.PrintDocument.BeginPrint> and <xref:System.Drawing.Printing.PrintDocument.EndPrint> events, perhaps including an integer representing the total number of pages to print that is decremented as each page prints.</span></span>  
+     <span data-ttu-id="4b2d4-112">에 대 한 코드를 작성할 수도 있습니다는 <xref:System.Drawing.Printing.PrintDocument.BeginPrint> 및 <xref:System.Drawing.Printing.PrintDocument.EndPrint> 이벤트를 포함 하 여 페이지의 총 수를 나타내는 인쇄를 정수는 각 페이지 출력으로 감소 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b2d4-112">You may also want to write code for the <xref:System.Drawing.Printing.PrintDocument.BeginPrint> and <xref:System.Drawing.Printing.PrintDocument.EndPrint> events, perhaps including an integer representing the total number of pages to print that is decremented as each page prints.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="67a68-113">추가할 수 있습니다는 <xref:System.Windows.Forms.PrintDialog> 구성 요소를 폼을 명확 하 고 효율적인 사용자 인터페이스 (UI) 사용자에 게 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="67a68-113">You can add a <xref:System.Windows.Forms.PrintDialog> component to your form to provide a clean and efficient user interface (UI) to your users.</span></span> <span data-ttu-id="67a68-114">설정 합니다 <xref:System.Windows.Forms.PrintDialog.Document%2A> 의 속성을 <xref:System.Windows.Forms.PrintDialog> 폼의 구성 요소 사용 하도록 설정 하면 문서 인쇄와 관련 된 속성을 설정 하는 데 사용 중인.</span><span class="sxs-lookup"><span data-stu-id="67a68-114">Setting the <xref:System.Windows.Forms.PrintDialog.Document%2A> property of the <xref:System.Windows.Forms.PrintDialog> component enables you to set properties related to the print document you are working with on your form.</span></span> <span data-ttu-id="67a68-115">에 대 한 자세한 내용은 합니다 <xref:System.Windows.Forms.PrintDialog> 구성 요소를 참조 하세요 [PrintDialog 구성 요소](../controls/printdialog-component-windows-forms.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="67a68-115">For more information about the <xref:System.Windows.Forms.PrintDialog> component, see [PrintDialog Component](../controls/printdialog-component-windows-forms.md).</span></span>  
+    >  <span data-ttu-id="4b2d4-113">추가할 수 있습니다는 <xref:System.Windows.Forms.PrintDialog> 구성 요소를 폼을 명확 하 고 효율적인 사용자 인터페이스 (UI) 사용자에 게 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b2d4-113">You can add a <xref:System.Windows.Forms.PrintDialog> component to your form to provide a clean and efficient user interface (UI) to your users.</span></span> <span data-ttu-id="4b2d4-114">설정 합니다 <xref:System.Windows.Forms.PrintDialog.Document%2A> 의 속성을 <xref:System.Windows.Forms.PrintDialog> 폼의 구성 요소 사용 하도록 설정 하면 문서 인쇄와 관련 된 속성을 설정 하는 데 사용 중인.</span><span class="sxs-lookup"><span data-stu-id="4b2d4-114">Setting the <xref:System.Windows.Forms.PrintDialog.Document%2A> property of the <xref:System.Windows.Forms.PrintDialog> component enables you to set properties related to the print document you are working with on your form.</span></span> <span data-ttu-id="4b2d4-115">에 대 한 자세한 내용은 합니다 <xref:System.Windows.Forms.PrintDialog> 구성 요소를 참조 하세요 [PrintDialog 구성 요소](../controls/printdialog-component-windows-forms.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="4b2d4-115">For more information about the <xref:System.Windows.Forms.PrintDialog> component, see [PrintDialog Component](../controls/printdialog-component-windows-forms.md).</span></span>  
   
-     <span data-ttu-id="67a68-116">세부 정보에 대 한 자세한 내용은 Windows Forms의 인쇄 작업을 프로그래밍 방식으로 인쇄 작업을 만드는 방법을 포함 하 여 참조 <xref:System.Drawing.Printing.PrintPageEventArgs>합니다.</span><span class="sxs-lookup"><span data-stu-id="67a68-116">For more information about the specifics of Windows Forms print jobs, including how to create a print job programmatically, see <xref:System.Drawing.Printing.PrintPageEventArgs>.</span></span>  
+     <span data-ttu-id="4b2d4-116">세부 정보에 대 한 자세한 내용은 Windows Forms의 인쇄 작업을 프로그래밍 방식으로 인쇄 작업을 만드는 방법을 포함 하 여 참조 <xref:System.Drawing.Printing.PrintPageEventArgs>합니다.</span><span class="sxs-lookup"><span data-stu-id="4b2d4-116">For more information about the specifics of Windows Forms print jobs, including how to create a print job programmatically, see <xref:System.Drawing.Printing.PrintPageEventArgs>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="67a68-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="67a68-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4b2d4-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="4b2d4-117">See also</span></span>
 
 - <xref:System.Drawing.Printing.PrintDocument>
-- [<span data-ttu-id="67a68-118">Windows Forms 인쇄 지원</span><span class="sxs-lookup"><span data-stu-id="67a68-118">Windows Forms Print Support</span></span>](windows-forms-print-support.md)
+- [<span data-ttu-id="4b2d4-118">Windows Forms 인쇄 지원</span><span class="sxs-lookup"><span data-stu-id="4b2d4-118">Windows Forms Print Support</span></span>](windows-forms-print-support.md)

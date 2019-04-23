@@ -18,47 +18,47 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 309c31dacd801f1c46a2d37932124638bc157cd6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59214029"
 ---
-# <a name="icordebugdatatargetgetplatform-method"></a><span data-ttu-id="12c1a-102">ICorDebugDataTarget::GetPlatform 메서드</span><span class="sxs-lookup"><span data-stu-id="12c1a-102">ICorDebugDataTarget::GetPlatform Method</span></span>
-<span data-ttu-id="12c1a-103">프로세서 아키텍처와 대상 프로세스가 실행 되는 운영 체제를 포함 하 여 플랫폼에 대 한 정보를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="12c1a-103">Provides information about the platform, including processor architecture and operating system, on which the target process is running.</span></span>  
+# <a name="icordebugdatatargetgetplatform-method"></a><span data-ttu-id="c20a2-102">ICorDebugDataTarget::GetPlatform 메서드</span><span class="sxs-lookup"><span data-stu-id="c20a2-102">ICorDebugDataTarget::GetPlatform Method</span></span>
+<span data-ttu-id="c20a2-103">프로세서 아키텍처와 대상 프로세스가 실행 되는 운영 체제를 포함 하 여 플랫폼에 대 한 정보를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="c20a2-103">Provides information about the platform, including processor architecture and operating system, on which the target process is running.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="12c1a-104">구문</span><span class="sxs-lookup"><span data-stu-id="12c1a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c20a2-104">구문</span><span class="sxs-lookup"><span data-stu-id="c20a2-104">Syntax</span></span>  
   
 ```  
 HRESULT GetPlatform([out] CorDebugPlatform * pTargetPlatform);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="12c1a-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="12c1a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c20a2-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="c20a2-105">Parameters</span></span>  
  `pTargetPlatform`  
- <span data-ttu-id="12c1a-106">[out] 에 대 한 포인터를 [CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) 대상 플랫폼을 설명 하는 열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="12c1a-106">[out] A pointer to a [CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) enumeration that describes the target platform.</span></span>  
+ <span data-ttu-id="c20a2-106">[out] 에 대 한 포인터를 [CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) 대상 플랫폼을 설명 하는 열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="c20a2-106">[out] A pointer to a [CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) enumeration that describes the target platform.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="12c1a-107">설명</span><span class="sxs-lookup"><span data-stu-id="12c1a-107">Remarks</span></span>  
- <span data-ttu-id="12c1a-108">`CorDebugPlatformEnum` 열거형 반환 값은 사용 된 [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) 포인터 크기, 주소 공간 레이아웃, 레지스터 집합, 명령 형식, 상황에 맞는 레이아웃 대상 프로세스의 세부 정보를 확인 하는 인터페이스 및 호출 규칙입니다.</span><span class="sxs-lookup"><span data-stu-id="12c1a-108">The `CorDebugPlatformEnum` enumeration return value is used by the [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) interface to determine details of the target process such as its pointer size, address space layout, register set, instruction format, context layout, and calling conventions.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c20a2-107">설명</span><span class="sxs-lookup"><span data-stu-id="c20a2-107">Remarks</span></span>  
+ <span data-ttu-id="c20a2-108">`CorDebugPlatformEnum` 열거형 반환 값은 사용 된 [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) 포인터 크기, 주소 공간 레이아웃, 레지스터 집합, 명령 형식, 상황에 맞는 레이아웃 대상 프로세스의 세부 정보를 확인 하는 인터페이스 및 호출 규칙입니다.</span><span class="sxs-lookup"><span data-stu-id="c20a2-108">The `CorDebugPlatformEnum` enumeration return value is used by the [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) interface to determine details of the target process such as its pointer size, address space layout, register set, instruction format, context layout, and calling conventions.</span></span>  
   
- <span data-ttu-id="12c1a-109">`pTargetPlatform` 값 사용에는 실제 하드웨어를 지정 하는 대신 대상에 대해 에뮬레이트 되는 플랫폼을 참조할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="12c1a-109">The `pTargetPlatform` value may refer to a platform that is being emulated for the target instead of specifying the actual hardware in use.</span></span> <span data-ttu-id="12c1a-110">예를 들어, 64 비트 버전 Windows 운영 체제의 Windows (WOW) 환경에서 Windows에서 실행 중인 프로세스를 사용 해야 합니다 `CORDB_PLATFORM_WINDOWS_X86` 의 값을 [CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) 열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="12c1a-110">For example, a process that is running in the Windows on Windows (WOW) environment on a 64-bit edition of the Windows operating system should use the `CORDB_PLATFORM_WINDOWS_X86` value of the [CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) enumeration.</span></span>  
+ <span data-ttu-id="c20a2-109">`pTargetPlatform` 값 사용에는 실제 하드웨어를 지정 하는 대신 대상에 대해 에뮬레이트 되는 플랫폼을 참조할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c20a2-109">The `pTargetPlatform` value may refer to a platform that is being emulated for the target instead of specifying the actual hardware in use.</span></span> <span data-ttu-id="c20a2-110">예를 들어, 64 비트 버전 Windows 운영 체제의 Windows (WOW) 환경에서 Windows에서 실행 중인 프로세스를 사용 해야 합니다 `CORDB_PLATFORM_WINDOWS_X86` 의 값을 [CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) 열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="c20a2-110">For example, a process that is running in the Windows on Windows (WOW) environment on a 64-bit edition of the Windows operating system should use the `CORDB_PLATFORM_WINDOWS_X86` value of the [CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) enumeration.</span></span>  
   
- <span data-ttu-id="12c1a-111">이 메서드는 성공 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="12c1a-111">This method must succeed.</span></span> <span data-ttu-id="12c1a-112">실패 한 경우 대상 플랫폼을 사용할 수 없는 합니다.</span><span class="sxs-lookup"><span data-stu-id="12c1a-112">If it fails, the target platform is unusable.</span></span> <span data-ttu-id="12c1a-113">메서드는 다음과 같은 이유로 실패할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="12c1a-113">The method may fail for the following reasons:</span></span>  
+ <span data-ttu-id="c20a2-111">이 메서드는 성공 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c20a2-111">This method must succeed.</span></span> <span data-ttu-id="c20a2-112">실패 한 경우 대상 플랫폼을 사용할 수 없는 합니다.</span><span class="sxs-lookup"><span data-stu-id="c20a2-112">If it fails, the target platform is unusable.</span></span> <span data-ttu-id="c20a2-113">메서드는 다음과 같은 이유로 실패할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c20a2-113">The method may fail for the following reasons:</span></span>  
   
--   <span data-ttu-id="12c1a-114">대상에 대해 에뮬레이트 되는 플랫폼을 사용할 수 없는 합니다.</span><span class="sxs-lookup"><span data-stu-id="12c1a-114">The platform that is being emulated for the target is unusable.</span></span>  
+-   <span data-ttu-id="c20a2-114">대상에 대해 에뮬레이트 되는 플랫폼을 사용할 수 없는 합니다.</span><span class="sxs-lookup"><span data-stu-id="c20a2-114">The platform that is being emulated for the target is unusable.</span></span>  
   
--   <span data-ttu-id="12c1a-115">대상 플랫폼에는 실제 하드웨어를 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="12c1a-115">The actual hardware on the target platform is unusable.</span></span>  
+-   <span data-ttu-id="c20a2-115">대상 플랫폼에는 실제 하드웨어를 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="c20a2-115">The actual hardware on the target platform is unusable.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="12c1a-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="12c1a-116">Requirements</span></span>  
- <span data-ttu-id="12c1a-117">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="12c1a-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c20a2-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c20a2-116">Requirements</span></span>  
+ <span data-ttu-id="c20a2-117">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="c20a2-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="12c1a-118">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="12c1a-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c20a2-118">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c20a2-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="12c1a-119">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="12c1a-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c20a2-119">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c20a2-119">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="12c1a-120">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="12c1a-120">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ <span data-ttu-id="c20a2-120">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c20a2-120">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="12c1a-121">참고자료</span><span class="sxs-lookup"><span data-stu-id="12c1a-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c20a2-121">참고자료</span><span class="sxs-lookup"><span data-stu-id="c20a2-121">See also</span></span>
 
-- [<span data-ttu-id="12c1a-122">ICorDebugDataTarget 인터페이스</span><span class="sxs-lookup"><span data-stu-id="12c1a-122">ICorDebugDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
-- [<span data-ttu-id="12c1a-123">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="12c1a-123">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="12c1a-124">디버깅</span><span class="sxs-lookup"><span data-stu-id="12c1a-124">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="c20a2-122">ICorDebugDataTarget 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c20a2-122">ICorDebugDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
+- [<span data-ttu-id="c20a2-123">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c20a2-123">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="c20a2-124">디버깅</span><span class="sxs-lookup"><span data-stu-id="c20a2-124">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
