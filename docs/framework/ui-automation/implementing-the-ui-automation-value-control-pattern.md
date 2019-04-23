@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
 ms.openlocfilehash: cccaf1afa55d786e43863e094a9745a0a1d00870
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174956"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>UI 자동화 Value 컨트롤 패턴 구현
@@ -32,11 +32,11 @@ ms.locfileid: "59174956"
   
 -   단일 줄 편집 컨트롤은 <xref:System.Windows.Automation.Provider.IValueProvider>를 구현하여 해당 내용에 대한 프로그래밍 방식 액세스를 제공합니다. 하지만 여러 줄 편집 컨트롤은 <xref:System.Windows.Automation.Provider.IValueProvider>를 구현하지 않습니다. 대신, <xref:System.Windows.Automation.Provider.ITextProvider>를 구현하여 내용에 대한 액세스를 제공합니다.  
   
--   여러 줄 편집 컨트롤의 텍스트 내용을 검색하려면 컨트롤이 <xref:System.Windows.Automation.Provider.ITextProvider>를 구현해야 합니다. 하지만 <xref:System.Windows.Automation.Provider.ITextProvider>는 컨트롤의 값 설정을 지원하지 않습니다.  
+-   여러 줄 편집 컨트롤의 텍스트 내용을 검색하려면 컨트롤이 <xref:System.Windows.Automation.Provider.ITextProvider>를 구현해야 합니다. 하지만 <xref:System.Windows.Automation.Provider.ITextProvider> 는 컨트롤의 값 설정을 지원하지 않습니다.  
   
--   <xref:System.Windows.Automation.Provider.IValueProvider> 형식 지정 정보 부분 문자열 값의 검색을 지원 하지 않습니다. 이러한 시나리오에서는 <xref:System.Windows.Automation.Provider.ITextProvider>를 구현합니다.  
+-   <xref:System.Windows.Automation.Provider.IValueProvider> 는 서식 정보 및 하위 문자열 값 검색을 지원하지 않습니다. 이러한 시나리오에서는 <xref:System.Windows.Automation.Provider.ITextProvider> 를 구현합니다.  
   
--   <xref:System.Windows.Automation.Provider.IValueProvider> 와 같은 컨트롤에 의해 구현 되어야 합니다 **색 선택기** 선택 컨트롤에서 [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (아래 그림 참조) 색 값 (예: "노란색") 및 해당 하는 내부 간의문자열매핑을지원하는[!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)]구조입니다.  
+-   <xref:System.Windows.Automation.Provider.IValueProvider> 는 색 값(예: "노란색") 및 해당되는 내부 **구조 간의 문자열 매핑을 지원하는** 의 [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] 색 선택 [!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)] 선택 항목 컨트롤과 같은(아래 그림 참조) 컨트롤이 구현해야 합니다.  
   
  ![노란색이 강조 표시 된 색 선택 합니다. ](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 색 견본 문자열 매핑의 예  
@@ -70,4 +70,4 @@ ms.locfileid: "59174956"
 - [클라이언트용 UI 자동화 컨트롤 패턴](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [ValuePattern 삽입 텍스트 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
 - [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [UI 자동화에서 캐싱 사용](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [UI 자동화의 캐싱 사용](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

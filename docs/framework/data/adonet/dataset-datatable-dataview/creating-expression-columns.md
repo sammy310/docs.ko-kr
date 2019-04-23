@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 0af3bd64-92a2-4b47-ae62-f5df35f131a6
 ms.openlocfilehash: 6e19e4e7cc0ea92e9d93e45c2a50d009e46b78c5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175502"
 ---
 # <a name="creating-expression-columns"></a>식 열 만들기
@@ -44,5 +44,5 @@ workTable.Columns.Add("SalesTax", typeof(Double), "Total * 0.086");
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>
 - [DataTable 스키마 정의](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
-- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

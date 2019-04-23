@@ -7,10 +7,10 @@ helpviewer_keywords:
 - GridItem control pattern
 ms.assetid: bffbae08-fe2a-42fd-ab84-f37187518916
 ms.openlocfilehash: 932eb0af6afbe958695d5c084d2cb0c0bc188830
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59176620"
 ---
 # <a name="implementing-the-ui-automation-griditem-control-pattern"></a>UI 자동화 GridItem 컨트롤 패턴 구현
@@ -29,7 +29,7 @@ ms.locfileid: "59176620"
   
 -   병합된 셀은 UI 자동화 공급자가 정의한 기본 앵커 셀을 기반으로 해당 <xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A> 및 <xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A> 속성을 보고합니다. 일반적으로, 기본 앵커 셀은 맨 위쪽 및 맨 왼쪽 행이나 열입니다.  
   
--   <xref:System.Windows.Automation.Provider.IGridItemProvider> 셀 병합 또는 분할과 같은 표이 활성 조작 제공 하지 않습니다.  
+-   <xref:System.Windows.Automation.Provider.IGridItemProvider>는 셀 병합 또는 분할과 같은 표이 활성 조작 기능을 제공하지 않습니다.  
   
 -   <xref:System.Windows.Automation.Provider.IGridItemProvider>를 구현하는 컨트롤은 일반적으로 키보드를 사용하여 트래버스(즉, UI 자동화 클라이언트가 인접 컨트롤로 이동할 수 있음)할 수 있습니다.  
   
@@ -58,4 +58,4 @@ ms.locfileid: "59176620"
 - [클라이언트용 UI 자동화 컨트롤 패턴](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [UI 자동화 Grid 컨트롤 패턴 구현](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md)
 - [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [UI 자동화에서 캐싱 사용](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [UI 자동화의 캐싱 사용](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
 ms.openlocfilehash: 162414dbd4b0f5e15eceaf73c87c122701fefc4e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59177413"
 ---
 # <a name="dialog-boxes-overview"></a>대화 상자 개요
@@ -45,7 +45,7 @@ ms.locfileid: "59177413"
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxconfigurecodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxconfigurecodebehind)]  
   
- 메시지 상자를 표시 하려면 호출을 `static`<xref:System.Windows.MessageBox.Show%2A> 메서드를 다음 코드 에서처럼 합니다.  
+ 메시지 상자를 표시 하려면 호출을 `static` <xref:System.Windows.MessageBox.Show%2A> 메서드를 다음 코드 에서처럼 합니다.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowcodebehind)]  
@@ -63,7 +63,7 @@ ms.locfileid: "59177413"
   
 <a name="Common_Dialogs"></a>   
 ## <a name="common-dialog-boxes"></a>일반 대화 상자  
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 다양 한 파일 열기, 파일 저장 및 인쇄에 대 한 대화 상자를 포함 하는 모든 응용 프로그램에 공통 되는 재사용 가능 대화 상자를 구현 합니다. 이러한 대화 상자는 운영 체제에서 구현되므로 운영 체제에서 실행되는 모든 애플리케이션에서 공유할 수 있어 사용자 경험의 일관성에 도움이 됩니다. 운영 체제에서 제공되는 대화 상자를 사용자가 한 애플리케이션에서 익히고 나면 다른 애플리케이션에서 대화 상자의 사용 방법을 다시 익힐 필요가 없습니다. 이러한 대화 상자는 모든 응용 프로그램에 사용할 수 있고 라고 일관 된 사용자 경험에 도움이 되므로 *공용 대화 상자*합니다.  
+ [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]에서는 파일을 열고, 파일을 저장하고, 인쇄하는 등의 용도로 사용되는 대화 상자를 비롯하여 모든 응용 프로그램에서 공통되는, 다양한 재사용 가능 대화 상자를 구현합니다. 이러한 대화 상자는 운영 체제에서 구현되므로 운영 체제에서 실행되는 모든 애플리케이션에서 공유할 수 있어 사용자 경험의 일관성에 도움이 됩니다. 운영 체제에서 제공되는 대화 상자를 사용자가 한 애플리케이션에서 익히고 나면 다른 애플리케이션에서 대화 상자의 사용 방법을 다시 익힐 필요가 없습니다. 이러한 대화 상자는 모든 응용 프로그램에 사용할 수 있고 라고 일관 된 사용자 경험에 도움이 되므로 *공용 대화 상자*합니다.  
   
  Windows Presentation Foundation (WPF) 캡슐화 열려 있는 파일, 파일을 저장 및 인쇄 일반 대화 상자 및 독립 실행형 응용 프로그램에서 사용 하 여 관리 되는 클래스로 노출 합니다. 이 항목에서는 각각의 개요를 간략하게 제공합니다.  
   
@@ -208,7 +208,7 @@ ms.locfileid: "59177413"
   
  ![잘못 된 왼쪽된 여백 값 주위에 빨간색 테두리를 사용 하 여 여백 대화 상자입니다.](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 유효한 데이터를 입력할 때까지 잘못 된 컨트롤에 사용자를 제한 하지 않습니다. 대화 상자에서 좋은 동작입니다. 사용자는 데이터의 유효성에 관계없이 대화 상자에서 컨트롤을 자유롭게 탐색할 수 있어야 합니다. 그러나이 경우 잘못 된 데이터 및 키를 눌러 입력할 수 있는 합니다 **확인** 단추입니다. 따라서이 코드에서는 대화 상자에서 모든 컨트롤의 유효성을 검사 하려면 상자는 **확인** 처리 하 여 단추를 누를 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서는 사용자가 유효한 데이터를 입력할 때까지 사용자를 잘못된 데이터로 제한하지 않습니다. 대화 상자에서 좋은 동작입니다. 사용자는 데이터의 유효성에 관계없이 대화 상자에서 컨트롤을 자유롭게 탐색할 수 있어야 합니다. 그러나이 경우 잘못 된 데이터 및 키를 눌러 입력할 수 있는 합니다 **확인** 단추입니다. 따라서이 코드에서는 대화 상자에서 모든 컨트롤의 유효성을 검사 하려면 상자는 **확인** 처리 하 여 단추를 누를 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다.  
   
  [!code-csharp[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs#marginsdialogboxvalidationcodebehind1)]
  [!code-vb[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb#marginsdialogboxvalidationcodebehind1)]  
@@ -344,6 +344,6 @@ ms.locfileid: "59177413"
   
 ## <a name="see-also"></a>참고자료
 
-- [Popup 개요](../controls/popup-overview.md)
+- [팝업 개요](../controls/popup-overview.md)
 - [대화 상자 샘플](https://go.microsoft.com/fwlink/?LinkID=159984)
 - [ColorPicker 사용자 지정 컨트롤 샘플](https://go.microsoft.com/fwlink/?LinkID=159977)

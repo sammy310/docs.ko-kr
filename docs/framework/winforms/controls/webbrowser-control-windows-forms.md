@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Web pages [Windows Forms], Windows Forms controls
 ms.assetid: 12667861-5b5b-46bc-8fb5-675e25264c9f
 ms.openlocfilehash: 34194bf707cd309768b00fd903d1f46aff7dd170
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174826"
 ---
 # <a name="webbrowser-control-windows-forms"></a>WebBrowser 컨트롤(Windows Forms)
@@ -23,19 +23,19 @@ Windows Forms `WebBrowser` 컨트롤이 웹 페이지를 호스팅하고 웹 검
  [WebBrowser 보안](webbrowser-security.md)  
  컨트롤에 대 한 보안 문제를 설명 합니다.  
   
- [방법: WebBrowser 컨트롤을 사용하여 URL로 이동](how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
+ [방법: WebBrowser 컨트롤을 사용 하 여 URL로 이동](how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
  특정 URL로 이동할 컨트롤을 사용 하는 방법을 보여 줍니다.  
   
- [방법: WebBrowser 컨트롤을 사용하여 인쇄](how-to-print-with-a-webbrowser-control.md)  
+ [방법: WebBrowser 컨트롤을 사용 하 여 인쇄](how-to-print-with-a-webbrowser-control.md)  
  표시 하지 않고 웹 페이지를 인쇄 하는 방법에 설명 합니다.  
   
- [방법: Windows Forms 애플리케이션에 웹 브라우저 기능 추가](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
+ [방법: Windows Forms 응용 프로그램에 웹 브라우저 기능 추가](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
  웹 브라우저를 사용 하 여 컨트롤을 초기화 하는 방법을 설명 합니다.  
   
- [방법: Windows Forms 애플리케이션에서 HTML 문서 뷰어 만들기](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
+ [방법: Windows Forms 응용 프로그램에서 HTML 문서 뷰어 만들기](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
  HTML 뷰어를 사용 하 여 컨트롤을 초기화 하는 방법을 설명 합니다.  
   
- [방법: DHTML 코드와 클라이언트 애플리케이션 코드 간의 양방향 통신 구현](implement-two-way-com-between-dhtml-and-client.md)  
+ [방법: DHTML 코드와 클라이언트 응용 프로그램 코드 간의 양방향 통신 구현](implement-two-way-com-between-dhtml-and-client.md)  
  컨트롤에 의해 호스팅되는 웹 페이지에서 응용 프로그램 코드 및 DHTML 간의 양방향 통신을 설정 하는 방법을 설명 합니다.  
   
  [관리되는 HTML 문서 개체 모델 사용](using-the-managed-html-document-object-model.md)  

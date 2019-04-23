@@ -5,10 +5,10 @@ helpviewer_keywords:
 - syndication [WCF]
 ms.assetid: ebf80384-0fc9-4919-a1e8-23ca2a13e300
 ms.openlocfilehash: 198b664ff52b42b7f393eec3e8162f3a12037d9d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175918"
 ---
 # <a name="wcf-syndication"></a>WCF 배포
@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF)에 읽기 및 만들고 뿐만 서비스 
  [방법: 기본 Atom 피드 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
  기본 ATOM 피드를 사용 가능하도록 지정하는 서비스를 만드는 방법을 보여 줍니다.  
   
- [방법: Atom 및 RSS로 피드 공개](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)  
+ [방법: Atom로 피드 공개 및 RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)  
  ATOM 및 RSS에서 동일한 피드를 사용 가능하도록 지정하는 서비스를 만드는 방법을 보여 줍니다.  
   
  [배포 확장성](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md)  

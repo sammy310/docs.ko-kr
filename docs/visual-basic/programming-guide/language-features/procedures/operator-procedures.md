@@ -12,10 +12,10 @@ helpviewer_keywords:
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
 ms.openlocfilehash: 80c9a77494be95365899c6a25435fcfc5d2a7293
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175021"
 ---
 # <a name="operator-procedures-visual-basic"></a>연산자 프로시저(Visual Basic)
@@ -82,12 +82,12 @@ ms.locfileid: "59175021"
 ## <a name="see-also"></a>참고자료
 
 - [절차](./index.md)
-- [하위 프로시저](./sub-procedures.md)
-- [함수 프로시저](./function-procedures.md)
+- [Sub 프로시저](./sub-procedures.md)
+- [Function 프로시저](./function-procedures.md)
 - [속성 프로시저](./property-procedures.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
-- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator 문](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [방법: 연산자 정의](./how-to-define-an-operator.md)
-- [방법: 변환 연산자 정의](./how-to-define-a-conversion-operator.md)
+- [방법: 변환 연산자를 정의 합니다.](./how-to-define-a-conversion-operator.md)
 - [방법: 연산자 프로시저 호출](./how-to-call-an-operator-procedure.md)
-- [방법: 연산자를 정의하는 클래스 사용](./how-to-use-a-class-that-defines-operators.md)
+- [방법: 연산자를 정의 하는 클래스를 사용 합니다.](./how-to-use-a-class-that-defines-operators.md)

@@ -25,10 +25,10 @@ helpviewer_keywords:
 - lifetime events of objects [WPF]
 ms.assetid: face6fc7-465b-4502-bfe5-e88d2e729a78
 ms.openlocfilehash: 8ecc3f716061dfd08ac95652d1a9d8e06e26d949
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175794"
 ---
 # <a name="object-lifetime-events"></a>개체 수명 이벤트
@@ -40,7 +40,7 @@ ms.locfileid: "59175794"
   
 <a name="intro"></a>   
 ## <a name="object-lifetime-events"></a>개체 수명 이벤트  
- Microsoft.NET Framework 관리 코드의 모든 개체와 유사한 수명, 생성, 사용 및 소멸 단계의 집합을 통해 이동합니다. 또한 많은 개체에는 소멸 단계의 일부로 발생하는 종료 단계가 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 개체, 특히 시각적 개체는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 식별 요소로 개체 수명의 공통 단계 집합이 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프로그래밍 및 응용 프로그램 모델은 이러한 단계를 일련의 이벤트로 노출합니다. 수명 이벤트와 관련하여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에는 일반적인 요소, 창 요소, 탐색 호스트 및 애플리케이션 개체 등 네 가지 기본 유형의 개체가 있습니다. Windows 및 탐색 호스트도 시각적 개체(요소)의 더 큰 그룹에 속합니다. 이 항목에서는 모든 요소에 공통적으로 적용되는 수명 이벤트에 대해 설명한 다음 애플리케이션 정의, 창 또는 탐색 호스트에 적용되는 특정 이벤트를 소개합니다.  
+ Microsoft.NET Framework 관리 코드의 모든 개체와 유사한 수명, 생성, 사용 및 소멸 단계의 집합을 통해 이동합니다. 또한 많은 개체에는 소멸 단계의 일부로 발생하는 종료 단계가 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 개체, 특히 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]가 요소로 식별하는 시각적 개체에는 개체 수명의 공통 단계 집합이 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프로그래밍 및 응용 프로그램 모델은 이러한 단계를 일련의 이벤트로 노출합니다. 수명 이벤트와 관련하여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에는 일반적인 요소, 창 요소, 탐색 호스트 및 애플리케이션 개체 등 네 가지 기본 유형의 개체가 있습니다. Windows 및 탐색 호스트도 시각적 개체(요소)의 더 큰 그룹에 속합니다. 이 항목에서는 모든 요소에 공통적으로 적용되는 수명 이벤트에 대해 설명한 다음 애플리케이션 정의, 창 또는 탐색 호스트에 적용되는 특정 이벤트를 소개합니다.  
   
 <a name="common_events"></a>   
 ## <a name="common-lifetime-events-for-elements"></a>요소에 대한 공통 수명 이벤트  
