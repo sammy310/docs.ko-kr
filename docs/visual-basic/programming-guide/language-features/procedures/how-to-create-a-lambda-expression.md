@@ -6,10 +6,10 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
 ms.openlocfilehash: fc2b7ed2004b842116d051b393f00506428def61
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344548"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>방법: 람다 식 (Visual Basic) 만들기
@@ -19,11 +19,11 @@ A *람다 식* 은 함수 또는 서브루틴에 이름이 없습니다입니다
   
 1. 대리자 형식을 사용할 수 있는 모든 상황에서 키워드를 입력 `Function`다음 예제와 같이:  
   
-     `Dim add1 =`   `Function`  
+     `Dim add1 =`  `Function`  
   
 2. 괄호로 직후 `Function`, 함수의 매개 변수를 입력 합니다. 뒤에 이름을 지정 하지 않으면 확인 `Function`합니다.  
   
-     `Dim add1 = Function`   `(num As Integer)`  
+     `Dim add1 = Function`  `(num As Integer)`  
   
 3. 매개 변수 목록 다음 함수의 본문으로 단일 식을 입력 합니다. 식이 계산 되는 값에는 함수가 반환한 값이입니다. 사용 하지 않는 것을 `As` 반환 형식을 지정 하는 절.  
   
@@ -41,11 +41,11 @@ A *람다 식* 은 함수 또는 서브루틴에 이름이 없습니다입니다
   
 1. 대리자 형식을 사용할 수 있는 모든 상황에서 키워드를 입력 `Sub`다음 예제에서와 같이 합니다.  
   
-     `Dim add1 =`   `Sub`  
+     `Dim add1 =`  `Sub`  
   
 2. 괄호로 직후 `Sub`, 서브루틴의 매개 변수를 입력 합니다. 뒤에 이름을 지정 하지 않으면 확인 `Sub`합니다.  
   
-     `Dim add1 = Sub`   `(msg As String)`  
+     `Dim add1 = Sub`  `(msg As String)`  
   
 3. 매개 변수 목록에 다음 서브루틴의 본문으로 단일 문을 입력 합니다.  
   
@@ -59,11 +59,11 @@ A *람다 식* 은 함수 또는 서브루틴에 이름이 없습니다입니다
   
 1. 대리자 형식을 사용할 수 있는 모든 상황에서 키워드를 입력 `Function`다음 예제에서와 같이 합니다.  
   
-     `Dim add1 =`   `Function`  
+     `Dim add1 =`  `Function`  
   
 2. 괄호로 직후 `Function`, 함수의 매개 변수를 입력 합니다. 뒤에 이름을 지정 하지 않으면 확인 `Function`합니다.  
   
-     `Dim add1 = Function`   `(index As Integer)`  
+     `Dim add1 = Function`  `(index As Integer)`  
   
 3. Enter 키를 누릅니다. `End Function` 문을 자동으로 추가 됩니다.  
   
@@ -79,7 +79,7 @@ A *람다 식* 은 함수 또는 서브루틴에 이름이 없습니다입니다
   
 1. 대리자 형식을 사용할 수 있는 모든 상황에서 키워드를 입력 `Sub`다음 예제에서와 같이:  
   
-     `Dim add1 =`   `Sub`  
+     `Dim add1 =`  `Sub`  
   
 2. 괄호로 직후 `Sub`, 서브루틴의 매개 변수를 입력 합니다. 뒤에 이름을 지정 하지 않으면 확인 `Sub`합니다.  
   

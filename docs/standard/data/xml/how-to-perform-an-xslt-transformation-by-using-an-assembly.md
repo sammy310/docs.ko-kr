@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f32a71ec04d791c83f711beee1086bcba283401c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dcf869d77882810d063532b2cf0c8139be163b7a
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625616"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59345406"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>방법: 어셈블리를 사용하여 XSLT 변형 수행
 XSLT 컴파일러(xsltc.exe)에서는 XSLT 스타일시트를 컴파일하여 어셈블리를 생성합니다. 그런 다음 어셈블리를 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 메서드로 직접 전달할 수 있습니다.  
@@ -132,7 +132,7 @@ XSLT 컴파일러(xsltc.exe)에서는 XSLT 스타일시트를 컴파일하여 �
   
 ### <a name="to-compile-the-style-sheet-with-the-script-enabled"></a>스크립트가 활성화된 스타일시트를 컴파일하려면  
   
-1.  명령줄에서 다음 명령을 실행하면 이름이 `Transform.dll` 및 `Transform_Script1.dll`인 두 개의 어셈블리가 만들어집니다. 이것이 기본 동작이며, 아무 것도 지정하지 않으면 클래스 및 어셈블리 이름은 기본 스타일시트 이름으로 지정됩니다.  
+1. 명령줄에서 다음 명령을 실행하면 이름이 `Transform.dll` 및 `Transform_Script1.dll`인 두 개의 어셈블리가 만들어집니다. 이것이 기본 동작이며, 아무 것도 지정하지 않으면 클래스 및 어셈블리 이름은 기본 스타일시트 이름으로 지정됩니다.  
   
     ```  
     xsltc /settings:script+ Transform.xsl  
@@ -146,15 +146,15 @@ xsltc /settings:script+ /class:Transform Transform.xsl
   
 ### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a>코드를 컴파일할 때 컴파일된 어셈블리를 참조로 포함하려면  
   
-1.  Visual Studio의 솔루션 탐색기에서 참조를 추가하거나 명령줄을 사용하여 어셈블리를 포함할 수 있습니다.  
+1. Visual Studio의 솔루션 탐색기에서 참조를 추가하거나 명령줄을 사용하여 어셈블리를 포함할 수 있습니다.  
   
-2.  C#을 사용하는 명령줄의 경우 다음을 사용합니다.  
+2. C#을 사용하는 명령줄의 경우 다음을 사용합니다.  
   
     ```  
     csc myCode.cs /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
-3.  Visual Basic을 사용하는 명령줄의 경우 다음을 사용합니다.  
+3. Visual Basic을 사용하는 명령줄의 경우 다음을 사용합니다.  
   
     ```  
     vbc myCode.vb /r:system.dll;system.xml.dll;Transform.dll  
@@ -162,7 +162,7 @@ xsltc /settings:script+ /class:Transform Transform.xsl
   
 ### <a name="to-use-the-compiled-assembly-in-your-code"></a>사용자 코드에서 컴파일된 어셈블리를 사용하려면  
   
-1.  다음 예제에서는 컴파일된 스타일시트를 사용하여 XSLT 변환을 실행하는 방법을 보여 줍니다.  
+1. 다음 예제에서는 컴파일된 스타일시트를 사용하여 XSLT 변환을 실행하는 방법을 보여 줍니다.  
   
  [!code-csharp[XslTransform_XSLTC#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslTransform_XSLTC/CS/XslTransform_XSLTC.cs#1)]
  [!code-vb[XslTransform_XSLTC#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslTransform_XSLTC/VB/XslTransform_XSLTC.vb#1)]  

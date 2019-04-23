@@ -6,10 +6,10 @@ helpviewer_keywords:
 - controls [Windows Forms], copying
 ms.assetid: 106c1eb2-1fba-4f69-b2ec-9ea3fa182f1e
 ms.openlocfilehash: 8a60dd4c5fc80af46b1552e99abbba37a8a390af
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345614"
 ---
 # <a name="how-to-copy-controls-between-windows-forms"></a>방법: Windows Forms 간 컨트롤 복사
@@ -28,7 +28,7 @@ ms.locfileid: "59345614"
 - [방법: Windows Forms에 ActiveX 컨트롤 추가](how-to-add-activex-controls-to-windows-forms.md)
 - [방법: Windows Forms에 사용자 인터페이스가 없는 컨트롤 추가](how-to-add-controls-without-a-user-interface-to-windows-forms.md)
 - [Windows Forms에서 컨트롤 정렬](arranging-controls-on-windows-forms.md)
-- [방법: Windows Forms 컨트롤에서 표시하는 텍스트 설정](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [방법: 설정 하 여 표시 되는 텍스트는 Windows Forms 컨트롤](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Windows Forms에 컨트롤 넣기](putting-controls-on-windows-forms.md)
 - [개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)

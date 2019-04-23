@@ -3,10 +3,10 @@ title: 예외 및 오류 처리
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
 ms.openlocfilehash: c29b3900a36d8d5c41fee49c408a2e3fdf67680b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343430"
 ---
 # <a name="handling-exceptions-and-faults"></a>예외 및 오류 처리
@@ -20,7 +20,7 @@ ms.locfileid: "59343430"
   
 |예외 형식|의미|내부 예외 콘텐츠|복구 전략|  
 |--------------------|-------------|-----------------------------|-----------------------|  
-|<xref:System.ServiceModel.AddressAlreadyInUseException>|수신용으로 지정된 엔드포인트 주소가 이미 사용 중입니다.|있는 경우 이 예외를 일으킨 전송 오류에 대한 세부 정보를 더 제공합니다. 예를 들어 <xref:System.IO.PipeException>하십시오 <xref:System.Net.HttpListenerException>, 또는 <xref:System.Net.Sockets.SocketException>합니다.|다른 주소를 지정하십시오.|  
+|<xref:System.ServiceModel.AddressAlreadyInUseException>|수신용으로 지정된 엔드포인트 주소가 이미 사용 중입니다.|있는 경우 이 예외를 일으킨 전송 오류에 대한 세부 정보를 더 제공합니다. 예를 들어 <xref:System.IO.PipeException>, <xref:System.Net.HttpListenerException> 또는 <xref:System.Net.Sockets.SocketException>.|다른 주소를 지정하십시오.|  
 |<xref:System.ServiceModel.AddressAccessDeniedException>|프로세스에 수신용으로 지정된 엔드포인트 주소에 대한 액세스가 허용되지 않습니다.|있는 경우 이 예외를 일으킨 전송 오류에 대한 세부 정보를 더 제공합니다. 예를 들면 <xref:System.IO.PipeException> 또는 <xref:System.Net.HttpListenerException>과 같습니다.|다른 자격 증명으로 시도해 보십시오.|  
 |<xref:System.ServiceModel.CommunicationObjectFaultedException>|<xref:System.ServiceModel.ICommunicationObject> Faulted 상태인 되 (자세한 내용은 참조 하십시오 [상태 변경 이해](../../../../docs/framework/wcf/extending/understanding-state-changes.md)). 개체에서 보류 중인 호출이 여러 개인 경우에는 한 호출에서만 실패와 관련된 예외가 throw되며, 나머지 호출에서는 <xref:System.ServiceModel.CommunicationObjectFaultedException>이 throw됩니다. 이 예외는 보통 응용 프로그램에서 예외를 간과하고 이미 실패한 개체를 사용하려는 경우에 throw되며, 원래 예외를 catch한 것과 다른 스레드에서 일어나는 경우가 많습니다.|있는 경우 내부 예외에 대한 세부 정보를 제공합니다.|새 개체를 만듭니다. 처음에 <xref:System.ServiceModel.ICommunicationObject>의 오류를 일으킨 것이 무엇인지에 따라 다른 복구 작업이 필요할 수도 있습니다.|  
 |<xref:System.ServiceModel.CommunicationObjectAbortedException>|합니다 <xref:System.ServiceModel.ICommunicationObject> 사용이 중단 되었습니다 (자세한 내용은 [상태 변경 이해](../../../../docs/framework/wcf/extending/understanding-state-changes.md)). <xref:System.ServiceModel.CommunicationObjectFaultedException>과 마찬가지로, 이 예외는 응용 프로그램에서 개체에 대해 <xref:System.ServiceModel.ICommunicationObject.Abort%2A>를 호출했으며 따라서 개체를 더 이상 사용할 수 없는 경우를 나타냅니다. 이러한 호출은 다른 스레드에서 이루어지는 경우도 많습니다.|있는 경우 내부 예외에 대한 세부 정보를 제공합니다.|새 개체를 만듭니다. 처음에 <xref:System.ServiceModel.ICommunicationObject>의 중단을 일으킨 것이 무엇인지에 따라 다른 복구 작업이 필요할 수도 있습니다.|  
@@ -116,7 +116,7 @@ public class FaultReason
 ### <a name="generating-faults"></a>오류 생성  
  이 단원에서는 채널에서 검색된 오류나 채널에서 만든 메시지 속성에 대한 반응으로 오류를 생성하는 과정을 설명합니다. 일반적인 예로는 잘못된 데이터가 포함된 요청 메시지에 대한 반응으로 오류를 다시 보내는 경우가 있습니다.  
   
- 오류를 생성할 때에는 사용자 지정 채널에서 오류를 직접 보내지 않고 예외를 throw한 다음 위의 계층에서 예외를 오류로 변환할 것인지 여부와 전송 방법을 결정하게 해야 합니다. 이 변환을 돕기 위해, 채널에서는 사용자 지정 채널에서 throw된 예외를 적절한 오류로 변환할 수 있는 `FaultConverter` 구현을 제공해야 합니다. `FaultConverter` 로 정의 됩니다.  
+ 오류를 생성할 때에는 사용자 지정 채널에서 오류를 직접 보내지 않고 예외를 throw한 다음 위의 계층에서 예외를 오류로 변환할 것인지 여부와 전송 방법을 결정하게 해야 합니다. 이 변환을 돕기 위해, 채널에서는 사용자 지정 채널에서 throw된 예외를 적절한 오류로 변환할 수 있는 `FaultConverter` 구현을 제공해야 합니다. `FaultConverter`는 다음과 같이 정의됩니다.  
   
 ```  
 public class FaultConverter  
@@ -302,14 +302,14 @@ public class MessageFault
 }  
 ```  
   
- `IsMustUnderstandFault` 반환 `true` 오류인 경우는 `mustUnderstand` 오류입니다. `WasHeaderNotUnderstood` 반환 `true` 지정한 이름 및 네임 스페이스를 사용 하 여 헤더는 오류에 NotUnderstood 헤더로 포함 합니다.  그 외의 경우 `false`를 반환합니다.  
+ 오류가 `IsMustUnderstandFault` 오류인 경우 `true`는 `mustUnderstand`를 반환합니다. `WasHeaderNotUnderstood`에서는 지정된 이름과 네임스페이스의 헤더가 오류에 NotUnderstood 헤더로 포함되어 있으면 `true`를 반환합니다.  그 외의 경우 `false`를 반환합니다.  
   
  채널에서 MustUnderstand = true로 표시된 헤더를 전송하면 계층에서도 Exception Generation API 패턴을 구현하고 앞서 설명한 것과 같이 헤더에서 발생한 `mustUnderstand` 오류를 좀더 유용한 예외로 변환해야 합니다.  
   
 ## <a name="tracing"></a>추적  
  .NET Framework에서는 디버거를 첨부하고 코드를 실행할 수 없는 경우 프로덕션 응용 프로그램 또는 일시적인 문제의 진단을 돕는 방법으로서 프로그램 실행을 추적하는 메커니즘을 제공합니다. 이 메커니즘의 핵심 구성 요소는 <xref:System.Diagnostics?displayProperty=nameWithType> 네임스페이스에 있으며 다음으로 구성됩니다.  
   
--   <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>기록할 추적 정보의 소스 <xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>에서 추적 정보를 수신 하는 구체적인 수신기에 대 한 추상 기본 클래스는를 <xref:System.Diagnostics.TraceSource> 및 수신기 별 대상에 출력 합니다. 예를 들어 <xref:System.Diagnostics.XmlWriterTraceListener>에서는 추적 정보를 XML 파일로 출력합니다. 마지막으로 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>은 응용 프로그램 사용자가 추적의 자세한 정도를 추적할 수 있게 해 주며 일반적으로 구성에 지정됩니다.  
+-   <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>는 쓰려는 추적 정보의 소스이고 <xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>는 <xref:System.Diagnostics.TraceSource>로부터 추적할 정보를 받아 수신기별 대상으로 출력하는 구체적인 수신기의 추상 기본 클래스입니다. 예를 들어 <xref:System.Diagnostics.XmlWriterTraceListener>에서는 추적 정보를 XML 파일로 출력합니다. 마지막으로 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>은 응용 프로그램 사용자가 추적의 자세한 정도를 추적할 수 있게 해 주며 일반적으로 구성에 지정됩니다.  
   
 -   핵심 구성 요소 외에도 사용할 수 있습니다 합니다 [Service Trace Viewer 도구 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) WCF 검색 및 보기를 추적 합니다. 도구를 사용 하 여 작성 및 WCF에 의해 생성 된 추적 파일을 위해 특별히 설계 <xref:System.Diagnostics.XmlWriterTraceListener>합니다. 다음 그림에서는 추적에 관련된 다양한 구성 요소를 소개합니다.  
   
@@ -368,7 +368,7 @@ udpsource.TraceInformation("UdpInputChannel received a message");
 ```  
   
 #### <a name="tracing-structured-data"></a>구조적 데이터 추적  
- <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> 에 <xref:System.Diagnostics.TraceSource.TraceData%2A> 메서드는 하나 이상의 개체를 사용 하는 추적 항목에 포함 됩니다. 일반적으로 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 메서드는 각 개체에서 호출되며 결과 문자열은 추적 항목의 일부로 기록됩니다. <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>를 사용하여 추적을 출력하는 경우 <xref:System.Xml.XPath.IXPathNavigable?displayProperty=nameWithType>을 데이터 개체로 <xref:System.Diagnostics.TraceSource.TraceData%2A>에 전달할 수 있습니다. 결과 추적 항목에는 <xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>에서 제공되는 XML이 포함됩니다. 다음은 XML 응용 프로그램 데이터의 항목 예입니다.  
+ <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>에는 추적 항목에 포함할 개체를 하나 이상 가져오는 <xref:System.Diagnostics.TraceSource.TraceData%2A> 메서드가 있습니다. 일반적으로 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 메서드는 각 개체에서 호출되며 결과 문자열은 추적 항목의 일부로 기록됩니다. <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>를 사용하여 추적을 출력하는 경우 <xref:System.Xml.XPath.IXPathNavigable?displayProperty=nameWithType>을 데이터 개체로 <xref:System.Diagnostics.TraceSource.TraceData%2A>에 전달할 수 있습니다. 결과 추적 항목에는 <xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>에서 제공되는 XML이 포함됩니다. 다음은 XML 응용 프로그램 데이터의 항목 예입니다.  
   
 ```xml  
 <E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">  
