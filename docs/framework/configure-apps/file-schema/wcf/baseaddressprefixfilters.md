@@ -3,22 +3,22 @@ title: <baseAddressPrefixFilters>
 ms.date: 03/30/2017
 ms.assetid: 8cab2a9a-c51f-4283-bb60-2ad0c274fd46
 ms.openlocfilehash: 378db238d647be2248c0303f45aece42f7ea5b31
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59227628"
 ---
-# <a name="baseaddressprefixfilters"></a><span data-ttu-id="9c200-101">\<baseAddressPrefixFilters></span><span class="sxs-lookup"><span data-stu-id="9c200-101">\<baseAddressPrefixFilters></span></span>
-<span data-ttu-id="9c200-102">Windows Communication Foundation (WCF) IIS 응용 프로그램을 호스팅할 때 적합 한 인터넷 정보 서비스 (IIS) 바인딩을 선택 하기 위한 메커니즘을 제공 하는 필터를 통과 하는 요소가 지정 하는 구성의 컬렉션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="9c200-102">Represents a collection of configuration elements that specify pass through filters, which provide a mechanism to pick the appropriate Internet Information Services (IIS) bindings when hosting the Windows Communication Foundation (WCF) application in IIS.</span></span>  
+# <a name="baseaddressprefixfilters"></a><span data-ttu-id="b79b6-101">\<baseAddressPrefixFilters></span><span class="sxs-lookup"><span data-stu-id="b79b6-101">\<baseAddressPrefixFilters></span></span>
+<span data-ttu-id="b79b6-102">Windows Communication Foundation (WCF) IIS 응용 프로그램을 호스팅할 때 적합 한 인터넷 정보 서비스 (IIS) 바인딩을 선택 하기 위한 메커니즘을 제공 하는 필터를 통과 하는 요소가 지정 하는 구성의 컬렉션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="b79b6-102">Represents a collection of configuration elements that specify pass through filters, which provide a mechanism to pick the appropriate Internet Information Services (IIS) bindings when hosting the Windows Communication Foundation (WCF) application in IIS.</span></span>  
   
 > [!WARNING]
->  <span data-ttu-id="9c200-103">\<baseAddressPrefixFilters > 대신 정규화 된 컴퓨터 이름을 사용 하 여, "localhost"를 인식 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="9c200-103">\<baseAddressPrefixFilters> does not recognize "localhost", use the fully qualified machine name instead.</span></span>  
+>  <span data-ttu-id="b79b6-103">\<baseAddressPrefixFilters > 대신 정규화 된 컴퓨터 이름을 사용 하 여, "localhost"를 인식 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b79b6-103">\<baseAddressPrefixFilters> does not recognize "localhost", use the fully qualified machine name instead.</span></span>  
   
- <span data-ttu-id="9c200-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="9c200-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="9c200-105">\<ServiceHostingEnvironment></span><span class="sxs-lookup"><span data-stu-id="9c200-105">\<ServiceHostingEnvironment></span></span>  
+ <span data-ttu-id="b79b6-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="b79b6-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="b79b6-105">\<ServiceHostingEnvironment></span><span class="sxs-lookup"><span data-stu-id="b79b6-105">\<ServiceHostingEnvironment></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9c200-106">구문</span><span class="sxs-lookup"><span data-stu-id="9c200-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b79b6-106">구문</span><span class="sxs-lookup"><span data-stu-id="b79b6-106">Syntax</span></span>  
   
 ```xml  
 <serviceHostingEnvironment>
@@ -28,39 +28,39 @@ ms.locfileid: "59227628"
 </serviceHostingEnvironment>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="9c200-107">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="9c200-107">Attributes and Elements</span></span>  
- <span data-ttu-id="9c200-108">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9c200-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="b79b6-107">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="b79b6-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="b79b6-108">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="b79b6-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="9c200-109">특성</span><span class="sxs-lookup"><span data-stu-id="9c200-109">Attributes</span></span>  
- <span data-ttu-id="9c200-110">없음</span><span class="sxs-lookup"><span data-stu-id="9c200-110">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="b79b6-109">특성</span><span class="sxs-lookup"><span data-stu-id="b79b6-109">Attributes</span></span>  
+ <span data-ttu-id="b79b6-110">없음</span><span class="sxs-lookup"><span data-stu-id="b79b6-110">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="9c200-111">자식 요소</span><span class="sxs-lookup"><span data-stu-id="9c200-111">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="b79b6-111">자식 요소</span><span class="sxs-lookup"><span data-stu-id="b79b6-111">Child Elements</span></span>  
   
-|<span data-ttu-id="9c200-112">요소</span><span class="sxs-lookup"><span data-stu-id="9c200-112">Element</span></span>|<span data-ttu-id="9c200-113">설명</span><span class="sxs-lookup"><span data-stu-id="9c200-113">Description</span></span>|  
+|<span data-ttu-id="b79b6-112">요소</span><span class="sxs-lookup"><span data-stu-id="b79b6-112">Element</span></span>|<span data-ttu-id="b79b6-113">설명</span><span class="sxs-lookup"><span data-stu-id="b79b6-113">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="9c200-114">\<add></span><span class="sxs-lookup"><span data-stu-id="9c200-114">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-baseaddressprefixfilter.md)|<span data-ttu-id="9c200-115">서비스 호스트에서 사용하는 기본 주소에 대한 접두사 필터를 지정하는 구성 요소를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="9c200-115">Adds a configuration element that specifies a prefix filter for the base addresses used by the service host.</span></span>|  
+|[<span data-ttu-id="b79b6-114">\<add></span><span class="sxs-lookup"><span data-stu-id="b79b6-114">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-baseaddressprefixfilter.md)|<span data-ttu-id="b79b6-115">서비스 호스트에서 사용하는 기본 주소에 대한 접두사 필터를 지정하는 구성 요소를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="b79b6-115">Adds a configuration element that specifies a prefix filter for the base addresses used by the service host.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="9c200-116">부모 요소</span><span class="sxs-lookup"><span data-stu-id="9c200-116">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="b79b6-116">부모 요소</span><span class="sxs-lookup"><span data-stu-id="b79b6-116">Parent Elements</span></span>  
   
-|<span data-ttu-id="9c200-117">요소</span><span class="sxs-lookup"><span data-stu-id="9c200-117">Element</span></span>|<span data-ttu-id="9c200-118">설명</span><span class="sxs-lookup"><span data-stu-id="9c200-118">Description</span></span>|  
+|<span data-ttu-id="b79b6-117">요소</span><span class="sxs-lookup"><span data-stu-id="b79b6-117">Element</span></span>|<span data-ttu-id="b79b6-118">설명</span><span class="sxs-lookup"><span data-stu-id="b79b6-118">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="9c200-119">\<serviceHostingEnvironment></span><span class="sxs-lookup"><span data-stu-id="9c200-119">\<serviceHostingEnvironment></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|<span data-ttu-id="9c200-120">특정 전송을 위해 서비스 호스팅 환경에서 인스턴스화하는 형식을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="9c200-120">Defines the type the service hosting environment instantiates for a particular transport.</span></span>|  
+|[<span data-ttu-id="b79b6-119">\<serviceHostingEnvironment></span><span class="sxs-lookup"><span data-stu-id="b79b6-119">\<serviceHostingEnvironment></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|<span data-ttu-id="b79b6-120">특정 전송을 위해 서비스 호스팅 환경에서 인스턴스화하는 형식을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="b79b6-120">Defines the type the service hosting environment instantiates for a particular transport.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="9c200-121">설명</span><span class="sxs-lookup"><span data-stu-id="9c200-121">Remarks</span></span>  
- <span data-ttu-id="9c200-122">접두사 필터는 공유 호스팅 공급자가 서비스에 사용될 URI를 지정하는 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="9c200-122">A prefix filter provides a way for shared hosting providers to specify which URIs are to be used by the service.</span></span> <span data-ttu-id="9c200-123">이 방법을 사용하면 공유 호스트가 동일한 사이트의 동일한 체계에 대해 기본 주소가 다른 여러 응용 프로그램을 호스트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c200-123">It enables shared hosts to host multiple applications with different base addresses for the same scheme on the same site.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b79b6-121">설명</span><span class="sxs-lookup"><span data-stu-id="b79b6-121">Remarks</span></span>  
+ <span data-ttu-id="b79b6-122">접두사 필터는 공유 호스팅 공급자가 서비스에 사용될 URI를 지정하는 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b79b6-122">A prefix filter provides a way for shared hosting providers to specify which URIs are to be used by the service.</span></span> <span data-ttu-id="b79b6-123">이 방법을 사용하면 공유 호스트가 동일한 사이트의 동일한 체계에 대해 기본 주소가 다른 여러 응용 프로그램을 호스트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b79b6-123">It enables shared hosts to host multiple applications with different base addresses for the same scheme on the same site.</span></span>  
   
- <span data-ttu-id="9c200-124">IIS 웹 사이트는 가상 디렉터리를 포함하는 가상 응용 프로그램의 컨테이너입니다.</span><span class="sxs-lookup"><span data-stu-id="9c200-124">IIS Web sites are containers for virtual applications which contain virtual directories.</span></span> <span data-ttu-id="9c200-125">사이트의 응용 프로그램은 하나 이상의 IIS 바인딩을 통해 액세스될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c200-125">The application in a site can be accessed through one or more IIS bindings.</span></span> <span data-ttu-id="9c200-126">IIS 바인딩은 바인딩 프로토콜과 바인딩 정보라는 두 가지 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="9c200-126">IIS bindings provide two pieces of information: binding protocol and binding information.</span></span> <span data-ttu-id="9c200-127">바인딩 프로토콜(예: HTTP)은 통신이 이루어지는 체계를 정의하며, 바인딩 정보(예: IP 주소, 포트, Hostheader)는 사이트 액세스에 사용되는 데이터를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="9c200-127">Binding protocol (for example, HTTP) defines the scheme over which communication occurs, and binding information (for example, IP Address, Port, Hostheader) contains data used to access the site.</span></span>  
+ <span data-ttu-id="b79b6-124">IIS 웹 사이트는 가상 디렉터리를 포함하는 가상 응용 프로그램의 컨테이너입니다.</span><span class="sxs-lookup"><span data-stu-id="b79b6-124">IIS Web sites are containers for virtual applications which contain virtual directories.</span></span> <span data-ttu-id="b79b6-125">사이트의 응용 프로그램은 하나 이상의 IIS 바인딩을 통해 액세스될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b79b6-125">The application in a site can be accessed through one or more IIS bindings.</span></span> <span data-ttu-id="b79b6-126">IIS 바인딩은 바인딩 프로토콜과 바인딩 정보라는 두 가지 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b79b6-126">IIS bindings provide two pieces of information: binding protocol and binding information.</span></span> <span data-ttu-id="b79b6-127">바인딩 프로토콜(예: HTTP)은 통신이 이루어지는 체계를 정의하며, 바인딩 정보(예: IP 주소, 포트, Hostheader)는 사이트 액세스에 사용되는 데이터를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="b79b6-127">Binding protocol (for example, HTTP) defines the scheme over which communication occurs, and binding information (for example, IP Address, Port, Hostheader) contains data used to access the site.</span></span>  
   
- <span data-ttu-id="9c200-128">IIS에서는 각 사이트에 대해 여러 개의 IIS 바인딩을 지정할 수 있으므로, 각 체계에 대해 여러 개의 기본 주소가 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c200-128">IIS supports specifying multiple IIS bindings for each site, which results in multiple base addresses for each scheme.</span></span> <span data-ttu-id="9c200-129">사이트에서 호스팅되는 WCF 서비스에서는 각 체계에 대해 단 하나의 기본 주소에 바인딩할 하므로 호스 티 드 서비스의 필수 기본 주소를 선택 하려면 접두사 필터 기능을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c200-129">Because a WCF service hosted under a site allows binding to only one base address for each scheme, you can use the prefix filter feature to pick the required base address of the hosted service.</span></span> <span data-ttu-id="9c200-130">IIS에서 제공하는 들어오는 기본 주소는 선택적 접두사 목록 필터를 기반으로 필터링됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c200-130">The incoming base addresses, supplied by IIS, are filtered based on the optional prefix list filter.</span></span>  
+ <span data-ttu-id="b79b6-128">IIS에서는 각 사이트에 대해 여러 개의 IIS 바인딩을 지정할 수 있으므로, 각 체계에 대해 여러 개의 기본 주소가 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="b79b6-128">IIS supports specifying multiple IIS bindings for each site, which results in multiple base addresses for each scheme.</span></span> <span data-ttu-id="b79b6-129">사이트에서 호스팅되는 WCF 서비스에서는 각 체계에 대해 단 하나의 기본 주소에 바인딩할 하므로 호스 티 드 서비스의 필수 기본 주소를 선택 하려면 접두사 필터 기능을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b79b6-129">Because a WCF service hosted under a site allows binding to only one base address for each scheme, you can use the prefix filter feature to pick the required base address of the hosted service.</span></span> <span data-ttu-id="b79b6-130">IIS에서 제공하는 들어오는 기본 주소는 선택적 접두사 목록 필터를 기반으로 필터링됩니다.</span><span class="sxs-lookup"><span data-stu-id="b79b6-130">The incoming base addresses, supplied by IIS, are filtered based on the optional prefix list filter.</span></span>  
   
- <span data-ttu-id="9c200-131">예를 들어, 사이트에서 다음 기본 주소를 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c200-131">For example, your site can contain the following base addresses.</span></span>  
+ <span data-ttu-id="b79b6-131">예를 들어, 사이트에서 다음 기본 주소를 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b79b6-131">For example, your site can contain the following base addresses.</span></span>  
   
 ```  
 http://testl.fabrikam.com/Service.svc  
 http://test2.fabrikam.com/Service.svc  
 ```  
   
- <span data-ttu-id="9c200-132">다음 구성 파일을 사용하여 appdomain 수준에서 접두사 필터를 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c200-132">You can use the following configuration file to specify a prefix filter at the appdomain level.</span></span>  
+ <span data-ttu-id="b79b6-132">다음 구성 파일을 사용하여 appdomain 수준에서 접두사 필터를 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b79b6-132">You can use the following configuration file to specify a prefix filter at the appdomain level.</span></span>  
   
 ```xml  
 <system.serviceModel>
@@ -73,16 +73,16 @@ http://test2.fabrikam.com/Service.svc
 </system.serviceModel>
 ```  
   
- <span data-ttu-id="9c200-133">이 예제에서 `net.tcp://test1.fabrikam.com:8000` 및 `http://test2.fabrikam.com:9000`은 해당 체계에서 통과되도록 허용된 유일한 기본 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="9c200-133">In this example, `net.tcp://test1.fabrikam.com:8000` and `http://test2.fabrikam.com:9000` are the only base addresses for their respective schemes, which are allowed to be passed through.</span></span>  
+ <span data-ttu-id="b79b6-133">이 예제에서 `net.tcp://test1.fabrikam.com:8000` 및 `http://test2.fabrikam.com:9000`은 해당 체계에서 통과되도록 허용된 유일한 기본 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="b79b6-133">In this example, `net.tcp://test1.fabrikam.com:8000` and `http://test2.fabrikam.com:9000` are the only base addresses for their respective schemes, which are allowed to be passed through.</span></span>  
   
- <span data-ttu-id="9c200-134">기본적으로, 접두사가 지정되지 않으면 모든 주소가 통과됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c200-134">By default, when prefix is not specified, all addresses are passed through.</span></span> <span data-ttu-id="9c200-135">접두사를 지정하면 해당 체계에서 일치하는 기본 주소만 통과됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c200-135">Specifying the prefix only allows the matching base address for that scheme to be passed through.</span></span>  
+ <span data-ttu-id="b79b6-134">기본적으로, 접두사가 지정되지 않으면 모든 주소가 통과됩니다.</span><span class="sxs-lookup"><span data-stu-id="b79b6-134">By default, when prefix is not specified, all addresses are passed through.</span></span> <span data-ttu-id="b79b6-135">접두사를 지정하면 해당 체계에서 일치하는 기본 주소만 통과됩니다.</span><span class="sxs-lookup"><span data-stu-id="b79b6-135">Specifying the prefix only allows the matching base address for that scheme to be passed through.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="9c200-136">필터는 와일드카드를 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="9c200-136">The filter does not support any wildcards.</span></span> <span data-ttu-id="9c200-137">또한 IIS에서 제공하는 baseAddress는 `baseAddressPrefixFilters` 목록에 없는 다른 체계에 바인딩되는 주소를 가질 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c200-137">In addition, the baseAddresses supplied by IIS may have addresses bound to other schemes not present in the `baseAddressPrefixFilters` list.</span></span> <span data-ttu-id="9c200-138">이러한 주소는 필터링되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="9c200-138">These addresses are not filtered out.</span></span>  
+>  <span data-ttu-id="b79b6-136">필터는 와일드카드를 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b79b6-136">The filter does not support any wildcards.</span></span> <span data-ttu-id="b79b6-137">또한 IIS에서 제공하는 baseAddress는 `baseAddressPrefixFilters` 목록에 없는 다른 체계에 바인딩되는 주소를 가질 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b79b6-137">In addition, the baseAddresses supplied by IIS may have addresses bound to other schemes not present in the `baseAddressPrefixFilters` list.</span></span> <span data-ttu-id="b79b6-138">이러한 주소는 필터링되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b79b6-138">These addresses are not filtered out.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9c200-139">참고자료</span><span class="sxs-lookup"><span data-stu-id="9c200-139">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b79b6-139">참고자료</span><span class="sxs-lookup"><span data-stu-id="b79b6-139">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.BaseAddressPrefixFilterElementCollection>
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>
-- [<span data-ttu-id="9c200-140">호스팅</span><span class="sxs-lookup"><span data-stu-id="9c200-140">Hosting</span></span>](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [<span data-ttu-id="b79b6-140">호스팅</span><span class="sxs-lookup"><span data-stu-id="b79b6-140">Hosting</span></span>](../../../../../docs/framework/wcf/feature-details/hosting.md)

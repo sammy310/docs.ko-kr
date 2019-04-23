@@ -1,5 +1,5 @@
 ---
-title: <defaultProxy> 요소 (네트워크 설정)
+title: <defaultProxy> 요소(네트워크 설정)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultProxy
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
 ms.openlocfilehash: ce08dadb0fb7b986c0573b1514f9ecbbe2961c3a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228349"
 ---
-# <a name="defaultproxy-element-network-settings"></a><span data-ttu-id="afc9c-102">\<defaultProxy > 요소 (네트워크 설정)</span><span class="sxs-lookup"><span data-stu-id="afc9c-102">\<defaultProxy> Element (Network Settings)</span></span>
-<span data-ttu-id="afc9c-103">HTTP(Hypertext Transfer Protocol) 프록시 서버를 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="afc9c-103">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>  
+# <a name="defaultproxy-element-network-settings"></a><span data-ttu-id="944ac-102">\<defaultProxy > 요소 (네트워크 설정)</span><span class="sxs-lookup"><span data-stu-id="944ac-102">\<defaultProxy> Element (Network Settings)</span></span>
+<span data-ttu-id="944ac-103">HTTP(Hypertext Transfer Protocol) 프록시 서버를 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="944ac-103">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>  
   
- <span data-ttu-id="afc9c-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="afc9c-104">\<configuration></span></span>  
-<span data-ttu-id="afc9c-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="afc9c-105">\<system.net></span></span>  
-<span data-ttu-id="afc9c-106">\<defaultProxy></span><span class="sxs-lookup"><span data-stu-id="afc9c-106">\<defaultProxy></span></span>  
+ <span data-ttu-id="944ac-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="944ac-104">\<configuration></span></span>  
+<span data-ttu-id="944ac-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="944ac-105">\<system.net></span></span>  
+<span data-ttu-id="944ac-106">\<defaultProxy></span><span class="sxs-lookup"><span data-stu-id="944ac-106">\<defaultProxy></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="afc9c-107">구문</span><span class="sxs-lookup"><span data-stu-id="afc9c-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="944ac-107">구문</span><span class="sxs-lookup"><span data-stu-id="944ac-107">Syntax</span></span>  
   
 ```xml  
 <defaultProxy  
@@ -34,40 +34,40 @@ ms.locfileid: "59228349"
 </defaultProxy>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="afc9c-108">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="afc9c-108">Attributes and Elements</span></span>  
- <span data-ttu-id="afc9c-109">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="afc9c-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="944ac-108">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="944ac-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="944ac-109">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="944ac-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="afc9c-110">특성</span><span class="sxs-lookup"><span data-stu-id="afc9c-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="944ac-110">특성</span><span class="sxs-lookup"><span data-stu-id="944ac-110">Attributes</span></span>  
   
-|**<span data-ttu-id="afc9c-111">요소</span><span class="sxs-lookup"><span data-stu-id="afc9c-111">Element</span></span>**|**<span data-ttu-id="afc9c-112">설명</span><span class="sxs-lookup"><span data-stu-id="afc9c-112">Description</span></span>**|  
+|<span data-ttu-id="944ac-111">**요소**</span><span class="sxs-lookup"><span data-stu-id="944ac-111">**Element**</span></span>|<span data-ttu-id="944ac-112">**설명**</span><span class="sxs-lookup"><span data-stu-id="944ac-112">**Description**</span></span>|  
 |-----------------|---------------------|  
-|`enabled`|<span data-ttu-id="afc9c-113">웹 프록시의 사용 여부를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="afc9c-113">Specifies whether a web proxy is used.</span></span> <span data-ttu-id="afc9c-114">기본값은 `true`입니다.</span><span class="sxs-lookup"><span data-stu-id="afc9c-114">The default value is `true`.</span></span>|  
-|`useDefaultCredentials`|<span data-ttu-id="afc9c-115">이 호스트에 대한 기본 자격 증명을 사용하여 웹 프록시에 액세스하는지 여부를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="afc9c-115">Specifies whether the default credentials for this host are used to access the web proxy.</span></span> <span data-ttu-id="afc9c-116">기본값은 `false`입니다.</span><span class="sxs-lookup"><span data-stu-id="afc9c-116">The default value is `false`.</span></span>|  
+|`enabled`|<span data-ttu-id="944ac-113">웹 프록시의 사용 여부를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="944ac-113">Specifies whether a web proxy is used.</span></span> <span data-ttu-id="944ac-114">기본값은 `true`입니다.</span><span class="sxs-lookup"><span data-stu-id="944ac-114">The default value is `true`.</span></span>|  
+|`useDefaultCredentials`|<span data-ttu-id="944ac-115">이 호스트에 대한 기본 자격 증명을 사용하여 웹 프록시에 액세스하는지 여부를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="944ac-115">Specifies whether the default credentials for this host are used to access the web proxy.</span></span> <span data-ttu-id="944ac-116">기본값은 `false`입니다.</span><span class="sxs-lookup"><span data-stu-id="944ac-116">The default value is `false`.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="afc9c-117">자식 요소</span><span class="sxs-lookup"><span data-stu-id="afc9c-117">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="944ac-117">자식 요소</span><span class="sxs-lookup"><span data-stu-id="944ac-117">Child Elements</span></span>  
   
-|**<span data-ttu-id="afc9c-118">요소</span><span class="sxs-lookup"><span data-stu-id="afc9c-118">Element</span></span>**|**<span data-ttu-id="afc9c-119">설명</span><span class="sxs-lookup"><span data-stu-id="afc9c-119">Description</span></span>**|  
+|<span data-ttu-id="944ac-118">**요소**</span><span class="sxs-lookup"><span data-stu-id="944ac-118">**Element**</span></span>|<span data-ttu-id="944ac-119">**설명**</span><span class="sxs-lookup"><span data-stu-id="944ac-119">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="afc9c-120">bypasslist</span><span class="sxs-lookup"><span data-stu-id="afc9c-120">bypasslist</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|<span data-ttu-id="afc9c-121">프록시를 사용하지 않는 주소를 설명하는 정규식 집합을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="afc9c-121">Provides a set of regular expressions that describe addresses that do not use the proxy.</span></span>|  
-|[<span data-ttu-id="afc9c-122">name</span><span class="sxs-lookup"><span data-stu-id="afc9c-122">module</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|<span data-ttu-id="afc9c-123">응용 프로그램에 새 프록시 모듈을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="afc9c-123">Adds a new proxy module to the application.</span></span>|  
-|[<span data-ttu-id="afc9c-124">프록시</span><span class="sxs-lookup"><span data-stu-id="afc9c-124">proxy</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|<span data-ttu-id="afc9c-125">프록시 서버를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="afc9c-125">Defines a proxy server.</span></span>|  
+|[<span data-ttu-id="944ac-120">bypasslist</span><span class="sxs-lookup"><span data-stu-id="944ac-120">bypasslist</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|<span data-ttu-id="944ac-121">프록시를 사용하지 않는 주소를 설명하는 정규식 집합을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="944ac-121">Provides a set of regular expressions that describe addresses that do not use the proxy.</span></span>|  
+|[<span data-ttu-id="944ac-122">module</span><span class="sxs-lookup"><span data-stu-id="944ac-122">module</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|<span data-ttu-id="944ac-123">응용 프로그램에 새 프록시 모듈을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="944ac-123">Adds a new proxy module to the application.</span></span>|  
+|[<span data-ttu-id="944ac-124">proxy</span><span class="sxs-lookup"><span data-stu-id="944ac-124">proxy</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|<span data-ttu-id="944ac-125">프록시 서버를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="944ac-125">Defines a proxy server.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="afc9c-126">부모 요소</span><span class="sxs-lookup"><span data-stu-id="afc9c-126">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="944ac-126">부모 요소</span><span class="sxs-lookup"><span data-stu-id="944ac-126">Parent Elements</span></span>  
   
-|**<span data-ttu-id="afc9c-127">요소</span><span class="sxs-lookup"><span data-stu-id="afc9c-127">Element</span></span>**|**<span data-ttu-id="afc9c-128">설명</span><span class="sxs-lookup"><span data-stu-id="afc9c-128">Description</span></span>**|  
+|<span data-ttu-id="944ac-127">**요소**</span><span class="sxs-lookup"><span data-stu-id="944ac-127">**Element**</span></span>|<span data-ttu-id="944ac-128">**설명**</span><span class="sxs-lookup"><span data-stu-id="944ac-128">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="afc9c-129">system.net</span><span class="sxs-lookup"><span data-stu-id="afc9c-129">system.net</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="afc9c-130">.NET Framework의 네트워크 연결 방법을 지정하는 설정을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="afc9c-130">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
+|[<span data-ttu-id="944ac-129">system.net</span><span class="sxs-lookup"><span data-stu-id="944ac-129">system.net</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="944ac-130">.NET Framework의 네트워크 연결 방법을 지정하는 설정을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="944ac-130">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="afc9c-131">설명</span><span class="sxs-lookup"><span data-stu-id="afc9c-131">Remarks</span></span>  
- <span data-ttu-id="afc9c-132">DefaultProxy 요소 비어 있으면 Internet Explorer의 프록시 설정이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="afc9c-132">If the defaultProxy element is empty, the proxy settings from Internet Explorer will be used.</span></span> <span data-ttu-id="afc9c-133">이 동작은 .NET Framework 버전 1.1과 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="afc9c-133">This behavior is different from version 1.1 of the .NET Framework.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="944ac-131">설명</span><span class="sxs-lookup"><span data-stu-id="944ac-131">Remarks</span></span>  
+ <span data-ttu-id="944ac-132">DefaultProxy 요소 비어 있으면 Internet Explorer의 프록시 설정이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="944ac-132">If the defaultProxy element is empty, the proxy settings from Internet Explorer will be used.</span></span> <span data-ttu-id="944ac-133">이 동작은 .NET Framework 버전 1.1과 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="944ac-133">This behavior is different from version 1.1 of the .NET Framework.</span></span>  
   
- <span data-ttu-id="afc9c-134">경우 예외가 throw 됩니다 합니다 [모듈](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md) 요소는 public이 아닌 형식 지정, 형식에서 파생 하지 않거나는 <xref:System.Net.IWebProxy> 클래스를이 개체의 기본 생성자에서 예외가 발생 하거나 예외가 발생 했습니다 하는 동안 시스템 지정 기본 프록시를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="afc9c-134">An exception is thrown if the [module](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md) element specifies a non-public type, the type is not deriving from the <xref:System.Net.IWebProxy> class, an exception from the default constructor of this object occurred, or an exception occurred while retrieving the system-specified default proxy.</span></span> <span data-ttu-id="afc9c-135">예외의 <xref:System.Exception.InnerException%2A> 속성에는 오류의 근본 원인에 대한 추가 정보가 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="afc9c-135">The <xref:System.Exception.InnerException%2A> property on the exception should have more information about the root cause of the error.</span></span>  
+ <span data-ttu-id="944ac-134">경우 예외가 throw 됩니다 합니다 [모듈](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md) 요소는 public이 아닌 형식 지정, 형식에서 파생 하지 않거나는 <xref:System.Net.IWebProxy> 클래스를이 개체의 기본 생성자에서 예외가 발생 하거나 예외가 발생 했습니다 하는 동안 시스템 지정 기본 프록시를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="944ac-134">An exception is thrown if the [module](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md) element specifies a non-public type, the type is not deriving from the <xref:System.Net.IWebProxy> class, an exception from the default constructor of this object occurred, or an exception occurred while retrieving the system-specified default proxy.</span></span> <span data-ttu-id="944ac-135">예외의 <xref:System.Exception.InnerException%2A> 속성에는 오류의 근본 원인에 대한 추가 정보가 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="944ac-135">The <xref:System.Exception.InnerException%2A> property on the exception should have more information about the root cause of the error.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="afc9c-136">구성 파일</span><span class="sxs-lookup"><span data-stu-id="afc9c-136">Configuration Files</span></span>  
- <span data-ttu-id="afc9c-137">이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="afc9c-137">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="944ac-136">구성 파일</span><span class="sxs-lookup"><span data-stu-id="944ac-136">Configuration Files</span></span>  
+ <span data-ttu-id="944ac-137">이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="944ac-137">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="afc9c-138">예제</span><span class="sxs-lookup"><span data-stu-id="afc9c-138">Example</span></span>  
- <span data-ttu-id="afc9c-139">다음 예제에서는 Internet Explorer 프록시의 기본값을 사용 하 여 프록시 주소를 지정 하며 로컬 액세스 및 contoso.com에 대 한 프록시를 무시 합니다.</span><span class="sxs-lookup"><span data-stu-id="afc9c-139">The following example uses the defaults from the Internet Explorer proxy, specifies the proxy address, and bypasses the proxy for local access and contoso.com.</span></span>  
+## <a name="example"></a><span data-ttu-id="944ac-138">예제</span><span class="sxs-lookup"><span data-stu-id="944ac-138">Example</span></span>  
+ <span data-ttu-id="944ac-139">다음 예제에서는 Internet Explorer 프록시의 기본값을 사용 하 여 프록시 주소를 지정 하며 로컬 액세스 및 contoso.com에 대 한 프록시를 무시 합니다.</span><span class="sxs-lookup"><span data-stu-id="944ac-139">The following example uses the defaults from the Internet Explorer proxy, specifies the proxy address, and bypasses the proxy for local access and contoso.com.</span></span>  
   
 ```xml  
 <configuration>  
@@ -86,7 +86,7 @@ ms.locfileid: "59228349"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="afc9c-140">참고자료</span><span class="sxs-lookup"><span data-stu-id="afc9c-140">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="944ac-140">참고자료</span><span class="sxs-lookup"><span data-stu-id="944ac-140">See also</span></span>
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [<span data-ttu-id="afc9c-141">네트워크 설정 스키마</span><span class="sxs-lookup"><span data-stu-id="afc9c-141">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [<span data-ttu-id="944ac-141">네트워크 설정 스키마</span><span class="sxs-lookup"><span data-stu-id="944ac-141">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
