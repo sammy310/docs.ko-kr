@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
 ms.openlocfilehash: 58bec40f197dd1f2b104607a65c3ad456b95f69d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59118198"
 ---
 # <a name="windows-communication-foundation-security"></a>Windows Communication Foundation 보안
@@ -71,4 +71,4 @@ ms.locfileid: "59118198"
   
 ## <a name="see-also"></a>참고자료
 
-- [응용 프로그램 구성](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)
+- [애플리케이션 구성](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)

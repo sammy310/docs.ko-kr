@@ -3,10 +3,10 @@ title: 엔터티 형식(entity type)
 ms.date: 03/30/2017
 ms.assetid: a6dee9ab-9e4a-48f2-a169-3f79cc15821c
 ms.openlocfilehash: 026b0aef7cf2de8fe222721191afa459859701ee
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59108266"
 ---
 # <a name="entity-type"></a>엔터티 형식(entity type)
@@ -39,4 +39,4 @@ ms.locfileid: "59108266"
 
 - [엔터티 데이터 모델의 주요 개념](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [엔터티 데이터 모델](../../../../docs/framework/data/adonet/entity-data-model.md)
-- [패싯](../../../../docs/framework/data/adonet/facet.md)
+- [facet](../../../../docs/framework/data/adonet/facet.md)

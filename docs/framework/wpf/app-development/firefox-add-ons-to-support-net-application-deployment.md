@@ -8,10 +8,10 @@ helpviewer_keywords:
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
 ms.openlocfilehash: 4b0552ab9f565d9118415bc2da2823762f34fe2c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111737"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>.NET 응용 프로그램 배포를 지원하기 위한 Firefox 추가 기능
@@ -35,6 +35,6 @@ Windows Presentation Foundation (WPF) Firefox 및 Firefox에 대 한.NET Framewo
   
 ## <a name="see-also"></a>참고자료
 
-- [WPF 애플리케이션 배포](deploying-a-wpf-application-wpf.md)
-- [WPF XAML 브라우저 애플리케이션 개요](wpf-xaml-browser-applications-overview.md)
+- [WPF 응용 프로그램 배포](deploying-a-wpf-application-wpf.md)
+- [WPF XAML 브라우저 응용 프로그램 개요](wpf-xaml-browser-applications-overview.md)
 - [Firefox용 WPF 플러그 인 설치 여부 확인](how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)

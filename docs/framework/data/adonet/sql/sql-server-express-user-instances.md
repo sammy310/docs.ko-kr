@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
 ms.openlocfilehash: b456549daefa0fdf67524b0b039a091652cf41ff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111152"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express 사용자 인스턴스
@@ -37,17 +37,17 @@ sp_configure 'user instances enabled','0'
  사용자 인스턴스의 네트워크 프로토콜은 명명된 로컬 파이프여야 합니다. 사용자 인스턴스는 SQL Server의 원격 인스턴스로 시작될 수 없으며 SQL Server 로그인은 허용되지 않습니다.  
   
 ## <a name="connecting-to-a-user-instance"></a>사용자 인스턴스에 연결  
- `User Instance` 및 `AttachDBFilename`<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 키워드를 허용을 <xref:System.Data.SqlClient.SqlConnection> 사용자 인스턴스에 연결 합니다. 사용자 인스턴스는 에서도 지원 합니다 <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` 및 `AttachDBFilename` 속성입니다.  
+ `User Instance` 및 `AttachDBFilename` <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 키워드를 허용을 <xref:System.Data.SqlClient.SqlConnection> 사용자 인스턴스에 연결 합니다. 사용자 인스턴스는 <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` 및 `AttachDBFilename` 속성에서도 지원됩니다.  
   
  아래 표시된 샘플 연결 문자열을 참조하세요.  
   
 -   `Data Source` 키워드는 사용자 인스턴스를 생성하는 SQL Server Express의 부모 인스턴스를 참조합니다. 기본 인스턴스는 .\sqlexpress입니다.  
   
--   `Integrated Security` 로 설정 된 `true`합니다. 사용자 인스턴스에 연결하려면 Windows 인증이 필요합니다. SQL Server 로그인은 지원되지 않습니다.  
+-   `Integrated Security`이 `true`로 설정됩니다. 사용자 인스턴스에 연결하려면 Windows 인증이 필요합니다. SQL Server 로그인은 지원되지 않습니다.  
   
 -   `User Instance`가 `true`로 설정되면 사용자 인스턴스를 호출합니다. 기본값은 `false`입니다.  
   
--   `AttachDbFileName` 연결 문자열 키워드를 사용하여 전체 경로 이름을 포함하는 기본 데이터베이스 파일(.mdf)에 연결할 수 있습니다. `AttachDbFileName` 또한 "확장된 속성" 및 "초기 파일 이름" 키 내에 해당는 <xref:System.Data.SqlClient.SqlConnection> 연결 문자열입니다.  
+-   `AttachDbFileName` 연결 문자열 키워드를 사용하여 전체 경로 이름을 포함하는 기본 데이터베이스 파일(.mdf)에 연결할 수 있습니다. `AttachDbFileName`은 또한 <xref:System.Data.SqlClient.SqlConnection> 연결 문자열 내의 "확장 속성" 및 "초기 파일 이름" 키에 해당합니다.  
   
 -   파이프 기호 안에 포함된 `|DataDirectory|` 대체 문자열은 연결을 여는 응용 프로그램의 데이터 디렉터리를 참조하며 .mdf 및 .ldf 데이터베이스 및 로그 파일의 위치를 나타내는 상대 경로를 제공합니다. 이러한 파일의 위치를 찾으려면 파일에 대한 전체 경로를 제공해야 합니다.  
   
@@ -58,10 +58,10 @@ Initial Catalog=InstanceDB;
 ```  
   
 > [!NOTE]
->  사용할 수도 있습니다는 <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> 및 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> 런타임 속성에 연결 문자열을 작성 합니다.  
+>  <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> 및 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> 속성을 사용하여 런타임에 연결 문자열을 빌드할 수도 있습니다.  
   
 ### <a name="using-the-124datadirectory124-substitution-string"></a>사용 하는 &#124;DataDirectory&#124; 대체 문자열  
- `AttachDbFileName` ADO.NET 2.0에서의 도입으로 확장 되었습니다는 `|DataDirectory|` (파이프 기호 안에 포함 됨) 대체 문자열입니다. `DataDirectory` 와 함께 사용 되어 `AttachDbFileName` 데이터 파일에 상대 경로 나타내기 없이 데이터 소스의 상대 경로 기반으로 하는 연결 문자열을 만드는 개발자를 허용 하는 데 필요한 전체 경로 지정 합니다.  
+ ADO.NET 2.0에서는 `AttachDbFileName`(파이프 기호 안에 포함됨) 대체 문자열이 도입되어 `|DataDirectory|`이 확장되었습니다. `DataDirectory`는 `AttachDbFileName`과 함께 사용되어 데이터 파일의 상대 경로를 나타내기 때문에 개발자가 전체 경로를 지정할 필요 없이 데이터 소스의 상대 경로를 기반으로 연결 문자열을 만들 수 있습니다.  
   
  `DataDirectory`가 가리키는 실제 위치는 응용 프로그램 형식에 따라 다릅니다. 이 예제에서 연결된 Northwind.mdf 파일은 응용 프로그램의 \app_data 폴더에 있습니다.  
   
@@ -77,7 +77,7 @@ Initial Catalog=Northwind;
  연결 문자열에 형식이 적절하지 않은 대체 문자열이 있는 경우 <xref:System.ArgumentException>이 throw됩니다.  
   
 > [!NOTE]
->  <xref:System.Data.SqlClient> 로컬 컴퓨터 파일 시스템에 대 한 전체 경로로 대체 문자열을 확인합니다. 따라서 원격 서버, HTTP 및 UNC 경로 이름은 지원되지 않습니다. 서버가 로컬 컴퓨터에 없는 경우 연결이 열릴 때 예외가 throw됩니다.  
+>  <xref:System.Data.SqlClient>에서는 로컬 컴퓨터 파일 시스템에 대해 대체 문자열을 전체 경로로 적용합니다. 따라서 원격 서버, HTTP 및 UNC 경로 이름은 지원되지 않습니다. 서버가 로컬 컴퓨터에 없는 경우 연결이 열릴 때 예외가 throw됩니다.  
   
  <xref:System.Data.SqlClient.SqlConnection>이 열린 경우 기본 SQL Server Express 인스턴스로부터 호출자 계정에서 실행되는 런타임에 시작된 인스턴스로 리디렉션됩니다.  
   

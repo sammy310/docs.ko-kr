@@ -14,10 +14,10 @@ helpviewer_keywords:
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
 ms.openlocfilehash: 557c3296310a7eb3922a6c18b7b3de19ffac953c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115767"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows Forms의 파일 및 데이터 액세스 추가 보안
@@ -133,7 +133,7 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 ```  
   
 > [!NOTE]
->  Visual C#에서는 이벤트 처리기를 사용 하는 코드를 추가 하는 것을 확인 합니다. 다음 코드는 이전 예제에서 코드를 사용 하 여 이벤트 처리기를 사용 하는 방법을 보여 줍니다.`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
+>  Visual C#에서는 이벤트 처리기를 사용 하는 코드를 추가 하는 것을 확인 합니다. 이전 예제의 코드를 사용하여 다음 코드에서는 이벤트 처리기 `this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`를 사용하도록 설정하는 방법을 보여 줍니다.  
   
 ### <a name="other-files"></a>기타 파일  
  응용 프로그램 설정을 유지해야 하는 경우와 같이 사용자가 지정하지 않는 파일을 읽거나 써야 하는 경우가 있습니다. 로컬 인트라넷 및 인터넷 영역에서는 로컬 파일에 데이터를 저장할 수 있는 권한이 응용 프로그램에 없습니다. 그러나 응용 프로그램은 격리된 저장소에 데이터를 저장할 수 있습니다. 격리된 저장소는 데이터가 저장된 실제 디렉터리 위치를 포함하는 하나 이상의 격리된 저장소 파일(저장소라고 함)이 포함된 추상 데이터 컴파트먼트(특정 저장소 위치가 아님)입니다. <xref:System.Security.Permissions.FileIOPermission>과 같은 파일 액세스 권한은 필요하지 않습니다. 대신, <xref:System.Security.Permissions.IsolatedStoragePermission> 클래스는 격리된 저장소에 대한 권한을 제어합니다. 기본적으로 로컬 인트라넷 및 인터넷 영역에서 실행 중인 응용 프로그램은 격리된 저장소를 사용하여 데이터를 저장할 수 있습니다. 그러나 디스크 할당량과 같은 설정이 달라질 수 있습니다. 격리 된 저장소에 대 한 자세한 내용은 참조 하세요. [격리 된 저장소](../../standard/io/isolated-storage.md)합니다.  
@@ -354,7 +354,7 @@ public void Write()
  부분 신뢰로 응용 프로그램을 실행하려 하므로 데이터베이스에 직접 액세스할 수 없는 경우 데이터에 액세스하는 대체 방법으로 웹 서비스를 사용할 수 있습니다. 웹 서비스는 네트워크를 통해 프로그래밍 방식으로 액세스할 수 있는 소프트웨어입니다. 웹 서비스를 통해 응용 프로그램은 코드 그룹 영역 간에 데이터를 공유할 수 있습니다. 기본적으로 로컬 인트라넷 및 인터넷 영역의 응용 프로그램에는 동일한 서버에서 호스트된 웹 서비스를 호출할 수 있게 해주는 원본 사이트 액세스 권한이 부여됩니다. 자세한 내용은 참조 [ASP.NET AJAX의 웹 서비스](https://docs.microsoft.com/previous-versions/aspnet/bb398785(v=vs.100)) 하거나 [Windows Communication Foundation](../wcf/index.md)합니다.  
   
 ## <a name="registry-access"></a>레지스트리 액세스  
- <xref:System.Security.Permissions.RegistryPermission> 클래스는 운영 체제 레지스트리에 대한 액세스를 제어합니다. 기본적으로 로컬에서 실행 중인 응용 프로그램만 레지스트리에 액세스할 수 있습니다.  <xref:System.Security.Permissions.RegistryPermission> 응용 프로그램 레지스트리 액세스 시도 권한만 부여 못하고 액세스가 성공 한다는 운영 체제가 여전히 레지스트리에 대 한 보안을 적용 하므로 합니다.  
+ <xref:System.Security.Permissions.RegistryPermission> 클래스는 운영 체제 레지스트리에 대한 액세스를 제어합니다. 기본적으로 로컬에서 실행 중인 응용 프로그램만 레지스트리에 액세스할 수 있습니다.  <xref:System.Security.Permissions.RegistryPermission>은 레지스트리 액세스 시도 권한만 응용 프로그램에 부여합니다. 운영 체제가 여전히 레지스트리에 대한 보안을 적용하므로 액세스가 성공한다는 보장은 없습니다.  
   
  부분 신뢰에서는 레지스트리에 액세스할 수 없으므로 다른 데이터 저장 방법을 찾아야 할 수도 있습니다. 응용 프로그램 설정을 저장하는 경우 레지스트리 대신 격리된 저장소를 사용합니다. 격리된 저장소를 사용하여 다른 응용 프로그램 관련 파일을 저장할 수도 있습니다. 또한 기본적으로 응용 프로그램에 원본 사이트 액세스 권한이 부여되므로 서버 또는 원본 사이트에 대한 전역 응용 프로그램 정보를 저장할 수 있습니다.  
   
@@ -365,4 +365,4 @@ public void Write()
 - [Windows Forms의 보안 개요](security-in-windows-forms-overview.md)
 - [Windows Forms 보안](windows-forms-security.md)
 - [Mage.exe(매니페스트 생성 및 편집 도구)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
-- [MageUI.exe (매니페스트 생성 및 편집 도구, 그래픽 클라이언트)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [MageUI.exe(매니페스트 생성 및 편집 도구, 그래픽 클라이언트)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

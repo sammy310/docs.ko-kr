@@ -11,10 +11,10 @@ ms.assetid: fb626b41-b888-4625-84c3-2c02b5e3866f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 448712561f1531a055ac141db9825581525c779c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59106706"
 ---
 # <a name="axlgetissuerpublickeyhash-function"></a>_AxlGetIssuerPublicKeyHash 함수
@@ -37,7 +37,7 @@ HRESULT _AxlGetIssuerPublicKeyHash (
  [out] 16진수로 인코딩된 공개 키 토큰을 받는 WCHAR *에 대한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `S_OK` 함수가 성공 하면; 그렇지 않으면 `S_FALSE`합니다.  
+ 함수가 정상적으로 실행되는 경우 `S_OK`이고 그렇지 않으면 `S_FALSE`입니다.  
   
 ## <a name="see-also"></a>참고자료
 

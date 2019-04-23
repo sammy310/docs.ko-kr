@@ -6,10 +6,10 @@ helpviewer_keywords:
 - graphics [Windows Forms], class structure
 ms.assetid: 010a1e46-656b-40a1-8d5d-87aa05ee1243
 ms.openlocfilehash: 9dfffe8ea3f76d89823dfe2ef6bd0e4f3accf8f1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59106784"
 ---
 # <a name="structure-of-the-graphics-interface"></a>그래픽 인터페이스의 구조
@@ -25,5 +25,5 @@ ms.locfileid: "59106784"
 ## <a name="see-also"></a>참고자료
 
 - [그래픽 개요](graphics-overview-windows-forms.md)
-- [GDI+ 관리 코드 정보](about-gdi-managed-code.md)
-- [관리형 그래픽 클래스 사용](using-managed-graphics-classes.md)
+- [GDI + 관리 코드 정보](about-gdi-managed-code.md)
+- [관리되는 그래픽 클래스 사용](using-managed-graphics-classes.md)

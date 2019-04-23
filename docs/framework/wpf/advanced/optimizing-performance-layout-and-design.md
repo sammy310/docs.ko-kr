@@ -10,10 +10,10 @@ helpviewer_keywords:
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
 ms.openlocfilehash: 8a76dd5de9f374d77345eeab3d259624546fed7c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107070"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>성능 최적화: 레이아웃 및 디자인
@@ -57,7 +57,7 @@ ms.locfileid: "59107070"
 ### <a name="build-your-tree-top-down"></a>하향식 트리 빌드  
  논리적 트리에서 노드가 추가 또는 제거될 경우 노드의 부모 및 모든 자식에서 속성 무효화가 발생합니다. 결과적으로 이미 유효성이 검사된 노드에서 불필요한 무효화의 비용을 방지하려면 항상 하향식 생성 패턴을 따라야 합니다. 다음 표에서 하향식 및 상향식의 트리를 150 개 수준 깊이 단일 트리 실행 속도 차이 보여 줍니다 <xref:System.Windows.Controls.TextBlock> 고 <xref:System.Windows.Controls.DockPanel> 각 수준에서.  
   
-|**작업**|**트리 빌드 (ms)**|**렌더링 — 트리 빌드 (ms)를 포함 합니다.**|  
+|**작업**|**트리 빌드(ms)**|**렌더링—트리 빌드 포함(ms)**|  
 |----------------|---------------------------------|-------------------------------------------------|  
 |상향식|366|454|  
 |하향식|11|96|  
@@ -71,13 +71,13 @@ ms.locfileid: "59107070"
   
 ## <a name="see-also"></a>참고자료
 
-- [WPF 애플리케이션 성능 최적화](optimizing-wpf-application-performance.md)
-- [응용 프로그램 성능 계획](planning-for-application-performance.md)
-- [하드웨어 활용](optimizing-performance-taking-advantage-of-hardware.md)
-- [2D 그래픽 및 이미징](optimizing-performance-2d-graphics-and-imaging.md)
+- [WPF 응용 프로그램 성능 최적화](optimizing-wpf-application-performance.md)
+- [애플리케이션 성능 계획](planning-for-application-performance.md)
+- [하드웨어 이용](optimizing-performance-taking-advantage-of-hardware.md)
+- [2차원 그래픽 및 이미징](optimizing-performance-2d-graphics-and-imaging.md)
 - [개체 동작](optimizing-performance-object-behavior.md)
 - [애플리케이션 리소스](optimizing-performance-application-resources.md)
 - [텍스트](optimizing-performance-text.md)
 - [데이터 바인딩](optimizing-performance-data-binding.md)
-- [기타 성능 추천 사항](optimizing-performance-other-recommendations.md)
+- [기타 성능 권장 사항](optimizing-performance-other-recommendations.md)
 - [레이아웃](layout.md)

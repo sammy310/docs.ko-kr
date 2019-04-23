@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 42055ee0-6d0c-443d-9d89-788dfc345d6d
 ms.openlocfilehash: 16b3afe9540f3e2953311f602408fce5412be2eb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59112218"
 ---
 # <a name="security-considerations-in-wcf"></a>WCF에서의 보안 고려 사항
@@ -20,7 +20,7 @@ ms.locfileid: "59112218"
  [정보 공개](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
  정보가 공개되거나 공격 받을 수 있는 다양한 방법과 이러한 문제를 줄이는 방법에 대해 설명합니다.  
   
- [권한 높이기](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
+ [권한 상승](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
  초기에 부여된 권한을 벗어나는 공격자 인증 권한 제공에 따른 영향 및 이에 따른 문제를 줄이는 방법에 대해 설명합니다.  
   
  [서비스 거부](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  

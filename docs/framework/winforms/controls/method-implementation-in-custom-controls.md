@@ -12,10 +12,10 @@ helpviewer_keywords:
 - methods [Windows Forms], custom controls
 ms.assetid: 35d14fca-4bb4-4a27-8211-1f7a98ea27de
 ms.openlocfilehash: 38dcad25af31b87afc1cc6ef4f89a1f7903bc0ed
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59117419"
 ---
 # <a name="method-implementation-in-custom-controls"></a>사용자 지정 컨트롤에서 메서드 구현
@@ -48,7 +48,7 @@ public int ConvertMatterToEnergy(int matter)
  컨트롤 사용자가 메서드에 서로 다른 매개 변수 조합을 제공할 수 있도록 하려면 명시적 데이터 형식을 사용하여 메서드의 여러 오버로드를 제공합니다. 모든 데이터 형식을 포함할 수 있는 `As Object`로 선언된 매개 변수는 만들지 않아야 합니다. 이러한 매개 변수를 만들면 오류가 발생해도 테스트에서 확인되지 않을 수 있습니다.  
   
 > [!NOTE]
->  공용 언어 런타임의 유니버설 데이터 형식은 `Object`가 아닌 `Variant`입니다. `Variant` 언어에서 제거 되었습니다.  
+>  공용 언어 런타임의 유니버설 데이터 형식은 `Object`가 아닌 `Variant`입니다. `Variant`는 언어에서 제거되었습니다.  
   
  예를 들어 가상 `Spin` 컨트롤의 `Widget` 메서드에서는 회전 방향과 속도를 직접 지정할 수도 있고 각운동량을 가져올 다른 `Widget` 개체를 지정할 수도 있습니다.  
   

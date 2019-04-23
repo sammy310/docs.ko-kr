@@ -5,10 +5,10 @@ helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
 ms.openlocfilehash: 0cd69a4d2d6087c1ebf93bb5931511f32a4c9c5f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59110060"
 ---
 # <a name="base-elements-overview"></a>기본 요소 개요
@@ -93,7 +93,7 @@ ms.locfileid: "59110060"
   
  <xref:System.Windows.Media.Animation.Animatable> 가 <xref:System.Windows.Freezable> 특히 애니메이션 컨트롤 계층과 일부 유틸리티 멤버 현재 애니메이션이 적용 된 속성이 구별할 수 있도록에서 추가 되는 속성과 클래스를 파생 합니다.  
   
-### <a name="control"></a>컨트롤  
+### <a name="control"></a>Control  
  <xref:System.Windows.Controls.Control> 컨트롤 또는 구성 요소는 기술에 따라 다양 하 게 표현 되는 개체의 형식에 대 한 의도 한 기본 클래스가입니다. 일반적으로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤 클래스는 UI 컨트롤을 직접 나타내거나 컨트롤 컴퍼지션에 밀접하게 참여하는 클래스입니다. 기본 기능이 있는 <xref:System.Windows.Controls.Control> 컨트롤 템플릿 기능입니다.  
   
 ## <a name="see-also"></a>참고자료

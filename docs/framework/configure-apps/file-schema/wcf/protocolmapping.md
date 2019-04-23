@@ -3,10 +3,10 @@ title: <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 5076644b-1f33-4f26-9488-87de9fcda04c
 ms.openlocfilehash: e26044340bda84fe38b7e286edf833affa94b86c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59118217"
 ---
 # <a name="protocolmapping"></a>\<protocolMapping>
@@ -35,7 +35,7 @@ ms.locfileid: "59118217"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<filters>](filters-of-routing.md)|전송 프로토콜 체계 (예: http, net.tcp, net.pipe 등) 및 WCF 바인딩 간의 기본 프로토콜 매핑을 포함합니다.|  
+|[\<필터>](filters-of-routing.md)|전송 프로토콜 체계 (예: http, net.tcp, net.pipe 등) 및 WCF 바인딩 간의 기본 프로토콜 매핑을 포함합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   

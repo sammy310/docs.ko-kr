@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Web pages [Windows Forms], displaying in applications
 ms.assetid: 6e3e1cc2-9c48-4136-9659-e99e4e60b7e9
 ms.openlocfilehash: c75d0b348a2f3dd678f2bfb235bce2e4e227c4b6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59109437"
 ---
 # <a name="webbrowser-control-overview"></a>WebBrowser 컨트롤 개요
@@ -27,13 +27,13 @@ ms.locfileid: "59109437"
 |이름|설명|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.WebBrowser.Document%2A> 속성|현재 웹 페이지의 HTML 문서 개체 모델 (DOM)에 대 한 관리 액세스를 제공 하는 개체를 가져옵니다.|  
-|<xref:System.Windows.Forms.WebBrowser.DocumentCompleted> 이벤트(event)|웹 페이지 로드가 완료 되 면 발생 합니다.|  
+|<xref:System.Windows.Forms.WebBrowser.DocumentCompleted> 이벤트|웹 페이지 로드가 완료 되 면 발생 합니다.|  
 |<xref:System.Windows.Forms.WebBrowser.DocumentText%2A> 속성|현재 웹 페이지의 콘텐츠 HTML을 가져오거나 설정 합니다.|  
 |<xref:System.Windows.Forms.WebBrowser.DocumentTitle%2A> 속성|현재 웹 페이지의 제목을 가져옵니다.|  
 |<xref:System.Windows.Forms.WebBrowser.GoBack%2A> 메서드|기록에서 이전 페이지로 이동합니다.|  
 |<xref:System.Windows.Forms.WebBrowser.GoForward%2A> 메서드|기록의 다음 페이지로 이동합니다.|  
 |<xref:System.Windows.Forms.WebBrowser.Navigate%2A> 메서드|지정된 된 URL로 이동합니다.|  
-|<xref:System.Windows.Forms.WebBrowser.Navigating> 이벤트(event)|작업을 취소할 수 있도록 탐색이 시작 되기 전에 발생 합니다.|  
+|<xref:System.Windows.Forms.WebBrowser.Navigating> 이벤트|작업을 취소할 수 있도록 탐색이 시작 되기 전에 발생 합니다.|  
 |<xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> 속성|웹 페이지 스크립팅 코드 응용 프로그램과 통신 하는 데 사용할 수 있는 개체를 가져오거나 설정 합니다.|  
 |<xref:System.Windows.Forms.WebBrowser.Print%2A> 메서드|현재 웹 페이지를 인쇄합니다.|  
 |<xref:System.Windows.Forms.WebBrowser.Refresh%2A> 메서드|현재 웹 페이지를 다시 로드합니다.|  
@@ -53,9 +53,9 @@ ms.locfileid: "59109437"
 - <xref:System.Windows.Forms.WebBrowserProgressChangedEventArgs>
 - <xref:System.Windows.Forms.WebBrowserReadyState>
 - <xref:System.Windows.Forms.WebBrowserRefreshOption>
-- [방법: WebBrowser 컨트롤을 사용하여 URL로 이동](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [방법: WebBrowser 컨트롤을 사용하여 인쇄](how-to-print-with-a-webbrowser-control.md)
-- [방법: Windows Forms 애플리케이션에 웹 브라우저 기능 추가](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
-- [방법: Windows Forms 애플리케이션에서 HTML 문서 뷰어 만들기](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
-- [방법: DHTML 코드와 클라이언트 애플리케이션 코드 간의 양방향 통신 구현](implement-two-way-com-between-dhtml-and-client.md)
+- [방법: WebBrowser 컨트롤을 사용 하 여 URL로 이동](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [방법: WebBrowser 컨트롤을 사용 하 여 인쇄](how-to-print-with-a-webbrowser-control.md)
+- [방법: Windows Forms 응용 프로그램에 웹 브라우저 기능 추가](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
+- [방법: Windows Forms 응용 프로그램에서 HTML 문서 뷰어 만들기](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
+- [방법: DHTML 코드와 클라이언트 응용 프로그램 코드 간의 양방향 통신 구현](implement-two-way-com-between-dhtml-and-client.md)
 - [WebBrowser 보안](webbrowser-security.md)

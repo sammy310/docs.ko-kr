@@ -3,10 +3,10 @@ title: 웹 서비스를 사용하는 LINQ to SQL N 계층
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
 ms.openlocfilehash: 7b13a0cd77925423a12c093b1b5ac9b63ad7e019
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107408"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>웹 서비스를 사용하는 LINQ to SQL N 계층
@@ -30,7 +30,7 @@ ms.locfileid: "59107408"
  데이터를 삽입할 경우 프레젠테이션 계층에서는 새 개체를 만든 후 중간 계층에 보내거나, 중간 계층에서 개체를 만드는 데 사용할 기준 값을 제공할 수 있습니다. 일반적으로 n 계층 응용 프로그램에서의 데이터 검색 및 삽입은 2계층 응용 프로그램에서의 해당 프로세스와 크게 다르지 않습니다. 자세한 내용은 [데이터베이스 쿼리](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md) 하 고 [만들기 및 데이터 변경 내용을 제출](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)합니다.  
   
 ## <a name="tracking-changes-for-updates-and-deletes"></a>업데이트 및 삭제 변경 사항 추적  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 타임 스탬프 (RowVersions 라고도 함)에 대 한 원래 값 기반 낙관적 동시성을 지원 합니다. 데이터베이스 테이블에 타임스탬프가 있는 경우에는 업데이트 및 삭제 시 중간 계층 또는 프레젠테이션 계층에서 약간의 추가 작업이 필요할 수 있습니다. 그러나 낙관적 동시성 검사에 원래 값을 사용해야 하는 경우에는 업데이트 시 이러한 값을 추적하고 다시 보내는 작업을 프레젠테이션 계층에서 담당합니다. 그 이유는 프레젠테이션 계층에서 발생한 엔터티 변경 사항을 중간 계층에서 추적하지 않기 때문입니다. 실제로 엔터티에 대한 최초 검색과 엔터티에 대한 이후 업데이트는 일반적으로 <xref:System.Data.Linq.DataContext>의 완전하게 다른 두 개별 인스턴스를 통해 수행됩니다.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 RowVersions라고도 하는 타임스탬프 및 원래 값을 기반으로 하는 낙관적 동시성을 지원합니다. 데이터베이스 테이블에 타임스탬프가 있는 경우에는 업데이트 및 삭제 시 중간 계층 또는 프레젠테이션 계층에서 약간의 추가 작업이 필요할 수 있습니다. 그러나 낙관적 동시성 검사에 원래 값을 사용해야 하는 경우에는 업데이트 시 이러한 값을 추적하고 다시 보내는 작업을 프레젠테이션 계층에서 담당합니다. 그 이유는 프레젠테이션 계층에서 발생한 엔터티 변경 사항을 중간 계층에서 추적하지 않기 때문입니다. 실제로 엔터티에 대한 최초 검색과 엔터티에 대한 이후 업데이트는 일반적으로 <xref:System.Data.Linq.DataContext>의 완전하게 다른 두 개별 인스턴스를 통해 수행됩니다.  
   
  프레젠테이션 계층에서 변경하는 내용이 많을수록 변경 사항을 추적하고 패키지화하여 중간 계층에 다시 보내기가 복잡해 집니다. 변경 사항 통신 메커니즘은 응용 프로그램에 따라 다르게 구현되지만 낙관적 동시성 검사에 필요한 원래 값을 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에 반드시 제공해야 한다는 점은 동일합니다.  
   

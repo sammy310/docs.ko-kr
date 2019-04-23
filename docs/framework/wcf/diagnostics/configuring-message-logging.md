@@ -5,10 +5,10 @@ helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
 ms.openlocfilehash: e1d4c91ee282233e862ae14bf8d650ab2a754462
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59112088"
 ---
 # <a name="configuring-message-logging"></a>메시지 로깅 구성
@@ -78,7 +78,7 @@ ms.locfileid: "59112088"
  이 계층에서 기록된 메시지는 통신 전송 동안 또는 그 이후에 인코딩이나 디코딩할 수 있습니다. 필터가 정의된 경우에는 해당 필터에 맞는 메시지만 기록되며 그 이외에는 전송 계층의 모든 메시지가 기록됩니다. 신뢰할 수 있는 메시징 메시지를 포함한 모든 인프라 메시지도 이 계층에서 기록됩니다. 스트리밍된 메시지의 경우는 헤더만 기록됩니다. 또한 보안 메시지는 이 수준에서 암호화된 채로 기록되는데 HTTPS와 같은 보안 전송이 사용되는 경우는 예외입니다.  
   
 ### <a name="malformed-level"></a>잘못된 형식의 수준  
- 잘못 된 형식의 메시지는 처리의 모든 단계에서 WCF 스택에 의해 거부 된 메시지입니다. 이러한 잘못된 형식의 메시지는 암호화된 상태라면 암호화된 상태로, 적절하지 않은 XML로 된 상태라면 그 상태 그대로 기록됩니다. `maxSizeOfMessageToLog` CDATA로 기록 될 메시지의 크기를 정의 합니다. 기본적으로 `maxSizeOfMessageToLog`는256K입니다. 이 특성에 대 한 자세한 내용은 기타 옵션 단원을 참조 하세요.  
+ 잘못 된 형식의 메시지는 처리의 모든 단계에서 WCF 스택에 의해 거부 된 메시지입니다. 이러한 잘못된 형식의 메시지는 암호화된 상태라면 암호화된 상태로, 적절하지 않은 XML로 된 상태라면 그 상태 그대로 기록됩니다. `maxSizeOfMessageToLog`는 CDATA로 기록될 메시지 크기를 정의합니다. 기본적으로 `maxSizeOfMessageToLog`는256K입니다. 이 특성에 대 한 자세한 내용은 기타 옵션 단원을 참조 하세요.  
   
 ### <a name="other-options"></a>기타 옵션  
  로깅 수준 이외에 다음과 같은 옵션을 지정할 수 있습니다.  

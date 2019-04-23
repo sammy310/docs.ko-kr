@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: a5333e19-8e55-4aa9-82dc-ca8745e516ed
 ms.openlocfilehash: a2227b33c7caacdd04c7bf50082bb0cfab7f3302
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59113947"
 ---
 # <a name="enabling-query-notifications"></a>쿼리 알림 사용
@@ -30,19 +30,19 @@ ms.locfileid: "59113947"
   
  **SQL Server 설명서**  
   
--   [알림에 대한 쿼리 만들기](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
+-   [알림에 대 한 쿼리 만들기](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
--   [Service Broker에 대한 보안 고려 사항](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166059(v=sql.90))  
+-   [Service Broker에 대 한 보안 고려 사항](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166059(v=sql.90))  
   
--   [보안 및 보호(Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522911(v=sql.105))  
+-   [보안 및 보호 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522911(v=sql.105))  
   
--   [Notifications Services에 대한 보안 고려 사항](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms172604(v=sql.90))  
+-   [Notifications Services에 대 한 보안 고려 사항](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms172604(v=sql.90))  
   
--   [쿼리 알림 사용 권한](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188311(v=sql.105))  
+-   [쿼리 알림 권한](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188311(v=sql.105))  
   
--   [Service Broker에 대한 국가별 고려 사항](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166028(v=sql.90))  
+-   [Service Broker에 대 한 국가별 고려 사항](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166028(v=sql.90))  
   
--   [솔루션 디자인 고려 사항(Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522899(v=sql.105))  
+-   [솔루션 디자인 고려 사항 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522899(v=sql.105))  
   
 -   [Service Broker 개발자 정보 센터](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
@@ -79,7 +79,7 @@ CREATE SERVICE ContactChangeNotifications
 ### <a name="using-sqldependency"></a>SqlDependency 사용  
  <xref:System.Data.SqlClient.SqlDependency>를 사용하려면 사용 중인 SQL Server 데이터베이스에 대해 Service Broker를 활성화해야 하며 사용자는 알림을 수신할 수 있는 권한이 있어야 합니다. 알림 큐 같은 Service Broker 개체는 미리 정의되어 있습니다.  
   
- 또한 <xref:System.Data.SqlClient.SqlDependency>는 작업자 스레드를 자동으로 실행하여 큐에 게시되는 알림을 처리하고, Service Broker 메시지를 구문 분석하여 해당 정보를 이벤트 인수 데이터로 노출합니다. <xref:System.Data.SqlClient.SqlDependency> 호출 하 여 초기화 해야 합니다는 `Start` 데이터베이스 종속성을 설정 하는 방법입니다. 이 메서드는 응용 프로그램을 초기화하는 동안 필요한 데이터베이스 연결마다 한 번씩만 호출해야 하는 정적 메서드입니다. 만들어진 각 종속성 연결에 대해 응용 프로그램이 종료될 때 `Stop` 메서드를 호출해야 합니다.  
+ 또한 <xref:System.Data.SqlClient.SqlDependency>는 작업자 스레드를 자동으로 실행하여 큐에 게시되는 알림을 처리하고, Service Broker 메시지를 구문 분석하여 해당 정보를 이벤트 인수 데이터로 노출합니다. <xref:System.Data.SqlClient.SqlDependency>는 `Start` 메서드를 호출하여 데이터베이스에 대해 종속성을 설정함으로써 초기화해야 합니다. 이 메서드는 응용 프로그램을 초기화하는 동안 필요한 데이터베이스 연결마다 한 번씩만 호출해야 하는 정적 메서드입니다. 만들어진 각 종속성 연결에 대해 응용 프로그램이 종료될 때 `Stop` 메서드를 호출해야 합니다.  
   
 ### <a name="using-sqlnotificationrequest"></a>SqlNotificationRequest 사용  
  이와 반대로 <xref:System.Data.Sql.SqlNotificationRequest>를 사용하려면 전체 수신 인프라를 직접 구현해야 합니다. 또한 큐, 서비스, 큐에서 지원하는 메시지 유형 같은 모든 지원되는 Service Broker 개체를 정의해야 합니다. 이 수동 접근 방식은 응용 프로그램에 특별한 알림 메시지 또는 알림 동작이 필요하거나 응용 프로그램이 보다 큰 Service Broker 응용 프로그램에 속해 있는 경우에 유용합니다.  

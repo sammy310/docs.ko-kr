@@ -9,10 +9,10 @@ helpviewer_keywords:
 - UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
 ms.openlocfilehash: a75b502dc02f0541b9debb6cd1ae23ba10eed8b1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59116365"
 ---
 # <a name="ui-automation-properties-for-clients"></a>클라이언트의 UI 자동화 속성
@@ -25,7 +25,7 @@ ms.locfileid: "59116365"
   
  컨트롤 패턴에는 속성도 있습니다. 컨트롤 패턴의 속성은 패턴에 따라 다릅니다. 예를 들어, <xref:System.Windows.Automation.ScrollPattern> 에는 클라이언트 애플리케이션이 창을 가로 또는 세로로 스크롤할 수 있는지와 현재 뷰 크기 및 스크롤 위치를 확인할 수 있는 속성이 있습니다. 컨트롤 패턴은 구조를 통해 모든 속성을 노출합니다(예: <xref:System.Windows.Automation.ScrollPattern.ScrollPatternInformation>).  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성은 읽기 전용입니다. 컨트롤의 속성을 설정하려면 적절한 컨트롤 패턴의 메서드를 사용해야 합니다. 예를 들어, 스크롤 창의 위치 값을 변경하려면 <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> 를 사용합니다.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성이 읽기 전용입니다. 컨트롤의 속성을 설정하려면 적절한 컨트롤 패턴의 메서드를 사용해야 합니다. 예를 들어, 스크롤 창의 위치 값을 변경하려면 <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> 를 사용합니다.  
   
  성능 향상을 위해 <xref:System.Windows.Automation.AutomationElement> 개체가 검색될 때 컨트롤 및 컨트롤 패턴의 속성 값을 캐시할 수 있습니다. 자세한 내용은 [UI Automation 클라이언트의 캐싱](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)합니다.  
   

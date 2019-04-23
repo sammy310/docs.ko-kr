@@ -3,10 +3,10 @@ title: 채널 팩터리 및 캐싱
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
 ms.openlocfilehash: 3914ba74337bd959558348c191a897c79a32da52
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59106459"
 ---
 # <a name="channel-factory-and-caching"></a>채널 팩터리 및 캐싱
@@ -25,7 +25,7 @@ WCF 클라이언트 응용 프로그램에서는 <xref:System.ServiceModel.Chann
 > [!TIP]
 >  <xref:System.ServiceModel.ChannelFactory%601> 클래스를 직접 사용하면 채널 팩터리 생성을 직접 제어할 수 있습니다.  
   
- 사용 하 여 생성 된 WCF 클라이언트 프록시 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 에서 파생 된 <xref:System.ServiceModel.ClientBase%601>합니다. <xref:System.ServiceModel.ClientBase%601> 정적 정의 <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> 채널 팩터리 캐싱 동작을 정의 하는 속성입니다. 캐시 설정은 특정 형식에 대해 지정합니다. 예를 들어, 설정 `ClientBase<ITest>.CacheSettings` 아래에 정의 된 값 중 하나에 해당 프록시/ClientBase 형식의 영향이 `ITest`합니다. 특정 <xref:System.ServiceModel.ClientBase%601>에 대한 캐시 설정은 첫 번째 프록시/ClientBase 인스턴스가 만들어지는 즉시 변경할 수 없게 됩니다.  
+ 사용 하 여 생성 된 WCF 클라이언트 프록시 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 에서 파생 된 <xref:System.ServiceModel.ClientBase%601>합니다. <xref:System.ServiceModel.ClientBase%601>는 채널 팩터리 캐싱 동작을 정의하는 정적 <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> 속성을 정의합니다. 캐시 설정은 특정 형식에 대해 지정합니다. 예를 들어, 설정 `ClientBase<ITest>.CacheSettings` 아래에 정의 된 값 중 하나에 해당 프록시/ClientBase 형식의 영향이 `ITest`합니다. 특정 <xref:System.ServiceModel.ClientBase%601>에 대한 캐시 설정은 첫 번째 프록시/ClientBase 인스턴스가 만들어지는 즉시 변경할 수 없게 됩니다.  
   
 ## <a name="specifying-caching-behavior"></a>캐싱 동작 지정  
  캐싱 동작은 <xref:System.ServiceModel.ClientBase%601.CacheSetting> 속성을 다음 값 중 하나로 설정하여 지정할 수 있습니다.  
