@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Cache Or Next Cache Only policy
 - Refresh policy
 ms.assetid: e41d7f1a-0a6a-4dee-97d1-c6a8b6a07fc2
-ms.openlocfilehash: 594aef9feee81d026abd6313f1e75cb518479688
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04efb24dd9e48d7e33fa3ea3c41a51c2dc96ac77
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499832"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59129898"
 ---
 # <a name="location-based-cache-policies"></a>위치 기반 캐시 정책
 위치 기반 캐시 정책은 요청한 리소스를 가져올 수 있는 위치를 기반으로 캐시된 유효한 항목의 새로 고침을 정의합니다. 캐시된 리소스를 사용해도 서버 지정 유효성 재검사 요구 사항을 위반하지 않으면 해당 리소스는 유효합니다. 위치 기반 캐시 정책은 <xref:System.Net.Cache.RequestCachePolicy> 또는 <xref:System.Net.Cache.HttpRequestCachePolicy> 클래스 생성자를 사용하여 프로그래밍 방식으로 만듭니다. 위치 기반 정책 형식은 <xref:System.Net.Cache.RequestCacheLevel> 또는 <xref:System.Net.Cache.HttpRequestCacheLevel> 열거형 값을 사용하여 생성자에 전달됩니다. 위치 기반 캐시 정책을 만드는 코드 예제는 [방법: 애플리케이션에 대해 위치 기반 캐시 정책 설정](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md)을 참조하세요. 다음 섹션에서는 Hypertext Transfer Protocol(http 및 https) 리소스를 위한 각각의 위치 기반 캐시 정책 형식을 설명합니다.  
@@ -47,6 +47,7 @@ ms.locfileid: "54499832"
  서버의 복사본과 캐시에 있는 리소스의 복사본을 비교합니다. 서버의 복사본이 최신이면 요청을 처리하는 데 사용하고 캐시의 복사본을 대체합니다. 캐시의 복사본이 서버의 복사본과 동일하면 캐시된 복사본을 사용합니다. HTTP 캐싱 프로토콜에서는 조건부 요청을 사용하여 이 작업을 수행합니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [네트워크 애플리케이션에 대한 캐시 관리](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [캐시 정책](../../../docs/framework/network-programming/cache-policy.md)
 - [시간 기반 캐시 정책](../../../docs/framework/network-programming/time-based-cache-policies.md)

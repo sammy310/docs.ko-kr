@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 40494916-c25a-4cb8-8f7c-fcb8d378464e
 ms.openlocfilehash: c3ed424aff3cd485a78d26a7f27bc5b1eac66448
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119745"
 ---
 # <a name="executing-a-command"></a>명령 실행
@@ -42,5 +42,5 @@ ms.locfileid: "59119745"
 ## <a name="see-also"></a>참고자료
 
 - [명령 및 매개 변수](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [DataAdapters 및 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [DataAdapter 및 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [ADO.NET 개요](ado-net-overview.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - control patterns, MultipleView
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
 ms.openlocfilehash: 74e5908dfcd42d031464ffccedb530be4a71a3f2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125200"
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>UI 자동화 MultipleView 컨트롤 패턴 구현
@@ -27,7 +27,7 @@ ms.locfileid: "59125200"
 ## <a name="implementation-guidelines-and-conventions"></a>구현 지침 및 규칙  
  Multiple View 컨트롤 패턴을 구현할 때는 다음 지침 및 규칙에 유의하세요.  
   
--   <xref:System.Windows.Automation.Provider.IMultipleViewProvider> 현재 보기를 제공 하는 컨트롤에서 다른 경우 현재 보기를 관리 하는 컨테이너에도 구현 해야 합니다. 예를 들어, 컨트롤의 뷰가 Windows 탐색기 애플리케이션에서 관리되는 동안 Windows 탐색기에는 현재 폴더 내용에 대한 목록 컨트롤이 포함됩니다.  
+-   <xref:System.Windows.Automation.Provider.IMultipleViewProvider> 가 현재 보기를 제공하는 컨트롤과 다를 경우 현재 보기를 관리하는 컨테이너에도 구현해야 합니다. 예를 들어, 컨트롤의 뷰가 Windows 탐색기 애플리케이션에서 관리되는 동안 Windows 탐색기에는 현재 폴더 내용에 대한 목록 컨트롤이 포함됩니다.  
   
 -   콘텐츠를 정렬할 수 있는 컨트롤은 여러 뷰를 지원한다고 간주되지 않습니다.  
   
@@ -62,4 +62,4 @@ ms.locfileid: "59125200"
 - [UI 자동화 공급자의 컨트롤 패턴 지원](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [클라이언트용 UI 자동화 컨트롤 패턴](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [UI 자동화에서 캐싱 사용](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [UI 자동화의 캐싱 사용](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

@@ -3,14 +3,14 @@ title: 비트 정식 함수
 ms.date: 03/30/2017
 ms.assetid: 993868ca-16e3-47b6-9915-c29cd63b0a21
 ms.openlocfilehash: 67d78e8d31f0bc3564a0a111b9bc71cbd0e14f5c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59127804"
 ---
 # <a name="bitwise-canonical-functions"></a>비트 정식 함수
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 비트 정식 함수가 포함 됩니다.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]에는 비트 정식 함수가 포함되어 있습니다.  
   
 ## <a name="remarks"></a>설명  
  다음 표에서는 비트 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 정식 함수를 보여 줍니다. 이러한 함수는 `Null`이 입력되면 `Null`을 반환합니다. 함수의 반환 형식은 인수 형식과 같습니다. 함수가 둘 이상의 인수를 사용하는 경우 인수는 같은 형식이어야 합니다. 서로 다른 형식에서 비트 작업을 수행 하려면 동일한 형식으로 명시적으로 캐스팅 해야 합니다.  

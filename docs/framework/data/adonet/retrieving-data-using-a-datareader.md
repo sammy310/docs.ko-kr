@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
 ms.openlocfilehash: 8063f239123ec1a2f2650adf9d76f7ceaaa50673
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59128689"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>DataReader를 사용 하 여 데이터를 검색 합니다.
@@ -259,7 +259,7 @@ adapter.Fill(ds);
   
 ## <a name="see-also"></a>참고자료
 
-- [DataAdapters 및 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [DataAdapter 및 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [명령 및 매개 변수](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [데이터베이스 스키마 정보 검색](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

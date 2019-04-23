@@ -1,5 +1,5 @@
 ---
-title: <memoryCache> 요소 (캐시 설정)
+title: <memoryCache> 요소(캐시 설정)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <memoryCache> element
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - memoryCache element
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
 ms.openlocfilehash: dbb46e7cf2580635add9d3100c8177c99cbae6bd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126817"
 ---
 # <a name="memorycache-element-cache-settings"></a>\<memoryCache > 요소 (캐시 설정)
@@ -31,7 +31,7 @@ ms.locfileid: "59126817"
 ```  
   
 ## <a name="type"></a>형식  
- <xref:System.Runtime.Caching.MemoryCache> 포함됩니다.  
+ <xref:System.Runtime.Caching.MemoryCache> 클래스.  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
  다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  

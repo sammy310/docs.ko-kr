@@ -3,14 +3,14 @@ title: NetHttpBinding 사용
 ms.date: 03/30/2017
 ms.assetid: fe134acf-ceca-49de-84a9-05a37e3841f1
 ms.openlocfilehash: 5090cfdfeb068acda1e1092e408f3cd747c574c2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59121019"
 ---
 # <a name="using-the-nethttpbinding"></a>NetHttpBinding 사용
-<xref:System.ServiceModel.NetHttpBinding> HTTP 또는 WebSocket 서비스를 사용 하도록 디자인 된 바인딩을 하며 기본적으로 이진 인코딩을 사용 합니다. <xref:System.ServiceModel.NetHttpBinding> 요청-회신 계약 또는 이중 계약 사용 되는지 여부를 감지 하 고 그에 맞게 동작 변경-HTTP 요청-회신 계약 및 Websocket에 대 한 이중 계약에 사용 됩니다. <xref:System.ServiceModel.Channels.WebSocketTransportUsage> 설정을 사용하여 이 동작을 재정의할 수도 있습니다.  
+<xref:System.ServiceModel.NetHttpBinding>은 HTTP 또는 WebSocket 서비스를 사용하도록 디자인된 바인딩이며 기본적으로 이진 인코딩을 사용합니다. <xref:System.ServiceModel.NetHttpBinding>은 해당 바인딩이 HTTP 요청-회신 계약에 사용되는지 이중 계약에 사용되는지를 검색하고 그에 맞게 동작을 변경합니다. 요청-회신 계약에는 HTTP가 사용되고 이중 계약에는 WebSocket이 사용됩니다. <xref:System.ServiceModel.Channels.WebSocketTransportUsage> 설정을 사용하여 이 동작을 재정의할 수도 있습니다.  
   
 1. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Always> -이렇게 하면 Websocket 요청-회신 계약에 대해서도 사용할 수 있습니다.  
   
@@ -18,7 +18,7 @@ ms.locfileid: "59121019"
   
 3. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.WhenDuplex> -이 값은 기본값 및 위에서 설명한 것 처럼 동작 합니다.  
   
- <xref:System.ServiceModel.NetHttpBinding> HTTP 모드 및 WebSocket 모드 둘 다에서 신뢰할 수 있는 세션을 지원합니다. WebSocket 모드에서는 세션이 전송에 의해 제공됩니다.  
+ <xref:System.ServiceModel.NetHttpBinding>은 HTTP 모드 및 WebSocket 모드에서 신뢰할 수 있는 세션을 지원합니다. WebSocket 모드에서는 세션이 전송에 의해 제공됩니다.  
   
 > [!WARNING]
 >  <xref:System.ServiceModel.NetHttpBinding>이 사용되고 바인딩의 TransferMode가 TransferMode.Streamed로 설정된 경우 큰 스트림으로 인해 교착 상태가 발생하고 호출이 시간 초과될 수 있습니다. 이 문제를 해결하려면 보다 작은 메시지를 보내거나 TransferMode.Buffered를 사용하세요.  

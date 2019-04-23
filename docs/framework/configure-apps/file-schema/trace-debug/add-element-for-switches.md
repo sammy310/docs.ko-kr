@@ -1,5 +1,5 @@
 ---
-title: <add> 에 대 한 요소 <switches>
+title: <switches>에 대한 <add> 요소
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/switches/add
@@ -8,10 +8,10 @@ helpviewer_keywords:
 - add element for <switches>
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
 ms.openlocfilehash: d7500620aed1165ff365fee8529230ba252dbc4b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120096"
 ---
 # <a name="add-element-for-switches"></a>\<추가 > 요소에 대 한 \<스위치 >
@@ -37,7 +37,7 @@ ms.locfileid: "59120096"
 |특성|설명|  
 |---------------|-----------------|  
 |**name**|필수 특성입니다.<br /><br /> 스위치의 이름을 지정합니다. 이 특성의 값에 해당 합니다 *displayName* 전환 생성자에 전달 되는 매개 변수입니다.|  
-|**값**|필수 특성입니다.<br /><br /> 스위치의 수준을 지정합니다.|  
+|**value**|필수 특성입니다.<br /><br /> 스위치의 수준을 지정합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 1afd763d41ac3ffd42409ff8d1b8823979ab0c08
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 91d76309fedb2a6f3d877a47f230fda74060107e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713048"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59122891"
 ---
 # <a name="await-c-reference"></a>await(C# 참조)
 `await` 연산자는 비동기 메서드의 작업에 적용되어 대기 중인 작업이 완료될 때까지 메서드의 실행에 일시 중단 지점을 삽입합니다. 작업은 진행 중인 작업을 나타냅니다.  
@@ -68,6 +68,7 @@ TResult result = await AsyncMethodThatReturnsValueTaskTResult();
 앞의 예제에서는 [`async` `Main` 메서드](../../programming-guide/main-and-command-args/index.md)를 지원하는 C# 7.1을 사용합니다. 이전 C# 버전은 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601>를 반환하는 애플리케이션 진입점을 지원하지 않으므로 `async` 한정자를 `Main` 메서드에 적용하고 `GetPageLengthsAsync` 메서드 호출을 기다릴 수 없습니다. 이 경우 <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> 속성의 값을 검색하여 `Main` 메서드가 비동기 작업이 완료될 때까지 대기하도록 할 수 있습니다. 값을 반환하지 않는 작업의 경우 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 메서드를 호출할 수 있습니다. 언어 버전을 선택하는 방법에 대한 자세한 내용은 [C# 언어 버전 선택](../configure-language-version.md)을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
+
 - [Async 및 Await를 사용한 비동기 프로그래밍](../../../csharp/programming-guide/concepts/async/index.md)
 - [연습: Async 및 Await를 사용하여 웹에 액세스](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [async](../../../csharp/language-reference/keywords/async.md)

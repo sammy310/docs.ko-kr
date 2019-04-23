@@ -10,10 +10,10 @@ helpviewer_keywords:
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
 ms.openlocfilehash: 6b178ac6b93205afebb1bea45f1b7e94826cb670
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124841"
 ---
 # <a name="storyboards-overview"></a>Storyboard 개요
@@ -61,10 +61,10 @@ ms.locfileid: "59124841"
   
 |storyboard 시작 방법...|인스턴스별|스타일|컨트롤 템플릿|데이터 템플릿|예제|  
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> 및 <xref:System.Windows.EventTrigger>|예|예|예|예|[스토리보드를 사용하여 속성에 애니메이션 효과 주기](how-to-animate-a-property-by-using-a-storyboard.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> 속성 <xref:System.Windows.Trigger>|아니요|예|예|예|[속성 값 변경 시 애니메이션 트리거](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> 및 <xref:System.Windows.EventTrigger>|예|예|예|예|[Storyboard를 사용하여 속성에 애니메이션 효과 주기](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> 속성 <xref:System.Windows.Trigger>|아니요|예|예|예|[속성 값이 변경될 때 애니메이션 트리거](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> 및 <xref:System.Windows.DataTrigger>|아니요|예|예|예|[방법: 데이터가 변경 될 때 애니메이션 트리거](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
-|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 메서드|예|아니요|아니요|아니요|[스토리보드를 사용하여 속성에 애니메이션 효과 주기](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 메서드|예|아니요|아니요|아니요|[Storyboard를 사용하여 속성에 애니메이션 효과 주기](how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  다음 예제에서는 <xref:System.Windows.Media.Animation.Storyboard> 애니메이션 효과를 주는 합니다 <xref:System.Windows.FrameworkElement.Width%2A> 의 <xref:System.Windows.Shapes.Rectangle> 요소 및 <xref:System.Windows.Media.SolidColorBrush.Color%2A> 의 <xref:System.Windows.Media.SolidColorBrush> 를 그리는 데 <xref:System.Windows.Shapes.Rectangle>.  
   
@@ -276,7 +276,7 @@ ms.locfileid: "59124841"
   
 -   지정할 수 없습니다는 <xref:System.Windows.EventTrigger.SourceName%2A> 에 대 한는 <xref:System.Windows.EventTrigger> 또는 <xref:System.Windows.Trigger>합니다.  
   
--   설정 하려면 동적 리소스 참조 또는 데이터 바인딩 식을 사용할 수 없습니다 <xref:System.Windows.Media.Animation.Storyboard> 또는 애니메이션 속성 값입니다. 있기 때문입니다 내의 모든 항목을 <xref:System.Windows.Style> 스레드로부터 안전 해야 하며 타이밍 시스템 <xref:System.Windows.Freezable.Freeze%2A><xref:System.Windows.Media.Animation.Storyboard> 개체를 스레드로부터 안전 합니다. <xref:System.Windows.Media.Animation.Storyboard> 또는 해당 자식 타임 라인이 동적 리소스 참조 또는 데이터 바인딩 식을 포함 하는 경우 고정 될 수 없습니다. 고정 및 기타에 대 한 자세한 내용은 <xref:System.Windows.Freezable> 기능을 참조 합니다 [Freezable 개체 개요](../advanced/freezable-objects-overview.md)합니다.  
+-   설정 하려면 동적 리소스 참조 또는 데이터 바인딩 식을 사용할 수 없습니다 <xref:System.Windows.Media.Animation.Storyboard> 또는 애니메이션 속성 값입니다. 있기 때문입니다 내의 모든 항목을 <xref:System.Windows.Style> 스레드로부터 안전 해야 하며 타이밍 시스템 <xref:System.Windows.Freezable.Freeze%2A> <xref:System.Windows.Media.Animation.Storyboard> 개체를 스레드로부터 안전 합니다. <xref:System.Windows.Media.Animation.Storyboard> 또는 해당 자식 타임 라인이 동적 리소스 참조 또는 데이터 바인딩 식을 포함 하는 경우 고정 될 수 없습니다. 고정 및 기타에 대 한 자세한 내용은 <xref:System.Windows.Freezable> 기능을 참조 합니다 [Freezable 개체 개요](../advanced/freezable-objects-overview.md)합니다.  
   
 -   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에 대 한 이벤트 처리기를 선언할 수 없습니다 <xref:System.Windows.Media.Animation.Storyboard> 또는 애니메이션 이벤트입니다.  
   
@@ -290,7 +290,7 @@ ms.locfileid: "59124841"
   
 -   합니다 <xref:System.Windows.EventTrigger.SourceName%2A> 에 대 한는 <xref:System.Windows.EventTrigger> 또는 <xref:System.Windows.Trigger> 의 자식 개체만 참조할 수는 <xref:System.Windows.Controls.ControlTemplate>합니다.  
   
--   설정 하려면 동적 리소스 참조 또는 데이터 바인딩 식을 사용할 수 없습니다 <xref:System.Windows.Media.Animation.Storyboard> 또는 애니메이션 속성 값입니다. 있기 때문입니다 내의 모든 항목을 <xref:System.Windows.Controls.ControlTemplate> 스레드로부터 안전 해야 하며 타이밍 시스템 <xref:System.Windows.Freezable.Freeze%2A><xref:System.Windows.Media.Animation.Storyboard> 개체를 스레드로부터 안전 합니다. <xref:System.Windows.Media.Animation.Storyboard> 또는 해당 자식 타임 라인이 동적 리소스 참조 또는 데이터 바인딩 식을 포함 하는 경우 고정 될 수 없습니다. 고정 및 기타에 대 한 자세한 내용은 <xref:System.Windows.Freezable> 기능을 참조 합니다 [Freezable 개체 개요](../advanced/freezable-objects-overview.md)합니다.  
+-   설정 하려면 동적 리소스 참조 또는 데이터 바인딩 식을 사용할 수 없습니다 <xref:System.Windows.Media.Animation.Storyboard> 또는 애니메이션 속성 값입니다. 있기 때문입니다 내의 모든 항목을 <xref:System.Windows.Controls.ControlTemplate> 스레드로부터 안전 해야 하며 타이밍 시스템 <xref:System.Windows.Freezable.Freeze%2A> <xref:System.Windows.Media.Animation.Storyboard> 개체를 스레드로부터 안전 합니다. <xref:System.Windows.Media.Animation.Storyboard> 또는 해당 자식 타임 라인이 동적 리소스 참조 또는 데이터 바인딩 식을 포함 하는 경우 고정 될 수 없습니다. 고정 및 기타에 대 한 자세한 내용은 <xref:System.Windows.Freezable> 기능을 참조 합니다 [Freezable 개체 개요](../advanced/freezable-objects-overview.md)합니다.  
   
 -   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에 대 한 이벤트 처리기를 선언할 수 없습니다 <xref:System.Windows.Media.Animation.Storyboard> 또는 애니메이션 이벤트입니다.  
   

@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 최신 웹 애플리케이�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 3ab7de919ed98df1d3fcda02772ba66f9d6294ae
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1d58f6ef590e798e52730d79e56b8c16830c1712
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978334"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59128390"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC 앱 개발
 
@@ -425,7 +425,6 @@ public void ConfigureServices(IServiceCollection services)
 #### <a name="custom-security"></a>사용자 지정 보안
 
 암호화, 사용자 멤버 자격 또는 토큰 생성 시스템을 "고유하게" 구현하도록 롤링하는 방법에 특히 주의하세요. 여러 상용 및 오픈 소스 대안을 사용할 수 있습니다. 이를 사용하면 사용자 지정 구현보다 보안이 확식하게 향상됩니다.
-
 
 > ### <a name="references--security"></a>참고 자료 - 보안
 >

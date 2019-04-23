@@ -4,12 +4,12 @@ description: ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케�
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 68f88d29a6c88f4ce261a0a2794035d43db1fc0c
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 22cb673f09faf7b0eabcfa5b3f6700d33242d84b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921106"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59122696"
 ---
 # <a name="common-web-application-architectures"></a>일반 웹 애플리케이션 아키텍처
 
@@ -300,7 +300,7 @@ Visual Studio를 사용하여 애플리케이션에 Docker 지원을 추가하�
 >   <https://deviq.com/repository-pattern/>
 > - **클린 아키텍처 솔루션 샘플**  
 >   <https://github.com/ardalis/cleanarchitecture>
-> - **마이크로 서비스 설계 eBook**  
+> - **마이크로 서비스 설계 전자책**  
 >   <https://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]

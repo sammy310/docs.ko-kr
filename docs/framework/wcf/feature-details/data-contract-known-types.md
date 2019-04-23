@@ -10,10 +10,10 @@ helpviewer_keywords:
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
 ms.openlocfilehash: bedf35544454a32ff13856a072779cd70723e989
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129625"
 ---
 # <a name="data-contract-known-types"></a>데이터 계약 알려진 형식
@@ -174,6 +174,6 @@ ms.locfileid: "59129625"
 - <xref:System.Object>
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.DataContractSerializer.KnownTypes%2A>
-- [알려진 유형](../../../../docs/framework/wcf/samples/known-types.md)
+- [알려진 형식](../../../../docs/framework/wcf/samples/known-types.md)
 - [데이터 계약 동등성](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
 - [서비스 계약 디자인](../../../../docs/framework/wcf/designing-service-contracts.md)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: b38526cd-a62a-48cb-822a-e91dfa68e02d
 ms.openlocfilehash: 5eb81fd2a64f06f1252f71e251e58df568e7407c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120681"
 ---
 # <a name="obtaining-a-single-value-from-a-database"></a>데이터베이스에서 단일 값 가져오기

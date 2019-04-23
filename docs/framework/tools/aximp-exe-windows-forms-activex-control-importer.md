@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b7a2725b340c4ecb43861e1b8855fcae425a4b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b7e9401cbd26c62f88ccb4a4b8c2caeb78768d9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521883"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59119199"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows Forms ActiveX 컨트롤 가져오기)
 ActiveX 컨트롤 가져오기를 사용하면 ActiveX 컨트롤에 대한 COM 형식 라이브러리의 형식 정의를 Windows Forms 컨트롤로 변환할 수 있습니다.  
@@ -80,5 +80,6 @@ aximp c:\systemroot\system32\msdxm.ocx
 ```  
   
 ## <a name="see-also"></a>참고 항목
+
 - [도구](../../../docs/framework/tools/index.md)
 - [Ildasm.exe(IL 디스어셈블러)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)

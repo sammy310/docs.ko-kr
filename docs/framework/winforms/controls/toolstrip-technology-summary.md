@@ -8,10 +8,10 @@ helpviewer_keywords:
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
 ms.openlocfilehash: b6537faa3be7ee28a934927fc95100a34a64e176
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120963"
 ---
 # <a name="toolstrip-technology-summary"></a>ToolStrip 기술 요약
@@ -43,7 +43,7 @@ ms.locfileid: "59120963"
   
 -   `ToolStripPanel`을 사용하여 `ToolStrip` 컨트롤 병합.  
   
- `ToolStrip` 에 대 한 확장 가능한 기본 클래스인 `MenuStrip`, `ContextMenuStrip`, 및 `StatusStrip`합니다. 이들 컨트롤은 각 구현이 적절한 동작을 처리하도록 확장된, 일반 동작 및 이벤트 처리를 상속하는 <xref:System.Windows.Forms.ToolStripItem> 컨테이너입니다. <xref:System.Windows.Forms.ToolStripItem>에서 파생되는 컨트롤이 다음 표에 나와 있습니다. 기본 `ToolStrip` 클래스는 이들 컨트롤에 대한 그리기, 사용자 입력 및 끌어서 놓기 이벤트를 처리합니다.  
+ `ToolStrip`는 `MenuStrip`, `ContextMenuStrip` 및 `StatusStrip`의 확장 가능한 기본 클래스입니다. 이들 컨트롤은 각 구현이 적절한 동작을 처리하도록 확장된, 일반 동작 및 이벤트 처리를 상속하는 <xref:System.Windows.Forms.ToolStripItem> 컨테이너입니다. <xref:System.Windows.Forms.ToolStripItem>에서 파생되는 컨트롤이 다음 표에 나와 있습니다. 기본 `ToolStrip` 클래스는 이들 컨트롤에 대한 그리기, 사용자 입력 및 끌어서 놓기 이벤트를 처리합니다.  
   
  `ToolStrip`, `MenuStrip`, `ContextMenuStrip` 및 `StatusStrip` 컨트롤은 이전 도구 모음, 메뉴, 바로 가기 메뉴 및 상태 표시줄 컨트롤을 대체합니다. 이전 버전과의 호환성을 위해 해당 컨트롤이 유지되는 경우에도 마찬가지입니다.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "59120963"
  컨트롤 호스팅의 예제를 참조 하세요. [방법: ToolStripControlHost 사용 하 여 Windows Forms 컨트롤 래핑](how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md)합니다.  
   
 ## <a name="rendering"></a>렌더링  
- <xref:System.Windows.Forms.ToolStrip> 클래스는 다른 Windows Forms 컨트롤과 크게 다른 렌더링 체계를 구현 합니다. 이 체계를 사용하여 스타일과 테마를 쉽게 적용할 수 있습니다.  
+ <xref:System.Windows.Forms.ToolStrip> 클래스는 기타 Windows Forms 컨트롤과 크게 다른 렌더링 체계를 구현합니다. 이 체계를 사용하여 스타일과 테마를 쉽게 적용할 수 있습니다.  
   
  <xref:System.Windows.Forms.ToolStrip> 및 여기에 포함된 모든 <xref:System.Windows.Forms.ToolStripItem> 개체에 스타일을 적용하려면 각 항목에 대한 <xref:System.Windows.Forms.ToolStripItem.Paint> 이벤트를 처리할 필요가 없습니다. 대신에 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 속성을 <xref:System.Windows.Forms.ToolStripRenderMode.Custom>이 아닌 <xref:System.Windows.Forms.ToolStripRenderMode> 값의 하나로 설정할 수 있습니다. 또는 <xref:System.Windows.Forms.ToolStrip.Renderer%2A>를 직접 <xref:System.Windows.Forms.ToolStripRenderer> 클래스에서 상속되는 클래스로 설정할 수 있습니다. 이 속성을 설정하면 자동으로 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>가 설정됩니다.  
   
@@ -99,10 +99,10 @@ ms.locfileid: "59120963"
  렌더링의 예 참조 [방법: 만들기 및 ToolStrip 컨트롤에 Windows Forms에 대 한 사용자 지정 렌더러를 설정](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)합니다.  
   
 ## <a name="styles-and-themes"></a>스타일 및 테마  
- <xref:System.Windows.Forms.ToolStrip> 관련된 클래스에는 재정의 필요 하지 않은 사용자 지정 모양과 비주얼 스타일을 지원 하기는 쉬운 방법을 제공 하 고는 <xref:System.Windows.Forms.ToolStripItem.OnPaint%2A> 각 항목에 대 한 메서드. <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>과 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 및 <xref:System.Windows.Forms.ToolStrip.Renderer%2A> 속성을 사용합니다.  
+ <xref:System.Windows.Forms.ToolStrip> 및 연결된 클래스를 사용하면 각 항목에 대한 <xref:System.Windows.Forms.ToolStripItem.OnPaint%2A> 메서드를 재정의할 필요 없이 시각적 스타일과 사용자 지정 모양을 쉽게 지원할 수 있습니다. <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>과 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 및 <xref:System.Windows.Forms.ToolStrip.Renderer%2A> 속성을 사용합니다.  
   
 ## <a name="rafting-and-docking"></a>래프팅 및 도킹  
- <xref:System.Windows.Forms.ToolStrip> 컨트롤을 래프팅, 도킹 또는 절대적으로 배치할 수 있습니다. <xref:System.Windows.Forms.ToolStrip> 항목에 따라 배치 되며는 <xref:System.Windows.Forms.ToolStrip.LayoutEngine%2A> 컨테이너입니다.  
+ <xref:System.Windows.Forms.ToolStrip> 컨트롤을 래프팅, 도킹 또는 절대적으로 배치할 수 있습니다. <xref:System.Windows.Forms.ToolStrip> 항목은 컨테이너의 <xref:System.Windows.Forms.ToolStrip.LayoutEngine%2A>에 의해 배치됩니다.  
   
  *래프팅* 기능은 도구 모음의 가로 또는 세로 공간을 공유 합니다. Windows 폼에는 <xref:System.Windows.Forms.ToolStripContainer>가 포함될 수 있고, 이 컨테이너에는 폼의 왼쪽, 오른쪽, 위쪽, 아래쪽에 <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip> 및 <xref:System.Windows.Forms.StatusStrip> 컨트롤을 배치 및 래프팅할 패널이 있습니다. 왼쪽 또는 오른쪽 <xref:System.Windows.Forms.ToolStripContainer>에 여러 <xref:System.Windows.Forms.ToolStrip> 컨트롤을 배치하면 컨트롤이 세로로 쌓입니다. 위쪽 또는 아래쪽 <xref:System.Windows.Forms.ToolStripContainer>에 배치하면 가로로 쌓입니다. <xref:System.Windows.Forms.ToolStripContainer>의 가운데 <xref:System.Windows.Forms.ToolStripContentPanel>을 사용하여 기존 컨트롤을 폼에 배치할 수 있습니다.  
   

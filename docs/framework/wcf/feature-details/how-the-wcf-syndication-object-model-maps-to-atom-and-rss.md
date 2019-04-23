@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 0365eb37-98cc-4b13-80fb-f1e78847a748
 ms.openlocfilehash: b5a7f68edc49a02bb99ca05765d4582b798e72ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59127389"
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>WCF 배포 개체 모델을 Atom 및 RSS로 매핑하는 방법
@@ -37,12 +37,12 @@ Windows Communication Foundation (WCF) 배포 서비스를 개발할 때 피드 
   
  이 항목의 코드 샘플에서는 여기에 정의된 두 개 메서드 중 하나를 사용하여 실제 serialization을 수행합니다.  
   
- `SerializeFeed` 배포 피드를 serialize 합니다.  
+ `SerializeFeed`는 배포 피드를 serialize합니다.  
   
  [!code-csharp[SyndicationMapping#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#10)]
  [!code-vb[SyndicationMapping#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#10)]  
   
- `SerializeItem` 배포 항목을 serialize합니다.  
+ `SerializeItem`은 배포 항목을 serialize합니다.  
   
  [!code-csharp[SyndicationMapping#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#11)]
  [!code-vb[SyndicationMapping#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#11)]  
@@ -403,4 +403,4 @@ Windows Communication Foundation (WCF) 배포 서비스를 개발할 때 피드 
 - [배포 아키텍처](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)
 - [방법: 기본 RSS 피드 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)
 - [방법: 기본 Atom 피드 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)
-- [방법: Atom 및 RSS로 피드 공개](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)
+- [방법: Atom로 피드 공개 및 RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)
