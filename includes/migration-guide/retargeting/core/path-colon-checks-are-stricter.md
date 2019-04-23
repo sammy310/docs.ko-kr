@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: a51738fa75ba2dd4574549fce2570df8231c4cae
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59234972"
+---
 ### <a name="path-colon-checks-are-stricter"></a>경로 콜론 검사가 더욱 엄격해짐
 
 |   |   |
@@ -8,4 +16,3 @@
 |버전|4.6.2|
 |형식|대상 변경|
 |영향을 받는 API|<ul><li><xref:System.IO.Path.GetDirectoryName(System.String)?displayProperty=nameWithType></li><li><xref:System.IO.Path.GetPathRoot(System.String)?displayProperty=nameWithType></li></ul>|
-

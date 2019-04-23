@@ -10,11 +10,11 @@ helpviewer_keywords:
 - MDI [Windows Forms], merging menu items
 ms.assetid: ab70c936-b452-4653-b417-17be57bb795b
 ms.openlocfilehash: a335531b090983de4e2b3daccc9f956930cbad6e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59298944"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59771698"
 ---
 # <a name="how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms"></a>방법: (Windows Forms) MDI 부모 창에 MenuStrip 추가
 일부 응용 프로그램에서는 MDI(다중 문서 인터페이스) 자식 창의 종류가 MDI 부모 창과 다를 수 있습니다. 예를 들어 MDI 부모는 스프레드시트이고 MDI 자식은 차트일 수 있습니다. 이 경우 다른 종류의 MDI 자식 창이 활성화될 때 MDI 부모 메뉴의 내용을 MDI 자식 메뉴의 내용으로 업데이트하려고 합니다.  
@@ -29,21 +29,21 @@ ms.locfileid: "59298944"
   
 2. `Form1`에 <xref:System.Windows.Forms.MenuStrip>을 추가하고 <xref:System.Windows.Forms.MenuStrip>의 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 속성을 `true`로 설정합니다.  
   
-3. 설정 합니다 <xref:System.Windows.Forms.ToolStripItem.Visible%2A> 의 속성을 `Form1`<xref:System.Windows.Forms.MenuStrip> 에 `false`.  
+3. `Form1`<xref:System.Windows.Forms.MenuStrip>의 <xref:System.Windows.Forms.ToolStripItem.Visible%2A> 속성을 `false`로 설정합니다.  
   
-4. 최상위 메뉴 항목을 추가 합니다 `Form1`<xref:System.Windows.Forms.MenuStrip> 설정 및 해당 <xref:System.Windows.Forms.Control.Text%2A> 속성을 `&File`입니다.  
+4. `Form1`<xref:System.Windows.Forms.MenuStrip>에 최상위 메뉴 항목을 추가하고 해당 <xref:System.Windows.Forms.Control.Text%2A> 속성을 `&File`로 설정합니다.  
   
 5. `&File` 메뉴 항목에 하위 메뉴 항목을 추가하고 해당 <xref:System.Windows.Forms.Form.Text%2A> 속성을 `&Open`로 설정합니다.  
   
-6. 프로젝트에 폼에 추가 <xref:System.Windows.Forms.MenuStrip> 을 설정 하 고는 폼을 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 의 속성을 `Form2`<xref:System.Windows.Forms.MenuStrip> 에 `true`.  
+6. 프로젝트에 폼을 추가하고, 폼에 <xref:System.Windows.Forms.MenuStrip>을 추가한 다음 `Form2`<xref:System.Windows.Forms.MenuStrip>의 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 속성을 `true`로 설정합니다.  
   
-7. 최상위 메뉴 항목을 추가 합니다 `Form2`<xref:System.Windows.Forms.MenuStrip> 설정 및 해당 <xref:System.Windows.Forms.Form.Text%2A> 속성을 `&Special`입니다.  
+7. `Form2`<xref:System.Windows.Forms.MenuStrip>에 최상위 메뉴 항목을 추가하고 해당 <xref:System.Windows.Forms.Form.Text%2A> 속성을 `&Special`로 설정합니다.  
   
 8. `&Special` 메뉴 항목에 두 개의 하위 메뉴 항목을 추가하고 해당 <xref:System.Windows.Forms.Form.Text%2A> 속성을 각각 `Command&1` 및 `Command&2`로 설정합니다.  
   
 9. `&Special`, `Command&1` 및 `Command&2` 메뉴 항목의 <xref:System.Windows.Forms.MergeAction> 속성을 <xref:System.Windows.Forms.MergeAction.Append>로 설정합니다.  
   
-10. 이벤트 처리기를 만듭니다는 <xref:System.Windows.Forms.Control.Click> 의 이벤트는 `&New`<xref:System.Windows.Forms.ToolStripMenuItem>합니다.  
+10. `&New`<xref:System.Windows.Forms.ToolStripMenuItem>의 <xref:System.Windows.Forms.Control.Click> 이벤트에 대한 이벤트 처리기를 만듭니다.  
   
 11. 이벤트 처리기 내에서 다음 코드 예제와 비슷한 코드를 삽입하여 `Form2`의 새 인스턴스를 만들고 `Form1`의 MDI 자식으로 표시합니다.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "59298944"
     }  
     ```  
   
-12. 다음 코드 예제와 비슷한 코드를 배치 합니다 `&Open`<xref:System.Windows.Forms.ToolStripMenuItem> 이벤트 처리기를 등록 합니다.  
+12. `&Open`<xref:System.Windows.Forms.ToolStripMenuItem>에 다음 코드 예제와 비슷한 코드를 배치하여 이벤트 처리기를 등록합니다.  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(sender As Object, e As _  

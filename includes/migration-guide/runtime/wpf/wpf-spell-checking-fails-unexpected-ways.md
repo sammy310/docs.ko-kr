@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8049bf01bc10c5913fa11b25e49afd1b1317eecc
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 09e3f0e168e0dcbe79d8ee7216f2671c67bfb87e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761401"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59234242"
 ---
 ### <a name="wpf-spell-checking-fails-in-unexpected-ways"></a>예기치 않은 방식으로 WPF 맞춤법 검사가 실패
 
@@ -15,4 +15,3 @@ ms.locfileid: "58761401"
 |범위|Microsoft Edge|
 |버전|4.6.1|
 |형식|런타임|
-

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d00f86c492a7d32344b1067a48c8e53aa2a43426
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 38c774417fc94fa080bf2b82c04d575e9068cdcb
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761334"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59234175"
 ---
 ### <a name="reflection-objects-can-no-longer-be-passed-from-managed-code-to-out-of-process-dcom-clients"></a>더 이상 리플렉션 개체를 관리 코드에서 out-of-process DCOM 클라이언트로 전달할 수 없습니다
 
@@ -15,4 +15,3 @@ ms.locfileid: "58761334"
 |범위|부|
 |버전|4.6|
 |형식|런타임|
-

@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID451
 ms.assetid: 8542382a-689f-4e1b-abc0-c1e2dadb92f4
 ms.openlocfilehash: 7da1de98132f47740e805ed34ff3890f0ba0f889
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334707"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773235"
 ---
 # <a name="property-let-procedure-not-defined-and-property-get-procedure-did-not-return-an-object"></a>Property Let 프로시저가 정의되지 않았고 Property Get 프로시저에서 개체를 반환하지 않았습니다.
 특정 속성, 메서드 및 작업에만 적용할 수 `Collection` 개체입니다. 작업 또는 속성 컬렉션에는 지정 했지만 개체 컬렉션이 아닙니다.  

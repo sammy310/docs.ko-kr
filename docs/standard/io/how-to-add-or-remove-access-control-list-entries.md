@@ -16,11 +16,11 @@ ms.assetid: 53758b39-bd9b-4640-bb04-cad5ed8d0abf
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 351d8325cc0fc1a1b551b6d513cad02f1291daab
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59308018"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772949"
 ---
 # <a name="how-to-add-or-remove-access-control-list-entries-net-framework-only"></a>방법: 액세스 제어 목록 항목 추가 또는 제거(.NET Framework에만 해당)
 파일 또는 디렉터리에서 ACL(액세스 제어 목록) 항목을 추가 또는 제거하려면, 파일 또는 디렉터리에서 <xref:System.Security.AccessControl.FileSecurity> 또는 <xref:System.Security.AccessControl.DirectorySecurity> 개체를 가져옵니다. 개체를 수정한 다음, 파일이나 디렉터리에 다시 적용합니다.  

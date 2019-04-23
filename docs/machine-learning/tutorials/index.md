@@ -4,11 +4,11 @@ description: 사용자 지정 AI 솔루션을 빌드하고 .NET 애플리케이�
 ms.custom: seodec18
 ms.date: 04/05/2019
 ms.openlocfilehash: 1f3824e409c21514bfb0c5743c6d9f36419ecb06
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59427575"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59771857"
 ---
 # <a name="net-machine-learning-tutorials---mlnet"></a>.NET 기계 학습 자습서 - ML.NET
 
