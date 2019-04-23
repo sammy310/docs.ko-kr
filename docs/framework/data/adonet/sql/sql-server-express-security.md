@@ -3,10 +3,10 @@ title: SQL Server Express 보안
 ms.date: 03/30/2017
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
 ms.openlocfilehash: f4291de89b397f60aedd35b89d6aa3130d348be5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174553"
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express 보안
@@ -31,7 +31,7 @@ Microsoft SQL Server Express Edition(SQL Server Express)은 Microsoft SQL Server
   
 |||  
 |-|-|  
-|[Microsoft SQL Server 2005 Express Edition 온라인 설명서](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|SQL Server 2005 Express Edition의 전체 설명서가 있습니다.|  
+|[Microsoft SQL Server 2005 Express Edition Books Online](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|SQL Server 2005 Express Edition의 전체 설명서가 있습니다.|  
 |[비관리자 용 사용자 인스턴스](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) SQL Server 온라인 설명서의|사용자 인스턴스를 만들고 배포하는 방법을 설명합니다.|  
 |[SQL Server Express 사용자 인스턴스](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|ADO.NET 응용 프로그램에서 사용할 수 있는 사용자 인스턴스 기능에 대해 설명합니다. 사용자 인스턴스를 사용하는 방법, <xref:System.Data.SqlClient.SqlConnection>을 통해 사용자 인스턴스에 연결하는 방법, 사용자 인스턴스 수명 및 사용자 인스턴스 시나리오에 대해 설명합니다.|  
   
