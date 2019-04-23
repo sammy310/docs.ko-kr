@@ -18,34 +18,34 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bae4dccacfa092243c7e0b1a2e6daad92b51d933
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59090383"
 ---
-# <a name="imetadataemit2resetenclog-method"></a><span data-ttu-id="2ea9a-102">IMetaDataEmit2::ResetENCLog 메서드</span><span class="sxs-lookup"><span data-stu-id="2ea9a-102">IMetaDataEmit2::ResetENCLog Method</span></span>
-<span data-ttu-id="2ea9a-103">편집 하며 계속 하기 로그를 다시 설정 하 고 새 세션을 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="2ea9a-103">Resets the edit-and-continue log and starts a new session.</span></span>  
+# <a name="imetadataemit2resetenclog-method"></a><span data-ttu-id="c1611-102">IMetaDataEmit2::ResetENCLog 메서드</span><span class="sxs-lookup"><span data-stu-id="c1611-102">IMetaDataEmit2::ResetENCLog Method</span></span>
+<span data-ttu-id="c1611-103">편집 하며 계속 하기 로그를 다시 설정 하 고 새 세션을 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="c1611-103">Resets the edit-and-continue log and starts a new session.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2ea9a-104">구문</span><span class="sxs-lookup"><span data-stu-id="2ea9a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c1611-104">구문</span><span class="sxs-lookup"><span data-stu-id="c1611-104">Syntax</span></span>  
   
 ```  
 HRESULT ResetENCLog ();  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2ea9a-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="2ea9a-105">Parameters</span></span>  
- `ResetENCLog` <span data-ttu-id="2ea9a-106">매개 변수를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="2ea9a-106">takes no parameters.</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c1611-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="c1611-105">Parameters</span></span>  
+ <span data-ttu-id="c1611-106">`ResetENCLog` 매개 변수를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="c1611-106">`ResetENCLog` takes no parameters.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2ea9a-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="2ea9a-107">Requirements</span></span>  
- <span data-ttu-id="2ea9a-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="2ea9a-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c1611-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c1611-107">Requirements</span></span>  
+ <span data-ttu-id="c1611-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="c1611-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2ea9a-109">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="2ea9a-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c1611-109">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c1611-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="2ea9a-110">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="2ea9a-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c1611-110">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="c1611-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="2ea9a-111">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="2ea9a-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="c1611-111">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c1611-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2ea9a-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="2ea9a-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c1611-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="c1611-112">See also</span></span>
 
-- [<span data-ttu-id="2ea9a-113">IMetaDataEmit2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="2ea9a-113">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="2ea9a-114">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="2ea9a-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="c1611-113">IMetaDataEmit2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c1611-113">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="c1611-114">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c1611-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4dac7e38d1e767a3edeef932a0c0916daffe24b8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59092034"
 ---
-# <a name="icorprofilerinfo2getboxclasslayout-method"></a><span data-ttu-id="af8a8-102">ICorProfilerInfo2::GetBoxClassLayout 메서드</span><span class="sxs-lookup"><span data-stu-id="af8a8-102">ICorProfilerInfo2::GetBoxClassLayout Method</span></span>
-<span data-ttu-id="af8a8-103">지정 된 값 형식 위치한 boxed 형식이 됩니다 하는 경우에 대 한 정보를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="af8a8-103">Gets information about where the specified value type is located when it is boxed.</span></span>  
+# <a name="icorprofilerinfo2getboxclasslayout-method"></a><span data-ttu-id="4ae5c-102">ICorProfilerInfo2::GetBoxClassLayout 메서드</span><span class="sxs-lookup"><span data-stu-id="4ae5c-102">ICorProfilerInfo2::GetBoxClassLayout Method</span></span>
+<span data-ttu-id="4ae5c-103">지정 된 값 형식 위치한 boxed 형식이 됩니다 하는 경우에 대 한 정보를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="4ae5c-103">Gets information about where the specified value type is located when it is boxed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="af8a8-104">구문</span><span class="sxs-lookup"><span data-stu-id="af8a8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4ae5c-104">구문</span><span class="sxs-lookup"><span data-stu-id="4ae5c-104">Syntax</span></span>  
   
 ```  
 HRESULT GetBoxClassLayout(  
@@ -35,26 +35,26 @@ HRESULT GetBoxClassLayout(
     [out] ULONG32 *pBufferOffset);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="af8a8-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="af8a8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4ae5c-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="4ae5c-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="af8a8-106">[in] Boxed 값 형식을 설명 하는 클래스의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="af8a8-106">[in] The ID of the class that describes the value type that is boxed.</span></span>  
+ <span data-ttu-id="4ae5c-106">[in] Boxed 값 형식을 설명 하는 클래스의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="4ae5c-106">[in] The ID of the class that describes the value type that is boxed.</span></span>  
   
  `pBufferOffset`  
- <span data-ttu-id="af8a8-107">[out] 값 형식의 boxed 개체 ID 포인터에 상대적인 오프셋을 나타내는 정수입니다.</span><span class="sxs-lookup"><span data-stu-id="af8a8-107">[out] An integer that is the offset, relative to the boxed object ID pointer, of the value type.</span></span>  
+ <span data-ttu-id="4ae5c-107">[out] 값 형식의 boxed 개체 ID 포인터에 상대적인 오프셋을 나타내는 정수입니다.</span><span class="sxs-lookup"><span data-stu-id="4ae5c-107">[out] An integer that is the offset, relative to the boxed object ID pointer, of the value type.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="af8a8-108">설명</span><span class="sxs-lookup"><span data-stu-id="af8a8-108">Remarks</span></span>  
- <span data-ttu-id="af8a8-109">`pBufferOffset` 값 상자 내에서 값 형식의 위치입니다.</span><span class="sxs-lookup"><span data-stu-id="af8a8-109">The `pBufferOffset` value is the location of the value type within a box.</span></span> <span data-ttu-id="af8a8-110">후 `pBufferOffset` 적용 되는 boxed 개체에 값 형식의 클래스 레이아웃에 사용할 수 개체의 값을 해석 합니다.</span><span class="sxs-lookup"><span data-stu-id="af8a8-110">After `pBufferOffset` is applied to a boxed object, the value type's class layout can be used to interpret the object's value.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4ae5c-108">설명</span><span class="sxs-lookup"><span data-stu-id="4ae5c-108">Remarks</span></span>  
+ <span data-ttu-id="4ae5c-109">`pBufferOffset` 값 상자 내에서 값 형식의 위치입니다.</span><span class="sxs-lookup"><span data-stu-id="4ae5c-109">The `pBufferOffset` value is the location of the value type within a box.</span></span> <span data-ttu-id="4ae5c-110">후 `pBufferOffset` 적용 되는 boxed 개체에 값 형식의 클래스 레이아웃에 사용할 수 개체의 값을 해석 합니다.</span><span class="sxs-lookup"><span data-stu-id="4ae5c-110">After `pBufferOffset` is applied to a boxed object, the value type's class layout can be used to interpret the object's value.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="af8a8-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="af8a8-111">Requirements</span></span>  
- <span data-ttu-id="af8a8-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="af8a8-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4ae5c-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4ae5c-111">Requirements</span></span>  
+ <span data-ttu-id="4ae5c-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="4ae5c-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="af8a8-113">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="af8a8-113">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="4ae5c-113">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="4ae5c-113">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="af8a8-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="af8a8-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4ae5c-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4ae5c-114">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="af8a8-115">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="af8a8-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="4ae5c-115">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4ae5c-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="af8a8-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="af8a8-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4ae5c-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="4ae5c-116">See also</span></span>
 
-- [<span data-ttu-id="af8a8-117">ICorProfilerInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="af8a8-117">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="af8a8-118">ICorProfilerInfo2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="af8a8-118">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [<span data-ttu-id="4ae5c-117">ICorProfilerInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4ae5c-117">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="4ae5c-118">ICorProfilerInfo2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4ae5c-118">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
