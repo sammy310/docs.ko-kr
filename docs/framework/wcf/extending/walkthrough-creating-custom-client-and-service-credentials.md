@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
 ms.openlocfilehash: db137eb84108c6adbbf04a380934bb6da6936d61
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343053"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>연습: 사용자 지정 클라이언트 및 서비스 자격 증명 만들기
@@ -40,7 +40,7 @@ ms.locfileid: "59343053"
 ## <a name="first-in-a-series"></a>시리즈의 첫 번째 단계  
  사용자 지정 자격 증명 클래스를 만드는 이므로 첫 번째 단계만에 프로 비전 하는 자격 증명, 보안 토큰 serialization 또는 인증에 대 한 WCF 동작을 변경 하려면 자격 증명을 사용자 지정에 대 한 이유는 합니다. 이 단원의 다른 항목에서는 사용자 지정 serializer 및 인증자를 만드는 방법에 대해 설명합니다. 이와 관련하여 사용자 지정 자격 증명 클래스를 만드는 것이 이 시리즈의 첫 번째 항목입니다. 후속 작업(사용자 지정 serializer 및 인증자 만들기)은 사용자 지정 자격 증명을 만든 이후에야 수행할 수 있습니다. 이 항목을 기초로 한 추가 항목은 다음과 같습니다.  
   
--   [방법: 사용자 지정 보안 토큰 공급 기업 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+-   [방법: 사용자 지정 보안 토큰 공급자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
   
 -   [방법: 사용자 지정 보안 토큰 인증자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
   
@@ -186,6 +186,6 @@ ms.locfileid: "59343053"
 - <xref:System.IdentityModel.Selectors.SecurityTokenManager>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement>
-- [방법: 사용자 지정 보안 토큰 공급 기업 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [방법: 사용자 지정 보안 토큰 공급자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
 - [방법: 사용자 지정 보안 토큰 인증자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
 - [방법: 사용자 지정 토큰 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)

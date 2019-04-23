@@ -9,10 +9,10 @@ ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7a60f03d85997d20b54366360f104519c9c75f5e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343872"
 ---
 # <a name="net-framework-cryptography-model"></a>.NET Framework 암호화 모델
@@ -42,7 +42,7 @@ ms.locfileid: "59343872"
   
 5. <xref:System.Security.Cryptography.TripleDES>  
   
- <xref:System.Security.Cryptography.Aes> 두 클래스에서 상속 됩니다. <xref:System.Security.Cryptography.AesCryptoServiceProvider> 고 <xref:System.Security.Cryptography.AesManaged>입니다. <xref:System.Security.Cryptography.AesCryptoServiceProvider> 클래스는 Aes의 Windows CAPI(암호화 API) 구현에 대한 래퍼인 반면, <xref:System.Security.Cryptography.AesManaged> 클래스는 완전히 관리 코드로 작성됩니다. 관리되는 구현 및 CAPI 구현 외에도 세 번째 유형의 구현인 CNG(Cryptography Next Generation)가 있습니다. CNG 알고리즘의 한 예는 <xref:System.Security.Cryptography.ECDiffieHellmanCng>입니다. CNG 알고리즘은 Windows Vista 이상에서 사용할 수 있습니다.  
+ <xref:System.Security.Cryptography.Aes>는 두 클래스 <xref:System.Security.Cryptography.AesCryptoServiceProvider> 및 <xref:System.Security.Cryptography.AesManaged>에 상속됩니다. <xref:System.Security.Cryptography.AesCryptoServiceProvider> 클래스는 Aes의 Windows CAPI(암호화 API) 구현에 대한 래퍼인 반면, <xref:System.Security.Cryptography.AesManaged> 클래스는 완전히 관리 코드로 작성됩니다. 관리되는 구현 및 CAPI 구현 외에도 세 번째 유형의 구현인 CNG(Cryptography Next Generation)가 있습니다. CNG 알고리즘의 한 예는 <xref:System.Security.Cryptography.ECDiffieHellmanCng>입니다. CNG 알고리즘은 Windows Vista 이상에서 사용할 수 있습니다.  
   
  가장 적합한 구현을 선택할 수 있습니다.  관리되는 구현은 .NET Framework를 지원하는 모든 플랫폼에서 사용할 수 있습니다.  CAPI 구현은 이전 운영 체제에서 사용할 수 있으며 더 이상 개발되지 않습니다. CNG는 새로운 개발이 수행되는 최신 구현입니다. 그러나 관리되는 구현은 FIPS(Federal Information Processing Standards)에서 인증되지 않았으며 래퍼 클래스보다 느릴 수 있습니다.  
   
@@ -89,4 +89,4 @@ ms.locfileid: "59343872"
   
 ## <a name="see-also"></a>참고자료
 
-- [암호화 서비스](../../../docs/standard/security/cryptographic-services.md)
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

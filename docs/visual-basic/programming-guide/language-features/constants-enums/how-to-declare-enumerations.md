@@ -7,16 +7,16 @@ helpviewer_keywords:
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
 ms.openlocfilehash: f168d6d9cd6970353e75fa35a7e52cc7156fda72
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343343"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>방법: 열거형 (Visual Basic)를 선언 합니다.
 사용 하 여 열거형을 만듭니다는 `Enum` 클래스 또는 모듈을 선언 섹션에서 설명 합니다. 메서드 내에서 열거형을 선언할 수 없습니다. 적절 한 수준의 액세스를 지정 하려면 `Private`, `Protected`를 `Friend`, 또는 `Public`합니다.  
   
- `Enum` 형식에는 이름, 내부 형식 및 필드의 집합을 각각 나타내는 상수입니다. 이름은 유효한 Visual Basic.NET 한정자 여야 합니다. 기본 형식은 정수 형식 중 하나 여야 합니다-`Byte`, `Short`하십시오 `Long` 또는 `Integer`. `Integer` 기본값은입니다. 열거는 항상 강력한 형식이 지정 되며 정수 숫자 형식으로 서로 바꿔 사용할 수 없습니다.  
+ `Enum` 형식에는 이름, 내부 형식 및 필드의 집합을 각각 나타내는 상수입니다. 이름은 유효한 Visual Basic.NET 한정자 여야 합니다. 기본 형식은 정수 형식 중 하나 여야 합니다-`Byte`, `Short`하십시오 `Long` 또는 `Integer`. 기본값은 `Integer`입니다. 열거는 항상 강력한 형식이 지정 되며 정수 숫자 형식으로 서로 바꿔 사용할 수 없습니다.  
   
  열거형 부동 소수점 값을 가질 수 없습니다. 열거형에는 부동 소수점 값을 할당 되 면 `Option Strict On`, 컴파일러 오류가 발생 합니다. 경우 `Option Strict` 됩니다 `Off`, 값을 자동으로 변환 되며는 `Enum` 형식입니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "59343343"
 - [열거형 및 이름 한정](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
 - [방법: 열거형 멤버 참조](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
 - [방법: Visual Basic에서 열거형 반복](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
-- [방법: 열거형 값과 연결된 문자열 확인](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)
+- [방법: 열거형 값과 연결 된 문자열 확인](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)
 - [열거형을 사용하는 경우](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
 - [상수 개요](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
 - [상수 및 리터럴 데이터 형식](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)

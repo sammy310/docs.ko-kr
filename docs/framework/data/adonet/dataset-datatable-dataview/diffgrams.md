@@ -3,10 +3,10 @@ title: DiffGram
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
 ms.openlocfilehash: 048c5331028bbe2bb232302637dbb12bcdd2adc3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313517"
 ---
 # <a name="diffgrams"></a>DiffGram
@@ -87,14 +87,14 @@ DiffGram은 현재 및 원래의 데이터 요소 버전을 식별하는 XML 형
 |**parentId**|요소를 식별 하는 **\<** ***DataInstance*** **>** 블록은 현재 요소의 부모 요소입니다. 값을 **diffgr: parentid** 주석 형태로 *[TableName] [RowIdentifier]* 합니다. 예: `<Orders diffgr:parentId="Customers1">`|  
 |**hasChanges**|행을 식별 합니다 **\<** ***DataInstance*** **>** 수정 된 것을 차단 합니다. 합니다 **hasChanges** 주석은 다음 두 값 중 하나일 수 있습니다.<br /><br /> **inserted**<br /> 하 게 식별 하는 **Added** 행입니다.<br /><br /> **modified**<br /> 하 게 식별 하는 **Modified** 포함 된 행은 **원래** 행 버전이  **\<diffgr: 전에 >** 블록. **Deleted** 행는 **원래** 행 버전이 합니다  **\<diffgr: 하기 전에 >** 블록 있지만 합니다 주석이추가된요소가없습니다**\<** ***DataInstance*** **>** 블록입니다.|  
 |**hasErrors**|행을 식별 합니다 **\<** ***DataInstance*** **>** 블록을 **RowError**합니다. 오류 요소에 배치 되는  **\<diffgr:errors >** 블록입니다.|  
-|**Error**|텍스트를 포함 합니다 **RowError** 의 특정 요소에 대해를  **\<diffgr:errors >** 블록입니다.|  
+|**오류**|텍스트를 포함 합니다 **RowError** 의 특정 요소에 대해를  **\<diffgr:errors >** 블록입니다.|  
   
  <xref:System.Data.DataSet>에는 자신의 내용을 DiffGram으로 읽거나 작성할 때 추가 주석이 포함됩니다. 다음 표에서 네임 스페이스에 정의 된 이러한 추가 주석에 **urn: 스키마-microsoft-com:xml-msdata**합니다.  
   
 |주석|설명|  
 |----------------|-----------------|  
 |**RowOrder**|원래 데이터의 행 순서를 유지하며 특정 <xref:System.Data.DataTable>에 있는 행의 인덱스를 식별합니다.|  
-|**Hidden**|것으로 열을 식별 하는 **ColumnMapping** 속성으로 설정 **MappingType.Hidden**합니다. 특성의 형식으로 기록 됩니다 **msdata: 숨겨진** *[ColumnName]*= "*값*"입니다. 예: `<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`<br /><br /> 데이터가 있는 숨겨진 열만 DiffGram 특성으로 작성됩니다. 데이터가 없는 숨겨진 열은 무시됩니다.|  
+|**숨김**|것으로 열을 식별 하는 **ColumnMapping** 속성으로 설정 **MappingType.Hidden**합니다. 특성의 형식으로 기록 됩니다 **msdata: 숨겨진** *[ColumnName]*= "*값*"입니다. 예: `<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`<br /><br /> 데이터가 있는 숨겨진 열만 DiffGram 특성으로 작성됩니다. 데이터가 없는 숨겨진 열은 무시됩니다.|  
   
 ## <a name="sample-diffgram"></a>샘플 DiffGram  
  다음은 DiffGram 형식의 예제입니다. 이 예제에서는 변경 사항이 커밋되기 전에 테이블에 있는 행을 업데이트한 결과를 보여 줍니다. CustomerID가 "ALFKI"인 행이 수정되었지만 업데이트되지는 않았습니다. 결과적으로를 **현재** 사용 하 여 행을 **diffgr: id** "Customers1"에서 합니다 **\<** ***DataInstance*** **>** 블록 및 **원래** 사용 하 여 행을 **diffgr: id** "Customers1"에서 합니다  **\<diffgr: 전에 >** 블록입니다. 가 "ANATR" 인 CustomerID 행을 **RowError**이므로 주석이 `diffgr:hasErrors="true"` 에 관련된 요소가 이며 합니다  **\<diffgr:errors >** 블록입니다.  
@@ -134,7 +134,7 @@ DiffGram은 현재 및 원래의 데이터 요소 버전을 식별하는 XML 형
 ## <a name="see-also"></a>참고자료
 
 - [데이터 집합에서 XML 사용](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [XML에서 데이터 집합 로드](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [데이터 집합 콘텐츠를 XML 데이터로 작성](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
-- [DataSets, DataTables 및 DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [XML에서 데이터 세트 로드](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
+- [데이터 세트 콘텐츠를 XML 데이터로 작성](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
+- [DataSet, DataTable 및 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

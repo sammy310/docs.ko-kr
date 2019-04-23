@@ -10,10 +10,10 @@ helpviewer_keywords:
 - GDI+, rendering existing images
 ms.assetid: c128b79a-3e31-47d8-9e66-3470f570a056
 ms.openlocfilehash: e038da545bb3f56cc757710bcaa93aa2c86bfa67
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342552"
 ---
 # <a name="how-to-render-images-with-gdi"></a>방법: GDI+를 사용하여 이미지 렌더링
@@ -86,7 +86,7 @@ ms.locfileid: "59342552"
 - [그래픽 프로그래밍 시작](getting-started-with-graphics-programming.md)
 - [방법: 그리는 데 필요한 그래픽 개체 만들기](how-to-create-graphics-objects-for-drawing.md)
 - [GDI+의 펜, 선 및 사각형](pens-lines-and-rectangles-in-gdi.md)
-- [방법: Windows Form에서 텍스트 그리기](how-to-draw-text-on-a-windows-form.md)
+- [방법: Windows Form에 텍스트 그리기](how-to-draw-text-on-a-windows-form.md)
 - [Windows Forms의 그래픽 및 그리기](graphics-and-drawing-in-windows-forms.md)
-- [선 또는 닫힌 그림 그리기](/cpp/windows/drawing-lines-or-closed-figures-image-editor-for-icons)
+- [선 또는 닫힌된 그림 그리기](/cpp/windows/drawing-lines-or-closed-figures-image-editor-for-icons)
 - [아이콘에 대한 이미지 편집기](/cpp/windows/image-editor-for-icons)
