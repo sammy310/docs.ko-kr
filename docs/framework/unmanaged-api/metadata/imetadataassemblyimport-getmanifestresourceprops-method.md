@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ba99d84686974b425bcdee0bbf4770e4843e1351
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59081664"
 ---
-# <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a><span data-ttu-id="0e647-102">IMetaDataAssemblyImport::GetManifestResourceProps 메서드</span><span class="sxs-lookup"><span data-stu-id="0e647-102">IMetaDataAssemblyImport::GetManifestResourceProps Method</span></span>
-<span data-ttu-id="0e647-103">지정 된 메타 데이터 서명 사용 하 여 매니페스트 리소스의 속성 집합을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="0e647-103">Gets the set of properties of the manifest resource with the specified metadata signature.</span></span>  
+# <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a><span data-ttu-id="1de84-102">IMetaDataAssemblyImport::GetManifestResourceProps 메서드</span><span class="sxs-lookup"><span data-stu-id="1de84-102">IMetaDataAssemblyImport::GetManifestResourceProps Method</span></span>
+<span data-ttu-id="1de84-103">지정 된 메타 데이터 서명 사용 하 여 매니페스트 리소스의 속성 집합을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="1de84-103">Gets the set of properties of the manifest resource with the specified metadata signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0e647-104">구문</span><span class="sxs-lookup"><span data-stu-id="0e647-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1de84-104">구문</span><span class="sxs-lookup"><span data-stu-id="1de84-104">Syntax</span></span>  
   
 ```  
 HRESULT GetManifestResourceProps (  
@@ -41,37 +41,37 @@ HRESULT GetManifestResourceProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0e647-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="0e647-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1de84-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="1de84-105">Parameters</span></span>  
  `mdmr`  
- <span data-ttu-id="0e647-106">[in] `mdManifestResource` 속성을 검색할 원본에 대 한 리소스를 나타내는 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="0e647-106">[in] An `mdManifestResource` token that represents the resource for which to get the properties.</span></span>  
+ <span data-ttu-id="1de84-106">[in] `mdManifestResource` 속성을 검색할 원본에 대 한 리소스를 나타내는 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="1de84-106">[in] An `mdManifestResource` token that represents the resource for which to get the properties.</span></span>  
   
  `szName`  
- <span data-ttu-id="0e647-107">[out] 리소스의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="0e647-107">[out] The name of the resource.</span></span>  
+ <span data-ttu-id="1de84-107">[out] 리소스의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="1de84-107">[out] The name of the resource.</span></span>  
   
  `cchName`  
- <span data-ttu-id="0e647-108">[in] 와이드 문자에서 크기의 `szName`합니다.</span><span class="sxs-lookup"><span data-stu-id="0e647-108">[in] The size, in wide chars, of `szName`.</span></span>  
+ <span data-ttu-id="1de84-108">[in] 와이드 문자에서 크기의 `szName`합니다.</span><span class="sxs-lookup"><span data-stu-id="1de84-108">[in] The size, in wide chars, of `szName`.</span></span>  
   
  `pchName`  
- <span data-ttu-id="0e647-109">[out] 에 실제로 반환 된 와이드 문자 수에 대 한 포인터 `szName`합니다.</span><span class="sxs-lookup"><span data-stu-id="0e647-109">[out] A pointer to the number of wide chars actually returned in `szName`.</span></span>  
+ <span data-ttu-id="1de84-109">[out] 에 실제로 반환 된 와이드 문자 수에 대 한 포인터 `szName`합니다.</span><span class="sxs-lookup"><span data-stu-id="1de84-109">[out] A pointer to the number of wide chars actually returned in `szName`.</span></span>  
   
  `ptkImplementation`  
- <span data-ttu-id="0e647-110">[out] 에 대 한 포인터를 `mdFile` 토큰 또는 `mdAssemblyRef` 리소스가 포함 된 파일 또는 어셈블리를 각각 나타내는 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="0e647-110">[out] A pointer to an `mdFile` token or an `mdAssemblyRef` token that represents the file or assembly, respectively, that contains the resource.</span></span>  
+ <span data-ttu-id="1de84-110">[out] 에 대 한 포인터를 `mdFile` 토큰 또는 `mdAssemblyRef` 리소스가 포함 된 파일 또는 어셈블리를 각각 나타내는 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="1de84-110">[out] A pointer to an `mdFile` token or an `mdAssemblyRef` token that represents the file or assembly, respectively, that contains the resource.</span></span>  
   
  `pdwOffset`  
- <span data-ttu-id="0e647-111">[out] 파일 내에서 리소스의 시작 부분 까지의 오프셋을 지정 하는 값에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="0e647-111">[out] A pointer to a value that specifies the offset to the beginning of the resource within the file.</span></span>  
+ <span data-ttu-id="1de84-111">[out] 파일 내에서 리소스의 시작 부분 까지의 오프셋을 지정 하는 값에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="1de84-111">[out] A pointer to a value that specifies the offset to the beginning of the resource within the file.</span></span>  
   
  `pdwResourceFlags`  
- <span data-ttu-id="0e647-112">[out] 리소스에 적용할 메타 데이터를 설명 하는 플래그에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="0e647-112">[out] A pointer to flags that describe the metadata applied to a resource.</span></span> <span data-ttu-id="0e647-113">플래그 값은 하나 이상의 조합 [CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) 값입니다.</span><span class="sxs-lookup"><span data-stu-id="0e647-113">The flags value is a combination of one or more [CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) values.</span></span>  
+ <span data-ttu-id="1de84-112">[out] 리소스에 적용할 메타 데이터를 설명 하는 플래그에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="1de84-112">[out] A pointer to flags that describe the metadata applied to a resource.</span></span> <span data-ttu-id="1de84-113">플래그 값은 하나 이상의 조합 [CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) 값입니다.</span><span class="sxs-lookup"><span data-stu-id="1de84-113">The flags value is a combination of one or more [CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) values.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0e647-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="0e647-114">Requirements</span></span>  
- <span data-ttu-id="0e647-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="0e647-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1de84-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="1de84-114">Requirements</span></span>  
+ <span data-ttu-id="1de84-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="1de84-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0e647-116">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="0e647-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="1de84-116">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="1de84-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="0e647-117">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="0e647-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="1de84-117">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="1de84-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="0e647-118">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="0e647-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="1de84-118">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1de84-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0e647-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="0e647-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1de84-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="1de84-119">See also</span></span>
 
-- [<span data-ttu-id="0e647-120">IMetaDataAssemblyImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0e647-120">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="1de84-120">IMetaDataAssemblyImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="1de84-120">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

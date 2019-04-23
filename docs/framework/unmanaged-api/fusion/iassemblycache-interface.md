@@ -17,33 +17,33 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9fc5f3a3d5bc5699a596bcc648a7153190c130f0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59075637"
 ---
-# <a name="iassemblycache-interface"></a><span data-ttu-id="23061-102">IAssemblyCache 인터페이스</span><span class="sxs-lookup"><span data-stu-id="23061-102">IAssemblyCache Interface</span></span>
-<span data-ttu-id="23061-103">Fusion 기술에서 사용 하 여 전역 어셈블리 캐시를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="23061-103">Represents the global assembly cache for use by the fusion technology.</span></span>  
+# <a name="iassemblycache-interface"></a><span data-ttu-id="b48b2-102">IAssemblyCache 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b48b2-102">IAssemblyCache Interface</span></span>
+<span data-ttu-id="b48b2-103">Fusion 기술에서 사용 하 여 전역 어셈블리 캐시를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="b48b2-103">Represents the global assembly cache for use by the fusion technology.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="23061-104">메서드</span><span class="sxs-lookup"><span data-stu-id="23061-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="b48b2-104">메서드</span><span class="sxs-lookup"><span data-stu-id="b48b2-104">Methods</span></span>  
   
-|<span data-ttu-id="23061-105">메서드</span><span class="sxs-lookup"><span data-stu-id="23061-105">Method</span></span>|<span data-ttu-id="23061-106">설명</span><span class="sxs-lookup"><span data-stu-id="23061-106">Description</span></span>|  
+|<span data-ttu-id="b48b2-105">메서드</span><span class="sxs-lookup"><span data-stu-id="b48b2-105">Method</span></span>|<span data-ttu-id="b48b2-106">설명</span><span class="sxs-lookup"><span data-stu-id="b48b2-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="23061-107">CreateAssemblyCacheItem 메서드</span><span class="sxs-lookup"><span data-stu-id="23061-107">CreateAssemblyCacheItem Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblycacheitem-method.md)|<span data-ttu-id="23061-108">새 참조를 가져옵니다 [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="23061-108">Gets a reference to a new [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md).</span></span>|  
-|[<span data-ttu-id="23061-109">CreateAssemblyScavenger 메서드</span><span class="sxs-lookup"><span data-stu-id="23061-109">CreateAssemblyScavenger Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblyscavenger-method.md)|<span data-ttu-id="23061-110">Fusion 기술에서 내부 용도로 예약 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="23061-110">Reserved for internal use by the fusion technology.</span></span>|  
-|[<span data-ttu-id="23061-111">InstallAssembly 메서드</span><span class="sxs-lookup"><span data-stu-id="23061-111">InstallAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-installassembly-method.md)|<span data-ttu-id="23061-112">전역 어셈블리 캐시에 지정된 된 어셈블리를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="23061-112">Installs the specified assembly in the global assembly cache.</span></span>|  
-|[<span data-ttu-id="23061-113">QueryAssemblyInfo 메서드</span><span class="sxs-lookup"><span data-stu-id="23061-113">QueryAssemblyInfo Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-queryassemblyinfo-method.md)|<span data-ttu-id="23061-114">지정된 된 어셈블리에 대 한 요청 된 데이터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="23061-114">Gets the requested data about the specified assembly.</span></span>|  
-|[<span data-ttu-id="23061-115">UninstallAssembly 메서드</span><span class="sxs-lookup"><span data-stu-id="23061-115">UninstallAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-uninstallassembly-method.md)|<span data-ttu-id="23061-116">전역 어셈블리 캐시에서 지정된 된 어셈블리를 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="23061-116">Uninstalls the specified assembly from the global assembly cache.</span></span>|  
+|[<span data-ttu-id="b48b2-107">CreateAssemblyCacheItem 메서드</span><span class="sxs-lookup"><span data-stu-id="b48b2-107">CreateAssemblyCacheItem Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblycacheitem-method.md)|<span data-ttu-id="b48b2-108">새 참조를 가져옵니다 [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b48b2-108">Gets a reference to a new [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md).</span></span>|  
+|[<span data-ttu-id="b48b2-109">CreateAssemblyScavenger 메서드</span><span class="sxs-lookup"><span data-stu-id="b48b2-109">CreateAssemblyScavenger Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblyscavenger-method.md)|<span data-ttu-id="b48b2-110">Fusion 기술에서 내부 용도로 예약 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b48b2-110">Reserved for internal use by the fusion technology.</span></span>|  
+|[<span data-ttu-id="b48b2-111">InstallAssembly 메서드</span><span class="sxs-lookup"><span data-stu-id="b48b2-111">InstallAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-installassembly-method.md)|<span data-ttu-id="b48b2-112">전역 어셈블리 캐시에 지정된 된 어셈블리를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="b48b2-112">Installs the specified assembly in the global assembly cache.</span></span>|  
+|[<span data-ttu-id="b48b2-113">QueryAssemblyInfo 메서드</span><span class="sxs-lookup"><span data-stu-id="b48b2-113">QueryAssemblyInfo Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-queryassemblyinfo-method.md)|<span data-ttu-id="b48b2-114">지정된 된 어셈블리에 대 한 요청 된 데이터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="b48b2-114">Gets the requested data about the specified assembly.</span></span>|  
+|[<span data-ttu-id="b48b2-115">UninstallAssembly 메서드</span><span class="sxs-lookup"><span data-stu-id="b48b2-115">UninstallAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-uninstallassembly-method.md)|<span data-ttu-id="b48b2-116">전역 어셈블리 캐시에서 지정된 된 어셈블리를 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="b48b2-116">Uninstalls the specified assembly from the global assembly cache.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="23061-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="23061-117">Requirements</span></span>  
- <span data-ttu-id="23061-118">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="23061-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b48b2-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b48b2-117">Requirements</span></span>  
+ <span data-ttu-id="b48b2-118">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="b48b2-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="23061-119">**헤더:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="23061-119">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="b48b2-119">**헤더:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="b48b2-119">**Header:** Fusion.h</span></span>  
   
- **<span data-ttu-id="23061-120">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="23061-120">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="b48b2-120">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b48b2-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="23061-121">참고자료</span><span class="sxs-lookup"><span data-stu-id="23061-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b48b2-121">참고자료</span><span class="sxs-lookup"><span data-stu-id="b48b2-121">See also</span></span>
 
-- [<span data-ttu-id="23061-122">Fusion 인터페이스</span><span class="sxs-lookup"><span data-stu-id="23061-122">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [<span data-ttu-id="23061-123">전역 어셈블리 캐시</span><span class="sxs-lookup"><span data-stu-id="23061-123">Global Assembly Cache</span></span>](../../../../docs/framework/app-domains/gac.md)
+- [<span data-ttu-id="b48b2-122">Fusion 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b48b2-122">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [<span data-ttu-id="b48b2-123">전역 어셈블리 캐시</span><span class="sxs-lookup"><span data-stu-id="b48b2-123">Global Assembly Cache</span></span>](../../../../docs/framework/app-domains/gac.md)

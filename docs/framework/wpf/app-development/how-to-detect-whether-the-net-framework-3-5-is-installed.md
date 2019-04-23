@@ -8,23 +8,23 @@ helpviewer_keywords:
 - determining whether.NET Framework 3.5 is installed [WPF]
 ms.assetid: 8556a9d2-1eb8-48ef-919c-5baf22a2a9a2
 ms.openlocfilehash: af2428ece79803953b8c90431d905824dd18fec8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074640"
 ---
-# <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a><span data-ttu-id="cac11-102">방법: .NET Framework 3.5 설치 여부 확인</span><span class="sxs-lookup"><span data-stu-id="cac11-102">How to: Detect Whether the .NET Framework 3.5 Is Installed</span></span>
-<span data-ttu-id="cac11-103">대상으로 하는 시스템에서 Windows Presentation Foundation (WPF) 응용 프로그램을 배포 하려면 관리자는 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]를 먼저 확인 해야 합니다 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 런타임이 있는지 합니다.</span><span class="sxs-lookup"><span data-stu-id="cac11-103">Before administrators can deploy Windows Presentation Foundation (WPF) applications on a system that targets the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], they must first confirm that the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] runtime is present.</span></span> <span data-ttu-id="cac11-104">이 항목에서는 작성 된 스크립트 관리자 결정 하는 데 사용할 수 있는 HTML/javascript 여부를 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 를 시스템에 있는 합니다.</span><span class="sxs-lookup"><span data-stu-id="cac11-104">This topic provides a script written in HTML/JavaScript that administrators can use to determine whether the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] is present on a system.</span></span>  
+# <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a><span data-ttu-id="20199-102">방법: .NET Framework 3.5 설치 여부 확인</span><span class="sxs-lookup"><span data-stu-id="20199-102">How to: Detect Whether the .NET Framework 3.5 Is Installed</span></span>
+<span data-ttu-id="20199-103">대상으로 하는 시스템에서 Windows Presentation Foundation (WPF) 응용 프로그램을 배포 하려면 관리자는 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]를 먼저 확인 해야 합니다 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 런타임이 있는지 합니다.</span><span class="sxs-lookup"><span data-stu-id="20199-103">Before administrators can deploy Windows Presentation Foundation (WPF) applications on a system that targets the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)], they must first confirm that the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] runtime is present.</span></span> <span data-ttu-id="20199-104">이 항목에서는 작성 된 스크립트 관리자 결정 하는 데 사용할 수 있는 HTML/javascript 여부를 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 를 시스템에 있는 합니다.</span><span class="sxs-lookup"><span data-stu-id="20199-104">This topic provides a script written in HTML/JavaScript that administrators can use to determine whether the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] is present on a system.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="cac11-105">설치, 배포 및 검색에 대 한 정보를 자세한 합니다 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]를 참조 하세요 [개발자 용.NET Framework 설치](../../install/guide-for-developers.md).</span><span class="sxs-lookup"><span data-stu-id="cac11-105">For more detailed information on installing, deploying, and detecting the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], see [Install the .NET Framework for developers](../../install/guide-for-developers.md).</span></span>  
+>  <span data-ttu-id="20199-105">설치, 배포 및 검색에 대 한 정보를 자세한 합니다 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]를 참조 하세요 [개발자 용.NET Framework 설치](../../install/guide-for-developers.md).</span><span class="sxs-lookup"><span data-stu-id="20199-105">For more detailed information on installing, deploying, and detecting the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], see [Install the .NET Framework for developers](../../install/guide-for-developers.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cac11-106">예제</span><span class="sxs-lookup"><span data-stu-id="cac11-106">Example</span></span>  
- <span data-ttu-id="cac11-107">경우는 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 는 설치 MSI를 추가 하는 ".NET CLR" 및 버전 번호를 UserAgent 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="cac11-107">When the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] is installed, the MSI adds ".NET CLR" and the version number to the UserAgent string.</span></span> <span data-ttu-id="cac11-108">다음 예제에서는 간단한 HTML 페이지에 포함 된 스크립트를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="cac11-108">The following example shows a script embedded in a simple HTML page.</span></span> <span data-ttu-id="cac11-109">확인 하려면 UserAgent 문자열을 검색 하는 스크립트 여부를 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 이 설치 되어 있으며 검색 결과에 상태 메시지를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="cac11-109">The script searches the UserAgent string to determine whether the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] is installed, and displays a status message on the results of the search.</span></span>  
+## <a name="example"></a><span data-ttu-id="20199-106">예제</span><span class="sxs-lookup"><span data-stu-id="20199-106">Example</span></span>  
+ <span data-ttu-id="20199-107">경우는 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 는 설치 MSI를 추가 하는 ".NET CLR" 및 버전 번호를 UserAgent 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="20199-107">When the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] is installed, the MSI adds ".NET CLR" and the version number to the UserAgent string.</span></span> <span data-ttu-id="20199-108">다음 예제에서는 간단한 HTML 페이지에 포함 된 스크립트를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="20199-108">The following example shows a script embedded in a simple HTML page.</span></span> <span data-ttu-id="20199-109">확인 하려면 UserAgent 문자열을 검색 하는 스크립트 여부를 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 이 설치 되어 있으며 검색 결과에 상태 메시지를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="20199-109">The script searches the UserAgent string to determine whether the [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] is installed, and displays a status message on the results of the search.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="cac11-110">이 스크립트는 Internet Explorer에 대 한 설계 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="cac11-110">This script is designed for Internet Explorer.</span></span> <span data-ttu-id="cac11-111">다른 브라우저 UserAgent 문자열에서.NET CLR 정보를 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cac11-111">Other browsers may not include .NET CLR information in the UserAgent string.</span></span>  
+>  <span data-ttu-id="20199-110">이 스크립트는 Internet Explorer에 대 한 설계 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="20199-110">This script is designed for Internet Explorer.</span></span> <span data-ttu-id="20199-111">다른 브라우저 UserAgent 문자열에서.NET CLR 정보를 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="20199-111">Other browsers may not include .NET CLR information in the UserAgent string.</span></span>  
   
 ```  
 <HTML>  
@@ -116,18 +116,18 @@ ms.locfileid: "59074640"
 </HTML>  
 ```  
   
- <span data-ttu-id="cac11-112">".NET CLR" 버전에 대 한 검색이 성공 하면 다음과 같은 유형의 상태 메시지가 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="cac11-112">If the search for the ".NET CLR " version is successful, the following type of status message appears:</span></span>  
+ <span data-ttu-id="20199-112">".NET CLR" 버전에 대 한 검색이 성공 하면 다음과 같은 유형의 상태 메시지가 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="20199-112">If the search for the ".NET CLR " version is successful, the following type of status message appears:</span></span>  
   
  `This machine has the correct version of the .NET Framework 3.5.`  
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; SLCC1; .NET CLR 2.0.50727; .NET CLR 1.1.4322; InfoPath.2; .NET CLR 3.0.590; .NET CLR 3.5.20726; MS-RTC LM 8).`  
   
- <span data-ttu-id="cac11-113">그렇지 않은 경우 다음과 같은 유형의 상태 메시지 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="cac11-113">Otherwise, the following type of status message appears:</span></span>  
+ <span data-ttu-id="20199-113">그렇지 않은 경우 다음과 같은 유형의 상태 메시지 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="20199-113">Otherwise, the following type of status message appears:</span></span>  
   
  `This machine does not have the correct version of the .NET Framework 3.5. The required version is v3.5.0.0.`  
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; SLCC1; .NET CLR 2.0.50727; .NET CLR 1.1.4322; InfoPath.2; .NET CLR 3.0.590; MS-RTC LM 8).`  
   
-## <a name="see-also"></a><span data-ttu-id="cac11-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="cac11-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="20199-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="20199-114">See also</span></span>
 
-- [<span data-ttu-id="cac11-115">.NET Framework 3.0 설치 여부 확인</span><span class="sxs-lookup"><span data-stu-id="cac11-115">Detect Whether the .NET Framework 3.0 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-0-is-installed.md)
+- [<span data-ttu-id="20199-115">.NET Framework 3.0 설치 여부 확인</span><span class="sxs-lookup"><span data-stu-id="20199-115">Detect Whether the .NET Framework 3.0 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-0-is-installed.md)
