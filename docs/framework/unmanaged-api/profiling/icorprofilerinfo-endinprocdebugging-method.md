@@ -18,40 +18,40 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bcae66fd30c29a0a3c9bd0b5ffc2047efdf3788d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59138218"
 ---
-# <a name="icorprofilerinfoendinprocdebugging-method"></a><span data-ttu-id="63095-102">ICorProfilerInfo::EndInprocDebugging 메서드</span><span class="sxs-lookup"><span data-stu-id="63095-102">ICorProfilerInfo::EndInprocDebugging Method</span></span>
-<span data-ttu-id="63095-103">프로세스의 디버깅 세션을 종료 합니다.</span><span class="sxs-lookup"><span data-stu-id="63095-103">Shuts down an in-process debugging session.</span></span> <span data-ttu-id="63095-104">이 메서드는.NET Framework 버전 2.0에서에서 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="63095-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  
+# <a name="icorprofilerinfoendinprocdebugging-method"></a><span data-ttu-id="4ab88-102">ICorProfilerInfo::EndInprocDebugging 메서드</span><span class="sxs-lookup"><span data-stu-id="4ab88-102">ICorProfilerInfo::EndInprocDebugging Method</span></span>
+<span data-ttu-id="4ab88-103">프로세스의 디버깅 세션을 종료 합니다.</span><span class="sxs-lookup"><span data-stu-id="4ab88-103">Shuts down an in-process debugging session.</span></span> <span data-ttu-id="4ab88-104">이 메서드는.NET Framework 버전 2.0에서에서 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4ab88-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="63095-105">구문</span><span class="sxs-lookup"><span data-stu-id="63095-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4ab88-105">구문</span><span class="sxs-lookup"><span data-stu-id="4ab88-105">Syntax</span></span>  
   
 ```  
 HRESULT EndInprocDebugging(  
     [in]  DWORD dwProfilerContext);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="63095-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="63095-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4ab88-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="4ab88-106">Parameters</span></span>  
  `dwProfilerContext`  
- <span data-ttu-id="63095-107">[in] 디버깅 세션을 식별 하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="63095-107">[in] A value that identifies the debugging session.</span></span> <span data-ttu-id="63095-108">이 값에서 수신 하는 것과 동일 해야 합니다 [icorprofilerinfo:: Begininprocdebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="63095-108">This value must be the same as that received in the [ICorProfilerInfo::BeginInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) method.</span></span>  
+ <span data-ttu-id="4ab88-107">[in] 디버깅 세션을 식별 하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="4ab88-107">[in] A value that identifies the debugging session.</span></span> <span data-ttu-id="4ab88-108">이 값에서 수신 하는 것과 동일 해야 합니다 [icorprofilerinfo:: Begininprocdebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="4ab88-108">This value must be the same as that received in the [ICorProfilerInfo::BeginInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) method.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="63095-109">설명</span><span class="sxs-lookup"><span data-stu-id="63095-109">Remarks</span></span>  
- <span data-ttu-id="63095-110">호출 해야 합니다 [icorprofilerinfo:: Begininprocdebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) 고 `EndInprocDebugging` 동일한 콜백 메서드 내에서.</span><span class="sxs-lookup"><span data-stu-id="63095-110">You must call [ICorProfilerInfo::BeginInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) and `EndInprocDebugging` within the same callback method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4ab88-109">설명</span><span class="sxs-lookup"><span data-stu-id="4ab88-109">Remarks</span></span>  
+ <span data-ttu-id="4ab88-110">호출 해야 합니다 [icorprofilerinfo:: Begininprocdebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) 고 `EndInprocDebugging` 동일한 콜백 메서드 내에서.</span><span class="sxs-lookup"><span data-stu-id="4ab88-110">You must call [ICorProfilerInfo::BeginInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) and `EndInprocDebugging` within the same callback method.</span></span>  
   
- <span data-ttu-id="63095-111">CLR 디버깅 서비스.NET Framework 버전 1.0 및 1.1에서에서 제한 된 프로세스에서 디버깅을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="63095-111">The CLR debugging services supported limited in-process debugging in the .NET Framework versions 1.0 and 1.1.</span></span> <span data-ttu-id="63095-112">디버깅 프로세스에 프로파일러를 사용 하 여 디버깅 API의 검사 부분을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="63095-112">In-process debugging enabled a profiler to use the inspection portions of the debugging API.</span></span> <span data-ttu-id="63095-113">그러나 고객 의견 때문에 프로세스의 디버깅 버전 2.0에서에서.NET Framework에서 제거 되어 프로 파일링 API에 따라 더 기능 집합으로 대체 합니다.</span><span class="sxs-lookup"><span data-stu-id="63095-113">However, due to customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.</span></span>  
+ <span data-ttu-id="4ab88-111">CLR 디버깅 서비스.NET Framework 버전 1.0 및 1.1에서에서 제한 된 프로세스에서 디버깅을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="4ab88-111">The CLR debugging services supported limited in-process debugging in the .NET Framework versions 1.0 and 1.1.</span></span> <span data-ttu-id="4ab88-112">디버깅 프로세스에 프로파일러를 사용 하 여 디버깅 API의 검사 부분을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4ab88-112">In-process debugging enabled a profiler to use the inspection portions of the debugging API.</span></span> <span data-ttu-id="4ab88-113">그러나 고객 의견 때문에 프로세스의 디버깅 버전 2.0에서에서.NET Framework에서 제거 되어 프로 파일링 API에 따라 더 기능 집합으로 대체 합니다.</span><span class="sxs-lookup"><span data-stu-id="4ab88-113">However, due to customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="63095-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="63095-114">Requirements</span></span>  
- <span data-ttu-id="63095-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="63095-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4ab88-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4ab88-114">Requirements</span></span>  
+ <span data-ttu-id="4ab88-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="4ab88-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="63095-116">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="63095-116">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="4ab88-116">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="4ab88-116">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="63095-117">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="63095-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4ab88-117">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4ab88-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="63095-118">**.NET framework 버전:** 1.0</span><span class="sxs-lookup"><span data-stu-id="63095-118">**.NET Framework Version:** 1.0</span></span>  
+ <span data-ttu-id="4ab88-118">**.NET framework 버전:** 1.0</span><span class="sxs-lookup"><span data-stu-id="4ab88-118">**.NET Framework Version:** 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="63095-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="63095-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4ab88-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="4ab88-119">See also</span></span>
 
-- [<span data-ttu-id="63095-120">ICorProfilerInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="63095-120">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="4ab88-120">ICorProfilerInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4ab88-120">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

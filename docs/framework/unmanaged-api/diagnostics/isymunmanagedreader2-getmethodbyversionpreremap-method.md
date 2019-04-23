@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bcd200b7fa431f193dd202c3c2a690aa22ec8e32
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59135189"
 ---
-# <a name="isymunmanagedreader2getmethodbyversionpreremap-method"></a><span data-ttu-id="9d9bf-102">ISymUnmanagedReader2::GetMethodByVersionPreRemap 메서드</span><span class="sxs-lookup"><span data-stu-id="9d9bf-102">ISymUnmanagedReader2::GetMethodByVersionPreRemap Method</span></span>
-<span data-ttu-id="9d9bf-103">지정 된 메서드 토큰 및 편집 하며 계속 하기 버전 번호를 기호 판독기 메서드를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="9d9bf-103">Gets a symbol reader method, given a method token and an edit-and-continue version number.</span></span> <span data-ttu-id="9d9bf-104">버전 번호는 1부터 시작 하 고 메서드가 편집 하며 계속 하기 작업으로 인해 변경 될 때마다 증가 합니다.</span><span class="sxs-lookup"><span data-stu-id="9d9bf-104">Version numbers start at 1 and are incremented each time the method is changed as a result of an edit-and-continue operation.</span></span>  
+# <a name="isymunmanagedreader2getmethodbyversionpreremap-method"></a><span data-ttu-id="847b2-102">ISymUnmanagedReader2::GetMethodByVersionPreRemap 메서드</span><span class="sxs-lookup"><span data-stu-id="847b2-102">ISymUnmanagedReader2::GetMethodByVersionPreRemap Method</span></span>
+<span data-ttu-id="847b2-103">지정 된 메서드 토큰 및 편집 하며 계속 하기 버전 번호를 기호 판독기 메서드를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="847b2-103">Gets a symbol reader method, given a method token and an edit-and-continue version number.</span></span> <span data-ttu-id="847b2-104">버전 번호는 1부터 시작 하 고 메서드가 편집 하며 계속 하기 작업으로 인해 변경 될 때마다 증가 합니다.</span><span class="sxs-lookup"><span data-stu-id="847b2-104">Version numbers start at 1 and are incremented each time the method is changed as a result of an edit-and-continue operation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9d9bf-105">구문</span><span class="sxs-lookup"><span data-stu-id="9d9bf-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="847b2-105">구문</span><span class="sxs-lookup"><span data-stu-id="847b2-105">Syntax</span></span>  
   
 ```  
 HRESULT GetMethodByVersionPreRemap(  
@@ -36,22 +36,22 @@ HRESULT GetMethodByVersionPreRemap(
     [out, retval] ISymUnmanagedMethod** pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9d9bf-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="9d9bf-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="847b2-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="847b2-106">Parameters</span></span>  
  `token`  
- <span data-ttu-id="9d9bf-107">[in] 메서드 메타 데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="9d9bf-107">[in] The method metadata token.</span></span>  
+ <span data-ttu-id="847b2-107">[in] 메서드 메타 데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="847b2-107">[in] The method metadata token.</span></span>  
   
  `version`  
- <span data-ttu-id="9d9bf-108">[in] 메서드 버전입니다.</span><span class="sxs-lookup"><span data-stu-id="9d9bf-108">[in] The method version.</span></span>  
+ <span data-ttu-id="847b2-108">[in] 메서드 버전입니다.</span><span class="sxs-lookup"><span data-stu-id="847b2-108">[in] The method version.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="9d9bf-109">[out] 반환 된 포인터 [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="9d9bf-109">[out] A pointer to the returned [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) interface.</span></span>  
+ <span data-ttu-id="847b2-109">[out] 반환 된 포인터 [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="847b2-109">[out] A pointer to the returned [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9d9bf-110">반환 값</span><span class="sxs-lookup"><span data-stu-id="9d9bf-110">Return Value</span></span>  
- <span data-ttu-id="9d9bf-111">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="9d9bf-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="847b2-110">반환 값</span><span class="sxs-lookup"><span data-stu-id="847b2-110">Return Value</span></span>  
+ <span data-ttu-id="847b2-111">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="847b2-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9d9bf-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="9d9bf-112">Requirements</span></span>  
- <span data-ttu-id="9d9bf-113">**헤더:** CorSym.idl.</span><span class="sxs-lookup"><span data-stu-id="9d9bf-113">**Header:** CorSym.idl.</span></span> <span data-ttu-id="9d9bf-114">CorSym.h</span><span class="sxs-lookup"><span data-stu-id="9d9bf-114">CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="847b2-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="847b2-112">Requirements</span></span>  
+ <span data-ttu-id="847b2-113">**헤더:** CorSym.idl.</span><span class="sxs-lookup"><span data-stu-id="847b2-113">**Header:** CorSym.idl.</span></span> <span data-ttu-id="847b2-114">CorSym.h</span><span class="sxs-lookup"><span data-stu-id="847b2-114">CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9d9bf-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="9d9bf-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="847b2-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="847b2-115">See also</span></span>
 
-- [<span data-ttu-id="9d9bf-116">ISymUnmanagedReader2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="9d9bf-116">ISymUnmanagedReader2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+- [<span data-ttu-id="847b2-116">ISymUnmanagedReader2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="847b2-116">ISymUnmanagedReader2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)

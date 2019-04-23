@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9a88adec508d80a40ec044e5011d3115e197e334
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137490"
 ---
-# <a name="gethashfromassemblyfilew-function"></a><span data-ttu-id="5aff0-102">GetHashFromAssemblyFileW 함수</span><span class="sxs-lookup"><span data-stu-id="5aff0-102">GetHashFromAssemblyFileW Function</span></span>
-<span data-ttu-id="5aff0-103">지정된 해시 알고리즘을 사용하여 지정된 어셈블리 파일의 해시를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="5aff0-103">Gets a hash of the specified assembly file, using the specified hash algorithm.</span></span> <span data-ttu-id="5aff0-104">어셈블리 파일의 경로를 유니코드 문자열로 지정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="5aff0-104">The path to the assembly file must be specified as a Unicode string.</span></span>  
+# <a name="gethashfromassemblyfilew-function"></a><span data-ttu-id="243ab-102">GetHashFromAssemblyFileW 함수</span><span class="sxs-lookup"><span data-stu-id="243ab-102">GetHashFromAssemblyFileW Function</span></span>
+<span data-ttu-id="243ab-103">지정된 해시 알고리즘을 사용하여 지정된 어셈블리 파일의 해시를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="243ab-103">Gets a hash of the specified assembly file, using the specified hash algorithm.</span></span> <span data-ttu-id="243ab-104">어셈블리 파일의 경로를 유니코드 문자열로 지정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="243ab-104">The path to the assembly file must be specified as a Unicode string.</span></span>  
   
- <span data-ttu-id="5aff0-105">이 함수는 더 이상 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="5aff0-105">This function has been deprecated.</span></span> <span data-ttu-id="5aff0-106">사용 된 [iclrstrongname:: Gethashfromassemblyfilew](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md) 메서드 대신 합니다.</span><span class="sxs-lookup"><span data-stu-id="5aff0-106">Use the [ICLRStrongName::GetHashFromAssemblyFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md) method instead.</span></span>  
+ <span data-ttu-id="243ab-105">이 함수는 더 이상 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="243ab-105">This function has been deprecated.</span></span> <span data-ttu-id="243ab-106">사용 된 [iclrstrongname:: Gethashfromassemblyfilew](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md) 메서드 대신 합니다.</span><span class="sxs-lookup"><span data-stu-id="243ab-106">Use the [ICLRStrongName::GetHashFromAssemblyFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5aff0-107">구문</span><span class="sxs-lookup"><span data-stu-id="5aff0-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="243ab-107">구문</span><span class="sxs-lookup"><span data-stu-id="243ab-107">Syntax</span></span>  
   
 ```  
 HRESULT GetHashFromAssemblyFileW (  
@@ -40,33 +40,33 @@ HRESULT GetHashFromAssemblyFileW (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5aff0-108">매개 변수</span><span class="sxs-lookup"><span data-stu-id="5aff0-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="243ab-108">매개 변수</span><span class="sxs-lookup"><span data-stu-id="243ab-108">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="5aff0-109">[in] 해시할 파일 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="5aff0-109">[in] The path to the file to be hashed.</span></span> <span data-ttu-id="5aff0-110">이 매개 변수는 유니코드 문자열 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="5aff0-110">This parameter must be a Unicode string.</span></span>  
+ <span data-ttu-id="243ab-109">[in] 해시할 파일 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="243ab-109">[in] The path to the file to be hashed.</span></span> <span data-ttu-id="243ab-110">이 매개 변수는 유니코드 문자열 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="243ab-110">This parameter must be a Unicode string.</span></span>  
   
  `piHashAlg`  
- <span data-ttu-id="5aff0-111">[out에서] 해시 알고리즘을 지정 하는 상수입니다.</span><span class="sxs-lookup"><span data-stu-id="5aff0-111">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="5aff0-112">기본 해시 알고리즘에 0을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="5aff0-112">Use zero for the default hash algorithm.</span></span>  
+ <span data-ttu-id="243ab-111">[out에서] 해시 알고리즘을 지정 하는 상수입니다.</span><span class="sxs-lookup"><span data-stu-id="243ab-111">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="243ab-112">기본 해시 알고리즘에 0을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="243ab-112">Use zero for the default hash algorithm.</span></span>  
   
  `pbHash`  
- <span data-ttu-id="5aff0-113">[out] 반환 된 해시 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="5aff0-113">[out] The returned hash buffer.</span></span>  
+ <span data-ttu-id="243ab-113">[out] 반환 된 해시 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="243ab-113">[out] The returned hash buffer.</span></span>  
   
  `cchHash`  
- <span data-ttu-id="5aff0-114">[in] 요청 된 최대 크기인 `pbHash`합니다.</span><span class="sxs-lookup"><span data-stu-id="5aff0-114">[in] The requested maximum size of `pbHash`.</span></span>  
+ <span data-ttu-id="243ab-114">[in] 요청 된 최대 크기인 `pbHash`합니다.</span><span class="sxs-lookup"><span data-stu-id="243ab-114">[in] The requested maximum size of `pbHash`.</span></span>  
   
  `pchHash`  
- <span data-ttu-id="5aff0-115">[out] 크기 (바이트)를 반환 `pbHash`합니다.</span><span class="sxs-lookup"><span data-stu-id="5aff0-115">[out] The returned size, in bytes, of `pbHash`.</span></span>  
+ <span data-ttu-id="243ab-115">[out] 크기 (바이트)를 반환 `pbHash`합니다.</span><span class="sxs-lookup"><span data-stu-id="243ab-115">[out] The returned size, in bytes, of `pbHash`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5aff0-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5aff0-116">Requirements</span></span>  
- <span data-ttu-id="5aff0-117">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="5aff0-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="243ab-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="243ab-116">Requirements</span></span>  
+ <span data-ttu-id="243ab-117">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="243ab-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5aff0-118">**헤더:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="5aff0-118">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="243ab-118">**헤더:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="243ab-118">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="5aff0-119">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="5aff0-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="243ab-119">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="243ab-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="5aff0-120">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="5aff0-120">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="243ab-120">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="243ab-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5aff0-121">참고자료</span><span class="sxs-lookup"><span data-stu-id="5aff0-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="243ab-121">참고자료</span><span class="sxs-lookup"><span data-stu-id="243ab-121">See also</span></span>
 
-- [<span data-ttu-id="5aff0-122">GetHashFromAssemblyFileW 메서드</span><span class="sxs-lookup"><span data-stu-id="5aff0-122">GetHashFromAssemblyFileW Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
-- [<span data-ttu-id="5aff0-123">GetHashFromAssemblyFile 메서드</span><span class="sxs-lookup"><span data-stu-id="5aff0-123">GetHashFromAssemblyFile Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)
-- [<span data-ttu-id="5aff0-124">ICLRStrongName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="5aff0-124">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="243ab-122">GetHashFromAssemblyFileW 메서드</span><span class="sxs-lookup"><span data-stu-id="243ab-122">GetHashFromAssemblyFileW Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
+- [<span data-ttu-id="243ab-123">GetHashFromAssemblyFile 메서드</span><span class="sxs-lookup"><span data-stu-id="243ab-123">GetHashFromAssemblyFile Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)
+- [<span data-ttu-id="243ab-124">ICLRStrongName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="243ab-124">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
