@@ -8,25 +8,25 @@ helpviewer_keywords:
 - multimedia [WPF], synchronizing media playback with events
 ms.assetid: c4dbe632-6e7f-4d7f-9df5-98737a758bc3
 ms.openlocfilehash: ae8ba54cc852bb85350492c95e3e890aebf6534f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150178"
 ---
-# <a name="how-to-trigger-media-playback-with-a-user-event"></a><span data-ttu-id="7ddfb-102">방법: 사용자 이벤트를 사용하여 미디어 재생 트리거</span><span class="sxs-lookup"><span data-stu-id="7ddfb-102">How to: Trigger Media Playback with a User Event</span></span>
-<span data-ttu-id="7ddfb-103">이 예제에서는 미디어 재생을 이벤트와 동기화하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="7ddfb-103">This example shows how to synchronize media playback with an event.</span></span>  
+# <a name="how-to-trigger-media-playback-with-a-user-event"></a><span data-ttu-id="375e0-102">방법: 사용자 이벤트를 사용하여 미디어 재생 트리거</span><span class="sxs-lookup"><span data-stu-id="375e0-102">How to: Trigger Media Playback with a User Event</span></span>
+<span data-ttu-id="375e0-103">이 예제에서는 미디어 재생을 이벤트와 동기화하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="375e0-103">This example shows how to synchronize media playback with an event.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7ddfb-104">예제</span><span class="sxs-lookup"><span data-stu-id="7ddfb-104">Example</span></span>  
- <span data-ttu-id="7ddfb-105">다음 예제에서는 합니다 <xref:System.Windows.Controls.MediaElement> 컨트롤 및 <xref:System.Windows.Media.MediaTimeline> 를 클릭할 때 발생 하는 사운드를 재생 하는 클래스는 <xref:System.Windows.Controls.Button>합니다.</span><span class="sxs-lookup"><span data-stu-id="7ddfb-105">The following example uses the <xref:System.Windows.Controls.MediaElement> control and the <xref:System.Windows.Media.MediaTimeline> class to play a sound that occurs when the user clicks a <xref:System.Windows.Controls.Button>.</span></span>  
+## <a name="example"></a><span data-ttu-id="375e0-104">예제</span><span class="sxs-lookup"><span data-stu-id="375e0-104">Example</span></span>  
+ <span data-ttu-id="375e0-105">다음 예제에서는 합니다 <xref:System.Windows.Controls.MediaElement> 컨트롤 및 <xref:System.Windows.Media.MediaTimeline> 를 클릭할 때 발생 하는 사운드를 재생 하는 클래스는 <xref:System.Windows.Controls.Button>합니다.</span><span class="sxs-lookup"><span data-stu-id="375e0-105">The following example uses the <xref:System.Windows.Controls.MediaElement> control and the <xref:System.Windows.Media.MediaTimeline> class to play a sound that occurs when the user clicks a <xref:System.Windows.Controls.Button>.</span></span>  
   
  [!code-xaml[MediaGallery_snippet#SoundFromUserEventExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/MediaGallery_snippet/CSharp/SoundFromUserEventExample.xaml#soundfromusereventexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="7ddfb-106">참고자료</span><span class="sxs-lookup"><span data-stu-id="7ddfb-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="375e0-106">참고자료</span><span class="sxs-lookup"><span data-stu-id="375e0-106">See also</span></span>
 
 - <xref:System.Windows.Controls.MediaElement>
 - <xref:System.Windows.Media.MediaTimeline>
 - <xref:System.Windows.EventTrigger.RoutedEvent%2A>
 - <xref:System.Windows.Media.Animation.Storyboard>
-- [<span data-ttu-id="7ddfb-107">방법 항목</span><span class="sxs-lookup"><span data-stu-id="7ddfb-107">How-to Topics</span></span>](audio-and-video-how-to-topics.md)
-- [<span data-ttu-id="7ddfb-108">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="7ddfb-108">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="375e0-107">방법 항목</span><span class="sxs-lookup"><span data-stu-id="375e0-107">How-to Topics</span></span>](audio-and-video-how-to-topics.md)
+- [<span data-ttu-id="375e0-108">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="375e0-108">Graphics and Multimedia</span></span>](index.md)

@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7615f5dad1666685333011503c5bef4c98a6a8bd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59149879"
 ---
-# <a name="iclrruntimeinfoisloaded-method"></a><span data-ttu-id="82473-102">ICLRRuntimeInfo::IsLoaded 메서드</span><span class="sxs-lookup"><span data-stu-id="82473-102">ICLRRuntimeInfo::IsLoaded Method</span></span>
-<span data-ttu-id="82473-103">CLR (공용 언어 런타임)에 연결 된 여부를 나타내는 합니다 [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) 인터페이스는 프로세스에 로드 됩니다.</span><span class="sxs-lookup"><span data-stu-id="82473-103">Indicates whether the common language runtime (CLR) associated with the [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface is loaded into a process.</span></span> <span data-ttu-id="82473-104">시작 하지 않고 런타임에 로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="82473-104">A runtime can be loaded without also being started.</span></span>  
+# <a name="iclrruntimeinfoisloaded-method"></a><span data-ttu-id="f2515-102">ICLRRuntimeInfo::IsLoaded 메서드</span><span class="sxs-lookup"><span data-stu-id="f2515-102">ICLRRuntimeInfo::IsLoaded Method</span></span>
+<span data-ttu-id="f2515-103">CLR (공용 언어 런타임)에 연결 된 여부를 나타내는 합니다 [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) 인터페이스는 프로세스에 로드 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f2515-103">Indicates whether the common language runtime (CLR) associated with the [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface is loaded into a process.</span></span> <span data-ttu-id="f2515-104">시작 하지 않고 런타임에 로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f2515-104">A runtime can be loaded without also being started.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="82473-105">구문</span><span class="sxs-lookup"><span data-stu-id="82473-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f2515-105">구문</span><span class="sxs-lookup"><span data-stu-id="f2515-105">Syntax</span></span>  
   
 ```  
 HRESULT IsLoaded(  
@@ -35,45 +35,45 @@ HRESULT IsLoaded(
 [out, retval] BOOL *pbLoaded);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="82473-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="82473-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f2515-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f2515-106">Parameters</span></span>  
  `hndProcess`  
- <span data-ttu-id="82473-107">[in] 프로세스 핸들입니다.</span><span class="sxs-lookup"><span data-stu-id="82473-107">[in] A handle to the process.</span></span>  
+ <span data-ttu-id="f2515-107">[in] 프로세스 핸들입니다.</span><span class="sxs-lookup"><span data-stu-id="f2515-107">[in] A handle to the process.</span></span>  
   
  `pbLoaded`  
- <span data-ttu-id="82473-108">[out] `true` CLR이 고, 그렇지 않으면 프로세스에 로드 하는 경우 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="82473-108">[out] `true` if the CLR is loaded into the process; otherwise, `false`.</span></span>  
+ <span data-ttu-id="f2515-108">[out] `true` CLR이 고, 그렇지 않으면 프로세스에 로드 하는 경우 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="f2515-108">[out] `true` if the CLR is loaded into the process; otherwise, `false`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="82473-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="82473-109">Return Value</span></span>  
- <span data-ttu-id="82473-110">이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="82473-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f2515-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="f2515-109">Return Value</span></span>  
+ <span data-ttu-id="f2515-110">이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="f2515-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="82473-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="82473-111">HRESULT</span></span>|<span data-ttu-id="82473-112">설명</span><span class="sxs-lookup"><span data-stu-id="82473-112">Description</span></span>|  
+|<span data-ttu-id="f2515-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="f2515-111">HRESULT</span></span>|<span data-ttu-id="f2515-112">설명</span><span class="sxs-lookup"><span data-stu-id="f2515-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="82473-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="82473-113">S_OK</span></span>|<span data-ttu-id="82473-114">메서드가 완료되었습니다.</span><span class="sxs-lookup"><span data-stu-id="82473-114">The method completed successfully.</span></span>|  
-|<span data-ttu-id="82473-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="82473-115">E_POINTER</span></span>|`pbLoaded` <span data-ttu-id="82473-116">null입니다.</span><span class="sxs-lookup"><span data-stu-id="82473-116">is null.</span></span>|  
+|<span data-ttu-id="f2515-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="f2515-113">S_OK</span></span>|<span data-ttu-id="f2515-114">메서드가 완료되었습니다.</span><span class="sxs-lookup"><span data-stu-id="f2515-114">The method completed successfully.</span></span>|  
+|<span data-ttu-id="f2515-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="f2515-115">E_POINTER</span></span>|<span data-ttu-id="f2515-116">`pbLoaded`가 null입니다.</span><span class="sxs-lookup"><span data-stu-id="f2515-116">`pbLoaded` is null.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="82473-117">설명</span><span class="sxs-lookup"><span data-stu-id="82473-117">Remarks</span></span>  
- <span data-ttu-id="82473-118">이 메서드는 이전 버전과 호환성이 다음 함수 및 인터페이스를 사용 하 여:</span><span class="sxs-lookup"><span data-stu-id="82473-118">This method is backward-compatible with the following functions and interfaces:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f2515-117">설명</span><span class="sxs-lookup"><span data-stu-id="f2515-117">Remarks</span></span>  
+ <span data-ttu-id="f2515-118">이 메서드는 이전 버전과 호환성이 다음 함수 및 인터페이스를 사용 하 여:</span><span class="sxs-lookup"><span data-stu-id="f2515-118">This method is backward-compatible with the following functions and interfaces:</span></span>  
   
--   <span data-ttu-id="82473-119">[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) (.NET Framework 버전 1 호스팅 API)의 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="82473-119">[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) interface (in the .NET Framework version 1 hosting API).</span></span>  
+-   <span data-ttu-id="f2515-119">[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) (.NET Framework 버전 1 호스팅 API)의 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="f2515-119">[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) interface (in the .NET Framework version 1 hosting API).</span></span>  
   
--   <span data-ttu-id="82473-120">[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) (호스팅 API는.NET Framework 2.0)의 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="82473-120">[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) interface (in the .NET Framework 2.0 hosting API).</span></span>  
+-   <span data-ttu-id="f2515-120">[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) (호스팅 API는.NET Framework 2.0)의 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="f2515-120">[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) interface (in the .NET Framework 2.0 hosting API).</span></span>  
   
--   <span data-ttu-id="82473-121">사용 되지 않음 `CorBindTo*` 함수 (참조 [사용 되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) 호스팅 API는.NET Framework 2.0에서).</span><span class="sxs-lookup"><span data-stu-id="82473-121">Deprecated `CorBindTo*` functions (see [Deprecated CLR Hosting Functions](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) in the .NET Framework 2.0 hosting API).</span></span>  
+-   <span data-ttu-id="f2515-121">사용 되지 않음 `CorBindTo*` 함수 (참조 [사용 되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) 호스팅 API는.NET Framework 2.0에서).</span><span class="sxs-lookup"><span data-stu-id="f2515-121">Deprecated `CorBindTo*` functions (see [Deprecated CLR Hosting Functions](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) in the .NET Framework 2.0 hosting API).</span></span>  
   
- <span data-ttu-id="82473-122">호스트 사용 되지 않는 중 하나를 호출할 수 있습니다 `CorBindTo*` 와 같은 함수를 [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) 함수를 CLR의 특정 버전을 인스턴스화합니다.</span><span class="sxs-lookup"><span data-stu-id="82473-122">A host may call one of the deprecated `CorBindTo*` functions, such as the [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) function, to instantiate a specific version of the CLR.</span></span> <span data-ttu-id="82473-123">호스트 호출할 수는 [iclrmetahost:: Getruntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md) 메서드를 가져올 동일한 버전 번호를 지정 하 고는 [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) 인터페이스.</span><span class="sxs-lookup"><span data-stu-id="82473-123">The host could then call the [ICLRMetaHost::GetRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md) method and specify the same version number to obtain a [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface.</span></span>  
+ <span data-ttu-id="f2515-122">호스트 사용 되지 않는 중 하나를 호출할 수 있습니다 `CorBindTo*` 와 같은 함수를 [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) 함수를 CLR의 특정 버전을 인스턴스화합니다.</span><span class="sxs-lookup"><span data-stu-id="f2515-122">A host may call one of the deprecated `CorBindTo*` functions, such as the [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md) function, to instantiate a specific version of the CLR.</span></span> <span data-ttu-id="f2515-123">호스트 호출할 수는 [iclrmetahost:: Getruntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md) 메서드를 가져올 동일한 버전 번호를 지정 하 고는 [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) 인터페이스.</span><span class="sxs-lookup"><span data-stu-id="f2515-123">The host could then call the [ICLRMetaHost::GetRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md) method and specify the same version number to obtain a [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface.</span></span>  
   
- <span data-ttu-id="82473-124">호스트 한 다음 호출 하는 경우는 `IsLoaded` 메서드는 반환 된 [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) 인터페이스 `pbLoaded` 반환 `true`고, 그렇지 않으면 반환 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="82473-124">If the host then calls the `IsLoaded` method on the returned [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface, `pbLoaded` returns `true`; otherwise, it returns `false`.</span></span>  
+ <span data-ttu-id="f2515-124">호스트 한 다음 호출 하는 경우는 `IsLoaded` 메서드는 반환 된 [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) 인터페이스 `pbLoaded` 반환 `true`고, 그렇지 않으면 반환 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="f2515-124">If the host then calls the `IsLoaded` method on the returned [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface, `pbLoaded` returns `true`; otherwise, it returns `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="82473-125">요구 사항</span><span class="sxs-lookup"><span data-stu-id="82473-125">Requirements</span></span>  
- <span data-ttu-id="82473-126">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="82473-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f2515-125">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f2515-125">Requirements</span></span>  
+ <span data-ttu-id="f2515-126">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="f2515-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="82473-127">**헤더:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="82473-127">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="f2515-127">**헤더:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="f2515-127">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="82473-128">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="82473-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f2515-128">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="f2515-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="82473-129">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="82473-129">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ <span data-ttu-id="f2515-129">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f2515-129">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="82473-130">참고자료</span><span class="sxs-lookup"><span data-stu-id="82473-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f2515-130">참고자료</span><span class="sxs-lookup"><span data-stu-id="f2515-130">See also</span></span>
 
-- [<span data-ttu-id="82473-131">ICLRRuntimeInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="82473-131">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [<span data-ttu-id="82473-132">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="82473-132">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="82473-133">호스팅</span><span class="sxs-lookup"><span data-stu-id="82473-133">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="f2515-131">ICLRRuntimeInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f2515-131">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [<span data-ttu-id="f2515-132">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f2515-132">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="f2515-133">호스팅</span><span class="sxs-lookup"><span data-stu-id="f2515-133">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
