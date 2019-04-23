@@ -12,10 +12,10 @@ helpviewer_keywords:
 - escape sequence [XAML Services]
 ms.assetid: 3ce3e2ad-a868-43f9-9c98-b29561cb146e
 ms.openlocfilehash: 9f6743dd8a82891ac2233978550e5679130de0be
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182075"
 ---
 # <a name="-escape-sequence--markup-extension"></a>{} 이스케이프 시퀀스/태그 확장명
@@ -60,5 +60,5 @@ ms.locfileid: "59182075"
   
 ## <a name="see-also"></a>참고자료
 
-- [XAML을 위한 형식 변환기 및 태그 확장](type-converters-and-markup-extensions-for-xaml.md)
+- [XAML을 위한 형식 변환기 및 태그 확장명](type-converters-and-markup-extensions-for-xaml.md)
 - [XML 문자 엔터티 및 XAML](xml-character-entities-and-xaml.md)

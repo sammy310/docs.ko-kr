@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6c327aad129f685e44f7b456e4ceef8f99fe12b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6d07fe8ec61ee4515696eb3cf3d808483b50dfb
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712602"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59186565"
 ---
 # <a name="setting-assembly-attributes"></a>어셈블리 특성 설정
 어셈블리 특성은 어셈블리에 대한 정보를 제공하는 값입니다. 특성은 다음과 같은 정보 집합으로 나뉩니다.  
@@ -87,5 +87,6 @@ ms.locfileid: "54712602"
  [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
   
 ## <a name="see-also"></a>참고 항목
+
 - [어셈블리 만들기](../../../docs/framework/app-domains/create-assemblies.md)
 - [어셈블리를 사용한 프로그래밍](../../../docs/framework/app-domains/programming-with-assemblies.md)

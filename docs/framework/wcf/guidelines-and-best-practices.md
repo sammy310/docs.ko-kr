@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
 ms.openlocfilehash: 1c16c0936f729636aaa56e6e50c33e18c2b0f788
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59181348"
 ---
 # <a name="guidelines-and-best-practices"></a>지침 및 최선의 구현 방법
@@ -31,7 +31,7 @@ ms.locfileid: "59181348"
  [리소스 사용 제어 및 성능 향상](../../../docs/framework/wcf/controlling-resource-consumption-and-improving-performance.md)  
  과도한 리소스 사용을 방지하고 보안을 향상시키는 데 도움을 주도록 디자인된 속성에 대해 설명하고, 이러한 속성 사용에 대한 자세한 정보를 제공합니다.  
   
- [ClickOnce를 사용하여 WCF 응용 프로그램 배포](../../../docs/framework/wcf/deploying-wcf-applications-with-clickonce.md)  
+ [ClickOnce를 사용하여 WCF 애플리케이션 배포](../../../docs/framework/wcf/deploying-wcf-applications-with-clickonce.md)  
  ClickOnce 기능 사용 시 고려할 사항에 대해 설명합니다.  
   
 ## <a name="reference"></a>참조  

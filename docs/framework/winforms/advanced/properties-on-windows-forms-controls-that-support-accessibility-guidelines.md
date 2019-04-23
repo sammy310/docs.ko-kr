@@ -6,10 +6,10 @@ helpviewer_keywords:
 - accessibility [Windows Forms], Windows Forms control properties
 ms.assetid: ad3567a6-313b-4708-9e15-f487a831f049
 ms.openlocfilehash: b3f10fe472e449d39385facdbc716cba9b3f7382
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183783"
 ---
 # <a name="properties-on-windows-forms-controls-that-support-accessibility-guidelines"></a>내게 필요한 옵션 지침을 지원하는 Windows Forms 컨트롤의 속성
@@ -32,4 +32,4 @@ ms.locfileid: "59183783"
   
 ## <a name="see-also"></a>참고자료
 
-- [연습: 내게 필요한 옵션이 지원되는 Windows 기반 애플리케이션 만들기](walkthrough-creating-an-accessible-windows-based-application.md)
+- [연습: 액세스할 수 있는 Windows 기반 응용 프로그램 만들기](walkthrough-creating-an-accessible-windows-based-application.md)
