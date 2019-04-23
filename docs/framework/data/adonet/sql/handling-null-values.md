@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
 ms.openlocfilehash: 0d200ad35d3ab56bf97114b51b4f7fcc898eecdf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332146"
 ---
 # <a name="handling-null-values"></a>Null 값 처리
@@ -35,7 +35,7 @@ ms.locfileid: "59332146"
  ![Truth Table](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansinulls-option"></a>ANSI_NULLS 옵션 이해  
- <xref:System.Data.SqlTypes> SQL Server에서 ANSI_NULLS 옵션이 설정 되어 있을 때와 동일한 의미 체계를 제공 합니다. 모든 산술 연산자 (+,-, *, /, %), 비트 연산자 (~, &, &#124;), 대부분의 함수는 피연산자 또는 인수 중 하나라도 null 인 속성을 제외 하 고 null을 반환할 `IsNull`합니다.  
+ <xref:System.Data.SqlTypes>는 SQL Server에서 ANSI_NULLS 옵션이 설정되어 있을 때와 동일한 의미 체계를 제공합니다. 모든 산술 연산자 (+,-, *, /, %), 비트 연산자 (~, &, &#124;), 대부분의 함수는 피연산자 또는 인수 중 하나라도 null 인 속성을 제외 하 고 null을 반환할 `IsNull`합니다.  
   
  ANSI SQL-92 표준에서는 지원 하지 *columnName* = WHERE 절에서 NULL입니다. SQL Server에서는 ANSI_NULLS 옵션이 데이터베이스의 기본 null 허용 여부와 null 값에 대한 비교 평가를 모두 제어합니다. ANSI_NULLS를 사용하는 경우(기본값)에는 null 값을 테스트할 때 식에서 IS NULL 연산자를 사용해야 합니다. 예를 들어, 다음 비교는 ANSI_NULLS가 사용될 때 항상 알 수 없음 상태를 반환합니다.  
   
@@ -83,7 +83,7 @@ WHERE TerritoryID IN (1, 2, 3)
 >  `Nullable<T>` 또는 <xref:System.Nullable> 구조체는 현재 `DataSet`에서 지원되지 않습니다.  
   
 ### <a name="multiple-column-row-assignment"></a>여러 열(행) 할당  
- `DataTable.Add`를 `DataTable.LoadDataRow`, 또는 허용 하는 다른 Api는 <xref:System.Data.DataRow.ItemArray%2A> 행에 매핑되는, 'null'을 DataColumn의 기본값으로 매핑합니다. 배열의 개체가 `DbNull.Value` 또는 이에 해당하는 강력한 형식의 값을 포함하는 경우 위에서 설명한 것과 동일한 규칙이 적용됩니다.  
+ `DataTable.Add`, `DataTable.LoadDataRow` 또는 행으로 매핑되는 <xref:System.Data.DataRow.ItemArray%2A>를 허용하는 그 밖의 API는 'null'을 DataColumn의 기본값으로 매핑합니다. 배열의 개체가 `DbNull.Value` 또는 이에 해당하는 강력한 형식의 값을 포함하는 경우 위에서 설명한 것과 동일한 규칙이 적용됩니다.  
   
  또한 다음 규칙은 `DataRow.["columnName"]` null 할당의 인스턴스에도 적용됩니다.  
   
@@ -118,7 +118,7 @@ isColumnNull=True, ID=Null, Description=Null
 ```  
   
 ## <a name="comparing-null-values-with-sqltypes-and-clr-types"></a>SqlTypes 및 CLR 형식을 사용하여 Null 값 비교  
- null 값을 비교할 때는 `Equals` 메서드가 <xref:System.Data.SqlTypes>에서 null 값을 평가하는 방식과 CLR 형식을 사용하는 방식을 비교하여 그 차이를 반드시 알아야 합니다. 모든는 <xref:System.Data.SqlTypes>`Equals` 메서드에서 null 값을 평가 하는 데 데이터베이스 의미 체계를 사용 합니다: 비교 결과 null 값 중 하나 또는 모두 null 인 경우. 한편, 두 `Equals`에 대해 CLR <xref:System.Data.SqlTypes> 메서드를 사용하면 둘 다 null인 경우 결과는 true입니다. 이는 CLR `String.Equals` 메서드와 같은 인스턴스 메서드 사용과 정적/공유 메서드인 `SqlString.Equals` 사용 간의 차이를 나타냅니다.  
+ null 값을 비교할 때는 `Equals` 메서드가 <xref:System.Data.SqlTypes>에서 null 값을 평가하는 방식과 CLR 형식을 사용하는 방식을 비교하여 그 차이를 반드시 알아야 합니다. 모든 <xref:System.Data.SqlTypes>`Equals` 메서드에서는 null 값을 평가하는 데 데이터베이스 의미 체계를 사용합니다. 하나의 값 또는 두 값 모두 null이면 비교 결과는 null입니다. 한편, 두 `Equals`에 대해 CLR <xref:System.Data.SqlTypes> 메서드를 사용하면 둘 다 null인 경우 결과는 true입니다. 이는 CLR `String.Equals` 메서드와 같은 인스턴스 메서드 사용과 정적/공유 메서드인 `SqlString.Equals` 사용 간의 차이를 나타냅니다.  
   
  다음 예제에서는 각각의 `SqlString.Equals` 메서드와 `String.Equals` 메서드에 null 값 쌍이 전달된 후 빈 문자열 쌍이 전달될 때 두 메서드의 결과 차이를 보여 줍니다.  
   

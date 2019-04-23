@@ -3,10 +3,10 @@ title: 워크플로 추적
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
 ms.openlocfilehash: cd53ed834fdacb639b38346dca831ef4c3e26337
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321668"
 ---
 # <a name="workflow-tracing"></a>워크플로 추적
@@ -23,7 +23,7 @@ ms.locfileid: "59321668"
   
 4. 기본 분석 추적 버퍼 크기는 겨우 4KB이므로 이 크기를 32KB로 늘리는 것이 좋습니다. 이렇게 하려면 다음 단계를 수행합니다.  
   
-    1.  현재 프레임 워크 디렉터리 (예를 들어 C:\Windows\Microsoft.NET\Framework\v4.0.21203)에서 다음 명령을 실행 합니다. `wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
+    1.  현재 프레임워크 디렉터리(예: C:\Windows\Microsoft.NET\Framework\v4.0.21203)에서 `wevtutil um Microsoft.Windows.ApplicationServer.Applications.man` 명령을 실행합니다.  
   
     2.  변경 된 \<bufferSize > 32 Windows.ApplicationServer.Applications.man 파일의 값입니다.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "59321668"
                   </channel>  
         ```  
   
-    3.  현재 프레임 워크 디렉터리 (예를 들어 C:\Windows\Microsoft.NET\Framework\v4.0.21203)에서 다음 명령을 실행 합니다. `wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
+    3.  현재 프레임워크 디렉터리(예: C:\Windows\Microsoft.NET\Framework\v4.0.21203)에서 `wevtutil im Microsoft.Windows.ApplicationServer.Applications.man` 명령을 실행합니다.  
   
 > [!NOTE]
 >  .NET Framework 4 Client Profile을 사용 하는 경우.NET Framework 4 디렉터리에서 다음 명령을 실행 하 여 ETW 매니페스트를 먼저 등록 해야 합니다. `ServiceModelReg.exe –i –c:etw`  

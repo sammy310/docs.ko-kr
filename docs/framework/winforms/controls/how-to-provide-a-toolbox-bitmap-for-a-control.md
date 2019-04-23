@@ -10,10 +10,10 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], custom controls
 ms.assetid: 0ed0840a-616d-41ba-a27d-3573241932ad
 ms.openlocfilehash: 7c26e00acd4278ced53ad29c748ac076e0215a23
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337710"
 ---
 # <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>방법: 컨트롤에 대한 도구 상자 비트맵 제공
@@ -66,7 +66,7 @@ ms.locfileid: "59337710"
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Drawing.ToolboxBitmapAttribute>
-- [연습: 사용자 지정 구성 요소로 도구 상자 자동 채우기](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [연습: 사용자 지정 구성 요소를 사용 하 여 도구 상자에 자동으로 채우기](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
 - [디자인 타임에 Windows Forms 컨트롤 개발](developing-windows-forms-controls-at-design-time.md)
 - [특성 개요(Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md)
 - [특성(C#)](../../../csharp/programming-guide/concepts/attributes/index.md)

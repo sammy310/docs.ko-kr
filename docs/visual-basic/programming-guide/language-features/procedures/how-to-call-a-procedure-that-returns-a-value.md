@@ -8,10 +8,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], returning a value
 ms.assetid: a445127b-0f5f-465a-98fb-3e514b93d115
 ms.openlocfilehash: 6f45f01489ee84b6addb1f7c7c8dc584332f38dd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333888"
 ---
 # <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>방법: (Visual Basic) 값을 반환 하는 프로시저 호출
@@ -46,9 +46,9 @@ ms.locfileid: "59333888"
   
 ## <a name="see-also"></a>참고자료
 
-- [함수 프로시저](./function-procedures.md)
+- [Function 프로시저](./function-procedures.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
 - [Function 문](../../../../visual-basic/language-reference/statements/function-statement.md)
-- [방법: 값을 반환하는 프로시저 만들기](./how-to-create-a-procedure-that-returns-a-value.md)
-- [방법: 프로시저에서 값 반환](./how-to-return-a-value-from-a-procedure.md)
-- [방법: 값을 반환하지 않는 프로시저 호출](./how-to-call-a-procedure-that-does-not-return-a-value.md)
+- [방법: 값을 반환 하는 프로시저 만들기](./how-to-create-a-procedure-that-returns-a-value.md)
+- [방법: 프로시저에서 값을 반환 합니다.](./how-to-return-a-value-from-a-procedure.md)
+- [방법: 값을 반환 하지 않는 프로시저 호출](./how-to-call-a-procedure-that-does-not-return-a-value.md)

@@ -3,10 +3,10 @@ title: '연습: 비동기를 사용 하 여 웹 서비스에 액세스 하 고 A
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
 ms.openlocfilehash: 7f9b71bc76e8d17cf2fb6714070b4439265d1fda
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335903"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>연습: 비동기를 사용 하 여 웹 서비스에 액세스 하 고 Await (Visual Basic)
@@ -42,7 +42,7 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
   
 -   [GetURLContentsAsync 메서드를 .NET Framework 메서드로 바꾸려면](#GetURLContentsAsync)  
   
--   [예제](#BKMK_CompleteCodeExamples)  
+-   [예](#BKMK_CompleteCodeExamples)  
   
 ## <a name="prerequisites"></a>전제 조건  
  Visual Studio 2012 이상이 컴퓨터에 설치되어 있어야 합니다. 자세한 내용은 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=235233)를 참조하세요.  
@@ -137,13 +137,13 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
   
 3. 동기 솔루션에 대한 코드에는 다음 네 가지 메서드가 포함되어 있습니다.  
   
-    -   `SumPageSizes`에서 웹 페이지 Url 목록을 가져오는 `SetUpURLList` 를 호출 하 `GetURLContents` 및 `DisplayResults` 각 URL을 처리 합니다.  
+    -   `SumPageSizes` - `SetUpURLList`에서 웹 페이지 URL 목록을 가져온 다음 `GetURLContents` 및 `DisplayResults`를 호출하여 각 URL을 처리합니다.  
   
-    -   `SetUpURLList`를 사용 하면 있으며 웹 주소 목록을 반환 합니다.  
+    -   `SetUpURLList` - 웹 주소 목록을 만들어 반환합니다.  
   
-    -   `GetURLContents`에 각 웹 사이트의 콘텐츠를 다운로드 하 고 콘텐츠를 바이트 배열로 반환 합니다.  
+    -   `GetURLContents` - 각 웹 사이트의 콘텐츠를 다운로드하고 해당 콘텐츠를 바이트 배열로 반환합니다.  
   
-    -   `DisplayResults`각 URL에 대 한 바이트 배열의 바이트 수를 표시 합니다.  
+    -   `DisplayResults`- 각 URL에 대한 바이트 배열의 바이트 수를 표시합니다.  
   
      다음 네가지 메서드를 복사한 다음 아래에 `startButton_Click` MainWindow.xaml.vb의 이벤트 처리기:  
   
@@ -263,7 +263,7 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
     Using response As WebResponse = webReq.GetResponseAsync()  
     ```  
   
-2. `GetResponseAsync` 반환 된 <xref:System.Threading.Tasks.Task%601>합니다. 이 경우 *작업 반환 변수* `TResult`는 <xref:System.Net.WebResponse> 형식입니다. 작업은 요청한 데이터를 다운로드하고 작업을 실행하여 완료한 후 실제 `WebResponse` 개체를 생성한다는 약속입니다.  
+2. `GetResponseAsync`는 <xref:System.Threading.Tasks.Task%601>를 반환합니다. 이 경우 *작업 반환 변수* `TResult`는 <xref:System.Net.WebResponse> 형식입니다. 작업은 요청한 데이터를 다운로드하고 작업을 실행하여 완료한 후 실제 `WebResponse` 개체를 생성한다는 약속입니다.  
   
      검색 하는 `WebResponse` 작업에서 값을 적용을 [Await](../../../../visual-basic/language-reference/operators/await-operator.md) 연산자에 대 한 호출으로 `GetResponseAsync`다음 코드와 같이 합니다.  
   
@@ -675,11 +675,11 @@ End Class
   
 ## <a name="see-also"></a>참고자료
 
-- [Async 샘플: 웹 연습에 액세스 (C# 및 Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
+- [비동기 샘플: 웹 연습에 액세스 (C# 및 Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
 - [Await 연산자](../../../../visual-basic/language-reference/operators/await-operator.md)
-- [Async](../../../../visual-basic/language-reference/modifiers/async.md)
+- [비동기](../../../../visual-basic/language-reference/modifiers/async.md)
 - [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [비동기 반환 형식 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
-- [작업 기반 비동기 프로그래밍 (탭)](https://go.microsoft.com/fwlink/?LinkId=204847)
+- [비동기 반환 형식(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
+- [TAP(작업 기반 비동기 프로그래밍)](https://go.microsoft.com/fwlink/?LinkId=204847)
 - [방법: Task.WhenAll (Visual Basic)를 사용 하 여 비동기 연습 확장](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
 - [방법: 비동기를 사용 하 여 병렬로 여러 웹 요청 만들기 및 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

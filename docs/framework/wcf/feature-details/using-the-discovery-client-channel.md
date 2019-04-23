@@ -3,10 +3,10 @@ title: Discovery 클라이언트 채널 사용
 ms.date: 03/30/2017
 ms.assetid: 1494242a-1d64-4035-8ecd-eb4f06c8d2ba
 ms.openlocfilehash: 298cafe34b20a3644f967acf15f831be5b0b90ac
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329937"
 ---
 # <a name="using-the-discovery-client-channel"></a>Discovery 클라이언트 채널 사용
@@ -20,7 +20,7 @@ WCF 클라이언트 응용 프로그램을 작성하는 경우 호출할 서비�
   
  <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> 클래스에는 다음 두 개의 공용 속성이 들어 있습니다.  
   
-1. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.FindCriteria%2A>에 호출 하려는 서비스를 설명 하는 데 사용 됩니다.  
+1. 호출할 서비스를 설명하는 데 사용되는 <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.FindCriteria%2A>  
   
 2. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A> 검색 메시지를 보낼 검색 끝점을 지정 합니다.  
   

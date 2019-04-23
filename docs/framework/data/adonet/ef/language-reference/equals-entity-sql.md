@@ -3,10 +3,10 @@ title: = (같음) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 948eb588-7080-4046-bb48-633b007393bf
 ms.openlocfilehash: d50ede1964f6d6b9025a7214efe90e878aa55a0c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333160"
 ---
 # <a name="-equals-entity-sql"></a>= (같음) (Entity SQL)
@@ -25,7 +25,7 @@ expression == expression
  모든 유효한 식입니다. 비교할 두 식 모두 데이터 형식이 암시적으로 변환 가능해야 합니다.  
   
 ## <a name="result-types"></a>결과 형식  
- `true` 왼쪽된에 있는 식이 오른쪽 식; 같을 경우 그렇지 않으면 `false`합니다.  
+ 왼쪽 식의 값이 오른쪽 식의 값과 같으면`true` 이고, 그렇지 않으면 `false`입니다.  
   
 ## <a name="remarks"></a>설명  
  == 연산자는 = 연산자와 동일합니다.  

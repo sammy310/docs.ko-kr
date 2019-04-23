@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 2c1416566ca59a44b36457c710955de863013417
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 05978c5604e7aa359b016bd6e3f3196178f706ec
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980729"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59332211"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>명령줄 인수(C# 프로그래밍 가이드)
 다음 방법 중 하나로 메서드를 정의하여 인수를 `Main` 메서드에 보낼 수 있습니다.  
@@ -51,23 +51,23 @@ long num = Convert.ToInt64(s);
   
  명령 프롬프트에서 애플리케이션을 컴파일 및 실행하려면 다음 단계를 수행합니다.  
   
-1.  다음 코드를 텍스트 편집기에 붙여넣고 이름 `Factorial.cs`를 사용하여 파일을 텍스트 파일로 저장합니다.  
+1. 다음 코드를 텍스트 편집기에 붙여넣고 이름 `Factorial.cs`를 사용하여 파일을 텍스트 파일로 저장합니다.  
   
      [!code-csharp[csProgGuideMain#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#16)]  
   
-2.  **시작** 화면이나 **시작** 메뉴에서 Visual Studio **개발자 명령 프롬프트** 창을 열고 방금 만든 파일이 포함된 폴더로 이동합니다.  
+2. **시작** 화면이나 **시작** 메뉴에서 Visual Studio **개발자 명령 프롬프트** 창을 열고 방금 만든 파일이 포함된 폴더로 이동합니다.  
   
-3.  다음 명령을 입력하여 애플리케이션을 컴파일합니다.  
+3. 다음 명령을 입력하여 애플리케이션을 컴파일합니다.  
   
      `csc Factorial.cs`  
   
      애플리케이션에 컴파일 오류가 없으면 `Factorial.exe`라는 실행 파일이 만들어집니다.  
   
-4.  다음 명령을 입력하여 3의 계승을 계산합니다.  
+4. 다음 명령을 입력하여 3의 계승을 계산합니다.  
   
      `Factorial 3`  
   
-5.  이 명령은 다음 출력을 생성합니다. `The factorial of 3 is 6.`  
+5. 이 명령은 다음 출력을 생성합니다. `The factorial of 3 is 6.`  
   
 > [!NOTE]
 >  Visual Studio에서 애플리케이션을 실행할 경우 [프로젝트 디자이너, 디버그 페이지](/visualstudio/ide/reference/debug-page-project-designer)에서 명령줄 인수를 지정할 수 있습니다.  

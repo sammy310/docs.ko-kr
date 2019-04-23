@@ -6,10 +6,10 @@ helpviewer_keywords:
 - application settings [Windows Forms], changing
 ms.assetid: 5da91272-ad7e-49e7-9d1f-eb64439a1e4d
 ms.openlocfilehash: 6421171072f72764927b1a449c0257a29e8e82d6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326556"
 ---
 # <a name="how-to-change-the-value-of-an-existing-setting-at-design-time"></a>방법: 디자인 타임에 기존 설정 값 변경
@@ -35,4 +35,4 @@ ms.locfileid: "59326556"
 
 - [응용 프로그램 설정 및 사용자 설정 사용](using-application-settings-and-user-settings.md)
 - [방법: 디자인 타임에 새 설정 만들기](how-to-create-a-new-setting-at-design-time.md)
-- [애플리케이션 설정 개요](application-settings-overview.md)
+- [응용 프로그램 설정 개요](application-settings-overview.md)

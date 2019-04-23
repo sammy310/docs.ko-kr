@@ -9,23 +9,21 @@ helpviewer_keywords:
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45ac26442adc78c5d1e6a2efe94fc2cefff86562
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: e1696bd6eb4eb3a43593cf7ed264c80745c1ec66
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219622"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59326283"
 ---
 # <a name="copying-and-pinning"></a>복사 및 고정
 데이터를 마샬링할 때 interop 마샬러는 마샬링되는 데이터를 복사 또는 고정할 수 있습니다. 데이터를 복사하면 한 메모리 위치의 데이터 복사본이 또 다른 메모리 위치에 배치됩니다. 다음 그림에서는 값 형식 복사와 관리되는 메모리에서 관리되지 않는 메모리로 참조를 통해 전달되는 형식 복사의 차이점을 보여 줍니다.  
   
- ![값 및 참조로 전달되는 값 형식](./media/interopmarshalcopy.gif "interopmarshalcopy")  
-값 및 참조로 전달되는 값 형식  
+ ![값 및 참조 형식을 복사하는 방법을 보여 주는 다이어그램입니다.](./media/copying-and-pinning/interop-marshal-copy.gif)  
   
- 값으로 전달되는 메서드 인수는 스택의 값으로 비관리 코드에 마샬링됩니다. 복사는 직접 프로세스입니다. 참조로 전달된 인수는 스택의 포인터로 전달됩니다. 참조 형식도 값 및 참조로 전달됩니다. 다음 그림과 같이 값으로 전달되는 참조 형식은 복사 또는 고정됩니다.  
+ 값으로 전달되는 메서드 인수는 스택의 값으로 비관리 코드에 마샬링됩니다. 복사는 직접 프로세스입니다. 참조로 전달된 인수는 스택의 포인터로 전달됩니다. 참조 형식도 값 및 참조로 전달됩니다. 다음 그림과 같이 값으로 전달되는 참조 형식은 복사 또는 고정됩니다. 
   
- ![COM interop](./media/interopmarshalpin.gif "interopmarshalpin")  
-값 및 참조로 전달되는 참조 형식  
+ ![값 및 참조로 전달되는 참조 형식을 보여 주는 다이어그램입니다.](./media/copying-and-pinning/interop-marshal-reference-pin.gif)  
   
  고정 작업은 현재 메모리 위치에서 데이터를 일시적으로 잠그므로 공용 언어 런타임의 가비지 수집기에 의해 데이터가 재배치되지 않습니다. 마샬러는 데이터를 고정하여 복사 오버헤드를 줄이고 성능을 개선합니다. 데이터 형식에 따라 마샬링 프로세스 중에 복사 또는 고정되는지 결정됩니다.  고정 작업은 <xref:System.String> 같은 개체의 마샬링 중에 수행되지만 <xref:System.Runtime.InteropServices.GCHandle> 클래스를 사용하여 메모리를 수동으로 고정할 수도 있습니다.  
   
@@ -78,6 +76,7 @@ ms.locfileid: "56219622"
  <xref:System.Text.StringBuilder?displayProperty=nameWithType>가 값으로 전달되면 마샬러는 **StringBuilder**의 내부 버퍼에 대한 참조를 호출자에게 직접 전달합니다. 호출자와 호출 수신자가 버퍼 크기가 동의해야 합니다. 호출자는 적절한 길이의 **StringBuilder**를 만들어야 합니다. 호출 수신자는 버퍼가 오버런되지 않도록 필요한 예방 조치를 수행해야 합니다. **StringBuilder**는 값으로 전달되는 참조 형식이 기본적으로 In 매개 변수로 전달되는 규칙의 예외입니다. 항상 In/Out으로 전달됩니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [기본 마샬링 동작](default-marshaling-behavior.md)
 - [방향 특성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [interop 마샬링](interop-marshaling.md)

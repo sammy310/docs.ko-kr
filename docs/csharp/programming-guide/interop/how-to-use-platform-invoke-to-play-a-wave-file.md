@@ -8,12 +8,12 @@ helpviewer_keywords:
 - wav files
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
-ms.openlocfilehash: 209a0f03197e0f77e23be0dc1170789688f3e09a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 29c36bd0494879b66674cf3a3c404fdaf3908f59
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967219"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59323813"
 ---
 # <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>방법: 플랫폼 호출을 사용하여 웨이브 파일 재생(C# 프로그래밍 가이드)
 다음 C# 코드 예제에서는 플랫폼 호출 서비스를 사용하여 Windows 운영 체제에서 .wav 사운드 파일을 재생하는 방법을 설명합니다.  
@@ -31,15 +31,15 @@ ms.locfileid: "56967219"
   
 ### <a name="to-compile-the-code"></a>코드를 컴파일하려면  
   
-1.  Visual Studio에서 새 C# Windows 애플리케이션 프로젝트를 만들고 이름을 **WinSound**로 지정합니다.  
+1. Visual Studio에서 새 C# Windows 애플리케이션 프로젝트를 만들고 이름을 **WinSound**로 지정합니다.  
   
-2.  위의 코드를 복사하여 `Form1.cs` 파일 내용 위에 붙여넣습니다.  
+2. 위의 코드를 복사하여 `Form1.cs` 파일 내용 위에 붙여넣습니다.  
   
-3.  다음 코드를 복사하여 `Form1.Designer.cs` 파일의 `InitializeComponent()` 메서드에서 기존 코드 뒤에 붙여넣습니다.  
+3. 다음 코드를 복사하여 `Form1.Designer.cs` 파일의 `InitializeComponent()` 메서드에서 기존 코드 뒤에 붙여넣습니다.  
   
      [!code-csharp[csProgGuideInterop#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInterop/CS/WinSound.cs#4)]  
   
-4.  코드를 컴파일하고 실행합니다.  
+4. 코드를 컴파일하고 실행합니다.  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
  자세한 내용은 [.NET의 보안](../../../standard/security/index.md)을 참조하세요.  

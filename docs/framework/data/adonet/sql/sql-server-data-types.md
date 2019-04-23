@@ -3,10 +3,10 @@ title: SQL Server 데이터 형식 및 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
 ms.openlocfilehash: 9e81e54f223d35a3db9c943edf6f9f9b24110faa
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326309"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server 데이터 형식 및 ADO.NET
@@ -20,10 +20,10 @@ SQL Server와 .NET Framework는 서로 다른 형식 시스템을 기반으로 �
   
  **SQL Server 온라인 설명서**  
   
-1. [데이터 형식(데이터베이스 엔진)](https://go.microsoft.com/fwlink/?LinkID=107468)  
+1. [데이터 형식 (데이터베이스 엔진)](https://go.microsoft.com/fwlink/?LinkID=107468)  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [SqlType 및 DataSet](../../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)  
+ [SqlTypes 및 DataSet](../../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)  
  `SqlTypes`의 `DataSet`에 대한 형식 지원에 대해 설명합니다.  
   
  [Null 값 처리](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)  

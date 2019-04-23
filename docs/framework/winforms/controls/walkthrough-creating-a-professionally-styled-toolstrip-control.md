@@ -11,10 +11,10 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
 ms.openlocfilehash: 526cb509d780abdbf3db6e15504616de19daae83
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336553"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>연습: 전문적인 스타일의 ToolStrip 컨트롤 만들기
@@ -88,7 +88,7 @@ ms.locfileid: "59336553"
     |ImageTransparentColor|`238, 238, 238`|  
     |여백|`0, 0, 0, 0`|  
     |안쪽 여백|`3, 3, 3, 3`|  
-    |텍스트|**메일**|  
+    |텍스트|**Mail**|  
     |TextAlign|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
   
 5. 세 개 이상에 대 한 7 단계를 반복 <xref:System.Windows.Forms.ToolStripButton> 컨트롤입니다.  
@@ -190,4 +190,4 @@ ms.locfileid: "59336553"
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>
 - [ToolStrip 컨트롤](toolstrip-control-windows-forms.md)
-- [방법: 양식에 표준 메뉴 항목 제공](how-to-provide-standard-menu-items-to-a-form.md)
+- [방법: 폼에 표준 메뉴 항목 제공](how-to-provide-standard-menu-items-to-a-form.md)

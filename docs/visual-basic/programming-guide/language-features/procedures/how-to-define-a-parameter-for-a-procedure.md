@@ -9,10 +9,10 @@ helpviewer_keywords:
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
 ms.openlocfilehash: 55925b0f007b1be2f5d46ffc0854601f483b2e2d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333836"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>방법: 프로시저 (Visual Basic)에 대 한 매개 변수를 정의 합니다.
@@ -55,11 +55,11 @@ A *매개 변수* 호출 코드를 호출할 때 프로시저에 값을 전달�
 ## <a name="see-also"></a>참고자료
 
 - [절차](./index.md)
-- [하위 프로시저](./sub-procedures.md)
-- [함수 프로시저](./function-procedures.md)
+- [Sub 프로시저](./sub-procedures.md)
+- [Function 프로시저](./function-procedures.md)
 - [방법: 프로시저에 인수 전달](./how-to-pass-arguments-to-a-procedure.md)
 - [값 또는 참조로 인수 전달](./passing-arguments-by-value-and-by-reference.md)
 - [재귀 프로시저](./recursive-procedures.md)
 - [프로시저 오버로딩](./procedure-overloading.md)
 - [개체 및 클래스](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [개체 지향 프로그래밍 (Visual Basic)](../../concepts/object-oriented-programming.md)
+- [개체 지향 프로그래밍(Visual Basic)](../../concepts/object-oriented-programming.md)

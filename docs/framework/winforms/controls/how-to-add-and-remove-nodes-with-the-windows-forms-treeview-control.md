@@ -12,10 +12,10 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], adding nodes
 ms.assetid: de1b82db-4905-449a-9f59-af271a6b6673
 ms.openlocfilehash: 4cbb5fbdb24790a7ddbce5c38060703c7ba7024a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326894"
 ---
 # <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control"></a>방법: Windows Forms TreeView 컨트롤을 사용하여 노드 추가 및 제거
@@ -74,7 +74,7 @@ Windows Forms <xref:System.Windows.Forms.TreeView> 컨트롤의 최상위 노드
 
 - [TreeView 컨트롤](treeview-control-windows-forms.md)
 - [TreeView 컨트롤 개요](treeview-control-overview-windows-forms.md)
-- [방법: Windows Forms TreeView 컨트롤에 대한 아이콘 설정](how-to-set-icons-for-the-windows-forms-treeview-control.md)
-- [방법: Windows Forms TreeView 컨트롤의 모든 노드 반복](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
-- [방법: 클릭한 TreeView 노드 확인](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
-- [방법: TreeView 또는 ListView 컨트롤에 사용자 지정 정보 추가(Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [방법: Windows Forms TreeView 컨트롤의 아이콘 설정](how-to-set-icons-for-the-windows-forms-treeview-control.md)
+- [방법: Windows Forms TreeView 컨트롤의 노드 전체 반복](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
+- [방법: 클릭 한 TreeView 노드 확인](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
+- [방법: TreeView 또는 ListView 컨트롤 (Windows Forms)에 사용자 지정 정보 추가](add-custom-information-to-a-treeview-or-listview-control-wf.md)

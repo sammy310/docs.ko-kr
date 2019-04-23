@@ -16,10 +16,10 @@ helpviewer_keywords:
 - execution [Visual Basic], stopping
 ms.assetid: 07018828-2d49-4cf5-a44b-19fb15d9efea
 ms.openlocfilehash: 3129824f6e4047420c422503cc366a1c8d28b7e7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326218"
 ---
 # <a name="walkthrough-defining-classes-visual-basic"></a>연습: 정의 클래스 (Visual Basic)
@@ -81,5 +81,5 @@ ms.locfileid: "59326218"
   
 ## <a name="see-also"></a>참고자료
 
-- [개체 지향 프로그래밍 (Visual Basic)](../../concepts/object-oriented-programming.md)
+- [개체 지향 프로그래밍(Visual Basic)](../../concepts/object-oriented-programming.md)
 - [개체 및 클래스](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

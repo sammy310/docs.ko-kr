@@ -3,10 +3,10 @@ title: 스트림
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
 ms.openlocfilehash: f6ca887240ec4f6a304f0d5972790837c0121721
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330222"
 ---
 # <a name="stream"></a>스트림
@@ -36,7 +36,7 @@ public interface IStreamingSample
 }  
 ```  
   
- `GetStream` 작업은 버퍼링되는 문자열로 입력 데이터를 받고, 스트리밍되는 `Stream`을 반환합니다. 반대로, `UploadStream`은 스트리밍된 `Stream`을 받아 버퍼링된 `bool`을 반환합니다. `EchoStream` 받아서 반환 `Stream` 은 작업의 예 인 입력 및 출력 메시지가 모두 스트리밍됩니다. 마지막으로, `GetReversedStream`은 어떤 입력도 받지 않고 스트리밍되는 `Stream`을 반환합니다.  
+ `GetStream` 작업은 버퍼링되는 문자열로 입력 데이터를 받고, 스트리밍되는 `Stream`을 반환합니다. 반대로, `UploadStream`은 스트리밍된 `Stream`을 받아 버퍼링된 `bool`을 반환합니다. `EchoStream`은 `Stream`을 받고 반환하므로 입출력 메시지 모두 스트리밍되는 작업의 예입니다. 마지막으로, `GetReversedStream`은 어떤 입력도 받지 않고 스트리밍되는 `Stream`을 반환합니다.  
   
 ## <a name="enabling-streamed-transfers"></a>스트리밍 전송 사용  
  앞서 설명한 대로 작업 계약을 정의하면 프로그래밍 모델 수준에서 스트리밍을 제공합니다. 여기서 중지하면 전송에서는 계속 메시지의 내용 전체를 버퍼링합니다. 전송 스트리밍을 사용하려면 전송의 바인딩 요소에서 전송 모드를 선택합니다. 바인딩 요소에는 `TransferMode`, `Buffered`, `Streamed` 또는 `StreamedRequest`로 설정할 수 있는 `StreamedResponse` 속성이 있습니다. 전송 모드를 `Streamed`로 설정하면 양방향 스트리밍 통신이 가능합니다. 전송 모드를 `StreamedRequest` 또는 `StreamedResponse`로 설정하면 각각 요청 또는 응답에서만 스트리밍 통신을 사용합니다.  
@@ -66,7 +66,7 @@ public interface IStreamingSample
 ## <a name="processing-data-as-it-is-streamed"></a>스트리밍 과정에서 데이터 처리  
  `GetStream`, `UploadStream` 및 `EchoStream` 작업 모두 파일로부터 바로 데이터를 보내거나 받은 데이터를 파일에 바로 저장하는 일을 담당합니다. 그러나 많은 양의 데이터를 보내거나 받을 필요가 있어 보내거나 받는 과정에 데이터의 청크를 대상으로 처리 작업을 수행하는 경우가 있습니다. 그러나 시나리오를 해결하는 방법 중 하나는 읽거나 기록하는 과정에서 데이터를 처리하는 사용자 지정 스트림(<xref:System.IO.Stream>에서 파생되는 클래스)을 작성하는 것입니다. `GetReversedStream` 작업 및 `ReverseStream` 클래스가 해당됩니다.  
   
- `GetReversedStream` 만들고의 새 인스턴스를 반환 합니다. `ReverseStream`합니다. 시스템이 해당 `ReverseStream` 개체로부터 읽을 때 실제 처리가 이루어집니다. `ReverseStream.Read` 구현은 기본 파일로부터 바이트 청크를 읽고 이를 반대로 바꾼 다음 그 바이트를 반환합니다. 여기서 파일의 내용 전체를 반대로 바꾸지는 않습니다. 한 번에 하나의 바이트 청크를 반대로 바꿉니다. 이는 스트림에서 콘텐츠를 읽거나 기록하는 중에 스트림 처리를 수행하는 방법을 보여 주는 예제입니다.  
+ `GetReversedStream`은 `ReverseStream`의 새 인스턴스를 만들어 반환합니다. 시스템이 해당 `ReverseStream` 개체로부터 읽을 때 실제 처리가 이루어집니다. `ReverseStream.Read` 구현은 기본 파일로부터 바이트 청크를 읽고 이를 반대로 바꾼 다음 그 바이트를 반환합니다. 여기서 파일의 내용 전체를 반대로 바꾸지는 않습니다. 한 번에 하나의 바이트 청크를 반대로 바꿉니다. 이는 스트림에서 콘텐츠를 읽거나 기록하는 중에 스트림 처리를 수행하는 방법을 보여 주는 예제입니다.  
   
 ```csharp
 class ReverseStream : Stream  

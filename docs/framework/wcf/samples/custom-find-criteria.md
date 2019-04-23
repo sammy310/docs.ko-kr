@@ -3,10 +3,10 @@ title: 사용자 지정 찾기 조건
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
 ms.openlocfilehash: d676d7b2edbfb517f3fd8fe0c99fe7cc54eca2a8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332536"
 ---
 # <a name="custom-find-criteria"></a>사용자 지정 찾기 조건
@@ -45,7 +45,7 @@ ms.locfileid: "59332536"
   
      이 사용자 지정 논리는 서비스에 있는 각 엔드포인트의 모든 범위에 적용됩니다. 엔드포인트의 범위가 클라이언트에서 제공한 범위와 일치하면 검색 서비스에서는 클라이언트로 다시 보내는 응답에 해당 엔드포인트를 추가합니다.  
   
-3. **CustomDiscoveryExtension.cs**: 검색 서비스를 구현 하는 마지막 단계를 사용자 지정이 구현에 연결할 서비스 호스트에 서비스를 검색 합니다. 여기에 사용되는 도우미 클래스는 `CustomDiscoveryExtension` 클래스입니다. 이 클래스는 <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension> 클래스를 확장합니다. 사용자는 <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> 메서드를 재정의해야 합니다. 이 경우 메서드는 이전에 생성된 사용자 지정 검색 서비스의 인스턴스를 반환합니다. `PublishedEndpoints` <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 에 추가 되는 응용 프로그램 끝점 모두 포함 하는 <xref:System.ServiceModel.ServiceHost>합니다. 사용자 지정 검색 서비스에서는 이를 사용하여 해당 내부 목록을 채웁니다. 사용자가 다른 엔드포인트 메타데이터를 추가할 수도 있습니다.  
+3. **CustomDiscoveryExtension.cs**: 검색 서비스를 구현 하는 마지막 단계를 사용자 지정이 구현에 연결할 서비스 호스트에 서비스를 검색 합니다. 여기에 사용되는 도우미 클래스는 `CustomDiscoveryExtension` 클래스입니다. 이 클래스는 <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension> 클래스를 확장합니다. 사용자는 <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> 메서드를 재정의해야 합니다. 이 경우 메서드는 이전에 생성된 사용자 지정 검색 서비스의 인스턴스를 반환합니다. `PublishedEndpoints`는 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>에 추가된 모든 응용 프로그램 엔드포인트를 포함하는 <xref:System.ServiceModel.ServiceHost>입니다. 사용자 지정 검색 서비스에서는 이를 사용하여 해당 내부 목록을 채웁니다. 사용자가 다른 엔드포인트 메타데이터를 추가할 수도 있습니다.  
   
  마지막으로 Program.cs를 엽니다. <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>와 `CustomDiscoveryExtension`이 모두 호스트에 추가되어 있습니다. 이 작업이 수행되고 호스트에 검색 메시지를 받는 데 사용할 엔드포인트가 있으면 응용 프로그램에서 사용자 지정 검색 서비스를 사용할 수 있습니다.  
   

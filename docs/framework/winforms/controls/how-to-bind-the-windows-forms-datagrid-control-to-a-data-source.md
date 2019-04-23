@@ -15,10 +15,10 @@ helpviewer_keywords:
 - data-bound controls [Windows Forms], DataGrid
 ms.assetid: 128cdb07-dfd3-4d60-9d6a-902847667c36
 ms.openlocfilehash: 920a93894cc126f85bc6b618efbe6e9cedea4881
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332575"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>방법: 데이터 원본에 Windows Forms DataGrid 컨트롤 바인딩
@@ -106,6 +106,6 @@ ms.locfileid: "59332575"
 ## <a name="see-also"></a>참고자료
 
 - [DataGrid 컨트롤 개요](datagrid-control-overview-windows-forms.md)
-- [방법: Windows Forms DataGrid 컨트롤에 테이블 및 열 추가](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [방법: Windows Forms DataGrid 컨트롤에 테이블과 열 추가](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
 - [DataGrid 컨트롤](datagrid-control-windows-forms.md)
 - [Windows Forms 데이터 바인딩](../windows-forms-data-binding.md)

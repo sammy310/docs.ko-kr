@@ -12,10 +12,10 @@ helpviewer_keywords:
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
 ms.openlocfilehash: 59766999c5b03aac7aec13b293feaa8c17f2ced0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338568"
 ---
 # <a name="option-infer-statement"></a>Option Infer 문
@@ -102,6 +102,6 @@ Option Infer { On | Off }
 - [Option Compare 문](../../../visual-basic/language-reference/statements/option-compare-statement.md)
 - [Option Explicit 문](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
 - [Option Strict 문](../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [옵션 대화 상자, 프로젝트, VB 기본값](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+- [옵션 대화 상자, 프로젝트, Visual Basic 기본값](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
 - [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
 - [boxing 및 unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)

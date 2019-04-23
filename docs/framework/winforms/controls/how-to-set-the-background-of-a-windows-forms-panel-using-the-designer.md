@@ -8,10 +8,10 @@ helpviewer_keywords:
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: db83cf54-3c69-4b08-ac6c-25b9b5abb1b0
 ms.openlocfilehash: 888b1910902819b847d7d622f7b086fec82d669d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334356"
 ---
 # <a name="how-to-set-the-background-of-a-windows-forms-panel-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms 패널 배경 설정
@@ -42,4 +42,4 @@ Windows Forms <xref:System.Windows.Forms.Panel> 컨트롤 배경색 및 배경 �
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>
 - [Panel 컨트롤](panel-control-windows-forms.md)
 - [Panel 컨트롤 개요](panel-control-overview-windows-forms.md)
-- [방법: 디자이너를 사용하여 Windows Forms 패널 컨트롤에서 컨트롤 그룹화](group-controls-with-wf-panel-control-using-the-designer.md)
+- [방법: 디자이너를 사용 하 여 Windows Forms 패널 컨트롤을 사용 하 여 그룹 컨트롤](group-controls-with-wf-panel-control-using-the-designer.md)

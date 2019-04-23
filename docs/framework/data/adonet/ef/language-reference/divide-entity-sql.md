@@ -3,10 +3,10 @@ title: '- (나누기) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: ef48c368-f3ed-4275-8ada-4e9649781262
 ms.openlocfilehash: c3b477a63adf3c3d51f28449e94c2b716422296c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330859"
 ---
 # <a name="-divide-entity-sql"></a>/ (나누기) (Entity SQL)
@@ -20,10 +20,10 @@ dividend / divisor
   
 ## <a name="arguments"></a>인수  
  `dividend`  
- 나눌 숫자 식입니다. `dividend` 숫자 데이터 형식 중 하나인 유효한 식이입니다.  
+ 나눌 숫자 식입니다. `dividend` 는 숫자 데이터 형식의 유효한 식입니다.  
   
  `divisor`  
- 피제수를 나눌 숫자 식입니다. `divisor` 숫자 데이터 형식 중 하나인 유효한 식이입니다.  
+ 피제수를 나눌 숫자 식입니다. `divisor` 는 숫자 데이터 형식의 유효한 식입니다.  
   
 ## <a name="result-types"></a>결과 형식  
  두 인수에 대해 암시적 형식 승격을 수행한 결과 데이터 형식입니다. 암시적 형식 승격에 대 한 자세한 내용은 참조 하세요. [형식 시스템](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)입니다.  

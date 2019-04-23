@@ -5,10 +5,10 @@ f1_keywords:
 - vbrMissingMember_MemberNotFoundOnType2
 ms.assetid: 6300feb8-78ac-4dd0-9653-1d03e1f5bc20
 ms.openlocfilehash: fdaea9d7f0aee92852430ae3ad676bf13a3d9396
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336969"
 ---
 # <a name="public-member-membername-on-type-typename-not-found"></a>Public 멤버 '\<membername >' 형식에 '\<typename >' 찾을 수 없음
@@ -20,5 +20,5 @@ ms.locfileid: "59336969"
   
 ## <a name="see-also"></a>참고자료
 
-- [Public](../../visual-basic/language-reference/modifiers/public.md)
-- [컴파일 시 바인딩 및 런타임에 바인딩](../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
+- [공용](../../visual-basic/language-reference/modifiers/public.md)
+- [초기 바인딩 및 런타임에 바인딩](../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
