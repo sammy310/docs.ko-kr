@@ -10,23 +10,23 @@ helpviewer_keywords:
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
 ms.openlocfilehash: cc8f8c620516a943d6d70187e19b72f5a2a99888
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301336"
 ---
-# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a><span data-ttu-id="80db6-102">방법: 디자인 타임에 Windows Form의 컨트롤에 대한 도구 설명 설정</span><span class="sxs-lookup"><span data-stu-id="80db6-102">How to: Set ToolTips for Controls on a Windows Form at Design Time</span></span>
-<span data-ttu-id="80db6-103">설정할 수 있습니다는 <xref:System.Windows.Forms.ToolTip> Windows Forms 디자이너 또는 코드에서 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="80db6-103">You can set a <xref:System.Windows.Forms.ToolTip> string in code or in the Windows Forms Designer.</span></span> <span data-ttu-id="80db6-104">에 대 한 자세한 내용은 합니다 <xref:System.Windows.Forms.ToolTip> 구성 요소를 참조 하세요 [ToolTip 구성 요소 개요](tooltip-component-overview-windows-forms.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="80db6-104">For more information about the <xref:System.Windows.Forms.ToolTip> component, see [ToolTip Component Overview](tooltip-component-overview-windows-forms.md).</span></span>  
+# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a><span data-ttu-id="dc18f-102">방법: 디자인 타임에 Windows Form의 컨트롤에 대한 도구 설명 설정</span><span class="sxs-lookup"><span data-stu-id="dc18f-102">How to: Set ToolTips for Controls on a Windows Form at Design Time</span></span>
+<span data-ttu-id="dc18f-103">설정할 수 있습니다는 <xref:System.Windows.Forms.ToolTip> Windows Forms 디자이너 또는 코드에서 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="dc18f-103">You can set a <xref:System.Windows.Forms.ToolTip> string in code or in the Windows Forms Designer.</span></span> <span data-ttu-id="dc18f-104">에 대 한 자세한 내용은 합니다 <xref:System.Windows.Forms.ToolTip> 구성 요소를 참조 하세요 [ToolTip 구성 요소 개요](tooltip-component-overview-windows-forms.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="dc18f-104">For more information about the <xref:System.Windows.Forms.ToolTip> component, see [ToolTip Component Overview](tooltip-component-overview-windows-forms.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="80db6-105">표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="80db6-105">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="80db6-106">설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="80db6-106">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="80db6-107">자세한 내용은 [Visual Studio IDE 개인 설정](/visualstudio/ide/personalizing-the-visual-studio-ide)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="80db6-107">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
+>  <span data-ttu-id="dc18f-105">표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dc18f-105">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="dc18f-106">설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="dc18f-106">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="dc18f-107">자세한 내용은 [Visual Studio IDE 개인 설정](/visualstudio/ide/personalizing-the-visual-studio-ide)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="dc18f-107">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
   
-### <a name="to-set-a-tooltip-programmatically"></a><span data-ttu-id="80db6-108">프로그래밍 방식으로 도구 설명을 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="80db6-108">To set a ToolTip programmatically</span></span>  
+### <a name="to-set-a-tooltip-programmatically"></a><span data-ttu-id="dc18f-108">프로그래밍 방식으로 도구 설명을 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="dc18f-108">To set a ToolTip programmatically</span></span>  
   
-1. <span data-ttu-id="80db6-109">도구 설명이 표시 되는 컨트롤을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="80db6-109">Add the control that will display the ToolTip.</span></span>  
+1. <span data-ttu-id="dc18f-109">도구 설명이 표시 되는 컨트롤을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="dc18f-109">Add the control that will display the ToolTip.</span></span>  
   
-2. <span data-ttu-id="80db6-110">사용 된 <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> 메서드의 <xref:System.Windows.Forms.ToolTip> 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="80db6-110">Use the <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> method of the <xref:System.Windows.Forms.ToolTip> component.</span></span>  
+2. <span data-ttu-id="dc18f-110">사용 된 <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> 메서드의 <xref:System.Windows.Forms.ToolTip> 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="dc18f-110">Use the <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> method of the <xref:System.Windows.Forms.ToolTip> component.</span></span>  
   
     ```vb  
     ' In this example, Button1 is the control to display the ToolTip.  
@@ -43,17 +43,17 @@ ms.locfileid: "59301336"
     toolTip1->SetToolTip(button1, "Save changes");  
     ```  
   
-### <a name="to-set-a-tooltip-in-the-designer"></a><span data-ttu-id="80db6-111">디자이너에서 도구 설명을 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="80db6-111">To set a ToolTip in the designer</span></span>  
+### <a name="to-set-a-tooltip-in-the-designer"></a><span data-ttu-id="dc18f-111">디자이너에서 도구 설명을 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="dc18f-111">To set a ToolTip in the designer</span></span>  
   
-1. <span data-ttu-id="80db6-112">폼에 <xref:System.Windows.Forms.ToolTip> 구성 요소를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="80db6-112">Add a <xref:System.Windows.Forms.ToolTip> component to the form.</span></span>  
+1. <span data-ttu-id="dc18f-112">폼에 <xref:System.Windows.Forms.ToolTip> 구성 요소를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="dc18f-112">Add a <xref:System.Windows.Forms.ToolTip> component to the form.</span></span>  
   
-2. <span data-ttu-id="80db6-113">도구 설명 표시 되거나 폼에 추가 하는 컨트롤을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="80db6-113">Select the control that will display the ToolTip, or add it to the form.</span></span>  
+2. <span data-ttu-id="dc18f-113">도구 설명 표시 되거나 폼에 추가 하는 컨트롤을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="dc18f-113">Select the control that will display the ToolTip, or add it to the form.</span></span>  
   
-3. <span data-ttu-id="80db6-114">에 **속성** 창에서 **ToolTip1의 도구 설명** 텍스트 문자열을 적절 한 값입니다.</span><span class="sxs-lookup"><span data-stu-id="80db6-114">In the **Properties** window, set the **ToolTip on ToolTip1** value to an appropriate string of text.</span></span>  
+3. <span data-ttu-id="dc18f-114">에 **속성** 창에서 **ToolTip1의 도구 설명** 텍스트 문자열을 적절 한 값입니다.</span><span class="sxs-lookup"><span data-stu-id="dc18f-114">In the **Properties** window, set the **ToolTip on ToolTip1** value to an appropriate string of text.</span></span>  
 
-### <a name="to-remove-a-tooltip-programmatically"></a><span data-ttu-id="80db6-115">도구 설명에 프로그래밍 방식으로 제거 하려면</span><span class="sxs-lookup"><span data-stu-id="80db6-115">To remove a ToolTip programmatically</span></span>  
+### <a name="to-remove-a-tooltip-programmatically"></a><span data-ttu-id="dc18f-115">도구 설명에 프로그래밍 방식으로 제거 하려면</span><span class="sxs-lookup"><span data-stu-id="dc18f-115">To remove a ToolTip programmatically</span></span>  
   
-1. <span data-ttu-id="80db6-116">사용 된 <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> 메서드의 <xref:System.Windows.Forms.ToolTip> 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="80db6-116">Use the <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> method of the <xref:System.Windows.Forms.ToolTip> component.</span></span>  
+1. <span data-ttu-id="dc18f-116">사용 된 <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> 메서드의 <xref:System.Windows.Forms.ToolTip> 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="dc18f-116">Use the <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> method of the <xref:System.Windows.Forms.ToolTip> component.</span></span>  
   
     ```vb  
     ' In this example, Button1 is the control displaying the ToolTip.  
@@ -70,14 +70,14 @@ ms.locfileid: "59301336"
     toolTip1->SetToolTip(button1, NULL);  
     ```  
   
-### <a name="to-remove-a-tooltip-in-the-designer"></a><span data-ttu-id="80db6-117">디자이너에서 도구 설명을 제거 하려면</span><span class="sxs-lookup"><span data-stu-id="80db6-117">To remove a ToolTip in the designer</span></span>  
+### <a name="to-remove-a-tooltip-in-the-designer"></a><span data-ttu-id="dc18f-117">디자이너에서 도구 설명을 제거 하려면</span><span class="sxs-lookup"><span data-stu-id="dc18f-117">To remove a ToolTip in the designer</span></span>  
   
-1. <span data-ttu-id="80db6-118">도구 설명에 표시 되는 컨트롤을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="80db6-118">Select the control that is displaying the ToolTip.</span></span>  
+1. <span data-ttu-id="dc18f-118">도구 설명에 표시 되는 컨트롤을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="dc18f-118">Select the control that is displaying the ToolTip.</span></span>  
   
-2. <span data-ttu-id="80db6-119">에 **속성** 창에서 텍스트를 삭제 합니다 **ToolTip1의 도구 설명**합니다.</span><span class="sxs-lookup"><span data-stu-id="80db6-119">In the **Properties** window, delete the text in the **ToolTip on ToolTip1**.</span></span>  
+2. <span data-ttu-id="dc18f-119">에 **속성** 창에서 텍스트를 삭제 합니다 **ToolTip1의 도구 설명**합니다.</span><span class="sxs-lookup"><span data-stu-id="dc18f-119">In the **Properties** window, delete the text in the **ToolTip on ToolTip1**.</span></span>  
 
-## <a name="see-also"></a><span data-ttu-id="80db6-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="80db6-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dc18f-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="dc18f-120">See also</span></span>
 
-- [<span data-ttu-id="80db6-121">ToolTip 구성 요소 개요</span><span class="sxs-lookup"><span data-stu-id="80db6-121">ToolTip Component Overview</span></span>](tooltip-component-overview-windows-forms.md)
-- [<span data-ttu-id="80db6-122">방법: Windows Forms ToolTip 구성 요소의 지연 변경</span><span class="sxs-lookup"><span data-stu-id="80db6-122">How to: Change the Delay of the Windows Forms ToolTip Component</span></span>](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
-- [<span data-ttu-id="80db6-123">ToolTip 구성 요소</span><span class="sxs-lookup"><span data-stu-id="80db6-123">ToolTip Component</span></span>](tooltip-component-windows-forms.md)
+- [<span data-ttu-id="dc18f-121">ToolTip 구성 요소 개요</span><span class="sxs-lookup"><span data-stu-id="dc18f-121">ToolTip Component Overview</span></span>](tooltip-component-overview-windows-forms.md)
+- [<span data-ttu-id="dc18f-122">방법: Windows Forms ToolTip 구성 요소의 지연 변경</span><span class="sxs-lookup"><span data-stu-id="dc18f-122">How to: Change the Delay of the Windows Forms ToolTip Component</span></span>](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
+- [<span data-ttu-id="dc18f-123">ToolTip 구성 요소</span><span class="sxs-lookup"><span data-stu-id="dc18f-123">ToolTip Component</span></span>](tooltip-component-windows-forms.md)
