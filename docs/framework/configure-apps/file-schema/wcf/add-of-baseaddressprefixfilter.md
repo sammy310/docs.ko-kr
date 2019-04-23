@@ -1,12 +1,12 @@
 ---
-title: <add> / <baseAddressPrefixFilter>
+title: <baseAddressPrefixFilter>의 <add>
 ms.date: 03/30/2017
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
 ms.openlocfilehash: a58a29e44fff3d653d04da271e3b240f2969611f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143899"
 ---
 # <a name="add-of-baseaddressprefixfilter"></a>\<추가 >의 \<a d >

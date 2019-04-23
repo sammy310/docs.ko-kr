@@ -3,10 +3,10 @@ title: 보안 세션에 대한 보안 고려 사항
 ms.date: 03/30/2017
 ms.assetid: 0d5be591-9a7b-4a6f-a906-95d3abafe8db
 ms.openlocfilehash: d2244ba42b1cf95f77424d32a19ebe11dd3a2a45
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148709"
 ---
 # <a name="security-considerations-for-secure-sessions"></a>보안 세션에 대한 보안 고려 사항
@@ -22,6 +22,6 @@ ms.locfileid: "59148709"
   
 ## <a name="see-also"></a>참고자료
 
-- [방법: WSFederationHttpBinding에서 보안 세션을 사용하지 않도록 설정](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [방법: WSFederationHttpBinding에서 보안 세션을 사용 하지 않도록 설정](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
 - [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [보안 모범 사례](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)
+- [보안을 위한 최선의 방법](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)

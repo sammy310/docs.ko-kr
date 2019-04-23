@@ -9,10 +9,10 @@ ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7f9bf0e309ec8c77d4b1d6afbf111e7eeae629ac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59149736"
 ---
 # <a name="garbage-collection-etw-events"></a>가비지 컬렉션 ETW 이벤트
@@ -337,7 +337,7 @@ ms.locfileid: "59149736"
 |이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
 |`GCKeyword` (0x1)|정보(4)|  
-|`ThreadingKeyword` (0x10000)|정보(4)|  
+|`ThreadingKeyword`(0x10000)|정보(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   
@@ -356,7 +356,7 @@ ms.locfileid: "59149736"
 |이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
 |`GCKeyword` (0x1)|정보(4)|  
-|`ThreadingKeyword` (0x10000)|정보(4)|  
+|`ThreadingKeyword`(0x10000)|정보(4)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   

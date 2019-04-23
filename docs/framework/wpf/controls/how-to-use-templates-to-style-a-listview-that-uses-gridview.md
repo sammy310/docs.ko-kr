@@ -5,10 +5,10 @@ helpviewer_keywords:
 - ListView controls [WPF], styling
 ms.assetid: 94bf964b-96c8-4bdf-a0c3-f5271b7cb565
 ms.openlocfilehash: 1caa652c4a2a3a7d0a8d40fe703df7a3e8038c9b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59147097"
 ---
 # <a name="how-to-use-templates-to-style-a-listview-that-uses-gridview"></a>방법: 템플릿을 사용하여 GridView를 사용하는 ListView의 스타일 지정

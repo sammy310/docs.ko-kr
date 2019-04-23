@@ -3,10 +3,10 @@ title: ADO.NET 응용 프로그램 보안
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
 ms.openlocfilehash: 32d3de15242aaf9cfacd9371289a5a0a675f884b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59149385"
 ---
 # <a name="securing-adonet-applications"></a>ADO.NET 응용 프로그램 보안
@@ -23,7 +23,7 @@ ms.locfileid: "59149385"
  [보안 데이터 액세스](../../../../docs/framework/data/adonet/secure-data-access.md)  
  안전한 데이터 소스의 데이터로 작업하는 방법에 대해 설명합니다.  
   
- [안전한 클라이언트 응용 프로그램](../../../../docs/framework/data/adonet/secure-client-applications.md)  
+ [안전한 클라이언트 애플리케이션](../../../../docs/framework/data/adonet/secure-client-applications.md)  
  클라이언트 응용 프로그램 보안을 위한 고려 사항에 대해 설명합니다.  
   
  [코드 액세스 보안 및 ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)  

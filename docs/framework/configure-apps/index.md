@@ -25,10 +25,10 @@ helpviewer_keywords:
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
 ms.openlocfilehash: 97dadfa8b7d32d4f0f981e50d6eb90ca74ecdaa3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59147110"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>구성 파일을 사용하여 앱 구성
@@ -101,7 +101,7 @@ ms.locfileid: "59147110"
 -   사용자 정책 구성 파일: %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [방법: DEVPATH를 사용하여 어셈블리 찾기](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
+ [방법: DEVPATH를 사용 하 여 어셈블리를 찾습니다](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
  어셈블리를 검색할 때 런타임에서 DEVPATH 환경 변수를 사용하도록 지정하는 방법에 대해 설명합니다.  
   
  [어셈블리 버전 리디렉션](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  

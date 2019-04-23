@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2f229e421cc69f2ff45110233c4c6c36d7a1fc4c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152752"
 ---
 # <a name="iclrruntimeinfogetinterface-method"></a>ICLRRuntimeInfo::GetInterface 메서드
@@ -54,7 +54,7 @@ HRESULT GetInterface(
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_POINTER|`ppUnk` null입니다.|  
+|E_POINTER|`ppUnk`가 null입니다.|  
 |E_OUTOFMEMORY|요청을 처리할 수 있는 메모리가 부족 합니다.|  
 |CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|다양 한 런타임 이미 레거시 CLR 버전 2 정품 인증 정책에 바인딩 되었습니다.|  
   

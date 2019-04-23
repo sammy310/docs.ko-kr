@@ -3,10 +3,10 @@ title: 데이터 형식 및 함수
 ms.date: 03/30/2017
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
 ms.openlocfilehash: c17c02900ea6ebda1ee4bbf6e6534310f125a0a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151946"
 ---
 # <a name="data-types-and-functions"></a>데이터 형식 및 함수
@@ -18,7 +18,7 @@ ms.locfileid: "59151946"
 |-----------|-----------------|  
 |[SQL-CLR 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)|CLR 형식 및 SQL Server 형식 간의 매핑에 대한 자세한 매트릭스를 제공합니다.|  
 |[기본 데이터 형식](../../../../../../docs/framework/data/adonet/sql/linq/basic-data-types.md)|[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]와의 동작 차이점을 요약합니다.|  
-|[Boolean 데이터 형식](../../../../../../docs/framework/data/adonet/sql/linq/boolean-data-types.md)|[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]와의 동작 차이점을 요약합니다.|  
+|[부울 데이터 형식](../../../../../../docs/framework/data/adonet/sql/linq/boolean-data-types.md)|[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]와의 동작 차이점을 요약합니다.|  
 |[Null 의미 체계](../../../../../../docs/framework/data/adonet/sql/linq/null-semantics.md)|null 및 nullable 문제를 설명하는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 항목에 대한 링크를 제공합니다.|  
 |[숫자 및 비교 연산자](../../../../../../docs/framework/data/adonet/sql/linq/numeric-and-comparison-operators.md)|[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]와의 동작 차이점을 요약합니다.|  
 |[시퀀스 연산자](../../../../../../docs/framework/data/adonet/sql/linq/sequence-operators.md)|[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]와의 동작 차이점을 요약합니다.|  

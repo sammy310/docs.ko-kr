@@ -3,14 +3,14 @@ title: 피어 채널 응용 프로그램 보안
 ms.date: 03/30/2017
 ms.assetid: d4a0311d-3f78-4525-9c4b-5c93c4492f28
 ms.openlocfilehash: a747923f81f4773eb58a4b7500cf4fc1c006f889
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59146248"
 ---
 # <a name="securing-peer-channel-applications"></a>피어 채널 응용 프로그램 보안
-[!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]의 다른 바인딩과 마찬가지로 `NetPeerTcpBinding`은 기본적으로 보안을 사용하며 전송 및 메시지 기반 보안(또는 둘 다)을 제공합니다. 이 항목에서는 이러한 두 가지 보안 형식에 대해 설명합니다. 보안 형식은 바인딩 사양의 보안 모드 태그에 의해 지정 됩니다 (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`).  
+[!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]의 다른 바인딩과 마찬가지로 `NetPeerTcpBinding`은 기본적으로 보안을 사용하며 전송 및 메시지 기반 보안(또는 둘 다)을 제공합니다. 이 항목에서는 이러한 두 가지 보안 형식에 대해 설명합니다. 보안 형식은 바인딩 사양의 보안 모드 태그(<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`)로 지정됩니다.  
   
 ## <a name="transport-based-security"></a>전송 기반 보안  
  피어 채널은 전송 보안을 위한 두 가지 형식의 인증 자격 증명을 지원하며, 두 형식에서 모두 연결된 `ClientCredentialSettings.Peer`의 `ChannelFactory` 속성을 설정해야 합니다.  

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - accessibility domain [C#]
 ms.assetid: 8af779c1-275b-44be-a864-9edfbca71bcc
 ms.openlocfilehash: 529d256a553c4000c77bcd5096db1a4d943874ff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59141754"
 ---
 # <a name="accessibility-domain-c-reference"></a>액세스 가능 도메인(C# 참조)
@@ -31,8 +31,8 @@ ms.locfileid: "59141754"
 - [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
 - [C# 키워드](../../../csharp/language-reference/keywords/index.md)
 - [액세스 한정자](../../../csharp/language-reference/keywords/access-modifiers.md)
-- [내게 필요한 옵션 수준](../../../csharp/language-reference/keywords/accessibility-levels.md)
-- [내게 필요한 옵션 수준 사용에 대한 제한](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)
+- [액세스 수준](../../../csharp/language-reference/keywords/accessibility-levels.md)
+- [접근성 수준 사용에 대한 제한](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)
 - [액세스 한정자](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
 - [public](../../../csharp/language-reference/keywords/public.md)
 - [private](../../../csharp/language-reference/keywords/private.md)

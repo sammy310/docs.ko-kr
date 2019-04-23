@@ -22,12 +22,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: ebc238f6739f7db23d570688ea3c6e2031f9699f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25d7b0e8b8b98d68a0fb4a3cadab3d9f3e8747bd
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729134"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59146148"
 ---
 # <a name="introducing-pluggable-protocols"></a>플러그형 프로토콜 소개
 Microsoft .NET Framework는 더 빠르고 쉽게 애플리케이션에 통합할 수 있는 계층적이고 확장 가능하며 관리되는 인터넷 서비스 구현을 제공합니다. <xref:System.Net> 및 <xref:System.Net.Sockets> 네임스페이스의 인터넷 액세스 클래스를 사용하여 웹 기반 애플리케이션과 인터넷 기반 애플리케이션을 둘 다 구현할 수 있습니다.  
@@ -67,6 +67,7 @@ Microsoft .NET Framework는 더 빠르고 쉽게 애플리케이션에 통합할
  Windows 소켓 인터페이스에 익숙한 개발자나 소켓 수준에서 프로그래밍을 통해 제공되는 컨트롤이 필요한 개발자는 **System.Net.Sockets** 클래스가 필요에 맞는다는 것을 알 수 있습니다. **System.Net.Sockets** 클래스는 **System.Net** 클래스 내에서 관리 코드에서 네이티브 코드로 전환되는 지점입니다. 대부분의 경우 **System.Net.Sockets** 클래스는 데이터를 Windows 32비트 데이터로 마샬링하고 모든 필요한 보안 검사를 처리합니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [플러그형 프로토콜 프로그래밍](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
 - [.NET Framework의 네트워크 프로그래밍](../../../docs/framework/network-programming/index.md)
 - [네트워크 프로그래밍 샘플](../../../docs/framework/network-programming/network-programming-samples.md)

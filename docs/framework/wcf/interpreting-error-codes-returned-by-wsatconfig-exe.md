@@ -3,10 +3,10 @@ title: wsatConfig.exe에서 반환된 오류 코드 해석
 ms.date: 03/30/2017
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
 ms.openlocfilehash: 47db39f2b350c2fa8c655a041ec0239e5d297644
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151634"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>wsatConfig.exe에서 반환된 오류 코드 해석
@@ -21,7 +21,7 @@ ms.locfileid: "59151634"
 |2|보안 설정을 검색하기 위해 MSDTC에 연결하는 동안 예기치 않은 오류가 발생했습니다.|MSDTC 서비스가 비활성화되지 않았는지 확인하고 반환된 예외에 표시된 모든 문제를 해결합니다.|  
 |3|WsatConfig.exe가 실행된 계정에는 네트워크 보안 설정을 읽을 수 있는 충분한 권한이 없습니다.|Administrator 사용자 계정으로 WsatConfig.exe를 실행합니다.|  
 |4|WS-AT를 지원하기 전에 MSDTC에 "네트워크 DTC 액세스"를 사용합니다.|MSDTC에 "네트워크 DTC 액세스"를 사용하고 유틸리티를 다시 실행합니다.|  
-|5|입력한 포트가 범위를 벗어났습니다. 값은 1에서 65535 사이의 범위 내에 있어야 합니다.|수정 된 `-port:<portNum>`<br /><br /> 명령줄 옵션을 수정합니다.|  
+|5|입력한 포트가 범위를 벗어났습니다. 값은 1에서 65535 사이의 범위 내에 있어야 합니다.|오류 메시지에 표시된 대로 `-port:<portNum>`<br /><br /> 명령줄 옵션을 수정합니다.|  
 |6|명령줄에 잘못된 엔드포인트 인증서가 지정되었습니다.  인증서를 찾을 수 없거나 인증서가 확인 과정을 통과하지 못했습니다.|`-endpointCert` 명령줄 옵션을 수정합니다. 인증서에 개인 키가 있는지, 인증서를 ClientAuthentication 및 ServerAuthentication 모두에 사용할 수 있는지, 인증서가 LocalMachine\MY 인증서 저장소에 설치되어 있는지 그리고 인증서를 완전히 신뢰할 수 있는지 확인합니다.|  
 |7|명령줄에 잘못된 계정 인증서가 지정되었습니다.|`-accountsCerts` 명령줄 옵션을 수정합니다. 지정한 인증서가 잘못 지정되었거나 해당 인증서를 찾을 수 없습니다.|  
 |8|기본 시간 제한이 1초에서 3600초 사이의 범위를 벗어나 지정되었습니다.|표시된 대로 올바른 기본 시간 제한 값을 입력합니다.|  
@@ -35,9 +35,9 @@ ms.locfileid: "59151634"
 |17|http.sys를 구성하지 못했습니다. 이전 포트에서 SSL 인증서를 바인딩 해제할 수 없습니다.|오류 메시지에 반환된 오류 코드를 사용하여 적절한 시스템 오류에 매핑합니다. 필요한 경우 httpcfg.exe 또는 netsh.exe를 사용하여 잘못된 포트 예약을 제거합니다.|  
 |18|http.sys를 구성하지 못했습니다. 이전 SSL 바인딩이 이미 있으므로 지정된 인증서를 포트에 바인딩할 수 없습니다.|다른 응용 프로그램에 특정 포트에 대한 소유권이 이미 있습니다. 다른 포트로 변경하거나 현재 응용 프로그램을 제거 또는 다시 구성합니다.|  
 |19|MSDTC를 다시 시작하지 못했습니다.|필요한 경우 MSDTC를 수동으로 다시 시작합니다. 문제가 계속되면 Microsoft에 문의하십시오.|  
-|20|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 원격 컴퓨터에 설치 되어 있지 않거나 올바르게 설치 되지 않았습니다.|컴퓨터에 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]를 설치합니다.|  
+|20|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]가 원격 컴퓨터에 설치되지 않았거나 올바로 설치되지 않았습니다.|컴퓨터에 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]를 설치합니다.|  
 |21|작업 시간 제한 초과로 인해 원격 구성에 실패했습니다.|원격 컴퓨터에 WS-AT를 구성하기 위해 호출은 90초보다 길어야 합니다.|  
-|22|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 원격 컴퓨터에 설치 되어 있지 않거나 올바르게 설치 되지 않았습니다.|컴퓨터에 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]를 설치합니다.|  
+|22|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]가 원격 컴퓨터에 설치되지 않았거나 올바로 설치되지 않았습니다.|컴퓨터에 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]를 설치합니다.|  
 |23|원격 컴퓨터의 예외로 인해 원격 구성에 실패했습니다.|실행 가능한 항목에 대한 오류 메시지를 확인합니다.|  
 |26|잘못된 인수가 WsatConfig.exe에 전달되었습니다.|오류가 있는지 명령줄을 확인합니다.|  
 |27|`-accounts` 명령줄 옵션이 잘못되었습니다.|-`accounts` 명령줄 옵션을 수정하여 사용자 계정을 올바로 지정합니다.|  

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - XAML [XAML Services], type converter services how-to
 ms.assetid: b4dad00f-03da-4579-a4e9-d8d72d2ccbce
 ms.openlocfilehash: 850e266aed6fc2d69722ba6dac3baa3e115678a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59147799"
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>형식 변환기 또는 태그 확장에서 사용할 수 있는 서비스 컨텍스트
@@ -20,7 +20,7 @@ ms.locfileid: "59147799"
   
 <a name="services_for_a_markup_extension"></a>   
 ## <a name="services-for-a-markup-extension"></a>태그 확장에 대한 서비스  
- <xref:System.Windows.Markup.MarkupExtension> 하나의 가상 메서드가 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>합니다. 입력 `serviceProvider` 매개 변수는 태그 확장이 XAML 프로세서에서 호출될 때 서비스가 구현에 전달되는 방법입니다. 다음 의사 코드에서는 태그 확장 구현이 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>에서 서비스를 쿼리하는 방법을 보여 줍니다.  
+ <xref:System.Windows.Markup.MarkupExtension> 에는 단 하나의 가상 메서드 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>가 있습니다. 입력 `serviceProvider` 매개 변수는 태그 확장이 XAML 프로세서에서 호출될 때 서비스가 구현에 전달되는 방법입니다. 다음 의사 코드에서는 태그 확장 구현이 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>에서 서비스를 쿼리하는 방법을 보여 줍니다.  
   
 ```  
 public override object ProvideValue(IServiceProvider serviceProvider)  
@@ -42,7 +42,7 @@ public override object ProvideValue(IServiceProvider serviceProvider)
   
 <a name="services_for_a_type_converter"></a>   
 ## <a name="services-for-a-type-converter"></a>형식 변환기에 대한 서비스  
- <xref:System.ComponentModel.TypeConverter> 가상 메서드 4 개가 서비스 컨텍스트를 사용 하 고 XAML 사용을 지에 있습니다. 이들 메서드는 각각 입력 `context` 매개 변수를 전달합니다. 이 매개 변수는 <xref:System.ComponentModel.ITypeDescriptorContext>형식이지만 해당 인터페이스는 <xref:System.IServiceProvider>를 상속하므로 형식 컨버터 구현에 <xref:System.IServiceProvider.GetService%2A> 메서드를 사용할 수 있습니다.  
+ <xref:System.ComponentModel.TypeConverter> 에는 서비스 컨텍스트를 사용하고 XAML 사용을 지원하는 가상 메서드 4개가 있습니다. 이들 메서드는 각각 입력 `context` 매개 변수를 전달합니다. 이 매개 변수는 <xref:System.ComponentModel.ITypeDescriptorContext>형식이지만 해당 인터페이스는 <xref:System.IServiceProvider>를 상속하므로 형식 컨버터 구현에 <xref:System.IServiceProvider.GetService%2A> 메서드를 사용할 수 있습니다.  
   
  다음 의사 코드에서는 XAML 사용에 대한 형식 변환기 구현이 재정의의 하나에서 서비스를 쿼리할 수 있습니다(이 경우 <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>).  
   
@@ -80,7 +80,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="itypedescriptorcontext"></a>ITypeDescriptorContext  
  **참조 설명서**: <xref:System.ComponentModel.ITypeDescriptorContext>  
   
- <xref:System.IServiceProvider>에서 파생됩니다. 이 클래스는 표준 <xref:System.ComponentModel.TypeConverter> 서명, <xref:System.ComponentModel.TypeConverter> 의 컨텍스트가 .NET Framework 1.0부터 있었던 클래스임을 나타냅니다. 이 클래스는 문자열-값 형식 변환을 위한 XAML 및 XAML <xref:System.ComponentModel.TypeConverter> 시나리오보다 오래되었습니다. .NET Framework XAML 서비스 컨텍스트에서 <xref:System.ComponentModel.TypeConverter> 의 메서드는 명시적으로 구현됩니다. 명시적 구현의 동작은 호출자에게 <xref:System.ComponentModel.ITypeDescriptorContext> API가 XAML 형식 시스템과 관련되거나 XAML에서 개체 읽기 또는 쓰기와 관련되지 않음을 나타냅니다. <xref:System.ComponentModel.ITypeDescriptorContext.Container%2A>하십시오 <xref:System.ComponentModel.ITypeDescriptorContext.Instance%2A>, 및 <xref:System.ComponentModel.ITypeDescriptorContext.PropertyDescriptor%2A> 일반적으로 반환 `null` .NET Framework XAML 서비스 컨텍스트에서 합니다.  
+ <xref:System.IServiceProvider>에서 파생됩니다. 이 클래스는 표준 <xref:System.ComponentModel.TypeConverter> 서명, <xref:System.ComponentModel.TypeConverter> 의 컨텍스트가 .NET Framework 1.0부터 있었던 클래스임을 나타냅니다. 이 클래스는 문자열-값 형식 변환을 위한 XAML 및 XAML <xref:System.ComponentModel.TypeConverter> 시나리오보다 오래되었습니다. .NET Framework XAML 서비스 컨텍스트에서 <xref:System.ComponentModel.TypeConverter> 의 메서드는 명시적으로 구현됩니다. 명시적 구현의 동작은 호출자에게 <xref:System.ComponentModel.ITypeDescriptorContext> API가 XAML 형식 시스템과 관련되거나 XAML에서 개체 읽기 또는 쓰기와 관련되지 않음을 나타냅니다. <xref:System.ComponentModel.ITypeDescriptorContext.Container%2A>, <xref:System.ComponentModel.ITypeDescriptorContext.Instance%2A>, 및 <xref:System.ComponentModel.ITypeDescriptorContext.PropertyDescriptor%2A> 는 일반적으로 .NET Framework XAML 서비스 컨텍스트에서 `null` 을 반환합니다.  
   
 ### <a name="ivalueserializercontext"></a>IValueSerializerContext  
  **참조 설명서**: <xref:System.Windows.Markup.IValueSerializerContext>  
@@ -96,7 +96,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **서비스 API:**  <xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A>  
   
- XAML 작성기가 개체 그래프에서 CLR 개체를 생성할 때 필요한 XAML-CLR 형식 매핑에 영향을 미칠 수 있습니다. <xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A> XAML 형식 이름에 해당 하는 잠재적으로 접두사로 한정 문자열 처리 (<xref:System.Xaml.XamlType.Name%2A?displayProperty=nameWithType>), CLR을 반환 하 고 <xref:System.Type>입니다. 형식 확인은 일반적으로 XAML 스키마 컨텍스트에 따라 크게 달라집니다. XAML 스키마 컨텍스트는 어떤 어셈블리가 로드되는지, 그리고 형식 확인을 위해 어떤 어셈블리에 액세스할 수 있거나 액세스해야 하는지 등의 고려 사항만 인식합니다.  
+ XAML 작성기가 개체 그래프에서 CLR 개체를 생성할 때 필요한 XAML-CLR 형식 매핑에 영향을 미칠 수 있습니다. <xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A>는 XAML 형식 이름(<xref:System.Xaml.XamlType.Name%2A?displayProperty=nameWithType>)에 해당하는 잠재적으로 접두사로 한정된 문자열을 처리하고 CLR <xref:System.Type>을 반환합니다. 형식 확인은 일반적으로 XAML 스키마 컨텍스트에 따라 크게 달라집니다. XAML 스키마 컨텍스트는 어떤 어셈블리가 로드되는지, 그리고 형식 확인을 위해 어떤 어셈블리에 액세스할 수 있거나 액세스해야 하는지 등의 고려 사항만 인식합니다.  
   
 ### <a name="iuricontext"></a>IUriContext  
  **참조 설명서**: <xref:System.Windows.Markup.IUriContext>  
@@ -151,7 +151,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **서비스 API:** <xref:System.Xaml.IXamlNamespaceResolver.GetNamespace%2A> , 저장 경로에 대한 <xref:System.Xaml.IXamlNamespaceResolver.GetNamespacePrefixes%2A> .  
   
- <xref:System.Xaml.IXamlNamespaceResolver> XAML 네임 스페이스 식별자를 반환할 수 있는 서비스 / 원래 XAML 태그에 매핑된 대로 접두사에 따라 URI입니다.  
+ <xref:System.Xaml.IXamlNamespaceResolver> 는 원래 XAML 태그에 매핑된 대로 접두사에 따라 XAML 네임스페이스 식별자/URI를 반환할 수 있는 서비스입니다.  
   
 ### <a name="iprovidevaluetarget"></a>IProvideValueTarget  
  **참조 설명서**: <xref:System.Windows.Markup.IProvideValueTarget>  
@@ -162,7 +162,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **서비스 API:**  <xref:System.Windows.Markup.IProvideValueTarget.TargetObject%2A>, <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A>.  
   
- <xref:System.Windows.Markup.IProvideValueTarget> 형식 변환기 또는 태그 확장이 로드 시 작동할 위치에 대 한 컨텍스트를 가져올 수 있습니다. 구현에서 이 컨텍스트를 사용하여 사용을 무효화할 수 있습니다. 예를 들어 WPF에는 몇몇 태그 확장 내부에 <xref:System.Windows.DynamicResourceExtension>과 같은 논리가 있습니다. 이 논리에서는 <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A> 를 확인하여 확장이 종속성 속성을 설정하거나 기타 비종속성 속성의 짧은 목록을 설정하는 데만 사용되는지 확인합니다.  
+ <xref:System.Windows.Markup.IProvideValueTarget> 을 사용하면 형식 변환기 또는 태그 확장이 로드 시 작동할 위치에 대한 컨텍스트를 가져올 수 있습니다. 구현에서 이 컨텍스트를 사용하여 사용을 무효화할 수 있습니다. 예를 들어 WPF에는 몇몇 태그 확장 내부에 <xref:System.Windows.DynamicResourceExtension>과 같은 논리가 있습니다. 이 논리에서는 <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A> 를 확인하여 확장이 종속성 속성을 설정하거나 기타 비종속성 속성의 짧은 목록을 설정하는 데만 사용되는지 확인합니다.  
   
 ### <a name="ixamlnameresolver"></a>IXamlNameResolver  
  **참조 설명서**: <xref:System.Xaml.IXamlNameResolver>  
@@ -190,5 +190,5 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 
 - <xref:System.Windows.Markup.MarkupExtension>
 - <xref:System.Xaml.XamlObjectWriter>
-- [XAML 태그 확장 개요](markup-extensions-for-xaml-overview.md)
+- [XAML 태그 확장명 개요](markup-extensions-for-xaml-overview.md)
 - [XAML을 위한 형식 변환기 개요](type-converters-for-xaml-overview.md)

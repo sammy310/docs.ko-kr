@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8254d3de7dc282edb8ebe8bf0dd71ce1c943322d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 51e34d8eed40481de47dfd217392e95a11a412d1
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689210"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59145121"
 ---
 # <a name="dynamically-loading-and-using-types"></a>동적으로 형식 로드 및 사용
 리플렉션은 [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] 및 JScript와 같은 언어 컴파일러에서 암시적 런타임에 바인딩을 구현하는 데 사용되는 인프라를 제공합니다. 바인딩은 고유하게 지정된 형식에 해당하는 선언(즉, 구현)을 찾는 프로세스입니다. 이 프로세스가 컴파일 시간이 아닌 런타임에 수행되는 경우 이를 런타임에 바인딩이라고 합니다. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]에서는 코드에서 암시적 런타임에 바인딩을 사용할 수 있고, Visual Basic 컴파일러는 리플렉션을 사용하여 개체 형식을 가져오는 도우미 메서드를 호출합니다. 인수가 도우미 메서드에 전달되면 런타임에 적절한 메서드가 호출됩니다. 이러한 인수는 메서드를 호출하는 인스턴스(개체), 호출된 메서드의 이름(문자열) 및 호출된 메서드에 전달된 인수(개체 배열)입니다.  
@@ -100,6 +100,7 @@ End Module
  <xref:System.Type> 클래스에는 **Binder** 형식의 매개 변수를 사용하여 특정 멤버에 대한 참조를 확인하는 **Get** 메서드가 포함됩니다. <xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>, <xref:System.Type.GetMethod%2A?displayProperty=nameWithType> 및 <xref:System.Type.GetProperty%2A?displayProperty=nameWithType>는 해당 멤버에 대한 시그니처 정보를 제공하여 현재 형식의 특정 멤버를 검색합니다. <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType> 및 <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType>는 해당하는 메서드의 지정된 시그니처 정보를 선택하기 위해 콜백됩니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - [형식 정보 보기](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)

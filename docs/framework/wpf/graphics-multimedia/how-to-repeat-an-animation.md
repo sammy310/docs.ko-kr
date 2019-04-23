@@ -8,10 +8,10 @@ helpviewer_keywords:
 - animation [WPF], repeating
 ms.assetid: e6f3b068-eeeb-47fd-8d40-8848c31f1e1e
 ms.openlocfilehash: a80f72b0e67c13890d4befcbd5ab7c4a92a93fe7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150542"
 ---
 # <a name="how-to-repeat-an-animation"></a>방법: 애니메이션 반복
@@ -30,8 +30,8 @@ ms.locfileid: "59150542"
   
 ## <a name="see-also"></a>참고자료
 
-- [반복 주기 동안 애니메이션 값 누적](how-to-accumulate-animation-values-during-repeat-cycles.md)
-- [Timeline을 자동으로 뒤집을지 여부 지정](how-to-specify-whether-a-timeline-automatically-reverses.md)
+- [주기가 반복되는 동안 애니메이션 값 누적](how-to-accumulate-animation-values-during-repeat-cycles.md)
+- [타임라인을 자동으로 뒤집을지 여부 지정](how-to-specify-whether-a-timeline-automatically-reverses.md)
 - [애니메이션 및 타이밍 방법 항목](animation-and-timing-how-to-topics.md)
 - [애니메이션 개요](animation-overview.md)
 - [애니메이션 타이밍 동작 샘플](https://go.microsoft.com/fwlink/?LinkID=159970)

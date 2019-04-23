@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 ms.assetid: c66fd3f7-2377-4553-8f1b-006527f08f32
 ms.openlocfilehash: 0d0a0bdba779fad7bd9b19acb2ea09408dea60a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151920"
 ---
 # <a name="how-to-implement-a-custom-toolstriprenderer"></a>방법: 사용자 지정 ToolStripRenderer 구현
@@ -23,9 +23,9 @@ ms.locfileid: "59151920"
   
  `GridStripRenderer` 클래스는 `GridStrip` 컨트롤 모양의 세 가지 측면을 사용자 지정합니다.  
   
--   `GridStrip` border  
+-   `GridStrip` 테두리  
   
--   <xref:System.Windows.Forms.ToolStripButton> border  
+-   <xref:System.Windows.Forms.ToolStripButton> 테두리  
   
 -   <xref:System.Windows.Forms.ToolStripButton> 이미지  
   

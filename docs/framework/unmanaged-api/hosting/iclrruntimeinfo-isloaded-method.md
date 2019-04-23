@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7615f5dad1666685333011503c5bef4c98a6a8bd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59149879"
 ---
 # <a name="iclrruntimeinfoisloaded-method"></a>ICLRRuntimeInfo::IsLoaded 메서드
@@ -48,7 +48,7 @@ HRESULT IsLoaded(
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_POINTER|`pbLoaded` null입니다.|  
+|E_POINTER|`pbLoaded`가 null입니다.|  
   
 ## <a name="remarks"></a>설명  
  이 메서드는 이전 버전과 호환성이 다음 함수 및 인터페이스를 사용 하 여:  

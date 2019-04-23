@@ -12,10 +12,10 @@ helpviewer_keywords:
 - views [WPF], grouping data
 ms.assetid: 145c8c3f-dbdd-4d0d-816f-90b35eba7eda
 ms.openlocfilehash: ca4439b574264ebebfda745f0765f750099bc95f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59144523"
 ---
 # <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a>방법: XAML에서 보기를 사용하여 데이터 정렬 및 그룹화
@@ -41,6 +41,6 @@ ms.locfileid: "59144523"
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.Data.CollectionViewSource>
-- [데이터 컬렉션의 기본 보기 가져오기](how-to-get-the-default-view-of-a-data-collection.md)
+- [데이터 수집의 기본 뷰 가져오기](how-to-get-the-default-view-of-a-data-collection.md)
 - [데이터 바인딩 개요](data-binding-overview.md)
 - [방법 항목](data-binding-how-to-topics.md)

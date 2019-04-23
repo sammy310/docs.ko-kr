@@ -5,10 +5,10 @@ helpviewer_keywords:
 - resource keys [WPF], SystemFonts class
 ms.assetid: 036ebea7-5677-4f60-8ba4-56c9f9d9b8bd
 ms.openlocfilehash: e924f4c14d98380d9f4c0defe27d9f98c3293114
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148930"
 ---
 # <a name="how-to-use-system-fonts-keys"></a>방법: 시스템 글꼴 키 사용
@@ -26,6 +26,6 @@ ms.locfileid: "59148930"
   
 ## <a name="see-also"></a>참고자료
 
-- [시스템 브러시로 영역 칠하기](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
+- [시스템 브러시로 영역 그리기](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
 - [SystemParameters 사용](how-to-use-systemparameters.md)
 - [SystemFonts 사용](how-to-use-systemfonts.md)
