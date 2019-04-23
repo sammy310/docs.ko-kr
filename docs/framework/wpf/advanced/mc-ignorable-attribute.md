@@ -10,10 +10,10 @@ helpviewer_keywords:
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
 ms.openlocfilehash: 03439a2c4a1a4de375e90d0e5121e690541e2f0f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59219332"
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable 특성
@@ -46,7 +46,7 @@ ms.locfileid: "59219332"
   
 |||  
 |-|-|  
-|*ignorablePrefix, ignorablePrefix1 등입니다.*|XML 1.0 사양에 따라 모든 유효한 접두사 문자열입니다.|  
+|*ignorablePrefix, ignorablePrefix1, etc.*|XML 1.0 사양에 따라 모든 유효한 접두사 문자열입니다.|  
 |*ignorableUri*|XML 1.0 사양에 따라 네임 스페이스를 지정 하는 것에 대 한 모든 유효한 URI입니다.|  
 |*ThisElementCanBeIgnored*|무시할 수 있는 요소 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 내부 형식을 확인할 수 없는 경우 프로세서 구현 합니다.|  
   

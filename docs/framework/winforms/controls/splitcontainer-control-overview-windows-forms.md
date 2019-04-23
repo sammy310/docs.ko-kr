@@ -7,10 +7,10 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
 ms.openlocfilehash: 4afdd764b2f6ef7f15e8bd26459f0fa4c7d345e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59219423"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>SplitContainer 컨트롤 개요(Windows Forms)
@@ -46,8 +46,8 @@ Windows Forms <xref:System.Windows.Forms.SplitContainer> 컨트롤은 복합으�
 |<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> 속성|이동할 수 있는 분할 막대를 왼쪽 또는 위쪽 가장자리에서 픽셀 단위의 거리를 결정합니다.|  
 |<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> 속성|픽셀 분할자 사용자가 이동할 수 있는 최소 거리를 결정 합니다.|  
 |<xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A> 속성|분할자의 픽셀에서 두께 결정합니다.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> 이벤트(event)|분할자 이동 되 면 발생 합니다.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> 이벤트(event)|분할자가 이동 되었을 때 발생 합니다.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> 이벤트|분할자 이동 되 면 발생 합니다.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> 이벤트|분할자가 이동 되었을 때 발생 합니다.|  
   
 ## <a name="see-also"></a>참고자료
 
