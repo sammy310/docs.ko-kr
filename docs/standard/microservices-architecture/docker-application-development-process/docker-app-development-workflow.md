@@ -4,12 +4,12 @@ description: Docker 기반 애플리케이션 개발 워크플로의 세부 정�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 3fb5c06f8ed58b45a3ee669931d8c3118b3dc314
-ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
+ms.openlocfilehash: f23a2352d86d5c77d2f05af2a2452fb3c944e049
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59553877"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613371"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 앱에 대한 개발 워크플로
 
@@ -64,7 +64,7 @@ Docker 애플리케이션 개발은 Docker 없이 애플리케이션을 개발�
 ### <a name="additional-resources"></a>추가 자료
 
 - **Windows용 Docker CE 시작** \
-  [https://docs.docker.com/docker-for-windows/](https://docs.docker.com/docker-for-windows/)
+  <https://docs.docker.com/docker-for-windows/>
 
 - **Visual Studio 2017** \
   [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
@@ -122,7 +122,7 @@ ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
   [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
 
 - **고유의 이미지 빌드**. 공식 Docker 설명서에 있습니다.\
-  [https://docs.docker.com/engine/tutorials/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/)
+  <https://docs.docker.com/engine/tutorials/dockerimages/>
 
 - **Staying up-to-date with .NET Container Images(.NET 컨테이너 이미지를 최신 상태로 유지)** \
   <https://devblogs.microsoft.com/dotnet/staying-up-to-date-with-net-container-images/>
@@ -290,10 +290,10 @@ RUN dotnet restore
 ### <a name="additional-resources"></a>추가 자료
 
 - **다중 아키텍처 .NET Core 이미지**.\
-  [https://github.com/dotnet/announcements/issues/14](https://github.com/dotnet/announcements/issues/14)
+  <https://github.com/dotnet/announcements/issues/14>
 
 - **기본 이미지 만들기**. 공식 Docker 설명서입니다.\
-  [https://docs.docker.com/engine/userguide/eng-image/baseimages/](https://docs.docker.com/engine/userguide/eng-image/baseimages/)
+  <https://docs.docker.com/develop/develop-images/baseimages/>
 
 ![3 - Dockerfile에 정의된 이미지 만들기](./media/image7.png)
 
@@ -485,7 +485,7 @@ Visual Studio 2017을 사용하여 다중 컨테이너 애플리케이션을 실
 ### <a name="additional-resources"></a>추가 자료
 
 - **원격 Docker 호스트에 ASP.NET 컨테이너 배포** \
-  [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
+  <https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker>
 
 ### <a name="a-note-about-testing-and-deploying-with-orchestrators"></a>오케스트레이터를 사용하여 테스트 및 배포하는 내용에 대한 메모
 
@@ -522,10 +522,10 @@ Visual Studio 2017을 사용하여 컨테이너를 실행하고 디버깅할 때
 ### <a name="additional-resources"></a>추가 자료
 
 - **로컬 Docker 컨테이너에서 앱 디버그** \
-  [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
+  [https://docs.microsoft.com/visualstudio/containers/edit-and-refresh](/visualstudio/containers/edit-and-refresh)
 
 - **Steve Lasker. Docker를 사용하여 ASP.NET Core 앱 빌드, 디버그, 배포.** 비디오. \
-  [https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115)
+  <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115>
 
 ## <a name="simplified-workflow-when-developing-containers-with-visual-studio"></a>Visual Studio를 사용하여 컨테이너를 개발할 때의 간소화된 워크플로
 
@@ -540,7 +540,7 @@ Visual Studio를 사용하면 편집기/CLI 방식을 사용할 때보다 워크
 ### <a name="additional-resources"></a>추가 자료
 
 - **Steve Lasker. Visual Studio 2017을 사용한 .NET Docker 개발** \
-  [https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111)
+  <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111>
 
 ## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>DockerFile에서 PowerShell 명령을 사용하여 Windows 컨테이너 설정 
 
@@ -562,7 +562,7 @@ RUN powershell add-windowsfeature web-asp-net45
 ### <a name="additional-resources"></a>추가 자료
 
 - **aspnet-docker/Dockerfile.** Windows 기능을 포함하도록 dockerfile에서 실행되는 PowerShell 명령 예제.\
-  [https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile)
+  <https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile>
 
 >[!div class="step-by-step"]
 >[이전](index.md)

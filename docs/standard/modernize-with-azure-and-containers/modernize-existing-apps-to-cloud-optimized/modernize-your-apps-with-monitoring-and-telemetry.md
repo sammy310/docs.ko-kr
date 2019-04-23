@@ -1,17 +1,17 @@
 ---
-title: 모니터링과 원격 분석을 사용하여 앱을 최신화
+title: 모니터링 및 원격 분석을 사용하여 앱을 최신화
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 모니터링 및 원격 분석을 사용하여 앱을 최신화
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: cd54861600127191b852e0a966baae6e0fe7914e
 ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/16/2019
 ms.locfileid: "59613878"
 ---
-# <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>모니터링과 원격 분석을 사용하여 앱을 최신화
+# <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>모니터링 및 원격 분석을 사용하여 앱을 최신화
 
 프로덕션 환경에서 응용 프로그램을 실행하는 경우 응용 프로그램 성능에 대한 통찰력이 중요합니다. 높은 수준으로 실행되고 있읍니까? 사용자에게 오류를 발생시키거나 아니면 안정적이고 신뢰할 수 있는 응용 프로그램입니까? 다양한 성능 모니터링과 강력한 알림, 대시보드가 있어야 응용 프로그램이 사용할 수 있고 기대한 대로 실행되는지 확인할 수 있습니다. 또한 문제가 있다면 신속하게 확인하여 얼마나 많은 고객이 영향을 받는지 확인하고, 문제를 찾아서 해결하기 위해 근본 원인을 분석하는 작업을 해야 합니다.
 

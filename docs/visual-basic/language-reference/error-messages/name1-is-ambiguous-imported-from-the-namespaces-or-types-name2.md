@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30561
 ms.assetid: 761091f7-1018-4299-b481-3966a4a2c126
 ms.openlocfilehash: ed988547e0be3ef934c46d725c41646c3a75e626
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339062"
 ---
 # <a name="name1-is-ambiguous-imported-from-the-namespaces-or-types-name2"></a>'\<name1 >'는 네임 스페이스 또는 형식에서 가져온 모호\<name2 >'
@@ -28,5 +28,5 @@ ms.locfileid: "59339062"
 ## <a name="see-also"></a>참고자료
 
 - [Imports 문(.NET 네임스페이스 및 형식)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [Visual Basic의 네임스페이스](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [Visual Basic의 네임 스페이스](../../../visual-basic/programming-guide/program-structure/namespaces.md)
 - [Namespace 문](../../../visual-basic/language-reference/statements/namespace-statement.md)

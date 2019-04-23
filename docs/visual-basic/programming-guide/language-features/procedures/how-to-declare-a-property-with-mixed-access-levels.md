@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
 ms.openlocfilehash: e899b57e02f492b0e4909aca84c069e5b7688618
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339816"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>방법: 액세스 수준이 혼합된 (Visual Basic)를 사용 하 여 속성 선언
@@ -39,7 +39,7 @@ ms.locfileid: "59339816"
 - [절차](./index.md)
 - [속성 프로시저](./property-procedures.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
-- [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [Property 문](../../../../visual-basic/language-reference/statements/property-statement.md)
 - [Visual Basic에서 속성과 변수의 차이점](./differences-between-properties-and-variables.md)
 - [방법: 속성 만들기](./how-to-create-a-property.md)
 - [방법: 속성 프로시저 호출](./how-to-call-a-property-procedure.md)

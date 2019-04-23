@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: f02e2de2ce8e2d4d6c8032e826764fd0383b3b3d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 71330714658729ed82ba111e9384e6cd9d5ae116
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092646"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59339426"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>연습: 동적 개체 만들기 및 사용(C# 및 Visual Basic)
 
@@ -44,30 +44,30 @@ ms.locfileid: "56092646"
   
 ### <a name="to-create-a-custom-dynamic-class"></a>사용자 지정 동적 클래스를 만들려면  
   
-1.  Visual Studio를 시작합니다.  
+1. Visual Studio를 시작합니다.  
   
-2.  **파일** 메뉴에서 **새로 만들기** 를 가리킨 다음 **프로젝트**를 클릭합니다.  
+2. **파일** 메뉴에서 **새로 만들기** 를 가리킨 다음 **프로젝트**를 클릭합니다.  
   
-3.  **새 프로젝트** 대화 상자의 **프로젝트 형식** 창에서 **Windows**가 선택되었는지 확인합니다. **템플릿** 창에서 **콘솔 애플리케이션**을 선택합니다. **이름** 상자에 `DynamicSample`를 입력한 다음 **확인**을 클릭합니다. 새 프로젝트가 만들어집니다.  
+3. **새 프로젝트** 대화 상자의 **프로젝트 형식** 창에서 **Windows**가 선택되었는지 확인합니다. **템플릿** 창에서 **콘솔 애플리케이션**을 선택합니다. **이름** 상자에 `DynamicSample`를 입력한 다음 **확인**을 클릭합니다. 새 프로젝트가 만들어집니다.  
   
-4.  DynamicSample 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가**를 가리킨 다음 **클래스**를 클릭합니다. **이름** 상자에 `ReadOnlyFile`을 입력한 다음 **확인**을 클릭합니다. ReadOnlyFile 클래스가 포함된 새 파일이 추가됩니다.  
+4. DynamicSample 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가**를 가리킨 다음 **클래스**를 클릭합니다. **이름** 상자에 `ReadOnlyFile`을 입력한 다음 **확인**을 클릭합니다. ReadOnlyFile 클래스가 포함된 새 파일이 추가됩니다.  
   
-5.  ReadOnlyFile.cs 또는 ReadOnlyFile.vb 파일 맨 위에 다음 코드를 추가하여 <xref:System.IO?displayProperty=nameWithType> 및 <xref:System.Dynamic?displayProperty=nameWithType> 네임스페이스를 가져옵니다.  
+5. ReadOnlyFile.cs 또는 ReadOnlyFile.vb 파일 맨 위에 다음 코드를 추가하여 <xref:System.IO?displayProperty=nameWithType> 및 <xref:System.Dynamic?displayProperty=nameWithType> 네임스페이스를 가져옵니다.  
 
     [!code-csharp[VbDynamicWalkthrough#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#1)]
     [!code-vb[VbDynamicWalkthrough#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#1)]  
 
-6.  사용자 지정 동적 개체는 열거형을 사용하여 검색 기준을 결정합니다. Class 문 앞에 다음 열거형 정의를 추가합니다.  
+6. 사용자 지정 동적 개체는 열거형을 사용하여 검색 기준을 결정합니다. Class 문 앞에 다음 열거형 정의를 추가합니다.  
   
     [!code-csharp[VbDynamicWalkthrough#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#2)]
     [!code-vb[VbDynamicWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#2)]
   
-7.  다음 코드 예제와 같이, `DynamicObject` 클래스를 상속하도록 class 문을 업데이트합니다.  
+7. 다음 코드 예제와 같이, `DynamicObject` 클래스를 상속하도록 class 문을 업데이트합니다.  
   
     [!code-csharp[VbDynamicWalkthrough#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#3)]
     [!code-vb[VbDynamicWalkthrough#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#3)]
 
-8.  다음 코드를 `ReadOnlyFile` 클래스에 추가하여 파일 경로의 전용 필드 및 `ReadOnlyFile` 클래스의 생성자를 정의합니다.  
+8. 다음 코드를 `ReadOnlyFile` 클래스에 추가하여 파일 경로의 전용 필드 및 `ReadOnlyFile` 클래스의 생성자를 정의합니다.  
   
     [!code-csharp[VbDynamicWalkthrough#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#4)]
     [!code-vb[VbDynamicWalkthrough#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#4)]
@@ -93,9 +93,9 @@ ms.locfileid: "56092646"
   
 #### <a name="to-create-a-sample-text-file"></a>샘플 텍스트 파일을 만들려면  
   
-1.  DynamicSample 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가**를 가리킨 다음 **새 항목**을 클릭합니다. **설치된 템플릿** 창에서 **일반**을 선택한 다음 **텍스트 파일** 템플릿을 선택합니다. **이름** 상자에 있는 기본 이름 TextFile1.txt를 그대로 두고 **추가**를 클릭합니다. 새 텍스트 파일이 프로젝트에 추가됩니다.  
+1. DynamicSample 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가**를 가리킨 다음 **새 항목**을 클릭합니다. **설치된 템플릿** 창에서 **일반**을 선택한 다음 **텍스트 파일** 템플릿을 선택합니다. **이름** 상자에 있는 기본 이름 TextFile1.txt를 그대로 두고 **추가**를 클릭합니다. 새 텍스트 파일이 프로젝트에 추가됩니다.  
   
-2.  TextFile1.txt 파일에 다음 텍스트를 복사합니다.  
+2. TextFile1.txt 파일에 다음 텍스트를 복사합니다.  
   
     ```  
     List of customers and suppliers  
@@ -112,18 +112,18 @@ ms.locfileid: "56092646"
     Customer: Koch, Paul  
     ```  
   
-3.  파일을 저장한 후 닫습니다.  
+3. 파일을 저장한 후 닫습니다.  
   
 #### <a name="to-create-a-sample-application-that-uses-the-custom-dynamic-object"></a>사용자 지정 동적 개체를 사용하는 샘플 애플리케이션을 만들려면  
   
-1.  **솔루션 탐색기**에서, Visual Basic을 사용 중인 경우 Module1.vb 파일, Visual C#을 사용 중인 경우 Program.cs 파일을 두 번 클릭합니다.  
+1. **솔루션 탐색기**에서, Visual Basic을 사용 중인 경우 Module1.vb 파일, Visual C#을 사용 중인 경우 Program.cs 파일을 두 번 클릭합니다.  
   
-2.  Main 프로시저에 다음 코드를 추가하여 TextFile1.txt 파일에 대한 `ReadOnlyFile` 클래스의 인스턴스를 만듭니다. 코드는 런타임에 바인딩을 사용하여 동적 멤버를 호출하고 "Customer" 문자열이 포함된 텍스트의 줄을 검색합니다.  
+2. Main 프로시저에 다음 코드를 추가하여 TextFile1.txt 파일에 대한 `ReadOnlyFile` 클래스의 인스턴스를 만듭니다. 코드는 런타임에 바인딩을 사용하여 동적 멤버를 호출하고 "Customer" 문자열이 포함된 텍스트의 줄을 검색합니다.  
   
      [!code-csharp[VbDynamicWalkthrough#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/program.cs#8)]
      [!code-vb[VbDynamicWalkthrough#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/module1.vb#8)]
   
-3.  파일을 저장한 다음 Ctrl+F5를 눌러 애플리케이션을 빌드하고 실행합니다.  
+3. 파일을 저장한 다음 Ctrl+F5를 눌러 애플리케이션을 빌드하고 실행합니다.  
   
 ## <a name="calling-a-dynamic-language-library"></a>동적 언어 라이브러리 호출  
 
@@ -131,27 +131,27 @@ ms.locfileid: "56092646"
   
 ### <a name="to-create-a-custom-dynamic-class"></a>사용자 지정 동적 클래스를 만들려면
   
-1.  Visual Studio의 **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.  
+1. Visual Studio의 **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.  
   
-2.  **새 프로젝트** 대화 상자의 **프로젝트 형식** 창에서 **Windows**가 선택되었는지 확인합니다. **템플릿** 창에서 **콘솔 애플리케이션**을 선택합니다. **이름** 상자에 `DynamicIronPythonSample`를 입력한 다음 **확인**을 클릭합니다. 새 프로젝트가 만들어집니다.  
+2. **새 프로젝트** 대화 상자의 **프로젝트 형식** 창에서 **Windows**가 선택되었는지 확인합니다. **템플릿** 창에서 **콘솔 애플리케이션**을 선택합니다. **이름** 상자에 `DynamicIronPythonSample`를 입력한 다음 **확인**을 클릭합니다. 새 프로젝트가 만들어집니다.  
   
-3.  Visual Basic을 사용 중인 경우 DynamicIronPythonSample 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다. **참조** 탭을 클릭합니다. **추가** 단추를 클릭합니다. Visual C#을 사용 중인 경우 **솔루션 탐색기**에서 **References** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **참조 추가**를 클릭합니다.  
+3. Visual Basic을 사용 중인 경우 DynamicIronPythonSample 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다. **참조** 탭을 클릭합니다. **추가** 단추를 클릭합니다. Visual C#을 사용 중인 경우 **솔루션 탐색기**에서 **References** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **참조 추가**를 클릭합니다.  
   
-4.  **찾아보기** 탭에서 IronPython 라이브러리가 설치된 폴더로 이동합니다. 예를 들어 .NET 4.0의 경우 C:\Program Files\IronPython 2.6입니다. **IronPython.dll**, **IronPython.Modules.dll**, **Microsoft.Scripting.dll** 및 **Microsoft.Dynamic.dll** 라이브러리를 선택합니다. **확인**을 클릭합니다.  
+4. **찾아보기** 탭에서 IronPython 라이브러리가 설치된 폴더로 이동합니다. 예를 들어 .NET 4.0의 경우 C:\Program Files\IronPython 2.6입니다. **IronPython.dll**, **IronPython.Modules.dll**, **Microsoft.Scripting.dll** 및 **Microsoft.Dynamic.dll** 라이브러리를 선택합니다. **확인**을 클릭합니다.  
   
-5.  Visual Basic을 사용 중인 경우 Module1.vb 파일을 편집합니다. Visual C#을 사용 중인 경우 Program.cs 파일을 편집합니다.  
+5. Visual Basic을 사용 중인 경우 Module1.vb 파일을 편집합니다. Visual C#을 사용 중인 경우 Program.cs 파일을 편집합니다.  
   
-6.  파일 맨 위에 다음 코드를 추가하여 IronPython 라이브러리에서 `Microsoft.Scripting.Hosting` 및 `IronPython.Hosting` 네임스페이스를 가져옵니다.  
+6. 파일 맨 위에 다음 코드를 추가하여 IronPython 라이브러리에서 `Microsoft.Scripting.Hosting` 및 `IronPython.Hosting` 네임스페이스를 가져옵니다.  
   
     [!code-csharp[VbDynamicWalkthroughIronPython#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/cs/program.cs#1)]
     [!code-vb[VbDynamicWalkthroughIronPython#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/vb/module1.vb#1)]
   
-7.  Main 메서드에서 다음 코드를 추가하여 IronPython 라이브러리를 호스트하기 위한 새 `Microsoft.Scripting.Hosting.ScriptRuntime` 개체를 만듭니다. `ScriptRuntime` 개체는 IronPython 라이브러리 모듈 random.py를 로드합니다.  
+7. Main 메서드에서 다음 코드를 추가하여 IronPython 라이브러리를 호스트하기 위한 새 `Microsoft.Scripting.Hosting.ScriptRuntime` 개체를 만듭니다. `ScriptRuntime` 개체는 IronPython 라이브러리 모듈 random.py를 로드합니다.  
   
      [!code-csharp[VbDynamicWalkthroughIronPython#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/cs/program.cs#2)]
      [!code-vb[VbDynamicWalkthroughIronPython#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/vb/module1.vb#2)]
   
-8.  random.py 모듈을 로드할 코드 뒤에 다음 코드를 추가하여 정수 배열을 만듭니다. 배열은 random.py 모듈의 `shuffle` 메서드로 전달되며, 이 모듈은 배열의 값을 임의로 정렬합니다.  
+8. random.py 모듈을 로드할 코드 뒤에 다음 코드를 추가하여 정수 배열을 만듭니다. 배열은 random.py 모듈의 `shuffle` 메서드로 전달되며, 이 모듈은 배열의 값을 임의로 정렬합니다.  
   
      [!code-csharp[VbDynamicWalkthroughIronPython#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/cs/program.cs#3)]
      [!code-vb[VbDynamicWalkthroughIronPython#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/vb/module1.vb#3)]

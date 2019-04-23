@@ -6,16 +6,16 @@ dev_langs:
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
 ms.openlocfilehash: 84762d8917609b84a049ea665b575acfa6e5fecf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325191"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>방법: ASP.NET 웹 서비스 클라이언트와 상호 운용하도록 WCF 서비스 구성
 상호 운용 가능 하도록 Windows Communication Foundation (WCF) 서비스 끝점을 구성 하려면 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 서비스 클라이언트를 사용 하 여는 <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> 서비스 끝점의 바인딩 형식으로 형식입니다.  
   
- 바인딩에서 HTTPS 및 전송 수준 클라이언트 인증에 대한 지원을 선택적으로 사용할 수 있습니다. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 서비스 클라이언트에서 MTOM 메시지 인코딩을 지원 하지 않기 때문 <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> 인 기본 값으로 속성을 두어야 <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>합니다. ASP.Net 웹 서비스 클라이언트는 WS-Security를 지원하지 않기 때문에 <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType>를 <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>로 설정해야 합니다.  
+ 바인딩에서 HTTPS 및 전송 수준 클라이언트 인증에 대한 지원을 선택적으로 사용할 수 있습니다. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 서비스 클라이언트는 MTOM 메시지 인코딩을 지원하지 않기 때문에 <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> 속성을 기본값인 <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>로 두어야 합니다. ASP.Net 웹 서비스 클라이언트는 WS-Security를 지원하지 않기 때문에 <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType>를 <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>로 설정해야 합니다.  
   
  WCF 서비스에 대 한 메타 데이터를 사용할 수 있도록 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 서비스 프록시 생성 도구 (즉, [웹 서비스 기술 언어 도구 (Wsdl.exe)](https://go.microsoft.com/fwlink/?LinkId=73833), [웹 서비스 검색 도구 (Disco.exe)](https://go.microsoft.com/fwlink/?LinkId=73834), 및 Visual Studio에서 웹 참조 추가 기능), HTTP/GET 메타 데이터 끝점을 노출 해야 합니다.  
   
@@ -48,10 +48,10 @@ ms.locfileid: "59325191"
   
 ## <a name="see-also"></a>참고자료
 
-- [방법: 코드에서 서비스 엔드포인트 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)
-- [방법: 코드를 사용하여 서비스에 대한 메타데이터 게시](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+- [방법: 코드에서 서비스 끝점 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)
+- [방법: 코드를 사용 하는 서비스의 메타 데이터 게시](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
 - [방법: 구성에서 서비스 바인딩 지정](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
-- [방법: 구성에서 서비스 엔드포인트 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
-- [방법: 구성 파일을 사용하여 서비스에 대한 메타데이터 게시](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [방법: 구성에서 서비스 끝점 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+- [방법: 구성 파일을 사용 하는 서비스의 메타 데이터 게시](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [전송 보안](../../../../docs/framework/wcf/feature-details/transport-security.md)
 - [메타데이터 사용](../../../../docs/framework/wcf/feature-details/using-metadata.md)

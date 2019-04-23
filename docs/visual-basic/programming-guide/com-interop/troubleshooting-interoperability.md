@@ -17,10 +17,10 @@ helpviewer_keywords:
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
 ms.openlocfilehash: 147c61badd680277480226b809df97d46b636c7d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59341194"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>상호 운용성 문제 해결(Visual Basic)
@@ -133,5 +133,5 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 - [Tlbimp.exe(형식 라이브러리 가져오기)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
 - [Tlbexp.exe(형식 라이브러리 내보내기)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
 - [연습: COM 개체를 사용한 상속 구현](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
-- [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [Inherits 문](../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [전역 어셈블리 캐시](../../../framework/app-domains/gac.md)

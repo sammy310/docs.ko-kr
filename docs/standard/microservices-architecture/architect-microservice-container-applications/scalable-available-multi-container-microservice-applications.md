@@ -4,12 +4,12 @@ description: Kubernetes 애플리케이션 수명 주기를 개발하는 동안 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 6fa25c1d35e276473f4fcac344efbc5cafbc4b3f
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 1452f25f96a5e277d8cfcd53f03e90675e9f9372
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465440"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613267"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 
@@ -148,13 +148,13 @@ Azure Dev Spaces는 팀 작업과 분리될 걱정 없이 상대적으로 격리
 ## <a name="additional-resources"></a>추가 자료
 
 - **AKS(Azure Kubernetes Service) 시작** \
-  [https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)
+  <https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal>
 
 - **Azure Dev Spaces** \
-  [https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces)
+  <https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces>
 
 - **Kubernetes** 공식 사이트. \
-  [https://kubernetes.io/](https://kubernetes.io/)
+  <https://kubernetes.io/>
 
 >[!div class="step-by-step"]
 >[이전](resilient-high-availability-microservices.md)

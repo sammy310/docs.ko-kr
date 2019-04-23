@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03600a7c7fbff30acab46f875fb8cd2516207457
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 9ee17426e3ac8d5351490276a8c71cdfe996eb1a
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654603"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59341077"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>.NET Framework의 Side-by-Side 실행
 Side-by-side 실행은 동일한 컴퓨터에서 여러 버전의 애플리케이션 또는 구성 요소를 실행하는 기능입니다. 동일한 컴퓨터에서 여러 버전의 공용 언어 런타임과, 하나의 런타임 버전을 사용하는 여러 버전의 애플리케이션 및 구성 요소를 동시에 사용할 수 있습니다.  
@@ -75,11 +75,11 @@ Side-by-side 실행은 동일한 컴퓨터에서 여러 버전의 애플리케�
   
  애플리케이션 구성 파일이 있으면 런타임은 다음 프로세스의 결과에 따라 로드할 적절한 런타임 버전을 결정합니다.  
   
-1.  런타임이 애플리케이션 구성 파일에서 [\<supportedRuntime&gt;](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 요소를 검사합니다. **\<supportedRuntime>** 요소에 지정되어 있는 지원되는 런타임 버전이 하나 이상 있으면 런타임은 첫 번째 **\<supportedRuntime>** 요소에서 지정하는 런타임 버전을 로드합니다. 이 버전을 사용할 수 없으면 런타임은 다음 **\<supportedRuntime>** 요소를 확인하고 지정된 런타임 버전을 로드하려고 시도합니다. 이 런타임 버전을 사용할 수 없으면 그다음 **\<supportedRuntime>** 요소를 확인합니다. 지원되는 런타임 버전을 사용할 수 없으면 런타임에서 런타임 버전을 로드하지 못하고 사용자에게 메시지를 표시합니다(3단계 참조).  
+1. 런타임이 애플리케이션 구성 파일에서 [\<supportedRuntime&gt;](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 요소를 검사합니다. **\<supportedRuntime>** 요소에 지정되어 있는 지원되는 런타임 버전이 하나 이상 있으면 런타임은 첫 번째 **\<supportedRuntime>** 요소에서 지정하는 런타임 버전을 로드합니다. 이 버전을 사용할 수 없으면 런타임은 다음 **\<supportedRuntime>** 요소를 확인하고 지정된 런타임 버전을 로드하려고 시도합니다. 이 런타임 버전을 사용할 수 없으면 그다음 **\<supportedRuntime>** 요소를 확인합니다. 지원되는 런타임 버전을 사용할 수 없으면 런타임에서 런타임 버전을 로드하지 못하고 사용자에게 메시지를 표시합니다(3단계 참조).  
   
-2.  런타임이 애플리케이션 실행 파일의 PE 파일 헤더를 읽습니다. PE 파일 헤더에 지정된 런타임 버전을 사용할 수 있으면 런타임에서 해당 버전을 로드합니다. 지정된 런타임 버전을 사용할 수 없으면 런타임이 Microsoft에서 PE 헤더의 런타임 버전과 호환되는 것으로 확인된 런타임 버전을 검색합니다. 해당 버전이 없으면 프로세스가 3단계로 넘어갑니다.  
+2. 런타임이 애플리케이션 실행 파일의 PE 파일 헤더를 읽습니다. PE 파일 헤더에 지정된 런타임 버전을 사용할 수 있으면 런타임에서 해당 버전을 로드합니다. 지정된 런타임 버전을 사용할 수 없으면 런타임이 Microsoft에서 PE 헤더의 런타임 버전과 호환되는 것으로 확인된 런타임 버전을 검색합니다. 해당 버전이 없으면 프로세스가 3단계로 넘어갑니다.  
   
-3.  런타임이 애플리케이션에서 지원하는 런타임 버전을 사용할 수 없다는 메시지를 표시합니다. 런타임이 로드되지 않습니다.  
+3. 런타임이 애플리케이션에서 지원하는 런타임 버전을 사용할 수 없다는 메시지를 표시합니다. 런타임이 로드되지 않습니다.  
   
     > [!NOTE]
     >  HKLM\Software\Microsoft\\.NETFramework 레지스트리 키 아래에 있는 NoGuiFromShim 값을 사용하거나 COMPLUS_NoGuiFromShim 환경 변수를 사용하여 이 메시지가 표시되지 않도록 할 수 있습니다. 예를 들어 무인 설치 또는 Windows 서비스와 같이 일반적으로 사용자와 상호 작용하지 않는 애플리케이션에 대한 메시지가 표시되지 않도록 할 수 있습니다. 이 메시지가 표시되지 않도록 설정된 경우 런타임은 이벤트 로그에 메시지를 씁니다.  컴퓨터의 모든 애플리케이션에 대해 이 메시지가 표시되지 않게 하려면 NoGuiFromShim 레지스트리 값을 1로 설정합니다. 또는 특정 사용자 컨텍스트에서 실행되는 애플리케이션에 대해 메시지가 표시되지 않게 하려면 COMPLUS_NoGuiFromShim 환경 변수를 1로 설정합니다.  

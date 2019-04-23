@@ -3,12 +3,12 @@ title: 식 트리 설명
 description: 식 트리에 대해 알아보고 외부 실행을 위한 알고리즘 변환 및 실행 전 코드 검사에 식 트리가 어떻게 유용한지 알아봅니다.
 ms.date: 06/20/2016
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
-ms.openlocfilehash: 012ea0dec85e6fba7581f4bc46a5e78da8c64708
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 3bad826bb58ff361688d3e13497343661e7edbd3
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59481433"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613423"
 ---
 # <a name="expression-trees-explained"></a>식 트리 설명
 
@@ -23,6 +23,7 @@ ms.locfileid: "59481433"
 ```csharp
 var sum = 1 + 2;
 ```
+
 이 코드를 식 트리로 분석하려는 경우 트리에 여러 개의 노드가 포함됩니다.
 가장 바깥쪽 노드는 할당을 사용하는 변수 선언문(`var sum = 1 + 2;`)입니다. 이 가장 바깥쪽 노드에는 변수 선언, 대입 연산자 및 등호의 오른쪽을 나타내는 식과 같은 여러 개의 자식 노드가 포함됩니다. 이 식은 더하기 연산을 나타내는 식, 더하기의 왼쪽과 오른쪽 피연산자로 다시 구분됩니다.
 

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
 ms.openlocfilehash: d8529929870b14611c136221f1eefe3eb4ba3d42
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338997"
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>방법: 사용자 지정 클라이언트 ID 검증 도구 만들기
@@ -86,5 +86,5 @@ ms.locfileid: "59338997"
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
 - <xref:System.ServiceModel.EndpointIdentity>
 - <xref:System.ServiceModel.Security.IdentityVerifier>
-- [Service Identity 샘플](../../../../docs/framework/wcf/samples/service-identity-sample.md)
+- [서비스 ID 샘플](../../../../docs/framework/wcf/samples/service-identity-sample.md)
 - [권한 부여 정책](../../../../docs/framework/wcf/samples/authorization-policy.md)

@@ -11,10 +11,10 @@ ms.assetid: 4afd40c3-68f2-41c5-8ec1-4951bc148b9c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3a3ee82a9091f0caeee010ec79632ce703efb589
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338841"
 ---
 # <a name="how-to-generate-interop-assemblies-from-type-libraries"></a>방법: 형식 라이브러리에서 Interop 어셈블리 생성

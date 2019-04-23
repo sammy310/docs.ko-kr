@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 6c5f42309970f14aa9a0cda3c48efa59b620bdb5
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: ae1252f4544f184a5f63ef02ba898da9b4373e17
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464166"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612708"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>도메인 모델 레이어에서 유효성 검사 디자인
 
@@ -88,25 +88,25 @@ UI 계층 내에서 모델 유효성 검사를 허용하도록 입력을 허용�
 ## <a name="additional-resources"></a>추가 자료
 
 - **Rachel Appel. ASP.NET Core MVC의 모델 유효성 검사 소개** \
-  [https://docs.microsoft.com/aspnet/core/mvc/models/validation](https://docs.microsoft.com/aspnet/core/mvc/models/validation)
+  <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
 
 - **Rick Anderson. 유효성 검사 추가** \
-  [https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
+  <https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation>
 
 - **Martin Fowler. 유효성 검사에서 예외 Throw를 알림으로 교체** \
-  [https://martinfowler.com/articles/replaceThrowWithNotification.html](https://martinfowler.com/articles/replaceThrowWithNotification.html)
+  <https://martinfowler.com/articles/replaceThrowWithNotification.html>
 
 - **사양 및 알림 패턴** \
-  [https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns](https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns)
+  <https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns>
 
 - **Lev Gorodinski. DDD(도메인 기반 디자인)에서 유효성 검사** \
-  [http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/](http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/)
+  <http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/>
 
 - **Colin Jack. 도메인 모델 유효성 검사** \
-  [https://colinjack.blogspot.com/2008/03/domain-model-validation.html](https://colinjack.blogspot.com/2008/03/domain-model-validation.html)
+  <https://colinjack.blogspot.com/2008/03/domain-model-validation.html>
 
 - **Jimmy Bogard. DDD 세계에서 유효성 검사** \
-  [https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/](https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/)
+  <https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/>
 
 > [!div class="step-by-step"]
 > [이전](enumeration-classes-over-enum-types.md)

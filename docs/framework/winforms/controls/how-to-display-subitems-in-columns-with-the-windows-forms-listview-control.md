@@ -11,10 +11,10 @@ helpviewer_keywords:
 - subitems
 ms.assetid: e465f044-cde7-4fd9-a687-788a73a0f554
 ms.openlocfilehash: 318521cc1377be89ef54706d80c8b2990a6ba1b8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339296"
 ---
 # <a name="how-to-display-subitems-in-columns-with-the-windows-forms-listview-control"></a>방법: Windows Forms ListView 컨트롤을 사용하여 열에 하위 항목 표시
@@ -32,7 +32,7 @@ Windows Forms <xref:System.Windows.Forms.ListView> 컨트롤 추가 텍스트 �
 ## <a name="see-also"></a>참고자료
 
 - [ListView 컨트롤 개요](listview-control-overview-windows-forms.md)
-- [방법: Windows Forms ListView 컨트롤을 사용하여 항목 추가 및 제거](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [방법: Windows Forms ListView 컨트롤을 사용 하 여 항목 추가 및 제거](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
 - [방법: Windows Forms ListView 컨트롤에 열 추가](how-to-add-columns-to-the-windows-forms-listview-control.md)
-- [방법: Windows Forms ListView 컨트롤에 대한 아이콘 표시](how-to-display-icons-for-the-windows-forms-listview-control.md)
-- [방법: TreeView 또는 ListView 컨트롤에 사용자 지정 정보 추가(Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [방법: Windows Forms ListView 컨트롤에 대 한 아이콘을 표시 합니다.](how-to-display-icons-for-the-windows-forms-listview-control.md)
+- [방법: TreeView 또는 ListView 컨트롤 (Windows Forms)에 사용자 지정 정보 추가](add-custom-information-to-a-treeview-or-listview-control-wf.md)

@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 7df274e90d5466581b6f93fe210b6c9310815833
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 5c2ac880462851dd18735ced189b3641a759c8ca
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465895"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613059"
 ---
 # <a name="design-a-microservice-domain-model"></a>마이크로 서비스 도메인 모델 디자인
 
@@ -58,13 +58,13 @@ DDD에서 도메인 엔터티는 엔터티 데이터(메모리에 액세스된 �
 #### <a name="additional-resources"></a>추가 자료
 
 - **DevIQ. 도메인 엔터티** \
-  [https://deviq.com/entity/](https://deviq.com/entity/)
+  <https://deviq.com/entity/>
 
 - **Martin Fowler. 도메인 모델** \
-  [https://martinfowler.com/eaaCatalog/domainModel.html](https://martinfowler.com/eaaCatalog/domainModel.html)
+  <https://martinfowler.com/eaaCatalog/domainModel.html>
 
 - **Martin Fowler. 빈약한 도메인 모델** \
-  [https://martinfowler.com/bliki/AnemicDomainModel.html](https://martinfowler.com/bliki/AnemicDomainModel.html)
+  <https://martinfowler.com/bliki/AnemicDomainModel.html>
 
 ### <a name="the-value-object-pattern"></a>가치 개체 패턴
 
@@ -83,16 +83,16 @@ EF Core 2.0에는 값 개체를 더 쉽게 처리할 수 있는 [소유한 엔�
 #### <a name="additional-resources"></a>추가 자료
 
 - **Martin Fowler. 값 개체 패턴** \
-  [https://martinfowler.com/bliki/ValueObject.html](https://martinfowler.com/bliki/ValueObject.html)
+  <https://martinfowler.com/bliki/ValueObject.html>
 
 - **값 개체** \
-  [https://deviq.com/value-object/](https://deviq.com/value-object/)
+  <https://deviq.com/value-object/>
 
 - **테스트 기반 개발의 값 개체** \
   [https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
 - **Eric Evans. 도메인 기반 디자인: 소프트웨어 핵심에서 복잡성을 처리합니다.** (도서; 값 개체의 토론 포함) \
-  [https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+  <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="the-aggregate-pattern"></a>집계 모듈
 
@@ -145,13 +145,13 @@ public class Order : Entity, IAggregateRoot
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
 - **Sergey Grybniak. DDD 전술적 디자인 패턴** \
-  [https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
+  <https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part>
 
 - **Chris Richardson. 집계를 사용한 트랜잭션 마이크로 서비스 개발** \
-  [https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
+  <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson>
 
 - **DevIQ. 집계 패턴** \
-  [https://deviq.com/aggregate-pattern/](https://deviq.com/aggregate-pattern/)
+  <https://deviq.com/aggregate-pattern/>
 
 >[!div class="step-by-step"]
 >[이전](ddd-oriented-microservice.md)
