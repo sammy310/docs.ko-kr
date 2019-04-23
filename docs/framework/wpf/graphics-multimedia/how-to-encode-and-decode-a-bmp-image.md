@@ -14,29 +14,29 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 ms.assetid: feb5ef27-28ac-40ab-bfc2-e0456990d32c
 ms.openlocfilehash: b7d5ace8aead864cb69a9e696a3f1f925e232600
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59121903"
 ---
-# <a name="how-to-encode-and-decode-a-bmp-image"></a><span data-ttu-id="6b1f8-102">방법: BMP 이미지 인코딩 및 디코딩</span><span class="sxs-lookup"><span data-stu-id="6b1f8-102">How to: Encode and Decode a BMP Image</span></span>
-<span data-ttu-id="6b1f8-103">다음 예제를 디코딩 및 인코딩하는 방법을 보여는 [!INCLUDE[TLA#tla_bmp](../../../../includes/tlasharptla-bmp-md.md)] 특정을 사용 하 여 이미지 <xref:System.Windows.Media.Imaging.BmpBitmapDecoder> 고 <xref:System.Windows.Media.Imaging.BmpBitmapEncoder> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="6b1f8-103">The following examples show how to decode and encode a [!INCLUDE[TLA#tla_bmp](../../../../includes/tlasharptla-bmp-md.md)] image using the specific <xref:System.Windows.Media.Imaging.BmpBitmapDecoder> and <xref:System.Windows.Media.Imaging.BmpBitmapEncoder> objects.</span></span>  
+# <a name="how-to-encode-and-decode-a-bmp-image"></a><span data-ttu-id="0cd21-102">방법: BMP 이미지 인코딩 및 디코딩</span><span class="sxs-lookup"><span data-stu-id="0cd21-102">How to: Encode and Decode a BMP Image</span></span>
+<span data-ttu-id="0cd21-103">다음 예제를 디코딩 및 인코딩하는 방법을 보여는 [!INCLUDE[TLA#tla_bmp](../../../../includes/tlasharptla-bmp-md.md)] 특정을 사용 하 여 이미지 <xref:System.Windows.Media.Imaging.BmpBitmapDecoder> 고 <xref:System.Windows.Media.Imaging.BmpBitmapEncoder> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="0cd21-103">The following examples show how to decode and encode a [!INCLUDE[TLA#tla_bmp](../../../../includes/tlasharptla-bmp-md.md)] image using the specific <xref:System.Windows.Media.Imaging.BmpBitmapDecoder> and <xref:System.Windows.Media.Imaging.BmpBitmapEncoder> objects.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6b1f8-104">예제</span><span class="sxs-lookup"><span data-stu-id="6b1f8-104">Example</span></span>  
- <span data-ttu-id="6b1f8-105">디코딩하는 방법을 보여 주는이 예제는 [!INCLUDE[TLA2#tla_bmp](../../../../includes/tla2sharptla-bmp-md.md)] 를 사용 하 여 이미지를 <xref:System.Windows.Media.Imaging.BmpBitmapDecoder> 에서 <xref:System.Uri>합니다.</span><span class="sxs-lookup"><span data-stu-id="6b1f8-105">This example demonstrates how to decode a [!INCLUDE[TLA2#tla_bmp](../../../../includes/tla2sharptla-bmp-md.md)] image using a <xref:System.Windows.Media.Imaging.BmpBitmapDecoder> from a <xref:System.Uri>.</span></span>  
+## <a name="example"></a><span data-ttu-id="0cd21-104">예제</span><span class="sxs-lookup"><span data-stu-id="0cd21-104">Example</span></span>  
+ <span data-ttu-id="0cd21-105">디코딩하는 방법을 보여 주는이 예제는 [!INCLUDE[TLA2#tla_bmp](../../../../includes/tla2sharptla-bmp-md.md)] 를 사용 하 여 이미지를 <xref:System.Windows.Media.Imaging.BmpBitmapDecoder> 에서 <xref:System.Uri>합니다.</span><span class="sxs-lookup"><span data-stu-id="0cd21-105">This example demonstrates how to decode a [!INCLUDE[TLA2#tla_bmp](../../../../includes/tla2sharptla-bmp-md.md)] image using a <xref:System.Windows.Media.Imaging.BmpBitmapDecoder> from a <xref:System.Uri>.</span></span>  
   
  [!code-cpp[BmpBitmapDecoderEncoder#5](~/samples/snippets/cpp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CPP/anotherfile.cpp#5)]
  [!code-csharp[BmpBitmapDecoderEncoder#5](~/samples/snippets/csharp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CSharp/BitmapFrame.cs#5)]
  [!code-vb[BmpBitmapDecoderEncoder#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/VB/BitmapFrame.vb#5)]  
   
-## <a name="example"></a><span data-ttu-id="6b1f8-106">예제</span><span class="sxs-lookup"><span data-stu-id="6b1f8-106">Example</span></span>  
- <span data-ttu-id="6b1f8-107">인코딩하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Imaging.BitmapSource> 에 [!INCLUDE[TLA2#tla_bmp](../../../../includes/tla2sharptla-bmp-md.md)] 사용 하 여 이미지를 <xref:System.Windows.Media.Imaging.BmpBitmapEncoder>입니다.</span><span class="sxs-lookup"><span data-stu-id="6b1f8-107">This example demonstrates how to encode a <xref:System.Windows.Media.Imaging.BitmapSource> into a [!INCLUDE[TLA2#tla_bmp](../../../../includes/tla2sharptla-bmp-md.md)] image using a <xref:System.Windows.Media.Imaging.BmpBitmapEncoder>.</span></span>  
+## <a name="example"></a><span data-ttu-id="0cd21-106">예제</span><span class="sxs-lookup"><span data-stu-id="0cd21-106">Example</span></span>  
+ <span data-ttu-id="0cd21-107">인코딩하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Imaging.BitmapSource> 에 [!INCLUDE[TLA2#tla_bmp](../../../../includes/tla2sharptla-bmp-md.md)] 사용 하 여 이미지를 <xref:System.Windows.Media.Imaging.BmpBitmapEncoder>입니다.</span><span class="sxs-lookup"><span data-stu-id="0cd21-107">This example demonstrates how to encode a <xref:System.Windows.Media.Imaging.BitmapSource> into a [!INCLUDE[TLA2#tla_bmp](../../../../includes/tla2sharptla-bmp-md.md)] image using a <xref:System.Windows.Media.Imaging.BmpBitmapEncoder>.</span></span>  
   
  [!code-cpp[BmpBitmapDecoderEncoder#4](~/samples/snippets/cpp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CPP/anotherfile.cpp#4)]
  [!code-csharp[BmpBitmapDecoderEncoder#4](~/samples/snippets/csharp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CSharp/BitmapFrame.cs#4)]
  [!code-vb[BmpBitmapDecoderEncoder#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/VB/BitmapFrame.vb#4)]  
   
-## <a name="see-also"></a><span data-ttu-id="6b1f8-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="6b1f8-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0cd21-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="0cd21-108">See also</span></span>
 
-- [<span data-ttu-id="6b1f8-109">이미징 개요</span><span class="sxs-lookup"><span data-stu-id="6b1f8-109">Imaging Overview</span></span>](imaging-overview.md)
+- [<span data-ttu-id="0cd21-109">이미징 개요</span><span class="sxs-lookup"><span data-stu-id="0cd21-109">Imaging Overview</span></span>](imaging-overview.md)

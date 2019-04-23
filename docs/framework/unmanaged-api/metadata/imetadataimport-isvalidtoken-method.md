@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3a99ed42f500b83b5109631b21a88029995b43d6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59123882"
 ---
-# <a name="imetadataimportisvalidtoken-method"></a><span data-ttu-id="e38a8-102">IMetaDataImport::IsValidToken 메서드</span><span class="sxs-lookup"><span data-stu-id="e38a8-102">IMetaDataImport::IsValidToken Method</span></span>
-<span data-ttu-id="e38a8-103">지정한 토큰이 코드 개체에 대한 유효한 참조를 포함하는지 여부를 나타내는 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="e38a8-103">Gets a value indicating whether the specified token holds a valid reference to a code object.</span></span>  
+# <a name="imetadataimportisvalidtoken-method"></a><span data-ttu-id="e0078-102">IMetaDataImport::IsValidToken 메서드</span><span class="sxs-lookup"><span data-stu-id="e0078-102">IMetaDataImport::IsValidToken Method</span></span>
+<span data-ttu-id="e0078-103">지정한 토큰이 코드 개체에 대한 유효한 참조를 포함하는지 여부를 나타내는 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="e0078-103">Gets a value indicating whether the specified token holds a valid reference to a code object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e38a8-104">구문</span><span class="sxs-lookup"><span data-stu-id="e38a8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e0078-104">구문</span><span class="sxs-lookup"><span data-stu-id="e0078-104">Syntax</span></span>  
   
 ```  
 BOOL IsValidToken (  
@@ -35,23 +35,23 @@ BOOL IsValidToken (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e38a8-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="e38a8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e0078-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="e0078-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="e38a8-106">[in] 에 대 한 참조 유효성을 검사할 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="e38a8-106">[in] The token to check the reference validity for.</span></span>  
+ <span data-ttu-id="e0078-106">[in] 에 대 한 참조 유효성을 검사할 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="e0078-106">[in] The token to check the reference validity for.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e38a8-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="e38a8-107">Return Value</span></span>  
- `true` <span data-ttu-id="e38a8-108">경우 `tk` 은 현재 범위 내에서 유효한 메타 데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="e38a8-108">if `tk` is a valid metadata token within the current scope.</span></span> <span data-ttu-id="e38a8-109">그렇지 않으면 `false`입니다.</span><span class="sxs-lookup"><span data-stu-id="e38a8-109">Otherwise, `false`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e0078-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="e0078-107">Return Value</span></span>  
+ <span data-ttu-id="e0078-108">`true` 경우 `tk` 은 현재 범위 내에서 유효한 메타 데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="e0078-108">`true` if `tk` is a valid metadata token within the current scope.</span></span> <span data-ttu-id="e0078-109">그렇지 않으면 `false`입니다.</span><span class="sxs-lookup"><span data-stu-id="e0078-109">Otherwise, `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e38a8-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e38a8-110">Requirements</span></span>  
- <span data-ttu-id="e38a8-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="e38a8-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e0078-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e0078-110">Requirements</span></span>  
+ <span data-ttu-id="e0078-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="e0078-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e38a8-112">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e38a8-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="e0078-112">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e0078-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="e38a8-113">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="e38a8-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="e0078-113">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="e0078-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="e38a8-114">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="e38a8-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="e0078-114">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e0078-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e38a8-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="e38a8-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e0078-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="e0078-115">See also</span></span>
 
-- [<span data-ttu-id="e38a8-116">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e38a8-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="e38a8-117">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e38a8-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="e0078-116">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e0078-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="e0078-117">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e0078-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

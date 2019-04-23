@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 18f1a4ede1a362860df1271835600e7b867eac00
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59127766"
 ---
-# <a name="coinitializeee-function"></a><span data-ttu-id="720d6-102">CoInitializeEE 함수</span><span class="sxs-lookup"><span data-stu-id="720d6-102">CoInitializeEE Function</span></span>
-<span data-ttu-id="720d6-103">공용 언어 런타임 실행 엔진 프로세스에 로드 되도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="720d6-103">Ensures that the common language runtime execution engine is loaded into a process.</span></span> <span data-ttu-id="720d6-104">이 함수에서 사용 되지 않습니다는 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="720d6-104">This function is deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="720d6-105">사용 된 [iclrruntimehost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) 메서드 대신 합니다.</span><span class="sxs-lookup"><span data-stu-id="720d6-105">Use the [ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) method instead.</span></span>  
+# <a name="coinitializeee-function"></a><span data-ttu-id="e7c04-102">CoInitializeEE 함수</span><span class="sxs-lookup"><span data-stu-id="e7c04-102">CoInitializeEE Function</span></span>
+<span data-ttu-id="e7c04-103">공용 언어 런타임 실행 엔진 프로세스에 로드 되도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="e7c04-103">Ensures that the common language runtime execution engine is loaded into a process.</span></span> <span data-ttu-id="e7c04-104">이 함수에서 사용 되지 않습니다는 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="e7c04-104">This function is deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="e7c04-105">사용 된 [iclrruntimehost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) 메서드 대신 합니다.</span><span class="sxs-lookup"><span data-stu-id="e7c04-105">Use the [ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="720d6-106">구문</span><span class="sxs-lookup"><span data-stu-id="720d6-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e7c04-106">구문</span><span class="sxs-lookup"><span data-stu-id="e7c04-106">Syntax</span></span>  
   
 ```  
 HRESULT CoInitializeEE (  
@@ -35,31 +35,31 @@ HRESULT CoInitializeEE (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="720d6-107">매개 변수</span><span class="sxs-lookup"><span data-stu-id="720d6-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e7c04-107">매개 변수</span><span class="sxs-lookup"><span data-stu-id="e7c04-107">Parameters</span></span>  
  `fFlags`  
- <span data-ttu-id="720d6-108">[in] 중 하나는 [COINITIEE](../../../../docs/framework/unmanaged-api/metadata/coinitiee-enumeration.md) 열거형 상수입니다.</span><span class="sxs-lookup"><span data-stu-id="720d6-108">[in] One of the [COINITIEE](../../../../docs/framework/unmanaged-api/metadata/coinitiee-enumeration.md) enumeration constants.</span></span>  
+ <span data-ttu-id="e7c04-108">[in] 중 하나는 [COINITIEE](../../../../docs/framework/unmanaged-api/metadata/coinitiee-enumeration.md) 열거형 상수입니다.</span><span class="sxs-lookup"><span data-stu-id="e7c04-108">[in] One of the [COINITIEE](../../../../docs/framework/unmanaged-api/metadata/coinitiee-enumeration.md) enumeration constants.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="720d6-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="720d6-109">Return Value</span></span>  
- <span data-ttu-id="720d6-110">이 메서드는 다음 표에서 값과 Winerror.h에 정의 된 대로 표준 COM 오류 코드를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="720d6-110">This method returns standard COM error codes as defined in Winerror.h, and the values in the following table.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e7c04-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="e7c04-109">Return Value</span></span>  
+ <span data-ttu-id="e7c04-110">이 메서드는 다음 표에서 값과 Winerror.h에 정의 된 대로 표준 COM 오류 코드를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="e7c04-110">This method returns standard COM error codes as defined in Winerror.h, and the values in the following table.</span></span>  
   
-|<span data-ttu-id="720d6-111">반환 코드</span><span class="sxs-lookup"><span data-stu-id="720d6-111">Return code</span></span>|<span data-ttu-id="720d6-112">설명</span><span class="sxs-lookup"><span data-stu-id="720d6-112">Description</span></span>|  
+|<span data-ttu-id="e7c04-111">반환 코드</span><span class="sxs-lookup"><span data-stu-id="e7c04-111">Return code</span></span>|<span data-ttu-id="e7c04-112">설명</span><span class="sxs-lookup"><span data-stu-id="e7c04-112">Description</span></span>|  
 |-----------------|-----------------|  
-|<span data-ttu-id="720d6-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="720d6-113">S_OK</span></span>|<span data-ttu-id="720d6-114">실행 엔진을 로드 했습니다.</span><span class="sxs-lookup"><span data-stu-id="720d6-114">The execution engine was loaded successfully.</span></span>|  
-|<span data-ttu-id="720d6-115">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="720d6-115">S_FALSE</span></span>|<span data-ttu-id="720d6-116">실행 엔진 이미 로드 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="720d6-116">The execution engine is already loaded.</span></span>|  
-|<span data-ttu-id="720d6-117">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="720d6-117">E_FAIL</span></span>|<span data-ttu-id="720d6-118">실행 엔진을 로드할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="720d6-118">The execution engine could not be loaded.</span></span>|  
+|<span data-ttu-id="e7c04-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="e7c04-113">S_OK</span></span>|<span data-ttu-id="e7c04-114">실행 엔진을 로드 했습니다.</span><span class="sxs-lookup"><span data-stu-id="e7c04-114">The execution engine was loaded successfully.</span></span>|  
+|<span data-ttu-id="e7c04-115">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="e7c04-115">S_FALSE</span></span>|<span data-ttu-id="e7c04-116">실행 엔진 이미 로드 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="e7c04-116">The execution engine is already loaded.</span></span>|  
+|<span data-ttu-id="e7c04-117">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="e7c04-117">E_FAIL</span></span>|<span data-ttu-id="e7c04-118">실행 엔진을 로드할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="e7c04-118">The execution engine could not be loaded.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="720d6-119">설명</span><span class="sxs-lookup"><span data-stu-id="720d6-119">Remarks</span></span>  
- <span data-ttu-id="720d6-120">이 메서드는 이전에 로드 되지 않았으면 하는 경우 실행 엔진을 로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="720d6-120">This method loads the execution engine if it has not been previously loaded.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e7c04-119">설명</span><span class="sxs-lookup"><span data-stu-id="e7c04-119">Remarks</span></span>  
+ <span data-ttu-id="e7c04-120">이 메서드는 이전에 로드 되지 않았으면 하는 경우 실행 엔진을 로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="e7c04-120">This method loads the execution engine if it has not been previously loaded.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="720d6-121">요구 사항</span><span class="sxs-lookup"><span data-stu-id="720d6-121">Requirements</span></span>  
- <span data-ttu-id="720d6-122">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="720d6-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e7c04-121">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e7c04-121">Requirements</span></span>  
+ <span data-ttu-id="e7c04-122">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="e7c04-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="720d6-123">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="720d6-123">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="e7c04-123">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e7c04-123">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="720d6-124">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="720d6-124">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="e7c04-124">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="e7c04-124">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="720d6-125">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="720d6-125">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="e7c04-125">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e7c04-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="720d6-126">참고자료</span><span class="sxs-lookup"><span data-stu-id="720d6-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e7c04-126">참고자료</span><span class="sxs-lookup"><span data-stu-id="e7c04-126">See also</span></span>
 
-- [<span data-ttu-id="720d6-127">메타데이터 전역 정적 함수</span><span class="sxs-lookup"><span data-stu-id="720d6-127">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+- [<span data-ttu-id="e7c04-127">메타데이터 전역 정적 함수</span><span class="sxs-lookup"><span data-stu-id="e7c04-127">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

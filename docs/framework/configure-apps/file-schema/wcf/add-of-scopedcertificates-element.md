@@ -3,25 +3,25 @@ title: <add> <scopedCertificates> 요소
 ms.date: 03/30/2017
 ms.assetid: e21c1ef8-d6d6-4bca-ac5a-6fbf4bd77412
 ms.openlocfilehash: 06a624d0146745581dfe907d044d1f7d3b857902
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119680"
 ---
-# <a name="add-of-scopedcertificates-element"></a><span data-ttu-id="4102c-102">\<추가 >의 \<scopedCertificates > 요소</span><span class="sxs-lookup"><span data-stu-id="4102c-102">\<add> of \<scopedCertificates> Element</span></span>
-<span data-ttu-id="4102c-103">범위가 지정된 인증서 컬렉션에 X.509 인증서를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="4102c-103">Adds an X.509 certificate to the collection of scoped certificates.</span></span>  
+# <a name="add-of-scopedcertificates-element"></a><span data-ttu-id="f1b58-102">\<추가 >의 \<scopedCertificates > 요소</span><span class="sxs-lookup"><span data-stu-id="f1b58-102">\<add> of \<scopedCertificates> Element</span></span>
+<span data-ttu-id="f1b58-103">범위가 지정된 인증서 컬렉션에 X.509 인증서를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="f1b58-103">Adds an X.509 certificate to the collection of scoped certificates.</span></span>  
   
- <span data-ttu-id="4102c-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="4102c-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="4102c-105">\<behaviors></span><span class="sxs-lookup"><span data-stu-id="4102c-105">\<behaviors></span></span>  
-<span data-ttu-id="4102c-106">endpointBehaviors 섹션</span><span class="sxs-lookup"><span data-stu-id="4102c-106">endpointBehaviors section</span></span>  
-<span data-ttu-id="4102c-107">\<behavior></span><span class="sxs-lookup"><span data-stu-id="4102c-107">\<behavior></span></span>  
-<span data-ttu-id="4102c-108">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="4102c-108">\<clientCredentials></span></span>  
-<span data-ttu-id="4102c-109">\<serviceCertificate></span><span class="sxs-lookup"><span data-stu-id="4102c-109">\<serviceCertificate></span></span>  
-<span data-ttu-id="4102c-110">\<scopedCertificates></span><span class="sxs-lookup"><span data-stu-id="4102c-110">\<scopedCertificates></span></span>  
-<span data-ttu-id="4102c-111">\<추가 > 요소에 대 한 \<scopedCertificates ></span><span class="sxs-lookup"><span data-stu-id="4102c-111">\<add> element for \<scopedCertificates></span></span>  
+ <span data-ttu-id="f1b58-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="f1b58-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="f1b58-105">\<behaviors></span><span class="sxs-lookup"><span data-stu-id="f1b58-105">\<behaviors></span></span>  
+<span data-ttu-id="f1b58-106">endpointBehaviors 섹션</span><span class="sxs-lookup"><span data-stu-id="f1b58-106">endpointBehaviors section</span></span>  
+<span data-ttu-id="f1b58-107">\<behavior></span><span class="sxs-lookup"><span data-stu-id="f1b58-107">\<behavior></span></span>  
+<span data-ttu-id="f1b58-108">\<clientCredentials></span><span class="sxs-lookup"><span data-stu-id="f1b58-108">\<clientCredentials></span></span>  
+<span data-ttu-id="f1b58-109">\<serviceCertificate></span><span class="sxs-lookup"><span data-stu-id="f1b58-109">\<serviceCertificate></span></span>  
+<span data-ttu-id="f1b58-110">\<scopedCertificates></span><span class="sxs-lookup"><span data-stu-id="f1b58-110">\<scopedCertificates></span></span>  
+<span data-ttu-id="f1b58-111">\<추가 > 요소에 대 한 \<scopedCertificates ></span><span class="sxs-lookup"><span data-stu-id="f1b58-111">\<add> element for \<scopedCertificates></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4102c-112">구문</span><span class="sxs-lookup"><span data-stu-id="4102c-112">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f1b58-112">구문</span><span class="sxs-lookup"><span data-stu-id="f1b58-112">Syntax</span></span>  
   
 ```xml  
 <add findValue="String"
@@ -31,61 +31,61 @@ ms.locfileid: "59119680"
      x509Type="FindByThumbprint/FindBySubjectName/FindBySubjectDistinguishedName/FindByIssuerName/FindByIssuerDistinguishedName/FindBySerialNumber/FindByTimeValid/FindByTimeNotYetValid/FindBySerialNumber/FindByTimeExpired/FindByTemplateName/FindByApplicationPolicy/FindByCertificatePolicy/FindByExtension/FindByKeyUsage/FindBySubjectKeyIdentifier" />
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="4102c-113">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="4102c-113">Attributes and Elements</span></span>  
- <span data-ttu-id="4102c-114">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="4102c-114">The following sections describe attributes, child elements, and parent elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f1b58-113">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="f1b58-113">Attributes and Elements</span></span>  
+ <span data-ttu-id="f1b58-114">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="f1b58-114">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="4102c-115">특성</span><span class="sxs-lookup"><span data-stu-id="4102c-115">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="f1b58-115">특성</span><span class="sxs-lookup"><span data-stu-id="f1b58-115">Attributes</span></span>  
   
-|<span data-ttu-id="4102c-116">특성</span><span class="sxs-lookup"><span data-stu-id="4102c-116">Attribute</span></span>|<span data-ttu-id="4102c-117">설명</span><span class="sxs-lookup"><span data-stu-id="4102c-117">Description</span></span>|  
+|<span data-ttu-id="f1b58-116">특성</span><span class="sxs-lookup"><span data-stu-id="f1b58-116">Attribute</span></span>|<span data-ttu-id="f1b58-117">설명</span><span class="sxs-lookup"><span data-stu-id="f1b58-117">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="4102c-118">targetUri</span><span class="sxs-lookup"><span data-stu-id="4102c-118">targetUri</span></span>|<span data-ttu-id="4102c-119">문자열.</span><span class="sxs-lookup"><span data-stu-id="4102c-119">String.</span></span> <span data-ttu-id="4102c-120">인증서와 연결된 서비스의 URI를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4102c-120">Specifies the URI of the service associated with the certificate.</span></span>|  
-|<span data-ttu-id="4102c-121">findValue</span><span class="sxs-lookup"><span data-stu-id="4102c-121">findValue</span></span>|<span data-ttu-id="4102c-122">문자열.</span><span class="sxs-lookup"><span data-stu-id="4102c-122">String.</span></span> <span data-ttu-id="4102c-123">검색할 값입니다.</span><span class="sxs-lookup"><span data-stu-id="4102c-123">The value to search for.</span></span>|  
-|<span data-ttu-id="4102c-124">x509FindType</span><span class="sxs-lookup"><span data-stu-id="4102c-124">x509FindType</span></span>|<span data-ttu-id="4102c-125">열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="4102c-125">Enumeration.</span></span> <span data-ttu-id="4102c-126">검색할 인증서 필드 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="4102c-126">One of the certificate fields to search.</span></span>|  
-|<span data-ttu-id="4102c-127">storeLocation</span><span class="sxs-lookup"><span data-stu-id="4102c-127">storeLocation</span></span>|<span data-ttu-id="4102c-128">열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="4102c-128">Enumeration.</span></span> <span data-ttu-id="4102c-129">검색할 두 저장소 위치 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="4102c-129">One of the two store locations to search.</span></span>|  
-|<span data-ttu-id="4102c-130">storeName</span><span class="sxs-lookup"><span data-stu-id="4102c-130">storeName</span></span>|<span data-ttu-id="4102c-131">열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="4102c-131">Enumeration.</span></span> <span data-ttu-id="4102c-132">검색할 시스템 저장소 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="4102c-132">One of the system stores to search.</span></span>|  
+|<span data-ttu-id="f1b58-118">targetUri</span><span class="sxs-lookup"><span data-stu-id="f1b58-118">targetUri</span></span>|<span data-ttu-id="f1b58-119">문자열.</span><span class="sxs-lookup"><span data-stu-id="f1b58-119">String.</span></span> <span data-ttu-id="f1b58-120">인증서와 연결된 서비스의 URI를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="f1b58-120">Specifies the URI of the service associated with the certificate.</span></span>|  
+|<span data-ttu-id="f1b58-121">findValue</span><span class="sxs-lookup"><span data-stu-id="f1b58-121">findValue</span></span>|<span data-ttu-id="f1b58-122">문자열.</span><span class="sxs-lookup"><span data-stu-id="f1b58-122">String.</span></span> <span data-ttu-id="f1b58-123">검색할 값입니다.</span><span class="sxs-lookup"><span data-stu-id="f1b58-123">The value to search for.</span></span>|  
+|<span data-ttu-id="f1b58-124">x509FindType</span><span class="sxs-lookup"><span data-stu-id="f1b58-124">x509FindType</span></span>|<span data-ttu-id="f1b58-125">열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="f1b58-125">Enumeration.</span></span> <span data-ttu-id="f1b58-126">검색할 인증서 필드 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="f1b58-126">One of the certificate fields to search.</span></span>|  
+|<span data-ttu-id="f1b58-127">storeLocation</span><span class="sxs-lookup"><span data-stu-id="f1b58-127">storeLocation</span></span>|<span data-ttu-id="f1b58-128">열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="f1b58-128">Enumeration.</span></span> <span data-ttu-id="f1b58-129">검색할 두 저장소 위치 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="f1b58-129">One of the two store locations to search.</span></span>|  
+|<span data-ttu-id="f1b58-130">storeName</span><span class="sxs-lookup"><span data-stu-id="f1b58-130">storeName</span></span>|<span data-ttu-id="f1b58-131">열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="f1b58-131">Enumeration.</span></span> <span data-ttu-id="f1b58-132">검색할 시스템 저장소 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="f1b58-132">One of the system stores to search.</span></span>|  
   
-## <a name="findvalue-attribute"></a><span data-ttu-id="4102c-133">findValue 특성</span><span class="sxs-lookup"><span data-stu-id="4102c-133">findValue Attribute</span></span>  
+## <a name="findvalue-attribute"></a><span data-ttu-id="f1b58-133">findValue 특성</span><span class="sxs-lookup"><span data-stu-id="f1b58-133">findValue Attribute</span></span>  
   
-|<span data-ttu-id="4102c-134">값</span><span class="sxs-lookup"><span data-stu-id="4102c-134">Value</span></span>|<span data-ttu-id="4102c-135">설명</span><span class="sxs-lookup"><span data-stu-id="4102c-135">Description</span></span>|  
+|<span data-ttu-id="f1b58-134">값</span><span class="sxs-lookup"><span data-stu-id="f1b58-134">Value</span></span>|<span data-ttu-id="f1b58-135">설명</span><span class="sxs-lookup"><span data-stu-id="f1b58-135">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="4102c-136">문자열</span><span class="sxs-lookup"><span data-stu-id="4102c-136">String</span></span>|<span data-ttu-id="4102c-137">이 값은 검색 중인 필드(X509FindType 특성으로 지정)에 따라 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="4102c-137">The value depends on the field (specified by the X509FindType attribute) being searched.</span></span> <span data-ttu-id="4102c-138">예를 들어, 지문을 검색할 경우 이 값은 16진수 문자열이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4102c-138">For example, if searching for a thumbprint, the value must be a string of hexadecimal numbers.</span></span>|  
+|<span data-ttu-id="f1b58-136">문자열</span><span class="sxs-lookup"><span data-stu-id="f1b58-136">String</span></span>|<span data-ttu-id="f1b58-137">이 값은 검색 중인 필드(X509FindType 특성으로 지정)에 따라 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="f1b58-137">The value depends on the field (specified by the X509FindType attribute) being searched.</span></span> <span data-ttu-id="f1b58-138">예를 들어, 지문을 검색할 경우 이 값은 16진수 문자열이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f1b58-138">For example, if searching for a thumbprint, the value must be a string of hexadecimal numbers.</span></span>|  
   
-## <a name="x509findtype-attribute"></a><span data-ttu-id="4102c-139">x509FindType 특성</span><span class="sxs-lookup"><span data-stu-id="4102c-139">x509FindType Attribute</span></span>  
+## <a name="x509findtype-attribute"></a><span data-ttu-id="f1b58-139">x509FindType 특성</span><span class="sxs-lookup"><span data-stu-id="f1b58-139">x509FindType Attribute</span></span>  
   
-|<span data-ttu-id="4102c-140">값</span><span class="sxs-lookup"><span data-stu-id="4102c-140">Value</span></span>|<span data-ttu-id="4102c-141">설명</span><span class="sxs-lookup"><span data-stu-id="4102c-141">Description</span></span>|  
+|<span data-ttu-id="f1b58-140">값</span><span class="sxs-lookup"><span data-stu-id="f1b58-140">Value</span></span>|<span data-ttu-id="f1b58-141">설명</span><span class="sxs-lookup"><span data-stu-id="f1b58-141">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="4102c-142">열거형</span><span class="sxs-lookup"><span data-stu-id="4102c-142">Enumeration</span></span>|<span data-ttu-id="4102c-143">값은 다음과 같습니다. FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, findbysubjectkeyidentifier가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4102c-143">Values include: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName, FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.</span></span>|  
+|<span data-ttu-id="f1b58-142">열거형</span><span class="sxs-lookup"><span data-stu-id="f1b58-142">Enumeration</span></span>|<span data-ttu-id="f1b58-143">값은 다음과 같습니다. FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, findbysubjectkeyidentifier가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f1b58-143">Values include: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName, FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.</span></span>|  
   
-## <a name="storelocation-attribute"></a><span data-ttu-id="4102c-144">storeLocation 특성</span><span class="sxs-lookup"><span data-stu-id="4102c-144">storeLocation Attribute</span></span>  
+## <a name="storelocation-attribute"></a><span data-ttu-id="f1b58-144">storeLocation 특성</span><span class="sxs-lookup"><span data-stu-id="f1b58-144">storeLocation Attribute</span></span>  
   
-|<span data-ttu-id="4102c-145">값</span><span class="sxs-lookup"><span data-stu-id="4102c-145">Value</span></span>|<span data-ttu-id="4102c-146">설명</span><span class="sxs-lookup"><span data-stu-id="4102c-146">Description</span></span>|  
+|<span data-ttu-id="f1b58-145">값</span><span class="sxs-lookup"><span data-stu-id="f1b58-145">Value</span></span>|<span data-ttu-id="f1b58-146">설명</span><span class="sxs-lookup"><span data-stu-id="f1b58-146">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="4102c-147">열거형</span><span class="sxs-lookup"><span data-stu-id="4102c-147">Enumeration</span></span>|<span data-ttu-id="4102c-148">CurrentUser 또는 LocalMachine입니다.</span><span class="sxs-lookup"><span data-stu-id="4102c-148">CurrentUser or LocalMachine.</span></span>|  
+|<span data-ttu-id="f1b58-147">열거형</span><span class="sxs-lookup"><span data-stu-id="f1b58-147">Enumeration</span></span>|<span data-ttu-id="f1b58-148">CurrentUser 또는 LocalMachine입니다.</span><span class="sxs-lookup"><span data-stu-id="f1b58-148">CurrentUser or LocalMachine.</span></span>|  
   
-## <a name="storename-attribute"></a><span data-ttu-id="4102c-149">storeName 특성</span><span class="sxs-lookup"><span data-stu-id="4102c-149">storeName Attribute</span></span>  
+## <a name="storename-attribute"></a><span data-ttu-id="f1b58-149">storeName 특성</span><span class="sxs-lookup"><span data-stu-id="f1b58-149">storeName Attribute</span></span>  
   
-|<span data-ttu-id="4102c-150">값</span><span class="sxs-lookup"><span data-stu-id="4102c-150">Value</span></span>|<span data-ttu-id="4102c-151">설명</span><span class="sxs-lookup"><span data-stu-id="4102c-151">Description</span></span>|  
+|<span data-ttu-id="f1b58-150">값</span><span class="sxs-lookup"><span data-stu-id="f1b58-150">Value</span></span>|<span data-ttu-id="f1b58-151">설명</span><span class="sxs-lookup"><span data-stu-id="f1b58-151">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="4102c-152">열거형</span><span class="sxs-lookup"><span data-stu-id="4102c-152">Enumeration</span></span>|<span data-ttu-id="4102c-153">값은 다음과 같습니다. AddressBook, AuthRoot, CertificateAuthority, Disallowed, My, 루트, TrustedPeople 및 TrustedPublisher 합니다.</span><span class="sxs-lookup"><span data-stu-id="4102c-153">Values include: AddressBook, AuthRoot, CertificateAuthority, Disallowed, My, Root, TrustedPeople, and TrustedPublisher.</span></span>|  
+|<span data-ttu-id="f1b58-152">열거형</span><span class="sxs-lookup"><span data-stu-id="f1b58-152">Enumeration</span></span>|<span data-ttu-id="f1b58-153">값은 다음과 같습니다. AddressBook, AuthRoot, CertificateAuthority, Disallowed, My, 루트, TrustedPeople 및 TrustedPublisher 합니다.</span><span class="sxs-lookup"><span data-stu-id="f1b58-153">Values include: AddressBook, AuthRoot, CertificateAuthority, Disallowed, My, Root, TrustedPeople, and TrustedPublisher.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="4102c-154">자식 요소</span><span class="sxs-lookup"><span data-stu-id="4102c-154">Child Elements</span></span>  
- <span data-ttu-id="4102c-155">없음</span><span class="sxs-lookup"><span data-stu-id="4102c-155">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="f1b58-154">자식 요소</span><span class="sxs-lookup"><span data-stu-id="f1b58-154">Child Elements</span></span>  
+ <span data-ttu-id="f1b58-155">없음</span><span class="sxs-lookup"><span data-stu-id="f1b58-155">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="4102c-156">부모 요소</span><span class="sxs-lookup"><span data-stu-id="4102c-156">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="f1b58-156">부모 요소</span><span class="sxs-lookup"><span data-stu-id="f1b58-156">Parent Elements</span></span>  
   
-|<span data-ttu-id="4102c-157">요소</span><span class="sxs-lookup"><span data-stu-id="4102c-157">Element</span></span>|<span data-ttu-id="4102c-158">설명</span><span class="sxs-lookup"><span data-stu-id="4102c-158">Description</span></span>|  
+|<span data-ttu-id="f1b58-157">요소</span><span class="sxs-lookup"><span data-stu-id="f1b58-157">Element</span></span>|<span data-ttu-id="f1b58-158">설명</span><span class="sxs-lookup"><span data-stu-id="f1b58-158">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="4102c-159">\<scopedCertificates></span><span class="sxs-lookup"><span data-stu-id="4102c-159">\<scopedCertificates></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)|<span data-ttu-id="4102c-160">인증에 대해 범위가 지정된 특정 서비스가 제공하는 X.509 인증서 컬렉션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="4102c-160">Represents a collection of X.509 certificates provided by specific services (scoped) for authentication.</span></span>|  
+|[<span data-ttu-id="f1b58-159">\<scopedCertificates></span><span class="sxs-lookup"><span data-stu-id="f1b58-159">\<scopedCertificates></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)|<span data-ttu-id="f1b58-160">인증에 대해 범위가 지정된 특정 서비스가 제공하는 X.509 인증서 컬렉션을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="f1b58-160">Represents a collection of X.509 certificates provided by specific services (scoped) for authentication.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="4102c-161">설명</span><span class="sxs-lookup"><span data-stu-id="4102c-161">Remarks</span></span>  
- <span data-ttu-id="4102c-162">이 요소를 사용하면 클라이언트가 통신할 서비스의 URL을 기반으로 사용할 서비스 인증서를 구성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4102c-162">This element enables the client to configure a service certificate to use based on the URL of the service it communicates with.</span></span> <span data-ttu-id="4102c-163">이는 클라이언트가 중간 보안 토큰 서비스뿐 아니라 끝 서비스 등의 여러 서비스와 통신할 수 있는 발급된 토큰 시나리오에서 특히 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="4102c-163">This is especially useful in issued token scenarios where a client can be communicating to multiple services (the end service as well as intermediary security token services).</span></span> <span data-ttu-id="4102c-164">인증서 기반 메시지 보안을 사용하는 바인딩의 경우 서비스에 보내는 메시지를 암호화하는 데 이 인증서를 사용하며, 서비스에서는 클라이언트로 보내는 회신에 서명하는 데 이 인증서를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4102c-164">For bindings that use certificate-based message security, this certificate is used to encrypt messages to the service, and is expected to be used by the service for signing replies to the client.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f1b58-161">설명</span><span class="sxs-lookup"><span data-stu-id="f1b58-161">Remarks</span></span>  
+ <span data-ttu-id="f1b58-162">이 요소를 사용하면 클라이언트가 통신할 서비스의 URL을 기반으로 사용할 서비스 인증서를 구성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f1b58-162">This element enables the client to configure a service certificate to use based on the URL of the service it communicates with.</span></span> <span data-ttu-id="f1b58-163">이는 클라이언트가 중간 보안 토큰 서비스뿐 아니라 끝 서비스 등의 여러 서비스와 통신할 수 있는 발급된 토큰 시나리오에서 특히 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="f1b58-163">This is especially useful in issued token scenarios where a client can be communicating to multiple services (the end service as well as intermediary security token services).</span></span> <span data-ttu-id="f1b58-164">인증서 기반 메시지 보안을 사용하는 바인딩의 경우 서비스에 보내는 메시지를 암호화하는 데 이 인증서를 사용하며, 서비스에서는 클라이언트로 보내는 회신에 서명하는 데 이 인증서를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f1b58-164">For bindings that use certificate-based message security, this certificate is used to encrypt messages to the service, and is expected to be used by the service for signing replies to the client.</span></span>  
   
- <span data-ttu-id="4102c-165">바인딩을 수행할 때 서비스용 인증서가 필요하고 서비스 URL에 대한 특정 인증서를 ScopedCertificates에서 찾을 수 없는 경우, 기본 인증서가 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="4102c-165">If a binding requires a certificate for the service and no specific certificate for the service URL is found in the ScopedCertificates, the default certificate is used.</span></span>  
+ <span data-ttu-id="f1b58-165">바인딩을 수행할 때 서비스용 인증서가 필요하고 서비스 URL에 대한 특정 인증서를 ScopedCertificates에서 찾을 수 없는 경우, 기본 인증서가 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="f1b58-165">If a binding requires a certificate for the service and no specific certificate for the service URL is found in the ScopedCertificates, the default certificate is used.</span></span>  
   
- <span data-ttu-id="4102c-166">자세한 내용은의 "범위가 지정 된 인증서" 섹션을 참조 하세요. [방법: 페더레이션된 클라이언트 만들기](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="4102c-166">For more information, see the "Scoped Certificates" section of [How to: Create a Federated Client](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).</span></span>  
+ <span data-ttu-id="f1b58-166">자세한 내용은의 "범위가 지정 된 인증서" 섹션을 참조 하세요. [방법: 페더레이션된 클라이언트 만들기](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="f1b58-166">For more information, see the "Scoped Certificates" section of [How to: Create a Federated Client](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4102c-167">예제</span><span class="sxs-lookup"><span data-stu-id="4102c-167">Example</span></span>  
- <span data-ttu-id="4102c-168">다음 예제에서는 컬렉션에 X.509 인증서를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="4102c-168">The following example adds an X.509 certificate the collection.</span></span>  
+## <a name="example"></a><span data-ttu-id="f1b58-167">예제</span><span class="sxs-lookup"><span data-stu-id="f1b58-167">Example</span></span>  
+ <span data-ttu-id="f1b58-168">다음 예제에서는 컬렉션에 X.509 인증서를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="f1b58-168">The following example adds an X.509 certificate the collection.</span></span>  
   
 ```xml  
 <behaviors>
@@ -107,14 +107,14 @@ ms.locfileid: "59119680"
 </behaviors>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4102c-169">참고자료</span><span class="sxs-lookup"><span data-stu-id="4102c-169">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f1b58-169">참고자료</span><span class="sxs-lookup"><span data-stu-id="f1b58-169">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement.ScopedCertificates%2A>
 - <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElementCollection>
 - <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>
-- [<span data-ttu-id="4102c-170">방법: 페더레이션 클라이언트 만들기</span><span class="sxs-lookup"><span data-stu-id="4102c-170">How to: Create a Federated Client</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [<span data-ttu-id="4102c-171">인증서 작업</span><span class="sxs-lookup"><span data-stu-id="4102c-171">Working with Certificates</span></span>](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [<span data-ttu-id="4102c-172">클라이언트에 보안 설정</span><span class="sxs-lookup"><span data-stu-id="4102c-172">Securing Clients</span></span>](../../../../../docs/framework/wcf/securing-clients.md)
-- [<span data-ttu-id="4102c-173">서비스 및 클라이언트에 보안 설정</span><span class="sxs-lookup"><span data-stu-id="4102c-173">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [<span data-ttu-id="f1b58-170">방법: 페더레이션된 클라이언트 만들기</span><span class="sxs-lookup"><span data-stu-id="f1b58-170">How to: Create a Federated Client</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [<span data-ttu-id="f1b58-171">인증서 작업</span><span class="sxs-lookup"><span data-stu-id="f1b58-171">Working with Certificates</span></span>](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [<span data-ttu-id="f1b58-172">클라이언트에 보안 설정</span><span class="sxs-lookup"><span data-stu-id="f1b58-172">Securing Clients</span></span>](../../../../../docs/framework/wcf/securing-clients.md)
+- [<span data-ttu-id="f1b58-173">서비스 및 클라이언트에 보안 설정</span><span class="sxs-lookup"><span data-stu-id="f1b58-173">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

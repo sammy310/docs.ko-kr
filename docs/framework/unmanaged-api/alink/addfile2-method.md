@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7a651be40773607e0db215eadf884ed642e6e3b1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126934"
 ---
-# <a name="addfile2-method"></a><span data-ttu-id="1d3bf-102">AddFile2 메서드</span><span class="sxs-lookup"><span data-stu-id="1d3bf-102">AddFile2 Method</span></span>
-<span data-ttu-id="1d3bf-103">어셈블리 파일을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="1d3bf-103">Adds files to the assembly.</span></span> <span data-ttu-id="1d3bf-104">바인딩되지 않은 모듈을 만드는 데 사용할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1d3bf-104">Can also be used to create unbound modules.</span></span>  
+# <a name="addfile2-method"></a><span data-ttu-id="4993e-102">AddFile2 메서드</span><span class="sxs-lookup"><span data-stu-id="4993e-102">AddFile2 Method</span></span>
+<span data-ttu-id="4993e-103">어셈블리 파일을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="4993e-103">Adds files to the assembly.</span></span> <span data-ttu-id="4993e-104">바인딩되지 않은 모듈을 만드는 데 사용할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4993e-104">Can also be used to create unbound modules.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1d3bf-105">구문</span><span class="sxs-lookup"><span data-stu-id="1d3bf-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4993e-105">구문</span><span class="sxs-lookup"><span data-stu-id="4993e-105">Syntax</span></span>  
   
 ```  
 HRESULT AddFile2(  
@@ -39,30 +39,30 @@ HRESULT AddFile2(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1d3bf-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="1d3bf-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4993e-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="4993e-106">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="1d3bf-107">파일이 추가 되는 어셈블리에 대 한 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="1d3bf-107">ID for the assembly to which the file is added.</span></span>  
+ <span data-ttu-id="4993e-107">파일이 추가 되는 어셈블리에 대 한 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="4993e-107">ID for the assembly to which the file is added.</span></span>  
   
  `pszFilename`  
- <span data-ttu-id="1d3bf-108">추가할 파일의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="1d3bf-108">Name of the file to be added.</span></span>  
+ <span data-ttu-id="4993e-108">추가할 파일의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="4993e-108">Name of the file to be added.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="1d3bf-109">COM + `FileDef` 와 같은 플래그 `ffContainsNoMetaData` 고 `ffWriteable`입니다.</span><span class="sxs-lookup"><span data-stu-id="1d3bf-109">COM+ `FileDef` flags such as `ffContainsNoMetaData` and `ffWriteable`.</span></span> `dwFlags` <span data-ttu-id="1d3bf-110">에 전달 됩니다 [DefineFile 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="1d3bf-110">is passed to [DefineFile Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).</span></span>  
+ <span data-ttu-id="4993e-109">COM + `FileDef` 와 같은 플래그 `ffContainsNoMetaData` 고 `ffWriteable`입니다.</span><span class="sxs-lookup"><span data-stu-id="4993e-109">COM+ `FileDef` flags such as `ffContainsNoMetaData` and `ffWriteable`.</span></span> <span data-ttu-id="4993e-110">`dwFlags` 에 전달 됩니다 [DefineFile 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="4993e-110">`dwFlags` is passed to [DefineFile Method](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).</span></span>  
   
  `pEmitter`  
- <span data-ttu-id="1d3bf-111">인터페이스 [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md) 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="1d3bf-111">Interface to [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md) interface.</span></span>  
+ <span data-ttu-id="4993e-111">인터페이스 [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md) 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="4993e-111">Interface to [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md) interface.</span></span>  
   
  `pFileToken`  
- <span data-ttu-id="1d3bf-112">추가할 파일의 ID를 받습니다.</span><span class="sxs-lookup"><span data-stu-id="1d3bf-112">Receives ID for the file being added.</span></span>  
+ <span data-ttu-id="4993e-112">추가할 파일의 ID를 받습니다.</span><span class="sxs-lookup"><span data-stu-id="4993e-112">Receives ID for the file being added.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="1d3bf-113">반환 값</span><span class="sxs-lookup"><span data-stu-id="1d3bf-113">Return Value</span></span>  
- <span data-ttu-id="1d3bf-114">메서드가 성공 하면 S_OK를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="1d3bf-114">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4993e-113">반환 값</span><span class="sxs-lookup"><span data-stu-id="4993e-113">Return Value</span></span>  
+ <span data-ttu-id="4993e-114">메서드가 성공 하면 S_OK를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="4993e-114">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1d3bf-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="1d3bf-115">Requirements</span></span>  
- <span data-ttu-id="1d3bf-116">Alink.h가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="1d3bf-116">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4993e-115">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4993e-115">Requirements</span></span>  
+ <span data-ttu-id="4993e-116">Alink.h가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="4993e-116">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1d3bf-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="1d3bf-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4993e-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="4993e-117">See also</span></span>
 
-- [<span data-ttu-id="1d3bf-118">IALink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="1d3bf-118">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="1d3bf-119">IALink 인터페이스</span><span class="sxs-lookup"><span data-stu-id="1d3bf-119">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="1d3bf-120">ALink API</span><span class="sxs-lookup"><span data-stu-id="1d3bf-120">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="4993e-118">IALink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4993e-118">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="4993e-119">IALink 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4993e-119">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="4993e-120">ALink API</span><span class="sxs-lookup"><span data-stu-id="4993e-120">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d25a3ccdd66ff7acb70f1f5e6c60157b53cc97c5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59123734"
 ---
-# <a name="getfileversion-function"></a><span data-ttu-id="9ac6c-102">GetFileVersion 함수</span><span class="sxs-lookup"><span data-stu-id="9ac6c-102">GetFileVersion Function</span></span>
-<span data-ttu-id="9ac6c-103">지정된 된 버퍼를 사용 하 여 지정된 된 파일의 공용 언어 런타임 (CLR) 버전 정보를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="9ac6c-103">Gets the common language runtime (CLR) version information of the specified file, using the specified buffer.</span></span>  
+# <a name="getfileversion-function"></a><span data-ttu-id="f3d4b-102">GetFileVersion 함수</span><span class="sxs-lookup"><span data-stu-id="f3d4b-102">GetFileVersion Function</span></span>
+<span data-ttu-id="f3d4b-103">지정된 된 버퍼를 사용 하 여 지정된 된 파일의 공용 언어 런타임 (CLR) 버전 정보를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="f3d4b-103">Gets the common language runtime (CLR) version information of the specified file, using the specified buffer.</span></span>  
   
- <span data-ttu-id="9ac6c-104">이 함수에서 사용 중단에 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="9ac6c-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="f3d4b-104">이 함수에서 사용 중단에 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="f3d4b-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9ac6c-105">구문</span><span class="sxs-lookup"><span data-stu-id="9ac6c-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f3d4b-105">구문</span><span class="sxs-lookup"><span data-stu-id="f3d4b-105">Syntax</span></span>  
   
 ```  
 HRESULT GetFileVersion (  
@@ -39,26 +39,26 @@ HRESULT GetFileVersion (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9ac6c-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="9ac6c-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f3d4b-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f3d4b-106">Parameters</span></span>  
  `szFilename`  
- <span data-ttu-id="9ac6c-107">[in] 검사할 파일의 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="9ac6c-107">[in] The path of the file to be examined.</span></span>  
+ <span data-ttu-id="f3d4b-107">[in] 검사할 파일의 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="f3d4b-107">[in] The path of the file to be examined.</span></span>  
   
  `szBuffer`  
- <span data-ttu-id="9ac6c-108">[out에서] 반환 되는 버전 정보에 대 한 할당 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="9ac6c-108">[in, out] The buffer allocated for the version information that is returned.</span></span>  
+ <span data-ttu-id="f3d4b-108">[out에서] 반환 되는 버전 정보에 대 한 할당 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="f3d4b-108">[in, out] The buffer allocated for the version information that is returned.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="9ac6c-109">[in] 와이드 문자에서 크기의 `szBuffer`합니다.</span><span class="sxs-lookup"><span data-stu-id="9ac6c-109">[in] The size, in wide characters, of `szBuffer`.</span></span>  
+ <span data-ttu-id="f3d4b-109">[in] 와이드 문자에서 크기의 `szBuffer`합니다.</span><span class="sxs-lookup"><span data-stu-id="f3d4b-109">[in] The size, in wide characters, of `szBuffer`.</span></span>  
   
  `dwLength`  
- <span data-ttu-id="9ac6c-110">[out] 반환 된 바이트의 크기, `szBuffer`합니다.</span><span class="sxs-lookup"><span data-stu-id="9ac6c-110">[out] The size, in bytes, of the returned `szBuffer`.</span></span>  
+ <span data-ttu-id="f3d4b-110">[out] 반환 된 바이트의 크기, `szBuffer`합니다.</span><span class="sxs-lookup"><span data-stu-id="f3d4b-110">[out] The size, in bytes, of the returned `szBuffer`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9ac6c-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="9ac6c-111">Requirements</span></span>  
- <span data-ttu-id="9ac6c-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="9ac6c-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f3d4b-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f3d4b-111">Requirements</span></span>  
+ <span data-ttu-id="f3d4b-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="f3d4b-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9ac6c-113">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="9ac6c-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="f3d4b-113">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f3d4b-113">**Header:** MSCorEE.h</span></span>  
   
- **<span data-ttu-id="9ac6c-114">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="9ac6c-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ <span data-ttu-id="f3d4b-114">**.NET Framework 버전:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f3d4b-114">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9ac6c-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="9ac6c-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f3d4b-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="f3d4b-115">See also</span></span>
 
-- [<span data-ttu-id="9ac6c-116">사용되지 않는 CLR 호스팅 함수</span><span class="sxs-lookup"><span data-stu-id="9ac6c-116">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="f3d4b-116">사용되지 않는 CLR 호스팅 함수</span><span class="sxs-lookup"><span data-stu-id="f3d4b-116">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
