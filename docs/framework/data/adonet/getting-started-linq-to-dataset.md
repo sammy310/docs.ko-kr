@@ -3,10 +3,10 @@ title: 시작(LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 97522119-f6a3-434c-a1ec-17396b74a556
 ms.openlocfilehash: cb9e2ddc3fa667d93d724740281fb61974e623a3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59208334"
 ---
 # <a name="getting-started-linq-to-dataset"></a>시작(LINQ to DataSet)
@@ -16,7 +16,7 @@ ms.locfileid: "59208334"
  [LINQ to DataSet 개요](../../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
  [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]에 대한 개념적인 개요를 설명합니다.  
   
- [데이터를 데이터 집합에 로드](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
+ [데이터를 데이터 세트에 로드](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
  <xref:System.Data.DataSet>을 채우는 예제를 제공합니다. 이 예제에서는 <xref:System.Data.Common.DataAdapter>를 사용하여 데이터베이스에서 데이터를 검색합니다.  
   
  [샘플 데이터베이스 다운로드](../../../../docs/framework/data/adonet/downloading-sample-databases-linq-to-dataset.md)  
@@ -35,5 +35,5 @@ ms.locfileid: "59208334"
 ## <a name="see-also"></a>참고자료
 
 - [LINQ 및 ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)
-- [언어 통합 쿼리 (LINQ)C#](../../../csharp/programming-guide/concepts/linq/index.md)  
-- [언어 통합 쿼리 (LINQ)-Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)  
+- [LINQ(Language-Integrated Query) - C#](../../../csharp/programming-guide/concepts/linq/index.md)  
+- [LINQ(Language-Integrated Query) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)  

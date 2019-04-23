@@ -11,10 +11,10 @@ helpviewer_keywords:
 - properties [WPF], RowGroups [WPF], manipulating row groups
 ms.assetid: ea61440f-08ae-44ed-b314-5716aaaae3ed
 ms.openlocfilehash: edc5fbe552a04387fc3f152cb53444605d142624
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209972"
 ---
 # <a name="how-to-manipulate-a-tables-row-groups-through-the-rowgroups-property"></a>방법: RowGroups 속성을 통해 테이블의 행 그룹 조작
@@ -85,6 +85,6 @@ ms.locfileid: "59209972"
   
 ## <a name="see-also"></a>참고자료
 
-- [방법: Inlines 속성을 통해 유동 콘텐츠 요소 조작](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
-- [Blocks 속성을 통해 FlowDocument 조작](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
+- [방법: Inlines 속성을 통한 유동 콘텐츠 요소 조작](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+- [Blocks 속성을 통한 FlowDocument 조작](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
 - [Columns 속성을 통해 테이블의 열 조작](how-to-manipulate-table-columns-through-the-columns-property.md)

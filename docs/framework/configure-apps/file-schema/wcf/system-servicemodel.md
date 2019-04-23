@@ -9,10 +9,10 @@ helpviewer_keywords:
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
 ms.openlocfilehash: c176f7f470cc65bb135e5f92935102e09c7e8485
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209829"
 ---
 # <a name="systemservicemodel"></a>\<system.serviceModel>
@@ -69,7 +69,7 @@ ms.locfileid: "59209829"
 |[\<diagnostics>](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)|이 섹션에는 WCF의 진단 기능에 대한 설정이 포함됩니다. 사용자는 추적, 성능 카운터 및 WMI 공급자를 사용하거나 사용하지 않도록 설정하고 사용자 지정 메시지 필터를 추가할 수 있습니다.|  
 |[\<extensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions-section.md)|이 섹션에는 사용자 정의 바인딩, 동작 및 확장의 기타 측면을 만들 수 있도록 하는 확장명 컬렉션이 포함됩니다.|  
 |[\<protocolMapping>](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|이 섹션에는 전송 프로토콜 체계 (예: http, net.tcp, net.pipe 등) 및 WCF 바인딩 간의 기본 프로토콜 매핑 집합을 정의합니다.|  
-|[\<라우팅 >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|이 섹션에서는 Windows Communication Foundation (WCF)의 형식을 결정 하는 라우팅 필터 집합을 정의<xref:System.ServiceModel.Dispatcher.MessageFilter> 사용할 라우팅 뿐만 아니라 들어오는 메시지를 평가할 때 메시지를 보낼 대상 끝점을 정의 하는 테이블을 필터와 일치합니다.|  
+|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|이 섹션에서는 Windows Communication Foundation (WCF)의 형식을 결정 하는 라우팅 필터 집합을 정의<xref:System.ServiceModel.Dispatcher.MessageFilter> 사용할 라우팅 뿐만 아니라 들어오는 메시지를 평가할 때 메시지를 보낼 대상 끝점을 정의 하는 테이블을 필터와 일치합니다.|  
 |[\<serviceHostingEnvironment>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|이 섹션은 특정 전송을 위해 서비스 호스팅 환경에서 인스턴스화하는 형식을 정의합니다. 이 섹션이 비어 있으면 기본 형식이 사용됩니다.|  
 |[\<services>](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)|이 섹션에는 서비스의 컬렉션이 포함됩니다. 이 요소에는 어셈블리에 정의된 서비스별로 서비스의 설정을 지정하는 `service` 요소가 포함됩니다.|  
 |[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|이 섹션은 다시 사용할 수 있는 미리 구성된 엔드포인트인 표준 엔드포인트의 컬렉션을 정의합니다. 표준 엔드포인트에는 고정 값으로 설정된 하나 이상의 주소, 바인딩 및 계약 특성이 있습니다. 예를 들어 검색 엔드포인트에서는 계약이 고정됩니다. 표준 엔드포인트를 사용자 지정 바인딩 정의와 유사한 새 속성과 함께 사용하여 서비스 엔드포인트를 확장할 수도 있습니다.|

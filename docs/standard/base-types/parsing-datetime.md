@@ -16,12 +16,12 @@ helpviewer_keywords:
 - time strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c8aa10c25fd7459bebb1de6d71a54b6e361e20e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 413a04d6ccdfff4b9cbf937821683ab7f7b37361
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560817"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59208126"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>.NET에서 날짜 및 시간 문자열 구문 분석
 
@@ -32,7 +32,6 @@ ms.locfileid: "54560817"
 1. 텍스트 표현에서 누락된 구성 요소를 날짜 및 시간으로 설정하는 방법을 지정할 수 있습니다.
 
 <xref:System.DateTime.Parse%2A> 및 <xref:System.DateTime.TryParse%2A> 메서드는 날짜 및 시간의 여러 공통된 표현을 변환합니다. <xref:System.DateTime.ParseExact%2A> 및 <xref:System.DateTime.TryParseExact%2A> 메서드는 날짜 및 시간 형식 문자열에 지정된 패턴을 따르는 문자열 표현을 변환합니다. 자세한 내용은 [표준 날짜 및 시간 형식 문자열](standard-date-and-time-format-strings.md) 및 [사용자 지정 날짜 및 시간 형식 문자열](custom-date-and-time-format-strings.md)의 문서를 참조하세요.
-
 
 현재 <xref:System.Globalization.DateTimeFormatInfo> 개체를 사용하면 텍스트를 날짜 및 시간으로 해석하는 방법을 더 세밀하게 제어할 수 있습니다. <xref:System.Globalization.DateTimeFormatInfo>의 속성은 날짜 및 시간 구분 기호, 월, 일 및 연대의 이름, “AM” 및 “PM” 지정의 형식을 설명합니다. 현재 스레드 문화권에서는 현재 문화권을 나타내는 <xref:System.Globalization.DateTimeFormatInfo>를 제공합니다. 특정 문화권 또는 사용자 지정 설정이 필요한 경우 구문 분석 메서드의 <xref:System.IFormatProvider> 매개 변수를 지정합니다. <xref:System.IFormatProvider> 매개 변수의 경우 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 개체나 <xref:System.Globalization.DateTimeFormatInfo> 개체를 지정해야 합니다.
 

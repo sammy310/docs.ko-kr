@@ -10,10 +10,10 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], about combo boxes
 ms.assetid: a58b393f-a614-45d1-8961-857a024b5acd
 ms.openlocfilehash: 80056771744c9b97828a024adf32638e545a839e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211581"
 ---
 # <a name="combobox-control-overview-windows-forms"></a>ComboBox 컨트롤 개요(Windows Forms)
@@ -28,9 +28,9 @@ Windows Forms <xref:System.Windows.Forms.ComboBox> 드롭다운 콤보 상자에
 - <xref:System.Windows.Forms.ComboBox>
 - [ListBox 컨트롤 개요](listbox-control-overview-windows-forms.md)
 - [ListBox 대신 Windows Forms ComboBox를 사용해야 하는 경우](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
-- [방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤에서 항목 추가 및 제거](add-and-remove-items-from-a-wf-combobox.md)
-- [방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤의 내용 정렬](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
-- [방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤에서 특정 항목 액세스](access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)
+- [방법: 추가 및 제거할 항목을 Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤](add-and-remove-items-from-a-wf-combobox.md)
+- [방법: Windows의 내용을 정렬할 Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [방법: 액세스 관련 항목에는 Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤](access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)
 - [방법: 데이터에 Windows Forms ComboBox 또는 ListBox 컨트롤 바인딩](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
-- [옵션 목록 표시에 사용하는 Windows Forms 컨트롤](windows-forms-controls-used-to-list-options.md)
-- [방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤에 대한 조회 테이블 만들기](create-a-lookup-table-for-a-wf-combobox-listbox.md)
+- [옵션 목록 표시에 사용된 Windows Forms 컨트롤](windows-forms-controls-used-to-list-options.md)
+- [방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤에 대 한 조회 테이블 만들기](create-a-lookup-table-for-a-wf-combobox-listbox.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - enumeration [WPF]
 ms.assetid: b9091eba-1119-424e-868b-d1a4168b3732
 ms.openlocfilehash: 5026261366d6abde82790f05780d8ba2c29c4a49
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59210024"
 ---
 # <a name="how-to-bind-to-an-enumeration"></a>방법: 열거형에 바인딩
@@ -23,6 +23,6 @@ ms.locfileid: "59210024"
   
 ## <a name="see-also"></a>참고자료
 
-- [메서드에 바인딩](how-to-bind-to-a-method.md)
+- [메서드 바인딩](how-to-bind-to-a-method.md)
 - [데이터 바인딩 개요](data-binding-overview.md)
 - [방법 항목](data-binding-how-to-topics.md)

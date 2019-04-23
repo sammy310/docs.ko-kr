@@ -11,10 +11,10 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 9b93ccbc-c0fe-44a2-968e-faac25971831
 ms.openlocfilehash: cc5d5af4ef49abb7f5f89a99d5cc799eb96a5c61
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207957"
 ---
 # <a name="contextmenu-component-windows-forms"></a>ContextMenu 구성 요소(Windows Forms)
@@ -27,7 +27,7 @@ ms.locfileid: "59207957"
  [ContextMenu 구성 요소 개요](contextmenu-component-overview-windows-forms.md)  
  일반적인 개념을 소개 합니다 `ContextMenu` 사용자가 선택한 개체와 관련 된 자주 사용 되는 명령의 메뉴를 만들 수 있는 구성 요소입니다.  
   
- [방법: Windows Forms ContextMenu 구성 요소를 사용하여 메뉴 항목 추가 및 제거](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
+ [방법: Windows Forms ContextMenu 구성 요소를 사용 하 여 메뉴 항목 추가 및 제거](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
  추가 Windows Forms의 바로 가기 메뉴 항목을 제거 하는 방법을 설명 합니다.  
   
 ## <a name="reference"></a>참조  

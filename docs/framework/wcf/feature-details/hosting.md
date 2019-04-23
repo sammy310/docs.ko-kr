@@ -3,10 +3,10 @@ title: Hosting2
 ms.date: 03/30/2017
 ms.assetid: 0820c7e5-0b50-4cde-80e7-74e346513002
 ms.openlocfilehash: 575b2a3e34246e1082d34545baaf812203a1dde1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209114"
 ---
 # <a name="hosting"></a>호스팅
@@ -15,13 +15,13 @@ ms.locfileid: "59209114"
  신뢰할 수 없는 호스트에서 서비스나 확장을 실행하면 보안이 손상된다는 점에 주의해야 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [인터넷 정보 서비스에서의 호스팅](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+ [인터넷 정보 서비스에서 호스팅](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
  Windows Communication Foundation (WCF) 서비스는 인터넷 정보 서비스에서 호스트 되는 방법에 대해 설명 하거나 [Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496)합니다.  
   
- [Windows Process Activation Service에서의 호스팅](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)  
+ [Windows Process Activation Service에서 호스팅](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)  
  WCF 서비스 Windows Process Activation Service에서 호스트 되는 방법을 설명 합니다.  
   
- [Windows 서비스 응용 프로그램에서의 호스팅](../../../../docs/framework/wcf/feature-details/hosting-in-a-windows-service-application.md)  
+ [Windows 서비스 애플리케이션에서의 호스팅](../../../../docs/framework/wcf/feature-details/hosting-in-a-windows-service-application.md)  
  WCF 서비스는 Windows 서비스에서 호스트 되는 방법을 설명 합니다.  
   
  [관리되는 애플리케이션에서의 호스팅](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)  

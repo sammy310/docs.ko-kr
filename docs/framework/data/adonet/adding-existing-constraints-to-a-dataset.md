@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 307d2809-208b-4cf8-b6a9-5d16f15fc16c
 ms.openlocfilehash: 18c391e97baa170b78dcfe0165fb38b6c6d739f4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59210557"
 ---
 # <a name="adding-existing-constraints-to-a-dataset"></a>데이터 집합에 기존 제약 조건 추가
@@ -62,7 +62,7 @@ custAdapter.Fill(custDataSet, "Customers");
   
 ## <a name="see-also"></a>참고자료
 
-- [DataAdapters 및 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [DataSets, DataTables 및 DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [DataAdapter 및 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [DataSet, DataTable 및 DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [ADO.NET에서 데이터 검색 및 수정](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

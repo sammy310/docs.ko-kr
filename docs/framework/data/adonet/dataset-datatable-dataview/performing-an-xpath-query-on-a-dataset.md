@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
 ms.openlocfilehash: 29d1e5ae494b2fff4e13886159bb937041152382
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209478"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>데이터 집합에서 XPath 쿼리 수행
@@ -103,5 +103,5 @@ foreach (XmlNode xmlNode in nodeList)
   
 ## <a name="see-also"></a>참고자료
 
-- [데이터 집합 및 XmlDataDocument 동기화](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
+- [데이터 세트 및 XmlDataDocument 동기화](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

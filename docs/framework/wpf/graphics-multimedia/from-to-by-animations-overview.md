@@ -9,10 +9,10 @@ helpviewer_keywords:
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
 ms.openlocfilehash: 9708a4d06e8a2aa65fb4d3bb959f4699237a2bc6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209153"
 ---
 # <a name="fromtoby-animations-overview"></a>From/To/By 애니메이션 개요
@@ -40,7 +40,7 @@ ms.locfileid: "59209153"
   
  여기서 *\<Type>* 은 클래스가 애니메이션을 적용하는 값의 형식입니다.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 다음 From/To/By 애니메이션 클래스를 제공합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 다음 From/To/By 애니메이션 클래스를 제공합니다.  
   
 |속성 형식|해당 From/To/By 애니메이션 클래스|  
 |-------------------|------------------------------------------------|  
@@ -73,7 +73,7 @@ ms.locfileid: "59209153"
   
      애니메이션의 끝 값을 지정 하려면 사용 하 여 해당 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 속성입니다. 사용 하는 경우는 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 속성을 단독으로 애니메이션 시작 값을 가져옵니다 애니메이션 효과가 적용 되는 속성 또는 동일한 속성에 적용 되는 다른 애니메이션의 출력입니다. 사용할 수는 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 속성과 함께 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 속성을 명시적으로 시작 및 끝 애니메이션에 대 한 값을 지정 합니다.  
   
--   **오프셋된 값**  
+-   **오프셋 값**  
   
      <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 속성을 사용 하면 명시적 시작 또는 끝 애니메이션에 대 한 값 대신 오프셋을 지정할 수 있습니다. <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 애니메이션의 속성 지정 기간 동안 얼마나 많은 애니메이션에 따라 값을 변경 합니다. 사용할 수는 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 자체적으로 또는 속성을 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 속성입니다. 만 지정한 경우는 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 속성에 애니메이션 속성의 기준 값 또는 다른 애니메이션의 출력에 오프셋된 값을 추가 합니다.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "59209153"
   
 -   경로 애니메이션에서 출력 값을 생성 한 <xref:System.Windows.Media.PathGeometry>합니다. 자세한 내용은 참조는 [경로 애니메이션 개요](path-animations-overview.md)합니다.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 사용자 고유의 사용자 지정 애니메이션 형식도 만들 수 있습니다. 자세한 내용은 참조는 [사용자 지정 애니메이션 개요](custom-animations-overview.md)합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 고유한 사용자 지정 애니메이션 형식도 만들 수 있습니다. 자세한 내용은 참조는 [사용자 지정 애니메이션 개요](custom-animations-overview.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
 
