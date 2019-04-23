@@ -17,36 +17,36 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1a9a647a9c77a3c1f82ae3691e2a5e5b2f544cad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59221966"
 ---
-# <a name="icordebugboxvalue-interface"></a><span data-ttu-id="315ad-102">ICorDebugBoxValue 인터페이스</span><span class="sxs-lookup"><span data-stu-id="315ad-102">ICorDebugBoxValue Interface</span></span>
+# <a name="icordebugboxvalue-interface"></a><span data-ttu-id="baec6-102">ICorDebugBoxValue 인터페이스</span><span class="sxs-lookup"><span data-stu-id="baec6-102">ICorDebugBoxValue Interface</span></span>
 
-<span data-ttu-id="315ad-103">Boxed 값 클래스 개체를 나타내는 "ICorDebugHeapValue"의 하위 클래스.</span><span class="sxs-lookup"><span data-stu-id="315ad-103">A subclass of "ICorDebugHeapValue" that represents a boxed value class object.</span></span>  
+<span data-ttu-id="baec6-103">Boxed 값 클래스 개체를 나타내는 "ICorDebugHeapValue"의 하위 클래스.</span><span class="sxs-lookup"><span data-stu-id="baec6-103">A subclass of "ICorDebugHeapValue" that represents a boxed value class object.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="315ad-104">메서드</span><span class="sxs-lookup"><span data-stu-id="315ad-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="baec6-104">메서드</span><span class="sxs-lookup"><span data-stu-id="baec6-104">Methods</span></span>  
   
-|<span data-ttu-id="315ad-105">메서드</span><span class="sxs-lookup"><span data-stu-id="315ad-105">Method</span></span>|<span data-ttu-id="315ad-106">설명</span><span class="sxs-lookup"><span data-stu-id="315ad-106">Description</span></span>|  
+|<span data-ttu-id="baec6-105">메서드</span><span class="sxs-lookup"><span data-stu-id="baec6-105">Method</span></span>|<span data-ttu-id="baec6-106">설명</span><span class="sxs-lookup"><span data-stu-id="baec6-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="315ad-107">GetObject 메서드</span><span class="sxs-lookup"><span data-stu-id="315ad-107">GetObject Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-getobject-method.md)|<span data-ttu-id="315ad-108">Boxed "ICorDebugObjectValue" 인스턴스에 대 한 인터페이스 포인터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="315ad-108">Gets an interface pointer to the boxed "ICorDebugObjectValue" instance.</span></span>|  
+|[<span data-ttu-id="baec6-107">GetObject 메서드</span><span class="sxs-lookup"><span data-stu-id="baec6-107">GetObject Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-getobject-method.md)|<span data-ttu-id="baec6-108">Boxed "ICorDebugObjectValue" 인스턴스에 대 한 인터페이스 포인터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="baec6-108">Gets an interface pointer to the boxed "ICorDebugObjectValue" instance.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="315ad-109">설명</span><span class="sxs-lookup"><span data-stu-id="315ad-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="baec6-109">설명</span><span class="sxs-lookup"><span data-stu-id="baec6-109">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="315ad-110">이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="315ad-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="baec6-110">이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="baec6-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="315ad-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="315ad-111">Requirements</span></span>  
- <span data-ttu-id="315ad-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="315ad-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="baec6-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="baec6-111">Requirements</span></span>  
+ <span data-ttu-id="baec6-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="baec6-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="315ad-113">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="315ad-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="baec6-113">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="baec6-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="315ad-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="315ad-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="baec6-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="baec6-114">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="315ad-115">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="315ad-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="baec6-115">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="baec6-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="315ad-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="315ad-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="baec6-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="baec6-116">See also</span></span>
 
-- [<span data-ttu-id="315ad-117">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="315ad-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="baec6-117">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="baec6-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

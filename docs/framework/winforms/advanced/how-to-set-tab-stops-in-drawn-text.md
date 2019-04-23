@@ -9,35 +9,35 @@ helpviewer_keywords:
 - tabs [Windows Forms], drawn text
 ms.assetid: 64878f98-39ba-4303-b63f-0859ab682eeb
 ms.openlocfilehash: 68dbebfc4fab773fe749f9443d0c61883099d2ab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197492"
 ---
-# <a name="how-to-set-tab-stops-in-drawn-text"></a><span data-ttu-id="0b079-102">방법: 그린 텍스트에 탭 정지 설정</span><span class="sxs-lookup"><span data-stu-id="0b079-102">How to: Set Tab Stops in Drawn Text</span></span>
-<span data-ttu-id="0b079-103">호출 하 여 텍스트에 대 한 탭 정지를 설정할 수 있습니다는 <xref:System.Drawing.StringFormat.SetTabStops%2A> 메서드를 <xref:System.Drawing.StringFormat> 개체와 전달 하는 <xref:System.Drawing.StringFormat> 개체를 <xref:System.Drawing.Graphics.DrawString%2A> 메서드를 <xref:System.Drawing.Graphics> 클래스.</span><span class="sxs-lookup"><span data-stu-id="0b079-103">You can set tab stops for text by calling the <xref:System.Drawing.StringFormat.SetTabStops%2A> method of a <xref:System.Drawing.StringFormat> object and then passing that <xref:System.Drawing.StringFormat> object to the <xref:System.Drawing.Graphics.DrawString%2A> method of the <xref:System.Drawing.Graphics> class.</span></span>  
+# <a name="how-to-set-tab-stops-in-drawn-text"></a><span data-ttu-id="24554-102">방법: 그린 텍스트에 탭 정지 설정</span><span class="sxs-lookup"><span data-stu-id="24554-102">How to: Set Tab Stops in Drawn Text</span></span>
+<span data-ttu-id="24554-103">호출 하 여 텍스트에 대 한 탭 정지를 설정할 수 있습니다는 <xref:System.Drawing.StringFormat.SetTabStops%2A> 메서드를 <xref:System.Drawing.StringFormat> 개체와 전달 하는 <xref:System.Drawing.StringFormat> 개체를 <xref:System.Drawing.Graphics.DrawString%2A> 메서드를 <xref:System.Drawing.Graphics> 클래스.</span><span class="sxs-lookup"><span data-stu-id="24554-103">You can set tab stops for text by calling the <xref:System.Drawing.StringFormat.SetTabStops%2A> method of a <xref:System.Drawing.StringFormat> object and then passing that <xref:System.Drawing.StringFormat> object to the <xref:System.Drawing.Graphics.DrawString%2A> method of the <xref:System.Drawing.Graphics> class.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="0b079-104">합니다 <xref:System.Windows.Forms.TextRenderer?displayProperty=nameWithType> 사용을 중지할 기존 탭을 확장할 수 있지만 그린된 텍스트에 탭 정지를 추가 하는 지원 하지 않습니다는 <xref:System.Windows.Forms.TextFormatFlags.ExpandTabs?displayProperty=nameWithType> 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="0b079-104">The <xref:System.Windows.Forms.TextRenderer?displayProperty=nameWithType> does not support adding tab stops to drawn text, although you can expand existing tab stops using the <xref:System.Windows.Forms.TextFormatFlags.ExpandTabs?displayProperty=nameWithType> flag.</span></span>  
+>  <span data-ttu-id="24554-104">합니다 <xref:System.Windows.Forms.TextRenderer?displayProperty=nameWithType> 사용을 중지할 기존 탭을 확장할 수 있지만 그린된 텍스트에 탭 정지를 추가 하는 지원 하지 않습니다는 <xref:System.Windows.Forms.TextFormatFlags.ExpandTabs?displayProperty=nameWithType> 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="24554-104">The <xref:System.Windows.Forms.TextRenderer?displayProperty=nameWithType> does not support adding tab stops to drawn text, although you can expand existing tab stops using the <xref:System.Windows.Forms.TextFormatFlags.ExpandTabs?displayProperty=nameWithType> flag.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0b079-105">예제</span><span class="sxs-lookup"><span data-stu-id="0b079-105">Example</span></span>  
- <span data-ttu-id="0b079-106">다음 예제에서는 150, 250 및 350에 탭 정지를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="0b079-106">The following example sets tab stops at 150, 250, and 350.</span></span> <span data-ttu-id="0b079-107">그런 다음 코드에는 이름 및 시험 점수의 탭된 목록을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="0b079-107">Then, the code displays a tabbed list of names and test scores.</span></span>  
+## <a name="example"></a><span data-ttu-id="24554-105">예제</span><span class="sxs-lookup"><span data-stu-id="24554-105">Example</span></span>  
+ <span data-ttu-id="24554-106">다음 예제에서는 150, 250 및 350에 탭 정지를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="24554-106">The following example sets tab stops at 150, 250, and 350.</span></span> <span data-ttu-id="24554-107">그런 다음 코드에는 이름 및 시험 점수의 탭된 목록을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="24554-107">Then, the code displays a tabbed list of names and test scores.</span></span>  
   
- <span data-ttu-id="0b079-108">다음 그림에서는 탭된 텍스트를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0b079-108">The following illustration shows the tabbed text:</span></span>  
+ <span data-ttu-id="24554-108">다음 그림에서는 탭된 텍스트를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="24554-108">The following illustration shows the tabbed text:</span></span>  
   
  ![탭된 이름 목록과 점수를 보여 주는 스크린샷.](./media/how-to-set-tab-stops-in-drawn-text/tab-list-names-test-scores.png)  
   
- <span data-ttu-id="0b079-110">다음 코드는 두 개의 인수를 전달 합니다 <xref:System.Drawing.StringFormat.SetTabStops%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="0b079-110">The following code passes two arguments to the <xref:System.Drawing.StringFormat.SetTabStops%2A> method.</span></span> <span data-ttu-id="0b079-111">두 번째 인수는 탭 오프셋을 포함 하는 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="0b079-111">The second argument is an array that contains tab offsets.</span></span> <span data-ttu-id="0b079-112">첫 번째 인수를 전달할 <xref:System.Drawing.StringFormat.SetTabStops%2A> 은 0, 0, 경계 사각형의 왼쪽된 가장자리의 위치에서 배열의 첫 번째 오프셋을 측정 하는 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="0b079-112">The first argument passed to <xref:System.Drawing.StringFormat.SetTabStops%2A> is 0, which indicates that the first offset in the array is measured from position 0, the left edge of the bounding rectangle.</span></span>  
+ <span data-ttu-id="24554-110">다음 코드는 두 개의 인수를 전달 합니다 <xref:System.Drawing.StringFormat.SetTabStops%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="24554-110">The following code passes two arguments to the <xref:System.Drawing.StringFormat.SetTabStops%2A> method.</span></span> <span data-ttu-id="24554-111">두 번째 인수는 탭 오프셋을 포함 하는 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="24554-111">The second argument is an array that contains tab offsets.</span></span> <span data-ttu-id="24554-112">첫 번째 인수를 전달할 <xref:System.Drawing.StringFormat.SetTabStops%2A> 은 0, 0, 경계 사각형의 왼쪽된 가장자리의 위치에서 배열의 첫 번째 오프셋을 측정 하는 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="24554-112">The first argument passed to <xref:System.Drawing.StringFormat.SetTabStops%2A> is 0, which indicates that the first offset in the array is measured from position 0, the left edge of the bounding rectangle.</span></span>  
   
  [!code-csharp[System.Drawing.FontsAndText#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.FontsAndText#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#41)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="0b079-113">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="0b079-113">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="24554-113">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="24554-113">Compiling the Code</span></span>  
   
--   <span data-ttu-id="0b079-114">앞의 예제는 Windows Forms에서 사용 하도록 설계 되었으며 필요 <xref:System.Windows.Forms.PaintEventArgs> `e`의 매개 변수인 <xref:System.Windows.Forms.PaintEventHandler>합니다.</span><span class="sxs-lookup"><span data-stu-id="0b079-114">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
+-   <span data-ttu-id="24554-114">앞의 예제는 Windows Forms에서 사용 하도록 설계 되었으며 필요 <xref:System.Windows.Forms.PaintEventArgs> `e`의 매개 변수인 <xref:System.Windows.Forms.PaintEventHandler>합니다.</span><span class="sxs-lookup"><span data-stu-id="24554-114">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0b079-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="0b079-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="24554-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="24554-115">See also</span></span>
 
-- [<span data-ttu-id="0b079-116">글꼴 및 텍스트 사용</span><span class="sxs-lookup"><span data-stu-id="0b079-116">Using Fonts and Text</span></span>](using-fonts-and-text.md)
-- [<span data-ttu-id="0b079-117">방법: GDI를 사용하여 텍스트 그리기</span><span class="sxs-lookup"><span data-stu-id="0b079-117">How to: Draw Text with GDI</span></span>](how-to-draw-text-with-gdi.md)
+- [<span data-ttu-id="24554-116">글꼴 및 텍스트 사용</span><span class="sxs-lookup"><span data-stu-id="24554-116">Using Fonts and Text</span></span>](using-fonts-and-text.md)
+- [<span data-ttu-id="24554-117">방법: GDI 사용 하 여 텍스트 그리기</span><span class="sxs-lookup"><span data-stu-id="24554-117">How to: Draw Text with GDI</span></span>](how-to-draw-text-with-gdi.md)

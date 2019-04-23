@@ -1,37 +1,37 @@
 ---
 ms.openlocfilehash: 72acd0029d0189de1c724856572957f111b9d18f
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760393"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804597"
 ---
-## <a name="installation-instructions"></a><span data-ttu-id="0a746-101">설치 지침</span><span class="sxs-lookup"><span data-stu-id="0a746-101">Installation instructions</span></span> 
+## <a name="installation-instructions"></a><span data-ttu-id="ccef7-101">설치 지침</span><span class="sxs-lookup"><span data-stu-id="ccef7-101">Installation instructions</span></span> 
 
-<span data-ttu-id="0a746-102">**Visual Studio 설치 관리자**에서 **.NET Compiler Platform SDK**를 찾는 두 가지 방법이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0a746-102">There are two different ways to find the **.NET Compiler Platform SDK** in the **Visual Studio Installer**:</span></span>
+<span data-ttu-id="ccef7-102">**Visual Studio 설치 관리자**에서 **.NET Compiler Platform SDK**를 찾는 두 가지 방법이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ccef7-102">There are two different ways to find the **.NET Compiler Platform SDK** in the **Visual Studio Installer**:</span></span>
 
-### <a name="install-using-the-workloads-view"></a><span data-ttu-id="0a746-103">워크로드 보기를 사용하여 설치</span><span class="sxs-lookup"><span data-stu-id="0a746-103">Install using the Workloads view</span></span>
+### <a name="install-using-the-workloads-view"></a><span data-ttu-id="ccef7-103">워크로드 보기를 사용하여 설치</span><span class="sxs-lookup"><span data-stu-id="ccef7-103">Install using the Workloads view</span></span>
 
-<span data-ttu-id="0a746-104">.NET Compiler Platform SDK는 Visual Studio 확장 개발 워크로드의 일부로 자동으로 선택되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="0a746-104">The .NET Compiler Platform SDK is not automatically selected as part of the Visual Studio extension development workload.</span></span> <span data-ttu-id="0a746-105">선택적 구성 요소로 선택해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0a746-105">You must select it as an optional component.</span></span>
+<span data-ttu-id="ccef7-104">.NET Compiler Platform SDK는 Visual Studio 확장 개발 워크로드의 일부로 자동으로 선택되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ccef7-104">The .NET Compiler Platform SDK is not automatically selected as part of the Visual Studio extension development workload.</span></span> <span data-ttu-id="ccef7-105">선택적 구성 요소로 선택해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ccef7-105">You must select it as an optional component.</span></span>
 
-1. <span data-ttu-id="0a746-106">**Visual Studio 설치 관리자**를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="0a746-106">Run **Visual Studio Installer**</span></span> 
-1. <span data-ttu-id="0a746-107">**수정**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="0a746-107">Select **Modify**</span></span> 
-1. <span data-ttu-id="0a746-108">**Visual Studio 확장 개발** 워크로드를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="0a746-108">Check the **Visual Studio extension development** workload.</span></span>
-1. <span data-ttu-id="0a746-109">요약 트리에서 **Visual Studio 확장 개발** 노드를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="0a746-109">Open the **Visual Studio extension development** node in the summary tree.</span></span>
-1. <span data-ttu-id="0a746-110">**.NET Compiler Platform SDK**에 대한 확인란을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="0a746-110">Check the box for **.NET Compiler Platform SDK**.</span></span> <span data-ttu-id="0a746-111">선택적 구성 요소 아래에서 마지막에 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0a746-111">You'll find it last under the optional components.</span></span>
+1. <span data-ttu-id="ccef7-106">**Visual Studio 설치 관리자**를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="ccef7-106">Run **Visual Studio Installer**</span></span> 
+1. <span data-ttu-id="ccef7-107">**수정**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="ccef7-107">Select **Modify**</span></span> 
+1. <span data-ttu-id="ccef7-108">**Visual Studio 확장 개발** 워크로드를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="ccef7-108">Check the **Visual Studio extension development** workload.</span></span>
+1. <span data-ttu-id="ccef7-109">요약 트리에서 **Visual Studio 확장 개발** 노드를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="ccef7-109">Open the **Visual Studio extension development** node in the summary tree.</span></span>
+1. <span data-ttu-id="ccef7-110">**.NET Compiler Platform SDK**에 대한 확인란을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="ccef7-110">Check the box for **.NET Compiler Platform SDK**.</span></span> <span data-ttu-id="ccef7-111">선택적 구성 요소 아래에서 마지막에 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ccef7-111">You'll find it last under the optional components.</span></span>
 
-<span data-ttu-id="0a746-112">필요에 따라, 시각화 도우미에서 **DGML 편집기**에 그래프도 표시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0a746-112">Optionally, you'll also want the **DGML editor** to display graphs in the visualizer:</span></span>
+<span data-ttu-id="ccef7-112">필요에 따라, 시각화 도우미에서 **DGML 편집기**에 그래프도 표시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ccef7-112">Optionally, you'll also want the **DGML editor** to display graphs in the visualizer:</span></span>
 
-1. <span data-ttu-id="0a746-113">요약 트리에서 **개별 구성 요소** 노드를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="0a746-113">Open the **Individual components** node in the summary tree.</span></span>
-1. <span data-ttu-id="0a746-114">**DGML 편집기** 확인란을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="0a746-114">Check the box for **DGML editor**</span></span>
+1. <span data-ttu-id="ccef7-113">요약 트리에서 **개별 구성 요소** 노드를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="ccef7-113">Open the **Individual components** node in the summary tree.</span></span>
+1. <span data-ttu-id="ccef7-114">**DGML 편집기** 확인란을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="ccef7-114">Check the box for **DGML editor**</span></span>
 
-### <a name="install-using-the-individual-components-tab"></a><span data-ttu-id="0a746-115">개별 구성 요소 탭을 사용하여 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="0a746-115">Install using the Individual components tab</span></span>
+### <a name="install-using-the-individual-components-tab"></a><span data-ttu-id="ccef7-115">개별 구성 요소 탭을 사용하여 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="ccef7-115">Install using the Individual components tab</span></span>
 
-1. <span data-ttu-id="0a746-116">**Visual Studio 설치 관리자**를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="0a746-116">Run **Visual Studio Installer**</span></span> 
-1. <span data-ttu-id="0a746-117">**수정**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="0a746-117">Select **Modify**</span></span> 
-1. <span data-ttu-id="0a746-118">**개별 구성 요소** 탭을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="0a746-118">Select the **Individual components** tab</span></span> 
-1. <span data-ttu-id="0a746-119">**.NET Compiler Platform SDK**에 대한 확인란을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="0a746-119">Check the box for **.NET Compiler Platform SDK**.</span></span> <span data-ttu-id="0a746-120">**컴파일러, 빌드 도구 및 런타임** 섹션의 위쪽에서 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0a746-120">You'll find it at the top under the **Compilers, build tools, and runtimes** section.</span></span>
+1. <span data-ttu-id="ccef7-116">**Visual Studio 설치 관리자**를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="ccef7-116">Run **Visual Studio Installer**</span></span> 
+1. <span data-ttu-id="ccef7-117">**수정**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="ccef7-117">Select **Modify**</span></span> 
+1. <span data-ttu-id="ccef7-118">**개별 구성 요소** 탭을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="ccef7-118">Select the **Individual components** tab</span></span> 
+1. <span data-ttu-id="ccef7-119">**.NET Compiler Platform SDK**에 대한 확인란을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="ccef7-119">Check the box for **.NET Compiler Platform SDK**.</span></span> <span data-ttu-id="ccef7-120">**컴파일러, 빌드 도구 및 런타임** 섹션의 위쪽에서 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ccef7-120">You'll find it at the top under the **Compilers, build tools, and runtimes** section.</span></span>
 
-<span data-ttu-id="0a746-121">필요에 따라, 시각화 도우미에서 **DGML 편집기**에 그래프도 표시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0a746-121">Optionally, you'll also want the **DGML editor** to display graphs in the visualizer:</span></span>
+<span data-ttu-id="ccef7-121">필요에 따라, 시각화 도우미에서 **DGML 편집기**에 그래프도 표시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ccef7-121">Optionally, you'll also want the **DGML editor** to display graphs in the visualizer:</span></span>
 
-1. <span data-ttu-id="0a746-122">**DGML 편집기** 확인란을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="0a746-122">Check the box for **DGML editor**.</span></span> <span data-ttu-id="0a746-123">**코드 도구** 섹션에서 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0a746-123">You'll find it under the **Code tools** section.</span></span>
+1. <span data-ttu-id="ccef7-122">**DGML 편집기** 확인란을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="ccef7-122">Check the box for **DGML editor**.</span></span> <span data-ttu-id="ccef7-123">**코드 도구** 섹션에서 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ccef7-123">You'll find it under the **Code tools** section.</span></span>

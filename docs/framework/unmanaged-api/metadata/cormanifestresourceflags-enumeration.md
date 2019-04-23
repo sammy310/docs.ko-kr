@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 204f04b1ed1ea293639e0b9826f7e0ce6f384763
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59198545"
 ---
-# <a name="cormanifestresourceflags-enumeration"></a><span data-ttu-id="55541-102">CorManifestResourceFlags 열거형</span><span class="sxs-lookup"><span data-stu-id="55541-102">CorManifestResourceFlags Enumeration</span></span>
-<span data-ttu-id="55541-103">어셈블리 매니페스트에 인코딩된 리소스의 표시 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="55541-103">Indicates the visibility of resources encoded in an assembly manifest.</span></span>  
+# <a name="cormanifestresourceflags-enumeration"></a><span data-ttu-id="20ee0-102">CorManifestResourceFlags 열거형</span><span class="sxs-lookup"><span data-stu-id="20ee0-102">CorManifestResourceFlags Enumeration</span></span>
+<span data-ttu-id="20ee0-103">어셈블리 매니페스트에 인코딩된 리소스의 표시 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="20ee0-103">Indicates the visibility of resources encoded in an assembly manifest.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="55541-104">구문</span><span class="sxs-lookup"><span data-stu-id="55541-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="20ee0-104">구문</span><span class="sxs-lookup"><span data-stu-id="20ee0-104">Syntax</span></span>  
   
 ```  
 typedef enum CorManifestResourceFlags {  
@@ -38,21 +38,21 @@ typedef enum CorManifestResourceFlags {
 } CorManifestResourceFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="55541-105">멤버</span><span class="sxs-lookup"><span data-stu-id="55541-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="20ee0-105">멤버</span><span class="sxs-lookup"><span data-stu-id="20ee0-105">Members</span></span>  
   
-|<span data-ttu-id="55541-106">멤버</span><span class="sxs-lookup"><span data-stu-id="55541-106">Member</span></span>|<span data-ttu-id="55541-107">설명</span><span class="sxs-lookup"><span data-stu-id="55541-107">Description</span></span>|  
+|<span data-ttu-id="20ee0-106">멤버</span><span class="sxs-lookup"><span data-stu-id="20ee0-106">Member</span></span>|<span data-ttu-id="20ee0-107">설명</span><span class="sxs-lookup"><span data-stu-id="20ee0-107">Description</span></span>|  
 |------------|-----------------|  
-|`mrVisibilityMask`|<span data-ttu-id="55541-108">예약됨.</span><span class="sxs-lookup"><span data-stu-id="55541-108">Reserved.</span></span>|  
-|`mrPublic`|<span data-ttu-id="55541-109">리소스는 공용입니다.</span><span class="sxs-lookup"><span data-stu-id="55541-109">The resources are public.</span></span>|  
-|`mrPrivate`|<span data-ttu-id="55541-110">리소스는 private입니다.</span><span class="sxs-lookup"><span data-stu-id="55541-110">The resources are private.</span></span>|  
+|`mrVisibilityMask`|<span data-ttu-id="20ee0-108">예약됨.</span><span class="sxs-lookup"><span data-stu-id="20ee0-108">Reserved.</span></span>|  
+|`mrPublic`|<span data-ttu-id="20ee0-109">리소스는 공용입니다.</span><span class="sxs-lookup"><span data-stu-id="20ee0-109">The resources are public.</span></span>|  
+|`mrPrivate`|<span data-ttu-id="20ee0-110">리소스는 private입니다.</span><span class="sxs-lookup"><span data-stu-id="20ee0-110">The resources are private.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="55541-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="55541-111">Requirements</span></span>  
- <span data-ttu-id="55541-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="55541-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="20ee0-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="20ee0-111">Requirements</span></span>  
+ <span data-ttu-id="20ee0-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="20ee0-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="55541-113">**헤더:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="55541-113">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="20ee0-113">**헤더:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="20ee0-113">**Header:** CorHdr.h</span></span>  
   
- **<span data-ttu-id="55541-114">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="55541-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="20ee0-114">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="20ee0-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="55541-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="55541-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="20ee0-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="20ee0-115">See also</span></span>
 
-- [<span data-ttu-id="55541-116">메타데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="55541-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="20ee0-116">메타데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="20ee0-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

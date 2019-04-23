@@ -9,56 +9,56 @@ helpviewer_keywords:
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
 ms.openlocfilehash: f1dcc03a67880727893e55c13d65a804586b3f56
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315506"
 ---
-# <a name="-optioninfer"></a><span data-ttu-id="db283-102">-optioninfer</span><span class="sxs-lookup"><span data-stu-id="db283-102">-optioninfer</span></span>
-<span data-ttu-id="db283-103">변수 선언에서 지역 형식 유추를 사용하도록 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="db283-103">Enables the use of local type inference in variable declarations.</span></span>  
+# <a name="-optioninfer"></a><span data-ttu-id="de6da-102">-optioninfer</span><span class="sxs-lookup"><span data-stu-id="de6da-102">-optioninfer</span></span>
+<span data-ttu-id="de6da-103">변수 선언에서 지역 형식 유추를 사용하도록 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="de6da-103">Enables the use of local type inference in variable declarations.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="db283-104">구문</span><span class="sxs-lookup"><span data-stu-id="db283-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="de6da-104">구문</span><span class="sxs-lookup"><span data-stu-id="de6da-104">Syntax</span></span>  
   
 ```  
 -optioninfer[+ | -]  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="db283-105">인수</span><span class="sxs-lookup"><span data-stu-id="db283-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="de6da-105">인수</span><span class="sxs-lookup"><span data-stu-id="de6da-105">Arguments</span></span>  
   
-|<span data-ttu-id="db283-106">용어</span><span class="sxs-lookup"><span data-stu-id="db283-106">Term</span></span>|<span data-ttu-id="db283-107">정의</span><span class="sxs-lookup"><span data-stu-id="db283-107">Definition</span></span>|  
+|<span data-ttu-id="de6da-106">용어</span><span class="sxs-lookup"><span data-stu-id="de6da-106">Term</span></span>|<span data-ttu-id="de6da-107">정의</span><span class="sxs-lookup"><span data-stu-id="de6da-107">Definition</span></span>|  
 |---|---|  
-|`+` <span data-ttu-id="db283-108">&#124;</span><span class="sxs-lookup"><span data-stu-id="db283-108">&#124;</span></span> `-`|<span data-ttu-id="db283-109">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="db283-109">Optional.</span></span> <span data-ttu-id="db283-110">지역 형식 유추를 사용하도록 설정하려면 `-optioninfer+`를 지정하고, 차단하려면 `-optioninfer-`를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="db283-110">Specify `-optioninfer+` to enable local type inference, or `-optioninfer-` to block it.</span></span> <span data-ttu-id="db283-111">값을 지정하지 않은 `-optioninfer` 옵션은 `-optioninfer+`와 같습니다.</span><span class="sxs-lookup"><span data-stu-id="db283-111">The `-optioninfer` option, with no value specified, is the same as `-optioninfer+`.</span></span> <span data-ttu-id="db283-112">`-optioninfer` 스위치가 없을 때의 기본값도 `-optioninfer+`입니다.</span><span class="sxs-lookup"><span data-stu-id="db283-112">The default value when the `-optioninfer` switch is not present is also `-optioninfer+`.</span></span> <span data-ttu-id="db283-113">기본값은 vbc.rsp 지시 파일에서 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="db283-113">The default value is set in the Vbc.rsp response file.</span></span>|  
+|<span data-ttu-id="de6da-108">`+` &#124; `-`</span><span class="sxs-lookup"><span data-stu-id="de6da-108">`+` &#124; `-`</span></span>|<span data-ttu-id="de6da-109">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="de6da-109">Optional.</span></span> <span data-ttu-id="de6da-110">지역 형식 유추를 사용하도록 설정하려면 `-optioninfer+`를 지정하고, 차단하려면 `-optioninfer-`를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="de6da-110">Specify `-optioninfer+` to enable local type inference, or `-optioninfer-` to block it.</span></span> <span data-ttu-id="de6da-111">값을 지정하지 않은 `-optioninfer` 옵션은 `-optioninfer+`와 같습니다.</span><span class="sxs-lookup"><span data-stu-id="de6da-111">The `-optioninfer` option, with no value specified, is the same as `-optioninfer+`.</span></span> <span data-ttu-id="de6da-112">`-optioninfer` 스위치가 없을 때의 기본값도 `-optioninfer+`입니다.</span><span class="sxs-lookup"><span data-stu-id="de6da-112">The default value when the `-optioninfer` switch is not present is also `-optioninfer+`.</span></span> <span data-ttu-id="de6da-113">기본값은 vbc.rsp 지시 파일에서 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="de6da-113">The default value is set in the Vbc.rsp response file.</span></span>|  
   
 > [!NOTE]
->  <span data-ttu-id="db283-114">`-noconfig` 옵션을 사용하여 vbc.rsp에 지정된 값 대신 컴파일러의 내부 기본값을 유지할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="db283-114">You can use the `-noconfig` option to retain the compiler's internal defaults instead of those specified in vbc.rsp.</span></span> <span data-ttu-id="db283-115">이 옵션에 대한 컴파일러 기본값은 `-optioninfer-`입니다.</span><span class="sxs-lookup"><span data-stu-id="db283-115">The compiler default for this option is `-optioninfer-`.</span></span>  
+>  <span data-ttu-id="de6da-114">`-noconfig` 옵션을 사용하여 vbc.rsp에 지정된 값 대신 컴파일러의 내부 기본값을 유지할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="de6da-114">You can use the `-noconfig` option to retain the compiler's internal defaults instead of those specified in vbc.rsp.</span></span> <span data-ttu-id="de6da-115">이 옵션에 대한 컴파일러 기본값은 `-optioninfer-`입니다.</span><span class="sxs-lookup"><span data-stu-id="de6da-115">The compiler default for this option is `-optioninfer-`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="db283-116">설명</span><span class="sxs-lookup"><span data-stu-id="db283-116">Remarks</span></span>  
- <span data-ttu-id="db283-117">소스 코드 파일을 포함 하는 경우는 [Option Infer 문](../../../visual-basic/language-reference/statements/option-infer-statement.md), 문이 재정의 `-optioninfer` 명령줄 컴파일러 설정을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="db283-117">If the source code file contains an [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md), the statement overrides the `-optioninfer` command-line compiler setting.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="de6da-116">설명</span><span class="sxs-lookup"><span data-stu-id="de6da-116">Remarks</span></span>  
+ <span data-ttu-id="de6da-117">소스 코드 파일을 포함 하는 경우는 [Option Infer 문](../../../visual-basic/language-reference/statements/option-infer-statement.md), 문이 재정의 `-optioninfer` 명령줄 컴파일러 설정을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="de6da-117">If the source code file contains an [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md), the statement overrides the `-optioninfer` command-line compiler setting.</span></span>  
   
-### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a><span data-ttu-id="db283-118">-Optioninfer Visual Studio IDE에서 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="db283-118">To set -optioninfer in the Visual Studio IDE</span></span>  
+### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a><span data-ttu-id="de6da-118">-Optioninfer Visual Studio IDE에서 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="de6da-118">To set -optioninfer in the Visual Studio IDE</span></span>  
   
-1. <span data-ttu-id="db283-119">프로젝트를 선택 **솔루션 탐색기**합니다.</span><span class="sxs-lookup"><span data-stu-id="db283-119">Select a project in **Solution Explorer**.</span></span> <span data-ttu-id="db283-120">**프로젝트** 메뉴에서 **속성**을 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="db283-120">On the **Project** menu, click **Properties**.</span></span>  
+1. <span data-ttu-id="de6da-119">프로젝트를 선택 **솔루션 탐색기**합니다.</span><span class="sxs-lookup"><span data-stu-id="de6da-119">Select a project in **Solution Explorer**.</span></span> <span data-ttu-id="de6da-120">**프로젝트** 메뉴에서 **속성**을 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="de6da-120">On the **Project** menu, click **Properties**.</span></span>  
   
-2. <span data-ttu-id="db283-121">에 **컴파일할** 탭에서 값을 수정 합니다 **Option infer** 상자입니다.</span><span class="sxs-lookup"><span data-stu-id="db283-121">On the **Compile** tab, modify the value in the **Option infer** box.</span></span>  
+2. <span data-ttu-id="de6da-121">에 **컴파일할** 탭에서 값을 수정 합니다 **Option infer** 상자입니다.</span><span class="sxs-lookup"><span data-stu-id="de6da-121">On the **Compile** tab, modify the value in the **Option infer** box.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="db283-122">예제</span><span class="sxs-lookup"><span data-stu-id="db283-122">Example</span></span>  
- <span data-ttu-id="db283-123">다음 코드에서는 지역 형식 유추를 사용하도록 설정한 상태로 `test.vb`를 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="db283-123">The following code compiles `test.vb` with local type inference enabled.</span></span>  
+## <a name="example"></a><span data-ttu-id="de6da-122">예제</span><span class="sxs-lookup"><span data-stu-id="de6da-122">Example</span></span>  
+ <span data-ttu-id="de6da-123">다음 코드에서는 지역 형식 유추를 사용하도록 설정한 상태로 `test.vb`를 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="de6da-123">The following code compiles `test.vb` with local type inference enabled.</span></span>  
   
 ```console
 vbc -optioninfer+ test.vb  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="db283-124">참고자료</span><span class="sxs-lookup"><span data-stu-id="db283-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="de6da-124">참고자료</span><span class="sxs-lookup"><span data-stu-id="de6da-124">See also</span></span>
 
-- [<span data-ttu-id="db283-125">Visual Basic 명령줄 컴파일러</span><span class="sxs-lookup"><span data-stu-id="db283-125">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="db283-126">-optioncompare</span><span class="sxs-lookup"><span data-stu-id="db283-126">-optioncompare</span></span>](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
-- [<span data-ttu-id="db283-127">-optionexplicit</span><span class="sxs-lookup"><span data-stu-id="db283-127">-optionexplicit</span></span>](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
-- [<span data-ttu-id="db283-128">-optionstrict</span><span class="sxs-lookup"><span data-stu-id="db283-128">-optionstrict</span></span>](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
-- [<span data-ttu-id="db283-129">샘플 컴파일 명령줄</span><span class="sxs-lookup"><span data-stu-id="db283-129">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [<span data-ttu-id="db283-130">Option Infer 문</span><span class="sxs-lookup"><span data-stu-id="db283-130">Option Infer Statement</span></span>](../../../visual-basic/language-reference/statements/option-infer-statement.md)
-- [<span data-ttu-id="db283-131">지역 형식 유추</span><span class="sxs-lookup"><span data-stu-id="db283-131">Local Type Inference</span></span>](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [<span data-ttu-id="db283-132">옵션 대화 상자, 프로젝트, VB 기본값</span><span class="sxs-lookup"><span data-stu-id="db283-132">Visual Basic Defaults, Projects, Options Dialog Box</span></span>](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
-- [<span data-ttu-id="db283-133">프로젝트 디자이너, 컴파일 페이지(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="db283-133">Compile Page, Project Designer (Visual Basic)</span></span>](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
-- [<span data-ttu-id="db283-134">/noconfig</span><span class="sxs-lookup"><span data-stu-id="db283-134">/noconfig</span></span>](../../../visual-basic/reference/command-line-compiler/noconfig.md)
-- [<span data-ttu-id="db283-135">명령줄에서 빌드</span><span class="sxs-lookup"><span data-stu-id="db283-135">Building from the Command Line</span></span>](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)
+- [<span data-ttu-id="de6da-125">Visual Basic 명령줄 컴파일러</span><span class="sxs-lookup"><span data-stu-id="de6da-125">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="de6da-126">-optioncompare</span><span class="sxs-lookup"><span data-stu-id="de6da-126">-optioncompare</span></span>](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
+- [<span data-ttu-id="de6da-127">-optionexplicit</span><span class="sxs-lookup"><span data-stu-id="de6da-127">-optionexplicit</span></span>](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
+- [<span data-ttu-id="de6da-128">-optionstrict</span><span class="sxs-lookup"><span data-stu-id="de6da-128">-optionstrict</span></span>](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
+- [<span data-ttu-id="de6da-129">샘플 컴파일 명령줄</span><span class="sxs-lookup"><span data-stu-id="de6da-129">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [<span data-ttu-id="de6da-130">Option Infer 문</span><span class="sxs-lookup"><span data-stu-id="de6da-130">Option Infer Statement</span></span>](../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [<span data-ttu-id="de6da-131">지역 형식 유추</span><span class="sxs-lookup"><span data-stu-id="de6da-131">Local Type Inference</span></span>](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [<span data-ttu-id="de6da-132">옵션 대화 상자, 프로젝트, Visual Basic 기본값</span><span class="sxs-lookup"><span data-stu-id="de6da-132">Visual Basic Defaults, Projects, Options Dialog Box</span></span>](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+- [<span data-ttu-id="de6da-133">프로젝트 디자이너, 컴파일 페이지(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="de6da-133">Compile Page, Project Designer (Visual Basic)</span></span>](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
+- [<span data-ttu-id="de6da-134">/noconfig</span><span class="sxs-lookup"><span data-stu-id="de6da-134">/noconfig</span></span>](../../../visual-basic/reference/command-line-compiler/noconfig.md)
+- [<span data-ttu-id="de6da-135">명령줄에서 빌드</span><span class="sxs-lookup"><span data-stu-id="de6da-135">Building from the Command Line</span></span>](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)
