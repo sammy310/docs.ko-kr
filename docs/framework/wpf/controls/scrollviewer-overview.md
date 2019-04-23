@@ -10,10 +10,10 @@ helpviewer_keywords:
 - ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
 ms.openlocfilehash: a3302d9c360b0918a1fce956af3e3aa14f29361b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59212429"
 ---
 # <a name="scrollviewer-overview"></a>ScrollViewer 개요
@@ -29,7 +29,7 @@ ms.locfileid: "59212429"
   
 <a name="scrollviewer_physical_vs_logical"></a>   
 ## <a name="physical-vs-logical-scrolling"></a>실제 및 논리적 스크롤  
- 실제 스크롤은 미리 결정된 실제 증분만큼(일반적으로 픽셀 단위로 선언된 값만큼) 콘텐츠를 스크롤하는 데 사용됩니다. 논리적 스크롤은 논리 트리에서 다음 항목으로 스크롤하는 데 사용됩니다. 실제 스크롤은 대부분에 대 한 기본 스크롤 동작 <xref:System.Windows.Controls.Panel> 요소입니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 두 가지 스크롤 형식을 모두 지원합니다.  
+ 실제 스크롤은 미리 결정된 실제 증분만큼(일반적으로 픽셀 단위로 선언된 값만큼) 콘텐츠를 스크롤하는 데 사용됩니다. 논리적 스크롤은 논리 트리에서 다음 항목으로 스크롤하는 데 사용됩니다. 실제 스크롤은 대부분에 대 한 기본 스크롤 동작 <xref:System.Windows.Controls.Panel> 요소입니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 두 가지 스크롤 형식을 모두 지원합니다.  
   
 #### <a name="the-iscrollinfo-interface"></a>IScrollInfo 인터페이스  
  합니다 <xref:System.Windows.Controls.Primitives.IScrollInfo> 인터페이스 내의 주요 스크롤 영역을 나타내는 <xref:System.Windows.Controls.ScrollViewer> 또는 파생 컨트롤입니다. 스크롤 속성 및으로 구현할 수 있는 메서드를 정의 하는 인터페이스 <xref:System.Windows.Controls.Panel> 는 실제 증분이 아닌 논리적 단위로 스크롤 필요로 하는 요소입니다. 인스턴스로 캐스팅 <xref:System.Windows.Controls.Primitives.IScrollInfo> 파생 하려면 <xref:System.Windows.Controls.Panel> 픽셀 증분만큼이 아닌 자식 컬렉션에 있는 다음 논리 단위를 스크롤 하는 유용한 방법을 제공 하 고 스크롤 메서드를 사용 하 여 다음입니다. 기본적으로 <xref:System.Windows.Controls.ScrollViewer> 컨트롤이 실제 단위로 스크롤을 지원 합니다.  

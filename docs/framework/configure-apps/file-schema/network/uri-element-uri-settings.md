@@ -1,19 +1,19 @@
 ---
-title: <Uri> 요소 (Uri 설정)
+title: <Uri> 요소(URI 설정)
 ms.date: 03/30/2017
 ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
 ms.openlocfilehash: 1f3573babd2e363a78f0ad454f0ba36c87ba6390
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59212144"
 ---
 # <a name="uri-element-uri-settings"></a>\<Uri > 요소 (Uri 설정)
 .NET Framework uniform resource identifier (Uri)를 사용 하 여 표현 하는 웹 주소를 처리 하는 방법을 지정 하는 설정을 포함 합니다.  
   
 ## <a name="schema-hierarchy"></a>스키마 계층 구조  
- [\<구성 > 요소](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [\<configuration> 요소](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
  [\<uri>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "59212144"
   
 |**요소**|**설명**|  
 |-----------------|---------------------|  
-|[구성](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|모든 네임 스페이스에 대 한 설정을 포함합니다.|  
+|[configuration](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|모든 네임 스페이스에 대 한 설정을 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
  `uri` 요소 멤버에 대 한 설정을 포함 합니다 <xref:System.Uri> 클래스에 의해 사용 되는 클래스는 <xref:System.Net> 네임 스페이스. 이 설정은 IRI 및 IDN에 대 한 지원을 구성 합니다.  

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - control patterns, ExpandCollapse
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
 ms.openlocfilehash: ff07f5264ccb3ec699e3676a2e9ba64443b2875f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211662"
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>UI 자동화 ExpandCollapse 컨트롤 패턴 구현
@@ -32,7 +32,7 @@ ms.locfileid: "59211662"
   
 -   컨트롤의 <xref:System.Windows.Automation.ExpandCollapseState> 가 <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>로 설정되어 있으면 모든 <xref:System.Windows.Automation.ExpandCollapsePattern> 기능이 컨트롤에 대해 비활성화되고 이 컨트롤 패턴을 사용하여 가져올 수 있는 유일한 정보는 <xref:System.Windows.Automation.ExpandCollapseState>입니다. 나중에 자식 개체를 추가하면 <xref:System.Windows.Automation.ExpandCollapseState> 가 변경되고 <xref:System.Windows.Automation.ExpandCollapsePattern> 기능이 활성화됩니다.  
   
--   <xref:System.Windows.Automation.ExpandCollapseState> 만; 직계 자식 개체의 표시 유형을 참조합니다. 모든 하위 개체의 표시 유형을 참조 하지 않습니다.  
+-   <xref:System.Windows.Automation.ExpandCollapseState> 는 직계 자식 개체의 표시 유형을 나타내며, 모든 하위 개체의 표시 유형을 나타내지는 않습니다.  
   
 -   확장 및 축소는 컨트롤 관련 기능입니다. 다음은 이 동작의 예입니다.  
   
@@ -70,4 +70,4 @@ ms.locfileid: "59211662"
 - [클라이언트용 UI 자동화 컨트롤 패턴](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [TreeWalker를 사용하여 UI 자동화 요소 간 탐색](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
 - [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [UI 자동화에서 캐싱 사용](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [UI 자동화의 캐싱 사용](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

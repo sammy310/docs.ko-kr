@@ -6,10 +6,10 @@ helpviewer_keywords:
 - access control [WCF]
 ms.assetid: 9d576122-3f55-4425-9acf-b23d0781e966
 ms.openlocfilehash: 53b20e7f11f5accd1436f29063817142681e4f74
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213261"
 ---
 # <a name="access-control-mechanisms"></a>Access Control 메커니즘
@@ -42,7 +42,7 @@ ms.locfileid: "59213261"
  역할 공급자 기능을 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: ASP.NET 역할 공급자를 사용 하 여 서비스를 사용 하 여](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)입니다.  
   
 ## <a name="authorization-manager"></a>권한 부여 관리자  
- 다른 기능은 AzMan(권한 부여 관리자)을 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 역할 공급자와 결합하여 클라이언트에 권한을 부여하는 것입니다. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]에서 웹 서비스를 호스팅할 때 AzMan을 응용 프로그램에 통합하면 AzMan을 통해 서비스에 권한을 부여할 수 있습니다. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 역할 관리자는 응용 프로그램 역할을 관리, 추가 및 역할에서 사용자를 제거 및 역할 멤버 자격을 확인할 수 있도록 API를 제공 하지만 사용자는 명명 된 작업 또는 작업을 수행 하도록 허용 하는지 여부를 쿼리 하는 데이 게 허용 하지 않습니다. AzMan을 사용하면 개별 작업을 정의하여 다른 작업에 결합할 수 있습니다. AZMan을 사용하면 역할 확인뿐 아니라 사용자가 작업을 수행할 수 있는지 여부도 확인할 수 있습니다. 역할 할당 및 작업 인증은 응용 프로그램 외부에서 구성하거나 응용 프로그램 내부에서 프로그래밍 방식으로 수행할 수 있습니다. 관리자는 AzMan 관리 MMC(Microsoft Management Console) 스냅인을 사용하여 런타임에 역할에서 수행할 수 있는 작업을 변경하고 각 사용자의 역할 멤버 자격을 관리할 수 있습니다.  
+ 다른 기능은 AzMan(권한 부여 관리자)을 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 역할 공급자와 결합하여 클라이언트에 권한을 부여하는 것입니다. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]에서 웹 서비스를 호스팅할 때 AzMan을 응용 프로그램에 통합하면 AzMan을 통해 서비스에 권한을 부여할 수 있습니다. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 역할 관리자에서는 응용 프로그램 역할을 관리하고, 역할에서 사용자를 제거하고, 역할 멤버 자격을 확인할 수 있도록 API를 제공하지만, 명명된 작업을 수행할 수 있는 권한이 사용자에게 부여되었는지 여부를 쿼리할 수는 없습니다. AzMan을 사용하면 개별 작업을 정의하여 다른 작업에 결합할 수 있습니다. AZMan을 사용하면 역할 확인뿐 아니라 사용자가 작업을 수행할 수 있는지 여부도 확인할 수 있습니다. 역할 할당 및 작업 인증은 응용 프로그램 외부에서 구성하거나 응용 프로그램 내부에서 프로그래밍 방식으로 수행할 수 있습니다. 관리자는 AzMan 관리 MMC(Microsoft Management Console) 스냅인을 사용하여 런타임에 역할에서 수행할 수 있는 작업을 변경하고 각 사용자의 역할 멤버 자격을 관리할 수 있습니다.  
   
  또한 기존 AzMan 설치에 이미 액세스한 경우 AzMan/역할 공급자 조합의 기능을 사용하여 서비스 사용자에게 권한을 부여하려면 AzMan 및 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 역할 공급자를 사용할 수 있습니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "59213261"
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
-- [방법: PrincipalPermissionAttribute 클래스를 사용하여 액세스 제한](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [방법: PrincipalPermissionAttribute 클래스를 사용 하 여 액세스 제한](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
 - [방법: 서비스에서 ASP.NET 역할 공급자 사용](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
 - [방법: 서비스에서 ASP.NET 권한 부여 관리자 역할 공급자 사용](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)
 - [ID 모델을 사용하여 클레임 및 권한 부여 관리](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

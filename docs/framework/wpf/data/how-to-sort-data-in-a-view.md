@@ -13,10 +13,10 @@ helpviewer_keywords:
 - sorting data in views [WPF]
 ms.assetid: f4c43578-01b7-4774-a953-acb95a13b94a
 ms.openlocfilehash: 32f73d3c3ba213778654f0d1ee7bbae16b9d845b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211259"
 ---
 # <a name="how-to-sort-data-in-a-view"></a>방법: 보기에서 데이터 정렬
@@ -39,7 +39,7 @@ ms.locfileid: "59211259"
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.Data.ListCollectionView.CustomSort%2A>
-- [머리글 클릭 시 GridView 열 정렬](../controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
+- [헤더를 클릭하면 GridView 열 정렬](../controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
 - [데이터 바인딩 개요](data-binding-overview.md)
-- [보기에서 데이터 필터링](how-to-filter-data-in-a-view.md)
+- [뷰에서 데이터 필터링](how-to-filter-data-in-a-view.md)
 - [방법 항목](data-binding-how-to-topics.md)

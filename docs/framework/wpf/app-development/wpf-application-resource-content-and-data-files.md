@@ -18,10 +18,10 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
 ms.openlocfilehash: 075f70e3ef053507dfe3d408246d179bb57c5891
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211928"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF 애플리케이션 리소스, 콘텐츠 및 데이터 파일
@@ -123,7 +123,7 @@ ms.locfileid: "59211928"
  데이터 파일을 사용하는 어셈블리를 재컴파일하지 않고 업데이트하고자 하는 애플리케이션 데이터 파일을 애플리케이션에서 필요로 할 때는 콘텐츠 파일을 사용해야 합니다.  
   
 ### <a name="configuring-content-files"></a>콘텐츠 파일 구성  
- 콘텐츠 파일을 프로젝트에 추가 하려면 응용 프로그램 데이터 파일을로 포함 되어야 합니다는 `Content` 항목입니다. 또한 어셈블리에 직접 콘텐츠 파일을 컴파일되지 않은, 때문에 설정 해야 합니다 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory` 메타 데이터 요소를 콘텐츠 파일이 빌드된 어셈블리에 상대적인 위치로 복사 되도록 지정 합니다. 프로젝트가 빌드될 때마다 빌드 출력 폴더에 복사 될 리소스를 하려는 경우 설정 합니다는 `CopyToOutputDirectory` 사용 하 여 메타 데이터 요소는 `Always` 값입니다. 그렇지 않으면 확실히 리소스의 최신 버전에만 사용 하 여 빌드 출력 폴더로 복사 됩니다는 `PreserveNewest` 값입니다.  
+ 콘텐츠 파일을 프로젝트에 추가 하려면 응용 프로그램 데이터 파일을로 포함 되어야 합니다는 `Content` 항목입니다. 또한 어셈블리에 직접 콘텐츠 파일을 컴파일되지 않은, 때문에 설정 해야 합니다 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `CopyToOutputDirectory` 메타 데이터 요소를 콘텐츠 파일이 빌드된 어셈블리에 상대적인 위치로 복사 되도록 지정 합니다. 프로젝트가 빌드될 때마다 빌드 출력 폴더에 복사 될 리소스를 하려는 경우 설정 합니다는 `CopyToOutputDirectory` 사용 하 여 메타 데이터 요소는 `Always` 값입니다. 그렇지 않으면 확실히 리소스의 최신 버전에만 사용 하 여 빌드 출력 폴더로 복사 됩니다는 `PreserveNewest` 값입니다.  
   
  다음 예제에서는 리소스의 새 버전이 프로젝트에 추가된 경우에만 콘텐츠 파일이 빌드 출력 폴더에 복사되는 방식으로 구성된 파일을 보여 줍니다.  
   
@@ -197,7 +197,7 @@ ms.locfileid: "59211928"
 ### <a name="configuring-site-of-origin-files"></a>원본 사이트 파일 구성  
  기존 배포를 사용 해야 하는 경우에 원본 사이트 파일 존재 하지 않거나 알 수 없는 컴파일 타임에 런타임에 사용 하는 등 필요한 파일에 대 한 메커니즘을 사용할 수는 `XCopy` 명령줄 프로그램이 나 합니다 [!INCLUDE[TLA#tla_wininstall](../../../../includes/tlasharptla-wininstall-md.md)].  
   
- 이러한 파일을 알지 못하는 경우 컴파일 타임에 원본 사이트에서 찾아야 할 수 있지만 명시적 종속성을 방지 하려면 파일을 추가할 수 있습니다는 [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] 로 프로젝트 `None` 항목입니다. 콘텐츠 파일을 사용 하 여 설정 해야 합니다 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory` 원본 파일의 사이트 중 하나를 지정 하 여 빌드된 어셈블리를 기준으로 하는 위치로 복사 되도록 지정 하는 특성을 `Always` 값 또는 `PreserveNewest` 값입니다.  
+ 이러한 파일을 알지 못하는 경우 컴파일 타임에 원본 사이트에서 찾아야 할 수 있지만 명시적 종속성을 방지 하려면 파일을 추가할 수 있습니다는 [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] 로 프로젝트 `None` 항목입니다. 콘텐츠 파일을 사용 하 여 설정 해야 합니다 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `CopyToOutputDirectory` 원본 파일의 사이트 중 하나를 지정 하 여 빌드된 어셈블리를 기준으로 하는 위치로 복사 되도록 지정 하는 특성을 `Always` 값 또는 `PreserveNewest` 값입니다.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
 ms.openlocfilehash: 702d88f844f00b86e64404bd100fd6b3d34971c6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211233"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>ID 캐시에서 개체 검색
@@ -30,7 +30,7 @@ ms.locfileid: "59211233"
   
  이러한 일반적인 형태에서 `Function1`, `Function2` 및 `predicate`는 다음과 같이 정의됩니다.  
   
- `Function1` 다음 중 하나일 수 있습니다.  
+ `Function1`는 다음과 같을 수 있습니다.  
   
 -   <xref:System.Linq.Queryable.Where%2A>  
   
@@ -42,7 +42,7 @@ ms.locfileid: "59211233"
   
 -   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- `Function2` 다음 중 하나일 수 있습니다.  
+ `Function2`는 다음과 같을 수 있습니다.  
   
 -   <xref:System.Linq.Queryable.First%2A>  
   
@@ -52,7 +52,7 @@ ms.locfileid: "59211233"
   
 -   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- `predicate` 개체의 기본 키 속성을 상수 값으로 설정 되어 있는 식 이어야 합니다. 개체에 둘 이상의 속성에서 정의한 기본 키가 있는 경우 각 기본 키 속성은 상수 값으로 설정되어야 합니다. 다음은 `predicate`가 사용해야 하는 형태의 예제입니다.  
+ `predicate`는 개체의 기본 키 속성이 상수 값으로 설정되어 있는 식이어야 합니다. 개체에 둘 이상의 속성에서 정의한 기본 키가 있는 경우 각 기본 키 속성은 상수 값으로 설정되어야 합니다. 다음은 `predicate`가 사용해야 하는 형태의 예제입니다.  
   
 -   `c => c.PK == constant_value`  
   
