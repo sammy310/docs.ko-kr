@@ -18,32 +18,32 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0b59d85227f21bb230333456eda9130416563111
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180533"
 ---
-# <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfocount-method"></a><span data-ttu-id="9927b-102">ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount 메서드</span><span class="sxs-lookup"><span data-stu-id="9927b-102">ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount Method</span></span>
-<span data-ttu-id="9927b-103">정보를 검색 하는 기호 수를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="9927b-103">Gets a count of symbol search information.</span></span>  
+# <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfocount-method"></a><span data-ttu-id="b419a-102">ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount 메서드</span><span class="sxs-lookup"><span data-stu-id="b419a-102">ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount Method</span></span>
+<span data-ttu-id="b419a-103">정보를 검색 하는 기호 수를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="b419a-103">Gets a count of symbol search information.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9927b-104">구문</span><span class="sxs-lookup"><span data-stu-id="9927b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b419a-104">구문</span><span class="sxs-lookup"><span data-stu-id="b419a-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSymbolSearchInfoCount(  
     [out] ULONG32 *pcSearchInfo);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9927b-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="9927b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b419a-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="b419a-105">Parameters</span></span>  
  `pcSearchInfo`  
- <span data-ttu-id="9927b-106">out]]에 대 한 포인터를 `ULONG32` 검색 정보를 포함 하는 데 필요한 버퍼의 크기를 받는 합니다.</span><span class="sxs-lookup"><span data-stu-id="9927b-106">]out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the search information.</span></span>  
+ <span data-ttu-id="b419a-106">out]]에 대 한 포인터를 `ULONG32` 검색 정보를 포함 하는 데 필요한 버퍼의 크기를 받는 합니다.</span><span class="sxs-lookup"><span data-stu-id="b419a-106">]out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the search information.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9927b-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="9927b-107">Return Value</span></span>  
- <span data-ttu-id="9927b-108">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="9927b-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b419a-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="b419a-107">Return Value</span></span>  
+ <span data-ttu-id="b419a-108">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="b419a-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9927b-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="9927b-109">Requirements</span></span>  
- <span data-ttu-id="9927b-110">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="9927b-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b419a-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b419a-109">Requirements</span></span>  
+ <span data-ttu-id="b419a-110">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="b419a-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9927b-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="9927b-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b419a-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="b419a-111">See also</span></span>
 
-- [<span data-ttu-id="9927b-112">ISymUnmanagedReaderSymbolSearchInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="9927b-112">ISymUnmanagedReaderSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)
+- [<span data-ttu-id="b419a-112">ISymUnmanagedReaderSymbolSearchInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b419a-112">ISymUnmanagedReaderSymbolSearchInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)
