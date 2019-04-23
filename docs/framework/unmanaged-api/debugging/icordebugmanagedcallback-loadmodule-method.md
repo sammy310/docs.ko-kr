@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cfca06c656f3274f4c5ddb06373a0296dc5e6905
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164543"
 ---
-# <a name="icordebugmanagedcallbackloadmodule-method"></a><span data-ttu-id="0a23d-102">ICorDebugManagedCallback::LoadModule 메서드</span><span class="sxs-lookup"><span data-stu-id="0a23d-102">ICorDebugManagedCallback::LoadModule Method</span></span>
-<span data-ttu-id="0a23d-103">공용 언어 런타임 (CLR) 모듈이 로드 되었음을 디버거에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="0a23d-103">Notifies the debugger that a common language runtime (CLR) module has been successfully loaded.</span></span>  
+# <a name="icordebugmanagedcallbackloadmodule-method"></a><span data-ttu-id="23ca8-102">ICorDebugManagedCallback::LoadModule 메서드</span><span class="sxs-lookup"><span data-stu-id="23ca8-102">ICorDebugManagedCallback::LoadModule Method</span></span>
+<span data-ttu-id="23ca8-103">공용 언어 런타임 (CLR) 모듈이 로드 되었음을 디버거에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="23ca8-103">Notifies the debugger that a common language runtime (CLR) module has been successfully loaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0a23d-104">구문</span><span class="sxs-lookup"><span data-stu-id="0a23d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="23ca8-104">구문</span><span class="sxs-lookup"><span data-stu-id="23ca8-104">Syntax</span></span>  
   
 ```  
 HRESULT LoadModule (  
@@ -36,26 +36,26 @@ HRESULT LoadModule (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0a23d-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="0a23d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="23ca8-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="23ca8-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="0a23d-106">[in] 모듈 로드 된 응용 프로그램 도메인을 나타내는 ICorDebugAppDomain 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="0a23d-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain into which the module has been loaded.</span></span>  
+ <span data-ttu-id="23ca8-106">[in] 모듈 로드 된 응용 프로그램 도메인을 나타내는 ICorDebugAppDomain 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="23ca8-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain into which the module has been loaded.</span></span>  
   
  `pModule`  
- <span data-ttu-id="0a23d-107">[in] CLR 모듈을 나타내는 ICorDebugModule 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="0a23d-107">[in] A pointer to an ICorDebugModule object that represents the CLR module.</span></span>  
+ <span data-ttu-id="23ca8-107">[in] CLR 모듈을 나타내는 ICorDebugModule 개체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="23ca8-107">[in] A pointer to an ICorDebugModule object that represents the CLR module.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0a23d-108">설명</span><span class="sxs-lookup"><span data-stu-id="0a23d-108">Remarks</span></span>  
- <span data-ttu-id="0a23d-109">`LoadModule` 콜백 모듈에 대 한 메타 데이터를 검사,-just-in-time (JIT) 컴파일러 플래그를 설정, 사용 하거나 모듈에 대 한 콜백을 로드 하는 클래스를 사용 하지 않도록 설정 하는 적절 한 시간을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="0a23d-109">The `LoadModule` callback provides an appropriate time to examine metadata for the module, set just-in-time (JIT) compiler flags, or enable or disable class loading callbacks for the module.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="23ca8-108">설명</span><span class="sxs-lookup"><span data-stu-id="23ca8-108">Remarks</span></span>  
+ <span data-ttu-id="23ca8-109">`LoadModule` 콜백 모듈에 대 한 메타 데이터를 검사,-just-in-time (JIT) 컴파일러 플래그를 설정, 사용 하거나 모듈에 대 한 콜백을 로드 하는 클래스를 사용 하지 않도록 설정 하는 적절 한 시간을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="23ca8-109">The `LoadModule` callback provides an appropriate time to examine metadata for the module, set just-in-time (JIT) compiler flags, or enable or disable class loading callbacks for the module.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0a23d-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="0a23d-110">Requirements</span></span>  
- <span data-ttu-id="0a23d-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="0a23d-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="23ca8-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="23ca8-110">Requirements</span></span>  
+ <span data-ttu-id="23ca8-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="23ca8-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0a23d-112">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0a23d-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="23ca8-112">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="23ca8-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0a23d-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0a23d-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="23ca8-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="23ca8-113">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="0a23d-114">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="0a23d-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="23ca8-114">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="23ca8-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0a23d-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="0a23d-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="23ca8-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="23ca8-115">See also</span></span>
 
-- [<span data-ttu-id="0a23d-116">UnloadModule 메서드</span><span class="sxs-lookup"><span data-stu-id="0a23d-116">UnloadModule Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadmodule-method.md)
-- [<span data-ttu-id="0a23d-117">ICorDebugManagedCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0a23d-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="23ca8-116">UnloadModule 메서드</span><span class="sxs-lookup"><span data-stu-id="23ca8-116">UnloadModule Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadmodule-method.md)
+- [<span data-ttu-id="23ca8-117">ICorDebugManagedCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="23ca8-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

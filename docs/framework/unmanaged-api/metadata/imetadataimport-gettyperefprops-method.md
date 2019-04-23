@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 808c48bb0c516c51f39a8424acf49869b1bc9208
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165232"
 ---
-# <a name="imetadataimportgettyperefprops-method"></a><span data-ttu-id="29834-102">IMetaDataImport::GetTypeRefProps 메서드</span><span class="sxs-lookup"><span data-stu-id="29834-102">IMetaDataImport::GetTypeRefProps Method</span></span>
-<span data-ttu-id="29834-103">연관 된 메타 데이터를 가져옵니다는 <xref:System.Type> 지정한 TypeRef 토큰이 참조 합니다.</span><span class="sxs-lookup"><span data-stu-id="29834-103">Gets the metadata associated with the <xref:System.Type> referenced by the specified TypeRef token.</span></span>  
+# <a name="imetadataimportgettyperefprops-method"></a><span data-ttu-id="a583e-102">IMetaDataImport::GetTypeRefProps 메서드</span><span class="sxs-lookup"><span data-stu-id="a583e-102">IMetaDataImport::GetTypeRefProps Method</span></span>
+<span data-ttu-id="a583e-103">연관 된 메타 데이터를 가져옵니다는 <xref:System.Type> 지정한 TypeRef 토큰이 참조 합니다.</span><span class="sxs-lookup"><span data-stu-id="a583e-103">Gets the metadata associated with the <xref:System.Type> referenced by the specified TypeRef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="29834-104">구문</span><span class="sxs-lookup"><span data-stu-id="29834-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a583e-104">구문</span><span class="sxs-lookup"><span data-stu-id="a583e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetTypeRefProps (  
@@ -39,32 +39,32 @@ HRESULT GetTypeRefProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="29834-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="29834-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a583e-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="a583e-105">Parameters</span></span>  
  `tr`  
- <span data-ttu-id="29834-106">[in] TypeRef 토큰에 대 한 메타 데이터를 반환할 형식을 나타내는입니다.</span><span class="sxs-lookup"><span data-stu-id="29834-106">[in] The TypeRef token that represents the type to return metadata for.</span></span>  
+ <span data-ttu-id="a583e-106">[in] TypeRef 토큰에 대 한 메타 데이터를 반환할 형식을 나타내는입니다.</span><span class="sxs-lookup"><span data-stu-id="a583e-106">[in] The TypeRef token that represents the type to return metadata for.</span></span>  
   
  `ptkResolutionScope`  
- <span data-ttu-id="29834-107">[out] 참조 된 범위에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="29834-107">[out] A pointer to the scope in which the reference is made.</span></span> <span data-ttu-id="29834-108">이 값은 AssemblyRef 또는 ModuleRef 토큰을 합니다.</span><span class="sxs-lookup"><span data-stu-id="29834-108">This value is an AssemblyRef or ModuleRef token.</span></span>  
+ <span data-ttu-id="a583e-107">[out] 참조 된 범위에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="a583e-107">[out] A pointer to the scope in which the reference is made.</span></span> <span data-ttu-id="a583e-108">이 값은 AssemblyRef 또는 ModuleRef 토큰을 합니다.</span><span class="sxs-lookup"><span data-stu-id="a583e-108">This value is an AssemblyRef or ModuleRef token.</span></span>  
   
  `szName`  
- <span data-ttu-id="29834-109">[out] 형식 이름을 포함 하는 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="29834-109">[out] A buffer containing the type name.</span></span>  
+ <span data-ttu-id="a583e-109">[out] 형식 이름을 포함 하는 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="a583e-109">[out] A buffer containing the type name.</span></span>  
   
  `cchName`  
- <span data-ttu-id="29834-110">[in] 요청된 된 크기의 와이드 문자에서 `szName`합니다.</span><span class="sxs-lookup"><span data-stu-id="29834-110">[in] The requested size in wide characters of `szName`.</span></span>  
+ <span data-ttu-id="a583e-110">[in] 요청된 된 크기의 와이드 문자에서 `szName`합니다.</span><span class="sxs-lookup"><span data-stu-id="a583e-110">[in] The requested size in wide characters of `szName`.</span></span>  
   
  `pchName`  
- <span data-ttu-id="29834-111">[out] 반환 되는 크기의 와이드 문자에서 `szName`합니다.</span><span class="sxs-lookup"><span data-stu-id="29834-111">[out] The returned size in wide characters of `szName`.</span></span>  
+ <span data-ttu-id="a583e-111">[out] 반환 되는 크기의 와이드 문자에서 `szName`합니다.</span><span class="sxs-lookup"><span data-stu-id="a583e-111">[out] The returned size in wide characters of `szName`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="29834-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="29834-112">Requirements</span></span>  
- <span data-ttu-id="29834-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="29834-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a583e-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="a583e-112">Requirements</span></span>  
+ <span data-ttu-id="a583e-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="a583e-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="29834-114">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="29834-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="a583e-114">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="a583e-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="29834-115">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="29834-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="a583e-115">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="a583e-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="29834-116">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="29834-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="a583e-116">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a583e-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="29834-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="29834-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a583e-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="a583e-117">See also</span></span>
 
-- [<span data-ttu-id="29834-118">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="29834-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="29834-119">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="29834-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="a583e-118">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a583e-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="a583e-119">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a583e-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

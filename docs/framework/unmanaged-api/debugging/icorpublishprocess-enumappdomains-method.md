@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 173a7d6793bec9262efb661d56e3a371d0bf9b47
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164608"
 ---
-# <a name="icorpublishprocessenumappdomains-method"></a><span data-ttu-id="2477d-102">ICorPublishProcess::EnumAppDomains 메서드</span><span class="sxs-lookup"><span data-stu-id="2477d-102">ICorPublishProcess::EnumAppDomains Method</span></span>
-<span data-ttu-id="2477d-103">이 참조 되는 프로세스의 응용 프로그램 도메인에 대 한 열거자를 가져옵니다 [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="2477d-103">Gets an enumerator for the application domains in the process that is referenced by this [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md).</span></span>  
+# <a name="icorpublishprocessenumappdomains-method"></a><span data-ttu-id="f87c3-102">ICorPublishProcess::EnumAppDomains 메서드</span><span class="sxs-lookup"><span data-stu-id="f87c3-102">ICorPublishProcess::EnumAppDomains Method</span></span>
+<span data-ttu-id="f87c3-103">이 참조 되는 프로세스의 응용 프로그램 도메인에 대 한 열거자를 가져옵니다 [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="f87c3-103">Gets an enumerator for the application domains in the process that is referenced by this [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2477d-104">구문</span><span class="sxs-lookup"><span data-stu-id="2477d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f87c3-104">구문</span><span class="sxs-lookup"><span data-stu-id="f87c3-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumAppDomains (  
@@ -35,24 +35,24 @@ HRESULT EnumAppDomains (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2477d-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="2477d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f87c3-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f87c3-105">Parameters</span></span>  
  `ppEnum`  
- <span data-ttu-id="2477d-106">[out] 주소에 대 한 포인터를 [ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md) 인스턴스가이 프로세스에서 응용 프로그램 도메인의 컬렉션을 반복할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="2477d-106">[out] A pointer to the address of an [ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md) instance that allows iteration through the collection of application domains in this process.</span></span>  
+ <span data-ttu-id="f87c3-106">[out] 주소에 대 한 포인터를 [ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md) 인스턴스가이 프로세스에서 응용 프로그램 도메인의 컬렉션을 반복할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="f87c3-106">[out] A pointer to the address of an [ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md) instance that allows iteration through the collection of application domains in this process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2477d-107">설명</span><span class="sxs-lookup"><span data-stu-id="2477d-107">Remarks</span></span>  
- <span data-ttu-id="2477d-108">응용 프로그램 도메인 목록에는 스냅숏을 기반으로 존재 하는 응용 프로그램 도메인의 경우는 `EnumAppDomains` 메서드가 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2477d-108">The list of application domains is based on a snapshot of the application domains that exist when the `EnumAppDomains` method is called.</span></span> <span data-ttu-id="2477d-109">새 최신 목록을 만들려면이 메서드를 두 번 이상 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2477d-109">This method may be called more than once to create a new up-to-date list.</span></span> <span data-ttu-id="2477d-110">이 메서드가 이후에 호출 하 여 기존 목록을 받지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2477d-110">Existing lists will not be affected by subsequent calls of this method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f87c3-107">설명</span><span class="sxs-lookup"><span data-stu-id="f87c3-107">Remarks</span></span>  
+ <span data-ttu-id="f87c3-108">응용 프로그램 도메인 목록에는 스냅숏을 기반으로 존재 하는 응용 프로그램 도메인의 경우는 `EnumAppDomains` 메서드가 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f87c3-108">The list of application domains is based on a snapshot of the application domains that exist when the `EnumAppDomains` method is called.</span></span> <span data-ttu-id="f87c3-109">새 최신 목록을 만들려면이 메서드를 두 번 이상 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f87c3-109">This method may be called more than once to create a new up-to-date list.</span></span> <span data-ttu-id="f87c3-110">이 메서드가 이후에 호출 하 여 기존 목록을 받지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f87c3-110">Existing lists will not be affected by subsequent calls of this method.</span></span>  
   
- <span data-ttu-id="2477d-111">프로세스 종료 된 경우 `EnumAppDomains` CORDBG_E_PROCESS_TERMINATED의 HRESULT 값을 사용 하 여 실패 합니다.</span><span class="sxs-lookup"><span data-stu-id="2477d-111">If the process has been terminated, `EnumAppDomains` will fail with an HRESULT value of CORDBG_E_PROCESS_TERMINATED.</span></span>  
+ <span data-ttu-id="f87c3-111">프로세스 종료 된 경우 `EnumAppDomains` CORDBG_E_PROCESS_TERMINATED의 HRESULT 값을 사용 하 여 실패 합니다.</span><span class="sxs-lookup"><span data-stu-id="f87c3-111">If the process has been terminated, `EnumAppDomains` will fail with an HRESULT value of CORDBG_E_PROCESS_TERMINATED.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2477d-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="2477d-112">Requirements</span></span>  
- <span data-ttu-id="2477d-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="2477d-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f87c3-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f87c3-112">Requirements</span></span>  
+ <span data-ttu-id="f87c3-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="f87c3-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2477d-114">**헤더:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="2477d-114">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="f87c3-114">**헤더:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="f87c3-114">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="2477d-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2477d-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f87c3-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f87c3-115">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="2477d-116">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="2477d-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="f87c3-116">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f87c3-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2477d-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="2477d-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f87c3-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="f87c3-117">See also</span></span>
 
-- [<span data-ttu-id="2477d-118">ICorPublishProcess 인터페이스</span><span class="sxs-lookup"><span data-stu-id="2477d-118">ICorPublishProcess Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)
+- [<span data-ttu-id="f87c3-118">ICorPublishProcess 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f87c3-118">ICorPublishProcess Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)
