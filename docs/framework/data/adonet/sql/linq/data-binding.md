@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cbec8b02-a1e8-4ae8-a83b-bb5190413ac5
-ms.openlocfilehash: f07053c9fba194138467bbf8664e2f5fe1f667ea
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 66964497159c5c03a9070090ee60b43fa7d31abf
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352820"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978928"
 ---
 # <a name="data-binding"></a>데이터 바인딩
 
@@ -42,9 +42,9 @@ Windows Presentation Foundation에서도 동일한 동작이 발생합니다.
 
 - 데이터 소스가 <xref:System.Linq.IQueryable%601>인 경우 다음과 같은 두 가지 시나리오가 있습니다.
 
-    - [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]가 <xref:System.Data.Linq.Table%601>에서 기본 <xref:System.Linq.IQueryable%601>을 찾는 경우 소스를 편집할 수 있으며 첫 번째 글머리 기호의 경우와 상황이 같아집니다.
+  - [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]가 <xref:System.Data.Linq.Table%601>에서 기본 <xref:System.Linq.IQueryable%601>을 찾는 경우 소스를 편집할 수 있으며 첫 번째 글머리 기호의 경우와 상황이 같아집니다.
 
-    - 하는 경우 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 내부를 찾을 수 없습니다 <xref:System.Data.Linq.Table%601>, 소스 버전에 대 한 허용 하지 않습니다 (예를 들어 `groupby`). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 제네릭에 맞게 쿼리를 찾습니다 `SortableBindingList`에 간단한 <xref:System.ComponentModel.BindingList%601> 지정된 된 속성의 T 엔터티에 대 한 정렬 기능을 구현 하는 합니다.
+  - 하는 경우 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 내부를 찾을 수 없습니다 <xref:System.Data.Linq.Table%601>, 소스 버전에 대 한 허용 하지 않습니다 (예를 들어 `groupby`). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 제네릭에 맞게 쿼리를 찾습니다 `SortableBindingList`에 간단한 <xref:System.ComponentModel.BindingList%601> 지정된 된 속성의 T 엔터티에 대 한 정렬 기능을 구현 하는 합니다.
 
 ## <a name="specialized-collections"></a>특수 컬렉션
 

@@ -6,12 +6,12 @@ title: .NET 설명서
 description: C#, Visual Basic 및 F#을 사용하는 모든 플랫폼에서 .NET을 사용하여 다양한 애플리케이션을 만드는 방법을 알아보세요. API 참조, 샘플 코드, 자습서 등을 찾아보세요.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 61b3e6f2aae2ad2633f82360b227a876f685fcc1
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.openlocfilehash: 01472d5586becf0bca2333557a05ddb10ee8b607
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59427489"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978083"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -54,7 +54,7 @@ ms.locfileid: "59427489"
                 </a>
             </li>
             <li>
-                <a href="/dotnet/api/?view=netframework-4.7.2">
+                <a href="/dotnet/api/?view=netframework-4.8">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -232,7 +232,7 @@ ms.locfileid: "59427489"
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/machine-learning">ML.NET 가이드</a></h3>
                                                 <p><a href="/dotnet/machine-learning/tutorials">자습서</a></p>
-                                                <p><a href="/dotnet/machine-learning/resources">자료</a></p>
+                                                <p><a href="/dotnet/machine-learning/resources">리소스</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources/glossary">용어</a></p>
                                                 <p><a href="/dotnet/api?view=ml-dotnet">ML.NET API 참조</a></p>
                                             </div>
@@ -434,7 +434,7 @@ ms.locfileid: "59427489"
                         </ul>
                     </li>
                     <li>
-                        <a href="#mobile">휴대폰</a>
+                        <a href="#mobile">모바일</a>
                         <ul id="mobile" class="cardsC">
                             <li>
                                 <a href="/xamarin/ios">
@@ -496,7 +496,7 @@ ms.locfileid: "59427489"
                         </ul>
                     </li>
                     <li>
-                        <a href="#desktop">바탕 화면</a>
+                        <a href="#desktop">데스크톱</a>
                         <ul id="desktop" class="cardsC">
                             <li>
                                 <a href="/uwp">
