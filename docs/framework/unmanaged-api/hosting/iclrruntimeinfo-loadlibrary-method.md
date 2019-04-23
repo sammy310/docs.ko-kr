@@ -18,18 +18,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3fe1f93c621fd567471b9a49e4aa75cb90e6e0e7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59161163"
 ---
-# <a name="iclrruntimeinfoloadlibrary-method"></a><span data-ttu-id="741f0-102">ICLRRuntimeInfo::LoadLibrary 메서드</span><span class="sxs-lookup"><span data-stu-id="741f0-102">ICLRRuntimeInfo::LoadLibrary Method</span></span>
-<span data-ttu-id="741f0-103">.NET Framework 라이브러리를 나타내는 공용 언어 런타임 (CLR)에서 로드를 [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="741f0-103">Loads a .NET Framework library from the common language runtime (CLR) represented by an [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface.</span></span>  
+# <a name="iclrruntimeinfoloadlibrary-method"></a><span data-ttu-id="d920f-102">ICLRRuntimeInfo::LoadLibrary 메서드</span><span class="sxs-lookup"><span data-stu-id="d920f-102">ICLRRuntimeInfo::LoadLibrary Method</span></span>
+<span data-ttu-id="d920f-103">.NET Framework 라이브러리를 나타내는 공용 언어 런타임 (CLR)에서 로드를 [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="d920f-103">Loads a .NET Framework library from the common language runtime (CLR) represented by an [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface.</span></span>  
   
- <span data-ttu-id="741f0-104">이 메서드를 대체 합니다 [LoadLibraryShim](../../../../docs/framework/unmanaged-api/hosting/loadlibraryshim-function.md) 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="741f0-104">This method supersedes the [LoadLibraryShim](../../../../docs/framework/unmanaged-api/hosting/loadlibraryshim-function.md) function.</span></span>  
+ <span data-ttu-id="d920f-104">이 메서드를 대체 합니다 [LoadLibraryShim](../../../../docs/framework/unmanaged-api/hosting/loadlibraryshim-function.md) 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="d920f-104">This method supersedes the [LoadLibraryShim](../../../../docs/framework/unmanaged-api/hosting/loadlibraryshim-function.md) function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="741f0-105">구문</span><span class="sxs-lookup"><span data-stu-id="741f0-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d920f-105">구문</span><span class="sxs-lookup"><span data-stu-id="d920f-105">Syntax</span></span>  
   
 ```  
 HRESULT LoadLibrary(  
@@ -37,36 +37,36 @@ HRESULT LoadLibrary(
      [out, retval] HMODULE *phndModule);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="741f0-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="741f0-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d920f-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d920f-106">Parameters</span></span>  
  `pwzDllName`  
- <span data-ttu-id="741f0-107">[in] 로드할 어셈블리의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="741f0-107">[in] The name of the assembly to be loaded.</span></span>  
+ <span data-ttu-id="d920f-107">[in] 로드할 어셈블리의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="d920f-107">[in] The name of the assembly to be loaded.</span></span>  
   
  `phndModule`  
- <span data-ttu-id="741f0-108">[out] 로드 된 어셈블리에 대 한 핸들입니다.</span><span class="sxs-lookup"><span data-stu-id="741f0-108">[out] A handle to the loaded assembly.</span></span>  
+ <span data-ttu-id="d920f-108">[out] 로드 된 어셈블리에 대 한 핸들입니다.</span><span class="sxs-lookup"><span data-stu-id="d920f-108">[out] A handle to the loaded assembly.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="741f0-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="741f0-109">Return Value</span></span>  
- <span data-ttu-id="741f0-110">이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="741f0-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d920f-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="d920f-109">Return Value</span></span>  
+ <span data-ttu-id="d920f-110">이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="d920f-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="741f0-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="741f0-111">HRESULT</span></span>|<span data-ttu-id="741f0-112">설명</span><span class="sxs-lookup"><span data-stu-id="741f0-112">Description</span></span>|  
+|<span data-ttu-id="d920f-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="d920f-111">HRESULT</span></span>|<span data-ttu-id="d920f-112">설명</span><span class="sxs-lookup"><span data-stu-id="d920f-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="741f0-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="741f0-113">S_OK</span></span>|<span data-ttu-id="741f0-114">메서드가 완료되었습니다.</span><span class="sxs-lookup"><span data-stu-id="741f0-114">The method completed successfully.</span></span>|  
-|<span data-ttu-id="741f0-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="741f0-115">E_POINTER</span></span>|`pwzDllName` <span data-ttu-id="741f0-116">또는 `phndModule` null입니다.</span><span class="sxs-lookup"><span data-stu-id="741f0-116">or `phndModule` is null.</span></span>|  
-|<span data-ttu-id="741f0-117">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="741f0-117">E_OUTOFMEMORY</span></span>|<span data-ttu-id="741f0-118">요청을 처리할 수 있는 메모리가 부족 합니다.</span><span class="sxs-lookup"><span data-stu-id="741f0-118">Not enough memory is available to handle the request.</span></span>|  
+|<span data-ttu-id="d920f-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="d920f-113">S_OK</span></span>|<span data-ttu-id="d920f-114">메서드가 완료되었습니다.</span><span class="sxs-lookup"><span data-stu-id="d920f-114">The method completed successfully.</span></span>|  
+|<span data-ttu-id="d920f-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="d920f-115">E_POINTER</span></span>|<span data-ttu-id="d920f-116">`pwzDllName` 또는 `phndModule`이 null입니다.</span><span class="sxs-lookup"><span data-stu-id="d920f-116">`pwzDllName` or `phndModule` is null.</span></span>|  
+|<span data-ttu-id="d920f-117">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="d920f-117">E_OUTOFMEMORY</span></span>|<span data-ttu-id="d920f-118">요청을 처리할 수 있는 메모리가 부족 합니다.</span><span class="sxs-lookup"><span data-stu-id="d920f-118">Not enough memory is available to handle the request.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="741f0-119">설명</span><span class="sxs-lookup"><span data-stu-id="741f0-119">Remarks</span></span>  
- <span data-ttu-id="741f0-120">이 메서드는.NET Framework 재배포 가능 패키지에 포함 된 Dll만 로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="741f0-120">This method only loads DLLs included in the .NET Framework redistributable package.</span></span> <span data-ttu-id="741f0-121">이 사용자가 생성 한 어셈블리 로드할 수는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="741f0-121">It can not load user-generated assemblies.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d920f-119">설명</span><span class="sxs-lookup"><span data-stu-id="d920f-119">Remarks</span></span>  
+ <span data-ttu-id="d920f-120">이 메서드는.NET Framework 재배포 가능 패키지에 포함 된 Dll만 로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="d920f-120">This method only loads DLLs included in the .NET Framework redistributable package.</span></span> <span data-ttu-id="d920f-121">이 사용자가 생성 한 어셈블리 로드할 수는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="d920f-121">It can not load user-generated assemblies.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="741f0-122">요구 사항</span><span class="sxs-lookup"><span data-stu-id="741f0-122">Requirements</span></span>  
- <span data-ttu-id="741f0-123">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="741f0-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d920f-122">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d920f-122">Requirements</span></span>  
+ <span data-ttu-id="d920f-123">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="d920f-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="741f0-124">**헤더:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="741f0-124">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="d920f-124">**헤더:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="d920f-124">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="741f0-125">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="741f0-125">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="d920f-125">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="d920f-125">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="741f0-126">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="741f0-126">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ <span data-ttu-id="d920f-126">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d920f-126">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="741f0-127">참고자료</span><span class="sxs-lookup"><span data-stu-id="741f0-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d920f-127">참고자료</span><span class="sxs-lookup"><span data-stu-id="d920f-127">See also</span></span>
 
-- [<span data-ttu-id="741f0-128">ICLRRuntimeInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="741f0-128">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [<span data-ttu-id="741f0-129">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="741f0-129">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="741f0-130">호스팅</span><span class="sxs-lookup"><span data-stu-id="741f0-130">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="d920f-128">ICLRRuntimeInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d920f-128">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [<span data-ttu-id="d920f-129">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d920f-129">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="d920f-130">호스팅</span><span class="sxs-lookup"><span data-stu-id="d920f-130">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

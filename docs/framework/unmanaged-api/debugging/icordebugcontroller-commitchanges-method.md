@@ -18,13 +18,13 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 115f3a8c81bcedb48669d06e57f26b88d36148d6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59156372"
 ---
-# <a name="icordebugcontrollercommitchanges-method"></a><span data-ttu-id="161d6-102">ICorDebugController::CommitChanges 메서드</span><span class="sxs-lookup"><span data-stu-id="161d6-102">ICorDebugController::CommitChanges Method</span></span>
-`CommitChanges` <span data-ttu-id="161d6-103">사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="161d6-103">is obsolete.</span></span> <span data-ttu-id="161d6-104">이 메서드를 호출 하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="161d6-104">Do not call this method.</span></span>  
+# <a name="icordebugcontrollercommitchanges-method"></a><span data-ttu-id="605d2-102">ICorDebugController::CommitChanges 메서드</span><span class="sxs-lookup"><span data-stu-id="605d2-102">ICorDebugController::CommitChanges Method</span></span>
+<span data-ttu-id="605d2-103">`CommitChanges`는 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="605d2-103">`CommitChanges` is obsolete.</span></span> <span data-ttu-id="605d2-104">이 메서드를 호출 하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="605d2-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="161d6-105">참고자료</span><span class="sxs-lookup"><span data-stu-id="161d6-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="605d2-105">참고자료</span><span class="sxs-lookup"><span data-stu-id="605d2-105">See also</span></span>
