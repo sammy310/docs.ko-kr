@@ -7,10 +7,10 @@ helpviewer_keywords:
 - data grids [Windows Forms], resizing columns and rows
 ms.assetid: 7532764d-e5c1-4943-a08b-6377a722d3b6
 ms.openlocfilehash: e1fa2d57cfb2cd374d691fe03a0e0bdbd3ad7141
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59138114"
 ---
 # <a name="resizing-columns-and-rows-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤에서 열 및 행 크기 조정
@@ -30,10 +30,10 @@ ms.locfileid: "59138114"
  [방법: Windows Forms DataGridView 컨트롤의 크기 조정 모드 설정](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
  일반적인 용도 대 한 크기 조정 모드를 구성 하는 방법에 설명 합니다.  
   
- [방법: Windows Forms DataGridView 컨트롤에서 내용에 맞게 프로그래밍 방식으로 셀 크기 조정](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
+ [방법: 프로그래밍 방식으로 Windows Forms DataGridView 컨트롤의 내용에 맞게 셀 크기 조정](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
  프로그래밍 방식으로 크기 조정을 통한 실험 하는 데 사용할 수 있는 데모 코드를 제공 합니다.  
   
- [방법: Windows Forms DataGridView 컨트롤에서 내용 변경 시 자동으로 셀 크기 조정](automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
+ [방법: Windows Forms DataGridView 컨트롤에서 내용이 변경 될 때 자동으로 셀 크기 조정](automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
  자동 크기 조정 모드를 사용 하 여 실험에 사용할 수 있는 데모 코드를 제공 합니다.  
   
 ## <a name="reference"></a>참조  

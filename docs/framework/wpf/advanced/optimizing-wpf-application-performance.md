@@ -8,10 +8,10 @@ helpviewer_keywords:
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
 ms.openlocfilehash: 53291a0e428b723cd7a6e7b1184639a7b3c3b972
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59141559"
 ---
 # <a name="optimizing-wpf-application-performance"></a>WPF 애플리케이션 성능 최적화
@@ -23,11 +23,11 @@ ms.locfileid: "59141559"
 ## <a name="in-this-section"></a>섹션 내용  
  [응용 프로그램 성능 계획](planning-for-application-performance.md)  
   
- [하드웨어 활용](optimizing-performance-taking-advantage-of-hardware.md)  
+ [하드웨어 이용](optimizing-performance-taking-advantage-of-hardware.md)  
   
  [레이아웃 및 디자인](optimizing-performance-layout-and-design.md)  
   
- [2D 그래픽 및 이미징](optimizing-performance-2d-graphics-and-imaging.md)  
+ [2차원 그래픽 및 이미징](optimizing-performance-2d-graphics-and-imaging.md)  
   
  [개체 동작](optimizing-performance-object-behavior.md)  
   
@@ -39,9 +39,9 @@ ms.locfileid: "59141559"
   
  [컨트롤](optimizing-performance-controls.md)  
   
- [기타 성능 추천 사항](optimizing-performance-other-recommendations.md)  
+ [기타 성능 권장 사항](optimizing-performance-other-recommendations.md)  
   
- [애플리케이션 시작 시간](application-startup-time.md)  
+ [응용 프로그램 시작 시간](application-startup-time.md)  
   
 ## <a name="see-also"></a>참고자료
 
@@ -62,4 +62,4 @@ ms.locfileid: "59141559"
 - [데이터 바인딩 개요](../data/data-binding-overview.md)
 - [탐색 개요](../app-development/navigation-overview.md)
 - [애니메이션에 대한 유용한 정보](../graphics-multimedia/animation-tips-and-tricks.md)
-- [연습: WPF 애플리케이션에서 애플리케이션 데이터 캐싱](walkthrough-caching-application-data-in-a-wpf-application.md)
+- [연습: WPF 응용 프로그램에서 응용 프로그램 데이터 캐싱](walkthrough-caching-application-data-in-a-wpf-application.md)

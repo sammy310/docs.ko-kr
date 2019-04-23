@@ -8,10 +8,10 @@ ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87ec70b2b27c8886ac9b567498d75f9294437bed
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59141533"
 ---
 # <a name="loader-etw-events"></a>로더 ETW 이벤트
@@ -21,7 +21,7 @@ ms.locfileid: "59141533"
   
  로더 이벤트는 다음으로 다시 구분됩니다.  
   
--   [애플리케이션 도메인 이벤트](#application_domain_events)  
+-   [응용 프로그램 도메인 이벤트](#application_domain_events)  
   
 -   [CLR 로더 어셈블리 이벤트](#clr_loader_assembly_events)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "59141533"
   
 |이벤트|이벤트 ID|설명|  
 |-----------|--------------|-----------------|  
-|`AppDomainLoad_V1` (모든 응용 프로그램 도메인에 대 한 로그)|156|프로세스 수명 중에 애플리케이션 도메인이 만들어질 때마다 발생합니다.|  
+|`AppDomainLoad_V1` (모든 응용 프로그램 도메인에 대해 기록됨)|156|프로세스 수명 중에 애플리케이션 도메인이 만들어질 때마다 발생합니다.|  
 |`AppDomainUnLoad_V1`|157|프로세스 수명 중에 애플리케이션 도메인이 삭제될 때마다 발생합니다.|  
 |`AppDomainDCStart_V1`|157|시작 런다운 중에 애플리케이션 도메인을 열거합니다.|  
 |`AppDomainDCEnd_V1`|158|끝 런다운 중에 애플리케이션 도메인을 열거합니다.|  

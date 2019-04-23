@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
 ms.openlocfilehash: a101b5838b843f0130d16aab6eb199c7a54ca6b9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59139531"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Windows Forms의 추가 보안 고려 사항
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 보안 설정 보다 부분 신뢰 환경에서 로컬 컴퓨터에서 서로 다르게 실행 되도록 응용 프로그램에 발생할 수 있습니다. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 여러 가지 중에서도 파일 시스템, 네트워크 및 관리되지 않는 API와 같은 중요한 로컬 리소스에 대한 액세스를 제한합니다. 보안 설정을 Microsoft Windows API 또는 보안 시스템에서 확인할 수 없는 기타 Api를 호출 하는 기능을 영향을 줍니다. 또한 파일, 데이터 액세스, 인쇄를 비롯한 애플리케이션의 다른 측면에도 영향을 줍니다. 부분 신뢰 환경에서의 파일 및 데이터 액세스에 대한 자세한 내용은 [Windows Forms의 파일 및 데이터 액세스 추가 보안](more-secure-file-and-data-access-in-windows-forms.md)을 참조하세요. 부분 신뢰 환경에서의 인쇄에 대한 자세한 내용은 [Windows Forms의 인쇄 추가 보안](more-secure-printing-in-windows-forms.md)을 참조하세요.  
+[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 보안 설정으로 인해 부분적으로 신뢰할 수 있는 환경에서는 로컬 컴퓨터에서와는 다르게 응용 프로그램이 실행될 수 있습니다. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 여러 가지 중에서도 파일 시스템, 네트워크 및 관리되지 않는 API와 같은 중요한 로컬 리소스에 대한 액세스를 제한합니다. 보안 설정을 Microsoft Windows API 또는 보안 시스템에서 확인할 수 없는 기타 Api를 호출 하는 기능을 영향을 줍니다. 또한 파일, 데이터 액세스, 인쇄를 비롯한 애플리케이션의 다른 측면에도 영향을 줍니다. 부분 신뢰 환경에서의 파일 및 데이터 액세스에 대한 자세한 내용은 [Windows Forms의 파일 및 데이터 액세스 추가 보안](more-secure-file-and-data-access-in-windows-forms.md)을 참조하세요. 부분 신뢰 환경에서의 인쇄에 대한 자세한 내용은 [Windows Forms의 인쇄 추가 보안](more-secure-printing-in-windows-forms.md)을 참조하세요.  
   
  다음 섹션에는 클립보드를 사용 하 여 작업, 창 조작 수행, 부분 신뢰 환경에서 실행 되는 응용 프로그램에서 Windows API를 호출 하는 방법을 설명 합니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "59139531"
 |<xref:System.Windows.Forms.Control>|-시작 된 <xref:System.Windows.Forms.Control.Parent%2A> 속성입니다.<br />-   `Region` 속성을 설정합니다.<br />-호출 된 <xref:System.Windows.Forms.Control.FindForm%2A> , <xref:System.Windows.Forms.Control.Focus%2A>, <xref:System.Windows.Forms.Control.FromChildHandle%2A> 및 <xref:System.Windows.Forms.Control.FromHandle%2A>, <xref:System.Windows.Forms.Control.PreProcessMessage%2A>, <xref:System.Windows.Forms.Control.ReflectMessage%2A>, 또는 <xref:System.Windows.Forms.Control.SetTopLevel%2A> 메서드.<br />-호출 된 <xref:System.Windows.Forms.Control.GetChildAtPoint%2A> 컨트롤을 반환 하는 경우 메서드는 호출 컨트롤의 자식이 아닙니다.<br />-   컨테이너 컨트롤 내에서 컨트롤 포커스를 수정합니다.|  
 |<xref:System.Windows.Forms.Cursor>|-   <xref:System.Windows.Forms.Cursor.Clip%2A> 속성을 설정합니다.<br />-호출 된 <xref:System.Windows.Forms.Control.Hide%2A> 메서드.|  
 |<xref:System.Windows.Forms.DataGrid>|-호출 된 <xref:System.Windows.Forms.ContainerControl.ProcessTabKey%2A> 메서드.|  
-|<xref:System.Windows.Forms.Form>|-시작 합니다 <xref:System.Windows.Forms.Form.ActiveForm%2A> 또는 <xref:System.Windows.Forms.Form.MdiParent%2A> 속성입니다.<br />-설정 된 <xref:System.Windows.Forms.Form.ControlBox%2A>, <xref:System.Windows.Forms.Form.ShowInTaskbar%2A>, 또는 <xref:System.Windows.Forms.Form.TopMost%2A> 속성입니다.<br />-설정 된 <xref:System.Windows.Forms.Form.Opacity%2A> 속성 50% 미만입니다.<br />-설정 된 <xref:System.Windows.Forms.Form.WindowState%2A> 속성을 <xref:System.Windows.Forms.FormWindowState.Minimized> 프로그래밍 방식으로 합니다.<br />-호출 된 <xref:System.Windows.Forms.Form.Activate%2A> 메서드.<br />-사용 된 <xref:System.Windows.Forms.FormBorderStyle.None>, <xref:System.Windows.Forms.FormBorderStyle.FixedToolWindow>, 및 <xref:System.Windows.Forms.FormBorderStyle.SizableToolWindow><xref:System.Windows.Forms.FormBorderStyle> 열거형 값입니다.|  
+|<xref:System.Windows.Forms.Form>|-시작 합니다 <xref:System.Windows.Forms.Form.ActiveForm%2A> 또는 <xref:System.Windows.Forms.Form.MdiParent%2A> 속성입니다.<br />-설정 된 <xref:System.Windows.Forms.Form.ControlBox%2A>, <xref:System.Windows.Forms.Form.ShowInTaskbar%2A>, 또는 <xref:System.Windows.Forms.Form.TopMost%2A> 속성입니다.<br />-설정 된 <xref:System.Windows.Forms.Form.Opacity%2A> 속성 50% 미만입니다.<br />-설정 된 <xref:System.Windows.Forms.Form.WindowState%2A> 속성을 <xref:System.Windows.Forms.FormWindowState.Minimized> 프로그래밍 방식으로 합니다.<br />-호출 된 <xref:System.Windows.Forms.Form.Activate%2A> 메서드.<br />-사용 된 <xref:System.Windows.Forms.FormBorderStyle.None>, <xref:System.Windows.Forms.FormBorderStyle.FixedToolWindow>, 및 <xref:System.Windows.Forms.FormBorderStyle.SizableToolWindow> <xref:System.Windows.Forms.FormBorderStyle> 열거형 값입니다.|  
 |<xref:System.Windows.Forms.NotifyIcon>|-사용 된 <xref:System.Windows.Forms.NotifyIcon> 구성 요소를 완전히 제한 됩니다.|  
   
  합니다 <xref:System.Security.Permissions.UIPermissionWindow.SafeSubWindows> 값으로 제한 뿐만 아니라 다음 표에 나열 된 작업을 제한 합니다 <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> 값입니다.  
@@ -94,4 +94,4 @@ ms.locfileid: "59139531"
 - [Windows Forms의 인쇄 추가 보안](more-secure-printing-in-windows-forms.md)
 - [Windows Forms의 보안 개요](security-in-windows-forms-overview.md)
 - [Windows Forms 보안](windows-forms-security.md)
-- [ClickOnce 애플리케이션 보안](/visualstudio/deployment/securing-clickonce-applications)
+- [ClickOnce 응용 프로그램 보안](/visualstudio/deployment/securing-clickonce-applications)

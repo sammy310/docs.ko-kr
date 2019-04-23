@@ -10,19 +10,19 @@ helpviewer_keywords:
 - transformations [WPF], how-to topics
 ms.assetid: ff71384e-8811-420f-8cc8-0a3332e0397f
 ms.openlocfilehash: 6e630b76e05803ffc4ac3c69c403d1ea2741b112
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59140870"
 ---
 # <a name="transformations-how-to-topics"></a>변환 방법 항목
 이 섹션의에서 항목에서는 개체에 여러 변환을 적용 하는 방법에 설명 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [이벤트 발생 시 요소에 변환 적용](how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
+ [이벤트가 발생할 때 요소에 변환 적용](how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
  [개체에 다중 변환 적용](how-to-apply-multiple-transforms-to-an-object.md)  
- [현재 위치에서 요소 회전](how-to-make-an-element-spin-in-place.md)  
+ [현재 위치에서 요소가 회전하도록 만들기](how-to-make-an-element-spin-in-place.md)  
  [개체 회전](how-to-rotate-an-object.md)  
  [요소 배율 조정](how-to-scale-an-element.md)  
  [요소 기울이기](how-to-skew-an-element.md)  

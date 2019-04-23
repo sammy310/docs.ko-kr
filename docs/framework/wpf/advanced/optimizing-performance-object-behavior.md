@@ -12,10 +12,10 @@ helpviewer_keywords:
 - Freezable objects [WPF], performance
 ms.assetid: 73aa2f47-1d73-439a-be1f-78dc4ba2b5bd
 ms.openlocfilehash: 49318059435c5f5669510f7cf3fb7c93a4bc05e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137438"
 ---
 # <a name="optimizing-performance-object-behavior"></a>성능 최적화: 개체 동작
@@ -25,7 +25,7 @@ ms.locfileid: "59137438"
 ## <a name="not-removing-event-handlers-on-objects-may-keep-objects-alive"></a>개체에 대한 이벤트 처리기를 제거하지 않으면 개체가 활성 상태로 유지될 수 있음  
  개체가 해당 이벤트에 전달하는 대리자는 사실상 해당 개체에 대한 참조입니다. 따라서 이벤트 처리기는 예상보다 오래 개체의 활성 상태를 유지할 수 있습니다. 개체의 이벤트를 수신하도록 등록된 개체를 정리하려면 개체를 해제하기 전에 먼저 대리자를 제거해야 합니다. 불필요한 개체를 활성 상태로 유지하면 애플리케이션의 메모리 사용이 늘어납니다. 이러한 현상은 특히 개체가 논리적 트리 또는 시각적 트리의 루트인 경우 특히 그렇습니다.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 원본과 수신기 간의 개체 수명 관계를 추적 하기 어려운 경우에 유용할 수 있는 이벤트에 대 한 약한 이벤트 수신기 패턴이 도입 되었습니다. 일부 기존 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이벤트에서 이 패턴을 사용하기도 합니다. 사용자 지정 이벤트를 사용하여 개체를 구현하는 경우 이 패턴이 유용할 수 있습니다. 자세한 내용은 [약한 이벤트 패턴](weak-event-patterns.md)을 참조하세요.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에는 소스와 수신기 간의 개체 수명 관계를 추적하기 어려운 경우에 유용할 수 있는 이벤트에 대한 약한 이벤트 수신기 패턴이 도입되었습니다. 일부 기존 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이벤트에서 이 패턴을 사용하기도 합니다. 사용자 지정 이벤트를 사용하여 개체를 구현하는 경우 이 패턴이 유용할 수 있습니다. 자세한 내용은 [약한 이벤트 패턴](weak-event-patterns.md)을 참조하세요.  
   
  지정된 프로세스의 메모리 사용에 대한 정보를 제공할 수 있는 CLR 프로파일러 및 작업 집합 뷰어 등 여러 가지 도구가 있습니다. CLR 프로파일러에는 할당된 형식에 대한 히스토그램, 할당 및 호출 그래프, 다양한 세대의 가비지 수집을 보여 주는 시간 표시 막대, 이러한 수집 이후의 관리되는 힙에 대한 결과 상태, 메서드당 할당 및 어셈블리 로드를 보여 주는 호출 트리 등 할당 프로필에 대한 매우 유용한 여러 뷰가 포함되어 있습니다. 자세한 내용은 [.NET Framework 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=117435)를 참조하세요.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "59137438"
   
  고정 된 <xref:System.Windows.Freezable> 이상 마다 리소스 변경 알림 유지 관리를 확장 해야 하므로 성능을 향상 시킬 수 없습니다. 아래 표에 간단한 크기를 보여 줍니다 <xref:System.Windows.Media.SolidColorBrush> 때 해당 <xref:System.Windows.Freezable.IsFrozen%2A> 속성이 `true`있지 않은 경우에 비해, 합니다. 이 가정에 브러시 하나를 적용 합니다 <xref:System.Windows.Shapes.Shape.Fill%2A> 10 속성 <xref:System.Windows.Shapes.Rectangle> 개체입니다.  
   
-|**상태**|**크기**|  
+|**상태**|**Size**|  
 |---------------|--------------|  
 |고정 <xref:System.Windows.Media.SolidColorBrush>|212바이트|  
 |고정 되지 않은 <xref:System.Windows.Media.SolidColorBrush>|972바이트|  
@@ -103,19 +103,19 @@ ms.locfileid: "59137438"
   
  아래 표에서 경과 된 시간을 추가 하 고 5000 렌더링 <xref:System.Windows.Controls.TextBlock> 요소를 사용 하는 <xref:System.Windows.Controls.StackPanel> 및 <xref:System.Windows.Controls.VirtualizingStackPanel>합니다. 측정값이이 시나리오에서는 텍스트 문자열을 연결 사이의 시간을 나타내는 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 의 속성을 <xref:System.Windows.Controls.ItemsControl> 패널 요소가 텍스트 문자열을 표시 하는 경우에 개체.  
   
-|**호스트 패널**|**렌더링 시간 (ms)**|  
+|**호스트 패널**|**렌더링 시간(ms)**|  
 |--------------------|----------------------------|  
 |<xref:System.Windows.Controls.StackPanel>|3210|  
 |<xref:System.Windows.Controls.VirtualizingStackPanel>|46|  
   
 ## <a name="see-also"></a>참고자료
 
-- [WPF 애플리케이션 성능 최적화](optimizing-wpf-application-performance.md)
-- [응용 프로그램 성능 계획](planning-for-application-performance.md)
-- [하드웨어 활용](optimizing-performance-taking-advantage-of-hardware.md)
+- [WPF 응용 프로그램 성능 최적화](optimizing-wpf-application-performance.md)
+- [애플리케이션 성능 계획](planning-for-application-performance.md)
+- [하드웨어 이용](optimizing-performance-taking-advantage-of-hardware.md)
 - [레이아웃 및 디자인](optimizing-performance-layout-and-design.md)
-- [2D 그래픽 및 이미징](optimizing-performance-2d-graphics-and-imaging.md)
-- [애플리케이션 리소스](optimizing-performance-application-resources.md)
+- [2차원 그래픽 및 이미징](optimizing-performance-2d-graphics-and-imaging.md)
+- [응용 프로그램 리소스](optimizing-performance-application-resources.md)
 - [텍스트](optimizing-performance-text.md)
 - [데이터 바인딩](optimizing-performance-data-binding.md)
-- [기타 성능 추천 사항](optimizing-performance-other-recommendations.md)
+- [기타 성능 권장 사항](optimizing-performance-other-recommendations.md)

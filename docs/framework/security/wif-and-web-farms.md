@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
 ms.openlocfilehash: 2f95213390187648c9f58b9b2bf2d5e3f49fb860
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59135358"
 ---
 # <a name="wif-and-web-farms"></a>WIF 및 웹 팜
@@ -88,7 +88,7 @@ public interface ISessionSecurityTokenCacheService
 }  
 ```  
   
- 다음 코드에서는 WCF 캐싱 서비스의 구현을 보여 줍니다. 이 예제에서는 WIF에 의해 구현되는 메모리 내 기본 세션 토큰 캐시가 사용됩니다. 또는 데이터베이스에서 지원하는 영구 캐시를 구현할 수 있습니다. `ISessionSecurityTokenCacheService` 위에 표시 된 인터페이스를 정의 합니다. 이 예제에서 인터페이스를 구현하는 데 필요한 일부 메서드는 간단한 설명을 위해 표시되지 않습니다.  
+ 다음 코드에서는 WCF 캐싱 서비스의 구현을 보여 줍니다. 이 예제에서는 WIF에 의해 구현되는 메모리 내 기본 세션 토큰 캐시가 사용됩니다. 또는 데이터베이스에서 지원하는 영구 캐시를 구현할 수 있습니다. `ISessionSecurityTokenCacheService`에서는 위에 표시된 인터페이스를 정의합니다. 이 예제에서 인터페이스를 구현하는 데 필요한 일부 메서드는 간단한 설명을 위해 표시되지 않습니다.  
   
 ```  
 using System;  
