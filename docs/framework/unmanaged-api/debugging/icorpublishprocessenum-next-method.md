@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 169716d1a6d0dd633821cc832de96c9a02958d76
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183107"
 ---
-# <a name="icorpublishprocessenumnext-method"></a><span data-ttu-id="2c1b1-102">ICorPublishProcessEnum::Next 메서드</span><span class="sxs-lookup"><span data-stu-id="2c1b1-102">ICorPublishProcessEnum::Next Method</span></span>
-<span data-ttu-id="2c1b1-103">현재 커서 위치부터 컬렉션에서 지정 된 프로세스 수를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="2c1b1-103">Gets the specified number of processes from the collection, starting at the current cursor position.</span></span>  
+# <a name="icorpublishprocessenumnext-method"></a><span data-ttu-id="b68bf-102">ICorPublishProcessEnum::Next 메서드</span><span class="sxs-lookup"><span data-stu-id="b68bf-102">ICorPublishProcessEnum::Next Method</span></span>
+<span data-ttu-id="b68bf-103">현재 커서 위치부터 컬렉션에서 지정 된 프로세스 수를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="b68bf-103">Gets the specified number of processes from the collection, starting at the current cursor position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2c1b1-104">구문</span><span class="sxs-lookup"><span data-stu-id="2c1b1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b68bf-104">구문</span><span class="sxs-lookup"><span data-stu-id="b68bf-104">Syntax</span></span>  
   
 ```  
 HRESULT Next (  
@@ -38,25 +38,25 @@ HRESULT Next (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2c1b1-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="2c1b1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b68bf-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="b68bf-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="2c1b1-106">[in] 검색 프로세스의 수입니다.</span><span class="sxs-lookup"><span data-stu-id="2c1b1-106">[in] The number of processes to be retrieved.</span></span>  
+ <span data-ttu-id="b68bf-106">[in] 검색 프로세스의 수입니다.</span><span class="sxs-lookup"><span data-stu-id="b68bf-106">[in] The number of processes to be retrieved.</span></span>  
   
  `objects`  
- <span data-ttu-id="2c1b1-107">[out] 검색의 배열에 대 한 포인터 [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) 각각 프로세스를 나타내는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="2c1b1-107">[out] A pointer to the array of retrieved [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) objects, each of which represents a process.</span></span>  
+ <span data-ttu-id="b68bf-107">[out] 검색의 배열에 대 한 포인터 [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) 각각 프로세스를 나타내는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="b68bf-107">[out] A pointer to the array of retrieved [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) objects, each of which represents a process.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="2c1b1-108">[out] 실제로 반환 된 프로세스의 수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="2c1b1-108">[out] Pointer to the number of processes actually returned.</span></span> <span data-ttu-id="2c1b1-109">이 값은 null 일 수 있으면 `celt` 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="2c1b1-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="b68bf-108">[out] 실제로 반환 된 프로세스의 수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="b68bf-108">[out] Pointer to the number of processes actually returned.</span></span> <span data-ttu-id="b68bf-109">이 값은 null 일 수 있으면 `celt` 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="b68bf-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2c1b1-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="2c1b1-110">Requirements</span></span>  
- <span data-ttu-id="2c1b1-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="2c1b1-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b68bf-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b68bf-110">Requirements</span></span>  
+ <span data-ttu-id="b68bf-111">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="b68bf-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2c1b1-112">**헤더:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="2c1b1-112">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="b68bf-112">**헤더:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="b68bf-112">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="2c1b1-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2c1b1-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b68bf-113">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b68bf-113">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="2c1b1-114">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="2c1b1-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="b68bf-114">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b68bf-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2c1b1-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="2c1b1-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b68bf-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="b68bf-115">See also</span></span>
 
-- [<span data-ttu-id="2c1b1-116">ICorPublishProcessEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="2c1b1-116">ICorPublishProcessEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)
+- [<span data-ttu-id="b68bf-116">ICorPublishProcessEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b68bf-116">ICorPublishProcessEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)

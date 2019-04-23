@@ -18,19 +18,19 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 661c27b9c21f77104b8a86163d3c92d44f8a85df
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59181781"
 ---
-# <a name="isymunmanagedreaderinitialize-method"></a><span data-ttu-id="09d91-102">ISymUnmanagedReader::Initialize 메서드</span><span class="sxs-lookup"><span data-stu-id="09d91-102">ISymUnmanagedReader::Initialize Method</span></span>
-<span data-ttu-id="09d91-103">이 판독기가 모듈의 파일 이름과 함께, 연결 되는 메타 데이터 가져오기 인터페이스를 사용 하 여 기호 판독기를 초기화 합니다.</span><span class="sxs-lookup"><span data-stu-id="09d91-103">Initializes the symbol reader with the metadata importer interface that this reader will be associated with, along with the file name of the module.</span></span>  
+# <a name="isymunmanagedreaderinitialize-method"></a><span data-ttu-id="bd80e-102">ISymUnmanagedReader::Initialize 메서드</span><span class="sxs-lookup"><span data-stu-id="bd80e-102">ISymUnmanagedReader::Initialize Method</span></span>
+<span data-ttu-id="bd80e-103">이 판독기가 모듈의 파일 이름과 함께, 연결 되는 메타 데이터 가져오기 인터페이스를 사용 하 여 기호 판독기를 초기화 합니다.</span><span class="sxs-lookup"><span data-stu-id="bd80e-103">Initializes the symbol reader with the metadata importer interface that this reader will be associated with, along with the file name of the module.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="09d91-104">이 메서드는 한 번만 호출할 수 있습니다 및 다른 판독기 메서드보다 먼저 호출 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="09d91-104">This method can be called only once, and must be called before any other reader methods.</span></span>  
+>  <span data-ttu-id="bd80e-104">이 메서드는 한 번만 호출할 수 있습니다 및 다른 판독기 메서드보다 먼저 호출 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="bd80e-104">This method can be called only once, and must be called before any other reader methods.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="09d91-105">구문</span><span class="sxs-lookup"><span data-stu-id="09d91-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bd80e-105">구문</span><span class="sxs-lookup"><span data-stu-id="bd80e-105">Syntax</span></span>  
   
 ```  
 HRESULT Initialize (  
@@ -40,28 +40,28 @@ HRESULT Initialize (
     [in]  IStream      *pIStream);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="09d91-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="09d91-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bd80e-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="bd80e-106">Parameters</span></span>  
  `importer`  
- <span data-ttu-id="09d91-107">[in] 이 판독기가 연결 될 하는 메타 데이터 가져오기 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="09d91-107">[in] The metadata importer interface with which this reader will be associated.</span></span>  
+ <span data-ttu-id="bd80e-107">[in] 이 판독기가 연결 될 하는 메타 데이터 가져오기 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="bd80e-107">[in] The metadata importer interface with which this reader will be associated.</span></span>  
   
  `filename`  
- <span data-ttu-id="09d91-108">[in] 모듈의 파일 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="09d91-108">[in] The file name of the module.</span></span> <span data-ttu-id="09d91-109">사용할 수는 `pIStream` 매개 변수 대신 합니다.</span><span class="sxs-lookup"><span data-stu-id="09d91-109">You can use the `pIStream` parameter instead.</span></span>  
+ <span data-ttu-id="bd80e-108">[in] 모듈의 파일 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="bd80e-108">[in] The file name of the module.</span></span> <span data-ttu-id="bd80e-109">사용할 수는 `pIStream` 매개 변수 대신 합니다.</span><span class="sxs-lookup"><span data-stu-id="bd80e-109">You can use the `pIStream` parameter instead.</span></span>  
   
  `searchPath`  
- <span data-ttu-id="09d91-110">[in] 검색할 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="09d91-110">[in] The path to search.</span></span> <span data-ttu-id="09d91-111">이 매개 변수는 선택적 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="09d91-111">This parameter is optional.</span></span>  
+ <span data-ttu-id="bd80e-110">[in] 검색할 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="bd80e-110">[in] The path to search.</span></span> <span data-ttu-id="bd80e-111">이 매개 변수는 선택적 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="bd80e-111">This parameter is optional.</span></span>  
   
  `pIStream`  
- <span data-ttu-id="09d91-112">[in] Filename 매개 변수에 대 안으로 사용 되는 파일 스트림.</span><span class="sxs-lookup"><span data-stu-id="09d91-112">[in] The file stream, used as an alternative to the filename parameter.</span></span>  
+ <span data-ttu-id="bd80e-112">[in] Filename 매개 변수에 대 안으로 사용 되는 파일 스트림.</span><span class="sxs-lookup"><span data-stu-id="bd80e-112">[in] The file stream, used as an alternative to the filename parameter.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="09d91-113">반환 값</span><span class="sxs-lookup"><span data-stu-id="09d91-113">Return Value</span></span>  
- <span data-ttu-id="09d91-114">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="09d91-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="bd80e-113">반환 값</span><span class="sxs-lookup"><span data-stu-id="bd80e-113">Return Value</span></span>  
+ <span data-ttu-id="bd80e-114">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="bd80e-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="09d91-115">설명</span><span class="sxs-lookup"><span data-stu-id="09d91-115">Remarks</span></span>  
- <span data-ttu-id="09d91-116">중 하나만 지정 해야 합니다 `filename` 또는 `pIStream` 매개 변수를 둘 다.</span><span class="sxs-lookup"><span data-stu-id="09d91-116">You need to specify only one of the `filename` or the `pIStream` parameters, not both.</span></span> <span data-ttu-id="09d91-117">`searchPath` 매개 변수는 선택적 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="09d91-117">The `searchPath` parameter is optional.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bd80e-115">설명</span><span class="sxs-lookup"><span data-stu-id="bd80e-115">Remarks</span></span>  
+ <span data-ttu-id="bd80e-116">중 하나만 지정 해야 합니다 `filename` 또는 `pIStream` 매개 변수를 둘 다.</span><span class="sxs-lookup"><span data-stu-id="bd80e-116">You need to specify only one of the `filename` or the `pIStream` parameters, not both.</span></span> <span data-ttu-id="bd80e-117">`searchPath` 매개 변수는 선택적 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="bd80e-117">The `searchPath` parameter is optional.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="09d91-118">요구 사항</span><span class="sxs-lookup"><span data-stu-id="09d91-118">Requirements</span></span>  
- <span data-ttu-id="09d91-119">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="09d91-119">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bd80e-118">요구 사항</span><span class="sxs-lookup"><span data-stu-id="bd80e-118">Requirements</span></span>  
+ <span data-ttu-id="bd80e-119">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="bd80e-119">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="09d91-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="09d91-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bd80e-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="bd80e-120">See also</span></span>
 
-- [<span data-ttu-id="09d91-121">ISymUnmanagedReader 인터페이스</span><span class="sxs-lookup"><span data-stu-id="09d91-121">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="bd80e-121">ISymUnmanagedReader 인터페이스</span><span class="sxs-lookup"><span data-stu-id="bd80e-121">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

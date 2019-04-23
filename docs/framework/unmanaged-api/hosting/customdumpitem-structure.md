@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9000f35e9a8f7ecc6c40cf0ef9c220fc9f4f9c10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59185928"
 ---
-# <a name="customdumpitem-structure"></a><span data-ttu-id="48ef3-102">CustomDumpItem 구조체</span><span class="sxs-lookup"><span data-stu-id="48ef3-102">CustomDumpItem Structure</span></span>
-<span data-ttu-id="48ef3-103">오류 보고에 사용자 지정 덤프에 추가할 항목을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="48ef3-103">Describes an item to be added to a custom dump in error reporting.</span></span>  
+# <a name="customdumpitem-structure"></a><span data-ttu-id="be962-102">CustomDumpItem 구조체</span><span class="sxs-lookup"><span data-stu-id="be962-102">CustomDumpItem Structure</span></span>
+<span data-ttu-id="be962-103">오류 보고에 사용자 지정 덤프에 추가할 항목을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="be962-103">Describes an item to be added to a custom dump in error reporting.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="48ef3-104">구문</span><span class="sxs-lookup"><span data-stu-id="48ef3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="be962-104">구문</span><span class="sxs-lookup"><span data-stu-id="be962-104">Syntax</span></span>  
   
 ```  
 struct {  
@@ -37,25 +37,25 @@ struct {
 } CustomDumpItem;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="48ef3-105">멤버</span><span class="sxs-lookup"><span data-stu-id="48ef3-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="be962-105">멤버</span><span class="sxs-lookup"><span data-stu-id="be962-105">Members</span></span>  
   
-|<span data-ttu-id="48ef3-106">멤버</span><span class="sxs-lookup"><span data-stu-id="48ef3-106">Member</span></span>|<span data-ttu-id="48ef3-107">설명</span><span class="sxs-lookup"><span data-stu-id="48ef3-107">Description</span></span>|  
+|<span data-ttu-id="be962-106">멤버</span><span class="sxs-lookup"><span data-stu-id="be962-106">Member</span></span>|<span data-ttu-id="be962-107">설명</span><span class="sxs-lookup"><span data-stu-id="be962-107">Description</span></span>|  
 |------------|-----------------|  
-|`itemKind`|<span data-ttu-id="48ef3-108">[ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) 추가할 항목의 종류를 나타내는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="48ef3-108">An [ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) value that indicates the kind of item to be added.</span></span>|  
-|`pReserved`|<span data-ttu-id="48ef3-109">현재 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="48ef3-109">Not currently used.</span></span> <span data-ttu-id="48ef3-110">공용 구조체에 추가 된 모든 항목 포인터 크기 보다 더 커야 합니다.</span><span class="sxs-lookup"><span data-stu-id="48ef3-110">Any items added to the union must be no larger than pointer size.</span></span> <span data-ttu-id="48ef3-111">경우는 `struct` 는 필요한 별도로 할당 하며 가리키도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="48ef3-111">If a `struct` is required, you must allocate it separately and point to it.</span></span>|  
+|`itemKind`|<span data-ttu-id="be962-108">[ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) 추가할 항목의 종류를 나타내는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="be962-108">An [ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) value that indicates the kind of item to be added.</span></span>|  
+|`pReserved`|<span data-ttu-id="be962-109">현재 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="be962-109">Not currently used.</span></span> <span data-ttu-id="be962-110">공용 구조체에 추가 된 모든 항목 포인터 크기 보다 더 커야 합니다.</span><span class="sxs-lookup"><span data-stu-id="be962-110">Any items added to the union must be no larger than pointer size.</span></span> <span data-ttu-id="be962-111">경우는 `struct` 는 필요한 별도로 할당 하며 가리키도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="be962-111">If a `struct` is required, you must allocate it separately and point to it.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="48ef3-112">설명</span><span class="sxs-lookup"><span data-stu-id="48ef3-112">Remarks</span></span>  
- <span data-ttu-id="48ef3-113">[Iclrerrorreportingmanager:: Begincustomdump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) 형식의 매개 변수 `CustomDumpItem`합니다.</span><span class="sxs-lookup"><span data-stu-id="48ef3-113">[ICLRErrorReportingManager::BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) takes a parameter of type `CustomDumpItem`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="be962-112">설명</span><span class="sxs-lookup"><span data-stu-id="be962-112">Remarks</span></span>  
+ <span data-ttu-id="be962-113">[Iclrerrorreportingmanager:: Begincustomdump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) 형식의 매개 변수 `CustomDumpItem`합니다.</span><span class="sxs-lookup"><span data-stu-id="be962-113">[ICLRErrorReportingManager::BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) takes a parameter of type `CustomDumpItem`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="48ef3-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="48ef3-114">Requirements</span></span>  
- <span data-ttu-id="48ef3-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="48ef3-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="be962-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="be962-114">Requirements</span></span>  
+ <span data-ttu-id="be962-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="be962-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="48ef3-116">**헤더:** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="48ef3-116">**Header:** MSCorEE.idl</span></span>  
+ <span data-ttu-id="be962-116">**헤더:** MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="be962-116">**Header:** MSCorEE.idl</span></span>  
   
- <span data-ttu-id="48ef3-117">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="48ef3-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="be962-117">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="be962-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="48ef3-118">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="48ef3-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="be962-118">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="be962-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="48ef3-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="48ef3-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="be962-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="be962-119">See also</span></span>
 
-- [<span data-ttu-id="48ef3-120">호스팅 구조체</span><span class="sxs-lookup"><span data-stu-id="48ef3-120">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [<span data-ttu-id="be962-120">호스팅 구조체</span><span class="sxs-lookup"><span data-stu-id="be962-120">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
