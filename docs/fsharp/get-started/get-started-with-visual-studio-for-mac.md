@@ -1,4 +1,4 @@
----
+﻿---
 title: Mac 용 Visual Studio에서 F# 시작
 description: Mac 용 Visual Studio에서 F#을 사용하는 방법을 알아봅니다.
 ms.date: 07/03/2018
@@ -91,7 +91,7 @@ val isOdd : x:int -> bool
 val it : bool = false
 ```
 
-위의 새 함수를 정의 `isOdd`를 사용 하는 `int` 홀수 인지를 확인!  서로 다른 입력을 사용 하 여 반환 값을 확인 하려면이 함수를 호출할 수 있습니다.  함수 호출 내에서 함수를 호출할 수 있습니다.
+위의 함수는 새로운 함수 `isOdd`를 정의합니다. `isOdd`는 `int`를 취해 홀수인지 확인합니다. 이 함수를 호출하여 다른 입력 값으로 무엇이 반환되는지 확인할 수 있습니다. 함수 호출 내에서 함수를 호출할 수 있습니다.
 
 ```
 > isOdd (square 15);;
@@ -117,6 +117,6 @@ val it : bool = true
 
 - [Visual F#](../index.md)
 - [F# 둘러보기](../tour.md)
-- [F#언어 참조](../language-reference/index.md)
+- [F# 언어 참조](../language-reference/index.md)
 - [형식 유추](../language-reference/type-inference.md)
 - [기호 및 연산자 참조](../language-reference/symbol-and-operator-reference/index.md)
