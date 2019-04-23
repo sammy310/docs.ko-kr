@@ -1,18 +1,11 @@
-items:
 - name: 식 트리
   href: index.md
   items:
-  - name: '방법: 식 트리 실행'
-    href: how-to-execute-expression-trees.md
-  - name: '방법: 식 트리 수정'
-    href: how-to-modify-expression-trees.md
-  - name: '방법: 식 트리를 사용하여 동적 쿼리 빌드'
-    href: how-to-use-expression-trees-to-build-dynamic-queries.md
-  - name: 식 트리 디버그
-    href: debugging-expression-trees-in-visual-studio.md
-ms.openlocfilehash: 996a32e179fa654f5e9cfa4ea70ceb450474d6b4
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470940"
+    - name: '방법: 식 트리 실행'
+      href: how-to-execute-expression-trees.md
+    - name: '방법: 식 트리 수정'
+      href: how-to-modify-expression-trees.md
+    - name: '방법: 식 트리를 사용하여 동적 쿼리 빌드'
+      href: how-to-use-expression-trees-to-build-dynamic-queries.md
+    - name: 식 트리 디버그
+      href: debugging-expression-trees-in-visual-studio.md

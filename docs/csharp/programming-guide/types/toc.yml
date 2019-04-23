@@ -1,25 +1,18 @@
-items:
 - name: 유형
   href: index.md
   items:
-  - name: 캐스팅 및 형식 변환
-    href: casting-and-type-conversions.md
-  - name: boxing 및 unboxing
-    href: boxing-and-unboxing.md
-  - name: 동적 형식 사용
-    href: using-type-dynamic.md
-    items:
-    - name: '연습: 동적 개체 만들기 및 사용(C# 및 Visual Basic)'
-      href: walkthrough-creating-and-using-dynamic-objects.md
-  - name: '방법: 바이트 배열을 정수로 변환'
-    href: how-to-convert-a-byte-array-to-an-int.md
-  - name: '방법: 문자열을 숫자로 변환'
-    href: how-to-convert-a-string-to-a-number.md
-  - name: '방법: 16진수 문자열과 숫자 형식 간 변환'
-    href: how-to-convert-between-hexadecimal-strings-and-numeric-types.md
-ms.openlocfilehash: ec544bd0f41d24e9775277ac1968787de9391dd5
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469825"
+    - name: 캐스팅 및 형식 변환
+      href: casting-and-type-conversions.md
+    - name: boxing 및 unboxing
+      href: boxing-and-unboxing.md
+    - name: 동적 형식 사용
+      href: using-type-dynamic.md
+      items:
+        - name: '연습: 동적 개체 만들기 및 사용(C# 및 Visual Basic)'
+          href: walkthrough-creating-and-using-dynamic-objects.md
+    - name: '방법: 바이트 배열을 정수로 변환'
+      href: how-to-convert-a-byte-array-to-an-int.md
+    - name: '방법: 문자열을 숫자로 변환'
+      href: how-to-convert-a-string-to-a-number.md
+    - name: '방법: 16진수 문자열과 숫자 형식 간 변환'
+      href: how-to-convert-between-hexadecimal-strings-and-numeric-types.md

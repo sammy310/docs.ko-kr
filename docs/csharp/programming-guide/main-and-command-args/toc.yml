@@ -1,18 +1,11 @@
-items:
 - name: Main() 및 명령줄 인수
   href: index.md
   items:
-  - name: 명령줄 인수
-    href: command-line-arguments.md
-  - name: '방법: 명령줄 인수 표시'
-    href: how-to-display-command-line-arguments.md
-  - name: '방법: foreach를 사용하여 명령줄 인수에 액세스'
-    href: how-to-access-command-line-arguments-using-foreach.md
-  - name: Main() 반환 값
-    href: main-return-values.md
-ms.openlocfilehash: f46f240118ac595dc8d933ecd5f7efbf16cb25ab
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470380"
+    - name: 명령줄 인수
+      href: command-line-arguments.md
+    - name: '방법: 명령줄 인수 표시'
+      href: how-to-display-command-line-arguments.md
+    - name: '방법: foreach를 사용하여 명령줄 인수에 액세스'
+      href: how-to-access-command-line-arguments-using-foreach.md
+    - name: Main() 반환 값
+      href: main-return-values.md

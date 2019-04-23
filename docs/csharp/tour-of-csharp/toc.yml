@@ -1,32 +1,25 @@
-items:
-- name: C# 둘러보기
+- name: 'C# 둘러보기'
   href: index.md
   items:
-  - name: 프로그램 구조
-    href: program-structure.md
-  - name: 형식 및 변수
-    href: types-and-variables.md
-  - name: 식
-    href: expressions.md
-  - name: 문
-    href: statements.md
-  - name: 클래스 및 개체
-    href: classes-and-objects.md
-  - name: 구조체
-    href: structs.md
-  - name: 배열
-    href: arrays.md
-  - name: 인터페이스
-    href: interfaces.md
-  - name: 열거형
-    href: enums.md
-  - name: 대리자
-    href: delegates.md
-  - name: 특성
-    href: attributes.md
-ms.openlocfilehash: 9f1265c48bea8f76bd352eb95605187b1385cae5
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470049"
+    - name: 프로그램 구조
+      href: program-structure.md
+    - name: 형식 및 변수
+      href: types-and-variables.md
+    - name: 식
+      href: expressions.md
+    - name: 문
+      href: statements.md
+    - name: 클래스 및 개체
+      href: classes-and-objects.md
+    - name: 구조체
+      href: structs.md
+    - name: 배열
+      href: arrays.md
+    - name: 인터페이스
+      href: interfaces.md
+    - name: 열거형
+      href: enums.md
+    - name: 대리자
+      href: delegates.md
+    - name: 특성
+      href: attributes.md

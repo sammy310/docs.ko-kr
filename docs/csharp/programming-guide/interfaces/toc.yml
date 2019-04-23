@@ -1,16 +1,9 @@
-items:
 - name: 인터페이스
   href: index.md
   items:
-  - name: 명시적 인터페이스 구현
-    href: explicit-interface-implementation.md
-  - name: '방법: 인터페이스 멤버를 명시적으로 구현'
-    href: how-to-explicitly-implement-interface-members.md
-  - name: '방법: 두 인터페이스의 멤버를 명시적으로 구현'
-    href: how-to-explicitly-implement-members-of-two-interfaces.md
-ms.openlocfilehash: e57ba8a9916b35c4bfdedba8f720615ea1eaf727
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470740"
+    - name: 명시적 인터페이스 구현
+      href: explicit-interface-implementation.md
+    - name: '방법: 인터페이스 멤버를 명시적으로 구현'
+      href: how-to-explicitly-implement-interface-members.md
+    - name: '방법: 두 인터페이스의 멤버를 명시적으로 구현'
+      href: how-to-explicitly-implement-members-of-two-interfaces.md
