@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2b5646a1a556c57814602790d5f17104d2148e5
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: e3eb5c9686f54bcaacef8d593f0ace4804d4ae60
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410747"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59098223"
 ---
 # <a name="default-marshaling-for-arrays"></a>배열에 대한 기본 마샬링
 전체적으로 관리 코드로 구성된 애플리케이션에서는 공용 언어 런타임이 배열 형식을 In/Out 매개 변수로 전달합니다. 반면 interop 마샬러는 기본적으로 배열을 In 매개 변수로 전달합니다.  
@@ -361,6 +361,7 @@ public struct MyStruct {
 ```  
   
 ## <a name="see-also"></a>참고 항목
+
 - [기본 마샬링 동작](default-marshaling-behavior.md)
 - [Blittable 형식 및 비 Blittable 형식](blittable-and-non-blittable-types.md)
 - [방향 특성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))

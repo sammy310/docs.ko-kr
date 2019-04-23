@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d51fcbdeeaa1fe30bbdeff5eb85a1c15fa9b4847
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: dc02178223e48c7c578d10ba92123d9436d4f439
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221084"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59097267"
 ---
 # <a name="packaging-an-assembly-for-com"></a>COM에서 사용할 어셈블리의 패키징
 COM 개발자는 애플리케이션에 통합하려는 관리 형식에 대한 다음 정보를 활용할 수 있습니다.  
@@ -81,6 +81,7 @@ COM 개발자는 애플리케이션에 통합하려는 관리 형식에 대한 �
  [.NET 서비스 설치 도구(Regsvcs.exe)](../tools/regsvcs-exe-net-services-installation-tool.md)는 Windows 2000 구성 요소 서비스를 관리 클래스에 추가하고 여러 작업을 단일 도구에 결합합니다. 어셈블리를 로드하고 등록하는 외에도 Regsvcs.exe는 형식 라이브러리를 생성하고 등록하며 기존 COM+ 1.0 애플리케이션에 설치할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - <xref:System.Runtime.InteropServices.ITypeLibConverter>
 - [.NET Framework 구성 요소를 COM에 노출](exposing-dotnet-components-to-com.md)

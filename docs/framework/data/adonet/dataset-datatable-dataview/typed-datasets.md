@@ -3,10 +3,10 @@ title: 형식화된 데이터 집합
 ms.date: 03/30/2017
 ms.assetid: 033d2548-cf24-4c05-8179-67d8b009c048
 ms.openlocfilehash: 92ed3f8fd392238785fd2d205668f14fe477f2b8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59098659"
 ---
 # <a name="typed-datasets"></a>형식화된 데이터 집합
@@ -20,10 +20,10 @@ ms.locfileid: "59098659"
  [강력한 형식의 데이터 세트 생성](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-strongly-typed-datasets.md)  
  만들고 강력한 형식의 사용 방법에 설명 **데이터 집합**합니다.  
   
- [형식화된 데이터 집합에 주석 지정](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/annotating-typed-datasets.md)  
+ [형식화된 데이터 세트에 주석 지정](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/annotating-typed-datasets.md)  
  강력한 형식의 생성 하는 데 XML 스키마 정의 언어 (XSD) 스키마에 주석을 추가 하는 방법에 설명 **데이터 집합**으로 지정 **데이터 집합** 기본 스키마를 변경 하지 않고 요소 이름입니다.  
   
 ## <a name="see-also"></a>참고자료
 
-- [DataSets, DataTables 및 DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [DataSet, DataTable 및 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

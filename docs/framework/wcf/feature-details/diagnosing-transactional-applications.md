@@ -3,10 +3,10 @@ title: 트랜잭션 응용 프로그램 진단
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
 ms.openlocfilehash: aca5f95e2085dfadf06da35dfd86af72c0b6092d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101714"
 ---
 # <a name="diagnosing-transactional-applications"></a>트랜잭션 응용 프로그램 진단
@@ -95,7 +95,7 @@ ms.locfileid: "59101714"
   
      WS-AtomicTransaction 추적을 사용 하 여 사용할 수는 [WS-AtomicTransaction 구성 유틸리티 (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)합니다. 이러한 추적을 통해 시스템 내의 트랜잭션 및 참여 상태를 정확하게 판단할 수 있습니다. 또한 내부 서비스 모델 추적을 사용하기 위해 `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` 레지스트리 키를 유효한 <xref:System.Diagnostics.SourceLevels> 열거형 값으로 설정할 수 있습니다. 메시지는 다른 WCF 응용 프로그램과 동일한 방식으로 로깅을 활성화할 수 있습니다.  
   
--   `System.Transactions` 추적(tracing)  
+-   `System.Transactions` 추적  
   
      OleTransactions 프로토콜을 사용하는 경우 프로토콜 메시지를 추적할 수 없습니다. <xref:System.Transactions> 인프라가 제공하는 추적 지원(OleTransactions 사용)을 통해 사용자는 트랜잭션에 발생된 이벤트를 확인할 수 있습니다. <xref:System.Transactions> 응용 프로그램에 대한 추적을 사용하기 위해 다음 코드를 `App.config` 구성 파일에 포함합니다.  
   

@@ -5,10 +5,10 @@ ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9015ec35c2a3d13b986eb9524e4f2984d909eb21
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59098236"
 ---
 # <a name="runtime-directive-policy-settings"></a>런타임 지시문 정책 설정
@@ -24,28 +24,28 @@ ms.locfileid: "59098236"
   
 -   리플렉션 정책 형식은 런타임에 리플렉션에 사용할 수 있는 메타데이터를 결정합니다.  
   
-    -   `Activate` 인스턴스를 활성화할 수 있도록 생성자에 대 한 런타임 액세스를 제어 합니다.  
+    -   `Activate` - 인스턴스를 활성화할 수 있도록 생성자에 대한 런타임 액세스를 제어합니다.  
   
-    -   `Browse` 컨트롤에 대 한 정보 쿼리 프로그램 요소입니다.  
+    -   `Browse` - 프로그램 요소에 대한 정보 쿼리를 제어합니다.  
   
-    -   `Dynamic` 모든 형식과 멤버에 동적 사용에 대 한 런타임 액세스 제어 프로그래밍 합니다.  
+    -   `Dynamic` - 동적 프로그래밍을 사용할 수 있도록 모든 형식 및 멤버에 대한 런타임 액세스를 제어합니다.  
   
      다음 표에는 리플렉션 정책 형식과 해당 형식을 사용할 수 있는 프로그램 요소가 나와 있습니다.  
   
     |요소|Activate|Browse|동적|  
     |-------------|--------------|------------|-------------|  
-    |[\<응용 프로그램 >](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|  
-    |[\<어셈블리 >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
+    |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|  
+    |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
     |[\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|  
-    |[\<이벤트 >](../../../docs/framework/net-native/event-element-net-native.md)||✓|✓|  
-    |[\<필드 >](../../../docs/framework/net-native/field-element-net-native.md)||✓|✓|  
+    |[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)||✓|✓|  
+    |[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)||✓|✓|  
     |[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|  
     |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|  
-    |[\<메서드 >](../../../docs/framework/net-native/method-element-net-native.md)||✓|✓|  
+    |[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)||✓|✓|  
     |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)||✓|✓|  
-    |[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|  
+    |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|  
     |[\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|  
-    |[\<속성 >](../../../docs/framework/net-native/property-element-net-native.md)||✓|✓|  
+    |[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)||✓|✓|  
     |[\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|  
     |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|  
     |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|  
@@ -53,30 +53,30 @@ ms.locfileid: "59098236"
   
 -   Serialization 정책 형식에 따라 런타임에 serialization 및 deserialization에 사용할 수 있는 메타데이터가 결정됩니다.  
   
-    -   `Serialize` 생성자, 필드 및 Newtonsoft JSON serializer 등의 타사 라이브러리를 통해 직렬화 할 형식 인스턴스를 사용 하도록 설정 하려면 속성에 대 한 런타임 액세스를 제어 합니다.  
+    -   `Serialize` - Newtonsoft JSON serializer 등의 타사 라이브러리를 통해 형식 인스턴스를 serialize할 수 있도록 생성자, 필드 및 속성에 대한 런타임 액세스를 제어합니다.  
   
-    -   `DataContractSerializer` 생성자, 필드 및 형식 인스턴스를 serialize 할 수 있도록 속성에 대 한 런타임 액세스를 제어 합니다 <xref:System.Runtime.Serialization.DataContractSerializer> 클래스입니다.  
+    -   `DataContractSerializer` - <xref:System.Runtime.Serialization.DataContractSerializer> 클래스가 형식 인스턴스를 serialize할 수 있도록 생성자, 필드 및 속성에 대한 런타임 액세스를 제어합니다.  
   
-    -   `DataContractJsonSerializer` 생성자, 필드 및 형식 인스턴스를 serialize 할 수 있도록 속성에 대 한 런타임 액세스를 제어 합니다 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 클래스입니다.  
+    -   `DataContractJsonSerializer` - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 클래스가 형식 인스턴스를 serialize할 수 있도록 생성자, 필드 및 속성에 대한 런타임 액세스를 제어합니다.  
   
-    -   `XmlSerializer` 생성자, 필드 및 형식 인스턴스를 serialize 할 수 있도록 속성에 대 한 런타임 액세스를 제어 합니다 <xref:System.Xml.Serialization.XmlSerializer> 클래스입니다.  
+    -   `XmlSerializer` - <xref:System.Xml.Serialization.XmlSerializer> 클래스가 형식 인스턴스를 serialize할 수 있도록 생성자, 필드 및 속성에 대한 런타임 액세스를 제어합니다.  
   
      다음 표에는 serialization 정책 형식과 해당 형식을 사용할 수 있는 프로그램 요소가 나와 있습니다.  
   
     |요소|Serialize|DataContractSerializer|DataContractJsonSerializer|XmlSerializer|  
     |-------------|---------------|----------------------------|--------------------------------|-------------------|  
-    |[\<응용 프로그램 >](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<어셈블리 >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|✓|  
     |[\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<이벤트 >](../../../docs/framework/net-native/event-element-net-native.md)|||||  
-    |[\<필드 >](../../../docs/framework/net-native/field-element-net-native.md)|✓||||  
+    |[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|||||  
+    |[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|✓||||  
     |[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|✓|  
     |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<메서드 >](../../../docs/framework/net-native/method-element-net-native.md)|||||  
+    |[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|||||  
     |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|||||  
-    |[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|✓|  
     |[\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<속성 >](../../../docs/framework/net-native/property-element-net-native.md)|✓||||  
+    |[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|✓||||  
     |[\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|✓|  
     |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|✓|  
     |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|✓|  
@@ -84,28 +84,28 @@ ms.locfileid: "59098236"
   
 -   interop 정책 형식에 따라 런타임에 참조 형식, 값 형식 및 함수 포인터를 COM 및 Windows 런타임으로 전달하는 데 사용할 수 있는 메타데이터가 결정됩니다.  
   
-    -   `MarshalObject` COM 및 참조 형식에 대 한 Windows 런타임으로 네이티브 마샬링을 제어 합니다.  
+    -   `MarshalObject` - 참조 형식에 대해 COM 및 Windows 런타임으로의 네이티브 마샬링을 제어합니다.  
   
-    -   `MarshalDelegate` 대리자 형식을 함수 포인터로 네이티브 마샬링을 제어 합니다.  
+    -   `MarshalDelegate` - 대리자 형식을 함수 포인터로 마샬링하는 네이티브 마샬링을 제어합니다.  
   
-    -   `MarshalStructure` COM 및 값 형식에 대 한 Windows 런타임으로 네이티브 마샬링을 제어 합니다.  
+    -   `MarshalStructure` - 값 형식에 대해 COM 및 Windows 런타임으로의 네이티브 마샬링을 제어합니다.  
   
      다음 표에는 interop 정책 형식과 해당 형식을 사용할 수 있는 프로그램 요소가 나와 있습니다.  
   
     |요소|MarshalObject|MarshalDelegate|MarshalStructure|  
     |-------------|-------------------|---------------------|----------------------|  
-    |[\<응용 프로그램 >](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|  
-    |[\<어셈블리 >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
+    |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|  
+    |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
     |[\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|  
-    |[\<이벤트 >](../../../docs/framework/net-native/event-element-net-native.md)||||  
-    |[\<필드 >](../../../docs/framework/net-native/field-element-net-native.md)||||  
+    |[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)||||  
+    |[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)||||  
     |[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|  
     |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|  
-    |[\<메서드 >](../../../docs/framework/net-native/method-element-net-native.md)||||  
+    |[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)||||  
     |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)||||  
-    |[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|  
+    |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|  
     |[\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|  
-    |[\<속성 >](../../../docs/framework/net-native/property-element-net-native.md)||||  
+    |[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)||||  
     |[\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|  
     |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|  
     |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|  
@@ -114,10 +114,10 @@ ms.locfileid: "59098236"
 ## <a name="policy-settings"></a>정책 설정  
  각 정책 형식은 다음 표에 나와 있는 값 중 하나로 설정할 수 있습니다. 형식 멤버를 나타내는 요소는 기타 요소와는 다른 정책 설정 집합을 지원합니다.  
   
-|정책 설정|설명|`Assembly`를 `Namespace`하십시오 `Type`, 및 `TypeInstantiation` 요소|`Event``Field`, `Method`하십시오 `MethodInstantiation`, 및 `Property` 요소|  
+|정책 설정|설명|`Assembly`, `Namespace`, `Type` 및 `TypeInstantiation` 요소|`Event`, `Field`, `Method`, `MethodInstantiation` 및 `Property` 요소|  
 |--------------------|-----------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
 |`All`|.NET 네이티브 도구 체인에서 제거하지 않는 모든 형식과 멤버에 대해 정책을 사용하도록 설정합니다.|✓||  
-|`Auto`|해당 프로그램 요소에 대한 정책 형식으로 기본 정책을 사용해야 함을 지정합니다. 이 설정은 해당 정책 형식에 대해 정책을 생략하는 것과 같습니다. `Auto` 부모 요소에서 정책이 상속 됨을 나타내기 위해 일반적으로 사용 됩니다.|✓|✓|  
+|`Auto`|해당 프로그램 요소에 대한 정책 형식으로 기본 정책을 사용해야 함을 지정합니다. 이 설정은 해당 정책 형식에 대해 정책을 생략하는 것과 같습니다. `Auto`는 보통 부모 요소에서 정책이 상속됨을 나타내는 데 사용됩니다.|✓|✓|  
 |`Excluded`|특정 프로그램 요소에 대해 정책을 사용하지 않음을 나타냅니다. 예를 들어<br /><br /> `<Type Name="BusinessClasses.Person" Browse="Excluded" Dynamic="Excluded" />`<br /><br /> 런타임 지시문은 `BusinessClasses.Person` 클래스의 메타데이터를 검색하거나 `Person` 개체를 동적으로 인스턴스화 및 수정하는 데 사용할 수 없음을 지정합니다.|✓|✓|  
 |`Included`|부모 형식의 메타데이터를 사용할 수 있는 경우 정책을 사용하도록 설정합니다.||✓|  
 |`Public`|도구 체인이 형식 또는 멤버를 불필요한 것으로 결정하여 제거하는 경우가 아니면 public 형식 또는 멤버에 대해 정책을 사용하도록 설정합니다. 이 설정은 도구 체인에서 불필요한 것으로 결정하는 public 형식 및 멤버도 항상 사용할 수 있도록 하는 `Required Public`과는 다릅니다.|✓||  

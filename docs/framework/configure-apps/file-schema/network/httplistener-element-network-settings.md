@@ -1,12 +1,12 @@
 ---
-title: <httpListener> 요소 (네트워크 설정)
+title: <httpListener> 요소(네트워크 설정)
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
 ms.openlocfilehash: b3a6d527bc1bf8210bb85424fa218fda495a2a2d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59099745"
 ---
 # <a name="httplistener-element-network-settings"></a>\<httpListener > 요소 (네트워크 설정)
@@ -43,7 +43,7 @@ ms.locfileid: "59099745"
   
 |**요소**|**설명**|  
 |-----------------|---------------------|  
-|[설정](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<xref:System.Net> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<xref:System.Net> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.|  
   
 ## <a name="remarks"></a>설명  
  합니다 **unescapeRequestUrl** 하는 경우 특성을 나타냅니다 <xref:System.Net.HttpListener> 는 백분율로 인코딩된 값 변환 되 고 다른 정규화 단계에 따라 변환 된 URI 대신 이스케이프 되지 않은 원시 URI를 사용 합니다.  

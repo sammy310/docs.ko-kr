@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0a553f2cbac6110e82803e6d0dd872cfaa15d773
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59099926"
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>ICorDebugNativeFrame2::IsMatchingParentFrame 메서드
@@ -49,7 +49,7 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
 |-------------|-----------------|  
 |S_OK|부모 상태가 반환 되었습니다.|  
 |E_FAIL|부모 상태를 반환 하지 못했습니다.|  
-|E_INVALIDARG|`pPotentialParentFrame` 또는 `pIsParent` null입니다.|  
+|E_INVALIDARG|`pPotentialParentFrame` 또는 `pIsParent`이 null입니다.|  
   
 ## <a name="exceptions"></a>예외  
   

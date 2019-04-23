@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 52257b30b8172b80f968df25115956b6995c1552
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101590"
 ---
 # <a name="iclrruntimeinfoisloadable-method"></a>ICLRRuntimeInfo::IsLoadable 메서드
@@ -44,7 +44,7 @@ HRESULT IsLoadable(
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_POINTER|`pbLoadable` null입니다.|  
+|E_POINTER|`pbLoadable`가 null입니다.|  
   
 ## <a name="remarks"></a>설명  
  다른 런타임 프로세스에 이미 로드 하 고이 인터페이스와 연결 된 런타임 in-process side-by-side-실행에 로드할 수 있습니다 `pbLoadable` 반환 `true`합니다. 두 개의 런타임 side-by-side-in-process로 실행할 수 없는 경우 `pbLoadable` 반환 `false`합니다. 예를 들어,는 CLR (공용 언어 런타임) 버전 4-side-by-side CLR 버전 2.0 사용 하 여 동일한 프로세스에서 또는 CLR 버전 1.1 실행할 수 있습니다. 그러나 CLR 버전 1.1 및 CLR 버전 2.0-병렬 처리를 실행할 수 없습니다.  

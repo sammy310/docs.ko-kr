@@ -11,10 +11,10 @@ helpviewer_keywords:
 - ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
 ms.openlocfilehash: fdbc69634e86992e71cfccdc080829b6b45f963c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100932"
 ---
 # <a name="xclassmodifier-directive"></a>x:ClassModifier 지시문
@@ -58,5 +58,5 @@ XAML 컴파일 동작을 수정 하는 경우 `x:Class` 도 제공 됩니다. �
 - [x:Class 지시문](x-class-directive.md)
 - [WPF의 코드 숨김 및 XAML](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
 - [x:FieldModifier 지시문](x-fieldmodifier-directive.md)
-- [보안(WPF)](../wpf/security-wpf.md)
+- [보안 (WPF)](../wpf/security-wpf.md)
 - [WPF에서 System.Xaml로 마이그레이션된 형식](types-migrated-from-wpf-to-system-xaml.md)

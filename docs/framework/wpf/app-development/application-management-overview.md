@@ -8,10 +8,10 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
 ms.openlocfilehash: 687037d4299c8a53a2dcd644fd778081b5e7a0a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100082"
 ---
 # <a name="application-management-overview"></a>애플리케이션 관리 개요
@@ -105,7 +105,7 @@ ms.locfileid: "59100082"
   
 <a name="Getting_the_Current_Application"></a>   
 ## <a name="getting-the-current-application"></a>현재 애플리케이션 가져오기  
- 때문에 기능의 합니다 <xref:System.Windows.Application> 클래스는 응용 프로그램 간에 공유 되며, 하나의 인스턴스만 있을 수 있습니다 합니다 <xref:System.Windows.Application> 당 클래스 <xref:System.AppDomain>합니다. 이 적용 하는 <xref:System.Windows.Application> 클래스는 singleton 클래스로 구현 됩니다 (참조 [에서 Singleton 구현 C# ](https://go.microsoft.com/fwlink/?LinkId=100567))를 자체의 단일 인스턴스를 만들고 제공 하는 공유 액세스를 사용 하 여는 `static`<xref:System.Windows.Application.Current%2A> 속성입니다.  
+ 때문에 기능의 합니다 <xref:System.Windows.Application> 클래스는 응용 프로그램 간에 공유 되며, 하나의 인스턴스만 있을 수 있습니다 합니다 <xref:System.Windows.Application> 당 클래스 <xref:System.AppDomain>합니다. 이 적용 하는 <xref:System.Windows.Application> 클래스는 singleton 클래스로 구현 됩니다 (참조 [C#에서 Singleton 구현](https://go.microsoft.com/fwlink/?LinkId=100567))를 자체의 단일 인스턴스를 만들고 제공 하는 공유 액세스를 사용 하 여 합니다 `static` <xref:System.Windows.Application.Current%2A> 속성입니다.  
   
  다음 코드에 대 한 참조를 확보 하는 방법을 보여 줍니다 합니다 <xref:System.Windows.Application> 현재 <xref:System.AppDomain>합니다.  
   
@@ -359,7 +359,7 @@ ms.locfileid: "59100082"
 - <xref:System.Windows.Application>
 - [WPF 창 개요](wpf-windows-overview.md)
 - [탐색 개요](navigation-overview.md)
-- [WPF 애플리케이션 리소스, 콘텐츠 및 데이터 파일](wpf-application-resource-content-and-data-files.md)
+- [WPF 응용 프로그램 리소스, 콘텐츠 및 데이터 파일](wpf-application-resource-content-and-data-files.md)
 - [WPF의 Pack URI](pack-uris-in-wpf.md)
-- [응용 프로그램 모델: 방법 항목](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
-- [애플리케이션 개발](index.md)
+- [응용 프로그램 모델: 방법 도움말 항목](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
+- [응용 프로그램 개발](index.md)

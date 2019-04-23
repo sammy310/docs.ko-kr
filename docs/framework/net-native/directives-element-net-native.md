@@ -5,10 +5,10 @@ ms.assetid: 444846f3-48d5-4341-a43e-69f7221389eb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5cfc9dc5c8122f9b1b1696cedcd5d9a8ceead403
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100225"
 ---
 # <a name="directives-element-net-native"></a>\<지시문 > 요소 (.NET 네이티브)
@@ -34,7 +34,7 @@ ms.locfileid: "59100225"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<응용 프로그램 >](../../../docs/framework/net-native/application-element-net-native.md)|해당 메타데이터를 리플렉션에 사용할 수 있는 응용 프로그램 수준 형식 및 형식 멤버의 컨테이너로 사용됩니다.|  
+|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|해당 메타데이터를 리플렉션에 사용할 수 있는 응용 프로그램 수준 형식 및 형식 멤버의 컨테이너로 사용됩니다.|  
 |[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|런타임에 자식 형식 및 형식 멤버에 메타데이터가 필요한 어셈블리를 정의합니다.|  
   
 ## <a name="remarks"></a>설명  
