@@ -1,5 +1,5 @@
 ---
-title: <add> ConnectionManagement (네트워크 설정)에 대 한 요소
+title: connectionManagement의 <add> 요소(네트워크 설정)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -11,10 +11,10 @@ helpviewer_keywords:
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
 ms.openlocfilehash: 3a046fd386536b29ea2dcad5660c65c08b7e4478
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59204252"
 ---
 # <a name="add-element-for-connectionmanagement-network-settings"></a>\<추가 > connectionManagement (네트워크 설정)에 대 한 요소

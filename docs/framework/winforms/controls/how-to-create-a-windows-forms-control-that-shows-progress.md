@@ -11,10 +11,10 @@ helpviewer_keywords:
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
 ms.openlocfilehash: 1f457d6e2b0eb73da7a16dc93ea80a14ddb4b2c2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59202016"
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>방법: 진행률을 보여 주는 Windows Forms 컨트롤 만들기
@@ -28,9 +28,9 @@ ms.locfileid: "59202016"
   
 -   재정의 <xref:System.Windows.Forms.Control.OnPaint%2A> 컨트롤을 그리는 논리를 제공 하는 방법입니다.  
   
--   영역 컨트롤을 그리는 데 사용 하 여 사용할 수 있는 컴퓨팅 해당 <xref:System.Windows.Forms.Control.ClientRectangle%2A> 속성입니다. `FlashTrackBar` 작업을 위해 해당 `OptimizedInvalidate` 메서드.  
+-   영역 컨트롤을 그리는 데 사용 하 여 사용할 수 있는 컴퓨팅 해당 <xref:System.Windows.Forms.Control.ClientRectangle%2A> 속성입니다. `FlashTrackBar`은 해당 `OptimizedInvalidate` 메서드에서 이를 수행합니다.  
   
--   Windows Forms 디자이너에서 변경되는 경우 속성의 serialization 또는 지속성을 구현합니다. `FlashTrackBar` 정의 `ShouldSerializeStartColor` 하 고 `ShouldSerializeEndColor` 직렬화 하는 작업에 대 한 메서드 해당 `StartColor` 및 `EndColor` 속성입니다.  
+-   Windows Forms 디자이너에서 변경되는 경우 속성의 serialization 또는 지속성을 구현합니다. `FlashTrackBar`은 `StartColor` 및 `EndColor` 속성을 직렬화하는 `ShouldSerializeStartColor` 및 `ShouldSerializeEndColor` 메서드를 정의합니다.  
   
  다음 테이블에서는 `FlashTrackBar`에서 정의된 사용자 지정 속성을 보여 줍니다.  
   

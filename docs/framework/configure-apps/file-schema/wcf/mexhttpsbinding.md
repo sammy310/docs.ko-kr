@@ -3,10 +3,10 @@ title: <mexHttpsBinding>
 ms.date: 03/30/2017
 ms.assetid: f2ed3774-78b9-4a15-b79b-655f1ad68b86
 ms.openlocfilehash: 4e96c28ac9b372092d06538d24d165dde6c5fe48
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59203134"
 ---
 # <a name="mexhttpsbinding"></a>\<mexHttpsBinding>
@@ -58,11 +58,11 @@ HTTPS를 통한 WS-MEX(WS-MetadataExchange) 메시지 교환에 사용되는 바
 
 - <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexHttpsBinding%2A>
 - <xref:System.ServiceModel.Configuration.MexHttpsBindingElement>
-- [방법: 구성 파일을 사용하여 서비스에 대한 메타데이터 게시](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [방법: 구성 파일을 사용 하는 서비스의 메타 데이터 게시](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [사용자 지정 바인딩을 통해 메타데이터 게시 및 검색](../../../../../docs/framework/wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)
-- [방법: 사용자 지정 WS-Metadata Exchange 바인딩 구성](../../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)
-- [방법: MEX가 아닌 바인딩을 통해 메타데이터 검색](../../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)
-- [Custom Secure Metadata Endpoint](../../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)
+- [방법: 구성 사용자 지정 Ws-metadata Exchange 바인딩](../../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)
+- [방법: 가 아닌-MEX 바인딩을 통해 메타 데이터를 검색 합니다.](../../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)
+- [사용자 지정 보안 메타 데이터 엔드포인트](../../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)
 - [메타데이터](../../../../../docs/framework/wcf/feature-details/metadata.md)
 - [바인딩](../../../../../docs/framework/wcf/bindings.md)
 - [시스템 제공 바인딩 구성](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)

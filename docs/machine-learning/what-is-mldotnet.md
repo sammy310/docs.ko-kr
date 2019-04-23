@@ -5,12 +5,12 @@ author: cjgronlund
 ms.custom: seodec18
 ms.topic: overview
 ms.date: 03/01/2019
-ms.openlocfilehash: 6ba4719c830c8b0344a38dad4b86d38cc323e972
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3f5d44e90ba705195deba54ef658668488cdb0f7
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466949"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59200368"
 ---
 # <a name="what-is-mlnet-and-how-do-i-understand-machine-learning-basics"></a>ML.NET의 정의 및 Machine Learning 기본 사항을 이해하는 방법은 무엇인가요?
 
@@ -24,7 +24,6 @@ ML.NET은 사용자 지정 기계 학습 솔루션을 빌드하고 .NET 애플�
 기계 학습은 컴퓨터가 기존 데이터를 사용하여 향후 동작, 결과 및 추세를 예측할 수 있게 해주는 데이터 과학 기술입니다. 기계 학습을 사용하는 컴퓨터는 명시적으로 프로그래밍되지 않고 학습합니다.
 
 기계 학습의 예상이나 예측을 통해 앱과 디바이스를 더 효율적으로 만들 수 있습니다. 온라인 쇼핑 시 기계 학습을 통해 구입한 제품을 기반으로 사용자가 좋아할 만한 다른 제품을 추천할 수 있습니다. 신용 카드를 판독기에 대면 기계 학습이 트랜잭션 데이터베이스와 트랜잭션을 비교하여 사기 행위를 탐지하도록 도와줍니다. 로봇 진공 청소기가 방을 청소할 때 기계 학습은 로봇이 작업 완료 여부를 결정하도록 도와줍니다.
-
 
 ## <a name="short-videos-on-data-science"></a>데이터 과학에 대한 짧은 비디오 
 

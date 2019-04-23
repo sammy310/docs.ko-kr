@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c788f2f9-65cc-4455-9907-e8388a268e00
 ms.openlocfilehash: 0f1b6cf27101c2a7f55757b72b56b2291198404d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59200664"
 ---
 # <a name="object-identity"></a>개체 ID
@@ -23,7 +23,7 @@ ms.locfileid: "59200664"
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 <xref:System.Data.Linq.DataContext>는 개체 ID를 관리합니다. 데이터베이스에서 새 행을 검색할 때마다 해당 기본 키별로 ID 테이블에 행이 기록되고 새 개체가 만들어집니다. 동일한 해당 행을 검색할 때마다 원래 개체 인스턴스가 응용 프로그램에 다시 전달됩니다. 이와 같은 방식으로 <xref:System.Data.Linq.DataContext>는 데이터베이스에 인식하는 ID의 개념(즉, 기본 키)을 언어에서 인식하는 ID의 개념(즉, 인스턴스)으로 변환합니다. 응용 프로그램은 처음 검색된 상태로만 개체를 봅니다. 새 데이터는 다를 경우 삭제됩니다. 자세한 내용은 [Id 캐시에서 개체 검색](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md)합니다.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 이 방법을 사용 하 여 낙관적 업데이트를 지원 하기 위해 로컬 개체의 무결성을 관리 합니다. 개체가 처음 만들어진 후에 발생한 변경만 응용 프로그램에 의해 수행된 변경이므로 응용 프로그램에서 의도하는 바를 분명히 알 수 있습니다. 도중에 외부로부터 변경이 발생한 경우에는 `SubmitChanges()`가 호출될 때 해당 변경 내용이 식별됩니다.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 낙관적 업데이트를 지원하기 위해 이 방법을 사용하여 로컬 개체의 무결성을 관리합니다. 개체가 처음 만들어진 후에 발생한 변경만 응용 프로그램에 의해 수행된 변경이므로 응용 프로그램에서 의도하는 바를 분명히 알 수 있습니다. 도중에 외부로부터 변경이 발생한 경우에는 `SubmitChanges()`가 호출될 때 해당 변경 내용이 식별됩니다.  
   
 > [!NOTE]
 >  쿼리에 의해 요청된 개체를 이미 검색된 개체로 쉽게 식별할 수 있는 경우 쿼리가 실행되지 않습니다. ID 테이블은 이전에 검색된 모든 개체의 캐시로 작동합니다.  
