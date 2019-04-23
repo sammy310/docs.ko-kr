@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
 ms.openlocfilehash: 7940d1d8869d3b82c1aa19cb038a68b8724345dd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320054"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>방법: 장기 실행 워크플로 만들기 및 실행
@@ -23,25 +23,25 @@ Windows Workflow Foundation (WF)의 핵심 기능 중 하나는 유지 하 고 �
   
 ## <a name="in-this-topic"></a>항목 내용  
   
--   [지속성 데이터베이스를 만들려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
+-   [지 속성 데이터베이스를 만들려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
   
--   [DurableInstancing 어셈블리에 대한 참조를 추가하려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
+-   [DurableInstancing 어셈블리에 대 한 참조를 추가 하려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
   
 -   [워크플로 호스트 폼을 만들려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
   
--   [폼의 속성 및 도우미 메서드를 추가하려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
+-   [폼의 도우미 메서드와 속성을 추가 하려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
   
--   [인스턴스 저장소, 워크플로 수명 주기 처리기 및 확장을 구성하려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
+-   [인스턴스 저장소, 워크플로 수명 주기 처리기 및 확장을 구성 하려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
   
--   [여러 워크플로 유형을 시작 및 다시 시작할 수 있도록 설정하려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
+-   [시작 하 고 여러 워크플로 유형을 다시 시작을 사용 하도록 설정 하려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
   
--   [새 워크플로를 시작하려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
+-   [새 워크플로 시작 하려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
   
--   [워크플로를 다시 시작하려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
+-   [워크플로 다시 시작 하려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
   
--   [워크플로를 종료하려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
+-   [워크플로 종료 하려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
   
--   [애플리케이션을 빌드하고 실행하려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
+-   [빌드 및 응용 프로그램을 실행 하려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
   
 ### <a name="BKMK_CreatePersistenceDatabase"></a> 지 속성 데이터베이스를 만들려면  
   
@@ -50,7 +50,7 @@ Windows Workflow Foundation (WF)의 핵심 기능 중 하나는 유지 하 고 �
     > [!NOTE]
     >  했는지 **Create Database** 데이터베이스를 만들기 전에 로컬 서버에 대 한 권한이 있습니다.  
   
-2. 선택 **엽니다**를 **파일** 에서 합니다 **파일** 메뉴. 다음 폴더로 이동 합니다. `C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en`  
+2. 선택 **엽니다**를 **파일** 에서 합니다 **파일** 메뉴. `C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en` 폴더로 이동합니다.  
   
      다음 두 파일을 선택 하 고 클릭 **열려**합니다.  
   
@@ -94,7 +94,7 @@ Windows Workflow Foundation (WF)의 핵심 기능 중 하나는 유지 하 고 �
   
     |컨트롤|속성: 값|  
     |-------------|---------------------|  
-    |**단추**|이름: NewGame<br /><br /> 위치: 13, 13<br /><br /> 크기: 75, 23<br /><br /> 텍스트: 새 게임|  
+    |**Button**|이름: NewGame<br /><br /> 위치: 13, 13<br /><br /> 크기: 75, 23<br /><br /> 텍스트: 새 게임|  
     |**레이블**|위치: 94, 18<br /><br /> 텍스트: 1부터 다음까지 수로 추측|  
     |**ComboBox**|이름: NumberRange<br /><br /> DropDownStyle: DropDownList<br /><br /> 항목: 10, 100, 1000<br /><br /> 위치: 228, 12<br /><br /> 크기: 143, 21|  
     |**레이블**|위치: 13, 43<br /><br /> 텍스트: 워크플로 형식|  
@@ -111,8 +111,8 @@ Windows Workflow Foundation (WF)의 핵심 기능 중 하나는 유지 하 고 �
     |**ComboBox**|이름: InstanceId<br /><br /> DropDownStyle: DropDownList<br /><br /> 위치: 121, 17<br /><br /> 크기: 227, 21|  
     |**레이블**|위치: 7, 47<br /><br /> 텍스트: 추측|  
     |**TextBox**|이름: 추측<br /><br /> 위치: 50, 44<br /><br /> 크기: 65, 20|  
-    |**단추**|이름: EnterGuess<br /><br /> 위치: 121, 42<br /><br /> 크기: 75, 23<br /><br /> 텍스트: 추측 입력|  
-    |**단추**|이름: QuitGame<br /><br /> 위치: 274, 42<br /><br /> 크기: 75, 23<br /><br /> 텍스트: 끝내기|  
+    |**Button**|이름: EnterGuess<br /><br /> 위치: 121, 42<br /><br /> 크기: 75, 23<br /><br /> 텍스트: 추측 입력|  
+    |**Button**|이름: QuitGame<br /><br /> 위치: 274, 42<br /><br /> 크기: 75, 23<br /><br /> 텍스트: 끝내기|  
     |**TextBox**|이름: WorkflowStatus<br /><br /> 위치: 10, 73<br /><br /> Multiline: True<br /><br /> ReadOnly: True<br /><br /> 스크롤 막대. 세로<br /><br /> 크기: 338, 208|  
   
 5. 설정 된 **AcceptButton** 폼의 속성 **EnterGuess**합니다.  
@@ -341,7 +341,7 @@ Windows Workflow Foundation (WF)의 핵심 기능 중 하나는 유지 하 고 �
     }  
     ```  
   
-     `ListPersistedWorkflows` 지속형된 워크플로 인스턴스를 인스턴스 저장소를 쿼리하고 인스턴스 id를 추가 합니다 `cboInstanceId` 콤보 상자입니다.  
+     `ListPersistedWorkflows`는 인스턴스 저장소에서 지속형 워크플로 인스턴스를 쿼리하고 해당 인스턴스 ID를 `cboInstanceId` 콤보 상자에 추가합니다.  
   
 10. 폼 클래스에 다음 `UpdateStatus` 메서드와 해당 대리자를 추가합니다. 이 메서드는 현재 실행 중인 워크플로의 상태로 폼의 상태 창을 업데이트합니다.  
   
@@ -574,7 +574,7 @@ Windows Workflow Foundation (WF)의 핵심 기능 중 하나는 유지 하 고 �
     };  
     ```  
   
-     <xref:System.Activities.PersistableIdleAction> 열거형에는 세 개의 값(<xref:System.Activities.PersistableIdleAction.None>, <xref:System.Activities.PersistableIdleAction.Persist> 및 <xref:System.Activities.PersistableIdleAction.Unload>)이 있습니다. <xref:System.Activities.PersistableIdleAction.Persist> 원인 워크플로가 유지 되도록 하지만 워크플로가 언로드되도록 발생 하지 않습니다. <xref:System.Activities.PersistableIdleAction.Unload> 하면 워크플로 유지 하 고 로드할 수 없습니다.  
+     <xref:System.Activities.PersistableIdleAction> 열거형에는 세 개의 값(<xref:System.Activities.PersistableIdleAction.None>, <xref:System.Activities.PersistableIdleAction.Persist> 및 <xref:System.Activities.PersistableIdleAction.Unload>)이 있습니다. <xref:System.Activities.PersistableIdleAction.Persist>는 워크플로가 유지되도록 하지만 워크플로가 언로드되도록 하지는 않습니다. <xref:System.Activities.PersistableIdleAction.Unload>는 워크플로가 유지되고 언로드되도록 합니다.  
   
      다음 예제는 전체 `ConfigureWorkflowApplication` 메서드입니다.  
   
@@ -692,7 +692,7 @@ Windows Workflow Foundation (WF)의 핵심 기능 중 하나는 유지 하 고 �
     ```  
   
 ### <a name="BKMK_WorkflowVersionMap"></a> 시작 하 고 여러 워크플로 유형을 다시 시작을 사용 하도록 설정 하려면  
- 워크플로 인스턴스를 다시 시작하려면 호스트에서 워크플로 정의를 제공해야 합니다. 이 자습서에는 세 가지 워크플로 유형이 있으며 이후 자습서 단계에서는 이러한 유형의 여러 버전을 소개합니다. `WorkflowIdentity` 호스트 응용 프로그램의 식별 정보는 지속형된 워크플로 인스턴스와 연결할 수가 있습니다. 이 단원의 단계에서는 유틸리티 클래스를 만들어 지속형 워크플로 인스턴스의 워크플로 ID를 해당 워크플로 정의에 쉽게 매핑할 수 있도록 하는 방법을 보여 줍니다. 에 대 한 자세한 내용은 `WorkflowIdentity` 버전 관리, 참조 [사용 하 여 WorkflowIdentity 및 버전 관리](using-workflowidentity-and-versioning.md)합니다.  
+ 워크플로 인스턴스를 다시 시작하려면 호스트에서 워크플로 정의를 제공해야 합니다. 이 자습서에는 세 가지 워크플로 유형이 있으며 이후 자습서 단계에서는 이러한 유형의 여러 버전을 소개합니다. 호스트 응용 프로그램에서는 `WorkflowIdentity`를 통해 식별 정보를 지속형 워크플로 인스턴스에 연결할 수 있습니다. 이 단원의 단계에서는 유틸리티 클래스를 만들어 지속형 워크플로 인스턴스의 워크플로 ID를 해당 워크플로 정의에 쉽게 매핑할 수 있도록 하는 방법을 보여 줍니다. 에 대 한 자세한 내용은 `WorkflowIdentity` 버전 관리, 참조 [사용 하 여 WorkflowIdentity 및 버전 관리](using-workflowidentity-and-versioning.md)합니다.  
   
 1. 마우스 오른쪽 단추로 클릭 **NumberGuessWorkflowHost** 에서 **솔루션 탐색기** 선택한 **추가**하십시오 **클래스**합니다. 형식 `WorkflowVersionMap` 에 **이름** 상자 하 고 클릭 **추가**합니다.  
   
@@ -806,7 +806,7 @@ Windows Workflow Foundation (WF)의 핵심 기능 중 하나는 유지 하 고 �
     }  
     ```  
   
-     `WorkflowVersionMap` 이 자습서에서 세 개의 워크플로 정의에 매핑하는 세 개의 워크플로 id를 포함 하 고 워크플로가 시작 및 다시 시작 하는 경우 다음 섹션에서 사용 됩니다.  
+     `WorkflowVersionMap`에는 이 자습서에서 사용하는 세 개의 워크플로 정의에 매핑되며 다음 단원에서 워크플로가 시작 및 다시 시작될 때 사용되는 세 개의 워크플로 ID가 포함되어 있습니다.  
   
 ### <a name="BKMK_StartWorkflow"></a> 새 워크플로 시작 하려면  
   

@@ -3,10 +3,10 @@ title: 본문에 의한 경로
 ms.date: 03/30/2017
 ms.assetid: 07a6fc3b-c360-42e0-b663-3d0f22cf4502
 ms.openlocfilehash: b8a3f7785d7d59d8ad85d6dddde7fd6a04a12d63
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320719"
 ---
 # <a name="route-by-body"></a>본문에 의한 경로
@@ -35,7 +35,7 @@ ms.locfileid: "59320719"
     }  
 ```  
   
- 계약이 지정되면 서비스에서는 작업 사이에서 메시지를 디스패치할 수 있도록 사용자 지정 디스패치 동작 `DispatchByBodyBehavior`를 요청합니다. 이 디스패치 동작 초기화는 `DispatchByBodyElementOperationSelector` 각 래퍼 요소의 QName에서 지정 된 작업 이름의 테이블을 사용 하 여 사용자 지정 작업 선택기입니다. `DispatchByBodyElementOperationSelector` 본문의 첫 번째 자식의 시작 태그를 확인 하 고 앞에서 언급 한 테이블을 사용 하는 작업을 선택 합니다.  
+ 계약이 지정되면 서비스에서는 작업 사이에서 메시지를 디스패치할 수 있도록 사용자 지정 디스패치 동작 `DispatchByBodyBehavior`를 요청합니다. 이 디스패치 동작 초기화는 `DispatchByBodyElementOperationSelector` 각 래퍼 요소의 QName에서 지정 된 작업 이름의 테이블을 사용 하 여 사용자 지정 작업 선택기입니다. `DispatchByBodyElementOperationSelector`는 본문의 첫 번째 자식에 대한 시작 태그를 살펴보고 이전에 설명한 테이블을 사용하여 작업을 선택합니다.  
   
  클라이언트는 서비스를 사용 하 여 내보낸 WSDL 로부터 자동으로 생성 된 프록시를 사용 하 여 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)합니다.  
   

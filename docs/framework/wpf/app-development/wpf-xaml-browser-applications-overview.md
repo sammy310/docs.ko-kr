@@ -11,10 +11,10 @@ helpviewer_keywords:
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
 ms.openlocfilehash: 81ae93871fa5e3fc46382ee9a1810808574fb043
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320134"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 브라우저 애플리케이션 개요
@@ -23,7 +23,7 @@ ms.locfileid: "59320134"
   
  이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   
--   [새 XBAP(XAML 브라우저 애플리케이션) 만들기](#creating_a_new_xaml_browser_application_xbap)  
+-   [새 XBAP(XAML 브라우저 응용 프로그램) 만들기](#creating_a_new_xaml_browser_application_xbap)  
   
 -   [XBAP 배포](#deploying_a_xbap)  
   
@@ -188,5 +188,5 @@ ms.locfileid: "59320134"
   
 ## <a name="see-also"></a>참고자료
 
-- [Visual Studio를 구성하여 웹 서비스를 호출하는 XAML 브라우저 애플리케이션 디버깅](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
-- [WPF 애플리케이션 배포](deploying-a-wpf-application-wpf.md)
+- [Visual Studio를 구성하여 웹 서비스를 호출하는 XAML 브라우저 응용 프로그램 디버깅](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
+- [WPF 응용 프로그램 배포](deploying-a-wpf-application-wpf.md)

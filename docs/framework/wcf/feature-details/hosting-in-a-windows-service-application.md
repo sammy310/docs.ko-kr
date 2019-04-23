@@ -3,10 +3,10 @@ title: Windows 서비스 응용 프로그램에서의 호스팅
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
 ms.openlocfilehash: 8e50c39955f9ab72dfa1d52cbc37ab90f1ab0a8a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335370"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Windows 서비스 응용 프로그램에서의 호스팅
@@ -39,8 +39,8 @@ Windows 서비스(이전의 Windows NT 서비스)에서는 장기 실행되는 �
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.ServiceProcess>
-- [연습: 구성 요소 디자이너에서 Windows 서비스 응용 프로그램 만들기](https://go.microsoft.com/fwlink/?LinkId=94875)
-- [방법: 관리형 Windows 서비스에서 WCF 서비스 호스팅](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
+- [연습: 구성 요소 디자이너에서 Windows 서비스 애플리케이션 만들기](https://go.microsoft.com/fwlink/?LinkId=94875)
+- [방법: Host a WCF Service in a Managed Windows Service](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
 - [Windows Service 호스트](../../../../docs/framework/wcf/samples/windows-service-host.md)
-- [서비스 응용 프로그램 프로그래밍 아키텍처](https://go.microsoft.com/fwlink/?LinkId=94876)
+- [서비스 애플리케이션 프로그래밍 아키텍처](https://go.microsoft.com/fwlink/?LinkId=94876)
 - [Windows Server App Fabric 호스팅 기능](https://go.microsoft.com/fwlink/?LinkId=201276)

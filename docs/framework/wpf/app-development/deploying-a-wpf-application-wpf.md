@@ -6,10 +6,10 @@ helpviewer_keywords:
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
 ms.openlocfilehash: 0ffd4fb05a5a409d74f8a9401a5fb021db0cd99b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320654"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>WPF 애플리케이션 배포(WPF)
@@ -21,9 +21,9 @@ Windows Presentation Foundation (WPF) 응용 프로그램을 빌드한 후 배�
   
 -   XCopy 배포.  
   
--   [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 배포 합니다.  
+-   [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 배포.  
   
--   [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] 배포 합니다.  
+-   [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] 배포.  
   
 <a name="XCopy_Deployment"></a>   
 ### <a name="xcopy-deployment"></a>XCopy 배포  
@@ -39,15 +39,15 @@ Windows Presentation Foundation (WPF) 응용 프로그램을 빌드한 후 배�
   
 <a name="Windows_Installer"></a>   
 ### <a name="windows-installer"></a>Windows Installer  
- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 응용 프로그램을을 쉽게 클라이언트에 배포 및 실행할 수 있는 자체 포함된 실행 파일로 패키지할 수 있습니다. 또한 [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]는 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]와 함께 설치되며 데스크톱, 시작 메뉴 및 프로그램 제어판과의 통합을 가능하게 합니다.  
+ [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]를 사용하면 클라이언트에 쉽게 배포하고 실행할 수 있는 자체 포함 실행 파일로 응용 프로그램을 패키지할 수 있습니다. 또한 [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]는 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]와 함께 설치되며 데스크톱, 시작 메뉴 및 프로그램 제어판과의 통합을 가능하게 합니다.  
   
- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 설치 및 응용 프로그램의 제거를 간소화 하지만 설치 된 응용 프로그램 버전 관리 관점에서 최신 상태로 유지를 보장 하기 위한 기능을 제공 하지 않습니다.  
+ [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]에서는 응용 프로그램의 설치 및 제거가 간단하지만 설치된 응용 프로그램이 버전 관리 관점에서 최신 버전으로 유지되도록 보장하는 기능은 제공하지 않습니다.  
   
  Windows Installer에 대 한 자세한 내용은 참조 하세요. [Windows Installer 배포](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop)합니다.
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>ClickOnce 배포  
- [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 비 웹 응용 프로그램에 대 한 웹 스타일 응용 프로그램 배포를 사용 하도록 설정 합니다. 애플리케이션이 웹 또는 파일 서버에서 게시되고 배포됩니다. [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]는 [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 설치 응용 프로그램처럼 전체 범위의 클라이언트 기능을 지원하지는 않지만 다음을 포함하는 하위 기능은 지원합니다.  
+ [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]에서는 비 웹 응용 프로그램에 대해 웹 스타일 응용 프로그램 배포를 사용할 수 있습니다. 애플리케이션이 웹 또는 파일 서버에서 게시되고 배포됩니다. [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]는 [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 설치 응용 프로그램처럼 전체 범위의 클라이언트 기능을 지원하지는 않지만 다음을 포함하는 하위 기능은 지원합니다.  
   
 -   시작 메뉴 및 프로그램 제어판과의 통합.  
   
@@ -87,7 +87,7 @@ Windows Presentation Foundation (WPF) 응용 프로그램을 빌드한 후 배�
   
 <a name="Deploying_XAML_Browser_Applications"></a>   
 ### <a name="deploying-xaml-browser-applications"></a>XAML 브라우저 애플리케이션 배포  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 다음 세 가지 파일을 배포 해야 하는 컴파일된 응용 프로그램:  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]는 배포하려면 다음과 같은 파일 세 개가 필요한 컴파일된 응용 프로그램입니다.  
   
 -   *ApplicationName*.exe: 실행 가능한 어셈블리 응용 프로그램 파일입니다.  
   
@@ -100,7 +100,7 @@ Windows Presentation Foundation (WPF) 응용 프로그램을 빌드한 후 배�
   
  이러한 파일은 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]가 빌드될 때 생성됩니다. 자세한 내용은 [방법: 새 WPF 브라우저 응용 프로그램 프로젝트 만들기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))합니다. 마크업 전용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지처럼 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]는 일반적으로 웹 서버에 게시되며 [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)]를 사용하여 볼 수 있습니다.  
   
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 배포 방법 중 하나를 사용 하 여 클라이언트에 배포할 수 있습니다. 그러나 다음과 같은 기능을 제공하는 [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]가 권장됩니다.  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]는 배포 기술 중 하나를 사용하여 클라이언트에 배포할 수 있습니다. 그러나 다음과 같은 기능을 제공하는 [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]가 권장됩니다.  
   
 1. 새 버전이 게시될 때 자동 업데이트.  
   
@@ -124,5 +124,5 @@ Windows Presentation Foundation (WPF) 응용 프로그램을 빌드한 후 배�
   
 ## <a name="see-also"></a>참고자료
 
-- [WPF 애플리케이션 빌드](building-a-wpf-application-wpf.md)
+- [WPF 응용 프로그램 빌드](building-a-wpf-application-wpf.md)
 - [보안](../security-wpf.md)

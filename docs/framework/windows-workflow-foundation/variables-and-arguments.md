@@ -3,10 +3,10 @@ title: 변수 및 인수
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
 ms.openlocfilehash: 29ce5222435b68ed13cbc967e58e72a937625e8e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320745"
 ---
 # <a name="variables-and-arguments"></a>변수 및 인수
@@ -67,7 +67,7 @@ Variable<string> var = new Variable<string>
   
 2. <xref:System.Activities.InOutArgument%601.Set%2A>이 호출되면 런타임은 값을 즉시 설정합니다.  
   
-3. 인수는 선택적으로 <xref:System.Activities.Argument.EvaluationOrder%2A>를 지정할 수 있습니다. <xref:System.Activities.Argument.EvaluationOrder%2A> 인수가 계산 되는 순서를 지정 하는 0부터 시작 값이입니다. 기본적으로 인수의 평가 순서는 지정되지 않으며 <xref:System.Activities.Argument.UnspecifiedEvaluationOrder> 값과 같습니다. <xref:System.Activities.Argument.EvaluationOrder%2A>를 0보다 크거나 같은 값으로 설정하여 이 인수의 평가 순서를 지정합니다. Windows Workflow Foundation에는 오름차순에서 지정한 평가 순서의 인수를 평가합니다. 평가 순서가 지정되지 않은 인수는 평가 순서가 지정된 인수 이전에 평가됩니다.  
+3. 인수는 선택적으로 <xref:System.Activities.Argument.EvaluationOrder%2A>를 지정할 수 있습니다. <xref:System.Activities.Argument.EvaluationOrder%2A>는 인수를 평가하는 순서를 지정하는 0부터 시작하는 값입니다. 기본적으로 인수의 평가 순서는 지정되지 않으며 <xref:System.Activities.Argument.UnspecifiedEvaluationOrder> 값과 같습니다. <xref:System.Activities.Argument.EvaluationOrder%2A>를 0보다 크거나 같은 값으로 설정하여 이 인수의 평가 순서를 지정합니다. Windows Workflow Foundation에는 오름차순에서 지정한 평가 순서의 인수를 평가합니다. 평가 순서가 지정되지 않은 인수는 평가 순서가 지정된 인수 이전에 평가됩니다.  
   
  활동 작성자는 강력한 형식의 메커니즘을 사용하여 인수를 노출합니다. 이 작업은 <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601> 및 <xref:System.Activities.InOutArgument%601> 형식의 속성을 선언하여 수행됩니다. 이렇게 하면 활동 작성자가 활동 내부 및 외부로 이동하는 데이터에 대한 특정 계약을 설정할 수 있습니다.  
   
@@ -87,7 +87,7 @@ public class Prompt : Activity
 >  단일 값을 반환하는 활동은 <xref:System.Activities.Activity%601>, <xref:System.Activities.NativeActivity%601> 또는 <xref:System.Activities.CodeActivity%601>에서 파생될 수 있습니다. 이 활동에는 활동의 반환 값을 포함하는 <xref:System.Activities.OutArgument%601>라는 잘 정의된 <xref:System.Activities.Activity%601.Result%2A>이 있습니다.  
   
 ### <a name="using-variables-and-arguments-in-workflows"></a>워크플로에서 변수 및 인수 사용  
- 다음 예제에서는 워크플로에서 변수와 인수를 사용하는 방법을 보여 줍니다. 워크플로는 `var1`, `var2` 및 `var3`이라는 세 가지 변수를 선언하는 시퀀스입니다. 워크플로의 첫 번째 활동은 `Assign` 변수에 `var1` 변수의 값을 할당하는 `var2` 활동입니다. 다음은 `WriteLine` 변수의 값을 인쇄하는 `var2` 활동입니다. 그 다음은 `Assign` 변수에 `var2` 변수의 값을 할당하는 다른 `var3` 활동입니다. 마지막으로 `WriteLine` 변수의 값을 인쇄하는 다른 `var3` 활동이 있습니다. 첫 번째 `Assign` 활동은 활동의 인수에 대한 바인딩을 명시적으로 나타내는 `InArgument<string>` 및 `OutArgument<string>` 개체를 사용합니다. `InArgument<string>` 에 사용 되 <xref:System.Activities.Statements.Assign.Value%2A> 에 전달 되기 때문에 <xref:System.Activities.Statements.Assign%601> 를 통해 작업을 해당 <xref:System.Activities.Statements.Assign.Value%2A> 인수를 및 `OutArgument<string>` 되 <xref:System.Activities.Statements.Assign.To%2A> 개 전달 되기 때문에 <xref:System.Activities.Statements.Assign.To%2A> 변수에 인수. 두 번째 `Assign` 활동은 암시적 캐스트를 사용하는 더 간단하지만 동일한 구문을 사용하여 같은 작업을 수행합니다. `WriteLine` 활동도 간단한 구문을 사용합니다.  
+ 다음 예제에서는 워크플로에서 변수와 인수를 사용하는 방법을 보여 줍니다. 워크플로는 `var1`, `var2` 및 `var3`이라는 세 가지 변수를 선언하는 시퀀스입니다. 워크플로의 첫 번째 활동은 `Assign` 변수에 `var1` 변수의 값을 할당하는 `var2` 활동입니다. 다음은 `WriteLine` 변수의 값을 인쇄하는 `var2` 활동입니다. 그 다음은 `Assign` 변수에 `var2` 변수의 값을 할당하는 다른 `var3` 활동입니다. 마지막으로 `WriteLine` 변수의 값을 인쇄하는 다른 `var3` 활동이 있습니다. 첫 번째 `Assign` 활동은 활동의 인수에 대한 바인딩을 명시적으로 나타내는 `InArgument<string>` 및 `OutArgument<string>` 개체를 사용합니다. `InArgument<string>`에서는 값은 <xref:System.Activities.Statements.Assign.Value%2A> 인수를 통해 <xref:System.Activities.Statements.Assign%601> 활동으로 전달되기 때문에 <xref:System.Activities.Statements.Assign.Value%2A>이 사용되고 `OutArgument<string>`에서는 값이 <xref:System.Activities.Statements.Assign.To%2A> 인수에서 변수로 전달되기 때문에 <xref:System.Activities.Statements.Assign.To%2A>이 사용됩니다. 두 번째 `Assign` 활동은 암시적 캐스트를 사용하는 더 간단하지만 동일한 구문을 사용하여 같은 작업을 수행합니다. `WriteLine` 활동도 간단한 구문을 사용합니다.  
   
 ```csharp  
 // Declare three variables; the first one is given an initial value.  

@@ -2,12 +2,12 @@
 title: WebRequest 문제 및 예외 이해
 ms.date: 03/30/2017
 ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
-ms.openlocfilehash: 55ef0b0f5260c986cad01d2854202dea3755ace7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a6dc06ed7abdbb6a28f9d6c09eda079157493d9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587530"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59215016"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>WebRequest 문제 및 예외 이해
 <xref:System.Net.WebRequest> 및 파생 클래스(<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest> 및 <xref:System.Net.FileWebRequest>)는 예외를 throw하여 비정상 상태를 알립니다. 이러한 문제의 해결이 분명하지 않은 경우도 있습니다.  
@@ -29,6 +29,7 @@ ms.locfileid: "54587530"
 |<xref:System.Net.WebExceptionStatus.ServerProtocolViolation>|서버 응답이 유효한 HTTP 응답이 아닙니다. 이 문제는 .NET Framework에서 서버 응답이 HTTP 1.1 RFC에 맞지 않는 것을 감지할 경우 발생합니다. 응답에 잘못된 헤더 또는 잘못된 헤더 구분 기호가 포함된 경우 이 문제가 발생할 수 있습니다. RFC 2616에서는 HTTP 1.1 및 서버 응답에 유효한 형식을 정의합니다. 자세한 내용은 [IETF(Internet Engineering Task Force)](https://www.ietf.org/) 웹 사이트에서 [RFC 2616 - Hypertext Transfer Protocol -- HTTP/1.1](https://go.microsoft.com/fwlink/?LinkID=147388)을 참조하세요.|트랜잭션의 네트워크 추적을 가져오고 응답의 헤더를 검사합니다.<br /><br /> 애플리케이션에 구문 분석 없이 서버 응답이 필요한 경우(보안 문제가 발생할 수 있음) 구성 파일에서 `useUnsafeHeaderParsing`을 `true`로 설정합니다. [\<httpWebRequest> 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md)를 참조하세요.|  
   
 ## <a name="see-also"></a>참고 항목
+
 - <xref:System.Net.HttpWebRequest>
 - <xref:System.Net.HttpWebResponse>
 - <xref:System.Net.Dns>
