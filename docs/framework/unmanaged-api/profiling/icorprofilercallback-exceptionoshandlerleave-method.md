@@ -18,31 +18,31 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0decfde08a9097c8fe5185c8b5a3fef4f7f68189
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213339"
 ---
-# <a name="icorprofilercallbackexceptionoshandlerleave-method"></a><span data-ttu-id="bfbd7-102">ICorProfilerCallback::ExceptionOSHandlerLeave 메서드</span><span class="sxs-lookup"><span data-stu-id="bfbd7-102">ICorProfilerCallback::ExceptionOSHandlerLeave Method</span></span>
-<span data-ttu-id="bfbd7-103">구현되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="bfbd7-103">Not implemented.</span></span> <span data-ttu-id="bfbd7-104">관리 되지 않는 예외 정보를 필요로 하는 프로파일러는 다른 수단을 통해이 정보를 얻어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbd7-104">A profiler that needs unmanaged exception information must obtain this information through other means.</span></span>  
+# <a name="icorprofilercallbackexceptionoshandlerleave-method"></a><span data-ttu-id="6dac8-102">ICorProfilerCallback::ExceptionOSHandlerLeave 메서드</span><span class="sxs-lookup"><span data-stu-id="6dac8-102">ICorProfilerCallback::ExceptionOSHandlerLeave Method</span></span>
+<span data-ttu-id="6dac8-103">구현되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="6dac8-103">Not implemented.</span></span> <span data-ttu-id="6dac8-104">관리 되지 않는 예외 정보를 필요로 하는 프로파일러는 다른 수단을 통해이 정보를 얻어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6dac8-104">A profiler that needs unmanaged exception information must obtain this information through other means.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bfbd7-105">구문</span><span class="sxs-lookup"><span data-stu-id="bfbd7-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6dac8-105">구문</span><span class="sxs-lookup"><span data-stu-id="6dac8-105">Syntax</span></span>  
   
 ```  
 HRESULT ExceptionOSHandlerLeave(  
     [in] UINT_PTR __unused);  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="bfbd7-106">요구 사항</span><span class="sxs-lookup"><span data-stu-id="bfbd7-106">Requirements</span></span>  
- <span data-ttu-id="bfbd7-107">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="bfbd7-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6dac8-106">요구 사항</span><span class="sxs-lookup"><span data-stu-id="6dac8-106">Requirements</span></span>  
+ <span data-ttu-id="6dac8-107">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="6dac8-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bfbd7-108">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="bfbd7-108">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="6dac8-108">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="6dac8-108">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="bfbd7-109">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bfbd7-109">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6dac8-109">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6dac8-109">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="bfbd7-110">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="bfbd7-110">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="6dac8-110">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6dac8-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bfbd7-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="bfbd7-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6dac8-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="6dac8-111">See also</span></span>
 
-- [<span data-ttu-id="bfbd7-112">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="bfbd7-112">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="6dac8-112">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="6dac8-112">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
