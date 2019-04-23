@@ -3,10 +3,10 @@ title: 발급된 토큰을 사용하는 메시지 보안
 ms.date: 03/30/2017
 ms.assetid: 731fc871-54d0-4689-90fd-1c9415c45621
 ms.openlocfilehash: 3c2669a4f569d26be15fc7b338f7b01c3e94791c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195100"
 ---
 # <a name="message-security-with-issued-tokens"></a>발급된 토큰을 사용하는 메시지 보안
@@ -19,4 +19,4 @@ ms.locfileid: "59195100"
 ## <a name="see-also"></a>참고자료
 
 - [페더레이션 및 발급된 토큰](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [Windows Server AppFabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server appfabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

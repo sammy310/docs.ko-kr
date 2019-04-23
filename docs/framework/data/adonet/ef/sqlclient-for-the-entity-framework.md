@@ -3,22 +3,22 @@ title: Entity Framework용 SqlClient
 ms.date: 03/30/2017
 ms.assetid: 9a5d6d39-d955-43a5-a5c2-931c239398f1
 ms.openlocfilehash: d81499961e7e47bba3b2594ddddd192c87a4a936
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195464"
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>Entity Framework용 SqlClient
 이 단원에서는 Entity Framework가 Microsoft SQL Server에서 작동할 수 있도록 하는 .NET Framework Data Provider for SQL Server(SqlClient)에 대해 설명합니다.  
   
 ## <a name="provider-schema-attribute"></a>공급자 스키마 특성  
- `Provider` 특성을 `Schema` 요소 (SSDL) 저장소 스키마 정의 언어에서입니다.  
+ `Provider`는 SSDL(저장소 스키마 정의 언어)의 `Schema` 요소에 대한 특성입니다.  
   
  SqlClient를 사용하려면 `Provider` 요소의 `Schema` 특성에 "System.Data.SqlClient" 문자열을 할당합니다.  
   
 ## <a name="providermanifesttoken-schema-attribute"></a>ProviderManifestToken 스키마 특성  
- `ProviderManifestToken` 필수 특성을 `Schema` ssdl에서 요소입니다. 이 토큰은 오프라인 시나리오용으로 공급자 매니페스트를 로드하는 데 사용됩니다. 에 대 한 자세한 내용은 `ProviderManifestToken` 특성을 참조 하십시오 [스키마 요소 (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl)합니다.  
+ `ProviderManifestToken`은 SSDL에서 `Schema` 요소의 필수 특성입니다. 이 토큰은 오프라인 시나리오용으로 공급자 매니페스트를 로드하는 데 사용됩니다. 에 대 한 자세한 내용은 `ProviderManifestToken` 특성을 참조 하십시오 [스키마 요소 (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl)합니다.  
   
  SqlClient 다른 버전의 SQL Server에 대 한 데이터 공급자로 사용할 수 있습니다. 이러한 버전에는 서로 다른 기능이 있습니다. 예를 들어 [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]은 `varchar(max)`에서 도입된 `nvarchar(max)` 및 [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)] 형식을 지원하지 않습니다.  
   

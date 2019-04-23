@@ -3,10 +3,10 @@ title: ISOF(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b2b0d34-d0a7-4bcd-baf2-58aa8456d00b
 ms.openlocfilehash: 097d6e7d452ee62a2c8934d2c5fcfdddbeaffc73
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195750"
 ---
 # <a name="isof-entity-sql"></a>ISOF(Entity SQL)
@@ -32,7 +32,7 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
  `expression`을 테스트할 형식입니다. 형식은 네임스페이스로 한정되어야 합니다.  
   
 ## <a name="return-value"></a>반환 값  
- `true` 하는 경우 `expression` 는 형식의 T T 이며 기본 형식 또는 파생된 형식의 `type`; 경우 null `expression` 이 고, 그렇지 않으면 런타임에 null `false`합니다.  
+ `true`이 T 형식이며 T가 기본 형식이거나 `expression`의 파생 형식인 경우 `type`이고, `expression`이 런타임에 null인 경우 null이며, 그 이외의 경우 `false`입니다.  
   
 ## <a name="remarks"></a>설명  
  식을 `expression IS NOT OF (type)` 하 고 `expression IS NOT OF (ONLY type)` 하는 구문은 동일 `NOT (expression IS OF (type))` 및 `NOT (expression IS OF (ONLY type))`각각.  
