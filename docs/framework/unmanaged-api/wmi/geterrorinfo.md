@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c2df4b87016394d1998ef90abe2e3eeb911886ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217507"
 ---
 # <a name="geterrorinfo-function"></a>GetErrorInfo 함수
@@ -51,4 +51,4 @@ IErrorInfo* GetErrorInfo();
   
 ## <a name="see-also"></a>참고자료
 
-- [WMI 및 성능 카운터(관리되지 않는 API 참조)](index.md)
+- [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

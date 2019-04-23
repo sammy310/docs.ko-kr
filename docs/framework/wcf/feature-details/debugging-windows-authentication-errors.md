@@ -9,10 +9,10 @@ helpviewer_keywords:
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
 ms.openlocfilehash: 28c70ca860083808c93fa58b498e22ea4e4ca6cb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299451"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Windows 인증 오류 디버깅
@@ -91,7 +91,7 @@ Windows 인증을 보안 메커니즘으로 사용하면 SSPI(보안 지원 공�
   
 3. NTLM 사용을 허용하지 않고 Kerberos를 사용하려면 SSPI 협상이 필요합니다.  
   
-    1.  다음 문 사용 하 여 코드에서이 수행 합니다. `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
+    1.  `ChannelFactory.Credentials.Windows.AllowNtlm = false` 문과 함께 코드에서 이 작업을 수행합니다.  
   
     2.  `allowNtlm` 특성을 `false`로 설정하여 구성 파일에서 이 작업을 수행할 수도 있습니다. 이 특성에 포함 된 [ \<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md)합니다.  
   

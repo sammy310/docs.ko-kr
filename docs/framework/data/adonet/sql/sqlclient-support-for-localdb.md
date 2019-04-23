@@ -3,10 +3,10 @@ title: LocalDB에 대한 SqlClient 지원
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
 ms.openlocfilehash: 416945964af7fda5ed5aaab2f5aae1bbc8928556
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59204759"
 ---
 # <a name="sqlclient-support-for-localdb"></a>LocalDB에 대한 SqlClient 지원
@@ -29,7 +29,7 @@ SQL Server 코드 이름 Denali 부터는 LocalDB 라고 부르는 SQL Server의
     server=(localdb)\\myInstance  
     ```  
   
- `User Instance=True` LocalDB 데이터베이스에 연결할 때 허용 되지 않습니다.  
+ `User Instance=True` 는 LocalDB 데이터베이스에 연결할 때는 사용할 수 없습니다.  
   
  [Microsoft SQL Server 2012 기능 팩](https://www.microsoft.com/download/en/details.aspx?id=29065)에서 LocalDB를 다운로드할 수 있습니다. Sqlcmd.exe를 사용 하 여 LocalDB 인스턴스에서 데이터를 수정 하는, SQL Server 2012 기능 팩 에서도 가져올 수 있습니다 SQL Server 2012의 sqlcmd를 해야 합니다.  
   

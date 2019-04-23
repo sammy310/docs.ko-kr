@@ -12,10 +12,10 @@ ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fdf840035150f08c894c984213af9a0abe6e95af
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59192058"
 ---
 # <a name="developmentmode-element"></a>\<developmentMode > 요소
@@ -45,7 +45,7 @@ ms.locfileid: "59192058"
 |값|설명|  
 |-----------|-----------------|  
 |**true**|DEVPATH 환경 변수로 지정 된 디렉터리에서 어셈블리를 검색 합니다.|  
-|**False**|DEVPATH 환경 변수로 지정 된 디렉터리에서 어셈블리에 대 한 검색 하지 않습니다. 이것이 기본값|  
+|**false**|DEVPATH 환경 변수로 지정 된 디렉터리에서 어셈블리에 대 한 검색 하지 않습니다. 이것이 기본값|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -75,4 +75,4 @@ ms.locfileid: "59192058"
 
 - [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [방법: DEVPATH를 사용하여 어셈블리 찾기](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)
+- [방법: DEVPATH를 사용 하 여 어셈블리를 찾습니다](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)

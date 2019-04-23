@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: 31b44dd3-b903-4a48-8419-40419a3e4038
-ms.openlocfilehash: de8cb03e6205a83d2cc93ee300eb3fcac1ac5b74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0820ad6a6d5000ef7ea575e856d883ba5325b1b0
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497172"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59230982"
 ---
 # <a name="networkinformation"></a>NetworkInformation
 <xref:System.Net.NetworkInformation> 네임스페이스를 사용하면 네트워크 이벤트, 변경 사항, 통계 및 속성에 대한 정보를 수집할 수 있습니다. <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType> 클래스를 사용하여 원격 호스트에 연결 가능한지도 확인할 수 있습니다.  
@@ -24,6 +24,7 @@ ms.locfileid: "54497172"
  <xref:System.Net.NetworkInformation.Ping> 클래스를 사용하여 원격 호스트가 가동되어 네트워크에 있으며 연결 가능한지 확인할 수 있습니다. 자세한 내용은 [방법: 호스트 Ping](../../../docs/framework/network-programming/how-to-ping-a-host.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [네트워크 프로그래밍 샘플](../../../docs/framework/network-programming/network-programming-samples.md)
 - [네트워크 정보 기술 샘플](https://go.microsoft.com/fwlink/?LinkID=179564)
 - [NetStat 도구 기술 샘플](https://go.microsoft.com/fwlink/?LinkID=179562)

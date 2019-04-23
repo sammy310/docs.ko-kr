@@ -5,10 +5,10 @@ ms.assetid: e7733bd3-68da-47f9-82ef-477db5f2e32d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bb41cc47351ccf22fcd522b7d4291c235312bfaa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59167691"
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>ICorDebugProcess6::EnableVirtualModuleSplitting 메서드
@@ -24,7 +24,7 @@ HRESULT EnableVirtualModuleSplitting(
   
 ## <a name="parameters"></a>매개 변수  
  `enableSplitting`  
- `true` 가상 모듈 분할을 사용 하도록 설정 하려면 `false` 사용 하지 않도록 합니다.  
+ 가상 모듈 분할을 사용하려면 `true`로 설정하고, 사용하지 않으려면 `false`로 설정합니다.  
   
 ## <a name="remarks"></a>설명  
  가상 모듈 분할 원인 [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) 처리 하 고 대형 모듈 하나가 아닌 개별 모듈 그룹으로 표시 하는 빌드 중에 병합 된 모듈을 인식 하도록 합니다. 다양 한 동작을 변경 이렇게 [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) 아래 설명 된 방법입니다.  

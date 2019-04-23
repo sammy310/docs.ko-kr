@@ -8,10 +8,10 @@ helpviewer_keywords:
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 7bc69c90-8a11-48b1-9336-3adab5b41591
 ms.openlocfilehash: 81559444b6e3da2861e48bdc637ae01d246c0758
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165349"
 ---
 # <a name="bindingsource-component-architecture"></a>BindingSource 구성 요소 아키텍처
@@ -176,5 +176,5 @@ ms.locfileid: "59165349"
 - [BindingNavigator 컨트롤](bindingnavigator-control-windows-forms.md)
 - [Windows Forms 데이터 바인딩](../windows-forms-data-binding.md)
 - [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
-- [방법: 형식에 Windows Forms 컨트롤 바인딩](how-to-bind-a-windows-forms-control-to-a-type.md)
-- [방법: BindingSource가 있는 Windows Forms 컨트롤에서 데이터 원본 업데이트 반영](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)
+- [방법: 형식에는 Windows Forms 컨트롤 바인딩](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [방법: BindingSource 사용 하 여 Windows Forms 컨트롤에 데이터 소스 업데이트 내용 반영](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)

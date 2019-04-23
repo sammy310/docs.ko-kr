@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
 ms.openlocfilehash: ea597d7caca3174b17ce16a1e9d70c022e3e75c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164738"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>데이터 집합 및 XmlDataDocument 동기화
@@ -90,13 +90,13 @@ ADO.NET <xref:System.Data.DataSet>으로 데이터의 관계형 표현을 사용
  동기화 할 때를 **데이터 집합** 사용 하 여는 **XmlDataDocument**, 여부에 따라 결과가 달라질 수 있습니다에 <xref:System.Data.DataRelation> 개체 중첩 됩니다. 자세한 내용은 [중첩 Datarelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [XmlDataDocument로 데이터 집합 동기화](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
+ [XmlDataDocument로 데이터 세트 동기화](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
  강력한 형식의 동기화 하는 방법을 보여 줍니다 **데이터 집합**, 최소한의 스키마를 사용 하 여 사용 하 여는 **XmlDataDocument**합니다.  
   
- [데이터 집합에서 XPath 쿼리 수행](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/performing-an-xpath-query-on-a-dataset.md)  
+ [데이터 세트에서 XPath 쿼리 수행](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/performing-an-xpath-query-on-a-dataset.md)  
  내용에 XPath 쿼리를 수행 하는 방법을 보여 줍니다는 **데이터 집합**합니다.  
   
- [XSLT 변형을 DataSet에 적용](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md)  
+ [XSLT 변형을 데이터 세트에 적용](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md)  
  내용에 XSLT 변형을 적용 하는 방법을 보여 줍니다는 **데이터 집합**합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
@@ -106,7 +106,7 @@ ADO.NET <xref:System.Data.DataSet>으로 데이터의 관계형 표현을 사용
  [DataRelation 중첩](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
  중요성에 대해 중첩 **DataRelation** 변수의 내용을 나타내는 개체를 **데이터 집합** XML 데이터로 이러한 관계를 만드는 방법에 설명 합니다.  
   
- [DataSets, DataTables 및 DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [DataSet, DataTable 및 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  에 대해 설명 합니다 **데이터 집합** 및 응용 프로그램 데이터를 관리 하 고 관계형 데이터베이스 및 XML을 포함 하 여 데이터 소스와 상호 작용을 사용 하는 방법입니다.  
   
  <xref:System.Xml.XmlDataDocument>  

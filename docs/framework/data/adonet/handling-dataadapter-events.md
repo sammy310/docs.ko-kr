@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
 ms.openlocfilehash: 864a9072b38054557b2583f505e6e7827c02d2de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180754"
 ---
 # <a name="handling-dataadapter-events"></a>DataAdapter 이벤트 처리
@@ -22,7 +22,7 @@ ADO.NET <xref:System.Data.Common.DataAdapter>는 데이터 소스의 데이터�
 |`FillError`|`Fill` 작업 중에 오류가 발생했습니다.|  
   
 ## <a name="rowupdating-and-rowupdated"></a>RowUpdating 및 RowUpdated  
- `RowUpdating` 행 업데이트 되기 전에 발생 합니다 <xref:System.Data.DataSet> 데이터 소스에서 처리 되었습니다. `RowUpdated` 행 업데이트가 된 후 발생 합니다 `DataSet` 데이터 소스에서 처리 되었습니다. 결과적으로 `RowUpdating`을 사용하면 업데이트가 발생하기 전에 업데이트 동작을 수정하거나, 업데이트가 발생할 경우 추가 처리 방법을 제공하거나, 업데이트된 행에 대한 참조를 유지하거나, 현재 업데이트를 취소하고 일괄 프로세스로 나중에 처리하도록 예약하는 것과 같은 작업을 수행할 수 있습니다. `RowUpdated` 오류 및 업데이트 하는 동안 발생 하는 예외에 응답 하는 데 유용 합니다. 재시도 논리 등은 물론이고 오류 정보도 `DataSet`에 추가할 수 있습니다.  
+ `RowUpdating`은 <xref:System.Data.DataSet>의 행 업데이트가 데이터 소스에서 처리되기 전에 발생합니다. `RowUpdated`는 `DataSet`의 행 업데이트가 데이터 소스에서 처리된 후에 발생합니다. 결과적으로 `RowUpdating`을 사용하면 업데이트가 발생하기 전에 업데이트 동작을 수정하거나, 업데이트가 발생할 경우 추가 처리 방법을 제공하거나, 업데이트된 행에 대한 참조를 유지하거나, 현재 업데이트를 취소하고 일괄 프로세스로 나중에 처리하도록 예약하는 것과 같은 작업을 수행할 수 있습니다. `RowUpdated`는 업데이트 중에 발생하는 오류와 예외에 응답하는 데 유용합니다. 재시도 논리 등은 물론이고 오류 정보도 `DataSet`에 추가할 수 있습니다.  
   
  <xref:System.Data.Common.RowUpdatingEventArgs> 및 <xref:System.Data.Common.RowUpdatedEventArgs> 이벤트로 전달되는 `RowUpdating` 및 `RowUpdated` 인수에는 업데이트를 수행하는 데 사용되는 `Command` 개체를 참조하는 `Command` 속성, 업데이트된 정보가 포함된 `Row` 개체를 참조하는 `DataRow` 속성, 수행되는 업데이트 형식을 나타내는 `StatementType` 속성, `TableMapping` 속성(해당되는 경우) 및 작업의 `Status` 속성이 있습니다.  
   
@@ -188,8 +188,8 @@ protected static void FillError(object sender, FillErrorEventArgs args)
   
 ## <a name="see-also"></a>참고자료
 
-- [DataAdapters 및 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [데이터 세트 이벤트 처리](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
+- [DataAdapter 및 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [데이터 집합 이벤트 처리](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
 - [DataTable 이벤트 처리](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
 - [이벤트](../../../../docs/standard/events/index.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

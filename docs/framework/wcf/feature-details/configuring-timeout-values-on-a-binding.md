@@ -3,11 +3,11 @@ title: 바인딩에 시간 제한 값 구성
 ms.date: 03/30/2017
 ms.assetid: b5c825a2-b48f-444a-8659-61751ff11d34
 ms.openlocfilehash: f323dfff338f8a3ba24caab6df3b3916d3ae0d13
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59339764"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773248"
 ---
 # <a name="configuring-timeout-values-on-a-binding"></a>바인딩에 시간 제한 값 구성
 WCF 바인딩에서 사용할 수 있는 시간 제한 설정은 여러 가지가 있습니다. 이러한 시간 제한 설정을 정확하게 설정하면 서비스 성능이 향상될 뿐만 아니라 서비스의 유용성과 보안에도 도움이 됩니다. WCF 바인딩에서 사용할 수 있는 시간 제한은 다음과 같습니다.  

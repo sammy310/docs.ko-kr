@@ -15,10 +15,10 @@ helpviewer_keywords:
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
 ms.openlocfilehash: eb0adb2e8140b20c8d52eced02f177b8c3560354
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211636"
 ---
 # <a name="xtype-markup-extension"></a>x:Type 태그 확장
@@ -84,4 +84,4 @@ CLR 제공 <xref:System.Type> 개체는 지정된 된 XAML 형식에 대 한 기
 - <xref:System.Windows.Style>
 - [스타일 지정 및 템플릿](../wpf/controls/styling-and-templating.md)
 - [XAML 개요(WPF)](../wpf/advanced/xaml-overview-wpf.md)
-- [태그 확장명 및 WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [태그 확장 및 WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

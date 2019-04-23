@@ -10,10 +10,10 @@ helpviewer_keywords:
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
 ms.openlocfilehash: f95274861f58d1581e4c5439861ebf186b1b3489
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332562"
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>방법: 서명 및 암호화에 별도의 X.509 인증서 사용
@@ -23,13 +23,13 @@ ms.locfileid: "59332562"
   
  다음 다이어그램에서는 사용되는 주 클래스, 상속하는 클래스(위쪽 화살표로 표시), 특정 메서드 및 속성의 반환 형식을 보여 줍니다.  
   
--   `MyClientCredentials` 사용자 지정 구현 <xref:System.ServiceModel.Description.ClientCredentials>합니다.  
+-   `MyClientCredentials`는 <xref:System.ServiceModel.Description.ClientCredentials>의 사용자 지정 구현입니다.  
   
     -   다이어그램에 표시된 속성은 모두 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>인스턴스를 반환합니다.  
   
     -   메서드 <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A>는 `MyClientCredentialsSecurityTokenManager`인스턴스를 반환합니다.  
   
--   `MyClientCredentialsSecurityTokenManager` 사용자 지정 구현 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>합니다.  
+-   `MyClientCredentialsSecurityTokenManager`는 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>의 사용자 지정 구현입니다.  
   
     -   메서드 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A>는 <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider>인스턴스를 반환합니다.  
   

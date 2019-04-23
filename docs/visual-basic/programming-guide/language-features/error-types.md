@@ -11,14 +11,14 @@ helpviewer_keywords:
 - syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
 ms.openlocfilehash: 07db963ac3cf9d1c0d17c420480189d362cdaf2c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58831568"
 ---
 # <a name="error-types-visual-basic"></a>오류 형식(Visual Basic)
-Visual Basic의 경우 오류 (라고도 *예외*) 세 가지 범주 중 하나에 속합니다: 구문 오류, 런타임 오류 및 논리 오류입니다.  
+Visual basic의 경우 오류 (라고도 *예외*) 세 가지 범주 중 하나에 속합니다: 구문 오류, 런타임 오류 및 논리 오류입니다.  
   
 ## <a name="syntax-errors"></a>구문 오류  
  *구문 오류* 는 코드를 작성 하는 동안 발생 하 합니다. Visual Basic에서 입력할 때 코드를 확인 합니다 **코드 편집기** 창 고 철자 부적절 하 게 언어 요소를 사용 하 여 등의 실수 한 경우 경고 합니다. 구문 오류는 오류의 가장 일반적인 형식입니다. 해결할 수 있습니다 이러한 쉽게 코딩 환경에서 발생 하는 즉시.  

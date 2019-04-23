@@ -6,10 +6,10 @@ helpviewer_keywords:
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
 ms.openlocfilehash: 7db435e45ddc55346af5ea5fdbcce611173c774b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122917"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath XAML 구문
@@ -47,7 +47,7 @@ ms.locfileid: "59122917"
 <Binding Path="[key]" .../>  
 ```  
   
- `key` 사전 이나 해시 테이블 형식의 인덱스 이거나 배열의 정수 인덱스 여야 합니다. 또한 키 값은 키 값이 적용되는 속성에 직접 바인딩할 수 있는 형식이어야 합니다. 예를 들어 문자열 키 및 문자열 값을 포함 하는 해시 테이블을 사용할 수이 이렇게에 대 한 텍스트에 바인딩하는 <xref:System.Windows.Controls.TextBox>합니다. 또는 키가 컬렉션이나 하위 인덱스를 가리키는 경우 이 구문을 사용하여 대상 컬렉션 속성에 바인딩할 수 있습니다. 이외의 경우에는 `<Binding Path="[key].propertyName" .../>`과 같은 구문을 통해 특정 속성을 참조해야 합니다.  
+ `key`는 사전 및 해시 테이블에 대한 형식화된 인덱스이거나 배열의 정수 인덱스여야 합니다. 또한 키 값은 키 값이 적용되는 속성에 직접 바인딩할 수 있는 형식이어야 합니다. 예를 들어 문자열 키 및 문자열 값을 포함 하는 해시 테이블을 사용할 수이 이렇게에 대 한 텍스트에 바인딩하는 <xref:System.Windows.Controls.TextBox>합니다. 또는 키가 컬렉션이나 하위 인덱스를 가리키는 경우 이 구문을 사용하여 대상 컬렉션 속성에 바인딩할 수 있습니다. 이외의 경우에는 `<Binding Path="[key].propertyName" .../>`과 같은 구문을 통해 특정 속성을 참조해야 합니다.  
   
  필요한 경우 인덱스의 형식을 지정할 수 있습니다. 인덱싱된 속성 경로의이 측면에 대 한 세부 정보를 참조 하세요. <xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>합니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "59122917"
 <object property="(ownerType.propertyName)" .../>  
 ```  
   
- 괄호를 표시 하는이 속성을 <xref:System.Windows.PropertyPath> 부분 정규화를 사용 하 여 생성 해야 합니다. XML 네임스페이스를 사용하여 적절한 매핑이 있는 형식을 찾을 수 있습니다. `ownerType` 있는 형식을 검색을 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 처리기는를 통해 액세스할 수는 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 각 어셈블리에서 선언 합니다. 대부분 애플리케이션에서는 기본 XML 네임스페이스가 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 네임스페이스에 매핑되므로 접두사는 대개 사용자 지정 형식 또는 해당 네임스페이스 외부의 형식에만 필요합니다.  `propertyName` 에 있는 속성의 이름으로 확인 되어야 합니다 `ownerType`합니다. 일반적으로 이 구문은 다음 경우 중 하나에 사용됩니다.  
+ 괄호를 표시 하는이 속성을 <xref:System.Windows.PropertyPath> 부분 정규화를 사용 하 여 생성 해야 합니다. XML 네임스페이스를 사용하여 적절한 매핑이 있는 형식을 찾을 수 있습니다. `ownerType` 있는 형식을 검색을 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 처리기는를 통해 액세스할 수는 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 각 어셈블리에서 선언 합니다. 대부분 애플리케이션에서는 기본 XML 네임스페이스가 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 네임스페이스에 매핑되므로 접두사는 대개 사용자 지정 형식 또는 해당 네임스페이스 외부의 형식에만 필요합니다.  `propertyName`은 `ownerType`에 있는 속성의 이름으로 확인되어야 합니다. 일반적으로 이 구문은 다음 경우 중 하나에 사용됩니다.  
   
 -   경로는 지정된 대상 형식이 없는 스타일 또는 템플릿인 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에 지정됩니다. 스타일이 아니고 템플릿이 아닌 경우에 속성은 형식이 아닌 인스턴스에 있으므로 일반적으로 이를 제외한 다른 경우에는 정규화된 사용이 적절하지 않습니다.  
   
@@ -165,7 +165,7 @@ or
   
  `propertyName` 하나는 속성 이어야 합니다는 <xref:System.Windows.Freezable> 값 형식 이거나 지정 된에 있는 기본 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 형식입니다.  
   
- `propertyName2` 값인 개체에 존재 하는 종속성 속성의 이름 이어야 합니다 `propertyName`합니다. 즉, `propertyName2` 되는 형식에 종속성 속성으로 존재 해야 합니다 `propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>합니다.  
+ `propertyName2`는 `propertyName` 값인 개체에 있는 종속성 속성의 이름이어야 합니다. 즉, `propertyName2` 되는 형식에 종속성 속성으로 존재 해야 합니다 `propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>합니다.  
   
  적용된 스타일 및 템플릿 때문에 애니메이션의 간접 대상 지정이 필요합니다. 애니메이션을 대상으로 하려면를 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 는 대상 개체에서 이름으로 설정 됩니다 [X:name](../../xaml-services/x-name-directive.md) 또는 <xref:System.Windows.FrameworkElement.Name%2A>합니다. 템플릿 및 스타일 요소에 이름이 있을 수 있지만 해당 이름은 스타일 및 템플릿의 네임스페이스 내에서만 유효합니다. 템플릿 및 스타일이 네임스페이스를 애플리케이션 태그와 공유한 경우 이름이 고유하지 않습니다. 스타일 및 템플릿은 문자 그대로 인스턴스 간에 공유되고 중복 이름을 영구화합니다. 따라서 애니메이션 효과를 줄 요소의 개별 속성이 스타일이나 템플릿을 기반으로 한 경우 스타일 템플릿을 기반으로 하지 않은 명명된 요소 인스턴스로 시작한 다음 애니메이션 효과를 줄 속성에 도착할 스타일 또는 템플릿 시각적 트리를 대상으로 지정해야 합니다.  
   
@@ -178,7 +178,7 @@ or
 <animation Storyboard.TargetProperty="(ownerType.propertyName)" .../>  
 ```  
   
- 괄호를 표시 하는이 속성을 <xref:System.Windows.PropertyPath> 부분 정규화를 사용 하 여 생성 해야 합니다. XML 네임스페이스를 사용하여 형식을 찾을 수 있습니다. `ownerType` 있는 형식을 검색을 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 처리기는를 통해 액세스할 수는 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 각 어셈블리에서 선언 합니다. 대부분 애플리케이션에서는 기본 XML 네임스페이스가 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 네임스페이스에 매핑되므로 접두사는 대개 사용자 지정 형식 또는 해당 네임스페이스 외부의 형식에만 필요합니다. `propertyName` 에 있는 속성의 이름으로 확인 되어야 합니다 `ownerType`합니다. 로 지정 된 속성이 `propertyName` 이어야 합니다는 <xref:System.Windows.DependencyProperty>합니다. 모든 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 연결된 속성은 종속성 속성으로 구현되므로 이 문제는 사용자 지정 연결된 속성에만 관련됩니다.  
+ 괄호를 표시 하는이 속성을 <xref:System.Windows.PropertyPath> 부분 정규화를 사용 하 여 생성 해야 합니다. XML 네임스페이스를 사용하여 형식을 찾을 수 있습니다. `ownerType` 있는 형식을 검색을 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 처리기는를 통해 액세스할 수는 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 각 어셈블리에서 선언 합니다. 대부분 애플리케이션에서는 기본 XML 네임스페이스가 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 네임스페이스에 매핑되므로 접두사는 대개 사용자 지정 형식 또는 해당 네임스페이스 외부의 형식에만 필요합니다. `propertyName`은 `ownerType`에 있는 속성의 이름으로 확인되어야 합니다. 로 지정 된 속성이 `propertyName` 이어야 합니다는 <xref:System.Windows.DependencyProperty>합니다. 모든 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 연결된 속성은 종속성 속성으로 구현되므로 이 문제는 사용자 지정 연결된 속성에만 관련됩니다.  
   
 <a name="indexanim"></a>   
 ### <a name="indexers"></a>인덱서  

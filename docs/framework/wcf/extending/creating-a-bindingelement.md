@@ -3,10 +3,10 @@ title: BindingElement 만들기
 ms.date: 03/30/2017
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
 ms.openlocfilehash: 600bf9b394078ffc1b1bc97390bd0de406d64338
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115169"
 ---
 # <a name="creating-a-bindingelement"></a>BindingElement 만들기
@@ -22,9 +22,9 @@ ms.locfileid: "59115169"
   
  `ChunkingBindingElement`는 `ChunkingChannelFactory` 및 `ChunkingChannelListener`를 만듭니다. 또한 <xref:System.ServiceModel.Channels.BindingElement.CanBuildChannelFactory%2A> 및 <xref:System.ServiceModel.Channels.BindingElement.CanBuildChannelListener%2A> 구현을 재정의하고, 형식 매개 변수가<xref:System.ServiceModel.Channels.IDuplexSessionChannel>(이 예제에서는 이 채널 셰이프가 `ChunkingChannel`에서 지원하는 유일한 채널 셰이프임)인지 그리고 바인딩에 있는 다른 바인딩 요소가 이 채널 셰이프를 지원하는지를 확인합니다.  
   
- <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> 요청한 채널 셰이프는 빌드할 수 있습니다 하 고 다음 청크 할 메시지 동작 목록을 가져옵니다를 먼저 확인 합니다. 그런 다음 새로운 `ChunkingChannelFactory`를 만들고 이를 내부 채널 팩터리에 전달합니다. 전송 바인딩 요소를 만드는 경우 이 요소가 바인딩 스택의 마지막 요소이므로 채널 수신기나 채널 팩터리를 만들어야 합니다.  
+ <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A>는 요청한 채널 셰이프를 만들 수 있는지 먼저 확인한 다음 청크 분할되는 메시지 동작 목록을 가져옵니다. 그런 다음 새로운 `ChunkingChannelFactory`를 만들고 이를 내부 채널 팩터리에 전달합니다. 전송 바인딩 요소를 만드는 경우 이 요소가 바인딩 스택의 마지막 요소이므로 채널 수신기나 채널 팩터리를 만들어야 합니다.  
   
- <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> 만들기에 대 한 구현 방법이 비슷합니다 `ChunkingChannelListener` 내부 채널 수신기를 전달 합니다.  
+ <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A>에서도 `ChunkingChannelListener`를 만들어 내부 채널 수신기에 전달하는 구현 방법이 비슷합니다.  
   
  전송 채널을 사용 하는 또 다른 예로 [전송 합니다. UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플에서는 다음 재정의 제공 합니다.  
   
@@ -47,14 +47,14 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
 #### <a name="protocol-binding-elements"></a>프로토콜 바인딩 요소  
  새 바인딩 요소는 포함된 바인딩 요소를 바꾸거나 확대할 수 있으며 새 전송, 인코딩 또는 더 높은 수준의 프로토콜을 추가할 수 있습니다. 새 프로토콜 바인딩 요소를 만들려면 먼저 <xref:System.ServiceModel.Channels.BindingElement> 클래스를 확장합니다. 최소한 다음을 구현 해야 합니다 <xref:System.ServiceModel.Channels.BindingElement.Clone%2A?displayProperty=nameWithType> 구현 및 합니다 `ChannelProtectionRequirements` 를 사용 하 여 <xref:System.ServiceModel.Channels.IChannel.GetProperty%2A?displayProperty=nameWithType>. 이렇게 하면 이 바인딩 요소에 대해 <xref:System.ServiceModel.Security.ChannelProtectionRequirements>가 반환됩니다.  자세한 내용은 <xref:System.ServiceModel.Security.ChannelProtectionRequirements>을 참조하세요.  
   
- <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> 이 바인딩 요소의 새 복사본을 반환 해야 합니다. 바인딩 요소 작성자는 기본 복사 생성자를 호출한 다음 이 클래스의 추가 필드를 복제하는 복사 생성자를 사용하여 <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>을 구현하는 것이 좋습니다.  
+ <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>은 이 바인딩 요소의 새 복사본을 반환합니다. 바인딩 요소 작성자는 기본 복사 생성자를 호출한 다음 이 클래스의 추가 필드를 복제하는 복사 생성자를 사용하여 <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>을 구현하는 것이 좋습니다.  
   
 #### <a name="transport-binding-elements"></a>전송 바인딩 요소  
  새 전송 바인딩 요소를 만들려면 <xref:System.ServiceModel.Channels.TransportBindingElement> 인터페이스를 확장합니다. 그런 다음 최소한 <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> 메서드와 <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A?displayProperty=nameWithType> 속성을 구현해야 합니다.  
   
- <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> – 해야이 바인딩 요소의 새 복사본을 반환 합니다.  바인딩 요소 작성자는 기본 복사 생성자를 호출한 다음 이 클래스의 추가 필드를 복제하는 복사 생성자를 통해 Clone을 구현하는 것이 좋습니다.  
+ <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> – 이 바인딩 요소의 새 복사본을 반환합니다.  바인딩 요소 작성자는 기본 복사 생성자를 호출한 다음 이 클래스의 추가 필드를 복제하는 복사 생성자를 통해 Clone을 구현하는 것이 좋습니다.  
   
- <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> – <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> 바인딩 요소로 나타내는 전송 프로토콜에 대 한 속성에서 반환 URI 체계를 가져옵니다. 예를 들어 합니다 <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> 하며 <xref:System.ServiceModel.Channels.TcpTransportBindingElement?displayProperty=nameWithType> 는 각각의 "http" 및 "net.tcp"를 반환 <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> 속성.  
+ <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> – <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> get 속성은 바인딩 요소로 표현되는 전송 프로토콜의 URI 체계를 반환합니다. 예를 들어 합니다 <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> 하며 <xref:System.ServiceModel.Channels.TcpTransportBindingElement?displayProperty=nameWithType> 는 각각의 "http" 및 "net.tcp"를 반환 <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> 속성.  
   
 #### <a name="encoding-binding-elements"></a>인코딩 바인딩 요소  
  새 인코딩 바인딩 요소를 만들려면 먼저 <xref:System.ServiceModel.Channels.BindingElement> 클래스를 확장하고 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement?displayProperty=nameWithType> 클래스를 구현합니다. 그런 다음 최소한 <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>, <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A?displayProperty=nameWithType> 메서드와 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A?displayProperty=nameWithType> 속성을 구현해야 합니다.  

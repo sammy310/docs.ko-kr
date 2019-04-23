@@ -3,12 +3,12 @@ title: nullable 참조 형식을 사용하여 디자인
 description: 이 고급 자습서에서는 nullable 참조 형식을 소개합니다. 참조 값이 null일 수 있는 경우에 대한 디자인 의도를 표현하고 컴파일러가 null일 수 없는 경우를 적용하게 하는 방법을 알아봅니다.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 57f738771a6f1d2cebe7af546d06ac7d7289a338
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: fac83d8f61b725a4a2163c9cd42911fe60d12263
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443252"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59427294"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>자습서: nullable 참조 형식이 있는 기존 코드 마이그레이션
 
@@ -24,7 +24,7 @@ C# 8에서는 nullable 값 형식이 값 형식을 보완하는 것과 동일한
 
 ## <a name="prerequisites"></a>전제 조건
 
-C# 8.0 베타 컴파일러를 포함하여 .NET Core를 실행하도록 머신을 설정해야 합니다. C# 8 베타 컴파일러는 [Visual Studio 2019 Preview 2 이상](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) 또는 [.NET Core 3.0 Preview 2](https://dotnet.microsoft.com/download/dotnet-core/3.0)에서 사용할 수 있습니다.
+C# 8.0 베타 컴파일러를 포함하여 .NET Core를 실행하도록 머신을 설정해야 합니다. C# 8 베타 컴파일러는 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 또는 최신 [.NET Core 3.0 미리 보기](https://dotnet.microsoft.com/download/dotnet-core/3.0)에서 사용할 수 있습니다.
 
 이 자습서에서는 Visual Studio 또는 .NET Core CLI를 포함하여 C# 및 .NET에 익숙하다고 가정합니다.
 
@@ -81,7 +81,7 @@ public class NewsStoryViewModel
 
 [!code-csharp[StarterCreateNewsItem](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#CreateNewsItem)]
 
-위 코드 블록에서는 몇 가지 작업이 진행되고 있습니다. 이 애플리케이션은 [AutoMapper](http://automapper.org/) NuGet 패키지를 사용하여 `ISyndicationItem`으로부터 뉴스 항목을 생성합니다. 이 하나의 문에서 뉴스 기사 항목이 생성되고 속성이 설정된다는 사실을 파악했습니다. 따라서 `NewsStoryViewModel`의 설계 의도는 이러한 속성이 `null` 값을 갖지 않도록 하는 것임을 알 수 있습니다. 이러한 속성은 **nullable이 아닌 참조 형식**이 되어야 합니다. 이렇게 해야 원래 설계 의도가 가장 잘 표현됩니다. 실제로 모든 `NewsStoryViewModel`이 null이 아닌 값으로 올바르게 인스턴스화되었습니다. 그렇다면 다음과 같은 초기화 코드가 유효한 수정이 될 수 있습니다.
+위 코드 블록에서는 몇 가지 작업이 진행되고 있습니다. 이 애플리케이션은 [AutoMapper](https://automapper.org/) NuGet 패키지를 사용하여 `ISyndicationItem`으로부터 뉴스 항목을 생성합니다. 이 하나의 문에서 뉴스 기사 항목이 생성되고 속성이 설정된다는 사실을 파악했습니다. 따라서 `NewsStoryViewModel`의 설계 의도는 이러한 속성이 `null` 값을 갖지 않도록 하는 것임을 알 수 있습니다. 이러한 속성은 **nullable이 아닌 참조 형식**이 되어야 합니다. 이렇게 해야 원래 설계 의도가 가장 잘 표현됩니다. 실제로 모든 `NewsStoryViewModel`이 null이 아닌 값으로 올바르게 인스턴스화되었습니다. 그렇다면 다음과 같은 초기화 코드가 유효한 수정이 될 수 있습니다.
 
 ```csharp
 public class NewsStoryViewModel

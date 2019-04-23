@@ -4,12 +4,12 @@ description: Linux 컴퓨터에서 .NET Core 애플리케이션을 개발, 배�
 author: thraka
 ms.author: adegeo
 ms.date: 12/14/2018
-ms.openlocfilehash: 5ef1737185ad41de7bd5e7a9b8db048ff577811f
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 29256259c66b909ad65691230bd652f38583184e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083888"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084913"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux에서 .NET Core의 필수 구성 요소
 
@@ -19,11 +19,11 @@ ms.locfileid: "55083888"
 * [Visual Studio Code](https://code.visualstudio.com/)
 
 > [!NOTE]
-> .NET Core SDK 패키지는 프로덕션 서버/환경에서 필요하지 않습니다. .NET Core 런타임 패키지만 프로덕션 환경에 배포된 앱에 필요합니다. NET Core 런타임은 자체 포함된 배포의 일부로 앱으로 배포되지만 프레임워크 종속 배포된 앱에 대해 별도로 배포되어야 합니다. 프레임워크 종속 및 자체 포함된 배포 형식에 대한 자세한 내용은 [.NET Core 애플리케이션 배포](./deploying/index.md)를 참조하세요. 또한 특정 지침은 [자체 포함된 Linux 애플리케이션](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md)을 참조하세요.
+> .NET Core SDK 패키지는 프로덕션 서버/환경에서 필요하지 않습니다. .NET Core 런타임 패키지만 프로덕션 환경에 배포된 앱에 필요합니다. .NET Core 런타임은 자체 포함된 배포의 일부로 앱으로 배포되지만 프레임워크 종속 배포된 앱에 대해 별도로 배포되어야 합니다. 프레임워크 종속 및 자체 포함된 배포 형식에 대한 자세한 내용은 [.NET Core 애플리케이션 배포](./deploying/index.md)를 참조하세요. 또한 특정 지침은 [자체 포함된 Linux 애플리케이션](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md)을 참조하세요.
 
 ## <a name="supported-linux-versions"></a>지원되는 Linux 버전
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# [<a name="net-core-2x"></a>.NET Core 2.x](#tab/netcore2x)
 
 .NET Core 2.x는 단일 운영 체제로 Linux를 처리합니다. 지원되는 Linux 배포에 대한 단일 Linux 빌드(칩 아키텍처마다)가 있습니다. 
 
@@ -44,7 +44,7 @@ ms.locfileid: "55083888"
 
 .NET Core 2.1 및 .NET Core 2.2가 지원되는 운영 체제, 배포 및 버전, 지원되지 않는 OS 버전, 수명 주기 정책 링크의 전체 목록은 [.NET Core 2.1이 지원되는 OS 버전](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) 및 [.NET Core 2.2가 지원되는 OS 버전](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)을 참조하세요.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# [<a name="net-core-1x"></a>.NET Core 1.x](#tab/netcore1x)
 
 다운로드 링크 및 자세한 내용은 [.NET Core 1.1 다운로드](https://www.microsoft.com/net/download/dotnet-core/1.1) 또는 [.NET Core 1.0 다운로드](https://www.microsoft.com/net/download/dotnet-core/1.0)를 참조하세요.
 
@@ -61,7 +61,7 @@ ms.locfileid: "55083888"
 
 지원 OS 버전 중 .NET Core 1.x를 지원하는 운영 체제 및 수명 주기 정책 링크는 [.NET Core 1.x Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)(.NET Core 1.x가 지원되는 OS 버전)를 참조하세요.
 
-# <a name="net-core-30-preview-1tabnetcore30"></a>[.NET Core 3.0 Preview 1](#tab/netcore30)
+# [<a name="net-core-30-preview-1"></a>.NET Core 3.0 미리 보기 1](#tab/netcore30)
 
 .NET Core 3.0 Preview 1은 단일 운영 체제로 Linux를 처리합니다. 지원되는 Linux 배포에 대한 단일 Linux 빌드(칩 아키텍처마다)가 있습니다. 
 
@@ -74,7 +74,7 @@ OS                            | 버전               | 아키텍처
 Red Hat Enterprise Linux      | 6                     | X64
 Red Hat Enterprise Linux<br>CentOS<br>Oracle Linux  | 7                     | X64
 Fedora                        | 28                    | X64
-Debian                        | 10                     | x64, ARM32\*, ARM64\*
+Debian                        | 9                     | x64, ARM32\*, ARM64\*
 Ubuntu                        | 16.04+, 18.04+        | x64, ARM32\*, ARM64\*
 Linux Mint                    | 18                    | X64
 openSUSE                      | 42.3+                 | X64
@@ -86,8 +86,6 @@ Alpine Linux                  | 3.8+                  | x64, ARM64
 지원 OS 버전 중 .NET Core 3.0이 지원되는 운영 체제, 배포 및 버전, 수명 주기 정책 링크의 전체 목록은 [.NET Core 3.0이 지원되는 OS 버전](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)을 참조하세요.
 
 ARM64에 .NET Core 3.0을 설치하는 방법에 대한 자세한 내용은 [Linux ARM64에 .NET Core 3.0 설치](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213)를 참조하세요.
-
-
 
 ---
 

@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 9b66a7d372c76ac1675e55713bd5655e213e68fe
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: d2d4b191ed4cb8f2f8b9b0a34fe99e65d4596a72
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633623"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613566"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>열거형 형식 대신 열거형 클래스 사용하기
 
@@ -85,25 +85,25 @@ public abstract class CardType : Enumeration
 ## <a name="additional-resources"></a>추가 자료
 
 - **열거형을 의심할 것 - 업데이트** \
-  [https://www.planetgeek.ch/2009/07/01/enums-are-evil/](https://www.planetgeek.ch/2009/07/01/enums-are-evil/)
+  <https://www.planetgeek.ch/2009/07/01/enums-are-evil/>
 
 - **Daniel Hardman 열거형이 질병을 전파하는 방법 - 및 질병 치료 방법** \
-  [https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/](https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/)
+  <https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/>
 
 - **Jimmy Bogard. 열거형 클래스** \
-  [https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/](https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/)
+  <https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/>
 
 - **Steve Smith. C#의 열거형 대체 항목** \
-  [https://ardalis.com/enum-alternatives-in-c](https://ardalis.com/enum-alternatives-in-c)
+  <https://ardalis.com/enum-alternatives-in-c>
 
 - **Enumeration.cs.** eShopOnContainers의 기본 열거형 클래스\
-  [https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)
+  <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs>
 
 - **CardType.cs**. eShopOnContainers의 샘플 열거형 클래스 \
-  [https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs)
+  <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs>
     
 - **SmartEnum**. Ardalis-.NET에서 더 강력한 형식의 스마트한 열거형을 생성하는데 도움을 준 클래스입니다. \
-  [https://www.nuget.org/packages/Ardalis.SmartEnum/](https://www.nuget.org/packages/Ardalis.SmartEnum/)
+  <https://www.nuget.org/packages/Ardalis.SmartEnum/>
 
 >[!div class="step-by-step"]
 >[이전](implement-value-objects.md)

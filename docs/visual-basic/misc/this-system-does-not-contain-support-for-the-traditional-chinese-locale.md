@@ -5,10 +5,10 @@ f1_keywords:
 - vbrArgument_TCNotSupported
 ms.assetid: 95bace92-c7b9-4641-b71f-c088ddb418c9
 ms.openlocfilehash: 43b94b3382c4ce62afbdce6abcd4aad10b46ca58
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333628"
 ---
 # <a name="this-system-does-not-contain-support-for-the-traditional-chinese-locale"></a>이 시스템은 중국어 번체 로캘을 지원하지 않습니다.
@@ -22,4 +22,4 @@ ms.locfileid: "59333628"
 
 - <xref:System.Globalization>
 
-- [.NET Framework 기반의 국가별 애플리케이션 소개](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
+- [.NET Framework 기반의 국가별 응용 프로그램 소개](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)

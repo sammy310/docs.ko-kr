@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2c5acf5cad41dba46b9f711ee842200ae86cc9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0483f1477ee215537d1081fde791d0742d5aec50
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712576"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59299477"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>연습: 부분 신뢰 시나리오에서 코드 내보내기
 리플렉션 내보내기에는 완전 또는 부분 신뢰에서 동일한 API 집합이 사용되지만 일부 기능의 경우 부분적으로 신뢰할 수 있는 코드에 특수 권한이 필요합니다. 또한 리플렉션 내보내기에는 부분 신뢰와 함께 보안 투명 어셈블리에서 사용되도록 디자인된 익명으로 호스트되는 동적 메서드의 기능이 있습니다.  
@@ -59,12 +59,12 @@ ms.locfileid: "54712576"
   
 ##### <a name="to-create-an-application-domain-with-partial-trust"></a>부분 신뢰를 사용하여 애플리케이션 도메인을 만들려면  
   
-1.  샌드박스가 적용된 애플리케이션 도메인에서 어셈블리에 부여할 권한 집합을 만듭니다. 이 경우 인터넷 영역의 권한 집합이 사용됩니다.  
+1. 샌드박스가 적용된 애플리케이션 도메인에서 어셈블리에 부여할 권한 집합을 만듭니다. 이 경우 인터넷 영역의 권한 집합이 사용됩니다.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#2)]
      [!code-vb[HowToEmitCodeInPartialTrust#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#2)]  
   
-2.  <xref:System.AppDomainSetup> 개체를 만들어 애플리케이션 경로를 통해 애플리케이션 도메인을 초기화합니다.  
+2. <xref:System.AppDomainSetup> 개체를 만들어 애플리케이션 경로를 통해 애플리케이션 도메인을 초기화합니다.  
   
     > [!IMPORTANT]
     >  간단히 설명하기 위해 이 코드 예제에서는 현재 폴더를 사용합니다. 실제로 인터넷에서 나오는 코드를 실행하려면 [방법: 샌드박스에서 부분적으로 신뢰할 수 있는 코드 실행](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)의 설명대로 신뢰할 수 없는 코드에 별도의 폴더를 사용합니다.  
@@ -72,7 +72,7 @@ ms.locfileid: "54712576"
      [!code-csharp[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#3)]
      [!code-vb[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#3)]  
   
-3.  애플리케이션 도메인을 만들어 애플리케이션 도메인 설정 정보 및 애플리케이션 도메인에서 실행되는 모든 어셈블리의 권한 집합을 지정합니다.  
+3. 애플리케이션 도메인을 만들어 애플리케이션 도메인 설정 정보 및 애플리케이션 도메인에서 실행되는 모든 어셈블리의 권한 집합을 지정합니다.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#5)]
      [!code-vb[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#5)]  
@@ -89,7 +89,7 @@ ms.locfileid: "54712576"
   
 ##### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>부분 신뢰 및 RMA를 사용하여 애플리케이션 도메인을 만들려면  
   
-1.  <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess>(RMA) 플래그가 있는 새 <xref:System.Security.Permissions.ReflectionPermission> 개체를 만들고 <xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType> 메서드를 사용하여 권한 집합에 권한을 추가합니다.  
+1. <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess>(RMA) 플래그가 있는 새 <xref:System.Security.Permissions.ReflectionPermission> 개체를 만들고 <xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType> 메서드를 사용하여 권한 집합에 권한을 추가합니다.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#7)]
      [!code-vb[HowToEmitCodeInPartialTrust#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#7)]  
@@ -99,7 +99,7 @@ ms.locfileid: "54712576"
     > [!NOTE]
     >  RMA는 익명으로 호스트된 동적 메서드의 기능입니다. 일반 동적 메서드가 JIT 표시 유형 확인을 건너뛰면 내보낸 코드에 완전 신뢰가 필요합니다.  
   
-2.  애플리케이션 도메인을 만들어 애플리케이션 도메인 설정 정보 및 권한 집합을 지정합니다.  
+2. 애플리케이션 도메인을 만들어 애플리케이션 도메인 설정 정보 및 권한 집합을 지정합니다.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#8)]
      [!code-vb[HowToEmitCodeInPartialTrust#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#8)]  
@@ -110,24 +110,24 @@ ms.locfileid: "54712576"
   
 #### <a name="to-define-and-execute-a-method-in-an-application-domain"></a>애플리케이션 도메인에서 메서드를 정의 및 실행하려면  
   
-1.  <xref:System.MarshalByRefObject>에서 파생된 클래스를 정의합니다. 이 작업을 통해 다른 애플리케이션 도메인에서 클래스 인스턴스를 만들고 애플리케이션 도메인 경계에 걸쳐 메서드 호출을 실행할 수 있습니다. 이 예제에서 클래스 이름은 `Worker`입니다.  
+1. <xref:System.MarshalByRefObject>에서 파생된 클래스를 정의합니다. 이 작업을 통해 다른 애플리케이션 도메인에서 클래스 인스턴스를 만들고 애플리케이션 도메인 경계에 걸쳐 메서드 호출을 실행할 수 있습니다. 이 예제에서 클래스 이름은 `Worker`입니다.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#10)]
      [!code-vb[HowToEmitCodeInPartialTrust#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#10)]  
   
-2.  실행할 코드가 포함된 public 메서드를 정의합니다. 이 예제에서 코드는 간단한 동적 메서드를 내보내고, 대리자를 만들어 메서드를 실행하고, 대리자를 호출합니다.  
+2. 실행할 코드가 포함된 public 메서드를 정의합니다. 이 예제에서 코드는 간단한 동적 메서드를 내보내고, 대리자를 만들어 메서드를 실행하고, 대리자를 호출합니다.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#11)]
      [!code-vb[HowToEmitCodeInPartialTrust#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#11)]  
   
-3.  기본 프로그램에서 어셈블리의 표시 이름을 가져옵니다. 이 이름은 샌드박스가 적용된 애플리케이션 도메인에서 `Worker` 클래스의 인스턴스를 만들 때 사용됩니다.  
+3. 기본 프로그램에서 어셈블리의 표시 이름을 가져옵니다. 이 이름은 샌드박스가 적용된 애플리케이션 도메인에서 `Worker` 클래스의 인스턴스를 만들 때 사용됩니다.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#14](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#14)]
      [!code-vb[HowToEmitCodeInPartialTrust#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#14)]  
   
-4.  기본 프로그램에서 이 연습의 [첫 번째 절차](#Setting_up)에 설명된 대로 샌드박스가 적용된 애플리케이션 도메인을 만듭니다. `SimpleEmitDemo` 메서드는 public 메서드만 사용하므로 `Internet` 권한 집합에 권한을 추가할 필요가 없습니다.  
+4. 기본 프로그램에서 이 연습의 [첫 번째 절차](#Setting_up)에 설명된 대로 샌드박스가 적용된 애플리케이션 도메인을 만듭니다. `SimpleEmitDemo` 메서드는 public 메서드만 사용하므로 `Internet` 권한 집합에 권한을 추가할 필요가 없습니다.  
   
-5.  기본 프로그램에서 샌드박스가 적용된 애플리케이션 도메인에서 `Worker` 클래스의 인스턴스를 만듭니다.  
+5. 기본 프로그램에서 샌드박스가 적용된 애플리케이션 도메인에서 `Worker` 클래스의 인스턴스를 만듭니다.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#12)]
      [!code-vb[HowToEmitCodeInPartialTrust#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#12)]  
@@ -137,7 +137,7 @@ ms.locfileid: "54712576"
     > [!NOTE]
     >  Visual Studio에서 이 코드를 사용하는 경우 네임스페이스를 포함하도록 클래스의 이름을 변경해야 합니다. 기본적으로 네임스페이스는 프로젝트의 이름입니다. 예를 들어 프로젝트가 "PartialTrust"이면 클래스 이름은 "PartialTrust.Worker"입니다.  
   
-6.  `SimpleEmitDemo` 메서드를 호출하는 코드를 추가합니다. 호출은 애플리케이션 도메인 경계에서 마샬링되고 코드는 샌드박스가 적용된 애플리케이션 도메인에서 실행됩니다.  
+6. `SimpleEmitDemo` 메서드를 호출하는 코드를 추가합니다. 호출은 애플리케이션 도메인 경계에서 마샬링되고 코드는 샌드박스가 적용된 애플리케이션 도메인에서 실행됩니다.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#13](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#13)]
      [!code-vb[HowToEmitCodeInPartialTrust#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#13)]  
@@ -212,5 +212,6 @@ ms.locfileid: "54712576"
 -   Visual Studio에서 이 코드 예제를 빌드하는 경우 <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> 메서드에 클래스를 전달할 때 네임스페이스를 포함하도록 해당 클래스의 이름을 변경해야 합니다. 기본적으로 네임스페이스는 프로젝트의 이름입니다. 예를 들어 프로젝트가 "PartialTrust"이면 클래스 이름은 "PartialTrust.Worker"입니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [리플렉션 내보내기의 보안 문제점](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
 - [방법: 샌드박스에서 부분적으로 신뢰할 수 있는 코드 실행](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

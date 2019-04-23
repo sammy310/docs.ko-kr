@@ -13,10 +13,10 @@ helpviewer_keywords:
 - bound controls [Windows Forms]
 ms.assetid: 4e96e3d0-b1cc-4de1-8774-bc9970ec4554
 ms.openlocfilehash: fe54c650e1d19f36d681053c7da47e12527c5827
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320888"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a>방법: 디자이너를 사용하여 데이터 원본에 Windows Forms DataGrid 컨트롤 바인딩
@@ -72,7 +72,7 @@ ms.locfileid: "59320888"
 ## <a name="see-also"></a>참고자료
 
 - [DataGrid 컨트롤 개요](datagrid-control-overview-windows-forms.md)
-- [방법: Windows Forms DataGrid 컨트롤에 테이블 및 열 추가](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [방법: Windows Forms DataGrid 컨트롤에 테이블과 열 추가](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
 - [DataGrid 컨트롤](datagrid-control-windows-forms.md)
 - [Windows Forms 데이터 바인딩](../windows-forms-data-binding.md)
 - [Visual Studio에서 데이터 액세스](/visualstudio/data-tools/accessing-data-in-visual-studio)

@@ -3,10 +3,10 @@ title: SQL Server의 서버 및 데이터베이스 역할
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
 ms.openlocfilehash: e2d0de08f23bc3767e11de31c4ded4a326d060a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087978"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>SQL Server의 서버 및 데이터베이스 역할
@@ -16,7 +16,7 @@ ms.locfileid: "59087978"
  고정 서버 역할에는 서버 범위의 고정 권한 집합이 할당되어 있습니다. 고정 서버 역할은 SQL Server를 관리하는 데 사용되며 이 역할에 할당된 권한은 변경할 수 없습니다. 데이터베이스에 사용자 계정을 만들지 않고도 고정 서버 역할에 로그인을 할당할 수 있습니다.  
   
 > [!IMPORTANT]
->  `sysadmin` 고정 서버 역할은 다른 모든 역할을 포함하며 범위에 제한이 없습니다. 완전히 신뢰할 수 있는 보안 주체만 이 역할에 추가하세요. `sysadmin` 역할 멤버에는 모든 서버 데이터베이스 및 리소스에 취소할 수 없는 관리 권한을 가집니다.  
+>  `sysadmin` 고정 서버 역할은 다른 모든 역할을 포함하며 범위에 제한이 없습니다. 완전히 신뢰할 수 있는 보안 주체만 이 역할에 추가하세요. `sysadmin` 역할 멤버는 모든 서버 데이터베이스 및 리소스에 대해 취소할 수 없는 관리 권한을 갖습니다.  
   
  고정 서버 역할에 사용자를 추가할 때는 주의를 기울여야 합니다. 예를 들어 `bulkadmin` 역할에 속한 사용자는 로컬 파일의 내용을 테이블에 삽입할 수 있으므로 이로 인해 데이터 무결성이 손상될 수 있습니다. 고정된 서버 역할 및 사용 권한의 전체 목록은 SQL Server 온라인 설명서를 참조 하세요.  
   
@@ -66,6 +66,6 @@ ms.locfileid: "59087978"
 - [ADO.NET 응용 프로그램 보안](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server의 응용 프로그램 보안 시나리오](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [SQL Server에서 인증](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
-- [SQL Server에서 소유권 및 사용자와 스키마 분리](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
+- [SQL Server에서 소유권 및 사용자 스키마 분리](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
 - [SQL Server에서 권한 부여 및 권한](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

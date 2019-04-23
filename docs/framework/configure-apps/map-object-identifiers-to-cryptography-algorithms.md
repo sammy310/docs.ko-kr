@@ -9,10 +9,10 @@ helpviewer_keywords:
 - cryptography, mapping object identifiers
 ms.assetid: c9673f81-bf9e-47fd-bc6f-6bc1c1c4c15e
 ms.openlocfilehash: e035ff04a70a441f7f64bbc230ba6d8036fb2ace
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130613"
 ---
 # <a name="mapping-object-identifiers-to-cryptography-algorithms"></a>개체 식별자를 암호화 알고리즘에 매핑
@@ -43,4 +43,4 @@ ms.locfileid: "59130613"
 ## <a name="see-also"></a>참고자료
 
 - [암호화 클래스 구성](../../../docs/framework/configure-apps/configure-cryptography-classes.md)
-- [암호화 서비스](../../../docs/standard/security/cryptographic-services.md)
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

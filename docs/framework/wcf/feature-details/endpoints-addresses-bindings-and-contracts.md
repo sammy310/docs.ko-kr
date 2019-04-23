@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
 ms.openlocfilehash: 3e78e7cf0c5acde53d7ee23294fd52134414e860
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207528"
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>엔드포인트: 주소, 바인딩 및 계약
@@ -78,16 +78,16 @@ Windows Communication Foundation (WCF) 서비스와 모든 통신을 통해 발�
  [계약](../../../../docs/framework/wcf/feature-details/contracts.md)  
  계약이 서비스 메서드를 정의하는 방법에 대해 설명합니다.  
   
- [방법: 구성에서 서비스 엔드포인트 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [방법: 구성에서 서비스 끝점 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  구성에서 서비스 엔드포인트를 만드는 방법에 대해 설명합니다.  
   
- [방법: 코드에서 서비스 엔드포인트 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
+ [방법: 코드에서 서비스 끝점 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
  코드에서 서비스 엔드포인트를 만드는 방법에 대해 설명합니다.  
   
- [방법: Svcutil.exe를 사용하여 컴파일된 서비스 코드 유효성 검사](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
+ [방법: Svcutil.exe를 사용 하 여 컴파일된 서비스 코드 유효성 검사](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
  사용 하 여 서비스를 호스트 하지 않고 서비스 구현과 구성에서 오류를 검색 하는 방법에 설명 합니다 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
 
 - [서비스 구성](../../../../docs/framework/wcf/configuring-services.md)
-- [바인딩 확장명](../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [바인딩 확장](../../../../docs/framework/wcf/extending/extending-bindings.md)

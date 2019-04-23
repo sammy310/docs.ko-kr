@@ -17,15 +17,15 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d7fd463a8cc8ad6a88818669de6fb495e12e497b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215146"
 ---
 # <a name="icordebugeditandcontinuesnapshot-interface"></a>ICorDebugEditAndContinueSnapshot 인터페이스
 
-`ICorDebugEditAndContinueSnapshot` 사용 되지 않습니다. 이 인터페이스를 사용하지 마십시오.  
+`ICorDebugEditAndContinueSnapshot`는 사용되지 않습니다. 이 인터페이스를 사용하지 마십시오.  
   
 ## <a name="see-also"></a>참고자료
 

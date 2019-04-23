@@ -5,10 +5,10 @@ helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
 ms.openlocfilehash: 8702091c185ba3d4956d3bd5d13ca191c12fce82
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162883"
 ---
 # <a name="configuring-tracing"></a>추적 구성
@@ -185,4 +185,4 @@ ms.locfileid: "59162883"
 - [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [관리 및 진단](../../../../../docs/framework/wcf/diagnostics/index.md)
 - [방법: 추적 수신기 만들기 및 초기화](https://go.microsoft.com/fwlink/?LinkId=94648)
-- [Creating a Custom TraceListener](https://go.microsoft.com/fwlink/?LinkId=96239)
+- [사용자 지정 TraceListener 만들기](https://go.microsoft.com/fwlink/?LinkId=96239)

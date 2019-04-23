@@ -5,10 +5,10 @@ helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
 ms.openlocfilehash: ec6eaadae1dd7a7db84538c24e396a14db1a65a4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164991"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverter 및 XAML
@@ -71,7 +71,7 @@ ms.locfileid: "59164991"
   
  다음으로 가장 중요 한 메서드는 <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>합니다. (예를 들어 저장 되는 경우 파일로 XAML에) 응용 프로그램 태그 표현으로 변환 하는 경우, <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> 는 태그 표현 생성을 담당 합니다. 이 경우 코드는 XAML에 대 한 중요 한 경로가 전달 하는 경우는 `destinationType` 의 <xref:System.String> 합니다.  
   
- <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> 및 <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> 서비스의 기능을 쿼리할 때 사용 되는 지원 메서드입니다는 <xref:System.ComponentModel.TypeConverter> 구현 합니다. 변환기의 동일한 변환 메서드에서 지원하는 형식 관련 케이스에 대해 `true` 를 반환하려면 이러한 메서드를 구현해야 합니다. XAML 용도에서는 일반적으로 <xref:System.String> 형식을 의미합니다.  
+ <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> 및 <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> 은 서비스에서 <xref:System.ComponentModel.TypeConverter> 구현의 기능을 쿼리할 때 사용되는 지원 메서드입니다. 변환기의 동일한 변환 메서드에서 지원하는 형식 관련 케이스에 대해 `true` 를 반환하려면 이러한 메서드를 구현해야 합니다. XAML 용도에서는 일반적으로 <xref:System.String> 형식을 의미합니다.  
   
 ### <a name="culture-information-and-type-converters-for-xaml"></a>XAML에 대한 문화권 정보 및 형식 변환기  
  각 <xref:System.ComponentModel.TypeConverter> 구현에서는 변환에 유효한 문자열 구성 요소 자체 해석할 및 수를 사용 하거나 무시할 수도 있습니다 매개 변수로 전달 된 형식 설명 합니다. 문화권 및 XAML 형식 변환과 관련하여 중요한 고려 사항이 있습니다. XAML에서는 지역화 가능 문자열을 특성 값으로 사용할 수 있습니다. 그러나 해당 지역화 가능 문자열을 특정 문화권 요구 사항이 있는 형식 변환기 입력으로 사용할 수는 없습니다. XAML 특성 값에 대한 형식 변환기에는 `en-US` 문화권을 사용하는 고정 언어 구문 분석 동작이 반드시 포함되기 때문입니다. 이러한 제한의 디자인상 이유에 대한 자세한 내용은 XAML 언어 사양([\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525))을 참조하세요.  
@@ -87,7 +87,7 @@ ms.locfileid: "59164991"
 >  중괄호 문자, 특히 {를 문자열 형식의 가능한 요소로 사용하지 마세요. 이러한 문자는 태그 확장명 시퀀스의 시작 및 종료로 예약되어 있습니다.  
   
 ### <a name="implementing-convertto"></a>ConvertTo 구현  
- <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> serialization 지원에 잠재적으로 사용 됩니다. <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> 를 통해 사용자 지정 형식 및 해당 형식 변환기에 대해 Serialization을 지원하는 것은 절대적인 요구 사항이 아닙니다. 그러나 컨트롤을 구현하거나 클래스의 디자인 또는 기능의 일부로 serialization을 사용하는 경우에는 <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>를 구현해야 합니다.  
+ <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> 는 serialization 지원에 잠재적으로 사용됩니다. <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> 를 통해 사용자 지정 형식 및 해당 형식 변환기에 대해 Serialization을 지원하는 것은 절대적인 요구 사항이 아닙니다. 그러나 컨트롤을 구현하거나 클래스의 디자인 또는 기능의 일부로 serialization을 사용하는 경우에는 <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>를 구현해야 합니다.  
   
  으로 사용할 수는 <xref:System.ComponentModel.TypeConverter> XAML을 지 원하는 구현 합니다 <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> 해당 변환기에 대 한 방법으로 지원 되는 형식 (또는 값)의 인스턴스를 허용 해야 합니다 `value` 매개 변수입니다. 경우는 `destinationType` 매개 변수가 <xref:System.String>, 반환된 된 개체는으로 캐스트 될 수 있어야 합니다. 그런 다음 <xref:System.String>합니다. 반환된 문자열은 `value`의 직렬화된 값을 나타내야 합니다. 이상적으로 선택한 serialization 형식은 해당 문자열에 전달 된 경우 동일한 값을 생성할 수 있어야 합니다 <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> 정보가 크게 손실 없이, 동일한 변환기의 구현입니다.  
   
@@ -111,5 +111,5 @@ ms.locfileid: "59164991"
 
 - <xref:System.ComponentModel.TypeConverter>
 - [XAML 개요(WPF)](xaml-overview-wpf.md)
-- [태그 확장명 및 WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [태그 확장 및 WPF XAML](markup-extensions-and-wpf-xaml.md)
 - [XAML 구문 정보](xaml-syntax-in-detail.md)

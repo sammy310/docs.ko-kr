@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a0bb52de-d279-419d-8f23-4b12d1a3f36e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 741bb73280d9e81fc1865867152ab1243e9dd53c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 342c3ce59ad80c9a60f2a2b69b30f77ff0549415
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494680"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59176763"
 ---
 # <a name="mitigation-path-colon-checks"></a>완화: 경로 콜론 검사
 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]를 대상으로 하는 앱부터 이전에 지원되지 않던 경로를 지원하도록 여러 가지 변경이 수행되었습니다(길이 및 형식 측면에서). 특히 적절한 드라이브 구분 기호 구문(콜론)에 대한 확인이 좀 더 정확해졌습니다.  
@@ -33,4 +33,5 @@ ms.locfileid: "54494680"
     ```  
   
 ## <a name="see-also"></a>참고 항목
+
 - [대상 다시 지정 변경 내용](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
 ms.openlocfilehash: 824d2a08ddd36317fcdb8caa1690decb2f9c432a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295889"
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>방법: Atom 및 RSS로 피드 공개
@@ -17,7 +17,7 @@ Windows Communication Foundation (WCF)를 사용 하면 배포 피드를 노출 
   
 ### <a name="to-create-a-basic-syndication-service"></a>기본 배포 서비스를 만들려면  
   
-1. <xref:System.ServiceModel.Web.WebGetAttribute> 특성으로 표시된 인터페이스를 사용하여 서비스 계약을 정의합니다. 배포 피드로 노출된 각 작업은 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 개체를 반환합니다. <xref:System.ServiceModel.Web.WebGetAttribute>의 매개 변수를 확인합니다. `UriTemplate` 이 서비스 작업을 호출 하는 데 사용 하는 URL을 지정 합니다. 이 매개 변수에 대 한 문자열이 리터럴 및 변수 중괄호에서 ({*형식*}). 이 변수는 서비스 작업의 `format` 매개 변수에 해당합니다. 자세한 내용은 <xref:System.UriTemplate>을 참조하세요. `BodyStyle` 이 서비스 작업이 보내고 받는 메시지가 작성 되는 방법에 영향을 줍니다. <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> 이 서비스 작업에서 보내거나 받은 데이터가 인프라 정의 XML 요소로 래핑되지 않습니다 지정 합니다. 자세한 내용은 <xref:System.ServiceModel.Web.WebMessageBodyStyle>을 참조하세요.  
+1. <xref:System.ServiceModel.Web.WebGetAttribute> 특성으로 표시된 인터페이스를 사용하여 서비스 계약을 정의합니다. 배포 피드로 노출된 각 작업은 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 개체를 반환합니다. <xref:System.ServiceModel.Web.WebGetAttribute>의 매개 변수를 확인합니다. `UriTemplate`은 이 서비스 작업을 호출하는 데 사용되는 URL을 지정합니다. 이 매개 변수에 대 한 문자열이 리터럴 및 변수 중괄호에서 ({*형식*}). 이 변수는 서비스 작업의 `format` 매개 변수에 해당합니다. 자세한 내용은 <xref:System.UriTemplate>을 참조하세요. `BodyStyle`은 이 서비스 작업이 보내고 받는 메시지가 작성되는 방법에 영향을 줍니다. <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare>는 이 서비스 작업에서 보내거나 받은 데이터가 인프라 정의 XML 요소로 래핑되지 않도록 지정합니다. 자세한 내용은 <xref:System.ServiceModel.Web.WebMessageBodyStyle>을 참조하세요.  
   
      [!code-csharp[htAtomRss#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#0)]
      [!code-vb[htAtomRss#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#0)]  

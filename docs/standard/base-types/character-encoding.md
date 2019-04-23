@@ -14,12 +14,12 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 16154ff6b2fcf6c537126b6ced03c45f6746b57a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8edc747c003cd5527df509af83325816671ddfb
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649403"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59346108"
 ---
 # <a name="character-encoding-in-net"></a>.NET의 문자 인코딩
 문자는 다양한 방법으로 표현할 수 있는 추상 엔터티입니다. 문자 인코딩은 지원되는 문자 집합의 각 문자와 해당 문자를 나타내는 일부 값의 쌍을 만드는 시스템입니다. 예를 들어 모르스 부호는 로마 알파벳의 각 문자와 전화선을 통한 전송에 적합한 점과 대시 패턴의 쌍을 만드는 문자 인코딩입니다. 컴퓨터의 문자 인코딩은 지원되는 문자 집합의 각 문자와 해당 문자를 나타내는 숫자 값의 쌍을 만듭니다. 문자 인코딩에는 다음 두 가지 구성 요소가 있습니다.  
@@ -215,11 +215,11 @@ ms.locfileid: "54649403"
   
  또한 다음 단계를 수행하여 최적 대체(fallback), 교체 대체(fallback) 또는 예외 대체(fallback)를 사용하는 사용자 지정 솔루션을 구현할 수 있습니다.  
   
-1.  인코딩 작업의 경우 <xref:System.Text.EncoderFallback> 에서 클래스를 파생시키고, 디코딩 작업의 경우 <xref:System.Text.DecoderFallback> 에서 클래스를 파생시킵니다.  
+1. 인코딩 작업의 경우 <xref:System.Text.EncoderFallback> 에서 클래스를 파생시키고, 디코딩 작업의 경우 <xref:System.Text.DecoderFallback> 에서 클래스를 파생시킵니다.  
   
-2.  인코딩 작업의 경우 <xref:System.Text.EncoderFallbackBuffer> 에서 클래스를 파생시키고, 디코딩 작업의 경우 <xref:System.Text.DecoderFallbackBuffer> 에서 클래스를 파생시킵니다.  
+2. 인코딩 작업의 경우 <xref:System.Text.EncoderFallbackBuffer> 에서 클래스를 파생시키고, 디코딩 작업의 경우 <xref:System.Text.DecoderFallbackBuffer> 에서 클래스를 파생시킵니다.  
   
-3.  예외 대체(fallback)의 경우 미리 정의된 <xref:System.Text.EncoderFallbackException> 및 <xref:System.Text.DecoderFallbackException> 클래스가 요구를 충족하지 않는 경우 <xref:System.Exception> 또는 <xref:System.ArgumentException>과 같은 예외 개체에서 클래스를 파생시킵니다.  
+3. 예외 대체(fallback)의 경우 미리 정의된 <xref:System.Text.EncoderFallbackException> 및 <xref:System.Text.DecoderFallbackException> 클래스가 요구를 충족하지 않는 경우 <xref:System.Exception> 또는 <xref:System.ArgumentException>과 같은 예외 개체에서 클래스를 파생시킵니다.  
   
 ### <a name="deriving-from-encoderfallback-or-decoderfallback"></a>EncoderFallback 또는 DecoderFallback에서 파생  
  사용자 지정 대체(fallback) 솔루션을 구현하려면 인코딩 작업의 경우 <xref:System.Text.EncoderFallback> 에서 상속하고 디코딩 작업의 경우 <xref:System.Text.DecoderFallback> 에서 상속하는 클래스를 만들어야 합니다. 이러한 클래스의 인스턴스는 <xref:System.Text.Encoding.GetEncoding%28System.String%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> 메서드에 전달되며 인코딩 클래스와 대체(fallback) 구현 간의 중개자 역할을 합니다.  

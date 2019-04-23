@@ -5,10 +5,10 @@ ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5b858b9daad22cdda6df30be7b28cdecfd275b8f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228304"
 ---
 # <a name="application-element-net-native"></a>\<응용 프로그램 > 요소 (.NET 네이티브)
@@ -60,15 +60,15 @@ ms.locfileid: "59228304"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<어셈블리 >](../../../docs/framework/net-native/assembly-element-net-native.md)|특정 어셈블리의 모든 형식에 정책을 적용합니다.|  
-|[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|특정 네임스페이스의 모든 형식에 정책을 적용합니다.|  
+|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|특정 어셈블리의 모든 형식에 정책을 적용합니다.|  
+|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|특정 네임스페이스의 모든 형식에 정책을 적용합니다.|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|클래스 또는 구조체와 같은 특정 형식에 정책을 적용합니다.|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|생성된 제네릭 형식에 정책을 적용합니다. 예를 들어 [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 요소를 사용하면 `List<String>` 형식에 대한 정책을 정의할 수 있습니다.|  
-|[\<메서드 >](../../../docs/framework/net-native/method-element-net-native.md)|특정 형식에 대한 메서드에 정책을 적용합니다.|  
+|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|특정 형식에 대한 메서드에 정책을 적용합니다.|  
 |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|생성된 제네릭 메서드에 정책을 적용합니다.|  
-|[\<속성 >](../../../docs/framework/net-native/property-element-net-native.md)|특정 형식에 대한 속성에 정책을 적용합니다.|  
-|[\<필드 >](../../../docs/framework/net-native/field-element-net-native.md)|특정 형식에 대한 필드에 정책을 적용합니다.|  
-|[\<이벤트 >](../../../docs/framework/net-native/event-element-net-native.md)|특정 형식의 이벤트에 정책을 적용합니다.|  
+|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|특정 형식에 대한 속성에 정책을 적용합니다.|  
+|[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|특정 형식에 대한 필드에 정책을 적용합니다.|  
+|[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|특정 형식의 이벤트에 정책을 적용합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -87,7 +87,7 @@ ms.locfileid: "59228304"
   
 ## <a name="see-also"></a>참고자료
 
-- [\<Library> 요소](../../../docs/framework/net-native/library-element-net-native.md)
-- [\<Directives> 요소](../../../docs/framework/net-native/directives-element-net-native.md)
+- [\<라이브러리 > 요소](../../../docs/framework/net-native/library-element-net-native.md)
+- [\<지시문 > 요소](../../../docs/framework/net-native/directives-element-net-native.md)
 - [런타임 지시문 요소](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

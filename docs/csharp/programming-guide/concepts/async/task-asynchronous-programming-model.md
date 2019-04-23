@@ -2,12 +2,12 @@
 title: async 및 await를 사용한 TAP(작업 비동기 프로그래밍) 모델(C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: edcf9222c34b7cf29fedabd676605db95133d68c
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 2fde365acfab3342082e2ca286decc00ca73a19d
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675889"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59295967"
 ---
 # <a name="task-asynchronous-programming-model"></a>작업 비동기 프로그래밍 모델
 비동기 프로그래밍을 사용하여 성능 병목 현상을 방지하고 애플리케이션의 전체적인 응답성을 향상할 수 있습니다. 그러나 비동기 애플리케이션을 쓰는 일반적인 기술이 복잡하여 해당 애플리케이션을 쓰고, 디버깅하고, 유지 관리하기 어려울 수 있습니다.  
@@ -106,19 +106,19 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
   
  다이어그램의 숫자는 다음 단계에 해당하고 사용자가 "시작" 단추를 클릭할 때 시작됩니다.
   
-1.  이벤트 처리기가 호출되어 `AccessTheWebAsync` 비동기 메서드를 기다립니다.  
+1. 이벤트 처리기가 호출되어 `AccessTheWebAsync` 비동기 메서드를 기다립니다.  
   
-2.  `AccessTheWebAsync`는 <xref:System.Net.Http.HttpClient> 인스턴스를 만들고 <xref:System.Net.Http.HttpClient.GetStringAsync%2A> 비동기 메서드를 호출하여 웹 사이트의 내용을 문자열로 다운로드합니다.  
+2. `AccessTheWebAsync`는 <xref:System.Net.Http.HttpClient> 인스턴스를 만들고 <xref:System.Net.Http.HttpClient.GetStringAsync%2A> 비동기 메서드를 호출하여 웹 사이트의 내용을 문자열로 다운로드합니다.  
   
-3.  `GetStringAsync`에서 특정 작업이 발생하여 진행이 일시 중단됩니다. 웹 사이트에서 다운로드 또는 다른 차단 작업을 수행할 때까지 기다려야 할 수 있습니다. 리소스를 차단하지 않기 위해 `GetStringAsync`는 해당 호출자인 `AccessTheWebAsync`에 제어 권한을 양도합니다.  
+3. `GetStringAsync`에서 특정 작업이 발생하여 진행이 일시 중단됩니다. 웹 사이트에서 다운로드 또는 다른 차단 작업을 수행할 때까지 기다려야 할 수 있습니다. 리소스를 차단하지 않기 위해 `GetStringAsync`는 해당 호출자인 `AccessTheWebAsync`에 제어 권한을 양도합니다.  
   
      `GetStringAsync`는 `TResult`가 문자열인 <xref:System.Threading.Tasks.Task%601>를 반환하고, `AccessTheWebAsync`는 `getStringTask` 변수에 작업을 할당합니다. 이 작업은 작업이 완료될 때 실제 문자열 값을 생성하기 위한 코드와 함께 `GetStringAsync`를 호출하는 지속적인 프로세스를 나타냅니다.  
   
-4.  `getStringTask`가 아직 대기되지 않았으므로 `AccessTheWebAsync`가 `GetStringAsync`의 최종 결과에 무관한 다른 작업을 계속할 수 있습니다. 이 작업은 동기 메서드 `DoIndependentWork`를 호출하여 나타냅니다.  
+4. `getStringTask`가 아직 대기되지 않았으므로 `AccessTheWebAsync`가 `GetStringAsync`의 최종 결과에 무관한 다른 작업을 계속할 수 있습니다. 이 작업은 동기 메서드 `DoIndependentWork`를 호출하여 나타냅니다.  
   
-5.  `DoIndependentWork`는 작업을 수행하고 호출자에게 반환하는 동기 메서드입니다.  
+5. `DoIndependentWork`는 작업을 수행하고 호출자에게 반환하는 동기 메서드입니다.  
   
-6.  `AccessTheWebAsync`에 `getStringTask` 결과 없이 수행할 수 있는 작업이 없습니다. 다음으로 `AccessTheWebAsync`는 다운로드한 문자열의 길이를 계산하여 반환하려 하지만, 메서드가 문자열을 확인할 때까지 해당 값을 계산할 수 없습니다.  
+6. `AccessTheWebAsync`에 `getStringTask` 결과 없이 수행할 수 있는 작업이 없습니다. 다음으로 `AccessTheWebAsync`는 다운로드한 문자열의 길이를 계산하여 반환하려 하지만, 메서드가 문자열을 확인할 때까지 해당 값을 계산할 수 없습니다.  
   
      따라서 `AccessTheWebAsync`는 await 연산자를 사용해서 해당 프로세스를 일시 중단하고 `AccessTheWebAsync`를 호출한 메서드에 제어 권한을 양도합니다. `AccessTheWebAsync`는 `Task<int>`를 호출자에게 반환합니다. 작업은 다운로드한 문자열의 길이인 정수 결과를 만든다는 약속을 나타냅니다.  
   
@@ -127,9 +127,9 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
   
      호출자(이 예제의 이벤트 처리기) 내에서 처리 패턴이 계속됩니다. 호출자가 해당 결과를 기다리거나 즉시 기다리기 전에 `AccessTheWebAsync`에서 결과에 의존하지 않는 다른 작업을 수행할 수 있습니다.   `AccessTheWebAsync`에 대한 이벤트가 대기 중이며 `AccessTheWebAsync`가 `GetStringAsync`를 대기 중입니다.  
   
-7.  `GetStringAsync`가 완료되고 문자열 결과를 생성합니다. `GetStringAsync`를 호출할 경우 문자열 결과가 예상대로 반환되지 않습니다. (메서드가 이미 3단계에서 작업을 반환했습니다.) 대신 문자열 결과가 메서드 `getStringTask`의 완료를 나타내는 작업에 저장됩니다. await 연산자가 `getStringTask`에서 결과를 검색합니다. 할당 문은 검색된 결과를 `urlContents`에 할당합니다.  
+7. `GetStringAsync`가 완료되고 문자열 결과를 생성합니다. `GetStringAsync`를 호출할 경우 문자열 결과가 예상대로 반환되지 않습니다. (메서드가 이미 3단계에서 작업을 반환했습니다.) 대신 문자열 결과가 메서드 `getStringTask`의 완료를 나타내는 작업에 저장됩니다. await 연산자가 `getStringTask`에서 결과를 검색합니다. 할당 문은 검색된 결과를 `urlContents`에 할당합니다.  
   
-8.  `AccessTheWebAsync`에 문자열 결과가 있는 경우 메서드가 문자열 길이를 계산할 수 있습니다. 그런 다음 `AccessTheWebAsync` 작업도 완료되고 대기 이벤트 처리기를 다시 시작할 수 있습니다. 이 항목 뒷부분의 전체 예에서는 이벤트 처리기가 길이 결과 값을 검색하고 출력하는지 확인할 수 있습니다.    
+8. `AccessTheWebAsync`에 문자열 결과가 있는 경우 메서드가 문자열 길이를 계산할 수 있습니다. 그런 다음 `AccessTheWebAsync` 작업도 완료되고 대기 이벤트 처리기를 다시 시작할 수 있습니다. 이 항목 뒷부분의 전체 예에서는 이벤트 처리기가 길이 결과 값을 검색하고 출력하는지 확인할 수 있습니다.    
 비동기 프로그래밍을 처음 접하는 사용자인 경우 동기 동작과 비동기 동작의 차이점을 살펴보세요. 비동기 메서드는 작업이 완료될 때 반환되지만(5단계) 비동기 메서드는 작업이 일시 중단될 때 반환됩니다. 비동기 메서드가 해당 작업을 완료하면 작업이 완료된 것으로 표시되고 결과가 있을 경우 작업에 저장됩니다.  
   
 제어 흐름에 대한 자세한 내용은 [비동기 프로그램의 제어 흐름(C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)을 참조하세요.  
@@ -223,8 +223,7 @@ Windows 런타임 프로그래밍의 비동기 API에는 작업과 유사한 다
 -   <xref:Windows.Foundation.IAsyncActionWithProgress%601>  
   
 -   <xref:Windows.Foundation.IAsyncOperationWithProgress%602>  
-   
-  
+
 ## <a name="BKMK_NamingConvention"></a> 명명 규칙  
 규칙에 따라 일반적으로 대기 가능한 형식(예: `Task`, `Task<T>`, `ValueTask`, `ValueTask<T>`)을 반환하는 메서드에는 "Async"로 끝나는 이름을 사용해야 합니다. 비동기 작업을 시작하지만 대기 가능한 형식을 반환하지 않는 메서드는 "Async"로 끝나는 이름을 사용하지 않아야 하지만, "Begin", "Start" 또는 일부 다른 동사로 시작하여 이 메서드가 작업 결과를 반환하거나 throw하지 않도록 할 수 있습니다.
   

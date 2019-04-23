@@ -1,5 +1,5 @@
 ---
-title: <add> 에 대 한 요소 <sharedListeners>
+title: <sharedListeners>에 대한 <add> 요소
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - add element for <sharedListeners>
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
 ms.openlocfilehash: e7934ed5e71005cfd28271298ff6ce1eb8829a0d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59095635"
 ---
 # <a name="add-element-for-sharedlisteners"></a>\<추가 > 요소에 대 한 \<sharedListeners >
@@ -80,7 +80,7 @@ ms.locfileid: "59095635"
  이 요소는 응용 프로그램 구성 파일과 컴퓨터 구성 파일 (Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 사용 하는 방법을 보여 줍니다 `<add>` 요소를 추가 하는 <xref:System.Diagnostics.TextWriterTraceListener>`textListener` 에 `sharedListeners` 컬렉션입니다.   `textListener` 이름으로 추가 되는 `Listeners` 추적 소스에 대 한 컬렉션 `TraceSourceApp`합니다. `textListener` 수신기 파일 myListener.log에 추적 출력을 씁니다.  
+ 다음 예제에서는 사용 하는 방법을 보여 줍니다 `<add>` 요소를 추가 하는 <xref:System.Diagnostics.TextWriterTraceListener> `textListener` 에 `sharedListeners` 컬렉션입니다.   `textListener` 이름으로 추가 되는 `Listeners` 추적 소스에 대 한 컬렉션 `TraceSourceApp`합니다. `textListener` 수신기 파일 myListener.log에 추적 출력을 씁니다.  
   
 ```xml  
 <configuration>  

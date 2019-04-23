@@ -4,12 +4,12 @@ description: 동기 및 비동기 방식의 의미를 이해하고 마이크로 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 4b57607897e42ff68ff7566120bc3c932040a2a6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 364bd4eb82907fcf0fbcc850eca839f676a2dbf8
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466194"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613241"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>마이크로 서비스 아키텍처의 통신
 
@@ -90,10 +90,10 @@ ms.locfileid: "58466194"
 ### <a name="additional-resources"></a>추가 자료
 
 - **Martin Fowler. Richardson Maturity 모델** REST 모델의 설명입니다. \
-  [https://martinfowler.com/articles/richardsonMaturityModel.html](https://martinfowler.com/articles/richardsonMaturityModel.html)
+  <https://martinfowler.com/articles/richardsonMaturityModel.html>
 
 - **Swagger** 공식 사이트입니다. \
-  [https://swagger.io/](https://swagger.io/)
+  <https://swagger.io/>
 
 ### <a name="push-and-real-time-communication-based-on-http"></a>HTTP 기반 푸시 및 실시간 통신
 

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
 ms.openlocfilehash: f8e5a7475765bffb76e7b07e81db25b4a62ae038
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303494"
 ---
 # <a name="flow-document-overview"></a>유동 문서 개요
@@ -107,7 +107,7 @@ ms.locfileid: "59303494"
   
  그러나 아래에 보이는 대로 다른 인라인 파생 요소도 포함할 수 있습니다도 합니다. 
   
- **단원**  
+ **섹션**  
   
  <xref:System.Windows.Documents.Section> 기타를 포함 하는 때에 사용 되며 <xref:System.Windows.Documents.Block>-요소를 파생 합니다. 포함된 요소에 기본 서식 지정을 적용하지 않습니다. 그러나 모든 속성 값 집합을 <xref:System.Windows.Documents.Section> 해당 자식 요소에 적용 됩니다. 또한 섹션을 사용하면 프로그래밍 방식으로 자식 컬렉션을 반복할 수 있습니다. <xref:System.Windows.Documents.Section> 비슷한 방법으로는 \<d i V > html에서 태그입니다.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "59303494"
   
  **참고:** <xref:System.Windows.Documents.List> 를 사용 하는 유일한 유동 요소는는 <xref:System.Windows.Documents.ListItemCollection> 자식 요소를 관리 하도록 합니다.  
   
- **표**  
+ **Table**  
   
  <xref:System.Windows.Documents.Table> 테이블을 만드는 사용 됩니다. <xref:System.Windows.Documents.Table> 비슷합니다는 <xref:System.Windows.Controls.Grid> 요소 하지만 더 많은 기능을 큰 리소스 오버 헤드가 필요 합니다. 때문에 <xref:System.Windows.Controls.Grid> 되는 <xref:System.Windows.UIElement>에 포함 된 경우가 아니면 유동 콘텐츠에서 사용할 수 없습니다를 <xref:System.Windows.Documents.BlockUIContainer> 또는 <xref:System.Windows.Documents.InlineUIContainer>합니다. 에 대 한 자세한 <xref:System.Windows.Documents.Table>를 참조 하세요 [테이블 개요](table-overview.md)합니다.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "59303494"
   
  **참고:**  부터 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], <xref:System.Windows.Documents.Run.Text%2A> 의 속성을 <xref:System.Windows.Documents.Run> 개체 속성은 종속성 속성입니다. 바인딩할 수 있습니다 합니다 <xref:System.Windows.Documents.Run.Text%2A> 와 같은 속성에 대 한 데이터 소스를 <xref:System.Windows.Controls.TextBlock>입니다. <xref:System.Windows.Documents.Run.Text%2A> 속성은 단방향 바인딩을 완벽 하 게 지원 합니다. 합니다 <xref:System.Windows.Documents.Run.Text%2A> 속성을 제외 하 고 양방향 바인딩도 지원 <xref:System.Windows.Controls.RichTextBox>합니다. 예제를 보려면 <xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>를 참조하십시오.  
   
- **범위**  
+ **Span**  
   
  <xref:System.Windows.Documents.Span> 다른 인라인 콘텐츠 요소를 그룹화합니다. 내 콘텐츠의 없습니다 상속 렌더링이 적용 되지를 <xref:System.Windows.Documents.Span> 요소입니다. 그러나 요소에서 상속 되는 <xref:System.Windows.Documents.Span> 포함 하 여 <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Documents.Bold>, <xref:System.Windows.Documents.Italic> 고 <xref:System.Windows.Documents.Underline> 텍스트에 서식을 적용지 않습니다.  
   
@@ -194,7 +194,7 @@ ms.locfileid: "59303494"
   
  <xref:System.Windows.Documents.Figure> 및 <xref:System.Windows.Documents.Floater> 다른 점이 몇 가지 및 다른 시나리오에 사용 됩니다.  
   
- **그림:**  
+ **Figure:**  
   
 -   배치 될 수 있습니다. 페이지, 콘텐츠, 열 또는 단락에 상대적인 도킹의 가로 및 세로 앵커를 설정할 수 있습니다. 사용할 수도 있습니다 해당 <xref:System.Windows.Documents.Figure.HorizontalOffset%2A> 고 <xref:System.Windows.Documents.Figure.VerticalOffset%2A> 임의 오프셋을 지정 하는 속성입니다.  
   

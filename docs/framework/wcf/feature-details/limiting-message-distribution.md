@@ -3,10 +3,10 @@ title: 메시지 분포 제한
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
 ms.openlocfilehash: d09a2be4a59a08a4bddbb1e0f4d038cd2c5ff3e2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130223"
 ---
 # <a name="limiting-message-distribution"></a>메시지 분포 제한
@@ -20,9 +20,9 @@ ms.locfileid: "59130223"
 -   코드 조각 및 관련된 정보에 대 한 참조를 [피어 채널 블로그](https://go.microsoft.com/fwlink/?LinkID=114531)합니다.  
   
 ## <a name="message-propagation-filter"></a>메시지 전파 필터  
- `MessagePropagationFilter` 메시지 플 러 딩 메시지 또는 다른 특정 시나리오의 내용을 따라 전파 여부가 결정 하는 경우에 특히 사용자 지정된 컨트롤에 사용할 수 있습니다. 이 필터를 사용하면 노드를 통해 전달되는 모든 메시지에 대해 전파 여부를 결정할 수 있습니다. 이는 메시의 기타 위치에서 발생하여 노드에 수신된 메시지뿐만 아니라 응용 프로그램에서 생성된 메시지에도 적용됩니다. 이 필터는 메시지와 해당 메시지의 발생 위치에 모두 액세스할 수 있으므로 사용 가능한 전체 정보에 따라 메시지 전달 또는 삭제 여부를 결정할 수 있습니다.  
+ `MessagePropagationFilter`는 특히 메시지 내용 또는 다른 특정 시나리오에 따라 전파 여부가 결정되는 경우 메시지 플러딩을 사용자 지정 방식으로 제어하는 데 사용할 수 있습니다. 이 필터를 사용하면 노드를 통해 전달되는 모든 메시지에 대해 전파 여부를 결정할 수 있습니다. 이는 메시의 기타 위치에서 발생하여 노드에 수신된 메시지뿐만 아니라 응용 프로그램에서 생성된 메시지에도 적용됩니다. 이 필터는 메시지와 해당 메시지의 발생 위치에 모두 액세스할 수 있으므로 사용 가능한 전체 정보에 따라 메시지 전달 또는 삭제 여부를 결정할 수 있습니다.  
   
- <xref:System.ServiceModel.PeerMessagePropagationFilter> 단일 함수를 사용 하 여 기본 추상 클래스인 <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A>합니다. 메서드 호출의 첫 번째 인수는 메시지의 전체 복사본을 전달합니다. 메시지를 변경해도 실제 메시지는 영향을 받지 않습니다. 메서드 호출의 마지막 인수는 메시지의 발생 위치(`PeerMessageOrigination.Local` 또는 `PeerMessageOrigination.Remote`)를 식별합니다. 이 메서드를 구체적으로 구현하면 메시지를 로컬 응용 프로그램으로 전달하거나(<xref:System.ServiceModel.PeerMessagePropagation>), 원격 클라이언트로 전달하거나(`Local`), 두 위치 모두로 전달하거나(`Remote`), 두 위치 모두로 전달하지 않음(`LocalAndRemote`)을 나타내는 상수를 `None` 열거형에서 반환해야 합니다. 해당 `PeerNode` 개체에 액세스하고 `PeerNode.MessagePropagationFilter` 속성에 파생된 전파 필터 클래스의 인스턴스를 지정하여 이 필터를 적용할 수 있습니다. 피어 채널을 열기 전에 전파 필터가 연결되어 있는지 확인하십시오.  
+ <xref:System.ServiceModel.PeerMessagePropagationFilter>는 단일 함수 <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A>가 있는 기본 추상 클래스입니다. 메서드 호출의 첫 번째 인수는 메시지의 전체 복사본을 전달합니다. 메시지를 변경해도 실제 메시지는 영향을 받지 않습니다. 메서드 호출의 마지막 인수는 메시지의 발생 위치(`PeerMessageOrigination.Local` 또는 `PeerMessageOrigination.Remote`)를 식별합니다. 이 메서드를 구체적으로 구현하면 메시지를 로컬 응용 프로그램으로 전달하거나(<xref:System.ServiceModel.PeerMessagePropagation>), 원격 클라이언트로 전달하거나(`Local`), 두 위치 모두로 전달하거나(`Remote`), 두 위치 모두로 전달하지 않음(`LocalAndRemote`)을 나타내는 상수를 `None` 열거형에서 반환해야 합니다. 해당 `PeerNode` 개체에 액세스하고 `PeerNode.MessagePropagationFilter` 속성에 파생된 전파 필터 클래스의 인스턴스를 지정하여 이 필터를 적용할 수 있습니다. 피어 채널을 열기 전에 전파 필터가 연결되어 있는지 확인하십시오.  
   
 -   코드 조각 및 관련된 정보에 대 한 참조를 [피어 채널 블로그](https://go.microsoft.com/fwlink/?LinkID=114532)합니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "59130223"
   
  이러한 사항에 대해 생각해 보면 홉 수, 메시지 전파 필터, 로컬 필터, 직접 연결 중 어느 것을 사용할지 결정하는 데 도움이 됩니다. 다음과 같은 일반적인 지침을 고려해 보십시오.  
   
--   **대상**  
+-   **Who**  
   
     -   *개별 노드*:  로컬 필터 또는 직접 연결 합니다.  
   

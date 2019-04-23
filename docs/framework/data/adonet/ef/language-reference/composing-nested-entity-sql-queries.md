@@ -3,14 +3,14 @@ title: 중첩 Entity SQL 쿼리 작성
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
 ms.openlocfilehash: 4d6892e96cfbc9c5ba9d389aa03588c5133c7943
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137984"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>중첩 Entity SQL 쿼리 작성
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 다양 한 기능 언어가입니다. 빌딩 블록 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 식입니다. 기존 SQL과 달리 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 테이블 형식 결과 집합으로 제한 되지 않습니다: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 리터럴, 매개 변수 또는 중첩된 식을 포함할 수 있는 복잡 한 식 작성을 지원 합니다. 식의 값을 매개 변수화 또는 다른 식으로 구성 수 있습니다.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]은 다양한 기능을 가진 언어입니다. 빌딩 블록 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 식입니다. 기존 SQL과 달리 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 테이블 형식 결과 집합으로 제한 되지 않습니다: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 리터럴, 매개 변수 또는 중첩된 식을 포함할 수 있는 복잡 한 식 작성을 지원 합니다. 식의 값을 매개 변수화 또는 다른 식으로 구성 수 있습니다.  
   
 ## <a name="nested-expressions"></a>중첩된 식  
  중첩된 식은 자신이 반환한 형식의 값이 허용되는 임의의 위치에 놓일 수 있습니다. 예를 들어:  

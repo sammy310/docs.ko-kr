@@ -4,10 +4,10 @@ description: 사용자 지정 AI 솔루션 생성 및 .NET 애플리케이션에
 ms.custom: seodec18
 ms.date: 03/01/2019
 ms.openlocfilehash: c8d1258629f777cd8bced47e4b956c9cf100a682
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427585"
 ---
 # <a name="net-machine-learning-how-to-guides---mlnet"></a>.NET 기계 학습 방법 가이드 - ML.NET
@@ -32,7 +32,7 @@ ML.NET 가이드의 방법 섹션에서 일반적인 질문에 대한 빠른 답
 
 * [교차 유효성 검사를 사용하여 기계 학습 모델을 학습합니다.](train-cross-validation-ml-net.md)
 
-* [ML.NET을 사용하여 값을 예측하기 위해 회귀 모델을 학습합니다.](train-regression-model-ml-net.md)
+* [ML.NET을 사용해서 회귀 모델을 학습하여 값을 예측합니다.](train-regression-model-ml-net.md)
 
 ### <a name="evaluate-the-model-quality"></a>모델 품질 평가
 

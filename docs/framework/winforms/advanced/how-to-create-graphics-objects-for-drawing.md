@@ -11,10 +11,10 @@ helpviewer_keywords:
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
 ms.openlocfilehash: 79eae4d37c056fc95ac73c78e00dd1a2b68bcd24
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324203"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>방법: 그리는 데 필요한 그래픽 개체 만들기
@@ -165,14 +165,14 @@ ms.locfileid: "59324203"
   
     |렌더링|참조|  
     |---------------|---------|  
-    |선|[방법: Windows Form에서 선 그리기](how-to-draw-a-line-on-a-windows-form.md)|  
+    |선|[방법: Windows Form에 선 그리기](how-to-draw-a-line-on-a-windows-form.md)|  
     |도형|[방법: 윤곽선이 있는 도형 그리기](how-to-draw-an-outlined-shape.md)|  
-    |텍스트|[방법: Windows Form에서 텍스트 그리기](how-to-draw-text-on-a-windows-form.md)|  
-    |이미지|[방법: GDI+를 사용하여 이미지 렌더링](how-to-render-images-with-gdi.md)|  
+    |텍스트|[방법: Windows Form에 텍스트 그리기](how-to-draw-text-on-a-windows-form.md)|  
+    |이미지|[방법: GDI +를 사용 하 여 이미지를 렌더링 합니다.](how-to-render-images-with-gdi.md)|  
   
 ## <a name="see-also"></a>참고자료
 
 - [그래픽 프로그래밍 시작](getting-started-with-graphics-programming.md)
 - [Windows Forms의 그래픽 및 그리기](graphics-and-drawing-in-windows-forms.md)
 - [선, 곡선 및 도형](lines-curves-and-shapes.md)
-- [방법: GDI+를 사용하여 이미지 렌더링](how-to-render-images-with-gdi.md)
+- [방법: GDI +를 사용 하 여 이미지를 렌더링 합니다.](how-to-render-images-with-gdi.md)

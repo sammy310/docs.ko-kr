@@ -5,10 +5,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], architecture
 ms.assetid: 1c6cabf0-02ee-4bbc-9574-b54bb7f5b19e
 ms.openlocfilehash: 892168ec282fbf168c43515e0718fe5486a345a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130262"
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>DataGridView 컨트롤 아키텍처(Windows Forms)
@@ -140,4 +140,4 @@ ms.locfileid: "59130262"
 
 - [DataGridView 컨트롤 개요](datagridview-control-overview-windows-forms.md)
 - [Windows Forms DataGridView 컨트롤 사용자 지정](customizing-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 컨트롤에서 새 레코드에 대한 행 사용](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 컨트롤에서 새 레코드에 행 사용](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)

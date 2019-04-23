@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b40e12c7cb077d6ef128d4ee1aada6086cb9c1d
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: b64b0dd843f408f9a6d064aff935f8d18b3dbddd
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846469"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59313374"
 ---
 # <a name="language-independence-and-language-independent-components"></a>언어 독립성 및 언어 독립적 구성 요소
 .NET Framework는 언어에 국한되지 않습니다. 즉, 개발자로서 .NET Framework를 대상으로 하는 많은 언어 중 하나로 개발할 수 있습니다(예: C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL 및 Windows PowerShell). 원래 작성된 언어를 모르거나 원래의 언어 규칙을 따르지 않고도 .NET Framework를 위해 개발된 클래스 라이브러리의 형식과 멤버에 액세스할 수 있습니다. 사용자가 구성 요소 개발자일 경우 언어와 상관없이 모든 .NET Framework 응용 프로그램에서 구성 요소를 액세스할 수 있습니다.  
@@ -517,13 +517,13 @@ ms.locfileid: "57846469"
   
  CLS 규격 구성 요소를 만들려면  
   
-1.  <xref:System.CLSCompliantAttribute>를 사용하여 어셈블리를 CLS 규격으로 표시합니다.  
+1. <xref:System.CLSCompliantAttribute>를 사용하여 어셈블리를 CLS 규격으로 표시합니다.  
   
-2.  CLS 규격이 아닌 어셈블리의 공개적으로 노출되는 모든 형식을 비규격으로 표시합니다.  
+2. CLS 규격이 아닌 어셈블리의 공개적으로 노출되는 모든 형식을 비규격으로 표시합니다.  
   
-3.  CLS 규격 형식의 공개적으로 노출되는 모든 멤버를 비규격으로 표시합니다.  
+3. CLS 규격 형식의 공개적으로 노출되는 모든 멤버를 비규격으로 표시합니다.  
   
-4.  CLS 규격이 아닌 멤버에 대해 CLS 규격 대체 멤버를 제공합니다.  
+4. CLS 규격이 아닌 멤버에 대해 CLS 규격 대체 멤버를 제공합니다.  
   
  모든 비규격 형식 및 멤버를 성공적으로 표시한 경우 컴파일러에서 미준수 경고가 발생하지 않아야 합니다. 그러나 제품 설명서에 CLS 규격이 아닌 멤버를 표시하고 이들의 CLS 규격 대체 멤버를 명시해야 합니다.  
   

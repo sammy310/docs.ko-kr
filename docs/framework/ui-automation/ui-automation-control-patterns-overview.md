@@ -6,10 +6,10 @@ helpviewer_keywords:
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
 ms.openlocfilehash: fc07cc23498b2079aba41dfa57c26b88944d6a8d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126362"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI 자동화 컨트롤 패턴 개요
@@ -18,7 +18,7 @@ ms.locfileid: "59126362"
   
  이 개요에서는 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 컨트롤 패턴을 소개합니다. 컨트롤 패턴은 컨트롤 형식 및 컨트롤의 모양에 관계없이 컨트롤의 기능을 분류하고 노출하는 방법을 제공합니다.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 사용 하 여 공통적인 컨트롤 동작을 나타내는 패턴을 제어 합니다. 예를 들어, 호출할 수 있는 컨트롤(예: 단추)에 대해 Invoke 컨트롤 패턴을 사용하고 스크롤 막대가 있는 컨트롤(예: 목록 상자, 목록 뷰 또는 콤보 상자)에 대해 Scroll 컨트롤 패턴을 사용합니다. 각 컨트롤 패턴은 별도 기능을 나타내므로 컨트롤 패턴을 조합하여 특정 컨트롤에서 지원하는 기능의 전체 집합을 설명할 수 있습니다.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 은 컨트롤 패턴을 사용하여 공통된 컨트롤 동작을 나타냅니다. 예를 들어, 호출할 수 있는 컨트롤(예: 단추)에 대해 Invoke 컨트롤 패턴을 사용하고 스크롤 막대가 있는 컨트롤(예: 목록 상자, 목록 뷰 또는 콤보 상자)에 대해 Scroll 컨트롤 패턴을 사용합니다. 각 컨트롤 패턴은 별도 기능을 나타내므로 컨트롤 패턴을 조합하여 특정 컨트롤에서 지원하는 기능의 전체 집합을 설명할 수 있습니다.  
   
 > [!NOTE]
 >  부모 컨트롤이 노출한 기능에 대한 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 를 제공하는 하위 컨트롤을 사용하여 빌드된 집계 컨트롤은 각 하위 컨트롤과 정상적으로 연결된 모든 컨트롤 패턴을 구현해야 합니다. 따라서 이러한 동일한 컨트롤 패턴을 하위 컨트롤이 구현할 필요가 없습니다.  
@@ -78,4 +78,4 @@ ms.locfileid: "59126362"
 - [UI 자동화 클라이언트에 대한 컨트롤 패턴 매핑](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
 - [UI 자동화 개요](../../../docs/framework/ui-automation/ui-automation-overview.md)
 - [클라이언트의 UI 자동화 속성](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
-- [클라이언트에 대한 UI 자동화 이벤트](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
+- [클라이언트용 UI 자동화 이벤트](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)

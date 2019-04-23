@@ -13,10 +13,10 @@ helpviewer_keywords:
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
 ms.openlocfilehash: 3d420e5cb4d9e7f2ad6f8136b8dd33f5901326d2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59095492"
 ---
 # <a name="data-binding-and-windows-forms"></a>데이터 바인딩 및 Windows Forms
@@ -57,5 +57,5 @@ Windows Forms에서는 기존의 데이터 소스뿐 아니라 데이터를 포�
 
 - <xref:System.Windows.Forms.Binding>
 - [Windows Forms 데이터 바인딩](windows-forms-data-binding.md)
-- [방법: 데이터 원본에 Windows Forms DataGrid 컨트롤 바인딩](./controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [방법: 데이터 소스에 Windows Forms DataGrid 컨트롤 바인딩](./controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
 - [BindingSource 구성 요소](./controls/bindingsource-component.md)

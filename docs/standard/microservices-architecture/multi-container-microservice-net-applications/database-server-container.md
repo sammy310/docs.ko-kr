@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 2adc58339012095c9dc58d633a9b3815cf7aba3f
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: c993f962d84ca3fc859ab704489300192536ee74
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463347"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611278"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>컨테이너로 실행되는 데이터베이스 서버 사용
 
@@ -48,10 +48,10 @@ SQL Server를 컨테이너로 실행하면 SQL Server의 인스턴스에 대한 
 #### <a name="additional-resources"></a>추가 자료
 
 - **Linux, Mac 또는 Windows에서 SQL Server Docker 이미지 실행** \
-    [https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
+    [https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker](/sql/linux/sql-server-linux-setup-docker)
 
 - **sqlcmd를 사용하여 Linux에서 SQL Server 연결 및 쿼리** \
-    [https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
+    [https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd](/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
 
 ### <a name="seeding-with-test-data-on-web-application-startup"></a>웹 애플리케이션 시작 시 테스트 데이터로 시드
 
@@ -165,7 +165,7 @@ public class Startup
 
 Redis는 Redis에서 Docker 이미지를 제공합니다. 해당 이미지는 다음 URL의 Docker 허브에서 제공됩니다.
 
-[https://hub.docker.com/_/redis/](https://hub.docker.com/_/redis/)
+<https://hub.docker.com/\_/redis/>
 
 명령 프롬프트에서 다음 Docker CLI 명령을 실행하여 Docker Redis 컨테이너를 직접 실행할 수 있습니다.
 

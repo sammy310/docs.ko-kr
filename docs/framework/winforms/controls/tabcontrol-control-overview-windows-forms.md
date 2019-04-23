@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Windows Forms dialog boxes [Windows Forms], tabs
 ms.assetid: 2b4ea784-a39d-463c-81d8-af74ce068476
 ms.openlocfilehash: 4511882aa4c7804e535f228dd150c26a8f7689f0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59140883"
 ---
 # <a name="tabcontrol-control-overview-windows-forms"></a>TabControl 컨트롤 개요(Windows Forms)
@@ -28,6 +28,6 @@ Windows Forms <xref:System.Windows.Forms.TabControl>은 파일 캐비닛의 폴�
 - [TabControl 컨트롤](tabcontrol-control-windows-forms.md)
 - [방법: Windows Forms TabControl의 모양 변경](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
 - [방법: 탭 페이지에 컨트롤 추가](how-to-add-a-control-to-a-tab-page.md)
-- [방법: Windows Forms TabControl을 사용하여 탭 추가 및 제거](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
-- [방법: 탭 페이지를 사용하지 않도록 설정](how-to-disable-tab-pages.md)
+- [방법: Windows Forms TabControl 사용 하 여 탭 추가 및 제거](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [방법: 탭 페이지를 사용 하지 않도록 설정](how-to-disable-tab-pages.md)
 - [Windows Forms 대화 상자](../dialog-boxes-in-windows-forms.md)

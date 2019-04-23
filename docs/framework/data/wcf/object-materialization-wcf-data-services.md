@@ -6,16 +6,16 @@ helpviewer_keywords:
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
 ms.openlocfilehash: bf75e126c2a44b6b9d151269046d2cb8110815cc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335396"
 ---
 # <a name="object-materialization-wcf-data-services"></a>개체 구체화(WCF Data Services)
 사용 하는 경우는 **서비스 참조 추가** 대화 상자를 사용 하는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] .NET Framework 기반 클라이언트 응용 프로그램에서 피드를 해당 하는 데이터 클래스가 피드에서 노출 하는 데이터 모델의 각 엔터티 형식에 대 한 생성 됩니다. 자세한 내용은 [데이터 서비스 클라이언트 라이브러리 생성](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)합니다. 쿼리에서 반환되는 엔터티 데이터는 이러한 생성된 클라이언트 데이터 서비스 클래스 중 하나의 인스턴스로 구체화됩니다. 병합 옵션 및 추적 된 개체의 id 확인에 대 한 자세한 내용은 [데이터 서비스 컨텍스트 관리](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)합니다.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 도구에서 생성 된 데이터 클래스를 사용 하는 것이 아니라 고유한 클라이언트 데이터 서비스 클래스를 정의할 수 있습니다. 이에 따라 POCO(Plain Old CLR Object) 데이터 클래스라고도 하는 고유 데이터 클래스를 사용할 수 있습니다. 이러한 유형의 사용자 지정 데이터 클래스를 사용 하는 경우 특성을 지정 해야 사용 하 여 데이터 클래스 <xref:System.Data.Services.Common.DataServiceKeyAttribute> 또는 <xref:System.Data.Services.Common.DataServiceEntityAttribute> 해당 형식 이름이 클라이언트 데이터 서비스의 데이터 모델의 형식 이름과 일치를 확인 합니다.  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 사용하면 도구에서 생성된 데이터 클래스를 사용하지 않고 고유한 클라이언트 데이터 서비스 클래스를 정의할 수도 있습니다. 이에 따라 POCO(Plain Old CLR Object) 데이터 클래스라고도 하는 고유 데이터 클래스를 사용할 수 있습니다. 이러한 유형의 사용자 지정 데이터 클래스를 사용 하는 경우 특성을 지정 해야 사용 하 여 데이터 클래스 <xref:System.Data.Services.Common.DataServiceKeyAttribute> 또는 <xref:System.Data.Services.Common.DataServiceEntityAttribute> 해당 형식 이름이 클라이언트 데이터 서비스의 데이터 모델의 형식 이름과 일치를 확인 합니다.  
   
  반환된 된 데이터를 구체화 라이브러리 쿼리 응답 메시지를 받으면는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 클라이언트 데이터의 인스턴스로 쿼리 형식의 서비스 클래스를 피드 합니다. 이러한 개체를 구체화하는 일반적인 프로세스는 다음과 같습니다.  
   
@@ -49,4 +49,4 @@ ms.locfileid: "59335396"
 ## <a name="see-also"></a>참고자료
 
 - [데이터 서비스 쿼리](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
-- [프로젝션 쿼리](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)
+- [프로젝트 쿼리](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)

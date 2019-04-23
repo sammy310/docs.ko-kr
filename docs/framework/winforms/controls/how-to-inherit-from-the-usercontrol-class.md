@@ -8,10 +8,10 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 ms.assetid: 67713625-e2e4-4f6a-bce7-0855ee5043d9
 ms.openlocfilehash: 5e9bdb6d6628b1c696b7944dc0ea1f4c974c8172
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311411"
 ---
 # <a name="how-to-inherit-from-the-usercontrol-class"></a>방법: UserControl 클래스에서 상속
@@ -38,7 +38,7 @@ ms.locfileid: "59311411"
 
 - [사용자 지정 컨트롤의 종류](varieties-of-custom-controls.md)
 - [방법: Control 클래스에서 상속](how-to-inherit-from-the-control-class.md)
-- [방법: 기존 Windows Forms 컨트롤에서 상속](how-to-inherit-from-existing-windows-forms-controls.md)
-- [방법: Windows Forms 컨트롤 작성](how-to-author-controls-for-windows-forms.md)
+- [방법: 에서 상속 하는 기존 Windows Forms 컨트롤](how-to-inherit-from-existing-windows-forms-controls.md)
+- [방법: Windows forms 컨트롤 작성](how-to-author-controls-for-windows-forms.md)
 - [Visual Basic에서 상속된 이벤트 처리기 관련 문제 해결](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
 - [방법: UserControl의 런타임 동작 테스트](how-to-test-the-run-time-behavior-of-a-usercontrol.md)

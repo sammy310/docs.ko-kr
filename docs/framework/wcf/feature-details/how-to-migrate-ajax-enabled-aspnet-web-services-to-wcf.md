@@ -3,10 +3,10 @@ title: '방법: AJAX 사용 ASP.NET 웹 서비스를 WCF로 마이그레이션'
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
 ms.openlocfilehash: 6114fa90b10a5d0cacb60a7ad40f63fae776e174
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337424"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>방법: AJAX 사용 ASP.NET 웹 서비스를 WCF로 마이그레이션
@@ -193,7 +193,7 @@ d.Add("two", 2);
 
  이 사전은 다음 목록에 표시된 것처럼 JSON 개체로 표현됩니다.
 
--   [{"Key": "일", "Value": 1}, {"키": "two", "Value": 2}] 하 여는 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>
+-   <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>에 의한 [{"Key":"one","Value":1},{"Key":"two","Value":2}]
 
 -   {"one": 1, "two": 2} ASP.NET ajax <xref:System.Web.Script.Serialization.JavaScriptSerializer>
 
@@ -204,14 +204,14 @@ d.Add("two", 2);
 |차이의 범주|DataContractJsonSerializer|ASP.NET AJAX JavaScriptSerializer|
 |-----------------------------|--------------------------------|---------------------------------------|
 |빈 버퍼(새 바이트[0])를 <xref:System.Object> 또는 <xref:System.Uri> 또는 다른 클래스로 deserialize함|SerializationException|null|
-|serialization <xref:System.DBNull.Value>|{} (또는 {"__type": "#System"})|Null|
+|<xref:System.DBNull.Value>의 serialization|{} (또는 {"__type": "#System"})|Null|
 |[Serializable] 형식의 private 멤버 serialization|serialize됨|serialize되지 않음|
 |<xref:System.Runtime.Serialization.ISerializable> 형식의 .public 속성 serialization|serialize되지 않음|serialize됨|
 |JSON "확장명"|개체 멤버 이름({"a":"hello"})에 따옴표를 사용해야 하는 JSON 사양 준수|따옴표가 없는 개체 멤버 이름({a:"hello"}) 지원|
-|<xref:System.DateTime> UTC (Coordinated Universal Time)|형식을 지원 하지 않는 "\\/Date(123456789U)\\/" 또는 "\\/날짜\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\) \\\\/)".|지원 형식 "\\/Date(123456789U)\\/" 및 "\\/날짜\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\) \\ \\/) "형식을 DateTime 값으로.|
+|<xref:System.DateTime> UTC(협정 세계시)|형식을 지원 하지 않는 "\\/Date(123456789U)\\/" 또는 "\\/날짜\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\) \\\\/)".|지원 형식 "\\/Date(123456789U)\\/" 및 "\\/날짜\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\) \\ \\/) "형식을 DateTime 값으로.|
 |사전의 표현|KeyValuePair의 배열을\<K, V >, 문자열이 아닌 키 유형을 처리 합니다.|실제 JSON 개체로 문자열인 키 유형만 처리합니다.|
 |이스케이프된 문자|항상 이스케이프 슬래시(/)가 포함되고, "\n"과 같이 이스케이프되지 않은 잘못된 JSON 문자는 사용할 수 없습니다.|DateTime 값에 이스케이프 슬래시(/)가 포함됩니다.|
 
 ## <a name="see-also"></a>참고자료
 
-- [방법: 구성을 사용하여 ASP.NET AJAX 엔드포인트 추가](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+- [방법: 구성을 사용 하 여 ASP.NET AJAX 끝점 추가](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)

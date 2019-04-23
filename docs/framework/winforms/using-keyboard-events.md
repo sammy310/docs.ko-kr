@@ -10,10 +10,10 @@ helpviewer_keywords:
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
 ms.openlocfilehash: 9aefe6be17e5d72c86c2c47bf0d373d0a081ca76
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59114272"
 ---
 # <a name="using-keyboard-events"></a>키보드 이벤트 사용
@@ -35,7 +35,7 @@ ms.locfileid: "59114272"
 |키보드 이벤트|설명|결과|  
 |--------------------|-----------------|-------------|  
 |<xref:System.Windows.Forms.Control.KeyDown>|이 이벤트는 사용자가 물리적 키를 누를 때 발생합니다.|<xref:System.Windows.Forms.Control.KeyDown>에 대한 처리기는 다음을 수신합니다.<br /><br /> <ul><li>물리적 키보드 단추를 지정하는 <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> 속성을 제공하는 <xref:System.Windows.Forms.KeyEventArgs> 매개 변수.</li><li><xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> 속성(SHIFT, CTRL 또는 ALT).</li><li>키 코드 및 한정자를 결합하는 <xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> 속성. <xref:System.Windows.Forms.KeyEventArgs> 매개 변수는 다음을 제공합니다.<br /><br /> <ul><li>기본 컨트롤의 키 수신을 방지하도록 설정될 수 있는 <xref:System.Windows.Forms.KeyEventArgs.Handled%2A> 속성.</li><li>해당 키 입력에 대한 <xref:System.Windows.Forms.Control.KeyPress> 및 <xref:System.Windows.Forms.Control.KeyUp> 이벤트를 억제하는 사용될 수 있는 <xref:System.Windows.Forms.KeyEventArgs.SuppressKeyPress%2A> 속성.</li></ul></li></ul>|  
-|<xref:System.Windows.Forms.Control.KeyPress>|이 이벤트는 키를 하나 이상 눌러서 문자가 표시될 때 발생합니다. 예를 들어 사용자가 SHIFT 키와 소문자 "a" 키를 누르면 대문자 "A" 문자가 표시됩니다.|<xref:System.Windows.Forms.Control.KeyPress> 후에 발생 <xref:System.Windows.Forms.Control.KeyDown>합니다.<br /><br /> <ul><li><xref:System.Windows.Forms.Control.KeyPress>에 대한 처리기는 다음을 수신합니다.</li><li>눌린 키의 문자 코드가 포함된 <xref:System.Windows.Forms.KeyPressEventArgs> 매개 변수. 이 문자 코드는 모든 문자 키 및 한정자 키 조합에 대해 고유합니다.<br /><br />     예를 들어 "A" 키는 다음을 생성합니다.<br /><br /> <ul><li>문자 코드 65, SHIFT 키와 함께 누른 경우</li><li>또는 CAPS LOCK 키, 97, 키 자체를 누른 경우</li><li>및 1, CTRL 키와 함께 누른 경우.</li></ul></li></ul>|  
+|<xref:System.Windows.Forms.Control.KeyPress>|이 이벤트는 키를 하나 이상 눌러서 문자가 표시될 때 발생합니다. 예를 들어 사용자가 SHIFT 키와 소문자 "a" 키를 누르면 대문자 "A" 문자가 표시됩니다.|<xref:System.Windows.Forms.Control.KeyPress>는 <xref:System.Windows.Forms.Control.KeyDown> 뒤에 발생합니다.<br /><br /> <ul><li><xref:System.Windows.Forms.Control.KeyPress>에 대한 처리기는 다음을 수신합니다.</li><li>눌린 키의 문자 코드가 포함된 <xref:System.Windows.Forms.KeyPressEventArgs> 매개 변수. 이 문자 코드는 모든 문자 키 및 한정자 키 조합에 대해 고유합니다.<br /><br />     예를 들어 "A" 키는 다음을 생성합니다.<br /><br /> <ul><li>문자 코드 65, SHIFT 키와 함께 누른 경우</li><li>또는 CAPS LOCK 키, 97, 키 자체를 누른 경우</li><li>및 1, CTRL 키와 함께 누른 경우.</li></ul></li></ul>|  
 |<xref:System.Windows.Forms.Control.KeyUp>|이 이벤트는 사용자가 물리적 키를 놓을 때 발생합니다.|<xref:System.Windows.Forms.Control.KeyUp>에 대한 처리기는 다음을 수신합니다.<br /><br /> <ul><li><xref:System.Windows.Forms.KeyEventArgs> 매개 변수:<br /><br /> <ul><li>물리적 키보드 단추를 지정하는 <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> 속성을 제공.</li><li><xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> 속성(SHIFT, CTRL 또는 ALT).</li><li>키 코드 및 한정자를 결합하는 <xref:System.Globalization.SortKey.KeyData%2A> 속성.</li></ul></li></ul>|  
   
 ## <a name="see-also"></a>참고자료

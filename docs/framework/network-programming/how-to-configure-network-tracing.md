@@ -12,10 +12,10 @@ helpviewer_keywords:
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
 ms.openlocfilehash: cc08faba7edede3dd527b7c05fe47f6408e18a04
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151556"
 ---
 # <a name="how-to-configure-network-tracing"></a>방법: 네트워크 추적 구성
@@ -102,4 +102,4 @@ ms.locfileid: "59151556"
 - [네트워크 추적 해석](../../../docs/framework/network-programming/interpreting-network-tracing.md)
 - [.NET Framework의 네트워크 추적](../../../docs/framework/network-programming/network-tracing.md)
 - [네트워크 추적 사용](../../../docs/framework/network-programming/enabling-network-tracing.md)
-- [응용 프로그램 추적 및 조율](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [애플리케이션 추적 및 조율](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

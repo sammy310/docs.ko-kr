@@ -21,10 +21,10 @@ helpviewer_keywords:
 - overriding, Overrides keyword
 ms.assetid: dfc8deba-f5b3-4d1d-a937-7cb826446fc5
 ms.openlocfilehash: 5e4b8511145e758bf3d6328141be0e526965dccf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58826576"
 ---
 # <a name="inheritance-basics-visual-basic"></a>상속 기본 사항(Visual Basic)
@@ -43,7 +43,7 @@ ms.locfileid: "58826576"
   
 -   `NotInheritable` 한정자-프로그래머에 게 기본 클래스로 클래스를 사용 하는 것을 금지 합니다.  
   
--   `MustInherit` 한정자-는 클래스를 사용 하기 위한 기본 클래스로 지정 합니다. 인스턴스의 `MustInherit` 만 만들 수 있습니다 파생된 클래스와 기본 클래스 인스턴스의; 클래스를 직접 만들 수 없습니다. (C + +와 같은 다른 프로그래밍 언어 및 C#, 용어를 사용 하 여 *추상 클래스* 이러한 클래스를 설명 합니다.)  
+-   `MustInherit` 한정자-는 클래스를 사용 하기 위한 기본 클래스로 지정 합니다. 인스턴스의 `MustInherit` 만 만들 수 있습니다 파생된 클래스와 기본 클래스 인스턴스의; 클래스를 직접 만들 수 없습니다. (다른 프로그래밍 언어와 같은 C++ 및 C#, 이라는 용어를 사용 *추상 클래스* 이러한 클래스를 설명 합니다.)  
   
 ## <a name="overriding-properties-and-methods-in-derived-classes"></a>속성 및 파생된 클래스에서 메서드 재정의  
  기본적으로 파생된 클래스는 기본 클래스에서 속성 및 메서드 상속합니다. 상속 된 속성 또는 메서드는 파생된 클래스에서 다르게 동작 하는 경우 수 있습니다 *재정의*합니다. 즉, 파생된 클래스에서 메서드의 새 구현을 정의할 수 있습니다. 다음 한정자는 속성 및 메서드가 재정의되는 방식을 제어하는 데 사용됩니다.  

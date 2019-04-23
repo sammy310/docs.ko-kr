@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f68c1f2f888f340488c3cbec4c2384f6dce58077
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93abf6e91c2e13173184faee281de52eb83e17f5
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517684"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59314011"
 ---
 # <a name="composite-formatting"></a>복합 형식 지정
 
@@ -100,15 +100,15 @@ ms.locfileid: "54517684"
   
  이스케이프된 중괄호가 해석되는 방식에 따라 예기치 않은 결과가 나올 수도 있습니다. 예를 들어 여는 중괄호, 10진수로 서식 지정된 숫자 값 및 닫는 중괄호를 표시하기 위해 서식 항목 “{{{0:D}}}”를 사용했다고 가정해 봅시다. 그러나 이 서식 항목은 다음과 같이 해석됩니다.  
   
-1.  맨 처음 여는 중괄호 2개("{{")는 이스케이프되어 여는 중괄호 1개가 됩니다.  
+1. 맨 처음 여는 중괄호 2개("{{")는 이스케이프되어 여는 중괄호 1개가 됩니다.  
   
-2.  그 다음 3개의 문자("{0:")는 서식 항목의 시작으로 해석됩니다.  
+2. 그 다음 3개의 문자("{0:")는 서식 항목의 시작으로 해석됩니다.  
   
-3.  다음 문자("D")는 10진 표준 숫자 서식 지정자로 해석되지만, 그 다음 이스케이프된 중괄호 2개("}}")는 중괄호 1개로 인식됩니다. 결과 문자열("D}")은 표준 숫자 서식 지정자가 아니므로 리터럴 문자열 "D}"를 표시하는 사용자 지정 서식 문자열로 해석됩니다.  
+3. 다음 문자("D")는 10진 표준 숫자 서식 지정자로 해석되지만, 그 다음 이스케이프된 중괄호 2개("}}")는 중괄호 1개로 인식됩니다. 결과 문자열("D}")은 표준 숫자 서식 지정자가 아니므로 리터럴 문자열 "D}"를 표시하는 사용자 지정 서식 문자열로 해석됩니다.  
   
-4.  마지막 중괄호("}")는 서식 항목의 끝으로 해석됩니다.  
+4. 마지막 중괄호("}")는 서식 항목의 끝으로 해석됩니다.  
   
-5.  표시되는 최종 결과는 리터럴 문자열 "{D}"입니다. 서식 지정 시 의도했던 숫자 값이 표시되지 않습니다.  
+5. 표시되는 최종 결과는 리터럴 문자열 "{D}"입니다. 서식 지정 시 의도했던 숫자 값이 표시되지 않습니다.  
   
  이스케이프된 중괄호 및 서식 항목이 잘못 해석되지 않도록 코드를 작성하는 방법 중 하나는 중괄호와 서식 항목의 서식을 따로 지정하는 것입니다. 즉, 첫째 서식 작업에서 리터럴 여는 중괄호를 표시하고 다음 작업에서 서식 항목의 결과를 표시한 다음 마지막 작업에서 리터럴 닫는 괄호를 표시합니다. 다음 예제에서 이 방법을 보여 줍니다.  
   
@@ -120,11 +120,11 @@ ms.locfileid: "54517684"
   
  다음과 같이 서식 항목에 상응하는 매개 변수 목록의 각 값이 문자열로 변환됩니다.  
   
-1.  서식을 지정할 값이 `null`이면 빈 문자열 <xref:System.String.Empty?displayProperty=nameWithType>이 반환됩니다.  
+1. 서식을 지정할 값이 `null`이면 빈 문자열 <xref:System.String.Empty?displayProperty=nameWithType>이 반환됩니다.  
   
-2.  <xref:System.ICustomFormatter> 구현을 사용할 수 있는 경우 런타임은 <xref:System.ICustomFormatter.Format%2A> 메서드를 호출합니다. <xref:System.IFormatProvider> 구현과 함께, 형식 항목의 *formatString* 값이 있는 경우 메서드에 이 값을 전달하고, 값이 없는 경우에는 `null`을 전달합니다. <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> 메서드에 대한 호출이 `null`을 반환하는 경우 실행은 다음 단계로 진행합니다. 그렇지 않은 경우 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> 호출의 결과가 반환됩니다.
+2. <xref:System.ICustomFormatter> 구현을 사용할 수 있는 경우 런타임은 <xref:System.ICustomFormatter.Format%2A> 메서드를 호출합니다. <xref:System.IFormatProvider> 구현과 함께, 형식 항목의 *formatString* 값이 있는 경우 메서드에 이 값을 전달하고, 값이 없는 경우에는 `null`을 전달합니다. <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> 메서드에 대한 호출이 `null`을 반환하는 경우 실행은 다음 단계로 진행합니다. 그렇지 않은 경우 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> 호출의 결과가 반환됩니다.
   
-3.  값이 <xref:System.IFormattable> 인터페이스를 구현하면 인터페이스의 <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> 메서드가 호출됩니다. *formatString* 값(형식 항목에 있는 경우) 또는 `null`(없는 경우)이 메서드에 전달됩니다. <xref:System.IFormatProvider> 인수는 다음과 같이 결정됩니다.  
+3. 값이 <xref:System.IFormattable> 인터페이스를 구현하면 인터페이스의 <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> 메서드가 호출됩니다. *formatString* 값(형식 항목에 있는 경우) 또는 `null`(없는 경우)이 메서드에 전달됩니다. <xref:System.IFormatProvider> 인수는 다음과 같이 결정됩니다.  
   
     -   숫자 값의 경우, null이 아닌 <xref:System.IFormatProvider> 인수가 있는 합성 서식 지정 메서드가 호출되면 런타임이 <xref:System.Globalization.NumberFormatInfo> 메서드에서 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 개체를 요청합니다. 값을 제공할 수 없거나, 인수 값이 `null`이거나, 합성 서식 지정 메서드에 <xref:System.IFormatProvider> 매개 변수가 없는 경우, 현재 스레드 문화권에 대한 <xref:System.Globalization.NumberFormatInfo> 개체가 사용됩니다.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "54517684"
   
     -   다른 형식의 개체에 대해, 복합 형식 지정 메서드가 <xref:System.IFormatProvider> 인수와 함께 호출되는 경우 그 값은 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 구현으로 직접 전달됩니다. 그렇지 않으면 `null`이 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 구현으로 전달됩니다.  
   
-4.  `ToString`을 재정의하거나 기본 클래스의 동작을 상속하는, 형식의 매개 변수 없는 <xref:System.Object.ToString?displayProperty=nameWithType> 메서드가 호출됩니다. 이 경우, 형식 항목에서 *formatString* 구성 요소로 지정된 형식 문자열(있는 경우)은 무시됩니다.  
+4. `ToString`을 재정의하거나 기본 클래스의 동작을 상속하는, 형식의 매개 변수 없는 <xref:System.Object.ToString?displayProperty=nameWithType> 메서드가 호출됩니다. 이 경우, 형식 항목에서 *formatString* 구성 요소로 지정된 형식 문자열(있는 경우)은 무시됩니다.  
   
  앞의 단계가 수행된 후에 맞춤이 적용됩니다.  
   

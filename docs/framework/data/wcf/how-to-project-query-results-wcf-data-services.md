@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF Data Services, querying
 ms.assetid: 474ac625-8770-43ba-8320-d3315ea9530f
 ms.openlocfilehash: 4b0646c2ad45a86691b86b1dd5f112f598ee2dfd
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59518196"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59974800"
 ---
 # <a name="how-to-project-query-results-wcf-data-services"></a>방법: 쿼리 결과 프로젝션 (WCF Data Services)
 프로젝션은 엔터티의 특정 속성만 응답에서 반환되도록 지정하여 쿼리에서 반환되는 데이터의 양을 줄이는 메커니즘을 제공합니다. 결과에 따라 예측을 수행할 수 있습니다는 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 를 사용 하 여 쿼리를 `$select` 쿼리 옵션 또는 사용 하 여 합니다 [선택](~/docs/csharp/language-reference/keywords/select-clause.md) 절 ([선택](~/docs/visual-basic/language-reference/queries/select-clause.md) Visual Basic의) LINQ 쿼리에서 합니다. 자세한 내용은 [데이터 서비스 쿼리](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)합니다.  

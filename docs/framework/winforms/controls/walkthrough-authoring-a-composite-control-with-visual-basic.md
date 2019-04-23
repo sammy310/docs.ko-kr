@@ -14,10 +14,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
 ms.openlocfilehash: 6404e5933f886578b4ad8afd0d3da324541fc3f9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299984"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>연습: Visual Basic을 사용하여 복합 컨트롤 작성
@@ -35,7 +35,7 @@ ms.locfileid: "59299984"
   
 2. Visual Basic 프로젝트의 목록에서 선택 합니다 **Windows 컨트롤 라이브러리** 프로젝트 템플릿, 형식 `ctlClockLib` 에 **이름** 상자를 선택한 다음 클릭 **확인**합니다.  
   
-     프로젝트 이름, `ctlClockLib`는 기본적으로 루트 네임스페이스에도 할당됩니다. 루트 네임스페이스는 어셈블리에서 구성 요소의 이름을 정규화하는 데 사용됩니다. 예를 들어, 명명 된 구성 요소를 제공 하는 두 명의 어셈블리가 `ctlClock`를 지정할 수 있습니다 프로그램 `ctlClock` 구성 요소를 사용 하 여 `ctlClockLib.ctlClock.`  
+     프로젝트 이름, `ctlClockLib`는 기본적으로 루트 네임스페이스에도 할당됩니다. 루트 네임스페이스는 어셈블리에서 구성 요소의 이름을 정규화하는 데 사용됩니다. 예를 들어 두 어셈블리에서 `ctlClock`이라는 구성 요소를 제공하면 `ctlClockLib.ctlClock.`을 사용하여 `ctlClock` 구성 요소를 지정할 수 있습니다.  
   
 3. 솔루션 탐색기에서 **UserControl1.vb**를 마우스 오른쪽 단추로 클릭한 다음 **이름 바꾸기**를 클릭합니다. 파일 이름을 `ctlClock.vb`로 변경합니다. 코드 요소 “UserControl1”에 대한 모든 참조 이름을 변경할지 묻는 메시지가 표시되면 **예** 단추를 클릭합니다.  
   
@@ -245,9 +245,9 @@ ms.locfileid: "59299984"
     |속성|설정|  
     |--------------|-------------|  
     |**이름**|`lblAlarm`|  
-    |**텍스트**|**경고!**|  
+    |**텍스트**|**Alarm!**|  
     |**TextAlign**|`MiddleCenter`|  
-    |**표시**|`False`|  
+    |**Visible**|`False`|  
   
 ### <a name="adding-the-alarm-functionality"></a>경보 기능 추가  
  이전 프로시저에서는 복합 컨트롤에서 경보 기능을 설정하는 속성 및 컨트롤을 추가했습니다. 이 프로시저에서는 현재 시간을 경보 시간과 비교하여 같으면 알람을 울리고 깜박이는 코드를 추가합니다. `ctlClock`의 `Timer1_Tick` 메소드를 재정의하고 코드를 더 추가하여 `ctlClock`의 모든 고유 기능을 유지하면서 `ctlAlarmClock`의 기능을 확장합니다.  
@@ -361,7 +361,7 @@ ms.locfileid: "59299984"
     |`label1`|**텍스트**|`(blank space)`|  
     ||**이름**|`lblTest`|  
     |`dateTimePicker1`|**이름**|`dtpTest`|  
-    ||**형식**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
+    ||**Format**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
   
 12. 디자이너에서 **dtpTest**를 두 번 클릭합니다.  
   
@@ -398,5 +398,5 @@ ms.locfileid: "59299984"
 ## <a name="see-also"></a>참고자료
 
 - [사용자 지정 컨트롤의 종류](varieties-of-custom-controls.md)
-- [방법: 복합 컨트롤 작성](how-to-author-composite-controls.md)
-- [방법: 도구 상자 항목 선택 대화 상자에 컨트롤 표시](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [방법: 복합 컨트롤 제작](how-to-author-composite-controls.md)
+- [방법: 컨트롤에 표시 된 도구 상자 항목 선택 대화 상자](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)

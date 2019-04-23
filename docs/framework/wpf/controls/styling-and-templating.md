@@ -16,14 +16,14 @@ helpviewer_keywords:
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
 ms.openlocfilehash: 3fae4993a13b02ad998668f644a80ba7c07196fa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132299"
 ---
 # <a name="styling-and-templating"></a>스타일 지정 및 템플릿
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 스타일 지정 및 템플릿 집합 개발자와 디자이너가 시각적으로 멋진 효과를 만들고 해당 제품에 대해 일관 된 모양을 만들려면 허용 하는 기능 (스타일, 템플릿, 트리거 및 스토리 보드)을 참조 하십시오. 개발자 및/또는 디자이너는 애플리케이션에 따라 모양을 광범위하게 사용자 지정할 수 있지만 애플리케이션 내에서 또는 애플리케이션 간에 모양을 유지 관리 및 공유하려면 강력한 스타일 지정 및 템플릿 모델이 필요합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 이 모델을 제공 합니다.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 스타일 지정 및 템플릿은 개발자와 디자이너가 시각적으로 눈에 띄는 효과를 만들고 제품에 대한 일관된 모양을 만들 수 있는 기능 모음(스타일, 템플릿, 트리거 및 스토리보드)을 나타냅니다. 개발자 및/또는 디자이너는 애플리케이션에 따라 모양을 광범위하게 사용자 지정할 수 있지만 애플리케이션 내에서 또는 애플리케이션 간에 모양을 유지 관리 및 공유하려면 강력한 스타일 지정 및 템플릿 모델이 필요합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 이 모델을 제공합니다.  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 스타일 지정 모델의 또 다른 기능은 프레젠테이션과 논리의 분리입니다. 즉, 개발자가 C# 또는 Visual Basic을 사용하여 프로그래밍 논리 작업을 수행할 때 동시에 디자이너가 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]만 사용하여 애플리케이션 모양 작업을 수행할 수 있습니다.  
   
@@ -199,5 +199,5 @@ ms.locfileid: "59132299"
 ## <a name="see-also"></a>참고자료
 
 - [WPF의 Pack URI](../app-development/pack-uris-in-wpf.md)
-- [방법: ControlTemplate에서 생성된 요소 찾기](how-to-find-controltemplate-generated-elements.md)
+- [방법: ControlTemplate에서 생성 된 요소 찾기](how-to-find-controltemplate-generated-elements.md)
 - [DataTemplate에서 생성된 요소 찾기](../data/how-to-find-datatemplate-generated-elements.md)

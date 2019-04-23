@@ -3,10 +3,10 @@ title: 배달 못 한 편지 큐
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
 ms.openlocfilehash: 379b6901e835a6820d194edda1d7727df789bfd8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334096"
 ---
 # <a name="dead-letter-queues"></a>배달 못 한 편지 큐
@@ -24,7 +24,7 @@ ms.locfileid: "59334096"
 
  `NetMsmqBinding` 바인딩에서 배달 못 한 편지 큐는 다음과 같은 속성으로 표현됩니다.
 
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> 클라이언트에 필요한 배달 못 한 편지 큐의 종류를 표현 하는 속성입니다. 이 열거형에는 다음과 같은 값이 있습니다.
+-   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> 속성은 클라이언트에 필요한 배달 못 한 편지 큐의 종류를 표현합니다. 이 열거형에는 다음과 같은 값이 있습니다.
 
 -   `None`: 배달 못 한 편지 큐는 클라이언트가 필요 합니다.
 
@@ -32,7 +32,7 @@ ms.locfileid: "59334096"
 
 -   `Custom`: 사용 하 여 지정 된 사용자 지정 배달 못 한 편지 큐는 <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 속성은 배달 못 한 메시지를 저장 하는 데 사용 됩니다. 이 기능은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다. 이 기능은 응용 프로그램이 동일한 컴퓨터에서 실행되는 다른 응용 프로그램과 배달 못 한 편지 큐를 공유하지 않고 고유한 배달 못 한 편지 큐를 사용해야 하는 경우에 사용됩니다.
 
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 배달 못 한 편지 큐로 사용할 특정 큐를 표현 하는 속성입니다. 이 속성은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다.
+-   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 속성은 배달 못 한 편지 큐로 사용할 특정 큐를 표현합니다. 이 속성은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다.
 
  이 샘플에서 클라이언트는 트랜잭션 범위 내에서 서비스로 일괄 처리 메시지를 보내고 이러한 메시지의 "TTL(Time-To-Live)" 값을 임의로 낮게 지정합니다(약 2초). 또한 클라이언트는 사용자 지정 배달 못 한 편지 큐를 지정하여 만료된 메시지를 큐에 삽입하는 데 사용합니다.
 

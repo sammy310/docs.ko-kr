@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: 5bce891a0061bb1810559febf1ab904a5fb6fc94
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: b07851a0d26f5bfe7edc2115d7276a8e96ba0917
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675786"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59101330"
 ---
 # <a name="customizing-structure-marshalling"></a>구조체 마샬링 사용자 지정
 
@@ -230,7 +230,6 @@ struct UnicodeString
 ```
 
 UTF-8 인코딩을 사용하여 문자열을 마샬링하려는 경우 <xref:System.Runtime.InteropServices.MarshalAsAttribute>의 <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> 값을 사용할 수 있습니다.
-
 
 ```csharp
 public struct UTF8String

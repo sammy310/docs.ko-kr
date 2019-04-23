@@ -8,11 +8,11 @@ helpviewer_keywords:
 - status bars
 ms.assetid: 0b9c991e-a9fa-4609-9e1b-caadaef93821
 ms.openlocfilehash: cf4c23f385ba624befdc17c42145d20e184792b9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195113"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975912"
 ---
 # <a name="toolstripstatuslabel-control-overview"></a>ToolStripStatusLabel 컨트롤 개요
 합니다 <xref:System.Windows.Forms.ToolStripStatusLabel> 에 대 한 레이블이 <xref:System.Windows.Forms.StatusStrip>합니다. 같은 합니다 <xref:System.Windows.Forms.Label> 또는 <xref:System.Windows.Forms.ToolStripLabel>, <xref:System.Windows.Forms.ToolStripStatusLabel> 텍스트, 이미지 또는 둘 다에 대 한 클릭 가능한 비 표시 영역을 제공 합니다. 합니다 <xref:System.Windows.Forms.ToolStripStatusLabel> 에서 호스트 되는 <xref:System.Windows.Forms.StatusStrip>합니다.  

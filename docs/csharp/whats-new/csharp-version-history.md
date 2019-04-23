@@ -3,12 +3,12 @@ title: C#의 역사 - C# 가이드
 description: 이 언어의 초창기 버전은 어떤 모습이었으며 이후 어떻게 변했는가?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 84274f8ddfd8295d5db1e861c790c134ba30c6e2
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 727f0064ac1de46eb670a366af38cf561e1a1533
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58126151"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59303364"
 ---
 # <a name="the-history-of-c"></a>C\#의 역사
 
@@ -20,11 +20,11 @@ ms.locfileid: "58126151"
 C# 빌드 도구는 최신 주요 언어 릴리스가 기본 언어 버전으로 고려합니다. 주요 릴리스 사이에는 이 섹션의 다른 문서에서 상세히 설명한 포인트 릴리스가 있을 수 있습니다. 포인트 릴리스에서 최신 기능을 사용하려면 [컴파일러 언어 버전을 구성](../language-reference/configure-language-version.md)하고 해당 버전을 선택해야 합니다. C# 7.0 이후 세 가지 포인트 릴리스가 있습니다.
 
 * [C# 7.3](csharp-7-3.md):
-  - C# 7.3은 현재 [Visual Studio 2017 버전 15.7](https://visualstudio.microsoft.com/vs/whatsnew/) 및 [.NET Core 2.1 SDK 2.1.300 RC1](../../core/whats-new/index.md)에서 사용 가능합니다.
+  - C# 7.3은 [Visual Studio 2017 버전 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 및 [.NET Core 2.1 SDK](../../core/whats-new/dotnet-core-2-1.md)부터 사용할 수 있습니다.
 * [C# 7.2](csharp-7-2.md):
-  - C# 7.2는 현재 [Visual Studio 2017 버전 15.5](https://visualstudio.microsoft.com/vs/whatsnew/) 및 [.NET Core 2.0 SDK](../../core/whats-new/index.md)에서 사용 가능합니다.
+  - C# 7.2는 [Visual Studio 2017 버전 15.5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 및 [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md)부터 사용할 수 있습니다.
 * [C# 7.1](csharp-7-1.md):
-  - 이러한 기능은 [Visual Studio 2017 버전 15.3](https://visualstudio.microsoft.com/vs/whatsnew/) 및 [.NET Core 2.0 SDK](../../core/whats-new/index.md)에 추가되었습니다.
+  - C# 7.1은 [Visual Studio 2017 버전 15.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 및 [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md)부터 사용할 수 있습니다.
 
 ## <a name="c-version-10"></a>C# 버전 1.0
 

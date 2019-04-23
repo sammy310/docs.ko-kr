@@ -7,14 +7,14 @@ helpviewer_keywords:
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
 ms.openlocfilehash: f9b507c874dfe0ab3feca19e7fcf79df5af93e10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197687"
 ---
 # <a name="trees-in-wpf"></a>WPF의 트리
-대부분의 기술에서 요소와 구성 요소는 트리 구조로 구성됩니다. 이 트리 구조에서 개발자는 트리의 개체 노드를 직접 조작하여 애플리케이션의 동작이나 렌더링에 영향을 줍니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 또한 여러 트리 구조 메타포를 사용 하 여 프로그램 요소 간의 관계를 정의 합니다. 대부분 경우 WPF 개발자는 개념적으로 개체 트리 메타포를 고려하면서 코드로 애플리케이션을 만들거나 XAML로 애플리케이션의 일부를 정의할 수 있지만 XML DOM에서 사용할 수 있는 몇 가지 일반적인 개체 트리 조작 API 대신 특정 API를 호출하거나 특정 태그를 사용하여 이 작업을 수행합니다. WPF 트리 메타포 보기를 제공 하는 두 개의 도우미 클래스를 노출 <xref:System.Windows.LogicalTreeHelper> 고 <xref:System.Windows.Media.VisualTreeHelper>입니다. 또한 WPF 설명서에서는 시각적 트리와 논리 트리라는 용어를 사용하는데 이러한 동일한 트리는 특정 주요 WPF 기능의 동작을 이해하는 데 유용하기 때문입니다. 이 항목에서는 시각적 트리와 논리 트리가 나타내는 항목 정의 전체 개체 트리 개념과 이러한 트리 관계에 대해 설명 하 고 소개 <xref:System.Windows.LogicalTreeHelper> 고 <xref:System.Windows.Media.VisualTreeHelper>s입니다.  
+대부분의 기술에서 요소와 구성 요소는 트리 구조로 구성됩니다. 이 트리 구조에서 개발자는 트리의 개체 노드를 직접 조작하여 애플리케이션의 동작이나 렌더링에 영향을 줍니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서도 여러 가지 트리 구조 메타포를 사용하여 프로그램 요소 간의 관계를 정의합니다. 대부분 경우 WPF 개발자는 개념적으로 개체 트리 메타포를 고려하면서 코드로 애플리케이션을 만들거나 XAML로 애플리케이션의 일부를 정의할 수 있지만 XML DOM에서 사용할 수 있는 몇 가지 일반적인 개체 트리 조작 API 대신 특정 API를 호출하거나 특정 태그를 사용하여 이 작업을 수행합니다. WPF 트리 메타포 보기를 제공 하는 두 개의 도우미 클래스를 노출 <xref:System.Windows.LogicalTreeHelper> 고 <xref:System.Windows.Media.VisualTreeHelper>입니다. 또한 WPF 설명서에서는 시각적 트리와 논리 트리라는 용어를 사용하는데 이러한 동일한 트리는 특정 주요 WPF 기능의 동작을 이해하는 데 유용하기 때문입니다. 이 항목에서는 시각적 트리와 논리 트리가 나타내는 항목 정의 전체 개체 트리 개념과 이러한 트리 관계에 대해 설명 하 고 소개 <xref:System.Windows.LogicalTreeHelper> 고 <xref:System.Windows.Media.VisualTreeHelper>s입니다.  
 
 <a name="element_tree"></a>   
 ## <a name="trees-in-wpf"></a>WPF의 트리  

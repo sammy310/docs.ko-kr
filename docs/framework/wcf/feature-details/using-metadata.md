@@ -3,10 +3,10 @@ title: 메타데이터 사용
 ms.date: 03/30/2017
 ms.assetid: 05cf53a1-b92d-4d8e-a87e-79f6e51c4a8d
 ms.openlocfilehash: 78005f68512e62c667b59c3cec5841a37723b973
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59082713"
 ---
 # <a name="using-metadata"></a>메타데이터 사용
@@ -16,7 +16,7 @@ ms.locfileid: "59082713"
  [생성된 클라이언트 코드 이해](../../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)  
  Svcutil.exe 도구를 통해 생성되는 여러 가지 클래스와 인터페이스에 대해 설명합니다.  
   
- [방법: 메타데이터 검색 및 규정 준수 서비스 구현](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)  
+ [방법: 메타 데이터 검색 및 규격 서비스 구현](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)  
  Svcutil.exe를 사용하여 메타데이터를 검색하는 방법과 규격 서비스를 구현하는 방법을 보여 줍니다.  
   
  [서비스 메타데이터에서 WCF 클라이언트 생성](../../../../docs/framework/wcf/feature-details/generating-a-wcf-client-from-service-metadata.md)  

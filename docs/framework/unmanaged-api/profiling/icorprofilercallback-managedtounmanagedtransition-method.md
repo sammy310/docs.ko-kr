@@ -18,10 +18,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b00394d0b08e7e4a02b95437908dd65a51d0a042
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59084611"
 ---
 # <a name="icorprofilercallbackmanagedtounmanagedtransition-method"></a>ICorProfilerCallback::ManagedToUnmanagedTransition 메서드
@@ -43,7 +43,7 @@ HRESULT ManagedToUnmanagedTransition(
  [in] 값을 [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) 전환 또는 관리 되는 함수에 의해 관리 되지 않는 호출에서 반환 된 관리 코드에서 비관리 코드 호출으로 인해 발생 했는지 여부를 나타내는 열거형입니다.  
   
 ## <a name="remarks"></a>설명  
- 경우 변수의 `reason` COR_PRF_TRANSITION_CALL, 함수는 관리 되지 않는 함수는 되지 컴파일된-just-in-time 컴파일러를 사용 하 여 ID가 됩니다. 이름, 일부 메타 데이터 등, 관련 기본 정보를 포함 하는 관리 되지 않는 함수입니다. 암시적 플랫폼을 사용 하 여 관리 되지 않는 함수를 호출한 경우 호출 (PInvoke), 런타임에서 호출의 대상 및의 값을 확인할 수 없습니다 `functionId` null이 됩니다. 암시적 PInvoke에 대 한 자세한 내용은 참조 하세요. [c + + Interop 사용 (암시적 PInvoke)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke)합니다.  
+ 경우 변수의 `reason` COR_PRF_TRANSITION_CALL, 함수는 관리 되지 않는 함수는 되지 컴파일된-just-in-time 컴파일러를 사용 하 여 ID가 됩니다. 이름, 일부 메타 데이터 등, 관련 기본 정보를 포함 하는 관리 되지 않는 함수입니다. 암시적 플랫폼을 사용 하 여 관리 되지 않는 함수를 호출한 경우 호출 (PInvoke), 런타임에서 호출의 대상 및의 값을 확인할 수 없습니다 `functionId` null이 됩니다. 암시적 PInvoke에 대 한 자세한 내용은 참조 하세요. [사용 C++ (암시적 PInvoke) Interop](/cpp/dotnet/using-cpp-interop-implicit-pinvoke)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

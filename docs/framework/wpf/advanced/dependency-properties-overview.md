@@ -15,10 +15,10 @@ helpviewer_keywords:
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
 ms.openlocfilehash: 443ea9ad56d13d26191231104ce3998b2691fc34
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188645"
 ---
 # <a name="dependency-properties-overview"></a>종속성 속성 개요
@@ -36,7 +36,7 @@ WPF(Windows Presentation Foundation)에서는 형식의 [속성](../../../standa
 SDK 참조에서는 속성에 대한 관리되는 참조 페이지에 [종속성 속성 정보] 섹션이 있는지 여부에 따라 해당 속성이 종속성 속성인지를 식별할 수 있습니다. 종속성 속성 정보 섹션에는 해당 종속성 속성의 <xref:System.Windows.DependencyProperty> 식별자 필드에 대한 링크가 포함되어 있으며, 해당 속성에 대해 설정되는 메타데이터 옵션 목록, 클래스별 재정의 정보 및 기타 정보도 포함되어 있습니다.
 
 ## <a name="dependency-properties-back-clr-properties"></a>종속성 속성의 CLR 속성 지원
-종속성 속성 및 WPF 속성 시스템은 private 필드로 속성을 지원하는 표준 패턴에 대한 대체 구현으로 속성을 지원하는 형식을 제공하여 속성 기능을 확장합니다. 이 형식의 이름은 <xref:System.Windows.DependencyProperty>입니다. WPF 속성 시스템을 정의하는 다른 중요한 형식은 <xref:System.Windows.DependencyObject>입니다. <xref:System.Windows.DependencyObject> 등록 하는 종속성 속성을 소유 하는 기본 클래스를 정의 합니다.
+종속성 속성 및 WPF 속성 시스템은 private 필드로 속성을 지원하는 표준 패턴에 대한 대체 구현으로 속성을 지원하는 형식을 제공하여 속성 기능을 확장합니다. 이 형식의 이름은 <xref:System.Windows.DependencyProperty>입니다. WPF 속성 시스템을 정의하는 다른 중요한 형식은 <xref:System.Windows.DependencyObject>입니다. <xref:System.Windows.DependencyObject>는 종속성 속성을 등록하고 소유할 수 있는 기본 클래스를 정의합니다.
 
 다음은 종속성 속성에 사용되는 용어를 나열합니다.
 
@@ -85,7 +85,7 @@ XAML은 속성을 설정하는 다양한 구문 형식 지원 특정 속성에 �
 ## <a name="property-functionality-provided-by-a-dependency-property"></a>종속성 속성에서 제공하는 속성 기능
 종속성 속성은 필드에서 지원하는 속성과 반대로 속성의 기능을 확장하는 기능을 제공합니다. 종종 이러한 기능은 다음과 같은 특정 기능 중 하나를 지원하거나 나타냅니다.
 
-- [자료](#resources)
+- [리소스](#resources)
 
 - [데이터 바인딩](#data-binding)
 

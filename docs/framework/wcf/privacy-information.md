@@ -7,10 +7,10 @@ helpviewer_keywords:
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
 ms.openlocfilehash: e506908299109f94be6d190017b381fe7b4ee044
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151504"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 개인 정보 취급 방침
@@ -47,7 +47,7 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
 |데이터|스토리지|  
 |----------|-------------|  
 |사용자 이름, X.509 인증서, Kerberos 토큰, 자격 증명에 대한 참조 등의 프레젠테이션 자격 증명|Windows 인증서 저장소 등의 표준 Windows 자격 증명 관리 메커니즘|  
-|사용자 이름, 암호 등의 사용자 멤버 자격 정보|[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 멤버 자격 공급자입니다.|  
+|사용자 이름, 암호 등의 사용자 멤버 자격 정보|[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 멤버 자격 공급자|  
 |서비스를 클라이언트에 인증하는 데 사용되는 서비스에 대한 ID 정보|서비스의 끝점 주소|  
 |호출자 정보|감사 로그|  
   

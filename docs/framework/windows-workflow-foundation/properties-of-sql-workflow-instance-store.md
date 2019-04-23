@@ -3,10 +3,10 @@ title: SQL 워크플로 인스턴스 저장소의 속성
 ms.date: 03/30/2017
 ms.assetid: 5bf75f3c-8f33-450d-967f-6ee862c14c67
 ms.openlocfilehash: fae96b08b8b9bb620ae3e86376bb0be4691d4caa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222122"
 ---
 # <a name="properties-of-sql-workflow-instance-store"></a>SQL 워크플로 인스턴스 저장소의 속성
@@ -29,4 +29,4 @@ ms.locfileid: "59222122"
 ## <a name="see-also"></a>참고자료
 
 - [Windows Server App Fabric 인스턴스 스토어](https://go.microsoft.com/fwlink/?LinkId=201201)
-- [AppFabric SQL Server 지속성 데이터베이스](https://go.microsoft.com/fwlink/?LinkId=201202)
+- [App Fabric SQL Server 지 속성 데이터베이스](https://go.microsoft.com/fwlink/?LinkId=201202)

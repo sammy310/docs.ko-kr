@@ -11,10 +11,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
 ms.openlocfilehash: b606de4b7cf4648fdc7ada3c1f6faec81342d02c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320641"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>연습: Visual Basic을 사용하여 Windows Forms 컨트롤에서 상속
@@ -140,7 +140,7 @@ Visual Basic을 사용 하 여을 통해 강력한 사용자 지정 컨트롤을
   
 11. **디버그** 메뉴에서 **디버깅 시작**을 선택합니다.  
   
-     `Form1` 표시 됩니다.  
+     `Form1`이 나타납니다.  
   
 12. `Valuebutton1`을 클릭합니다.  
   
@@ -148,7 +148,7 @@ Visual Basic을 사용 하 여을 통해 강력한 사용자 지정 컨트롤을
   
 ## <a name="see-also"></a>참고자료
 
-- [연습: Visual Basic을 사용하여 복합 컨트롤 작성](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [방법: 도구 상자 항목 선택 대화 상자에 컨트롤 표시](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [연습: Visual Basic에서 합성 컨트롤 제작](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [방법: 컨트롤에 표시 된 도구 상자 항목 선택 대화 상자](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
 - [.NET Framework에서 사용자 지정 Windows Forms 컨트롤 개발](developing-custom-windows-forms-controls.md)
-- [상속 기본 사항 (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [상속 기본 사항(Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

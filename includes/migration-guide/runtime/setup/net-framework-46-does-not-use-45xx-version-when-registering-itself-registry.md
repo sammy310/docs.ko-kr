@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: ee5070a1a4c58d6c1282ba47c921436ca22722ff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234256"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774206"
 ---
 ### <a name="the-net-framework-46-does-not-use-a-45xx-version-when-registering-itself-in-the-registry"></a>.NET Framework 4.6은 레지스트리에 등록될 때 4.5.x.x 버전을 사용하지 않습니다.
 

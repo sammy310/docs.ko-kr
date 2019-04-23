@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
 ms.openlocfilehash: 80b7df4922e1398c7290e769e53627a1d46ebc83
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344179"
 ---
 # <a name="date-and-time-data"></a>날짜 및 시간 데이터
@@ -99,7 +99,7 @@ SQL Server 2008에서는 날짜 및 시간 정보를 처리하기 위한 새로�
 >  시간 값이 0보다 작거나 24시간보다 크면 <xref:System.ArgumentException>이 throw됩니다.  
   
 ### <a name="creating-parameters"></a>매개 변수 만들기  
- 만들 수 있습니다를 <xref:System.Data.SqlClient.SqlParameter> 해당 생성자를 사용 하 여 또는 추가 하 여 개체를 <xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A> 호출 하 여 컬렉션의 `Add` 메서드의 <xref:System.Data.SqlClient.SqlParameterCollection>. `Add` 메서드는 생성자 인수 또는 기존 매개 변수 개체를 입력으로 사용합니다.  
+ <xref:System.Data.SqlClient.SqlParameter> 개체는 해당 생성자를 사용하거나, <xref:System.Data.SqlClient.SqlCommand>의 <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> 메서드를 호출하여 `Add`<xref:System.Data.SqlClient.SqlParameterCollection> 컬렉션에 추가하는 방법으로 만들 수 있습니다. `Add` 메서드는 생성자 인수 또는 기존 매개 변수 개체를 입력으로 사용합니다.  
   
  이 항목의 다음 섹션에서는 날짜 및 시간 매개 변수를 지정하는 방법에 대한 예제를 제공합니다. 매개 변수를 사용 하 여 작업의 추가 예제를 참조 하세요 [구성 매개 변수 및 매개 변수 데이터 형식](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md) 하 고 [DataAdapter 매개 변수](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)합니다.  
   
@@ -235,9 +235,9 @@ command.Parameters.AddWithValue( _
   
 |항목|설명|  
 |-----------|-----------------|  
-|[날짜 및 시간 데이터 형식 및 함수(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|모든 Transact-SQL 날짜 및 시간 데이터 형식 및 함수에 대한 개요를 제공합니다.|  
+|[날짜 및 시간 데이터 형식 및 함수 (TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|모든 Transact-SQL 날짜 및 시간 데이터 형식 및 함수에 대한 개요를 제공합니다.|  
 |[날짜 및 시간 데이터 사용](https://go.microsoft.com/fwlink/?LinkId=98361)|날짜 및 시간 데이터 형식과 함수를 비롯하여 이러한 데이터 형식의 사용 방법에 대한 정보를 제공합니다.|  
-|[데이터 형식(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|SQL Server 2008에 제공되는 시스템 데이터 형식에 대해 설명합니다.|  
+|[데이터 형식 (TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|SQL Server 2008에 제공되는 시스템 데이터 형식에 대해 설명합니다.|  
   
 ## <a name="see-also"></a>참고자료
 

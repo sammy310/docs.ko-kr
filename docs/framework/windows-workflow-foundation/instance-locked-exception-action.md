@@ -3,10 +3,10 @@ title: 인스턴스 잠금 예외 동작
 ms.date: 03/30/2017
 ms.assetid: 164a5419-315c-4987-ad72-54cbdb88d402
 ms.openlocfilehash: 0cb39c51436271999c66c30210e0da79adc92e72
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326153"
 ---
 # <a name="instance-locked-exception-action"></a>인스턴스 잠금 예외 동작
@@ -20,7 +20,7 @@ SQL 워크플로 인스턴스 저장소의 <xref:System.Activities.DurableInstan
   
  인스턴스 잠금 예외 동작 기능은 다음 시나리오를 지원합니다. 모든 시나리오에서 SqlWorkflowInstanceStore의 instanceLockedExceptionAction 속성이 <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.BasicRetry> 또는 <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.AggressiveRetry>로 설정되어 있는 경우 호스트는 인스턴스에 대한 잠금을 주기적으로 투명하게 다시 시도합니다.  
   
-1. **응용 프로그램 도메인 정상 종료 및 중첩 재활용을 사용합니다.** 가정 된 **AppDomain** 서비스 호스트를 사용 하 여 실행 중인 워크플로 서비스 인스턴스를 재활용 하 고 새 **AppDomain** 으로 이전 하는 동안 동시에 새 요청을 처리  **AppDomain** 정상적으로 중단 합니다. 워크플로 서비스 인스턴스가 유휴 상태가 될 때까지 종료를 중지했다가 인스턴스를 유지하고 언로드합니다. 새 호스트에서 모든 시도가 **AppDomain** 인스턴스를 잠그려고 하면는 <xref:System.Runtime.DurableInstancing.InstanceLockedException>합니다.  
+1. **정상 종료 및 중첩 재활용 응용 프로그램 도메인을 사용 하도록 설정 합니다.** 가정 된 **AppDomain** 서비스 호스트를 사용 하 여 실행 중인 워크플로 서비스 인스턴스를 재활용 하 고 새 **AppDomain** 으로 이전 하는 동안 동시에 새 요청을 처리  **AppDomain** 정상적으로 중단 합니다. 워크플로 서비스 인스턴스가 유휴 상태가 될 때까지 종료를 중지했다가 인스턴스를 유지하고 언로드합니다. 새 호스트에서 모든 시도가 **AppDomain** 인스턴스를 잠그려고 하면는 <xref:System.Runtime.DurableInstancing.InstanceLockedException>합니다.  
   
 2. **유형이 같은 서버 팜에서 지속형 워크플로 수평 확장.** 워크플로 인스턴스가 실행 중인 서버 팜 노드가 충돌하고 워크플로 호스트가 실행 중인 인스턴스에 대한 잠금을 제거할 수 없다고 가정합니다. 다른 팜 노드에서 실행 중인 서비스 호스트가 워크플로 인스턴스에 대한 메시지를 수신한 후 해당 인스턴스를 잠그려고 시도하면 <xref:System.Runtime.DurableInstancing.InstanceLockedException>이 발생합니다. 잠금을 갱신하려는 호스트가 더 이상 존재하기 않기 때문에 잠금이 잠시 후 만료됩니다.  
   

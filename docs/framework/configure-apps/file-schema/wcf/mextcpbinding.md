@@ -3,10 +3,10 @@ title: <mexTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 01baba8d-d784-4255-9ea2-7afff1482bf0
 ms.openlocfilehash: 9e76d65a27e7732d1d62c4ba25afac76d73be167
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078891"
 ---
 # <a name="mextcpbinding"></a>\<mexTcpBinding>
@@ -55,7 +55,7 @@ TCP를 통한 WS-MEX(WS-MetadataExchange) 메시지 교환에 사용되는 바�
 
 - <xref:System.ServiceModel.Configuration.MexTcpBindingElement>
 - <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexTcpBinding%2A>
-- [방법: 구성 파일을 사용하여 서비스에 대한 메타데이터 게시](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [방법: 구성 파일을 사용 하는 서비스의 메타 데이터 게시](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [사용자 지정 바인딩을 통해 메타데이터 게시 및 검색](../../../../../docs/framework/wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)
 - [메타데이터](../../../../../docs/framework/wcf/feature-details/metadata.md)
 - [바인딩](../../../../../docs/framework/wcf/bindings.md)

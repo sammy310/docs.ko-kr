@@ -5,10 +5,10 @@ ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c82d32fe5b1e62a19ff5e2920c5943f1303b2d64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207034"
 ---
 # <a name="serialization-and-metadata"></a>Serialization 및 메타데이터
@@ -69,4 +69,4 @@ ms.locfileid: "59207034"
 - [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [런타임 지시문 요소](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [\<형식 > 요소](../../../docs/framework/net-native/type-element-net-native.md)
-- [\<Namespace > 요소](../../../docs/framework/net-native/namespace-element-net-native.md)
+- [\<Namespace> 요소](../../../docs/framework/net-native/namespace-element-net-native.md)

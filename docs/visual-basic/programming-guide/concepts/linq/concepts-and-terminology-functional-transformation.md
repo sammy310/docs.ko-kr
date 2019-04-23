@@ -3,10 +3,10 @@ title: 개념과 용어 (함수 변환) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 24fd244d-ebae-4721-8858-89bb544aea0b
 ms.openlocfilehash: c6308185b39651095482dca434ce25d717bd5e6b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58820804"
 ---
 # <a name="concepts-and-terminology-functional-transformation-visual-basic"></a>개념과 용어 (함수 변환) (Visual Basic)
@@ -42,7 +42,7 @@ ms.locfileid: "58820804"
  다음 표에는 함수 변환과 관련된 몇 가지 용어가 정의되어 있습니다.  
   
  고차(1급) 함수  
- 프로그램 개체로 취급할 수 있는 함수입니다. 예를 들어, 고차 함수는 다른 함수로 전달되거나 다른 함수에서 반환될 수 있습니다. Visual Basic에서 대리자와 람다 식은 고차 함수를 지 원하는 언어 기능 됩니다. 고차 함수를 작성하려면 하나 이상의 인수를 선언하여 대리자를 사용하며, 고차 함수를 호출할 때는 흔히 람다 식을 사용합니다. 대부분의 표준 쿼리 연산자가 고차 함수입니다.  
+ 프로그램 개체로 취급할 수 있는 함수입니다. 예를 들어, 고차 함수는 다른 함수로 전달되거나 다른 함수에서 반환될 수 있습니다. Visual basic에서 대리자와 람다 식은 고차 함수를 지 원하는 언어 기능 됩니다. 고차 함수를 작성하려면 하나 이상의 인수를 선언하여 대리자를 사용하며, 고차 함수를 호출할 때는 흔히 람다 식을 사용합니다. 대부분의 표준 쿼리 연산자가 고차 함수입니다.  
   
  자세한 내용은 [표준 쿼리 연산자 개요 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)합니다.  
   

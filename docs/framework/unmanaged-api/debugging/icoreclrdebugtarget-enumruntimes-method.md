@@ -20,10 +20,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: afb31646d21ec7e15f79601f5fe83ea6ce44fa90
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134682"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>ICoreClrDebugTarget::EnumRuntimes 메서드
@@ -54,7 +54,7 @@ HRESULT EnumRuntimes (
  명령 실행 성공  
   
  S_FALSE  
- `dwInternalProcessID` 일치 하지 않습니다 컴퓨터에서 실행 되는 모든 프로세스 아마도 프로세스가 종료 되었습니다. `pcRuntimes` 및 `ppRuntimes` null이 됩니다.  
+ `dwInternalProcessID`가 컴퓨터에서 실행 중인 프로세스와 일치하지 않습니다. 프로세스가 종료된 것 같습니다. `pcRuntimes` 및 `ppRuntimes`가 null이 됩니다.  
   
  E_OUTOFMEMORY  
  `ppRuntimes`에 대해 충분한 메모리를 할당할 수 없습니다.  

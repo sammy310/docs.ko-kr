@@ -3,10 +3,10 @@ title: '방법: 메시징 활동을 사용하여 워크플로 서비스 만들�
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
 ms.openlocfilehash: f5bb8df5936be1890bf744300daa7ccb68e341e3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337775"
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>방법: 메시징 활동을 사용하여 워크플로 서비스 만들기
@@ -93,4 +93,4 @@ ms.locfileid: "59337775"
 
 - [워크플로 서비스](../../../../docs/framework/wcf/feature-details/workflow-services.md)
 - [워크플로 서비스 호스팅 개요](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
-- [메시징 활동](../../../../docs/framework/wcf/feature-details/messaging-activities.md)
+- [메시징 작업](../../../../docs/framework/wcf/feature-details/messaging-activities.md)

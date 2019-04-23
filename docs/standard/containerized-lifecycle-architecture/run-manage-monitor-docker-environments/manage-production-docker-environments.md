@@ -4,12 +4,12 @@ description: 컨테이너 기반 프로덕션 환경을 관리 하는 것에 대
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: f3cf9bc281e94f342cecb1083d886daba03c019d
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 3f8c51b95f52a655de470ac237c51dd4ee9c13eb
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836619"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672102"
 ---
 # <a name="manage-production-docker-environments"></a>프로덕션 Docker 환경 관리
 
@@ -30,7 +30,7 @@ Azure Virtual Machine Scale Sets를 사용 하 여 이러한 클러스터를 배
 | [컨테이너에 대 한 azure Monitor](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) | Azure는 Kubernetes 관리 도구 전용 | Azure Kubernetes 서비스 (AKS) |
 | [Kubernetes 웹 UI (대시보드)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | Kubernetes 관리 도구를 모니터링 하 고 로컬 Kubernetes 클러스터를 관리할 수 있습니다. | AKS(Azure Kubernetes Service)<br/>로컬 Kubernetes |
 | [Service Fabric에 대 한 azure portal](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal)<br/>[Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) | Azure에서 온 프레미스, 로컬 개발 및 기타 클라우드에서 Service Fabric 클러스터를 관리 하는 것에 대 한 온라인 및 데스크톱 버전 | Azure Service Fabric |
-| [컨테이너 모니터링 (Log Analytics)](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | 일반 컨테이너 관리 y 모니터링 솔루션입니다. 통해 Kubernetes 클러스터를 관리할 수 있습니다 [컨테이너에 대 한 Azure Monitor](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview)합니다. | Azure Service Fabric<br/>AKS(Azure Kubernetes Service)<br/>Mesosphere DC/OS를 사용 합니다. |
+| [컨테이너 모니터링 (Azure 모니터)](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | 일반 컨테이너 관리 y 모니터링 솔루션입니다. 통해 Kubernetes 클러스터를 관리할 수 있습니다 [컨테이너에 대 한 Azure Monitor](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview)합니다. | Azure Service Fabric<br/>AKS(Azure Kubernetes Service)<br/>Mesosphere DC/OS를 사용 합니다. |
 
 ## <a name="azure-service-fabric"></a>Azure Service Fabric
 

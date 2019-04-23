@@ -3,12 +3,12 @@ title: 비동기 스트림 생성 및 사용
 description: 이 고급 자습서에서는 비동기 스트림을 생성 및 사용하여 비동기적으로 생성될 수 있는 데이터 시퀀스를 사용하는 더 자연스러운 방법을 제공하는 시나리오를 보여 줍니다.
 ms.date: 02/10/2019
 ms.custom: mvc
-ms.openlocfilehash: c8be9cf4b83e3dd72232279e7c15dcba639c2058
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 0fa7c778ca9ce0f0124fcc520dd4de65f2f92ea8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56306008"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59308551"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>자습서: C# 8.0 및 .NET Core 3.0을 사용하여 비동기 스트림 생성 및 사용
 
@@ -23,7 +23,7 @@ C# 8.0은 데이터 스트림의 요소를 비동기적으로 검색하거나 �
 
 ## <a name="prerequisites"></a>전제 조건
 
-C# 8.0 베타 컴파일러를 포함하여 .NET Core를 실행하도록 머신을 설정해야 합니다. C# 8 베타 컴파일러는 [Visual Studio 2019 미리 보기 1](https://visualstudio.microsoft.com/vs/preview/) 또는 [.NET Core 3.0 미리 보기 1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0)부터 사용할 수 있습니다. 비동기 스트림은 .NET Core 3.0 미리 보기 1에서 처음 제공됩니다.
+C# 8.0 베타 컴파일러를 포함하여 .NET Core를 실행하도록 머신을 설정해야 합니다. C# 8 베타 컴파일러는 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 또는 최신 [.NET Core 3.0 미리 보기 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0)부터 사용할 수 있습니다. 비동기 스트림은 .NET Core 3.0 미리 보기 1에서 처음 제공됩니다.
 
 GitHub GraphQL 엔드포인트에 액세스할 수 있도록 [GitHub 액세스 토큰](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token)을 만들어야 합니다. GitHub 액세스 토큰에 사용할 다음 권한을 선택합니다.
 

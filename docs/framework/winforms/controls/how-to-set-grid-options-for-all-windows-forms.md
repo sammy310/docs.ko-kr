@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
 ms.openlocfilehash: 6823b524759bbc8ec252bf2d34a6e428d1bb237b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336059"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>방법: 모든 Windows Forms에 대한 모눈 옵션 설정
@@ -31,13 +31,13 @@ Visual Studio 개발 환경에서 작업 하는 데 익숙해지면 모든 폼�
   
 ## <a name="see-also"></a>참고자료
 
-- [연습: Windows Forms에서 맞춤선을 사용하여 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [옵션 대화 상자, Windows Forms 디자이너, 일반](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
+- [연습: 맞춤선을 사용 하 여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [일반적으로 Windows Forms 디자이너, 옵션 대화 상자](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
 - [Windows Forms 컨트롤](index.md)
 - [방법: Windows Forms에 컨트롤 추가](how-to-add-controls-to-windows-forms.md)
 - [Windows Forms에서 컨트롤 정렬](arranging-controls-on-windows-forms.md)
 - [방법: Windows Forms에서 탭 순서 설정](how-to-set-the-tab-order-on-windows-forms.md)
-- [방법: Windows Forms 컨트롤에서 표시하는 텍스트 설정](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [방법: 설정 하 여 표시 되는 텍스트는 Windows Forms 컨트롤](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Windows Forms에 컨트롤 넣기](putting-controls-on-windows-forms.md)
 - [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)
 - [기능별 Windows Forms 컨트롤](windows-forms-controls-by-function.md)

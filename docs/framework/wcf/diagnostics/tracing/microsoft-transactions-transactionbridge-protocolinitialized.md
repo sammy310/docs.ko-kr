@@ -3,10 +3,10 @@ title: Microsoft.Transactions.TransactionBridge.ProtocolInitialized
 ms.date: 03/30/2017
 ms.assetid: 166dfa2d-10de-447a-b76f-3b64752a2967
 ms.openlocfilehash: 98bb4e5910fa31ef4985e708d154380d203cca31
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59093464"
 ---
 # <a name="microsofttransactionstransactionbridgeprotocolinitialized"></a>Microsoft.Transactions.TransactionBridge.ProtocolInitialized
@@ -18,5 +18,5 @@ WS-Atomic Transaction 프로토콜 서비스가 초기화되었습니다.
 ## <a name="see-also"></a>참고자료
 
 - [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [추적을 사용하여 응용 프로그램 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [추적을 사용하여 애플리케이션 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [관리 및 진단](../../../../../docs/framework/wcf/diagnostics/index.md)

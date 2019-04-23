@@ -3,10 +3,10 @@ title: EXISTS(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d28ead43-4afb-4bdc-af64-efd2e05005d7
 ms.openlocfilehash: 72d96c5f24fcedf870370de3792680831145a454
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311138"
 ---
 # <a name="exists-entity-sql"></a>EXISTS(Entity SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "59311138"
  EXISTS의 결과를 부정하도록 지정합니다.  
   
 ## <a name="return-value"></a>반환 값  
- `true` 컬렉션이 비어 있습니다. 그렇지 않으면 `false`합니다.  
+ 컬렉션이 비어 있지 않으면 `true`이고 비어 있으면 `false`입니다.  
   
 ## <a name="remarks"></a>설명  
  EXISTS는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 집합 연산자 중 하나입니다. 모든 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 집합 연산자는 왼쪽에서 오른쪽으로 계산됩니다. 우선 순위에 대 한 정보를 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 집합 연산자를 참조 하십시오 [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)합니다.  

@@ -13,10 +13,10 @@ ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d6b9e3d3f5ebc122e2031dac5999a80445ee03a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59083843"
 ---
 # <a name="collections-and-data-structures"></a>컬렉션 및 데이터 구조
@@ -50,7 +50,7 @@ ms.locfileid: "59083843"
   
 -   **일관된 하한**  
   
-     컬렉션의 하한은 첫 번째 요소의 인덱스입니다. <xref:System.Collections> 네임스페이스의 모든 인덱싱된 컬렉션은 하한이 0입니다(0부터 인덱싱됨). <xref:System.Array> 기본 하한은 0이지만 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType>를 사용하여 **Array** 클래스의 인스턴스를 만들 때 다른 하한을 정의할 수 있습니다.  
+     컬렉션의 하한은 첫 번째 요소의 인덱스입니다. <xref:System.Collections> 네임스페이스의 모든 인덱싱된 컬렉션은 하한이 0입니다(0부터 인덱싱됨). <xref:System.Array>의 기본 하한은 0이지만 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType>를 사용하여 **Array** 클래스의 인스턴스를 만들 때 다른 하한을 정의할 수 있습니다.  
   
 -   **여러 스레드로부터의 액세스를 위한 동기화**(<xref:System.Collections> 클래스에만 해당됨).  
   

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - 3-D translations [WPF], animating [WPF], with quaternions
 ms.assetid: adca9cb1-066b-4de8-abbb-6b4007579ee7
 ms.openlocfilehash: d994ac2ae67fd366f27f123d5bd15f14d5ac7abe
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183224"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-quaternions"></a>방법: 4원수를 사용하여 3차원 회전에 애니메이션 효과 주기
@@ -35,5 +35,5 @@ ms.locfileid: "59183224"
 - [3차원 장면 만들기](how-to-create-a-3-d-scene.md)
 - [3차원 그래픽 개요](3-d-graphics-overview.md)
 - [Transform 개요](transforms-overview.md)
-- [스토리보드를 사용하여 3차원 회전에 애니메이션 효과 주기](how-to-animate-a-3-d-rotation-using-storyboards.md)
+- [Storyboard를 사용하여 3차원 회전에 애니메이션 효과 주기](how-to-animate-a-3-d-rotation-using-storyboards.md)
 - [Rotation3DAnimation을 사용하여 3차원 회전에 애니메이션 효과 주기](how-to-animate-a-3-d-rotation-using-rotation3danimation.md)

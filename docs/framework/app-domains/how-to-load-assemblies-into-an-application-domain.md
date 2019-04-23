@@ -12,10 +12,10 @@ ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 51c1ac87cf9111504ba99efa25f6fca2bb0b63df
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188528"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>방법: 애플리케이션 도메인에 어셈블리 로드
@@ -50,7 +50,7 @@ ms.locfileid: "59188528"
 
 - <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>
 - [애플리케이션 도메인으로 프로그래밍](application-domains.md#programming-with-application-domains)
-- [반사](../../../docs/framework/reflection-and-codedom/reflection.md)
+- [리플렉션](../../../docs/framework/reflection-and-codedom/reflection.md)
 - [애플리케이션 도메인 사용](../../../docs/framework/app-domains/use.md)
 - [방법: 리플렉션 전용 컨텍스트에 어셈블리 로드](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
-- [응용 프로그램 도메인 및 어셈블리](application-domains.md#application-domains-and-assemblies)
+- [애플리케이션 도메인 및 어셈블리](application-domains.md#application-domains-and-assemblies)

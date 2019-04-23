@@ -3,10 +3,10 @@ title: '방법: 코드 편집기를 사용하여 엔터티 클래스 사용자 �
 ms.date: 03/30/2017
 ms.assetid: ec28332f-9f3c-4e0a-baca-60f9141a68c0
 ms.openlocfilehash: 05a523f8b98c7b64350b67c217baba07dca14de3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155170"
 ---
 # <a name="how-to-customize-entity-classes-by-using-the-code-editor"></a>방법: 코드 편집기를 사용하여 엔터티 클래스 사용자 지정
@@ -31,10 +31,10 @@ Visual Studio를 사용 하 여 개발자가 사용할 수는 [!INCLUDE[vs_ordes
  [방법: 데이터베이스 관계 매핑](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md)  
  <xref:System.Data.Linq.Mapping.AssociationAttribute> 특성을 사용한 예제를 제공합니다.  
   
- [방법: 열을 데이터베이스에서 생성된 열로 표현](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-database-generated.md)  
+ [방법: 데이터베이스 생성 값으로 열 표현](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-database-generated.md)  
  <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>를 사용하는 방법을 설명합니다.  
   
- [방법: 열을 타임스탬프 또는 버전 열로 표현](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-timestamp-or-version-columns.md)  
+ [방법: 열을 타임 스탬프 또는 버전 열을 나타내는](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-timestamp-or-version-columns.md)  
  <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>를 사용하는 방법을 설명합니다.  
   
  [방법: 데이터베이스 데이터 형식 지정](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-database-data-types.md)  
@@ -43,10 +43,10 @@ Visual Studio를 사용 하 여 개발자가 사용할 수는 [!INCLUDE[vs_ordes
  [방법: 계산 열 표현](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-computed-columns.md)  
  <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>를 사용하는 방법을 설명합니다.  
   
- [방법: 전용 스토리지 필드 지정](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-private-storage-fields.md)  
+ [방법: 전용 저장소 필드 지정](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-private-storage-fields.md)  
  <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>를 사용하는 방법을 설명합니다.  
   
- [방법: 열을 NULL 값을 허용하는 열로 표현](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-allowing-null-values.md)  
+ [방법: Null 값을 허용 하도록 열 표현](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-allowing-null-values.md)  
  <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>를 사용하는 방법을 설명합니다.  
   
  [방법: 상속 계층 구조 매핑](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md)  

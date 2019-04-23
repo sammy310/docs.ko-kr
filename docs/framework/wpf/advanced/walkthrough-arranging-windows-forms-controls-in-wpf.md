@@ -9,10 +9,10 @@ helpviewer_keywords:
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
 ms.openlocfilehash: 5b759baebb7192c1ee94b4aa925198864ba7a31a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338776"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>연습: WPF에서 Windows Forms 컨트롤 정렬
@@ -91,7 +91,7 @@ ms.locfileid: "59338776"
   
      [!code-xaml[WpfLayoutHostingWfWithXaml#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#3)]  
   
-2. F5 키를 눌러 애플리케이션을 빌드하고 실행합니다. 합니다 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Button?displayProperty=nameWithType> 컨트롤에 표시 됩니다는 <xref:System.Windows.Controls.Canvas>합니다. 호스팅된 컨트롤이 해당 콘텐츠에 따라 크기가 및 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 호스트 된 컨트롤에 맞게 크기가 조정 됩니다.  
+2. F5 키를 눌러 애플리케이션을 빌드하고 실행합니다. 합니다 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Button?displayProperty=nameWithType> 컨트롤에 표시 됩니다는 <xref:System.Windows.Controls.Canvas>합니다. 호스팅된 컨트롤이 해당 콘텐츠에 따라 크기가 및 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 호스트 된 컨트롤에 맞게 크기가 조정 됩니다.  
   
 ## <a name="sizing-to-content"></a>콘텐츠에 맞게 크기 조정  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 호스트 된 컨트롤 크기가 조정 됩니다 해당 콘텐츠가 제대로 표시 되도록 합니다.  

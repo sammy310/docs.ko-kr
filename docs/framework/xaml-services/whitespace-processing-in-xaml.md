@@ -8,10 +8,10 @@ helpviewer_keywords:
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
 ms.openlocfilehash: dadfab948aff73714a2cf253100f89de3b4a2d57
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59294927"
 ---
 # <a name="white-space-processing-in-xaml"></a>XAML의 공백 처리
@@ -76,6 +76,6 @@ XAML에 대 한 언어 규칙에 따르면 해당 유효 공백에서 처리 되
   
 ## <a name="see-also"></a>참고자료
 
-- [XAML 개요 (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [XAML 개요(WPF)](../wpf/advanced/xaml-overview-wpf.md)
 - [XML 문자 엔터티 및 XAML](xml-character-entities-and-xaml.md)
 - [XAML에서 처리 하는 xml: space](xml-space-handling-in-xaml.md)

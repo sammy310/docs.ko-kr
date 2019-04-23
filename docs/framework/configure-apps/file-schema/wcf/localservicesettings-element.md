@@ -3,10 +3,10 @@ title: <localServiceSettings> 요소
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
 ms.openlocfilehash: e987d14edde3af6aca2ceb392976abe3b6460c9c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102637"
 ---
 # <a name="localservicesettings-element"></a>\<localServiceSettings > 요소
@@ -76,13 +76,13 @@ ms.locfileid: "59102637"
   
  `localServiceSecuritySettings` 요소의 다음 특성을 사용하면 DOS(서비스 거부) 보안 공격을 줄일 수 있습니다.  
   
--   `maxCachedCookies`: SPNEGO 또는 SSL 협상 후에 서버에서 캐시 되는 시간 제한 Securitycontexttoken의 최대 수를 제어 합니다.  
+-   `maxCachedCookies`: SPNEGO 또는 SSL 협상 후에 서버에서 캐시하는 시간 제한 SecurityContextToken의 최대 개수를 제어합니다.  
   
--   `issuedCookieLifetime`: SPNEGO 또는 SSL 협상 후에 서버에서 발급 하는 Securitycontexttoken의 수명을 제어 합니다. 서버는 이 기간 동안 SecurityContextToken을 캐시합니다.  
+-   `issuedCookieLifetime`: SPNEGO 또는 SSL 협상 후에 서버에서 발급하는 SecurityContextToken의 수명을 제어합니다. 서버는 이 기간 동안 SecurityContextToken을 캐시합니다.  
   
--   `maxPendingSessions`: 응용 프로그램 메시지가 처리 되는 있지만 서버에서 설정 된 보안 대화의 최대 수를 제어 합니다. 이 할당량은 클라이언트가 서비스에서 보안 대화를 설정할 수 없도록 하고 서비스에서 각 클라이언트의 상태를 유지 관리하게 하지만 사용하지는 않습니다.  
+-   `maxPendingSessions`: 서버에서 설정되었지만 응용 프로그램 메시지가 처리되지 않은 보안 대화의 최대 개수를 제어합니다. 이 할당량은 클라이언트가 서비스에서 보안 대화를 설정할 수 없도록 하고 서비스에서 각 클라이언트의 상태를 유지 관리하게 하지만 사용하지는 않습니다.  
   
--   `inactivityTimeout`: 최대 시간을 제어는 서비스에서 보안 대화를 활성 상태로 유지 수신 되지 않을 때에 응용 프로그램 메시지입니다. 이 할당량은 클라이언트가 서비스에서 보안 대화를 설정할 수 없도록 하고 서비스에서 각 클라이언트의 상태를 유지 관리하게 하지만 사용하지는 않습니다.  
+-   `inactivityTimeout`: 응용 프로그램 메시지가 수신되지 않을 때 서비스에서 보안 대화를 활성 상태로 유지하는 최대 시간을 제어합니다. 이 할당량은 클라이언트가 서비스에서 보안 대화를 설정할 수 없도록 하고 서비스에서 각 클라이언트의 상태를 유지 관리하게 하지만 사용하지는 않습니다.  
   
  보안 대화 세션에서 바인딩의 `inactivityTimeout` 및 `receiveTimeout` 특성은 모두 세션 시간 제한에 영향을 줍니다. 제한 시간은 두 속성 값 중 짧은 시간으로 결정됩니다.  
   
@@ -94,8 +94,8 @@ ms.locfileid: "59102637"
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [바인딩](../../../../../docs/framework/wcf/bindings.md)
-- [바인딩 확장명](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [바인딩 확장](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [Custom Binding Security](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+- [방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩 만들기](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [사용자 지정 바인딩 보안](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

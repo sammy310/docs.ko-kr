@@ -3,11 +3,11 @@ title: 영속 인스턴스 컨텍스트
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
 ms.openlocfilehash: 25772e7f119ddd5a144d223f402e815380b3eba5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59316936"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773378"
 ---
 # <a name="durable-instance-context"></a>영속 인스턴스 컨텍스트
 이 샘플에는 영 속 인스턴스 컨텍스트를 사용 하도록 설정 하려면 Windows Communication Foundation (WCF) 런타임 사용자 지정 하는 방법을 보여 줍니다. 여기서는 SQL Server 2005를 백업 저장소(이 경우 SQL Server 2005 Express)로 사용합니다. 사용자 지정 저장소 메커니즘에 액세스하는 방법도 제공합니다.  

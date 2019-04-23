@@ -3,11 +3,11 @@ title: Programming Model Item Tree
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
 ms.openlocfilehash: 1aaa1aa9922a7f57138782effe9492ec84198c8a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59321135"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59771610"
 ---
 # <a name="programming-model-item-tree"></a>Programming Model Item Tree
 이 샘플을 탐색 하는 방법을 보여 줍니다는 <xref:System.Activities.Presentation.Model.ModelItem> Windows Presentation Foundation (WPF) 트리 뷰에서 선언적 데이터 바인딩을 사용 하 여 트리.

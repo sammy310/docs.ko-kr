@@ -10,10 +10,10 @@ helpviewer_keywords:
 - loading XML data [WPF]
 ms.assetid: 6eea9f4e-45ce-413b-a266-f08238737bf2
 ms.openlocfilehash: 4db87c5f266a9eed136f0651f48d11720abede65
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59083837"
 ---
 # <a name="xaml-loading-and-dependency-properties"></a>XAML 로드 및 종속성 속성
@@ -47,4 +47,4 @@ ms.locfileid: "59083837"
 - [종속성 속성 메타데이터](dependency-property-metadata.md)
 - [컬렉션 형식 종속성 속성](collection-type-dependency-properties.md)
 - [종속성 속성 보안](dependency-property-security.md)
-- [DependencyObject의 안전한 생성자 패턴](safe-constructor-patterns-for-dependencyobjects.md)
+- [DependencyObjects의 안전한 생성자 패턴](safe-constructor-patterns-for-dependencyobjects.md)

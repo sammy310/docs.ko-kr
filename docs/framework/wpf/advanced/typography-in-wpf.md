@@ -5,10 +5,10 @@ helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
 ms.openlocfilehash: 0fba0b8814597f58018c4c5feba85082ef035e1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111412"
 ---
 # <a name="typography-in-wpf"></a>WPF의 입력 체계
@@ -16,7 +16,7 @@ ms.locfileid: "59111412"
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>텍스트의 향상된 품질 및 성능  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 텍스트는 [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]을 사용하여 렌더링되어 텍스트의 명확성 및 가독성이 향상됩니다. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 개발한 소프트웨어 기술 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 랩톱 화면, Pocket PC 화면, 평면 모니터 등 기존의 Lcd (액정 디스플레이)에서 텍스트의 가독성을 향상 시키는 합니다. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 픽셀의 소수 부분에 문자를 맞춰에서 실제 모양에 사용 하 여 표시할 텍스트를 허용 하는 하위 픽셀 렌더링을 사용 합니다. 해상도를 더 세밀하게 지원할수록 텍스트의 미세한 부분까지 더 선명하게 표시되므로 오랫동안 더 쉽게 읽을 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]에서 향상된 또 다른 기능은 y 방향 앤티앨리어싱으로, 텍스트 문자에서 얕은 곡선의 위쪽과 아래쪽을 다듬습니다. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 기능에 대한 자세한 내용은 [ClearType 개요](cleartype-overview.md)를 참조하세요.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 텍스트는 [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]을 사용하여 렌더링되어 텍스트의 명확성 및 가독성이 향상됩니다. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]은 랩톱 화면, Pocket PC 화면, 평면 모니터 등 기존의 LCD(액정 디스플레이)에서 보다 쉽게 텍스트를 읽을 수 있도록 하기 위해 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]에서 개발한 소프트웨어 기술입니다. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]은 픽셀의 소수 부분에 문자를 맞춰 보다 정밀하게 실제 모양으로 텍스트를 표시할 수 있는 하위 픽셀 렌더링을 사용합니다. 해상도를 더 세밀하게 지원할수록 텍스트의 미세한 부분까지 더 선명하게 표시되므로 오랫동안 더 쉽게 읽을 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]에서 향상된 또 다른 기능은 y 방향 앤티앨리어싱으로, 텍스트 문자에서 얕은 곡선의 위쪽과 아래쪽을 다듬습니다. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 기능에 대한 자세한 내용은 [ClearType 개요](cleartype-overview.md)를 참조하세요.  
   
  ![ClearType y 방향 앤티 앨리어싱을 사용한 텍스트](./media/typography-in-wpf/text-y-direction-antialiasing.gif)  
 ClearType y 방향 앤티앨리어싱으로 표시된 텍스트  
@@ -43,7 +43,7 @@ ClearType y 방향 앤티앨리어싱으로 표시된 텍스트
   
 <a name="Enhanced_International_Text_Support"></a>   
 ## <a name="enhanced-international-text-support"></a>향상된 국가별 텍스트 지원  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 다음 기능을 제공 하 여 향상 된 국가별 텍스트 지원을 제공 합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 다음과 같은 기능을 제공하여 향상된 국가별 텍스트를 지원합니다.  
   
 -   모든 쓰기 시스템에서 적응형 단위를 사용하는 자동 줄 간격.  
   
@@ -53,7 +53,7 @@ ClearType y 방향 앤티앨리어싱으로 표시된 텍스트
   
 <a name="Enhanced_Font_Support"></a>   
 ## <a name="enhanced-font-support"></a>향상된 글꼴 지원  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 다음 기능을 제공 하 여 향상 된 글꼴 지원을 제공 합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 다음과 같은 기능을 제공하여 향상된 글꼴을 지원합니다.  
   
 -   모든 텍스트에 대한 유니코드. 글꼴 동작 및 선택에 문자 집합이나 코드 페이지가 더 이상 필요하지 않습니다.  
   
@@ -71,7 +71,7 @@ ClearType y 방향 앤티앨리어싱으로 표시된 텍스트
   
 <a name="New_Text_APIs"></a>   
 ## <a name="new-text-application-programming-interfaces-apis"></a>새 텍스트 API(응용 프로그래밍 인터페이스)  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 여러 텍스트 제공 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 개발자가 응용 프로그램에서 텍스트를 포함 하는 경우 사용 하 합니다. 이러한 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]는 세 가지 범주로 그룹화됩니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 응용 프로그램에 텍스트를 포함할 때 개발자가 사용할 여러 가지 텍스트 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]를 제공합니다. 이러한 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]는 세 가지 범주로 그룹화됩니다.  
   
 -   **레이아웃 및 사용자 인터페이스**. [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)]에 대한 일반적인 텍스트 컨트롤입니다.  
   
@@ -83,7 +83,7 @@ ClearType y 방향 앤티앨리어싱으로 표시된 텍스트
  가장 높은 수준의 기능을 텍스트 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 일반적인 제공 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 와 같은 컨트롤 <xref:System.Windows.Controls.Label>를 <xref:System.Windows.Controls.TextBlock>, 및 <xref:System.Windows.Controls.TextBox>합니다. 이러한 컨트롤은 애플리케이션 내에서 기본 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 요소를 제공하며, 텍스트를 제공하고 텍스트와 상호 작용하는 쉬운 방법을 제공합니다. 와 같은 컨트롤 <xref:System.Windows.Controls.RichTextBox> 고 <xref:System.Windows.Controls.PasswordBox> 더 고급 또는 특수화 텍스트 처리 사용 합니다. 와 같은 클래스 <xref:System.Windows.Documents.TextRange>, <xref:System.Windows.Documents.TextSelection>, 및 <xref:System.Windows.Documents.TextPointer> 유용한 텍스트 조작을 사용 하도록 설정 합니다. 이러한 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 컨트롤 속성을 같은 제공 <xref:System.Windows.Controls.Control.FontFamily%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, 및 <xref:System.Windows.Controls.Control.FontStyle%2A>, 텍스트를 렌더링 하는 데 사용 되는 글꼴을 제어할 수 있도록 합니다.  
   
 #### <a name="using-bitmap-effects-transforms-and-text-effects"></a>비트맵 효과, 변환 및 텍스트 효과 사용  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 비트맵 효과, 변환 및 텍스트 효과 같은 기능을 사용 하 여 시각적으로 흥미로운 텍스트 사용을 만들 수 있습니다. 다음 예제에서는 일반적인 형식의 그림자 효과가 적용된 텍스트를 보여 줍니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 비트맵 효과, 변환 및 텍스트 효과 같은 기능을 사용하여 시각적으로 흥미로운 텍스트를 만들 수 있습니다. 다음 예제에서는 일반적인 형식의 그림자 효과가 적용된 텍스트를 보여 줍니다.  
   
  ![Softness 인 텍스트 그림자 &#61; 0.25](./media/typography-in-wpf/drop-shadow-text-effect.jpg) 
   

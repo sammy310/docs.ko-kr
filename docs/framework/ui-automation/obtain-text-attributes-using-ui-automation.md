@@ -10,10 +10,10 @@ helpviewer_keywords:
 - text attributes, getting
 ms.assetid: fdefc6c3-b836-4cfe-8dec-1484bfdc5551
 ms.openlocfilehash: d4cb9d12e4e2d5a28744e3a238884616a6db8f68
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59214899"
 ---
 # <a name="obtain-text-attributes-using-ui-automation"></a>UI 자동화를 사용하여 텍스트 특성 가져오기

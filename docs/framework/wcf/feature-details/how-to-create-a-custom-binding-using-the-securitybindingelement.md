@@ -8,17 +8,17 @@ helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
 ms.openlocfilehash: 7966c1fe4cd94408455c6bb146fdd3ea55757702
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316806"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기
 Windows Communication Foundation (WCF)를 구성할 수 있지만 WCF 지 원하는 모든 보안 옵션을 구성할 때 완전 한 유연성을 제공 하지 않습니다는 여러 시스템 제공 바인딩이 포함 되어 있습니다. 이 항목에서는 개별 바인딩 요소에서 직접 사용자 지정 바인딩을 만드는 방법에 대해 설명하고, 이와 같은 바인딩을 만들 때 지정할 수 있는 일부 보안 설정에 대해 강조합니다. 사용자 지정 바인딩을 만드는 방법에 대 한 자세한 내용은 참조 하세요. [바인딩 확장](../../../../docs/framework/wcf/extending/extending-bindings.md)합니다.  
   
 > [!WARNING]
->  <xref:System.ServiceModel.Channels.SecurityBindingElement> 지원 하지 않습니다는 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 채널 셰이프는 TCP가 기본 채널 셰이프 사용 되는 경우 전송 <xref:System.ServiceModel.TransferMode> 로 설정 되어 <xref:System.ServiceModel.TransferMode.Buffered>. 이 시나리오에서 <xref:System.ServiceModel.TransferMode>를 사용하려면 <xref:System.ServiceModel.TransferMode.Streamed>를 <xref:System.ServiceModel.Channels.SecurityBindingElement>으로 설정해야 합니다.  
+>  <xref:System.ServiceModel.Channels.SecurityBindingElement>는 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>가 <xref:System.ServiceModel.TransferMode>로 설정된 경우 TCP 전송에서 사용하는 기본 채널 셰이프인 <xref:System.ServiceModel.TransferMode.Buffered> 채널 셰이프를 지원하지 않습니다. 이 시나리오에서 <xref:System.ServiceModel.TransferMode>를 사용하려면 <xref:System.ServiceModel.TransferMode.Streamed>를 <xref:System.ServiceModel.Channels.SecurityBindingElement>으로 설정해야 합니다.  
   
 ## <a name="creating-a-custom-binding"></a>사용자 지정 바인딩 만들기  
  WCF의 모든 바인딩에 이루어져 *바인딩 요소*합니다. 각 바인딩 요소는 <xref:System.ServiceModel.Channels.BindingElement> 클래스에서 파생됩니다. 표준 시스템 제공 바인딩의 경우 바인딩 요소가 자동으로 생성되어 구성되지만 일부 속성 설정을 사용자 지정할 수 있습니다.  
@@ -112,5 +112,5 @@ Windows Communication Foundation (WCF)를 구성할 수 있지만 WCF 지 원하
 - <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [바인딩 확장명](../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [바인딩 확장](../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [시스템 제공 바인딩](../../../../docs/framework/wcf/system-provided-bindings.md)

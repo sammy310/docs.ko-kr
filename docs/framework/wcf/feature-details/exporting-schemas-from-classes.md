@@ -9,10 +9,10 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
 ms.openlocfilehash: dcbccbea279796fdaec1227b7575cf39e47f9e4f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336878"
 ---
 # <a name="exporting-schemas-from-classes"></a>클래스에서 스키마 내보내기
@@ -50,11 +50,11 @@ ms.locfileid: "59336878"
 ## <a name="helper-methods"></a>도우미 메서드  
  스키마를 내보내는 기본 역할 외에도 `XsdDataContractExporter` 는 형식에 대한 정보를 제공하는 몇 가지 유용한 도우미 메서드를 제공합니다. 여기에는 다음이 포함됩니다.  
   
--   <xref:System.Runtime.Serialization.XsdDataContractExporter.GetRootElementName%2A> 메서드를 재정의합니다. 이 메서드는 `Type` 을 받아서 이 형식이 루트 개체로 serialize된 경우에 사용되는 루트 요소 이름과 네임스페이스를 나타내는 <xref:System.Xml.XmlQualifiedName> 을 반환합니다.  
+-   <xref:System.Runtime.Serialization.XsdDataContractExporter.GetRootElementName%2A> 메서드를 호출하여 생성됩니다. 이 메서드는 `Type` 을 받아서 이 형식이 루트 개체로 serialize된 경우에 사용되는 루트 요소 이름과 네임스페이스를 나타내는 <xref:System.Xml.XmlQualifiedName> 을 반환합니다.  
   
--   <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaTypeName%2A> 메서드를 재정의합니다. 이 메서드는 `Type` 을 받아서 이 형식을 스키마로 내보낸 경우에 사용되는 XSD 스키마 형식의 이름을 나타내는 <xref:System.Xml.XmlQualifiedName> 을 반환합니다. 스키마에 익명 형식으로 나타나는 <xref:System.Xml.Serialization.IXmlSerializable> 형식에 대해 이 메서드는 `null`을 반환합니다.  
+-   <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaTypeName%2A> 메서드를 호출하여 생성됩니다. 이 메서드는 `Type` 을 받아서 이 형식을 스키마로 내보낸 경우에 사용되는 XSD 스키마 형식의 이름을 나타내는 <xref:System.Xml.XmlQualifiedName> 을 반환합니다. 스키마에 익명 형식으로 나타나는 <xref:System.Xml.Serialization.IXmlSerializable> 형식에 대해 이 메서드는 `null`을 반환합니다.  
   
--   <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaType%2A> 메서드를 재정의합니다. 이 메서드는 스키마에 익명 형식으로 나타나는 <xref:System.Xml.Serialization.IXmlSerializable> 형식에서만 작동하고 다른 모든 형식에 대해 `null` 을 반환합니다. 익명 형식의 경우 이 메서드는 지정된 <xref:System.Xml.Schema.XmlSchemaType> 을 나타내는 `Type`을 반환합니다.  
+-   <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaType%2A> 메서드를 호출하여 생성됩니다. 이 메서드는 스키마에 익명 형식으로 나타나는 <xref:System.Xml.Serialization.IXmlSerializable> 형식에서만 작동하고 다른 모든 형식에 대해 `null` 을 반환합니다. 익명 형식의 경우 이 메서드는 지정된 <xref:System.Xml.Schema.XmlSchemaType> 을 나타내는 `Type`을 반환합니다.  
   
  내보내기 옵션은 이러한 모든 메서드에 영향을 줍니다.  
   

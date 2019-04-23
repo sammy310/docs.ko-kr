@@ -3,10 +3,10 @@ title: XSD(XML 스키마)에서 데이터 집합 관계 생성
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
 ms.openlocfilehash: 29c0e9ee96c376c6da392692febccbbae3c6a33f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170224"
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>XSD(XML 스키마)에서 데이터 집합 관계 생성
@@ -91,10 +91,10 @@ msdata:childkey="" />
  관계를 만드는 방법을 설명 합니다는 **데이터 집합** 중첩 되지 않은 XML 스키마 요소 사이입니다.  
   
 ### <a name="related-sections"></a>관련 단원  
- [XML 스키마에서 데이터 집합 관계형 구조 파생(XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ [XML 스키마에서 데이터 세트 관계형 구조 파생(XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
  관계형 구조 또는 스키마를 설명 합니다는 **데이터 집합** XML 스키마 정의 언어 (XSD)에서 만들어집니다.  
   
- [데이터 집합 제약 조건에 XSD(XML 스키마) 제약 조건 매핑](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [데이터 세트 제약 조건에 XSD(XML 스키마) 제약 조건 매핑](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  고유 및 외래 키 제약 조건을 만드는 데 필요한 XML 스키마 요소에 설명 합니다는 **데이터 집합**합니다.  
   
 ## <a name="see-also"></a>참고자료

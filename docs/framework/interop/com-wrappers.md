@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e56c485b-6b67-4345-8e66-fd21835a6092
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce15e0535bbd6bc67054c651a518f11cf9dd2ae1
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: b633239be85a66c5bba54132c3732357967eb177
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410357"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59182938"
 ---
 # <a name="com-wrappers"></a>COM 래퍼
 COM은 다음과 같은 여러 중요한 방식에서 .NET Framework 개체 모델과 다릅니다.  
@@ -34,6 +34,7 @@ COM은 다음과 같은 여러 중요한 방식에서 .NET Framework 개체 모�
  대부분의 경우 런타임에 의해 생성된 표준 RCW 또는 CCW는 COM 및 .NET Framework 사이의 경계를 넘어가는 호출에 대해 적절한 마샬링을 제공합니다. 사용자 지정 특성을 사용하여 런타임이 관리 코드와 비관리 코드를 나타내는 방식을 필요에 따라 조정할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [고급 COM 상호 운용성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
 - [런타임 호출 가능 래퍼](runtime-callable-wrapper.md)
 - [COM 호출 가능 래퍼](com-callable-wrapper.md)

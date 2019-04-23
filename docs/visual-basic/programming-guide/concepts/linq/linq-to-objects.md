@@ -3,10 +3,10 @@ title: LINQ to Objects(Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: dd4c30bc-1c9b-4781-a482-b5eada38deb2
 ms.openlocfilehash: c1e2e8fbaaf984fec69322a459fc7c55890965ad
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326881"
 ---
 # <a name="linq-to-objects-visual-basic"></a>LINQ to Objects(Visual Basic)
@@ -33,7 +33,7 @@ ms.locfileid: "59326881"
  [LINQ 및 리플렉션 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-reflection.md)  
  LINQ에서 리플렉션을 사용하는 방식을 보여 주는 샘플 링크를 제공합니다.  
   
- [LINQ 및 파일 디렉터리 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)  
+ [LINQ 및 파일 디렉터리(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)  
  LINQ를 사용하여 파일 시스템을 조작하는 방법을 설명합니다. 또한 이러한 개념을 설명하는 항목의 링크도 제공합니다.  
   
  [방법: LINQ (Visual Basic)를 사용 하 여 ArrayList 쿼리](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)  

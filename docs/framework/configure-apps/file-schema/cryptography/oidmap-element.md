@@ -9,10 +9,10 @@ helpviewer_keywords:
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
 ms.openlocfilehash: 80564c5895e08884f78a4ec7c955ecdb11126e35
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59146876"
 ---
 # <a name="oidmap-element"></a>\<oidMap > 요소
@@ -77,6 +77,6 @@ ASN.1 클래스 개체 식별자 (OID) 매핑이 들어 있습니다.
 
 - [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [암호화 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [암호화 서비스](../../../../../docs/standard/security/cryptographic-services.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
 - [암호화 클래스 구성](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
 - [개체 식별자를 암호화 알고리즘에 매핑](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

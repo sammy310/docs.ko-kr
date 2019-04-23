@@ -13,11 +13,11 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 ms.assetid: 9445af8f-4f62-48b0-a3f6-068058964b9f
 ms.openlocfilehash: 1de835bda5ac906837ac3fbd97b87f68f14d1953
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59333927"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59771532"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>방법: Windows Forms 컨트롤에서 표시하는 이미지 설정
 여러 Windows Forms 컨트롤 이미지를 표시할 수 있습니다. 이러한 이미지와 같은 디스켓 아이콘을 나타내는 단추 컨트롤의 용도 설명 하는 아이콘이 수는 **저장** 명령입니다. 또는 아이콘 배경 이미지가 모양과 동작을 제어할 수 있습니다.  

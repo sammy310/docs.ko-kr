@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
 ms.openlocfilehash: f106ce1bca67f8b88df0835496eea0b3297ac946
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309682"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>방법: IIS에서 WCF 서비스 호스팅
@@ -66,7 +66,7 @@ ms.locfileid: "59309682"
   
      다음 예제에서는 구성 파일의 엔드포인트를 명시적으로 지정합니다. 서비스에 엔드포인트를 추가하지 않으면 런타임에서 기본 엔드포인트를 자동으로 추가합니다. 기본 끝점, 바인딩 및 동작 참조 하는 방법에 대 한 자세한 내용은 [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) 하 고 [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)합니다.  
   
-11. 서비스가 호스팅되는 올바르게 확인 하려면 서비스의 URL 찾아 Internet Explorer의 인스턴스를 엽니다. `http://localhost/IISHostedCalc/Service.svc`  
+11. 서비스가 올바르게 호스팅되는지 확인하려면 Internet Explorer 인스턴스를 열고 서비스 URL인 `http://localhost/IISHostedCalc/Service.svc`로 이동합니다.  
   
 ## <a name="example"></a>예제  
  다음은 IIS에서 호스팅되는 계산기 서비스에 해당되는 전체 코드 목록입니다.  
@@ -77,7 +77,7 @@ ms.locfileid: "59309682"
   
 ## <a name="see-also"></a>참고자료
 
-- [인터넷 정보 서비스에서의 호스팅](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
+- [인터넷 정보 서비스에서 호스팅](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
 - [서비스 호스팅](../../../../docs/framework/wcf/hosting-services.md)
 - [WCF 서비스 및 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
 - [보안](../../../../docs/framework/wcf/feature-details/security.md)

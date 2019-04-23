@@ -9,10 +9,10 @@ helpviewer_keywords:
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
 ms.openlocfilehash: 91e335f4d5adaa5279fb16805604f2e2848eeb8b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59167169"
 ---
 # <a name="timing-events-overview"></a>타이밍 이벤트 개요
@@ -56,7 +56,7 @@ ms.locfileid: "59167169"
   
 |이벤트(event)|트리거하는 대화형 작업|기타 트리거|  
 |-----------|--------------------------------------|--------------------|  
-|**완료**|건너뛰어서 채우기|클록이 완료됩니다.|  
+|**Completed**|건너뛰어서 채우기|클록이 완료됩니다.|  
 |**CurrentGlobalSpeedInvalidated**|일시 중지, 다시 시작, 검색, 속도 비율 설정, 건너뛰어서 채우기, 중지|클록이 거꾸로 진행되거나, 가속되거나, 시작되거나, 중지됩니다.|  
 |**CurrentStateInvalidated**|시작, 건너뛰어서 채우기, 중지|클록이 시작되거나, 중지되거나, 채워집니다.|  
 |**CurrentTimeInvalidated**|시작, 검색, 건너뛰어서 채우기, 중지|클록이 진행됩니다.|  

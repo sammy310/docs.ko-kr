@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
 ms.openlocfilehash: 1a02520ab7d1196b8071bda752ae30896958f372
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105419"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>CommittableTransaction을 사용하여 명시적 트랜잭션 구현
@@ -88,4 +88,4 @@ void OnCommitted(IAsyncResult asyncResult)
 ## <a name="see-also"></a>참고자료
 
 - [트랜잭션 범위를 사용하여 암시적 트랜잭션 구현](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)
-- [트랜잭션 처리 ](../../../../docs/framework/data/transactions/index.md)
+- [트랜잭션 처리](../../../../docs/framework/data/transactions/index.md)

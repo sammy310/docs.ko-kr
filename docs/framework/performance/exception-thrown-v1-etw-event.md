@@ -8,10 +8,10 @@ ms.assetid: 0d3da389-6b7b-40f6-a877-fac546d6019c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dd322d25d91bb277a4c817594c968c28a6d61d68
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59136138"
 ---
 # <a name="exception-thrownv1-etw-event"></a>예외가 throw된 V1 ETW 이벤트
@@ -21,7 +21,7 @@ ms.locfileid: "59136138"
   
 |이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
-|`ExceptionKeyword` (0x8000)|경고(2)|  
+|`ExceptionKeyword`(0x8000)|경고(2)|  
   
  다음 표에서는 이벤트 정보를 보여 줍니다.  
   

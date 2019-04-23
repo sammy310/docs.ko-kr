@@ -7,10 +7,10 @@ helpviewer_keywords:
 - child timelines [WPF]
 ms.assetid: 8335d770-d13d-42bd-8dfa-63f92c0327e2
 ms.openlocfilehash: 21a297208be045eea79d6f5ca6c8eac016d26345
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096396"
 ---
 # <a name="how-to-simplify-animations-by-using-child-timelines"></a>방법: 자식 Timeline을 사용하여 애니메이션 단순화
@@ -28,4 +28,4 @@ ms.locfileid: "59096396"
 ## <a name="see-also"></a>참고자료
 
 - [애니메이션 개요](animation-overview.md)
-- [스토리보드 애니메이션 간의 HandoffBehavior 지정](how-to-specify-handoffbehavior-between-storyboard-animations.md)
+- [Storyboard 애니메이션 간의 HandoffBehavior 지정](how-to-specify-handoffbehavior-between-storyboard-animations.md)

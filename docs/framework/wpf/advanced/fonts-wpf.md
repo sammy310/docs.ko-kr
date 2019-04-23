@@ -7,10 +7,10 @@ helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: 6c766a95-ad03-475e-a36f-2243e9495941
 ms.openlocfilehash: eb8a02445511935d64ebaa6d78d4b05c0b75167e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59169249"
 ---
 # <a name="fonts-wpf"></a>글꼴(WPF)
@@ -18,7 +18,7 @@ ms.locfileid: "59169249"
   
 ## <a name="in-this-section"></a>섹션 내용  
  [OpenType 글꼴 기능](opentype-font-features.md)  
- [애플리케이션과 함께 글꼴 패키징](packaging-fonts-with-applications.md)  
+ [응용 프로그램과 함께 글꼴 패키징](packaging-fonts-with-applications.md)  
  [샘플 OpenType 글꼴 팩](sample-opentype-font-pack.md)  
  [방법 항목](fonts-how-to-topics.md)  
   

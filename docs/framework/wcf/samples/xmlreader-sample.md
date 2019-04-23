@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XML Reader
 ms.assetid: 60e5848d-7d9c-4ea5-bed9-22758c9ac16c
 ms.openlocfilehash: 03c6949d25497419a55f7baafa33d568817b8f27
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59299327"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768347"
 ---
 # <a name="xmlreader-sample"></a>XmlReader 샘플
 XmlReader 샘플에서는 <xref:System.Xml.XmlReader>를 사용하는 메시지 본문의 처리를 보여 줍니다. 샘플을 기반으로 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)를 계산기 서비스를 구현 하는 합니다. 더할 값의 배열이 포함된 메시지를 받는 서비스 작업인 `Sum`이 추가되었습니다. 이 서비스는 <xref:System.Xml.XmlReader>를 사용하여 메시지를 읽습니다.  

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
 ms.openlocfilehash: 8d8bd85f65adfde5f239e1e2dd79d65517b745a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59166246"
 ---
 # <a name="sorting-and-filtering-data"></a>데이터 정렬 및 필터링
@@ -30,8 +30,8 @@ ms.locfileid: "59166246"
     |DataViewRowState 옵션|설명|  
     |------------------------------|-----------------|  
     |**CurrentRows**|**현재** 의 모든 행 버전 **Unchanged**를 **Added**, 및 **Modified** 행. 이 값이 기본값입니다.|  
-    |**추가됨**|합니다 **현재** 의 모든 행 버전 **Added** 행.|  
-    |**삭제됨**|합니다 **원래** 의 모든 행 버전 **Deleted** 행.|  
+    |**추가**|합니다 **현재** 의 모든 행 버전 **Added** 행.|  
+    |**삭제**|합니다 **원래** 의 모든 행 버전 **Deleted** 행.|  
     |**ModifiedCurrent**|합니다 **현재** 의 모든 행 버전 **Modified** 행.|  
     |**ModifiedOriginal**|합니다 **원래** 의 모든 행 버전 **Modified** 행.|  
     |**없음**|행이 없습니다.|  
@@ -62,5 +62,5 @@ DataView prodView = new DataView(prodDS.Tables["Products"],
 - <xref:System.Data.DataColumn.Expression%2A?displayProperty=nameWithType>
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
-- [데이터 보기](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -3,10 +3,10 @@ title: 구성을 사용하지 않고 AJAX 서비스 만들기
 ms.date: 03/30/2017
 ms.assetid: e6db7acd-5679-45d4-b98a-8449c6873838
 ms.openlocfilehash: f5ebc952fcc6c2ca4c7272a90dc1929d4b4a0eae
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331613"
 ---
 # <a name="ajax-service-without-configuration"></a>구성을 사용하지 않고 AJAX 서비스 만들기
@@ -28,7 +28,7 @@ ms.locfileid: "59331613"
 %>  
 ```
 
- <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> 자동으로 추가 된 <xref:System.ServiceModel.Description.WebScriptEndpoint> 서비스입니다. 엔드포인트에 대한 구성 변경이 필요하지 않은 경우 서비스에 대한 Web.config 파일에서 `<system.ServiceModel>` 섹션을 완전히 제거할 수 있습니다. Web.config 파일에는 ConfigFreeClientPage.aspx에 사용되는 몇 가지 ASP.NET 설정이 포함되어 있습니다. 그렇지 않은 경우 전체 Web.config 파일을 제거할 수 있습니다.  
+ <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>가 자동으로 <xref:System.ServiceModel.Description.WebScriptEndpoint>를 서비스에 추가합니다. 엔드포인트에 대한 구성 변경이 필요하지 않은 경우 서비스에 대한 Web.config 파일에서 `<system.ServiceModel>` 섹션을 완전히 제거할 수 있습니다. Web.config 파일에는 ConfigFreeClientPage.aspx에 사용되는 몇 가지 ASP.NET 설정이 포함되어 있습니다. 그렇지 않은 경우 전체 Web.config 파일을 제거할 수 있습니다.  
   
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
@@ -52,4 +52,4 @@ ms.locfileid: "59331613"
   
 ## <a name="see-also"></a>참고자료
 
-- [Basic AJAX Service](../../../../docs/framework/wcf/samples/basic-ajax-service.md)
+- [기본 AJAX 서비스](../../../../docs/framework/wcf/samples/basic-ajax-service.md)

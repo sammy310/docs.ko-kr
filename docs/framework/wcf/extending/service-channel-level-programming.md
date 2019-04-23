@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
 ms.openlocfilehash: be5c73e2ac9fcc45d136280c869148326cd91315
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329132"
 ---
 # <a name="service-channel-level-programming"></a>서비스 채널 수준 프로그래밍
@@ -36,7 +36,7 @@ ms.locfileid: "59329132"
 #### <a name="building-a-channellistener"></a>ChannelListener 빌드  
  바인딩을 만든 후에 <xref:System.ServiceModel.Channels.Binding.BuildChannelListener%2A?displayProperty=nameWithType>을 호출하여 형식 매개 변수가 만들 채널 셰이프인 채널 수신기를 빌드합니다. 이 예제에서는 요청/회신 메시지 교환 패턴으로 들어오는 메시지를 수신 대기하려고 하므로 <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType>을 사용합니다.  
   
- <xref:System.ServiceModel.Channels.IReplyChannel> 요청 메시지를 보내고 다시 회신 메시지를 받기 위해 사용 됩니다. <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType>를 호출하면 요청 메시지를 받고 회신 메시지를 다시 보내는 데 사용할 수 있는 <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>을 반환합니다.  
+ <xref:System.ServiceModel.Channels.IReplyChannel>은 요청 메시지를 받고 회신 메시지를 다시 보내는 데 사용됩니다. <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType>를 호출하면 요청 메시지를 받고 회신 메시지를 다시 보내는 데 사용할 수 있는 <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>을 반환합니다.  
   
  수신기를 만들 때 수신하는 네트워크 주소를 전달합니다. 이 경우는 `http://localhost:8080/channelapp`입니다. 일반적으로 각 전송 채널은 하나 또는 여러 개의 주소 스키마를 지원합니다. 예를 들면 HTTP 전송은 http와 https 스키마를 모두 지원합니다.  
   

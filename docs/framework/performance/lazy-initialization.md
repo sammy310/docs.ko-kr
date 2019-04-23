@@ -10,10 +10,10 @@ ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182301"
 ---
 # <a name="lazy-initialization"></a>초기화 지연
@@ -23,7 +23,7 @@ ms.locfileid: "59182301"
   
 -   만드는 데 비용이 많이 드는 개체가 있고 다른 비용이 많이 드는 작업이 완료될 때까지 생성을 지연시키려는 경우가 있습니다. 예를 들어, 프로그램을 시작할 때 여러 개체 인스턴스를 로드하지만 그중 일부만 즉시 필요합니다. 필요한 개체를 만들 때까지 필요하지 않은 개체의 초기화를 지연하여 프로그램의 시작 성능을 향상시킬 수 있습니다.  
   
- 초기화 지연을 수행하도록 고유 코드를 작성할 수 있지만 <xref:System.Lazy%601>를 대신 사용하는 것이 좋습니다. <xref:System.Lazy%601> 및 관련된 형식은 또한 스레드로부터 안전을 지원 하 고 일관 된 예외 전파 정책을 제공 합니다.  
+ 초기화 지연을 수행하도록 고유 코드를 작성할 수 있지만 <xref:System.Lazy%601>를 대신 사용하는 것이 좋습니다. <xref:System.Lazy%601> 및 관련 유형에서도 스레드로부터 안전을 지원하고 일관된 예외 전파 정책을 제공합니다.  
   
  다음 표에는 다양한 시나리오에서 초기화 지연을 사용하도록 .NET Framework 버전 4에서 제공하는 유형이 나열되어 있습니다.  
   
@@ -102,8 +102,8 @@ ms.locfileid: "59182301"
 |-----------------|------------------------|--------------------------------|---------------------------|  
 |Lazy(T)()|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|아니요|아니요|  
 |Lazy(T)(Func(T))|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|예|예|  
-|Lazy(T)(Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) 또는 `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|아니요|아니요|  
-|Lazy(T)(Func(T), Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) 또는 `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|예|예|  
+|Lazy(T)(Boolean)|`True`(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) 또는 `false`(<xref:System.Threading.LazyThreadSafetyMode.None>)|아니요|아니요|  
+|Lazy(T)(Func(T), Boolean)|`True`(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) 또는 `false`(<xref:System.Threading.LazyThreadSafetyMode.None>)|예|예|  
 |Lazy(T)(LazyThreadSafetyMode)|사용자 지정|아니요|아니요|  
 |Lazy(T)(Func(T), LazyThreadSafetyMode)|사용자 지정|예|사용자가 <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>를 지정하는 경우 No, 지정하지 않으면 Yes.|  
   
@@ -126,7 +126,7 @@ ms.locfileid: "59182301"
  [!code-csharp[Lazy#7](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#7)]
  [!code-vb[Lazy#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#7)]  
   
- <xref:System.Threading.ThreadLocal%601> 거의 동일한 방법으로 해당 개체를 래핑하면 <xref:System.Lazy%601>, 이러한 중요 한 차이점이 있는:  
+ <xref:System.Threading.ThreadLocal%601>에서는 <xref:System.Lazy%601>와 거의 동일한 방식으로 개체를 래핑합니다. 단, 다음과 같은 중요한 차이점이 있습니다.  
   
 -   각 스레드가 다른 스레드에서 액세스할 수 없는 고유한 개인 데이터를 사용하여 스레드 지역 변수를 초기화합니다.  
   

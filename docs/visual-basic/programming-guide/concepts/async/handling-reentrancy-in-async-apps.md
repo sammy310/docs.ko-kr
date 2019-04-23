@@ -3,10 +3,10 @@ title: Async (Visual Basic) 앱에서 재입력 처리
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
 ms.openlocfilehash: 0913a8b422d8ea3d6b38680a26bac143087dd2c8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324788"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Async (Visual Basic) 앱에서 재입력 처리
@@ -14,9 +14,9 @@ ms.locfileid: "59324788"
   
  **항목 내용**  
   
--   [재진입 인식](#BKMK_RecognizingReentrancy)  
+-   [재입력 인식](#BKMK_RecognizingReentrancy)  
   
--   [재진입 처리](#BKMK_HandlingReentrancy)  
+-   [재입력 처리](#BKMK_HandlingReentrancy)  
   
     -   [시작 단추 사용 안 함](#BKMK_DisableTheStartButton)  
   
@@ -24,7 +24,7 @@ ms.locfileid: "59324788"
   
     -   [여러 작업을 실행하고 출력을 큐 대기](#BKMK_RunMultipleOperations)  
   
--   [예제 응용 프로그램 검토 및 실행](#BKMD_SettingUpTheExample)  
+-   [예제 앱 검토 및 실행](#BKMD_SettingUpTheExample)  
   
 > [!NOTE]
 >  예제를 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.  
@@ -412,9 +412,9 @@ End Sub
 #### <a name="the-accessthewebasync-method"></a>AccessTheWebAsync 메서드  
  이 예제에서는 `AccessTheWebAsync`를 두 개의 메서드로 분할합니다. 첫 번째 메서드 `AccessTheWebAsync`는 그룹에 대해 모든 다운로드 작업을 시작하고 `pendingWork`를 설정하여 표시 프로세스를 제어합니다. 이 메서드는 LINQ(통합 언어 쿼리) 쿼리 및 <xref:System.Linq.Enumerable.ToArray%2A>를 사용하여 모든 다운로드 작업을 동시에 시작합니다.  
   
- `AccessTheWebAsync` 그런 다음 호출 `FinishOneGroupAsync` 각 다운로드 완료 되기를 기다립니다. 및 해당 길이 표시 합니다.  
+ 그런 다음 `AccessTheWebAsync`는 `FinishOneGroupAsync`를 호출하여 각 다운로드가 완료될 때까지 대기하고 해당 길이를 표시합니다.  
   
- `FinishOneGroupAsync` 에 할당 된 작업 반환 `pendingWork` 에서 `AccessTheWebAsync`합니다. 해당 값은 작업이 완료되기 전에 다른 작업에 의한 중단을 방지합니다.  
+ `FinishOneGroupAsync`는 `AccessTheWebAsync`의 `pendingWork`에 할당되는 작업을 반환합니다. 해당 값은 작업이 완료되기 전에 다른 작업에 의한 중단을 방지합니다.  
   
 ```vb  
 Private Async Function AccessTheWebAsync(grp As Char) As Task(Of Char)  

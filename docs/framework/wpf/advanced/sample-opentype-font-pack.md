@@ -7,10 +7,10 @@ helpviewer_keywords:
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
 ms.openlocfilehash: 96a0a5feaf14a7f040402681e90fba8f9766324b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199039"
 ---
 # <a name="sample-opentype-font-pack"></a>샘플 OpenType 글꼴 팩
@@ -55,4 +55,4 @@ Lindsey 글꼴 표시
 
 - <xref:System.Windows.Documents.Typography>
 - [OpenType 글꼴 기능](opentype-font-features.md)
-- [애플리케이션과 함께 글꼴 패키징](packaging-fonts-with-applications.md)
+- [응용 프로그램과 함께 글꼴 패키징](packaging-fonts-with-applications.md)

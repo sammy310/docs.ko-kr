@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
 ms.openlocfilehash: 2d323566aa211ced9ed76302756ed5dc82c5d2c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59185694"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973722"
 ---
 # <a name="data-member-default-values"></a>데이터 멤버 기본값
 에 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], 형식 개념이 *기본값*합니다. 예를 들어 참조 형식의 기본값은 `null`이고 정수 형식의 기본값은 0입니다. 기본값으로 설정할 경우 serialize된 데이터에서 데이터 멤버를 생략하는 것이 좋을 수도 있습니다. 멤버에 기본값이 있기 때문에 실제 값을 serialize할 필요가 없으므로 성능이 향상됩니다.  

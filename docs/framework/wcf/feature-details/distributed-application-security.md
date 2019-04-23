@@ -6,10 +6,10 @@ helpviewer_keywords:
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
 ms.openlocfilehash: e447cd5ccf84e49ff384bd3591884404736d04f8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132062"
 ---
 # <a name="distributed-application-security"></a>분산 응용 프로그램 보안
@@ -99,4 +99,4 @@ Windows Communication Foundation (WCF) 보안 세 가지 주요 기능 영역으
 - [엔드포인트 만들기 개요](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [시스템 제공 바인딩](../../../../docs/framework/wcf/system-provided-bindings.md)
 - [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server AppFabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server appfabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -2,12 +2,12 @@
 title: 확장된 보호를 사용하는 Windows 통합 인증
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-ms.openlocfilehash: 93156ab346d97259030b001d3a4d8ca4612f48c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3088d59a91b5caa75cda3e40a5203874c24325cd
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591619"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59325724"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>확장된 보호를 사용하는 Windows 통합 인증
 <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream>, 그리고 <xref:System.Net> 및 관련 네임스페이스의 관련 클래스에 의해 Windows 통합 인증이 처리되는 방식에 영향을 미치는 기능이 향상되었습니다. 보안을 강화하기 위한 확장된 보호에 대한 지원이 추가되었습니다.  
@@ -25,17 +25,17 @@ ms.locfileid: "54591619"
   
  전체 목표는 다음과 같습니다.  
   
-1.  클라이언트가 확장된 보호를 지원하도록 업데이트된 경우 애플리케이션은 모든 지원되는 인증 프로토콜에 채널 바인딩 및 서비스 바인딩 정보를 제공해야 합니다. 바인딩할 채널(TLS)이 있는 경우 채널 바인딩 정보만 제공될 수 있습니다. 서비스 바인딩 정보는 항상 제공되어야 합니다.  
+1. 클라이언트가 확장된 보호를 지원하도록 업데이트된 경우 애플리케이션은 모든 지원되는 인증 프로토콜에 채널 바인딩 및 서비스 바인딩 정보를 제공해야 합니다. 바인딩할 채널(TLS)이 있는 경우 채널 바인딩 정보만 제공될 수 있습니다. 서비스 바인딩 정보는 항상 제공되어야 합니다.  
   
-2.  제대로 구성된 업데이트된 서버는 클라이언트 인증 토큰 내에 있을 경우 채널 및 서비스 바인딩 정보를 확인하고 채널 바인딩이 일치하지 않을 경우 인증 시도를 거부할 수 있습니다. 배포 시나리오에 따라 서버는 채널 바인딩 또는 서비스 바인딩을 확인하거나 두 바인딩을 모두 확인할 수 있습니다.  
+2. 제대로 구성된 업데이트된 서버는 클라이언트 인증 토큰 내에 있을 경우 채널 및 서비스 바인딩 정보를 확인하고 채널 바인딩이 일치하지 않을 경우 인증 시도를 거부할 수 있습니다. 배포 시나리오에 따라 서버는 채널 바인딩 또는 서비스 바인딩을 확인하거나 두 바인딩을 모두 확인할 수 있습니다.  
   
-3.  업데이트된 서버에는 정책에 따라 채널 바인딩 정보가 포함되지 않은 하위 수준 클라이언트 요청을 허용하거나 거부할 수 있습니다.  
+3. 업데이트된 서버에는 정책에 따라 채널 바인딩 정보가 포함되지 않은 하위 수준 클라이언트 요청을 허용하거나 거부할 수 있습니다.  
   
  확장된 보호에서 사용되는 정보는 다음 두 부분 중 하나 또는 두 개로 구성됩니다.  
   
-1.  채널 바인딩 토큰 또는 CBT.  
+1. 채널 바인딩 토큰 또는 CBT.  
   
-2.  SPN(서비스 사용자 이름) 형식의 서비스 바인딩 정보.  
+2. SPN(서비스 사용자 이름) 형식의 서비스 바인딩 정보.  
   
  서비스 바인딩 정보는 특정 서비스 엔드포인트에 대해 인증하고자 하는 클라이언트의 의도를 나타냅니다. 다음 속성을 사용하여 클라이언트에서 서버로 전달합니다.  
   
@@ -122,11 +122,11 @@ ms.locfileid: "54591619"
   
  이 구성에서 외부 보안 채널을 통해 서버에 대한 요청을 만들 경우 외부 채널이 쿼리되어 채널 바인딩이 있는지 확인됩니다. 이 채널 바인딩이 인증 SSPI 호출에 전달됩니다. 이 호출은 인증 Blob의 채널 바인딩이 일치하는지 검사합니다. 세 가지 가능한 결과는 다음과 같습니다.  
   
-1.  서버의 기본 운영 체제가 확장된 보호를 지원하지 않습니다. 요청이 애플리케이션에 노출되지 않고 권한 없는(401) 응답이 클라이언트에 반환됩니다. 오류의 원인을 나타내는 메시지가 <xref:System.Net.HttpListener> 추적 소스에 기록됩니다.  
+1. 서버의 기본 운영 체제가 확장된 보호를 지원하지 않습니다. 요청이 애플리케이션에 노출되지 않고 권한 없는(401) 응답이 클라이언트에 반환됩니다. 오류의 원인을 나타내는 메시지가 <xref:System.Net.HttpListener> 추적 소스에 기록됩니다.  
   
-2.  SSPI 호출이 실패하고, 이것은 클라이언트가 외부 채널에서 검색되는 예상 값과 일치하지 않는 채널 바인딩을 지정했거나 클라이언트가 서버에 대한 확장된 보호 정책에 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>를 사용하도록 구성된 경우 채널 바인딩을 제공하지 못했음을 나타냅니다. 두 경우에 모두 요청이 애플리케이션에 노출되지 않고 권한 없는(401) 응답이 클라이언트에 반환됩니다. 오류의 원인을 나타내는 메시지가 <xref:System.Net.HttpListener> 추적 소스에 기록됩니다.  
+2. SSPI 호출이 실패하고, 이것은 클라이언트가 외부 채널에서 검색되는 예상 값과 일치하지 않는 채널 바인딩을 지정했거나 클라이언트가 서버에 대한 확장된 보호 정책에 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>를 사용하도록 구성된 경우 채널 바인딩을 제공하지 못했음을 나타냅니다. 두 경우에 모두 요청이 애플리케이션에 노출되지 않고 권한 없는(401) 응답이 클라이언트에 반환됩니다. 오류의 원인을 나타내는 메시지가 <xref:System.Net.HttpListener> 추적 소스에 기록됩니다.  
   
-3.  클라이언트는 올바른 채널 바인딩을 지정하거나, 서버에 대한 확장된 보호 정책이 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported>를 사용하여 구성되므로 채널 바인딩을 지정하지 않고 연결할 수 있습니다. 요청은 처리를 위해 애플리케이션에 반환됩니다. 서비스 이름 확인은 자동으로 수행되지 않습니다. 애플리케이션은 <xref:System.Net.HttpListenerRequest.ServiceName%2A> 속성을 사용하여 자체 서비스 이름 유효성 검사를 수행할 수 있지만 이러한 상황에서는 작업이 중복됩니다.  
+3. 클라이언트는 올바른 채널 바인딩을 지정하거나, 서버에 대한 확장된 보호 정책이 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported>를 사용하여 구성되므로 채널 바인딩을 지정하지 않고 연결할 수 있습니다. 요청은 처리를 위해 애플리케이션에 반환됩니다. 서비스 이름 확인은 자동으로 수행되지 않습니다. 애플리케이션은 <xref:System.Net.HttpListenerRequest.ServiceName%2A> 속성을 사용하여 자체 서비스 이름 유효성 검사를 수행할 수 있지만 이러한 상황에서는 작업이 중복됩니다.  
   
  애플리케이션이 HTTP 요청 본문 내에서 앞뒤로 전달되는 Blob을 기반으로 인증을 수행하도록 자체 SSPI를 호출하고 채널 바인딩을 지원하려고 할 경우 애플리케이션은 <xref:System.Net.HttpListener>를 통해 외부 보안 채널에서 예상 채널 바인딩을 검색하여 네이티브 Win32 [AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) 함수에 전달해야 합니다. 이렇게 하려면 <xref:System.Net.HttpListenerRequest.TransportContext%2A> 속성을 사용하여 <xref:System.Net.TransportContext.GetChannelBinding%2A> 메서드를 호출하여 CBT를 검색합니다. 엔드포인트 바인딩만 지원됩니다. <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint> 이외의 다른 항목이 지정되면 <xref:System.NotSupportedException>이 throw됩니다. 기본 운영 체제가 채널 바인딩을 지원하면 <xref:System.Net.TransportContext.GetChannelBinding%2A> 메서드는 `pInput` 매개 변수에 전달되는 SecBuffer 구조체의 pvBuffer 멤버로 [AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) 함수에 전달하기에 적합한 채널 바인딩에 대한 포인터를 래핑하는 <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding><xref:System.Runtime.InteropServices.SafeHandle>을 반환합니다. <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding.Size%2A> 속성에는 채널 바인딩의 길이(바이트)가 포함됩니다. 기본 운영 체제가 채널 바인딩을 지원하지 않으면 이 함수는 `null`을 반환합니다.  
   
@@ -136,18 +136,19 @@ ms.locfileid: "54591619"
   
  이 구성에서 외부 보안 채널을 사용하지 않고 서버에 대한 요청을 만들 경우 일반적으로 인증은 채널 바인딩 확인 없이 진행됩니다. 인증에 성공하면 컨텍스트가 쿼리되어 클라이언트가 제공하고 허용 가능한 서비스 이름 목록에 대해 유효성 검사된 서비스 이름이 있는지 확인됩니다. 네 가지 가능한 결과는 다음과 같습니다.  
   
-1.  서버의 기본 운영 체제가 확장된 보호를 지원하지 않습니다. 요청이 애플리케이션에 노출되지 않고 권한 없는(401) 응답이 클라이언트에 반환됩니다. 오류의 원인을 나타내는 메시지가 <xref:System.Net.HttpListener> 추적 소스에 기록됩니다.  
+1. 서버의 기본 운영 체제가 확장된 보호를 지원하지 않습니다. 요청이 애플리케이션에 노출되지 않고 권한 없는(401) 응답이 클라이언트에 반환됩니다. 오류의 원인을 나타내는 메시지가 <xref:System.Net.HttpListener> 추적 소스에 기록됩니다.  
   
-2.  클라이언트의 기본 운영 체제가 확장된 보호를 지원하지 않습니다. <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 구성에서 인증 시도가 성공하고 요청이 애플리케이션에 반환됩니다. <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> 구성에서 인증 시도가 실패합니다. 요청이 애플리케이션에 노출되지 않고 권한 없는(401) 응답이 클라이언트에 반환됩니다. 오류의 원인을 나타내는 메시지가 <xref:System.Net.HttpListener> 추적 소스에 기록됩니다.  
+2. 클라이언트의 기본 운영 체제가 확장된 보호를 지원하지 않습니다. <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 구성에서 인증 시도가 성공하고 요청이 애플리케이션에 반환됩니다. <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> 구성에서 인증 시도가 실패합니다. 요청이 애플리케이션에 노출되지 않고 권한 없는(401) 응답이 클라이언트에 반환됩니다. 오류의 원인을 나타내는 메시지가 <xref:System.Net.HttpListener> 추적 소스에 기록됩니다.  
   
-3.  클라이언트의 기본 운영 체제가 확장된 보호를 지원하지만 애플리케이션이 서비스 바인딩을 지정하지 않았습니다. 요청이 애플리케이션에 노출되지 않고 권한 없는(401) 응답이 클라이언트에 반환됩니다. 오류의 원인을 나타내는 메시지가 <xref:System.Net.HttpListener> 추적 소스에 기록됩니다.  
+3. 클라이언트의 기본 운영 체제가 확장된 보호를 지원하지만 애플리케이션이 서비스 바인딩을 지정하지 않았습니다. 요청이 애플리케이션에 노출되지 않고 권한 없는(401) 응답이 클라이언트에 반환됩니다. 오류의 원인을 나타내는 메시지가 <xref:System.Net.HttpListener> 추적 소스에 기록됩니다.  
   
-4.  클라이언트가 서비스 바인딩을 지정했습니다. 서비스 바인딩은 허용되는 서비스 바인딩 목록에 비교됩니다. 일치할 경우 요청이 애플리케이션에 반환됩니다. 일치하지 않을 경우 요청이 애플리케이션에 노출되지 않고 권한 없는(401) 응답이 클라이언트에 자동으로 반환됩니다. 오류의 원인을 나타내는 메시지가 <xref:System.Net.HttpListener> 추적 소스에 기록됩니다.  
+4. 클라이언트가 서비스 바인딩을 지정했습니다. 서비스 바인딩은 허용되는 서비스 바인딩 목록에 비교됩니다. 일치할 경우 요청이 애플리케이션에 반환됩니다. 일치하지 않을 경우 요청이 애플리케이션에 노출되지 않고 권한 없는(401) 응답이 클라이언트에 자동으로 반환됩니다. 오류의 원인을 나타내는 메시지가 <xref:System.Net.HttpListener> 추적 소스에 기록됩니다.  
   
  허용되는 서비스 이름 목록을 사용하는 이 간단한 방법으로 부족할 경우 애플리케이션은 <xref:System.Net.HttpListenerRequest.ServiceName%2A> 속성을 쿼리하여 자체 서비스 이름 유효성 검사를 제공할 수 있습니다. 위의 사례 1 및 2에서 속성은 `null`을 반환합니다. 사례 3에서 속성은 빈 문자열을 반환합니다. 사례 4에서는 클라이언트에서 지정된 서비스 이름이 반환됩니다.  
   
  이러한 확장된 보호 기능은 다른 요청 형식을 사용하여 인증할 경우 및 신뢰할 수 있는 프록시가 사용될 경우 서버 애플리케이션에서 인증에 사용될 수도 있습니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - <xref:System.Security.Authentication.ExtendedProtection>
 - <xref:System.Security.Authentication.ExtendedProtection.Configuration>

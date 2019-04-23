@@ -12,10 +12,10 @@ ms.assetid: 348ae651-ccda-4f13-8eda-19e8337e9438
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9f9d01715a9635b276ca87d94082bb4d3820084e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59138881"
 ---
 # <a name="how-to-obtain-type-and-member-information-from-an-assembly"></a>방법: 어셈블리에서 형식 및 멤버 정보 가져오기
@@ -31,5 +31,5 @@ ms.locfileid: "59138881"
 ## <a name="see-also"></a>참고 항목
 
 - [애플리케이션 도메인으로 프로그래밍](./application-domains.md#programming-with-application-domains)
-- [반사](../../../docs/framework/reflection-and-codedom/reflection.md)
+- [리플렉션](../../../docs/framework/reflection-and-codedom/reflection.md)
 - [애플리케이션 도메인 사용](../../../docs/framework/app-domains/use.md)

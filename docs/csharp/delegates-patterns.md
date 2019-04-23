@@ -3,12 +3,12 @@ title: 대리자에 대한 일반적인 패턴
 description: 코드에서 대리자를 사용하여 구성 요소 간의 강력한 결합을 방지하기 위한 일반적인 패턴에 대해 알아봅니다.
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: 20d55a1aba345b962c506bbc3f82248a817923ea
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: ea0e0b7af361b76c4b46b0a180e07b44c1fa07e1
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827022"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59095700"
 ---
 # <a name="common-patterns-for-delegates"></a>대리자에 대한 일반적인 패턴
 
@@ -98,7 +98,6 @@ Core Framework에 정의된 대리자 형식을 사용하면 사용자가 대리
 다음 해당 파일 기반 로거입니다.
 
 [!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/FileLogger.cs#FileLogger "Log to files")]
-
 
 이 클래스를 만들었으면 인스턴스화하고 해당 LogMessage 메서드를 로거 구성 요소에 연결합니다.
 

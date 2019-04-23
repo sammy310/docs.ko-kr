@@ -14,10 +14,10 @@ helpviewer_keywords:
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
 ms.openlocfilehash: 968913a52a1d86746498aed7c97b63594d346a31
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313569"
 ---
 # <a name="security-wpf"></a>보안(WPF)
@@ -37,11 +37,11 @@ ms.locfileid: "59313569"
   
 -   [WebBrowser 컨트롤 및 기능 컨트롤](#webbrowser_control_and_feature_controls)  
   
--   [부분적으로 신뢰할 수 있는 클라이언트 애플리케이션에 대한 APTCA 어셈블리를 사용하지 않도록 설정](#APTCA)  
+-   [부분적으로 신뢰할 수 있는 클라이언트 응용 프로그램에 대한 APTCA 어셈블리를 사용하지 않도록 설정](#APTCA)  
   
--   [느슨한 XAML 파일에 대한 샌드박스 동작](#LooseContentSandboxing)  
+-   [XAML 사용 완화 파일에 대한 샌드박스 동작](#LooseContentSandboxing)  
   
--   [보안을 승격하는 WPF 애플리케이션 개발을 위한 리소스](#BestPractices)  
+-   [보안을 승격하는 WPF 응용 프로그램 개발을 위한 리소스](#BestPractices)  
   
 <a name="SafeTopLevelNavigation"></a>   
 ## <a name="safe-navigation"></a>안전한 탐색  
@@ -266,7 +266,7 @@ ms.locfileid: "59313569"
   
 |영역|리소스|  
 |----------|--------------|  
-|관리 코드|[패턴 및 응용 프로그램에 대 한 사례 보안 지침](https://go.microsoft.com/fwlink/?LinkId=117426)|  
+|관리 코드|[응용 프로그램에 대한 패턴 및 사례 보안 지침](https://go.microsoft.com/fwlink/?LinkId=117426)|  
 |[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]|[코드 액세스 보안](../misc/code-access-security.md)|  
 |[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]|[ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)|  
 |[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF 부분 신뢰 보안](wpf-partial-trust-security.md)|  
@@ -276,7 +276,7 @@ ms.locfileid: "59313569"
 - [WPF 부분 신뢰 보안](wpf-partial-trust-security.md)
 - [WPF 보안 전략 - 플랫폼 보안](wpf-security-strategy-platform-security.md)
 - [WPF 보안 전략 - 보안 엔지니어링](wpf-security-strategy-security-engineering.md)
-- [패턴 및 응용 프로그램에 대 한 사례 보안 지침](https://go.microsoft.com/fwlink/?LinkId=117426)
+- [응용 프로그램에 대한 패턴 및 사례 보안 지침](https://go.microsoft.com/fwlink/?LinkId=117426)
 - [코드 액세스 보안](../misc/code-access-security.md)
 - [ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)
 - [XAML 개요(WPF)](./advanced/xaml-overview-wpf.md)

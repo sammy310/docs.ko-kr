@@ -7,10 +7,10 @@ helpviewer_keywords:
 - serialization limitations of XamlWriter.Save
 ms.assetid: f86acc91-2b67-4039-8555-505734491d36
 ms.openlocfilehash: 89cb36dba63dccdf7e52b7fcafbe3d9fc2fea1e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59113284"
 ---
 # <a name="serialization-limitations-of-xamlwritersave"></a>XamlWriter.Save의 serialization 제한
@@ -30,7 +30,7 @@ ms.locfileid: "59113284"
   
 <a name="Event_Handling_is_Not_Preserved"></a>   
 ## <a name="event-handling-is-not-preserved"></a>이벤트 처리가 유지되지 않음  
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]을 통해 이벤트 처리기가 serialize될 경우 이벤트 처리기는 유지되지 않습니다. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 코드 숨김 없이 (없고 관련된 X:code 메커니즘이) 런타임 절차 논리를 직렬화 할 방법이 없습니다. serialization은 자체 포함되고 논리 트리로 제한되므로 이벤트 처리기를 저장하는 기능이 없습니다. 따라서 이벤트 처리기 특성(특성 자체 및 처리기를 명명하는 문자열 값)이 출력 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서 제거됩니다.  
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]을 통해 이벤트 처리기가 serialize될 경우 이벤트 처리기는 유지되지 않습니다. 코드 숨김이 없고 관련 x:Code 메커니즘이 없는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]은 런타임 절차 논리를 serialize할 수 없습니다. serialization은 자체 포함되고 논리 트리로 제한되므로 이벤트 처리기를 저장하는 기능이 없습니다. 따라서 이벤트 처리기 특성(특성 자체 및 처리기를 명명하는 문자열 값)이 출력 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서 제거됩니다.  
   
 <a name="Realistic_Scenarios_for_Use_of_XAMLWriter_Save"></a>   
 ## <a name="realistic-scenarios-for-use-of-xamlwritersave"></a>XAMLWriter.Save 사용에 대한 실제 시나리오  

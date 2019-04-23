@@ -3,10 +3,10 @@ title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
 ms.openlocfilehash: 4105aaba92c73206e7a162415e3bc245507f40e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191915"
 ---
 # <a name="adonet"></a>ADO.NET
@@ -28,7 +28,7 @@ ADO.NET은 .NET Framework 프로그래머에게 데이터 액세스 서비스를
  [ADO.NET에서 데이터 형식 매핑](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
  .NET Framework 데이터 형식과 .NET Framework 데이터 공급자 간의 데이터 형식 매핑에 대해 설명합니다.  
   
- [DataSets, DataTables 및 DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [DataSet, DataTable 및 DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  `DataSets`, 형식화된 `DataSets`, `DataTables` 및 `DataViews`를 만들고 사용하는 방법에 대해 설명합니다.  
   
  [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)  
@@ -44,10 +44,10 @@ ADO.NET은 .NET Framework 프로그래머에게 데이터 액세스 서비스를
  .NET Framework Data Provider for Oracle과 관련된 기능 및 동작을 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [언어 통합 쿼리 (LINQ)C#](../../../csharp/programming-guide/concepts/linq/index.md)  
+ [LINQ(Language-Integrated Query) - C#](../../../csharp/programming-guide/concepts/linq/index.md)  
  LINQ 항목 링크를 제공 하 고 사용 하 여 샘플 C#입니다.  
   
- [언어 통합 쿼리 (LINQ)-Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ [LINQ(Language-Integrated Query) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)  
  LINQ 항목 및 Visual Basic을 사용한 샘플에 대 한 링크를 제공 합니다.  
   
  [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)  

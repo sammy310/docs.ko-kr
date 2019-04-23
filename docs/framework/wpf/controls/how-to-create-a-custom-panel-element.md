@@ -10,10 +10,10 @@ helpviewer_keywords:
 - custom Panel elements [WPF]
 ms.assetid: e0df4f1e-8c07-4e86-89a3-e22acfffdc2a
 ms.openlocfilehash: d4fc9d76ada9f27bd52619280b323691af9382c2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59139570"
 ---
 # <a name="how-to-create-a-custom-panel-element"></a>방법: 사용자 지정 Panel 요소 만들기
@@ -31,5 +31,5 @@ ms.locfileid: "59139570"
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.Controls.Panel>
-- [Panel 개요](panels-overview.md)
+- [패널 개요](panels-overview.md)
 - [사용자 지정 콘텐츠 줄 바꿈 패널 샘플 만들기](https://go.microsoft.com/fwlink/?LinkID=159979)

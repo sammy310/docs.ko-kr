@@ -2,12 +2,12 @@
 title: IPv6 사용 및 사용 안 함
 ms.date: 03/30/2017
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
-ms.openlocfilehash: 75c452216a5f4a74792d641a840f53e4423ab92f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 73dee0cb57674c8a2fa4ba2246162870ab1e3a10
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543765"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59083688"
 ---
 # <a name="enabling-and-disabling-ipv6"></a>IPv6 사용 및 사용 안 함
 IPv6 프로토콜을 사용하려면 IPv6을 지원하는 운영 체제 버전을 실행 중인지 확인하고 운영 체제와 네트워킹 클래스가 제대로 구성되어 있는지 확인합니다.  
@@ -45,6 +45,7 @@ IPv6 프로토콜을 사용하려면 IPv6을 지원하는 운영 체제 버전�
  .NET Framework 버전 2.0 이상의 경우 Windows에서 IPv6을 지원하면 <xref:System.Net.Dns?displayProperty=nameWithType> 클래스의 멤버(예: <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=nameWithType> 메서드)는 한 가지 제한과 함께 IPv6 주소를 반환합니다. DNS <xref:System.Net.Dns?displayProperty=nameWithType>의 사용되지 않는 멤버(예: <xref:System.Net.Dns.Resolve%2A?displayProperty=nameWithType> 메서드)는 구성 파일에서 ipv6 enabled 설정에 대한 값을 읽고 인식합니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [인터넷 프로토콜 버전 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
 - [소켓](../../../docs/framework/network-programming/sockets.md)
 - [네트워크 설정 스키마](../../../docs/framework/configure-apps/file-schema/network/index.md)

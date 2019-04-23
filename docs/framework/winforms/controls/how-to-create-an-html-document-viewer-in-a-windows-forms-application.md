@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Windows Forms, creating document viewers
 ms.assetid: 6a6338fe-f7ee-4f5e-9d8f-0465c57e9039
 ms.openlocfilehash: 99609e4bf5a352c436986e0773375d1c8e15e790
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340752"
 ---
 # <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a>방법: Windows Forms 애플리케이션에서 HTML 문서 뷰어 만들기
@@ -45,5 +45,5 @@ ms.locfileid: "59340752"
 - <xref:System.Windows.Forms.WebBrowser.Url%2A>
 - [WebBrowser 컨트롤 개요](webbrowser-control-overview.md)
 - [WebBrowser 보안](webbrowser-security.md)
-- [방법: WebBrowser 컨트롤을 사용하여 URL로 이동](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [방법: WebBrowser 컨트롤을 사용하여 인쇄](how-to-print-with-a-webbrowser-control.md)
+- [방법: WebBrowser 컨트롤을 사용 하 여 URL로 이동](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [방법: WebBrowser 컨트롤을 사용 하 여 인쇄](how-to-print-with-a-webbrowser-control.md)

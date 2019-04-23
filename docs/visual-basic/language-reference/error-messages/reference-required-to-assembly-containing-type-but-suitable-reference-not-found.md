@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30969
 ms.assetid: 1b29dbc5-8268-45fe-bfc2-b2070a5c845c
 ms.openlocfilehash: 9868598b32ae17ef5bfb5dd738f8a7541515f5ec
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310673"
 ---
 # <a name="reference-required-to-assembly-assemblyidentity-containing-type-typename-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-projectname1-and-projectname2"></a>참조 어셈블리에 필요한 '\<assemblyidentity >' 형식이 포함 된 '\<typename >', 프로젝트 사이의 모호성으로 인해 적합 한 참조를 찾을 수 없습니다 있지만\<projectname1 >' 및 '\< projectname2 >'
@@ -32,7 +32,7 @@ ms.locfileid: "59310673"
 ## <a name="see-also"></a>참고자료
 
 - [프로젝트의 참조 관리](/visualstudio/ide/managing-references-in-a-project)
-- [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [선언된 요소 참조](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 
 - [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)
-- [Troubleshooting Broken References](/visualstudio/ide/troubleshooting-broken-references)
+- [끊어진 참조 문제 해결](/visualstudio/ide/troubleshooting-broken-references)

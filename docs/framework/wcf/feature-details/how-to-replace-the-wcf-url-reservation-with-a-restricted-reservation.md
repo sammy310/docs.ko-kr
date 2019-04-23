@@ -3,10 +3,10 @@ title: '방법: WCF URL 예약을 제한된 예약으로 바꾸기'
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
 ms.openlocfilehash: f9cfda1d4ca14dd380dd01f944d4c900f9832096
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307563"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>방법: WCF URL 예약을 제한된 예약으로 바꾸기
@@ -32,7 +32,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 2. 입력 **netsh http delete urlacl =http://+:80/Temporary_Listen_Addresses/**  명령 프롬프트 창에서.  
   
-3. 예약이 삭제되면 다음 메시지가 표시됩니다. **URL 예약을 성공적으로 삭제했습니다.**  
+3. 예약이 삭제되면 다음 메시지가 표시됩니다. **URL 예약을 삭제 했습니다.**  
   
 ## <a name="creating-a-new-security-group-and-new-restricted-url-reservation"></a>새 보안 그룹 및 새 제한된 URL 예약 만들기  
  WCF URL 예약을 제한 된 예약으로 바꾸려면 먼저 새 보안 그룹을 만들어야 합니다. 이 작업은 명령 프롬프트 또는 컴퓨터 관리 콘솔에서 수행할 수 있습니다. 한 가지만 수행하면 됩니다.  
@@ -43,7 +43,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 2. 입력 **net localgroup "\<보안 그룹 이름 >" / 주석: "\<보안 그룹 설명 >" /add** 명령 프롬프트에서. 교체  **\<보안 그룹 이름 >** 만들려는 보안 그룹의 이름 및  **\<보안 그룹 설명 >** 에 대 한 적절 한 설명을 사용 하 여는 보안 그룹입니다.  
   
-3. 보안 그룹이 만들어지면 다음 메시지가 표시됩니다. **명령을 완료했습니다.**  
+3. 보안 그룹이 만들어지면 다음 메시지가 표시됩니다. **명령이 완료 되었습니다.**  
   
 #### <a name="to-create-a-new-security-group-from-the-computer-management-console"></a>컴퓨터 관리 콘솔에서 새 보안 그룹을 만들려면  
   

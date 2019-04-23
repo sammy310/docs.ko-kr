@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: ca662b57fae9b1d0d41290f3052f71bca66e9bf3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234846"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774470"
 ---
 ### <a name="webutilityhtmlencode-and-webutilityhtmldecode-round-trip-bmp-correctly"></a>WebUtility.HtmlEncode 및 WebUtility.HtmlDecode가 BMP를 올바르게 라운드트립
 

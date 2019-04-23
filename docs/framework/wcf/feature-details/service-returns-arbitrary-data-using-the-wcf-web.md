@@ -3,10 +3,10 @@ title: '방법: WCF 웹 HTTP 프로그래밍 모델을 사용하여 임의의 �
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
 ms.openlocfilehash: 55fdc6824ab82bdf3b5913cd600815ed05bd909c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303923"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>방법: WCF 웹 HTTP 프로그래밍 모델을 사용하여 임의의 데이터를 반환하는 서비스 만들기
@@ -51,7 +51,7 @@ ms.locfileid: "59303923"
        }  
     ```  
   
-     두 번째 코드의 마지막 줄을 확인 합니다. `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
+     밑에서 두 번째에 있는 코드 줄 `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`를 보십시오.  
   
      이 콘텐츠 형식 헤더를 설정 합니다 `"image/jpeg"`합니다. 이 샘플에서는 .jpg 파일을 반환하는 방법을 보여 주지만 코드를 수정하여 필요한 모든 종류의 데이터를 원하는 형식으로 반환할 수 있습니다. 이 작업은 데이터를 검색 또는 생성한 다음 스트림에 작성해야 합니다.  
   

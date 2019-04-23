@@ -3,11 +3,11 @@ title: 예외
 ms.date: 03/30/2017
 ms.assetid: 065205cc-52dd-4f30-9578-b17d8d113136
 ms.openlocfilehash: 64a8338133c265ee1b4c7acbd9b4d168318b66a5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145992"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59976068"
 ---
 # <a name="exceptions"></a>예외
 워크플로에서 <xref:System.Activities.Statements.TryCatch> 활동을 사용하여 워크플로 실행 중에 발생하는 예외를 처리할 수 있습니다. 이러한 예외를 처리하거나 <xref:System.Activities.Statements.Rethrow> 활동을 사용하여 다시 throw할 수 있습니다. <xref:System.Activities.Statements.TryCatch.Finally%2A> 섹션의 활동은 <xref:System.Activities.Statements.TryCatch.Try%2A> 섹션 또는 <xref:System.Activities.Statements.TryCatch.Catches%2A> 섹션이 완료되면 실행됩니다. 워크플로 호스팅하는 <xref:System.Activities.WorkflowApplication> 인스턴스를 사용할 수도 있습니다는 <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> 으로 처리 되지 않은 예외를 처리할 이벤트 처리기를 <xref:System.Activities.Statements.TryCatch> 활동입니다.  

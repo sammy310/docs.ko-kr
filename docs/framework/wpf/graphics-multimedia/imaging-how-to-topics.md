@@ -8,10 +8,10 @@ helpviewer_keywords:
 - images [WPF], how-to topics
 ms.assetid: 96834ee4-a5fc-4dd0-9948-b9bbc9437a5c
 ms.openlocfilehash: 70294aff4c40bd5ae14b61e6a847155a10d675a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183042"
 ---
 # <a name="imaging-how-to-topics"></a>이미징 방법 항목
@@ -19,12 +19,12 @@ ms.locfileid: "59183042"
   
 ## <a name="in-this-section"></a>섹션 내용  
  [XAML에서 BitmapImage 사용](how-to-use-a-bitmapimage.md)  
- [썸네일 이미지로 로드](how-to-load-an-image-as-a-thumbnail.md)  
+ [이미지를 축소판으로 로드](how-to-load-an-image-as-a-thumbnail.md)  
  [BitmapImage에 변환 적용](how-to-apply-a-transform-to-a-bitmapimage.md)  
- [Visual에서 비트맵 만들기](how-to-create-a-bitmap-from-a-visual.md)  
- [Visual을 이미지 파일에 인코딩](how-to-encode-a-visual-to-an-image-file.md)  
+ [시각적 대체에서 비트맵 만들기](how-to-create-a-bitmap-from-a-visual.md)  
+ [시각적 요소를 이미지 파일로 인코딩](how-to-encode-a-visual-to-an-image-file.md)  
  [새 BitmapSource 만들기](how-to-create-a-new-bitmapsource.md)  
- [여러 BitmapSource 개체 모두 연결](how-to-chain-bitmapsource-objects-together.md)  
+ [여러 BitmapSource 개체 연결](how-to-chain-bitmapsource-objects-together.md)  
  [BitmapSource를 다른 PixelFormat으로 변환](how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
  [BitmapSource를 인덱싱된 픽셀 형식으로 변환](how-to-convert-a-bitmapsource-to-an-indexed-pixel-format.md)  
  [JPEG 이미지 인코딩 및 디코딩](how-to-encode-and-decode-a-jpeg-image.md)  
@@ -33,7 +33,7 @@ ms.locfileid: "59183042"
  [WDP 이미지 인코딩 및 디코딩](how-to-encode-and-decode-a-wdp-image.md)  
  [GIF 이미지 인코딩 및 디코딩](how-to-encode-and-decode-a-gif-image.md)  
  [TIFF 이미지 인코딩 및 디코딩](how-to-encode-and-decode-a-tiff-image.md)  
- [비트맵에 메타데이터 쓰기](how-to-write-metadata-to-a-bitmap.md)  
+ [메타데이터를 비트맵에 쓰기](how-to-write-metadata-to-a-bitmap.md)  
  [비트맵에서 메타데이터 읽기](how-to-read-metadata-from-a-bitmap.md)  
   
 ## <a name="reference"></a>참조  

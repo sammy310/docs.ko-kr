@@ -3,10 +3,10 @@ title: '방법: WSDL 계약을 통해 서비스 모니커 사용'
 ms.date: 03/30/2017
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
 ms.openlocfilehash: 2968641538bf0b4d0e136d5784bf69e5e7fcb3a0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298086"
 ---
 # <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>방법: WSDL 계약을 통해 서비스 모니커 사용
@@ -57,4 +57,4 @@ ms.locfileid: "59298086"
 ## <a name="see-also"></a>참고자료
 
 - [시작](../../../../docs/framework/wcf/samples/getting-started-sample.md)
-- [COM 응용 프로그램과 통합 개요](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+- [COM 애플리케이션과 통합 개요](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

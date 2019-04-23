@@ -3,10 +3,10 @@ title: 추적
 ms.date: 03/30/2017
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
 ms.openlocfilehash: 2379b290494e72b65db5ddc6a7bc5df376d4373f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59093399"
 ---
 # <a name="tracing"></a>추적
@@ -27,7 +27,7 @@ Windows Communication Foundation (WCF) 오류 모니터링 및 분석을 위해 
   
  이 단원에서는 디버깅을 지원하기 위해 종단 간 상관 관계에 대한 동작 추적 및 전파를 사용할 수 있는 방법에 대해 설명합니다.  
   
- [추적을 사용하여 응용 프로그램 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [추적을 사용하여 애플리케이션 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
   
  이 단원에서는 응용 프로그램을 디버깅하기 위해 추적을 사용할 수 있는 방법에 대해 설명합니다.  
   

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
 ms.openlocfilehash: d5652c1f52d7cee4921d0c6b50973b494458ecd2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170185"
 ---
 # <a name="printing-how-to-topics"></a>인쇄 방법 항목
@@ -25,7 +25,7 @@ ms.locfileid: "59170185"
  [인쇄 작업 문제 진단](how-to-diagnose-problematic-print-job.md)  
  인쇄 대기열 및 인쇄 작업의 속성을 사용 하 여 인쇄 되지 않는 인쇄 작업을 진단 하기 위한 지침입니다.  
   
- [특정 시간에 인쇄 작업을 인쇄할 수 있는지 확인](how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md)  
+ [인쇄 작업을 현재 인쇄할 수 있는지 확인](how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md)  
  인쇄할 수 작업이 인쇄 대기열 및 인쇄 작업의 속성을 사용 하 여 프로그래밍 방식으로 시간을 결정 하는 것에 대 한 지침입니다.  
   
  [인쇄 큐의 하위 집합 열거](how-to-enumerate-a-subset-of-print-queues.md)  

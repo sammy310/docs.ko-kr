@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c2209fdb-70ef-4dea-8bb8-097fe96f5563
 ms.openlocfilehash: a428f54c3834ccdf6a0c7a5bfce8307172724524
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322890"
 ---
 # <a name="how-to-execute-a-query-that-returns-complex-types"></a>방법: 복합 형식을 반환하는 쿼리 실행
@@ -26,7 +26,7 @@ ms.locfileid: "59322890"
   
 3. 모델을 표시 하려면.edmx 파일을 두 번 클릭 합니다 [Model 브라우저 창](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738483(v=vs.100)) 엔터티 디자이너입니다. Entity Designer 화면에서 선택 합니다 `Email` 및 `Phone` 의 속성을 `Contact` 엔터티 형식에 다음 마우스 오른쪽 단추로 **새 복합 형식으로 리팩터링**합니다.  
   
-4. 선택 된 새 복합 형식이 `Email` 하 고 `Phone` 속성에 추가 됩니다는 **Model 브라우저**합니다. 복합 형식에 기본 이름이 지정 됩니다:으로 형식 이름 바꾸기 `EmailPhone` 에 **속성** 창. 또한 새 `ComplexProperty` 속성이 `Contact` 엔터티 형식에 추가됩니다. 속성 이름 바꾸기 `EmailPhoneComplexType.`  
+4. 선택 된 새 복합 형식이 `Email` 하 고 `Phone` 속성에 추가 됩니다는 **Model 브라우저**합니다. 복합 형식에 기본 이름이 지정 됩니다:으로 형식 이름 바꾸기 `EmailPhone` 에 **속성** 창. 또한 새 `ComplexProperty` 속성이 `Contact` 엔터티 형식에 추가됩니다. 속성의 이름을 `EmailPhoneComplexType.`으로 바꿉니다.  
   
      만들기 및 엔터티 데이터 모델 마법사를 사용 하 여 복합 형식을 수정 하는 방법에 대 한 내용은 [방법: 기존 속성을 복합 형식 속성으로 리팩터링](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456814(v=vs.100)) 고 [방법: 복합 형식 만들기 및 수정](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100))합니다.  
   

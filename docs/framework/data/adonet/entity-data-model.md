@@ -3,10 +3,10 @@ title: 엔터티 데이터 모델
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
 ms.openlocfilehash: 8e96890d97f652295a3fdb67c48ec37710280eec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197921"
 ---
 # <a name="entity-data-model"></a>엔터티 데이터 모델
@@ -21,33 +21,33 @@ EDM(엔터티 데이터 모델)은 저장된 폼에 관계없이 데이터 구�
   
  [엔터티 데이터 모델의 주요 개념](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
   
- [엔터티 데이터 모델: 네임스페이스](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
+ [엔터티 데이터 모델: 네임 스페이스](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
   
  [엔터티 데이터 모델: 기본 데이터 형식](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
   
  [엔터티 데이터 모델: 상속](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
   
- [연결 End](../../../../docs/framework/data/adonet/association-end.md)  
+ [연결 끝](../../../../docs/framework/data/adonet/association-end.md)  
   
- [연결 End 복합성](../../../../docs/framework/data/adonet/association-end-multiplicity.md)  
+ [연결 끝 다중성](../../../../docs/framework/data/adonet/association-end-multiplicity.md)  
   
- [연결 집합(association set)](../../../../docs/framework/data/adonet/association-set.md)  
+ [연결 집합](../../../../docs/framework/data/adonet/association-set.md)  
   
- [연결 집합 End](../../../../docs/framework/data/adonet/association-set-end.md)  
+ [연결 집합 끝](../../../../docs/framework/data/adonet/association-set-end.md)  
   
  [연결 형식](../../../../docs/framework/data/adonet/association-type.md)  
   
  [복합 형식](../../../../docs/framework/data/adonet/complex-type.md)  
   
- [엔터티 컨테이너(entity container)](../../../../docs/framework/data/adonet/entity-container.md)  
+ [엔터티 컨테이너](../../../../docs/framework/data/adonet/entity-container.md)  
   
  [엔터티 키](../../../../docs/framework/data/adonet/entity-key.md)  
   
  [엔터티 집합](../../../../docs/framework/data/adonet/entity-set.md)  
   
- [엔터티 형식(entity type)](../../../../docs/framework/data/adonet/entity-type.md)  
+ [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md)  
   
- [패싯](../../../../docs/framework/data/adonet/facet.md)  
+ [facet](../../../../docs/framework/data/adonet/facet.md)  
   
  [외래 키 속성](../../../../docs/framework/data/adonet/foreign-key-property.md)  
   
@@ -55,7 +55,7 @@ EDM(엔터티 데이터 모델)은 저장된 폼에 관계없이 데이터 구�
   
  [모델 정의 함수](../../../../docs/framework/data/adonet/model-defined-function.md)  
   
- [탐색 속성(navigation property)](../../../../docs/framework/data/adonet/navigation-property.md)  
+ [탐색 속성](../../../../docs/framework/data/adonet/navigation-property.md)  
   
  [속성](../../../../docs/framework/data/adonet/property.md)  
   

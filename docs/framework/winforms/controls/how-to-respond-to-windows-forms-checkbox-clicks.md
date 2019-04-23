@@ -13,10 +13,10 @@ helpviewer_keywords:
 - check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
 ms.openlocfilehash: ce616f45ceaa3db117c6981d2987ac09bba7b3fb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319900"
 ---
 # <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>방법: Windows Forms 확인란 클릭에 응답
@@ -139,5 +139,5 @@ Windows Forms를 클릭할 때마다 <xref:System.Windows.Forms.CheckBox> 컨트
 
 - <xref:System.Windows.Forms.CheckBox>
 - [CheckBox 컨트롤 개요](checkbox-control-overview-windows-forms.md)
-- [방법: Windows Forms CheckBox 컨트롤을 사용하여 옵션 설정](how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [방법: Windows Forms CheckBox 컨트롤을 사용 하 여 옵션 설정](how-to-set-options-with-windows-forms-checkbox-controls.md)
 - [CheckBox 컨트롤](checkbox-control-windows-forms.md)

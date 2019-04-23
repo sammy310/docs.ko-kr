@@ -3,16 +3,16 @@ title: OLE DB 데이터 형식 매핑
 ms.date: 03/30/2017
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
 ms.openlocfilehash: 09fab7c5df99ffdb0aef6d32a8ad5ca1ed446d42
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100589"
 ---
 # <a name="ole-db-data-type-mappings"></a>OLE DB 데이터 형식 매핑
 다음 표에서는 .NET Framework Data Provider ADO 및 OLE DB([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)])의 데이터 형식에 대해 유추된 <xref:System.Data.OleDb> 형식을 보여 줍니다. 또한 이 표에는 <xref:System.Data.OleDb.OleDbDataReader>의 형식화된 접근자 메서드도 나열되어 있습니다.  
   
-|ADO 형식|OLE DB 형식|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] type|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식화 된 접근자|  
+|ADO 형식|OLE DB 형식|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 형식화된 접근자|  
 |--------------|-----------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
 |adBigInt|DBTYPE_I8|Int64|GetInt64()|  
 |adBinary|DBTYPE_BYTES|Byte[]|GetBytes()|  

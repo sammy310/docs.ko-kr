@@ -5,10 +5,10 @@ ms.assetid: 7e8cc303-6e77-4116-aa8b-7ea297a3a467
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 408219307015d5c39cb581b3884ed9810f4c0566
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216355"
 ---
 # <a name="authenticode-unmanaged-api-reference"></a>Authenticode(관리되지 않는 API 참조)
@@ -36,10 +36,10 @@ Authenticode XrML 라이센스 만들기 및 확인 모듈을 지원합니다.
  [CertVerifyAuthenticodeLicense 함수](../../../../docs/framework/unmanaged-api/authenticode/certverifyauthenticodelicense-function.md)  
  Authenticode XrML 라이선스의 유효성을 확인합니다.  
   
- [AXL_AUTHENTICODE_SIGNER_INFO 구조](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md)  
+ [AXL_AUTHENTICODE_SIGNER_INFO 구조체](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md)  
  Authenticode 서명자 정보를 정의합니다.  
   
- [AXL_AUTHENTICODE_TIMESTAMPER_INFO 구조](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md)  
+ [AXL_AUTHENTICODE_TIMESTAMPER_INFO 구조체](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md)  
  Authenticode 타임스탬퍼 정보를 정의합니다.  
   
 ## <a name="see-also"></a>참고 항목

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe1d35f091eb98ca0080a73283d7e158e2ae26eb
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 6bf6acc719b4697534e845f64890ddcd9cac550f
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409447"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59315766"
 ---
 # <a name="default-marshaling-behavior"></a>기본 마샬링 동작
 Interop 마샬링은 메서드 매개 변수와 연결된 데이터가 관리되는 메모리와 관리되지 않는 메모리 간에 전달될 때 동작하는 방식을 제어하는 규칙에 따라 작동합니다. 이러한 기본 제공 규칙은 데이터 형식 변형, 호출 수신자가 전달된 데이터를 변경하고 해당 변경 내용을 호출자에게 반환할 수 있는지 여부 및 마샬러가 성능 최적화를 제공하는 상황과 같은 마샬링 작업을 제어합니다.  
@@ -64,11 +64,11 @@ BSTR MethodOne (BSTR b) {
   
  알려진 개체의 인터페이스가 아닌 경우 마샬러는 다음을 수행합니다.  
   
-1.  마샬러가 **IProvideClassInfo2** 인터페이스에 대해 개체를 쿼리합니다. 제공되면 마샬러가 **IProvideClassInfo2.GetGUID**에서 반환된 CLSID를 사용하여 인터페이스를 제공하는 coclass를 식별합니다. CLSID를 통해 마샬러는 어셈블리가 이전에 등록된 경우 레지스트리에서 래퍼를 찾을 수 있습니다.  
+1. 마샬러가 **IProvideClassInfo2** 인터페이스에 대해 개체를 쿼리합니다. 제공되면 마샬러가 **IProvideClassInfo2.GetGUID**에서 반환된 CLSID를 사용하여 인터페이스를 제공하는 coclass를 식별합니다. CLSID를 통해 마샬러는 어셈블리가 이전에 등록된 경우 레지스트리에서 래퍼를 찾을 수 있습니다.  
   
-2.  마샬러가 **IProvideClassInfo** 인터페이스에 대해 인터페이스를 쿼리합니다. 제공되면 마샬러가 **IProvideClassInfo.GetClassinfo**에서 반환된 **ITypeInfo**를 사용하여 인터페이스를 노출하는 클래스의 CLSID를 확인합니다. 마샬러는 CLSID를 사용하여 래퍼에 대한 메타데이터를 찾을 수 있습니다.  
+2. 마샬러가 **IProvideClassInfo** 인터페이스에 대해 인터페이스를 쿼리합니다. 제공되면 마샬러가 **IProvideClassInfo.GetClassinfo**에서 반환된 **ITypeInfo**를 사용하여 인터페이스를 노출하는 클래스의 CLSID를 확인합니다. 마샬러는 CLSID를 사용하여 래퍼에 대한 메타데이터를 찾을 수 있습니다.  
   
-3.  마샬러가 여전히 클래스를 식별할 수 없는 경우 **System.__ComObject**라는 제네릭 래퍼 클래스로 인터페이스를 래핑합니다.  
+3. 마샬러가 여전히 클래스를 식별할 수 없는 경우 **System.__ComObject**라는 제네릭 래퍼 클래스로 인터페이스를 래핑합니다.  
   
 ## <a name="default-marshaling-for-delegates"></a>대리자에 대한 기본 마샬링  
  관리되는 대리자는 호출 메커니즘에 따라 COM 인터페이스 또는 함수 포인터로 마샬링됩니다.  
@@ -440,6 +440,7 @@ interface IValueTypes : IDispatch {
 ```  
   
 ## <a name="see-also"></a>참고 항목
+
 - [Blittable 형식 및 비 Blittable 형식](blittable-and-non-blittable-types.md)
 - [복사 및 고정](copying-and-pinning.md)
 - [배열에 대한 기본 마샬링](default-marshaling-for-arrays.md)

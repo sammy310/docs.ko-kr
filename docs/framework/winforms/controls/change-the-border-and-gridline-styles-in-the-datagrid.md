@@ -12,10 +12,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], gridline styles
 ms.assetid: 2f413c7a-4025-4171-8e3a-66ef908ea583
 ms.openlocfilehash: d24adb98c339f911d6bea0312bce4d4b4f198a61
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224996"
 ---
 # <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a>방법: Windows Forms DataGridView 컨트롤에서 테두리 및 눈금선 스타일 변경
@@ -66,4 +66,4 @@ ms.locfileid: "59224996"
 - <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewCellBorderStyle>
 - <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle>
-- [Windows Forms DataGridView 컨트롤에서 기본 형식 및 스타일 지정](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 컨트롤의 기본 형식 및 스타일 지정](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)

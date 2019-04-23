@@ -3,12 +3,12 @@ title: 식 해석
 description: 식 트리의 구조를 검사하는 코드를 작성하는 방법을 알아봅니다.
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 49c030706a0a6196dfdd72e3c2fbff90b7667f48
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 952a1c553e2392ffc717dc344dfe77a11f025cc4
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201978"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59211246"
 ---
 # <a name="interpreting-expressions"></a>식 해석
 
@@ -355,7 +355,6 @@ Expression<Func<int, int>> factorial = (n) =>
 
 이 코드는 수학 *계승* 함수에 가능한 한 가지 구현을 나타냅니다. 이 코드를 작성한 방법에서는 식에 람다 식을 할당하여 식 트리를 작성할 때의 두 가지 제한을 강조합니다. 첫째, 문 람다는 허용되지 않습니다. 즉, 루프, 블록, if/else 문 및 C#에서 일반적인 다른 제어 구조를 사용할 수 없습니다. 식 사용으로 제한됩니다. 둘째, 같은 식을 재귀적으로 호출할 수 없습니다.
 이미 대리자인 경우에는 가능하지만 식 트리 형식으로는 호출할 수 없습니다. [식 트리 작성](expression-trees-building.md)에 대한 섹션에서는 이러한 제한 사항을 해결하는 기술을 알아봅니다.
-
 
 이 식에서는 다음과 같은 형식의 노드가 모두 나타납니다.
 1. 같음(이진 식)

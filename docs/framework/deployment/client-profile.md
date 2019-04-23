@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 06db09ac66164886b1dc99a37129201543c5ce4c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8373ed288ff3e8e3f7992729e57b366a4c0043a4
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514324"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59126752"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
 .NET Client Profile은 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 및 이전 버전에서 제공되었고 클라이언트 애플리케이션을 위해 최적화된 .NET Framework의 하위 집합입니다. .NET Framework는 Windows, Windows Phone 및 Microsoft Azure용 개발 플랫폼으로서, 관리되는 앱 실행 환경과 .NET Framework 클래스 라이브러리를 제공합니다. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 및 이전 버전에서는 전체 .NET Framework와 Client Profile의 두 가지 배포 옵션을 제공했습니다. Client Profile로 전체 .NET Framework보다 더 빠르게 배포하고 더 작은 응용 프로그램 설치 패키지를 사용할 수 있게 되었습니다.  
@@ -28,6 +28,7 @@ ms.locfileid: "54514324"
  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]를 설치한 경우 .NET Framework 4 Client Profile은 .NET Framework의 정식 버전으로 업데이트됩니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 설치에 대한 자세한 내용은 [개발자용 .NET Framework 설치](../../../docs/framework/install/guide-for-developers.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [.NET Framework 클라이언트 프로필(.NET Framework 4)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29)
 - [Visual Studio 멀티 타기팅 개요](/visualstudio/ide/visual-studio-multi-targeting-overview)
 - [.NET Framework 타기팅 오류 문제 해결](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)

@@ -11,10 +11,10 @@ helpviewer_keywords:
 ms.assetid: 45c48e2e-b97d-44bc-8896-14f328e0ce33
 author: ghogen
 ms.openlocfilehash: f75a2f33ecde408d2d8e2f2343197ba56c4b8c21
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143821"
 ---
 # <a name="troubleshooting-service-application-wont-install"></a>문제 해결: 서비스 애플리케이션이 설치되지 않음
@@ -27,4 +27,4 @@ ms.locfileid: "59143821"
   
 ## <a name="see-also"></a>참고 항목
 
-- [Windows 서비스 응용 프로그램 소개](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Windows 서비스 애플리케이션 소개](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)

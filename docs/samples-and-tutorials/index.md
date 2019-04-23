@@ -5,10 +5,10 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
 ms.openlocfilehash: 265ac7aa996014ea24e9c128076e12c937de0857
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330820"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET 샘플 및 자습서
@@ -19,7 +19,7 @@ ms.locfileid: "59330820"
 
 ### <a name="samples"></a>샘플
 
-**[Dotnet 테스트를 사용하여 .NET Core에서 단위 테스트](../core/testing/unit-testing-with-dotnet-test.md)**
+**[dotnet 테스트를 사용한 .NET Core의 유닛 테스트](../core/testing/unit-testing-with-dotnet-test.md)**
 
 이 가이드에서는 ASP.NET Core 웹앱 및 관련 단위 테스트를 만드는 방법을 보여 줍니다. 먼저 간단한 웹 서비스 앱을 만든 다음 테스트를 추가합니다. 계속해서 더 많은 테스트를 만들어 새로운 기능 구현을 안내합니다. [완료된 샘플](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test)은 GitHub의 dotnet/samples 리포지토리에서 사용 가능합니다.
 

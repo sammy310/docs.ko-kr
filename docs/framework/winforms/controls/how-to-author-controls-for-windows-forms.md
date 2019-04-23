@@ -7,10 +7,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
 ms.openlocfilehash: 844d165cef05e46d25960f113af3bf99dd35e14f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340336"
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>방법: Windows Forms 컨트롤 작성
@@ -53,10 +53,10 @@ ms.locfileid: "59340336"
   
 ## <a name="see-also"></a>참고자료
 
-- [연습: Visual Basic을 사용하여 복합 컨트롤 작성](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [연습: Visual Basic을 사용하여 Windows Forms 컨트롤에서 상속](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [연습: Visual Basic에서 합성 컨트롤 제작](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [연습: Visual Basic을 사용한 Windows Forms 컨트롤에서 상속](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
 - [방법: UserControl 클래스에서 상속](how-to-inherit-from-the-usercontrol-class.md)
 - [방법: Control 클래스에서 상속](how-to-inherit-from-the-control-class.md)
-- [방법: 기존 Windows Forms 컨트롤에서 상속](how-to-inherit-from-existing-windows-forms-controls.md)
+- [방법: 에서 상속 하는 기존 Windows Forms 컨트롤](how-to-inherit-from-existing-windows-forms-controls.md)
 - [방법: UserControl의 런타임 동작 테스트](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
 - [사용자 지정 컨트롤의 종류](varieties-of-custom-controls.md)

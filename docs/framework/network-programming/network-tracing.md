@@ -19,10 +19,10 @@ helpviewer_keywords:
 - method invocations
 ms.assetid: e993b7c3-087f-45d8-9c02-9dded936d804
 ms.openlocfilehash: 45ec7b83824777c594b966a38d2b7fcd4f63b596
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59221191"
 ---
 # <a name="network-tracing-in-the-net-framework"></a>.NET Framework의 네트워크 추적
@@ -40,4 +40,4 @@ ms.locfileid: "59221191"
 - [네트워크 추적 사용](../../../docs/framework/network-programming/enabling-network-tracing.md)
 - [방법: 네트워크 추적 구성](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)
 - [네트워크 추적 해석](../../../docs/framework/network-programming/interpreting-network-tracing.md)
-- [응용 프로그램 추적 및 조율](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [애플리케이션 추적 및 조율](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 409cea924b8a775621c3073e27009d1f556e4f42
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c8c9fe05049feff6e15c765212b72e35265fd844
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838575"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345432"
 ---
 # <a name="custom-date-and-time-format-strings"></a>사용자 지정 날짜 및 시간 서식 문자열
 
@@ -97,7 +97,7 @@ ms.locfileid: "58838575"
 |&#92;|이스케이프 문자입니다.<br /><br /> 추가 정보: [문자 리터럴](#Literals) 및 [이스케이프 문자 사용](#escape).|2009-06-15T13:45:30 (h \h) -> 1 h|
 |기타 문자|문자가 변경되지 않은 상태로 결과 문자열에 복사됩니다.<br /><br /> 추가 정보: [문자 리터럴](#Literals).|2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A|
 
-다음 섹션에서는 각 사용자 지정 날짜 및 시간 형식 지정자에 대한 추가 정보를 제공합니다. 다른 설명이 없는한, 각 지정자는 <xref:System.DateTime> 값이나 <xref:System.DateTimeOffset> 값에 상관없이 동일한 문자열을 생성합니다.
+다음 단원에서는 각 사용자 지정 날짜 및 시간 형식 지정자에 대한 추가 정보를 제공합니다. 다른 설명이 없는한, 각 지정자는 <xref:System.DateTime> 값이나 <xref:System.DateTimeOffset> 값에 상관없이 동일한 문자열을 생성합니다.
 
 ## <a name="dSpecifier"></a> “d” 사용자 지정 형식 지정자
 
@@ -632,7 +632,7 @@ ms.locfileid: "58838575"
 |F|H|K|M|일|
 |f|g|h|분|s|
 |t|y|z|%|:|
-|/|"|'|\||
+|/|"|'|&#92;||
 
 다른 모든 문자는 항상 문자 리터럴로 해석되며, 형식 지정 작업에서 변경되지 않고 결과 문자열에 포함됩니다.  구문 분석 작업에서는 입력 문자열의 문자와 정확히 일치해야 하며, 비교 시 대/소문자를 구분합니다.
 
@@ -698,6 +698,6 @@ ms.locfileid: "58838575"
 
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.IFormatProvider?displayProperty=nameWithType>
-- [형식 서식 지정](../../../docs/standard/base-types/formatting-types.md)
+- [형식의 서식 지정](../../../docs/standard/base-types/formatting-types.md)
 - [표준 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
 - [샘플: .NET Framework 4 서식 유틸리티](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

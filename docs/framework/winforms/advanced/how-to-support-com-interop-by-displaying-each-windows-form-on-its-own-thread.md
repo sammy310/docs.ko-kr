@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Windows Forms, interop
 ms.assetid: a9e04765-d2de-4389-a494-a9a6d07aa6ee
 ms.openlocfilehash: 39a9793f3046960032da32795e60314ea05a00fe
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072677"
 ---
 # <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>방법: 각 Windows Form을 별개의 스레드에서 표시하여 COM Interop 지원
@@ -50,5 +50,5 @@ ms.locfileid: "59072677"
 - [.NET Framework 구성 요소를 COM에 노출](../../interop/exposing-dotnet-components-to-com.md)
 - [COM에서 사용할 어셈블리의 패키징](../../interop/packaging-an-assembly-for-com.md)
 - [COM에 어셈블리 등록](../../interop/registering-assemblies-with-com.md)
-- [방법: ShowDialog 메서드를 통해 Windows Form을 표시하여 COM Interop 지원](com-interop-by-displaying-a-windows-form-shadow.md)
-- [Windows Forms 및 관리되지 않는 애플리케이션 개요](windows-forms-and-unmanaged-applications-overview.md)
+- [방법: ShowDialog 메서드로 Windows Form을 표시 하 여 COM Interop 지원](com-interop-by-displaying-a-windows-form-shadow.md)
+- [Windows Forms 및 관리되지 않는 응용 프로그램 개요](windows-forms-and-unmanaged-applications-overview.md)

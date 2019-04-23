@@ -10,10 +10,10 @@ helpviewer_keywords:
 - camera direction [WPF], animating with key frames
 ms.assetid: 5753024e-0057-454d-947f-43ea686879c7
 ms.openlocfilehash: 44464cc314d649516998338e36c1b523101ac4e2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59346082"
 ---
 # <a name="how-to-animate-camera-position-and-direction-using-key-frames"></a>방법: 키 프레임을 사용하여 카메라 위치 및 방향에 애니메이션 효과 주기

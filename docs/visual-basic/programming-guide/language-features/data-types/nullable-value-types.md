@@ -11,10 +11,10 @@ helpviewer_keywords:
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
 ms.openlocfilehash: d17d2ad3fd99c6d563c21ddd646396ccb1c1ca48
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58921314"
 ---
 # <a name="nullable-value-types-visual-basic"></a>Nullable 값 형식(Visual Basic)
@@ -113,7 +113,7 @@ Null을 허용 하는 경우 `Boolean` 변수는 부울 식에 사용 되 고, �
 - [데이터 형식](index.md)
 - [Value Types and Reference Types](value-types-and-reference-types.md)
 - [데이터 형식 문제 해결](troubleshooting-data-types.md)
-- [TableAdapters를 사용하여 데이터 세트 채우기](/visualstudio/data-tools/fill-datasets-by-using-tableadapters)
+- [TableAdapter를 사용하여 데이터 집합 채우기](/visualstudio/data-tools/fill-datasets-by-using-tableadapters)
 - [If 연산자](../../../language-reference/operators/if-operator.md)
 - [지역 형식 유추](../variables/local-type-inference.md)
 - [Is 연산자](../../../language-reference/operators/is-operator.md)

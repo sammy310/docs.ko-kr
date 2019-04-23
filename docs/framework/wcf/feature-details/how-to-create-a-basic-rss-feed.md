@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 431879b8-a5f8-4947-ad1e-4768c726aca8
 ms.openlocfilehash: 5bab8b5a19f33f8dcfcc5a5f5d882309a4b1cc99
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59305275"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59771142"
 ---
 # <a name="how-to-create-a-basic-rss-feed"></a>방법: 기본 RSS 피드 만들기
 Windows Communication Foundation (WCF)를 사용 하면 배포 피드를 노출 하는 서비스를 만들 수 있습니다. 이 항목에서는 RSS 배포 피드를 노출하는 배포 서비스를 만드는 방법에 대해 설명합니다.  

@@ -5,10 +5,10 @@ f1_keywords:
 - vbrAmbiguousCall2
 ms.assetid: 13b20ffa-9f02-4971-a3cb-e08b402fd971
 ms.openlocfilehash: 230807eaa8e8bda7d8ca7b73d61dfc7a8fb40bf5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345497"
 ---
 # <a name="no-accessible-overloaded-methodname-can-be-called-with-these-arguments-without-a-narrowing-conversion-list"></a>액세스 가능한 오버 로드 된 '\<methodname >' 축소 변환 없이이 인수로 호출할 수 있습니다: \<목록 >
@@ -23,4 +23,4 @@ ms.locfileid: "59345497"
 ## <a name="see-also"></a>참고자료
 
 - [값 또는 참조로 인수 전달](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
-- [Widening and Narrowing Conversions](../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [확대 변환과 축소 변환](../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

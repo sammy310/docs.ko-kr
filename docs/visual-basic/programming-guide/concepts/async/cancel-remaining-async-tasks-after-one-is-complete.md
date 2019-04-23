@@ -3,10 +3,10 @@ title: 하나가 (Visual Basic) 완료 되 면 남은 비동기 작업 취소
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
 ms.openlocfilehash: 5dd9a99b96dc1e599fc2bde3a796beadf33f8147
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324515"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>하나가 (Visual Basic) 완료 되 면 남은 비동기 작업 취소
@@ -78,7 +78,7 @@ End Function
     Dim downloadTasks As Task(Of Integer)() = downloadTasksQuery.ToArray()  
     ```  
   
-4. 작업 컬렉션에서 `WhenAny`를 호출합니다. `WhenAny` 반환 된 `Task(Of Task(Of Integer))` 또는 `Task<Task<int>>`합니다.  즉, `WhenAny`는 대기 시 단일 `Task(Of Integer)` 또는 `Task<int>`로 계산되는 작업을 반환합니다. 이 단일 작업은 컬렉션에서 완료될 첫 번째 작업입니다. 첫 번째로 완료된 작업은 `firstFinishedTask`에 할당됩니다. `firstFinishedTask`의 형식은 <xref:System.Threading.Tasks.Task%601>입니다. 여기서 `TResult`는 `ProcessURLAsync`의 반환 형식이므로 정수입니다.  
+4. 작업 컬렉션에서 `WhenAny`를 호출합니다. `WhenAny`는 `Task(Of Task(Of Integer))` 또는 `Task<Task<int>>`를 반환합니다.  즉, `WhenAny`는 대기 시 단일 `Task(Of Integer)` 또는 `Task<int>`로 계산되는 작업을 반환합니다. 이 단일 작업은 컬렉션에서 완료될 첫 번째 작업입니다. 첫 번째로 완료된 작업은 `firstFinishedTask`에 할당됩니다. `firstFinishedTask`의 형식은 <xref:System.Threading.Tasks.Task%601>입니다. 여기서 `TResult`는 `ProcessURLAsync`의 반환 형식이므로 정수입니다.  
   
 ```vb  
 ' ***Call WhenAny and then await the result. The task that finishes   
@@ -235,6 +235,6 @@ End Class
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
-- [Async (Visual Basic) 응용 프로그램 미세 조정](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [Async 응용 프로그램 미세 조정(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
 - [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [Async 샘플: 응용 프로그램 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [비동기 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

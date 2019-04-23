@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ebd54afb312de0796b5a96b3d41f1e98dd97bd1b
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: f7bda02e1862740e6a6328835367a6a5e9929033
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654356"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59328311"
 ---
 # <a name="memory-mapped-files"></a>메모리 매핑된 파일
 메모리 매핑된 파일에는 가상 메모리에 있는 파일의 내용이 포함됩니다. 파일과 메모리 공간 사이의 매핑을 사용하면 여러 프로세스를 포함한 애플리케이션이 메모리에 직접 읽고 쓰는 방식으로 파일을 수정할 수 있습니다. [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터는 네이티브 Windows 함수가 메모리 매핑된 파일에 액세스할 때와 같은 방식으로 관리 코드를 사용하여 메모리 매핑된 파일에 액세스할 수 있습니다. 이에 대해서는 [메모리 매핑된 파일 관리](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10))에 설명되어 있습니다.  
@@ -96,29 +96,29 @@ ms.locfileid: "58654356"
   
  다음 예제는 메모리 매핑된 파일에 부울 값을 쓰는 세 개의 개별 프로세스(콘솔 애플리케이션)로 구성됩니다. 다음 작업 시퀀스가 발생합니다.  
   
-1.  `Process A`는 메모리 매핑된 파일을 만들고 이 파일에 값을 씁니다.  
+1. `Process A`는 메모리 매핑된 파일을 만들고 이 파일에 값을 씁니다.  
   
-2.  `Process B`는 메모리 매핑된 파일을 열고 이 파일에 값을 씁니다.  
+2. `Process B`는 메모리 매핑된 파일을 열고 이 파일에 값을 씁니다.  
   
-3.  `Process C`는 메모리 매핑된 파일을 열고 이 파일에 값을 씁니다.  
+3. `Process C`는 메모리 매핑된 파일을 열고 이 파일에 값을 씁니다.  
   
-4.  `Process A`는 메모리 매핑된 파일에서 값을 읽고 표시합니다.  
+4. `Process A`는 메모리 매핑된 파일에서 값을 읽고 표시합니다.  
   
-5.  `Process A`가 메모리 매핑된 파일로 완료된 후에는 가비지 수집에 의해 파일이 즉시 회수됩니다.  
+5. `Process A`가 메모리 매핑된 파일로 완료된 후에는 가비지 수집에 의해 파일이 즉시 회수됩니다.  
   
  이 예제를 실행하려면 다음을 수행합니다.  
   
-1.  애플리케이션을 컴파일하고 세 개의 명령 프롬프트 창을 엽니다.  
+1. 애플리케이션을 컴파일하고 세 개의 명령 프롬프트 창을 엽니다.  
   
-2.  첫 번째 명령 프롬프트 창에서 `Process A`를 실행합니다.  
+2. 첫 번째 명령 프롬프트 창에서 `Process A`를 실행합니다.  
   
-3.  두 번째 명령 프롬프트 창에서 `Process B`를 실행합니다.  
+3. 두 번째 명령 프롬프트 창에서 `Process B`를 실행합니다.  
   
-4.  `Process A`로 돌아가서 ENTER 키를 누릅니다.  
+4. `Process A`로 돌아가서 ENTER 키를 누릅니다.  
   
-5.  세 번째 명령 프롬프트 창에서 `Process C`를 실행합니다.  
+5. 세 번째 명령 프롬프트 창에서 `Process C`를 실행합니다.  
   
-6.  `Process A`로 돌아가서 ENTER 키를 누릅니다.  
+6. `Process A`로 돌아가서 ENTER 키를 누릅니다.  
   
  `Process A`의 출력은 다음과 같습니다.  
   

@@ -3,11 +3,11 @@ title: Federation 샘플
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
 ms.openlocfilehash: bc2c28300d9bfc3c30388f8d13e05a23a9f37287
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59311463"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59769920"
 ---
 # <a name="federation-sample"></a>Federation 샘플
 이 샘플에서는 연결된 보안을 보여 줍니다.  

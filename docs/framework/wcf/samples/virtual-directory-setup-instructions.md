@@ -3,10 +3,10 @@ title: 가상 디렉터리 설치 지침
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
 ms.openlocfilehash: fdff88026a49989870ee5c47f9a38a65ecad3c80
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325347"
 ---
 # <a name="virtual-directory-setup-instructions"></a>가상 디렉터리 설치 지침
@@ -59,9 +59,9 @@ Windows Communication Foundation (WCF) 샘플은 %SystemDrive%\inetpub\wwwroot\s
   
 7. 기본적으로 다음 확인란이 선택되어 있습니다.  
   
-    -   **읽기**  
+    -   **Read**  
   
-    -   **스크립트 실행(예: ASP)**  
+    -   **스크립트 실행 (예: ASP)**  
   
 8. 클릭 **다음**를 클릭 하 고 **마침** 마법사를 완료 합니다.  
   
@@ -84,7 +84,7 @@ Windows Communication Foundation (WCF) 샘플은 %SystemDrive%\inetpub\wwwroot\s
   
 2. 기본적으로 다음 확인란이 선택되어 있습니다.  
   
-    -   **읽기**  
+    -   **Read**  
   
     -   **방문 기록**  
   

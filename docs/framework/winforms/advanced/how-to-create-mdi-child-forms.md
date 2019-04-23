@@ -10,10 +10,10 @@ helpviewer_keywords:
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
 ms.openlocfilehash: 73f2004470d5d1da04199af75832cefd6348ce18
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342481"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>방법: MDI 자식 양식 만들기
@@ -108,8 +108,8 @@ MDI 자식 폼의 중요 한 요소는 [다중 문서 MDI (인터페이스) 응�
   
 ## <a name="see-also"></a>참고자료
 
-- [MDI 애플리케이션](multiple-document-interface-mdi-applications.md)
-- [방법: MDI 부모 양식 만들기](how-to-create-mdi-parent-forms.md)
+- [MDI(다중 문서 인터페이스) 응용 프로그램](multiple-document-interface-mdi-applications.md)
+- [방법: MDI 부모 폼 만들기](how-to-create-mdi-parent-forms.md)
 - [방법: 활성 MDI 자식 확인](how-to-determine-the-active-mdi-child.md)
-- [방법: 활성 MDI 자식으로 데이터 보내기](how-to-send-data-to-the-active-mdi-child.md)
-- [방법: MDI 자식 양식 정렬](how-to-arrange-mdi-child-forms.md)
+- [방법: 활성 MDI 자식으로 데이터 전송](how-to-send-data-to-the-active-mdi-child.md)
+- [방법: MDI 자식 폼 정렬](how-to-arrange-mdi-child-forms.md)

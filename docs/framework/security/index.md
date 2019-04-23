@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 7eb50bcb-38d8-4afb-86aa-2573586697c2
 author: BrucePerlerMS
 ms.openlocfilehash: 36f7687f42c6e0d6f865a025f09c4ead6f79960c
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481407"
 ---
 # <a name="windows-identity-foundation"></a>Windows Identity Foundation
@@ -42,29 +42,29 @@ ms.locfileid: "59481407"
 
 - [WIF 방법 인덱스](../../../docs/framework/security/wif-how-tos-index.md)
 
-  - [방법: WIF를 사용하여 클레임 인식 ASP.NET MVC 웹 애플리케이션 빌드](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)
+  - [방법: WIF를 사용 하 여 클레임 인식 ASP.NET MVC 웹 응용 프로그램 빌드](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)
 
-  - [방법: WIF를 사용하여 클레임 인식 ASP.NET Web Forms 애플리케이션 빌드](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+  - [방법: WIF를 사용 하 여 클레임 인식 ASP.NET Web Forms 응용 프로그램 빌드](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
 
-  - [방법: 양식 기반 인증을 사용하여 클레임 인식 ASP.NET 애플리케이션 빌드](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)
+  - [방법: 폼 기반 인증을 사용 하 여 클레임 인식 ASP.NET 응용 프로그램 빌드](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)
 
-  - [방법: Windows 인증을 사용하여 클레임 인식 ASP.NET 애플리케이션 빌드](../../../docs/framework/security/how-to-build-claims-aware-aspnet-app-using-windows-authentication.md)
+  - [방법: Windows 인증을 사용 하 여 클레임 인식 ASP.NET 응용 프로그램 빌드](../../../docs/framework/security/how-to-build-claims-aware-aspnet-app-using-windows-authentication.md)
 
-  - [방법: WIF 추적을 사용하여 클레임 인식 애플리케이션 및 서비스 디버그](../../../docs/framework/security/how-to-debug-claims-aware-applications-and-services-using-wif-tracing.md)
+  - [방법: 클레임 인식 응용 프로그램 및 WIF 추적을 사용 하 여 서비스 디버그](../../../docs/framework/security/how-to-debug-claims-aware-applications-and-services-using-wif-tracing.md)
 
-  - [방법: WIF를 사용하여 로그인 상태 표시](../../../docs/framework/security/how-to-display-signed-in-status-using-wif.md)
+  - [방법: WIF를 사용 하 여 상태를 로그인 하는 표시](../../../docs/framework/security/how-to-display-signed-in-status-using-wif.md)
 
-  - [방법: 토큰 재생을 검색하도록 설정](../../../docs/framework/security/how-to-enable-token-replay-detection.md)
+  - [방법: 토큰 재생 검색 사용](../../../docs/framework/security/how-to-enable-token-replay-detection.md)
 
   - [방법: WIF 추적 사용](../../../docs/framework/security/how-to-enable-wif-tracing.md)
 
-  - [방법: WCF 웹 서비스 애플리케이션에 WIF 사용](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md)
+  - [방법: WCF 웹 서비스 응용 프로그램에 WIF 사용](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md)
 
   - [방법: 들어오는 클레임 변환](../../../docs/framework/security/how-to-transform-incoming-claims.md)
 
 - [WIF 지침](../../../docs/framework/security/wif-guidelines.md)
 
-  - [WIF 3.5를 사용하여 빌드된 애플리케이션을 WIF 4.5로 마이그레이션하는 지침](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)
+  - [WIF 3.5를 사용하여 빌드된 응용 프로그램을 WIF 4.5로 마이그레이션하는 지침](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)
 
   - [WIF 3.5와 WIF 4.5 간의 네임스페이스 매핑](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
 

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30298
 ms.assetid: 2d77b7f4-0640-4f89-9c65-f101fd2847c0
 ms.openlocfilehash: 8459ee7fec6d761161a721c88ccdc88e513fc95f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324385"
 ---
 # <a name="constructor-name-cannot-call-itself"></a>생성자 '\<이름 >' 자신을 호출할 수 없습니다.
@@ -29,4 +29,4 @@ ms.locfileid: "59324385"
   
 ## <a name="see-also"></a>참고자료
 
-- [개체 수명: 개체가 만들어지고 제거되는 방법](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+- [개체 수명: 개체가 만들어지고 제거 하는 방법](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)

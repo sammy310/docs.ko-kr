@@ -5,10 +5,10 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: 36fcf5769376375854c2a2631e26e8b136df0de6
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920911"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 앱을 위한 내부 루프 개발 워크플로
@@ -216,7 +216,7 @@ Redis 서비스에서 사용 하는 [최신 공개 redis 이미지](https://hub.
 
 앱에 단일 컨테이너만 경우 Docker 호스트 (VM 또는 물리적 서버)에 배포 하 여 실행 하기만 하면 됩니다. 그러나 경우 앱은 여러 서비스로 구성 된, 해야 *구성*도 합니다. 다양 한 옵션을 확인해 보겠습니다.
 
-***옵션 A: 단일 컨테이너 또는 서비스를 실행 합니다.***
+***옵션 a: 단일 컨테이너 또는 서비스를 실행 합니다.***
 
 여기에 나와 있는 것 처럼 docker run 명령을 사용 하 여 Docker 이미지를 실행할 수 있습니다.
 
@@ -226,7 +226,7 @@ docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 
 이 특정 배포에 대 한 내부 포트 5000에 포트 80에 전송 된 요청 리디렉션 수 됩니다 것입니다. 이제 응용 프로그램 호스트 수준에서 80 외부 포트에서 수신 대기 합니다.
 
-***옵션 B: 작성 및 다중 컨테이너 응용 프로그램을 실행 합니다.***
+***옵션 b: 작성 및 다중 컨테이너 응용 프로그램을 실행 합니다.***
 
 대부분의 엔터프라이즈 시나리오에서 Docker 응용 프로그램을 여러 서비스로 구성 됩니다. 이러한 경우에 실행할 수 있습니다는 `docker-compose up` 수 이전에 만든 docker compose.yml 파일을 사용 하는 명령 (그림 4-27). 이 명령을 실행의 모든 해당 관련된 컨테이너를 사용 하 여 구성 된 응용 프로그램을 배포 합니다.
 

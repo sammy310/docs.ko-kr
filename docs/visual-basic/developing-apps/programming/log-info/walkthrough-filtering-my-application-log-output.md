@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: f38217a5385b9d736eaa744a73024f210eb8f553
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 25d2177eed9ef83ba8f2575668e72dc21c2cd43f
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829389"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59298398"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>연습: My.Application.Log 출력 필터링(Visual Basic)
 이 연습에서는 `My.Application.Log` 개체에 대한 기본 로그 필터링을 변경하여 `Log` 개체에서 수신기로 전달되는 정보 및 수신기가 작성하는 정보를 제어하는 방법을 보여 줍니다. 구성 정보가 애플리케이션의 구성 파일에 저장되므로 애플리케이션을 빌드한 후에도 로깅 동작을 변경할 수 있습니다.  
@@ -21,17 +21,17 @@ ms.locfileid: "58829389"
   
 #### <a name="to-build-the-sample-application"></a>샘플 애플리케이션을 빌드하려면  
   
-1.  새 Visual Basic Windows 애플리케이션 프로젝트를 엽니다.  
+1. 새 Visual Basic Windows 애플리케이션 프로젝트를 엽니다.  
   
-2.  Button1이라는 단추를 Form1에 추가합니다.  
+2. Button1이라는 단추를 Form1에 추가합니다.  
   
-3.  Button1에 대한 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기에 다음 코드를 추가합니다.  
+3. Button1에 대한 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기에 다음 코드를 추가합니다.  
   
      [!code-vb[VbVbcnMyApplicationLogFiltering#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyApplicationLogFiltering/VB/Form1.vb#1)]  
   
-4.  디버거에서 애플리케이션을 실행합니다.  
+4. 디버거에서 애플리케이션을 실행합니다.  
   
-5.  **Button1**을 누릅니다.  
+5. **Button1**을 누릅니다.  
   
      애플리케이션이 다음 정보를 애플리케이션의 디버그 출력 및 로그 파일에 기록합니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "58829389"
   
      `DefaultSource Error: 2 : Error in the application.`  
   
-6.  애플리케이션을 닫습니다.  
+6. 애플리케이션을 닫습니다.  
   
      애플리케이션의 디버그 출력 창을 보는 방법에 대한 자세한 내용은 [출력 창](/visualstudio/ide/reference/output-window)을 참조하세요. 애플리케이션의 로그 파일 위치에 대한 정보는 [연습: My.Application.Log가 정보를 기록하는 위치 확인](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)을 참조하세요.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "58829389"
   
 #### <a name="to-log-only-activity-tracing-events"></a>작업 추적 이벤트만 기록하려면  
   
-1.  **솔루션 탐색기**에서 app.config를 마우스 오른쪽 단추로 클릭하고 **열기**를 선택합니다.  
+1. **솔루션 탐색기**에서 app.config를 마우스 오른쪽 단추로 클릭하고 **열기**를 선택합니다.  
   
      또는  
   
@@ -83,15 +83,15 @@ ms.locfileid: "58829389"
   
     3.  **추가**를 클릭합니다.  
   
-2.  최상위 `<configuration>` 섹션의 `<system.diagnostics>` 섹션에 있는 `<switches>` 섹션으로 이동합니다.  
+2. 최상위 `<configuration>` 섹션의 `<system.diagnostics>` 섹션에 있는 `<switches>` 섹션으로 이동합니다.  
   
-3.  스위치 컬렉션에 `DefaultSwitch`를 추가하는 요소를 찾습니다. 이 요소는 다음과 유사합니다.  
+3. 스위치 컬렉션에 `DefaultSwitch`를 추가하는 요소를 찾습니다. 이 요소는 다음과 유사합니다.  
   
      `<add name="DefaultSwitch" value="Information" />`  
   
-4.  `value` 특성의 값을 "ActivityTracing"으로 변경합니다.  
+4. `value` 특성의 값을 "ActivityTracing"으로 변경합니다.  
   
-5.  app.config 파일의 내용은 다음 XML과 비슷합니다.  
+5. app.config 파일의 내용은 다음 XML과 비슷합니다.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -120,9 +120,9 @@ ms.locfileid: "58829389"
     </configuration>  
     ```  
   
-6.  디버거에서 애플리케이션을 실행합니다.  
+6. 디버거에서 애플리케이션을 실행합니다.  
   
-7.  **Button1**을 누릅니다.  
+7. **Button1**을 누릅니다.  
   
      애플리케이션이 다음 정보를 애플리케이션의 디버그 출력 및 로그 파일에 기록합니다.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "58829389"
   
      `DefaultSource Stop: 5 : Leaving Button1_Click`  
   
-8.  애플리케이션을 닫습니다.  
+8. 애플리케이션을 닫습니다.  
   
 9. `value` 특성의 값을 다시 "정보"로 변경합니다.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "58829389"
   
 #### <a name="to-log-only-activity-tracing-events"></a>동작 추적 이벤트만 기록하려면  
   
-1.  **솔루션 탐색기**에서 app.config를 마우스 오른쪽 단추로 클릭하고 **열기**를 선택합니다.  
+1. **솔루션 탐색기**에서 app.config를 마우스 오른쪽 단추로 클릭하고 **열기**를 선택합니다.  
   
      또는  
   
@@ -158,11 +158,11 @@ ms.locfileid: "58829389"
   
     3.  **추가**를 클릭합니다.  
   
-2.  **솔루션 탐색기**에서 app.config를 마우스 오른쪽 단추로 클릭합니다. **열기**를 선택합니다.  
+2. **솔루션 탐색기**에서 app.config를 마우스 오른쪽 단추로 클릭합니다. **열기**를 선택합니다.  
   
-3.  `<sources>` 섹션 아래에서 `name` 특성이 "DefaultSource"인 `<source>` 섹션에서 `<listeners>` 섹션을 찾습니다. `<sources>` 섹션은 최상위 `<configuration>` 섹션의 `<system.diagnostics>` 섹션에 있습니다.  
+3. `<sources>` 섹션 아래에서 `name` 특성이 "DefaultSource"인 `<source>` 섹션에서 `<listeners>` 섹션을 찾습니다. `<sources>` 섹션은 최상위 `<configuration>` 섹션의 `<system.diagnostics>` 섹션에 있습니다.  
   
-4.  이 요소를 `<listeners>` 섹션에 추가합니다.  
+4. 이 요소를 `<listeners>` 섹션에 추가합니다.  
   
     ```xml  
     <!-- Remove the default debug listener. -->  
@@ -171,9 +171,9 @@ ms.locfileid: "58829389"
     <add name="NewDefault"/>  
     ```  
   
-5.  최상위 `<sharedListeners>` 섹션의 `<system.diagnostics>` 섹션에서 `<configuration>` 섹션을 찾습니다.  
+5. 최상위 `<sharedListeners>` 섹션의 `<system.diagnostics>` 섹션에서 `<configuration>` 섹션을 찾습니다.  
   
-6.  다음 요소를 `<sharedListeners>` 섹션에 추가합니다.  
+6. 다음 요소를 `<sharedListeners>` 섹션에 추가합니다.  
   
     ```xml  
     <add name="NewDefault"   
@@ -188,7 +188,7 @@ ms.locfileid: "58829389"
   
      <xref:System.Diagnostics.EventTypeFilter> 필터는 <xref:System.Diagnostics.SourceLevels> 열거형 값 중 하나를 해당 `initializeData` 특성으로 사용합니다.  
   
-7.  app.config 파일의 내용은 다음 XML과 비슷합니다.  
+7. app.config 파일의 내용은 다음 XML과 비슷합니다.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -229,7 +229,7 @@ ms.locfileid: "58829389"
     </configuration>  
     ```  
   
-8.  디버거에서 애플리케이션을 실행합니다.  
+8. 디버거에서 애플리케이션을 실행합니다.  
   
 9. **Button1**을 누릅니다.  
   

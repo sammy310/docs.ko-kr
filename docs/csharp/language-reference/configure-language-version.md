@@ -2,12 +2,12 @@
 title: C# 언어 버전 선택 - C# 가이드
 description: 특정 컴파일러 버전을 사용하여 구문 유효성 검사를 수행하도록 컴파일러 구성
 ms.date: 02/28/2019
-ms.openlocfilehash: 6d31a757171bd2eecdcc1fbd3da765dcb3fe45c0
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: feb3e51a107f9830071b55c7985f202edc842f4a
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212029"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59770882"
 ---
 # <a name="select-the-c-language-version"></a>C# 언어 버전 선택
 
@@ -80,7 +80,7 @@ Visual Studio에서 버전을 설정할 수 있습니다. 솔루션 탐색기에
 
 ## <a name="configure-multiple-projects"></a>여러 프로젝트 구성
 
-`<LangVersion>` 요소를 포함하는 **Directory.build.props** 파일을 생성하여 여러 디렉터리를 구성할 수 있습니다. 일반적으로 솔루션 디렉터리에서 이 작업을 수행합니다. 솔루션 디렉터리의 **Directory.build.props** 파일에 다음을 추가합니다.
+`<LangVersion>` 요소를 포함하는 **Directory.Build.props** 파일을 만들어 여러 디렉터리를 구성할 수 있습니다. 일반적으로 솔루션 디렉터리에서 이 작업을 수행합니다. 솔루션 디렉터리의 **Directory.Build.props** 파일에 다음을 추가합니다.
 
 ```xml
 <Project>

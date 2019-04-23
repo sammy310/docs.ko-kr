@@ -3,10 +3,10 @@ title: 보안 세션
 ms.date: 03/30/2017
 ms.assetid: 7b50602f-d7b5-42e9-8e92-1f0413df0d8b
 ms.openlocfilehash: 8f5cf9a965951bcc1049c2e96ae6cfa80b0113ba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59084974"
 ---
 # <a name="secure-sessions"></a>보안 세션
@@ -21,7 +21,7 @@ Windows Communication Foundation (WCF)의 기능은 메시지는 전송 된 순�
 |-|-|  
 |[보안 대화 및 보안 세션](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)|보안 대화 및 보안 세션은 동의어입니다. 이 항목에서는 보안 대화가 작동하는 방식과 패턴을 사용하는 시기와 이유에 대해 설명합니다.|  
 |[방법: 보안 세션 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-secure-session.md)|기본적인 보안 세션 만들기에 대해 설명합니다.|  
-|[방법: 보안 세션에 대한 보안 컨텍스트 토큰 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)|클라이언트로 상태 및 세션을 관리할 웹 팜을 만드는 단계에 대해 설명합니다.|  
+|[방법: 보안 컨텍스트 토큰이 보안 세션](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)|클라이언트로 상태 및 세션을 관리할 웹 팜을 만드는 단계에 대해 설명합니다.|  
 |[보안 세션에 대한 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)|보안 세션에 대해 고려할 사항에 대해 설명합니다.|  
   
 ## <a name="reference"></a>참조  

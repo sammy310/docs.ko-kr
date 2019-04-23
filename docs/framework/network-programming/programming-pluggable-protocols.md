@@ -16,10 +16,10 @@ helpviewer_keywords:
 - protocols, pluggable
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
 ms.openlocfilehash: d14eb426c8e142f56d9f024dcbf37a1d2d78664d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072343"
 ---
 # <a name="programming-pluggable-protocols"></a>플러그형 프로토콜 프로그래밍

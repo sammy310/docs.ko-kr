@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Multiple EndPoints
 ms.assetid: 8f0c2e1f-9aee-41c2-8301-c72b7f664412
 ms.openlocfilehash: 90b8c3cb49ff7b246b6bf7799d6b76f8549b23e5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59310325"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59976081"
 ---
 # <a name="multiple-endpoints"></a>다중 엔드포인트
 Multiple Endpoints 샘플은 서비스에서 여러 엔드포인트를 구성하는 방법과 클라이언트에서 각 엔드포인트와 통신하는 방법을 보여 줍니다. 이 샘플은 기반 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)합니다. 서비스 구성은 `ICalculator` 계약을 지원하지만 각각 다른 바인딩을 사용하여 다른 주소에 있는 두 개의 엔드포인트를 정의하기 위해 수정되었습니다. 클라이언트 구성과 코드는 두 서비스 엔드포인트 모두와 통신하기 위해 수정되었습니다.  

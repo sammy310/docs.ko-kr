@@ -9,11 +9,11 @@ helpviewer_keywords:
 - TextWrapping property [WPF], changing programmatically
 ms.assetid: 30d25554-4c82-4df9-a8d6-35683a4a13bb
 ms.openlocfilehash: 21ca31d24121492fe6927cd533d5b3c0785b5a28
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095843"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975002"
 ---
 # <a name="how-to-change-the-textwrapping-property-programmatically"></a>방법: 프로그래밍 방식으로 TextWrapping 속성 변경
 ## <a name="example"></a>예제  

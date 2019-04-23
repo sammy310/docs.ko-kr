@@ -3,10 +3,10 @@ title: 본문 요소에 의한 디스패치
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
 ms.openlocfilehash: ff82ab027ff66b1c4c7433ea77efa6c34ccae088
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330202"
 ---
 # <a name="dispatch-by-body-element"></a>본문 요소에 의한 디스패치
@@ -34,7 +34,7 @@ class DispatchByBodyElementOperationSelector : IDispatchOperationSelector
 }
 ```  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 구현을 매우 간단 하 게 인터페이스에서 메서드를 하나만 없기 때문에 빌드할 수 있습니다: <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>합니다. 이 메서드의 작업은 들어오는 메시지를 검사하고 현재 엔드포인트에 대한 서비스 계약의 메서드 이름과 동일한 문자열을 반환하는 것입니다.  
+ <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 구현은 인터페이스 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>에 메서드가 하나만 있으므로 매우 간단하게 빌드할 수 있습니다. 이 메서드의 작업은 들어오는 메시지를 검사하고 현재 엔드포인트에 대한 서비스 계약의 메서드 이름과 동일한 문자열을 반환하는 것입니다.  
   
  이 샘플에서 작업 선택기는 <xref:System.Xml.XmlDictionaryReader>를 사용하여 들어오는 메시지의 본문에 대한 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A>를 가져옵니다. 이 메서드는 메시지 본문의 첫 번째 자식에 판독기를 미리 배치하여 현재 요소의 이름과 네임스페이스 URI를 가져와서 `XmlQualifiedName`에 결합한 다음 작업 선택기에서 보유하고 있는 사전에서 해당 작업을 조회하는 데 사용할 수 있도록 합니다.  
   

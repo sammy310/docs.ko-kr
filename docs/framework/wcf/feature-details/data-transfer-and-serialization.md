@@ -6,10 +6,10 @@ helpviewer_keywords:
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
 ms.openlocfilehash: 1eefd82a149d0bc215ca441e92c7d737a744b1e0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59088407"
 ---
 # <a name="data-transfer-and-serialization"></a>데이터 전송 및 Serialization
@@ -58,7 +58,7 @@ ms.locfileid: "59088407"
  <xref:System.Xml.Serialization>  
   
 ## <a name="related-sections"></a>관련 단원  
- [인코더 및 Serializer 확장](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
+ [인코더 및 직렬 변환기 확장](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
   
 ## <a name="see-also"></a>참고자료
 

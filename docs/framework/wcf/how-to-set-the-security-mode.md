@@ -10,10 +10,10 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
 ms.openlocfilehash: 5a4550e4c914dcdbc9908e766c67a2efa53e6e9e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339387"
 ---
 # <a name="how-to-set-the-security-mode"></a>방법: 보안 모드 설정
@@ -115,8 +115,8 @@ Windows Communication Foundation (WCF) 보안에 가장 미리 정의 된 바인
   
 ## <a name="see-also"></a>참고자료
 
-- [방법: SSL 인증서를 사용하여 포트 구성](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
-- [방법: 전송 보안 및 메시지 자격 증명 사용](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
+- [방법: SSL 인증서로 포트 구성](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [방법: 사용 하 여 전송 보안 및 메시지 자격 증명](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
 - [전송 보안](../../../docs/framework/wcf/feature-details/transport-security.md)
 - [메시지 보안](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
 - [보안 개요](../../../docs/framework/wcf/feature-details/security-overview.md)

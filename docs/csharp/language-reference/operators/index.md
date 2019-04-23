@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 877992227df417badf7322be7f9be79bf7256e69
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 4958f3e28b80fca2086d45827df1ced8fc26bd8e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59308655"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672292"
 ---
 # <a name="c-operators"></a>C# 연산자
 
@@ -158,6 +158,14 @@ C#에서는 많은 연산자를 제공하며, 이러한 연산자는 식에서 �
 이 연산자는 다음 섹션보다 우선 순위가 높고 이전 섹션보다 우선 순위가 낮습니다.
 
 [x &#124; y](or-operator.md) – 논리적 또는 비트 OR. 일반적으로 정수 형식 및 `enum` 형식에서 사용할 수 있습니다.
+
+## <a name="true-operator"></a>True 연산자
+
+[true](../keywords/true-false-operators.md) 연산자는 [부울](../keywords/bool.md) 값 `true`를 반환하여 피연산자가 확실히 true임을 나타냅니다. 
+
+## <a name="false-operator"></a>False 연산자
+
+[false](../keywords/true-false-operators.md) 연산자는 [부울](../keywords/bool.md) 값 `true`를 반환하여 피연산자가 확실히 false임을 나타냅니다. 
 
 ## <a name="conditional-and-operator"></a>조건부 AND 연산자
 

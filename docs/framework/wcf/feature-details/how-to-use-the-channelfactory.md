@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d48f01b5-582b-4c8b-b547-8adddae7e371
 ms.openlocfilehash: 7d542a3dcae514e75194b49c23a8dec5dd7e8c3b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59298853"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773729"
 ---
 # <a name="how-to-use-the-channelfactory"></a>방법: ChannelFactory 사용
 제네릭 <xref:System.ServiceModel.ChannelFactory%601> 클래스는 둘 이상의 채널을 만드는 데 사용할 수 있는 채널 팩터리를 만들어야 하는 고급 시나리오에서 사용됩니다.  

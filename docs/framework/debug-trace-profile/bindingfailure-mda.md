@@ -12,10 +12,10 @@ ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1e904d452b9f4a1b172d35984b752c0d97228338
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480952"
 ---
 # <a name="bindingfailure-mda"></a>bindingFailure MDA
@@ -52,7 +52,7 @@ ms.locfileid: "59480952"
 
 - 위의 확인에 따라 원인을 해결합니다. 가능한 해결 옵션은 다음과 같습니다.
 
-  - 전역 어셈블리 캐시에 요청된 어셈블리를 설치하고 <xref:System.Reflection.Assembly.Load%2A> id로 어셈블리를 로드 하는 메서드.
+  - 전역 어셈블리 캐시에 요청된 어셈블리를 설치하고 <xref:System.Reflection.Assembly.Load%2A> 메서드를 호출하여 ID로 어셈블리를 로드합니다.
 
   - 요청된 어셈블리를 애플리케이션 디렉터리에 복사하고 <xref:System.Reflection.Assembly.Load%2A> 메서드를 호출하여 ID로 어셈블리를 로드합니다.
 

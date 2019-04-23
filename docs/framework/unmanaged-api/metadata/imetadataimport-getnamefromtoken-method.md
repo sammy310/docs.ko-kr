@@ -18,10 +18,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1d77891478c9136a18dc4c9c44beed805244dd1a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225939"
 ---
 # <a name="imetadataimportgetnamefromtoken-method"></a>IMetaDataImport::GetNameFromToken 메서드
@@ -44,7 +44,7 @@ HRESULT GetNameFromToken (
  [out] 힙에 있는 u t F-8 개체 이름에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
- `GetNameFromToken` 사용 되지 않습니다. 대신 특정 형식의 토큰이 필요한 경우와 같은 속성을 가져오는 메서드를 호출 `GetFieldProps` 필드에 대해 또는 `GetMethodProps` 메서드에 대 한 합니다.  
+ `GetNameFromToken`는 사용되지 않습니다. 대신 특정 형식의 토큰이 필요한 경우와 같은 속성을 가져오는 메서드를 호출 `GetFieldProps` 필드에 대해 또는 `GetMethodProps` 메서드에 대 한 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d3e4affa363083ce55ac3764c26412a0d60ba3f6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59203095"
 ---
 # <a name="iclrsyncmanager-interface"></a>ICLRSyncManager 인터페이스
@@ -48,5 +48,5 @@ ms.locfileid: "59203095"
 
 - <xref:System.Threading.Thread>
 - [IHostSyncManager 인터페이스](ihostsyncmanager-interface.md)
-- [관리되는 스레딩과 관리되지 않는 스레딩](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
+- [관리 되는 스레딩과 관리 되지 않는 스레딩](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
 - [호스팅 인터페이스](hosting-interfaces.md)

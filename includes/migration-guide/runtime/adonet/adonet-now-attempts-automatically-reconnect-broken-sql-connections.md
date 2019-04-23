@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 4c65cd62b2d84ef2b852d10a04e5f6ce0cc82d3a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235762"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804540"
 ---
 ### <a name="adonet-now-attempts-to-automatically-reconnect-broken-sql-connections"></a>ADO.NET가 이제 끊어진 SQL 연결을 자동으로 다시 연결 시도
 

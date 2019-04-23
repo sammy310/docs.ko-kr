@@ -5,10 +5,10 @@ dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
 ms.openlocfilehash: 326caf550e8b138b4b968f0021a7fc475dc58c8d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338074"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>연습: 간단한 개체 모델 및 쿼리(Visual Basic)
@@ -91,7 +91,7 @@ ms.locfileid: "59338074"
   
 -   데이터베이스의 기본 키 열을 나타내도록 `CustomerID` 속성을 지정합니다.  
   
--   전용 저장소에 `_CustomerID` 및 `_City` 필드를 지정합니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 저장 하 여 비즈니스 논리가 포함 된 공용 접근자를 사용 하는 대신 직접 값을 검색 합니다.  
+-   전용 저장소에 `_CustomerID` 및 `_City` 필드를 지정합니다. 그러면 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 비즈니스 논리가 포함된 공용 접근자를 사용하는 대신 값을 직접 저장하고 검색할 수 있습니다.  
   
 #### <a name="to-represent-characteristics-of-two-database-columns"></a>두 데이터베이스 열의 특징을 나타내려면  
   

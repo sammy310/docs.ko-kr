@@ -3,10 +3,10 @@ title: 채용 프로세스
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
 ms.openlocfilehash: c6f542cef8e1417ed9c8d3a185252a91062e2161
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313153"
 ---
 # <a name="hiring-process"></a>채용 프로세스
@@ -18,7 +18,7 @@ ms.locfileid: "59313153"
   
  이 샘플에서는 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]의 다음과 같은 기능을 보여 줍니다.  
   
--   <xref:System.Activities.Statements.Flowchart> 및 <xref:System.Activities.Statements.Sequence> 비즈니스 프로세스를 모델링 하는 것에 대 한 워크플로.  
+-   비즈니스 프로세스를 모델링하기 위한 <xref:System.Activities.Statements.Flowchart> 및 <xref:System.Activities.Statements.Sequence> 워크플로  
   
 -   워크플로 서비스  
   
@@ -38,9 +38,9 @@ ms.locfileid: "59313153"
   
 -   활동의 컴퍼지션  
   
--   <xref:System.Activities.Statements.Parallel> 작업을 합니다.  
+-   <xref:System.Activities.Statements.Parallel> 활동  
   
--   <xref:System.Activities.Statements.CancellationScope> 작업입니다.  
+-   <xref:System.Activities.Statements.CancellationScope> 활동  
   
 -   지속적인 타이머(<xref:System.Activities.Statements.Delay> 활동)  
   
@@ -121,10 +121,10 @@ ms.locfileid: "59313153"
 |활동의 컴퍼지션|프로세스 정의는 <xref:System.Activities.Activity>의 자유 컴퍼지션을 사용합니다. 순서도에는 다른 활동과 함께 여러 개의 시퀀스 활동 및 병렬 활동이 포함되어 있습니다.|HiringRequestService|  
 |병렬 활동|-   <xref:System.Activities.Statements.ParallelForEach%601> (두 명의 HR 관리자의 승인 단계를 기다리는 중) 병렬로 CEO 및 HR 관리자의 수신함에 있는 등록에 사용 됩니다.<br />-   <xref:System.Activities.Statements.Parallel> 완료 됨 및 거부 된 단계에서 일부 정리 작업을 수행 하는 데 사용 됩니다.|HiringRequestService|  
 |모델 취소|순서도는 <xref:System.Activities.Statements.CancellationScope>를 사용하여 취소 동작을 만들며, 몇 가지 정리 작업을 수행합니다.|HiringRequestService|  
-|고객 지속성 참가자|`HiringRequestPersistenceParticipant` 워크플로 변수에서 Contoso HR 데이터베이스에 저장 된 테이블에 데이터를 저장 합니다.|HiringRequestService|  
-|워크플로 서비스|`ResumeRequestService` 워크플로 서비스를 사용 하 여 구현 됩니다. 워크플로 정의와 서비스 정보는 ResumeRequestService.xamlx에 포함되어 있습니다. 서비스는 지속성과 추적을 사용하도록 구성됩니다.|ResumeRequestService|  
-|지속적인 타이머|`ResumeRequestService` 지 속성 타이머를 사용 하 여 직원 모집 공고 기간을 정의 (시간 제한이 만료 되 면 직원 모집 공고 닫혀).|ResumeRequestService|  
-|트랜잭션|<xref:System.Activities.Statements.TransactionScope> (새 이력서 수신) 하는 경우 일부의 활동 실행 내에서 데이터의 일관성을 유지 하는 데 사용 됩니다.|ResumeRequestService|  
+|고객 지속성 참가자|`HiringRequestPersistenceParticipant`는 워크플로 변수의 데이터를 Contoso HR 데이터베이스에 저장된 테이블에 저장합니다.|HiringRequestService|  
+|워크플로 서비스|`ResumeRequestService`는 워크플로 서비스를 사용하여 구현됩니다. 워크플로 정의와 서비스 정보는 ResumeRequestService.xamlx에 포함되어 있습니다. 서비스는 지속성과 추적을 사용하도록 구성됩니다.|ResumeRequestService|  
+|지속적인 타이머|`ResumeRequestService`는 지속적인 타이머를 사용하여 직원 모집 공고 기간을 정의하며 직원 모집 공고는 마감 시한이 되면 마감됩니다.|ResumeRequestService|  
+|트랜잭션|<xref:System.Activities.Statements.TransactionScope>는 새 이력서를 받는 경우 몇 가지 활동 실행 내에서 데이터의 일관성을 유지하는 데 사용됩니다.|ResumeRequestService|  
 |트랜잭션|사용자 지정 지속성 참가자(`HiringRequestPersistenceParticipant`)와 사용자 지정 추적 참가자(`HistoryFileTrackingParticipant`)는 같은 트랜잭션을 사용합니다.|HiringRequestService|  
 |[!INCLUDE[wf1](../../../../includes/wf1-md.md)] 응용 프로그램에서 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]을 사용합니다.|두 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 응용 프로그램에서 워크플로에 액세스합니다.|InternalClient/CareersWebSite|  
   

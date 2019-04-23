@@ -15,10 +15,10 @@ helpviewer_keywords:
 - MDI forms [Windows Forms], walkthroughs
 ms.assetid: fbab4221-74af-42d0-bbf4-3c97f7b2e544
 ms.openlocfilehash: 62e137df53d06f5aedb2701b5727c25e52f35614
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319068"
 ---
 # <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>연습: 메뉴 병합 및 ToolStrip 컨트롤을 사용하여 MDI 양식 만들기
@@ -209,7 +209,7 @@ ms.locfileid: "59319068"
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>
-- [방법: MDI 부모 양식 만들기](../advanced/how-to-create-mdi-parent-forms.md)
-- [방법: MDI 자식 양식 만들기](../advanced/how-to-create-mdi-child-forms.md)
-- [방법: MDI 드롭다운 메뉴에 MenuStrip 삽입](how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)
+- [방법: MDI 부모 폼 만들기](../advanced/how-to-create-mdi-parent-forms.md)
+- [방법: MDI 자식 폼 만들기](../advanced/how-to-create-mdi-child-forms.md)
+- [방법: MDI 드롭 다운 메뉴에 MenuStrip 삽입](how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)
 - [ToolStrip 컨트롤](toolstrip-control-windows-forms.md)

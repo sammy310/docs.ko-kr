@@ -1,13 +1,13 @@
 ---
 title: .NET Core용 csproj 형식에 대한 추가 사항
 description: 기존 및 .NET Core csproj 파일 간의 차이점에 대해 알아보기
-ms.date: 09/22/2017
-ms.openlocfilehash: e196be28f622873359153f32c5dd9b0b5a514c0f
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.date: 04/08/2019
+ms.openlocfilehash: f72ea279079b4cdb3a06a2ba64925e2a335e1ed2
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654655"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517332"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core용 csproj 형식에 대한 추가 사항
 
@@ -15,7 +15,7 @@ ms.locfileid: "58654655"
 
 ## <a name="implicit-package-references"></a>암시적 패키지 참조
 
-메타패키지는 프로젝트 파일의 `<TargetFramework>` 또는 `<TargetFrameworks>` 속성에 지정된 대상 프레임워크를 기준으로 암시적으로 참조됩니다. `<TargetFramework>`가 지정된 경우 `<TargetFrameworks>`는 순서와 관계없이 무시됩니다.
+메타패키지는 프로젝트 파일의 `<TargetFramework>` 또는 `<TargetFrameworks>` 속성에 지정된 대상 프레임워크를 기준으로 암시적으로 참조됩니다. `<TargetFramework>`가 지정된 경우 `<TargetFrameworks>`는 순서와 관계없이 무시됩니다. 자세한 내용은 [패키지, 메타패키지 및 프레임워크](../packages.md)를 참조하세요. 
 
 ```xml
  <PropertyGroup>
@@ -31,15 +31,39 @@ ms.locfileid: "58654655"
 
 ### <a name="recommendations"></a>권장 사항
 
-`Microsoft.NETCore.App` 또는 `NetStandard.Library` 메타패키지가 암시적으로 참조되기 때문에 권장되는 모범 사례는 다음과 같습니다.
+`Microsoft.NETCore.App` 또는 `NETStandard.Library` 메타패키지가 암시적으로 참조되기 때문에 권장되는 모범 사례는 다음과 같습니다.
 
-* .NET Core 또는 .NET Standard를 대상으로 하는 경우 절대로 프로젝트 파일의 `<PackageReference>` 항목을 통해 `Microsoft.NETCore.App` 또는 `NetStandard.Library` 메타패키지를 명시적으로 참조하지 않습니다.
+* .NET Core 또는 .NET Standard를 대상으로 하는 경우 절대로 프로젝트 파일의 `<PackageReference>` 항목을 통해 `Microsoft.NETCore.App` 또는 `NETStandard.Library` 메타패키지를 명시적으로 참조하지 않습니다.
 * .NET Core를 대상으로 할 때 특정 버전의 런타임이 필요한 경우 메타패키지를 참조하는 대신 프로젝트의 `<RuntimeFrameworkVersion>` 속성(예: `1.0.4`)을 사용해야 합니다.
-    * 예를 들어 [자체 포함 배포](../deploying/index.md#self-contained-deployments-scd)를 사용하고, 1.0.0 LTS 런타임이라는 특정 패치 버전이 필요한 경우 이런 일이 발생할 수 있습니다.
-* .NET Standard를 대상으로 할 때 특정 버전의 `NetStandard.Library` 메타패키지가 필요한 경우 `<NetStandardImplicitPackageVersion>` 속성을 사용하고 필요한 버전을 설정할 수 있습니다.
-* .NET Framework 프로젝트의 `Microsoft.NETCore.App` 또는 `NetStandard.Library` 메타패키지에 참조를 명시적으로 추가하거나 업데이트하지 마십시오. .NET Standard 기반 NuGet 패키지를 사용할 때 모든 버전의 `NetStandard.Library`가 필요한 경우 NuGet은 자동으로 해당 버전을 설치합니다.
+  * 예를 들어 [자체 포함 배포](../deploying/index.md#self-contained-deployments-scd)를 사용하고, 1.0.0 LTS 런타임이라는 특정 패치 버전이 필요한 경우 이런 일이 발생할 수 있습니다.
+* .NET Standard를 대상으로 할 때 특정 버전의 `NETStandard.Library` 메타패키지가 필요한 경우 `<NetStandardImplicitPackageVersion>` 속성을 사용하고 필요한 버전을 설정할 수 있습니다.
+* .NET Framework 프로젝트의 `Microsoft.NETCore.App` 또는 `NETStandard.Library` 메타패키지에 참조를 명시적으로 추가하거나 업데이트하지 마십시오. .NET Standard 기반 NuGet 패키지를 사용할 때 모든 버전의 `NETStandard.Library`가 필요한 경우 NuGet은 자동으로 해당 버전을 설치합니다.
+
+## <a name="implicit-version-for-some-package-references"></a>일부 패키지 참조의 암시적 버전
+
+대부분 [`<PackageReference>`](#packagereference)를 사용하려면 `Version` 특성을 설정하여 사용할 NuGet 패키지 버전을 지정해야 합니다. 그러나 .NET Core 2.1 또는 2.2를 사용하고 [Microsoft.AspNetCore.App](/aspnet/core/fundamentals/metapackage-app) 또는 [Microsoft.AspNetCore.All](/aspnet/core/fundamentals/metapackage)을 참조하는 경우에는 해당 특성이 필요하지 않습니다. .NET Core SDK는 사용해야 하는 패키지의 버전을 자동으로 선택할 수 있습니다.
+
+### <a name="recommendation"></a>권장 사항
+
+`Microsoft.AspNetCore.App` 또는 `Microsoft.AspNetCore.All` 패키지를 참조하는 경우에는 해당 버전을 지정하지 마세요. 버전을 지정하면 SDK에서 경고 NETSDK1071이 생성될 수 있습니다. 이 경고를 해결하려면 다음 예제와 같이 패키지 버전을 제거합니다.
+
+```xml
+<ItemGroup>
+  <PackageReference Include="Microsoft.AspNetCore.App" />
+</ItemGroup>
+```
+
+> 알려진 문제: .NET Core 2.1 SDK는 프로젝트에서 Microsoft.NET.Sdk.Web을 사용하는 경우에만 이 구문을 지원했습니다. 이 문제는 .NET Core 2.2 SDK에서 해결되었습니다.
+
+ASP.NET Core 메타패키지에 대한 이 참조의 동작은 대부분의 일반 NuGet 패키지와 약간 다릅니다. 이 메타패키지를 사용하는 애플리케이션의 [프레임워크 종속 배포](../deploying/index.md#framework-dependent-deployments-fdd)에서는 자동으로 ASP.NET Core 공유 프레임워크를 활용합니다. 메타패키지를 사용할 경우, 참조되는 ASP.NET Core NuGet 패키지의 자산이 애플리케이션을 사용하여 배포되지 **않습니다**. 이 자산은 ASP.NET Core 공유 프레임워크에 포함됩니다. 공유 프레임워크의 자산은 애플리케이션 시작 시간을 개선하기 위해 대상 플랫폼에 최적화됩니다. 공유 프레임워크에 대한 자세한 내용은 [.NET Core 배포 패키징](../build/distribution-packaging.md)을 참조하세요.
+
+버전이 지정되면 프레임워크 종속 배포의 경우 ASP.NET Core 공유 프레임워크의 최소 버전으로 처리되고, 자체 포함 배포의 경우 정확한 버전으로 처리됩니다. 다음과 같은 결과가 나타날 수 있습니다.
+
+* 서버에 설치된 ASP.NET Core 버전이 PackageReference에 지정된 버전보다 낮으면 .NET Core 프로세스가 시작되지 않습니다. Azure와 같은 호스팅 환경에서 업데이트를 제공되기 전에 일반적으로 NuGet.org에서 메타패키지 업데이트를 사용할 수 있습니다. ASP.NET Core에 대한 PackageReference에서 버전을 업데이트하면 배포된 애플리케이션이 실패할 수 있습니다.
+* 애플리케이션이 [자체 포함 배포](../deploying/index.md#self-contained-deployments-scd)로 배포되면 애플리케이션에는 .NET Core에 대한 최신 보안 업데이트가 포함되지 않을 수 있습니다. 버전이 지정되지 않으면 SDK는 자체 포함 배포에 최신 버전의 ASP.NET Core를 자동으로 포함할 수 있습니다.
 
 ## <a name="default-compilation-includes-in-net-core-projects"></a>.NET Core 프로젝트의 기본 컴파일 포함 사항
+
 최신 SDK 버전의 *csproj* 형식으로 전환하면서 컴파일 항목에 대한 기본 포함 사항과 제외 사항 및 포함 리소스를 SDK 속성 파일로 이동했습니다. 따라서 더 이상 프로젝트 파일에서 컴파일 항목을 지정할 필요가 없습니다.
 
 이렇게 하는 주된 이유는 프로젝트 파일에서 혼란을 줄이기 위해서입니다. SDK의 기본값은 가장 일반적인 사용 사례를 다루므로 개발자가 만드는 모든 프로젝트에서 반복할 필요가 없습니다. 결과적으로 프로젝트 파일 수가 줄어 훨씬 쉽게 이해하고 편집(필요한 경우)할 수 있습니다.
@@ -100,6 +124,7 @@ ms.locfileid: "58654655"
 ## <a name="additions"></a>추가
 
 ### <a name="sdk-attribute"></a>SDK 특성
+
 *.csproj* 파일의 루트 `<Project>` 요소에 `Sdk`라고 하는 새 특성이 있습니다. `Sdk`는 프로젝트에서 사용될 SDK를 지정합니다. [레이어 문서](cli-msbuild-architecture.md)에 설명된 것처럼 SDK는 .NET Core 코드를 빌드할 수 있는 MSBuild [작업](/visualstudio/msbuild/msbuild-tasks) 및 [대상](/visualstudio/msbuild/msbuild-targets)의 집합입니다. .NET Core 도구와 함께 다음 세 가지 주요 SDK가 제공됩니다.
 
 1. `Microsoft.NET.Sdk`의 ID와 함께 .NET Core SDK
@@ -282,7 +307,6 @@ SPDX 식별자가 할당되지 않은 라이선스나 사용자 지정 라이선
 ### <a name="packagelicenseurl"></a>PackageLicenseUrl
 
 패키지에 적용되는 라이선스에 대한 URL입니다. (Visual Studio 15.9.4, .NET SDK 2.1.502 및 2.2.101 이후부터 사용되지 않습니다.)
-
 
 ### <a name="packageiconurl"></a>PackageIconUrl
 

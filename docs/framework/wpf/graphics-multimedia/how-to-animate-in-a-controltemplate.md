@@ -6,11 +6,11 @@ helpviewer_keywords:
 - ControlTemplates [WPF], animating within
 ms.assetid: 97abb5d9-4dc7-4085-a011-54bd8bcb497b
 ms.openlocfilehash: a82cd68196382d541f1085b03f2e199a1bd0145f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222135"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59770739"
 ---
 # <a name="how-to-animate-in-a-controltemplate"></a>방법: ControlTemplate에서 애니메이션 효과 적용
 이 예제에 사용 하는 방법을 보여 줍니다 <xref:System.Windows.Media.Animation.Storyboard>, <xref:System.Windows.EventTrigger>, 및 <xref:System.Windows.Trigger> 내에서 애니메이션 효과를 줄 개체를 <xref:System.Windows.Controls.ControlTemplate>입니다.  

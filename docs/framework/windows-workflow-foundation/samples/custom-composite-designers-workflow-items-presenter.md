@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
 ms.openlocfilehash: 61f61962e06e94572b7eb564ab08b829ba2c864f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344873"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>사용자 지정 복합 디자이너 - 워크플로 항목 프리젠터
@@ -32,15 +32,15 @@ ms.locfileid: "59344873"
 ## <a name="sample-highlights"></a>샘플의 중요 사항
  이 샘플의 코드는 다음 내용을 보여 줍니다.
 
--   에 대 한 활동 디자이너가 빌드됩니다.  `Parallel`
+-   디자이너가 빌드되는 활동:  `Parallel`
 
 -   <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>를 사용하여 사용자 지정 활동 디자이너를 만드는 방법 고려해야 할 몇 가지 사항은 다음과 같습니다.
 
-    -   WPF 데이터 바인딩을 사용하여 `ModelItem.Branches`에 바인딩합니다. `ModelItem` 속성 켜져 `WorkflowElementDesigner` 은 디자이너가 사용 될,이 경우 기본 개체를 참조 하는 우리의 `Parallel`합니다.
+    -   WPF 데이터 바인딩을 사용하여 `ModelItem.Branches`에 바인딩합니다. `ModelItem`은 디자이너가 사용될 기본 개체(이 경우 `WorkflowElementDesigner`)를 참조하는 `Parallel`의 속성입니다.
 
     -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType>을 사용하여 컬렉션의 개별 항목을 시각적으로 표시할 수 있습니다.
 
-    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> 컬렉션에 있는 항목의 레이아웃을 결정할 제공 될 수 있는 템플릿입니다. 이 경우에는 가로 스택 패널이 사용됩니다.
+    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType>은 컬렉션에 있는 항목의 레이아웃을 결정하는 데 제공할 수 있는 템플릿입니다. 이 경우에는 가로 스택 패널이 사용됩니다.
 
  다음 코드 예제에서는 이를 보여 줍니다.
 
@@ -160,4 +160,4 @@ End Sub
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Activities.Presentation.WorkflowItemsPresenter>
-- [Workflow Designer로 응용 프로그램 개발](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
+- [워크플로 디자이너로 응용 프로그램 개발](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

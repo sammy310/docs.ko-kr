@@ -3,10 +3,10 @@ title: 수량자 작업 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ae1a2b73-503c-4f4b-a3fd-31b5adbee67c
 ms.openlocfilehash: e871a77caf0b7cfe361f11462085180c17bf2057
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58816046"
 ---
 # <a name="quantifier-operations-visual-basic"></a>수량자 작업 (Visual Basic)
@@ -27,7 +27,7 @@ ms.locfileid: "58816046"
 |포함|시퀀스에 지정된 요소가 들어 있는지를 확인합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.Contains%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Contains%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-examples"></a>쿼리 식 구문 예제  
- 이러한 예에서 사용 된 `Aggregate` Visual Basic의 LINQ 쿼리에서 필터링 조건의 일부로 절.  
+ 이러한 예에서 사용 된 `Aggregate` Visual basic의 LINQ 쿼리에서 필터링 조건의 일부로 절.  
   
  다음 예제에서는 합니다 `Aggregate` 절 및 <xref:System.Linq.Enumerable.All%2A> 확장 메서드를 컬렉션에서 해당 애완 동물 모든 지정 된 기간 보다 오래 된 사람들을 반환 합니다.  
   

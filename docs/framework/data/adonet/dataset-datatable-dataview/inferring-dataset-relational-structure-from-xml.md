@@ -3,10 +3,10 @@ title: XML에서 데이터 집합 관계형 구조 유추
 ms.date: 03/30/2017
 ms.assetid: cd2f41c6-6785-420e-aa43-3ceb0bdccdce
 ms.openlocfilehash: 9a9dc7d94728ea797a8930d3f77068fdd3ebfb5c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191544"
 ---
 # <a name="inferring-dataset-relational-structure-from-xml"></a>XML에서 데이터 집합 관계형 구조 유추
@@ -19,7 +19,7 @@ ms.locfileid: "59191544"
  XML 문서에 나타난 모든 특성을 유추 과정에 포함시켜야 하는 것은 아닙니다. 네임스페이스로 한정된 특성에서는 XML 문서에는 중요하지만 <xref:System.Data.DataSet> 스키마에는 중요하지 않은 메타데이터를 포함할 수 있습니다. <xref:System.Data.DataSet.InferXmlSchema%2A>를 사용하면 유추 과정에서 네임스페이스를 무시하도록 지정할 수 있습니다. 자세한 내용은 [XML에서 데이터 집합 스키마 정보 로드](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [데이터 집합 스키마 유추 프로세스 요약](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/summary-of-the-dataset-schema-inference-process.md)  
+ [데이터 세트 스키마 유추 프로세스 요약](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/summary-of-the-dataset-schema-inference-process.md)  
  XML로부터 <xref:System.Data.DataSet>의 스키마를 유추하는 규칙에 대한 고급 요약 정보를 제공합니다.  
   
  [테이블 유추](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-tables.md)  
@@ -41,7 +41,7 @@ ms.locfileid: "59191544"
  [데이터 집합에서 XML 사용](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  <xref:System.Data.DataSet> 개체가 XML 데이터와 상호 작용하는 방법을 설명합니다.  
   
- [XML 스키마에서 데이터 집합 관계형 구조 파생(XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ [XML 스키마에서 데이터 세트 관계형 구조 파생(XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
  XSD(XML 스키마 정의 언어) 스키마에서 만들어지는 <xref:System.Data.DataSet>의 관계 구조 또는 스키마에 대해 설명합니다.  
   
  [ADO.NET 개요](../../../../../docs/framework/data/adonet/ado-net-overview.md)  

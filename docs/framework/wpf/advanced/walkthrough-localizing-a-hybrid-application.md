@@ -6,10 +6,10 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
 ms.openlocfilehash: 01530d4ae9779934948bbaff60fbbd392de6e701
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329299"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>연습: 하이브리드 애플리케이션 지역화
@@ -46,7 +46,7 @@ ms.locfileid: "59329299"
 
 1. 만들기는 **WPF 앱** 라는 프로젝트 `LocalizingWpfInWf`합니다.  (**파일** > **새** > **프로젝트** > **Visual C#** 또는 **Visual Basic**   >  **클래식 바탕 화면** > **WPF 응용 프로그램**).
 
-2. 추가 된 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.UserControl> 라는 요소가 `SimpleControl` 프로젝트에.
+2. 추가 된 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> 라는 요소가 `SimpleControl` 프로젝트에.
 
 3. 사용 된 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤을는 `SimpleControl` 요소를 폼에 합니다. 자세한 내용은 [연습: Windows Forms에서 3-D WPF 복합 컨트롤 호스팅](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)합니다.
 
@@ -176,6 +176,6 @@ Windows Forms 디자이너에서는 위성 어셈블리에서 지역화를 사�
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [애플리케이션 지역화](how-to-localize-an-application.md)
+- [응용 프로그램 지역화](how-to-localize-an-application.md)
 - [연습: Windows Forms 지역화](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100))
 - [Visual Studio에서 XAML 디자인](/visualstudio/designers/designing-xaml-in-visual-studio)

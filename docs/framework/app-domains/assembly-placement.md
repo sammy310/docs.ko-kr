@@ -10,10 +10,10 @@ ms.assetid: ff8d48bc-f606-484f-9fe1-d0af264269fb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a9b8357be5b9f49569114cbc1c2942eea03696eb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180182"
 ---
 # <a name="assembly-placement"></a>어셈블리 배치
@@ -24,6 +24,6 @@ ms.locfileid: "59180182"
 ## <a name="see-also"></a>참고 항목
 
 - [런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [앱 구성](../../../docs/framework/configure-apps/index.md)
+- [응용 프로그램 구성](../../../docs/framework/configure-apps/index.md)
 - [비관리 코드와의 상호 운용](../../../docs/framework/interop/index.md)
 - [공용 언어 런타임의 어셈블리](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

@@ -12,10 +12,10 @@ helpviewer_keywords:
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
 ms.openlocfilehash: d68781aa12ab7c1c717031ca252c5f3120649edc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335487"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>방법: 연산자 프로시저 (Visual Basic)를 호출 합니다.
@@ -57,11 +57,11 @@ ms.locfileid: "59335487"
 
 - [연산자 프로시저](./operator-procedures.md)
 - [방법: 연산자 정의](./how-to-define-an-operator.md)
-- [방법: 변환 연산자 정의](./how-to-define-a-conversion-operator.md)
-- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
-- [Widening](../../../../visual-basic/language-reference/modifiers/widening.md)
+- [방법: 변환 연산자를 정의 합니다.](./how-to-define-a-conversion-operator.md)
+- [Operator 문](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [확장](../../../../visual-basic/language-reference/modifiers/widening.md)
 - [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)
 - [Structure 문](../../../../visual-basic/language-reference/statements/structure-statement.md)
-- [방법: 구조체 선언](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [방법: 구조 선언](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
 - [암시적 변환과 명시적 변환](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [확대 변환과 축소 변환](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

@@ -3,10 +3,10 @@ title: 데이터 원본에 연결(ADO.NET)
 ms.date: 03/30/2017
 ms.assetid: 9abc3f92-1be3-4e1a-b360-762dc689650e
 ms.openlocfilehash: c04624be758e4bc7c8b1981ad6a9dc44430d62b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59083714"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>데이터 원본에 연결(ADO.NET)
@@ -26,6 +26,6 @@ ADO.NET 사용 하 여는 **연결** 개체에 연결 문자열에 필요한 인
 - [연결 문자열](../../../../docs/framework/data/adonet/connection-strings.md)
 - [연결 풀링](../../../../docs/framework/data/adonet/connection-pooling.md)
 - [명령 및 매개 변수](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [DataAdapters 및 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [DataAdapter 및 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [트랜잭션 및 동시성](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

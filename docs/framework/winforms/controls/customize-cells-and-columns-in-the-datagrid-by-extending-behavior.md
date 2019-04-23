@@ -10,10 +10,10 @@ helpviewer_keywords:
 - cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 9b7dc7b6-5ce6-4566-9949-902f74f17a81
 ms.openlocfilehash: 6b0773b4c41b77fe43a5b7fba994778ae18c16c1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325009"
 ---
 # <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>방법: 동작 및 모양을 확장하여 Windows Forms DataGridView 컨트롤에서 셀 및 열 사용자 지정
@@ -78,4 +78,4 @@ ms.locfileid: "59325009"
 - [Windows Forms DataGridView 컨트롤 사용자 지정](customizing-the-windows-forms-datagridview-control.md)
 - [DataGridView 컨트롤 아키텍처](datagridview-control-architecture-windows-forms.md)
 - [Windows Forms DataGridView 컨트롤의 열 형식](column-types-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 컨트롤의 크기 조정에 대한 모범 사례](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 컨트롤의 크기를 조정하는 최선의 방법](best-practices-for-scaling-the-windows-forms-datagridview-control.md)

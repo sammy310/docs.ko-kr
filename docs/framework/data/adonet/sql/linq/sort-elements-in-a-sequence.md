@@ -6,17 +6,17 @@ dev_langs:
 - vb
 ms.assetid: d59b93a9-50c8-4770-a114-d902f6a0ea76
 ms.openlocfilehash: 33473eadefabc2bcbbb552d225d021eae4bed0bb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59169015"
 ---
 # <a name="sort-elements-in-a-sequence"></a>시퀀스의 요소 정렬
 <xref:System.Linq.Enumerable.OrderBy%2A> 연산자를 사용하여 하나 이상의 키에 따른 시퀀스를 정렬합니다.  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 같이 간단한 기본 형식에 따라 순서를 지원 하도록 설계 되었습니다 `string`, `int`등입니다. 익명 형식과 같이 복잡한 다중값 클래스에 대한 순서는 지원되지 않습니다. 또한 `byte` 데이터 형식을 지원하지 않습니다.  
+>  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 `string`, `int` 등과 같이 간단한 기본 형식에 따라 순서를 지원하도록 디자인되었습니다. 익명 형식과 같이 복잡한 다중값 클래스에 대한 순서는 지원되지 않습니다. 또한 `byte` 데이터 형식을 지원하지 않습니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 고용 날짜 기준으로 `Employees`를 정렬합니다.  

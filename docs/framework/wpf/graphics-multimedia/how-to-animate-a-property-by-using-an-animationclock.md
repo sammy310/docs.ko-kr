@@ -9,10 +9,10 @@ helpviewer_keywords:
 - AnimationClocks [WPF]
 ms.assetid: e6542021-714c-4675-9567-04f1c7380834
 ms.openlocfilehash: 4fa9efc593461d26eabaee5e2f62c1a17da1b543
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59201366"
 ---
 # <a name="how-to-animate-a-property-by-using-an-animationclock"></a>방법: AnimationClock을 사용하여 속성에 애니메이션 효과 주기
@@ -38,6 +38,6 @@ ms.locfileid: "59201366"
   
 ## <a name="see-also"></a>참고자료
 
-- [스토리보드를 사용하여 속성에 애니메이션 효과 주기](how-to-animate-a-property-by-using-a-storyboard.md)
-- [스토리보드를 사용하지 않고 속성에 애니메이션 효과 주기](how-to-animate-a-property-without-using-a-storyboard.md)
+- [Storyboard를 사용하여 속성에 애니메이션 효과 주기](how-to-animate-a-property-by-using-a-storyboard.md)
+- [Storyboard를 사용하지 않고 속성에 애니메이션 효과 주기](how-to-animate-a-property-without-using-a-storyboard.md)
 - [속성 애니메이션 기술 개요](property-animation-techniques-overview.md)

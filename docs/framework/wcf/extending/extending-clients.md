@@ -5,10 +5,10 @@ helpviewer_keywords:
 - proxy extensions [WCF]
 ms.assetid: 1328c61c-06e5-455f-9ebd-ceefb59d3867
 ms.openlocfilehash: 99b4dd5e4acfce8bea4d3c2cae3a53152585675d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074757"
 ---
 # <a name="extending-clients"></a>클라이언트 확장
@@ -119,4 +119,4 @@ ms.locfileid: "59074757"
 - <xref:System.ServiceModel.Dispatcher.ClientRuntime>
 - <xref:System.ServiceModel.Dispatcher.ClientOperation>
 - [방법: 클라이언트에서 메시지 검사 또는 수정](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)
-- [방법: 매개 변수 검사 또는 수정](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
+- [방법: 검사 하거나 매개 변수를 수정 합니다.](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)

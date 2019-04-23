@@ -5,10 +5,10 @@ ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4244d47c099fe7a5b0093b94ef44b4354bae86f1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59173136"
 ---
 # <a name="typeinstantiation-element-net-native"></a>\<TypeInstantiation > 요소 (.NET 네이티브)
@@ -73,12 +73,12 @@ ms.locfileid: "59173136"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<이벤트 >](../../../docs/framework/net-native/event-element-net-native.md)|이 형식에 속하는 이벤트에 리플렉션 정책을 적용합니다.|  
-|[\<필드 >](../../../docs/framework/net-native/field-element-net-native.md)|이 형식에 속하는 필드에 리플렉션 정책을 적용합니다.|  
+|[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|이 형식에 속하는 이벤트에 리플렉션 정책을 적용합니다.|  
+|[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|이 형식에 속하는 필드에 리플렉션 정책을 적용합니다.|  
 |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|포함 `<TypeInstantiation>` 요소가 나타내는 형식에 정책이 적용된 경우 형식에 해당 정책을 적용합니다.|  
-|[\<메서드 >](../../../docs/framework/net-native/method-element-net-native.md)|이 형식에 속하는 메서드에 리플렉션 정책을 적용합니다.|  
+|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|이 형식에 속하는 메서드에 리플렉션 정책을 적용합니다.|  
 |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|이 형식에 속하는 생성된 제네릭 메서드에 리플렉션 정책을 적용합니다.|  
-|[\<속성 >](../../../docs/framework/net-native/property-element-net-native.md)|이 형식에 속하는 속성에 리플렉션 정책을 적용합니다.|  
+|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|이 형식에 속하는 속성에 리플렉션 정책을 적용합니다.|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|중첩된 형식에 리플렉션 정책을 적용합니다.|  
 |`<TypeInstantiation>`|생성된 중첩 제네릭 형식에 리플렉션 정책을 적용합니다.|  
   
@@ -86,10 +86,10 @@ ms.locfileid: "59173136"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<응용 프로그램 >](../../../docs/framework/net-native/application-element-net-native.md)|런타임에 해당 메타데이터를 리플렉션에 사용할 수 있는 응용 프로그램 수준 형식 및 형식 멤버에 대한 컨테이너로 사용됩니다.|  
-|[\<어셈블리 >](../../../docs/framework/net-native/assembly-element-net-native.md)|지정된 어셈블리의 모든 형식에 리플렉션 정책을 적용합니다.|  
+|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|런타임에 해당 메타데이터를 리플렉션에 사용할 수 있는 응용 프로그램 수준 형식 및 형식 멤버에 대한 컨테이너로 사용됩니다.|  
+|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|지정된 어셈블리의 모든 형식에 리플렉션 정책을 적용합니다.|  
 |[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|런타임에 해당 메타데이터를 리플렉션에 사용할 수 있는 형식 및 형식 멤버가 포함된 어셈블리를 정의합니다.|  
-|[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|네임스페이스의 모든 형식에 리플렉션 정책을 적용합니다.|  
+|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|네임스페이스의 모든 형식에 리플렉션 정책을 적용합니다.|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
 |`<TypeInstantiation>`|생성된 제네릭 형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
   

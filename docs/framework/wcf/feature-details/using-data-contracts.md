@@ -10,10 +10,10 @@ helpviewer_keywords:
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
 ms.openlocfilehash: 28033e3e90c5010eee63f35791b0c3c77e64d1ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129937"
 ---
 # <a name="using-data-contracts"></a>데이터 계약 사용
@@ -79,5 +79,5 @@ ms.locfileid: "59129937"
 - [데이터 계약 버전 관리](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
 - [버전 독립적 Serialization 콜백](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
 - [데이터 멤버 기본값](../../../../docs/framework/wcf/feature-details/data-member-default-values.md)
-- [데이터 계약 Serializer에서 지원하는 형식](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
-- [방법: 클래스 또는 구조체에 대한 기본 데이터 계약 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)
+- [데이터 계약 직렬 변환기에서 지원하는 형식](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [방법: 클래스 또는 구조체에 대 한 기본 데이터 계약 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)

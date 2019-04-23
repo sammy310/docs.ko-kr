@@ -7,10 +7,10 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], displaying scroll bars
 ms.assetid: cdeb42e1-86e8-410c-ba46-18aec264ef5f
 ms.openlocfilehash: 152706cee511e4bca1dd324a652e8077b1f8548a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312659"
 ---
 # <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>방법: Windows Forms RichTextBox 컨트롤에서 스크롤 막대 표시
@@ -24,7 +24,7 @@ ms.locfileid: "59312659"
   
     |값|설명|  
     |-----------|-----------------|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Both> (기본값)|텍스트 너비 또는 컨트롤의 길이 초과 하는 경우에 가로 또는 세로 스크롤 막대 또는 둘 다를 표시 합니다.|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Both>(기본값)|텍스트 너비 또는 컨트롤의 길이 초과 하는 경우에 가로 또는 세로 스크롤 막대 또는 둘 다를 표시 합니다.|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.None>|스크롤 막대의 표시 되지 않습니다.|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.Horizontal>|가로 스크롤 막대의 텍스트 컨트롤의 너비를 초과 하는 경우에 표시 됩니다. (이 발생 합니다 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 속성으로 설정 되어 있어야 `false`.)|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.Vertical>|세로 스크롤 막대의 텍스트 컨트롤의 높이 초과 하는 경우에 표시 됩니다.|  
@@ -37,7 +37,7 @@ ms.locfileid: "59312659"
     |값|설명|  
     |-----------|-----------------|  
     |`false`|컨트롤의 텍스트 줄 바꿈을 도달할 때까지 오른쪽으로 스크롤됩니다 컨트롤의 너비에 맞게 자동으로 조정 되지 됩니다. 위의 가로 스크롤 막대 또는 둘 다 선택한 경우이 값을 사용 합니다.|  
-    |`true` (기본값)|컨트롤의 텍스트 컨트롤의 너비에 맞게 자동으로 조정 됩니다. 가로 스크롤 막대가 표시 되지 않습니다. 하나 이상의 단락 표시 위에 세로 스크롤 막대 또는 none을 선택한 경우이 값을 사용 합니다.|  
+    |`true`(기본값)|컨트롤의 텍스트 컨트롤의 너비에 맞게 자동으로 조정 됩니다. 가로 스크롤 막대가 표시 되지 않습니다. 하나 이상의 단락 표시 위에 세로 스크롤 막대 또는 none을 선택한 경우이 값을 사용 합니다.|  
   
 ## <a name="see-also"></a>참고자료
 

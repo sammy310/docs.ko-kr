@@ -3,14 +3,14 @@ title: 기타 정식 함수
 ms.date: 03/30/2017
 ms.assetid: 729bd47b-8e41-494c-a9a9-dcabf8b74312
 ms.openlocfilehash: 05eea547b8c1ad4adf39faa5def5f25c9d45d767
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59146369"
 ---
 # <a name="other-canonical-functions"></a>기타 정식 함수
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 비트, 집계, 수치로 분류 되지 않은 정식 함수를 포함 날짜/시간 또는 문자열입니다.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]에는 비트, 집계, 수치, 날짜/시간, 문자열 등으로 분류되지 않는 정식 함수가 포함됩니다.  
   
  다음 표에서는 기타 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 정식 함수를 보여 줍니다.  
   

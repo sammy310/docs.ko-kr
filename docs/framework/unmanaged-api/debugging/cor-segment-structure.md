@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: faf1be65d308b223490f3ae67eed3d8a2b1688b9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59223071"
 ---
 # <a name="corsegment-structure"></a>COR_SEGMENT 구조체
@@ -47,7 +47,7 @@ typedef struct _COR_SEGMENT {
 |`heap`|메모리 영역이 있는 힙 번호입니다. 자세한 내용은 설명 부분을 참조하세요.|  
   
 ## <a name="remarks"></a>설명  
- `COR_SEGMENTS` 구조는 관리되는 힙의 메모리 영역을 나타냅니다.  `COR_SEGMENTS` 개체의 멤버인 합니다 [ICorDebugHeapRegionEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) 컬렉션 개체를 호출 하 여 채워집니다 합니다 [ICorDebugProcess5::EnumerateHeapRegions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md) 메서드.  
+ `COR_SEGMENTS` 구조는 관리되는 힙의 메모리 영역을 나타냅니다.  `COR_SEGMENTS` 개체는 [ICorDebugHeapRegionEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) 컬렉션 개체의 멤버이며, [ICorDebugProcess5::EnumerateHeapRegions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md) 메서드를 호출하여 채웁니다.  
   
  `heap` 필드는 보고되는 힙에 해당하는 프로세서 번호입니다. 워크스테이션 가비지 수집기의 경우 워크스테이션에 가비지 수집 힙이 하나만 있으므로, 해당 값은 항상 0입니다. 서버 가비지 수집기의 값은 힙이 연결된 프로세서에 해당합니다. 가비지 수집기의 구현 세부 정보로 인해 실제 프로세서보다 가비지 수집 힙이 더 많거나 적을 수 있습니다.  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a97ba44cfadc27582b2ae9119c01b392f14a19f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7ee801a5af214e2306e6f1667b5e4ee067683fdb
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496497"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59093113"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe(CorFlags 변환 도구)
 CorFlags 변환 도구를 사용하면 이식할 수 있는 실행 가능 이미지 헤더의 CorFlags 섹션을 구성할 수 있습니다.  
@@ -53,6 +53,7 @@ CorFlags.exe assembly [options]
  옵션을 지정하지 않으면 CorFlags 변환 도구에서 지정한 어셈블리에 대한 플래그를 표시합니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [도구](../../../docs/framework/tools/index.md)
 - [64비트 애플리케이션](../../../docs/framework/64-bit-apps.md)
 - [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

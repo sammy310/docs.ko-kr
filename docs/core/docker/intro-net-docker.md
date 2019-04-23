@@ -3,12 +3,12 @@ title: Docker 소개
 description: 이 문서에서는 .NET Core 애플리케이션 컨텍스트에서 Docker를 소개하고 간략하게 설명합니다.
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 725d8301a27f1109c85a89945f0fb8403e255ab4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: acf1307c241d9462278bc0fce5cf59fdde0750a3
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817257"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480731"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 및 Docker 소개
 
@@ -57,6 +57,9 @@ Kubernetes를 사용하여 Linux 컨테이너를 확장 및 오케스트레이�
 
 * [Azure App Service](https://azure.microsoft.com/services/app-service/containers/)\
 PaaS 환경에서 Linux 컨테이너를 사용하여 웹앱 또는 API를 배포합니다.
+
+* [Azure Container Instances](https://azure.microsoft.com/services/container-instances/)\
+더 높은 수준의 관리 서비스 없이 클라우드에서 컨테이너를 호스트합니다.
 
 * [Azure Batch](https://azure.microsoft.com/services/batch/)\
 컨테이너를 사용하여 반복적인 컴퓨팅 작업을 실행합니다.

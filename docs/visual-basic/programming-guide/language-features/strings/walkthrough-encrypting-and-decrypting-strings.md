@@ -8,10 +8,10 @@ helpviewer_keywords:
 - strings [Visual Basic], decrypting
 ms.assetid: 1f51e40a-2f88-43e2-a83e-28a0b5c0d6fd
 ms.openlocfilehash: 1d003df87327e14a6cbd65222f86c3dc4df169ff
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334044"
 ---
 # <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>연습: 암호화 및 Visual Basic의 문자열을 암호 해독
@@ -81,4 +81,4 @@ ms.locfileid: "59334044"
 - <xref:System.Security.Cryptography.DES>
 - <xref:System.Security.Cryptography.TripleDES>
 - <xref:System.Security.Cryptography.Rijndael>
-- [암호화 서비스](../../../../standard/security/cryptographic-services.md)
+- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)

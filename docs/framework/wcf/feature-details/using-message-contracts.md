@@ -8,10 +8,10 @@ helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
 ms.openlocfilehash: 4c5f1ab0b6fa56e4836a950ca3f2bbad19cfbff2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59121981"
 ---
 # <a name="using-message-contracts"></a>메시지 계약 사용
@@ -105,7 +105,7 @@ public class BankingTransaction
  <xref:System.ServiceModel.MessageContractAttribute>를 사용하면 SOAP 메시지 본문에서 래퍼 요소의 이름을 제어하는 WrapperName 및 WrapperNamespace 특성을 지정할 수 있습니다. 기본적으로 메시지 계약 형식의 이름이 래퍼로 사용되며 메시지 계약이 정의된 네임스페이스 `http://tempuri.org/`가 기본 네임스페이스로 사용됩니다.  
   
 > [!NOTE]
->  <xref:System.Runtime.Serialization.KnownTypeAttribute> 특성은 메시지 계약에서 무시 됩니다. <xref:System.Runtime.Serialization.KnownTypeAttribute>가 필요할 경우 해당 메시지 계약을 사용 중인 작업에 포함시킵니다.  
+>  <xref:System.Runtime.Serialization.KnownTypeAttribute> 특성은 메시지 계약에서 무시됩니다. <xref:System.Runtime.Serialization.KnownTypeAttribute>가 필요할 경우 해당 메시지 계약을 사용 중인 작업에 포함시킵니다.  
   
 ## <a name="controlling-header-and-body-part-names-and-namespaces"></a>헤더와 본문 부분의 이름 및 네임스페이스 제어  
  메시지 계약의 SOAP 표현에서 각 헤더 및 본문 부분은 하나의 이름과 하나의 네임스페이스를 가진 XML 요소로 매핑됩니다.  
@@ -244,7 +244,7 @@ public class PatientRecord
 ## <a name="soap-header-attributes"></a>SOAP 헤더 특성  
  SOAP 표준은 헤더에 있을 수 있는 다음 특성을 정의합니다.  
   
--   `Actor/Role` (`Actor` soap 1.1 `Role` soap 1.2)  
+-   `Actor/Role`(SOAP 1.1에서는 `Actor`, SOAP 1.2에서는 `Role`)  
   
 -   `MustUnderstand`  
   

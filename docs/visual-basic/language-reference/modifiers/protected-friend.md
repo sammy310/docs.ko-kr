@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Protected Friend keyword [Visual Basic]
 - Protected Friend keyword [Visual Basic], syntax
 ms.openlocfilehash: 331c63dc290d4096e8158f265ee869b47743a273
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151777"
 ---
 # <a name="protected-friend-visual-basic"></a>Protected Friend (Visual Basic)
@@ -20,14 +20,14 @@ ms.locfileid: "59151777"
 
 ## <a name="rules"></a>규칙
 
-- **선언 컨텍스트.** 사용할 수 있습니다 `Protected Friend` 클래스 수준에만 합니다. 즉, 선언 컨텍스트는 `Protected` 요소 클래스 여야 하며 소스 파일, 네임 스페이스, 인터페이스, 모듈, 구조체 또는 프로시저 일 수 없습니다. 
+- **선언 컨텍스트입니다.** 사용할 수 있습니다 `Protected Friend` 클래스 수준에만 합니다. 즉, 선언 컨텍스트는 `Protected` 요소 클래스 여야 하며 소스 파일, 네임 스페이스, 인터페이스, 모듈, 구조체 또는 프로시저 일 수 없습니다. 
 
 ## <a name="see-also"></a>참고자료
 
-- [Public](../../../visual-basic/language-reference/modifiers/public.md)
+- [공용](../../../visual-basic/language-reference/modifiers/public.md)
 - [보호됨](../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](friend.md)
-- [Private](../../../visual-basic/language-reference/modifiers/private.md)
+- [전용](../../../visual-basic/language-reference/modifiers/private.md)
 - [Private Protected](./private-protected.md)
 - [Visual Basic의 액세스 수준](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [절차](../../../visual-basic/programming-guide/language-features/procedures/index.md)

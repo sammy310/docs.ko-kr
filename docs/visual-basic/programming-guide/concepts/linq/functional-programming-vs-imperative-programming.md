@@ -3,10 +3,10 @@ title: 함수형 프로그래밍과 명령형 프로그래밍 비교 (Visual Bas
 ms.date: 07/20/2015
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
 ms.openlocfilehash: dec9fd4b59d96c0548e49276a27103114a7b3e8b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58827339"
 ---
 # <a name="functional-programming-vs-imperative-programming-visual-basic"></a>함수형 프로그래밍과 명령형 프로그래밍 비교 (Visual Basic)

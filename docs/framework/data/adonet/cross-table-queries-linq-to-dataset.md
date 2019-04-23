@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 6819a16f-8656-41af-a54d-dfec0cb66366
 ms.openlocfilehash: e22df1148fab9148c1ca46f27e8603f55f71b34b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193605"
 ---
 # <a name="cross-table-queries-linq-to-dataset"></a>크로스 테이블 쿼리(LINQ to DataSet)
@@ -31,8 +31,8 @@ ms.locfileid: "59193605"
   
 ## <a name="see-also"></a>참고자료
 
-- [DataSets 쿼리](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
+- [데이터 집합 쿼리](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
 - [단일 테이블 쿼리](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)
-- [형식화된 데이터 세트 쿼리](../../../../docs/framework/data/adonet/querying-typed-datasets.md)
+- [형식화된 데이터 집합 쿼리](../../../../docs/framework/data/adonet/querying-typed-datasets.md)
 - [조인 작업](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397908(v=vs.120))
 - [LINQ to DataSet 예제](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

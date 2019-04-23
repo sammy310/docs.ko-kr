@@ -30,10 +30,10 @@ helpviewer_keywords:
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
 ms.openlocfilehash: bf4118c6e811f409715b7b6684851b8b3e8bbb25
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298892"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 구문 정보
@@ -316,7 +316,7 @@ ms.locfileid: "59298892"
 ## <a name="see-also"></a>참고자료
 
 - [XAML 개요(WPF)](xaml-overview-wpf.md)
-- [XAML 네임스페이스(x:) 언어 기능](../../xaml-services/xaml-namespace-x-language-features.md)
+- [XAML Namespace (x:) 언어 기능](../../xaml-services/xaml-namespace-x-language-features.md)
 - [WPF XAML 확장](wpf-xaml-extensions.md)
 - [종속성 속성 개요](dependency-properties-overview.md)
 - [TypeConverter 및 XAML](typeconverters-and-xaml.md)

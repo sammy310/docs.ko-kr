@@ -10,10 +10,10 @@ ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c35e796333aa3a93b7a66416fe0d93b7b1f3837f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311957"
 ---
 # <a name="net-framework-tools"></a>.NET Framework 도구
@@ -32,7 +32,7 @@ ms.locfileid: "59311957"
  [Al.exe(어셈블리 링커)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
  모듈 또는 리소스 파일로부터 어셈블리 매니페스트가 있는 파일을 생성합니다.  
   
- [Aximp.exe (Windows Forms ActiveX 컨트롤 가져오기)](../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)  
+ [Aximp.exe(Windows Forms ActiveX 컨트롤 가져오기)](../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)  
  ActiveX 컨트롤용 COM 형식 라이브러리의 형식 정의를 Windows Forms 컨트롤로 변환합니다.  
   
  [Caspol.exe(코드 액세스 보안 정책 도구)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)  
@@ -71,7 +71,7 @@ ms.locfileid: "59311957"
  [Mage.exe(매니페스트 생성 및 편집 도구)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
  애플리케이션 및 배포 매니페스트를 만들고, 편집하고, 서명할 수 있도록 합니다. Mage.exe는 명령줄 도구로서 일괄 처리 스크립트뿐 아니라 ASP.NET 애플리케이션을 비롯한 Windows 기반 애플리케이션에서도 실행할 수 있습니다.  
   
- [MageUI.exe (매니페스트 생성 및 편집 도구, 그래픽 클라이언트)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)  
+ [MageUI.exe(매니페스트 생성 및 편집 도구, 그래픽 클라이언트)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)  
  명령줄 도구인 Mage.exe와 동일한 기능을 지원하지만 Windows 기반 UI(사용자 인터페이스)를 사용합니다. 명령줄 도구인 Mage.exe와 동일한 기능을 지원하지만 Windows 기반 UI(사용자 인터페이스)를 사용합니다.  
   
  [MDbg.exe(.NET Framework 명령줄 디버거)](../../../docs/framework/tools/mdbg-exe.md)  
@@ -107,7 +107,7 @@ ms.locfileid: "59311957"
  [Sn.exe(강력한 이름 도구)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
  강력한 이름을 사용하여 어셈블리를 만들 수 있도록 합니다. 이 도구는 키 관리, 서명 생성 및 서명 확인을 위한 옵션을 제공합니다.  
   
- [SOS.dll(SOS 디버깅 확장명)](../../../docs/framework/tools/sos-dll-sos-debugging-extension.md)  
+ [SOS.dll(SOS 디버깅 확장)](../../../docs/framework/tools/sos-dll-sos-debugging-extension.md)  
  내부 공용 언어 런타임 환경에 대한 정보를 제공하여 관리되는 프로그램을 WinDbg.exe 디버거와 Visual Studio에서 쉽게 디버깅할 수 있도록 합니다.  
   
  [SqlMetal.exe(코드 생성 도구)](../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)  

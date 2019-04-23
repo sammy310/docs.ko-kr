@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
 ms.openlocfilehash: ddc2f3338b231ab3ae59e65bc82c00bb8f663540
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342175"
 ---
 # <a name="how-keyboard-input-works"></a>키보드 입력 작동 방식
@@ -63,9 +63,9 @@ Windows Forms에서는 Windows 메시지에 대한 응답으로 키보드 이벤
 |작업|메서드|  
 |----------|------------|  
 |탐색 키를 가로채 고 발생 한 <xref:System.Windows.Forms.Control.KeyDown> 이벤트입니다. Tab 키와 Enter 키를 텍스트 상자에서 처리하려는 경우를 예를 들어보겠습니다.|<xref:System.Windows.Forms.Control.IsInputKey%2A>을 재정의합니다. **참고:**  처리할 수 있습니다 합니다 <xref:System.Windows.Forms.Control.PreviewKeyDown> 이벤트 집합과 <xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A> 의 합니다 <xref:System.Windows.Forms.PreviewKeyDownEventArgs> 에 `true` 키 또는 키에 대 한 합니다.|  
-|컨트롤에서 특수 입력 키나 탐색 키에 대한 처리를 수행합니다. 예를 들어 목록 컨트롤에서 화살표 키를 사용하여 선택한 항목을 변경할 수 있습니다.|재정의 <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
+|컨트롤에서 특수 입력 키나 탐색 키에 대한 처리를 수행합니다. 예를 들어 목록 컨트롤에서 화살표 키를 사용하여 선택한 항목을 변경할 수 있습니다.|<xref:System.Windows.Forms.Control.ProcessDialogKey%2A>를 재정의합니다.|  
 |탐색 키를 가로채 고 발생 한 <xref:System.Windows.Forms.Control.KeyPress> 이벤트입니다. 예를 들어 스핀 상자 컨트롤에서 화살표 키를 여러 차례 눌러 항목 전체를 빠르게 진행할 수 있습니다.|<xref:System.Windows.Forms.Control.IsInputChar%2A>을 재정의합니다.|  
-|중 특수 입력 키나 탐색 처리를 수행는 <xref:System.Windows.Forms.Control.KeyPress> 이벤트입니다. 예를 들어, 목록 컨트롤에서 "r" 키를 누른 채로 r 문자로 시작하는 항목 사이를 건너뛸 수 있습니다.|재정의 <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
+|중 특수 입력 키나 탐색 처리를 수행는 <xref:System.Windows.Forms.Control.KeyPress> 이벤트입니다. 예를 들어, 목록 컨트롤에서 "r" 키를 누른 채로 r 문자로 시작하는 항목 사이를 건너뛸 수 있습니다.|<xref:System.Windows.Forms.Control.ProcessDialogChar%2A>를 재정의합니다.|  
 |사용자 지정 니모닉 처리를 수행합니다. 예를 들어 도구 모음에 포함된, 소유자가 그린 단추의 니모닉을 처리할 수 있습니다.|<xref:System.Windows.Forms.Control.ProcessMnemonic%2A>을 재정의합니다.|  
   
 ## <a name="see-also"></a>참고자료

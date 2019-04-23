@@ -3,10 +3,10 @@ title: SQL Server 보안 개요
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
 ms.openlocfilehash: de0c79a95a786f33b05c88ce4ed298837f2a6923
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148592"
 ---
 # <a name="overview-of-sql-server-security"></a>SQL Server 보안 개요
@@ -27,7 +27,7 @@ ms.locfileid: "59148592"
  [SQL Server의 서버 및 데이터베이스 역할](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
  고정 서버 역할과 데이터베이스 역할, 사용자 지정 데이터베이스 역할 및 기본 제공 계정에 대해 설명하고 추가 리소스에 대한 링크를 제공합니다.  
   
- [SQL Server에서 소유권 및 사용자와 스키마 분리](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
+ [SQL Server에서 소유권 및 사용자 스키마 분리](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
  개체 소유권과 사용자 스키마 분리에 대해 설명하고 추가 리소스에 대한 링크를 제공합니다.  
   
  [SQL Server에서 권한 부여 및 권한](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  

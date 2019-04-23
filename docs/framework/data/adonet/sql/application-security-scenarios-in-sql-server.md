@@ -3,10 +3,10 @@ title: SQL Server의 응용 프로그램 보안 시나리오
 ms.date: 03/30/2017
 ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
 ms.openlocfilehash: 96c9f48cbf2e2ade2ff1688573a83fd86d613f2c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130164"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>SQL Server의 응용 프로그램 보안 시나리오
@@ -50,10 +50,10 @@ ms.locfileid: "59130164"
  [SQL Server에서 행 수준 권한 부여](../../../../../docs/framework/data/adonet/sql/granting-row-level-permissions-in-sql-server.md)  
  데이터 액세스를 제한하는 낮은 수준의 권한을 구현하는 방법에 대해 설명합니다.  
   
- [SQL Server에서 응용 프로그램 역할 만들기](../../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)  
+ [SQL Server에서 애플리케이션 역할 만들기](../../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)  
  응용 프로그램 역할의 특성과 기능에 대해 설명합니다.  
   
- [SQL Server에서 데이터베이스간 액세스 활성화](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
+ [SQL Server에서 데이터베이스 간 액세스 활성화](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
  보안을 위협하지 않고 데이터베이스 간 액세스를 허용하는 방법에 대해 설명합니다.  
   
 ## <a name="see-also"></a>참고자료

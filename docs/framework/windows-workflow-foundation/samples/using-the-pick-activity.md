@@ -3,10 +3,10 @@ title: Pick 활동 사용
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
 ms.openlocfilehash: 0b2fbeb9b32406dd913d7e1ee87ac167113d0f28
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302983"
 ---
 # <a name="using-the-pick-activity"></a>Pick 활동 사용
@@ -17,7 +17,7 @@ ms.locfileid: "59302983"
  이 샘플에서는 지정된 시간 내에 사용자의 이름을 입력하라는 메시지를 콘솔에 표시합니다. 이 샘플의 <xref:System.Activities.Statements.Pick> 활동에는 사용자가 이름을 5초 안에 입력했는지 여부를 기준으로 실행되는 두 개의 분기가 있습니다. 사용자가 이름을 5초 안에 입력하면 사용자 지정 `ReadLine` 활동이 포함된 첫째 분기가 실행되고, 사용자가 이름을 5초 안에 입력하지 않으면 <xref:System.Activities.Statements.Delay> 활동이 포함된 둘째 분기가 실행됩니다. 사용자가 콘솔에 이름을 입력하고 나면 해당 이름이 콘솔에 출력됩니다. 이름을 5초 안에 입력하지 않으면 작업 제한 시간이 초과합니다.
 
 ## <a name="demonstrates"></a>세부 항목
- <xref:System.Activities.Statements.Pick> 작업입니다.
+ <xref:System.Activities.Statements.Pick> 활동
 
 ## <a name="discussion"></a>토론
  이 샘플에는 디자이너 워크플로와 코딩된 워크플로가 포함되어 있습니다.

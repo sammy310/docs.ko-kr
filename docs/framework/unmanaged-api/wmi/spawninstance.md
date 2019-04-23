@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8056ef18089f56f1f9b6717d505fa3d058957541
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074419"
 ---
 # <a name="spawninstance-function"></a>SpawnInstance 함수
@@ -60,7 +60,7 @@ HRESULT SpawnInstance (
 |---------|---------|---------|
 | `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` 올바른 클래스 정의가 아닌 경우 및 새 인스턴스를 생성할 수 없습니다. 완료 되지 않은 또는 등록 되지 않은 Windows 관리를 사용 하 여 호출 하 여 [PutClassWmi](putclasswmi.md)합니다. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 메모리가 부족 하 여 작업을 완료할 수 없습니다. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` `null`합니다. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass`가 `null`인 경우 |
 | `WBEM_S_NO_ERROR` | 0 | 함수 호출이 성공 했습니다.  |
   
 ## <a name="remarks"></a>설명
@@ -80,4 +80,4 @@ HRESULT SpawnInstance (
   
 ## <a name="see-also"></a>참고자료
 
-- [WMI 및 성능 카운터(관리되지 않는 API 참조)](index.md)
+- [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

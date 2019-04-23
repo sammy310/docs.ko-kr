@@ -29,10 +29,10 @@ helpviewer_keywords:
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
 ms.openlocfilehash: 5acebf0f88f3147bf274818f11697b480146701a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296123"
 ---
 # <a name="wpf-windows-overview"></a>WPF 창 개요
@@ -108,9 +108,9 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
 ## <a name="configuring-a-window-definition-for-msbuild"></a>MSBuild에 대해 창 정의 구성  
  창을 구현 하는 방법에 대 한 구성 하는 방법 결정 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]합니다. 모두 사용 하 여 정의 된 창에 대 한 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 태그와 코드 숨김을:  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 마크업 파일으로 구성 된 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page` 항목입니다.  
+-   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 마크업 파일으로 구성 됩니다 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` 항목입니다.  
   
--   코드 숨김 파일으로 구성 된 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Compile` 항목입니다.  
+-   코드 숨김 파일으로 구성 됩니다 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` 항목입니다.  
   
  다음 그림은이 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] 프로젝트 파일입니다.  
   
@@ -257,7 +257,7 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
  [!code-csharp[WindowClosingSnippets](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
  [!code-vb[WindowClosingSnippets](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
 
- <xref:System.Windows.Window.Closing> 이벤트 처리기에 전달 됩니다는 <xref:System.ComponentModel.CancelEventArgs>를 구현 하는 합니다 `Boolean`<xref:System.ComponentModel.CancelEventArgs.Cancel%2A> 속성을 설정 하는 `true` 창 닫기를 방지 하기 위해.  
+ <xref:System.Windows.Window.Closing> 이벤트 처리기에 전달 됩니다는 <xref:System.ComponentModel.CancelEventArgs>를 구현 하는 합니다 `Boolean` <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> 속성을 설정 하는 `true` 창 닫기를 방지 하기 위해.  
   
  경우 <xref:System.Windows.Window.Closing> 처리 되지 않은 또는 처리는 되었지만 취소 되지 않은, 창이 닫힙니다. 창이 실제로 닫히기 직전 <xref:System.Windows.Window.Closed> 발생 합니다. 이 시점에서는 창 닫기를 방지할 수 없습니다.  
   
@@ -272,7 +272,7 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
   
 -   기본 응용 프로그램 창이 닫혀 있는 및 <xref:System.Windows.Application.ShutdownMode%2A> 는 <xref:System.Windows.ShutdownMode.OnMainWindowClose>합니다.  
   
--   <xref:System.Windows.Application.Shutdown%2A> 가 호출 됩니다.  
+-   <xref:System.Windows.Application.Shutdown%2A>가 호출된 경우  
   
 > [!NOTE]
 >  창을 닫은 뒤에는 다시 열 수 없습니다.  
@@ -293,7 +293,7 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
   
  초기 위치를 지정할 수도 있습니다는 <xref:System.Windows.Window> 먼저 표시 되 면 설정 하 여 합니다 <xref:System.Windows.Window.WindowStartupLocation%2A> 속성을 다음 중 하나로 <xref:System.Windows.WindowStartupLocation> 열거형 값:  
   
--   <xref:System.Windows.WindowStartupLocation.CenterOwner> (기본값)  
+-   <xref:System.Windows.WindowStartupLocation.CenterOwner>(기본값)  
   
 -   <xref:System.Windows.WindowStartupLocation.CenterScreen>  
   
@@ -381,7 +381,7 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
   
  창의 상태를 설정 하 여 구성할 수 있습니다 해당 <xref:System.Windows.Window.WindowState%2A> 속성을 다음 중 하나를 가질 수 있는 <xref:System.Windows.WindowState> 열거형 값:  
   
--   <xref:System.Windows.WindowState.Normal> (기본값)  
+-   <xref:System.Windows.WindowState.Normal>(기본값)  
   
 -   <xref:System.Windows.WindowState.Maximized>  
   
@@ -409,7 +409,7 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
   
 -   <xref:System.Windows.ResizeMode.CanMinimize>  
   
--   <xref:System.Windows.ResizeMode.CanResize> (기본값)  
+-   <xref:System.Windows.ResizeMode.CanResize>(기본값)  
   
 -   <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
   
@@ -427,7 +427,7 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
   
 -   <xref:System.Windows.WindowStyle.None>  
   
--   <xref:System.Windows.WindowStyle.SingleBorderWindow> (기본값)  
+-   <xref:System.Windows.WindowStyle.SingleBorderWindow>(기본값)  
   
 -   <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
   
@@ -486,4 +486,4 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
 - <xref:System.Windows.Navigation.NavigationWindow>
 - <xref:System.Windows.Application>
 - [대화 상자 개요](dialog-boxes-overview.md)
-- [WPF 애플리케이션 빌드](building-a-wpf-application-wpf.md)
+- [WPF 응용 프로그램 빌드](building-a-wpf-application-wpf.md)

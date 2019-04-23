@@ -11,10 +11,10 @@ helpviewer_keywords:
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
 ms.openlocfilehash: 04517e5089f55c2d2b08a492439026d33ed9069d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339842"
 ---
 # <a name="saml-tokens-and-claims"></a>SAML 토큰 및 클레임
@@ -48,7 +48,7 @@ SAML security Assertions Markup Language () *토큰* 클레임의 XML 표현 됩
 - <xref:System.IdentityModel.Policy.IAuthorizationPolicy>
 - <xref:System.IdentityModel.Claims.ClaimSet>
 - [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)
-- [방법: 페더레이션 클라이언트 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [방법: 페더레이션된 클라이언트 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [방법: 페더레이션 서비스에서 자격 증명 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
 - [ID 모델을 사용하여 클레임 및 권한 부여 관리](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
 - [클레임 및 토큰](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)

@@ -3,11 +3,11 @@ title: '방법: 다시 호스트된 디자이너에서 유효성 검사 오류 �
 ms.date: 03/30/2017
 ms.assetid: 5aa8fb53-8f75-433b-bc06-7c7d33583d5d
 ms.openlocfilehash: a3d993f55bf130039905f1a6512a7ae104512432
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59310202"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59770908"
 ---
 # <a name="how-to-display-validation-errors-in-a-rehosted-designer"></a>방법: 다시 호스트된 디자이너에서 유효성 검사 오류 표시
 이 항목에서는 다시 호스트된 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)]에서 유효성 검사 오류를 검색하고 게시하는 방법에 대해 설명합니다. 또한 다시 호스트된 디자이너의 워크플로가 유효한지 확인하는 절차도 제공합니다.  

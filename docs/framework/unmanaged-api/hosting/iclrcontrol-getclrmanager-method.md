@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 33c790bf2721f09b263494e845356ef6b6712f99
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.openlocfilehash: 09079c8847b7cb995d97a4577d03982602bbadfa
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177140"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979175"
 ---
 # <a name="iclrcontrolgetclrmanager-method"></a>ICLRControl::GetCLRManager 메서드
 호스트의 CLR (공용 언어 런타임)을 구성 하 여 관리자 형식의 모든 인스턴스에 대 한 인터페이스 포인터를 가져옵니다.  
@@ -52,7 +52,7 @@ HRESULT GetCLRManager (
   
 -   IID_ICLRPolicyManager: 형식임 `ppObject` 형식이 [ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)합니다.  
   
--   IID_ICLRTaskManager: speciries입니다 `ppObject` 형식이 [ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)합니다.  
+-   IID_ICLRTaskManager: 형식임 `ppObject` 형식이 [ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)합니다.  
   
  `ppObject`  
  [out] 잘못 된 관리자 유형이 요청 된 경우 null을 요청한 관리자에 대 한 인터페이스 포인터.  

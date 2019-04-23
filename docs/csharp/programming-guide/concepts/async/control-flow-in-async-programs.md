@@ -2,12 +2,12 @@
 title: 비동기 프로그램의 제어 흐름(C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-ms.openlocfilehash: 45d349fa131daf3fdf39d29d53d8ec236c79f81f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6a7b8f3f41b2096e3e7524d03217bdc123f26f10
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150604"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326205"
 ---
 # <a name="control-flow-in-async-programs-c"></a>비동기 프로그램의 제어 흐름(C#)
 
@@ -17,9 +17,9 @@ ms.locfileid: "53150604"
 
 다음 예제에서는 비동기 메서드를 사용하여 지정된 웹 사이트의 콘텐츠를 문자열로 다운로드하고 문자열 길이를 표시합니다. 예제에는 다음 두 가지 메서드가 포함됩니다.
 
--   `startButton_Click` - `AccessTheWebAsync`를 호출하고 결과를 표시합니다.
+-   `startButton_Click`- `AccessTheWebAsync`를 호출하고 결과를 표시합니다.
 
--   `AccessTheWebAsync` - 웹 사이트의 콘텐츠를 문자열로 다운로드하고 문자열의 길이를 반환합니다. `AccessTheWebAsync`는 비동기 <xref:System.Net.Http.HttpClient> 메서드인 <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>을 사용하여 콘텐츠를 다운로드합니다.
+-   `AccessTheWebAsync`- 웹 사이트의 콘텐츠를 문자열로 다운로드하고 문자열의 길이를 반환합니다. `AccessTheWebAsync` 비동기 <xref:System.Net.Http.HttpClient> 메서드인 <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>을 사용하여 콘텐츠를 다운로드합니다.
 
 전체 프로그램에서 전략적 지점에 번호가 매겨진 표시 줄이 나타나 프로그램 실행 방식을 이해하도록 도와주고 표시된 각 지점에서 수행되는 작업을 설명합니다. 표시 줄에는 "ONE"~"SIX"의 레이블이 지정됩니다. 레이블은 프로그램이 이러한 코드 줄에 도달하는 순서를 나타냅니다.
 
@@ -97,13 +97,13 @@ Length of the downloaded string: 33946.
 
 ### <a name="download-the-program"></a>프로그램 다운로드
 
-[Async Sample: Control Flow in Async Programs (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)(Async 샘플: 비동기 프로그램의 제어 흐름(C# 및 Visual Basic))에서 이 항목에 대한 응용 프로그램을 다운로드할 수 있습니다. 다음 단계에서 프로그램을 열고 실행합니다.
+[비동기 샘플: 비동기 프로그램의 제어 흐름](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)에서 이 항목의 애플리케이션을 다운로드할 수 있습니다. 다음 단계에서 프로그램을 열고 실행합니다.
 
-1.  다운로드한 파일의 압축을 풀고 Visual Studio를 시작합니다.
+1. 다운로드한 파일의 압축을 풀고 Visual Studio를 시작합니다.
 
-2.  메뉴 모음에서 **파일** > **열기** > **프로젝트/솔루션**을 선택합니다.
+2. 메뉴 모음에서 **파일** > **열기** > **프로젝트/솔루션**을 선택합니다.
 
-3.  압축을 푼 샘플 코드가 포함된 폴더로 이동하여 솔루션(.sln) 파일을 열고 **F5** 키를 선택하여 프로젝트를 빌드하고 실행합니다.
+3. 압축을 푼 샘플 코드가 포함된 폴더로 이동하여 솔루션(.sln) 파일을 열고 **F5** 키를 선택하여 프로젝트를 빌드하고 실행합니다.
 
 ### <a name="create-the-program-yourself"></a>프로그램 직접 만들기
 
@@ -111,23 +111,23 @@ Length of the downloaded string: 33946.
 
 프로젝트를 실행하려면 다음 단계를 수행합니다.
 
-1.  Visual Studio를 시작합니다.
+1. Visual Studio를 시작합니다.
 
-2.  메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트**를 선택합니다.
+2. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트**를 선택합니다.
 
      **새 프로젝트** 대화 상자가 열립니다.
 
-3.  **설치됨** > **Visual C#** > **Windows 데스크톱** 범주를 선택하고 프로젝트 템플릿 목록에서 **WPF 앱**을 선택합니다.
+3. **설치됨** > **Visual C#** > **Windows 데스크톱** 범주를 선택하고 프로젝트 템플릿 목록에서 **WPF 앱**을 선택합니다.
 
-4.  프로젝트의 이름으로 `AsyncTracer`를 입력한 다음 **확인** 단추를 선택합니다.
+4. 프로젝트의 이름으로 `AsyncTracer`를 입력한 다음 **확인** 단추를 선택합니다.
 
      **솔루션 탐색기**에 새 프로젝트가 표시됩니다.
 
-5.  Visual Studio 코드 편집기에서 **MainWindow.xaml** 탭을 선택합니다.
+5. Visual Studio 코드 편집기에서 **MainWindow.xaml** 탭을 선택합니다.
 
      탭이 표시되지 않는 경우 **솔루션 탐색기**에서 MainWindow.xaml의 바로 가기 메뉴를 열고 **코드 보기**를 선택합니다.
 
-6.  MainWindow.xaml의 **XAML** 보기에서 코드를 다음 코드로 바꿉니다.
+6. MainWindow.xaml의 **XAML** 보기에서 코드를 다음 코드로 바꿉니다.
 
     ```csharp
     <Window
@@ -145,9 +145,9 @@ Length of the downloaded string: 33946.
 
      텍스트 상자와 단추가 포함된 간단한 창이 MainWindow.xaml의 **디자인** 보기에 나타납니다.
 
-7.  <xref:System.Net.Http>에 대한 참조를 추가합니다.
+7. <xref:System.Net.Http>에 대한 참조를 추가합니다.
 
-8.  **솔루션 탐색기**에서 MainWindow.xaml.cs의 바로 가기 메뉴를 열고 **코드 보기**를 선택합니다.
+8. **솔루션 탐색기**에서 MainWindow.xaml.cs의 바로 가기 메뉴를 열고 **코드 보기**를 선택합니다.
 
 9. MainWindow.xaml.cs에서 코드를 다음 코드로 바꿉니다.
 
@@ -311,7 +311,7 @@ string urlContents = await getStringTask;
  await 식은 `client.GetStringAsync`가 반환될 때까지 `AccessTheWebAsync`를 일시 중단합니다. 그리고 제어는 `AccessTheWebAsync`의 호출자, `startButton_Click`으로 반환됩니다.
 
 > [!NOTE]
-> 일반적으로 즉시 비동기 메서드에 대한 호출을 기다립니다. 예를 들어 다음 할당은 `getStringTask`를 만들고 기다리는 이전 코드를 대체할 수 있습니다. `string urlContents = await client.GetStringAsync("https://msdn.microsoft.com");`.
+> 일반적으로 즉시 비동기 메서드에 대한 호출을 기다립니다. 예를 들어 다음 할당은 `getStringTask`를 만들고 기다리는 이전 코드를 대체할 수 있습니다. `string urlContents = await client.GetStringAsync("https://msdn.microsoft.com");`
 >
 > 이 항목에서 await 연산자는 나중에 프로그램을 통해 제어 흐름을 표시하는 출력 줄을 수용하기 위해 적용됩니다.
 
@@ -360,7 +360,7 @@ FIVE:  Back in AccessTheWebAsync.
 
  ![5단계](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace-FIVE")
 
- `AccessTheWebAsync`는 완료될 때까지 실행되고 제어는 완료를 기다리고 있는 `startButton_Click`으로 반환됩니다.
+ `AccessTheWebAsync` 완료될 때까지 실행되고 제어는 완료를 기다리고 있는 `startButton_Click`으로 반환됩니다.
 
 ### <a name="step-six"></a>6단계
 
@@ -390,4 +390,4 @@ int contentLength = await getLengthTask;
 - [async 및 await를 사용한 비동기 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/async/index.md)
 - [비동기 반환 형식(C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
 - [연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Async Sample: Control Flow in Async Programs (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)(Async 샘플: 비동기 프로그램의 제어 흐름(C# 및 Visual Basic))
+- [비동기 샘플: 비동기 프로그램의 제어 흐름(C# 및 Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

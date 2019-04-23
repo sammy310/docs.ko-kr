@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74ddda813d756fb5cb54cb600e3cbf1cf68b3f38
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: b129da00fcd841566a4a823d8929348441d0a0f3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221149"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59315545"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>방법: 리플렉션 내보내기를 사용하여 제네릭 형식 정의
 이 항목에서는 두 개의 형식 매개 변수가 있는 간단한 제네릭 형식을 만드는 방법, 형식 매개 변수에 클래스 제약 조건, 인터페이스 제약 조건, 특수 제약 조건을 적용하는 방법, 클래스의 형식 매개 변수를 매개 변수 형식 및 반환 형식으로 사용하는 멤버를 만드는 방법을 보여 줍니다.  
@@ -27,25 +27,25 @@ ms.locfileid: "56221149"
   
 ### <a name="to-define-a-generic-type"></a>제네릭 형식을 정의하려면  
   
-1.  `GenericEmitExample1`이라는 동적 어셈블리를 정의합니다. 이 예제에서는 어셈블리가 실행되고 디스크에 저장되므로 <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType>이 지정됩니다.  
+1. `GenericEmitExample1`이라는 동적 어셈블리를 정의합니다. 이 예제에서는 어셈블리가 실행되고 디스크에 저장되므로 <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType>이 지정됩니다.  
   
      [!code-cpp[EmitGenericType#2](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#2)]
      [!code-csharp[EmitGenericType#2](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#2)]
      [!code-vb[EmitGenericType#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#2)]  
   
-2.  동적 모듈을 정의합니다. 어셈블리는 실행 모듈로 구성됩니다. 단일 모듈 어셈블리의 경우 모듈 이름은 어셈블리 이름과 같고, 파일 이름은 모듈 이름에 확장명을 추가한 이름입니다.  
+2. 동적 모듈을 정의합니다. 어셈블리는 실행 모듈로 구성됩니다. 단일 모듈 어셈블리의 경우 모듈 이름은 어셈블리 이름과 같고, 파일 이름은 모듈 이름에 확장명을 추가한 이름입니다.  
   
      [!code-cpp[EmitGenericType#3](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#3)]
      [!code-csharp[EmitGenericType#3](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#3)]
      [!code-vb[EmitGenericType#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#3)]  
   
-3.  클래스를 정의합니다. 이 예제에서 클래스 이름은 `Sample`입니다.  
+3. 클래스를 정의합니다. 이 예제에서 클래스 이름은 `Sample`입니다.  
   
      [!code-cpp[EmitGenericType#4](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#4)]
      [!code-csharp[EmitGenericType#4](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#4)]
      [!code-vb[EmitGenericType#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#4)]  
   
-4.  매개 변수 이름이 포함된 문자열 배열을 <xref:System.Reflection.Emit.TypeBuilder.DefineGenericParameters%2A?displayProperty=nameWithType> 메서드에 전달하여 `Sample`의 제네릭 형식 매개 변수를 정의합니다. 이렇게 하면 클래스가 제네릭 형식이 됩니다. 반환 값은 내보낸 코드에서 사용할 수 있는 형식 매개 변수를 나타내는 <xref:System.Reflection.Emit.GenericTypeParameterBuilder> 개체 배열입니다.  
+4. 매개 변수 이름이 포함된 문자열 배열을 <xref:System.Reflection.Emit.TypeBuilder.DefineGenericParameters%2A?displayProperty=nameWithType> 메서드에 전달하여 `Sample`의 제네릭 형식 매개 변수를 정의합니다. 이렇게 하면 클래스가 제네릭 형식이 됩니다. 반환 값은 내보낸 코드에서 사용할 수 있는 형식 매개 변수를 나타내는 <xref:System.Reflection.Emit.GenericTypeParameterBuilder> 개체 배열입니다.  
   
      다음 코드에서 `Sample`은 형식 매개 변수 `TFirst` 및 `TSecond`가 있는 제네릭 형식이 됩니다. 코드를 읽기 쉽도록 각 <xref:System.Reflection.Emit.GenericTypeParameterBuilder>는 형식 매개 변수와 동일한 이름을 가진 변수에 배치됩니다.  
   
@@ -53,25 +53,25 @@ ms.locfileid: "56221149"
      [!code-csharp[EmitGenericType#5](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#5)]
      [!code-vb[EmitGenericType#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#5)]  
   
-5.  형식 매개 변수에 특수 제약 조건을 추가합니다. 이 예제에서 형식 매개 변수 `TFirst`는 매개 변수가 없는 생성자를 가진 형식과 참조 형식으로 제한됩니다.  
+5. 형식 매개 변수에 특수 제약 조건을 추가합니다. 이 예제에서 형식 매개 변수 `TFirst`는 매개 변수가 없는 생성자를 가진 형식과 참조 형식으로 제한됩니다.  
   
      [!code-cpp[EmitGenericType#6](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#6)]
      [!code-csharp[EmitGenericType#6](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#6)]
      [!code-vb[EmitGenericType#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#6)]  
   
-6.  필요에 따라 형식 매개 변수에 클래스 및 인터페이스 제약 조건을 추가합니다. 이 예제에서 형식 매개 변수 `TFirst`는 `baseType` 변수에 포함된 <xref:System.Type> 개체가 나타내는 기본 클래스에서 파생되고 `interfaceA` 및 `interfaceB` 변수에 포함된 형식의 인터페이스를 구현하는 형식으로 제한됩니다. 이러한 변수의 선언 및 할당은 코드 예제를 참조하세요.  
+6. 필요에 따라 형식 매개 변수에 클래스 및 인터페이스 제약 조건을 추가합니다. 이 예제에서 형식 매개 변수 `TFirst`는 `baseType` 변수에 포함된 <xref:System.Type> 개체가 나타내는 기본 클래스에서 파생되고 `interfaceA` 및 `interfaceB` 변수에 포함된 형식의 인터페이스를 구현하는 형식으로 제한됩니다. 이러한 변수의 선언 및 할당은 코드 예제를 참조하세요.  
   
      [!code-cpp[EmitGenericType#7](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#7)]
      [!code-csharp[EmitGenericType#7](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#7)]
      [!code-vb[EmitGenericType#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#7)]  
   
-7.  필드를 정의합니다. 이 예제에서 필드 형식은 형식 매개 변수 `TFirst`로 지정됩니다. <xref:System.Reflection.Emit.GenericTypeParameterBuilder>는 <xref:System.Type>에서 파생되므로 형식을 사용할 수 있는 어디에서든 제네릭 형식 매개 변수를 사용할 수 있습니다.  
+7. 필드를 정의합니다. 이 예제에서 필드 형식은 형식 매개 변수 `TFirst`로 지정됩니다. <xref:System.Reflection.Emit.GenericTypeParameterBuilder>는 <xref:System.Type>에서 파생되므로 형식을 사용할 수 있는 어디에서든 제네릭 형식 매개 변수를 사용할 수 있습니다.  
   
      [!code-cpp[EmitGenericType#21](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#21)]
      [!code-csharp[EmitGenericType#21](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#21)]
      [!code-vb[EmitGenericType#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#21)]  
   
-8.  제네릭 형식의 형식 매개 변수를 사용하는 메서드를 정의합니다. 이러한 메서드는 고유한 형식 매개 변수 목록이 없을 경우 제네릭 메서드가 아닙니다. 다음 코드는 `TFirst` 배열을 사용하고배열의 모든 요소가 포함된 `List<TFirst>`(Visual Basic에서는 `List(Of TFirst)`)를 반환하는 `static` 메서드(Visual Basic에서는 `Shared`)를 정의합니다. 이 메서드를 정의하려면 제네릭 형식 정의 `List<T>`에 대해 <xref:System.Type.MakeGenericType%2A>을 호출하여 `List<TFirst>` 형식을 만들어야 합니다. `typeof` 연산자(Visual Basic에서는 `GetType`)를 사용하여 제네릭 형식 정의를 가져오는 경우 `T`가 생략됩니다. 매개 변수 형식은 <xref:System.Type.MakeArrayType%2A> 메서드를 사용하여 생성됩니다.  
+8. 제네릭 형식의 형식 매개 변수를 사용하는 메서드를 정의합니다. 이러한 메서드는 고유한 형식 매개 변수 목록이 없을 경우 제네릭 메서드가 아닙니다. 다음 코드는 `TFirst` 배열을 사용하고배열의 모든 요소가 포함된 `List<TFirst>`(Visual Basic에서는 `List(Of TFirst)`)를 반환하는 `static` 메서드(Visual Basic에서는 `Shared`)를 정의합니다. 이 메서드를 정의하려면 제네릭 형식 정의 `List<T>`에 대해 <xref:System.Type.MakeGenericType%2A>을 호출하여 `List<TFirst>` 형식을 만들어야 합니다. `typeof` 연산자(Visual Basic에서는 `GetType`)를 사용하여 제네릭 형식 정의를 가져오는 경우 `T`가 생략됩니다. 매개 변수 형식은 <xref:System.Type.MakeArrayType%2A> 메서드를 사용하여 생성됩니다.  
   
      [!code-cpp[EmitGenericType#22](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#22)]
      [!code-csharp[EmitGenericType#22](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#22)]
@@ -110,7 +110,7 @@ ms.locfileid: "56221149"
      [!code-csharp[EmitGenericType#10](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#10)]
      [!code-vb[EmitGenericType#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#10)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 기본 클래스 및 두 개의 인터페이스와 함께 `Sample`이라는 클래스를 정의합니다. 프로그램은 `Sample`에 대한 두 개의 제네릭 형식 매개 변수를 정의하고 제네릭 형식으로 변환합니다. 형식 매개 변수를 통해서만 제네릭 형식을 만들 수 있습니다. 프로그램은 형식 매개 변수 정의 앞과 뒤에 테스트 메시지를 표시하여 이를 보여 줍니다.  
   
  형식 매개 변수 `TSecond`는 기본 클래스 및 인터페이스를 통해 클래스 및 인터페이스 제약 조건을 보여 주는 데 사용되고, 형식 매개 변수 `TFirst`는 특수 제약 조건을 보여 주는 데 사용됩니다.  
@@ -136,6 +136,7 @@ ms.locfileid: "56221149"
 -   csc.exe, vbc.exe 또는 cl.exe를 사용하여 명령줄에서 코드를 컴파일합니다. Visual Studio에서 코드를 컴파일하려면 콘솔 애플리케이션 프로젝트 템플릿에 배치합니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - <xref:System.Reflection.Emit.GenericTypeParameterBuilder>
 - [리플렉션 내보내기 사용](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
 - [리플렉션 내보내기 동적 어셈블리 시나리오](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/tt9483fk(v=vs.100))

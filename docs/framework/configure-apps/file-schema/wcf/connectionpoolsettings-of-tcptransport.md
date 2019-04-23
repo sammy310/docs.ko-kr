@@ -1,12 +1,12 @@
 ---
-title: <connectionPoolSettings> / <tcpTransport>
+title: <tcpTransport>의 <connectionPoolSettings>
 ms.date: 03/30/2017
 ms.assetid: 2fbc3aa7-fcc9-4193-99a3-85d31d60d3f7
 ms.openlocfilehash: 93363c5ff1753ff02956404da7697780078c9839
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129976"
 ---
 # <a name="connectionpoolsettings-of-tcptransport"></a>\<connectionPoolSettings> of \<tcpTransport>
@@ -37,7 +37,7 @@ TCP 전송에 대한 추가 연결 풀 설정을 지정합니다.
 |---------------|-----------------|  
 |`groupName`|나가는 채널에 사용되는 연결 풀의 이름을 정의하는 문자열입니다. 스트리밍 모드에서는 연결이 공유되지 않습니다. 즉 연결 풀링이 사용되지 않습니다. 기본값은 "default" 문자열입니다. 이 값을 수정하여 특정 클라이언트의 연결을 별도의 그룹으로 격리할 수 있습니다.|  
 |`idleTimeout`|연결이 끊어지기 전에 유휴 상태를 유지할 수 있는 최대 시간을 지정하는 <xref:System.TimeSpan>(양수)입니다. 기본값은 00:02:00입니다.|  
-|`leaseTimeout`|활성 연결이 종료되는 유휴 시간을 지정하는 <xref:System.TimeSpan>입니다. 기본값은 00:05:00입니다.<br /><br /> 활성 전송 중이 아니라 연결 캐시로 돌아온 후에 연결이 닫힙니다. TCP 전송에 의해 사용 되는 연결 캐시에 의해 설정 된 캐시 제한까지 각 끝점에 대해 필요에 따라 새 연결을 만듭니다. `maxOutboundConnectionsPerEndpoint.`|  
+|`leaseTimeout`|활성 연결이 종료되는 유휴 시간을 지정하는 <xref:System.TimeSpan>입니다. 기본값은 00:05:00입니다.<br /><br /> 활성 전송 중이 아니라 연결 캐시로 돌아온 후에 연결이 닫힙니다. TCP 전송에 사용되는 연결 캐시는 `maxOutboundConnectionsPerEndpoint.`로 설정된 캐시 제한까지 각 엔드포인트에 필요한 새 연결을 만듭니다.|  
 |`maxOutboundConnectionsPerEndpoint`|서비스에서 시작된 원격 엔드포인트와의 최대 연결 수를 지정하는 양의 정수 값입니다. 이 제한을 초과하는 연결은 채널 수가 제한 아래로 내려갈 때까지 큐에 대기됩니다. `idleTimeout`은 예외가 throw되기 전에 연결이 큐에 대기할 수 있는 시간을 제한합니다. 기본값은 10입니다.<br /><br /> 이 특성은 클라이언트에서 특정 서비스 엔드포인트로의 동시 활성 연결 수를 제한합니다. 활성 클라이언트 연결 수가 이 값을 초과할 경우 해당 서비스가 클라이언트에 응답하지 않는 것처럼 보일 수 있습니다. 이러한 경우 이 값을 특정 엔드포인트에 대해 예상되는 동시 클라이언트 최대 연결 수보다 크게 조정해야 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
@@ -59,6 +59,6 @@ TCP 전송에 대한 추가 연결 풀 설정을 지정합니다.
 - [전송](../../../../../docs/framework/wcf/feature-details/transports.md)
 - [전송 선택](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
 - [바인딩](../../../../../docs/framework/wcf/bindings.md)
-- [바인딩 확장명](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [바인딩 확장](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

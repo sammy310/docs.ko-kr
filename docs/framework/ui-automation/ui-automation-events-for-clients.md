@@ -6,10 +6,10 @@ helpviewer_keywords:
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
 ms.openlocfilehash: 9da2f125b7b373d81014150c0d67a1422c932516
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59196361"
 ---
 # <a name="ui-automation-events-for-clients"></a>클라이언트에 대한 UI 자동화 이벤트
@@ -18,7 +18,7 @@ ms.locfileid: "59196361"
   
  이 항목에서는 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 이벤트가 UI 자동화 클라이언트에서 사용되는 방법을 설명합니다.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클라이언트가 원하는 이벤트를 구독할 수 있습니다. 이 기능은 정보, 구조 또는 상태가 변경되었는지 확인하기 위해 시스템의 모든 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 요소를 지속적으로 폴링하지 않고도 성능을 향상시킵니다.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]을 통해 클라이언트가 원하는 이벤트를 구독할 수 있습니다. 이 기능은 정보, 구조 또는 상태가 변경되었는지 확인하기 위해 시스템의 모든 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 요소를 지속적으로 폴링하지 않고도 성능을 향상시킵니다.  
   
  정의된 기능 내에서만 이벤트를 수신 대기하는 기능을 통해 효율성도 향상되었습니다. 예를 들어, 클라이언트는 트리의 모든 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요소에서 포커스 변경 이벤트를 수신 대기하거나, 하나의 요소와 해당 하위 항목만 수신 대기할 수 있습니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "59196361"
 |<xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A>|포커스 변경|<xref:System.Windows.Automation.AutomationFocusChangedEventArgs>|<xref:System.Windows.Automation.AutomationFocusChangedEventHandler>|  
 |<xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>|속성 변경|<xref:System.Windows.Automation.AutomationPropertyChangedEventArgs>|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|  
 |<xref:System.Windows.Automation.Automation.AddStructureChangedEventHandler%2A>|구조 변경|<xref:System.Windows.Automation.StructureChangedEventArgs>|<xref:System.Windows.Automation.StructureChangedEventHandler>|  
-|<xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>|다른 모든 이벤트로 식별 되는 <xref:System.Windows.Automation.AutomationEvent>|<xref:System.Windows.Automation.AutomationEventArgs> 또는 <xref:System.Windows.Automation.WindowClosedEventArgs>|<xref:System.Windows.Automation.AutomationEventHandler>|  
+|<xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>|<xref:System.Windows.Automation.AutomationEvent>로 식별된 기타 모든 이벤트|<xref:System.Windows.Automation.AutomationEventArgs> 또는 <xref:System.Windows.Automation.WindowClosedEventArgs>|<xref:System.Windows.Automation.AutomationEventHandler>|  
   
  메서드를 호출하기 전에, 이벤트를 처리하는 대리자 메서드를 만들어야 합니다. 원하는 경우, 단일 메서드에서 여러 종류의 이벤트를 처리하고 이 메서드를 여러 번 호출하여 테이블에 있는 메서드 중 하나에 전달할 수 있습니다. 예를 들어, 다양한 이벤트를 <xref:System.Windows.Automation.AutomationEventArgs.EventId%2A>에 따라 다르게 처리하도록 단일 <xref:System.Windows.Automation.AutomationEventHandler>를 설정할 수 있습니다.  
   

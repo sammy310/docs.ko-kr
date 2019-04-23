@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: f6f0cbc9-f7bf-4d6e-875f-ad1ba0b4aa62
 ms.openlocfilehash: f30974e020545a69ad20c03bc05ac6a28f289b01
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074627"
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>트랜잭션 및 대량 복사 작업
@@ -25,7 +25,7 @@ ms.locfileid: "59074627"
  대량 복사 작업은 <xref:System.Data.SqlClient.SqlBulkCopy.BatchSize%2A> 속성을 10으로 설정하여 실행합니다. 작업 중 올바르지 않은 행이 발견되면 예외가 throw됩니다. 이 첫 번째 예제에서 대량 복사 작업은 비트랜잭트 방식입니다. 오류 지점까지 복사한 모든 배치가 커밋되어, 중복 키를 포함하는 배치가 롤백되고 다른 모든 배치가 처리될 때까지 대량 복사 작업이 중지됩니다.  
   
 > [!NOTE]
->  이 샘플에 설명 된 대로 작업 테이블을 만든 경우가 아니면 실행 되지 것입니다 [대량 복사 예제 설정](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)합니다. 이 코드는 사용 하는 구문을 보여 주기 위해 제공 됩니다 **SqlBulkCopy** 만 합니다. 더 쉽고 빠르게 사용할 원본 및 대상 테이블이 동일한 SQL Server 인스턴스에 있으면는 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]`INSERT … SELECT` 문은 데이터를 복사 합니다.  
+>  이 샘플에 설명 된 대로 작업 테이블을 만든 경우가 아니면 실행 되지 것입니다 [대량 복사 예제 설정](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)합니다. 이 코드는 사용 하는 구문을 보여 주기 위해 제공 됩니다 **SqlBulkCopy** 만 합니다. 더 쉽고 빠르게 사용할 원본 및 대상 테이블이 동일한 SQL Server 인스턴스에 있으면를 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` 문은 데이터를 복사 합니다.  
   
  [!code-csharp[DataWorks SqlBulkCopy.DefaultTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.DefaultTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.DefaultTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.DefaultTransaction/VB/source.vb#1)]  
@@ -41,7 +41,7 @@ ms.locfileid: "59074627"
  다음 콘솔 응용 프로그램은 다음 한 가지를 제외하면 앞의 예제와 유사합니다. 이 예제에서 대량 복사 작업은 고유 트랜잭션을 관리합니다. 오류 지점까지 복사한 모든 배치가 커밋되어, 중복 키를 포함하는 배치가 롤백되고 다른 모든 배치가 처리될 때까지 대량 복사 작업이 중지됩니다.  
   
 > [!IMPORTANT]
->  이 샘플에 설명 된 대로 작업 테이블을 만든 경우가 아니면 실행 되지 것입니다 [대량 복사 예제 설정](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)합니다. 이 코드는 사용 하는 구문을 보여 주기 위해 제공 됩니다 **SqlBulkCopy** 만 합니다. 더 쉽고 빠르게 사용할 원본 및 대상 테이블이 동일한 SQL Server 인스턴스에 있으면는 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]`INSERT … SELECT` 문은 데이터를 복사 합니다.  
+>  이 샘플에 설명 된 대로 작업 테이블을 만든 경우가 아니면 실행 되지 것입니다 [대량 복사 예제 설정](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)합니다. 이 코드는 사용 하는 구문을 보여 주기 위해 제공 됩니다 **SqlBulkCopy** 만 합니다. 더 쉽고 빠르게 사용할 원본 및 대상 테이블이 동일한 SQL Server 인스턴스에 있으면를 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` 문은 데이터를 복사 합니다.  
   
  [!code-csharp[DataWorks SqlBulkCopy.InternalTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.InternalTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.InternalTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.InternalTransaction/VB/source.vb#1)]  
@@ -54,7 +54,7 @@ ms.locfileid: "59074627"
  다음 콘솔 응용 프로그램은 다음 한 가지를 제외하면 첫 번째(비트랜잭트 방식) 예제와 유사합니다. 이 예제에서는 대량 복사 작업이 보다 큰 외부 트랜잭션에 포함됩니다. 기본 키 위반 오류가 발생하는 경우에는 전체 트랜잭션이 롤백되고 대상 테이블에 행이 추가되지 않습니다.  
   
 > [!IMPORTANT]
->  이 샘플에 설명 된 대로 작업 테이블을 만든 경우가 아니면 실행 되지 것입니다 [대량 복사 예제 설정](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)합니다. 이 코드는 사용 하는 구문을 보여 주기 위해 제공 됩니다 **SqlBulkCopy** 만 합니다. 더 쉽고 빠르게 사용할 원본 및 대상 테이블이 동일한 SQL Server 인스턴스에 있으면는 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]`INSERT … SELECT` 문은 데이터를 복사 합니다.  
+>  이 샘플에 설명 된 대로 작업 테이블을 만든 경우가 아니면 실행 되지 것입니다 [대량 복사 예제 설정](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)합니다. 이 코드는 사용 하는 구문을 보여 주기 위해 제공 됩니다 **SqlBulkCopy** 만 합니다. 더 쉽고 빠르게 사용할 원본 및 대상 테이블이 동일한 SQL Server 인스턴스에 있으면를 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` 문은 데이터를 복사 합니다.  
   
  [!code-csharp[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/VB/source.vb#1)]  

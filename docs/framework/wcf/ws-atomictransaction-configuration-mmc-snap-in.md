@@ -3,10 +3,10 @@ title: WS-AtomicTransaction 구성 MMC 스냅인
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
 ms.openlocfilehash: b1d86fa57b31d1f9be12f76c28f9d042e7e28e24
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59138211"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>WS-AtomicTransaction 구성 MMC 스냅인
@@ -54,18 +54,18 @@ regasm.exe /codebase WsatUI.dll
   
  WS-AT를 구성한 후에 방화벽을 활성화하는 경우 이 도구를 다시 실행하고 이 매개 변수를 사용하여 포트 번호를 제공해야 합니다. 구성한 후에 방화벽을 비활성화하는 경우 WS-AT는 추가 입력 없이 계속 작동합니다.  
   
- **엔드포인트 인증서**  
+ **끝점 인증서**  
   
  클릭 하 여 **선택** 단추 사용자가 SSL 암호화에 사용할 수 있는 인증서를 선택할 수 있도록 로컬 컴퓨터에서 현재 사용할 수 있는 인증서를 사용 하 여 목록을 표시 합니다. 인증서에는 개인 키가 있어야 합니다. 그렇지 않으면 오류 메시지가 표시됩니다.  
   
 > [!NOTE]
 >  선택한 포트에 대한 SSL 인증서를 설정하는 경우 인증서가 있으면 해당 포트와 연결된 원래 SSL 인증서를 덮어씁니다.  
   
- **허가된 계정**  
+ **권한 있는 계정**  
   
  클릭 하 여 **선택** 지정할 수 있는 사용자 또는 그룹에 참여할 수 있는 Ws-atomic 트랜잭션에 확인 하 여 Windows 액세스 제어 목록 편집기를 호출 하는 단추를 **허용** 또는 **Deny** 상자에 **참여** 권한 그룹입니다.  
   
- **허가된 인증서**  
+ **허가 된 인증서**  
   
  클릭 하는 **선택** 단추를 누르면 로컬 컴퓨터에 현재 사용할 수 있는 인증서 목록을 표시 합니다. 그런 다음 WS-Atomic Transaction에 참여시할 수 있는 인증서 ID를 선택할 수 있습니다.  
   

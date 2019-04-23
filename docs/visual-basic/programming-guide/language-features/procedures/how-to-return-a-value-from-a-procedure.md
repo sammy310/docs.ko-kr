@@ -7,10 +7,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], returning a value
 ms.assetid: 4bcc4724-2b4e-4df8-9b4b-16054607f87d
 ms.openlocfilehash: 8b53df1634d2b9971bc44c968a17db81cac3924f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307888"
 ---
 # <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>방법: 프로시저 (Visual Basic)에서 값을 반환 합니다.
@@ -47,11 +47,11 @@ ms.locfileid: "59307888"
 ## <a name="see-also"></a>참고자료
 
 - [절차](./index.md)
-- [하위 프로시저](./sub-procedures.md)
+- [Sub 프로시저](./sub-procedures.md)
 - [속성 프로시저](./property-procedures.md)
 - [연산자 프로시저](./operator-procedures.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
 - [Function 문](../../../../visual-basic/language-reference/statements/function-statement.md)
 - [Return 문](../../../../visual-basic/language-reference/statements/return-statement.md)
-- [방법: 값을 반환하는 프로시저 만들기](./how-to-create-a-procedure-that-returns-a-value.md)
-- [방법: 값을 반환하는 프로시저 호출](./how-to-call-a-procedure-that-returns-a-value.md)
+- [방법: 값을 반환 하는 프로시저 만들기](./how-to-create-a-procedure-that-returns-a-value.md)
+- [방법: 값을 반환 하는 프로시저 호출](./how-to-call-a-procedure-that-returns-a-value.md)

@@ -3,10 +3,10 @@ title: LINQ to DataSet 예제
 ms.date: 03/30/2017
 ms.assetid: dfd91658-8d8a-45a4-a356-e327e809f21d
 ms.openlocfilehash: 07ad4a993187c91babb74fae9d05f17b66c2098b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091696"
 ---
 # <a name="linq-to-dataset-examples"></a>LINQ to DataSet 예제
@@ -22,7 +22,7 @@ ms.locfileid: "59091696"
   
 -   [분할](../../../../docs/framework/data/adonet/query-expression-syntax-examples-partitioning.md)  
   
--   [순서 지정](../../../../docs/framework/data/adonet/query-expression-syntax-examples-ordering-linq-to-dataset.md)  
+-   [정렬](../../../../docs/framework/data/adonet/query-expression-syntax-examples-ordering-linq-to-dataset.md)  
   
 -   [요소 연산자](../../../../docs/framework/data/adonet/query-expression-syntax-examples-element-operators.md)  
   
@@ -37,9 +37,9 @@ ms.locfileid: "59091696"
   
 -   [분할](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-partitioning-linq.md)  
   
--   [순서 지정](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
+-   [정렬](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
   
--   [세트 연산자](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-set-operators.md)  
+-   [집합 연산자](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-set-operators.md)  
   
 -   [변환 연산자](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-conversion-operators.md)  
   
@@ -55,4 +55,4 @@ ms.locfileid: "59091696"
 ## <a name="see-also"></a>참고자료
 
 - [프로그래밍 가이드](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
-- [데이터를 데이터 집합에 로드](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+- [데이터를 데이터 세트에 로드](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)

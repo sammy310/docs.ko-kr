@@ -6,17 +6,17 @@ dev_langs:
 - vb
 ms.assetid: ccdc3777-b2c2-44e3-a627-abef8d79a555
 ms.openlocfilehash: dca917b3c12b0f9923cc9ea34a2568c412a09831
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59081839"
 ---
 # <a name="return-the-first-element-in-a-sequence"></a>시퀀스의 첫 번째 요소 반환
 <xref:System.Linq.Enumerable.First%2A> 연산자를 사용하여 시퀀스의 첫 번째 요소를 반환합니다. <xref:System.Linq.Enumerable.First%2A>를 사용한 쿼리는 즉시 실행됩니다.  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 지원 하지 않습니다는 <xref:System.Linq.Enumerable.Last%2A> 연산자입니다.  
+>  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 <xref:System.Linq.Enumerable.Last%2A> 연산자를 지원하지 않습니다.  
   
 ## <a name="example"></a>예제  
  다음 코드에서는 테이블에서 첫 번째 `Shipper`를 찾습니다.  

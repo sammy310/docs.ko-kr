@@ -12,10 +12,10 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 5f445633-529c-4091-8a2c-13035ac8c41b
 ms.openlocfilehash: 6be388292ce2c73b9ef555ea6b00c986c99dc11a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197739"
 ---
 # <a name="drawings-how-to-topics"></a>그리기 방법 항목
@@ -23,11 +23,11 @@ ms.locfileid: "59197739"
   
 ## <a name="in-this-section"></a>섹션 내용  
  [Drawing에 GuidelineSet 적용](how-to-apply-a-guidelineset-to-a-drawing.md)  
-  [복합 그리기 만들기](how-to-create-a-composite-drawing.md)  
+  [합성 그리기 만들기](how-to-create-a-composite-drawing.md)  
   [GeometryDrawing 만들기](how-to-create-a-geometrydrawing.md)  
   [ImageDrawing을 사용하여 이미지 그리기](how-to-draw-an-image-using-imagedrawing.md)  
   [VideoDrawing을 사용하여 미디어 재생](how-to-play-media-using-a-videodrawing.md)  
-  [Drawing을 이미지 원본으로 사용](how-to-use-a-drawing-as-an-image-source.md)  
+  [그림을 이미지 소스로 사용](how-to-use-a-drawing-as-an-image-source.md)  
   
 ## <a name="see-also"></a>참고자료
 

@@ -3,10 +3,10 @@ title: <backupList>
 ms.date: 03/30/2017
 ms.assetid: a3d9d1f9-4a53-45e9-a880-86c8bee0b833
 ms.openlocfilehash: b0a6c604b5741c1355c35fca510cd10544dab9f3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59135735"
 ---
 # <a name="backuplist"></a>\<backupList>
@@ -48,7 +48,7 @@ ms.locfileid: "59135735"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<라우팅 >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|백업 엔드포인트의 목록입니다.|  
+|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|백업 엔드포인트의 목록입니다.|  
   
 ## <a name="remarks"></a>설명  
  이 섹션에는 기본 엔드포인트로 메시지를 보낼 때 통신 예외가 발생하면 이 메시지를 전송할 엔드포인트의 정렬된 컬렉션이 포함됩니다.  

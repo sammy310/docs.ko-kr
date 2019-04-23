@@ -4,24 +4,24 @@ description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: e89f1e79eec16919b2e70952392b6f640433156b
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 2202e2f972951e4074ed1941f0a0cfe352ab4b85
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846261"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612955"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>기술 개요와 실습
 
 이 전자책의 분량이 너무 방대해지는 것을 피하고자, 추가적인 기술 설명서와 실습의 전체 내용은 GitHub 리포지토리를 활용하도록 구성되어 있습니다. 이 장에서 설명하는 실습 온라인 시리즈에서는 Windows 컨테이너를 기반으로 하는 다양한 환경의 단계별 설치와 Azure 배포에 대해 설명합니다.
 
-다음 섹션에서는 각 연습에 대해 해당 목표 및 고급 시각 및 관련 된 작업의 다이어그램을 제공을 설명 합니다. 자체 연습을 가져올 수 있습니다에 *eShopModernizing* apps GitHub 리포지토리 wiki에서 [ https://github.com/dotnet-architecture/eShopModernizing/wiki ](https://github.com/dotnet-architecture/eShopModernizing/wiki)합니다.
+다음 섹션에서는 각 연습에 대해 해당 목표 및 고급 시각 및 관련 된 작업의 다이어그램을 제공을 설명 합니다. 자체 연습을 가져올 수 있습니다에 *eShopModernizing* apps GitHub 리포지토리 wiki에서 <https://github.com/dotnet-architecture/eShopModernizing/wiki>합니다.
 
 ## <a name="technical-walkthrough-list"></a>기술 연습 목록
 
 다음 시작 연습에서는 리프트 앤 시프트 컨테이너를 사용 하 여 및 다음 Azure에서 여러 배포 옵션을 사용 하 여 이동 하는 샘플 앱에 대 한 일관적이 고 포괄적인 기술 지침을 제공 합니다.
 
-다음 연습 중 각 앱을 사용 하 여 새 샘플 eShopLegacy 및 eShopModernizing에서 GitHub에서 사용할 수 있는 [ https://github.com/dotnet-architecture/eShopModernizing ](https://github.com/dotnet-architecture/eShopModernizing)합니다.
+다음 연습 중 각 앱을 사용 하 여 새 샘플 eShopLegacy 및 eShopModernizing에서 GitHub에서 사용할 수 있는 <https://github.com/dotnet-architecture/eShopModernizing>합니다.
 
 - **EShop 레거시 앱 (기준 앱 현대화) 둘러보기**
 
@@ -136,7 +136,7 @@ GitHub wiki의이 콘텐츠를 더 자세히 살펴보기
 
 ### <a name="technical-walkthrough-availability"></a>기술 연습 가용성
 
-전체 기술 연습 eShopModernizing GitHub 리포지토리 wiki에서 제공 됩니다. [https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
+전체 기술 연습 eShopModernizing GitHub 리포지토리 wiki에서 제공 됩니다. <https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)>
 
 ### <a name="overview"></a>개요
 
@@ -182,7 +182,7 @@ Azure에 배포할 때 온-프레미스 Windows Server 2016 Vm에 Windows 컨테
 
 GitHub wiki의이 콘텐츠를 더 자세히 살펴보기
 
-[https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
+<https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)>
 
 ## <a name="walkthrough-4-deploy-your-windows-containers-based-apps-to-azure-container-instances-aci"></a>연습 4: Azure Container Instances (ACI)에 Windows 컨테이너 기반 앱을 배포 합니다.
 
@@ -228,7 +228,7 @@ GitHub wiki의이 콘텐츠를 더 자세히 살펴보기
 
 전체 기술 연습 eShopModernizing GitHub 리포지토리 wiki에서 제공 됩니다.
 
-[https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
+<https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)>
 
 ### <a name="overview"></a>개요
 
@@ -280,7 +280,7 @@ Kubernetes를 사용 하 여 개발자 수행해 볼 수 있습니다 실제 및
 
 ## <a name="next-steps"></a>다음 단계
 
-GitHub wiki의이 콘텐츠를 더 자세히 살펴보기 [https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
+GitHub wiki의이 콘텐츠를 더 자세히 살펴보기 <https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)>
 
 ## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>연습 6: Azure Service Fabric에 Windows 컨테이너 기반 앱을 배포 합니다.
 
@@ -288,7 +288,7 @@ GitHub wiki의이 콘텐츠를 더 자세히 살펴보기 [https://github.com/do
 
 전체 기술 연습 eShopModernizing GitHub 리포지토리 wiki에서 제공 됩니다.
 
-[https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD))
+<https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)>
 
 ### <a name="overview"></a>개요
 
@@ -354,7 +354,7 @@ Service Fabric을 사용 하 여 개발자 수행해 볼 수 있습니다 실제
 
 GitHub wiki의이 콘텐츠를 더 자세히 살펴보기
 
-[https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD))
+<https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)>
 
 > [!div class="step-by-step"]
 > [이전](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)

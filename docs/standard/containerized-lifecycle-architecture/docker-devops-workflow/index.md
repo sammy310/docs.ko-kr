@@ -4,20 +4,20 @@ description: Microsoft 도구를 사용 하 여 Microsoft 플랫폼 및 도구 D
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: a2fa1dddd68a54b7aab2ac44bf6109626689b36b
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 80acd58d08900da8e79f6b7388da3b10f9e4e566
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663927"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672305"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Microsoft 도구를 사용하는 Docker 애플리케이션 DevOps 워크플로
 
-*Microsoft Visual Studio, Azure DevOps 서비스, Team Foundation Server 및 Application Insights는 포괄적인 에코 시스템 개발 및 팀 프로젝트를 관리 하 고 신속 하 게 빌드, 테스트 및 배포 하는 도구를 제공 하는 IT 운영에 대 한 제공 컨테이너 화 된 응용 프로그램입니다.*
+*Microsoft Visual Studio, Azure DevOps 서비스, Team Foundation Server 및 Azure Monitor는 포괄적인 에코 시스템 개발 및 IT 운영 팀 프로젝트를 관리 하 고 신속 하 게 구축 하는 도구를 제공 하는 테스트 및 배포에 대 한 컨테이너 화 된 제공 응용 프로그램입니다.*
 
 Visual Studio 및 Team Foundation Server 온-프레미스와 클라우드의 Azure DevOps 서비스를 사용 하 여 개발 팀 수 생산적으로 빌드, 테스트 및 Windows 또는 Linux를 대상으로 하는 컨테이너 화 된 응용 프로그램을 릴리스 합니다.
 
-Microsoft 도구는 컨테이너 화 된 응용 프로그램의 특정 구현에 대 한 파이프라인을 자동화할 수 있습니다-Docker,.NET Core 또는 다른 플랫폼 조합 등 전역 빌드 및 CI (지속적인 통합) 및 Azure DevOps 서비스 또는 팀을 사용 하 여 테스트 Foundation Server에 연속 배포 (CD) Docker 환경 (개발, 스테이징, 프로덕션), 및 Application Insights를 통해 개발 팀 서비스에 대 한 분석 정보를 전송 합니다. 모든 코드 커밋은 빌드(CI)를 시작하고 특정 컨테이너화된 환경(CD)에 자동으로 서비스를 배포할 수 있습니다.
+Microsoft 도구는 컨테이너 화 된 응용 프로그램의 특정 구현에 대 한 파이프라인을 자동화할 수 있습니다-Docker,.NET Core 또는 다른 플랫폼 조합 등 전역 빌드 및 CI (지속적인 통합) 및 Azure DevOps 서비스 또는 팀을 사용 하 여 테스트 Foundation Server에 연속 배포 (CD) Docker 환경 (개발, 스테이징, 프로덕션)을 하는 데 Azure Monitor를 통해 개발 팀에는 서비스에 대 한 분석 정보를 전송 합니다. 모든 코드 커밋은 빌드(CI)를 시작하고 특정 컨테이너화된 환경(CD)에 자동으로 서비스를 배포할 수 있습니다.
 
 개발자와 테스터는 Microsoft Azure의 템플릿을 사용하여 프로덕션 환경과 유사한 Docker 기반의 개발 및 배포 환경을 쉽고 빠르게 프로비전할 수 있습니다.
 

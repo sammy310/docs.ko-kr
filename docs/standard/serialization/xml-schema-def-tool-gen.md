@@ -8,10 +8,10 @@ helpviewer_keywords:
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
 ms.openlocfilehash: 77bb567d2b7b8fff2b1b8de43b2d5fa36fffb3b3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59346134"
 ---
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>방법: XML 스키마 정의 도구를 사용하여 클래스 및 XML 스키마 문서 생성
@@ -55,9 +55,9 @@ XML 스키마 정의 도구(Xsd.exe)를 사용하면 클래스를 설명하는 X
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Data.DataSet>
-- [XML 스키마 정의 도구 및 XML Serialization](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)
-- [XML Serialization 소개](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
+- [XML 스키마 정의 도구 및 XML serialization](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)
+- [XML serialization 소개](../../../docs/standard/serialization/introducing-xml-serialization.md)
+- [XML 스키마 정의 도구(Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [방법: 개체 직렬화](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [방법: 개체 serialize](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [방법: 개체 deserialize](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

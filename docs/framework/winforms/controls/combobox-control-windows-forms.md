@@ -11,10 +11,10 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms]
 ms.assetid: 86a1bbc3-0469-4290-91c5-99ff61b739ff
 ms.openlocfilehash: 9f9653069606ec81d7ece4372d67a0a0eba4c073
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59227123"
 ---
 # <a name="combobox-control-windows-forms"></a>ComboBox 컨트롤(Windows Forms)
@@ -32,7 +32,7 @@ Windows Forms `ComboBox` 드롭다운 콤보 상자에서 데이터를 표시할
  이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [옵션 목록 표시에 사용하는 Windows Forms 컨트롤](windows-forms-controls-used-to-list-options.md)  
+ [옵션 목록 표시에 사용된 Windows Forms 컨트롤](windows-forms-controls-used-to-list-options.md)  
  목록 상자, 콤보 상자 및 선택된 목록 상자를 사용 하 여 수행할 수 있는 작업의 목록을 제공 합니다.  
   
 ## <a name="see-also"></a>참고자료

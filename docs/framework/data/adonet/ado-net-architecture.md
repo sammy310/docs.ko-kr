@@ -3,10 +3,10 @@ title: ADO.NET 아키텍처
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
 ms.openlocfilehash: 3f3fc0c8c125c57116da4f1de467d738ac36ca29
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59202640"
 ---
 # <a name="adonet-architecture"></a>ADO.NET 아키텍처
@@ -49,12 +49,12 @@ ADO.NET 아키텍처
  ADO.NET Entity Framework는 개발자가 관계형 저장소 스키마에 대해 직접 프로그래밍하는 대신 개념적 응용 프로그램 모델에 대해 프로그래밍하는 방법으로 데이터 액세스 응용 프로그램을 만들 수 있도록 설계되었습니다. 이 프레임워크의 목표는 데이터 지향 응용 프로그램에 필요한 코드와 유지 관리 작업의 양을 줄이는 것입니다. 자세한 내용은 [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)합니다.  
   
 ## <a name="wcf-data-services"></a>WCF Data Services  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 웹 또는 인트라넷용 데이터 서비스를 배포에 사용 됩니다. 데이터는 엔터티 데이터 모델의 사양에 따라 엔터티와 관계로 구조화됩니다. 이 모델에 배포되는 데이터는 표준 HTTP 프로토콜로 주소를 지정할 수 있습니다. 자세한 내용은 [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)를 참조하세요.  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 웹 또는 인트라넷에 데이터 서비스를 배포하는 데 사용됩니다. 데이터는 엔터티 데이터 모델의 사양에 따라 엔터티와 관계로 구조화됩니다. 이 모델에 배포되는 데이터는 표준 HTTP 프로토콜로 주소를 지정할 수 있습니다. 자세한 내용은 [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)를 참조하세요.  
   
 ## <a name="xml-and-adonet"></a>XML 및 ADO.NET  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 연결이 끊어진된 데이터에 액세스할 수 있도록 XML의 강력한 기능을 활용 합니다. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 가 디자인 된 직접 처리의 XML 클래스와는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]; 둘 다 단일 아키텍처의 구성 요소입니다.  
+ [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]에서는 XML을 이용하여 데이터에 대한 연결되지 않은 액세스를 제공합니다. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 XML 클래스와 밀접하게 디자인되었으며 두 가지 모두 단일 아키텍처의 구성 요소입니다.  
   
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 및의 XML 클래스는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 관련 되어를 `DataSet` 개체입니다. `DataSet`은 파일이든 XML 스트림이든 간에 XML 소스의 데이터로 채울 수 있습니다. `DataSet`은 `DataSet`의 데이터 소스에 관계없이 해당 스키마를 XSD(XML 스키마 정의 언어) 스키마로 포함하여 W3C(World-Wide Web 컨소시엄) 규격의 XML로 작성할 수 있습니다. `DataSet`의 네이티브 serialization 형식은 XML로 `DataSet`은 XML Web services를 통해 데이터 및 스키마 컨텍스트를 원격화하는 데 최적으로 사용할 수 있으므로 계층 간 데이터를 이동하기 위한 탁월한 수단입니다. 자세한 내용은 [XML 문서 및 데이터](../../../../docs/standard/data/xml/index.md)를 참조하세요.  
+ [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 및 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 XML 클래스는 `DataSet` 개체와 관련되어 있습니다. `DataSet`은 파일이든 XML 스트림이든 간에 XML 소스의 데이터로 채울 수 있습니다. `DataSet`은 `DataSet`의 데이터 소스에 관계없이 해당 스키마를 XSD(XML 스키마 정의 언어) 스키마로 포함하여 W3C(World-Wide Web 컨소시엄) 규격의 XML로 작성할 수 있습니다. `DataSet`의 네이티브 serialization 형식은 XML로 `DataSet`은 XML Web services를 통해 데이터 및 스키마 컨텍스트를 원격화하는 데 최적으로 사용할 수 있으므로 계층 간 데이터를 이동하기 위한 탁월한 수단입니다. 자세한 내용은 [XML 문서 및 데이터](../../../../docs/standard/data/xml/index.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
 

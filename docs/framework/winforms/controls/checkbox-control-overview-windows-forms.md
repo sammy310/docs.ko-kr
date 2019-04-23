@@ -9,10 +9,10 @@ helpviewer_keywords:
 - check boxes [Windows Forms], about check boxes
 ms.assetid: 085a4e0b-9046-473f-b141-d0edddfb2ebb
 ms.openlocfilehash: 2a18327d9836d1dbbcd5d5d6e73f217637736d20
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59121797"
 ---
 # <a name="checkbox-control-overview-windows-forms"></a>CheckBox 컨트롤 개요(Windows Forms)
@@ -27,6 +27,6 @@ Windows Forms <xref:System.Windows.Forms.CheckBox> 컨트롤은 특정 조건이
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.Forms.CheckBox>
-- [방법: Windows Forms CheckBox 컨트롤을 사용하여 옵션 설정](how-to-set-options-with-windows-forms-checkbox-controls.md)
-- [방법: Windows Forms 확인란 클릭에 응답](how-to-respond-to-windows-forms-checkbox-clicks.md)
+- [방법: Windows Forms CheckBox 컨트롤을 사용 하 여 옵션 설정](how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [방법: Windows Forms CheckBox 클릭에 응답](how-to-respond-to-windows-forms-checkbox-clicks.md)
 - [CheckBox 컨트롤](checkbox-control-windows-forms.md)

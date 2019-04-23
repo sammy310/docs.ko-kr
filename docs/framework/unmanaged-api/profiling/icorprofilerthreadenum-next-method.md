@@ -18,10 +18,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 44595229eaefa0d8fc8ca7bf15a88d0fbf1ee0d7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59104314"
 ---
 # <a name="icorprofilerthreadenumnext-method"></a>ICorProfilerThreadEnum::Next 메서드
@@ -52,7 +52,7 @@ HRESULT Next (    [in]  ULONG      celt,
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|`celt` 요소가 반환 되었습니다.|  
+|S_OK|`celt` 요소가 반환되었습니다.|  
 |S_FALSE|`celt`개 미만의 요소가 반환되었으며 이는 열거형이 완료되었음을 나타냅니다.|  
   
 ## <a name="requirements"></a>요구 사항  

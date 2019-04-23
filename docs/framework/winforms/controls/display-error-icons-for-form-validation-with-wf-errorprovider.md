@@ -12,10 +12,10 @@ helpviewer_keywords:
 - error messages [Windows Forms], displaying icons
 ms.assetid: 3b681a32-9db4-497b-a34b-34980eabee46
 ms.openlocfilehash: 9487d4f82878ffefe17c576b16f654293ef01106
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316507"
 ---
 # <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>방법: Windows Forms ErrorProvider 구성 요소를 사용하여 양식 유효성 오류 아이콘 표시
@@ -96,4 +96,4 @@ Windows Forms를 사용할 수 있습니다 <xref:System.Windows.Forms.ErrorProv
 
 - <xref:System.Windows.Forms.ErrorProvider.SetError%2A>
 - [ErrorProvider 구성 요소 개요](errorprovider-component-overview-windows-forms.md)
-- [방법: Windows Forms ErrorProvider 구성 요소를 사용하여 DataSet 내의 오류 보기](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
+- [방법: Windows Forms ErrorProvider 구성 요소를 사용 하 여 데이터 집합에 있는 오류 보기](view-errors-within-a-dataset-with-wf-errorprovider-component.md)

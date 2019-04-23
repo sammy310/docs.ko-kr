@@ -10,10 +10,10 @@ helpviewer_keywords:
 - controls [Windows Forms], binding to DBNull values
 ms.assetid: 96494e6f-5f40-4f83-af97-bbd7192c2af8
 ms.openlocfilehash: cc3dde0db3dad6faff548951ff06a39d23248d53
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137763"
 ---
 # <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>방법: DBNull 데이터베이스 값에 Windows Forms 컨트롤 바인딩
@@ -37,5 +37,5 @@ Windows Forms 컨트롤을 데이터 소스에 바인딩하고 데이터 소스�
 ## <a name="see-also"></a>참고자료
 
 - [BindingSource 구성 요소](bindingsource-component.md)
-- [방법: 데이터 바인딩에서 발생하는 오류 및 예외 처리](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
-- [방법: 형식에 Windows Forms 컨트롤 바인딩](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [방법: 오류 및 데이터 바인딩에서 발생 하는 예외 처리](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
+- [방법: 형식에는 Windows Forms 컨트롤 바인딩](how-to-bind-a-windows-forms-control-to-a-type.md)

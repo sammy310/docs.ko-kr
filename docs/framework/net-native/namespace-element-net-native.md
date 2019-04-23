@@ -5,10 +5,10 @@ ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c304606a27552e604bf40953f49a30a794026281
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150750"
 ---
 # <a name="namespace-element-net-native"></a>\<Namespace > 요소 (.NET 네이티브)
@@ -73,8 +73,8 @@ ms.locfileid: "59150750"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<응용 프로그램 >](../../../docs/framework/net-native/application-element-net-native.md)|런타임에 해당 메타데이터를 리플렉션에 사용할 수 있는 응용 프로그램 수준 형식 및 형식 멤버에 대한 컨테이너로 사용됩니다. [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) 요소는 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 요소를 포함하지 않을 수도 있고 하나 이상 포함할 수도 있습니다.|  
-|[\<어셈블리 >](../../../docs/framework/net-native/assembly-element-net-native.md)|지정된 어셈블리의 모든 형식에 런타임 리플렉션 정책을 적용합니다.|  
+|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|런타임에 해당 메타데이터를 리플렉션에 사용할 수 있는 응용 프로그램 수준 형식 및 형식 멤버에 대한 컨테이너로 사용됩니다. [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) 요소는 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 요소를 포함하지 않을 수도 있고 하나 이상 포함할 수도 있습니다.|  
+|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|지정된 어셈블리의 모든 형식에 런타임 리플렉션 정책을 적용합니다.|  
 |[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|런타임에 해당 메타데이터를 리플렉션에 사용할 수 있는 형식 및 형식 멤버가 포함된 어셈블리를 정의합니다. [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 요소는 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 요소를 포함하지 않을 수도 있고 하나 포함할 수도 있습니다.|  
 |`<Namespace>`|부모 네임스페이스의 모든 형식에 리플렉션 정책을 적용합니다.|  
   

@@ -3,16 +3,16 @@ title: 사용자 지정 암호화 알고리즘 지정
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
 ms.openlocfilehash: b365c3c8e74adcad03246a227d6593c49f8b3993
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342832"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>사용자 지정 암호화 알고리즘 지정
 WCF를 통해 데이터를 암호화하거나 디지털 서명을 연산화할 때 사용할 사용자 지정 암호화 알고리즘을 지정할 수 있습니다. 이렇게 하려면 다음 단계를 따릅니다.  
   
-1. 클래스 파생 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>  
+1. <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>에서 클래스를 파생시킵니다.  
   
 2. 알고리즘을 등록합니다.  
   

@@ -3,10 +3,10 @@ title: '방법: ServiceContractGenerator에 대한 확장 쓰기'
 ms.date: 03/30/2017
 ms.assetid: 876ca823-bd16-4bdf-9e0f-02092df90e51
 ms.openlocfilehash: c9e10efccf0d51e6b78aace1296d227a78a9f91d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340622"
 ---
 # <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>방법: ServiceContractGenerator에 대한 확장 쓰기
@@ -96,7 +96,7 @@ ms.locfileid: "59340622"
        throw new Exception("There were errors during code compilation.");  
     ```  
   
-7. <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> 구현 하는 지정된 된 계약에서 각 계약 동작에 대해 자동으로 호출 됩니다 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>합니다. 그런 다음 이 메서드는 전달된 <xref:System.ServiceModel.Description.ServiceContractGenerationContext>를 수정할 수 있습니다. 이 예제에서는 주석이 추가되었습니다.  
+7. <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29>는 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>을 구현하는 제공된 계약에서 각 계약 동작에 대해 자동으로 호출됩니다. 그런 다음 이 메서드는 전달된 <xref:System.ServiceModel.Description.ServiceContractGenerationContext>를 수정할 수 있습니다. 이 예제에서는 주석이 추가되었습니다.  
   
 ## <a name="see-also"></a>참고자료
 

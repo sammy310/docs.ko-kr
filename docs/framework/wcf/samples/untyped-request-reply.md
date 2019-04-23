@@ -3,11 +3,11 @@ title: 형식화 되지 않은 요청-회신
 ms.date: 03/30/2017
 ms.assetid: 0bf0f9d9-7caf-4d3d-8c9e-2d468cca16a5
 ms.openlocfilehash: 6ff3a8c7f9f5c3d4731bb8946e290b265be61729
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59302727"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773638"
 ---
 # <a name="untyped-requestreply"></a>형식없는 요청/회신
 이 샘플에서는 Message 클래스를 사용하는 작업 계약을 정의하는 방법을 보여 줍니다.  

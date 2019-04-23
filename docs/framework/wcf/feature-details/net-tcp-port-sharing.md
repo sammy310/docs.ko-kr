@@ -6,10 +6,10 @@ helpviewer_keywords:
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
 ms.openlocfilehash: b04266b15f786e3a5a93ac1e9fff1754c397ccd4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073694"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP 포트 공유
@@ -52,5 +52,5 @@ Windows Communication Foundation (WCF) 고성능 통신을 위한 새로운 TCP 
 
 - [Net.TCP Port Sharing Service 구성](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)
 - [호스팅](../../../../docs/framework/wcf/feature-details/hosting.md)
-- [방법: 포트 공유를 사용하도록 WCF 서비스 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)
-- [방법: Net.TCP Port Sharing Service 사용](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)
+- [방법: 포트 공유를 사용 하는 WCF 서비스를 구성 합니다.](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)
+- [방법: Net.TCP Port Sharing Service를 사용 하도록 설정](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)

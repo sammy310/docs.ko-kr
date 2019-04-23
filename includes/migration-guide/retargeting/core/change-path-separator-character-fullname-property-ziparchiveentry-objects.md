@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: dc1bc68a219faa8d17afbe58a07bab1a5c38231c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234429"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804598"
 ---
 ### <a name="change-in-path-separator-character-in-fullname-property-of-ziparchiveentry-objects"></a>ZipArchiveEntry 개체의 FullName 속성에서 경로 구분 기호 문자 변경
 

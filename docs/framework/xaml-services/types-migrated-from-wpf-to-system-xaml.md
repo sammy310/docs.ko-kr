@@ -7,10 +7,10 @@ helpviewer_keywords:
 - System.Xaml [XAML Services], types migrated from WPF
 ms.assetid: d79dabf5-a2ec-4e8d-a37a-67c4ba8a2b91
 ms.openlocfilehash: dcfad1c2b2f95783e2b348a3a1111501f958143f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59116482"
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>WPF에서 System.Xaml로 마이그레이션된 형식
@@ -41,7 +41,7 @@ ms.locfileid: "59116482"
   
 <a name="markupextension_supporting_service_classes"></a>   
 ## <a name="markupextension-supporting-service-classes"></a>MarkupExtension 지원 서비스 클래스  
- [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 및 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] WPF를 사용할 수 있었던 여러 서비스에 대 한 <xref:System.Windows.Markup.MarkupExtension> 구현자 및 <xref:System.ComponentModel.TypeConverter> XAML에서 형식/속성 사용을 지원 하기 위해 구현 합니다. 이러한 서비스는 다음과 같습니다.  
+ WPF용[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 및 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] 에서는 <xref:System.Windows.Markup.MarkupExtension> implementers 및 <xref:System.ComponentModel.TypeConverter> 구현에서 XAML의 형식/속성 사용을 지원하기 위해 사용할 수 있었던 여러 서비스를 제공했습니다. 이러한 서비스는 다음과 같습니다.  
   
 -   <xref:System.Windows.Markup.IProvideValueTarget>  
   
@@ -50,7 +50,7 @@ ms.locfileid: "59116482"
 -   <xref:System.Windows.Markup.IXamlTypeResolver>  
   
 > [!NOTE]
->  태그 확장과 관련된 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 의 또 다른 서비스는 <xref:System.Windows.Markup.IReceiveMarkupExtension> 인터페이스입니다. <xref:System.Windows.Markup.IReceiveMarkupExtension> 이 마이그레이션되지 않았으며 표시 됩니다 `[Obsolete]` 에 대 한 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]합니다. 이전에 <xref:System.Windows.Markup.IReceiveMarkupExtension> 을 사용한 시나리오에서는 대신 <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute> 특성 콜백을 사용해야 합니다. <xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute> 표시 `[Obsolete]`합니다.  
+>  태그 확장과 관련된 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 의 또 다른 서비스는 <xref:System.Windows.Markup.IReceiveMarkupExtension> 인터페이스입니다. <xref:System.Windows.Markup.IReceiveMarkupExtension> 이 마이그레이션되지 않았으며 `[Obsolete]` 에 대해 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]로 표시됩니다. 이전에 <xref:System.Windows.Markup.IReceiveMarkupExtension> 을 사용한 시나리오에서는 대신 <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute> 특성 콜백을 사용해야 합니다. <xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute> 도 `[Obsolete]`로 표시됩니다.  
   
 <a name="xaml_language_features"></a>   
 ## <a name="xaml-language-features"></a>XAML 언어 기능  
@@ -69,7 +69,7 @@ ms.locfileid: "59116482"
   
 <a name="valueserializer_and_supporting_classes"></a>   
 ## <a name="valueserializer-and-supporting-classes"></a>ValueSerializer 및 지원 클래스  
- <xref:System.Windows.Markup.ValueSerializer> 클래스는 특히 직렬화 시 출력에 여러 모드 또는 노드가 필요할 수 있는 XAML 직렬화 사례를 위해 문자열로의 형식 변환을 지원합니다. [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 및 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]에서는 WPF용 <xref:System.Windows.Markup.ValueSerializer> 가 WindowsBase 어셈블리에 있었습니다. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서는, <xref:System.Windows.Markup.ValueSerializer> 클래스가 System.Xaml에 있으며 WPF에서 빌드된 시나리오뿐 아니라 모든 XAML 확장성 시나리오에 사용됩니다. <xref:System.Windows.Markup.IValueSerializerContext> (지원 서비스) 및 <xref:System.Windows.Markup.DateTimeValueSerializer> (특정 서브 클래스)도 System.Xaml로 마이그레이션됩니다.  
+ <xref:System.Windows.Markup.ValueSerializer> 클래스는 특히 직렬화 시 출력에 여러 모드 또는 노드가 필요할 수 있는 XAML 직렬화 사례를 위해 문자열로의 형식 변환을 지원합니다. [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 및 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]에서는 WPF용 <xref:System.Windows.Markup.ValueSerializer> 가 WindowsBase 어셈블리에 있었습니다. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서는, <xref:System.Windows.Markup.ValueSerializer> 클래스가 System.Xaml에 있으며 WPF에서 빌드된 시나리오뿐 아니라 모든 XAML 확장성 시나리오에 사용됩니다. <xref:System.Windows.Markup.IValueSerializerContext> (지원 서비스) 및 <xref:System.Windows.Markup.DateTimeValueSerializer> (특정 서브클래스)도 System.Xaml로 마이그레이션됩니다.  
   
 <a name="xamlrelated_attributes"></a>   
 ## <a name="xaml-related-attributes"></a>XAML 관련 특성  
@@ -107,9 +107,9 @@ ms.locfileid: "59116482"
   
 <a name="miscellaneous_classes"></a>   
 ## <a name="miscellaneous-classes"></a>기타 클래스  
- <xref:System.Windows.Markup.IComponentConnector> 인터페이스는 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 및 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]에서는 WindowsBase에 있었지만 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서는 System.Xaml에 있습니다. <xref:System.Windows.Markup.IComponentConnector> 주로 도구 지원 및 XAML 태그 컴파일러에 대 한 것입니다.  
+ <xref:System.Windows.Markup.IComponentConnector> 인터페이스는 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 및 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]에서는 WindowsBase에 있었지만 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서는 System.Xaml에 있습니다. <xref:System.Windows.Markup.IComponentConnector> 는 주로 도구 지원 및 XAML 태그 컴파일러에 사용됩니다.  
   
- <xref:System.Windows.Markup.INameScope> 인터페이스는 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 및 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]에서는 WindowsBase에 있었지만 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서는 System.Xaml에 있습니다. <xref:System.Windows.Markup.INameScope> XAML 이름 범위에 대 한 기본 작업을 정의합니다.  
+ <xref:System.Windows.Markup.INameScope> 인터페이스는 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 및 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]에서는 WindowsBase에 있었지만 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서는 System.Xaml에 있습니다. <xref:System.Windows.Markup.INameScope> 는 XAML 네임스페이스에 대한 기본 작업을 정의합니다.  
   
 <a name="xamlrelated_classes_with_shared_names_that_exist_in_wpf_and_systemxaml"></a>   
 ## <a name="xaml-related-classes-with-shared-names-that-exist-in-wpf-and-systemxaml"></a>WPF 및 System.Xaml에 있는 공유 이름의 XAML 관련 클래스  

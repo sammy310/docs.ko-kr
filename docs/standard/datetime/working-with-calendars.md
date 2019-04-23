@@ -16,10 +16,10 @@ ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a0113ef84c2b3e42f6d14d25747f7fdbb836a212
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59055315"
 ---
 # <a name="working-with-calendars"></a>달력 작업
@@ -30,33 +30,33 @@ ms.locfileid: "59055315"
 
 .NET의 모든 달력에서 파생 된 <xref:System.Globalization.Calendar?displayProperty=nameWithType> 기본 달력 구현을 제공 하는 클래스입니다. <xref:System.Globalization.Calendar> 클래스로부터 상속되는 클래스 중 하나는 모든 음력 달력의 기본 클래스인 <xref:System.Globalization.EastAsianLunisolarCalendar> 클래스입니다. .NET에는 다음과 같은 달력 구현이 포함 됩니다.
 
-* <xref:System.Globalization.ChineseLunisolarCalendar>에 중국식 음력 달력을 나타냅니다.
+* <xref:System.Globalization.ChineseLunisolarCalendar>는 중국식 음력 달력을 나타냅니다.
 
-* <xref:System.Globalization.GregorianCalendar>양력 달력을 나타냅니다. 이 달력은 다시 <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType> 열거형으로 정의되는 하위 유형으로 세분화됩니다(예: 아랍어 및 중동 프랑스어). <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> 속성은 그레고리오력 달력의 하위 유형을 지정합니다.
+* <xref:System.Globalization.GregorianCalendar>는 그레고리오력을 나타냅니다. 이 달력은 다시 <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType> 열거형으로 정의되는 하위 유형으로 세분화됩니다(예: 아랍어 및 중동 프랑스어). <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> 속성은 그레고리오력 달력의 하위 유형을 지정합니다.
 
-* <xref:System.Globalization.HebrewCalendar>히브리어 달력을 나타냅니다.
+* <xref:System.Globalization.HebrewCalendar>는 히브리어 달력을 나타냅니다.
 
-* <xref:System.Globalization.HijriCalendar>회교식 달력을 나타냅니다.
+* <xref:System.Globalization.HijriCalendar>는 회교식 달력을 나타냅니다.
 
-* <xref:System.Globalization.JapaneseCalendar>에 일본식 달력을 나타냅니다.
+* <xref:System.Globalization.JapaneseCalendar>는 일본식 달력을 나타냅니다.
 
-* <xref:System.Globalization.JapaneseLunisolarCalendar>일본식 음력 달력을 나타냅니다.
+* <xref:System.Globalization.JapaneseLunisolarCalendar>는 일본식 음력 달력을 나타냅니다.
 
-* <xref:System.Globalization.JulianCalendar>를 율리우스력을 나타냅니다.
+* <xref:System.Globalization.JulianCalendar>는 율리우스력을 나타냅니다.
 
-* <xref:System.Globalization.KoreanCalendar>에 한국식 달력을 나타냅니다.
+* <xref:System.Globalization.KoreanCalendar>는 한국식 달력을 나타냅니다.
 
-* <xref:System.Globalization.KoreanLunisolarCalendar>한국식 음력 달력을 나타냅니다.
+* <xref:System.Globalization.KoreanLunisolarCalendar>는 한국식 음력 달력을 나타냅니다.
 
-* <xref:System.Globalization.PersianCalendar>에 페르시아력을 나타냅니다.
+* <xref:System.Globalization.PersianCalendar>는 페르시아력을 나타냅니다.
 
-* <xref:System.Globalization.TaiwanCalendar>을 대만 달력을 나타냅니다.
+* <xref:System.Globalization.TaiwanCalendar>는 대만식 달력을 나타냅니다.
 
-* <xref:System.Globalization.TaiwanLunisolarCalendar>대만식 음력 달력을 나타냅니다.
+* <xref:System.Globalization.TaiwanLunisolarCalendar>는 대만식 음력 달력을 나타냅니다.
 
-* <xref:System.Globalization.ThaiBuddhistCalendar>태국 불교식 달력을 나타냅니다.
+* <xref:System.Globalization.ThaiBuddhistCalendar>는 태국 불교식 달력을 나타냅니다.
 
-* <xref:System.Globalization.UmAlQuraCalendar>Um Al Qura 달력을 나타냅니다.
+* <xref:System.Globalization.UmAlQuraCalendar>는 사우디아라비아 회교식(Um Al Qura) 달력을 나타냅니다.
 
 달력은 다음 두 가지 방법 중 하나로 사용할 수 있습니다.
 
@@ -363,5 +363,5 @@ Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
 ## <a name="see-also"></a>참고자료
 
 - [방법: 그레고리오 력이 아닌 달력의 날짜 표시](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
-- [예제: Calendar week range 유틸리티](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
+- [샘플: Calendar week range 유틸리티](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
 - [달력 클래스](xref:System.Globalization.Calendar)

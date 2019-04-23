@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40db78b8b09b90ab5e11dcc61dc042af1981e827
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2717655ac73cac6635aba563f008feb460a5f788
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701406"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59074523"
 ---
 # <a name="security-issues-in-reflection-emit"></a>리플렉션 내보내기의 보안 문제점
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 MSIL(Microsoft Intermediate Language)을 내보내는 세 가지 방법을 제공하며, 각각 고유한 보안 문제가 있습니다.  
@@ -154,5 +154,6 @@ ms.locfileid: "54701406"
  [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]부터 public이 아닌 형식과 멤버에 대한 정보를 가져오는 데 필요한 권한은 없습니다. 리플렉션을 사용하여 동적 메서드를 내보내는 데 필요한 정보를 가져옵니다. 예를 들어 <xref:System.Reflection.MethodInfo> 개체를 사용하여 메서드 호출을 내보냅니다. 이전 버전의 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.ReflectionPermission>이 필요합니다. 자세한 내용은 [리플렉션의 보안 고려 사항](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [리플렉션의 보안 고려 사항](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)
 - [동적 메서드 및 어셈블리 내보내기](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)

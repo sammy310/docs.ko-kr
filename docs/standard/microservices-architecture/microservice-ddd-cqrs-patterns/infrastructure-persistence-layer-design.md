@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: c173d0049558ec0a752bc2aead9de9692ea28cf9
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 3e9c2ce0a332351f136dcd4dcb6d3da4f794a1eb
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463061"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611018"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>인프라 지속성 계층 디자인
 
@@ -111,24 +111,24 @@ eShopOnContainers에 구현된 리포지토리는 해당 변경 추적기를 사
 ### <a name="repository-pattern"></a>리포지토리 패턴
 
 - **리포지토리 패턴** \
-  [https://deviq.com/repository-pattern/](https://deviq.com/repository-pattern/)
+  <https://deviq.com/repository-pattern/>
 
 - **Edward Hieatt와 Rob Mee. 리포지토리 패턴.** \
-  [https://martinfowler.com/eaaCatalog/repository.html](https://martinfowler.com/eaaCatalog/repository.html)
+  <https://martinfowler.com/eaaCatalog/repository.html>
 
 - **리포지토리 패턴** \
-  [https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)](https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10))
+  <https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)>
 
 - **Eric Evans. 도메인 기반 디자인: 소프트웨어 핵심에서 복잡성을 처리합니다.** (서적, 리포지토리 패턴 논의 포함)\
-  [https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+  <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="unit-of-work-pattern"></a>작업 단위 패턴
 
 - **Martin Fowler. 작업 단위 패턴.** \
-  [https://martinfowler.com/eaaCatalog/unitOfWork.html](https://martinfowler.com/eaaCatalog/unitOfWork.html)
+  <https://martinfowler.com/eaaCatalog/unitOfWork.html>
 
 - **ASP.NET MVC 애플리케이션에서 작업 패턴의 리포지토리 및 단위 구현** \
-  [https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application](https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
+  <https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
 
 >[!div class="step-by-step"]
 >[이전](domain-events-design-implementation.md)

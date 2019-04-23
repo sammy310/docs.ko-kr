@@ -3,10 +3,10 @@ title: 데이터 분할 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 69c59379-b66e-422c-b324-5b5c07760ef7
 ms.openlocfilehash: 2da63a1f6b73c8592d6036a90fa374a0d4385f4c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58839576"
 ---
 # <a name="partitioning-data-visual-basic"></a>데이터 분할 (Visual Basic)
@@ -14,7 +14,7 @@ LINQ의 분할은 요소를 다시 정렬한 후 섹션 중 하나를 반환하�
   
  다음 그림은 문자 시퀀스에 대한 세 가지 분할 작업의 결과를 보여 줍니다. 첫 번째 작업은 시퀀스에서 처음 세 개의 요소를 반환합니다. 두 번째 작업은 처음 세 개의 요소를 건너뛰고 나머지 요소를 반환합니다. 세 번째 작업은 시퀀스에서 처음 두 개의 요소를 건너뛰고 다음 세 개의 요소를 반환합니다.  
   
- ![세 가지 LINQ 분할 작업을 보여 주는 그림입니다.](./media/partitioning-data/linq-partitioning-operations.png)  
+ ![세 개의 LINQ 분할 작업을 보여주는 그림.](./media/partitioning-data/linq-partitioning-operations.png)  
   
  시퀀스를 분할하는 표준 쿼리 연산자 메서드가 다음 섹션에 나와 있습니다.  
   
@@ -40,7 +40,7 @@ LINQ의 분할은 요소를 다시 정렬한 후 섹션 중 하나를 반환하�
  [!code-vb[CsLINQPartitioning#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#2)]  
   
 ### <a name="take"></a>Take  
- 다음 코드 예제에서는 `Take` 절 Visual Basic의 문자열 배열에서 처음 두 문자열을 반환 합니다.  
+ 다음 코드 예제에서는 `Take` 절 Visual basic의 문자열 배열에서 처음 두 문자열을 반환 합니다.  
   
  [!code-vb[CsLINQPartitioning#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQPartitioning/VB/Partitioning.vb#3)]  
   

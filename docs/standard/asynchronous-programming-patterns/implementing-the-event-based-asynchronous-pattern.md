@@ -17,12 +17,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: 2c95b903ae03ea261674885262b24a33efa9e2db
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 76c7b9fa9ef103fc5fc62830932cc724ba50baca
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973745"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59333374"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>이벤트 기반 비동기 패턴 구현
 상당한 지연을 일으킬 수 있는 몇 가지 작업을 사용하여 클래스를 작성하는 경우 [이벤트 기반 비동기 패턴 개요](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)를 구현하여 비동기 기능을 부여하는 것을 고려할 수 있습니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "56973745"
   
  별개의 각 _MethodName_**Async** 메서드 시그니처에 대해 다음을 수행합니다.  
   
-1.  해당 메서드와 같은 클래스에서 다음 이벤트를 정의합니다.  
+1. 해당 메서드와 같은 클래스에서 다음 이벤트를 정의합니다.  
   
     ```vb  
     Public Event MethodNameCompleted As MethodNameCompletedEventHandler  
@@ -85,7 +85,7 @@ ms.locfileid: "56973745"
     public event MethodNameCompletedEventHandler MethodNameCompleted;  
     ```  
   
-2.  다음 대리자 및 <xref:System.ComponentModel.AsyncCompletedEventArgs>를 정의합니다. 이러한 항목은 클래스 자체의 외부이면서 동일한 네임스페이스에서 정의될 수 있습니다.  
+2. 다음 대리자 및 <xref:System.ComponentModel.AsyncCompletedEventArgs>를 정의합니다. 이러한 항목은 클래스 자체의 외부이면서 동일한 네임스페이스에서 정의될 수 있습니다.  
   
     ```vb  
     Public Delegate Sub MethodNameCompletedEventHandler( _  

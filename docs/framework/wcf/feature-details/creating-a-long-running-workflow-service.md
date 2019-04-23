@@ -3,10 +3,10 @@ title: 장기 실행 워크플로 서비스 만들기
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
 ms.openlocfilehash: ac0cb83ad428ce98a05fd0626fff835162ad0e41
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301349"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>장기 실행 워크플로 서비스 만들기
@@ -19,7 +19,7 @@ ms.locfileid: "59301349"
 
 2. Visual Studio 2012
 
-3. Microsoft  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
+3. Microsoft [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
 
 4. WCF 및 Visual Studio 2012를 사용 하 여 알고 있으며 프로젝트/솔루션을 만드는 방법을 알고 있어야 합니다.
 

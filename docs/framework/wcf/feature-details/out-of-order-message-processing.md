@@ -3,10 +3,10 @@ title: 순서에 상관없이 메시지 처리
 ms.date: 03/30/2017
 ms.assetid: 33fc62a5-5d59-461c-a37a-0e1b51ac763d
 ms.openlocfilehash: 4e1864b25a4dbe8192cd5c692c75645bebbb92d2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59141403"
 ---
 # <a name="out-of-order-message-processing"></a>순서에 상관없이 메시지 처리

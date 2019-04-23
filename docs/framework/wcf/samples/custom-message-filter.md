@@ -3,11 +3,11 @@ title: 사용자 지정 메시지 필터
 ms.date: 03/30/2017
 ms.assetid: 98dd0af8-fce6-4255-ac32-42eb547eea67
 ms.openlocfilehash: 34e6d851bd0aa3515c5c43521be6213451b7ed12
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59345822"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773079"
 ---
 # <a name="custom-message-filter"></a>사용자 지정 메시지 필터
 이 샘플에는 Windows Communication Foundation (WCF) 끝점에 메시지를 디스패치할 때 사용 하는 메시지 필터를 교체 하는 방법을 보여 줍니다.  

@@ -3,10 +3,10 @@ title: SQL Server CLR 통합 소개
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
 ms.openlocfilehash: dc7d19bf361ed5fcda1fd5edf64eeb5e4ce15a71
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336813"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>SQL Server CLR 통합 소개
@@ -20,7 +20,7 @@ CLR(공용 언어 런타임)은 Microsoft .NET Framework의 핵심으로, 모든
   
  **SQL Server 온라인 설명서**  
   
--   [CLR(공용 언어 런타임) 통합 개요](https://go.microsoft.com/fwlink/?LinkId=115242)  
+-   [공용 언어 런타임 (CLR) 통합 개요](https://go.microsoft.com/fwlink/?LinkId=115242)  
   
 ## <a name="enabling-clr-integration"></a>CLR 통합 활성화  
  Microsoft SQL Server에서 CLR(공용 언어 런타임) 통합 기능은 기본적으로 사용하지 않도록 설정되어 있으며 CLR 통합을 사용하여 구현되는 개체를 사용하려면 이를 활성화해야 합니다. Transact-SQL을 사용하여 CLR 통합을 활성화하려면 다음과 같이 `clr enabled` 저장 프로시저의 `sp_configure` 옵션을 사용합니다.  
@@ -38,7 +38,7 @@ GO
   
  **SQL Server 온라인 설명서**  
   
--   [CLR 통합 활성화](https://go.microsoft.com/fwlink/?LinkId=115230)  
+-   [CLR 통합 사용](https://go.microsoft.com/fwlink/?LinkId=115230)  
   
 ## <a name="deploying-a-clr-assembly"></a>CLR 어셈블리 배포  
  테스트 서버에서 테스트되고 확인된 CLR 메서드는 배포 스크립트를 사용하여 프로덕션 서버에 배포할 수 있습니다. 배포 스크립트는 수동으로 생성하거나 SQL Server Management Studio를 사용하여 생성할 수 있습니다. 자세한 내용을 보려면 현재 사용하고 있는 SQL Server 버전에 해당하는 SQL Server 온라인 설명서 버전을 참조하세요.  

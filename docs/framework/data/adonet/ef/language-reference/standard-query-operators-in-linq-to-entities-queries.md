@@ -3,10 +3,10 @@ title: LINQ to Entities 쿼리에서 표준 쿼리 연산자
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
 ms.openlocfilehash: 5c666bad40d0e433ee5f8d2b1155e881d7042a85
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59118146"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>LINQ to Entities 쿼리에서 표준 쿼리 연산자
@@ -69,7 +69,7 @@ ms.locfileid: "59118146"
 ## <a name="type-methods"></a>형식 메서드  
  형식 변환과 테스트를 다루는 두 LINQ 메서드는 모두 Entity Framework의 컨텍스트에서 지원 됩니다. 이 지원 되는 형식만 형식은 적절 한 Entity Framework 형식에 매핑되는 것을 의미 합니다. 이러한 형식의 목록, 참조 [개념적 모델 형식 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl)합니다. 형식 메서드는 `Convert` 및 `OfType`입니다.  
   
- `OfType` 엔터티 형식에 대해 지원 됩니다. `Convert` 개념적 모델 기본 형식에 지원 됩니다.  C# `is` 및 `as` 메서드 역시 지원됩니다.  
+ `OfType`은 엔터티 형식에 대해 지원됩니다. `Convert`는 개념적 모델 기본 형식에 대해 지원됩니다.  C# `is` 및 `as` 메서드 역시 지원됩니다.  
   
 ## <a name="paging-methods"></a>페이징 메서드  
  페이징 작업 시퀀스에서 단일 요소 또는 여러 요소를 반환합니다. 지원 되는 페이징 메서드는 `First`, `FirstOrDefault`, `Single`, `SingleOrDefault`합니다 `Skip`, 및 `Take`합니다.  

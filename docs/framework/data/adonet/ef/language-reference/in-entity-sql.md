@@ -3,10 +3,10 @@ title: IN(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 51662950-ee01-4857-b7b9-311dd8515966
 ms.openlocfilehash: d88f79dbfcd27f0ca0d1e26815d7d2bbee731bcf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331275"
 ---
 # <a name="in-entity-sql"></a>IN(Entity SQL)
@@ -29,7 +29,7 @@ value [ NOT ] IN expression
  일치 여부를 테스트할 컬렉션을 반환하는 모든 유효한 식입니다. 모든 식은 형식이 같거나 기본 형식 또는 파생 형식이 `value`이어야 합니다.  
   
 ## <a name="return-value"></a>반환 값  
- `true` 값이 컬렉션에 있으면 컬렉션 또는 null 값이 null 이면 null;입니다. 그렇지 않으면 `false`합니다. NOT IN을 사용하면 IN의 결과가 부정됩니다.  
+ 값이 컬렉션에 있으면 `true`이고, 값 또는 컬렉션이 null이면 null이고, 그렇지 않으면 `false`입니다. NOT IN을 사용하면 IN의 결과가 부정됩니다.  
   
 ## <a name="example"></a>예제  
  다음 Entity SQL 쿼리에서는 IN 연산자를 사용하여 컬렉션에 일치하는 값이 있는지 여부를 결정합니다. 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다. 이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.  

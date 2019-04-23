@@ -3,10 +3,10 @@ title: 재생 공격
 ms.date: 03/30/2017
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
 ms.openlocfilehash: fefcb533cedb5405736ecda70c6879ebe00b8b49
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186760"
 ---
 # <a name="replay-attacks"></a>재생 공격
@@ -40,7 +40,7 @@ A *재생 공격* 공격자가 두 당사자 간에 메시지 스트림을 복�
 
 - [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [정보 공개](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [권한 높이기](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [권한 상승](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
 - [서비스 거부](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [변조](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [지원되지 않는 시나리오](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

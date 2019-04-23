@@ -5,14 +5,14 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
 ms.openlocfilehash: d3562122ab578f5f622d439c17d86cdb64a1e573
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172122"
 ---
 # <a name="wcf-data-services-resources"></a>WCF Data Services 리소스
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 다음 위치에 대 한 소개 항목을 찾을 수 있습니다. 이들 항목 중 상당수에는 자세한 정보가 포함된 관련 항목 링크가 제공됩니다.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 개략적으로 소개하는 항목을 다음 위치에서 찾을 수 있습니다. 이들 항목 중 상당수에는 자세한 정보가 포함된 관련 항목 링크가 제공됩니다.  
   
  [개요](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에서 사용할 수 있는 기능에 대한 개요를 제공합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "59172122"
  [WCF Data Services 포럼](https://go.microsoft.com/fwlink/?LinkId=150512)  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 개발자를 위한 데이터 프로그래밍 지원입니다.  
   
- [WCF Data Services Team Blog](https://go.microsoft.com/fwlink/?LinkId=150511)  
+ [WCF Data Services 팀 블로그](https://go.microsoft.com/fwlink/?LinkId=150511)  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 기능 업데이트를 제공하며 기능에 대해 토론하는 블로그입니다.  
   
  [OData 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=184554)  
@@ -41,19 +41,19 @@ ms.locfileid: "59172122"
  [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185248)  
  샘플 서비스, 샘플 및 작업할 수 있도록 하는 프로그래밍 라이브러리 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드 합니다.  
   
- [OData Blog](https://go.microsoft.com/fwlink/?LinkId=185868)  
+ [OData 블로그](https://go.microsoft.com/fwlink/?LinkId=185868)  
  에 대 한 토론을 포함 하는 블로그 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 프로그래밍 합니다.  
   
  [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink/?LinkId=91903)  
  데이터 작업을 위한 정보와 리소스를 찾을 수 있는 중앙 위치입니다.  
   
- [Data Platform How Do I? 비디오: WCF Data Services 시리즈](https://go.microsoft.com/fwlink/?LinkId=124600)  
+ [데이터 플랫폼 어떻게 할까요? 비디오: WCF Data Services 시리즈](https://go.microsoft.com/fwlink/?LinkId=124600)  
  데이터 서비스를 빌드 및 액세스하는 방법을 보여 주는 일련의 비디오 화면 캐스트가 포함되어 있습니다.  
   
  [개요: WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=131074)  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]의 이점에 대한 보다 높은 수준의 정보를 제공하는 백서입니다.  
   
- [Using Microsoft WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=131075)  
+ [Microsoft WCF Data Services 사용](https://go.microsoft.com/fwlink/?LinkID=131075)  
  클라이언트 응용 프로그램에서 데이터 서비스를 만들고 액세스하는 방법에 대한 추가 정보와 예제를 제공하는 백서입니다.  
   
  [The Entity-Relationship Model: 데이터의 통합 된 뷰에](https://go.microsoft.com/fwlink/?LinkId=91909) Peter Pin-shan Chen, Massachusetts Institute of Technology에서  

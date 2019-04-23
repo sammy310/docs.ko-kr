@@ -3,10 +3,10 @@ title: 라우팅 소개
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
 ms.openlocfilehash: d0f07d0dd171de428f7d556d84dfda04e35880b2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59158680"
 ---
 # <a name="routing-introduction"></a>라우팅 소개
@@ -152,7 +152,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
 > [!NOTE]
 >  기본적으로 라우팅 서비스는 메시지의 헤더만 평가합니다. 필터에서 메시지 본문에 액세스하도록 허용하려면 <xref:System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly%2A>를 `false`로 설정해야 합니다.  
   
- **멀티캐스트**  
+ **멀티 캐스트**  
   
  많은 라우팅 서비스 구성에서 하나의 특정 엔드포인트로만 메시지를 라우트하는 단독 필터 논리를 사용하지만 주어진 메시지를 여러 대상 엔드포인트로 라우트해야 하는 경우도 있습니다. 메시지를 여러 대상으로 멀티캐스트하려면 다음 조건이 충족되어야 합니다.  
   

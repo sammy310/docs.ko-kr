@@ -7,10 +7,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
 ms.openlocfilehash: 59a025535e850cf3c773a2a078511d41058bb24c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321850"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에 데이터 바인딩
@@ -51,13 +51,13 @@ ms.locfileid: "59321850"
 - <xref:System.Windows.Forms.DataGridView.DataMember%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>
 - [방법: 데이터베이스의 데이터에 연결](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120))
-- [방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열 추가 및 제거](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
-- [방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열 순서 변경](change-the-order-of-columns-in-the-datagrid-using-the-designer.md)
-- [방법: 디자이너를 사용하여 Windows Forms DataGridView 열의 형식 변경](change-the-type-of-a-wf-datagridview-column-using-the-designer.md)
-- [방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열 고정](freeze-columns-in-the-datagrid-using-the-designer.md)
-- [방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열 숨기기](hide-columns-in-the-datagrid-using-the-designer.md)
-- [방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열을 읽기 전용으로 설정](make-columns-read-only-in-the-datagrid-using-the-designer.md)
-- [방법: Windows Forms 응용 프로그램 프로젝트 만들기](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [방법: 추가 하 고 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤에서 열을 제거 합니다.](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
+- [방법: 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤에서 열 순서 변경](change-the-order-of-columns-in-the-datagrid-using-the-designer.md)
+- [방법: 디자이너를 사용 하 여 Windows Forms Datagridview 컨트롤의 형식 변경](change-the-type-of-a-wf-datagridview-column-using-the-designer.md)
+- [방법: 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤에서 열 고정](freeze-columns-in-the-datagrid-using-the-designer.md)
+- [방법: 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤에서 열 숨기기](hide-columns-in-the-datagrid-using-the-designer.md)
+- [방법: 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤의 읽기 전용으로 열 만들기](make-columns-read-only-in-the-datagrid-using-the-designer.md)
+- [방법: Windows Forms 애플리케이션 프로젝트 만들기](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
 - [방법: Windows Forms에 컨트롤 추가](how-to-add-controls-to-windows-forms.md)
 - [데이터 소스 창](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))
 - [방법: Windows Forms 응용 프로그램에서 관련된 데이터 표시](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120))

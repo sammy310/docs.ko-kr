@@ -12,10 +12,10 @@ helpviewer_keywords:
 - OnSerializedAttribute [WCF]
 ms.assetid: aa4a3a6f-05ec-4efd-bdbf-2181e13e6468
 ms.openlocfilehash: da13f9989b427da047c4a94f77907847ed2ae4d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124633"
 ---
 # <a name="version-tolerant-serialization-callbacks"></a>버전 독립적 Serialization 콜백
@@ -48,4 +48,4 @@ ms.locfileid: "59124633"
 - <xref:System.Runtime.Serialization.OnDeserializingAttribute>
 - <xref:System.Runtime.Serialization.OnDeserializedAttribute>
 - <xref:System.Runtime.Serialization.StreamingContext>
-- [버전 독립적 Serialization](../../../../docs/standard/serialization/version-tolerant-serialization.md)
+- [버전 독립적 serialization](../../../../docs/standard/serialization/version-tolerant-serialization.md)

@@ -3,10 +3,10 @@ title: Flowchart 활동에서 TryCatch를 사용하여 오류 처리
 ms.date: 03/30/2017
 ms.assetid: 50922964-bfe0-4ba8-9422-0e7220d514fd
 ms.openlocfilehash: 81bfeb911658a6f363a9f0f95ecc7db68a02dbe2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331262"
 ---
 # <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>Flowchart 활동에서 TryCatch를 사용하여 오류 처리
@@ -23,7 +23,7 @@ ms.locfileid: "59331262"
 
  `CreateFlowchartWithFaults` 활동은 <xref:System.Activities.Statements.FlowSwitch%601> 인수로 전환하고 다음 수식을 사용하여 할인율을 계산하는 `promoCode` 활동을 사용합니다.
 
-|값 `promoCode`|할인율(%)|
+|`promoCode`의 값|할인율(%)|
 |--------------------------|--------------------|
 |Single|10|
 |MNK|15|

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
 ms.openlocfilehash: c8a16dc0269fbd768a73e99f15f53e38c207a8d4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326842"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>방법: 순차 워크플로 만들기
@@ -164,5 +164,5 @@ ms.locfileid: "59326842"
 - [Windows Workflow Foundation 프로그래밍](programming.md)
 - [워크플로 디자인](designing-workflows.md)
 - [초보자를 위한 자습서](getting-started-tutorial.md)
-- [방법: 작업 만들기](how-to-create-an-activity.md)
+- [방법: 활동 만들기](how-to-create-an-activity.md)
 - [방법: 워크플로 실행](how-to-run-a-workflow.md)

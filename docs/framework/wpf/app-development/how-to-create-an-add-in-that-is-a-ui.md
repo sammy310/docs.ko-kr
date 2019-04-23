@@ -10,10 +10,10 @@ helpviewer_keywords:
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
 ms.openlocfilehash: 9b7fa33d9af8d364491d1c72813cb62f34378557
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100303"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>방법: UI인 추가 기능 만들기
@@ -21,7 +21,7 @@ ms.locfileid: "59100303"
   
  추가 UI는 WPF 사용자 컨트롤입니다. 이 사용자 정의 컨트롤의 콘텐츠는 클릭했을 때 메시지 상자를 표시하는 하나의 단추입니다. WPF 독립 실행형 응용 프로그램은 주 응용 프로그램 창의 콘텐츠로 추가 UI를 호스팅합니다.  
   
- **전제 조건**  
+ **필수 조건**  
   
  이 예제는이 시나리오를 사용 하도록 설정 하는.NET Framework 추가 기능 모델에 WPF 확장을 강조 표시 하 고 다음을 가정 합니다.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "59100303"
   
  추가 UI와의 상호 작용을 처리 하기 위한 코드는 추가 기능의 응용 프로그램 도메인에서 실행 됩니다. 이러한 상호 작용에는 다음이 포함됩니다.  
   
--   처리는 <xref:System.Windows.Controls.Button><xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다.  
+-   처리를 <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다.  
   
 -   표시 된 <xref:System.Windows.MessageBox>합니다.  
   

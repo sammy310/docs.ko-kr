@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 88d6c166acf9e9ab72c2713b575a8453779f70d1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234263"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774164"
 ---
 ### <a name="attempting-a-tcpip-connection-to-a-sql-server-database-that-resolves-to-localhost-fails"></a>`localhost`로 확인된 SQL Server 데이터베이스에 대한 TCP/IP 연결 시도 실패
 

@@ -3,14 +3,14 @@ title: '낙관적 동시성: 개요'
 ms.date: 03/30/2017
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
 ms.openlocfilehash: 8f3bd35cc1391339d99d5aa0a4021e29fa81756c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59106550"
 ---
 # <a name="optimistic-concurrency-overview"></a>낙관적 동시성: 개요
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 낙관적 동시성 제어를 지원합니다. 다음 표에서 낙관적 동시성에 적용 되는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 설명서:  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 낙관적 동시성 제어를 지원합니다. 다음 표에서 낙관적 동시성에 적용 되는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 설명서:  
   
 |용어|설명|  
 |-----------|-----------------|  
@@ -18,7 +18,7 @@ ms.locfileid: "59106550"
 |동시성 충돌|둘 이상의 사용자가 한 행의 하나 이상의 열에 충돌하는 값을 동시에 전송하려는 상황입니다.|  
 |동시성 제어|동시성 충돌을 해결하는 데 사용되는 기술입니다.|  
 |낙관적 동시성 제어|변경 내용이 전송되도록 허용하기 전에 다른 트랜잭션에서 행의 값을 변경했는지 조사하는 기술입니다.<br /><br /> 대비 *비관적 동시성 제어*, 동시성 충돌을 방지 하기 위해 레코드를 고정 하는 합니다.<br /><br /> *낙관적* 한 트랜잭션이 다른 트랜잭션을 방해할 가능성이 없다고 간주 하기 때문에 제어 라는 용어가 있습니다.|  
-|충돌 해결|데이터베이스를 다시 쿼리한 다음 차이를 조정하여 충돌하는 항목을 새로 고치는 프로세스입니다.<br /><br /> 개체를 새로 고칠 경우 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 변경 추적기는 다음 데이터를 보유합니다.<br /><br /> 원래 데이터베이스에서 수행 하 고 업데이트에 사용 되는 값-확인 합니다.<br />후속 쿼리의-새 데이터베이스 값입니다.<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 충돌 (즉, 해당 멤버 값 중 하나 이상이 변경 되었는지 여부) 인지 여부를 결정 합니다. 개체가 충돌할 경우 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 해당 멤버 중에서 충돌하는 멤버를 확인합니다.<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]이 검색한 모든 멤버 충돌은 충돌 목록에 추가됩니다.|  
+|충돌 해결|데이터베이스를 다시 쿼리한 다음 차이를 조정하여 충돌하는 항목을 새로 고치는 프로세스입니다.<br /><br /> 개체를 새로 고칠 경우 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 변경 추적기는 다음 데이터를 보유합니다.<br /><br /> 원래 데이터베이스에서 수행 하 고 업데이트에 사용 되는 값-확인 합니다.<br />후속 쿼리의-새 데이터베이스 값입니다.<br /><br /> 그런 다음 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 개체가 충돌하는지 여부(즉, 해당 멤버 값 중 하나 이상이 변경되었는지 여부)를 확인합니다. 개체가 충돌할 경우 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 해당 멤버 중에서 충돌하는 멤버를 확인합니다.<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]이 검색한 모든 멤버 충돌은 충돌 목록에 추가됩니다.|  
   
  에 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개체 모델을 *낙관적 동시성 충돌* 다음 조건 중 둘 다에 해당할 때 발생:  
   
@@ -90,4 +90,4 @@ ms.locfileid: "59106550"
   
 ## <a name="see-also"></a>참고자료
 
-- [방법: 변경 충돌 관리](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [방법: 변경 내용 충돌 관리](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

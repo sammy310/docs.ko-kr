@@ -5,10 +5,10 @@ helpviewer_keywords:
 - animation [WPF]
 ms.assetid: b89a82be-b03d-481e-a8d3-cc513d09ca00
 ms.openlocfilehash: 945675d03a280e2394fdb0eab27c0978dc7cc320
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102611"
 ---
 # <a name="how-to-add-an-animation-output-value-to-an-animation-starting-value"></a>방법: 애니메이션 시작 값에 애니메이션 출력 값 추가
@@ -23,7 +23,7 @@ ms.locfileid: "59102611"
   
 ## <a name="see-also"></a>참고자료
 
-- [반복 주기 동안 애니메이션 값 누적](how-to-accumulate-animation-values-during-repeat-cycles.md)
+- [주기가 반복되는 동안 애니메이션 값 누적](how-to-accumulate-animation-values-during-repeat-cycles.md)
 - [애니메이션 개요](animation-overview.md)
 - [키 프레임 애니메이션 개요](key-frame-animations-overview.md)
 - [애니메이션 및 타이밍 방법 항목](animation-and-timing-how-to-topics.md)

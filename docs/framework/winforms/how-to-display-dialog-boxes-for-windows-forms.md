@@ -12,11 +12,11 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], displaying for Windows Forms
 ms.assetid: aaac1b38-c651-495a-8d3d-5a9bfb32fee3
 ms.openlocfilehash: b99f2273dae88faf86448da6e1d2986a83803abf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59311086"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773820"
 ---
 # <a name="how-to-display-dialog-boxes-for-windows-forms"></a>방법: Windows Forms 대화 상자 표시
 동일한 방식으로 응용 프로그램에서 다른 폼을 표시할 때 대화 상자를 표시 합니다. 시작 폼이 응용 프로그램이 실행 될 때 자동으로 로드 합니다. 두 번째 폼 또는 대화 상자 응용 프로그램에 표시 되도록 로드 하 고 표시 하는 코드를 작성 합니다. 마찬가지로, 양식 또는 대화 상자 사라지게 하려면, 언로드 또는 숨길에 코드를 작성 합니다.  

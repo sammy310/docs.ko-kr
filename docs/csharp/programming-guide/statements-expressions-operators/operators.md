@@ -8,10 +8,10 @@ helpviewer_keywords:
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
 ms.openlocfilehash: 0b2af8c41bc6411d2665d2cf37bd48040fc8d8dc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307475"
 ---
 # <a name="operators-c-programming-guide"></a>연산자(C# 프로그래밍 가이드)
@@ -107,7 +107,7 @@ C#에서 *연산자* 는 식 또는 문에서 하나 이상의 *피연산자* �
 |식|설명|  
 |----------------|-----------------|  
 |x [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) y|Equal|  
-|x [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|다음과 같지 않음|  
+|x [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|같지 않음|  
   
  **논리, 조건 및 null 연산자**  
   
@@ -178,4 +178,4 @@ a = (b = c);
 ## <a name="see-also"></a>참고 항목
 
 - [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-- [문, 식 및 연산자](../../../csharp/programming-guide/statements-expressions-operators/index.md)
+- [문, 식, 연산자](../../../csharp/programming-guide/statements-expressions-operators/index.md)

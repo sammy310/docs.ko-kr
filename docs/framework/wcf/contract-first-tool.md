@@ -3,11 +3,11 @@ title: 계약 중심 도구
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
 ms.openlocfilehash: ad0566eaff08d27e8368f091388adda7376a37ef
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819621"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978915"
 ---
 # <a name="contract-first-tool"></a>계약 중심 도구
 서비스 계약을 기존 서비스에서 만들어야 할 경우가 있습니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서 계약 중심 도구를 사용하여 데이터 계약 클래스를 기존 서비스에서 자동으로 만들 수 있습니다. 계약 중심 도구를 사용하려면 XSD(XML 스키마 정의) 파일을 로컬에서 다운로드해야 합니다. 이 도구는 HTTP를 통해 원격 데이터 계약을 가져올 수 없습니다.

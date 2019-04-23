@@ -7,10 +7,10 @@ helpviewer_keywords:
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
 ms.openlocfilehash: db9b3d31ba9657d26c1fb76ce4002afad949a881
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301167"
 ---
 # <a name="-platform-visual-basic"></a>-플랫폼 (Visual Basic)
@@ -83,6 +83,6 @@ vbc -platform:x86 myFile.vb
   
 ## <a name="see-also"></a>참고자료
 
-- [/target(Visual Basic)](target.md)
+- [/target (Visual Basic)](target.md)
 - [Visual Basic 명령줄 컴파일러](index.md)
 - [샘플 컴파일 명령줄](sample-compilation-command-lines.md)

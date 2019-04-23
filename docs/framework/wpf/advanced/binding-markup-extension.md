@@ -8,10 +8,10 @@ helpviewer_keywords:
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
 ms.openlocfilehash: 3455c7ccdedb432fc05c7dc9e80f0f7509f4fa0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170315"
 ---
 # <a name="binding-markup-extension"></a>Binding 태그 확장
@@ -118,7 +118,7 @@ ms.locfileid: "59170315"
   
  데이터 유효성 검사와 관련 된 바인딩은 일반적으로 명시적으로 지정 `Binding` 요소 아니라는 `{Binding ...}` 식 및 설정은 <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> 또는 <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> 식에는 흔하지 않습니다. 왜냐하면 도우미 속성 <xref:System.Windows.Data.Binding.ValidationRules%2A> 식 형식에서 쉽게 설정할 수 없습니다. 자세한 내용은 [구현 바인딩 유효성 검사](../data/how-to-implement-binding-validation.md)합니다.  
   
- `Binding` 태그 확장입니다. 태그 확장 되도록 아닌 리터럴 값 또는 처리기 이름을 특성 값을 이스케이프 하는 요구 사항은 되며 이러한 요구 사항은 특정 형식 또는 속성에 특성을 사용 하는 형식 변환기 보다 더 많은 글로벌 하는 경우에 일반적으로 구현 됩니다. XAML 사용의 모든 태그 확장을 `{` 고 `}` XAML 프로세서는 태그 확장에 문자열 내용을 처리 해야 한다는 것을 인식 하는 규칙은 특성 구문에서 문자입니다. 자세한 내용은 [태그 확장 및 WPF XAML](markup-extensions-and-wpf-xaml.md)을 참조하세요.  
+ `Binding`은 태그 확장입니다. 태그 확장 되도록 아닌 리터럴 값 또는 처리기 이름을 특성 값을 이스케이프 하는 요구 사항은 되며 이러한 요구 사항은 특정 형식 또는 속성에 특성을 사용 하는 형식 변환기 보다 더 많은 글로벌 하는 경우에 일반적으로 구현 됩니다. XAML 사용의 모든 태그 확장을 `{` 고 `}` XAML 프로세서는 태그 확장에 문자열 내용을 처리 해야 한다는 것을 인식 하는 규칙은 특성 구문에서 문자입니다. 자세한 내용은 [태그 확장 및 WPF XAML](markup-extensions-and-wpf-xaml.md)을 참조하세요.  
   
  `Binding` 비정상적 태그 확장인는 <xref:System.Windows.Data.Binding> WPF의 XAML 구현에 대 한 확장 기능을 구현 하는 클래스도 여러 다른 메서드 및 XAML에 관련 되지 않은 속성을 구현 합니다. 다른 멤버를 확인 하려는 <xref:System.Windows.Data.Binding> XAML 태그 확장으로 작동 하는 것 외에도 여러 데이터 바인딩 시나리오를 해결할 수 있는 더 다양 하 고 자체 포함 된 클래스입니다.  
   
@@ -127,4 +127,4 @@ ms.locfileid: "59170315"
 - <xref:System.Windows.Data.Binding>
 - [데이터 바인딩 개요](../data/data-binding-overview.md)
 - [XAML 개요(WPF)](xaml-overview-wpf.md)
-- [태그 확장명 및 WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [태그 확장 및 WPF XAML](markup-extensions-and-wpf-xaml.md)

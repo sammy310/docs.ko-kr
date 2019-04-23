@@ -3,10 +3,10 @@ title: Windows Workflow 개요
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
 ms.openlocfilehash: 57c394805d4aa07f8a137af259619bb1e65c43de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217603"
 ---
 # <a name="windows-workflow-overview"></a>Windows Workflow 개요
@@ -33,7 +33,7 @@ ms.locfileid: "59217603"
   
  ![워크플로 구성 요소가 상호 작용 하는 방법을 보여 주는 다이어그램입니다.](./media/overview/workflow-component-interatction.gif)  
   
- 위의 다이어그램에서는 <xref:System.Activities.WorkflowInvoker.Invoke%2A> 클래스의 <xref:System.Activities.WorkflowInvoker> 메서드를 사용하여 여러 워크플로 인스턴스를 호출합니다. <xref:System.Activities.WorkflowInvoker> 호스트에서 관리할 필요 없는 간단한 워크플로에 사용 됩니다. 호스트에서 관리 해야 하는 워크플로 (같은 <xref:System.Activities.Bookmark> 다시 시작)를 사용 하 여 실행 해야 <xref:System.Activities.WorkflowApplication.Run%2A> 대신 합니다. 한 워크플로 인스턴스가 완료될 때까지 기다렸다가 다른 워크플로 인스턴스를 호출할 필요는 없습니다. 런타임 엔진은 여러 워크플로 인스턴스의 동시 실행을 지원합니다.  호출된 워크플로는 다음과 같습니다.  
+ 위의 다이어그램에서는 <xref:System.Activities.WorkflowInvoker.Invoke%2A> 클래스의 <xref:System.Activities.WorkflowInvoker> 메서드를 사용하여 여러 워크플로 인스턴스를 호출합니다. <xref:System.Activities.WorkflowInvoker>는 호스트에서 관리할 필요 없는 간단한 워크플로에 사용되며, 호스트에서 관리해야 하는 워크플로(예: <xref:System.Activities.Bookmark> 다시 시작)는 그 대신 <xref:System.Activities.WorkflowApplication.Run%2A>을 사용하여 실행해야 합니다. 한 워크플로 인스턴스가 완료될 때까지 기다렸다가 다른 워크플로 인스턴스를 호출할 필요는 없습니다. 런타임 엔진은 여러 워크플로 인스턴스의 동시 실행을 지원합니다.  호출된 워크플로는 다음과 같습니다.  
   
 -   <xref:System.Activities.Statements.Sequence> 자식 활동을 포함하는 <xref:System.Activities.Statements.WriteLine> 활동입니다. 부모 활동의 <xref:System.Activities.Variable>은 자식 활동의 <xref:System.Activities.InArgument>에 바인딩됩니다. 변수, 인수 및 바인딩에 대 한 자세한 내용은 참조 하세요. [변수 및 인수](variables-and-arguments.md)합니다.  
   

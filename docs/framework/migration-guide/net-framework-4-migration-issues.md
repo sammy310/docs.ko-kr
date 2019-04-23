@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d861aa59b31871d20d21d88d9587239f76ae386d
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 368d5f7fa2eec8f3526a10b4777a862e8334617c
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203641"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59210232"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 마이그레이션 문제
 
@@ -85,7 +85,6 @@ ms.locfileid: "57203641"
 | ------- | ------------------------ | ------------------- |
 | **일광 절약** | 시스템 시계와의 일관성을 위해, 시간 속성(예: <xref:System.TimeZoneInfo.Local> 및 <xref:System.DateTime.Now>)은 일광 절약 시간제 작업에 대해 다른 .NET Framework 데이터 대신 운영 체제 규칙을 사용합니다. | 없음 |
 | **문자열 서식 지정** | 문화권에 민감한 서식을 지원하기 위해 새로운 `ParseExact` 및 `TryParseExact` 메서드 외에도 `ToString`, `Parse` 및 `TryParse` 메서드의 새로운 오버로드가 <xref:System.TimeSpan> 구조에 포함됩니다. | 없음 |
-
 
 ### <a name="globalization"></a>전역화
 

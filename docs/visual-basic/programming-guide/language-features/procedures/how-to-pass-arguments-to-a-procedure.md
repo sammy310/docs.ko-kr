@@ -12,10 +12,10 @@ helpviewer_keywords:
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
 ms.openlocfilehash: 012ad8e6229958575030ee820a3b0b79cc50facc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333914"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>방법: (Visual Basic) 프로시저에 인수 전달
@@ -47,13 +47,13 @@ ms.locfileid: "59333914"
   
 ## <a name="see-also"></a>참고자료
 
-- [하위 프로시저](./sub-procedures.md)
-- [함수 프로시저](./function-procedures.md)
+- [Sub 프로시저](./sub-procedures.md)
+- [Function 프로시저](./function-procedures.md)
 - [속성 프로시저](./property-procedures.md)
 - [연산자 프로시저](./operator-procedures.md)
-- [방법: 프로시저의 매개 변수 정의](./how-to-define-a-parameter-for-a-procedure.md)
+- [방법: 프로시저의 매개 변수를 정의 합니다.](./how-to-define-a-parameter-for-a-procedure.md)
 - [값 또는 참조로 인수 전달](./passing-arguments-by-value-and-by-reference.md)
 - [재귀 프로시저](./recursive-procedures.md)
 - [프로시저 오버로딩](./procedure-overloading.md)
 - [개체 및 클래스](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [개체 지향 프로그래밍 (Visual Basic)](../../concepts/object-oriented-programming.md)
+- [개체 지향 프로그래밍(Visual Basic)](../../concepts/object-oriented-programming.md)

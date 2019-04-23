@@ -3,10 +3,10 @@ title: Byref
 description: Byref 및 byref와 유사한 형식에 대 한 자세한 F#에 낮은 수준의 프로그래밍에 사용 됩니다.
 ms.date: 09/02/2018
 ms.openlocfilehash: c0bad26672fbb9eb315eee1c3e275183ddeb9297
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59055367"
 ---
 # <a name="byrefs"></a>Byref
@@ -121,10 +121,10 @@ C# 지원 합니다 `in ref` 및 `out ref` 외에에서 키워드 `ref` 반환 �
 
 |F#구문|내보낸된 구문|
 |------------|-----------------|
-|`inref<'T>` 인수(argument)|`[In]` 인수에는 특성|
-|`inref<'T>` return|`modreq` 특성 값을|
+|`inref<'T>` 인수|`[In]` 인수에는 특성|
+|`inref<'T>` 반환|`modreq` 특성 값을|
 |`inref<'T>` 추상 슬롯 또는 구현|`modreq` 인수 또는 반환|
-|`outref<'T>` 인수(argument)|`[Out]` 인수에는 특성|
+|`outref<'T>` 인수|`[Out]` 인수에는 특성|
 
 ### <a name="type-inference-and-overloading-rules"></a>형식 유추 및 규칙을 오버 로드
 

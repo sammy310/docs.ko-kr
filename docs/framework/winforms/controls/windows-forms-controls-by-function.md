@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Forms controls, list of
 ms.assetid: 5e65a6c3-5d6f-480d-beb8-b28f865f07e3
 ms.openlocfilehash: 3a82642c985b7ec1cee885cdda7b054adbe3dfee
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115481"
 ---
 # <a name="windows-forms-controls-by-function"></a>기능별 Windows Forms 컨트롤

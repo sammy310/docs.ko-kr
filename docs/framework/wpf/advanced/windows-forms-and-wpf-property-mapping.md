@@ -9,10 +9,10 @@ helpviewer_keywords:
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 999d8298-9c04-467d-a453-86e41002057d
 ms.openlocfilehash: a7d78837a141ed322da42629501cee6dcc9143e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59088823"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Windows Forms 및 WPF 속성 매핑
@@ -140,5 +140,5 @@ ms.locfileid: "59088823"
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [WPF 및 Win32 상호 운용성](wpf-and-win32-interoperation.md)
 - [WPF 및 Windows Forms 상호 운용성](wpf-and-windows-forms-interoperation.md)
-- [연습: WindowsFormsHost 요소를 사용하여 속성 매핑](walkthrough-mapping-properties-using-the-windowsformshost-element.md)
-- [연습: ElementHost 컨트롤을 사용하여 속성 매핑](walkthrough-mapping-properties-using-the-elementhost-control.md)
+- [연습: WindowsFormsHost 요소를 사용 하 여 속성 매핑](walkthrough-mapping-properties-using-the-windowsformshost-element.md)
+- [연습: ElementHost 컨트롤을 사용 하 여 속성 매핑](walkthrough-mapping-properties-using-the-elementhost-control.md)

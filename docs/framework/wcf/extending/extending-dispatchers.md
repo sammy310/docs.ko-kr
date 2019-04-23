@@ -5,10 +5,10 @@ helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
 ms.openlocfilehash: ac20e24eb9148ed9d403b7a9c2c260009f39d492
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335032"
 ---
 # <a name="extending-dispatchers"></a>디스패처 확장
@@ -84,17 +84,17 @@ ms.locfileid: "59335032"
   
 4. 보안 관련 구성 요소는 다음과 같은 속성을 사용할 수 있습니다.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> 감사 이벤트를 쓰는 위치를 나타냅니다.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>은 감사 이벤트가 작성되는 위치를 나타냅니다.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> 서비스가 들어오는 메시지를 제공한 자격 증명을 사용 하 여 가장을 시도 하는지 여부를 제어 합니다.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A>는 들어오는 메시지가 제공하는 자격 증명을 사용하여 서비스가 가장을 시도하는지 여부를 제어합니다.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> 성공적인 메시지 권한 부여 이벤트로 지정 된 이벤트 로그에 쓰는지 여부를 제어 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>입니다.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A>은 성공적인 메시지 권한 부여 이벤트가 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>에서 지정된 이벤트 로그에 작성되는지 여부를 제어합니다.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> 제어 하는 방법을 <xref:System.Threading.Thread.CurrentPrincipal%2A> 속성을 설정 합니다.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A>는 <xref:System.Threading.Thread.CurrentPrincipal%2A> 속성을 설정하는 방법을 제어합니다.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A> 권한 부여 이벤트의 감사를 수행 하는 방법을 지정 합니다.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A>은 권한 부여 이벤트에 대한 감사를 수행하는 방법을 지정합니다.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> 로깅 프로세스 중 발생 하는 중요 하지 않은 예외를 보류할 지 여부를 지정 합니다.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A>는 로깅 프로세스 중에 발생하는 중요하지 않은 예외가 표시되지 않도록 할지 여부를 지정합니다.  
   
  일반적으로 사용자 지정 확장 개체는 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 속성에 할당되거나 서비스 동작(<xref:System.ServiceModel.Description.IServiceBehavior>를 구현하는 개체), 계약 동작(<xref:System.ServiceModel.Description.IContractBehavior>를 구현하는 개체) 또는 끝점 동작(<xref:System.ServiceModel.Description.IEndpointBehavior>를 구현하는 개체)에 의해 컬렉션에 삽입됩니다. 그런 다음 프로그래밍 방식을 사용하거나 사용자 지정 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> 개체를 구현하여 설치 동작 개체를 해당 동작 컬렉션에 추가하므로, 애플리케이션 구성 파일을 사용하여 동작을 삽입할 수 있습니다.  
   
@@ -132,5 +132,5 @@ ms.locfileid: "59335032"
 - <xref:System.ServiceModel.Dispatcher.DispatchRuntime>
 - <xref:System.ServiceModel.Dispatcher.DispatchOperation>
 - [방법: 서비스에서 메시지 검사 및 수정](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)
-- [방법: 매개 변수 검사 또는 수정](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
-- [방법: 엔터프라이즈에서 엔드포인트 잠그기](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)
+- [방법: 검사 하거나 매개 변수를 수정 합니다.](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
+- [방법: 엔터프라이즈에서 끝점 잠그기](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)

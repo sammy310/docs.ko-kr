@@ -3,10 +3,10 @@ title: '방법: WorkflowServiceHost를 사용하여 워크플로의 처리되지
 ms.date: 03/30/2017
 ms.assetid: 51b25c86-292c-43e4-8d13-273d2badc8ad
 ms.openlocfilehash: cd3729019b5371b5313bba3814758c723c0d448a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318749"
 ---
 # <a name="how-to-configure-workflow-unhandled-exception-behavior-with-workflowservicehost"></a>방법: WorkflowServiceHost를 사용하여 워크플로의 처리되지 않은 예외 동작 구성
@@ -53,5 +53,5 @@ ms.locfileid: "59318749"
   
 ## <a name="see-also"></a>참고자료
 
-- [워크플로 서비스 호스트 확장](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)
+- [워크플로 서비스 호스트 확장성](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)
 - [워크플로 서비스](../../../../docs/framework/wcf/feature-details/workflow-services.md)

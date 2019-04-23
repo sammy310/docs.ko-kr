@@ -12,10 +12,10 @@ ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b7380556e13e17e26ffb2f8c5fbbc7136a1fb5e9
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481329"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>.NET Framework 및 애플리케이션 배포
@@ -170,7 +170,7 @@ ms.locfileid: "59481329"
 |[애플리케이션, 서비스 및 구성 요소 배포](/visualstudio/deployment/deploying-applications-services-and-components)|ClickOnce 및 Windows Installer 기술을 사용하여 애플리케이션을 게시하기 위한 지침을 포함하여 Visual Studio의 배포 옵션을 설명합니다.|
 |[ClickOnce 애플리케이션 게시](/visualstudio/deployment/publishing-clickonce-applications)|Windows Forms 애플리케이션을 패키징하고 ClickOnce로 네트워크의 클라이언트 컴퓨터에 배포하는 방법을 설명합니다.|
 |[리소스 패키징 및 배포](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)|.NET Framework에서 리소스를 패키징 및 배포하는 데 사용하는 허브 및 스포크 모델을 설명합니다. 리소스 명명 규칙, 대체(fallback) 프로세스 및 패키징 대안을 설명합니다.|
-|[Interop 응용 프로그램 배포](../../../docs/framework/interop/deploying-an-interop-application.md)|일반적으로 .NET Framework 클라이언트 어셈블리, 고유한 COM 형식 라이브러리를 나타내는 하나 이상의 interop 어셈블리 및 하나 이상의 등록된 COM 구성 요소를 포함하는 interop 애플리케이션을 제공하고 설치하는 방법을 설명합니다.|
+|[Interop 애플리케이션 배포](../../../docs/framework/interop/deploying-an-interop-application.md)|일반적으로 .NET Framework 클라이언트 어셈블리, 고유한 COM 형식 라이브러리를 나타내는 하나 이상의 interop 어셈블리 및 하나 이상의 등록된 COM 구성 요소를 포함하는 interop 애플리케이션을 제공하고 설치하는 방법을 설명합니다.|
 |[방법: .NET Framework 4.5 설치 관리자에서 진행률 가져오기](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|설치 진행 상황을 자체적으로 표시하면서 .NET Framework 설치 프로세스를 자동으로 시작하고 추적하는 방법을 설명합니다.|
 
 ## <a name="see-also"></a>참고 항목

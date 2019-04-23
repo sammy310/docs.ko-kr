@@ -7,10 +7,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 ms.assetid: 259b49a3-a3c1-4254-ba8c-73cdc4127703
 ms.openlocfilehash: 6e3ce2a184ca5411a6a016929a16bf3d67e669ca
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335474"
 ---
 # <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>방법: (Visual Basic) 값을 반환 하지 않는 프로시저 호출
@@ -33,9 +33,9 @@ ms.locfileid: "59335474"
 - <xref:Microsoft.VisualBasic.Interaction.Shell%2A>
 - <xref:System.ArgumentException>
 - [절차](./index.md)
-- [하위 프로시저](./sub-procedures.md)
+- [Sub 프로시저](./sub-procedures.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
 - [Sub 문](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [방법: 프로시저 만들기](./how-to-create-a-procedure.md)
-- [방법: 값을 반환하는 프로시저 호출](./how-to-call-a-procedure-that-returns-a-value.md)
+- [방법: 값을 반환 하는 프로시저 호출](./how-to-call-a-procedure-that-returns-a-value.md)
 - [방법: Visual Basic의 이벤트 처리기를 호출 합니다.](./how-to-call-an-event-handler.md)

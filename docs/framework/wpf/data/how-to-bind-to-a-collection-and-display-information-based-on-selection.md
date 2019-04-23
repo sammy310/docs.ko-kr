@@ -11,10 +11,10 @@ helpviewer_keywords:
 - data binding [WPF], binding to collections
 ms.assetid: 952a7d76-dd29-49e5-86f5-32c4530e70eb
 ms.openlocfilehash: bb7d4c89e63982a3052857dcb50d04d36d9517dd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314395"
 ---
 # <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>방법: 선택 영역에 따라 컬렉션 및 표시 정보에 바인딩
@@ -47,8 +47,8 @@ ms.locfileid: "59314395"
   
 ## <a name="see-also"></a>참고자료
 
-- [계층적 데이터에서 마스터-세부 정보 패턴 사용](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)
-- [계층적 XML 데이터에서 마스터-세부 정보 패턴 사용](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
+- [계층적 데이터에 마스터-세부 패턴 사용](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)
+- [계층적 XML 데이터에 마스터-세부 패턴 사용](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
 - [데이터 바인딩 개요](data-binding-overview.md)
 - [데이터 템플릿 개요](data-templating-overview.md)
 - [방법 항목](data-binding-how-to-topics.md)

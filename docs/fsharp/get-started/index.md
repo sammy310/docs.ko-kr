@@ -1,4 +1,4 @@
-﻿---
+---
 title: F# 시작
 description: F# 프로그래밍 언어를 시작하는 방법을 확인합니다.
 ms.date: 12/08/2018
@@ -9,7 +9,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 02/28/2019
 ms.locfileid: "56971418"
 ---
-# <a name="get-started-with-f"></a>F# 시작
+# <a name="get-started-with-f"></a>F\# 시작
 
 F#은 컴퓨터나 온라인으로 시작할 수 있습니다.
 

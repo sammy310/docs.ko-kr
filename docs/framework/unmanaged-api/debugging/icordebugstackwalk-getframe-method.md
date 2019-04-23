@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 253a25fdfc1f00adbc20388660caf6c227030a1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111243"
 ---
 # <a name="icordebugstackwalkgetframe-method"></a>ICorDebugStackWalk::GetFrame 메서드
@@ -45,7 +45,7 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
 |S_OK|런타임은 현재 프레임을 반환 했습니다.|  
 |E_FAIL|현재 프레임을 반환 하지 않았습니다.|  
 |S_FALSE|현재 프레임은 기본 스택 프레임입니다.|  
-|E_INVALIDARG|`pFrame` null입니다.|  
+|E_INVALIDARG|`pFrame`가 null입니다.|  
 |CORDBG_E_PAST_END_OF_STACK|프레임 포인터 끝 스택;에 이미 따라서 추가 프레임 없음 액세스할 수 있습니다.|  
   
 ## <a name="exceptions"></a>예외  

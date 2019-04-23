@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ef9445bb56523f3ef2adf668a4a637868b5d565
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f27385fadd872d2ff6f84cabe079811142008df
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558919"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59143652"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>.NET Framework의 버전 호환성
 이전 버전과의 호환성은 특정 버전의 플랫폼용으로 개발된 앱이 해당 플랫폼의 다음 버전에서도 실행되는 것을 의미합니다. .NET Framework는 이전 버전과의 호환성을 최대한 지원하려고 합니다. 한 버전의 .NET Framework용으로 작성된 소스 코드는 다음 버전의 .NET Framework에서 컴파일되어야 하며, 한 버전의 .NET Framework에서 실행되는 이진 파일은 다음 버전의 .NET Framework에서 동일하게 작동해야 합니다.  
@@ -66,6 +66,7 @@ ms.locfileid: "54558919"
  문제에 대한 적합한 해결 방법을 찾지 못한 경우 .NET Framework 4.5(또는 해당 포인트 릴리스 중 하나)가 버전 1.1, 2.0 및 3.5와 side-by-side 실행된다는 것과 버전 4.5는 버전 4를 대체하는 내부 업데이트임을 기억하십시오. 버전 1.1, 2.0 및 3.5를 대상으로 하는 앱의 경우 대상 컴퓨터에 적절한 .NET Framework 버전을 설치하여 앱을 가장 적합한 환경에서 실행할 수 있습니다. Side-by-Side 실행에 대한 자세한 내용은 [Side-by-Side 실행](../../../docs/framework/deployment/side-by-side-execution.md)을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [새로운 기능](../../../docs/framework/whats-new/index.md)
 - [클래스 라이브러리의 사용되지 않는 기능](../../../docs/framework/whats-new/whats-obsolete.md)
 - [애플리케이션 호환성](../../../docs/framework/migration-guide/application-compatibility.md)

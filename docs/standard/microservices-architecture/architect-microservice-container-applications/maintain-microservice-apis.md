@@ -4,12 +4,12 @@ description: 요구 사항의 변화에 따라 발전과 버전을 고려하여 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 6580418ea04d64650cefe2f4c91f03e3f40a058f
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: f42de3895f7f9affe09891fd89621fbb414313e9
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466051"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612110"
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>마이크로 서비스 API 및 계약 만들기, 개선 및 버전 관리
 
@@ -28,13 +28,13 @@ API에 특성이나 매개 변수를 추가하는 경우처럼 API 변경이 작
 ## <a name="additional-resources"></a>추가 자료
 
 - **Scott Hanselman. 쉬워진 ASP.NET Core RESTful Web API 버전 관리** \
-  [https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx](https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
+  <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
 - **RESTful Web API 버전 관리** \
-  [https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
+  <https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api>
 
 - **Roy Fielding. 버전 관리, 하이퍼미디어 및 REST** \
-  [https://www.infoq.com/articles/roy-fielding-on-versioning](https://www.infoq.com/articles/roy-fielding-on-versioning)
+  <https://www.infoq.com/articles/roy-fielding-on-versioning>
 
 >[!div class="step-by-step"]
 >[이전](asynchronous-message-based-communication.md)

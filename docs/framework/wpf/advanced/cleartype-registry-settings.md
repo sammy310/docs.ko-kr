@@ -6,18 +6,18 @@ helpviewer_keywords:
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
 ms.openlocfilehash: a776c3d4060b9ca291e4e919ab6ca33fb713434c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59079996"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType 레지스트리 설정
-이 항목의 개요를 제공 합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] 에서 사용 되는 레지스트리 설정 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다.  
+이 항목의 개요를 제공 합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] 에서 사용 되는 레지스트리 설정 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다.  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>기술 개요  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 디스플레이 장치 사용에 대 한 텍스트를 렌더링 하는 응용 프로그램 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 기능 향상된 된 읽기 환경을 제공 합니다. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 개발한 소프트웨어 기술 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 랩톱 화면, Pocket PC 화면, 평면 모니터 등 기존의 Lcd (액정 디스플레이)에서 텍스트의 가독성을 향상 시키는 합니다. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] LCD 화면의 모든 픽셀에 있는 개별 세로 색 스트라이프 요소에 액세스 하 여 작동 합니다. 에 대 한 자세한 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]를 참조 하세요 [ClearType 개요](cleartype-overview.md)합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 디스플레이 장치 사용에 대 한 텍스트를 렌더링 하는 응용 프로그램 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 기능 향상된 된 읽기 환경을 제공 합니다. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]은 랩톱 화면, Pocket PC 화면, 평면 모니터 등 기존의 LCD(액정 디스플레이)에서 보다 쉽게 텍스트를 읽을 수 있도록 하기 위해 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]에서 개발한 소프트웨어 기술입니다. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]은 LCD 화면의 모든 픽셀에 있는 개별 세로 색 스트라이프 요소에 액세스하는 방식으로 작동합니다. 에 대 한 자세한 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]를 참조 하세요 [ClearType 개요](cleartype-overview.md)합니다.  
   
  사용 하 여 렌더링 되는 텍스트 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 다양 한 디스플레이 장치에서 볼 때 상당히 다르게 보일 수 있습니다. 소수의 모니터 파랑, 녹색, 빨강 순서로 세로 색 스트라이프 요소 대신 일반적인 빨강, 녹색, 파랑을 구현 하는 예를 들어 ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) 순서입니다.  
   
@@ -31,17 +31,17 @@ ms.locfileid: "59079996"
   
 |설정|설명|  
 |-------------|-----------------|  
-|[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] level|수준을 설명 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 색 투명도입니다.|  
+|[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 수준|수준을 설명 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 색 투명도입니다.|  
 |감마 수준|디스플레이 디바이스의 픽셀 색 구성 요소 수준을 설명합니다.|  
 |픽셀 구조체|디스플레이 디바이스의 픽셀 배치를 설명합니다.|  
 |텍스트 대비 수준|표시되는 텍스트의 대비 수준을 설명합니다.|  
   
- 이러한 설정은 식별 된 참조 하는 방법을 아는 외부 구성 유틸리티에서 액세스할 수 있습니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 레지스트리 설정 합니다. 이러한 설정은 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 레지스트리 편집기를 통해 직접 값에 액세스하여 만들거나 수정할 수도 있습니다.  
+ 이러한 설정은 식별 된 참조 하는 방법을 아는 외부 구성 유틸리티에서 액세스할 수 있습니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 레지스트리 설정 합니다. 이러한 설정은 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 레지스트리 편집기를 통해 직접 값에 액세스하여 만들거나 수정할 수도 있습니다.  
   
- 경우는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 레지스트리 설정은 합니다 (기본 상태), 설정 되지 않습니다 합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 쿼리를 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 글꼴 다듬기 설정에 대 한 시스템 매개 변수 정보입니다.  
+ 경우는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 레지스트리 설정은 합니다 (기본 상태), 설정 되지 않습니다 합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 쿼리를 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 글꼴 다듬기 설정에 대 한 시스템 매개 변수 정보입니다.  
   
 > [!NOTE]
->  디스플레이 장치 이름을 열거에 대 한 내용은 참조는 `SystemParametersInfo`[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 함수입니다.  
+>  디스플레이 장치 이름을 열거에 대 한 내용은 참조는 `SystemParametersInfo` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 함수입니다.  
   
 <a name="ClearType_level"></a>   
 ## <a name="cleartype-level"></a>ClearType 수준  
@@ -82,14 +82,14 @@ ms.locfileid: "59079996"
   
 |형식|값|설명|  
 |----------|-----------|-----------------|  
-|플랫|0|디스플레이 디바이스에는 픽셀 구조체가 없습니다. 즉 각 색의 광원이 픽셀 영역에서 고르게 분산되며, 이를 회색조 렌더링이라고 합니다. 이 형식은 표준 디스플레이 디바이스에서 작동하는 방법입니다. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 렌더링된 된 텍스트에 적용 되지 않습니다.|  
-|RGB|1|디스플레이 디바이스에는 빨강, 녹색 및 파랑 순서의 3개 스트라이프로 구성되는 픽셀이 있습니다. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 렌더링된 된 텍스트에 적용 됩니다.|  
-|BGR|2|디스플레이 디바이스에는 파랑, 녹색 및 빨강 순서의 3개 스트라이프로 구성되는 픽셀이 있습니다. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 렌더링된 된 텍스트에 적용 됩니다. 색의 순서가 RGB 형식과는 반대입니다.|  
+|플랫|0|디스플레이 디바이스에는 픽셀 구조체가 없습니다. 즉 각 색의 광원이 픽셀 영역에서 고르게 분산되며, 이를 회색조 렌더링이라고 합니다. 이 형식은 표준 디스플레이 디바이스에서 작동하는 방법입니다. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]이 렌더링된 텍스트에 적용되지 않습니다.|  
+|RGB|1|디스플레이 디바이스에는 빨강, 녹색 및 파랑 순서의 3개 스트라이프로 구성되는 픽셀이 있습니다. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]이 렌더링된 텍스트에 적용됩니다.|  
+|BGR|2|디스플레이 디바이스에는 파랑, 녹색 및 빨강 순서의 3개 스트라이프로 구성되는 픽셀이 있습니다. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]이 렌더링된 텍스트에 적용됩니다. 색의 순서가 RGB 형식과는 반대입니다.|  
   
  픽셀 구조체는 0에서 2까지의 정수 값에 해당합니다. 기본 수준은 플랫 픽셀 구조체를 나타내는 0입니다.  
   
 > [!NOTE]
->  디스플레이 장치 이름을 열거에 대 한 내용은 참조는 `EnumDisplayDevices`[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 함수입니다.  
+>  디스플레이 장치 이름을 열거에 대 한 내용은 참조는 `EnumDisplayDevices` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 함수입니다.  
   
 ### <a name="registry-setting"></a>레지스트리 설정  
  픽셀 구조체에 대한 레지스트리 설정 위치는 특정 디스플레이 디바이스 이름에 해당하는 로컬 컴퓨터 설정입니다.  

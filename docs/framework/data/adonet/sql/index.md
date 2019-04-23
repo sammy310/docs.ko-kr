@@ -3,16 +3,16 @@ title: SQL Server 및 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.openlocfilehash: f30d9d715a2d94deee788f92cfc8eed0cba706de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172772"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server 및 ADO.NET
 이 단원에서는 .NET Framework Data Provider for SQL Server(<xref:System.Data.SqlClient>)와 관련된 기능 및 동작에 대해 설명합니다.  
   
- <xref:System.Data.SqlClient> 데이터베이스 관련 프로토콜을 캡슐화 하는 SQL Server 버전에 대 한 액세스를 제공 합니다. 이 데이터 공급자의 기능은 OLE DB, ODBC 및 Oracle용 .NET Framework 데이터 공급자와 유사하게 디자인되었습니다. <xref:System.Data.SqlClient> SQL Server와 직접 통신할 수 표 형식 데이터 스트림 (TDS) 파서가 포함 되어 있습니다.  
+ <xref:System.Data.SqlClient>는 데이터베이스 관련 프로토콜을 캡슐화하는 SQL Server 버전에 대한 액세스를 제공합니다. 이 데이터 공급자의 기능은 OLE DB, ODBC 및 Oracle용 .NET Framework 데이터 공급자와 유사하게 디자인되었습니다. <xref:System.Data.SqlClient>에는 SQL Server와 직접 통신하기 위한 TDS(Tabular Data Stream) 파서가 포함되어 있습니다.  
   
 > [!NOTE]
 >  .NET Framework Data Provider for SQL Server를 사용하려면 응용 프로그램에서 <xref:System.Data.SqlClient> 네임스페이스를 참조해야 합니다.  

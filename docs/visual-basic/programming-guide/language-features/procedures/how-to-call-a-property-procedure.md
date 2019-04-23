@@ -9,10 +9,10 @@ helpviewer_keywords:
 - procedure calls [Visual Basic], property procedures
 ms.assetid: 96bc4d74-d9c3-4b7a-954d-58ac8553cd94
 ms.openlocfilehash: d05c1b63f5567ade9935f80ecc022eb4840e0af0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318756"
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>방법: 속성 프로시저 (Visual Basic)
@@ -56,10 +56,10 @@ ms.locfileid: "59318756"
 
 - [속성 프로시저](./property-procedures.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
-- [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [Property 문](../../../../visual-basic/language-reference/statements/property-statement.md)
 - [Visual Basic에서 속성과 변수의 차이점](./differences-between-properties-and-variables.md)
 - [방법: 속성 만들기](./how-to-create-a-property.md)
-- [방법: 액세스 수준이 혼합된 속성 선언](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [방법: 액세스 수준이 혼합된 된 속성 선언](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [방법: 선언 및 Visual Basic의 기본 속성을 호출](./how-to-declare-and-call-a-default-property.md)
 - [방법: 속성 값 입력](./how-to-put-a-value-in-a-property.md)
 - [방법: 속성에서 값 가져오기](./how-to-get-a-value-from-a-property.md)

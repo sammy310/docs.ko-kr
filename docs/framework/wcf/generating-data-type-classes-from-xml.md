@@ -3,14 +3,14 @@ title: XML에서 데이터 형식 클래스 생성
 ms.date: 03/30/2017
 ms.assetid: e4e5e4e8-527f-44d1-92fa-8904a08784ea
 ms.openlocfilehash: c1b5dfda8aa5370dbc202ab90c75ab5677970467
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309344"
 ---
 # <a name="generating-data-type-classes-from-xml"></a>XML에서 데이터 형식 클래스 생성
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] XML에서 데이터 형식 클래스를 생성 하는 새 기능이 포함 되어 있습니다. 이 항목에서는.NET 블로그 RSS 피드를 자동으로 생성 하는 방법을 설명 합니다.  
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에는 XML에서 데이터 형식 클래스를 생성하는 새 기능이 포함되어 있습니다. 이 항목에서는.NET 블로그 RSS 피드를 자동으로 생성 하는 방법을 설명 합니다.  
   
 ### <a name="obtaining-the-xml-from-the-net-blog-rss-feed"></a>피드.NET 블로그 rss에서 XML 가져오기  
   

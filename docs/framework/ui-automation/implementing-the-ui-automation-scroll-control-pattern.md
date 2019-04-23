@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Scroll control pattern
 ms.assetid: 73d64242-6cbb-424c-92dd-dc69530b7899
 ms.openlocfilehash: bb473b7f10aa400dc42303e1acc15c2bdcd34516
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59154533"
 ---
 # <a name="implementing-the-ui-automation-scroll-control-pattern"></a>UI 자동화 Scroll 컨트롤 패턴 구현
@@ -36,11 +36,11 @@ ms.locfileid: "59154533"
   
 -   스크롤이 백분율로 측정되면, 스크롤 눈금과 관련된 모든 값 또는 양은 0에서 100까지의 범위로 정규화되어야 합니다.  
   
--   <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> 및 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> 무관 합니다 <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>합니다.  
+-   <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> 및 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> 는 <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>와 관계가 없습니다.  
   
 -   하는 경우 <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty>  =  `false` 한 다음 <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> 100%로 설정 해야 하 고 <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> 로 설정 해야 <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>합니다. 마찬가지로, <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> = `false` 일 경우 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> 는 100%로 설정되어야 하며 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> 는 <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>를 참조하세요. 따라서 클라이언트가 원하지 않는 스크롤 방향이 활성화되어 있는 경우 UI 자동화 클라이언트는 <xref:System.Windows.Automation.ScrollPattern.SetScrollPercent%2A> 경합 상태 [를 방지하면서](https://support.microsoft.com/default.aspx?scid=kb;en-us;317723) 메서드 내에서 이러한 속성 값을 사용할 수 있습니다.  
   
--   <xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A> 로캘 관련 됩니다. HorizontalScrollPercent = 100.0으로 설정하는 경우 왼쪽에서 오른쪽으로 읽는 언어(예: 영어)에서 컨트롤의 스크롤 위치는 맨 오른쪽 위치에 해당하는 값으로 설정해야 합니다. 또는 오른쪽에서 왼쪽으로 읽는 언어(예: 아랍어)의 경우 HorizontalScrollPercent = 100.0으로 설정할 경우 스크롤 위치는 맨 왼쪽 위치로 설정해야 합니다.  
+-   <xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A> 는 로캘과 관련됩니다. HorizontalScrollPercent = 100.0으로 설정하는 경우 왼쪽에서 오른쪽으로 읽는 언어(예: 영어)에서 컨트롤의 스크롤 위치는 맨 오른쪽 위치에 해당하는 값으로 설정해야 합니다. 또는 오른쪽에서 왼쪽으로 읽는 언어(예: 아랍어)의 경우 HorizontalScrollPercent = 100.0으로 설정할 경우 스크롤 위치는 맨 왼쪽 위치로 설정해야 합니다.  
   
 <a name="Required_Members_for_IScrollProvider"></a>   
 ## <a name="required-members-for-iscrollprovider"></a>IScrollProvider에 필요한 멤버  
@@ -65,9 +65,9 @@ ms.locfileid: "59154533"
   
 |예외 형식|조건|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A> 컨트롤을 지 원하는 경우이 예외를 throw <xref:System.Windows.Automation.ScrollAmount.SmallIncrement> 가로 또는 세로 스크롤에 대 한 단독으로 값 있지만 <xref:System.Windows.Automation.ScrollAmount.LargeIncrement> 값에서 전달 됩니다.|  
-|<xref:System.ArgumentException>|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> double로 변환할 수 없는 값 전달 되 면이 예외를 throw 합니다.|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> 가 0 보다 작거나 100 보다 큰 값을 전달 하는 경우이 예외를 throw (해당 하는-1 제외 <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>).|  
+|<xref:System.ArgumentException>|컨트롤이 가로 또는 세로 스크롤에 대해서만<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A> 값을 지원하지만 <xref:System.Windows.Automation.ScrollAmount.SmallIncrement> 값이 전달되는 경우에 <xref:System.Windows.Automation.ScrollAmount.LargeIncrement> 은 이 예외를 발생시킵니다.|  
+|<xref:System.ArgumentException>|double로 변환할 수 없는 값이 전달되는 경우<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> 가 이 예외를 발생시킵니다.|  
+|<xref:System.ArgumentOutOfRangeException>|100보다 크거나 0보다 작은 값이 전달되는 경우(<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> 에 해당하는 -1 제외) <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>가 이 예외를 발생시킵니다.|  
 |<xref:System.InvalidOperationException>|지원되지 않는 방향으로 스크롤이 시도되면 <xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A> 및 <xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> 둘 다 이 예외를 발생시킵니다.|  
   
 ## <a name="see-also"></a>참고자료
@@ -76,4 +76,4 @@ ms.locfileid: "59154533"
 - [UI 자동화 공급자의 컨트롤 패턴 지원](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [클라이언트용 UI 자동화 컨트롤 패턴](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [UI 자동화에서 캐싱 사용](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [UI 자동화의 캐싱 사용](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

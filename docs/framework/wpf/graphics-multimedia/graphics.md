@@ -8,10 +8,10 @@ helpviewer_keywords:
 - graphics [WPF], effects
 ms.assetid: 3bfc652e-91b7-4697-a4f4-83ff0e98327e
 ms.openlocfilehash: c59d19c925d99ac8f5dd07da84295ee002c956de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102351"
 ---
 # <a name="graphics"></a>그래픽
@@ -20,11 +20,11 @@ ms.locfileid: "59102351"
 ## <a name="in-this-section"></a>섹션 내용  
  [비트맵 효과](bitmap-effects.md)  
  [브러시](brushes.md)  
- [Drawing](drawings.md)  
- [Geometry](geometries.md)  
+ [그리기](drawings.md)  
+ [기하 도형](geometries.md)  
  [이미지](images.md)  
  [도형](shapes.md)  
- [변형](transformations.md)  
+ [변환](transformations.md)  
  [그래픽 렌더링 레지스트리 설정](graphics-rendering-registry-settings.md)  
  [방법 항목](graphics-how-to-topics.md)  
   
@@ -37,6 +37,6 @@ ms.locfileid: "59102351"
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Effects.BitmapEffect>
-- [2D 그래픽 및 이미징](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [2차원 그래픽 및 이미징](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [그래픽 및 멀티미디어](index.md)
 - [WPF 그래픽 렌더링 개요](wpf-graphics-rendering-overview.md)

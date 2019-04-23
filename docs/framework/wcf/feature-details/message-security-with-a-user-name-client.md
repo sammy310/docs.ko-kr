@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
 ms.openlocfilehash: 73e984193f87b20e0e00d8ab92a7c0fd67f7968f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59081556"
 ---
 # <a name="message-security-with-a-user-name-client"></a>사용자 이름 클라이언트를 사용하는 메시지 보안
@@ -128,7 +128,7 @@ ms.locfileid: "59081556"
 ## <a name="see-also"></a>참고자료
 
 - [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Message Security User Name](../../../../docs/framework/wcf/samples/message-security-user-name.md)
+- [메시지 보안 사용자 이름](../../../../docs/framework/wcf/samples/message-security-user-name.md)
 - [서비스 ID 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
 - [\<identity>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
-- [Windows Server AppFabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server appfabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

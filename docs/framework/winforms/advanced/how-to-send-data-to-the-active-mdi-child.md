@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
 ms.openlocfilehash: f4399d8548eff76aaa4effae6da7239cd3b0284b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343716"
 ---
 # <a name="how-to-send-data-to-the-active-mdi-child"></a>방법: 활성 MDI 자식으로 데이터 보내기
@@ -93,8 +93,8 @@ ms.locfileid: "59343716"
   
 ## <a name="see-also"></a>참고자료
 
-- [MDI 애플리케이션](multiple-document-interface-mdi-applications.md)
-- [방법: MDI 부모 양식 만들기](how-to-create-mdi-parent-forms.md)
-- [방법: MDI 자식 양식 만들기](how-to-create-mdi-child-forms.md)
+- [MDI(다중 문서 인터페이스) 응용 프로그램](multiple-document-interface-mdi-applications.md)
+- [방법: MDI 부모 폼 만들기](how-to-create-mdi-parent-forms.md)
+- [방법: MDI 자식 폼 만들기](how-to-create-mdi-child-forms.md)
 - [방법: 활성 MDI 자식 확인](how-to-determine-the-active-mdi-child.md)
-- [방법: MDI 자식 양식 정렬](how-to-arrange-mdi-child-forms.md)
+- [방법: MDI 자식 폼 정렬](how-to-arrange-mdi-child-forms.md)

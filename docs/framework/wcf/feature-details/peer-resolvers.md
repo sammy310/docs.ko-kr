@@ -3,10 +3,10 @@ title: 피어 확인자
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
 ms.openlocfilehash: de19e08c1c001076c56e26020584d17079f1a45f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151621"
 ---
 # <a name="peer-resolvers"></a>피어 확인자
@@ -35,7 +35,7 @@ ms.locfileid: "59151621"
  사용자 지정 확인자를 구현 하는 방법의 데모를 참조 하세요 [피어 채널 사용자 지정 피어 확인자](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90))합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [CustomPeerResolverService 내: 클라이언트 등록](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
+ [Custompeerresolverservice: 클라이언트 등록](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
   
 ## <a name="see-also"></a>참고자료
 

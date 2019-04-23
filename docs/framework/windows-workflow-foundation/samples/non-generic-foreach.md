@@ -3,16 +3,16 @@ title: 비제네릭 ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
 ms.openlocfilehash: 353128d1c313be62222e091c084e5b5e37a92b58
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303546"
 ---
 # <a name="non-generic-foreach"></a>비제네릭 ForEach
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 제어 흐름 활동을 포함 하 여 집합을 도구 상자에 제공 됩니다 <xref:System.Activities.Statements.ForEach%601>를 반복할 수 있도록 하는 <xref:System.Collections.Generic.IEnumerable%601> 컬렉션입니다.  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]의 도구 상자에는 <xref:System.Activities.Statements.ForEach%601> 컬렉션을 반복할 수 있도록 하는 <xref:System.Collections.Generic.IEnumerable%601>을 비롯한 흐름 제어 활동이 제공됩니다.  
   
- <xref:System.Activities.Statements.ForEach%601> 필요한 해당 <xref:System.Activities.Statements.ForEach%601.Values%2A> 형식으로 속성 <xref:System.Collections.Generic.IEnumerable%601>합니다. 그러면 사용자가 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스를 구현하는 데이터 구조(예: <xref:System.Collections.ArrayList>)를 반복하지 못합니다. <xref:System.Activities.Statements.ForEach%601>의 비제네릭 버전은 컬렉션 값의 형식에 대한 호환성을 유지하기 위해 런타임 복잡성이 더 높아지지만 이러한 요구 사항의 제약을 받지 않습니다.  
+ <xref:System.Activities.Statements.ForEach%601>을 사용하려면 <xref:System.Activities.Statements.ForEach%601.Values%2A> 속성이 <xref:System.Collections.Generic.IEnumerable%601> 형식이어야 합니다. 그러면 사용자가 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스를 구현하는 데이터 구조(예: <xref:System.Collections.ArrayList>)를 반복하지 못합니다. <xref:System.Activities.Statements.ForEach%601>의 비제네릭 버전은 컬렉션 값의 형식에 대한 호환성을 유지하기 위해 런타임 복잡성이 더 높아지지만 이러한 요구 사항의 제약을 받지 않습니다.  
   
  이 샘플에서는 비제네릭 <xref:System.Activities.Statements.ForEach%601> 활동과 디자이너를 구현하는 방법을 보여 줍니다. 이 활동을 사용하여 <xref:System.Collections.ArrayList>를 반복할 수 있습니다.  
   
@@ -69,7 +69,7 @@ Activity sampleUsage =
   
 |조건|메시지|심각도|예외 형식|  
 |---------------|-------------|--------------|--------------------|  
-|값은 `null`|필수 활동 인수 'Values'의 값이 제공되지 않았습니다.|Error|<xref:System.InvalidOperationException>|  
+|값은 `null`입니다.|필수 활동 인수 'Values'의 값이 제공되지 않았습니다.|Error|<xref:System.InvalidOperationException>|  
   
 ## <a name="foreach-designer"></a>ForEach 디자이너  
  샘플의 활동 디자이너는 기본 제공 <xref:System.Activities.Statements.ForEach%601> 활동에 제공되는 디자이너와 모양이 비슷합니다. 디자이너의 도구 상자에 표시 합니다 **샘플**, **비 제네릭 활동** 범주입니다. 디자이너 **ForEachWithBodyFactory** 도구 상자에서 작업을 노출 하기 때문에 <xref:System.Activities.Presentation.IActivityTemplateFactory> 활동을 제대로 구성 된 만드는 도구 상자에서 <xref:System.Activities.ActivityAction>합니다.  

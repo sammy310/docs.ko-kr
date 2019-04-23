@@ -6,10 +6,10 @@ helpviewer_keywords:
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
 ms.openlocfilehash: d45f18b0b8fe4e0cc9667091e166c80691faa2d4
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58921327"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>방법: 개발 중에 사용할 임시 인증서 만들기
@@ -115,5 +115,5 @@ WCF에서의 인증서 사용에 대한 자세한 내용은 [Working with Certif
 ## <a name="see-also"></a>참고자료
 
 - [인증서 작업](working-with-certificates.md)
-- [방법: MMC 스냅인을 사용하여 인증서 보기](how-to-view-certificates-with-the-mmc-snap-in.md)
+- [방법: MMC 스냅인을 사용 하 여 인증서 보기](how-to-view-certificates-with-the-mmc-snap-in.md)
 - [서비스 및 클라이언트에 보안 설정](securing-services-and-clients.md)

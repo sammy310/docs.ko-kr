@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
 ms.openlocfilehash: 4fc4565db58d008f52bc047d26118fc849648770
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329455"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>방법: 여러 버전의 워크플로를 함께 호스팅
-`WorkflowIdentity` 이 정보는 지속형된 워크플로 인스턴스와 연결 되도록 하는 워크플로 정의 사용 하 여 이름 및 버전을 연결 하려면 워크플로 응용 프로그램 개발자를 위한 한 수가 있습니다. 이 ID 정보는 워크플로 응용 프로그램 개발자가 여러 버전의 워크플로 정의를 side-by-side로 실행하는 경우와 같은 시나리오를 가능하도록 하는 데 사용될 수 있으며 동적 업데이트와 같은 다른 기능의 토대를 제공합니다. 자습서의 이 단계에서는 `WorkflowIdentity`를 사용하여 여러 버전의 워크플로를 동시에 호스트하는 방법을 보여 줍니다.
+`WorkflowIdentity`는 워크플로 응용 프로그램 개발자에게 이름 및 버전을 워크플로 정의에 연결하는 방법을 제공하며, 이러한 정보는 지속형 워크플로 인스턴스와 연결됩니다. 이 ID 정보는 워크플로 응용 프로그램 개발자가 여러 버전의 워크플로 정의를 side-by-side로 실행하는 경우와 같은 시나리오를 가능하도록 하는 데 사용될 수 있으며 동적 업데이트와 같은 다른 기능의 토대를 제공합니다. 자습서의 이 단계에서는 `WorkflowIdentity`를 사용하여 여러 버전의 워크플로를 동시에 호스트하는 방법을 보여 줍니다.
 
 > [!NOTE]
 >  완료 된 버전을 다운로드 하거나이 자습서의 비디오 연습을 보려면을 참조 하세요 [Windows Workflow Foundation(wf45 ()-초보자를 위한 자습서](https://go.microsoft.com/fwlink/?LinkID=248976)합니다.  
@@ -23,17 +23,17 @@ ms.locfileid: "59329455"
   
 -   [NumberGuessWorkflowActivities 프로젝트의 복사본을 만들려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)  
   
--   [워크플로를 업데이트하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
+-   [워크플로 업데이트 하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
   
-    -   [StateMachine 워크플로를 업데이트하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
+    -   [StateMachine 워크플로 업데이트 하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
   
-    -   [Flowchart 워크플로를 업데이트하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
+    -   [순서도 워크플로 업데이트 하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
   
-    -   [Sequential 워크플로를 업데이트하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
+    -   [순차 워크플로 업데이트 하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
   
--   [이전 워크플로 버전을 포함하도록 WorkflowVersionMap을 업데이트하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
+-   [이전 워크플로 버전을 포함 하도록 WorkflowVersionMap을 업데이트.](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
   
--   [애플리케이션을 빌드하고 실행하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
+-   [빌드 및 응용 프로그램을 실행 하려면](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
   
 > [!NOTE]
 >  이 항목의 단계를 수행하기 전에 응용 프로그램을 실행하고 각 유형의 여러 워크플로를 시작한 후 각 워크플로마다 한두 개의 숫자를 추측하세요. 이 단계에서 다음 단계에 이러한 지속형된 워크플로 사용 하는 [방법: 실행 중인 워크플로 인스턴스의 정의 업데이트](how-to-update-the-definition-of-a-running-workflow-instance.md)합니다.
@@ -555,14 +555,14 @@ ms.locfileid: "59329455"
 
 2. 클릭 하 여 새 워크플로 시작할 **New Game**합니다. 워크플로의 버전이 상태 창에 표시되고 연결된 `WorkflowIdentity`에서 업데이트된 버전이 반영됩니다. 완료 시 워크플로 추적 파일을 볼 수 있도록 `InstanceId`를 적어 두고 게임이 완료될 때까지 추측 값을 입력합니다. 상태 창에 표시된 정보에 사용자의 추측 값이 나타나는 방식은 `WriteLine` 활동에 대한 업데이트에 따라 달라집니다.
 
- **Please enter a number between 1 and 10**  
-**5 is too high.**  
-**Please enter a number between 1 and 10**  
-**3 is too high.**  
-**Please enter a number between 1 and 10**  
-**1 is too low.**  
-**Please enter a number between 1 and 10**  
-**Congratulations, you guessed the number in 4 turns.**  
+ **1과 10 사이의 숫자를 입력 하세요.**  
+**5 너무 높습니다.**  
+**1과 10 사이의 숫자를 입력 하세요.**  
+**3 너무 높습니다.**  
+**1과 10 사이의 숫자를 입력 하세요.**  
+**1 너무 낮습니다.**  
+**1과 10 사이의 숫자를 입력 하세요.**  
+**축, 4 결과적으로 숫자를 추측 합니다.**  
 
     > [!NOTE]
     >  `WriteLine` 활동에서 업데이트된 텍스트는 표시되지만 이 항목에서 추가된 최종 `WriteLine` 활동의 출력은 표시되지 않습니다. 상태 창은 `PersistableIdle` 처리기에 의해 업데이트되기 때문입니다. 워크플로는 완료 및 최종 활동 후에도 유휴 상태가 되지 않으므로 `PersistableIdle` 처리기가 호출되지 않습니다. 그러나 `Completed` 처리기에 의해 유사한 메시지가 상태 창에 표시됩니다. 필요한 경우 `Completed`에서 텍스트를 추출하여 상태 창에 표시하도록 `StringWriter` 처리기에 코드를 추가할 수 있습니다.

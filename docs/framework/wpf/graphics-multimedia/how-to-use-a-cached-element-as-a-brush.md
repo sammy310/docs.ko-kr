@@ -8,10 +8,10 @@ helpviewer_keywords:
 - CacheMode [WPF], using
 ms.assetid: d36e944a-866e-4baf-98c4-fd6a75f6fdd0
 ms.openlocfilehash: 78df242c7f00b69e36ea4ab6751f51509d9e2220
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59229370"
 ---
 # <a name="how-to-use-a-cached-element-as-a-brush"></a>방법: 캐시된 요소를 브러시로 사용
@@ -27,4 +27,4 @@ ms.locfileid: "59229370"
 - <xref:System.Windows.Media.BitmapCache>
 - <xref:System.Windows.Media.BitmapCacheBrush>
 - <xref:System.Windows.UIElement.CacheMode%2A>
-- [방법: 요소를 캐시하여 렌더링 성능 향상](how-to-improve-rendering-performance-by-caching-an-element.md)
+- [방법: 요소를 캐시 하 여 렌더링 성능 향상](how-to-improve-rendering-performance-by-caching-an-element.md)

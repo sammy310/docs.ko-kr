@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Windows Forms, drawing text at a specified location
 ms.assetid: 60816423-1c38-465e-980d-2c2b64d74086
 ms.openlocfilehash: f7834ea45db8dd6e971defd9c3b2b152ffddf512
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336410"
 ---
 # <a name="how-to-draw-text-at-a-specified-location"></a>방법: 지정된 위치에 텍스트 그리기
@@ -47,7 +47,7 @@ ms.locfileid: "59336410"
   
 ## <a name="see-also"></a>참고자료
 
-- [방법: GDI를 사용하여 텍스트 그리기](how-to-draw-text-with-gdi.md)
+- [방법: GDI 사용 하 여 텍스트 그리기](how-to-draw-text-with-gdi.md)
 - [글꼴 및 텍스트 사용](using-fonts-and-text.md)
 - [방법: 글꼴 패밀리 및 글꼴 만들기](how-to-construct-font-families-and-fonts.md)
 - [방법: 사각형 안에 줄 바꿈된 텍스트 그리기](how-to-draw-wrapped-text-in-a-rectangle.md)

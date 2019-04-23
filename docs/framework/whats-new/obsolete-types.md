@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a8c6046d05dc706074a732d9ba2a9c1ec73c56f
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: b4b10ff681f7300412fd2f6a1e310989fcc3b31c
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412346"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59114695"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework에서 사용되지 않는 형식
 <a name="introduction"></a> 이 문서의 표에는 어셈블리에서 구성된 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 및 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]에서 사용하지 않는 형식이 나열되어 있습니다. 사용하지 않는 형식과 각 어셈블리에서 권장되는 대체 형식의 목록을 보려면 다음 링크를 사용합니다. 이러한 형식은 사용되지 않으므로 해당 형식의 멤버도 모두 사용되지 않습니다. .NET Framework 클래스 라이브러리의 사용되지 않는 멤버에 대한 추가 목록은 [사용되지 않는 멤버](obsolete-members.md)를 참조하십시오.
@@ -779,5 +779,6 @@ Visual Basic 6에서 마이그레이션에 대한 정보는 [Visual Basic 6.0 �
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll은 사용되지 않는 어셈블리이며 이전 버전과의 호환성을 위해서만 존재합니다.|
 
 ## <a name="see-also"></a>참고 항목
+
 - [클래스 라이브러리의 사용되지 않는 기능](whats-obsolete.md)
 - [사용되지 않는 멤버](obsolete-members.md)

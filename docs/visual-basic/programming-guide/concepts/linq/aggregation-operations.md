@@ -3,10 +3,10 @@ title: 집계 작업 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0f47e92c-5dd2-4007-baf4-c5fe5dc3b4a8
 ms.openlocfilehash: 72268e27fdf6d573279e98438fd884a076e0c8a3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58817242"
 ---
 # <a name="aggregation-operations-visual-basic"></a>집계 작업 (Visual Basic)
@@ -38,7 +38,7 @@ ms.locfileid: "58817242"
  [!code-vb[CsLINQAggregating#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#1)]  
   
 ### <a name="count"></a>개수  
- 다음 코드 예제에서는 `Aggregate Into Count` 절 Visual Basic의 배열에서 80 보다 크거나 값의 수를 계산 합니다.  
+ 다음 코드 예제에서는 `Aggregate Into Count` 절 Visual basic의 배열에서 80 보다 크거나 값의 수를 계산 합니다.  
   
  [!code-vb[CsLINQAggregating#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#2)]  
   

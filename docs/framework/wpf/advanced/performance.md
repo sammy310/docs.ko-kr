@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WPF [WPF], performance
 ms.assetid: c649a20f-8b7e-4a38-9b80-74839298d406
 ms.openlocfilehash: 268bb396564db983c293ab1d718171e963ab7aaa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188489"
 ---
 # <a name="performance"></a>성능
@@ -18,8 +18,8 @@ ms.locfileid: "59188489"
   
 ## <a name="in-this-section"></a>섹션 내용  
  [그래픽 렌더링 계층](graphics-rendering-tiers.md)  
- [WPF 애플리케이션 성능 최적화](optimizing-wpf-application-performance.md)  
- [연습: WPF 애플리케이션에서 애플리케이션 데이터 캐싱](walkthrough-caching-application-data-in-a-wpf-application.md)  
+ [WPF 응용 프로그램 성능 최적화](optimizing-wpf-application-performance.md)  
+ [연습: WPF 응용 프로그램에서 응용 프로그램 데이터 캐싱](walkthrough-caching-application-data-in-a-wpf-application.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Media.RenderCapability>  

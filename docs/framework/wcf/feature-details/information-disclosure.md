@@ -3,10 +3,10 @@ title: 정보 공개
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
 ms.openlocfilehash: b42faeb4043302e5e70379cc4e1de3cb8bd96af4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195906"
 ---
 # <a name="information-disclosure"></a>정보 공개
@@ -59,7 +59,7 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
 ## <a name="see-also"></a>참고자료
 
 - [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [권한 높이기](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [권한 상승](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
 - [서비스 거부](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [변조](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [지원되지 않는 시나리오](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

@@ -3,10 +3,10 @@ title: ASP.NET 웹 서비스를 WCF로 마이그레이션
 ms.date: 03/30/2017
 ms.assetid: 1adbb931-f0b1-47f3-9caf-169e4edc9907
 ms.openlocfilehash: 703088cdaae69d90d71fb950912538ea0662229b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211090"
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>ASP.NET 웹 서비스를 WCF로 마이그레이션
@@ -37,8 +37,8 @@ ASP.NET은 .NET Framework 클래스 라이브러리 및 웹 서비스 빌드를 
   
 ## <a name="see-also"></a>참고자료
 
-- [Windows Communication Foundation 채택에 대한 기대: 향후 마이그레이션 간소화](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
-- [Windows Communication Foundation 채택에 대한 기대: 향후 통합 간소화](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
+- [Windows Communication Foundation 채택 예상: 향후 마이그레이션 간소화](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
+- [Windows Communication Foundation 채택 예상: 향후 통합 간소화](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
 - [Windows Communication Foundation 채택](../../../../docs/framework/wcf/feature-details/adopting-wcf.md)
 - [용도와 사용되는 표준을 기반으로 ASP.NET 웹 서비스와 WCF 비교](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
 - [개발을 기반으로 ASP.NET 웹 서비스와 WCF 비교](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development.md)

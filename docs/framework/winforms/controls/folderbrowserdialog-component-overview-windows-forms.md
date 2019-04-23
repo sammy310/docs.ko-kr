@@ -9,10 +9,10 @@ helpviewer_keywords:
 - folders [Windows Forms], enabling browsing in applications
 ms.assetid: 796b622c-3ba9-4356-93bb-e217fc52f2c7
 ms.openlocfilehash: aae18167b29c71ad692cc6ba447457cd079374b4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074133"
 ---
 # <a name="folderbrowserdialog-component-overview-windows-forms"></a>FolderBrowserDialog 구성 요소 개요(Windows Forms)
@@ -28,5 +28,5 @@ Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> 구성 요소는 �
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.Forms.FolderBrowserDialog>
-- [방법: Windows Forms FolderBrowserDialog 구성 요소를 사용하여 폴더 선택](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)
+- [방법: Windows Forms FolderBrowserDialog 구성 요소를 사용 하 여 폴더를 선택 합니다.](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)
 - [FolderBrowserDialog 구성 요소](folderbrowserdialog-component-windows-forms.md)

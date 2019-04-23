@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 81f4d5219865bf7f7c9e6d284d74d0c249729dfc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59194424"
 ---
 # <a name="spawnderivedclass-function"></a>SpawnDerivedClass 함수
@@ -62,7 +62,7 @@ HRESULT SpawnDerivedClass (
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | 클래스는 인스턴스를 생성 하는 등 잘못 된 작업 요청 되었습니다. |
 | `WBEM_E_INCOMPLETE_CLASS` | 완전히 원본 클래스 정의 되었거나 새 파생된 클래스는 허용 되지 않습니다 있도록 Windows 관리를 사용 하 여 등록 합니다. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 메모리가 부족 하 여 작업을 완료할 수 없습니다. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` `null`합니다. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass`가 `null`인 경우 |
 | `WBEM_S_NO_ERROR` | 0 | 함수 호출이 성공 했습니다.  |
   
 ## <a name="remarks"></a>설명
@@ -82,4 +82,4 @@ HRESULT SpawnDerivedClass (
   
 ## <a name="see-also"></a>참고자료
 
-- [WMI 및 성능 카운터(관리되지 않는 API 참조)](index.md)
+- [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

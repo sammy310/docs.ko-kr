@@ -9,10 +9,10 @@ helpviewer_keywords:
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
 ms.openlocfilehash: a628665ccfa0a423667344b1fe81f132d6691b12
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321681"
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>연습: 사용자 정의 컨트롤에서 끌어서 놓기 사용
@@ -114,7 +114,7 @@ ms.locfileid: "59321681"
 
     -   정적 호출 <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> 끌어서 놓기 작업을 시작 하는 방법입니다. 다음 세 가지 매개 변수를 전달 합니다 <xref:System.Windows.DragDrop.DoDragDrop%2A> 메서드:
 
-        -   `dragSource` –이 컨트롤에 참조입니다.
+        -   `dragSource` – 이 컨트롤에 대한 참조입니다.
 
         -   `data` – <xref:System.Windows.DataObject> 이전 코드에서 생성 합니다.
 

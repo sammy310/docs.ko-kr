@@ -4,10 +4,10 @@ description: 사용 하 여 Azure 서비스 사용에 대 한 가이드F#
 author: sylvanc
 ms.date: 09/22/2016
 ms.openlocfilehash: 92b453b680a5f8c55f35458e9020f15444e90035
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211740"
 ---
 # <a name="using-f-on-azure"></a>Azure에서 F# 사용
@@ -33,18 +33,18 @@ Azure Functions는 F# 코드의 효율적이고 반응적이며 확장 가능한
 
 Azure Functions 및 F# 사용에 대한 기타 리소스:
 
-* [Azure functions에서 F# Suave를 사용 하 여](https://blog.tamizhvendan.in/blog/2016/09/19/scale-up-azure-functions-in-f-number-using-suave/)
-* [Azure 함수를 만드는 방법F#](https://mnie.github.io/2016-09-08-AzureFunctions/)
+* [Suave를 사용하여 F#에서 Azure Functions 확장](https://blog.tamizhvendan.in/blog/2016/09/19/scale-up-azure-functions-in-f-number-using-suave/)
+* [F#으로 Azure 함수를 만드는 방법](https://mnie.github.io/2016-09-08-AzureFunctions/)
 * [Azure Functions를 사용 하 여 Azure 형식 공급자를 사용 하 여](https://compositional-it.com/blog/2017/08-30-using-the-azure-type-provider-with-azure-functions/index.html)
 
 ## <a name="using-azure-storage-with-f"></a>F와 함께 Azure Storage 사용\#
 
 Azure Storage는 내구성, 가용성, 확장성을 활용하여 고객의 요구 사항을 충족하는 최신 애플리케이션을 위한 저장소 서비스의 기본 레이어입니다. F#프로그램은 다음 문서에서 설명한 기술을 사용 하 여 Azure 저장소 서비스에 직접 상호 작용할 수 있습니다.
 
-* [사용 하 여 Azure Blob storage 시작F#](blob-storage.md)
-* [사용 하 여 Azure File storage 시작F#](file-storage.md)
-* [사용 하 여 Azure 큐 저장소 시작F#](queue-storage.md)
-* [사용 하 여 Azure Table storage 시작F#](table-storage.md)
+* [F#을 사용하여 Azure Blob Storage 시작](blob-storage.md)
+* [F#을 사용하여 Azure File Storage 시작](file-storage.md)
+* [F#을 사용하여 Azure Queue Storage 시작](queue-storage.md)
+* [F#을 사용하여 Azure Table Storage 시작](table-storage.md)
 
 명시적 API 호출이 아닌 선언적 구성을 통해 Azure Functions와 함께 Azure Storage를 사용할 수도 있습니다. F# 예제를 포함하는 [Azure Storage를 위한 Azure Functions 트리거 및 바인딩](/azure/azure-functions/functions-bindings-storage)을 참조하세요.
 
@@ -52,15 +52,15 @@ Azure Storage는 내구성, 가용성, 확장성을 활용하여 고객의 요�
 
 [Azure App Service](https://azure.microsoft.com/services/app-service/)는 클라우드 또는 온-프레미스 내 어디서든 데이터에 연결되는 강력한 웹 및 모바일 앱을 빌드하는 클라우드 플랫폼입니다.
 
-* [F#Azure 웹 API 예제](https://github.com/fsprojects/azure-webapi-example)
-* [호스팅 F# Azure에서 웹 응용 프로그램](https://github.com/isaacabraham/fsharp-demonstrator)
+* [F# Azure 웹 API 예제](https://github.com/fsprojects/azure-webapi-example)
+* [Azure의 웹 응용 프로그램에서 F# 호스트](https://github.com/isaacabraham/fsharp-demonstrator)
 
 ## <a name="using-apache-spark-with-f-with-azure-hdinsight"></a>F#을 사용한 Apache Spark와 함께 Azure HDInsight 사용
 
 [Azure HDInsight용 Apache Spark](https://azure.microsoft.com/services/hdinsight/apache-spark/)는 대규모 데이터 분석 응용 프로그램을 실행하는 오픈 소스 처리 프레임워크입니다. Azure는 배포하기에 간단하고 비용 효과적인 Apache Spark를 만듭니다. Spark용 .NET API인 [Mobius](https://github.com/Microsoft/Mobius)를 사용하여 F#으로 Spark 애플리케이션을 개발합니다.
 
-* [Spark 앱 구현 F# Mobius를 사용 하 여](https://github.com/Microsoft/Mobius/blob/master/notes/spark-fsharp-mobius.md)
-* [예제에서는 F# Mobius를 사용 하 여 Spark 앱](https://github.com/Microsoft/Mobius/tree/master/examples/fsharp)
+* [Mobius를 사용하여 F#으로 Spark 앱 구현](https://github.com/Microsoft/Mobius/blob/master/notes/spark-fsharp-mobius.md)
+* [Mobius를 사용하는 예제 F# Spark 앱](https://github.com/Microsoft/Mobius/tree/master/examples/fsharp)
 
 ## <a name="using-azure-cosmos-db-with-f"></a>F #과 함께 Azure Cosmos DB를 사용 하 여\#
 
@@ -99,7 +99,7 @@ Webhook은 [F#의 Azure Function 및 Webhook 바인딩](/azure/azure-functions/f
 
 [WebJobs](/azure/app-service-web/web-sites-create-web-jobs)는 주문형, 지속형, 예약형의 세 가지 방법으로 App Service 웹앱에서 실행할 수 있는 프로그램입니다.
 
-[예제에서는 F# Webjob](https://github.com/jrr/webjob-project-examples)
+[예제 F# WebJobs](https://github.com/jrr/webjob-project-examples)
 
 ## <a name="implementing-timers-on-azure-with-f"></a>F 사용 하 여 Azure에서 타이머 구현\#
 
@@ -117,4 +117,4 @@ F# 스크립트를 사용하여 리소스를 배포하고 관리하는 작업은
 
 ## <a name="other-resources"></a>기타 리소스
 
-* [모든 Azure 서비스에 대 한 전체 설명서](/azure/)
+* [모든 Azure 서비스에 대한 전체 설명서](/azure/)

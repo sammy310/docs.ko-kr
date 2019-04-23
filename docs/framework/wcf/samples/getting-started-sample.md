@@ -8,10 +8,10 @@ helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
 ms.openlocfilehash: b249137117f970a14284beb6439e501a3004eee1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298866"
 ---
 # <a name="getting-started-sample"></a>Getting Started 샘플
@@ -285,5 +285,5 @@ Getting Started 샘플은 서비스와 클라이언트를 만드는 표준 방�
 
 ## <a name="see-also"></a>참고자료
 
-- [방법: 관리형 애플리케이션에서 WCF 서비스 호스트](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [방법: 관리 되는 응용 프로그램에서 WCF 서비스 호스팅](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
 - [방법: IIS에서 WCF 서비스 호스팅](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)

@@ -16,11 +16,11 @@ ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 33af618ac3971df76683fd64346e1aa1e5977177
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334616"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773417"
 ---
 # <a name="how-to-access-hardware-encryption-devices"></a>방법: 하드웨어 암호화 디바이스에 액세스
 <xref:System.Security.Cryptography.CspParameters> 클래스를 사용하여 하드웨어 암호화 장치에 액세스할 수 있습니다. 예를 들어 이 클래스를 사용하여 스마트 카드, 하드웨어 난수 생성기 또는 특정 암호화 알고리즘의 하드웨어 구현과 응용 프로그램을 통합할 수 있습니다.  

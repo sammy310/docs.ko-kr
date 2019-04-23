@@ -8,10 +8,10 @@ helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
 ms.openlocfilehash: 5abafe1edfdbac1966a98d5eef28265e6504c868
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59154416"
 ---
 # <a name="controls"></a>컨트롤
@@ -100,11 +100,11 @@ ms.locfileid: "59154416"
 ## <a name="see-also"></a>참고자료
 
 - [스타일 지정 및 템플릿](styling-and-templating.md)
-- [컨트롤 범주](controls-by-category.md)
+- [범주별 컨트롤](controls-by-category.md)
 - [컨트롤 라이브러리](control-library.md)
 - [데이터 템플릿 개요](../data/data-templating-overview.md)
 - [데이터 바인딩 개요](../data/data-binding-overview.md)
 - [입력](../advanced/input-wpf.md)
 - [명령 사용](../advanced/how-to-enable-a-command.md)
-- [연습: 사용자 지정 애니메이션 효과가 있는 단추 만들기](walkthroughs-create-a-custom-animated-button.md)
+- [연습: 사용자 지정 애니메이션된 단추 만들기](walkthroughs-create-a-custom-animated-button.md)
 - [컨트롤 사용자 지정](control-customization.md)

@@ -16,10 +16,10 @@ helpviewer_keywords:
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
 ms.openlocfilehash: ed5ed56366911c3676c4413711207ac0a8f85765
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58826199"
 ---
 # <a name="basic-query-operations-visual-basic"></a>기본 쿼리 작업(Visual Basic)
@@ -38,7 +38,7 @@ ms.locfileid: "58826199"
   
  `From` 데이터 소스를 지정 하는 절 `customers`, 및 *범위 변수*, `cust`합니다. 쿼리 식에서 실제 반복이 발생 하지는 점을 제외 하 고 범위 변수는 루프 반복 변수를 사용 하 여 비슷합니다. 쿼리 실행 되는 시기를 자주 사용 하 여는 `For Each` 루프의 각 연속 요소에 대 한 참조 역할도 범위 변수 `customers`합니다. 컴파일러에서 `cust` 형식을 유추할 수 있으므로 명시적으로 지정할 필요가 없습니다. 명시적 형식 지정 하지 않고 사용 하 여 작성 하는 쿼리의 예제를 참조 하세요 [쿼리 작업 (Visual Basic)의 형식 관계](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md)합니다.  
   
- 사용 하는 방법에 대 한 자세한 합니다 `From` Visual Basic에서는 절 참조 [From 절](../../../../visual-basic/language-reference/queries/from-clause.md)합니다.  
+ 사용 하는 방법에 대 한 자세한 합니다 `From` Visual basic에서는 절 참조 [From 절](../../../../visual-basic/language-reference/queries/from-clause.md)합니다.  
   
 ## <a name="filtering-data-where"></a>데이터 필터링 (위치)  
  아마도 가장 일반적인 쿼리 작업은 부울 식 형태로 필터를 적용 합니다. 다음 쿼리는 식이 true 인 요소만 반환 합니다. `Where` 절을 필터링 하는 데 사용 됩니다. 필터 결과 시퀀스에 포함할 데이터 원본에 있는 요소를 지정 합니다. 다음 예제에서는 London에 주소가 있는 고객만 포함 됩니다.  
@@ -57,7 +57,7 @@ Where cust.City = "London" And cust.Name = "Devon"
 Where cust.City = "London" Or cust.City = "Paris"   
 ```  
   
- 사용 하는 방법에 대 한 자세한 합니다 `Where` Visual Basic에서는 절 참조 [Where 절](../../../../visual-basic/language-reference/queries/where-clause.md)합니다.  
+ 사용 하는 방법에 대 한 자세한 합니다 `Where` Visual basic에서는 절 참조 [Where 절](../../../../visual-basic/language-reference/queries/where-clause.md)합니다.  
   
 ## <a name="ordering-data-order-by"></a>(Order By) 데이터 정렬  
  종종 유용 반환 된 데이터를 특정 순서로 정렬 합니다. `Order By` 절은 지정된 된 필드 또는 필드를 기준으로 정렬 됩니다 반환된 된 시퀀스의 요소를 게 합니다. 예를 들어 다음 쿼리는 정렬 기준으로 결과 `Name` 속성입니다. 때문에 `Name` 문자열인 경우 반환된 된 데이터는 A에서 Z까지 사전순으로 정렬 됩니다.  
@@ -66,7 +66,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  결과를 역순으로 정렬하려면 `Order By...Descending` 절을 사용합니다. 기본값은 `Ascending` 하지 않은 경우 `Ascending` 도 `Descending` 지정 됩니다.  
   
- 사용 하는 방법에 대 한 자세한 합니다 `Order By` Visual Basic에서는 절 참조 [Order By 절](../../../../visual-basic/language-reference/queries/order-by-clause.md)합니다.  
+ 사용 하는 방법에 대 한 자세한 합니다 `Order By` Visual basic에서는 절 참조 [Order By 절](../../../../visual-basic/language-reference/queries/order-by-clause.md)합니다.  
   
 ## <a name="selecting-data-select"></a>데이터 (선택)를 선택합니다.  
  `Select` 절 형식 및 반환 되는 요소는 콘텐츠를 지정 합니다. 결과 전체으로 구성할 것인지를 지정할 수는 예를 들어 `Customer` 개체를 하나만 `Customer` 속성, 속성의 하위 집합, 다양 한 데이터 원본 또는 몇 가지 새 결과 형식에서 속성의 조합을 기반으로 계산 합니다. `Select` 절이 소스 요소의 복사본이 아닌 다른 항목을 생성하는 경우 이 작업을 *프로젝션*이라고 합니다.  
@@ -95,7 +95,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
      [!code-vb[VbLINQBasicOps#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#8)]  
   
- 사용 하는 방법에 대 한 자세한 합니다 `Select` Visual Basic에서는 절 참조 [Select 절](../../../../visual-basic/language-reference/queries/select-clause.md)합니다.  
+ 사용 하는 방법에 대 한 자세한 합니다 `Select` Visual basic에서는 절 참조 [Select 절](../../../../visual-basic/language-reference/queries/select-clause.md)합니다.  
   
 ## <a name="joining-data-join-and-group-join"></a>조인 데이터 (조인 및 그룹 조인)  
  둘 이상의 데이터 원본에 결합할 수 있습니다는 `From` 여러 가지 방법으로 절. 예를 들어, 다음 코드는 두 데이터 소스를 사용 하 여 하 고 암시적으로 두 개의 결과는 속성을 결합 합니다. 쿼리는 마지막 이름이 모음을 사용 하 여 시작 하는 학생을 선택 합니다.  

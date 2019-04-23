@@ -6,10 +6,10 @@ helpviewer_keywords:
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
 ms.openlocfilehash: c3403a8602cc874e993bd649851b77d7bf652cce
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129599"
 ---
 # <a name="timing-behaviors-overview"></a>타이밍 동작 개요
@@ -42,7 +42,7 @@ ms.locfileid: "59129599"
 |----------|-----------------|----------------|-|-|-|  
 |단순 지속 시간|타임라인이 단일 정방향 반복을 수행하는 데 걸리는 시간입니다.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>||||  
 |1회 반복|재생 되 면 및 경우에 타임 라인에 걸리는 시간의 길이 <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> 속성이 true 이면 거꾸로 1 번만 재생 합니다.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>||||  
-|활성 기간|지정한 모든 반복을 완료 하려면 타임 라인에 걸리는 시간의 길이 <xref:System.Windows.Media.Animation.RepeatBehavior> 속성입니다.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>에서 <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>에서 <xref:System.Windows.Media.Animation.RepeatBehavior>||||  
+|활성 기간|지정한 모든 반복을 완료 하려면 타임 라인에 걸리는 시간의 길이 <xref:System.Windows.Media.Animation.RepeatBehavior> 속성입니다.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>, <xref:System.Windows.Media.Animation.RepeatBehavior>||||  
   
 <a name="duration"></a>   
 ### <a name="the-duration-property"></a>Duration 속성  

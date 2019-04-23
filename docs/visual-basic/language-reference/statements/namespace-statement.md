@@ -13,10 +13,10 @@ helpviewer_keywords:
 - declarations [Visual Basic], namespaces
 ms.assetid: a31fbd95-9ace-4c3d-bbb1-51222a2272b2
 ms.openlocfilehash: 7f6b976af7933b3895f6992488d2d1532a8fc2f7
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58820934"
 ---
 # <a name="namespace-statement"></a>Namespace 문
@@ -48,7 +48,7 @@ End Namespace
   
  이후 선언 된 모든 프로그래밍 요소는 `Namespace` 문을 해당 네임 스페이스에 속합니다. Visual Basic 계속 중 하나를 발견할 때까지 마지막으로 선언 된 네임 스페이스에 요소를 컴파일하는 데는 `End Namespace` 문 또는 다른 `Namespace` 문입니다.  
   
- 네임 스페이스를 이미 정의 되어 있으면, 프로젝트, 외부 에서도 프로그래밍 요소를 추가할 수 있습니다. 이 작업을 수행 하려면 사용을 `Namespace` Visual Basic 네임 스페이스에 요소를 컴파일할 문입니다.  
+ 네임 스페이스를 이미 정의 되어 있으면, 프로젝트, 외부 에서도 프로그래밍 요소를 추가할 수 있습니다. 이 작업을 수행 하려면 사용을 `Namespace` Visual basic 네임 스페이스에 요소를 컴파일할 문입니다.  
   
  사용할 수는 `Namespace` 파일이 나 네임 스페이스 수준 에서만 문입니다. 즉, 합니다 *선언 컨텍스트* 네임 스페이스는 소스 파일 또는 다른 네임 스페이스 이어야 하며 클래스, 구조체, 모듈, 인터페이스 또는 프로시저 일 수 없습니다. 자세한 내용은 [선언 컨텍스트 및 기본 액세스 수준](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)을 참조하세요.  
   

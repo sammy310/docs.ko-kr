@@ -3,11 +3,11 @@ title: XMLSerializer 오류
 ms.date: 03/30/2017
 ms.assetid: c6b80f14-64f4-4162-ae76-71664cf42fd3
 ms.openlocfilehash: a64a28e7a0105f5133ba2b0cd3abf72d97d5a3e3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59298008"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773215"
 ---
 # <a name="xmlserializer-faults"></a>XMLSerializer 오류
 <xref:System.Xml.Serialization.XmlSerializer>Fault Contract 샘플은 <xref:System.Xml.Serialization.XmlSerializer>를 사용하여 오류 정보를 서비스에서 클라이언트로 전달하는 방법을 보여 줍니다. 샘플을 기반으로 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md), 내부 예외를 오류로 변환 하는 서비스에 추가 하는 일부 추가 코드를 사용 하 여 합니다. 클라이언트는 서비스에서 오류 조건을 강제하기 위해 0으로 나누기를 시도합니다.  

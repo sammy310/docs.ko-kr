@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 590fed6a2a4e59f438dc73057973aff4539cb1aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83afabf58048620b3b9936560f2b3fdf1e2039d5
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589768"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59226939"
 ---
 # <a name="applying-interop-attributes"></a>Interop 특성 적용
 <xref:System.Runtime.InteropServices> 네임스페이스는 디자인 타임에 사용자가 적용한 특성, 변환 과정에서 COM interop 도구 및 API가 적용한 특성, 사용자 또는 COM interop가 적용한 특성 등 세 가지 범주의 interop 관련 특성을 제공합니다.  
@@ -68,6 +68,7 @@ ms.locfileid: "54589768"
 |<xref:System.Runtime.InteropServices.TypeLibVarAttribute>|원래 COM 형식 라이브러리에서 이 변수에 대해 가져온 **VARFLAGS**를 포함합니다.|  
   
 ## <a name="see-also"></a>참고 항목
+
 - <xref:System.Runtime.InteropServices>
 - [.NET Framework 구성 요소를 COM에 노출](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
 - [특성](../../../docs/standard/attributes/index.md)

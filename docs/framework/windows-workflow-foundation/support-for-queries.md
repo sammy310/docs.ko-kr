@@ -3,26 +3,26 @@ title: 쿼리 지원
 ms.date: 03/30/2017
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
 ms.openlocfilehash: 30695fcd791a0d69c31a897068d69838c80c3957
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307953"
 ---
 # <a name="support-for-queries"></a>쿼리 지원
 SQL 워크플로 인스턴스 저장소는 잘 알려진 속성 집합을 저장소에 기록합니다. 사용자는 이러한 속성을 기반으로 인스턴스를 쿼리할 수 있습니다. 다음은 잘 알려진 일부 속성 목록입니다.  
   
--   **Site Name.** 서비스를 포함하는 웹 사이트의 이름입니다.  
+-   **사이트 이름입니다.** 서비스를 포함하는 웹 사이트의 이름입니다.  
   
--   **Relative Application Path.** 웹 사이트에 상대적인 응용 프로그램 경로입니다.  
+-   **상대 응용 프로그램 경로입니다.** 웹 사이트에 상대적인 응용 프로그램 경로입니다.  
   
--   **Relative Service Path.** 응용 프로그램에 상대적인 서비스 경로입니다.  
+-   **상대적인 서비스 경로입니다.** 응용 프로그램에 상대적인 서비스 경로입니다.  
   
--   **Service Name.** 서비스의 이름입니다.  
+-   **서비스 이름입니다.** 서비스의 이름입니다.  
   
--   **Service Namespace.** 서비스에 사용되는 네임스페이스의 이름입니다.  
+-   **서비스 Namespace입니다.** 서비스에 사용되는 네임스페이스의 이름입니다.  
   
--   **Current Machine.**  
+-   **현재 컴퓨터입니다.**  
   
 -   **컴퓨터를 마지막**합니다. 워크플로 서비스 인스턴스가 마지막으로 실행된 컴퓨터입니다.  
   

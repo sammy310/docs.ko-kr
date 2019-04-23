@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pkulikov
 ms.author: ronpet
 ms.openlocfilehash: 64728182fe0b758f8da668d19761305e2001f1a5
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920898"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - 문자열 보간(C# 참조)
@@ -95,7 +95,7 @@ ms.locfileid: "58920898"
 - <xref:System.FormattableString?displayProperty=nameWithType>
 - <xref:System.IFormattable?displayProperty=nameWithType>
 - [복합 형식 지정](../../../standard/base-types/composite-formatting.md)
-- [숫자 결과 서식 지정 표](../keywords/formatting-numeric-results-table.md)
+- [숫자 결과 형식 지정 표](../keywords/formatting-numeric-results-table.md)
 - [문자열](../../programming-guide/strings/index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 특수 문자](index.md)

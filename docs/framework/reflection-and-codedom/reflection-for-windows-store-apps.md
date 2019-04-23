@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: face7f836ece3230ec1be745569060f8b34d814c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bbfebe57cd10f10719abf02cb529dd0cf3bb3cc9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604356"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59103014"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Windows 스토어 앱에 대한 .NET Framework의 리플렉션
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]부터 .NET Framework에는 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱에서 사용하기 위한 리플렉션 형식 및 멤버 집합이 포함되어 있습니다. 이러한 형식과 멤버는 전체 .NET Framework 및 [Windows 스토어 앱용 .NET](https://go.microsoft.com/fwlink/?LinkID=225700)에서 사용할 수 있습니다. 이 문서에서는 이러한 항목과 .NET Framework 4 이전 버전에 있는 해당 항목 간의 주요 차이점을 설명합니다.  
@@ -42,5 +42,6 @@ ms.locfileid: "54604356"
  [!code-vb[System.ReflectionWinStoreApp#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflectionwinstoreapp/vb/mainpage.xaml.vb#1)]  
   
 ## <a name="see-also"></a>참고 항목
+
 - [리플렉션](../../../docs/framework/reflection-and-codedom/reflection.md)
 - [Windows 스토어 앱용 .NET – 지원되는 API](https://go.microsoft.com/fwlink/?LinkID=225700)

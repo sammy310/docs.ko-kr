@@ -9,10 +9,10 @@ helpviewer_keywords:
 - cryptoClasses element
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
 ms.openlocfilehash: 7a03729f075645a230c660ff4c6469e0f5f3a51e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59220320"
 ---
 # <a name="cryptoclasses-element"></a>\<cryptoClasses > 요소
@@ -81,6 +81,6 @@ ms.locfileid: "59220320"
 - <xref:System.Security.Cryptography>
 - [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [암호화 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [암호화 서비스](../../../../../docs/standard/security/cryptographic-services.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
 - [System.Security.Cryptography.CryptoConfig.CreateFromName](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)
 - [암호화 클래스 구성](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

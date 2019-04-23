@@ -15,10 +15,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c6594bb72ce9cd2fbfa9cdafebc152a90618b810
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193085"
 ---
 # <a name="icordebugilframe4getlocalvariableex-method"></a>ICorDebugILFrame4::GetLocalVariableEx 메서드
@@ -47,7 +47,7 @@ HRESULT GetLocalVariableEx(
  [out] 검색된 된 값을 나타내는 "ICorDebugValue" 개체의 주소에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
- 이 메서드는 비슷합니다는 [GetLocalVariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md) 메서드와 해당 it는 필요에 따라 프로파일러 ReJIT 계측에에서 추가 된 변수에 액세스 합니다. 이 메서드를 호출을 `flags` 의 값 `ILCODE_ORIGINAL_IL` 호출 하는 것과 같습니다 [GetLocalVariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md)메서드가 추가 로컬 변수를 사용 하 여 계측 되는 경우 해당 변수에 액세스할 수 없습니다. `ILCODE_REJIT_IL` 디버거가 프로파일러 ReJIT 계측에에서 추가 된 로컬 변수에 액세스할 수 있습니다. IL이 계측되지 않는 경우 메서드는 `E_INVALIDARG`를 반환합니다.  
+ 이 메서드는 비슷합니다는 [GetLocalVariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md) 메서드와 해당 it는 필요에 따라 프로파일러 ReJIT 계측에에서 추가 된 변수에 액세스 합니다. 이 메서드를 호출을 `flags` 의 값 `ILCODE_ORIGINAL_IL` 호출 하는 것과 같습니다 [GetLocalVariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md)메서드가 추가 로컬 변수를 사용 하 여 계측 되는 경우 해당 변수에 액세스할 수 없습니다. `ILCODE_REJIT_IL`을 사용하는 경우 디버거가 프로파일러 ReJIT 계측에 추가된 로컬 변수에 액세스할 수 있습니다. IL이 계측되지 않는 경우 메서드는 `E_INVALIDARG`를 반환합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9503c12da9e98fbd43f3904aad25c5d10655cec2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59075563"
 ---
 # <a name="icordebugnativeframe2ischild-method"></a>ICorDebugNativeFrame2::IsChild 메서드
@@ -44,7 +44,7 @@ HRESULT IsChild([out] BOOL * pIsChild);
 |-------------|-----------------|  
 |S_OK|자식 상태가 반환 되었습니다.|  
 |E_FAIL|자식 상태를 반환 하지 못했습니다.|  
-|E_INVALIDARG|`pIsChild` null입니다.|  
+|E_INVALIDARG|`pIsChild`가 null입니다.|  
   
 ## <a name="exceptions"></a>예외  
   

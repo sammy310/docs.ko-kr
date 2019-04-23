@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 719f71f42ac7b0c376525ab3a316a986af0b0f43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1aecd8e6dcec73ba4dc45d4bf8f365503888687e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678800"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59295993"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>데스크톱 응용 프로그램용 위성 어셈블리 만들기
 리소스 파일은 지역화된 애플리케이션에서 중요한 역할을 합니다. 애플리케이션을 사용하여 사용자의 언어 및 문화권에서 문자열, 이미지 및 기타 데이터를 표시하고 사용자의 언어 또는 문화권에 대한 리소스를 사용할 수 없는 경우 대체 데이터를 제공할 수 있습니다. .NET Framework에서는 허브 및 스포크 모델을 사용하여 지역화된 리소스를 찾고 검색합니다. 허브는 지역화할 수 없는 실행 코드와 중립 또는 기본 문화권이라고 하는 단일 문화권의 리소스를 포함하는 주 어셈블리입니다. 기본 문화권은 애플리케이션의 대체 문화권으로, 지역화된 리소스를 사용할 수 없는 경우 사용됩니다. <xref:System.Resources.NeutralResourcesLanguageAttribute> 특성을 사용하여 애플리케이션의 기본 문화권의 문화를 지정합니다. 각 스포크는 지역화된 단일 문화권의 리소스를 포함하지만 코드는 포함하지 않는 위성 어셈블리에 연결됩니다. 위성 어셈블리는 주 어셈블리의 일부가 아니므로 애플리케이션의 주 어셈블리를 바꾸지 않고도 특정 문화권에 해당하는 리소스를 손쉽게 업데이트하거나 바꿀 수 있습니다.  
@@ -52,10 +52,11 @@ ms.locfileid: "54678800"
   
 -   위성 어셈블리의 문화권에 대한 정보는 어셈블리의 메타데이터에 포함되어야 합니다. 문화권 이름을 위성 어셈블리의 메타데이터에 저장하려면 [어셈블리 링커](../../../docs/framework/tools/al-exe-assembly-linker.md)를 사용하여 리소스를 위성 어셈블리에 포함할 때 `/culture` 옵션을 지정합니다.  
   
- 다음 그림은 [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)에 설치하지 않는 애플리케이션에 대한 샘플 디렉터리 구조 및 위치 요구 사항을 보여 줍니다. .txt 및 .resources 확장명을 가진 항목은 최종 애플리케이션과 함께 제공되지 않습니다. 이러한 중간 리소스 파일은 최종 위성 리소스 어셈블리를 만드는 데 사용됩니다. 이 예제에서는 .resx 파일을 .txt 파일로 대체할 수 있습니다. 자세한 내용은 [리소스 패키지 및 배포](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)를 참조하세요.  
+ 다음 그림은 [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)에 설치하지 않는 애플리케이션에 대한 샘플 디렉터리 구조 및 위치 요구 사항을 보여 줍니다. .txt 및 .resources 확장명을 가진 항목은 최종 애플리케이션과 함께 제공되지 않습니다. 이러한 중간 리소스 파일은 최종 위성 리소스 어셈블리를 만드는 데 사용됩니다. 이 예제에서는 .resx 파일을 .txt 파일로 대체할 수 있습니다. 자세한 내용은 [리소스 패키지 및 배포](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)를 참조하세요. 
+ 
+ 다음 이미지는 위성 어셈블리 디렉터리를 보여 줍니다.
   
- ![위성 어셈블리](../../../docs/framework/resources/media/satelliteassemblydir.gif "satelliteassemblydir")  
-위성 어셈블리 디렉터리  
+ ![지역화된 문화권 하위 디렉터리가 포함된 위성 어셈블리 디렉터리입니다.](./media/creating-satellite-assemblies-for-desktop-apps/satellite-assembly-directory.gif)
   
 ## <a name="compiling-satellite-assemblies"></a>위성 어셈블리 컴파일  
  [리소스 파일 생성기(Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)를 사용하여 리소스를 포함하는 텍스트 파일 또는 XML(.resx) 파일을 이진 .resources 파일로 컴파일합니다. 그런 다음 [어셈블리 링커(Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md)를 사용하여 .resources 파일을 위성 어셈블리로 컴파일합니다. Al.exe는 지정한 .resources 파일에서 어셈블리를 만듭니다. 위성 어셈블리는 리소스만 포함할 수 있으며, 어떠한 실행 코드도 포함할 수 없습니다.  
@@ -87,14 +88,14 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
 ## <a name="satellite-assemblies-an-example"></a>위성 어셈블리: 예제  
  다음은 지역화된 인사말이 들어 있는 메시지 상자를 표시하는 간단한 "Hello world" 예제입니다. 이 예제에서는 영어(미국), 프랑스어(프랑스) 및 러시아어(러시아) 문화권에 대한 리소스가 포함되고 해당 대체 문화권은 영어입니다. 예제를 만들려면 다음을 수행합니다.  
   
-1.  기본 문화권의 리소스를 포함하는 Greeting.resx 또는 Greeting.txt라는 리소스 파일을 만듭니다. 값이 “Hello world!”인 `HelloString`이라는 단일 문자열을 이 파일에 저장합니다.  
+1. 기본 문화권의 리소스를 포함하는 Greeting.resx 또는 Greeting.txt라는 리소스 파일을 만듭니다. 값이 “Hello world!”인 `HelloString`이라는 단일 문자열을 이 파일에 저장합니다.  
   
-2.  영어(en)가 애플리케이션의 기본 문화권임을 나타내려면 다음 <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> 특성을 애플리케이션의 AssemblyInfo 파일 또는 애플리케이션의 주 어셈블리로 컴파일할 주 소스 코드 파일에 추가합니다.  
+2. 영어(en)가 애플리케이션의 기본 문화권임을 나타내려면 다음 <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> 특성을 애플리케이션의 AssemblyInfo 파일 또는 애플리케이션의 주 어셈블리로 컴파일할 주 소스 코드 파일에 추가합니다.  
   
      [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
      [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
   
-3.  추가 문화권(en-US, fr-FR 및 ru-RU)에 대한 지원을 애플리케이션에 다음과 같이 추가할 수 있습니다.  
+3. 추가 문화권(en-US, fr-FR 및 ru-RU)에 대한 지원을 애플리케이션에 다음과 같이 추가할 수 있습니다.  
   
     -   "en-US" 또는 영어(미국) 문화권을 지원하려면 Greeting.en-US.resx 또는 Greeting.en-US.txt라는 리소스 파일을 만들어 값이 "Hi world!"인 `HelloString`이라는 단일 문자열에 저장합니다.  
   
@@ -102,7 +103,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
     -   ru-RU 또는 러시아어(러시아) 문화권을 지원하려면 Greeting.ru-RU.resx 또는 Greeting.ru-RU.txt라는 리소스 파일을 만들어 값이 "Всем привет!"인 `HelloString`이라는 단일 문자열에 저장합니다.  
   
-4.  [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)를 사용하여 각 텍스트 또는 XML 리소스 파일을 이진 .resources 파일로 컴파일합니다. 출력은 .resx 또는 .txt 파일과 동일한 루트 파일 이름을 가지고 있지만 .resources 확장명과는 다른 파일의 집합입니다. Visual Studio를 사용하여 예제를 만들면 컴파일 프로세스는 자동으로 처리됩니다. Visual Studio를 사용하지 않는 경우, .resx 파일을 .resources 파일로 컴파일하는 데 다음 명령을 실행합니다.  
+4. [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)를 사용하여 각 텍스트 또는 XML 리소스 파일을 이진 .resources 파일로 컴파일합니다. 출력은 .resx 또는 .txt 파일과 동일한 루트 파일 이름을 가지고 있지만 .resources 확장명과는 다른 파일의 집합입니다. Visual Studio를 사용하여 예제를 만들면 컴파일 프로세스는 자동으로 처리됩니다. Visual Studio를 사용하지 않는 경우, .resx 파일을 .resources 파일로 컴파일하는 데 다음 명령을 실행합니다.  
   
     ```console
     resgen Greeting.resx  
@@ -113,7 +114,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
      리소스가 XML 파일 대신 텍스트 파일에 있는 경우 .resx 확장명을 .txt로 바꿉니다.  
   
-5.  다음 소스 코드를 기본 문화권에 대한 리소스와 함께 애플리케이션의 주 어셈블리로 컴파일합니다.  
+5. 다음 소스 코드를 기본 문화권에 대한 리소스와 함께 애플리케이션의 주 어셈블리로 컴파일합니다.  
   
     > [!IMPORTANT]
     >  Visual Studio 대신 명령줄을 사용하여 예제를 만들 경우 <xref:System.Resources.ResourceManager> 클래스 생성자에 대한 호출을 `ResourceManager rm = new ResourceManager("Greetings", typeof(Example).Assembly);`와 같이 수정해야 합니다.  
@@ -133,9 +134,9 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
     vbc Example.vb -res:Greeting.resources  
     ```  
   
-6.  애플리케이션에서 지원되는 각 지역화된 문화권에 대한 주 애플리케이션 디렉터리에서 하위 디렉터리를 만듭니다. en-US, fr-FR 및 ru-RU 하위 디렉터리를 만들어야 합니다. Visual Studio는 컴파일 프로세스의 일부로 이러한 하위 디렉터리를 자동으로 만듭니다.  
+6. 애플리케이션에서 지원되는 각 지역화된 문화권에 대한 주 애플리케이션 디렉터리에서 하위 디렉터리를 만듭니다. en-US, fr-FR 및 ru-RU 하위 디렉터리를 만들어야 합니다. Visual Studio는 컴파일 프로세스의 일부로 이러한 하위 디렉터리를 자동으로 만듭니다.  
   
-7.  각 문화권별 .resources 파일을 위성 어셈블리로 포함하고 해당 디렉터리에 저장합니다. 각 .resources 파일에 대해 이 작업을 수행하는 명령은 다음과 같습니다.  
+7. 각 문화권별 .resources 파일을 위성 어셈블리로 포함하고 해당 디렉터리에 저장합니다. 각 .resources 파일에 대해 이 작업을 수행하는 명령은 다음과 같습니다.  
   
     ```console
     al -target:lib -embed:Greeting.culture.resources -culture:culture -out:culture\Example.resources.dll  
@@ -202,7 +203,7 @@ gacutil -i:StringLibrary.resources.dll
 ### <a name="resources-in-the-global-assembly-cache-an-example"></a>글로벌 어셈블리 캐시의 리소스: 예제  
  다음 예제에서는 .NET Framework 클래스 라이브러리에서 메서드를 사용하여 지역화된 인사말을 리소스 파일에서 추출하고 반환합니다. 라이브러리 및 리소스를 전역 어셈블리 캐시에 등록합니다. 예제에는 영어(미국), 프랑스어(프랑스), 러시아어(러시아) 및 영미 문화권에 대한 리소스가 포함됩니다. 영어는 기본 문화권으로, 해당 리소스는 주 어셈블리에 저장됩니다. 처음 예제는 라이브러리 및 공개 키를 가진 위성 어셈블리의 서명을 연기한 다음, 공개/개인 키 쌍을 사용하여 다시 서명합니다. 예제를 만들려면 다음을 수행합니다.  
   
-1.  Visual Studio를 사용하지 않는 경우 다음 [강력한 이름 도구(Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 명령을 사용하여 ResKey.snk라는 공개/개인 키 쌍을 만듭니다.  
+1. Visual Studio를 사용하지 않는 경우 다음 [강력한 이름 도구(Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 명령을 사용하여 ResKey.snk라는 공개/개인 키 쌍을 만듭니다.  
   
     ```console
     sn –k ResKey.snk  
@@ -210,20 +211,20 @@ gacutil -i:StringLibrary.resources.dll
   
      Visual Studio를 사용하는 경우 프로젝트 **속성** 대화 상자의 **서명** 탭을 사용하여 키 파일을 생성합니다.  
   
-2.  다음 [강력한 이름 도구(Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 명령을 사용하여 PublicKey.snk라는 공개 키 파일을 만듭니다.  
+2. 다음 [강력한 이름 도구(Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 명령을 사용하여 PublicKey.snk라는 공개 키 파일을 만듭니다.  
   
     ```console
     sn –p ResKey.snk PublicKey.snk  
     ```  
   
-3.  기본 문화권의 리소스를 포함할 Strings.resx라는 리소스 파일을 만듭니다. "How do you do?"의 값을 가진 `Greeting`이라는 이름의 단일 문자열을 해당 파일에 저장합니다.  
+3. 기본 문화권의 리소스를 포함할 Strings.resx라는 리소스 파일을 만듭니다. "How do you do?"의 값을 가진 `Greeting`이라는 이름의 단일 문자열을 해당 파일에 저장합니다.  
   
-4.  "en"가 애플리케이션의 기본 문화권임을 나타내려면 다음 <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> 특성을 애플리케이션의 AssemblyInfo 파일 또는 애플리케이션의 주 어셈블리로 컴파일할 주 소스 코드 파일에 추가합니다.  
+4. "en"가 애플리케이션의 기본 문화권임을 나타내려면 다음 <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> 특성을 애플리케이션의 AssemblyInfo 파일 또는 애플리케이션의 주 어셈블리로 컴파일할 주 소스 코드 파일에 추가합니다.  
   
      [!code-csharp[Conceptual.Resources.Satellites#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#2)]
      [!code-vb[Conceptual.Resources.Satellites#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#2)]  
   
-5.  추가 문화권(en-US, fr-FR 및 ru-RU 문화권)에 대한 지원을 애플리케이션에 다음과 같이 추가합니다.  
+5. 추가 문화권(en-US, fr-FR 및 ru-RU 문화권)에 대한 지원을 애플리케이션에 다음과 같이 추가합니다.  
   
     -   "en-US" 또는 영어(미국) 문화권을 지원하려면 Strings.en-US.resx 또는 Strings.en-US.txt라는 리소스 파일을 만들어 값이 "Hello!"인 `Greeting`이라는 단일 문자열에 저장합니다.  
   
@@ -231,7 +232,7 @@ gacutil -i:StringLibrary.resources.dll
   
     -   "ru-RU" 또는 러시아어(러시아) 문화권을 지원하려면 Strings.ru-RU.resx 또는 Strings.ru-RU.txt라는 리소스 파일을 만들어 값이 "Привет!"인 `Greeting`이라는 단일 문자열에 저장합니다.  
   
-6.  [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)를 사용하여 각 텍스트 또는 XML 리소스 파일을 이진 .resources 파일로 컴파일합니다. 출력은 .resx 또는 .txt 파일과 동일한 루트 파일 이름을 가지고 있지만 .resources 확장명과는 다른 파일의 집합입니다. Visual Studio를 사용하여 예제를 만들면 컴파일 프로세스는 자동으로 처리됩니다. Visual Studio를 사용하지 않는 경우, .resx 파일을 .resources 파일로 컴파일하는 데 다음 명령을 실행합니다.  
+6. [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)를 사용하여 각 텍스트 또는 XML 리소스 파일을 이진 .resources 파일로 컴파일합니다. 출력은 .resx 또는 .txt 파일과 동일한 루트 파일 이름을 가지고 있지만 .resources 확장명과는 다른 파일의 집합입니다. Visual Studio를 사용하여 예제를 만들면 컴파일 프로세스는 자동으로 처리됩니다. Visual Studio를 사용하지 않는 경우, .resx 파일을 .resources 파일로 컴파일하는 데 다음 명령을 실행합니다.  
   
     ```console
     resgen filename  
@@ -239,7 +240,7 @@ gacutil -i:StringLibrary.resources.dll
   
      여기서 *filename*은 선택적 경로, 파일 이름 및 .resx 또는 텍스트 파일의 확장명입니다.  
   
-7.  StringLibrary.vb 또는 StringLibrary.cs에 대한 다음 소스 코드를 기본 문화권의 리소스와 함께 StringLibrary.dll이라는 지연 서명된 라이브러리 어셈블리로 컴파일합니다.  
+7. StringLibrary.vb 또는 StringLibrary.cs에 대한 다음 소스 코드를 기본 문화권의 리소스와 함께 StringLibrary.dll이라는 지연 서명된 라이브러리 어셈블리로 컴파일합니다.  
   
     > [!IMPORTANT]
     >  Visual Studio 대신 명령줄을 사용하여 예제를 만들 경우 <xref:System.Resources.ResourceManager> 클래스 생성자에 대한 호출을 `ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);`로 수정해야 합니다.  
@@ -259,7 +260,7 @@ gacutil -i:StringLibrary.resources.dll
     vbc -t:library -resource:Strings.resources -delaysign+ -keyfile:publickey.snk StringLibrary.vb  
     ```  
   
-8.  애플리케이션에서 지원되는 각 지역화된 문화권에 대한 주 애플리케이션 디렉터리에서 하위 디렉터리를 만듭니다. en-US, fr-FR 및 ru-RU 하위 디렉터리를 만들어야 합니다. Visual Studio는 컴파일 프로세스의 일부로 이러한 하위 디렉터리를 자동으로 만듭니다. 위성 어셈블리가 모두 같은 파일 이름을 갖기 때문에, 공개/개인 키 쌍으로 서명될 때까지 각 문화권별 위성 어셈블리를 저장하는 데 하위 디렉터리가 사용됩니다.  
+8. 애플리케이션에서 지원되는 각 지역화된 문화권에 대한 주 애플리케이션 디렉터리에서 하위 디렉터리를 만듭니다. en-US, fr-FR 및 ru-RU 하위 디렉터리를 만들어야 합니다. Visual Studio는 컴파일 프로세스의 일부로 이러한 하위 디렉터리를 자동으로 만듭니다. 위성 어셈블리가 모두 같은 파일 이름을 갖기 때문에, 공개/개인 키 쌍으로 서명될 때까지 각 문화권별 위성 어셈블리를 저장하는 데 하위 디렉터리가 사용됩니다.  
   
 9. 각 문화권별 .resources 파일을 지연 서명된 위성 어셈블리로 포함하고 해당 디렉터리에 저장합니다. 각 .resources 파일에 대해 이 작업을 수행하는 명령은 다음과 같습니다.  
   
@@ -309,6 +310,7 @@ gacutil -i:StringLibrary.resources.dll
 14. Example.exe를 실행합니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [리소스 패키징 및 배포](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
 - [어셈블리 서명 연기](../../../docs/framework/app-domains/delay-sign-assembly.md)
 - [Al.exe(어셈블리 링커)](../../../docs/framework/tools/al-exe-assembly-linker.md)

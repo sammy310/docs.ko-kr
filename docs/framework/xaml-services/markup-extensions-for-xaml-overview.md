@@ -6,10 +6,10 @@ helpviewer_keywords:
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
 ms.openlocfilehash: 41fe3cb368bed12ccb2dbe9bd31f95fd556e3968
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224925"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>XAML 태그 확장 개요
@@ -25,19 +25,19 @@ ms.locfileid: "59224925"
 >  `x:` 접두사는 XAML 프로덕션의 루트 요소에서 XAML 언어 네임스페이스의 일반적인 XAML 네임스페이스 매핑에 사용됩니다. 다양 한 특정 프레임 워크에 대 한 Visual Studio 프로젝트 및 페이지 템플릿은이 사용 하 여 XAML 파일을 시작 하는 예를 들어 `x:` 매핑. 사용자 고유의 XAML 네임스페이스 매핑에서 다른 접두사 토큰을 선택할 수 있지만 이 설명서에서는 특정 프레임워크의 기본 XAML 네임스페이스나 다른 임의 CLR 또는 XML 네임스페이스와 달리 XAML 언어 XAML 네임 스페이스에서 정의된 부분인 해당 엔터티를 식별하는 방법으로 기본 `x:` 매핑을 가정합니다.  
   
 ### <a name="xtype"></a>x:Type  
- `x:Type` 제공 된 <xref:System.Type> 명명 된 형식에 대 한 개체입니다. 이 기능은 기본 CLR 형식 및 형식 파생을 그룹화 모니커 또는 식별자로 사용하는 지연 메커니즘에서 가장 자주 사용됩니다. WPF 스타일 및 템플릿, `TargetType` 속성의 용도는 특정 예제입니다. 자세한 내용은 [x:Type Markup Extension](x-type-markup-extension.md)을 참조하세요.  
+ `x:Type` 은 명명된 형식에 <xref:System.Type> 개체를 제공합니다. 이 기능은 기본 CLR 형식 및 형식 파생을 그룹화 모니커 또는 식별자로 사용하는 지연 메커니즘에서 가장 자주 사용됩니다. WPF 스타일 및 템플릿, `TargetType` 속성의 용도는 특정 예제입니다. 자세한 내용은 [x:Type Markup Extension](x-type-markup-extension.md)을 참조하세요.  
   
 ### <a name="xstatic"></a>x:Static  
- `x:Static` 속성의 값의 형식을 직접 되지 않지만 해당 형식으로 계산 될 수 있는 값-형식 코드 엔터티에서 정적 값을 생성 합니다. 잘 알려진 상수로 형식 정의에 이미 존재하는 값을 지정하는 데 유용합니다. 자세한 내용은 [x:Static Markup Extension](x-static-markup-extension.md)을 참조하세요.  
+ `x:Static` 은 직접적으로 속성 값의 형식이 아니라 해당 형식으로 계산될 수 있는 값-형식 코드 엔터티에서 정적 값을 생성합니다. 잘 알려진 상수로 형식 정의에 이미 존재하는 값을 지정하는 데 유용합니다. 자세한 내용은 [x:Static Markup Extension](x-static-markup-extension.md)을 참조하세요.  
   
 ### <a name="xnull"></a>x:Null  
- `x:Null` 지정 `null` XAML 멤버에 대 한 값으로. 특정 형식의 디자인인지 더 큰 프레임워크 개념인지에 따라 `null` 이 속성의 기본값이나 빈 문자열 특성의 암시적 값이 아닌 경우가 있습니다. 자세한 내용은 [x:Null Markup Extension](x-null-markup-extension.md)을 참조하세요.  
+ `x:Null` 은 `null` 을 XAML 멤버에 대한 값으로 지정합니다. 특정 형식의 디자인인지 더 큰 프레임워크 개념인지에 따라 `null` 이 속성의 기본값이나 빈 문자열 특성의 암시적 값이 아닌 경우가 있습니다. 자세한 내용은 [x:Null Markup Extension](x-null-markup-extension.md)을 참조하세요.  
   
 ### <a name="xarray"></a>x:Array  
- `x:Array` 기본 요소 및 컨트롤 모델에서 제공 하는 컬렉션 지원이 의도적으로 사용 되는 경우 XAML 구문에서 일반적인 배열 만들기를 지원 합니다. 자세한 내용은 [x:Array Markup Extension](x-array-markup-extension.md)을 참조하세요. 특히 XAML 2009에서 배열은 확장이 아닌 언어 기본 형식으로 액세스됩니다. 자세한 내용은 [XAML 2009 Language Features](xaml-2009-language-features.md)을 참조하세요.  
+ `x:Array` 는 기본 요소 및 컨트롤 모델에서 제공하는 컬렉션 지원이 의도적으로 사용되지 않는 경우 XAML 구문에서 일반적인 배열 만들기를 지원합니다. 자세한 내용은 [x:Array Markup Extension](x-array-markup-extension.md)을 참조하세요. 특히 XAML 2009에서 배열은 확장이 아닌 언어 기본 형식으로 액세스됩니다. 자세한 내용은 [XAML 2009 Language Features](xaml-2009-language-features.md)을 참조하세요.  
   
 ### <a name="xreference"></a>x:Reference  
- `x:Reference` 원래 (2006) 언어 집합의 확장인 XAML 2009의 일부가입니다. `x:Reference` 개체 그래프의 다른 기존 개체에 대 한 참조를 나타냅니다. 해당 개체는 `x:Name`으로 식별됩니다. 자세한 내용은 [x:Reference Markup Extension](x-reference-markup-extension.md)을 참조하세요.  
+ `x:Reference` 는 원래(2006) 언어 집합의 확장인 XAML 2009의 일부입니다. `x:Reference` 는 개체 그래프에 있는 다른 기존 개체에 대한 참조를 나타냅니다. 해당 개체는 `x:Name`으로 식별됩니다. 자세한 내용은 [x:Reference Markup Extension](x-reference-markup-extension.md)을 참조하세요.  
   
 ### <a name="other-x-constructs"></a>기타 x: 구문  
  XAML 언어 기능을 지원하는 다른 `x:` 구문도 있지만 이러한 구문은 태그 확장으로 구현되지 않습니다. 자세한 내용은 참조 하세요. [XAML Namespace (x:) 언어 기능](xaml-namespace-x-language-features.md)합니다.  
@@ -122,7 +122,7 @@ public Collate(CollationMode collationMode, object collateThis) {...}
 ## <a name="attributing-for-a-custom-markup-extension"></a>사용자 지정 태그 확장에 대한 특성 지정  
  디자인 환경과 특정 XAML 개체 작성기 시나리오를 모두 지원하려면 여러 가지 CLR 특성으로 태그 확장 지원 형식의 특성을 지정해야 합니다. 이러한 특성은 의도된 태그 확장 사용을 보고합니다.  
   
- <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> 보고서를 <xref:System.Type> 개체에 대 한 정보를 입력 하는 <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> 반환 합니다. 순수 서명에 따라 <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> 는 <xref:System.Object>를 반환합니다. 그러나 다양한 소비자는 보다 정확한 반환 형식 정보를 원할 수 있습니다. 여기에는 다음이 포함됩니다.  
+ <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> 는 <xref:System.Type> 에서 반환하는 개체 형식에 대한 <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> 정보를 보고합니다. 순수 서명에 따라 <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> 는 <xref:System.Object>를 반환합니다. 그러나 다양한 소비자는 보다 정확한 반환 형식 정보를 원할 수 있습니다. 여기에는 다음이 포함됩니다.  
   
 -   태그 확장 사용에 대한 형식 인식 지원을 제공할 수 있는 디자이너 및 IDE.  
   
@@ -138,11 +138,11 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
  태그 확장 사용에서 위치 인수를 사용하는 경우 초기화 값을 가진 시작 개체로 표현됩니다. 대략적인 텍스트 표현으로 노드 스트림은 다음과 유사합니다.  
   
- `StartObject` (<xref:System.Xaml.XamlType> 은 반환 형식이 아니라 태그 확장의 정의 형식)  
+ `StartObject` (<xref:System.Xaml.XamlType> 은 반환 형식이 아니라 태그 확장의 정의 형식임)  
   
- `StartMember` (이름 합니다 <xref:System.Xaml.XamlMember> 는 `_InitializationText`)  
+ `StartMember` ( <xref:System.Xaml.XamlMember> 의 이름은 `_InitializationText`임)  
   
- `Value` 값 이어서 위치 인수 사이의 구분 기호를 포함 하는 문자열로  
+ `Value` (값은 사이의 구분 기호를 포함하는 문자열로의 위치 인수임)  
   
  `EndMember`  
   
@@ -157,5 +157,5 @@ public Collate(CollationMode collationMode, object collateThis) {...}
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.Markup.MarkupExtension>
-- [XAML을 위한 형식 변환기 및 태그 확장](type-converters-and-markup-extensions-for-xaml.md)
-- [태그 확장명 및 WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [XAML을 위한 형식 변환기 및 태그 확장명](type-converters-and-markup-extensions-for-xaml.md)
+- [태그 확장 및 WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

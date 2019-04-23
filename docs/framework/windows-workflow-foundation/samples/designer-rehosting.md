@@ -3,10 +3,10 @@ title: 디자이너 재호스팅
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
 ms.openlocfilehash: b2a51014e34bf27d6f016db71d2c2eaabb906c6d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328168"
 ---
 # <a name="designer-rehosting"></a>디자이너 재호스팅
@@ -40,7 +40,7 @@ ms.locfileid: "59328168"
 </Grid>  
 ```  
   
- 다음으로 이 샘플에서는 디자이너를 만들고 해당 기본 <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> 및 <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A>를 사용자 인터페이스의 적절한 컨테이너와 연결합니다. 아래에 추가로 나와 있는 몇몇 코드 줄에 대해서는 약간의 설명이 필요합니다. <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> 호출은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]에 제공되는 활동에 대한 기본 활동 디자이너를 연결하는 데 필요합니다. <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> 편집할 WF 항목을 전달 하기 위해 호출 됩니다. 마지막으로, <xref:System.Activities.Presentation.WorkflowDesigner.View%2A>(기본 캔버스) 및 <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A>(속성 표)가 사용자 인터페이스 화면에 배치됩니다.  
+ 다음으로 이 샘플에서는 디자이너를 만들고 해당 기본 <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> 및 <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A>를 사용자 인터페이스의 적절한 컨테이너와 연결합니다. 아래에 추가로 나와 있는 몇몇 코드 줄에 대해서는 약간의 설명이 필요합니다. <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> 호출은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]에 제공되는 활동에 대한 기본 활동 디자이너를 연결하는 데 필요합니다. <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A>는 편집할 WF 항목을 전달하기 위해 호출됩니다. 마지막으로, <xref:System.Activities.Presentation.WorkflowDesigner.View%2A>(기본 캔버스) 및 <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A>(속성 표)가 사용자 인터페이스 화면에 배치됩니다.  
   
 ```csharp  
 protected override void OnInitialized(EventArgs e)  

@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: e41f84a79dc075de05a9e30ccbf3de38175900a2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 5c56e497ffb6466840d034458daaebf9fe0c8f03
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464907"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611486"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>DDD 지향 마이크로 서비스 디자인
 
@@ -96,13 +96,13 @@ Entity Framework Core와 같은 대부분의 최신 ORM 프레임워크에서는
 #### <a name="additional-resources"></a>추가 자료
 
 - **DevIQ. 지속성 무시 원칙** \
-  [https://deviq.com/persistence-ignorance/](https://deviq.com/persistence-ignorance/)
+  <https://deviq.com/persistence-ignorance/>
 
 - **Oren Eini. 인프라 무시** \
-  [https://ayende.com/blog/3137/infrastructure-ignorance](https://ayende.com/blog/3137/infrastructure-ignorance)
+  <https://ayende.com/blog/3137/infrastructure-ignorance>
 
 - **Angel Lopez. 도메인 기반 디자인의 계층화된 아키텍처** \
-  [https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
+  <https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/>
 
 >[!div class="step-by-step"]
 >[이전](cqrs-microservice-reads.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - ListBox control [Windows Forms], about ListBox control
 ms.assetid: 37ea226b-6fc8-4c70-936a-c6af4e0cad4c
 ms.openlocfilehash: f70246d4a4d158815ee9662036eca8edeb891d85
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59104203"
 ---
 # <a name="listbox-control-overview-windows-forms"></a>ListBox 컨트롤 개요(Windows Forms)
@@ -25,10 +25,10 @@ Windows Forms <xref:System.Windows.Forms.ListBox> 컨트롤 사용자 하나 이
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.Forms.ListBox>
-- [방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤에서 항목 추가 및 제거](add-and-remove-items-from-a-wf-combobox.md)
-- [방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤의 내용 정렬](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [방법: 추가 및 제거할 항목을 Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤](add-and-remove-items-from-a-wf-combobox.md)
+- [방법: Windows의 내용을 정렬할 Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
 - [방법: 데이터에 Windows Forms ComboBox 또는 ListBox 컨트롤 바인딩](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
 - [ComboBox 컨트롤 개요](combobox-control-overview-windows-forms.md)
 - [CheckedListBox 컨트롤 개요](checkedlistbox-control-overview-windows-forms.md)
-- [옵션 목록 표시에 사용하는 Windows Forms 컨트롤](windows-forms-controls-used-to-list-options.md)
-- [방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤에 대한 조회 테이블 만들기](create-a-lookup-table-for-a-wf-combobox-listbox.md)
+- [옵션 목록 표시에 사용된 Windows Forms 컨트롤](windows-forms-controls-used-to-list-options.md)
+- [방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤에 대 한 조회 테이블 만들기](create-a-lookup-table-for-a-wf-combobox-listbox.md)

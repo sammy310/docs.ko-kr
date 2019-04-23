@@ -3,10 +3,10 @@ title: SendMail 사용자 지정 활동
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
 ms.openlocfilehash: 89252098402deee991ea01b8e76082a5f4b8c389
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321863"
 ---
 # <a name="sendmail-custom-activity"></a>SendMail 사용자 지정 활동
@@ -109,11 +109,11 @@ new SendMail
   
 -   [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
   
--   [Configuring the SMTP Service (IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
+-   [SMTP 서비스 (IIS 6.0) 구성](https://go.microsoft.com/fwlink/?LinkId=150456)  
   
 -   [IIS 7.0: SMTP 전자 메일 구성](https://go.microsoft.com/fwlink/?LinkId=150457)  
   
--   [SMTP 서비스를 설치하는 방법](https://go.microsoft.com/fwlink/?LinkId=150458)  
+-   [SMTP 서비스를 설치 하는 방법](https://go.microsoft.com/fwlink/?LinkId=150458)  
   
  타사에서 제공하는 SMTP 에뮬레이터를 다운로드할 수 있습니다.  
   

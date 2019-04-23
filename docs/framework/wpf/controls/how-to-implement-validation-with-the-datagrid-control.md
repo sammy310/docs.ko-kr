@@ -9,10 +9,10 @@ helpviewer_keywords:
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
 ms.openlocfilehash: 00d09c62aae67e3438816409c95ccf96050b3206
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305958"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>방법: DataGrid 컨트롤을 사용하여 유효성 검사 구현
@@ -96,4 +96,4 @@ ms.locfileid: "59305958"
 - [DataGrid](datagrid.md)
 - [데이터 바인딩](../data/data-binding-wpf.md)
 - [바인딩 유효성 검사 구현](../data/how-to-implement-binding-validation.md)
-- [사용자 지정 개체에 대한 유효성 검사 논리 구현](../data/how-to-implement-validation-logic-on-custom-objects.md)
+- [사용자 지정 개체의 유효성 검사 논리 구현](../data/how-to-implement-validation-logic-on-custom-objects.md)

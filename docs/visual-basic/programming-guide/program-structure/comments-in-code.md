@@ -15,10 +15,10 @@ helpviewer_keywords:
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
 ms.openlocfilehash: a8094397ff2a076cf474d735e65298b3d2f0a9cd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343014"
 ---
 # <a name="comments-in-code-visual-basic"></a>코드 주석(Visual Basic)
@@ -62,7 +62,7 @@ ms.locfileid: "59343014"
 ## <a name="see-also"></a>참고자료
 
 - [Basic Instincts-XML 주석 사용 하 여 코드 문서화](https://msdn.microsoft.com/magazine/dd722812.aspx)
-- [방법: XML 설명서 만들기](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [방법: XML 문서 만들기](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
 - [XML 주석 태그](../../../visual-basic/language-reference/xmldoc/index.md)
 - [프로그램 구조 및 코드 규칙](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [REM 문](../../../visual-basic/language-reference/statements/rem-statement.md)

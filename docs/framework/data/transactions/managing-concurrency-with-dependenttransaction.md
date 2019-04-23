@@ -3,10 +3,10 @@ title: DependentTransaction으로 동시성 관리
 ms.date: 03/30/2017
 ms.assetid: b85a97d8-8e02-4555-95df-34c8af095148
 ms.openlocfilehash: b06470ed76c15208f019874db8573d0ed4778d33
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216303"
 ---
 # <a name="managing-concurrency-with-dependenttransaction"></a>DependentTransaction으로 동시성 관리
@@ -19,7 +19,7 @@ ms.locfileid: "59216303"
   
 -   <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete> 축소 또는 될 때까지 부모 트랜잭션이 시간까지 부모 트랜잭션의 커밋 프로세스를 차단 하는 종속 트랜잭션을 만듭니다 <xref:System.Transactions.DependentTransaction.Complete%2A> 완료를 나타내는 모든 종속 항목에서 호출 됩니다. 이 기능은 종속 트랜잭션이 완료될 때까지 클라이언트에서 부모 트랜잭션을 커밋하지 않으려는 경우에 유용합니다. 부모가 종속 트랜잭션보다 일찍 작업을 마치고 트랜잭션에서 <xref:System.Transactions.CommittableTransaction.Commit%2A>을 호출하면 모든 종속 트랜잭션이 <xref:System.Transactions.DependentTransaction.Complete%2A>를 호출할 때까지 커밋 프로세스가 트랜잭션에 대해 추가 작업을 수행하고 새 인리스트먼트를 만들 수 있는 상태로 차단됩니다. 모든 트랜잭션이 작업을 완료하고 <xref:System.Transactions.DependentTransaction.Complete%2A>를 호출하면 즉시 트랜잭션의 커밋 프로세스가 시작됩니다.  
   
--   <xref:System.Transactions.DependentCloneOption.RollbackIfNotComplete>다른 한편으로 경우 자동으로 중단 하는 종속 트랜잭션을 만듭니다 <xref:System.Transactions.CommittableTransaction.Commit%2A> 하기 전에 부모 트랜잭션에서 라고 <xref:System.Transactions.DependentTransaction.Complete%2A> 라고 합니다. 이 경우 종속 트랜잭션에서 수행된 모든 작업이 하나의 트랜잭션 수명 내에서 그대로 유지되며 아무도 작업의 일부만 커밋할 수 없습니다.  
+-   반면 <xref:System.Transactions.DependentCloneOption.RollbackIfNotComplete>는 <xref:System.Transactions.CommittableTransaction.Commit%2A>가 호출되기 전에 부모 트랜잭션에서 <xref:System.Transactions.DependentTransaction.Complete%2A>이 호출되는 경우 자동으로 중단되는 종속 트랜잭션을 만듭니다. 이 경우 종속 트랜잭션에서 수행된 모든 작업이 하나의 트랜잭션 수명 내에서 그대로 유지되며 아무도 작업의 일부만 커밋할 수 없습니다.  
   
  <xref:System.Transactions.DependentTransaction.Complete%2A> 메서드는 응용 프로그램이 종속 트랜잭션에서 작업을 완료할 때 한 번만 호출되어야 합니다. 그렇지 않으면 <xref:System.InvalidOperationException>이 throw됩니다. 이 메서드를 호출한 후에는 트랜잭션에서 추가 작업을 시도하지 말아야 합니다. 그렇지 않으면 예외가 throw됩니다.  
   

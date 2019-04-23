@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4221dbea2b5ad98f889e04eb8a9b6d992b59066e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59212299"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration 함수
@@ -106,4 +106,4 @@ HRESULT BeginEnumeration (
   
 ## <a name="see-also"></a>참고자료
 
-- [WMI 및 성능 카운터(관리되지 않는 API 참조)](index.md)
+- [WMI 및 성능 카운터 (관리 되지 않는 API 참조)](index.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WPF [WPF], getting started
 ms.assetid: 04f91da8-708c-46c7-8172-f1695ec847cd
 ms.openlocfilehash: 26cb4fabedb7a4e17f3ee56e95c310e6483d59e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59099692"
 ---
 # <a name="getting-started-wpf"></a>시작(WPF)
@@ -29,5 +29,5 @@ WPF(Windows Presentation Foundation)는 데스크톱 클라이언트 애플리�
 ## <a name="see-also"></a>참고자료
 
 - [클래스 라이브러리](../class-library-wpf.md)
-- [애플리케이션 개발](../app-development/index.md)
+- [응용 프로그램 개발](../app-development/index.md)
 - [.NET Framework 개발자 센터](https://www.microsoft.com/net)

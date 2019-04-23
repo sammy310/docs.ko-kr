@@ -11,10 +11,10 @@ ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e0533265cc96ebf5601579f7fb25b8cbafae73e2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305197"
 ---
 # <a name="assembly-versioning"></a>어셈블리 버전 관리
@@ -72,6 +72,6 @@ ms.locfileid: "59305197"
 ## <a name="see-also"></a>참고 항목
 
 - [런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [앱 구성](../../../docs/framework/configure-apps/index.md)
+- [응용 프로그램 구성](../../../docs/framework/configure-apps/index.md)
 - [어셈블리 특성 설정](../../../docs/framework/app-domains/set-assembly-attributes.md)
 - [공용 언어 런타임의 어셈블리](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

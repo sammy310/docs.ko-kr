@@ -11,10 +11,10 @@ helpviewer_keywords:
 - examples [Windows Forms], tooltips
 ms.assetid: 08979ba7-dd84-477b-ab17-8d06e759be99
 ms.openlocfilehash: cf257cccd272c16c3d7c3d403456265444fc8ac8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345484"
 ---
 # <a name="how-to-change-the-delay-of-the-windows-forms-tooltip-component"></a>방법: Windows Forms ToolTip 구성 요소의 지연 변경
@@ -45,5 +45,5 @@ Windows Forms에 대해 설정할 수 있는 지연 값이 여러 개 <xref:Syst
 ## <a name="see-also"></a>참고자료
 
 - [ToolTip 구성 요소 개요](tooltip-component-overview-windows-forms.md)
-- [방법: 디자인 타임에 Windows Form의 컨트롤에 대한 도구 설명 설정](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)
+- [방법: 디자인 타임에 Windows Form의 컨트롤에 도구 설명 설정](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)
 - [ToolTip 구성 요소](tooltip-component-windows-forms.md)

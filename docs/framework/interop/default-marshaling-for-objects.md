@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65b13d99873fe1027d0b316d1cf90e766799dbb1
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 1b05d5c72491265b7617950550935e3c719421f3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409278"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59076162"
 ---
 # <a name="default-marshaling-for-objects"></a>개체에 대한 마샬링
 <xref:System.Object?displayProperty=nameWithType>로 형식화된 매개 변수와 필드는 비관리 코드에 다음 형식 하나로 표시할 수 있습니다.  
@@ -314,6 +314,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |**변형**  *v***(VT_BYREF** *&#124;* **VT_)**|**Ref 개체**  *o*|형식이 변경되지 않은 경우에만.|  
   
 ## <a name="see-also"></a>참고 항목
+
 - [기본 마샬링 동작](default-marshaling-behavior.md)
 - [Blittable 형식 및 비 Blittable 형식](blittable-and-non-blittable-types.md)
 - [방향 특성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))

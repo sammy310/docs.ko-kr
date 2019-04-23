@@ -4,10 +4,10 @@ description: .NET Core CLI(명령줄 인터페이스) 도구 및 기능에 대�
 ms.date: 08/14/2017
 ms.custom: seodec18
 ms.openlocfilehash: e174867ce06e573fc85579183df0196d8276fb37
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58826316"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core CLI(명령줄 인터페이스) 도구

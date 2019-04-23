@@ -6,10 +6,10 @@ helpviewer_keywords:
 - variables [Visual Basic], creating
 ms.assetid: 35300be3-77b0-4bef-a156-034d3cdedde0
 ms.openlocfilehash: ee1e93b4e9819992f17738eb024004a4d66210d1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332588"
 ---
 # <a name="how-to-create-a-new-variable-visual-basic"></a>방법: 새 변수 (Visual Basic) 만들기
@@ -59,9 +59,9 @@ ms.locfileid: "59332588"
 
 - [변수](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [변수 선언](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [선언 요소 이름](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [선언 요소의 특징](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [문](../../../../visual-basic/language-reference/statements/index.md)
+- [문(C++)](../../../../visual-basic/language-reference/statements/index.md)
 - [지역 형식 유추](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Option Infer 문](../../../../visual-basic/language-reference/statements/option-infer-statement.md)

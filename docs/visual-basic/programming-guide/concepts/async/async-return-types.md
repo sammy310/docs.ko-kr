@@ -3,10 +3,10 @@ title: 비동기 반환 형식 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
 ms.openlocfilehash: 227a187f7046d128a7170b272f90f77cfaac61c7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313283"
 ---
 # <a name="async-return-types-visual-basic"></a>비동기 반환 형식 (Visual Basic)
@@ -98,7 +98,7 @@ Async Function Task_MethodAsync() As Task
 End Function  
 ```  
   
- `Task_MethodAsync` 호출 되 고 동기에 대 한 호출 문과 비슷하게 await 식 대신 await 문을 사용 하 여 대기 `Sub` 또는 메서드가 void를 반환 합니다. 응용 프로그램을 `Await` 연산자가 예제의 값을 생성 하지.  
+ 동기 `Sub` 또는 void를 반환하는 메서드에 대한 호출 문과 비슷하게 await 식 대신 await 문을 사용하여 `Task_MethodAsync`가 호출되고 대기됩니다. 응용 프로그램을 `Await` 연산자가 예제의 값을 생성 하지.  
   
  다음 코드는 `Task_MethodAsync` 메서드를 호출하고 기다립니다.  
   
@@ -296,6 +296,6 @@ End Sub
 
 - <xref:System.Threading.Tasks.Task.FromResult%2A>
 - [연습: 비동기를 사용 하 여 웹 서비스에 액세스 하 고 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [비동기 프로그램 (Visual Basic)의 제어 흐름](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)
-- [Async](../../../../visual-basic/language-reference/modifiers/async.md)
+- [비동기 프로그램의 제어 흐름(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)
+- [비동기](../../../../visual-basic/language-reference/modifiers/async.md)
 - [Await 연산자](../../../../visual-basic/language-reference/operators/await-operator.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3daf0a1cf2d1ae55780a16612aa33a0fdb70a52b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e5320bc6c5105c95d63b1888e1adbc2ecf1bc5fb
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55282037"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59200001"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe(.NET Framework 명령줄 디버거)
 도구 공급업체와 애플리케이션 개발자는 .NET Framework 명령줄 디버거를 사용하여 .NET Framework 공용 언어 런타임을 대상으로 하는 프로그램에서 버그를 찾고 수정할 수 있습니다. 이 도구에는 디버깅 서비스를 제공하기 위해 런타임 디버깅 API가 사용됩니다. MDbg.exe를 사용하여 관리 코드만 디버깅할 수 있습니다. 관리되지 않는 코드의 디버깅은 지원하지 않습니다.  
@@ -105,5 +105,6 @@ mdbg>
  디버거에서는 이전 섹션에 설명된 명령과 인수를 사용하십시오.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [도구](../../../docs/framework/tools/index.md)
 - [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

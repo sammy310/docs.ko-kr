@@ -2,9 +2,15 @@
 title: Visual Basic의 프로그래밍
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'programming [Visual Basic], Visual Basic'
-  - programming
+- programming [Visual Basic], Visual Basic
+- programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
+ms.openlocfilehash: 09bc9254c880d58ffed22971d3ff96ba341fdf83
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58819062"
 ---
 # <a name="programming-in-visual-basic"></a>Visual Basic의 프로그래밍
 이 섹션에서는 Visual Basic 애플리케이션을 만들 때 배우면 도움이 될 수 있는 프로그래밍 작업에 대해 설명합니다.  

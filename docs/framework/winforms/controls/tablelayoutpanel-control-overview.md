@@ -12,10 +12,10 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], about TableLayoutPanel control
 ms.assetid: 337661c8-61cb-44ee-93e0-3662bddec327
 ms.openlocfilehash: 65daba0ce1a6f1c37fb257c1029396577821aad9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295369"
 ---
 # <a name="tablelayoutpanel-control-overview"></a>TableLayoutPanel 컨트롤 개요
@@ -33,18 +33,18 @@ ms.locfileid: "59295369"
   
  자식 컨트롤의 `ColumnSpan` 또는 `RowSpan` 속성을 설정하여 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤에 셀을 병합할 수 있습니다.  
   
-1. [방법: TableLayoutPanel 컨트롤에서 컨트롤 맞춤 및 늘이기](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
+1. [방법: 에서 맞춤 및 늘이기 컨트롤을 TableLayoutPanel 컨트롤](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
   
-2. [방법: TableLayoutPanel 컨트롤에서 행 및 열 확장](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
+2. [방법: TableLayoutPanel 컨트롤의 행과 열 확장](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
   
-3. [방법: TableLayoutPanel 컨트롤에서 열 및 행 편집](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
+3. [방법: TableLayoutPanel 컨트롤의 열과 행 편집](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
   
-4. [연습: TableLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+4. [연습: TableLayoutPanel을 사용 하 여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
   
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutSettings>
-- [방법: 지역화에 효과적으로 대응하는 Windows Forms 레이아웃 디자인](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)
-- [방법: 데이터 입력에 맞게 크기 조정 가능한 Windows Form 만들기](how-to-create-a-resizable-windows-form-for-data-entry.md)
+- [방법: 지역화에 효과적으로 대응 하는 Windows Forms 레이아웃 디자인](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)
+- [방법: 데이터 항목에 대 한 크기 조정 가능한 Windows Form 만들기](how-to-create-a-resizable-windows-form-for-data-entry.md)
 - [TableLayoutPanel 컨트롤에 대한 모범 사례](best-practices-for-the-tablelayoutpanel-control.md)

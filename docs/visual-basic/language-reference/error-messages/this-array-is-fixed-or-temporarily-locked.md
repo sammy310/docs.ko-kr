@@ -5,10 +5,10 @@ f1_keywords:
 - vbrID10
 ms.assetid: de6713a6-51d7-4edb-8515-d5fb544e2091
 ms.openlocfilehash: c74d9524ff64101ba6002e133b93c9b80e8f50a9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337970"
 ---
 # <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a>이 배열은 고정되었거나 임시로 잠겨 있습니다(Visual Basic).
@@ -30,4 +30,4 @@ ms.locfileid: "59337970"
   
 ## <a name="see-also"></a>참고자료
 
-- [배열](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [배열(C++)](../../../visual-basic/programming-guide/language-features/arrays/index.md)

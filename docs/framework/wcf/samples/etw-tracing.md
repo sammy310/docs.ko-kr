@@ -2,12 +2,12 @@
 title: ETW 추적
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: b445606677fba23ec81e896cce564330cedd6a19
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: a5c2f173978f514aa4627caa476a595d8d45d4f9
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59300686"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613748"
 ---
 # <a name="etw-tracing"></a>ETW 추적
 이 샘플에서는 ETW(Windows용 이벤트 추적) 및 이 샘플과 함께 제공된 `ETWTraceListener`를 사용하여 E2E(종단 간) 추적을 구현하는 방법을 보여 줍니다. 샘플을 기반으로 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) 및 ETW 추적을 포함 합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "59300686"
  이 수신기를 사용하기 전에 ETW 추적 세션이 시작되어야 합니다. 이 세션은 Logman.exe 또는 Tracelog.exe를 사용하여 시작할 수 있습니다. SetupETW.bat 파일이 이 샘플에 포함되어 있으므로 ETW 추적 세션을 닫고 로그 파일을 완료하는 CleanupETW.bat 파일과 함께 세션을 설정할 수 있습니다.  
   
 > [!NOTE]
->  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다. 이러한 도구에 대 한 자세한 내용은 참조 하세요. [https://go.microsoft.com/fwlink/?LinkId=56580](https://go.microsoft.com/fwlink/?LinkId=56580)  
+>  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다. 이러한 도구에 대 한 자세한 내용은 참조 하세요. <https://go.microsoft.com/fwlink/?LinkId=56580>  
   
  ETWTraceListener를 사용할 경우 추적은 이진 .etl 파일에 기록됩니다. ServiceModel 추적이 설정된 상태에서 생성된 모든 추적은 동일한 파일에 표시됩니다. 사용 하 여 [Service Trace Viewer 도구 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) .etl 및.svclog 로그 파일 보기에 대 한 합니다. 이 뷰어는 해당 소스에서 해당 대상 및 소비 지점까지 메시지를 추적하는 데 사용할 수 있는 시스템의 종단 간 보기를 만듭니다.  
   

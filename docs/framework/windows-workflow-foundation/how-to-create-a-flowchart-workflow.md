@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
 ms.openlocfilehash: 15cf94d5ea191435723f754f35e43d65632142e2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311203"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>방법: 순서도 워크플로 만들기
@@ -157,5 +157,5 @@ ms.locfileid: "59311203"
 - [Windows Workflow Foundation 프로그래밍](programming.md)
 - [워크플로 디자인](designing-workflows.md)
 - [초보자를 위한 자습서](getting-started-tutorial.md)
-- [방법: 작업 만들기](how-to-create-an-activity.md)
+- [방법: 활동 만들기](how-to-create-an-activity.md)
 - [방법: 워크플로 실행](how-to-run-a-workflow.md)

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
 ms.openlocfilehash: 4fca9231872a268470c9bcfa73e7a0c0a26d300c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074991"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>성능 최적화: 2D 그래픽 및 이미징
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 요구 사항에 대 한 다양 한 범위의 2D 그래픽 및 최적화할 수 있는 이미징 기능을 제공 합니다. 이 항목에서는 이러한 영역의 성능 최적화에 대한 정보를 제공합니다.  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 응용 프로그램 요구 사항에 맞게 최적화할 수 있는 다양한 범위의 2D 그래픽 및 이미징 기능을 제공합니다. 이 항목에서는 이러한 영역의 성능 최적화에 대한 정보를 제공합니다.  
 
 <a name="Drawing_and_Shapes"></a>   
 ## <a name="drawing-and-shapes"></a>그리기 및 도형  
@@ -28,7 +28,7 @@ ms.locfileid: "59074991"
   
  <xref:System.Windows.Shapes.Shape> 화면에 그래픽 도형을 그릴 수 있습니다. 파생 되므로 합니다 <xref:System.Windows.FrameworkElement> 클래스인 <xref:System.Windows.Shapes.Shape> 패널 및 대부분의 컨트롤 내에서 개체를 사용할 수 있습니다.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 여러 계층의 그래픽 및 렌더링 서비스에 대 한 액세스를 제공합니다. 최상위 계층 <xref:System.Windows.Shapes.Shape> 개체는 쉽게 사용 하 여 레이아웃 및 이벤트 처리 등 여러 유용한 기능을 제공 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 즉시 사용 shape 개체의 수를 제공합니다. 모든 도형 개체에서 상속 된 <xref:System.Windows.Shapes.Shape> 클래스입니다. 사용 가능한 도형 개체를 포함 <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>를 <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>를 <xref:System.Windows.Shapes.Polyline>, 및 <xref:System.Windows.Shapes.Rectangle>합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 그래픽 및 렌더링 서비스에 대한 여러 계층의 액세스를 제공합니다. 최상위 계층 <xref:System.Windows.Shapes.Shape> 개체는 쉽게 사용 하 여 레이아웃 및 이벤트 처리 등 여러 유용한 기능을 제공 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 바로 사용할 수 있는 여러 도형 개체를 제공합니다. 모든 도형 개체에서 상속 된 <xref:System.Windows.Shapes.Shape> 클래스입니다. 사용 가능한 도형 개체를 포함 <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>를 <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>를 <xref:System.Windows.Shapes.Polyline>, 및 <xref:System.Windows.Shapes.Rectangle>합니다.  
   
  <xref:System.Windows.Media.Drawing> 개체를 다른 한편으로에서 파생 되지 않은 <xref:System.Windows.FrameworkElement> 클래스 및 렌더링 도형, 이미지 및 텍스트에 대 한 간단한 구현을 제공 합니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "59074991"
   
 <a name="Images"></a>   
 ## <a name="images"></a>이미지  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이전 버전의 이미징 기능 향상을 제공 하는 이미징 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]합니다. 비트맵을 표시하거나 공용 컨트롤에 이미지를 사용하는 등의 이미징 기능은 원래 주로 Microsoft Windows GDI(그래픽 디바이스 인터페이스) 또는 Microsoft Windows GDI+ API(응용 프로그래밍 인터페이스)에 의해 처리되었습니다. 이러한 API는 기준 이미징 기능은 제공했지만 코덱 확장성 및 고품질 이미지 지원 등과 같은 기능이 없었습니다. WPF 이미징 API는 GDI 및 GDI+의 단점을 보완하고 애플리케이션 내에서 이미지를 표시 및 사용하기 위한 새로운 API 집합을 제공하도록 다시 디자인되었습니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이미징은 이전 버전의 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]보다 크게 향상된 이미징 기능을 제공합니다. 비트맵을 표시하거나 공용 컨트롤에 이미지를 사용하는 등의 이미징 기능은 원래 주로 Microsoft Windows GDI(그래픽 디바이스 인터페이스) 또는 Microsoft Windows GDI+ API(응용 프로그래밍 인터페이스)에 의해 처리되었습니다. 이러한 API는 기준 이미징 기능은 제공했지만 코덱 확장성 및 고품질 이미지 지원 등과 같은 기능이 없었습니다. WPF 이미징 API는 GDI 및 GDI+의 단점을 보완하고 애플리케이션 내에서 이미지를 표시 및 사용하기 위한 새로운 API 집합을 제공하도록 다시 디자인되었습니다.  
   
  이미지를 사용할 경우 더 나은 성능을 얻으려면 다음 권장 사항을 고려하세요.  
   
@@ -100,13 +100,13 @@ ms.locfileid: "59074991"
   
 ## <a name="see-also"></a>참고자료
 
-- [WPF 애플리케이션 성능 최적화](optimizing-wpf-application-performance.md)
-- [응용 프로그램 성능 계획](planning-for-application-performance.md)
-- [하드웨어 활용](optimizing-performance-taking-advantage-of-hardware.md)
+- [WPF 응용 프로그램 성능 최적화](optimizing-wpf-application-performance.md)
+- [애플리케이션 성능 계획](planning-for-application-performance.md)
+- [하드웨어 이용](optimizing-performance-taking-advantage-of-hardware.md)
 - [레이아웃 및 디자인](optimizing-performance-layout-and-design.md)
 - [개체 동작](optimizing-performance-object-behavior.md)
 - [애플리케이션 리소스](optimizing-performance-application-resources.md)
 - [텍스트](optimizing-performance-text.md)
 - [데이터 바인딩](optimizing-performance-data-binding.md)
-- [기타 성능 추천 사항](optimizing-performance-other-recommendations.md)
+- [기타 성능 권장 사항](optimizing-performance-other-recommendations.md)
 - [애니메이션에 대한 유용한 정보](../graphics-multimedia/animation-tips-and-tricks.md)

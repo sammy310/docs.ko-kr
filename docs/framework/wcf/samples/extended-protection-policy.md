@@ -3,11 +3,11 @@ title: 확장된 보호 정책
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
 ms.openlocfilehash: 645b48b3c7ce3daaaedac372ba5ba6fd5edfc8f8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59328753"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768425"
 ---
 # <a name="extended-protection-policy"></a>확장된 보호 정책
 확장된 보호는 MITM(Man-In-The-Middle, 메시지 가로채기) 공격을 방지하기 위한 보안 이니셔티브입니다. MITM 공격은 공격자가 클라이언트의 자격 증명을 가로채 서버로 전달하는 보안 위협입니다.  

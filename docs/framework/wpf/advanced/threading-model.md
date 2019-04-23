@@ -19,14 +19,14 @@ helpviewer_keywords:
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
 ms.openlocfilehash: 0bcb0e7369345aaae39d99a005a07304aaad7043
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59200352"
 ---
 # <a name="threading-model"></a>스레딩 모델
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 개발자가 스레딩의 어려움을 해결에서 저장 하도록 설계 되었습니다. 결과적으로 대부분의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 개발자가 둘 이상의 스레드를 사용 하는 인터페이스를 작성할 필요가 없습니다. 다중 스레드 프로그램은 복잡하고 디버그하기 어려우므로 단일 스레드 솔루션이 있을 경우 피해야 합니다.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 개발자가 스레딩의 어려움을 해결하도록 디자인되어 있습니다. 결과적으로 대부분의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 개발자가 둘 이상의 스레드를 사용 하는 인터페이스를 작성할 필요가 없습니다. 다중 스레드 프로그램은 복잡하고 디버그하기 어려우므로 단일 스레드 솔루션이 있을 경우 피해야 합니다.  
   
  그러나 아무리 얼마나 잘 구성 되었는지, 아니요 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] framework 적이 모든 종류의 문제에 대 한 단일 스레드 솔루션을 제공 하는 일을 할 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 가 근접 하는 여러 스레드가 개선 하는 상황도 있습니다 하지만 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 응답성 이나 응용 프로그램 성능. 일부 배경 자료를 설명한 후 이 문서에서는 이러한 상황 중 일부를 살펴보고 몇몇 하위 수준 세부 정보에 대한 설명으로 마무리 짓습니다.  
 
@@ -45,7 +45,7 @@ ms.locfileid: "59200352"
   
  지금까지 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 허용 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 요소를 만든 스레드에서 액세스할 수 있습니다. 즉, 일부 장기 실행 작업을 처리하는 백그라운드 스레드는 작업이 완료될 때 입력란을 업데이트할 수 없습니다. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 무결성을 보장 하려면이 작업을 수행 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 구성 요소입니다. 목록 상자의 콘텐츠가 그리는 동안 백그라운드 스레드를 통해 업데이트되면 목록 상자가 이상하게 표시될 수 있습니다.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이 조정을 적용 하는 기본 제공 상호 배제 메커니즘을 있습니다. 대부분의 클래스 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에서 파생 <xref:System.Windows.Threading.DispatcherObject>합니다. 생성 시를 <xref:System.Windows.Threading.DispatcherObject> 에 대 한 참조를 저장 합니다 <xref:System.Windows.Threading.Dispatcher> 현재 실행 중인 스레드에 연결 합니다. 실제로 <xref:System.Windows.Threading.DispatcherObject> 만든 스레드를 사용 하 여 연결 합니다. 프로그램 실행 중에 <xref:System.Windows.Threading.DispatcherObject> 해당 공용을 호출할 수 <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> 메서드. <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> 검사는 <xref:System.Windows.Threading.Dispatcher> 현재 스레드와 연결 된와 비교는 <xref:System.Windows.Threading.Dispatcher> 생성 중에 저장 된 참조입니다. 일치 하지 않으면 <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> 예외를 throw 합니다. <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> 에 속한 모든 메서드의 시작 부분에서 호출 될 것을 <xref:System.Windows.Threading.DispatcherObject>입니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에는 이 조정을 적용하는 기본 제공 상호 배제 메커니즘이 있습니다. 대부분의 클래스 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에서 파생 <xref:System.Windows.Threading.DispatcherObject>합니다. 생성 시를 <xref:System.Windows.Threading.DispatcherObject> 에 대 한 참조를 저장 합니다 <xref:System.Windows.Threading.Dispatcher> 현재 실행 중인 스레드에 연결 합니다. 실제로 <xref:System.Windows.Threading.DispatcherObject> 만든 스레드를 사용 하 여 연결 합니다. 프로그램 실행 중에 <xref:System.Windows.Threading.DispatcherObject> 해당 공용을 호출할 수 <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> 메서드. <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> 검사는 <xref:System.Windows.Threading.Dispatcher> 현재 스레드와 연결 된와 비교는 <xref:System.Windows.Threading.Dispatcher> 생성 중에 저장 된 참조입니다. 일치 하지 않으면 <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> 예외를 throw 합니다. <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> 에 속한 모든 메서드의 시작 부분에서 호출 될 것을 <xref:System.Windows.Threading.DispatcherObject>입니다.  
   
  경우에 하나의 스레드를 수정할 수는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], 사용자를 사용 하 여 백그라운드 스레드 상호 작용? 백그라운드 스레드를 요청할 수 있습니다는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 스레드를 대신 하 여 작업을 수행 합니다. 와 작업 항목을 등록 하 여 수행 합니다 <xref:System.Windows.Threading.Dispatcher> 의 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 스레드입니다. <xref:System.Windows.Threading.Dispatcher> 클래스는 작업 항목을 등록 하는 두 가지 방법을 제공 합니다. <xref:System.Windows.Threading.Dispatcher.Invoke%2A> 및 <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>합니다. 메서드는 둘 다 대리자 실행을 예약합니다. <xref:System.Windows.Threading.Dispatcher.Invoke%2A> 동기 호출 – 즉, 될 때까지 반환 하지 않기를 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 스레드가 실제로 대리자 실행을 완료 합니다. <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> 비동기를 즉시 반환 합니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "59200352"
   
  ![디스패처 큐를 보여 주는 스크린샷.](./media/threading-model/threading-dispatcher-queue.png)  
   
- [!INCLUDE[TLA#tla_word](../../../../includes/tlasharptla-word-md.md)] 이 메커니즘을 사용 하 여 맞춤법 검사를 수행 합니다. 유휴 시간을 사용 하 여 백그라운드에서 이루어집니다 맞춤법 검사는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 스레드입니다. 코드를 살펴보겠습니다.  
+ [!INCLUDE[TLA#tla_word](../../../../includes/tlasharptla-word-md.md)]에서는 이 메커니즘을 사용하여 맞춤법 검사를 수행합니다. 유휴 시간을 사용 하 여 백그라운드에서 이루어집니다 맞춤법 검사는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 스레드입니다. 코드를 살펴보겠습니다.  
   
  다음 예제에서는 사용자 인터페이스를 만드는 XAML을 보여 줍니다.  
   
@@ -92,12 +92,12 @@ ms.locfileid: "59200352"
   
  텍스트를 업데이트 하는 것 외에도 합니다 <xref:System.Windows.Controls.Button>,이 처리기는 대리자를 추가 하 여 첫 번째 소수 검사를 예약 하는 일을 담당 합니다 <xref:System.Windows.Threading.Dispatcher> 큐입니다. 이 이벤트 처리기가 해당 작업을 완료 한 후 따라는 <xref:System.Windows.Threading.Dispatcher> 이 대리자 실행을 선택 합니다.  
   
- 앞에서 설명한 것 처럼 <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> 되는 <xref:System.Windows.Threading.Dispatcher> 대리자 실행을 예약 하는 데 사용 되는 멤버입니다. 선택이 경우에 <xref:System.Windows.Threading.DispatcherPriority.SystemIdle> 우선 순위입니다. <xref:System.Windows.Threading.Dispatcher> 처리 하는 데 중요 한 이벤트가 없을 경우에이 대리자를 실행 합니다. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 응답성이 숫자 검사 보다 더 중요 합니다. 또한 숫자 검사 루틴을 표현하는 새 대리자를 전달합니다.  
+ 앞에서 설명한 것 처럼 <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> 되는 <xref:System.Windows.Threading.Dispatcher> 대리자 실행을 예약 하는 데 사용 되는 멤버입니다. 선택이 경우에 <xref:System.Windows.Threading.DispatcherPriority.SystemIdle> 우선 순위입니다. <xref:System.Windows.Threading.Dispatcher> 처리 하는 데 중요 한 이벤트가 없을 경우에이 대리자를 실행 합니다. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 응답성이 숫자 검사보다 더 중요합니다. 또한 숫자 검사 루틴을 표현하는 새 대리자를 전달합니다.  
   
  [!code-csharp[ThreadingPrimeNumbers#ThreadingPrimeNumberCheckNextNumber](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml.cs#threadingprimenumberchecknextnumber)]
  [!code-vb[ThreadingPrimeNumbers#ThreadingPrimeNumberCheckNextNumber](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingPrimeNumbers/visualbasic/mainwindow.xaml.vb#threadingprimenumberchecknextnumber)]  
   
- 이 메서드는 다음 홀수가 소수인지 확인합니다. 메서드를 직접 업데이트 소수인 경우는 `bigPrime`<xref:System.Windows.Controls.TextBlock> 해당 검색을 반영 하도록 합니다. 구성 요소를 만드는 데 사용된 같은 스레드에서 계산이 수행되므로 이 작업을 수행할 수 있습니다. 계산에 대 한 별도 스레드를 사용 하도록 선택한 경우를 할 것 더 복잡 한 동기화 메커니즘을 사용 하 고 업데이트를 실행 합니다 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 스레드입니다. 이 상황은 다음에 살펴보겠습니다.  
+ 이 메서드는 다음 홀수가 소수인지 확인합니다. 메서드를 직접 업데이트 소수인 경우 합니다 `bigPrime` <xref:System.Windows.Controls.TextBlock> 해당 검색을 반영 하도록 합니다. 구성 요소를 만드는 데 사용된 같은 스레드에서 계산이 수행되므로 이 작업을 수행할 수 있습니다. 계산에 대 한 별도 스레드를 사용 하도록 선택한 경우를 할 것 더 복잡 한 동기화 메커니즘을 사용 하 고 업데이트를 실행 합니다 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 스레드입니다. 이 상황은 다음에 살펴보겠습니다.  
   
  이 샘플에 대 한 전체 소스 코드에 대 한 참조를 [장기 실행 계산 샘플을 사용 하 여 단일 스레드 응용 프로그램](https://go.microsoft.com/fwlink/?LinkID=160038)  
   
@@ -141,9 +141,9 @@ ms.locfileid: "59200352"
 ### <a name="multiple-windows-multiple-threads"></a>여러 Windows, 여러 스레드  
  일부 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램에 여러 개의 최상위 창이 필요 합니다. 한 스레드에서 완벽 하 게 적합 /<xref:System.Windows.Threading.Dispatcher> 더 나은 작업을 수행 하는 여러 windows 하지만 경우에 따라 여러 스레드를 관리 하는 조합 합니다. 특히 창 중 하나가 스레드를 독점할 가능성이 있는 경우 여러 스레드를 사용하는 것이 좋습니다.  
   
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 탐색기가이 방식으로 작동 합니다. 새로운 각 탐색기 창은 원래 프로세스에 속하지만 독립 스레드의 제어를 기반으로 만들어집니다.  
+ [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 탐색기가 이 방식으로 작동합니다. 새로운 각 탐색기 창은 원래 프로세스에 속하지만 독립 스레드의 제어를 기반으로 만들어집니다.  
   
- 사용 하 여를 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Frame> 컨트롤을 웹 페이지를 표시할 수 있습니다. 간단한 쉽게 만들 수 있습니다 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] 대체 합니다. 새 탐색기 창을 여는 중요한 기능으로 시작합니다. 사용자가 “새 창” 단추를 클릭하면 창 복사본을 별도의 스레드에서 시작합니다. 이렇게 하면 창 중 하나에 있는 장기 실행 또는 차단 작업으로 인해 모든 다른 창이 잠기지 않습니다.  
+ 사용 하 여는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Frame> 컨트롤을 웹 페이지를 표시할 수 있습니다. 간단한 쉽게 만들 수 있습니다 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] 대체 합니다. 새 탐색기 창을 여는 중요한 기능으로 시작합니다. 사용자가 “새 창” 단추를 클릭하면 창 복사본을 별도의 스레드에서 시작합니다. 이렇게 하면 창 중 하나에 있는 장기 실행 또는 차단 작업으로 인해 모든 다른 창이 잠기지 않습니다.  
   
  실제로 웹 브라우저 모델에는 복잡한 자체 스레딩 모델이 있습니다. 대부분의 독자에게 친숙해야 하므로 이를 선택했습니다.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "59200352"
  [!code-csharp[CommandingOverviewSnippets#ThreadingArticleWeatherComponent1](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#threadingarticleweathercomponent1)]
  [!code-vb[CommandingOverviewSnippets#ThreadingArticleWeatherComponent1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#threadingarticleweathercomponent1)]  
   
- `GetWeatherAsync` 사용 합니다 백그라운드 스레드 만들기와 같은 앞에서 설명한 기술 중 하나는 작업을 비동기적으로 수행 호출 스레드를 차단 하지 않습니다.  
+ `GetWeatherAsync`는 백그라운드 스레드 만들기와 같이 앞에서 설명한 기술 중 하나를 사용하여 호출 스레드를 잠그지 않고 비동기적으로 작업을 수행합니다.  
   
  이 패턴의 가장 중요 한 부분 중 하나를 호출 합니다 *MethodName* `Completed` 메서드를 호출한 스레드와 동일한 스레드에서 *MethodName* `Async` 로 시작 하는 방법. 사용 하 여 수행할 수 있습니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 를 저장 하 여 비교적 쉽게 <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>-다음 고 그래픽이 아닌 구성 요소 에서만에 사용 될 수 있지만 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램에 없는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 또는 [!INCLUDE[TLA#tla_aspnet](../../../../includes/tlasharptla-aspnet-md.md)] 프로그램입니다.  
   
@@ -189,7 +189,7 @@ ms.locfileid: "59200352"
   
  ![확인 단추가 있는 MessageBox를 보여 주는 스크린샷](./media/threading-model/threading-message-loop.png)  
   
- 일부 스레드는 메시지 상자 창을 처리해야 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 메시지 상자 창에 대 한 새 스레드를 만들 수 있지만이 스레드는 원래 창에서 사용할 수 없는 요소를 그릴 수 없습니다 (이전 설명은 상호 배제 해야 함). 대신 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 중첩된 메시지 처리 시스템을 사용 합니다. <xref:System.Windows.Threading.Dispatcher> 라는 특수 메서드를 포함 하는 클래스 <xref:System.Windows.Threading.Dispatcher.PushFrame%2A>를 저장 하는 응용 프로그램의 현재 실행 지점을 다음 새 메시지 루프를 시작 합니다. 원래 후 실행을 다시 시작할 중첩된 메시지 루프가 완료 되 면 <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> 호출 합니다.  
+ 일부 스레드는 메시지 상자 창을 처리해야 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 메시지 상자 창인 경우에만 새 스레드를 만들 수 있지만 이 스레드는 원래 창에서 사용되지 않는 요소를 그릴 수 없습니다(상호 배제에 대한 이전 설명 참조). 대신 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 중첩된 메시지 처리 시스템을 사용 합니다. <xref:System.Windows.Threading.Dispatcher> 라는 특수 메서드를 포함 하는 클래스 <xref:System.Windows.Threading.Dispatcher.PushFrame%2A>를 저장 하는 응용 프로그램의 현재 실행 지점을 다음 새 메시지 루프를 시작 합니다. 원래 후 실행을 다시 시작할 중첩된 메시지 루프가 완료 되 면 <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> 호출 합니다.  
   
  이 경우 <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> 에 대 한 호출 시 프로그램 컨텍스트를 유지 관리 <xref:System.Windows.MessageBox>.<xref:System.Windows.MessageBox.Show%2A>, 백그라운드 창을 다시 표시 되 고 메시지 상자 창에 대 한 입력을 처리 하는 새 메시지 루프를 시작 합니다. 사용자가 확인을 클릭 하 고 팝업 창을 지우면 중첩된 루프가 존재 시간과 호출 후 컨트롤을 다시 시작 <xref:System.Windows.MessageBox.Show%2A>합니다.  
   
@@ -217,4 +217,4 @@ ms.locfileid: "59200352"
   
 ## <a name="see-also"></a>참고자료
 
-- [장기 실행 계산 샘플을 사용 하 여 단일 스레드 응용 프로그램](https://go.microsoft.com/fwlink/?LinkID=160038)
+- [장기 실행 계산이 포함된 단일 스레드 응용 프로그램 샘플](https://go.microsoft.com/fwlink/?LinkID=160038)

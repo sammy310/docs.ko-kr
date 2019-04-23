@@ -3,17 +3,17 @@ title: 동적 활동을 사용하여 런타임에 활동 만들기
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
 ms.openlocfilehash: ed133e972caa9a3a62ab2ac1310cb1bd666947ce
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321234"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>동적 활동을 사용하여 런타임에 활동 만들기
-<xref:System.Activities.DynamicActivity> public 생성자를 사용 하 여 구체적이 고 봉인 클래스가입니다. <xref:System.Activities.DynamicActivity> DOM. 활동을 사용 하 여 런타임에 활동 기능을 어셈블할 수 있습니다.  
+<xref:System.Activities.DynamicActivity>는 public 생성자를 사용하는 구체적이고 봉인된 클래스입니다. <xref:System.Activities.DynamicActivity>는 활동 DOM을 통해 런타임에 활동 기능을 어셈블하는 데 사용할 수 있습니다.  
   
 ## <a name="dynamicactivity-features"></a>DynamicActivity 기능  
- <xref:System.Activities.DynamicActivity> 에 대 한 실행 속성, 인수 및 변수 있지만 자식 활동 예약, 추적 같은 런타임 서비스에 액세스할 수 없습니다.  
+ <xref:System.Activities.DynamicActivity>는 실행 속성, 인수 및 변수에 대한 액세스 권한이 있지만 자식 활동 예약, 추적 등과 같은 런타임 서비스에 대한 액세스 권한이 없습니다.  
   
  워크플로 <xref:System.Activities.Argument> 개체를 사용하여 최상위 속성을 설정할 수 있습니다. 명령적 코드에서는 새로운 형식의 CLR 속성을 사용하여 이러한 인수를 만듭니다. XAML에서는 `x:Class` 및 `x:Member` 태그를 사용하여 이러한 인수를 선언합니다.  
   
@@ -98,4 +98,4 @@ ms.locfileid: "59321234"
   
 ## <a name="see-also"></a>참고자료
 
-- [명령 코드를 사용하여 워크플로, 활동 및 식 작성](authoring-workflows-activities-and-expressions-using-imperative-code.md)
+- [명령형 코드를 사용하여 워크플로, 활동 및 식 작성](authoring-workflows-activities-and-expressions-using-imperative-code.md)

@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: efb42d773669b949aeafa52fdcc445f18b469a5e
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: a72e5e557cd3aa098b674bffd277e3cc6da99d33
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410266"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306068"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>CLI를 사용하여 .NET Core 앱 게시
 
@@ -33,8 +33,7 @@ CLI 사용에 대한 빠른 도움말을 찾나요? 다음 표는 앱을 게시�
 |                                | 2.2 | `dotnet publish -c Release -r <RID> --self-contained true` |
 |                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained true` |
 
-> [!IMPORTANT]
-> \*SDK 버전 3.0을 사용할 경우 프레임워크 종속 실행 파일은 기본 `dotnet publish` 명령을 실행할 때 기본 모드입니다. 이는 **.NET Core 2.1** 또는 **.NET Core 3.0**을 대상으로 하는 프로젝트에만 적용됩니다.
+\*SDK 버전 3.0을 사용할 경우 프레임워크 종속 실행 파일은 기본 `dotnet publish` 명령을 실행할 때 기본 게시 모드입니다. 이 내용은 **.NET Core 2.1** 또는 **.NET Core 3.0**을 대상으로 하는 프로젝트에만 적용됩니다.
 
 ## <a name="publishing-basics"></a>게시 기본 사항
 
@@ -129,13 +128,14 @@ FDE를 게시하면 앱을 실행하는 시스템에서 사용할 수 있는 최
 
 현재 플랫폼을 대상으로 할 때는 .NET Core 3.x를 제외하고 `dotnet publish` 명령과 함께 다음 스위치를 사용하여 FDE를 게시해야 합니다.
 
-- `-r <RID>` 이 스위치는 식별자(RID)를 사용하여 대상 플랫폼을 지정합니다. 런타임 식별자 목록은 [런타임 식별자(RID) 카탈로그](../rid-catalog.md)를 참조하세요.
+- `-r <RID>`
+  이 스위치는 식별자(RID)를 사용하여 대상 플랫폼을 지정합니다. 런타임 식별자 목록은 [런타임 식별자(RID) 카탈로그](../rid-catalog.md)를 참조하세요.
 
 - `--self-contained false` 이 스위치는 .NET Core SDK에 실행 파일을 FDE로 생성하도록 지시합니다.
 
-`-r` 스위치를 사용할 때마다 출력 폴더 경로가 `./bin/<BUILD-CONFIGURATION>/<TFM>/<RID>/publish/`로 변경됩니다.
+`-r` 스위치를 사용할 때마다 출력 폴더 경로가 다음으로 변경됩니다. `./bin/<BUILD-CONFIGURATION>/<TFM>/<RID>/publish/`
 
-[예제 앱](#sample-app)을 사용하는 경우 `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false`를 실행합니다. 이 명령은 `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe` 실행 파일을 만듭니다.
+[예제 앱](#sample-app)을 사용하는 경우 `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false`를 실행합니다. 이 명령은 다음 실행 파일을 만듭니다. `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe`
 
 > [!NOTE]
 > **세계화 고정 모드**를 사용하여 배포의 전체 크기를 줄일 수 있습니다. 이 모드는 전역적으로 인식되지 않는 서식 지정 규칙, 대/소문자 규칙 및 문자열 비교와 [고정 문화권](xref:System.Globalization.CultureInfo.InvariantCulture)의 정렬 순서를 사용할 수 있는 애플리케이션에 유용합니다. **세계화 고정 모드**와 이 모드를 사용하는 방법에 대한 자세한 내용은 [.NET Core 세계화 고정 모드](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)를 참조하세요.
@@ -148,13 +148,13 @@ SCD를 게시하면 사용 가능한 최신 .NET Core 보안 패치로 롤포워
 
 SCD를 게시하려면 `dotnet publish` 명령과 함께 다음 스위치를 사용해야 합니다.
 
-- `-r <RID>` 이 스위치는 식별자(RID)를 사용하여 대상 플랫폼을 지정합니다. 런타임 식별자 목록은 [런타임 식별자(RID) 카탈로그](../rid-catalog.md)를 참조하세요.
+- `-r <RID>`
+  이 스위치는 식별자(RID)를 사용하여 대상 플랫폼을 지정합니다. 런타임 식별자 목록은 [런타임 식별자(RID) 카탈로그](../rid-catalog.md)를 참조하세요.
 
 - `--self-contained true` 이 스위치는 .NET Core SDK에 실행 파일을 SCD로 생성하도록 지시합니다.
 
 > [!NOTE]
 > **세계화 고정 모드**를 사용하여 배포의 전체 크기를 줄일 수 있습니다. 이 모드는 전역적으로 인식되지 않는 서식 지정 규칙, 대/소문자 규칙 및 문자열 비교와 [고정 문화권](xref:System.Globalization.CultureInfo.InvariantCulture)의 정렬 순서를 사용할 수 있는 애플리케이션에 유용합니다. **세계화 고정 모드**와 이 모드를 사용하는 방법에 대한 자세한 내용은 [.NET Core 세계화 고정 모드](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)를 참조하세요.
-
 
 ## <a name="see-also"></a>참고 항목
 

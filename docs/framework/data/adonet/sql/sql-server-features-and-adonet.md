@@ -3,10 +3,10 @@ title: SQL Server 기능 및 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
 ms.openlocfilehash: 4f2d93ca2abc15e4c7af8489d5b875c0a46d7185
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59294901"
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server 기능 및 ADO.NET
@@ -16,7 +16,7 @@ ms.locfileid: "59294901"
   
  **SQL Server 온라인 설명서**  
   
-1. [개발(데이터베이스 엔진)](https://go.microsoft.com/fwlink/?LinkId=115245)  
+1. [개발 (데이터베이스 엔진)](https://go.microsoft.com/fwlink/?LinkId=115245)  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [SQL Server의 인스턴스 열거(ADO.NET)](../../../../../docs/framework/data/adonet/sql/enumerating-instances-of-sql-server.md)  

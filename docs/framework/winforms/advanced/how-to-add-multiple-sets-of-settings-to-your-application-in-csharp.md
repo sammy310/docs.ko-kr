@@ -6,10 +6,10 @@ helpviewer_keywords:
 - application settings [Windows Forms], C#
 ms.assetid: 45007ac6-cf07-4be7-bc38-3f0ef962faf9
 ms.openlocfilehash: 9a4913f635204aac2214d97225c7b8147c6fe9ab
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326608"
 ---
 # <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a>방법: C에서 응용 프로그램에 다중 설정 집합 추가\#
@@ -28,4 +28,4 @@ ms.locfileid: "59326608"
 ## <a name="see-also"></a>참고자료
 
 - [응용 프로그램 설정 및 사용자 설정 사용](using-application-settings-and-user-settings.md)
-- [애플리케이션 설정 개요](application-settings-overview.md)
+- [응용 프로그램 설정 개요](application-settings-overview.md)

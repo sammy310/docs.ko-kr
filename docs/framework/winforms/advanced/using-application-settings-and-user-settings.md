@@ -6,10 +6,10 @@ helpviewer_keywords:
 - application settings [Windows Forms], how-to topics
 ms.assetid: 54682d3b-1cbf-4683-9351-012b8b4286b5
 ms.openlocfilehash: ea6994e653b3a06239634f5a0fddea84a07086e2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107265"
 ---
 # <a name="using-application-settings-and-user-settings"></a>응용 프로그램 설정 및 사용자 설정 사용
@@ -26,19 +26,19 @@ ms.locfileid: "59107265"
   
  기존 설정 값을 변경 하려면 Visual Studio를 사용 하는 방법에 설명 합니다.  
   
- [방법: 애플리케이션 세션 간 설정 값 변경](how-to-change-the-value-of-a-setting-between-application-sessions.md)  
+ [방법: 응용 프로그램 세션 간 설정 값 변경](how-to-change-the-value-of-a-setting-between-application-sessions.md)  
   
  응용 프로그램 세션 간에 컴파일된 응용 프로그램에서 설정의 값을 변경 하는 방법을 자세히 설명 합니다.  
   
- [방법: C#을 사용하여 런타임에 설정 읽기](how-to-read-settings-at-run-time-with-csharp.md)  
+ [방법: 사용 하 여 런타임에 설정 읽기C#](how-to-read-settings-at-run-time-with-csharp.md)  
   
  사용 하 여 설정을 읽는 코드를 사용 하는 방법에 설명 합니다 C#입니다.  
   
- [방법: C#을 사용하여 런타임에 사용자 설정 쓰기](how-to-write-user-settings-at-run-time-with-csharp.md)  
+ [방법: 사용 하 여 런타임에 사용자 설정 쓰기C#](how-to-write-user-settings-at-run-time-with-csharp.md)  
   
  코드를 사용 하 여 작성 하 고 사용 하 여 사용자 설정의 값을 저장 하는 방법을 설명 C#입니다.  
   
- [방법: C#에서 애플리케이션에 여러 설정 집합 추가](how-to-add-multiple-sets-of-settings-to-your-application-in-csharp.md)  
+ [방법: 응용 프로그램에 다중 설정 집합 추가C#](how-to-add-multiple-sets-of-settings-to-your-application-in-csharp.md)  
   
  여러 집합의 설정 사용 하 여 응용 프로그램에 추가 하는 방법에 자세히 설명 C#입니다.  
   

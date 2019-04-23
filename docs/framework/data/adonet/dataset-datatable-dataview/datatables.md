@@ -3,10 +3,10 @@ title: DataTables
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
 ms.openlocfilehash: f6509400d7f6633749155f778e3ba58ec6c27ec2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207320"
 ---
 # <a name="datatables"></a>DataTables
@@ -37,7 +37,7 @@ ms.locfileid: "59207320"
  [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
  ADO.NET 아키텍처 및 구성 요소에 대해 설명하고, 이를 사용하여 기존 데이터 소스에 액세스하고 응용 프로그램 데이터를 관리하는 방법을 설명합니다.  
   
- [DataSets, DataTables 및 DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [DataSet, DataTable 및 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  ADO.NET에 대 한 정보를 제공 **데이터 집합** 테이블 간의 관계를 만드는 방법을 포함 합니다.  
   
  <xref:System.Data.Constraint>  

@@ -3,10 +3,10 @@ title: 고가용성 및 재해 복구에 대한 SqlClient 지원
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 ms.openlocfilehash: 40054378319b81113dcb8f40cb82a8b1d02fc594
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307614"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>고가용성 및 재해 복구에 대한 SqlClient 지원
@@ -63,7 +63,7 @@ ms.locfileid: "59307614"
   
 2. 응용 프로그램이 `ApplicationIntent=ReadWrite`(아래에 설명)를 사용하고 보조 복제본 위치가 읽기 전용 액세스용으로 구성되어 있는 경우  
   
- <xref:System.Data.SqlClient.SqlDependency> 읽기 전용 보조 복제본에서 지원 되지 않습니다.  
+ <xref:System.Data.SqlClient.SqlDependency>는 읽기 전용 보조 복제본에서 지원되지 않습니다.  
   
  주 복제본이 읽기 전용 작업을 거부하도록 구성되어 있고 연결 문자열에 `ApplicationIntent=ReadOnly`가 포함되어 있으면 연결이 실패합니다.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "59307614"
   
  레거시 읽기 전용 데이터베이스에는 `ApplicationIntent` 키워드를 사용할 수 없습니다.  
   
- 데이터베이스는 대상 AlwaysOn 데이터베이스에 대한 읽기 작업을 허용하거나 허용하지 않을 수 있습니다. (으로 수행 됩니다 합니다 `ALLOW_CONNECTIONS` 절을 `PRIMARY_ROLE` 및 `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 문.)  
+ 데이터베이스는 대상 AlwaysOn 데이터베이스에 대한 읽기 작업을 허용하거나 허용하지 않을 수 있습니다. `ALLOW_CONNECTIONS` 및 `PRIMARY_ROLE``SECONDARY_ROLE` 문의 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 절을 사용하여 이를 수행할 수 있습니다.  
   
  `ApplicationIntent` 키워드를 사용하여 읽기 전용 라우팅을 사용하도록 설정할 수 있습니다.  
   

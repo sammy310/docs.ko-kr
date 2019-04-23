@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
 ms.openlocfilehash: 48df9b90a92468858bd3ac5498bd83fd0d57fe75
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315142"
 ---
 # <a name="how-to-create-an-activity"></a>방법: 작업 만들기
@@ -46,7 +46,7 @@ ms.locfileid: "59315142"
      [!code-vb[CFX_WF_GettingStarted#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
 
     > [!NOTE]
-    > `ReadInt` 활동은 코드 활동 템플릿의 기본값인 <xref:System.Activities.NativeActivity%601> 대신 <xref:System.Activities.CodeActivity>에서 파생됩니다. <xref:System.Activities.CodeActivity%601> 활동을 통해 노출 되는 단일 결과 제공 하는 경우 사용할 수는 <xref:System.Activities.Activity%601.Result%2A> 인수를 하지만 <xref:System.Activities.CodeActivity%601> 책갈피의 사용을 따라서 지원 하지 않습니다 <xref:System.Activities.NativeActivity%601> 사용 됩니다.
+    > `ReadInt` 활동은 코드 활동 템플릿의 기본값인 <xref:System.Activities.NativeActivity%601> 대신 <xref:System.Activities.CodeActivity>에서 파생됩니다. 활동이 <xref:System.Activities.CodeActivity%601> 인수를 통해 노출되는 단일 결과를 제공하는 경우 <xref:System.Activities.Activity%601.Result%2A>를 사용할 수 있지만 <xref:System.Activities.CodeActivity%601>는 책갈피 사용을 지원하지 않으므로 <xref:System.Activities.NativeActivity%601>가 사용됩니다.
 
 ## <a name="create-the-prompt-activity"></a>Prompt 활동 만들기
 
@@ -109,4 +109,4 @@ ms.locfileid: "59315142"
 - [사용자 지정 활동 디자인 및 구현](designing-and-implementing-custom-activities.md)
 - [초보자를 위한 자습서](getting-started-tutorial.md)
 - [방법: 워크플로 만들기](how-to-create-a-workflow.md)
-- [사용자 지정 활동 디자이너에서 ExpressionTextBox 사용](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+- [사용자 지정 작업 디자이너에서 ExpressionTextBox 사용](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

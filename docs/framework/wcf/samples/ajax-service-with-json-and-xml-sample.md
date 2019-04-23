@@ -3,10 +3,10 @@ title: JSON 및 XML 샘플을 포함한 AJAX 서비스
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
 ms.openlocfilehash: a93e7bdf8cda88a1e86b59e5c3d37f049bdfcf28
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304794"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>JSON 및 XML 샘플을 포함한 AJAX 서비스
@@ -19,7 +19,7 @@ ms.locfileid: "59304794"
 > [!NOTE]
 > 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.
   
-ASP.NET 이외의 AJAX 클라이언트를 사용할 수 있도록 설정하려면 .svc 파일에서 <xref:System.ServiceModel.Activation.WebServiceHostFactory>가 아닌 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>를 사용합니다. <xref:System.ServiceModel.Activation.WebServiceHostFactory> 추가 된 <xref:System.ServiceModel.Description.WebHttpEndpoint> 표준 끝점을 서비스 합니다. 끝점은.svc 파일을 기준으로 빈 주소에 구성 됩니다. 즉, 서비스 주소가 `http://localhost/ServiceModelSamples/service.svc`, 작업 이름이 아닌 추가 접미사를 사용 하 여 합니다.  
+ASP.NET 이외의 AJAX 클라이언트를 사용할 수 있도록 설정하려면 .svc 파일에서 <xref:System.ServiceModel.Activation.WebServiceHostFactory>가 아닌 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>를 사용합니다. <xref:System.ServiceModel.Activation.WebServiceHostFactory>는 <xref:System.ServiceModel.Description.WebHttpEndpoint> 표준 엔드포인트를 서비스에 추가합니다. 끝점은.svc 파일을 기준으로 빈 주소에 구성 됩니다. 즉, 서비스 주소가 `http://localhost/ServiceModelSamples/service.svc`, 작업 이름이 아닌 추가 접미사를 사용 하 여 합니다.  
   
 ```svc
 <%@ServiceHost language="c#" Debug="true" Service="Microsoft.Samples.XmlAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebServiceHostFactory" %>  
@@ -113,4 +113,4 @@ xmlHttp.onreadystatechange=function(){
   
 ## <a name="see-also"></a>참고자료
 
-- [AJAX Service Using HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)
+- [HTTP POST를 사용하는 AJAX 서비스](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - XAML [XAML Services], x:FieldModifier attribute
 ms.assetid: ed427cd4-2f35-4d24-bd2f-0fa7b71ec248
 ms.openlocfilehash: c20564bcf8a25b1b59887fbefe6419671e0d6c03
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59144549"
 ---
 # <a name="xfieldmodifier-directive"></a>x:FieldModifier 지시문
@@ -26,7 +26,7 @@ ms.locfileid: "59144549"
   
 |||  
 |-|-|  
-|*Public*|정확한 문자열 지정 전달할 <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> 비교 <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> 사용 되는 코드 숨김 프로그래밍 언어에 따라 달라 집니다. 설명 부분을 참조하세요.|  
+|*공용*|정확한 문자열 지정 전달할 <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> 비교 <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> 사용 되는 코드 숨김 프로그래밍 언어에 따라 달라 집니다. 설명 부분을 참조하세요.|  
   
 ## <a name="dependencies"></a>종속성  
  XAML 프로덕션에 사용 하는 경우 `x:FieldModifier` 어디서 나 해당 XAML 프로덕션의 루트 요소를 선언 해야 합니다는 [X:class 지시문](x-class-directive.md)합니다.  
@@ -55,5 +55,5 @@ ms.locfileid: "59144549"
 - [WPF에 대한 XAML 및 사용자 지정 클래스](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)
 - [WPF의 코드 숨김 및 XAML](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
 - [x:Name 지시문](x-name-directive.md)
-- [WPF 애플리케이션 빌드(WPF)](../wpf/app-development/building-a-wpf-application-wpf.md)
+- [WPF 응용 프로그램 빌드(WPF)](../wpf/app-development/building-a-wpf-application-wpf.md)
 - [x:ClassModifier 지시문](x-classmodifier-directive.md)

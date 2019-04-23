@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: c210475dfab98b2a7e2b62e5a08e5630481f3928
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234222"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774181"
 ---
 ### <a name="exception-message-has-changed-for-failed-datacontract-serialization-in-case-of-an-unknown-type"></a>알 수 없는 형식의 경우 실패한 DataContract serialization에 대한 예외 메시지가 변경되었습니다.
 

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - UI Automation, Toggle control pattern
 ms.assetid: 3cfe875f-b0c0-413d-9703-5f14e6a1a30e
 ms.openlocfilehash: cd14a20920b11cb198cfc91fd9be6ef83ca05c17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182158"
 ---
 # <a name="implementing-the-ui-automation-toggle-control-pattern"></a>UI 자동화 Toggle 컨트롤 패턴 구현
@@ -29,7 +29,7 @@ ms.locfileid: "59182158"
   
 -   컨트롤은 다음 순서대로 <xref:System.Windows.Automation.ToggleState> 를 순환해야 합니다. <xref:System.Windows.Automation.ToggleState.On>, <xref:System.Windows.Automation.ToggleState.Off> , <xref:System.Windows.Automation.ToggleState.Indeterminate>(지원되는 경우)  
   
--   <xref:System.Windows.Automation.TogglePattern> 적절 한 순환 하지 않고 3 상 확인란을 직접 설정 문제로 인해 setstate (newstate) 메서드를 제공 하지 않습니다 <xref:System.Windows.Automation.ToggleState> 시퀀스입니다.  
+-   <xref:System.Windows.Automation.TogglePattern> 은 적절한 <xref:System.Windows.Automation.ToggleState> 순서로 순환하지 않고 3상 확인란을 직접 설정하는 것과 관련된 문제로 인해 SetState(newState) 메서드를 제공하지 않습니다.  
   
 -   RadioButton 컨트롤은 유효한 상태를 순환할 수 없기 때문에 <xref:System.Windows.Automation.Provider.IToggleProvider>를 구현하지 않습니다.  
   
@@ -55,4 +55,4 @@ ms.locfileid: "59182158"
 - [클라이언트용 UI 자동화 컨트롤 패턴](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [UI 자동화를 사용하여 확인란의 전환 상태 가져오기](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)
 - [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [UI 자동화에서 캐싱 사용](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [UI 자동화의 캐싱 사용](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

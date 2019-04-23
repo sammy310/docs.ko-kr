@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
 ms.openlocfilehash: 786094bc426066b45fd1a214950ec1e030f0b731
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59088836"
 ---
 # <a name="connection-strings-and-configuration-files"></a>연결 문자열 및 구성 파일
@@ -67,7 +67,7 @@ ms.locfileid: "59088836"
 >  **machine.config** 파일에는 Visual Studio에서 사용하는 연결 문자열이 있는 **connectionStrings** 섹션도 포함되어 있습니다. 공급자 이름을 사용하여 Windows 애플리케이션의 **app.config** 파일에서 연결 문자열을 검색하면 **machine.config**의 연결 문자열이 먼저 로드된 다음, **app.config**의 항목이 로드됩니다. **connectionStrings** 요소 바로 뒤에 **clear**를 추가하면 상속된 모든 참조가 메모리의 데이터 구조에서 제거되어 로컬 **app.config** 파일에 정의된 연결 문자열만 검색할 수 있습니다.  
   
 ### <a name="working-with-the-configuration-classes"></a>구성 클래스 사용  
- .NET Framework 2.0부터는 로컬 컴퓨터의 구성 파일을 사용할 경우 더 이상 사용되지 않는 <xref:System.Configuration.ConfigurationManager> 대신 <xref:System.Configuration.ConfigurationSettings>가 사용됩니다. <xref:System.Web.Configuration.WebConfigurationManager> ASP.NET 구성 파일 작업에 사용 됩니다. 이 클래스는 웹 서버의 구성 파일에 사용하도록 디자인되었으며 **system.web**과 같은 구성 파일 섹션에 프로그래밍 방식으로 액세스할 수 있도록 합니다.  
+ .NET Framework 2.0부터는 로컬 컴퓨터의 구성 파일을 사용할 경우 더 이상 사용되지 않는 <xref:System.Configuration.ConfigurationManager> 대신 <xref:System.Configuration.ConfigurationSettings>가 사용됩니다. ASP.NET 구성 파일을 사용하는 경우에는 <xref:System.Web.Configuration.WebConfigurationManager>가 사용됩니다. 이 클래스는 웹 서버의 구성 파일에 사용하도록 디자인되었으며 **system.web**과 같은 구성 파일 섹션에 프로그래밍 방식으로 액세스할 수 있도록 합니다.  
   
 > [!NOTE]
 >  런타임에 구성 파일에 액세스하려면 호출자에게 권한을 부여해야 합니다. 필요한 권한은 응용 프로그램의 종류와 구성 파일 및 구성 파일의 위치에 따라 다릅니다. 자세한 내용은 [구성 클래스 사용](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100)) 및 <xref:System.Web.Configuration.WebConfigurationManager>(ASP.NET 애플리케이션)와 <xref:System.Configuration.ConfigurationManager>(Windows 애플리케이션)를 참조하세요.  
@@ -174,6 +174,6 @@ ms.locfileid: "59088836"
 - [연결 문자열 작성기](../../../../docs/framework/data/adonet/connection-string-builders.md)
 - [연결 정보 보호](../../../../docs/framework/data/adonet/protecting-connection-information.md)
 - [구성 클래스 사용](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
-- [앱 구성](../../../../docs/framework/configure-apps/index.md)
+- [응용 프로그램 구성](../../../../docs/framework/configure-apps/index.md)
 - [ASP.NET 웹 사이트 관리](https://docs.microsoft.com/previous-versions/aspnet/6hy1xzbw(v=vs.100))
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

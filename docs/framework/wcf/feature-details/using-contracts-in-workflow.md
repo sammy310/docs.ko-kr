@@ -3,10 +3,10 @@ title: 워크플로에서 계약 사용
 ms.date: 03/30/2017
 ms.assetid: 939c64e9-e7cc-4abc-b41e-27cfce1d7e50
 ms.openlocfilehash: dd35766011c412acc937eed75d523a0574f6b9cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150061"
 ---
 # <a name="using-contracts-in-workflow"></a>워크플로에서 계약 사용
@@ -15,7 +15,7 @@ ms.locfileid: "59150061"
 ## <a name="contract-inference"></a>계약 유추  
  <xref:System.ServiceModel.Activities.WorkflowServiceHost>를 사용하여 워크플로 서비스가 호스트되면 워크플로 정의가 검사되고 워크플로에 있는 메시징 작업 집합을 기반으로 계약이 생성됩니다. 특히 계약을 생성하는 데는 다음 작업과 속성이 사용됩니다.  
   
- <xref:System.ServiceModel.Activities.Receive> 활동  
+ <xref:System.ServiceModel.Activities.Receive> 작업  
   
 -   <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>  
   
@@ -23,17 +23,17 @@ ms.locfileid: "59150061"
   
 -   <xref:System.ServiceModel.Activities.Receive.Action%2A>   
  
- <xref:System.ServiceModel.Activities.SendReply> 활동  
+ <xref:System.ServiceModel.Activities.SendReply> 작업  
   
 -   <xref:System.ServiceModel.Activities.SendReply.Action%2A>  
   
- <xref:System.ServiceModel.Activities.TransactedReceiveScope> 활동  
+ <xref:System.ServiceModel.Activities.TransactedReceiveScope> 작업  
   
  계약 유추의 최종 결과는 WCF 서비스 및 작업 계약과 동일한 데이터 구조를 사용하는 서비스에 대한 설명입니다. 이 정보는 나중에 워크플로 서비스에 대한 WSDL을 노출하는 데 사용됩니다.  
   
 ## <a name="see-also"></a>참고자료
 
 - [워크플로 서비스](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [메시징 활동](../../../../docs/framework/wcf/feature-details/messaging-activities.md)
-- [방법: 메시징 활동을 사용하여 워크플로 서비스 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)
-- [방법: 기존 서비스 계약을 사용하는 워크플로 서비스 만들기](../../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)
+- [메시징 작업](../../../../docs/framework/wcf/feature-details/messaging-activities.md)
+- [방법: 메시징 활동을 사용 하 여 워크플로 서비스 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)
+- [방법: 기존 서비스 계약을 사용 하는 워크플로 서비스 만들기](../../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)

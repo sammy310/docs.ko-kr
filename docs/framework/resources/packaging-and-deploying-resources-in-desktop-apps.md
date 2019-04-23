@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9edc54b5b7d86f0ecb58a6910cde82d088b2c663
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 19f1d3d1d94db885938a5da3f3b66c8e554205b5
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357861"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611395"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>.NET 앱에서 리소스 패키징 및 배포
 
@@ -147,8 +147,7 @@ ms.locfileid: "57357861"
        > 대/소문자 구분 파일 시스템이 있는 운영 체제(즉, Linux 및 macOS)에서는 문화권 이름 하위 디렉터리 검색이 대/소문자를 구분합니다. 하위 디렉터리 이름은 <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType>(예: `es` 또는 `es-MX`)의 대/소문자와 정확히 일치해야 합니다.
 
        > [!NOTE]
-       > 프로그래머가 <xref:System.Runtime.Loader.AssemblyLoadContext>에서 사용자 지정 어셈블리 로드 컨텍스트를 파생한 경우에는 상황이 복잡합니다. 실행 중인 어셈블리가 사용자 지정 컨텍스트에 로드된 경우 런타임에서 위성 어셈블리를 사용자 지정 컨텍스트에 로드합니다. 세부 정보는 이 문서의 범위를 벗어납니다. 
-  <xref:System.Runtime.Loader.AssemblyLoadContext>을 참조하세요.
+       > 프로그래머가 <xref:System.Runtime.Loader.AssemblyLoadContext>에서 사용자 지정 어셈블리 로드 컨텍스트를 파생한 경우에는 상황이 복잡합니다. 실행 중인 어셈블리가 사용자 지정 컨텍스트에 로드된 경우 런타임에서 위성 어셈블리를 사용자 지정 컨텍스트에 로드합니다. 세부 정보는 이 문서의 범위를 벗어납니다. <xref:System.Runtime.Loader.AssemblyLoadContext>을 참조하세요.
 
      * 위성 어셈블리를 찾지 못한 경우 <xref:System.Runtime.Loader.AssemblyLoadContext>에서 <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> 이벤트를 실행하여 위성 어셈블리를 찾을 수 없음을 표시합니다. 이벤트를 처리하도록 선택하면 이벤트 처리기가 위성 어셈블리에 대한 참조를 로드하고 반환할 수 있습니다.
      * 그래도 위성 어셈블리를 찾지 못하면 AssemblyLoadContext에서 AppDomain이 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 이벤트를 트리거하여 위성 어셈블리를 찾을 수 없음을 표시하게 합니다. 이벤트를 처리하도록 선택하면 이벤트 처리기가 위성 어셈블리에 대한 참조를 로드하고 반환할 수 있습니다.
@@ -227,6 +226,7 @@ vbc Example1.vb
 ```
 Bon jour!
 ```
+
 ## <a name="suggested-packaging-alternative"></a>패키징 대체 방법 제안
 
 시간 또는 예산 제약 조건으로 인해 애플리케이션이 지원하는 모든 하위 문화권의 리소스 집합을 만들지 못할 수도 있습니다. 대신, 부모 문화권에 대해 관련된 모든 하위 문화권이 사용할 수 있는 단일 위성 어셈블리를 만들 수 있습니다. 예를 들어 지역별 영어 리소스를 요청하는 사용자가 검색하는 단일 영어 위성 어셈블리(en) 및 지역별 독일어 리소스를 요청하는 사용자를 위한 단일 독일어 위성 어셈블리(de)를 제공할 수 있습니다. 예를 들어 독일에서 사용되는 독일어(de-DE), 오스트리아에서 사용되는 독일어(de-AT), 스위스에서 사용되는 독일어(de-CH) 요청은 독일어 위성 어셈블리(de)로 대체됩니다. 기본 리소스는 최종 대체라서 대부분의 애플리케이션 사용자가 요청하는 리소스여야 하므로 이러한 리소스를 선택할 때는 주의하세요. 이 접근 방법은 문화권별 성격이 약한 리소스를 배포하지만 애플리케이션의 지역화 비용을 훨씬 줄일 수 있습니다.

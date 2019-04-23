@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
 ms.openlocfilehash: 06ac34f5ba5d95bd9f000a35036cf288d3c8f7f7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319926"
 ---
 # <a name="how-to-run-a-workflow"></a>방법: 워크플로 실행
@@ -62,7 +62,7 @@ ms.locfileid: "59319926"
     WorkflowInvoker.Invoke(workflow1);
     ```
 
-     이 생성된 호스팅 코드에서는 <xref:System.Activities.WorkflowInvoker>를 사용합니다. <xref:System.Activities.WorkflowInvoker> 메서드 호출인 고 지 속성을 사용 하지 않는 워크플로에만 사용할 수 하는 경우에 따라 워크플로 호출 하는 데는 간단한 방법을 제공 합니다. <xref:System.Activities.WorkflowApplication> 수명 주기 이벤트, 실행 제어, 책갈피 다시 시작 및 지 속성에 대 한 알림을 포함 하는 워크플로 실행 하기 위한 다기능 모델을 제공 합니다. 이 예제에서는 책갈피를 사용하며 <xref:System.Activities.WorkflowApplication> 을 사용하여 워크플로를 호스트합니다. 기존 `using` using **또는** Imports **문 아래의** Program.cs **또는** Module1.vb **위에 다음** 또는 **Imports** 문을 추가합니다.
+     이 생성된 호스팅 코드에서는 <xref:System.Activities.WorkflowInvoker>를 사용합니다. <xref:System.Activities.WorkflowInvoker> 는 메서드 호출과 같은 방식으로 워크플로를 호출하기 위한 간단한 방법을 제공하며, 지속성을 사용하지 않는 워크플로에만 사용될 수 있습니다. <xref:System.Activities.WorkflowApplication> 은 수명 주기 이벤트 알림, 실행 제어, 책갈피 다시 시작 및 지속성을 비롯한 다양한 워크플로 실행 모델을 제공합니다. 이 예제에서는 책갈피를 사용하며 <xref:System.Activities.WorkflowApplication> 을 사용하여 워크플로를 호스트합니다. 기존 `using` using **또는** Imports **문 아래의** Program.cs **또는** Module1.vb **위에 다음** 또는 **Imports** 문을 추가합니다.
 
     ```vb
     Imports NumberGuessWorkflowActivities
@@ -166,6 +166,6 @@ ms.locfileid: "59319926"
 - [Windows Workflow Foundation 프로그래밍](programming.md)
 - [초보자를 위한 자습서](getting-started-tutorial.md)
 - [방법: 워크플로 만들기](how-to-create-a-workflow.md)
-- [방법: 장기 실행 워크플로 만들기 및 실행](how-to-create-and-run-a-long-running-workflow.md)
+- [방법: 만들기 및 장기 실행 워크플로 실행 합니다.](how-to-create-and-run-a-long-running-workflow.md)
 - [워크플로에서 입력 대기](waiting-for-input-in-a-workflow.md)
 - [워크플로 호스팅](hosting-workflows.md)

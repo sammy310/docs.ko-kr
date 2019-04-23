@@ -3,12 +3,12 @@ title: 패턴 일치 기능을 사용하여 데이터 형식 확장
 description: 이 고급 자습서에서는 패턴 일치 기술을 사용하여 개별적으로 생성된 데이터 및 알고리즘을 사용하여 기능을 만드는 방법을 보여 줍니다.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: c064af5fdf85587d0c4fa1471894122d6fe0d2f7
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 5fdd65fdb96cce05f15872969bbdd401095b59e5
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262516"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59769244"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>자습서: 패턴 일치 기능을 사용하여 데이터 형식 확장
 
@@ -23,7 +23,7 @@ C# 7에서는 기본 패턴 일치 기능을 도입했습니다. 이 기능은 �
 
 ## <a name="prerequisites"></a>전제 조건
 
-C# 8.0 미리 보기 컴파일러를 포함하여 .NET Core를 실행하도록 머신을 설정해야 합니다. C# 8 미리 보기 컴파일러는 최신 [Visual Studio 2019 미리 보기](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) 또는 최신 [.NET Core 3.0 미리 보기](https://dotnet.microsoft.com/download/dotnet-core/3.0)에서 사용할 수 있습니다.
+C# 8.0 미리 보기 컴파일러를 포함하여 .NET Core를 실행하도록 머신을 설정해야 합니다. C# 8 미리 보기 컴파일러는 최신 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 또는 최신 [.NET Core 3.0 미리 보기](https://dotnet.microsoft.com/download/dotnet-core/3.0)에서 사용할 수 있습니다.
 
 이 자습서에서는 Visual Studio 또는 .NET Core CLI를 포함하여 C# 및 .NET에 익숙하다고 가정합니다.
 

@@ -3,10 +3,10 @@ title: 보안 데이터 액세스
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
 ms.openlocfilehash: 32106f83785759f4e9aaadcf2198afdcdb24363d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137256"
 ---
 # <a name="secure-data-access"></a>보안 데이터 액세스
@@ -56,7 +56,7 @@ ms.locfileid: "59137256"
 |리소스|설명|  
 |--------------|-----------------|  
 |[예외 처리 기본 사항](../../../../docs/standard/exceptions/exception-handling-fundamentals.md)|try/catch/finally 구조적 예외 처리의 기본 형태에 대해 설명합니다.|  
-|[최선의 예외 구현 방법](../../../../docs/standard/exceptions/best-practices-for-exceptions.md)|최상의 예외 처리 방법에 대해 설명합니다.|  
+|[예외에 대한 모범 사례](../../../../docs/standard/exceptions/best-practices-for-exceptions.md)|최상의 예외 처리 방법에 대해 설명합니다.|  
   
 ## <a name="protecting-microsoft-access-and-excel-data-sources"></a>Microsoft Access 및 Excel 데이터 소스 보호  
  보안 요구 사항이 최소 수준이거나 없는 경우 Microsoft Access와 Microsoft Excel을 ADO.NET 응용 프로그램의 데이터 저장소로 사용할 수 있습니다. 두 프로그램의 보안 기능으로 어느 정도의 저지 효과는 볼 수 있지만 무분별한 사용자의 악의적인 장난을 막는 것 이상의 효과는 기대할 수 없습니다. Access 및 Excel의 실제 데이터 파일은 파일 시스템에 존재하며 모든 사용자가 액세스할 수 있습니다. 따라서 파일을 복사하거나 변경하기가 쉬워 도난이나 데이터 손실을 야기하는 공격에 취약합니다. 강력한 보안이 필요한 경우에는 파일 시스템에서 실제 데이터 파일을 읽을 수 없는 SQL Server나 다른 서버 기반 데이터베이스를 사용해야 합니다.  
@@ -65,9 +65,9 @@ ms.locfileid: "59137256"
   
 |리소스|설명|  
 |--------------|-----------------|  
-|[Security Considerations and Guidance for Access 2007](https://go.microsoft.com/fwlink/?LinkId=98354)|파일 암호화, 암호 관리, 새로운 ACCDB 및 ACCDE 형식으로 데이터베이스 변환, 기타 보안 옵션 사용 등 Access 2007의 보안 기술에 대해 설명합니다.|  
-|[Access 보안에서 작업 그룹 정보 파일의 역할 이해](https://support.microsoft.com/kb/305542)|Access 2003 보안에서 작업 그룹 정보 파일의 역할 및 관계에 대해 설명합니다.|  
-|[Frequently Asked Questions About Microsoft Access Security for Microsoft Access versions 2.0 through 2000](https://go.microsoft.com/fwlink/?LinkId=47698)|Microsoft Access Security FAQ의 다운로드 버전입니다.|  
+|[보안 고려 사항 및 Access 2007에 대 한 지침](https://go.microsoft.com/fwlink/?LinkId=98354)|파일 암호화, 암호 관리, 새로운 ACCDB 및 ACCDE 형식으로 데이터베이스 변환, 기타 보안 옵션 사용 등 Access 2007의 보안 기술에 대해 설명합니다.|  
+|[액세스 보안에서 작업 그룹 정보 파일 역할 이해](https://support.microsoft.com/kb/305542)|Access 2003 보안에서 작업 그룹 정보 파일의 역할 및 관계에 대해 설명합니다.|  
+|[자주 묻는 질문에 대 한 액세스를 위한 Microsoft 보안 Microsoft Access 버전 2.0 ~ 2000](https://go.microsoft.com/fwlink/?LinkId=47698)|Microsoft Access Security FAQ의 다운로드 버전입니다.|  
 ## <a name="enterprise-services"></a>엔터프라이즈 서비스  
  COM+에는 Windows NT 계정 및 프로세스/스레드 가장을 사용하는 고유의 보안 모델이 포함되어 있습니다. <xref:System.EnterpriseServices> 네임스페이스에서는 <xref:System.EnterpriseServices.ServicedComponent> 클래스를 통해 .NET 응용 프로그램에서 관리 코드를 COM+ 보안 서비스와 통합할 수 있도록 하는 래퍼를 제공합니다.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "59137256"
 |리소스|설명|  
 |--------------|-----------------|  
 |[비관리 코드와의 상호 운용](../../../../docs/framework/interop/index.md)|COM 구성 요소를 .NET Framework에 노출하는 방법과 .NET Framework 구성 요소를 COM에 노출하는 방법에 대해 설명하는 항목을 제공합니다.|
-|[고급 수준의 COM 상호 운용성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|주 interop 어셈블리, 스레딩 및 사용자 지정 마샬링 등에 대해 설명하는 고급 항목을 제공합니다.|
+|[고급 COM 상호 운용성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|주 interop 어셈블리, 스레딩 및 사용자 지정 마샬링 등에 대해 설명하는 고급 항목을 제공합니다.|
 
 ## <a name="see-also"></a>참고자료
 

@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Sub Main error message
 ms.assetid: a006d57d-4dd3-46a7-9026-ca9a31470da7
 ms.openlocfilehash: e48968472fea2accd85544f2360a6732e2bcbe17
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338750"
 ---
 # <a name="sub-main-was-not-found-in-name"></a>'Sub'에서 찾을 '\<이름 >'
-`Sub Main` 누락 또는 잘못 된 위치에 지정 되었습니다.  
+`Sub Main`이 누락되었거나 잘못된 위치가 지정되었습니다.  
   
  **오류 ID:** BC30420  
   
@@ -29,4 +29,4 @@ ms.locfileid: "59338750"
 ## <a name="see-also"></a>참고자료
 
 - [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Visual Basic의 Main 프로시저](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
+- [Visual Basic의 main 프로시저](../../../visual-basic/programming-guide/program-structure/main-procedure.md)

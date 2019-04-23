@@ -9,10 +9,10 @@ helpviewer_keywords:
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
 ms.openlocfilehash: 19ffe7e3fb0de9b377279d9cd274f998a104c6b2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303390"
 ---
 # <a name="how-to-create-a-federated-client"></a>방법: 페더레이션 클라이언트 만들기
@@ -162,10 +162,10 @@ Windows Communication Foundation (WCF)를 만들기에 대 한 클라이언트�
   
 ## <a name="see-also"></a>참고자료
 
-- [Federation 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [방법: WSFederationHttpBinding에서 보안 세션을 사용하지 않도록 설정](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [페더레이션 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)
+- [방법: WSFederationHttpBinding에서 보안 세션을 사용 하지 않도록 설정](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
 - [방법: WSFederationHttpBinding 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
 - [방법: 페더레이션 서비스에서 자격 증명 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
 - [방법: 로컬 발급자 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
 - [메타데이터 관련 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
-- [방법: 메타데이터 엔드포인트 보안](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+- [방법: 메타 데이터 끝점 보안](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)

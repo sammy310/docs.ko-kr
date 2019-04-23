@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1962815b8e294b1321320ce500554046d05f4c8f
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 5a4a2f59ee81ac7884050f588d9bd437977490e9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654135"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59210141"
 ---
 # <a name="runtime-callable-wrapper"></a>RCW
 공용 언어 런타임은 RCW(런타임 호출 가능 래퍼)라는 프록시를 통해 COM 개체를 노출합니다. RCW는 .NET 클라이언트에 일반적인 개체인 것처럼 나타나지만 주요 기능이 .NET 클라이언트와 COM 개체 간의 호출을 마샬링하는 것입니다.  
@@ -25,8 +25,7 @@ ms.locfileid: "58654135"
 다음 이미지에서는 런타임 호출 가능 래퍼를 통해 COM 개체에 액세스하기 위한 프로세스를 보여줍니다.
 
  ![RCW를 통해 COM 개체에 액세스하기 위한 프로세스.](./media/runtime-callable-wrapper/runtime-callable-wrapper.gif)  
-   
-  
+
  형식 라이브러리에서 파생된 메타데이터를 사용하여 런타임은 호출되는 COM 개체와 해당 개체에 대한 래퍼를 둘 다 만듭니다. 각 RCW는 래핑하는 COM 개체에서 인터페이스 포인터 캐시를 유지 관리하고, RCW가 더 이상 필요하지 않으면 COM 개체에서 해당 참조를 해제합니다. 런타임은 RCW에서 가비지 컬렉션을 수행합니다.  
   
  다른 활동 중에서도 RCW는 래핑된 개체를 대신하여 관리 코드와 비관리 코드 간에 데이터를 마샬링합니다. 특히, RCW는 클라이언트와 서버 간에 서로 다른 데이터 표현이 전달될 때마다 메서드 인수 및 메서드 반환 값에 대한 마샬링을 제공합니다.  
@@ -60,6 +59,7 @@ ms.locfileid: "58654135"
 |**IEnumVARIANT**|열거형을 지원하는 COM 형식이 컬렉션으로 처리될 수 있게 합니다.|  
   
 ## <a name="see-also"></a>참고 항목
+
 - [COM 래퍼](com-wrappers.md)
 - [COM 호출 가능 래퍼](com-callable-wrapper.md)
 - [형식 라이브러리를 어셈블리로 변환 요약](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))

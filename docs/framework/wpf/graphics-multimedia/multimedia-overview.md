@@ -6,10 +6,10 @@ helpviewer_keywords:
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
 ms.openlocfilehash: 66cb28fce9485898711b9029baf8a17dd9b2c011
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340492"
 ---
 # <a name="multimedia-overview"></a>멀티미디어 개요
@@ -99,7 +99,7 @@ ms.locfileid: "59340492"
 ### <a name="controlling-mediaplayer"></a>MediaPlayer 제어  
  때문에 <xref:System.Windows.Media.MediaPlayer> 는 상태 비저장만 두 가지 미디어 재생을 제어할 수 있습니다.  
   
-1. 대화형 컨트롤 메서드. 독립 모드에서 작업 하는 경우 준비에서 (`null`<xref:System.Windows.Media.MediaPlayer.Clock%2A> 속성).  
+1. 대화형 컨트롤 메서드. 독립 모드에 있을 때 진행에서 (`null` <xref:System.Windows.Media.MediaPlayer.Clock%2A> 속성).  
   
 2. <xref:System.Windows.Media.MediaClock>. 미디어에 때 적용에서 된 <xref:System.Windows.Media.MediaPlayer.Clock%2A>합니다.  
   

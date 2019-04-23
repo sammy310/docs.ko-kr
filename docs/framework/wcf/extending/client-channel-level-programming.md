@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 3b787719-4e77-4e77-96a6-5b15a11b995a
 ms.openlocfilehash: ea56c99d7d122dd20fc217f8ecb2937bcf81bec3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59324134"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772585"
 ---
 # <a name="client-channel-level-programming"></a>클라이언트 채널 수준 프로그래밍
 이 항목에서는 사용 하지 않고 Windows Communication Foundation (WCF) 클라이언트 응용 프로그램을 작성 하는 방법을 설명 합니다 <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> 클래스 및 관련된 개체 모델입니다.  

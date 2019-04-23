@@ -3,10 +3,10 @@ title: 검색 프록시 구현
 ms.date: 03/30/2017
 ms.assetid: dda20e79-8df3-438e-a281-69d779d978ec
 ms.openlocfilehash: 5d9296d8ba70d4c9e8d8339fa3a032d9c4c62826
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59141006"
 ---
 # <a name="implementing-a-discovery-proxy"></a>검색 프록시 구현
@@ -20,10 +20,10 @@ ms.locfileid: "59141006"
  [방법: 검색 프록시 구현](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
  검색 프록시를 구현하는 방법에 대해 설명합니다.  
   
- [방법: 검색 프록시에 등록할 검색 가능한 서비스 구현](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)  
+ [방법: 검색 프록시에 등록할 검색 가능한 서비스를 구현 합니다.](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)  
  검색 프록시에 등록할 검색 가능한 WCF 서비스를 구현 하는 방법에 설명 합니다.  
   
- [방법: 검색 프록시를 사용하여 서비스를 찾는 클라이언트 애플리케이션 구현](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)  
+ [방법: 검색 프록시를 사용 하 여 서비스를 검색 하는 클라이언트 응용 프로그램 구현](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)  
  서비스에 대 한 검색 하려면 검색 프록시를 사용 하는 WCF 클라이언트 응용 프로그램을 구현 하는 방법에 설명 합니다.  
   
  [방법: 검색 프록시 테스트](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)  

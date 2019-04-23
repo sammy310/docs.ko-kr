@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e96f86e516e7b741aa9fbf67efd1683d0845101
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a785401f0477131e6ebf0e9c04ce6d0b0b4d4f5c
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488515"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59517540"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe(IL 디스어셈블러)
 
@@ -69,7 +69,7 @@ ildasm [options] [PEfilename] [options]
 |**/classlist**|모듈에 정의된 클래스 목록을 포함합니다.|
 |**/forward**|정방향 클래스 선언을 사용합니다.|
 |**/headers**|출력에 파일 헤더 정보를 포함시킵니다.|
-|**/item:** `class`[**::** `member`[`(sig`]]|지정된 인수에 따라 다음과 같이 디스어셈블합니다.<br /><br /> -   지정된 `class`를 디스어셈블합니다.<br />-   지정된 `class`의 `member`를 디스어셈블합니다.<br />-   지정된 시그니처 `sig`가 포함된 `class`의 `member`를 디스어셈블합니다. `sig` 형식은 다음과 같습니다.<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **참고** .NET Framework 버전 1.0 및 1.1에서는 `(sig)`와 같이 `sig` 다음에 닫는 괄호가 있어야 합니다. .NET Framework 2.0부터는 `sig`와 같이 닫는 괄호를 생략해야 합니다.|
+|**/item:** `class`[**::** `member`[`(sig`]]|지정된 인수에 따라 다음과 같이 디스어셈블합니다.<br /><br /> -   지정된 `class`를 디스어셈블합니다.<br />-   지정된 `class`의 `member`를 디스어셈블합니다.<br />-   지정된 시그니처 `sig`가 포함된 `class`의 `member`를 디스어셈블합니다. `sig` 형식은 다음과 같습니다.<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **참고** .NET Framework 버전 1.0 및 1.1에서는 `(sig)`와 같이 `sig` 다음에 닫는 괄호가 있어야 합니다. .Net Framework 2.0부터는 `(sig`와 같이 닫는 괄호를 생략해야 합니다.|
 |**/noil**|IL 어셈블리 코드 출력을 표시하지 않습니다.|
 |**/stats**|이미지에 대한 통계를 포함합니다.|
 |**/typelist**|라운드트립에서 형식 순서를 유지하기 위해 전체 형식 목록을 생성합니다.|

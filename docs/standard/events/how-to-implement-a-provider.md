@@ -13,10 +13,10 @@ ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 12c229b3a1436f9794258fec13905cce0fb767aa
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324775"
 ---
 # <a name="how-to-implement-a-provider"></a>방법: 공급자 구현
@@ -65,4 +65,4 @@ ms.locfileid: "59324775"
 - <xref:System.IObservable%601>
 - [관찰자 디자인 패턴](../../../docs/standard/events/observer-design-pattern.md)
 - [방법: 관찰자 구현](../../../docs/standard/events/how-to-implement-an-observer.md)
-- [관찰자 디자인 패턴 모범 사례](../../../docs/standard/events/observer-design-pattern-best-practices.md)
+- [관찰자 디자인 패턴 유용한 정보](../../../docs/standard/events/observer-design-pattern-best-practices.md)

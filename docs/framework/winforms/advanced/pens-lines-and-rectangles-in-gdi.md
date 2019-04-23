@@ -18,10 +18,10 @@ helpviewer_keywords:
 - lines [Windows Forms], dashed
 ms.assetid: 30b25aae-e3eb-4479-bdb8-187cf651fc84
 ms.openlocfilehash: 84752773c0b56d9684dc31620d463d4ddccf9dad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078228"
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>GDI+의 펜, 선 및 사각형
@@ -73,5 +73,5 @@ ms.locfileid: "59078228"
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - <xref:System.Drawing.Rectangle?displayProperty=nameWithType>
 - [방법: 펜 만들기](how-to-create-a-pen.md)
-- [방법: Windows Form에서 선 그리기](how-to-draw-a-line-on-a-windows-form.md)
+- [방법: Windows Form에 선 그리기](how-to-draw-a-line-on-a-windows-form.md)
 - [방법: 윤곽선이 있는 도형 그리기](how-to-draw-an-outlined-shape.md)

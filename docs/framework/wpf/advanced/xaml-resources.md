@@ -8,10 +8,10 @@ helpviewer_keywords:
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
 ms.openlocfilehash: 0176ebffe82e60671ea66481b7d659004dc31477
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344925"
 ---
 # <a name="xaml-resources"></a>XAML 리소스
@@ -128,7 +128,7 @@ ms.locfileid: "59344925"
   
 -   설정 되는 속성의 속성 이어야 합니다는 <xref:System.Windows.FrameworkElement> 또는 <xref:System.Windows.FrameworkContentElement>합니다. 속성에서 백업 해야 하는 <xref:System.Windows.DependencyProperty>합니다.  
   
--   내의 값에 대 한 참조는는 <xref:System.Windows.Style><xref:System.Windows.Setter>합니다.  
+-   내의 값에 대 한 참조 되는 <xref:System.Windows.Style> <xref:System.Windows.Setter>합니다.  
   
 -   설정 되는 속성의 속성 이어야 합니다는 <xref:System.Windows.Freezable> 값으로 제공 되는 <xref:System.Windows.FrameworkElement> 또는 <xref:System.Windows.FrameworkContentElement> 속성인 또는 <xref:System.Windows.Setter> 값입니다.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "59344925"
   
  [!code-xaml[FEResourceSH_snip#ImplicitStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#implicitstyle)]  
   
- 스타일 실제로 키가: 암시적 키는 `typeof(`<xref:System.Windows.Controls.Button>`)`합니다. 태그를 지정할 수 있습니다는 <xref:System.Windows.Style.TargetType%2A> 형식으로 직접 이름 (또는 필요에 따라 사용할 수 있습니다 [{x: Type...}](../../xaml-services/x-type-markup-extension.md) 반환할는 <xref:System.Type>합니다.  
+ 스타일 실제로 키가: 암시적 키는 `typeof(` <xref:System.Windows.Controls.Button> `)`합니다. 태그를 지정할 수 있습니다는 <xref:System.Windows.Style.TargetType%2A> 형식으로 직접 이름 (또는 필요에 따라 사용할 수 있습니다 [{x: Type...}](../../xaml-services/x-type-markup-extension.md) 반환할는 <xref:System.Type>합니다.  
   
  사용 하는 기본 테마 스타일 메커니즘을 통해 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], 스타일의 런타임 스타일으로 적용 되지 않음을 <xref:System.Windows.Controls.Button> 페이지에서도 합니다 <xref:System.Windows.Controls.Button> 자체를 지정 하지 않습니다 해당 <xref:System.Windows.FrameworkElement.Style%2A> 속성 또는 특정 리소스 스타일에 대 한 참조입니다. 페이지에 정의 된 스타일은 테마 사전 스타일에는 동일한 키를 사용 하 여 테마 사전 스타일 보다 조회 시퀀스 앞 있습니다. 만 지정할 수 있습니다 `<Button>Hello</Button>` 어디에 페이지를 사용 하 여 정의 된 스타일 <xref:System.Windows.Style.TargetType%2A> 의 `Button` 해당 단추에 적용 됩니다. 동일한 형식 값을 사용 하 여 스타일을 명시적으로 키를 <xref:System.Windows.Style.TargetType%2A>에 있지만 태그에서 명확 하 게는 선택 사항입니다.  
   
@@ -155,10 +155,10 @@ ms.locfileid: "59344925"
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.ResourceDictionary>
-- [애플리케이션 리소스](optimizing-performance-application-resources.md)
+- [응용 프로그램 리소스](optimizing-performance-application-resources.md)
 - [리소스 및 코드](resources-and-code.md)
 - [리소스 정의 및 참조](how-to-define-and-reference-a-resource.md)
-- [애플리케이션 관리 개요](../app-development/application-management-overview.md)
+- [응용 프로그램 관리 개요](../app-development/application-management-overview.md)
 - [x:Type 태그 확장](../../xaml-services/x-type-markup-extension.md)
 - [StaticResource 태그 확장](staticresource-markup-extension.md)
 - [DynamicResource 태그 확장](dynamicresource-markup-extension.md)

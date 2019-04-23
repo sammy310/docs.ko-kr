@@ -6,10 +6,10 @@ helpviewer_keywords:
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
 ms.openlocfilehash: 9312f386198459d0d2dac110827cc6c0029eb247
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222746"
 ---
 # <a name="ui-automation-providers-overview"></a>UI 자동화 공급자 개요
@@ -41,10 +41,10 @@ ms.locfileid: "59222746"
  이 섹션에서는 UI 자동화 공급자를 구현하기 위해 이해해야 할 주요 개념 중 일부에 대해 간략하게 설명합니다.  
   
 ### <a name="elements"></a>요소  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요소는 부분 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] UI 자동화 클라이언트에 표시 되는 합니다. 애플리케이션 창, 창, 단추, 도구 설명, 목록 상자 및 목록 항목을 예로 들 수 있습니다.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요소는 UI 자동화 클라이언트에 표시되는 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 항목입니다. 애플리케이션 창, 창, 단추, 도구 설명, 목록 상자 및 목록 항목을 예로 들 수 있습니다.  
   
 ### <a name="navigation"></a>탐색  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요소는 클라이언트에 노출 되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 다른 요소에서 이동 하 여 트리를 생성 합니다. 탐색은 부모, 형제, 자식을 나타낼 수 있는 각 요소의 공급자를 통해 사용할 수 있습니다.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요소는 클라이언트에 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리로 노출됩니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 은 요소를 탐색하여 트리를 생성합니다. 탐색은 부모, 형제, 자식을 나타낼 수 있는 각 요소의 공급자를 통해 사용할 수 있습니다.  
   
  클라이언트 뷰에 대 한 자세한 내용은 합니다 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리를 참조 하십시오 [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)합니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "59222746"
 ### <a name="frameworks"></a>프레임워크  
  프레임워크는 화면 영역에서 하위 컨트롤, 적중 테스트, 렌더링을 관리하는 구성 요소입니다. 예를 들어, HWND라고도 하는 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 창은  메뉴 모음, 상태 표시줄 및 단추와 같은 여러 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요소가 포함되는 프레임워크 역할을 할 수 있습니다.  
   
- [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 컨테이너 목록 상자 같은 컨트롤 및 트리 보기 것으로 간주 됩니다 프레임 워크 하위 항목 렌더링 및 수행을 위해 해당 코드를 포함 하기 때문에에 적중 테스트 합니다. 한편, [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 목록 상자는 렌더링 및 적중 테스트가 포함된 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 창에서 처리되기 때문에 프레임워크가 아닙니다.  
+ 목록 상자 및 트리 뷰와 같은[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 컨테이너 컨트롤은 하위 항목 렌더링 및 적중 테스트 수행을 위한 고유한 코드가 포함되어 있기 때문에 프레임워크로 간주됩니다. 한편, [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 목록 상자는 렌더링 및 적중 테스트가 포함된 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 창에서 처리되기 때문에 프레임워크가 아닙니다.  
   
  애플리케이션에서 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 는 다양한 프레임워크로 구성될 수 있습니다. 예를 들어, HWND 애플리케이션 창에 [!INCLUDE[TLA#tla_dhtml](../../../includes/tlasharptla-dhtml-md.md)] 이 포함되고 그에 따라 HWND에 콤보 상자와 같은 구성 요소가 포함될 수 있습니다.  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bd250caae1bd98d238f8d99702a97f0cdbc7448
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 5580b6d8af7319397ad7eb6416941c2be0dcdb76
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826904"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59303435"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>방법: 강력한 이름으로 어셈블리 서명
 강력한 이름으로 어셈블리에 서명하는 여러 가지 방법이 있습니다.  
@@ -35,13 +35,13 @@ ms.locfileid: "55826904"
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-visual-studio"></a>Visual Studio를 사용하여 강력한 이름으로 어셈블리를 만들고 서명하려면  
   
-1.  **솔루션 탐색기**에서 프로젝트의 바로 가기 메뉴를 열고 **속성**을 선택합니다.  
+1. **솔루션 탐색기**에서 프로젝트의 바로 가기 메뉴를 열고 **속성**을 선택합니다.  
   
-2.  **서명** 탭을 선택합니다.  
+2. **서명** 탭을 선택합니다.  
   
-3.  **어셈블리 서명** 상자를 선택합니다.  
+3. **어셈블리 서명** 상자를 선택합니다.  
   
-4.  **강력한 이름 키 파일 선택** 상자에서 **\<찾아보기…>** 를 선택한 다음, 키 파일로 이동합니다. 새 키 파일을 만들려면 **\<새로 만들기…>** 를 선택하고 **강력한 이름 키 만들기** 대화 상자에 이름을 입력합니다.  
+4. **강력한 이름 키 파일 선택** 상자에서 **\<찾아보기…>** 를 선택한 다음, 키 파일로 이동합니다. 새 키 파일을 만들려면 **\<새로 만들기…>** 를 선택하고 **강력한 이름 키 만들기** 대화 상자에 이름을 입력합니다.  
   
 > [!NOTE]
 >  [어셈블리를 지연 서명](../../../docs/framework/app-domains/delay-sign-assembly.md)하기 위해 공개 키 파일을 선택합니다.  
@@ -73,9 +73,9 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
   
 #### <a name="to-sign-an-assembly-with-a-strong-name-by-using-attributes"></a>특성을 사용하여 강력한 이름으로 어셈블리를 서명하려면  
   
-1.  <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=nameWithType> 또는 <xref:System.Reflection.AssemblyKeyNameAttribute> 특성을 소스 코드 모듈에 추가하고, 강력한 이름으로 어셈블리를 서명할 때 사용할 키 쌍이 포함된 컨테이너 또는 파일의 이름을 지정합니다.  
+1. <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=nameWithType> 또는 <xref:System.Reflection.AssemblyKeyNameAttribute> 특성을 소스 코드 모듈에 추가하고, 강력한 이름으로 어셈블리를 서명할 때 사용할 키 쌍이 포함된 컨테이너 또는 파일의 이름을 지정합니다.  
   
-2.  소스 코드 파일을 정상적으로 컴파일합니다.  
+2. 소스 코드 파일을 정상적으로 컴파일합니다.  
   
 > [!NOTE]
 >  C# 및 Visual Basic 컴파일러에서는 소스 코드에 <xref:System.Reflection.AssemblyKeyFileAttribute> 또는 <xref:System.Reflection.AssemblyKeyNameAttribute> 특성이 나올 때 컴파일러 경고(각각 CS1699 및 BC41008)를 발생시킵니다. 이런 경고는 무시할 수 있습니다.  
@@ -101,6 +101,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
     ```  
   
 ## <a name="see-also"></a>참고 항목
+
 - [강력한 이름의 어셈블리 만들기 및 사용](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
 - [방법: 공개/개인 키 쌍 만들기](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
 - [Al.exe(어셈블리 링커)](../../../docs/framework/tools/al-exe-assembly-linker.md)

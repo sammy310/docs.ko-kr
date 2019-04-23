@@ -22,10 +22,10 @@ helpviewer_keywords:
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
 ms.openlocfilehash: 59570af89e6236e3c13866d45dc5361d52b84274
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308525"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>방법: Windows Forms 컨트롤에서 표시하는 텍스트 설정
@@ -74,5 +74,5 @@ Windows Forms 컨트롤은 일반적으로 컨트롤의 기본 기능과 관련�
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>
-- [방법: Windows Forms 컨트롤에 대한 선택키 만들기](how-to-create-access-keys-for-windows-forms-controls.md)
+- [방법: Windows Forms 컨트롤에 대 한 액세스 키 만들기](how-to-create-access-keys-for-windows-forms-controls.md)
 - [방법: Windows Forms 단추 클릭에 응답](how-to-respond-to-windows-forms-button-clicks.md)

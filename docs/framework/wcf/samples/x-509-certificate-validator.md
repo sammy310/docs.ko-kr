@@ -3,11 +3,11 @@ title: X.509 Certificate Validator
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
 ms.openlocfilehash: 88364aabf5df3a4f41d83613c0c4328b2d5979a0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59302558"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772156"
 ---
 # <a name="x509-certificate-validator"></a>X.509 Certificate Validator
 이 샘플에서는 사용자 지정 X.509 인증서 유효성 검사기를 구현하는 방법을 보여 줍니다. 이 방법은 기본 제공되는 X.509 인증서 유효성 검사기 중에서 응용 프로그램의 요구 사항에 적절한 것이 없는 경우에 유용합니다. 이 샘플에서는 자체 발급된 인증서를 승인하는 사용자 지정 유효성 검사기가 있는 서비스를 보여 줍니다. 그런 인증서를 사용하여 클라이언트가 서비스에 인증합니다.

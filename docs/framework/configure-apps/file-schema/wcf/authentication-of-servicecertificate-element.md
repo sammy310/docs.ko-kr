@@ -3,10 +3,10 @@ title: <authentication> <serviceCertificate> 요소
 ms.date: 03/30/2017
 ms.assetid: 733b67b4-08a1-4d25-9741-10046f9357ef
 ms.openlocfilehash: b96d53312d672eebd67de82f69cd9a0a2b5bd22e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59117771"
 ---
 # <a name="authentication-of-servicecertificate-element"></a>\<인증 >의 \<serviceCertificate > 요소
@@ -108,7 +108,7 @@ endpointBehaviors 섹션
 - <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication>
 - [보안 동작](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [인증서 작업](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [방법: 사용자 지정 인증서 유효성 검사기를 사용하는 서비스 만들기](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
+- [방법: 사용자 지정 인증서 유효성 검사기를 사용 하는 서비스 만들기](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
 - [\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)
 - [클라이언트에 보안 설정](../../../../../docs/framework/wcf/securing-clients.md)
 - [서비스 및 클라이언트에 보안 설정](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5d4723fbf2311316184cb77c90754d7e037badcd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089594"
 ---
 # <a name="getrealprocaddress-function"></a>GetRealProcAddress 함수
@@ -50,7 +50,7 @@ HRESULT GetRealProcAddress (
 |반환 코드|설명|  
 |-----------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_POINTER|`ppv` 잘못되었습니다.|  
+|E_POINTER|`ppv`가 잘못된 경우|  
 |CLR_E_SHIM_RUNTIMEEXPORT|런타임에서 함수를 내보내지 않습니다.|  
   
 ## <a name="requirements"></a>요구 사항  

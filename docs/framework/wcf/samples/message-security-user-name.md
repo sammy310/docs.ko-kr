@@ -5,10 +5,10 @@ helpviewer_keywords:
 - WS Security
 ms.assetid: c63cfc87-6b20-4949-93b3-bcd4b732b0a2
 ms.openlocfilehash: 947ef3c2120377fe33e0062d1ed508ddda432314
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335331"
 ---
 # <a name="message-security-user-name"></a>Message Security User Name
@@ -222,7 +222,7 @@ Press <ENTER> to terminate client.
   
 5. 서버에서 실행 `setup.bat service` 관리자 권한으로 연 Visual Studio 용 개발자 명령 프롬프트에서. 실행 중인 `setup.bat` 사용 하 여는 `service` 인수가 컴퓨터의 정규화 된 도메인 이름 서비스 인증서를 만들고 Service.cer 이라는 파일로 서비스 인증서를 내보냅니다.  
   
-6. 컴퓨터의 정규화 된 도메인 이름으로 동일한 (serviceCertificate 요소의 findValue 특성)에 새 인증서 이름을 반영 되도록 Web.config를 편집 합니다.`.`  
+6. 컴퓨터의 정규화된 도메인 이름과 일치하는 새 인증서 이름이 serviceCertificate 요소의 findValue 특성에 반영되도록 Web.config를 편집합니다`.`  
   
 7. 서비스 디렉터리에서 클라이언트 컴퓨터의 클라이언트 디렉터리로 Service.cer 파일을 복사합니다.  
   

@@ -3,10 +3,10 @@ title: Poison Message Handling in MSMQ 4.0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
 ms.openlocfilehash: b4711d344a6ce08adc6e993c19f2c3d97f56e7b4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316468"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Poison Message Handling in MSMQ 4.0
@@ -23,7 +23,7 @@ ms.locfileid: "59316468"
 ## <a name="msmq-v40-poison-handling-sample"></a>MSMQ v4.0 Poison Handling 샘플
  [!INCLUDE[wv](../../../../includes/wv-md.md)]의 MSMQ에서는 포이즌 메시지를 저장하는 데 사용할 수 있는 포이즌 하위 큐 기능을 제공합니다. 이 샘플에서는 [!INCLUDE[wv](../../../../includes/wv-md.md)]를 사용하여 포이즌 메시지를 처리하는 가장 좋은 방법을 보여 줍니다.
 
- [!INCLUDE[wv](../../../../includes/wv-md.md)]의 포이즌 메시지 검색은 매우 정교합니다. 검색에 도움이 되는 속성은 세 가지입니다. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>는 큐에서 지정된 메시지를 다시 읽고 응용 프로그램으로 디스패치하여 처리할 수 있는 횟수입니다. 메시지를 응용 프로그램으로 디스패치할 수 없어 큐에 다시 배치하거나 응용 프로그램이 서비스 작업에서 트랜잭션을 롤백하는 경우에 큐의 메시지를 다시 읽을 수 있습니다. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> 메시지를 재시도 큐로 이동 하는 횟수입니다. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>에 도달하면 메시지가 재시도 큐로 이동합니다. <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> 속성은 메시지가 재시도 큐에서 다시 기본 큐로 이동한 후의 시간 지연입니다. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>는 0으로 다시 설정되고, 메시지가 다시 시도됩니다. 메시지를 읽으려는 시도가 모두 실패하면 메시지가 포이즌으로 표시됩니다.
+ [!INCLUDE[wv](../../../../includes/wv-md.md)]의 포이즌 메시지 검색은 매우 정교합니다. 검색에 도움이 되는 속성은 세 가지입니다. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>는 큐에서 지정된 메시지를 다시 읽고 응용 프로그램으로 디스패치하여 처리할 수 있는 횟수입니다. 메시지를 응용 프로그램으로 디스패치할 수 없어 큐에 다시 배치하거나 응용 프로그램이 서비스 작업에서 트랜잭션을 롤백하는 경우에 큐의 메시지를 다시 읽을 수 있습니다. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>는 메시지를 재시도 큐로 이동하는 횟수입니다. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>에 도달하면 메시지가 재시도 큐로 이동합니다. <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> 속성은 메시지가 재시도 큐에서 다시 기본 큐로 이동한 후의 시간 지연입니다. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>는 0으로 다시 설정되고, 메시지가 다시 시도됩니다. 메시지를 읽으려는 시도가 모두 실패하면 메시지가 포이즌으로 표시됩니다.
 
  메시지가 포이즌으로 표시되면 메시지는 <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> 열거의 설정에 따라 처리됩니다. 반복하려는 경우 가능한 값은 다음과 같습니다.
 
@@ -35,7 +35,7 @@ ms.locfileid: "59316468"
 
 -   거부: 메시지 보낸 사람의 배달 못 한 편지 큐를 다시 보내는 메시지를 거부 합니다. 이 값은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다.
 
- 이 샘플에서는 포이즌 메시지에 `Move` 처리를 사용하는 방법을 보여 줍니다. `Move` 메시지가 포이즌 하위 큐로 이동 됩니다.
+ 이 샘플에서는 포이즌 메시지에 `Move` 처리를 사용하는 방법을 보여 줍니다. `Move`를 사용하면 메시지가 포이즌 하위 큐로 이동합니다.
 
  서비스 계약은 `IOrderProcessor`이며, 이는 큐에 사용하기에 적합한 단방향 서비스를 정의합니다.
 

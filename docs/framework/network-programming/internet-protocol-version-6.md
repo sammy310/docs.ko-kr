@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-ms.openlocfilehash: 6cd35ae50d76ec2276fdd08760d088cf6be1658e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 135d87f126dcdb9689c23adbaaa4786bc69a3e09
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588160"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59182327"
 ---
 # <a name="internet-protocol-version-6"></a>인터넷 프로토콜 버전 6
 IPv6(인터넷 프로토콜 버전 6)은 인터넷 네트워크 계층에 대한 새로운 표준 프로토콜 도구 모음입니다. IPv6은 주소 고갈, 보안, 자동 구성, 확장성 등에 관련된 현재 버전 인터넷 프로토콜 도구 모음(IPv4라고 함)의 많은 문제를 해결하도록 설계되었습니다. IPv6은 피어 투 피어 및 모바일 애플리케이션을 포함한 새로운 종류의 애플리케이션을 구현하기 위해 인터넷 기능을 확장합니다. 현재 IPv4 프로토콜의 주요 문제는 다음과 같습니다.  
@@ -58,6 +58,7 @@ IPv6(인터넷 프로토콜 버전 6)은 인터넷 네트워크 계층에 대한
  또한 [IPv6(IP 버전 6)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379498%28v=ws.10%29)에서 IPv6 관련 정보를 찾을 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [IPv6 소켓 샘플](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms180981%28v=vs.85%29)
 - [네트워크 프로그래밍 샘플](../../../docs/framework/network-programming/network-programming-samples.md)
 - [소켓](../../../docs/framework/network-programming/sockets.md)

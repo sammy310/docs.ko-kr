@@ -3,10 +3,10 @@ title: 범위 샘플을 사용한 검색
 ms.date: 03/30/2017
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
 ms.openlocfilehash: 9ad20e63e00464ed615620b9d0ec83fb90d07444
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328090"
 ---
 # <a name="discovery-with-scopes-sample"></a>범위 샘플을 사용한 검색
@@ -20,7 +20,7 @@ ms.locfileid: "59328090"
   
 #### <a name="to-use-this-sample"></a>이 샘플을 사용하려면  
   
-1. 이 샘플에서는 HTTP 엔드포인트를 사용하며 이 샘플을 실행하려면 적절한 URL ACL을 추가해야 합니다. 참조 [HTTP 및 HTTPS 구성](https://go.microsoft.com/fwlink/?LinkId=70353) 세부 정보에 대 한 합니다. 높은 권한으로 다음 명령을 실행하면 적절한 ACL이 추가됩니다. 명령이 작동 하지 않는 경우 다음 인수의 도메인과 사용자 이름을 대체 하려는 경우: `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. 이 샘플에서는 HTTP 엔드포인트를 사용하며 이 샘플을 실행하려면 적절한 URL ACL을 추가해야 합니다. 참조 [HTTP 및 HTTPS 구성](https://go.microsoft.com/fwlink/?LinkId=70353) 세부 정보에 대 한 합니다. 높은 권한으로 다음 명령을 실행하면 적절한 ACL이 추가됩니다. 명령이 지정한 대로 작동하지 않는 경우 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%` 인수 대신 도메인과 사용자 이름을 사용할 수 있습니다.  
   
 2. 솔루션을 빌드합니다.  
   

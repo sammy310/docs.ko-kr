@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3571e2698b980b12b89a5b689efb868a34a3ef71
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59167663"
 ---
 # <a name="clrcreateinstance-function"></a>CLRCreateInstance 함수
@@ -53,7 +53,7 @@ HRESULT CLRCreateInstance(
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_POINTER|`ppInterface` null입니다.|  
+|E_POINTER|`ppInterface`가 null입니다.|  
   
 ## <a name="remarks"></a>설명  
  다음 테이블에 대 한 지원 되는 조합을 보여 줍니다 `clsid` 고 `riid`입니다.  

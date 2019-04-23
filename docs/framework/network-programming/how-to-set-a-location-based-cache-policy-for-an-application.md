@@ -11,21 +11,21 @@ helpviewer_keywords:
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-ms.openlocfilehash: 4ac0d6449fea4980154eef8c88d03d13230a6a62
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06d458828c77f61e03d18f635ec00f6a7267bab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514051"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59341870"
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>방법: 애플리케이션에 대해 위치 기반 캐시 정책 설정
 위치 기반 캐시 정책을 사용하면 애플리케이션이 요청된 리소스의 위치를 기반으로 캐싱 동작을 명시적으로 정의할 수 있습니다. 이 항목에서는 캐시 정책을 프로그래밍 방식으로 설정하는 방법을 보여 줍니다. 구성 파일을 사용하여 애플리케이션에 대한 정책을 설정하는 방법에 대한 자세한 내용은 [\<requestCaching&gt; 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)를 참조하세요.  
   
 ### <a name="to-set-a-location-based-cache-policy-for-an-application"></a>애플리케이션에 대해 위치 기반 캐시 정책을 설정하려면  
   
-1.  <xref:System.Net.Cache.RequestCachePolicy> 또는 <xref:System.Net.Cache.HttpRequestCachePolicy> 개체를 만듭니다.  
+1. <xref:System.Net.Cache.RequestCachePolicy> 또는 <xref:System.Net.Cache.HttpRequestCachePolicy> 개체를 만듭니다.  
   
-2.  정책 개체를 애플리케이션 도메인의 기본값으로 설정합니다.  
+2. 정책 개체를 애플리케이션 도메인의 기본값으로 설정합니다.  
   
 ### <a name="to-set-a-policy-that-takes-requested-resources-from-a-cache"></a>캐시에서 요청된 리소스를 가져오는 정책을 설정하려면  
   
@@ -154,6 +154,7 @@ ms.locfileid: "54514051"
     ```  
   
 ## <a name="see-also"></a>참고 항목
+
 - [네트워크 애플리케이션에 대한 캐시 관리](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [캐시 정책](../../../docs/framework/network-programming/cache-policy.md)
 - [위치 기반 캐시 정책](../../../docs/framework/network-programming/location-based-cache-policies.md)

@@ -3,10 +3,10 @@ title: 시퀀스 연산자
 ms.date: 03/30/2017
 ms.assetid: 4d332d32-3806-4451-b7af-25af269194ae
 ms.openlocfilehash: 62cb654922af9df65b0ec9abb67bdc33fda09339
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59113687"
 ---
 # <a name="sequence-operators"></a>시퀀스 연산자
@@ -43,7 +43,7 @@ ms.locfileid: "59113687"
 |<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=nameWithType>|  
   
 ## <a name="differences-from-net"></a>.NET과의 차이점  
- `Average`에 대해 지원되는 모든 시퀀스 연산자는 CLR(공용 언어 런타임) 예외에서 예상대로 동작합니다. `Average` 에서는 평균화 형식으로 동일한 형식의 값을 반환 하지만 clr에서 `Average` 항상 반환을 <xref:System.Double> 또는 <xref:System.Decimal>합니다. 소스 인수를 명시적으로 double/decimal로 캐스팅하거나 선택기를 double/decimal로 캐스팅하면 결과 SQL에서는 이러한 변환을 갖게 되고 예상한대로 결과가 나타납니다.  
+ `Average`에 대해 지원되는 모든 시퀀스 연산자는 CLR(공용 언어 런타임) 예외에서 예상대로 동작합니다. CLR에서 `Average`가 항상 `Average` 또는 <xref:System.Double>을 반환하는 것에 반해 <xref:System.Decimal>에서는 평균화하는 형식과 동일한 형식의 값을 반환합니다. 소스 인수를 명시적으로 double/decimal로 캐스팅하거나 선택기를 double/decimal로 캐스팅하면 결과 SQL에서는 이러한 변환을 갖게 되고 예상한대로 결과가 나타납니다.  
   
 ## <a name="see-also"></a>참고자료
 

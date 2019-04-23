@@ -11,10 +11,10 @@ helpviewer_keywords:
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
 ms.openlocfilehash: b0b301bca33842dfb68de9143b665bed73f17b74
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59146772"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>비주얼 스타일을 사용하여 컨트롤 렌더링
@@ -54,9 +54,9 @@ ms.locfileid: "59146772"
 ## <a name="visual-style-element-and-rendering-classes"></a>비주얼 스타일 요소 및 렌더링 클래스  
  <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 네임스페이스에는 그리기에 사용할 수 있고 비주얼 스타일에서 지원되는 컨트롤이나 UI 요소에 대한 정보를 가져올 수 있는 클래스가 포함되어 있습니다. 지원되는 컨트롤에는 <xref:System.Windows.Forms?displayProperty=nameWithType> 네임스페이스에 렌더링 클래스가 있는 공용 컨트롤(이전 섹션 참조) 및 탭 컨트롤과 rebar 컨트롤 같은 기타 컨트롤이 포함됩니다. 기타 지원되는 UI 요소에는 **시작** 메뉴의 일부, 작업 표시줄 및 창의 비클라이언트 영역이 있습니다.  
   
- <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 네임스페이스의 주요 클래스는 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 및 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>입니다. <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 비주얼 스타일에서 지 원하는 모든 컨트롤 또는 사용자 인터페이스 요소를 식별 하는 것에 대 한 기본 클래스입니다. <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 자체 외에도 <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 네임스페이스에는 컨트롤, 컨트롤 파트 또는 비주얼 스타일에서 지원하는 기타 UI 요소의 모든 상태에 대해 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>를 반환하는 `static` 속성을 가지고 있는 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>의 여러 중첩된 클래스가 포함되어 있습니다.  
+ <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 네임스페이스의 주요 클래스는 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 및 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>입니다. <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 는 비주얼 스타일에서 지원하는 컨트롤 또는 사용자 인터페이스 요소를 식별하기 위한 기본 클래스입니다. <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 자체 외에도 <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 네임스페이스에는 컨트롤, 컨트롤 파트 또는 비주얼 스타일에서 지원하는 기타 UI 요소의 모든 상태에 대해 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>를 반환하는 `static` 속성을 가지고 있는 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>의 여러 중첩된 클래스가 포함되어 있습니다.  
   
- <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 그리고 각각에 대 한 정보는 메서드를 제공 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 운영 체제의 현재 비주얼 스타일으로 정의 합니다. 요소에 대해 검색할 수 있는 정보에는 기본 크기, 배경 유형 및 색상 정의가 포함됩니다. <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 비주얼 스타일 (UxTheme) API는 Windows Platform SDK의 Windows 셸 부분에서의 기능을 래핑합니다. 자세한 내용은 [비주얼 스타일이 활성화](/windows/desktop/controls/cookbook-overview)합니다.  
+ <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 는 그리기를 수행하고 운영 체제의 현재 비주얼 스타일에 의해 정의된 각 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 에 대한 정보를 가져오는 메서드를 제공합니다. 요소에 대해 검색할 수 있는 정보에는 기본 크기, 배경 유형 및 색상 정의가 포함됩니다. <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 는 Windows Platform SDK의 Windows 셸 부분에서 비주얼 스타일(UxTheme) API의 기능을 래핑합니다. 자세한 내용은 [비주얼 스타일이 활성화](/windows/desktop/controls/cookbook-overview)합니다.  
   
  사용에 대 한 자세한 내용은 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 하 고 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>를 참조 하세요 [방법: 비주얼 스타일 요소 렌더링](how-to-render-a-visual-style-element.md)합니다.  
   

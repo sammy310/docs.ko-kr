@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC31098
 ms.assetid: 72528d02-77b7-4b4c-8b9e-d12f666f92ef
 ms.openlocfilehash: e1a33a56d196b2a8731f2ddb5c632b0de147db3e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59346316"
 ---
 # <a name="class-classname-cannot-be-found"></a>클래스의\<응용 프로그램 이름 >' 찾을 수 없습니다
@@ -33,4 +33,4 @@ ms.locfileid: "59346316"
   
 ## <a name="see-also"></a>참고자료
 
-- [Talk to Us](/visualstudio/ide/talk-to-us)
+- [의견 보내기](/visualstudio/ide/talk-to-us)

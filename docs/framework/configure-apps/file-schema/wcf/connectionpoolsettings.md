@@ -3,10 +3,10 @@ title: <connectionPoolSettings>
 ms.date: 03/30/2017
 ms.assetid: 6fa7fa65-2c6e-4eab-b8cf-7690112c0be5
 ms.openlocfilehash: b1ff302a46605cb78fe567a63f66723ed757f147
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59169990"
 ---
 # <a name="connectionpoolsettings"></a>\<connectionPoolSettings>
@@ -57,6 +57,6 @@ ms.locfileid: "59169990"
 - [전송](../../../../../docs/framework/wcf/feature-details/transports.md)
 - [전송 선택](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
 - [바인딩](../../../../../docs/framework/wcf/bindings.md)
-- [바인딩 확장명](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [바인딩 확장](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

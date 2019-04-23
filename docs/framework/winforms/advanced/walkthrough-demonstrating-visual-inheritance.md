@@ -12,10 +12,10 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
 ms.openlocfilehash: 9366c7ebe2e5b347f4795b15e6f2c2d0f3835482
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307626"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>연습: 시각적 상속 데모
@@ -166,5 +166,5 @@ ms.locfileid: "59307626"
 ## <a name="see-also"></a>참고자료
 
 - [방법: Windows Forms 상속](how-to-inherit-windows-forms.md)
-- [Windows Forms 시각적 상속](windows-forms-visual-inheritance.md)
+- [Windows Forms 시각적 개체 상속](windows-forms-visual-inheritance.md)
 - [Windows Forms](../index.md)

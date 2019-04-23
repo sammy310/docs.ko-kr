@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: e08b78b49cab88d4435d75b04bd446b413a61340
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59234962"
+---
 ### <a name="operationcontextcurrent-may-return-null-when-called-in-a-using-clause"></a>OperationContext.Current는 using 절에서 호출될 때 null을 반환할 수 있습니다.
 
 |   |   |
@@ -8,4 +16,3 @@
 |버전|4.6.2|
 |형식|대상 변경|
 |영향을 받는 API|<ul><li><xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType></li></ul>|
-

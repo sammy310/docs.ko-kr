@@ -8,16 +8,16 @@ ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1610322e33be81a109dec1cd1d189544a33b17d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59095519"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>애플리케이션 도메인 및 어셈블리 방법 항목
 다음 섹션에는 애플리케이션 도메인 및 어셈블리를 사용한 프로그래밍에 대한 개념 설명서에 나오는 모든 방법 항목에 대한 링크가 있습니다.  
   
- **응용 프로그램 도메인**  
+ **애플리케이션 도메인**  
   
 -   [방법: 애플리케이션 도메인 만들기](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
   

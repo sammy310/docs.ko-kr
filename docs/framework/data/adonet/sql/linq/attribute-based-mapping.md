@@ -3,10 +3,10 @@ title: 특성 기반 매핑
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
 ms.openlocfilehash: d7d7c14ca12e40af643d164069cf7b0f3165fa20
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59223565"
 ---
 # <a name="attribute-based-mapping"></a>특성 기반 매핑
@@ -26,12 +26,12 @@ ms.locfileid: "59223565"
   
 |속성|형식|기본|설명|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|문자열|참조 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|해당 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 속성과 함께 사용되어 데이터베이스의 이름을 지정합니다.|  
+|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|문자열|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>을 참조하세요.|해당 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 속성과 함께 사용되어 데이터베이스의 이름을 지정합니다.|  
   
  자세한 내용은 <xref:System.Data.Linq.Mapping.DatabaseAttribute>을 참조하세요.  
   
 ## <a name="tableattribute-attribute"></a>TableAttribute 특성  
- 클래스를 데이터베이스 테이블 또는 데이터베이스 뷰와 연결된 엔터티 클래스로 지정하려면 이 특성을 사용합니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 영구 클래스로이 특성이 있는 클래스를 처리 합니다. 다음 표에서는 <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> 속성에 대해 설명합니다.  
+ 클래스를 데이터베이스 테이블 또는 데이터베이스 뷰와 연결된 엔터티 클래스로 지정하려면 이 특성을 사용합니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 이 특성이 있는 클래스를 영구 클래스로 처리합니다. 다음 표에서는 <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> 속성에 대해 설명합니다.  
   
 |속성|형식|기본|설명|  
 |--------------|----------|-------------|-----------------|  
@@ -56,7 +56,7 @@ ms.locfileid: "59223565"
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A>|Boolean|`false`|열이 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 상속 계층 구조에 대한 판별자 값을 포함한다는 것을 나타냅니다.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>|Boolean|`false`|이 클래스 멤버가 테이블의 기본 키이거나 기본 키의 일부인 열을 나타낸다는 것을 지정합니다.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>|Boolean|`false`|멤버의 열 형식을 데이터베이스 타임스탬프 또는 버전 번호로 식별합니다.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|`Always`경우가 아니면 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> 는 `true` 멤버|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]이 낙관적 동시성 충돌 감지에 접근하는 방법을 지정합니다.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|멤버에 대한 `Always`이 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>가 아니면 `true`|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]이 낙관적 동시성 충돌 감지에 접근하는 방법을 지정합니다.|  
   
  자세한 내용은 <xref:System.Data.Linq.Mapping.ColumnAttribute>을 참조하세요.  
   

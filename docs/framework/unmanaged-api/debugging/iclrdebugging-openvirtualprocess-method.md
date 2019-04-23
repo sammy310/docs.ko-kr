@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a313ea62455067fb36b94d942b0ce21589677e3b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122579"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>ICLRDebugging::OpenVirtualProcess 메서드
@@ -74,7 +74,7 @@ HRESULT OpenVirtualProcess(
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_POINTER|`pDataTarget` `null`합니다.|  
+|E_POINTER|`pDataTarget`가 `null`인 경우|  
 |CORDBG_E_LIBRARY_PROVIDER_ERROR|합니다 [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) 콜백 오류를 반환 하거나 유효한 핸들을 제공 하지 않습니다.|  
 |CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` 이 버전의 런타임이 필요한 데이터 대상 인터페이스를 구현 하지 않습니다.|  
 |CORDBG_E_NOT_CLR|표시 된 모듈이 CLR 모듈이 아닙니다. 메모리가 손상, 모듈을 사용할 수 없는 CLR 버전은 shim 된 버전 보다 최신 때문에 CLR 모듈을 검색할 수 없는 경우에이 HRESULT 반환 됩니다.|  

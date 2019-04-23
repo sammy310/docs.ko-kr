@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 94044a31-de90-479b-935a-8159b4ae5c5a
 ms.openlocfilehash: 3e58c6f2849ed9714b3356662dae313ab9d11696
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134006"
 ---
 # <a name="how-to-bracket-data-submissions-by-using-transactions"></a>방법: 트랜잭션을 사용하여 대괄호로 묶은 데이터 전송

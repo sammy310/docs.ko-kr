@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d3eb82cf9bac1e40947fb78882d18c5f09b0092
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3177ae53d8b932a52dccf11b12d44fd07ec1c4f
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690087"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59226627"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>완화: 새로운 64비트 JIT 컴파일러
 .NET Framework 4.6부터는 런타임에 Just-In-Time 컴파일을 위한 새로운 64비트 JIT 컴파일러가 포함됩니다. 이 변경 내용은 32비트 JIT 컴파일러를 사용하는 컴파일에는 영향을 주지 않습니다.  
@@ -70,5 +70,6 @@ ms.locfileid: "54690087"
  [Microsoft Connect](https://connect.microsoft.com/VisualStudio)에 버그를 보고하여 문제를 알릴 수도 있습니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [런타임 변경 내용](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
 - [\<useLegacyJit> 요소](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)

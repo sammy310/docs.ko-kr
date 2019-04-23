@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 28ed6bf8-141b-4b73-a4e3-44a99fae5084
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71e1829716e0a9d5fc63692ca84c8bfefe4cefef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d54751ae0492e25f824eee6362e0f3bca446d75e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663468"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59147630"
 ---
 # <a name="mitigation-wpf-window-rendering"></a>완화: WPF 창 렌더링
 Windows 8 이상에서 실행되는 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]에서, 다중 모니터 시나리오에서 전체 창이 단일 디스플레이를 벗어나 확장되는 경우 클리핑 없이 렌더링됩니다.  
@@ -39,4 +39,5 @@ Windows 8 이상에서 실행되는 [!INCLUDE[net_v46](../../../includes/net-v46
 -   앱을 시작할 때 <xref:System.Windows.CoreCompatibilityPreferences.EnableMultiMonitorDisplayClipping%2A> 속성을 `true`로 설정합니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [런타임 변경 내용](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)

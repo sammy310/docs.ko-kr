@@ -4,12 +4,12 @@ description: .NET에서 기본 구성 요소와 인터페이스하는 모범 사
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 5b65f80d3a81fab0d74ce26aec3b454c716a5d51
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 6702d469abf317b3b1f545ce79b980e8581ab5f1
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412060"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59196660"
 ---
 # <a name="native-interoperability-best-practices"></a>기본 상호 운용성 모범 사례
 
@@ -187,7 +187,6 @@ Windows API에서 일반적으로 사용되는 데이터 형식과 Windows 코�
 | 64    | `ULARGE_INTEGER` | `unsigned long long` | `ulong`  |                                      |
 | 32    | `HRESULT`        | `long`               | `int`    |                                      |
 | 32    | `NTSTATUS`       | `long`               | `int`    |                                      |
-
 
 다음 형식은 포인터로, 플랫폼의 너비를 따릅니다. 이러한 형식에는 `IntPtr`/`UIntPtr`을 사용합니다.
 

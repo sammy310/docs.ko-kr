@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
 ms.openlocfilehash: d55c85ae0af567c5af0fd421b612809eaf5bb789
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318431"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>N 계층 응용 프로그램에서 데이터 검색 및 CUD 작업(LINQ to SQL)
@@ -17,7 +17,7 @@ Customers 또는 Orders와 같은 엔터티 개체를 네트워크상의 클라�
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 엔터티 대신 프록시 개체를 serialize하는 경우에도 데이터베이스에 데이터를 전송하려면 DAL(데이터 액세스 계층)에서 엔터티를 만들어 새 <xref:System.Data.Linq.DataContext?displayProperty=nameWithType>에 연결해야 합니다.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 엔터티가 serialize 되는 방법은 합니다. 사용 하는 방법에 대 한 자세한 내용은 합니다 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Windows Communication Foundation (WCF)를 사용 하 여 직렬화 할 수 있는 클래스를 생성 하려면 SQLMetal 도구를 살펴보고 [방법: 엔터티를 직렬화 할 수 있도록 설정](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)합니다.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 엔터티가 serialize되는 방법은 고려하지 않습니다. 사용 하는 방법에 대 한 자세한 내용은 합니다 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Windows Communication Foundation (WCF)를 사용 하 여 직렬화 할 수 있는 클래스를 생성 하려면 SQLMetal 도구를 살펴보고 [방법: 엔터티를 직렬화 할 수 있도록 설정](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)합니다.  
   
 > [!NOTE]
 >  `Attach` 메서드는 새 엔터티 또는 deserialize된 엔터티에 대해서만 호출해야 합니다. 엔터티는 serialization을 통해서만 원래 데이터 컨텍스트로부터 분리될 수 있습니다. 이전 데이터 컨텍스트에서 지연 로더가 있는 분리되지 않은 엔터티를 새 데이터 컨텍스트에 연결하려고 하면 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 예외를 throw합니다. 서로 다른 두 데이터 컨텍스트의 지연 로더가 있는 엔터티에 대해 삽입, 업데이트 및 삭제 작업을 수행하면 예기치 않은 결과가 발생할 수 있습니다. 지연된 로더에 대 한 자세한 내용은 참조 하세요. [즉시 로드 비교 지연](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)합니다.  
@@ -208,7 +208,7 @@ public void DeleteOrder(Order order)
 ```  
   
 ## <a name="updating-data"></a>데이터 업데이트  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 낙관적 동시성을 포함 하는 이러한 시나리오에서 업데이트를 지원 합니다.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 낙관적 동시성이 사용되는 다음과 같은 시나리오에서 업데이트를 지원합니다.  
   
 -   타임스탬프 또는 RowVersion 번호를 기반으로 하는 낙관적 동시성  
   

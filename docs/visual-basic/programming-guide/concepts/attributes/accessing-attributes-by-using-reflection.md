@@ -3,10 +3,10 @@ title: 리플렉션 (Visual Basic)를 사용 하 여 특성 액세스
 ms.date: 07/20/2015
 ms.assetid: c56e41da-5433-464f-a7bf-2a722e78bc9f
 ms.openlocfilehash: e5cbce8529cc7554a8edacb2d83dabb73a495eec
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58827655"
 ---
 # <a name="accessing-attributes-by-using-reflection-visual-basic"></a>리플렉션 (Visual Basic)를 사용 하 여 특성 액세스

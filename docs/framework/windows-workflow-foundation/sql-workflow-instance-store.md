@@ -3,10 +3,10 @@ title: SQL 워크플로 인스턴스 저장소
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
 ms.openlocfilehash: 8314781f46d9cd4eddd06f6be95f8e952feef1b9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086574"
 ---
 # <a name="sql-workflow-instance-store"></a>SQL 워크플로 인스턴스 저장소
@@ -24,7 +24,7 @@ ms.locfileid: "59086574"
   
 -   [SQL 워크플로 인스턴스 저장소의 속성](properties-of-sql-workflow-instance-store.md)  
   
--   [방법: 워크플로 및 워크플로 서비스에 SQL 지속성 사용](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
+-   [방법: 워크플로 및 워크플로 서비스에 대 한 SQL 지 속성 사용](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
   
 -   [인스턴스 활성화](instance-activation.md)  
   
@@ -38,4 +38,4 @@ ms.locfileid: "59086574"
   
 ## <a name="see-also"></a>참고자료
 
-- [Persistence 샘플](https://go.microsoft.com/fwlink/?LinkID=177735)
+- [지 속성 샘플](https://go.microsoft.com/fwlink/?LinkID=177735)

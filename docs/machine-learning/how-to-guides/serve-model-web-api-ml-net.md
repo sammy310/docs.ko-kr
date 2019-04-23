@@ -3,12 +3,12 @@ title: ASP.NET Core Web API에서 기계 학습 모델 제공
 description: ASP.NET Core Web API를 사용하여 인터넷을 통해 ML.NET 감정 분석 기계 학습 모델 제공
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 0cc13ec22b3a8805ec4aa17bf10560b2564ccd63
-ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
+ms.openlocfilehash: af51ccaac263202fc34d36e746722d2da46404f8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58307917"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59321235"
 ---
 # <a name="how-to-serve-machine-learning-model-through-aspnet-core-web-api"></a>방법: ASP.NET Core Web API를 통해 기계 학습 모델 제공
 
@@ -21,7 +21,7 @@ ms.locfileid: "58307917"
 
 ## <a name="prerequisites"></a>전제 조건
 
-- “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2017 15.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
+- “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2017 15.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017).
 - PowerShell.
 - 미리 학습된 모델입니다.
     - [ML.NET 감정 분석 자습서](../tutorials/sentiment-analysis.md)를 사용하여 고유한 모델을 빌드합니다.

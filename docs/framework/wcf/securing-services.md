@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
 ms.openlocfilehash: 65d4f2858c2be4c2a6872f96ef3739bb16253d74
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157679"
 ---
 # <a name="securing-services"></a>서비스에 보안 설정
@@ -111,9 +111,9 @@ Windows Communication Foundation (WCF) 서비스의 보안 구성의 두 가지 
 - [보안](../../../docs/framework/wcf/feature-details/security.md)
 - [보안 개요](../../../docs/framework/wcf/feature-details/security-overview.md)
 - [방법: ProtectionLevel 속성 설정](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
-- [방법: Windows 자격 증명을 사용하여 서비스 보호](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [방법: Windows 자격 증명을 사용 하 여 서비스에 보안 설정](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
 - [방법: 보안 모드 설정](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
 - [방법: 클라이언트 자격 증명 형식 지정](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
-- [방법: PrincipalPermissionAttribute 클래스를 사용하여 액세스 제한](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [방법: PrincipalPermissionAttribute 클래스를 사용 하 여 액세스 제한](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
 - [방법: 서비스에서 클라이언트 가장](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
 - [방법: 보안 컨텍스트 검사](../../../docs/framework/wcf/how-to-examine-the-security-context.md)

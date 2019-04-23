@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '& operator [C#]'
 - AND operator (&) [C#]
 ms.assetid: afa346d5-90ec-4b1f-a2c8-3881f018741d
-ms.openlocfilehash: a799c0e37d6607e8ff72ab984ff5e540a4e11063
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 67d60709e1c6c76071ecfb7aac74c83dec6f372a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236377"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310046"
 ---
 # <a name="amp-operator-c-reference"></a>&amp; 연산자(C# 참조)
 
@@ -46,9 +46,9 @@ ms.locfileid: "53236377"
 
 [!code-csharp-interactive[bool logical AND](~/samples/snippets/csharp/language-reference/operators/AndOperatorExamples.cs#BooleanOperands)]
 
-[조건부 AND 연산자](conditional-and-operator.md) `&&`도 해당 피연산자의 논리 AND를 계산하지만, 첫 번째 피연산자가 `true`로 평가되는 경우에만 두 번째 피연산자를 평가합니다.
+[조건부 AND 연산자](boolean-logical-operators.md#conditional-logical-and-operator-) `&&`도 해당 피연산자의 논리 AND를 컴퓨팅하지만, 첫 번째 피연산자가 `false`로 평가되는 경우에는 두 번째 피연산자를 평가하지 않습니다.
 
-nullable bool 피연산자의 경우 `&` 연산자는 동작은 SQL의 값이 세 개인 논리와 일치합니다. 자세한 내용은 [nullable 형식 사용](../../programming-guide/nullable-types/using-nullable-types.md)의 [bool? 형식](../../programming-guide/nullable-types/using-nullable-types.md#the-bool-type)을 참조하세요.
+nullable bool 피연산자의 경우 `&` 연산자는 동작은 SQL의 값이 세 개인 논리와 일치합니다. 자세한 내용은 [부울 논리 연산자](boolean-logical-operators.md) 문서의 [Nullable 부울 논리 연산자](boolean-logical-operators.md#nullable-boolean-logical-operators) 섹션을 참조하세요.
 
 ## <a name="operator-overloadability"></a>연산자 오버로드 가능성
 
@@ -63,8 +63,8 @@ nullable bool 피연산자의 경우 `&` 연산자는 동작은 SQL의 값이 �
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [C# 연산자](index.md)
+- [부울 논리 연산자](boolean-logical-operators.md)
 - [포인터 형식](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [| 연산자](or-operator.md)
 - [^ 연산자](xor-operator.md)
 - [~ 연산자](bitwise-complement-operator.md)
-- [&& 연산자](conditional-and-operator.md)

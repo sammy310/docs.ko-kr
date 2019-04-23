@@ -4,12 +4,12 @@ description: Visual Studio Code를 사용하여 C#에서 첫 번째 .NET Core �
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: d91427197662d61c1c3ffc242de9b1128b81b9c6
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: d23f095454a24d67c2b9fb7a0f090fb08ff9e8bb
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890555"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613449"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 및 Visual Studio Code 시작
 
@@ -93,6 +93,7 @@ ms.locfileid: "58890555"
 1. 새 클래스를 추가하려면 VSCode 탐색기에서 마우스 오른쪽 단추를 클릭하고 **새 파일**을 선택합니다. VSCode에서 열어 놓은 폴더에 새 파일이 추가됩니다.
 2. 파일 이름을 `MyClass.cs`로 지정합니다. csharp 파일로 인식되도록 끝에 `.cs` 확장명을 추가해서 저장해야 합니다.
 3. 아래 코드를 추가하여 첫 번째 클래스를 만듭니다. `Program.cs` 파일에서 참조할 수 있도록 올바른 네임스페이스를 포함해야 합니다.
+
 ``` csharp
 using System;
 
@@ -127,6 +128,7 @@ namespace HelloWorld
 ```
 
 5. 변경 내용을 저장하고 프로그램을 다시 실행합니다. 추가된 문자열을 포함하는 새 메시지가 표시됩니다.
+
 ```console
 > dotnet run
 Hello World! Happy coding!
@@ -140,5 +142,5 @@ Visual Studio Code C# 확장에서 빌드 및 디버그할 자산을 생성할 �
 
 ## <a name="see-also"></a>참고 항목
 
-- [Visual Studio Code 설정](https://code.visualstudio.com/docs/setup/setup-overview)
+- [Visual Studio Code 설치](https://code.visualstudio.com/docs/setup/setup-overview)
 - [Visual Studio Code의 디버깅](https://code.visualstudio.com/Docs/editor/debugging)

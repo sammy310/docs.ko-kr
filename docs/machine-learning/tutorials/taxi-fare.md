@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/20/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 79b8abd0fb01062900b2ae4e14c02d8844bb6ef9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 49770672ebcff98d8779a888372b5c9f40a55b1d
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59295980"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611811"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>자습서: ML.NET와 함께 회귀 학습자를 사용하여 가격 예측
 
@@ -92,7 +92,7 @@ ms.locfileid: "59295980"
 
 [!code-csharp[DefineTaxiTrip](~/samples/machine-learning/tutorials/TaxiFarePrediction/TaxiTrip.cs#2 "Define the taxi trip and fare predictions classes")]
 
-`TaxiTrip` 은(는) 입력 데이터 클래스이며 각 데이터 집합 열의 정의를 포함합니다. <xref:Microsoft.ML.Data.LoadColumnAttribute> 특성을 사용하여 데이터 세트에서 소스 열의 인덱스를 지정합니다.
+`TaxiTrip`은 입력 데이터 클래스이며 각 데이터 집합 열의 정의를 포함합니다. <xref:Microsoft.ML.Data.LoadColumnAttribute> 특성을 사용하여 데이터 세트에서 소스 열의 인덱스를 지정합니다.
 
 `TaxiTripFarePrediction` 클래스는 예측된 결과를 나타냅니다. 여기에는 `FareAmount`라는 단일 부동 필드가 있으며 `Score` <xref:Microsoft.ML.Data.ColumnNameAttribute> 특성이 적용되었습니다. 회귀 작업의 경우 **점수** 열에 예측된 레이블 값이 포함됩니다.
 
@@ -107,9 +107,9 @@ ms.locfileid: "59295980"
 
 데이터 세트가 있는 파일 및 모델을 저장할 파일의 경로를 포함할 세 개의 필드를 만들어야 합니다.
 
-* `_trainDataPath` 에는 모델을 학습하는 데 사용되는 데이터 집합이 있는 파일에 대한 경로가 포함됩니다.
-* `_testDataPath` 에는 모델을 평가하는 데 사용되는 데이터 집합이 있는 파일에 대한 경로가 포함됩니다.
-* `_modelPath` 에는 학습된 모델이 저장되는 파일에 대한 경로가 포함됩니다.
+* `_trainDataPath`에는 모델을 학습하는 데 사용되는 데이터 집합이 있는 파일에 대한 경로가 포함됩니다.
+* `_testDataPath`에는 모델을 평가하는 데 사용되는 데이터 집합이 있는 파일에 대한 경로가 포함됩니다.
+* `_modelPath`에는 학습된 모델이 저장되는 파일에 대한 경로가 포함됩니다.
 
 `Main` 메서드 바로 위에 다음 코드를 추가하여 해당 경로와 `_textLoader` 변수를 지정합니다.
 
@@ -148,7 +148,7 @@ public static ITransformer Train(MLContext mlContext, string dataPath)
 
 ## <a name="load-and-transform-data"></a>데이터 로드 및 변환
 
-[LoadFromTextFile 메서드](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29)에 대해 `MLContext.Data.LoadFromTextFile` 래퍼를 사용하여 데이터를 로드합니다. <xref:Microsoft.Data.DataView.IDataView>가 반환됩니다. 
+[LoadFromTextFile 메서드](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29)에 대해 `MLContext.Data.LoadFromTextFile` 래퍼를 사용하여 데이터를 로드합니다. <xref:Microsoft.Data.DataView.IDataView>가 반환됩니다.
 
 `Transforms`의 입력 및 출력으로 사용되는 `DataView`는 `LINQ`의 `IEnumerable`과 비슷한 기본적인 데이터 파이프라인 형식입니다.
 
@@ -184,7 +184,7 @@ ML.NET에서 데이터는 SQL 뷰와 유사합니다. 지연 계산되고, 스�
 
 ## <a name="train-the-model"></a>모델 학습
 
-마지막 단계에서는 모델을 학습시킵니다. 로드되고 변환된 데이터 세트를 기준으로 <xref:Microsoft.ML.Data.TransformerChain> 모델을 학습시킵니다. 추정기가 정의되면, 이미 로드된 학습 데이터를 제공하는 동시에 <xref:Microsoft.ML.Data.EstimatorChain%601.Fit%2A>을 사용하여 모델을 학습시킵니다. 그러면 예측에 사용할 모델이 반환됩니다. `pipeline.Fit()` 은(는) 파이프라인을 학습시키고, 전달된 `DataView`에 따라 `Transformer`를 반환합니다. 이 문제가 발생할 때까지 실험이 실행되지 않습니다.
+마지막 단계에서는 모델을 학습시킵니다. 로드되고 변환된 데이터 세트를 기준으로 <xref:Microsoft.ML.Data.TransformerChain> 모델을 학습시킵니다. 추정기가 정의되면, 이미 로드된 학습 데이터를 제공하는 동시에 <xref:Microsoft.ML.Data.EstimatorChain%601.Fit%2A>을 사용하여 모델을 학습시킵니다. 그러면 예측에 사용할 모델이 반환됩니다. `pipeline.Fit()`은 파이프라인을 학습시키고, 전달된 `DataView`에 따라 `Transformer`를 반환합니다. 이 문제가 발생할 때까지 실험이 실행되지 않습니다.
 
 [!code-csharp[TrainModel](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#11 "Train the model")]
 
@@ -231,6 +231,7 @@ private static void Evaluate(MLContext mlContext, ITransformer model)
 
 }
 ```
+
 `Evaluate` 메서드는 다음 작업을 실행합니다.
 
 * 테스트 데이터 세트를 로드합니다.
@@ -302,12 +303,12 @@ private static void TestSinglePrediction(MLContext mlContext)
 `model`은 여러 데이터 행에서 작동하는 `transformer`이지만, 일반적인 프로덕션 시나리오에서는 개별 예제에 대한 예측이 필요합니다. <xref:Microsoft.ML.PredictionEngine%602>은 `CreatePredictionEngine` 메서드에서 반환되는 래퍼입니다. 다음 코드를 추가하여 `PredictionEngine`을 `TestSinglePrediction` 메서드의 다음 줄로 만듭니다.
 
 [!code-csharp[MakePredictionEngine](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#22 "Create the PredictionFunction")]
-  
+
 이 자습서에서는 이 클래스 내에서 하나의 테스트 이동을 사용합니다. 나중에 이 모델로 실험할 다른 시나리오를 추가할 수 있습니다. `TaxiTrip` 인스턴스를 만들어 주행을 추가하여 `TestSinglePrediction` 메서드에서 학습된 모델의 비용 예측을 테스트합니다.
 
 [!code-csharp[PredictionData](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#23 "Create test data for single prediction")]
 
- 해당 메서드를 사용하여 택시 주행 데이터의 단일 인스턴스를 기준으로 운임을 예측할 수 있습니다. 예측을 가져오려면 데이터에 대해 <xref:Microsoft.ML.PredictionEngine%602.Predict%2A>을 사용합니다. 입력 데이터는 문자열이고 모델은 기능화를 포함합니다. 파이프라인은 학습 및 예측 중에 동기화됩니다. 특별히 예측을 위해 전처리/기능화 코드를 작성할 필요가 없고 동일한 API가 배치 및 일회성 예측을 둘 다 처리합니다.
+해당 메서드를 사용하여 택시 주행 데이터의 단일 인스턴스를 기준으로 운임을 예측할 수 있습니다. 예측을 가져오려면 데이터에 대해 <xref:Microsoft.ML.PredictionEngine%602.Predict%2A>을 사용합니다. 입력 데이터는 문자열이고 모델은 기능화를 포함합니다. 파이프라인은 학습 및 예측 중에 동기화됩니다. 특별히 예측을 위해 전처리/기능화 코드를 작성할 필요가 없고 동일한 API가 배치 및 일회성 예측을 둘 다 처리합니다.
 
 [!code-csharp[Predict](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#24 "Create a prediction of taxi fare")]
 
@@ -322,6 +323,7 @@ private static void TestSinglePrediction(MLContext mlContext)
 ## <a name="next-steps"></a>다음 단계
 
 본 자습서에서는 다음 작업에 관한 방법을 학습했습니다.
+
 > [!div class="checklist"]
 > * 문제 이해
 > * 적절한 기계 학습 작업 선택
@@ -334,5 +336,6 @@ private static void TestSinglePrediction(MLContext mlContext)
 > * 예측에 모델 사용
 
 다음 자습서로 이동하여 자세히 알아보세요.
+
 > [!div class="nextstepaction"]
 > [아이리스 클러스터링](iris-clustering.md)

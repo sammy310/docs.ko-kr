@@ -14,12 +14,12 @@ helpviewer_keywords:
 - network
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
-ms.openlocfilehash: 5f79f25e879df85fed7b6e402d47d98f047dd562
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 656a21a7b8801a2c3b72b25531705576fcf047cd
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699858"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59295759"
 ---
 # <a name="automatic-proxy-detection"></a>자동 프록시 검색
 자동 프록시 검색은 웹 프록시 서버가 시스템에 의해 식별되고 클라이언트 대신 요청을 보내는 데 사용되는 프로세스입니다. 이 기능을 WPAD(웹 프록시 자동 검색)라고도 합니다. 자동 프록시 검색을 사용하면 시스템이 요청에 사용할 수 있는 프록시 집합을 반환하는 프록시 구성 스크립트를 찾으려고 시도합니다. 프록시 구성 스크립트가 발견되면 <xref:System.Net.WebProxy> 인스턴스를 사용하는 요청에 대한 프록시 정보, 요청 스트림 또는 응답이 확보될 때 로컬 컴퓨터에서 스크립트가 다운로드, 컴파일 및 실행됩니다.  
@@ -31,13 +31,13 @@ ms.locfileid: "54699858"
   
  자동 프록시 검색을 사용하면 <xref:System.Net.WebProxy> 클래스가 다음과 같이 프록시 구성 스크립트를 찾으려고 시도합니다.  
   
-1.  WinINet `InternetQueryOption` 함수는 Internet Explorer에서 가장 최근에 검색된 프록시 구성 스크립트를 찾는 데 사용됩니다.  
+1. WinINet `InternetQueryOption` 함수는 Internet Explorer에서 가장 최근에 검색된 프록시 구성 스크립트를 찾는 데 사용됩니다.  
   
-2.  스크립트를 찾을 수 없는 경우 <xref:System.Net.WebProxy> 클래스는 DHCP(Dynamic Host Configuration Protocol)를 사용하여 스크립트를 찾습니다. DHCP 서버는 스크립트의 위치(호스트 이름) 또는 스크립트에 대한 전체 URL로 응답할 수 있습니다.  
+2. 스크립트를 찾을 수 없는 경우 <xref:System.Net.WebProxy> 클래스는 DHCP(Dynamic Host Configuration Protocol)를 사용하여 스크립트를 찾습니다. DHCP 서버는 스크립트의 위치(호스트 이름) 또는 스크립트에 대한 전체 URL로 응답할 수 있습니다.  
   
-3.  DHCP가 WPAD 호스트를 식별하지 않는 경우 WPAD를 해당 이름 또는 별칭으로 사용하여 DNS에서 호스트를 쿼리합니다.  
+3. DHCP가 WPAD 호스트를 식별하지 않는 경우 WPAD를 해당 이름 또는 별칭으로 사용하여 DNS에서 호스트를 쿼리합니다.  
   
-4.  호스트가 확인되지 않고 프록시 구성 스크립트의 위치가 Internet Explorer LAN 설정 또는 구성 파일에서 지정된 경우 이 위치가 사용됩니다.  
+4. 호스트가 확인되지 않고 프록시 구성 스크립트의 위치가 Internet Explorer LAN 설정 또는 구성 파일에서 지정된 경우 이 위치가 사용됩니다.  
   
 > [!NOTE]
 >  NT 서비스 또는 ASP.NET의 일부로 실행 중인 애플리케이션은 호출하는 사용자의 Internet Explorer 프록시 서버 설정(사용 가능한 경우)을 사용합니다. 일부 서비스 애플리케이션에는 이러한 설정을 사용할 수 없습니다.  
@@ -68,6 +68,7 @@ Public Shared Sub DisableForMyRequest(ByVal resource As Uri)
  프록시가 없는 요청은 <xref:System.Net.WebRequest.DefaultWebProxy%2A> 속성에서 사용할 수 있는 애플리케이션 도메인의 기본 프록시를 사용합니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.WebRequest>
 - [\<system.Net> 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)

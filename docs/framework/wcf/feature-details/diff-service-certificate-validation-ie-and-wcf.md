@@ -6,10 +6,10 @@ helpviewer_keywords:
 - certificates [WCF], service certificate validation
 ms.assetid: 9dffcab2-70a9-40f0-99fd-d3a0b296028f
 ms.openlocfilehash: 0bced548cdc9423d1907de09e8b52ebe078d7c19
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225922"
 ---
 # <a name="differences-between-service-certificate-validation-done-by-internet-explorer-and-wcf"></a>Internet Explorer와 WCF로 완료된 서비스 인증서 유효성 검사의 차이점
@@ -18,4 +18,4 @@ Internet Explorer 및 Windows Communication Foundation (WCF) HTTPS를 사용 하
 ## <a name="see-also"></a>참고자료
 
 - [HTTPS, TCP를 통한 SSL 및 SOAP 보안의 인증서 유효성 검사 차이점](../../../../docs/framework/wcf/feature-details/cert-val-diff-https-ssl-over-tcp-and-soap.md)
-- [방법: 메타데이터 검색 및 규정 준수 서비스 구현](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)
+- [방법: 메타 데이터 검색 및 규격 서비스 구현](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)

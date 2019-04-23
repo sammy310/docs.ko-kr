@@ -11,10 +11,10 @@ helpviewer_keywords:
 - DataGrid columns [WPF], using
 ms.assetid: bf89ea63-79b6-422b-bc9f-0485ad803216
 ms.openlocfilehash: dda712d58a4ff956de074ecd416402ba0aece5f4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197154"
 ---
 # <a name="datagrid"></a>DataGrid
@@ -49,11 +49,11 @@ ms.locfileid: "59197154"
   
 |제목|설명|  
 |-----------|-----------------|  
-|[연습: DataGrid 컨트롤에서 SQL Server 데이터베이스의 데이터 표시](walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|엔터티 프레임 워크 요소를 추가할 새 WPF 프로젝트를 설정, 소스를 설정 및 데이터를 표시 하는 방법을 설명는 <xref:System.Windows.Controls.DataGrid>합니다.|  
+|[연습: DataGrid 컨트롤에는 SQL Server 데이터베이스에서 데이터를 표시 합니다.](walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|엔터티 프레임 워크 요소를 추가할 새 WPF 프로젝트를 설정, 소스를 설정 및 데이터를 표시 하는 방법을 설명는 <xref:System.Windows.Controls.DataGrid>합니다.|  
 |[방법: DataGrid 컨트롤에 행 세부 정보 추가](how-to-add-row-details-to-a-datagrid-control.md)|행 세부 정보를 만드는 방법에 설명 된 <xref:System.Windows.Controls.DataGrid>합니다.|  
-|[방법: DataGrid 컨트롤을 사용하여 유효성 검사 구현](how-to-implement-validation-with-the-datagrid-control.md)|값의 유효성을 검사 하는 방법에 설명 <xref:System.Windows.Controls.DataGrid> 셀 및 행 및 유효성 검사 피드백을 표시 합니다.|  
+|[방법: DataGrid 컨트롤을 사용 하 여 유효성 검사 구현](how-to-implement-validation-with-the-datagrid-control.md)|값의 유효성을 검사 하는 방법에 설명 <xref:System.Windows.Controls.DataGrid> 셀 및 행 및 유효성 검사 피드백을 표시 합니다.|  
 |[DataGrid 컨트롤에서의 기본 키보드 및 마우스 동작](default-keyboard-and-mouse-behavior-in-the-datagrid-control.md)|상호 작용 하는 방법에 설명 합니다 <xref:System.Windows.Controls.DataGrid> 키보드 및 마우스를 사용 하 여 제어 합니다.|  
-|[방법: DataGrid 컨트롤에서 데이터 그룹화, 정렬 및 필터링](how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|데이터를 보는 방법에 설명 합니다.는 <xref:System.Windows.Controls.DataGrid> 그룹화, 정렬 및 데이터를 필터링 하 여 다양 한 방식에서입니다.|  
+|[방법: 그룹, 정렬 및 DataGrid 컨트롤에서 데이터 필터링](how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|데이터를 보는 방법에 설명 합니다.는 <xref:System.Windows.Controls.DataGrid> 그룹화, 정렬 및 데이터를 필터링 하 여 다양 한 방식에서입니다.|  
 |[DataGrid 컨트롤의 크기 조정 옵션](sizing-options-in-the-datagrid-control.md)|절대 및 자동 크기 조정 제어 하는 방법에 설명 합니다 <xref:System.Windows.Controls.DataGrid>합니다.|  
   
 ## <a name="see-also"></a>참고자료

@@ -3,10 +3,10 @@ title: 사용자 지정 인코더
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
 ms.openlocfilehash: 7602e18a03f73f66dfd028d810c003db0b6653bb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59190576"
 ---
 # <a name="custom-encoders"></a>사용자 지정 인코더
@@ -50,7 +50,7 @@ ms.locfileid: "59190576"
 ### <a name="pooling"></a>Pooling  
  각 인코더 구현에서는 가능한 한 많이 풀링하려고 합니다. 관리 코드의 성능을 향상시키기 위한 주요 방법은 할당을 줄이는 것입니다. 이 풀링을 수행하기 위해 구현에서는 `SynchronizedPool` 클래스를 사용합니다. C# 파일에는 이 클래스에서 사용하는 추가 최적화에 대한 설명이 포함되어 있습니다.  
   
- <xref:System.Xml.XmlDictionaryReader> 및 <xref:System.Xml.XmlDictionaryWriter> 인스턴스 풀링되 고 각 메시지에 대 한 새로 할당 되지 않도록 다시 초기화 됩니다. 판독기의 경우 `OnClose`가 호출될 때 `Close()` 콜백이 판독기를 회수합니다. 인코더는 또한 메시지를 구성할 때 사용된 일부 메시지 상태 개체를 재활용합니다. 이러한 풀의 크기는 `MaxReadPoolSize`에서 파생된 세 가지 각 클래스에 대한 `MaxWritePoolSize` 및 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 속성으로 구성할 수 있습니다.  
+ <xref:System.Xml.XmlDictionaryReader> 및 <xref:System.Xml.XmlDictionaryWriter> 인스턴스를 풀링하고 다시 초기화하여 각 메시지의 새 인스턴스가 할당되지 않도록 합니다. 판독기의 경우 `OnClose`가 호출될 때 `Close()` 콜백이 판독기를 회수합니다. 인코더는 또한 메시지를 구성할 때 사용된 일부 메시지 상태 개체를 재활용합니다. 이러한 풀의 크기는 `MaxReadPoolSize`에서 파생된 세 가지 각 클래스에 대한 `MaxWritePoolSize` 및 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 속성으로 구성할 수 있습니다.  
   
 ### <a name="binary-encoding"></a>이진 인코딩  
  이진 인코딩에서 세션을 사용하는 경우 동적 사전 문자열을 메시지 수신자에게 전달해야 합니다. 이 작업은 동적 사전 문자열을 메시지의 접두사로 지정하여 수행합니다. 수신자는 문자열을 제거하여 세션에 추가한 다음 메시지를 처리합니다. 사전 문자열을 올바르게 전달하려면 전송을 버퍼링해야 합니다.  
@@ -79,9 +79,9 @@ ms.locfileid: "59190576"
   
 -   재정의해야 하는 이 클래스의 주요 메서드는 다음과 같습니다.  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> 사용 하는 한 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 개체 및에 씁니다를 <xref:System.IO.Stream> 개체입니다.  
+-   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 개체를 가져와서 <xref:System.IO.Stream> 개체에 씁니다.  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> 사용 하는 한 <xref:System.IO.Stream> 개체와 최대 헤더 크기를 반환을 <xref:System.ServiceModel.Channels.Message> 개체입니다.  
+-   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> - <xref:System.IO.Stream> 개체와 최대 헤더 크기를 가져오고 <xref:System.ServiceModel.Channels.Message> 개체를 반환합니다.  
   
  이러한 메서드에 작성하는 코드로, 표준 전송 프로토콜과 사용자 지정 인코딩 간의 변환을 처리합니다.  
   

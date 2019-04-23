@@ -7,10 +7,10 @@ helpviewer_keywords:
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
 ms.openlocfilehash: eda91ab6d81150749dc542139949fb92684c0fe1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316741"
 ---
 # <a name="key-frame-animations-overview"></a>키 프레임 애니메이션 개요
@@ -50,7 +50,7 @@ ms.locfileid: "59316741"
   
  여기서 *\<Type>* 은 클래스가 애니메이션을 적용하는 값의 형식입니다.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 다음 키 프레임 애니메이션 클래스를 제공합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 다음 키 프레임 애니메이션 클래스를 제공합니다.  
   
 |속성 형식|해당 From/To/By 애니메이션 클래스|지원되는 보간 방법|  
 |-------------------|------------------------------------------------|-------------------------------------|  

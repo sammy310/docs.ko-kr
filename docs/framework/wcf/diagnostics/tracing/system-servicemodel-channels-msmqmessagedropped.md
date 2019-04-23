@@ -3,10 +3,10 @@ title: System.ServiceModel.Channels.MsmqMessageDropped
 ms.date: 03/30/2017
 ms.assetid: 8b6e644d-fa68-4be7-abe9-3659671a37c1
 ms.openlocfilehash: 3fa5ec62c5e8ac83f3f81fb406499b7e596b3dac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59161339"
 ---
 # <a name="systemservicemodelchannelsmsmqmessagedropped"></a>System.ServiceModel.Channels.MsmqMessageDropped
@@ -22,6 +22,6 @@ MSMQ에서 메시지를 삭제했습니다.
 ## <a name="see-also"></a>참고자료
 
 - [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [추적을 사용하여 응용 프로그램 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [추적을 사용하여 애플리케이션 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [관리 및 진단](../../../../../docs/framework/wcf/diagnostics/index.md)
 - [포이즌 메시지 처리](https://go.microsoft.com/fwlink/?LinkID=99546)

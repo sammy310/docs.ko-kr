@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c680c1a4671b38c9b2c35945ddecaf9d92d0f477
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 60173739842835a705a72da4e7ab442cacfc08d2
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729238"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59306549"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>방법: HRESULT 및 예외 매핑
 COM 메서드는 HRESULT를 반환하여 오류를 보고하고, .NET 메서드는 예외를 throw하여 오류를 보고합니다. 런타임은 두 항목 간의 전환을 처리합니다. .NET Framework의 각 예외 클래스는 HRESULT에 매핑됩니다.  
@@ -31,7 +31,7 @@ COM 메서드는 HRESULT를 반환하여 오류를 보고하고, .NET 메서드�
   
 ### <a name="to-create-a-new-exception-class-and-map-it-to-an-hresult"></a>새 예외 클래스를 만들고 HRESULT에 매핑하려면  
   
-1.  다음 코드를 사용하여 `NoAccessException`이라는 새 예외 클래스를 만들고 HRESULT `E_ACCESSDENIED`에 매핑합니다.  
+1. 다음 코드를 사용하여 `NoAccessException`이라는 새 예외 클래스를 만들고 HRESULT `E_ACCESSDENIED`에 매핑합니다.  
   
     ```cpp  
     Class NoAccessException : public ApplicationException  
@@ -143,5 +143,6 @@ CMyClass::MethodThatThrows
  **Message**, **Source** 및 **StackTrace**와 같은 예외 필드는 **StackOverflowException**에 사용할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [고급 COM 상호 운용성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
 - [예외](../../standard/exceptions/index.md)

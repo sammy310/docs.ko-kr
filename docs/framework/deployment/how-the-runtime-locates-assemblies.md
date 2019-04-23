@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 867bf0812e54c33dbe84737b67091fc87e3b0651
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 250e1764084ba3f7750867f2eea89e87cc7239eb
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661869"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59342348"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>런타임에서 어셈블리를 찾는 방법
 .NET Framework 애플리케이션을 성공적으로 배포하려면 공용 언어 런타임이 애플리케이션을 구성하는 어셈블리를 찾아서 바인딩하는 방법을 이해해야 합니다. 기본적으로 런타임은 애플리케이션 빌드 시 사용된 정확한 버전의 어셈블리로 바인딩을 시도합니다. 이 기본 동작은 구성 파일 설정으로 재정의할 수 있습니다.  
@@ -40,16 +40,16 @@ ms.locfileid: "54661869"
   
  런타임은 다음 단계를 사용하여 어셈블리 참조를 확인합니다.  
   
-1.  애플리케이션 구성 파일, 게시자 정책 파일 및 컴퓨터 구성 파일을 비롯한 해당 구성 파일을 검사하여[올바른 어셈블리 버전을 결정](#step1) 합니다. 구성 파일이 원격 컴퓨터에 있는 경우 런타임에서 먼저 애플리케이션 구성 파일을 찾아서 다운로드해야 합니다.  
+1. 애플리케이션 구성 파일, 게시자 정책 파일 및 컴퓨터 구성 파일을 비롯한 해당 구성 파일을 검사하여[올바른 어셈블리 버전을 결정](#step1) 합니다. 구성 파일이 원격 컴퓨터에 있는 경우 런타임에서 먼저 애플리케이션 구성 파일을 찾아서 다운로드해야 합니다.  
   
-2.  [어셈블리 이름이 이전에 바인딩되었는지 여부를 확인](#step2) 하고, 바인딩된 경우 이전에 로드된 어셈블리를 사용합니다. 이전의 어셈블리 로드 요청이 실패한 경우 어셈블리 로드를 시도하지 않고 요청이 즉시 실패합니다.  
+2. [어셈블리 이름이 이전에 바인딩되었는지 여부를 확인](#step2) 하고, 바인딩된 경우 이전에 로드된 어셈블리를 사용합니다. 이전의 어셈블리 로드 요청이 실패한 경우 어셈블리 로드를 시도하지 않고 요청이 즉시 실패합니다.  
   
     > [!NOTE]
     >  어셈블리 바인딩 실패 캐싱은 .NET Framework 버전 2.0의 새로운 기능입니다.  
   
-3.  [전역 어셈블리 캐시를 확인](#step3)합니다. 어셈블리가 있으면 런타임에서 이 어셈블리를 사용합니다.  
+3. [전역 어셈블리 캐시를 확인](#step3)합니다. 어셈블리가 있으면 런타임에서 이 어셈블리를 사용합니다.  
   
-4.  다음 단계를 사용하여[어셈블리를 검색](#step4) 합니다.  
+4. 다음 단계를 사용하여[어셈블리를 검색](#step4) 합니다.  
   
     1.  구성 및 게시자 정책이 원래 참조 영향을 주지 않고 바인딩 요청이 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 메서드를 사용하여 만들어진 경우 런타임에서 위치 힌트를 확인합니다.  
   
@@ -154,9 +154,9 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ## <a name="step-4-locating-the-assembly-through-codebases-or-probing"></a>4단계: 코드베이스나 조사를 통해 어셈블리 찾기  
  호출 어셈블리 참조와 구성 파일의 정보를 사용하여 올바른 어셈블리 버전을 확인하고 전역 어셈블리 캐시를 검사한 후(강력한 이름의 어셈블리에만 해당) 공용 언어 런타임이 어셈블리를 찾으려고 시도합니다. 어셈블리를 찾는 프로세스는 다음 단계로 구성됩니다.  
   
-1.  애플리케이션 구성 파일에 [\<codeBase&gt;](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 요소가 있을 경우 런타임은 지정한 위치를 확인합니다. 일치 항목이 있으면 해당 어셈블리가 사용되고 검색이 수행되지 않습니다. 어셈블리가 없으면 바인딩 요청이 실패합니다.  
+1. 애플리케이션 구성 파일에 [\<codeBase&gt;](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 요소가 있을 경우 런타임은 지정한 위치를 확인합니다. 일치 항목이 있으면 해당 어셈블리가 사용되고 검색이 수행되지 않습니다. 어셈블리가 없으면 바인딩 요청이 실패합니다.  
   
-2.  그런 다음 런타임은 이 섹션의 뒷부분에 지정된 규칙을 사용하여 참조된 어셈블리를 검색합니다.  
+2. 그런 다음 런타임은 이 섹션의 뒷부분에 지정된 규칙을 사용하여 참조된 어셈블리를 검색합니다.  
   
 > [!NOTE]
 >  같은 디렉터리에 여러 버전의 어셈블리가 있고 그중에서 특정 버전을 참조하려는 경우 [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 요소의 `privatePath` 특성 대신 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 요소를 사용해야 합니다. [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 요소를 사용할 경우 참조되는 단순 어셈블리 이름에 일치하는 어셈블리를 런타임에서 처음 찾았으면 정확하게 일치하는지 여부에 관계없이 검색이 중지됩니다. 정확하게 일치하는 항목이면 해당 어셈블리가 사용됩니다. 정확하게 일치하는 항목이 아니면 검색이 중지되고 바인딩이 실패합니다.  
@@ -248,5 +248,6 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  예를 들어 Assembly1이 Assembly2를 참조하고 Assembly1이 `http://www.code.microsoft.com/utils`에서 다운로드된 경우 해당 위치는 Assembly2.dll을 찾을 수 있는 위치에 대한 힌트로 간주됩니다. 런타임은 `http://www.code.microsoft.com/utils/Assembly2.dll`과 `http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll`의 어셈블리를 탐지합니다. Assembly2가 이러한 위치 중 하나에  없으면 런타임에서 Windows Installer를 쿼리합니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [최선의 어셈블리 로드 방법](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
 - [배포](../../../docs/framework/deployment/index.md)

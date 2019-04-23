@@ -13,10 +13,10 @@ ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c7c2956a222a47cea36abbc2f21da2d7e2061e09
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314531"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>방법: 리플렉션을 사용하여 대리자 후크
@@ -120,4 +120,4 @@ ms.locfileid: "59314531"
 - <xref:System.Activator.CreateInstance%2A>
 - <xref:System.Delegate.CreateDelegate%2A>
 - [방법: 동적 메서드 정의 및 실행](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)
-- [반사](../../../docs/framework/reflection-and-codedom/reflection.md)
+- [리플렉션](../../../docs/framework/reflection-and-codedom/reflection.md)

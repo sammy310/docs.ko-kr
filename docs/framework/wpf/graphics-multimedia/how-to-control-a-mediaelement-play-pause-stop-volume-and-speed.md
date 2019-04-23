@@ -11,10 +11,10 @@ helpviewer_keywords:
 - media [WPF], controlling playback of
 ms.assetid: 6885a730-e054-4c16-8c1e-ffe17b1f7c32
 ms.openlocfilehash: bb7319fc7ccec0220cbd79a32d5d015f9f2422d0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182860"
 ---
 # <a name="how-to-control-a-mediaelement-play-pause-stop-volume-and-speed"></a>방법: MediaElement 제어(재생, 일시 중지, 정지, 볼륨 및 속도)
@@ -36,4 +36,4 @@ ms.locfileid: "59182860"
   
 ## <a name="see-also"></a>참고자료
 
-- [스토리보드를 사용하여 MediaElement 제어](how-to-control-a-mediaelement-by-using-a-storyboard.md)
+- [Storyboard를 사용하여 MediaElement 제어](how-to-control-a-mediaelement-by-using-a-storyboard.md)

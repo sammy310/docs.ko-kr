@@ -10,10 +10,10 @@ helpviewer_keywords:
 - classes [WPF], SystemFonts
 ms.assetid: 3f46a4ec-2225-408a-8123-8838a8f7057a
 ms.openlocfilehash: 5976bc0cb8b34e68d5e89dd70a608d7e52ded332
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216784"
 ---
 # <a name="how-to-use-systemfonts"></a>방법: SystemFonts 사용
@@ -39,7 +39,7 @@ ms.locfileid: "59216784"
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.SystemFonts>
-- [시스템 브러시로 영역 칠하기](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
+- [시스템 브러시로 영역 그리기](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
 - [SystemParameters 사용](how-to-use-systemparameters.md)
 - [시스템 글꼴 키 사용](how-to-use-system-fonts-keys.md)
 - [방법 항목](resources-how-to-topics.md)

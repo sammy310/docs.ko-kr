@@ -3,10 +3,10 @@ title: 데이터 필터링 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7749519a-7edc-49fe-aef9-6a353864af6c
 ms.openlocfilehash: a673126d928a97bf522783e73fc254debe2a9de8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58837449"
 ---
 # <a name="filtering-data-visual-basic"></a>데이터 필터링 (Visual Basic)
@@ -14,7 +14,7 @@ ms.locfileid: "58837449"
   
  다음 그림에서는 문자 시퀀스를 필터링한 결과를 보여 줍니다. 필터링 작업에 대한 조건자는 문자가 'A'가 되도록 지정합니다.  
   
- ![LINQ 필터링 작업을 보여 주는 다이어그램](./media/filtering-data/linq-filter-operation.png)  
+ ![LINQ 필터링 작업을 보여주는 다이어그램](./media/filtering-data/linq-filter-operation.png)  
   
  선택을 수행하는 표준 쿼리 연산자 메서드는 다음 섹션에 나열됩니다.  
   

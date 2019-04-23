@@ -10,10 +10,10 @@ helpviewer_keywords:
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
 ms.openlocfilehash: 351d133215343e07e849ad1045eba601dd8cce56
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59092282"
 ---
 # <a name="administration-and-diagnostics"></a>관리 및 진단
@@ -41,7 +41,7 @@ Windows Communication Foundation (WCF) 다양 한 응용 프로그램 수명의 
   
 ## <a name="see-also"></a>참고자료
 
-- [응용 프로그램 구성](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)
+- [애플리케이션 구성](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)
 - [서비스 배포](../../../../docs/framework/wcf/diagnostics/deploying-services.md)
 - [예외 참조](../../../../docs/framework/wcf/diagnostics/exceptions-reference/index.md)
 - [이벤트 로깅](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
@@ -50,6 +50,6 @@ Windows Communication Foundation (WCF) 다양 한 응용 프로그램 수명의 
 - [Service Trace Viewer 도구(SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [ServiceModel 등록 도구](../../../../docs/framework/wcf/diagnostics/servicemodel-registration-tool.md)
 - [추적](../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [진단에 Windows Management Instrumentation 사용](../../../../docs/framework/wcf/diagnostics/wmi/index.md)
+- [진단에 WMI(Windows Management Instrumentation) 사용](../../../../docs/framework/wcf/diagnostics/wmi/index.md)
 - [성능 카운터](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)
 - [Windows Communication Foundation 도구](../../../../docs/framework/wcf/tools.md)

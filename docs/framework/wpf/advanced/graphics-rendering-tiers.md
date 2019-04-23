@@ -9,10 +9,10 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
 ms.openlocfilehash: d5924ff9336bc6e93022caf1b85d5fd98f7a617d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197388"
 ---
 # <a name="graphics-rendering-tiers"></a>그래픽 렌더링 계층
@@ -68,10 +68,10 @@ ms.locfileid: "59197388"
 |-------------|-----------|  
 |2D 렌더링|대부분의 2D 렌더링이 지원됩니다.|  
 |3D 래스터화|대부분의 3D 래스터화가 지원됩니다.|  
-|3D 이방성 필터링|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 3D 콘텐츠를 렌더링할 때 이방성 필터링을 사용 하려고 합니다. 이방성 필터링은 카메라에서 멀리 떨어져 있고 기울기가 심한 표면에서 이미지의 질감을 향상시키는 것을 나타냅니다.|  
-|3D MIP 매핑|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 3D 콘텐츠를 렌더링할 때 MIP 매핑을 사용 하려고 시도 합니다. MIP 매핑은 작은 보기 필드에서 차지 하는 경우 질감 렌더링 품질을 향상 시키기를 <xref:System.Windows.Controls.Viewport3D>입니다.|  
+|3D 이방성 필터링|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 3D 콘텐츠를 렌더링할 때 이방성 필터링을 사용합니다. 이방성 필터링은 카메라에서 멀리 떨어져 있고 기울기가 심한 표면에서 이미지의 질감을 향상시키는 것을 나타냅니다.|  
+|3D MIP 매핑|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 3D 콘텐츠를 렌더링할 때 MIP 매핑을 사용합니다. MIP 매핑은 작은 보기 필드에서 차지 하는 경우 질감 렌더링 품질을 향상 시키기를 <xref:System.Windows.Controls.Viewport3D>입니다.|  
 |방사형 그라데이션|지원 되지만 사용 하지 않도록 <xref:System.Windows.Media.RadialGradientBrush> 대형 개체입니다.|  
-|3D 조명 계산|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 즉, 메시에 적용할 각 재질의 꼭 짓 점 마다 조명 강도 계산 해야 함을 꼭 짓 점별 조명을 수행 합니다.|  
+|3D 조명 계산|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 꼭짓점별 조명을 수행합니다. 즉, 메시에 적용할 각 재질의 꼭짓점마다 조명 강도를 계산해야 합니다.|  
 |텍스트 렌더링|하위 픽셀 글꼴 렌더링에서는 그래픽 하드웨어에서 사용 가능한 픽셀 셰이더를 사용합니다.|  
   
  다음 특징과 기능은 렌더링 계층 2용으로만 가속화된 하드웨어입니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "59197388"
  다음 리소스를 사용하면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애플리케이션의 성능 특징을 분석할 수 있습니다.  
   
 ### <a name="graphics-rendering-registry-settings"></a>그래픽 렌더링 레지스트리 설정  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 네 가지 레지스트리 설정을 제어 하기 위한 제공 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 렌더링 합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 렌더링을 제어하는 다음 네 개의 레지스트리 설정을 제공합니다.  
   
 |설정|설명|  
 |-------------|-----------------|  
@@ -108,7 +108,7 @@ ms.locfileid: "59197388"
  이러한 설정은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 레지스트리 설정을 참조하는 방법을 아는 외부 구성 유틸리티에서 액세스할 수 있습니다. 이러한 설정은 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 레지스트리 편집기를 통해 직접 값에 액세스하여 만들거나 수정할 수도 있습니다. 자세한 내용은 [그래픽 렌더링 레지스트리 설정](../graphics-multimedia/graphics-rendering-registry-settings.md)을 참조하세요.  
   
 ### <a name="wpf-performance-profiling-tools"></a>WPF 성능 프로파일링 도구  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 성능 프로 파일링 할 응용 프로그램의 런타임 동작을 분석 하 고 적용할 수 있습니다 하는 성능 최적화의 유형을 결정할 수 있는 도구 집합을 제공 합니다. 다음 테이블에서는 [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)] 도구인 WPF 성능 제품군에 포함된 성능 프로파일링 도구를 나열합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 응용 프로그램의 런타임 동작을 분석할 수 있고 적용할 수 있는 성능 최적화 형식을 판별하는 성능 프로파일링 도구 제품군을 제공합니다. 다음 테이블에서는 [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)] 도구인 WPF 성능 제품군에 포함된 성능 프로파일링 도구를 나열합니다.  
   
 |도구|설명|  
 |----------|-----------------|  
@@ -131,7 +131,7 @@ DirectX 진단 도구 기본 창
 
 - <xref:System.Windows.Media.RenderCapability>
 - <xref:System.Windows.Media.RenderOptions>
-- [WPF 애플리케이션 성능 최적화](optimizing-wpf-application-performance.md)
+- [WPF 응용 프로그램 성능 최적화](optimizing-wpf-application-performance.md)
 - [WPF 성능 제품군](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))
 - [그래픽 렌더링 레지스트리 설정](../graphics-multimedia/graphics-rendering-registry-settings.md)
 - [애니메이션에 대한 유용한 정보](../graphics-multimedia/animation-tips-and-tricks.md)

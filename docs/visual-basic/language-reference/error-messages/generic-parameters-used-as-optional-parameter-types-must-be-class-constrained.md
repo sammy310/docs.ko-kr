@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC32124
 ms.assetid: 55aa8b2a-9ce3-4620-a710-2f9b0feb6143
 ms.openlocfilehash: 9b0293472f5eda74c2bf8fb215e15ae5cf8d8b98
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58813901"
 ---
 # <a name="generic-parameters-used-as-optional-parameter-types-must-be-class-constrained"></a>선택적 매개 변수 형식으로 사용된 제네릭 매개 변수에는 클래스 제약 조건이 있어야 합니다.

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
 ms.openlocfilehash: f2fc69867ae1659a342161b00dfd91852441fa5b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126219"
 ---
 # <a name="optimistic-concurrency"></a>낙관적 동시성
@@ -209,7 +209,7 @@ protected static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)
 ## <a name="see-also"></a>참고자료
 
 - [ADO.NET에서 데이터 검색 및 수정](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [DataAdapters로 데이터 원본 업데이트](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
+- [DataAdapter로 데이터 원본 업데이트](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
 - [행 오류 정보](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)
 - [트랜잭션 및 동시성](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
 - [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)

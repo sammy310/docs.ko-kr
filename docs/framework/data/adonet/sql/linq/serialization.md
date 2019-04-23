@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
 ms.openlocfilehash: b6778522b5757c0ece899f7465d3ab500038fc49
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59202562"
 ---
 # <a name="serialization"></a>Serialization
@@ -76,4 +76,4 @@ ms.locfileid: "59202562"
 
 - [배경 정보](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
 - [SqlMetal.exe(코드 생성 도구)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
-- [방법: 직렬화 가능한 엔터티 만들기](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)
+- [방법: 엔터티를 직렬화 할 수 있도록 설정](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)

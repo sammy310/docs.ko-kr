@@ -10,21 +10,24 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-ms.openlocfilehash: 540b6d422be5d5c0898f019592a755258145d14d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.openlocfilehash: b836659821b54698b675d48acd4e46466001d654
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125023"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977277"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>방법: 선형 그라데이션 만들기
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 가로, 세로 및 대각선 선형 그라데이션을 제공합니다. 기본적으로 선형 그라데이션에 색이 균일 하 게 변경 합니다. 그러나 균일 하지 않은 방식으로 색이 변경 되도록 선형 그라데이션을 사용자 지정할 수 있습니다.  
+GDI + 가로, 세로 및 대각선 선형 그라데이션 제공합니다. 기본적으로 선형 그라데이션에 색이 균일 하 게 변경 합니다. 그러나 균일 하지 않은 방식으로 색이 변경 되도록 선형 그라데이션을 사용자 지정할 수 있습니다.  
+
+> [!NOTE]
+> 이 문서의 예제에서는 컨트롤에서 호출 되는 메서드는 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기입니다.  
+
+다음 예제에서는 선, 타원, 및 가로 선형 그라데이션 브러시를 사용 하 여 사각형을 채웁니다.  
   
- 다음 예제에서는 선, 타원, 및 가로 선형 그라데이션 브러시를 사용 하 여 사각형을 채웁니다.  
+<xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> 생성자는 네 개의 인수를 받습니다: 두 색으로 및 두 점입니다. 첫 번째 지점 (0, 10) 첫 번째 색 (빨강)에 연결 되며 두 번째 점 (200, 10)는 두 번째 색 (파란색)를 사용 하 여 연결 합니다. 예상한 대로에서 가져온 줄 (0, 10)를 (200, 10) 빨간색에서 파란색 점진적으로 변경 합니다.  
   
- <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> 생성자는 네 개의 인수를 받습니다: 두 색으로 및 두 점입니다. 첫 번째 지점 (0, 10) 첫 번째 색 (빨강)에 연결 되며 두 번째 점 (200, 10)는 두 번째 색 (파란색)를 사용 하 여 연결 합니다. 예상한 대로에서 가져온 줄 (0, 10)를 (200, 10) 빨간색에서 파란색 점진적으로 변경 합니다.  
-  
- 점 (50, 10) 및 (200, 10)에서 10 중요 하지 않습니다. 두 점 동일한 두 번째 좌표에는 중요 한 것-연결 선은 가로입니다. 타원 및 사각형 변경할 수도 점진적으로 빨간색에서 가로 좌표 이동 0에서 200으로 파란색입니다.  
+ 점 (0, 10) 및 (200, 10)에서 10 중요 하지 않습니다. 두 점 동일한 두 번째 좌표에는 중요 한 것-연결 선은 가로입니다. 타원 및 사각형 변경할 수도 점진적으로 빨간색에서 가로 좌표 이동 0에서 200으로 파란색입니다.  
   
  다음 그림은 선, 타원 및 사각형을 나타냅니다. 참고는 색 그라데이션 반복 하는 가로 좌표는 200 개 이상 증가 합니다.  
   
@@ -39,7 +42,7 @@ ms.locfileid: "59125023"
   
  앞의 예제에서 200에서 가로 좌표 0 가로 좌표에서 이동 색 구성 요소 선형적으로 변경 합니다. 예를 들어, 첫 번째 좌표가 0과 200 사이의 중간 지점 0과 255 사이의 중간에 있는 파란색 구성 요소를 갖습니다.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 이 기능을 사용 하면 다른 색이 변하는 그라데이션의 한쪽 가장자리에서 방식을 조정할 수 있습니다. 검정에서 다음 표에 따라 빨강으로 변경 하는 그라데이션 브러시를 만들려고 한다고 가정 합니다.  
+ GDI + 다른 색이 변하는 그라데이션의 한쪽 가장자리에서 방식을 조정할 수 있습니다. 검정에서 다음 표에 따라 빨강으로 변경 하는 그라데이션 브러시를 만들려고 한다고 가정 합니다.  
   
 |가로 좌표|RGB 구성 요소|  
 |---------------------------|--------------------|  
@@ -49,12 +52,12 @@ ms.locfileid: "59125023"
   
  빨강 구성 요소는 농도가 절반 경우 가로 좌표는 0에서 방법 200의 20%만 note 합니다.  
   
- 다음 예제에서는 합니다 <xref:System.Drawing.Drawing2D.LinearGradientBrush.Blend%2A> 의 속성을 <xref:System.Drawing.Drawing2D.LinearGradientBrush> 세 상대 강도 세 가지 상대 위치를 사용 하 여 연결할 개체입니다. 앞의 표에서 같이 0.5의 상대 강도 0.2의 상대적 위치와 연결 됩니다. 그라데이션 브러시를 사용 하 여 사각형 및 타원을 채웁니다.  
+ 다음 예제에서는 <xref:System.Drawing.Drawing2D.LinearGradientBrush.Blend%2A?displayProperty=nameWithType> 세 가지 상대 위치를 사용 하 여 세 가지 상대 강도 연결할 속성입니다. 앞의 표에서 같이 0.5의 상대 강도 0.2의 상대적 위치와 연결 됩니다. 그라데이션 브러시를 사용 하 여 사각형 및 타원을 채웁니다.  
   
  다음 그림에서는 결과 타원 및 사각형을 보여 줍니다.  
   
  ![선형 그라데이션](./media/cslineargradient2.png "cslineargradient2")  
-  
+
 ### <a name="to-customize-linear-gradients"></a>선형 그라데이션 사용자 지정 하려면  
   
 -   불투명 한 검정 픽셀과 불투명 한 빨강의 세 번째 및 네 번째 인수로 각각 전달 합니다.  

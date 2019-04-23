@@ -7,12 +7,12 @@ helpviewer_keywords:
 - networking how-tos [.NET Framework]
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
-ms.openlocfilehash: e3569ec8608a52101cc0bf752d39fbe01ab46917
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c165470cd00ac39a45464ec5a534eb0eea531be2
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561974"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59121994"
 ---
 # <a name="network-programming-how-to-topics"></a>네트워크 프로그래밍 방법 항목
 다음 목록에는 네트워크 프로그래밍 개념 문서에 나와 있는 방법 항목에 대한 링크가 들어 있습니다.  
@@ -78,6 +78,7 @@ ms.locfileid: "54561974"
 -   [방법: 호스트 Ping](../../../docs/framework/network-programming/how-to-ping-a-host.md)  
   
 ## <a name="see-also"></a>참고 항목
+
 - [.NET Framework의 네트워크 프로그래밍](../../../docs/framework/network-programming/index.md)
 - [네트워크 프로그래밍 샘플](../../../docs/framework/network-programming/network-programming-samples.md)
 - [MSDN 코드 갤러리의 .NET용 네트워킹 샘플](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

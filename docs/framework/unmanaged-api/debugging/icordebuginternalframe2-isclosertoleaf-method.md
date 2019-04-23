@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 30a9d26283d4f544bdd865e40cfc1c1c625ae462
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120902"
 ---
 # <a name="icordebuginternalframe2isclosertoleaf-method"></a>ICorDebugInternalFrame2::IsCloserToLeaf 메서드
@@ -48,7 +48,7 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
 |-------------|-----------------|  
 |S_OK|비교는 성공적으로 수행 되었습니다.|  
 |E_FAIL|비교를 수행할 수 없습니다.|  
-|E_INVALIDARG|`pFrameToCompare` 또는 `pIsCloser` null입니다.|  
+|E_INVALIDARG|`pFrameToCompare` 또는 `pIsCloser`이 null입니다.|  
   
 ## <a name="remarks"></a>설명  
  `IsCloserToLeaf` 인터리빙 스택의 다른 프레임을 사용 하 여 내부 프레임에 대 한 정책을 구현 하려면 사용할 수 있습니다.  

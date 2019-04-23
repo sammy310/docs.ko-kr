@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
 author: ghogen
-ms.openlocfilehash: 9adcb39504cc2b5189f0c65cc5603c149d1483f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68fd5d705cb2f38e00e90c211111ff34d23f3b10
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572619"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59335812"
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>방법: 서비스에 대한 보안 컨텍스트 지정
 기본적으로 서비스는 로그인한 사용자와 다른 보안 컨텍스트에서 실행됩니다. 서비스는 기본 시스템 계정 `LocalSystem`의 컨텍스트에서 실행되므로, 시스템 리소스에 대해 사용자와는 다른 액세스 권한을 받습니다. 이 동작을 변경하여 서비스를 실행할 다른 사용자 계정을 지정할 수 있습니다.  
@@ -35,16 +35,17 @@ ms.locfileid: "54572619"
   
 ### <a name="to-specify-the-security-context-for-a-service"></a>서비스에 대한 보안 컨텍스트를 지정하려면  
   
-1.  서비스를 만든 후 서비스에 필요한 설치 관리자를 추가합니다. 자세한 내용은 [방법: 서비스 애플리케이션에 설치 관리자 추가](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)를 참조하세요.  
+1. 서비스를 만든 후 서비스에 필요한 설치 관리자를 추가합니다. 자세한 내용은 [방법: 서비스 애플리케이션에 설치 관리자 추가](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)를 참조하세요.  
   
-2.  디자이너에서 `ProjectInstaller` 클래스에 액세스하고 작업 중인 서비스에 대한 서비스 프로세스 설치 관리자를 클릭합니다.  
+2. 디자이너에서 `ProjectInstaller` 클래스에 액세스하고 작업 중인 서비스에 대한 서비스 프로세스 설치 관리자를 클릭합니다.  
   
     > [!NOTE]
     >  모든 서비스 애플리케이션의 `ProjectInstaller` 클래스에는 적어도 두 개의 설치 구성 요소가 있는데, 프로젝트의 모든 서비스에 대한 프로세스를 설치하는 구성 요소와 애플리케이션에 포함된 각 서비스에 대한 설치 관리자 1개입니다. 이 인스턴스에서 <xref:System.ServiceProcess.ServiceProcessInstaller>을 선택할 수 있습니다.  
   
-3.  **속성** 창에서 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A>를 적절한 값으로 설정합니다.  
+3. **속성** 창에서 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A>를 적절한 값으로 설정합니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [Windows 서비스 애플리케이션 소개](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
 - [방법: 서비스 애플리케이션에 설치 관리자 추가](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
 - [방법: Windows 서비스 만들기](../../../docs/framework/windows-services/how-to-create-windows-services.md)

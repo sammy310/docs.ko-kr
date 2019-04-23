@@ -7,17 +7,17 @@ helpviewer_keywords:
 - geometry classes [WPF]
 ms.assetid: 83873331-b013-472e-8197-8ba993dd242f
 ms.openlocfilehash: 3afee770e36b7daea754775f64dd7f1030659267
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096241"
 ---
 # <a name="geometries-how-to-topics"></a>Geometry 방법 항목
 이 섹션의에서 항목에서는 사용 하는 방법을 보여 줍니다 <xref:System.Windows.Media.Geometry> 응용 프로그램의 개체입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [EllipseGeometry에 애니메이션 효과 주기](how-to-animate-an-ellipsegeometry.md)  
+ [EllipseGeometry에 애니메이션 효과 적용](how-to-animate-an-ellipsegeometry.md)  
  [ArcSegment 크기에 애니메이션 효과 주기](how-to-animate-the-size-of-an-arcsegment.md)  
  [복합 도형의 채우기 제어](how-to-control-the-fill-of-a-composite-shape.md)  
  [결합된 기하 도형 만들기](how-to-create-a-combined-geometry.md)  
@@ -31,7 +31,7 @@ ms.locfileid: "59096241"
  [타원형 원호 만들기](how-to-create-an-elliptical-arc.md)  
  [PathGeometry 내에 다중 하위 경로 만들기](how-to-create-multiple-subpaths-within-a-pathgeometry.md)  
  [RectangleGeometry를 사용하여 사각형 정의](how-to-define-a-rectangle-using-a-rectanglegeometry.md)  
- [RectangleGeometry의 모서리 둥글게 하기](how-to-round-the-corners-of-a-rectanglegeometry.md)  
+ [사각형 기하 도형의 모퉁이 둥글게 하기](how-to-round-the-corners-of-a-rectanglegeometry.md)  
   
 ## <a name="see-also"></a>참고자료
 

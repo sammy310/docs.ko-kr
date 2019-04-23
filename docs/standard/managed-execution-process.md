@@ -12,29 +12,29 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3e6548484f3e41ce67522931f4eafef3acee1fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce088fd10540ce9d390b7411bdcd8e563636a437
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652022"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59336150"
 ---
 # <a name="managed-execution-process"></a>관리되는 실행 프로세스
 <a name="introduction"></a> 관리되는 실행 프로세스에는 이 항목의 뒷부분에서 설명하는 다음 단계가 포함됩니다.  
   
-1.  [컴파일러 선택](#choosing_a_compiler).  
+1. [컴파일러 선택](#choosing_a_compiler).  
   
      공용 언어 런타임에서 제공되는 이점을 얻으려면 런타임을 대상으로 지정하는 언어 컴파일러를 하나 이상 사용해야 합니다.  
   
-2.  [코드를 MSIL로 컴파일](#compiling_to_msil).  
+2. [코드를 MSIL로 컴파일](#compiling_to_msil).  
   
      컴파일을 통해 소스 코드가 MSIL(Microsoft Intermediate Language)로 변환되고 필요한 메타데이터가 생성됩니다.  
   
-3.  [MSIL을 네이티브 코드로 컴파일](#compiling_msil_to_native_code).  
+3. [MSIL을 네이티브 코드로 컴파일](#compiling_msil_to_native_code).  
   
      실행 시간에 JIT(Just-In-Time) 컴파일러는 MSIL을 네이티브 코드로 변환합니다. 이 컴파일 중에 코드는 MSIL 및 메타데이터를 검사하여 코드가 형식 안전 코드로 판별되는지 확인하는 확인 프로세스를 통과해야 합니다.  
   
-4.  [코드 실행](#running_code).  
+4. [코드 실행](#running_code).  
   
      공용 언어 런타임은 실행을 가능하게 하는 인프라와 실행 중에 사용할 수 있는 서비스를 제공합니다.  
   
@@ -99,9 +99,9 @@ ms.locfileid: "54652022"
   
  Microsoft [!INCLUDE[winxp](../../includes/winxp-md.md)] 및 [!INCLUDE[windowsver](../../includes/windowsver-md.md)]에서는 운영 체제 로더가 COFF 헤더에서 비트를 검사하여 관리 모듈을 확인합니다. 설정되는 비트는 관리 모듈을 나타냅니다. 로더는 관리 모듈을 감지하면 mscoree.dll을 로드하고 `_CorValidateImage` 및 `_CorImageUnloading` 는 관리 모듈 이미지가 로드 및 언로드될 때 로더에 알립니다. `_CorValidateImage` 는 다음 작업을 수행합니다.  
   
-1.  코드가 올바른 관리 코드인지 확인합니다.  
+1. 코드가 올바른 관리 코드인지 확인합니다.  
   
-2.  이미지의 진입점을 런타임의 진입점으로 변경합니다.  
+2. 이미지의 진입점을 런타임의 진입점으로 변경합니다.  
   
  64비트 Windows에서 `_CorValidateImage` 는 이미지를 PE32에서 PE32+ 형식으로 변환하여 메모리에 있는 이미지를 수정합니다.  
   

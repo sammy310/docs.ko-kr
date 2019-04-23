@@ -3,10 +3,10 @@ title: ServiceDescription 및 WSDL 참조
 ms.date: 03/30/2017
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
 ms.openlocfilehash: 6690bea3d3df0f39a5581c3a6c14723c0f30f40c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182886"
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription 및 WSDL 참조
@@ -50,7 +50,7 @@ ms.locfileid: "59182886"
 |----------------|------------------|  
 |`Name`|엔드포인트에 대한 기본 이름에 사용되며, 계약 이름을 밑줄로 구분하여 연결한 바인딩 이름입니다.|  
 |`Namespace`|`targetNamespace` 정의에 대한 `wsdl:binding`입니다.<br /><br /> 가져오기에서는 정책이 WSDL 포트에 연결되어 있으면 가져온 바인딩 네임스페이스가 `targetNamespace` 정의에 대한 `wsdl:port`에 매핑됩니다.|  
-|`BindingElementCollection`에서 반환한는 `CreateBindingElements`() 메서드|`wsdl:binding` 정의에 대한 다양한 도메인별 확장명(일반적으로 정책 어설션)입니다.|  
+|`BindingElementCollection`() 메서드에 의해 반환되는 `CreateBindingElements`|`wsdl:binding` 정의에 대한 다양한 도메인별 확장명(일반적으로 정책 어설션)입니다.|  
 |`MessageVersion`|엔드포인트에 대한 `EnvelopeVersion` 및 `AddressingVersion`입니다.<br /><br /> `MessageVersion.None`이 지정된 경우 WSDL 바인딩은 SOAP 바인딩을 포함하지 않고 WSDL 포트는 WS-Addressing 콘텐츠를 포함하지 않습니다. 이 설정은 일반적으로 POX(Plain Old XML) 엔드포인트에 사용됩니다.|  
   
 #### <a name="bindingelements"></a>BindingElements  

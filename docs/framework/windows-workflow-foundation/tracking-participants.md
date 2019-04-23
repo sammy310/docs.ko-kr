@@ -3,14 +3,14 @@ title: 추적 참가자
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
 ms.openlocfilehash: 6c42712300baa6d7e12b9a29d94c925caaad5141
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340180"
 ---
 # <a name="tracking-participants"></a>추적 참가자
-추적 참가자는 워크플로 개발자가 <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> 개체에 액세스하여 처리할 수 있는 확장성 지점입니다. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 이벤트 추적에 대 한 Windows (ETW) 이벤트로 추적 레코드를 기록 하는 표준 추적 참가자가 포함 되어 있습니다. 표준 참가자가 요구 사항에 맞지 않는 경우 사용자 지정 추적 참가자를 작성할 수도 있습니다.  
+추적 참가자는 워크플로 개발자가 <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> 개체에 액세스하여 처리할 수 있는 확장성 지점입니다. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]에는 추적 레코드를 ETW(Windows용 이벤트 추적) 이벤트로 기록하는 표준 추적 참가자가 포함되어 있습니다. 표준 참가자가 요구 사항에 맞지 않는 경우 사용자 지정 추적 참가자를 작성할 수도 있습니다.  
   
 ## <a name="tracking-participants"></a>추적 참가자  
  추적 인프라를 사용하면 참가자가 레코드 하위 집합을 구독할 수 있도록 보내는 추적 레코드에 필터를 적용할 수 있습니다. 필터를 적용하는 메커니즘은 추적 프로필을 사용합니다.  
@@ -18,7 +18,7 @@ ms.locfileid: "59340180"
  Windows WF (Workflow Foundation)에서 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 는 추적 레코드를 ETW 세션에 기록 하는 추적 참가자를 제공 합니다. 추적 참가자는 워크플로 서비스에서 구성 파일에 추적별 동작을 추가하여 구성할 수 있습니다. ETW 추적 참가자를 사용하여 이벤트 뷰어에서 추적 레코드를 볼 수 있습니다. ETW 기반 추적에 대한 SDK 샘플을 사용하면 ETW 기반 추적 참가자를 사용하는 WF 추적을 쉽게 익힐 수 있습니다.  
   
 ## <a name="etw-tracking-participant"></a>ETW 추적 참가자  
- [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 추적 레코드를 ETW 세션에 기록 하는 ETW 추적 참가자를 포함 합니다. 이 작업은 응용 프로그램 성능이나 서버 처리량에 미치는 영향을 최소화하면서 매우 효율적인 방식으로 수행됩니다. 표준 ETW 추적 참가자를 사용하는 이점은 Windows 이벤트 뷰어에서 다른 응용 프로그램 및 시스템 로그를 사용하여 참가자가 받는 추적 레코드를 볼 수 있다는 것입니다.  
+ [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]에는 추적 레코드를 ETW 세션에 기록하는 ETW 추적 참가자가 포함됩니다. 이 작업은 응용 프로그램 성능이나 서버 처리량에 미치는 영향을 최소화하면서 매우 효율적인 방식으로 수행됩니다. 표준 ETW 추적 참가자를 사용하는 이점은 Windows 이벤트 뷰어에서 다른 응용 프로그램 및 시스템 로그를 사용하여 참가자가 받는 추적 레코드를 볼 수 있다는 것입니다.  
   
  다음 예제와 같이 표준 ETW 추적 참가자는 Web.config 파일에서 구성됩니다.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "59340180"
 ## <a name="custom-tracking-participant"></a>사용자 지정 추적 참가자  
  추적 참가자 API를 사용하면 워크플로 런타임에서 내보낸 추적 레코드를 처리하기 위한 사용자 지정 논리를 포함할 수 있는 사용자 제공 추적 참가자를 사용하여 추적 런타임을 확장할 수 있습니다. 사용자 지정 추적 참가자를 기록하려면 개발자가 `Track` 클래스에서 <xref:System.Activities.Tracking.TrackingParticipant> 메서드를 구현해야 합니다. 이 메서드는 워크플로 런타임에서 추적 레코드를 내보낼 때 호출됩니다.  
   
- 추적 참가자는 <xref:System.Activities.Tracking.TrackingParticipant> 클래스에서 파생됩니다. 시스템 제공 <xref:System.Activities.Tracking.EtwTrackingParticipant>는 받은 각 추적 레코드에 대해 ETW(Windows용 이벤트 추적) 이벤트를 내보냅니다. 사용자 지정 추적 참가자를 만들려면 <xref:System.Activities.Tracking.TrackingParticipant>에서 파생되는 클래스를 만듭니다. 기본 추적 기능을 제공하려면 <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>을 재정의합니다. <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> 추적 레코드를 런타임에 의해 전송 되 고 원하는 방식으로 처리 될 때 호출 됩니다. 다음 예제에서는 모든 추적 레코드를 콘솔 창으로 내보내는 사용자 지정 추적 참가자 클래스를 정의합니다. <xref:System.Activities.Tracking.TrackingParticipant> 및 `BeginTrack` 메서드를 사용하여 비동기식으로 추적 레코드를 처리하는 `EndTrack` 개체를 구현할 수도 있습니다.  
+ 추적 참가자는 <xref:System.Activities.Tracking.TrackingParticipant> 클래스에서 파생됩니다. 시스템 제공 <xref:System.Activities.Tracking.EtwTrackingParticipant>는 받은 각 추적 레코드에 대해 ETW(Windows용 이벤트 추적) 이벤트를 내보냅니다. 사용자 지정 추적 참가자를 만들려면 <xref:System.Activities.Tracking.TrackingParticipant>에서 파생되는 클래스를 만듭니다. 기본 추적 기능을 제공하려면 <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>을 재정의합니다. <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>은 런타임에서 추적 레코드를 보낼 때 호출되며 원하는 방법으로 처리할 수 있습니다. 다음 예제에서는 모든 추적 레코드를 콘솔 창으로 내보내는 사용자 지정 추적 참가자 클래스를 정의합니다. <xref:System.Activities.Tracking.TrackingParticipant> 및 `BeginTrack` 메서드를 사용하여 비동기식으로 추적 레코드를 처리하는 `EndTrack` 개체를 구현할 수도 있습니다.  
   
 ```csharp  
 class ConsoleTrackingParticipant : TrackingParticipant  

@@ -3,10 +3,10 @@ title: 데이터 서비스 컨텍스트 관리(WCF Data Services)
 ms.date: 03/30/2017
 ms.assetid: 15b19d09-7de7-4638-9556-6ef396cc45ec
 ms.openlocfilehash: 33e7ce17eea5d534b941d778fd13144ad51b4094
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184745"
 ---
 # <a name="managing-the-data-service-context-wcf-data-services"></a>데이터 서비스 컨텍스트 관리(WCF Data Services)
@@ -20,7 +20,7 @@ ms.locfileid: "59184745"
 ## <a name="managing-concurrency"></a>동시성 관리  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 데이터 서비스에서 업데이트 충돌을 검색할 수 있도록 낙관적 동시성을 지원 합니다. 데이터 서비스에서 동시성 토큰을 사용하여 엔터티의 변경 내용을 확인하는 방식으로 데이터 서비스 공급자를 구성할 수 있습니다. 이 토큰에는 리소스 변경 여부를 확인하기 위해 데이터 서비스에서 유효성이 검사되는 엔터티 형식의 속성이 하나 이상 포함됩니다. 요청 및 데이터 서비스에서 응답의 eTag 헤더에 포함 된, 동시성 토큰에 의해 관리 되는 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트입니다. 자세한 내용은 [데이터 서비스 업데이트](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)합니다.  
   
- <xref:System.Data.Services.Client.DataServiceContext>는 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>, <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> 및 <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A>를 사용하거나 <xref:System.Data.Services.Client.DataServiceCollection%601>에 의해 수동으로 보고된 개체의 변경 내용을 추적합니다. <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 메서드가 호출되면 클라이언트가 변경 내용을 데이터 서비스에 보냅니다. <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 클라이언트에서 데이터 변경 내용이 데이터 서비스의 변경 내용과 충돌 하는 경우 실패할 수 있습니다. 이러한 경우에는 엔터티 리소스에 대한 쿼리를 다시 실행하여 업데이트 데이터를 받아야 합니다. 데이터 서비스의 변경 내용을 덮어쓰려면 <xref:System.Data.Services.Client.MergeOption.PreserveChanges> 병합 옵션을 사용하여 쿼리를 실행합니다. <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>를 다시 호출하면 데이터 서비스의 해당 리소스에 다른 변경이 이미 수행되지 않은 경우 클라이언트에 유지된 변경 내용이 데이터 서비스에 유지됩니다.  
+ <xref:System.Data.Services.Client.DataServiceContext>는 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>, <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> 및 <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A>를 사용하거나 <xref:System.Data.Services.Client.DataServiceCollection%601>에 의해 수동으로 보고된 개체의 변경 내용을 추적합니다. <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 메서드가 호출되면 클라이언트가 변경 내용을 데이터 서비스에 보냅니다. <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>는 클라이언트의 데이터 변경 내용이 데이터 서비스의 변경 내용과 충돌하는 경우 실패할 수 있습니다. 이러한 경우에는 엔터티 리소스에 대한 쿼리를 다시 실행하여 업데이트 데이터를 받아야 합니다. 데이터 서비스의 변경 내용을 덮어쓰려면 <xref:System.Data.Services.Client.MergeOption.PreserveChanges> 병합 옵션을 사용하여 쿼리를 실행합니다. <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>를 다시 호출하면 데이터 서비스의 해당 리소스에 다른 변경이 이미 수행되지 않은 경우 클라이언트에 유지된 변경 내용이 데이터 서비스에 유지됩니다.  
   
 ## <a name="saving-changes"></a>변경 내용 저장  
  변경 내용이 <xref:System.Data.Services.Client.DataServiceContext> 인스턴스에서 추적되기는 하지만 서버로 즉시 전송되지는 않습니다. 지정한 작업에 대해 필요한 변경을 모두 마치면 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>를 호출하여 모든 변경 내용을 데이터 서비스에 전송합니다. <xref:System.Data.Services.Client.DataServiceResponse> 작업이 완료된 후에는 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 개체가 반환됩니다. <xref:System.Data.Services.Client.DataServiceResponse> 개체는 유지되거나 시도된 변경 내용을 나타내는 <xref:System.Data.Services.Client.OperationResponse> 또는 <xref:System.Data.Services.Client.EntityDescriptor> 인스턴스의 시퀀스가 차례로 포함되는 <xref:System.Data.Services.Client.LinkDescriptor> 개체의 시퀀스를 포함합니다. 데이터 서비스에서 엔터티를 만들거나 수정하면 <xref:System.Data.Services.Client.EntityDescriptor>에는 위 예제에서 생성된 `ProductID` 값과 같은 서버에서 생성된 속성 값을 포함하여 업데이트된 엔터티에 대한 참조가 포함됩니다. 클라이언트 라이브러리는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 개체를 이러한 새 값으로 자동으로 업데이트합니다.  

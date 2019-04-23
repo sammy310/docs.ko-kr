@@ -1,5 +1,5 @@
 ---
-title: <authenticationModules> 요소 (네트워크 설정)
+title: <authenticationModules> 요소(네트워크 설정)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#authenticationModules
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - <authenticationModules> element
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
 ms.openlocfilehash: 8878bcbdf8b3613677231db3e91a6d71dfa10bae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143340"
 ---
 # <a name="authenticationmodules-element-network-settings"></a>\<authenticationModules > 요소 (네트워크 설정)
@@ -40,7 +40,7 @@ ms.locfileid: "59143340"
 |**요소**|**설명**|  
 |-----------------|---------------------|  
 |[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-authenticationmodules-network-settings.md)|응용 프로그램에 인증 모듈을 추가합니다.|  
-|[지우기](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-authenticationmodules-network-settings.md)|응용 프로그램에서 인증 모듈을 모두 지웁니다.|  
+|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-authenticationmodules-network-settings.md)|응용 프로그램에서 인증 모듈을 모두 지웁니다.|  
 |[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-authenticationmodules-network-settings.md)|응용 프로그램에서 인증 모듈을 제거합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  

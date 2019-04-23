@@ -5,10 +5,10 @@ helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
 ms.openlocfilehash: 1866ba7a5419ea435a56daa63f94122d3b83473e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59166896"
 ---
 # <a name="bitmap-effects-overview"></a>비트맵 효과 개요
@@ -34,10 +34,10 @@ ms.locfileid: "59166896"
 -   <xref:System.Windows.Media.Effects.EmbossBitmapEffect> 범프 매핑을 만듭니다는 <xref:System.Windows.Media.Visual> 인공 광원에서 깊이 및 질감 효과 제공 합니다.  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 비트맵 효과 소프트웨어 모드에서 렌더링 됩니다. 효과를 적용하는 모든 개체도 소프트웨어에서 렌더링됩니다. 큰 시각적 개체에 비트맵 효과를 사용하거나 비트맵 효과의 속성에 애니메이션 효과를 줄 때 성능이 가장 크게 저하됩니다. 따라서 여러분도 이러한 방식으로 비트맵 효과를 사용하지 않아야 하는 것은 물론, 다른 사용자들도 바람직한 경험을 얻을 수 있도록 철저히 테스트하고 주의해야 합니다.  
+>  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 비트맵 효과는 소프트웨어 모드에서 렌더링됩니다. 효과를 적용하는 모든 개체도 소프트웨어에서 렌더링됩니다. 큰 시각적 개체에 비트맵 효과를 사용하거나 비트맵 효과의 속성에 애니메이션 효과를 줄 때 성능이 가장 크게 저하됩니다. 따라서 여러분도 이러한 방식으로 비트맵 효과를 사용하지 않아야 하는 것은 물론, 다른 사용자들도 바람직한 경험을 얻을 수 있도록 철저히 테스트하고 주의해야 합니다.  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 비트맵 효과 부분 신뢰 실행을 지원 하지 않습니다. 비트맵 효과를 사용하려면 애플리케이션에 완전 신뢰 권한이 있어야 합니다.  
+>  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 비트맵 효과는 부분 신뢰 실행을 지원하지 않습니다. 비트맵 효과를 사용하려면 애플리케이션에 완전 신뢰 권한이 있어야 합니다.  
   
 <a name="applyeffects"></a>   
 ## <a name="how-to-apply-an-effect"></a>효과를 적용하는 방법  
@@ -56,7 +56,7 @@ ms.locfileid: "59166896"
   
 <a name="customeffects"></a>   
 ## <a name="creating-custom-effects"></a>사용자 지정 효과 만들기  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 또한 사용할 수 있는 사용자 지정 효과를 만들 관리 되지 않는 인터페이스를 제공 관리 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램입니다. 사용자 지정 비트맵 효과를 만들기 위한 추가 참조 자료에 대해서는 [관리되지 않는 WPF 비트맵 효과](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh) 설명서를 참조하세요.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서는 또한 관리되는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램에서 사용할 수 있는 사용자 지정 효과를 만들기 위한 관리되지 않는 인터페이스를 제공합니다. 사용자 지정 비트맵 효과를 만들기 위한 추가 참조 자료에 대해서는 [관리되지 않는 WPF 비트맵 효과](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh) 설명서를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
 
@@ -67,4 +67,4 @@ ms.locfileid: "59166896"
 - [이미징 개요](imaging-overview.md)
 - [보안](../security-wpf.md)
 - [WPF 그래픽 렌더링 개요](wpf-graphics-rendering-overview.md)
-- [2D 그래픽 및 이미징](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [2차원 그래픽 및 이미징](../advanced/optimizing-performance-2d-graphics-and-imaging.md)

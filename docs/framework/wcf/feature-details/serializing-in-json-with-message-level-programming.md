@@ -3,10 +3,10 @@ title: 메시지 수준의 프로그래밍으로 JSON으로 serialize
 ms.date: 03/30/2017
 ms.assetid: 5f940ba2-57ee-4c49-a779-957c5e7e71fa
 ms.openlocfilehash: fc2777d71376cc482b715898fa81ddf618bd8284
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186942"
 ---
 # <a name="serializing-in-json-with-message-level-programming"></a>메시지 수준의 프로그래밍으로 JSON으로 serialize
@@ -35,4 +35,4 @@ WCF는 JSON 형식의 데이터 serialize를 지원합니다. 이 항목에서�
 
 - [AJAX 통합 및 JSON 지원](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)
 - [독립 실행형 JSON Serialization](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)
-- [JSON serialization](../../../../docs/framework/wcf/samples/json-serialization.md)
+- [JSON Serialization](../../../../docs/framework/wcf/samples/json-serialization.md)

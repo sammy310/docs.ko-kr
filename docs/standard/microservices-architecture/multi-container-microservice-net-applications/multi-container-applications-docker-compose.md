@@ -4,12 +4,12 @@ description: docker-compose.yml을 사용하여 다중 컨테이너 애플리케
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 4f4918a6f26a617fad38c7955415c4ff559a9187
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: f40559ef7c41febb5e17d583ef2d0eb64addc0a8
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920781"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613189"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션 정의
 
@@ -423,7 +423,7 @@ docker-compose는 .env 파일의 각 줄이 \<변수\>=\<값\> 형식이 되도�
 #### <a name="additional-resources"></a>추가 자료
 
 - **Docker Compose 개요** \
-    [https://docs.docker.com/compose/overview/](https://docs.docker.com/compose/overview/)
+    <https://docs.docker.com/compose/overview/>
 
 - **다중 계산 파일** \
     [https://docs.docker.com/compose/extends/\#multiple-compose-files](https://docs.docker.com/compose/extends/#multiple-compose-files)
@@ -466,7 +466,7 @@ ENTRYPOINT ["dotnet", "run"]
 #### <a name="additional-resources"></a>추가 자료
 
 - **ASP.NET Core를 사용하여 최적화된 Docker 이미지 빌드** \
-    [https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
+    <https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/>
 
 - **.NET Core 애플리케이션에 대한 Docker 이미지 작성** \
     [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)

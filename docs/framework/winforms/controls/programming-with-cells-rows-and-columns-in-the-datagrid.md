@@ -9,10 +9,10 @@ helpviewer_keywords:
 - rows [Windows Forms], data grids
 ms.assetid: 0d76f7e4-4149-42c6-9118-bb37d6669dc5
 ms.openlocfilehash: 085fcd0114742e787c8cbcaabf89a354b0e3e830
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59144627"
 ---
 # <a name="programming-with-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤에서 셀, 행 및 열 프로그래밍
@@ -22,7 +22,7 @@ ms.locfileid: "59144627"
  [방법: Windows Forms DataGridView 컨트롤에서 개별 셀에 도구 설명 추가](add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
  처리 하는 방법에 설명 합니다 <xref:System.Windows.Forms.DataGridView.CellFormatting> 개별 셀에 대 한 다양 한 도구 설명을 제공 하는 이벤트입니다.  
   
- [방법: Windows Forms DataGridView 컨트롤의 셀 변경 내용에 따라 사용자 지정 작업 수행](perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md)  
+ [방법: Windows Forms DataGridView 컨트롤의 셀 변경 내용에 따라 사용자 지정 작업을 수행 합니다.](perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md)  
  처리 하는 방법에 설명 합니다 <xref:System.Windows.Forms.DataGridView.CellValueChanged> 및 <xref:System.Windows.Forms.DataGridView.CellStateChanged> 이벤트입니다.  
   
  [방법: Windows Forms DataGridView 컨트롤에서 밴드 조작](how-to-manipulate-bands-in-the-windows-forms-datagridview-control.md)  

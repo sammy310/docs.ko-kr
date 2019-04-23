@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
 ms.openlocfilehash: 04526e8aea09b412de4d3a94f17938b02ad6527b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105276"
 ---
 # <a name="transport-security-overview"></a>전송 보안 개요
@@ -19,7 +19,7 @@ ms.locfileid: "59105276"
 >  .NET Framework 3.5 이상에 SSL 보안을 사용 하는 경우 WCF 클라이언트를 인증서 저장소의 중간 인증서 모두를 사용 하 고 서비스의 인증서 체인 유효성 검사를 수행 하려면 SSL 협상 중에 받은 중간 인증서 인증서입니다. .NET Framework 3.0은 로컬 인증서 저장소에 설치된 중간 인증서만 사용합니다.  
   
 > [!WARNING]
->  전송 보안이 사용되는 경우에는 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 속성이 덮어쓰일 수 있습니다. 설정 하지 않도록 하는 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType> 에 <xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>입니다. <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 서비스 설명에 설정할 수 있는 서비스 동작입니다.  
+>  전송 보안이 사용되는 경우에는 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 속성이 덮어쓰일 수 있습니다. 설정 하지 않도록 하는 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType> 에 <xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>입니다. <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>는 서비스 설명에 설정할 수 있는 서비스 동작입니다.  
   
 ## <a name="basichttpbinding"></a>BasicHttpBinding  
  기본적으로 <xref:System.ServiceModel.BasicHttpBinding> 클래스는 보안을 제공하지 않습니다. 이 바인딩은 보안을 구현하지 않는 웹 서비스 공급자와의 상호 운용성을 위해 디자인되었습니다. 하지만 <xref:System.ServiceModel.BasicHttpSecurity.Mode%2A> 속성을 <xref:System.ServiceModel.BasicHttpSecurityMode.None> 이외의 값으로 설정하여 보안으로 전환할 수 있습니다. 전송 보안을 사용하려면 속성을 <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>로 설정합니다.  

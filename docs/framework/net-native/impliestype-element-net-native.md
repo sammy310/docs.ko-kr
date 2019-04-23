@@ -5,10 +5,10 @@ ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2ef238a2cb852ecd7fa3f0e2dbe4048ff03a4139
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59080880"
 ---
 # <a name="impliestype-element-net-native"></a>\<ImpliesType > 요소 (.NET 네이티브)
@@ -70,7 +70,7 @@ ms.locfileid: "59080880"
 |-------------|-----------------|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|생성된 제네릭 형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
-|[\<메서드 >](../../../docs/framework/net-native/method-element-net-native.md)|메서드에 리플렉션 정책을 적용합니다.|  
+|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|메서드에 리플렉션 정책을 적용합니다.|  
   
 ## <a name="remarks"></a>설명  
  `<ImpliesType>` 요소는 주로 라이브러리에서 사용되며 다음과 같은 시나리오를 해결합니다.  

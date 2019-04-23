@@ -3,10 +3,10 @@ title: WCF 확장에 대한 사용자 지정 메타데이터 가져오기
 ms.date: 03/30/2017
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
 ms.openlocfilehash: 830829be98202c97a9fc2b34e31da25967292efb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339972"
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>WCF 확장에 대한 사용자 지정 메타데이터 가져오기
@@ -52,4 +52,4 @@ Windows Communication Foundation (WCF), 메타 데이터 가져오기는 해당 
 
 - [방법: 사용자 지정 WSDL 가져오기](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
 - [방법: 사용자 지정 정책 어설션 가져오기](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
-- [방법: ServiceContractGenerator에 대한 확장 쓰기](../../../../docs/framework/wcf/extending/how-to-write-an-extension-for-the-servicecontractgenerator.md)
+- [방법: ServiceContractGenerator에 대 한 확장 작성](../../../../docs/framework/wcf/extending/how-to-write-an-extension-for-the-servicecontractgenerator.md)

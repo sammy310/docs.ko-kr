@@ -6,10 +6,10 @@ helpviewer_keywords:
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
 ms.openlocfilehash: b5294080d0cc76fdb98bc0908f4273dbb011f982
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328727"
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM+ 응용 프로그램과 통합 개요
@@ -103,4 +103,4 @@ Windows Communication Foundation (WCF)는 분산된 응용 프로그램을 만�
   
 ## <a name="see-also"></a>참고자료
 
-- [COM 응용 프로그램과 통합 개요](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+- [COM 애플리케이션과 통합 개요](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

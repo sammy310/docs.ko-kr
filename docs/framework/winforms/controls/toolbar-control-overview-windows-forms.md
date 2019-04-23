@@ -8,10 +8,10 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], about ToolBar controls
 ms.assetid: d426b203-0216-4dbe-b834-1641e50a9c29
 ms.openlocfilehash: 7b39c8e3dca88e968b43ba5ff14794e2e77247d1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174813"
 ---
 # <a name="toolbar-control-overview-windows-forms"></a>ToolBar 컨트롤 개요(Windows Forms)
@@ -35,5 +35,5 @@ ms.locfileid: "59174813"
 - <xref:System.Windows.Forms.ToolBar>
 - [ToolBar 컨트롤](toolbar-control-windows-forms.md)
 - [방법: ToolBar 컨트롤에 단추 추가](how-to-add-buttons-to-a-toolbar-control.md)
-- [방법: 도구 모음 단추에 대한 아이콘 정의](how-to-define-an-icon-for-a-toolbar-button.md)
-- [방법: Toolbar 단추에 대한 메뉴 이벤트 트리거](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [방법: 도구 모음 단추의 아이콘 정의](how-to-define-an-icon-for-a-toolbar-button.md)
+- [방법: Toolbar 단추의 메뉴 이벤트 트리거](how-to-trigger-menu-events-for-toolbar-buttons.md)

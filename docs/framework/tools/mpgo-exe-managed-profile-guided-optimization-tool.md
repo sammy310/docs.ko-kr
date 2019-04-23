@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 20b4df2a663bdc584b5f350c95c8c533f1cc7c8e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0258edb552b53130e7df47df6ccefa9b30def843
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496822"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59306341"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe(관리되는 프로필 기반 최적화 도구)
 
@@ -79,23 +79,23 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
   
 ## <a name="to-use-mpgoexe"></a>Mpgo.exe를 사용하려면  
   
-1.  Visual Studio Ultimate 2012와 애플리케이션이 설치된 컴퓨터를 사용합니다.  
+1. Visual Studio Ultimate 2012와 애플리케이션이 설치된 컴퓨터를 사용합니다.  
   
-2.  Mpgo.exe를 관리자 권한으로 필요한 매개 변수를 사용하여 실행합니다.  샘플 명령은 다음 단원을 참조하십시오.  
+2. Mpgo.exe를 관리자 권한으로 필요한 매개 변수를 사용하여 실행합니다.  샘플 명령은 다음 단원을 참조하십시오.  
   
      최적화된 IL(중간 언어) 어셈블리는 `–OutDir` 매개 변수로 지정된 폴더(이 예제에서는 `C:\Optimized` 폴더)에 생성됩니다.  
   
-3.  Ngen.exe에 사용한 IL 어셈블리를 `–OutDir`로 지정된 디렉터리의 프로필 정보가 포함된 새로운 IL 어셈블리로 바꿉니다.  
+3. Ngen.exe에 사용한 IL 어셈블리를 `–OutDir`로 지정된 디렉터리의 프로필 정보가 포함된 새로운 IL 어셈블리로 바꿉니다.  
   
-4.  애플리케이션을 설정하면(Mpgo.exe에서 제공하는 이미지를 사용) 최적화된 원시 이미지가 설치됩니다.  
+4. 애플리케이션을 설정하면(Mpgo.exe에서 제공하는 이미지를 사용) 최적화된 원시 이미지가 설치됩니다.  
   
 ## <a name="suggested-workflow"></a>제안된 워크플로  
   
-1.  Mpgo.exe를 `–Scenario` 매개 변수와 함께 사용하여 최적화된 IL 어셈블리 집합을 만듭니다.  
+1. Mpgo.exe를 `–Scenario` 매개 변수와 함께 사용하여 최적화된 IL 어셈블리 집합을 만듭니다.  
   
-2.  소스 제어에 최적화된 IL 어셈블리를 확인합니다.  
+2. 소스 제어에 최적화된 IL 어셈블리를 확인합니다.  
   
-3.  빌드 프로세스에서, 최적화된 IL 이미지를 생성하여 Ngen.exe에 전달하기 위한 빌드 후 단계로 `–Import` 매개 변수와 함께 Mpgo.exe를 호출합니다.  
+3. 빌드 프로세스에서, 최적화된 IL 이미지를 생성하여 Ngen.exe에 전달하기 위한 빌드 후 단계로 `–Import` 매개 변수와 함께 Mpgo.exe를 호출합니다.  
   
  이렇게 하면 모든 어셈블리의 데이터가 최적화됩니다. 최적화된 어셈블리 업데이트(1단계와 2단계)를 더 자주 체크 인하는 경우, 성능 수치의 일관성이 제품 개발 과정 전체에 걸쳐 향상됩니다.  
   
@@ -127,6 +127,7 @@ mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyT
 ```  
   
 ## <a name="see-also"></a>참고 항목
+
 - [Ngen.exe(네이티브 이미지 생성기)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)
 - [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
 - [데스크톱 애플리케이션의 시작 성능 개선](https://go.microsoft.com/fwlink/p/?LinkId=248943)

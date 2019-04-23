@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5194df21e086291611dc32ee03fd928d89df3d6c
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: ad29d522451649aae09786a90088f0a5d33c3ad8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760874"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59234012"
 ---
 ### <a name="accessibility-improvements-in-windows-forms-controls-for-net-472"></a>.NET 4.7.2에 대한 Windows Forms 콘트롤의 접근성 개선 사항
 
@@ -15,4 +15,3 @@ ms.locfileid: "58760874"
 |범위|주요함|
 |버전|4.7.2|
 |형식|대상 변경|
-

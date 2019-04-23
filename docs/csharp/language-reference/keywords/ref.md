@@ -1,19 +1,19 @@
 ---
 title: ref 키워드 - C# 참조
 ms.custom: seodec18
-ms.date: 10/24/2018
+ms.date: 03/26/2019
 f1_keywords:
 - ref_CSharpKeyword
 - ref
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: dc19638dc3753132be01235466a98f87bdce4569
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1faebe2ce1a59798621888e3a518900234720be5
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726652"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59116258"
 ---
 # <a name="ref-c-reference"></a>ref(C# 참조)
 
@@ -24,10 +24,9 @@ ms.locfileid: "54726652"
 - 멤버 본문에서 참조 반환 값이 호출자가 수정하려는 참조로 로컬에 저장되거나 일반적으로 로컬 변수가 참조를 기준으로 다른 값에 액세스 함을 나타냅니다. 자세한 내용은 [ref 로컬](#ref-locals)을 참조하세요.
 - `ref struct` 또는 `ref readonly struct`을 선언하기 위한 `struct` 선언서. 자세한 내용은 [ref struct 형식](#ref-struct-types)을 참조하세요.
 
-
 ## <a name="passing-an-argument-by-reference"></a>참조로 인수 전달
 
-메서드의 매개 변수 목록에 사용되는 경우 `ref` 키워드는 인수가 값이 아니라 참조로 전달됨을 나타냅니다. 인수를 참조로 전달하는 경우 호출된 메서드의 인수 변경 내용이 호출 메서드에 반영됩니다. 예를 들어 호출자가 지역 변수 식 또는 배열 요소 액세스 식을 전달하는 경우 호출된 메서드에서 ref 매개 변수가 참조하는 개체를 바꾸면 메서드 반환 시 호출자의 지역 변수 또는 배열 요소가 새 개체를 참조합니다.
+메서드의 매개 변수 목록에 사용되는 경우 `ref` 키워드는 인수가 값이 아니라 참조로 전달됨을 나타냅니다. `ref` 키워드는 정식 매개 변수를 변수여야 하는 인수의 별칭으로 설정합니다. 즉, 매개 변수에 대한 모든 작업이 인수에서 수행됩니다. 예를 들어 호출자가 지역 변수 식 또는 배열 요소 액세스 식을 전달하는 경우 호출된 메서드에서 ref 매개 변수가 참조하는 개체를 바꾸면 메서드 반환 시 호출자의 지역 변수 또는 배열 요소가 새 개체를 참조합니다.
 
 > [!NOTE]
 > 참조로 전달의 개념과 참조 형식의 개념을 혼동해서는 안 됩니다. 이 두 개념은 서로 다릅니다. 메서드 매개 변수는 값 형식이든 참조 형식이든 관계없이 `ref`를 통해 수정할 수 있으며, 참조로 전달되는 경우 값 형식은 boxing되지 않습니다.  

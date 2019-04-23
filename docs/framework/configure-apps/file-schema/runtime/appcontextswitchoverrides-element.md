@@ -1,7 +1,7 @@
 ---
 title: <AppContextSwitchOverrides> 요소
 ms.custom: updateeachrelease
-ms.date: 03/07/2019
+ms.date: 04/18/2019
 helpviewer_keywords:
 - AppContextSwitchOverrides
 - compatibility switches
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bc4cd94d3acd37244e1d5b882612e4b1da91b90
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.openlocfilehash: e887747a3f036d10e5e5fec6c0cadaf9f34050df
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59136463"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978252"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > 요소
 <xref:System.AppContext> 클래스에 사용되는 스위치를 하나 이상 정의하여 새 기능의 옵트아웃 메커니즘을 제공합니다.  
@@ -98,6 +98,7 @@ ms.locfileid: "59136463"
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|컨트롤 여부를 값을 [cspparameters.parentwindowhandle에](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle) 속성은는 [IntPtr](xref:System.IntPtr) 나타내는 창에 메모리 위치 처리 또는 창 핸들 (HWND) 인지는. 자세한 내용은 [완화: Cspparameters.parentwindowhandle에 HWND 필요](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value)합니다. |.NET Framework 4.7|   
 |`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|일부 SignedCMS 작업에 대 한 기본값은 SHA1 또는 SHA256 여부를 결정 합니다.<br>SHA1 관련 충돌 문제로 인해 SHA256을 사용하는 것이 좋습니다.|.NET Framework 4.7.1|
 |`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|일부 SignedXML 작업에 대 한 기본값은 SHA1 또는 SHA256 여부를 결정 합니다.<br>SHA1 관련 충돌 문제로 인해 SHA256을 사용하는 것이 좋습니다.|.NET Framework 4.7.1|
+|`Switch.System.Security.Cryptography.`<br/>`UseLegacyFipsThrow`|FIPS 모드 throw의 클래스를 관리 되는 암호화를 사용 하는지 여부를 제어를 <xref:System.Security.Cryptography.CryptographicException> (`true`) 또는 시스템 라이브러리의 구현을 사용 (`false`).|.NET Framework 4.8|
 |`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|결정 하는지 여부를 `TransportWithMessageCredential` 보안 모드에서는 메시지를 부호 없는 "to" 헤더가 합니다. 이 옵트인 스위치입니다. 자세한 내용은 [.NET Framework 4.6.1의에서 런타임 변경 내용](../../../migration-guide/runtime/4.5.2-4.6.1.md#windows-communication-foundation-wcf)합니다.|.NET Framework 4.6.1| 
 |`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|컨트롤 여부를 합니다 <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})> 생성자에서 throw를 <xref:System.ArgumentException> 요소 중 하나 이면 `null`합니다.|.NET Framework 4.7.1| 
 |`Switch.System.ServiceModel.`<br />`DisableCngCertificates`|CSG 키 저장소 공급자를 예외를 throw X509를 사용 하려고 인증서를 사용 하 여 여부를 결정 합니다. 자세한 내용은 [WCF 전송 보안에서 CNG를 사용 하 여 저장 한 인증서 지원](../../../migration-guide/retargeting/4.6.1-4.6.2.md#wcf-transport-security-supports-certificates-stored-using-cng)합니다.|.NET Framework 4.6.1|
@@ -109,6 +110,7 @@ ms.locfileid: "59136463"
 |`Switch.System.ServiceModel.`<br/>`UseSha1InPipeConnectionGetHashAlgorithm`|WCF는 SHA1 또는 SHA256 해시를 명명 된 파이프에 대 한 임의 이름을 생성을 사용 하는지 여부를 제어 합니다.<br>SHA1 관련 충돌 문제로 인해 SHA256을 사용하는 것이 좋습니다.|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.Internals`<br/>`IncludeNullExceptionMessageInETWTrace`|발생시킬지 여부를 제어 하는 [NullReferenceException](xref:System.NullReferenceException) 예외 메시지가 null 인 경우.|.NET Framework 4.7|  
 |`Switch.System.ServiceProcess.`<br/>`DontThrowExceptionsOnStart`|서비스 시작 시 throw 된 예외는 호출자에 게 전파 하는지 여부를 제어 합니다 <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType> 메서드.|.NET Framework 4.7.1|
+|`Switch.System.Threading.UseNetCoreTimer`|컨트롤 여부 <xref:System.Threading.Timer> 인스턴스 확장성이 뛰어난 환경에 대 한 성능 개선 사항을 활용 합니다. 하는 경우 `true`, 성능 향상을 사용 하면 경우 `false` (기본값), 비활성화 된 합니다.|.NET Framework 4.8|
 |`Switch.System.Uri.`<br/>`DontEnableStrictRFC3986ReservedCharacterSets`|때로는 디코딩되는 특정 백분율로 인코딩된 문자를 왼쪽 일관 되 게 인코딩할 이제는 지 여부를 결정 합니다. 하는 경우 `true`,이 고, 그렇지 않으면 디코딩된 `false`합니다.|.NET Framework 4.7.2|
 |`Switch.System.Uri.`<br/>`DontKeepUnicodeBidiFormattingCharacters`|Uri에서 유니코드 양방향 문자를 처리를 결정합니다. `true` Uri;에서를 제거 하려면 `false` 유지 하 고 % 인코딩해야 합니다.|.NET Framework 4.7.2|
 |`Switch.System.Windows.Controls.Grid.`<br/>`StarDefinitionsCanExceedAvailableSpace` |Windows Presentation Foundation 이전 알고리즘을 적용 하는지 여부를 결정 (`true`) 또는 새 알고리즘 (`false`)에서 공간을 할당 \*-열입니다. 자세한 내용은 [완화: Grid 컨트롤의 별 열 공간 할당](../../../migration-guide/retargeting/4.6.2-4.7.md#wpf-grid-allocation-of-space-to-star-columns)합니다. |.NET Framework 4.7 |
@@ -178,4 +180,4 @@ ms.locfileid: "59136463"
 
 - <xref:System.AppContext?displayProperty=nameWithType>
 - [\<런타임 > 요소](runtime-element.md)
-- [\<구성 > 요소](../configuration-element.md)
+- [\<configuration> 요소](../configuration-element.md)

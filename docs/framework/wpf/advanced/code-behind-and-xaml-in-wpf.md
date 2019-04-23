@@ -6,10 +6,10 @@ helpviewer_keywords:
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
 ms.openlocfilehash: 4a77060661cb0d71b0209cbcdeba23ffc2c6e5c7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59088577"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>WPF의 코드 숨김 및 XAML
@@ -17,7 +17,7 @@ ms.locfileid: "59088577"
   
  이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   
--   [전제 조건](#Prerequisites)  
+-   [필수 조건](#Prerequisites)  
   
 -   [코드 숨김 및 XAML 언어](#codebehind_and_the_xaml_language)  
   
@@ -62,5 +62,5 @@ ms.locfileid: "59088577"
 
 - [XAML 개요(WPF)](xaml-overview-wpf.md)
 - [x:Code 내장 XAML 형식](../../xaml-services/x-code-intrinsic-xaml-type.md)
-- [WPF 애플리케이션 빌드](../app-development/building-a-wpf-application-wpf.md)
+- [WPF 응용 프로그램 빌드](../app-development/building-a-wpf-application-wpf.md)
 - [XAML 구문 정보](xaml-syntax-in-detail.md)

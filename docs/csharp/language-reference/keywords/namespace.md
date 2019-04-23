@@ -10,10 +10,10 @@ helpviewer_keywords:
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
 ms.openlocfilehash: 4859c361b3321c1144204f63896152694f6ac5c9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148761"
 ---
 # <a name="namespace-c-reference"></a>namespace(C# 참조)
@@ -28,15 +28,15 @@ ms.locfileid: "59148761"
 
 - 다른 네임스페이스
 
-- [클래스](class.md)
+- [class](class.md)
 
-- [interface(인터페이스)](interface.md)
+- [interface](interface.md)
 
 - [struct](struct.md)
 
 - [enum](enum.md)
 
-- [대리자(delegate)](delegate.md)
+- [delegate](delegate.md)
 
 C# 소스 파일에서 네임스페이스를 명시적으로 선언하는지 여부에 관계없이 컴파일러는 기본 네임스페이스를 추가합니다. 전역 네임스페이스라고도 하는 이 명명되지 않은 네임스페이스는 모든 파일에 있습니다. 전역 네임스페이스의 모든 식별자는 명명된 네임스페이스에서 사용할 수 있습니다.
 
@@ -60,7 +60,7 @@ C# 소스 파일에서 네임스페이스를 명시적으로 선언하는지 여
 
 - [네임스페이스 사용](../../programming-guide/namespaces/using-namespaces.md)
 
-- [방법: 글로벌 네임스페이스 별칭 사용](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
+- [방법: 전역 네임스페이스 별칭 사용](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 

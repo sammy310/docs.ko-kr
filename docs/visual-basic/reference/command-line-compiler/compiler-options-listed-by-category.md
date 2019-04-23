@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
 ms.openlocfilehash: 333bfb539fc375fd8f2dd170a187002fcf81ea2b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58827369"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic 컴파일러 옵션 범주별 목록
@@ -72,7 +72,7 @@ Visual Basic 명령줄 컴파일러는 Visual Studio 통합된 개발 환경 (ID
 |[-warnaserror](../../../visual-basic/reference/command-line-compiler/warnaserror.md)|경고를 오류로 승격합니다.|  
 |`-ruleset:<file>`|특정 진단을 사용하지 않는 규칙 집합 파일을 지정합니다.|  
   
-## <a name="help"></a>도움말  
+## <a name="help"></a>Help  
   
 |옵션|용도|  
 |---|---|  

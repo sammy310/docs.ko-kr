@@ -3,10 +3,10 @@ title: 데이터베이스 스키마 정보 검색
 ms.date: 03/30/2017
 ms.assetid: 79038d52-f122-4fd4-9bfb-aaa22d6a114b
 ms.openlocfilehash: 885d3c9ad61c9099c960ddb0c0f77fa8a98dbefa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59133707"
 ---
 # <a name="retrieving-database-schema-information"></a>데이터베이스 스키마 정보 검색
@@ -25,7 +25,7 @@ ms.locfileid: "59133707"
  스키마 제한  
  사용 하 여 사용할 수 있는 스키마 제한을 설명 합니다 **GetSchema**합니다.  
   
- [공용 스키마 컬렉션](../../../../docs/framework/data/adonet/common-schema-collections.md)  
+ [공통 스키마 컬렉션](../../../../docs/framework/data/adonet/common-schema-collections.md)  
  모든 .NET Framework 관리 공급자에서 지원하는 모든 공통 스키마 컬렉션에 대해 설명합니다.  
   
  [SQL Server 스키마 컬렉션](../../../../docs/framework/data/adonet/sql-server-schema-collections.md)  

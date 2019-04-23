@@ -3,10 +3,10 @@ title: '방법: 대리자 메서드 (Visual Basic) 호출'
 ms.date: 07/20/2015
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
 ms.openlocfilehash: ac3e32010e7c20ba76e39915d694b11ab3a65d40
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319614"
 ---
 # <a name="how-to-invoke-a-delegate-method-visual-basic"></a>방법: 대리자 메서드 (Visual Basic) 호출
@@ -47,4 +47,4 @@ ms.locfileid: "59319614"
 - [Delegate 문](../../../../visual-basic/language-reference/statements/delegate-statement.md)
 - [대리자](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
 - [이벤트](../../../../visual-basic/programming-guide/language-features/events/index.md)
-- [다중 스레드 응용 프로그램](../../../../standard/threading/using-threads-and-threading.md)
+- [다중 스레드 애플리케이션](../../../../standard/threading/using-threads-and-threading.md)

@@ -3,10 +3,10 @@ title: ClickOnce를 사용하여 WCF 응용 프로그램 배포
 ms.date: 03/30/2017
 ms.assetid: 1a11feee-2a47-4d3e-a28a-ad69d5ff93e0
 ms.openlocfilehash: 1820b00aa903633750f74f319f9cf8038ba2b043
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086236"
 ---
 # <a name="deploying-wcf-applications-with-clickonce"></a>ClickOnce를 사용하여 WCF 응용 프로그램 배포
@@ -16,5 +16,5 @@ ClickOnce 기술을 사용 하 여 Windows Communication Foundation (WCF)를 사
   
 ## <a name="see-also"></a>참고자료
 
-- [Trusted Application Deployment Overview](https://go.microsoft.com/fwlink/?LinkId=94775)
+- [신뢰할 수 있는 응용 프로그램 배포 개요](https://go.microsoft.com/fwlink/?LinkId=94775)
 - [ClickOnce 배포에 대 한 Windows Forms 응용 프로그램](https://go.microsoft.com/fwlink/?LinkId=94776)

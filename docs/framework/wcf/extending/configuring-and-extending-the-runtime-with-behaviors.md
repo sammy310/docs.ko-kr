@@ -5,11 +5,11 @@ helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
 ms.openlocfilehash: 71057ec219f46cb8b51eb9b44d8b93af540d1b01
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59344249"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768204"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>동작을 사용하여 런타임 구성 및 확장
 동작을 사용 하 여 기본 동작을 수정 하 고 검사 하 고 서비스 구성의 유효성을 검사 하거나 Windows Communication Foundation (WCF) 클라이언트와 서비스 응용 프로그램에서 런타임 동작을 수정 하는 사용자 지정 확장을 추가할 수 있습니다. 이 항목에서는 동작 인터페이스에 대해 설명하고 이를 구현하는 방법 및 프로그래밍 방식이나 구성 파일을 통해 서비스 응용 프로그램의 서비스 설명 또는 클라이언트 응용 프로그램의 엔드포인트에 추가하는 방법에 대해 설명합니다. 시스템 제공 동작 사용에 대 한 자세한 내용은 참조 하십시오 [서비스 런타임 동작 지정](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) 하 고 [클라이언트 런타임 동작 지정](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)합니다.  

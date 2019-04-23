@@ -11,11 +11,11 @@ helpviewer_keywords:
 - list views [Windows Forms], selecting items
 ms.assetid: ddea918e-1ddf-47f4-bd09-1e9b4c9d0c39
 ms.openlocfilehash: b3cfcc6c2873dfb0eb95cf7950adc6b2bb73e74c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143184"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977615"
 ---
 # <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a>방법: Windows Forms ListView 컨트롤에서 항목 선택
 이 예제에서는 프로그래밍 방식으로 Windows Forms에서 항목을 선택 하는 방법에 설명 <xref:System.Windows.Forms.ListView> 제어 합니다. 프로그래밍 방식으로 항목을 선택 하면 자동으로 바뀌지 않습니다에 포커스를 <xref:System.Windows.Forms.ListView> 제어 합니다. 따라서 일반적으로 하려는 항목을 선택할 때 강조 하는 항목을 설정 합니다.  

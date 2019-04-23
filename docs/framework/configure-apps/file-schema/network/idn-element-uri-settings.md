@@ -1,19 +1,19 @@
 ---
-title: <idn> 요소 (Uri 설정)
+title: <idn> 요소(URI 설정)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
 ms.openlocfilehash: 2d2729f9120d6b6fe673904ad2bf6d005ddf5469
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321759"
 ---
 # <a name="idn-element-uri-settings"></a>\<idn > 요소 (Uri 설정)
 다국어 도메인 이름 (IDN) 구문 분석 된 도메인 이름에 적용 됩니다 지정 합니다.  
   
 ## <a name="schema-hierarchy"></a>스키마 계층 구조  
- [\<구성 > 요소](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [\<configuration> 요소](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
  [\<Uri > 요소 (Uri 설정)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
 ms.openlocfilehash: 5495d8198d30f4462fa9772f7d663664c82c6dee
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296344"
 ---
 # <a name="working-with-nats-and-firewalls"></a>NAT 및 방화벽 작업
@@ -32,7 +32,7 @@ ms.locfileid: "59296344"
  개인 사용자 방화벽의 일반적인 구성에서는 나가는 연결이 해당 컴퓨터에서 설정될 때까지 들어오는 연결을 금지합니다. 비즈니스 사용자 방화벽의 일반적인 구성에서는 특별히 식별된 그룹을 제외한 모든 포트에서 들어오는 연결을 금지합니다. 예를 들어, HTTP 및 HTTPS 서비스를 제공하기 위해 포트 80 및 443을 제외한 모든 포트에서 연결을 금지하는 방화벽이 있습니다. 개인 사용자와 비즈니스 사용자 모두에 컴퓨터의 신뢰할 수 있는 사용자 또는 프로세스에서 방화벽 구성을 변경할 수 있도록 허용하는 관리되는 방화벽이 있습니다. 관리되는 방화벽은 네트워크 사용을 제어하는 회사 정책이 없는 개인 사용자에게 더 일반적입니다.  
   
 ## <a name="using-teredo"></a>Teredo 사용  
- Teredo는 NAT 뒤에서 컴퓨터의 주소를 직접 지정할 수 있는 IPv6 전환 기술입니다. Teredo는 잠재적 연결을 광고하기 위해 공개적이고 전역적으로 라우팅될 수 있는 서버를 사용합니다. Teredo 서버는 응용 프로그램 클라이언트와 서버에 연결 정보를 교환할 수 있는 공통 만남 지점을 제공합니다. 컴퓨터는 임시 Teredo 주소를 요청하고 패킷이 기존 네트워크를 통해 터널링됩니다. 운영 체제에서 IPv6 및 Teredo 지원을 사용 하도록 설정 해야 하는 WCF에서 teredo를 지원 합니다. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 및 이후 운영 체제에서는 Teredo를 지원 합니다. [!INCLUDE[wv](../../../../includes/wv-md.md)] 및 이후 운영 체제 기본적으로 IPv6를 지원 하기만 하면 사용자가 Teredo를 사용 하도록 합니다. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 및 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 사용자가 IPv6 및 Teredo를 사용 하도록 설정 해야 합니다. 자세한 내용은 참조는 [Teredo 개요](https://go.microsoft.com/fwlink/?LinkId=87571)합니다.  
+ Teredo는 NAT 뒤에서 컴퓨터의 주소를 직접 지정할 수 있는 IPv6 전환 기술입니다. Teredo는 잠재적 연결을 광고하기 위해 공개적이고 전역적으로 라우팅될 수 있는 서버를 사용합니다. Teredo 서버는 응용 프로그램 클라이언트와 서버에 연결 정보를 교환할 수 있는 공통 만남 지점을 제공합니다. 컴퓨터는 임시 Teredo 주소를 요청하고 패킷이 기존 네트워크를 통해 터널링됩니다. 운영 체제에서 IPv6 및 Teredo 지원을 사용 하도록 설정 해야 하는 WCF에서 teredo를 지원 합니다. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 이상 운영 체제에서는 Teredo를 지원합니다. [!INCLUDE[wv](../../../../includes/wv-md.md)] 이상 운영 체제에서는 기본적으로 IPv6을 지원하므로 사용자가 Teredo를 사용하도록 설정하기만 하면 됩니다. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 및 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]에서는 IPv6과 Teredo를 모두 사용하도록 설정해야 합니다. 자세한 내용은 참조는 [Teredo 개요](https://go.microsoft.com/fwlink/?LinkId=87571)합니다.  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>전송 및 메시지 교환 패턴 선택  
  전송 및 MEP 선택은 3단계 프로세스입니다.  
@@ -56,9 +56,9 @@ ms.locfileid: "59296344"
 |주소 지정 기능|서버에서 직접|서버에서 직접(NAT 통과)|서버 NAT|서버 NAT(NAT 통과)|  
 |--------------------|-------------------|--------------------------------------|----------------|-----------------------------------|  
 |클라이언트에서 직접|모든 전송 및 MEP|모든 전송 및 MEP|지원되지 않습니다.|지원되지 않습니다.|  
-|클라이언트에서 직접(NAT 통과)|모든 전송 및 MEP|모든 전송 및 MEP|지원되지 않습니다.|Teredo 사용 TCP 및 모든 MEP. [!INCLUDE[wv](../../../../includes/wv-md.md)] 에 Teredo 사용 HTTP 지 원하는 시스템 수준의 구성 옵션이.|  
+|클라이언트에서 직접(NAT 통과)|모든 전송 및 MEP|모든 전송 및 MEP|지원되지 않습니다.|Teredo 사용 TCP 및 모든 MEP. [!INCLUDE[wv](../../../../includes/wv-md.md)]에는 Teredo 사용 HTTP를 지원하는 시스템 수준의 구성 옵션이 있습니다.|  
 |클라이언트 NAT|모든 비이중 전송 및 MEP 이중 MEP에는 TCP 전송이 필요합니다.|모든 비이중 전송 및 MEP 이중 MEP에는 TCP 전송이 필요합니다.|지원되지 않습니다.|지원되지 않습니다.|  
-|클라이언트 NAT(NAT 통과)|모든 비이중 전송 및 MEP 이중 MEP에는 TCP 전송이 필요합니다.|이중 HTTP 및 모든 MEP를 제외한 모두. 이중 MEP에는 TCP 전송이 필요합니다. 이중 TCP 전송에는 Teredo가 필요합니다. [!INCLUDE[wv](../../../../includes/wv-md.md)] 에 Teredo 사용 HTTP 지 원하는 시스템 수준의 구성 옵션이.|지원되지 않습니다.|Teredo 사용 TCP 및 모든 MEP. [!INCLUDE[wv](../../../../includes/wv-md.md)] 에 Teredo 사용 HTTP 지 원하는 시스템 수준의 구성 옵션이.|  
+|클라이언트 NAT(NAT 통과)|모든 비이중 전송 및 MEP 이중 MEP에는 TCP 전송이 필요합니다.|이중 HTTP 및 모든 MEP를 제외한 모두. 이중 MEP에는 TCP 전송이 필요합니다. 이중 TCP 전송에는 Teredo가 필요합니다. [!INCLUDE[wv](../../../../includes/wv-md.md)]에는 Teredo 사용 HTTP를 지원하는 시스템 수준의 구성 옵션이 있습니다.|지원되지 않습니다.|Teredo 사용 TCP 및 모든 MEP. [!INCLUDE[wv](../../../../includes/wv-md.md)]에는 Teredo 사용 HTTP를 지원하는 시스템 수준의 구성 옵션이 있습니다.|  
   
 |방화벽 제한 사항|열린 서버|관리되는 방화벽이 설치된 서버|HTTP 전용 방화벽이 설치된 서버|아웃바운드 전용 방화벽이 설치된 서버|  
 |---------------------------|-----------------|----------------------------------|-------------------------------------|-----------------------------------------|  

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
 author: ghogen
-ms.openlocfilehash: b26186ccf4a773297db89026797e89f194db2aa4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a98528a4bae1a22352096958cfec2350b21ddf8e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614421"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59103417"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Windows 서비스 응용 프로그램 소개
 과거에 NT 서비스라고 불리던 Microsoft Windows 서비스를 사용하면 고유한 Windows 세션에서 장시간 실행되는 애플리케이션을 만들 수 있습니다. 이러한 서비스는 컴퓨터가 부팅될 때 자동으로 시작될 수 있고, 일시 중지 및 다시 시작할 수 있으며, 사용자 인터페이스를 표시하지 않습니다. 이러한 특징 때문에 서버에서 사용하거나 같은 컴퓨터에서 작업하는 다른 사용자를 방해하지 않는 장기 실행 기능이 필요한 경우 유용합니다. 로그온한 사용자나 기본 컴퓨터 계정과 다른 특정 사용자 계정의 보안 컨텍스트에서 서비스를 실행할 수도 있습니다. 서비스 및 Windows 세션에 대한 자세한 내용은 Windows SDK 설명서를 참조하세요.  
@@ -81,6 +81,7 @@ ms.locfileid: "54614421"
 -   Windows 서비스를 포함하는 프로젝트에는 프로젝트 및 해당 서비스에 대한 설치 구성 요소가 있어야 합니다. 이 작업은 **속성** 창에서 간단히 수행할 수 있습니다. 자세한 내용은 [방법: 서비스 애플리케이션에 설치 관리자 추가](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [Windows 서비스 애플리케이션](../../../docs/framework/windows-services/index.md)
 - [서비스 애플리케이션 프로그래밍 아키텍처](../../../docs/framework/windows-services/service-application-programming-architecture.md)
 - [방법: Windows 서비스 만들기](../../../docs/framework/windows-services/how-to-create-windows-services.md)

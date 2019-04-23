@@ -8,10 +8,10 @@ helpviewer_keywords:
 - security [Windows Forms], printing
 ms.assetid: 48fd36ac-872f-4de0-902a-e52969cd4367
 ms.openlocfilehash: 5ee170980ed02d90606c774e2a7055f047292e33
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197362"
 ---
 # <a name="more-secure-printing-in-windows-forms"></a>Windows Forms의 인쇄 추가 보안
@@ -22,9 +22,9 @@ Windows Forms 응용 프로그램에 인쇄 기능이 포함 되는 경우가 �
 |PrintingPermissionLevel|설명|  
 |-----------------------------|-----------------|  
 |<xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>|설치 된 모든 프린터에 대 한 전체 액세스를 제공합니다.|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>|기본 프린터를 프로그래밍 방식 인쇄 및 인쇄 제한적인 대화 상자를 통해 안전 하 게 인쇄할 수 있습니다. <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> 하위 집합인 <xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>합니다.|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>|보다 제한 된 대화 상자 에서만에서 인쇄를 제공합니다. <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> 하위 집합인 <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>합니다.|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting>|프린터에 대 한 액세스를 차단합니다. <xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting> 하위 집합인 <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>합니다.|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>|기본 프린터를 프로그래밍 방식 인쇄 및 인쇄 제한적인 대화 상자를 통해 안전 하 게 인쇄할 수 있습니다. <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>는 <xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>의 하위 집합입니다.|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>|보다 제한 된 대화 상자 에서만에서 인쇄를 제공합니다. <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>는 <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>의 하위 집합입니다.|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting>|프린터에 대 한 액세스를 차단합니다. <xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting>는 <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>의 하위 집합입니다.|  
   
 ## <a name="see-also"></a>참고자료
 

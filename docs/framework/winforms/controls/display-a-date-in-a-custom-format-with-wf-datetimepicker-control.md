@@ -11,10 +11,10 @@ helpviewer_keywords:
 - dates [Windows Forms], displaying in DateTimePicker control
 ms.assetid: 39767691-2d2b-46b6-a663-b7901e581a6e
 ms.openlocfilehash: 08d5a505229cd434dbf82e8ae4624bb418efd379
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335942"
 ---
 # <a name="how-to-display-a-date-in-a-custom-format-with-the-windows-forms-datetimepicker-control"></a>방법: Windows Forms DateTimePicker 컨트롤을 사용하여 날짜를 사용자 지정 형식으로 표시
@@ -66,4 +66,4 @@ Windows Forms <xref:System.Windows.Forms.DateTimePicker> 컨트롤의 컨트롤�
 ## <a name="see-also"></a>참고자료
 
 - [DateTimePicker 컨트롤](datetimepicker-control-windows-forms.md)
-- [방법: Windows Forms DateTimePicker 컨트롤을 사용하여 날짜 설정 및 반환](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)
+- [방법: Windows Forms DateTimePicker 컨트롤을 포함 하는 설정 및 반환 날짜](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

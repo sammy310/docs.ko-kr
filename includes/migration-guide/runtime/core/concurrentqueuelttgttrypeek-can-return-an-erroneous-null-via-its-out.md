@@ -1,4 +1,12 @@
-### <a name="concurrentqueuelttgttrypeek-can-return-an-erroneous-null-via-its-out-parameter"></a>ConcurrentQueue&lt;T&gt;.TryPeek는 out 매개 변수를 통해 잘못된 null을 반환할 수 있습니다.
+---
+ms.openlocfilehash: a93fbbd787aa50f080337a6170cf8f56d0d24e31
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804557"
+---
+### <a name="concurrentqueuettrypeek-can-return-an-erroneous-null-via-its-out-parameter"></a>ConcurrentQueue\<T>.TryPeek는 out 매개 변수를 통해 잘못된 null을 반환할 수 있습니다.
 
 |   |   |
 |---|---|
@@ -8,4 +16,3 @@
 |버전|4.5|
 |형식|런타임|
 |영향을 받는 API|<ul><li><xref:System.Collections.Concurrent.ConcurrentQueue%601.TryPeek(%600@)?displayProperty=nameWithType></li></ul>|
-

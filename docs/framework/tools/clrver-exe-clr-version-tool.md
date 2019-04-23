@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: cbc2ee86-bdc8-4a65-a8f1-ba23bce3a699
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5543e49ea44c20a536a7097277b246d4041522a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 28ac90eadcc7a13fe946aabf17973ebc602c9d4a
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735437"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59084598"
 ---
 # <a name="clrverexe-clr-version-tool"></a>Clrver.exe(CLR 버전 도구)
 CLR 버전 도구(Clrver.exe)에서는 컴퓨터에서 CLR(공용 언어 런타임)의 모든 설치 버전을 보고합니다.  
@@ -57,5 +57,6 @@ clrver [option]
  `Clrver -all`  
   
 ## <a name="see-also"></a>참고 항목
+
 - [도구](../../../docs/framework/tools/index.md)
 - [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

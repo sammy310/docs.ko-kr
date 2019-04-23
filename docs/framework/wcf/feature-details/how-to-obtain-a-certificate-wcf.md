@@ -5,10 +5,10 @@ helpviewer_keywords:
 - certificates [WCF], obtaining
 ms.assetid: d53762fd-15ea-42dc-b0ea-6a6597aa23f7
 ms.openlocfilehash: 21e9e0609ed63c4398f2df7ba718f8af17464b0a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332484"
 ---
 # <a name="how-to-obtain-a-certificate-wcf"></a>방법: (WCF) 인증서 가져오기
@@ -20,7 +20,7 @@ Windows Communication Foundation (WCF) 중 하나를 사용 하 여 X.509 인증
   
     -   VeriSign, Inc, 같은 인증 기관에서 인증서를 구입합니다.  
   
-    -   자체 인증서 서비스를 설정하고 인증 기관이 인증서에 서명하도록 합니다. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]Windows 2000 Server, Windows 2000 Server Datacenter 및 Windows 2000 Datacenter Server 모든 공개 키 인프라 (PKI)를 지 원하는 인증서 서비스를 포함 합니다. Windows Server 2008을 사용 합니다 [Active Directory 인증서 서비스](https://go.microsoft.com/fwlink/?LinkID=153483) 인증 기관을 관리 하는 역할입니다.  
+    -   자체 인증서 서비스를 설정하고 인증 기관이 인증서에 서명하도록 합니다. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], Windows 2000 Server, Windows 2000 Server Datacenter 및 Windows 2000 Datacenter Server에는 모두 PKI(공개 키 인프라)를 지원하는 인증서 서비스가 포함되어 있습니다. Windows Server 2008을 사용 합니다 [Active Directory 인증서 서비스](https://go.microsoft.com/fwlink/?LinkID=153483) 인증 기관을 관리 하는 역할입니다.  
   
     -   자체 인증서 서비스를 설정하고 인증서가 서명되지 않도록 합니다.  
   
@@ -30,4 +30,4 @@ Windows Communication Foundation (WCF) 중 하나를 사용 하 여 X.509 인증
 ## <a name="see-also"></a>참고자료
 
 - [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [방법: 개발 중에 사용할 임시 인증서 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)
+- [방법: 개발 중 사용할 임시 인증서 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)

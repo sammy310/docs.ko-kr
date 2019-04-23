@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
 ms.openlocfilehash: cde5599734dbeb450e10b2b74cf035b41129d653
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296097"
 ---
 # <a name="ws-transaction-flow"></a>WS Transaction Flow
@@ -188,7 +188,7 @@ Console.WriteLine("Transaction committed");
   
 -   두 번째 `Subtract` 요청은 `TransactionScopeOption.Suppress` 옵션으로 선언된 새 트랜잭션 범위 내에서 수행됩니다. 따라서 클라이언트의 초기 외부 트랜잭션이 표시되지 않고 요청에서 트랜잭션의 흐름을 서비스로 지정하지 않습니다. 이 접근 방식을 사용하면 필요하지 않은 경우 클라이언트에서 트랜잭션 흐름이 실행되지 않도록 하고 트랜잭션 흐름이 서비스로 지정되지 않도록 보호할 수 있습니다. 서비스의 작업은 새 트랜잭션과 연결되지 않은 트랜잭션의 범위 내에서 발생합니다.  
   
--   `Multiply` 클라이언트에서의 정의 생성 하기 때문에 요청이 서비스에 트랜잭션을 전달 되지 않습니다는 `ICalculator` 인터페이스에는 <xref:System.ServiceModel.TransactionFlowAttribute> 로 설정 <xref:System.ServiceModel.TransactionFlowOption>`NotAllowed`.  
+-   `Multiply` 요청에서는`ICalculator` 인터페이스에 대해 클라이언트에서 생성한 정의에 <xref:System.ServiceModel.TransactionFlowAttribute>이<xref:System.ServiceModel.TransactionFlowOption>로 설정된 `NotAllowed`가 포함되므로 트랜잭션의 흐름을 서비스로 지정하지 않습니다.  
   
 -   `Divide` 요청에서도 `ICalculator` 인터페이스에 대해 클라이언트에서 생성한 정의에 `TransactionFlowAttribute`가 포함되지 않으므로 트랜잭션의 흐름을 서비스로 지정하지 않습니다. 또한 서비스의 작업은 또 다른 새 트랜잭션과 연결되지 않은 트랜잭션의 범위 내에서 발생합니다.  
   
@@ -225,7 +225,7 @@ Press <ENTER> to terminate the service.
   
 1. 지침에 따라 C# 또는 Visual Basic.NET 버전의 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)  
   
-2. SQL Server Express Edition 또는 SQL Server를 설치했고 연결 문자열이 서비스의 응용 프로그램 구성 파일에서 올바르게 설정되었는지 확인합니다. 데이터베이스를 사용 하지 않고 샘플을 실행 하려면 설정의 `usingSql` 서비스의 응용 프로그램 구성 파일의 값 `false`  
+2. SQL Server Express Edition 또는 SQL Server를 설치했고 연결 문자열이 서비스의 응용 프로그램 구성 파일에서 올바르게 설정되었는지 확인합니다. 데이터베이스를 사용하지 않고 샘플을 실행하려면 서비스의 응용 프로그램 구성 파일에서 `usingSql` 값을 `false`로 설정합니다.  
   
 3. 단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
   

@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 애플리케이션의.NET 마이크로 서�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: afd3148f77dc4222a077f7ce020260ee889e92cb
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 962d12c054bed3b2623283e17f83b8466ab2811b
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466142"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613280"
 ---
 # <a name="subscribing-to-events"></a>이벤트 구독
 
@@ -325,16 +325,16 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 ### <a name="additional-resources"></a>추가 자료
 
 - **NServiceBus를 사용하여 포크된 eShopOnContainers(특정 소프트웨어)** \
-    [https://go.particular.net/eShopOnContainers](https://go.particular.net/eShopOnContainers)
+    <https://go.particular.net/eShopOnContainers>
 
 - **이벤트 기반 메시징** \
     [http://soapatterns.org/design\_patterns/event\_driven\_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
 
 - **Jimmy Bogard. 복원력에 대한 리팩터링: 결합 평가** \
-    [https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
+    <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 - **게시-구독 채널** \
-    [https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
+    <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
 - **바인딩된 컨텍스트 간 통신** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
@@ -343,19 +343,19 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     [https://en.wikipedia.org/wiki/Eventual\_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
 
 - **Philip Brown. 바인딩된 컨텍스트 통합 전략** \
-    [https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/](https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
+    <https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/>
 
 - **Chris Richardson. 집계, 이벤트 소싱 및 CQRS를 사용한 트랜잭션 마이크로서비스 개발 - 2부** \
-    [https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
+    <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson>
 
 - **Chris Richardson. 이벤트 소싱 패턴** \
-    [https://microservices.io/patterns/data/event-sourcing.html](https://microservices.io/patterns/data/event-sourcing.html)
+    <https://microservices.io/patterns/data/event-sourcing.html>
 
 - **이벤트 소싱 소개** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591559(v=pandp.10)>
 
 - **Event Store database**. 공식 사이트입니다. \
-    [https://geteventstore.com/](https://geteventstore.com/)
+    <https://geteventstore.com/>
 
 - **Patrick Nommensen. 마이크로서비스를 위한 이벤트 기반 데이터 관리** \
     <https://dzone.com/articles/event-driven-data-management-for-microservices-1>
@@ -364,25 +364,25 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     [https://en.wikipedia.org/wiki/CAP\_theorem](https://en.wikipedia.org/wiki/CAP_theorem)
 
 - **CAP 원리란?** \
-    [https://www.quora.com/What-Is-CAP-Theorem-1](https://www.quora.com/What-Is-CAP-Theorem-1)
+    <https://www.quora.com/What-Is-CAP-Theorem-1>
 
 - **데이터 일관성 입문서** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
 - **Rick Saling. CAP 원리: 클라우드와 인터넷의 "모든 것이 다른" 이유** \
-    [https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
+    <https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/>
 
 - **Eric Brewer. CAP 12년 후: "규칙"이 변화하는 방식** \
-    [https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
+    <https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed>
 
 - **Azure Service Bus. 조정된 메시징: 중복 검색**  \
-    [https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
+    <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
 
 - **안정성 가이드**(RabbitMQ 설명서) \
     [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html#consumer)
 
 - **Azure Service Bus. 조정된 메시징: 중복 검색** \
-    [https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
+    <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
 
 - **안정성 가이드**(RabbitMQ 설명서) \
     [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html%23consumer)

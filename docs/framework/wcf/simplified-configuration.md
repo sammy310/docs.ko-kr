@@ -3,14 +3,14 @@ title: 단순화된 구성
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
 ms.openlocfilehash: 13cf8bd46ef3aabb011cb2ddd207963235468662
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184056"
 ---
 # <a name="simplified-configuration"></a>단순화된 구성
-Windows Communication Foundation (WCF) 서비스를 구성 하면 복잡 한 작업을 수 있습니다. 다양한 옵션이 있을 수 있고 경우에 따라 필요한 설정을 확인하는 것이 쉽지 않을 수도 있습니다. 구성 파일을 사용 하면 WCF 서비스의 유연성, 문제를 발견 하기가 그만큼 이들은입니다. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 이러한 문제를 해결 하 고 크기와 서비스 구성의 복잡성을 줄일 수 있습니다.  
+Windows Communication Foundation (WCF) 서비스를 구성 하면 복잡 한 작업을 수 있습니다. 다양한 옵션이 있을 수 있고 경우에 따라 필요한 설정을 확인하는 것이 쉽지 않을 수도 있습니다. 구성 파일을 사용 하면 WCF 서비스의 유연성, 문제를 발견 하기가 그만큼 이들은입니다. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]에서는 이러한 문제를 해결하고 서비스 구성의 크기와 복잡성을 줄일 수 있는 방법을 제공합니다.  
   
 ## <a name="simplified-configuration"></a>단순화된 구성  
  WCF 서비스 구성 파일에는 <`system.serviceModel`> 섹션에서는 <`service`> 호스트 된 각 서비스에 대 한 요소입니다. <`service`> 요소 컬렉션을 포함 <`endpoint`> 각 서비스 및 필요에 따라 서비스 동작의 집합에 대 한 노출 된 끝점을 지정 하는 요소입니다. <`endpoint`> 요소는 지정 된 주소, 바인딩 및 계약이 노출 끝점으로 이동 하 고 선택적으로 바인딩 구성과 끝점 동작도 합니다. <`system.serviceModel`> 섹션도 포함 되어 있습니다를 <`behaviors`> 요소는 서비스 또는 끝점 동작을 지정할 수 있습니다. 다음 예제는 <`system.serviceModel`> 구성 파일의 섹션입니다.  

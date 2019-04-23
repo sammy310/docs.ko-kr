@@ -3,10 +3,10 @@ title: 코드로 WCF 서비스 구성
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
 ms.openlocfilehash: 8a1eeff76b02315143fb7b50ccc41aa18bb9eb0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225705"
 ---
 # <a name="configuring-wcf-services-in-code"></a>코드로 WCF 서비스 구성
@@ -103,6 +103,6 @@ public class Service1 : IService1
 - [구성 및 메타데이터 지원](../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)
 - [구성](../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)
 - [방법: 구성에서 서비스 바인딩 지정](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
-- [방법: 구성에서 서비스 엔드포인트 만들기](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
-- [방법: 구성 파일을 사용하여 서비스에 대한 메타데이터 게시](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [방법: 구성에서 서비스 끝점 만들기](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+- [방법: 구성 파일을 사용 하는 서비스의 메타 데이터 게시](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [방법: 구성에서 클라이언트 바인딩 지정](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)

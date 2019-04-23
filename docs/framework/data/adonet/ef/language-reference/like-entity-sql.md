@@ -3,10 +3,10 @@ title: LIKE(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
 ms.openlocfilehash: 9463a5cb522a3d3dab7725c4b71a5970d1bdf19d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302259"
 ---
 # <a name="like-entity-sql"></a>LIKE(Entity SQL)
@@ -32,19 +32,19 @@ match [NOT] LIKE pattern [ESCAPE escape]
  LIKE의 결과를 부정하도록 지정합니다.  
   
 ## <a name="return-value"></a>반환 값  
- `true` 경우는 `string` 패턴과 일치 하 고, 그렇지 않으면 `false`합니다.  
+ `true`이 패턴과 일치하면 `string`이고, 그렇지 않으면 `false`입니다.  
   
 ## <a name="remarks"></a>설명  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] LIKE 연산자를 사용 하는 식이 같음을 필터 조건으로 사용 하는 식으로 동일한 방식으로 거의 계산 됩니다. 하지만, LIKE 연산자를 사용하는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 식에는 리터럴과 와일드카드 문자 모두가 포함될 수 있습니다.  
+ LIKE 연산자를 사용하는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 식의 계산은 같음을 필터 조건으로 사용하는 식과 동일한 방법으로 이루어집니다. 하지만, LIKE 연산자를 사용하는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 식에는 리터럴과 와일드카드 문자 모두가 포함될 수 있습니다.  
   
  다음 표에서는 패턴 `string`의 구문을 설명합니다.  
   
 |와일드카드 문자|설명|예제|  
 |------------------------|-----------------|-------------|  
 |%|문자 0개 이상으로 이루어진 임의의 `string`입니다.|`title like '%computer%'` 단어 포함 된 모든 제목을 찾습니다 `"computer"` 제목에 있습니다.|  
-|_(밑줄)|임의의 단일 문자입니다.|`firstname like '_ean'` 모든 4 문자로 이루어진 이름을 찾습니다 끝나야 `"ean`, "Dean 이나 Sean 등입니다.|  
-|[ ]|지정된 범위([a-f]) 또는 집합([abcdef]) 내의 임의의 단일 문자입니다.|`lastname like '[C-P]arsen'` 으로 성을 찾습니다 되 고 "arsen"으로 끝나는 C와은 Carsen 이나 Larsen P 사이의 단일 문자로 시작 합니다.|  
-|[^]|지정된 범위([^a-f]) 또는 집합([^abcdef])에 속하지 않는 임의의 단일 문자입니다.|`lastname like 'de[^l]%'` "de"로 시작 하 고 그 다음 문자 "l"을 포함 하지 않는 성을 찾습니다.|  
+|_(밑줄)|임의의 단일 문자입니다.|`firstname like '_ean'`은 Dean이나 Sean처럼 `"ean`"으로 끝나면서 4문자로 이루어진 이름을 찾습니다.|  
+|[ ]|지정된 범위([a-f]) 또는 집합([abcdef]) 내의 임의의 단일 문자입니다.|`lastname like '[C-P]arsen'`은 Carsen이나 Larsen처럼 C와 P 사이의 단일 문자로 시작되고 "arsen"으로 끝나는 성을 찾습니다.|  
+|[^]|지정된 범위([^a-f]) 또는 집합([^abcdef])에 속하지 않는 임의의 단일 문자입니다.|`lastname like 'de[^l]%'`는 "de"로 시작되고 그 다음 문자에 "l"이 포함되지 않는 성을 모두 찾습니다.|  
   
 > [!NOTE]
 >  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] LIKE 연산자와 ESCAPE 절은 `System.DateTime` 또는 `System.Guid` 값에 적용할 수 없습니다.  

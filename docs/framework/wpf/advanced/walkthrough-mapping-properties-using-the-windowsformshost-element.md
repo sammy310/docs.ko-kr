@@ -9,10 +9,10 @@ helpviewer_keywords:
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
 ms.openlocfilehash: edd9d6f698ba27cacb5e9a5eecab43f58d47b8e1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296526"
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>연습: WindowsFormsHost 요소를 사용하여 속성 매핑
@@ -83,7 +83,7 @@ ms.locfileid: "59296526"
 
      합니다 `AddClipMapping` 에 대 한 새 매핑을 추가 하는 메서드는 <xref:System.Windows.UIElement.Clip%2A> 속성입니다.
 
-     `OnClipChange` 메서드 변환 하는 <xref:System.Windows.UIElement.Clip%2A> 속성을는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.Region%2A> 속성입니다.
+     `OnClipChange` 메서드 변환 하는 <xref:System.Windows.UIElement.Clip%2A> 속성을 합니다 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Control.Region%2A> 속성.
 
      합니다 `Window1_SizeChanged` 창의 처리 <xref:System.Windows.FrameworkElement.SizeChanged> 이벤트 응용 프로그램 창에 맞게 클리핑 영역의 크기입니다.
 
@@ -113,7 +113,7 @@ ms.locfileid: "59296526"
 
      합니다 `ReplaceFlowDirectionMapping` 방법에 대 한 기본 매핑을 바꿉니다는 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 속성입니다.
 
-     `OnFlowDirectionChange` 메서드 변환 하는 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 속성을는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.RightToLeft%2A> 속성입니다.
+     `OnFlowDirectionChange` 메서드 변환 하는 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 속성을 합니다 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Control.RightToLeft%2A> 속성.
 
      `cb_CheckedChanged` 메서드 핸들을 <xref:System.Windows.Forms.CheckBox.CheckedChanged> 이벤트에는 <xref:System.Windows.Forms.CheckBox> 컨트롤입니다. 할당 된 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 속성의 값에 기반을 <xref:System.Windows.Forms.CheckBox.CheckState%2A> 속성
 
@@ -145,7 +145,7 @@ ms.locfileid: "59296526"
 
      `WindowLoaded` 메서드 핸들을 <xref:System.Windows.FrameworkElement.Loaded> 이벤트 하 고 다음과 같은 초기화를 수행 합니다.
 
-    -   만듭니다는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.CheckBox> 제어 합니다.
+    -   만듭니다는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.CheckBox> 제어 합니다.
 
     -   연습에서 이전에 정의한 메서드를 호출하여 속성 매핑을 설정합니다.
 

@@ -11,10 +11,10 @@ ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: caa9afcb1ab2ca53bba849c39651ca4cba3a9c77
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316533"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>방법: 샌드박스에서 부분적으로 신뢰할 수 있는 코드 실행
@@ -63,7 +63,7 @@ AppDomain.CreateDomain( string friendlyName,
     PermissionSet internetPS = SecurityManager.GetStandardSandbox(ev);  
     ```  
   
-     <xref:System.Security.SecurityManager.GetStandardSandbox%2A> 메서드는 증거의 영역에 따라 `Internet` 권한 집합 또는 `LocalIntranet` 권한 집합을 반환합니다. <xref:System.Security.SecurityManager.GetStandardSandbox%2A> 참조로 전달 되는 증명 정보 개체의 일부에 대 한 id 권한을 생성 합니다.  
+     <xref:System.Security.SecurityManager.GetStandardSandbox%2A> 메서드는 증거의 영역에 따라 `Internet` 권한 집합 또는 `LocalIntranet` 권한 집합을 반환합니다. <xref:System.Security.SecurityManager.GetStandardSandbox%2A>는 참조로 전달되는 일부 증거 개체에 대한 ID 권한을 생성합니다.  
   
 2. 신뢰할 수 없는 코드를 호출하는 호스팅 클래스(이 예제에서 이름은 `Sandboxer`)가 포함된 어셈블리에 서명합니다. 어셈블리에 서명하는 데 사용된 <xref:System.Security.Policy.StrongName>을 <xref:System.AppDomain.CreateDomain%2A> 호출에 대한 `fullTrustAssemblies` 매개 변수의 <xref:System.Security.Policy.StrongName> 배열에 추가합니다. 부분 신뢰 코드를 실행할 수 있게 하거나 부분 신뢰 응용 프로그램에 서비스를 제공하려면 호스팅 클래스가 완전히 신뢰된 코드로 실행되어야 합니다. 어셈블리의 <xref:System.Security.Policy.StrongName>을 읽는 방법은 다음과 같습니다.  
   
@@ -167,7 +167,7 @@ AppDomain.CreateDomain( string friendlyName,
     }  
     ```  
   
-     <xref:System.Reflection> 부분적으로 신뢰할 수 있는 어셈블리에서 메서드 핸들을 가져오는 데 사용 됩니다. 핸들을 사용하여 최소 권한을 사용하는 안전한 방법으로 코드를 실행할 수 있습니다.  
+     <xref:System.Reflection>은 부분적으로 신뢰할 수 있는 어셈블리에서 메서드 핸들을 가져오는 데 사용됩니다. 핸들을 사용하여 최소 권한을 사용하는 안전한 방법으로 코드를 실행할 수 있습니다.  
   
      이전 코드에서 <xref:System.Security.SecurityException>을 인쇄하기 전에 완전 신뢰 권한에 대한 <xref:System.Security.PermissionSet.Assert%2A>를 기록해 둡니다.  
   

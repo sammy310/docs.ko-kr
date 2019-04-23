@@ -3,10 +3,10 @@ title: SELECT(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
 ms.openlocfilehash: d6250871b8e22b73b49a94ee7ae7835f53a7c7cd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306432"
 ---
 # <a name="select-entity-sql"></a>SELECT(Entity SQL)
@@ -62,7 +62,7 @@ SELECT customers.Name FROM customers AS c
  FULL, INNER, LEFT, OUTER, ON, RIGHT 등의 JOIN 구문을 사용할 수도 있습니다. ON은 내부 조인에 필수적이지만 크로스 조인에는 사용할 수 없습니다.  
   
 ## <a name="row-and-value-select-clauses"></a>ROW 및 VALUE SELECT 절  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 두 가지 변형의 SELECT 절을 지원합니다. 하나는 행 선택으로서, SELECT 키워드로 식별됩니다. 이 절은 프로젝션될 값을 하나 이상 지정하는 데 사용됩니다. 반환되는 값 주위에 행 래퍼가 암시적으로 추가되므로, 쿼리 식의 결과는 항상 행의 multiset입니다.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 에서는 두 가지 변형의 SELECT 절을 지원합니다. 하나는 행 선택으로서, SELECT 키워드로 식별됩니다. 이 절은 프로젝션될 값을 하나 이상 지정하는 데 사용됩니다. 반환되는 값 주위에 행 래퍼가 암시적으로 추가되므로, 쿼리 식의 결과는 항상 행의 multiset입니다.  
   
  행의 각 쿼리 식에서는 별칭이 지정되어야 합니다. 별칭이 지정되지 않은 경우[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 에서는 별칭 생성 규칙에 따라 별칭을 생성합니다.  
   

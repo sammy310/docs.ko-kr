@@ -5,10 +5,10 @@ helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
 ms.openlocfilehash: e34f2033ec0f7dac784634d06712d65786503299
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59099770"
 ---
 # <a name="queues-overview"></a>큐 개요
@@ -81,5 +81,5 @@ ms.locfileid: "59099770"
 - [일시 대기 통신](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)
 - [Windows Communication Foundation에서 메시지 큐로](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
 - [메시지 큐(MSMQ) 설치](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
-- [Windows Communication Foundation로 메시지 큐](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)
+- [메시지 큐에서 indows Communication Foundation으로](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)
 - [메시지 큐에 대한 메시지 보안](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

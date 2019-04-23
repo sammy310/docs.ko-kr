@@ -14,10 +14,10 @@ ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 85cf8f32a3dbf283e75052548f5963e8a7da0ed2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321057"
 ---
 # <a name="how-to-create-and-initialize-trace-listeners"></a>방법: 추적 수신기 만들기 및 초기화
@@ -98,5 +98,5 @@ ms.locfileid: "59321057"
 
 - [추적 수신기](../../../docs/framework/debug-trace-profile/trace-listeners.md)
 - [추적 스위치](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [방법: 애플리케이션 코드에 추적 문 추가](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [방법: 응용 프로그램 코드에 Trace 문 추가](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [응용 프로그램 추적 및 조율](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

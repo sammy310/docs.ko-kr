@@ -3,11 +3,11 @@ title: '방법: 오류 처리'
 ms.date: 03/30/2017
 ms.assetid: de566e39-9358-44ff-8244-780f6b799966
 ms.openlocfilehash: 3752e358230b76d8984fa8e6a2ded43ad0eb2c6c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334993"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979396"
 ---
 # <a name="how-to-error-handling"></a>방법: 오류 처리
 이 항목에서는 오류 처리를 사용하는 라우팅 구성을 만드는 데 필요한 기본 단계에 대해 간략하게 설명합니다. 이 예제에서는 메시지를 대상 엔드포인트로 라우트합니다. 네트워크 또는 통신 관련 오류(<xref:System.ServiceModel.CommunicationException>)로 인해 메시지를 전달할 수 없는 경우에는 메시지가 대체 엔드포인트로 다시 보내집니다.  

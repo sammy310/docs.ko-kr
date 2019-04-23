@@ -5,10 +5,10 @@ f1_keywords:
 - vbrID430
 ms.assetid: d985bb7e-e48e-443e-86f2-ddb86758757c
 ms.openlocfilehash: 4545c6d3bc302dba0c37e5ae6ebefa8939b0cff9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305925"
 ---
 # <a name="class-does-not-support-automation-or-does-not-support-expected-interface"></a>클래스가 자동화를 지원하지 않거나 필요한 인터페이스를 지원하지 않습니다.
@@ -23,4 +23,4 @@ ms.locfileid: "59305925"
 ## <a name="see-also"></a>참고자료
 
 - [오류 형식](../../../visual-basic/programming-guide/language-features/error-types.md)
-- [Talk to Us](/visualstudio/ide/talk-to-us)
+- [의견 보내기](/visualstudio/ide/talk-to-us)

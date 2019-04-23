@@ -10,10 +10,10 @@ helpviewer_keywords:
 - automatic sizing
 ms.assetid: f55175c6-424e-4782-a86e-3f79c1550235
 ms.openlocfilehash: b51d3bd8e9d8816dfae6c10fc752adb0b3cea59c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337788"
 ---
 # <a name="tablelayoutpanel-control-windows-forms"></a>TableLayoutPanel 컨트롤(Windows Forms)
@@ -26,25 +26,25 @@ ms.locfileid: "59337788"
  [TableLayoutPanel 컨트롤에 대한 모범 사례](best-practices-for-the-tablelayoutpanel-control.md)  
  <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤의 레이아웃 기능을 최대한 활용할 수 있게 해주는 권장 사항을 간략하게 설명합니다.  
   
- [TableLayoutPanel 컨트롤의 AutoSize 동작](autosize-behavior-in-the-tablelayoutpanel-control.md)  
+ [TableLayoutPanel 컨트롤 개요](autosize-behavior-in-the-tablelayoutpanel-control.md)  
  <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤이 자동 크기 조정 동작을 지원하는 방법을 설명합니다.  
   
- [방법: TableLayoutPanel 컨트롤에서 자식 컨트롤 고정 및 도킹](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
+ [방법: TableLayoutPanel 컨트롤의 자식 컨트롤 고정 및 도킹](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
  <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤에서 자식 컨트롤을 고정 및 도킹하는 방법을 보여 줍니다.  
   
- [방법: 지역화에 효과적으로 대응하는 Windows Forms 레이아웃 디자인](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)  
+ [방법: 지역화에 효과적으로 대응 하는 Windows Forms 레이아웃 디자인](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)  
  <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 사용하여 지역화에 효과적으로 대응하는 폼을 빌드하는 방법을 보여 줍니다.  
   
- [방법: 데이터 입력에 맞게 크기 조정 가능한 Windows Form 만들기](how-to-create-a-resizable-windows-form-for-data-entry.md)  
+ [방법: 데이터 항목에 대 한 크기 조정 가능한 Windows Form 만들기](how-to-create-a-resizable-windows-form-for-data-entry.md)  
  <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 사용하여 크기 조정에 효과적으로 대응하는 폼을 빌드하는 방법을 보여 줍니다.  
   
-1. [방법: TableLayoutPanel 컨트롤에서 컨트롤 맞춤 및 늘이기](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
+1. [방법: 에서 맞춤 및 늘이기 컨트롤을 TableLayoutPanel 컨트롤](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
   
-2. [방법: TableLayoutPanel 컨트롤에서 행 및 열 확장](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
+2. [방법: TableLayoutPanel 컨트롤의 행과 열 확장](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
   
-3. [방법: TableLayoutPanel 컨트롤에서 열 및 행 편집](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
+3. [방법: TableLayoutPanel 컨트롤의 열과 행 편집](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
   
-4. [연습: TableLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+4. [연습: TableLayoutPanel을 사용 하 여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Forms.TableLayoutPanel>  

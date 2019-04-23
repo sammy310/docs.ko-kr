@@ -3,10 +3,10 @@ title: UriTemplate 및 UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
 ms.openlocfilehash: b0dc3b2b747bc08da239490db7db3ba77d1e7ed8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130249"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate 및 UriTemplateTable
@@ -25,22 +25,22 @@ ms.locfileid: "59130249"
  이 표에서는 구조적으로 비슷한 URI 집합을 보여 줍니다. 각 항목은 URI 템플릿에 해당합니다. 중괄호 안에 있는 세그먼트는 변수를 설명하고 중괄호 밖에 있는 세그먼트는 리터럴 문자열을 설명합니다. WCF 템플릿 클래스 사용 예를 들어 "/ weather/wa/seattle/순환", 수신 URI를 설명 하는 템플릿에 일치 하는 개발자가 "/weather/{state}/{city}/{activity} / {city} / {활동}".  
   
 ## <a name="uritemplate"></a>UriTemplate  
- <xref:System.UriTemplate> URI 템플릿을 캡슐화 하는 클래스입니다. 생성자는 템플릿을 정의하는 문자열 매개 변수를 사용합니다. 이 문자열에는 다음 단원에 설명된 형식의 템플릿이 포함되어 있습니다. <xref:System.UriTemplate> 클래스는 수신 URI를 템플릿에 일치시키고, 템플릿에서 URI를 생성하고, 템플릿에 사용되는 변수 이름 컬렉션을 검색하고, 두 템플릿이 동일한지 확인하고, 템플릿의 문자열을 반환할 수 있는 메서드를 제공합니다.  
+ <xref:System.UriTemplate>은 URI 템플릿을 캡슐화하는 클래스입니다. 생성자는 템플릿을 정의하는 문자열 매개 변수를 사용합니다. 이 문자열에는 다음 단원에 설명된 형식의 템플릿이 포함되어 있습니다. <xref:System.UriTemplate> 클래스는 수신 URI를 템플릿에 일치시키고, 템플릿에서 URI를 생성하고, 템플릿에 사용되는 변수 이름 컬렉션을 검색하고, 두 템플릿이 동일한지 확인하고, 템플릿의 문자열을 반환할 수 있는 메서드를 제공합니다.  
   
- <xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29> 기본 주소와 후보는 URI 및 URI을 템플릿에 일치 하도록 시도 합니다. 일치가 성공적으로 수행되면 <xref:System.UriTemplateMatch> 인스턴스가 반환됩니다. <xref:System.UriTemplateMatch> 개체에는 기본 URI, 후보 URI, 쿼리 매개 변수의 이름/값 컬렉션, 상대 경로 세그먼트 배열, 일치된 변수의 이름/값 컬렉션, 일치를 수행하는 데 사용된 <xref:System.UriTemplate> 인스턴스, 후보 URI의 일치하지 않는 부분을 포함하는 문자열(템플릿에 와일드카드가 있는 경우에 사용됨) 및 템플릿에 연결된 개체 등이 포함되어 있습니다.  
+ <xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29>는 기본 주소와 후보 URI을 사용하고 URI을 템플릿에 일치시키려고 시도합니다. 일치가 성공적으로 수행되면 <xref:System.UriTemplateMatch> 인스턴스가 반환됩니다. <xref:System.UriTemplateMatch> 개체에는 기본 URI, 후보 URI, 쿼리 매개 변수의 이름/값 컬렉션, 상대 경로 세그먼트 배열, 일치된 변수의 이름/값 컬렉션, 일치를 수행하는 데 사용된 <xref:System.UriTemplate> 인스턴스, 후보 URI의 일치하지 않는 부분을 포함하는 문자열(템플릿에 와일드카드가 있는 경우에 사용됨) 및 템플릿에 연결된 개체 등이 포함되어 있습니다.  
   
 > [!NOTE]
 >  <xref:System.UriTemplate> 클래스는 후보 URI를 템플릿에 일치시킬 때 구성표 및 포트 번호를 무시합니다.  
   
- 템플릿에서 URI를 생성할 수 있게 해주는 두 메서드(<xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> 및 <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29>)가 있습니다. <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> 기본 주소와 매개 변수의 이름/값 컬렉션을 사용합니다. 이러한 매개 변수는 템플릿이 바인딩될 때 변수를 대체합니다. <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29> 이름/값 쌍을 사용 하 고 왼쪽에서 오른쪽으로 대체 합니다.  
+ 템플릿에서 URI를 생성할 수 있게 해주는 두 메서드(<xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> 및 <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29>)가 있습니다. <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29>은 기본 주소와 매개 변수의 이름/값 컬렉션을 사용합니다. 이러한 매개 변수는 템플릿이 바인딩될 때 변수를 대체합니다. <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29>은 이름/값 쌍을 사용하고 왼쪽에서 오른쪽으로 대체합니다.  
   
- <xref:System.UriTemplate.ToString> 템플릿 문자열을 반환합니다.  
+ <xref:System.UriTemplate.ToString>은 템플릿 문자열을 반환합니다.  
   
  <xref:System.UriTemplate.PathSegmentVariableNames%2A> 속성은 템플릿 문자열의 경로 세그먼트에 사용되는 변수 이름 컬렉션을 포함합니다.  
   
- <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> 사용 된 <xref:System.UriTemplate> 매개 변수로 두 템플릿이 동일한 지 여부를 지정 하는 부울 값을 반환 합니다. 자세한 내용은이 항목의 뒷부분에 나오는 템플릿 동등성 섹션을 참조 하세요.  
+ <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29>는 <xref:System.UriTemplate>을 매개 변수로 사용하고 두 템플릿이 일치하는지 여부를 지정하는 부울 값을 반환합니다. 자세한 내용은이 항목의 뒷부분에 나오는 템플릿 동등성 섹션을 참조 하세요.  
   
- <xref:System.UriTemplate> HTTP URI 문법을 따르는 모든 URI 구성표를 사용 하 여 작동 하도록 설계 되었습니다. 다음은 지원되는 URI 구성표의 예입니다.  
+ <xref:System.UriTemplate>은 HTTP URI 문법을 따르는 모든 URI 구성표와 함께 사용되도록 만들어졌습니다. 다음은 지원되는 URI 구성표의 예입니다.  
   
 - http://  
   

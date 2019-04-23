@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
 ms.openlocfilehash: 1445a95fc6360a7956048d2bae2d840f9c3f7a99
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325698"
 ---
 # <a name="database-mirroring-in-sql-server"></a>SQL Server에서 데이터베이스 미러링
@@ -61,7 +61,7 @@ string activeServer = connection.DataSource;
   
 |리소스|설명|  
 |--------------|-----------------|  
-|[데이터베이스 미러링 관리](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|SQL Server에서 미러링을 설정 및 구성하는 방법을 설명합니다.|  
+|[데이터베이스 미러링](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|SQL Server에서 미러링을 설정 및 구성하는 방법을 설명합니다.|  
   
 ## <a name="see-also"></a>참고자료
 

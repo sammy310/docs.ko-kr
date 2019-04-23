@@ -9,10 +9,10 @@ helpviewer_keywords:
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
 ms.openlocfilehash: fcb450b86066e24fba9c6a33f7abe0d4749d2c8d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193721"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows Forms의 보안 개요
@@ -20,7 +20,7 @@ ms.locfileid: "59193721"
   
  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 코드에서 보유한 권한과 사용자가 보유한 권한을 구분할 수 있게 해주는 코드 액세스 보안이라는 인프라가 도입되었습니다. 기본적으로 인터넷 및 인트라넷에서 들어오는 코드는 부분 신뢰에서만 실행할 수 있습니다. 부분 신뢰에서는 애플리케이션에 일련의 제한이 적용됩니다. 특히, 애플리케이션의 로컬 하드 디스크 액세스가 제한되며 비관리 코드를 실행할 수 없습니다. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 코드의 ID, 출처, [강력한 이름 어셈블리](../app-domains/strong-named-assemblies.md)가 있는지 여부, 인증서로 서명되었는지 여부 등에 따라 해당 코드가 액세스할 수 있는 리소스를 제어합니다.  
   
- [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] Windows Forms 응용 프로그램을 배포 하는 데 사용할 수 있는 기술을 쉽게 부분 신뢰, 완전 신뢰 또는 부분 신뢰 환경에서 관리자 권한으로 실행 되는 응용 프로그램을 개발할 수 있습니다. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 응용 프로그램이 요청할 수 있도록 완전 신뢰 또는 높은 권한을 로컬 사용자의 책임 방식으로 권한 상승 및 신뢰할 수 있는 응용 프로그램 배포와 같은 기능을 제공 합니다.  
+ Windows Forms 응용 프로그램을 배포하는 데 사용하는 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 기술은 부분 신뢰, 완전 신뢰 또는 높은 권한으로 부분 신뢰에서 실행되는 응용 프로그램을 쉽게 개발할 수 있도록 도와줍니다. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]에서는 응용 프로그램이 책임 있는 방식으로 로컬 사용자로부터 완전 신뢰 또는 높은 권한을 요청할 수 있도록 권한 상승 및 신뢰할 수 있는 응용 프로그램 배포와 같은 기능을 제공합니다.  
   
 ## <a name="understanding-security-in-the-net-framework"></a>.NET Framework의 보안 이해  
  코드 액세스 보안을 통해 코드 발생 위치 및 코드 ID의 다른 측면에 따라 다양한 수준으로 코드를 신뢰할 수 있습니다. 공용 언어 런타임에서 보안 정책을 결정하는 데 사용하는 증거에 대한 자세한 내용은 [증거](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd(v=vs.100))를 참조하세요. 악성 코드로부터 컴퓨터 시스템을 보호하고 의도적으로 또는 실수로 보안이 손상되지 않도록 신뢰할 수 있는 코드를 보호합니다. 코드 액세스 보안을 통해 애플리케이션에 필요한 권한만 지정할 수 있으므로 애플리케이션이 수행할 수 있는 작업에 대한 제어도 강화됩니다. 코드 액세스 보안은 코드에서 단일 코드 액세스 보안 권한 검사를 수행하지 않는 경우에도 공용 언어 런타임을 대상으로 하는 모든 관리 코드에 영향을 줍니다. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]의 보안에 대한 자세한 내용은 [주요 보안 개념](../../standard/security/key-security-concepts.md) 및 [코드 액세스 보안 기본 사항](../misc/code-access-security-basics.md)을 참조하세요.  
@@ -62,9 +62,9 @@ ms.locfileid: "59193721"
 -  
   
 ### <a name="deploying-an-application-with-the-appropriate-permissions"></a>적절한 권한으로 애플리케이션 배포  
- 클라이언트 컴퓨터에 Windows Forms 애플리케이션을 배포하는 가장 일반적인 방법은 애플리케이션에서 실행해야 하는 모든 구성 요소를 설명하는 배포 기술인 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]를 사용하는 것입니다. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 어셈블리 및 응용 프로그램을 구성 하는 파일에 설명 하는 매니페스트 라는 XML 파일이 사용 하 고 응용 프로그램에 필요한 권한을 합니다.  
+ 클라이언트 컴퓨터에 Windows Forms 애플리케이션을 배포하는 가장 일반적인 방법은 애플리케이션에서 실행해야 하는 모든 구성 요소를 설명하는 배포 기술인 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]를 사용하는 것입니다. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]는 매니페스트라는 XML 파일을 사용하여 응용 프로그램을 구성하는 어셈블리 및 파일과 응용 프로그램에 필요한 권한을 설명합니다.  
   
- [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 클라이언트 컴퓨터에서 높은 권한을 요청 하는 것에 대 한 두 가지 기술에 있습니다. 두 기술은 모두 Authenticode 인증서를 사용합니다. 인증서는 애플리케이션이 신뢰할 수 있는 소스에서 제공되었다는 일부 보증을 사용자에게 제공합니다.  
+ [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]에는 클라이언트 컴퓨터에서 높은 권한을 요청하는 두 가지 기술이 있습니다. 두 기술은 모두 Authenticode 인증서를 사용합니다. 인증서는 애플리케이션이 신뢰할 수 있는 소스에서 제공되었다는 일부 보증을 사용자에게 제공합니다.  
   
  다음 표에서는 이러한 기술을 설명합니다.  
   
@@ -87,6 +87,6 @@ ms.locfileid: "59193721"
 - [Windows Forms 보안](windows-forms-security.md)
 - [코드 액세스 보안 기본 사항](../misc/code-access-security-basics.md)
 - [ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)
-- [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview)
+- [신뢰할 수 있는 응용 프로그램 배포 개요](/visualstudio/deployment/trusted-application-deployment-overview)
 - [Mage.exe(매니페스트 생성 및 편집 도구)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
-- [MageUI.exe (매니페스트 생성 및 편집 도구, 그래픽 클라이언트)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [MageUI.exe(매니페스트 생성 및 편집 도구, 그래픽 클라이언트)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

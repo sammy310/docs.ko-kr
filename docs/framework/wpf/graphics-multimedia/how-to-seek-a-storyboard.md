@@ -9,10 +9,10 @@ helpviewer_keywords:
 - seeking Storyboards [WPF]
 ms.assetid: 887bb39a-0c2a-4ae8-956d-1d9f6f8ebbfc
 ms.openlocfilehash: a57272c17a5bc6f5baaa21fb77233fc5693d1914
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59131666"
 ---
 # <a name="how-to-seek-a-storyboard"></a>방법: 스토리보드 검색
@@ -31,4 +31,4 @@ ms.locfileid: "59131666"
   
 ## <a name="see-also"></a>참고자료
 
-- [동기적으로 스토리보드 검색](how-to-seek-a-storyboard-synchronously.md)
+- [동기적으로 Storyboard 검색](how-to-seek-a-storyboard-synchronously.md)

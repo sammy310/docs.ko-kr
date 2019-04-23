@@ -3,10 +3,10 @@ title: 전송 보안
 ms.date: 03/30/2017
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
 ms.openlocfilehash: 036c3db96a14b6e2be299380f495f54436b5c87d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59218968"
 ---
 # <a name="transport-security"></a>전송 보안
@@ -25,7 +25,7 @@ ms.locfileid: "59218968"
  [전송 보안을 통해 가장 사용](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
  전송 보안 모드를 사용하여 수행할 수 있는 5가지 가장 수준에 대해 설명합니다.  
   
- [방법: SSL 인증서를 사용하여 포트 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
+ [방법: SSL 인증서로 포트 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
  SSL(전송) 보안용 X.509 인증서가 있는 컴퓨터에서의 포트 구성 기본 사항에 대해 설명합니다.  
   
 ## <a name="reference"></a>참조  

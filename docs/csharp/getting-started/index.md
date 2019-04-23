@@ -9,10 +9,10 @@ ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
 ms.openlocfilehash: 5c502c3832ca9afc30599d47d0890fae168fa998
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130972"
 ---
 # <a name="get-started-with-c"></a>C\# 시작
@@ -25,7 +25,7 @@ ms.locfileid: "59130972"
 
      C# 언어 및 .NET에 대해 간략히 설명합니다.
 
-* [Visual Studio 2017에서 .NET Core를 사용하여 C# Hello World 애플리케이션 빌드](../../core/tutorials/with-visual-studio.md)
+* [Visual Studio 2017 RC에서 .NET Core를 사용하여 C# Hello World 애플리케이션 빌드](../../core/tutorials/with-visual-studio.md)
 
    Visual Studio의 최신 릴리스인 Visual Studio 2017을 사용하면 Windows용 통합 개발 환경에서 애플리케이션을 코딩, 컴파일, 실행, 디버그, 프로파일링 및 게시할 수 있습니다.
 

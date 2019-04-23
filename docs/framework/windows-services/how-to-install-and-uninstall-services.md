@@ -12,12 +12,12 @@ helpviewer_keywords:
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
-ms.openlocfilehash: 43b5ad2f346406897e8bcbcce5660a6c9524f9af
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 0119fee443aafd1d4215260d2cf42cec9f7eba74
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826268"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59308473"
 ---
 # <a name="how-to-install-and-uninstall-windows-services"></a>방법: Windows 서비스 설치 및 제거
 .NET Framework를 사용하여 Windows 서비스를 개발하는 경우 [*InstallUtil.exe*](../tools/installutil-exe-installer-tool.md) 명령줄 유틸리티를 사용하여 서비스 앱을 신속하게 설치할 수 있습니다. 사용자가 설치하고 제거할 수 있는 Windows 서비스를 릴리스하려는 개발자는 InstallShield를 사용해야 합니다. 자세한 내용은 [설치 관리자 패키지 만들기(Windows 클라이언트)](https://docs.microsoft.com/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-client)를 참조하세요.
@@ -34,13 +34,13 @@ ms.locfileid: "55826268"
   
 ### <a name="install-your-service-manually"></a>서비스를 수동으로 설치  
   
-1.  **시작** 메뉴에서 **Visual Studio \<*version*>** 디렉터리를 선택한 다음, **Developer Command Prompt for VS \<*version*>** 을 선택합니다.
+1. **시작** 메뉴에서 **Visual Studio \<*version*>** 디렉터리를 선택한 다음, **Developer Command Prompt for VS \<*version*>** 을 선택합니다.
   
      Visual Studio용 개발자 명령 프롬프트가 나타납니다. 
   
-2.  프로젝트의 컴파일된 실행 파일이 있는 디렉터리에 액세스합니다.  
+2. 프로젝트의 컴파일된 실행 파일이 있는 디렉터리에 액세스합니다.  
   
-3.  프로젝트의 실행 파일을 매개 변수로 사용하여 명령 프롬프트에서 *InstallUtil.exe*를 실행합니다.  
+3. 프로젝트의 실행 파일을 매개 변수로 사용하여 명령 프롬프트에서 *InstallUtil.exe*를 실행합니다.  
   
     ```console
     installutil <yourproject>.exe  
@@ -58,7 +58,7 @@ ms.locfileid: "55826268"
   
      Visual Studio용 개발자 명령 프롬프트가 나타납니다.  
   
-2.  프로젝트의 출력을 매개 변수로 사용하여 명령 프롬프트에서 *InstallUtil.exe*를 실행합니다.  
+2. 프로젝트의 출력을 매개 변수로 사용하여 명령 프롬프트에서 *InstallUtil.exe*를 실행합니다.  
   
     ```console  
     installutil /u <yourproject>.exe  
@@ -67,6 +67,7 @@ ms.locfileid: "55826268"
 3. 서비스의 실행 파일을 삭제해도 서비스가 레지스트리에 남아 있을 수 있습니다. 이러한 경우에는 [sc delete](/windows-server/administration/windows-commands/sc-delete) 명령을 사용하여 레지스트리에서 서비스의 항목을 제거합니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [Windows 서비스 애플리케이션 소개](../windows-services/introduction-to-windows-service-applications.md)
 - [방법: Windows 서비스 만들기](../windows-services/how-to-create-windows-services.md)
 - [방법: 서비스 애플리케이션에 설치 관리자 추가](../windows-services/how-to-add-installers-to-your-service-application.md)

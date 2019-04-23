@@ -5,21 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
-ms.openlocfilehash: 927a87b250863c4d59e630264ee11286c30deb3a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fa84052bcf9ca97b903111fc02e319b25deb384
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608001"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59296968"
 ---
 # <a name="how-to-assign-user-information-to-group-connections"></a>방법: 그룹 연결에 사용자 정보 할당
 
-  
  다음 예제에서는 이 코드 섹션이 호출되기 전에 애플리케이션이 *UserName*, *SecurelyStoredPassword* 및 *Domain* 변수를 설정하고 *UserName*이 고유하다고 가정하여 사용자 정보를 그룹 연결에 할당하는 방법을 보여 줍니다.  
   
 ### <a name="to-assign-user-information-to-a-group-connection"></a>그룹 연결에 사용자 정보를 할당하려면  
   
-1.  연결 그룹 이름을 만듭니다.  
+1. 연결 그룹 이름을 만듭니다.  
   
     ```csharp  
     SHA1Managed Sha1 = new SHA1Managed();  
@@ -33,7 +32,7 @@ ms.locfileid: "54608001"
     Dim secureGroupName As [String] = Encoding.Default.GetString(updHash)  
     ```  
   
-2.  특정 URL에 대한 요청을 만듭니다. 예를 들어 다음 코드는 URL `http://www.contoso.com.`에 대한 요청을 만듭니다.  
+2. 특정 URL에 대한 요청을 만듭니다. 예를 들어 다음 코드는 URL `http://www.contoso.com.`에 대한 요청을 만듭니다.  
   
     ```csharp  
     WebRequest myWebRequest=WebRequest.Create("http://www.contoso.com");  
@@ -43,7 +42,7 @@ ms.locfileid: "54608001"
     Dim myWebRequest As WebRequest = WebRequest.Create("http://www.contoso.com")  
     ```  
   
-3.  웹 요청에 대한 자격 증명 및 연결 그룹 이름을 설정하고 **GetResponse**를 호출하여 **WebResponse** 개체를 검색합니다.  
+3. 웹 요청에 대한 자격 증명 및 연결 그룹 이름을 설정하고 **GetResponse**를 호출하여 **WebResponse** 개체를 검색합니다.  
   
     ```csharp  
     myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);   
@@ -59,7 +58,7 @@ ms.locfileid: "54608001"
     Dim myWebResponse As WebResponse = myWebRequest.GetResponse()  
     ```  
   
-4.  WebRespose 개체를 사용한 후 응답 스트림을 닫습니다.  
+4. WebRespose 개체를 사용한 후 응답 스트림을 닫습니다.  
   
     ```csharp  
     MyWebResponse.Close();  
@@ -109,5 +108,6 @@ MyWebResponse.Close()
 ```  
   
 ## <a name="see-also"></a>참고 항목
+
 - [연결 관리](../../../docs/framework/network-programming/managing-connections.md)
 - [연결 그룹화](../../../docs/framework/network-programming/connection-grouping.md)

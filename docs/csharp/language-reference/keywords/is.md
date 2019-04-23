@@ -1,19 +1,19 @@
 ---
 title: is - C# 참조
 ms.custom: seodec18
-ms.date: 02/17/2017
+ms.date: 04/09/2019
 f1_keywords:
 - is_CSharpKeyword
 - is
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: a391449afd53b28ae4293865314275782d6e9505
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 83cb308a14a6db99f65b30eded20442d675cbd57
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977060"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480835"
 ---
 # <a name="is-c-reference"></a>is(C# 참조)
 
@@ -51,7 +51,7 @@ ms.locfileid: "56977060"
 
 [!code-csharp[is#2](../../../../samples/snippets/csharp/language-reference/keywords/is/is2.cs#2)]
 
-`expr`은 무명 메서드 및 람다 식을 제외하고 값을 반환하는 모든 식이 될 수 있습니다. 다음 예제에서는 `is`를 사용하여 메서드 호출의 반환 값을 평가합니다.   
+`expr` 무명 메서드 또는 람다 식일 수 없습니다. 값을 반환하는 다른 식일 수 있습니다. 다음 예제에서는 `is`를 사용하여 메서드 호출의 반환 값을 평가합니다.   
 [!code-csharp[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
 
 C# 7.0부터는 [형식 패턴](#type)을 사용한 패턴 일치를 통해 `is` 문을 사용하는 보다 간결한 코드를 작성할 수 있습니다.
@@ -66,7 +66,7 @@ C# 7.0부터는 `is` 및 [switch](../../../csharp/language-reference/keywords/sw
 
 - [var 패턴](#var) - 항상 성공하고 식의 값을 새 로컬 변수에 바인딩하는 일치입니다. 
 
-### <a name="type" /> 형식 패턴 </a>
+### <a name="a-nametype-type-pattern"></a><a name="type" />형식 패턴
 
 형식 패턴을 사용하여 패턴 일치를 수행하는 경우 `is`는 식을 지정된 형식으로 변환할 수 있는지 여부를 테스트하고, 변환할 수 있으면 해당 형식의 변수로 캐스트합니다. 간결한 형식 평가 및 변환을 사용하는 `is` 문의 간단한 확장입니다. `is` 형식 패턴의 일반적인 형식은 다음과 같습니다.
 
@@ -85,6 +85,8 @@ C# 7.0부터는 `is` 및 [switch](../../../csharp/language-reference/keywords/sw
 - *expr*의 컴파일 시간 형식은 *type*의 기본 클래스이고 *expr*의 런타임 형식은 *type*이거나 *type*에서 파생됩니다. 변수의 *컴파일 시간 형식*은 해당 선언에 정의된 변수의 형식입니다. 변수의 *런타임 형식*은 해당 변수에 할당된 인스턴스의 형식입니다.
 
 - *expr*이 *type* 인터페이스를 구현하는 형식의 인스턴스입니다.
+
+C# 7.1부터 *expr*은 제네릭 형식 매개 변수 및 해당 제약 조건을 통해 컴파일 시간 형식을 정의할 수 있습니다. 
 
 *expr*이 `true`이고 `is`가 `if` 문에서 사용되는 경우 *varname*이 할당되며 `if` 문 내의 로컬 범위만 갖습니다.
 
@@ -142,17 +144,15 @@ C# 7.0부터는 `is` 및 [switch](../../../csharp/language-reference/keywords/sw
  
 ### <a name="var" /> var 패턴 </a>
 
-var 패턴을 사용한 패턴 일치는 항상 성공합니다. 사용되는 구문은 다음과 같습니다.
+null이 아닌 식에 대한 var 패턴을 사용한 패턴 일치는 항상 성공합니다. *expr*이 `null`인 경우 `is` 식은 `false`입니다. *expr*의 null이 아닌 값은 항상 *expr*의 런타임 시간 형식과 동일한 형식의 지역 변수에 할당됩니다.  사용되는 구문은 다음과 같습니다.
 
 ```csharp 
    expr is var varname
 ```
 
-여기서 *expr*의 값은 항상 *varname*이라는 로컬 변수에 할당됩니다. *varname*은 *expr*과 동일한 형식의 정적 변수입니다. 다음 예제에서는 var 패턴을 사용하여 `obj`라는 변수에 식을 할당합니다. 그런 다음 `obj`의 값과 형식을 표시합니다.
+다음 예제에서는 var 패턴을 사용하여 `obj`라는 변수에 식을 할당합니다. 그런 다음 `obj`의 값과 형식을 표시합니다.
 
 [!code-csharp[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
-
-*expr*이 `null`인 경우에도 `is` 식은 true이고 *varname*에 `null`을 할당합니다. 
 
 ## <a name="c-language-specification"></a>C# 언어 사양
   

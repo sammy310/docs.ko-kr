@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
-ms.openlocfilehash: 009d95089efdfb78680ca7e364093e5f2b65bc77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 17e16cec34b381cdfe46e1066c3219a93c3780e3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714882"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59216394"
 ---
 # <a name="service-application-programming-architecture"></a>서비스 응용 프로그램 프로그래밍 아키텍처
 Windows 서비스 애플리케이션은 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 클래스에서 상속되는 클래스를 기반으로 합니다. 이 클래스의 메서드를 재정의하고 이 메서드에서 서비스 동작 방식을 결정하는 기능을 정의합니다.  
@@ -67,5 +67,6 @@ Windows 서비스 애플리케이션은 <xref:System.ServiceProcess.ServiceBase?
  <xref:System.ServiceProcess.ServiceController>라는 구성 요소를 사용하여 기존 서비스와 통신하고 서비스의 동작을 제어할 수도 있습니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [Windows 서비스 애플리케이션 소개](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
 - [방법: Windows 서비스 만들기](../../../docs/framework/windows-services/how-to-create-windows-services.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - navigating through objects in data CollectionView [WPF]
 ms.assetid: fcd37590-bce1-4ac9-8b74-3b96c7458b8a
 ms.openlocfilehash: 1507ab4db0c91b670d8bca754f6fd67d887c7041
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59138179"
 ---
 # <a name="how-to-navigate-through-the-objects-in-a-data-collectionview"></a>방법: 데이터 CollectionView에서 개체 탐색
@@ -32,7 +32,7 @@ ms.locfileid: "59138179"
 ## <a name="see-also"></a>참고자료
 
 - [데이터 바인딩 개요](data-binding-overview.md)
-- [보기에서 데이터 정렬](how-to-sort-data-in-a-view.md)
-- [보기에서 데이터 필터링](how-to-filter-data-in-a-view.md)
-- [XAML에서 보기를 사용하여 데이터 정렬 및 그룹화](how-to-sort-and-group-data-using-a-view-in-xaml.md)
+- [뷰의 데이터 정렬](how-to-sort-data-in-a-view.md)
+- [뷰에서 데이터 필터링](how-to-filter-data-in-a-view.md)
+- [XAML 데이터 정렬 및 그룹화](how-to-sort-and-group-data-using-a-view-in-xaml.md)
 - [방법 항목](data-binding-how-to-topics.md)

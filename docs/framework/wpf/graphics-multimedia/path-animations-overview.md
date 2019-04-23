@@ -9,10 +9,10 @@ helpviewer_keywords:
 - path animations [WPF]
 ms.assetid: 979c732c-df74-47a6-be96-8e07b3707d53
 ms.openlocfilehash: 195af217ddf3a78a0ef1bb54957a65b6ce62deae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182470"
 ---
 # <a name="path-animations-overview"></a>경로 애니메이션 개요
@@ -49,13 +49,13 @@ ms.locfileid: "59182470"
   
  여기서 *\<Type>* 은 클래스가 애니메이션을 적용하는 값의 형식입니다.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 다음 경로 애니메이션 클래스를 제공합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 다음 경로 애니메이션 클래스를 제공합니다.  
   
 |속성 형식|해당 경로 애니메이션 클래스|예제|  
 |-------------------|----------------------------------------|-------------|  
 |<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|[경로를 따라 개체에 애니메이션 효과 주기(Double 애니메이션)](how-to-animate-an-object-along-a-path-double-animation.md)|  
 |<xref:System.Windows.Media.Matrix>|<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>|[경로를 따라 개체에 애니메이션 효과 주기(Matrix 애니메이션)](how-to-animate-an-object-along-a-path-matrix-animation.md)|  
-|<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|[경로를 따라 개체에 애니메이션 효과 주기(Point 애니메이션)](how-to-animate-an-object-along-a-path-point-animation.md)|  
+|<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|[경로를 따라 개체에 애니메이션 효과 주기(포인트 애니메이션)](how-to-animate-an-object-along-a-path-point-animation.md)|  
   
  A <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> 생성 <xref:System.Windows.Media.Matrix> 에서 값을 해당 <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.PathGeometry%2A>합니다. 와 함께 사용할 경우는 <xref:System.Windows.Media.MatrixTransform>, <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> 경로 따라 개체를 이동할 수 있습니다. 설정 하는 경우를 <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.DoesRotateWithTangent%2A> 의 속성을 <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> 를 `true`, 개체가 경로의 곡선을 따라 회전 합니다.  
   

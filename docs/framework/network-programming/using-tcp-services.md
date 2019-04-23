@@ -16,14 +16,15 @@ helpviewer_keywords:
 - protocols, TCP
 - Internet, TCP
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
-ms.openlocfilehash: 552fb69910d7186321d834e4bc36abc867a31658
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d9b3c9975c4d10649bdecd6f63cf362a2b2a2738
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602912"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611954"
 ---
 # <a name="using-tcp-services"></a>TCP 서비스 사용
+
 <xref:System.Net.Sockets.TcpClient> 클래스는 TCP를 사용하여 인터넷 리소스의 데이터를 요청합니다. **TcpClient**의 메서드 및 속성은 TCP를 사용하여 데이터를 요청 및 수신하는 <xref:System.Net.Sockets.Socket>을 만들기 위한 세부 정보를 추상화합니다. 원격 디바이스에 대한 연결은 스트림으로 표현되므로 .NET Framework 스트림 처리 기법을 사용하여 데이터를 읽고 쓸 수 있습니다.  
   
  TCP 프로토콜은 원격 엔드포인트에 연결한 후 해당 연결을 사용하여 데이터 패킷을 주고받습니다. TCP는 데이터 패킷이 엔드포인트로 전송되고 도착 시 올바른 순서로 어셈블되도록 합니다.  
@@ -192,7 +193,4 @@ public class TcpTimeServer {
     }  
   
 }  
-```  
-  
-## <a name="see-also"></a>참고 항목
-
+```

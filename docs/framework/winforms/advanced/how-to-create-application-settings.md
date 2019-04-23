@@ -9,10 +9,10 @@ helpviewer_keywords:
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
 ms.openlocfilehash: 5cf109aec8b55650f43f07f5b303c6373df4efc7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305977"
 ---
 # <a name="how-to-create-application-settings"></a>방법: 애플리케이션 설정 만들기
@@ -50,5 +50,5 @@ ms.locfileid: "59305977"
 
 - <xref:System.Configuration.SpecialSettingAttribute>
 - <xref:System.Configuration.LocalFileSettingsProvider>
-- [애플리케이션 설정 개요](application-settings-overview.md)
-- [방법: 애플리케이션 설정 업데이트](how-to-validate-application-settings.md)
+- [응용 프로그램 설정 개요](application-settings-overview.md)
+- [방법: 응용 프로그램 설정 유효성 검사](how-to-validate-application-settings.md)

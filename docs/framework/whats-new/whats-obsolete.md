@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 416192d431234b2ce7d6e53f21803f88371a6805
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 9c84afced8c98530e6d6b02c1cde69e93bd8d7e9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58018751"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59337281"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>.NET Framework 클래스 라이브러리의 사용되지 않는 기능
 .NET Framework는 시간이 지남에 따라 변경됩니다. 새 버전이 나올 때마다 새로운 기능을 제공하는 새로운 형식 및 형식 멤버가 추가됩니다. 기존 형식과 해당 멤버도 시간이 지남에 따라 변경됩니다. 예를 들어 일부 형식은 지원하는 기술이 새로운 기술로 대체됨에 따라 덜 중요해지고 일부 메서드는 보다 편리하거나 보다 완전한 기능을 갖춘 최신 메서드로 대체됩니다.  
@@ -42,9 +42,9 @@ ms.locfileid: "58018751"
   
  이후 버전의 .NET Framework에 대해 기존 코드를 다시 컴파일하지 않도록 선택할 수 있습니다. 대신, 기존의 컴파일된 코드가 실행되는 .NET Framework 버전을 지정할 수 있습니다. 예를 들어 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]에 대해 컴파일된 app1.exe라는 애플리케이션이 있지만 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에 대해 애플리케이션을 실행하려 한다고 가정합니다. 이 경우 다음 단계를 수행해야 합니다.  
   
-1.  주 실행 파일에 대한 구성 파일을 만들고 이름을 *appName*.exe.config로 지정합니다. 여기서 *appName*은 애플리케이션 실행 파일의 이름입니다. 예제에서는 app1.exe라는 애플리케이션에 대해 app1.exe.config라는 구성 파일을 만듭니다.  
+1. 주 실행 파일에 대한 구성 파일을 만들고 이름을 *appName*.exe.config로 지정합니다. 여기서 *appName*은 애플리케이션 실행 파일의 이름입니다. 예제에서는 app1.exe라는 애플리케이션에 대해 app1.exe.config라는 구성 파일을 만듭니다.  
   
-2.  구성 파일에 다음 코드를 추가합니다.  
+2. 구성 파일에 다음 코드를 추가합니다.  
   
     ```xml  
     <configuration>  
@@ -82,4 +82,5 @@ ms.locfileid: "58018751"
  [.NET Framework 2.0에서 사용되지 않는 항목 목록](https://go.microsoft.com/fwlink/?LinkID=125264)  
   
 ## <a name="see-also"></a>참고 항목
+
 - [\<supportedRuntime> 요소](../configure-apps/file-schema/startup/supportedruntime-element.md)

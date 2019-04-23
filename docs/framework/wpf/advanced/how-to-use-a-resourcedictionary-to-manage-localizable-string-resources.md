@@ -11,11 +11,11 @@ helpviewer_keywords:
 - localization [WPF], packaging string resources
 ms.assetid: 19e7d9a5-20df-4ad3-b157-fe6515902e5e
 ms.openlocfilehash: b56a307ed31fc8f7573215eac70350ac5e4b9de1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59311320"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772117"
 ---
 # <a name="how-to-use-a-resourcedictionary-to-manage-localizable-string-resources"></a>방법: ResourceDictionary를 사용하여 지역화 가능한 문자열 리소스 관리
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.ResourceDictionary> 패키지 지역화 가능한 문자열 리소스 Windows Presentation Foundation (WPF) 응용 프로그램에 대 한 합니다.  

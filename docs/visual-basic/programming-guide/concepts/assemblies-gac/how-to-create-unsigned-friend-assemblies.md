@@ -3,10 +3,10 @@ title: '방법: 서명 되지 않은 Friend 어셈블리 (Visual Basic) 만들�
 ms.date: 03/14/2018
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
 ms.openlocfilehash: 4771d0fe116d1532c270cf41b209665d5403a9b8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339179"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>방법: 서명 되지 않은 Friend 어셈블리 (Visual Basic) 만들기

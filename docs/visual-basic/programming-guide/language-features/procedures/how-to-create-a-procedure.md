@@ -9,10 +9,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], about procedures
 ms.assetid: 4f779247-0b50-47e8-9e5c-ab5cf39ac0d2
 ms.openlocfilehash: 56099d334a03e85b816cf48983cbbead0784ef5b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320394"
 ---
 # <a name="how-to-create-a-procedure-visual-basic"></a>방법: 프로시저 (Visual Basic) 만들기
@@ -56,12 +56,12 @@ ms.locfileid: "59320394"
 ## <a name="see-also"></a>참고자료
 
 - [절차](./index.md)
-- [하위 프로시저](./sub-procedures.md)
-- [함수 프로시저](./function-procedures.md)
+- [Sub 프로시저](./sub-procedures.md)
+- [Function 프로시저](./function-procedures.md)
 - [속성 프로시저](./property-procedures.md)
 - [연산자 프로시저](./operator-procedures.md)
 - [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
 - [재귀 프로시저](./recursive-procedures.md)
 - [프로시저 오버로딩](./procedure-overloading.md)
 - [개체 및 클래스](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [개체 지향 프로그래밍 (Visual Basic)](../../concepts/object-oriented-programming.md)
+- [개체 지향 프로그래밍(Visual Basic)](../../concepts/object-oriented-programming.md)

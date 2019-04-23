@@ -8,10 +8,10 @@ helpviewer_keywords:
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
 ms.openlocfilehash: d1442e02d651cd283e5ff63d28f3cfe80e99cc7d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306601"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>방법: 이벤트 구독 및 구독 취소(C# 프로그래밍 가이드)
@@ -102,7 +102,7 @@ ms.locfileid: "59306601"
 ## <a name="see-also"></a>참고 항목
 
 - [이벤트](../../../csharp/programming-guide/events/index.md)
-- [이벤트(event)](../../../csharp/language-reference/keywords/event.md)
-- [방법: .NET Framework 지침을 준수하는 이벤트 게시](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [event](../../../csharp/language-reference/keywords/event.md)
+- [방법: .NET Framework 지침을 따르는 이벤트 게시](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)
 - [-= 연산자(C# 참조)](../../language-reference/operators/subtraction-assignment-operator.md)
 - [+= 연산자](../../../csharp/language-reference/operators/addition-assignment-operator.md)

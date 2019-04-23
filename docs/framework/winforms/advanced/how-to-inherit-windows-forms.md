@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
 ms.openlocfilehash: 0d8799359a12b9bb64331d83df2500bede8c0ff2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314545"
 ---
 # <a name="how-to-inherit-windows-forms"></a>방법: Windows Forms 상속
@@ -42,8 +42,8 @@ ms.locfileid: "59314545"
   
 ## <a name="see-also"></a>참고자료
 
-- [Inherits Statement](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
+- [Inherits 문](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
 - [Imports 문(.NET 네임스페이스 및 형식)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [using](~/docs/csharp/language-reference/keywords/using.md)
 - [기본 폼의 모양 수정 효과](effects-of-modifying-base-form-appearance.md)
-- [Windows Forms 시각적 상속](windows-forms-visual-inheritance.md)
+- [Windows Forms 시각적 개체 상속](windows-forms-visual-inheritance.md)

@@ -12,10 +12,10 @@ helpviewer_keywords:
 - checking spelling [WPF]
 ms.assetid: 6f953d2b-67e8-4012-84ce-53c0e958da47
 ms.openlocfilehash: 7381bafc349506d89058581e9ed62a4348a72865
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076850"
 ---
 # <a name="how-to-enable-spell-checking-in-a-text-editing-control"></a>방법: 텍스트 편집 컨트롤에서 맞춤법 검사 사용
@@ -29,6 +29,6 @@ ms.locfileid: "59076850"
   
 ## <a name="see-also"></a>참고자료
 
-- [상황에 맞는 메뉴에서 맞춤법 검사 사용](how-to-use-spell-checking-with-a-context-menu.md)
+- [상황에 맞는 메뉴로 맞춤법 검사 사용](how-to-use-spell-checking-with-a-context-menu.md)
 - [TextBox 개요](textbox-overview.md)
 - [RichTextBox 개요](richtextbox-overview.md)

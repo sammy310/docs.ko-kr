@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30971
 ms.assetid: 75d2e8b5-2fdc-4623-8b32-cba805dab7db
 ms.openlocfilehash: 951f90a9209ff31896f4426ceb75f05b012897a6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335149"
 ---
 # <a name="message-this-error-could-also-be-due-to-mixing-a-file-reference-with-a-project-reference-to-assembly-assemblyname"></a>\<메시지 > 참조 어셈블리에 대 한 프로젝트 참조를 사용 하 여 파일 참조가 섞여 있기 때문에이 오류도 수 '\<assemblyname >'
@@ -32,7 +32,7 @@ ms.locfileid: "59335149"
 ## <a name="see-also"></a>참고자료
 
 - [프로젝트의 참조 관리](/visualstudio/ide/managing-references-in-a-project)
-- [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [선언된 요소 참조](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 
 - [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)
-- [Troubleshooting Broken References](/visualstudio/ide/troubleshooting-broken-references)
+- [끊어진 참조 문제 해결](/visualstudio/ide/troubleshooting-broken-references)

@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c587f4248205251824be851c135d93784e86c2f1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f444dd512dc27f1b7cda017e2c2848ac41eb56de
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646635"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59305041"
 ---
 # <a name="traversing-xml-schemas"></a>XML 스키마 통과
 SOM(스키마 개체 모델) API를 사용하여 XML 스키마를 통과하면 SOM에 저장된 요소, 특성 및 형식에 액세스할 수 있습니다. SOM에 로드된 XML 스키마를 통과하는 것은 SOM API를 사용하여 XML 스키마를 편집하는 첫 번째 단계이기도 합니다.  
@@ -43,19 +43,19 @@ SOM(스키마 개체 모델) API를 사용하여 XML 스키마를 통과하면 S
   
  이 샘플은 다음과 같은 단계로 고객 스키마를 통과합니다.  
   
-1.  고객 스키마를 새 <xref:System.Xml.Schema.XmlSchemaSet> 개체에 추가한 다음 컴파일합니다. 스키마를 읽거나 컴파일할 때 발생하는 모든 스키마 유효성 검사 경고 및 오류는 <xref:System.Xml.Schema.ValidationEventHandler> 대리자에서 처리됩니다.  
+1. 고객 스키마를 새 <xref:System.Xml.Schema.XmlSchemaSet> 개체에 추가한 다음 컴파일합니다. 스키마를 읽거나 컴파일할 때 발생하는 모든 스키마 유효성 검사 경고 및 오류는 <xref:System.Xml.Schema.ValidationEventHandler> 대리자에서 처리됩니다.  
   
-2.  <xref:System.Xml.Schema.XmlSchema> 속성을 반복하여 <xref:System.Xml.Schema.XmlSchemaSet>에서 컴파일된 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 개체를 검색합니다. 스키마가 컴파일되므로 PSCI(Post-Schema-Compilation-Infoset) 속성에 액세스할 수 있습니다.  
+2. <xref:System.Xml.Schema.XmlSchema> 속성을 반복하여 <xref:System.Xml.Schema.XmlSchemaSet>에서 컴파일된 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 개체를 검색합니다. 스키마가 컴파일되므로 PSCI(Post-Schema-Compilation-Infoset) 속성에 액세스할 수 있습니다.  
   
-3.  각 요소 이름을 콘솔에 작성하는 post-schema-compilation <xref:System.Xml.Schema.XmlSchemaElement> 컬렉션의 <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> 컬렉션에서 각 <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>를 반복합니다.  
+3. 각 요소 이름을 콘솔에 작성하는 post-schema-compilation <xref:System.Xml.Schema.XmlSchemaElement> 컬렉션의 <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> 컬렉션에서 각 <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>를 반복합니다.  
   
-4.  `Customer` 클래스를 사용하여 <xref:System.Xml.Schema.XmlSchemaComplexType> 요소의 복합 형식을 얻습니다.  
+4. `Customer` 클래스를 사용하여 <xref:System.Xml.Schema.XmlSchemaComplexType> 요소의 복합 형식을 얻습니다.  
   
-5.  복합 형식에 특성이 있을 경우 <xref:System.Collections.IDictionaryEnumerator>가 각 <xref:System.Xml.Schema.XmlSchemaAttribute>를 열거하도록 하고 그 이름을 콘솔에 작성합니다.  
+5. 복합 형식에 특성이 있을 경우 <xref:System.Collections.IDictionaryEnumerator>가 각 <xref:System.Xml.Schema.XmlSchemaAttribute>를 열거하도록 하고 그 이름을 콘솔에 작성합니다.  
   
-6.  <xref:System.Xml.Schema.XmlSchemaSequence> 클래스를 사용하여 복합 형식의 sequence 파티클을 얻습니다.  
+6. <xref:System.Xml.Schema.XmlSchemaSequence> 클래스를 사용하여 복합 형식의 sequence 파티클을 얻습니다.  
   
-7.  각 자식 요소의 이름을 콘솔에 작성하는 <xref:System.Xml.Schema.XmlSchemaElement> 컬렉션에서 각 <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType>를 반복합니다.  
+7. 각 자식 요소의 이름을 콘솔에 작성하는 <xref:System.Xml.Schema.XmlSchemaElement> 컬렉션에서 각 <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType>를 반복합니다.  
   
  다음은 전체 코드 예제입니다.  
   
