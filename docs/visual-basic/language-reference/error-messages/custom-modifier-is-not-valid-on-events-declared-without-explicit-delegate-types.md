@@ -8,40 +8,40 @@ helpviewer_keywords:
 - BC31122
 ms.assetid: 6911f0d1-641a-473b-906d-8ee5681194be
 ms.openlocfilehash: 169cb49cc5abc76b7c52785392d0083b81a99450
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300946"
 ---
-# <a name="custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a><span data-ttu-id="f8e7b-102">명시적 대리자 형식 없이 선언된 이벤트에는 'Custom' 한정자를 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="f8e7b-102">'Custom' modifier is not valid on events declared without explicit delegate types</span></span>
-<span data-ttu-id="f8e7b-103">사용자 지정이 아닌 경우와 달리를 `Custom Event` 선언에 필요는 `As` 절과 이벤트에 대 한 대리자 형식을 명시적으로 지정 하는 이벤트 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="f8e7b-103">Unlike a non-custom event, a `Custom Event` declaration requires an `As` clause following the event name that explicitly specifies the delegate type for the event.</span></span>  
+# <a name="custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a><span data-ttu-id="68638-102">명시적 대리자 형식 없이 선언된 이벤트에는 'Custom' 한정자를 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="68638-102">'Custom' modifier is not valid on events declared without explicit delegate types</span></span>
+<span data-ttu-id="68638-103">사용자 지정이 아닌 경우와 달리를 `Custom Event` 선언에 필요는 `As` 절과 이벤트에 대 한 대리자 형식을 명시적으로 지정 하는 이벤트 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="68638-103">Unlike a non-custom event, a `Custom Event` declaration requires an `As` clause following the event name that explicitly specifies the delegate type for the event.</span></span>  
   
- <span data-ttu-id="f8e7b-104">비-사용자 지정 이벤트 수 사용 하 여 정의 `As` 절 및 명시적 대리자 형식 또는 매개 변수를 사용 하 여 목록 바로 이벤트 이름 다음에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f8e7b-104">Non-custom events can be defined either with an `As` clause and an explicit delegate type, or with a parameter list immediately following the event name.</span></span>  
+ <span data-ttu-id="68638-104">비-사용자 지정 이벤트 수 사용 하 여 정의 `As` 절 및 명시적 대리자 형식 또는 매개 변수를 사용 하 여 목록 바로 이벤트 이름 다음에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="68638-104">Non-custom events can be defined either with an `As` clause and an explicit delegate type, or with a parameter list immediately following the event name.</span></span>  
   
- <span data-ttu-id="f8e7b-105">**오류 ID:** BC31122</span><span class="sxs-lookup"><span data-stu-id="f8e7b-105">**Error ID:** BC31122</span></span>  
+ <span data-ttu-id="68638-105">**오류 ID:** BC31122</span><span class="sxs-lookup"><span data-stu-id="68638-105">**Error ID:** BC31122</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="f8e7b-106">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="f8e7b-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="68638-106">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="68638-106">To correct this error</span></span>  
   
-1. <span data-ttu-id="f8e7b-107">사용자 지정 이벤트와 동일한 매개 변수 목록 사용 하 여 대리자를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8e7b-107">Define a delegate with the same parameter list as the custom event.</span></span>  
+1. <span data-ttu-id="68638-107">사용자 지정 이벤트와 동일한 매개 변수 목록 사용 하 여 대리자를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="68638-107">Define a delegate with the same parameter list as the custom event.</span></span>  
   
-     <span data-ttu-id="f8e7b-108">예를 들어 경우는 `Custom Event` 정의한 `Custom Event Test(ByVal sender As Object, ByVal i As Integer)`, 해당 대리자는 다음 것을 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8e7b-108">For example, if the `Custom Event` was defined by `Custom Event Test(ByVal sender As Object, ByVal i As Integer)`, then the corresponding delegate would be the following.</span></span>  
+     <span data-ttu-id="68638-108">예를 들어 경우는 `Custom Event` 정의한 `Custom Event Test(ByVal sender As Object, ByVal i As Integer)`, 해당 대리자는 다음 것을 합니다.</span><span class="sxs-lookup"><span data-stu-id="68638-108">For example, if the `Custom Event` was defined by `Custom Event Test(ByVal sender As Object, ByVal i As Integer)`, then the corresponding delegate would be the following.</span></span>  
   
      [!code-vb[VbVbalrEventError#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEventError/VB/VbVbalrEventError.vb#18)]  
   
-2. <span data-ttu-id="f8e7b-109">대체 매개 변수 목록을 사용 하 여 사용자 지정 이벤트는 `As` 절 대리자 형식을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8e7b-109">Replace the parameter list of the custom event with an `As` clause specifying the delegate type.</span></span>  
+2. <span data-ttu-id="68638-109">대체 매개 변수 목록을 사용 하 여 사용자 지정 이벤트는 `As` 절 대리자 형식을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="68638-109">Replace the parameter list of the custom event with an `As` clause specifying the delegate type.</span></span>  
   
-     <span data-ttu-id="f8e7b-110">예를 사용 하 여 계속 `Custom Event` 선언을 다음과 같이 다시 작성할 수는 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f8e7b-110">Continuing with the example, `Custom Event` declaration would be rewritten as follows.</span></span>  
+     <span data-ttu-id="68638-110">예를 사용 하 여 계속 `Custom Event` 선언을 다음과 같이 다시 작성할 수는 있습니다.</span><span class="sxs-lookup"><span data-stu-id="68638-110">Continuing with the example, `Custom Event` declaration would be rewritten as follows.</span></span>  
   
      [!code-vb[VbVbalrEventError#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEventError/VB/VbVbalrEventError.vb#19)]  
   
-## <a name="example"></a><span data-ttu-id="f8e7b-111">예제</span><span class="sxs-lookup"><span data-stu-id="f8e7b-111">Example</span></span>  
- <span data-ttu-id="f8e7b-112">이 예제에서는 선언 된 `Custom Event` 필요한 지정 `As` 대리자 형식으로는 절.</span><span class="sxs-lookup"><span data-stu-id="f8e7b-112">This example declares a `Custom Event` and specifies the required `As` clause with a delegate type.</span></span>  
+## <a name="example"></a><span data-ttu-id="68638-111">예제</span><span class="sxs-lookup"><span data-stu-id="68638-111">Example</span></span>  
+ <span data-ttu-id="68638-112">이 예제에서는 선언 된 `Custom Event` 필요한 지정 `As` 대리자 형식으로는 절.</span><span class="sxs-lookup"><span data-stu-id="68638-112">This example declares a `Custom Event` and specifies the required `As` clause with a delegate type.</span></span>  
   
  [!code-vb[VbVbalrEventError#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEventError/VB/VbVbalrEventError.vb#2)]  
   
-## <a name="see-also"></a><span data-ttu-id="f8e7b-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="f8e7b-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="68638-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="68638-113">See also</span></span>
 
-- [<span data-ttu-id="f8e7b-114">Event 문</span><span class="sxs-lookup"><span data-stu-id="f8e7b-114">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)
-- [<span data-ttu-id="f8e7b-115">Delegate 문</span><span class="sxs-lookup"><span data-stu-id="f8e7b-115">Delegate Statement</span></span>](../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [<span data-ttu-id="f8e7b-116">이벤트</span><span class="sxs-lookup"><span data-stu-id="f8e7b-116">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [<span data-ttu-id="68638-114">Event 문</span><span class="sxs-lookup"><span data-stu-id="68638-114">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)
+- [<span data-ttu-id="68638-115">Delegate 문</span><span class="sxs-lookup"><span data-stu-id="68638-115">Delegate Statement</span></span>](../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [<span data-ttu-id="68638-116">이벤트</span><span class="sxs-lookup"><span data-stu-id="68638-116">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)

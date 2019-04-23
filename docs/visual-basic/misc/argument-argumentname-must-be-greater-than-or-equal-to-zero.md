@@ -5,21 +5,21 @@ f1_keywords:
 - vbrFinancial_ArgGEZero1
 ms.assetid: 7b901c2a-3447-4afc-91f8-8fa5f6f961d7
 ms.openlocfilehash: 25872e8cd2ca18d12a6d2f07a9a97c0d2bcb4f7e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298234"
 ---
-# <a name="argument-argumentname-must-be-greater-than-or-equal-to-zero"></a><span data-ttu-id="bb683-102">인수 '\<argumentname >' 보다 크거나 0 이어야 합니다</span><span class="sxs-lookup"><span data-stu-id="bb683-102">Argument '\<argumentname>' must be greater than or equal to zero</span></span>
-<span data-ttu-id="bb683-103">인수가 0보다 작기 때문에 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="bb683-103">An argument is not valid because it is less than zero.</span></span>  
+# <a name="argument-argumentname-must-be-greater-than-or-equal-to-zero"></a><span data-ttu-id="e4798-102">인수 '\<argumentname >' 보다 크거나 0 이어야 합니다</span><span class="sxs-lookup"><span data-stu-id="e4798-102">Argument '\<argumentname>' must be greater than or equal to zero</span></span>
+<span data-ttu-id="e4798-103">인수가 0보다 작기 때문에 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="e4798-103">An argument is not valid because it is less than zero.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="bb683-104">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="bb683-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e4798-104">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="e4798-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="bb683-105">인수의 철자를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="bb683-105">Check the spelling of arguments.</span></span> <span data-ttu-id="bb683-106">철자가 잘못된 변수 이름은 0으로 초기화되는 숫자 변수를 암시적으로 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bb683-106">A misspelled variable name can implicitly create a numeric variable that is initialized to zero.</span></span>  
+1. <span data-ttu-id="e4798-105">인수의 철자를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="e4798-105">Check the spelling of arguments.</span></span> <span data-ttu-id="e4798-106">철자가 잘못된 변수 이름은 0으로 초기화되는 숫자 변수를 암시적으로 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e4798-106">A misspelled variable name can implicitly create a numeric variable that is initialized to zero.</span></span>  
   
-2. <span data-ttu-id="bb683-107">이전 작업에서 식의 변수 특히, 다른 프로시저에서 해당 프로시저로 인수로 전달된 변수를 검사합니다.</span><span class="sxs-lookup"><span data-stu-id="bb683-107">Check previous operations on variables in the expression, especially those passed into the procedure as arguments from other procedures.</span></span>  
+2. <span data-ttu-id="e4798-107">이전 작업에서 식의 변수 특히, 다른 프로시저에서 해당 프로시저로 인수로 전달된 변수를 검사합니다.</span><span class="sxs-lookup"><span data-stu-id="e4798-107">Check previous operations on variables in the expression, especially those passed into the procedure as arguments from other procedures.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bb683-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="bb683-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e4798-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="e4798-108">See also</span></span>
 
-- [<span data-ttu-id="bb683-109">값 또는 참조로 인수 전달</span><span class="sxs-lookup"><span data-stu-id="bb683-109">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [<span data-ttu-id="e4798-109">값 또는 참조로 인수 전달</span><span class="sxs-lookup"><span data-stu-id="e4798-109">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
