@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e863640e18ca64de084331327e0fa39468b54b60
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59176243"
 ---
-# <a name="isymunmanagedvariablegetname-method"></a><span data-ttu-id="376c4-102">ISymUnmanagedVariable::GetName 메서드</span><span class="sxs-lookup"><span data-stu-id="376c4-102">ISymUnmanagedVariable::GetName Method</span></span>
-<span data-ttu-id="376c4-103">이 변수의 이름을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="376c4-103">Gets the name of this variable.</span></span>  
+# <a name="isymunmanagedvariablegetname-method"></a><span data-ttu-id="44ab1-102">ISymUnmanagedVariable::GetName 메서드</span><span class="sxs-lookup"><span data-stu-id="44ab1-102">ISymUnmanagedVariable::GetName Method</span></span>
+<span data-ttu-id="44ab1-103">이 변수의 이름을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="44ab1-103">Gets the name of this variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="376c4-104">구문</span><span class="sxs-lookup"><span data-stu-id="376c4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="44ab1-104">구문</span><span class="sxs-lookup"><span data-stu-id="44ab1-104">Syntax</span></span>  
   
 ```  
 HRESULT GetName(  
@@ -37,22 +37,22 @@ HRESULT GetName(
         length_is(*pcchName)] WCHAR szName[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="376c4-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="376c4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="44ab1-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="44ab1-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="376c4-106">[in] 버퍼의 길이는 `pcchName` 매개 변수를 가리킵니다.</span><span class="sxs-lookup"><span data-stu-id="376c4-106">[in] The length of the buffer that the `pcchName` parameter points to.</span></span>  
+ <span data-ttu-id="44ab1-106">[in] 버퍼의 길이는 `pcchName` 매개 변수를 가리킵니다.</span><span class="sxs-lookup"><span data-stu-id="44ab1-106">[in] The length of the buffer that the `pcchName` parameter points to.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="376c4-107">[out] 에 대 한 포인터를 `ULONG32` 문자의 null 종료를 포함 하는 이름을 포함 하는 데 필요한 버퍼의 크기를 받는 합니다.</span><span class="sxs-lookup"><span data-stu-id="376c4-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the name, including the null termination.</span></span>  
+ <span data-ttu-id="44ab1-107">[out] 에 대 한 포인터를 `ULONG32` 문자의 null 종료를 포함 하는 이름을 포함 하는 데 필요한 버퍼의 크기를 받는 합니다.</span><span class="sxs-lookup"><span data-stu-id="44ab1-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the name, including the null termination.</span></span>  
   
  `szName`  
- <span data-ttu-id="376c4-108">[out] 이름을 저장 하는 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="376c4-108">[out] The buffer that stores the name.</span></span>  
+ <span data-ttu-id="44ab1-108">[out] 이름을 저장 하는 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="44ab1-108">[out] The buffer that stores the name.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="376c4-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="376c4-109">Return Value</span></span>  
- <span data-ttu-id="376c4-110">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="376c4-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="44ab1-109">반환 값</span><span class="sxs-lookup"><span data-stu-id="44ab1-109">Return Value</span></span>  
+ <span data-ttu-id="44ab1-110">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="44ab1-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="376c4-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="376c4-111">Requirements</span></span>  
- <span data-ttu-id="376c4-112">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="376c4-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="44ab1-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="44ab1-111">Requirements</span></span>  
+ <span data-ttu-id="44ab1-112">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="44ab1-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="376c4-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="376c4-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="44ab1-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="44ab1-113">See also</span></span>
 
-- [<span data-ttu-id="376c4-114">ISymUnmanagedVariable 인터페이스</span><span class="sxs-lookup"><span data-stu-id="376c4-114">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [<span data-ttu-id="44ab1-114">ISymUnmanagedVariable 인터페이스</span><span class="sxs-lookup"><span data-stu-id="44ab1-114">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
