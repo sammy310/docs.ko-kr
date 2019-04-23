@@ -3,10 +3,10 @@ title: 지원 및 미지원 LINQ 메서드 (LINQ to Entities)
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
 ms.openlocfilehash: 74b3973f931fa6f0d1f5b380833b8d5e5566563b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59077077"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>지원 및 미지원 LINQ 메서드 (LINQ to Entities)
@@ -150,7 +150,7 @@ ms.locfileid: "59077077"
 |메서드|Support(지원)|Visual Basic 함수 시그니처|C# 메서드 시그니처|  
 |------------|-------------|-------------------------------------|--------------------------|  
 |<xref:System.Linq.Queryable.Cast%2A>|EDM 기본 형식에 지원됨|`Function Cast(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> Cast<TResult>( this IQueryable source )`|  
-|<xref:System.Linq.Queryable.OfType%2A>|에 대 한 지원 <xref:System.Data.Metadata.Edm.EntityType>|`Function OfType(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> OfType<TResult>( this IQueryable source )`|  
+|<xref:System.Linq.Queryable.OfType%2A>|<xref:System.Data.Metadata.Edm.EntityType>에 지원됨|`Function OfType(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> OfType<TResult>( this IQueryable source )`|  
   
 ## <a name="paging-methods"></a>페이징 메서드  
  많은 LINQ 페이징 메서드는 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 쿼리에서 지원되지 않습니다. 자세한 내용은 [linq to Entities 쿼리에서 표준 쿼리 연산자](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)합니다. 다음 표에서는 지원되거나 지원되지 않는 페이징 메서드를 보여 줍니다.  

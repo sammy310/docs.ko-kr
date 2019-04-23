@@ -5,10 +5,10 @@ ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e7ec1280f3b7ba25367fac21d5160046915636a5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076863"
 ---
 # <a name="apis-that-rely-on-reflection"></a>리플렉션을 사용하는 API
@@ -51,9 +51,9 @@ App1.AppClass`1<System.Int32>.
   
  이 코드를 정상적으로 실행하려면 다음과 같은 여러 메타데이터 항목이 필요합니다.  
   
--   `Browse` 메서드를 호출 하려는 형식에 대 한 메타 데이터입니다.  
+-   해당 메서드를 호출할 형식에 대한 `Browse` 메타데이터  
   
--   `Browse` 호출 하려는 메서드에 대 한 메타 데이터입니다.  public 메서드의 경우 포함 형식에 대한 public `Browse` 메타데이터를 추가하면 메서드도 포함됩니다.  
+-   호출하려는 메서드에 대한 `Browse` 메타데이터.  public 메서드의 경우 포함 형식에 대한 public `Browse` 메타데이터를 추가하면 메서드도 포함됩니다.  
   
 -   호출하려는 메서드에 대한 동적 메타데이터([!INCLUDE[net_native](../../../includes/net-native-md.md)] 도구 체인에 의해 리플렉션 호출 대리자가 제거되지 않도록 함). 메서드에 대한 동적 메타데이터가 누락되면 <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> 메서드 호출 시 다음 예외가 throw됩니다.  
   
@@ -86,7 +86,7 @@ App1.Class1[]
 Unfortunately, no further information is available.  
 ```  
   
- `Browse` 동적으로 인스턴스화하려면 해당 배열 형식에 대 한 메타 데이터가 필요 합니다.  다음 런타임 지시문을 사용하면 `Class1[]`을 동적으로 인스턴스화할 수 있습니다.  
+ 배열 형식을 동적으로 인스턴스화하려면 해당 형식에 대한 `Browse` 메타데이터가 필요합니다.  다음 런타임 지시문을 사용하면 `Class1[]`을 동적으로 인스턴스화할 수 있습니다.  
   
 ```xml  
 <Type Name="App1.Class1[]" Browse="Required Public" />  

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - expressions [Visual Basic]
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
 ms.openlocfilehash: b762c3002913cbd925579ef28f2aa01411976c32
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073652"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Visual Basic의 연산자 및 식
@@ -66,4 +66,4 @@ ms.locfileid: "59073652"
 
 - [연산자](../../../../visual-basic/language-reference/operators/index.md)
 - [연산자의 효율적 결합](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
-- [문](../../../../visual-basic/language-reference/statements/index.md)
+- [문(C++)](../../../../visual-basic/language-reference/statements/index.md)

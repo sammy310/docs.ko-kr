@@ -5,10 +5,10 @@ dev_langs:
 - vb
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
 ms.openlocfilehash: a348fb7989a83ec9ee7903bd38896bedcf86ce3a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074536"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>인증서 인증을 사용하는 전송 보안
@@ -140,4 +140,4 @@ cc.Close();
 ## <a name="see-also"></a>참고자료
 
 - [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server AppFabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server appfabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

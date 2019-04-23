@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: 8fe0eadf-297b-487c-8d4b-7816753c2883
 ms.openlocfilehash: 2b45a4629474c394c8e49c41a7a98fc1181e124b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59077175"
 ---
 # <a name="comparing-datarows-linq-to-dataset"></a>DataRow 비교(LINQ to DataSet)
-[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 같은지를 확인 하려면 소스 요소를 비교 하기 위한 다양 한 집합 연산자를 정의 합니다. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 다음과 같은 집합 연산자를 제공합니다.  
+[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]에는 소스 요소가 같은지 여부를 확인하는 다양한 집합 연산자가 정의되어 있습니다. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]에서는 다음과 같은 집합 연산자를 제공합니다.  
   
 -   <xref:System.Linq.Enumerable.Distinct%2A>  
   
@@ -41,5 +41,5 @@ ms.locfileid: "59077175"
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Data.DataRowComparer>
-- [데이터를 데이터 집합에 로드](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+- [데이터를 데이터 세트에 로드](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
 - [LINQ to DataSet 예제](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

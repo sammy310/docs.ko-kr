@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Columns property [WPF]
 ms.assetid: 3f8884f4-7e1f-456b-be06-fbd3cf469bf3
 ms.openlocfilehash: d379d1a98bff614ff9e16cdd340bb69644988743
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078423"
 ---
 # <a name="how-to-manipulate-a-tables-columns-through-the-columns-property"></a>방법: Columns 속성을 통해 테이블의 열 조작
@@ -68,8 +68,8 @@ ms.locfileid: "59078423"
 ## <a name="see-also"></a>참고자료
 
 - [테이블 개요](table-overview.md)
-- [XAML을 사용하여 테이블 정의](how-to-define-a-table-with-xaml.md)
-- [프로그래밍 방식으로 테이블 작성](how-to-build-a-table-programmatically.md)
-- [RowGroups 속성을 통해 테이블의 행 그룹 조작](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
-- [Blocks 속성을 통해 FlowDocument 조작](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
-- [RowGroups 속성을 통해 테이블의 행 그룹 조작](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+- [XAML로 테이블 정의](how-to-define-a-table-with-xaml.md)
+- [프로그래밍 방식으로 표 작성](how-to-build-a-table-programmatically.md)
+- [RowGroups 속성을 통한 테이블의 행 그룹 조작](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+- [Blocks 속성을 통한 FlowDocument 조작](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
+- [RowGroups 속성을 통한 테이블의 행 그룹 조작](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)

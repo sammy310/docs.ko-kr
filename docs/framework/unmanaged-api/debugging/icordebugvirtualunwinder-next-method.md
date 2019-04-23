@@ -5,10 +5,10 @@ ms.assetid: 790e0426-e5cd-49fd-a792-f8c8635d72fe
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 74be827dc97213507b96da9e025923f859011acd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076889"
 ---
 # <a name="icordebugvirtualunwindernext-method"></a>ICorDebugVirtualUnwinder::Next 메서드
@@ -24,7 +24,7 @@ HRESULT Next();
  없음  
   
 ## <a name="return-value"></a>반환 값  
- `S_OK` 해제가 성공적으로 발생 한 경우 또는 `CORDBG_S_AT_END_OF_STACK` 되므로 더 이상 프레임이 해제를 완료할 수 없는 경우.  
+ 해제가 성공적으로 발생한 경우 `S_OK`이고, 더 이상 프레임이 없어 해제를 완료할 수 없는 경우 `CORDBG_S_AT_END_OF_STACK`입니다.  
   
  실패 HRESULT가 반환되면 ICorDebug API에서 `CORDBG_E_DATA_TARGET_ERROR`를 반환합니다.  
   

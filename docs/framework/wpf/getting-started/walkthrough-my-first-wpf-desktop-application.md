@@ -12,10 +12,10 @@ author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
 ms.openlocfilehash: dbfc40bd1fcc97810ea1397731bd8c232297cbd1
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59055250"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>연습: 내 첫 WPF 데스크톱 애플리케이션
@@ -118,7 +118,7 @@ ms.locfileid: "59055250"
 
     이 파일에 선언 된 이벤트를 처리 하는 코드를 포함 하는 코드 숨김 파일은 *MainWindow.xaml*합니다. 이 파일에는 XAML에 정의된 창의 부분 클래스가 포함되어 있습니다.
 
-7. C#을 사용 하는 경우 변경 합니다 `MainWindow` 에서 파생 된 클래스 <xref:System.Windows.Navigation.NavigationWindow>합니다. (Visual Basic에서는 자동으로 이루어집니다 XAML에서 창을 변경 하면 됩니다.)
+7. C#을 사용 하는 경우 변경 합니다 `MainWindow` 에서 파생 된 클래스 <xref:System.Windows.Navigation.NavigationWindow>합니다. (Visual basic에서는 자동으로 이루어집니다 XAML에서 창을 변경 하면 됩니다.)
 
    코드는 다음과 같습니다.
 
@@ -493,7 +493,7 @@ ms.locfileid: "59055250"
 이 연습에서는 다양 한 Windows Presentation Foundation (WPF)를 사용 하 여 UI 만들기에 대 한 기술 배웠습니다. 이제 데이터 바인딩된.NET Framework 응용 프로그램의 구성 요소에 대 한 기본적인 지식이 있어야 합니다. WPF 아키텍처 및 프로그래밍 모델에 대한 자세한 내용은 다음 항목을 참조하세요.
 
 - [WPF 아키텍처](../advanced/wpf-architecture.md)
-- [XAML 개요 (WPF)](../advanced/xaml-overview-wpf.md)
+- [XAML 개요(WPF)](../advanced/xaml-overview-wpf.md)
 - [종속성 속성 개요](../advanced/dependency-properties-overview.md)
 - [레이아웃](../advanced/layout.md)
 
@@ -505,7 +505,7 @@ ms.locfileid: "59055250"
 - [그래픽 및 멀티미디어](../graphics-multimedia/index.md)
 - [WPF의 문서](../advanced/documents-in-wpf.md)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 - [패널 개요](../controls/panels-overview.md)
 - [데이터 템플릿 개요](../data/data-templating-overview.md)

@@ -3,10 +3,10 @@ title: '가져오기 선언: Open 키워드'
 description: 에 대해 알아봅니다 F# 선언 및 모듈 또는 네임 스페이스 정규화 된 이름을 사용 하지 않고 참조할 수 있는 요소를 지정 하는 방법을 가져옵니다.
 ms.date: 04/04/2019
 ms.openlocfilehash: ad64190c3243c57a185f3b864270fca80590f079
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59055003"
 ---
 # <a name="import-declarations-the-open-keyword"></a>가져오기 선언: `open` 키워드
@@ -24,7 +24,7 @@ open module-or-namespace-name
 
 ## <a name="remarks"></a>설명
 
-정규화 된 네임 스페이스 또는 모듈 경로 사용 하 여 코드를 참조 될 때마다 쓰기, 읽기 및 유지 관리 하기 어려운 코드를 만들 수 있습니다. 대신 사용할 수는 `open` 키워드에 대 한 자주 모듈 및 네임 스페이스를 사용 하 여 해당 모듈 또는 네임 스페이스의 멤버를 참조할 때 정규화 된 이름 대신 이름의 약식을 사용할 수 있습니다. 이 키워드는 비슷합니다는 `using` C#의 키워드 `using namespace` Visual c + +에서 및 `Imports` Visual Basic의 합니다.
+정규화 된 네임 스페이스 또는 모듈 경로 사용 하 여 코드를 참조 될 때마다 쓰기, 읽기 및 유지 관리 하기 어려운 코드를 만들 수 있습니다. 대신 사용할 수는 `open` 키워드에 대 한 자주 모듈 및 네임 스페이스를 사용 하 여 해당 모듈 또는 네임 스페이스의 멤버를 참조할 때 정규화 된 이름 대신 이름의 약식을 사용할 수 있습니다. 이 키워드는 비슷합니다는 `using` 키워드 C#를 `using namespace` 시각적 개체의 C++, 및 `Imports` Visual Basic의 합니다.
 
 같은 프로젝트 또는 참조 된 프로젝트나 어셈블리에 모듈을 제공 하는 네임 스페이스 여야 합니다. 프로젝트에 대 한 참조를 추가 또는 사용할 수 없는 경우는 `-reference` 명령`-`명령줄 옵션 (또는 해당 약어 `-r`). 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조하세요.
 

@@ -5,10 +5,10 @@ ms.assetid: 98f15b05-afad-4616-9e2a-1a9af31948b6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 54ccb52468a530280527252e0e0c43cc9edbb2c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59080958"
 ---
 # <a name="icordebugassembly3enumeratecontainedassemblies-method"></a>ICorDebugAssembly3::EnumerateContainedAssemblies 메서드
@@ -27,7 +27,7 @@ HRESULT EnumerateContainedAssemblies(
  [out] 열거자는 ICorDebugAssemblyEnum 인터페이스 개체의 주소에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `S_OK` 이 `ICorDebugAssembly3` 개체가 컨테이너가 고, 그렇지 않으면 `S_FALSE`, 열거형은 비어 있습니다.  
+ 이 `S_OK` 개체가 컨테이너이면 `ICorDebugAssembly3`이고, 그러지 않으면 `S_FALSE`이며 열거형은 비어 있습니다.  
   
 ## <a name="remarks"></a>설명  
  포함된 어셈블리를 열거하려면 기호가 필요합니다. 기호가 없으면 메서드는 `S_FALSE`를 반환하며 올바른 열거자가 제공되지 않습니다.  

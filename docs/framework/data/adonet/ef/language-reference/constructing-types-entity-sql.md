@@ -3,10 +3,10 @@ title: 형식 생성(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
 ms.openlocfilehash: 53aa7fcc82a476c8b8bd87b059e08bee6741c0d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073782"
 ---
 # <a name="constructing-types-entity-sql"></a>형식 생성(Entity SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "59073782"
  자세한 내용은 [MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md)합니다.  
   
 ## <a name="named-type-constructors-namedtype-initializers"></a>명명된 형식 생성자(NamedType 이니셜라이저)  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 엔터티 형식과 형식 생성자 (이니셜라이저) 명명 된 복합 형식의 인스턴스를 만들 수 있습니다. 예를 들어, 다음 식은 `Person` 형식의 인스턴스를 만듭니다.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서 형식 생성자(이니셜라이저)는 명명된 복합 형식과 엔터티 형식 인스턴스를 만들 수 있습니다. 예를 들어, 다음 식은 `Person` 형식의 인스턴스를 만듭니다.  
   
  `Person("abc", 12)`  
   

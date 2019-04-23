@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Win32 host containers [WPF], hit tests using
 ms.assetid: 9491f7f3-d8ba-4573-a888-2f064d1349dc
 ms.openlocfilehash: ac5cae5bcd94dc8bf80ff95b8971914e1fa5ba2c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59081465"
 ---
 # <a name="how-to-hit-test-using-a-win32-host-container"></a>방법: Win32 호스트 컨테이너를 사용하여 적중 테스트
@@ -38,4 +38,4 @@ ms.locfileid: "59081465"
 
 - <xref:System.Windows.Interop.HwndSource>
 - [시각적 계층에서 적중 테스트](hit-testing-in-the-visual-layer.md)
-- [자습서: Win32 애플리케이션에서 시각적 개체 호스팅](tutorial-hosting-visual-objects-in-a-win32-application.md)
+- [자습서: Win32 응용 프로그램에서 시각적 개체 호스팅](tutorial-hosting-visual-objects-in-a-win32-application.md)

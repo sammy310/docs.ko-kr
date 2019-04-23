@@ -9,10 +9,10 @@ helpviewer_keywords:
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
 ms.openlocfilehash: 0cb8d0656765e5bc2c2a54ef5f282a67d8579f20
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59082180"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>시각적 계층에서 적중 테스트
@@ -145,5 +145,5 @@ ms.locfileid: "59082180"
 - <xref:System.Windows.UIElement.IsHitTestVisible%2A>
 - [적중 테스트 DrawingVisuals 샘플을 사용 하 여](https://go.microsoft.com/fwlink/?LinkID=159994)
 - [적중 테스트 Win32 상호 운용성 샘플](https://go.microsoft.com/fwlink/?LinkID=159995)
-- [시각적 개체의 기하 도형 적중 테스트](how-to-hit-test-geometry-in-a-visual.md)
+- [시각적 요소의 기하 도형 적중 테스트](how-to-hit-test-geometry-in-a-visual.md)
 - [Win32 호스트 컨테이너를 사용하여 적중 테스트](how-to-hit-test-using-a-win32-host-container.md)

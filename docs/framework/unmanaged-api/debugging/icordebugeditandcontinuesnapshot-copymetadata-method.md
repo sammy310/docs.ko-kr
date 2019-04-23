@@ -18,14 +18,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5dafaef05305a8f4ab4a196690d98486be96d51e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59082141"
 ---
 # <a name="icordebugeditandcontinuesnapshotcopymetadata-method"></a>ICorDebugEditAndContinueSnapshot::CopyMetaData 메서드
-`CopyMetaData` 사용 되지 않습니다. 이 메서드를 호출 하지 마세요.  
+`CopyMetaData`는 사용되지 않습니다. 이 메서드를 호출 하지 마세요.  
   
 ## <a name="see-also"></a>참고자료
 

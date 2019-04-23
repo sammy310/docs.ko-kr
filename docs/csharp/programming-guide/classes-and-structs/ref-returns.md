@@ -4,12 +4,12 @@ description: 참조 반환 및 참조 로컬 값을 정의하고 사용하는 �
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: dd5094789114f7ad620dd681877318ad49b78997
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fcac162f63438b6cbe54908383467d4b0f227c39
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514417"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59081849"
 ---
 # <a name="ref-returns-and-ref-locals"></a>참조 반환 및 참조 로컬
 
@@ -59,7 +59,6 @@ public ref Person GetContactInformation(string fname, string lname)
 - ‘참조로’ 반환하는 경우 동일한 변수에 대한 별칭을 반환하는 것입니다.
 - 다른 메서드에 ‘참조로’ 전달하는 경우 별칭이 있는 변수에 대한 참조를 전달하는 것입니다.
 - [참조 로컬](#ref-locals) 별칭을 만들 경우 동일한 변수에 대한 새 별칭을 만드는 것입니다.
-
 
 ## <a name="ref-locals"></a>참조 로컬
 

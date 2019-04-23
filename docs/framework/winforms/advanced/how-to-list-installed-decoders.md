@@ -9,10 +9,10 @@ helpviewer_keywords:
 - image decoders [Windows Forms], listing
 ms.assetid: 11417191-8c95-40ca-8024-779e61706fb6
 ms.openlocfilehash: c92b8010def2f77f859ee0bd9cdb1ed51dd15f27
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59079417"
 ---
 # <a name="how-to-list-installed-decoders"></a>방법: 설치된 디코더 나열
@@ -33,5 +33,5 @@ ms.locfileid: "59079417"
   
 ## <a name="see-also"></a>참고자료
 
-- [방법: 설치된 인코더 나열](how-to-list-installed-encoders.md)
-- [관리형 GDI+에서 이미지 인코더 및 디코더 사용](using-image-encoders-and-decoders-in-managed-gdi.md)
+- [방법: 설치 된 인코더 나열](how-to-list-installed-encoders.md)
+- [관리되는 GDI+에서 이미지 인코더 및 디코더 사용](using-image-encoders-and-decoders-in-managed-gdi.md)

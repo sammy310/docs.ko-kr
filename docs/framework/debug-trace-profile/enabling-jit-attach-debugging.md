@@ -8,10 +8,10 @@ ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f1696f9054d44a5f80a1f67cc38e315a8627d295
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078786"
 ---
 # <a name="enabling-jit-attach-debugging"></a>JIT 연결 디버깅 설정
@@ -21,15 +21,15 @@ ms.locfileid: "59078786"
   
 -   처리되지 않은 예외(네이티브 및 관리 코드에서 둘 다).  
   
--   <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> 메서드 또는 [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) 함수 (Windows 7 제품군).  
+-   <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> 메서드 또는 [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) 함수(Windows 7 제품군).  
   
 -   런타임 오류.  
   
  JIT 연결 디버깅은 다음 메서드 및 함수에 대한 호출에 의해서도 트리거됩니다.  
   
--   <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> 메서드를 재정의합니다.  
+-   <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> 메서드를 호출하여 생성됩니다.  
   
--   <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> 메서드를 재정의합니다.  
+-   <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> 메서드를 호출하여 생성됩니다.  
   
 -   [DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106) 함수(Win32).  
   

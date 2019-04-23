@@ -5,10 +5,10 @@ helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
 ms.openlocfilehash: 5b234a00f3194fcf40a33d25302cff16d5999b05
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59082987"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Windows Process Activation Service에서의 호스팅
@@ -54,7 +54,7 @@ Windows 프로세스 활성화 서비스 (WAS)는 정품 인증 및 호스트 Wi
 ## <a name="see-also"></a>참고자료
 
 - [WAS Activation 아키텍처](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)
-- [WCF에서 사용하도록 WAS 구성](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
-- [방법: WCF 활성화 구성 요소 설치 및 구성](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
+- [WCF와 함께 사용하도록 WAS 구성](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
+- [방법: 설치 하 고 WCF Activation 구성 요소를 구성 합니다.](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
 - [방법: WAS에서 WCF 서비스 호스팅](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
 - [Windows Server App Fabric 호스팅 기능](https://go.microsoft.com/fwlink/?LinkId=201276)

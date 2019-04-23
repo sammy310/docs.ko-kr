@@ -3,10 +3,10 @@ title: <additionalRequestParameters> 요소
 ms.date: 03/30/2017
 ms.assetid: da8109fb-581c-48f4-b718-3bbda1edc47d
 ms.openlocfilehash: bbd6f5ef78d26417a926140ba9eacb2b2eeffb77
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59075615"
 ---
 # <a name="additionalrequestparameters-element"></a>\<additionalRequestParameters > 요소
@@ -22,8 +22,8 @@ ms.locfileid: "59075615"
 - [사용자 지정 바인딩을 사용하는 보안 기능](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
 - [페더레이션 및 발급된 토큰](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
 - [바인딩](../../../../../docs/framework/wcf/bindings.md)
-- [바인딩 확장명](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [바인딩 확장](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [사용자 지정 바인딩](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [Custom Binding Security](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+- [방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩 만들기](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [사용자 지정 바인딩 보안](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

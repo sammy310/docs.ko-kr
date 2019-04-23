@@ -8,10 +8,10 @@ helpviewer_keywords:
 - buttons [Windows Forms], about buttons
 ms.assetid: 255b291b-51a9-4a92-a1a4-2400cd82443f
 ms.openlocfilehash: 1ded871fdfab83407d8022ca0c4ce6b2c8a6c67c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076551"
 ---
 # <a name="button-control-overview-windows-forms"></a>Button 컨트롤 개요(Windows Forms)
@@ -26,6 +26,6 @@ ms.locfileid: "59076551"
 - <xref:System.Windows.Forms.Button>
 - [방법: Windows Forms 단추 클릭에 응답](how-to-respond-to-windows-forms-button-clicks.md)
 - [Windows Forms Button 컨트롤 선택 방법](ways-to-select-a-windows-forms-button-control.md)
-- [방법: 디자이너를 사용하여 Windows Forms 단추를 적용 단추로 지정](designate-a-wf-button-as-the-accept-button-using-the-designer.md)
-- [방법: 디자이너를 사용하여 Windows Forms 단추를 취소 단추로 지정](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
+- [방법: Windows Forms 단추를 디자이너를 사용 하 여 적용 단추로 지정](designate-a-wf-button-as-the-accept-button-using-the-designer.md)
+- [방법: Windows Forms 단추를 디자이너를 사용 하는 취소 단추로 지정](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
 - [Button 컨트롤](button-control-windows-forms.md)

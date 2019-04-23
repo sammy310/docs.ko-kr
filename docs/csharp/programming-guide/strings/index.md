@@ -7,10 +7,10 @@ helpviewer_keywords:
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
 ms.openlocfilehash: 57781dd5a988435778587636cc458256b966446c
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920690"
 ---
 # <a name="strings-c-programming-guide"></a>문자열(C# 프로그래밍 가이드)
@@ -135,8 +135,8 @@ string s = String.Empty;
 |[방법: 검색 문자열](../../how-to/search-strings.md)|문자열에서 특정 텍스트 또는 패턴에 대해 검색을 사용하는 방법을 설명합니다.|  
 |[방법: 문자열이 숫자 값을 나타내는지 확인](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|문자열에 올바른 숫자 값이 있는지 여부를 확인할 수 있도록 문자열을 안전하게 구문 분석하는 방법을 보여 줍니다.|  
 |[문자열 보간](../../language-reference/tokens/interpolated.md)|문자열의 서식을 지정하는 편리한 구문을 제공하는 문자열 보간 기능에 대해 설명합니다.|
-|[기본 문자열 작업](../../../../docs/standard/base-types/basic-string-operations.md)|<xref:System.String?displayProperty=nameWithType> 및 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 메서드를 사용하여 기본적인 문자열 작업을 수행하는 항목에 대한 링크를 제공합니다.|  
-|[문자열 구문 분석](../../../standard/base-types/parsing-strings.md)|.NET 기본 형식의 문자열 표현을 해당 형식의 인스턴스로 변환하는 방법에 대해 설명합니다.|  
+|[기본적인 문자열 작업](../../../../docs/standard/base-types/basic-string-operations.md)|<xref:System.String?displayProperty=nameWithType> 및 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 메서드를 사용하여 기본적인 문자열 작업을 수행하는 항목에 대한 링크를 제공합니다.|  
+|[Parsing Strings](../../../standard/base-types/parsing-strings.md)|.NET 기본 형식의 문자열 표현을 해당 형식의 인스턴스로 변환하는 방법에 대해 설명합니다.|  
 |[.NET에서 날짜 및 시간 문자열 구문 분석](../../../standard/base-types/parsing-datetime.md)|"01/24/2008"과 같은 문자열을 <xref:System.DateTime?displayProperty=nameWithType> 개체로 변환하는 방법을 보여 줍니다.|  
 |[문자열 비교](../../../../docs/standard/base-types/comparing.md)|문자열을 비교하는 방법에 대한 정보가 포함되어 있으며, C# 및 Visual Basic의 예제를 제공합니다.|  
 |[StringBuilder 클래스 사용](../../../standard/base-types/stringbuilder.md)|<xref:System.Text.StringBuilder> 클래스를 사용하여 동적 문자열 개체를 만들고 수정하는 방법을 설명합니다.|  

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Windows Forms, resizing
 ms.assetid: 5d9dd47e-e68c-48c9-a0a3-a9ff34ba009d
 ms.openlocfilehash: 2da4b7483e92b02360bceb886d84a7f729b84dee
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59077227"
 ---
 # <a name="how-to-resize-windows-forms"></a>방법: Windows Forms 크기 조정
@@ -115,4 +115,4 @@ ms.locfileid: "59077227"
 ## <a name="see-also"></a>참고자료
 
 - [Windows Forms 시작](getting-started-with-windows-forms.md)
-- [Windows Forms 애플리케이션 강화](./advanced/index.md)
+- [Windows Forms 응용 프로그램 강화](./advanced/index.md)

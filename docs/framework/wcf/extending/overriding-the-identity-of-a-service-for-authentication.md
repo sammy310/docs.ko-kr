@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
 ms.openlocfilehash: a5a32220ad1f638bf2e93051e9b436d8270aec2f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59082193"
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>인증을 위해 서비스 ID 재정의
@@ -59,5 +59,5 @@ ms.locfileid: "59082193"
   
 ## <a name="see-also"></a>참고자료
 
-- [방법: 사용자 지정 클라이언트 ID 검증 도구 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
+- [방법: 사용자 지정 클라이언트 Id 검증 도구 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
 - [서비스 ID 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

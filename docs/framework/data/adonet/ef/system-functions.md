@@ -3,10 +3,10 @@ title: 시스템 함수
 ms.date: 03/30/2017
 ms.assetid: b7c71b58-09e6-44ce-a3e5-a0fdb892fb86
 ms.openlocfilehash: 135154d2f5e26cdf7f2e41e8ed2b561bb75f377e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073450"
 ---
 # <a name="system-functions"></a>시스템 함수
@@ -14,7 +14,7 @@ ms.locfileid: "59073450"
   
 |함수|설명|  
 |--------------|-----------------|  
-|`CHECKSUM (` `value`, [`value`, [`value`]]`)`|체크섬 값을 반환합니다. `CHECKSUM` 해시 인덱스를 작성에 사용 하 여 위한 것입니다.<br /><br /> **인수**<br /><br /> `value`: A `Boolean`, `Byte`, `Int16`, `Int32`, `Int64`, `Single`, `Decimal`, `Double`, `DateTime`, `String`, `Binary`, 또는 `Guid`합니다. 한 개, 두 개 또는 세 개의 값을 지정할 수 있습니다.<br /><br /> **반환 값**<br /><br /> 지정한 식의 절대 값입니다.<br /><br /> **예제**<br /><br /> `SqlServer.CHECKSUM(10,100,1000.0)`|  
+|`CHECKSUM (` `value`, [`value`, [`value`]]`)`|체크섬 값을 반환합니다. `CHECKSUM`은 해시 인덱스를 작성하는 데 사용하기 위한 것입니다.<br /><br /> **인수**<br /><br /> `value`: A `Boolean`, `Byte`, `Int16`, `Int32`, `Int64`, `Single`, `Decimal`, `Double`, `DateTime`, `String`, `Binary`, 또는 `Guid`합니다. 한 개, 두 개 또는 세 개의 값을 지정할 수 있습니다.<br /><br /> **반환 값**<br /><br /> 지정한 식의 절대 값입니다.<br /><br /> **예제**<br /><br /> `SqlServer.CHECKSUM(10,100,1000.0)`|  
 |`CURRENT_TIMESTAMP ()`|SQL Server 2008에서는 전체 자릿수가 7이고 SQL Server 2005에서는 전체 자릿수가 3인 `DateTime` 값의 SQL Server 내부 형식으로 현재 날짜와 시간을 생성합니다.<br /><br /> **반환 값**<br /><br /> `DateTime` 형식의 현재 시스템 날짜 및 시간입니다.<br /><br /> **예제**<br /><br /> `SqlServer.CURRENT_TIMESTAMP()`|  
 |`CURRENT_ USER` `()`|현재 사용자의 이름을 반환합니다.<br /><br /> **반환 값**<br /><br /> ASCII `String`입니다.<br /><br /> **예제**<br /><br /> `SqlServer.CURRENT_USER()`|  
 |`DATALENGTH` `(` `expression` `)`|식을 표시하는 데 사용되는 바이트 수를 반환합니다.<br /><br /> **인수**<br /><br /> `expression`: `Boolean`, `Byte`, `Int16`, `Int32`, `Int64`를 `Single`, `Decimal`를 `Double`, `DateTime`를 `Time`, `DateTimeOffset`, `String`, `Binary`, 또는 `Guid`.<br /><br /> **반환 값**<br /><br /> 속성의 크기를 나타내는 `Int32`입니다.<br /><br /> **예제**<br /><br /> `SELECT VALUE SqlServer.DATALENGTH(P.Name)FROM`<br /><br /> `AdventureWorksEntities.Product AS P`|  
@@ -28,7 +28,7 @@ ms.locfileid: "59073450"
   
 |SQL Server 2000|SQL Server 2005|SQL Server 2008|  
 |---------------------|---------------------|---------------------|  
-|[시스템 함수(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115918)|[시스템 함수(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115917)|[시스템 함수(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115919)|  
+|[시스템 함수 &#40;transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115918)|[시스템 함수 &#40;transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115917)|[시스템 함수 (TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=115919)|  
   
 ## <a name="see-also"></a>참고자료
 

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
 ms.openlocfilehash: 9c532858ba3b93d427e5c0455f953db2499ebd6a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072547"
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>데이터 계약 Serializer에서 지원하는 형식
@@ -31,7 +31,7 @@ Windows Communication Foundation (WCF)를 사용 하 여 <xref:System.Runtime.Se
   
 -   <xref:System.SerializableAttribute> 특성으로 표시된 형식입니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 기본 클래스 라이브러리에 포함된 여러 형식이 이 범주에 해당합니다. <xref:System.Runtime.Serialization.DataContractSerializer> 는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>인터페이스 지원을 비롯하여 .NET Framework Remoting, <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>및 <xref:System.Runtime.Serialization.ISerializable> 에서 사용된 이 serialization 프로그래밍 모델을 완전히 지원합니다.  
   
--   원시 XML을 나타내는 형식이거나 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 관계형 데이터를 나타내는 형식입니다. <xref:System.Xml.XmlElement> 및 <xref:System.Xml.XmlNode> 형식의 배열은 XML을 직접 나타내는 방식으로 지원됩니다. 또한, 관련된 <xref:System.Xml.Serialization.IXmlSerializable> 특성, <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 및 <xref:System.Xml.Linq.XDocument> 형식을 비롯하여 <xref:System.Xml.Linq.XElement> 인터페이스를 구현하는 형식이 지원됩니다. 합니다 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataTable> 형식 및 <xref:System.Data.DataSet> 형식 (형식화 된 파생된 클래스) 모든 구현를 <xref:System.Xml.Serialization.IXmlSerializable> 인터페이스 및 하므로이 범주에 속합니다. 자세한 내용은 [XML 및 ADO.NET 형식 데이터 계약의](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)합니다.  
+-   원시 XML을 나타내는 형식이거나 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 관계형 데이터를 나타내는 형식입니다. <xref:System.Xml.XmlElement> 및 <xref:System.Xml.XmlNode> 형식의 배열은 XML을 직접 나타내는 방식으로 지원됩니다. 또한, 관련된 <xref:System.Xml.Serialization.IXmlSerializable> 특성, <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 및 <xref:System.Xml.Linq.XDocument> 형식을 비롯하여 <xref:System.Xml.Linq.XElement> 인터페이스를 구현하는 형식이 지원됩니다. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataTable> 형식과 <xref:System.Data.DataSet> 형식 및 형식화된 파생 클래스는 모두 <xref:System.Xml.Serialization.IXmlSerializable> 인터페이스를 구현하므로 이 범주에 속합니다. 자세한 내용은 [XML 및 ADO.NET 형식 데이터 계약의](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)합니다.  
   
 ## <a name="limitations-of-using-certain-types-in-partial-trust-mode"></a>부분 신뢰 모드에서 특정 형식의 사용 제한  
  다음은 부분 신뢰 모드 시나리오에서 특정 형식을 사용할 때의 제한 사항을 나열한 것입니다.  
