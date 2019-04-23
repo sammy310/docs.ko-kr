@@ -4,12 +4,12 @@ description: .NET에서 P/Invoke를 통해 네이티브 함수를 호출하는 �
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 4836096e12f6c3d317daa5da91566ab472053ede
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 1a5f2f9d13429f84d5b5bb58d36f015004fb746b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409239"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59517865"
 ---
 # <a name="platform-invoke-pinvoke"></a>P/Invoke(플랫폼 호출)
 
@@ -24,7 +24,7 @@ public class Program {
 
     // Import user32.dll (containing the function we need) and define
     // the method corresponding to the native function.
-    [DllImport("user32.dll")]
+    [DllImport("user32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
     public static extern int MessageBox(IntPtr hWnd, String text, String caption, int options);
 
     public static void Main(string[] args) {
@@ -37,7 +37,7 @@ public class Program {
 앞의 예제는 간단하지만 관리 코드에서 관리되지 않는 함수를 호출하는 데 필요한 사항을 보여 줍니다. 예제를 단계별로 살펴보겠습니다.
 
 *   줄 #1에서는 필요한 항목이 모두 포함되어 있는 `System.Runtime.InteropServices` 네임스페이스에 대한 using 문을 보여 줍니다.
-*   줄 #7에서는 `DllImport` 특성을 도입합니다. 이 특성은 관리되지 않는 DLL을 로드하도록 런타임에 지정하므로 중요합니다. 전달된 문자열은 대상 함수가 있는 DLL입니다.
+*   줄 #7에서는 `DllImport` 특성을 도입합니다. 이 특성은 관리되지 않는 DLL을 로드하도록 런타임에 지정하므로 중요합니다. 전달된 문자열은 대상 함수가 있는 DLL입니다. 또한 문자열을 마샬링하는 데 사용할 [문자 집합](./charset.md)을 지정합니다. 마지막으로 이 함수가 [SetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror)를 호출하고 사용자가 <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error?displayProperty=nameWithType>을 통해 검색할 수 있게 런타임이 이 오류 코드를 캡처하도록 지정합니다.
 *   줄 #8은 P/Invoke 작업의 핵심입니다. 관리되지 않는 메서드와 **동일한 시그니처**가 있는 관리되는 메서드를 정의합니다. 선언에서 확인할 수 있는 새 키워드 `extern`은 이 메서드가 외부 메서드이며 호출 시 런타임이 `DllImport` 특성에 지정된 DLL에서 찾도록 런타임에 지정합니다.
 
 예제의 나머지 부분에서는 단순히 다른 관리되는 메서드와 마찬가지로 메서드를 호출합니다.
@@ -237,7 +237,6 @@ namespace PInvokeSamples {
 ```
 
 앞의 두 예제에서는 매개 변수를 사용하며, 두 경우 모두 매개 변수가 관리형 형식으로 지정됩니다. 런타임에서 “올바른 작업”을 수행하고 다른 쪽의 해당 항목으로 처리합니다. [형식 마샬링](type-marshalling.md) 페이지에서 형식이 네이티브 코드로 마샬링되는 방식을 알아봅니다.
-
 
 ## <a name="more-resources"></a>추가 리소스
 

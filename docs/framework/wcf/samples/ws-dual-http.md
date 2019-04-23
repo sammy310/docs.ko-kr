@@ -3,11 +3,11 @@ title: WS 다중 Http
 ms.date: 03/30/2017
 ms.assetid: 9997eba5-29ec-48db-86f3-fa77b241fb1a
 ms.openlocfilehash: 8141ee85fa1d38c3f190688981ce66a9dd9c88f4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59306211"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59974492"
 ---
 # <a name="ws-dual-http"></a>WS 다중 Http
 Dual Http 샘플에서는 `WSDualHttpBinding` 바인딩을 구성하는 방법을 보여 줍니다. 이 샘플은 IIS(인터넷 정보 서비스)에 의해 호스트되는 클라이언트 콘솔 프로그램(.exe) 및 서비스 라이브러리(.dll)로 구성됩니다. 서비스는 이중 계약을 구현합니다. 계약은 수학 연산(Add, Subtract, Multiply 및 Divide)을 노출시키는 `ICalculatorDuplex` 인터페이스에 의해 정의됩니다. 이 샘플에서 클라이언트는 `ICalculatorDuplex` 인터페이스를 통해 수학 연산을 수행하고 세션 중에 실행 결과를 계산할 수 있습니다. 서비스는 독립적으로 `ICalculatorDuplexCallback` 인터페이스에 결과를 반환합니다. 클라이언트와 서비스 간에 전송되는 메시지 집합을 서로 연결하기 위해 컨텍스트를 설정해야 하므로 이중 계약에는 세션이 필요합니다. `WSDualHttpBinding` 바인딩은 이중 통신을 지원합니다.  

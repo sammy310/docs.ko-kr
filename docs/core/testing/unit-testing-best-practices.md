@@ -5,12 +5,12 @@ author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
 ms.custom: seodec18
-ms.openlocfilehash: b543ab2e200e8169a251db8ddfb1493c5583ed69
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7f4699b5277c5feeac4d9116ac85e096247aa748
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360253"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427450"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core 및.NET 표준을 사용하는 단위 테스트 모범 사례
 
@@ -18,7 +18,7 @@ ms.locfileid: "57360253"
 
 이 가이드에서는 단위 테스트를 작성할 때 테스트를 탄력적이고 이해하기 쉽게 유지하기 위한 몇 가지 모범 사례를 알아봅니다.
 
-[John Reese](https://reese.dev), [Roy Osherove](http://osherove.com/)에 대한 특별한 감사
+[John Reese](https://reese.dev), [Roy Osherove](https://osherove.com/)에 대한 특별한 감사
 
 ## <a name="why-unit-test"></a>단위 테스트하는 이유는?
 
@@ -82,7 +82,7 @@ purchase.ValidateOrders();
 Assert.True(purchase.CanBeShipped);
 ```
 
-클래스 이름을 `FakeOrder`로 바꾸면 클래스를 훨씬 더 일반화되게 만들므로 클래스를 mock 또는 stub으로 사용할 수 있습니다. 어느 것이든 테스트 사례에 좋습니다. 위의 예에서는 `FakeOrder`가 stub으로 사용됩니다. assert 중에 `FakeOrder`를 어떤 모양 또는 형태로 사용하지 않습니다. `FakeOrder`는 방금 `Purchase` 클래스에 전달되어 생성자의 요구 사항을 충족했습니다.
+클래스 이름을 `FakeOrder`로 바꾸면 클래스를 훨씬 더 일반화되게 만들므로 클래스를 mock 또는 stub으로 사용할 수 있습니다. 어느 것이든 테스트 사례에 좋습니다. 위의 예에서는 `FakeOrder`가 stub으로 사용됩니다. assert 중에 `FakeOrder`를 어떤 모양 또는 형태로 사용하지 않습니다. `FakeOrder` 방금 `Purchase` 클래스에 전달되어 생성자의 요구 사항을 충족했습니다.
 
 Mock으로 사용하려면 다음과 같이 수행하면 됩니다.
 
@@ -250,17 +250,17 @@ mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같
 ```csharp
 public string ParseLogLine(string input)
 {
-    var sanitizedInput = trimInput(input);
+    var sanitizedInput = TrimInput(input);
     return sanitizedInput;
 }
 
-private string trimInput(string input)
+private string TrimInput(string input)
 {
     return input.Trim();
 }
 ```
 
-첫 번째 반응은 메서드가 예상대로 작동하는지 확인하려고 하기 때문에 `trimInput`에 대한 테스트를 작성하는 것일 수 있습니다. 그러나 `ParseLogLine`에서 예상하지 못한 방식으로 `sanitizedInput`을 조작하여 쓸모없는 `trimInput`에 대한 테스트를 렌더링하는 것은 전적으로 가능합니다. 
+첫 번째 반응은 메서드가 예상대로 작동하는지 확인하려고 하기 때문에 `TrimInput`에 대한 테스트를 작성하는 것일 수 있습니다. 그러나 `ParseLogLine`에서 예상하지 못한 방식으로 `sanitizedInput`을 조작하여 쓸모없는 `TrimInput`에 대한 테스트를 렌더링하는 것은 전적으로 가능합니다. 
 
 실제 테스트는 공용 연결 메서드 `ParseLogLine`에 대해 수행되어야 합니다. 이는 최종적으로 주의를 기울여야 하는 것이기 때문이다. 
 

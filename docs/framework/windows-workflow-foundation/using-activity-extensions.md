@@ -3,11 +3,11 @@ title: 활동 확장 사용
 ms.date: 03/30/2017
 ms.assetid: 500eb96a-c009-4247-b6b5-b36faffdf715
 ms.openlocfilehash: e524f7e7127eb215be85b0c317474eee70830c2b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59321291"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768964"
 ---
 # <a name="using-activity-extensions"></a>활동 확장 사용
 활동은 호스트에서 워크플로에 명시적으로 모델링되지 않은 추가 기능을 제공할 수 있도록 하는 워크플로 응용 프로그램 확장과 상호 작용할 수 있습니다.  이 항목에서는 활동이 실행되는 횟수를 계산하기 위해 확장을 만들고 사용하는 방법을 설명합니다.

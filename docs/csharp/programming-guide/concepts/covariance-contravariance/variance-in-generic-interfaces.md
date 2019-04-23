@@ -1,17 +1,19 @@
 ---
 title: 제네릭 인터페이스의 가변성(C#)
-ms.date: 07/20/2015
+ms.date: 04/10/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: ffe437fc88722b9f38aa2fde6cdd87ed2e2060be
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5874a39a57f85695bedc3d1ffa61adf19fcdbe37
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469550"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59480783"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>제네릭 인터페이스의 가변성(C#)
 
-.NET Framework 4에서는 기존의 몇몇 제네릭 인터페이스에 대한 가변성 지원이 추가되었습니다. 가변성 지원은 이러한 인터페이스를 구현하는 클래스의 암시적 변환을 가능하게 합니다. 다음 인터페이스는 현재 variant입니다.
+.NET Framework 4에서는 기존의 몇몇 제네릭 인터페이스에 대한 가변성 지원이 추가되었습니다. 가변성 지원은 이러한 인터페이스를 구현하는 클래스의 암시적 변환을 가능하게 합니다. 
+
+.NET Framework 4부터 다음 인터페이스는 variant입니다.
 
 - <xref:System.Collections.Generic.IEnumerable%601>(T는 공변(covariant)임)
 
@@ -27,6 +29,12 @@ ms.locfileid: "57469550"
 
 - <xref:System.IComparable%601>(T는 반공변(contravariant)임)
 
+.NET Framework 4.5부터 다음 인터페이스는 variant입니다.
+
+- <xref:System.Collections.Generic.IReadOnlyList%601>(T는 반공변(contravariant)임)
+
+- <xref:System.Collections.Generic.IReadOnlyCollection%601>(T는 반공변(contravariant)임)
+
 공변성(covariance)은 메서드가 인터페이스의 제네릭 형식 매개 변수에 정의된 것보다 더 많은 수의 파생된 반환 형식을 갖도록 허용합니다. 공변성(covariance) 기능을 설명하려면 `IEnumerable<Object>` 및 `IEnumerable<String>`이라는 제네릭 인터페이스를 고려하세요. `IEnumerable<String>` 인터페이스는 `IEnumerable<Object>` 인터페이스를 상속하지 않습니다. 그러나 `String` 형식은 `Object` 형식을 상속하며, 경우에 따라 이러한 인터페이스의 개체를 서로 할당할 수 있습니다. 다음 코드 예제에서 이를 확인할 수 있습니다.
 
 ```csharp
@@ -34,7 +42,7 @@ IEnumerable<String> strings = new List<String>();
 IEnumerable<Object> objects = strings;
 ```
 
-.NET Framework의 이전 버전에서는 이 코드가 `Option Strict On` 상태의 C#에서 컴파일 오류를 일으킵니다. 그러나 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스는 공변(covariant) 이므로 이제 다음 예제와 같이 `objects` 대신 `strings`를 사용할 수 있습니다.
+.NET Framework의 이전 버전에서는 이 코드로 인해 C# 및 Visual Basic(`Option Strict`이 on인 경우)에서 컴파일 오류가 발생합니다. 그러나 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스는 공변(covariant) 이므로 이제 다음 예제와 같이 `objects` 대신 `strings`를 사용할 수 있습니다.
 
 반공변성(Contravariance)은 메서드가 인터페이스의 제네릭 매개 변수에 지정된 것보다 더 적은 수의 파생된 형식의 인수 형식을 갖도록 허용합니다. 반공변성(contravariance)을 설명하기 위해, 사용자가 `BaseComparer` 클래스를 만들어 `BaseClass` 클래스의 인스턴스를 비교한다고 가정합니다. `BaseComparer` 클래스는 `IEqualityComparer<BaseClass>` 인터페이스를 구현합니다. <xref:System.Collections.Generic.IEqualityComparer%601> 인터페이스는 이제 반공변(contravariant)이므로 `BaseClass` 클래스를 상속하는 클래스의 인스턴스를 비교하는 데 `BaseComparer`를 사용할 수 있습니다. 다음 코드 예제에서 이를 확인할 수 있습니다.
 

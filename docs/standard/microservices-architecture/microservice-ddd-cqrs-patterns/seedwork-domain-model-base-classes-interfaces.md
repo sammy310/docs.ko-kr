@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 38de5d686c17810f406a57d58554046ba2d888d9
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: bea2dbbc926f351179d11eaacd0dbb89fe036b12
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545730"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611070"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork(도메인 모델에 대해 재사용이 가능한 기본 클래스 및 인터페이스)
 
@@ -140,7 +140,7 @@ public interface IRepository<T> where T : IAggregateRoot
 ## <a name="additional-resources"></a>추가 자료
 
 - **Martin Fowler. 분리된 인터페이스.** \
-  [https://www.martinfowler.com/eaaCatalog/separatedInterface.html](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)
+  <https://www.martinfowler.com/eaaCatalog/separatedInterface.html>
 
 >[!div class="step-by-step"]
 >[이전](net-core-microservice-domain-model.md)

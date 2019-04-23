@@ -2,12 +2,12 @@
 title: C# 8.0의 새로운 기능 - C# 가이드
 description: C# 8.0의 새로운 기능을 살펴봅니다. 이 문서는 미리 보기 2가 반영된 최신 내용을 담고 있습니다.
 ms.date: 02/12/2019
-ms.openlocfilehash: 07752d6d7784ff4aeb70900ef3bcd90cb29f7c22
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: eecc37433e4b026b7337418eac1a5e80ef48ea6e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545561"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59427281"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0의 새로운 기능
 
@@ -58,7 +58,7 @@ public enum Rainbow
 }
 ```
 
-다음과 같이 switch 식을 포함하는 메서드를 사용하여 `Rainbow` 값을 RGB 값으로 변환할 수 있습니다.
+애플리케이션이 `R`, `G` 및 `B` 구성 요소에서 생성된 `RGBColor` 형식을 정의한 경우 switch 식을 포함하는 다음 메서드를 사용하여 `Rainbow` 값을 RGB 값으로 변환할 수 있습니다.
 
 ```csharp
 public static RGBColor FromRainbow(Rainbow colorBand) =>
@@ -219,7 +219,6 @@ static void WriteLinesToFile(IEnumerable<string> lines)
 ```
 
 위 예에서 메서드의 닫는 중괄호에 도달하면 파일이 삭제됩니다. 이 지점이 바로 `file`이 선언된 범위의 끝입니다. 위 코드는 기존의 [using 문](../language-reference/keywords/using-statement.md) 문을 사용하는 다음 코드와 동일합니다.
-
 
 ```csharp
 static void WriteLinesToFile(IEnumerable<string> lines)

@@ -4,12 +4,12 @@ description: .NET Core 런타임의 작동 방식을 제어해야 하는 고급 
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 27717cd68d2ef7c19289a9e06f99bb8767f2f582
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 53cdc13d5a356a2975182c58374a0e9c6639ec17
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654057"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481147"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>사용자 지정 .NET Core 호스트를 작성하여 네이티브 코드에서 .NET 런타임 제어
 
@@ -68,8 +68,10 @@ CoreCLR 라이브러리를 로드한 후 다음 단계는 `GetProcAddress`(Windo
 
 일반적인 속성은 다음과 같습니다.
 
-* `TRUSTED_PLATFORM_ASSEMBLIES` 런타임이 기본적으로 확인할 수 있는 어셈블리 경로의 목록입니다(Windows에서 ‘;’으로 구분되고 Linux에서 ‘:’으로 구분됨). 일부 호스트에는 로드할 수 있는 어셈블리를 나열하는 하드 코딩된 매니페스트가 있습니다. 다른 호스트는 이 목록의 특정 위치(예: *coreclr.dll* 옆)에 라이브러리를 배치합니다.
-* `APP_PATHS` TPA(신뢰할 수 있는 플랫폼 어셈블리) 목록에서 찾을 수 없는 경우 어셈블리에 대해 검색하는 경로 목록입니다. 호스트는 TPA 목록을 사용하여 로드되는 어셈블리를 더 세부적으로 제어할 수 있지만 호스트가 로드해야 하는 어셈블리를 결정하고 명시적으로 나열하는 것이 가장 좋은 방법입니다. 하지만 런타임 시 검색이 필요한 경우 이 속성으로 해당 시나리오를 구현할 수 있습니다.
+* `TRUSTED_PLATFORM_ASSEMBLIES`
+  런타임이 기본적으로 확인할 수 있는 어셈블리 경로의 목록입니다(Windows에서 ‘;’으로 구분되고 Linux에서 ‘:’으로 구분됨). 일부 호스트에는 로드할 수 있는 어셈블리를 나열하는 하드 코딩된 매니페스트가 있습니다. 다른 호스트는 이 목록의 특정 위치(예: *coreclr.dll* 옆)에 라이브러리를 배치합니다.
+* `APP_PATHS`
+  TPA(신뢰할 수 있는 플랫폼 어셈블리) 목록에서 찾을 수 없는 경우 어셈블리에 대해 검색하는 경로 목록입니다. 호스트는 TPA 목록을 사용하여 로드되는 어셈블리를 더 세부적으로 제어할 수 있지만 호스트가 로드해야 하는 어셈블리를 결정하고 명시적으로 나열하는 것이 가장 좋은 방법입니다. 하지만 런타임 시 검색이 필요한 경우 이 속성으로 해당 시나리오를 구현할 수 있습니다.
 *  `APP_NI_PATHS` 이 목록은 네이티브 이미지에 대해 검색되는 경로를 제외하고, APP_PATHS와 비슷합니다.
 *  `NATIVE_DLL_SEARCH_DIRECTORIES` 이 속성은 p/invoke를 통해 호출되는 네이티브 라이브러리를 찾을 때 로더에서 검색해야 하는 경로 목록입니다.
 *  `PLATFORM_RESOURCE_ROOTS` 이 목록에는 (문화권별 하위 디렉터리에서) 리소스 위성 어셈블리에 대해 검색하는 경로가 포함됩니다.
@@ -114,7 +116,7 @@ int hr = executeAssembly(
 
 [!code-cpp[CoreClrHost#6](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#6)]
 
-`FreeLibrary`(Windows) 또는 `dlclose`(Linux/Mac)를 사용하여 CoreCLR 라이브러리를 업로드하는 것을 잊지 마세요.
+CoreCLR은 다시 초기화 또는 언로드를 지원하지 않습니다. `coreclr_initialize`를 다시 호출하거나 CoreCLR 라이브러리를 언로드하지 마세요.
 
 ## <a name="create-a-host-using-mscoreeh"></a>Mscoree.h를 사용하여 호스트 만들기
 
@@ -164,8 +166,10 @@ AppDomain 플래그는 보안 및 interop와 관련된 AppDomain 동작을 지�
 
 일반적인 AppDomain 속성에는 다음이 포함됩니다.
 
-* `TRUSTED_PLATFORM_ASSEMBLIES` AppDomain에서 로드의 우선 순위를 지정하고 완전 신뢰(부분적으로 신뢰할 수 있는 도메인에서도)를 제공해야 하는 어셈블리 경로 목록입니다(Windows에서 `;`으로 구분되고 Linux/Mac에서 `:`으로 구분됨). 이 목록에는 'Framework' 어셈블리 및 .NET Framework 시나리오에서 GAC와 비슷한 기타 신뢰할 수 있는 모듈이 포함됩니다. 일부 호스트는 이 목록에서 *coreclr.dll* 옆에 라이브러리를 배치하고, 일부에는 목적에 대해 신뢰할 수 있는 어셈블리를 나열하는 하드 코드된 매니페스트가 있습니다.
-* `APP_PATHS` TPA(신뢰할 수 있는 플랫폼 어셈블리) 목록에서 찾을 수 없는 경우 어셈블리에 대해 검색하는 경로 목록입니다. 호스트는 TPA 목록을 사용하여 로드되는 어셈블리를 더 세부적으로 제어할 수 있지만 호스트가 로드해야 하는 어셈블리를 결정하고 명시적으로 나열하는 것이 가장 좋은 방법입니다. 하지만 런타임 시 검색이 필요한 경우 이 속성으로 해당 시나리오를 구현할 수 있습니다.
+* `TRUSTED_PLATFORM_ASSEMBLIES`
+  AppDomain에서 로드의 우선 순위를 지정하고 완전 신뢰(부분적으로 신뢰할 수 있는 도메인에서도)를 제공해야 하는 어셈블리 경로 목록입니다(Windows에서 `;`으로 구분되고 Linux/Mac에서 `:`으로 구분됨). 이 목록에는 'Framework' 어셈블리 및 .NET Framework 시나리오에서 GAC와 비슷한 기타 신뢰할 수 있는 모듈이 포함됩니다. 일부 호스트는 이 목록에서 *coreclr.dll* 옆에 라이브러리를 배치하고, 일부에는 목적에 대해 신뢰할 수 있는 어셈블리를 나열하는 하드 코드된 매니페스트가 있습니다.
+* `APP_PATHS`
+  TPA(신뢰할 수 있는 플랫폼 어셈블리) 목록에서 찾을 수 없는 경우 어셈블리에 대해 검색하는 경로 목록입니다. 호스트는 TPA 목록을 사용하여 로드되는 어셈블리를 더 세부적으로 제어할 수 있지만 호스트가 로드해야 하는 어셈블리를 결정하고 명시적으로 나열하는 것이 가장 좋은 방법입니다. 하지만 런타임 시 검색이 필요한 경우 이 속성으로 해당 시나리오를 구현할 수 있습니다.
 *  `APP_NI_PATHS` 이 목록은 네이티브 이미지에 대해 검색되는 경로를 제외하고, APP_PATHS와 아주 비슷합니다.
 *  `NATIVE_DLL_SEARCH_DIRECTORIES` 이 속성은 p/invoke를 통해 호출되는 네이티브 DLL을 찾을 때 로더에서 검색해야 하는 경로 목록입니다.
 *  `PLATFORM_RESOURCE_ROOTS` 이 목록에는 (문화권별 하위 디렉터리에서) 리소스 위성 어셈블리에 대해 검색하는 경로가 포함됩니다.
@@ -202,6 +206,8 @@ hr = runtimeHost->CreateDelegate(
 마지막으로 호스트는 AppDomain을 언로드하고, 런타임을 중지하고, `ICLRRuntimeHost4` 참조를 릴리스하여 자체 정리해야 합니다.
 
 [!code-cpp[NetCoreHost#9](~/samples/core/hosting/HostWithMscoree/host.cpp#9)]
+
+CoreCLR은 언로드를 지원하지 않습니다. CoreCLR 라이브러리를 언로드하지 마세요.
 
 ## <a name="conclusion"></a>결론
 호스트가 빌드되면 명령줄에서 실행하고 호스트에서 예상하는 인수(예: mscoree example 호스트에서 실행할 관리 앱)를 전달하여 테스트할 수 있습니다. 실행할 호스트에 대해 .NET Core 앱을 지정할 때 `dotnet build`로 생성된 .dll을 사용하세요. 자체 포함된 애플리케이션에 대해 `dotnet publish`로 생성된 실행 파일(.exe 파일)이 실제로 기본 .NET Core 호스트이며(앱이 주 시나리오의 명령줄에서 직접 실행될 수 있음), 사용자 코드는 동일한 이름의 DLL로 컴파일됩니다.

@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID62
 ms.assetid: 65292704-6e7d-4622-9f50-eb655a59b016
 ms.openlocfilehash: 5da14c7a28ecdcd023fc6439cb6ed64444c1183b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59342780"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768555"
 ---
 # <a name="input-past-end-of-file"></a>입력(값)이 파일의 끝을 넘습니다.
 중 하나는 `Input` 문에서 비어 있는 파일 또는 모든 데이터 사용 또는 사용에서 읽고는 `EOF` 함수 파일을 사용 하 여 이진 액세스를 위해 열렸습니다.  

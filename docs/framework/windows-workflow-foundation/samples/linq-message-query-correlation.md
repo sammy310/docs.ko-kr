@@ -3,11 +3,11 @@ title: LINQ 메시지 쿼리 상관 관계
 ms.date: 03/30/2017
 ms.assetid: b746872e-57b1-4514-b337-53398a0e0deb
 ms.openlocfilehash: cc13696cfd8eb2dcdf22fdc067518c8bd55ca32d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59327674"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973319"
 ---
 # <a name="linq-message-query-correlation"></a>LINQ 메시지 쿼리 상관 관계
 이 샘플에서는 시스템에서 제공하는 <xref:System.ServiceModel.Dispatcher.MessageQuery> 대신 사용자 지정 <xref:System.ServiceModel.XPathMessageQuery> 구현을 사용하여 내용 기반 상관 관계를 만드는 방법을 보여 줍니다.  

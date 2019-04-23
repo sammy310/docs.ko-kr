@@ -3,11 +3,11 @@ title: 활동 클래스를 사용하여 워크플로 활동 제작
 ms.date: 03/30/2017
 ms.assetid: 7b7b1c66-f093-43c3-b4d1-7173b46516da
 ms.openlocfilehash: 1bec10b6ae9fb43319cfb6acbf59133e1acca09c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59322318"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59770773"
 ---
 # <a name="workflow-activity-authoring-using-the-activity-class"></a>활동 클래스를 사용하여 워크플로 활동 제작
 Windows WF (Workflow Foundation)에서 사용 하 여 활동을 만드는 가장 기본적인 방법은 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 에서 상속 되는 클래스를 만듭니다 <xref:System.Activities.Activity> 만들어지는 기능 조합 하 여 사용자 지정 활동 또는 활동에서의 [기본 제공 활동 라이브러리](net-framework-4-5-built-in-activity-library.md)합니다. 이 항목에서는 콘솔에 두 개의 메시지를 쓰는 활동을 만드는 방법을 보여 줍니다.

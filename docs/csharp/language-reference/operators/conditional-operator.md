@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 210b7cabb658c6f068d9ab34c83050ad6267e426
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c03fa202b413c98230ba70ca7a0b709d7865cb91
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704910"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427385"
 ---
 # <a name="-operator-c-reference"></a>?: 연산자(C# 참조)
 
@@ -24,12 +24,12 @@ ms.locfileid: "57704910"
 조건 연산자의 구문은 다음과 같습니다.
 
 ```csharp
-condition ? consequence : alternative
+condition ? consequent : alternative
 ```
 
-`condition` 식은 `true` 또는 `false`로 계산되어야 합니다. `condition`이 `true`로 계산되면 `consequence` 식이 계산되고 해당 결과가 연산 결과가 됩니다. `condition`이 `false`로 계산되면 `alternative` 식이 계산되고 해당 결과가 연산 결과가 됩니다. `consequence` 또는 `alternative`만 계산됩니다.
+`condition` 식은 `true` 또는 `false`로 계산되어야 합니다. `condition`이 `true`로 계산되면 `consequent` 식이 계산되고 해당 결과가 연산 결과가 됩니다. `condition`이 `false`로 계산되면 `alternative` 식이 계산되고 해당 결과가 연산 결과가 됩니다. `consequent` 또는 `alternative`만 계산됩니다.
 
-`consequence` 및 `alternative`의 형식이 동일해야 하거나 한 형식에서 다른 형식으로 암시적 변환이 있어야 합니다.
+`consequent` 및 `alternative`의 형식이 동일해야 하거나 한 형식에서 다른 형식으로 암시적 변환이 있어야 합니다.
 
 조건부 연산자는 오른쪽 결합성입니다. 즉, 다음 형식의 식을 가정해 보세요.
 
@@ -54,12 +54,12 @@ C# 7.2부터 조건부 ref 식을 사용하여 두 식 중 하나의 결과에 �
 조건부 ref 식의 구문은 다음과 같습니다.
 
 ```csharp
-condition ? ref consequence : ref alternative
+condition ? ref consequent : ref alternative
 ```
 
-원래 조건부 연산자와 마찬가지로 조건부 ref 식은 두 식 중 하나(`consequence` 또는 `alternative`)만 계산합니다.
+원래 조건부 연산자와 마찬가지로 조건부 ref 식은 두 식 중 하나(`consequent` 또는 `alternative`)만 계산합니다.
 
-조건부 ref 식의 경우 `consequence` 및 `alternative`의 형식이 동일해야 합니다.
+조건부 ref 식의 경우 `consequent` 및 `alternative`의 형식이 동일해야 합니다.
 
 다음 예제에서는 조건부 ref 식의 사용법을 보여 줍니다.
 

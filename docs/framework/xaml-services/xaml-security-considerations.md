@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XAML security [XAML Services]
 ms.assetid: 544296d4-f38e-4498-af49-c9f4dad28964
 ms.openlocfilehash: 124310497cc2a8e8a816ba90b2c68a16ed342ae6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162674"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973455"
 ---
 # <a name="xaml-security-considerations"></a>XAML 보안 고려 사항
 이 항목에서는 XAML 및.NET Framework XAML 서비스 API를 사용 하는 경우 응용 프로그램의 보안을 위한 모범 사례를 설명 합니다.  

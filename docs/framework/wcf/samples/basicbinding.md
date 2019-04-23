@@ -3,11 +3,11 @@ title: BasicBinding
 ms.date: 03/30/2017
 ms.assetid: 86fbeb87-4d89-4b61-9577-867e0ac12945
 ms.openlocfilehash: b24933cfd89e0c8bfe6a3994fedafd4e323ebead
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59341207"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59769816"
 ---
 # <a name="basicbinding"></a>BasicBinding
 이 샘플에서는 첫 번째 및 두 번째 세대 웹 서비스와의 HTTP 통신 및 최대 상호 운용성을 제공하는 `basicHttpBinding`의 사용을 보여 줍니다.  

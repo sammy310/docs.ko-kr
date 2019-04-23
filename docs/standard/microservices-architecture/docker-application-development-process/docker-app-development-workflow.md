@@ -4,12 +4,12 @@ description: Docker 기반 애플리케이션 개발 워크플로의 세부 정�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: d494dba829d8065e2bc1424bc9bcc11e265fbcc0
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 3fb5c06f8ed58b45a3ee669931d8c3118b3dc314
+ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921093"
+ms.lasthandoff: 04/13/2019
+ms.locfileid: "59553877"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 앱에 대한 개발 워크플로
 
@@ -67,7 +67,7 @@ Docker 애플리케이션 개발은 Docker 없이 애플리케이션을 개발�
   [https://docs.docker.com/docker-for-windows/](https://docs.docker.com/docker-for-windows/)
 
 - **Visual Studio 2017** \
-  [https://visualstudio.microsoft.com/downloads/](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+  [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
 
 ![2 - Dockerfile 작성](./media/image4.png)
 
@@ -193,26 +193,26 @@ Dockerfile은 배치 스크립트와 비슷합니다. 명령줄에서 머신을 
 17  RUN dotnet restore src/Services/Catalog/Catalog.API/Catalog.API.csproj
 18  COPY . .
 19  WORKDIR /src/src/Services/Catalog/Catalog.API
-20  RUN dotnet build Catalog.API.csproj -c Release -0 /app
+20  RUN dotnet build Catalog.API.csproj -c Release -o /app
 21
 22  FROM build AS publish
-23  RUN dotnet publish Catalog.API.csproj -c Release -0 /app
+23  RUN dotnet publish Catalog.API.csproj -c Release -o /app
 24
 25  FROM base AS final
 26  WORKDIR /app
-27  COPY --from=publish /app
+27  COPY --from=publish /app .
 28  ENTRYPOINT ["dotnet", "Catalog.API.dll"]
 ```
 
 이를 한 줄씩 자세히 설명하면 다음과 같습니다.
 
-1.  "작은" 런타임 전용 기본 이미지로 단계를 시작하고 참조를 위해 이를 **base**라고 명명합니다.
-2.  이미지에 **/app** 디렉터리를 만듭니다.
-3.  포트 **80**을 공개합니다.
+1. "작은" 런타임 전용 기본 이미지로 단계를 시작하고 참조를 위해 이를 **base**라고 명명합니다.
+2. 이미지에 **/app** 디렉터리를 만듭니다.
+3. 포트 **80**을 공개합니다.
 <!-- skip -->
-5.  빌드/게시를 위한 "큰" 이미지로 새 단계를 시작하고 참조를 위해 이를 **build**라고 명명합니다.
-6.  이미지에 **/src** 디렉터리를 만듭니다.
-7.  패키지를 나중에 복원할 수 있도록 16번째 줄까지 참조된 프로젝트 **.csproj** 파일을 복사합니다.
+5. 빌드/게시를 위한 "큰" 이미지로 새 단계를 시작하고 참조를 위해 이를 **build**라고 명명합니다.
+6. 이미지에 **/src** 디렉터리를 만듭니다.
+7. 패키지를 나중에 복원할 수 있도록 16번째 줄까지 참조된 프로젝트 **.csproj** 파일을 복사합니다.
 <!-- skip -->
 17. **Catalog.API** 프로젝트 및 참조된 프로젝트의 패키지를 복원합니다.
 18. **솔루션의 모든 디렉터리 트리**(**.dockerignore** 파일에 포함된 파일/디렉터리는 예외)를 이미지의 **/src** 디렉터리로 복사합니다.
@@ -255,9 +255,9 @@ RUN dotnet restore
 
 1) **.dockerignore**에 다음 줄을 추가합니다.
 
-   - `*.sln`- 기본 폴더 트리의 모든 솔루션 파일 무시
+   - `*.sln` - 기본 폴더 트리의 모든 솔루션 파일 무시
 
-   - `!eShopOnContainers-ServicesAndWebApps.sln`- 이 솔루션 파일만 포함
+   - `!eShopOnContainers-ServicesAndWebApps.sln` - 이 솔루션 파일만 포함
 
 2) `dotnet restore`에 `/ignoreprojectextensions:.dcproj` 인수를 포함하여 docker-compose 프로젝트를 무시하고 eShopOnContainers-ServicesAndWebApps 솔루션의 패키지만 복원하도록 합니다.
 

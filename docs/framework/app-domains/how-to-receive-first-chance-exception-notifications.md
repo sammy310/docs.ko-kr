@@ -11,11 +11,11 @@ ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f6f70b4c67de892c3b66a0099dae9f618a99b3f1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59314115"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59770492"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>방법: 첫째 예외 알림 받기
 <xref:System.AppDomain> 클래스의 <xref:System.AppDomain.FirstChanceException> 이벤트를 사용하면 공용 언어 런타임이 예외 처리기 검색을 시작하기 전에 예외가 throw되었다는 알림을 받을 수 있습니다.

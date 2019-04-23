@@ -4,12 +4,12 @@ description: C#에서 특성이 작동하는 방식을 알아봅니다.
 author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: e744f3585fe7be02fb8bdd25f559a12a88b61730
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3141c1bf7ddcf3fd3426290428f9eeeb54b3c872
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975604"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59481233"
 ---
 # <a name="using-attributes-in-c"></a>C\#에서 특성 사용
 
@@ -147,4 +147,4 @@ C#에서 특성은 `Attribute` 기본 클래스에서 상속되는 클래스입�
 
 ## <a name="summary"></a>요약
 
-특성은 C#에 선언적 기능을 제공합니다. 하지만 메타데이터로서의 코드 형태를 가지므로 단독으로 동작하지 않습니다.
+특성은 C#에 선언적 기능을 제공하지만 코드의 메타데이터 형식이며 단독으로 동작하지 않습니다.

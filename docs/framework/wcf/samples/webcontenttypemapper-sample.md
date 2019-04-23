@@ -3,11 +3,11 @@ title: WebContentTypeMapper 샘플
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
 ms.openlocfilehash: 381fc4a3084b1a2620384a04de85b9085e02ae16
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59344678"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973514"
 ---
 # <a name="webcontenttypemapper-sample"></a>WebContentTypeMapper 샘플
 이 샘플에는 Windows Communication Foundation (WCF) 메시지 본문 형식에 새 콘텐츠 형식을 매핑하는 방법을 보여 줍니다.  

@@ -3,22 +3,22 @@ title: 클러스터링 학습자를 사용하여 아이리스 꽃 클러스터�
 description: 클러스터링 시나리오에서 ML.NET을 사용하는 방법 알아보기
 author: pkulikov
 ms.author: johalex
-ms.date: 03/18/2019
+ms.date: 04/08/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: be59760091767b7229d80693cd69434581a8b140
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 86eba0c7a3eaeed008d41ff950bf2fd7e0e5fb57
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634416"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59481342"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>자습서: ML.NET을 통해 클러스터링 학습자를 사용하여 아이리스 꽃 클러스터링
 
 > [!NOTE]
 > 이 항목은 현재 미리 보기로 제공되는 ML.NET을 참조하며, 자료는 변경될 수 있습니다. 자세한 내용은 [ML.NET 소개](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)를 참조하세요.
 
-이 자습서와 관련 샘플에서는 현재 **ML.NET 버전 0.11**을 사용하고 있습니다. 자세한 내용은 [dotnet/machinelearning GitHub 리포지토리](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)에서 릴리스 정보를 참조하세요.
+이 자습서와 관련 샘플에서는 현재 **ML.NET 1.0 RC(릴리스 후보)(버전 `1.0.0-preview`)** 를 사용하고 있습니다. 자세한 내용은 [dotnet/machinelearning GitHub 리포지토리](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)에서 릴리스 정보를 참조하세요.
 
 이 자습서에서는 ML.NET을 사용하여 [아이리스 꽃 데이터 집합](https://en.wikipedia.org/wiki/Iris_flower_data_set)을 위해 [클러스터링 모델](../resources/tasks.md#clustering)을 빌드하는 방법을 보여줍니다.
 
@@ -34,7 +34,7 @@ ms.locfileid: "58634416"
 
 ## <a name="prerequisites"></a>전제 조건
 
-- “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2017 15.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
+- “.NET Core 플랫폼 간 개발” 워크로드가 설치된 [Visual Studio 2017 15.6 이상](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017).
 
 ## <a name="understand-the-problem"></a>문제 이해
 
@@ -127,16 +127,16 @@ ms.locfileid: "58634416"
 
 `Main` 메서드에 다음 코드를 추가하여 데이터를 로드하는 방법을 설정합니다.
 
-[!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#SetupTextLoader)]
+[!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#CreateDataView)]
 
-[LoadFromTextFile 메서드](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29)에 대해 제네릭`MLContext.Data.LoadFromTextFile`래퍼를 사용하여 데이터를 로드합니다. `IrisData` 데이터 모델 형식의 데이터 세트 스키마를 유추하고 데이터 세트 헤더를 사용하는 <xref:Microsoft.Data.DataView.IDataView>를 반환하고 콤마로 구분합니다.
+제네릭 [`MLContext.Data.LoadFromTextFile` 확장 메서드](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29)는 제공된 `IrisData` 형식에서 데이터 세트 스키마를 유추하고 변환기의 입력으로 사용할 수 있는 <xref:Microsoft.ML.IDataView>를 반환합니다.
 
 ## <a name="create-a-learning-pipeline"></a>학습 파이프라인 만들기
 
 이 자습서의 경우 클러스터링 작업의 학습 파이프라인은 다음 두 단계로 구성됩니다.
 
 - 로드된 열을 클러스터링 교육 담당자가 사용하는 하나의 **기능** 열로 연결합니다.
-- <xref:Microsoft.ML.Trainers.KMeansPlusPlusTrainer> 교육 담당자를 사용하여 k-means++ 클러스터링 알고리즘을 사용하는 모델을 학습합니다.
+- <xref:Microsoft.ML.Trainers.KMeansTrainer> 교육 담당자를 사용하여 k-means++ 클러스터링 알고리즘을 사용하는 모델을 학습합니다.
 
 `Main` 메서드에 다음 코드를 추가합니다.
 

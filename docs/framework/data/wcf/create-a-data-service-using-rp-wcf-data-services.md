@@ -8,10 +8,10 @@ helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: 7315c6d8-f452-4fb2-a0c1-76ab0593c146
 ms.openlocfilehash: 233b17de17b7f50547b2f4fbf6a543d7258183cf
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59517098"
 ---
 # <a name="how-to-create-a-data-service-using-the-reflection-provider-wcf-data-services"></a>방법: 리플렉션 공급자 (WCF Data Services)를 사용 하 여 데이터 서비스 만들기

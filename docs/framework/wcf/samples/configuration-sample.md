@@ -3,11 +3,11 @@ title: 구성 샘플
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
 ms.openlocfilehash: 48f66c4110d048f714dae0943f97f3f4aa7cd419
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59332523"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768243"
 ---
 # <a name="configuration-sample"></a>구성 샘플
 이 샘플에서는 구성 파일을 사용하여 서비스를 검색 가능하게 만드는 방법을 보여 줍니다.  

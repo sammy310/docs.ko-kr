@@ -13,10 +13,10 @@ helpviewer_keywords:
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
 ms.openlocfilehash: 58ee58577b9ff71112103abb4d33c8b85d3c806f
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481355"
 ---
 # <a name="graphics-and-multimedia"></a>그래픽 및 멀티미디어
@@ -59,7 +59,7 @@ WPF는 고품질의 2차원 그래픽을 지원합니다. 기능으로는 브러
 
 ### <a name="2-d-shapes"></a>2차원 도형
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 자주 사용 되는, 벡터 기반의 라이브러리를 제공 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 사각형 및 타원과 다음 그림과 같은 모양입니다.
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 다음 그림에 표시된 사각형 및 타원과 같은 일반적인 벡터 기반의 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 도형 라이브러리를 제공합니다.
 
 ![다이어그램 표시 타원 및 사각형입니다.](./media/index/two-deminsional-shapes-ellipses-rectangles.png)
 
@@ -109,7 +109,7 @@ End Class
 
 ### <a name="2-d-effects"></a>2차원 효과
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 라이브러리를 제공 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 다양 한 효과 만드는 데 사용할 수 있는 클래스입니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 렌더링 기능은 그라데이션, 비트맵, 그림 및 비디오가 있는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 요소를 그리고 회전, 크기 조정 및 기울이기를 사용하여 조작하는 기능을 제공합니다. 다음 그림에서는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 브러시를 사용하여 획득할 수 있는 많은 효과의 예를 보여 줍니다.
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서는 다양한 효과 만드는 데 사용할 수 있는 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 클래스 라이브러리를 제공합니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 렌더링 기능은 그라데이션, 비트맵, 그림 및 비디오가 있는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 요소를 그리고 회전, 크기 조정 및 기울이기를 사용하여 조작하는 기능을 제공합니다. 다음 그림에서는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 브러시를 사용하여 획득할 수 있는 많은 효과의 예를 보여 줍니다.
 
 ![다양 한 WPF 브러시 및 그리기 요소를 보여 주는 그림입니다.](./media/index/brushes-paint-elements.png)
 
@@ -119,7 +119,7 @@ End Class
 
 ## <a name="3-d-rendering"></a>3차원 렌더링
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 집합을 제공 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 통합 하는 렌더링 기능도 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 그래픽 지원을 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 더 흥미로운 레이아웃을 만들 수 있는 순서로 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], 및 데이터 시각화. 다음 그림과 같이 스펙트럼의 한쪽 끝에서 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]를 사용하여 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 이미지를 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 도형 표면 위에 렌더링할 수 있습니다.
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서는 더 흥미로운 레이아웃, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 및 데이터 시각화를 만들 수 있도록 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 그래픽 지원을 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에 통합하는 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 렌더링 기능 집합을 제공합니다. 다음 그림과 같이 스펙트럼의 한쪽 끝에서 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]를 사용하여 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 이미지를 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 도형 표면 위에 렌더링할 수 있습니다.
 
 ![다른 질감을 사용 하 여 3 차원 도형을 보여 주는 샘플의 스크린샷.](./media/index/visual-three-dimensional-shape.png)
 
@@ -166,7 +166,7 @@ End Class
 - <xref:System.Windows.Media>
 - <xref:System.Windows.Media.Animation>
 - <xref:System.Windows.Media.Media3D>
-- [2D 그래픽 및 이미징](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [2차원 그래픽 및 이미징](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [WPF에서 Shape 및 기본 그리기 개요](shapes-and-basic-drawing-in-wpf-overview.md)
 - [단색 및 그라데이션을 사용한 그리기 개요](painting-with-solid-colors-and-gradients-overview.md)
 - [이미지, 그림 및 시각적 표시로 그리기](painting-with-images-drawings-and-visuals.md)

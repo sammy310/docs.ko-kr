@@ -2,12 +2,12 @@
 title: SQL Server에서 행 수준 권한 부여
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: acd4a8962e0c4cd3504b9912a4de66d2a461805a
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.openlocfilehash: 891b5114551c5784b11504f2463525087125131f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57844771"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973085"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>SQL Server에서 행 수준 권한 부여
 
@@ -23,35 +23,35 @@ ms.locfileid: "57844771"
 
 - 행 수준 필터링을 사용하도록 설정합니다.
 
-    - SQL Server 2016 이상이나 [Azure SQL 데이터베이스](https://docs.microsoft.com/azure/sql-database/)를 사용하고 있으면 반환되는 행을 현재 데이터베이스 사용자(CURRENT_USER() 기본 제공 함수 사용) 또는 현재 로그인 이름(SUSER_SNAME() 기본 제공 함수 사용)과 일치하는 행으로 제한하는 조건자를 테이블에 추가하는 보안 정책을 만듭니다.
+  - SQL Server 2016 이상이나 [Azure SQL 데이터베이스](https://docs.microsoft.com/azure/sql-database/)를 사용하고 있으면 반환되는 행을 현재 데이터베이스 사용자(CURRENT_USER() 기본 제공 함수 사용) 또는 현재 로그인 이름(SUSER_SNAME() 기본 제공 함수 사용)과 일치하는 행으로 제한하는 조건자를 테이블에 추가하는 보안 정책을 만듭니다.
 
-        ```sql
-        CREATE SCHEMA Security
-        GO
+      ```sql
+      CREATE SCHEMA Security
+      GO
 
-        CREATE FUNCTION Security.userAccessPredicate(@UserName sysname)
-            RETURNS TABLE
-            WITH SCHEMABINDING
-        AS
-            RETURN SELECT 1 AS accessResult
-            WHERE @UserName = SUSER_SNAME()
-        GO
+      CREATE FUNCTION Security.userAccessPredicate(@UserName sysname)
+          RETURNS TABLE
+          WITH SCHEMABINDING
+      AS
+          RETURN SELECT 1 AS accessResult
+          WHERE @UserName = SUSER_SNAME()
+      GO
 
-        CREATE SECURITY POLICY Security.userAccessPolicy
-            ADD FILTER PREDICATE Security.userAccessPredicate(UserName) ON dbo.MyTable,
-            ADD BLOCK PREDICATE Security.userAccessPredicate(UserName) ON dbo.MyTable
-        GO
-        ```
+      CREATE SECURITY POLICY Security.userAccessPolicy
+          ADD FILTER PREDICATE Security.userAccessPredicate(UserName) ON dbo.MyTable,
+          ADD BLOCK PREDICATE Security.userAccessPredicate(UserName) ON dbo.MyTable
+      GO
+      ```
 
-    - SQL Server 2016 이전 버전을 사용하고 있으면 뷰를 사용하여 비슷한 기능을 적용할 수 있습니다.
+  - SQL Server 2016 이전 버전을 사용하고 있으면 뷰를 사용하여 비슷한 기능을 적용할 수 있습니다.
 
-        ```sql
-        CREATE VIEW vw_MyTable
-        AS
-            RETURN SELECT * FROM MyTable
-            WHERE UserName = SUSER_SNAME()
-        GO
-        ```
+      ```sql
+      CREATE VIEW vw_MyTable
+      AS
+          RETURN SELECT * FROM MyTable
+          WHERE UserName = SUSER_SNAME()
+      GO
+      ```
 
 - 저장 프로시저를 만들어서 데이터를 선택, 삽입, 업데이트, 삭제합니다. 필터링이 보안 정책을 통해 시행되면 저장 프로시저는 기본 테이블에서 직접 이들 작업을 수행해야 합니다. 그렇지 않고 필터링이 뷰를 통해 시행되면 저장 프로시저는 대신 뷰에서 작업을 수행해야 합니다. 보안 정책 또는 뷰에서는 사용자 쿼리를 통해 반환 또는 수정되는 행을 자동으로 필터링하고, 저장 프로시저에서는 직접 쿼리 권한을 가진 사용자가 필터링된 데이터를 방해할 수 있는 쿼리를 실행하지 못하도록 더 강력한 보안 경계를 제공합니다.
 

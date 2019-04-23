@@ -1,175 +1,107 @@
 ---
-title: 기계 학습 데이터 변환 - ML.NET
+title: 데이터 변환 | ML.NET
 description: ML.NET에서 지원되는 기능 엔지니어링 구성 요소를 탐색합니다.
-author: JRAlexander
-ms.custom: seodec18
-ms.date: 01/14/2019
-ms.openlocfilehash: e649c9a27f0409cb9cdfb554963b5c0e732991f2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+author: natke
+ms.author: nakersha
+ms.date: 04/02/2019
+ms.openlocfilehash: 506abcc826059f4d252378b1bde0b852949a42e1
+ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355413"
+ms.lasthandoff: 04/13/2019
+ms.locfileid: "59553851"
 ---
-# <a name="machine-learning-data-transforms---mlnet"></a>기계 학습 데이터 변환 - ML.NET
+# <a name="data-transformations"></a>데이터 변환
 
-다음 테이블은 ML.NET에서 지원되는 모든 데이터 변환에 대한 정보를 포함합니다.
+데이터 변환은 모델 학습용 데이터를 준비하는 데 사용됩니다. 이 가이드의 변환은 [IEstimator](xref:Microsoft.ML.IEstimator`1) 인터페이스를 구현하는 클래스를 반환합니다. 데이터 변환은 함께 연결될 수 있습니다. 두 변환은 각각 연결된 참조 설명서에 지정된 특정 형식 및 형태의 데이터를 예측하고 생성합니다.
 
-> [!NOTE]
-> ML.NET은 현재 미리 보기로 제공됩니다. 일부 데이터 변환은 현재 지원되지 않습니다. 특정 변환에 대한 요청을 제출하려면 [dotnet/machinelearning](https://github.com/dotnet/machinelearning/issues) GitHub 리포지토리에서 문제를 엽니다.
+일부 데이터 변환의 경우 해당 매개 변수를 계산하려면 학습 데이터가 필요합니다. 예를 들어 <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> 변환기는 `Fit()` 작업 중에 학습 데이터의 평균 및 분산을 계산하고 해당 매개 변수를 `Transform()` 작업에서 사용합니다. 
 
-## <a name="combiners-and-segregators"></a>결합자 및 분리기
+다른 데이터 변환에는 학습 데이터가 필요하지 않습니다. 예를 들어 <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale*> 변환은 `Fit()` 작업 중에 학습 데이터를 확인하지 않고 `Transform()` 작업을 수행할 수 있습니다.
 
-| 변형 | 정의 |
-| --- | --- |
-| <xref:Microsoft.ML.Transforms.GroupTransform> | 스칼라 열의 값을 인접 그룹 ID 기반의 벡터로 그룹화합니다. |
-| <xref:Microsoft.ML.Transforms.UngroupTransform> | 벡터 열을 행의 시퀀스로 그룹을 해제합니다(그룹 변환의 반대). |
-
-## <a name="conversions"></a>변환
+## <a name="column-mapping-and-grouping"></a>열 매핑 및 그룹화
 
 | 변형 | 정의 |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.Conversions.HashingTransformer> | 단일 반환된 열 또는 벡터 열을 해싱합니다. 벡터 열의 경우 각 슬롯을 개별적으로 해싱합니다. 텍스트 값 또는 키 값을 해싱할 수 있습니다. |
-| <xref:Microsoft.ML.Transforms.Conversions.HashJoiningTransform> | 여러 열 값을 해시로 변환합니다. 이 변환은 숫자 및 텍스트 입력 모두와 단일 및 벡터 값 열 모두를 허용합니다. |
-| <xref:Microsoft.ML.Transforms.Conversions.KeyToBinaryVectorMappingTransformer> | 키를 이진 벡터 열로 변환합니다. |
-| <xref:Microsoft.ML.Transforms.Conversions.KeyToValueMappingTransformer > | KeyValues 메타데이터를 활용하여 키 인덱스를 KeyValues 메타데이터의 해당 값으로 매핑합니다. |
-| <xref:Microsoft.ML.Transforms.Conversions.KeyToVectorMappingTransformer> | 키를 벡터 열로 변환합니다. |
-| <xref:Microsoft.ML.Transforms.Conversions.TypeConvertingTransformer> | 유형을 변환할 수 있는 경우 기본 열 유형을 변경합니다. |
-| <xref:Microsoft.ML.Transforms.Conversions.ValueToKeyMappingTransformer> | 입력 값(단어, 숫자 등)을 사전의 인덱스로 변환합니다. |
+| <xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate%2A> | 새 출력 열에 하나 이상의 입력 열 연결 |
+| <xref:Microsoft.ML.TransformExtensionsCatalog.CopyColumns%2A> | 하나 이상의 입력 열 복사 및 이름 바꾸기 |
+| <xref:Microsoft.ML.TransformExtensionsCatalog.DropColumns%2A> | 하나 이상의 입력 열 삭제 |
+| <xref:Microsoft.ML.TransformExtensionsCatalog.SelectColumns%2A> | 입력 데이터에서 유지할 하나 이상의 열 선택 |
 
-## <a name="deep-learning"></a>딥러닝
+## <a name="normalization-and-scaling"></a>정규화 및 크기 조정
 
 | 변형 | 정의 |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.OnnxTransform> | 데이터를 기존 ONNX 모델에 제공하고 점수를 반환합니다(예측). |
-| <xref:Microsoft.ML.Transforms.TensorFlowTransform> | 미리 학습된 TensorFlow 모델을 사용하여 점수를 매기거나 TensorFlow 모델을 재교육할 수 있습니다. |
+| <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> | 학습 데이터의 평균을 빼고 학습 데이터의 차이로 나누기 |
+| <xref:Microsoft.ML.NormalizationCatalog.NormalizeLogMeanVariance%2A> | 학습 데이터의 로그를 기반으로 정규화 |
+| <xref:Microsoft.ML.NormalizationCatalog.NormalizeLpNorm%2A> | [lp-norm](https://en.wikipedia.org/wiki/Lp_space#The_p-norm_in_finite_dimensions)으로 입력 벡터 크기 조정. 여기서 p는 1, 2 또는 무한대입니다. 기본값 l2(유클리드 거리)로 설정 |
+| <xref:Microsoft.ML.NormalizationCatalog.NormalizeGlobalContrast%2A> | 행 데이터의 평균을 빼서 행에 있는 각 값의 크기를 조정하고, 표준 편차 또는 l2-norm(행 데이터)으로 나누고, 구성 가능한 배율(기본값 2) 곱하기 |
+| <xref:Microsoft.ML.NormalizationCatalog.NormalizeBinning%2A> | bin 인덱스에 입력 값을 할당하고 bin 수로 나누어 0과 1 사이 float 값을 생성합니다. bin 경계는 여러 bin에 학습 데이터를 균등하게 분배하도록 계산됨 |
+| <xref:Microsoft.ML.NormalizationCatalog.NormalizeSupervisedBinning%2A> | 레이블 열에 대한 상관 관계에 따라 bin에 입력 값 할당 |
+| <xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax%2A> | 학습 데이터에서 최솟값과 최댓값의 차이로 입력 크기 조정 |
 
-## <a name="feature-extraction"></a>기능 추출
-
-| 변형 | 정의 |
-| --- | --- |
-| <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | 개별 토큰(대/소문자를 구분하지 않는 비교)을 중지 단어와 비교하여 지정된 중지 단어의 목록을 제거합니다.|
-| <xref:Microsoft.ML.ImageAnalytics.ImageGrayscaleTransform> | 하나 이상의 ImageType 열을 사용하고 동일한 이미지의 회색조 표현으로 변환합니다.|
-| <xref:Microsoft.ML.ImageAnalytics.ImageLoaderTransform> | 하나 이상의 ReadOnlyMemory 열을 사용하고 ImageType으로 로드합니다. |
-| <xref:Microsoft.ML.ImageAnalytics.ImagePixelExtractorTransform> | 하나 이상의 ImageType 열을 사용하고 벡터 표현으로 변환합니다.|
-| <xref:Microsoft.ML.ImageAnalytics.ImageResizerTransform> | 하나 이상의 ImageType 열을 사용하고 제공된 높이 및 너비로 크기를 조정합니다.|
-| <xref:Microsoft.ML.Transforms.Text.LatentDirichletAllocationTransformer> | Latent Dirichlet 할당의 최신 구현인 LightLDA를 구현합니다.|
-| <xref:Microsoft.ML.Transforms.LoadTransform> | 지정된 모델 파일에서 특정 변환을 로드합니다. 직렬화된 체인에서 'cherry picking' 변환을 허용하거나 다른(그러나 여전히 호환 가능한) 데이터 뷰에 미리 학습된 변환을 적용하도록 합니다. |
-| <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | 키의 지정된 벡터에서 ngrams 개수 모음(1-n 길이의 연속 값의 시퀀스)을 생성합니다. ngrams의 사전을 빌드하고 모음의 인덱스로 사전의 ID를 사용하여 이를 수행합니다. |
-| <xref:Microsoft.ML.Transforms.Text.NgramExtractorTransform> | 토큰화된 텍스트의 컬렉션(ReadOnlyMemory의 벡터) 또는 키의 벡터를 숫자 기능 벡터로 설정합니다. 기능 벡터는 ngrams의 개수입니다(1-n 길이의 연속 토큰- 단어 또는 키의 시퀀스). |
-| <xref:Microsoft.ML.Transforms.Text.NgramHashExtractingTransformer> | 해싱을 사용하여 토큰화된 텍스트의 컬렉션(ReadOnlyMemory의 벡터)을 숫자 기능 벡터로 설정합니다. |
-| <xref:Microsoft.ML.Transforms.Text.NgramHashingTransformer> | 지정된 텍스트에서 ngrams 개수 모음(1-n 길이의 연속 단어의 시퀀스)을 생성합니다. |
-| <xref:Microsoft.ML.Transforms.Categorical.OneHotEncodingTransformer> | 데이터를 기반으로 범주의 사전을 빌드하고 배열의 인덱스로 사전의 ID를 사용하여 범주 값을 표시기 배열로 변환합니다. |
-| <xref:Microsoft.ML.Transforms.Projections.PcaTransform> | 기능 벡터의 프로젝션을 낮은 순위 하위 공간으로 계산합니다. |
-| <xref:Microsoft.ML.Transforms.Text.SentimentAnalyzingTransformer> | 미리 학습된 감정 모델을 사용하여 입력 문자열의 점수를 매깁니다. |
-| <xref:Microsoft.ML.Transforms.Text.StopWordsRemovingTransformer> | 개별 토큰(대/소문자를 구분하지 않는 비교)을 중지 단어와 비교하여 중지 단어의 언어별 목록(가장 일반적인 단어)을 제거합니다. |
-| <xref:Microsoft.ML.Transforms.Text.WordBagBuildingTransformer> | 지정된 텍스트에서 ngrams 개수 모음(연속 단어의 시퀀스)을 생성합니다. ngrams의 사전을 빌드하고 모음의 인덱스로 사전의 ID를 사용하여 이를 수행합니다. |
-| <xref:Microsoft.ML.Transforms.Text.WordHashBagProducingTransformer> | 지정된 텍스트에서 ngrams 개수 모음(1-n 길이의 연속 단어의 시퀀스)을 생성합니다. 각 ngram을 해싱하고 모음의 인덱스로 해시 값을 사용하여 이를 수행합니다. |
-| <xref:Microsoft.ML.Transforms.Text.WordTokenizingTransformer> | 구분 문자를 사용하여 텍스트를 단어로 분할합니다. |
-
-
-## <a name="image-model-featurizers"></a>이미지 모델 Featurizer
+## <a name="conversions-between-data-types"></a>데이터 형식 간 변환
 
 | 변형 | 정의 |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.AlexNetExtension> | 미리 학습된 [AlexNet](https://en.wikipedia.org/wiki/AlexNet) 모델을 사용하기 위해 <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator>와 함께 사용되는 확장 메서드입니다. 이 확장을 포함하는 NuGet도 이진 모델 파일을 포함하도록 보장됩니다. |
-| <xref:Microsoft.ML.Transforms.ResNet18Extension> | 미리 학습된 ResNet18 모델을 사용하기 위해 <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator>와 함께 사용되는 확장 메서드입니다. 이 확장을 포함하는 NuGet도 이진 모델 파일을 포함하도록 보장됩니다. |
-| <xref:Microsoft.ML.Transforms.ResNet50Extension> | 미리 학습된 ResNet50 모델을 사용하기 위해 <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator>와 함께 사용되는 확장 메서드입니다. 이 확장을 포함하는 NuGet도 이진 모델 파일을 포함하도록 보장됩니다. |
-| <xref:Microsoft.ML.Transforms.ResNet101Extension> | 미리 학습된 ResNet101 모델을 사용하기 위해 <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator>와 함께 사용되는 확장 메서드입니다. 이 확장을 포함하는 NuGet도 이진 모델 파일을 포함하도록 보장됩니다. |
+| <xref:Microsoft.ML.ConversionsExtensionsCatalog.ConvertType%2A> | 입력 열 형식을 새 형식으로 변환 |
+| <xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValue*> | 제공된 매핑 사전을 기반으로 키(범주)에 값 매핑 |
+| <xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey*> | 입력 데이터에서 매핑을 만들어 키(범주)에 값 매핑 |
+| <xref:Microsoft.ML.ConversionsExtensionsCatalog.MapKeyToValue*> | 키를 다시 원래 값으로 변환 |
+| <xref:Microsoft.ML.ConversionsExtensionsCatalog.MapKeyToVector*> | 키를 다시 원래 값의 벡터로 변환 |
+| <xref:Microsoft.ML.ConversionsCatalog.MapKeyToBinaryVector*> | 키를 다시 원래 값의 이진 벡터로 변환 |
+| <xref:Microsoft.ML.ConversionsExtensionsCatalog.Hash*> | 입력 열에서 값 해시 |
 
-## <a name="label-parsing"></a>레이블 구문 분석
+## <a name="text-transformations"></a>텍스트 변환
 
 | 변형 | 정의 |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.LabelConvertTransform> |  레이블을 변환합니다. |
-| <xref:Microsoft.ML.Transforms.LabelIndicatorTransform> | 주로 OVA와 함께 사용하기 위해 다중 클래스 레이블을 이진 True, False 레이블로 다시 매핑합니다.|
+| <xref:Microsoft.ML.TextCatalog.FeaturizeText*> | 텍스트 열을 정규화된 ngrams 및 char-grams 수의 float 배열로 변환 | 
+| <xref:Microsoft.ML.TextCatalog.TokenizeIntoWords*> | 하나 이상의 텍스트 열을 개별 단어로 분할 |
+| <xref:Microsoft.ML.TextCatalog.TokenizeIntoCharactersAsKeys*> | 토픽 세트에서 하나 이상의 텍스트 열을 개별 문자 float로 분할 |
+| <xref:Microsoft.ML.TextCatalog.NormalizeText*> | 대/소문자 변경, 분음 부호, 문장 부호 및 숫자 제거 |
+| <xref:Microsoft.ML.TextCatalog.ProduceNgrams*> | 텍스트 열을 ngrams 개수 모음(연속 단어의 시퀀스)으로 변환|
+| <xref:Microsoft.ML.TextCatalog.ProduceWordBags*> | 텍스트 열을 ngrams 벡터 개수 모음으로 변환 |
+| <xref:Microsoft.ML.TextCatalog.ProduceHashedNgrams*> | 텍스트 열을 해시된 ngram 개수 벡터로 변환 |
+| <xref:Microsoft.ML.TextCatalog.ProduceHashedWordBags*> | 텍스트 열을 해시된 ngram 개수 모음으로 변환 |
+| <xref:Microsoft.ML.TextCatalog.RemoveDefaultStopWords*>  | 입력 열에서 지정된 언어의 기본 중지 단어 제거 |
+| <xref:Microsoft.ML.TextCatalog.RemoveStopWords*> | 입력 열에서 지정된 중지 단어 제거 |
+| <xref:Microsoft.ML.TextCatalog.LatentDirichletAllocation*> | 토픽 세트에서 문서(float 벡터로 표시됨)를 float 벡터로 변환 |
+| <xref:Microsoft.ML.TextCatalog.ApplyWordEmbedding*> | 미리 학습된 모델을 사용하여 텍스트 토큰의 벡터를 문장 벡터로 변환 |
+
+## <a name="image-transformations"></a>이미지 변환
+
+| 변형 | 정의 |
+| --- | --- |
+| <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale*> | 이미지를 회색조로 변환 |
+| <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToImage*> | 픽셀의 벡터를 <xref:Microsoft.ML.Transforms.Image.ImageDataViewType>으로 변환 |
+| <xref:Microsoft.ML.ImageEstimatorsCatalog.ExtractPixels*> | 입력 이미지의 벡터를 숫자의 벡터로 변환 |
+| <xref:Microsoft.ML.ImageEstimatorsCatalog.LoadImages*> | 폴더에서 메모리로 이미지 로드 |
+| <xref:Microsoft.ML.ImageEstimatorsCatalog.ResizeImages*> | 이미지 크기 조정 |
+
+## <a name="categorical-data-transformations"></a>범주별 데이터 변환
+
+| 변형 | 정의 |
+| --- | --- |
+| <xref:Microsoft.ML.CategoricalCatalog.OneHotEncoding*> | 하나 이상의 텍스트 열을 [원 핫(one-hot)](https://en.wikipedia.org/wiki/One-hot) 인코딩된 벡터로 변환 |
+| <xref:Microsoft.ML.CategoricalCatalog.OneHotHashEncoding*> | 하나 이상의 텍스트 열을 해시 기반 원 핫(one-hot) 인코딩된 벡터로 변환 |
 
 ## <a name="missing-values"></a>누락 값
 
 | 변형 | 정의 |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.MissingValueDroppingTransformer> | 열에서 누락 값을 삭제합니다. |
-| <xref:Microsoft.ML.Transforms.MissingValueIndicatorTransform> | 입력 열과 동일한 수의 슬롯을 사용하여 부울 출력 열을 만듭니다. 여기서 출력 값은 입력 열의 값이 누락된 경우 true입니다. |
-| <xref:Microsoft.ML.Transforms.MissingValueReplacingTransformer> | 기본값 또는 평균값/최솟값/최댓값으로 대체하여 누락 값을 처리합니다(텍스트가 아닌 열에만 해당). |
+| <xref:Microsoft.ML.ExtensionsCatalog.IndicateMissingValues*> | 새 부울 출력 열 만들기. 이 열의 값은 입력 열의 값이 누락된 경우 true입니다. |
+| <xref:Microsoft.ML.ExtensionsCatalog.ReplaceMissingValues*> | 새 출력 열 만들기. 이 열의 값은 입력 열에 값이 없는 경우 기본값으로 설정되고, 이외의 경우에는 해당 값으로 설정됩니다. |
 
-## <a name="normalization"></a>표준화
-
-| 변형 | 정의 |
-| --- | --- |
-| <xref:Microsoft.ML.Transforms.Projections.LpNormalizingTransformer> | Lp-Norm(벡터/행 단위) 정규화 변환입니다. |
-| <xref:Microsoft.ML.Transforms.Normalizers.MeanVarDblAggregator> | 벡터 값 열에 대한 평균 및 분산을 계산합니다. 현재 평균 및 M2(평균 값의 제곱차의 합계), NaNs의 수 및 0이 아닌 요소의 수를 추적합니다. |
-| <xref:Microsoft.ML.Transforms.Normalizers.MeanVarSngAggregator> | 벡터 값 열에 대한 평균 및 분산을 계산합니다. 현재 평균 및 M2(평균 값의 제곱차의 합계), NaNs의 수 및 0이 아닌 요소의 수를 추적합니다. |
-| <xref:Microsoft.ML.Transforms.Normalizers.MinMaxDblAggregator> | 벡터 값 열에 대한 최소, 최대, 스파스가 아닌 값(vCount)의 수 및 ProcessValue() 호출의 수(trainCount)를 추적합니다. |
-| <xref:Microsoft.ML.Transforms.Normalizers.NormalizeTransform> | 기능 범위를 표준화합니다. |
-| <xref:Microsoft.ML.Transforms.Normalizers.NormalizingTransformer> |기능 범위를 표준화합니다. |
-
-## <a name="onnx"></a>Onnx
+## <a name="feature-selection"></a>기능 선택
 
 | 변형 | 정의 |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.OnnxTransform> | ONNX 표준 v1.2를 사용하는 미리 학습된 ONNX 모델의 점수를 매깁니다. |
+| <xref:Microsoft.ML.FeatureSelectionCatalog.SelectFeaturesBasedOnCount*> | 기본값이 아닌 값이 임계값보다 큰 기능 선택 |
+| <xref:Microsoft.ML.FeatureSelectionCatalog.SelectFeaturesBasedOnMutualInformation*> | 레이블 열의 데이터가 종속성이 가장 높은 기능 선택 |
 
-## <a name="preprocessing"></a>전처리
-| 변형 | 정의 |
-| --- | --- |
-| <xref:Microsoft.ML.Transforms.BootstrapSamplingTransformer> | 푸아송 샘플링을 사용하는 부트스트랩 샘플링을 대략적으로 보여줍니다. |
-| <xref:Microsoft.ML.Transforms.Projections.RandomFourierFeaturizingTransformer> | 임의 Fourier 기능을 생성합니다. |
-| <xref:Microsoft.ML.Transforms.Text.TokenizingByCharactersTransformer> | 텍스트가 문자의 시퀀스로 간주되는 문자 기반 토크나이저입니다. |
-| <xref:Microsoft.ML.Transforms.Projections.VectorWhiteningTransformer> | 가중치 식별을 돕기 위해 최적화를 간소화합니다. |
-
-## <a name="row-filters"></a>행 필터
+## <a name="custom-transformations"></a>사용자 지정 변환
 
 | 변형 | 정의 |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.RowShufflingTransformer> | 지정된 수의 행의 풀을 사용하여 수행하기 위해 임의 커서 시도의 순서를 섞습니다.  |
-| <xref:Microsoft.ML.Transforms.SkipFilter> | 행 수를 건너뛰어 행의 하위 집합으로 입력 제한을 허용합니다. |
-| <xref:Microsoft.ML.Transforms.SkipTakeFilter> | 선택적 오프셋에서 행의 하위 집합으로 입력 제한을 허용합니다. 데이터 페이징을 구현하는 데 사용될 수 있습니다. SkipTakeFilter.SkipArguments를 사용하여 만든 경우 `SkipFilter`처럼 동작합니다.
-| <xref:Microsoft.ML.Transforms.TakeFilter> | N을 첫 번째 행으로 사용하여 행의 하위 집합으로 입력 제한을 허용합니다. |
-
-
-## <a name="schema"></a>스키마
-
-| 변형 | 정의 |
-| --- | --- |
-| <xref:Microsoft.ML.Transforms.ColumnCopyingTransformer> | 데이터 세트에서 열을 복제합니다.|
-| <xref:Microsoft.ML.Transforms.ColumnSelectingTransformer> | 지정된 입력에서 삭제 또는 유지할 열 집합을 선택합니다. |
-| <xref:Microsoft.ML.Transforms.FeatureSelection.SlotsDroppingTransformer> | 열에서 슬롯을 삭제합니다.|
-| <xref:Microsoft.ML.Transforms.OptionalColumnTransform> | 지정된 형식 및 기본 값을 사용하여 새 열을 만듭니다. |
-| <xref:Microsoft.ML.Transforms.RangeFilter> | Single, Double 또는 Key(연속) 형식의 열에서 데이터 보기를 필터링합니다. 지정된 최소/최대 범위 내에 있는 값을 유지합니다. NaNs는 항상 필터링됩니다. 입력이 Key 형식인 경우 최소/최대는 값 수의 백분율로 간주됩니다. |
-
-## <a name="tensorflow"></a>TensorFlow
-
-| 변형 | 정의 |
-| --- | --- |
-| <xref:Microsoft.ML.Transforms.TensorFlowTransform> | 미리 학습된 TensorFlow 모델을 사용하여 점수를 매기거나 TensorFlow 모델을 재교육합니다. |
-
-## <a name="text-processing-and-featurization"></a>텍스트 처리 및 기능화
-
-| 변형 | 정의 |
-| --- | --- |
-| <xref:Microsoft.ML.Transforms.Text.TextNormalizingTransformer> | 텍스트 대/소문자 정규화, 분음 부호 제거, 문장 부호 및/또는 숫자를 허용하는 텍스트 정규화 변환입니다. 변환은 토큰/텍스트(ReadOnlyMemory의 벡터)의 벡터 뿐만 아니라 텍스트 입력에서 작동합니다. |
-| <xref:Microsoft.ML.Transforms.Text.TokenizingByCharactersTransformer> | 텍스트가 문자의 시퀀스로 간주되는 문자 기반 토크나이저입니다. |
-
-## <a name="time-series"></a>시계열
-
-| 변형 | 정의 |
-| --- | --- |
-| <xref:Microsoft.ML.TimeSeriesProcessing.ExponentialAverageTransform> | 값의 가중치 평균을 사용합니다. ExpAvg(y_t) = a * y_t + (1-a) * ExpAvg(y_(t-1)) |
-| <xref:Microsoft.ML.TimeSeriesProcessing.IidChangePointDetector> | 적응 커널 밀도 추정 및 마틴게일을 기준으로 i.i.d. 시퀀스(임의 샘플)에 대한 변경 지점 탐지기 변환을 구현합니다. |
-| <xref:Microsoft.ML.TimeSeriesProcessing.IidSpikeDetector> | 적응 커널 밀도 추정을 기준으로 i.i.d. 시퀀스(임의 샘플)에 대한 급증 탐지기 변환을 구현합니다. |
-| <xref:Microsoft.ML.TimeSeriesProcessing.MovingAverageTransform> | 슬라이딩 윈도우 값의 가중치 평균을 제공합니다. |
-| <xref:Microsoft.ML.TimeSeriesProcessing.PercentileThresholdTransform> | 시계열 현재 값이 슬라이딩 윈도우 상위 값 백분위 수에 속하는지 여부를 결정합니다. |
-| <xref:Microsoft.ML.TimeSeriesProcessing.PValueTransform> | 슬라이딩 윈도우의 다른 값을 기준으로 시리즈 현재 값 경험적 p-값을 계산합니다. |
-| <xref:Microsoft.ML.TimeSeriesProcessing.SlidingWindowTransform> | Single 형식의 시계열에 슬라이딩 윈도우를 출력합니다. |
-| <xref:Microsoft.ML.TimeSeriesProcessing.SsaChangePointDetector> | 시계열의 단수 스펙트럼 모델링에 따라 변경 지점 탐지기 변환을 구현합니다. |
-| <xref:Microsoft.ML.TimeSeriesProcessing.SsaSpikeDetector> | 시계열의 단수 스펙트럼 모델링에 따라 급증 탐지기 변환을 구현합니다. |
-
-## <a name="miscellaneous"></a>기타
-
-| 변형 | 정의 |
-| --- | --- |
-| <xref:Microsoft.ML.Transforms.CompositeTransformer> | 복합 데이터 변환을 만듭니다. |
-| <xref:Microsoft.ML.Transforms.CustomMappingTransformer%602> | 제공된 `IDataView`에 추가 열을 생성합니다. 행의 수를 변경하지 않으며 입력 데이터의 모든 행에 사용자 함수의 애플리케이션 결과로 표시될 수 있습니다.|
-| <xref:Microsoft.ML.Transforms.GenerateNumberTransform> | 생성된 번호 시퀀스를 사용하여 열을 추가합니다. |
-| <xref:Microsoft.ML.Transforms.ProduceIdTransform> | 열로 커서의 ID를 사용하여 열을 생성합니다. |
-| <xref:Microsoft.ML.Transforms.RandomNumberGenerator> | 난수를 생성합니다. |
+| <xref:Microsoft.ML.CustomMappingCatalog.CustomMapping*> | 사용자 정의 매핑을 사용하여 기존 열을 새 열로 변환 |

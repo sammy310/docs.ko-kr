@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: edd9407f05e30eb420e83fb042c2412e99b0a022
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222590"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59770661"
 ---
 # <a name="icordebugmodulegetfunctionfromrva-method"></a>ICorDebugModule::GetFunctionFromRVA 메서드
 이 메서드는 현재 버전의.NET Framework에서 구현 되지에.  

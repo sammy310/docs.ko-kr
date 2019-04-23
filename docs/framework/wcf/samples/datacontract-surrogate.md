@@ -3,11 +3,11 @@ title: DataContract 서로게이트
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
 ms.openlocfilehash: a56fbcabfacf146142f7b0c0623325cc8e69c29a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59312633"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59769101"
 ---
 # <a name="datacontract-surrogate"></a>DataContract 서로게이트
 이 샘플에서는 데이터 계약 서로게이트 클래스를 사용하여 serialization, deserialization, 스키마 내보내기 및 스키마 가져오기와 같은 프로세스를 사용자 지정할 수 있는 방법에 대해 설명합니다. 이 샘플에는 데이터 serialize 되 고 Windows Communication Foundation (WCF) 클라이언트와 서비스 간에 전송 되는 클라이언트 및 서버 시나리오에서 서로게이트를 사용 하는 방법을 보여 줍니다.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Data Contract
 ms.assetid: b124e9e0-cb73-4ae0-b9c3-e6cdf5eced98
 ms.openlocfilehash: 775f799d683cfa543e65879af8cd1332a2bfb848
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59317508"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768581"
 ---
 # <a name="basic-data-contract"></a>기본 데이터 계약
 이 샘플에서는 데이터 계약을 구현하는 방법을 보여 줍니다. 데이터 계약을 사용하면 서비스와 구조적 데이터를 주고 받을 수 있습니다. 이 샘플은 기반 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) 하지만 기본 숫자 형식 대신 복소수를 사용 합니다.  

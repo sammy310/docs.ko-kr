@@ -3,12 +3,12 @@ title: Visual Studio 2017을 사용하여 Hello World .NET Core 애플리케이�
 description: Visual Studio 2017에서 C# 또는 Visual Basic으로 작성된 Hello World 앱을 디버그하는 방법을 알아봅니다.
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 268a0d47b63b8d6baa25305296395d7d8a86729e
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 9b2375443c9947a32fcccea062642103601d5010
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463425"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59610719"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Visual Studio 2017을 사용하여 C# 또는 Visual Basic .NET Core Hello World 애플리케이션 디버그
 
@@ -154,6 +154,7 @@ ms.locfileid: "58463425"
    ```vb
    ? String.IsNullOrEmpty(name)
    ```
+
   ![문이 실행된 후 true 값을 반환하는 직접 실행 창 - Visual Basic](./media/debugging-with-visual-studio/vb-immediate-window-output.png)
 
 1. 도구 모음에서 **계속** 단추를 선택하여 프로그램 실행을 계속합니다.

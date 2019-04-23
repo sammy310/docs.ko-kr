@@ -3,11 +3,11 @@ title: Custom Secure Metadata Endpoint
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
 ms.openlocfilehash: c835cfecab38a76f285767f918dfc082915ffcfc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59325971"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59769693"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>Custom Secure Metadata Endpoint
 이 샘플에는 비 메타 데이터 교환 바인딩 중 하나를 사용 하는 보안 메타 데이터 끝점이 있는 서비스를 구현 하는 방법 및 구성 하는 방법을 보여 줍니다 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 또는 인출 하는 클라이언트는 이러한 메타 데이터 끝점에서 메타 데이터입니다. 메타데이터 엔드포인트를 노출하는 데 시스템에서 제공한 두 가지 바인딩, mexHttpBinding 및 mexHttpsBinding을 사용할 수 있습니다. mexHttpBinding은 HTTP를 통해 비보안 방식으로 메타데이터 엔드포인트를 노출하는 데 사용되고, mexHttpsBinding은 HTTPS를 통해 보안 방식으로 메타데이터 엔드포인트를 노출하는 데 사용됩니다. 이 샘플에서는 <xref:System.ServiceModel.WSHttpBinding>을 사용하여 보안 메타데이터 엔드포인트를 노출하는 방법을 보여 줍니다. 바인딩의 보안 설정을 변경하려고 하지만 HTTPS를 사용하지 않으려는 경우 이 방법을 사용할 수 있습니다. mexHttpsBinding을 사용하면 메타데이터 엔드포인트가 보안되지만 바인딩 설정은 수정할 수 없습니다.  

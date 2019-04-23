@@ -3,11 +3,11 @@ title: 사용자 지정 활동 사용
 ms.date: 03/30/2017
 ms.assetid: 8f356419-681a-4175-ae93-878eee970249
 ms.openlocfilehash: 47ddd42168445aa23eaaded6fd19ffe4698e4117
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59309617"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973358"
 ---
 # <a name="using-a-custom-activity"></a>사용자 지정 활동 사용
 <xref:System.Activities.Activity> 또는 해당 하위 클래스에서 파생되는 활동은 더 큰 워크플로로 구성하거나 코드로 직접 작성할 수 있습니다. 이 항목에서는 코드나 디자이너에서 만든 워크플로에서 사용자 지정 활동을 사용하는 방법에 대해 설명합니다.  

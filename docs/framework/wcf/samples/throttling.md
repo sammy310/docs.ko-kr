@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Throttling Sample [Windows Communication Foundation]
 ms.assetid: 40bb3582-8ae9-4410-96f0-6c515bfaf47c
 ms.openlocfilehash: d41270d63d188443207c78a3c55b469e2bd7b482
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59336748"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59974610"
 ---
 # <a name="throttling"></a>스로틀
 Throttling 샘플에서는 스로틀 컨트롤을 사용하는 방법을 보여 줍니다. 스로틀은 리소스가 과도하게 사용되는 것을 방지하기 위해 동시 호출, 인스턴스 또는 세션 수를 제한합니다. 스로틀 동작은 서비스 구성 파일 설정에 지정됩니다. 이 샘플은 기반 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) 계산기 서비스를 구현 하는 합니다.  
