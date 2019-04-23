@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1291d4e69843db7bd90af07291da415220d98807
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59131360"
 ---
-# <a name="icorruntimehostswitchoutlogicalthreadstate-method"></a><span data-ttu-id="5bcdc-102">ICorRuntimeHost::SwitchOutLogicalThreadState 메서드</span><span class="sxs-lookup"><span data-stu-id="5bcdc-102">ICorRuntimeHost::SwitchOutLogicalThreadState Method</span></span>
-<span data-ttu-id="5bcdc-103">이 메서드는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="5bcdc-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icorruntimehostswitchoutlogicalthreadstate-method"></a><span data-ttu-id="35e86-102">ICorRuntimeHost::SwitchOutLogicalThreadState 메서드</span><span class="sxs-lookup"><span data-stu-id="35e86-102">ICorRuntimeHost::SwitchOutLogicalThreadState Method</span></span>
+<span data-ttu-id="35e86-103">이 메서드는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="35e86-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5bcdc-104">구문</span><span class="sxs-lookup"><span data-stu-id="5bcdc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="35e86-104">구문</span><span class="sxs-lookup"><span data-stu-id="35e86-104">Syntax</span></span>  
   
 ```  
 HRESULT SwitchOutLogicalThreadState(  
@@ -35,19 +35,19 @@ HRESULT SwitchOutLogicalThreadState(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5bcdc-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="5bcdc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="35e86-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="35e86-105">Parameters</span></span>  
  `pFiberCookie`  
- <span data-ttu-id="5bcdc-106">[out] 스위치 아웃 되 고 파이버를 나타내는 쿠키입니다.</span><span class="sxs-lookup"><span data-stu-id="5bcdc-106">[out] Cookie that indicates the fiber being switched out.</span></span>  
+ <span data-ttu-id="35e86-106">[out] 스위치 아웃 되 고 파이버를 나타내는 쿠키입니다.</span><span class="sxs-lookup"><span data-stu-id="35e86-106">[out] Cookie that indicates the fiber being switched out.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5bcdc-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5bcdc-107">Requirements</span></span>  
- <span data-ttu-id="5bcdc-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="5bcdc-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="35e86-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="35e86-107">Requirements</span></span>  
+ <span data-ttu-id="35e86-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="35e86-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5bcdc-109">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="5bcdc-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="35e86-109">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="35e86-109">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="5bcdc-110">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="5bcdc-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="35e86-110">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="35e86-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="5bcdc-111">**.NET framework 버전:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="5bcdc-111">**.NET Framework Version:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="35e86-111">**.NET framework 버전:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="35e86-111">**.NET Framework Version:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5bcdc-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="5bcdc-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="35e86-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="35e86-112">See also</span></span>
 
-- [<span data-ttu-id="5bcdc-113">ICorRuntimeHost 인터페이스</span><span class="sxs-lookup"><span data-stu-id="5bcdc-113">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [<span data-ttu-id="35e86-113">ICorRuntimeHost 인터페이스</span><span class="sxs-lookup"><span data-stu-id="35e86-113">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

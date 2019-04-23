@@ -10,22 +10,22 @@ api_type:
 - Assembly
 ms.assetid: e7287d3f-59ee-448f-b7fe-b640508501a5
 ms.openlocfilehash: c7291de223a0cce5a2af1dbd4fecf394ad7c8a1d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59133174"
 ---
-# <a name="microsoftvisualstudioactivitiesasrclientactivitybuilder"></a><span data-ttu-id="a8c8a-102">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder</span><span class="sxs-lookup"><span data-stu-id="a8c8a-102">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder</span></span>
-<span data-ttu-id="a8c8a-103">이 클래스는 워크플로 활동의 데이터를 제공하는 <xref:System.Activities.ActivityBuilder> 개체를 만들고 구성하는 데 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="a8c8a-103">Use this class to create and configure a <xref:System.Activities.ActivityBuilder> object that provides data for a workflow activity.</span></span>  
+# <a name="microsoftvisualstudioactivitiesasrclientactivitybuilder"></a><span data-ttu-id="ada96-102">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder</span><span class="sxs-lookup"><span data-stu-id="ada96-102">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder</span></span>
+<span data-ttu-id="ada96-103">이 클래스는 워크플로 활동의 데이터를 제공하는 <xref:System.Activities.ActivityBuilder> 개체를 만들고 구성하는 데 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ada96-103">Use this class to create and configure a <xref:System.Activities.ActivityBuilder> object that provides data for a workflow activity.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a8c8a-104">구문</span><span class="sxs-lookup"><span data-stu-id="a8c8a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ada96-104">구문</span><span class="sxs-lookup"><span data-stu-id="ada96-104">Syntax</span></span>  
   
 ```csharp  
 public class ClientActivityBuilder   
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a8c8a-105">참고자료</span><span class="sxs-lookup"><span data-stu-id="a8c8a-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ada96-105">참고자료</span><span class="sxs-lookup"><span data-stu-id="ada96-105">See also</span></span>
 
-- [<span data-ttu-id="a8c8a-106">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder.Build</span><span class="sxs-lookup"><span data-stu-id="a8c8a-106">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder.Build</span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder-build.md)
-- [<span data-ttu-id="a8c8a-107">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder..ctor</span><span class="sxs-lookup"><span data-stu-id="a8c8a-107">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder..ctor</span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder-ctor.md)
+- [<span data-ttu-id="ada96-106">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder.Build</span><span class="sxs-lookup"><span data-stu-id="ada96-106">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder.Build</span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder-build.md)
+- [<span data-ttu-id="ada96-107">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder..ctor</span><span class="sxs-lookup"><span data-stu-id="ada96-107">Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder..ctor</span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder-ctor.md)
