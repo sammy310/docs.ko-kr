@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 697557463aa949036acb21e63b9a82b1fb84b415
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105497"
 ---
-# <a name="loadstringrcex-function"></a><span data-ttu-id="ac7a2-102">LoadStringRCEx 함수</span><span class="sxs-lookup"><span data-stu-id="ac7a2-102">LoadStringRCEx Function</span></span>
-<span data-ttu-id="ac7a2-103">지정된 된 문화권에 대 한 적절 한 오류 메시지에는 HRESULT 값으로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="ac7a2-103">Translates an HRESULT value to an appropriate error message for the specified culture.</span></span>  
+# <a name="loadstringrcex-function"></a><span data-ttu-id="7e892-102">LoadStringRCEx 함수</span><span class="sxs-lookup"><span data-stu-id="7e892-102">LoadStringRCEx Function</span></span>
+<span data-ttu-id="7e892-103">지정된 된 문화권에 대 한 적절 한 오류 메시지에는 HRESULT 값으로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="7e892-103">Translates an HRESULT value to an appropriate error message for the specified culture.</span></span>  
   
- <span data-ttu-id="ac7a2-104">이 함수에서 사용 중단에 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="ac7a2-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="7e892-104">이 함수에서 사용 중단에 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="7e892-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ac7a2-105">구문</span><span class="sxs-lookup"><span data-stu-id="ac7a2-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7e892-105">구문</span><span class="sxs-lookup"><span data-stu-id="7e892-105">Syntax</span></span>  
   
 ```  
 HRESULT LoadStringRCEx (  
@@ -41,47 +41,47 @@ HRESULT LoadStringRCEx (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ac7a2-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="ac7a2-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7e892-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="7e892-106">Parameters</span></span>  
  `lcid`  
- <span data-ttu-id="ac7a2-107">[in] 문화권 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="ac7a2-107">[in] A culture identifier.</span></span> <span data-ttu-id="ac7a2-108">-1을 전달 `lcid` 를 기본 문화권을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="ac7a2-108">Pass -1 for `lcid` to use the default culture.</span></span>  
+ <span data-ttu-id="7e892-107">[in] 문화권 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="7e892-107">[in] A culture identifier.</span></span> <span data-ttu-id="7e892-108">-1을 전달 `lcid` 를 기본 문화권을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="7e892-108">Pass -1 for `lcid` to use the default culture.</span></span>  
   
  `iResourceID`  
- <span data-ttu-id="ac7a2-109">[in] An HRESULT.</span><span class="sxs-lookup"><span data-stu-id="ac7a2-109">[in] An HRESULT.</span></span>  
+ <span data-ttu-id="7e892-109">[in] An HRESULT.</span><span class="sxs-lookup"><span data-stu-id="7e892-109">[in] An HRESULT.</span></span>  
   
  `szBuffer`  
- <span data-ttu-id="ac7a2-110">[out] 성공적으로 완료 되는 오류 메시지를 포함 하는 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="ac7a2-110">[out] A buffer that contains the error message upon successful completion.</span></span>  
+ <span data-ttu-id="7e892-110">[out] 성공적으로 완료 되는 오류 메시지를 포함 하는 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="7e892-110">[out] A buffer that contains the error message upon successful completion.</span></span>  
   
  `iMax`  
- <span data-ttu-id="ac7a2-111">[in] 오류 메시지 버퍼의 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="ac7a2-111">[in] The size of the error message buffer.</span></span>  
+ <span data-ttu-id="7e892-111">[in] 오류 메시지 버퍼의 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="7e892-111">[in] The size of the error message buffer.</span></span>  
   
  `bQuiet`  
- <span data-ttu-id="ac7a2-112">[in] Ignored.</span><span class="sxs-lookup"><span data-stu-id="ac7a2-112">[in] Ignored.</span></span>  
+ <span data-ttu-id="7e892-112">[in] Ignored.</span><span class="sxs-lookup"><span data-stu-id="7e892-112">[in] Ignored.</span></span>  
   
  `pcwchUsed`  
- <span data-ttu-id="ac7a2-113">[out] 오류 메시지의 길이에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="ac7a2-113">[out] A pointer to the length of the error message.</span></span>  
+ <span data-ttu-id="7e892-113">[out] 오류 메시지의 길이에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="7e892-113">[out] A pointer to the length of the error message.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ac7a2-114">반환 값</span><span class="sxs-lookup"><span data-stu-id="ac7a2-114">Return Value</span></span>  
- <span data-ttu-id="ac7a2-115">이 메서드는 다음 값 외에도 WinError.h에 정의 된 대로 표준 COM 오류 코드를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="ac7a2-115">This method returns standard COM error codes, as defined in WinError.h, in addition to the following values.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7e892-114">반환 값</span><span class="sxs-lookup"><span data-stu-id="7e892-114">Return Value</span></span>  
+ <span data-ttu-id="7e892-115">이 메서드는 다음 값 외에도 WinError.h에 정의 된 대로 표준 COM 오류 코드를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="7e892-115">This method returns standard COM error codes, as defined in WinError.h, in addition to the following values.</span></span>  
   
-|<span data-ttu-id="ac7a2-116">반환 코드</span><span class="sxs-lookup"><span data-stu-id="ac7a2-116">Return code</span></span>|<span data-ttu-id="ac7a2-117">설명</span><span class="sxs-lookup"><span data-stu-id="ac7a2-117">Description</span></span>|  
+|<span data-ttu-id="7e892-116">반환 코드</span><span class="sxs-lookup"><span data-stu-id="7e892-116">Return code</span></span>|<span data-ttu-id="7e892-117">설명</span><span class="sxs-lookup"><span data-stu-id="7e892-117">Description</span></span>|  
 |-----------------|-----------------|  
-|<span data-ttu-id="ac7a2-118">S_OK</span><span class="sxs-lookup"><span data-stu-id="ac7a2-118">S_OK</span></span>|<span data-ttu-id="ac7a2-119">메서드가 완료되었습니다.</span><span class="sxs-lookup"><span data-stu-id="ac7a2-119">The method completed successfully.</span></span>|  
-|<span data-ttu-id="ac7a2-120">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="ac7a2-120">E_INVALIDARG</span></span>|`szBuffer` <span data-ttu-id="ac7a2-121">이 null 또는 `iMax` 은 영 (0).</span><span class="sxs-lookup"><span data-stu-id="ac7a2-121">is null, or `iMax` is zero (0).</span></span>|  
+|<span data-ttu-id="7e892-118">S_OK</span><span class="sxs-lookup"><span data-stu-id="7e892-118">S_OK</span></span>|<span data-ttu-id="7e892-119">메서드가 완료되었습니다.</span><span class="sxs-lookup"><span data-stu-id="7e892-119">The method completed successfully.</span></span>|  
+|<span data-ttu-id="7e892-120">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="7e892-120">E_INVALIDARG</span></span>|<span data-ttu-id="7e892-121">`szBuffer` 이 null 또는 `iMax` 은 영 (0).</span><span class="sxs-lookup"><span data-stu-id="7e892-121">`szBuffer` is null, or `iMax` is zero (0).</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ac7a2-122">설명</span><span class="sxs-lookup"><span data-stu-id="ac7a2-122">Remarks</span></span>  
- <span data-ttu-id="ac7a2-123">메서드가 성공적으로 완료 되지 않으면 `szBuffer` 빈 문자열을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="ac7a2-123">If the method does not complete successfully, `szBuffer` contains an empty string.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7e892-122">설명</span><span class="sxs-lookup"><span data-stu-id="7e892-122">Remarks</span></span>  
+ <span data-ttu-id="7e892-123">메서드가 성공적으로 완료 되지 않으면 `szBuffer` 빈 문자열을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="7e892-123">If the method does not complete successfully, `szBuffer` contains an empty string.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ac7a2-124">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ac7a2-124">Requirements</span></span>  
- <span data-ttu-id="ac7a2-125">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="ac7a2-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7e892-124">요구 사항</span><span class="sxs-lookup"><span data-stu-id="7e892-124">Requirements</span></span>  
+ <span data-ttu-id="7e892-125">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="7e892-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ac7a2-126">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ac7a2-126">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="7e892-126">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="7e892-126">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="ac7a2-127">**라이브러리:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ac7a2-127">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="7e892-127">**라이브러리:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7e892-127">**Library:** MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="ac7a2-128">.NET Framework 버전:</span><span class="sxs-lookup"><span data-stu-id="ac7a2-128">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="7e892-128">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7e892-128">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ac7a2-129">참고자료</span><span class="sxs-lookup"><span data-stu-id="ac7a2-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7e892-129">참고자료</span><span class="sxs-lookup"><span data-stu-id="7e892-129">See also</span></span>
 
 - <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="ac7a2-130">LoadStringRC 함수</span><span class="sxs-lookup"><span data-stu-id="ac7a2-130">LoadStringRC Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)
-- [<span data-ttu-id="ac7a2-131">사용되지 않는 CLR 호스팅 함수</span><span class="sxs-lookup"><span data-stu-id="ac7a2-131">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="7e892-130">LoadStringRC 함수</span><span class="sxs-lookup"><span data-stu-id="7e892-130">LoadStringRC Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)
+- [<span data-ttu-id="7e892-131">사용되지 않는 CLR 호스팅 함수</span><span class="sxs-lookup"><span data-stu-id="7e892-131">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
