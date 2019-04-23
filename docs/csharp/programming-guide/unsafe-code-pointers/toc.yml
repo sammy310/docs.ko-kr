@@ -1,39 +1,32 @@
-items:
 - name: 안전하지 않은 코드 및 포인터
   href: index.md
   items:
-  - name: 고정 크기 버퍼
-    href: fixed-size-buffers.md
-  - name: 포인터 형식
-    href: pointer-types.md
-    items:
-    - name: 포인터 변환
-      href: pointer-conversions.md
-    - name: 포인터 식
-      href: pointer-expressions.md
+    - name: 고정 크기 버퍼
+      href: fixed-size-buffers.md
+    - name: 포인터 형식
+      href: pointer-types.md
       items:
-      - name: '방법: 포인터 변수의 값 가져오기'
-        href: how-to-obtain-the-value-of-a-pointer-variable.md
-      - name: '방법: 변수의 주소 가져오기'
-        href: how-to-obtain-the-address-of-a-variable.md
-      - name: '방법: 포인터를 사용하여 멤버에 액세스'
-        href: how-to-access-a-member-with-a-pointer.md
-      - name: '방법: 포인터를 사용하여 배열 요소에 액세스'
-        href: how-to-access-an-array-element-with-a-pointer.md
-      - name: 포인터 조작
-        href: manipulating-pointers.md
-        items:
-        - name: '방법: 포인터 증가 및 감소'
-          href: how-to-increment-and-decrement-pointers.md
-        - name: 포인터에 대한 산술 연산
-          href: arithmetic-operations-on-pointers.md
-        - name: 포인터 비교
-          href: pointer-comparison.md
-    - name: '방법: 포인터를 사용하여 바이트 배열 복사'
-      href: how-to-use-pointers-to-copy-an-array-of-bytes.md
-ms.openlocfilehash: 094fa68222bcb4d92ab19a57373789a8234d2606
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470345"
+        - name: 포인터 변환
+          href: pointer-conversions.md
+        - name: 포인터 식
+          href: pointer-expressions.md
+          items:
+            - name: '방법: 포인터 변수의 값 가져오기'
+              href: how-to-obtain-the-value-of-a-pointer-variable.md
+            - name: '방법: 변수의 주소 가져오기'
+              href: how-to-obtain-the-address-of-a-variable.md
+            - name: '방법: 포인터를 사용하여 멤버에 액세스'
+              href: how-to-access-a-member-with-a-pointer.md
+            - name: '방법: 포인터를 사용하여 배열 요소에 액세스'
+              href: how-to-access-an-array-element-with-a-pointer.md
+            - name: 포인터 조작
+              href: manipulating-pointers.md
+              items:
+                - name: '방법: 포인터 증가 및 감소'
+                  href: how-to-increment-and-decrement-pointers.md
+                - name: 포인터에 대한 산술 연산
+                  href: arithmetic-operations-on-pointers.md
+                - name: 포인터 비교
+                  href: pointer-comparison.md
+        - name: '방법: 포인터를 사용하여 바이트 배열 복사'
+          href: how-to-use-pointers-to-copy-an-array-of-bytes.md

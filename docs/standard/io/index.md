@@ -13,11 +13,11 @@ ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a8d95a347237b15dfa55586bb15fe605bd5c7a94
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947123"
 ---
 # <a name="file-and-stream-io"></a>파일 및 스트림 I/O
 
@@ -51,8 +51,7 @@ Visual Basic 사용자는 이러한 클래스를 사용하는 것 외에도, 파
 
 ## <a name="streams"></a>스트림
 
-추상 기본 클래스 <xref:System.IO.Stream>은 바이트 읽기 및 쓰기를 지원합니다. 스트림을 나타내는 모든 클래스는 <xref:System.IO.Stream> 클래스로부터 상속됩니다. 
-  <xref:System.IO.Stream> 클래스와 이 클래스에서 파생되는 클래스는 데이터 소스와 리포지토리의 일반 뷰를 제공하고, 이때 프로그래머는 운영 체제 및 내부 장치의 세부 사항에서 격리됩니다.
+추상 기본 클래스 <xref:System.IO.Stream>은 바이트 읽기 및 쓰기를 지원합니다. 스트림을 나타내는 모든 클래스는 <xref:System.IO.Stream> 클래스로부터 상속됩니다. <xref:System.IO.Stream> 클래스와 이 클래스에서 파생되는 클래스는 데이터 소스와 리포지토리의 일반 뷰를 제공하고, 이때 프로그래머는 운영 체제 및 내부 장치의 세부 사항에서 격리됩니다.
 
 스트림에는 다음의 세 가지 기본 작업이 포함됩니다.
 
@@ -62,8 +61,7 @@ Visual Basic 사용자는 이러한 클래스를 사용하는 것 외에도, 파
 
 - 검색 - 스트림 내에서 현재 위치를 쿼리하고 수정합니다.
 
-내부 데이터 소스 또는 리포지토리에 따라 스트림에서 이러한 기능 중 일부만 지원할 수도 있습니다. 예를 들어, <xref:System.IO.Pipes.PipeStream> 클래스는 검색을 지원하지 않습니다. 
-  <xref:System.IO.Stream.CanRead%2A>, <xref:System.IO.Stream.CanWrite%2A>, <xref:System.IO.Stream.CanSeek%2A> 스트림 속성은 스트림이 지원하는 작업을 지정합니다.
+내부 데이터 소스 또는 리포지토리에 따라 스트림에서 이러한 기능 중 일부만 지원할 수도 있습니다. 예를 들어, <xref:System.IO.Pipes.PipeStream> 클래스는 검색을 지원하지 않습니다. <xref:System.IO.Stream.CanRead%2A>, <xref:System.IO.Stream.CanWrite%2A>, <xref:System.IO.Stream.CanSeek%2A> 스트림 속성은 스트림이 지원하는 작업을 지정합니다.
 
 다음은 몇 가지 자주 사용되는 스트림 클래스입니다.
 
@@ -109,8 +107,7 @@ Visual Basic 사용자는 이러한 클래스를 사용하는 것 외에도, 파
 
 ## <a name="compression"></a>압축
 
-압축은 스토리지에 맞춰 파일 크기를 줄이는 프로세스를 가리킵니다. 압축 해제는 압축된 파일의 내용을 사용 가능한 형식으로 추출하는 프로세스입니다. 
-  <xref:System.IO.Compression?displayProperty=nameWithType> 네임스페이스는 파일 및 스트림을 압축하고 압축을 푸는 형식을 포함합니다.
+압축은 스토리지에 맞춰 파일 크기를 줄이는 프로세스를 가리킵니다. 압축 해제는 압축된 파일의 내용을 사용 가능한 형식으로 추출하는 프로세스입니다. <xref:System.IO.Compression?displayProperty=nameWithType> 네임스페이스는 파일 및 스트림을 압축하고 압축을 푸는 형식을 포함합니다.
 
 다음 클래스는 파일과 스트림을 압축하고 압축 해제할 때 자주 사용됩니다.
 
@@ -164,9 +161,7 @@ Visual Basic 사용자는 이러한 클래스를 사용하는 것 외에도, 파
 
 ## <a name="io-and-security"></a>I/O 및 보안
 
-
-  <xref:System.IO?displayProperty=nameWithType> 네임스페이스에서 클래스를 사용할 때, 파일 및 디렉터리에 대한 액세스를 제어하기 위해 액세스 제어 목록(ACL)과 같은 운영 체제 보안 요구 사항을 따라야 합니다. 
-  <xref:System.Security.Permissions.FileIOPermission> 요구 사항에 이 요구 사항이 추가됩니다. ACL은 프로그래밍 방식으로 관리할 수 있습니다. 자세한 내용은 [방법: 액세스 제어 목록 항목 추가 또는 제거](how-to-add-or-remove-access-control-list-entries.md)를 참조하세요.
+<xref:System.IO?displayProperty=nameWithType> 네임스페이스에서 클래스를 사용할 때, 파일 및 디렉터리에 대한 액세스를 제어하기 위해 액세스 제어 목록(ACL)과 같은 운영 체제 보안 요구 사항을 따라야 합니다. <xref:System.Security.Permissions.FileIOPermission> 요구 사항에 이 요구 사항이 추가됩니다. ACL은 프로그래밍 방식으로 관리할 수 있습니다. 자세한 내용은 [방법: 액세스 제어 목록 항목 추가 또는 제거](how-to-add-or-remove-access-control-list-entries.md)를 참조하세요.
 
 기본 보안 정책은 인터넷 또는 인트라넷 애플리케이션에서 사용자의 컴퓨터에 있는 파일의 액세스를 방지합니다. 따라서 실제 파일의 경로를 인터넷이나 인트라넷을 통해 다운로드되는 코드를 작성할 때 필요한 I/O 클래스를 사용하지 마세요. 대신에 기존의 .NET Framework 애플리케이션의 경우 [격리된 스토리지](isolated-storage.md)를 사용하거나 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱의 경우 [애플리케이션 데이터](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))를 사용합니다.
 

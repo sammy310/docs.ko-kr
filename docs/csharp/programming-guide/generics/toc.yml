@@ -1,36 +1,29 @@
-items:
 - name: 제네릭
   href: index.md
   items:
-  - name: 제네릭 소개
-    href: introduction-to-generics.md
-  - name: 제네릭의 장점
-    href: benefits-of-generics.md
-  - name: 제네릭 형식 매개 변수
-    href: generic-type-parameters.md
-  - name: 형식 매개 변수에 대한 제약 조건
-    href: constraints-on-type-parameters.md
-  - name: 제네릭 클래스
-    href: generic-classes.md
-  - name: 제네릭 인터페이스
-    href: generic-interfaces.md
-  - name: 제네릭 메서드
-    href: generic-methods.md
-  - name: 제네릭 및 배열
-    href: generics-and-arrays.md
-  - name: 제네릭 대리자
-    href: generic-delegates.md
-  - name: C++ 템플릿과 C# 제네릭의 차이점
-    href: differences-between-cpp-templates-and-csharp-generics.md
-  - name: 런타임의 제네릭
-    href: generics-in-the-run-time.md
-  - name: 제네릭 및 리플렉션
-    href: generics-and-reflection.md
-  - name: 제네릭 및 특성
-    href: generics-and-attributes.md
-ms.openlocfilehash: daccd9dc4b0c808750866aacad6dacffc1282f6e
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470001"
+    - name: 제네릭 소개
+      href: introduction-to-generics.md
+    - name: 제네릭의 장점
+      href: benefits-of-generics.md
+    - name: 제네릭 형식 매개 변수
+      href: generic-type-parameters.md
+    - name: 형식 매개 변수에 대한 제약 조건
+      href: constraints-on-type-parameters.md
+    - name: 제네릭 클래스
+      href: generic-classes.md
+    - name: 제네릭 인터페이스
+      href: generic-interfaces.md
+    - name: 제네릭 메서드
+      href: generic-methods.md
+    - name: 제네릭 및 배열
+      href: generics-and-arrays.md
+    - name: 제네릭 대리자
+      href: generic-delegates.md
+    - name: 'C++ 템플릿과 C# 제네릭의 차이점'
+      href: differences-between-cpp-templates-and-csharp-generics.md
+    - name: 런타임의 제네릭
+      href: generics-in-the-run-time.md
+    - name: 제네릭 및 리플렉션
+      href: generics-and-reflection.md
+    - name: 제네릭 및 특성
+      href: generics-and-attributes.md

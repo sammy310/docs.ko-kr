@@ -5,11 +5,11 @@ ms.assetid: 7e8cc303-6e77-4116-aa8b-7ea297a3a467
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 408219307015d5c39cb581b3884ed9810f4c0566
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941636"
 ---
 # <a name="authenticode-unmanaged-api-reference"></a>Authenticode(관리되지 않는 API 참조)
 Authenticode XrML 라이센스 만들기 및 확인 모듈을 지원합니다.  

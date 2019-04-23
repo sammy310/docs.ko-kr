@@ -1,30 +1,23 @@
-items:
 - name: 오픈 소스 라이브러리 지침
   href: index.md
   items:
-  - name: 시작
-    href: get-started.md
-  - name: 플랫폼 간 대상 지정
-    href: cross-platform-targeting.md
-  - name: 강력한 이름 지정
-    href: strong-naming.md
-  - name: NuGet
-    href: nuget.md
-    items:
-    - name: 종속성
-      href: dependencies.md
-    - name: 소스 링크
-      href: sourcelink.md
-    - name: 게시
-      href: publish-nuget-package.md
-  - name: 버전 관리
-    href: versioning.md
-    items:
-    - name: 호환성이 손상되는 변경
-      href: breaking-changes.md
-ms.openlocfilehash: eb2748f71480aee063efadd8291c76440347169b
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469740"
+    - name: 시작
+      href: get-started.md
+    - name: 플랫폼 간 대상 지정
+      href: cross-platform-targeting.md
+    - name: 강력한 이름 지정
+      href: strong-naming.md
+    - name: NuGet
+      href: nuget.md
+      items:
+        - name: 종속성
+          href: dependencies.md
+        - name: 소스 링크
+          href: sourcelink.md
+        - name: 게시
+          href: publish-nuget-package.md
+    - name: 버전 관리
+      href: versioning.md
+      items:
+        - name: 호환성이 손상되는 변경
+          href: breaking-changes.md

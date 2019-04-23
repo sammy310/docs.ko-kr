@@ -7,8 +7,8 @@ ms.openlocfilehash: 45534e196c2dc0cd1994445eeb482474b32aaa41
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59980397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62019115"
 ---
 # <a name="net-machine-learning-tutorials---mlnet"></a>.NET 기계 학습 자습서 - ML.NET
 

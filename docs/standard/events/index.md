@@ -17,11 +17,11 @@ ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b5e49e9d575ae2ec9b48b18f839d469632ffa769
-ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58348806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770411"
 ---
 # <a name="handling-and-raising-events"></a>이벤트 처리 및 발생
 
@@ -52,8 +52,7 @@ ms.locfileid: "58348806"
   
 대리자는 [멀티캐스트](xref:System.MulticastDelegate)로, 둘 이상의 이벤트 처리 메서드에 대한 참조를 포함할 수 있습니다. 자세한 내용은 <xref:System.Delegate> 참조 페이지를 참조하십시오. 대리자를 사용하면 유연하고 정밀하게 이벤트 처리를 제어할 수 있습니다. 대리자는 이벤트에 등록된 이벤트 처리기의 목록을 유지 관리하여 이벤트를 발생시키는 클래스의 이벤트 발송자 이벤트로서 작동합니다.  
   
-
-  <xref:System.EventHandler> 및 <xref:System.EventHandler%601> 대리자가 작동하지 않는 시나리오의 경우, 대리자를 정의할 수 있습니다. 대리자를 정의해야 하는 시나리오(예: 제네릭을 인식할 수 없는 코드를 사용하여 작업해야 하는 경우)는 매우 드뭅니다. 선언에서 대리자는 C# [`delegate`](../../csharp/language-reference/keywords/delegate.md) 및 Visual Basic [`Delegate`](../../visual-basic/language-reference/statements/delegate-statement.md) 키워드를 사용하여 표시합니다. 다음 예제에서는 `ThresholdReachedEventHandler`라는 대리자를 선언하는 방법을 보여 줍니다.  
+<xref:System.EventHandler> 및 <xref:System.EventHandler%601> 대리자가 작동하지 않는 시나리오의 경우, 대리자를 정의할 수 있습니다. 대리자를 정의해야 하는 시나리오(예: 제네릭을 인식할 수 없는 코드를 사용하여 작업해야 하는 경우)는 매우 드뭅니다. 선언에서 대리자는 C# [`delegate`](../../csharp/language-reference/keywords/delegate.md) 및 Visual Basic [`Delegate`](../../visual-basic/language-reference/statements/delegate-statement.md) 키워드를 사용하여 표시합니다. 다음 예제에서는 `ThresholdReachedEventHandler`라는 대리자를 선언하는 방법을 보여 줍니다.  
   
 [!code-csharp[EventsOverview#4](~/samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)]
 [!code-vb[EventsOverview#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  
@@ -62,9 +61,7 @@ ms.locfileid: "58348806"
 
 이벤트와 관련된 데이터는 이벤트 데이터 클래스를 통해 제공할 수 있습니다. .NET에서는 애플리케이션에 사용할 수 있는 여러 이벤트 데이터 클래스를 제공합니다. 예를 들어, <xref:System.IO.Ports.SerialDataReceivedEventArgs> 클래스는 <xref:System.IO.Ports.SerialPort.DataReceived?displayProperty=nameWithType> 이벤트에 대한 이벤트 데이터 클래스에 해당합니다. .NET에서는 모든 이벤트 데이터 클래스를 `EventArgs`로 끝내는 명명 패턴을 따릅니다. 이벤트에 대한 대리자를 보는 것만으로 어떠한 이벤트 데이터 클래스가 이벤트에 연결되어 있는지 확인할 수 있습니다. 예를 들어, <xref:System.IO.Ports.SerialDataReceivedEventHandler> 대리자는 매개 변수 중 하나로 <xref:System.IO.Ports.SerialDataReceivedEventArgs> 클래스를 가집니다.  
   
-
-  <xref:System.EventArgs> 클래스는 모든 이벤트 데이터 클래스의 기본 형식입니다. <xref:System.EventArgs>는 이벤트에 연결된 데이터가 없을 때 사용하는 클래스이기도 합니다. 다른 클래스에게 어떤 일이 발생했으며 어떠한 데이터도 전달할 필요가 없다는 것을 알리기만 하는 이벤트를 만들려면 대리자에서 두 번째 매개 변수로 <xref:System.EventArgs> 클래스를 포함합니다. 어떠한 데이터도 제공되지 않은 경우 <xref:System.EventArgs.Empty?displayProperty=nameWithType> 값을 전달할 수 있습니다. 
-  <xref:System.EventHandler> 대리자는 매개 변수로 <xref:System.EventArgs> 클래스를 포함합니다.  
+<xref:System.EventArgs> 클래스는 모든 이벤트 데이터 클래스의 기본 형식입니다. <xref:System.EventArgs>는 이벤트에 연결된 데이터가 없을 때 사용하는 클래스이기도 합니다. 다른 클래스에게 어떤 일이 발생했으며 어떠한 데이터도 전달할 필요가 없다는 것을 알리기만 하는 이벤트를 만들려면 대리자에서 두 번째 매개 변수로 <xref:System.EventArgs> 클래스를 포함합니다. 어떠한 데이터도 제공되지 않은 경우 <xref:System.EventArgs.Empty?displayProperty=nameWithType> 값을 전달할 수 있습니다. <xref:System.EventHandler> 대리자는 매개 변수로 <xref:System.EventArgs> 클래스를 포함합니다.  
   
 사용자 지정된 이벤트 데이터 클래스를 만들려면 <xref:System.EventArgs>로부터 파생된 클래스를 만든 후, 이벤트 관련 데이터를 전달하는 데 필요한 멤버를 제공합니다. 일반적으로 .NET과 동일한 명명 패턴을 사용하여 이벤트 데이터 클래스 이름을 `EventArgs`로 끝내야 합니다.  
   

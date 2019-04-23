@@ -1,15 +1,8 @@
-items:
 - name: 웹 설정 스키마
   href: index.md
   items:
-  - name: <system.web> 요소(웹 설정)
-    href: system-web-element-web-settings.md
-    items:
-    - name: <applicationPool> 요소(웹 설정)
-      href: applicationpool-element-web-settings.md
-ms.openlocfilehash: d47abec64d32f6b285c4d3494c169bc19114063b
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469780"
+    - name: <system.web> 요소(웹 설정)
+      href: system-web-element-web-settings.md
+      items:
+        - name: <applicationPool> 요소(웹 설정)
+          href: applicationpool-element-web-settings.md

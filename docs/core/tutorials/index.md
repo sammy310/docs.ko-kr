@@ -6,11 +6,11 @@ ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
 ms.openlocfilehash: 794aa91e11f8d7386d3fe98f692e245e8af95eaa
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61647244"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>자습서에서 .NET Core 및 .NET Core SDK 도구 알아보기
 
@@ -46,7 +46,7 @@ ms.locfileid: "57788299"
 ## <a name="other"></a>기타
 - [Dotnet 테스트를 사용한 .NET Core의 단위 테스트](../testing/unit-testing-with-dotnet-test.md)
 - [MSTest 및 .NET Core를 사용한 단위 테스트](../testing/unit-testing-with-mstest.md)
-- [플랫폼 간 도구로 라이브러리 개발](libraries.md)
+- [여러 플랫폼에서 사용할 수 있는 도구로 라이브러리 개발](libraries.md)
 - [네이티브 코드에서 .NET Core 호스트](netcore-hosting.md)
 - [dotnet용 사용자 지정 템플릿 새로 만들기](create-custom-template.md)
 

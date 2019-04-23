@@ -1,13 +1,19 @@
 ---
-title: 'nullable 형식 - C# 프로그래밍 가이드'
+title: nullable 형식 - C# 프로그래밍 가이드
 ms.custom: seodec18
-description: 'C# nullable 형식 및 사용 방법 알아보기'
+description: C# nullable 형식 및 사용 방법 알아보기
 ms.date: 07/30/2018
 helpviewer_keywords:
-  - 'nullable types [C#]'
-  - 'C# language, nullable types'
-  - 'types [C#], nullable'
+- nullable types [C#]
+- C# language, nullable types
+- types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
+ms.openlocfilehash: 740b39c9c729f0768e75b0465eb8ca98eb5b318f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61710149"
 ---
 # <a name="nullable-types-c-programming-guide"></a>nullable 형식(C# 프로그래밍 가이드)
 

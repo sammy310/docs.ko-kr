@@ -9,11 +9,11 @@ ms.assetid: 14295c28-1da8-408b-a656-9584abcd9896
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 412b61e026b019f7516332c247b203ac85304146
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61672941"
 ---
 # <a name="hosting-unmanaged-api-reference"></a>호스팅(관리되지 않는 API 참조)
 호스팅 API는 관리되지 않는 호스트가 CLR(공용 언어 런타임)을 응용 프로그램에 통합할 수 있게 해줍니다.  

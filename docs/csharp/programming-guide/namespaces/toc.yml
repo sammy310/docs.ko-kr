@@ -1,16 +1,9 @@
-items:
 - name: 네임스페이스
   href: index.md
   items:
-  - name: 네임스페이스 사용
-    href: using-namespaces.md
-  - name: '방법: 글로벌 네임스페이스 별칭 사용'
-    href: how-to-use-the-global-namespace-alias.md
-  - name: '방법: 내 네임스페이스 사용'
-    href: how-to-use-the-my-namespace.md
-ms.openlocfilehash: 289817c09457dd50111d9d7514d27802d337cb79
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470177"
+    - name: 네임스페이스 사용
+      href: using-namespaces.md
+    - name: '방법: 글로벌 네임스페이스 별칭 사용'
+      href: how-to-use-the-global-namespace-alias.md
+    - name: '방법: 내 네임스페이스 사용'
+      href: how-to-use-the-my-namespace.md

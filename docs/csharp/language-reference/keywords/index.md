@@ -1,14 +1,20 @@
 ---
-title: 'C# 키워드'
+title: C# 키워드
 ms.date: 03/07/2017
 f1_keywords:
-  - cs.keywords
+- cs.keywords
 helpviewer_keywords:
-  - 'keywords [C#]'
-  - 'C# language, keywords'
-  - 'Visual C#, keywords'
-  - '@ keyword'
+- keywords [C#]
+- C# language, keywords
+- Visual C#, keywords
+- '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
+ms.openlocfilehash: c590a33b83a9c6d1b839ecb496e8eb08488b2598
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61661401"
 ---
 # <a name="c-keywords"></a>C# 키워드
 키워드는 컴파일러에 대해 특별한 의미를 갖는, 미리 정의되어 있는 예약된 식별자입니다. 키워드는 프로그램에서 식별자로 사용되려면 접두어로 `@`을 포함해야 합니다. 예를 들어 `@if`는 올바른 식별자이지만 `if`는 `if`가 키워드이므로 식별자로 적절하지 않습니다.  

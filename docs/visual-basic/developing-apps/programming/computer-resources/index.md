@@ -7,15 +7,15 @@ helpviewer_keywords:
 - computer resources [Visual Basic], accessing
 ms.assetid: 75b81c88-f7c0-46e0-95c8-0c006d2120f9
 ms.openlocfilehash: 7128a71f28d1755a14fcda5f09bee11202ab4154
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973883"
 ---
 # <a name="accessing-computer-resources-visual-basic"></a>컴퓨터 리소스에 액세스(Visual Basic)
 
-`My.Computer` 개체는 `My`의 세 가지 중앙 개체 중 하나로, 이를 통해 정보 및 일반적으로 사용되는 기능에 액세스할 수 있습니다. `My.Computer`에서는 응용 프로그램이 실행되는 컴퓨터에 액세스하기 위한 메서드, 특성 및 이벤트를 제공합니다. 다음과 같은 개체가 있습니다.  
+`My.Computer` 개체는 `My`의 세 가지 중앙 개체 중 하나로, 이를 통해 정보 및 일반적으로 사용되는 기능에 액세스할 수 있습니다. `My.Computer`에서는 애플리케이션이 실행되는 컴퓨터에 액세스하기 위한 메서드, 특성 및 이벤트를 제공합니다. 다음과 같은 개체가 있습니다.  
   
 -   <xref:Microsoft.VisualBasic.Devices.Audio>
 -   클립보드(<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>)

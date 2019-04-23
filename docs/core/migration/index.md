@@ -4,11 +4,11 @@ description: project.json을 사용하여 이전 .NET Core 프로젝트를 마�
 ms.date: 07/19/2017
 ms.custom: seodec18
 ms.openlocfilehash: f48728e647b57a8c5796bdc2119f72b58a49d80f
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663342"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>project.json에서 .NET Core 프로젝트 마이그레이션
 

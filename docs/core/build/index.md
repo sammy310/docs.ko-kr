@@ -4,8 +4,13 @@ description: 소스 코드에서 .NET Core 및 .NET Core CLI를 빌드하는 방
 author: bleroy
 ms.date: 06/28/2017
 ms.custom: seodec18
+ms.openlocfilehash: 523b537ba07afd1b6c56192c5e2589082fe5820f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650884"
 ---
-
 # <a name="build-net-core-from-source"></a>소스에서 .NET Core 빌드
 
 소스 코드에서 .NET Core를 빌드하는 기능은 여러 가지 면에서 중요합니다. .NET Core를 새 플랫폼으로 쉽게 포팅하고, 제품에 대한 기여 및 수정을 할 수 있으며, 사용자 지정 버전의 .NET을 만들 수 있습니다.

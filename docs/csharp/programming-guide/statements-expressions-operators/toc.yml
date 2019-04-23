@@ -1,49 +1,42 @@
-items:
-- name: 문, 식 및 연산자
+- name: '문, 식 및 연산자'
   href: index.md
   items:
-  - name: 문
-    href: statements.md
-  - name: 식
-    href: expressions.md
-    items:
-    - name: 식 본문 멤버
-      href: expression-bodied-members.md
-  - name: 연산자
-    href: operators.md
-  - name: 익명 함수
-    href: anonymous-functions.md
-    items:
-    - name: 람다 식
-      href: lambda-expressions.md
+    - name: 문
+      href: statements.md
+    - name: 식
+      href: expressions.md
       items:
-      - name: '방법: 쿼리에서 람다 식 사용'
-        href: how-to-use-lambda-expressions-in-a-query.md
-      - name: '방법: LINQ 외부에서 람다 식 사용'
-        href: how-to-use-lambda-expressions-outside-linq.md
-    - name: 무명 메서드
-      href: anonymous-methods.md
-  - name: 오버로드할 수 있는 연산자
-    href: overloadable-operators.md
-  - name: 변환 연산자
-    href: conversion-operators.md
-    items:
-    - name: 변환 연산자 사용
-      href: using-conversion-operators.md
-    - name: '방법: 구조체 간의 사용자 정의 변환 구현'
-      href: how-to-implement-user-defined-conversions-between-structs.md
-  - name: 기본값 식
-    href: default-value-expressions.md
-  - name: 같음 비교
-    href: equality-comparisons.md
-    items:
-    - name: '방법: 형식의 값 일치 정의'
-      href: how-to-define-value-equality-for-a-type.md
-    - name: '방법: 참조 일치 테스트(ID)'
-      href: how-to-test-for-reference-equality-identity.md
-ms.openlocfilehash: d5f37fd97cf72c7c8d9b7854753eb25fdea8bbb2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470020"
+        - name: 식 본문 멤버
+          href: expression-bodied-members.md
+    - name: 연산자
+      href: operators.md
+    - name: 익명 함수
+      href: anonymous-functions.md
+      items:
+        - name: 람다 식
+          href: lambda-expressions.md
+          items:
+            - name: '방법: 쿼리에서 람다 식 사용'
+              href: how-to-use-lambda-expressions-in-a-query.md
+            - name: '방법: LINQ 외부에서 람다 식 사용'
+              href: how-to-use-lambda-expressions-outside-linq.md
+        - name: 무명 메서드
+          href: anonymous-methods.md
+    - name: 오버로드할 수 있는 연산자
+      href: overloadable-operators.md
+    - name: 변환 연산자
+      href: conversion-operators.md
+      items:
+        - name: 변환 연산자 사용
+          href: using-conversion-operators.md
+        - name: '방법: 구조체 간의 사용자 정의 변환 구현'
+          href: how-to-implement-user-defined-conversions-between-structs.md
+    - name: 기본값 식
+      href: default-value-expressions.md
+    - name: 같음 비교
+      href: equality-comparisons.md
+      items:
+        - name: '방법: 형식의 값 일치 정의'
+          href: how-to-define-value-equality-for-a-type.md
+        - name: '방법: 참조 일치 테스트(ID)'
+          href: how-to-test-for-reference-equality-identity.md

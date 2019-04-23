@@ -14,11 +14,11 @@ ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a417e964c2f44c291892f9ddec6e32438fbff9a1
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945433"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>.NET의 예외 처리 및 Throw
 
@@ -48,7 +48,7 @@ ms.locfileid: "55758433"
 
 다음 표에서는 몇 가지 일반적인 예외 및 예외가 발생할 수 있는 경우의 예를 보여 줍니다.
 
-| 예외 형식 | 설명 | 예 |
+| 예외 형식 | 설명 | 예제 |
 | -------------- | ----------- | ------- |
 | <xref:System.Exception> | 모든 예외의 기본 클래스. | 없음(이 예외의 파생된 클래스 사용). |
 | <xref:System.IndexOutOfRangeException> | 배열이 올바르지 않게 인덱싱된 경우에만 런타임에서 발생됩니다. | 유효 범위를 벗어난 배열 인덱싱: <br /> `arr[arr.Length+1]` |
