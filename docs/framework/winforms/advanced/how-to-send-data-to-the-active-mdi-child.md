@@ -11,24 +11,24 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
 ms.openlocfilehash: f4399d8548eff76aaa4effae6da7239cd3b0284b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343716"
 ---
-# <a name="how-to-send-data-to-the-active-mdi-child"></a><span data-ttu-id="de93d-102">방법: 활성 MDI 자식으로 데이터 보내기</span><span class="sxs-lookup"><span data-stu-id="de93d-102">How to: Send Data to the Active MDI Child</span></span>
-<span data-ttu-id="de93d-103">컨텍스트 내에서 종종 [다중 문서 MDI (인터페이스) 응용 프로그램](multiple-document-interface-mdi-applications.md), 사용자 데이터를 클립보드에서 MDI 응용 프로그램에 붙여 넣는 같은 활성 자식 창에 데이터를 전송 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="de93d-103">Often, within the context of [Multiple-Document Interface (MDI) Applications](multiple-document-interface-mdi-applications.md), you will need to send data to the active child window, such as when the user pastes data from the Clipboard into an MDI application.</span></span>  
+# <a name="how-to-send-data-to-the-active-mdi-child"></a><span data-ttu-id="9bf94-102">방법: 활성 MDI 자식으로 데이터 보내기</span><span class="sxs-lookup"><span data-stu-id="9bf94-102">How to: Send Data to the Active MDI Child</span></span>
+<span data-ttu-id="9bf94-103">컨텍스트 내에서 종종 [다중 문서 MDI (인터페이스) 응용 프로그램](multiple-document-interface-mdi-applications.md), 사용자 데이터를 클립보드에서 MDI 응용 프로그램에 붙여 넣는 같은 활성 자식 창에 데이터를 전송 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9bf94-103">Often, within the context of [Multiple-Document Interface (MDI) Applications](multiple-document-interface-mdi-applications.md), you will need to send data to the active child window, such as when the user pastes data from the Clipboard into an MDI application.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="de93d-104">자식 창에 포커스가 확인 하 고 해당 콘텐츠를 클립보드에 전송 하는 방법에 대 한 내용은 [활성 MDI 자식 확인](how-to-determine-the-active-mdi-child.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="de93d-104">For information about verifying which child window has focus and sending its contents to the Clipboard, see [Determining the Active MDI Child](how-to-determine-the-active-mdi-child.md).</span></span>  
+>  <span data-ttu-id="9bf94-104">자식 창에 포커스가 확인 하 고 해당 콘텐츠를 클립보드에 전송 하는 방법에 대 한 내용은 [활성 MDI 자식 확인](how-to-determine-the-active-mdi-child.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9bf94-104">For information about verifying which child window has focus and sending its contents to the Clipboard, see [Determining the Active MDI Child](how-to-determine-the-active-mdi-child.md).</span></span>  
   
-### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a><span data-ttu-id="de93d-105">클립보드에서 활성 MDI 자식 창에 데이터를 보내도록</span><span class="sxs-lookup"><span data-stu-id="de93d-105">To send data to the active MDI child window from the Clipboard</span></span>  
+### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a><span data-ttu-id="9bf94-105">클립보드에서 활성 MDI 자식 창에 데이터를 보내도록</span><span class="sxs-lookup"><span data-stu-id="9bf94-105">To send data to the active MDI child window from the Clipboard</span></span>  
   
-1. <span data-ttu-id="de93d-106">메서드를 활성 자식 폼의 활성 컨트롤을 클립보드에 텍스트를 복사 합니다.</span><span class="sxs-lookup"><span data-stu-id="de93d-106">Within a method, copy the text on the Clipboard to the active control of the active child form.</span></span>  
+1. <span data-ttu-id="9bf94-106">메서드를 활성 자식 폼의 활성 컨트롤을 클립보드에 텍스트를 복사 합니다.</span><span class="sxs-lookup"><span data-stu-id="9bf94-106">Within a method, copy the text on the Clipboard to the active control of the active child form.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="de93d-107">이 예제에서는 가정 MDI 부모 폼 (`Form1`) 포함 된 하나 이상의 MDI 자식 창에 있는 <xref:System.Windows.Forms.RichTextBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="de93d-107">This example assumes there is an MDI parent form (`Form1`) that has one or more MDI child windows containing a <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="de93d-108">자세한 내용은 [MDI 부모 폼 만들기](how-to-create-mdi-parent-forms.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="de93d-108">For more information, see [Creating MDI Parent Forms](how-to-create-mdi-parent-forms.md).</span></span>  
+    >  <span data-ttu-id="9bf94-107">이 예제에서는 가정 MDI 부모 폼 (`Form1`) 포함 된 하나 이상의 MDI 자식 창에 있는 <xref:System.Windows.Forms.RichTextBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="9bf94-107">This example assumes there is an MDI parent form (`Form1`) that has one or more MDI child windows containing a <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="9bf94-108">자세한 내용은 [MDI 부모 폼 만들기](how-to-create-mdi-parent-forms.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9bf94-108">For more information, see [Creating MDI Parent Forms](how-to-create-mdi-parent-forms.md).</span></span>  
   
     ```vb  
     Public Sub mniPaste_Click(ByVal sender As Object, _  
@@ -91,10 +91,10 @@ ms.locfileid: "59343716"
     }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="de93d-109">참고자료</span><span class="sxs-lookup"><span data-stu-id="de93d-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9bf94-109">참고자료</span><span class="sxs-lookup"><span data-stu-id="9bf94-109">See also</span></span>
 
-- [<span data-ttu-id="de93d-110">MDI 애플리케이션</span><span class="sxs-lookup"><span data-stu-id="de93d-110">Multiple-Document Interface (MDI) Applications</span></span>](multiple-document-interface-mdi-applications.md)
-- [<span data-ttu-id="de93d-111">방법: MDI 부모 양식 만들기</span><span class="sxs-lookup"><span data-stu-id="de93d-111">How to: Create MDI Parent Forms</span></span>](how-to-create-mdi-parent-forms.md)
-- [<span data-ttu-id="de93d-112">방법: MDI 자식 양식 만들기</span><span class="sxs-lookup"><span data-stu-id="de93d-112">How to: Create MDI Child Forms</span></span>](how-to-create-mdi-child-forms.md)
-- [<span data-ttu-id="de93d-113">방법: 활성 MDI 자식 확인</span><span class="sxs-lookup"><span data-stu-id="de93d-113">How to: Determine the Active MDI Child</span></span>](how-to-determine-the-active-mdi-child.md)
-- [<span data-ttu-id="de93d-114">방법: MDI 자식 양식 정렬</span><span class="sxs-lookup"><span data-stu-id="de93d-114">How to: Arrange MDI Child Forms</span></span>](how-to-arrange-mdi-child-forms.md)
+- [<span data-ttu-id="9bf94-110">MDI(다중 문서 인터페이스) 응용 프로그램</span><span class="sxs-lookup"><span data-stu-id="9bf94-110">Multiple-Document Interface (MDI) Applications</span></span>](multiple-document-interface-mdi-applications.md)
+- [<span data-ttu-id="9bf94-111">방법: MDI 부모 폼 만들기</span><span class="sxs-lookup"><span data-stu-id="9bf94-111">How to: Create MDI Parent Forms</span></span>](how-to-create-mdi-parent-forms.md)
+- [<span data-ttu-id="9bf94-112">방법: MDI 자식 폼 만들기</span><span class="sxs-lookup"><span data-stu-id="9bf94-112">How to: Create MDI Child Forms</span></span>](how-to-create-mdi-child-forms.md)
+- [<span data-ttu-id="9bf94-113">방법: 활성 MDI 자식 확인</span><span class="sxs-lookup"><span data-stu-id="9bf94-113">How to: Determine the Active MDI Child</span></span>](how-to-determine-the-active-mdi-child.md)
+- [<span data-ttu-id="9bf94-114">방법: MDI 자식 폼 정렬</span><span class="sxs-lookup"><span data-stu-id="9bf94-114">How to: Arrange MDI Child Forms</span></span>](how-to-arrange-mdi-child-forms.md)

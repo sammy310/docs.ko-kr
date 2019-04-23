@@ -10,21 +10,21 @@ helpviewer_keywords:
 - Point4D structures [WPF], testing for equality
 ms.assetid: e004a67e-db7f-4af8-a31f-e6b2a44ccf34
 ms.openlocfilehash: ce1188e99ef2b0682427cc2e227aaccd27f7c4f4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59198441"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59770154"
 ---
-# <a name="how-to-test-point4d-structures-for-equality-and-inequality"></a><span data-ttu-id="8688e-102">방법: Point4D 구조체가 동일한지 여부 테스트</span><span class="sxs-lookup"><span data-stu-id="8688e-102">How to: Test Point4D structures for equality and inequality</span></span>
-<span data-ttu-id="8688e-103">이 예제에서는 테스트 <xref:System.Windows.Media.Media3D.Point4D> 같음 및 다름에 대 한 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="8688e-103">This example shows how to test <xref:System.Windows.Media.Media3D.Point4D> structures for equality and inequality.</span></span>  
+# <a name="how-to-test-point4d-structures-for-equality-and-inequality"></a><span data-ttu-id="2883b-102">방법: Point4D 구조체가 동일한지 여부 테스트</span><span class="sxs-lookup"><span data-stu-id="2883b-102">How to: Test Point4D structures for equality and inequality</span></span>
+<span data-ttu-id="2883b-103">이 예제에서는 테스트 <xref:System.Windows.Media.Media3D.Point4D> 같음 및 다름에 대 한 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="2883b-103">This example shows how to test <xref:System.Windows.Media.Media3D.Point4D> structures for equality and inequality.</span></span>  
   
- <span data-ttu-id="8688e-104">다음 코드를 테스트 하는 방법을 보여 줍니다 <xref:System.Windows.Media.Media3D.Point4D> 같음 및 같지 않음 사용에 대 한 구조는 <xref:System.Windows.Media.Media3D.Point4D> 같음 메서드.</span><span class="sxs-lookup"><span data-stu-id="8688e-104">The following code illustrates how to test <xref:System.Windows.Media.Media3D.Point4D> structures for equality and inequality using the <xref:System.Windows.Media.Media3D.Point4D> equality methods.</span></span>  <span data-ttu-id="8688e-105"><xref:System.Windows.Media.Media3D.Point4D> 구조는 오버 로드 된 같음을 사용 하 여 같음 테스트 (`==`) 연산자를 오버 로드 된 같지 않음을 사용 하 여 다른 지에 대 한 다음 (`!=`) 연산자를 마지막으로 <xref:System.Windows.Media.Media3D.Point3D> 구조 및 <xref:System.Windows.Media.Media3D.Point4D> 구조 정적을 사용 하 여 같은지 확인 <xref:System.Windows.Media.Media3D.Point4D.Equals%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="8688e-105">The <xref:System.Windows.Media.Media3D.Point4D> structures are tested for equality using the overloaded equality (`==`) operator, then for inequality using the overloaded inequality (`!=`) operator, and finally a <xref:System.Windows.Media.Media3D.Point3D> structure and a <xref:System.Windows.Media.Media3D.Point4D> structure are checked for equality using the static <xref:System.Windows.Media.Media3D.Point4D.Equals%2A> method.</span></span>  
+ <span data-ttu-id="2883b-104">다음 코드를 테스트 하는 방법을 보여 줍니다 <xref:System.Windows.Media.Media3D.Point4D> 같음 및 같지 않음 사용에 대 한 구조는 <xref:System.Windows.Media.Media3D.Point4D> 같음 메서드.</span><span class="sxs-lookup"><span data-stu-id="2883b-104">The following code illustrates how to test <xref:System.Windows.Media.Media3D.Point4D> structures for equality and inequality using the <xref:System.Windows.Media.Media3D.Point4D> equality methods.</span></span>  <span data-ttu-id="2883b-105"><xref:System.Windows.Media.Media3D.Point4D> 구조는 오버 로드 된 같음을 사용 하 여 같음 테스트 (`==`) 연산자를 오버 로드 된 같지 않음을 사용 하 여 다른 지에 대 한 다음 (`!=`) 연산자를 마지막으로 <xref:System.Windows.Media.Media3D.Point3D> 구조 및 <xref:System.Windows.Media.Media3D.Point4D> 구조 정적을 사용 하 여 같은지 확인 <xref:System.Windows.Media.Media3D.Point4D.Equals%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="2883b-105">The <xref:System.Windows.Media.Media3D.Point4D> structures are tested for equality using the overloaded equality (`==`) operator, then for inequality using the overloaded inequality (`!=`) operator, and finally a <xref:System.Windows.Media.Media3D.Point3D> structure and a <xref:System.Windows.Media.Media3D.Point4D> structure are checked for equality using the static <xref:System.Windows.Media.Media3D.Point4D.Equals%2A> method.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8688e-106">예제</span><span class="sxs-lookup"><span data-stu-id="8688e-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="2883b-106">예제</span><span class="sxs-lookup"><span data-stu-id="2883b-106">Example</span></span>  
  [!code-csharp[3DGallery_procedural_snip#Point4DEqualityExample_csharp](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/Misc3DOperationsExample.cs#point4dequalityexample_csharp)]  
   
-## <a name="see-also"></a><span data-ttu-id="8688e-107">참고자료</span><span class="sxs-lookup"><span data-stu-id="8688e-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2883b-107">참고자료</span><span class="sxs-lookup"><span data-stu-id="2883b-107">See also</span></span>
 
 - <xref:System.Windows.Media.Media3D.Point4D.op_Equality%2A>
 - <xref:System.Windows.Media.Media3D.Point4D.op_Inequality%2A>
