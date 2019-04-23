@@ -3,10 +3,10 @@ title: '방법: 열을 데이터베이스에서 생성된 열로 표현'
 ms.date: 03/30/2017
 ms.assetid: 6524b8a6-e5d2-4a3b-8e08-beafc4a84fd2
 ms.openlocfilehash: 2803697c668a8e1dbbeb426ea41b64878f70c145
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307914"
 ---
 # <a name="how-to-represent-columns-as-database-generated"></a>방법: 열을 데이터베이스에서 생성된 열로 표현
@@ -23,4 +23,4 @@ ms.locfileid: "59307914"
 ## <a name="see-also"></a>참고자료
 
 - [LINQ to SQL 개체 모델](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [방법: 코드 편집기를 사용하여 엔터티 클래스 사용자 지정](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [방법: 코드 편집기를 사용 하 여 엔터티 클래스 사용자 지정](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

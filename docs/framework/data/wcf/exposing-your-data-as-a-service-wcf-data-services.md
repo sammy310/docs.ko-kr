@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: df0bbcee-f66f-4a88-abb4-4e73c8b9c908
 ms.openlocfilehash: 3c0763f21940831f401194356dc25b0d99c8d6f2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308538"
 ---
 # <a name="expose-your-data-as-a-service-wcf-data-services"></a>As a Service (WCF Data Services) 데이터를 노출 합니다.
@@ -25,7 +25,7 @@ WCF Data Services로 데이터를 노출 하는 서비스를 더 쉽게 정의�
 
 2. **데이터 서비스를 만듭니다.** 가장 기본적인 데이터 서비스는 <xref:System.Data.Services.DataService%601> 클래스에서 상속하는 클래스를 엔터티 컨테이너의 네임스페이스로 정규화된 이름인 `T` 형식으로 노출합니다. 자세한 내용은 [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)의 개발 및 배포에 대한 정보를 제공합니다.
 
-3. **데이터 서비스 구성.** 기본적으로 WCF Data Services는 엔터티 컨테이너에 의해 노출 되는 리소스에 대 한 액세스를 비활성화 합니다. <xref:System.Data.Services.DataServiceConfiguration> 인터페이스를 사용 하면 리소스에 대 한 액세스를 구성 및 서비스 작업, odata, 지원 되는 버전을 지정 하 고 일괄 처리 동작 또는 반환할 수 있는 엔터티의 최대 수와 같은 서비스 전반적인 기타 동작을 정의 하려면 단일 응답 합니다. 자세한 내용은 [데이터 서비스 구성](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)합니다.
+3. **데이터 서비스를 구성 합니다.** 기본적으로 WCF Data Services는 엔터티 컨테이너에 의해 노출 되는 리소스에 대 한 액세스를 비활성화 합니다. <xref:System.Data.Services.DataServiceConfiguration> 인터페이스를 사용 하면 리소스에 대 한 액세스를 구성 및 서비스 작업, odata, 지원 되는 버전을 지정 하 고 일괄 처리 동작 또는 반환할 수 있는 엔터티의 최대 수와 같은 서비스 전반적인 기타 동작을 정의 하려면 단일 응답 합니다. 자세한 내용은 [데이터 서비스 구성](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)합니다.
 
 Northwind 샘플 데이터베이스를 기반으로 하는 간단한 데이터 서비스를 만드는 방법의 예제를 참조 하세요 [퀵 스타트](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)합니다.
 

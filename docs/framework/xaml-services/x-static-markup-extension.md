@@ -11,10 +11,10 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
 ms.openlocfilehash: 3da2f6afc7e7ecf20c91f0badca38bc26083d3ae
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295712"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static 태그 확장
@@ -69,7 +69,7 @@ ms.locfileid: "59295712"
 
 이 태그 확장에 대 한 처리 정의한.NET Framework XAML 서비스 구현에서의 <xref:System.Windows.Markup.StaticExtension> 클래스입니다.  
 
-`x:Static` 태그 확장입니다. XAML 사용의 모든 태그 확장을 `{` 고 `}` XAML 프로세서는 태그 확장 값을 입력 해야 한다는 인식 하는 규칙은 특성 구문에서 문자입니다. 태그 확장에 대한 자세한 내용은 [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md)를 참조하세요.  
+`x:Static`은 태그 확장입니다. XAML 사용의 모든 태그 확장을 `{` 고 `}` XAML 프로세서는 태그 확장 값을 입력 해야 한다는 인식 하는 규칙은 특성 구문에서 문자입니다. 태그 확장에 대한 자세한 내용은 [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md)를 참조하세요.  
   
 ## <a name="wpf-usage-notes"></a>WPF 사용 정보  
  WPF 프로그래밍에 사용할 기본 XAML 네임 스페이스에는 많은 유용한 정적 속성이 있고 유용한 정적 속성 중 대부분 필요 없이 쉽게 사용할 수 있는 형식 변환기와 같은 지원 `{x:Static}` 합니다. 정적 속성에 대 한 중 하나가 참인 경우 XAML 네임 스페이스에 대 한 접두사를 매핑되어야 합니다.  

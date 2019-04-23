@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC40057
 ms.assetid: 4ae3506e-2ebe-4ff3-995d-14ac60db5e9f
 ms.openlocfilehash: 105fa8da838938d13022c210c1f65cdafd251003
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308486"
 ---
 # <a name="namespace-or-type-specified-in-the-project-level-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>프로젝트 수준의 Imports'에 지정 된 Namespace 또는 형식을\<qualifiedelementname >' public 멤버가 없거나 찾을 수 없습니다
@@ -39,8 +39,8 @@ ms.locfileid: "59308486"
   
 ## <a name="see-also"></a>참고자료
 
-- [참조 페이지, 프로젝트 디자이너(Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)
+- [프로젝트 디자이너, 참조 페이지(Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)
 - [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)
-- [Public](../../../visual-basic/language-reference/modifiers/public.md)
-- [Visual Basic의 네임스페이스](../../../visual-basic/programming-guide/program-structure/namespaces.md)
-- [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [공용](../../../visual-basic/language-reference/modifiers/public.md)
+- [Visual Basic의 네임 스페이스](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [선언된 요소 참조](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

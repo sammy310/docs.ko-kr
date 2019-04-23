@@ -3,10 +3,10 @@ title: '전송: UDP 샘플에의 한 사용자 지정 트랜잭션'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
 ms.openlocfilehash: e257c987d93fc7a5b5e8e7f51d79dd8399b45d72
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310124"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>전송: UDP 샘플에의 한 사용자 지정 트랜잭션
@@ -46,7 +46,7 @@ byte[] txmsgBuffer =                TransactionMessageBuffer.WriteTransactionMes
 int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFlags.None, this.remoteEndPoint);  
 ```  
   
- `TransactionMessageBuffer.WriteTransactionMessageBuffer` 메시지 엔터티를 사용 하 여 현재 트랜잭션의 전파 토큰을 병합 하 고 버퍼에 배치 하는 새 기능을 포함 하는 도우미 메서드입니다.  
+ `TransactionMessageBuffer.WriteTransactionMessageBuffer`는 현재 트랜잭션의 전파 토큰을 메시지 엔터티와 병합하고 이를 버퍼에 배치하는 새로운 기능이 포함된 도우미 메서드입니다.  
   
  사용자 지정 트랜잭션 흐름 전송의 경우 클라이언트 구현 알아야 트랜잭션 흐름이 필요한 서비스 작업 및 WCF에이 정보를 전달 합니다. 또한 사용자 트랜잭션을 전송 계층으로 전송하기 위한 메커니즘도 있어야 합니다. 이 샘플 "WCF 메시지 검사자"를 사용 하 여이 정보를 얻을 수 있습니다. 여기서 구현된 `TransactionFlowInspector`라는 클라이언트 메시지 검사자는 다음 작업을 수행합니다.  
   
@@ -159,7 +159,7 @@ count = listenSocket.EndReceiveFrom(result, ref dummy);
 // read the transaction and message                       TransactionMessageBuffer.ReadTransactionMessageBuffer(buffer, count, out transaction, out msg);  
 ```  
   
- `TransactionMessageBuffer.ReadTransactionMessageBuffer()` 수행한 serialization 프로세스를 반대로 하는 도우미 메서드입니다 `TransactionMessageBuffer.WriteTransactionMessageBuffer()`합니다.  
+ `TransactionMessageBuffer.ReadTransactionMessageBuffer()`는 `TransactionMessageBuffer.WriteTransactionMessageBuffer()`가 수행한 serialization 프로세스를 반대로 하는 도우미 메서드입니다.  
   
  트랜잭션이 이동하면 `TransactionMessageProperty`의 메시지에 추가됩니다.  
   

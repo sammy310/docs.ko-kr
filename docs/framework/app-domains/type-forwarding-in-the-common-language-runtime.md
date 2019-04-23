@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92b72667101575aebea9b60a41979e374004b541
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e378eb36e633575d5afa886e886aed302cbdab9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499264"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59310986"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>공용 언어 런타임의 형식 전달
 형식 전달을 사용하면 원본 어셈블리를 사용하는 애플리케이션을 다시 컴파일하지 않고도 형식을 다른 어셈블리로 이동할 수 있습니다.  
@@ -30,9 +30,9 @@ ms.locfileid: "54499264"
 ## <a name="forwarding-types"></a>형식 전달  
  다음 네 단계를 통해 형식을 전달할 수 있습니다.  
   
-1.  형식의 소스 코드를 원본 어셈블리에서 대상 어셈블리로 이동합니다.  
+1. 형식의 소스 코드를 원본 어셈블리에서 대상 어셈블리로 이동합니다.  
   
-2.  해당 형식이 있었던 어셈블리에서 이동된 형식에 대해 <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>를 추가합니다. 다음 코드에서는 이동된 `Example` 형식의 특성을 보여 줍니다.  
+2. 해당 형식이 있었던 어셈블리에서 이동된 형식에 대해 <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>를 추가합니다. 다음 코드에서는 이동된 `Example` 형식의 특성을 보여 줍니다.  
   
     ```csharp  
     [assembly:TypeForwardedToAttribute(typeof(Example))]  
@@ -42,11 +42,12 @@ ms.locfileid: "54499264"
     [assembly:TypeForwardedToAttribute(Example::typeid)]  
     ```  
   
-3.  해당 형식이 현재 들어 있는 어셈블리를 컴파일합니다.  
+3. 해당 형식이 현재 들어 있는 어셈블리를 컴파일합니다.  
   
-4.  해당 형식이 있었던 어셈블리를 현재 해당 형식이 들어 있는 어셈블리에 대한 참조를 사용하여 다시 컴파일합니다. 예를 들어, 명령줄에서 C# 파일을 컴파일할 경우 [/reference (C# Compiler Options)](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md) 옵션을 사용하여 해당 형식이 들어 있는 어셈블리를 지정합니다. C++의 경우 소스 파일에서 [#using](/cpp/preprocessor/hash-using-directive-cpp) 지시문을 사용하여 해당 형식이 들어 있는 어셈블리를 지정합니다.  
+4. 해당 형식이 있었던 어셈블리를 현재 해당 형식이 들어 있는 어셈블리에 대한 참조를 사용하여 다시 컴파일합니다. 예를 들어, 명령줄에서 C# 파일을 컴파일할 경우 [/reference (C# Compiler Options)](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md) 옵션을 사용하여 해당 형식이 들어 있는 어셈블리를 지정합니다. C++의 경우 소스 파일에서 [#using](/cpp/preprocessor/hash-using-directive-cpp) 지시문을 사용하여 해당 형식이 들어 있는 어셈블리를 지정합니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>
 - [형식 전달(C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)
 - [#using 지시문](/cpp/preprocessor/hash-using-directive-cpp)

@@ -11,16 +11,16 @@ helpviewer_keywords:
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
 ms.openlocfilehash: 4f81c7377423899c142c4270f325bbd7ed20b877
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312243"
 ---
 # <a name="overload-resolution-visual-basic"></a>오버로드 확인(Visual Basic)
 Visual Basic 컴파일러는 여러 오버 로드 된 버전에 정의 된 프로시저 호출을 발견 하면, 오버 로드를 호출 하는 결정 해야 합니다. 다음 단계를 수행 하 여 수행 합니다.  
   
-1. **내게 필요한 옵션입니다.** 호출 코드를 호출 하지 못하도록 제한 하는 액세스 수준 가진 오버 로드 모두 제거 합니다.  
+1. **접근성.** 호출 코드를 호출 하지 못하도록 제한 하는 액세스 수준 가진 오버 로드 모두 제거 합니다.  
   
 2. **매개 변수 개수입니다.** 호출에서 제공 하는 다른 개수의 매개 변수를 정의 하는 오버 로드 모두 제거 합니다.  
   
@@ -65,9 +65,9 @@ Visual Basic 컴파일러는 여러 오버 로드 된 버전에 정의 된 프�
 - [프로시저 오버로딩](./procedure-overloading.md)
 - [프로시저 문제 해결](./troubleshooting-procedures.md)
 - [방법: 여러 버전의 프로시저 정의](./how-to-define-multiple-versions-of-a-procedure.md)
-- [방법: 오버로드된 프로시저 호출](./how-to-call-an-overloaded-procedure.md)
-- [방법: 선택적 매개 변수를 사용하는 프로시저 오버로드](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [방법: 매개 변수를 무제한으로 사용하는 프로시저 오버로드](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
-- [프로시저 오버로드에서 고려해야 할 사항](./considerations-in-overloading-procedures.md)
-- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
+- [방법: 오버 로드 된 프로시저 호출](./how-to-call-an-overloaded-procedure.md)
+- [방법: 선택적 매개 변수를 사용 하는 프로시저 오버 로드](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [방법: 무한 개수의 매개 변수를 사용 하는 프로시저 오버 로드](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [프로시저를 오버로드할 때 고려해야 할 사항](./considerations-in-overloading-procedures.md)
+- [오버로드](../../../../visual-basic/language-reference/modifiers/overloads.md)
 - [확장명 메서드](./extension-methods.md)

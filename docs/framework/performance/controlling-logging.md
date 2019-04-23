@@ -7,10 +7,10 @@ ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16ed4d86d64a6d3c569c7fd7ab9e9e3a3943f078
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312100"
 ---
 # <a name="controlling-net-framework-logging"></a>.NET Framework 로깅 제어
@@ -53,9 +53,9 @@ Provider                                 GUID
   
     -   `-p` 매개 변수는 공급자 GUID를 식별합니다.  
   
-    -   `0x1CCBD` 발생할 수 있는 이벤트의 범주를 지정 합니다.  
+    -   `0x1CCBD`는 발생할 이벤트의 범주를 지정합니다.  
   
-    -   `0x5` (이 예제의 경우 verbose (5)) 로깅 수준을 설정 합니다.  
+    -   `0x5`는 로깅 수준을 설정합니다(이 경우, verbose(5)).  
   
     -   `-ets` 매개 변수는 이벤트 추적 세션에 명령을 보내도록 Logman에 지시합니다.  
   

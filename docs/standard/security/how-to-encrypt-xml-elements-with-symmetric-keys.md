@@ -19,10 +19,10 @@ ms.assetid: d8461a44-aa2c-4ef4-b3e4-ab7cbaaee1b5
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2268dc813d6f12b69bee99dd07f8f4431b12a283
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295629"
 ---
 # <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>방법: 대칭 키를 사용하여 XML 요소 암호화
@@ -104,4 +104,4 @@ ms.locfileid: "59295629"
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Security.Cryptography.Xml>
-- [방법: 대칭 키를 사용하여 XML 요소 해독](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)
+- [방법: 대칭 키로 XML 요소 해독](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)

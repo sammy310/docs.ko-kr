@@ -12,10 +12,10 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], drag-and-drop operations
 ms.assetid: ca167d1c-2014-4cf0-96a0-20598470be3b
 ms.openlocfilehash: 5c60fe411fcbf6257c8aaacf1f7400c11c150ddc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310280"
 ---
 # <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>방법: Windows Forms RichTextBox 컨트롤을 사용하여 끌어서 놓기 작업 사용
@@ -167,6 +167,6 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤을 사용한 끌
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.Forms.RichTextBox>
-- [방법: 애플리케이션 간에 끌어서 놓기 작업 수행](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
+- [방법: 응용 프로그램 간에 끌어서 놓기 작업 수행](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
 - [RichTextBox 컨트롤](richtextbox-control-windows-forms.md)
 - [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)

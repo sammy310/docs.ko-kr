@@ -11,10 +11,10 @@ ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d96e223b85178c7f2784a523e5609057d1432488
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310540"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>지역화 대비 애플리케이션 개발을 위한 모범 사례
@@ -104,4 +104,4 @@ ms.locfileid: "59310540"
 ## <a name="see-also"></a>참고 항목
 
 - [전역화 및 지역화](../../../docs/standard/globalization-localization/index.md)
-- [데스크톱 응용 프로그램의 리소스](../../../docs/framework/resources/index.md)
+- [데스크톱 앱의 리소스](../../../docs/framework/resources/index.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a417c94106988e07e2b2ab2766c691f081ca7006
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74acea566e4b0e407e86cb67d3f521f18c2d68af
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734518"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59307719"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>방법: 관리 코드 DCOM을 WCF로 마이그레이션
 WCF(Windows Communication Foundation)는 분산 환경에서 서버와 클라이언트 간에 관리 코드 호출에 대해 DCOM(Distributed Component Object Model)보다 권장되는 안전한 선택 항목입니다. 이 문서에서는 다음과 같은 시나리오에 대해 코드를 DCOM에서 WCF로 마이그레이션하는 방법을 보여 줍니다.  
@@ -215,7 +215,7 @@ public interface ICustomerManager
 ### <a name="add-code-to-the-client-that-sends-a-by-value-object"></a>클라이언트에 값 방식으로 개체를 전송하는 코드 추가  
  다음 코드에서는 클라이언트가 새로운 값 방식 customer 개체를 만들고, `ICustomerManager` 서비스와 통신하는 채널을 만든 다음 customer 개체를 전송하는 방법을 보여 줍니다.  
   
- customer 개체가 직렬화되어 서비스로 전송되며, 서비스에서 해당 개체의 새 복사본으로 역직렬화됩니다.  이 개체에 대한 서비스를 호출하는 모든 메서드는 서버에서 로컬로만 실행됩니다. 이 코드는 파생된 형식(`PremiumCustomer`)을 보내는 것을 보여줍니다.  서비스 계약에는 `Customer` 개체가 필요하지만 서비스 데이터 계약에서 [<xref:System.Runtime.Serialization.KnownTypeAttribute>] 특성을 사용하여 `PremiumCustomer`도 허용됨을 나타냅니다.  WCF에서 이 서비스 인터페이스를 통해 다른 형식을 직렬화하거나 역직렬화하려고 하면 실패합니다.  
+ customer 개체가 직렬화되어 서비스로 전송되며, 서비스에서 해당 개체의 새 복사본으로 역직렬화됩니다.  이 개체에 대한 서비스를 호출하는 모든 메서드는 서버에서 로컬로만 실행됩니다. 이 코드는 파생된 형식(`PremiumCustomer`)을 보내는 것을 보여줍니다.  서비스 계약에는 `Customer` 개체가 필요하지만 서비스 데이터 계약에서 [<xref:System.Runtime.Serialization.KnownTypeAttribute>] 특성을 사용하여 `PremiumCustomer`도 허용됨을 나타냅니다.  WCF에서 이 서비스 인터페이스를 통해 다른 형식을 직렬화하거나 deserialization하려고 하면 실패합니다.  
   
 ```csharp  
 PremiumCustomer customer = new PremiumCustomer();  
@@ -325,9 +325,9 @@ public class SessionBoundFactory : ISessionBoundFactory
 ### <a name="step-3-configure-and-start-the-wcf-services"></a>3단계: WCF 서비스 구성 및 시작  
  이러한 서비스를 호스트하려면 서버의 구성 파일(web.config)에 다음 내용을 추가해야 합니다.  
   
-1.  세션 개체의 엔드포인트를 설명하는 `<client>` 섹션을 추가합니다.  이 시나리오에서는 서버가 클라이언트 역할도 하며 이 기능을 사용할 수 있도록 구성해야 합니다.  
+1. 세션 개체의 엔드포인트를 설명하는 `<client>` 섹션을 추가합니다.  이 시나리오에서는 서버가 클라이언트 역할도 하며 이 기능을 사용할 수 있도록 구성해야 합니다.  
   
-2.  `<services>` 섹션에서 팩터리와 세션 개체의 서비스 엔드포인트를 선언합니다.  그러면 클라이언트가 서비스 엔드포인트와 통신하고 <xref:System.ServiceModel.EndpointAddress10>을 확보한 다음 세션 채널을 만들 수 있습니다.  
+2. `<services>` 섹션에서 팩터리와 세션 개체의 서비스 엔드포인트를 선언합니다.  그러면 클라이언트가 서비스 엔드포인트와 통신하고 <xref:System.ServiceModel.EndpointAddress10>을 확보한 다음 세션 채널을 만들 수 있습니다.  
   
  다음은 이러한 설정을 포함하는 예제 구성 파일입니다.  
   
@@ -390,13 +390,13 @@ sessionBoundServiceHost.Open();
   
  서비스를 호출하려면 다음을 수행하는 코드를 클라이언트에 추가합니다.  
   
-1.  `ISessionBoundFactory` 서비스에 대한 채널을 만듭니다.  
+1. `ISessionBoundFactory` 서비스에 대한 채널을 만듭니다.  
   
-2.  채널을 사용하여 `ISessionBoundFactory` 서비스를 호출하고 <xref:System.ServiceModel.EndpointAddress10> 개체를 가져옵니다.  
+2. 채널을 사용하여 `ISessionBoundFactory` 서비스를 호출하고 <xref:System.ServiceModel.EndpointAddress10> 개체를 가져옵니다.  
   
-3.  <xref:System.ServiceModel.EndpointAddress10>을 사용하여 세션 개체를 가져올 채널을 만듭니다.  
+3. <xref:System.ServiceModel.EndpointAddress10>을 사용하여 세션 개체를 가져올 채널을 만듭니다.  
   
-4.  `SetCurrentValue` 및 `GetCurrentValue` 메서드를 호출하여 여러 호출에서 동일한 개체 인스턴스가 사용됨을 보여 줍니다.  
+4. `SetCurrentValue` 및 `GetCurrentValue` 메서드를 호출하여 여러 호출에서 동일한 개체 인스턴스가 사용됨을 보여 줍니다.  
   
 ```csharp  
 ChannelFactory<ISessionBoundFactory> factory =  
@@ -422,6 +422,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 ```  
   
 ## <a name="see-also"></a>참고 항목
+
 - [기본 WCF 프로그래밍](../../../docs/framework/wcf/basic-wcf-programming.md)
 - [서비스 디자인 및 구현](../../../docs/framework/wcf/designing-and-implementing-services.md)
 - [클라이언트 빌드](../../../docs/framework/wcf/building-clients.md)
