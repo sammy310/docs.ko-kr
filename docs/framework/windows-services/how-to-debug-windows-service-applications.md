@@ -9,12 +9,12 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 15b790f4a4d3348e2bef3e7e929d72c09da8690c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 1abb64f7d76b772168ed97024f5f1381670c6882
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441881"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59321447"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>방법: Windows 서비스 애플리케이션 디버그
 서비스는 Visual Studio 내에서가 아니라 서비스 제어 관리자의 컨텍스트 내에서 실행해야 합니다. 따라서 서비스를 디버그하는 것은 다른 Visual Studio 응용 프로그램 형식을 디버그하는 것처럼 단순하지 않습니다. 서비스를 디버그하려면 서비스를 시작한 다음 서비스가 실행되는 프로세스에 디버거를 연결해야 합니다. 그리고 나면 Visual Studio의 모든 표준 디버깅 기능을 사용하여 응용 프로그램을 디버그할 수 있습니다.  
@@ -36,23 +36,23 @@ ms.locfileid: "56441881"
   
 ### <a name="to-debug-a-service"></a>서비스를 디버깅하려면  
   
-1.  디버그 구성에서 서비스를 빌드합니다.  
+1. 디버그 구성에서 서비스를 빌드합니다.  
   
-2.  서비스를 설치합니다. 자세한 내용은 [방법: 서비스 설치 및 제거](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)를 참조하세요.  
+2. 서비스를 설치합니다. 자세한 내용은 [방법: 서비스 설치 및 제거](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)를 참조하세요.  
   
-3.  **서비스 제어 관리자**, **서버 탐색기** 또는 코드에서 서비스를 시작합니다. 자세한 내용은 [방법: 서비스 시작](../../../docs/framework/windows-services/how-to-start-services.md)을 참조하세요.  
+3. **서비스 제어 관리자**, **서버 탐색기** 또는 코드에서 서비스를 시작합니다. 자세한 내용은 [방법: 서비스 시작](../../../docs/framework/windows-services/how-to-start-services.md)을 참조하세요.  
   
-4.  시스템 프로세스에 연결할 수 있도록 관리 자격 증명을 사용하여 Visual Studio를 시작합니다.  
+4. 시스템 프로세스에 연결할 수 있도록 관리 자격 증명을 사용하여 Visual Studio를 시작합니다.  
   
-5.  (선택 사항) Visual Studio 메뉴 모음에서 **도구**, **옵션**을 선택합니다. **옵션** 대화 상자에서 **디버깅**, **기호**를 차례로 선택하고 **Microsoft 기호 서버** 확인란을 선택한 다음, **확인** 단추를 선택합니다.  
+5. (선택 사항) Visual Studio 메뉴 모음에서 **도구**, **옵션**을 선택합니다. **옵션** 대화 상자에서 **디버깅**, **기호**를 차례로 선택하고 **Microsoft 기호 서버** 확인란을 선택한 다음, **확인** 단추를 선택합니다.  
   
-6.  메뉴 모음의 **디버그** 또는 **도구** 메뉴에서 **프로세스에 연결**을 (키보드: Ctrl+Alt+P)  
+6. 메뉴 모음의 **디버그** 또는 **도구** 메뉴에서 **프로세스에 연결**을 (키보드: Ctrl+Alt+P)  
   
      **프로세스** 대화 상자가 표시됩니다.  
   
-7.  **모든 사용자의 프로세스 표시** 확인란을 선택합니다.  
+7. **모든 사용자의 프로세스 표시** 확인란을 선택합니다.  
   
-8.  **사용 가능한 프로세스** 섹션에서 서비스의 프로세스를 선택한 다음, **연결**을 선택합니다.  
+8. **사용 가능한 프로세스** 섹션에서 서비스의 프로세스를 선택한 다음, **연결**을 선택합니다.  
   
     > [!TIP]
     >  프로세스의 이름은 서비스의 실행 파일 이름과 같습니다.  
@@ -77,8 +77,7 @@ ms.locfileid: "56441881"
   
 #### <a name="how-to-run-a-windows-service-as-a-console-application"></a>방법: 콘솔 애플리케이션으로 Windows 서비스 실행  
   
-1.  
-  <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 및 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 메서드를 실행하는 서비스에 메서드를 추가합니다.  
+1. <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 및 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 메서드를 실행하는 서비스에 메서드를 추가합니다.  
   
     ```csharp  
     internal void TestStartupAndStop(string[] args)  
@@ -89,8 +88,7 @@ ms.locfileid: "56441881"
     }  
     ```  
   
-2.  
-  `Main` 메서드를 다음과 같이 다시 작성합니다.  
+2. `Main` 메서드를 다음과 같이 다시 작성합니다.  
   
     ```csharp  
     static void Main(string[] args)  
@@ -107,15 +105,16 @@ ms.locfileid: "56441881"
     }
     ```  
   
-3.  프로젝트 속성의 **애플리케이션** 탭에서 **출력 형식**을 **콘솔 애플리케이션**으로 설정합니다.  
+3. 프로젝트 속성의 **애플리케이션** 탭에서 **출력 형식**을 **콘솔 애플리케이션**으로 설정합니다.  
   
-4.  **디버깅 시작**(F5)을 선택합니다.  
+4. **디버깅 시작**(F5)을 선택합니다.  
   
-5.  프로그램을 Windows 서비스로 다시 실행하려면 해당 프로그램을 설치하고 Windows 서비스를 시작하는 일반적인 방법으로 시작합니다. 이러한 변경 내용을 되돌릴 필요는 없습니다.  
+5. 프로그램을 Windows 서비스로 다시 실행하려면 해당 프로그램을 설치하고 Windows 서비스를 시작하는 일반적인 방법으로 시작합니다. 이러한 변경 내용을 되돌릴 필요는 없습니다.  
   
  시스템 시작 시에만 발생하는 문제를 디버그하려는 등의 일부 경우에는 Windows 디버거를 사용해야 합니다. [WDK(Windows 드라이버 키트)를 다운로드](/windows-hardware/drivers/download-the-wdk)하고 [How to debug Windows Services](https://support.microsoft.com/kb/824344)(Windows 서비스를 디버그하는 방법)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [Windows 서비스 애플리케이션 소개](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
 - [방법: 서비스 설치 및 제거](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
 - [방법: 서비스 시작](../../../docs/framework/windows-services/how-to-start-services.md)

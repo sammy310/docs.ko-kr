@@ -3,10 +3,10 @@ title: OVERLAPS(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41743e89-79cb-4d7b-8a27-355b45024b61
 ms.openlocfilehash: 9d909fb7efbb29619351cfc866b0f84381d0b80b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319640"
 ---
 # <a name="overlaps-entity-sql"></a>OVERLAPS(Entity SQL)
@@ -23,7 +23,7 @@ expression OVERLAPS expression
  다른 쿼리 식에서 반환된 컬렉션과 비교할 컬렉션을 반환하는 모든 유효한 쿼리 식입니다. 모든 식은 형식이 같거나 기본 형식 또는 파생 형식이 `expression`이어야 합니다.  
   
 ## <a name="return-value"></a>반환 값  
- `true` 두 컬렉션에 공통 요소가; 하는 경우 그렇지 않으면 `false`합니다.  
+ 두 컬렉션에 공통 요소가 있으면`true` 이고, 그렇지 않으면 `false`입니다.  
   
 ## <a name="remarks"></a>설명  
  OVERLAPS 제공 기능적으로 다음에 해당을 합니다.  

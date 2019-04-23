@@ -1,5 +1,5 @@
 ---
-title: 출력 파일에 쓸 수 없습니다. '<filename>'. <error>
+title: "'<filename>' 출력 파일에 쓸 수 없습니다. <error>"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31019
@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
 ms.openlocfilehash: f29eb628c079f65a520cf5e1ccd8afed549f7cad
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318223"
 ---
 # <a name="unable-to-write-to-output-file-filename-error"></a>출력 파일에 쓸 수 없습니다. '\<파일 이름 >': \<오류 >
@@ -59,4 +59,4 @@ ms.locfileid: "59318223"
   
 ## <a name="see-also"></a>참고자료
 
-- [Talk to Us](/visualstudio/ide/talk-to-us)
+- [의견 보내기](/visualstudio/ide/talk-to-us)

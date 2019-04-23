@@ -5,10 +5,10 @@ ms.date: 03/12/2019
 ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: e25f044247064db26e4e1e74590d6f4970fe4477
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318782"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>자습서: 다중 클래스 분류 시나리오에서 ML.NET을 사용하여 GitHub 문제 분류
@@ -144,13 +144,13 @@ ms.locfileid: "59318782"
 
 최근에 다운로드한 파일의 경로와 `MLContext`,`DataView`, `PredictionEngine` 및 `TextLoader`의 글로벌 변수가 포함될 세 개의 글로벌 필드를 만듭니다.
 
-* `_trainDataPath` 에는 모델을 학습시키는 데 사용되는 데이터 세트의 경로가 포함됩니다.
-* `_testDataPath` 에는 모델을 평가하는 데 사용되는 데이터 세트의 경로가 포함됩니다.
-* `_modelPath` 에는 학습된 모델이 저장되는 경로가 포함됩니다.
-* `_mlContext` 은(는) 처리 컨텍스트를 제공하는 <xref:Microsoft.ML.MLContext>입니다.
-* `_trainingDataView` 은(는) 학습 데이터 세트를 처리하는 데 사용되는 <xref:Microsoft.Data.DataView.IDataView>입니다.
-* `_predEngine` 은(는) 단일 예측에 사용되는 <xref:Microsoft.ML.PredictionEngine%602>입니다.
-* `_reader` 은(는) 데이터 세트를 로드하고 변환하는 데 사용되는 <xref:Microsoft.ML.Data.TextLoader>입니다.
+* `_trainDataPath`에는 모델을 학습시키는 데 사용되는 데이터 세트의 경로가 포함됩니다.
+* `_testDataPath`에는 모델을 평가하는 데 사용되는 데이터 세트의 경로가 포함됩니다.
+* `_modelPath`에는 학습된 모델이 저장되는 경로가 포함됩니다.
+* `_mlContext`는 처리 컨텍스트를 제공하는 <xref:Microsoft.ML.MLContext>입니다.
+* `_trainingDataView`는 학습 데이터 세트를 처리하는 데 사용되는 <xref:Microsoft.Data.DataView.IDataView>입니다.
+* `_predEngine`은 단일 예측에 사용되는 <xref:Microsoft.ML.PredictionEngine%602>입니다.
+* `_reader`는 데이터 세트를 로드하고 변환하는 데 사용되는 <xref:Microsoft.ML.Data.TextLoader>입니다.
 
 `Main` 메서드 바로 위의 줄에 다음 코드를 추가하여 해당 경로와 다른 변수를 지정합니다.
 
@@ -170,16 +170,16 @@ ms.locfileid: "59318782"
 
 [!code-csharp[DeclareGlobalVariables](~/samples/machine-learning/tutorials/GitHubIssueClassification/GitHubIssueData.cs#DeclareTypes)]
 
-`GitHubIssue` 은(는) 다음 입력 데이터 세트 클래스이며 다음 <xref:System.String> 필드를 포함합니다.
+`GitHubIssue`는 다음 입력 데이터 세트 클래스이며 다음 <xref:System.String> 필드를 포함합니다.
 
-* `ID` 에 GitHub 문제 ID에 대한 값 포함
-* `Area` 에 `Area` 레이블에 대한 값 포함
-* `Title` 에 GitHub 문제 제목 포함
-* `Description` 에 GitHub 문제 설명 포함
+* `ID`에 GitHub 문제 ID에 대한 값 포함
+* `Area`에 `Area` 레이블에 대한 값 포함
+* `Title`에 GitHub 문제 제목 포함
+* `Description`에 GitHub 문제 설명 포함
 
-`IssuePrediction` 은(는) 모델이 학습된 후 예측에 사용되는 클래스입니다. 여기에는 단일 `string`(`Area`) 및 `PredictedLabel` `ColumnName` 특성이 포함됩니다. `Label`은 세트를 만들고 학습시키는 데 사용되며 두 번째 데이터 세트와 함께 모델을 평가하는 데도 사용됩니다. `PredictedLabel`은 예측 및 평가 중에 사용됩니다. 평가를 위해 학습 데이터가 있는 입력, 예측 값 및 모델이 사용됩니다.
+`IssuePrediction`은 모델이 학습된 후 예측에 사용되는 클래스입니다. 여기에는 단일 `string`(`Area`) 및 `PredictedLabel` `ColumnName` 특성이 포함됩니다. `Label`은 세트를 만들고 학습시키는 데 사용되며 두 번째 데이터 세트와 함께 모델을 평가하는 데도 사용됩니다. `PredictedLabel`은 예측 및 평가 중에 사용됩니다. 평가를 위해 학습 데이터가 있는 입력, 예측 값 및 모델이 사용됩니다.
 
-ML.NET를 사용하여 모델을 빌드하는 경우 먼저 <xref:Microsoft.ML.MLContext>를 만듭니다. `MLContext` 은(는) Entity Framework에서 `DbContext`를 사용하는 것과 비슷한 개념입니다. 환경은 예외 추적 및 로깅에 사용할 수 있는 ML 작업의 컨텍스트를 제공합니다.
+ML.NET를 사용하여 모델을 빌드하는 경우 먼저 <xref:Microsoft.ML.MLContext>를 만듭니다. `MLContext`는 Entity Framework에서 `DbContext`를 사용하는 것과 비슷한 개념입니다. 환경은 예외 추적 및 로깅에 사용할 수 있는 ML 작업의 컨텍스트를 제공합니다.
 
 ### <a name="initialize-variables-in-main"></a>Main에서 변수 초기화
 
@@ -203,8 +203,8 @@ ML.NET에서 데이터는 `SQL view`와 유사합니다. 지연 계산되고, �
 
 * 첫 번째 열 `ID`(GitHub 문제 ID)
 * 두 번째 열 `Area`(학습 예측)
-* 세 번째 열 `Title`(GitHub 문제 제목)은 다음을 예측하는 데 사용되는 첫 번째 [기능](../resources/glossary.md##feature)임 - `Area`
-* 네 번째 열 `Description`은 다음을 예측하는 데 사용되는 두 번째 기능임 - `Area`
+* 세 번째 열 `Title`(GitHub 문제 제목)은 `Area`를 예측하는 데 사용되는 첫 번째 [기능](../resources/glossary.md##feature)입니다.
+* 네 번째 열 `Description`은 `Area`를 예측하는 데 사용되는 두 번째 기능입니다.
 
 `_trainingDataView` 글로벌 변수를 파이프라인에 사용하기 위해 초기화 및 로드하려면 `mlContext` 초기화 후에 다음 코드를 추가합니다.
 
@@ -299,7 +299,7 @@ BuildAndTrainModel 메서드에는 학습 데이터 세트(`trainingDataView`)�
 
 ### <a name="train-the-model"></a>모델 학습
 
-로드되고 변환된 데이터 세트를 기반으로 <xref:Microsoft.ML.Data.TransformerChain%601> 모델을 학습시킵니다. 추정기가 정의된 후, 이미 로드된 학습 데이터를 제공하는 동시에 <xref:Microsoft.ML.Data.EstimatorChain%601.Fit%2A>을 사용하여 모델을 학습시킵니다. 이 메서드는 예측에 사용할 모델을 반환합니다. `trainingPipeline.Fit()` 은(는) 파이프라인을 학습시키고, 전달된 `DataView`에 따라 `Transformer`를 반환합니다. `.Fit()` 메서드가 실행될 때까지 실험이 실행되지 않습니다.
+로드되고 변환된 데이터 세트를 기반으로 <xref:Microsoft.ML.Data.TransformerChain%601> 모델을 학습시킵니다. 추정기가 정의된 후, 이미 로드된 학습 데이터를 제공하는 동시에 <xref:Microsoft.ML.Data.EstimatorChain%601.Fit%2A>을 사용하여 모델을 학습시킵니다. 이 메서드는 예측에 사용할 모델을 반환합니다. `trainingPipeline.Fit()`은 파이프라인을 학습시키고, 전달된 `DataView`에 따라 `Transformer`를 반환합니다. `.Fit()` 메서드가 실행될 때까지 실험이 실행되지 않습니다.
 
 `BuildAndTrainModel` 메서드에 다음 코드를 추가합니다.
 

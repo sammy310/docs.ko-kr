@@ -24,23 +24,23 @@ helpviewer_keywords:
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2c422a75244302ae6433af933995b00bdfaa061
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c665cb590a090c546d50f780477c254344914a2f
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537974"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59327765"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>방법: 특정 날짜의 요일 추출
 .NET Framework를 사용하면 쉽게 특정 날짜가 일주일 중 몇 번째 날인지 확인하고, 특정 날짜의 지역화된 요일 이름을 표시할 수 있습니다. 특정 날짜에 해당하는 요일을 나타내는 열거형 값은 <xref:System.DateTime.DayOfWeek%2A> 또는 <xref:System.DateTimeOffset.DayOfWeek%2A> 속성에서 제공합니다. 이와 대조적으로 요일 이름을 검색하는 것은 날짜 및 시간 값의 `ToString` 메서드 또는 <xref:System.String.Format%2A?displayProperty=nameWithType> 메서드와 같은 서식 지정 메서드를 호출하여 수행할 수 있는 서식 지정 작업입니다. 이 항목에서는 이러한 서식 지정 작업을 수행하는 방법을 보여 줍니다.  
   
 ### <a name="to-extract-a-number-indicating-the-day-of-the-week-from-a-specific-date"></a>특정 날짜에서 요일을 나타내는 숫자를 추출하려면  
   
-1.  날짜의 문자열 표현에 대한 작업을 하는 경우에는 정적 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 메서드를 사용하여 해당 표현을 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 또는 <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> 값으로 변환합니다.  
+1. 날짜의 문자열 표현에 대한 작업을 하는 경우에는 정적 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 메서드를 사용하여 해당 표현을 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 또는 <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> 값으로 변환합니다.  
   
-2.  <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> 또는 <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=nameWithType> 속성을 사용하여 요일을 나타내는 <xref:System.DayOfWeek> 값을 검색합니다.  
+2. <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> 또는 <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=nameWithType> 속성을 사용하여 요일을 나타내는 <xref:System.DayOfWeek> 값을 검색합니다.  
   
-3.  필요한 경우 <xref:System.DayOfWeek> 값을 정수로 캐스팅(C#의 경우) 또는 변환(Visual Basic의 경우)합니다.  
+3. 필요한 경우 <xref:System.DayOfWeek> 값을 정수로 캐스팅(C#의 경우) 또는 변환(Visual Basic의 경우)합니다.  
   
  다음 예제에서는 특정 날짜의 요일을 나타내는 정수를 표시합니다.  
   
@@ -49,9 +49,9 @@ ms.locfileid: "54537974"
   
 ### <a name="to-extract-the-abbreviated-weekday-name-from-a-specific-date"></a>특정 날짜에서 간략화된 요일 이름을 추출하려면  
   
-1.  날짜의 문자열 표현에 대한 작업을 하는 경우에는 정적 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 메서드를 사용하여 해당 표현을 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 또는 <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> 값으로 변환합니다.  
+1. 날짜의 문자열 표현에 대한 작업을 하는 경우에는 정적 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 메서드를 사용하여 해당 표현을 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 또는 <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> 값으로 변환합니다.  
   
-2.  현재 문화권 또는 특정 문화권의 간략화된 요일 이름을 추출할 수 있습니다.  
+2. 현재 문화권 또는 특정 문화권의 간략화된 요일 이름을 추출할 수 있습니다.  
   
     1.  현재 문화권의 간략화된 요일 이름을 추출하려면 날짜 및 시간 값의 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 또는 <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> 인스턴스 메서드를 호출하고 문자열 "ddd"를 `format` 매개 변수로 전달합니다. 다음 예제에서는 <xref:System.DateTime.ToString%28System.String%29> 메서드를 호출하는 방법을 보여 줍니다.  
   
@@ -65,9 +65,9 @@ ms.locfileid: "54537974"
   
 ### <a name="to-extract-the-full-weekday-name-from-a-specific-date"></a>특정 날짜에서 전체 요일 이름을 추출하려면  
   
-1.  날짜의 문자열 표현에 대한 작업을 하는 경우에는 정적 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 메서드를 사용하여 해당 표현을 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 또는 <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> 값으로 변환합니다.  
+1. 날짜의 문자열 표현에 대한 작업을 하는 경우에는 정적 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 메서드를 사용하여 해당 표현을 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 또는 <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> 값으로 변환합니다.  
   
-2.  현재 문화권 또는 특정 문화권의 전체 요일 이름을 추출할 수 있습니다.  
+2. 현재 문화권 또는 특정 문화권의 전체 요일 이름을 추출할 수 있습니다.  
   
     1.  현재 문화권의 요일 이름을 추출하려면 날짜 및 시간 값의 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 또는 <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> 인스턴스 메서드를 호출하고 문자열 "dddd"를 `format` 매개 변수로 전달합니다. 다음 예제에서는 <xref:System.DateTime.ToString%28System.String%29> 메서드를 호출하는 방법을 보여 줍니다.  
   

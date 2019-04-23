@@ -10,10 +10,10 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
 ms.openlocfilehash: 4a76b2565c343e69ac3c11441035a7682a8f08ec
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318938"
 ---
 # <a name="decision-structures-visual-basic"></a>판단 구조(Visual Basic)
@@ -48,7 +48,7 @@ Visual Basic을 사용 하 여 조건을 테스트 하 고 해당 테스트의 �
 ## <a name="see-also"></a>참고자료
 
 - [제어 흐름](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
-- [루프 구조체](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
-- [기타 제어 구조체](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
-- [중첩 제어 구조체](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
+- [루프 구조](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [기타 제어 구조](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
+- [중첩 제어 구조](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
 - [If 연산자](../../../../visual-basic/language-reference/operators/if-operator.md)

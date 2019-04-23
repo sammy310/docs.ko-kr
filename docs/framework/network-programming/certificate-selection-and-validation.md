@@ -2,12 +2,12 @@
 title: 인증서 선택 및 유효성 검사
 ms.date: 03/30/2017
 ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
-ms.openlocfilehash: 6d2c5470856f09d3da3bcae890717757c598a4c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 79cc46d91f6b1818154bac6f62df2acbac36fe20
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666668"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59318353"
 ---
 # <a name="certificate-selection-and-validation"></a>인증서 선택 및 유효성 검사
 <xref:System.Net> 클래스는 SSL(Secure Sockets Layer) 연결에 대한 <xref:System.Security.Cryptography.X509Certificates>를 선택하고 유효성을 검사하는 여러 가지 방법을 지원합니다. 클라이언트는 서버에 인증하기 위해 하나 이상의 인증서를 선택할 수 있습니다. 서버는 인증을 위해 클라이언트 인증서에 하나 이상의 특정 특성이 있도록 요구할 수 있습니다.  
@@ -29,11 +29,11 @@ ms.locfileid: "54666668"
 ## <a name="client-certificate-selection"></a>클라이언트 인증서 선택  
  .NET Framework는 다음과 같은 방식으로 서버에 제공할 클라이언트 인증서를 선택합니다.  
   
-1.  이전에 클라이언트 인증서가 서버에 제공된 경우 처음 제공될 때 인증서가 캐시되고 후속 클라이언트 인증서 요청에 다시 사용됩니다.  
+1. 이전에 클라이언트 인증서가 서버에 제공된 경우 처음 제공될 때 인증서가 캐시되고 후속 클라이언트 인증서 요청에 다시 사용됩니다.  
   
-2.  대리자가 있는 경우 항상 대리자의 결과를 선택할 클라이언트 인증서로 사용합니다. 가능한 경우 캐시된 인증서를 사용하되, 대리자가 null을 반환하고 인증서 컬렉션이 비어 있지 않으면 캐시된 익명 자격 증명을 사용하지 마세요.  
+2. 대리자가 있는 경우 항상 대리자의 결과를 선택할 클라이언트 인증서로 사용합니다. 가능한 경우 캐시된 인증서를 사용하되, 대리자가 null을 반환하고 인증서 컬렉션이 비어 있지 않으면 캐시된 익명 자격 증명을 사용하지 마세요.  
   
-3.  클라이언트 인증서에 대한 첫 번째 인증인 경우 프레임워크는 연결과 관련된 <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 또는 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 클래스 개체의 인증서를 열거하고, 서버에서 제공하는 인증서 발급자 목록과 클라이언트 인증서 발급자 이름 간에 일치 항목을 찾습니다. 일치하는 첫 번째 인증서가 서버에 전송됩니다. 일치하는 인증서가 없거나 인증서 컬렉션이 비어 있으면 익명 자격 증명이 서버에 전송되지 않습니다.  
+3. 클라이언트 인증서에 대한 첫 번째 인증인 경우 프레임워크는 연결과 관련된 <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 또는 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 클래스 개체의 인증서를 열거하고, 서버에서 제공하는 인증서 발급자 목록과 클라이언트 인증서 발급자 이름 간에 일치 항목을 찾습니다. 일치하는 첫 번째 인증서가 서버에 전송됩니다. 일치하는 인증서가 없거나 인증서 컬렉션이 비어 있으면 익명 자격 증명이 서버에 전송되지 않습니다.  
   
 ## <a name="tools-for-certificate-configuration"></a>인증서 구성 도구  
  클라이언트 및 서버 인증서 구성을 위해 다양한 도구를 사용할 수 있습니다.  
@@ -53,5 +53,6 @@ ms.locfileid: "54666668"
  이러한 도구 외에도 <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 및 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 클래스는 파일 시스템에서 인증서를 로드하기 위한 메서드를 제공합니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [네트워크 프로그래밍의 보안](../../../docs/framework/network-programming/security-in-network-programming.md)
 - [.NET Framework의 네트워크 프로그래밍](../../../docs/framework/network-programming/index.md)

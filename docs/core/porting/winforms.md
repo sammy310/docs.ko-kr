@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: 3a50b5f085aee4afc2f388aeac8a4f68823b92c7
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: aebfaa85338e014ca47256b85a1bd6529ad803bb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675863"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327167"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>방법: .NET Core에 Windows Forms 데스크톱 앱 포팅
 
@@ -27,7 +27,7 @@ ms.locfileid: "58675863"
 
 ## <a name="prerequisites"></a>전제 조건
 
-- 수행할 디자이너 작업용 [Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=winforms+core)
+- 수행할 디자이너 작업용 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)
 
   다음 Visual Studio 워크로드를 설치합니다.
   - .NET 데스크톱 개발
@@ -37,9 +37,8 @@ ms.locfileid: "58675863"
 - 프로젝트는 C#으로 코딩되어야 합니다. 
 - 최신 [.NET Core 3.0](https://aka.ms/netcore3download) 미리 보기를 설치합니다.
 
-
 >[!NOTE]
->**Visual Studio 2017**은 .NET Core 3.0 프로젝트를 지원하지 않습니다. **Visual Studio 2019 미리 보기/RC**는 .NET Core 3.0 프로젝트를 지원하지만, .NET Core 3.0 Windows Forms 프로젝트의 비주얼 디자이너는 아직 지원하지 않습니다. 비주얼 디자이너를 사용하려면 .NET Core 프로젝트와 양식 파일을 공유하는 .NET Windows Forms 프로젝트가 솔루션에 있어야 합니다.
+>**Visual Studio 2017**은 .NET Core 3.0 프로젝트를 지원하지 않습니다. **Visual Studio 2019**는 .NET Core 3.0 프로젝트를 지원하지만, .NET Core 3.0 Windows Forms 프로젝트의 비주얼 디자이너는 아직 지원하지 않습니다. 비주얼 디자이너를 사용하려면 .NET Core 프로젝트와 양식 파일을 공유하는 .NET Windows Forms 프로젝트가 솔루션에 있어야 합니다.
 
 ### <a name="consider"></a>Consider
 
@@ -61,7 +60,7 @@ ms.locfileid: "58675863"
 
     마이그레이션하기 전에 항상 NuGet 패키지의 최신 버전을 사용하는 것이 좋습니다. 애플리케이션이 NuGet 패키지를 참조하는 경우 최신 버전으로 업데이트합니다. 애플리케이션이 성공적으로 빌드되었는지 확인합니다. 업그레이드한 후 패키지 오류가 있는 경우에는 코드를 중단하지 않는 최신 버전으로 패키지를 다운그레이드합니다.
 
-01. Visual Studio 2019 미리 보기/RC는 .NET Core 3.0용 Forms 디자이너를 아직 지원하지 않습니다.
+01. Visual Studio 2019는 .NET Core 3.0용 Forms 디자이너를 아직 지원하지 않습니다.
 
     현재 Visual Studio에서 Forms 디자이너를 사용하려면 기존 .NET Framework Windows Forms 프로젝트 파일을 유지해야 합니다.
 
@@ -295,7 +294,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj package Microsoft.Windows.Compati
 
 ## <a name="windows-forms-designer"></a>Windows Forms 디자이너
 
-이 문서에 설명된 대로, Visual Studio 2019 미리 보기/RC만 .NET Framework 프로젝트의 Forms 디자이너를 지원합니다. 동시에 .NET Core 프로젝트를 만들면 .NET Framework 프로젝트를 사용하여 양식을 디자인하는 동안 .NET Core를 사용하여 프로젝트를 테스트할 수 있습니다. 솔루션 파일에는 .NET Framework 및 .NET Core 프로젝트가 모두 포함됩니다. .NET Framework 프로젝트에서 양식과 컨트롤을 추가 및 디자인합니다. 그러면 .NET Core 프로젝트에 추가한 파일 GLOB 패턴을 기반으로 새 파일이나 변경된 파일이 자동으로 .NET Core 프로젝트에 포함됩니다.
+이 문서에 설명된 대로, Visual Studio 2019만 .NET Framework 프로젝트의 Forms 디자이너를 지원합니다. 동시에 .NET Core 프로젝트를 만들면 .NET Framework 프로젝트를 사용하여 양식을 디자인하는 동안 .NET Core를 사용하여 프로젝트를 테스트할 수 있습니다. 솔루션 파일에는 .NET Framework 및 .NET Core 프로젝트가 모두 포함됩니다. .NET Framework 프로젝트에서 양식과 컨트롤을 추가 및 디자인합니다. 그러면 .NET Core 프로젝트에 추가한 파일 GLOB 패턴을 기반으로 새 파일이나 변경된 파일이 자동으로 .NET Core 프로젝트에 포함됩니다.
 
 Visual Studio 2019가 Windows Forms 디자이너를 지원하면 .NET Core 프로젝트 파일의 콘텐츠를 .NET Framework 프로젝트 파일로 복사하여 붙여넣을 수 있습니다. 그런 다음, `<Source>` 및 `<EmbeddedResource>` 항목과 함께 추가된 파일 GLOB 패턴을 삭제합니다. 앱에서 사용하는 프로젝트 참조의 경로를 수정합니다. 이렇게 하면 .NET Framework 프로젝트가 .NET Core 프로젝트로 효과적으로 업그레이드됩니다.
  

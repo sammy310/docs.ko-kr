@@ -3,10 +3,10 @@ title: 인터넷 정보 서비스 호스팅 지침
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
 ms.openlocfilehash: f5aa276bc1178f3e7c61af7505fcf54df8b934e6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328961"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>인터넷 정보 서비스 호스팅 지침
@@ -50,7 +50,7 @@ IIS(인터넷 정보 서비스)에서 호스팅하는 샘플을 실행하려면 
   
     2.  **ASP.NET**  
   
-    3.  **ISAPI 확장명**  
+    3.  **ISAPI 확장**  
   
     4.  **ISAPI 필터**  
   
@@ -108,7 +108,7 @@ IIS(인터넷 정보 서비스)에서 호스팅하는 샘플을 실행하려면 
   
     2.  **ASP.NET**  
   
-    3.  **ISAPI 확장명**  
+    3.  **ISAPI 확장**  
   
     4.  **ISAPI 필터**  
   

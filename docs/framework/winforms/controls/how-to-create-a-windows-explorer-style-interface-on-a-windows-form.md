@@ -7,10 +7,10 @@ helpviewer_keywords:
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
 ms.openlocfilehash: dd70feaba29e29748ac56729632fa359582a6914
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327375"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>방법: Windows Form에 Windows 탐색기 스타일 인터페이스 만들기
@@ -52,7 +52,7 @@ Windows 탐색기는 쉽게 사용할 수 있으므로 응용 프로그램에 �
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.Forms.SplitContainer>
-- [방법: Windows Forms를 사용하여 다중 창 사용자 인터페이스 만들기](how-to-create-a-multipane-user-interface-with-windows-forms.md)
-- [방법: 분할 창에서 크기 조정 및 위치 지정 동작 정의](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
-- [방법: 가로로 창 분할](how-to-split-a-window-horizontally.md)
+- [방법: Windows Forms로 다중 창 사용자 인터페이스 만들기](how-to-create-a-multipane-user-interface-with-windows-forms.md)
+- [방법: 크기 조정 및 분할 창에서 위치 지정 동작 정의](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
+- [방법: 가로로 창 분합니다](how-to-split-a-window-horizontally.md)
 - [SplitContainer 컨트롤](splitcontainer-control-windows-forms.md)
