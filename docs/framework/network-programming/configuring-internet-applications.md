@@ -21,12 +21,12 @@ helpviewer_keywords:
 - network resources, configuring Internet applications
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
-ms.openlocfilehash: 48794898eb1a3e13454a335a2335fac57d8faf3b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ddc4717c873e65311a8502e66f3edaf39dd89ff9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561649"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59133804"
 ---
 # <a name="configuring-internet-applications"></a>인터넷 애플리케이션 구성
 [\<system.Net&gt; 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) 구성 요소에는 애플리케이션에 대한 네트워크 구성 정보가 들어 있습니다. [\<system.Net&gt; 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) 구성 요소를 사용하여 프록시 서버를 설정하고, 연결 관리 매개 변수를 설정하고, 애플리케이션에 사용자 지정 인증 및 요청 모듈을 포함할 수 있습니다.  
@@ -98,6 +98,7 @@ ms.locfileid: "54561649"
 ```  
   
 ## <a name="see-also"></a>참고 항목
+
 - [.NET Framework의 네트워크 프로그래밍](../../../docs/framework/network-programming/index.md)
 - [네트워크 설정 스키마](../../../docs/framework/configure-apps/file-schema/network/index.md)
 - [\<system.Net> 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)

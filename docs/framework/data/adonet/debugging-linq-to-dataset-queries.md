@@ -3,10 +3,10 @@ title: LINQ to DataSet 쿼리 디버깅
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
 ms.openlocfilehash: 0e015cc6042a21bf6d35915c3e19bfeb9b0dbb2a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59133336"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>LINQ to DataSet 쿼리 디버깅
@@ -29,5 +29,5 @@ Visual Studio의 디버깅을 지원 하며 [!INCLUDE[linq_dataset](../../../../
   
 ## <a name="see-also"></a>참고자료
 
-- [관리 코드 디버깅](/visualstudio/debugger/debugging-managed-code)
+- [관리 코드 디버그](/visualstudio/debugger/debugging-managed-code)
 - [프로그래밍 가이드](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

@@ -10,10 +10,10 @@ ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e4d8497d17e1a82791f4dd6ca8f91c9a012db167
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132784"
 ---
 # <a name="securing-wrapper-code"></a>래퍼 코드 보안
@@ -71,7 +71,7 @@ ms.locfileid: "59132784"
   
  선언적 보안은 다음과 같은 보안 검사를 제공합니다.  
   
--   <xref:System.Security.Permissions.SecurityAction.Demand> 코드 액세스 보안 스택 워크를 지정합니다. 성공하려면 스택의 모든 호출자에게 지정된 권한이나 ID가 있어야 합니다. **필요 시** 스택의 다양 한 호출자가 포함 될 수 있으므로 모든 호출에 대해 발생 합니다. 메서드를 반복해서 호출하는 경우 이 보안 검사는 매번 발생합니다. **필요 시** 유인 공격에 유용한 보호는 통과 하는 동안 무단된 코드 검색 됩니다.  
+-   <xref:System.Security.Permissions.SecurityAction.Demand>는 코드 액세스 보안 스택 워크를 지정합니다. 성공하려면 스택의 모든 호출자에게 지정된 권한이나 ID가 있어야 합니다. **필요 시** 스택의 다양 한 호출자가 포함 될 수 있으므로 모든 호출에 대해 발생 합니다. 메서드를 반복해서 호출하는 경우 이 보안 검사는 매번 발생합니다. **필요 시** 유인 공격에 유용한 보호는 통과 하는 동안 무단된 코드 검색 됩니다.  
   
 -   [LinkDemand](../../../docs/framework/misc/link-demands.md) -just-in-time (JIT) 컴파일 타임에 발생 하 고 즉각적인 호출자만 검사 합니다. 이 보안 검사는 호출자의 호출자를 검사하지 않습니다. 이 검사가 성공하고 나면 호출자가 호출할 수 있는 횟수에 관계없이 추가 보안 오버헤드가 없습니다. 그러나 유인 공격으로부터 보호되지 않습니다. 사용 하 여 **LinkDemand**, 악성 코드를 권한이 부여 된 코드를 사용 하 여 호출할 수 있도록 하 여 테스트를 통과 하 고 코드를 참조할 수 있는 모든 코드 보안을 잠재적으로 위반할 수 있습니다. 따라서 사용 하지 마세요 **LinkDemand** 않으면 가능한 모든 보안 약점을 완전히 방지할 수 있습니다.  
   

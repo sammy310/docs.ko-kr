@@ -11,14 +11,14 @@ helpviewer_keywords:
 - UI Automation [WPF], using with custom controls
 ms.assetid: 47b310fc-fbd5-4ce2-a606-22d04c6d4911
 ms.openlocfilehash: 0d663acc195b36fdc95c196f2233ae997fbd9195
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132771"
 ---
 # <a name="ui-automation-of-a-wpf-custom-control"></a>WPF 사용자 지정 컨트롤의 UI 자동화
-[!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)] 자동화 클라이언트가 다양 한 플랫폼 및 프레임 워크의 사용자 인터페이스를 작동 하거나 검사 하는 데 사용할 수 있는 일반화 된 단일 인터페이스를 제공 합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] 품질 보증 (테스트) 코드와 사용자 인터페이스 요소를 검사 하 고 다른 코드에서 상호 작용은 사용자를 시뮬레이션할 화면 읽기 프로그램과 같은 접근성 응용 프로그램을 사용 하도록 설정 합니다. 모든 플랫폼에서 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 자세한 내용은 접근성을 참조하세요.  
+[!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)]에서는 자동화 클라이언트가 다양한 플랫폼 및 프레임워크의 사용자 인터페이스를 검사하거나 운영하는 데 사용할 수 있는 일반화된 단일 인터페이스를 제공합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]를 통해 품질 보증(테스트) 코드 및 화면 읽기 프로그램과 같은 접근성 응용 프로그램은 사용자 인터페이스 요소를 검사하고 다른 코드에서 해당 요소에 대한 사용자 상호 작용을 시뮬레이트할 수 있습니다. 모든 플랫폼에서 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 자세한 내용은 접근성을 참조하세요.  
   
  이 항목에서는 WPF 애플리케이션에서 실행되는 사용자 지정 컨트롤에 대한 서버 쪽 UI 자동화 공급자를 구현하는 방법을 설명합니다. WPF는 사용자 인터페이스 요소의 트리에 대응하는 피어 자동화 개체의 트리를 통해 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]를 지원합니다. 접근성 기능을 제공하는 애플리케이션 및 테스트 코드는 자동화 피어 개체를 직접 사용(in-process 코드의 경우)하거나 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]에서 제공하는 일반화된 인터페이스를 통해 사용할 수 있습니다.  
 

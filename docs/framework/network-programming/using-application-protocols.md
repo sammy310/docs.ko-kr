@@ -13,17 +13,18 @@ helpviewer_keywords:
 - receiving data, application protocols
 - requesting data from Internet, application protocols
 ms.assetid: 3aab4bcc-8397-4e1a-a1b6-bbd837a21430
-ms.openlocfilehash: 55c49d757a770da04614ff27e826301a6102caf4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ffb47c6384a5c26599a65c9837f3b9d1d9332e9f
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545477"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59131484"
 ---
 # <a name="using-application-protocols"></a>애플리케이션 프로토콜 사용
 .NET Framework는 일반적으로 사용되는 인터넷 애플리케이션 프로토콜을 지원합니다. 이 섹션에서는 [HTTP](../../../docs/framework/network-programming/http.md), “TCP” 및 “UDP” 프로토콜을 사용하는 방법에 대한 정보와 [Windows 소켓](../../../docs/framework/network-programming/sockets.md) 인터페이스를 사용하여 사용자 지정 프로토콜을 구현하는 방법에 대한 정보가 포함되어 있습니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 - [.NET Framework의 네트워크 프로그래밍](../../../docs/framework/network-programming/index.md)
 - [네트워크 프로그래밍 샘플](../../../docs/framework/network-programming/network-programming-samples.md)
 - [MSDN 코드 갤러리의 .NET용 네트워킹 샘플](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

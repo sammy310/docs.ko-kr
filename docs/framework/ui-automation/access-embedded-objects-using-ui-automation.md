@@ -10,10 +10,10 @@ helpviewer_keywords:
 - UI Automation, accessing embedded objects
 ms.assetid: a5b513ec-7fa6-4460-869f-c18ff04f7cf2
 ms.openlocfilehash: 07223b9e48905b0952e37a6acdb703f584d166d8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59131250"
 ---
 # <a name="access-embedded-objects-using-ui-automation"></a>UI 자동화를 사용하여 포함 개체에 액세스
@@ -47,7 +47,7 @@ ms.locfileid: "59131250"
  다음 코드 예제는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 텍스트 공급자 내에 포함된 개체에서 텍스트 범위를 가져오는 방법을 보여줍니다. 검색된 텍스트 범위는 빈 범위로서 시작되는 엔드포인트 앞에 "… ocean.(space)"가 오고 끝나는 엔드포인트 뒤에 닫는 "."가 와서 포함된 하이퍼링크를 나타냅니다(소개 부분에 제공된 이미지 참조). 검색된 범위가 비어 있는 범위라 해도, 0이 아닌 범위이기 때문에 중복 제거 범위로 간주되지 않습니다.  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.TextPattern> 하이퍼링크와 같은 텍스트 기반의 포함 된 개체를 검색할 수 있습니다. 그러나 보조 <xref:System.Windows.Automation.TextPattern> 전체 기능을 노출 하려면 포함된 된 개체에서 얻을 수 해야 합니다.  
+>  <xref:System.Windows.Automation.TextPattern> 은 하이퍼링크와 같이 텍스트를 기반으로 하는 포함된 개체를 검색할 수 있지만, 보조 <xref:System.Windows.Automation.TextPattern> 은 포함된 개체에서 가져와야 전체 기능을 노출할 수 있습니다.  
   
  [!code-csharp[UIATextPattern_snip#GetRangeFromChild](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATextPattern_snip/CSharp/SearchWindow.cs#getrangefromchild)]
  [!code-vb[UIATextPattern_snip#GetRangeFromChild](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIATextPattern_snip/VisualBasic/SearchWindow.vb#getrangefromchild)]  

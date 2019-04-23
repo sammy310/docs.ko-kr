@@ -9,10 +9,10 @@ ms.assetid: 77526f65-b71c-4483-9d19-3a3751fd8a45
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8c76db644ffee478003d834460c155c4ec6d0070
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59133954"
 ---
 # <a name="constants-unmanaged-api-reference"></a>상수(관리되지 않는 API 참조)
@@ -24,7 +24,7 @@ ms.locfileid: "59133954"
 |기호|설명|  
 |------------|-----------------|  
 |CorSym_LanguageType_C|C 언어를 나타냅니다.|  
-|CorSym_LanguageType_CPlusPlus|C + + 언어를 나타냅니다.|  
+|CorSym_LanguageType_CPlusPlus|나타냅니다는 C++ 언어입니다.|  
 |CorSym_LanguageType_CSharp|나타냅니다는 C# 언어입니다.|  
 |CorSym_LanguageType_Basic|기본 언어를 나타냅니다.|  
 |CorSym_LanguageType_Java|Java 언어를 나타냅니다.|  
@@ -33,7 +33,7 @@ ms.locfileid: "59133954"
 |CorSym_LanguageType_ILAssembly|Microsoft 중간 언어 (MSIL) 어셈블리 코드를 나타냅니다.|  
 |CorSym_LanguageType_JScript|JScript 언어를 나타냅니다.|  
 |CorSym_LanguageType_SMC|SMC 언어를 나타냅니다.|  
-|CorSym_LanguageType_MCPlusPlus|C + + 언어를.NET Framework에 대 한 사용을 나타냅니다.|  
+|CorSym_LanguageType_MCPlusPlus|나타냅니다는 C++ 언어를.NET Framework를 사용 합니다.|  
   
 ## <a name="language-vendor-constants"></a>언어 공급 업체 상수  
  다음 표에서 언어 프로그래밍 언어 공급 업체를 식별 하는 Guid를 표시 하는 공급 업체 상수를 보여 줍니다.  

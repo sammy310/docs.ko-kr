@@ -3,16 +3,16 @@ title: 형식 시스템(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 818a505b-a196-41dd-aaac-2ccd5f7a2f1a
 ms.openlocfilehash: 0afeffd3ad180d6cc6175010140754e279988b38
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134565"
 ---
 # <a name="type-system-entity-sql"></a>형식 시스템(Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 형식의 수를 지원합니다.  
   
--   기본 (단순) 형식- `Int32` 및 `String.`  
+-   기본(단순) 형식 - `Int32` 및 `String.`  
   
 -   명목 형식 - 스키마에서 정의됨. <xref:System.Data.Metadata.Edm.EntityType>, <xref:System.Data.Metadata.Edm.ComplexType> 및 <xref:System.Data.Metadata.Edm.RelationshipType>  
   
@@ -29,7 +29,7 @@ ms.locfileid: "59134565"
 ## <a name="references"></a>참조  
  참조는 특정 엔터티 집합 내의 특정 엔터티를 가리키는 논리 포인터입니다.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 다음 연산자를 생성, 해체 및 참조를 통해 탐색을 지원 합니다.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 참조를 통한 생성, 해체 및 탐색에 사용되는 다음 연산자를 지원합니다.  
   
 -   [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)  
   

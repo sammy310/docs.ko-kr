@@ -3,10 +3,10 @@ title: LINQ to SQL 사용을 위한 일반 단계
 ms.date: 03/30/2017
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
 ms.openlocfilehash: a7c6257bc27728d101d64d07ffedb1e38bc994eb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132849"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>LINQ to SQL 사용을 위한 일반 단계
@@ -20,7 +20,7 @@ ms.locfileid: "59132849"
 ### <a name="1-select-a-tool-to-create-the-model"></a>1. 모델을 만들기 위한 도구를 선택합니다.  
  모델을 만들기 위한 세 가지 도구를 사용할 수 있습니다.  
   
--   Component [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
+-   [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
   
      이 디자이너는 기존 데이터베이스에서 개체 모델을 만들기 위한 풍부한 사용자 인터페이스를 제공합니다. 이 도구는 Visual Studio IDE의 일부 이며 소형 또는 중형 데이터베이스에 가장 적합 합니다.  
   
