@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 612d09c8303f7216e4f384668bee755ac375f6ad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59189354"
 ---
-# <a name="icordebugobjectvaluegetvirtualmethod-method"></a><span data-ttu-id="3a5f9-102">ICorDebugObjectValue::GetVirtualMethod 메서드</span><span class="sxs-lookup"><span data-stu-id="3a5f9-102">ICorDebugObjectValue::GetVirtualMethod Method</span></span>
-`GetVirtualMethod` <span data-ttu-id="3a5f9-103">이 버전의.NET Framework에서 구현 되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="3a5f9-103">is not implemented in this version of the .NET Framework.</span></span>  
+# <a name="icordebugobjectvaluegetvirtualmethod-method"></a><span data-ttu-id="81802-102">ICorDebugObjectValue::GetVirtualMethod 메서드</span><span class="sxs-lookup"><span data-stu-id="81802-102">ICorDebugObjectValue::GetVirtualMethod Method</span></span>
+<span data-ttu-id="81802-103">`GetVirtualMethod` 이 버전의.NET Framework에서 구현 되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="81802-103">`GetVirtualMethod` is not implemented in this version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3a5f9-104">구문</span><span class="sxs-lookup"><span data-stu-id="3a5f9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="81802-104">구문</span><span class="sxs-lookup"><span data-stu-id="81802-104">Syntax</span></span>  
   
 ```  
 HRESULT GetVirtualMethod (  
@@ -36,7 +36,7 @@ HRESULT GetVirtualMethod (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="3a5f9-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="3a5f9-105">Requirements</span></span>  
- <span data-ttu-id="3a5f9-106">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3a5f9-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="81802-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="81802-105">Requirements</span></span>  
+ <span data-ttu-id="81802-106">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="81802-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3a5f9-107">참고자료</span><span class="sxs-lookup"><span data-stu-id="3a5f9-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="81802-107">참고자료</span><span class="sxs-lookup"><span data-stu-id="81802-107">See also</span></span>
