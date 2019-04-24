@@ -33,32 +33,32 @@ ms.locfileid: "59612890"
 > [!NOTE]
 > 템플릿 옵션을 보이지 않으면 명령 팔레트에서 다음 명령을 실행 하 여 서식 파일을 새로 고쳐 보세요. `>F#: Refresh Project Templates`합니다.
 
-선택 "F#: 새 프로젝트 "를 눌러 **Enter**합니다. 이 프로젝트 템플릿을 선택 하는 다음 단계를 안내 합니다.
+**Enter**를 눌러서 "F#: new project"를 선택합니다. 이렇게 하면 프로젝트 템플릿을 선택하는 다음 단계로 넘어갑니다.
 
-선택 된 `classlib` 템플릿과 적중 **Enter**합니다.
+`classlib` 템플릿을 선택하고 **Enter**를 칩니다.
 
-그런 다음에 프로젝트를 만들려면 디렉터리를 선택 합니다. 이 비워 두면 경우 현재 디렉터리를 사용 합니다.
+그런 다음에 프로젝트를 생성하기 위한 디렉터리를 선택합니다. 비워 두면 현재 디렉터리를 사용합니다.
 
-마지막으로, 마지막 단계에서 프로젝트를 이름을 지정 합니다. F#사용 하 여 [파스칼식 대 / 소문자](http://c2.com/cgi/wiki?PascalCase) 프로젝트 이름에 대 한 합니다. 이 문서에서는 `ClassLibraryDemo` 이름으로 합니다. 프로젝트에 대해 원하는 이름을 입력 한 후 적중 **Enter**합니다.
+끝으로, 마지막 단계에서는 프로젝트의 이름을 지정합니다. F#에서는 [파스칼식 대/소문자](http://c2.com/cgi/wiki?PascalCase)를 프로젝트 이름으로 사용합니다. 이 문서에서는 `ClassLibraryDemo`를 이름으로 합니다. 자신이 원하는 프로젝트 이름을 입력한 후 **Enter**를 칩니다.
 
-이전 단계를 수행한 경우 Visual Studio 코드에서 작업 영역의 왼쪽에 있는 다음 표시할 얻게 됩니다.
+지금까지의 단계를 수행했다면 Visual Studio 코드의 좌측 작업 영역에 다음 내용이 표시됩니다.
 
-1. F# 프로젝트 자체를 아래 합니다 `ClassLibraryDemo` 폴더입니다.
-2. 통해 패키지를 추가 하기 위한 올바른 디렉터리 구조 [ `Paket` ](https://fsprojects.github.io/Paket/)합니다.
-3. 플랫폼 간 빌드 스크립트 [ `FAKE` ](https://fsharp.github.io/FAKE/)합니다.
-4. `paket.exe` 패키지 있습니다 가져오고 수에 대 한 종속성을 해결 하는 실행 파일입니다.
-5. `.gitignore` Git 기반 소스 제어에이 프로젝트를 추가 하려는 경우 파일입니다.
+1. F# 프로젝트 자체는 `ClassLibraryDemo` 폴더 하위에 존재합니다.
+2. [`Paket`](https://fsprojects.github.io/Paket/)을 통해 패키지를 추가하기 위한 올바른 디렉터리 구조.
+3. [`FAKE`](https://fsharp.github.io/FAKE/)를 통한 크로스 플랫폼 빌드 스크립트.
+4. 패키지를 설치하고 종속성을 해결할 수 있는 `paket.exe` 실행 파일.
+5. 이 프로젝트를 Git 기반 소스 컨트롤에 추가하려는 경우 `.gitignore` 파일
 
-## <a name="writing-some-code"></a>일부 코드 작성
+## <a name="writing-some-code"></a> 코드 작성
 
-엽니다는 *ClassLibraryDemo* 폴더입니다.  다음 파일이 표시 됩니다.
+*ClassLibraryDemo* 폴더를 엽니다. 다음과 같은 파일이 표시됩니다.
 
-1. `ClassLibraryDemo.fs`에 F# 에 정의 된 클래스를 사용 하 여 구현 파일입니다.
-2. `ClassLibraryDemo.fsproj`에 F# 프로젝트 파일을이 프로젝트를 빌드하는 데 사용 합니다.
-3. `Script.fsx`에 F# 소스 파일을 로드 하는 스크립트 파일입니다.
-4. `paket.references`를 프로젝트 종속성을 지정 하는 Paket 파일입니다.
+1. 클래스가 정의된 F# 구현 파일인`ClassLibraryDemo.fs`
+2. 이 프로젝트를 빌드하는 데 사용되는 F# 프로젝트 파일인 `ClassLibraryDemo.fsproj`
+3. 소스 파일을 로드하는 F# 스크립트 파일인 `Script.fsx`
+4. 프로젝트 종속성을 지정하는 Paket 파일인 `paket.references`
 
-열기 `Script.fsx`의 끝에 다음 코드를 추가 합니다.
+`Script.fsx`를 열고 마지막에 다음 코드를 추가합니다.
 
 [!code-fsharp[ToPigLatin](../../../samples/snippets/fsharp/getting-started/to-pig-latin.fsx)]
 
