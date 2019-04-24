@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: c03fa202b413c98230ba70ca7a0b709d7865cb91
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.openlocfilehash: 82ada5e4d1f56ea93bbd7f41b04cda9f98d678c9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59427385"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672396"
 ---
 # <a name="-operator-c-reference"></a>?: 연산자(C# 참조)
 
@@ -42,6 +42,12 @@ a ? b : c ? d : e
 ```csharp
 a ? b : (c ? d : e)
 ```
+
+이 연산자가 다음과 같이 질문하여 평가하는 방법을 기억하는 데 사용할 수 있는 편리한 니모닉 디바이스입니다. 
+```
+is this condition true ? yes : no
+```
+이 질문에는 이전 문의 물음표로 사용되는 연산자의 ? 부분 및 이 질문에 대한 논리적 응답으로 사용되는 결과가 사용됩니다.
 
 다음 예제에서는 조건부 연산자의 사용법을 보여 줍니다.
 

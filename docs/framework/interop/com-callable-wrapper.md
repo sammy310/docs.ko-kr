@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6d205cc9b13a43cd3b519c2a262f3db767ace7b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 942ba933126da291e072270318a5657953ddcdb8
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59309487"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613254"
 ---
 # <a name="com-callable-wrapper"></a>CCW
 
@@ -182,7 +182,7 @@ public class LoanApp
 
 이중 인터페이스를 사용하면 COM 클라이언트에서 인터페이스 멤버를 초기에 바인딩하고 런타임에 바인딩할 수 있습니다. 디자인 타임이나 테스트 중에는 클래스 인터페이스를 이중으로 설정하는 것이 유용할 수 있습니다. 수정되지 않는 관리되는 클래스(및 해당 기본 클래스)에도 이 옵션을 적용할 수 있습니다. 이외의 경우에는 클래스 인터페이스를 이중으로 설정하지 마세요.
 
-드물지만 자동으로 생성된 이중 인터페이스가 적절할 수 있지만 버전과 관련해서 복잡해지는 경우가 더 많습니다. 예를 들어 파생 클래스의 클래스 인터페이스를 사용하는 COM 클라이언트는 기본 클래스가 변경될 때 쉽게 중단될 수 있습니다. 타사에서 기본 클래스를 제공할 경우 클래스 인터페이스의 레이아웃을 제어할 수 없습니다. 또한 디스패치 전용 인터페이스와 달리 이중 인터페이스(**ClassInterfaceType.AutoDual**)는 내보낸 형식 라이브러리에서 클래스 인터페이스의 설명을 제공합니다. 이 설명은 런타임에 바인딩된 클라이언트가 런타임에 DispId를 캐시하도록 권장합니다.
+드물지만 자동으로 생성된 이중 인터페이스가 적절할 수 있지만 버전과 관련해서 복잡해지는 경우가 더 많습니다. 예를 들어 파생 클래스의 클래스 인터페이스를 사용하는 COM 클라이언트는 기본 클래스가 변경될 때 쉽게 중단될 수 있습니다. 타사에서 기본 클래스를 제공할 경우 클래스 인터페이스의 레이아웃을 제어할 수 없습니다. 또한 디스패치 전용 인터페이스와 달리 이중 인터페이스(**ClassInterfaceType.AutoDual**)는 내보낸 형식 라이브러리에서 클래스 인터페이스의 설명을 제공합니다. 이 설명은 런타임에 바인딩된 클라이언트가 컴파일 시간에 DispId를 캐시하도록 권장합니다.
 
 ### <a name="ensure-that-all-com-event-notifications-are-late-bound"></a>모든 COM 이벤트 알림이 런타임에 바인딩되는지 확인합니다.
 
@@ -200,4 +200,4 @@ public class LoanApp
 - [COM 래퍼](com-wrappers.md)
 - [.NET Framework 구성 요소를 COM에 노출](exposing-dotnet-components-to-com.md)
 - [상호 운용할 .NET 형식의 정규화](qualifying-net-types-for-interoperation.md)
-- [RCW](runtime-callable-wrapper.md)
+- [런타임 호출 가능 래퍼](runtime-callable-wrapper.md)

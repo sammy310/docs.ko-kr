@@ -3,10 +3,10 @@ title: '연습: async 및 await를 사용하여 웹에 액세스(C#)'
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
 ms.openlocfilehash: eac19135c2506fdd324a2f425c23548690189ed9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306731"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>연습: async 및 await를 사용하여 웹에 액세스(C#)
@@ -108,11 +108,11 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
 
 3. 동기 솔루션에 대한 코드에는 다음 네 가지 메서드가 포함되어 있습니다.
 
-    -   `SumPageSizes`- `SetUpURLList`에서 웹 페이지 URL 목록을 가져온 다음, `GetURLContents` 및 `DisplayResults`를 호출하여 각 URL을 처리합니다.
+    -   `SumPageSizes` - `SetUpURLList`에서 웹 페이지 URL 목록을 가져온 다음 `GetURLContents` 및 `DisplayResults`를 호출하여 각 URL을 처리합니다.
 
-    -   `SetUpURLList`- 웹 주소 목록을 만들어 반환합니다.
+    -   `SetUpURLList` - 웹 주소 목록을 만들어 반환합니다.
 
-    -   `GetURLContents`- 각 웹 사이트의 콘텐츠를 다운로드하고 해당 콘텐츠를 바이트 배열로 반환합니다.
+    -   `GetURLContents` - 각 웹 사이트의 콘텐츠를 다운로드하고 해당 콘텐츠를 바이트 배열로 반환합니다.
 
     -   `DisplayResults`- 각 URL에 대한 바이트 배열의 바이트 수를 표시합니다.
 
@@ -235,7 +235,7 @@ Control returned to startButton_Click.
     using (WebResponse response = webReq.GetResponseAsync())
     ```
 
-2. `GetResponseAsync` <xref:System.Threading.Tasks.Task%601>를 반환합니다. 이 경우 *작업 반환 변수* `TResult`는 <xref:System.Net.WebResponse> 형식입니다. 작업은 요청한 데이터를 다운로드하고 작업을 실행하여 완료한 후 실제 `WebResponse` 개체를 생성한다는 약속입니다.
+2. `GetResponseAsync`는 <xref:System.Threading.Tasks.Task%601>를 반환합니다. 이 경우 *작업 반환 변수* `TResult`는 <xref:System.Net.WebResponse> 형식입니다. 작업은 요청한 데이터를 다운로드하고 작업을 실행하여 완료한 후 실제 `WebResponse` 개체를 생성한다는 약속입니다.
 
      작업에서 `WebResponse` 값을 검색하려면 다음 코드에 표시된 대로 [await](../../../../csharp/language-reference/keywords/await.md) 연산자를 `GetResponseAsync` 호출에 적용합니다.
 

@@ -33,10 +33,10 @@ helpviewer_keywords:
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
 ms.openlocfilehash: de621b26334bbc9679ba7e48a9d5a0cbaec67eab
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427320"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>부울 논리 연산자(C# 참조)
@@ -162,9 +162,9 @@ x = x op y
 다음 목록에서는 논리 연산자를 가장 높은 우선 순위부터 가장 낮은 것으로 정렬합니다.
 
 - 논리 부정 연산자 `!`
-- 논리곱 연산자 `&`
+- 논리 AND 연산자 `&`
 - 논리 배타적 OR 연산자 `^`
-- 이는 논리 OR 연산자입니다 `|`
+- 논리 OR 연산자 `|`
 - 조건부 논리 AND 연산자 `&&`
 - 조건부 논리 OR 연산자 `||`
 

@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/31/2018
-ms.openlocfilehash: e9a69c61df574ea391622ebb709c14948c71014d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 086be4649f4e7e27ff98df6f26d08856683865c8
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59341727"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611785"
 ---
 # <a name="whats-new-in-net-core-30-preview-2"></a>.NET Core 3.0(Preview 2)의 새로운 기능
 
@@ -24,16 +24,16 @@ Windows, Mac 및 Linux에서 지금 바로 [.NET Core 3.0 Preview 2를 다운로
 
 각 버전에서 릴리스된 내용에 대한 자세한 내용은 다음 공지 사항을 참조하세요.
 
-- [.NET Core 3.0 미리 보기 1 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
-- [.NET Core 3.0 미리 보기 2 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-2/)
+- [.NET Core 3.0 Preview 1 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
+- [.NET Core 3.0 Preview 2 공지 사항](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-2/)
 
 ## <a name="c-8"></a>C# 8
 
 .NET Core 3.0은 C# 8을 지원하고 .NET Core 3.0 Preview 2에서는 다음과 같은 새로운 기능을 지원합니다. C# 8.0 기능에 대한 자세한 내용은 다음 블로그 게시물을 참조하세요.
 
-- [Do more with patterns in C# 8.0(C# 8.0으로 더 많은 패턴 작업 수행)](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/)
-- [Take C# 8.0 for a spin(C# 8.0으로 작업 시도)](https://devblogs.microsoft.com/dotnet/take-c-8-0-for-a-spin/)
-- [Building C# 8.0(C# 8.0 빌드)](https://devblogs.microsoft.com/dotnet/building-c-8-0/)
+- [Do more with patterns in C# 8.0](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/)(C# 8.0으로 더 많은 패턴 작업 수행)
+- [Take C# 8.0 for a spin](https://devblogs.microsoft.com/dotnet/take-c-8-0-for-a-spin/)(C# 8.0으로 작업 시도)
+- [Building C# 8.0](https://devblogs.microsoft.com/dotnet/building-c-8-0/)(C# 8.0 빌드)
 
 ### <a name="ranges-and-indices"></a>범위 및 인덱스
 
@@ -63,7 +63,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 {
     await foreach (var result in GetResultsAsync())
     {
-        if (result > 20) yield return result; 
+        if (result > 20) yield return result;
     }
 }
 ```
@@ -101,7 +101,7 @@ static string Display(object o) => o switch
 };
 ```
 
-이 예제에는 두 가지 패턴이 있습니다. `o` 먼저 `Point` 형식 패턴과 일치시킨 다음, {중괄호} 내부의 속성 패턴과 일치시킵니다. `_`은 *switch* 문에 대한 `default`와 동일한 `discard pattern`을 설명합니다.
+이 예제에는 두 가지 패턴이 있습니다. `o`은(는) 먼저 `Point` 형식 패턴과 매칭한 다음, {중괄호} 내부의 속성 패턴과 매칭합니다. `_`은 *switch* 문에 대한 `default`와 동일한 `discard pattern`을 설명합니다.
 
 패턴을 사용하면 테스트를 구현하는 프로시저 코드 대신 의도를 캡처하는 선언적 코드를 작성할 수 있습니다. 지루한 프로시저 코드를 구현할 책임이 컴파일러에 있고, 항상 제대로 수행하도록 보장됩니다.
 
@@ -148,10 +148,10 @@ static string Display(object o) => o switch
 
 다음 CoreCLR PR은 구현 또는 사용을 통해 몇 가지 내장 함수를 보여줍니다.
 
-* [간단한 SSE2 하드웨어 내장 함수 구현](https://github.com/dotnet/coreclr/pull/15585)
-* [SSE 하드웨어 내장 함수 구현](https://github.com/dotnet/coreclr/pull/15538)
-* [Arm64 Base HW 내장 함수](https://github.com/dotnet/coreclr/pull/16822)
-* [Locate{First|Last}Found{Byte|Char}에 TZCNT 및 LZCNT 사용](https://github.com/dotnet/coreclr/pull/21073)
+* [Implement simple SSE2 hardware intrinsics](https://github.com/dotnet/coreclr/pull/15585)(간단한 SSE2 하드웨어 내장 함수 구현)
+* [Implement the SSE hardware intrinsics](https://github.com/dotnet/coreclr/pull/15538)(SSE 하드웨어 내장 함수 구현)
+* [Arm64 Base HW Intrinsics](https://github.com/dotnet/coreclr/pull/16822)(Arm64 Base HW 내장 함수)
+* [Use TZCNT and LZCNT for Locate{First|Last}Found{Byte|Char}](https://github.com/dotnet/coreclr/pull/21073)(Locate{First|Last}Found{Byte|Char}에 TZCNT 및 LZCNT 사용)
 
 자세한 내용은 [.NET 플랫폼 종속 내장 함수](https://github.com/dotnet/designs/blob/master/accepted/platform-intrinsics.md)를 참조하세요. 여기에는 하드웨어 인프라를 정의하고, Microsoft, 칩 공급 업체나 기타 회사 또는 개인이 .NET 코드에 노출되어야 하는 하드웨어/칩 API를 정의할 수 있는 방법이 정의되어 있습니다.
 
@@ -166,20 +166,20 @@ static string Display(object o) => o switch
 
 ## <a name="build-copies-dependencies"></a>빌드 복사본 종속성
 
-`dotnet build` 이제 애플리케이션에 대한 NuGet 종속성을 NuGet 캐시에서 빌드 출력 폴더로 복사합니다. 이전에는 종속성이 `dotnet publish` 중에만 복사되었습니다. 
+이제 `dotnet build`가 애플리케이션에 대한 NuGet 종속성을 NuGet 캐시에서 빌드 출력 폴더로 복사합니다. 이전에는 종속성이 `dotnet publish` 중에만 복사되었습니다.
 
 연결, Razor 페이지 게시 등 여전히 게시해야 하는 일부 작업이 있습니다.
 
 ## <a name="local-dotnet-tools"></a>로컬 dotnet 도구
 
->[!WARNING]
->.NET Core Local Tools가 .NET Core 3.0 Preview 1과 .NET Core 3.0 Preview 2 사이에 변경되었습니다.  `dotnet tool restore` 또는 `dotnet tool install`와 같은 명령을 실행하여 Preview 1의 로컬 도구를 사용한 적이 있으면, 로컬 도구 캐시 폴더를 삭제해야 Preview 2에서 로컬 도구가 제대로 작동할 수 있습니다. 이 폴더의 위치는 다음과 같습니다.
+> [!WARNING]
+> .NET Core Local Tools가 .NET Core 3.0 Preview 1과 .NET Core 3.0 Preview 2 사이에 변경되었습니다.  `dotnet tool restore` 또는 `dotnet tool install`와 같은 명령을 실행하여 Preview 1의 로컬 도구를 사용한 적이 있으면, 로컬 도구 캐시 폴더를 삭제해야 Preview 2에서 로컬 도구가 제대로 작동할 수 있습니다. 이 폴더의 위치는 다음과 같습니다.
 >
->mac, Linux: `rm -r $HOME/.dotnet/toolResolverCache`
+> mac, Linux: `rm -r $HOME/.dotnet/toolResolverCache`
 >
->Windows: `rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`
+> Windows: `rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`
 >
->이 폴더를 삭제하지 않으면 오류가 발생합니다.
+> 이 폴더를 삭제하지 않으면 오류가 발생합니다.
 
 .NET Core 2.1은 전역 도구를 지원한 한편, .NET Core 3.0은 이제 로컬 도구를 지원합니다. 로컬 도구는 전역 도구와 유사하지만 디스크의 특정 위치와 연결됩니다. 이를 통해 프로젝트별 및 리포지토리별 도구를 사용할 수 있습니다. 로컬로 설치된 도구는 전역으로 사용할 수 없습니다. 도구는 NuGet 패키지로 배포됩니다.
 
@@ -309,10 +309,12 @@ WPF가 아닌 Windows Forms를 선택하려면 `UseWPF` 대신 `UseWindowsForms`
 
 Visual Studio 2019에 제공되는 [Windows 애플리케이션 패키징 프로젝트](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)를 사용하면 [자체 포함](../deploying/index.md#self-contained-deployments-scd) .NET Core 애플리케이션을 사용하여 MSIX 패키지를 만들 수 있습니다.
 
->참고: .NET Core 프로젝트 파일은 `<RuntimeIdentifiers>` 속성에 지원되는 런타임을 지정해야 합니다.
-```xml
-<RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
-```
+> [!NOTE]
+> NET Core 프로젝트 파일은 `<RuntimeIdentifiers>` 속성에 지원되는 런타임을 지정해야 합니다.
+>
+> ```xml
+> <RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
+> ```
 
 ## <a name="fast-built-in-json-support"></a>빠른 기본 제공 JSON 지원
 
@@ -322,7 +324,7 @@ Visual Studio 2019에 제공되는 [Windows 애플리케이션 패키징 프로�
 
 ### <a name="utf8jsonreader"></a>Utf8JsonReader
 
-`System.Text.Json.Utf8JsonReader` `ReadOnlySpan<byte>`에서 읽어온 UTF-8 인코딩 JSON 텍스트를 위한 고성능, 저할당, 전달 전용 판독기입니다. `Utf8JsonReader`는 사용자 지정 구문 분석기 및 역직렬 변환기를 빌드하는 데 활용할 수 있는 하위 수준의 기초 형식입니다. 새 `Utf8JsonReader`를 사용하여 JSON 페이로드를 읽을 경우 **Json.NET**의 판독기를 사용하는 것에 비해 2배 더 빠릅니다. JSON 토큰을 (UTF-16) 문자열로 실현해야 할 때까지 할당하지 않습니다.
+`System.Text.Json.Utf8JsonReader`는 `ReadOnlySpan<byte>`에서 읽어온 UTF-8 인코드된 JSON 텍스트를 위한 고성능, 저할당, 전달 전용 판독기입니다. `Utf8JsonReader`는 사용자 지정 구문 분석기 및 역직렬 변환기를 빌드하는 데 활용할 수 있는 하위 수준의 기초 형식입니다. 새 `Utf8JsonReader`를 사용하여 JSON 페이로드를 읽을 경우 **Json.NET**의 판독기를 사용하는 것에 비해 2배 더 빠릅니다. JSON 토큰을 (UTF-16) 문자열로 실현해야 할 때까지 할당하지 않습니다.
 
 이 새로운 API에는 다음 구성 요소가 포함됩니다.
 
@@ -379,7 +381,7 @@ public static void Utf8JsonReaderLoop(ReadOnlySpan<byte> dataUtf8)
 
 ### <a name="utf8jsonwriter"></a>Utf8JsonWriter
 
-`System.Text.Json.Utf8JsonWriter` `String`, `Int32` 및 `DateTime`과 같은 일반적인 .NET 형식에서 UTF-8 인코딩 JSON 텍스트를 쓰는 캐시를 사용하지 않고 앞으로만 이동 가능한 고성능의 방법을 제공합니다. reader와 마찬가지로 writer는 사용자 지정 serializer를 빌드하는 데 활용될 수 있는 기초적인 하위 수준 유형입니다. 새로운 `Utf8JsonWriter`를 사용하여 JSON 페이로드를 작성하면 **Json.NET**의 writer를 사용하는 것보다 30-80% 빠르며 할당하지 않습니다.
+`System.Text.Json.Utf8JsonWriter`는 `String`, `Int32` 및 `DateTime`과 같은 일반적인 .NET 형식에서 UTF-8 인코딩 JSON 텍스트를 쓰는 캐시를 사용하지 않고 앞으로만 이동 가능한 고성능의 방법을 제공합니다. reader와 마찬가지로 writer는 사용자 지정 serializer를 빌드하는 데 활용될 수 있는 기초적인 하위 수준 유형입니다. 새로운 `Utf8JsonWriter`를 사용하여 JSON 페이로드를 작성하면 **Json.NET**의 writer를 사용하는 것보다 30-80% 빠르며 할당하지 않습니다.
 
 다음은 시작점으로 사용할 수 있는 `Utf8JsonWriter`의 샘플 사용법입니다.
 
@@ -421,11 +423,11 @@ static int WriteJson(IBufferWriter<byte> output, long[] extraData)
 }
 ```
 
-`Utf8JsonWriter`는 JSON 데이터를 동기식으로 작성하는 출력 위치로 `IBufferWriter<byte>`를 수락하고, 호출자는 구체적인 구현을 제공해야 합니다. 플랫폼에 이 인터페이스의 구현이 현재 포함되어 있지 않습니다. `IBufferWriter<byte>`에 대한 예제를 보려면 [https://gist.github.com/ahsonkhan/c76a1cc4dc7107537c3fdc0079a68b35](https://gist.github.com/ahsonkhan/c76a1cc4dc7107537c3fdc0079a68b35)를 참조하십시오.
+`Utf8JsonWriter`는 JSON 데이터를 동기식으로 작성하는 출력 위치로 `IBufferWriter<byte>`를 수락하고, 호출자는 구체적인 구현을 제공해야 합니다. 플랫폼에 이 인터페이스의 구현이 현재 포함되어 있지 않습니다. `IBufferWriter<byte>`에 대한 예를 보려면 <https://gist.github.com/ahsonkhan/c76a1cc4dc7107537c3fdc0079a68b35>를 참조하세요.
 
 ### <a name="jsondocument"></a>JsonDocument
 
-`System.Text.Json.JsonDocument` `Utf8JsonReader`를 기반으로 빌드됩니다. `JsonDocument`는 JSON 데이터를 구문 분석하고 임의 액세스 및 열거를 지원하기 위해 쿼리할 수 있는 읽기 전용 DOM(문서 개체 모델)을 작성하는 기능을 제공합니다. 데이터를 구성하는 JSON 요소는 `JsonDocument`에 의해 `RootElement`라는 속성으로 노출되는 `JsonElement` 형식을 통해 액세스할 수 있습니다. `JsonElement`는 JSON 텍스트를 일반적인 .NET 형식으로 변환하는 API와 함께 개체 열거자와 JSON 배열을 포함합니다. `JsonDocument`를 사용하여 일반적인 JSON 페이로드를 구분 분석하고 모든 멤버에 액세스하면 **Json.NET**보다 2-3배 빠르고, 합리적인 크기(예 : 1MB 미만)의 데이터가 거의 할당되지 않습니다.
+`System.Text.Json.JsonDocument`는 `Utf8JsonReader`를 기반으로 빌드됩니다. `JsonDocument`는 JSON 데이터를 구문 분석하고 임의 액세스 및 열거를 지원하기 위해 쿼리할 수 있는 읽기 전용 DOM(문서 개체 모델)을 작성하는 기능을 제공합니다. 데이터를 구성하는 JSON 요소는 `JsonDocument`에 의해 `RootElement`라는 속성으로 노출되는 `JsonElement` 형식을 통해 액세스할 수 있습니다. `JsonElement`는 JSON 텍스트를 일반적인 .NET 형식으로 변환하는 API와 함께 개체 열거자와 JSON 배열을 포함합니다. `JsonDocument`를 사용하여 일반적인 JSON 페이로드를 구분 분석하고 모든 멤버에 액세스하면 **Json.NET**보다 2-3배 빠르고, 합리적인 크기(예 : 1MB 미만)의 데이터가 거의 할당되지 않습니다.
 
 다음은 시작점으로 사용할 수 있는 `JsonDocument` 및 `JsonElement`의 샘플 사용법입니다.
 
@@ -466,7 +468,7 @@ static double ParseJson()
 
 이 기능은 다음과 유사한 시나리오에 사용할 수 있습니다.
 
-* 동적 플러그인 로드 및 언로드가 필요한 플러그인 시나리오. 
+* 동적 플러그인 로드 및 언로드가 필요한 플러그인 시나리오.
 * 동적인 코드 컴파일, 실행 및 플러시. 웹 사이트, 스크립팅 엔진 등에 유용합니다.
 * 많은 경우 [MetadataLoadContext](#type-metadataloadcontext)(Preview 1에 릴리스됨)를 선택하는 것이 더 유용하더라도 내성을 위해 어셈블리를(예: ReflectionOnlyLoad) 로드합니다.
 
@@ -484,7 +486,7 @@ Windows는 플랫 C API, COM 및 WinRT의 형태로 다양한 네이티브 API�
 
 ## <a name="type-sequencereader"></a>유형: SequenceReader
 
-.NET Core 3.0에서는 `ReadOnlySequence<T>`용 판독기로 사용할 수 있는 `System.Buffers.SequenceReader`가 추가되었습니다. 이를 통해 여러 지원 버퍼에 걸쳐 있을 수 있는 `System.IO.Pipelines` 데이터의 고성능, 저할당 구문 분석이 가능합니다. 
+.NET Core 3.0에서는 `ReadOnlySequence<T>`용 판독기로 사용할 수 있는 `System.Buffers.SequenceReader`가 추가되었습니다. 이를 통해 여러 지원 버퍼에 걸쳐 있을 수 있는 `System.IO.Pipelines` 데이터의 고성능, 저할당 구문 분석이 가능합니다.
 
 다음 예제에서는 입력 `Sequence`를 유효한 `CR/LF` 구분 줄로 분석합니다.
 
@@ -517,9 +519,9 @@ public static void ReadLines(ReadOnlySequence<byte> sequence)
 
 ## <a name="type-metadataloadcontext"></a>유형: MetadataLoadContext
 
-호출자의 애플리케이션 도메인에 영향을 주지 않고 어셈블리 메타데이터를 읽을 수 있도록 하는 `MetadataLoadContext` 형식이 추가되었습니다. 현재 런타임 환경과 다른 아키텍처 및 플랫폼용으로 빌드된 어셈블리를 포함하여, 어셈블리는 데이터로 읽힙니다. `MetadataLoadContext` .NET Framework에서만 사용할 수 있는 <xref:System.Reflection.Assembly.ReflectionOnlyLoad*>와 겹칩니다.
+호출자의 애플리케이션 도메인에 영향을 주지 않고 어셈블리 메타데이터를 읽을 수 있도록 하는 `MetadataLoadContext` 형식이 추가되었습니다. 현재 런타임 환경과 다른 아키텍처 및 플랫폼용으로 빌드된 어셈블리를 포함하여, 어셈블리는 데이터로 읽힙니다. `MetadataLoadContext`는 .NET Framework에서만 사용할 수 있는 <xref:System.Reflection.Assembly.ReflectionOnlyLoad*>와 겹칩니다.
 
-`MetdataLoadContext` [System.Reflection.MetadataLoadContext 패키지](https://www.nuget.org/packages/System.Reflection.MetadataLoadContext)에서 사용할 수 있습니다. .NET Standard 2.0 패키지입니다.
+`MetdataLoadContext`는 [System.Reflection.MetadataLoadContext 패키지](https://www.nuget.org/packages/System.Reflection.MetadataLoadContext)에서 사용할 수 있습니다. .NET Standard 2.0 패키지입니다.
 
 `MetadataLoadContext`는 <xref:System.Runtime.Loader.AssemblyLoadContext> 형식과 마찬가지로 API를 노출하지만 해당 형식을 기반으로 하지 않습니다. <xref:System.Runtime.Loader.AssemblyLoadContext>와 마찬가지로, `MetadataLoadContext`를 사용하면 격리된 어셈블리 로드 Universe 내에서 어셈블리를 로드할 수 있습니다. `MetdataLoadContext` API는 <xref:System.Reflection.Assembly> 개체를 반환하여 익숙한 리플렉션 API를 사용할 수 있도록 합니다. [MethodBase.Invoke](https://github.com/dotnet/corefx/blob/master/src/System.Reflection.MetadataLoadContext/src/System/Reflection/TypeLoading/Methods/RoMethod.cs#L127) 등의 실행 지향 API는 허용되지 않으며 InvalidOperationException을 throw합니다.
 
@@ -663,7 +665,7 @@ namespace rsakeyprint
             {
                 byte[] keyBytes = File.ReadAllBytes(args[0]);
                 rsa.ImportRSAPrivateKey(keyBytes, out int bytesRead);
- 
+
                 Console.WriteLine($"Read {bytesRead} bytes, {keyBytes.Length-bytesRead} extra byte(s) in file.");
                 RSAParameters rsaParameters = rsa.ExportParameters(true);
                 Console.WriteLine(BitConverter.ToString(rsaParameters.D));
@@ -709,7 +711,7 @@ PFX/PKCS#12 파일은 각각 `System.Security.Cryptography.Pkcs.Pkcs12Info` 및 
 
 ## <a name="more-bcl-improvements"></a>더 많은 BCL 개선 사항
 
-.NET Core 2.1에서 도입된 `Span<T>`, `Memory<T>` 및 관련 형식이 .NET Core 3.0에서 최적화되었습니다. 이제 범위 구성, 조각화, 구문 분석, 서식 지정과 같은 일반적인 작업의 성능이 향상됩니다. 
+.NET Core 2.1에서 도입된 `Span<T>`, `Memory<T>` 및 관련 형식이 .NET Core 3.0에서 최적화되었습니다. 이제 범위 구성, 조각화, 구문 분석, 서식 지정과 같은 일반적인 작업의 성능이 향상됩니다.
 
 또한 `String` 등의 형식이 내부적으로 개선되어, `Dictionary<TKey, TValue>` 및 기타 컬렉션에서 키로 사용할 때 보다 효율적으로 작동합니다. 코드 변경 없이도 이러한 개선 사항을 활용할 수 있습니다.
 
@@ -751,7 +753,7 @@ Snap은 [Snap을 지원하는 Linux 배포판](https://docs.snapcraft.io/install
 ```console
 sudo snap install dotnet-sdk --beta --classic
 ```
- 
+
 Snap 패키지를 사용하여 .NET Core를 설치하면 기본 .NET Core 명령이 `dotnet`이 아니라 `dotnet-sdk.dotnet`입니다. 네임스페이스 지정 명령의 이점은 전역적으로 설치된 .NET Core 버전이 있을 경우 충돌하지 않는다는 점입니다. 이 명령은 다음을 사용하여 `dotnet`에 별칭으로 사용될 수 있습니다.
 
 ```console

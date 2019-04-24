@@ -2,12 +2,12 @@
 title: .NET Core용 csproj 형식에 대한 추가 사항
 description: 기존 및 .NET Core csproj 파일 간의 차이점에 대해 알아보기
 ms.date: 04/08/2019
-ms.openlocfilehash: f72ea279079b4cdb3a06a2ba64925e2a335e1ed2
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
+ms.openlocfilehash: 89f0bbab1f9887295a68ffc6434340f1c6f10d5d
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59517332"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611096"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core용 csproj 형식에 대한 추가 사항
 
@@ -325,8 +325,10 @@ UI 표시에서 패키지에 대한 아이콘으로 사용하는 투명한 배�
 압축된 패키지가 삭제되는 출력 경로를 결정합니다. 기본값은 `$(OutputPath)`입니다.
 
 ### <a name="includesymbols"></a>IncludeSymbols
+이 부울 값은 프로젝트가 압축될 때 패키지에서 추가 기호 패키지를 만들어야 하는지 여부를 나타냅니다. 기호 패키지의 형식은 `SymbolPackageFormat` 속성으로 제어됩니다.
 
-이 부울 값은 프로젝트가 압축될 때 패키지에서 추가 기호 패키지를 만들어야 하는지 여부를 나타냅니다. 이 패키지에는 *. symbols.nupkg* 확장이 있으며 DLL 및 기타 출력 파일과 함께 PDB 파일을 복사합니다.
+### <a name="symbolpackageformat"></a>SymbolPackageFormat
+기호 패키지의 형식을 지정합니다. “symbols.nupkg”인 경우 레거시 기호 패키지가 PDB, DLL 및 기타 출력 파일이 포함된 *.symbols.nupkg* 확장과 함께 생성됩니다. “snupkg”인 경우 snupkg 기호 패키지가 이식 가능한 PDB가 포함되어 생성됩니다. 기본값은 “symbols.nupkg”입니다.
 
 ### <a name="includesource"></a>IncludeSource
 

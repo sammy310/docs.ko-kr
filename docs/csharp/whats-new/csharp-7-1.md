@@ -3,10 +3,10 @@ title: C# 7.1의 새로운 기능
 description: C# 7.1의 새로운 기능에 대한 개요입니다.
 ms.date: 04/09/2019
 ms.openlocfilehash: c79c8576f9cbbd921ebf30bd84ee5a817d6dc6e7
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480965"
 ---
 # <a name="whats-new-in-c-71"></a>C# 7.1의 새로운 기능
@@ -17,7 +17,7 @@ C# 7.1은 [언어 버전 선택](../language-reference/configure-language-versio
 
 이 릴리스의 새로운 언어 기능은 다음과 같습니다.
 
-* [`async` `Main` 메서드](#async-main)
+* [`async` `Main`메서드](#async-main)
   - 애플리케이션에 대한 진입점은 `async` 한정자를 가질 수 있습니다.
 * [`default` 리터럴 식](#default-literal-expressions)
   - 대상 형식을 유추할 수 있는 경우 기본 값 식에서 기본 리터럴 식을 사용할 수 있습니다.

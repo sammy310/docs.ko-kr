@@ -4,12 +4,12 @@ description: 전역 도구를 만드는 방법을 설명합니다. 전역 도구
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: a54cb0a8c32da6a89ab1c3b7757df10fd9adf5cf
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 3d0a64d0473f51d73892cd40633e2982c1130469
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677866"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612669"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>.NET Core CLI를 사용하여 .NET Core 전역 도구 만들기
 
@@ -162,7 +162,7 @@ dotnet run -- hello from the bot
 dotnet pack
 ```
 
-`botsay.1.0.0.nupkg` 파일은 `botsay.csproj` 파일의 `<PackageOutputPath>` XML 값으로 식별되는 폴더에 생성됩니다(이 예제에서는 `./nupkg` 폴더). 이를 사용하여 쉽게 설치 및 테스트할 수 있습니다. 공개적으로 도구를 릴리스하려면 [https://www.nuget.org](https://www.nuget.org)에 업로드합니다. NuGet에서 도구를 사용할 수 있게 되면 개발자는 [dotnet tool install](dotnet-tool-install.md) 명령의 `--global` 옵션을 사용하여 사용자 수준의 도구 설치를 수행할 수 있습니다.
+`botsay.1.0.0.nupkg` 파일은 `botsay.csproj` 파일의 `<PackageOutputPath>` XML 값으로 식별되는 폴더에 생성됩니다(이 예제에서는 `./nupkg` 폴더). 이를 사용하여 쉽게 설치 및 테스트할 수 있습니다. 공개적으로 도구를 릴리스하려면 <https://www.nuget.org>에 업로드합니다. NuGet에서 도구를 사용할 수 있게 되면 개발자는 [dotnet tool install](dotnet-tool-install.md) 명령의 `--global` 옵션을 사용하여 사용자 수준의 도구 설치를 수행할 수 있습니다.
 
 이제 패키지가 있으므로 해당 패키지에서 도구를 설치합니다.
 

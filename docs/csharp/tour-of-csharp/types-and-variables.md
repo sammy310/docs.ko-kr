@@ -3,12 +3,12 @@ title: C# 형식 및 변수 - C# 언어 둘러보기
 description: C#에서 형식 정의 및 변수 선언에 대한 자세한 정보
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 552066ff8d17d49dc5cc0bbb60b05c9c3e5f8eda
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: ae44dd273a2460e5718adc7324fae324e3de5bba
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59481082"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672370"
 ---
 # <a name="types-and-variables"></a>형식 및 변수
 
@@ -18,31 +18,42 @@ C#의 값 형식은 *단순 형식*, *열거형 형식*, *구조체 형식* 및 
 
 다음은 C# 형식 시스템의 개요입니다.
 
-* 값 형식
-  - 단순 형식
-    * 부호 있는 정수: `sbyte`, `short`, `int`, `long`
-    * 부호 없는 정수: `byte`, `ushort`, `uint`, `ulong`
+* [값 형식][ValueTypes]
+  - [단순 형식][SimpleTypes]
+    * 부호 있는 정수: `sbyte`, `short`, `int`,`long`
+    * 부호 없는 정수: `byte`, `ushort`, `uint`,`ulong`
     * 유니코드 문자: `char`
     * IEEE 부동 소수점: `float`, `double`
-    * 고정밀도 10진수: `decimal`
+    * High-Precision 10진수:`decimal`
     * 부울: `bool`
-  - 열거형
-    * 다음 양식의 사용자 정의 형식 `enum E {...}`
-  - 구조체 형식
-    * 다음 양식의 사용자 정의 형식 `struct S {...}`
-  - Nullable 값 형식
+  - [열거형 형식][EnumTypes]
+    * `enum E {...}` 양식의 사용자 정의 형식
+  - [구조체 형식][StructTypes]
+    * `struct S {...}` 양식의 사용자 정의 형식
+  - [Nullable 값 형식][NullableTypes]
     * `null` 값을 갖는 다른 모든 값 형식의 확장
-* 참조 형식
-  - 클래스 형식
+* [참조 형식][ReferenceTypes]
+  - [클래스 형식][ClassTypes]
     * 다른 모든 형식의 기본 클래스: `object`
     * 유니코드 문자열: `string`
-    * 다음 양식의 사용자 정의 형식 `class C {...}`
-  - 인터페이스 형식
-    * 다음 양식의 사용자 정의 형식 `interface I {...}`
-  - 배열 형식
-    * 단일 차원 및 다차원, 예: `int[]` 및 `int[,]`
-  - 대리자 형식
-    * 다음 양식의 사용자 정의 형식 `delegate int D(...)`
+    * `class C {...}` 양식의 사용자 정의 형식
+  - [인터페이스 형식][InterfaceTypes]
+    * `interface I {...}` 양식의 사용자 정의 형식
+  - [배열 형식][ArrayTypes]
+    * 단일 차원 및 다차원(예: `int[]` 및`int[,]`)
+  - [대리자 형식][DelegateTypes]
+    * `delegate int D(...)` 양식의 사용자 정의 형식
+
+[ValueTypes]: ../language-reference/keywords/value-types-table.md
+[SimpleTypes]: ../language-reference/keywords/value-types.md#simple-types
+[EnumTypes]: ../language-reference/keywords/enum.md
+[StructTypes]: ../language-reference/keywords/struct.md
+[NullableTypes]: ../programming-guide/nullable-types/index.md
+[ReferenceTypes]: ../language-reference/keywords/reference-types.md
+[ClassTypes]: ../language-reference/keywords/class.md
+[InterfaceTypes]: ../language-reference/keywords/interface.md
+[DelegateTypes]: ../language-reference/keywords/delegate.md
+[ArrayTypes]: ../programming-guide/arrays/index.md
 
 8가지 정수 형식은 부호 있는 형식 또는 부호 없는 형식으로 8비트, 16비트, 32비트 및 64비트 값에 대한 지원을 제공합니다.
 
@@ -60,17 +71,17 @@ C#의 문자 및 문자열 처리에서는 유니코드 인코딩이 사용됩�
   - `sbyte`:  8비트(-128~127)
   - `short`: 16비트(-32,768~32,767)
   - `int`  : 32비트(-2,147,483,648~2,147,483,647)
-  - `long` : 64비트(-9,223,372,036,854,775,808~9,223,372,036,854,775,807)
+  - `long`은: 64비트(-9,223,372,036,854,775,808~9,223,372,036,854,775,807)
 * 부호 없는 정수
   - `byte`   :  8비트(0~255)
-  - `ushort` : 16비트(0~65,535)
+  - `ushort`은: 16비트(0~65,535)
   - `uint`   : 32비트(0~4,294,967,295)
   - `ulong`  : 64비트(0~18,446,744,073,709,551,615)
 * 부동 소수점
   - `float`  : 32비트(1.5 × 10<sup>-45</sup>~3.4 × 10<sup>38</sup>),    전체 자릿수 7자리
-  - `double` : 64비트(5.0 × 10<sup>-324</sup>~1.7 × 10<sup>308</sup>), 전체 자릿수 15자리
+  - `double`은: 64비트(5.0 × 10<sup>-324</sup>~1.7 × 10<sup>308</sup>), 전체 자릿수 15자리
 * Decimal
-  - `decimal` : 128비트(최소 -7.9 × 10<sup>-28</sup>~7.9 × 10<sup>28</sup>), 전체 자릿수 최소 28자리
+  - `decimal`은: 128비트(최소 -7.9 × 10<sup>-28</sup>~7.9 × 10<sup>28</sup>), 전체 자릿수 최소 28자리
 
 C# 프로그램에서는 *형식 선언*을 사용하여 새 형식을 만듭니다. 형식 선언은 새 형식의 이름과 멤버를 지정합니다. 사용자 정의가 가능한 C#의 5가지 형식 범주는 클래스 형식, 구조체 형식, 인터페이스 형식, 열거형 형식 및 대리자 형식입니다.
 
