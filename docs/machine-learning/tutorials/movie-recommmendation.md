@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/08/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: efa217440ae636422bc8d2bd429f0396d7d28057
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: bdc49f42e520f11ef63de873f0d30d11ba4b2366
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59311099"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612279"
 ---
 # <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>자습서: ML.NET을 사용하여 Movie Recommender 만들기
 
@@ -137,7 +137,7 @@ using Microsoft.ML.Data;
 
 [!code-csharp[MovieRatingClass](~/samples/machine-learning/tutorials/MovieRecommendation/MovieRatingData.cs#MovieRatingClass "Add the Movie Rating class")]
 
-`MovieRating` 은(는) 입력 데이터 클래스를 지정합니다. [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) 특성은 데이터 세트에서 로드해야 하는 열(열 인덱스 기준)을 지정합니다. `userId` 및 `movieId` 열은 `Features`(모델에서 `Label`을 예측하기 위해 제공하는 입력)이고, 등급 열은 예측할 `Label`(모델의 출력)입니다.
+`MovieRating`은 입력 데이터 클래스를 지정합니다. [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) 특성은 데이터 세트에서 로드해야 하는 열(열 인덱스 기준)을 지정합니다. `userId` 및 `movieId` 열은 `Features`(모델에서 `Label`을 예측하기 위해 제공하는 입력)이고, 등급 열은 예측할 `Label`(모델의 출력)입니다.
 
 *MovieRatingData.cs*의 `MovieRating` 클래스 뒤에 다음 코드를 추가하여 예측 결과를 나타내는 또 다른 클래스(`MovieRatingPrediction`)를 만듭니다.
 
@@ -161,11 +161,11 @@ public static (IDataView training, IDataView test) LoadData(MLContext mlContext)
 > [!NOTE]
 > 이 메서드는 다음 단계에서 return 문을 추가할 때까지 오류를 제공합니다.
 
-데이터 경로 변수를 초기화하여 *.csv 파일에서 데이터를 로드하고 `LoadData()`의 다음 코드 줄로 다음 항목을 추가하여 `Train` 및 `Test` 데이터를 `IDataView` 개체로 반환합니다.
+데이터 경로 변수를 초기화하여 \*.csv 파일에서 데이터를 로드하고 `LoadData()`의 다음 코드 줄로 다음 항목을 추가하여 `Train` 및 `Test` 데이터를 `IDataView` 개체로 반환합니다.
 
 [!code-csharp[LoadData](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#LoadData "Load data from data paths")]
 
-ML.NET의 데이터는 [IDataView 클래스](xref:Microsoft.ML.IDataView)로 표시됩니다. `IDataView` 은(는) 표 형식 데이터(숫자 및 텍스트)를 유연하고 효율적으로 설명하는 방법입니다. 데이터를 텍스트 파일 또는 실시간(예: SQL 데이터베이스 또는 로그 파일)에서 `IDataView` 개체로 로드할 수 있습니다.
+ML.NET의 데이터는 [IDataView 클래스](xref:Microsoft.ML.IDataView)로 표시됩니다. `IDataView`는 표 형식 데이터(숫자 및 텍스트)를 유연하고 효율적으로 설명하는 방법입니다. 데이터를 텍스트 파일 또는 실시간(예: SQL 데이터베이스 또는 로그 파일)에서 `IDataView` 개체로 로드할 수 있습니다.
 
 [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29)은 데이터 스키마를 정의하고 파일에서 읽습니다. 데이터 경로 변수를 가져와서 `IDataView`를 반환합니다. 이 경우, `Test` 및 `Train` 파일의 경로를 제공하고 텍스트 파일 헤더(열 이름을 올바르게 사용할 수 있도록)와 쉼표 문자 데이터 구분 기호(기본 구분 기호는 탭)를 모두 나타냅니다.
 
@@ -177,11 +177,11 @@ ML.NET의 데이터는 [IDataView 클래스](xref:Microsoft.ML.IDataView)로 표
 
 ML.NET에는 세 가지 주요 개념이 있습니다. [데이터](../basic-concepts-model-training-in-mldotnet.md#data), [변환기](../basic-concepts-model-training-in-mldotnet.md#transformer) 및 [평가자](../basic-concepts-model-training-in-mldotnet.md#estimator).
 
-기계 학습 알고리즘은 특정 형식의 데이터가 필요합니다. `Transformers` 은(는) 표 형식 데이터를 호환 가능한 형식으로 변환하는 데 사용됩니다.
+기계 학습 알고리즘은 특정 형식의 데이터가 필요합니다. `Transformers`는 표 형식 데이터를 호환 가능한 형식으로 변환하는 데 사용됩니다.
 
 ![변환기 이미지](./media/movie-recommendation/transformer.png)
 
-`Estimators`를 생성하여 ML.NET에서 `Transformers`를 만듭니다. `Estimators` 은(는) 데이터를 가져와서 `Transformers`를 반환합니다.
+`Estimators`를 생성하여 ML.NET에서 `Transformers`를 만듭니다. `Estimators`는 데이터를 가져와서 `Transformers`를 반환합니다.
 
 ![평가자 이미지](./media/movie-recommendation/estimator.png)
 
@@ -202,7 +202,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 > 이 메서드는 다음 단계에서 return 문을 추가할 때까지 오류를 제공합니다.
 
 `BuildAndTrainModel()`에 다음 코드를 추가하여 데이터 변환을 정의합니다.
-   
+
 [!code-csharp[DataTransformations](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#DataTransformations "Define data transformations")]
 
 `userId` 및 `movieId`는 실제 값이 아닌 사용자와 영화 제목을 나타내기 때문에 [MapValueToKey()](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) 메서드를 사용하여 각 `userId` 및 각 `movieId`를 숫자 키 형식 `Feature` 열(권장 알고리즘에서 허용하는 형식)로 변환하고 새 데이터 세트 열로 추가합니다.
@@ -217,7 +217,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 
 [!code-csharp[AddAlgorithm](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#AddAlgorithm "Add the training algorithm with options")]
 
-[MatrixFactorizationTrainer](xref:Microsoft.ML.RecommendationCatalog.RecommendationTrainers.MatrixFactorization%28Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options%29)는 권장 학습 알고리즘입니다.  [Matrix Factorization](https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems))은 사용자가 이전에 제품을 평가한 방법에 대한 데이터가 있을 때 권장되는 일반적인 접근 방법입니다. 이는 이 자습서의 데이터 세트에 해당됩니다. 다른 데이터를 사용할 수 있는 경우에 대한 기타 권장 알고리즘이 있습니다(자세한 내용은 아래의 [기타 권장 알고리즘](#other-recommendation-algorithms) 섹션 참조). 
+[MatrixFactorizationTrainer](xref:Microsoft.ML.RecommendationCatalog.RecommendationTrainers.MatrixFactorization%28Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options%29)는 권장 학습 알고리즘입니다.  [Matrix Factorization](https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems))은 사용자가 이전에 제품을 평가한 방법에 대한 데이터가 있을 때 권장되는 일반적인 접근 방법입니다. 이는 이 자습서의 데이터 세트에 해당됩니다. 다른 데이터를 사용할 수 있는 경우에 대한 기타 권장 알고리즘이 있습니다(자세한 내용은 아래의 [기타 권장 알고리즘](#other-recommendation-algorithms) 섹션 참조).
 
 이 경우, `Matrix Factorization` 알고리즘은 "공동 작업 필터링"이라는 방법을 사용합니다. 이 방법은 사용자 1이 특정 문제에 대해 사용자 2와 의견이 같으면, 다른 문제에 대해 사용자 1이 사용자 2와 동일한 방식으로 느낄 가능성이 높다고 가정합니다.
 
@@ -242,7 +242,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 
 ## <a name="evaluate-your-model"></a>모델 평가
 
-모델을 학습한 후에는 테스트 데이터를 사용하여 모델의 성능을 평가합니다. 
+모델을 학습한 후에는 테스트 데이터를 사용하여 모델의 성능을 평가합니다.
 
 다음 코드를 사용하여 `BuildAndTrainModel()` 메서드 바로 뒤에 `EvaluateModel()` 메서드를 만듭니다.
 
@@ -253,8 +253,7 @@ public static void EvaluateModel(MLContext mlContext, IDataView testDataView, IT
 }
 ```
 
-`EvaluateModel()`에 다음 코드를 추가하여 `Test`데이터를 변환합니다.
-[!code-csharp[Transform](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#Transform "Transform the test data")]
+`EvaluateModel()`에 다음([!code-csharp[Transform](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#Transform "Transform the test data")]) 코드를 추가하여 `Test`데이터를 변환합니다.
 
 [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) 메서드는 테스트 데이터 세트의 여러 입력 행을 예측합니다.
 
@@ -306,7 +305,7 @@ RSquared: 0.412556298844873
 
 `root of mean squared error`(RMS 또는 RMSE)는 모델 예측 값과 테스트 데이터 세트 관찰 값 간의 차이를 측정하는 데 사용됩니다. 기술적으로 오차 제곱 평균의 제곱근입니다. RMS가 낮을수록 더 나은 모델입니다.
 
-`R Squared` 는 데이터가 모델에 얼마나 잘 맞는지를 나타냅니다. 범위는 0에서 1까지입니다. 0 값은 데이터가 무작위이거나 모델에 맞지 않음을 의미합니다. 값 1은 모델이 데이터와 정확히 일치함을 의미합니다. `R Squared` 점수를 가능한 한 1에 가깝게 합니다.
+`R Squared`는 데이터가 모델에 얼마나 잘 맞는지를 나타냅니다. 범위는 0에서 1까지입니다. 0 값은 데이터가 무작위이거나 모델에 맞지 않음을 의미합니다. 값 1은 모델이 데이터와 정확히 일치함을 의미합니다. `R Squared` 점수를 가능한 한 1에 가깝게 합니다.
 
 성공한 모델 빌드하는 것은 반복적인 프로세스입니다. 자습서에서는 작은 데이터 세트를 사용하여 빠른 모델 학습을 제공하므로 이 모델은 초기 품질이 좋지 않습니다. 모델 품질에 만족하지 않는 경우 더 큰 학습 데이터 세트를 제공하거나 각 알고리즘에 대한 다양한 하이퍼 매개 변수와 함께 다양한 학습 알고리즘을 선택하여 모델 품질을 개선할 수 있습니다. 자세한 내용은 아래 [모델 개선](#improve-your-model) 섹션을 참조하세요.
 
@@ -315,6 +314,7 @@ RSquared: 0.412556298844873
 이제 학습된 모델을 사용하여 새 데이터를 예측할 수 있습니다.
 
 다음 코드를 사용하여 `EvaluateModel()` 메서드 바로 뒤에 `UseModelForSinglePrediction()` 메서드를 만듭니다.
+
 ```csharp
 public static void UseModelForSinglePrediction(MLContext mlContext, ITransformer model)
 {
@@ -427,9 +427,9 @@ Movie 10 is recommended for user 6
 
 ### <a name="features"></a>기능
 
-이 자습서에서는 데이터 세트에서 제공하는 세 개의 `Features`(`user id`, `movie id` 및 `rating`)만 사용합니다. 
+이 자습서에서는 데이터 세트에서 제공하는 세 개의 `Features`(`user id`, `movie id` 및 `rating`)만 사용합니다.
 
-시작은 좋지만 실제로는 데이터 세트에 포함된 다른 특성 또는 `Features`(예: 나이, 성별, 지리적 위치 등)를 추가할 수 있습니다. 관련성이 높은 `Features`를 추가하면 권장 모델의 성능을 향상시킬 수 있습니다. 
+시작은 좋지만 실제로는 데이터 세트에 포함된 다른 특성 또는 `Features`(예: 나이, 성별, 지리적 위치 등)를 추가할 수 있습니다. 관련성이 높은 `Features`를 추가하면 권장 모델의 성능을 향상시킬 수 있습니다.
 
 `Features`가 기계 학습 작업에 가장 관련이 있는지 확실하지 않은 경우, ML.NET에서 가장 영향력 있는 `Features`를 검색하기 위해 제공되는 FCC(Feature Contribution Calculation) 및 [Feature Permutation 중요도](../how-to-guides/determine-global-feature-importance-in-model.md)를 사용할 수도 있습니다.
 
@@ -445,7 +445,7 @@ ML.NET은 좋은 기본 학습 알고리즘을 제공하지만 알고리즘의 [
 var options = new MatrixFactorizationTrainer.Options
 {
     MatrixColumnIndexColumnName = "userIdEncoded",
-    MatrixRowIndexColumnName = "movieIdEncoded", 
+    MatrixRowIndexColumnName = "movieIdEncoded",
     LabelColumnName = "Label",
     NumberOfIterations = 20,
     ApproximationRank = 100

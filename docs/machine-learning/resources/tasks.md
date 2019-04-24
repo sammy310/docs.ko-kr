@@ -2,21 +2,20 @@
 title: 기계 학습 작업 - ML.NET
 description: ML.NET에서 지원되는 다양한 기계 학습 작업 및 관련 작업을 살펴봅니다.
 ms.custom: seodec18
-ms.date: 01/15/2019
-author: jralexander
-ms.openlocfilehash: 02b454d18eca36c94c27ae15665af5df2ec87905
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.date: 04/12/2019
+author: natke
+ms.openlocfilehash: bfed9cf12f8d539c4327549e5305415ce096e022
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415704"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613163"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET의 기계 학습 작업
 
-기계 학습 모델을 빌드할 때 먼저 데이터로 무엇을 달성하려고 하는지 정의해야 합니다. 그런 다음, 상황에 맞는 올바른 기계 학습 작업을 선택할 수 있습니다. 다음 목록은 사용자가 선택할 수 있는 다양한 기계 학습 작업과 몇 가지 일반적인 사용 사례에 대해 설명합니다.
+기계 학습 모델을 빌드할 때 먼저 데이터로 무엇을 달성하려고 하는지 정의해야 합니다. 그러면 상황에 맞는 올바른 기계 학습 작업을 선택할 수 있습니다. 다음 목록은 사용자가 선택할 수 있는 다양한 기계 학습 작업과 몇 가지 일반적인 사용 사례에 대해 설명합니다.
 
-> [!NOTE]
-> ML.NET은 현재 미리 보기로 제공됩니다. 일부 기계 학습 작업은 현재 지원되지 않습니다. 특정 작업에 대한 요청을 제출하려면 [dotnet/machinelearning 리포지토리](https://github.com/dotnet/machinelearning/issues)에서 문제를 엽니다.
+시나리오에 적합한 작업을 선택했으면 모델을 학습할 최상의 알고리즘을 선택해야 합니다. 사용 가능한 알고리즘은 각 작업의 섹션에 나열됩니다.
 
 ## <a name="binary-classification"></a>이진 분류
 
@@ -29,30 +28,22 @@ ms.locfileid: "54415704"
 
 자세한 내용은 Wikipedia에서 [Binary classification](https://en.wikipedia.org/wiki/Binary_classification)(이진 분류) 문서를 참조하세요.
 
-이진 분류의 권장 학습자:
+### <a name="binary-classification-training-algorithms"></a>이진 분류 학습 알고리즘
 
-* AveragedPerceptronTrainer
-* StochasticGradientDescentClassificationTrainer
-* LightGbmBinaryTrainer
-* FastTreeBinaryClassificationTrainer
-* SymSgdClassificationTrainer
+다음 알고리즘을 사용하여 이진 분류 모델을 학습할 수 있습니다.
 
-### <a name="binary-classification-learners"></a>이진 분류 학습자
-
-이진 분류 작업에 사용할 수 있는 학습자는 다음과 같습니다.
-
-* [AveragedPerceptronTrainer](xref:Microsoft.ML.Trainers.Online.AveragedPerceptronTrainer)
-* [BinaryClassificationGamTrainer](xref:Microsoft.ML.Trainers.FastTree.BinaryClassificationGamTrainer)
-* [FastForestClassification](xref:Microsoft.ML.Trainers.FastTree.FastForestClassification)
-* [FastTreeBinaryClassificationTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryClassificationTrainer)
-* [FieldAwareFactorizationMachineTrainer](xref:Microsoft.ML.FactorizationMachine.FieldAwareFactorizationMachineTrainer)
-* [LightGbmBinaryTrainer](xref:Microsoft.ML.LightGBM.LightGbmBinaryTrainer)
-* [LinearSvmTrainer](xref:Microsoft.ML.Trainers.Online.LinearSvmTrainer)
-* [LogisticRegression](xref:Microsoft.ML.Learners.LogisticRegression)
-* [PriorTrainer](xref:Microsoft.ML.Trainers.PriorTrainer)
-* [RandomTrainer](xref:Microsoft.ML.Trainers.RandomTrainer)
-* [StochasticGradientDescentClassificationTrainer](xref:Microsoft.ML.Trainers.StochasticGradientDescentClassificationTrainer)
-* [SymSgdClassificationTrainer](xref:Microsoft.ML.Trainers.SymSgd.SymSgdClassificationTrainer)
+* <xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer>
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.LinearSvmTrainer>
+* <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.PriorTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>
 
 ## <a name="multiclass-classification"></a>다중 클래스 분류
 
@@ -64,26 +55,20 @@ ms.locfileid: "54415704"
 
 자세한 내용은 Wikipedia에서 [Multiclass classification](https://en.wikipedia.org/wiki/Multiclass_classification)(다중 클래스 분류) 문서를 참조하세요.
 
-다중 클래스의 권장 학습자:
-
-* OVA-AveragedPerceptronTrainer
-* SdcaMultiClassTrainer
-* LightGbmMulticlassTrainer
-* OVA-FastTreeBinaryClassificationTrainer
-
 >[!NOTE]
->OVA 및 PKPD는 모든 [이진 분류 학습자](#binary-classification)를 다중 클래스 데이터 세트에서 작동하도록 업그레이드합니다. 자세한 내용은 [Wikipedia](https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest))를 참조하세요.
+>일 대 다(One vs all)는 모든 [이진 분류 학습자](#binary-classification)를 다중 클래스 데이터 세트에서 작동하도록 업그레이드합니다. 자세한 내용은 [Wikipedia](https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest))를 참조하세요.
 
-### <a name="multiclass-classification-learners"></a>다중 클래스 분류 학습자
+### <a name="multiclass-classification-training-algorithms"></a>다중 클래스 분류 학습 알고리즘
 
-다중 클래스 분류 작업에 사용할 수 있는 학습자는 다음과 같습니다.
+다음 학습 알고리즘을 사용하여 다중 클래스 분류 모델을 학습할 수 있습니다.
 
-* [LightGbmMulticlassTrainer](xref:Microsoft.ML.LightGBM.LightGbmMulticlassTrainer)
-* [MetaMulticlassTrainer<TTransformer,TModel>](xref:Microsoft.ML.Learners.MetaMulticlassTrainer%602)
-* [MultiClassNaiveBayesTrainer](xref:Microsoft.ML.Trainers.MultiClassNaiveBayesTrainer)
-* [Ova](xref:Microsoft.ML.Trainers.Ova)
-* [Pkpd](xref:Microsoft.ML.Trainers.Pkpd)
-* [SdcaMultiClassTrainer](xref:Microsoft.ML.Trainers.SdcaMultiClassTrainer)
+* <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer>
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmMulticlassTrainer>
+* <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>
+* <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer>
+* <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer>
 
 ## <a name="regression"></a>재발
 
@@ -93,27 +78,19 @@ ms.locfileid: "54415704"
 * 과거 데이터 및 현재 시장 추세를 기반으로 미래 재고 가격 예측.
 * 광고 예산을 기반으로 제품 판매 예측.
 
-회귀의 권장 학습자:
+### <a name="regression-training-algorithms"></a>회귀 학습 알고리즘
 
-* FastTreeTweedieTrainer 
-* LightGbmRegressorTrainer 
-* SdcaRegressionTrainer 
-* FastTreeRegressionTrainer
+다음 알고리즘을 사용하여 회귀 모델을 학습할 수 있습니다.
 
-### <a name="regression-learners"></a>회귀 학습자
-
-회귀 작업에 사용할 수 있는 학습자는 다음과 같습니다.
-
-* [FastTreeRegressionTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer)
-* [FastTreeTweedieTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer)
-* [LightGbmRegressorTrainer](xref:Microsoft.ML.LightGBM.LightGbmRegressorTrainer)
-* [OlsLinearRegressionTrainer](xref:Microsoft.ML.Trainers.HalLearners.OlsLinearRegressionTrainer)
-* [OnlineGradientDescentTrainer](xref:Microsoft.ML.Trainers.Online.OnlineGradientDescentTrainer)
-* [PoissonRegression](xref:Microsoft.ML.Trainers.PoissonRegression)
-* [RegressionGamTrainer](xref:Microsoft.ML.Trainers.FastTree.RegressionGamTrainer)
-* [SdcaRegressionTrainer](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer)
-* [FastTree.SingleTrainer](xref:Microsoft.ML.Trainers.FastTree.SingleTrainer)
-* [LightGBM.SingleTrainer](xref:Microsoft.ML.LightGBM.SingleTrainer)
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastForestRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.OlsTrainer>
+* <xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer>
+* <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.GamRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>
 
 ## <a name="clustering"></a>클러스터링
 
@@ -123,11 +100,11 @@ ms.locfileid: "54415704"
 * 대상 광고 캠페인을 구축하는 데 도움이 되는 고객 세그먼트 및 인구 통계 식별.
 * 제조 메트릭을 기반으로 인벤토리 범주화.
 
-### <a name="clustering-learners"></a>클러스터링 학습자
+### <a name="clustering-training-algorithms"></a>클러스터링 학습 알고리즘
 
-클러스터링 작업에 사용할 수 있는 학습자는 다음과 같습니다.
+다음 알고리즘을 사용하여 클러스터링 모델을 학습할 수 있습니다.
 
-* [KMeansPlusPlusTrainer](xref:Microsoft.ML.Trainers.KMeans.KMeansPlusPlusTrainer)
+* <xref:Microsoft.ML.Trainers.KMeansTrainer>
 
 ## <a name="anomaly-detection"></a>변칙 검색
 
@@ -144,30 +121,29 @@ ms.locfileid: "54415704"
 
 변칙은 정의상 거의 발생하지 않으므로 모델링에 사용할 데이터의 대표 샘플을 수집하기 어려울 수 있습니다. 이 범주에 포함된 알고리즘은 특히 불균형 데이터 세트를 사용하여 모델을 빌드하고 학습시키는 핵심 과제를 해결하도록 설계되었습니다.
 
-### <a name="anomaly-detection-learners"></a>변칙 검색 학습자
+### <a name="anomaly-detection-training-algorithms"></a>변칙 검색 학습 알고리즘
 
-변칙 검색 작업에 사용할 수 있는 학습자는 다음과 같습니다.
+다음 알고리즘을 사용하여 변칙 검색 모델을 학습할 수 있습니다.
 
-* [RandomizedPcaTrainer](xref:Microsoft.ML.Trainers.PCA.RandomizedPcaTrainer)
+* <xref:Microsoft.ML.Trainers.RandomizedPcaTrainer>
 
 ## <a name="ranking"></a>순위 지정
 
 순위 지정 작업은 레이블이 지정된 예제 세트에서 순위매기기를 구성합니다. 이 예제 세트는 지정된 기준에 따라 점수가 매겨질 수 있는 인스턴스 그룹으로 이루어져 있습니다. 순위 레이블은 각 인스턴스마다 {0, 1, 2, 3, 4}입니다.  순위매기기는 각 인스턴스마다 점수를 알 수 없는 새 인스턴스 그룹의 순위를 지정하도록 학습됩니다. ML.NET 순위 지정 학습자는 [기계 학습 순위 지정](https://en.wikipedia.org/wiki/Learning_to_rank)을 기반으로 합니다.
 
-### <a name="ranking-learners"></a>순위 지정 학습자
+### <a name="ranking-training-algorithms"></a>순위 지정 학습 알고리즘
 
-순위 지정 작업에 사용할 수 있는 학습자는 다음과 같습니다.
+다음 알고리즘을 사용하여 순위 지정 모델을 학습할 수 있습니다.
 
-* [FastTreeRankingTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer)
-* [LightGbmRankingTrainer](xref:Microsoft.ML.LightGBM.LightGbmRankingTrainer)
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer>
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRankingTrainer>
 
 ## <a name="recommendation"></a>권장 사항
 
 권장 사항 작업을 통해 권장 제품 또는 서비스 목록을 생성할 수 있습니다. ML.NET은 카탈로그에 기록 제품 등급 데이터가 있는 경우 [공동 작업 필터링](https://en.wikipedia.org/wiki/Collaborative_filtering) 알고리즘인 [MF(행렬 인수)](https://en.wikipedia.org/wiki/Matrix_factorization_%28recommender_systems%29)를 권장 사항에 사용합니다. 예를 들어 사용자에 대한 기록 영화 등급 데이터가 있고, 사용자가 다음에 시청할 가능성이 큰 다른 영화를 추천하려고 합니다.
 
-### <a name="recommendation-learners"></a>권장 사항 학습자
+### <a name="recommendation-training-algorithms"></a>권장 사항 학습 알고리즘
 
-권장 사항 작업에 사용할 수 있는 학습자는 다음과 같습니다.
+다음 알고리즘을 사용하여 권장 사항 모델을 학습할 수 있습니다.
 
-* [MatrixFactorizationTrainer](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer)
-* [MatrixFactorizationPredictionTransformer](xref:Microsoft.ML.Trainers.Recommender.MatrixFactorizationPredictionTransformer)
+* <xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer>
