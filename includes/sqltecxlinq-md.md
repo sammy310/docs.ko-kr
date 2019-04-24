@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: da2a5ea2bdcdc6d7307a259694c4a0ca0a3bf1aa
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58133365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701543"
 ---
-<span data-ttu-id="2c41b-101">LINQ to XML</span><span class="sxs-lookup"><span data-stu-id="2c41b-101">LINQ to XML</span></span>
+<span data-ttu-id="1ade2-101">LINQ to XML</span><span class="sxs-lookup"><span data-stu-id="1ade2-101">LINQ to XML</span></span>
