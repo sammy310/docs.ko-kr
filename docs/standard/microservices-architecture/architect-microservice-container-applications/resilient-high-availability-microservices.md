@@ -4,12 +4,12 @@ description: 마이크로 서비스는 고가용성을 달성하기 위해 복�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: ebf3a81718cd3423d3c80edb9c2f5b10f4ef47da
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: a63b0c67e00ec91c5a91e1c6b84d1a38ab50e394
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465817"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672357"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>마이크로 서비스의 복원력 및 고가용성
 
@@ -42,7 +42,7 @@ ms.locfileid: "58465817"
 
 모놀리식 서버 기반 애플리케이션에서는 로그를 디스크의 파일(로그 파일)에 기록한 다음, 모든 도구로 분석할 수 있습니다. 애플리케이션 실행은 고정된 서버 또는 VM으로 제한되므로 일반적으로 이벤트 흐름을 분석하기에는 그다지 복잡하지 않습니다. 그러나 오케스트레이터 클러스터의 여러 노드에서 여러 서비스가 실행되는 분산 애플리케이션에서는 분산된 이벤트를 상호 연결할 수 있습니다.
 
-마이크로 서비스 기반 애플리케이션은 이벤트나 로그 파일의 출력 스트림을 자체적으로 저장하려고 시도해서는 안되며 이벤트 라우팅을 중앙 위치로 관리하려고 시도하지 않아야 합니다. 이 모든 과정은 투명해야 합니다. 즉, 각 프로세스는 실행 중인 실행 환경 인프라에서 수집하는 표준 출력에 해당 이벤트 스트림을 기록해야 합니다. 이러한 이벤트 스트림 라우터의 예로는 [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow)가 있으며, 여러 소스에서 이벤트 스트림을 수집하여 출력 시스템에 게시합니다. 여기에는 [Application Insights](https://azure.microsoft.com/services/application-insights/), [OMS](https://github.com/Azure/diagnostics-eventflow#oms-operations-management-suite)(온-프레미스 애플리케이션용) 및 [Azure Diagnostics](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics)와 같은 개발 환경 또는 클라우드 시스템을 위한 간단한 표준 출력이 포함될 수 있습니다. [Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA)와 같이 실시간으로도 로그를 검색, 경고, 보고 및 모니터링할 수 있는 타사 로그 분석 플랫폼 및 도구도 제공됩니다.
+마이크로 서비스 기반 애플리케이션은 이벤트나 로그 파일의 출력 스트림을 자체적으로 저장하려고 시도해서는 안되며 이벤트 라우팅을 중앙 위치로 관리하려고 시도하지 않아야 합니다. 이 모든 과정은 투명해야 합니다. 즉, 각 프로세스는 실행 중인 실행 환경 인프라에서 수집하는 표준 출력에 해당 이벤트 스트림을 기록해야 합니다. 이러한 이벤트 스트림 라우터의 예로는 [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow)가 있으며, 여러 소스에서 이벤트 스트림을 수집하여 출력 시스템에 게시합니다. 여기에는 [Azure Monitor](https://azure.microsoft.com/services/monitor//), [Azure Diagnostics](https://docs.microsoft.com/azure/azure-monitor/platform/diagnostics-extension-overview)와 같은 개발 환경 또는 클라우드 시스템을 위한 간단한 표준 출력이 포함될 수 있습니다. [Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA)와 같이 실시간으로도 로그를 검색, 경고, 보고 및 모니터링할 수 있는 타사 로그 분석 플랫폼 및 도구도 제공됩니다.
 
 ### <a name="orchestrators-managing-health-and-diagnostics-information"></a>상태 및 진단 정보를 관리하는 오케스트레이터
 
@@ -59,22 +59,22 @@ ms.locfileid: "58465817"
 ## <a name="additional-resources"></a>추가 자료
 
 - **The Twelve-Factor App. XI. 로그: 로그를 이벤트 스트림으로 처리** \
-  [https://12factor.net/logs](https://12factor.net/logs)
+  <https://12factor.net/logs>
 
 - **Microsoft 진단 EventFlow 라이브러리** GitHub 리포지토리 \
-  [https://github.com/Azure/diagnostics-eventflow](https://github.com/Azure/diagnostics-eventflow)
+  <https://github.com/Azure/diagnostics-eventflow>
 
 - **Azure Diagnostics란?** \
-  [https://docs.microsoft.com/azure/azure-diagnostics](https://docs.microsoft.com/azure/azure-diagnostics)
+  <https://docs.microsoft.com/azure/azure-diagnostics>
 
-- **Azure에서 Windows 컴퓨터를 Log Analytics 서비스에 연결** \
-  [https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
+- **Azure Monitor 서비스에 Windows 컴퓨터 연결** \
+  <https://docs.microsoft.com/azure/azure-monitor/platform/agent-windows>
 
 - **Logging What You Mean: Using the Semantic Logging Application Block** \(의도한 내용 로깅: 의미 체계 로깅 애플리케이션 블록 사용)
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn440729(v=pandp.60)>
 
 - **Splunk** 공식 사이트 \
-  [https://www.splunk.com/](https://www.splunk.com/)
+  <https://www.splunk.com/>
 
 - Windows용 이벤트 추적(ETW)의 **EventSource 클래스** API
   [https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource](xref:System.Diagnostics.Tracing.EventSource)

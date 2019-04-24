@@ -4,12 +4,12 @@ description: .NET 마이크로 서비스 및 웹 애플리케이션의 보안 - 
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 99049dca3d127f82ba5312c94d5246940bb71ba8
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 63bf357c95b82a820b6dfb6a2d24a5d89f66de72
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466129"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672422"
 ---
 # <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>Azure Key Vault를 사용하여 프로덕션 시 비밀 보호
 
@@ -19,13 +19,13 @@ ms.locfileid: "58466129"
 
 1. 애플리케이션을 Azure AD 애플리케이션으로 등록합니다. (키 자격 증명 모음에 대한 액세스는 Azure AD에 의해 관리됩니다.) Azure 관리 포털을 통해 이 작업을 수행할 수 있습니다.\
 
-   또는 암호 또는 클라이언트 암호 대신 인증서를 사용하여 애플리케이션을 인증하려는 경우 [New-AzureRmADApplication](/powershell/module/azurerm.resources/new-azurermadapplication) PowerShell cmdlet을 사용할 수 있습니다. Azure Key Vault로 등록하는 인증서는 공개 키만 필요합니다. (애플리케이션은 개인 키를 사용합니다.)
+   또는 암호나 클라이언트 암호 대신 인증서를 사용하여 애플리케이션을 인증하려는 경우 [New-AzADApplication](/powershell/module/az.resources/new-azadapplication) PowerShell cmdlet을 사용할 수 있습니다. Azure Key Vault로 등록하는 인증서는 공개 키만 필요합니다. 애플리케이션은 개인 키를 사용합니다.
 
 2. 새 서비스 주체를 만들어 등록된 애플리케이션에 키 자격 증명 모음에 대한 액세스를 제공합니다. 다음 PowerShell 명령을 사용하여 이를 수행할 수 있습니다.
 
    ```powershell
-   $sp = New-AzureRmADServicePrincipal -ApplicationId "<Application ID guid>"
-   Set-AzureRmKeyVaultAccessPolicy -VaultName "<VaultName>" -ServicePrincipalName $sp.ServicePrincipalNames[0] -PermissionsToSecrets all -ResourceGroupName "<KeyVault Resource Group>"
+   $sp = New-AzADServicePrincipal -ApplicationId "<Application ID guid>"
+   Set-AzKeyVaultAccessPolicy -VaultName "<VaultName>" -ServicePrincipalName $sp.ServicePrincipalNames[0] -PermissionsToSecrets all -ResourceGroupName "<KeyVault Resource Group>"
    ```
 
 3. <xref:Microsoft.Extensions.Configuration.IConfigurationRoot> 인스턴스를 만들 때 <xref:Microsoft.Extensions.Configuration.AzureKeyVaultConfigurationExtensions.AddAzureKeyVault%2A?displayProperty=nameWithType> 확장 메서드를 호출하여 애플리케이션에 키 자격 증명 모음을 구성 소스로 포함합니다. `AddAzureKeyVault`를 호출하려면 이전 단계에서 등록되었으며 키 자격 증명 모음에 대한 액세스 권한이 부여된 애플리케이션 ID가 필요합니다.
@@ -50,7 +50,7 @@ ms.locfileid: "58466129"
   [https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings](/aspnet/core/security/data-protection/configuration/default-settings)
 
 - **Microsoft.Extensions.Configuration.KeyPerFile** GitHub 리포지토리 \
-  [https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile](https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile)
+  <https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile>
 
 >[!div class="step-by-step"]
 >[이전](developer-app-secrets-storage.md)

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 1b12e614c59785a066ad34e5320a205961f7dd49
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59610810"
+---
 # <a name="contributing"></a>참여
 
 .NET 문서에 기여하는 데 관심을 가져주셔서 감사합니다!
@@ -24,7 +32,7 @@
 
 [Git 및 GitHub.com](https://guides.github.com/activities/hello-world/)의 기본적인 내용을 이해하고 있어야 합니다.
 
-**1단계:** 사소한 변경의 경우 이 단계를 건너뜁니다. 새로운 콘텐츠를 작성하거나 기존 콘텐츠를 완전히 수정하려는 경우 원하는 작업을 설명하는 [문제](https://github.com/dotnet/docs/issues)를 엽니다.
+**1단계:** 소규모 변경(예: 오타를 수정하거나 문서에서 찾은 문제를 해결하기 위해 즉시 끌어오기 요청을 여는 경우)인 경우 이 단계를 건너뜁니다. 새로운 콘텐츠를 작성하거나 기존 콘텐츠를 완전히 수정하려는 경우 원하는 작업을 설명하는 [문제](https://github.com/dotnet/docs/issues)를 엽니다.
 **docs** 폴더 내의 콘텐츠는 TOC(목차)에 반영된 섹션으로 구성되어 있습니다. 목차에서 항목을 배치할 위치를 정의합니다. 제안에 대한 피드백을 가져옵니다.
 
 또는
