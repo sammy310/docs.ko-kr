@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
 ms.openlocfilehash: 22d2ce71d850fc799304cadf7e8d7d8af2670d5d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856603"
 ---
 # <a name="data-transfer-architectural-overview"></a>데이터 전송 아키텍처 개요
 Windows Communication Foundation (WCF) 메시징 인프라로 생각할 수 있습니다. WCF는 메시지를 받고, 처리하고, 추가 작업을 위해 사용자 코드로 디스패치하거나, 사용자 코드에서 제공된 데이터로부터 메시지를 생성하고 이 메시지를 대상에 전달할 수 있습니다. 고급 개발자를 대상으로 한 이 항목에서는 메시지 및 포함된 데이터를 처리하기 위한 아키텍처에 대해 설명합니다. 데이터를 주고 받는 방법을 보다 간단하게, 작업에 초점을 두고 설명하는 내용은 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)을 참조하십시오.  
