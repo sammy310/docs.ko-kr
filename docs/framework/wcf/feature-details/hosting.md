@@ -3,11 +3,11 @@ title: Hosting2
 ms.date: 03/30/2017
 ms.assetid: 0820c7e5-0b50-4cde-80e7-74e346513002
 ms.openlocfilehash: 575b2a3e34246e1082d34545baaf812203a1dde1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855844"
 ---
 # <a name="hosting"></a>호스팅
 이 단원의 항목에서는 서비스 호스팅에 대해 설명합니다. 인터넷 정보 서비스 (IIS), Windows 프로세스 활성화 서비스 (WAS), Windows Server AppFabric, Windows 서비스 또는 관리 되는 응용 프로그램에서 서비스를 호스팅할 수 있습니다-이 옵션은 라고도 *자체 호스팅*합니다.  

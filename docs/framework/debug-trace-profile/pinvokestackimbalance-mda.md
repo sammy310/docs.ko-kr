@@ -13,11 +13,11 @@ ms.assetid: 34ddc6bd-1675-4f35-86aa-de1645d5c631
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9ecdfd708217f260b0c02383159fab88948029c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61874213"
 ---
 # <a name="pinvokestackimbalance-mda"></a>PInvokeStackImbalance MDA
 
@@ -50,7 +50,7 @@ MDA 메시지는 스택 불균형을 발생시키는 플랫폼 호출 메서드 
 
 **PInvoke '은 SampleMethod' 함수에 대 한 호출 스택 불안정 하 게 되었습니다. 관리 되는 PInvoke 서명이 관리 되지 않는 대상 서명이 일치 하지 않으므로 가능성이 있습니다. 호출 규칙 및 PInvoke 서명의 매개 변수를 대상 비관리 시그니처와 일치 하는지 확인 합니다.**
 
-## <a name="configuration"></a>구성하기
+## <a name="configuration"></a>구성
 
 ```xml
 <mdaConfig>

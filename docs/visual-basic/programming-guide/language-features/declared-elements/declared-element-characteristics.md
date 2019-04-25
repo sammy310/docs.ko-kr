@@ -14,11 +14,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
 ms.openlocfilehash: 98f6a7738a462e9f36abdc0380cb1fe8d488fb9d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61830169"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>선언된 요소 특성(Visual Basic)
 A *특징* 선언 된 요소의 요소 코드 상호 작용 하는 방법에 영향을 주는 기능입니다. 선언 된 모든 요소에 하나 이상의 연결 된 다음과 같은 특징이 있습니다.  

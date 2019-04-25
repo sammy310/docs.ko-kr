@@ -5,11 +5,11 @@ ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c0788c05edace2142d348c679c73aa1b4404ce75
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868864"
 ---
 # <a name="assembly-element-net-native"></a>\<어셈블리 > 요소 (.NET 네이티브)
 지정된 어셈블리의 모든 형식에 런타임 리플렉션 정책을 적용합니다.  

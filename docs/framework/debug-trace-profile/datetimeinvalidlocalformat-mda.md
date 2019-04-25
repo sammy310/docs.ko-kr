@@ -15,11 +15,11 @@ ms.assetid: c4a942bb-2651-4b65-8718-809f892a0659
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 380334dbe9b91ea369de6cbe58686a9a74254c2c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61874668"
 ---
 # <a name="datetimeinvalidlocalformat-mda"></a>dateTimeInvalidLocalFormat MDA
 UTC(협정 세계 표준시)로 저장된 <xref:System.DateTime> 인스턴스가 로컬 <xref:System.DateTime> 인스턴스에만 사용해야 하는 형식을 사용하여 형식이 지정되면 `dateTimeInvalidLocalFormat` MDA가 활성화됩니다. 미지정 또는 기본 <xref:System.DateTime> 인스턴스의 경우 이 MDA는 활성화되지 않습니다.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
 ms.openlocfilehash: 382d2aeff98b7d48dbae07dadb04ed644c3f4449
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856823"
 ---
 # <a name="federation"></a>페더레이션
 이 항목에서는 페더레이션 보안의 개념에 대한 간략한 개요를 제공합니다. 또한 페더레이션된 보안 아키텍처를 배포 하는 것에 대 한 Windows Communication Foundation (WCF) 지원을 설명 합니다. 페더레이션을 설명 하는 샘플 응용 프로그램을 참조 하세요 [Federation 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)합니다.  

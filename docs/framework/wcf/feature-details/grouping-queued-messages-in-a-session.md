@@ -8,11 +8,11 @@ helpviewer_keywords:
 - queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
 ms.openlocfilehash: 37f0874ea99ee928e49a54a3e6a05ea4ef06f84e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855922"
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>세션의 대기 중인 메시지 그룹화
 Windows Communication Foundation (WCF) 단일 수신 응용 프로그램 처리 관련된 메시지 집합을 그룹화 할 수 있는 세션을 제공 합니다. 세션의 일부인 메시지는 동일한 트랜잭션의 일부여야 합니다. 모든 메시지가 동일한 트랜잭션의 일부이므로, 하나의 메시지가 처리되지 않으면 전체 세션이 롤백됩니다. 세션은 배달 못 한 편지 큐 및 포이즌 큐와 관련하여 유사하게 동작합니다. 세션에 대해 구성된 대기 중인 바인딩에 대해 설정된 TTL(Time to Live) 속성은 세션에 전체적으로 적용됩니다. TTL이 만료되기 전에 세션에 있는 메시지 중 일부만 전송된 경우 전체 세션이 배달 못 한 편지 큐에 배치됩니다. 마찬가지로 세션에 있는 메시지가 응용 프로그램 큐에서 응용 프로그램으로 전송되지 못하면 전체 세션이 포이즌 큐(사용 가능한 경우)에 배치됩니다.  

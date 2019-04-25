@@ -29,11 +29,11 @@ ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 104a0018896eb95255cf4054f9402ce5160b95f7
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61683303"
 ---
 # <a name="generics-in-net"></a>.NET의 제네릭
 
@@ -115,7 +115,7 @@ ms.locfileid: "48584145"
   
 -   제네릭 대리자를 사용하면 여러 대리자 클래스를 만들지 않고도 형식이 안전한 콜백을 사용할 수 있습니다. 예를 들어 <xref:System.Predicate%601> 제네릭 대리자를 사용하면 특정 형식에 대해 고유한 검색 기준을 구현하는 메서드를 만든 다음 <xref:System.Array> , <xref:System.Array.Find%2A>, <xref:System.Array.FindLast%2A>등의 <xref:System.Array.FindAll%2A>형식 메서드와 함께 사용할 수 있습니다.  
   
--   제네릭을 통해 동적으로 생성된 코드를 원활하게 실행. 동적으로 생성된 코드에서 제네릭을 사용하는 경우 형식을 생성할 필요가 없습니다. 이로 인해 전체 어셈블리를 생성하는 대신 간단한 동적 메서드를 사용할 수 있는 시나리오의 수가 증가합니다. 자세한 내용은 [방법: 동적 메서드 정의 및 실행](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md) 및 <xref:System.Reflection.Emit.DynamicMethod>을 참조하세요.  
+-   제네릭을 통해 동적으로 생성된 코드를 원활하게 실행. 동적으로 생성된 코드에서 제네릭을 사용하는 경우 형식을 생성할 필요가 없습니다. 이로 인해 전체 어셈블리를 생성하는 대신 간단한 동적 메서드를 사용할 수 있는 시나리오의 수가 증가합니다. 자세한 내용은 [방법: 동적 메서드 ](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md) 및 <xref:System.Reflection.Emit.DynamicMethod>를 정의하고 실행합니다.  
   
  아래에는 제네릭의 몇 가지 제한이 나와 있습니다.  
   

@@ -11,11 +11,11 @@ ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ae3b72cb5a1281899cdfdb514bbf5a1dc289c949
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61872848"
 ---
 # <a name="managed-extensibility-framework-mef"></a>MEF(Managed Extensibility Framework)
 
@@ -24,7 +24,7 @@ ms.locfileid: "49454501"
 <a name="what_is_mef"></a>
 ## <a name="what-is-mef"></a>MEF란?
 
-MEF(Managed Extensibility Framework)는 확장 가능한 경량 응용 프로그램을 만드는 데 사용할 수 있는 라이브러리입니다. 응용 프로그램 개발자는 MEF를 통해 구성을 수행하지 않고도 확장을 검색하여 사용할 수 있습니다. 또한 확장 개발자는 코드를 쉽게 캡슐화하고 취약한 강한 종속성을 방지할 수 있습니다. MEF를 통해 응용 프로그램 내에서뿐 아니라 응용 프로그램 간에도 확장을 다시 사용할 수 있습니다.
+MEF(Managed Extensibility Framework)는 확장 가능한 경량 응용 프로그램을 만드는 데 사용할 수 있는 라이브러리입니다. 응용 프로그램 개발자는 MEF를 통해 구성을 수행하지 않고도 확장을 검색하여 사용할 수 있습니다. 또한 확장명 개발자는 코드를 쉽게 캡슐화하고 취약한 강한 종속성을 방지할 수 있습니다. MEF를 통해 응용 프로그램 내에서뿐 아니라 응용 프로그램 간에도 확장을 다시 사용할 수 있습니다.
 
 <a name="the_problem_of_extensibility"></a>
 ## <a name="the-problem-of-extensibility"></a>확장성 문제
@@ -50,7 +50,7 @@ MEF(Managed Extensibility Framework)는 확장 가능한 경량 응용 프로그
 
  MEF 모델에서는 특정 응용 프로그램 어셈블리에 대한 강한 종속성이 필요하지 않으므로 응용 프로그램 간에 확장을 다시 사용할 수 있습니다. 이로 인해 응용 프로그램에 관계없이 확장명 구성 요소를 테스트하기 위한 테스트 경도를 쉽게 개발할 수 있습니다.
 
- MEF를 사용하여 작성된 확장 가능한 응용 프로그램은 확장 구성 요소를 통해 채울 수 있는 Import를 선언하며, 응용 프로그램 서비스를 확장에 노출하기 위해 Export도 선언할 수 있습니다. 각 확장명 구성 요소는 Export를 선언하며 Import도 선언할 수 있습니다. 이러한 방식으로 인해 확장 구성 요소 자체를 자동으로 확장할 수 있습니다.
+ MEF를 사용하여 작성된 확장 가능한 응용 프로그램은 확장 구성 요소를 통해 채울 수 있는 Import를 선언하며, 응용 프로그램 서비스를 확장에 노출하기 위해 Export도 선언할 수 있습니다. 각 확장명 구성 요소는 Export를 선언하며 Import도 선언할 수 있습니다. 이러한 방식으로 인해 확장명 구성 요소 자체를 자동으로 확장할 수 있습니다.
 
 <a name="where_is_mef_available"></a>
 ## <a name="where-is-mef-available"></a>MEF 제공 위치
@@ -62,16 +62,16 @@ MEF(Managed Extensibility Framework)는 확장 가능한 경량 응용 프로그
 
 <a name="simplecalculator_an_example_application"></a>
 
-## <a name="simplecalculator-an-example-application"></a>SimpleCalculator: 예제 응용 프로그램
+## <a name="simplecalculator-an-example-application"></a>SimpleCalculator: 예제 애플리케이션
 
-MEF에서 수행할 수 있는 작업을 확인하는 가장 간단한 방법은 간단한 MEF 응용 프로그램을 빌드하는 것입니다. 이 예제에서는 SimpleCalculator라는 매우 간단한 계산기를 빌드합니다. SimpleCalculator에서는 "5+3" 또는 "6-2"와 같은 형식의 기본적인 산술 명령을 수락하고 정답을 반환하는 콘솔 응용 프로그램을 만들려고 합니다. MEF를 사용하면 응용 프로그램 코드를 변경하지 않고도 새 연산자를 추가할 수 있습니다.
+MEF에서 수행할 수 있는 작업을 확인하는 가장 간단한 방법은 간단한 MEF 응용 프로그램을 빌드하는 것입니다. 이 예제에서는 SimpleCalculator라는 매우 간단한 계산기를 빌드합니다. SimpleCalculator에서는 "5+3" 또는 "6-2"와 같은 형식의 기본적인 산술 명령을 수락하고 정답을 반환하는 콘솔 응용 프로그램을 만들려고 합니다. MEF를 사용하면 애플리케이션 코드를 변경하지 않고도 새 연산자를 추가할 수 있습니다.
 
 이 예제의 전체 코드를 다운로드하려면 [SimpleCalculator sample](https://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e)(SimpleCalculator 샘플)을 참조하세요.
 
 > [!NOTE]
 > SimpleCalculator는 사용 방식을 보여 주는 실제 시나리오를 제공하기보다는 MEF의 개념과 구문을 제시하는 데 사용됩니다. MEF의 이점을 가장 효율적으로 활용할 수 있는 대부분의 응용 프로그램은 SimpleCalculator보다 복잡합니다. 보다 포괄적인 예제는 GitHub에서 [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef)를 참조하세요.
 
-- 우선 Visual Studio에서 새 콘솔 응용 프로그램 프로젝트를 만들고 이름을 `SimpleCalculator`로 지정합니다.
+- 우선 Visual Studio에서 새 콘솔 애플리케이션 프로젝트를 만들고 이름을 `SimpleCalculator`로 지정합니다.
 
 - 그런 다음 MEF가 상주하는 System.ComponentModel.Composition 어셈블리에 대한 참조를 추가합니다.
 
@@ -439,7 +439,7 @@ catalog.Catalogs.Add(New DirectoryCatalog("C:\SimpleCalculator\SimpleCalculator\
 catalog.Catalogs.Add(new DirectoryCatalog("C:\\SimpleCalculator\\SimpleCalculator\\Extensions"));
 ```
 
- 예제 경로를 Extensions 디렉터리의 경로로 바꿉니다. 이 경로는 디버깅용으로만 사용할 수 있습니다. 프로덕션 응용 프로그램에서는 상대 경로를 사용합니다. 이제 <xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog>는 Extensions 디렉터리의 어셈블리에서 발견되는 파트를 컴퍼지션 컨테이너에 추가합니다.
+ 예제 경로를 Extensions 디렉터리의 경로로 바꿉니다. 이 경로는 디버깅용으로만 사용할 수 있습니다. 프로덕션 애플리케이션에서는 상대 경로를 사용합니다. 이제 <xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog>는 Extensions 디렉터리의 어셈블리에서 발견되는 파트를 컴퍼지션 컨테이너에 추가합니다.
 
  ExtendedOperations 프로젝트에서 SimpleCalculator 및 System.ComponentModel.Composition에 대한 참조를 추가합니다. ExtendedOperations 클래스 파일에서 System.ComponentModel.Composition에 대해 `Imports` 또는 `using` 문을 추가합니다. Visual Basic에서 SimpleCalculator에 대해 `Imports` 문도 추가합니다. 그런 다음 ExtendedOperations 클래스 파일에 다음 클래스를 추가합니다.
 

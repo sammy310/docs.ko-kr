@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
 ms.openlocfilehash: 4e0831a045da5eb5798d10aeb977981ecae20040
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61869669"
 ---
 # <a name="value-types-and-reference-types"></a>Value Types and Reference Types
 Visual Basic의 경우 데이터 형식은 분류에 따라 구현 됩니다. Visual Basic 데이터 형식 특정 형식의 변수는 자체 데이터 또는 데이터에 대 한 포인터를 저장 하는 여부에 따라 분류할 수 있습니다. 자체 데이터를 저장 하는 경우는 *값 형식*데이터는 메모리에 다른 곳에서 포인터를 보유 하는 경우를 *참조 형식*합니다.  

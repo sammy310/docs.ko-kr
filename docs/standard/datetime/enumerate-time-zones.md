@@ -1,5 +1,5 @@
 ---
-title: '방법: 컴퓨터에 있는 표준 시간대를 열거 합니다.'
+title: '방법: 컴퓨터에 있는 표준 시간대 열거'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,18 +12,18 @@ ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 697cd40482aee73fd150359acb710ffc258c3df2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908676"
 ---
-# <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>방법: 컴퓨터에 있는 표준 시간대를 열거 합니다.
+# <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>방법: 컴퓨터에 있는 표준 시간대 열거
 
 지정한 표준 시간대를 성공적으로 사용하려면 해당 표준 시간대 관련 정보를 시스템에서 사용할 수 있어야 합니다. Windows XP 및 Windows Vista 운영 체제 레지스트리의이 정보를 저장 합니다. 그러나 전세계에 있는 표준 시간대의 전체 수는 상당히 많지만 레지스트리에는 이들 중 일부에 대한 정보만 포함됩니다. 또한 레지스트리 자체도 동적 구조이므로 그 내용이 실수나 고의로 변경될 수 있습니다. 따라서 언제나 애플리케이션에서 특정 표준 시간대가 정의되어 있고 시스템에서 사용할 수 있다고 가정할 수는 없습니다. 표준 시간대 정보 애플리케이션을 사용하는 많은 애플리케이션의 첫 번째 단계는 필요한 표준 시간대를 로컬 시스템에서 사용할 수 있는지를 확인하거나 사용자에게 표준 시간대를 선택할 수 있는 목록을 제공하는 것입니다. 이렇게 하려면 애플리케이션에서 로컬 시스템에 정의되어 있는 표준 시간대를 나열해야 합니다.
 
 > [!NOTE]
-> 응용 프로그램 로컬 시스템에 정의 될 수 있는 특정 표준 시간대의 현재 상태에 의존 하는 경우 응용 프로그램 표준 시간대에 대 한 정보의 직렬화 및 역직렬화 하 여 해당 현재 상태를 확인할 수 있습니다. 응용 프로그램 사용자가 선택할 수 있도록 표준 시간대 목록 컨트롤에 추가한 다음 있습니다. 세부 정보를 참조 하세요. [방법: 포함된 리소스에 표준 시간대 저장](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) 고 [방법: 포함된 리소스에서 표준 시간대 복원](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)합니다.
+> 응용 프로그램 로컬 시스템에 정의 될 수 있는 특정 표준 시간대의 현재 상태에 의존 하는 경우 응용 프로그램 표준 시간대에 대 한 정보의 직렬화 및 역직렬화 하 여 해당 현재 상태를 확인할 수 있습니다. 응용 프로그램 사용자가 선택할 수 있도록 표준 시간대 목록 컨트롤에 추가한 다음 있습니다. 자세한 내용은 [방법: 포함된 리소스에 표준 시간대 저장](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) 고 [방법: 포함된 리소스에서 표준 시간대 복원](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)합니다.
 
 ### <a name="to-enumerate-the-time-zones-present-on-the-local-system"></a>로컬 시스템에 있는 표준 시간대를 열거하려면
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
 ms.openlocfilehash: b935184f0e4d0378bfea69811aa4e6c068a9776f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61827946"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>숨기기와 재정의의 차이점(Visual Basic)
 기본 클래스에서 상속 되는 클래스를 정의 하는 경우 하나 이상의 파생된 클래스에서 기본 클래스 요소를 다시 정의 하려는 경우가 있습니다. 숨기기와 재정의이 목적을 위해는 둘 다 사용할 수 있습니다.  

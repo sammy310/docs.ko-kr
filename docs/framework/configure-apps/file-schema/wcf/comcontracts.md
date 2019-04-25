@@ -3,11 +3,11 @@ title: <comContracts>
 ms.date: 03/30/2017
 ms.assetid: 42e74148-223d-4888-a8ed-1d928527eb09
 ms.openlocfilehash: 47a7d862cf85254f88373d582169ff421be2b5b8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673292"
 ---
 # <a name="comcontracts"></a>\<comContracts>
 `comContracts` 구성 섹션에는 COM+ 통합 서비스 계약의 다양한 속성을 지정할 수 있게 해 주는 요소가 포함되어 있습니다.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
 ms.openlocfilehash: dcbccbea279796fdaec1227b7575cf39e47f9e4f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856679"
 ---
 # <a name="exporting-schemas-from-classes"></a>클래스에서 스키마 내보내기
 데이터 계약 모델에 사용되는 클래스에서 XSD(XML 스키마 정의 언어) 스키마를 생성하려면 <xref:System.Runtime.Serialization.XsdDataContractExporter> 클래스를 사용합니다. 이 항목에서는 스키마를 만드는 프로세스에 대해 설명합니다.  

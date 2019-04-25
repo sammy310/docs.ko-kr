@@ -3,11 +3,11 @@ title: <contractTypeNames>
 ms.date: 03/30/2017
 ms.assetid: 5ec5efc6-87f8-4160-9be0-dcd2e01df3df
 ms.openlocfilehash: b1cec9272a1de029ab72ea4d5f36c74630e5b93a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673201"
 ---
 # <a name="contracttypenames"></a>\<contractTypeNames>
 검색할 서비스의 계약 이름인 계약 형식 이름 목록 및 서비스를 검색할 때 일반적으로 사용되는 기준을 지정하는 구성 섹션입니다. 둘 이상의 계약 이름이 지정되면 모든 계약과 일치하는 서비스 엔드포인트만 응답합니다. Windows Communication Foundation (WCF), 끝점 수 하나의 계약만 지원할 참고 합니다.  

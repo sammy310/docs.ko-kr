@@ -7,11 +7,11 @@ ms.assetid: 3df28dee-2a9f-40ff-9852-bfdbe59c27f3
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 19b5ad73150697c1442056642a1b11d504ecc426
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61869748"
 ---
 # <a name="security-and-public-read-only-array-fields"></a>보안 및 공용 읽기 전용 배열 필드
 읽기 전용 공용 배열 필드를 수정할 수 있으므로 경계 동작이 나 응용 프로그램의 보안을 정의 하는 관리 되는 라이브러리에서 읽기 전용 공용 배열 필드를 사용 하지 않습니다.  

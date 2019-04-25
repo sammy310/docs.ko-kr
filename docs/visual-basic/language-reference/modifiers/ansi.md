@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ANSI
 ms.assetid: 4f1fa6ff-5557-41ab-b6da-90baf4c15917
 ms.openlocfilehash: 98dafab3e524ea371bba228eb231e28d46cc3b4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802559"
 ---
 # <a name="ansi-visual-basic"></a>Ansi(Visual Basic)
 Visual Basic 선언 되는 외부 프로시저의 이름에 관계 없이 ANSI American National Standards Institute () 값으로 모든 문자열을 마샬링하고 지정 합니다.  

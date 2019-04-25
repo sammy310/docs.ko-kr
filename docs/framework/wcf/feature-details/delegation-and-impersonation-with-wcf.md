@@ -9,11 +9,11 @@ helpviewer_keywords:
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
 ms.openlocfilehash: ec34c19da9cd642f5de51166bef0264c2e75c58c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856715"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>WCF를 통한 위임 및 가장
 *가장* 은 서비스에서 서비스 도메인 리소스에 대한 클라이언트 액세스를 제한하는 데 사용하는 일반적인 기술 서비스입니다. 서비스 도메인 리소스는 로컬 파일(가장)과 같은 시스템 리소스이거나 파일 공유(위임)와 같은 다른 시스템의 리소스일 수 있습니다. 샘플 응용 프로그램을 보려면 [클라이언트 가장](../../../../docs/framework/wcf/samples/impersonating-the-client.md)을 참조하세요. 가장을 사용 하는 방법의 예제를 참조 하세요. [방법: 서비스에서 클라이언트 가장](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)합니다.  

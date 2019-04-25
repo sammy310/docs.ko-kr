@@ -10,11 +10,11 @@ ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 46e2e1c327a683782b68069ace2ad6c40bbc856e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868994"
 ---
 # <a name="security-and-remoting-considerations"></a>보안 및 원격 서비스 고려 사항
 원격 기능을 사용하면 응용 프로그램 도메인, 프로세스 또는 컴퓨터 간에 투명한 호출을 설정할 수 있습니다. 그러나 코드 액세스 보안 스택 워크는 프로세스 또는 시스템 경계를 넘어갈 수 없습니다(동일한 프로세스의 응용 프로그램 도메인 간에 적용됨).  

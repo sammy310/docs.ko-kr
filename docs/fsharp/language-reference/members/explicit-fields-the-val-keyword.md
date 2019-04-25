@@ -3,11 +3,11 @@ title: '명시적 필드: Val 키워드'
 description: 알아봅니다는 F# 형식을 초기화 하지 않고 클래스 또는 구조체 형식의 값을 저장 하는 위치를 선언 하는 데 사용 되는 'val' 키워드입니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: 6557514f13a9e86c7f367713775535db79e99a0c
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904919"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>명시적 필드: Val 키워드
 

@@ -82,11 +82,11 @@ helpviewer_keywords:
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
 ms.openlocfilehash: 56dad921b2900061dbe2db0d8f1faaf759641f87
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802299"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>형식 변환 함수(Visual Basic)
 이러한 함수는 변환 코드가 식을 계산 하는 코드의 일부인 즉 인라인으로 컴파일됩니다. 때때로 성능을 향상 시키는 변환을 수행 하는 프로시저에 대 한 호출이 있습니다. 각 함수는 식에서 특정 데이터 형식으로 강제 변환합니다.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], custom controls
 ms.assetid: 0ed0840a-616d-41ba-a27d-3573241932ad
 ms.openlocfilehash: 7c26e00acd4278ced53ad29c748ac076e0215a23
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913213"
 ---
 # <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>방법: 컨트롤에 대한 도구 상자 비트맵 제공
 컨트롤에 대 한 특수 아이콘에 표시 하려는 경우는 **도구 상자**를 사용 하 여 특정 이미지를 지정할 수 있습니다는 <xref:System.Drawing.ToolboxBitmapAttribute>합니다. 이 클래스는 *특성*이라는 다른 클래스에 연결할 수 있는 특수한 유형의 클래스입니다. 특성에 대 한 자세한 내용은 참조 하세요. [특성 개요 (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md) Visual basic 또는 [특성 (C#)](../../../csharp/programming-guide/concepts/attributes/index.md) C#에 대 한 합니다.  

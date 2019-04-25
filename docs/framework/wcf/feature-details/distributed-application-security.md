@@ -6,11 +6,11 @@ helpviewer_keywords:
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
 ms.openlocfilehash: e447cd5ccf84e49ff384bd3591884404736d04f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856546"
 ---
 # <a name="distributed-application-security"></a>분산 응용 프로그램 보안
 Windows Communication Foundation (WCF) 보안 세 가지 주요 기능 영역으로 나뉩니다: 전송 보안, 액세스 제어 및 감사 합니다. 전송 보안은 무결성, 기밀성 및 인증을 제공합니다. 전송 보안은 전송 보안, 메시지 보안, `TransportWithMessageCredential` 중 하나를 통해 제공됩니다.  

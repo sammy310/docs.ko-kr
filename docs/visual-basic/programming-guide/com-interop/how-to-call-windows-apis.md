@@ -8,11 +8,11 @@ helpviewer_keywords:
 - calls [Visual Basic], stored procedures
 ms.assetid: 27d75f0a-54ab-4ee1-b91d-43513a19b12d
 ms.openlocfilehash: e7b76495b83cb9a1dfe7629a1d82695d2046eac2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61818718"
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>방법: Windows Api (Visual Basic)를 호출 합니다.
 정의 하 고 호출 하는이 예제는 `MessageBox` user32.dll의 함수 다음에 문자열을 전달 합니다.  

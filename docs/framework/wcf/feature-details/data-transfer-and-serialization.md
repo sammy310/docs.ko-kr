@@ -6,11 +6,11 @@ helpviewer_keywords:
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
 ms.openlocfilehash: 1eefd82a149d0bc215ca441e92c7d737a744b1e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856559"
 ---
 # <a name="data-transfer-and-serialization"></a>데이터 전송 및 Serialization
 연결된 시스템에서 서비스 및 클라이언트는 데이터 교환에 의존하여 작업을 수행합니다. 서비스나 클라이언트의 개발자는 또한 Windows Communication Foundation (WCF) 효율적이 고 쉽게 유지 관리할 수 있는 응용 프로그램을 만들기 위해 데이터 및 데이터 serialization을 처리 하는 방법을 이해 해야 합니다.  

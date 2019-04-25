@@ -22,11 +22,11 @@ helpviewer_keywords:
 - arccosine function
 ms.assetid: 63e449d8-9444-44fb-8db1-6d9cf346e2aa
 ms.openlocfilehash: 0d0606c52d1d50fcc2fd8eea3ad2851c95b18a69
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801896"
 ---
 # <a name="derived-math-functions-visual-basic"></a>파생된 수학 함수(Visual Basic)
 다음 표에서 기본 수학 함수의에서 파생 될 수 있는 비 내장 수치 연산 함수는 <xref:System.Math?displayProperty=nameWithType> 개체입니다. 기본 수학 함수를 추가 하 여 액세스할 수 있습니다 `Imports System.Math` 을 파일이 나 프로젝트입니다.  

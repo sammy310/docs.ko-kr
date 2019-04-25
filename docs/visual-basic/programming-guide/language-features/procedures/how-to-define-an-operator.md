@@ -14,11 +14,11 @@ helpviewer_keywords:
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
 ms.openlocfilehash: 14aa25de78eb357f8474d3828aa45e48e7a4f9c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863847"
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>방법: 연산자 (Visual Basic)를 정의 합니다.
 클래스 또는 구조체를 정의한 경우에 표준 연산자의 동작을 정의할 수 있습니다 (같은 `*`, `<>`, 또는 `And`) 클래스 또는 구조체 형식의 하나 또는 두 피연산자 모두가 하는 경우.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40008
 ms.assetid: 729e3eb5-76ac-4c55-9fdd-78350e0de55e
 ms.openlocfilehash: 545f0f4a56e72e32d2225217225d441a10f0e52e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803443"
 ---
 # <a name="elementname-is-obsolete-visual-basic-warning"></a>'\<elementname >'가 사용 되지 않습니다 (Visual Basic 경고)
 문에서 경고로 처리하는 <xref:System.ObsoleteAttribute> 특성 및 지시문으로 표시된 프로그래밍 요소에 액세스하려고 합니다.  

@@ -12,11 +12,11 @@ ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bc8cd20a4183ffd002f1399b6b50c8956208a21b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868806"
 ---
 # <a name="securing-exception-handling"></a>예외 처리 보안
 시각적 개체의 C++ 하기 전에 Visual Basic의 경우 스택에서 추가 필터 식을 실행 **마지막** 문입니다. **catch** 블록에 연결 된 후 실행 되는 필터는 **마지막으로** 문. 자세한 내용은 [사용자 필터 예외](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md)합니다. 이 섹션에서는이 주문의 보안 문제를 검사합니다. 필터 문 순서를 보여 주는 다음 의사 코드 예제 및 **마지막** 문을 실행 합니다.  

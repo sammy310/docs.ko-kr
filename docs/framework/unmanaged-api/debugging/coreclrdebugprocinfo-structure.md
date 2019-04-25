@@ -19,11 +19,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b9d4b27ca0bf454b42f15b849008e5a3019bb09a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864080"
 ---
 # <a name="coreclrdebugprocinfo-structure"></a>CoreClrDebugProcInfo 구조체
 원격 컴퓨터에서 실행되는 프로세스를 나타냅니다.  
@@ -47,7 +47,7 @@ struct  CoreClrDebugProcInfo {
 |`m_wszName`|프로세스의 명령줄입니다. 이 멤버는 잘릴 수 있습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CoreClrRemoteDebuggingInterfaces.h  
   

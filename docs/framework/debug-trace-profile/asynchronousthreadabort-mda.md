@@ -11,11 +11,11 @@ ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 08f67ad363d0bd3efcc7a1eeedd1f48d3bae9407
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59114899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875708"
 ---
 # <a name="asynchronousthreadabort-mda"></a>asynchronousThreadAbort MDA
 `asynchronousThreadAbort` MDA(관리 디버깅 도우미)는 스레드가 비동기 중단을 다른 스레드에 도입하려고 할 때 활성화됩니다. 동기 스레드 중단은 `asynchronousThreadAbort` MDA를 활성화하지 않습니다.
