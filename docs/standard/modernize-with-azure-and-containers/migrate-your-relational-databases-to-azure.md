@@ -49,33 +49,34 @@ Azure SQL Database에서 관리 되는 인스턴스에는 다음과 같은 특�
 
   - 기본 백업 및 복원, 로그 전달
 
-이러한 기능을 사용 하 여 Azure SQL Database에 기존 응용 프로그램 데이터베이스를 마이그레이션하는 경우 관리 되는 인스턴스 모델 제공 PaaS의 이점 중 거의 100% SQL Server에 대 한 합니다. 관리 되는 인스턴스는 인스턴스 수준 기능을 사용 하 여 응용 프로그램 디자인을 변경 하지 않고 계속 하면 SQL Server 환경입니다.
+이러한 기능을 사용하여 Azure SQL Database에 기존 응용 프로그램 데이터베이스를 마이그레이션하는 경우 Managed Instance 모델은 SQL Server에 대한 PaaS의 이점을 거의 100%를 제공합니다. Managed Instance는 응용 프로그램 디자인을 변경하지 않고 인스턴스 수준의 기능을 계속해서 사용할 수 있는 SQL Server 환경입니다.
 
-관리 되는 인스턴스는 현재 SQL Server를 사용 중인 및 클라우드에서 네트워크 보안에 유연성이 필요한는 기업에 가장 적합 한 것입니다. SQL database에 대 한 개인 가상 네트워크를 것과 같습니다.
+Managed Instance는 현재 SQL Server를 사용중이고 클라우드에서 네트워크 보안에 유연성이 필요한 기업에 가장 적합니다. 이는 SQL database용 개인 가상 네트워크와 같습니다.
 
 ## <a name="when-to-migrate-to-azure-sql-database"></a>Azure SQL Database로 마이그레이션할 시기
 
-언급 했 듯이 표준 Azure SQL Database는 완전히 관리 되는 관계형 DBaaS 합니다. SQL Database는 현재 전 세계 38 데이터 센터에서 수백만 개의 프로덕션 데이터베이스를 관리합니다. 광범위 한 응용 프로그램 및 글로벌 규모로 고급 데이터 처리를 필요로 하는 데이터를 가장 많이 사용 하는 중요 업무용 응용 프로그램을 이끌어내기 위해 간단한 트랜잭션 데이터 관리에서 워크 로드를 지원 합니다.
+언급 했듯이 표준 Azure SQL Database는 완전히 관리되는 관계형 DBaaS입니다. SQL Database는 현재 전세계 38개의 데이터 센터에서 수백만 개의 상용 데이터베이스를 관리합니다. 간단한 트랜잭션 데이터 관리에서부터 글로벌 규모의 고급 데이터 처리를 필요로하며 데이터를 가장 많이 사용하고 중요한 업무용 응용 프로그램에 이르기까지 광범위한 응용 프로그램과 워크로드를 지원합니다.
 
-해당 전체 PaaS 기능으로 인해 보다 나은 가격-궁극적으로 비용을 절감 하 고-있다면 응용 프로그램을 사용 하 여 기본, 표준 SQL database 인스턴스 추가 기능이 없습니다 "기본적으로 선택한"으로 표준 Azure SQL Database로 이동 해야 합니다. 표준 Azure SQL Database에서 SQL CLR 통합, SQL Server 에이전트 및 데이터베이스 간 쿼리와 같은 SQL Server 기능을 사용할 수 없습니다. 이러한 기능은 Azure SQL Database Managed Instance 모델 에서만 사용할 수 있습니다.
+PaaS의 완벽한 기능, 더 나은 가격 책정(궁극적으로 저렴한 비용)으로 인해, 기본 SQL 데이터베이스를 사용하는 응용 프로그램이 있고 추가 인스턴스 기능이 없는 경우 "기본적인 선택"으로 표준 Azure SQL 데이터베이스로 이동해야합니다
+표준 Azure SQL Database에서는 SQL CLR 통합과 SQL Server 에이전트, 크로스 데이터베이스 쿼리와 같은 SQL Server 기능을 사용할 수 없습니다. 이러한 기능은 Azure SQL Database Managed Instance 모델에서만 사용할 수 있습니다.
 
-Azure SQL Database는 앱 개발자를 위한 기본 제공 되는 지능형 클라우드 데이터베이스 서비스입니다. 즉석에서 다중 테 넌 트 앱을 효율적으로 제공 하는 데 가동 중지 시간 없이 크기가 조정 되는 유일한 클라우드 데이터베이스 서비스 이기도 합니다. 궁극적으로 Azure SQL Database를 혁신 하는 데 더 오래 유지 및 출시 시간 가속화 합니다. 보안 앱을 빌드하고 원하는 플랫폼과 언어를 사용 하 여 SQL database에 연결할 수 있습니다.
+Azure SQL Database는 앱 개발자를 위해 기본적으로 제공되는 지능형 클라우드 데이터베이스 서비스입니다. 멀티 테넌트 앱을 효율적으로 제공하기위해 가동 중단 시간 없이 즉석에서 크기를 조정할 수 있는 유일한 클라우드 데이터베이스 서비스 입니다. 궁극적으로 Azure SQL Database를 사용하면 혁신에 더 많은 시간을 사용할 수 있고 출시를 앞당겨 줍니다. 원하는 플랫폼과 언어를 사용하여 보안 앱을 만들고 SQL database에 연결할 수 있습니다.
 
-Azure SQL Database는 다음과 같은 이점을 제공합니다.
+Azure SQL Database에서는 다음과 같은 이점을 제공합니다.
 
-- 학습 및 적응 응용 프로그램에 기본 제공 인텔리전스 (기계 학습)
+- 앱을 학습하고 적응하는 지능 내장(기계 학습)
 
-- 요청 시 데이터베이스 프로 비전
+- 온 디멘드 데이터베이스 프로비저닝
 
-- 모든 워크 로드에 대 한 제품의 범위
+- 모든 워크로드에 대한 제품의 범위
 
-- 99.99% 가용성 SLA, 0 개 유지 관리
+- 가용성 99.99 % SLA, 유지관리 없음
 
-- 데이터 보호에 대 한 지역에서 복제 및 복원 서비스
+- 데이터 보호를위한 지리적 복제 및 복원 서비스
 
-- Azure SQL Database 지정 시간 복원 기능
+- Azure SQL Database 시점 복원 기능
 
-- SQL Server 2016에서는 하이브리드 및 마이그레이션을 비롯 한 호환성
+- 하이브리드 및 마이그레이션을 포함한 SQL Server 2016과의 호환성
 
 표준 Azure SQL Database 보다 더 가까운 PaaS로 Azure SQL Database Managed Instance. 관리 되는 클라우드에서 많은 혜택을 얻게 되므로 표준 Azure SQL Database를 선호 합니다. 그러나 Azure SQL Database 일반에서 몇 가지 주요 차이점이 있으며 온-프레미스 SQL Server 인스턴스. 기존 응용 프로그램의 데이터베이스 요구 사항 및 enterprise 요구 사항 및 정책에 따라 아닐 최상의 클라우드로 마이그레이션을 계획할 때.
 
