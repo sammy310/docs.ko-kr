@@ -9,14 +9,14 @@ helpviewer_keywords:
 - collections [Windows Forms], accessing with keys
 ms.assetid: b9b79b8b-d9bf-4f8c-b9d6-9578bc3219d3
 ms.openlocfilehash: fdd3a56ab9a267990bb0e832c0d4cc2af9334034
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801831"
 ---
-# <a name="how-to-access-keyed-collections-in-windows-forms"></a><span data-ttu-id="6147e-102">방법: Windows Forms에서 키 컬렉션에 액세스</span><span class="sxs-lookup"><span data-stu-id="6147e-102">How to: Access Keyed Collections in Windows Forms</span></span>
--   <span data-ttu-id="6147e-103">키로 개별 컬렉션 항목에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6147e-103">You can access individual collection items by key.</span></span> <span data-ttu-id="6147e-104">이 기능은 Windows Forms 응용 프로그램에서 일반적으로 사용 되는 여러 컬렉션 클래스에 추가 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="6147e-104">This functionality has been added to many collection classes that are typically used by Windows Forms applications.</span></span> <span data-ttu-id="6147e-105">다음은 액세스할 수 있는 키 컬렉션에 있는 컬렉션 클래스 중 일부를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6147e-105">The following list shows some of the collection classes that have accessible keyed collections:</span></span>  
+# <a name="how-to-access-keyed-collections-in-windows-forms"></a><span data-ttu-id="9859b-102">방법: Windows Forms에서 키 컬렉션에 액세스</span><span class="sxs-lookup"><span data-stu-id="9859b-102">How to: Access Keyed Collections in Windows Forms</span></span>
+-   <span data-ttu-id="9859b-103">키로 개별 컬렉션 항목에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9859b-103">You can access individual collection items by key.</span></span> <span data-ttu-id="9859b-104">이 기능은 Windows Forms 응용 프로그램에서 일반적으로 사용 되는 여러 컬렉션 클래스에 추가 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="9859b-104">This functionality has been added to many collection classes that are typically used by Windows Forms applications.</span></span> <span data-ttu-id="9859b-105">다음은 액세스할 수 있는 키 컬렉션에 있는 컬렉션 클래스 중 일부를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9859b-105">The following list shows some of the collection classes that have accessible keyed collections:</span></span>  
   
 -   <xref:System.Windows.Forms.ListView.ListViewItemCollection>  
   
@@ -28,30 +28,30 @@ ms.locfileid: "59214042"
   
 -   <xref:System.Windows.Forms.TreeNodeCollection>  
   
- <span data-ttu-id="6147e-106">컬렉션의 항목에 연결 된 키를 일반적으로 항목의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="6147e-106">The key associated with an item in a collection is typically the name of the item.</span></span> <span data-ttu-id="6147e-107">다음 절차에서는 일반적인 작업을 수행할 컬렉션 클래스를 사용 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6147e-107">The following procedures show you how to use collection classes to perform common tasks.</span></span>  
+ <span data-ttu-id="9859b-106">컬렉션의 항목에 연결 된 키를 일반적으로 항목의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="9859b-106">The key associated with an item in a collection is typically the name of the item.</span></span> <span data-ttu-id="9859b-107">다음 절차에서는 일반적인 작업을 수행할 컬렉션 클래스를 사용 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9859b-107">The following procedures show you how to use collection classes to perform common tasks.</span></span>  
   
-### <a name="to-find-and-give-focus-to-a-nested-control-in-a-control-collection"></a><span data-ttu-id="6147e-108">찾을 컨트롤 컬렉션에서 중첩 된 컨트롤에 포커스를</span><span class="sxs-lookup"><span data-stu-id="6147e-108">To find and give focus to a nested control in a control collection</span></span>  
+### <a name="to-find-and-give-focus-to-a-nested-control-in-a-control-collection"></a><span data-ttu-id="9859b-108">찾을 컨트롤 컬렉션에서 중첩 된 컨트롤에 포커스를</span><span class="sxs-lookup"><span data-stu-id="9859b-108">To find and give focus to a nested control in a control collection</span></span>  
   
--   <span data-ttu-id="6147e-109">사용 된 <xref:System.Windows.Forms.Control.ControlCollection.Find%2A> 및 <xref:System.Windows.Forms.Control.Focus%2A> 찾기 및 포커스를 컨트롤의 이름을 지정 하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="6147e-109">Use the <xref:System.Windows.Forms.Control.ControlCollection.Find%2A> and <xref:System.Windows.Forms.Control.Focus%2A> methods to specify the name of the control to find and give focus to.</span></span>  
+-   <span data-ttu-id="9859b-109">사용 된 <xref:System.Windows.Forms.Control.ControlCollection.Find%2A> 및 <xref:System.Windows.Forms.Control.Focus%2A> 찾기 및 포커스를 컨트롤의 이름을 지정 하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="9859b-109">Use the <xref:System.Windows.Forms.Control.ControlCollection.Find%2A> and <xref:System.Windows.Forms.Control.Focus%2A> methods to specify the name of the control to find and give focus to.</span></span>  
   
      [!code-csharp[System.Windows.Forms.KeyedCollectionsEx#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/CS/Form1.cs#1)]
      [!code-vb[System.Windows.Forms.KeyedCollectionsEx#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#1)]  
   
-### <a name="to-access-an-image-in-an-image-collection"></a><span data-ttu-id="6147e-110">이미지는 이미지 컬렉션에 액세스 하려면</span><span class="sxs-lookup"><span data-stu-id="6147e-110">To access an image in an image collection</span></span>  
+### <a name="to-access-an-image-in-an-image-collection"></a><span data-ttu-id="9859b-110">이미지는 이미지 컬렉션에 액세스 하려면</span><span class="sxs-lookup"><span data-stu-id="9859b-110">To access an image in an image collection</span></span>  
   
--   <span data-ttu-id="6147e-111">사용 된 <xref:System.Windows.Forms.ImageList.ImageCollection.Item%2A> 속성에 액세스 하려는 이미지의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="6147e-111">Use the <xref:System.Windows.Forms.ImageList.ImageCollection.Item%2A> property to specify the name of the image you want to access.</span></span>  
+-   <span data-ttu-id="9859b-111">사용 된 <xref:System.Windows.Forms.ImageList.ImageCollection.Item%2A> 속성에 액세스 하려는 이미지의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="9859b-111">Use the <xref:System.Windows.Forms.ImageList.ImageCollection.Item%2A> property to specify the name of the image you want to access.</span></span>  
   
      [!code-csharp[System.Windows.Forms.KeyedCollectionsEx#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.KeyedCollectionsEx#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#2)]  
   
-### <a name="to-set-a-tab-page-as-the-selected-tab"></a><span data-ttu-id="6147e-112">선택된 된 탭으로 탭 페이지를 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="6147e-112">To set a tab page as the selected tab</span></span>  
+### <a name="to-set-a-tab-page-as-the-selected-tab"></a><span data-ttu-id="9859b-112">선택된 된 탭으로 탭 페이지를 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="9859b-112">To set a tab page as the selected tab</span></span>  
   
--   <span data-ttu-id="6147e-113">사용 하 여는 <xref:System.Windows.Forms.TabControl.SelectedTab%2A> 와 함께 속성을 <xref:System.Windows.Forms.TabControl.TabPageCollection.Item%2A> 선택된 된 탭으로 설정 하려면 탭 페이지의 이름을 지정 하는 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="6147e-113">Use the <xref:System.Windows.Forms.TabControl.SelectedTab%2A> property together with the <xref:System.Windows.Forms.TabControl.TabPageCollection.Item%2A> property to specify the name of the tab page to set as the selected tab.</span></span>  
+-   <span data-ttu-id="9859b-113">사용 하 여는 <xref:System.Windows.Forms.TabControl.SelectedTab%2A> 와 함께 속성을 <xref:System.Windows.Forms.TabControl.TabPageCollection.Item%2A> 선택된 된 탭으로 설정 하려면 탭 페이지의 이름을 지정 하는 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="9859b-113">Use the <xref:System.Windows.Forms.TabControl.SelectedTab%2A> property together with the <xref:System.Windows.Forms.TabControl.TabPageCollection.Item%2A> property to specify the name of the tab page to set as the selected tab.</span></span>  
   
      [!code-csharp[System.Windows.Forms.KeyedCollectionsEx#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.KeyedCollectionsEx#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#3)]  
   
-## <a name="see-also"></a><span data-ttu-id="6147e-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="6147e-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9859b-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="9859b-114">See also</span></span>
 
-- [<span data-ttu-id="6147e-115">Windows Forms 시작</span><span class="sxs-lookup"><span data-stu-id="6147e-115">Getting Started with Windows Forms</span></span>](getting-started-with-windows-forms.md)
-- [<span data-ttu-id="6147e-116">방법: Windows Forms ImageList 구성 요소를 사용 하 여 이미지 추가 또는 제거</span><span class="sxs-lookup"><span data-stu-id="6147e-116">How to: Add or Remove Images with the Windows Forms ImageList Component</span></span>](./controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)
+- [<span data-ttu-id="9859b-115">Windows Forms 시작</span><span class="sxs-lookup"><span data-stu-id="9859b-115">Getting Started with Windows Forms</span></span>](getting-started-with-windows-forms.md)
+- [<span data-ttu-id="9859b-116">방법: Windows Forms ImageList 구성 요소를 사용 하 여 이미지 추가 또는 제거</span><span class="sxs-lookup"><span data-stu-id="9859b-116">How to: Add or Remove Images with the Windows Forms ImageList Component</span></span>](./controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)
