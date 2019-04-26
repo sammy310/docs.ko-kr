@@ -1,7 +1,7 @@
 ---
 title: .NET Framework의 새로운 기능
 ms.custom: updateeachrelease
-ms.date: 04/10/2018
+ms.date: 04/18/2019
 dev_langs:
 - csharp
 - vb
@@ -10,17 +10,18 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d67626a72e04cd1163e749339d8d5fac22959a3a
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 3c0fcf9bd1c1e8df19458f681497b77348279915
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914842"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework의 새로운 기능
 
 이 문서에서는 다음 버전의 .NET Framework에 새로 추가된 주요 기능과 향상된 내용에 대해 요약합니다.
 
+- [.NET Framework 4.8](#v48)
 - [.NET Framework 4.7.2](#v472)
 - [.NET Framework 4.7.1](#v471)
 - [.NET Framework 4.7](#v47)
@@ -36,29 +37,162 @@ ms.locfileid: "59613761"
 > [!NOTE]
 > .NET Framework 팀에서는 플랫폼 지원을 확장하고 새로운 기능(예: 변경할 수 없는 컬렉션 및 SIMD 사용 벡터 형식)을 도입하기 위한 NuGet이 있는 번외 기능도 릴리스했습니다. 자세한 내용은 [추가 클래스 라이브러리 및 API](../additional-apis/index.md) 및 [.NET Framework 및 번외 릴리스](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)를 참조하십시오. .NET Framework에 대해서는 [NuGet 패키지의 전체 목록](https://blogs.msdn.microsoft.com/dotnet/p/nugetpackages/)을 참조하거나 [피드](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/)를 구독하십시오.
 
+<a name="v48" />
+
+## <a name="introducing-net-framework-48"></a>.NET Framework 4.8 소개
+
+.NET Framework 4.8은 .NET Framework 4.x의 이전 버전에서 빌드되며 제품의 안정성을 유지하면서 많은 새로운 수정 및 여러 가지 새 기능이 추가됩니다.
+
+### <a name="downloading-and-installing-net-framework-48"></a>.NET Framework 4.8 다운로드 및 설치
+
+다음 위치에서 .NET Framework 4.8을 다운로드할 수 있습니다.
+
+- [.NET Framework 4.8 웹 설치 관리자](https://go.microsoft.com/fwlink/?LinkId=2085155)
+
+- [.NET Framework 4.8 오프라인 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2088631)
+
+.NET Framework 4.8은 Windows 10, Windows 8.1, Windows 7 SP1 및 Windows Server 2008 R2 SP1 이상의 해당 서버 플랫폼에 설치할 수 있습니다. 웹 설치 관리자 또는 오프라인 설치 관리자를 사용하여 .NET Framework 4.8을 설치할 수 있습니다. 대부분의 사용자에게 권장되는 방법은 웹 설치 관리자를 사용하는 것입니다.
+
+[.NET Framework 4.8 개발자 팩](https://go.microsoft.com/fwlink/?LinkId=2085167)을 설치하여 Visual Studio 2012 이상 버전에서 .NET Framework 4.8을 대상으로 할 수 있습니다.
+
+### <a name="whats-new-in-net-framework-48"></a>.NET Framework 4.8의 새로운 기능
+
+.NET Framework 4.8에는 다음과 같은 영역의 새 기능이 소개됩니다.
+
+- [기본 클래스](#core48)
+- [WCF(Windows Communication Foundation)](#wcf48)
+- [WPF(Windows Presentation Foundation)](#wpf48)
+- [공용 언어 런타임](#clr48)
+
+애플리케이션이 보조 기술 사용자에게 적절한 환경을 제공할 수 있도록 하는 향상된 내게 필요한 옵션 기능이 계속해서 .NET Framework 4.8의 주력 기능이 됩니다. .NET Framework 4.8에서 내게 필요한 옵션의 기능 향상에 대한 자세한 내용은 [.NET Framework의 내게 필요한 옵션의 새로운 기능](whats-new-in-accessibility.md)을 참조하세요.
+
+<a name="core48" />
+
+#### <a name="base-classes"></a>기본 클래스
+
+**암호화에 대한 FIPS 영향 감소**. 이전 버전의 .NET Framework에서 <xref:System.Security.Cryptography.SHA256Managed>와 같은 관리형 암호화 공급자 클래스는 시스템 암호화 라이브러리가 “FIPS 모드”로 구성될 때 <xref:System.Security.Cryptography.CryptographicException>을 throw합니다. 암호화 공급자 클래스의 관리형 버전은 시스템 암호화 라이브러리와 달리 FIPS(Federal Information Processing Standard) 140-2 인증을 거치지 않았으므로 이 예외가 throw됩니다. 개발 머신을 FIPS 모드에서 사용하는 개발자는 거의 없으므로 일반적으로 예외는 프로덕션 시스템에서 throw됩니다.
+
+기본적으로 .NET Framework 4.8을 대상으로 하는 애플리케이션에서 다음 관리형 암호화 클래스는 더 이상 다음 경우에 <xref:System.Security.Cryptography.CryptographicException>을 throw하지 않습니다.
+
+- <xref:System.Security.Cryptography.MD5Cng>
+- <xref:System.Security.Cryptography.MD5CryptoServiceProvider>
+- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>
+- <xref:System.Security.Cryptography.RijndaelManaged>
+- <xref:System.Security.Cryptography.RIPEMD160Managed>
+- <xref:System.Security.Cryptography.SHA256Managed>
+
+대신, 이 클래스는 암호화 작업을 시스템 암호화 라이브러리로 리디렉션합니다. 이 변경에 따라 개발자 환경과 프로덕션 환경 간에 혼동될 수 있는 차이가 효과적으로 제거되고 네이티브 구성 요소와 관리형 구성 요소가 동일한 암호화 정책에서 작동합니다. 이 예외에 의존하는 애플리케이션은 AppContext 스위치 `Switch.System.Security.Cryptography.UseLegacyFipsThrow`를 `true`로 설정하여 이전 동작을 복원할 수 있습니다. 자세한 내용은 [관리형 암호화 클래스가 FIPS 모드에서 CryptographyException을 throw하지 않음](../migration-guide/retargeting/4.7.2-4.8.md#managed-cryptography-classes-do-not-throw-a-cryptographyexception-in-fips-mode)을 참조하세요.
+
+**업데이트된 버전의 ZLib 사용**
+
+.NET Framework 4.5부터 clrcompression.dll 어셈블리는 압축 알고리즘 구현을 제공하기 위해 데이터 압축용 네이티브 외부 라이브러리인 [ZLib](https://www.zlib.net)를 사용합니다. .NET Framework 4.8의 clrcompression.dll은 ZLib 버전 1.2.11을 사용하도록 업데이트되며, 여기에는 몇 가지 주요 개선 사항과 수정 사항이 포함되어 있습니다.
+
+<a name="wcf48" />
+
+#### <a name="windows-communication-foundation-wcf"></a>WCF(Windows Communication Foundation)
+
+**ServiceHealthBehavior 소개**
+
+상태 엔드포인트는 상태를 기반으로 서비스를 관리하기 위해 오케스트레이션 도구에서 광범위하게 사용됩니다. 또한 상태 검사는 모니터링 도구에서 서비스의 가용성 및 성능에 대한 알림을 추적하고 제공하는 데 사용할 수 있습니다.
+
+**ServiceHealthBehavior**는 <xref:System.ServiceModel.Description.IServiceBehavior>를 확장하는 WCF 서비스 동작입니다.  <xref:System.ServiceModel.Description.ServiceDescription.Behaviors?displayProperty=nameWithType> 컬렉션에 추가될 경우 서비스 동작은 다음과 같습니다.
+
+- HTTP 응답 코드를 사용하여 서비스 상태를 반환합니다. HTTP/GET 상태 프로브 요청에 대한 HTTP 상태 코드를 쿼리 문자열로 지정할 수 있습니다.
+
+- 서비스 상태에 대한 정보를 게시합니다. 서비스 상태, 제한 개수 및 용량을 포함한 서비스별 세부 정보는 `?health` 쿼리 문자열과 함께 HTTP/GET 요청을 사용하여 표시할 수 있습니다. 잘못 동작하는 WCF 서비스 문제를 해결할 때 해당 정보에 쉽게 액세스할 수 있어야 합니다.
+
+다음과 같은 두 가지 방법으로 상태 엔드포인트를 공개하고 WCF 서비스 상태 정보를 게시할 수 있습니다.
+
+- 코드를 통해. 예:
+
+  ```csharp
+  ServiceHost host = new ServiceHost(typeof(Service1),
+                     new Uri("http://contoso:81/Service1"));
+  ServiceHealthBehavior healthBehavior =
+      host.Description.Behaviors.Find<ServiceHealthBehavior>();
+  if (healthBehavior == null)
+  {
+     healthBehavior = new ServiceHealthBehavior();
+  }
+   host.Description.Behaviors.Add(healthBehavior);
+  ```
+
+- 구성 파일 사용. 예:
+
+  ```xml
+  <behaviors>
+    <serviceBehaviors>
+      <behavior name="DefaultBehavior">
+        <serviceHealth httpsGetEnabled="true"/>
+      </behavior>
+    </serviceBehaviors>
+  </behaviors>
+  ```
+
+서비스 상태는 `OnServiceFailure`, `OnDispatcherFailure`, `OnListenerFailure`, `OnThrottlePercentExceeded` 등의 쿼리 매개 변수를 사용하여 쿼리할 수 있고 각 쿼리 매개 변수에 대한 HTTP 응답 코드를 지정할 수 있습니다. 쿼리 매개 변수에 대한 HTTP 응답 코드가 생략되면 기본적으로 503 HTTP 응답 코드가 사용됩니다. 예:
+
+- OnServiceFailure: `https://contoso:81/Service1?health&OnServiceFailure=450`
+
+  [ServiceHost.State](xref:System.ServiceModel.Channels.CommunicationObject.State)가 <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType>보다 크면 450 HTTP 응답 상태 코드가 반환됩니다.
+쿼리 매개 변수 및 예제:
+
+- OnDispatcherFailure: `https://contoso:81/Service1?health&OnDispatcherFailure=455`
+
+  채널 디스패처의 상태가 <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType>보다 크면 455 HTTP 응답 상태 코드가 반환됩니다.
+
+- OnListenerFailure: `https://contoso:81/Service1?health&OnListenerFailure=465`
+
+  채널 수신기의 상태가 <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType>보다 크면 465 HTTP 응답 상태 코드가 반환됩니다.
+
+- OnThrottlePercentExceeded: `https://contoso:81/Service1?health&OnThrottlePercentExceeded= 70:350,95:500`
+
+  응답 및 해당 HTTP 응답 코드 {200~599}를 트리거하는 백분율 {1~100}을 지정합니다. 이 예제에 대한 설명:
+
+    - 백분율이 95보다 크면 500 HTTP 응답 코드가 반환됩니다.
+
+    - 백분율 또는 70~95 사이이면 350이 반환됩니다.
+
+    - 그렇지 않으면 200이 반환됩니다.
+
+HTML에서 `https://contoso:81/Service1?health` 같은 쿼리 문자열을 지정하거나 XML에서 `https://contoso:81/Service1?health&Xml` 같은 쿼리 문자열을 지정하여 서비스 상태를 표시할 수 있습니다. `https://contoso:81/Service1?health&NoContent` 같은 쿼리 문자열은 빈 HTML 페이지를 반환합니다.
+
+<a name="wpf48" />
+
+#### <a name="windows-presentation-foundation-wpf"></a>WPF(Windows Presentation Foundation)
+
+**높은 DPI 기능 향상**
+
+.NET Framework 4.8에서 WPF는 모니터별 V2 DPI 인식 및 혼합 모드 DPI 크기 조정에 대한 지원을 추가합니다. 높은 DPI 개발에 대한 자세한 내용은 [Windows에서 높은 DPI 데스크톱 애플리케이션 개발](/desktop/hidpi/high-dpi-desktop-application-development-on-windows)을 참조하세요.
+
+.NET Framework 4.8은 혼합 모드 DPI 크기 조정(Windows 10 2018년 4월 업데이트부터)을 지원하는 플랫폼의 높은 DPI WPF 애플리케이션에서 호스트되는 HWND 및 Windows Forms 상호 운용 지원을 향상합니다. 호스트된 HWND 또는 Windows Forms 컨트롤이 [SetThreadDpiHostingBehavior](/windows/desktop/api/winuser/nf-winuser-setthreaddpihostingbehavior) 및 [SetThreadDpiAwarenessContext](/windows/desktop/api/winuser/nf-winuser-setthreaddpiawarenesscontext)를 호출하여 혼합 모드 DPI 크기 조정 창으로 만들어지면 이 컨트롤은 모니터별 V2 WPF 애플리케이션에서 호스트될 수 있고 적절하게 크기가 지정되거나 조정됩니다. 해당 호스트된 콘텐츠는 네이티브 DPI로 렌더링되지 않습니다. 대신 운영 체제가 호스트된 콘텐츠를 적절한 크기로 조정합니다. 모니터별 v2 DPI 인식 모드에 대한 지원도 높은 DPI 애플리케이션의 네이티브 창에 WPF 컨트롤을 호스트(부모 지정)할 수 있습니다.
+
+혼합 모드 높은 DPI 크기 조정을 지원하려면 다음 [AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)가 애플리케이션 구성 파일을 전환하도록 설정하면 됩니다.
+
+```xml
+<runtime>
+   <AppContextSwitchOverrides value = "Switch.System.Windows.DoNotScaleForDpiChanges=false; Switch.System.Windows.DoNotUsePresentationDpiCapabilityTier2OrGreater=false"/>
+</runtime>
+```
+
+<a name="clr48" />
+
+#### <a name="common-language-runtime"></a>공용 언어 런타임
+
+.NET Framework 4.8의 런타임은 다음과 같은 변경 내용과 향상된 기능을 포함합니다.
+
+**JIT 컴파일러의 향상된 기능**. .NET Framework 4.8의 JIT(Just-In-Time) 컴파일러는 .NET Core 2.1의 JIT 컴파일러를 기반으로 합니다. .NET Core 2.1 JIT 컴파일러에 적용된 대부분의 최적화 및 모든 버그 수정은 .NET Framework 4.8 JIT 컴파일러에 포함됩니다.
+
+**NGEN 향상된 기능**. NGEN 이미지에서 매핑된 데이터가 메모리에 상주되지 않도록 런타임은 NGEN([네이티브 이미지 생성기](../tools/ngen-exe-native-image-generator.md)) 이미지의 메모리 관리를 개선했습니다. 실행될 메모리를 수정하여 임의 코드를 실행하려고 시도하는 공격에 사용할 수 있는 노출 영역이 줄어듭니다.
+
+**모든 어셈블리에 대한 맬웨어 방지 검사**. 이전 버전의 .NET Framework에서 런타임은 Windows Defender 또는 타사 맬웨어 방지 프로그램을 사용하여 디스크에서 로드된 모든 어셈블리를 검사합니다. 그러나 <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType> 메서드와 같은 기타 소스에서 로드된 어셈블리는 검사되지 않으며 검색되지 않은 맬웨어를 포함할 수 있습니다. Windows 10에서 실행되는 .NET Framework 4.8부터 런타임은 [AMSI(맬웨어 방지 검사 인터페이스)](/windows/desktop/AMSI/antimalware-scan-interface-portal)를 구현하는 맬웨어 방지 솔루션을 통해 검사를 실행합니다.
+
 <a name="v472" />
 
-## <a name="introducing-the-net-framework-472"></a>.NET Framework 4.7.2 소개
+## <a name="whats-new-in-net-framework-472"></a>.NET Framework 4.7.2의 새로운 기능
 
-.NET Framework 4.7.2는 .NET Framework 4.x의 이전 버전에서 빌드되며 제품의 안정성을 유지하면서 많은 새로운 수정 및 여러 가지 새 기능이 추가됩니다.
+.NET Framework 4.7.2에는 다음 영역의 새 기능이 포함됩니다.
 
-### <a name="downloading-and-installing-the-net-framework-472"></a>.NET Framework 4.7.2 다운로드 및 설치
-
-다음 위치에서 .NET Framework 4.7.2를 다운로드할 수 있습니다.
-
-- [.NET Framework 4.7.2 웹 설치 관리자](https://go.microsoft.com/fwlink/?LinkId=863262)
-
-- [.NET Framework 4.7.2 오프라인 설치 관리자](https://go.microsoft.com/fwlink/?LinkId=863265)
-
-.NET Framework 4.7.2는 Windows 10, Windows 8.1, Windows 7 SP1 및 Windows Server 2008 R2 SP1 이상의 해당 서버 플랫폼에 설치할 수 있습니다. 웹 설치 관리자 또는 오프라인 설치 관리자를 사용하여 .NET Framework 4.7.2를 설치할 수 있습니다. 대부분의 사용자에게 권장되는 방법은 웹 설치 관리자를 사용하는 것입니다.
-
-[.NET Framework 4.7.2 개발자 팩](https://go.microsoft.com/fwlink/?LinkId=874338)을 설치하여 Visual Studio 2012 이상 버전에서 .NET Framework 4.7.2를 대상으로 할 수 있습니다.
-
-### <a name="whats-new-in-the-net-framework-472"></a>.NET Framework 4.7.2의 새로운 기능
-
-.NET Framework 4.7.2에는 다음과 같은 영역의 새 기능이 포함됩니다.
-
-- [코어](#core-472)
+- [기본 클래스](#core-472)
 - [ASP.NET](#asp-net472)
 - [네트워킹](#net472)
 - [SQL](#sql472)
@@ -69,7 +203,7 @@ ms.locfileid: "59613761"
 
 <a name="core-472" />
 
-#### <a name="core"></a>코어
+#### <a name="base-classes"></a>기본 클래스
 
 .NET Framework 4.7.2는 여러 향상된 암호화 기능, ZIP 보관을 위한 더 나은 압축 풀기 지원 및 추가적인 컬렉션 API를 제공합니다.
 
@@ -297,7 +431,7 @@ c.SameSite = SameSiteMode.Lax
 
 **HttpClientHandler 속성의 구현**
 
-.NET Framework 4.7.1에서는 8가지 속성을 <xref:System.Net.Http.HttpClientHandler?displayProperty=nameWithType> 클래스에 추가하였습니다. 단, 두 가지 속성은 <xref:System.PlatformNotSupportedException>을 throw했습니다. 이제 .NET Framework 4.7.2는 이러한 속성에 대한 구현을 제공합니다. 속성은 다음과 같습니다.
+.NET Framework 4.7.1에서는 8가지 속성을 <xref:System.Net.Http.HttpClientHandler?displayProperty=nameWithType> 클래스에 추가했습니다. 단, 두 가지 속성은 <xref:System.PlatformNotSupportedException>을 throw했습니다. 이제 .NET Framework 4.7.2는 이 속성에 대한 구현을 제공합니다. 속성은 다음과 같습니다.
 
 - <xref:System.Net.Http.HttpClientHandler.CheckCertificateRevocationList>
 - <xref:System.Net.Http.HttpClientHandler.SslProtocols>
@@ -308,7 +442,7 @@ c.SameSite = SameSiteMode.Lax
 
 **Azure Active Directory 유니버설 인증 및 다단계 인증에 대한 지원**
 
-높아지는 규정 준수 및 보안 요구에 따라 많은 고객들은 MFA(다단계 인증)를 사용해야 합니다. 또한 현재 모범 사례들은 연결 문자열에서 직접 사용자 암호를 포함하는 것을 배제합니다. 이러한 변경 내용을 지원하기 위해 .NET Framework 4.7.2는 기존 “인증” 키워드가 MFA 및 [Azure AD 인증](/azure/sql-database/sql-database-aad-authentication-configure)을 지원하도록 새로운 값인 “Active Directory 대화형”을 추가하여 [SQLClient 연결 문자열](xref:System.Data.SqlClient.SqlConnection.ConnectionString)을 확장합니다. 새로운 대화형 메서드는 Azure AD 게스트 사용자와 함께 네이티브 및 페더레이션 Azure AD 사용자를 지원합니다. 이 메서드를 사용하는 경우 Azure AD에서 도입된 MFA 인증은 SQL 데이터베이스에 지원됩니다. 또한 인증 프로세스에는 보안 모범 사례에 적합한 사용자 암호가 필요합니다.
+높아지는 규정 준수 및 보안 요구에 따라 많은 고객들은 MFA(다단계 인증)를 사용해야 합니다. 또한 현재 모범 사례들은 연결 문자열에서 직접 사용자 암호를 포함하는 것을 배제합니다. 이 변경 내용을 지원하기 위해 .NET Framework 4.7.2는 기존 “인증” 키워드가 MFA 및 [Azure AD 인증](/azure/sql-database/sql-database-aad-authentication-configure)을 지원하도록 새로운 값인 “Active Directory 대화형”을 추가하여 [SQLClient 연결 문자열](xref:System.Data.SqlClient.SqlConnection.ConnectionString)을 확장합니다. 새로운 대화형 메서드는 Azure AD 게스트 사용자와 함께 네이티브 및 페더레이션 Azure AD 사용자를 지원합니다. 이 메서드를 사용하는 경우 Azure AD에서 도입된 MFA 인증은 SQL 데이터베이스에 지원됩니다. 또한 인증 프로세스에는 보안 모범 사례에 적합한 사용자 암호가 필요합니다.
 
 이전 버전의 .NET Framework에서 SQL 연결은 <xref:System.Data.SqlClient.SqlAuthenticationMethod.ActiveDirectoryPassword?displayProperty=nameWithType> 및 <xref:System.Data.SqlClient.SqlAuthenticationMethod.ActiveDirectoryIntegrated?displayProperty=nameWithType> 옵션만 지원했습니다. 이 두 가지는 모두 비대화형 [ADAL 프로토콜](/azure/active-directory/develop/active-directory-authentication-libraries)의 일부로 MFA를 지원하지 않습니다. 새 <xref:System.Data.SqlClient.SqlAuthenticationMethod.ActiveDirectoryInteractive?displayProperty=nameWithType> 옵션을 사용하면 SQL 연결은 기존 인증 방법(암호 및 통합된 인증)과 함께 MFA를 지원하므로 연결 문자열에 암호를 유지할 필요 없이 사용자가 사용자 암호를 대화형으로 입력할 수 있습니다.
 
@@ -390,7 +524,7 @@ Visual Studio의 “편집하며 계속하기” 기능과 같은 진단 도우�
 
 **StaticResource 참조 찾기**
 
-이제 진단 도우미는 [StaticResource](../wpf/advanced/staticresource-markup-extension.md) 참조가 확인될 때마다 알림을 받을 수 있습니다. (이는 프로덕션 애플리케이션이 아닌 진단 도우미에서 사용하기 위한 기능입니다.) Visual Studio의 “편집하며 계속하기” 기능과 같은 진단 도우미는 해당 값이 <xref:Windows.UI.Xaml.ResourceDictionary> 변경 내용에 포함된 경우 리소스의 모든 사용을 업데이트해야 할 수도 있습니다. WPF는 [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) 참조에 대해 이를 자동으로 수행하지만, [StaticResource](../wpf/advanced/staticresource-markup-extension.md) 참조에 대해서는 의도적으로 수행하지 않습니다. .NET Framework 4.7.2부터 진단 도우미는 이러한 알림을 사용하여 정적 리소스의 해당 사용을 찾을 수 있습니다.
+이제 진단 도우미는 [StaticResource](../wpf/advanced/staticresource-markup-extension.md) 참조가 확인될 때마다 알림을 받을 수 있습니다. (이는 프로덕션 애플리케이션이 아닌 진단 도우미에서 사용하기 위한 기능입니다.) Visual Studio의 “편집하며 계속하기” 기능과 같은 진단 도우미는 해당 값이 <xref:Windows.UI.Xaml.ResourceDictionary> 변경 내용에 포함된 경우 리소스의 모든 사용을 업데이트해야 할 수도 있습니다. WPF는 [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) 참조에 대해 이를 자동으로 수행하지만, [StaticResource](../wpf/advanced/staticresource-markup-extension.md) 참조에 대해서는 의도적으로 수행하지 않습니다. .NET Framework 4.7.2부터 진단 도우미는 이 알림을 사용하여 정적 리소스의 해당 사용을 찾을 수 있습니다.
 
 알림은 새로운 <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.StaticResourceResolved?displayProperty=nameWithType> 이벤트에 의해 구현됩니다.
 
@@ -433,11 +567,11 @@ Windows Forms 애플리케이션의 경우 애플리케이션 매니페스트가
 
 <a name="v471" />
 
-## <a name="whats-new-in-the-net-framework-471"></a>.NET Framework 4.7.1의 새로운 기능
+## <a name="whats-new-in-net-framework-471"></a>.NET Framework 4.7.1의 새로운 기능
 
-.NET Framework 4.7.1에는 다음과 같은 영역의 새 기능이 포함됩니다.
+.NET Framework 4.7.1에는 다음 영역의 새 기능이 포함됩니다.
 
-- [코어](#core471)
+- [기본 클래스](#core471)
 - [CLR(공용 언어 런타임)](#clr)
 - [네트워킹](#net471)
 - [ASP.NET](#asp-net471)
@@ -446,7 +580,7 @@ Windows Forms 애플리케이션의 경우 애플리케이션 매니페스트가
 
 <a name="core471" />
 
-#### <a name="core"></a>코어
+#### <a name="base-classes"></a>기본 클래스
 
 **.NET Standard 2.0에 대한 지원**
 
@@ -484,7 +618,7 @@ Windows Forms 애플리케이션의 경우 애플리케이션 매니페스트가
 
 **Message.HashAlgorithm에 대한 SHA-2 지원**
 
-.NET Framework 4.7 및 이전 버전에서 <xref:System.Messaging.Message.HashAlgorithm%2A?displayProperty=nameWithType> 속성은 <xref:System.Messaging.HashAlgorithm.Md5?displayProperty=nameWithType> 및 <xref:System.Messaging.HashAlgorithm.Sha?displayProperty=nameWithType> 값만 지원했습니다. .NET Framework 4.7.1부터는 <xref:System.Messaging.HashAlgorithm.Sha256?displayProperty=nameWithType>, <xref:System.Messaging.HashAlgorithm.Sha384?displayProperty=nameWithType>, 및 <xref:System.Messaging.HashAlgorithm.Sha512?displayProperty=nameWithType>도 지원됩니다. <xref:System.Messaging.Message> 인스턴스 자체가 해싱을 수행하지는 않지만 MSMQ에 값을 전달하므로 이 값이 실제로 사용되는지 여부는 MSMQ에 따라 달라집니다. 자세한 내용은 [.NET Framework 4.7.1 ASP.NET and Configuration Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-asp-net-and-configuration-features/)(.NET Framework 4.7.1 ASP.NET 및 구성 기능) 블로그 게시물의 "SHA-2 support for Message.HashAlgorithm"(Message.HashAlgorithm에 대한 SHA-2 지원) 섹션을 참조하세요.
+.NET Framework 4.7 및 이전 버전에서 <xref:System.Messaging.Message.HashAlgorithm%2A?displayProperty=nameWithType> 속성은 <xref:System.Messaging.HashAlgorithm.Md5?displayProperty=nameWithType> 및 <xref:System.Messaging.HashAlgorithm.Sha?displayProperty=nameWithType> 값만 지원했습니다. .NET Framework 4.7.1부터는 <xref:System.Messaging.HashAlgorithm.Sha256?displayProperty=nameWithType>, <xref:System.Messaging.HashAlgorithm.Sha384?displayProperty=nameWithType> 및 <xref:System.Messaging.HashAlgorithm.Sha512?displayProperty=nameWithType>도 지원됩니다. <xref:System.Messaging.Message> 인스턴스 자체가 해싱을 수행하지는 않지만 MSMQ에 값을 전달하므로 이 값이 실제로 사용되는지 여부는 MSMQ에 따라 달라집니다. 자세한 내용은 [.NET Framework 4.7.1 ASP.NET and Configuration Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-asp-net-and-configuration-features/)(.NET Framework 4.7.1 ASP.NET 및 구성 기능) 블로그 게시물의 "SHA-2 support for Message.HashAlgorithm"(Message.HashAlgorithm에 대한 SHA-2 지원) 섹션을 참조하세요.
 
 <a name="asp-net471" />
 
@@ -500,7 +634,7 @@ ASP.NET은 23개 이벤트가 포함된 미리 정의된 파이프라인의 요�
 
 **ASP.NET 양식 인증 자격 증명에 대한 SHA-2 해시 지원**
 
-.NET Framework 4.7 및 이전 버전에서는 개발자가 MD5 또는 SHA1을 사용하여 구성 파일에 해시 암호와 사용자 자격 증명을 저장할 수 있었습니다. .NET Framework 4.7.1부터 ASP.NET은 SHA256, SHA384 및 SHA512 같은 새로운 보안 SHA-2 해시 옵션도 지원합니다. SHA1은 기본값을 유지하며, 기본값이 아닌 해시 알고리즘은 웹 구성 파일에 정의할 수 있습니다. 예:
+.NET Framework 4.7 이하 버전에서는 개발자가 MD5 또는 SHA1을 사용하여 구성 파일에 해시 암호와 사용자 자격 증명을 저장할 수 있었습니다. .NET Framework 4.7.1부터 ASP.NET은 SHA256, SHA384 및 SHA512 같은 새로운 보안 SHA-2 해시 옵션도 지원합니다. SHA1은 기본값을 유지하며, 기본값이 아닌 해시 알고리즘은 웹 구성 파일에 정의할 수 있습니다. 예:
 
 ```xml
 <system.web>
@@ -516,11 +650,11 @@ ASP.NET은 23개 이벤트가 포함된 미리 정의된 파이프라인의 요�
 
 <a name="v47" />
 
-## <a name="whats-new-in-the-net-framework-47"></a>.NET Framework 4.7의 새로운 기능
+## <a name="whats-new-in-net-framework-47"></a>.NET Framework 4.7의 새로운 기능
 
-.NET Framework 4.7에는 다음과 같은 영역의 새 기능이 포함됩니다.
+.NET Framework 4.7에는 다음 영역의 새 기능이 포함됩니다.
 
-- [코어](#Core47)
+- [기본 클래스](#Core47)
 - [네트워킹](#net47)
 - [ASP.NET](#ASP-NET47)
 - [WCF(Windows Communication Foundation)](#wcf47)
@@ -531,7 +665,7 @@ ASP.NET은 23개 이벤트가 포함된 미리 정의된 파이프라인의 요�
 
 <a name="Core47" />
 
-#### <a name="core"></a>코어
+#### <a name="base-classes"></a>기본 클래스
 
 .NET Framework 4.7은 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>를 통해 serialization을 향상합니다.
 
@@ -561,7 +695,7 @@ GitHub에서 [.NET Framework 4.7 암호화 개선 예제](https://gist.github.co
 
 #### <a name="aspnet"></a>ASP.NET
 
-NET Framework 4.7에서 ASP.NET에는 다음과 같은 새 기능이 포함됩니다.
+.NET Framework 4.7에서 ASP.NET에는 다음과 같은 새 기능이 포함됩니다.
 
 **개체 캐시 확장성**
 
@@ -626,7 +760,7 @@ WISP(Windows 잉크 서비스 플랫폼) 대신 [WM_POINTER 메시지](https://d
 
 <a name="v462" />
 
-## <a name="whats-new-in-the-net-framework-462"></a>.NET Framework 4.6.2의 새로운 기능
+## <a name="whats-new-in-net-framework-462"></a>.NET Framework 4.6.2의 새로운 기능
 
 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]에는 다음과 같은 영역의 새 기능이 포함됩니다.
 
@@ -1087,7 +1221,7 @@ ClickOnce는 이미 지원되는 1.0 프로토콜 외에 TLS 1.1 및 TLS 1.2를 
 
 <a name="v461" />
 
-## <a name="whats-new-in-the-net-framework-461"></a>.NET Framework 4.6.1의 새로운 기능
+## <a name="whats-new-in-net-framework-461"></a>.NET Framework 4.6.1의 새로운 기능
 
 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]에는 다음과 같은 영역의 새 기능이 포함됩니다.
 
@@ -1352,7 +1486,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
              [!code-csharp[WhatsNew.Casting#1](~/samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#1)]
              [!code-vb[WhatsNew.Casting#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#1)]
 
-             .NET Framework 4.6에서 새로운 암호화 API를 사용하는 코드는 캐스팅을 방지하기 위해 다음과 같이 작성될 수 있습니다.
+             .NET Framework 4.6에서 새로운 암호화 API를 사용하는 코드는 캐스팅을 방지하기 위해 다음과 같이 다시 작성될 수 있습니다.
 
              [!code-csharp[WhatsNew.Casting#2](~/samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#2)]
              [!code-vb[WhatsNew.Casting#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#2)]
@@ -1582,7 +1716,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
 <a name="v452" />
 
-## <a name="whats-new-in-the-net-framework-452"></a>.NET Framework 4.5.2의 새로운 기능
+## <a name="whats-new-in-net-framework-452"></a>.NET Framework 4.5.2의 새로운 기능
 
 - **ASP.NET 앱을 위한 새 API.** 새로운 <xref:System.Web.HttpResponse.AddOnSendingHeaders%2A?displayProperty=nameWithType> 및 <xref:System.Web.HttpResponseBase.AddOnSendingHeaders%2A?displayProperty=nameWithType> 메서드를 통해, 응답이 클라이언트 앱에 플러시되고 있을 때 응답 헤더와 상태 코드를 검사 및 수정할 수 있습니다. 이러한 메서드는 <xref:System.Web.HttpApplication.PreSendRequestHeaders> 및 <xref:System.Web.HttpApplication.PreSendRequestContent> 이벤트 대신 사용할 수 있으며 더욱 효율적이고 신뢰할 수 있습니다.
 
@@ -1653,7 +1787,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
 <a name="v451" />
 
-## <a name="whats-new-in-the-net-framework-451"></a>.NET Framework 4.5.1의 새로운 기능
+## <a name="whats-new-in-net-framework-451"></a>.NET Framework 4.5.1의 새로운 기능
 
 **2014년 4월 업데이트**:
 
@@ -1673,7 +1807,7 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
 
 - [.NET Framework 참조 소스](https://referencesource.microsoft.com/)에서는 새로운 검색 환경과 향상된 기능을 제공합니다. 온라인에서 .NET Framework 소스 코드를 검색하여, [참조를 다운로드](https://referencesource.microsoft.com/download.html)해 오프라인에서 살펴보고, 디버그 시 소스(패치 및 업데이트 포함)를 단계별로 실행할 수 있습니다. 자세한 내용은 블로그 항목 [.NET 참조 소스의 새로운 디자인](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/)을 참조하십시오.
 
-.NET Framework 4.5.1의 주요 새로운 기능 및 향상된 기능은 다음과 같습니다.
+.NET Framework 4.5.1에서 기본 클래스의 새로운 기능 및 향상된 기능은 다음과 같습니다.
 
 - 어셈블리에 대한 자동 바인딩 리디렉션. Visual Studio 2013부터는 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]을 대상으로 하는 앱을 컴파일할 때 앱 또는 해당 구성 요소가 동일한 어셈블리의 여러 버전을 참조할 경우 앱 구성 파일에 바인딩 리디렉션을 추가할 수 있습니다. 또한 이전 버전의 .NET Framework를 대상으로 하는 프로젝트에 대해 이 기능을 사용하도록 설정할 수 있습니다. 자세한 내용은 [방법: 자동 바인딩 리디렉션 사용 설정 및 해제](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)를 참조하세요.
 
@@ -1715,9 +1849,9 @@ ASP.NET 4.5.1의 새로운 기능은 [Visual Studio 2013용 ASP.NET 및 Web Tool
 
 <a name="v45" />
 
-## <a name="whats-new-in-the-net-framework-45"></a>.NET Framework 4.5의 새로운 기능
+## <a name="whats-new-in-net-framework-45"></a>.NET Framework 4.5의 새로운 기능
 
-### <a name="core-new-features-and-improvements"></a>주요 새로운 기능 및 향상된 기능
+### <a name="base-classes"></a>기본 클래스
 
 - 배포 시 .NET Framework 4 애플리케이션을 감지하고 닫아 시스템 다시 시작 횟수를 줄이는 기능. [.NET Framework 4.5를 설치하는 동안 시스템 다시 시작 줄이기](../deployment/reducing-system-restarts.md)를 참조하십시오.
 
@@ -1881,7 +2015,7 @@ ASP.NET 4.5 및 4.5.1은 Web Forms, WebSocket 지원, 비동기 처리기, 성�
 
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]의 Windows WF(Workflow Foundation)에 몇 가지 새로운 기능이 추가되었습니다.
 
-- 상태 시스템 워크플로가 .NET Framework 4.0.1([.NET Framework 4 플랫폼 업데이트 1](https://go.microsoft.com/fwlink/?LinkID=215092))의 일부로 처음 도입됨. 이 업데이트에는 개발자가 상태 시스템 워크플로를 만들 수 있도록 하는 몇 가지 새로운 클래스와 활동이 포함되었습니다. 이러한 클래스와 활동은 다음을 포함하도록 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에 대해 업데이트되었습니다.
+- 상태 머신 워크플로가 .NET Framework 4.0.1([.NET Framework 4 플랫폼 업데이트 1](https://go.microsoft.com/fwlink/?LinkID=215092))의 일부로 처음 도입되었습니다. 이 업데이트에는 개발자가 상태 시스템 워크플로를 만들 수 있도록 하는 몇 가지 새로운 클래스와 활동이 포함되었습니다. 이러한 클래스와 활동은 다음을 포함하도록 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에 대해 업데이트되었습니다.
 
     - 상태에 중단점을 설정하는 기능
 
