@@ -1,0 +1,76 @@
+- name: ML.NET 가이드
+  href: index.yml
+- name: 개요
+  expanded: true
+  items:
+    - name: ML.NET이란?
+      href: what-is-mldotnet.md
+    - name: 모델 학습 개념
+      href: basic-concepts-model-training-in-mldotnet.md
+- name: 자습서
+  href: null
+  items:
+    - name: 개요
+      href: tutorials/index.md
+    - name: 감정 분석(이진 분류)
+      href: tutorials/sentiment-analysis.md
+    - name: 문제 분류(다중 클래스 분류)
+      href: tutorials/github-issue-classification.md
+    - name: 가격 예측(회귀)
+      href: tutorials/taxi-fare.md
+    - name: 아이리스 꽃(클러스터링)
+      href: tutorials/iris-clustering.md
+    - name: 동영상 권장 사항(권장 사항)
+      href: tutorials/movie-recommmendation.md
+    - name: 이미지 분류(전이 학습)
+      href: tutorials/image-classification.md
+- name: 방법 가이드
+  items:
+    - name: 데이터 로드
+      href: how-to-guides/load-data-ml-net.md
+    - name: 데이터 준비
+      href: how-to-guides/index.md
+      items:
+        - name: 범주 기능 엔지니어링 적용
+          href: how-to-guides/train-model-categorical-ml-net.md
+        - name: 텍스트 기능 엔지니어링 적용
+          href: how-to-guides/train-model-textual-ml-net.md
+        - name: 노멀라이저를 사용하여 데이터 전처리
+          href: how-to-guides/normalizers-preprocess-data-ml-net.md
+    - name: '학습, 평가 및 모델 설명'
+      items:
+        - name: 교차 유효성 검사를 사용하여 모델 학습
+          href: how-to-guides/train-cross-validation-ml-net.md
+        - name: 중간 파이프라인 데이터 값 검사
+          href: how-to-guides/inspect-intermediate-data-ml-net.md
+        - name: 회귀 모델 학습
+          href: how-to-guides/train-regression-model-ml-net.md
+        - name: PFI를 사용하여 모델 기능 중요도 파악
+          href: how-to-guides/determine-global-feature-importance-in-model.md
+    - name: 학습된 모델 사용
+      items:
+        - name: PredictionEngine을 사용하여 한 번에 하나씩 예측 수행
+          href: how-to-guides/single-predict-model-ml-net.md
+        - name: 학습된 모델 운용
+          href: how-to-guides/consuming-model-ml-net.md
+        - name: 모델 Azure Functions 제공
+          href: how-to-guides/serve-model-serverless-azure-functions-ml-net.md
+        - name: Web API에서 모델 제공
+          href: how-to-guides/serve-model-web-api-ml-net.md
+        - name: Infer.NET
+          items: null
+        - name: Infer.NET을 사용한 확률 프로그래밍
+          href: how-to-guides/matchup-app-infer-net.md
+- name: 참조
+  items:
+    - name: API 참조
+      href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet'
+- name: 자료
+  href: resources/index.md
+  items:
+    - name: 기계 학습 용어집
+      href: resources/glossary.md
+    - name: 기계 학습 작업
+      href: resources/tasks.md
+    - name: 데이터 변환
+      href: resources/transforms.md
