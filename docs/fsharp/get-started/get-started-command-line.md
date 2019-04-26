@@ -36,7 +36,7 @@ FSNetCore
 
 ### <a name="write-a-class-library"></a>클래스 라이브러리 작성
 
-*FSNetCore*으로 디렉터리를 변경합니다.
+*FSNetCore*로 디렉터리를 변경합니다.
 
 `dotnet new` 명령어를 사용하여 **src** 폴더에 Library라는 클래스 라이브러리 프로젝트를 만듭니다. 
 
@@ -78,7 +78,7 @@ dotnet add src/Library/Library.fsproj package Newtonsoft.Json
 dotnet sln add src/Library/Library.fsproj
 ```
 
-`dotnet build`를 실행하여 프로젝트를 빌드합니다. 확인되지 않은 종속성은 빌드할 때 복원 됩니다.
+`dotnet build`를 실행하여 프로젝트를 빌드합니다. 확인되지 않은 종속성은 빌드할 때 복원됩니다.
 
 ### <a name="write-a-console-application-that-consumes-the-class-library"></a>클래스 라이브러리를 사용하는 콘솔 응용 프로그램 작성
 
@@ -102,7 +102,7 @@ dotnet new console -lang F# -o src/App
             └── Library.fsproj
 ```
 
-`Program.fs`파일의 내용을 다음 코드로 대체 합니다 :
+`Program.fs`파일의 내용을 다음 코드로 대체합니다.
 
 ```fsharp
 open System
@@ -151,4 +151,4 @@ I used to be World but now I'm ""World"" thanks to JSON.NET!
 
 ## <a name="next-steps"></a>다음 단계
 
-다음으로 다양한 F#기능을 알아보기위해 [F# 둘러보기](../tour.md)를 확인합니다.
+다음으로 다양한 F#기능을 알아보기 위해 [F# 둘러보기](../tour.md)를 확인합니다.
