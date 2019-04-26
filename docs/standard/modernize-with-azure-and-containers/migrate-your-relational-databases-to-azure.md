@@ -77,11 +77,11 @@ Azure SQL Database는 다음과 같은 이점을 제공합니다.
 
 - SQL Server 2016에서는 하이브리드 및 마이그레이션을 비롯 한 호환성
 
-표준 Azure SQL Database 보다 더 가까운 PaaS로 Azure SQL Database Managed Instance. 관리 되는 클라우드에서 많은 혜택을 얻게 되므로 표준 Azure SQL Database를 선호 합니다. 그러나 Azure SQL Database 일반에서 몇 가지 주요 차이점이 있으며 온-프레미스 SQL Server 인스턴스. 기존 응용 프로그램의 데이터베이스 요구 사항 및 enterprise 요구 사항 및 정책에 따라 아닐 최상의 클라우드로 마이그레이션을 계획할 때.
+표준 Azure SQL 데이터베이스는 Azure SQL Database Managed Instance 보다 PaaS에 더 가깝습니다. 표준 Azure SQL 데이터베이스를 선호하는 이유는 관리되는 클라우드에서 더 많은 이점을 얻을 수 있기 때문입니다. 그러나 Azure SQL 데이터베이스는 온-프레미스나 일반적인 SQL Server 인스턴스와 몇가지 주요 차이점이 존재합니다. 기존 애플리케이션의 데이터베이스 요구사항과 엔터프라이즈 요구사항 및 정책에따라 클라우드로 마이그레이션을 계획할 때 최선의 선택이 아닐 수도 있습니다.
 
-## <a name="when-to-move-your-original-rdbms-to-a-vm-iaas"></a>원래 RDBMS에 VM (IaaS)으로 이동 하는 경우
+## <a name="when-to-move-your-original-rdbms-to-a-vm-iaas"></a>원래 RDBMS를 VM(IaaS)으로 이동하는 시점
 
-마이그레이션 옵션 중 하나에 원래 관계형 데이터베이스 관리 시스템 (RDBMS), Oracle, IBM DB2, MySQL, PostgreSQL 또는 SQL Server를 포함 하 여 Azure VM에서 실행 되는 유사한 서버로 이동 하는 것입니다. 최소한의 변경 내용 또는 변경 없이 클라우드에서 가장 빠른 마이그레이션에 필요한 기존 응용 프로그램에 있는 경우 IaaS 클라우드에서로 직접 마이그레이션하는 공정 옵션을 수 있습니다. 가장 좋은 방법은 클라우드의 모든 이점을 활용 되지 않을 수 있습니다 하지만 가장 빠른 초기 경로 것입니다.
+마이그레이션 옵션 중 하나는 Oracle, IBM DB2, MySQL, PostgreSQL 또는 SQL Server를 포함한 원래의 관계형 데이터베이스 관리 시스템 (RDBMS)을 Azure VM에서 실행중인 서버와 유사한 서버로 이동하는 것입니다. 전혀 변경하지 않거나 최소한의 변경만으로 가장 빠르게 클라우드로 마이그레이션을 수행해야하는 기존 애플리케이션이 있으면 클라우드의 IaaS로 직접 마이그레이션하는 것이 적절한 옵션일 수 있습니다. 이 방법이 클라우드의 모든 이점을 활용하는 최선의 방법은 아니지만 아마도 가장 빠르게 시작하는 방법일 것입니다.
 
 현재까지 Microsoft Azure 지원 [331 다른 데이터베이스 서버](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/category/databases?page=1&subcategories=databases-all) IaaS Vm으로 배포 합니다. 여기에 SQL Server, Oracle, MySQL, PostgreSQL 및 IBM DB2와 같은 인기 있는 RDBMS MongoDB, Cassandra, DataStax, MariaDB, 및 Cloudera와 같은 다른 많은 NoSQL 데이터베이스 포함 됩니다.
 
