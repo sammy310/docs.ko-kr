@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 4958f3e28b80fca2086d45827df1ced8fc26bd8e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f4267caeb6301950b9f6a8b9545a47b9f48e7920
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59672292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61689816"
 ---
 # <a name="c-operators"></a>C# 연산자
 
@@ -77,7 +77,7 @@ C#에서는 많은 연산자를 제공하며, 이러한 연산자는 식에서 �
 
 [\!x](boolean-logical-operators.md#logical-negation-operator-) – 논리 부정
 
-[~x](bitwise-complement-operator.md) – 비트 보수
+[~x](bitwise-and-shift-operators.md#bitwise-complement-operator-) – 비트 보수
 
 [++x](arithmetic-operators.md#increment-operator-) – 전위 증가 1보다 큰 x 값(일반적으로 정수 1을 더함)으로 스토리지 위치를 업데이트한 후 x의 값을 반환합니다.
 
@@ -90,6 +90,10 @@ C#에서는 많은 연산자를 제공하며, 이러한 연산자는 식에서 �
 [&x](and-operator.md) – 주소
 
 [*x](multiplication-operator.md) – 역참조
+
+[true 연산자](../keywords/true-false-operators.md) - [bool](../keywords/bool.md) 값 `true`를 반환하여 피연산자가 확실히 true임을 나타냅니다.
+
+[false 연산자](../keywords/true-false-operators.md) - [bool](../keywords/bool.md) 값 `true`를 반환하여 피연산자가 확실히 false임을 나타냅니다.
 
 ## <a name="multiplicative-operators"></a>곱하기 연산자
 
@@ -113,9 +117,9 @@ C#에서는 많은 연산자를 제공하며, 이러한 연산자는 식에서 �
 
 이러한 연산자는 다음 섹션보다 우선 순위가 높고 이전 섹션보다 우선 순위가 낮습니다.
 
-[x <\<  y](left-shift-operator.md) – 왼쪽 비트를 시프트하고 오른쪽을 0으로 채웁니다.
+[x <\<  y](bitwise-and-shift-operators.md#left-shift-operator-) – 왼쪽 비트를 시프트하고 오른쪽을 0으로 채웁니다.
 
-[x >> y](right-shift-operator.md) – 오른쪽 비트를 시프트합니다. 왼쪽 피연산자가 `int` 또는 `long`이면 왼쪽 비트는 부호 비트로 채워집니다. 왼쪽 피연산자가 `uint` 또는 `ulong`이면 왼쪽 비트는 0으로 채워집니다.
+[x >> y](bitwise-and-shift-operators.md#right-shift-operator-) – 오른쪽 비트를 시프트합니다. 왼쪽 피연산자가 `int` 또는 `long`이면 왼쪽 비트는 부호 비트로 채워집니다. 왼쪽 피연산자가 `uint` 또는 `ulong`이면 왼쪽 비트는 0으로 채워집니다.
 
 ## <a name="relational-and-type-testing-operators"></a>관계형 및 형식 테스트 연산자
 
@@ -145,27 +149,19 @@ C#에서는 많은 연산자를 제공하며, 이러한 연산자는 식에서 �
 
 이 연산자는 다음 섹션보다 우선 순위가 높고 이전 섹션보다 우선 순위가 낮습니다.
 
-[x & y](and-operator.md) – 논리적 또는 비트 AND. 일반적으로 정수 형식 및 `enum` 형식에서 사용할 수 있습니다.
+`x & y` – `bool` 피연산자의 경우 [논리 AND](boolean-logical-operators.md#logical-and-operator-)이고, 정수 형식 피연산자의 경우 [비트 논리 AND](bitwise-and-shift-operators.md#logical-and-operator-)입니다.
 
 ## <a name="logical-xor-operator"></a>논리적 XOR 연산자
 
 이 연산자는 다음 섹션보다 우선 순위가 높고 이전 섹션보다 우선 순위가 낮습니다.
 
-[x ^ y](xor-operator.md) – 논리적 또는 비트 XOR. 일반적으로 정수 형식 및 `enum` 형식에서 사용할 수 있습니다.
+`x ^ y` – `bool` 피연산자의 경우 [논리 XOR](boolean-logical-operators.md#logical-exclusive-or-operator-)이고, 정수 형식 피연산자의 경우 [비트 논리 XOR](bitwise-and-shift-operators.md#logical-exclusive-or-operator-)입니다.
 
 ## <a name="logical-or-operator"></a>이는 논리 OR 연산자입니다
 
 이 연산자는 다음 섹션보다 우선 순위가 높고 이전 섹션보다 우선 순위가 낮습니다.
 
-[x &#124; y](or-operator.md) – 논리적 또는 비트 OR. 일반적으로 정수 형식 및 `enum` 형식에서 사용할 수 있습니다.
-
-## <a name="true-operator"></a>True 연산자
-
-[true](../keywords/true-false-operators.md) 연산자는 [부울](../keywords/bool.md) 값 `true`를 반환하여 피연산자가 확실히 true임을 나타냅니다. 
-
-## <a name="false-operator"></a>False 연산자
-
-[false](../keywords/true-false-operators.md) 연산자는 [부울](../keywords/bool.md) 값 `true`를 반환하여 피연산자가 확실히 false임을 나타냅니다. 
+`x | y` – `bool` 피연산자의 경우 [논리 OR](boolean-logical-operators.md#logical-or-operator-)이고, 정수 형식 피연산자의 경우 [비트 논리 OR](bitwise-and-shift-operators.md#logical-or-operator-)입니다.
 
 ## <a name="conditional-and-operator"></a>조건부 AND 연산자
 
@@ -201,21 +197,21 @@ C#에서는 많은 연산자를 제공하며, 이러한 연산자는 식에서 �
 
 [x -= y](subtraction-assignment-operator.md) – 감소. `x`의 값에서 `y`의 값을 빼고 결과를 `x`에 저장한 다음 새 값을 반환합니다. `x`가 `event`를 지정하는 경우 `y`는 C#에서 이벤트 처리기로 제거하는 적절한 함수여야 합니다.
 
-[x *= y](multiplication-assignment-operator.md) – 곱하기 대입. `y`의 값을 `x`의 값에 곱하고 결과를 `x`에 저장한 다음 새 값을 반환합니다.
+[x *= y](arithmetic-operators.md#compound-assignment) – 곱하기 대입. `y`의 값을 `x`의 값에 곱하고 결과를 `x`에 저장한 다음 새 값을 반환합니다.
 
 [x /= y](arithmetic-operators.md#compound-assignment) – 나누기 대입. `x`의 값을 `y`의 값으로 나누고 결과를 `x`에 저장한 다음 새 값을 반환합니다.
 
 [x %= y](arithmetic-operators.md#compound-assignment) – 나머지 할당. `x`의 값을 `y`의 값으로 나누고 나머지를 `x`에 저장한 다음 새 값을 반환합니다.
 
-[x &= y](and-assignment-operator.md) – AND 대입. `y`의 값을 `x`의 값과 AND하고 결과를 `x`에 저장한 다음 새 값을 반환합니다.
+[x &= y](boolean-logical-operators.md#compound-assignment) – AND 대입. `y`의 값을 `x`의 값과 AND하고 결과를 `x`에 저장한 다음 새 값을 반환합니다.
 
-[x &#124;= y](or-assignment-operator.md) – OR 대입. `y`의 값을 `x`의 값과 OR하고 결과를 `x`에 저장한 다음 새 값을 반환합니다.
+[x &#124;= y](boolean-logical-operators.md#compound-assignment) – OR 대입. `y`의 값을 `x`의 값과 OR하고 결과를 `x`에 저장한 다음 새 값을 반환합니다.
 
-[x ^= y](xor-assignment-operator.md) – XOR 대입. `y`의 값을 `x`의 값과 XOR하고 결과를 `x`에 저장한 다음 새 값을 반환합니다.
+[x ^= y](boolean-logical-operators.md#compound-assignment) – XOR 대입. `y`의 값을 `x`의 값과 XOR하고 결과를 `x`에 저장한 다음 새 값을 반환합니다.
 
-[x <<= y](left-shift-assignment-operator.md) – 왼쪽 시프트 대입. `x`의 값을 왼쪽으로 `y` 위치만큼 시프트하고 결과를 `x`에 저장한 다음 새 값을 반환합니다.
+[x <<= y](bitwise-and-shift-operators.md#compound-assignment) – 왼쪽 시프트 대입. `x`의 값을 왼쪽으로 `y` 위치만큼 시프트하고 결과를 `x`에 저장한 다음 새 값을 반환합니다.
 
-[x >>= y](right-shift-assignment-operator.md) – 오른쪽 시프트 대입. `x`의 값을 오른쪽으로 `y` 위치만큼 시프트하고 결과를 `x`에 저장한 다음 새 값을 반환합니다.
+[x >>= y](bitwise-and-shift-operators.md#compound-assignment) – 오른쪽 시프트 대입. `x`의 값을 오른쪽으로 `y` 위치만큼 시프트하고 결과를 `x`에 저장한 다음 새 값을 반환합니다.
 
 [=>](lambda-operator.md) – 람다 선언.
 
