@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30766
 ms.assetid: 13918600-6087-40d7-8134-32aa9d3bfda4
 ms.openlocfilehash: 2561995e6b03efb2b6c10b7ded7cd76805ec481c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801610"
 ---
 # <a name="functionname-is-not-declared-smart-devicevisual-basic-compiler-error"></a>'\<functionname >' 선언 되지 않았습니다 (스마트 장치/Visual Basic 컴파일러 오류)
 <`functionname`> 선언 되지 않았습니다. 파일 I/O 기능은 일반적으로 `Microsoft.VisualBasic` 네임스페이스에서 사용할 수 있지만 대상 버전의 .NET Compact Framework에서 지원하지 않습니다.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
 ms.openlocfilehash: 83507a95dbc4bc7499b94a516f569703f21a2726
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855129"
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>방법: WSE 3.0 액세스 WCF 클라이언트를 사용 하 여 서비스
 Windows Communication Foundation (WCF) 클라이언트는 WCF 클라이언트가 2004 년 8 월 버전의 Ws-addressing 사양 사용 하도록 구성 된 하는 경우 Microsoft.NET 서비스용 유선 수준으로 호환 Web Services Enhancements (WSE) 3.0 사용 하 여 합니다. 그러나 WSE 3.0 서비스 지원 하지 않습니다 메타 데이터 교환 (MEX) 프로토콜은 지금 사용 하는 경우는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) WCF 클라이언트 클래스를 만들려면 보안 설정이 적용 되지 않습니다는 생성 된 WCF 클라이언트입니다. 따라서 보안 설정을 지정 해야 합니다는 WSE 3.0 서비스에 WCF 클라이언트 생성 된 후 필요 합니다.  

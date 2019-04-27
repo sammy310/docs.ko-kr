@@ -3,11 +3,11 @@ title: 엔터티 데이터 모델의 주요 개념
 ms.date: 03/30/2017
 ms.assetid: c635a16d-6674-45aa-9344-dcb7df992bab
 ms.openlocfilehash: 2efa54b6bd656129812cc9dd7c2ce38a4fb2a89a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879279"
 ---
 # <a name="entity-data-model-key-concepts"></a>엔터티 데이터 모델의 주요 개념
 (EDM (엔터티 데이터 모델) 세 가지 주요 개념을 사용 하 여 데이터의 구조를 설명: *엔터티 형식*를 *연결 형식*, 및 *속성*합니다. 이는 모든 EDM 구현의 데이터 구조 설명에 가장 중요한 개념입니다.  

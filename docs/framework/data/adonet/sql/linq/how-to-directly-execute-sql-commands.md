@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 04671bb0-40c0-4465-86e5-77986f454661
 ms.openlocfilehash: eeac6272f176ac8e780b72b0076d032ad9e8f108
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903229"
 ---
 # <a name="how-to-directly-execute-sql-commands"></a>방법: SQL 명령 직접 실행
 <xref:System.Data.Linq.DataContext> 연결에서는 <xref:System.Data.Linq.DataContext.ExecuteCommand%2A>를 사용하여 개체를 반환하지 않는 SQL 명령을 실행할 수 있습니다.  

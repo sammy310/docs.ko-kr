@@ -5,11 +5,11 @@ helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
 ms.openlocfilehash: 645d19219481d22ade90f44aaecb62471eb915d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802003"
 ---
 # <a name="string-functions-visual-basic"></a>문자열 함수(Visual Basic)
 다음 표에서 검색 문자열을 조작 하는 Visual Basic 함수를 나열 합니다.  

@@ -3,11 +3,11 @@ title: 1041 - WorkflowApplicationPersistableIdle
 ms.date: 03/30/2017
 ms.assetid: 966adf2f-e21d-44df-a3ec-a8e285e0a316
 ms.openlocfilehash: 07be0ae603443a1ef06cb539bba7b227d7b3e325
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33509669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61924191"
 ---
 # <a name="1041---workflowapplicationpersistableidle"></a>1041 - WorkflowApplicationPersistableIdle
 ## <a name="properties"></a>속성  
@@ -23,7 +23,7 @@ ms.locfileid: "33509669"
  워크플로 응용 프로그램이 유휴 상태이며 지속 가능함을 나타냅니다. 워크플로 응용 프로그램이 유휴 상태이거나 지속됩니다.  
   
 ## <a name="message"></a>메시지  
- WorkflowApplication Id: '%1'는 유휴 상태로 지속 됩니다.  다음과 같은 조치가 취해집니다: %2입니다.  
+ WorkflowApplication Id: '%1'은 유휴 상태 이며 지속 가능 합니다.  다음 작업이 수행 됩니다. %2.  
   
 ## <a name="details"></a>설명  
   

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
 ms.openlocfilehash: d8f2f16d2fb15f2e840f13f177d3fea83fda315e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61828102"
 ---
 # <a name="access-levels-in-visual-basic"></a>Visual Basic의 액세스 수준
 합니다 *액세스 수준* 것에 액세스할 수 있도록 범위를 읽거나 쓸 수 있는 권한이 있는 코드, 선언 된 요소입니다. 요소 자체를 선언한 방법 뿐만 아니라 요소의 컨테이너의 액세스 수준에 따라 결정 됩니다. 포함 하는 요소에 액세스할 수 없는 코드에 액세스할 수 없는 포함 된 요소의 이더라도로 선언 `Public`합니다. 예를 들어를 `Public` 변수는 `Private` 구조 아닌 하지만 해당 구조체를 포함 하는 클래스 내에서 액세스할 수 있습니다 해당 클래스 외부에서.  

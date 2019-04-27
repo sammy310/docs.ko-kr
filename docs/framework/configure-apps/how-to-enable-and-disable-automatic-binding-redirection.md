@@ -6,13 +6,13 @@ helpviewer_keywords:
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
 ms.openlocfilehash: f646445d5fa4556646700bb5daf8ac859631da2c
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61880123"
 ---
-# <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>방법: 사용 하도록 설정 하 고 자동 바인딩 리디렉션 사용 안 함
+# <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>방법: 자동 바인딩 리디렉션 사용 설정 및 해제
 
 대상으로 하는 Visual Studio에서 앱을 컴파일할 때의 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 이상 버전에서는 바인딩 리디렉션이 어셈블리 통합을 재정의 하도록 앱 구성 파일을에 자동으로 추가 될 수 있습니다. 수동으로 바인딩 리디렉션을 응용 프로그램의 구성 파일에 지정할 지라도 응용 프로그램 또는 해당 구성 요소가 동일 어셈블리의 두 개 이상의 버전을 참조할 경우 바인딩 리디렉션을 추가합니다. 자동 바인딩 리디렉션 기능에 영향을 데스크톱 앱 및 웹 앱 대상으로 하는 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 이상 버전, 웹 앱에 대 한 동작을 약간 다릅니다. 하지만 합니다. 수동으로 바인딩 리디렉션을 작성 하려는 경우에이 기능을 비활성화할 수 있습니다 또는 기존 앱 해당 이전 버전의 대상으로.NET Framework를 있는 경우 자동 바인딩 리디렉션을 사용할 수 있습니다.
 

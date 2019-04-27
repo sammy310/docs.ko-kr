@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ListBoxItem [WPF]
 ms.assetid: da877c6f-5fd8-40cb-8909-225cbfd99aa5
 ms.openlocfilehash: 27a435feb4a941c77af221ab25bd63ea98b16e92
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910327"
 ---
 # <a name="how-to-get-a-listboxitem"></a>방법: ListBoxItem 가져오기
 특정 준비 해야 하는 경우 <xref:System.Windows.Controls.ListBoxItem> 특정 인덱스에는 <xref:System.Windows.Controls.ListBox>를 사용할 수 있습니다는 <xref:System.Windows.Controls.ItemContainerGenerator>.  

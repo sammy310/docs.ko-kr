@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1decb05e-37ad-4ed6-ab2f-071eb4c4f628
 ms.openlocfilehash: d71eaf834ebf36d462f8581f0074b2f6a90bae17
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903125"
 ---
 # <a name="how-to-display-linq-to-sql-commands"></a>방법: LINQ to SQL 명령 표시
 <xref:System.Data.Linq.DataContext.GetCommand%2A>를 사용하여 SQL 명령 및 기타 정보를 표시합니다.  

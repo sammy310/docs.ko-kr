@@ -23,17 +23,17 @@ Azure에서 IaaS VM(순수한 리프트 앤 시프트)에 직접 데이터베이
 
 ## <a name="when-to-migrate-to-azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance로 마이그레이션할 시기
 
-대부분의 경우, Azure SQL Database Managed Instance에 Azure에 데이터를 마이그레이션할 때 고려할 최선의 됩니다. SQL Server 데이터베이스를 마이그레이션하는 거의 하지 않아도 응용 프로그램을 재설계 하거나 데이터 또는 데이터 액세스 코드를 변경 하는 100% 보증 해야 하는 경우 Azure SQL Database의 관리 되는 인스턴스 기능을 선택 합니다.
+대부분의 경우 Azure로 데이터를 마이그레이션할 때 Azure SQL Database Managed Instance는 생각할 수 있는 가장 좋은 선택입니다. SQL Server 데이터베이스를 마이그레이션할 때 응용 프로그램을 다시 작성하거나 데이터 또는 데이터에 액세스하는 코드를 거의 변경하지 않아도 된다는 것을 100% 보장해야 하는 경우 Azure SQL Database의 Managed Instance 기능을 선택하십시오.
 
-Azure SQL Database 관리 되는 인스턴스는 SQL Server 인스턴스 수준 기능에 대 한 추가 요구 사항 또는 표준 Azure SQL Database (단일 데이터베이스 모델)에서 제공 하는 기능 이상의 격리 요구 사항이 있는 경우 최상의 옵션입니다. 마지막은 가장 PaaS 지향 선택 되었지만 기존 SQL server와 동일한 기능을 제공 하지 않습니다. 마이그레이션 마찰을 표시할 수 있습니다.
+Azure SQL Database Managed Instance는 표준 Azure SQL 데이터베이스(단일 데이터베이스 모델)에서 제공되는 기능을 넘어선 격리 요구 사항이나 SQL Server 인스턴스 수준의 기능에 대한 추가적인 요구 사항이 있는 경우 최상의 옵션입니다. 마지막은 PaaS 중심의 선택이지만 기존 SQL 서버와 동일한 기능을 제공하지는 않습니다. 마이그레이션은 마찰을 일으킬 수 있습니다.
 
 예를 들어, SQL Server 기능 인스턴스 수준에서에서 심층 투자에 조직에서 SQL Managed Instance로 마이그레이션 도움이 되는 경우 인스턴스 수준 SQL Server 기능의 예제는 SQL 공용 언어 런타임 (CLR) 통합, SQL Server 에이전트 및 데이터베이스 간 쿼리 있습니다. 이러한 기능에 대 한 지원이 표준 Azure SQL Database (단일 데이터베이스 모델)에서 사용할 수 없는 경우
 
-매우 규제 산업에서 작동 하는 및 보안을 위해 격리를 유지 해야 하는 조직을에서 이점을 얻을 수 SQL Managed Instance 모델을 선택 합니다.
+규제가 엄격한 산업에서 운영되고 보안 목적으로 격리를 유지해야하는 조직은 SQL Managed Instance 모델을 선택하면 도움이 될 수 있습니다.
 
-Azure SQL Database에서 관리 되는 인스턴스에는 다음과 같은 특징이 있습니다.
+Azure SQL Database에서 관리되는 인스턴스는 다음과 같은 특징이 있습니다.
 
-- Azure Virtual Network를 통해 보안 격리
+- Azure Virtual Network를 통한 보안 격리
 
 - 응용 프로그램 노출 호환성, 이러한 기능을 사용 하 여:
 

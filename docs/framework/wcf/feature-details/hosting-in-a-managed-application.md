@@ -3,11 +3,11 @@ title: 관리되는 애플리케이션에서의 호스팅
 ms.date: 03/30/2017
 ms.assetid: af70132d-e9e1-4f32-b20f-f0014629758a
 ms.openlocfilehash: 415a6fef511d7d7397a38882801e5848e2998a11
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855831"
 ---
 # <a name="hosting-in-a-managed-application"></a>관리되는 애플리케이션에서의 호스팅
 Windows Communication Foundation (WCF) 서비스에서 호스팅될 수 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 응용 프로그램입니다. 자체 호스팅 서비스는 배포하는 데 최소한의 인프라를 필요로 하기 때문에 가장 유연한 호스팅 옵션입니다. 그러나 것도 가장 약한 호스팅 옵션을 관리 되는 응용 프로그램에는 고급 호스팅 및 관리 기능 wcf에서 인터넷 정보 서비스 (IIS) 및 Windows 서비스 등의 다른 호스팅 옵션을 제공 하지 않기 때문입니다.  

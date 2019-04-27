@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f588597a-49de-4206-8463-4ef377e112ff
 ms.openlocfilehash: 0a17755af4027238393890545c051a063d607b6e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877762"
 ---
 # <a name="aspnet-applications-using-wait-handles"></a>대기 핸들을 사용한 ASP.NET 응용 프로그램
 응용 프로그램에서 비동기 작업을 한 번에 하나씩만 처리할 경우 비동기 작업 처리를 위한 콜백 및 폴링 모델이 유용합니다. Wait 모델을 사용하면 여러 개의 비동기 작업을 보다 유연한 방식으로 처리할 수 있습니다. Wait 모델에는 Wait(Any) 모델과 Wait(All) 모델의 두 가지가 있으며 이를 구현하는 데 사용되는 <xref:System.Threading.WaitHandle> 메서드에 대해 이름이 지정됩니다.  

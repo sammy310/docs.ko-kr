@@ -7,11 +7,11 @@ helpviewer_keywords:
 - GridView controls [WPF], grouping items
 ms.assetid: eebef25b-ddc6-424e-a66d-ea228d1bf33d
 ms.openlocfilehash: b3dd6891976a942b299c87fca25e430e9ee59a51
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59177673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910275"
 ---
 # <a name="how-to-group-items-in-a-listview-that-implements-a-gridview"></a>방법: GridView를 구현하는 ListView의 항목 그룹화
 항목 그룹을 표시 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.GridView> 의 보기 모드를 <xref:System.Windows.Controls.ListView> 제어 합니다.  

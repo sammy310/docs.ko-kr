@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
 ms.openlocfilehash: a758d05cca5ca71943b0ef08184aef5b2c457739
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802351"
 ---
 # <a name="expression-recursively-calls-the-containing-property-propertyname"></a>식이 재귀적으로 호출을 포함 하는 속성 '\<propertyname >'
 문과 `Set` 프로시저 속성 정의의 값을 속성의 이름에 저장 합니다.  

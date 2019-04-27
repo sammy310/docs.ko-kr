@@ -3,11 +3,11 @@ title: 복합 형식
 ms.date: 03/30/2017
 ms.assetid: 63efbd23-11d4-4871-bc88-ad01b9837553
 ms.openlocfilehash: 9d63660c441192bbc9ecb48bb3a86030b46461cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61880017"
 ---
 # <a name="complex-type"></a>복합 형식
 A *복합 형식* 에서 다양 한 구조적된 속성을 정의 하기 위한 템플릿입니다 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md) 또는 다른 복합 형식입니다. 각 템플릿에는 다음 정보가 들어 있습니다.  

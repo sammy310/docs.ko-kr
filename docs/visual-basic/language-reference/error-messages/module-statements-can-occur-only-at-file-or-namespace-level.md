@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30617
 ms.assetid: 5e9de8e5-d26b-4fb2-9e28-814413fe9cef
 ms.openlocfilehash: bf0239422fb5a98e4670aea407f684753d3a7ea4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920863"
 ---
 # <a name="module-statements-can-occur-only-at-file-or-namespace-level"></a>'Module' 문은 파일이나 네임스페이스 수준에서만 사용할 수 있습니다.
 `Module` 문을 소스 파일의 맨 위에 있는 나타나야 직후 `Option` 및 `Imports` 문, 전역 특성 및 네임 스페이스 선언을 다른 모든 선언 앞입니다.  

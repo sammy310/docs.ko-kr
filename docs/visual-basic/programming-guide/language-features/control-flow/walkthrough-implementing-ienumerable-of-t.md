@@ -8,11 +8,11 @@ helpviewer_keywords:
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
 ms.openlocfilehash: b13fd85ae01fd0b6f3c963d87a372add930be99d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61975301"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>연습: Visual Basic에서 IEnumerable(Of T) 구현
 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스는 한 번에 하나의 항목 값의 시퀀스를 반환할 수 있는 클래스에서 구현 됩니다. 한 번에 하나의 항목은 메모리에 로드할 데이터의 전체 집합 작업할 필요가 없습니다 데이터 반환 활용 합니다. 충분 한 메모리를 사용 하 여 데이터의 단일 항목을 로드 해야 합니다. 구현 하는 클래스를 `IEnumerable(T)` 인터페이스를 사용 하 여 사용할 수 `For Each` 루프 또는 LINQ 쿼리 합니다.  

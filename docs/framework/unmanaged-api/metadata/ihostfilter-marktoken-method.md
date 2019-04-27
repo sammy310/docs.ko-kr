@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f3214a21dda27fda01054e96400997b15d11f71b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59194439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61905426"
 ---
 # <a name="ihostfiltermarktoken-method"></a>IHostFilter::MarkToken 메서드
 지정 된 메타 데이터 토큰을 처리할 수를 나타냅니다.  

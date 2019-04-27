@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Visual Basic compiler, sample command lines
 ms.assetid: 5bfbb487-5f47-4267-969a-39dfb917beeb
 ms.openlocfilehash: 0771ed41d6c58ce7cc98435b405f5819e45393db
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61916762"
 ---
 # <a name="sample-compilation-command-lines-visual-basic"></a>샘플 컴파일 명령줄 (Visual Basic)
 Visual Studio 내에서 Visual Basic 프로그램을 컴파일할 수 또는 실행 파일 (.exe) 또는 동적 연결 라이브러리 (.dll) 파일을 생성 하려면 명령줄에서 컴파일할 수 있습니다.  

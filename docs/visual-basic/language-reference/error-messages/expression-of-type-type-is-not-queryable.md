@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36593
 ms.assetid: 6f1f5860-bf97-4885-9ebb-bc87d028095c
 ms.openlocfilehash: 121c0a95a3a6bb695d9c73347c733cba215a0de4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801623"
 ---
 # <a name="expression-of-type-type-is-not-queryable"></a>형식의 식은 \<유형 >를 쿼리할 수 없습니다
 형식의 식은 \<유형 >를 쿼리할 수 없습니다. LINQ 공급자에 대 한 어셈블리 참조 및/또는 네임 스페이스 가져오기가 없습니다 있는지 확인 합니다.  

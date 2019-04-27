@@ -5,11 +5,11 @@ helpviewer_keywords:
 - ListView controls [WPF], styling
 ms.assetid: 0b999645-0313-4b33-80b9-19ece08b5459
 ms.openlocfilehash: dbcdd38e0397b8e637aff962420a2959f33203df
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59090097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910886"
 ---
 # <a name="how-to-create-a-style-for-a-dragged-gridview-column-header"></a>방법: 끌어온 GridView 열 머리글에 대한 스타일 만들기
 이 예제는 끌어 온된 모양의 변경 하는 방법을 보여 줍니다 <xref:System.Windows.Controls.GridViewColumnHeader> 사용자가 열의 위치를 변경 하는 경우.  

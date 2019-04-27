@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Visual Basic code, operators
 ms.assetid: cb44c210-686f-4417-a13f-51c0d60161f8
 ms.openlocfilehash: 3fbb8dd0dafb0d16531f13280a2033e4f085897f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801285"
 ---
 # <a name="operators-summary-visual-basic"></a>연산자 요약(Visual Basic)
 Visual Basic 언어 키워드 및 런타임 라이브러리 멤버 용도 따라 구성 됩니다 사용 합니다.  

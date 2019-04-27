@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
 ms.openlocfilehash: c06ecd8626b148c4f2143efdfa1e143d6ab3d6bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876358"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>SQL Server의 스냅숏 격리
 스냅숏 격리를 통해 OLTP 응용 프로그램의 동시성이 향상됩니다.  

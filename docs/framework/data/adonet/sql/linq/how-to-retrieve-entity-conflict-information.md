@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9a02b608-e7bb-4041-a452-a7fed26fd008
 ms.openlocfilehash: 825ba2a32e7c75e922ca08386b9f6efede7b2693
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904074"
 ---
 # <a name="how-to-retrieve-entity-conflict-information"></a>방법: 엔터티 충돌 정보 검색
 <xref:System.Data.Linq.ObjectChangeConflict> 클래스의 개체를 사용하여 <xref:System.Data.Linq.ChangeConflictException> 예외로 인해 발생한 충돌에 대한 정보를 제공할 수 있습니다. 자세한 내용은 참조 하세요. [낙관적 동시성: 개요](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)합니다.  

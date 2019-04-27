@@ -10,11 +10,11 @@ helpviewer_keywords:
 - variables [Visual Basic], accessing hidden
 ms.assetid: ae21a8ac-9cd4-4fba-a3ec-ecc4321ef93c
 ms.openlocfilehash: a97a51d4570d87eaa873fb3152ad810f528dff46
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61829662"
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>방법: 파생된 클래스 (Visual Basic)에 의해 숨겨진 변수에 액세스
 변수에 액세스 하는 파생된 클래스에서 코드를 컴파일러가 파생 단계의 이전 버전과 액세스 하는 클래스에서 액세스할 수 있는 버전 즉, 가장 가까운 액세스할 수 있는 버전에 대 한 참조에 확인 일반적으로 합니다. 파생된 클래스에서 변수를 정의 하는 경우 코드에 일반적으로 해당 정의 액세스 합니다.  

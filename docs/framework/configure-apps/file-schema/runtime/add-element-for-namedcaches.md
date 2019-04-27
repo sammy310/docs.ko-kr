@@ -6,11 +6,11 @@ helpviewer_keywords:
 - <add> element for <namedCaches>
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
 ms.openlocfilehash: 9a7e370f9cce0e9ddf6dbe49984b7597e041eb84
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59094530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674326"
 ---
 # <a name="add-element-for-namedcaches"></a>\<추가 > 요소에 대 한 \<namedCaches >
 추가 `namedCache` 항목을 `namedCaches` 메모리 캐시에 대 한 컬렉션입니다.  

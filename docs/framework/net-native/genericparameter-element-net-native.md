@@ -5,11 +5,11 @@ ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 40fef845a55412e5731ec08bd1e038d6b311694c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868610"
 ---
 # <a name="genericparameter-element-net-native"></a>\<GenericParameter > 요소 (.NET 네이티브)
 제네릭 형식 또는 메서드의 매개 변수 형식에 정책을 적용합니다.  

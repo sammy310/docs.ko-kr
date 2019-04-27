@@ -3,11 +3,11 @@ title: 파일이 너무 커서 바이트 배열로 읽어 들일 수 없습니�
 ms.date: 07/20/2015
 ms.assetid: 686630a6-a439-46c7-8d7b-34613ae4c5d8
 ms.openlocfilehash: 0c7d35e08eeb42e35c4c40e47434a64393d829b1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800882"
 ---
 # <a name="file-is-too-large-to-read-into-a-byte-array"></a>파일이 너무 커서 바이트 배열로 읽어 들일 수 없습니다.
 바이트 배열로 읽어 들일 하려는 파일의 크기는 4GB를 초과 합니다. `My.Computer.FileSystem.ReadAllBytes` 메서드는이 크기를 초과 하는 파일을 읽을 수 없습니다.  

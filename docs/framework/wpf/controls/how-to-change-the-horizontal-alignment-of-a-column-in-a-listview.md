@@ -5,11 +5,11 @@ helpviewer_keywords:
 - ListView controls [WPF], horizontal alignment [WPF]
 ms.assetid: b9573e44-9dad-4d14-939c-7859ca372758
 ms.openlocfilehash: 528a711c1cf7992bb32c0aa4d6e81d71744c9f80
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911068"
 ---
 # <a name="how-to-change-the-horizontal-alignment-of-a-column-in-a-listview"></a>방법: ListView에서 열의 가로 맞춤 변경
 기본적으로 각 열에 콘텐츠를 <xref:System.Windows.Controls.ListViewItem> 왼쪽에 맞춰집니다. 제공 하 여 각 열의 맞춤을 변경할 수 있습니다는 <xref:System.Windows.DataTemplate> 설정 합니다 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 내 요소의 속성에는 <xref:System.Windows.DataTemplate>. 이 항목에서는 어떻게를 <xref:System.Windows.Controls.ListView> 의 한 열에 맞춤을 변경 하는 방법 및 기본적으로 해당 내용을 맞춥니다.는 <xref:System.Windows.Controls.ListView>합니다.  

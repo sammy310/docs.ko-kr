@@ -3,11 +3,11 @@ title: 목록
 description: 에 대해 알아봅니다 F# 는 정렬 된, 변경할 수 없는 일련의 동일한 형식의 요소를 나열 합니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: cc4e292280cca0dca37f69cf5a46ec2822d08d5c
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904126"
 ---
 # <a name="lists"></a>목록
 
@@ -442,10 +442,10 @@ List.iteri2: element 2 of list1 is 3; element 2 of list2 is 6
 
 목록에 추가 작업에 대 한 자세한 라이브러리 참조 항목을 참조 하세요 [Collections.List 모듈](https://msdn.microsoft.com/visualfsharpdocs/conceptual/collections.list-module-%5bfsharp%5d)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [F# 언어 참조](index.md)
 - [F# 형식](fsharp-types.md)
 - [시퀀스](sequences.md)
-- [배열 (C++)](arrays.md)
+- [배열](arrays.md)
 - [옵션](options.md)

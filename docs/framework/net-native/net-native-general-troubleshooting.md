@@ -5,11 +5,11 @@ ms.assetid: ee8c5e17-35ea-48a1-8767-83298caac1e8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f81ff8a347235ab1a765b4f41051dab2da786b89
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61866875"
 ---
 # <a name="net-native-general-troubleshooting"></a>.NET 네이티브 일반 문제 해결
 이 항목에서는 [!INCLUDE[net_native](../../../includes/net-native-md.md)]를 사용하여 앱을 개발할 때 발생할 수 있는 잠재적인 문제를 해결하는 방법을 설명합니다.  

@@ -3,11 +3,11 @@ title: 구조체
 description: 에 대 한 자세한는 F# 구조체, 종종 간단한 개체 형식으로 적은 양의 데이터 적고 동작이 단순한 형식에 대해 클래스 보다 더 효율적입니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: c091dc91765d6e828426de21e9bc5f79bfdebc6c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925881"
 ---
 # <a name="structures"></a>구조체
 
@@ -75,7 +75,7 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 ## <a name="readonly-structs"></a>읽기 전용 구조체
 
-구조체를 사용 하 여 주석을 추가할 수는 <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute> 특성입니다. 예를 들면 다음과 같습니다.
+구조체를 사용 하 여 주석을 추가할 수는 <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute> 특성입니다. 예를 들어:
 
 ```fsharp
 [<IsReadOnly; Struct>]
@@ -94,7 +94,7 @@ type S(count1: int, count2: int) =
 
 나타낼 수 있습니다 [레코드](records.md) 하 고 [구별 된 공용 구조체](discriminated-unions.md) 사용 하 여 구조체로 `[<Struct>]` 특성입니다.  자세한 내용은 각 문서를 참조 하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [F# 언어 참조](index.md)
 - [클래스](classes.md)

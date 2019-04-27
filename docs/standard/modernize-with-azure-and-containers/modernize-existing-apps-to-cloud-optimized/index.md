@@ -5,15 +5,15 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
 ms.openlocfilehash: edbffe45a2a1652ff477f9785b3afb5b0e493bc3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61811680"
 ---
 # <a name="modernize-existing-net-apps-to-cloud-optimized-applications"></a>기존.NET 앱을 클라우드에 최적화된 응용 프로그램으로 최신화
 
-> 비전: 기존.NET Framework 응용 프로그램을 더 빠르게 제공 하 고 응용 프로그램의 배달 비용을 절감할 수 있도록 배포 민첩성을 대폭 개선 함으로써 클라우드 액세스에 최적화 된 응용 프로그램을 현대화 합니다.
+> Vision: 기존.NET Framework 응용 프로그램을 더 빠르게 제공 하 고 응용 프로그램의 배달 비용을 절감할 수 있도록 배포 민첩성을 대폭 개선 함으로써 클라우드 액세스에 최적화 된 응용 프로그램을 현대화 합니다.
 
 컨테이너와 같은 새로운 기술과 클라우드의 이점을 활용하려면 기존.NET 애플리케이션을 부분적으로나마 현대화해야 합니다. 궁극적으로, 엔터프라이즈 애플리케이션을 현대화하면 총 소유 비용이 감소합니다.
 

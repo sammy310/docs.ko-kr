@@ -3,11 +3,11 @@ title: '예외: invalidArg 함수'
 description: 에 대해 알아봅니다 하는 방법을 F# 'invalidArg' 함수 인수 예외를 생성 합니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: 7fd8d48b80970dbbafc0c23a478b4ccf3490f3ee
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996885"
 ---
 # <a name="exceptions-the-invalidarg-function"></a>예외: invalidArg 함수
 
@@ -35,9 +35,9 @@ January
 System.ArgumentException: Month parameter out of range.
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
-- [Visual C++에서 예외 처리](index.md)
+- [예외 처리](index.md)
 - [예외 형식](exception-types.md)
 - [예외: `try...with` 식](the-try-with-expression.md)
 - [예외: `try...finally` 식](the-try-finally-expression.md)

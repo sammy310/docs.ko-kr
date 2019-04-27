@@ -3,11 +3,11 @@ title: 채널 개발
 ms.date: 03/30/2017
 ms.assetid: 0513af9f-a0c2-457b-9a50-5b6bfee48513
 ms.openlocfilehash: 44fb0da52c60b900c41b7b497861c12ed72d8ffc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858067"
 ---
 # <a name="developing-channels"></a>채널 개발
 Windows Communication Foundation (WCF)를 사용 하 여 사용할 수 있는 프로토콜 또는 전송 채널을 개발 하려면 응용 프로그램 계층에는 여러 단계가 필요 합니다. 이 항목에서는 이러한 단계에 대해 설명하고 자세한 내용을 참조할 수 있는 구체적인 항목을 알려 줍니다. 이 항목에 나와 있는 다양 한 형식과 채널 모델을 이해 하려면 [채널 모델 개요](../../../../docs/framework/wcf/extending/channel-model-overview.md)합니다. 완전 한 전송 채널 샘플을 보려면 [전송 합니다. UDP](../../../../docs/framework/wcf/samples/transport-udp.md).  

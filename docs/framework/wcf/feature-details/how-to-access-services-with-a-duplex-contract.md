@@ -8,11 +8,11 @@ helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
 ms.openlocfilehash: 366fd9d6aa220bcbec1ee8fb2a04d1b84755800a
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855142"
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a>방법: 이중 계약을와 함께 access services
 
@@ -58,8 +58,7 @@ Windows Communication Foundation (WCF)의 기능 중 하나는 이중 메시징 
     End Class
     ```
 
-5. 
-  <xref:System.ServiceModel.InstanceContext> 클래스의 인스턴스를 만듭니다. 생성자에 클라이언트 클래스의 인스턴스가 필요합니다.
+5. <xref:System.ServiceModel.InstanceContext> 클래스의 인스턴스를 만듭니다. 생성자에 클라이언트 클래스의 인스턴스가 필요합니다.
 
     ```csharp
     InstanceContext site = new InstanceContext(new CallbackHandler());

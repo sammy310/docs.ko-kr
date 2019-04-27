@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Button controls [WPF], creating
 ms.assetid: 607a193c-4098-4dd8-8dc0-51256cec2020
 ms.openlocfilehash: 5be928ac75ad727feabcde07ac0c6dc76ed130e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910951"
 ---
 # <a name="how-to-create-a-button-that-has-an-image"></a>방법: 이미지가 있는 단추 만들기
 이 예제에서 이미지를 포함 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.Button>합니다.  

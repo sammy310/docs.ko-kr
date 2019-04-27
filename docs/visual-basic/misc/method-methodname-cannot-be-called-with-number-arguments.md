@@ -5,11 +5,11 @@ f1_keywords:
 - vbrNoMethodTakingXArguments2
 ms.assetid: 23260199-b6a4-469f-b75f-4a3d8d25e2cc
 ms.openlocfilehash: e168d59da6c0c293d2429f90b858baf3547c22b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922319"
 ---
 # <a name="method-methodname-cannot-be-called-with-number-arguments"></a>메서드 '\<methodname >'로 호출할 수 없습니다 \<수 > 인수
 메서드 호출에 잘못된 인수 개수가 포함되어 있습니다.  

@@ -3,11 +3,11 @@ title: '루프: for...in 식'
 description: 참조 하는 방법을 F# 하십시오... 식 구문을 반복을 사용 하는 열거 가능한 컬렉션에서 특정 패턴의 일치를 반복 합니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: adaf448a49cf53c63c41f9156d40ee5d1ad3caeb
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024445"
 ---
 # <a name="loops-forin-expression"></a>루프: for...in 식
 
@@ -28,11 +28,11 @@ for pattern in enumerable-expression do
 
 사용 하 여 범위를 표현할 수는 `..` 연산자는 다음 구문을 사용할 수 있습니다.
 
-*시작* ... *마침*
+*start* .. *finish*
 
 라는 증분을 포함 하는 버전을 사용할 수도 있습니다는 *건너뛸*다음 코드 에서처럼 합니다.
 
-*시작* ... *건너뛸* ... *마침*
+*start* .. *skip* .. *finish*
 
 정수 범위 및 간단한 카운터 변수를 사용 하 여 패턴으로 일반적인 동작 카운터 변수 반복 될 때마다 1 씩 증가 이지만 범위는 skip 값에 포함 된 경우 카운터가 증가 skip 값 대신 합니다.
 
@@ -133,8 +133,8 @@ Number of elements in list1: 5
 
 `Note` 사용할 수 있습니다 `for...in` 시퀀스 식 및 기타 계산 식, 사용자 지정된 버전의 경우는 `for...in` 식이 사용 됩니다. 자세한 내용은 [시퀀스](sequences.md)를 [비동기 워크플로](asynchronous-workflows.md), 및 [계산 식](computation-expressions.md)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [F# 언어 참조](index.md)
-- [루프: `for...to` 식](loops-for-to-expression.md)
-- [루프: `while...do` 식](loops-while-do-expression.md)
+- [루프: `for...to` Expression](loops-for-to-expression.md)
+- [루프: `while...do` Expression](loops-while-do-expression.md)

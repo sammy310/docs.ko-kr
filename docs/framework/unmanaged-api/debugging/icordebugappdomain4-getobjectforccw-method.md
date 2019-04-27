@@ -5,11 +5,11 @@ ms.assetid: 2cacdb85-e7b8-42e7-b310-c3e8c22e5d33
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 973442a969746671e4d85c5d7881f51c5dfba535
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922605"
 ---
 # <a name="icordebugappdomain4getobjectforccw-method"></a>ICorDebugAppDomain4::GetObjectForCCW 메서드
 CCW(COM 호출 가능 래퍼) 포인터에서 관리되는 개체를 가져옵니다.  

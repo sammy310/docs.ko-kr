@@ -3,17 +3,17 @@ title: WMI 클래스 참조
 ms.date: 03/30/2017
 ms.assetid: b95a51f5-8251-4619-ae05-7de88cb90f9a
 ms.openlocfilehash: 73b36bfc3df917982a2cc9071bdb31f42b3b2dff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61915659"
 ---
 # <a name="wmi-class-reference"></a>WMI 클래스 참조
-이 섹션에서는 Windows Communication Foundation (WCF) WMI 공급자가 제공 하는 모든 WMI 클래스를 나열 합니다.  
+이 섹션에서는 Windows Communication Foundation (WCF) WMI 공급자가 노출 하는 모든 WMI 클래스를 나열 합니다.  
   
 ## <a name="accessing-wmi-instances"></a>WMI 인스턴스에 액세스  
- WMI 개체 참조에 나열된 모든 클래스는 Service, AppDomain, Contract, ServiceAppDomain, ServiceToEndpointAssociation 및 Endpoint를 제외하고 직접 인스턴스화할 수 없습니다. 다른 인스턴스에 액세스하려면 앞에서 설명한 최상위 클래스의 속성에 액세스합니다. 예를 들어 Endpoint 인스턴스 -> Binding -> BindingElements에서 TransportBindingElement 인스턴스에 액세스할 수 있습니다.  
+ WMI 개체 참조에 나열된 모든 클래스는 Service, AppDomain, Contract, ServiceAppDomain, ServiceToEndpointAssociation 및 Endpoint를 제외하고 직접 인스턴스화할 수 없습니다. 다른 인스턴스에 액세스하려면 앞에서 설명한 최상위 클래스의 속성에 액세스합니다. TransportBindingElement 인스턴스에 액세스할 수는 예를 들어 Endpoint 인스턴스->에서 Binding-> BindingElements 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [ActivityTransfer](../../../../../docs/framework/wcf/diagnostics/wmi/activitytransfer.md)  
@@ -24,7 +24,7 @@ ms.locfileid: "33487622"
   
  [AsymmetricSecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/asymmetricsecuritybindingelement.md)  
   
- "Behavior 클래스"  
+ "동작 클래스"  
   
  [BinaryMessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/binarymessageencodingbindingelement.md)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "33487622"
   
  [DeliveryRequirementsAttribute](../../../../../docs/framework/wcf/diagnostics/wmi/deliveryrequirementsattribute.md)  
   
- [Endpoint](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md)  
+ [엔드포인트](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md)  
   
  [HttpsTransportBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/httpstransportbindingelement.md)  
   

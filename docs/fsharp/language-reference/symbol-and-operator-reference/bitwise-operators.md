@@ -3,11 +3,11 @@ title: 비트 연산자
 description: 사용할 수 있는 비트 연산자에 알아봅니다는 F# 프로그래밍 언어입니다.
 ms.date: 07/20/2018
 ms.openlocfilehash: 01c68be485525b49eb3121dfaea6dce0adfe3972
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61926297"
 ---
 # <a name="bitwise-operators"></a>비트 연산자
 
@@ -28,7 +28,7 @@ ms.locfileid: "53611973"
 
 형식은 비트 연산자를 사용 하 여 사용할 수: `byte`, `sbyte`, `int16`, `uint16`, `int32 (int)`를 `uint32`, `int64`를 `uint64`, `nativeint`, 및 `unativeint`합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [기호 및 연산자 참조](index.md)
 - [산술 연산자](arithmetic-operators.md)

@@ -3,11 +3,11 @@ title: '방법: 그룹화 (Visual Basic)를 사용 하 여 계층을 만들려�
 ms.date: 07/20/2015
 ms.assetid: 4eb3ca6b-1aed-43de-b8b9-41c769c993f8
 ms.openlocfilehash: dea189d9d689cfba661fd84cb52f8e6658935a30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855415"
 ---
 # <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a>방법: 그룹화 (Visual Basic)를 사용 하 여 계층을 만들려면
 이 예제에서는 데이터를 그룹화한 다음 그룹화에 따라 XML을 생성하는 방법을 보여 줍니다.  

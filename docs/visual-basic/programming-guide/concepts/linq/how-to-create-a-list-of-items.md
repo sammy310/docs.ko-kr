@@ -6,11 +6,11 @@ helpviewer_keywords:
 - objects [Visual Basic], list of items
 ms.assetid: fe941aba-6340-455c-8b1f-ffd9c3eb1ac5
 ms.openlocfilehash: 97952c2240a5ec1d5e41bd9b2b59aeed3eb43ab6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855461"
 ---
 # <a name="how-to-create-a-list-of-items"></a>방법: 항목 목록 만들기
 이 항목의 코드는 `Student` 클래스를 정의하고 클래스의 인스턴스 목록을 만듭니다. 목록 항목을 지원 하도록 설계 된 [연습: Visual Basic에서 쿼리 작성](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)합니다. 또한 개체 목록이 필요한 모든 응용 프로그램에도 사용할 수 있습니다. 코드는 개체 이니셜라이저를 사용하여 학생 목록에 항목을 정의합니다.  

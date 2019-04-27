@@ -16,11 +16,11 @@ helpviewer_keywords:
 - properties [Visual Basic], overriding
 ms.assetid: 6e9d9ad6-bb64-433f-b32b-3ef84293bf96
 ms.openlocfilehash: 0ddd7d0d2a57afc02aa7483ba5e83b65c48af534
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920758"
 ---
 # <a name="mustoverride-visual-basic"></a>MustOverride(Visual Basic)
 속성 또는 프로시저가이 클래스에서 구현 되지 않습니다 및 사용할 수 전에 파생된 클래스에서 재정의 해야 합니다를 지정 합니다.  

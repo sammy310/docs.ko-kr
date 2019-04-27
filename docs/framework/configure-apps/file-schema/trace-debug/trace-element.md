@@ -11,11 +11,11 @@ helpviewer_keywords:
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
 ms.openlocfilehash: 5faf352dce2a459a999b3cf54209f6bd9793bde0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673799"
 ---
 # <a name="trace-element"></a>\<추적 > 요소
 추적 메시지를 수집하고 저장하고 라우팅하는 수신기가 포함되어 있습니다.  

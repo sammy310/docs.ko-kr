@@ -125,4 +125,4 @@ Mac용 Visual Studio을 사용하여 macOS에서 .NET Core로 개발하려면 �
 * 지원되는 macOS 운영 체제 버전
 * OpenSSL(.NET Core 1.x 전용, .NET Core 2.x는 macOS에서 기본적으로 제공되는 보안 서비스를 사용함)
 * .NET Core SDK for Mac
-* [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
+* [Mac용 Visual Studio](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)

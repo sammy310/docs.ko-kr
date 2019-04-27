@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8f5eec26-b809-4aca-8778-7e202356d856
 ms.openlocfilehash: 14e210c36ee2ab8ddba7451ac7b346ad72288d94
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879829"
 ---
 # <a name="datarows-and-datarowviews"></a>DataRow 및 DataRowView
 <xref:System.Data.DataView>는 <xref:System.Data.DataRowView> 개체의 열거할 수 있는 컬렉션을 노출시킵니다. 합니다 **DataRowView** 개체 이름 또는 기본 테이블의 열 서 수 참조에 따라 인덱싱된 개체 배열로 값을 노출 합니다. 액세스할 수 있습니다는 <xref:System.Data.DataRow> 의해 노출 되는 **DataRowView** 를 사용 하 여를 <xref:System.Data.DataRowView.Row%2A> 의 속성을 **DataRowView**.  

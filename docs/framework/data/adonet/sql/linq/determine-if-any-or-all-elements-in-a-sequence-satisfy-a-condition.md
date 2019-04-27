@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 339ec145-826c-46d2-8cf2-3acd252cd072
 ms.openlocfilehash: c1bc8e18f2e3b0c67b98713e67fc261649a6a0e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59128338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877372"
 ---
 # <a name="determine-if-any-or-all-elements-in-a-sequence-satisfy-a-condition"></a>시퀀스에서 일부 또는 모든 요소가 조건을 만족하는지 확인
 시퀀스의 모든 요소가 조건을 만족하면 <xref:System.Linq.Enumerable.All%2A> 연산자에서는 `true`를 반환합니다.  

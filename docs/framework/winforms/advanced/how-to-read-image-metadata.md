@@ -9,11 +9,11 @@ helpviewer_keywords:
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
 ms.openlocfilehash: 0a53e9b9d23c03715bf3088a4ae8577a39527995
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61672603"
 ---
 # <a name="how-to-read-image-metadata"></a>방법: 이미지 메타데이터 읽기
 일부 이미지 파일 이미지의 기능을 확인 하려면 읽을 수 있는 메타 데이터를 포함 합니다. 예를 들어, 디지털 사진 제조업체 및 모델의 이미지 캡처에 사용한 카메라 결정할 읽을 수 있는 메타 데이터를 포함할 수 있습니다. 사용 하 여 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], 기존 메타 데이터를 읽을 수 있습니다 및 이미지 파일에 새 메타 데이터를 쓸 수도 있습니다.  

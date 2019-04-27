@@ -8,11 +8,11 @@ helpviewer_keywords:
 - text boxes [Windows Forms], about text boxes
 ms.assetid: 95081194-3dd4-4b84-9545-dd373e491eca
 ms.openlocfilehash: 0827c1919597e9eb85bfa41721676008b76564d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902501"
 ---
 # <a name="richtextbox-control-overview-windows-forms"></a>RichTextBox 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.RichTextBox> 표시, 입력 및 서식 있는 텍스트를 조작에 대 한 컨트롤을 사용 합니다. 합니다 <xref:System.Windows.Forms.RichTextBox> 모든 작업을 수행 하는 컨트롤을 <xref:System.Windows.Forms.TextBox> 제어 하지만 또한 글꼴, 색 및 링크를 표시, 텍스트 및 포함 된 이미지 파일에서 로드 및 지정 된 문자를 찾습니다. <xref:System.Windows.Forms.RichTextBox> 컨트롤은 일반적으로 텍스트를 조작 하 고 Microsoft Word와 같은 워드 프로세싱 응용 프로그램과 유사한 기능을 표시 하는 데 사용 됩니다. 같은 <xref:System.Windows.Forms.TextBox> 컨트롤을 <xref:System.Windows.Forms.RichTextBox> 컨트롤에서 스크롤 막대를 표시할 수 있습니다 달리 있지만 <xref:System.Windows.Forms.TextBox> 필요에 따라 가로 및 세로 스크롤 막대를 표시 하는 컨트롤을 기본 설정인 것 있고 추가 스크롤 막대.  

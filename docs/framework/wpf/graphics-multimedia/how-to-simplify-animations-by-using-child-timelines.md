@@ -7,11 +7,11 @@ helpviewer_keywords:
 - child timelines [WPF]
 ms.assetid: 8335d770-d13d-42bd-8dfa-63f92c0327e2
 ms.openlocfilehash: 21a297208be045eea79d6f5ca6c8eac016d26345
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61804015"
 ---
 # <a name="how-to-simplify-animations-by-using-child-timelines"></a>방법: 자식 Timeline을 사용하여 애니메이션 단순화
 이 예제에서는 자식을 사용 하 여 애니메이션 단순화 <xref:System.Windows.Media.Animation.ParallelTimeline> 개체입니다. <xref:System.Windows.Media.Animation.Storyboard> 유형의 <xref:System.Windows.Media.Animation.Timeline> 있기 타임 라인에 대 한 대상 정보를 제공 합니다. 사용 하 여를 <xref:System.Windows.Media.Animation.Storyboard> 타임 라인 대상 개체 및 속성 정보를 포함 한 정보를 제공 합니다.  

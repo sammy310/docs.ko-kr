@@ -10,11 +10,11 @@ helpviewer_keywords:
 - drawings [WPF], painting with
 ms.assetid: c10dc4b1-09b1-41e8-ad14-456b5fb377df
 ms.openlocfilehash: 6b204ae631912181333e2559ebadcdc37e7693b7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010087"
 ---
 # <a name="how-to-paint-an-area-with-a-drawing"></a>방법: Drawing으로 영역 그리기
 이 예제에서는 그리기로 영역을 그리는 방법을 보여 줍니다. 그리기로 영역 그리기를 사용 하는 <xref:System.Windows.Media.DrawingBrush> 와 하나 이상의 <xref:System.Windows.Media.Drawing> 개체입니다.   다음 예제에서는 <xref:System.Windows.Media.DrawingBrush> 2 개의 타원 그리기로 개체를 그립니다.  
