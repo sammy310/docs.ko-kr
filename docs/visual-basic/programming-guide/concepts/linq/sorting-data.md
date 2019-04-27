@@ -3,37 +3,37 @@ title: 데이터 정렬 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6f81065c-0c89-4bf3-a6d8-442273f8810e
 ms.openlocfilehash: ad39aca6a53221f077a6b8313262d508744ff5ea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908113"
 ---
-# <a name="sorting-data-visual-basic"></a><span data-ttu-id="faede-102">데이터 정렬 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="faede-102">Sorting Data (Visual Basic)</span></span>
-<span data-ttu-id="faede-103">정렬 작업은 하나 이상의 특성을 기준으로 시퀀스의 요소를 정렬합니다.</span><span class="sxs-lookup"><span data-stu-id="faede-103">A sorting operation orders the elements of a sequence based on one or more attributes.</span></span> <span data-ttu-id="faede-104">첫 번째 정렬 기준은 요소에 대해 기본 정렬을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="faede-104">The first sort criterion performs a primary sort on the elements.</span></span> <span data-ttu-id="faede-105">두 번째 정렬 기준을 지정하면 각 기본 정렬 그룹 내의 요소를 정렬할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="faede-105">By specifying a second sort criterion, you can sort the elements within each primary sort group.</span></span>  
+# <a name="sorting-data-visual-basic"></a><span data-ttu-id="226ca-102">데이터 정렬 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="226ca-102">Sorting Data (Visual Basic)</span></span>
+<span data-ttu-id="226ca-103">정렬 작업은 하나 이상의 특성을 기준으로 시퀀스의 요소를 정렬합니다.</span><span class="sxs-lookup"><span data-stu-id="226ca-103">A sorting operation orders the elements of a sequence based on one or more attributes.</span></span> <span data-ttu-id="226ca-104">첫 번째 정렬 기준은 요소에 대해 기본 정렬을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="226ca-104">The first sort criterion performs a primary sort on the elements.</span></span> <span data-ttu-id="226ca-105">두 번째 정렬 기준을 지정하면 각 기본 정렬 그룹 내의 요소를 정렬할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="226ca-105">By specifying a second sort criterion, you can sort the elements within each primary sort group.</span></span>  
   
- <span data-ttu-id="faede-106">다음 그림은 문자 시퀀스에 대한 사전순 정렬 작업의 결과를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="faede-106">The following illustration shows the results of an alphabetical sort operation on a sequence of characters.</span></span>  
+ <span data-ttu-id="226ca-106">다음 그림은 문자 시퀀스에 대한 사전순 정렬 작업의 결과를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="226ca-106">The following illustration shows the results of an alphabetical sort operation on a sequence of characters.</span></span>  
   
  ![사전순 정렬 작업을 보여 주는 그래픽입니다.](./media/sorting-data/alphabetical-sort-operation.png)  
   
- <span data-ttu-id="faede-108">다음 섹션에는 데이터를 정렬하는 표준 쿼리 연산자 메서드가 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="faede-108">The standard query operator methods that sort data are listed in the following section.</span></span>  
+ <span data-ttu-id="226ca-108">다음 섹션에는 데이터를 정렬하는 표준 쿼리 연산자 메서드가 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="226ca-108">The standard query operator methods that sort data are listed in the following section.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="faede-109">메서드</span><span class="sxs-lookup"><span data-stu-id="faede-109">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="226ca-109">메서드</span><span class="sxs-lookup"><span data-stu-id="226ca-109">Methods</span></span>  
   
-|<span data-ttu-id="faede-110">메서드 이름</span><span class="sxs-lookup"><span data-stu-id="faede-110">Method Name</span></span>|<span data-ttu-id="faede-111">설명</span><span class="sxs-lookup"><span data-stu-id="faede-111">Description</span></span>|<span data-ttu-id="faede-112">Visual Basic 쿼리 식 구문</span><span class="sxs-lookup"><span data-stu-id="faede-112">Visual Basic Query Expression Syntax</span></span>|<span data-ttu-id="faede-113">추가 정보</span><span class="sxs-lookup"><span data-stu-id="faede-113">More Information</span></span>|  
+|<span data-ttu-id="226ca-110">메서드 이름</span><span class="sxs-lookup"><span data-stu-id="226ca-110">Method Name</span></span>|<span data-ttu-id="226ca-111">설명</span><span class="sxs-lookup"><span data-stu-id="226ca-111">Description</span></span>|<span data-ttu-id="226ca-112">Visual Basic 쿼리 식 구문</span><span class="sxs-lookup"><span data-stu-id="226ca-112">Visual Basic Query Expression Syntax</span></span>|<span data-ttu-id="226ca-113">추가 정보</span><span class="sxs-lookup"><span data-stu-id="226ca-113">More Information</span></span>|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|<span data-ttu-id="faede-114">OrderBy</span><span class="sxs-lookup"><span data-stu-id="faede-114">OrderBy</span></span>|<span data-ttu-id="faede-115">값을 오름차순으로 정렬합니다.</span><span class="sxs-lookup"><span data-stu-id="faede-115">Sorts values in ascending order.</span></span>|`Order By`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=nameWithType>|  
-|<span data-ttu-id="faede-116">OrderByDescending</span><span class="sxs-lookup"><span data-stu-id="faede-116">OrderByDescending</span></span>|<span data-ttu-id="faede-117">값을 내림차순으로 정렬합니다.</span><span class="sxs-lookup"><span data-stu-id="faede-117">Sorts values in descending order.</span></span>|`Order By … Descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|  
-|<span data-ttu-id="faede-118">ThenBy</span><span class="sxs-lookup"><span data-stu-id="faede-118">ThenBy</span></span>|<span data-ttu-id="faede-119">2차 정렬을 오름차순으로 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="faede-119">Performs a secondary sort in ascending order.</span></span>|`Order By …, …`|<xref:System.Linq.Enumerable.ThenBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ThenBy%2A?displayProperty=nameWithType>|  
-|<span data-ttu-id="faede-120">ThenByDescending</span><span class="sxs-lookup"><span data-stu-id="faede-120">ThenByDescending</span></span>|<span data-ttu-id="faede-121">2차 정렬을 내림차순으로 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="faede-121">Performs a secondary sort in descending order.</span></span>|`Order By …, … Descending`|<xref:System.Linq.Enumerable.ThenByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ThenByDescending%2A?displayProperty=nameWithType>|  
-|<span data-ttu-id="faede-122">Reverse</span><span class="sxs-lookup"><span data-stu-id="faede-122">Reverse</span></span>|<span data-ttu-id="faede-123">컬렉션에서 요소의 순서를 반대로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="faede-123">Reverses the order of the elements in a collection.</span></span>|<span data-ttu-id="faede-124">해당 사항 없음.</span><span class="sxs-lookup"><span data-stu-id="faede-124">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Reverse%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Reverse%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="226ca-114">OrderBy</span><span class="sxs-lookup"><span data-stu-id="226ca-114">OrderBy</span></span>|<span data-ttu-id="226ca-115">값을 오름차순으로 정렬합니다.</span><span class="sxs-lookup"><span data-stu-id="226ca-115">Sorts values in ascending order.</span></span>|`Order By`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="226ca-116">OrderByDescending</span><span class="sxs-lookup"><span data-stu-id="226ca-116">OrderByDescending</span></span>|<span data-ttu-id="226ca-117">값을 내림차순으로 정렬합니다.</span><span class="sxs-lookup"><span data-stu-id="226ca-117">Sorts values in descending order.</span></span>|`Order By … Descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="226ca-118">ThenBy</span><span class="sxs-lookup"><span data-stu-id="226ca-118">ThenBy</span></span>|<span data-ttu-id="226ca-119">2차 정렬을 오름차순으로 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="226ca-119">Performs a secondary sort in ascending order.</span></span>|`Order By …, …`|<xref:System.Linq.Enumerable.ThenBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ThenBy%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="226ca-120">ThenByDescending</span><span class="sxs-lookup"><span data-stu-id="226ca-120">ThenByDescending</span></span>|<span data-ttu-id="226ca-121">2차 정렬을 내림차순으로 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="226ca-121">Performs a secondary sort in descending order.</span></span>|`Order By …, … Descending`|<xref:System.Linq.Enumerable.ThenByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ThenByDescending%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="226ca-122">Reverse</span><span class="sxs-lookup"><span data-stu-id="226ca-122">Reverse</span></span>|<span data-ttu-id="226ca-123">컬렉션에서 요소의 순서를 반대로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="226ca-123">Reverses the order of the elements in a collection.</span></span>|<span data-ttu-id="226ca-124">해당 사항 없음.</span><span class="sxs-lookup"><span data-stu-id="226ca-124">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Reverse%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Reverse%2A?displayProperty=nameWithType>|  
   
-## <a name="query-expression-syntax-examples"></a><span data-ttu-id="faede-125">쿼리 식 구문 예제</span><span class="sxs-lookup"><span data-stu-id="faede-125">Query Expression Syntax Examples</span></span>  
+## <a name="query-expression-syntax-examples"></a><span data-ttu-id="226ca-125">쿼리 식 구문 예제</span><span class="sxs-lookup"><span data-stu-id="226ca-125">Query Expression Syntax Examples</span></span>  
   
-### <a name="primary-sort-examples"></a><span data-ttu-id="faede-126">1차 정렬 예제</span><span class="sxs-lookup"><span data-stu-id="faede-126">Primary Sort Examples</span></span>  
+### <a name="primary-sort-examples"></a><span data-ttu-id="226ca-126">1차 정렬 예제</span><span class="sxs-lookup"><span data-stu-id="226ca-126">Primary Sort Examples</span></span>  
   
-#### <a name="primary-ascending-sort"></a><span data-ttu-id="faede-127">1차 오름차순 정렬</span><span class="sxs-lookup"><span data-stu-id="faede-127">Primary Ascending Sort</span></span>  
- <span data-ttu-id="faede-128">다음 예제에서는 LINQ 쿼리에 `Order By` 절을 사용하여 배열의 문자열을 문자열 길이의 오름차순으로 정렬하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="faede-128">The following example demonstrates how to use the `Order By` clause in a LINQ query to sort the strings in an array by string length, in ascending order.</span></span>  
+#### <a name="primary-ascending-sort"></a><span data-ttu-id="226ca-127">1차 오름차순 정렬</span><span class="sxs-lookup"><span data-stu-id="226ca-127">Primary Ascending Sort</span></span>  
+ <span data-ttu-id="226ca-128">다음 예제에서는 LINQ 쿼리에 `Order By` 절을 사용하여 배열의 문자열을 문자열 길이의 오름차순으로 정렬하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="226ca-128">The following example demonstrates how to use the `Order By` clause in a LINQ query to sort the strings in an array by string length, in ascending order.</span></span>  
   
 ```vb  
 Dim words = {"the", "quick", "brown", "fox", "jumps"}  
@@ -59,8 +59,8 @@ MsgBox(sb.ToString())
 ' jumps  
 ```  
   
-#### <a name="primary-descending-sort"></a><span data-ttu-id="faede-129">1차 내림차순 정렬</span><span class="sxs-lookup"><span data-stu-id="faede-129">Primary Descending Sort</span></span>  
- <span data-ttu-id="faede-130">다음 예제에서는 LINQ 쿼리에 `Order By Descending` 절을 사용하여 문자열을 첫 글자의 내림차순으로 정렬하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="faede-130">The next example demonstrates how to use the `Order By Descending` clause in a LINQ query to sort the strings by their first letter, in descending order.</span></span>  
+#### <a name="primary-descending-sort"></a><span data-ttu-id="226ca-129">1차 내림차순 정렬</span><span class="sxs-lookup"><span data-stu-id="226ca-129">Primary Descending Sort</span></span>  
+ <span data-ttu-id="226ca-130">다음 예제에서는 LINQ 쿼리에 `Order By Descending` 절을 사용하여 문자열을 첫 글자의 내림차순으로 정렬하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="226ca-130">The next example demonstrates how to use the `Order By Descending` clause in a LINQ query to sort the strings by their first letter, in descending order.</span></span>  
   
 ```vb  
 Dim words = {"the", "quick", "brown", "fox", "jumps"}  
@@ -86,10 +86,10 @@ MsgBox(sb.ToString())
 ' brown  
 ```  
   
-### <a name="secondary-sort-examples"></a><span data-ttu-id="faede-131">2차 정렬 예제</span><span class="sxs-lookup"><span data-stu-id="faede-131">Secondary Sort Examples</span></span>  
+### <a name="secondary-sort-examples"></a><span data-ttu-id="226ca-131">2차 정렬 예제</span><span class="sxs-lookup"><span data-stu-id="226ca-131">Secondary Sort Examples</span></span>  
   
-#### <a name="secondary-ascending-sort"></a><span data-ttu-id="faede-132">2차 오름차순 정렬</span><span class="sxs-lookup"><span data-stu-id="faede-132">Secondary Ascending Sort</span></span>  
- <span data-ttu-id="faede-133">다음 예제에서는 LINQ 쿼리에 `Order By` 절을 사용하여 배열의 문자열에 대해 1차 및 2차 정렬을 수행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="faede-133">The following example demonstrates how to use the `Order By` clause in a LINQ query to perform a primary and secondary sort of the strings in an array.</span></span> <span data-ttu-id="faede-134">문자열은 길이의 오름차순으로 1차 정렬된 다음 문자열 첫 글자의 오름차순으로 2차 정렬됩니다.</span><span class="sxs-lookup"><span data-stu-id="faede-134">The strings are sorted primarily by length and secondarily by the first letter of the string, both in ascending order.</span></span>  
+#### <a name="secondary-ascending-sort"></a><span data-ttu-id="226ca-132">2차 오름차순 정렬</span><span class="sxs-lookup"><span data-stu-id="226ca-132">Secondary Ascending Sort</span></span>  
+ <span data-ttu-id="226ca-133">다음 예제에서는 LINQ 쿼리에 `Order By` 절을 사용하여 배열의 문자열에 대해 1차 및 2차 정렬을 수행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="226ca-133">The following example demonstrates how to use the `Order By` clause in a LINQ query to perform a primary and secondary sort of the strings in an array.</span></span> <span data-ttu-id="226ca-134">문자열은 길이의 오름차순으로 1차 정렬된 다음 문자열 첫 글자의 오름차순으로 2차 정렬됩니다.</span><span class="sxs-lookup"><span data-stu-id="226ca-134">The strings are sorted primarily by length and secondarily by the first letter of the string, both in ascending order.</span></span>  
   
 ```vb  
 Dim words = {"the", "quick", "brown", "fox", "jumps"}  
@@ -115,8 +115,8 @@ MsgBox(sb.ToString())
 ' quick  
 ```  
   
-#### <a name="secondary-descending-sort"></a><span data-ttu-id="faede-135">2차 내림차순 정렬</span><span class="sxs-lookup"><span data-stu-id="faede-135">Secondary Descending Sort</span></span>  
- <span data-ttu-id="faede-136">다음 예제에서는 LINQ 쿼리에 `Order By Descending` 절을 사용하여 1차 정렬을 오름차순으로 수행한 다음 2차 정렬을 내림차순으로 수행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="faede-136">The next example demonstrates how to use the `Order By Descending` clause in a LINQ query to perform a primary sort, in ascending order, and a secondary sort, in descending order.</span></span> <span data-ttu-id="faede-137">문자열은 길이순으로 1차 정렬된 다음 문자열 첫 글자순으로 2차 정렬됩니다.</span><span class="sxs-lookup"><span data-stu-id="faede-137">The strings are sorted primarily by length and secondarily by the first letter of the string.</span></span>  
+#### <a name="secondary-descending-sort"></a><span data-ttu-id="226ca-135">2차 내림차순 정렬</span><span class="sxs-lookup"><span data-stu-id="226ca-135">Secondary Descending Sort</span></span>  
+ <span data-ttu-id="226ca-136">다음 예제에서는 LINQ 쿼리에 `Order By Descending` 절을 사용하여 1차 정렬을 오름차순으로 수행한 다음 2차 정렬을 내림차순으로 수행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="226ca-136">The next example demonstrates how to use the `Order By Descending` clause in a LINQ query to perform a primary sort, in ascending order, and a secondary sort, in descending order.</span></span> <span data-ttu-id="226ca-137">문자열은 길이순으로 1차 정렬된 다음 문자열 첫 글자순으로 2차 정렬됩니다.</span><span class="sxs-lookup"><span data-stu-id="226ca-137">The strings are sorted primarily by length and secondarily by the first letter of the string.</span></span>  
   
 ```vb  
 Dim words = {"the", "quick", "brown", "fox", "jumps"}  
@@ -142,10 +142,10 @@ MsgBox(sb.ToString())
 ' brown  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="faede-138">참고자료</span><span class="sxs-lookup"><span data-stu-id="faede-138">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="226ca-138">참고자료</span><span class="sxs-lookup"><span data-stu-id="226ca-138">See also</span></span>
 
 - <xref:System.Linq>
-- [<span data-ttu-id="faede-139">표준 쿼리 연산자 개요(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="faede-139">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [<span data-ttu-id="faede-140">Order By 절</span><span class="sxs-lookup"><span data-stu-id="faede-140">Order By Clause</span></span>](../../../../visual-basic/language-reference/queries/order-by-clause.md)
-- [<span data-ttu-id="faede-141">방법: 쿼리 결과 정렬</span><span class="sxs-lookup"><span data-stu-id="faede-141">How to: Sort Query Results</span></span>](../../../../visual-basic/programming-guide/language-features/linq/how-to-sort-query-results-by-using-linq.md)
-- [<span data-ttu-id="faede-142">방법: 데이터 정렬 또는 필터링 텍스트에서 단어 또는 필드 (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="faede-142">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [<span data-ttu-id="226ca-139">표준 쿼리 연산자 개요(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="226ca-139">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [<span data-ttu-id="226ca-140">Order By 절</span><span class="sxs-lookup"><span data-stu-id="226ca-140">Order By Clause</span></span>](../../../../visual-basic/language-reference/queries/order-by-clause.md)
+- [<span data-ttu-id="226ca-141">방법: 쿼리 결과 정렬</span><span class="sxs-lookup"><span data-stu-id="226ca-141">How to: Sort Query Results</span></span>](../../../../visual-basic/programming-guide/language-features/linq/how-to-sort-query-results-by-using-linq.md)
+- [<span data-ttu-id="226ca-142">방법: 데이터 정렬 또는 필터링 텍스트에서 단어 또는 필드 (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="226ca-142">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

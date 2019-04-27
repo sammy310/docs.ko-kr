@@ -6,21 +6,21 @@ helpviewer_keywords:
 - <add> element for <namedCaches>
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
 ms.openlocfilehash: 9a7e370f9cce0e9ddf6dbe49984b7597e041eb84
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59094530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674326"
 ---
-# <a name="add-element-for-namedcaches"></a><span data-ttu-id="9a3f5-102">\<추가 > 요소에 대 한 \<namedCaches ></span><span class="sxs-lookup"><span data-stu-id="9a3f5-102">\<add> Element for \<namedCaches></span></span>
-<span data-ttu-id="9a3f5-103">추가 `namedCache` 항목을 `namedCaches` 메모리 캐시에 대 한 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="9a3f5-103">Adds a `namedCache` entry to the `namedCaches` collection for a memory cache.</span></span>  
+# <a name="add-element-for-namedcaches"></a><span data-ttu-id="c87e2-102">\<추가 > 요소에 대 한 \<namedCaches ></span><span class="sxs-lookup"><span data-stu-id="c87e2-102">\<add> Element for \<namedCaches></span></span>
+<span data-ttu-id="c87e2-103">추가 `namedCache` 항목을 `namedCaches` 메모리 캐시에 대 한 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="c87e2-103">Adds a `namedCache` entry to the `namedCaches` collection for a memory cache.</span></span>  
   
- <span data-ttu-id="9a3f5-104">\<system.runtime.caching></span><span class="sxs-lookup"><span data-stu-id="9a3f5-104">\<system.runtime.caching></span></span>  
-<span data-ttu-id="9a3f5-105">\<memoryCache></span><span class="sxs-lookup"><span data-stu-id="9a3f5-105">\<memoryCache></span></span>  
-<span data-ttu-id="9a3f5-106">\<namedCaches></span><span class="sxs-lookup"><span data-stu-id="9a3f5-106">\<namedCaches></span></span>  
-<span data-ttu-id="9a3f5-107">\<add></span><span class="sxs-lookup"><span data-stu-id="9a3f5-107">\<add></span></span>  
+ <span data-ttu-id="c87e2-104">\<system.runtime.caching></span><span class="sxs-lookup"><span data-stu-id="c87e2-104">\<system.runtime.caching></span></span>  
+<span data-ttu-id="c87e2-105">\<memoryCache></span><span class="sxs-lookup"><span data-stu-id="c87e2-105">\<memoryCache></span></span>  
+<span data-ttu-id="c87e2-106">\<namedCaches></span><span class="sxs-lookup"><span data-stu-id="c87e2-106">\<namedCaches></span></span>  
+<span data-ttu-id="c87e2-107">\<add></span><span class="sxs-lookup"><span data-stu-id="c87e2-107">\<add></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9a3f5-108">구문</span><span class="sxs-lookup"><span data-stu-id="9a3f5-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c87e2-108">구문</span><span class="sxs-lookup"><span data-stu-id="c87e2-108">Syntax</span></span>  
   
 ```xml  
 <namedCaches>  
@@ -29,35 +29,35 @@ ms.locfileid: "59094530"
  </namedCaches>  
 ```  
   
-## <a name="type"></a><span data-ttu-id="9a3f5-109">형식</span><span class="sxs-lookup"><span data-stu-id="9a3f5-109">Type</span></span>  
+## <a name="type"></a><span data-ttu-id="c87e2-109">형식</span><span class="sxs-lookup"><span data-stu-id="c87e2-109">Type</span></span>  
  `None`  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="9a3f5-110">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="9a3f5-110">Attributes and Elements</span></span>  
- <span data-ttu-id="9a3f5-111">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9a3f5-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c87e2-110">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="c87e2-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="c87e2-111">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="c87e2-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="9a3f5-112">특성</span><span class="sxs-lookup"><span data-stu-id="9a3f5-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="c87e2-112">특성</span><span class="sxs-lookup"><span data-stu-id="c87e2-112">Attributes</span></span>  
   
-|<span data-ttu-id="9a3f5-113">특성</span><span class="sxs-lookup"><span data-stu-id="9a3f5-113">Attribute</span></span>|<span data-ttu-id="9a3f5-114">설명</span><span class="sxs-lookup"><span data-stu-id="9a3f5-114">Description</span></span>|  
+|<span data-ttu-id="c87e2-113">특성</span><span class="sxs-lookup"><span data-stu-id="c87e2-113">Attribute</span></span>|<span data-ttu-id="c87e2-114">설명</span><span class="sxs-lookup"><span data-stu-id="c87e2-114">Description</span></span>|  
 |-|-|  
-|`CacheMemoryLimitMegabytes`|<span data-ttu-id="9a3f5-115">최대 허용 크기 (메가바이트 단위)를 지정 하는 정수 값은 인스턴스에 <xref:System.Runtime.Caching.MemoryCache> 증가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9a3f5-115">An integer value that specifies the maximum allowed size (in megabytes) that an instance of a <xref:System.Runtime.Caching.MemoryCache> can grow to.</span></span> <span data-ttu-id="9a3f5-116">기본값은 0으로, 즉는 <xref:System.Runtime.Caching.MemoryCache> 클래스의 자동 크기 조정 추론이 기본적으로 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9a3f5-116">The default value is 0, which means that the <xref:System.Runtime.Caching.MemoryCache> class's autosizing heuristics are used by default.</span></span>|  
-|`Name`|<span data-ttu-id="9a3f5-117">캐시의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="9a3f5-117">The name of the cache.</span></span>|  
-|`PhysicalMemoryLimitPercentage`|<span data-ttu-id="9a3f5-118">캐시에서 사용할 수 있는 물리적으로 설치 된 컴퓨터 메모리의 최대 백분율을 지정 하는 0과 100 사이의 정수 값입니다.</span><span class="sxs-lookup"><span data-stu-id="9a3f5-118">An integer value between 0 and 100 that specifies the maximum percentage of physically installed computer memory that can be consumed by the cache.</span></span> <span data-ttu-id="9a3f5-119">기본값은 0으로, 즉는 <xref:System.Runtime.Caching.MemoryCache> 클래스의 자동 크기 조정 추론이 기본적으로 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9a3f5-119">The default value is 0, which means that the <xref:System.Runtime.Caching.MemoryCache> class's autosizing heuristics are used by default.</span></span>|  
-|`PollingInterval`|<span data-ttu-id="9a3f5-120">캐시 구현이 현재 메모리 로드를 캐시 인스턴스에 대해 설정된 절대 및 백분율 기반 메모리 제한과 비교하기까지의 시간 간격을 나타내는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="9a3f5-120">A value that indicates the time interval after which the cache implementation compares the current memory load against the absolute and percentage-based memory limits that are set for the cache instance.</span></span> <span data-ttu-id="9a3f5-121">이 값은 "hh: mm:" 형식으로 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="9a3f5-121">This value is entered in "HH:MM:SS" format.</span></span>|  
+|`CacheMemoryLimitMegabytes`|<span data-ttu-id="c87e2-115">최대 허용 크기 (메가바이트 단위)를 지정 하는 정수 값은 인스턴스에 <xref:System.Runtime.Caching.MemoryCache> 증가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c87e2-115">An integer value that specifies the maximum allowed size (in megabytes) that an instance of a <xref:System.Runtime.Caching.MemoryCache> can grow to.</span></span> <span data-ttu-id="c87e2-116">기본값은 0으로, 즉는 <xref:System.Runtime.Caching.MemoryCache> 클래스의 자동 크기 조정 추론이 기본적으로 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c87e2-116">The default value is 0, which means that the <xref:System.Runtime.Caching.MemoryCache> class's autosizing heuristics are used by default.</span></span>|  
+|`Name`|<span data-ttu-id="c87e2-117">캐시의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="c87e2-117">The name of the cache.</span></span>|  
+|`PhysicalMemoryLimitPercentage`|<span data-ttu-id="c87e2-118">캐시에서 사용할 수 있는 물리적으로 설치 된 컴퓨터 메모리의 최대 백분율을 지정 하는 0과 100 사이의 정수 값입니다.</span><span class="sxs-lookup"><span data-stu-id="c87e2-118">An integer value between 0 and 100 that specifies the maximum percentage of physically installed computer memory that can be consumed by the cache.</span></span> <span data-ttu-id="c87e2-119">기본값은 0으로, 즉는 <xref:System.Runtime.Caching.MemoryCache> 클래스의 자동 크기 조정 추론이 기본적으로 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c87e2-119">The default value is 0, which means that the <xref:System.Runtime.Caching.MemoryCache> class's autosizing heuristics are used by default.</span></span>|  
+|`PollingInterval`|<span data-ttu-id="c87e2-120">캐시 구현이 현재 메모리 로드를 캐시 인스턴스에 대해 설정된 절대 및 백분율 기반 메모리 제한과 비교하기까지의 시간 간격을 나타내는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="c87e2-120">A value that indicates the time interval after which the cache implementation compares the current memory load against the absolute and percentage-based memory limits that are set for the cache instance.</span></span> <span data-ttu-id="c87e2-121">이 값은 "hh: mm:" 형식으로 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="c87e2-121">This value is entered in "HH:MM:SS" format.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="9a3f5-122">자식 요소</span><span class="sxs-lookup"><span data-stu-id="9a3f5-122">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="c87e2-122">자식 요소</span><span class="sxs-lookup"><span data-stu-id="c87e2-122">Child Elements</span></span>  
  `None`  
   
-### <a name="parent-elements"></a><span data-ttu-id="9a3f5-123">부모 요소</span><span class="sxs-lookup"><span data-stu-id="9a3f5-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="c87e2-123">부모 요소</span><span class="sxs-lookup"><span data-stu-id="c87e2-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="9a3f5-124">요소</span><span class="sxs-lookup"><span data-stu-id="9a3f5-124">Element</span></span>|<span data-ttu-id="9a3f5-125">설명</span><span class="sxs-lookup"><span data-stu-id="9a3f5-125">Description</span></span>|  
+|<span data-ttu-id="c87e2-124">요소</span><span class="sxs-lookup"><span data-stu-id="c87e2-124">Element</span></span>|<span data-ttu-id="c87e2-125">설명</span><span class="sxs-lookup"><span data-stu-id="c87e2-125">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="9a3f5-126">\<namedCaches></span><span class="sxs-lookup"><span data-stu-id="9a3f5-126">\<namedCaches></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|<span data-ttu-id="9a3f5-127">명명 된 구성 설정의 컬렉션을 포함 <xref:System.Runtime.Caching.MemoryCache> 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="9a3f5-127">Contains a collection of configuration settings for the named <xref:System.Runtime.Caching.MemoryCache> instances.</span></span>|  
+|[<span data-ttu-id="c87e2-126">\<namedCaches></span><span class="sxs-lookup"><span data-stu-id="c87e2-126">\<namedCaches></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|<span data-ttu-id="c87e2-127">명명 된 구성 설정의 컬렉션을 포함 <xref:System.Runtime.Caching.MemoryCache> 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="c87e2-127">Contains a collection of configuration settings for the named <xref:System.Runtime.Caching.MemoryCache> instances.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="9a3f5-128">설명</span><span class="sxs-lookup"><span data-stu-id="9a3f5-128">Remarks</span></span>  
- <span data-ttu-id="9a3f5-129">합니다 `add` 항목을 추가 하는 요소는 `namedCaches` 메모리 캐시에 대 한 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="9a3f5-129">The `add` element adds an entry to the `namedCaches` collection for a memory cache.</span></span> <span data-ttu-id="9a3f5-130">사용할 수는 [지우기](../../../../../docs/framework/configure-apps/file-schema/runtime/clear-element-for-namedcaches.md) 요소를 사용 하기 전에 `add` 요소는 다른 특정 명명 된 컬렉션에는 캐시 합니다.</span><span class="sxs-lookup"><span data-stu-id="9a3f5-130">You can use the [clear](../../../../../docs/framework/configure-apps/file-schema/runtime/clear-element-for-namedcaches.md) element before you use the `add` element to be certain that there are no other named caches in the collection.</span></span> <span data-ttu-id="9a3f5-131">Web.config 파일 및 machine.config 파일에서이 요소를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9a3f5-131">This element can be used in the machine.config file and in the Web.config file.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c87e2-128">설명</span><span class="sxs-lookup"><span data-stu-id="c87e2-128">Remarks</span></span>  
+ <span data-ttu-id="c87e2-129">합니다 `add` 항목을 추가 하는 요소는 `namedCaches` 메모리 캐시에 대 한 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="c87e2-129">The `add` element adds an entry to the `namedCaches` collection for a memory cache.</span></span> <span data-ttu-id="c87e2-130">사용할 수는 [지우기](../../../../../docs/framework/configure-apps/file-schema/runtime/clear-element-for-namedcaches.md) 요소를 사용 하기 전에 `add` 요소는 다른 특정 명명 된 컬렉션에는 캐시 합니다.</span><span class="sxs-lookup"><span data-stu-id="c87e2-130">You can use the [clear](../../../../../docs/framework/configure-apps/file-schema/runtime/clear-element-for-namedcaches.md) element before you use the `add` element to be certain that there are no other named caches in the collection.</span></span> <span data-ttu-id="c87e2-131">Web.config 파일 및 machine.config 파일에서이 요소를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c87e2-131">This element can be used in the machine.config file and in the Web.config file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9a3f5-132">예제</span><span class="sxs-lookup"><span data-stu-id="9a3f5-132">Example</span></span>  
- <span data-ttu-id="9a3f5-133">다음 예제에서는 기본 설정을 정의 하는 방법을 보여 줍니다 `namedCache` 항목을 `namedCaches` 메모리 캐시에 대 한 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="9a3f5-133">The following example shows how to define settings for the default `namedCache` entry to the `namedCaches` collection for a memory cache.</span></span>  
+## <a name="example"></a><span data-ttu-id="c87e2-132">예제</span><span class="sxs-lookup"><span data-stu-id="c87e2-132">Example</span></span>  
+ <span data-ttu-id="c87e2-133">다음 예제에서는 기본 설정을 정의 하는 방법을 보여 줍니다 `namedCache` 항목을 `namedCaches` 메모리 캐시에 대 한 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="c87e2-133">The following example shows how to define settings for the default `namedCache` entry to the `namedCaches` collection for a memory cache.</span></span>  
   
 ```xml  
 <configuration>  
@@ -76,6 +76,6 @@ ms.locfileid: "59094530"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9a3f5-134">참고자료</span><span class="sxs-lookup"><span data-stu-id="9a3f5-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c87e2-134">참고자료</span><span class="sxs-lookup"><span data-stu-id="c87e2-134">See also</span></span>
 
-- [<span data-ttu-id="9a3f5-135">\<namedCaches > 요소 (캐시 설정)</span><span class="sxs-lookup"><span data-stu-id="9a3f5-135">\<namedCaches> Element (Cache Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+- [<span data-ttu-id="c87e2-135">\<namedCaches > 요소 (캐시 설정)</span><span class="sxs-lookup"><span data-stu-id="c87e2-135">\<namedCaches> Element (Cache Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
