@@ -12,11 +12,11 @@ helpviewer_keywords:
 - parameters [Visual Basic], definition
 ms.assetid: c237c056-74f4-4749-9f2c-15864f139a31
 ms.openlocfilehash: a69b956c7cffcc2a26916d6fc92f23dd4e2322d7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864249"
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>매개 변수와 인수의 차이점(Visual Basic)
 대부분의 경우에서 프로시저를 호출한 후 나타나는 상황에 대 한 정보가 있어야 합니다. 반복 또는 공유 작업을 수행 하는 프로시저는 각 호출에 대 한 다른 정보를 사용 합니다. 이 정보는 변수, 상수 및 호출할 때 프로시저에 전달 하는 식으로 구성 됩니다.  

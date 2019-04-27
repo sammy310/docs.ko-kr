@@ -7,11 +7,11 @@ helpviewer_keywords:
 - layout [Windows Forms], child controls
 ms.assetid: 5a5723ff-34e0-4b6f-a57b-be4ebe35cb34
 ms.openlocfilehash: 2639322707c1c7e378f6d389a1dec80fd619841c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913174"
 ---
 # <a name="how-to-reassign-existing-controls-to-a-different-parent"></a>방법: 다른 부모에 기존 컨트롤 다시 할당
 폼에 있는 컨트롤을 새 컨테이너 컨트롤에 할당할 수 있습니다.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with system brushes [WPF]
 ms.assetid: 5141a763-9235-42cb-a6bb-afc75513eac7
 ms.openlocfilehash: e713903e2cfbb63cb64ceb94621317f9e76dea70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921721"
 ---
 # <a name="how-to-paint-an-area-with-a-system-brush"></a>방법: 시스템 브러시로 영역 칠하기
 합니다 <xref:System.Windows.SystemColors> 클래스와 같은 시스템 브러시 및 색에 대 한 액세스를 제공 합니다 <xref:System.Windows.SystemColors.ControlBrush%2A>를 <xref:System.Windows.SystemColors.ControlBrushKey%2A>, 및 <xref:System.Windows.SystemColors.DesktopBrush%2A>합니다. 시스템 브러시는는 <xref:System.Windows.Media.SolidColorBrush> 개체는 지정된 된 시스템 색으로 영역을 그립니다. 시스템 브러시는 항상 단색을 생성하므로 그라데이션을 만드는 데는 사용할 수 없습니다.  

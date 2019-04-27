@@ -9,11 +9,11 @@ helpviewer_keywords:
 - spin button control [Windows Forms], Windows Forms
 ms.assetid: cff3cf30-4d46-4381-87df-37bfe83c71c5
 ms.openlocfilehash: 218eb685e546acac76a18450612a1601ab87276b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61805764"
 ---
 # <a name="numericupdown-control-overview-windows-forms"></a>NumericUpDown 컨트롤 개요(Windows Forms)
 <xref:System.Windows.Forms.NumericUpDown> 컨트롤 사용자가 클릭 하 여 값을 조정할 수 있는 화살표 쌍 및 입력란의 조합을 다음과 같습니다. 컨트롤은 표시 하거나 고정 된 숫자 값 선택 목록에서 단일 숫자 값을 설정 합니다. 사용자는 증가 하 고 컨트롤의 텍스트 상자에에서 숫자를 입력 하거나 위쪽 및 아래쪽 화살표 키를 눌러 및 아래쪽 화살표, 화살표를 클릭 하 여 수를 줄일 수 있습니다. 최대 숫자는 이동 위쪽 화살표 키를 클릭 합니다. 아래쪽 화살표 키를 클릭 하면 번호를 최소값으로 이동 합니다.  

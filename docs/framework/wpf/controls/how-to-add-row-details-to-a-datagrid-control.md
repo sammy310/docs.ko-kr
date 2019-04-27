@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DataGrid [WPF], row details
 ms.assetid: 0bdc6f50-9b4c-483f-9df6-a47a1fde998b
 ms.openlocfilehash: d5b6539f3d379088528b9654861267988b6fc69b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911395"
 ---
 # <a name="how-to-add-row-details-to-a-datagrid-control"></a>방법: DataGrid 컨트롤에 행 세부 정보 추가
 사용 하는 경우는 <xref:System.Windows.Controls.DataGrid> 컨트롤을 사용자 지정할 수 있습니다 데이터 프레젠테이션 행 세부 정보 섹션을 추가 합니다. 행 세부 정보 섹션을 추가 하는 필요에 따라 표시 또는 축소 하는 서식 파일의 일부 데이터를 그룹화 할 수 있습니다. 예를 들어, 행 세부 정보를 추가할 수 있습니다는 <xref:System.Windows.Controls.DataGrid> 의 각 행에 대 한 데이터의 요약만을 표시 하는 <xref:System.Windows.Controls.DataGrid>, 행을 선택 하면 더 많은 데이터 필드를 표시 하지만 합니다. 행 세부 정보 섹션의 템플릿을 정의 합니다 <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> 속성입니다. 다음 그림에서는 행 세부 정보 섹션의 예를 보여 줍니다.  

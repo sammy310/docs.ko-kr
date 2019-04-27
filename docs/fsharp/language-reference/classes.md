@@ -3,11 +3,11 @@ title: 클래스
 description: 설명 하는 방법 F# 클래스는 속성, 메서드 및 이벤트를 가질 수 있는 개체를 나타내는 형식입니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: 6bf838e98acecb89436d3e87809d9eb6da0c66d5
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61870294"
 ---
 # <a name="classes"></a>클래스
 
@@ -71,7 +71,7 @@ and [access-modifier] type-name2 ...
 
 ## <a name="self-identifiers"></a>자체 식별자
 
-A *자체 식별자* 현재 인스턴스를 나타내는 이름입니다. 자체 식별자와 유사 합니다 `this` C# 또는 c + + 키워드 또는 `Me` Visual Basic의 합니다. 전체 클래스 정의 대 한 또는 개별 메서드에 대해서만 범위 내에서에 자체 식별자 여부에 따라 두 가지 방법으로 자체 식별자를 정의할 수 있습니다.
+A *자체 식별자* 현재 인스턴스를 나타내는 이름입니다. 자체 식별자와 유사 합니다 `this` 키워드 C# 또는 C++ 또는 `Me` Visual Basic의 합니다. 전체 클래스 정의 대 한 또는 개별 메서드에 대해서만 범위 내에서에 자체 식별자 여부에 따라 두 가지 방법으로 자체 식별자를 정의할 수 있습니다.
 
 전체 클래스에 대 한 자체 식별자를 정의 하려면 사용 된 `as` 생성자 매개 변수의 닫는 괄호 뒤 키워드 목록 및 식별자 이름을 지정 합니다.
 
@@ -132,7 +132,7 @@ type MyClass2(dataIn) as self =
 
 구조 데이터의 작은 집계에도 유용 하지만.NET의 값 형식에 클래스 및 레코드에서 다릅니다. 클래스 및 레코드에는.NET 참조 형식입니다. 값 형식을 값으로 전달 되는 값 형식과 참조 의미 체계 서로 다릅니다. 즉, 복사 되는 비트 수준 매개 변수로 전달 하거나 함수에서 반환 하는 경우에 합니다. 또한 스택에 저장 인지, 대신 부모 개체 내에 포함 된 필드로 사용 하는 경우 힙의 고유한 별도 위치에 저장 합니다. 따라서 힙에 액세스 하는 오버 헤드가 문제인 경우 구조는 자주 액세스 하는 데이터에 적합 합니다. 구조에 대 한 자세한 내용은 참조 하세요. [구조](structures.md)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [F# 언어 참조](index.md)
 - [멤버](members/index.md)

@@ -3,11 +3,11 @@ title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
 ms.openlocfilehash: 37da57a000376f972cd6da9e04be46ddec1b7144
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989890"
 ---
 # <a name="jsonp"></a>JSONP
 이 샘플에서는 WCF REST 서비스에서 JSONP(JSON with Padding)를 지원하는 방법을 보여 줍니다. JSONP는 스크립트 태그를 현재 문서에서 생성함으로써 도메인의 제한 없이 스크립트를 호출하는 데 사용되는 규칙입니다. 결과는 지정된 콜백 함수를 통해 반환됩니다. JSONP는 아이디어를 기반으로 같은 태그는 `<script src="http://..." >` 모든 도메인의에서 스크립트를 평가할 수 있으며 이러한 태그로 검색 된 스크립트는 다른 함수 있습니다 이미 정의 되어 있는 범위 내에서 평가 됩니다.

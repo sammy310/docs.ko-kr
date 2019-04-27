@@ -3,11 +3,11 @@ title: 워크플로 인스턴스 만들기 및 실행
 ms.date: 03/30/2017
 ms.assetid: 19d27f47-0491-4569-8f53-51bc1d940e80
 ms.openlocfilehash: f2bdfce0b311da6dd20aac5e0fe4f5fbcd14f68a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005305"
 ---
 # <a name="creating-and-running-a-workflow-instance"></a>워크플로 인스턴스 만들기 및 실행
 이 샘플에서는 워크플로 인스턴스를 실행하는 방법을 보여 줍니다. 동기적 실행 방법과 비동기적 실행 방법을 모두 보여 줍니다.  

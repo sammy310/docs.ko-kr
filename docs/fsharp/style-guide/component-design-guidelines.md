@@ -3,11 +3,11 @@ title: F#구성 요소 디자인 지침
 description: 쓰기에 대 한 지침을 알아보려면 F# 다른 호출자가 사용 하기 위한 구성 요소입니다.
 ms.date: 05/14/2018
 ms.openlocfilehash: c61e4cd9098388b356c71c325d66c760fa866cf0
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55066027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902163"
 ---
 # <a name="f-component-design-guidelines"></a>F#구성 요소 디자인 지침
 
@@ -70,7 +70,7 @@ type Point =
 
 다음 표에서.NET 이름 지정 및 대/소문자 규칙을 따릅니다. 작은 추가 포함 하는 F# 를 생성 합니다.
 
-| 구문 | Case | 파트 | 예제 | 노트 |
+| 구문 | 사례 | 파트 | 예제 | 노트 |
 |-----------|------|------|----------|-------|
 | 구체적인 형식 | PascalCase | 명사 adjective / | 목록, Double, 복잡 한 | 구체적인 형식은 구조체, 클래스, 열거형, 대리자, 레코드 및 공용 구조체입니다. 형식 이름은 일반적으로 OCaml에서 소문자 있지만 F# 는 형식에 대 한.NET 명명 체계를 채택 했습니다.
 | DLL           | PascalCase |                 | Fabrikam.Core.dll |  |

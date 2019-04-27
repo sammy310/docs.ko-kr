@@ -3,14 +3,14 @@ title: 추적 형식 요약
 ms.date: 03/30/2017
 ms.assetid: e639410b-d1d1-479c-b78e-a4701d4e4085
 ms.openlocfilehash: 73777df2b58b14947c416ce409bcb42d439499ec
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925153"
 ---
 # <a name="trace-type-summary"></a>추적 형식 요약
-[Source Levels](https://go.microsoft.com/fwlink/?LinkID=94943) 다양 한 추적 수준을 정의: 중요, 오류, 경고, 정보 및 Verbose 등에 대 한 설명을 제공 합니다 `ActivityTracing` 플래그의 출력을 토글하는 경계와 동작 전송 이벤트를 추적 합니다.  
+[Source Levels](https://go.microsoft.com/fwlink/?LinkID=94943) 다양 한 추적 수준을 정의 합니다. 중요, 오류, 경고, 정보 및 자세한 정보 표시에 대 한 설명을 제공 합니다 `ActivityTracing` 플래그의 출력을 토글하는 경계와 동작 전송 이벤트를 추적 합니다.  
   
  또한 검토할 수 있습니다 [TraceEventType](https://go.microsoft.com/fwlink/?LinkId=95169) 에서 내보낼 수 있는 추적의 형식에 대 한 <xref:System.Diagnostics>합니다.  
   
@@ -18,7 +18,7 @@ ms.locfileid: "43512540"
   
 |추적 형식|설명|  
 |----------------|-----------------|  
-|중요|오류 또는 응용 프로그램 충돌|  
+|중요|오류 또는 애플리케이션 충돌|  
 |오류|복구할 수 있는 오류|  
 |경고|알림 메시지|  
 |정보|중요하지 않은 문제|  

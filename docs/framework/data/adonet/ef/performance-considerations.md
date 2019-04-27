@@ -3,11 +3,11 @@ title: 성능 고려 사항(Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
 ms.openlocfilehash: ec7f3571f60dc7f10816cad90911e50d271a9ce1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879400"
 ---
 # <a name="performance-considerations-entity-framework"></a>성능 고려 사항(Entity Framework)
 이 항목에서는 ADO.NET Entity Framework의 성능 특징에 대해 설명하고, Entity Framework 응용 프로그램의 성능 개선을 위해 고려해야 할 몇 가지 사항을 알려 줍니다.  

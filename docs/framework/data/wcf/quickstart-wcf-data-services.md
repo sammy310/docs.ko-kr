@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
 ms.openlocfilehash: f20ffcf356aa0493b1e2356746d9ad7b27d9a1aa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876202"
 ---
 # <a name="quickstart-wcf-data-services"></a>빠른 시작(WCF Data Services)
 
@@ -28,13 +28,13 @@ ms.locfileid: "43504564"
 
 - SQL Server의 인스턴스입니다. 여기에 SQL Server Express 기본 설치의 일부로 또는 Visual Studio 2015에 포함 되는 **데이터 저장소 및 처리** Visual Studio 2017에서 워크 로드.
 
-- Northwind 샘플 데이터베이스 이 샘플 데이터베이스를 다운로드 하려면 다운로드 페이지를 참조 하세요 [SQL Server 용 샘플 데이터베이스](https://go.microsoft.com/fwlink/?linkid=24758)합니다.
+- Northwind 샘플 데이터베이스 이 샘플 데이터베이스를 다운로드하려면 [SQL Server용 샘플 데이터베이스](https://go.microsoft.com/fwlink/?linkid=24758)다운로드 페이지를 참조하세요.
 
 ## <a name="wcf-data-services-quickstart-tasks"></a>WCF data services 퀵 스타트 작업
 
  [데이터 서비스 만들기](../../../../docs/framework/data/wcf/creating-the-data-service.md)
 
- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 응용 프로그램과 데이터 모델을 정의하고, 데이터 서비스를 만들고, 리소스에 액세스할 수 있도록 합니다.
+ [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 애플리케이션과 데이터 모델을 정의하고, 데이터 서비스를 만들고, 리소스에 액세스할 수 있도록 합니다.
 
  [웹 브라우저에서 서비스에 액세스](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)
 
@@ -45,7 +45,7 @@ ms.locfileid: "43504564"
  OData 피드를 사용할 Windows 컨트롤에 데이터 바인딩, 변경, 바인딩된 컨트롤에서 데이터를 WPF 앱을 만들고 변경 내용을 데이터 서비스로 다시 보냅니다.
 
 > [!NOTE]
-> 빠른 시작의 전체 버전에서 프로젝트 파일에서 다운로드할 수 있습니다 합니다 [WCF Data Services Documentation Samples](https://go.microsoft.com/fwlink/?LinkId=179994) 페이지입니다.
+> 완성된 퀵 스타트 버전의 프로젝트 파일은 [WCF Data Services Documentation Samples](https://go.microsoft.com/fwlink/?LinkId=179994) 페이지에서 다운로드할 수 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
 ms.openlocfilehash: fa8607bf72dfb344048ec82514182dcb6810274d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803859"
 ---
 # <a name="copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument-narrows-from-type-typename1-to-type-typename2"></a>'ByRef' 매개 변수의 값을 복사 '\<parametername >' 인수에 다시 축소 됩니다. 형식에서 '\<typename1 >' 형식으로 '\<typename2 >'
 해당 매개 변수 형식으로 확대 되는 인수를 사용 하 여 프로시저 호출 및 매개 변수에서 인수 변환을 축소 됩니다.  

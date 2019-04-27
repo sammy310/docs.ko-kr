@@ -15,11 +15,11 @@ ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 43404ba24f6308d8da17b03df9997e893799c8d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875006"
 ---
 # <a name="contextswitchdeadlock-mda"></a>contextSwitchDeadlock MDA
 
@@ -56,13 +56,13 @@ STA 메시지 펌핑 관련 COM 규칙을 따릅니다.
 
 ## <a name="effect-on-the-runtime"></a>런타임에 대한 영향
 
-이 MDA는 CLR에 아무런 영향을 미치지 않으며, COM 컨텍스트에 대한 데이터를 보고할 뿐입니다.
+이 MDA는 CLR에 아무런 영향을 미치지 않습니다. COM 컨텍스트에 대한 데이터를 보고할 뿐입니다.
 
 ## <a name="output"></a>출력
 
 현재 컨텍스트 및 대상 컨텍스트를 설명하는 메시지입니다.
 
-## <a name="configuration"></a>구성하기
+## <a name="configuration"></a>구성
 
 ```xml
 <mdaConfig>

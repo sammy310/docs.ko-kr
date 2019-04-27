@@ -10,11 +10,11 @@ helpviewer_keywords:
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
 ms.openlocfilehash: bedf35544454a32ff13856a072779cd70723e989
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857170"
 ---
 # <a name="data-contract-known-types"></a>데이터 계약 알려진 형식
 <xref:System.Runtime.Serialization.KnownTypeAttribute> 클래스를 사용하면 고려 사항에 포함해야 하는 형식을 deserialization을 수행하는 동안 미리 지정할 수 있습니다. 작업 예제는 [Known Types](../../../../docs/framework/wcf/samples/known-types.md) 예제를 참조하십시오.  

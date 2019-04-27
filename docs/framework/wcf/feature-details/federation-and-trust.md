@@ -5,11 +5,11 @@ helpviewer_keywords:
 - federation [WCF], and trust
 ms.assetid: 4bdec4f2-f8a2-4512-bdcf-14ef54b5877a
 ms.openlocfilehash: 4e1529db6cc52b6b8cc8881d2b2a35a754b4b311
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856572"
 ---
 # <a name="federation-and-trust"></a>페더레이션 및 트러스트
 이 항목에서는 페더레이션된 응용 프로그램, 신뢰 경계 및 구성 및 Windows Communication Foundation (WCF)에서 발급 된 토큰을 사용 하 여 관련 된 다양 한 측면을 설명 합니다.  

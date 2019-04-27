@@ -7,11 +7,11 @@ helpviewer_keywords:
 - values [Visual Basic], enumeration members
 ms.assetid: 9253e7c8-579c-49a2-8f26-392b20ea99eb
 ms.openlocfilehash: 4fa04fa621347ae961975bfb636734e6c9df39fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906804"
 ---
 # <a name="how-to-determine-the-string-associated-with-an-enumeration-value-visual-basic"></a>방법: 열거형 값 (Visual Basic)를 사용 하 여 연결 문자열 확인
 합니다 <xref:System.Enum.GetValues%2A> 고 <xref:System.Enum.GetNames%2A> 메서드를 사용 하는 문자열과 열거형 멤버와 연결 된 값을 확인할 수 있습니다.  

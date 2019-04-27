@@ -5,11 +5,11 @@ helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
 ms.openlocfilehash: 31c5b386d707aa49cd36d536f1c8b419eb74a658
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61916411"
 ---
 # <a name="wcf-performance-counters"></a>WCF 성능 카운터
 Windows Communication Foundation (WCF)에 다양 한 응용 프로그램의 성능을 측정할 수 있도록 성능 카운터가 포함 됩니다.  

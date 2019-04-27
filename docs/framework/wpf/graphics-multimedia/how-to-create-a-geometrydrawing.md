@@ -8,11 +8,11 @@ helpviewer_keywords:
 - classes [WPF], GeometryDrawing
 ms.assetid: 11d3c096-91ba-4d41-9bba-aeac0db70f97
 ms.openlocfilehash: f5cdcfdb68ad8030bcbd6c689f45a8baddd000e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59179792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904958"
 ---
 # <a name="how-to-create-a-geometrydrawing"></a>방법: GeometryDrawing 만들기
 만들고 표시 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.GeometryDrawing>합니다. A <xref:System.Windows.Media.GeometryDrawing> 셰이프를 연결 하 여 채우기 및 윤곽선을 사용 하 여 만들 수 있습니다를 <xref:System.Windows.Media.Pen> 및 <xref:System.Windows.Media.Brush> 사용 하 여는 <xref:System.Windows.Media.Geometry>합니다. <xref:System.Windows.Media.GeometryDrawing.Geometry%2A> 셰이프 구조체에 설명 합니다 <xref:System.Windows.Media.GeometryDrawing.Brush%2A> 도형의 채우기 설명 및 <xref:System.Windows.Media.GeometryDrawing.Pen%2A> 도형의 윤곽선에 설명 합니다.  

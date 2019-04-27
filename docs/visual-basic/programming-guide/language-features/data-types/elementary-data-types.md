@@ -6,11 +6,11 @@ helpviewer_keywords:
 - data types [Visual Basic], elementary
 ms.assetid: dfad6fe9-2da6-49a4-b0b1-2d7ae0283de5
 ms.openlocfilehash: 0db989bbfcb8aa00278eb20bd269872c9447616f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907129"
 ---
 # <a name="elementary-data-types-visual-basic"></a>기본 데이터 형식(Visual Basic)
 Visual Basic에는 다양 한 프로그래밍 요소에 대해 사용할 수 있는 미리 정의 된 데이터 형식의 집합을 제공 합니다. 이 섹션에서는 이러한 형식 및 사용 하는 방법을 설명 합니다.  

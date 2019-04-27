@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID48
 ms.assetid: 4226cd1f-028c-477d-88a5-cb57f7e0cdc8
 ms.openlocfilehash: c3f88a5a3c37c89d23055aa413957b2add38ed67
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803469"
 ---
 # <a name="error-in-loading-dll-visual-basic"></a>DLL을 로드하는 동안 오류가 발생했습니다(Visual Basic).
 동적 연결 라이브러리 (DLL)는에 지정 된 라이브러리는 `Lib` 절을 `Declare` 문입니다. 이 오류의 가능한 원인은 다음과 같습니다.  

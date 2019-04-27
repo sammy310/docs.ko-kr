@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
 ms.openlocfilehash: 32ff0adca9d35e6b5439ae06be85414924dac2e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801298"
 ---
 # <a name="first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type"></a>'If' 이항 식의 첫 번째 피연산자는 nullable이거나 참조 형식이어야 합니다.
 `If` 식 2 또는 3 개의 인수를 사용할 수 있습니다. 두 개의 인수를 보낼 때 첫 번째 인수는 참조 형식 또는 nullable 형식 이어야 합니다. 첫 번째 인수 이외의 값으로 계산 하는 경우 `Nothing`, 해당 값이 반환 됩니다. 첫 번째 인수를 평가 하는 경우 `Nothing`, 두 번째 인수가 평가 되 고 반환 합니다.  

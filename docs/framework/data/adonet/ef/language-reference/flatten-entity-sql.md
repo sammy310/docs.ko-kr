@@ -3,11 +3,11 @@ title: FLATTEN(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 1a670c63-0a29-4738-80e6-101f66af05c3
 ms.openlocfilehash: 4f9a6315fc9cc2f295c21cc5fb7e1007e47796b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879725"
 ---
 # <a name="flatten-entity-sql"></a>FLATTEN(Entity SQL)
 여러 컬렉션의 컬렉션을 하나의 결합된 컬렉션으로 변환합니다. 새 컬렉션에는 기존 컬렉션과 동일한 요소가 모두 포함되지만 중첩 구조는 포함되지 않습니다.  

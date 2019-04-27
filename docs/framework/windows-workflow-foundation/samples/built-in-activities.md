@@ -3,11 +3,11 @@ title: 기본 제공 활동
 ms.date: 03/30/2017
 ms.assetid: 31e1b8c2-7f74-458a-b2e2-fddc5b10eac1
 ms.openlocfilehash: 7f497ff3dafd8615066bbae6ba1020d96d73b30c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913837"
 ---
 # <a name="built-in-activities"></a>기본 제공 활동
 이 섹션에는 기본 제공 Windows WF (Workflow Foundation) 활동을 보여 주는 샘플이 들어 있습니다.  
@@ -20,9 +20,7 @@ ms.locfileid: "57711605"
  XamlBuildTask 도구를 실행할 필요 없이 XAML 워크플로를 동적으로 로드하는 방법을 보여 줍니다.
   
  [InvokeMethod 작업 사용](using-the-invokemethod-activity.md)  
- 
-  <xref:System.Activities.Statements.InvokeMethod> 활동을 사용하여 public 클래스의 public 메서드를 호출하는 방법을 보여 줍니다.  
+ <xref:System.Activities.Statements.InvokeMethod> 활동을 사용하여 public 클래스의 public 메서드를 호출하는 방법을 보여 줍니다.  
   
  [Pick 작업 사용](using-the-pick-activity.md)  
- 
-  <xref:System.Activities.Statements.Pick> 활동을 사용하는 방법을 보여 줍니다.
+ <xref:System.Activities.Statements.Pick> 활동을 사용하는 방법을 보여 줍니다.

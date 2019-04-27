@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 694ea153-e4db-41ae-96ac-9ac66dcb69a9
 ms.openlocfilehash: cbe00fb792ab5f2a7586a958ddbe5bdf004656dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875968"
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>단일 단계 및 다단계에서 트랜잭션 커밋
 트랜잭션에 사용되는 각 리소스는 RM(리소스 관리자)에 의해 관리되고, RM의 작업은 TM(트랜잭션 관리자)에 의해 조정됩니다. 합니다 [트랜잭션에 참가 요소로 등록 리소스](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) 항목 리소스 (또는 여러 리소스) 트랜잭션에 참여할 수 있습니다 하는 방법에 대해 설명 합니다. 이 항목에서는 참여하는 리소스에서 트랜잭션 커밋을 조정하는 방법에 대해 설명합니다.  

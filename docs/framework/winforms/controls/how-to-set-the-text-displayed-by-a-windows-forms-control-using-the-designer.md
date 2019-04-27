@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms, setting the text displayed
 ms.assetid: 9d18e0e0-f17f-4074-837d-e67ceeeaa89d
 ms.openlocfilehash: a0f567befb1e0c323dd16fffedec279ff836cbf8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013220"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms 컨트롤에서 표시하는 텍스트 설정
 일반적으로 Windows Forms 컨트롤이 컨트롤의 기본 함수에 관련 된 일부 텍스트를 표시 합니다. 예를 들어, 한 <xref:System.Windows.Forms.Button> 컨트롤에는 일반적으로 단추를 클릭할 때 작업을 수행할지 여부를 나타내는 캡션을 표시 합니다. 모든 컨트롤에 대해 <xref:System.Windows.Forms.Control.Text%2A> 속성을 사용하여 텍스트를 설정하거나 반환할 수 있습니다. <xref:System.Windows.Forms.Control.Font%2A> 속성을 사용하여 글꼴을 변경할 수 있습니다.  

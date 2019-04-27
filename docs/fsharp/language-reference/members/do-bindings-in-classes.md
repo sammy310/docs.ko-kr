@@ -3,11 +3,11 @@ title: 클래스의 do 바인딩
 description: 사용 하는 방법을 알아봅니다는 F# 개체가 생성 될 때나 형식을 처음 사용할 때 작업을 수행 하는 클래스 정의 바인딩 ' do'.
 ms.date: 05/16/2016
 ms.openlocfilehash: 0ddf2b5ca458d0950c2e07bf2c37c205877e2173
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904594"
 ---
 # <a name="do-bindings-in-classes"></a>클래스의 do 바인딩
 
@@ -44,10 +44,10 @@ Initializing MyType.
 Initializing object 1 2 2 4 8 16
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [멤버](index.md)
 - [클래스](../classes.md)
-- [생성자(C++)](constructors.md)
+- [생성자](constructors.md)
 - [클래스의 `let` 바인딩](let-bindings-in-classes.md)
-- [`do` 바인딩](../functions/do-Bindings.md)
+- [`do` Bindings](../functions/do-Bindings.md)

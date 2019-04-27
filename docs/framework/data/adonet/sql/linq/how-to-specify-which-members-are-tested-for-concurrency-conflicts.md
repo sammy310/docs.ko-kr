@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d2cda293-1e2f-4878-af0e-5aaf0d092120
 ms.openlocfilehash: 9a1b4ab2dc28c569473eddbf50b96d10298d8d3c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902735"
 ---
 # <a name="how-to-specify-which-members-are-tested-for-concurrency-conflicts"></a>방법: 동시성 충돌을 테스트할 멤버 지정
 에 세 가지 열거형 중 하나를 적용 합니다 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> 속성을 <xref:System.Data.Linq.Mapping.ColumnAttribute> 낙관적 동시성 충돌 감지에 대 한 업데이트에 포함 될 멤버를 지정 하려면 특성 확인.  

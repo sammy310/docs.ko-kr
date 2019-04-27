@@ -3,11 +3,11 @@ title: 지연 식
 description: 설명 하는 방법 F# 지연 식에는 앱 및 라이브러리의 성능을 향상 시킬 수 있습니다.
 ms.date: 03/13/2019
 ms.openlocfilehash: 6d53d53093f4e93f53e1c956b94e2f1e4a1bbd55
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57853331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904113"
 ---
 # <a name="lazy-expressions"></a>지연 식
 

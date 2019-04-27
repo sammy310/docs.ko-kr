@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Canvas control [WPF], setting positioning properties
 ms.assetid: 1636b950-2b5a-4507-8a10-c5034cc58b1c
 ms.openlocfilehash: 06508e1198736ccb1cbda41641dff4bc634ef82b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59194411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910483"
 ---
 # <a name="how-to-get-or-set-canvas-positioning-properties"></a>방법: 캔버스 위치 지정 속성 가져오기 또는 설정
 위치 지정 메서드를 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.Canvas> 요소 자식 콘텐츠의 위치입니다. 콘텐츠를 사용 하 여이 예제는 <xref:System.Windows.Controls.ListBoxItem> 나타내는 위치 값 및 값의 인스턴스로 변환 <xref:System.Double>, 위치 지정에 대 한 필수 인수는 합니다. 값 다음 문자열로 다시 변환 되어에 텍스트로 표시 되는 <xref:System.Windows.Controls.TextBlock> 를 사용 하 여 요소를 <xref:System.Windows.Controls.Canvas.GetLeft%2A> 메서드.  

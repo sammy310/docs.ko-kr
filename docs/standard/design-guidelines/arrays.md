@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: 66a1b3d8-6f3f-4715-b235-e1ff95e32d8e
 author: KrzysztofCwalina
 ms.openlocfilehash: dd30cdee0440553a9f955f0b3f4ee420e938b9ea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864119"
 ---
 # <a name="arrays"></a>배열
 **✓ DO** 공용 Api에서 배열을 통해 컬렉션을 사용 하는 것을 선호 합니다. 합니다 [컬렉션](../../../docs/standard/design-guidelines/guidelines-for-collections.md) 섹션에서는 컬렉션 및 배열 중에서 선택 하는 방법에 대 한 세부 정보를 제공 합니다.  

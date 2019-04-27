@@ -9,11 +9,11 @@ helpviewer_keywords:
 - procedure calls [Visual Basic], property procedures
 ms.assetid: 96bc4d74-d9c3-4b7a-954d-58ac8553cd94
 ms.openlocfilehash: d05c1b63f5567ade9935f80ecc022eb4840e0af0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864366"
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>방법: 속성 프로시저 (Visual Basic)
 속성에 값을 저장 하거나 해당 값을 검색 하는 속성 프로시저를 호출 합니다. 변수에 액세스할 때 동일한 방식으로 속성에 액세스 합니다.  

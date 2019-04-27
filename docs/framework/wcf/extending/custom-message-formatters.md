@@ -3,11 +3,11 @@ title: 사용자 지정 메시지 포맷터
 ms.date: 03/30/2017
 ms.assetid: c07435f3-5214-4791-8961-2c2b61306d71
 ms.openlocfilehash: af1596c65fc87a68bc3dc2ab5ab2d82133e0fed4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857976"
 ---
 # <a name="custom-message-formatters"></a>사용자 지정 메시지 포맷터
 메시지 내용은 응용 프로그램에 편리한 형식이 아닌 XML 형식인 경우가 많습니다. 응용 프로그램은 속성을 가져오고 설정하여 개체를 조작합니다. Windows Communication Foundation (WCF)를 사용 합니다 *데이터 계약* 변환할는 <xref:System.ServiceModel.Channels.Message> 개체로 응용 프로그램에서 쉽게 처리 하는 개체입니다. 이러한 프로세스를 serialization 및 deserialization이라고 합니다. 전송 계층에서 메시지 통신 형식에 대해 수행하는 관련 없는 프로세스인 serialization 및 deserialization을 설명하는 데에도 동일한 용어가 사용됩니다.  

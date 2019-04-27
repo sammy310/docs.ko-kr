@@ -7,11 +7,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], returning a value
 ms.assetid: 8ee19f95-a9ef-4033-963b-d224dca207c4
 ms.openlocfilehash: 115c1df4bd49d5848d72c4cbd0242a49a12740c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863729"
 ---
 # <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>방법: (Visual Basic) 값을 반환 하는 프로시저 만들기
 사용할를 `Function` 프로시저를 호출 하는 코드에 값을 반환 합니다.  

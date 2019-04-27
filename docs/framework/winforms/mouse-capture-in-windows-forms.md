@@ -5,11 +5,11 @@ helpviewer_keywords:
 - mouse [Windows Forms], capture
 ms.assetid: 8911d4b0-a4f8-4f93-8246-371aebd27d0c
 ms.openlocfilehash: 30432c6978f60cc9ad47d5df5dafc7aa45229f3b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800960"
 ---
 # <a name="mouse-capture-in-windows-forms"></a>Windows Forms의 마우스 캡처
 *마우스 캡처* 컨트롤 명령의 모든 마우스 입력을 받는 시점을 나타냅니다. 컨트롤이 마우스를 캡처, 포인터의 테두리 내 있는지 여부에 관계 없이 마우스 입력을 받습니다.  

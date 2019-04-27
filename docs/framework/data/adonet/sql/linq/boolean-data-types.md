@@ -3,11 +3,11 @@ title: Boolean 데이터 형식
 ms.date: 03/30/2017
 ms.assetid: 57f7376b-4b11-4b35-98a9-780382053ceb
 ms.openlocfilehash: 2535d72a89691466b977e1d4c460ff73e3b93dc2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877398"
 ---
 # <a name="boolean-data-types"></a>Boolean 데이터 형식
 부울 연산자는 단락(short-circuiting) 동작이 변환되지 않는 것을 제외하고 CLR(공용 언어 런타임)에서 예상대로 동작합니다. 예를 들어 Visual Basic `AndAlso` 연산자는 `And` 연산자와 같이 동작합니다. C# `&&` 연산자는 `&` 연산자와 같이 동작합니다.  

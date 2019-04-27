@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], scenarios
 ms.assetid: 09a5fd05-3447-47ec-a4ec-6082a2b7f0dd
 ms.openlocfilehash: 52c448f21be056e6166334785943356039baf3ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909302"
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>DataGridView 컨트롤 시나리오(Windows Forms)
 사용 하 여는 <xref:System.Windows.Forms.DataGridView> 컨트롤, 다양 한 데이터 원본에서에서 테이블 형식 데이터를 표시할 수 있습니다. 간단한 용도로 수동으로 채울 수 있습니다는 <xref:System.Windows.Forms.DataGridView> 제어를 통해 직접 데이터를 조작 합니다. 그러나 일반적으로 외부 데이터 원본에 데이터를 저장할을 통해 컨트롤을 바인딩하는 <xref:System.Windows.Forms.BindingSource> 구성 요소입니다.  

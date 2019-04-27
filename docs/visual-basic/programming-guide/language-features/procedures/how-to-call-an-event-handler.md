@@ -9,11 +9,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 ms.assetid: 72e18ef8-144e-40df-a1f4-066a57271e28
 ms.openlocfilehash: 3690d1c2eb8ece9059b8b25b5a14bef2021bc8f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864509"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>방법: Visual Basic의 이벤트 처리기를 호출 합니다.
 *이벤트* 작업 또는 항목은-같은 마우스 클릭 이나 신용 한도 초과-응답 코드를 작성할 수 있는 한 일부 프로그램 구성 요소에 의해 인식 합니다. *이벤트 처리기* 이벤트에 응답을 작성 하는 코드입니다.  

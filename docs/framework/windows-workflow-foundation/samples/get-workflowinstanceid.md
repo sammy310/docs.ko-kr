@@ -3,11 +3,11 @@ title: WorkflowInstanceId 가져오기
 ms.date: 03/30/2017
 ms.assetid: bd7eea3b-1c28-4b84-9a67-003bc553aa81
 ms.openlocfilehash: 6725ed92bf785e5b7f7d61332944fcce8427388a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47112259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005019"
 ---
 # <a name="get-workflowinstanceid"></a>WorkflowInstanceId 가져오기
 이 샘플에서는 사용자 지정 활동인 `GetWorkflowInstanceId`를 사용하여 워크플로 인스턴스 ID를 반환하는 방법을 보여 줍니다.  

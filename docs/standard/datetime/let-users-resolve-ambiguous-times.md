@@ -1,5 +1,5 @@
 ---
-title: '방법: 사용자의 모호한 시간 확인 작업 허용'
+title: '방법: 사용자에게 모호한 시간 확인 작업 허용'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,13 +9,13 @@ ms.assetid: bca874ee-5b68-4654-8bbd-3711220ef332
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ae6d16bda7a2cd6f2367129b737ec79d8193ebf9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903788"
 ---
-# <a name="how-to-let-users-resolve-ambiguous-times"></a>방법: 사용자의 모호한 시간 확인 작업 허용
+# <a name="how-to-let-users-resolve-ambiguous-times"></a>방법: 사용자에게 모호한 시간 확인 작업 허용
 
 모호한 시간은 하나 이상의 UTC(협정 세계시)를 매핑하는 시간입니다. 표준 시간대의 일광 절약 시간에서 표준 시간으로 전환하는 것과 같이 클록 시간을 뒤로 조정하는 경우 발생합니다. 모호한 시간을 처리하는 경우 다음 중 하나를 수행할 수 있습니다.
 

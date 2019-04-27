@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f80d4327-b6a5-4aa8-a743-e95d09a2a02e
 ms.openlocfilehash: ed8071352902b8f97445cbfa5ff0ebe8fead9bb9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903255"
 ---
 # <a name="how-to-call-user-defined-functions-inline"></a>방법: 사용자 정의 함수 인라인 호출
 사용자 정의 함수를 인라인으로 호출할 수 있지만 실행이 지연된 쿼리에 포함된 함수는 쿼리가 실행될 때까지 실행되지 않습니다. 자세한 내용은 [LINQ 쿼리 소개(C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)를 참조하세요.  

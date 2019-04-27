@@ -3,11 +3,11 @@ title: 값
 description: 에 대해 알아봅니다 어떻게 값 F# 특정 형식을 가진 수량이 됩니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: 5c1d4f1e59cbf092911d99a725654042bf3383b1
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902189"
 ---
 # <a name="values"></a>값
 
@@ -48,7 +48,7 @@ F#은 순수 함수형 언어가 아니지만 함수형 프로그래밍을 완�
 |[let 바인딩](../functions/let-bindings.md)|사용에 대 한 정보를 제공 합니다 `let` 이름을 값 및 함수에 바인딩해야 하는 키워드입니다.|
 |[함수](../functions/index.md)|F#의 함수를 간략하게 설명합니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [Null 값](null-Values.md)
 - [F# 언어 참조](../index.md)

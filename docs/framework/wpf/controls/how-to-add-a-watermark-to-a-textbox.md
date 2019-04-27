@@ -9,11 +9,11 @@ helpviewer_keywords:
 - aid usability of a TextBox using a background image [WPF]
 ms.assetid: df89bdd8-a0fb-45e0-b312-dd53332d01a8
 ms.openlocfilehash: ef2536f03ba6ed08e27d2fcf30cd1f72df2cf460
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911623"
 ---
 # <a name="how-to-add-a-watermark-to-a-textbox"></a>방법: TextBox에 워터마크 추가
 다음 예제에서는의 유용성을 <xref:System.Windows.Controls.TextBox> 내부의 설명 배경 이미지를 표시 하 여는 <xref:System.Windows.Controls.TextBox> 이미지 제거 되는 시점까지 사용자가 텍스트를 입력 합니다. 또한 사용자가 입력을 제거 하는 경우 배경 이미지가 다시 복원 됩니다. 아래 그림을 참조 하세요.  

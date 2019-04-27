@@ -9,11 +9,11 @@ helpviewer_keywords:
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
 ms.openlocfilehash: e3d0143cd68bc94c6ff07e65ca5a3c8971b45f23
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858015"
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>방법: 서비스에 대한 사용자 지정 권한 부여 관리자 만들기
 Windows Communication Foundation (WCF)에서 Id 모델 인프라를 확장할 수 있는 클레임 기반 권한 부여 모델을 지원합니다. 클레임은 토큰에서 추출되어 사용자 지정 권한 부여 정책에 의해 선택적으로 처리된 다음,<xref:System.IdentityModel.Policy.AuthorizationContext>에 배치됩니다. 권한 부여 관리자는 <xref:System.IdentityModel.Policy.AuthorizationContext>에서 클레임을 검사하여 권한 부여 결정을 내립니다.  

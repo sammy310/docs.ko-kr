@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
 ms.openlocfilehash: d6e28e5e87c3a88e4db3fc81177894683dbb0908
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920447"
 ---
 # <a name="private-visual-basic"></a>Private(Visual Basic)
 하나 이상의 선언 된 프로그래밍 요소를 포함 된 모든 형식을 포함 하 여 해당 선언 컨텍스트 내 에서만 액세스할 수 있도록 지정 합니다.  

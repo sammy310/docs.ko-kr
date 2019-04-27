@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
 ms.openlocfilehash: 41e099cdca4f02231fd4b1cc8bce2c4b1e511c71
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878828"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>DataView로 필터링(LINQ to DataSet)
 특정 조건을 사용하여 데이터를 필터링한 다음 UI 컨트롤을 통해 클라이언트에 데이터를 제공하는 기능은 데이터 바인딩의 중요한 기능입니다. <xref:System.Data.DataView>에서는 데이터를 필터링하여 특정 필터 조건을 충족하는 데이터 행의 하위 집합을 반환하는 여러 가지 방법을 제공합니다. 문자열 기반 하는 것 외에도 필터링 기능도 <xref:System.Data.DataView> 사용 하는 기능도 제공 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 식을 필터링 조건에 대 한 합니다. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 식은 문자열 기반 필터링에 비해 훨씬 더 복잡 하 고 강력한 필터링 작업을 허용 합니다.  

@@ -15,11 +15,11 @@ ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 85a1a017197826717280f53995ed98f26f1d80bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61873862"
 ---
 # <a name="trace-switches"></a>추적 스위치
 추적 스위치를 사용하여 추적 출력을 활성화, 비활성화 및 필터링할 수 있습니다. 코드에 존재하며 .config 파일을 통해 외부에서 구성할 수 있는 개체입니다. .NET Framework에서 제공되는 세 가지 유형의 추적 스위치( <xref:System.Diagnostics.BooleanSwitch> 클래스, <xref:System.Diagnostics.TraceSwitch> 클래스 및 <xref:System.Diagnostics.SourceSwitch> 클래스)가 있습니다. <xref:System.Diagnostics.BooleanSwitch> 클래스는 다양한 trace 문을 사용하거나 사용하지 않도록 설정하는 토글 스위치 역할을 합니다. <xref:System.Diagnostics.TraceSwitch> 및 <xref:System.Diagnostics.SourceSwitch> 클래스를 통해 특정 추적 수준에 대한 추적 스위치를 사용하도록 설정하여 해당 수준 및 그 아래의 모든 수준에 대해 지정된 <xref:System.Diagnostics.Trace> 또는 <xref:System.Diagnostics.TraceSource> 메시지를 표시할 수 있습니다. 스위치를 사용하지 않도록 설정하면 추적 메시지가 나타나지 않습니다. 이러한 모든 클래스는 사용자 개발 스위치와 마찬가지로 추상(**MustInherit**) 클래스 **Switch**에서 파생됩니다.  

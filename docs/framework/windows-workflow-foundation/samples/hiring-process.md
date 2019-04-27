@@ -3,11 +3,11 @@ title: 채용 프로세스
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
 ms.openlocfilehash: c6f542cef8e1417ed9c8d3a185252a91062e2161
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005058"
 ---
 # <a name="hiring-process"></a>채용 프로세스
 이 샘플에서는 워크플로 서비스로 호스트되는 두 개의 워크플로와 메시징 활동을 사용하여 비즈니스 프로세스를 구현하는 방법을 보여 줍니다. 이 워크플로는 Contoso, Inc라는 가상 회사의 IT 인프라 중 일부입니다.  

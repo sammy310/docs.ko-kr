@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
 ms.openlocfilehash: a10eaa3ea62df9301a53f5609b503bfabcb50a46
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913083"
 ---
 # <a name="how-to-respond-to-windows-forms-button-clicks"></a>방법: Windows Forms 단추 클릭에 응답
 Windows Forms의 가장 기본적인 사용 <xref:System.Windows.Forms.Button> 컨트롤 단추를 클릭할 때 일부 코드를 실행 하는 것입니다.  

@@ -3,11 +3,11 @@ title: DataTables
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
 ms.openlocfilehash: f6509400d7f6633749155f778e3ba58ec6c27ec2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61880001"
 ---
 # <a name="datatables"></a>DataTables
 <xref:System.Data.DataSet>은 테이블 컬렉션, 관계 및 제약 조건으로 구성되어 있습니다. Ado.net에서는 <xref:System.Data.DataTable> 개체에서 테이블을 나타내는 데 사용 되며를 **데이터 집합**합니다. A **DataTable** 메모리 내 관계형 데이터의 테이블 데이터가 로컬 합니다. 상주 하지만 Microsoft SQL Server를 사용 하 여 같은 데이터 원본에서 채울 수 있습니다 하는.NET 기반 응용 프로그램을 **DataAdapter** 자세한 내용은 참조 하십시오 [DataAdapter에서 DataSet 채우기](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md) .  

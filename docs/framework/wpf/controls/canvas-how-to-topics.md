@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Canvas control [WPF], how-to topics
 ms.assetid: 5c8f5bca-7ba9-4526-a9bf-0852351dbe8a
 ms.openlocfilehash: 5c07039a66b40a6ecb54eda674bf2be396fc3e68
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912524"
 ---
 # <a name="canvas-how-to-topics"></a>캔버스 방법 항목
 이 섹션의에서 항목에서는 사용 하는 방법에 설명 합니다 <xref:System.Windows.Controls.Canvas> 요소 자식 요소의 절대 위치입니다.  

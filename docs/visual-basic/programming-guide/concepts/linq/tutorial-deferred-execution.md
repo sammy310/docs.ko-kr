@@ -3,11 +3,11 @@ title: '자습서: 지연 된 실행 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c80d53a8-1a30-4115-b232-52f0d089fec5
 ms.openlocfilehash: d78d298f7691c4f1df291fa865c92894414ead58
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907753"
 ---
 # <a name="tutorial-deferred-execution-visual-basic"></a>자습서: 지연 된 실행 (Visual Basic)
 이 자습서에서는 쿼리를 연결할 때의 처리 모델을 보여 줍니다. 쿼리 연결은 함수 변환을 작성할 때 핵심 부분을 차지합니다. 연결된 쿼리의 작동 방식을 정확히 이해해야 합니다.  

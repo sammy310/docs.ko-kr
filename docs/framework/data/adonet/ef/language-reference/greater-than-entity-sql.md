@@ -3,11 +3,11 @@ title: '> (보다 큼) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 4cea865c-677c-4b06-99a1-010f2ae2394a
 ms.openlocfilehash: e1d13fa863eb79982d239f4e2dc298f7fcd1346f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879491"
 ---
 # <a name="-greater-than-entity-sql"></a>> (보다 큼) (Entity SQL)
 두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값보다 큰지 여부를 결정합니다.  

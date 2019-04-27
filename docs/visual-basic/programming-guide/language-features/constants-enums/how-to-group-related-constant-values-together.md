@@ -6,11 +6,11 @@ helpviewer_keywords:
 - constants [Visual Basic], grouping together
 ms.assetid: 09d61da5-c940-4126-a79f-ba93c36653dc
 ms.openlocfilehash: a4f74e48cfdd5c0bc0f745d0f32eb39442f5bd83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906765"
 ---
 # <a name="how-to-group-related-constant-values-together-visual-basic"></a>방법: 그룹 관련된 상수 값 그룹화 (Visual Basic)
 열거형은 가장 좋은 방법은 관련된 상수를 그룹화 합니다. 사용 하 여 열거형을 만듭니다는 `Enum` 클래스 또는 모듈의 선언 섹션에서 문입니다. 자세한 내용은 [방법: 열거형 선언](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)합니다.  

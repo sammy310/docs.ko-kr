@@ -12,11 +12,11 @@ helpviewer_keywords:
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
 ms.openlocfilehash: ea719b60a6bcd40494666d4923fad296a8ddae70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907389"
 ---
 # <a name="composite-data-types-visual-basic"></a>복합 데이터 형식(Visual Basic)
 기본 데이터 형식 Visual Basic에서 제공 하는 것 외에도 수 조합 하 여 만들려는 다른 형식의 항목 *복합 데이터 형식* 클래스, 구조체 및 배열 등입니다. 기본 형식에서 다른 복합 형식의 복합 데이터 형식을 빌드할 수 있습니다. 예를 들어, 배열 멤버를 사용 하 여 한 구조 요소, 배열 또는 구조를 정의할 수 있습니다.  

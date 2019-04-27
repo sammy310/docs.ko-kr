@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5a29de74-acfc-4134-8616-829dd7ce0710
 ms.openlocfilehash: a71758781511f18ddf5451feaf0d308af1b4a652
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879933"
 ---
 # <a name="connection-events"></a>연결 이벤트
 .NET Framework 데이터 공급자의 모든 **연결** 데이터 원본에서 정보 메시지를 검색 또는 확인에 사용할 수 있는 두 개의 이벤트를 사용 하 여 개체의 상태를 **연결** 에 변경 합니다. 다음 표에서 이벤트를 설명 합니다 **연결** 개체입니다.  

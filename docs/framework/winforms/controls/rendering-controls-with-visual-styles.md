@@ -11,11 +11,11 @@ helpviewer_keywords:
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
 ms.openlocfilehash: b0b301bca33842dfb68de9143b665bed73f17b74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903437"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>비주얼 스타일을 사용하여 컨트롤 렌더링
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 는 지원되는 운영 체제에서 비주얼 스타일을 사용하여 컨트롤 및 기타 Windows UI(사용자 인터페이스) 요소를 렌더링하는 것을 지원합니다. 이 항목에서는 운영 체제의 현재 비주얼 스타일로 컨트롤 및 기타 UI 요소를 렌더링하는 작업에 대한 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 의 몇 가지 지원 수준에 대해 설명합니다.  

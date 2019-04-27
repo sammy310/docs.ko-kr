@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
 ms.openlocfilehash: 84762d8917609b84a049ea665b575acfa6e5fecf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857534"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>방법: ASP.NET 웹 서비스 클라이언트와 상호 운용하도록 WCF 서비스 구성
 상호 운용 가능 하도록 Windows Communication Foundation (WCF) 서비스 끝점을 구성 하려면 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 서비스 클라이언트를 사용 하 여는 <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> 서비스 끝점의 바인딩 형식으로 형식입니다.  

@@ -3,11 +3,11 @@ title: 문자열 함수
 ms.date: 03/30/2017
 ms.assetid: 338f0c26-8aee-43eb-bd1a-ec0849a376b9
 ms.openlocfilehash: 6da257cad90232426c71221dfd9d418265479bbe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879123"
 ---
 # <a name="string-functions"></a>문자열 함수
 .NET Framework Data Provider for SQL Server(SqlClient)에서는 입력 `String`에 대해 연산을 수행하고 `String` 또는 숫자 값 결과를 반환하는 `String` 함수를 제공합니다. 이 함수는 SqlClient를 사용할 때 사용 가능한 SqlServer 네임스페이스에 있습니다. 공급자의 네임스페이스 속성이 있으면 특정 구문(예: 형식 및 함수)에 대해 이 공급자가 사용하는 접두사를 Entity Framework에서 찾을 수 있습니다.  

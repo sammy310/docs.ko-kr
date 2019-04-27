@@ -3,11 +3,11 @@ title: Flowchart 활동에서 TryCatch를 사용하여 오류 처리
 ms.date: 03/30/2017
 ms.assetid: 50922964-bfe0-4ba8-9422-0e7220d514fd
 ms.openlocfilehash: 81bfeb911658a6f363a9f0f95ecc7db68a02dbe2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005045"
 ---
 # <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>Flowchart 활동에서 TryCatch를 사용하여 오류 처리
 이 샘플에서는 복잡한 제어 흐름 활동 내에서 <xref:System.Activities.Statements.TryCatch> 활동을 사용하는 방법을 보여 줍니다.

@@ -3,11 +3,11 @@ title: HTTP 인증 이해
 ms.date: 03/30/2017
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
 ms.openlocfilehash: 430b0ddb98514b605178124f331e5152605a2b89
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918907"
 ---
 # <a name="understanding-http-authentication"></a>HTTP 인증 이해
 인증은 클라이언트가 리소스에 액세스할 자격이 있는지 여부를 식별하는 프로세스입니다. HTTP 프로토콜에서는 보안 리소스에 대한 액세스를 협상하기 위해 인증을 지원합니다.  

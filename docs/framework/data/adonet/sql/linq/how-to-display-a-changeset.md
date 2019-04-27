@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 126e7245-c5a0-4ebf-800d-cc1fcf9cd0ab
 ms.openlocfilehash: 92acee0d36634ea09c245418fcc7a8b97d208aa6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903112"
 ---
 # <a name="how-to-display-a-changeset"></a>방법: ChangeSet 표시
 <xref:System.Data.Linq.DataContext>을 사용하여 <xref:System.Data.Linq.DataContext.GetChangeSet%2A>에 의해 추적된 변경 내용을 볼 수 있습니다.  

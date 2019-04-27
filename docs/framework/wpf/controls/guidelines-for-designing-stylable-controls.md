@@ -6,11 +6,11 @@ helpviewer_keywords:
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
 ms.openlocfilehash: 756cc821b1a9fe20741e390a1fe6e84d12cc6363
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009970"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>스타일을 지정할 수 있는 컨트롤을 디자인하기 위한 지침
 이 문서에서는 쉽게 스타일을 지정하고 템플릿을 지정할 수 있는 컨트롤을 디자인할 때 고려해야 하는 모범 사례 집합을 요약합니다. 기본 제공 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤 집합의 테마 컨트롤 스타일에 대해 작업하는 동안 많은 시행착오를 거쳐 이 모범 사례 집합을 얻게 되었습니다. 성공적으로 스타일을 지정하려면 스타일 자체만큼이나 잘 설계된 개체 모델이 필요함을 알게 되었습니다. 이 문서의 독자는 스타일 작성자가 아니라 컨트롤 작성자입니다.  

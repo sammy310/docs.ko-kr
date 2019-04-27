@@ -14,11 +14,11 @@ helpviewer_keywords:
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
 ms.openlocfilehash: 798baa90308c83e42b335635fb23a9983f5180fb
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61839386"
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>명령줄에서 빌드(Visual Basic)
 Visual Basic 프로젝트를 하나 이상의 별도 소스 파일로 구성 됩니다. 컴파일으로 알려진 프로세스 동안 이러한 파일은 모일 하나의 패키지로-응용 프로그램으로 실행할 수 있는 단일 실행 파일이 있습니다.  

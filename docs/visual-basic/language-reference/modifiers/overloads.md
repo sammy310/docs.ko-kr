@@ -11,11 +11,11 @@ helpviewer_keywords:
 - signature, hiding by
 ms.assetid: 0c6820b8-25b2-4664-bc59-5ca93c99c042
 ms.openlocfilehash: 0d68846938aba809a7a3a6f7d27f185bb90a39cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920681"
 ---
 # <a name="overloads-visual-basic"></a>Overloads(Visual Basic)
 속성 또는 프로시저에서 하나 이상의 기존 속성 또는 프로시저를 같은 이름으로 다시 선언할 수 있도록 지정합니다.  

@@ -1,5 +1,5 @@
 ---
-title: '방법: 방사형 그라데이션으로 영역 그리기'
+title: '방법: 방사형 그라데이션으로 영역 칠하기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - painting [WPF], with radial gradients
 ms.assetid: b5d0fc8a-8986-4796-b003-a75b41a48928
 ms.openlocfilehash: c3bcc11dea4b1f223f629415591ab03588881dde
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921834"
 ---
-# <a name="how-to-paint-an-area-with-a-radial-gradient"></a>방법: 방사형 그라데이션으로 영역 그리기
+# <a name="how-to-paint-an-area-with-a-radial-gradient"></a>방법: 방사형 그라데이션으로 영역 칠하기
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.RadialGradientBrush> 방사형 그라데이션으로 영역 그리기 클래스입니다.  
   
 ## <a name="example"></a>예제  

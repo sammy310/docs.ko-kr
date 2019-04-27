@@ -17,11 +17,11 @@ helpviewer_keywords:
 - properties [Visual Basic], overriding
 ms.assetid: 66ec6984-f5f5-4857-b362-6a3907aaf9e0
 ms.openlocfilehash: 41c08a48fdb7501081e887fb5cf9f99c334c72ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920655"
 ---
 # <a name="notoverridable-visual-basic"></a>NotOverridable(Visual Basic)
 파생된 클래스에서 속성 또는 프로시저를 재정의할 수 없음을 지정 합니다.  

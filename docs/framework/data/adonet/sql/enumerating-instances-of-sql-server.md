@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
 ms.openlocfilehash: a723679fe18352e115df78af72975097dc28b617
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877593"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>SQL Server의 인스턴스 열거(ADO.NET)
 SQL Server는 현재 네트워크 내에서 SQL Server 인스턴스를 찾으려면 응용 프로그램을 허용 합니다. <xref:System.Data.Sql.SqlDataSourceEnumerator> 클래스에서는 응용 프로그램 개발자에게 이 정보를 노출시켜 표시되는 모든 서버에 대한 정보가 포함된 <xref:System.Data.DataTable>을 제공합니다. 일치는 사용자가 새 연결을 만들려고 할 때 제공 된 목록에서 사용 가능한 모든 서버를 포함 하는 드롭다운 목록을 확장 하 고 네트워크에서 사용할 서버 인스턴스의 목록을 포함 하는 테이블을 반환이 **연결 속성** 대화 상자. 표시되는 결과가 항상 완전하지는 않습니다.  

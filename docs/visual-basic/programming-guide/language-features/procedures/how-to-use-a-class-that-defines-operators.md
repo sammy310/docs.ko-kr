@@ -12,11 +12,11 @@ helpviewer_keywords:
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
 ms.openlocfilehash: bd512adf2f06ed0fbd3d36ed3175a0928bf1c57c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863495"
 ---
 # <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>방법: 연산자 (Visual Basic)를 정의 하는 클래스를 사용 합니다.
 클래스 또는 고유한 연산자를 정의 하는 구조를 사용 하는 경우에 Visual Basic에서 이러한 연산자를 액세스할 수 있습니다.  

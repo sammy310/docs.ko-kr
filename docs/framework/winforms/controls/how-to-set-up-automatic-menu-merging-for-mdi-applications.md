@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Merging [Windows Forms], automatic menu
 ms.assetid: 55e32cad-1141-4a56-aa33-d9543ca3d393
 ms.openlocfilehash: 33e07bb655d81c6a802ebdce871a2fed845a5c96
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013025"
 ---
 # <a name="how-to-set-up-automatic-menu-merging-for-mdi-applications"></a>방법: MDI 애플리케이션에 대한 자동 메뉴 병합 설정
 다음 절차 (MDI) 다중 문서 인터페이스 응용 프로그램에 자동 병합 설정에 대 한 기본 단계를 제공 <xref:System.Windows.Forms.MenuStrip>합니다.  

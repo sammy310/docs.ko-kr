@@ -6,11 +6,11 @@ helpviewer_keywords:
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
 ms.openlocfilehash: 27b9c6e117b6ba809daae87d376b03e27bc2b0f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858080"
 ---
 # <a name="best-practices-for-queued-communication"></a>대기 중인 통신을 위한 최선의 방법
 이 항목에서는 Windows Communication Foundation (WCF)에서 대기 중인된 통신에 대 한 모범 사례를 제공합니다. 다음 단원에서는 시나리오 측면에서 권장되는 방법에 대해 설명합니다.  

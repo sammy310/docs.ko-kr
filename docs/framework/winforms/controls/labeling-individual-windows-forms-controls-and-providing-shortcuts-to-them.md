@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms controls, labels
 ms.assetid: 6eaf868c-819f-4131-8f59-048e20c286f7
 ms.openlocfilehash: 8d7ae8c807b8c5347a455b81c2c1a1b0897430c2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013012"
 ---
 # <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a>개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공
 Windows Forms에 추가된 컨트롤에는 사용자 환경을 더욱 특수화하는 데 사용되는 속성 및 메서드가 있습니다. 사용자의 요구에 맞게 사용자 인터페이스를 사용자 지정하는 것은 잘 설계된 Windows 응용 프로그램에 매우 중요합니다.  

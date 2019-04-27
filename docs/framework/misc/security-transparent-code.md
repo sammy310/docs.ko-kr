@@ -9,10 +9,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5cb528bbb4f85cd4502b4e2efabbcf592ac6bd0c
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59974385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868747"
 ---
 # <a name="security-transparent-code"></a>보안 투명 코드
 

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - BitmapSource objects [WPF], converting to palettized pixel format
 ms.assetid: cd9df1e4-d5dc-4f57-b67b-4ec67e086b33
 ms.openlocfilehash: ea042599369da8435198e4206f89f3fa356a80c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59153285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910171"
 ---
 # <a name="how-to-convert-a-bitmapsource-to-a-different-pixelformat"></a>방법: BitmapSource를 다른 PixelFormat으로 변환
 변환 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Imaging.BitmapSource> 개체 (<xref:System.Windows.Media.Imaging.BitmapImage>) 다른 <xref:System.Windows.Media.PixelFormat> 사용 하 여를 <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>입니다.  

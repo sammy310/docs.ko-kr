@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
 ms.openlocfilehash: c2923a1940e3d58b6e3434f5b02edfb02995a202
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875314"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>클라이언트 응용 프로그램에서 데이터 서비스 사용(WCF Data Services)
 노출 하는 서비스에 액세스할 수 있습니다는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 웹 브라우저에 URI를 제공 하 여 피드 합니다. URI는 리소스의 주소를 제공하고 요청 메시지는 해당 리소스가 나타내는 기본 데이터에 액세스하거나 변경하기 위해 이러한 주소로 전송됩니다. 브라우저는 HTTP GET 명령을 실행하고 요청된 리소스를 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드로 반환합니다. 자세한 내용은 [웹 브라우저에서 서비스 액세스](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)합니다.  

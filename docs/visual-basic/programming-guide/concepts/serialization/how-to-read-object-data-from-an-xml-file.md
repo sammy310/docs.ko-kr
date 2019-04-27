@@ -3,11 +3,11 @@ title: '방법: XML 파일 (Visual Basic)에서 개체 데이터 읽기'
 ms.date: 07/20/2015
 ms.assetid: 1e1423bf-74a4-4dde-a3bb-ae1bfc0a68ed
 ms.openlocfilehash: f6233fc7ce74cbd39237bab07cfd2ed22b9c2240
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907350"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>방법: XML 파일 (Visual Basic)에서 개체 데이터 읽기
 이 예제에서는 <xref:System.Xml.Serialization.XmlSerializer> 클래스를 사용하여 이전에 XML 파일에 기록된 개체 데이터를 읽습니다.  

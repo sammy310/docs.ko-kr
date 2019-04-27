@@ -10,11 +10,11 @@ helpviewer_keywords:
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
 ms.openlocfilehash: 568489d6034316e895cd999801241fa995aadefa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864405"
 ---
 # <a name="function-procedures-visual-basic"></a>Function 프로시저(Visual Basic)
 A `Function` 절차는 일련의 Visual Basic 문으로 둘러싸인 합니다 `Function` 및 `End Function` 문. `Function` 프로시저는 작업을 수행한 다음 호출 코드에 제어를 반환 합니다. 제어를 반환 하기 호출 코드에도 값을 반환 합니다.  

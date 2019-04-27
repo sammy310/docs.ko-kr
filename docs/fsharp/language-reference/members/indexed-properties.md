@@ -3,11 +3,11 @@ title: 인덱싱된 속성
 description: 인덱싱된 속성에 대해 알아봅니다 F#를 정렬 된 데이터에 대 한 배열 유사 액세스를 허용 합니다.
 ms.date: 10/17/2018
 ms.openlocfilehash: bc330641c451973ddefa0a34fe6e757a808f6cb7
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903827"
 ---
 # <a name="indexed-properties"></a>인덱싱된 속성
 

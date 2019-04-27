@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
 ms.openlocfilehash: f59b8403ecb683dafa6963565da46e517b5a2cbc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59220437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856636"
 ---
 # <a name="endpoint-addresses"></a>엔드포인트 주소
 모든 엔드포인트에는 해당 엔드포인트를 찾아서 식별하는 데 사용되는 연결된 주소가 있습니다. 이 주소는 주로 엔드포인트의 위치를 지정하는 URI(Uniform Resource Identifier)로 구성됩니다. 끝점 주소에서 Windows Communication Foundation (WCF) 프로그래밍 모델에 표시 됩니다는 <xref:System.ServiceModel.EndpointAddress> 선택적인 포함 하는 클래스 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 다른 끝점에서 끝점을 인증할 수 있게 하는 속성을 exchange를 사용 하 여 메시지 및 선택적 집합이 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 서비스에 도달 하는 데 필요한 다른 SOAP 헤더를 정의 하는 속성입니다. 선택적 헤더는 서비스 엔드포인트를 확인하거나 상호 작용하는 데 필요한 추가적인 자세한 주소 지정 정보를 제공합니다. 엔드포인트 주소는 통신 중에 WS-Addressing EPR(엔드포인트 참조)로 표시됩니다.  

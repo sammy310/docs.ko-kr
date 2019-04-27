@@ -9,11 +9,11 @@ helpviewer_keywords:
 - GridView view mode [WPF], customizing column headers
 ms.assetid: 74835674-a39e-4ab5-9418-ad7f6ab7b956
 ms.openlocfilehash: 83643d8acea706bad439683702e4228d240b97bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59090324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911367"
 ---
 # <a name="gridview-column-header-styles-and-templates-overview"></a>GridView 열 머리글 스타일 및 템플릿 개요
 이 개요의 열 머리글을 사용자 지정 하는 데 사용 하는 속성에 대 한 우선 순위에 설명 합니다 <xref:System.Windows.Controls.GridView> 의 보기 모드를 <xref:System.Windows.Controls.ListView> 제어 합니다.  

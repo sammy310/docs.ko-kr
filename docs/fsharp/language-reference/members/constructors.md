@@ -3,11 +3,11 @@ title: 생성자
 description: 정의에서 생성자를 사용 하는 방법을 알아봅니다 F# 를 만들고 클래스 및 구조체 개체를 초기화 합니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: 34989e2877b29f6f9fe1f6cc05e3fd7c90a1306a
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903970"
 ---
 # <a name="constructors"></a>생성자
 
@@ -90,6 +90,6 @@ Created an invalid person object.
 
 정적 개체를 만들기 위한 코드를 지정 하는 것 외에도 `let` 고 `do` 바인딩 형식 수준에서 초기화를 수행 하는 형식을 처음으로 사용 하기 전에 실행 되는 클래스 형식에서 작성할 수 있습니다. 자세한 내용은 참조 하세요. [ `let` 클래스의 바인딩](let-bindings-in-classes.md) 및 [ `do` 클래스에 바인딩](do-bindings-in-classes.md)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [멤버](index.md)

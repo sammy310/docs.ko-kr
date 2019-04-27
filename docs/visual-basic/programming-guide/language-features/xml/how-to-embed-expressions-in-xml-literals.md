@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: 75016fad-0141-42de-8564-5051be29487e
 ms.openlocfilehash: 31e79a8787978ffab2e35cd2827b80a8f1ed843e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61861363"
 ---
 # <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>방법: (Visual Basic) XML 리터럴에 식 포함
 XML 리터럴의 XML 문서, 조각 또는 런타임에 생성 하는 콘텐츠를 포함 하는 요소를 만들려면 포함 된 식으로 결합할 수 있습니다. 다음 예제에서는 포함 된 식을 사용 하 여 런타임에 콘텐츠 요소, 특성 및 요소 이름이 채우는 방법을 보여 줍니다.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c7cba174-9d40-491d-b32c-f2d73b7e9eab
 ms.openlocfilehash: 222ce575d9e977cc8b68862385b4a1b147c6394a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902696"
 ---
 # <a name="how-to-submit-changes-to-the-database"></a>방법: 데이터베이스에 변경 내용 전송
 개체의 변경 내용 수에 관계없이 메모리 내의 복제본에만 변경 내용이 적용됩니다. 데이터베이스의 실제 데이터는 변경하지 않습니다. <xref:System.Data.Linq.DataContext.SubmitChanges%2A>의 <xref:System.Data.Linq.DataContext>를 명시적으로 호출한 후에 변경 내용이 서버에 전송됩니다.  

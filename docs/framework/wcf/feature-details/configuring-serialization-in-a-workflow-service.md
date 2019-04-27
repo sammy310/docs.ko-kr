@@ -3,11 +3,11 @@ title: 워크플로 서비스에서 Serialization 구성
 ms.date: 03/30/2017
 ms.assetid: aa70b290-a2ee-4c3c-90ea-d0a7665096ae
 ms.openlocfilehash: 0e0f03a30aa8e8679cf849aa75948e0bc2314fe5
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57843932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857511"
 ---
 # <a name="configuring-serialization-in-a-workflow-service"></a>워크플로 서비스에서 Serialization 구성
 워크플로 서비스는 Windows Communication Foundation (WCF) 서비스 및 중 하나를 사용 하 여는 옵션이 있으므로 합니다 <xref:System.Runtime.Serialization.DataContractSerializer> (기본값) 또는 <xref:System.Xml.Serialization.XmlSerializer>합니다. 워크플로가 아닌 서비스를 작성할 때 사용할 직렬화기 형식은 서비스 또는 작업 계약에서 지정됩니다. WCF 워크플로 서비스를 만들 때 코드에서 이러한 계약을 지정 하지 않으면 하지만 계약 유추를 통해 런타임에 생성 대신 합니다. 계약 유추에 대 한 자세한 내용은 참조 하세요. [워크플로에서 계약 사용 하 여](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md)입니다.  직렬화기는 <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A> 속성을 사용하여 지정됩니다. 다음 그림과 같이 디자이너에서 이 속성을 설정할 수 있습니다.  

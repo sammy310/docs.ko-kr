@@ -3,11 +3,11 @@ title: <callbackTimeouts>
 ms.date: 03/30/2017
 ms.assetid: d7fcfc5f-6d35-491e-8fa6-2f964c1e792f
 ms.openlocfilehash: e666bac0be772e417f140e1482649f82ea70e2f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673422"
 ---
 # <a name="callbacktimeouts"></a>\<callbackTimeouts>
 이중 콜백 계약 시나리오에서 트랜잭션이 서버에서 클라이언트로 이동할 때의 시간 제한 값을 지정합니다.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - strings [Visual Basic], manipulating
 ms.assetid: 5d3197eb-fe66-417e-9e2a-20450660c9c6
 ms.openlocfilehash: db57633e2de0c4ae898c242ea754c5f5c2fcd211
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802598"
 ---
 # <a name="string-manipulation-summary-visual-basic"></a>문자열 조작 요약(Visual Basic)
 Visual Basic 언어 키워드 및 런타임 라이브러리 멤버 용도 따라 구성 됩니다 사용 합니다.  

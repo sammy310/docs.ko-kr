@@ -17,11 +17,11 @@ ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 35aec3a311680e398d9f2bba94bf4c9a274c8a04
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61873823"
 ---
 # <a name="trace-listeners"></a>추적 수신기
 **Trace**, **Debug** 및 <xref:System.Diagnostics.TraceSource>를 사용하는 경우 전송된 메시지를 수집 및 기록하는 메커니즘이 있어야 합니다. *수신기*가 추적 메시지를 수신합니다. 수신기의 목적은 추적 메시지를 수집, 저장 및 라우팅하는 것입니다. 수신기는 추적 출력을 로그, 창 또는 텍스트 파일과 같은 적절한 대상에 보냅니다.  

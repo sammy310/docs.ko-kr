@@ -9,11 +9,11 @@ helpviewer_keywords:
 - network element
 ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
 ms.openlocfilehash: c411e00026f03fdb355664049f8db00f3c800352
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59219969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674456"
 ---
 # <a name="network-element-network-settings"></a>\<네트워크 > 요소 (네트워크 설정)
 외부 전송 프로토콜 SMTP (Simple Mail) 서버에 대 한 네트워크 옵션을 구성 합니다.  

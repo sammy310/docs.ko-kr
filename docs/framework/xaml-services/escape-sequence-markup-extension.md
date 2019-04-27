@@ -12,11 +12,11 @@ helpviewer_keywords:
 - escape sequence [XAML Services]
 ms.assetid: 3ce3e2ad-a868-43f9-9c98-b29561cb146e
 ms.openlocfilehash: 9f6743dd8a82891ac2233978550e5679130de0be
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855611"
 ---
 # <a name="-escape-sequence--markup-extension"></a>{} 이스케이프 시퀀스/태그 확장명
 특성 값에 대 한 XAML 이스케이프 시퀀스를 제공합니다. 이스케이프 시퀀스는 리터럴로 해석 될 특성의 후속 값을 허용 합니다.  

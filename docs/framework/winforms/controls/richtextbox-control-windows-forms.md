@@ -7,11 +7,11 @@ helpviewer_keywords:
 - rich edit controls
 ms.assetid: 3225f2ef-c6d9-4bd4-9d3e-2219e58edbf2
 ms.openlocfilehash: 2b1a6604df3979e83e4a815cdb4a9397ab4e67ad
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012466"
 ---
 # <a name="richtextbox-control-windows-forms"></a>RichTextBox 컨트롤(Windows Forms)
 Windows Forms `RichTextBox` 표시, 입력 및 서식 있는 텍스트를 조작에 대 한 컨트롤을 사용 합니다. 합니다 `RichTextBox` 모든 작업을 수행 하는 컨트롤을 <xref:System.Windows.Forms.TextBox> 제어 하지만 또한 글꼴, 색 및 링크를 표시, 파일, 실행 취소 및 다시 실행 작업 편집 텍스트 및 포함된 이미지를 로드 및 지정 된 문자를 찾습니다. `RichTextBox` 컨트롤은 일반적으로 텍스트를 조작 하 고 Microsoft Word와 같은 워드 프로세싱 응용 프로그램과 유사한 기능을 표시 하는 데 사용 됩니다. 같은 <xref:System.Windows.Forms.TextBox> 컨트롤을 `RichTextBox` 컨트롤에서 스크롤 막대를 표시할 수 있습니다 달리 하지만 <xref:System.Windows.Forms.TextBox> 컨트롤 기본적으로 가로 및 세로 스크롤 막대를 표시 하 고 추가 스크롤 막대 설정이.  

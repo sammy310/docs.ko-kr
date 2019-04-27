@@ -12,11 +12,11 @@ helpviewer_keywords:
 - run time [Windows Forms], making controls invisible
 ms.assetid: 69eb2e72-32f5-4f79-a157-c2c5f60c1628
 ms.openlocfilehash: e9af529541a40a951d6defea180dbbef04c8f3be
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913707"
 ---
 # <a name="how-to-make-your-control-invisible-at-run-time"></a>방법: 런타임에 컨트롤 숨기기
 런타임 시 표시 되지 않는 사용자 정의 컨트롤을 만들려면 하려는 경우 경우가 있습니다. 예를 들어, 경보 시계 컨트롤을 경보를 울릴 때를 제외 하 고 볼 수 있습니다. 설정 하 여 쉽게 이렇게는 <xref:System.Windows.Forms.Control.Visible%2A> 속성입니다. 경우는 <xref:System.Windows.Forms.Control.Visible%2A> 속성은 `true`, 컨트롤을 정상적으로 표시 됩니다. 경우 `false`, 컨트롤은 숨겨집니다. 컨트롤의 코드는 않지만 계속 실행할 수 있습니다, 있지만 사용자 인터페이스를 통해 컨트롤과 상호 작용할 수 없습니다. 사용자 (예: 마우스 클릭) 입력에 응답 하는 여전히 보이지 않는 컨트롤을 만들려는 경우에 투명 한 컨트롤을 만들어야 합니다. 자세한 내용은 [컨트롤에 투명 한 배경을 제공](how-to-give-your-control-a-transparent-background.md)합니다.  

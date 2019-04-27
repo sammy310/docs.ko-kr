@@ -9,11 +9,11 @@ helpviewer_keywords:
 - system.diagnostics element
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
 ms.openlocfilehash: 026805ffb9b89aa55e84cf9a5c4afb8ed63cec09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673695"
 ---
 # <a name="systemdiagnostics-element"></a>\<system.diagnostics> Element
 메시지를 수집하고 저장하고 라우팅하는 추적 수신기를 지정하며, 추적 스위치가 설정되는 수준을 지정합니다.  

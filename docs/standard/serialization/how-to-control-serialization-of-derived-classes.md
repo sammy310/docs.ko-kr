@@ -1,18 +1,18 @@
 ---
-title: '방법: 파생된 클래스의 Serialization을 제어'
+title: '방법: 파생 클래스의 Serialization 제어'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: caa92596-9e15-4d91-acbe-56911ef47a84
 ms.openlocfilehash: 12cb3a1fb3311450b8597ef13f1f2efa4adeaf7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922514"
 ---
-# <a name="how-to-control-serialization-of-derived-classes"></a>방법: 파생된 클래스의 Serialization을 제어
+# <a name="how-to-control-serialization-of-derived-classes"></a>방법: 파생 클래스의 Serialization 제어
 **XmlElementAttribute** 특성을 사용하여 XML 요소의 이름을 변경하는 것이 개체 serialization을 사용자 지정하는 유일한 방법은 아닙니다. 기존 클래스에서 파생하고 새 클래스를 serialize하는 방법을 <xref:System.Xml.Serialization.XmlSerializer> 인스턴스에 지시하여 XML 스트림을 사용자 지정할 수도 있습니다.  
   
  예를 들어 `Book` 클래스의 경우 이 클래스에서 파생하고 몇 개의 속성이 더 있는 `ExpandedBook` 클래스를 만들 수 있습니다. 하지만 직렬화 또는 deserialize할 때 파생된 형식을 허용하도록 **XmlSerializer**에 지시해야 합니다. 이렇게 하려면 <xref:System.Xml.Serialization.XmlElementAttribute> 인스턴스를 만들고 이 인스턴스의 **Type** 속성을 파생 클래스 형식으로 설정합니다. **XmlElementAttribute**를 <xref:System.Xml.Serialization.XmlAttributes> 인스턴스에 추가합니다. 그런 다음 **XmlAttributes**를 <xref:System.Xml.Serialization.XmlAttributeOverrides> 인스턴스로 추가하고 재정의되는 형식과 파생 클래스를 허용하는 멤버의 이름을 지정합니다. 다음 예제에서 이를 확인할 수 있습니다.  

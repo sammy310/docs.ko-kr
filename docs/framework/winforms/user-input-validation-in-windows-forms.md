@@ -8,11 +8,11 @@ helpviewer_keywords:
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
 ms.openlocfilehash: c8a40706df4274728b438cff2539173a0e94b767
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800128"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Windows Forms에서 사용자 입력 유효성 검사
 사용자가 응용 프로그램에 데이터를 입력 하면 응용 프로그램에서 사용 하기 전에 데이터가 유효한 지 확인 하는 것이 좋습니다. 텍스트 필드에 특정 되지 않음을 길이가 0 인 필드는 전화 번호 또는 잘 구성 된 데이터의 다른 형식으로 지정 하거나, 또는 문자열에 데이터베이스의 보안을 손상 시킬 수 있는 모든 안전 하지 않은 문자가 포함 되지 않도록 해야 합니다. Windows Forms 응용 프로그램에서 입력의 유효성을 검사 하는 여러 가지 방법을 제공 합니다.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 85dafa07-e102-46e7-ab78-37bf06f257a6
 ms.openlocfilehash: e7151fd85c7e3988051ed87a60acc2b53a8af646
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878698"
 ---
 # <a name="query-expression-syntax-examples-aggregate-operators-linq-to-dataset"></a>쿼리 식 구문 예제: 집계 연산자 (LINQ to DataSet)
 이 항목의 예제에서는 <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A> 및 <xref:System.Linq.Enumerable.Sum%2A> 메서드에서 쿼리 식 구문을 사용하여 <xref:System.Data.DataSet>을 쿼리하고 데이터를 집계하는 방법을 보여 줍니다.  

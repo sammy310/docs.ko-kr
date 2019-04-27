@@ -8,11 +8,11 @@ helpviewer_keywords:
 - date and time picker controls
 ms.assetid: 501af106-e9fc-4efc-b9b3-c9d8dcaf8c5c
 ms.openlocfilehash: 451172b51427e4932470c53737c7bc276920271c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909170"
 ---
 # <a name="datetimepicker-control-overview-windows-forms"></a>DateTimePicker 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.DateTimePicker> 컨트롤 날짜 또는 시간 목록에서 단일 항목을 선택할 수 있습니다. 날짜를 나타내는 데, 두 부분으로 표시: 텍스트와 목록 옆의 아래쪽 화살표를 클릭할 때 표시 되는 모눈에 표시 된 날짜를 사용 하 여 드롭다운 목록입니다. 표에서 같습니다는 <xref:System.Windows.Forms.MonthCalendar> 여러 날짜를 선택할 때 사용할 수 있는 컨트롤입니다. 에 대 한 자세한 합니다 <xref:System.Windows.Forms.MonthCalendar> 제어를 참조 하십시오 [MonthCalendar 컨트롤 개요](monthcalendar-control-overview-windows-forms.md)합니다.  

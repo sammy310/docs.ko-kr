@@ -10,11 +10,11 @@ helpviewer_keywords:
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
 ms.openlocfilehash: f0196457235ad77df545a367573f62b43209269d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906986"
 ---
 # <a name="user-defined-constants-visual-basic"></a>사용자 정의 상수(Visual Basic)
 상수는 숫자 또는 변경 되지 않는 문자열의 발생 하는 의미 있는 이름입니다. 상수는 애플리케이션 실행 중 변함없이 유지되는 값을 저장합니다. 컨트롤 또는 구성 요소를 사용 하 여 작업에 의해 정의 된 상수를 사용할 수 있습니다 하거나 직접 만들 수 있습니다. 사용자가 직접 만든 상수 상수 라고 *사용자 정의*합니다.  

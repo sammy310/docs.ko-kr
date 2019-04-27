@@ -10,11 +10,11 @@ helpviewer_keywords:
 - reflections [WPF], creating
 ms.assetid: 4f017e16-ab80-43c7-98df-03b6bddbb203
 ms.openlocfilehash: 61b597cd36fcf0d60f215d9b5403f3b42b21dec4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904226"
 ---
 # <a name="how-to-create-a-reflection"></a>방법: 리플렉션 만들기
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.VisualBrush> 반사를 만들려고 합니다. 때문에 <xref:System.Windows.Media.VisualBrush> 기존 시각적 개체를 표시할 수 있습니다, 리플렉션 및 확대와 같은 흥미로운 시각적 효과 생성 하기 위해이 기능을 사용할 수 있습니다.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
 ms.openlocfilehash: d3d986dae478f49504dae21b9f39574b7887b4d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674625"
 ---
 # <a name="bypasslist-element-network-settings"></a>\<bypasslist > 요소 (네트워크 설정)
 프록시를 사용 하지 않는 주소를 설명 하는 정규식 집합을 제공 합니다.  

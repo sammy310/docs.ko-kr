@@ -3,11 +3,11 @@ title: 종단 간 추적 시나리오
 ms.date: 03/30/2017
 ms.assetid: f83b7d53-6061-4362-a9a3-ee1daf6542be
 ms.openlocfilehash: 6e2f62841e610d6eab95b908088f24cf2fec0c34
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912511"
 ---
 # <a name="end-to-end-tracing-scenarios"></a>종단 간 추적 시나리오
 이 단원에는 추적에 사용하는 다양한 시나리오를 설명하는 항목이 있습니다.  

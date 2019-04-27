@@ -14,11 +14,11 @@ helpviewer_keywords:
 - properties [Visual Basic], overriding
 ms.assetid: 9f5e6144-ce10-465e-842b-1a8f8760af90
 ms.openlocfilehash: 9eb19bf5e89b12a32cae28b2c087570acc10f3ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920571"
 ---
 # <a name="overrides-visual-basic"></a>Overrides(Visual Basic)
 속성 또는 프로시저가 기본 클래스에서 상속된 이름이 같은 속성 또는 프로시저를 재정의하도록 지정합니다.  

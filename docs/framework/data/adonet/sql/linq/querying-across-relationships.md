@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 297878d0-685b-4c01-b2e0-9d731b7322bc
 ms.openlocfilehash: 2e1cf9efcf47fc70421c64541aead5fb36d8c9d1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61916775"
 ---
 # <a name="querying-across-relationships"></a>관계 간 쿼리
 클래스 정의에서 다른 개체 또는 다른 개체의 컬렉션에 대한 참조는 데이터베이스의 외래 키 관계에 직접적으로 해당합니다. 점 표기법을 사용하여 쿼리할 때 이러한 관계를 사용하여 관계 속성에 액세스하고 한 개체에서 다른 개체로 이동할 수 있습니다. 이러한 액세스 작업은 해당 SQL에서 더 복잡한 조인이나 연관된 하위 쿼리로 변환됩니다.  

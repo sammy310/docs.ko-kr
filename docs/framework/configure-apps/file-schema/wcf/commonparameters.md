@@ -3,11 +3,11 @@ title: <commonParameters>
 ms.date: 03/30/2017
 ms.assetid: ffc20832-34d6-4622-8174-81924fd53514
 ms.openlocfilehash: b9ab4e8ca5a71d54a80d17322b61c83d41af2b40
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673591"
 ---
 # <a name="commonparameters"></a>\<commonParameters>
 여러 서비스에서 전역적으로 사용되는 매개 변수의 컬렉션을 나타냅니다. 일반적으로 이 컬렉션에는 영속 서비스에서 공유할 수 있는 데이터베이스 연결 문자열이 포함됩니다.  

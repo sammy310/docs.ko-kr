@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 79ef272e0c8afa0cd1942416c3a5eb9b825c2e6f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992630"
 ---
 # <a name="iceegencomputepointer-method"></a>ICeeGen::ComputePointer 메서드
 지정 된 코드 섹션에 대 한 버퍼를 결정합니다.  

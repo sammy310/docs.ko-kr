@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Canvas control [WPF], using
 ms.assetid: 420b9487-9a15-477c-9489-a22a4dec7779
 ms.openlocfilehash: 33b98024699a88f56d27b7e5ab8d5216c906e7ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001002"
 ---
 # <a name="how-to-create-and-use-a-canvas"></a>방법: 캔버스 만들기 및 사용
 다음 예제는 <xref:System.Windows.Controls.Canvas> 컨트롤 클래스 인스턴스의 생성 및 사용법에 관한 예제입니다.  

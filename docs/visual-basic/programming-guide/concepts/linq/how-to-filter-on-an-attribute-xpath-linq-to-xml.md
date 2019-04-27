@@ -3,11 +3,11 @@ title: '방법: 특성 (XPath 및 LINQ to XML) 필터링 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: ffefb9d6-45ec-4677-a396-dd9c2b36298f
 ms.openlocfilehash: 0803fe7a5527a86fcb85abfc160abf34bb32fbb2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855498"
 ---
 # <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a>방법: 특성 (XPath 및 LINQ to XML) 필터링 (Visual Basic)
 이 항목에서는 지정된 이름을 가진 하위 요소와 지정된 값을 가진 특성이 포함된 하위 요소를 가져오는 방법을 보여 줍니다.  

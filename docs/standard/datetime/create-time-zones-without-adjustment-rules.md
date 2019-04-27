@@ -1,5 +1,5 @@
 ---
-title: '방법: 표준 시간대 조정 규칙 없이 만들기'
+title: '방법: 조정 규칙을 사용하지 않고 표준 시간대 만들기'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,13 +13,13 @@ ms.assetid: a6af8647-7893-4f29-95a9-d94c65a6e8dd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cb3ffc7b6f1f7baec7ce6beb5a50b706ff78bfa1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026551"
 ---
-# <a name="how-to-create-time-zones-without-adjustment-rules"></a>방법: 표준 시간대 조정 규칙 없이 만들기
+# <a name="how-to-create-time-zones-without-adjustment-rules"></a>방법: 조정 규칙을 사용하지 않고 표준 시간대 만들기
 
 응용 프로그램에 필요한 정확한 표준 시간대 정보를 여러 가지 이유로 특정 시스템에 존재할 수 있습니다.
 

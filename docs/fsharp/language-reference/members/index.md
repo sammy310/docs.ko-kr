@@ -3,11 +3,11 @@ title: 멤버
 description: 개체 멤버에 대 한 알아봅니다는 F# 프로그래밍 언어입니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: c32bd76ab60673563f0cc45ce0fb569b2ea262b9
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903853"
 ---
 # <a name="members"></a>멤버
 
@@ -30,7 +30,7 @@ Private 필드 및 `do` 바인딩(클래스에만 사용됨)은 특정 형식의
 |[속성](properties.md)|클래스 및 기타 형식의 속성 멤버에 대해 설명합니다.|
 |[인덱싱된 속성](indexed-properties.md)|기타 형식 및 클래스의 배열 형식의 속성에 대해 설명합니다.|
 |[메서드](methods.md)|특정 형식의 멤버인 함수에 대해 설명합니다.|
-|[생성자(C++)](constructors.md)|특정 형식의 개체를 초기화하는 특수 함수에 대해 설명합니다.|
+|[생성자](constructors.md)|특정 형식의 개체를 초기화하는 특수 함수에 대해 설명합니다.|
 |[연산자 오버로드](../operator-overloading.md)|형식에 대한 사용자 지정된 연산자 정의에 대해 설명합니다.|
 |[이벤트](events.md)|F#의 이벤트 및 이벤트 처리 지원에 대한 정의에 대해 설명합니다.|
 |[명시적 필드: `val` 키워드](explicit-fields-the-val-keyword.md)|특정 형식의 초기화되지 않은 필드에 대한 정의에 대해 설명합니다.|

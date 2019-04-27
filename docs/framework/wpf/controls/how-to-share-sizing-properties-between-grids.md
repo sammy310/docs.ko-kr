@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Grid control [WPF], sharing sizing data of rows
 ms.assetid: a0535a6f-ff04-4b25-9912-7dd856e11044
 ms.openlocfilehash: d5ab2ac612d55c8cbc34ae6d7d9d63b9f8aa23e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910587"
 ---
 # <a name="how-to-share-sizing-properties-between-grids"></a>방법: 모눈 간 크기 조정 속성 공유
 이 예제에서는 열 크기 조정 데이터를 공유 하는 방법을 보여 줍니다 및 간에 행 <xref:System.Windows.Controls.Grid> 일관 된 크기 조정 유지 하기 위해 요소입니다.  

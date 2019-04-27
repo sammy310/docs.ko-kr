@@ -3,11 +3,11 @@ title: <baseAddressPrefixFilter>의 <add>
 ms.date: 03/30/2017
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
 ms.openlocfilehash: a58a29e44fff3d653d04da271e3b240f2969611f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59143899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673753"
 ---
 # <a name="add-of-baseaddressprefixfilter"></a>\<추가 >의 \<a d >
 IIS에서 Windows Communication Foundation (WCF) 응용 프로그램을 호스팅하는 경우 적절 한 인터넷 정보 서비스 (IIS) 바인딩을 선택 하기 위한 메커니즘을 제공할 통과 필터를 지정 하는 구성 요소를 나타냅니다.  

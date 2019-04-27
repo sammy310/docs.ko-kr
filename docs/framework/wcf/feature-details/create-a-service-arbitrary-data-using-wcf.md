@@ -3,11 +3,11 @@ title: '방법: WCF REST 프로그래밍 모델을 사용하여 임의의 데이
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
 ms.openlocfilehash: d7da3a5c6dd4f04c4d902dab9c2dff40413ddd20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857334"
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>방법: WCF REST 프로그래밍 모델을 사용하여 임의의 데이터를 허용하는 서비스 만들기
 서비스 작업에서 데이터가 반환되는 방법을 개발자가 완전히 제어해야 하는 경우가 있습니다. 이 경우 데이터 형식에서 지원 되지 않습니다. byWCF 서비스 작업을 반환 해야 합니다. 이 항목에서는 WCF REST 프로그래밍 모델을 사용 하 여 임의의 데이터를 받는 서비스를 만드는 것을 설명 합니다.  

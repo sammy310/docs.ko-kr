@@ -3,11 +3,11 @@ title: IIS 및 WAS에서 구성 기반 활성화
 ms.date: 03/30/2017
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
 ms.openlocfilehash: da98d237c066b70398d3238a75500e8a3abbe887
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857547"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>IIS 및 WAS에서 구성 기반 활성화
 
@@ -44,5 +44,5 @@ ms.locfileid: "48582686"
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection.ServiceActivations%2A>
 - [서비스 호스팅](../../../../docs/framework/wcf/hosting-services.md)
 - [워크플로 서비스 호스팅 개요](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
-- [\<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)
+- [\<serviceHostingEnvironment>](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)
 - [Windows Server App Fabric 호스팅 기능](https://go.microsoft.com/fwlink/?LinkId=201276)
