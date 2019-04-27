@@ -5,21 +5,21 @@ f1_keywords:
 - vbrID422
 ms.assetid: 127e0f5f-0997-4ac5-b9af-2e6a2eb513a2
 ms.openlocfilehash: c45c8458e9acb7f168fc9afb6b1979a950a38dc7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920785"
 ---
-# <a name="property-not-found"></a><span data-ttu-id="7b314-102">속성을 찾을 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="7b314-102">Property not found</span></span>
-<span data-ttu-id="7b314-103">이 개체는 지정된 된 속성을 지원 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="7b314-103">This object does not support the specified property.</span></span>  
+# <a name="property-not-found"></a><span data-ttu-id="1be85-102">속성을 찾을 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="1be85-102">Property not found</span></span>
+<span data-ttu-id="1be85-103">이 개체는 지정된 된 속성을 지원 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="1be85-103">This object does not support the specified property.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="7b314-104">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="7b314-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="1be85-104">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="1be85-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="7b314-105">속성의 이름의 철자를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b314-105">Check the spelling of the property's name.</span></span>  
+1. <span data-ttu-id="1be85-105">속성의 이름의 철자를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="1be85-105">Check the spelling of the property's name.</span></span>  
   
-2. <span data-ttu-id="7b314-106">"Caption" 또는 이름이 비슷한 속성을 개체를 실제로 지 원하는 경우 "text" 속성 처럼 항목에 액세스를 시도 하지 않는 되도록 개체의 설명서를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="7b314-106">Check the object's documentation to make sure you are not trying to access something like a "text" property when the object actually supports a "caption" or similarly named property.</span></span>  
+2. <span data-ttu-id="1be85-106">"Caption" 또는 이름이 비슷한 속성을 개체를 실제로 지 원하는 경우 "text" 속성 처럼 항목에 액세스를 시도 하지 않는 되도록 개체의 설명서를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="1be85-106">Check the object's documentation to make sure you are not trying to access something like a "text" property when the object actually supports a "caption" or similarly named property.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7b314-107">참고자료</span><span class="sxs-lookup"><span data-stu-id="7b314-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1be85-107">참고자료</span><span class="sxs-lookup"><span data-stu-id="1be85-107">See also</span></span>
 
-- [<span data-ttu-id="7b314-108">오류 형식</span><span class="sxs-lookup"><span data-stu-id="7b314-108">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="1be85-108">오류 형식</span><span class="sxs-lookup"><span data-stu-id="1be85-108">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)

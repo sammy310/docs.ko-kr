@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4817a62d276bfdb50bfcbf658f40f5568673bea0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61905049"
 ---
-# <a name="imetadataassemblyimportgetassemblyprops-method"></a><span data-ttu-id="49beb-102">IMetaDataAssemblyImport::GetAssemblyProps 메서드</span><span class="sxs-lookup"><span data-stu-id="49beb-102">IMetaDataAssemblyImport::GetAssemblyProps Method</span></span>
-<span data-ttu-id="49beb-103">지정 된 메타 데이터 서명 사용 하 여 어셈블리에 대 한 속성 집합을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="49beb-103">Gets the set of properties for the assembly with the specified metadata signature.</span></span>  
+# <a name="imetadataassemblyimportgetassemblyprops-method"></a><span data-ttu-id="f98ef-102">IMetaDataAssemblyImport::GetAssemblyProps 메서드</span><span class="sxs-lookup"><span data-stu-id="f98ef-102">IMetaDataAssemblyImport::GetAssemblyProps Method</span></span>
+<span data-ttu-id="f98ef-103">지정 된 메타 데이터 서명 사용 하 여 어셈블리에 대 한 속성 집합을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="f98ef-103">Gets the set of properties for the assembly with the specified metadata signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="49beb-104">구문</span><span class="sxs-lookup"><span data-stu-id="49beb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f98ef-104">구문</span><span class="sxs-lookup"><span data-stu-id="f98ef-104">Syntax</span></span>  
   
 ```  
 HRESULT GetAssemblyProps (  
@@ -43,43 +43,43 @@ HRESULT GetAssemblyProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="49beb-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="49beb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f98ef-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f98ef-105">Parameters</span></span>  
  `mda`  
- <span data-ttu-id="49beb-106">[in].</span><span class="sxs-lookup"><span data-stu-id="49beb-106">[in].</span></span> <span data-ttu-id="49beb-107">`mdAssembly` 메타 데이터 토큰을 가져올 속성에 대 한 어셈블리를 나타내는입니다.</span><span class="sxs-lookup"><span data-stu-id="49beb-107">The `mdAssembly` metadata token that represents the assembly for which to get the properties.</span></span>  
+ <span data-ttu-id="f98ef-106">[in].</span><span class="sxs-lookup"><span data-stu-id="f98ef-106">[in].</span></span> <span data-ttu-id="f98ef-107">`mdAssembly` 메타 데이터 토큰을 가져올 속성에 대 한 어셈블리를 나타내는입니다.</span><span class="sxs-lookup"><span data-stu-id="f98ef-107">The `mdAssembly` metadata token that represents the assembly for which to get the properties.</span></span>  
   
  `ppbPublicKey`  
- <span data-ttu-id="49beb-108">[out] 공개 키 또는 메타 데이터 토큰에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="49beb-108">[out] A pointer to the public key or the metadata token.</span></span>  
+ <span data-ttu-id="f98ef-108">[out] 공개 키 또는 메타 데이터 토큰에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="f98ef-108">[out] A pointer to the public key or the metadata token.</span></span>  
   
  `pcbPublicKey`  
- <span data-ttu-id="49beb-109">[out] 반환 된 공개 키의 바이트 수입니다.</span><span class="sxs-lookup"><span data-stu-id="49beb-109">[out] The number of bytes in the returned public key.</span></span>  
+ <span data-ttu-id="f98ef-109">[out] 반환 된 공개 키의 바이트 수입니다.</span><span class="sxs-lookup"><span data-stu-id="f98ef-109">[out] The number of bytes in the returned public key.</span></span>  
   
  `pulHashAlgId`  
- <span data-ttu-id="49beb-110">[out] 어셈블리의 파일을 해시 하는 데 사용 된 알고리즘에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="49beb-110">[out] A pointer to the algorithm used to hash the files in the assembly.</span></span>  
+ <span data-ttu-id="f98ef-110">[out] 어셈블리의 파일을 해시 하는 데 사용 된 알고리즘에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="f98ef-110">[out] A pointer to the algorithm used to hash the files in the assembly.</span></span>  
   
  `szName`  
- <span data-ttu-id="49beb-111">[out] 어셈블리의 단순한 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="49beb-111">[out] The simple name of the assembly.</span></span>  
+ <span data-ttu-id="f98ef-111">[out] 어셈블리의 단순한 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="f98ef-111">[out] The simple name of the assembly.</span></span>  
   
  `cchName`  
- <span data-ttu-id="49beb-112">[in] 와이드 문자에서 크기의 `szName`합니다.</span><span class="sxs-lookup"><span data-stu-id="49beb-112">[in] The size, in wide chars, of `szName`.</span></span>  
+ <span data-ttu-id="f98ef-112">[in] 와이드 문자에서 크기의 `szName`합니다.</span><span class="sxs-lookup"><span data-stu-id="f98ef-112">[in] The size, in wide chars, of `szName`.</span></span>  
   
  `pchName`  
- <span data-ttu-id="49beb-113">[out] 와이드 문자에 실제로 반환 된 수가 `szName`합니다.</span><span class="sxs-lookup"><span data-stu-id="49beb-113">[out] The number of wide chars actually returned in `szName`.</span></span>  
+ <span data-ttu-id="f98ef-113">[out] 와이드 문자에 실제로 반환 된 수가 `szName`합니다.</span><span class="sxs-lookup"><span data-stu-id="f98ef-113">[out] The number of wide chars actually returned in `szName`.</span></span>  
   
  `pMetaData`  
- <span data-ttu-id="49beb-114">[out] 어셈블리 메타 데이터를 포함 하는 ASSEMBLYMETADATA 구조체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="49beb-114">[out] A pointer to an ASSEMBLYMETADATA structure that contains the assembly metadata.</span></span>  
+ <span data-ttu-id="f98ef-114">[out] 어셈블리 메타 데이터를 포함 하는 ASSEMBLYMETADATA 구조체에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="f98ef-114">[out] A pointer to an ASSEMBLYMETADATA structure that contains the assembly metadata.</span></span>  
   
  `pdwAssemblyFlags`  
- <span data-ttu-id="49beb-115">[out] 어셈블리에 적용 하는 메타 데이터를 설명 하는 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="49beb-115">[out] Flags that describe the metadata applied to an assembly.</span></span> <span data-ttu-id="49beb-116">이 값은 하나 이상의 조합 [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) 값입니다.</span><span class="sxs-lookup"><span data-stu-id="49beb-116">This value is a combination of one or more [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values.</span></span>  
+ <span data-ttu-id="f98ef-115">[out] 어셈블리에 적용 하는 메타 데이터를 설명 하는 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="f98ef-115">[out] Flags that describe the metadata applied to an assembly.</span></span> <span data-ttu-id="f98ef-116">이 값은 하나 이상의 조합 [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) 값입니다.</span><span class="sxs-lookup"><span data-stu-id="f98ef-116">This value is a combination of one or more [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="49beb-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="49beb-117">Requirements</span></span>  
- <span data-ttu-id="49beb-118">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="49beb-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f98ef-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f98ef-117">Requirements</span></span>  
+ <span data-ttu-id="f98ef-118">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="f98ef-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="49beb-119">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="49beb-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="f98ef-119">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="f98ef-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="49beb-120">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="49beb-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="f98ef-120">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="f98ef-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="49beb-121">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="49beb-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f98ef-121">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f98ef-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="49beb-122">참고자료</span><span class="sxs-lookup"><span data-stu-id="49beb-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f98ef-122">참고자료</span><span class="sxs-lookup"><span data-stu-id="f98ef-122">See also</span></span>
 
-- [<span data-ttu-id="49beb-123">IMetaDataAssemblyImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="49beb-123">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="f98ef-123">IMetaDataAssemblyImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f98ef-123">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

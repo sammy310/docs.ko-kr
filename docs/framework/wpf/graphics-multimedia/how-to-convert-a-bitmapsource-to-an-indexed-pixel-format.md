@@ -17,15 +17,15 @@ helpviewer_keywords:
 - BitmapSource objects [WPF], converting to palettized pixel format
 ms.assetid: ccb03a83-8c72-4353-89da-48312d16548b
 ms.openlocfilehash: 69ccf82a42f6ec640106f554a10e7d2c86754220
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910015"
 ---
-# <a name="how-to-convert-a-bitmapsource-to-an-indexed-pixel-format"></a><span data-ttu-id="2eb32-102">방법: BitmapSource를 인덱싱된 픽셀 형식으로 변환</span><span class="sxs-lookup"><span data-stu-id="2eb32-102">How to: Convert a BitmapSource to an Indexed Pixel Format</span></span>
-<span data-ttu-id="2eb32-103">변환 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Imaging.BitmapSource> 인덱싱된 픽셀 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="2eb32-103">This example shows how to convert a <xref:System.Windows.Media.Imaging.BitmapSource> to an indexed pixel format.</span></span>  
+# <a name="how-to-convert-a-bitmapsource-to-an-indexed-pixel-format"></a><span data-ttu-id="b51d4-102">방법: BitmapSource를 인덱싱된 픽셀 형식으로 변환</span><span class="sxs-lookup"><span data-stu-id="b51d4-102">How to: Convert a BitmapSource to an Indexed Pixel Format</span></span>
+<span data-ttu-id="b51d4-103">변환 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Imaging.BitmapSource> 인덱싱된 픽셀 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="b51d4-103">This example shows how to convert a <xref:System.Windows.Media.Imaging.BitmapSource> to an indexed pixel format.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2eb32-104">예제</span><span class="sxs-lookup"><span data-stu-id="2eb32-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="b51d4-104">예제</span><span class="sxs-lookup"><span data-stu-id="b51d4-104">Example</span></span>  
  [!code-csharp[ImagingSnippetGallery_procedural_snip#FormatConvertedBitmapCodeExample2WholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/FormatConvertedBitmapExample2.cs#formatconvertedbitmapcodeexample2wholepage)]
  [!code-vb[ImagingSnippetGallery_procedural_snip#FormatConvertedBitmapCodeExample2WholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/FormatConvertedBitmapExample2.vb#formatconvertedbitmapcodeexample2wholepage)]

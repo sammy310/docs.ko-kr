@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aebc6dfe4830e6477cda8fd279b8ef2a8040895c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914565"
 ---
-# <a name="createasmnameobjflags-enumeration"></a><span data-ttu-id="3f3bf-102">CREATE_ASM_NAME_OBJ_FLAGS 열거형</span><span class="sxs-lookup"><span data-stu-id="3f3bf-102">CREATE_ASM_NAME_OBJ_FLAGS Enumeration</span></span>
-<span data-ttu-id="3f3bf-103">특성을 지정 하는 [IAssemblyName 인터페이스](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) 하 여 생성 될 때 개체를 [CreateAssemblyNameObject](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md) 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="3f3bf-103">Specifies the attributes of an [IAssemblyName Interface](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object when it is constructed by the [CreateAssemblyNameObject](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md) function.</span></span>  
+# <a name="createasmnameobjflags-enumeration"></a><span data-ttu-id="2f04f-102">CREATE_ASM_NAME_OBJ_FLAGS 열거형</span><span class="sxs-lookup"><span data-stu-id="2f04f-102">CREATE_ASM_NAME_OBJ_FLAGS Enumeration</span></span>
+<span data-ttu-id="2f04f-103">특성을 지정 하는 [IAssemblyName 인터페이스](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) 하 여 생성 될 때 개체를 [CreateAssemblyNameObject](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md) 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="2f04f-103">Specifies the attributes of an [IAssemblyName Interface](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object when it is constructed by the [CreateAssemblyNameObject](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md) function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3f3bf-104">구문</span><span class="sxs-lookup"><span data-stu-id="3f3bf-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2f04f-104">구문</span><span class="sxs-lookup"><span data-stu-id="2f04f-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -40,24 +40,24 @@ typedef enum {
 } CREATE_ASM_NAME_OBJ_FLAGS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="3f3bf-105">멤버</span><span class="sxs-lookup"><span data-stu-id="3f3bf-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="2f04f-105">멤버</span><span class="sxs-lookup"><span data-stu-id="2f04f-105">Members</span></span>  
   
-|<span data-ttu-id="3f3bf-106">멤버</span><span class="sxs-lookup"><span data-stu-id="3f3bf-106">Member</span></span>|<span data-ttu-id="3f3bf-107">설명</span><span class="sxs-lookup"><span data-stu-id="3f3bf-107">Description</span></span>|  
+|<span data-ttu-id="2f04f-106">멤버</span><span class="sxs-lookup"><span data-stu-id="2f04f-106">Member</span></span>|<span data-ttu-id="2f04f-107">설명</span><span class="sxs-lookup"><span data-stu-id="2f04f-107">Description</span></span>|  
 |------------|-----------------|  
-|`CANOF_PARSE_DISPLAY_NAME`|<span data-ttu-id="3f3bf-108">전달 된 매개 변수 텍스트 id 임을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="3f3bf-108">Indicates that the parameter passed is a textual identity.</span></span>|  
-|`CANOF_SET_DEFAULT_VALUES`|<span data-ttu-id="3f3bf-109">몇 가지 기본값을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="3f3bf-109">Sets a few default values.</span></span>|  
-|`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`|<span data-ttu-id="3f3bf-110">Friend 어셈블리 규칙 (이름 및 공개 키만)을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="3f3bf-110">Verifies the friend assembly rule (only name and public key).</span></span> <span data-ttu-id="3f3bf-111">이 멤버는 내부 전용입니다.</span><span class="sxs-lookup"><span data-stu-id="3f3bf-111">This member is for internal use only.</span></span>|  
-|`CANOF_PARSE_FRIEND_DISPLAY_NAME`|<span data-ttu-id="3f3bf-112">조합 된 `CANOF_PARSE_DISPLAY_NAME` 및 `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="3f3bf-112">A combination of the `CANOF_PARSE_DISPLAY_NAME` and `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` flags.</span></span> <span data-ttu-id="3f3bf-113">이 멤버는 내부 전용입니다.</span><span class="sxs-lookup"><span data-stu-id="3f3bf-113">This member is for internal use only.</span></span>|  
+|`CANOF_PARSE_DISPLAY_NAME`|<span data-ttu-id="2f04f-108">전달 된 매개 변수 텍스트 id 임을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="2f04f-108">Indicates that the parameter passed is a textual identity.</span></span>|  
+|`CANOF_SET_DEFAULT_VALUES`|<span data-ttu-id="2f04f-109">몇 가지 기본값을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="2f04f-109">Sets a few default values.</span></span>|  
+|`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`|<span data-ttu-id="2f04f-110">Friend 어셈블리 규칙 (이름 및 공개 키만)을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="2f04f-110">Verifies the friend assembly rule (only name and public key).</span></span> <span data-ttu-id="2f04f-111">이 멤버는 내부 전용입니다.</span><span class="sxs-lookup"><span data-stu-id="2f04f-111">This member is for internal use only.</span></span>|  
+|`CANOF_PARSE_FRIEND_DISPLAY_NAME`|<span data-ttu-id="2f04f-112">조합 된 `CANOF_PARSE_DISPLAY_NAME` 및 `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="2f04f-112">A combination of the `CANOF_PARSE_DISPLAY_NAME` and `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` flags.</span></span> <span data-ttu-id="2f04f-113">이 멤버는 내부 전용입니다.</span><span class="sxs-lookup"><span data-stu-id="2f04f-113">This member is for internal use only.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="3f3bf-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="3f3bf-114">Requirements</span></span>  
- <span data-ttu-id="3f3bf-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="3f3bf-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2f04f-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="2f04f-114">Requirements</span></span>  
+ <span data-ttu-id="2f04f-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="2f04f-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3f3bf-116">**헤더:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="3f3bf-116">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="2f04f-116">**헤더:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="2f04f-116">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="3f3bf-117">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3f3bf-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="2f04f-117">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2f04f-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3f3bf-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="3f3bf-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2f04f-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="2f04f-118">See also</span></span>
 
-- [<span data-ttu-id="3f3bf-119">IAssemblyName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="3f3bf-119">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [<span data-ttu-id="3f3bf-120">CreateAssemblyNameObject 함수</span><span class="sxs-lookup"><span data-stu-id="3f3bf-120">CreateAssemblyNameObject Function</span></span>](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md)
-- [<span data-ttu-id="3f3bf-121">Fusion 열거형</span><span class="sxs-lookup"><span data-stu-id="3f3bf-121">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [<span data-ttu-id="2f04f-119">IAssemblyName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="2f04f-119">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [<span data-ttu-id="2f04f-120">CreateAssemblyNameObject 함수</span><span class="sxs-lookup"><span data-stu-id="2f04f-120">CreateAssemblyNameObject Function</span></span>](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md)
+- [<span data-ttu-id="2f04f-121">Fusion 열거형</span><span class="sxs-lookup"><span data-stu-id="2f04f-121">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
