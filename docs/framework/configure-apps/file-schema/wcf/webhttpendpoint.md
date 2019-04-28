@@ -3,19 +3,19 @@ title: <webHttpEndpoint>
 ms.date: 03/30/2017
 ms.assetid: ecaaeb6f-ebd0-411d-8b53-92477cd45347
 ms.openlocfilehash: 6fb31fca6ac38f6cb92ef087cc277a4d5066521c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769774"
 ---
-# <a name="webhttpendpoint"></a><span data-ttu-id="bf93e-101">\<webHttpEndpoint></span><span class="sxs-lookup"><span data-stu-id="bf93e-101">\<webHttpEndpoint></span></span>
-<span data-ttu-id="bf93e-102">이 구성 요소에는 고정 된 표준 끝점을 정의 [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) 자동으로 바인딩을 추가 합니다 [ \<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) 동작 합니다.</span><span class="sxs-lookup"><span data-stu-id="bf93e-102">This configuration element defines a standard endpoint with a fixed [\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) binding that automatically adds the [\<webHttp>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) behavior.</span></span> <span data-ttu-id="bf93e-103">REST 서비스를 작성할 때는 이 엔드포인트를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="bf93e-103">Use this endpoint when writing a REST service.</span></span>  
+# <a name="webhttpendpoint"></a><span data-ttu-id="00ef5-101">\<webHttpEndpoint></span><span class="sxs-lookup"><span data-stu-id="00ef5-101">\<webHttpEndpoint></span></span>
+<span data-ttu-id="00ef5-102">이 구성 요소에는 고정 된 표준 끝점을 정의 [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) 자동으로 바인딩을 추가 합니다 [ \<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) 동작 합니다.</span><span class="sxs-lookup"><span data-stu-id="00ef5-102">This configuration element defines a standard endpoint with a fixed [\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) binding that automatically adds the [\<webHttp>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) behavior.</span></span> <span data-ttu-id="00ef5-103">REST 서비스를 작성할 때는 이 엔드포인트를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="00ef5-103">Use this endpoint when writing a REST service.</span></span>  
   
-<span data-ttu-id="bf93e-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="bf93e-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="bf93e-105">\<standardEndpoints></span><span class="sxs-lookup"><span data-stu-id="bf93e-105">\<standardEndpoints></span></span>  
+<span data-ttu-id="00ef5-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="00ef5-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="00ef5-105">\<standardEndpoints></span><span class="sxs-lookup"><span data-stu-id="00ef5-105">\<standardEndpoints></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bf93e-106">구문</span><span class="sxs-lookup"><span data-stu-id="bf93e-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="00ef5-106">구문</span><span class="sxs-lookup"><span data-stu-id="00ef5-106">Syntax</span></span>  
   
 ```xml  
 <system.serviceModel>
@@ -30,28 +30,28 @@ ms.locfileid: "59182457"
 </system.serviceModel>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="bf93e-107">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="bf93e-107">Attributes and Elements</span></span>  
- <span data-ttu-id="bf93e-108">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="bf93e-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="00ef5-107">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="00ef5-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="00ef5-108">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="00ef5-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="bf93e-109">특성</span><span class="sxs-lookup"><span data-stu-id="bf93e-109">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="00ef5-109">특성</span><span class="sxs-lookup"><span data-stu-id="00ef5-109">Attributes</span></span>  
   
-|<span data-ttu-id="bf93e-110">특성</span><span class="sxs-lookup"><span data-stu-id="bf93e-110">Attribute</span></span>|<span data-ttu-id="bf93e-111">설명</span><span class="sxs-lookup"><span data-stu-id="bf93e-111">Description</span></span>|  
+|<span data-ttu-id="00ef5-110">특성</span><span class="sxs-lookup"><span data-stu-id="00ef5-110">Attribute</span></span>|<span data-ttu-id="00ef5-111">설명</span><span class="sxs-lookup"><span data-stu-id="00ef5-111">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="bf93e-112">automaticFormatSelectionEnabled</span><span class="sxs-lookup"><span data-stu-id="bf93e-112">automaticFormatSelectionEnabled</span></span>|<span data-ttu-id="bf93e-113">자동 서식 선택을 사용하는지 여부를 나타내는 부울 값입니다.</span><span class="sxs-lookup"><span data-stu-id="bf93e-113">A Boolean value that indicates whether automatic format selection is enabled.</span></span><br /><br /> <span data-ttu-id="bf93e-114">자동 서식 선택을 사용하면 인프라에서 요청 메시지의 `Accept` 헤더를 구문 분석하여 가장 적합한 응답 형식을 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="bf93e-114">When automatic format selection is enabled, the infrastructure parses the `Accept` header of the request message and determines the most appropriate response format.</span></span> <span data-ttu-id="bf93e-115">`Accept` 헤더에서 적합한 응답 형식을 지정하지 않는 경우 인프라에서 요청 메시지의 `Content-Type`이나 작업의 기본 응답 형식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="bf93e-115">If the `Accept` header does not specify a suitable response format, the infrastructure uses the `Content-Type` of the request message or the default response format of the operation.</span></span>|  
-|<span data-ttu-id="bf93e-116">defaultOutgoingResponseFormat</span><span class="sxs-lookup"><span data-stu-id="bf93e-116">defaultOutgoingResponseFormat</span></span>|<span data-ttu-id="bf93e-117">나가는 응답의 기본 형식을 지정하는 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="bf93e-117">An attribute that specifies the default outgoing response format.</span></span> <span data-ttu-id="bf93e-118">이 특성은 <xref:System.ServiceModel.Web.WebMessageFormat> 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="bf93e-118">This attribute is of the <xref:System.ServiceModel.Web.WebMessageFormat> type</span></span>|  
-|<span data-ttu-id="bf93e-119">helpEnabled</span><span class="sxs-lookup"><span data-stu-id="bf93e-119">helpEnabled</span></span>|<span data-ttu-id="bf93e-120">엔드포인트에 대해 HTTP 도움말 페이지가 사용되는지 여부를 나타내는 부울 값입니다.</span><span class="sxs-lookup"><span data-stu-id="bf93e-120">A Boolean value that indicates whether the HTTP help page is enabled for the endpoint.</span></span>|  
-|<span data-ttu-id="bf93e-121">webEndpointType</span><span class="sxs-lookup"><span data-stu-id="bf93e-121">webEndpointType</span></span>|<span data-ttu-id="bf93e-122">엔드포인트의 형식을 지정하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="bf93e-122">A string that specifies the type of the endpoint.</span></span>|  
+|<span data-ttu-id="00ef5-112">automaticFormatSelectionEnabled</span><span class="sxs-lookup"><span data-stu-id="00ef5-112">automaticFormatSelectionEnabled</span></span>|<span data-ttu-id="00ef5-113">자동 서식 선택을 사용하는지 여부를 나타내는 부울 값입니다.</span><span class="sxs-lookup"><span data-stu-id="00ef5-113">A Boolean value that indicates whether automatic format selection is enabled.</span></span><br /><br /> <span data-ttu-id="00ef5-114">자동 서식 선택을 사용하면 인프라에서 요청 메시지의 `Accept` 헤더를 구문 분석하여 가장 적합한 응답 형식을 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="00ef5-114">When automatic format selection is enabled, the infrastructure parses the `Accept` header of the request message and determines the most appropriate response format.</span></span> <span data-ttu-id="00ef5-115">`Accept` 헤더에서 적합한 응답 형식을 지정하지 않는 경우 인프라에서 요청 메시지의 `Content-Type`이나 작업의 기본 응답 형식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="00ef5-115">If the `Accept` header does not specify a suitable response format, the infrastructure uses the `Content-Type` of the request message or the default response format of the operation.</span></span>|  
+|<span data-ttu-id="00ef5-116">defaultOutgoingResponseFormat</span><span class="sxs-lookup"><span data-stu-id="00ef5-116">defaultOutgoingResponseFormat</span></span>|<span data-ttu-id="00ef5-117">나가는 응답의 기본 형식을 지정하는 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="00ef5-117">An attribute that specifies the default outgoing response format.</span></span> <span data-ttu-id="00ef5-118">이 특성은 <xref:System.ServiceModel.Web.WebMessageFormat> 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="00ef5-118">This attribute is of the <xref:System.ServiceModel.Web.WebMessageFormat> type</span></span>|  
+|<span data-ttu-id="00ef5-119">helpEnabled</span><span class="sxs-lookup"><span data-stu-id="00ef5-119">helpEnabled</span></span>|<span data-ttu-id="00ef5-120">엔드포인트에 대해 HTTP 도움말 페이지가 사용되는지 여부를 나타내는 부울 값입니다.</span><span class="sxs-lookup"><span data-stu-id="00ef5-120">A Boolean value that indicates whether the HTTP help page is enabled for the endpoint.</span></span>|  
+|<span data-ttu-id="00ef5-121">webEndpointType</span><span class="sxs-lookup"><span data-stu-id="00ef5-121">webEndpointType</span></span>|<span data-ttu-id="00ef5-122">엔드포인트의 형식을 지정하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="00ef5-122">A string that specifies the type of the endpoint.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="bf93e-123">자식 요소</span><span class="sxs-lookup"><span data-stu-id="bf93e-123">Child Elements</span></span>  
- <span data-ttu-id="bf93e-124">없음</span><span class="sxs-lookup"><span data-stu-id="bf93e-124">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="00ef5-123">자식 요소</span><span class="sxs-lookup"><span data-stu-id="00ef5-123">Child Elements</span></span>  
+ <span data-ttu-id="00ef5-124">없음</span><span class="sxs-lookup"><span data-stu-id="00ef5-124">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="bf93e-125">부모 요소</span><span class="sxs-lookup"><span data-stu-id="bf93e-125">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="00ef5-125">부모 요소</span><span class="sxs-lookup"><span data-stu-id="00ef5-125">Parent Elements</span></span>  
   
-|<span data-ttu-id="bf93e-126">요소</span><span class="sxs-lookup"><span data-stu-id="bf93e-126">Element</span></span>|<span data-ttu-id="bf93e-127">설명</span><span class="sxs-lookup"><span data-stu-id="bf93e-127">Description</span></span>|  
+|<span data-ttu-id="00ef5-126">요소</span><span class="sxs-lookup"><span data-stu-id="00ef5-126">Element</span></span>|<span data-ttu-id="00ef5-127">설명</span><span class="sxs-lookup"><span data-stu-id="00ef5-127">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="bf93e-128">\<standardEndpoints></span><span class="sxs-lookup"><span data-stu-id="bf93e-128">\<standardEndpoints></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|<span data-ttu-id="bf93e-129">하나 이상의 속성(주소, 바인딩, 계약)이 고정된 미리 정의된 엔드포인트인 표준 엔드포인트의 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="bf93e-129">A collection of standard endpoints that are pre-defined endpoints with one or more of their properties (address, binding, contract) fixed.</span></span>|  
+|[<span data-ttu-id="00ef5-128">\<standardEndpoints></span><span class="sxs-lookup"><span data-stu-id="00ef5-128">\<standardEndpoints></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|<span data-ttu-id="00ef5-129">하나 이상의 속성(주소, 바인딩, 계약)이 고정된 미리 정의된 엔드포인트인 표준 엔드포인트의 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="00ef5-129">A collection of standard endpoints that are pre-defined endpoints with one or more of their properties (address, binding, contract) fixed.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="bf93e-130">참고자료</span><span class="sxs-lookup"><span data-stu-id="bf93e-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="00ef5-130">참고자료</span><span class="sxs-lookup"><span data-stu-id="00ef5-130">See also</span></span>
 
 - <xref:System.ServiceModel.Description.WebHttpEndpoint>
 - <xref:System.ServiceModel.Configuration.WebHttpEndpointElement>

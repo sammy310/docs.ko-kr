@@ -17,25 +17,25 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 70828b8d4ebcc17fa178a53806ef7f55f7ba33e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939791"
 ---
-# <a name="isymunmanageddocumentwriter-interface"></a><span data-ttu-id="be173-102">ISymUnmanagedDocumentWriter 인터페이스</span><span class="sxs-lookup"><span data-stu-id="be173-102">ISymUnmanagedDocumentWriter Interface</span></span>
-<span data-ttu-id="be173-103">기호 저장소가 참조하는 문서에 쓰기 위한 메서드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="be173-103">Provides methods for writing to a document referenced by a symbol store.</span></span>  
+# <a name="isymunmanageddocumentwriter-interface"></a><span data-ttu-id="b76f7-102">ISymUnmanagedDocumentWriter 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b76f7-102">ISymUnmanagedDocumentWriter Interface</span></span>
+<span data-ttu-id="b76f7-103">기호 저장소가 참조하는 문서에 쓰기 위한 메서드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b76f7-103">Provides methods for writing to a document referenced by a symbol store.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="be173-104">메서드</span><span class="sxs-lookup"><span data-stu-id="be173-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="b76f7-104">메서드</span><span class="sxs-lookup"><span data-stu-id="b76f7-104">Methods</span></span>  
   
-|<span data-ttu-id="be173-105">메서드</span><span class="sxs-lookup"><span data-stu-id="be173-105">Method</span></span>|<span data-ttu-id="be173-106">설명</span><span class="sxs-lookup"><span data-stu-id="be173-106">Description</span></span>|  
+|<span data-ttu-id="b76f7-105">메서드</span><span class="sxs-lookup"><span data-stu-id="b76f7-105">Method</span></span>|<span data-ttu-id="b76f7-106">설명</span><span class="sxs-lookup"><span data-stu-id="b76f7-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="be173-107">SetCheckSum 메서드</span><span class="sxs-lookup"><span data-stu-id="be173-107">SetCheckSum Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setchecksum-method.md)|<span data-ttu-id="be173-108">체크섬 정보를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="be173-108">Sets checksum information.</span></span>|  
-|[<span data-ttu-id="be173-109">SetSource 메서드</span><span class="sxs-lookup"><span data-stu-id="be173-109">SetSource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setsource-method.md)|<span data-ttu-id="be173-110">포함 된 기록 되는 문서에 대 한 소스를 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="be173-110">Sets embedded source for a document that is being written.</span></span>|  
+|[<span data-ttu-id="b76f7-107">SetCheckSum 메서드</span><span class="sxs-lookup"><span data-stu-id="b76f7-107">SetCheckSum Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setchecksum-method.md)|<span data-ttu-id="b76f7-108">체크섬 정보를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="b76f7-108">Sets checksum information.</span></span>|  
+|[<span data-ttu-id="b76f7-109">SetSource 메서드</span><span class="sxs-lookup"><span data-stu-id="b76f7-109">SetSource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setsource-method.md)|<span data-ttu-id="b76f7-110">포함 된 기록 되는 문서에 대 한 소스를 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="b76f7-110">Sets embedded source for a document that is being written.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="be173-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="be173-111">Requirements</span></span>  
- <span data-ttu-id="be173-112">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="be173-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b76f7-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b76f7-111">Requirements</span></span>  
+ <span data-ttu-id="b76f7-112">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="b76f7-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="be173-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="be173-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b76f7-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="b76f7-113">See also</span></span>
 
-- [<span data-ttu-id="be173-114">진단 기호 저장소 인터페이스</span><span class="sxs-lookup"><span data-stu-id="be173-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="b76f7-114">진단 기호 저장소 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b76f7-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

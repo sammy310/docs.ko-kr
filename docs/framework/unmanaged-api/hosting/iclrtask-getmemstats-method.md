@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 668e570c315f5473f222905a061f05ac94afa81a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763570"
 ---
-# <a name="iclrtaskgetmemstats-method"></a><span data-ttu-id="1398b-102">ICLRTask::GetMemStats 메서드</span><span class="sxs-lookup"><span data-stu-id="1398b-102">ICLRTask::GetMemStats Method</span></span>
-<span data-ttu-id="1398b-103">태스크와 관련 된 통계 메모리 사용 정보를 가져옵니다는 현재 [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) 인스턴스가 나타내는입니다.</span><span class="sxs-lookup"><span data-stu-id="1398b-103">Gets statistical memory usage information related to the task that the current [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instance represents.</span></span>  
+# <a name="iclrtaskgetmemstats-method"></a><span data-ttu-id="4e331-102">ICLRTask::GetMemStats 메서드</span><span class="sxs-lookup"><span data-stu-id="4e331-102">ICLRTask::GetMemStats Method</span></span>
+<span data-ttu-id="4e331-103">태스크와 관련 된 통계 메모리 사용 정보를 가져옵니다는 현재 [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) 인스턴스가 나타내는입니다.</span><span class="sxs-lookup"><span data-stu-id="4e331-103">Gets statistical memory usage information related to the task that the current [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instance represents.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1398b-104">구문</span><span class="sxs-lookup"><span data-stu-id="1398b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4e331-104">구문</span><span class="sxs-lookup"><span data-stu-id="4e331-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMemStats (  
@@ -35,33 +35,33 @@ HRESULT GetMemStats (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1398b-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="1398b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4e331-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="4e331-105">Parameters</span></span>  
  `pMemUsage`  
- <span data-ttu-id="1398b-106">[out] 에 대 한 포인터를 [COR_GC_THREAD_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md) 할당 된 바이트 수를 포함 하 여 작업의 메모리 사용량에 대 한 세부 정보가 포함 된 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="1398b-106">[out] A pointer to a [COR_GC_THREAD_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md) instance that contains details about the memory usage of the task, including the number of bytes allocated.</span></span>  
+ <span data-ttu-id="4e331-106">[out] 에 대 한 포인터를 [COR_GC_THREAD_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md) 할당 된 바이트 수를 포함 하 여 작업의 메모리 사용량에 대 한 세부 정보가 포함 된 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="4e331-106">[out] A pointer to a [COR_GC_THREAD_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md) instance that contains details about the memory usage of the task, including the number of bytes allocated.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="1398b-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="1398b-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4e331-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="4e331-107">Return Value</span></span>  
   
-|<span data-ttu-id="1398b-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="1398b-108">HRESULT</span></span>|<span data-ttu-id="1398b-109">설명</span><span class="sxs-lookup"><span data-stu-id="1398b-109">Description</span></span>|  
+|<span data-ttu-id="4e331-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="4e331-108">HRESULT</span></span>|<span data-ttu-id="4e331-109">설명</span><span class="sxs-lookup"><span data-stu-id="4e331-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="1398b-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="1398b-110">S_OK</span></span>|<span data-ttu-id="1398b-111">`GetMemStats` 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="1398b-111">`GetMemStats` returned successfully.</span></span>|  
-|<span data-ttu-id="1398b-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="1398b-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="1398b-113">프로세스에는 CLR (공용 언어 런타임)에 로드 되지 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="1398b-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="1398b-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="1398b-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="1398b-115">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="1398b-115">The call timed out.</span></span>|  
-|<span data-ttu-id="1398b-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="1398b-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="1398b-117">호출자가 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="1398b-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="1398b-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="1398b-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="1398b-119">이벤트가 차단 된 스레드가 취소 된 또는 파이버를 대기 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1398b-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="1398b-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="1398b-120">E_FAIL</span></span>|<span data-ttu-id="1398b-121">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="1398b-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="1398b-122">메서드 E_FAIL을 반환 하는 경우 CLR은 프로세스 내에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="1398b-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="1398b-123">메서드를 호스트 하는 데 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="1398b-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="4e331-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="4e331-110">S_OK</span></span>|<span data-ttu-id="4e331-111">`GetMemStats` 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="4e331-111">`GetMemStats` returned successfully.</span></span>|  
+|<span data-ttu-id="4e331-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="4e331-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="4e331-113">프로세스에는 CLR (공용 언어 런타임)에 로드 되지 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4e331-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="4e331-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="4e331-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="4e331-115">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="4e331-115">The call timed out.</span></span>|  
+|<span data-ttu-id="4e331-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="4e331-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="4e331-117">호출자가 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4e331-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="4e331-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="4e331-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="4e331-119">이벤트가 차단 된 스레드가 취소 된 또는 파이버를 대기 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4e331-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="4e331-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="4e331-120">E_FAIL</span></span>|<span data-ttu-id="4e331-121">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="4e331-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="4e331-122">메서드 E_FAIL을 반환 하는 경우 CLR은 프로세스 내에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4e331-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="4e331-123">메서드를 호스트 하는 데 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="4e331-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="1398b-124">요구 사항</span><span class="sxs-lookup"><span data-stu-id="1398b-124">Requirements</span></span>  
- <span data-ttu-id="1398b-125">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="1398b-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4e331-124">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4e331-124">Requirements</span></span>  
+ <span data-ttu-id="4e331-125">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="4e331-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1398b-126">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="1398b-126">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="4e331-126">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="4e331-126">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="1398b-127">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="1398b-127">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="4e331-127">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="4e331-127">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="1398b-128">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1398b-128">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="4e331-128">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4e331-128">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1398b-129">참고자료</span><span class="sxs-lookup"><span data-stu-id="1398b-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4e331-129">참고자료</span><span class="sxs-lookup"><span data-stu-id="4e331-129">See also</span></span>
 
-- [<span data-ttu-id="1398b-130">ICLRTask 인터페이스</span><span class="sxs-lookup"><span data-stu-id="1398b-130">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [<span data-ttu-id="1398b-131">ICLRTaskManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="1398b-131">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [<span data-ttu-id="1398b-132">IHostTask 인터페이스</span><span class="sxs-lookup"><span data-stu-id="1398b-132">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [<span data-ttu-id="1398b-133">IHostTaskManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="1398b-133">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [<span data-ttu-id="4e331-130">ICLRTask 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4e331-130">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [<span data-ttu-id="4e331-131">ICLRTaskManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4e331-131">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [<span data-ttu-id="4e331-132">IHostTask 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4e331-132">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [<span data-ttu-id="4e331-133">IHostTaskManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4e331-133">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

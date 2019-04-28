@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d7f8cccf8d583645982eb37f6afcb553914679ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777756"
 ---
-# <a name="imetadataimportgetfieldprops-method"></a><span data-ttu-id="ea531-102">IMetaDataImport::GetFieldProps 메서드</span><span class="sxs-lookup"><span data-stu-id="ea531-102">IMetaDataImport::GetFieldProps Method</span></span>
-<span data-ttu-id="ea531-103">지정한 FieldDef 토큰이 참조하는 필드와 연결된 메타데이터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="ea531-103">Gets metadata associated with the field referenced by the specified FieldDef token.</span></span>  
+# <a name="imetadataimportgetfieldprops-method"></a><span data-ttu-id="551d8-102">IMetaDataImport::GetFieldProps 메서드</span><span class="sxs-lookup"><span data-stu-id="551d8-102">IMetaDataImport::GetFieldProps Method</span></span>
+<span data-ttu-id="551d8-103">지정한 FieldDef 토큰이 참조하는 필드와 연결된 메타데이터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="551d8-103">Gets metadata associated with the field referenced by the specified FieldDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ea531-104">구문</span><span class="sxs-lookup"><span data-stu-id="ea531-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="551d8-104">구문</span><span class="sxs-lookup"><span data-stu-id="551d8-104">Syntax</span></span>  
   
 ```  
 HRESULT GetFieldProps (  
@@ -45,50 +45,50 @@ HRESULT GetFieldProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ea531-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="ea531-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="551d8-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="551d8-105">Parameters</span></span>  
  `mb`  
- <span data-ttu-id="ea531-106">[in] 에 대 한 연결 된 메타 데이터를 가져올 필드를 나타내는 FieldDef 토큰을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="ea531-106">[in] A FieldDef token that represents the field to get associated metadata for.</span></span>  
+ <span data-ttu-id="551d8-106">[in] 에 대 한 연결 된 메타 데이터를 가져올 필드를 나타내는 FieldDef 토큰을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="551d8-106">[in] A FieldDef token that represents the field to get associated metadata for.</span></span>  
   
  `pClass`  
- <span data-ttu-id="ea531-107">[out] 클래스에 속하는 필드의 형식을 나타내는 TypeDef 토큰에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="ea531-107">[out] A pointer to a TypeDef token that represents the type of the class that the field belongs to.</span></span>  
+ <span data-ttu-id="551d8-107">[out] 클래스에 속하는 필드의 형식을 나타내는 TypeDef 토큰에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="551d8-107">[out] A pointer to a TypeDef token that represents the type of the class that the field belongs to.</span></span>  
   
  `szField`  
- <span data-ttu-id="ea531-108">[out] 필드의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="ea531-108">[out] The name of the field.</span></span>  
+ <span data-ttu-id="551d8-108">[out] 필드의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="551d8-108">[out] The name of the field.</span></span>  
   
  `cchField`  
- <span data-ttu-id="ea531-109">[in] 와이드 문자에 대 한 버퍼의 크기 *szField*합니다.</span><span class="sxs-lookup"><span data-stu-id="ea531-109">[in] The size in wide characters of the buffer for *szField*.</span></span>  
+ <span data-ttu-id="551d8-109">[in] 와이드 문자에 대 한 버퍼의 크기 *szField*합니다.</span><span class="sxs-lookup"><span data-stu-id="551d8-109">[in] The size in wide characters of the buffer for *szField*.</span></span>  
   
  `pchField`  
- <span data-ttu-id="ea531-110">[out] 반환된 된 버퍼의 실제 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="ea531-110">[out] The actual size of the returned buffer.</span></span>  
+ <span data-ttu-id="551d8-110">[out] 반환된 된 버퍼의 실제 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="551d8-110">[out] The actual size of the returned buffer.</span></span>  
   
  `pdwAttr`  
- <span data-ttu-id="ea531-111">[out] 필드의 메타 데이터와 관련 된 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="ea531-111">[out] Flags associated with the field's metadata.</span></span>  
+ <span data-ttu-id="551d8-111">[out] 필드의 메타 데이터와 관련 된 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="551d8-111">[out] Flags associated with the field's metadata.</span></span>  
   
  `ppvSigBlob`  
- <span data-ttu-id="ea531-112">[in] 필드를 설명 하는 이진 메타 데이터 값에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="ea531-112">[in] A pointer to the binary metadata value that describes the field.</span></span>  
+ <span data-ttu-id="551d8-112">[in] 필드를 설명 하는 이진 메타 데이터 값에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="551d8-112">[in] A pointer to the binary metadata value that describes the field.</span></span>  
   
  `pcbSigBlob`  
- <span data-ttu-id="ea531-113">[out] 크기 (바이트) `ppvSigBlob`합니다.</span><span class="sxs-lookup"><span data-stu-id="ea531-113">[out] The size in bytes of `ppvSigBlob`.</span></span>  
+ <span data-ttu-id="551d8-113">[out] 크기 (바이트) `ppvSigBlob`합니다.</span><span class="sxs-lookup"><span data-stu-id="551d8-113">[out] The size in bytes of `ppvSigBlob`.</span></span>  
   
  `pdwCPlusTypeFlag`  
- <span data-ttu-id="ea531-114">[out] 필드의 값 형식을 지정 하는 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="ea531-114">[out] A flag that specifies the value type of the field.</span></span>  
+ <span data-ttu-id="551d8-114">[out] 필드의 값 형식을 지정 하는 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="551d8-114">[out] A flag that specifies the value type of the field.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="ea531-115">[out] 필드는 상수 값입니다.</span><span class="sxs-lookup"><span data-stu-id="ea531-115">[out] A constant value for the field.</span></span>  
+ <span data-ttu-id="551d8-115">[out] 필드는 상수 값입니다.</span><span class="sxs-lookup"><span data-stu-id="551d8-115">[out] A constant value for the field.</span></span>  
   
  `pcchValue`  
- <span data-ttu-id="ea531-116">[out] 문자 크기 `ppValue`, 문자열이 없는 경우 0입니다.</span><span class="sxs-lookup"><span data-stu-id="ea531-116">[out] The size in chars of `ppValue`, or zero if no string exists.</span></span>  
+ <span data-ttu-id="551d8-116">[out] 문자 크기 `ppValue`, 문자열이 없는 경우 0입니다.</span><span class="sxs-lookup"><span data-stu-id="551d8-116">[out] The size in chars of `ppValue`, or zero if no string exists.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ea531-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ea531-117">Requirements</span></span>  
- <span data-ttu-id="ea531-118">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="ea531-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="551d8-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="551d8-117">Requirements</span></span>  
+ <span data-ttu-id="551d8-118">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="551d8-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ea531-119">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ea531-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="551d8-119">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="551d8-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="ea531-120">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="ea531-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="551d8-120">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="551d8-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="ea531-121">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ea531-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="551d8-121">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="551d8-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ea531-122">참고자료</span><span class="sxs-lookup"><span data-stu-id="ea531-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="551d8-122">참고자료</span><span class="sxs-lookup"><span data-stu-id="551d8-122">See also</span></span>
 
-- [<span data-ttu-id="ea531-123">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ea531-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="ea531-124">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ea531-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="551d8-123">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="551d8-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="551d8-124">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="551d8-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
