@@ -9,11 +9,11 @@ helpviewer_keywords:
 - PrintDialog control [WPF]
 ms.assetid: 0ce9e3e7-206f-45ec-b845-4c05cfb5ff1d
 ms.openlocfilehash: 8030a9a25c86dffcbd28af61ea4b3948d647e6fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770502"
 ---
 # <a name="printdialog"></a>PrintDialog
 합니다 <xref:System.Windows.Controls.PrintDialog> 컨트롤은 자동으로 구성 하는 표준 인쇄 대화 상자를 인스턴스화하는 데 사용 된 <xref:System.Printing.PrintTicket> 및 <xref:System.Printing.PrintQueue> 사용자 입력에 따라 합니다.  

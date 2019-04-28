@@ -8,11 +8,11 @@ ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 777d496614435106b84b47b9aa3d35d964bc3e07
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704741"
 ---
 # <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy > 요소
 공용 언어 런타임에서 액세스 위반 및 기타 손상 된 상태 예외를 catch 하는 관리 되는 코드를 허용 하는지 여부를 지정 합니다.  
@@ -58,11 +58,11 @@ ms.locfileid: "59115104"
   
  로 시작 합니다 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]관리 되는 코드에는 더 이상 이러한 유형의 예외 catch `catch` 블록입니다. 그러나 이러한 변경 내용을 재정의 하 고 두 가지 방법으로 손상 된 상태 예외 처리를 유지 관리할 수 있습니다.  
   
--   설정 된 `<legacyCorruptedStateExceptionsPolicy>` 요소의 `enabled` 특성을 `true`입니다. 이 구성 설정은 프로세스 전체에 적용된 되며 모든 메서드에 영향을 줍니다.  
+- 설정 된 `<legacyCorruptedStateExceptionsPolicy>` 요소의 `enabled` 특성을 `true`입니다. 이 구성 설정은 프로세스 전체에 적용된 되며 모든 메서드에 영향을 줍니다.  
   
  또는  
   
--   적용 된 <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> 특성을 메서드에 예외를 포함 하는 `catch` 블록입니다.  
+- 적용 된 <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> 특성을 메서드에 예외를 포함 하는 `catch` 블록입니다.  
   
  이 구성 요소는 에서만 사용할 수는 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] 이상.  
   

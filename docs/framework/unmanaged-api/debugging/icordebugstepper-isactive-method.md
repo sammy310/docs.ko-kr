@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d4166b63e0bb0ae276c48abb961e381809cc9792
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763752"
 ---
 # <a name="icordebugstepperisactive-method"></a>ICorDebugStepper::IsActive 메서드
 이 ICorDebugStepper 현재 단계를 실행 하는지 여부를 나타내는 값을 가져옵니다.  

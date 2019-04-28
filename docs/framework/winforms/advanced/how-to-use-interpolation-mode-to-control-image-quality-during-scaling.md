@@ -10,24 +10,24 @@ helpviewer_keywords:
 - images [Windows Forms], controlling quality
 ms.assetid: fde9bccf-8aa5-4b0d-ba4b-788740627b02
 ms.openlocfilehash: 75f5077c2d969f026a28834144c219f289843dd6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778973"
 ---
 # <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a>방법: 배율 조정 시 보간 모드를 사용하여 이미지 품질 관리
 보간 모드를 <xref:System.Drawing.Graphics> 방식에 영향을 미칩니다 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 확장 (확장 및 축소) 이미지입니다. <xref:System.Drawing.Drawing2D.InterpolationMode> 열거형은 다음 목록에 나와 있는 여러 보간 모드를 정의 합니다.  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor>  
+- <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode.Bilinear>  
+- <xref:System.Drawing.Drawing2D.InterpolationMode.Bilinear>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear>  
+- <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode.Bicubic>  
+- <xref:System.Drawing.Drawing2D.InterpolationMode.Bicubic>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic>  
+- <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic>  
   
  이미지를 확대 하려면 원본 이미지의 각 픽셀의 더 큰 이미지 픽셀 그룹에 매핑해야 합니다. 이미지를 축소 하려면 원래 이미지의 픽셀의 그룹을 더 작은 이미지의 단일 픽셀에 매핑해야 합니다. 이러한 매핑을 수행 하는 알고리즘의 효과 배율 조정 된 이미지의 품질을 결정 합니다. 처리 시간이 더 높은 배율 조정 된 이미지를 생성 하는 알고리즘은 경향이 있습니다. 위의 목록에서 <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor> 최저 품질 모드 및 <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic> 최고 품질 모드입니다.  
   

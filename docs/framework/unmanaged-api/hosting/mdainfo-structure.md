@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3be6f2b9454ed2f74d2cc6792cd9aaa2c25215db
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765208"
 ---
 # <a name="mdainfo-structure"></a>MDAInfo 구조체
 에 대 한 세부 정보를 제공 합니다 `Event_MDAFired` 관리 디버깅 도우미 (MDA) 만들기를 트리거하는 이벤트입니다.  
@@ -47,9 +47,9 @@ typedef struct _MDAInfo {
   
  MDA의 생성을 트리거하는 이벤트가 발생 하는 경우 다음 단계를 수행 하는 런타임:  
   
--   호스트에 등록 되지 않은 경우는 [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) 를 호출 하 여 인스턴스 [iclroneventmanager:: Registeractiononevent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) 대 한 알림을 받아보려면는 `Event_MDAFired` 런타임에서 계속 이벤트를 해당 기본적으로 호스팅되지 않은 동작입니다.  
+- 호스트에 등록 되지 않은 경우는 [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) 를 호출 하 여 인스턴스 [iclroneventmanager:: Registeractiononevent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) 대 한 알림을 받아보려면는 `Event_MDAFired` 런타임에서 계속 이벤트를 해당 기본적으로 호스팅되지 않은 동작입니다.  
   
--   이 이벤트에 대 한 처리기를 등록 하는 호스트 하는 경우 런타임에서 프로세스에 디버거가 연결 되어 있는지 여부를 확인 합니다. 이 경우 런타임에서 디버거를 시작 합니다. 디버거가 계속 될 때 호스트를 호출 합니다. 디버거가 연결 되어 있으면 런타임에서 호출 `IActionOnCLREvent::OnEvent` 에 대 한 포인터를 전달 하 고는 `MDAInfo` 인스턴스를 `data` 매개 변수입니다.  
+- 이 이벤트에 대 한 처리기를 등록 하는 호스트 하는 경우 런타임에서 프로세스에 디버거가 연결 되어 있는지 여부를 확인 합니다. 이 경우 런타임에서 디버거를 시작 합니다. 디버거가 계속 될 때 호스트를 호출 합니다. 디버거가 연결 되어 있으면 런타임에서 호출 `IActionOnCLREvent::OnEvent` 에 대 한 포인터를 전달 하 고는 `MDAInfo` 인스턴스를 `data` 매개 변수입니다.  
   
  호스트는 Mda를 활성화 하는 데는 MDA가 활성화 될 때 알림을 받을 선택할 수 있습니다. 이렇게 하면 호스트 기본 동작을 재정의 하 고 프로세스 상태가 손상 방지 하기 위해 이벤트를 발생 하는 관리 되는 스레드를 중단할 수 있습니다. Mda를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [관리 디버깅 도우미를 사용 하 여 오류 진단](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)합니다.  
   

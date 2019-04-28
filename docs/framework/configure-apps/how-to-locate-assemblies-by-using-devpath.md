@@ -1,5 +1,5 @@
 ---
-title: '방법: DEVPATH를 사용 하 여 어셈블리를 찾습니다'
+title: '방법: DEVPATH를 사용하여 어셈블리 찾기'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DEVPATH
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - assemblies [.NET Framework], location
 ms.assetid: 44d2eadf-7eec-443c-a2ac-d601fd919e17
 ms.openlocfilehash: 5c4041f42b0a9d1d1e4bc8438e662911534daa42
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775832"
 ---
-# <a name="how-to-locate-assemblies-by-using-devpath"></a>방법: DEVPATH를 사용 하 여 어셈블리를 찾습니다
+# <a name="how-to-locate-assemblies-by-using-devpath"></a>방법: DEVPATH를 사용하여 어셈블리 찾기
 개발자가 작성 하는 공유 어셈블리를 여러 응용 프로그램을 사용 하 여 올바르게 작동 하는지 확인 수 있습니다. 지속적으로 어셈블리를 전역 어셈블리 캐시에서 개발 주기 동안에 배치 하는 대신 개발자는 어셈블리에 대 한 빌드 출력 디렉터리를 가리키는 DEVPATH 환경 변수를 만들면 됩니다.  
   
  출력 디렉터리는 C:\MySharedAssembly\Debug 고 예를 들어 MySharedAssembly 라는 공유 어셈블리를 작성할 수 있도록를 가정 합니다. C:\MySharedAssembly\Debug DEVPATH 변수에 넣을 수 있습니다. 지정 해야 합니다 [ \<developmentMode >](../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md) 컴퓨터 구성 파일의 요소입니다. 이 요소에는 공용 언어 런타임을 어셈블리를 찾는 데 DEVPATH를 사용 하도록 알려 줍니다.  

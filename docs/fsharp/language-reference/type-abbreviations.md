@@ -3,11 +3,11 @@ title: 형식 약어
 description: 에 대해 알아봅니다 F# 형식에 이름을 더 의미 있는 코드를 쉽게 읽을 수 있도록 하기 위해 약어를 입력 합니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: 0deaef789367aad413e5a537bf7164034e1275c0
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61683342"
 ---
 # <a name="type-abbreviations"></a>형식 약어
 
@@ -37,6 +37,6 @@ type [accessibility-modifier] type-abbreviation = type-name
 
 측정 단위 형식 약어를 사용할 수도 있습니다. 자세한 내용은 [측정 단위를](units-of-measure.md)입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [F# 언어 참조](index.md)

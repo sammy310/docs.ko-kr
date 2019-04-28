@@ -2,15 +2,9 @@
 title: Windows Workflow Foundation
 ms.date: 03/30/2017
 helpviewer_keywords:
-- WF [WF]
-- Windows Workflow Foundation [WF]
+  - 'WF [WF]'
+  - 'Windows Workflow Foundation [WF]'
 ms.assetid: 9a23ea6b-d600-483e-89cd-8889cfec5f66
-ms.openlocfilehash: 37c988e18090848ce1eb444bb9735aeadcdb566e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720280"
 ---
 # <a name="windows-workflow-foundation"></a>Windows Workflow Foundation
 이 섹션에 프로그래밍 모델, 샘플 및 도구에는 Windows WF (Workflow Foundation)에 대해 설명 합니다.  
@@ -23,12 +17,10 @@ ms.locfileid: "57720280"
  이전 버전과 다른 여러 개발 패러다임의 변경 내용에 대해 설명합니다.  
   
  [.NET 4.5에서 Windows Workflow Foundation의 새로운 기능](whats-new-in-wf-in-dotnet.md)  
- 
-  [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation의 새로운 기능에 대해 설명합니다.  
+ [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation의 새로운 기능에 대해 설명합니다.  
   
  [Windows Workflow Foundation 기능 특성](feature-specifics.md)  
- 
-  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] Windows Workflow Foundation의 새로운 기능에 대해 설명합니다.  
+ [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] Windows Workflow Foundation의 새로운 기능에 대해 설명합니다.  
   
  [Windows 워크플로 개념적 개요](conceptual-overview.md)  
  광범위 한 Windows Workflow Foundation 기본 개념을 설명 하는 항목의 집합입니다.  

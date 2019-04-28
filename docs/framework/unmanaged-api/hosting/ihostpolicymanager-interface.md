@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cf9d903b4e44ea7a185ad8b3b71b7a5da2f2bda3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760118"
 ---
 # <a name="ihostpolicymanager-interface"></a>IHostPolicyManager 인터페이스
 중단, 제한 시간 또는 오류는 CLR (공용 언어 런타임)의 경우 수행 하는 동작의 호스트에 알리는 메서드를 제공 합니다.  

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - compound assignment statements [Visual Basic]
 ms.assetid: 8ad26613-faff-4e2f-89ee-63feee33bfda
 ms.openlocfilehash: da2b5ca0b7538d77c3c8d8bc7d45712d656ce63a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768318"
 ---
 # <a name="-operator-visual-basic"></a>\<\<= 연산자 (Visual Basic)
 변수 또는 속성의 값에 산술 왼쪽된 시프트를 수행 하 고 해당 변수 또는 속성으로 결과 할당 합니다.  

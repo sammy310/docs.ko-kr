@@ -8,11 +8,11 @@ helpviewer_keywords:
 - TreeView control [WPF], improving the performance
 ms.assetid: b792c740-cf2b-4da8-8ba8-3d2e5a821874
 ms.openlocfilehash: de1b46da2a7c6c3db0c0c19cdbb654fcf2fbbd6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59153441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771009"
 ---
 # <a name="how-to-improve-the-performance-of-a-treeview"></a>방법: TreeView 성능 향상
 경우는 <xref:System.Windows.Controls.TreeView> 많은 항목이 로드 하는 데 걸리는 시간 사용자 인터페이스에서 상당한 지연이 발생할 수 있습니다. 설정 하 여 로드 하는 시간을 향상 시킬 수 있습니다 합니다 `VirtualizingStackPanel.IsVirtualizing` 연결 속성을 `true`입니다.  UI를 사용자가 스크롤할 때 대응할 느린 수도 있습니다는 <xref:System.Windows.Controls.TreeView> 스크롤 막대의 엄지 단추를 끌거나 마우스 휠을 사용 하 여 합니다. 성능을 향상 시킬 수 있습니다 합니다 <xref:System.Windows.Controls.TreeView> 설정 하 여 사용자가 스크롤할 때 합니다 `VirtualizingStackPanel.VirtualizationMode` 연결 된 속성을 <xref:System.Windows.Controls.VirtualizationMode.Recycling?displayProperty=nameWithType>입니다.  

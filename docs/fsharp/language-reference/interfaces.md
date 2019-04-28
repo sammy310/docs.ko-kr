@@ -3,11 +3,11 @@ title: 인터페이스
 description: 에 대해 알아봅니다 하는 방법 F# 인터페이스는 다른 클래스에서 구현 관련된 멤버의 집합을 지정 합니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: 85b5506d96c26be5e52670c0c62d27cae047d1a6
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666380"
 ---
 # <a name="interfaces"></a>인터페이스
 
@@ -91,7 +91,7 @@ let class-name (argument-list) =
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2805.fs)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [F# 언어 참조](index.md)
 - [개체 식](object-expressions.md)

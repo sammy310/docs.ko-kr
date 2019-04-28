@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
 ms.openlocfilehash: 0c5474a65bee7d3d290372e79f8423ea9986235f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767119"
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>방법: 시스템 제공 바인딩 사용자 지정
 Windows Communication Foundation (WCF) 속성의 전체가 아니라 일부 기본 바인딩 요소의 속성을 구성할 수 있도록 여러 시스템 제공 바인딩이 포함 되어 있습니다. 이 항목에서는 바인딩 요소의 속성을 설정하여 사용자 지정 바인딩을 만드는 방법을 보여 줍니다.  

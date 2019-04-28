@@ -12,11 +12,11 @@ helpviewer_keywords:
 - ListCount property
 ms.assetid: 7bcaea58-1cfa-46db-9baf-b75a69d8f9ec
 ms.openlocfilehash: 8a2429049acf1a22edde8d132ece17da4e91f1db
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759832"
 ---
 # <a name="when-to-use-a-windows-forms-combobox-instead-of-a-listbox"></a>ListBox 대신 Windows Forms ComboBox를 사용해야 하는 경우
 <xref:System.Windows.Forms.ComboBox> 하며 <xref:System.Windows.Forms.ListBox> 컨트롤 유사 하 게 동작에 있으며 일부 경우 않을 서로 바꿔 사용할 수 있습니다. 그러나 하나 또는 다른 작업에 더 적절 한 경우 경우가 있습니다.  

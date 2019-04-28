@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 8ae29ec5-e5fb-4137-9df5-60a288df7045
 ms.openlocfilehash: d847f589bc47f8ab3d6691666bbd879e795db0c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756522"
 ---
 # <a name="creating-xml-in-visual-basic"></a>Visual Basic에서 XML 만들기
 Visual Basic을 사용 하면 사용할 수 있습니다 *XML 리터럴을* 코드에서 직접. XML 리터럴 구문을 나타내는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 개체 및 해당 하는 XML 1.0 구문과 비슷합니다. 이렇게 하면 쉽게 코드에 동일한 최종 XML 구조 때문에 XML 요소, 문서 및 조각을 프로그래밍 방식으로 만들 수 있습니다.  

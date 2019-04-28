@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WF [WF], what's new
 ms.assetid: 11f96014-001e-41a0-bcc2-d0684a52fa43
 ms.openlocfilehash: 5ab1419a29dd77ac276681bb49dc529fc05d5b15
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669552"
 ---
 # <a name="whats-new-in-windows-workflow-foundation"></a>Windows Workflow Foundation의 새로운 기능
 Windows WF (Workflow Foundation)에서 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 여러 개발 패러다임이 이전 버전에서 변경 합니다. 이제 워크플로에서 많은 새로운 기능을 보다 쉽게 작성, 실행, 유지 관리 및 구현할 수 있습니다. 마이그레이션.NET 3.0 및.NET 3.5 워크플로 응용 프로그램을 최신 버전을 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [마이그레이션 지침](migration-guidance.md)합니다.  
@@ -24,13 +24,13 @@ Windows WF (Workflow Foundation)에서 [!INCLUDE[netfx40_long](../../../includes
 ## <a name="expanded-built-in-activity-library"></a>확장된 기본 제공 활동 라이브러리  
  활동 라이브러리에는 다음과 같은 새로운 기능이 있습니다.  
   
--   <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.Pick>, <xref:System.Activities.Statements.TryCatch>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.Switch%601>, <xref:System.Activities.Statements.ParallelForEach%601> 등의 새 흐름 제어 활동  
+- <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.Pick>, <xref:System.Activities.Statements.TryCatch>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.Switch%601>, <xref:System.Activities.Statements.ParallelForEach%601> 등의 새 흐름 제어 활동  
   
--   <xref:System.Activities.Statements.Assign> 등의 멤버 데이터 조작 활동 및 <xref:System.Activities.Statements.AddToCollection%601> 등의 컬렉션 활동  
+- <xref:System.Activities.Statements.Assign> 등의 멤버 데이터 조작 활동 및 <xref:System.Activities.Statements.AddToCollection%601> 등의 컬렉션 활동  
   
--   <xref:System.Activities.Statements.TransactionScope>, <xref:System.Activities.Statements.Compensate> 등의 트랜잭션 제어 활동  
+- <xref:System.Activities.Statements.TransactionScope>, <xref:System.Activities.Statements.Compensate> 등의 트랜잭션 제어 활동  
   
--   <xref:System.ServiceModel.Activities.SendContent>, <xref:System.ServiceModel.Activities.ReceiveReply> 등의 새로운 메시징 활동  
+- <xref:System.ServiceModel.Activities.SendContent>, <xref:System.ServiceModel.Activities.ReceiveReply> 등의 새로운 메시징 활동  
   
 ## <a name="explicit-activity-data-model"></a>명시적 활동 데이터 모델  
  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에는 데이터 저장 또는 이동을 위한 새로운 옵션이 있습니다. <xref:System.Activities.Variable>을 사용하여 활동에 데이터를 저장할 수 있습니다. 활동 내부 또는 외부에서 데이터를 이동할 때 특수 인수 유형을 사용하여 데이터가 이동하는 방향을 결정합니다. 이러한 유형은 <xref:System.Activities.InArgument>, <xref:System.Activities.InOutArgument> 및 <xref:System.Activities.OutArgument>입니다. 자세한 내용은 [Windows Workflow Foundation 데이터 모델](data-model.md)합니다.  
@@ -38,21 +38,21 @@ Windows WF (Workflow Foundation)에서 [!INCLUDE[netfx40_long](../../../includes
 ## <a name="enhanced-hosting-persistence-and-tracking-options"></a>향상된 호스팅, 지속성 및 추적 옵션  
  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에서는 지속성이 다음과 같이 향상되었습니다.  
   
--   <xref:System.ServiceModel.Activities.WorkflowServiceHost>, <xref:System.Activities.WorkflowApplication>, <xref:System.Activities.WorkflowInvoker> 등과 같은 더 많은 워크플로 실행 옵션이 있습니다.  
+- <xref:System.ServiceModel.Activities.WorkflowServiceHost>, <xref:System.Activities.WorkflowApplication>, <xref:System.Activities.WorkflowInvoker> 등과 같은 더 많은 워크플로 실행 옵션이 있습니다.  
   
--   <xref:System.Activities.Statements.Persist> 활동을 사용하여 워크플로 상태 데이터를 명시적으로 유지할 수 있습니다.  
+- <xref:System.Activities.Statements.Persist> 활동을 사용하여 워크플로 상태 데이터를 명시적으로 유지할 수 있습니다.  
   
--   호스트에서 <xref:System.Activities.ActivityInstance>를 언로드하지 않고 유지할 수 있습니다.  
+- 호스트에서 <xref:System.Activities.ActivityInstance>를 언로드하지 않고 유지할 수 있습니다.  
   
--   워크플로에서 유지할 수 없는 데이터로 작업할 때 비지속성 영역을 지정할 수 있습니다. 그러면 비지속성 영역이 있는 동안 지속성이 연기됩니다.  
+- 워크플로에서 유지할 수 없는 데이터로 작업할 때 비지속성 영역을 지정할 수 있습니다. 그러면 비지속성 영역이 있는 동안 지속성이 연기됩니다.  
   
--   <xref:System.Activities.Statements.TransactionScope>를 사용하여 트랜잭션을 워크플로로 전달할 수 있습니다.  
+- <xref:System.Activities.Statements.TransactionScope>를 사용하여 트랜잭션을 워크플로로 전달할 수 있습니다.  
   
--   <xref:System.Activities.Tracking.TrackingParticipant>를 사용하여 보다 쉽게 추적할 수 있습니다.  
+- <xref:System.Activities.Tracking.TrackingParticipant>를 사용하여 보다 쉽게 추적할 수 있습니다.  
   
--   <xref:System.Activities.Tracking.EtwTrackingParticipant>를 사용하여 시스템 이벤트 로그를 추적합니다.  
+- <xref:System.Activities.Tracking.EtwTrackingParticipant>를 사용하여 시스템 이벤트 로그를 추적합니다.  
   
--   이제 보류 중인 워크플로 다시 시작이 <xref:System.Activities.Bookmark> 개체를 사용하여 관리됩니다.  
+- 이제 보류 중인 워크플로 다시 시작이 <xref:System.Activities.Bookmark> 개체를 사용하여 관리됩니다.  
   
 ## <a name="easier-ability-to-extend-wf-designer-experience"></a>간편한 WF Designer 환경 확장 기능  
  새 WF Designer에서 Windows Presentation Foundation (WPF) 및 Visual Studio 외부에서 WF 디자이너 재호스팅 때 사용할 수 있는 간편한 모델 빌드되고 또한 사용자 지정 활동 디자이너를 만드는 간편한 메커니즘을 제공 합니다. 자세한 내용은 [워크플로 디자인 환경 사용자 지정](customizing-the-workflow-design-experience.md)합니다.

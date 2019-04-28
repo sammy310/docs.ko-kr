@@ -9,11 +9,11 @@ helpviewer_keywords:
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
 ms.openlocfilehash: 9708a4d06e8a2aa65fb4d3bb959f4699237a2bc6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762399"
 ---
 # <a name="fromtoby-animations-overview"></a>From/To/By 애니메이션 개요
 이 항목에서는 From/To/By 애니메이션을 사용하여 종속성 속성에 애니메이션 효과를 적용하는 방법을 설명합니다. From/To/By 애니메이션은 두 값 간에 변환을 생성합니다.  
@@ -65,15 +65,15 @@ ms.locfileid: "59209153"
 ## <a name="target-values"></a>대상 값  
  From/To/By 애니메이션은 두 대상 값 간에 변환을 생성합니다. 시작 값을 지정 하는 것 (사용 하 여 설정 합니다 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 속성)과 끝 값 (사용 하 여 설정 합니다 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 속성). 그러나 시작 값, 대상 값 또는 오프셋 값만 지정할 수도 있습니다. 이러한 경우 애니메이션은 애니메이션 효과를 적용할 속성에서 누락된 대상 값을 가져옵니다. 다음 목록에서는 애니메이션의 대상 값을 지정하는 여러 가지 방법을 설명합니다.  
   
--   **시작 값**  
+- **시작 값**  
   
      사용 된 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 속성 애니메이션의 시작 값을 명시적으로 지정 하려는 경우. 사용할 수는 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 자체적으로 또는 속성을 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 또는 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 속성입니다. 만 지정한 경우는 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 속성, 속성의 기준 값에 해당 값에서의 애니메이션 전환 합니다.  
   
--   **끝 값**  
+- **끝 값**  
   
      애니메이션의 끝 값을 지정 하려면 사용 하 여 해당 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 속성입니다. 사용 하는 경우는 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 속성을 단독으로 애니메이션 시작 값을 가져옵니다 애니메이션 효과가 적용 되는 속성 또는 동일한 속성에 적용 되는 다른 애니메이션의 출력입니다. 사용할 수는 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 속성과 함께 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 속성을 명시적으로 시작 및 끝 애니메이션에 대 한 값을 지정 합니다.  
   
--   **오프셋 값**  
+- **오프셋 값**  
   
      <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 속성을 사용 하면 명시적 시작 또는 끝 애니메이션에 대 한 값 대신 오프셋을 지정할 수 있습니다. <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 애니메이션의 속성 지정 기간 동안 얼마나 많은 애니메이션에 따라 값을 변경 합니다. 사용할 수는 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 자체적으로 또는 속성을 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 속성입니다. 만 지정한 경우는 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 속성에 애니메이션 속성의 기준 값 또는 다른 애니메이션의 출력에 오프셋된 값을 추가 합니다.  
   
@@ -134,9 +134,9 @@ ms.locfileid: "59209153"
 ## <a name="other-animation-types"></a>기타 애니메이션 형식  
  From/To/By 애니메이션은 애니메이션의 유형만 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 제공: 키 프레임 애니메이션 및 경로 애니메이션도 제공 합니다.  
   
--   키 프레임 애니메이션은 키 프레임을 사용하여 설명되는 제한 없는 수의 대상 값에 따라 애니메이션을 적용합니다. 자세한 내용은 참조는 [키 프레임 애니메이션 개요](key-frame-animations-overview.md)합니다.  
+- 키 프레임 애니메이션은 키 프레임을 사용하여 설명되는 제한 없는 수의 대상 값에 따라 애니메이션을 적용합니다. 자세한 내용은 참조는 [키 프레임 애니메이션 개요](key-frame-animations-overview.md)합니다.  
   
--   경로 애니메이션에서 출력 값을 생성 한 <xref:System.Windows.Media.PathGeometry>합니다. 자세한 내용은 참조는 [경로 애니메이션 개요](path-animations-overview.md)합니다.  
+- 경로 애니메이션에서 출력 값을 생성 한 <xref:System.Windows.Media.PathGeometry>합니다. 자세한 내용은 참조는 [경로 애니메이션 개요](path-animations-overview.md)합니다.  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 고유한 사용자 지정 애니메이션 형식도 만들 수 있습니다. 자세한 내용은 참조는 [사용자 지정 애니메이션 개요](custom-animations-overview.md)합니다.  
   

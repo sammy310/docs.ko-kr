@@ -13,11 +13,11 @@ helpviewer_keywords:
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
 ms.openlocfilehash: 6f7cbd91be83c96b25248f87ddc377159ba39b64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762389"
 ---
 # <a name="transforms-overview"></a>Transform 개요
 이 항목에서는 사용 하는 방법을 설명 합니다 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> 회전, 크기 조정, 이동 하는 클래스 (변환) 및 기울이기 <xref:System.Windows.FrameworkElement> 개체입니다.  
@@ -101,9 +101,9 @@ ms.locfileid: "59162206"
 ## <a name="transforming-a-frameworkelement"></a>FrameworkElement 변환  
  에 변환을 적용 하는 <xref:System.Windows.FrameworkElement>를 만들기는 <xref:System.Windows.Media.Transform> 두 속성 중 하나에 적용 하는 <xref:System.Windows.FrameworkElement> 클래스를 제공:  
   
--   <xref:System.Windows.FrameworkElement.LayoutTransform%2A> – 레이아웃 패스 전에 적용 되는 변환입니다. 이 변환을 적용된 후 레이아웃 시스템은 요소의 변환된 크기와 위치를 처리합니다.  
+- <xref:System.Windows.FrameworkElement.LayoutTransform%2A> – 레이아웃 패스 전에 적용 되는 변환입니다. 이 변환을 적용된 후 레이아웃 시스템은 요소의 변환된 크기와 위치를 처리합니다.  
   
--   <xref:System.Windows.UIElement.RenderTransform%2A> – 요소의 모양을 수정 하지만 레이아웃 패스가 완료 된 후에 적용 되는 변환입니다. 사용 하 여 합니다 <xref:System.Windows.UIElement.RenderTransform%2A> 속성 대신는 <xref:System.Windows.FrameworkElement.LayoutTransform%2A> 속성인 성능상의 이점을 얻을 수 있습니다.  
+- <xref:System.Windows.UIElement.RenderTransform%2A> – 요소의 모양을 수정 하지만 레이아웃 패스가 완료 된 후에 적용 되는 변환입니다. 사용 하 여 합니다 <xref:System.Windows.UIElement.RenderTransform%2A> 속성 대신는 <xref:System.Windows.FrameworkElement.LayoutTransform%2A> 속성인 성능상의 이점을 얻을 수 있습니다.  
   
  어떤 속성을 사용해야 할까요? 제공 하는 성능상의 이점 때문에 사용할 합니다 <xref:System.Windows.UIElement.RenderTransform%2A> 가능 하면 사용 하는 경우에 특히 애니메이션 효과가 적용 될 때마다 속성 <xref:System.Windows.Media.Transform> 개체입니다. 사용 된 <xref:System.Windows.FrameworkElement.LayoutTransform%2A> 속성 크기 조정, 회전, 기울이기 해야 요소의 변환 된 크기로 조정 하는 요소의 부모입니다. 사용 될 때는 합니다 <xref:System.Windows.FrameworkElement.LayoutTransform%2A> 속성인 <xref:System.Windows.Media.TranslateTransform> 개체 요소에 아무 효과도 없는 것 같습니다. 레이아웃 시스템이 변환된 요소를 처리 과정의 일부로 원래 위치로 되돌리기 때문입니다.  
   

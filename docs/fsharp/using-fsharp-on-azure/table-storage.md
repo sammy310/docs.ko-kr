@@ -4,11 +4,11 @@ description: Azure Table storage 또는 Azure Cosmos DB를 사용 하 여 클라
 author: sylvanc
 ms.date: 03/26/2018
 ms.openlocfilehash: 54c777acd454e4f675175b814675c185e41ad9a4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756353"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Azure Table storage와 F를 사용 하 여 Azure Cosmos DB Table API 시작\#
 

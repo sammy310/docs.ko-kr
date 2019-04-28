@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
 ms.openlocfilehash: 333bfb539fc375fd8f2dd170a187002fcf81ea2b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649757"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic 컴파일러 옵션 범주별 목록
 Visual Basic 명령줄 컴파일러는 Visual Studio 통합된 개발 환경 (IDE) 내에서 프로그램을 컴파일하는 대신 제공 됩니다. 다음은 기능 범주별으로 정렬 된 Visual Basic 명령줄 컴파일러 옵션의 목록입니다.  

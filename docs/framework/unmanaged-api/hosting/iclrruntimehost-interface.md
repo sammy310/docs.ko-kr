@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ed32fe643a7722eaf1af38e6079096194690e950
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771895"
 ---
 # <a name="iclrruntimehost-interface"></a>ICLRRuntimeHost 인터페이스
 유사한 기능을 제공 합니다 [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) 버전 1에서는 다음과 같이 변경을 사용 하 여.NET Framework에서 제공 하는 인터페이스:  
   
--   추가 된 [SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md) 호스트 컨트롤 인터페이스를 설정 하는 방법입니다.  
+- 추가 된 [SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md) 호스트 컨트롤 인터페이스를 설정 하는 방법입니다.  
   
--   제공 하는 몇 가지 방법 중 생략 `ICorRuntimeHost`합니다.  
+- 제공 하는 몇 가지 방법 중 생략 `ICorRuntimeHost`합니다.  
   
 ## <a name="methods"></a>메서드  
   

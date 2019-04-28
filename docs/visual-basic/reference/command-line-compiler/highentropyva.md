@@ -6,11 +6,11 @@ helpviewer_keywords:
 - /highentropyva compiler option (Visual Basic)
 ms.assetid: ff25f20a-6ca2-467b-9e52-5cf439f5028e
 ms.openlocfilehash: 16bfea37a5742ac5aaaabfacdcf03a2b5bedb6db
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663273"
 ---
 # <a name="-highentropyva-visual-basic"></a>-highentropyva (Visual Basic)
 나타냅니다 64 비트 실행 파일을 또는으로 표시 되는 실행 파일을 [/platform:anycpu](../../../visual-basic/reference/command-line-compiler/platform.md) 컴파일러 옵션은 높은 엔트로피 주소 공간 레이아웃 불규칙화 (ASLR)를 지원 합니다.  

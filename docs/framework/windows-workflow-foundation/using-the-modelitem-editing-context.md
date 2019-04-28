@@ -3,11 +3,11 @@ title: ModelItem 편집 컨텍스트 사용
 ms.date: 03/30/2017
 ms.assetid: 7f9f1ea5-0147-4079-8eca-be94f00d3aa1
 ms.openlocfilehash: a2628bbbf2f6684e5d484b05cd5a2ac622f3b664
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669500"
 ---
 # <a name="using-the-modelitem-editing-context"></a>ModelItem 편집 컨텍스트 사용
 <xref:System.Activities.Presentation.Model.ModelItem> 편집 컨텍스트는 호스트 응용 프로그램이 디자이너와 통신할 때 사용하는 개체입니다. <xref:System.Activities.Presentation.EditingContext>는 사용할 수 있는 메서드 두 개(<xref:System.Activities.Presentation.EditingContext.Items%2A> 및 <xref:System.Activities.Presentation.EditingContext.Services%2A>)를 노출합니다.  
@@ -99,48 +99,48 @@ protected override void OnModelItemChanged(object newItem)
   
  항목:  
   
--   <xref:System.Activities.Presentation.Hosting.AssemblyContextControlItem>: 컨트롤 (예: 식 편집기)에 대 한 워크플로 내부에서 사용 될 참조 된 로컬 어셈블리 목록을 관리 합니다.  
+- <xref:System.Activities.Presentation.Hosting.AssemblyContextControlItem>: 컨트롤 (예: 식 편집기)에 대 한 워크플로 내부에서 사용 될 참조 된 로컬 어셈블리 목록을 관리 합니다.  
   
--   <xref:System.Activities.Presentation.Hosting.ReadOnlyState>: 디자이너는 읽기 전용 상태 인지 여부를 나타냅니다.  
+- <xref:System.Activities.Presentation.Hosting.ReadOnlyState>: 디자이너는 읽기 전용 상태 인지 여부를 나타냅니다.  
   
--   <xref:System.Activities.Presentation.View.Selection>: 현재 선택 된 개체의 컬렉션을 정의 합니다.  
+- <xref:System.Activities.Presentation.View.Selection>: 현재 선택 된 개체의 컬렉션을 정의 합니다.  
   
--   <xref:System.Activities.Presentation.Hosting.WorkflowCommandExtensionItem>:  
+- <xref:System.Activities.Presentation.Hosting.WorkflowCommandExtensionItem>:  
   
--   <xref:System.Activities.Presentation.WorkflowFileItem>: 현재 편집 세션의 기반이 되는 파일에 정보를 제공 합니다.  
+- <xref:System.Activities.Presentation.WorkflowFileItem>: 현재 편집 세션의 기반이 되는 파일에 정보를 제공 합니다.  
   
  서비스:  
   
--   <xref:System.Activities.Presentation.Model.AttachedPropertiesService>: 현재 인스턴스를 추가할 수 있습니다 사용 하 여 <xref:System.Activities.Presentation.Model.AttachedPropertiesService.AddProperty%2A>입니다.  
+- <xref:System.Activities.Presentation.Model.AttachedPropertiesService>: 현재 인스턴스를 추가할 수 있습니다 사용 하 여 <xref:System.Activities.Presentation.Model.AttachedPropertiesService.AddProperty%2A>입니다.  
   
--   <xref:System.Activities.Presentation.View.DesignerView>: 디자이너 캔버스의 속성에 액세스할 수 있습니다.  
+- <xref:System.Activities.Presentation.View.DesignerView>: 디자이너 캔버스의 속성에 액세스할 수 있습니다.  
   
--   <xref:System.Activities.Presentation.IActivityToolboxService>: 업데이트할 도구 상자의 콘텐츠를 허용 합니다.  
+- <xref:System.Activities.Presentation.IActivityToolboxService>: 업데이트할 도구 상자의 콘텐츠를 허용 합니다.  
   
--   <xref:System.Activities.Presentation.Hosting.ICommandService>: 사용자 지정 제공 서비스 구현과 디자이너 명령 (예: 상황에 맞는 메뉴)를 통합 하는 데 사용 합니다.  
+- <xref:System.Activities.Presentation.Hosting.ICommandService>: 사용자 지정 제공 서비스 구현과 디자이너 명령 (예: 상황에 맞는 메뉴)를 통합 하는 데 사용 합니다.  
   
--   <xref:System.Activities.Presentation.Debug.IDesignerDebugView>: 디자이너 디버거에 기능을 제공합니다.  
+- <xref:System.Activities.Presentation.Debug.IDesignerDebugView>: 디자이너 디버거에 기능을 제공합니다.  
   
--   <xref:System.Activities.Presentation.View.IExpressionEditorService>: 식 편집기 대화 상자에 대 한 액세스를 제공합니다.  
+- <xref:System.Activities.Presentation.View.IExpressionEditorService>: 식 편집기 대화 상자에 대 한 액세스를 제공합니다.  
   
--   <xref:System.Activities.Presentation.IIntegratedHelpService>: 통합된 도움말 기능을 사용 하 여 디자이너를 제공합니다.  
+- <xref:System.Activities.Presentation.IIntegratedHelpService>: 통합된 도움말 기능을 사용 하 여 디자이너를 제공합니다.  
   
--   <xref:System.Activities.Presentation.Validation.IValidationErrorService>: 사용 하 여 유효성 검사 오류에 대 한 액세스를 제공 <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A>합니다.  
+- <xref:System.Activities.Presentation.Validation.IValidationErrorService>: 사용 하 여 유효성 검사 오류에 대 한 액세스를 제공 <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A>합니다.  
   
--   <xref:System.Activities.Presentation.IWorkflowDesignerStorageService>: 내부 데이터 저장 및 검색 서비스를 제공 합니다. 이 서비스는.NET Framework에서 내부적으로 사용 됩니다 하 고 외부 사용에 대 한이 아닙니다.  
+- <xref:System.Activities.Presentation.IWorkflowDesignerStorageService>: 내부 데이터 저장 및 검색 서비스를 제공 합니다. 이 서비스는.NET Framework에서 내부적으로 사용 됩니다 하 고 외부 사용에 대 한이 아닙니다.  
   
--   <xref:System.Activities.Presentation.IXamlLoadErrorService>: XAML 로드 오류 컬렉션을 사용에 대 한 액세스를 제공 <xref:System.Activities.Presentation.IXamlLoadErrorService.ShowXamlLoadErrors%2A>합니다.  
+- <xref:System.Activities.Presentation.IXamlLoadErrorService>: XAML 로드 오류 컬렉션을 사용에 대 한 액세스를 제공 <xref:System.Activities.Presentation.IXamlLoadErrorService.ShowXamlLoadErrors%2A>합니다.  
   
--   <xref:System.Activities.Presentation.Services.ModelService>: 디자이너에서 편집 중인 워크플로 모델과 상호 작용할 수 사용 합니다.  
+- <xref:System.Activities.Presentation.Services.ModelService>: 디자이너에서 편집 중인 워크플로 모델과 상호 작용할 수 사용 합니다.  
   
--   <xref:System.Activities.Presentation.Model.ModelTreeManager>: 사용 하 여 모델 항목 트리 루트에 대 한 액세스를 제공 <xref:System.Activities.Presentation.Model.ModelItem.Root%2A>합니다.  
+- <xref:System.Activities.Presentation.Model.ModelTreeManager>: 사용 하 여 모델 항목 트리 루트에 대 한 액세스를 제공 <xref:System.Activities.Presentation.Model.ModelItem.Root%2A>합니다.  
   
--   <xref:System.Activities.Presentation.UndoEngine>: 실행 취소를 제공 하 고 기능을 다시 실행 합니다.  
+- <xref:System.Activities.Presentation.UndoEngine>: 실행 취소를 제공 하 고 기능을 다시 실행 합니다.  
   
--   <xref:System.Activities.Presentation.Services.ViewService>: 기본 모델 항목에 시각적 요소를 매핑합니다.  
+- <xref:System.Activities.Presentation.Services.ViewService>: 기본 모델 항목에 시각적 요소를 매핑합니다.  
   
--   <xref:System.Activities.Presentation.View.ViewStateService>: 뷰 모델 항목에 대 한 상태를 저장 합니다.  
+- <xref:System.Activities.Presentation.View.ViewStateService>: 뷰 모델 항목에 대 한 상태를 저장 합니다.  
   
--   <xref:System.Activities.Presentation.View.VirtualizedContainerService>: 가상 컨테이너 UI 동작을 사용자 지정 하는 데 사용 합니다.  
+- <xref:System.Activities.Presentation.View.VirtualizedContainerService>: 가상 컨테이너 UI 동작을 사용자 지정 하는 데 사용 합니다.  
   
--   <xref:System.Activities.Presentation.Hosting.WindowHelperService>: 등록 및 이벤트 알림에 대 한 대리자를 등록 취소 하는 데 사용 합니다. 창 소유자를 설정할 수도 있습니다.
+- <xref:System.Activities.Presentation.Hosting.WindowHelperService>: 등록 및 이벤트 알림에 대 한 대리자를 등록 취소 하는 데 사용 합니다. 창 소유자를 설정할 수도 있습니다.

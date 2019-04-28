@@ -9,11 +9,11 @@ helpviewer_keywords:
 - procedure calls [Visual Basic], overloaded
 ms.assetid: 3bb331fb-f6bc-406f-9ca0-9609b497014c
 ms.openlocfilehash: d325c09516b4ce03facedce86f17ea49480b997a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666016"
 ---
 # <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>방법: 오버 로드 된 프로시저 호출 (Visual Basic)
 프로시저 오버 로드의 장점은 호출의 유연한입니다. 호출 코드를 프로시저에 전달 하 고 단일 프로시저 이름을 전달 하는 어떤 인수 없이 호출 하는 데 필요한 정보를 가져올 수 있습니다.  

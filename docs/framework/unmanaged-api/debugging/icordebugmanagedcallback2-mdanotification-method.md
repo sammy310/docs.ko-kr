@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 425c606b1f340bbd49cfe3497d394d5ad0dd37a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763804"
 ---
 # <a name="icordebugmanagedcallback2mdanotification-method"></a>ICorDebugManagedCallback2::MDANotification 메서드
 코드 실행을 MDA (관리 디버깅 도우미) 디버깅 중인 응용 프로그램에서 발생 하는 알림을 제공 합니다.  

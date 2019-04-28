@@ -5,11 +5,11 @@ ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 57d1a14199debbb90827c1ea95347d485a636329
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704845"
 ---
 # <a name="enableampmparseadjustment-element"></a>\<EnableAmPmParseAdjustment > 요소
 날짜 및 시간 구문 분석 메서드에 일, 월, 시간 및 AM/PM 지정자를 포함 하는 날짜 문자열을 구문 분석 조정 된 규칙 집합을 사용할지 여부를 결정 합니다.  
@@ -53,15 +53,15 @@ ms.locfileid: "59222512"
 ## <a name="remarks"></a>설명  
  `<EnableAmPmParseAdjustment>` 요소는 다음 방법 숫자 일 및 월을 시간 하 고 (예: "4 월 10 6 AM")는 AM/PM 지정자 뒤에 있는 날짜 문자열의 구문을 분석 하는 방법을 제어 합니다.  
   
--   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>  
+- <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>  
   
--   <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>  
+- <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>  
   
--   <xref:System.DateTime.TryParse%2A?displayProperty=nameWithType>  
+- <xref:System.DateTime.TryParse%2A?displayProperty=nameWithType>  
   
--   <xref:System.DateTimeOffset.TryParse%2A?displayProperty=nameWithType>  
+- <xref:System.DateTimeOffset.TryParse%2A?displayProperty=nameWithType>  
   
--   <xref:System.Convert.ToDateTime%2A?displayProperty=nameWithType>  
+- <xref:System.Convert.ToDateTime%2A?displayProperty=nameWithType>  
   
  다른 패턴이 없습니다 영향을 받습니다.  
   

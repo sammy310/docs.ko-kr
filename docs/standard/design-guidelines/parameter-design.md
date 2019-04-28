@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
 author: KrzysztofCwalina
 ms.openlocfilehash: 5a0f6e0fab5d0f2fe8574e348fc6b8ae726eeb99
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757406"
 ---
 # <a name="parameter-design"></a>매개 변수 디자인
 이 섹션에서는 매개 변수 디자인, 인수를 확인 하는 것에 대 한 지침을 사용 하 여 섹션을 비롯 한 광범위 한 지침을 제공 합니다. 에 설명 된 지침을 참조 해야 뿐만 [매개 변수 명명](../../../docs/standard/design-guidelines/naming-parameters.md)합니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "54617215"
 ### <a name="parameter-passing"></a>매개 변수 전달  
  프레임 워크 디자이너의 관점에서 그룹이 세 가지 주요 매개 변수: by 값 매개 변수 `ref` 매개 변수 및 `out` 매개 변수입니다.  
   
- 인수 값으로 매개 변수를 통해 전달 되 면 멤버에 전달 된 실제 인수의 복사본을 받습니다. 인수 값 형식이 면 인수의 복사본이 스택에 추가 됩니다. 인수가 참조 형식이 면 참조의 복사본이 스택에 추가 됩니다. 가장 인기 있는 CLR 언어 C#, VB.NET 및 c + +에서는 기본 매개 변수를 값별로 전달 하려면.  
+ 인수 값으로 매개 변수를 통해 전달 되 면 멤버에 전달 된 실제 인수의 복사본을 받습니다. 인수 값 형식이 면 인수의 복사본이 스택에 추가 됩니다. 인수가 참조 형식이 면 참조의 복사본이 스택에 추가 됩니다. 가장 인기 있는 CLR 언어와 같은 C#, VB.NET 및 C++를 기본적으로 매개 변수 값으로 전달 합니다.  
   
  인수로 전달 되는 경우는 `ref` 매개 변수를 멤버에 전달 된 실제 인수에 대 한 참조를 수신 합니다. 인수 값 형식이 면 인수에 대 한 참조를 스택에 배치 됩니다. 인수가 참조 형식이 면 참조에 대 한 참조를 스택에 배치 됩니다. `Ref` 호출자에 의해 전달 된 인수를 수정 하려면 멤버 수 있도록 매개 변수를 사용할 수 있습니다.  
   
@@ -138,7 +138,7 @@ public class String {
   
  **X DO NOT** 사용는 `varargs` 메서드, 줄임표 라고도 합니다.  
   
- C + +와 같은 일부 CLR 언어 라는 변수 매개 변수 목록을 전달 하는 것에 대 한 대체는 규칙을 지원 `varargs` 메서드. CLS 규격이 아니므로 프레임 워크에서 규칙을 해야 사용할 수 없습니다.  
+ 일부 CLR 언어와 같은 C++를 호출 하는 가변 매개 변수 목록을 전달 하는 것에 대 한 대체는 규칙을 지원 `varargs` 메서드. CLS 규격이 아니므로 프레임 워크에서 규칙을 해야 사용할 수 없습니다.  
   
 ### <a name="pointer-parameters"></a>포인터 매개 변수  
  일반적으로 포인터 하지 잘 설계 된 관리 코드 프레임 워크는 공개 노출 영역에 나타납니다. 대부분의 경우 포인터를 캡슐화 해야 합니다. 그러나 포인터는 상호 운용성을 위해 필요한 경우에 따라 및 포인터를 사용 하 여 이러한 사례에 적합 합니다.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ab6c0ac7-aac4-45ba-93d6-a0e9afd1756f
 ms.openlocfilehash: 2e294b7970a58fad9385802470a514e5a9240495
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766866"
 ---
 # <a name="how-to-inspect-or-modify-parameters"></a>방법: 매개 변수 검사 또는 수정
 검사 하거나 구현 하 여 Windows Communication Foundation (WCF) 클라이언트 개체 또는 WCF 서비스에서 단일 작업에 대 한 들어오는 메시지나 나가는 메시지를 수정할 수는 <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> 인터페이스와 클라이언트 또는 서비스 런타임에 삽입 하 합니다. 일반적으로 작업 동작을 사용하여 단일 작업에 매개 변수 검사자를 추가하지만, 다른 동작을 사용하여 더 넓은 범위의 런타임에 쉬운 액세스를 제공할 수도 있습니다. 자세한 내용은 [확장 클라이언트](../../../../docs/framework/wcf/extending/extending-clients.md) 하 고 [디스패처 확장](../../../../docs/framework/wcf/extending/extending-dispatchers.md)합니다.  
@@ -26,11 +26,11 @@ ms.locfileid: "59303975"
 ## <a name="example"></a>예제  
  다음 코드 예제는 아래 순서대로 나열되어 있습니다.  
   
--   매개 변수 검사자 구현.  
+- 매개 변수 검사자 구현.  
   
--   <xref:System.ServiceModel.Description.IOperationBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> 및 <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType>를 사용하여 매개 변수 검사자를 삽입하는 동작 구현.  
+- <xref:System.ServiceModel.Description.IOperationBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> 및 <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType>를 사용하여 매개 변수 검사자를 삽입하는 동작 구현.  
   
--   클라이언트 응용 프로그램에서 엔드포인트 동작을 로드하고 실행하여 클라이언트에 매개 변수 검사자를 삽입하는 구성 파일.  
+- 클라이언트 응용 프로그램에서 엔드포인트 동작을 로드하고 실행하여 클라이언트에 매개 변수 검사자를 삽입하는 구성 파일.  
   
  [!code-csharp[Interceptors#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/interceptors.cs#4)]
  [!code-vb[Interceptors#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/interceptors.vb#4)]  

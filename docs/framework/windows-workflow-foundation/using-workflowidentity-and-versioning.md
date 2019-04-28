@@ -3,24 +3,24 @@ title: WorkflowIdentity 및 버전 관리 사용
 ms.date: 03/30/2017
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
 ms.openlocfilehash: 5bed526a47b802c60aa679e53c84af4e14656675
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669647"
 ---
 # <a name="using-workflowidentity-and-versioning"></a>WorkflowIdentity 및 버전 관리 사용
 <xref:System.Activities.WorkflowIdentity>는 워크플로 응용 프로그램 개발자에게 이름 및 <xref:System.Version>을 워크플로 정의에 연결하는 방법을 제공하며, 이러한 정보는 지속형 워크플로 인스턴스와 연결됩니다. 이 ID 정보는 워크플로 응용 프로그램 개발자가 여러 버전의 워크플로 정의를 side-by-side로 실행하는 경우와 같은 시나리오를 가능하도록 하는 데 사용될 수 있으며 동적 업데이트와 같은 다른 기능의 토대를 제공합니다. 이 항목에서는 <xref:System.Activities.WorkflowIdentity> 호스팅과 함께 <xref:System.Activities.WorkflowApplication>를 사용하는 방법을 간단하게 설명합니다. 워크플로 서비스에서 워크플로 정의의 side-by-side-실행 정보를 참조 하세요 [WorkflowServiceHost에서 Side-by-side 버전 관리](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md)합니다. 동적 업데이트에 대 한 자세한 내용은 [동적 업데이트](dynamic-update.md)합니다.  
   
 ## <a name="in-this-topic"></a>항목 내용  
   
--   [WorkflowIdentity 사용](using-workflowidentity-and-versioning.md#UsingWorkflowIdentity)  
+- [WorkflowIdentity 사용](using-workflowidentity-and-versioning.md#UsingWorkflowIdentity)  
   
-    -   [WorkflowIdentity를 사용한 side-by-side-실행](using-workflowidentity-and-versioning.md#SxS)  
+    - [WorkflowIdentity를 사용한 side-by-side-실행](using-workflowidentity-and-versioning.md#SxS)  
   
--   [워크플로 버전 관리를 지원 하기 위해.NET Framework 4 지 속성 데이터베이스 업그레이드](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)  
+- [워크플로 버전 관리를 지원 하기 위해.NET Framework 4 지 속성 데이터베이스 업그레이드](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)  
   
-    -   [데이터베이스 스키마를 업그레이드 하려면](using-workflowidentity-and-versioning.md#ToUpgrade)  
+    - [데이터베이스 스키마를 업그레이드 하려면](using-workflowidentity-and-versioning.md#ToUpgrade)  
   
 ## <a name="UsingWorkflowIdentity"></a> WorkflowIdentity 사용  
  <xref:System.Activities.WorkflowIdentity>를 사용하려면 인스턴스를 만들어 구성한 다음 <xref:System.Activities.WorkflowApplication> 인스턴스에 연결합니다. <xref:System.Activities.WorkflowIdentity> 인스턴스에는 세 가지 식별 정보가 포함됩니다. 필수 요소인 <xref:System.Activities.WorkflowIdentity.Name%2A> 및 <xref:System.Activities.WorkflowIdentity.Version%2A>에는 이름과 <xref:System.Version>이 포함되며, 선택적인 <xref:System.Activities.WorkflowIdentity.Package%2A>는 어셈블리 이름 등의 정보나 원하는 다른 정보를 포함하는 추가 문자열을 지정하는 데 사용할 수 있습니다. 세 개의 속성 중 하나라도 다른 <xref:System.Activities.WorkflowIdentity>와 다르면 <xref:System.Activities.WorkflowIdentity>가 고유한 것으로 간주됩니다.  

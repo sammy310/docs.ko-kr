@@ -13,11 +13,11 @@ helpviewer_keywords:
 - passwords [Windows Forms], password text box
 ms.assetid: d105d6b9-3d50-44cd-80d8-2c0e2f486727
 ms.openlocfilehash: ab5df1233c16a7ce076efa817fb14808b588ebcd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746782"
 ---
 # <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>방법: Windows Forms TextBox 컨트롤을 사용하여 암호 텍스트 상자 만들기
 암호 상자에 사용자가 문자열을 입력 하는 동안 자리 표시자 문자를 표시 하는 Windows Forms 텍스트 상자가입니다.  

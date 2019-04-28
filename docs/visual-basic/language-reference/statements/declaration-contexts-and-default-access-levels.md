@@ -10,11 +10,11 @@ helpviewer_keywords:
 - access levels, default levels
 ms.assetid: bf63b96e-e825-4745-88c8-5dae222728db
 ms.openlocfilehash: 0d899342383bdf9d262fc9a1ab5e00bbe43066e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638189"
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>선언 컨텍스트 및 기본 액세스 수준(Visual Basic)
 이 항목에는 Visual Basic 형식은 다른 형식 내에서 선언 될 수 있으며 어떤 액세스 수준을 기본적으로 지정 되지 않은 경우 설명 합니다.  
@@ -24,11 +24,11 @@ ms.locfileid: "58821701"
   
  선언 컨텍스트의 수준은 다음과 같습니다.  
   
--   *Namespace 수준* -클래스, 구조체, 모듈 또는 인터페이스를 제외한 소스 파일 또는 네임 스페이스 내  
+- *Namespace 수준* -클래스, 구조체, 모듈 또는 인터페이스를 제외한 소스 파일 또는 네임 스페이스 내  
   
--   *모듈 수준* -클래스, 구조체, 모듈 또는 인터페이스 제외한 프로시저 또는 블록 내  
+- *모듈 수준* -클래스, 구조체, 모듈 또는 인터페이스 제외한 프로시저 또는 블록 내  
   
--   *프로시저 수준* -프로시저 또는 블록 내에서 (같은 `If` 또는 `For`)  
+- *프로시저 수준* -프로시저 또는 블록 내에서 (같은 `If` 또는 `For`)  
   
  다음 표에서 해당 선언 컨텍스트에 따라 다양 한 선언 된 프로그래밍 요소에 대 한 기본 액세스 수준을 보여 줍니다.  
   

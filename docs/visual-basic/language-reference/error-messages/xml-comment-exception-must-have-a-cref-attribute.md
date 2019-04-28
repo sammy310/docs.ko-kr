@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42319
 ms.assetid: 62eeeba3-6811-48be-b1ef-c2e4feda3177
 ms.openlocfilehash: a974df5d2305b88946981d0d258a8088b23d3fc3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766611"
 ---
 # <a name="xml-comment-exception-must-have-a-cref-attribute"></a>XML 주석 예외에는 'cref' 특성이 있어야 합니다.
 \<예외 > 태그는 메서드에서 throw 될 수 있는 예외를 문서화 하는 방법을 제공 합니다. 필수 `cref` 특성 설명서 생성기에서 확인 하는 멤버의 이름을 지정 합니다. 멤버가 있는 경우 문서 파일의 정식 요소 이름으로 변환 됩니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "58813290"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   추가 된 `cref` 예외에 특성을 다음과 같이 합니다.  
+- 추가 된 `cref` 예외에 특성을 다음과 같이 합니다.  
   
     ```  
     '''<exception cref="member">description</exception>  

@@ -12,11 +12,11 @@ ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9402c9f28c123affb7b90fc189484bb1fd43db46
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704611"
 ---
 # <a name="probing-element"></a>\<검색 > 요소
 공용 언어 런타임에서 어셈블리를 로드할 때 검색할 하위 응용 프로그램 기본 디렉터리를 지정 합니다.  

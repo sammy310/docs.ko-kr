@@ -3,11 +3,11 @@ title: <transactionFlow>
 ms.date: 03/30/2017
 ms.assetid: 8c7b4c5b-ace3-4fe3-89ff-7b13c9aacd13
 ms.openlocfilehash: 626ae03d622221ab3e956bd03898b6cc30482c98
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59179155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758030"
 ---
 # <a name="transactionflow"></a>\<transactionFlow>
 사용자 지정 바인딩에 대한 트랜잭션 흐름 지원을 지정합니다.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30961
 ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
 ms.openlocfilehash: 58b334eb5e6db443bcfaba72729d59cb1d798e70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766820"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2-multiple-file-references"></a>형식의 값 '\<typename1 >'로 변환할 수 없습니다 '\<typename2 >' (여러 파일 참조)
 형식의 값 '\<typename1 >'로 변환할 수 없습니다 '\<typename2 >'입니다. 형식 불일치에 대 한 파일 참조가 섞여 때문일 수 있습니다 '\<filepath1 >' 프로젝트에서 '\<projectname1 >'에 대 한 파일 참조를 사용 하 여 '\<filepath2 >' 프로젝트에서 '\<projectname2 >'입니다. 두 어셈블리가 동일하면 동일한 대상을 참조하도록 두 참조를 바꿔 보세요.  
@@ -27,9 +27,9 @@ ms.locfileid: "58833531"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   참조 된 어셈블리에서 동일한 어셈블리 id에 있는 경우 제거 하거나 단일 파일 참조만 되도록 파일 참조 중 하나를 대체 합니다.  
+- 참조 된 어셈블리에서 동일한 어셈블리 id에 있는 경우 제거 하거나 단일 파일 참조만 되도록 파일 참조 중 하나를 대체 합니다.  
   
--   참조 된 어셈블리는 동일한 어셈블리 id에 없는 경우 형식에서 다른 형식으로 변환 하려고 하지 않도록 코드를 변경 합니다.  
+- 참조 된 어셈블리는 동일한 어셈블리 id에 없는 경우 형식에서 다른 형식으로 변환 하려고 하지 않도록 코드를 변경 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

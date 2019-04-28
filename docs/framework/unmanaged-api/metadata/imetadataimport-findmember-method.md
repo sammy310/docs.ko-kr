@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 63afd82ca88e1a7c61913ec7fcc4d77d03ae9927
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777938"
 ---
 # <a name="imetadataimportfindmember-method"></a>IMetaDataImport::FindMember 메서드
 토큰을 가져옵니다 memberdef 묶여 있는 메서드나 필드에 대 한 지정 된 <xref:System.Type> 지정 된 이름 및 메타 데이터 서명을 하 고 있습니다.  

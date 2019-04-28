@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 358346af540c8b6b7ee1523e763bebbacf8cd2bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59127818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777522"
 ---
 # <a name="imetadataimportgetuserstring-method"></a>IMetaDataImport::GetUserString 메서드
 지정한 메타데이터 토큰이 나타내는 리터럴 문자열을 가져옵니다.  

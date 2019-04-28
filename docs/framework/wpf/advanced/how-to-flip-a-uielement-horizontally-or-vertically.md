@@ -6,11 +6,11 @@ helpviewer_keywords:
 - UIElements [WPF], flipping
 ms.assetid: 02c6730f-65c0-40d5-a553-4cb663721882
 ms.openlocfilehash: 6b3da322493d17e4f8e36a35b9a0e40fdc9dc685
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767055"
 ---
 # <a name="how-to-flip-a-uielement-horizontally-or-vertically"></a>방법: 가로 또는 세로로 UIElement 대칭 이동
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.ScaleTransform> 대칭으로 배열할지를 <xref:System.Windows.UIElement> 가로나 세로 방향으로 합니다. 이 예제에서는 <xref:System.Windows.Controls.Button> 컨트롤 (유형의 <xref:System.Windows.UIElement>) 적용 하 여 대칭 이동를 <xref:System.Windows.Media.ScaleTransform> 에 해당 <xref:System.Windows.UIElement.RenderTransform%2A> 속성입니다.  

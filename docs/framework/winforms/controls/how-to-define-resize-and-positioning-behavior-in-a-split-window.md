@@ -10,11 +10,11 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], resizing
 ms.assetid: 9bf73f36-ed2d-4a02-b15a-0770eff4fdfa
 ms.openlocfilehash: 8cdcfdfaa135a92ed6a6e96d4a72de2c97f2493d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757627"
 ---
 # <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>방법: 분할 창에서 크기 조정 및 위치 지정 동작 정의
 패널을 <xref:System.Windows.Forms.SplitContainer> 컨트롤 자체적으로 크기를 조정 하 고 사용자가 조작 합니다. 그러나 경우가 분할자를 프로그래밍 방식으로 제어 하려고 하면-커서가 않았고을 어느 정도는 이동할 수 있습니다.  

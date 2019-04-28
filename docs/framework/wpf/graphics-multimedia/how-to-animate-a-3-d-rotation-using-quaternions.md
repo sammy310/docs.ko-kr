@@ -7,11 +7,11 @@ helpviewer_keywords:
 - 3-D translations [WPF], animating [WPF], with quaternions
 ms.assetid: adca9cb1-066b-4de8-abbb-6b4007579ee7
 ms.openlocfilehash: d994ac2ae67fd366f27f123d5bd15f14d5ac7abe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762126"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-quaternions"></a>방법: 4원수를 사용하여 3차원 회전에 애니메이션 효과 주기
 이 예제에는 4 원수를 사용 하 여 3 차원 개체를 회전에 애니메이션을 적용 하는 방법을 보여 줍니다.  

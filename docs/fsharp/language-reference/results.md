@@ -3,11 +3,11 @@ title: 결과
 description: 사용 하는 방법을 알아봅니다는 F# 오류 코드를 작성할 수 있도록 'Result'를 입력 합니다.
 ms.date: 04/24/2017
 ms.openlocfilehash: 8b419412b406018a21f2c23103c8193fec8766f2
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770515"
 ---
 # <a name="results"></a>결과
 
@@ -82,7 +82,7 @@ test()
 
 알 수 있듯이 무척 쉽습니다 모두 반환 하려면 할 경우 다양 한 유효성 검사 함수 함께 연결 하는 `Result`합니다.  수 있도록 필요에 따라 구성할 수 있는 작은 조각으로 다음과 같은 기능을 중단할 수이 있습니다.  이 역시의 추가 가치 *적용* 사용 [패턴 일치](pattern-matching.md) 끝에 일련의 유효성 검사, 결과적으로 적용 하는 더 높은 수준의 프로그램 정확성을 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [구별된 공용 구조체](discriminated-unions.md)
 - [패턴 일치](pattern-matching.md)

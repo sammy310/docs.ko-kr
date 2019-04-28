@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: abe967195694dd61b4af18fb4eebbc3caad2ef4f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59205864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771477"
 ---
 # <a name="iclrstrongname-interface"></a>ICLRStrongName 인터페이스
 강력한 이름의 어셈블리를 서명 하는 기본 전역 정적 함수를 제공 합니다. 모든 `ICLRStrongName` 메서드는 표준 COM HRESULTs를 반환 합니다.  

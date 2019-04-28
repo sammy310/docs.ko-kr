@@ -14,11 +14,11 @@ helpviewer_keywords:
 - Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
 ms.openlocfilehash: dff1b9bb9e87f827663786cac3f33531db41b2c1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757068"
 ---
 # <a name="object-variable-assignment-visual-basic"></a>개체 변수 할당(Visual Basic)
 일반적인 대입문을를 사용 하 여 개체를 개체 변수에 할당 합니다. 개체 식을 할당할 수 있습니다 또는 [Nothing](../../../../visual-basic/language-reference/nothing.md) 키워드, 다음 예제와 같이 보여 줍니다.  

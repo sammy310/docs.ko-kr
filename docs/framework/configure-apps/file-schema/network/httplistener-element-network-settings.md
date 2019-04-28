@@ -3,11 +3,11 @@ title: <httpListener> 요소(네트워크 설정)
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
 ms.openlocfilehash: b3a6d527bc1bf8210bb85424fa218fda495a2a2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705079"
 ---
 # <a name="httplistener-element-network-settings"></a>\<httpListener > 요소 (네트워크 설정)
 매개 변수에서 사용 하는 사용자 지정을 <xref:System.Net.HttpListener> 클래스입니다.  
@@ -52,9 +52,9 @@ ms.locfileid: "59099745"
   
  `http.sys` 서비스는 두 요청 URI 문자열을 노출 합니다.  
   
--   원시 URI  
+- 원시 URI  
   
--   변환 된 URI  
+- 변환 된 URI  
   
  원시 URI가는 <xref:System.Uri?displayProperty=nameWithType> HTTP 요청의 요청 줄에 제공 합니다.  
   
@@ -72,11 +72,11 @@ ms.locfileid: "59099745"
   
  합니다 `http.sys` 결합 서비스는 <xref:System.Uri.Host%2A?displayProperty=nameWithType> 속성 값과 문자열을 변환된 된 URI를 만드는 요청 줄에 있습니다. 또한 `http.sys` 하며 <xref:System.Uri?displayProperty=nameWithType> 클래스는 다음을 수행 합니다.  
   
--   이스케이프 해제 인코딩된 모든 백분율 값입니다.  
+- 이스케이프 해제 인코딩된 모든 백분율 값입니다.  
   
--   Utf-16 문자 표현으로 변환 백분율로 인코딩된 비 ASCII 문자입니다. 유니코드 문자 (유니코드 %uXXXX 형식을 사용 하 여 인코딩) 및 u t F-8과 ANSI/DBCS 문자는 사용할 수는 note 합니다.  
+- Utf-16 문자 표현으로 변환 백분율로 인코딩된 비 ASCII 문자입니다. 유니코드 문자 (유니코드 %uXXXX 형식을 사용 하 여 인코딩) 및 u t F-8과 ANSI/DBCS 문자는 사용할 수는 note 합니다.  
   
--   경로 압축 등의 다른 정규화 단계를 실행합니다.  
+- 경로 압축 등의 다른 정규화 단계를 실행합니다.  
   
  백분율로 인코딩된 값에 사용 되는 인코딩에 대 한 정보가 요청 없으므로 백분율로 인코딩된 값을 구문 분석 하 여 올바른 인코딩을 결정 못할 수 있습니다.  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - cursor [WPF], positioning
 ms.assetid: c771a0b8-c6b4-4240-aecd-a21d0ba51a2e
 ms.openlocfilehash: 3d7da5daf09e06938b8366e0f5f98a599cae4571
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770619"
 ---
 # <a name="how-to-position-the-cursor-at-the-beginning-or-end-of-text-in-a-textbox-control"></a>방법: TextBox 컨트롤에서 텍스트 시작 또는 끝에 커서 놓기
 시작 또는 텍스트 내용의 끝에 커서를 배치 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.TextBox> 제어 합니다.  

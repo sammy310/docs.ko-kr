@@ -10,11 +10,11 @@ api_location:
 api_type:
 - Assembly
 ms.openlocfilehash: 1eddac7f9b813ea76e8347deb6f4bd7548abe504
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61706197"
 ---
 # <a name="eventstatus-enumeration"></a>EventStatus 열거형
 

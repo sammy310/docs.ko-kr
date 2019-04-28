@@ -1,17 +1,17 @@
 ---
-title: '방법: 데이터 서비스 참조 추가(WCF Data Services)'
+title: '방법: (WCF Data Services)는 데이터 서비스 참조 추가'
 ms.date: 08/24/2018
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 62c6f318-3ee1-433a-b7a3-efa234c3034c
 ms.openlocfilehash: fc1786e1c6102c702374989253cd3ce23e3f7b54
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765533"
 ---
-# <a name="how-to-add-a-data-service-reference-wcf-data-services"></a>방법: 데이터 서비스 참조 (WCF Data Services) 추가
+# <a name="how-to-add-a-data-service-reference-wcf-data-services"></a>방법: (WCF Data Services)는 데이터 서비스 참조 추가
 
 사용할 수는 **서비스 참조 추가** WCF Data Services에 대 한 참조를 추가 하려면 Visual Studio에서 대화 합니다. 이렇게 하면 Visual Studio에서 개발하는 클라이언트 응용 프로그램에서 데이터 서비스에 보다 쉽게 액세스할 수 있습니다. 이 절차를 완료하면 데이터 서비스에서 가져온 메타데이터를 기준으로 데이터 클래스가 생성됩니다. 자세한 내용은 [데이터 서비스 클라이언트 라이브러리 생성](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)합니다.
 

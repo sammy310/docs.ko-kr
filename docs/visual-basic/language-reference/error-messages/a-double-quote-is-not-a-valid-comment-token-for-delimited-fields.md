@@ -5,18 +5,18 @@ f1_keywords:
 - vbrTextFieldParser_InvalidComment
 ms.assetid: 636d4b81-00ba-4cfd-98f7-4d57036f494d
 ms.openlocfilehash: 6e55fde395cec2fcd4053e66d855750945ea1448
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751659"
 ---
 # <a name="a-double-quote-is-not-a-valid-comment-token-for-delimited-fields-where-escapequote-is-set-to-true"></a>EscapeQuote가 True로 설정되어 있으면 큰따옴표가 구분된 필드의 올바른 주석 토큰이 아닙니다.
 `TextFieldParser`에 대한 구분 기호로 따옴표가 제공되었지만 `EscapeQuotes` 가 `True`로 설정되어 있습니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   `EscapeQuotes`를 `False`로 설정합니다.  
+- `EscapeQuotes`를 `False`로 설정합니다.  
   
 ## <a name="see-also"></a>참고자료
 

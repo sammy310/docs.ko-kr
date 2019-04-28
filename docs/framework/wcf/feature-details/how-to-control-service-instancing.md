@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e0b12b34-8004-443a-a46d-83a5c00f2601
 ms.openlocfilehash: e8efbc5a3dec5f60dbefc8f6dc377d97b29b7653
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699619"
 ---
 # <a name="how-to-control-service-instancing"></a>방법: 서비스 인스턴스 만들기 제어
 서비스의 인스턴스 모드를 설정하면 <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType>(및 연결된 사용자 정의 서비스 개체)가 만들어지는 시기를 지정할 수 있습니다. 가능한 모드에 대해서는 <xref:System.ServiceModel.InstanceContextMode> 열거형을 참조하세요. 동작에 대 한 자세한 내용은 참조 하세요. [구성 및 동작을 사용 하 여 런타임 확장](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)합니다. 작업 예제를 보려면 [동작](../../../../docs/framework/wcf/samples/behaviors.md)합니다.  

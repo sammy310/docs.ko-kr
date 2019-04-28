@@ -9,20 +9,20 @@ helpviewer_keywords:
 - builds [WPF]
 ms.assetid: 5198df5e-dda0-4ddc-a275-e0a7a4693524
 ms.openlocfilehash: 0c3ddc042586df1164618d2a169df98934779b30
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756977"
 ---
 # <a name="building-and-deploying-wpf-applications"></a>WPF 응용 프로그램 빌드 및 배포
 다음과 같은 빌드 및 로컬 및 원격으로 응용 프로그램을 배포 하는 기능을 제공 하는 빌드 및 배포 모델:  
   
--   MSBuild:.NET Microsoft.Build.Tasks.Windows 네임 스페이스에 있는 시스템을 빌드합니다.  
+- MSBuild:.NET Microsoft.Build.Tasks.Windows 네임 스페이스에 있는 시스템을 빌드합니다.  
   
--   리소스: UI 리소스를 사용 합니다.  
+- 리소스: UI 리소스를 사용 합니다.  
   
--   ClickOnce 배포:.NET 게시 및 배포 시스템입니다.  
+- ClickOnce 배포:.NET 게시 및 배포 시스템입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [WPF 응용 프로그램 빌드](building-a-wpf-application-wpf.md)  

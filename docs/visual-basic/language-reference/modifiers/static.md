@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Static keyword [Visual Basic]
 ms.assetid: 19013910-4658-47b6-a22e-1744b527979e
 ms.openlocfilehash: de4f67fc5b60de48383a8ca886cff02b03830318
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781188"
 ---
 # <a name="static-visual-basic"></a>Static(Visual Basic)
 계속 존재 하 고 선언 된 프로시저가 종료 된 후 최신 값을 보유 하는 하나 이상의 선언 된 지역 변수를 지정 합니다.  
@@ -22,13 +22,13 @@ ms.locfileid: "58814177"
   
 ## <a name="rules"></a>규칙  
   
--   **선언 컨텍스트입니다.** 사용할 수 있습니다 `Static` 로컬 변수 에서만. 즉, 선언 컨텍스트는 `Static` 변수는 프로시저 또는 프로시저에서 블록 이어야 합니다 하 고 소스 파일, 네임 스페이스, 클래스, 구조체 또는 모듈 수 없습니다.  
+- **선언 컨텍스트입니다.** 사용할 수 있습니다 `Static` 로컬 변수 에서만. 즉, 선언 컨텍스트는 `Static` 변수는 프로시저 또는 프로시저에서 블록 이어야 합니다 하 고 소스 파일, 네임 스페이스, 클래스, 구조체 또는 모듈 수 없습니다.  
   
      사용할 수 없습니다 `Static` 구조 프로시저 내에서.  
   
--   데이터 형식의 `Static` 로컬 변수를 유추할 수 없습니다. 자세한 내용은 [로컬 형식 유추](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)합니다.  
+- 데이터 형식의 `Static` 로컬 변수를 유추할 수 없습니다. 자세한 내용은 [로컬 형식 유추](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)합니다.  
   
--   **결합 된 한정자입니다.** 지정할 수 없습니다 `Static` 와 함께 `ReadOnly`를 `Shadows`, 또는 `Shared` 같은 선언에 있습니다.  
+- **결합 된 한정자입니다.** 지정할 수 없습니다 `Static` 와 함께 `ReadOnly`를 `Shadows`, 또는 `Shared` 같은 선언에 있습니다.  
   
 ## <a name="behavior"></a>동작  
  정적 변수를 선언 하는 경우는 `Shared` 절차, 정적 변수 복사본 하나만 전체 응용 프로그램에서 사용할 수 있습니다. 호출을 `Shared` 클래스를 사용 하 여 프로시저 이름, 클래스의 인스턴스를 가리키는 변수 없습니다.  

@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [Windows Forms], creating
 ms.assetid: 6277bb81-90f7-4c5b-9f4b-b02bb42dd316
 ms.openlocfilehash: 21b8b08e56e8b4d48fb738b86247d3f04dc4150b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759871"
 ---
 # <a name="windows-forms-control-development-basics"></a>Windows Forms 컨트롤 개발 기본 사항
 Windows Forms 컨트롤에서 직접 또는 간접적으로 파생 된 클래스는 <xref:System.Windows.Forms.Control?displayProperty=nameWithType>합니다. 다음 목록에서는 Windows Forms 컨트롤 개발에 대 한 일반적인 시나리오를 설명 합니다.  
   
--   결합 기존 복합 컨트롤 작성을 제어 합니다.  
+- 결합 기존 복합 컨트롤 작성을 제어 합니다.  
   
      복합 컨트롤 컨트롤로 다시 사용할 수 있는 사용자 인터페이스를 캡슐화 합니다. 복합 컨트롤의 예로 텍스트 상자와 다시 설정 단추로 구성 된 컨트롤이 있습니다. 비주얼 디자이너에는 복합 컨트롤을 만들기 위한 풍부한 지원을 제공 합니다. 파생 복합 컨트롤을 작성, <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>합니다. 기본 클래스 <xref:System.Windows.Forms.UserControl> 자식 컨트롤과 자식 컨트롤을 그룹으로 작업할 수 있도록에 대 한 키보드 라우팅을 제공 합니다. 자세한 내용은 [Windows Forms 복합 컨트롤 개발](developing-a-composite-windows-forms-control.md)을 참조하세요.  
   
--   사용자 지정 하거나 해당 기능에 추가할 기존 컨트롤을 확장 합니다.  
+- 사용자 지정 하거나 해당 기능에 추가할 기존 컨트롤을 확장 합니다.  
   
      해당 색을 변경할 수 없습니다 단추가 클릭 횟수를 추적 하는 추가 속성이 있는 단추와 확장 된 컨트롤의 예입니다. 파생 하 고 재정의 하거나 속성, 메서드 및 이벤트를 추가 하 여 모든 Windows Forms 컨트롤을 사용자 지정할 수 있습니다.  
   
--   결합 되지 않거나 기존 컨트롤을 확장 하는 컨트롤을 작성 합니다.  
+- 결합 되지 않거나 기존 컨트롤을 확장 하는 컨트롤을 작성 합니다.  
   
      이 시나리오에서는 기본 클래스에서 컨트롤을 파생 <xref:System.Windows.Forms.Control>합니다. 속성, 메서드 및 기본 클래스의 이벤트를 재정의할 수 있을 뿐만 아니라 추가할 수 있습니다. 시작 하려면 참조 [방법: 간단한 Windows Forms 컨트롤 개발](how-to-develop-a-simple-windows-forms-control.md)합니다.  
   

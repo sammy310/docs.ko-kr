@@ -3,11 +3,11 @@ title: 추적 프로필
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
 ms.openlocfilehash: 2fa4d65a6f0056824b2fc9dd67b93608777fc75d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699675"
 ---
 # <a name="tracking-profiles"></a>추적 프로필
 
@@ -67,8 +67,7 @@ TrackingProfile profile = new TrackingProfile()
 
 그러나 경우를 `implementationVisibility` 추적 프로필이로 설정 된 특성이 `All`, 다음 아니라 추적 레코드가 내보내집니다 *MyActivity*, 있지만 활동에도 *Activity1* 및  *Activity2*합니다.
 
-
-  `implementationVisibility` 플래그가 적용되는 추적 레코드 형식은 다음과 같습니다.
+`implementationVisibility` 플래그가 적용되는 추적 레코드 형식은 다음과 같습니다.
 
 - ActivityStateRecord
 
