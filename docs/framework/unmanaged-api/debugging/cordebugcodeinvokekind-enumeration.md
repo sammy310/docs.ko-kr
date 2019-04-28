@@ -13,16 +13,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b3b4906f988d09f7b01aee40e8f63b589da5f33d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609206"
 ---
-# <a name="cordebugcodeinvokekind-enumeration"></a><span data-ttu-id="548a8-102">CorDebugCodeInvokeKind 열거형</span><span class="sxs-lookup"><span data-stu-id="548a8-102">CorDebugCodeInvokeKind Enumeration</span></span>
-<span data-ttu-id="548a8-103">내보낸 함수가 관리 코드를 호출하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="548a8-103">Describes how an exported function invokes managed code.</span></span>  
+# <a name="cordebugcodeinvokekind-enumeration"></a><span data-ttu-id="1df1c-102">CorDebugCodeInvokeKind 열거형</span><span class="sxs-lookup"><span data-stu-id="1df1c-102">CorDebugCodeInvokeKind Enumeration</span></span>
+<span data-ttu-id="1df1c-103">내보낸 함수가 관리 코드를 호출하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="1df1c-103">Describes how an exported function invokes managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="548a8-104">구문</span><span class="sxs-lookup"><span data-stu-id="548a8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1df1c-104">구문</span><span class="sxs-lookup"><span data-stu-id="1df1c-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugCodeInvokeKind  
@@ -33,30 +33,30 @@ typedef enum CorDebugCodeInvokeKind
 } CorDebugCodeInvokeKind;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="548a8-105">멤버</span><span class="sxs-lookup"><span data-stu-id="548a8-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="1df1c-105">멤버</span><span class="sxs-lookup"><span data-stu-id="1df1c-105">Members</span></span>  
   
-|<span data-ttu-id="548a8-106">멤버</span><span class="sxs-lookup"><span data-stu-id="548a8-106">Member</span></span>|<span data-ttu-id="548a8-107">설명</span><span class="sxs-lookup"><span data-stu-id="548a8-107">Description</span></span>|  
+|<span data-ttu-id="1df1c-106">멤버</span><span class="sxs-lookup"><span data-stu-id="1df1c-106">Member</span></span>|<span data-ttu-id="1df1c-107">설명</span><span class="sxs-lookup"><span data-stu-id="1df1c-107">Description</span></span>|  
 |------------|-----------------|  
-|`CODE_INVOKE_KIND_NONE`|<span data-ttu-id="548a8-108">이 메서드가 관리 코드를 호출하는 경우 나중에 명시적 이벤트 또는 중단점을 사용하여 해당 코드를 찾아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="548a8-108">If any managed code is invoked by this method, it will have to be located by explicit events or breakpoints later.</span></span><br /><br /> <span data-ttu-id="548a8-109">-- 또는 --</span><span class="sxs-lookup"><span data-stu-id="548a8-109">--or--</span></span><br /><br /> <span data-ttu-id="548a8-110">이 메서드를 쉽게 중지할 수 있는 방법이 없어 해당 메서드가 호출하는 일부 관리 코드가 누락될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="548a8-110">We may just miss some of the managed code this method calls because there is no easy way to stop on it.</span></span><br /><br /> <span data-ttu-id="548a8-111">-- 또는 --</span><span class="sxs-lookup"><span data-stu-id="548a8-111">--or--</span></span><br /><br /> <span data-ttu-id="548a8-112">메서드가 관리 코드를 호출하지 않을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="548a8-112">The method may never invoke managed code.</span></span>|  
-|`CODE_INVOKE_KIND_RETURN`|<span data-ttu-id="548a8-113">이 메서드는 반환 명령을 통해 관리 코드를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="548a8-113">This method will invoke managed code via a return instruction.</span></span> <span data-ttu-id="548a8-114">단계별 실행 시 다음 관리 코드에 도달하게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="548a8-114">Stepping out should arrive at the next managed code.</span></span>|  
-|`CODE_INVOKE_KIND_TAILCALL`|<span data-ttu-id="548a8-115">이 메서드는 마무리 호출을 통해 관리 코드를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="548a8-115">This method will invoke managed code via a tail-call.</span></span> <span data-ttu-id="548a8-116">호출 명령을 한 단계씩/프로시저 단위로 실행하면 관리 코드에 도달하게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="548a8-116">Single-stepping and stepping over any call instructions should arrive at managed code.</span></span>|  
+|`CODE_INVOKE_KIND_NONE`|<span data-ttu-id="1df1c-108">이 메서드가 관리 코드를 호출하는 경우 나중에 명시적 이벤트 또는 중단점을 사용하여 해당 코드를 찾아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1df1c-108">If any managed code is invoked by this method, it will have to be located by explicit events or breakpoints later.</span></span><br /><br /> <span data-ttu-id="1df1c-109">-- 또는 --</span><span class="sxs-lookup"><span data-stu-id="1df1c-109">--or--</span></span><br /><br /> <span data-ttu-id="1df1c-110">이 메서드를 쉽게 중지할 수 있는 방법이 없어 해당 메서드가 호출하는 일부 관리 코드가 누락될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1df1c-110">We may just miss some of the managed code this method calls because there is no easy way to stop on it.</span></span><br /><br /> <span data-ttu-id="1df1c-111">-- 또는 --</span><span class="sxs-lookup"><span data-stu-id="1df1c-111">--or--</span></span><br /><br /> <span data-ttu-id="1df1c-112">메서드가 관리 코드를 호출하지 않을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1df1c-112">The method may never invoke managed code.</span></span>|  
+|`CODE_INVOKE_KIND_RETURN`|<span data-ttu-id="1df1c-113">이 메서드는 반환 명령을 통해 관리 코드를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="1df1c-113">This method will invoke managed code via a return instruction.</span></span> <span data-ttu-id="1df1c-114">단계별 실행 시 다음 관리 코드에 도달하게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="1df1c-114">Stepping out should arrive at the next managed code.</span></span>|  
+|`CODE_INVOKE_KIND_TAILCALL`|<span data-ttu-id="1df1c-115">이 메서드는 마무리 호출을 통해 관리 코드를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="1df1c-115">This method will invoke managed code via a tail-call.</span></span> <span data-ttu-id="1df1c-116">호출 명령을 한 단계씩/프로시저 단위로 실행하면 관리 코드에 도달하게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="1df1c-116">Single-stepping and stepping over any call instructions should arrive at managed code.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="548a8-117">설명</span><span class="sxs-lookup"><span data-stu-id="548a8-117">Remarks</span></span>  
- <span data-ttu-id="548a8-118">이 열거형은에서 사용 된 [ICorDebugProcess6::GetExportStepInfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md) 관리 되는 코드를 한 단계씩 실행 하는 방법에 대 한 정보를 제공 하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="548a8-118">This enumeration is used by the [ICorDebugProcess6::GetExportStepInfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md) method to provide information about stepping through managed code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1df1c-117">설명</span><span class="sxs-lookup"><span data-stu-id="1df1c-117">Remarks</span></span>  
+ <span data-ttu-id="1df1c-118">이 열거형은에서 사용 된 [ICorDebugProcess6::GetExportStepInfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md) 관리 되는 코드를 한 단계씩 실행 하는 방법에 대 한 정보를 제공 하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="1df1c-118">This enumeration is used by the [ICorDebugProcess6::GetExportStepInfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md) method to provide information about stepping through managed code.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="548a8-119">이 열거형은 .NET 네이티브 디버깅 시나리오에서만 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="548a8-119">This enumeration is intended for use in .NET Native debugging scenarios only.</span></span>  
+>  <span data-ttu-id="1df1c-119">이 열거형은 .NET 네이티브 디버깅 시나리오에서만 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="1df1c-119">This enumeration is intended for use in .NET Native debugging scenarios only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="548a8-120">요구 사항</span><span class="sxs-lookup"><span data-stu-id="548a8-120">Requirements</span></span>  
- <span data-ttu-id="548a8-121">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="548a8-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1df1c-120">요구 사항</span><span class="sxs-lookup"><span data-stu-id="1df1c-120">Requirements</span></span>  
+ <span data-ttu-id="1df1c-121">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="1df1c-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="548a8-122">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="548a8-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="1df1c-122">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1df1c-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="548a8-123">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="548a8-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1df1c-123">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1df1c-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="548a8-124">**.NET Framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="548a8-124">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="1df1c-124">**.NET Framework 버전:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1df1c-124">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="548a8-125">참고자료</span><span class="sxs-lookup"><span data-stu-id="548a8-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1df1c-125">참고자료</span><span class="sxs-lookup"><span data-stu-id="1df1c-125">See also</span></span>
 
-- [<span data-ttu-id="548a8-126">디버깅 열거형</span><span class="sxs-lookup"><span data-stu-id="548a8-126">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
-- [<span data-ttu-id="548a8-127">디버깅</span><span class="sxs-lookup"><span data-stu-id="548a8-127">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="1df1c-126">디버깅 열거형</span><span class="sxs-lookup"><span data-stu-id="1df1c-126">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="1df1c-127">디버깅</span><span class="sxs-lookup"><span data-stu-id="1df1c-127">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

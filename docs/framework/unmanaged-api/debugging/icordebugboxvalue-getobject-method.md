@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c20eec52b0e4616af1b864bb58b6cbff44a720eb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645398"
 ---
-# <a name="icordebugboxvaluegetobject-method"></a><span data-ttu-id="b809b-102">ICorDebugBoxValue::GetObject 메서드</span><span class="sxs-lookup"><span data-stu-id="b809b-102">ICorDebugBoxValue::GetObject Method</span></span>
-<span data-ttu-id="b809b-103">Boxed 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="b809b-103">Gets the boxed value.</span></span>  
+# <a name="icordebugboxvaluegetobject-method"></a><span data-ttu-id="55ef0-102">ICorDebugBoxValue::GetObject 메서드</span><span class="sxs-lookup"><span data-stu-id="55ef0-102">ICorDebugBoxValue::GetObject Method</span></span>
+<span data-ttu-id="55ef0-103">Boxed 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="55ef0-103">Gets the boxed value.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b809b-104">구문</span><span class="sxs-lookup"><span data-stu-id="b809b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="55ef0-104">구문</span><span class="sxs-lookup"><span data-stu-id="55ef0-104">Syntax</span></span>  
   
 ```  
 HRESULT GetObject (  
@@ -35,15 +35,15 @@ HRESULT GetObject (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b809b-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="b809b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="55ef0-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="55ef0-105">Parameters</span></span>  
  `ppObject`  
- <span data-ttu-id="b809b-106">[out] Boxed 값을 나타내는 ICorDebugObjectValue 개체의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="b809b-106">[out] A pointer to the address of an ICorDebugObjectValue object that represents the boxed value.</span></span>  
+ <span data-ttu-id="55ef0-106">[out] Boxed 값을 나타내는 ICorDebugObjectValue 개체의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="55ef0-106">[out] A pointer to the address of an ICorDebugObjectValue object that represents the boxed value.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b809b-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b809b-107">Requirements</span></span>  
- <span data-ttu-id="b809b-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="b809b-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="55ef0-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="55ef0-107">Requirements</span></span>  
+ <span data-ttu-id="55ef0-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="55ef0-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b809b-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b809b-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="55ef0-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="55ef0-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b809b-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b809b-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="55ef0-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="55ef0-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b809b-111">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b809b-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="55ef0-111">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="55ef0-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

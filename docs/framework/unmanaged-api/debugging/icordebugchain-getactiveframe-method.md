@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c14b48a29993a65a0a0ab9fcb63bcb1e0d882042
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645372"
 ---
-# <a name="icordebugchaingetactiveframe-method"></a><span data-ttu-id="b0004-102">ICorDebugChain::GetActiveFrame 메서드</span><span class="sxs-lookup"><span data-stu-id="b0004-102">ICorDebugChain::GetActiveFrame Method</span></span>
-<span data-ttu-id="b0004-103">활성 가져옵니다 (즉, 가장 최근) 체인에서 프레임입니다.</span><span class="sxs-lookup"><span data-stu-id="b0004-103">Gets the active (that is, most recent) frame on the chain.</span></span>  
+# <a name="icordebugchaingetactiveframe-method"></a><span data-ttu-id="260ce-102">ICorDebugChain::GetActiveFrame 메서드</span><span class="sxs-lookup"><span data-stu-id="260ce-102">ICorDebugChain::GetActiveFrame Method</span></span>
+<span data-ttu-id="260ce-103">활성 가져옵니다 (즉, 가장 최근) 체인에서 프레임입니다.</span><span class="sxs-lookup"><span data-stu-id="260ce-103">Gets the active (that is, most recent) frame on the chain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b0004-104">구문</span><span class="sxs-lookup"><span data-stu-id="b0004-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="260ce-104">구문</span><span class="sxs-lookup"><span data-stu-id="260ce-104">Syntax</span></span>  
   
 ```  
 HRESULT GetActiveFrame (  
@@ -35,20 +35,20 @@ HRESULT GetActiveFrame (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b0004-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="b0004-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="260ce-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="260ce-105">Parameters</span></span>  
  `ppFrame`  
- <span data-ttu-id="b0004-106">[out] 활성 나타내는 ICorDebugFrame 개체의 주소에 대 한 포인터 (즉, 가장 최근) 체인에서 프레임입니다.</span><span class="sxs-lookup"><span data-stu-id="b0004-106">[out] A pointer to the address of an ICorDebugFrame object that represents the active (that is, most recent) frame on the chain.</span></span>  
+ <span data-ttu-id="260ce-106">[out] 활성 나타내는 ICorDebugFrame 개체의 주소에 대 한 포인터 (즉, 가장 최근) 체인에서 프레임입니다.</span><span class="sxs-lookup"><span data-stu-id="260ce-106">[out] A pointer to the address of an ICorDebugFrame object that represents the active (that is, most recent) frame on the chain.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b0004-107">설명</span><span class="sxs-lookup"><span data-stu-id="b0004-107">Remarks</span></span>  
- <span data-ttu-id="b0004-108">관리 되는 스택 프레임이 없기를 사용할 수 있으면 `ppFrame` 설정 되어 null로 합니다.</span><span class="sxs-lookup"><span data-stu-id="b0004-108">If no managed stack frame is available, `ppFrame` is set to null.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="260ce-107">설명</span><span class="sxs-lookup"><span data-stu-id="260ce-107">Remarks</span></span>  
+ <span data-ttu-id="260ce-108">관리 되는 스택 프레임이 없기를 사용할 수 있으면 `ppFrame` 설정 되어 null로 합니다.</span><span class="sxs-lookup"><span data-stu-id="260ce-108">If no managed stack frame is available, `ppFrame` is set to null.</span></span>  
   
- <span data-ttu-id="b0004-109">활성 프레임을 사용할 수 없는 경우 호출이 성공 한다는 및 `ppFrame` null이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b0004-109">If the active frame is not available, the call will succeed and `ppFrame` will be null.</span></span> <span data-ttu-id="b0004-110">활성 프레임 CHAIN_CLASS_INIT 인해 시작 하는 일부 체인 및 체인 CHAIN_ENTER_UNMANAGED,으로 인해 시작에 사용할 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b0004-110">Active frames will not be available for chains initiated due to CHAIN_ENTER_UNMANAGED, and for some chains initiated due to CHAIN_CLASS_INIT.</span></span> <span data-ttu-id="b0004-111">CorDebugChainReason 열거형을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="b0004-111">See the CorDebugChainReason enumeration.</span></span>  
+ <span data-ttu-id="260ce-109">활성 프레임을 사용할 수 없는 경우 호출이 성공 한다는 및 `ppFrame` null이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="260ce-109">If the active frame is not available, the call will succeed and `ppFrame` will be null.</span></span> <span data-ttu-id="260ce-110">활성 프레임 CHAIN_CLASS_INIT 인해 시작 하는 일부 체인 및 체인 CHAIN_ENTER_UNMANAGED,으로 인해 시작에 사용할 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="260ce-110">Active frames will not be available for chains initiated due to CHAIN_ENTER_UNMANAGED, and for some chains initiated due to CHAIN_CLASS_INIT.</span></span> <span data-ttu-id="260ce-111">CorDebugChainReason 열거형을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="260ce-111">See the CorDebugChainReason enumeration.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b0004-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b0004-112">Requirements</span></span>  
- <span data-ttu-id="b0004-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="b0004-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="260ce-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="260ce-112">Requirements</span></span>  
+ <span data-ttu-id="260ce-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="260ce-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b0004-114">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b0004-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="260ce-114">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="260ce-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b0004-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b0004-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="260ce-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="260ce-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b0004-116">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b0004-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="260ce-116">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="260ce-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

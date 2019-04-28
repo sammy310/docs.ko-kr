@@ -3,26 +3,26 @@ title: 활동 확장 사용
 ms.date: 03/30/2017
 ms.assetid: 500eb96a-c009-4247-b6b5-b36faffdf715
 ms.openlocfilehash: e524f7e7127eb215be85b0c317474eee70830c2b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669513"
 ---
-# <a name="using-activity-extensions"></a><span data-ttu-id="c3287-102">활동 확장 사용</span><span class="sxs-lookup"><span data-stu-id="c3287-102">Using Activity Extensions</span></span>
-<span data-ttu-id="c3287-103">활동은 호스트에서 워크플로에 명시적으로 모델링되지 않은 추가 기능을 제공할 수 있도록 하는 워크플로 응용 프로그램 확장과 상호 작용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c3287-103">Activities can interact with workflow application extensions that allow the host to provide additional functionality that is not explicitly modeled in the workflow.</span></span>  <span data-ttu-id="c3287-104">이 항목에서는 활동이 실행되는 횟수를 계산하기 위해 확장을 만들고 사용하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="c3287-104">This topic describes how to create and use an extension to count the number of times the activity executes.</span></span>
+# <a name="using-activity-extensions"></a><span data-ttu-id="c3cf4-102">활동 확장 사용</span><span class="sxs-lookup"><span data-stu-id="c3cf4-102">Using Activity Extensions</span></span>
+<span data-ttu-id="c3cf4-103">활동은 호스트에서 워크플로에 명시적으로 모델링되지 않은 추가 기능을 제공할 수 있도록 하는 워크플로 응용 프로그램 확장과 상호 작용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c3cf4-103">Activities can interact with workflow application extensions that allow the host to provide additional functionality that is not explicitly modeled in the workflow.</span></span>  <span data-ttu-id="c3cf4-104">이 항목에서는 활동이 실행되는 횟수를 계산하기 위해 확장을 만들고 사용하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="c3cf4-104">This topic describes how to create and use an extension to count the number of times the activity executes.</span></span>
 
-### <a name="to-use-an-activity-extension-to-count-executions"></a><span data-ttu-id="c3287-105">활동 확장을 사용하여 실행 횟수를 계산하려면</span><span class="sxs-lookup"><span data-stu-id="c3287-105">To use an activity extension to count executions</span></span>
+### <a name="to-use-an-activity-extension-to-count-executions"></a><span data-ttu-id="c3cf4-105">활동 확장을 사용하여 실행 횟수를 계산하려면</span><span class="sxs-lookup"><span data-stu-id="c3cf4-105">To use an activity extension to count executions</span></span>
 
-1. <span data-ttu-id="c3287-106">Visual Studio 2010을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="c3287-106">Open Visual Studio 2010.</span></span> <span data-ttu-id="c3287-107">선택 **새**하십시오 **프로젝트**합니다.</span><span class="sxs-lookup"><span data-stu-id="c3287-107">Select **New**, **Project**.</span></span> <span data-ttu-id="c3287-108">아래는 **Visual C#** 노드를 선택 **워크플로**합니다.</span><span class="sxs-lookup"><span data-stu-id="c3287-108">Under the **Visual C#** node, select **Workflow**.</span></span>  <span data-ttu-id="c3287-109">선택 **워크플로 콘솔 응용 프로그램** 템플릿 목록에서.</span><span class="sxs-lookup"><span data-stu-id="c3287-109">Select **Workflow Console Application** from the list of templates.</span></span> <span data-ttu-id="c3287-110">프로젝트 이름을 `Extensions`로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="c3287-110">Name the project `Extensions`.</span></span> <span data-ttu-id="c3287-111">**확인**을 클릭해 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="c3287-111">Click **OK** to create the project.</span></span>
+1. <span data-ttu-id="c3cf4-106">Visual Studio 2010을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="c3cf4-106">Open Visual Studio 2010.</span></span> <span data-ttu-id="c3cf4-107">선택 **새**하십시오 **프로젝트**합니다.</span><span class="sxs-lookup"><span data-stu-id="c3cf4-107">Select **New**, **Project**.</span></span> <span data-ttu-id="c3cf4-108">아래는 **Visual C#** 노드를 선택 **워크플로**합니다.</span><span class="sxs-lookup"><span data-stu-id="c3cf4-108">Under the **Visual C#** node, select **Workflow**.</span></span>  <span data-ttu-id="c3cf4-109">선택 **워크플로 콘솔 응용 프로그램** 템플릿 목록에서.</span><span class="sxs-lookup"><span data-stu-id="c3cf4-109">Select **Workflow Console Application** from the list of templates.</span></span> <span data-ttu-id="c3cf4-110">프로젝트 이름을 `Extensions`로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="c3cf4-110">Name the project `Extensions`.</span></span> <span data-ttu-id="c3cf4-111">**확인**을 클릭해 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="c3cf4-111">Click **OK** to create the project.</span></span>
 
-2. <span data-ttu-id="c3287-112">추가 된 `using` 문을 Program.cs 파일에는 **System.Collections.Generic** 네임 스페이스.</span><span class="sxs-lookup"><span data-stu-id="c3287-112">Add a `using` statement in the Program.cs file for the **System.Collections.Generic** namespace.</span></span>
+2. <span data-ttu-id="c3cf4-112">추가 된 `using` 문을 Program.cs 파일에는 **System.Collections.Generic** 네임 스페이스.</span><span class="sxs-lookup"><span data-stu-id="c3cf4-112">Add a `using` statement in the Program.cs file for the **System.Collections.Generic** namespace.</span></span>
 
     ```
     using System.Collections.Generic;
     ```
 
-3. <span data-ttu-id="c3287-113">Program.cs 파일에서 라는 새 클래스를 만듭니다 **ExecutionCountExtension**합니다.</span><span class="sxs-lookup"><span data-stu-id="c3287-113">In the Program.cs file, create a new class named **ExecutionCountExtension**.</span></span> <span data-ttu-id="c3287-114">다음 코드에서는 인스턴스 Id를 추적 하는 워크플로 확장 경우 해당 **등록** 메서드가 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c3287-114">The following code creates a workflow extension that tracks instance IDs when its **Register** method is called.</span></span>
+3. <span data-ttu-id="c3cf4-113">Program.cs 파일에서 라는 새 클래스를 만듭니다 **ExecutionCountExtension**합니다.</span><span class="sxs-lookup"><span data-stu-id="c3cf4-113">In the Program.cs file, create a new class named **ExecutionCountExtension**.</span></span> <span data-ttu-id="c3cf4-114">다음 코드에서는 인스턴스 Id를 추적 하는 워크플로 확장 경우 해당 **등록** 메서드가 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c3cf4-114">The following code creates a workflow extension that tracks instance IDs when its **Register** method is called.</span></span>
 
     ```
     // This extension collects a list of workflow Ids
@@ -56,7 +56,7 @@ ms.locfileid: "59768964"
     }
     ```
 
-4. <span data-ttu-id="c3287-115">사용 하는 작업을 만들 합니다 **ExecutionCountExtension**합니다.</span><span class="sxs-lookup"><span data-stu-id="c3287-115">Create an activity that consumes the **ExecutionCountExtension**.</span></span> <span data-ttu-id="c3287-116">다음 코드를 검색 하는 동작을 정의 합니다 **ExecutionCountExtension** 개체는 런타임 및 호출에서 해당 **등록** 메서드 작업을 실행할 때.</span><span class="sxs-lookup"><span data-stu-id="c3287-116">The following code defines an activity that retrieves the **ExecutionCountExtension** object from the runtime and calls its **Register** method when the activity executes.</span></span>
+4. <span data-ttu-id="c3cf4-115">사용 하는 작업을 만들 합니다 **ExecutionCountExtension**합니다.</span><span class="sxs-lookup"><span data-stu-id="c3cf4-115">Create an activity that consumes the **ExecutionCountExtension**.</span></span> <span data-ttu-id="c3cf4-116">다음 코드를 검색 하는 동작을 정의 합니다 **ExecutionCountExtension** 개체는 런타임 및 호출에서 해당 **등록** 메서드 작업을 실행할 때.</span><span class="sxs-lookup"><span data-stu-id="c3cf4-116">The following code defines an activity that retrieves the **ExecutionCountExtension** object from the runtime and calls its **Register** method when the activity executes.</span></span>
 
     ```
     // Activity that consumes an extension provided by the host. If the extension is available
@@ -75,7 +75,7 @@ ms.locfileid: "59768964"
     }
     ```
 
-5. <span data-ttu-id="c3287-117">활동을 구현 합니다 **Main** program.cs 파일의 메서드.</span><span class="sxs-lookup"><span data-stu-id="c3287-117">Implement the activity in the **Main** method of the program.cs file.</span></span> <span data-ttu-id="c3287-118">다음 코드에는 두 가지 워크플로를 생성하고 각 워크플로를 몇 번 실행하며 확장에 포함된 결과 데이터를 표시하는 메서드가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c3287-118">The following code contains methods to generate two different workflows, execute each workflow several times, and display the resulting data that is contained in the extension.</span></span>
+5. <span data-ttu-id="c3cf4-117">활동을 구현 합니다 **Main** program.cs 파일의 메서드.</span><span class="sxs-lookup"><span data-stu-id="c3cf4-117">Implement the activity in the **Main** method of the program.cs file.</span></span> <span data-ttu-id="c3cf4-118">다음 코드에는 두 가지 워크플로를 생성하고 각 워크플로를 몇 번 실행하며 확장에 포함된 결과 데이터를 표시하는 메서드가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c3cf4-118">The following code contains methods to generate two different workflows, execute each workflow several times, and display the resulting data that is contained in the extension.</span></span>
 
     ```
     class Program

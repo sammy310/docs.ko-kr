@@ -3,20 +3,20 @@ title: System.ServiceModel.Activation.ServicePause
 ms.date: 03/30/2017
 ms.assetid: 3aeef78f-835e-4a72-b759-bf3e25dd8412
 ms.openlocfilehash: a058676adffe5efa5cd6b12243b94dcdbaee3138
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59153012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666888"
 ---
-# <a name="systemservicemodelactivationservicepause"></a><span data-ttu-id="acd55-102">System.ServiceModel.Activation.ServicePause</span><span class="sxs-lookup"><span data-stu-id="acd55-102">System.ServiceModel.Activation.ServicePause</span></span>
-<span data-ttu-id="acd55-103">System.ServiceModel.Activation.ServicePause</span><span class="sxs-lookup"><span data-stu-id="acd55-103">System.ServiceModel.Activation.ServicePause</span></span>  
+# <a name="systemservicemodelactivationservicepause"></a><span data-ttu-id="dd7f7-102">System.ServiceModel.Activation.ServicePause</span><span class="sxs-lookup"><span data-stu-id="dd7f7-102">System.ServiceModel.Activation.ServicePause</span></span>
+<span data-ttu-id="dd7f7-103">System.ServiceModel.Activation.ServicePause</span><span class="sxs-lookup"><span data-stu-id="dd7f7-103">System.ServiceModel.Activation.ServicePause</span></span>  
   
-## <a name="description"></a><span data-ttu-id="acd55-104">설명</span><span class="sxs-lookup"><span data-stu-id="acd55-104">Description</span></span>  
- <span data-ttu-id="acd55-105">서비스를 일시 중지하라는 요청이 수신되었습니다.</span><span class="sxs-lookup"><span data-stu-id="acd55-105">A request to pause the service was received.</span></span>  
+## <a name="description"></a><span data-ttu-id="dd7f7-104">설명</span><span class="sxs-lookup"><span data-stu-id="dd7f7-104">Description</span></span>  
+ <span data-ttu-id="dd7f7-105">서비스를 일시 중지하라는 요청이 수신되었습니다.</span><span class="sxs-lookup"><span data-stu-id="dd7f7-105">A request to pause the service was received.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="acd55-106">참고자료</span><span class="sxs-lookup"><span data-stu-id="acd55-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dd7f7-106">참고자료</span><span class="sxs-lookup"><span data-stu-id="dd7f7-106">See also</span></span>
 
-- [<span data-ttu-id="acd55-107">추적</span><span class="sxs-lookup"><span data-stu-id="acd55-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="acd55-108">추적을 사용하여 애플리케이션 문제 해결</span><span class="sxs-lookup"><span data-stu-id="acd55-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="acd55-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="acd55-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="dd7f7-107">추적</span><span class="sxs-lookup"><span data-stu-id="dd7f7-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="dd7f7-108">추적을 사용하여 애플리케이션 문제 해결</span><span class="sxs-lookup"><span data-stu-id="dd7f7-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="dd7f7-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="dd7f7-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

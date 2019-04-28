@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8875fb24512ddfea57d5f9249e58de3c12b8c507
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796854"
 ---
-# <a name="ihostiocompletionmanagergetmaxthreads-method"></a><span data-ttu-id="7a9b2-102">IHostIoCompletionManager::GetMaxThreads 메서드</span><span class="sxs-lookup"><span data-stu-id="7a9b2-102">IHostIoCompletionManager::GetMaxThreads Method</span></span>
-<span data-ttu-id="7a9b2-103">I/O 요청을 처리 하는 호스트를 할당할 수 있는 스레드의 최대 수를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="7a9b2-103">Gets the maximum number of threads that the host can allot to service I/O requests.</span></span>  
+# <a name="ihostiocompletionmanagergetmaxthreads-method"></a><span data-ttu-id="9e3e3-102">IHostIoCompletionManager::GetMaxThreads 메서드</span><span class="sxs-lookup"><span data-stu-id="9e3e3-102">IHostIoCompletionManager::GetMaxThreads Method</span></span>
+<span data-ttu-id="9e3e3-103">I/O 요청을 처리 하는 호스트를 할당할 수 있는 스레드의 최대 수를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="9e3e3-103">Gets the maximum number of threads that the host can allot to service I/O requests.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7a9b2-104">구문</span><span class="sxs-lookup"><span data-stu-id="7a9b2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9e3e3-104">구문</span><span class="sxs-lookup"><span data-stu-id="9e3e3-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMaxThreads (  
@@ -35,35 +35,35 @@ HRESULT GetMaxThreads (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7a9b2-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="7a9b2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9e3e3-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="9e3e3-105">Parameters</span></span>  
  `pdwMaxIoCompletionThreads`  
- <span data-ttu-id="7a9b2-106">[out] 호스트 서비스 I/O 요청에 할당할 수 있는 스레드 풀의 스레드의 최대 수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="7a9b2-106">[out] A pointer to the maximum number of threads in the thread pool that the host can allot to service I/O requests.</span></span>  
+ <span data-ttu-id="9e3e3-106">[out] 호스트 서비스 I/O 요청에 할당할 수 있는 스레드 풀의 스레드의 최대 수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="9e3e3-106">[out] A pointer to the maximum number of threads in the thread pool that the host can allot to service I/O requests.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7a9b2-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="7a9b2-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9e3e3-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="9e3e3-107">Return Value</span></span>  
   
-|<span data-ttu-id="7a9b2-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="7a9b2-108">HRESULT</span></span>|<span data-ttu-id="7a9b2-109">설명</span><span class="sxs-lookup"><span data-stu-id="7a9b2-109">Description</span></span>|  
+|<span data-ttu-id="9e3e3-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="9e3e3-108">HRESULT</span></span>|<span data-ttu-id="9e3e3-109">설명</span><span class="sxs-lookup"><span data-stu-id="9e3e3-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="7a9b2-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="7a9b2-110">S_OK</span></span>|<span data-ttu-id="7a9b2-111">`GetMaxThreads` 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="7a9b2-111">`GetMaxThreads` returned successfully.</span></span>|  
-|<span data-ttu-id="7a9b2-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="7a9b2-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="7a9b2-113">프로세스에는 CLR (공용 언어 런타임)에 로드 되지 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="7a9b2-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="7a9b2-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="7a9b2-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="7a9b2-115">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="7a9b2-115">The call timed out.</span></span>|  
-|<span data-ttu-id="7a9b2-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="7a9b2-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="7a9b2-117">호출자가 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="7a9b2-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="7a9b2-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="7a9b2-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="7a9b2-119">이벤트가 차단 된 스레드가 취소 된 또는 파이버를 대기 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7a9b2-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="7a9b2-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="7a9b2-120">E_FAIL</span></span>|<span data-ttu-id="7a9b2-121">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="7a9b2-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="7a9b2-122">메서드 E_FAIL을 반환 하는 경우 CLR은 프로세스 내에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="7a9b2-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="7a9b2-123">메서드를 호스트 하는 데 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="7a9b2-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="7a9b2-124">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="7a9b2-124">E_NOTIMPL</span></span>|<span data-ttu-id="7a9b2-125">호스트의 구현을 제공 하지 않습니다 `GetMaxThreads`합니다.</span><span class="sxs-lookup"><span data-stu-id="7a9b2-125">The host does not provide an implementation of `GetMaxThreads`.</span></span>|  
+|<span data-ttu-id="9e3e3-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="9e3e3-110">S_OK</span></span>|<span data-ttu-id="9e3e3-111">`GetMaxThreads` 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="9e3e3-111">`GetMaxThreads` returned successfully.</span></span>|  
+|<span data-ttu-id="9e3e3-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="9e3e3-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="9e3e3-113">프로세스에는 CLR (공용 언어 런타임)에 로드 되지 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="9e3e3-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="9e3e3-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="9e3e3-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="9e3e3-115">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="9e3e3-115">The call timed out.</span></span>|  
+|<span data-ttu-id="9e3e3-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="9e3e3-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="9e3e3-117">호출자가 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="9e3e3-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="9e3e3-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="9e3e3-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="9e3e3-119">이벤트가 차단 된 스레드가 취소 된 또는 파이버를 대기 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9e3e3-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="9e3e3-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="9e3e3-120">E_FAIL</span></span>|<span data-ttu-id="9e3e3-121">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="9e3e3-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="9e3e3-122">메서드 E_FAIL을 반환 하는 경우 CLR은 프로세스 내에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="9e3e3-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="9e3e3-123">메서드를 호스트 하는 데 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="9e3e3-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="9e3e3-124">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="9e3e3-124">E_NOTIMPL</span></span>|<span data-ttu-id="9e3e3-125">호스트의 구현을 제공 하지 않습니다 `GetMaxThreads`합니다.</span><span class="sxs-lookup"><span data-stu-id="9e3e3-125">The host does not provide an implementation of `GetMaxThreads`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="7a9b2-126">설명</span><span class="sxs-lookup"><span data-stu-id="7a9b2-126">Remarks</span></span>  
- <span data-ttu-id="7a9b2-127">호스트 구현, 성능, 확장성 등의 이유로 I/O 요청을 처리 하는 데 할당 될 스레드의 수에 대 한 독점적인 제어권이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="7a9b2-127">A host might want exclusive control over the number of threads that can be allotted to process I/O requests, for reasons such as implementation, performance, or scalability.</span></span> <span data-ttu-id="7a9b2-128">이러한 이유로 호스트는 구현할 필요가 없습니다 `GetMaxThreads`합니다.</span><span class="sxs-lookup"><span data-stu-id="7a9b2-128">For this reason, the host is not required to implement `GetMaxThreads`.</span></span> <span data-ttu-id="7a9b2-129">이 경우 호스트는이 메서드의 E_NOTIMPL을 반환 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="7a9b2-129">In this case, the host should return E_NOTIMPL from this method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9e3e3-126">설명</span><span class="sxs-lookup"><span data-stu-id="9e3e3-126">Remarks</span></span>  
+ <span data-ttu-id="9e3e3-127">호스트 구현, 성능, 확장성 등의 이유로 I/O 요청을 처리 하는 데 할당 될 스레드의 수에 대 한 독점적인 제어권이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="9e3e3-127">A host might want exclusive control over the number of threads that can be allotted to process I/O requests, for reasons such as implementation, performance, or scalability.</span></span> <span data-ttu-id="9e3e3-128">이러한 이유로 호스트는 구현할 필요가 없습니다 `GetMaxThreads`합니다.</span><span class="sxs-lookup"><span data-stu-id="9e3e3-128">For this reason, the host is not required to implement `GetMaxThreads`.</span></span> <span data-ttu-id="9e3e3-129">이 경우 호스트는이 메서드의 E_NOTIMPL을 반환 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9e3e3-129">In this case, the host should return E_NOTIMPL from this method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7a9b2-130">요구 사항</span><span class="sxs-lookup"><span data-stu-id="7a9b2-130">Requirements</span></span>  
- <span data-ttu-id="7a9b2-131">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="7a9b2-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9e3e3-130">요구 사항</span><span class="sxs-lookup"><span data-stu-id="9e3e3-130">Requirements</span></span>  
+ <span data-ttu-id="9e3e3-131">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="9e3e3-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7a9b2-132">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="7a9b2-132">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="9e3e3-132">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="9e3e3-132">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="7a9b2-133">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="7a9b2-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="9e3e3-133">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="9e3e3-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="7a9b2-134">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7a9b2-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="9e3e3-134">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9e3e3-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7a9b2-135">참고자료</span><span class="sxs-lookup"><span data-stu-id="7a9b2-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9e3e3-135">참고자료</span><span class="sxs-lookup"><span data-stu-id="9e3e3-135">See also</span></span>
 
-- [<span data-ttu-id="7a9b2-136">ICLRIoCompletionManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="7a9b2-136">ICLRIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)
-- [<span data-ttu-id="7a9b2-137">IHostIoCompletionManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="7a9b2-137">IHostIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)
+- [<span data-ttu-id="9e3e3-136">ICLRIoCompletionManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="9e3e3-136">ICLRIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)
+- [<span data-ttu-id="9e3e3-137">IHostIoCompletionManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="9e3e3-137">IHostIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)

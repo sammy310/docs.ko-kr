@@ -10,45 +10,45 @@ helpviewer_keywords:
 - rootnamespace compiler option [Visual Basic]
 ms.assetid: e9245edf-6bef-420d-a7c7-324117752783
 ms.openlocfilehash: ff4b1729f1b9fb1d698b4b5b1e3711ce3d27b4db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61639037"
 ---
-# <a name="-rootnamespace"></a><span data-ttu-id="61b58-102">-rootnamespace</span><span class="sxs-lookup"><span data-stu-id="61b58-102">-rootnamespace</span></span>
-<span data-ttu-id="61b58-103">모든 형식 선언에 대한 네임스페이스를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="61b58-103">Specifies a namespace for all type declarations.</span></span>  
+# <a name="-rootnamespace"></a><span data-ttu-id="af293-102">-rootnamespace</span><span class="sxs-lookup"><span data-stu-id="af293-102">-rootnamespace</span></span>
+<span data-ttu-id="af293-103">모든 형식 선언에 대한 네임스페이스를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="af293-103">Specifies a namespace for all type declarations.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="61b58-104">구문</span><span class="sxs-lookup"><span data-stu-id="61b58-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="af293-104">구문</span><span class="sxs-lookup"><span data-stu-id="af293-104">Syntax</span></span>  
   
 ```  
 -rootnamespace:namespace  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="61b58-105">인수</span><span class="sxs-lookup"><span data-stu-id="61b58-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="af293-105">인수</span><span class="sxs-lookup"><span data-stu-id="af293-105">Arguments</span></span>  
   
-|<span data-ttu-id="61b58-106">용어</span><span class="sxs-lookup"><span data-stu-id="61b58-106">Term</span></span>|<span data-ttu-id="61b58-107">정의</span><span class="sxs-lookup"><span data-stu-id="61b58-107">Definition</span></span>|  
+|<span data-ttu-id="af293-106">용어</span><span class="sxs-lookup"><span data-stu-id="af293-106">Term</span></span>|<span data-ttu-id="af293-107">정의</span><span class="sxs-lookup"><span data-stu-id="af293-107">Definition</span></span>|  
 |---|---|  
-|`namespace`|<span data-ttu-id="61b58-108">현재 프로젝트에 대 한 모든 형식 선언을 포함할를 네임 스페이스의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="61b58-108">The name of the namespace in which to enclose all type declarations for the current project.</span></span>|  
+|`namespace`|<span data-ttu-id="af293-108">현재 프로젝트에 대 한 모든 형식 선언을 포함할를 네임 스페이스의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="af293-108">The name of the namespace in which to enclose all type declarations for the current project.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="61b58-109">설명</span><span class="sxs-lookup"><span data-stu-id="61b58-109">Remarks</span></span>  
- <span data-ttu-id="61b58-110">만든 프로젝트를 컴파일하는 데 사용 하 여 Visual Studio 통합된 개발 환경에서 Visual Studio 실행 파일 (Devenv.exe)를 사용 하는 경우 `-rootnamespace` 의 값을 지정 하는 <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="61b58-110">If you use the Visual Studio executable file (Devenv.exe) to compile a project created in the Visual Studio integrated development environment, use `-rootnamespace` to specify the value of the <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A> property.</span></span> <span data-ttu-id="61b58-111">참조 [Devenv 명령줄 스위치](/visualstudio/ide/reference/devenv-command-line-switches) 자세한 내용은 합니다.</span><span class="sxs-lookup"><span data-stu-id="61b58-111">See [Devenv Command Line Switches](/visualstudio/ide/reference/devenv-command-line-switches) for more information.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="af293-109">설명</span><span class="sxs-lookup"><span data-stu-id="af293-109">Remarks</span></span>  
+ <span data-ttu-id="af293-110">만든 프로젝트를 컴파일하는 데 사용 하 여 Visual Studio 통합된 개발 환경에서 Visual Studio 실행 파일 (Devenv.exe)를 사용 하는 경우 `-rootnamespace` 의 값을 지정 하는 <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="af293-110">If you use the Visual Studio executable file (Devenv.exe) to compile a project created in the Visual Studio integrated development environment, use `-rootnamespace` to specify the value of the <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A> property.</span></span> <span data-ttu-id="af293-111">참조 [Devenv 명령줄 스위치](/visualstudio/ide/reference/devenv-command-line-switches) 자세한 내용은 합니다.</span><span class="sxs-lookup"><span data-stu-id="af293-111">See [Devenv Command Line Switches](/visualstudio/ide/reference/devenv-command-line-switches) for more information.</span></span>  
   
- <span data-ttu-id="61b58-112">공용 언어 런타임은 MSIL 디스어셈블러를 사용 하 여 (`Ildasm.exe`) 출력 파일의 네임 스페이스 이름을 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="61b58-112">Use the common language runtime MSIL Disassembler (`Ildasm.exe`) to view the namespace names in your output file.</span></span>  
+ <span data-ttu-id="af293-112">공용 언어 런타임은 MSIL 디스어셈블러를 사용 하 여 (`Ildasm.exe`) 출력 파일의 네임 스페이스 이름을 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="af293-112">Use the common language runtime MSIL Disassembler (`Ildasm.exe`) to view the namespace names in your output file.</span></span>  
   
-|<span data-ttu-id="61b58-113">Visual Studio 통합된 개발 환경에서-rootnamespace를 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="61b58-113">To set -rootnamespace in the Visual Studio integrated development environment</span></span>|  
+|<span data-ttu-id="af293-113">Visual Studio 통합된 개발 환경에서-rootnamespace를 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="af293-113">To set -rootnamespace in the Visual Studio integrated development environment</span></span>|  
 |---|  
-|<span data-ttu-id="61b58-114">1.  **솔루션 탐색기**에서 프로젝트를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="61b58-114">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="61b58-115">**프로젝트** 메뉴에서 **속성**을 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="61b58-115">On the **Project** menu, click **Properties**.</span></span> <br /><span data-ttu-id="61b58-116">2.  **응용 프로그램** 탭을 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="61b58-116">2.  Click the **Application** tab.</span></span><br /><span data-ttu-id="61b58-117">3.  값을 수정 합니다 **루트 Namespace** 상자입니다.</span><span class="sxs-lookup"><span data-stu-id="61b58-117">3.  Modify the value in the **Root Namespace** box.</span></span>|  
+|<span data-ttu-id="af293-114">1.  **솔루션 탐색기**에서 프로젝트를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="af293-114">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="af293-115">**프로젝트** 메뉴에서 **속성**을 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="af293-115">On the **Project** menu, click **Properties**.</span></span> <br /><span data-ttu-id="af293-116">2.  **응용 프로그램** 탭을 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="af293-116">2.  Click the **Application** tab.</span></span><br /><span data-ttu-id="af293-117">3.  값을 수정 합니다 **루트 Namespace** 상자입니다.</span><span class="sxs-lookup"><span data-stu-id="af293-117">3.  Modify the value in the **Root Namespace** box.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="61b58-118">예제</span><span class="sxs-lookup"><span data-stu-id="61b58-118">Example</span></span>  
- <span data-ttu-id="61b58-119">다음 코드 컴파일을 `In.vb` 네임 스페이스의 모든 형식 선언을 포함 하 고 `mynamespace`입니다.</span><span class="sxs-lookup"><span data-stu-id="61b58-119">The following code compiles `In.vb` and encloses all type declarations in the namespace `mynamespace`.</span></span>  
+## <a name="example"></a><span data-ttu-id="af293-118">예제</span><span class="sxs-lookup"><span data-stu-id="af293-118">Example</span></span>  
+ <span data-ttu-id="af293-119">다음 코드 컴파일을 `In.vb` 네임 스페이스의 모든 형식 선언을 포함 하 고 `mynamespace`입니다.</span><span class="sxs-lookup"><span data-stu-id="af293-119">The following code compiles `In.vb` and encloses all type declarations in the namespace `mynamespace`.</span></span>  
   
 ```console
 vbc -rootnamespace:mynamespace in.vb  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="61b58-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="61b58-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="af293-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="af293-120">See also</span></span>
 
-- [<span data-ttu-id="61b58-121">Visual Basic 명령줄 컴파일러</span><span class="sxs-lookup"><span data-stu-id="61b58-121">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="61b58-122">Ildasm.exe(IL 디스어셈블러)</span><span class="sxs-lookup"><span data-stu-id="61b58-122">Ildasm.exe (IL Disassembler)</span></span>](../../../framework/tools/ildasm-exe-il-disassembler.md)
-- [<span data-ttu-id="61b58-123">샘플 컴파일 명령줄</span><span class="sxs-lookup"><span data-stu-id="61b58-123">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [<span data-ttu-id="af293-121">Visual Basic 명령줄 컴파일러</span><span class="sxs-lookup"><span data-stu-id="af293-121">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="af293-122">Ildasm.exe(IL 디스어셈블러)</span><span class="sxs-lookup"><span data-stu-id="af293-122">Ildasm.exe (IL Disassembler)</span></span>](../../../framework/tools/ildasm-exe-il-disassembler.md)
+- [<span data-ttu-id="af293-123">샘플 컴파일 명령줄</span><span class="sxs-lookup"><span data-stu-id="af293-123">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
