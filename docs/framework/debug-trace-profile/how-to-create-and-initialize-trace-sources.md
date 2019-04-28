@@ -12,11 +12,11 @@ ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2d96de43d258e4a7ff925e0c5b1702727e67d737
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754520"
 ---
 # <a name="how-to-create-and-initialize-trace-sources"></a>방법: 추적 소스 만들기 및 초기화
 <xref:System.Diagnostics.TraceSource> 클래스는 응용 프로그램과 연결될 수 있는 추적을 만들기 위해 응용 프로그램에서 사용됩니다. <xref:System.Diagnostics.TraceSource>는 추적 이벤트, 추적 데이터 및 문제 정보 추적을 쉽게 할 수 있도록 추적 메서드를 제공합니다. 구성 파일을 사용하거나 사용하지 않고 <xref:System.Diagnostics.TraceSource>에서 추적 출력을 만들고 초기화할 수 있습니다. 이 항목에서는 두 가지 옵션 모두에 대한 지침을 제공합니다. 하지만 구성 파일을 사용하여 런타임에 추적 소스에 의해 생성되는 추적을 쉽게 재구성하는 것이 좋습니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "59339439"
   
 ### <a name="to-initialize-trace-sources-listeners-and-filters-without-a-configuration-file"></a>구성 파일 없이 추적 소스, 수신기 및 필터를 초기화하려면  
   
--   다음 예제 코드를 사용하여 구성 파일을 사용하지 않고도 추적 소스를 통해 추적할 수 있도록 합니다. 이 방법은 권장되는 구현 방법은 아니지만, 상황에 따라 구성 파일에 의존하지 않고 추적하려는 경우가 있을 수 있습니다.  
+- 다음 예제 코드를 사용하여 구성 파일을 사용하지 않고도 추적 소스를 통해 추적할 수 있도록 합니다. 이 방법은 권장되는 구현 방법은 아니지만, 상황에 따라 구성 파일에 의존하지 않고 추적하려는 경우가 있을 수 있습니다.  
   
      [!code-csharp[TraceSourceExample2#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample2/cs/program.cs#1)]
      [!code-vb[TraceSourceExample2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample2/vb/program.vb#1)]  

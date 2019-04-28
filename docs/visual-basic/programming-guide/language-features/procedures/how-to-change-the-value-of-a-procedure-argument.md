@@ -14,11 +14,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
 ms.openlocfilehash: a56bdf888163c9559b87e857abb33522c547ed45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665834"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>방법: (Visual Basic) 프로시저 인수의 값 변경
 프로시저를 호출 하는 경우 각 인수를 제공 하는 프로시저에 정의 된 매개 변수 중 하나에 해당 합니다. 일부 경우에 프로시저 코드 호출 코드에서 인수를 기본 값을 변경할 수 있습니다. 절차는 다른 경우에만 인수로의 자체 로컬 복사본을 변경할 수 있습니다.  

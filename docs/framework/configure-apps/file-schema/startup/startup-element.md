@@ -10,11 +10,11 @@ helpviewer_keywords:
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
 ms.openlocfilehash: 5047cb0ab1c8206abd88dc795e50272d69f1fd3f
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701452"
 ---
 # <a name="startup-element"></a>\<시작 > 요소
 
@@ -44,7 +44,7 @@ ms.locfileid: "55674570"
 |값|설명|
 |-----------|-----------------|
 |`true`|사용 하도록 설정 [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] 레거시 런타임 정품 인증 기술에 바인딩하는 선택한 런타임에 대 한 런타임 정품 인증 정책 (같은 합니다 [CorBindToRuntimeEx 함수](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)) 대신 구성 파일에서 선택한 런타임에 CLR 버전 2.0에서 해당를 제한 합니다. 따라서 CLR 버전 4 이상을 구성 파일에서을 선택 하면 이전 버전의.NET Framework를 사용 하 여 만든 혼합 모드 어셈블리에 있는 선택한 CLR 버전을 사용 하 여 로드 됩니다. CLR 버전 1.1 또는 CLR 버전 2.0-in-process side-by-side-기능을 효과적으로 사용 하지 않도록 설정 하는 동일한 프로세스로 로드 방지이 값을 설정 합니다.|
-|`false`|에 대 한 기본 활성화 정책을 사용 하는 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] 이며 나중에 레거시 런타임 정품 인증 기술을 프로세스에 1.1 또는 2.0 버전 CLR을 로드할 수 있도록 합니다. 혼합 모드 어셈블리의.NET Framework 4 이상 빌드된.NET Framework 4 또는 나중에 로드를 방해이 값을 설정 합니다. 이 값이 기본값입니다.|
+|`false`|에 대 한 기본 활성화 정책을 사용 하는 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] 이며 나중에 레거시 런타임 정품 인증 기술을 프로세스에 1.1 또는 2.0 버전 CLR을 로드할 수 있도록 합니다. 혼합 모드 어셈블리의.NET Framework 4 이상 빌드된.NET Framework 4 또는 나중에 로드를 방해이 값을 설정 합니다. 이 값은 기본값입니다.|
 
 ### <a name="child-elements"></a>자식 요소
 

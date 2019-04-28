@@ -10,11 +10,11 @@ helpviewer_keywords:
 - radio buttons [Windows Forms], about radio buttons
 ms.assetid: cd11f0c2-d098-4022-adf9-1455bc166a13
 ms.openlocfilehash: 1210658226d9bcacbf4904fdc90a9908c34f5b73
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755950"
 ---
 # <a name="radiobutton-control-overview-windows-forms"></a>RadioButton 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.RadioButton> 컨트롤 사용자에 게 둘 이상의 상호 배타적인 옵션 집합을 제공 합니다. 중요 한 차이점이 있기 라디오 단추 및 확인란 마찬가지로 함수에 나타날 수 있습니다 하는 동안: 동일한 그룹의 다른 라디오 단추가 사용자가 라디오 단추를 선택 하면도 선택할 수 없습니다. 반면에 임의 개수의 확인란을 선택할 수 있습니다. 라디오 단추 그룹을 사용자 지정, "Here is 집합을 하나만 선택할 수 있습니다."  

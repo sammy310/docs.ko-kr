@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: faac5adccecdd0aeecede3b4f50a4db554e3d162
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796866"
 ---
 # <a name="ihostiocompletionmanagergetminthreads-method"></a>IHostIoCompletionManager::GetMinThreads 메서드
 I/O 요청을 처리 하는 것에 대 한 호스트를 제공 하는 스레드의 최소 수를 가져옵니다.  

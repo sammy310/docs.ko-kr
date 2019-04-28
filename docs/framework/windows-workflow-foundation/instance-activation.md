@@ -3,11 +3,11 @@ title: 인스턴스 활성화
 ms.date: 03/30/2017
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
 ms.openlocfilehash: 41dfc076bdee72c2f4d0c781c6588caa927c740e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641664"
 ---
 # <a name="instance-activation"></a>인스턴스 활성화
 SQL 워크플로 인스턴스 저장소는 정기적으로 다시 시작되어 지속성 데이터베이스에서 실행 가능하거나 활성화 가능한 워크플로 인스턴스를 검색하는 내부 작업를 실행합니다. 실행 가능한 워크플로 인스턴스를 발견하면 해당 인스턴스를 활성화할 수 있는 워크플로 호스트에 알려 줍니다. 인스턴스 저장소에서 활성화 가능한 워크플로 인스턴스를 발견하면 워크플로 호스트를 활성화하여 워크플로 인스턴스를 실행하는 일반 호스트에 알려 줍니다. 이 항목의 다음 단원에서는 인스턴스 활성화 프로세스에 대해 자세히 설명합니다.  
@@ -15,11 +15,11 @@ SQL 워크플로 인스턴스 저장소는 정기적으로 다시 시작되어 �
 ## <a name="RunnableSection"></a> 실행 가능한 워크플로 인스턴스 검색 및 활성화  
  SQL 워크플로 인스턴스 저장소는 워크플로 인스턴스를 고려 *runnable* 인스턴스 일시 중단 된 상태나 완료 된 상태가 아니며 다음 조건을 충족 하는 경우:  
   
--   인스턴스가 잠금 해제되었으며 만료된 보류 중인 타이머가 있습니다.  
+- 인스턴스가 잠금 해제되었으며 만료된 보류 중인 타이머가 있습니다.  
   
--   인스턴스에 만료된 잠금이 있습니다.  
+- 인스턴스에 만료된 잠금이 있습니다.  
   
--   인스턴스를 잠금 해제 하 고 해당 상태가 **Executing**합니다.  
+- 인스턴스를 잠금 해제 하 고 해당 상태가 **Executing**합니다.  
   
  SQL 워크플로 인스턴스 저장소에서는 실행 가능한 인스턴스가 발견되면 <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent>를 발생시킵니다. 그러면 SqlWorkflowInstanceStore는 저장소에서 <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand>가 한 번 호출될 때까지 모니터링을 중지합니다.  
   

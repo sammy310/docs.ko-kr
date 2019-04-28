@@ -12,20 +12,20 @@ helpviewer_keywords:
 - LayoutTransform property [WPF]
 ms.assetid: 71e4327e-ca57-444c-a3cf-09fb381491a0
 ms.openlocfilehash: 973b9267eaef5d55176633ee80a1dc7f8b043909
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698995"
 ---
 # <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a>방법: 이벤트 발생 시 요소에 변환 적용
 적용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.ScaleTransform> 이벤트가 발생 합니다. 여기에 표시된 개념은 다른 유형의 변환을 적용할 때 사용하는 것과 같습니다. 변환의 사용 가능한 형식에 대 한 자세한 내용은 참조는 <xref:System.Windows.Media.Transform> 클래스 또는 [변환 개요](transforms-overview.md)합니다.  
   
  다음 두 가지 방법으로 요소에 변환을 적용할 수 있습니다.  
   
--   않으려면 *하지* 레이아웃에 영향을 사용 하 여 변환이 <xref:System.Windows.UIElement.RenderTransform%2A> 요소의 속성입니다.  
+- 않으려면 *하지* 레이아웃에 영향을 사용 하 여 변환이 <xref:System.Windows.UIElement.RenderTransform%2A> 요소의 속성입니다.  
   
--   변환이 레이아웃에 영향을 줄에 사용 하지 않으려면 사용 된 <xref:System.Windows.FrameworkElement.LayoutTransform%2A> 요소의 속성입니다.  
+- 변환이 레이아웃에 영향을 줄에 사용 하지 않으려면 사용 된 <xref:System.Windows.FrameworkElement.LayoutTransform%2A> 요소의 속성입니다.  
   
  다음 예제에서는 적용을 <xref:System.Windows.Media.ScaleTransform> 에 <xref:System.Windows.UIElement.RenderTransform%2A> 단추의 속성. 마우스를 단추 위로 이동할 때를 <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> 및 <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> 의 속성을 <xref:System.Windows.Media.ScaleTransform> 로 설정 됩니다 `2`, 단추가 더 커집니다. 마우스 포인터를 단추 밖 <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> 하 고 <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> 로 설정 됩니다 `1`, 단추가 원래 크기로 돌아갑니다.  
   

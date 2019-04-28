@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: d17b5831-9a2c-45c4-b0d1-68f48e72e861
 author: BrucePerlerMS
 ms.openlocfilehash: 6bc185572528d4229ee53f1421eaa5bf27b053e6
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667225"
 ---
 # <a name="claimtype"></a>\<claimType>
 들어오는 보안 토큰에 대 한 단일 옵션 또는 필요한 클레임을 지정합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "55267237"
   
 |특성|설명|  
 |---------------|-----------------|  
-|형식|클레임 형식입니다. 일반적으로 URI입니다. 필수 요소.|  
+|type|클레임 형식입니다. 일반적으로 URI입니다. 필수 요소.|  
 |선택적|클레임 형식이 선택 사항 인지 여부를 지정 하는 부울 값입니다. 선택 사항입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  

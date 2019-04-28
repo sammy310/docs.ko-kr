@@ -9,11 +9,11 @@ helpviewer_keywords:
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
 ms.openlocfilehash: 33df685b4d14130ae00d59012706b7637924c9be
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699828"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>방법: 페더레이션 서비스에서 자격 증명 구성
 Windows Communication Foundation (WCF), 페더레이션된 서비스를 만드는 다음과 같은 기본 절차 이루어져 있습니다.  
@@ -63,11 +63,11 @@ Windows Communication Foundation (WCF), 페더레이션된 서비스를 만드�
   
  페더레이션 서비스에서 클라이언트를 인증하려면 발급된 토큰이 다음 조건을 만족해야 합니다.  
   
--   발급된 토큰의 디지털 서명에 RSA 보안 키 식별자를 사용하는 경우, <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> 속성은 `true`여야 합니다.  
+- 발급된 토큰의 디지털 서명에 RSA 보안 키 식별자를 사용하는 경우, <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> 속성은 `true`여야 합니다.  
   
--   발급된 토큰의 서명에 X.509 발급자 일련 번호, X.509 주체 키 식별자 또는 X.509 지문 보안 식별자를 사용하는 경우, 발급된 토큰은 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 클래스의 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 속성에 의해 반환된 컬렉션의 인증서를 통해 서명해야 합니다.  
+- 발급된 토큰의 서명에 X.509 발급자 일련 번호, X.509 주체 키 식별자 또는 X.509 지문 보안 식별자를 사용하는 경우, 발급된 토큰은 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 클래스의 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 속성에 의해 반환된 컬렉션의 인증서를 통해 서명해야 합니다.  
   
--   발급된 토큰을 X.509 인증서를 통해 서명하는 경우에는 해당 인증서가 신뢰하는 상대에게 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A>로 보내졌는지 또는 <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> 속성에서 가져온 것인지에 상관없이, 인증서에서는 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 속성 값으로 지정된 의미 체계별로 유효성을 검사해야 합니다. X.509 인증서 유효성 검사에 대 한 자세한 내용은 참조 하세요. [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)합니다.  
+- 발급된 토큰을 X.509 인증서를 통해 서명하는 경우에는 해당 인증서가 신뢰하는 상대에게 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A>로 보내졌는지 또는 <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> 속성에서 가져온 것인지에 상관없이, 인증서에서는 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 속성 값으로 지정된 의미 체계별로 유효성을 검사해야 합니다. X.509 인증서 유효성 검사에 대 한 자세한 내용은 참조 하세요. [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)합니다.  
   
  예를 들어 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A>를 <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust>로 설정하면 서명 인증서가 `TrustedPeople` 인증서 저장소에 있는 발급된 모든 토큰을 인증하게 됩니다. 이 경우 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> 속성을 <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> 또는 <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine>으로 설정합니다. <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> 등의 다른 모드를 선택할 수도 있습니다. `Custom`을 선택하면 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 클래스의 인스턴스를 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A> 속성에 할당해야 합니다. 사용자 지정 유효성 검사기에서 원하는 조건을 사용하여 인증서의 유효성을 검사할 수 있습니다. 자세한 내용은 [방법: 사용자 지정 인증서 유효성 검사기를 사용 하는 서비스 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)합니다.  
   

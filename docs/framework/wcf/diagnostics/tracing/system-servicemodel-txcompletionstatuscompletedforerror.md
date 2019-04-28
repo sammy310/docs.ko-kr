@@ -3,11 +3,11 @@ title: System.ServiceModel.TxCompletionStatusCompletedForError
 ms.date: 03/30/2017
 ms.assetid: 8ade4722-a6d5-471c-b960-1cfea4ea2aa9
 ms.openlocfilehash: 591e1a1dcb6746d79ff5eceba7e74e890f327354
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779498"
 ---
 # <a name="systemservicemodeltxcompletionstatuscompletedforerror"></a>System.ServiceModel.TxCompletionStatusCompletedForError
 처리되지 않은 실행 예외로 인해 지정된 작업에 대한 지정된 트랜잭션이 완료되었습니다.  

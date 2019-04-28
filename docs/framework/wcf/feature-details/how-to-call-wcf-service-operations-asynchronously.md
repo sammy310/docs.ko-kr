@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
 ms.openlocfilehash: 2815757bf9b00375f763673f18180bfbf51a165a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779225"
 ---
 # <a name="how-to-call-wcf-service-operations-asynchronously"></a>방법: WCF 서비스 작업을 비동기적으로 호출
 이 항목에서는 클라이언트에서 서비스 작업에 비동기적으로 액세스하는 방법에 대해 설명합니다. 이 항목에서 설명하는 서비스에서는 `ICalculator` 인터페이스를 구현합니다. 클라이언트는 이벤트 구동 비동기 호출 모델을 사용하여 이 인터페이스에서 작업을 비동기적으로 호출할 수 있습니다. (이벤트 기반 비동기 호출 모델에 대 한 자세한 내용은 참조 하세요. [이벤트 기반 비동기 패턴을 사용한 다중 스레드 프로그래밍](https://go.microsoft.com/fwlink/?LinkId=248184)). 서비스에서 작업을 비동기적으로 구현 하는 방법을 보여 주는 예제를 참조 하세요. [방법: 비동기 서비스 작업 구현](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)합니다. 동기 및 비동기 작업에 대 한 자세한 내용은 참조 하세요. [동기 및 비동기 작업](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)합니다.  
@@ -30,17 +30,17 @@ ms.locfileid: "59317449"
   
      이 생성, 동기 및 표준 대리자 기반 비동기 작업 외에도 포함 하는 WCF 클라이언트 클래스:  
   
-    -   두 개의 <`operationName` > `Async` 이벤트 기반 비동기 호출 방법에 대 한 사용에 대 한 작업입니다. 예를 들어:  
+    - 두 개의 <`operationName` > `Async` 이벤트 기반 비동기 호출 방법에 대 한 사용에 대 한 작업입니다. 예를 들어:  
   
          [!code-csharp[EventAsync#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#1)]
          [!code-vb[EventAsync#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#1)]  
   
-    -   폼의 작업 완료 이벤트가 <`operationName` > `Completed` 이벤트 기반 비동기 호출 방법에 사용 합니다. 예를 들어:  
+    - 폼의 작업 완료 이벤트가 <`operationName` > `Completed` 이벤트 기반 비동기 호출 방법에 사용 합니다. 예를 들어:  
   
          [!code-csharp[EventAsync#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#2)]
          [!code-vb[EventAsync#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#2)]  
   
-    -   <xref:System.EventArgs?displayProperty=nameWithType> 각 작업에 대 한 형식 (폼의 <`operationName`>`CompletedEventArgs`) 사용 하 여 이벤트 기반 비동기 호출 방법에 대 한 합니다. 예를 들어:  
+    - <xref:System.EventArgs?displayProperty=nameWithType> 각 작업에 대 한 형식 (폼의 <`operationName`>`CompletedEventArgs`) 사용 하 여 이벤트 기반 비동기 호출 방법에 대 한 합니다. 예를 들어:  
   
          [!code-csharp[EventAsync#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#3)]
          [!code-vb[EventAsync#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#3)]  

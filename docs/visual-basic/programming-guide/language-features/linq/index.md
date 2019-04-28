@@ -2,14 +2,8 @@
 title: Visual Basic의 LINQ
 ms.date: 07/20/2015
 helpviewer_keywords:
-- what's new [Visual Basic]
+  - 'what''s new [Visual Basic]'
 ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
-ms.openlocfilehash: 286e6266ef8f11a7a09a9e9fe898276a6734a96d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824860"
 ---
 # <a name="linq-in-visual-basic"></a>Visual Basic의 LINQ
 이 섹션에는 Visual Basic 및 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]를 이해하고 사용하는 데 도움이 되는 개요, 예제 및 배경 정보가 나와 있습니다.  

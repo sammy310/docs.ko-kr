@@ -7,67 +7,67 @@ helpviewer_keywords:
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
 ms.openlocfilehash: f73648888b28c349104a70e78c29eb208d438b78
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761691"
 ---
 # <a name="visual-basic-coding-conventions"></a>Visual Basic 코딩 규칙
 Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니다. 사용자가 동일한 코딩 규칙을 따른다면, 다음과 같은 이점을 얻을 수 있습니다.  
   
--   코드는 판독기 레이아웃이 아닌 내용에 집중할 수 있도록 일관된 모양을 갖습니다.  
+- 코드는 판독기 레이아웃이 아닌 내용에 집중할 수 있도록 일관된 모양을 갖습니다.  
   
--   읽는 사람이 이전 경험을 기반으로 예상할 수 있으므로 코드를 더 신속하게 이해합니다.  
+- 읽는 사람이 이전 경험을 기반으로 예상할 수 있으므로 코드를 더 신속하게 이해합니다.  
   
--   코드를 더 쉽게 복사, 변경 및  유지 관리할 수 있습니다.  
+- 코드를 더 쉽게 복사, 변경 및  유지 관리할 수 있습니다.  
   
--   코드가 Visual Basic을 위한 "모범 사례"가 될 것입니다.  
+- 코드가 Visual Basic을 위한 "모범 사례"가 될 것입니다.  
   
 ## <a name="naming-conventions"></a>명명 규칙  
   
--   명명 지침에 대한 정보를 더 보려면, [명명 지침](../../../standard/design-guidelines/naming-guidelines.md) 항목을 참조하십시오.  
+- 명명 지침에 대한 정보를 더 보려면, [명명 지침](../../../standard/design-guidelines/naming-guidelines.md) 항목을 참조하십시오.  
   
--   변수 이름의 일부로 "My" 또는 "my"를 사용하지 마십시오. 이것은 `My`개체와 혼동을 일으킵니다.  
+- 변수 이름의 일부로 "My" 또는 "my"를 사용하지 마십시오. 이것은 `My`개체와 혼동을 일으킵니다.  
   
--   지침에 맞게 자동으로 생성된 코드에서 개체의 이름을 변경할 필요가 없습니다.  
+- 지침에 맞게 자동으로 생성된 코드에서 개체의 이름을 변경할 필요가 없습니다.  
   
 ## <a name="layout-conventions"></a>레이아웃 규칙  
   
--   공백으로 탭을 삽입하고, 4칸 들여쓰기하는 스마트 들여쓰기를 사용하십시오.  
+- 공백으로 탭을 삽입하고, 4칸 들여쓰기하는 스마트 들여쓰기를 사용하십시오.  
   
--   코드 편집기에서 코드의 서식을 재조정하기 위해서는 **Pretty listing(reformatting)of code** 옵션을 이용하십시오. 자세한 내용은 [옵션, 텍스트 편집기, 기본(Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic)을 참조하십시오.  
+- 코드 편집기에서 코드의 서식을 재조정하기 위해서는 **Pretty listing(reformatting)of code** 옵션을 이용하십시오. 자세한 내용은 [옵션, 텍스트 편집기, 기본(Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic)을 참조하십시오.  
   
--   한 줄에 하나의 문을 사용하십시오. Visual Basic의 줄 구분 기호 문자(:)를 사용하지 마십시오.  
+- 한 줄에 하나의 문을 사용하십시오. Visual Basic의 줄 구분 기호 문자(:)를 사용하지 마십시오.  
   
--   언어에서 허용하더라도, 암시적 줄 연속 문자를 위해 명시적 줄 연속 문자 "_"를 사용하지 마십시오.  
+- 언어에서 허용하더라도, 암시적 줄 연속 문자를 위해 명시적 줄 연속 문자 "_"를 사용하지 마십시오.  
   
--   한 줄에 하나의 선언만 사용하십시오.  
+- 한 줄에 하나의 선언만 사용하십시오.  
   
--   만약 **Pretty listing(reformatting)of code**가 연속 줄 형식을 자동으로 지정하지 않는다면, 수동으로 연속된 줄을 들여쓰기하십시오. 그러나 목록의 항목을 항상 왼쪽 맞춤으로 하십시오.  
+- 만약 **Pretty listing(reformatting)of code**가 연속 줄 형식을 자동으로 지정하지 않는다면, 수동으로 연속된 줄을 들여쓰기하십시오. 그러나 목록의 항목을 항상 왼쪽 맞춤으로 하십시오.  
   
     ```  
     a As Integer,  
     b As Integer  
     ```  
   
--   메서드와 속성의 정의 사이에는 하나 이상의 빈 줄을 추가하십시오.  
+- 메서드와 속성의 정의 사이에는 하나 이상의 빈 줄을 추가하십시오.  
   
 ## <a name="commenting-conventions"></a>주석 규칙  
   
--   코드 줄의 끝이 아닌, 별도 줄에 주석을 작성하십시오.  
+- 코드 줄의 끝이 아닌, 별도 줄에 주석을 작성하십시오.  
   
--   주석은 대문자로 시작하고, 주석의 끝에 마침표를 찍으십시오.  
+- 주석은 대문자로 시작하고, 주석의 끝에 마침표를 찍으십시오.  
   
--   주석 구분 기호(')와 주석 내용 사이에 빈 칸을 하나 삽입하십시오.  
+- 주석 구분 기호(')와 주석 내용 사이에 빈 칸을 하나 삽입하십시오.  
   
      [!code-vb[VbVbalrGuidelines#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#2)]  
   
--   서식이 지정된 별표 블록으로 주석을 둘러싸지 마십시오.  
+- 서식이 지정된 별표 블록으로 주석을 둘러싸지 마십시오.  
   
 ## <a name="program-structure"></a>프로그램 구조  
   
--   사용 하는 경우는 `Main` 메서드를 새 콘솔 응용 프로그램에 대 한 기본 구조를 사용 하 고 사용 하 여 `My` 명령줄 인수에 대 한 합니다.  
+- 사용 하는 경우는 `Main` 메서드를 새 콘솔 응용 프로그램에 대 한 기본 구조를 사용 하 고 사용 하 여 `My` 명령줄 인수에 대 한 합니다.  
   
      [!code-vb[VbVbalrGuidelines#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#3)]  
   
@@ -75,11 +75,11 @@ Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니�
   
 ### <a name="string-data-type"></a>String 데이터 형식  
   
--   문자열을 연결하려면 앰퍼샌드(&)를 사용하십시오.  
+- 문자열을 연결하려면 앰퍼샌드(&)를 사용하십시오.  
   
      [!code-vb[VbVbalrGuidelines#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#4)]  
   
--   문자열을 루프에 추가 하려면 사용 된 <xref:System.Text.StringBuilder> 개체입니다.  
+- 문자열을 루프에 추가 하려면 사용 된 <xref:System.Text.StringBuilder> 개체입니다.  
   
      [!code-vb[VbVbalrGuidelines#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#5)]  
   
@@ -90,11 +90,11 @@ Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니�
   
 ### <a name="unsigned-data-type"></a>부호 없는 데이터 형식  
   
--   사용 하 여 `Integer` 필요한 되 제외한 부호 없는 형식 대신 합니다.  
+- 사용 하 여 `Integer` 필요한 되 제외한 부호 없는 형식 대신 합니다.  
   
 ### <a name="arrays"></a>배열  
   
--   선언 줄에서 배열을 초기화할 때는 간단한 구문을 사용 합니다. 예를 들어 다음 구문을 사용 합니다.  
+- 선언 줄에서 배열을 초기화할 때는 간단한 구문을 사용 합니다. 예를 들어 다음 구문을 사용 합니다.  
   
      [!code-vb[VbVbalrGuidelines#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#8)]  
   
@@ -102,7 +102,7 @@ Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니�
   
      [!code-vb[VbVbalrGuidelines#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#9)]  
   
--   변수의 아니라 형식에 배열 지정자를 배치 합니다. 예를 들어 다음 구문을 사용 합니다.  
+- 변수의 아니라 형식에 배열 지정자를 배치 합니다. 예를 들어 다음 구문을 사용 합니다.  
   
      [!code-vb[VbVbalrGuidelines#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#11)]  
   
@@ -110,7 +110,7 @@ Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니�
   
      [!code-vb[VbVbalrGuidelines#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#10)]  
   
--   선언 하 고 기본 데이터 형식의 배열을 초기화할 때 {} 구문을 사용 합니다. 예를 들어 다음 구문을 사용 합니다.  
+- 선언 하 고 기본 데이터 형식의 배열을 초기화할 때 {} 구문을 사용 합니다. 예를 들어 다음 구문을 사용 합니다.  
   
      [!code-vb[VbVbalrGuidelines#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#12)]  
   
@@ -131,7 +131,7 @@ Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니�
   
 ### <a name="new-keyword"></a>새 키워드  
   
--   간단한 인스턴스를 사용 합니다. 예를 들어 다음 구문을 사용 합니다.  
+- 간단한 인스턴스를 사용 합니다. 예를 들어 다음 구문을 사용 합니다.  
   
      [!code-vb[VbVbalrGuidelines#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#21)]  
   
@@ -139,25 +139,25 @@ Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니�
   
      [!code-vb[VbVbalrGuidelines#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#22)]  
   
--   매개 변수가 없는 생성자 대신 새 개체에 대 한 개체 이니셜라이저를 사용 합니다.  
+- 매개 변수가 없는 생성자 대신 새 개체에 대 한 개체 이니셜라이저를 사용 합니다.  
   
      [!code-vb[VbVbalrGuidelines#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#23)]  
   
 ### <a name="event-handling"></a>이벤트 처리  
   
--   사용 하 여 `Handles` 대신 `AddHandler`:  
+- 사용 하 여 `Handles` 대신 `AddHandler`:  
   
      [!code-vb[VbVbalrGuidelines#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#24)]  
   
--   사용 하 여 `AddressOf`, 및 대리자를 명시적으로 인스턴스화할 수 없습니다.  
+- 사용 하 여 `AddressOf`, 및 대리자를 명시적으로 인스턴스화할 수 없습니다.  
   
      [!code-vb[VbVbalrGuidelines#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#25)]  
   
--   이벤트를 정의할 때는 간단한 구문을 사용 하 여 및 대리자를 정의 하 여 컴파일러가:  
+- 이벤트를 정의할 때는 간단한 구문을 사용 하 여 및 대리자를 정의 하 여 컴파일러가:  
   
      [!code-vb[VbVbalrGuidelines#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#26)]  
   
--   이벤트 인지를 확인 하지 않습니다 `Nothing` (null)를 호출 하기 전에 `RaiseEvent` 메서드. `RaiseEvent` 에 대 한 확인 `Nothing` 이벤트를 발생 시키기 전에 합니다.  
+- 이벤트 인지를 확인 하지 않습니다 `Nothing` (null)를 호출 하기 전에 `RaiseEvent` 메서드. `RaiseEvent` 에 대 한 확인 `Nothing` 이벤트를 발생 시키기 전에 합니다.  
   
 ### <a name="using-shared-members"></a>공유 멤버 사용  
  호출 `Shared` 클래스 이름에서가 아니라 인스턴스 변수를 사용 하 여 멤버입니다.  
@@ -165,43 +165,43 @@ Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니�
 ### <a name="use-xml-literals"></a>XML 리터럴을 사용 하십시오.  
  XML 리터럴의 XML (예를 들어, 로드, 쿼리 및 변환)를 사용 하 여 작업할 때 발생할 수 있는 가장 일반적인 작업을 간소화 합니다. XML을 사용 하 여 개발 하는 경우 다음이 지침을 따르세요.  
   
--   XML 리터럴을 사용 하 여 XML 문서 및 XML Api를 직접 호출 하는 대신 조각을 만듭니다.  
+- XML 리터럴을 사용 하 여 XML 문서 및 XML Api를 직접 호출 하는 대신 조각을 만듭니다.  
   
--   XML 리터럴의 성능 최적화를 활용 하기 위해 파일 또는 프로젝트 수준에서 XML 네임 스페이스를 가져옵니다.  
+- XML 리터럴의 성능 최적화를 활용 하기 위해 파일 또는 프로젝트 수준에서 XML 네임 스페이스를 가져옵니다.  
   
--   특성과 해당 요소는 XML 문서에 액세스 하려면 XML 축 속성을 사용 합니다.  
+- 특성과 해당 요소는 XML 문서에 액세스 하려면 XML 축 속성을 사용 합니다.  
   
--   포함된 식을 사용 하 여 값을 포함 하 고 같은 API 호출을 사용 하는 대신 기존 값에서 XML을 만들 수는 `Add` 메서드:  
+- 포함된 식을 사용 하 여 값을 포함 하 고 같은 API 호출을 사용 하는 대신 기존 값에서 XML을 만들 수는 `Add` 메서드:  
   
      [!code-vb[VbVbalrGuidelines#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#27)]  
   
 ### <a name="linq-queries"></a>LINQ 쿼리  
   
--   쿼리 변수에 의미 있는 이름을 사용 합니다.  
+- 쿼리 변수에 의미 있는 이름을 사용 합니다.  
   
      [!code-vb[VbVbalrGuidelines#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#28)]  
   
--   익명 형식의 속성 이름이 올바로 대문자로 표시 되도록 파스칼을 사용 하 여 쿼리에서 요소에 대 한 이름을 제공 대/소문자 구분:  
+- 익명 형식의 속성 이름이 올바로 대문자로 표시 되도록 파스칼을 사용 하 여 쿼리에서 요소에 대 한 이름을 제공 대/소문자 구분:  
   
      [!code-vb[VbVbalrGuidelines#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#29)]  
   
--   결과의 속성 이름이 모호하면 속성 이름을 바꿉니다. 예를 들어 쿼리에서 고객 이름과 주문 ID를 반환 바꿀로 남겨두지 않고 `Name` 고 `ID` 결과에서:  
+- 결과의 속성 이름이 모호하면 속성 이름을 바꿉니다. 예를 들어 쿼리에서 고객 이름과 주문 ID를 반환 바꿀로 남겨두지 않고 `Name` 고 `ID` 결과에서:  
   
      [!code-vb[VbVbalrGuidelines#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#30)]  
   
--   쿼리 변수 및 범위 변수 선언에서 형식 유추를 사용 합니다.  
+- 쿼리 변수 및 범위 변수 선언에서 형식 유추를 사용 합니다.  
   
      [!code-vb[VbVbalrGuidelines#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#31)]  
   
--   아래의 쿼리 절을 정렬 된 `From` 문:  
+- 아래의 쿼리 절을 정렬 된 `From` 문:  
   
      [!code-vb[VbVbalrGuidelines#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#32)]  
   
--   사용 하 여 `Where` 나중 쿼리 절이 필터링 된 데이터 집합에서 실행 되도록 다른 앞 절 쿼리 절:  
+- 사용 하 여 `Where` 나중 쿼리 절이 필터링 된 데이터 집합에서 실행 되도록 다른 앞 절 쿼리 절:  
   
      [!code-vb[VbVbalrGuidelines#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#33)]  
   
--   사용 된 `Join` 절을 사용 하는 대신 조인 작업을 명시적으로 정의 `Where` 조인 작업을 암시적으로 정의 하는 절:  
+- 사용 된 `Join` 절을 사용 하는 대신 조인 작업을 명시적으로 정의 `Where` 조인 작업을 암시적으로 정의 하는 절:  
   
      [!code-vb[VbVbalrGuidelines#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#34)]  
   

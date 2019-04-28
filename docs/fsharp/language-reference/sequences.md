@@ -3,11 +3,11 @@ title: 시퀀스
 description: 사용 하는 방법을 알아봅니다 F# 시퀀스는 많은 경우 데이터의 컬렉션을 정렬 하지만 모든 요소를 사용 하 여 반드시 예상 하지도 않습니다.
 ms.date: 02/19/2019
 ms.openlocfilehash: a7791be5e8bd07d81fe9e890fc5896b181f0cb39
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770476"
 ---
 # <a name="sequences"></a>시퀀스
 

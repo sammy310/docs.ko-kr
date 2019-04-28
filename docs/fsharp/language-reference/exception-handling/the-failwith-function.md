@@ -3,11 +3,11 @@ title: '예외: failwith 함수'
 description: "'Failwith' 함수를 생성 하는 방법에 대해 알아봅니다는 F# 예외입니다."
 ms.date: 05/16/2016
 ms.openlocfilehash: 05d385ddfc98a910779a6f59949a7187c38f0812
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772686"
 ---
 # <a name="exceptions-the-failwith-function"></a>예외: failwith 함수
 
@@ -27,9 +27,9 @@ failwith error-message-string
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6001.fs)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
-- [Visual C++에서 예외 처리](index.md)
+- [예외 처리](index.md)
 - [예외 형식](exception-types.md)
 - [예외: `try...with` 식](the-try-with-expression.md)
 - [예외: `try...finally` 식](the-try-finally-expression.md)

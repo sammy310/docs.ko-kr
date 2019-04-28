@@ -6,25 +6,25 @@ helpviewer_keywords:
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
 ms.openlocfilehash: d3981be7977b56af0b60f9796519b78dc9ac5db3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640510"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Windows Forms의 자동 크기 조정
 
-자동 크기 조정은 한 컴퓨터에서 특정 디스플레이 해상도 또는 시스템 글꼴로 디자인된 폼과 해당 컨트롤이 다른 디스플레이 해상도 또는 시스템 글꼴을 사용하는 다른 컴퓨터에서 제대로 표시될 수 있게 합니다. 이 기능은 사용자 및 다른 개발자 컴퓨터 둘 다의 네이티브 Windows 및 기타 응용 프로그램과 일치하도록 폼과 해당 컨트롤의 크기가 지능적으로 조정되도록 합니다. 자동 크기 조정 및 시각적 스타일에 대한 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]의 지원을 통해 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 응용 프로그램은 각 사용자 컴퓨터의 네이티브 Windows 응용 프로그램과 비교하여 일관된 모양과 느낌을 유지할 수 있습니다.
+자동 크기 조정은 한 컴퓨터에서 특정 디스플레이 해상도 또는 시스템 글꼴로 디자인된 폼과 해당 컨트롤이 다른 디스플레이 해상도 또는 시스템 글꼴을 사용하는 다른 컴퓨터에서 제대로 표시될 수 있게 합니다. 이 기능은 사용자 및 다른 개발자 컴퓨터 둘 다의 네이티브 Windows 및 기타 애플리케이션과 일치하도록 폼과 해당 컨트롤의 크기가 지능적으로 조정되도록 합니다. 자동 크기 조정 및 시각적 스타일에 대한 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]의 지원을 통해 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 애플리케이션은 각 사용자 컴퓨터의 네이티브 Windows 애플리케이션과 비교하여 일관된 모양과 느낌을 유지할 수 있습니다.
 
-자동 크기 조정은 대부분의 경우 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 버전 2.0 이상에서 예상대로 작동합니다. 그러나 글꼴 구성표 변경은 문제가 될 수 있습니다. 이 문제를 해결 하는 방법의 예제를 참조 하세요 [방법: Windows Forms 응용 프로그램에서 글꼴 구성표 변경에 응답](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md)합니다.
+자동 크기 조정은 대부분의 경우 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 버전 2.0 이상에서 예상대로 작동합니다. 그러나 글꼴 구성표 변경은 문제가 될 수 있습니다. 이 문제를 해결 하는 방법의 예제를 참조 하세요. [방법: Windows Forms 응용 프로그램에서 글꼴 구성표 변경에 응답](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md)합니다.
 
 ## <a name="need-for-automatic-scaling"></a>자동 크기 조정 요구
 
-자동 크기 조정이 없으면 특정 디스플레이 해상도 또는 글꼴로 디자인된 응용 프로그램이 해당 해상도나 글꼴이 변경될 경우 너무 작거나 너무 크게 나타납니다. 예를 들어 응용 프로그램이 Tahoma 9 포인트를 기준으로 디자인된 경우 조정하지 않으면 시스템 글꼴이 Tahoma 12 포인트인 컴퓨터에서 실행할 경우 너무 작게 나타납니다. 제목, 메뉴, 텍스트 상자 내용 등의 텍스트 요소가 다른 응용 프로그램보다 작게 렌더링됩니다. 또한 제목 표시줄, 메뉴, 많은 컨트롤 등 텍스트가 포함된 UI(사용자 인터페이스) 요소의 크기는 사용하는 글꼴에 따라 달라집니다. 이 예제에서는 이러한 요소도 상대적으로 더 작게 나타납니다.
+자동 크기 조정이 없으면 특정 디스플레이 해상도 또는 글꼴로 디자인된 애플리케이션이 해당 해상도나 글꼴이 변경될 경우 너무 작거나 너무 크게 나타납니다. 예를 들어 애플리케이션이 Tahoma 9 포인트를 기준으로 디자인된 경우 조정하지 않으면 시스템 글꼴이 Tahoma 12 포인트인 컴퓨터에서 실행할 경우 너무 작게 나타납니다. 제목, 메뉴, 텍스트 상자 내용 등의 텍스트 요소가 다른 애플리케이션보다 작게 렌더링됩니다. 또한 제목 표시줄, 메뉴, 많은 컨트롤 등 텍스트가 포함된 UI(사용자 인터페이스) 요소의 크기는 사용하는 글꼴에 따라 달라집니다. 이 예제에서는 이러한 요소도 상대적으로 더 작게 나타납니다.
 
-응용 프로그램이 특정 디스플레이 해상도로 디자인된 경우 비슷한 상황이 발생합니다. 가장 일반적인 디스플레이 해상도 96dpi DPI (인치당), 100%는 디스플레이 배율을 같음는 있지만 125%, 150%, 200%를 지 원하는 더 높은 해상도 표시 (각각 같으면는 120, 144 및 192DPI) 위에 더욱 더 보편화 되 고 합니다. 조정하지 않으면 특정 해상도로 디자인된 응용 프로그램, 특히 그래픽 기반 응용 프로그램은 다른 해상도로 실행할 경우 너무 크거나 너무 작게 나타납니다.
+애플리케이션이 특정 디스플레이 해상도로 디자인된 경우 비슷한 상황이 발생합니다. 가장 일반적인 디스플레이 해상도 96dpi DPI (인치당), 100%는 디스플레이 배율을 같음는 있지만 125%, 150%, 200%를 지 원하는 더 높은 해상도 표시 (각각 같으면는 120, 144 및 192DPI) 위에 더욱 더 보편화 되 고 합니다. 조정하지 않으면 특정 해상도로 디자인된 애플리케이션, 특히 그래픽 기반 애플리케이션은 다른 해상도로 실행할 경우 너무 크거나 너무 작게 나타납니다.
 
-자동 크기 조정은 상대 글꼴 크기나 디스플레이 해상도에 따라 폼과 해당 자식 컨트롤의 크기를 자동으로 조정하여 이러한 문제를 개선하려고 합니다. Windows 운영 체제는 대화 상자 단위라는 상대 측정 단위를 사용하여 대화 상자의 자동 크기 조정을 지원합니다. 대화 상자 단위는 시스템 글꼴을 기반으로 하며, Win32 SDK 함수 `GetDialogBaseUnits`를 통해 픽셀과의 해당 관계를 확인할 수 있습니다. 사용자가 Windows에서 사용되는 테마를 변경하면 모든 대화 상자가 자동으로 적절하게 조정됩니다. 또한는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 기본 시스템 글꼴 또는 디스플레이 해상도 따라 자동 크기 조정을 지원 합니다. 필요에 따라 응용 프로그램에서 자동 크기 조정을 사용하지 않도록 설정할 수 있습니다.
+자동 크기 조정은 상대 글꼴 크기나 디스플레이 해상도에 따라 폼과 해당 자식 컨트롤의 크기를 자동으로 조정하여 이러한 문제를 개선하려고 합니다. Windows 운영 체제는 대화 상자 단위라는 상대 측정 단위를 사용하여 대화 상자의 자동 크기 조정을 지원합니다. 대화 상자 단위는 시스템 글꼴을 기반으로 하며, Win32 SDK 함수 `GetDialogBaseUnits`를 통해 픽셀과의 해당 관계를 확인할 수 있습니다. 사용자가 Windows에서 사용되는 테마를 변경하면 모든 대화 상자가 자동으로 적절하게 조정됩니다. 또한는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 기본 시스템 글꼴 또는 디스플레이 해상도 따라 자동 크기 조정을 지원 합니다. 필요에 따라 애플리케이션에서 자동 크기 조정을 사용하지 않도록 설정할 수 있습니다.
 
 ## <a name="original-support-for-automatic-scaling"></a>자동 크기 조정에 대 한 원래 지원
 
@@ -63,7 +63,7 @@ ms.locfileid: "43505768"
 
 - <xref:System.Windows.Forms.Control> 클래스에는 크기 조정에 참여하고 동일한 폼에서 혼합된 크기 조정을 지원할 수 있게 해주는 여러 개의 새 멤버도 있습니다. 구체적으로 <xref:System.Windows.Forms.Control.Scale%2A>, <xref:System.Windows.Forms.Control.ScaleChildren%2A> 및 <xref:System.Windows.Forms.Control.GetScaledBounds%2A> 멤버가 크기 조정을 지원합니다.
 
-- <xref:System.Windows.Forms.AutoScaleMode> 열거형에서 정의된 시스템 글꼴 지원을 보완하기 위해 화면 해상도를 기반으로 하는 크기 조정 지원이 추가되었습니다. 이 모드는 [!INCLUDE[compact](../../../includes/compact-md.md)]에서 지원하는 자동 크기 조정과 호환되므로 응용 프로그램을 쉽게 마이그레이션할 수 있습니다.
+- <xref:System.Windows.Forms.AutoScaleMode> 열거형에서 정의된 시스템 글꼴 지원을 보완하기 위해 화면 해상도를 기반으로 하는 크기 조정 지원이 추가되었습니다. 이 모드는 [!INCLUDE[compact](../../../includes/compact-md.md)]에서 지원하는 자동 크기 조정과 호환되므로 애플리케이션을 쉽게 마이그레이션할 수 있습니다.
 
 - <xref:System.Windows.Forms.FlowLayoutPanel> 및 <xref:System.Windows.Forms.TableLayoutPanel>과 같은 레이아웃 관리자와의 호환성이 자동 크기 조정 구현에 추가되었습니다.
 

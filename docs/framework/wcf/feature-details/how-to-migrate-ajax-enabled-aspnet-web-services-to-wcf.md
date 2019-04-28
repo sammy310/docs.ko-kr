@@ -3,20 +3,20 @@ title: '방법: AJAX 사용 ASP.NET 웹 서비스를 WCF로 마이그레이션'
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
 ms.openlocfilehash: 6114fa90b10a5d0cacb60a7ad40f63fae776e174
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61683524"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>방법: AJAX 사용 ASP.NET 웹 서비스를 WCF로 마이그레이션
 이 항목에 해당 하는 AJAX 지원 Windows Communication Foundation (WCF) 서비스에 기본 ASP.NET AJAX 서비스를 마이그레이션하는 절차를 간략하게 설명 합니다. ASP.NET AJAX 서비스의 기능적 WCF 버전을 만드는 방법을 보여 줍니다. 두 서비스는 함께 사용할 수 있습니다 또는 WCF 서비스는 ASP.NET AJAX 서비스를 바꾸는 데 사용할 수 있습니다.
 
  기존 ASP.NET AJAX 마이그레이션 WCF AJAX 서비스에 서비스 제공 다음과 같은 이점을 합니다.
 
--   최소의 추가 구성만으로 AJAX 서비스를 SOAP 서비스로 노출할 수 있습니다.
+- 최소의 추가 구성만으로 AJAX 서비스를 SOAP 서비스로 노출할 수 있습니다.
 
--   WCF 추적 등에서 이점을 얻을 수 있으며 등 수 있습니다.
+- WCF 추적 등에서 이점을 얻을 수 있으며 등 수 있습니다.
 
  다음 절차에서는 Visual Studio 2012를 사용 한다고 가정 합니다.
 
@@ -179,9 +179,9 @@ namespace ASPHello
 
  업그레이드 하는 ASMX 웹 서비스, side-by-side-WCF 서비스를 마이그레이션할 경우 클라이언트에서 동일한 이름으로 두 개의 형식 매핑 방지 합니다. 이 경우 같은 형식을 <xref:System.Web.Services.WebMethodAttribute> 및 <xref:System.ServiceModel.ServiceContractAttribute>에서 사용하면 serializer에 예외가 발생합니다.
 
--   먼저 WCF 서비스를 추가 하는 경우에 예외를 발생 ASMX 웹 서비스에 대 한 메서드 호출 <xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29> WCF 스타일 정의 프록시 순서가 우선 하므로 합니다.
+- 먼저 WCF 서비스를 추가 하는 경우에 예외를 발생 ASMX 웹 서비스에 대 한 메서드 호출 <xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29> WCF 스타일 정의 프록시 순서가 우선 하므로 합니다.
 
--   ASMX 웹 서비스는 먼저 추가 되 면 WCF 서비스의 메서드를 호출 하면에서 예외가 발생 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 웹 서비스 스타일 정의 프록시 순서가 우선 하므로 합니다.
+- ASMX 웹 서비스는 먼저 추가 되 면 WCF 서비스의 메서드를 호출 하면에서 예외가 발생 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 웹 서비스 스타일 정의 프록시 순서가 우선 하므로 합니다.
 
  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>와 ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer>의 동작에는 상당한 차이점이 있습니다. 예를 들어, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>는 키/값 쌍의 배열로 사전을 나타내고, ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer>는 실제 JSON 개체로 사전을 나타냅니다. 따라서 ASP.NET AJAX에서 사전은 다음과 같이 나타납니다.
 
@@ -193,9 +193,9 @@ d.Add("two", 2);
 
  이 사전은 다음 목록에 표시된 것처럼 JSON 개체로 표현됩니다.
 
--   <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>에 의한 [{"Key":"one","Value":1},{"Key":"two","Value":2}]
+- <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>에 의한 [{"Key":"one","Value":1},{"Key":"two","Value":2}]
 
--   {"one": 1, "two": 2} ASP.NET ajax <xref:System.Web.Script.Serialization.JavaScriptSerializer>
+- {"one": 1, "two": 2} ASP.NET ajax <xref:System.Web.Script.Serialization.JavaScriptSerializer>
 
  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>는 키 유형이 문자열이 아닌 사전을 처리할 수 있다는 점에서 훨씬 강력합니다. 반면 <xref:System.Web.Script.Serialization.JavaScriptSerializer>는 키 유형이 문자열이 아닌 사전을 처리할 수 없습니다. 그러나 후자가 JSON에 더 적합합니다.
 

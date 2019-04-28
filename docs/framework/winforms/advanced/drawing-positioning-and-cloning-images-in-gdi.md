@@ -16,11 +16,11 @@ helpviewer_keywords:
 - GDI+, positioning images
 ms.assetid: 09f0c07a-19c0-43b4-90a2-862a10545ce8
 ms.openlocfilehash: b5f98e7bdef9ff8ed0a4cd0e040cb92a31f30503
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756925"
 ---
 # <a name="drawing-positioning-and-cloning-images-in-gdi"></a>GDI+에서 이미지 그리기, 위치 지정 및 복제
 사용할 수는 <xref:System.Drawing.Bitmap> 로드 래스터 이미지를 표시 하는 클래스를 사용할 수는 <xref:System.Drawing.Imaging.Metafile> 클래스를 로드 하 고 벡터 이미지를 표시 합니다. <xref:System.Drawing.Bitmap> 하 고 <xref:System.Drawing.Imaging.Metafile> 클래스에서 상속 된 <xref:System.Drawing.Image> 클래스. 인스턴스의 벡터 이미지를 표시 하려면 필요 합니다 <xref:System.Drawing.Graphics> 클래스 및 <xref:System.Drawing.Imaging.Metafile>합니다. 인스턴스의 래스터 이미지를 표시 하려면 필요 합니다 <xref:System.Drawing.Graphics> 클래스 및 <xref:System.Drawing.Bitmap>합니다. 인스턴스의 <xref:System.Drawing.Graphics> 클래스를 제공 합니다 <xref:System.Drawing.Graphics.DrawImage%2A> 메서드를 수신 하는 합니다 <xref:System.Drawing.Imaging.Metafile> 또는 <xref:System.Drawing.Bitmap> 인수로.  

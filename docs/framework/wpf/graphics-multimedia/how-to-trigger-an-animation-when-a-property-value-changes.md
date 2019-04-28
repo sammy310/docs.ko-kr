@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Storyboards [WPF], starting when property values change
 ms.assetid: 12399c21-0300-4f4f-9e3a-d92d9907e5f5
 ms.openlocfilehash: 7e3eecedf7d464eeb8e4f60f2f05fa06d2e23e09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769306"
 ---
 # <a name="how-to-trigger-an-animation-when-a-property-value-changes"></a>방법: 속성 값 변경 시 애니메이션 트리거
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Trigger> 시작 하는 <xref:System.Windows.Media.Animation.Storyboard> 속성 값을 변경 하는 경우. 사용할 수는 <xref:System.Windows.Trigger> 내부를 <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>, 또는 <xref:System.Windows.DataTemplate>합니다.  

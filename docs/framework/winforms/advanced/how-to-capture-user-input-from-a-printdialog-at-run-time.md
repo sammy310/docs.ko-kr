@@ -12,11 +12,11 @@ helpviewer_keywords:
 - run time [Windows Forms], changing print options
 ms.assetid: 438501d8-9a70-4fb3-aae6-e46579aba0c6
 ms.openlocfilehash: 2aaf988f362baf9cd80eb16e4a08f7f65a5077bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937802"
 ---
 # <a name="how-to-capture-user-input-from-a-printdialog-at-run-time"></a>방법: 런타임에 PrintDialog에서 사용자 입력 캡처
 디자인 타임에 인쇄 관련 옵션을 설정할 수 있지만 가능성이 가장 높은 사용자의 선택으로 인해 런타임에 이러한 옵션을 변경 하려는 경우가 있습니다. 사용 하 여 문서를 인쇄 하는 것에 대 한 사용자 입력을 캡처할 수 있습니다 합니다 <xref:System.Windows.Forms.PrintDialog> 하며 <xref:System.Drawing.Printing.PrintDocument> 구성 요소입니다.  

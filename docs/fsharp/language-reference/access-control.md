@@ -1,15 +1,15 @@
 ---
-title: Access Control
+title: 액세스 제어
 description: 형식, 메서드 및 함수 등 프로그래밍 요소에 대 한 액세스를 제어 하는 방법을 알아봅니다는 F# 프로그래밍 언어입니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: 8db178b26f3beb6ce95bff84ccad9ac9e8c40ce7
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772738"
 ---
-# <a name="access-control"></a>Access Control
+# <a name="access-control"></a>액세스 제어
 
 *액세스 제어* 선언 형식, 메서드 및 함수 같은 특정 프로그램 요소를 사용할 수 있는 클라이언트를 가리킵니다.
 
@@ -52,7 +52,7 @@ F#, 액세스 제어 지정자 `public`, `internal`, 및 `private` 모듈, 형�
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/access-control/snippet2.fs)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [F# 언어 참조](index.md)
-- [시그니처](signatures.md)
+- [서명](signatures.md)

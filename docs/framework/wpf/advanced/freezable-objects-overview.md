@@ -10,11 +10,11 @@ helpviewer_keywords:
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
 ms.openlocfilehash: 8df19e69ff3be06704878ea290a3f4a2997127eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703315"
 ---
 # <a name="freezable-objects-overview"></a>Freezable 개체 개요
 이 항목에서는 효과적으로 사용 하 고 만드는 방법을 설명 <xref:System.Windows.Freezable> 응용 프로그램 성능을 개선 하는 데 도움이 되는 특별 한 기능을 제공 하는 개체입니다. Freezable 개체의 예로 브러시, 펜, 변환, 기 하 도형 및 애니메이션을 들 수 있습니다.  
@@ -63,11 +63,11 @@ ms.locfileid: "59224266"
   
  Freezable **없습니다** 다음 중 하나라도 해당 하는 경우 고정 될:  
   
--   애니메이션 효과가 적용 또는 데이터 바인딩된 속성입니다.  
+- 애니메이션 효과가 적용 또는 데이터 바인딩된 속성입니다.  
   
--   동적 리소스에서 설정 하는 속성이 있습니다. (참조를 [XAML 리소스](xaml-resources.md) 동적 리소스에 대 한 자세한 내용은 합니다.)  
+- 동적 리소스에서 설정 하는 속성이 있습니다. (참조를 [XAML 리소스](xaml-resources.md) 동적 리소스에 대 한 자세한 내용은 합니다.)  
   
--   포함 된 <xref:System.Windows.Freezable> 고정할 수 없는 하위 개체입니다.  
+- 포함 된 <xref:System.Windows.Freezable> 고정할 수 없는 하위 개체입니다.  
   
  이러한 조건이 false 이면 및 수정 하지 않으려는 경우는 <xref:System.Windows.Freezable>, 앞에서 설명한 성능 이점을 얻을 수 고를 고정 해야 합니다.  
   
@@ -122,13 +122,13 @@ mc:Ignorable="PresentationOptions"
 ## <a name="creating-your-own-freezable-class"></a>사용자 고유의 Freezable 클래스 만들기  
  파생 된 클래스 <xref:System.Windows.Freezable> 다음과 같은 기능이 있습니다.  
   
--   특수 상태: 읽기 전용 (고정) 및 쓰기 가능 상태입니다.  
+- 특수 상태: 읽기 전용 (고정) 및 쓰기 가능 상태입니다.  
   
--   스레드 보안: 고정 된 <xref:System.Windows.Freezable> 스레드 간에 공유할 수 있습니다.  
+- 스레드 보안: 고정 된 <xref:System.Windows.Freezable> 스레드 간에 공유할 수 있습니다.  
   
--   자세한 변경 알림: 달리 <xref:System.Windows.DependencyObject>s, Freezable 개체 변경 알림을 제공할 하위 속성 값을 변경 합니다.  
+- 자세한 변경 알림: 달리 <xref:System.Windows.DependencyObject>s, Freezable 개체 변경 알림을 제공할 하위 속성 값을 변경 합니다.  
   
--   쉬운 복제: Freezable 클래스가 이미 전체 복제를 만드는 여러 메서드를 구현 합니다.  
+- 쉬운 복제: Freezable 클래스가 이미 전체 복제를 만드는 여러 메서드를 구현 합니다.  
   
  A <xref:System.Windows.Freezable> 유형의 <xref:System.Windows.DependencyObject>, 따라서 종속성 속성 시스템을 사용 합니다. 클래스 속성을 종속성 속성 일 필요가 없지만 있으므로 작성 하는 코드의 양이 감소 하므로 종속성 속성을 사용 하는 <xref:System.Windows.Freezable> 클래스는 종속성 속성을 염두에서에 두고 설계 되었습니다. 종속성 속성 시스템에 대 한 자세한 내용은 참조는 [종속성 속성 개요](dependency-properties-overview.md)합니다.  
   
@@ -136,23 +136,23 @@ mc:Ignorable="PresentationOptions"
   
  비 종속성 속성 데이터 멤버를 포함 하는 클래스, 경우 다음 방법 재정의 해야 합니다.  
   
--   <xref:System.Windows.Freezable.CloneCore%2A>  
+- <xref:System.Windows.Freezable.CloneCore%2A>  
   
--   <xref:System.Windows.Freezable.CloneCurrentValueCore%2A>  
+- <xref:System.Windows.Freezable.CloneCurrentValueCore%2A>  
   
--   <xref:System.Windows.Freezable.GetAsFrozenCore%2A>  
+- <xref:System.Windows.Freezable.GetAsFrozenCore%2A>  
   
--   <xref:System.Windows.Freezable.GetCurrentValueAsFrozenCore%2A>  
+- <xref:System.Windows.Freezable.GetCurrentValueAsFrozenCore%2A>  
   
--   <xref:System.Windows.Freezable.FreezeCore%2A>  
+- <xref:System.Windows.Freezable.FreezeCore%2A>  
   
  또한 다음 규칙에 액세스 하 고는 종속성 속성이 아닌 데이터 멤버에 쓰기를 준수 해야 합니다.  
   
--   시작 부분에 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] 읽는 비 종속성 속성 데이터 멤버를 호출 합니다 <xref:System.Windows.Freezable.ReadPreamble%2A> 메서드.  
+- 시작 부분에 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] 읽는 비 종속성 속성 데이터 멤버를 호출 합니다 <xref:System.Windows.Freezable.ReadPreamble%2A> 메서드.  
   
--   비 종속성 속성 데이터 멤버를 기록 하는 모든 API의 시작 부분에서 호출 된 <xref:System.Windows.Freezable.WritePreamble%2A> 메서드. (호출한 후 <xref:System.Windows.Freezable.WritePreamble%2A> 에 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]를 추가로 호출할 필요가 없습니다 <xref:System.Windows.Freezable.ReadPreamble%2A> 비 종속성 속성 데이터 멤버를 읽은 경우.)  
+- 비 종속성 속성 데이터 멤버를 기록 하는 모든 API의 시작 부분에서 호출 된 <xref:System.Windows.Freezable.WritePreamble%2A> 메서드. (호출한 후 <xref:System.Windows.Freezable.WritePreamble%2A> 에 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]를 추가로 호출할 필요가 없습니다 <xref:System.Windows.Freezable.ReadPreamble%2A> 비 종속성 속성 데이터 멤버를 읽은 경우.)  
   
--   호출 된 <xref:System.Windows.Freezable.WritePostscript%2A> 비 종속성 속성 데이터 멤버에 쓰는 메서드를 종료 하기 전에 메서드.  
+- 호출 된 <xref:System.Windows.Freezable.WritePostscript%2A> 비 종속성 속성 데이터 멤버에 쓰는 메서드를 종료 하기 전에 메서드.  
   
  클래스는 종속성 속성이 아닌 데이터 멤버를 포함 하는 경우 <xref:System.Windows.DependencyObject> 개체를 호출 해야 합니다 <xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A> 을 변경할 때마다 해당 값 중 하나 멤버를 설정 하는 경우에 메서드 `null`합니다.  
   

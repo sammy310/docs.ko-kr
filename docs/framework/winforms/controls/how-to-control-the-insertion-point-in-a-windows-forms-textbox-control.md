@@ -11,11 +11,11 @@ helpviewer_keywords:
 - text boxes [Windows Forms], controlling insertion point
 ms.assetid: 5bee7d34-5121-429e-ab1f-d8ff67bc74c1
 ms.openlocfilehash: 43fdb023f19aa988dfef3dcd68443d6f59808472
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746630"
 ---
 # <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>방법: Windows Forms TextBox 컨트롤에서 삽입 지점 제어
 경우는 Windows Forms <xref:System.Windows.Forms.TextBox> 컨트롤의 포커스를 처음 받을, 기존 텍스트의 왼쪽에 텍스트 상자 내에서 기본 삽입 됩니다. 키보드 또는 마우스를 사용 하 여 커서를 이동할 수 있습니다. 텍스트 상자를 잃고 포커스를 다시 얻은 후, 하는 경우 아무 곳에 나 사용자 마지막으로 저장할 삽입 지점이 됩니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "59341324"
   
 #### <a name="to-make-the-text-box-insertion-point-visible-by-default-on-a-new-form"></a>새 폼에는 기본적으로 텍스트 상자 삽입 지점을 표시 하려면  
   
--   설정 된 <xref:System.Windows.Forms.TextBox> 컨트롤의 <xref:System.Windows.Forms.Control.TabIndex%2A> 속성을 `0`입니다.  
+- 설정 된 <xref:System.Windows.Forms.TextBox> 컨트롤의 <xref:System.Windows.Forms.Control.TabIndex%2A> 속성을 `0`입니다.  
   
 ## <a name="see-also"></a>참고자료
 

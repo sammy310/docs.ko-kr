@@ -3,11 +3,11 @@ title: 특성
 description: 에 대해 알아봅니다 하는 방법 F# 프로그래밍 구문에 적용할 메타 데이터 특성을 사용 합니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: 6e80bc4e32ee4ff5ff132270bde8e2fd018369e1
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703207"
 ---
 # <a name="attributes"></a>특성
 

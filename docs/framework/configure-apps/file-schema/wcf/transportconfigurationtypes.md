@@ -3,11 +3,11 @@ title: <transportConfigurationTypes>
 ms.date: 03/30/2017
 ms.assetid: 929c8b0a-5460-4f66-a098-2cb8d4e10b69
 ms.openlocfilehash: b3683a198ec403fb9966bb902c936108fd043bfa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788247"
 ---
 # <a name="transportconfigurationtypes"></a>\<transportConfigurationTypes>
 특정 전송의 형식을 식별하는 구성 요소 컬렉션을 나타냅니다. 사용자 지정 WAS 프로토콜을 추가하는 데 사용할 수 있습니다.  

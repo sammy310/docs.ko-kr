@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
 ms.openlocfilehash: 314409f5ac4ecb4b18f3b8d3f2aeb08a507ec9e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696173"
 ---
 # <a name="custom-bindings"></a>사용자 지정 바인딩
 시스템에서 제공하는 바인딩 중 하나가 사용자의 서비스 요구 사항을 충족하지 않을 때 <xref:System.ServiceModel.Channels.CustomBinding> 클래스를 사용할 수 있습니다. 모든 바인딩은 정렬된 바인딩 요소 집합으로부터 생성됩니다. 사용자 지정 바인딩은 시스템 제공 바인딩 요소로부터 만들거나 사용자 정의 사용자 지정 바인딩 요소를 포함할 수 있습니다. 예를 들어 사용자 지정 바인딩 요소를 사용하여 서비스 엔드포인트에서 새 전송 또는 새 인코더를 사용하도록 설정할 수 있습니다. 작업 예제를 보려면 [사용자 지정 바인딩 샘플](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90))합니다. 자세한 내용은 [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)합니다.  
@@ -18,47 +18,47 @@ ms.locfileid: "59207268"
 ## <a name="construction-of-a-custom-binding"></a>사용자 지정 바인딩 생성  
  사용자 지정 바인딩은 특정 순서로 "스택"되는 바인딩 요소 컬렉션에서 <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> 생성자를 사용하여 생성됩니다.  
   
--   맨 위에는 트랜잭션 이동을 허용하는 선택적 <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> 클래스가 있습니다.  
+- 맨 위에는 트랜잭션 이동을 허용하는 선택적 <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> 클래스가 있습니다.  
   
--   다음에는 WS-ReliableMessaging 사양에서 정의된 세션 및 순서 지정 메커니즘을 제공하는 선택적 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> 클래스가 있습니다. 세션은 SOAP 매개자 및 전송 매개자에 적용될 수 있습니다.  
+- 다음에는 WS-ReliableMessaging 사양에서 정의된 세션 및 순서 지정 메커니즘을 제공하는 선택적 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> 클래스가 있습니다. 세션은 SOAP 매개자 및 전송 매개자에 적용될 수 있습니다.  
   
--   다음에는 권한 부여, 인증, 보호, 기밀성과 같은 보안 기능을 제공하는 선택적 <xref:System.ServiceModel.Channels.SecurityBindingElement> 클래스가 있습니다.  
+- 다음에는 권한 부여, 인증, 보호, 기밀성과 같은 보안 기능을 제공하는 선택적 <xref:System.ServiceModel.Channels.SecurityBindingElement> 클래스가 있습니다.  
   
--   다음에는 기본적으로 이중 통신을 지원하지 않는 전송 프로토콜(예: HTTP)을 사용하여 양방향 이중 통신을 수행하는 기능을 제공하는 선택적 <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement> 클래스가 있습니다.  
+- 다음에는 기본적으로 이중 통신을 지원하지 않는 전송 프로토콜(예: HTTP)을 사용하여 양방향 이중 통신을 수행하는 기능을 제공하는 선택적 <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement> 클래스가 있습니다.  
   
--   다음에는 단방향 통신을 제공하는 <xref:System.ServiceModel.Channels.OneWayBindingElement>) 클래스가 있습니다.  
+- 다음에는 단방향 통신을 제공하는 <xref:System.ServiceModel.Channels.OneWayBindingElement>) 클래스가 있습니다.  
   
--   다음에는 아래와 같은 선택적 스트림 보안 바인딩 요소가 있습니다.  
+- 다음에는 아래와 같은 선택적 스트림 보안 바인딩 요소가 있습니다.  
   
-    -   <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
+    - <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
   
-    -   <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
+    - <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
--   다음에는 필수 메시지 인코딩 바인딩 요소가 있습니다. 고유의 메시지 인코더를 사용하거나 다음 세 가지 메시지 인코딩 바인딩 중 하나를 사용할 수 있습니다.  
+- 다음에는 필수 메시지 인코딩 바인딩 요소가 있습니다. 고유의 메시지 인코더를 사용하거나 다음 세 가지 메시지 인코딩 바인딩 중 하나를 사용할 수 있습니다.  
   
-    -   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
+    - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
   
-    -   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
+    - <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
   
-    -   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
+    - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
   
  맨 아래에는 필수 전송 요소가 있습니다. 고유의 전송을 또는 Windows Communication Foundation (WCF) 제공 전송 바인딩 요소 중 하나를 사용할 수 있습니다.  
   
--   <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.PeerTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.PeerTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>  
   
--   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>  
+- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>  
   
--   <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
   
  다음 표에서는 각 계층의 옵션을 요약합니다.  
   

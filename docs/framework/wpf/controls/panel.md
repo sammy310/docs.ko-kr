@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Panel control [WPF]
 ms.assetid: 792943c5-335d-49dd-aa5b-ec1582a10088
 ms.openlocfilehash: 6471aebf4a510c63084f8da733fb3dfe2300c1aa
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770671"
 ---
 # <a name="panel"></a>패널
 <xref:System.Windows.Controls.Panel> 응용 프로그램 레이아웃을 지 원하는 모든 요소에 대 한 기본 클래스인 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]합니다.  

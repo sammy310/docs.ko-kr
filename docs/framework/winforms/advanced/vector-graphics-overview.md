@@ -10,11 +10,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
 ms.openlocfilehash: d424254839db6c403bafe779f475c0e344918a5e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748448"
 ---
 # <a name="vector-graphics-overview"></a>벡터 그래픽 개요
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 좌표계에 선, 사각형 및 기타 도형을 그립니다. 다양 한 좌표 시스템에서에서 선택할 수 있지만 기본 좌표계 원점 왼쪽 위 모퉁이의 x 축이 오른쪽 y 축은 아래쪽을 가리키는 합니다. 기본 좌표계의 측정 단위는 픽셀입니다.  
@@ -32,19 +32,19 @@ ms.locfileid: "59087965"
   
  시간이 지남에 따라 특정 기본 빌드 블록 2 차원 그림을 만들기 위한 가장 유용한 것으로 입증 합니다. 모든 지원 되는 이러한 빌딩 블록 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], 다음 목록에 지정 됩니다.  
   
--   선  
+- 선  
   
--   사각형  
+- 사각형  
   
--   줄임표  
+- 줄임표  
   
--   원호  
+- 원호  
   
--   다각형  
+- 다각형  
   
--   카디널 스플라인  
+- 카디널 스플라인  
   
--   3차원 곡선 스플라인  
+- 3차원 곡선 스플라인  
   
 ## <a name="methods-for-drawing-with-a-graphics-object"></a>Graphics 개체를 사용 하 여 그리기 메서드  
  <xref:System.Drawing.Graphics> 클래스의 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 이전 목록에서 항목을 그리기 위한 메서드를 제공: <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawRectangle%2A>, <xref:System.Drawing.Graphics.DrawEllipse%2A>를 <xref:System.Drawing.Graphics.DrawPolygon%2A>, <xref:System.Drawing.Graphics.DrawArc%2A>, <xref:System.Drawing.Graphics.DrawCurve%2A> (카디널 스플라인 용) 및 <xref:System.Drawing.Graphics.DrawBezier%2A>. 이러한 각 메서드는 오버 로드 됩니다. 즉, 각 메서드는 여러 다른 매개 변수 목록을 지원합니다. 예를 들어, 하나의 변형 합니다 <xref:System.Drawing.Graphics.DrawLine%2A> 메서드는 수신를 <xref:System.Drawing.Pen> 개체 및 다른 변형 하는 동안 4 개의 정수를 <xref:System.Drawing.Graphics.DrawLine%2A> 메서드는 수신를 <xref:System.Drawing.Pen> 개체와 두 개의 <xref:System.Drawing.Point> 개체.  

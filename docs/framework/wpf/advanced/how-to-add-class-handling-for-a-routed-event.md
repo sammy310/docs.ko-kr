@@ -10,11 +10,11 @@ helpviewer_keywords:
 - class handlers [WPF], routed events
 ms.assetid: 15b7b06c-9112-4ee5-b30a-65d10c5c5df6
 ms.openlocfilehash: 7b897954cbdab461dc0305c6290e67c1af5282c3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777041"
 ---
 # <a name="how-to-add-class-handling-for-a-routed-event"></a>방법: 라우트된 이벤트에 대한 클래스 처리 추가
 클래스 처리기 또는 경로의 지정 된 모든 노드에서 인스턴스 처리기 라우트된 이벤트를 처리할 수 있습니다. 클래스 처리기는 먼저 호출 및 인스턴스 처리에서 이벤트를 억제 하는 기본 클래스를 소유 하는 이벤트에 다른 이벤트가 특정 동작을 소개 클래스 구현에서 사용할 수 있습니다. 이 예제에는 클래스 처리기를 구현 하는 것에 대 한 밀접 한 관련이 있는 두 가지 기술을 보여 줍니다.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - templates [WPF]
 ms.assetid: 7fd571fd-d54a-40fc-b332-4c4015a5b6ff
 ms.openlocfilehash: d7a5e9515e78dd9c762973ca9854e04b44c1e18d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790912"
 ---
 # <a name="styles-and-templates"></a>스타일 및 템플릿
 응용 프로그램, 문서 또는 사용자 인터페이스 (UI) 디자이너 시각적으로 뛰어난 응용 프로그램을 만들 수 있는 기능 (스타일, 템플릿, 트리거 및 스토리 보드)의 도구 모음에 Windows Presentation Foundation (WPF) 스타일 및 템플릿 참조 해당 제품에 대 한 특정 모양을 표준화할 합니다.  

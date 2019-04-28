@@ -5,11 +5,11 @@ helpviewer_keywords:
 - My.Application object
 ms.assetid: a0ecfccf-acf7-49ec-a08b-72e6458c5c8d
 ms.openlocfilehash: c88e9da85357df5b0bbbb5957ed2f7ca8276a04b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751466"
 ---
 # <a name="myapplication-object"></a>My.Application 개체
 속성, 메서드 및 현재 응용 프로그램에 관련 된 이벤트를 제공 합니다.  
@@ -17,11 +17,11 @@ ms.locfileid: "58818418"
 ## <a name="remarks"></a>설명  
  메서드 및 속성에 대 한 자세한는 `My.Application` 개체 다음 리소스를 참조 하십시오.  
   
--   <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> 모든 프로젝트에서 사용할 수 있는 멤버에 있습니다.  
+- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> 모든 프로젝트에서 사용할 수 있는 멤버에 있습니다.  
   
--   <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> Windows Forms 응용 프로그램에서 사용할 수 있는 멤버에 있습니다.  
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> Windows Forms 응용 프로그램에서 사용할 수 있는 멤버에 있습니다.  
   
--   <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> 콘솔 응용 프로그램에서 사용할 수 있는 멤버에 있습니다.  
+- <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> 콘솔 응용 프로그램에서 사용할 수 있는 멤버에 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **네임스페이스:** <xref:Microsoft.VisualBasic.ApplicationServices>  

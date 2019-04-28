@@ -2,16 +2,10 @@
 title: 시작 설정 스키마
 ms.date: 03/30/2017
 helpviewer_keywords:
-- startup settings schema
-- schema startup settings
-- configuration schema [.NET Framework], startup settings
+  - startup settings schema
+  - schema startup settings
+  - 'configuration schema [.NET Framework], startup settings'
 ms.assetid: 03de6972-442a-4648-9f3e-efa654e3b949
-ms.openlocfilehash: e5f9c9af64ff38e7c0f1f26ccab039261b052e30
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083420"
 ---
 # <a name="startup-settings-schema"></a>시작 설정 스키마
 

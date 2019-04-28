@@ -3,11 +3,11 @@ title: <states> WCF의 <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: d17f7525-8035-4e9e-85a0-4cddae59f85d
 ms.openlocfilehash: fad6f9c8871f79e4a1e26c893eed86ba168f6d01
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757952"
 ---
 # <a name="states-of-wcf-workflowinstancequery"></a>\<states> of WCF, \<workflowInstanceQuery>
 
@@ -77,11 +77,11 @@ ms.locfileid: "55281465"
 |Idle|워크플로 인스턴스가 유휴 상태입니다.|  
 |Persisted|워크플로 인스턴스가 지속되었습니다.|  
 |Resumed|워크플로 인스턴스가 다시 시작되었습니다.|  
-|시작됨|워크플로 인스턴스가 시작되었습니다.|  
+|Started|워크플로 인스턴스가 시작되었습니다.|  
 |UnhandledException|워크플로 인스턴스에서 처리되지 않은 예외가 발생했습니다.|  
 |Unloaded|워크플로 인스턴스가 언로드되었습니다.|  
 |Canceled|워크플로 인스턴스가 취소되었습니다.|  
-|일시 중단됨|워크플로 인스턴스가 일시 중단된 경우|  
+|Suspended|워크플로 인스턴스가 일시 중단된 경우|  
 |Terminated|워크플로 인스턴스가 종료됩니다.|  
 |Unsuspended|워크플로 인스턴스의 일시 중단이 해제됩니다.|  
   

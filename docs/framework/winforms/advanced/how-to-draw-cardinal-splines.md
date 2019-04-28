@@ -10,18 +10,18 @@ helpviewer_keywords:
 - graphics [Windows Forms], cardinal splines
 ms.assetid: a4a41e80-4461-4b47-b6bd-2c5e68881994
 ms.openlocfilehash: 2f03177bf97936a2ca9558972d4d82fa3e07463c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703731"
 ---
 # <a name="how-to-draw-cardinal-splines"></a>방법: 카디널 스플라인 그리기
 카디널 스플라인 곡선이 요소의 지정 된 집합을 통해 원활 하 게 전달 합니다. 카디널 스플라인 그리기를 만들려면를 <xref:System.Drawing.Graphics> 개체 및 배열 요소의 주소를 전달 합니다 <xref:System.Drawing.Graphics.DrawCurve%2A> 메서드.  
   
 ### <a name="drawing-a-bell-shaped-cardinal-spline"></a>종 모양의 카디널 스플라인 그리기  
   
--   다음 예제에서는 5 개의 지정 된 지점을 통과 하는 종 모양의 카디널 스플라인을 그립니다. 다음 그림에서는 5 점과 곡선을 보여 줍니다.  
+- 다음 예제에서는 5 개의 지정 된 지점을 통과 하는 종 모양의 카디널 스플라인을 그립니다. 다음 그림에서는 5 점과 곡선을 보여 줍니다.  
   
      ![종 모양의 카디널 스플라인 보여 주는 다이어그램입니다.](./media/how-to-draw-cardinal-splines/bell-shaped-cardinal-spline.png)  
   
@@ -30,7 +30,7 @@ ms.locfileid: "59204954"
   
 ### <a name="drawing-a-closed-cardinal-spline"></a>폐쇄형된 카디널 스플라인 그리기  
   
--   사용 합니다 <xref:System.Drawing.Graphics.DrawClosedCurve%2A> 메서드는 <xref:System.Drawing.Graphics> 클래스는 폐쇄형된 카디널 스플라인을 그립니다. 폐쇄형된 카디널 스플라인 곡선 배열의 마지막 요소를 계속 하 고 배열의 첫 번째 지점과 연결 합니다. 다음 예제에서는 6 개의 지정 된 지점을 통과 하는 폐쇄형된 카디널 스플라인을 그립니다. 다음 그림에서는 6 포인트에 따라 닫힌된 스플라인 보여 줍니다.  
+- 사용 합니다 <xref:System.Drawing.Graphics.DrawClosedCurve%2A> 메서드는 <xref:System.Drawing.Graphics> 클래스는 폐쇄형된 카디널 스플라인을 그립니다. 폐쇄형된 카디널 스플라인 곡선 배열의 마지막 요소를 계속 하 고 배열의 첫 번째 지점과 연결 합니다. 다음 예제에서는 6 개의 지정 된 지점을 통과 하는 폐쇄형된 카디널 스플라인을 그립니다. 다음 그림에서는 6 포인트에 따라 닫힌된 스플라인 보여 줍니다.  
   
  ![폐쇄형된 카디널 스플라인을 보여 주는 다이어그램입니다.](./media/how-to-draw-cardinal-splines/closed-cardinal-spine.png)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "59204954"
   
 ### <a name="changing-the-bend-of-a-cardinal-spline"></a>카디널 스플라인의 굴곡 변경  
   
--   카디널 스플라인의 장력 인수를 전달 하 여 굴곡 방법을 변경 하 여 <xref:System.Drawing.Graphics.DrawCurve%2A> 메서드. 다음 예제에서는 동일한 점 집합을 통과 하는 세 개의 카디널 스플라인을 그립니다. 다음 그림에서는 세 가지 스플라인 해당 장력 값과 함께 보여 줍니다. 참고 장력 0 인 점 직선으로 연결 됩니다.  
+- 카디널 스플라인의 장력 인수를 전달 하 여 굴곡 방법을 변경 하 여 <xref:System.Drawing.Graphics.DrawCurve%2A> 메서드. 다음 예제에서는 동일한 점 집합을 통과 하는 세 개의 카디널 스플라인을 그립니다. 다음 그림에서는 세 가지 스플라인 해당 장력 값과 함께 보여 줍니다. 참고 장력 0 인 점 직선으로 연결 됩니다.  
   
  ![카디널 스플라인 세 가지를 보여 주는 다이어그램입니다.](./media/how-to-draw-cardinal-splines/three-cardinal-splines.png)  
   

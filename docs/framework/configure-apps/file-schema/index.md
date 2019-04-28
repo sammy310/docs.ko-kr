@@ -2,32 +2,27 @@
 title: .NET Framework의 구성 파일 스키마
 ms.date: 05/01/2017
 helpviewer_keywords:
-- .NET Framework application configuration, configuration schema
-- machine configuration files
-- application configuration files, schema
-- app.config files, schema
-- schema configuration settings
-- schemas, configuration settings
-- enterprisesec.config files
-- well-formed XML
-- enterprisesec configuration files
-- security.config files
-- security [.NET Framework], configuration files
-- application development [.NET Framework], schema
-- XML tags
-- container tags
-- machine.config files
-- configuration schema [.NET Framework]
-- configuration settings [.NET Framework], applications
-- configuration file reference [.NET Framework]
+  - '.NET Framework application configuration, configuration schema'
+  - machine configuration files
+  - 'application configuration files, schema'
+  - 'app.config files, schema'
+  - schema configuration settings
+  - 'schemas, configuration settings'
+  - enterprisesec.config files
+  - well-formed XML
+  - enterprisesec configuration files
+  - security.config files
+  - 'security [.NET Framework], configuration files'
+  - 'application development [.NET Framework], schema'
+  - XML tags
+  - container tags
+  - machine.config files
+  - 'configuration schema [.NET Framework]'
+  - 'configuration settings [.NET Framework], applications'
+  - 'configuration file reference [.NET Framework]'
 ms.assetid: 69003d39-dc8a-460c-a6be-e6d93e690b38
-ms.openlocfilehash: 6ebb6487136bff567c57143e3000a20270c1f87e
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674908"
 ---
+
 # <a name="configuration-file-schema-for-the-net-framework"></a>.NET Framework의 구성 파일 스키마
 
 구성 파일은 설정을 변경하고 응용 프로그램을 위한 정책을 설정하는 데 사용할 수 있는 표준 XML 파일입니다. .NET Framework 구성 스키마는 응용 프로그램의 동작을 제어하기 위해 구성 파일에 사용할 수 있는 요소로 구성됩니다. 이 섹션의 목차에는 시작, 런타임, 네트워크 및 구성 설정의 다른 형식에 대한 스키마 계층 구조가 반영되어 있습니다.

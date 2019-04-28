@@ -11,28 +11,28 @@ helpviewer_keywords:
 - drawing [Windows Forms], paths
 ms.assetid: a5500dec-666c-41fd-9da3-2169dd89c5eb
 ms.openlocfilehash: c9a43065210f5ef0fffcae01cc7eb88349696b6b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938169"
 ---
 # <a name="graphics-paths-in-gdi"></a>GDI+의 그래픽 경로
 경로 선, 사각형 및 간단한 곡선을 결합 하 여 구성 됩니다. 설명한 대로 합니다 [벡터 그래픽 개요](vector-graphics-overview.md) 기본 구성 요소는 다음 그림을 그리기 위한 가장 유용한 것으로 입증는:  
   
--   선  
+- 선  
   
--   사각형  
+- 사각형  
   
--   줄임표  
+- 줄임표  
   
--   원호  
+- 원호  
   
--   다각형  
+- 다각형  
   
--   카디널 스플라인  
+- 카디널 스플라인  
   
--   3 차원 곡선 스플라인  
+- 3 차원 곡선 스플라인  
   
  GDI +에서 <xref:System.Drawing.Drawing2D.GraphicsPath> 개체를 사용 하면 단일 단위로 이러한 빌딩 블록의 시퀀스를 수집할 수 있습니다. 선, 사각형, 다각형 및 곡선의 전체 시퀀스를 한 번 호출을 사용 하 여 그릴 수 있습니다 합니다 <xref:System.Drawing.Graphics.DrawPath%2A> 메서드는 <xref:System.Drawing.Graphics> 클래스입니다. 다음 그림에서는 줄, 호, 3 차원 곡선 스플라인, 및 카디널 스플라인 결합 하 여 만든 경로 보여 줍니다.  
   

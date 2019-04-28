@@ -10,18 +10,18 @@ helpviewer_keywords:
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
 ms.openlocfilehash: 233143099996759cc006b3f28b984938554a0d18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666514"
 ---
 # <a name="how-to-change-the-windows-forms-monthcalendar-controls-appearance"></a>방법: Windows Forms MonthCalendar 컨트롤의 모양 변경
 Windows Forms <xref:System.Windows.Forms.MonthCalendar> 컨트롤을 사용 하면 여러 가지 방법으로 달력의 모양을 사용자 지정할 수 있습니다. 예를 들어, 색 구성표를 설정할 수 있으며 주 번호 및 현재 날짜를 표시 하거나 숨기려면 선택.  
   
 ### <a name="to-change-the-month-calendars-color-scheme"></a>월 달력의 색 구성표를 변경 하려면  
   
--   와 같은 속성을 설정 <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>하십시오 <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A> 및 <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>합니다. <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A> 또한 속성은 요일에 대 한 글꼴 색을 결정 합니다. <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> 속성 앞에 표시 된 달 또는 월을 수행 하는 날짜의 색을 결정 합니다.  
+- 와 같은 속성을 설정 <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>하십시오 <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A> 및 <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>합니다. <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A> 또한 속성은 요일에 대 한 글꼴 색을 결정 합니다. <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> 속성 앞에 표시 된 달 또는 월을 수행 하는 날짜의 색을 결정 합니다.  
   
     ```vb  
     MonthCalendar1.TitleBackColor = System.Drawing.Color.Blue  
@@ -46,7 +46,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> 컨트롤을 사용 하�
   
 ### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>컨트롤의 맨 아래에 현재 날짜를 표시 하려면  
   
--   <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> 속성을 `true`으로 설정합니다. 아래 예제에서는 표시 하 고 폼을 두 번 클릭으로 오늘 날짜를 생략 하면 간에 전환 합니다.  
+- <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> 속성을 `true`으로 설정합니다. 아래 예제에서는 표시 하 고 폼을 두 번 클릭으로 오늘 날짜를 생략 하면 간에 전환 합니다.  
   
     ```vb  
     Private Sub Form1_DoubleClick(ByVal sender As Object, _  
@@ -87,7 +87,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> 컨트롤을 사용 하�
   
 ### <a name="to-display-week-numbers"></a>주 번호를 표시 하려면  
   
--   <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> 속성을 `true`으로 설정합니다. 코드 또는 속성 창에서이 속성을 설정할 수 있습니다.  
+- <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> 속성을 `true`으로 설정합니다. 코드 또는 속성 창에서이 속성을 설정할 수 있습니다.  
   
      주 번호 첫 번째 요일의 왼쪽에 별도 열에 표시 됩니다.  
   

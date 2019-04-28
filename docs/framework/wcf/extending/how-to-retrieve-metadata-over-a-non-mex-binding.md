@@ -3,11 +3,11 @@ title: '방법: MEX가 아닌 바인딩을 통해 메타데이터 검색'
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
 ms.openlocfilehash: 4a127e3e2283050018705c85606bd7c03c36de8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766781"
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>방법: MEX가 아닌 바인딩을 통해 메타데이터 검색
 이 항목에서는 MEX가 아닌 바인딩을 통해 MEX 엔드포인트로부터 메타데이터를 검색하는 방법에 대해 설명합니다. 이 샘플의 코드를 기반으로 합니다 [사용자 지정 보안 메타 데이터 끝점](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) 샘플입니다.  

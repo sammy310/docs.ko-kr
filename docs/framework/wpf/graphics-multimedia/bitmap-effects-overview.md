@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
 ms.openlocfilehash: 1866ba7a5419ea435a56daa63f94122d3b83473e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752752"
 ---
 # <a name="bitmap-effects-overview"></a>비트맵 효과 개요
 디자이너를 사용 하는 비트맵 효과 및 시각적 효과를 적용 하려면 개발자가 Windows Presentation Foundation (WPF)을 콘텐츠 렌더링 합니다. 예를 들어 비트맵 효과 사용 하면 쉽게 적용할 수는 <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> 효과나 흐림 효과를 이미지 또는 단추입니다.  
@@ -23,15 +23,15 @@ ms.locfileid: "59166896"
   
  특수 한 경우에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], 효과로 설정할 수 있습니다 속성에서 실시간 <xref:System.Windows.Media.Visual> 같은 개체를 <xref:System.Windows.Controls.Button> 또는 <xref:System.Windows.Controls.TextBox>합니다. 런타임에 픽셀 처리가 적용되고 렌더링됩니다. 렌더링 시이 경우에 <xref:System.Windows.Media.Visual> 자동으로 변환 되며 해당 <xref:System.Windows.Media.Imaging.BitmapSource> 해당 입력으로 공급 되 고는 <xref:System.Windows.Media.Effects.BitmapEffect>. 출력 대체는 <xref:System.Windows.Media.Visual> 개체의 기본 렌더링 동작 합니다. 이 인해 <xref:System.Windows.Media.Effects.BitmapEffect> 개체 강제로 시각적 개체가 렌더링 되도록 소프트웨어에만 즉, 하드웨어 가속이 없는 시각적 개체에 효과가 적용 될 때입니다.  
   
--   <xref:System.Windows.Media.Effects.BlurBitmapEffect> 포커스를 벗어난 표시 되는 개체를 시뮬레이션 합니다.  
+- <xref:System.Windows.Media.Effects.BlurBitmapEffect> 포커스를 벗어난 표시 되는 개체를 시뮬레이션 합니다.  
   
--   <xref:System.Windows.Media.Effects.OuterGlowBitmapEffect> 개체의 둘레에 색 후광을 만듭니다.  
+- <xref:System.Windows.Media.Effects.OuterGlowBitmapEffect> 개체의 둘레에 색 후광을 만듭니다.  
   
--   <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> 개체 뒤에 그림자를 만듭니다.  
+- <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> 개체 뒤에 그림자를 만듭니다.  
   
--   <xref:System.Windows.Media.Effects.BevelBitmapEffect> 지정된 된 곡선에 따라 이미지 표면을 올리는 3d 가장자리를 만듭니다.  
+- <xref:System.Windows.Media.Effects.BevelBitmapEffect> 지정된 된 곡선에 따라 이미지 표면을 올리는 3d 가장자리를 만듭니다.  
   
--   <xref:System.Windows.Media.Effects.EmbossBitmapEffect> 범프 매핑을 만듭니다는 <xref:System.Windows.Media.Visual> 인공 광원에서 깊이 및 질감 효과 제공 합니다.  
+- <xref:System.Windows.Media.Effects.EmbossBitmapEffect> 범프 매핑을 만듭니다는 <xref:System.Windows.Media.Visual> 인공 광원에서 깊이 및 질감 효과 제공 합니다.  
   
 > [!NOTE]
 >  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 비트맵 효과는 소프트웨어 모드에서 렌더링됩니다. 효과를 적용하는 모든 개체도 소프트웨어에서 렌더링됩니다. 큰 시각적 개체에 비트맵 효과를 사용하거나 비트맵 효과의 속성에 애니메이션 효과를 줄 때 성능이 가장 크게 저하됩니다. 따라서 여러분도 이러한 방식으로 비트맵 효과를 사용하지 않아야 하는 것은 물론, 다른 사용자들도 바람직한 경험을 얻을 수 있도록 철저히 테스트하고 주의해야 합니다.  

@@ -5,15 +5,15 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
 ms.openlocfilehash: 0f9ff19c8e346560960a09d3b7c52976c478f2f3
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651200"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>기존 .NET 앱을 Azure IaaS(클라우드 인프라 지원)로 리프트 앤 시프트하기
 
-> Vision: 첫 번째 단계를 통해 온-프레미스 투자와 하드웨어 및 네트워킹 유지 관리의 총 비용을 줄이기 위해 단순히 rehost 클라우드에서 기존 응용 프로그램입니다.
+> 목표: 첫 번째 단계를 통해 온-프레미스 투자와 하드웨어 및 네트워킹 유지 관리의 총 비용을 줄이기 위해 단순히 rehost 클라우드에서 기존 응용 프로그램입니다.
 
 기존 응용 프로그램을 Azure 서비스 형태의 인프라(IaaS) 플랫폼으로 마이그레이션하는 *방법*을 살펴보기 전에, Azure의 IaaS로 직접 마이그레이션하려는 *이유*를 분석하는 것이 중요합니다. 이 최신화 성숙도 시나리오에서는 기본적으로 기존 온-프레미스 인프라를 사용하지 않고 클라우드의 VM을 사용합니다.
 

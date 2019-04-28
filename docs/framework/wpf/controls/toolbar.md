@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ToolBar control [WPF]
 ms.assetid: 8a95d759-c298-4291-aa7e-ecdeffaae6ab
 ms.openlocfilehash: 5acb5d96a9c8a1ce2d2c0c842be0e57e62eb538f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790821"
 ---
 # <a name="toolbar"></a>ToolBar
 <xref:System.Windows.Controls.ToolBar> 컨트롤은 명령 또는 해당 함수에서 일반적으로 관련 된 컨트롤의 그룹에 대 한 컨테이너입니다.  

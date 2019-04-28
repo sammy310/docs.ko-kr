@@ -10,11 +10,11 @@ ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 01b2cf06a5ab921f5ae89da4856e8164b6f57db5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754260"
 ---
 # <a name="loadfromcontext-mda"></a>loadFromContext MDA
 `loadFromContext` MDA(관리 디버깅 도우미)는 어셈블리가 `LoadFrom` 컨텍스트에 로드되면 활성화됩니다. 이 상황은 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>을 호출하거나 비슷한 메서드를 호출한 결과 발생할 수 있습니다.  
@@ -28,11 +28,11 @@ ms.locfileid: "59098613"
 ## <a name="resolution"></a>해결  
  더 이상 <xref:System.Reflection.Assembly.LoadFrom%2A>을 호출하지 않아도 되도록 애플리케이션을 구성합니다. 이 작업을 수행할 때 다음 기술을 사용할 수 있습니다.  
   
--   전역 어셈블리 캐시에 어셈블리 설치  
+- 전역 어셈블리 캐시에 어셈블리 설치  
   
--   <xref:System.AppDomain>의 <xref:System.AppDomainSetup.ApplicationBase%2A> 디렉터리에 어셈블리를 둡니다. 기본 도메인의 경우 <xref:System.AppDomainSetup.ApplicationBase%2A> 디렉터리에 프로세스를 시작하는 실행 파일이 포함되어 있습니다. 어셈블리를 쉽게 이동할 수 없는 경우 새로운 <xref:System.AppDomain>을 만들어야 할 수도 있습니다.  
+- <xref:System.AppDomain>의 <xref:System.AppDomainSetup.ApplicationBase%2A> 디렉터리에 어셈블리를 둡니다. 기본 도메인의 경우 <xref:System.AppDomainSetup.ApplicationBase%2A> 디렉터리에 프로세스를 시작하는 실행 파일이 포함되어 있습니다. 어셈블리를 쉽게 이동할 수 없는 경우 새로운 <xref:System.AppDomain>을 만들어야 할 수도 있습니다.  
   
--   종속 어셈블리가 실행 파일과 관련된 하위 디렉터리에 있는 경우 보조 애플리케이션 도메인 또는 애플리케이션 구성(.config) 파일에 검색 경로를 추가합니다.  
+- 종속 어셈블리가 실행 파일과 관련된 하위 디렉터리에 있는 경우 보조 애플리케이션 도메인 또는 애플리케이션 구성(.config) 파일에 검색 경로를 추가합니다.  
   
  각각의 경우 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 메서드를 사용하도록 코드를 변경할 수 있습니다.  
   

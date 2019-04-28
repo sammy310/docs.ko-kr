@@ -10,17 +10,17 @@ ms.assetid: 7d90ea7a-150f-4f97-98a7-f9c26541b9a3
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5bab707afb059d4fcbd46a9ee54edead991be523
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754221"
 ---
 # <a name="making-an-image-easier-to-debug-in-net"></a>이미지를 보다 쉽게.NET에서 디버그
 
 비관리 코드를 컴파일할 때 IDE 스위치 또는 명령줄 옵션을 설정하여 디버깅할 실행 가능 이미지를 구성할 수 있습니다. 예를 들어 Visual C++에서 /**Zi** 명령줄 옵션을 사용하여 디버그 기호 파일(확장 확장자는 .pdb)을 생성하도록 요청할 수 있습니다. 마찬가지로 /**Od** 명령줄 옵션을 사용하면 최적화를 사용하지 않게 설정하도록 컴파일러에 지시합니다. 결과 코드는 더 느리게 실행 이지만 쉽게 디버깅을 수행할 수 있습니다.
 
-.NET 컴파일 관리 코드를 하는 경우 Visual c + +, Visual Basic 및 C# 같은 컴파일러 MSIL (Microsoft intermediate language) 소스 프로그램을 컴파일합니다. 그런 다음 MSIL이 JIT 컴파일된 네이티브 기계어 코드로 실행 직전. 비관리 코드와 함께 IDE 스위치 또는 명령줄 옵션을 설정하여 디버깅할 실행 가능 이미지를 구성할 수 있습니다. 또한 동일한 방식으로 디버깅을 위해 JIT 컴파일을 구성할 수 있습니다.
+관리 코드, 시각적 개체와 같은 컴파일러.NET Framework를 컴파일할 때 C++, Visual Basic 및 C# MSIL (Microsoft intermediate language)로 소스 프로그램을 컴파일합니다. 그런 다음 MSIL이 JIT 컴파일된 네이티브 기계어 코드로 실행 직전. 비관리 코드와 함께 IDE 스위치 또는 명령줄 옵션을 설정하여 디버깅할 실행 가능 이미지를 구성할 수 있습니다. 또한 동일한 방식으로 디버깅을 위해 JIT 컴파일을 구성할 수 있습니다.
 
 JIT 구성에는 두 가지 요소가 있습니다.
 

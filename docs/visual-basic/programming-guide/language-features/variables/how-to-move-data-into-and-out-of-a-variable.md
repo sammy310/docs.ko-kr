@@ -6,11 +6,11 @@ helpviewer_keywords:
 - variables [Visual Basic], storing data
 ms.assetid: 93744f46-bf78-4fa0-9640-1de01bc38d9a
 ms.openlocfilehash: 30d1c0ab91724ac556e59b272782513ee8b8067b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756600"
 ---
 # <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>방법: 및 변수 (Visual Basic) 외부로 데이터 이동
 대입문의 왼쪽에 변수 이름을 입력 하 여 변수에 값을 저장 합니다.  
@@ -19,7 +19,7 @@ ms.locfileid: "58818541"
   
 #### <a name="to-store-a-value-in-a-variable"></a>변수에 값을 저장 하려면  
   
--   대입문의 왼쪽에 변수 이름을 사용 합니다.  
+- 대입문의 왼쪽에 변수 이름을 사용 합니다.  
   
      변수의 값을 설정 하는 다음 예제에서는 `alpha`합니다.  
   
@@ -34,11 +34,11 @@ ms.locfileid: "58818541"
   
 #### <a name="to-retrieve-a-value-from-a-variable"></a>변수에서 값을 검색 하려면  
   
--   식에서 변수 이름을 사용 합니다. 변수를 사용할 수 있습니다 어디에서 사용할 수 있습니다 상수 또는 리터럴, 제외 하 고 상수 값을 정의 하는 식입니다.  
+- 식에서 변수 이름을 사용 합니다. 변수를 사용할 수 있습니다 어디에서 사용할 수 있습니다 상수 또는 리터럴, 제외 하 고 상수 값을 정의 하는 식입니다.  
   
      또는  
   
--   등호 다음 변수 이름을 사용 하 여 (`=`) 대입문에 로그인 합니다.  
+- 등호 다음 변수 이름을 사용 하 여 (`=`) 대입문에 로그인 합니다.  
   
      다음 예에서는 변수 값을 읽고 `startValue` 다음 변수의 값을 사용 하 여 `counter` 식에 있습니다.  
   

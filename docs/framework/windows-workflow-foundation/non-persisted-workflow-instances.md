@@ -3,27 +3,27 @@ title: 비지속형 워크플로 인스턴스
 ms.date: 03/30/2017
 ms.assetid: 5e01af77-6b14-4964-91a5-7dfd143449c0
 ms.openlocfilehash: 410451f0dfeb91111e77634245aa786c4afc5b04
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644267"
 ---
 # <a name="non-persisted-workflow-instances"></a>비지속형 워크플로 인스턴스
 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>에 상태를 유지하는 워크플로의 새 인스턴스가 만들어지면 서비스 호스트에서는 인스턴스 저장소에 해당 서비스에 대한 항목을 만듭니다. 이후 워크플로 인스턴스가 처음으로 유지될 때 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>는 현재 인스턴스 상태를 저장합니다. 워크플로가 Windows Process Activation Service에서 호스트되는 경우에는 인스턴스가 처음으로 유지될 때 서비스 배포 데이터도 인스턴스 저장소에 기록됩니다.  
   
- 에 워크플로 인스턴스가 유지 되지으로 **비지속형** 상태입니다. 이 상태에 있는 동안에는 응용 프로그램 도메인 재활용, 호스트 오류 또는 컴퓨터 오류 후 워크플로 인스턴스를 복구할 수 없습니다.  
+ 워크플로 인스턴스가 유지 되지 않은 것으로에 **비지속형** 상태. 이 상태에 있는 동안에는 응용 프로그램 도메인 재활용, 호스트 오류 또는 컴퓨터 오류 후 워크플로 인스턴스를 복구할 수 없습니다.  
   
 ## <a name="the-non-persisted-state"></a>비지속형 상태  
  유지되지 않은 영속 워크플로 인스턴스는 다음과 같은 경우에 비지속형 상태로 남아 있습니다.  
   
--   워크플로 인스턴스가 처음으로 유지되기 전에 서비스 호스트에서 충돌이 발생한 경우. 워크플로 인스턴스가 인스턴스 저장소에 남아 있고 복구되지 않습니다. 상관 관계 메시지가 도착하면 워크플로 인스턴스가 다시 활성화됩니다.  
+- 워크플로 인스턴스가 처음으로 유지되기 전에 서비스 호스트에서 충돌이 발생한 경우. 워크플로 인스턴스가 인스턴스 저장소에 남아 있고 복구되지 않습니다. 상관 관계 메시지가 도착하면 워크플로 인스턴스가 다시 활성화됩니다.  
   
--   워크플로 인스턴스가 처음으로 유지되기 전에 워크플로 인스턴스에서 예외가 발생한 경우. 반환되는 <xref:System.Activities.UnhandledExceptionAction>에 따라 다음과 같은 시나리오가 발생합니다.  
+- 워크플로 인스턴스가 처음으로 유지되기 전에 워크플로 인스턴스에서 예외가 발생한 경우. 반환되는 <xref:System.Activities.UnhandledExceptionAction>에 따라 다음과 같은 시나리오가 발생합니다.  
   
-    -   <xref:System.Activities.UnhandledExceptionAction>이 <xref:System.Activities.UnhandledExceptionAction.Abort>로 설정된 경우: 예외가 발생하면 서비스 배포 정보가 인스턴스 저장소에 기록되고 워크플로 인스턴스가 메모리에서 언로드됩니다. 워크플로 인스턴스는 비지속형 상태로 남아 있으며 다시 로드될 수 없습니다.  
+    - <xref:System.Activities.UnhandledExceptionAction> 로 설정 된 <xref:System.Activities.UnhandledExceptionAction.Abort>: 예외가 발생 하는 경우 서비스 배포 정보가 인스턴스 저장소에 기록 됩니다 하 고 워크플로 인스턴스가 메모리에서 언로드 되었습니다. 워크플로 인스턴스는 비지속형 상태로 남아 있으며 다시 로드될 수 없습니다.  
   
-    -   <xref:System.Activities.UnhandledExceptionAction>이 <xref:System.Activities.UnhandledExceptionAction.Cancel> 또는 <xref:System.Activities.UnhandledExceptionAction.Terminate>로 설정된 경우: 예외가 발생하면 서비스 배포 정보가 인스턴스 저장소에 기록되고 활동 인스턴스 상태가 <xref:System.Activities.ActivityInstanceState.Closed>로 설정됩니다.  
+    - <xref:System.Activities.UnhandledExceptionAction> 로 설정 되어 <xref:System.Activities.UnhandledExceptionAction.Cancel> 또는 <xref:System.Activities.UnhandledExceptionAction.Terminate>: 예외가 발생 하는, 서비스 배포 정보가 인스턴스 저장소에 기록 되 고 활동 인스턴스 상태 설정 된 경우 <xref:System.Activities.ActivityInstanceState.Closed>합니다.  
   
  언로드된 비지속형 워크플로 인스턴스가 발생하는 위험을 최소화하려면 수명 주기의 초기에 워크플로를 유지하는 것이 좋습니다.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "33516752"
   
  SQL 워크플로 인스턴스 저장소에서 비지속형 인스턴스를 찾으려면 다음 SQL 쿼리를 사용할 수 있습니다.  
   
--   이 쿼리는 유지되지 않은 모든 인스턴스를 찾고 인스턴스의 ID와 만든 시간(UTC 시간으로 저장됨)을 반환합니다.  
+- 이 쿼리는 유지되지 않은 모든 인스턴스를 찾고 인스턴스의 ID와 만든 시간(UTC 시간으로 저장됨)을 반환합니다.  
   
     ```sql  
     select InstanceId, CreationTime   
@@ -42,7 +42,7 @@ ms.locfileid: "33516752"
         where IsInitialized = 0  
     ```  
   
--   이 쿼리는 유지되지 않고 로드되지 않은 모든 인스턴스를 찾고 인스턴스의 ID와 만든 시간(UTC 시간으로 저장됨)을 반환합니다.  
+- 이 쿼리는 유지되지 않고 로드되지 않은 모든 인스턴스를 찾고 인스턴스의 ID와 만든 시간(UTC 시간으로 저장됨)을 반환합니다.  
   
     ```sql  
     select InstanceId, CreationTime   
@@ -51,7 +51,7 @@ ms.locfileid: "33516752"
             and CurrentMachine is NULL  
     ```  
   
--   이 쿼리는 유지되지 않은 모든 일시 중단된 인스턴스를 찾고 인스턴스의 ID, 만든 시간(UTC 시간으로 저장됨), 일시 중단 이유 및 예외 이름을 반환합니다.  
+- 이 쿼리는 유지되지 않은 모든 일시 중단된 인스턴스를 찾고 인스턴스의 ID, 만든 시간(UTC 시간으로 저장됨), 일시 중단 이유 및 예외 이름을 반환합니다.  
   
     ```sql  
     select InstanceId, CreationTime, SuspensionReason, SuspensionExceptionName   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - camera direction [WPF], animating with key frames
 ms.assetid: 5753024e-0057-454d-947f-43ea686879c7
 ms.openlocfilehash: 44464cc314d649516998338e36c1b523101ac4e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59346082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651339"
 ---
 # <a name="how-to-animate-camera-position-and-direction-using-key-frames"></a>방법: 키 프레임을 사용하여 카메라 위치 및 방향에 애니메이션 효과 주기
 다음 예에서 <xref:System.Windows.Media.Animation.Point3DAnimationUsingKeyFrames> 위치에 애니메이션을 적용 하는 데 사용 되는 <xref:System.Windows.Media.Media3D.PerspectiveCamera> 3D 장면에서. 또한 <xref:System.Windows.Media.Animation.Vector3DAnimationUsingKeyFrames> 3D 장면에서 카메라 가리키고 방향에 애니메이션을 적용 하는 데 사용 됩니다. 이러한 애니메이션은 둘 다 다양 한 애니메이션 효과 만드는 몇 가지 키 프레임을 사용 합니다.  

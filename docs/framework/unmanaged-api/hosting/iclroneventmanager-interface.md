@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7486a094deab16ebbc05f19f1b652126479ce11c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638582"
 ---
 # <a name="iclroneventmanager-interface"></a>ICLROnEventManager 인터페이스
 등록 및 공용 언어 런타임 (CLR) 이벤트에 대 한 콜백을 등록 호스트를 사용할 수 있는 메서드를 제공 합니다.  

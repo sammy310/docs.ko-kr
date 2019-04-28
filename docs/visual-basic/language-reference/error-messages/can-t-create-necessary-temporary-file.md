@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID322
 ms.assetid: 53617b5b-eb06-4188-b4c2-8607cb9fbc79
 ms.openlocfilehash: 658c2ab1dc210bf472646bce529ae5ffd7f67bc5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649987"
 ---
 # <a name="cant-create-necessary-temporary-file"></a>필요한 임시 파일을 만들 수 없습니다.
 드라이브가 꽉 TEMP 환경 변수로 지정 된 디렉터리를 포함 하는 또는 TEMP 환경 변수는 유효 하지 않거나 읽기 전용 드라이브 또는 디렉터리를 지정 합니다.  

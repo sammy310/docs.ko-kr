@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f83b9796bb692ce234a03c596387960bd879ebf3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763739"
 ---
 # <a name="icordebugstepper-interface"></a>ICorDebugStepper 인터페이스
 디버거에서 수행하는 코드 실행 단계를 나타내며, 명령의 실행/완료를 구분하는 식별자로 사용되고, 단계를 취소하는 방법을 제공합니다.  
@@ -42,11 +42,11 @@ ms.locfileid: "59212520"
 ## <a name="remarks"></a>설명  
  `ICorDebugStepper` 인터페이스에는 다음 용도로 사용 됩니다.  
   
--   발급 한 단계 명령 및 해당 명령의 완료를 구분 하는 식별자로 작동 합니다.  
+- 발급 한 단계 명령 및 해당 명령의 완료를 구분 하는 식별자로 작동 합니다.  
   
--   수행할 수 있는 모든 단계별 실행을 캡슐화 하는 중앙 인터페이스를 제공 합니다.  
+- 수행할 수 있는 모든 단계별 실행을 캡슐화 하는 중앙 인터페이스를 제공 합니다.  
   
--   중간 단계별 실행 작업을 취소 하는 방법을 제공 합니다.  
+- 중간 단계별 실행 작업을 취소 하는 방법을 제공 합니다.  
   
  스레드당 둘 이상의 스텝 퍼 있을 수 있습니다. 예를 들어, 함수, 프로시저 단위 실행 하는 동안 중단점에 도달할 수 있습니다 하 고 사용자는 해당 함수 내에서 새 단계별 실행 작업을 시작 하려고 합니다. 디버거가이 상황을 처리 하는 방법을 결정 됩니다. 디버거 원래 단계별 실행 작업을 취소 하거나 두 작업을 중첩 해야 합니다. `ICorDebugStepper` 인터페이스에서 모두 선택 항목을 지원 합니다.  
   

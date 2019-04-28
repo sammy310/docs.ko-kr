@@ -3,11 +3,11 @@ title: <localClientSettings> 요소
 ms.date: 03/30/2017
 ms.assetid: 4680ace5-f4e1-4fcb-b9d8-a4a4af5cd7ae
 ms.openlocfilehash: c5caf183e37edda6efc79ec81f1628180379fd46
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765780"
 ---
 # <a name="localclientsettings-element"></a>\<localClientSettings > 요소
 이 바인딩에 대한 로컬 클라이언트의 보안 설정을 지정합니다.  

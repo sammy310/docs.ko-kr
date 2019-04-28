@@ -6,11 +6,11 @@ helpviewer_keywords:
 - menus
 ms.assetid: e361bf98-eed8-4ed3-9dfb-5a2e865e3ce6
 ms.openlocfilehash: 9d3956c10467e80f370188138d6c50b39986ba76
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723006"
 ---
 # <a name="menustrip-control-windows-forms"></a>MenuStrip 컨트롤(Windows Forms)
 이 컨트롤은 응용 프로그램 명령을 그룹화하고 더 쉽게 액세스할 수 있도록 설정합니다.  
@@ -44,12 +44,10 @@ ms.locfileid: "57707588"
  다양한 방법으로 확인 및 이미지 여백 속성을 설정하여 <xref:System.Windows.Forms.MenuStrip>을 사용자 지정하는 방법을 설명합니다.  
   
  [방법: 폼에 표준 메뉴 항목 제공](how-to-provide-standard-menu-items-to-a-form.md)  
- 
-  <xref:System.Windows.Forms.MenuStrip> 컨트롤을 사용하여 표준 메뉴가 포함된 폼을 만드는 방법을 설명합니다.  
+ <xref:System.Windows.Forms.MenuStrip> 컨트롤을 사용하여 표준 메뉴가 포함된 폼을 만드는 방법을 설명합니다.  
   
  [방법: MenuStrip에 옵션 단추 표시](how-to-display-option-buttons-in-a-menustrip-windows-forms.md)  
- 
-  <xref:System.Windows.Forms.ToolStripMenuItem>에서 옵션 단추(또는 라디오 단추) 동작을 구현하는 방법을 설명합니다.  
+ <xref:System.Windows.Forms.ToolStripMenuItem>에서 옵션 단추(또는 라디오 단추) 동작을 구현하는 방법을 설명합니다.  
   
  [Windows Forms MenuStrip 컨트롤의 메뉴 항목 병합](merging-menu-items-in-the-windows-forms-menustrip-control.md)  
  메뉴 병합에 대한 일반적인 개념과 메서드를 설명합니다.  
@@ -57,19 +55,19 @@ ms.locfileid: "57707588"
  [방법: MDI 응용 프로그램의 자동 메뉴 병합 설정](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)  
  런타임에 자동으로 메뉴 항목을 병합하는 방법을 설명합니다.  
   
--   [MenuStrip 항목 컬렉션 편집기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
+- [MenuStrip 항목 컬렉션 편집기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
   
--   [방법: ToolStripMenuItems 복사](how-to-copy-toolstripmenuitems.md)  
+- [방법: ToolStripMenuItems 복사](how-to-copy-toolstripmenuitems.md)  
   
--   [방법: 디자이너를 사용 하 여 ToolStripMenuItems 숨기기](how-to-hide-toolstripmenuitems-using-the-designer.md)  
+- [방법: 디자이너를 사용 하 여 ToolStripMenuItems 숨기기](how-to-hide-toolstripmenuitems-using-the-designer.md)  
   
--   [방법: 디자이너를 사용 하 여 ToolStripMenuItems를 사용 하지 않도록 설정](how-to-disable-toolstripmenuitems-using-the-designer.md)  
+- [방법: 디자이너를 사용 하 여 ToolStripMenuItems를 사용 하지 않도록 설정](how-to-disable-toolstripmenuitems-using-the-designer.md)  
   
--   [방법: ToolStripMenuItems 이동](how-to-move-toolstripmenuitems.md)  
+- [방법: ToolStripMenuItems 이동](how-to-move-toolstripmenuitems.md)  
   
--   [연습: 폼에 표준 메뉴 항목 제공](walkthrough-providing-standard-menu-items-to-a-form.md)  
+- [연습: 폼에 표준 메뉴 항목 제공](walkthrough-providing-standard-menu-items-to-a-form.md)  
   
--   [MenuStrip 작업 대화 상자](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
+- [MenuStrip 작업 대화 상자](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Forms.MenuStrip>  
@@ -79,8 +77,7 @@ ms.locfileid: "57707588"
  바로 가기 메뉴를 나타내는 <xref:System.Windows.Forms.ContextMenuStrip> 기능을 설명합니다.  
   
  <xref:System.Windows.Forms.ToolStripMenuItem>  
- 
-  <xref:System.Windows.Forms.MenuStrip> 또는 <xref:System.Windows.Forms.ContextMenuStrip>에 표시된 선택 가능한 옵션을 나타내는 <xref:System.Windows.Forms.ToolStripMenuItem> 클래스의 기능을 설명합니다.  
+ <xref:System.Windows.Forms.MenuStrip> 또는 <xref:System.Windows.Forms.ContextMenuStrip>에 표시된 선택 가능한 옵션을 나타내는 <xref:System.Windows.Forms.ToolStripMenuItem> 클래스의 기능을 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
  [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)  

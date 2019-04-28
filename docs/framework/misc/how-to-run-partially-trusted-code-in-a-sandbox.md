@@ -11,11 +11,11 @@ ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: caa9afcb1ab2ca53bba849c39651ca4cba3a9c77
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752973"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>방법: 샌드박스에서 부분적으로 신뢰할 수 있는 코드 실행
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -92,15 +92,15 @@ AppDomain.CreateDomain( string friendlyName,
   
      추가 정보:  
   
-    -   이는 <xref:System.Security.PermissionSet>을 매개 변수로 사용하는 <xref:System.AppDomain.CreateDomain%2A> 메서드의 유일한 오버로드이므로 부분 신뢰 설정에서 응용 프로그램을 로드하도록 하는 유일한 오버로드입니다.  
+    - 이는 <xref:System.Security.PermissionSet>을 매개 변수로 사용하는 <xref:System.AppDomain.CreateDomain%2A> 메서드의 유일한 오버로드이므로 부분 신뢰 설정에서 응용 프로그램을 로드하도록 하는 유일한 오버로드입니다.  
   
-    -   `evidence` 매개 변수는 권한 집합을 계산하는 데 사용되지 않으며, .NET Framework의 기타 기능을 통한 식별에 사용됩니다.  
+    - `evidence` 매개 변수는 권한 집합을 계산하는 데 사용되지 않으며, .NET Framework의 기타 기능을 통한 식별에 사용됩니다.  
   
-    -   `info` 매개 변수의 <xref:System.AppDomainSetup.ApplicationBase%2A> 속성의 설정은 이 오버로드에 대해 필수입니다.  
+    - `info` 매개 변수의 <xref:System.AppDomainSetup.ApplicationBase%2A> 속성의 설정은 이 오버로드에 대해 필수입니다.  
   
-    -   `fullTrustAssemblies` 매개 변수에는 <xref:System.Security.Policy.StrongName> 배열을 만드는 데 필요하지 않음을 의미하는 `params` 키워드가 있습니다. 0, 1 또는 더 강력한 이름을 매개 변수로 전달할 수 있습니다.  
+    - `fullTrustAssemblies` 매개 변수에는 <xref:System.Security.Policy.StrongName> 배열을 만드는 데 필요하지 않음을 의미하는 `params` 키워드가 있습니다. 0, 1 또는 더 강력한 이름을 매개 변수로 전달할 수 있습니다.  
   
-    -   응용 프로그램 도메인을 만드는 코드는 다음과 같습니다.  
+    - 응용 프로그램 도메인을 만드는 코드는 다음과 같습니다.  
   
     ```csharp
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
@@ -108,15 +108,15 @@ AppDomain.CreateDomain( string friendlyName,
   
 5. 직접 만든 샌드박싱 <xref:System.AppDomain>에 코드를 로드합니다. 이 작업은 다음 두 가지 방법으로 수행할 수 있습니다.  
   
-    -   어셈블리에 대한 <xref:System.AppDomain.ExecuteAssembly%2A> 메서드를 호출합니다.  
+    - 어셈블리에 대한 <xref:System.AppDomain.ExecuteAssembly%2A> 메서드를 호출합니다.  
   
-    -   <xref:System.Activator.CreateInstanceFrom%2A> 메서드를 사용하여 <xref:System.MarshalByRefObject>에서 파생된 클래스의 인스턴스를 새 <xref:System.AppDomain>에서 만듭니다.  
+    - <xref:System.Activator.CreateInstanceFrom%2A> 메서드를 사용하여 <xref:System.MarshalByRefObject>에서 파생된 클래스의 인스턴스를 새 <xref:System.AppDomain>에서 만듭니다.  
   
      새 <xref:System.AppDomain> 인스턴스에 매개 변수를 전달하는 것이 더 간편하므로 두 번째 방법을 사용하는 것이 좋습니다. <xref:System.Activator.CreateInstanceFrom%2A> 메서드는 다음 두 가지 중요 기능을 제공합니다.  
   
-    -   어셈블리가 포함되지 않은 위치를 가리키는 코드베이스를 사용할 수 있습니다.  
+    - 어셈블리가 포함되지 않은 위치를 가리키는 코드베이스를 사용할 수 있습니다.  
   
-    -   중요 클래스의 인스턴스를 만들 수 있는 완전 신뢰(<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>)의 경우 <xref:System.Security.CodeAccessPermission.Assert%2A> 아래에서 만들기를 수행할 수 있습니다. (이 상황은 어셈블리에 투명도 표시가 없고 어셈블리가 완전 신뢰된 코드로 로드될 때마다 발생합니다.) 따라서 이 함수로 신뢰하는 코드만 만들도록 주의해야 하고 새 응용 프로그램 도메인에서 완전히 신뢰할 수 있는 클래스의 인스턴스만 만드는 것이 좋습니다.  
+    - 중요 클래스의 인스턴스를 만들 수 있는 완전 신뢰(<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>)의 경우 <xref:System.Security.CodeAccessPermission.Assert%2A> 아래에서 만들기를 수행할 수 있습니다. (이 상황은 어셈블리에 투명도 표시가 없고 어셈블리가 완전 신뢰된 코드로 로드될 때마다 발생합니다.) 따라서 이 함수로 신뢰하는 코드만 만들도록 주의해야 하고 새 응용 프로그램 도메인에서 완전히 신뢰할 수 있는 클래스의 인스턴스만 만드는 것이 좋습니다.  
   
     ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  

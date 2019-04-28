@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1baeac5db41aa64380d694ebab5419229d8adb4c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763544"
 ---
 # <a name="iclrtask-interface"></a>ICLRTask 인터페이스
 호스트는 CLR (공용 언어 런타임)을 요청 하거나 알림 연결 된 작업에 대 한 CLR에 제공 하는 데 사용할 수 있는 메서드를 제공 합니다.  

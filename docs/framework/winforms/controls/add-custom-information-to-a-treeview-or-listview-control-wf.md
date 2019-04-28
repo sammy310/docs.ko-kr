@@ -14,18 +14,18 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
 ms.openlocfilehash: 302eb1b88d4e43b4e2bd6395e27a3a6489320085
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640397"
 ---
 # <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>방법: TreeView 또는 ListView 컨트롤에 사용자 지정 정보 추가(Windows Forms)
 Windows Forms에서 파생 된 노드를 만들 수 있습니다 <xref:System.Windows.Forms.TreeView> 컨트롤 또는에서 파생된 된 항목을 <xref:System.Windows.Forms.ListView> 제어 합니다. 파생은 필드를 처리하는 사용자 지정 메서드 및 생성자뿐만 아니라 필요로 하는 모든 필드를 추가할 수 있습니다. 이 기능을 사용하여 각 트리 노드 또는 목록 항목에 고객 개체를 연결합니다. 여기에 있는 예제는 한 <xref:System.Windows.Forms.TreeView> 컨트롤 이지만 동일한 접근 방식을 사용할 수 있습니다는 <xref:System.Windows.Forms.ListView> 제어 합니다.  
   
 ### <a name="to-derive-a-tree-node"></a>트리 노드를 파생하려면  
   
--   파생 된 새 노드 클래스를 만들기는 <xref:System.Windows.Forms.TreeNode> 파일 경로 기록 하는 사용자 지정 필드가 있는 클래스입니다.  
+- 파생 된 새 노드 클래스를 만들기는 <xref:System.Windows.Forms.TreeNode> 파일 경로 기록 하는 사용자 지정 필드가 있는 클래스입니다.  
   
     ```vb  
     Class myTreeNode  

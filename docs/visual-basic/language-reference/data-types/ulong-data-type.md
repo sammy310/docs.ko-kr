@@ -17,11 +17,11 @@ helpviewer_keywords:
 - UL literal type characters [Visual Basic]
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
 ms.openlocfilehash: 82a2badc1bb22a55f753c9075562db3a5ee0d234
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747080"
 ---
 # <a name="ulong-data-type-visual-basic"></a>ULong 데이터 형식 (Visual Basic)
 
@@ -64,19 +64,19 @@ Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
 
 ## <a name="programming-tips"></a>프로그래밍 팁
   
--   **음수를 사용할 수 있습니다.** 때문에 `ULong` 부호 없는 형식에는 음수를 나타낼 수 없습니다. 단항 빼기를 사용 하는 경우 (`-`) 형식으로 계산 되는 식에 연산자 `ULong`, Visual Basic 변환 식이 `Decimal` 첫 번째입니다.  
+- **음수를 사용할 수 있습니다.** 때문에 `ULong` 부호 없는 형식에는 음수를 나타낼 수 없습니다. 단항 빼기를 사용 하는 경우 (`-`) 형식으로 계산 되는 식에 연산자 `ULong`, Visual Basic 변환 식이 `Decimal` 첫 번째입니다.  
   
--   **CLS 규격입니다.** 합니다 `ULong` 데이터 형식이 아닙니다 부분 합니다 [공용 언어 사양](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), CLS 규격 코드를 사용 하는 구성 요소를 사용할 수 없습니다 있도록 합니다.  
+- **CLS 규격입니다.** 합니다 `ULong` 데이터 형식이 아닙니다 부분 합니다 [공용 언어 사양](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), CLS 규격 코드를 사용 하는 구성 요소를 사용할 수 없습니다 있도록 합니다.  
   
--   **Interop 고려 사항입니다.** 예제에서는 자동화 개체나 COM 개체에 대 한.NET Framework 용으로 작성 되지 구성 요소와 상호 작용 하는 경우와 같은 형식은 있음을 염두에 둡니다 `ulong` 다른 환경에서 다른 데이터 너비 (32 비트)를 가질 수 있습니다. 이러한 구성 요소는 32 비트 인수를 전달 하는 경우로 선언 `UInteger` 대신 `ULong` 관리 되는 Visual Basic 코드에서.  
+- **Interop 고려 사항입니다.** 예제에서는 자동화 개체나 COM 개체에 대 한.NET Framework 용으로 작성 되지 구성 요소와 상호 작용 하는 경우와 같은 형식은 있음을 염두에 둡니다 `ulong` 다른 환경에서 다른 데이터 너비 (32 비트)를 가질 수 있습니다. 이러한 구성 요소는 32 비트 인수를 전달 하는 경우로 선언 `UInteger` 대신 `ULong` 관리 되는 Visual Basic 코드에서.  
   
      또한 자동화는 Windows 95, Windows 98, Windows ME 또는 Windows 2000에 64 비트 정수를 지원 하지 않습니다. Visual Basic을 전달할 수 없습니다 `ULong` 이러한 플랫폼에서 자동화 구성 요소에는 인수입니다.  
   
--   **확대 합니다.** 합니다 `ULong` 데이터 형식으로 확장 되는지를 `Decimal`를 `Single`, 및 `Double`합니다. 즉, 변환할 수 있습니다 `ULong` 발생 없이 이러한 형식 중 하나에 <xref:System.OverflowException?displayProperty=nameWithType> 오류입니다.  
+- **확대 합니다.** 합니다 `ULong` 데이터 형식으로 확장 되는지를 `Decimal`를 `Single`, 및 `Double`합니다. 즉, 변환할 수 있습니다 `ULong` 발생 없이 이러한 형식 중 하나에 <xref:System.OverflowException?displayProperty=nameWithType> 오류입니다.  
   
--   **형식 문자입니다.** 리터럴 형식 문자를 추가 `UL` 리터럴에 리터럴에 `ULong` 데이터 형식입니다. `ULong` 에 식별자 형식 문자가 없습니다.
+- **형식 문자입니다.** 리터럴 형식 문자를 추가 `UL` 리터럴에 리터럴에 `ULong` 데이터 형식입니다. `ULong` 에 식별자 형식 문자가 없습니다.
   
--   **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.UInt64?displayProperty=nameWithType> 구조체입니다.  
+- **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.UInt64?displayProperty=nameWithType> 구조체입니다.  
   
 ## <a name="see-also"></a>참고자료
 

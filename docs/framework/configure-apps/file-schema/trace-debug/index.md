@@ -2,21 +2,15 @@
 title: 추적 및 디버그 설정 스키마
 ms.date: 03/30/2017
 helpviewer_keywords:
-- tracing [.NET Framework], trace and debug settings schema
-- configuration schema [.NET Framework], trace and debug settings
-- configuration settings [.NET Framework], tracing
-- schema configuration settings
-- configuration settings [.NET Framework], debugging
-- trace listeners, trace and debug settings schema
-- configuration sections [.NET Framework]
-- elements [.NET Framework], trace and debug settings
+  - 'tracing [.NET Framework], trace and debug settings schema'
+  - 'configuration schema [.NET Framework], trace and debug settings'
+  - 'configuration settings [.NET Framework], tracing'
+  - schema configuration settings
+  - 'configuration settings [.NET Framework], debugging'
+  - 'trace listeners, trace and debug settings schema'
+  - 'configuration sections [.NET Framework]'
+  - 'elements [.NET Framework], trace and debug settings'
 ms.assetid: 277ca5f6-e1c4-41b6-a47f-3a67ce5b94ac
-ms.openlocfilehash: 79054ba450dcab1a18562aaadd71b9171896c1e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59177439"
 ---
 # <a name="trace-and-debug-settings-schema"></a>추적 및 디버그 설정 스키마
 추적 및 디버그 설정은 메시지를 수집하고 저장하고 라우팅하는 추적 수신기를 지정하며, 추적 스위치가 설정되는 수준을 지정합니다.  

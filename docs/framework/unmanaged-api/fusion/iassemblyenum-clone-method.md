@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3a16717de7c109261e73f3a41fa07e9c0d86ee72
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697461"
 ---
 # <a name="iassemblyenumclone-method"></a>IAssemblyEnum::Clone 메서드
 이 항목의 단순 복사본을 만듭니다 [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) 개체입니다.  

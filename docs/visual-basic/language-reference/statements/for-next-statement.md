@@ -24,11 +24,11 @@ helpviewer_keywords:
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
 ms.openlocfilehash: 5d47d57b75005d5c13dbf8633981dfb2d57d3e90
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638063"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next 문(Visual Basic)
 문 그룹을 지정한 횟수 만큼을 반복합니다.  
@@ -98,11 +98,11 @@ Next [ counter ]
   
  `Exit For` 몇 가지 조건을 평가한 후에 자주 사용 됩니다 (예는 `If`... `Then`... `Else` 구조). 사용 하려는 `Exit For` 다음 조건에 대 한 합니다.  
   
--   계속 반복은 불필요 하거나 불가능 합니다. 잘못 된 값 이나 종료 요청을이 조건을 만들 수 있습니다.  
+- 계속 반복은 불필요 하거나 불가능 합니다. 잘못 된 값 이나 종료 요청을이 조건을 만들 수 있습니다.  
   
--   `Try`... `Catch`... `Finally` 예외를 catch 하는 문입니다. 사용할 수 있습니다 `Exit For` 끝에 `Finally` 블록입니다.  
+- `Try`... `Catch`... `Finally` 예외를 catch 하는 문입니다. 사용할 수 있습니다 `Exit For` 끝에 `Finally` 블록입니다.  
   
--   대규모 또는 무한도 가능 여러 번 실행 될 수 있는 루프는 무한 루프를 해야 합니다. 이러한 상태를 발견 하는 경우 사용할 수 있습니다 `Exit For` 루프를 이스케이프 합니다. 자세한 내용은 참조 하세요. [수행 하는 중... 문이 루프](../../../visual-basic/language-reference/statements/do-loop-statement.md)합니다.  
+- 대규모 또는 무한도 가능 여러 번 실행 될 수 있는 루프는 무한 루프를 해야 합니다. 이러한 상태를 발견 하는 경우 사용할 수 있습니다 `Exit For` 루프를 이스케이프 합니다. 자세한 내용은 참조 하세요. [수행 하는 중... 문이 루프](../../../visual-basic/language-reference/statements/do-loop-statement.md)합니다.  
   
 ## <a name="technical-implementation"></a>기술 구현  
  경우는 `For`... `Next` 루프가 시작 되며, Visual Basic 조건이 `start`를 `end`, 및 `step`합니다. 이 다시 할당에만 이러한 값을 평가 하는 Visual Basic `start` 에 `counter`입니다. 문 앞 블록은 실행, Visual Basic 비교 `counter` 에 `end`입니다. 경우 `counter` 보다 큰 이미 합니다 `end` 값 (또는 더 작은 경우 `step` 음수인), `For` 루프가 종료 되 고 제어가 뒤에 오는 문으로 전달은 `Next` 문. 그렇지 않은 경우 문 블록을 실행합니다.  
@@ -137,13 +137,13 @@ Next [ counter ]
   
  데이터 형식은 `counter` 다음 형식 중 하나 여야 하는 반복의 유형을 결정 합니다.  
   
--   A `Byte`, `SByte`, `UShort`, `Short`, `UInteger`, `Integer`, `ULong`, `Long`, `Decimal`, `Single`, 또는 `Double`합니다.  
+- A `Byte`, `SByte`, `UShort`, `Short`, `UInteger`, `Integer`, `ULong`, `Long`, `Decimal`, `Single`, 또는 `Double`합니다.  
   
--   사용 하 여 선언 하는 열거자를 [Enum 문](../../../visual-basic/language-reference/statements/enum-statement.md)합니다.  
+- 사용 하 여 선언 하는 열거자를 [Enum 문](../../../visual-basic/language-reference/statements/enum-statement.md)합니다.  
   
--   `Object`입니다.  
+- `Object`입니다.  
   
--   형식 `T` 같은 연산자를 포함 위치 `B` 에서 사용할 수 있는 형식인는 `Boolean` 식입니다.  
+- 형식 `T` 같은 연산자를 포함 위치 `B` 에서 사용할 수 있는 형식인는 `Boolean` 식입니다.  
   
      `Public Shared Operator >= (op1 As T, op2 As T) As B`  
   

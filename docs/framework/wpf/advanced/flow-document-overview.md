@@ -10,11 +10,11 @@ helpviewer_keywords:
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
 ms.openlocfilehash: f8e5a7475765bffb76e7b07e81db25b4a62ae038
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703929"
 ---
 # <a name="flow-document-overview"></a>유동 문서 개요
 유동 문서는 보기와 가독성을 최적화하도록 설계되었습니다. 유동 문서는 미리 정의된 하나의 레이아웃으로 설정되는 것이 아니라, 창 크기, 디바이스 해상도 및 선택적 사용자 기본 설정 등의 런타임 변수에 따라 동적으로 콘텐츠를 조정하고 리플로우합니다. 유동 문서에서는 페이지 매김 및 열과 같은 고급 문서 기능을 제공합니다. 이 항목에서는 유동 문서의 개요와 해당 문서를 작성하는 방법을 제공합니다.  
@@ -42,13 +42,13 @@ ms.locfileid: "59303494"
   
  위의 그림에서 강조 표시 된 대로 가지 유동 문서에 기본 제공 되는 몇 가지 기능이 있습니다.
   
--   검색: 전체 문서의 전체 텍스트 검색을 수행할 수 있습니다.  
+- 검색: 전체 문서의 전체 텍스트 검색을 수행할 수 있습니다.  
   
--   보기 모드: 단일 페이지 (페이지-에-) 보기 모드를 한 번에 두 페이지 (책 읽기 형식) 보기 모드 및 연속 스크롤 (바닥이 없음) 보기 모드를 포함 하 여 원하는 보기 모드를 선택할 수 있습니다.  이러한 보기 모드에 대 한 자세한 내용은 참조 하세요. <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>합니다.  
+- 보기 모드: 단일 페이지 (페이지-에-) 보기 모드를 한 번에 두 페이지 (책 읽기 형식) 보기 모드 및 연속 스크롤 (바닥이 없음) 보기 모드를 포함 하 여 원하는 보기 모드를 선택할 수 있습니다.  이러한 보기 모드에 대 한 자세한 내용은 참조 하세요. <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>합니다.  
   
--   페이지 탐색 컨트롤: 보기 모드에서 문서 페이지를 사용 하는 경우 페이지 탐색 컨트롤 단추는 다음 페이지 (아래쪽 화살표) 또는 이전 페이지 (위쪽 화살표) 뿐만 아니라 현재 페이지 번호와 총 페이지 수에 대 한 지표를 이동할 수를 포함 합니다. 키보드 화살표 키를 사용하여 페이지 넘기기도 수행할 수 있습니다.  
+- 페이지 탐색 컨트롤: 보기 모드에서 문서 페이지를 사용 하는 경우 페이지 탐색 컨트롤 단추는 다음 페이지 (아래쪽 화살표) 또는 이전 페이지 (위쪽 화살표) 뿐만 아니라 현재 페이지 번호와 총 페이지 수에 대 한 지표를 이동할 수를 포함 합니다. 키보드 화살표 키를 사용하여 페이지 넘기기도 수행할 수 있습니다.  
   
--   확대/축소: 확대/축소 컨트롤 더하기를 클릭 하 여 또는 빼기 단추, 확대/축소 수준을 늘리거나 사용자를 각각 사용 합니다. 확대/축소 컨트롤에는 확대/축소 수준을 조정하는 슬라이더도 포함되어 있습니다. 자세한 내용은 <xref:System.Windows.Controls.FlowDocumentReader.Zoom%2A>을 참조하세요.  
+- 확대/축소: 확대/축소 컨트롤 더하기를 클릭 하 여 또는 빼기 단추, 확대/축소 수준을 늘리거나 사용자를 각각 사용 합니다. 확대/축소 컨트롤에는 확대/축소 수준을 조정하는 슬라이더도 포함되어 있습니다. 자세한 내용은 <xref:System.Windows.Controls.FlowDocumentReader.Zoom%2A>을 참조하세요.  
   
  이러한 기능은 유동 콘텐츠를 호스트하는 데 사용되는 컨트롤을 통해 수정할 수 있습니다. 다음 섹션에서는 여러 다른 컨트롤에 대해 설명합니다.  
   
@@ -75,9 +75,9 @@ ms.locfileid: "59303494"
 ## <a name="creating-flow-content"></a>유동 콘텐츠 만들기  
  유동 콘텐츠는 텍스트, 이미지, 테이블을 포함 하 여 다양 한 요소로 구성 된 복잡 하 고도 수 <xref:System.Windows.UIElement> 컨트롤과 같은 클래스를 파생 합니다. 복합 유동 콘텐츠를 만드는 방법을 파악하려면 다음 사항의 중요합니다.  
   
--   **유동 관련 클래스**: 유동 콘텐츠에 사용 되는 각 클래스에는 특정 용도가 있습니다. 또한 유동 클래스 사이의 계층 구조 관계를 파악하면 클래스 사용 방식을 이해할 수 있습니다. 예를 들어에서 파생 된 클래스는 <xref:System.Windows.Documents.Block> 클래스는 클래스에서 파생 되는 동안 다른 개체를 포함 하는 데 사용 됩니다 <xref:System.Windows.Documents.Inline> 표시 되는 개체를 포함 합니다.  
+- **유동 관련 클래스**: 유동 콘텐츠에 사용 되는 각 클래스에는 특정 용도가 있습니다. 또한 유동 클래스 사이의 계층 구조 관계를 파악하면 클래스 사용 방식을 이해할 수 있습니다. 예를 들어에서 파생 된 클래스는 <xref:System.Windows.Documents.Block> 클래스는 클래스에서 파생 되는 동안 다른 개체를 포함 하는 데 사용 됩니다 <xref:System.Windows.Documents.Inline> 표시 되는 개체를 포함 합니다.  
   
--   **콘텐츠 스키마**: 유동 문서에는 상당한 수의 중첩된 요소가 필요할 수 있습니다. 콘텐츠 스키마는 요소 간 가능한 부모/자식 관계를 지정합니다.  
+- **콘텐츠 스키마**: 유동 문서에는 상당한 수의 중첩된 요소가 필요할 수 있습니다. 콘텐츠 스키마는 요소 간 가능한 부모/자식 관계를 지정합니다.  
   
  다음 섹션에서는 이러한 각 영역에 대해 자세히 살펴봅니다.  
   
@@ -196,19 +196,19 @@ ms.locfileid: "59303494"
   
  **Figure:**  
   
--   배치 될 수 있습니다. 페이지, 콘텐츠, 열 또는 단락에 상대적인 도킹의 가로 및 세로 앵커를 설정할 수 있습니다. 사용할 수도 있습니다 해당 <xref:System.Windows.Documents.Figure.HorizontalOffset%2A> 고 <xref:System.Windows.Documents.Figure.VerticalOffset%2A> 임의 오프셋을 지정 하는 속성입니다.  
+- 배치 될 수 있습니다. 페이지, 콘텐츠, 열 또는 단락에 상대적인 도킹의 가로 및 세로 앵커를 설정할 수 있습니다. 사용할 수도 있습니다 해당 <xref:System.Windows.Documents.Figure.HorizontalOffset%2A> 고 <xref:System.Windows.Documents.Figure.VerticalOffset%2A> 임의 오프셋을 지정 하는 속성입니다.  
   
--   둘 이상의 열에 많은 됩니다. 설정할 수 있습니다 <xref:System.Windows.Documents.Figure> 높이 및 너비를 페이지, 콘텐츠 또는 열 높이나 너비의 배수로 청구 됩니다. 페이지와 콘텐츠의 경우 1보다 큰 배수는 허용되지 않습니다. 예를 들어의 너비를 설정할 수 있습니다는 <xref:System.Windows.Documents.Figure> "0.5 페이지" 또는 "0.25 콘텐츠" 또는 "2 열"입니다. 높이와 너비를 절대 픽셀 값으로 설정할 수도 있습니다.  
+- 둘 이상의 열에 많은 됩니다. 설정할 수 있습니다 <xref:System.Windows.Documents.Figure> 높이 및 너비를 페이지, 콘텐츠 또는 열 높이나 너비의 배수로 청구 됩니다. 페이지와 콘텐츠의 경우 1보다 큰 배수는 허용되지 않습니다. 예를 들어의 너비를 설정할 수 있습니다는 <xref:System.Windows.Documents.Figure> "0.5 페이지" 또는 "0.25 콘텐츠" 또는 "2 열"입니다. 높이와 너비를 절대 픽셀 값으로 설정할 수도 있습니다.  
   
--   페이지: 경우 내에서 콘텐츠를 <xref:System.Windows.Documents.Figure> 맞지 않으면를 <xref:System.Windows.Documents.Figure>, 않습니다 렌더링 됩니다 하 고 나머지 내용을 손실 됩니다.  
+- 페이지: 경우 내에서 콘텐츠를 <xref:System.Windows.Documents.Figure> 맞지 않으면를 <xref:System.Windows.Documents.Figure>, 않습니다 렌더링 됩니다 하 고 나머지 내용을 손실 됩니다.  
   
  **Floater:**  
   
--   배치할 수 없으며 공간이 사용 가능하게 되면 렌더링됩니다. 오프셋 또는 앵커를 설정할 수 없습니다는 <xref:System.Windows.Documents.Floater>합니다.  
+- 배치할 수 없으며 공간이 사용 가능하게 되면 렌더링됩니다. 오프셋 또는 앵커를 설정할 수 없습니다는 <xref:System.Windows.Documents.Floater>합니다.  
   
--   둘 이상의 열을 조정할 수 없습니다. 기본적으로 <xref:System.Windows.Documents.Floater> 크기입니다. 에 <xref:System.Windows.Documents.Floater.Width%2A> 속성 이지만이 값은 무시 되는 한 열 너비 및 floater 보다 큰 경우 절대 픽셀 값으로 설정할 수 있는 하나의 열 크기가 있습니다. 올바른 픽셀 너비로 설정 하 여 크기를 1 개 미만의 열 수 있지만 크기 조정 되지 않으므로 열을 기준 "0.5Column"에 올바른 식이 아닙니다. <xref:System.Windows.Documents.Floater> 너비입니다. <xref:System.Windows.Documents.Floater> 높이 속성이 이며 높이 설정할 수 없습니다, 높이 내용에 따라 다릅니다.  
+- 둘 이상의 열을 조정할 수 없습니다. 기본적으로 <xref:System.Windows.Documents.Floater> 크기입니다. 에 <xref:System.Windows.Documents.Floater.Width%2A> 속성 이지만이 값은 무시 되는 한 열 너비 및 floater 보다 큰 경우 절대 픽셀 값으로 설정할 수 있는 하나의 열 크기가 있습니다. 올바른 픽셀 너비로 설정 하 여 크기를 1 개 미만의 열 수 있지만 크기 조정 되지 않으므로 열을 기준 "0.5Column"에 올바른 식이 아닙니다. <xref:System.Windows.Documents.Floater> 너비입니다. <xref:System.Windows.Documents.Floater> 높이 속성이 이며 높이 설정할 수 없습니다, 높이 내용에 따라 다릅니다.  
   
--   <xref:System.Windows.Documents.Floater> 페이지를 매깁니다. 두 개 이상의 열 높이를 확장 하는 지정 된 너비의 콘텐츠가 floater 중단 하 고 열이 고, 다음 페이지에 페이지를 매깁니다.  
+- <xref:System.Windows.Documents.Floater> 페이지를 매깁니다. 두 개 이상의 열 높이를 확장 하는 지정 된 너비의 콘텐츠가 floater 중단 하 고 열이 고, 다음 페이지에 페이지를 매깁니다.  
   
  <xref:System.Windows.Documents.Figure> 독립 실행형 콘텐츠를 넣는 크기를 제어 하려는 및 위치 지정 및이 콘텐츠는 지정된 된 크기에 맞는지 확실 합니다. <xref:System.Windows.Documents.Floater> 기본 페이지 콘텐츠와 비슷하게 하지만에서 구분 되는 자세한 자유롭게 흐르는 콘텐츠를 넣는 곳이입니다.  
   

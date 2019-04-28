@@ -8,22 +8,22 @@ helpviewer_keywords:
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
 ms.openlocfilehash: 6ec98aabd92a7a0fed11482bdf6e5e8ddc045a7e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700806"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>알고리즘 이름을 암호화 클래스에 매핑
 네 가지 방법으로 개발자는 암호화 하 여 개체를 만들 수는 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]:  
   
--   사용 하 여 개체를 만들 합니다 **새** 연산자입니다.  
+- 사용 하 여 개체를 만들 합니다 **새** 연산자입니다.  
   
--   호출 하 여 특정 암호화 알고리즘을 구현 하는 개체를 만드는 합니다 **만들기** 해당 알고리즘에 대 한 추상 클래스에서 메서드.  
+- 호출 하 여 특정 암호화 알고리즘을 구현 하는 개체를 만드는 합니다 **만들기** 해당 알고리즘에 대 한 추상 클래스에서 메서드.  
   
--   호출 하 여 특정 암호화 알고리즘을 구현 하는 개체를 만들기는 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> 메서드.  
+- 호출 하 여 특정 암호화 알고리즘을 구현 하는 개체를 만들기는 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> 메서드.  
   
--   호출 하 여 (예: 대칭 블록 암호화) 암호화 알고리즘의 클래스를 구현 하는 개체 만들기를 **만들기** 알고리즘의 해당 형식에 대 한 추상 클래스에서 메서드 (같은 <xref:System.Security.Cryptography.SymmetricAlgorithm>).  
+- 호출 하 여 (예: 대칭 블록 암호화) 암호화 알고리즘의 클래스를 구현 하는 개체 만들기를 **만들기** 알고리즘의 해당 형식에 대 한 추상 클래스에서 메서드 (같은 <xref:System.Security.Cryptography.SymmetricAlgorithm>).  
   
  예를 들어, 개발자는 바이트 집합의 SHA1 해시를 계산 합니다. <xref:System.Security.Cryptography> 네임 스페이스에는 SHA1 알고리즘, 하나의 순수 하 게 관리 되는 구현과 CryptoAPI를 래핑하는 것의 두 가지 구현이 포함 되어 있습니다. 개발자는 특정 SHA1 구현을 인스턴스화할 수도 (같은 <xref:System.Security.Cryptography.SHA1Managed>)를 호출 하 여는 **새** 연산자입니다. 그러나 SHA1 해시 알고리즘을 구현 하는 클래스와 공용 언어 런타임을 로드 하는 클래스는 중요 하지 않습니다, 경우 개발자 개체를 만들 수를 호출 하 여는 <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> 메서드. 이 메서드를 호출 **System.Security.Cryptography.CryptoConfig.CreateFromName("System.Security.Cryptography.SHA1")** 에 SHA1 해시 알고리즘의 구현을 반환 해야 합니다.  
   

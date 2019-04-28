@@ -3,11 +3,11 @@ title: 계산 식
 description: 계산을 작성 하기 위한 편리한 구문을 만드는 방법을 알아봅니다 F# 는 제어할 수 있습니다 수 사용 하 여 시퀀스 및 결합 된 바인딩과 흐름 구문이 구현 되었습니다.
 ms.date: 03/15/2019
 ms.openlocfilehash: 3c2abb5c6204309fc8d5215a53ce8af46c01d218
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766066"
 ---
 # <a name="computation-expressions"></a>계산 식
 

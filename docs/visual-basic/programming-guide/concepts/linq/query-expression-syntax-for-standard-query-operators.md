@@ -3,11 +3,11 @@ title: 표준 쿼리 연산자 (Visual Basic)에 대 한 쿼리 식 구문
 ms.date: 07/20/2015
 ms.assetid: eb978d86-d3b5-497b-95ce-a054bea8f510
 ms.openlocfilehash: bdbca93d5898e363ccf62b13231163573e2ba972
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766534"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-visual-basic"></a>표준 쿼리 연산자 (Visual Basic)에 대 한 쿼리 식 구문
 일부로 호출할 수 있도록 Visual Basic 언어 키워드 구문이 전용 자주 사용 되는 표준 쿼리 연산자 중 일부는 *쿼리 식*합니다. 쿼리 식은 *메서드 기반* 양식과는 다른, 가독성이 더 우수한 쿼리 표현 양식입니다. 쿼리 식 절은 컴파일 시간에 쿼리 메서드 호출로 변환됩니다.  

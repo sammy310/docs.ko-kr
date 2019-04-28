@@ -9,11 +9,11 @@ helpviewer_keywords:
 - visual styles [Windows Forms]
 ms.assetid: 95de9b9c-d804-405c-b2d1-49a88c1e0fe1
 ms.openlocfilehash: 7aa5208a4f378408a01a08a2f4c9dbf2edfa5243
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776144"
 ---
 # <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a>방법: 하이브리드 애플리케이션에서 비주얼 스타일 사용
 이 항목을 사용 하도록 설정 하는 방법을 보여 줍니다 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 에서 비주얼 스타일을 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 에 호스트 된 컨트롤을 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-기반 응용 프로그램.  
@@ -30,9 +30,9 @@ ms.locfileid: "59323605"
   
 2. 솔루션 탐색기에서 다음 어셈블리에 대한 참조를 추가합니다.  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
-    -   System.Windows.Forms  
+    - System.Windows.Forms  
   
 3. 도구 상자에서 두 번 클릭 합니다 <xref:System.Windows.Controls.Grid> 아이콘을를 <xref:System.Windows.Controls.Grid> 디자인 화면의 요소입니다.  
   

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
 ms.openlocfilehash: 90da8f4a2b4efeb684cbe9e5513084e6d1c6f515
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703688"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation 바인딩 개요
 바인딩에 Windows Communication Foundation (WCF) 서비스의 끝점에 연결 하는 데 필요한 통신 세부 정보를 지정 하는 데 사용 되는 개체입니다. WCF 서비스에서 각 끝점에 대해 바인딩을 올바로 지정 필요 합니다. 이 항목에서는 통신 세부 정보 바인딩을 정의 하는 바인딩, 바인딩 종류는 WCF에 포함 된 및 끝점에 대 한 바인딩을 지정할 수 있습니다 하는 방법의 요소 형식에 설명 합니다.  
@@ -32,13 +32,13 @@ ms.locfileid: "59325061"
 ## <a name="system-provided-bindings"></a>시스템 제공 바인딩  
  바인딩의 정보는 복잡할 수 있으며 일부 설정이 다른 설정과 호환되지 않을 수 있습니다. 따라서 WCF에는 시스템 제공 바인딩 집합이 포함 됩니다. 이러한 바인딩은 대부분의 응용 프로그램 요구 사항을 처리합니다. 다음 클래스는 시스템 제공 바인딩의 몇 가지 예를 나타냅니다.  
   
--   <xref:System.ServiceModel.BasicHttpBinding>: 웹 서비스에 연결 하기 위한 적절 한 바인딩 WS 따르는 HTTP 프로토콜-Basic Profile 사양을 (예를 들어, ASP.NET 웹 서비스 기반 서비스).  
+- <xref:System.ServiceModel.BasicHttpBinding>: 웹 서비스에 연결 하기 위한 적절 한 바인딩 WS 따르는 HTTP 프로토콜-Basic Profile 사양을 (예를 들어, ASP.NET 웹 서비스 기반 서비스).  
   
--   <xref:System.ServiceModel.WSHttpBinding>: WS-를 준수 하는 끝점에 연결 하는 데 적합 하는 상호 운용 가능한 바인딩을 * 프로토콜입니다.  
+- <xref:System.ServiceModel.WSHttpBinding>: WS-를 준수 하는 끝점에 연결 하는 데 적합 하는 상호 운용 가능한 바인딩을 * 프로토콜입니다.  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>: 사용 하 여는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 다른 WCF 끝점을 동일한 컴퓨터에 연결 합니다.  
+- <xref:System.ServiceModel.NetNamedPipeBinding>: 사용 하 여는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 다른 WCF 끝점을 동일한 컴퓨터에 연결 합니다.  
   
--   <xref:System.ServiceModel.NetMsmqBinding>: 사용 하 여 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 다른 WCF 끝점을 사용 하 여 대기 중인된 메시지 연결을 만들 합니다.  
+- <xref:System.ServiceModel.NetMsmqBinding>: 사용 하 여 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 다른 WCF 끝점을 사용 하 여 대기 중인된 메시지 연결을 만들 합니다.  
 
 - <xref:System.ServiceModel.NetTcpBinding>: 이 바인딩은 HTTP 바인딩 보다 더 높은 성능을 제공 하며 로컬 네트워크에서 사용 하기 위해 이상적입니다.
   

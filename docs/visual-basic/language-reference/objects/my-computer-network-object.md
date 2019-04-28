@@ -5,11 +5,11 @@ helpviewer_keywords:
 - My.Computer.Network object
 ms.assetid: 94ddbade-aff1-42f8-a6c8-88b78c28c0db
 ms.openlocfilehash: 4c79989f3bbae1bdb52e3eb0839503b330c6b8fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751295"
 ---
 # <a name="mycomputernetwork-object"></a>My.Computer.Network 개체
 속성, 이벤트 및 컴퓨터를 연결할 네트워크 상호 작용 하기 위한 메서드를 제공 합니다.  

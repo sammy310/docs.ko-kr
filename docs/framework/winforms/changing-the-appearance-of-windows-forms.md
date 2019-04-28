@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Windows Forms, changing the appearance of
 ms.assetid: 12f35d5b-1587-49cc-ada3-47eec1ff1738
 ms.openlocfilehash: 0582ad4c8e18d0f0419f0463ba260226839f7f42
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640422"
 ---
 # <a name="changing-the-appearance-of-windows-forms"></a>Windows Forms의 모양 변경
 테두리, 불투명도, 도형, 스타일 변경이나 Windows Forms 응용 프로그램에 대한 배경 이미지 설정과 같은 다양한 방법으로 Windows Forms 응용 프로그램의 모양을 사용자 지정할 수 있습니다.  

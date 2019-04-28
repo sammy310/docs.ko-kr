@@ -8,22 +8,22 @@ helpviewer_keywords:
 - Freezable objects [WPF], making read-only
 ms.assetid: 6c544b7d-d3c9-4736-aa90-4b8728234ccb
 ms.openlocfilehash: 9b7102db4de0df7183355e50e3b372eac30d81b3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771022"
 ---
 # <a name="how-to-make-a-freezable-read-only"></a>방법: Freezable을 읽기 전용으로 설정
 확인 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Freezable> 를 호출 하 여 읽기 전용으로 해당 <xref:System.Windows.Freezable.Freeze%2A> 메서드.  
   
  고정할 수 없습니다는 <xref:System.Windows.Freezable> 경우 다음 조건 중 하나는 개체 `true` 개체에 대 한 합니다.  
   
--   애니메이션 효과가 적용 또는 데이터 바인딩된 속성입니다.  
+- 애니메이션 효과가 적용 또는 데이터 바인딩된 속성입니다.  
   
--   동적 리소스에 의해 설정 된 속성이 있습니다. 동적 리소스에 대 한 자세한 내용은 참조는 [XAML 리소스](xaml-resources.md)합니다.  
+- 동적 리소스에 의해 설정 된 속성이 있습니다. 동적 리소스에 대 한 자세한 내용은 참조는 [XAML 리소스](xaml-resources.md)합니다.  
   
--   포함 된 <xref:System.Windows.Freezable> 고정할 수 없는 하위 개체입니다.  
+- 포함 된 <xref:System.Windows.Freezable> 고정할 수 없는 하위 개체입니다.  
   
  이러한 조건이 `false` 에 대 한 프로그램 <xref:System.Windows.Freezable> 개체 숨기지 않으려면 수정, 성능 이점을 얻을 수 고정 하는 것이 좋습니다.  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
 ms.openlocfilehash: 2a20e5a2bdbcbb36f6f06bbbadb2a46743ca5eba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703337"
 ---
 # <a name="framework-property-metadata"></a>프레임워크 속성 메타데이터
 프레임워크 속성 메타데이터는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 아키텍처의 WPF 프레임워크 수준에 있는 것으로 간주되는 개체 요소의 속성용으로 보고됩니다. 일반적으로 WPF 프레임워크 수준 지정에서는 렌더링, 데이터 바인딩 및 속성 시스템 미세 조정과 같은 기능이 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프레젠테이션 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 및 실행 파일을 통해 처리됩니다. 이러한 시스템에서 프레임워크 속성 메타데이터를 쿼리하여 특정 요소 속성의 기능별 특성을 결정합니다.  
@@ -23,18 +23,18 @@ ms.locfileid: "59314700"
 ## <a name="what-is-communicated-by-framework-property-metadata"></a>프레임워크 속성 메타데이터로 통신하는 내용  
  프레임워크 속성 메타데이터는 다음 범주로 구분할 수 있습니다.  
   
--   요소에 영향을 미치는 레이아웃 속성 보고 (<xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A>하십시오 <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>). 속성에 해당 측면에 영향을 구현 하는 경우 메타 데이터에서 이러한 플래그를 설정할 수는 <xref:System.Windows.FrameworkElement.MeasureOverride%2A>  /  <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> 특정 렌더링 동작 및 레이아웃 정보를 제공 하기 위해 클래스에서 메서드 시스템입니다. 일반적으로 이러한 구현에서는 해당 레이아웃 속성이 속성 메타데이터에서 참인 종속성 속성의 속성 무효화를 확인하고 해당 무효화만 새로운 레이아웃 전달을 요청해야 합니다.  
+- 요소에 영향을 미치는 레이아웃 속성 보고 (<xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A>하십시오 <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>). 속성에 해당 측면에 영향을 구현 하는 경우 메타 데이터에서 이러한 플래그를 설정할 수는 <xref:System.Windows.FrameworkElement.MeasureOverride%2A>  /  <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> 특정 렌더링 동작 및 레이아웃 정보를 제공 하기 위해 클래스에서 메서드 시스템입니다. 일반적으로 이러한 구현에서는 해당 레이아웃 속성이 속성 메타데이터에서 참인 종속성 속성의 속성 무효화를 확인하고 해당 무효화만 새로운 레이아웃 전달을 요청해야 합니다.  
   
--   요소의 부모 요소에 영향을 미치는 레이아웃 속성 보고 (<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentArrange%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A>). 기본적으로 이러한 플래그가 설정 되어 있는 몇 가지 예는 <xref:System.Windows.Documents.FixedPage.Left%2A?displayProperty=nameWithType> 고 <xref:System.Windows.Documents.Paragraph.KeepWithNext%2A?displayProperty=nameWithType>입니다.  
+- 요소의 부모 요소에 영향을 미치는 레이아웃 속성 보고 (<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentArrange%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A>). 기본적으로 이러한 플래그가 설정 되어 있는 몇 가지 예는 <xref:System.Windows.Documents.FixedPage.Left%2A?displayProperty=nameWithType> 고 <xref:System.Windows.Documents.Paragraph.KeepWithNext%2A?displayProperty=nameWithType>입니다.  
   
--   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>. 기본적으로 종속성 속성은 값을 상속하지 않습니다. <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A> 또한 컨트롤 합성 시나리오에 필요한 시각적 트리로 이동 하는 상속 경로 허용 합니다.  
+- <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>. 기본적으로 종속성 속성은 값을 상속하지 않습니다. <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A> 또한 컨트롤 합성 시나리오에 필요한 시각적 트리로 이동 하는 상속 경로 허용 합니다.  
   
     > [!NOTE]
     >  속성 값 컨텍스트에서 “상속”이라는 용어는 종속성 속성에 특정한 것입니다. 즉, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성 시스템의 WPF 프레임워크 수준 기능때문에 자식 요소가 부모 요소에서 실제 종속성 속성 값을 상속할 수 있습니다. 파생된 유형을 통한 멤버 상속 및 관리된 코드 유형과는 직접적인 관련이 없습니다. 자세한 내용은 [속성 값 상속](property-value-inheritance.md)을 참조하십시오.  
   
--   보고 데이터 바인딩 특성 (<xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A>, <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>). 기본적으로 프레임워크의 종속성 속성은 단방향 바인딩 동작을 통한 데이터 바인딩을 지원합니다. 시나리오가 전혀 없는 경우 데이터 바인딩을 사용하지 않게 설정할 수 있습니다(유연하고 확장 가능해야 하므로 기본 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]에는 이러한 속성의 예가 많지 않음). 바인딩의 구성 요소 간에 컨트롤의 동작을 함께 연결 하는 속성에 대 한 양방향 기본값을 설정할 수 있습니다 (<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> 예로) 나 사용자에 대 한 일반적인 예상된 시나리오인 경우 양방향 바인딩 (<xref:System.Windows.Controls.TextBox.Text%2A> 예로). 데이터 바인딩 관련 메타데이터를 변경하면 기본값에만 영향을 미칩니다. 바인딩별 변경에서는 해당 기본값을 항상 변경할 수 있습니다. 바인딩 모드와 일반적인 바인딩에 대한 자세한 내용은 [데이터 바인딩 개요](../data/data-binding-overview.md)를 참조하세요.  
+- 보고 데이터 바인딩 특성 (<xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A>, <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>). 기본적으로 프레임워크의 종속성 속성은 단방향 바인딩 동작을 통한 데이터 바인딩을 지원합니다. 시나리오가 전혀 없는 경우 데이터 바인딩을 사용하지 않게 설정할 수 있습니다(유연하고 확장 가능해야 하므로 기본 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]에는 이러한 속성의 예가 많지 않음). 바인딩의 구성 요소 간에 컨트롤의 동작을 함께 연결 하는 속성에 대 한 양방향 기본값을 설정할 수 있습니다 (<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> 예로) 나 사용자에 대 한 일반적인 예상된 시나리오인 경우 양방향 바인딩 (<xref:System.Windows.Controls.TextBox.Text%2A> 예로). 데이터 바인딩 관련 메타데이터를 변경하면 기본값에만 영향을 미칩니다. 바인딩별 변경에서는 해당 기본값을 항상 변경할 수 있습니다. 바인딩 모드와 일반적인 바인딩에 대한 자세한 내용은 [데이터 바인딩 개요](../data/data-binding-overview.md)를 참조하세요.  
   
--   속성을 저널링을 지 원하는 서비스 또는 응용 프로그램에서 저널링 해야 할지 여부를 보고 (<xref:System.Windows.FrameworkPropertyMetadata.Journal%2A>). 일반 요소에는 기본적으로 저널링을 사용하지 않지만, 특정 사용자 입력 컨트롤에 대해서는 선택적으로 사용합니다. 이 속성은 저널링의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 구현을 포함하여 저널링 서비스를 통해 읽어야 하며, 일반적으로 탐색 단계 간에 지속되어야 하는 목록의 사용자 선택 항목과 같은 사용자 컨트롤에 설정됩니다. 저널에 대한 자세한 내용은 [탐색 개요](../app-development/navigation-overview.md)를 참조하세요.  
+- 속성을 저널링을 지 원하는 서비스 또는 응용 프로그램에서 저널링 해야 할지 여부를 보고 (<xref:System.Windows.FrameworkPropertyMetadata.Journal%2A>). 일반 요소에는 기본적으로 저널링을 사용하지 않지만, 특정 사용자 입력 컨트롤에 대해서는 선택적으로 사용합니다. 이 속성은 저널링의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 구현을 포함하여 저널링 서비스를 통해 읽어야 하며, 일반적으로 탐색 단계 간에 지속되어야 하는 목록의 사용자 선택 항목과 같은 사용자 컨트롤에 설정됩니다. 저널에 대한 자세한 내용은 [탐색 개요](../app-development/navigation-overview.md)를 참조하세요.  
   
 <a name="Reading_FrameworkPropertyMetadata"></a>   
 ## <a name="reading-frameworkpropertymetadata"></a>FrameworkPropertyMetadata 읽기  
@@ -56,17 +56,17 @@ ms.locfileid: "59314700"
 ## <a name="framework-property-metadata-merge-behavior"></a>프레임워크 속성 메타데이터 병합 동작  
  프레임워크 속성 메타데이터를 재정의할 때, 여러 다른 메타데이터 특성을 병합하거나 대체합니다.  
   
--   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> 병합 됩니다. 새로 추가 하는 경우 <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>, 해당 콜백은 메타 데이터에 저장 됩니다. 지정 하지 않으면 경우는 <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> 재정의 값에 <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> 메타 데이터에 지정 된 가장 가까운 상위 항목에서 참조로 승격 됩니다.  
+- <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> 병합 됩니다. 새로 추가 하는 경우 <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>, 해당 콜백은 메타 데이터에 저장 됩니다. 지정 하지 않으면 경우는 <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> 재정의 값에 <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> 메타 데이터에 지정 된 가장 가까운 상위 항목에서 참조로 승격 됩니다.  
   
--   에 대 한 실제 속성 시스템 동작은 <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> 는 구현 계층의 모든 메타 데이터 소유자는 유지 하 고 테이블에 추가 하는 가장 많이 파생된 된 클래스의 콜백 되는 속성 시스템에서 실행 순서를 사용 하 여 먼저 호출 됩니다. 상속된 콜백은 한 번만 실행되며, 메타데이터에 해당 콜백을 둔 클래스가 소유하는 것으로 계산됩니다.  
+- 에 대 한 실제 속성 시스템 동작은 <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> 는 구현 계층의 모든 메타 데이터 소유자는 유지 하 고 테이블에 추가 하는 가장 많이 파생된 된 클래스의 콜백 되는 속성 시스템에서 실행 순서를 사용 하 여 먼저 호출 됩니다. 상속된 콜백은 한 번만 실행되며, 메타데이터에 해당 콜백을 둔 클래스가 소유하는 것으로 계산됩니다.  
   
--   <xref:System.Windows.PropertyMetadata.DefaultValue%2A> 대체 됩니다. 지정 하지 않으면 경우는 <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> 재정의 값에 <xref:System.Windows.PropertyMetadata.DefaultValue%2A> 메타 데이터에 지정 된 가장 가까운 상위 항목에서 제공 됩니다.  
+- <xref:System.Windows.PropertyMetadata.DefaultValue%2A> 대체 됩니다. 지정 하지 않으면 경우는 <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> 재정의 값에 <xref:System.Windows.PropertyMetadata.DefaultValue%2A> 메타 데이터에 지정 된 가장 가까운 상위 항목에서 제공 됩니다.  
   
--   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 구현이 대체 됩니다. 새로 추가 하는 경우 <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>, 해당 콜백은 메타 데이터에 저장 됩니다. 지정 하지 않으면 경우는 <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 재정의 값에 <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 메타 데이터에 지정 된 가장 가까운 상위 항목에서 참조로 승격 됩니다.  
+- <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 구현이 대체 됩니다. 새로 추가 하는 경우 <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>, 해당 콜백은 메타 데이터에 저장 됩니다. 지정 하지 않으면 경우는 <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 재정의 값에 <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 메타 데이터에 지정 된 가장 가까운 상위 항목에서 참조로 승격 됩니다.  
   
--   속성 시스템 동작은는 <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 직접 메타 데이터에서 호출 됩니다. 다른 참조가 없는 <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 구현 계층 구조에서 유지 됩니다.  
+- 속성 시스템 동작은는 <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 직접 메타 데이터에서 호출 됩니다. 다른 참조가 없는 <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 구현 계층 구조에서 유지 됩니다.  
   
--   플래그 <xref:System.Windows.FrameworkPropertyMetadataOptions> 열거형을 비트 OR 연산으로 결합 됩니다.  지정 하는 경우 <xref:System.Windows.FrameworkPropertyMetadataOptions>, 원래 옵션을 덮어쓰지 않습니다.  옵션을 변경 하려면 해당 속성에 설정 <xref:System.Windows.FrameworkPropertyMetadata>합니다. 예를 들어 경우 원래 <xref:System.Windows.FrameworkPropertyMetadata> 집합 개체를 <xref:System.Windows.FrameworkPropertyMetadataOptions.NotDataBindable?displayProperty=nameWithType> 플래그를 설정 하 여 변경할 수 있습니다 <xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A?displayProperty=nameWithType> 에 `false`입니다.  
+- 플래그 <xref:System.Windows.FrameworkPropertyMetadataOptions> 열거형을 비트 OR 연산으로 결합 됩니다.  지정 하는 경우 <xref:System.Windows.FrameworkPropertyMetadataOptions>, 원래 옵션을 덮어쓰지 않습니다.  옵션을 변경 하려면 해당 속성에 설정 <xref:System.Windows.FrameworkPropertyMetadata>합니다. 예를 들어 경우 원래 <xref:System.Windows.FrameworkPropertyMetadata> 집합 개체를 <xref:System.Windows.FrameworkPropertyMetadataOptions.NotDataBindable?displayProperty=nameWithType> 플래그를 설정 하 여 변경할 수 있습니다 <xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A?displayProperty=nameWithType> 에 `false`입니다.  
   
  이 동작을 구현 하 여 <xref:System.Windows.FrameworkPropertyMetadata.Merge%2A>, 파생 된 메타 데이터 클래스에서 재정의할 수 있습니다.  
   

@@ -14,18 +14,18 @@ helpviewer_keywords:
 - toolbars [Windows Forms], text
 ms.assetid: d62dc9d1-2edd-4dfa-aed7-1335d6e13d86
 ms.openlocfilehash: 5c326c8f6a56c934d317305f85f4c88e95e75f8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781266"
 ---
 # <a name="how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms"></a>방법: Windows Forms에서 ToolStrip 텍스트 및 이미지의 모양 변경
 텍스트 및 이미지에 표시 되는지 여부를 제어할 수 있습니다는 <xref:System.Windows.Forms.ToolStripItem> 서로 기준으로 정렬 되는 방법 및 및 <xref:System.Windows.Forms.ToolStrip>합니다.  
   
 ### <a name="to-define-what-is-displayed-on-a-toolstripitem"></a>ToolStripItem의 표시 되는 항목을 정의 하려면  
   
--   설정 된 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> 속성을 원하는 값입니다. 가능성은 `Image`, `ImageAndText`하십시오 `None`, 및 `Text`합니다. 기본값은 `ImageAndText`입니다.  
+- 설정 된 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> 속성을 원하는 값입니다. 가능성은 `Image`, `ImageAndText`하십시오 `None`, 및 `Text`합니다. 기본값은 `ImageAndText`입니다.  
   
     ```vb  
     ToolStripButton2.DisplayStyle = _  
@@ -38,7 +38,7 @@ ms.locfileid: "59088485"
   
 ### <a name="to-align-text-on-a-toolstripitem"></a>ToolStripItem의 텍스트에 맞게  
   
--   설정 된 <xref:System.Windows.Forms.ToolStripItem.TextAlign%2A> 속성을 원하는 값입니다. 가능성은 중간 위쪽과 아래쪽 왼쪽, 가운데, 오른쪽을 사용 하 여 조합 합니다. 기본값은 `MiddleCenter`입니다.  
+- 설정 된 <xref:System.Windows.Forms.ToolStripItem.TextAlign%2A> 속성을 원하는 값입니다. 가능성은 중간 위쪽과 아래쪽 왼쪽, 가운데, 오른쪽을 사용 하 여 조합 합니다. 기본값은 `MiddleCenter`입니다.  
   
     ```vb  
     ToolStripSplitButton1.TextAlign = _  
@@ -51,7 +51,7 @@ ms.locfileid: "59088485"
   
 ### <a name="to-align-an-image-on-a-toolstripitem"></a>ToolStripItem의 이미지에 맞게  
   
--   설정 된 <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A> 속성을 원하는 값입니다. 가능성은 중간 위쪽과 아래쪽 왼쪽, 가운데, 오른쪽을 사용 하 여 조합 합니다. 기본값은 `MiddleLeft`입니다.  
+- 설정 된 <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A> 속성을 원하는 값입니다. 가능성은 중간 위쪽과 아래쪽 왼쪽, 가운데, 오른쪽을 사용 하 여 조합 합니다. 기본값은 `MiddleLeft`입니다.  
   
     ```vb  
     ToolStripSplitButton1.ImageAlign = _  
@@ -64,7 +64,7 @@ ms.locfileid: "59088485"
   
 ### <a name="to-define-how-toolstripitem-text-and-images-are-displayed-relative-to-each-other"></a>Toolstripitem을 가리키는 텍스트 및 이미지 서로 기준으로 표시 되는 방법을 정의 하려면  
   
--   설정 된 <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> 속성을 원하는 값입니다. 가능성은 `ImageAboveText`, `ImageBeforeText`를 `Overlay`합니다 `TextAboveImage`, 및 `TextBeforeImage`합니다. 기본값은 `ImageBeforeText`입니다.  
+- 설정 된 <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> 속성을 원하는 값입니다. 가능성은 `ImageAboveText`, `ImageBeforeText`를 `Overlay`합니다 `TextAboveImage`, 및 `TextBeforeImage`합니다. 기본값은 `ImageBeforeText`입니다.  
   
     ```vb  
     ToolStripButton1.TextImageRelation = _  

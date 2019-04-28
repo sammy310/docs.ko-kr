@@ -24,11 +24,11 @@ helpviewer_keywords:
 - Decimal data type [Visual Basic], numeric data types
 ms.assetid: a27bd4d0-7e14-43eb-9cc4-b42eaab323c9
 ms.openlocfilehash: 75e60cb2a3a934956099ce6fc7d81bf6ecea4d11
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663377"
 ---
 # <a name="numeric-data-types-visual-basic"></a>숫자 데이터 형식(Visual Basic)
 Visual Basic 제공 여러 *숫자 데이터 형식* 숫자 다양 한 표현으로 처리할 수 있도록 합니다. *정수 계열* 형식을 나타내는 정수만 (양수, 음수 및 0) 및 *비정 수 계열* 형식은 정수와 소수 부분을 사용 하 여 숫자를 나타냅니다.  

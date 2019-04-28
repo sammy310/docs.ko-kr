@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
 ms.openlocfilehash: 0176ebffe82e60671ea66481b7d659004dc31477
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757081"
 ---
 # <a name="xaml-resources"></a>XAML 리소스
 리소스는 애플리케이션의 여러 위치에서 다시 사용할 수 있는 개체입니다. 리소스의 예로는 브러시와 스타일이 있습니다. 이 개요에서 리소스를 사용 하는 방법에 설명 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다. 또한 만들고 하 하거나 코드 서로 바꿔 코드를 사용 하 여 리소스에 액세스 하 고 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]입니다. 자세한 내용은 [리소스 및 코드](resources-and-code.md)합니다.  
@@ -44,28 +44,28 @@ ms.locfileid: "59344925"
   
  리소스를 참조할 때 정적 리소스 참조를 사용하는지 아니면 동적 리소스 참조를 사용하는지에 상관없이 영향을 미칠 수 있는 고려 사항은 다음과 같습니다.  
   
--   응용 프로그램에 대해 만든 리소스의 전반적인 디자인 (페이지당, 응용 프로그램에서 느슨한 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]를 리소스 전용 어셈블리에서).  
+- 응용 프로그램에 대해 만든 리소스의 전반적인 디자인 (페이지당, 응용 프로그램에서 느슨한 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]를 리소스 전용 어셈블리에서).  
   
--   애플리케이션 기능: 애플리케이션 요구 사항의 일부로서 실시간으로 리소스 업데이트.  
+- 애플리케이션 기능: 애플리케이션 요구 사항의 일부로서 실시간으로 리소스 업데이트.  
   
--   해당 리소스 참조 형식의 각 조회 동작.  
+- 해당 리소스 참조 형식의 각 조회 동작.  
   
--   특정 속성 또는 리소스 형식 및 해당 형식의 기본 동작.  
+- 특정 속성 또는 리소스 형식 및 해당 형식의 기본 동작.  
   
 ### <a name="static-resources"></a>정적 리소스  
  정적 리소스 참조는 다음 환경에 가장 적합합니다.  
   
--   애플리케이션 디자인에서는 대부분의 리소스를 페이지나 애플리케이션 수준 리소스 사전에 집중합니다. 정적 리소스 참조는 페이지 다시 로드와 같은 런타임 동작을 기반으로 다시 평가하지 않으므로, 리소스와 애플리케이션 디자인별로 필요하지 않을 때 다수의 동적 리소스 참조를 사용하지 않을 수 있다는 성능상의 이점이 있습니다.  
+- 애플리케이션 디자인에서는 대부분의 리소스를 페이지나 애플리케이션 수준 리소스 사전에 집중합니다. 정적 리소스 참조는 페이지 다시 로드와 같은 런타임 동작을 기반으로 다시 평가하지 않으므로, 리소스와 애플리케이션 디자인별로 필요하지 않을 때 다수의 동적 리소스 참조를 사용하지 않을 수 있다는 성능상의 이점이 있습니다.  
   
--   에 있지 않은 속성의 값을 설정 하는 한 <xref:System.Windows.DependencyObject> 또는 <xref:System.Windows.Freezable>합니다.  
+- 에 있지 않은 속성의 값을 설정 하는 한 <xref:System.Windows.DependencyObject> 또는 <xref:System.Windows.Freezable>합니다.  
   
--   DLL로 컴파일되고 애플리케이션의 일부로 컴파일되거나 애플리케이션에 공유될 리소스 사전을 만듭니다.  
+- DLL로 컴파일되고 애플리케이션의 일부로 컴파일되거나 애플리케이션에 공유될 리소스 사전을 만듭니다.  
   
--   사용자 지정 컨트롤의 테마를 만들고 테마에서 사용되는 리소스를 정의합니다. 이 경우 일반적으로 동적 리소스 참조 조회 동작을 사용하지 않습니다. 대신, 조회가 예측 가능하고 테마에 자체 포함되도록 정적 리소스 참조 동작을 사용합니다. 동적 리소스 참조를 사용하면, 테마에 있는 참조까지도 런타임 시까지 평가되지 않은 상태로 남아 있게 되며, 테마를 적용할 때 일부 요소에서 테마가 참조하려는 키를 재정의하고 조회에서 로컬 요소가 테마 자체보다 앞에 옵니다. 이 경우 테마가 예상대로 작동하지 않습니다.  
+- 사용자 지정 컨트롤의 테마를 만들고 테마에서 사용되는 리소스를 정의합니다. 이 경우 일반적으로 동적 리소스 참조 조회 동작을 사용하지 않습니다. 대신, 조회가 예측 가능하고 테마에 자체 포함되도록 정적 리소스 참조 동작을 사용합니다. 동적 리소스 참조를 사용하면, 테마에 있는 참조까지도 런타임 시까지 평가되지 않은 상태로 남아 있게 되며, 테마를 적용할 때 일부 요소에서 테마가 참조하려는 키를 재정의하고 조회에서 로컬 요소가 테마 자체보다 앞에 옵니다. 이 경우 테마가 예상대로 작동하지 않습니다.  
   
--   리소스를 사용하여 다수의 종속성 속성을 설정합니다. 종속성 속성에는 속성 시스템에서 사용하게 설정한 유효 값이 캐싱이 있습니다. 따라서 로드 시 평가될 수 있는 종속성 속성의 값을 제공하는 경우, 종속성 속성에서 재평가된 식을 확인하지 않아도 되며 마지막 유효 값을 반환할 수 있습니다. 이 기술을 사용하면 성능상의 이점이 있습니다.  
+- 리소스를 사용하여 다수의 종속성 속성을 설정합니다. 종속성 속성에는 속성 시스템에서 사용하게 설정한 유효 값이 캐싱이 있습니다. 따라서 로드 시 평가될 수 있는 종속성 속성의 값을 제공하는 경우, 종속성 속성에서 재평가된 식을 확인하지 않아도 되며 마지막 유효 값을 반환할 수 있습니다. 이 기술을 사용하면 성능상의 이점이 있습니다.  
   
--   모든 소비자에 대 한 기본 리소스를 변경 하려면 또는 사용 하 여 각 소비자의 별도 작성 가능 인스턴스를 유지 하려는 합니다 [x: 공유 특성](../../xaml-services/x-shared-attribute.md)합니다.  
+- 모든 소비자에 대 한 기본 리소스를 변경 하려면 또는 사용 하 여 각 소비자의 별도 작성 가능 인스턴스를 유지 하려는 합니다 [x: 공유 특성](../../xaml-services/x-shared-attribute.md)합니다.  
   
 #### <a name="static-resource-lookup-behavior"></a>정적 리소스 조회 동작  
   
@@ -84,28 +84,28 @@ ms.locfileid: "59344925"
 ### <a name="dynamic-resources"></a>동적 리소스  
  동적 리소스는 다음과 같은 환경에 가장 적합합니다.  
   
--   리소스 값은 런타임 시까지 알려지지 않은 조건에 따라 달라집니다. 여기에는 시스템 리소스 또는 사용자가 설정 가능한 리소스가 포함됩니다. 예를 들어로 노출 시스템 속성을 참조 하는 setter 값 만들 수 있습니다 <xref:System.Windows.SystemColors>, <xref:System.Windows.SystemFonts>, 또는 <xref:System.Windows.SystemParameters>합니다. 이러한 값은 궁극적으로 운영 체제와 사용자의 런타임 환경에서 오므로 정말로 동적입니다. 변경할 수 있는 애플리케이션 수준 테마도 있습니다. 이 경우 페이지 수준 리소스 액세스를 통해서도 변경 사항을 캡처해야 합니다.  
+- 리소스 값은 런타임 시까지 알려지지 않은 조건에 따라 달라집니다. 여기에는 시스템 리소스 또는 사용자가 설정 가능한 리소스가 포함됩니다. 예를 들어로 노출 시스템 속성을 참조 하는 setter 값 만들 수 있습니다 <xref:System.Windows.SystemColors>, <xref:System.Windows.SystemFonts>, 또는 <xref:System.Windows.SystemParameters>합니다. 이러한 값은 궁극적으로 운영 체제와 사용자의 런타임 환경에서 오므로 정말로 동적입니다. 변경할 수 있는 애플리케이션 수준 테마도 있습니다. 이 경우 페이지 수준 리소스 액세스를 통해서도 변경 사항을 캡처해야 합니다.  
   
--   사용자 지정 컨트롤의 테마 스타일을 만들거나 참조합니다.  
+- 사용자 지정 컨트롤의 테마 스타일을 만들거나 참조합니다.  
   
--   콘텐츠를 조정 하려는 <xref:System.Windows.ResourceDictionary> 응용 프로그램 수명 동안.  
+- 콘텐츠를 조정 하려는 <xref:System.Windows.ResourceDictionary> 응용 프로그램 수명 동안.  
   
--   상호 종속된 복잡한 리소스 구조체 가 있으며, 이 경우에는 전방 참조가 필요할 수 있습니다. 정적 리소스 참조는 전방 참조를 지원 하지 않습니다 하지만 동적 리소스 참조에서는 이러한 리소스는 런타임 시까지 계산할 필요가 없기 때문에 전방 참조 하므로 하지 관련 개념이 있습니다.  
+- 상호 종속된 복잡한 리소스 구조체 가 있으며, 이 경우에는 전방 참조가 필요할 수 있습니다. 정적 리소스 참조는 전방 참조를 지원 하지 않습니다 하지만 동적 리소스 참조에서는 이러한 리소스는 런타임 시까지 계산할 필요가 없기 때문에 전방 참조 하므로 하지 관련 개념이 있습니다.  
   
--   컴파일 또는 작업 집합 면에서 특히 큰 리소스를 참조하며, 페이지를 로드할 때 즉시 리소스를 사용하지 않을 수도 있습니다. 정적 리소스 참조가 항상 로드 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지를 로드할 때; 있지만 동적 리소스 참조를 로드 하지 않습니다는 실제로 사용할 때까지 합니다.  
+- 컴파일 또는 작업 집합 면에서 특히 큰 리소스를 참조하며, 페이지를 로드할 때 즉시 리소스를 사용하지 않을 수도 있습니다. 정적 리소스 참조가 항상 로드 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지를 로드할 때; 있지만 동적 리소스 참조를 로드 하지 않습니다는 실제로 사용할 때까지 합니다.  
   
--   setter 값이 테마나 다른 사용자 설정의 영향을 받는 다른 값에서 오는 스타일을 만듭니다.  
+- setter 값이 테마나 다른 사용자 설정의 영향을 받는 다른 값에서 오는 스타일을 만듭니다.  
   
--   애플리케이션 수명 중에 논리 트리에서 다시 부모가 지정될 수 있는 요소에 리소스를 적용합니다. 부모를 변경하면 리소스 조회 범위도 변경될 수 있으므로, 부모가 재지정된 요소의 리소스를 새 범위에 따라 재평가하려면 항상 동적 리소스 참조를 사용하세요.  
+- 애플리케이션 수명 중에 논리 트리에서 다시 부모가 지정될 수 있는 요소에 리소스를 적용합니다. 부모를 변경하면 리소스 조회 범위도 변경될 수 있으므로, 부모가 재지정된 요소의 리소스를 새 범위에 따라 재평가하려면 항상 동적 리소스 참조를 사용하세요.  
   
 #### <a name="dynamic-resource-lookup-behavior"></a>동적 리소스 조회 동작  
  동적 리소스 참조에 대 한 리소스 조회 동작 호출 하는 경우 코드의 조회 동작과 유사 <xref:System.Windows.FrameworkElement.FindResource%2A> 또는 <xref:System.Windows.FrameworkElement.SetResourceReference%2A>합니다.  
   
 1. 조회 프로세스가 속성을 설정하는 요소를 통해 정의된 리소스 사전에서 요청된 키를 확인합니다.  
   
-    -   요소를 정의 하는 경우는 <xref:System.Windows.FrameworkElement.Style%2A> 속성을 <xref:System.Windows.Style.Resources%2A> 사전 내에서 <xref:System.Windows.Style> 확인란이 선택 되어.  
+    - 요소를 정의 하는 경우는 <xref:System.Windows.FrameworkElement.Style%2A> 속성을 <xref:System.Windows.Style.Resources%2A> 사전 내에서 <xref:System.Windows.Style> 확인란이 선택 되어.  
   
-    -   요소를 정의 하는 경우는 <xref:System.Windows.Controls.Control.Template%2A> 속성을 <xref:System.Windows.FrameworkTemplate.Resources%2A> 사전 내에서 <xref:System.Windows.FrameworkTemplate> 확인란이 선택 되어.  
+    - 요소를 정의 하는 경우는 <xref:System.Windows.Controls.Control.Template%2A> 속성을 <xref:System.Windows.FrameworkTemplate.Resources%2A> 사전 내에서 <xref:System.Windows.FrameworkTemplate> 확인란이 선택 되어.  
   
 2. 그런 다음 조회 프로세스가 논리 트리를 상향식으로 통과하여 부모 요소와 해당 리소스 사전으로 이동합니다. 이 작업은 루트 요소에 도달할 때까지 계속됩니다.  
   
@@ -117,20 +117,20 @@ ms.locfileid: "59344925"
   
  예외 동작이 있는 경우 다음과 같이 다양합니다.  
   
--   리소스에서 요청한 경우를 <xref:System.Windows.FrameworkElement.FindResource%2A> 를 호출 하 고 찾을 수 없습니다, 예외가 발생 합니다.  
+- 리소스에서 요청한 경우를 <xref:System.Windows.FrameworkElement.FindResource%2A> 를 호출 하 고 찾을 수 없습니다, 예외가 발생 합니다.  
   
--   리소스에서 요청한 경우는 <xref:System.Windows.FrameworkElement.TryFindResource%2A> 를 호출 하 고 찾을 수 없습니다, 예외가 발생 하지 않지만 반환된 값은 `null`합니다. 설정 되는 속성을 허용 하지 않는 경우 `null`는 심층 예외가 발생할 수 있습니다 (이에 따라 달라 집니다 설정 되는 개별 속성).  
+- 리소스에서 요청한 경우는 <xref:System.Windows.FrameworkElement.TryFindResource%2A> 를 호출 하 고 찾을 수 없습니다, 예외가 발생 하지 않지만 반환된 값은 `null`합니다. 설정 되는 속성을 허용 하지 않는 경우 `null`는 심층 예외가 발생할 수 있습니다 (이에 따라 달라 집니다 설정 되는 개별 속성).  
   
--   리소스에 대 한 동적 리소스 참조를 요청한 경우 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], 및 찾지 다음 동작을 일반 속성 시스템에에 따라 달라 지지만 일반적인 동작은 것 처럼 속성 설정 작업이 수행 되지 않은 리소스가 있는 수준입니다. 예를 들어, 평가할 수 없는 리소스를 사용하여 개별 단추 요소에서 배경을 설정하려고 하면 값 집합이 생기지 않지만, 속성 시스템 및 값 우선 순위의 다른 참가자로부터 유효 값을 여전히 가져올 수 있습니다. 예를 들어, 배경색은 로컬에 정의한 단추 스타일 또는 테마 스타일에서 여전히 가져올 수 있습니다. 테마 스타일이 정의하지 않은 속성의 경우, 실패한 리소스 평가 후 유효 값은 속성 메타데이터의 기본값에서 가져올 수 있습니다.  
+- 리소스에 대 한 동적 리소스 참조를 요청한 경우 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], 및 찾지 다음 동작을 일반 속성 시스템에에 따라 달라 지지만 일반적인 동작은 것 처럼 속성 설정 작업이 수행 되지 않은 리소스가 있는 수준입니다. 예를 들어, 평가할 수 없는 리소스를 사용하여 개별 단추 요소에서 배경을 설정하려고 하면 값 집합이 생기지 않지만, 속성 시스템 및 값 우선 순위의 다른 참가자로부터 유효 값을 여전히 가져올 수 있습니다. 예를 들어, 배경색은 로컬에 정의한 단추 스타일 또는 테마 스타일에서 여전히 가져올 수 있습니다. 테마 스타일이 정의하지 않은 속성의 경우, 실패한 리소스 평가 후 유효 값은 속성 메타데이터의 기본값에서 가져올 수 있습니다.  
   
 #### <a name="restrictions"></a>제한  
  동적 리소스 참조에는 몇 가지 주목할 만한 제한 사항이 있습니다. 다음 중 하나 이상이 참이어야 합니다.  
   
--   설정 되는 속성의 속성 이어야 합니다는 <xref:System.Windows.FrameworkElement> 또는 <xref:System.Windows.FrameworkContentElement>합니다. 속성에서 백업 해야 하는 <xref:System.Windows.DependencyProperty>합니다.  
+- 설정 되는 속성의 속성 이어야 합니다는 <xref:System.Windows.FrameworkElement> 또는 <xref:System.Windows.FrameworkContentElement>합니다. 속성에서 백업 해야 하는 <xref:System.Windows.DependencyProperty>합니다.  
   
--   내의 값에 대 한 참조 되는 <xref:System.Windows.Style> <xref:System.Windows.Setter>합니다.  
+- 내의 값에 대 한 참조 되는 <xref:System.Windows.Style> <xref:System.Windows.Setter>합니다.  
   
--   설정 되는 속성의 속성 이어야 합니다는 <xref:System.Windows.Freezable> 값으로 제공 되는 <xref:System.Windows.FrameworkElement> 또는 <xref:System.Windows.FrameworkContentElement> 속성인 또는 <xref:System.Windows.Setter> 값입니다.  
+- 설정 되는 속성의 속성 이어야 합니다는 <xref:System.Windows.Freezable> 값으로 제공 되는 <xref:System.Windows.FrameworkElement> 또는 <xref:System.Windows.FrameworkContentElement> 속성인 또는 <xref:System.Windows.Setter> 값입니다.  
   
  설정 되는 속성 이어야 하므로 <xref:System.Windows.DependencyProperty> 또는 <xref:System.Windows.Freezable> 속성, 속성 변경 (변경 된 동적 리소스 값) 속성 시스템에 의해 승인 되기 때문에 UI에 대부분의 속성 변경 내용을 전파할 수 있습니다. 대부분의 컨트롤 포함 하는 경우 컨트롤의 다른 레이아웃에 적용 됩니다는 논리는 <xref:System.Windows.DependencyProperty> 변경 내용 및 속성이 레이아웃에 영향을 줄 수 있습니다. 그러나 속성 중 일부만 있는 [DynamicResource 태그 확장](dynamicresource-markup-extension.md) 해당 값으로 UI에 실시간으로에서 업데이트 하는 방식으로 값을 제공 하도록 보장 합니다. 이 기능은 속성 외에도 속성을 소유하는 형식, 심지어는 애플리케이션의 논리 구조체에 따라서도 여전히 달라질 수 있습니다.  
   

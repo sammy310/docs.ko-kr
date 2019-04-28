@@ -6,11 +6,11 @@ helpviewer_keywords:
 - BetweenShowDelay time property [WPF]
 ms.assetid: 984ea76d-f2a2-4326-a02e-f97ec3d036d6
 ms.openlocfilehash: b6d55c72c8264546949833fc086937a8b1fe2540
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696056"
 ---
 # <a name="how-to-use-the-betweenshowdelay-property"></a>방법: BetweenShowDelay 속성 사용
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> 도구 설명 신속 하 게 표시 되도록 속성을 시간-지연 시간을 거의 또는 전혀-사용자 이동 하면 포인터가 하나의 도구 설명에서 간 직접.  
@@ -20,9 +20,9 @@ ms.locfileid: "59139596"
   
  다음 시나리오 중 하나에 <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> 적용, 1 초 표시 되기 전에 두 번째 타원에 대 한 도구 설명 하면:  
   
--   두 번째 단추를 이동 하는 데 걸리는 시간 이면 2 초 이상.  
+- 두 번째 단추를 이동 하는 데 걸리는 시간 이면 2 초 이상.  
   
--   도구 설명은 첫 번째 타원은 시간 간격의 시작 부분에 표시 되지 않습니다.  
+- 도구 설명은 첫 번째 타원은 시간 간격의 시작 부분에 표시 되지 않습니다.  
   
  [!code-xaml[ToolTipService#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
 [!code-xaml[ToolTipService#NoToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#notooltip)]  

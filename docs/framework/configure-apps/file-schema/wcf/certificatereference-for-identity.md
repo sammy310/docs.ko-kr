@@ -3,11 +3,11 @@ title: <certificateReference> 에 대한 <identity>
 ms.date: 03/30/2017
 ms.assetid: ac359c65-c22d-42d2-97de-db53b77cebdb
 ms.openlocfilehash: 3b7779ac00c2fca6300c12ac18ff2d5f6b868424
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59138816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704338"
 ---
 # <a name="certificatereference-for-identity"></a>\<certificateReference >에 대 한 \<identity >
 X.509 인증서 유효성 검사의 설정을 지정합니다. 이 id 가진 끝점과 연결 하는 안전한 Windows Communication Foundation (WCF) 클라이언트는 서버가 나타내는 클레임이이 id 생성에 사용 되는 id 클레임을 포함 하는 것을 확인 합니다.  

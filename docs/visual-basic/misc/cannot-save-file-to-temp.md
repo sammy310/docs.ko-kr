@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID735
 ms.assetid: 1055fc15-9641-43b2-a40c-a0a9fbbb34b2
 ms.openlocfilehash: b78c2c23e155317642f3fc0aae95f72fb05bb63f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769996"
 ---
 # <a name="cannot-save-file-to-temp"></a>파일을 TEMP에 저장할 수 없습니다.
 구성 요소가 TEMP라는 디렉터리를 찾을 수 없거나 TEMP 디렉터리를 포함하는 드라이브 또는 파티션에 정보를 저장할 공간이 부족합니다.  

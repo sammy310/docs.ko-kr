@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
 ms.openlocfilehash: 5ab90e44e2809c1e71d7f100970b7be73af4a732
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784204"
 ---
 # <a name="inherits-statement"></a>Inherits Statement
 현재 클래스 또는 인터페이스가 다른 클래스나 인터페이스 집합에서 특성, 변수, 속성, 프로시저 및 이벤트를 상속 하도록 하면 됩니다.  
@@ -37,11 +37,11 @@ Inherits basetypenames
   
 ## <a name="rules"></a>규칙  
   
--   **클래스를 상속 합니다.** 클래스를 사용 하는 경우는 `Inherits` 문을 하나의 기본 클래스만 지정할 수 있습니다.  
+- **클래스를 상속 합니다.** 클래스를 사용 하는 경우는 `Inherits` 문을 하나의 기본 클래스만 지정할 수 있습니다.  
   
      클래스는 그 안에 중첩 된 클래스에서 상속할 수 없습니다.  
   
--   **인터페이스 상속 합니다.** 인터페이스를 사용 하는 경우는 `Inherits` 문에서 하나 이상의 기본 인터페이스를 지정할 수 있습니다. 동일한 이름 가진 멤버를 정의 하는 경우에 두 개의 인터페이스에서 상속할 수 있습니다. 이렇게 하면 구현 코드를 구현 하는 멤버를 지정 하려면 이름 한정을 사용 해야 합니다.  
+- **인터페이스 상속 합니다.** 인터페이스를 사용 하는 경우는 `Inherits` 문에서 하나 이상의 기본 인터페이스를 지정할 수 있습니다. 동일한 이름 가진 멤버를 정의 하는 경우에 두 개의 인터페이스에서 상속할 수 있습니다. 이렇게 하면 구현 코드를 구현 하는 멤버를 지정 하려면 이름 한정을 사용 해야 합니다.  
   
      인터페이스는 더 제한적인 액세스 수준 가진 다른 인터페이스에서 상속할 수 없습니다. 예를 들어, 한 `Public` 인터페이스에서 상속할 수 없습니다는 `Friend` 인터페이스입니다.  
   

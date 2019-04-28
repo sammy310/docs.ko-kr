@@ -1,17 +1,17 @@
 ---
-title: 모놀리식 응용 프로그램
+title: 모놀리식 애플리케이션
 description: 컨테이너 화 된 모놀리식 응용 프로그램에 대 한 핵심 개념을 이해 합니다.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: e7454100b09f602e1e103c38685609e1dab62fe9
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57843547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644988"
 ---
-# <a name="monolithic-applications"></a>모놀리식 응용 프로그램
+# <a name="monolithic-applications"></a>모놀리식 애플리케이션
 
 이 시나리오에서는 단일 모놀리식 웹 응용 프로그램 또는 서비스를 구축 하 고 컨테이너로 배포 키를 누릅니다. 응용 프로그램 내에서 구조 아닐 모놀리식; 이 여러 라이브러리, 구성 요소 또는 계층 (응용 프로그램 계층, 도메인 계층, 데이터 액세스 계층 등)으로 이루어질 수 있습니다. 외부에서 단일 프로세스, 단일 웹 응용 프로그램 또는 단일 서비스 같은 단일 컨테이너를입니다.
 

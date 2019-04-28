@@ -6,11 +6,11 @@ helpviewer_keywords:
 - controls [Windows Forms], copying
 ms.assetid: 106c1eb2-1fba-4f69-b2ec-9ea3fa182f1e
 ms.openlocfilehash: 8a60dd4c5fc80af46b1552e99abbba37a8a390af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746865"
 ---
 # <a name="how-to-copy-controls-between-windows-forms"></a>방법: Windows Forms 간 컨트롤 복사
 컨트롤을 폼에 동일한 프로젝트 내의 다른 폼, 다른 솔루션에서 사용 하기 위해 클립보드에 복사할 수 있습니다.  

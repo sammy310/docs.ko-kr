@@ -3,11 +3,11 @@ title: 일급 함수
 description: 첫 번째 클래스 함수 및의 함수형 프로그래밍에 대 한 중요 한 됩니다 하는 방법에 대해 알아봅니다 F#입니다.
 ms.date: 10/29/2018
 ms.openlocfilehash: 505ad686614b53d779cb617fc04ac74c2a88b31b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772764"
 ---
 # <a name="first-class-functions"></a>일급 함수
 
@@ -188,10 +188,10 @@ F#같은 대부분의 컬렉션 형식에 대 한 지도 메서드를 제공 [�
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet47.fs)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [목록](../language-reference/lists.md)
 - [튜플](../language-reference/tuples.md)
 - [함수](../language-reference/functions/index.md)
-- [`let` 바인딩](../language-reference/functions/let-bindings.md)
+- [`let` Bindings](../language-reference/functions/let-bindings.md)
 - [람다 식: `fun` 키워드](../language-reference/functions/lambda-expressions-the-fun-keyword.md)

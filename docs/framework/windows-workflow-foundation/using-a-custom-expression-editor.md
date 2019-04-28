@@ -3,18 +3,18 @@ title: 사용자 지정 식 편집기 사용
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
 ms.openlocfilehash: 4bf885911719f2ec673cb515807f0879535aed7d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669604"
 ---
 # <a name="using-a-custom-expression-editor"></a>사용자 지정 식 편집기 사용
 사용자 지정 식 편집기를 구현하여 보다 다양하거나 단순한 식 편집 환경을 제공할 수 있습니다. 사용자 지정 식 편집기는 다음과 같은 경우에 사용할 수 있습니다.  
   
--   IntelliSense와 다시 호스트된 Workflow Designer의 다른 다양한 편집 기능을 지원하려는 경우. 이 기능은 재 호스트 된 응용 프로그램에서 기본 Visual Studio 식 편집기를 사용할 수 없기 때문에 제공 되어야 합니다.  
+- IntelliSense와 다시 호스트된 Workflow Designer의 다른 다양한 편집 기능을 지원하려는 경우. 이 기능은 재 호스트 된 응용 프로그램에서 기본 Visual Studio 식 편집기를 사용할 수 없기 때문에 제공 되어야 합니다.  
   
--   쉬운 식 편집 환경을 비즈니스 분석가 사용자에 대 한 Visual Basic 학습 또는 Visual Basic 식을 사용 하 여 처리 예를 들어, 필요 하지는 않도록 합니다.  
+- 쉬운 식 편집 환경을 비즈니스 분석가 사용자에 대 한 Visual Basic 학습 또는 Visual Basic 식을 사용 하 여 처리 예를 들어, 필요 하지는 않도록 합니다.  
   
  사용자 지정 식 편집기를 구현하는 데는 기본적으로 다음과 같은 세 단계가 필요합니다.  
   

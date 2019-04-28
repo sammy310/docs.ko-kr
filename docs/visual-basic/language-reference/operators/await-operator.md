@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
 ms.openlocfilehash: d9d50433e3bc24df7cda137a145ab3f0f0302a1f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608674"
 ---
 # <a name="await-operator-visual-basic"></a>Await 연산자(Visual Basic)
 대기 중인 작업이 완료될 때까지 메서드 실행을 일시 중단하려면 비동기 메서드 또는 람다 식의 피연산자에 `Await` 연산자를 적용합니다. 작업은 진행 중인 작업을 나타냅니다.  

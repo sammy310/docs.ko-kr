@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2d7d4a295832a958fb6a8fe2e6c43a09135500d3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696682"
 ---
 # <a name="ihostsemaphore-interface"></a>IHostSemaphore 인터페이스
 세마포 스레딩에 대 한 호스트의 구현을 나타냅니다.  

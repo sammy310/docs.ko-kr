@@ -11,15 +11,14 @@ helpviewer_keywords:
 - tab dialog boxes
 ms.assetid: 915091af-93ac-4d3d-8283-738dd2d21ea7
 ms.openlocfilehash: d00dbe1e450a2d4316709e92eff7dab488b36045
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755378"
 ---
 # <a name="tabcontrol-control-windows-forms"></a>TabControl 컨트롤(Windows Forms)
-Windows Forms `TabControl`은 파일 캐비닛의 폴더 집합에 노트북 또는 레이블의 구분선과 같은 여러 탭을 표시합니다. 탭에는 사진 및 기타 컨트롤이 포함될 수 있습니다. 
-  `TabControl`을 사용하여 속성 페이지를 만듭니다.  
+Windows Forms `TabControl`은 파일 캐비닛의 폴더 집합에 노트북 또는 레이블의 구분선과 같은 여러 탭을 표시합니다. 탭에는 사진 및 기타 컨트롤이 포함될 수 있습니다. `TabControl`을 사용하여 속성 페이지를 만듭니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [TabControl 컨트롤 개요](tabcontrol-control-overview-windows-forms.md)  

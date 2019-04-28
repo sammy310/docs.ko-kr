@@ -3,11 +3,11 @@ title: Oracle BFILE
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
 ms.openlocfilehash: 5bb9f7e67016cf4b1d467935fe302ab4a40edbfa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771971"
 ---
 # <a name="oracle-bfiles"></a>Oracle BFILE
 .NET Framework Data Provider for Oracle에는 Oracle <xref:System.Data.OracleClient.OracleBFile> 데이터 형식 작업에 사용되는 <xref:System.Data.OracleClient.OracleType.BFile> 클래스가 포함되어 있습니다.  
@@ -16,11 +16,11 @@ ms.locfileid: "59304469"
   
  다른 특성을 **BFILE** 구별 되는 데이터 형식을 **LOB** 기원후는:  
   
--   구조화되지 않은 데이터를 포함합니다.  
+- 구조화되지 않은 데이터를 포함합니다.  
   
--   서버측 청크를 지원합니다.  
+- 서버측 청크를 지원합니다.  
   
--   참조 복사 의미를 사용합니다. 예를 들어 복사 작업을 수행 하는 **BFILE**만 합니다 **BFILE** (즉, 파일에 대 한 참조) 로케이터 복사 됩니다. 파일의 데이터는 복사되지 않습니다.  
+- 참조 복사 의미를 사용합니다. 예를 들어 복사 작업을 수행 하는 **BFILE**만 합니다 **BFILE** (즉, 파일에 대 한 참조) 로케이터 복사 됩니다. 파일의 데이터는 복사되지 않습니다.  
   
  합니다 **BFILE** 크기가 큰 Lob를 참조 하는 것에 대 한 데이터 형식을 사용 해야 하므로 데이터베이스에 저장 하기에 적합 하지 합니다. 더 많은 클라이언트, 서버 및 통신 오버 헤드가 수반 됩니다는 **BFILE** 데이터 형식에 비해 합니다 **LOB** 데이터 형식. 것이 더 효율적 액세스 하는 **BFILE** 적은 양의 데이터를 획득 해야 하는 경우. 반면에 전체 개체를 가져와야 하는 경우에는 데이터베이스 상주 LOB에 액세스 하는 것이 효율적입니다.  
   

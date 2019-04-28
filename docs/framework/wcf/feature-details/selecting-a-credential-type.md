@@ -3,11 +3,11 @@ title: 자격 증명 형식 선택
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
 ms.openlocfilehash: 8aa959aa952e839039bebffddddd951fbc1eb0d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748809"
 ---
 # <a name="selecting-a-credential-type"></a>자격 증명 형식 선택
 *자격 증명* 는 Windows Communication Foundation (WCF) 요청 된 id 또는 기능을 사용 하 여 데이터입니다. 예를 들어 여권은 정부에서 국가나 지역의 시민권을 입증하기 위해 발급하는 자격 증명입니다. Wcf에서 자격 증명에는 사용자 이름 토큰 및 X.509 인증서 등 다양 한 형식의 걸릴 수 있습니다. 이 항목에서는 자격 증명, wcf에서 사용 방법 및 응용 프로그램에 적합 한 자격 증명을 선택 하는 방법을 설명 합니다.  
@@ -85,9 +85,9 @@ ms.locfileid: "59167845"
 ## <a name="how-client-credentials-are-used-to-authenticate-a-client-to-the-service"></a>클라이언트 자격 증명을 사용하여 클라이언트를 서비스에 인증하는 방법  
  서비스와 통신하는 데 필요한 클라이언트 자격 증명 정보는 <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> 속성이나 <xref:System.ServiceModel.ChannelFactory.Credentials%2A> 속성을 사용하여 제공됩니다. 보안 채널은 이 정보를 사용하여 클라이언트를 서비스에 인증합니다. 인증은 다음 두 가지 모드 중 하나를 통해 수행됩니다.  
   
--   보안 컨텍스트를 설정 하려면 WCF 클라이언트 인스턴스를 사용 하 여 첫 번째 메시지를 보내기 전에 클라이언트 자격 증명을 한 번 사용 됩니다. 그런 다음 모든 응용 프로그램 메시지는 보안 컨텍스트를 통해 보안이 유지됩니다.  
+- 보안 컨텍스트를 설정 하려면 WCF 클라이언트 인스턴스를 사용 하 여 첫 번째 메시지를 보내기 전에 클라이언트 자격 증명을 한 번 사용 됩니다. 그런 다음 모든 응용 프로그램 메시지는 보안 컨텍스트를 통해 보안이 유지됩니다.  
   
--   서비스로 전송되는 모든 응용 프로그램 메시지를 인증하는 데 클라이언트 자격 증명이 사용됩니다. 이 경우에는 클라이언트와 서비스 간에 컨텍스트가 설정되지 않습니다.  
+- 서비스로 전송되는 모든 응용 프로그램 메시지를 인증하는 데 클라이언트 자격 증명이 사용됩니다. 이 경우에는 클라이언트와 서비스 간에 컨텍스트가 설정되지 않습니다.  
   
 ### <a name="established-identities-cannot-be-changed"></a>설정된 ID를 변경할 수 없음  
  첫 번째 방법을 사용하면 설정된 컨텍스트가 영구적으로 클라이언트 ID와 연결됩니다. 즉, 보안 컨텍스트가 설정되고 나면 클라이언트와 연결된 ID를 변경할 수 없습니다.  
@@ -108,7 +108,6 @@ ms.locfileid: "59167845"
 - <xref:System.ServiceModel.MessageSecurityOverMsmq.ClientCredentialType%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>
-- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>
 - [보안 개념](../../../../docs/framework/wcf/feature-details/security-concepts.md)

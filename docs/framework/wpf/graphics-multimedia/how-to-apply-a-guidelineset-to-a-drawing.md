@@ -6,11 +6,11 @@ helpviewer_keywords:
 - graphics [WPF], GuidelineSet property
 ms.assetid: 45f3e0b4-8820-45a7-b865-b8ea5b17b0c8
 ms.openlocfilehash: 134236c5beca806b747d45f20764cc82ddd8a4e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699051"
 ---
 # <a name="how-to-apply-a-guidelineset-to-a-drawing"></a>방법: Drawing에 GuidelineSet 적용
 적용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.GuidelineSet> 에 <xref:System.Windows.Media.DrawingGroup>합니다.  

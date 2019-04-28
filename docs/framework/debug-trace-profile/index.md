@@ -1,26 +1,20 @@
 ---
-title: 디버깅, 추적 및 프로파일링
+title: '디버깅, 추적 및 프로파일링'
 ms.date: 03/30/2017
 helpviewer_keywords:
-- debugging [.NET Framework]
-- .NET Framework application configuration, debugging
-- debugging [.NET Framework], .NET Framework application debugging
-- troubleshooting applications [.NET Framework], profiling
-- application development [.NET Framework], debugging
-- .NET Framework application configuration, profiling
-- profiling applications
-- troubleshooting applications [.NET Framework], debugging
-- troubleshooting applications [.NET Framework]
-- application development [.NET Framework], profiling
+  - 'debugging [.NET Framework]'
+  - '.NET Framework application configuration, debugging'
+  - 'debugging [.NET Framework], .NET Framework application debugging'
+  - 'troubleshooting applications [.NET Framework], profiling'
+  - 'application development [.NET Framework], debugging'
+  - '.NET Framework application configuration, profiling'
+  - profiling applications
+  - 'troubleshooting applications [.NET Framework], debugging'
+  - 'troubleshooting applications [.NET Framework]'
+  - 'application development [.NET Framework], profiling'
 ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 855a1329c9804e4b40d796c639bbe8768156dcc2
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092503"
 ---
 # <a name="debugging-tracing-and-profiling"></a>디버깅, 추적 및 프로파일링
 .NET Framework 응용 프로그램을 디버그하려면 디버거가 응용 프로그램에 연결하고 가능한 경우 응용 프로그램 및 해당 MSIL(Microsoft intermediate language)에 대한 기호 및 라인 맵을 둘 다 생성할 수 있도록 컴파일러 및 런타임 환경을 구성해야 합니다. 관리되는 응용 프로그램이 디버그된 후 성능을 향상시키기 위해 프로파일링할 수 있습니다. 프로파일링은 가장 자주 실행된 코드를 생성하는 소스 코드 줄과 실행하는 데 소요된 시간을 평가 및 설명합니다.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control patterns, ExpandCollapse
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
 ms.openlocfilehash: ff07f5264ccb3ec699e3676a2e9ba64443b2875f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61610012"
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>UI 자동화 ExpandCollapse 컨트롤 패턴 구현
 > [!NOTE]
@@ -25,24 +25,24 @@ ms.locfileid: "59211662"
 ## <a name="implementation-guidelines-and-conventions"></a>구현 지침 및 규칙  
  ExpandCollapse 컨트롤 패턴을 구현할 때는 다음 지침 및 규칙에 유의하세요.  
   
--   UI에 확장/축소 기능을 제공하는 자식 개체로 빌드된 집계 컨트롤은 <xref:System.Windows.Automation.ExpandCollapsePattern> 컨트롤 패턴을 지원해야 하지만 자식 요소는 그렇지 않습니다. 예를 들어 콤보 상자 컨트롤은 목록 상자, 단추 및 편집 컨트롤 조합으로 빌드되지만 <xref:System.Windows.Automation.ExpandCollapsePattern>을 지원해야 하는 부모 콤보 상자일 뿐입니다.  
+- UI에 확장/축소 기능을 제공하는 자식 개체로 빌드된 집계 컨트롤은 <xref:System.Windows.Automation.ExpandCollapsePattern> 컨트롤 패턴을 지원해야 하지만 자식 요소는 그렇지 않습니다. 예를 들어 콤보 상자 컨트롤은 목록 상자, 단추 및 편집 컨트롤 조합으로 빌드되지만 <xref:System.Windows.Automation.ExpandCollapsePattern>을 지원해야 하는 부모 콤보 상자일 뿐입니다.  
   
     > [!NOTE]
     >  단, 개별 MenuItem 개체의 집계인 메뉴 컨트롤은 예외입니다. MenuItem 개체는 <xref:System.Windows.Automation.ExpandCollapsePattern> 컨트롤 패턴을 지원할 수 있지만 부모 메뉴 컨트롤은 그렇지 않습니다. 트리 및 트리 항목 컨트롤에도 유사한 예외가 적용됩니다.  
   
--   컨트롤의 <xref:System.Windows.Automation.ExpandCollapseState> 가 <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>로 설정되어 있으면 모든 <xref:System.Windows.Automation.ExpandCollapsePattern> 기능이 컨트롤에 대해 비활성화되고 이 컨트롤 패턴을 사용하여 가져올 수 있는 유일한 정보는 <xref:System.Windows.Automation.ExpandCollapseState>입니다. 나중에 자식 개체를 추가하면 <xref:System.Windows.Automation.ExpandCollapseState> 가 변경되고 <xref:System.Windows.Automation.ExpandCollapsePattern> 기능이 활성화됩니다.  
+- 컨트롤의 <xref:System.Windows.Automation.ExpandCollapseState> 가 <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>로 설정되어 있으면 모든 <xref:System.Windows.Automation.ExpandCollapsePattern> 기능이 컨트롤에 대해 비활성화되고 이 컨트롤 패턴을 사용하여 가져올 수 있는 유일한 정보는 <xref:System.Windows.Automation.ExpandCollapseState>입니다. 나중에 자식 개체를 추가하면 <xref:System.Windows.Automation.ExpandCollapseState> 가 변경되고 <xref:System.Windows.Automation.ExpandCollapsePattern> 기능이 활성화됩니다.  
   
--   <xref:System.Windows.Automation.ExpandCollapseState> 는 직계 자식 개체의 표시 유형을 나타내며, 모든 하위 개체의 표시 유형을 나타내지는 않습니다.  
+- <xref:System.Windows.Automation.ExpandCollapseState> 는 직계 자식 개체의 표시 유형을 나타내며, 모든 하위 개체의 표시 유형을 나타내지는 않습니다.  
   
--   확장 및 축소는 컨트롤 관련 기능입니다. 다음은 이 동작의 예입니다.  
+- 확장 및 축소는 컨트롤 관련 기능입니다. 다음은 이 동작의 예입니다.  
   
-    -   Office 개인 메뉴는 세가지 상태의 MenuItem(<xref:System.Windows.Automation.ExpandCollapseState.Expanded>, <xref:System.Windows.Automation.ExpandCollapseState.Collapsed> 및 <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>)이 될 수 있으며, 이때 컨트롤은 <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> 또는 <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> 가 호출될 때 적용할 상태를 지정합니다.  
+    - Office 개인 메뉴는 세가지 상태의 MenuItem(<xref:System.Windows.Automation.ExpandCollapseState.Expanded>, <xref:System.Windows.Automation.ExpandCollapseState.Collapsed> 및 <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>)이 될 수 있으며, 이때 컨트롤은 <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> 또는 <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> 가 호출될 때 적용할 상태를 지정합니다.  
   
-    -   TreeItem에서 <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> 를 호출하면 모든 하위 항목 또는 직계 자식만 표시될 수 있습니다.  
+    - TreeItem에서 <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> 를 호출하면 모든 하위 항목 또는 직계 자식만 표시될 수 있습니다.  
   
-    -   컨트롤에서 <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> 또는 <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> 를 호출하여 하위 항목의 상태를 유지 관리하는 경우 상태 변경 이벤트가 아니라 표시 유형 변경 이벤트를 전송해야 합니다. 축소될 때 부모 컨트롤이 하위 항목의 상태를 유지 관리하지 않으면 컨트롤이 더 이상 표시되지 않는 모든 하위 항목을 삭제하고 삭제된 이벤트를 발생시킬 수 있습니다. 또는 각 하위 항목에 대해 <xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A> 를 변경하고 표시 유형 변경 이벤트를 발생시킬 수 있습니다.  
+    - 컨트롤에서 <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> 또는 <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> 를 호출하여 하위 항목의 상태를 유지 관리하는 경우 상태 변경 이벤트가 아니라 표시 유형 변경 이벤트를 전송해야 합니다. 축소될 때 부모 컨트롤이 하위 항목의 상태를 유지 관리하지 않으면 컨트롤이 더 이상 표시되지 않는 모든 하위 항목을 삭제하고 삭제된 이벤트를 발생시킬 수 있습니다. 또는 각 하위 항목에 대해 <xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A> 를 변경하고 표시 유형 변경 이벤트를 발생시킬 수 있습니다.  
   
--   탐색을 보장하려면 부모 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 에 관계없이 개체를 적절한 표시 유형 상태로 <xref:System.Windows.Automation.ExpandCollapseState>트리에 배치하는 것이 좋습니다. 요청 시 생성되는 하위 항목의 경우 처음으로 표시된 다음이나 표시되는 동안만 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에 나타날 수 있습니다.  
+- 탐색을 보장하려면 부모 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 에 관계없이 개체를 적절한 표시 유형 상태로 <xref:System.Windows.Automation.ExpandCollapseState>트리에 배치하는 것이 좋습니다. 요청 시 생성되는 하위 항목의 경우 처음으로 표시된 다음이나 표시되는 동안만 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에 나타날 수 있습니다.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iexpandcollapseprovider"></a>IExpandCollapseProvider에 필요한 멤버  

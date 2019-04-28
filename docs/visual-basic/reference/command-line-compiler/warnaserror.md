@@ -7,11 +7,11 @@ helpviewer_keywords:
 - -warnaserror compiler option [Visual Basic]
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
 ms.openlocfilehash: c06326a250fba0de2f63e13672b4fffbfa8a07f0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796177"
 ---
 # <a name="-warnaserror-visual-basic"></a>-warnaserror(Visual Basic)
 컴파일러가 첫 번째 발생하는 경고를 오류로 처리하도록 만듭니다.  

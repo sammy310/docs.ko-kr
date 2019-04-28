@@ -9,11 +9,11 @@ helpviewer_keywords:
 - object variables [Visual Basic]
 ms.assetid: 7f9b2c77-03cd-428f-adc2-b18070226e7c
 ms.openlocfilehash: 3c44748798d5ed554fc9fbded9c3a4d981a66d2f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769033"
 ---
 # <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>방법: 개체 (Visual Basic)의 현재 인스턴스 참조
 합니다 *현재 인스턴스* 는 코드가 현재 실행 중인 개체의 합니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "58823365"
   
 ### <a name="to-refer-to-the-current-instance"></a>현재 인스턴스를 가리키도록  
   
--   사용 된 `Me` 키워드 위치는 일반적으로 사용 하는 개체 변수의 이름입니다.  
+- 사용 된 `Me` 키워드 위치는 일반적으로 사용 하는 개체 변수의 이름입니다.  
   
     ```  
     Me.ForeColor = System.Drawing.Color.Crimson  

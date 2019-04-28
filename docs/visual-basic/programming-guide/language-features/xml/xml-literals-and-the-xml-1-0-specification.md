@@ -5,28 +5,28 @@ helpviewer_keywords:
 - XML literals [Visual Basic], XML 1.0 specification
 ms.assetid: 46f046e5-293c-41a3-b893-4e5f6e32e78a
 ms.openlocfilehash: 4cc64bc5469b86a35a9dc45e09fa8fc9260fdcad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761717"
 ---
 # <a name="xml-literals-and-the-xml-10-specification-visual-basic"></a>XML 리터럴 및 XML 1.0 사양(Visual Basic)
 Visual Basic의 XML 리터럴 구문을 대부분의 태그 XML (Extensible Language) 1.0 사양 지원합니다. XML 1.0 사양에 대 한 자세한 내용은 참조 하세요. [Extensible Markup Language (XML) 1.0](https://www.w3.org/TR/xml) W3C 웹 사이트입니다.  
   
 ## <a name="what-visual-basic-does-not-support"></a>Visual Basic 지원 하지 않는 내용  
   
--   리터럴 XML 문서 형식 정의 (DTD)를 포함할 수 없습니다.  
+- 리터럴 XML 문서 형식 정의 (DTD)를 포함할 수 없습니다.  
   
--   XML 문서 리터럴에 XML 문서 선언으로 시작 해야 합니다.  
+- XML 문서 리터럴에 XML 문서 선언으로 시작 해야 합니다.  
   
--   XML 리터럴을 한 줄에서 65,535 개 문자를 포함할 수 없습니다.  
+- XML 리터럴을 한 줄에서 65,535 개 문자를 포함할 수 없습니다.  
   
--   XML 네임 스페이스 접두사, 요소 이름 및 특성 이름에 1,024 개 문자를 포함할 수 없습니다.  
+- XML 네임 스페이스 접두사, 요소 이름 및 특성 이름에 1,024 개 문자를 포함할 수 없습니다.  
   
 ## <a name="extra-features-that-visual-basic-supports"></a>Visual Basic에서 지 원하는 추가 기능  
   
--   유효한 XML 문서 및 요소의 리터럴에서 허용 포함 된 식 구문이 아닙니다.  
+- 유효한 XML 문서 및 요소의 리터럴에서 허용 포함 된 식 구문이 아닙니다.  
   
 ## <a name="see-also"></a>참고자료
 

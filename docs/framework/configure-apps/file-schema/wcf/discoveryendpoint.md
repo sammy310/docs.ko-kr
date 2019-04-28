@@ -3,11 +3,11 @@ title: <discoveryEndpoint>
 ms.date: 03/30/2017
 ms.assetid: fae2f48b-a635-4e4b-859d-a1432ac37e1c
 ms.openlocfilehash: d1a3371872f5587a682b8242c29b71808508ca3d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704058"
 ---
 # <a name="discoveryendpoint"></a>\<discoveryEndpoint>
 
@@ -42,7 +42,7 @@ ms.locfileid: "57374299"
 | discoveryMode    | 검색 프로토콜의 모드를 지정하는 문자열입니다. 유효한 값은 "Adhoc" 및 "Managed"입니다. 관리 모드에서는 프로토콜이 검색 가능한 서비스의 리포지토리로 작동하는 검색 프록시를 사용하고, 애드혹 모드에서는 프로토콜이 UDP 멀티캐스트 메커니즘을 사용하여 사용 가능한 서비스를 찾아야 합니다. 속성에 대 한 자세한 내용은 참조 하세요. <xref:System.ServiceModel.Discovery.DiscoveryEndpoint.DiscoveryMode%2A>합니다. |  
 | discoveryVersion | WS-Discovery 프로토콜의 두 버전 중 하나를 지정하는 문자열입니다. 유효한 값은 WSDiscovery11 및 WSDiscoveryApril2005입니다. 이 값은 <xref:System.ServiceModel.Discovery.DiscoveryVersion> 형식입니다. |  
 | maxResponseDelay | 검색 프로토콜이 Probe Match 또는 Resolve Match 같은 특정 메시지가 전송될 때까지 대기하는 최대 지연 값을 지정하는 Timespan 값입니다.<br /><br /> 모든 Probe Match가 동시에 전송되는 경우 네트워크 폭주가 발생할 수 있습니다. 이러한 현상이 발생하는 것을 방지하기 위해 각 Probe Match 사이에 임의의 지연 간격을 두고 Probe Match가 전송됩니다. 0에서 이 특성에 의해 설정되는 값까지의 범위 내에서 임의의 지연 간격이 설정됩니다. 이 특성이 0으로 설정되면 Probe Match 메시지가 지연 간격 없이 연속하여 전송됩니다. 그렇지 않으면 모든 Probe Match 메시지를 보내는 데 걸리는 총 시간이 maxResponseDelay를 초과하지 않는 범위 내에서 Probe Match 메시지가 약간의 임의의 지연 간격을 두고 전송됩니다. 이 값은 서비스에만 관련된 것으로 클라이언트에서 사용되는 값은 아닙니다. |  
-| `name`           | 표준 끝점의 구성 이름을 지정하는 문자열입니다. 이 이름은 서비스 엔드포인트의 `endpointConfiguration` 특성에서 표준 엔드포인트를 해당 구성에 연결하기 위해 사용됩니다. |  
+| `name`           | 표준 엔드포인트의 구성 이름을 지정하는 문자열입니다. 이 이름은 서비스 엔드포인트의 `endpointConfiguration` 특성에서 표준 엔드포인트를 해당 구성에 연결하기 위해 사용됩니다. |  
   
 ### <a name="child-elements"></a>자식 요소
 
@@ -58,7 +58,7 @@ ms.locfileid: "57374299"
 
 다음 예제에서는 피어 넷 멀티캐스트 전송을 통해 검색 메시지를 수신하는 서비스를 보여 줍니다. 이 예제에서는 WS-Discovery April 2005 버전을 명시적으로 지정합니다.  
   
-표준 끝점 구성이 서비스별로 정의되고 서비스 간에 공유될 수 없습니다. 따라서 다른 서비스에서 동일한 검색 엔드포인트를 사용하려는 경우 해당 서비스의 섹션에 동일한 구성을 추가해야 합니다.  
+표준 엔드포인트 구성이 서비스별로 정의되고 서비스 간에 공유될 수 없습니다. 따라서 다른 서비스에서 동일한 검색 엔드포인트를 사용하려는 경우 해당 서비스의 섹션에 동일한 구성을 추가해야 합니다.  
   
 ```xml  
 <services>

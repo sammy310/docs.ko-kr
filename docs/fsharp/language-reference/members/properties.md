@@ -3,11 +3,11 @@ title: 속성
 description: 에 대해 알아봅니다 F# 개체에 연결 된 값을 나타내는 멤버 수 있는 속성입니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: bf605ee1135bd3b3561bde9a8ae66353497931b0
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666367"
 ---
 # <a name="properties"></a>속성
 

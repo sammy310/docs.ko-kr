@@ -3,11 +3,11 @@ title: Oracle REF CURSOR
 ms.date: 03/30/2017
 ms.assetid: c6b25b8b-0bdd-41b2-9c7c-661f070c2247
 ms.openlocfilehash: b23b0f07d7755fed820481a3ad1fe831ae3f5224
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771861"
 ---
 # <a name="oracle-ref-cursors"></a>Oracle REF CURSOR
 .NET Framework Data Provider for Oracle은 Oracle 지원 **REF CURSOR** 데이터 형식입니다. Oracle REF CURSOR를 사용하는 데이터 공급자를 사용할 경우 다음 동작을 고려해야 합니다.  
@@ -15,19 +15,19 @@ ms.locfileid: "59213170"
 > [!NOTE]
 >  일부 동작이 MSDAORA(Microsoft OLE DB Provider for Oracle)의 동작과 다릅니다.  
   
--   성능상의 이유로 Data Provider for Oracle 자동으로 바인딩할 수 없으면 **REF CURSOR** 데이터 형식은 MSDAORA 에서처럼 명시적으로 지정 합니다.  
+- 성능상의 이유로 Data Provider for Oracle 자동으로 바인딩할 수 없으면 **REF CURSOR** 데이터 형식은 MSDAORA 에서처럼 명시적으로 지정 합니다.  
   
--   데이터 공급자는 REF CURSOR 매개 변수를 지정하는 데 사용되는 {resultset} 이스케이프를 포함하여 ODBC 이스케이프 시퀀스를 지원하지 않습니다.  
+- 데이터 공급자는 REF CURSOR 매개 변수를 지정하는 데 사용되는 {resultset} 이스케이프를 포함하여 ODBC 이스케이프 시퀀스를 지원하지 않습니다.  
   
--   REF Cursor를 반환 하는 저장된 프로시저를 실행 하려면 매개 변수를 정의 해야 합니다 <xref:System.Data.OracleClient.OracleParameterCollection> 사용 하 여는 <xref:System.Data.OracleClient.OracleType> 의 **커서** 와 <xref:System.Data.OracleClient.OracleParameter.Direction%2A> 의 **출력**합니다. 데이터 공급자는 REF CURSOR를 출력 매개 변수로만 바인딩하는 것을 지원하며 REF CURSOR를 입력 매개 변수로 지원하지 않습니다.  
+- REF Cursor를 반환 하는 저장된 프로시저를 실행 하려면 매개 변수를 정의 해야 합니다 <xref:System.Data.OracleClient.OracleParameterCollection> 사용 하 여는 <xref:System.Data.OracleClient.OracleType> 의 **커서** 와 <xref:System.Data.OracleClient.OracleParameter.Direction%2A> 의 **출력**합니다. 데이터 공급자는 REF CURSOR를 출력 매개 변수로만 바인딩하는 것을 지원하며 REF CURSOR를 입력 매개 변수로 지원하지 않습니다.  
   
--   매개 변수 값에서 <xref:System.Data.OracleClient.OracleDataReader>를 가져오는 것은 지원되지 않습니다. 값의 형식은 명령이 실행된 후의 <xref:System.DBNull>입니다.  
+- 매개 변수 값에서 <xref:System.Data.OracleClient.OracleDataReader>를 가져오는 것은 지원되지 않습니다. 값의 형식은 명령이 실행된 후의 <xref:System.DBNull>입니다.  
   
--   유일한 **CommandBehavior** REF Cursor를 사용 하 여 작동 하는 열거형 값 (호출 하는 경우에 예를 들어 <xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A>)는 **CloseConnection**; 나머지는 무시 됩니다.  
+- 유일한 **CommandBehavior** REF Cursor를 사용 하 여 작동 하는 열거형 값 (호출 하는 경우에 예를 들어 <xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A>)는 **CloseConnection**; 나머지는 무시 됩니다.  
   
--   REF Cursor의 순서를 **OracleDataReader** 매개 변수 순서에 따라 합니다 **OracleParameterCollection**합니다. <xref:System.Data.OracleClient.OracleParameter.ParameterName%2A> 속성은 무시됩니다.  
+- REF Cursor의 순서를 **OracleDataReader** 매개 변수 순서에 따라 합니다 **OracleParameterCollection**합니다. <xref:System.Data.OracleClient.OracleParameter.ParameterName%2A> 속성은 무시됩니다.  
   
--   PL/SQL **테이블** 데이터 형식이 지원 되지 않습니다. 그러나 REF CURSOR가 더 효율적입니다. 사용 해야 하는 경우는 **테이블** 데이터 형식, OLE DB.NET Data Provider와 MSDAORA를 함께 사용 하 여 합니다.  
+- PL/SQL **테이블** 데이터 형식이 지원 되지 않습니다. 그러나 REF CURSOR가 더 효율적입니다. 사용 해야 하는 경우는 **테이블** 데이터 형식, OLE DB.NET Data Provider와 MSDAORA를 함께 사용 하 여 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [REF CURSOR 예제](../../../../docs/framework/data/adonet/ref-cursor-examples.md)  

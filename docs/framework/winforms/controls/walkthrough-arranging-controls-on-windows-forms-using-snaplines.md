@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 ms.openlocfilehash: 15ff9ad710b49caf35767acf498a8e55b238d84c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759923"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>연습: Windows Forms에서 맞춤선을 사용하여 컨트롤 정렬
 폼의 정확한 컨트롤 배치는 많은 응용 프로그램에서 우선 순위가 높습니다. Windows Forms 디자이너를 이렇게 하려면 여러 레이아웃 도구를 제공 합니다. 가장 중요 한 것은 <xref:System.Windows.Forms.Design.Behavior.SnapLine> 기능입니다.  
@@ -23,27 +23,27 @@ ms.locfileid: "59343040"
   
  이 연습에서 설명하는 작업은 다음과 같습니다.  
   
--   Windows Forms 프로젝트 만들기  
+- Windows Forms 프로젝트 만들기  
   
--   간격 조정 및 맞춤선을 사용 하 여 컨트롤 정렬  
+- 간격 조정 및 맞춤선을 사용 하 여 컨트롤 정렬  
   
--   폼과 컨테이너 여백에 맞춤  
+- 폼과 컨테이너 여백에 맞춤  
   
--   그룹화 된 컨트롤에 맞춤  
+- 그룹화 된 컨트롤에 맞춤  
   
--   맞춤선을 사용 하 여 크기로 개요 여 컨트롤을 배치 하려면  
+- 맞춤선을 사용 하 여 크기로 개요 여 컨트롤을 배치 하려면  
   
--   도구 상자에서 컨트롤을 끌어 올 때 맞춤선을 사용 하 여  
+- 도구 상자에서 컨트롤을 끌어 올 때 맞춤선을 사용 하 여  
   
--   맞춤선을 사용 하 여 컨트롤의 크기 조정  
+- 맞춤선을 사용 하 여 컨트롤의 크기 조정  
   
--   컨트롤의 텍스트에 레이블 맞춤  
+- 컨트롤의 텍스트에 레이블 맞춤  
   
--   맞춤선을 사용 하 여 키보드 탐색을 사용 하 여  
+- 맞춤선을 사용 하 여 키보드 탐색을 사용 하 여  
   
--   맞춤선 및 레이아웃 패널  
+- 맞춤선 및 레이아웃 패널  
   
--   맞춤선을 사용 하지 않도록 설정  
+- 맞춤선을 사용 하지 않도록 설정  
   
  작업을 완료 하는 경우에 레이아웃 역할 맞춤선 기능을 이해를 해야 합니다.  
   
@@ -216,7 +216,7 @@ ms.locfileid: "59343040"
   
 #### <a name="to-selectively-disable-snaplines"></a>선택적으로 맞춤선을 사용 하지 않도록 설정  
   
--   ALT 키를 누르고 형식 관련 컨트롤을 이동 하는 동안 합니다.  
+- ALT 키를 누르고 형식 관련 컨트롤을 이동 하는 동안 합니다.  
   
      Note 없습니다 맞춤선이 표시 하는 제어 가능한 맞춤 위치 스냅 되지 않습니다.  
   
@@ -233,9 +233,9 @@ ms.locfileid: "59343040"
 ## <a name="next-steps"></a>다음 단계  
  맞춤선의 폼에 컨트롤 맞추기는 직관적인 방법을 제공 합니다. 다음과 같은 사항을 더 살펴보는 것이 좋습니다.  
   
--   중첩 시도 <xref:System.Windows.Forms.GroupBox> 내에서 다른 컨트롤 <xref:System.Windows.Forms.GroupBox> 제어 합니다. 위치는 <xref:System.Windows.Forms.Button> 자식 내에 있는 컨트롤 <xref:System.Windows.Forms.GroupBox> 제어 및 부모 내에서 다른 <xref:System.Windows.Forms.GroupBox> 제어 합니다. 이동 된 <xref:System.Windows.Forms.Button> 컨트롤을 맞춤선 컨테이너 경계를 교차 하는 방법을 참조 하세요.  
+- 중첩 시도 <xref:System.Windows.Forms.GroupBox> 내에서 다른 컨트롤 <xref:System.Windows.Forms.GroupBox> 제어 합니다. 위치는 <xref:System.Windows.Forms.Button> 자식 내에 있는 컨트롤 <xref:System.Windows.Forms.GroupBox> 제어 및 부모 내에서 다른 <xref:System.Windows.Forms.GroupBox> 제어 합니다. 이동 된 <xref:System.Windows.Forms.Button> 컨트롤을 맞춤선 컨테이너 경계를 교차 하는 방법을 참조 하세요.  
   
--   열을 만들 <xref:System.Windows.Forms.TextBox> 컨트롤 및 해당 열의 <xref:System.Windows.Forms.Label> 컨트롤입니다. 값을 설정 합니다 <xref:System.Windows.Forms.Label> 컨트롤의 <xref:System.Windows.Forms.Control.AutoSize%2A> 속성을 `true`입니다. 맞춤선을 사용 하 여 이동 합니다 <xref:System.Windows.Forms.Label> 컨트롤의 표시 텍스트에 텍스트를 맞춥니다는 <xref:System.Windows.Forms.TextBox> 컨트롤입니다.  
+- 열을 만들 <xref:System.Windows.Forms.TextBox> 컨트롤 및 해당 열의 <xref:System.Windows.Forms.Label> 컨트롤입니다. 값을 설정 합니다 <xref:System.Windows.Forms.Label> 컨트롤의 <xref:System.Windows.Forms.Control.AutoSize%2A> 속성을 `true`입니다. 맞춤선을 사용 하 여 이동 합니다 <xref:System.Windows.Forms.Label> 컨트롤의 표시 텍스트에 텍스트를 맞춥니다는 <xref:System.Windows.Forms.TextBox> 컨트롤입니다.  
   
  Windows 사용자 인터페이스 디자인에 대 한 내용은 책을 참조 하세요 *Microsoft Windows User Experience, 사용자 인터페이스 개발자 및 디자이너를 위한 공식 지침* Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1).  
   

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
 ms.openlocfilehash: 968913a52a1d86746498aed7c97b63594d346a31
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696913"
 ---
 # <a name="security-wpf"></a>보안(WPF)
 <a name="introduction"></a> Windows Presentation Foundation (WPF) 독립 실행형 및 브라우저에서 호스팅된 응용 프로그램을 개발할 때 보안 모델을 고려해 야 합니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 독립 실행형 응용 프로그램 무제한 권한으로 실행 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** 권한 집합) Windows Installer (.msi), XCopy를 사용 하 여 배포한 여부에 관계 없이 또는 [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]합니다. ClickOnce를 포함한 부분 신뢰, 독립 실행형 WPF 애플리케이션 배포가 지원되지 않습니다. 그러나 완전 신뢰 호스트 응용 프로그램을 부분 신뢰를 만들 수 <xref:System.AppDomain> .NET Framework 추가 기능 모델을 사용 합니다. 자세한 내용은 [WPF 추가 기능 개요](./app-development/wpf-add-ins-overview.md)합니다.  
@@ -31,17 +31,17 @@ ms.locfileid: "59313569"
   
  이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   
--   [안전한 탐색](#SafeTopLevelNavigation)  
+- [안전한 탐색](#SafeTopLevelNavigation)  
   
--   [웹 브라우징 소프트웨어 보안 설정](#InternetExplorerSecuritySettings)  
+- [웹 브라우징 소프트웨어 보안 설정](#InternetExplorerSecuritySettings)  
   
--   [WebBrowser 컨트롤 및 기능 컨트롤](#webbrowser_control_and_feature_controls)  
+- [WebBrowser 컨트롤 및 기능 컨트롤](#webbrowser_control_and_feature_controls)  
   
--   [부분적으로 신뢰할 수 있는 클라이언트 응용 프로그램에 대한 APTCA 어셈블리를 사용하지 않도록 설정](#APTCA)  
+- [부분적으로 신뢰할 수 있는 클라이언트 응용 프로그램에 대한 APTCA 어셈블리를 사용하지 않도록 설정](#APTCA)  
   
--   [XAML 사용 완화 파일에 대한 샌드박스 동작](#LooseContentSandboxing)  
+- [XAML 사용 완화 파일에 대한 샌드박스 동작](#LooseContentSandboxing)  
   
--   [보안을 승격하는 WPF 응용 프로그램 개발을 위한 리소스](#BestPractices)  
+- [보안을 승격하는 WPF 응용 프로그램 개발을 위한 리소스](#BestPractices)  
   
 <a name="SafeTopLevelNavigation"></a>   
 ## <a name="safe-navigation"></a>안전한 탐색  
@@ -69,19 +69,19 @@ ms.locfileid: "59313569"
   
  이러한 콘텐츠 형식의 파일은 사용자 또는 프로그래밍 방식으로 탐색할 수 있습니다.  
   
--   **사용자 탐색**. 사용자가 클릭 하 여 탐색을 <xref:System.Windows.Documents.Hyperlink> 요소입니다.  
+- **사용자 탐색**. 사용자가 클릭 하 여 탐색을 <xref:System.Windows.Documents.Hyperlink> 요소입니다.  
   
--   **프로그래밍 방식 탐색**. 응용 프로그램에서 탐색을 설정 하 여, 예를 들어, 사용자 개입 없이 <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType> 속성입니다.  
+- **프로그래밍 방식 탐색**. 응용 프로그램에서 탐색을 설정 하 여, 예를 들어, 사용자 개입 없이 <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType> 속성입니다.  
   
 <a name="Browser_Navigation_Security"></a>   
 ### <a name="browser-navigation-security"></a>브라우저 탐색 보안  
  브라우저 탐색은 다음 조건에서만 안전한 것으로 간주됩니다.  
   
--   **사용자 탐색**. 사용자가 클릭 하 여 탐색을 <xref:System.Windows.Documents.Hyperlink> 주 내에 있는 요소 <xref:System.Windows.Navigation.NavigationWindow>없습니다 중첩 된 <xref:System.Windows.Controls.Frame>합니다.  
+- **사용자 탐색**. 사용자가 클릭 하 여 탐색을 <xref:System.Windows.Documents.Hyperlink> 주 내에 있는 요소 <xref:System.Windows.Navigation.NavigationWindow>없습니다 중첩 된 <xref:System.Windows.Controls.Frame>합니다.  
   
--   **영역**. 탐색 대상 콘텐츠는 인터넷 또는 로컬 인트라넷에 있습니다.  
+- **영역**. 탐색 대상 콘텐츠는 인터넷 또는 로컬 인트라넷에 있습니다.  
   
--   **프로토콜**. 사용 되는 프로토콜입니다 **http**, **https**합니다 **파일**, 또는 **mailto**합니다.  
+- **프로토콜**. 사용 되는 프로토콜입니다 **http**, **https**합니다 **파일**, 또는 **mailto**합니다.  
   
  경우는 [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] 가 이러한 조건을 준수 하지 않는 방식으로 콘텐츠를 탐색 하려고는 <xref:System.Security.SecurityException> throw 됩니다.  
   
@@ -91,15 +91,15 @@ ms.locfileid: "59313569"
   
  [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] 또는에서 실행할 수 있는 기능을 구성할 수 있습니다 하는 메커니즘을 제공 [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)], 다음을 비롯 한:  
   
--   .NET framework 기반 구성 요소  
+- .NET framework 기반 구성 요소  
   
--   ActiveX 컨트롤 및 플러그인  
+- ActiveX 컨트롤 및 플러그인  
   
--   다운로드  
+- 다운로드  
   
--   스크립팅  
+- 스크립팅  
   
--   사용자 인증  
+- 사용자 인증  
   
  영역 기반 별로 구성 된이 방법으로 보호할 수 있는 기능 컬렉션을 **인터넷**, **인트라넷**, **신뢰할 수 있는 사이트**, 및  **제한 된 사이트** 영역입니다. 다음 단계는 보안 설정을 구성하는 방법을 설명합니다.  
   
@@ -122,9 +122,9 @@ ms.locfileid: "59313569"
   
  부터 [!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)],.NET Framework 용으로 특별히 다음 보안 설정이 포함 됩니다.  
   
--   **느슨한 XAML**. 컨트롤 여부 [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] 탐색 하 여 느슨한 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 파일입니다. (설정, 해제 및 확인 옵션).  
+- **느슨한 XAML**. 컨트롤 여부 [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] 탐색 하 여 느슨한 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 파일입니다. (설정, 해제 및 확인 옵션).  
   
--   **XAML 브라우저 응용 프로그램**. 컨트롤 여부 [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] 로 이동 하 고 실행할 수 [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]입니다. (설정, 해제 및 확인 옵션).  
+- **XAML 브라우저 응용 프로그램**. 컨트롤 여부 [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] 로 이동 하 고 실행할 수 [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]입니다. (설정, 해제 및 확인 옵션).  
   
  기본적으로 이러한 설정이 모두 사용 됩니다는 **인터넷**를 **로컬 인트라넷**, 및 **신뢰할 수 있는 사이트** 영역 및에 대 한 사용 안 함은 **제한 된 사이트**  영역입니다.  
   
@@ -232,11 +232,11 @@ ms.locfileid: "59313569"
   
  이 키는 APTCA 어셈블리에 대한 항목을 설정합니다. 어셈블리를 사용할지를 지정하는 이 키에서 값을 만들 수도 있습니다. 다음은 값의 세부 정보입니다.  
   
--   값 이름: **APTCA_FLAG**.  
+- 값 이름: **APTCA_FLAG**.  
   
--   값 종류: **REG_DWORD**.  
+- 값 종류: **REG_DWORD**.  
   
--   값 데이터: **1** 사용 하지 않도록 설정 합니다. **0** 사용 하도록 설정 합니다.  
+- 값 데이터: **1** 사용 하지 않도록 설정 합니다. **0** 사용 하도록 설정 합니다.  
   
  어셈블리를 부분적으로 신뢰할 수 있는 클라이언트 애플리케이션에 사용하지 않도록 설정해야 하는 경우, 레지스트리 키와 값을 만드는 업데이트를 작성할 수 있습니다.  
   

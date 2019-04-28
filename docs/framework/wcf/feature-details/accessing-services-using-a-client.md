@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
 ms.openlocfilehash: a94864563491b5bd2d50a6df59858f4b7235fd75
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696225"
 ---
 # <a name="accessing-services-using-a-client"></a>클라이언트를 사용하여 서비스 액세스
 클라이언트 응용 프로그램 만들기, 구성 및 서비스와 통신 하려면 WCF 클라이언트 또는 채널 개체를 사용 해야 합니다. 합니다 [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md) 항목에서는 개체 및 기본 클라이언트 및 채널 개체를 만들고 사용 하는 단계를 간략하게 설명 합니다.  
@@ -20,13 +20,13 @@ ms.locfileid: "59314882"
 ## <a name="overview"></a>개요  
  이 항목에서는 다음과 관련된 동작 및 문제에 대해 설명합니다.  
   
--   채널 및 세션 수명  
+- 채널 및 세션 수명  
   
--   예외 처리  
+- 예외 처리  
   
--   블로킹 문제 이해  
+- 블로킹 문제 이해  
   
--   대화형으로 채널 초기화  
+- 대화형으로 채널 초기화  
   
 ### <a name="channel-and-session-lifetimes"></a>채널 및 세션 수명  
  Windows Communication Foundation (WCF) 응용 프로그램에는 두 가지 범주의 채널, 데이터 그램 및 세션 포함 됩니다.  

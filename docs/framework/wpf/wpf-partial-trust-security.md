@@ -16,11 +16,11 @@ helpviewer_keywords:
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
 ms.openlocfilehash: 75ebf605e9abb844e7a713b448aefe2ec4cd1a27
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696595"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF 부분 신뢰 보안
 <a name="introduction"></a> 일반적으로 악의적인 손상을 방지하기 위해 중요한 시스템 리소스에 직접 액세스하지 않도록 인터넷 응용 프로그램을 제한해야 합니다. 기본적으로 [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] 되며 클라이언트 쪽 스크립트 언어인 중요 한 시스템 리소스에 액세스할 수 없습니다. Windows Presentation Foundation (WPF) 브라우저에서 호스팅된 응용 프로그램은 브라우저에서 시작할 수 있으므로 비슷한 일련의 제한 사항에 따라야 합니다. 이러한 제한 사항이 적용 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 둘 다에 의존 [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] 하 고 [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (참조 [WPF 보안 전략-플랫폼 보안](wpf-security-strategy-platform-security.md)). 기본적으로 브라우저에서 호스팅된 응용 프로그램 요청 인터넷 영역 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 인터넷, 로컬 인트라넷 또는 로컬 컴퓨터에서 실행 되는 여부에 관계 없이 사용 권한 집합입니다. 전체 권한 집합보다 적은 권한으로 실행하는 애플리케이션은 부분 신뢰로 실행된다고 할 수 있습니다.  
@@ -29,11 +29,11 @@ ms.locfileid: "59218383"
   
  이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   
--   [WPF 기능 부분 신뢰 지원](#WPF_Feature_Partial_Trust_Support)  
+- [WPF 기능 부분 신뢰 지원](#WPF_Feature_Partial_Trust_Support)  
   
--   [부분 신뢰 프로그래밍](#Partial_Trust_Programming)  
+- [부분 신뢰 프로그래밍](#Partial_Trust_Programming)  
   
--   [권한 관리](#Managing_Permissions)  
+- [권한 관리](#Managing_Permissions)  
   
 <a name="WPF_Feature_Partial_Trust_Support"></a>   
 ## <a name="wpf-feature-partial-trust-support"></a>WPF 기능 부분 신뢰 지원  
@@ -52,19 +52,19 @@ ms.locfileid: "59218383"
   
  이 표는 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 높은 수준 기능입니다. 자세한 내용은 합니다 [!INCLUDE[TLA#tla_lhsdk](../../../includes/tlasharptla-lhsdk-md.md)] 의 각 멤버에 필요한 사용 권한에 대해 설명 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]합니다. 또한 다음 기능에는 특별한 고려 사항을 포함하는 부분 신뢰 실행에 대한 자세한 정보가 있습니다.  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (참조 [XAML 개요 (WPF)](./advanced/xaml-overview-wpf.md)).  
+- [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (참조 [XAML 개요 (WPF)](./advanced/xaml-overview-wpf.md)).  
   
--   팝업 (참조 <xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>).  
+- 팝업 (참조 <xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>).  
   
--   끌어서 놓기 (참조 [끌어서 놓기 개요](./advanced/drag-and-drop-overview.md)).  
+- 끌어서 놓기 (참조 [끌어서 놓기 개요](./advanced/drag-and-drop-overview.md)).  
   
--   클립보드 (참조 <xref:System.Windows.Clipboard?displayProperty=nameWithType>).  
+- 클립보드 (참조 <xref:System.Windows.Clipboard?displayProperty=nameWithType>).  
   
--   이미징 (참조 <xref:System.Windows.Controls.Image?displayProperty=nameWithType>).  
+- 이미징 (참조 <xref:System.Windows.Controls.Image?displayProperty=nameWithType>).  
   
--   Serialization (참조 <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>, <xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>).  
+- Serialization (참조 <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>, <xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>).  
   
--   파일 열기 대화 상자 (참조 <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>).  
+- 파일 열기 대화 상자 (참조 <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>).  
   
  다음 표에 설명 된 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 인터넷의 제한 내에서 실행 하기에 안전 하지 않은 기능 영역 권한 집합입니다.  
   
@@ -153,11 +153,11 @@ ms.locfileid: "59218383"
   
  권한을 높이는 경우 프로젝트 설정 및 ClickOnce 애플리케이션 매니페스트를 변경해야 합니다. 자세한 내용은 [WPF XAML 브라우저 애플리케이션 개요](./app-development/wpf-xaml-browser-applications-overview.md)를 참조하세요. 다음 문서도 유용할 수 있습니다.  
   
--   [Mage.exe(매니페스트 생성 및 편집 도구)](../tools/mage-exe-manifest-generation-and-editing-tool.md).  
+- [Mage.exe(매니페스트 생성 및 편집 도구)](../tools/mage-exe-manifest-generation-and-editing-tool.md).  
   
--   [MageUI.exe(매니페스트 생성 및 편집 도구, 그래픽 클라이언트)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).  
+- [MageUI.exe(매니페스트 생성 및 편집 도구, 그래픽 클라이언트)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).  
   
--   [ClickOnce 응용 프로그램 보안](/visualstudio/deployment/securing-clickonce-applications).  
+- [ClickOnce 응용 프로그램 보안](/visualstudio/deployment/securing-clickonce-applications).  
   
  경우에 [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] 완전 신뢰가 필요한 것과 동일한 도구를 사용 하 여 요청 된 권한 수준을 높입니다. 하지만 [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] 에 설치 되 고 로컬 컴퓨터, 인트라넷 또는 신뢰할 수 있는 허용 된 사이트 또는 브라우저에 나열 된 URL에서 시작 된 경우에 완전 신뢰를 받게 됩니다. 인트라넷 또는 신뢰할 수 있는 사이트에서 애플리케이션이 설치되면, 사용자는 상승된 권한을 알리는 표준 ClickOnce 프롬프트를 받습니다. 사용자는 설치를 계속하거나 취소하도록 선택할 수 있습니다.  
   

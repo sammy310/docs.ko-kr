@@ -3,11 +3,11 @@ title: 'Windows Communication Foundation 채택에 대한 기대: 향후 통합 
 ms.date: 03/30/2017
 ms.assetid: 3028bba8-6355-4ee0-9ecd-c56e614cb474
 ms.openlocfilehash: c6e749c32947a4159d6bfd56c4d30a06f6ef0b7f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650559"
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Windows Communication Foundation 채택에 대한 기대: 향후 통합 간소화
 현재 ASP.NET을 사용 하 고 나중에 WCF를 사용 하는 경우이 항목에서는 새 ASP.NET 웹 서비스는 WCF 응용 프로그램과 함께 잘 작동 하는지 확인 하기 위한 지침을 제공 합니다.  

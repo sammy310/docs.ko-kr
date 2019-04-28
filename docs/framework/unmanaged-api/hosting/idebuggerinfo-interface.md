@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 94dfeaaa4ae917540c8030034959ad2f693bb025
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59123735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699593"
 ---
 # <a name="idebuggerinfo-interface"></a>IDebuggerInfo 인터페이스
 디버깅 서비스의 상태에 대 한 정보를 가져오기 위한 메서드를 제공 합니다.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - animation [WPF], changing property values after
 ms.assetid: 79466556-4dbf-40bd-9c1e-a77613b07077
 ms.openlocfilehash: 2e1389392c6465ed56b2c71e53b2e3c1947acbe2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651105"
 ---
 # <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>방법: 스토리보드를 사용하여 애니메이션 효과를 적용한 후 속성 설정
 경우에 따라 애니메이션이 적용 된 후에 속성의 값을 변경할 수 없습니다 나타날 것입니다.  
@@ -30,11 +30,11 @@ ms.locfileid: "59188320"
   
  이전 코드는 작업을 수행할 나타나지: 값인 yellow, 브러시 유지가 제공한는 <xref:System.Windows.Media.Animation.ColorAnimation> 작업도 합니다. 기본 속성 값 (기본값)는 실제로 파란색으로 변경 됩니다. 효과적으로 또는 현재 값은 노란색으로 남아 있지만 때문에 <xref:System.Windows.Media.Animation.ColorAnimation> 여전히 기본 값을 재정의 합니다. 유효한 값을 다시 되도록 기본 값을 원하는 경우 속성에 영향을 주지 애니메이션을 중지 해야 합니다. Storyboard 애니메이션을 사용 하 여이 작업을 수행 하는 방법은 세 가지가 있습니다.  
   
--   애니메이션의 설정 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 속성 <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
+- 애니메이션의 설정 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 속성 <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
   
--   전체 스토리 보드를 제거 합니다.  
+- 전체 스토리 보드를 제거 합니다.  
   
--   개별 속성에서 애니메이션을 제거 합니다.  
+- 개별 속성에서 애니메이션을 제거 합니다.  
   
 ## <a name="set-the-animations-fillbehavior-property-to-stop"></a>애니메이션의 FillBehavior 속성 Stop으로 설정  
  설정 하 여 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 에 <xref:System.Windows.Media.Animation.FillBehavior.Stop>을 활성 기간의 끝에 도달한 후 대상 속성에 영향을 주지 않으려면 애니메이션을 알려줍니다.  

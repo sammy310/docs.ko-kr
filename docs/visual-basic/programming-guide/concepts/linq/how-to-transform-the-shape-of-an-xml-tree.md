@@ -3,11 +3,11 @@ title: '방법: (Visual Basic) XML 트리의 모양 변형'
 ms.date: 07/20/2015
 ms.assetid: 84b60854-48b2-452c-87f2-77d53e1d653a
 ms.openlocfilehash: 067bf56b8dff994080ba78147d992b97a56867cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61615001"
 ---
 # <a name="how-to-transform-the-shape-of-an-xml-tree-visual-basic"></a>방법: (Visual Basic) XML 트리의 모양 변형
 XML 문서의 *모양*은 요소 이름, 특성 이름 및 계층 구조의 특징을 나타냅니다.  

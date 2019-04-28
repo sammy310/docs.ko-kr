@@ -5,11 +5,11 @@ helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
 ms.openlocfilehash: 144d2b6732ea319ba920317601eff2ebd7b58322
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608560"
 ---
 # <a name="configuring-services-using-configuration-files"></a>구성 파일을 사용하여 서비스 구성
 디자인 타임에 대신 배포 지점에서 서비스 동작 데이터 및 끝점을 제공 하는 유연성을 제공 구성 파일을 사용 하 여 Windows Communication Foundation (WCF) 서비스를 구성 합니다. 이 항목에서는 사용할 수 있는 기본 기술에 대해 간략하게 설명합니다.  
@@ -74,24 +74,24 @@ ms.locfileid: "59132576"
 ### <a name="the-service-element"></a>\<서비스 > 요소  
  각 서비스에는 다음 특성이 있습니다.  
   
--   `name`. 서비스 계약의 구현을 제공하는 형식을 지정합니다. 네임스페이스, 마침표, 형식 이름순으로 구성되는 정규화된 이름입니다. 예를 들면 `"MyNameSpace.myServiceType"`과 같습니다.  
+- `name`. 서비스 계약의 구현을 제공하는 형식을 지정합니다. 네임스페이스, 마침표, 형식 이름순으로 구성되는 정규화된 이름입니다. 예를 들면 `"MyNameSpace.myServiceType"`과 같습니다.  
   
--   `behaviorConfiguration`. `behavior` 요소에 있는 `behaviors` 요소 중 하나의 이름을 지정합니다. 지정한 동작은 서비스에서 가장을 허용할지 여부와 같은 작업을 제어합니다. 해당 값이 빈 이름이거나 `behaviorConfiguration` 이 제공되지 않으면 기본 서비스 동작 집합이 서비스에 추가됩니다.  
+- `behaviorConfiguration`. `behavior` 요소에 있는 `behaviors` 요소 중 하나의 이름을 지정합니다. 지정한 동작은 서비스에서 가장을 허용할지 여부와 같은 작업을 제어합니다. 해당 값이 빈 이름이거나 `behaviorConfiguration` 이 제공되지 않으면 기본 서비스 동작 집합이 서비스에 추가됩니다.  
   
--   [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
+- [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
   
 ### <a name="the-endpoint-element"></a>\<끝점 > 요소  
  각 엔드포인트에는 다음 특성으로 표시되는 주소, 바인딩 및 계약이 필요합니다.  
   
--   `address`. 절대 주소이거나 서비스의 기본 주소에 대한 상대 주소일 수 있는 서비스의 URI(Uniform Resource Identifier)를 지정합니다. 이 특성이 빈 문자열로 설정되면 서비스에 <xref:System.ServiceModel.ServiceHost>를 만들 때 지정되는 기본 주소에서 엔드포인트를 사용할 수 있음을 나타냅니다.  
+- `address`. 절대 주소이거나 서비스의 기본 주소에 대한 상대 주소일 수 있는 서비스의 URI(Uniform Resource Identifier)를 지정합니다. 이 특성이 빈 문자열로 설정되면 서비스에 <xref:System.ServiceModel.ServiceHost>를 만들 때 지정되는 기본 주소에서 엔드포인트를 사용할 수 있음을 나타냅니다.  
   
--   `binding`. 일반적으로 <xref:System.ServiceModel.WSHttpBinding>과 같은 시스템 제공 바인딩을 지정하지만 사용자 정의 바인딩을 지정할 수도 있습니다. 지정된 바인딩에 따라 전송 형식, 사용된 보안 및 인코딩 그리고 신뢰할 수 있는 세션, 트랜잭션 또는 스트리밍을 지원하거나 사용할 수 있는지 여부를 확인합니다.  
+- `binding`. 일반적으로 <xref:System.ServiceModel.WSHttpBinding>과 같은 시스템 제공 바인딩을 지정하지만 사용자 정의 바인딩을 지정할 수도 있습니다. 지정된 바인딩에 따라 전송 형식, 사용된 보안 및 인코딩 그리고 신뢰할 수 있는 세션, 트랜잭션 또는 스트리밍을 지원하거나 사용할 수 있는지 여부를 확인합니다.  
   
--   `bindingConfiguration`. 바인딩의 기본값을 수정해야 하는 경우 `binding` 요소에서 해당 `bindings` 요소를 구성하여 수행할 수 있습니다. 이 특성에는 기본값을 변경하는 데 사용되는 `name` 요소의 `binding` 특성과 동일한 값을 지정해야 합니다. 이름을 지정하지 않거나 바인딩에서 `bindingConfiguration`을 지정하지 않으면 바인딩 형식의 기본 바인딩이 엔드포인트에 사용됩니다.  
+- `bindingConfiguration`. 바인딩의 기본값을 수정해야 하는 경우 `binding` 요소에서 해당 `bindings` 요소를 구성하여 수행할 수 있습니다. 이 특성에는 기본값을 변경하는 데 사용되는 `name` 요소의 `binding` 특성과 동일한 값을 지정해야 합니다. 이름을 지정하지 않거나 바인딩에서 `bindingConfiguration`을 지정하지 않으면 바인딩 형식의 기본 바인딩이 엔드포인트에 사용됩니다.  
   
--   `contract`. 계약을 정의하는 인터페이스를 지정합니다. 이 특성은 `name` 요소의 `service` 특성으로 지정된 CLR(공통 언어 런타임)에 구현된 인터페이스입니다.  
+- `contract`. 계약을 정의하는 인터페이스를 지정합니다. 이 특성은 `name` 요소의 `service` 특성으로 지정된 CLR(공통 언어 런타임)에 구현된 인터페이스입니다.  
   
--   [\<endpoint>](../configure-apps/file-schema/wcf/endpoint-element.md)  
+- [\<endpoint>](../configure-apps/file-schema/wcf/endpoint-element.md)  
   
 ### <a name="the-bindings-element"></a>\<바인딩 > 요소  
  `bindings` 요소에는 서비스에 정의된 엔드포인트에서 사용할 수 있는 모든 바인딩에 대한 사양이 포함됩니다.  

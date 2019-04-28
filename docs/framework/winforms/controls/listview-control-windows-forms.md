@@ -12,11 +12,11 @@ helpviewer_keywords:
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
 ms.openlocfilehash: d826fe0a64ad226db62e01259b0466f7f495f8e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757869"
 ---
 # <a name="listview-control-windows-forms"></a>ListView 컨트롤(Windows Forms)
 Windows Forms `ListView` 컨트롤은 아이콘이 포함된 항목 목록을 표시합니다. 목록 뷰를 사용하여 Windows 탐색기의 오른쪽 창과 같은 사용자 인터페이스를 만들 수 있습니다.  
@@ -58,15 +58,15 @@ Windows Forms `ListView` 컨트롤은 아이콘이 포함된 항목 목록을 �
  [방법: ListView 컨트롤에 검색 기능 추가](how-to-add-search-capabilities-to-a-listview-control.md)  
  텍스트 검색 또는 화면 좌표 중 하나를 사용하여 프로그래밍 방식으로 항목을 찾는 방법을 설명합니다.  
   
--   [방법: 디자이너를 사용 하 여 Windows Forms ListView 컨트롤에서 Tile 보기 사용](enable-tile-view-in-a-wf-listview-control-using-the-designer.md)  
+- [방법: 디자이너를 사용 하 여 Windows Forms ListView 컨트롤에서 Tile 보기 사용](enable-tile-view-in-a-wf-listview-control-using-the-designer.md)  
   
--   [방법: 디자이너를 사용 하 여 Windows Forms ListView 컨트롤을 사용 하 여 항목 추가 및 제거](add-and-remove-items-with-wf-listview-control-using-the-designer.md)  
+- [방법: 디자이너를 사용 하 여 Windows Forms ListView 컨트롤을 사용 하 여 항목 추가 및 제거](add-and-remove-items-with-wf-listview-control-using-the-designer.md)  
   
--   [방법: 디자이너를 사용 하 여 Windows Forms ListView 컨트롤에 열 추가](how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md)  
+- [방법: 디자이너를 사용 하 여 Windows Forms ListView 컨트롤에 열 추가](how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md)  
   
--   [방법: 디자이너를 사용 하 여 Windows Forms ListView 컨트롤에서 항목 그룹화](how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md)  
+- [방법: 디자이너를 사용 하 여 Windows Forms ListView 컨트롤에서 항목 그룹화](how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md)  
   
--   [연습: ListView 및 TreeView 컨트롤이 디자이너를 사용 하 여 된 탐색기 스타일 인터페이스 만들기](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
+- [연습: ListView 및 TreeView 컨트롤이 디자이너를 사용 하 여 된 탐색기 스타일 인터페이스 만들기](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Forms.ListView> 클래스  

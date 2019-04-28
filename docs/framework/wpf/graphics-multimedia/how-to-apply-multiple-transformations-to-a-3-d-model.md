@@ -8,11 +8,11 @@ helpviewer_keywords:
 - 3-D models [WPF], applying multiple transformations to
 ms.assetid: cb72245a-5560-4c96-9f58-593c66296992
 ms.openlocfilehash: 7a6a0dd4942eb2430ff79ab5df4a171a4064ac1c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698943"
 ---
 # <a name="how-to-apply-multiple-transformations-to-a-3-d-model"></a>방법: 3차원 모델에 다중 변환 적용
 이 샘플에서는 사용 하는 방법을 보여 줍니다.는 <xref:System.Windows.Media.Media3D.RotateTransform3D> 및 <xref:System.Windows.Media.Media3D.ScaleTransform3D> 를 회전 하 고 3 차원 모델의 배율을 변경 합니다. 아래 코드에 이러한 변환을 적용 하는 방법을 보여 줍니다 합니다 <xref:System.Windows.Media.Media3D.Model3D.Transform%2A> 의 속성을 <xref:System.Windows.Media.Media3D.GeometryModel3D> XAML에서.  

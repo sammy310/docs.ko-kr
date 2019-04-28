@@ -8,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: ee0038ef-b247-4747-a650-3c5c5cd58d8b
 author: KrzysztofCwalina
 ms.openlocfilehash: 6d4cc6615b7f7346e9c8fc2a7264025f318c8a3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785569"
 ---
 # <a name="attributes"></a>특성
 <xref:System.Attribute?displayProperty=nameWithType> 사용자 지정 특성을 정의 하는 기본 클래스를 사용 됩니다.  

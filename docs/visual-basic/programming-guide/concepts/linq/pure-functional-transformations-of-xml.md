@@ -3,11 +3,11 @@ title: (Visual Basic) XML의 순수 함수 변환
 ms.date: 07/20/2015
 ms.assetid: 5e19b74a-7773-4b58-b110-953ffd364c55
 ms.openlocfilehash: 48149faba1c41583ab4e50c539d52e4caf90592a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766456"
 ---
 # <a name="pure-functional-transformations-of-xml-visual-basic"></a>(Visual Basic) XML의 순수 함수 변환
 이 단원에서는 XML의 함수 변환 자습서를 제공합니다. 이 자습서에는 함수 변환을 사용하기 위해 이해해야 하는 주요 개념과 언어 구문에 대한 설명과 함수 변환을 사용하여 XML 문서를 조작하는 예제가 포함되어 있습니다. 이 자습서에서 LINQ to XML 코드 예제를 제공하지만 모든 기본 개념은 다른 LINQ 기술에도 적용됩니다.  
