@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7e201b9a350c030da59e2b6ed27f84f570c8e621
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698384"
 ---
-# <a name="efngetmanagedexcepstack-function"></a><span data-ttu-id="16730-102">_EFN_GetManagedExcepStack 함수</span><span class="sxs-lookup"><span data-stu-id="16730-102">_EFN_GetManagedExcepStack Function</span></span>
-<span data-ttu-id="16730-103">관리되는 예외 개체 주소를 제공하면 내부에 포함된 스택 추적의 문자열 버전을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="16730-103">Given a managed exception object address, returns a string version of the stack trace contained inside.</span></span>  
+# <a name="efngetmanagedexcepstack-function"></a><span data-ttu-id="1737a-102">_EFN_GetManagedExcepStack 함수</span><span class="sxs-lookup"><span data-stu-id="1737a-102">_EFN_GetManagedExcepStack Function</span></span>
+<span data-ttu-id="1737a-103">관리되는 예외 개체 주소를 제공하면 내부에 포함된 스택 추적의 문자열 버전을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="1737a-103">Given a managed exception object address, returns a string version of the stack trace contained inside.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="16730-104">구문</span><span class="sxs-lookup"><span data-stu-id="16730-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1737a-104">구문</span><span class="sxs-lookup"><span data-stu-id="1737a-104">Syntax</span></span>  
   
 ```  
 HRESULT _EFN_GetManagedExcepStack(  
@@ -37,29 +37,29 @@ HRESULT _EFN_GetManagedExcepStack(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="16730-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="16730-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1737a-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="1737a-105">Parameters</span></span>  
  `Client`  
- <span data-ttu-id="16730-106">[in] 디버깅 중인 클라이언트입니다.</span><span class="sxs-lookup"><span data-stu-id="16730-106">[in] The client being debugged.</span></span>  
+ <span data-ttu-id="1737a-106">[in] 디버깅 중인 클라이언트입니다.</span><span class="sxs-lookup"><span data-stu-id="1737a-106">[in] The client being debugged.</span></span>  
   
  `StackObjAddr`  
- <span data-ttu-id="16730-107">[in] 관리 되는 개체에 대 한 포인터에서 파생 된 <xref:System.Exception>합니다.</span><span class="sxs-lookup"><span data-stu-id="16730-107">[in] A managed object pointer, derived from <xref:System.Exception>.</span></span>  
+ <span data-ttu-id="1737a-107">[in] 관리 되는 개체에 대 한 포인터에서 파생 된 <xref:System.Exception>합니다.</span><span class="sxs-lookup"><span data-stu-id="1737a-107">[in] A managed object pointer, derived from <xref:System.Exception>.</span></span>  
   
- <span data-ttu-id="16730-108">szStackString</span><span class="sxs-lookup"><span data-stu-id="16730-108">szStackString</span></span>  
- <span data-ttu-id="16730-109">[out] 반환 된 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="16730-109">[out] The returned string.</span></span>  
+ <span data-ttu-id="1737a-108">szStackString</span><span class="sxs-lookup"><span data-stu-id="1737a-108">szStackString</span></span>  
+ <span data-ttu-id="1737a-109">[out] 반환 된 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="1737a-109">[out] The returned string.</span></span>  
   
  `cbString`  
- <span data-ttu-id="16730-110">[out] 문자열 버퍼에서 사용할 수 있는 문자의 수입니다.</span><span class="sxs-lookup"><span data-stu-id="16730-110">[out] The number of characters available in the string buffer.</span></span>  
+ <span data-ttu-id="1737a-110">[out] 문자열 버퍼에서 사용할 수 있는 문자의 수입니다.</span><span class="sxs-lookup"><span data-stu-id="1737a-110">[out] The number of characters available in the string buffer.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="16730-111">설명</span><span class="sxs-lookup"><span data-stu-id="16730-111">Remarks</span></span>  
- <span data-ttu-id="16730-112">관리 되는 코드가 없는 스레드에서 현재 컨텍스트에서 함수 HRESULT SOS_E_NOMANAGEDCODE 0xa0 기능 값 및 0x1000의 오류 코드를 사용 하 여 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="16730-112">If there is no managed code on the thread currently in context, the function returns HRESULT SOS_E_NOMANAGEDCODE with a facility value of 0xa0 and an error code of 0x1000.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1737a-111">설명</span><span class="sxs-lookup"><span data-stu-id="1737a-111">Remarks</span></span>  
+ <span data-ttu-id="1737a-112">관리 되는 코드가 없는 스레드에서 현재 컨텍스트에서 함수 HRESULT SOS_E_NOMANAGEDCODE 0xa0 기능 값 및 0x1000의 오류 코드를 사용 하 여 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="1737a-112">If there is no managed code on the thread currently in context, the function returns HRESULT SOS_E_NOMANAGEDCODE with a facility value of 0xa0 and an error code of 0x1000.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="16730-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="16730-113">Requirements</span></span>  
- <span data-ttu-id="16730-114">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="16730-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1737a-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="1737a-113">Requirements</span></span>  
+ <span data-ttu-id="1737a-114">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="1737a-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="16730-115">**헤더:** SOS_Stacktrace.h</span><span class="sxs-lookup"><span data-stu-id="16730-115">**Header:** SOS_Stacktrace.h</span></span>  
+ <span data-ttu-id="1737a-115">**헤더:** SOS_Stacktrace.h</span><span class="sxs-lookup"><span data-stu-id="1737a-115">**Header:** SOS_Stacktrace.h</span></span>  
   
- <span data-ttu-id="16730-116">**.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="16730-116">**.NET Framework Version:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="1737a-116">**.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1737a-116">**.NET Framework Version:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="16730-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="16730-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1737a-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="1737a-117">See also</span></span>
 
-- [<span data-ttu-id="16730-118">디버깅 전역 정적 함수</span><span class="sxs-lookup"><span data-stu-id="16730-118">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [<span data-ttu-id="1737a-118">디버깅 전역 정적 함수</span><span class="sxs-lookup"><span data-stu-id="1737a-118">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

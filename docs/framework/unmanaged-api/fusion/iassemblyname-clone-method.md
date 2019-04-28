@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2c824874d340aa3d381b3340408021ef1ed7eec6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697454"
 ---
-# <a name="iassemblynameclone-method"></a><span data-ttu-id="ab34d-102">IAssemblyName::Clone 메서드</span><span class="sxs-lookup"><span data-stu-id="ab34d-102">IAssemblyName::Clone Method</span></span>
-<span data-ttu-id="ab34d-103">이 항목의 단순 복사본을 만듭니다 [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="ab34d-103">Creates a shallow copy of this [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object.</span></span>  
+# <a name="iassemblynameclone-method"></a><span data-ttu-id="c39c5-102">IAssemblyName::Clone 메서드</span><span class="sxs-lookup"><span data-stu-id="c39c5-102">IAssemblyName::Clone Method</span></span>
+<span data-ttu-id="c39c5-103">이 항목의 단순 복사본을 만듭니다 [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="c39c5-103">Creates a shallow copy of this [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ab34d-104">구문</span><span class="sxs-lookup"><span data-stu-id="ab34d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c39c5-104">구문</span><span class="sxs-lookup"><span data-stu-id="c39c5-104">Syntax</span></span>  
   
 ```  
 HRESULT Clone (  
@@ -35,17 +35,17 @@ HRESULT Clone (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ab34d-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="ab34d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c39c5-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="c39c5-105">Parameters</span></span>  
  `pName`  
- <span data-ttu-id="ab34d-106">[out] 이 반환 되는 복사본 `IAssemblyName` 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="ab34d-106">[out] The returned copy of this `IAssemblyName` object.</span></span>  
+ <span data-ttu-id="c39c5-106">[out] 이 반환 되는 복사본 `IAssemblyName` 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="c39c5-106">[out] The returned copy of this `IAssemblyName` object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ab34d-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ab34d-107">Requirements</span></span>  
- <span data-ttu-id="ab34d-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="ab34d-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c39c5-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c39c5-107">Requirements</span></span>  
+ <span data-ttu-id="c39c5-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="c39c5-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ab34d-109">**헤더:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="ab34d-109">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="c39c5-109">**헤더:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="c39c5-109">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="ab34d-110">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ab34d-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c39c5-110">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c39c5-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ab34d-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="ab34d-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c39c5-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="c39c5-111">See also</span></span>
 
-- [<span data-ttu-id="ab34d-112">IAssemblyName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ab34d-112">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [<span data-ttu-id="c39c5-112">IAssemblyName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="c39c5-112">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)

@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e110f1f5ea326c232c7c96bb05913080e950083d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796619"
 ---
-# <a name="ihosttaskmanagersetuilocale-method"></a><span data-ttu-id="56f9f-102">IHostTaskManager::SetUILocale 메서드</span><span class="sxs-lookup"><span data-stu-id="56f9f-102">IHostTaskManager::SetUILocale Method</span></span>
-<span data-ttu-id="56f9f-103">CLR (공용 언어 런타임) 사용자 인터페이스 (UI) 로캘 또는 문화권을 현재 실행 중인 작업 변경에 호스트에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="56f9f-103">Notifies the host that the common language runtime (CLR) has changed the user interface (UI) locale, or culture, on the currently executing task.</span></span>  
+# <a name="ihosttaskmanagersetuilocale-method"></a><span data-ttu-id="d9354-102">IHostTaskManager::SetUILocale 메서드</span><span class="sxs-lookup"><span data-stu-id="d9354-102">IHostTaskManager::SetUILocale Method</span></span>
+<span data-ttu-id="d9354-103">CLR (공용 언어 런타임) 사용자 인터페이스 (UI) 로캘 또는 문화권을 현재 실행 중인 작업 변경에 호스트에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="d9354-103">Notifies the host that the common language runtime (CLR) has changed the user interface (UI) locale, or culture, on the currently executing task.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="56f9f-104">구문</span><span class="sxs-lookup"><span data-stu-id="56f9f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d9354-104">구문</span><span class="sxs-lookup"><span data-stu-id="d9354-104">Syntax</span></span>  
   
 ```  
 HRESULT SetUILocale (  
@@ -35,38 +35,38 @@ HRESULT SetUILocale (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="56f9f-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="56f9f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d9354-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d9354-105">Parameters</span></span>  
  `lcid`  
- <span data-ttu-id="56f9f-106">[in] 새로 할당 된 지리적 culture 및 언어에 매핑하는 로캘 식별자 값입니다.</span><span class="sxs-lookup"><span data-stu-id="56f9f-106">[in] The locale identifier value that maps to the newly assigned geographical culture and language.</span></span>  
+ <span data-ttu-id="d9354-106">[in] 새로 할당 된 지리적 culture 및 언어에 매핑하는 로캘 식별자 값입니다.</span><span class="sxs-lookup"><span data-stu-id="d9354-106">[in] The locale identifier value that maps to the newly assigned geographical culture and language.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="56f9f-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="56f9f-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d9354-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="d9354-107">Return Value</span></span>  
   
-|<span data-ttu-id="56f9f-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="56f9f-108">HRESULT</span></span>|<span data-ttu-id="56f9f-109">설명</span><span class="sxs-lookup"><span data-stu-id="56f9f-109">Description</span></span>|  
+|<span data-ttu-id="d9354-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="d9354-108">HRESULT</span></span>|<span data-ttu-id="d9354-109">설명</span><span class="sxs-lookup"><span data-stu-id="d9354-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="56f9f-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="56f9f-110">S_OK</span></span>|<span data-ttu-id="56f9f-111">`SetUILocale` 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="56f9f-111">`SetUILocale` returned successfully.</span></span>|  
-|<span data-ttu-id="56f9f-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="56f9f-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="56f9f-113">CLR이 로드 된 프로세스에 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="56f9f-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="56f9f-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="56f9f-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="56f9f-115">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="56f9f-115">The call timed out.</span></span>|  
-|<span data-ttu-id="56f9f-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="56f9f-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="56f9f-117">호출자가 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="56f9f-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="56f9f-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="56f9f-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="56f9f-119">이벤트가 차단 된 스레드가 취소 된 또는 파이버를 대기 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="56f9f-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="56f9f-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="56f9f-120">E_FAIL</span></span>|<span data-ttu-id="56f9f-121">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="56f9f-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="56f9f-122">메서드 E_FAIL을 반환 하는 경우 CLR은 프로세스 내에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="56f9f-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="56f9f-123">메서드를 호스트 하는 데 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="56f9f-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="56f9f-124">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="56f9f-124">E_NOTIMPL</span></span>|<span data-ttu-id="56f9f-125">호스트는 UI 문화권을 변경 하려면 관리 되는 사용자 코드를 허용 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="56f9f-125">The host does not allow managed user code to change the UI culture.</span></span>|  
+|<span data-ttu-id="d9354-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="d9354-110">S_OK</span></span>|<span data-ttu-id="d9354-111">`SetUILocale` 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="d9354-111">`SetUILocale` returned successfully.</span></span>|  
+|<span data-ttu-id="d9354-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="d9354-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="d9354-113">CLR이 로드 된 프로세스에 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="d9354-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="d9354-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="d9354-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="d9354-115">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="d9354-115">The call timed out.</span></span>|  
+|<span data-ttu-id="d9354-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="d9354-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="d9354-117">호출자가 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d9354-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="d9354-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="d9354-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="d9354-119">이벤트가 차단 된 스레드가 취소 된 또는 파이버를 대기 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d9354-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="d9354-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="d9354-120">E_FAIL</span></span>|<span data-ttu-id="d9354-121">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="d9354-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="d9354-122">메서드 E_FAIL을 반환 하는 경우 CLR은 프로세스 내에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="d9354-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="d9354-123">메서드를 호스트 하는 데 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="d9354-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="d9354-124">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="d9354-124">E_NOTIMPL</span></span>|<span data-ttu-id="d9354-125">호스트는 UI 문화권을 변경 하려면 관리 되는 사용자 코드를 허용 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d9354-125">The host does not allow managed user code to change the UI culture.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="56f9f-126">설명</span><span class="sxs-lookup"><span data-stu-id="56f9f-126">Remarks</span></span>  
- <span data-ttu-id="56f9f-127">런타임 호출 `SetUILocale` 때 값을 <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> 속성은 관리 코드에 의해 변경 됩니다.</span><span class="sxs-lookup"><span data-stu-id="56f9f-127">The runtime calls `SetUILocale` when the value of the <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> property is changed by managed code.</span></span> <span data-ttu-id="56f9f-128">이 메서드는 호스트가 로캘의 동기화를 위한 메커니즘을 가질 수 있습니다 실행 하는 데 사용할 수 있는 기회를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="56f9f-128">This method provides an opportunity for the host to execute any mechanisms it might have for synchronization of locales.</span></span> <span data-ttu-id="56f9f-129">호스트의 UI 로캘 관리 코드에서 변경할 수 없도록 또는 로캘 동기화 하는 메커니즘을 구현 하지 않는 경우이 메서드에서 E_NOTIMPL을 반환 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="56f9f-129">If a host does not allow the UI locale to be changed from managed code, or does not implement a mechanism to synchronize locales, it should return E_NOTIMPL from this method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d9354-126">설명</span><span class="sxs-lookup"><span data-stu-id="d9354-126">Remarks</span></span>  
+ <span data-ttu-id="d9354-127">런타임 호출 `SetUILocale` 때 값을 <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> 속성은 관리 코드에 의해 변경 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d9354-127">The runtime calls `SetUILocale` when the value of the <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> property is changed by managed code.</span></span> <span data-ttu-id="d9354-128">이 메서드는 호스트가 로캘의 동기화를 위한 메커니즘을 가질 수 있습니다 실행 하는 데 사용할 수 있는 기회를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="d9354-128">This method provides an opportunity for the host to execute any mechanisms it might have for synchronization of locales.</span></span> <span data-ttu-id="d9354-129">호스트의 UI 로캘 관리 코드에서 변경할 수 없도록 또는 로캘 동기화 하는 메커니즘을 구현 하지 않는 경우이 메서드에서 E_NOTIMPL을 반환 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d9354-129">If a host does not allow the UI locale to be changed from managed code, or does not implement a mechanism to synchronize locales, it should return E_NOTIMPL from this method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="56f9f-130">요구 사항</span><span class="sxs-lookup"><span data-stu-id="56f9f-130">Requirements</span></span>  
- <span data-ttu-id="56f9f-131">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="56f9f-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d9354-130">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d9354-130">Requirements</span></span>  
+ <span data-ttu-id="d9354-131">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="d9354-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="56f9f-132">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="56f9f-132">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="d9354-132">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="d9354-132">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="56f9f-133">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="56f9f-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="d9354-133">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="d9354-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="56f9f-134">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="56f9f-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d9354-134">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d9354-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="56f9f-135">참고자료</span><span class="sxs-lookup"><span data-stu-id="56f9f-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d9354-135">참고자료</span><span class="sxs-lookup"><span data-stu-id="d9354-135">See also</span></span>
 
-- [<span data-ttu-id="56f9f-136">ICLRTask 인터페이스</span><span class="sxs-lookup"><span data-stu-id="56f9f-136">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [<span data-ttu-id="56f9f-137">ICLRTaskManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="56f9f-137">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [<span data-ttu-id="56f9f-138">IHostTask 인터페이스</span><span class="sxs-lookup"><span data-stu-id="56f9f-138">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [<span data-ttu-id="56f9f-139">IHostTaskManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="56f9f-139">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
-- [<span data-ttu-id="56f9f-140">SetLocale 메서드</span><span class="sxs-lookup"><span data-stu-id="56f9f-140">SetLocale Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setlocale-method.md)
+- [<span data-ttu-id="d9354-136">ICLRTask 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d9354-136">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [<span data-ttu-id="d9354-137">ICLRTaskManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d9354-137">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [<span data-ttu-id="d9354-138">IHostTask 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d9354-138">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [<span data-ttu-id="d9354-139">IHostTaskManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d9354-139">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [<span data-ttu-id="d9354-140">SetLocale 메서드</span><span class="sxs-lookup"><span data-stu-id="d9354-140">SetLocale Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setlocale-method.md)

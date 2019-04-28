@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 03ce77dd7407db8289abfefba13d71a9af053e10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609518"
 ---
-# <a name="cordebugiltonativemap-structure"></a><span data-ttu-id="c39b9-102">COR_DEBUG_IL_TO_NATIVE_MAP 구조체</span><span class="sxs-lookup"><span data-stu-id="c39b9-102">COR_DEBUG_IL_TO_NATIVE_MAP Structure</span></span>
-<span data-ttu-id="c39b9-103">MSIL(Microsoft Intermediate Language) 코드를 네이티브 코드에 매핑하는 데 사용되는 오프셋을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="c39b9-103">Contains the offsets that are used to map Microsoft intermediate language (MSIL) code to native code.</span></span>  
+# <a name="cordebugiltonativemap-structure"></a><span data-ttu-id="1e4b6-102">COR_DEBUG_IL_TO_NATIVE_MAP 구조체</span><span class="sxs-lookup"><span data-stu-id="1e4b6-102">COR_DEBUG_IL_TO_NATIVE_MAP Structure</span></span>
+<span data-ttu-id="1e4b6-103">MSIL(Microsoft Intermediate Language) 코드를 네이티브 코드에 매핑하는 데 사용되는 오프셋을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="1e4b6-103">Contains the offsets that are used to map Microsoft intermediate language (MSIL) code to native code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c39b9-104">구문</span><span class="sxs-lookup"><span data-stu-id="c39b9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1e4b6-104">구문</span><span class="sxs-lookup"><span data-stu-id="1e4b6-104">Syntax</span></span>  
   
 ```  
 typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {  
@@ -36,26 +36,26 @@ typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {
 } COR_DEBUG_IL_TO_NATIVE_MAP;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="c39b9-105">멤버</span><span class="sxs-lookup"><span data-stu-id="c39b9-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="1e4b6-105">멤버</span><span class="sxs-lookup"><span data-stu-id="1e4b6-105">Members</span></span>  
   
-|<span data-ttu-id="c39b9-106">멤버</span><span class="sxs-lookup"><span data-stu-id="c39b9-106">Member</span></span>|<span data-ttu-id="c39b9-107">설명</span><span class="sxs-lookup"><span data-stu-id="c39b9-107">Description</span></span>|  
+|<span data-ttu-id="1e4b6-106">멤버</span><span class="sxs-lookup"><span data-stu-id="1e4b6-106">Member</span></span>|<span data-ttu-id="1e4b6-107">설명</span><span class="sxs-lookup"><span data-stu-id="1e4b6-107">Description</span></span>|  
 |------------|-----------------|  
-|`ilOffset`|<span data-ttu-id="c39b9-108">MSIL 코드의 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="c39b9-108">The offset of the MSIL code.</span></span>|  
-|`nativeStartOffset`|<span data-ttu-id="c39b9-109">네이티브 코드의 시작 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="c39b9-109">The offset of the start of the native code.</span></span>|  
-|`nativeEndOffset`|<span data-ttu-id="c39b9-110">네이티브 코드의 끝 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="c39b9-110">The offset of the end of the native code.</span></span>|  
+|`ilOffset`|<span data-ttu-id="1e4b6-108">MSIL 코드의 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="1e4b6-108">The offset of the MSIL code.</span></span>|  
+|`nativeStartOffset`|<span data-ttu-id="1e4b6-109">네이티브 코드의 시작 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="1e4b6-109">The offset of the start of the native code.</span></span>|  
+|`nativeEndOffset`|<span data-ttu-id="1e4b6-110">네이티브 코드의 끝 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="1e4b6-110">The offset of the end of the native code.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="c39b9-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c39b9-111">Requirements</span></span>  
- <span data-ttu-id="c39b9-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="c39b9-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1e4b6-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="1e4b6-111">Requirements</span></span>  
+ <span data-ttu-id="1e4b6-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="1e4b6-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c39b9-113">**헤더:** CorProf.idl, CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="c39b9-113">**Header:** CorProf.idl, CorDebug.idl</span></span>  
+ <span data-ttu-id="1e4b6-113">**헤더:** CorProf.idl, CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="1e4b6-113">**Header:** CorProf.idl, CorDebug.idl</span></span>  
   
- <span data-ttu-id="c39b9-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c39b9-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1e4b6-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1e4b6-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c39b9-115">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c39b9-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="1e4b6-115">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1e4b6-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c39b9-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="c39b9-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1e4b6-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="1e4b6-116">See also</span></span>
 
-- [<span data-ttu-id="c39b9-117">GetILToNativeMapping 메서드</span><span class="sxs-lookup"><span data-stu-id="c39b9-117">GetILToNativeMapping Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)
-- [<span data-ttu-id="c39b9-118">GetILToNativeMapping 메서드</span><span class="sxs-lookup"><span data-stu-id="c39b9-118">GetILToNativeMapping Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)
-- [<span data-ttu-id="c39b9-119">디버깅 구조체</span><span class="sxs-lookup"><span data-stu-id="c39b9-119">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="c39b9-120">디버깅</span><span class="sxs-lookup"><span data-stu-id="c39b9-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="1e4b6-117">GetILToNativeMapping 메서드</span><span class="sxs-lookup"><span data-stu-id="1e4b6-117">GetILToNativeMapping Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)
+- [<span data-ttu-id="1e4b6-118">GetILToNativeMapping 메서드</span><span class="sxs-lookup"><span data-stu-id="1e4b6-118">GetILToNativeMapping Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)
+- [<span data-ttu-id="1e4b6-119">디버깅 구조체</span><span class="sxs-lookup"><span data-stu-id="1e4b6-119">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="1e4b6-120">디버깅</span><span class="sxs-lookup"><span data-stu-id="1e4b6-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

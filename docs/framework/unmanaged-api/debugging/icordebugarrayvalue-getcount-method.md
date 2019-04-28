@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d00c04f3719d6fb340541d3301d4dc4a3f95ca40
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57495626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645723"
 ---
-# <a name="icordebugarrayvaluegetcount-method"></a><span data-ttu-id="f34e4-102">ICorDebugArrayValue::GetCount 메서드</span><span class="sxs-lookup"><span data-stu-id="f34e4-102">ICorDebugArrayValue::GetCount Method</span></span>
-<span data-ttu-id="f34e4-103">배열에 있는 요소의 총 수를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="f34e4-103">Gets the total number of elements in the array.</span></span>  
+# <a name="icordebugarrayvaluegetcount-method"></a><span data-ttu-id="58221-102">ICorDebugArrayValue::GetCount 메서드</span><span class="sxs-lookup"><span data-stu-id="58221-102">ICorDebugArrayValue::GetCount Method</span></span>
+<span data-ttu-id="58221-103">배열에 있는 요소의 총 수를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="58221-103">Gets the total number of elements in the array.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f34e4-104">구문</span><span class="sxs-lookup"><span data-stu-id="f34e4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="58221-104">구문</span><span class="sxs-lookup"><span data-stu-id="58221-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCount (  
@@ -35,15 +35,15 @@ HRESULT GetCount (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f34e4-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f34e4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="58221-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="58221-105">Parameters</span></span>  
  `pnCount`  
- <span data-ttu-id="f34e4-106">[out] 배열에 있는 요소의 총 수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="f34e4-106">[out] A pointer to the total number of elements in the array.</span></span>  
+ <span data-ttu-id="58221-106">[out] 배열에 있는 요소의 총 수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="58221-106">[out] A pointer to the total number of elements in the array.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f34e4-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f34e4-107">Requirements</span></span>  
- <span data-ttu-id="f34e4-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="f34e4-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="58221-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="58221-107">Requirements</span></span>  
+ <span data-ttu-id="58221-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="58221-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f34e4-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f34e4-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="58221-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="58221-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f34e4-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f34e4-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="58221-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="58221-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f34e4-111">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f34e4-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="58221-111">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="58221-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

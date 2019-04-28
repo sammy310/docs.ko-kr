@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 490af9ca67b538e0093115a6b371b65d9788772f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641367"
 ---
-# <a name="iclrruntimehostunloadappdomain-method"></a><span data-ttu-id="9220d-102">ICLRRuntimeHost::UnloadAppDomain 메서드</span><span class="sxs-lookup"><span data-stu-id="9220d-102">ICLRRuntimeHost::UnloadAppDomain Method</span></span>
-<span data-ttu-id="9220d-103">관리 되는 언로드합니다 <xref:System.AppDomain> 지정된 된 숫자 식별자에 해당 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="9220d-103">Unloads the managed <xref:System.AppDomain> that corresponds to the specified numeric identifier.</span></span>  
+# <a name="iclrruntimehostunloadappdomain-method"></a><span data-ttu-id="3f889-102">ICLRRuntimeHost::UnloadAppDomain 메서드</span><span class="sxs-lookup"><span data-stu-id="3f889-102">ICLRRuntimeHost::UnloadAppDomain Method</span></span>
+<span data-ttu-id="3f889-103">관리 되는 언로드합니다 <xref:System.AppDomain> 지정된 된 숫자 식별자에 해당 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f889-103">Unloads the managed <xref:System.AppDomain> that corresponds to the specified numeric identifier.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9220d-104">구문</span><span class="sxs-lookup"><span data-stu-id="9220d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3f889-104">구문</span><span class="sxs-lookup"><span data-stu-id="3f889-104">Syntax</span></span>  
   
 ```  
 HRESULT UnloadAppDomain(  
@@ -36,36 +36,36 @@ HRESULT UnloadAppDomain(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9220d-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="9220d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3f889-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="3f889-105">Parameters</span></span>  
  `dwAppDomainId`  
- <span data-ttu-id="9220d-106">[in] 언로드할 응용 프로그램 도메인의 숫자 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="9220d-106">[in] The numeric identifier of the application domain to unload.</span></span>  
+ <span data-ttu-id="3f889-106">[in] 언로드할 응용 프로그램 도메인의 숫자 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="3f889-106">[in] The numeric identifier of the application domain to unload.</span></span>  
   
  `fWaitUntilDone`  
- <span data-ttu-id="9220d-107">[in] `true` 는 CLR (공용 언어 런타임) 응용 프로그램 도메인 언로드를 시도 하기 전에 응용 프로그램의 현재 스레드의 실행이 완료 될 때까지 대기 해야 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="9220d-107">[in] `true` to indicate that the common language runtime( CLR) must wait until it has finished executing the application's current thread before attempting to unload the application domain.</span></span>  
+ <span data-ttu-id="3f889-107">[in] `true` 는 CLR (공용 언어 런타임) 응용 프로그램 도메인 언로드를 시도 하기 전에 응용 프로그램의 현재 스레드의 실행이 완료 될 때까지 대기 해야 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="3f889-107">[in] `true` to indicate that the common language runtime( CLR) must wait until it has finished executing the application's current thread before attempting to unload the application domain.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9220d-108">반환 값</span><span class="sxs-lookup"><span data-stu-id="9220d-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3f889-108">반환 값</span><span class="sxs-lookup"><span data-stu-id="3f889-108">Return Value</span></span>  
   
-|<span data-ttu-id="9220d-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="9220d-109">HRESULT</span></span>|<span data-ttu-id="9220d-110">설명</span><span class="sxs-lookup"><span data-stu-id="9220d-110">Description</span></span>|  
+|<span data-ttu-id="3f889-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="3f889-109">HRESULT</span></span>|<span data-ttu-id="3f889-110">설명</span><span class="sxs-lookup"><span data-stu-id="3f889-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="9220d-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="9220d-111">S_OK</span></span>|<span data-ttu-id="9220d-112">`UnloadAppDomain` 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="9220d-112">`UnloadAppDomain` returned successfully.</span></span>|  
-|<span data-ttu-id="9220d-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="9220d-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="9220d-114">CLR이 로드 된 프로세스에 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="9220d-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="9220d-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="9220d-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="9220d-116">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="9220d-116">The call timed out.</span></span>|  
-|<span data-ttu-id="9220d-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="9220d-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="9220d-118">호출자가 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="9220d-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="9220d-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="9220d-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="9220d-120">이벤트가 차단 된 스레드가 취소 된 또는 파이버를 대기 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9220d-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="9220d-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="9220d-121">E_FAIL</span></span>|<span data-ttu-id="9220d-122">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="9220d-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="9220d-123">메서드가 E_FAIL을 반환 하는 경우 CLR은 프로세스 내에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="9220d-123">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="9220d-124">메서드를 호스트 하는 데 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="9220d-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="3f889-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="3f889-111">S_OK</span></span>|<span data-ttu-id="3f889-112">`UnloadAppDomain` 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f889-112">`UnloadAppDomain` returned successfully.</span></span>|  
+|<span data-ttu-id="3f889-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="3f889-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="3f889-114">CLR이 로드 된 프로세스에 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="3f889-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="3f889-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="3f889-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="3f889-116">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="3f889-116">The call timed out.</span></span>|  
+|<span data-ttu-id="3f889-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="3f889-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="3f889-118">호출자가 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3f889-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="3f889-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="3f889-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="3f889-120">이벤트가 차단 된 스레드가 취소 된 또는 파이버를 대기 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3f889-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="3f889-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="3f889-121">E_FAIL</span></span>|<span data-ttu-id="3f889-122">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="3f889-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="3f889-123">메서드가 E_FAIL을 반환 하는 경우 CLR은 프로세스 내에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="3f889-123">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="3f889-124">메서드를 호스트 하는 데 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f889-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="9220d-125">설명</span><span class="sxs-lookup"><span data-stu-id="9220d-125">Remarks</span></span>  
- <span data-ttu-id="9220d-126">호출 하 여 현재 스레드가 실행 되는 응용 프로그램 도메인의 숫자 식별자를 가져올 수 있습니다 [GetCurrentAppDomainId](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9220d-126">You can get the numeric identifier of the application domain in which the current thread is executing by calling [GetCurrentAppDomainId](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).</span></span> <span data-ttu-id="9220d-127">이 식별자에 해당 하는 <xref:System.AppDomain.Id%2A> 관리 되는 속성 <xref:System.AppDomain> 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="9220d-127">This identifier corresponds to the <xref:System.AppDomain.Id%2A> property of the managed <xref:System.AppDomain> type.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3f889-125">설명</span><span class="sxs-lookup"><span data-stu-id="3f889-125">Remarks</span></span>  
+ <span data-ttu-id="3f889-126">호출 하 여 현재 스레드가 실행 되는 응용 프로그램 도메인의 숫자 식별자를 가져올 수 있습니다 [GetCurrentAppDomainId](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="3f889-126">You can get the numeric identifier of the application domain in which the current thread is executing by calling [GetCurrentAppDomainId](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).</span></span> <span data-ttu-id="3f889-127">이 식별자에 해당 하는 <xref:System.AppDomain.Id%2A> 관리 되는 속성 <xref:System.AppDomain> 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="3f889-127">This identifier corresponds to the <xref:System.AppDomain.Id%2A> property of the managed <xref:System.AppDomain> type.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9220d-128">요구 사항</span><span class="sxs-lookup"><span data-stu-id="9220d-128">Requirements</span></span>  
- <span data-ttu-id="9220d-129">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="9220d-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3f889-128">요구 사항</span><span class="sxs-lookup"><span data-stu-id="3f889-128">Requirements</span></span>  
+ <span data-ttu-id="3f889-129">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="3f889-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9220d-130">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="9220d-130">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="3f889-130">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="3f889-130">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="9220d-131">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="9220d-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="3f889-131">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="3f889-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="9220d-132">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9220d-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="3f889-132">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3f889-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9220d-133">참고자료</span><span class="sxs-lookup"><span data-stu-id="9220d-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3f889-133">참고자료</span><span class="sxs-lookup"><span data-stu-id="3f889-133">See also</span></span>
 
-- [<span data-ttu-id="9220d-134">ICLRRuntimeHost 인터페이스</span><span class="sxs-lookup"><span data-stu-id="9220d-134">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+- [<span data-ttu-id="3f889-134">ICLRRuntimeHost 인터페이스</span><span class="sxs-lookup"><span data-stu-id="3f889-134">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)

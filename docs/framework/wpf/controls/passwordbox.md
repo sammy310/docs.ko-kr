@@ -8,17 +8,17 @@ helpviewer_keywords:
 - controls [WPF], PasswordBox
 ms.assetid: 4dbf0320-30c2-4015-b9bc-4f6502f78e32
 ms.openlocfilehash: c3f86230bd0193ea3525e88d41e8e48d2d90684a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770632"
 ---
-# <a name="passwordbox"></a><span data-ttu-id="39915-102">PasswordBox</span><span class="sxs-lookup"><span data-stu-id="39915-102">PasswordBox</span></span>
-<span data-ttu-id="39915-103"><xref:System.Windows.Controls.PasswordBox> 컨트롤은 중요 한 개인 정보를 입력 하는 데 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="39915-103">The <xref:System.Windows.Controls.PasswordBox> control is used to input sensitive or private information.</span></span>  
+# <a name="passwordbox"></a><span data-ttu-id="57e42-102">PasswordBox</span><span class="sxs-lookup"><span data-stu-id="57e42-102">PasswordBox</span></span>
+<span data-ttu-id="57e42-103"><xref:System.Windows.Controls.PasswordBox> 컨트롤은 중요 한 개인 정보를 입력 하는 데 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="57e42-103">The <xref:System.Windows.Controls.PasswordBox> control is used to input sensitive or private information.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="39915-104">참고자료</span><span class="sxs-lookup"><span data-stu-id="39915-104">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="57e42-104">참고자료</span><span class="sxs-lookup"><span data-stu-id="57e42-104">See also</span></span>
 
 - <xref:System.Windows.Controls.TextBox>
 - <xref:System.Windows.Controls.RichTextBox>
-- [<span data-ttu-id="39915-105">컨트롤 라이브러리</span><span class="sxs-lookup"><span data-stu-id="39915-105">Control Library</span></span>](control-library.md)
+- [<span data-ttu-id="57e42-105">컨트롤 라이브러리</span><span class="sxs-lookup"><span data-stu-id="57e42-105">Control Library</span></span>](control-library.md)

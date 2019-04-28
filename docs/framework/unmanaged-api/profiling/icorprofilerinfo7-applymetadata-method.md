@@ -13,18 +13,18 @@ ms.assetid: a1bfb649-4584-4d35-b3e6-8fe59b53992a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aff6f63bb9f41fe45b22854787667070929bf987
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650797"
 ---
-# <a name="icorprofilerinfo7applymetadata-method"></a><span data-ttu-id="54dd1-102">ICorProfilerInfo7::ApplyMetaData 메서드</span><span class="sxs-lookup"><span data-stu-id="54dd1-102">ICorProfilerInfo7::ApplyMetaData Method</span></span>
-<span data-ttu-id="54dd1-103">[.NET Framework 4.6.1 이상 버전에서 지원됨]</span><span class="sxs-lookup"><span data-stu-id="54dd1-103">[Supported in the .NET Framework 4.6.1 and later versions]</span></span>  
+# <a name="icorprofilerinfo7applymetadata-method"></a><span data-ttu-id="2e214-102">ICorProfilerInfo7::ApplyMetaData 메서드</span><span class="sxs-lookup"><span data-stu-id="2e214-102">ICorProfilerInfo7::ApplyMetaData Method</span></span>
+<span data-ttu-id="2e214-103">[.NET Framework 4.6.1 이상 버전에서 지원됨]</span><span class="sxs-lookup"><span data-stu-id="2e214-103">[Supported in the .NET Framework 4.6.1 and later versions]</span></span>  
   
- <span data-ttu-id="54dd1-104">새로 정의한 메타 데이터를 적용 합니다 `IMetadataEmit::Define*` 지정된 된 모듈에는 메서드.</span><span class="sxs-lookup"><span data-stu-id="54dd1-104">Applies the metadata newly defined by the `IMetadataEmit::Define*` methods to a specified module.</span></span>  
+ <span data-ttu-id="2e214-104">새로 정의한 메타 데이터를 적용 합니다 `IMetadataEmit::Define*` 지정된 된 모듈에는 메서드.</span><span class="sxs-lookup"><span data-stu-id="2e214-104">Applies the metadata newly defined by the `IMetadataEmit::Define*` methods to a specified module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="54dd1-105">구문</span><span class="sxs-lookup"><span data-stu-id="54dd1-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2e214-105">구문</span><span class="sxs-lookup"><span data-stu-id="2e214-105">Syntax</span></span>  
   
 ```cpp
 HRESULT ApplyMetaData(  
@@ -32,42 +32,42 @@ HRESULT ApplyMetaData(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="54dd1-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="54dd1-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2e214-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="2e214-106">Parameters</span></span>  
  `moduleID`  
- <span data-ttu-id="54dd1-107">[in] 해당 메타 데이터가 변경 된 모듈의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="54dd1-107">[in] The identifier of the module whose metadata was changed.</span></span>  
+ <span data-ttu-id="2e214-107">[in] 해당 메타 데이터가 변경 된 모듈의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="2e214-107">[in] The identifier of the module whose metadata was changed.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="54dd1-108">설명</span><span class="sxs-lookup"><span data-stu-id="54dd1-108">Remarks</span></span>  
- <span data-ttu-id="54dd1-109">후 메타 데이터를 변경 하는 경우는 [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) 콜백 새 메타 데이터를 사용 하기 전에이 메서드를 호출 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="54dd1-109">If metadata changes are made after the [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) callback, you must call this method before using the new metadata.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2e214-108">설명</span><span class="sxs-lookup"><span data-stu-id="2e214-108">Remarks</span></span>  
+ <span data-ttu-id="2e214-109">후 메타 데이터를 변경 하는 경우는 [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) 콜백 새 메타 데이터를 사용 하기 전에이 메서드를 호출 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2e214-109">If metadata changes are made after the [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) callback, you must call this method before using the new metadata.</span></span>  
   
- <span data-ttu-id="54dd1-110">`ApplyMetaData` 다음과 같은 유형의 메타 데이터를 추가 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="54dd1-110">`ApplyMetaData` only supports adding the following types of metadata:</span></span>  
+ <span data-ttu-id="2e214-110">`ApplyMetaData` 다음과 같은 유형의 메타 데이터를 추가 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="2e214-110">`ApplyMetaData` only supports adding the following types of metadata:</span></span>  
   
--   <span data-ttu-id="54dd1-111">`AssemblyRef` 호출 하 여 만든 레코드를 [imetadataassemblyemit:: Defineassemblyref](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="54dd1-111">`AssemblyRef` records, which you create by calling the [IMetaDataAssemblyEmit::DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md).</span></span> <span data-ttu-id="54dd1-112">메서드를 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="54dd1-112">method.</span></span>  
+- <span data-ttu-id="2e214-111">`AssemblyRef` 호출 하 여 만든 레코드를 [imetadataassemblyemit:: Defineassemblyref](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="2e214-111">`AssemblyRef` records, which you create by calling the [IMetaDataAssemblyEmit::DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md).</span></span> <span data-ttu-id="2e214-112">메서드를 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="2e214-112">method.</span></span>  
   
--   <span data-ttu-id="54dd1-113">`TypeRef` 호출 하 여 만든 레코드를 [imetadataemit:: Definetyperefbyname](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="54dd1-113">`TypeRef` records, which you create by calling the [IMetaDataEmit::DefineTypeRefByName](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) method.</span></span>  
+- <span data-ttu-id="2e214-113">`TypeRef` 호출 하 여 만든 레코드를 [imetadataemit:: Definetyperefbyname](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="2e214-113">`TypeRef` records, which you create by calling the [IMetaDataEmit::DefineTypeRefByName](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) method.</span></span>  
   
--   <span data-ttu-id="54dd1-114">`TypeSpec` 호출 하 여 만든 레코드를 [imetadataemit:: Gettokenfromtypespec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="54dd1-114">`TypeSpec` records, which you create by calling the [IMetaDataEmit::GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) method.</span></span>  
+- <span data-ttu-id="2e214-114">`TypeSpec` 호출 하 여 만든 레코드를 [imetadataemit:: Gettokenfromtypespec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="2e214-114">`TypeSpec` records, which you create by calling the [IMetaDataEmit::GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) method.</span></span>  
   
--   <span data-ttu-id="54dd1-115">`MemberRef` 호출 하 여 만든 레코드를 [imetadataemit:: Definememberref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="54dd1-115">`MemberRef` records, which you create by calling the [IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md) method.</span></span>  
+- <span data-ttu-id="2e214-115">`MemberRef` 호출 하 여 만든 레코드를 [imetadataemit:: Definememberref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="2e214-115">`MemberRef` records, which you create by calling the [IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md) method.</span></span>  
   
--   <span data-ttu-id="54dd1-116">`MemberSpec` 호출 하 여 만든 레코드를 [IMetaDataEmit2::DefineMethodSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definemethodspec-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="54dd1-116">`MemberSpec` records, which you create by calling the [IMetaDataEmit2::DefineMethodSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definemethodspec-method.md) method.</span></span>  
+- <span data-ttu-id="2e214-116">`MemberSpec` 호출 하 여 만든 레코드를 [IMetaDataEmit2::DefineMethodSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definemethodspec-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="2e214-116">`MemberSpec` records, which you create by calling the [IMetaDataEmit2::DefineMethodSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definemethodspec-method.md) method.</span></span>  
   
--   <span data-ttu-id="54dd1-117">`UserString` 호출 하 여 만든 레코드를 [imetadataemit:: Defineuserstring](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="54dd1-117">`UserString` records, which you create by calling the [IMetaDataEmit::DefineUserString](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) method.</span></span>  
+- <span data-ttu-id="2e214-117">`UserString` 호출 하 여 만든 레코드를 [imetadataemit:: Defineuserstring](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="2e214-117">`UserString` records, which you create by calling the [IMetaDataEmit::DefineUserString](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) method.</span></span>  
 
-<span data-ttu-id="54dd1-118">.NET Core 3.0부터 `ApplyMetaData` 도 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="54dd1-118">Starting with .NET Core 3.0, `ApplyMetaData` also supports the following types:</span></span>
+<span data-ttu-id="2e214-118">.NET Core 3.0부터 `ApplyMetaData` 도 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="2e214-118">Starting with .NET Core 3.0, `ApplyMetaData` also supports the following types:</span></span>
 
-- <span data-ttu-id="54dd1-119">`TypeDef` 호출 하 여 만든 레코드를 [imetadataemit:: Definetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="54dd1-119">`TypeDef` records, which you create by calling the [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) method.</span></span>
+- <span data-ttu-id="2e214-119">`TypeDef` 호출 하 여 만든 레코드를 [imetadataemit:: Definetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="2e214-119">`TypeDef` records, which you create by calling the [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) method.</span></span>
 
-- <span data-ttu-id="54dd1-120">`MethodDef` 호출 하 여 만든 레코드를 [imetadataemit:: Definemethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="54dd1-120">`MethodDef` records, which you create by calling the [IMetaDataEmit::DefineMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md) method.</span></span> <span data-ttu-id="54dd1-121">그러나 가상 메서드를 기존 형식에 추가 지원 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="54dd1-121">However, adding virtual methods to an existing type is not supported.</span></span> <span data-ttu-id="54dd1-122">하기 전에 가상 메서드를 추가 해야 합니다 [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) 콜백 합니다.</span><span class="sxs-lookup"><span data-stu-id="54dd1-122">Virtual methods must be added before the [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) callback.</span></span>
+- <span data-ttu-id="2e214-120">`MethodDef` 호출 하 여 만든 레코드를 [imetadataemit:: Definemethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="2e214-120">`MethodDef` records, which you create by calling the [IMetaDataEmit::DefineMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md) method.</span></span> <span data-ttu-id="2e214-121">그러나 가상 메서드를 기존 형식에 추가 지원 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2e214-121">However, adding virtual methods to an existing type is not supported.</span></span> <span data-ttu-id="2e214-122">하기 전에 가상 메서드를 추가 해야 합니다 [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) 콜백 합니다.</span><span class="sxs-lookup"><span data-stu-id="2e214-122">Virtual methods must be added before the [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) callback.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="54dd1-123">요구 사항</span><span class="sxs-lookup"><span data-stu-id="54dd1-123">Requirements</span></span>  
- <span data-ttu-id="54dd1-124">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="54dd1-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2e214-123">요구 사항</span><span class="sxs-lookup"><span data-stu-id="2e214-123">Requirements</span></span>  
+ <span data-ttu-id="2e214-124">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="2e214-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="54dd1-125">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="54dd1-125">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="2e214-125">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="2e214-125">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="54dd1-126">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="54dd1-126">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2e214-126">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2e214-126">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="54dd1-127">**.NET Framework 버전:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="54dd1-127">**.NET Framework Versions:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]</span></span>  
+ <span data-ttu-id="2e214-127">**.NET Framework 버전:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2e214-127">**.NET Framework Versions:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="54dd1-128">참고자료</span><span class="sxs-lookup"><span data-stu-id="54dd1-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2e214-128">참고자료</span><span class="sxs-lookup"><span data-stu-id="2e214-128">See also</span></span>
 
-- [<span data-ttu-id="54dd1-129">ICorProfilerInfo7 인터페이스</span><span class="sxs-lookup"><span data-stu-id="54dd1-129">ICorProfilerInfo7 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)
+- [<span data-ttu-id="2e214-129">ICorProfilerInfo7 인터페이스</span><span class="sxs-lookup"><span data-stu-id="2e214-129">ICorProfilerInfo7 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)

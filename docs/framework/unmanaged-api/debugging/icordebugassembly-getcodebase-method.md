@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f6236d6b5349a9c2a528a85559c0cbc02c8da381
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645489"
 ---
-# <a name="icordebugassemblygetcodebase-method"></a><span data-ttu-id="2c3f2-102">ICorDebugAssembly::GetCodeBase 메서드</span><span class="sxs-lookup"><span data-stu-id="2c3f2-102">ICorDebugAssembly::GetCodeBase Method</span></span>
-<span data-ttu-id="2c3f2-103">이 메서드는 현재 버전의.NET Framework에서 구현 되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="2c3f2-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugassemblygetcodebase-method"></a><span data-ttu-id="ae79c-102">ICorDebugAssembly::GetCodeBase 메서드</span><span class="sxs-lookup"><span data-stu-id="ae79c-102">ICorDebugAssembly::GetCodeBase Method</span></span>
+<span data-ttu-id="ae79c-103">이 메서드는 현재 버전의.NET Framework에서 구현 되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="ae79c-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2c3f2-104">구문</span><span class="sxs-lookup"><span data-stu-id="2c3f2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ae79c-104">구문</span><span class="sxs-lookup"><span data-stu-id="ae79c-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCodeBase (  

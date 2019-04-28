@@ -10,42 +10,42 @@ helpviewer_keywords:
 - data formats [WPF], determining if present
 ms.assetid: e487a454-c9fc-4e53-aeaa-c458d059ad4c
 ms.openlocfilehash: 4cec733490e2a9dc5d54b3b253ac38a5090ac885
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776248"
 ---
-# <a name="how-to-determine-if-a-data-format-is-present-in-a-data-object"></a><span data-ttu-id="c5e3d-102">방법: 데이터 개체에 데이터 형식이 있는지 확인</span><span class="sxs-lookup"><span data-stu-id="c5e3d-102">How to: Determine if a Data Format is Present in a Data Object</span></span>
-<span data-ttu-id="c5e3d-103">다음 예제에서는 다양 한를 사용 하는 방법을 보여 줍니다 <xref:System.Windows.DataObject.GetDataPresent%2A> 특정 데이터 형식의 데이터 개체에 있는지 여부를 쿼리 메서드 오버 로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="c5e3d-103">The following examples show how to use the various <xref:System.Windows.DataObject.GetDataPresent%2A> method overloads to query whether a particular data format is present in a data object.</span></span>  
+# <a name="how-to-determine-if-a-data-format-is-present-in-a-data-object"></a><span data-ttu-id="45b5e-102">방법: 데이터 개체에 데이터 형식이 있는지 확인</span><span class="sxs-lookup"><span data-stu-id="45b5e-102">How to: Determine if a Data Format is Present in a Data Object</span></span>
+<span data-ttu-id="45b5e-103">다음 예제에서는 다양 한를 사용 하는 방법을 보여 줍니다 <xref:System.Windows.DataObject.GetDataPresent%2A> 특정 데이터 형식의 데이터 개체에 있는지 여부를 쿼리 메서드 오버 로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="45b5e-103">The following examples show how to use the various <xref:System.Windows.DataObject.GetDataPresent%2A> method overloads to query whether a particular data format is present in a data object.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c5e3d-104">예제</span><span class="sxs-lookup"><span data-stu-id="c5e3d-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="45b5e-104">예제</span><span class="sxs-lookup"><span data-stu-id="45b5e-104">Example</span></span>  
   
-### <a name="description"></a><span data-ttu-id="c5e3d-105">설명</span><span class="sxs-lookup"><span data-stu-id="c5e3d-105">Description</span></span>  
- <span data-ttu-id="c5e3d-106">다음 예제 코드를 사용 하는 <xref:System.Windows.DataObject.GetDataPresent%28System.String%29> 설명자 문자열에서 특정 데이터 형식의 존재에 대 한 쿼리를 오버 로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="c5e3d-106">The following example code uses the <xref:System.Windows.DataObject.GetDataPresent%28System.String%29> overload to query for the presence of a particular data format by descriptor string.</span></span>  
+### <a name="description"></a><span data-ttu-id="45b5e-105">설명</span><span class="sxs-lookup"><span data-stu-id="45b5e-105">Description</span></span>  
+ <span data-ttu-id="45b5e-106">다음 예제 코드를 사용 하는 <xref:System.Windows.DataObject.GetDataPresent%28System.String%29> 설명자 문자열에서 특정 데이터 형식의 존재에 대 한 쿼리를 오버 로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="45b5e-106">The following example code uses the <xref:System.Windows.DataObject.GetDataPresent%28System.String%29> overload to query for the presence of a particular data format by descriptor string.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="c5e3d-107">코드</span><span class="sxs-lookup"><span data-stu-id="c5e3d-107">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="45b5e-107">코드</span><span class="sxs-lookup"><span data-stu-id="45b5e-107">Code</span></span>  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_QueryDataFormats_String](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_querydataformats_string)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_QueryDataFormats_String](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_querydataformats_string)]  
   
-## <a name="example"></a><span data-ttu-id="c5e3d-108">예제</span><span class="sxs-lookup"><span data-stu-id="c5e3d-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="45b5e-108">예제</span><span class="sxs-lookup"><span data-stu-id="45b5e-108">Example</span></span>  
   
-### <a name="description"></a><span data-ttu-id="c5e3d-109">설명</span><span class="sxs-lookup"><span data-stu-id="c5e3d-109">Description</span></span>  
- <span data-ttu-id="c5e3d-110">다음 예제 코드를 사용 하는 <xref:System.Windows.DataObject.GetDataPresent%28System.Type%29> 형식에서 특정 데이터 형식의 존재에 대 한 쿼리를 오버 로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="c5e3d-110">The following example code uses the <xref:System.Windows.DataObject.GetDataPresent%28System.Type%29> overload to query for the presence of a particular data format by type.</span></span>  
+### <a name="description"></a><span data-ttu-id="45b5e-109">설명</span><span class="sxs-lookup"><span data-stu-id="45b5e-109">Description</span></span>  
+ <span data-ttu-id="45b5e-110">다음 예제 코드를 사용 하는 <xref:System.Windows.DataObject.GetDataPresent%28System.Type%29> 형식에서 특정 데이터 형식의 존재에 대 한 쿼리를 오버 로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="45b5e-110">The following example code uses the <xref:System.Windows.DataObject.GetDataPresent%28System.Type%29> overload to query for the presence of a particular data format by type.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="c5e3d-111">코드</span><span class="sxs-lookup"><span data-stu-id="c5e3d-111">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="45b5e-111">코드</span><span class="sxs-lookup"><span data-stu-id="45b5e-111">Code</span></span>  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_QueryDataFormats_Type](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_querydataformats_type)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_QueryDataFormats_Type](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_querydataformats_type)]  
   
-## <a name="example"></a><span data-ttu-id="c5e3d-112">예제</span><span class="sxs-lookup"><span data-stu-id="c5e3d-112">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="45b5e-112">예제</span><span class="sxs-lookup"><span data-stu-id="45b5e-112">Example</span></span>  
   
-### <a name="description"></a><span data-ttu-id="c5e3d-113">설명</span><span class="sxs-lookup"><span data-stu-id="c5e3d-113">Description</span></span>  
- <span data-ttu-id="c5e3d-114">다음 예제 코드를 사용 하는 <xref:System.Windows.DataObject.GetDataPresent%28System.String%2CSystem.Boolean%29> 설명자 문자열을 데이터에 대 한 쿼리를 오버 로드 하 고 자동 변환할 수 있는 데이터 형식을 처리 하는 방법을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="c5e3d-114">The following example code uses the <xref:System.Windows.DataObject.GetDataPresent%28System.String%2CSystem.Boolean%29> overload to query for data by descriptor string, and specifying how to treat auto-convertible data formats.</span></span>  
+### <a name="description"></a><span data-ttu-id="45b5e-113">설명</span><span class="sxs-lookup"><span data-stu-id="45b5e-113">Description</span></span>  
+ <span data-ttu-id="45b5e-114">다음 예제 코드를 사용 하는 <xref:System.Windows.DataObject.GetDataPresent%28System.String%2CSystem.Boolean%29> 설명자 문자열을 데이터에 대 한 쿼리를 오버 로드 하 고 자동 변환할 수 있는 데이터 형식을 처리 하는 방법을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="45b5e-114">The following example code uses the <xref:System.Windows.DataObject.GetDataPresent%28System.String%2CSystem.Boolean%29> overload to query for data by descriptor string, and specifying how to treat auto-convertible data formats.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="c5e3d-115">코드</span><span class="sxs-lookup"><span data-stu-id="c5e3d-115">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="45b5e-115">코드</span><span class="sxs-lookup"><span data-stu-id="45b5e-115">Code</span></span>  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_QueryDataFormats_Autoconvert](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_querydataformats_autoconvert)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_QueryDataFormats_Autoconvert](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_querydataformats_autoconvert)]  
   
-## <a name="see-also"></a><span data-ttu-id="c5e3d-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="c5e3d-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="45b5e-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="45b5e-116">See also</span></span>
 
 - <xref:System.Windows.IDataObject>
