@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
 ms.openlocfilehash: 10f8e0899e61d5d54589c910bdcbcd92d8ee947c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777067"
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>방법: 코드를 사용하여 이벤트 처리기 추가
 이 예제에서는 코드를 사용 하 여 요소에 이벤트 처리기를 추가 하는 방법을 보여 줍니다.  
@@ -25,9 +25,9 @@ ms.locfileid: "59129365"
   
  C# 사용 하 여 예제를 `+=` 이벤트 처리기를 할당 하는 연산자입니다. 처리기를 할당 하는 데 사용 되는 동일한 연산자는 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 이벤트 처리 모델입니다. Microsoft Visual Basic의 이벤트 처리기를 추가 하는 것이 연산자를 지원 하지 않습니다. 대신 두 가지 기술 중 하나가 필요합니다.  
   
--   사용 하 여 합니다 <xref:System.Windows.UIElement.AddHandler%2A> 메서드를 함께 `AddressOf` 연산자, 이벤트 처리기 구현을 참조 합니다.  
+- 사용 하 여 합니다 <xref:System.Windows.UIElement.AddHandler%2A> 메서드를 함께 `AddressOf` 연산자, 이벤트 처리기 구현을 참조 합니다.  
   
--   사용 된 `Handles` 이벤트 처리기 정의의 일부로 키워드입니다. 이 기술은 여기서는 표시 되지 않습니다. 참조 [Visual Basic 및 WPF 이벤트 처리](visual-basic-and-wpf-event-handling.md)합니다.  
+- 사용 된 `Handles` 이벤트 처리기 정의의 일부로 키워드입니다. 이 기술은 여기서는 표시 되지 않습니다. 참조 [Visual Basic 및 WPF 이벤트 처리](visual-basic-and-wpf-event-handling.md)합니다.  
   
  [!code-xaml[RoutedEventAddRemoveHandler#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/CSharp/default.xaml#xaml)]  
   

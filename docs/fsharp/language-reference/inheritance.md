@@ -3,11 +3,11 @@ title: 상속
 description: 지정 하는 방법을 알아봅니다 F# '상속' 키워드를 사용 하 여 상속 관계입니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: 775ee52039caf4c4ab65f82fa21d4e536135a12a
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937464"
 ---
 # <a name="inheritance"></a>상속
 
@@ -91,7 +91,7 @@ let obj2 = DerivedClass("A")
 
 개체 계층 구조를 만들 때에 상속 하는 대신 구별된 된 공용 구조체를 사용 하는 것이 좋습니다. 구별 된 공용 구조체는 전체 공용 형식을 공유 하는 다른 개체의 동작을 모델링할 수도 있습니다. 단일 구별 된 공용 구조체 파생된 클래스는 서로 조금씩 여러 필요가 종종 수 없습니다. 구별 된 공용 구조체에 대 한 정보를 참조 하세요 [구별 된 공용 구조체](discriminated-unions.md)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [개체 식](object-expressions.md)
 - [F# 언어 참조](index.md)

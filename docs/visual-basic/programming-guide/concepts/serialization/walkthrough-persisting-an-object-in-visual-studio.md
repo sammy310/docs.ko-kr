@@ -3,11 +3,11 @@ title: Visual Studio (Visual Basic)에서 개체 유지
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
 ms.openlocfilehash: 55ad2049003baaed26f4db909ae466aefdd161e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783476"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>연습: Visual Studio (Visual Basic)에서 개체 유지
 디자인 타임에 개체의 속성을 기본값으로 설정할 수 있지만, 런타임에 입력한 값은 개체가 소멸될 때 손실됩니다. serialization을 사용하면 인스턴스 간에 개체의 데이터를 유지할 수 있으므로, 다음에 개체를 인스턴스화할 때 값을 저장하고 검색할 수 있습니다.  
@@ -127,7 +127,7 @@ ms.locfileid: "59303351"
   
 ### <a name="to-mark-a-class-as-serializable"></a>클래스를 serialize로 표시하려면  
   
--   Loan 클래스에 대한 클래스 선언을 다음과 같이 변경합니다.  
+- Loan 클래스에 대한 클래스 선언을 다음과 같이 변경합니다.  
   
     ```vb  
     <Serializable()>  
@@ -138,7 +138,7 @@ ms.locfileid: "59303351"
   
 ### <a name="to-prevent-a-member-from-being-serialized"></a>멤버가 serialize되지 않게 하려면  
   
--   `PropertyChanged` 이벤트에 대한 선언을 다음과 같이 변경합니다.  
+- `PropertyChanged` 이벤트에 대한 선언을 다음과 같이 변경합니다.  
   
     ```vb  
     <NonSerialized()>  
@@ -150,7 +150,7 @@ ms.locfileid: "59303351"
   
 ### <a name="to-add-references-to-namespaces"></a>네임스페이스에 대한 참조를 추가하려면  
   
--   `Form1` 클래스 맨 위에 다음 문을 추가합니다.  
+- `Form1` 클래스 맨 위에 다음 문을 추가합니다.  
   
     ```vb  
     Imports System.IO  
@@ -197,7 +197,7 @@ ms.locfileid: "59303351"
   
 ### <a name="to-save-the-data-and-serialize-the-class"></a>데이터를 저장하고 클래스를 serialize하려면  
   
--   다음 코드를 `Form1_FormClosing` 이벤트 프로시저에 추가합니다.  
+- 다음 코드를 `Form1_FormClosing` 이벤트 프로시저에 추가합니다.  
   
     ```vb  
     Private Sub Form1_FormClosing() Handles MyBase.FormClosing  

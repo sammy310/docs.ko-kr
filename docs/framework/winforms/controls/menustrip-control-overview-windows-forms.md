@@ -11,8 +11,8 @@ ms.openlocfilehash: 7cd761697a09205294727043efc6cf73816803ce
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761373"
 ---
 # <a name="menustrip-control-overview-windows-forms"></a>MenuStrip 컨트롤 개요(Windows Forms)
 메뉴는 공통적인 주제로 별로 그룹화 되는 명령 키를 눌러 사용자에 게는 기능을 노출 합니다.  
@@ -26,11 +26,11 @@ ms.locfileid: "59975600"
 ## <a name="ways-to-use-the-menustrip-control"></a>MenuStrip 컨트롤을 사용 하는 방법  
  사용 된 <xref:System.Windows.Forms.MenuStrip> 컨트롤:  
   
--   지 원하는 일반적인된 메뉴 등의 고급 사용자 인터페이스 및 레이아웃 기능 텍스트 및 이미지 정렬 및 정렬, 끌어서 놓기 작업, MDI, 오버플로 및 메뉴 명령에 액세스 하기 위한 대체 모드, 쉽게 사용자 지정을 만듭니다.  
+- 지 원하는 일반적인된 메뉴 등의 고급 사용자 인터페이스 및 레이아웃 기능 텍스트 및 이미지 정렬 및 정렬, 끌어서 놓기 작업, MDI, 오버플로 및 메뉴 명령에 액세스 하기 위한 대체 모드, 쉽게 사용자 지정을 만듭니다.  
   
--   일반적인 모양 및 동작의 운영 체제를 지원 합니다.  
+- 일반적인 모양 및 동작의 운영 체제를 지원 합니다.  
   
--   다른 컨트롤에 대 한 이벤트를 처리 하는 동일한 방식으로 모든 컨테이너 및 포함 된 항목에 대해 일관 되 게 이벤트를 처리 합니다.  
+- 다른 컨트롤에 대 한 이벤트를 처리 하는 동일한 방식으로 모든 컨테이너 및 포함 된 항목에 대해 일관 되 게 이벤트를 처리 합니다.  
   
  다음 표에의 특히 중요 한 속성 몇 가지 <xref:System.Windows.Forms.MenuStrip> 및 연결 된 클래스입니다.  
   

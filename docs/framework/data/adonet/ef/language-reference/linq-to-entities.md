@@ -3,11 +3,11 @@ title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
 ms.openlocfilehash: da9529da9b45fc8ac2fdf0b19d65634dd33450fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760716"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities에서는 개발자가 Visual Basic 또는 Visual C#을 사용하여 Entity Framework 개념적 모델에 대한 쿼리를 작성할 수 있도록 해 주는 LINQ(Language-Integrated Query) 지원을 제공합니다. Entity Framework에 대한 쿼리는 개체 컨텍스트에 대해 실행되는 명령 트리 쿼리로 표현됩니다. LINQ to Entities는 LINQ(Language-Integrated Query) 쿼리를 명령 트리 쿼리로 변환하여 Entity Framework에 대해 실행한 다음 Entity Framework와 LINQ에서 모두 사용할 수 있는 개체를 반환합니다. 다음은 LINQ to Entities 쿼리를 만들고 실행하는 프로세스입니다.  
@@ -57,13 +57,13 @@ LINQ to Entities에서는 개발자가 Visual Basic 또는 Visual C#을 사용�
   
  쿼리 결과는 대개 다음 중 하나로 반환됩니다.  
   
--   개념적 모델에 정의된 복합 형식의 프로젝션 또는 0개 이상의 형식화된 엔터티 개체가 포함된 컬렉션  
+- 개념적 모델에 정의된 복합 형식의 프로젝션 또는 0개 이상의 형식화된 엔터티 개체가 포함된 컬렉션  
   
--   [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]에서 지원하는 CLR 형식  
+- [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]에서 지원하는 CLR 형식  
   
--   인라인 컬렉션  
+- 인라인 컬렉션  
   
--   익명 형식  
+- 익명 형식  
   
  자세한 내용은 [쿼리 결과](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md)합니다.  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
 ms.openlocfilehash: 4327e8bb07cb03a91f7384f7fe82bc2e47f6fcb9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780824"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF 문제 해결 퀵 스타트
 이 항목에서는 WCF 클라이언트 및 서비스를 개발하는 동안 발생하는 몇 가지 알려진 문제점을 나열합니다. 발생하는 문제가 이 목록에 없는 경우 서비스에 대한 추적을 구성하는 것이 좋습니다. 추적을 구성하면 추적 파일 뷰어로 보고 서비스 내에서 발생하는 예외에 대한 자세한 정보를 얻을 수 있는 추적 파일이 생성됩니다. 추적 구성에 대 한 자세한 내용은 다음을 참조 하세요. [추적 구성](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)합니다. 추적 파일 뷰어에 대 한 자세한 내용은 다음을 참조 하세요. [서비스 추적 뷰어 도구 (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)합니다.  
@@ -98,15 +98,15 @@ public class MyServiceHost : ServiceHost
 ## <a name="my-service-and-client-work-great-but-i-cant-get-them-to-work-when-the-client-is-on-another-computer-whats-happening"></a>서비스와 클라이언트는 문제없이 작동하는데 클라이언트가 다른 컴퓨터에 있으면 둘 다 제대로 작동하지 않습니다. 이유가 무엇입니까?  
  예외에 따라 여러 가지 문제가 있을 수 있습니다.  
   
--   클라이언트 엔드포인트 주소를 "localhost" 대신 호스트 이름으로 변경해야 할 수 있습니다.  
+- 클라이언트 엔드포인트 주소를 "localhost" 대신 호스트 이름으로 변경해야 할 수 있습니다.  
   
--   애플리케이션에 연결되는 포트를 열어야 할 수 있습니다. 자세한 내용은 SDK 샘플에서 [Firewall Instructions](../../../docs/framework/wcf/samples/firewall-instructions.md) 을 참조하십시오.  
+- 애플리케이션에 연결되는 포트를 열어야 할 수 있습니다. 자세한 내용은 SDK 샘플에서 [Firewall Instructions](../../../docs/framework/wcf/samples/firewall-instructions.md) 을 참조하십시오.  
   
--   다른 가능한 문제에 대 한 샘플 항목을 참조 하세요 [Windows Communication Foundation 샘플 실행](./samples/running-the-samples.md)합니다.  
+- 다른 가능한 문제에 대 한 샘플 항목을 참조 하세요 [Windows Communication Foundation 샘플 실행](./samples/running-the-samples.md)합니다.  
   
--   클라이언트가 Windows 자격 증명을 사용하고 예외가 <xref:System.ServiceModel.Security.SecurityNegotiationException>인 경우 다음과 같이 Kerberos를 구성합니다.  
+- 클라이언트가 Windows 자격 증명을 사용하고 예외가 <xref:System.ServiceModel.Security.SecurityNegotiationException>인 경우 다음과 같이 Kerberos를 구성합니다.  
   
-    1.  클라이언트 App.config 파일의 엔드포인트 요소에 ID 자격 증명을 추가합니다.  
+    1. 클라이언트 App.config 파일의 엔드포인트 요소에 ID 자격 증명을 추가합니다.  
   
         ```xml
         <endpoint   
@@ -122,33 +122,33 @@ public class MyServiceHost : ServiceHost
         </endpoint>  
         ```  
   
-    2.  System 또는 NetworkService 계정으로 자체 호스팅 서비스를 실행합니다. 다음 명령을 실행하여 System 계정으로 명령 창을 만들 수 있습니다.  
+    2. System 또는 NetworkService 계정으로 자체 호스팅 서비스를 실행합니다. 다음 명령을 실행하여 System 계정으로 명령 창을 만들 수 있습니다.  
   
         ```console
         at 12:36 /interactive "cmd.exe"  
         ```  
   
-    3.  기본적으로 SPN(서비스 사용자 이름) 계정을 사용하는 IIS(인터넷 정보 서비스)에서 서비스를 호스팅합니다.  
+    3. 기본적으로 SPN(서비스 사용자 이름) 계정을 사용하는 IIS(인터넷 정보 서비스)에서 서비스를 호스팅합니다.  
   
-    4.  SetSPN을 사용하여 도메인에 새 SPN을 등록합니다. 이 작업을 수행하려면 도메인 관리자여야 합니다.  
+    4. SetSPN을 사용하여 도메인에 새 SPN을 등록합니다. 이 작업을 수행하려면 도메인 관리자여야 합니다.  
   
  Kerberos 프로토콜에 대 한 자세한 내용은 참조 하세요. [Security Concepts Used in WCF](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md) 및:  
   
--   [Windows 인증 오류 디버깅](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
+- [Windows 인증 오류 디버깅](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
   
--   [Http.sys를 사용하여 Kerberos 서비스 보안 주체 이름 등록(영문 페이지일 수 있음)](https://go.microsoft.com/fwlink/?LinkId=86943)  
+- [Http.sys를 사용하여 Kerberos 서비스 보안 주체 이름 등록(영문 페이지일 수 있음)](https://go.microsoft.com/fwlink/?LinkId=86943)  
   
--   [Kerberos 설명(영문 페이지일 수 있음)](https://go.microsoft.com/fwlink/?LinkId=86946)  
+- [Kerberos 설명(영문 페이지일 수 있음)](https://go.microsoft.com/fwlink/?LinkId=86946)  
   
 <a name="BKMK_q5"></a>   
 ## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>FaultException을 발생 하면\<예외 > 예외 형식이 인 경우 항상 받습니다 일반 FaultException 형식을 클라이언트에서 제네릭 형식이 아닌 합니다. 이유가 무엇입니까?  
  사용자 지정 오류 데이터 형식을 만들고 이 형식을 오류 계약에서 세부 형식으로 선언하는 것이 좋습니다. 시스템 제공 예외 형식을 사용하는 이유는 다음과 같습니다.  
   
--   서비스 지향 애플리케이션의 가장 큰 장점 중 하나를 제거하는 형식 종속성을 만듭니다.  
+- 서비스 지향 애플리케이션의 가장 큰 장점 중 하나를 제거하는 형식 종속성을 만듭니다.  
   
--   표준 방법으로 serialize하는 예외에 의존할 수 없습니다. <xref:System.Security.SecurityException>과 같이 전혀 serialize할 수 없는 것도 있습니다.  
+- 표준 방법으로 serialize하는 예외에 의존할 수 없습니다. <xref:System.Security.SecurityException>과 같이 전혀 serialize할 수 없는 것도 있습니다.  
   
--   내부 구현 세부 정보를 클라이언트에 노출합니다. 자세한 내용은 [지정 및 계약 및 서비스에서 오류 처리](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)합니다.  
+- 내부 구현 세부 정보를 클라이언트에 노출합니다. 자세한 내용은 [지정 및 계약 및 서비스에서 오류 처리](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)합니다.  
   
  그러나 애플리케이션을 디버깅하는 경우에는 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 클래스를 사용하여 예외 정보를 serialize하고 클라이언트에 반환할 수 있습니다.  
   

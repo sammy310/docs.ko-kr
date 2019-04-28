@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, data binding
 ms.assetid: 40476b89-8941-4771-8d21-2fe430c85a9d
 ms.openlocfilehash: f55c9790b8300a1a3f26e031a17a0982638b562b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765520"
 ---
 # <a name="how-to-customize-data-binding-behaviors-wcf-data-services"></a>방법: 데이터 바인딩 (WCF Data Services) 동작을 사용자 지정
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 사용하면 바인딩 컬렉션에 개체가 추가 또는 제거되거나 속성 변경이 검색될 때 <xref:System.Data.Services.Client.DataServiceCollection%601>에서 호출하는 사용자 지정 논리를 제공할 수 있습니다. 이 사용자 지정 논리로 참조 하는 메서드를 그대로 제공 됩니다 <xref:System.Func%602> 의 값을 반환 하는 대리자 `false` 때 기본 동작이 수행 되어야 하는 사용자 지정 메서드가 완료 될 때 및 `true` 후속 처리의 경우는 이벤트는 중지 되어야 합니다.  

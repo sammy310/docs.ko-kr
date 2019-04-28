@@ -3,11 +3,11 @@ title: x:Members 지시문
 ms.date: 03/30/2017
 ms.assetid: 155b393d-3b49-4c5a-8c9e-b3d9893af4e4
 ms.openlocfilehash: d23e6b459af932e0a6f69309f26a1cce70a9d256
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58034500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938894"
 ---
 # <a name="xmembers-directive"></a>x:Members 지시문
 부모 요소의 x: 클래스에 적용 되는 태그에 정의 된 멤버 집합을 보유 합니다.  

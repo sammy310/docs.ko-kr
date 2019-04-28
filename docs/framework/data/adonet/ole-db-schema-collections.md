@@ -3,11 +3,11 @@ title: OLE DB 스키마 컬렉션
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
 ms.openlocfilehash: 6dc187b0a876d9e167a74f2381db156dde2764fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771997"
 ---
 # <a name="ole-db-schema-collections"></a>OLE DB 스키마 컬렉션
 이 단원에서는 Microsoft SQL Server, Oracle 및 Microsoft Jet용 OLE DB 공급자에서 지원하는 스키마 컬렉션에 대해 설명합니다.  
@@ -15,17 +15,17 @@ ms.locfileid: "59164686"
 ## <a name="microsoft-sql-server-ole-db-provider"></a>Microsoft SQL Server OLE DB 공급자  
  Microsoft SQL Server OLE DB Driver에서는 공통 스키마 컬렉션 외에도 다음과 같은 특정 스키마 컬렉션을 지원합니다.  
   
--   Tables  
+- Tables  
   
--   Columns  
+- Columns  
   
--   절차  
+- 절차  
   
--   ProcedureParameters  
+- ProcedureParameters  
   
--   Catalog  
+- Catalog  
   
--   인덱스  
+- 인덱스  
   
 ### <a name="tables"></a>Tables  
   
@@ -154,19 +154,19 @@ ms.locfileid: "59164686"
 ## <a name="microsoft-oracle-ole-db-provider"></a>Microsoft Oracle OLE DB      
  Microsoft Oracle OLE DB Driver                                             .  
   
--   Tables  
+- Tables  
   
--   Columns  
+- Columns  
   
--   절차  
+- 절차  
   
--   ProcedureColumns  
+- ProcedureColumns  
   
--   ProcedureParameters  
+- ProcedureParameters  
   
--   보기  
+- 보기  
   
--   인덱스  
+- 인덱스  
   
 ### <a name="tables"></a>Tables  
   
@@ -297,15 +297,15 @@ ms.locfileid: "59164686"
 ## <a name="microsoft-jet-ole-db-provider"></a>Microsoft Jet OLE DB      
  Microsoft Jet OLE DB Driver                                             .  
   
--   Tables  
+- Tables  
   
--   Columns  
+- Columns  
   
--   절차  
+- 절차  
   
--   보기  
+- 보기  
   
--   인덱스  
+- 인덱스  
   
 ### <a name="tables"></a>Tables  
   

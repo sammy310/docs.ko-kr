@@ -10,11 +10,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
 ms.openlocfilehash: b7aba4935756fc218a1fadaa1dd9f20a5bc3034f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778848"
 ---
 # <a name="how-to-validate-application-settings"></a>방법: 애플리케이션 설정 업데이트
 이 항목에서는 애플리케이션 설정이 유지되기 전에 유효성을 검사하는 방법을 설명합니다.  
@@ -34,11 +34,11 @@ ms.locfileid: "59317892"
   
  이벤트 처리기가 잘못된 값을 감지하면 일반적으로 다음 작업 중 하나를 수행합니다.  
   
--   기본 값과 같이 올바른 것으로 알려진 값을 자동으로 제공합니다.  
+- 기본 값과 같이 올바른 것으로 알려진 값을 자동으로 제공합니다.  
   
--   정보에 대한 서버 코드의 사용자를 다시 쿼리합니다.  
+- 정보에 대한 서버 코드의 사용자를 다시 쿼리합니다.  
   
--   와 같은 관련된 된 작업 전에 발생 하는 이벤트에 대 한 <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> 하 고 <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>를 사용 하 여는 <xref:System.ComponentModel.CancelEventArgs> 작업을 취소 하는 인수.  
+- 와 같은 관련된 된 작업 전에 발생 하는 이벤트에 대 한 <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> 하 고 <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>를 사용 하 여는 <xref:System.ComponentModel.CancelEventArgs> 작업을 취소 하는 인수.  
   
  이벤트를 처리하는 방법에 대한 자세한 내용은 [이벤트 처리기 개요](../event-handlers-overview-windows-forms.md)를 참조하세요.  
   
@@ -46,9 +46,9 @@ ms.locfileid: "59317892"
   
 ### <a name="to-obtain-the-application-settings-object"></a>애플리케이션 설정 개체를 가져오려면  
   
--   다음 글머리 기호 항목 중 하나를 완료하여 애플리케이션 설정 개체(래퍼 인스턴스)에 대한 참조를 가져옵니다.  
+- 다음 글머리 기호 항목 중 하나를 완료하여 애플리케이션 설정 개체(래퍼 인스턴스)에 대한 참조를 가져옵니다.  
   
-    -   **속성 편집기**에서 Visual Studio 응용 프로그램 설정 대화 상자를 사용하여 설정을 만든 경우 다음 식을 통해 언어에 대해 생성된 기본 설정 개체를 검색할 수 있습니다.  
+    - **속성 편집기**에서 Visual Studio 응용 프로그램 설정 대화 상자를 사용하여 설정을 만든 경우 다음 식을 통해 언어에 대해 생성된 기본 설정 개체를 검색할 수 있습니다.  
   
         ```csharp  
         Configuration.Settings.Default   
@@ -60,11 +60,11 @@ ms.locfileid: "59317892"
   
          -또는-  
   
-    -   사용자가 Visual Basic 개발자이며 프로젝트 디자이너를 사용하여 애플리케이션 설정을 만든 경우 [My.Settings 개체](~/docs/visual-basic/language-reference/objects/my-settings-object.md)를 사용하여 설정을 검색할 수 있습니다.  
+    - 사용자가 Visual Basic 개발자이며 프로젝트 디자이너를 사용하여 애플리케이션 설정을 만든 경우 [My.Settings 개체](~/docs/visual-basic/language-reference/objects/my-settings-object.md)를 사용하여 설정을 검색할 수 있습니다.  
   
          -또는-  
   
-    -   파생 하 여 설정을 만든 경우 <xref:System.Configuration.ApplicationSettingsBase> 직접 클래스를 수동으로 인스턴스화해야 해야 합니다.  
+    - 파생 하 여 설정을 만든 경우 <xref:System.Configuration.ApplicationSettingsBase> 직접 클래스를 수동으로 인스턴스화해야 해야 합니다.  
   
         ```csharp  
         MyCustomSettings settings = new MyCustomSettings();  

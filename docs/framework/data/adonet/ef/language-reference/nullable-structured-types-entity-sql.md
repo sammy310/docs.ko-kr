@@ -3,11 +3,11 @@ title: null 허용 구조적 형식(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ae006fa9-997e-45bb-8a04-a7f62026171e
 ms.openlocfilehash: 632b092e1d0d99a2a40cc3cd4b323e234de6232b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59127857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760326"
 ---
 # <a name="nullable-structured-types-entity-sql"></a>null 허용 구조적 형식(Entity SQL)
 구조적 형식의 `null` 인스턴스는 존재하지 않는 인스턴스입니다. 이는 모든 속성에 `null` 값이 있는 기존 인스턴스와 다릅니다.  
@@ -17,28 +17,28 @@ ms.locfileid: "59127857"
 ## <a name="kinds-of-nullable-structured-types"></a>구조적 Nullable 형식의 종류  
  구조적 nullable 형식에는 세 가지 종류가 있습니다.  
   
--   행 형식  
+- 행 형식  
   
--   복합 형식  
+- 복합 형식  
   
--   엔터티 형식  
+- 엔터티 형식  
   
 ## <a name="code-patterns-that-produce-null-instances-of-structured-types"></a>구조적 형식의 Null 인스턴스를 생성하는 코드 패턴  
  다음 시나리오에서는 `null` 인스턴스를 생성합니다.  
   
--   `null`을 구조적 형식으로 모양 결정:  
+- `null`을 구조적 형식으로 모양 결정:  
   
     ```  
     TREAT (NULL AS StructuredType)  
     ```  
   
--   기본 형식을 파생 형식으로 업캐스트:  
+- 기본 형식을 파생 형식으로 업캐스트:  
   
     ```  
     TREAT (BaseType AS DerivedType)  
     ```  
   
--   False 조건에 대한 외부 조인:  
+- False 조건에 대한 외부 조인:  
   
     ```  
     Collection1 LEFT OUTER JOIN Collection2  
@@ -59,19 +59,19 @@ ms.locfileid: "59127857"
     ON FalseCondition  
     ```  
   
--   `null` 참조 역참조:  
+- `null` 참조 역참조:  
   
     ```  
     DEREF(NullRef)  
     ```  
   
--   빈 컬렉션에서 ANYELEMENT 가져오기:  
+- 빈 컬렉션에서 ANYELEMENT 가져오기:  
   
     ```  
     ANYELEMENT(EmptyCollection)  
     ```  
   
--   구조적 형식의 `null` 인스턴스 확인:  
+- 구조적 형식의 `null` 인스턴스 확인:  
   
     ```csharp  
     ...  

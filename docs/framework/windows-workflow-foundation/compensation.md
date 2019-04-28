@@ -3,11 +3,11 @@ title: 보정
 ms.date: 03/30/2017
 ms.assetid: 722e9766-48d7-456c-9496-d7c5c8f0fa76
 ms.openlocfilehash: af29ba61ff5bede9208f2ab706f5e0ce1ff12274
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774285"
 ---
 # <a name="compensation"></a>보정
 보정에서 Windows WF (Workflow Foundation)는 이전에는 완료 된 작업 수 취소 하거나 보정 되어야 (응용 프로그램에서 정의한 논리)에 따라 메커니즘은 이후에 실패가 발생 하는 경우. 이 단원에서는 워크플로에서 보정을 사용하는 방법에 대해 설명합니다.  
@@ -159,8 +159,7 @@ Activity wf = new Sequence()
 </Sequence>  
 ```  
   
- 워크플로가 호출되면 <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>에서 호스트 응용 프로그램이 시뮬레이션된 오류 조건 예외를 처리하고 워크플로가 취소되고 <xref:System.Activities.Statements.CompensableActivity>의 취소 논리가 호출됩니다. 이 예제에서는 보정 논리와 취소 논리가 다른 목표를 가지고 있습니다. <xref:System.Activities.Statements.CompensableActivity.Body%2A>가 성공적으로 완료되면 신용 카드가 청구되고 비행기가 예약되었으므로 보정은 두 단계 모두 실행 취소해야 합니다. 이 예제에서 비행기를 취소하면 자동으로 신용 카드 청구를 취소합니다. 하지만 <xref:System.Activities.Statements.CompensableActivity>가 취소되면 <xref:System.Activities.Statements.CompensableActivity.Body%2A>가 완료되지 않았으므로 취소를 가장 잘 처리하는 방법을 결정할 수 있도록 <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A>의 논리가 필요합니다. 이 예제에서 <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A>가 신용 카드 청구를 취소하지만 `ReserveFlight`가 <xref:System.Activities.Statements.CompensableActivity.Body%2A>에서 마지막 활동이었으므로 비행기를 취소하려고 하지 않습니다. 
-  `ReserveFlight`가 <xref:System.Activities.Statements.CompensableActivity.Body%2A>에서 마지막 활동이었으므로 성공적으로 완료되었다면 <xref:System.Activities.Statements.CompensableActivity.Body%2A>가 완료되었으므로 가능한 취소도 없습니다.  
+ 워크플로가 호출되면 <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>에서 호스트 응용 프로그램이 시뮬레이션된 오류 조건 예외를 처리하고 워크플로가 취소되고 <xref:System.Activities.Statements.CompensableActivity>의 취소 논리가 호출됩니다. 이 예제에서는 보정 논리와 취소 논리가 다른 목표를 가지고 있습니다. <xref:System.Activities.Statements.CompensableActivity.Body%2A>가 성공적으로 완료되면 신용 카드가 청구되고 비행기가 예약되었으므로 보정은 두 단계 모두 실행 취소해야 합니다. 이 예제에서 비행기를 취소하면 자동으로 신용 카드 청구를 취소합니다. 하지만 <xref:System.Activities.Statements.CompensableActivity>가 취소되면 <xref:System.Activities.Statements.CompensableActivity.Body%2A>가 완료되지 않았으므로 취소를 가장 잘 처리하는 방법을 결정할 수 있도록 <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A>의 논리가 필요합니다. 이 예제에서 <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A>가 신용 카드 청구를 취소하지만 `ReserveFlight`가 <xref:System.Activities.Statements.CompensableActivity.Body%2A>에서 마지막 활동이었으므로 비행기를 취소하려고 하지 않습니다. `ReserveFlight`가 <xref:System.Activities.Statements.CompensableActivity.Body%2A>에서 마지막 활동이었으므로 성공적으로 완료되었다면 <xref:System.Activities.Statements.CompensableActivity.Body%2A>가 완료되었으므로 가능한 취소도 없습니다.  
   
  **ChargeCreditCard: 항공편에 대 한 신용 카드 청구 합니다.**  
 **SimulatedErrorCondition: ApplicationException을 throw 하는 방법**   

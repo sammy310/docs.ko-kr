@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
 ms.openlocfilehash: dd59e7689fbca68d3e7b0b0008973e471d092fe0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778341"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>방법: WCF 엔드포인트와 대기 중인 메시지 교환
 큐는 서비스의 통신 시 사용할 수 없는 경우에 Windows Communication Foundation (WCF) 서비스와 클라이언트 간에 신뢰할 수 있는 메시징 발생할 수 있다고 확인 합니다. 다음 절차에는 WCF 서비스를 구현 하는 경우 클라이언트와 표준을 사용 하 여 서비스 간 통신을 지 속하는 큐 바인딩을 확인 하는 방법을 보여 줍니다.  

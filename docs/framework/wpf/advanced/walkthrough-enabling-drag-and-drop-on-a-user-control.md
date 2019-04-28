@@ -9,11 +9,11 @@ helpviewer_keywords:
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
 ms.openlocfilehash: a628665ccfa0a423667344b1fe81f132d6691b12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778956"
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>연습: 사용자 정의 컨트롤에서 끌어서 놓기 사용
 
@@ -23,13 +23,13 @@ ms.locfileid: "59321681"
 
 이 연습에서는 다음 작업을 수행합니다.
 
--   사용자 지정 사용자 정의 컨트롤 만들기
+- 사용자 지정 사용자 정의 컨트롤 만들기
 
--   사용자 정의 컨트롤을 끌기 소스로 사용할 수 있도록 설정
+- 사용자 정의 컨트롤을 끌기 소스로 사용할 수 있도록 설정
 
--   사용자 정의 컨트롤을 놓기 대상으로 사용할 수 있도록 설정
+- 사용자 정의 컨트롤을 놓기 대상으로 사용할 수 있도록 설정
 
--   패널이 사용자 정의 컨트롤에서 놓은 데이터를 받을 수 있도록 설정
+- 패널이 사용자 정의 컨트롤에서 놓은 데이터를 받을 수 있도록 설정
 
 ## <a name="prerequisites"></a>전제 조건
 
@@ -108,17 +108,17 @@ ms.locfileid: "59321681"
 
      이 <xref:System.Windows.UIElement.OnMouseMove%2A> 재정의 다음 작업을 수행 합니다.
 
-    -   마우스를 이동하는 동안 마우스 왼쪽 단추를 눌렀는지 여부를 확인합니다.
+    - 마우스를 이동하는 동안 마우스 왼쪽 단추를 눌렀는지 여부를 확인합니다.
 
-    -   원 데이터를 패키지는 <xref:System.Windows.DataObject>합니다. 이 경우 원 컨트롤은 채우기 색의 문자열 표현, 높이의 double 표현과 자신의 복사본이라는 세 개의 데이터 항목을 패키지합니다.
+    - 원 데이터를 패키지는 <xref:System.Windows.DataObject>합니다. 이 경우 원 컨트롤은 채우기 색의 문자열 표현, 높이의 double 표현과 자신의 복사본이라는 세 개의 데이터 항목을 패키지합니다.
 
-    -   정적 호출 <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> 끌어서 놓기 작업을 시작 하는 방법입니다. 다음 세 가지 매개 변수를 전달 합니다 <xref:System.Windows.DragDrop.DoDragDrop%2A> 메서드:
+    - 정적 호출 <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> 끌어서 놓기 작업을 시작 하는 방법입니다. 다음 세 가지 매개 변수를 전달 합니다 <xref:System.Windows.DragDrop.DoDragDrop%2A> 메서드:
 
-        -   `dragSource` – 이 컨트롤에 대한 참조입니다.
+        - `dragSource` – 이 컨트롤에 대한 참조입니다.
 
-        -   `data` – <xref:System.Windows.DataObject> 이전 코드에서 생성 합니다.
+        - `data` – <xref:System.Windows.DataObject> 이전 코드에서 생성 합니다.
 
-        -   `allowedEffects` -허용 된 끌어서 놓기 작업으로, <xref:System.Windows.DragDropEffects.Copy> 또는 <xref:System.Windows.DragDropEffects.Move>합니다.
+        - `allowedEffects` -허용 된 끌어서 놓기 작업으로, <xref:System.Windows.DragDropEffects.Copy> 또는 <xref:System.Windows.DragDropEffects.Move>합니다.
 
 3. **F5** 키를 눌러 응용 프로그램을 빌드하고 실행합니다.
 
@@ -143,9 +143,9 @@ ms.locfileid: "59321681"
 
      이 <xref:System.Windows.UIElement.OnGiveFeedback%2A> 재정의 다음 작업을 수행 합니다.
 
-    -   확인 합니다 <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> 놓기 대상에서 설정 된 값 <xref:System.Windows.UIElement.DragOver> 이벤트 처리기입니다.
+    - 확인 합니다 <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> 놓기 대상에서 설정 된 값 <xref:System.Windows.UIElement.DragOver> 이벤트 처리기입니다.
 
-    -   설정에 따라 사용자 지정 커서를 <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> 값입니다. 커서는 데이터 놓기의 결과에 대한 시각적 피드백을 사용자에게 제공하기 위한 것입니다.
+    - 설정에 따라 사용자 지정 커서를 <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> 값입니다. 커서는 데이터 놓기의 결과에 대한 시각적 피드백을 사용자에게 제공하기 위한 것입니다.
 
 3. **F5** 키를 눌러 응용 프로그램을 빌드하고 실행합니다.
 
@@ -181,15 +181,15 @@ ms.locfileid: "59321681"
 
      이 <xref:System.Windows.UIElement.OnDrop%2A> 재정의 다음 작업을 수행 합니다.
 
-    -   사용 하 여 <xref:System.Windows.DataObject.GetDataPresent%2A> 문자열 개체를 끌어 온된 데이터에 포함 되어 있는지 확인 하는 방법입니다.
+    - 사용 하 여 <xref:System.Windows.DataObject.GetDataPresent%2A> 문자열 개체를 끌어 온된 데이터에 포함 되어 있는지 확인 하는 방법입니다.
 
-    -   사용 하 여 <xref:System.Windows.DataObject.GetData%2A> 있는 경우 문자열 데이터를 추출 하는 방법.
+    - 사용 하 여 <xref:System.Windows.DataObject.GetData%2A> 있는 경우 문자열 데이터를 추출 하는 방법.
 
-    -   사용 하는 <xref:System.Windows.Media.BrushConverter> 문자열을 변환 하려고를 <xref:System.Windows.Media.Brush>입니다.
+    - 사용 하는 <xref:System.Windows.Media.BrushConverter> 문자열을 변환 하려고를 <xref:System.Windows.Media.Brush>입니다.
 
-    -   변환이 성공한 경우에 브러시를 적용 합니다 <xref:System.Windows.Shapes.Shape.Fill%2A> 의 <xref:System.Windows.Shapes.Ellipse> 원 컨트롤의 UI를 제공 하는 합니다.
+    - 변환이 성공한 경우에 브러시를 적용 합니다 <xref:System.Windows.Shapes.Shape.Fill%2A> 의 <xref:System.Windows.Shapes.Ellipse> 원 컨트롤의 UI를 제공 하는 합니다.
 
-    -   표시 된 <xref:System.Windows.UIElement.Drop> 이벤트를 처리 합니다. 이 이벤트를 수신하는 다른 요소가 원 사용자 정의 컨트롤에서 해당 이벤트를 처리했음을 알 수 있도록 놓기 이벤트를 처리된 것으로 표시해야 합니다.
+    - 표시 된 <xref:System.Windows.UIElement.Drop> 이벤트를 처리 합니다. 이 이벤트를 수신하는 다른 요소가 원 사용자 정의 컨트롤에서 해당 이벤트를 처리했음을 알 수 있도록 놓기 이벤트를 처리된 것으로 표시해야 합니다.
 
 3. **F5** 키를 눌러 응용 프로그램을 빌드하고 실행합니다.
 
@@ -222,11 +222,11 @@ ms.locfileid: "59321681"
 
      이 <xref:System.Windows.UIElement.OnDragOver%2A> 재정의 다음 작업을 수행 합니다.
 
-    -   <xref:System.Windows.DragEventArgs.Effects%2A> 속성을 <xref:System.Windows.DragDropEffects.None>로 설정합니다.
+    - <xref:System.Windows.DragEventArgs.Effects%2A> 속성을 <xref:System.Windows.DragDropEffects.None>로 설정합니다.
 
-    -   수행 되는 동일한 검사를 수행 합니다 <xref:System.Windows.UIElement.OnDrop%2A> 원 사용자 정의 컨트롤로 끌어 온된 데이터를 처리할 수 있는지 여부를 결정 하는 방법입니다.
+    - 수행 되는 동일한 검사를 수행 합니다 <xref:System.Windows.UIElement.OnDrop%2A> 원 사용자 정의 컨트롤로 끌어 온된 데이터를 처리할 수 있는지 여부를 결정 하는 방법입니다.
 
-    -   사용자 정의 컨트롤에 데이터를 처리할 수를 설정 합니다 <xref:System.Windows.DragEventArgs.Effects%2A> 속성을 <xref:System.Windows.DragDropEffects.Copy> 또는 <xref:System.Windows.DragDropEffects.Move>합니다.
+    - 사용자 정의 컨트롤에 데이터를 처리할 수를 설정 합니다 <xref:System.Windows.DragEventArgs.Effects%2A> 속성을 <xref:System.Windows.DragDropEffects.Copy> 또는 <xref:System.Windows.DragDropEffects.Move>합니다.
 
 3. **F5** 키를 눌러 응용 프로그램을 빌드하고 실행합니다.
 
@@ -252,11 +252,11 @@ ms.locfileid: "59321681"
 
      이 <xref:System.Windows.UIElement.OnDragEnter%2A> 재정의 다음 작업을 수행 합니다.
 
-    -   저장를 <xref:System.Windows.Shapes.Shape.Fill%2A> 의 속성을 <xref:System.Windows.Shapes.Ellipse> 에 `_previousFill` 변수.
+    - 저장를 <xref:System.Windows.Shapes.Shape.Fill%2A> 의 속성을 <xref:System.Windows.Shapes.Ellipse> 에 `_previousFill` 변수.
 
-    -   수행 되는 동일한 검사를 수행 합니다 <xref:System.Windows.UIElement.OnDrop%2A> 데이터를 변환할 수 있는지 여부를 결정 하는 메서드를 <xref:System.Windows.Media.Brush>합니다.
+    - 수행 되는 동일한 검사를 수행 합니다 <xref:System.Windows.UIElement.OnDrop%2A> 데이터를 변환할 수 있는지 여부를 결정 하는 메서드를 <xref:System.Windows.Media.Brush>합니다.
 
-    -   유효한 데이터 변환 <xref:System.Windows.Media.Brush>에 적용 합니다 <xref:System.Windows.Shapes.Shape.Fill%2A> 의 <xref:System.Windows.Shapes.Ellipse>합니다.
+    - 유효한 데이터 변환 <xref:System.Windows.Media.Brush>에 적용 합니다 <xref:System.Windows.Shapes.Shape.Fill%2A> 의 <xref:System.Windows.Shapes.Ellipse>합니다.
 
 4. 다음을 추가 합니다 <xref:System.Windows.UIElement.OnDragLeave%2A> 클래스에 대 한 처리를 제공 하는 재정의 <xref:System.Windows.UIElement.DragLeave> 이벤트입니다.
 
@@ -265,7 +265,7 @@ ms.locfileid: "59321681"
 
      이 <xref:System.Windows.UIElement.OnDragLeave%2A> 재정의 다음 작업을 수행 합니다.
 
-    -   적용 됩니다는 <xref:System.Windows.Media.Brush> 에 저장 합니다 `_previousFill` 변수를 <xref:System.Windows.Shapes.Shape.Fill%2A> 의 <xref:System.Windows.Shapes.Ellipse> 원 사용자 정의 컨트롤의 UI를 제공 하는 합니다.
+    - 적용 됩니다는 <xref:System.Windows.Media.Brush> 에 저장 합니다 `_previousFill` 변수를 <xref:System.Windows.Shapes.Shape.Fill%2A> 의 <xref:System.Windows.Shapes.Ellipse> 원 사용자 정의 컨트롤의 UI를 제공 하는 합니다.
 
 5. **F5** 키를 눌러 응용 프로그램을 빌드하고 실행합니다.
 
@@ -296,11 +296,11 @@ ms.locfileid: "59321681"
 
      이 <xref:System.Windows.UIElement.DragOver> 이벤트 처리기는 다음 작업을 수행 합니다.
 
-    -   에 패키지 된 "Object" 데이터가 끌어 온된 데이터 포함을 확인 합니다 <xref:System.Windows.DataObject> 원 사용자 정의 컨트롤에서 호출에 전달 하 고 <xref:System.Windows.DragDrop.DoDragDrop%2A>입니다.
+    - 에 패키지 된 "Object" 데이터가 끌어 온된 데이터 포함을 확인 합니다 <xref:System.Windows.DataObject> 원 사용자 정의 컨트롤에서 호출에 전달 하 고 <xref:System.Windows.DragDrop.DoDragDrop%2A>입니다.
 
-    -   "Object" 데이터가 있는 경우를 확인 하는지 여부를 **Ctrl** 키가 눌러져 있습니다.
+    - "Object" 데이터가 있는 경우를 확인 하는지 여부를 **Ctrl** 키가 눌러져 있습니다.
 
-    -   경우는 **Ctrl** 키를 누르면 집합 합니다 <xref:System.Windows.DragEventArgs.Effects%2A> 속성을 <xref:System.Windows.DragDropEffects.Copy>입니다. 그렇지 않으면 설정 합니다 <xref:System.Windows.DragEventArgs.Effects%2A> 속성을 <xref:System.Windows.DragDropEffects.Move>입니다.
+    - 경우는 **Ctrl** 키를 누르면 집합 합니다 <xref:System.Windows.DragEventArgs.Effects%2A> 속성을 <xref:System.Windows.DragDropEffects.Copy>입니다. 그렇지 않으면 설정 합니다 <xref:System.Windows.DragEventArgs.Effects%2A> 속성을 <xref:System.Windows.DragDropEffects.Move>입니다.
 
 5. 다음 코드를 추가 합니다 <xref:System.Windows.UIElement.Drop> 이벤트 처리기입니다.
 
@@ -309,15 +309,15 @@ ms.locfileid: "59321681"
 
      이 <xref:System.Windows.UIElement.Drop> 이벤트 처리기는 다음 작업을 수행 합니다.
 
-    -   확인 여부를 <xref:System.Windows.UIElement.Drop> 이벤트가 이미 처리 되었습니다. 예를 들어 다른 원을 놓는 경우 원는 핸들을 <xref:System.Windows.UIElement.Drop> 이벤트를 원하지 않는 처리 원이 포함 된 패널입니다.
+    - 확인 여부를 <xref:System.Windows.UIElement.Drop> 이벤트가 이미 처리 되었습니다. 예를 들어 다른 원을 놓는 경우 원는 핸들을 <xref:System.Windows.UIElement.Drop> 이벤트를 원하지 않는 처리 원이 포함 된 패널입니다.
 
-    -   경우는 <xref:System.Windows.UIElement.Drop> 이벤트 처리 되지 않으면 검사 여부는 **Ctrl** 키를 누르면 합니다.
+    - 경우는 <xref:System.Windows.UIElement.Drop> 이벤트 처리 되지 않으면 검사 여부는 **Ctrl** 키를 누르면 합니다.
 
-    -   경우는 **Ctrl** 키를 누를 때를 <xref:System.Windows.UIElement.Drop> 발생 원의 복사 하면 제어에 추가 하는 <xref:System.Windows.Controls.Panel.Children%2A> 의 컬렉션을 <xref:System.Windows.Controls.StackPanel>.
+    - 경우는 **Ctrl** 키를 누를 때를 <xref:System.Windows.UIElement.Drop> 발생 원의 복사 하면 제어에 추가 하는 <xref:System.Windows.Controls.Panel.Children%2A> 의 컬렉션을 <xref:System.Windows.Controls.StackPanel>.
 
-    -   경우는 **Ctrl** 에서 원을 이동 키를 누르지를 <xref:System.Windows.Controls.Panel.Children%2A> 에 부모 컨트롤의 컬렉션을 <xref:System.Windows.Controls.Panel.Children%2A> 놓은 패널의 컬렉션입니다.
+    - 경우는 **Ctrl** 에서 원을 이동 키를 누르지를 <xref:System.Windows.Controls.Panel.Children%2A> 에 부모 컨트롤의 컬렉션을 <xref:System.Windows.Controls.Panel.Children%2A> 놓은 패널의 컬렉션입니다.
 
-    -   집합의 <xref:System.Windows.DragEventArgs.Effects%2A> 에 알리기 위해 속성을 <xref:System.Windows.DragDrop.DoDragDrop%2A> 메서드 이동 또는 복사 작업을 수행 하는지 여부입니다.
+    - 집합의 <xref:System.Windows.DragEventArgs.Effects%2A> 에 알리기 위해 속성을 <xref:System.Windows.DragDrop.DoDragDrop%2A> 메서드 이동 또는 복사 작업을 수행 하는지 여부입니다.
 
 6. **F5** 키를 눌러 응용 프로그램을 빌드하고 실행합니다.
 

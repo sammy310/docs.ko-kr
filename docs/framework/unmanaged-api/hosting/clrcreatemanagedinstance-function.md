@@ -21,11 +21,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f82303a3d38e7a5baaf1c3edcc41518228360d34
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789638"
 ---
 # <a name="clrcreatemanagedinstance-function"></a>ClrCreateManagedInstance 함수
 지정 된 관리 되는 형식의 인스턴스를 만듭니다.  

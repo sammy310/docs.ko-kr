@@ -16,38 +16,38 @@ helpviewer_keywords:
 - animations [WPF], applying
 ms.assetid: 075b9c2b-82c4-43fa-b3cd-de0b6236eb38
 ms.openlocfilehash: 456308e37bddc1df86b49085139a3810c4959a58
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763106"
 ---
 # <a name="easing-functions"></a>감속/가속 함수
 감속/가속 함수를 사용하여 사용자 지정 수식을 애니메이션에 적용할 수 있습니다. 예를 들어 마치 스프링 위에 있는 것처럼 개체가 사실적으로 바운스되거나 동작하도록 하고 싶을 수 있습니다. 키 프레임 또는 심지어 From/To/By 애니메이션을 사용하여 이러한 효과를 대략적으로 나타낼 수 있지만 상당히 복잡한 작업이 필요하며 수식을 사용할 때보다 애니메이션이 덜 정확해집니다.  
   
  상속 하 여 사용자 고유의 사용자 지정 감속/가속 함수를 만드는 것 외에 <xref:System.Windows.Media.Animation.EasingFunctionBase>, 일반적인 효과를 만들 런타임에서 제공 하는 여러 감속/가속 함수 중 하나를 사용할 수 있습니다.  
   
--   <xref:System.Windows.Media.Animation.BackEase>: 표시 된 경로로 애니메이션을 시작 하기 전에 애니메이션의 이동을 약간 취소 합니다.  
+- <xref:System.Windows.Media.Animation.BackEase>: 표시 된 경로로 애니메이션을 시작 하기 전에 애니메이션의 이동을 약간 취소 합니다.  
   
--   <xref:System.Windows.Media.Animation.BounceEase>: 바운스 효과 만듭니다.  
+- <xref:System.Windows.Media.Animation.BounceEase>: 바운스 효과 만듭니다.  
   
--   <xref:System.Windows.Media.Animation.CircleEase>: 및/또는 감속 순환 함수를 사용 하 여 감속 하는 애니메이션을 만듭니다.  
+- <xref:System.Windows.Media.Animation.CircleEase>: 및/또는 감속 순환 함수를 사용 하 여 감속 하는 애니메이션을 만듭니다.  
   
--   <xref:System.Windows.Media.Animation.CubicEase>: 가속 및/또는 수식을 사용 하 여 감속 하는 애니메이션을 만듭니다 *f*(*t*) = *t*<sup>3</sup>합니다.  
+- <xref:System.Windows.Media.Animation.CubicEase>: 가속 및/또는 수식을 사용 하 여 감속 하는 애니메이션을 만듭니다 *f*(*t*) = *t*<sup>3</sup>합니다.  
   
--   <xref:System.Windows.Media.Animation.ElasticEase>: 완전히 정지할 때까지 앞뒤로 진동 하는 스프링과 유사한 애니메이션을 만듭니다.  
+- <xref:System.Windows.Media.Animation.ElasticEase>: 완전히 정지할 때까지 앞뒤로 진동 하는 스프링과 유사한 애니메이션을 만듭니다.  
   
--   <xref:System.Windows.Media.Animation.ExponentialEase>: 가속 및/또는 지 수 식을 사용 하 여 감속 하는 애니메이션을 만듭니다.  
+- <xref:System.Windows.Media.Animation.ExponentialEase>: 가속 및/또는 지 수 식을 사용 하 여 감속 하는 애니메이션을 만듭니다.  
   
--   <xref:System.Windows.Media.Animation.PowerEase>: 가속 및/또는 수식을 사용 하 여 감속 하는 애니메이션을 만듭니다 *f*(*t*) = *t*<sup>p</sup> 여기서 p는 합니다 같음<xref:System.Windows.Media.Animation.PowerEase.Power%2A>속성입니다.  
+- <xref:System.Windows.Media.Animation.PowerEase>: 가속 및/또는 수식을 사용 하 여 감속 하는 애니메이션을 만듭니다 *f*(*t*) = *t*<sup>p</sup> 여기서 p는 합니다 같음<xref:System.Windows.Media.Animation.PowerEase.Power%2A>속성입니다.  
   
--   <xref:System.Windows.Media.Animation.QuadraticEase>: 가속 및/또는 수식을 사용 하 여 감속 하는 애니메이션을 만듭니다 *f*(*t*) = *t*<sup>2</sup>합니다.  
+- <xref:System.Windows.Media.Animation.QuadraticEase>: 가속 및/또는 수식을 사용 하 여 감속 하는 애니메이션을 만듭니다 *f*(*t*) = *t*<sup>2</sup>합니다.  
   
--   <xref:System.Windows.Media.Animation.QuarticEase>: 가속 및/또는 수식을 사용 하 여 감속 하는 애니메이션을 만듭니다 *f*(*t*) = *t*<sup>4</sup>합니다.  
+- <xref:System.Windows.Media.Animation.QuarticEase>: 가속 및/또는 수식을 사용 하 여 감속 하는 애니메이션을 만듭니다 *f*(*t*) = *t*<sup>4</sup>합니다.  
   
--   <xref:System.Windows.Media.Animation.QuinticEase>: 애니메이션을 가속화 및/또는 수식을 사용 하 여 감속 *f*(*t*) = *t*<sup>5</sup>합니다.  
+- <xref:System.Windows.Media.Animation.QuinticEase>: 애니메이션을 가속화 및/또는 수식을 사용 하 여 감속 *f*(*t*) = *t*<sup>5</sup>합니다.  
   
--   <xref:System.Windows.Media.Animation.SineEase>: 가속 및/또는 감속 사인 수식을 사용 하는 애니메이션을 만듭니다.  
+- <xref:System.Windows.Media.Animation.SineEase>: 가속 및/또는 감속 사인 수식을 사용 하는 애니메이션을 만듭니다.  
   
  애니메이션에 감속/가속 함수를 적용 하려면 사용 된 `EasingFunction` 애니메이션의 속성에 애니메이션을 적용할 감속/가속 함수를 지정 합니다. 적용 하는 다음 예제는 <xref:System.Windows.Media.Animation.BounceEase> 감속/가속 함수를를 <xref:System.Windows.Media.Animation.DoubleAnimation> 바운스 효과를 만듭니다.  
   
@@ -59,11 +59,11 @@ ms.locfileid: "57354507"
   
  사용할 수는 <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> , 감속/가속 함수가 동작 방식을 변경 하는 속성 애니메이션 보간 방법을 변경 합니다. 세 가지 가능한 값에 대해 제공할 수 있습니다 <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>:  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseIn>: 보간은 감속/가속 함수와 연결 된 수식을 따릅니다.  
+- <xref:System.Windows.Media.Animation.EasingMode.EaseIn>: 보간은 감속/가속 함수와 연결 된 수식을 따릅니다.  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseOut>: 보간은은 100% 보간에서 감속/가속 함수와 연결 된 수식의 출력을 뺀 값을 따릅니다.  
+- <xref:System.Windows.Media.Animation.EasingMode.EaseOut>: 보간은은 100% 보간에서 감속/가속 함수와 연결 된 수식의 출력을 뺀 값을 따릅니다.  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseInOut>: 보간 사용 <xref:System.Windows.Media.Animation.EasingMode.EaseIn> 애니메이션의 처음 절반에 대 한 및 <xref:System.Windows.Media.Animation.EasingMode.EaseOut> 하반기에 대 한 합니다.  
+- <xref:System.Windows.Media.Animation.EasingMode.EaseInOut>: 보간 사용 <xref:System.Windows.Media.Animation.EasingMode.EaseIn> 애니메이션의 처음 절반에 대 한 및 <xref:System.Windows.Media.Animation.EasingMode.EaseOut> 하반기에 대 한 합니다.  
   
  아래 그래프의 다른 값을 보여 줍니다 <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> 여기서 *f*(*x*)는 애니메이션 진행 상태를 나타냅니다와 *t* 시간을 나타냅니다.  
   

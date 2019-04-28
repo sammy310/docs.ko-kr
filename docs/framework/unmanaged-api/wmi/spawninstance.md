@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8056ef18089f56f1f9b6717d505fa3d058957541
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782529"
 ---
 # <a name="spawninstance-function"></a>SpawnInstance 함수
 클래스의 새 인스턴스를 만듭니다.    

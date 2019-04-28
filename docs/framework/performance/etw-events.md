@@ -8,11 +8,11 @@ ms.assetid: d186276f-6afb-4dfd-bf3c-4251edc2c299
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fa36399320a8c396a222619172264a32f3eb3505
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723604"
 ---
 # <a name="etw-events-in-the-net-framework"></a>ETW Events in the .NET Framework
 ETW(Windows용 이벤트 추적)는 Windows 운영 체제에서 제공되는 오버헤드가 낮고 확장 가능한 고성능 추적 시스템입니다. ETW는 .NET Framework에서 제공되는 프로파일링 및 디버깅 지원을 보완하며 다양한 시나리오 관련 문제를 해결하는 데 사용될 수 있습니다.  

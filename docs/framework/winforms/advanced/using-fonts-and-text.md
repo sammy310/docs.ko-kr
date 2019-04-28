@@ -9,11 +9,11 @@ helpviewer_keywords:
 - strings [Windows Forms], drawing in Windows Forms
 ms.assetid: d43640f3-da94-4df2-a29d-a9d021a1c069
 ms.openlocfilehash: c9fe16752223203806c7d3828f632aad0cab0c28
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769418"
 ---
 # <a name="using-fonts-and-text"></a>글꼴 및 텍스트 사용
 제공 하는 여러 클래스 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 고 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] Windows Forms에서 텍스트를 그리기 위한 합니다. 합니다 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> 클래스에 여러 개의 <xref:System.Drawing.Graphics.DrawString%2A> 텍스트, 위치, 경계 사각형, 글꼴 및 형식 등의 다양 한 기능을 지정할 수 있도록 하는 메서드. 그릴 텍스트를 측정 하는 또한 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 정적을 사용 하 여 <xref:System.Windows.Forms.TextRenderer.DrawText%2A> 하 고 <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> 에서 제공 하는 메서드는 `TextRenderer` 클래스입니다. [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 메서드 수 있습니다 위치, 글꼴 및 서식 지정 합니다. 그러나 선택할 수 있습니다 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 나 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 텍스트 렌더링;에 대 한 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 제품 향상 된 성능과 더 정확 하 게 텍스트 측정 일반적으로 합니다. 텍스트 렌더링에 영향을 주는 다른 클래스를 포함 `FontFamily`, `Font`를 <xref:System.Drawing.StringFormat>, 및 `TextFormatFlags`합니다.  

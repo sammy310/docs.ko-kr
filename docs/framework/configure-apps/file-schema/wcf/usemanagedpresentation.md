@@ -3,11 +3,11 @@ title: <useManagedPresentation>
 ms.date: 03/30/2017
 ms.assetid: 17a0dd77-af54-41db-a9d0-4b17ff42878f
 ms.openlocfilehash: eedf0ce6cf75b8fb56daf98f2005e66162ce10d8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769852"
 ---
 # <a name="usemanagedpresentation"></a>\<useManagedPresentation>
 WS-Trust의 CardSpace 프로필을 지원하는 CardSpace 보안 토큰 서비스와 통신하는 데 사용되는 바인딩 요소입니다. 이 요소는 특성이 없고 빈 스위치로 존재합니다.  

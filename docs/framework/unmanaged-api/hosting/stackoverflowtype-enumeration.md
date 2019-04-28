@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8541ea7b614ff4a6ca666f0e2549a7f50e190192
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777990"
 ---
 # <a name="stackoverflowtype-enumeration"></a>StackOverflowType 열거형
 스택 오버플로 이벤트의 근본 원인을 나타내는 값을 포함 합니다.  

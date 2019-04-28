@@ -11,11 +11,11 @@ helpviewer_keywords:
 - context menus [WPF], positioning
 ms.assetid: bf77c930-a546-4573-9a56-9af345ba189a
 ms.openlocfilehash: f9407f59c3daafd09fa5b84006f33ef2f3ebd31f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770827"
 ---
 # <a name="how-to-position-a-custom-context-menu-in-a-richtextbox"></a>방법: RichTextBox에서 사용자 지정 상황에 맞는 메뉴의 위치 지정
 에 대 한 사용자 지정 상황에 맞는 메뉴를 배치 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.RichTextBox>합니다.  

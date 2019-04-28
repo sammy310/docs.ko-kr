@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
 ms.openlocfilehash: b3d3afdd1e3fba2a77186d1cd644d723c445600c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767171"
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>방법: 사용자 지정 정책 어설션 내보내기
 정책 어설션은 서비스 엔드포인트의 기능 및 요구 사항에 대해 설명합니다. 서비스 응용 프로그램은 서비스 메타데이터에서 사용자 지정 정책 어설션을 사용하여 엔드포인트, 바인딩 또는 계약 사용자 지정 정보에 대해 클라이언트 응용 프로그램과 통신할 수 있습니다. Windows Communication Foundation (WCF)를 사용 하면 끝점, 작업 또는 기능 또는 사용자가 통신 하는 요구 사항에 따라 메시지 제목의 WSDL 바인딩에 연결 된 정책 식의 어설션을 내보낼 수 있습니다.  

@@ -3,11 +3,11 @@ title: 대리자
 description: 대리자를 사용 하는 방법에 알아봅니다 F#입니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: 772685488b7caef92123979d817929c631248afb
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766079"
 ---
 # <a name="delegates"></a>대리자
 
@@ -44,7 +44,7 @@ ccccc
 [|"aaa"; "bbb"|]
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [F# 언어 참조](index.md)
 - [매개 변수 및 인수](parameters-and-arguments.md)

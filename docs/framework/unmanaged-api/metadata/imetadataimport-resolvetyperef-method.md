@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f929e6b338d4fd48b2a6ef9588523377e0dd8faa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777405"
 ---
 # <a name="imetadataimportresolvetyperef-method"></a>IMetaDataImport::ResolveTypeRef 메서드
 확인을 <xref:System.Type> 지정한 TypeRef 토큰이 나타내는 참조 합니다.  

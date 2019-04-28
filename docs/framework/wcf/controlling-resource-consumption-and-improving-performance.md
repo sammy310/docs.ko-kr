@@ -3,11 +3,11 @@ title: 리소스 사용 제어 및 성능 향상
 ms.date: 03/30/2017
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
 ms.openlocfilehash: 11d1333ed0ae8b46f8f87fa6f4643d4b31fac3ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785062"
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>리소스 사용 제어 및 성능 향상
 이 항목에서는 리소스 소모를 작동 및 성능 메트릭에 영향을 주는 Windows Communication Foundation (WCF) 아키텍처의 다른 영역에서 다양 한 속성을 설명 합니다.

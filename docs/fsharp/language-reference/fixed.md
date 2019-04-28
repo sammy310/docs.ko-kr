@@ -3,11 +3,11 @@ title: Fixed 키워드
 description: 하는 방법에 대해 알아봅니다. 'p i를 스택으로 사용 하 여 컬렉션을 방지 하기 위해 로컬 합니다 F# 'fixed' 키워드입니다.
 ms.date: 04/24/2017
 ms.openlocfilehash: 7fdf66560f3e2ab7584b00c7e4584d7f6c161858
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772660"
 ---
 # <a name="the-fixed-keyword"></a>Fixed 키워드
 
@@ -61,6 +61,6 @@ let doPointerWork() =
 doPointerWork()
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [NativePtr 모듈](https://msdn.microsoft.com/visualfsharpdocs/conceptual/nativeinterop.nativeptr-module-%5Bfsharp%5D)

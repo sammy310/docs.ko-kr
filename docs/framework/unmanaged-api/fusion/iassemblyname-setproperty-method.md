@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2cc2a2c7991eb4d11873ebb6a2df92ccc45cde9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697227"
 ---
 # <a name="iassemblynamesetproperty-method"></a>IAssemblyName::SetProperty 메서드
 지정 된 속성 식별자가 참조 하는 속성의 값을 설정 합니다.  

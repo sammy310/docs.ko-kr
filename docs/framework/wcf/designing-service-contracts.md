@@ -8,11 +8,11 @@ helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
 ms.openlocfilehash: 68ea866b736350b8a393d1f4788e4b08754e5ab4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785036"
 ---
 # <a name="designing-service-contracts"></a>서비스 계약 디자인
 이 항목에서는 서비스 계약의 정의, 서비스 계약을 정의하는 방법, 사용 가능한 작업(및 기본 메시지 교환에 미치는 영향), 사용되는 데이터 형식 및 시나리오 요구 사항을 만족하는 작업을 디자인하는 데 도움이 되는 기타 문제에 대해 설명합니다.  
@@ -24,28 +24,28 @@ ms.locfileid: "59102741"
   
  이 항목에서는 다음과 같이 서비스 계약을 디자인할 때의 결정 사항에 대해 설명합니다.  
   
--   클래스 또는 인터페이스 사용 여부  
+- 클래스 또는 인터페이스 사용 여부  
   
--   교환할 데이터 형식 지정 방법  
+- 교환할 데이터 형식 지정 방법  
   
--   사용할 수 있는 교환 패턴 형식  
+- 사용할 수 있는 교환 패턴 형식  
   
--   계약의 명시적 보안 요구 사항 부분을 만들 수 있는지 여부  
+- 계약의 명시적 보안 요구 사항 부분을 만들 수 있는지 여부  
   
--   작업 입력 및 출력에 대한 제한  
+- 작업 입력 및 출력에 대한 제한  
   
 ## <a name="classes-or-interfaces"></a>클래스 또는 인터페이스  
  클래스 및 인터페이스를 모두 기능의 그룹화를 나타내는 및 따라서 둘 다 수는 WCF 서비스 계약을 정의 합니다. 그러나 인터페이스는 서비스 계약을 직접 모델링하므로 인터페이스를 사용하는 것이 좋습니다. 구현을 사용하지 않으면 인터페이스는 특정 서명이 있는 메서드 그룹화만 정의합니다. 서비스 계약 인터페이스를 구현 하 고 WCF 서비스를 구현 했습니다.  
   
  관리되는 인터페이스의 모든 장점이 서비스 계약 인터페이스에 적용됩니다.  
   
--   서비스 계약 인터페이스는 다른 여러 서비스 계약 인터페이스를 확장할 수 있습니다.  
+- 서비스 계약 인터페이스는 다른 여러 서비스 계약 인터페이스를 확장할 수 있습니다.  
   
--   단일 클래스는 그러한 서비스 계약 인터페이스를 구현하여 원하는 만큼 서비스 계약을 구현할 수 있습니다.  
+- 단일 클래스는 그러한 서비스 계약 인터페이스를 구현하여 원하는 만큼 서비스 계약을 구현할 수 있습니다.  
   
--   인터페이스 구현을 변경하여 서비스 계약의 구현을 수정할 수 있지만 서비스 계약은 그대로 유지됩니다.  
+- 인터페이스 구현을 변경하여 서비스 계약의 구현을 수정할 수 있지만 서비스 계약은 그대로 유지됩니다.  
   
--   기존 인터페이스와 새 인터페이스를 구현하여 서비스에 버전을 지정할 수 있습니다. 기존 클라이언트는 원래 버전에 연결하며, 새 클라이언트는 새 버전에 연결합니다.  
+- 기존 인터페이스와 새 인터페이스를 구현하여 서비스에 버전을 지정할 수 있습니다. 기존 클라이언트는 원래 버전에 연결하며, 새 클라이언트는 새 버전에 연결합니다.  
   
 > [!NOTE]
 >  다른 서비스 계약 인터페이스에서 상속할 때 이름 또는 네임스페이스와 같은 작업 속성은 재정의할 수 없습니다. 재정의하려면 현재 서비스 계약에 새 작업을 만듭니다.  
@@ -251,11 +251,11 @@ End Interface
   
  이 `IExplicitProtectionLevelSampleService` 계약을 구현하고 기본 <xref:System.ServiceModel.WSHttpBinding>(<xref:System.ServiceModel.SecurityMode?displayProperty=nameWithType>인 기본 <xref:System.ServiceModel.SecurityMode.Message>)을 사용하는 엔드포인트가 있는 서비스는 다음과 같이 동작합니다.  
   
--   `GetString` 작업 메시지가 암호화되고 서명됩니다.  
+- `GetString` 작업 메시지가 암호화되고 서명됩니다.  
   
--   `GetInt` 작업 메시지는 암호화되지 않고 서명되지 않은(일반 텍스트) 텍스트로 전송됩니다.  
+- `GetInt` 작업 메시지는 암호화되지 않고 서명되지 않은(일반 텍스트) 텍스트로 전송됩니다.  
   
--   `GetGuid` 작업 <xref:System.Guid?displayProperty=nameWithType>는 암호화되고 서명된 메시지에 반환됩니다.  
+- `GetGuid` 작업 <xref:System.Guid?displayProperty=nameWithType>는 암호화되고 서명된 메시지에 반환됩니다.  
   
  보호 수준 및 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [보호 수준을 이해](../../../docs/framework/wcf/understanding-protection-level.md)합니다. 보안에 대 한 자세한 내용은 참조 하세요. [Securing Services](../../../docs/framework/wcf/securing-services.md)합니다.  
   

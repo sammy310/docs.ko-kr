@@ -12,28 +12,28 @@ helpviewer_keywords:
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
 ms.openlocfilehash: 56d3e3cad09b46090a11b884f3ac590e8d4ba23a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773102"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>성능 최적화: 기타 권장 사항
 <a name="introduction"></a> 이 항목에서는 [WPF 응용 프로그램 성능 최적화](optimizing-wpf-application-performance.md) 섹션의 항목 내용에 추가되는 성능 권장 사항을 제공합니다.  
   
  이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   
--   [브러시의 불투명도와 요소의 불투명도 비교](#Opacity)  
+- [브러시의 불투명도와 요소의 불투명도 비교](#Opacity)  
   
--   [개체 탐색](#Navigation_Objects)  
+- [개체 탐색](#Navigation_Objects)  
   
--   [대형 3D 화면에서의 적중 횟수 테스트](#Hit_Testing)  
+- [대형 3D 화면에서의 적중 횟수 테스트](#Hit_Testing)  
   
--   [CompositionTarget.Rendering 이벤트](#CompositionTarget_Rendering_Event)  
+- [CompositionTarget.Rendering 이벤트](#CompositionTarget_Rendering_Event)  
   
--   [ScrollBarVisibility=Auto 사용 안 함](#Avoid_Using_ScrollBarVisibility)  
+- [ScrollBarVisibility=Auto 사용 안 함](#Avoid_Using_ScrollBarVisibility)  
   
--   [시작 시간을 줄이도록 글꼴 캐시 서비스 구성](#FontCache)  
+- [시작 시간을 줄이도록 글꼴 캐시 서비스 구성](#FontCache)  
   
 <a name="Opacity"></a>   
 ## <a name="opacity-on-brushes-versus-opacity-on-elements"></a>브러시의 불투명도와 요소의 불투명도 비교  

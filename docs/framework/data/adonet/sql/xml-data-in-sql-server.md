@@ -3,11 +3,11 @@ title: SQL Server의 XML 데이터
 ms.date: 03/30/2017
 ms.assetid: 9849d319-f518-4e3d-a7cd-f8fdcaaa1d4d
 ms.openlocfilehash: 75e5f24b0532a1d0da2cfcd4bdc39658db3cee35
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758011"
 ---
 # <a name="xml-data-in-sql-server"></a>SQL Server의 XML 데이터
 SQL Server에서는 .NET Framework 내에 SQLXML의 기능을 노출합니다. 개발자는 SQL Server 인스턴스에서 XML 데이터에 액세스하고 데이터를 .NET Framework 환경으로 가져와 처리한 다음 업데이트를 다시 SQL Server로 보내는 응용 프로그램을 작성할 수 있습니다. SQL Server에서는 데이터 저장소 및 데이터 검색을 위한 매개 변수 값을 비롯하여 여러 가지 방식으로 XML 데이터를 사용할 수 있습니다. 합니다 **SqlXml** .NET Framework의 클래스는 SQL Server 내의 XML 열에 저장 된 데이터로 작업 하기 위한 클라이언트 쪽 지원을 제공 합니다. 자세한 내용은 SQL Server 온라인 설명서의 "SQLXML Managed Classes"를 참조하세요.  

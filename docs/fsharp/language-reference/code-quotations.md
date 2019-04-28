@@ -3,11 +3,11 @@ title: 코드 인용
 description: 에 대해 알아봅니다 F# 코드 인용을 생성 하 여 작업할 수 있는 언어 기능 F# 식에 프로그래밍 방식으로 코드입니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: aa8a17eb8f9837ca4023abc552a6aac063117e96
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766118"
 ---
 # <a name="code-quotations"></a>코드 인용
 
@@ -100,6 +100,6 @@ let f = fun (x:System.Int32) -> x + 10 in f 10
 1 + Module1.mul(2,Module1.mul(3,4))
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [F# 언어 참조](index.md)

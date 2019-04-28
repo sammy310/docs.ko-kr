@@ -3,11 +3,11 @@ title: 튜플
 description: 알아봅니다는 F# 튜플 명명 되지는 않았지만 순서가 지정 된 값의 그룹화 합니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: a1fc31d4dc97c0921545e53b91dcde0547002006
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755339"
 ---
 # <a name="tuples"></a>튜플
 
@@ -118,7 +118,7 @@ let struct (newX, newY) = Example.AddOneToXAndY(struct (1, 2))
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/interop.fsx#L5-L12)]
 
-패턴 해야 1 개의 튜플이 일치 및 다른 구성 요소를 생성 합니다.  예를 들면 다음과 같습니다.
+패턴 해야 1 개의 튜플이 일치 및 다른 구성 요소를 생성 합니다.  예를 들어:
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/interop.fsx#L18-L22)]
 
@@ -132,7 +132,7 @@ let struct (newX, newY) = Example.AddOneToXAndY(struct (1, 2))
 
 구조체 튜플 (예를 들어 `struct (x, y)`), 참조 튜플에 근본적으로 다릅니다.  컴파일되지는 <xref:System.ValueTuple> 형식, 형식 매개 변수의 개수나 인자 수, 오버 로드 됩니다.  동일 [C# 7.0 튜플](../../csharp/tuples.md) 및 [Visual Basic 2017 튜플](../../visual-basic/programming-guide/language-features/data-types/tuples.md), 양방향 상호 운용 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [F# 언어 참조](index.md)
 - [F# 형식](fsharp-types.md)

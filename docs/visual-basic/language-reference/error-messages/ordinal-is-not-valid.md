@@ -5,20 +5,20 @@ f1_keywords:
 - vbrID452
 ms.assetid: 7459562b-cd4f-4590-95e0-6126ae3589a5
 ms.openlocfilehash: 28f78161e14604c1f59872801855ccc918faec58
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772491"
 ---
 # <a name="ordinal-is-not-valid"></a>서수가 잘못되었습니다.
 프로시저 이름 대신 숫자를 사용 하는 동적 연결 라이브러리 (DLL)를 호출 하 여 표시를 사용 하는 `#num` 구문입니다. 이 오류는 다음과 같은 가능한 원인을:  
   
--   변환 하려는 시도 `#num` 식 실패 하는 서 수입니다.  
+- 변환 하려는 시도 `#num` 식 실패 하는 서 수입니다.  
   
--   `#num` 지정 된 DLL에서 함수를 지정 하지 않습니다.  
+- `#num` 지정 된 DLL에서 함수를 지정 하지 않습니다.  
   
--   형식 라이브러리에는 잘못 된 서 수의 내부 사용에 잘못 된 선언이 있습니다.  
+- 형식 라이브러리에는 잘못 된 서 수의 내부 사용에 잘못 된 선언이 있습니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   

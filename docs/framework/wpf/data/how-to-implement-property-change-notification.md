@@ -11,11 +11,11 @@ helpviewer_keywords:
 - properties [WPF], change notifications
 ms.assetid: 30b59d9e-8c3a-4349-aa82-4be837e841cf
 ms.openlocfilehash: d37d468acc94470be8c2afdc495b40168932ec83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931445"
 ---
 # <a name="how-to-implement-property-change-notification"></a>방법: 속성 변경 알림 구현
 지원 하기 위해 <xref:System.Windows.Data.BindingMode.OneWay> 또는 <xref:System.Windows.Data.BindingMode.TwoWay> 바인딩 소스 (예를 들어 사용자가 폼을 편집할 때 자동으로 업데이트 미리 보기 창이), 동적 변경 사항을 자동으로 반영 하도록 바인딩 대상 속성을 사용 하도록 설정 하려면 바인딩 클래스 적절 한 속성 변경 알림을 제공 해야 합니다. 이 예제에는 구현 하는 클래스를 만드는 방법을 보여 줍니다 <xref:System.ComponentModel.INotifyPropertyChanged>합니다.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - brushes [Windows Forms], using hatch brushes
 ms.assetid: 9c8300ff-187b-404f-af1f-ebd499f5b16f
 ms.openlocfilehash: f5399c4151b335090f4b93be041375b8c2781afa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59118120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781346"
 ---
 # <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>방법: 빗살 무늬로 도형 채우기
 빗살 무늬 두 색으로에서 이루어집니다: 배경색 및 배경 위에 패턴을 형성 하는 줄에 대 한 하나입니다. 빗살 무늬를 사용 하 여 닫힌된 도형 채우기를 사용 하 여를 <xref:System.Drawing.Drawing2D.HatchBrush> 개체입니다. 다음 예제에서는 빗살 무늬를 사용 하 여 타원을 채우는 방법을 보여 줍니다.  
@@ -22,17 +22,17 @@ ms.locfileid: "59118120"
 ## <a name="example"></a>예제  
  <xref:System.Drawing.Drawing2D.HatchBrush.%23ctor%2A> 생성자에는 세 가지 인수: 해치 스타일, 빗살 무늬 선의 색 및 배경색입니다. 빗살 무늬 스타일 인수로 사용할 수 있는 모든 값은 <xref:System.Drawing.Drawing2D.HatchStyle> 열거형입니다. 에 50 개 이상의 요소가 <xref:System.Drawing.Drawing2D.HatchStyle> 열거형; 몇 가지 요소는 다음 목록에 표시 합니다.  
   
--   <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>  
+- <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>  
   
--   <xref:System.Drawing.Drawing2D.HatchStyle.Vertical>  
+- <xref:System.Drawing.Drawing2D.HatchStyle.Vertical>  
   
--   <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>  
+- <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>  
   
--   <xref:System.Drawing.Drawing2D.HatchStyle.BackwardDiagonal>  
+- <xref:System.Drawing.Drawing2D.HatchStyle.BackwardDiagonal>  
   
--   <xref:System.Drawing.Drawing2D.HatchStyle.Cross>  
+- <xref:System.Drawing.Drawing2D.HatchStyle.Cross>  
   
--   <xref:System.Drawing.Drawing2D.HatchStyle.DiagonalCross>  
+- <xref:System.Drawing.Drawing2D.HatchStyle.DiagonalCross>  
   
  다음 그림은 채워진된 타원을 보여 줍니다.  
   

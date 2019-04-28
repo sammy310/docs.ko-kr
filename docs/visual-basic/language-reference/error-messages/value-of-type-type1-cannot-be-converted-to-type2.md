@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC31194
 ms.assetid: 03d50c31-addd-4c90-9c53-725b84f9782e
 ms.openlocfilehash: c8480c6fab2bff931950ebc21d0a8affe3c41c66
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774818"
 ---
 # <a name="value-of-type-type1-cannot-be-converted-to-type2"></a>'type1' 형식의 값을 'type2'(으)로 변환할 수 없습니다.
 'Type1' 형식의 값을 'type2'으로 변환할 수 없습니다. 'Value' 속성을 사용 하 여 첫 번째 요소의 문자열 값을 검색할 '\<parentElement >'입니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "58827148"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   XML 리터럴의 `Value` 속성을 사용하여 해당 값을 `String`으로 참조합니다. `CType` 함수, 다른 형식 변환 함수 또는 <xref:System.Convert> 클래스를 사용하여 지정된 형식으로 값을 캐스팅합니다.  
+- XML 리터럴의 `Value` 속성을 사용하여 해당 값을 `String`으로 참조합니다. `CType` 함수, 다른 형식 변환 함수 또는 <xref:System.Convert> 클래스를 사용하여 지정된 형식으로 값을 캐스팅합니다.  
   
 ## <a name="see-also"></a>참고자료
 

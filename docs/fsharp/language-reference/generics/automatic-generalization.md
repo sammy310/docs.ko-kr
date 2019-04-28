@@ -3,11 +3,11 @@ title: 자동 일반화
 description: 에 대해 알아봅니다 하는 방법 F# 자동으로 인수 및 함수의 유형은 일반화 하 여 가능한 경우 여러 형식으로 작동 합니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: 15ecf8e6f07da19bb015fd028a7465ba8b837190
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937542"
 ---
 # <a name="automatic-generalization"></a>자동 일반화
 
@@ -97,7 +97,7 @@ let intLists = arrayOf10Lists<int>
 let floatLists = arrayOf10Lists<float>
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [형식 유추](../type-inference.md)
 - [제네릭](index.md)

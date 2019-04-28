@@ -10,11 +10,11 @@ helpviewer_keywords:
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
 ms.openlocfilehash: 45dcc80ee791da1c2731ba32f0ebd34564faf806
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778562"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>연산자 결과의 데이터 형식(Visual Basic)
 Visual Basic에는 피연산자의 데이터 형식을 기반으로 하는 작업의 결과 데이터 형식이 결정 합니다. 일부 경우에이 피연산자 중 하나가 보다 큰 범위의 데이터 형식일 수 있습니다.  
@@ -22,21 +22,21 @@ Visual Basic에는 피연산자의 데이터 형식을 기반으로 하는 작�
 ## <a name="data-type-ranges"></a>데이터 형식 범위  
  가장 크고 작은 순서로 관련 데이터 형식의 범위는 다음과 같습니다.  
   
--   [부울](../../../visual-basic/language-reference/data-types/boolean-data-type.md) -두 개의 가능한 값  
+- [부울](../../../visual-basic/language-reference/data-types/boolean-data-type.md) -두 개의 가능한 값  
   
--   [SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)하십시오 [바이트](../../../visual-basic/language-reference/data-types/byte-data-type.md) -256 개 정수 계열 값  
+- [SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)하십시오 [바이트](../../../visual-basic/language-reference/data-types/byte-data-type.md) -256 개 정수 계열 값  
   
--   [짧은](../../../visual-basic/language-reference/data-types/short-data-type.md)하십시오 [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md) -65,536 (6.5... E + 4) 가능한 정수 계열 값  
+- [짧은](../../../visual-basic/language-reference/data-types/short-data-type.md)하십시오 [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md) -65,536 (6.5... E + 4) 가능한 정수 계열 값  
   
--   [정수](../../../visual-basic/language-reference/data-types/integer-data-type.md)하십시오 [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md) -4,294,967,296 (4.2... E + 9) 사용할 수 있는 정수 계열 값  
+- [정수](../../../visual-basic/language-reference/data-types/integer-data-type.md)하십시오 [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md) -4,294,967,296 (4.2... E + 9) 사용할 수 있는 정수 계열 값  
   
--   [긴](../../../visual-basic/language-reference/data-types/long-data-type.md)하십시오 [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md) -18446744073709551615 (1.8... E + 19) 가능한 정수 계열 값  
+- [긴](../../../visual-basic/language-reference/data-types/long-data-type.md)하십시오 [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md) -18446744073709551615 (1.8... E + 19) 가능한 정수 계열 값  
   
--   [10 진수](../../../visual-basic/language-reference/data-types/decimal-data-type.md) -1.5... E + 29 가능한 정수 값을 최대 범위 7.9... + 28 (절대 값)  
+- [10 진수](../../../visual-basic/language-reference/data-types/decimal-data-type.md) -1.5... E + 29 가능한 정수 값을 최대 범위 7.9... + 28 (절대 값)  
   
--   [단일](../../../visual-basic/language-reference/data-types/single-data-type.md) -최대 범위 3.4... E + 38 (절대 값)  
+- [단일](../../../visual-basic/language-reference/data-types/single-data-type.md) -최대 범위 3.4... E + 38 (절대 값)  
   
--   [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) -최대 범위 1.7-E + 308 (절대 값)  
+- [Double](../../../visual-basic/language-reference/data-types/double-data-type.md) -최대 범위 1.7-E + 308 (절대 값)  
   
  Visual Basic 데이터 형식에 대 한 자세한 내용은 참조 하세요. [데이터 형식](../../../visual-basic/language-reference/data-types/index.md)합니다.  
   
@@ -68,11 +68,11 @@ Visual Basic에는 피연산자의 데이터 형식을 기반으로 하는 작�
 ## <a name="integer-arithmetic"></a>정수 연산  
  정수 연산 결과 데이터 형식은 피연산자의 데이터 형식에 따라 달라 집니다. 일반적으로 Visual Basic 결과 데이터 형식을 결정 하기 위해 다음 정책을 사용 합니다.  
   
--   이항 연산자의 피연산자가 모두 동일한 경우 데이터 형식으로 결과 해당 데이터 형식입니다. 예외가 `Boolean`를 강제 적용할 `Short`합니다.  
+- 이항 연산자의 피연산자가 모두 동일한 경우 데이터 형식으로 결과 해당 데이터 형식입니다. 예외가 `Boolean`를 강제 적용할 `Short`합니다.  
   
--   서명 된 피연산자를 사용 하 여 참여 하는 부호 없는 피연산자, 경우 결과 범위가 부호 있는 형식을 사용 하 여 가능한 큰 이상 피연산자 중 하나가으로 합니다.  
+- 서명 된 피연산자를 사용 하 여 참여 하는 부호 없는 피연산자, 경우 결과 범위가 부호 있는 형식을 사용 하 여 가능한 큰 이상 피연산자 중 하나가으로 합니다.  
   
--   이 고, 그렇지 결과 일반적으로 두 개의 피연산자 데이터 형식 중 더 큰 숫자를 있습니다.  
+- 이 고, 그렇지 결과 일반적으로 두 개의 피연산자 데이터 형식 중 더 큰 숫자를 있습니다.  
   
  결과 데이터 형식은 두 피연산자 데이터 형식으로 동일할 수 없습니다 있습니다 note 합니다.  
   

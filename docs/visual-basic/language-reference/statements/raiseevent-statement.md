@@ -11,11 +11,11 @@ helpviewer_keywords:
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
 ms.openlocfilehash: 5d8fd6adf33c992341324e07bcd2ad12986bbdf2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783970"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent 문
 클래스, 폼 또는 문서의 모듈 수준에서 선언한 이벤트를 트리거합니다.  

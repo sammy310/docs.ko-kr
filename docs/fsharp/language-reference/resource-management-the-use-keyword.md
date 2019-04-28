@@ -3,11 +3,11 @@ title: '리소스 관리: Use 키워드'
 description: 알아봅니다는 F# 키워드 'use' 및 'using' 함수를 초기화 및 리소스의 해제를 제어할 수 있습니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: 127877a3823faade9bc3c6aefea655c86cc348e7
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770489"
 ---
 # <a name="resource-management-the-use-keyword"></a>리소스 관리: Use 키워드
 
@@ -25,7 +25,7 @@ ms.locfileid: "53613091"
 
 합니다 `use` 키워드에는 유사한 폼을는 `let` 바인딩:
 
-사용 하 여 *값* = *식*
+use *value* = *expression*
 
 와 동일한 기능을 제공 하는 `let` 바인딩 하지만 호출을 추가 합니다 `Dispose` 값 범위를 벗어날 때 값에 있습니다. 컴파일러 경우 값은 값의 null 검사를 삽입 하는 참고 `null`에 대 한 호출 `Dispose` 시도 되지 않습니다.
 
@@ -58,6 +58,6 @@ ms.locfileid: "53613091"
 
 합니다 `using` 함수 및 `use` 바인딩은 거의 같은 방식으로 동일한 작업을 수행 합니다. 합니다 `using` 키워드 좀 더 잘 제어할 때 `Dispose` 라고 합니다. 사용 하는 경우 `using`, `Dispose` 사용 하는 경우, 함수 또는 람다 식의 끝에서 호출 되는 `use` 키워드를 `Dispose` 포함 하는 코드 블록의 끝에 호출 됩니다. 일반적으로 사용 하려는 `use` of를 `using` 함수입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [F# 언어 참조](index.md)

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - drawing [Windows Forms], arcs
 ms.assetid: 34f35133-a835-4ca4-81f6-0dfedee8b683
 ms.openlocfilehash: 8bbc2eda6450128eac55576259880e83f07099ab
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59117458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756652"
 ---
 # <a name="ellipses-and-arcs-in-gdi"></a>GDI+의 타원 및 원호
 타원 및 원호를 사용 하 여 쉽게 그릴 수 있습니다는 <xref:System.Drawing.Graphics.DrawEllipse%2A> 하 고 <xref:System.Drawing.Graphics.DrawArc%2A> 의 메서드는 <xref:System.Drawing.Graphics> 클래스입니다.  

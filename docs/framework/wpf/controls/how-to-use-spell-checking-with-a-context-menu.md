@@ -10,11 +10,11 @@ helpviewer_keywords:
 - spell checking with a context menu [WPF]
 ms.assetid: 61f69a20-2ff3-4056-9060-e32f4483ec5e
 ms.openlocfilehash: 72b24c386eb99140c9c2729688994b81f92e1a6f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59192981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699151"
 ---
 # <a name="how-to-use-spell-checking-with-a-context-menu"></a>방법: 상황에 맞는 메뉴에서 맞춤법 검사 사용
 기본적으로 편집 컨트롤에서 맞춤법 검사를 사용 하도록 설정 하면 같은 <xref:System.Windows.Controls.TextBox> 또는 <xref:System.Windows.Controls.RichTextBox>, 맞춤법 검사 옵션이 상황에 맞는 메뉴에 표시 합니다. 예를 들어 사용자가 맞춤법이 틀린된 단어를 마우스 오른쪽 단추로 받게 추천 또는 옵션 집합이 **모두 무시**합니다. 그러나 사용자 고유의 사용자 지정 상황에 맞는 메뉴를 사용 하 여 기본 상황에 맞는 메뉴를 재정의 하는 경우이 기능 손실 되 고 상황에 맞는 메뉴에서 맞춤법 검사 기능을 다시 사용 하도록 설정 하는 코드를 작성 해야 합니다. 다음 예제에서이 사용 하도록 설정 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.TextBox>합니다.  

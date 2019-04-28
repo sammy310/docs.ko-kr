@@ -9,31 +9,31 @@ helpviewer_keywords:
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
 ms.openlocfilehash: c27449da5ee0351e472eaba7d930a774979db65f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781383"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>연습: WPF에서 ActiveX 컨트롤 호스팅
 브라우저를 사용 하 여 향상 된 상호 작용을 사용 하도록 설정 하려면 사용할 수 있습니다 [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] 컨트롤에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-기반 응용 프로그램입니다. 이 연습에서는 호스팅하는 방법을 보여 줍니다.는 [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 의 컨트롤로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 페이지입니다.
 
  이 연습에서 설명하는 작업은 다음과 같습니다.
 
--   프로젝트 만들기.
+- 프로젝트 만들기.
 
--   ActiveX 컨트롤을 만드는 중입니다.
+- ActiveX 컨트롤을 만드는 중입니다.
 
--   WPF 페이지에서 ActiveX 컨트롤 호스팅.
+- WPF 페이지에서 ActiveX 컨트롤 호스팅.
 
  이 연습을 완료 하는 경우 사용 하는 방법을 이해할 [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] 컨트롤에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-기반 응용 프로그램입니다.
 
 ## <a name="prerequisites"></a>전제 조건
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.
 
--   [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] Visual Studio를 설치한 컴퓨터에 설치 합니다.
+- [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] Visual Studio를 설치한 컴퓨터에 설치 합니다.
 
--   Visual Studio 2010
+- Visual Studio 2010
 
 ## <a name="creating-the-project"></a>프로젝트 만들기
 

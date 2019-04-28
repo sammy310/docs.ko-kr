@@ -10,11 +10,11 @@ helpviewer_keywords:
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
 ms.openlocfilehash: 86921b610b4b42cfc0393af2966b70870bc650f9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773985"
 ---
 # <a name="opentype-font-features"></a>OpenType 글꼴 기능
 
@@ -26,15 +26,15 @@ ms.locfileid: "59104483"
   
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴 서식은 다음과 같이 개발자 문제를 해결합니다.  
   
--   광범위한 다중 플랫폼 지원  
+- 광범위한 다중 플랫폼 지원  
   
--   국가별 문자 집합에 대한 지원 향상  
+- 국가별 문자 집합에 대한 지원 향상  
   
--   글꼴 데이터 보호 향상  
+- 글꼴 데이터 보호 향상  
   
--   보다 효율적인 글꼴 배포를 위한 파일 크기 축소  
+- 보다 효율적인 글꼴 배포를 위한 파일 크기 축소  
   
--   고급 입력 체계 컨트롤을 위한 폭넓은 지원  
+- 고급 입력 체계 컨트롤을 위한 폭넓은 지원  
   
 > [!NOTE]
 >  Windows SDK에는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 애플리케이션과 함께 사용할 수 있는 샘플 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴 집합이 포함되어 있습니다. 이 글꼴에서는 이 항목의 나머지 부분에서 보여 주는 대부분의 기능이 제공됩니다. 자세한 내용은 [샘플 OpenType 글꼴 팩](sample-opentype-font-pack.md)을 참조하세요.  
@@ -44,11 +44,11 @@ ms.locfileid: "59104483"
 ### <a name="advanced-typographic-extensions"></a>고급 입력 체계 확장  
  고급 입력 체계 표([!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 레이아웃 표)는 [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] 또는 CFF 윤곽선으로 글꼴 기능을 확장합니다. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 레이아웃 글꼴에는 고품질 국제 입력 체계를 지원하도록 글꼴 기능을 확장하는 추가 정보가 들어 있습니다. 대부분의 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴은 사용 가능한 전체 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 기능 중 하위 집합만 노출합니다. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴은 다음과 같은 기능을 제공합니다.  
   
--   합자, 위치 형식, 대체 문자 및 기타 글꼴 대체를 지원하는 문자와 문자 모양 간의 다양한 매핑  
+- 합자, 위치 형식, 대체 문자 및 기타 글꼴 대체를 지원하는 문자와 문자 모양 간의 다양한 매핑  
   
--   2차원 위치 지정 및 문자 모양 첨부 지원  
+- 2차원 위치 지정 및 문자 모양 첨부 지원  
   
--   명시적인 스크립트 및 언어 정보가 글꼴에 포함되어 텍스트 처리 애플리케이션에서 동작을 조정할 수 있습니다.  
+- 명시적인 스크립트 및 언어 정보가 글꼴에 포함되어 텍스트 처리 애플리케이션에서 동작을 조정할 수 있습니다.  
   
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 사양의 [“글꼴 파일 표”](https://www.microsoft.com/typography/otspec/otff.htm) 섹션에서 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 레이아웃 표에 대해 자세히 설명합니다.  
   
@@ -120,13 +120,13 @@ ms.locfileid: "59104483"
 ## <a name="ligatures"></a>합자  
  합자는 읽기 쉽거나 보기 좋은 텍스트를 만들기 위해 단일 문자 모양으로 구성된 두 개 이상의 문자 모양입니다. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴은 네 가지 형식의 합자를 지원합니다.  
   
--   **표준 합자**. 가독성을 향상시키기 위해 디자인되었습니다. 표준 합자에는 “fi”, “fl” 및 “ff”가 포함됩니다.  
+- **표준 합자**. 가독성을 향상시키기 위해 디자인되었습니다. 표준 합자에는 “fi”, “fl” 및 “ff”가 포함됩니다.  
   
--   **컨텍스트 합자**. 합자를 구성하는 문자 간에 더 나은 결합 동작을 제공하여 가독성을 높이도록 디자인되었습니다.  
+- **컨텍스트 합자**. 합자를 구성하는 문자 간에 더 나은 결합 동작을 제공하여 가독성을 높이도록 디자인되었습니다.  
   
--   **임의 합자**. 장식용으로 디자인되었으며 가독성을 위해 별도로 디자인된 것은 아닙니다.  
+- **임의 합자**. 장식용으로 디자인되었으며 가독성을 위해 별도로 디자인된 것은 아닙니다.  
   
--   **기록 합자**. 기록용으로 디자인되었으며 가독성을 위해 별도로 디자인된 것은 아닙니다.  
+- **기록 합자**. 기록용으로 디자인되었으며 가독성을 위해 별도로 디자인된 것은 아닙니다.  
   
  다음 텍스트는 Pericles 글꼴에 대한 표준 합자 문자 모양을 표시합니다.  
   

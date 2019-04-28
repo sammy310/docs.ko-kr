@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: abbd35fe390cc09951b762a5fd671d2d34a57c6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59177894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777886"
 ---
 # <a name="imetadataimportfindmemberref-method"></a>IMetaDataImport::FindMemberRef 메서드
 지정 된로 묶인 멤버에 대 한 MemberRef 토큰에 대 한 포인터는 참조를 가져옵니다 <xref:System.Type> 지정 된 이름 및 메타 데이터 서명을 하 고 있습니다.  

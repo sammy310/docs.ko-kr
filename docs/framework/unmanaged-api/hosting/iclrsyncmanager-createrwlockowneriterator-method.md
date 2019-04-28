@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c742410da8e7dbce53b53978516ab94243455849
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763713"
 ---
 # <a name="iclrsyncmanagercreaterwlockowneriterator-method"></a>ICLRSyncManager::CreateRWLockOwnerIterator 메서드
 CLR (공용 언어 런타임)에서 판독기-기록기 잠금을 대기 하는 태스크 집합을 결정 하는 데 호스트에 대 한 반복기를 만들도록 요청 합니다.  
@@ -58,9 +58,9 @@ HRESULT CreateRWLockOwnerIterator (
 ## <a name="remarks"></a>설명  
  일반적으로 호스트를 호출 합니다 `CreateRWLockOwnerIterator`, `DeleteRWLockOwnerIterator`, 및 `GetRWLockOwnerNext` 교착 상태 감지 하는 동안 메서드. 호스트는 CLR에서는 판독기-기록기 잠금을 유지 하지 때문에 판독기 / 기록기 잠금이 여전히 유효한 지 확인 하는 일을 담당 합니다. 몇 가지 전략 호스트를 잠금의 유효성을 확인 하는 데 사용할 수 있습니다.  
   
--   호스트는 판독기 및 작성기 잠금 해제 호출이 차단할 수 있습니다 (예를 들어 [ihostsemaphore:: Releasesemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)) 하면서이 블록 교착 상태가 발생 하지 않습니다.  
+- 호스트는 판독기 및 작성기 잠금 해제 호출이 차단할 수 있습니다 (예를 들어 [ihostsemaphore:: Releasesemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)) 하면서이 블록 교착 상태가 발생 하지 않습니다.  
   
--   호스트에 다시이 블록 교착 상태가 발생 하지 않습니다을 보장 판독기-기록기 잠금과 사용 하 여 연결 된 이벤트 개체에 대 한 대기 종료를 차단할 수 있습니다.  
+- 호스트에 다시이 블록 교착 상태가 발생 하지 않습니다을 보장 판독기-기록기 잠금과 사용 하 여 연결 된 이벤트 개체에 대 한 대기 종료를 차단할 수 있습니다.  
   
 > [!NOTE]
 >  `CreateRWLockOwnerIterator` 스레드가 현재 실행 중인 관리 되지 않는 코드 에서만 호출 되어야 합니다.  

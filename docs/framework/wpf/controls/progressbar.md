@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ProgressBar control [WPF]
 ms.assetid: 4545b358-b93c-47df-88e4-9946d7db9e3f
 ms.openlocfilehash: 27a2f54edac2add67b938300dc342744475466cc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770549"
 ---
 # <a name="progressbar"></a>ProgressBar
 <xref:System.Windows.Controls.ProgressBar> 작업의 진행률을 나타냅니다. <xref:System.Windows.Controls.ProgressBar> 제어는 작업이 진행 됨에 따라 시스템 강조 색으로 채워진 창으로 구성 됩니다.  

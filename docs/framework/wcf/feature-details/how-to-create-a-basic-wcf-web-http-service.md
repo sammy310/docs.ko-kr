@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
 ms.openlocfilehash: 1b76d21cb4f416aae76e7597ad16cfd45e5b7cad
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47210268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779199"
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>방법: 기본 WCF 웹 HTTP 서비스 만들기
 
@@ -47,7 +47,7 @@ Windows Communication Foundation (WCF)를 사용 하면 웹 끝점을 노출 하
      [!code-vb[htBasicService#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#3)]
 
     > [!NOTE]
-    > 엔드포인트를 추가하지 않으면 <xref:System.ServiceModel.Web.WebServiceHost>는 자동으로 기본 엔드포인트를 만듭니다. <xref:System.ServiceModel.Web.WebServiceHost>는 또한 <xref:System.ServiceModel.Description.WebHttpBehavior>를 추가하고 메타데이터 끝점이 기본 HTTP 끝점과 간섭하지 않도록 HTTP 도움말 페이지 및 WSDL(웹 서비스 기술 언어) GET 기능을 비활성화합니다.
+    > 엔드포인트를 추가하지 않으면 <xref:System.ServiceModel.Web.WebServiceHost>는 자동으로 기본 엔드포인트를 만듭니다. <xref:System.ServiceModel.Web.WebServiceHost>는 또한 <xref:System.ServiceModel.Description.WebHttpBehavior>를 추가하고 메타데이터 엔드포인트가 기본 HTTP 엔드포인트와 간섭하지 않도록 HTTP 도움말 페이지 및 WSDL(웹 서비스 기술 언어) GET 기능을 비활성화합니다.
     >
     >  비 SOAP 엔드포인트를 ""의 URL과 함께 추가하면 엔드포인트에서 작업 호출 시도 시 예기치 못한 동작이 발생합니다. 이 원인은 수신 대기 끝점의 URI가 도움말 페이지 (WCF 서비스의 기본 주소를 찾아볼 때 표시 되는 페이지)에 대 한 URI와 동일 합니다.
 

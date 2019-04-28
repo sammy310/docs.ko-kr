@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
 ms.openlocfilehash: 7940d1d8869d3b82c1aa19cb038a68b8724345dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773422"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>방법: 장기 실행 워크플로 만들기 및 실행
 Windows Workflow Foundation (WF)의 핵심 기능 중 하나는 유지 하 고 데이터베이스에 유휴 워크플로 언로드합니다 런타임의 기능입니다. 단계 [방법: 워크플로 실행](how-to-run-a-workflow.md) 워크플로 콘솔 응용 프로그램을 사용 하 여 호스팅의 기본적인 내용을 설명 합니다. 예제에서는 워크플로 시작 방법, 워크플로 수명 주기 처리기 및 책갈피 다시 시작 방법을 보여 줍니다. 워크플로 지속성을 효과적으로 보여 주기 위해서는 여러 워크플로 인스턴스의 시작 및 다시 시작을 지원하는 좀 더 복잡한 워크플로 호스트가 필요합니다. 자습서의 이 단계에서는 여러 워크플로 인스턴스의 시작 및 다시 시작과 워크플로 지속성을 지원하는 Windows Form 호스트 응용 프로그램을 만드는 방법을 보여 주고, 이후 자습서 단계에서 설명하는 추적 및 버전 관리 등의 고급 기능에 대한 기본 사항을 제공합니다.  
@@ -23,25 +23,25 @@ Windows Workflow Foundation (WF)의 핵심 기능 중 하나는 유지 하 고 �
   
 ## <a name="in-this-topic"></a>항목 내용  
   
--   [지 속성 데이터베이스를 만들려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
+- [지 속성 데이터베이스를 만들려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
   
--   [DurableInstancing 어셈블리에 대 한 참조를 추가 하려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
+- [DurableInstancing 어셈블리에 대 한 참조를 추가 하려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
   
--   [워크플로 호스트 폼을 만들려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
+- [워크플로 호스트 폼을 만들려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
   
--   [폼의 도우미 메서드와 속성을 추가 하려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
+- [폼의 도우미 메서드와 속성을 추가 하려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
   
--   [인스턴스 저장소, 워크플로 수명 주기 처리기 및 확장을 구성 하려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
+- [인스턴스 저장소, 워크플로 수명 주기 처리기 및 확장을 구성 하려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
   
--   [시작 하 고 여러 워크플로 유형을 다시 시작을 사용 하도록 설정 하려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
+- [시작 하 고 여러 워크플로 유형을 다시 시작을 사용 하도록 설정 하려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
   
--   [새 워크플로 시작 하려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
+- [새 워크플로 시작 하려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
   
--   [워크플로 다시 시작 하려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
+- [워크플로 다시 시작 하려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
   
--   [워크플로 종료 하려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
+- [워크플로 종료 하려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
   
--   [빌드 및 응용 프로그램을 실행 하려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
+- [빌드 및 응용 프로그램을 실행 하려면](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
   
 ### <a name="BKMK_CreatePersistenceDatabase"></a> 지 속성 데이터베이스를 만들려면  
   
@@ -54,9 +54,9 @@ Windows Workflow Foundation (WF)의 핵심 기능 중 하나는 유지 하 고 �
   
      다음 두 파일을 선택 하 고 클릭 **열려**합니다.  
   
-    -   SqlWorkflowInstanceStoreLogic.sql  
+    - SqlWorkflowInstanceStoreLogic.sql  
   
-    -   SqlWorkflowInstanceStoreSchema.sql  
+    - SqlWorkflowInstanceStoreSchema.sql  
   
 3. 선택할 **SqlWorkflowInstanceStoreSchema.sql** 에서 합니다 **창** 메뉴. 되도록 **WF45GettingStartedTutorial** 에서 선택한 합니다 **사용 가능한 데이터베이스** 드롭다운 목록을 선택한 **Execute** 에서 **쿼리**메뉴.  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - visual layer [WPF]
 ms.assetid: d82c89db-077f-4c3c-a4f8-310ebfbe0fe2
 ms.openlocfilehash: 599ef73e2e8c772559badb3a562a12f8311e9c60
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762100"
 ---
 # <a name="visual-layer-programming"></a>시각적 계층 프로그래밍
 합니다 <xref:System.Windows.Media.Visual> 개체는 핵심 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 개체를 렌더링 지원을 제공 하는 역할입니다. 와 같은 사용자 인터페이스 컨트롤 <xref:System.Windows.Controls.Button> 및 <xref:System.Windows.Controls.TextBox>에서 파생 되는 <xref:System.Windows.Media.Visual> 클래스 및 해당 렌더링 데이터를 유지 하는 데 사용 합니다.  

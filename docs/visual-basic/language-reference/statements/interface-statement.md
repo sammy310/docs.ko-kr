@@ -8,11 +8,11 @@ helpviewer_keywords:
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
 ms.openlocfilehash: db39759a804905450e7f8913f45e8ddab39d8416
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784191"
 ---
 # <a name="interface-statement-visual-basic"></a>Interface 문(Visual Basic)
 인터페이스의 이름을 선언 하 고 인터페이스를 구성 하는 멤버의 정의 소개 합니다.  
@@ -67,31 +67,31 @@ End Interface
   
 ## <a name="rules"></a>규칙  
   
--   **인터페이스를 중첩 합니다.** 다른 내에서 하나의 인터페이스를 정의할 수 있습니다. 외부 인터페이스를 *인터페이스를 포함 하*, 내부 인터페이스 라고 하 고는 *중첩된 인터페이스*합니다.  
+- **인터페이스를 중첩 합니다.** 다른 내에서 하나의 인터페이스를 정의할 수 있습니다. 외부 인터페이스를 *인터페이스를 포함 하*, 내부 인터페이스 라고 하 고는 *중첩된 인터페이스*합니다.  
   
--   **멤버 선언입니다.** 만 정의 하는 인터페이스의 멤버인 속성 또는 프로시저를 선언 하는 경우는 *서명을* 해당 속성이 나 프로시저의 합니다. 이 요소 형식 (속성 또는 프로시저) 및 해당 매개 변수 및 매개 변수 형식과 해당 반환 형식을 포함합니다. 이 인해 멤버 정의 사용 하 여 한 줄의 코드 및 같은 종료 문에서 `End Function` 또는 `End Property` 인터페이스에서는 사용할 수 없습니다.  
+- **멤버 선언입니다.** 만 정의 하는 인터페이스의 멤버인 속성 또는 프로시저를 선언 하는 경우는 *서명을* 해당 속성이 나 프로시저의 합니다. 이 요소 형식 (속성 또는 프로시저) 및 해당 매개 변수 및 매개 변수 형식과 해당 반환 형식을 포함합니다. 이 인해 멤버 정의 사용 하 여 한 줄의 코드 및 같은 종료 문에서 `End Function` 또는 `End Property` 인터페이스에서는 사용할 수 없습니다.  
   
      반면, 열거자 또는 구조체 또는 중첩 된 클래스 또는 인터페이스를 정의할 때 해당 데이터 멤버를 포함 하는 데 필요한 됩니다.  
   
--   **멤버 한정자입니다.** 모듈 멤버를 정의 하는 경우에 모든 액세스 한정자를 사용할 수 없습니다 나 지정할 수 있습니다 [Shared](../../../visual-basic/language-reference/modifiers/shared.md) 제외 하 고 프로시저 한정자 나 [오버 로드](../../../visual-basic/language-reference/modifiers/overloads.md)합니다. 모든 멤버를 선언할 수 있습니다 [그림자](../../../visual-basic/language-reference/modifiers/shadows.md)를 사용할 수 있습니다 [기본값](../../../visual-basic/language-reference/modifiers/default.md) 속성을 정의 하는 경우 뿐만 [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md) 또는 [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).  
+- **멤버 한정자입니다.** 모듈 멤버를 정의 하는 경우에 모든 액세스 한정자를 사용할 수 없습니다 나 지정할 수 있습니다 [Shared](../../../visual-basic/language-reference/modifiers/shared.md) 제외 하 고 프로시저 한정자 나 [오버 로드](../../../visual-basic/language-reference/modifiers/overloads.md)합니다. 모든 멤버를 선언할 수 있습니다 [그림자](../../../visual-basic/language-reference/modifiers/shadows.md)를 사용할 수 있습니다 [기본값](../../../visual-basic/language-reference/modifiers/default.md) 속성을 정의 하는 경우 뿐만 [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md) 또는 [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).  
   
--   **상속.** 인터페이스를 사용 하는 경우는 [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md), 하나 이상의 기본 인터페이스를 지정할 수 있습니다. 동일한 이름 가진 멤버를 정의 하는 경우에 두 개의 인터페이스에서 상속할 수 있습니다. 이렇게 하면 구현 코드를 구현 하는 멤버를 지정 하려면 이름 한정을 사용 해야 합니다.  
+- **상속.** 인터페이스를 사용 하는 경우는 [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md), 하나 이상의 기본 인터페이스를 지정할 수 있습니다. 동일한 이름 가진 멤버를 정의 하는 경우에 두 개의 인터페이스에서 상속할 수 있습니다. 이렇게 하면 구현 코드를 구현 하는 멤버를 지정 하려면 이름 한정을 사용 해야 합니다.  
   
      인터페이스는 더 제한적인 액세스 수준 가진 다른 인터페이스에서 상속할 수 없습니다. 예를 들어, 한 `Public` 인터페이스에서 상속할 수 없습니다는 `Friend` 인터페이스입니다.  
   
      인터페이스 내에 중첩 된 인터페이스에서 상속할 수 없습니다.  
   
--   **구현입니다.** 클래스를 사용 하는 경우는 [구현](../../../visual-basic/language-reference/statements/implements-clause.md) 이 인터페이스를 구현 하는 문은 인터페이스 내에서 정의 된 모든 멤버를 구현 해야 합니다. 또한 각 서명에 구현 코드의이 인터페이스에 정의 된 해당 서명이 일치 해야 합니다. 그러나 구현 코드가 포함 된 멤버의 이름을 인터페이스에 정의 된 대로 멤버 이름과 일치 하지 않아도 됩니다.  
+- **구현입니다.** 클래스를 사용 하는 경우는 [구현](../../../visual-basic/language-reference/statements/implements-clause.md) 이 인터페이스를 구현 하는 문은 인터페이스 내에서 정의 된 모든 멤버를 구현 해야 합니다. 또한 각 서명에 구현 코드의이 인터페이스에 정의 된 해당 서명이 일치 해야 합니다. 그러나 구현 코드가 포함 된 멤버의 이름을 인터페이스에 정의 된 대로 멤버 이름과 일치 하지 않아도 됩니다.  
   
      클래스에서 프로시저를 구현 하는 경우에 따라이 절차를 지정할 수 없습니다 것 `Shared`입니다.  
   
--   **기본 속성입니다.** 인터페이스에서는 하나 이상의 속성으로 지정할 수 해당 *속성의 기본값을*에 속성 이름을 사용 하지 않고 참조할 수 있습니다. 사용 하 여 선언 하 여 이러한 속성을 지정 하는 [기본](../../../visual-basic/language-reference/modifiers/default.md) 한정자입니다.  
+- **기본 속성입니다.** 인터페이스에서는 하나 이상의 속성으로 지정할 수 해당 *속성의 기본값을*에 속성 이름을 사용 하지 않고 참조할 수 있습니다. 사용 하 여 선언 하 여 이러한 속성을 지정 하는 [기본](../../../visual-basic/language-reference/modifiers/default.md) 한정자입니다.  
   
      즉, 인터페이스 없음 상속 하는 경우에 기본 속성을 정의할 수 있는지 확인 합니다.  
   
 ## <a name="behavior"></a>동작  
   
--   **액세스 수준입니다.** 모든 인터페이스 멤버를 암시적으로 사용할 [공용](../../../visual-basic/language-reference/modifiers/public.md) 액세스 합니다. 멤버를 정의 하는 경우에 모든 액세스 한정자를 사용할 수 없습니다. 그러나 인터페이스를 구현 하는 클래스는 구현 된 각 멤버에 대 한 액세스 수준의 선언할 수 있습니다.  
+- **액세스 수준입니다.** 모든 인터페이스 멤버를 암시적으로 사용할 [공용](../../../visual-basic/language-reference/modifiers/public.md) 액세스 합니다. 멤버를 정의 하는 경우에 모든 액세스 한정자를 사용할 수 없습니다. 그러나 인터페이스를 구현 하는 클래스는 구현 된 각 멤버에 대 한 액세스 수준의 선언할 수 있습니다.  
   
      클래스 인스턴스를 변수에 할당할 경우 해당 멤버의 액세스 수준을 변수의 데이터 형식 인지 기본 인터페이스를 구현 하는 클래스에서 달라질 수 있습니다. 다음은 이에 대한 예입니다.  
   
@@ -99,11 +99,11 @@ End Interface
   
      클래스 멤버를 통해 액세스 하는 경우 `varAsInterface`, 모든 공용 액세스 권한을 가져야 합니다. 그러나 통해 멤버에 액세스 하는 경우 `varAsClass`는 `Sub` 프로시저 `doSomething` 개인 액세스 권한이 있습니다.  
   
--   **범위입니다.** 인터페이스는 해당 네임 스페이스, 클래스, 구조체 또는 모듈 전체 범위에서.  
+- **범위입니다.** 인터페이스는 해당 네임 스페이스, 클래스, 구조체 또는 모듈 전체 범위에서.  
   
      모든 인터페이스 멤버의 범위는 전체 인터페이스입니다.  
   
--   **수명입니다.** 인터페이스 자체 없는 수명이 없고 해당 멤버를 합니다. 클래스가 인터페이스 및 개체를 구현 하는 경우 만들어집니다의 인스턴스 클래스 개체에 실행 되는 응용 프로그램 내에서 수명. 자세한 내용은 "수명"를 참조 하세요 [Class 문](../../../visual-basic/language-reference/statements/class-statement.md)합니다.  
+- **수명입니다.** 인터페이스 자체 없는 수명이 없고 해당 멤버를 합니다. 클래스가 인터페이스 및 개체를 구현 하는 경우 만들어집니다의 인스턴스 클래스 개체에 실행 되는 응용 프로그램 내에서 수명. 자세한 내용은 "수명"를 참조 하세요 [Class 문](../../../visual-basic/language-reference/statements/class-statement.md)합니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 합니다 `Interface` 라는 인터페이스를 정의 하는 문을 `thisInterface`를 사용 하 여 구현 되어야 하는 `Property` 문 및 `Function` 문.  

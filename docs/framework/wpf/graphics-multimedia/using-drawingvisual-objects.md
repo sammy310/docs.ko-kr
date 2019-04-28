@@ -9,11 +9,11 @@ helpviewer_keywords:
 - DrawingVisual objects in visual layer [WPF]
 ms.assetid: 0b4e711d-e640-40cb-81c3-8f5c59909b7d
 ms.openlocfilehash: 01e10a4b0f0bf4959850caf3951ad4ea915edb4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762113"
 ---
 # <a name="using-drawingvisual-objects"></a>DrawingVisual 개체 사용
 이 항목에서는 사용 하는 방법의 개요를 제공 <xref:System.Windows.Media.DrawingVisual> 개체는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 시각적 계층입니다.  
@@ -51,9 +51,9 @@ ms.locfileid: "59121721"
   
  다음 목록에서는 재정의해야 하는 두 멤버에 대해 설명합니다.  
   
--   <xref:System.Windows.FrameworkElement.GetVisualChild%2A>: 자식 요소 컬렉션에서 지정된 된 인덱스에 있는 자식을 반환합니다.  
+- <xref:System.Windows.FrameworkElement.GetVisualChild%2A>: 자식 요소 컬렉션에서 지정된 된 인덱스에 있는 자식을 반환합니다.  
   
--   <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>: 이 요소 내 시각적 자식 요소의 수를 가져옵니다.  
+- <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>: 이 요소 내 시각적 자식 요소의 수를 가져옵니다.  
   
  다음 예제에서는 두 가지에 대 한 재정의가 <xref:System.Windows.FrameworkElement> 멤버 구현 됩니다.  
   

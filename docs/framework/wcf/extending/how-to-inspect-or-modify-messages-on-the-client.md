@@ -3,11 +3,11 @@ title: '방법: 클라이언트에서 메시지 검사 또는 수정'
 ms.date: 03/30/2017
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
 ms.openlocfilehash: 67fa0e092e6494ff55d71e666b5137cfc9a3069e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766846"
 ---
 # <a name="how-to-inspect-or-modify-messages-on-the-client"></a>방법: 클라이언트에서 메시지 검사 또는 수정
 검사 하거나 구현 하 여 WCF 클라이언트에서 들어오는 메시지나 나가는 메시지를 수정할 수는 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> 클라이언트 런타임에 삽입 하 고 있습니다. 자세한 내용은 [확장 클라이언트](../../../../docs/framework/wcf/extending/extending-clients.md)합니다. 서비스의 해당 기능은 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>입니다. 전체 코드 예제에 대 한 참조를 [메시지 검사자](../../../../docs/framework/wcf/samples/message-inspectors.md) 샘플입니다.  
@@ -23,13 +23,13 @@ ms.locfileid: "59343300"
 ## <a name="example"></a>예제  
  다음 코드 예제는 아래 순서대로 나열되어 있습니다.  
   
--   클라이언트 검사자 구현.  
+- 클라이언트 검사자 구현.  
   
--   검사자를 삽입하는 엔드포인트 동작.  
+- 검사자를 삽입하는 엔드포인트 동작.  
   
--   구성 파일에 동작을 추가하는 데 사용할 수 있는 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> 파생 클래스.  
+- 구성 파일에 동작을 추가하는 데 사용할 수 있는 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> 파생 클래스.  
   
--   클라이언트 메시지 검사자를 클라이언트 런타임에 삽입하는 엔드포인트 동작을 추가하는 구성 파일.  
+- 클라이언트 메시지 검사자를 클라이언트 런타임에 삽입하는 엔드포인트 동작을 추가하는 구성 파일.  
   
 ```csharp  
 // Client message inspector  

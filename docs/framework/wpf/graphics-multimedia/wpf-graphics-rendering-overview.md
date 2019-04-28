@@ -9,11 +9,11 @@ helpviewer_keywords:
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
 ms.openlocfilehash: a0400ce32dc6dab2585a8d5e76ff8d416fae24c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765065"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>WPF 그래픽 렌더링 개요
 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 시각적 계층에 대해 간략하게 설명합니다. 역할에 중점을 둡니다 합니다 <xref:System.Windows.Media.Visual> 의 렌더링 지원을 위한 클래스를 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 모델입니다.  
@@ -24,27 +24,27 @@ ms.locfileid: "59101369"
   
  합니다 <xref:System.Windows.Media.Visual> 개체는 핵심 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 개체를 렌더링 지원을 제공 하는 역할입니다. 와 같은 사용자 인터페이스 컨트롤 <xref:System.Windows.Controls.Button> 및 <xref:System.Windows.Controls.TextBox>에서 파생 되는 <xref:System.Windows.Media.Visual> 클래스 및 해당 렌더링 데이터를 유지 하는 데 사용 합니다. <xref:System.Windows.Media.Visual> 개체에 대 한 지원을 제공 합니다.  
   
--   출력 표시: 시각적 요소의 그리기 콘텐츠를 직렬화 지속형를 렌더링 합니다.  
+- 출력 표시: 시각적 요소의 그리기 콘텐츠를 직렬화 지속형를 렌더링 합니다.  
   
--   변환: 시각적 개체에서 변환을 수행 합니다.  
+- 변환: 시각적 개체에서 변환을 수행 합니다.  
   
--   클리핑: 시각적 개체에 대 한 클리핑 영역 지원을 제공 합니다.  
+- 클리핑: 시각적 개체에 대 한 클리핑 영역 지원을 제공 합니다.  
   
--   적중 테스트: 좌표 또는 기 하 도형이 시각적 개체의 경계 내에 포함 되는지 여부를 결정 합니다.  
+- 적중 테스트: 좌표 또는 기 하 도형이 시각적 개체의 경계 내에 포함 되는지 여부를 결정 합니다.  
   
--   경계 상자 계산: 시각적 개체의 경계 사각형을 결정합니다.  
+- 경계 상자 계산: 시각적 개체의 경계 사각형을 결정합니다.  
   
  그러나는 <xref:System.Windows.Media.Visual> 개체 비 렌더링 기능에 대 한 지원 등 포함 되지 않습니다.  
   
--   이벤트 처리  
+- 이벤트 처리  
   
--   레이아웃  
+- 레이아웃  
   
--   스타일  
+- 스타일  
   
--   데이터 바인딩  
+- 데이터 바인딩  
   
--   전역화  
+- 전역화  
   
  <xref:System.Windows.Media.Visual> 자식 클래스는 파생 해야 하는 공용 추상 클래스로 노출 됩니다. 다음 그림에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 노출되는 시각적 개체의 계층 구조를 보여 줍니다.  
   
@@ -127,13 +127,13 @@ DrawingGroup 작업의 순서
   
  시각적 개체 및 벡터 그래픽 명령 목록의 계층 구조에 대해 다음과 같은 사항을 명심해야 합니다.  
   
--   계층 구조의 순서는 그리기 정보의 렌더링 순서를 나타냅니다. 루트 시각적 요소에서 자식 요소는 왼쪽에서 오른쪽, 위쪽에서 아래쪽으로 트래버스됩니다. 요소에 시각적 자식 요소가 있으면 요소의 형제 요소보다 먼저 트래버스됩니다.  
+- 계층 구조의 순서는 그리기 정보의 렌더링 순서를 나타냅니다. 루트 시각적 요소에서 자식 요소는 왼쪽에서 오른쪽, 위쪽에서 아래쪽으로 트래버스됩니다. 요소에 시각적 자식 요소가 있으면 요소의 형제 요소보다 먼저 트래버스됩니다.  
   
--   계층의 리프가 아닌 노드 요소와 같은 <xref:System.Windows.Controls.ContentPresenter>, 자식 요소를 포함 하는 데 사용 됩니다-명령 목록을 포함 하지 않습니다.  
+- 계층의 리프가 아닌 노드 요소와 같은 <xref:System.Windows.Controls.ContentPresenter>, 자식 요소를 포함 하는 데 사용 됩니다-명령 목록을 포함 하지 않습니다.  
   
--   시각적 요소가 벡터 그래픽 명령 목록과 시각적 자식 개체를 모두 포함하는 경우 시각적 자식 개체의 그리기 작업 전에 시각적 부모 요소의 명령 목록이 먼저 렌더링됩니다.  
+- 시각적 요소가 벡터 그래픽 명령 목록과 시각적 자식 개체를 모두 포함하는 경우 시각적 자식 개체의 그리기 작업 전에 시각적 부모 요소의 명령 목록이 먼저 렌더링됩니다.  
   
--   벡터 그래픽 명령 목록에 있는 항목은 왼쪽에서 오른쪽으로 렌더링됩니다.  
+- 벡터 그래픽 명령 목록에 있는 항목은 왼쪽에서 오른쪽으로 렌더링됩니다.  
   
 <a name="visual_tree"></a>   
 ## <a name="visual-tree"></a>표시 트리  

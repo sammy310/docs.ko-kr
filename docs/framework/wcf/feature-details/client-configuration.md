@@ -3,11 +3,11 @@ title: 클라이언트 구성
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
 ms.openlocfilehash: b9975c6caeedc94bf4a7773e71a95eb0d8c7aed2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781513"
 ---
 # <a name="client-configuration"></a>클라이언트 구성
 주소, 바인딩, 동작 및 계약, 서비스 끝점에 연결을 사용 하는 클라이언트는 클라이언트 끝점의 "ABC" 속성을 지정 하려면 Windows Communication Foundation (WCF) 클라이언트 구성을 사용할 수 있습니다. 합니다 [ \<클라이언트 >](../../configure-apps/file-schema/wcf/client.md) 요소에는 [ \<끝점 >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) 해당 특성이 끝점 Abc를 구성에 사용 되는 요소입니다. 이러한 특성에 설명 되어는 [끝점 구성](#configuring-endpoints) 섹션입니다.  

@@ -3,22 +3,22 @@ title: 채널 팩터리 및 캐싱
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
 ms.openlocfilehash: 3914ba74337bd959558348c191a897c79a32da52
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784308"
 ---
 # <a name="channel-factory-and-caching"></a>채널 팩터리 및 캐싱
 WCF 클라이언트 응용 프로그램에서는 <xref:System.ServiceModel.ChannelFactory%601> 클래스를 사용하여 WCF 서비스와의 통신 채널을 만듭니다.  <xref:System.ServiceModel.ChannelFactory%601> 인스턴스를 만들 때는 다음 작업이 필요하기 때문에 약간의 오버헤드가 발생합니다.  
   
--   생성 된 <xref:System.ServiceModel.Description.ContractDescription> 트리  
+- 생성 된 <xref:System.ServiceModel.Description.ContractDescription> 트리  
   
--   필요한 모든 CLR 형식 반영  
+- 필요한 모든 CLR 형식 반영  
   
--   채널 스택 생성  
+- 채널 스택 생성  
   
--   리소스 삭제  
+- 리소스 삭제  
   
  이 오버헤드를 최소화하기 위해 사용자가 WCF 클라이언트 프록시를 사용할 때 WCF가 채널 팩터리를 캐시할 수 있습니다.  
   

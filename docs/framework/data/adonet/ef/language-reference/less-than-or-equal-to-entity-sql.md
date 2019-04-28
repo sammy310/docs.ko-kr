@@ -3,11 +3,11 @@ title: < = (작거나 같음) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 7c46da5c-fa09-4d90-adcc-c7e1b769d8e6
 ms.openlocfilehash: 7a65984da22d125bdbdd5cfadb5a2051fa3dafdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780278"
 ---
 # <a name="-less-than-or-equal-to-entity-sql"></a>\<=(보다 작거나 같음)(Entity SQL)
 두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값보다 작거나 같은지 여부를 결정합니다.  

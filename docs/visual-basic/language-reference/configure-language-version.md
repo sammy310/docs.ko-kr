@@ -3,11 +3,11 @@ title: Visual Basic 언어 버전 선택
 description: 컴파일러가 특정 컴파일러 버전을 사용 하 여 구문 유효성 검사를 수행 하도록 구성 합니다.
 ms.date: 05/24/2018
 ms.openlocfilehash: 3b6d8055dbf64f2a5c38f46b6d66794fc48a1cea
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797035"
 ---
 # <a name="select-the-visual-basic-language-version"></a>Visual Basic 언어 버전 선택
 

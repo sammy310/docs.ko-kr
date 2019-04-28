@@ -3,11 +3,11 @@ title: <windows> <clientCredentials> 요소
 ms.date: 03/30/2017
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
 ms.openlocfilehash: b5e92745b9e39534d2a0bc35504c2dbc8346d2ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769722"
 ---
 # <a name="windows-of-clientcredentials-element"></a>\<windows >의 \<clientCredentials > 요소
 클라이언트를 나타내는 데 사용되는 Windows 자격 증명의 설정을 지정합니다.  

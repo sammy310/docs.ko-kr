@@ -12,11 +12,11 @@ helpviewer_keywords:
 - cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
 ms.openlocfilehash: 09a445da068f0141b9526e0228df8be0105498c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776547"
 ---
 # <a name="how-to-clone-a-printer"></a>방법: 프린터 복제
 대부분의 비즈니스, 어느 시점에서 구입 동일한 모델의 여러 프린터입니다. 일반적으로 이러한 모든 설치 되며 실제로 동일한 구성 설정을 사용 하 여. 각 프린터 설치 시간이 오래 걸릴 수 및 오류가 발생 하기 쉽습니다. 합니다 <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> 네임 스페이스 및 <xref:System.Printing.PrintServer.InstallPrintQueue%2A> Microsoft.NET Framework를 사용 하 여 노출 되는 클래스를 사용 하면 기존 인쇄 큐에서 개수에 관계 없이 복제 되는 추가 인쇄 대기열을 즉시 설치할 수 있습니다.  
@@ -28,9 +28,9 @@ ms.locfileid: "59310462"
   
 2. 만들기는 <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> 에서 합니다 <xref:System.Printing.PrintSystemObject.PropertiesCollection%2A> 의 <xref:System.Printing.PrintQueue>합니다. 합니다 <xref:System.Collections.DictionaryEntry.Value%2A> 이 사전의 각 항목의 속성에서 파생 된 형식의 개체인 <xref:System.Printing.IndexedProperties.PrintProperty>합니다. 이 사전에 있는 항목의 값을 설정 하는 방법은 두 가지가 있습니다.  
   
-    -   사전의 사용 하 여 **제거할** 및 <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.Add%2A> 방법 항목을 제거 하 고 원하는 값을 사용 하 여 다시 추가 합니다.  
+    - 사전의 사용 하 여 **제거할** 및 <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.Add%2A> 방법 항목을 제거 하 고 원하는 값을 사용 하 여 다시 추가 합니다.  
   
-    -   사전의 사용 하 여 <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.SetProperty%2A> 메서드.  
+    - 사전의 사용 하 여 <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.SetProperty%2A> 메서드.  
   
      아래 예제에서는 두 가지 방법을 모두 보여 줍니다.  
   

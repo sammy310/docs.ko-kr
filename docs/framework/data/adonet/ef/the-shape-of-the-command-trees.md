@@ -2,12 +2,12 @@
 title: 명령 트리의 모양
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: aba5511b8baa395714bde315d9542932e854c98b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 08a67c8d181188cbc14c6f60876a7e26cd6de25a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763986"
 ---
 # <a name="the-shape-of-the-command-trees"></a>명령 트리의 모양
 
@@ -85,9 +85,9 @@ DbNewInstanceExpression은 다음 두 경우에만 발생할 수 있습니다.
 
 - DbProjectExpression의 Projection 속성으로.  이렇게 사용되는 경우 다음 제한 사항이 적용됩니다.
 
-    - 결과 형식이 행 형식이어야 합니다.
+  - 결과 형식이 행 형식이어야 합니다.
 
-    - 각 인수가 기본 형식을 사용하여 결과를 생성하는 식입니다. 일반적으로 각 인수는 DbVariableReferenceExpression을 통한 PropertyExpression과 같은 스칼라 식, 함수 호출 또는 DbVariableReferenceExpression을 통한 DbPropertyExpression 또는 함수 호출의 산술 계산입니다. 그러나 스칼라 하위 쿼리를 나타내는 식은 DbNewInstanceExpression의 인수 목록에서도 발생할 수 있습니다. 스칼라 하위 쿼리를 나타내는 식입니다는 정확히 하나의 행 DbElementExpression 개체 루트를 사용 하 여 기본 형식의 한 열을 반환 하는 하위 쿼리를 나타내는 식 트리
+  - 각 인수가 기본 형식을 사용하여 결과를 생성하는 식입니다. 일반적으로 각 인수는 DbVariableReferenceExpression을 통한 PropertyExpression과 같은 스칼라 식, 함수 호출 또는 DbVariableReferenceExpression을 통한 DbPropertyExpression 또는 함수 호출의 산술 계산입니다. 그러나 스칼라 하위 쿼리를 나타내는 식은 DbNewInstanceExpression의 인수 목록에서도 발생할 수 있습니다. 스칼라 하위 쿼리를 나타내는 식입니다는 정확히 하나의 행 DbElementExpression 개체 루트를 사용 하 여 기본 형식의 한 열을 반환 하는 하위 쿼리를 나타내는 식 트리
 
 - 컬렉션 반환 형식과 함께. 이 경우 DbNewInstanceExpression은 인수로 제공된 식의 새 컬렉션을 정의합니다.
 

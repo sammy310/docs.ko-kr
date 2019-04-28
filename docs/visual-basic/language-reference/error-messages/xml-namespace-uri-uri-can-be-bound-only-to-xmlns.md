@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC31183
 ms.assetid: 0ab1dbce-8397-4959-b2cd-f58798b051a0
 ms.openlocfilehash: dd5e67d573176a6b1a011b3191fca9607af85538
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766625"
 ---
 # <a name="xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-xmlns"></a>XML 네임 스페이스 URI `http://www.w3.org/XML/1998/namespace`; 'xmlns'에 바인딩할 수 있습니다
 URI `http://www.w3.org/XML/1998/namespace` XML 네임 스페이스 선언에 사용 됩니다. 이 URI는 예약 된 네임 스페이스 및 XML 네임 스페이스 선언에 포함 될 수 없습니다.  

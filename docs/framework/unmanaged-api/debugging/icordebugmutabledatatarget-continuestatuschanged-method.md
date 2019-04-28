@@ -5,11 +5,11 @@ ms.assetid: 5a66d3f4-dd16-4d62-9dcc-0eab7041d894
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 52b5c63f35732655834768eb5b914406203d423c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61927363"
 ---
 # <a name="icordebugmutabledatatargetcontinuestatuschanged-method"></a>ICorDebugMutableDataTarget::ContinueStatusChanged 메서드
 지정된 스레드에서 해결되지 않은 디버그 이벤트의 연속 상태를 변경합니다.  

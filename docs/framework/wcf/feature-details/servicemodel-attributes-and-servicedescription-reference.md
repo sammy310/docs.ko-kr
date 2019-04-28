@@ -3,11 +3,11 @@ title: ServiceModel 특성 및 ServiceDescription 참조
 ms.date: 03/30/2017
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
 ms.openlocfilehash: 022731d7d6e60d36c5f4a595edc90aaff0586a79
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747742"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>ServiceModel 특성 및 ServiceDescription 참조
 합니다 *설명 트리에* 형식의 계층 구조는 (부터 <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> 클래스) 함께 서비스의 모든 측면을 설명 하는 합니다. Windows Communication Foundation (WCF)는 설명 트리를 사용 하 여 유효한 서비스 런타임 Web Services Description Language (WSDL), XML 스키마 정의 언어 (XSD) 및 클라이언트를 사용할 수 있는 서비스에 대 한 정책 어설션 (메타 데이터)를 게시할 빌드를 연결 하 고 서비스를 사용 하는 설명 트리 값의 다양 한 코드 및 구성 파일 표현을 생성 합니다.  

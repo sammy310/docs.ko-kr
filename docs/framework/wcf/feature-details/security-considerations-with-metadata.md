@@ -3,11 +3,11 @@ title: 메타데이터 관련 보안 고려 사항
 ms.date: 03/30/2017
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
 ms.openlocfilehash: 0dc060475f868923e8c7e4c87ef43ef5912c7ac5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748371"
 ---
 # <a name="security-considerations-with-metadata"></a>메타데이터 관련 보안 고려 사항
 메타 데이터 기능에서 Windows Communication Foundation (WCF)을 사용 하는 경우 게시, 검색 및 서비스 메타 데이터를 사용 하 여 보안 문제를 고려 합니다.  

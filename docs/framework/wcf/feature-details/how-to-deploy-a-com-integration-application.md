@@ -3,11 +3,11 @@ title: '방법: COM+ 통합 애플리케이션 배포'
 ms.date: 03/30/2017
 ms.assetid: 2e5a0510-db3c-4988-a09c-696285836650
 ms.openlocfilehash: fcf525943e6e453253c6f4d3bcfa8a1a08df6909
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778328"
 ---
 # <a name="how-to-deploy-a-com-integration-application"></a>방법: COM+ 통합 애플리케이션 배포
 COM+ 통합 응용 프로그램을 작성했다면 이를 다른 컴퓨터에 배포해야 하는 경우가 있습니다. 이 항목에서는 한 컴퓨터에서 다른 컴퓨터로 COM+ 통합 응용 프로그램을 이동하는 방법에 대해 설명합니다.  

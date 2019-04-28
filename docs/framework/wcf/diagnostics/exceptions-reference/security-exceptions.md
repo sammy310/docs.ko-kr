@@ -3,11 +3,11 @@ title: 보안 예외
 ms.date: 03/30/2017
 ms.assetid: 76d5e5cd-e4f4-404f-9a5a-ec3522494ad8
 ms.openlocfilehash: c1eeca9111837b9833de54ecafbc981d1c2b6343
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780863"
 ---
 # <a name="security-exceptions"></a>보안 예외
 이 항목에서는 모든 보안 예외를 보여 줍니다.  
@@ -29,8 +29,8 @@ ms.locfileid: "50201376"
 |CachedNegotiationStateQuotaReached|지정된 용량에 도달했기 때문에 서비스가 협상 상태를 캐시할 수 없습니다. 요청을 다시 시도하십시오.|  
 |CacheQuotaReached|항목을 추가할 수 없습니다. 최대 캐시 크기가 지정되었습니다.|  
 |CannotDetermineSPNBasedOnAddress|클라이언트가 SspiNegotiation/Kerberos 용도로 지정된 대상 주소의 ID에 기초하여 서비스 사용자 이름을 확인할 수 없습니다. 대상 주소 id는 UPN id 여야 합니다 (예: acmedomain\\\alice) 또는 SPN id (예 호스트/bobs-machine).|  
-|CannotFindCert|지정된 검색 조건인 StoreName, StoreLocation, FindType, FindValue를 사용하여 X.509 인증서를 찾을 수 없습니다.|  
-|CannotFindCertForTarget|지정된 대상에 대해 지정된 검색 조건인 StoreName, StoreLocation, FindType, FindValue를 사용하여 X.509 인증서를 찾을 수 없습니다.|  
+|CannotFindCert|지정 된 검색 조건을 사용 하 여 X.509 인증서를 찾을 수 없습니다. StoreName, StoreLocation, FindType, FindValue.|  
+|CannotFindCertForTarget|지정 된 검색 조건을 사용 하 여 X.509 인증서를 찾을 수 없습니다. StoreName, StoreLocation, FindType, FindValue 지정된 된 대상에 대 한 합니다.|  
 |CannotFindCorrelationStateForApplyingSecurity|응답자에서의 회신에 보안을 적용하기 위한 상관 관계 상태를 찾을 수 없습니다.|  
 |CannotFindNegotiationState|지정된 컨텍스트에 대한 협상 상태를 찾을 수 없습니다.|  
 |CannotFindSecuritySession|지정된 ID가 있는 보안 세션을 찾을 수 없습니다.|  
@@ -55,8 +55,8 @@ ms.locfileid: "50201376"
 |ExportOfBindingWithAsymmetricAndTransportSecurityNotSupported|보안 정책을 내보내지 못했습니다. 바인딩에 AsymmetricSecurityBindingElement 및 보안 전송 바인딩 요소가 모두 포함되어 있습니다. 이러한 바인딩에 대한 정책 내보내기가 지원되지 않습니다.|  
 |ExportOfBindingWithSymmetricAndTransportSecurityNotSupported|보안 정책을 내보내지 못했습니다. 바인딩에 SymmetricSecurityBindingElement 및 보안 전송 바인딩 요소가 모두 포함되어 있습니다. 이러한 바인딩에 대한 정책 내보내기가 지원되지 않습니다.|  
 |ExportOfBindingWithTransportSecurityBindingElementAndNoTransportSecurityNotSupported|보안 정책을 내보내지 못했습니다. 바인딩에 TransportSecurityBindingElement가 포함되어 있지만 ITransportTokenAssertionProvider를 구현하는 전송 바인딩 요소가 없습니다. 이러한 바인딩에 대한 정책 내보내기가 지원되지 않습니다. 바인딩의 전송 바인딩 요소가 ITransportTokenAssertionProvider 인터페이스를 구현하는지 확인하십시오.|  
-|FoundMultipleCerts|지정된 검색 조건을 사용하여 여러 X.509 인증서를 찾았습니다. StoreName, StoreLocation, FindType, FindValue. 더 구체적인 찾기 값을 제공하십시오.|  
-|FoundMultipleCertsForTarget|지정된 검색 조건을 사용하여 여러 X.509 인증서를 찾았습니다. StoreName, StoreLocation, FindType, FindValue(지정된 대상에 대한). 더 구체적인 찾기 값을 제공하십시오.|  
+|FoundMultipleCerts|지정 된 검색 조건을 사용 하 여 여러 X.509 인증서를 찾았습니다. StoreName, StoreLocation, FindType, FindValue. 더 구체적인 찾기 값을 제공하십시오.|  
+|FoundMultipleCertsForTarget|지정 된 검색 조건을 사용 하 여 여러 X.509 인증서를 찾았습니다. StoreName, StoreLocation, FindType, FindValue 지정된 된 대상에 대 한 합니다. 더 구체적인 찾기 값을 제공하십시오.|  
 |HeaderDecryptionNotSupportedInWsSecurityJan2004|SecurityVersion.WSSecurityJan2004가 헤더 암호 해독을 지원하지 않습니다. SecurityVersion.WsSecurityXXX2005 이상을 사용하거나 전송 보안을 사용하여 전체 메시지를 암호화하십시오.|  
 |IdentityCheckFailedForIncomingMessage|들어오는 메시지의 ID를 검사하지 못했습니다. 대상 엔드포인트에 대해 필요한 ID가 지정되었습니다.|  
 |IdentityCheckFailedForOutgoingMessage|보내는 메시지의 ID를 검사하지 못했습니다. 대상 엔드포인트에 대해 필요한 ID가 지정되었습니다.|  

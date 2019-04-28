@@ -8,11 +8,11 @@ helpviewer_keywords:
 - events [WPF], suppressing
 ms.assetid: b5032308-aa9c-4d02-af11-630ecec8df7e
 ms.openlocfilehash: 75165df94aa8b508ef85cf970933efb98b9d62ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772881"
 ---
 # <a name="preview-events"></a>미리 보기 이벤트
 터널링 이벤트, 라고도 미리 보기 이벤트는 라우트된 이벤트에서 이벤트를 발생 시킨 및 이벤트 데이터에서 소스로 보고 되는 요소에 대해 응용 프로그램 루트 경로 방향 이동 하는 위치입니다. 일부 이벤트 시나리오를 지원 또는 미리 보기 이벤트; 필요 이 항목에서는 미리 보기 이벤트 있는, 응용 프로그램 또는 구성 요소 처리 하는 방법을 하는 경우 및 사용자 지정 구성 요소 또는 클래스에서 미리 보기 이벤트를 만들 수 있는 적절 한 사례를 설명 합니다.  

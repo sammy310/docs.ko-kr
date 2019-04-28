@@ -3,11 +3,11 @@ title: 독립 실행형 JSON Serialization
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
 ms.openlocfilehash: 29c7dd6ebde07632ef7742b5e9bdd846fc632258
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747591"
 ---
 # <a name="stand-alone-json-serialization"></a>독립 실행형 JSON Serialization
 JSON (JavaScript Object Notation)은 브라우저 내의 웹 페이지에서 실행되는 JavaScript 코드에 의해 사용되도록 특별히 디자인된 데이터 형식이며 Windows Communication Foundation (WCF)에서 만든 ASP.NET AJAX 서비스에서 사용 하는 기본 데이터 형식입니다.  
@@ -25,7 +25,7 @@ JSON (JavaScript Object Notation)은 브라우저 내의 웹 페이지에서 실
 |----------------|----------------------|-----------|  
 |모든 숫자 형식. 예: <xref:System.Int32>, <xref:System.Decimal> 또는 <xref:System.Double>|숫자|`Double.NaN`, `Double.PositiveInfinity` 및 `Double.NegativeInfinity`와 같은 특수한 값은 지원되지 않으므로 잘못된 JSON이 됩니다.|  
 |<xref:System.Enum>|숫자|이 항목의 뒷부분에 있는 "열거 및 JSON"을 참조하십시오.|  
-|<xref:System.Boolean>|부울|--|  
+|<xref:System.Boolean>|Boolean|--|  
 |<xref:System.String>, <xref:System.Char>|문자열|--|  
 |<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|문자열|이러한 유형의 JSON 형식이 XML 동일 (기본적으로 ISO 8601 기간 형식의 TimeSpan, "12345678-ABCD-ABCD-ABCD-1234567890AB" 형식의 GUID 및 자연 스러운 문자열 형태로 URI와 같은 "http://www.example.com"). 정확한 내용은 [데이터 계약 스키마 참조](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)합니다.|  
 |<xref:System.Xml.XmlQualifiedName>|문자열|형식은 "name:namespace"이며 첫 번째 콜론 앞에 오는 것이 이름입니다. 이름 또는 네임스페이스가 없는 경우도 있습니다. 네임스페이스가 없는 경우 콜론도 생략할 수 있습니다.|  
@@ -42,20 +42,20 @@ JSON (JavaScript Object Notation)은 브라우저 내의 웹 페이지에서 실
 ### <a name="enumerations-and-json"></a>열거 및 JSON  
  열거형 멤버 값은 JSON에서 숫자로 처리되며 이는 열거형 멤버 값이 멤버 이름으로 포함되는 데이터 계약에서의 처리 방식과 다릅니다. 데이터 계약 처리에 대 한 자세한 내용은 참조 하세요. [데이터 계약의 열거형 형식](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)합니다.  
   
--   예를 들어, `public enum Color {red, green, blue, yellow, pink}`가 있을 경우 `yellow`를 serialize하면 문자열 "yellow"가 아닌 숫자 3이 생성됩니다.  
+- 예를 들어, `public enum Color {red, green, blue, yellow, pink}`가 있을 경우 `yellow`를 serialize하면 문자열 "yellow"가 아닌 숫자 3이 생성됩니다.  
   
--   모든 `enum` 멤버는 serialize할 수 있습니다. <xref:System.Runtime.Serialization.EnumMemberAttribute> 및 <xref:System.NonSerializedAttribute> 특성은 사용될 경우 무시됩니다.  
+- 모든 `enum` 멤버는 serialize할 수 있습니다. <xref:System.Runtime.Serialization.EnumMemberAttribute> 및 <xref:System.NonSerializedAttribute> 특성은 사용될 경우 무시됩니다.  
   
--   존재하지 않는 `enum` 값을 deserialize할 수 있습니다. 예를 들어, 해당 색 이름이 정의되어 있지 않더라도 값 87을 이전 Color 열거형으로 deserialize할 수 있습니다.  
+- 존재하지 않는 `enum` 값을 deserialize할 수 있습니다. 예를 들어, 해당 색 이름이 정의되어 있지 않더라도 값 87을 이전 Color 열거형으로 deserialize할 수 있습니다.  
   
--   플래그 `enum`은 특수한 플래그가 아니며 `enum`과 동일하게 처리됩니다.  
+- 플래그 `enum`은 특수한 플래그가 아니며 `enum`과 동일하게 처리됩니다.  
   
 ### <a name="datestimes-and-json"></a>날짜/시간 및 JSON  
  JSON 형식은 날짜 및 시간을 직접적으로 지원하지 않습니다. 그러나 매우 일반적으로 사용되며 ASP.NET AJAX는 이러한 형식을 특수한 방식으로 지원합니다. ASP.NET AJAX 프록시를 사용할 경우 .NET의 <xref:System.DateTime> 형식은 JavaScrip의 `DateTime` 형식과 완전히 일치합니다.  
   
--   ASP.NET을 사용하지 않을 경우 <xref:System.DateTime> 형식은 JSON에서 이 항목의 고급 정보 단원에 설명된 특수 형식의 문자열로 표시됩니다.  
+- ASP.NET을 사용하지 않을 경우 <xref:System.DateTime> 형식은 JSON에서 이 항목의 고급 정보 단원에 설명된 특수 형식의 문자열로 표시됩니다.  
   
--   <xref:System.DateTimeOffset>은 JSON에 복합 형식 {"DateTime":dateTime,"OffsetMinutes":offsetMinutes}로 표현됩니다. `offsetMinutes` 멤버는 GMT(그리니치 표준시)의 현지 시간 오프셋으로, 관련 이벤트의 위치와 연관된 UTC(세계 협정시)라고도 합니다. `dateTime` 멤버는 관련 이벤트가 발행했을 때의 시간 인스턴스를 나타내며, ASP.NET AJAX를 사용할 때는 JavaScript에서 `DateTime`이 되고 사용하지 않을 때는 문자열이 됩니다. serialization 시 `dateTime` 멤버는 항상 GMT로 serialize됩니다. 따라서 뉴욕 시간으로 오전 3시인 경우 `dateTime` 시간 구성 요소는 오전 8시이고 `offsetMinutes`는 300(GMT에서 300분 또는 5시간을 뺀 값)입니다.  
+- <xref:System.DateTimeOffset>은 JSON에 복합 형식 {"DateTime":dateTime,"OffsetMinutes":offsetMinutes}로 표현됩니다. `offsetMinutes` 멤버는 GMT(그리니치 표준시)의 현지 시간 오프셋으로, 관련 이벤트의 위치와 연관된 UTC(세계 협정시)라고도 합니다. `dateTime` 멤버는 관련 이벤트가 발행했을 때의 시간 인스턴스를 나타내며, ASP.NET AJAX를 사용할 때는 JavaScript에서 `DateTime`이 되고 사용하지 않을 때는 문자열이 됩니다. serialization 시 `dateTime` 멤버는 항상 GMT로 serialize됩니다. 따라서 뉴욕 시간으로 오전 3시인 경우 `dateTime` 시간 구성 요소는 오전 8시이고 `offsetMinutes`는 300(GMT에서 300분 또는 5시간을 뺀 값)입니다.  
   
     > [!NOTE]
     >  JSON으로 serialize한 경우 <xref:System.DateTime> 및 <xref:System.DateTimeOffset> 개체는 밀리초 수준의 정보만 유지합니다. 서브-밀리초 값(마이크로초/나노초)은 serialization 중에 손실됩니다.  
@@ -63,28 +63,28 @@ JSON (JavaScript Object Notation)은 브라우저 내의 웹 페이지에서 실
 ### <a name="xml-types-and-json"></a>XML 형식 및 JSON  
  XML 형식은 JSON 문자열이 됩니다.  
   
--   예를 들어, 데이터 멤버 "q"를의 형식을 XElement 포함 \<abc / >, JSON은 {"q": "\<abc / >"}.  
+- 예를 들어, 데이터 멤버 "q"를의 형식을 XElement 포함 \<abc / >, JSON은 {"q": "\<abc / >"}.  
   
--   XML 래핑 방법을 지정하는 몇 가지 특수한 규칙이 있습니다. 자세한 내용은 이 항목의 뒷부분에 있는 고급 정보 단원을 참조하십시오.  
+- XML 래핑 방법을 지정하는 몇 가지 특수한 규칙이 있습니다. 자세한 내용은 이 항목의 뒷부분에 있는 고급 정보 단원을 참조하십시오.  
   
--   ASP.NET AJAX를 사용 중인 경우 JavaScript에서 문자열을 사용하는 대신 XML DOM을 사용하려면 <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A>에서<xref:System.ServiceModel.Web.WebGetAttribute> 속성을 XML로 설정하거나 <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A>에서 <xref:System.ServiceModel.Web.WebInvokeAttribute> 속성을 XML로 설정합니다.  
+- ASP.NET AJAX를 사용 중인 경우 JavaScript에서 문자열을 사용하는 대신 XML DOM을 사용하려면 <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A>에서<xref:System.ServiceModel.Web.WebGetAttribute> 속성을 XML로 설정하거나 <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A>에서 <xref:System.ServiceModel.Web.WebInvokeAttribute> 속성을 XML로 설정합니다.  
   
 ### <a name="collections-dictionaries-and-arrays"></a>컬렉션, 사전 및 배열  
  모든 컬렉션, 사전 및 배열은 JSON에서 배열로 표시됩니다.  
   
--   <xref:System.Runtime.Serialization.CollectionDataContractAttribute>를 사용하는 모든 사용자 지정은 JSON 표현에서 무시됩니다.  
+- <xref:System.Runtime.Serialization.CollectionDataContractAttribute>를 사용하는 모든 사용자 지정은 JSON 표현에서 무시됩니다.  
   
--   사전은 JSON에 직접 사용할 수 있는 방식이 아닙니다. 사전\<문자열, 개체 >에서 다른 JSON 기술로 작업할 예상 대로 WCF에서 동일한 방식으로 지원 되지 않습니다. 예를 들어 "abc"가 "xyz"로 매핑되고 "def"가 사전의 42로 매핑되는 경우 JSON 표현은 {"abc":"xyz","def":42}가 아니라 [{"Key":"abc","Value":"xyz"},{"Key":"def","Value":42}]입니다.  
+- 사전은 JSON에 직접 사용할 수 있는 방식이 아닙니다. 사전\<문자열, 개체 >에서 다른 JSON 기술로 작업할 예상 대로 WCF에서 동일한 방식으로 지원 되지 않습니다. 예를 들어 "abc"가 "xyz"로 매핑되고 "def"가 사전의 42로 매핑되는 경우 JSON 표현은 {"abc":"xyz","def":42}가 아니라 [{"Key":"abc","Value":"xyz"},{"Key":"def","Value":42}]입니다.  
   
--   JSON으로 직접 작업하려는 경우(엄격한 계약을 미리 정의하지 않고 키 및 값에 동적으로 액세스하는 경우) 다음과 같은 몇 가지 옵션이 있습니다.  
+- JSON으로 직접 작업하려는 경우(엄격한 계약을 미리 정의하지 않고 키 및 값에 동적으로 액세스하는 경우) 다음과 같은 몇 가지 옵션이 있습니다.  
   
-    -   사용을 고려 합니다 [약한 형 JSON Serialization (AJAX)](../../../../docs/framework/wcf/samples/weakly-typed-json-serialization-sample.md) 샘플입니다.  
+    - 사용을 고려 합니다 [약한 형 JSON Serialization (AJAX)](../../../../docs/framework/wcf/samples/weakly-typed-json-serialization-sample.md) 샘플입니다.  
   
-    -   <xref:System.Runtime.Serialization.ISerializable> 인터페이스와 deserialization 생성자를 사용합니다. 이 두 메커니즘을 사용하면 serialization과 deserialization 시 각각 JSON 키/값 쌍에 액세스할 수 있지만 부분 신뢰 시나리오에서 작업할 수 없습니다.  
+    - <xref:System.Runtime.Serialization.ISerializable> 인터페이스와 deserialization 생성자를 사용합니다. 이 두 메커니즘을 사용하면 serialization과 deserialization 시 각각 JSON 키/값 쌍에 액세스할 수 있지만 부분 신뢰 시나리오에서 작업할 수 없습니다.  
   
-    -   작업을 수행 합니다 [Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md) serializer를 사용 하는 대신 합니다.  
+    - 작업을 수행 합니다 [Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md) serializer를 사용 하는 대신 합니다.  
   
-    -   *다형성* serialization의 컨텍스트에서 해당 기본 형식이 필요한 경우에 파생된 형식을 serialize 하는 기능을 나타냅니다. 예를 들어 컬렉션을 <xref:System.Object>에 할당할 때처럼 컬렉션을 다형적으로 사용하는 경우 특수한 JSON 관련 규칙이 있습니다. 이러한 내용은 이 항목의 뒷부분에 있는 고급 정보 단원에 자세히 설명되어 있습니다.  
+    - *다형성* serialization의 컨텍스트에서 해당 기본 형식이 필요한 경우에 파생된 형식을 serialize 하는 기능을 나타냅니다. 예를 들어 컬렉션을 <xref:System.Object>에 할당할 때처럼 컬렉션을 다형적으로 사용하는 경우 특수한 JSON 관련 규칙이 있습니다. 이러한 내용은 이 항목의 뒷부분에 있는 고급 정보 단원에 자세히 설명되어 있습니다.  
   
 ## <a name="additional-details"></a>추가 정보  
   
@@ -124,9 +124,9 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 #### <a name="supported-and-unsupported-iserializable-types"></a>지원되는 ISerializable 형식과 지원되지 않는 ISerializable 형식  
  일반적으로 <xref:System.Runtime.Serialization.ISerializable> 인터페이스를 구현하는 형식은 JSON을 serialize하거나 deserialize할 때 완전히 지원됩니다. 그러나 이러한 형식 중에는 JSON 관련 serialization의 영향을 받으면 deserialize하지 않도록 구현되는 형식(일부 .NET Framework 형식 포함)도 있습니다.  
   
--   <xref:System.Runtime.Serialization.ISerializable>을 사용하면 개별 데이터 멤버의 형식을 미리 알 수 없습니다. 따라서 다형적 상황은 형식을 개체로 deserialize하는 상황과 유사합니다. 앞서 설명한 바와 같이 이로 인해 JSON에서 형식 정보가 손실될 수 있습니다. 예를 들어, 해당 `enum` 구현에서 <xref:System.Runtime.Serialization.ISerializable>을 serialize한 형식이 적절한 캐스팅 없이 바로 `enum`으로 다시 deserialize를 시도하는 경우 실패하게 됩니다. 이는 `enum`이 JSON에서 숫자를 사용하여 serialize되고 JSON 숫자는 기본 제공 .NET 숫자 형식(Int32, Decimal 또는 Double)으로 deserialize되기 때문입니다. 따라서 `enum` 값으로 사용된 숫자가 손실됩니다.  
+- <xref:System.Runtime.Serialization.ISerializable>을 사용하면 개별 데이터 멤버의 형식을 미리 알 수 없습니다. 따라서 다형적 상황은 형식을 개체로 deserialize하는 상황과 유사합니다. 앞서 설명한 바와 같이 이로 인해 JSON에서 형식 정보가 손실될 수 있습니다. 예를 들어, 해당 `enum` 구현에서 <xref:System.Runtime.Serialization.ISerializable>을 serialize한 형식이 적절한 캐스팅 없이 바로 `enum`으로 다시 deserialize를 시도하는 경우 실패하게 됩니다. 이는 `enum`이 JSON에서 숫자를 사용하여 serialize되고 JSON 숫자는 기본 제공 .NET 숫자 형식(Int32, Decimal 또는 Double)으로 deserialize되기 때문입니다. 따라서 `enum` 값으로 사용된 숫자가 손실됩니다.  
   
--   대부분의 JSON은 특정 순서를 보장하지 않기 때문에 해당 deserialization 생성자에서 특정 deserialization 순서에 의존하는 <xref:System.Runtime.Serialization.ISerializable> 형식도 일부 JSON 데이터를 deserialize하지 못할 수 있습니다.  
+- 대부분의 JSON은 특정 순서를 보장하지 않기 때문에 해당 deserialization 생성자에서 특정 deserialization 순서에 의존하는 <xref:System.Runtime.Serialization.ISerializable> 형식도 일부 JSON 데이터를 deserialize하지 못할 수 있습니다.  
   
 #### <a name="factory-types"></a>팩터리 형식  
  <xref:System.Runtime.Serialization.IObjectReference> 인터페이스는 일반적으로 JSON에서 지원되지만, 인터페이스를 구현하는 형식과 다른 형식의 인스턴스를 <xref:System.Runtime.Serialization.IObjectReference.GetRealObject%28System.Runtime.Serialization.StreamingContext%29>에서 반환하는 "팩터리 형식" 기능을 필요로 하는 형식은 지원되지 않습니다.  
@@ -204,11 +204,11 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 #### <a name="when-are-type-hints-emitted"></a>형식 힌트를 내보내는 시기  
  형식 힌트는 메시지 크기를 상당히 증가시킬 수 있습니다. 이 문제를 완화하기 위한 한 가지 방법은 가능한 경우 더 짧은 데이터 계약 네임스페이스를 사용하는 것입니다. 따라서 다음 규칙에 따라 형식 힌트를 내보낼지 여부가 결정됩니다.  
   
--   ASP.NET AJAX를 사용하는 경우, 기본/파생 할당이 없을 때(예를 들어 Circle이 Circle에 할당된 경우)에도 가능하면 항상 형식 힌트를 내보냅니다. 이는 정보의 큰 손실 없이 약한 형식 JSON 환경에서 강력한 형식 .NET 환경으로 호출하는 프로세스를 완벽하게 지원하기 위해 필요합니다.  
+- ASP.NET AJAX를 사용하는 경우, 기본/파생 할당이 없을 때(예를 들어 Circle이 Circle에 할당된 경우)에도 가능하면 항상 형식 힌트를 내보냅니다. 이는 정보의 큰 손실 없이 약한 형식 JSON 환경에서 강력한 형식 .NET 환경으로 호출하는 프로세스를 완벽하게 지원하기 위해 필요합니다.  
   
--   ASP.NET과 통합되지 않은 AJAX 서비스를 사용하는 경우에는 기본/파생 할당이 있는 경우에만 형식 힌트를 내보냅니다. 즉, Circle이 Shape 또는 <xref:System.Object>에 할당되었지만 Circle에는 할당되지 않은 경우에 형식 힌트를 내보냅니다. 이를 통해 JavaScript 클라이언트를 올바르게 구현하는 데 필요한 최소 정보가 제공되므로 성능이 향상되지만 잘못 디자인된 클라이언트의 경우 형식 정보 손실을 방지할 수 없습니다. 클라이언트에서 이 문제를 처리하지 않으려면 서버에 기본/파생 할당이 없도록 해야 합니다.  
+- ASP.NET과 통합되지 않은 AJAX 서비스를 사용하는 경우에는 기본/파생 할당이 있는 경우에만 형식 힌트를 내보냅니다. 즉, Circle이 Shape 또는 <xref:System.Object>에 할당되었지만 Circle에는 할당되지 않은 경우에 형식 힌트를 내보냅니다. 이를 통해 JavaScript 클라이언트를 올바르게 구현하는 데 필요한 최소 정보가 제공되므로 성능이 향상되지만 잘못 디자인된 클라이언트의 경우 형식 정보 손실을 방지할 수 없습니다. 클라이언트에서 이 문제를 처리하지 않으려면 서버에 기본/파생 할당이 없도록 해야 합니다.  
   
--   <xref:System.Runtime.Serialization.DataContractSerializer> 형식을 사용하는 경우 `alwaysEmitTypeInformation` 생성자 매개 변수를 사용하면 기본값을 "`false`"(필요한 경우에만 형식 힌트를 내보냄)로 설정하여 앞의 두 모드 간에 선택할 수 있습니다.  
+- <xref:System.Runtime.Serialization.DataContractSerializer> 형식을 사용하는 경우 `alwaysEmitTypeInformation` 생성자 매개 변수를 사용하면 기본값을 "`false`"(필요한 경우에만 형식 힌트를 내보냄)로 설정하여 앞의 두 모드 간에 선택할 수 있습니다.  
   
 #### <a name="duplicate-data-member-names"></a>중복 데이터 멤버 이름  
  파생 형식 정보는 기본 형식 정보와 함께 동일한 JSON 개체에 있으며 순서에 구애 받지 않습니다. 예를 들어 `Shape` 다음과 같이 표시 될 수 있습니다.  
@@ -245,9 +245,9 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
   
  <xref:System.Object>로 다시 deserialize하는 경우:  
   
--   `Shape` 알려진 형식 목록에 있어야 합니다. 것 <xref:System.Collections.Generic.List%601> 형식의 `Shape` 알려진된 형식에 영향을 주지 않습니다. 추가할 필요가 없습니다는 `Shape` serialization에서 알려진된 형식에이 경우이 자동으로 수행 됩니다.  
+- `Shape` 알려진 형식 목록에 있어야 합니다. 것 <xref:System.Collections.Generic.List%601> 형식의 `Shape` 알려진된 형식에 영향을 주지 않습니다. 추가할 필요가 없습니다는 `Shape` serialization에서 알려진된 형식에이 경우이 자동으로 수행 됩니다.  
   
--   컬렉션으로 deserialize 되는 <xref:System.Array> 형식의 <xref:System.Object> 포함 된 `Shape` 인스턴스.  
+- 컬렉션으로 deserialize 되는 <xref:System.Array> 형식의 <xref:System.Object> 포함 된 `Shape` 인스턴스.  
   
 #### <a name="derived-collections-assigned-to-base-collections"></a>기본 컬렉션에 할당된 파생 컬렉션  
  파생 컬렉션을 기본 컬렉션에 할당하면, 일반적으로 기본 형식의 컬렉션인 것처럼 컬렉션이 serialize됩니다. 그러나 파생 컬렉션의 항목 형식을 기본 컬렉션의 항목 형식에 할당할 수 없는 경우 예외가 throw됩니다.  

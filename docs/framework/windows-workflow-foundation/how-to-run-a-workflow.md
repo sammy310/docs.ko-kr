@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
 ms.openlocfilehash: 06ac34f5ba5d95bd9f000a35036cf288d3c8f7f7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779160"
 ---
 # <a name="how-to-run-a-workflow"></a>방법: 워크플로 실행
 이 항목에서는 Windows Workflow Foundation 초보자 자습서의 계속 이며 워크플로 호스트를 만들고 이전에 정의 된 워크플로 실행 하는 방법을 설명 [방법: 워크플로 만드는](how-to-create-a-workflow.md) 항목입니다.

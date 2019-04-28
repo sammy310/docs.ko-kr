@@ -9,11 +9,11 @@ helpviewer_keywords:
 - regions [Windows Forms], hit testing
 ms.assetid: 3a4c07cb-a40a-4d14-ad35-008f531910a8
 ms.openlocfilehash: 136f15f1364fb2aed791b4a61d0f11411b055967
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778874"
 ---
 # <a name="how-to-use-hit-testing-with-a-region"></a>방법: 영역에 적중 테스트 사용
 적중 횟수 테스트의 목적은 커서 아이콘 단추 등의 지정 된 개체에 대해 인지 여부를 확인 합니다.  

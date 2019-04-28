@@ -15,11 +15,11 @@ ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 93344e1c5aa62e86d29a0110a9d8cffc3cea66ff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775104"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR 프로파일러 및 Windows 스토어 앱
 
@@ -66,7 +66,7 @@ CLR 프로 파일링 API를 처음 접하는 경우이 항목의 끝에 리소�
 
 이 문서 전체에서 샘플 코드를 가정합니다.
 
-- CLR 프로 파일링 API의 요구 사항에 따라 네이티브 DLL을 해야 하므로 Profiler DLL c + +로 작성 됩니다.
+- Profiler DLL로 작성 된 C++이므로 CLR 프로 파일링 API의 요구 사항에 따라 네이티브 DLL을 이어야 합니다.
 
 - Profiler UI는 C#으로 작성 됩니다. 이렇게 할 필요는 있지만 Profiler UI의 프로세스에 대 한 언어에 요구 사항 없이 이기 때문에 간결 하 고 간단한는 언어를 선택 하지 않는 이유?
 
@@ -159,7 +159,7 @@ pkgDebugSettings.EnableDebugging(packageFullName, debuggerCommandLine,
 
      여기서 `-p 1336` 가지게 프로세스 ID 1336 Windows 스토어 앱 및 `-tid 1424` 스레드 ID 1424은 일시 중단 된 스레드를 의미 합니다. 더미 디버거 명령줄에서 ThreadID를 구문 분석 하 고 해당 스레드를 다시 시작 하 고 종료 됩니다.
 
-     다음은 몇 가지 예제 이렇게 하려면 c + + 코드 (오류 검사를 추가 하도록 일!).
+     다음은 몇 가지 예 C++ 이 작업을 수행 하는 코드 (오류 검사를 추가 하도록 일!).
 
     ```cpp
     int wmain(int argc, wchar_t* argv[])
@@ -346,7 +346,7 @@ Profiler DLL 때 로깅 정보가 있어야 합니다. 성능상의 이유로 �
 
 새 Windows 런타임 구성 요소 프로젝트를 만들려면 Visual Studio를 사용 하는 개발자, 하는 경우 해당 프로젝트의 빌드는 개발자가 작성 한 메타 데이터 (클래스, 인터페이스 등의 형식 설명)를 설명 하는 WinMD 파일을 생성 합니다. 이 프로젝트는 C# 또는 VB로 작성 된 관리 되는 언어 프로젝트를 하는 경우 WinMD 파일 또한 즉 개발자의 소스 코드에서 컴파일된 모든 IL을 포함 하는 해당 형식의 구현을 포함 합니다. 이러한 파일을 관리 되는 WinMD 파일 이라고 합니다. Windows 런타임 메타 데이터와 기본 구현이 모두 포함에 흥미로운 일입니다.
 
-반면, 개발자가 c + + Windows 런타임 구성 요소 프로젝트를 만든, 해당 프로젝트의 빌드 메타 데이터만 포함 하는 WinMD 파일을 생성 및 구현을 별도 네이티브 DLL로 컴파일됩니다. 마찬가지로, Windows SDK에서 제공 되는 WinMD 파일 Windows의 일부로 제공 되는 별도 네이티브 Dll로 컴파일된 구현과 메타 데이터만 포함 합니다.
+반대로, 개발자는 Windows 런타임 구성 요소 프로젝트를 만듭니다 C++, 해당 프로젝트의 빌드 메타 데이터만 포함 하는 WinMD 파일을 생성 및 구현을 별도 네이티브 DLL로 컴파일됩니다. 마찬가지로, Windows SDK에서 제공 되는 WinMD 파일 Windows의 일부로 제공 되는 별도 네이티브 Dll로 컴파일된 구현과 메타 데이터만 포함 합니다.
 
 아래 정보는 메타 데이터만 포함 하는 관리 되지 않는 Winmd 메타 데이터 및 구현에 포함 하는 관리 되는 Winmd 모두에 적용 됩니다.
 

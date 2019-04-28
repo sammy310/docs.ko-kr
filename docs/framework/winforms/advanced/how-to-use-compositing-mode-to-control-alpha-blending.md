@@ -10,20 +10,20 @@ helpviewer_keywords:
 - colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
 ms.openlocfilehash: 15cb111a68cedaec011e88fa4916c292786d16b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779043"
 ---
 # <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>방법: 혼합 모드를 사용하여 알파 혼합 조절
 다음 특성을 가진 오프 스크린 비트맵을 만들려고 하는 상황이 있을 수 있습니다.  
   
--   색의 알파 값을 255 보다 작은 경우  
+- 색의 알파 값을 255 보다 작은 경우  
   
--   색은 알파 비트맵을 만들 때 서로 혼합 합니다.  
+- 색은 알파 비트맵을 만들 때 서로 혼합 합니다.  
   
--   완성 된 비트맵을 표시 하는 경우 비트맵 색 디스플레이 장치에서 배경 색과 혼합 된 알파가입니다.  
+- 완성 된 비트맵을 표시 하는 경우 비트맵 색 디스플레이 장치에서 배경 색과 혼합 된 알파가입니다.  
   
  이러한 비트맵을 만들려면 빈 생성 <xref:System.Drawing.Bitmap> 개체를 생성 한 다음는 <xref:System.Drawing.Graphics> 해당 비트맵을 기반으로 하는 개체입니다. 혼합 모드를 설정 합니다 <xref:System.Drawing.Graphics> 개체를 <xref:System.Drawing.Drawing2D.CompositingMode.SourceCopy?displayProperty=nameWithType>입니다.  
   

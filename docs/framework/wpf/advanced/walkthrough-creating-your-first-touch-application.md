@@ -11,11 +11,11 @@ helpviewer_keywords:
 - creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
 ms.openlocfilehash: 53ae737394d76d9f293f6e03fbf04cbb46d2adbb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778822"
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>연습: 첫 번째 터치 애플리케이션 만들기
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램이 터치에 응답할 수 있습니다. 예를 들어, 하나를 사용 하 여 응용 프로그램을 조작할 수 있습니다 또는이 연습에서는 사용자가 이동할 수 있는 응용 프로그램을 만듭니다 원하는 터치 스크린과 같은 터치 감지 장치에서 손가락을 크기를 조정 하거나 터치를 사용 하 여 단일 개체를 회전 합니다.  
@@ -23,9 +23,9 @@ ms.locfileid: "59326985"
 ## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
--   Visual Studio.  
+- Visual Studio.  
   
--   Windows Touch를 지 원하는 터치 스크린과 같은 터치식 입력을 허용 하는 장치입니다.  
+- Windows Touch를 지 원하는 터치 스크린과 같은 터치식 입력을 허용 하는 장치입니다.  
   
  또한 응용 프로그램을 만드는 방법의 기본적인 이해를 해야 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], 특히 구독 하 고 이벤트를 처리 하는 방법입니다. 자세한 내용은 [연습: 내 첫 WPF 데스크톱 응용 프로그램](../getting-started/walkthrough-my-first-wpf-desktop-application.md)합니다.  
   
@@ -73,11 +73,11 @@ ms.locfileid: "59326985"
 ## <a name="testing-the-application"></a>애플리케이션 테스트
  응용 프로그램을 테스트 하려면 다음 조작을 시도 합니다. 동시에 다음 중 하나 이상 수행할 수 있습니다 note 합니다.
 
--   이동 하는 <xref:System.Windows.Shapes.Rectangle>, 위에 손가락을 놓고는 <xref:System.Windows.Shapes.Rectangle> 화면에서 손가락을 이동 하 고 합니다.
+- 이동 하는 <xref:System.Windows.Shapes.Rectangle>, 위에 손가락을 놓고는 <xref:System.Windows.Shapes.Rectangle> 화면에서 손가락을 이동 하 고 합니다.
 
--   크기를 조정 하려면 합니다 <xref:System.Windows.Shapes.Rectangle>에 두 손가락을 배치를 <xref:System.Windows.Shapes.Rectangle> 더 가깝게 또는 멀리 움직여 다른 손가락 이동 합니다.
+- 크기를 조정 하려면 합니다 <xref:System.Windows.Shapes.Rectangle>에 두 손가락을 배치를 <xref:System.Windows.Shapes.Rectangle> 더 가깝게 또는 멀리 움직여 다른 손가락 이동 합니다.
 
--   회전 하는 <xref:System.Windows.Shapes.Rectangle>에 두 손가락을 배치 합니다 <xref:System.Windows.Shapes.Rectangle> 손가락을 서로 회전 및 합니다.
+- 회전 하는 <xref:System.Windows.Shapes.Rectangle>에 두 손가락을 배치 합니다 <xref:System.Windows.Shapes.Rectangle> 손가락을 서로 회전 및 합니다.
 
  관성 시킬 이전 조작을 수행 하면 화면에서 손가락을 발생 신속 하 게 합니다. <xref:System.Windows.Shapes.Rectangle> 이동, 크기 조정 또는 중지 하기 전에 몇 초간 회전 계속 됩니다.
 

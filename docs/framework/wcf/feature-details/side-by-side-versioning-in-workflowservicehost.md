@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 60887eed-df40-4412-b812-41e1dd329d15
 ms.openlocfilehash: 3f180fa115453be86fa5f99fbabb776eb7198623
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747942"
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>WorkflowServiceHost에서 Side-by-side 버전 관리
 <xref:System.ServiceModel.Activities.WorkflowServiceHost>에 소개된 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] side-by-side 버전 관리는 단일 엔드포인트에서 여러 버전의 워크플로 서비스를 호스팅하는 기능을 제공합니다. 제공된 side-by-side 기능을 사용하여 워크플로 서비스를 구성할 수 있습니다. 그러면 기존 정의를 사용하여 실행 중인 인스턴스를 완료하는 동시에, 새 워크플로 정의를 사용하여 워크플로 서비스의 새 인스턴스를 만들 수 있습니다. 이 항목에서는 <xref:System.ServiceModel.Activities.WorkflowServiceHost>를 사용하는 워크플로 서비스 side-by-side 실행에 대해 대략적으로 설명합니다.  
@@ -27,21 +27,21 @@ ms.locfileid: "58465869"
 ### <a name="rules-for-hosting-multiple-versions-of-a-workflow-service"></a>워크플로 서비스의 여러 버전 호스팅에 대한 규칙  
  사용자가 <xref:System.ServiceModel.Activities.WorkflowServiceHost>에 추가 버전을 추가할 경우 동일한 엔드포인트 및 설명 집합을 사용하여 워크플로 서비스를 호스팅하려면 몇 가지 조건을 충족해야 합니다. 추가 버전 중 하나라도 이러한 조건을 충족하지 못하면 <xref:System.ServiceModel.Activities.WorkflowServiceHost>이 호출될 때 `Open`에서 예외를 throw합니다. 호스트에 추가 버전으로 제공된 각 워크플로 정의는 다음 요구사항을 충족해야 합니다(주 버전은 호스트 생성자에 제공된 워크플로 서비스 정의임). 추가 워크플로 버전은 다음 조건을 충족해야 합니다.  
   
--   워크플로 서비스의 주 버전과 <xref:System.ServiceModel.Activities.WorkflowService.Name%2A>이 동일해야 합니다.  
+- 워크플로 서비스의 주 버전과 <xref:System.ServiceModel.Activities.WorkflowService.Name%2A>이 동일해야 합니다.  
   
--   <xref:System.ServiceModel.Activities.Receive>에 주 버전에 없는 <xref:System.ServiceModel.Activities.SendReply> 또는 <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> 작업이 없어야 하며 작업 계약과 일치해야 합니다.  
+- <xref:System.ServiceModel.Activities.Receive>에 주 버전에 없는 <xref:System.ServiceModel.Activities.SendReply> 또는 <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> 작업이 없어야 하며 작업 계약과 일치해야 합니다.  
   
--   고유한 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>가 있어야 합니다. 하나의 워크플로 정의만 `null`<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>를 가질 수 있습니다.  
+- 고유한 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>가 있어야 합니다. 하나의 워크플로 정의만 `null`<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>를 가질 수 있습니다.  
   
  일부 변경 내용은 허용됩니다. 다음 항목은 버전간 다를 수 있습니다.  
   
--   <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>는 주 버전과 Name 및 Package가 다를 수 있습니다.  
+- <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>는 주 버전과 Name 및 Package가 다를 수 있습니다.  
   
--   <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A> 값은 주 버전과 다를 수 있습니다.  
+- <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A> 값은 주 버전과 다를 수 있습니다.  
   
--   <xref:System.ServiceModel.Activities.WorkflowService.ConfigurationName%2A>은 주 버전과 다를 수 있습니다.  
+- <xref:System.ServiceModel.Activities.WorkflowService.ConfigurationName%2A>은 주 버전과 다를 수 있습니다.  
   
--   <xref:System.ServiceModel.Activities.WorkflowService.ImplementedContracts%2A>은 주 버전과 다를 수 있습니다.  
+- <xref:System.ServiceModel.Activities.WorkflowService.ImplementedContracts%2A>은 주 버전과 다를 수 있습니다.  
   
 ### <a name="configuring-the-definitionidentity"></a>DefinitionIdentity 구성  
  워크플로 디자이너를 사용 하 여 워크플로 서비스를 만들 때 합니다 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> 를 사용 하 여 설정 됩니다는 **속성** 창. 워크플로 서비스를 선택 하 고 선택 디자이너에서 서비스의 루트 활동의 바깥쪽을 클릭 **속성 창** 에서 합니다 **보기** 메뉴. 선택 **WorkflowIdentity** 옆에 나타나는 드롭다운 목록에서 합니다 **DefinitionIdentity** 속성을 확장 한 다음 및 원하는 지정 <xref:System.Activities.WorkflowIdentity> 속성입니다. 다음 예제에서는 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> 로 구성 되어 합니다 <xref:System.Activities.WorkflowIdentity.Name%2A> `MortgageWorkflow` 및 <xref:System.Activities.WorkflowIdentity.Version%2A> 의 `1.0.0.0`합니다. <xref:System.Activities.WorkflowIdentity.Package%2A>는 선택 사항이며 이 예에서는 `null`입니다.  

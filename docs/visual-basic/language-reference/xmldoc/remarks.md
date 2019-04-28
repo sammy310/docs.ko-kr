@@ -6,11 +6,11 @@ helpviewer_keywords:
 - remarks XML tag
 ms.assetid: c6241773-a7ed-41c9-9a8b-9722a0c606a9
 ms.openlocfilehash: c5c088472ae09a416953d9c0829cad1cb48646b8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940818"
 ---
 # <a name="remarks-visual-basic"></a>\<설명 > (Visual Basic)
 멤버에 대 한 설명 부분을 지정합니다.  

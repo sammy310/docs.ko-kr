@@ -3,11 +3,11 @@ title: 215 - MessageReceivedByTransport
 ms.date: 03/30/2017
 ms.assetid: bb32aa60-5207-4711-9f08-110e8ac327e5
 ms.openlocfilehash: a8ba90b88ef8dbe3c8651bc565da61aae16a0a4a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781838"
 ---
 # <a name="215---messagereceivedbytransport"></a>215 - MessageReceivedByTransport
 ## <a name="properties"></a>속성  
@@ -33,5 +33,5 @@ ms.locfileid: "33460905"
 |데이터 항목 이름|데이터 항목 형식|설명|  
 |--------------------|--------------------|-----------------|  
 |Listen Address|`xs:string`|메시지를 받은 주소입니다.|  
-|HostReference|`xs:string`|웹 호스팅 서비스의 경우 이 필드는 웹 계층의 서비스를 고유하게 식별합니다. 해당 형식으로 정의 됩니다 ' 웹 Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'. 예: ' 기본 웹 사이트/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'.|  
+|HostReference|`xs:string`|웹 호스팅 서비스의 경우 이 필드는 웹 계층의 서비스를 고유하게 식별합니다. 해당 형식으로 정의 됩니다 ' Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'. 예제: 'Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'.|  
 |AppDomain|`xs:string`|AppDomain.CurrentDomain.FriendlyName에서 반환되는 문자열입니다.|

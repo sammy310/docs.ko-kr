@@ -10,11 +10,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], comment
 ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
 ms.openlocfilehash: 149bbac6d301a9c2f166d05698e3780171126cb3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938647"
 ---
 # <a name="xml-comment-literal-visual-basic"></a>XML 주석 리터럴(Visual Basic)
 리터럴 나타내는 <xref:System.Xml.Linq.XComment> 개체입니다.  
@@ -39,9 +39,9 @@ ms.locfileid: "58827278"
 ## <a name="remarks"></a>설명  
  XML 주석 리터럴 문서 콘텐츠가 없습니다. 문서에 대 한 정보가 있습니다. XML 주석 섹션을 순서 "-->"로 끝납니다. 이 다음 사항을 의미 합니다.  
   
--   포함된 식 구분 기호는 유효한 XML 주석 콘텐츠 때문에 XML 주석 리터럴에 포함된 식을 사용할 수 없습니다.  
+- 포함된 식 구분 기호는 유효한 XML 주석 콘텐츠 때문에 XML 주석 리터럴에 포함된 식을 사용할 수 없습니다.  
   
--   XML 주석 섹션 중첩 될 수 없으므로 있으므로 `content` "-->" 값을 포함할 수 없습니다.  
+- XML 주석 섹션 중첩 될 수 없으므로 있으므로 `content` "-->" 값을 포함할 수 없습니다.  
   
  XML 주석 리터럴에 변수에 할당할 수 있습니다 또는 XML 요소 리터럴에 포함할 수 있습니다.  
   

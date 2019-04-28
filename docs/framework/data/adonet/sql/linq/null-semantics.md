@@ -3,11 +3,11 @@ title: Null 의미 체계
 ms.date: 03/30/2017
 ms.assetid: a97017ae-d634-4cf3-bbaf-054a528fd683
 ms.openlocfilehash: eb1e96ba44c5d64e8366a654c2d06d89c9b46c9a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767542"
 ---
 # <a name="null-semantics"></a>Null 의미 체계
 다음 표에서 다양 한 부분에 대 한 링크를 제공 합니다 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 설명서 위치 `null` (`Nothing` Visual basic에서) 문제에 설명 합니다.  

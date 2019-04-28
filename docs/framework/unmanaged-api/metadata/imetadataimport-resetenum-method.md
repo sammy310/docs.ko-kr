@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 143b11f0a99081b7d49bfbb68b635d92cf1e9ba3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777431"
 ---
 # <a name="imetadataimportresetenum-method"></a>IMetaDataImport::ResetEnum 메서드
 지정한 열거자를 지정한 위치로 다시 설정합니다.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - programming [WF], designing workflows
 ms.assetid: 41f727b5-b142-4c1b-b046-492b96135ae6
 ms.openlocfilehash: a6624b06d9bdb4523cec5c98a199835bf55d9fd4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774038"
 ---
 # <a name="designing-workflows"></a>워크플로 디자인
 이 단원의 항목에서는 워크플로 개발에 사용되는 흐름 제어 패러다임에 대해 설명합니다.  

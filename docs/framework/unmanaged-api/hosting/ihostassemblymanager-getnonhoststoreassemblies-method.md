@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ae9a8e9e26f05675611ac4c6acd8ecfe5704b0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760196"
 ---
 # <a name="ihostassemblymanagergetnonhoststoreassemblies-method"></a>IHostAssemblyManager::GetNonHostStoreAssemblies 메서드
 한 인터페이스 포인터를 가져옵니다는 [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) 호스트에서 예상 하는 CLR (공용 언어 런타임)를 로드 하는 어셈블리의 목록을 나타내는입니다.  
@@ -54,13 +54,13 @@ HRESULT GetNonHostStoreAssemblies (
 ## <a name="remarks"></a>설명  
  다음 지침을 사용 하 여 참조를 확인 하는 CLR:  
   
--   반환 하는 어셈블리 참조의 목록을 확인 먼저 `GetNonHostStoreAssemblies`합니다.  
+- 반환 하는 어셈블리 참조의 목록을 확인 먼저 `GetNonHostStoreAssemblies`합니다.  
   
--   어셈블리 목록에 있으면 CLR에 정상적으로 바인딩합니다.  
+- 어셈블리 목록에 있으면 CLR에 정상적으로 바인딩합니다.  
   
--   어셈블리 목록에 나타나지 않습니다 하 고 호스트의 구현을 제공 했습니다 [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md), CLR 호출 [ihostassemblystore:: Provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) 호스트가 제공 하는 바인딩할 어셈블리입니다.  
+- 어셈블리 목록에 나타나지 않습니다 하 고 호스트의 구현을 제공 했습니다 [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md), CLR 호출 [ihostassemblystore:: Provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) 호스트가 제공 하는 바인딩할 어셈블리입니다.  
   
--   그렇지 않으면 CLR 어셈블리에 바인딩할 실패 합니다.  
+- 그렇지 않으면 CLR 어셈블리에 바인딩할 실패 합니다.  
   
  호스트 설정 하는 경우 `ppReferenceList` null이 고, CLR 첫 번째 프로브를 전역 어셈블리 캐시에는 다음과 같이 호출 됩니다. `ProvideAssembly`, 및 다음 어셈블리 참조를 확인 하는 응용 프로그램 기준 위치를 프로브 합니다.  
   

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: 650b5eb6-c71d-4dc1-8b64-b6beaf752114
 ms.openlocfilehash: a09c81b2d0f052884e8e54c899653a6f0e038aff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765624"
 ---
 # <a name="entity-framework-provider-wcf-data-services"></a>Entity Framework 공급자(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]와 마찬가지로 ADO.NET Entity Framework는 엔터티-관계 모델의 한 형식인 엔터티 데이터 모델을 기반으로 합니다. Entity Framework 변환 이라고 하는 엔터티 데이터 모델의 구현에 대 한 작업을 *개념적 모델*, 데이터 원본에 대 한 동등한 작업으로 합니다. 따라서 Entity Framework는 관계형 데이터를 기반으로 하는 데이터 서비스에 적합한 공급자이며, Entity Framework를 지원하는 데이터 공급자가 있는 모든 데이터베이스를 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]와 함께 사용할 수 있습니다. 현재 Entity Framework를 지 원하는 데이터 원본의 목록을 보려면 참조 [Entity Framework 용 타사 공급자](https://go.microsoft.com/fwlink/?LinkId=143699)합니다.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - literals [Visual Basic], XML
 ms.assetid: 37987c15-4ab8-471b-bd45-399816bfb57f
 ms.openlocfilehash: a7b70669131ae35135088418e4b33b3ae289d322
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761756"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>XML 리터럴 개요(Visual Basic)
 *XML 리터럴* Visual Basic 코드에 직접 XML을 통합할 수 있습니다. XML 리터럴 구문을 나타내는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 개체 되며 XML 1.0 구문과 비슷합니다. 이렇게 하면 쉽게 코드에 동일한 최종 XML 구조 때문에 XML 요소와 문서를 프로그래밍 방식으로 만들 수 있습니다.  

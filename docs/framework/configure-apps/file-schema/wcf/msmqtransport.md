@@ -3,11 +3,11 @@ title: <msmqTransport>
 ms.date: 03/30/2017
 ms.assetid: 19d89f35-76ac-49dc-832b-e8bec2d5e33b
 ms.openlocfilehash: 9bdaccd6183bc4ea58ed610b58aceddcb6ba0351
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772426"
 ---
 # <a name="msmqtransport"></a>\<msmqTransport>
 이 전송이 사용자 지정 바인딩에 포함되면 MSMQ 전송에서 채널이 메시지를 전송하도록 합니다.  

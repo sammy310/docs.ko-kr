@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 98bce126-18a9-401b-b20d-67ee462a5f8a
 author: BrucePerlerMS
 ms.openlocfilehash: 980d0c6dca9b0b5fadf2d4a841e4c95a9acaff52
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780083"
 ---
 # <a name="wif-session-management"></a>WIF 세션 관리
 클라이언트는 신뢰 당사자에 호스트된 보호된 리소스에 처음 액세스를 시도할 때 먼저 신뢰 당사자에 의해 신뢰된 STS(보안 토큰 서비스)에 인증해야 합니다. 그런 다음 STS는 클라이언트에 보안 토큰을 발급합니다. 클라이언트가 신뢰 당사자에게 이 토큰을 제공하면 신뢰 당사자가 보호된 리소스에 대한 액세스를 클라이언트에 부여합니다. 그러나 동일한 컴퓨터 또는 신뢰 당사자와 동일한 도메인에 없을 수도 있기 때문에 클라이언트가 각 요청에 대해 STS에 다시 인증할 필요가 없기를 바랍니다. 대신 WIF(Windows Identity Foundation)에서는 클라이언트 및 신뢰 당사자가 세션을 설정하고, 세션 중에 클라이언트는 첫 번째 요청 이후의 모든 요청에 대해 세션 보안 토큰을 사용하여 신뢰 당사자에 인증합니다. 신뢰 당사자는 쿠키 안에 저장된 이 세션 보안 토큰을 사용하여 클라이언트의 <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType>을 다시 구성할 수 있습니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "49122788"
  새 세션 토큰이 원래 세션 토큰의 세션 ID로 발급된 경우 <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler?displayProperty=nameWithType>는 토큰 캐시의 세션 토큰을 업데이트하지 않습니다. 항상 고유한 세션 ID로 세션 토큰을 인스턴스화해야 합니다.  
   
 > [!NOTE]
->  Session.SecurityTokenHandler.ReadToken은 잘못된 입력을 수신할 경우 <xref:System.Xml.XmlException> 예외를 throw합니다. 예를 들어 세션 토큰을 포함하는 쿠키가 손상된 경우입니다. 이 예외를 catch하고 응용 프로그램별 동작을 제공하는 것이 좋습니다.  
+>  Session.SecurityTokenHandler.ReadToken은 잘못된 입력을 수신할 경우 <xref:System.Xml.XmlException> 예외를 throw합니다. 예를 들어 세션 토큰을 포함하는 쿠키가 손상된 경우입니다. 이 예외를 catch하고 애플리케이션별 동작을 제공하는 것이 좋습니다.  
   
  보호된 웹 페이지에 보호된 도메인에도 있는 많은 리소스(예: 작은 그래픽)가 포함되어 있을 경우 클라이언트는 각 리소스를 다운로드하기 위해 신뢰 당사자에 다시 인증해야 합니다. 세션 인증 토큰을 사용하면 각 요청에 대해 STS에 인증할 필요가 없지만 여전히 많은 쿠키가 전송되고 있음을 의미합니다. 미러 항목이 보호되지 않은 도메인에 저장되고 기본 웹 페이지에서 연결되는 동안 중요한 데이터와 리소스가 보호된 도메인에 저장되도록 웹 페이지를 설정하는 것이 좋습니다. 또한 보호된 도메인만 참조하도록 쿠키 경로를 설정합니다.  
   

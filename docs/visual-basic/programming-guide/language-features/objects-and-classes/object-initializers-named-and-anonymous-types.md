@@ -11,11 +11,11 @@ helpviewer_keywords:
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
 ms.openlocfilehash: 6602a68555e37bf793ba41076ba8f484b4a0dbc3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760755"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>개체 이니셜라이저: 명명 된 형식과 익명 형식 (Visual Basic)
 개체 이니셜라이저를 사용 하는 단일 식을 사용 하 여 복잡 한 개체에 대 한 속성을 지정할 수 있습니다. 명명 된 형식 및 무명 형식의 인스턴스를 만드는 데 사용할 수 있습니다.  
@@ -63,11 +63,11 @@ ms.locfileid: "58821372"
   
 ### <a name="remarks-about-named-types"></a>명명 된 형식에 대 한 설명  
   
--   개체 이니셜라이저 목록에서 여러 번 클래스 멤버를 초기화할 수 없습니다. 선언의 `cust7` 오류가 발생 합니다.  
+- 개체 이니셜라이저 목록에서 여러 번 클래스 멤버를 초기화할 수 없습니다. 선언의 `cust7` 오류가 발생 합니다.  
   
      [!code-vb[VbVbalrObjectInit#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#9)]  
   
--   자신 또는 다른 필드를 초기화 하는 멤버를 사용할 수 있습니다. 이 초기화 되었으면 다음 선언 에서처럼 전에 멤버에 액세스 하는 경우 `cust8`, 기본 값이 사용 됩니다. 개체 이니셜라이저를 사용 하는 선언을 처리 되 면 가장 먼저 발생 하는 적절 한 생성자가 호출 해야 합니다. 그런 다음 이니셜라이저 목록에서 개별 필드 초기화 됩니다. 다음 예제에서는 기본값이 `Name` 에 대해 할당 `cust8`, 초기화 된 값에 할당 됩니다 `cust9`합니다.  
+- 자신 또는 다른 필드를 초기화 하는 멤버를 사용할 수 있습니다. 이 초기화 되었으면 다음 선언 에서처럼 전에 멤버에 액세스 하는 경우 `cust8`, 기본 값이 사용 됩니다. 개체 이니셜라이저를 사용 하는 선언을 처리 되 면 가장 먼저 발생 하는 적절 한 생성자가 호출 해야 합니다. 그런 다음 이니셜라이저 목록에서 개별 필드 초기화 됩니다. 다음 예제에서는 기본값이 `Name` 에 대해 할당 `cust8`, 초기화 된 값에 할당 됩니다 `cust9`합니다.  
   
      [!code-vb[VbVbalrObjectInit#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#10)]  
   
@@ -75,17 +75,17 @@ ms.locfileid: "58821372"
   
      [!code-vb[VbVbalrObjectInit#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#11)]  
   
--   개체 이니셜라이저를 중첩할 수 있습니다. 다음 예에서 `AddressClass` 는 두 개의 속성이 있는 클래스 `City` 하 고 `State`, 및 `Customer` 클래스에는 `Address` 인스턴스의 속성 `AddressClass`합니다.  
+- 개체 이니셜라이저를 중첩할 수 있습니다. 다음 예에서 `AddressClass` 는 두 개의 속성이 있는 클래스 `City` 하 고 `State`, 및 `Customer` 클래스에는 `Address` 인스턴스의 속성 `AddressClass`합니다.  
   
      [!code-vb[VbVbalrObjectInit#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#12)]  
   
--   초기화 목록을 비워 둘 수 없습니다.  
+- 초기화 목록을 비워 둘 수 없습니다.  
   
--   초기화 되는 인스턴스 개체 형식일 수 없습니다.  
+- 초기화 되는 인스턴스 개체 형식일 수 없습니다.  
   
--   초기화 되는 클래스 멤버는 공유 멤버, 읽기 전용 멤버, 상수 또는 메서드 호출 일 수 없습니다.  
+- 초기화 되는 클래스 멤버는 공유 멤버, 읽기 전용 멤버, 상수 또는 메서드 호출 일 수 없습니다.  
   
--   초기화 되는 클래스 멤버는 인덱싱된 하거나 정규화 될 수 없습니다. 다음 예제에서는 컴파일러 오류가 발생 합니다.  
+- 초기화 되는 클래스 멤버는 인덱싱된 하거나 정규화 될 수 없습니다. 다음 예제에서는 컴파일러 오류가 발생 합니다.  
   
      `'' Not valid.`  
   
@@ -109,19 +109,19 @@ ms.locfileid: "58821372"
   
 ### <a name="remarks-about-anonymous-types"></a>익명 형식에 대 한 설명  
   
--   일반적으로 무명 형식 선언에서 속성의 전체 또는 대부분 됩니다 키워드를 입력 하 여 표시 된 키 속성을 `Key` 속성 이름 앞에 있습니다.  
+- 일반적으로 무명 형식 선언에서 속성의 전체 또는 대부분 됩니다 키워드를 입력 하 여 표시 된 키 속성을 `Key` 속성 이름 앞에 있습니다.  
   
      [!code-vb[VbVbalrObjectInit#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#14)]  
   
      키 속성에 대 한 자세한 내용은 참조 하세요. [키](../../../../visual-basic/language-reference/modifiers/key.md)합니다.  
   
--   명명 된 형식과 마찬가지로, 이니셜라이저 목록 하나 이상의 속성을 선언 해야 하는 익명 형식 정의 대 한 합니다.  
+- 명명 된 형식과 마찬가지로, 이니셜라이저 목록 하나 이상의 속성을 선언 해야 하는 익명 형식 정의 대 한 합니다.  
   
      [!code-vb[VbVbalrObjectInit#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#2)]  
   
--   무명 형식의 인스턴스를 선언할 때 컴파일러는 일치 하는 익명 형식 정의 생성 합니다. 이름 및 속성의 데이터 형식을 인스턴스 선언에서 이동 하 고 정의에 컴파일러에 의해 포함 됩니다. 속성 없습니다 명명 되 고 명명 된 형식에 대 한 것 처럼 미리 정의 합니다. 해당 형식이 유추 됩니다. 속성의 데이터 형식을 사용 하 여 지정할 수 없습니다는 `As` 절.  
+- 무명 형식의 인스턴스를 선언할 때 컴파일러는 일치 하는 익명 형식 정의 생성 합니다. 이름 및 속성의 데이터 형식을 인스턴스 선언에서 이동 하 고 정의에 컴파일러에 의해 포함 됩니다. 속성 없습니다 명명 되 고 명명 된 형식에 대 한 것 처럼 미리 정의 합니다. 해당 형식이 유추 됩니다. 속성의 데이터 형식을 사용 하 여 지정할 수 없습니다는 `As` 절.  
   
--   익명 형식 이름 및 해당 속성의 값을 여러 가지 방법으로 설정할 수 있습니다. 예를 들어, 무명 형식 속성 이름 및 값의 변수 이름 및 다른 개체의 속성 값을 걸릴 수 있습니다.  
+- 익명 형식 이름 및 해당 속성의 값을 여러 가지 방법으로 설정할 수 있습니다. 예를 들어, 무명 형식 속성 이름 및 값의 변수 이름 및 다른 개체의 속성 값을 걸릴 수 있습니다.  
   
      [!code-vb[VbVbalrObjectInit#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#15)]  
   

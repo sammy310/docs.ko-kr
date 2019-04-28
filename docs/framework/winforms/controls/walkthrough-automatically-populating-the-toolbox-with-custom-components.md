@@ -7,33 +7,33 @@ helpviewer_keywords:
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
 ms.openlocfilehash: 6ecf69350b8337dc6049b73251809192b47dc2fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759910"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>연습: 사용자 지정 구성 요소로 도구 상자 자동 채우기
 구성 요소는 현재 열려 있는 솔루션의 프로젝트에서 정의 된 경우는 자동으로 나타나는 합니다 **도구 상자**, 작업이 사용자가 필요 하지 않습니다. 채울 수도 있습니다는 **도구 상자** 사용 하 여 사용자 지정 구성 요소를 사용 하 여 합니다 [선택 도구 상자 항목 대화 상자 (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100)), 하지만 **도구 상자** 고려 솔루션에 있는 항목의 다음 특성을 모두 사용 하 여 출력을 빌드하십시오.  
   
--   구현 <xref:System.ComponentModel.IComponent>;  
+- 구현 <xref:System.ComponentModel.IComponent>;  
   
--   없는 <xref:System.ComponentModel.ToolboxItemAttribute> 로 `false`;  
+- 없는 <xref:System.ComponentModel.ToolboxItemAttribute> 로 `false`;  
   
--   없는 <xref:System.ComponentModel.DesignTimeVisibleAttribute> 로 `false`합니다.  
+- 없는 <xref:System.ComponentModel.DesignTimeVisibleAttribute> 로 `false`합니다.  
   
 > [!NOTE]
 >  합니다 **도구 상자** 때문 솔루션의 프로젝트에 의해 빌드되지 않는 항목을 표시 하지 것입니다 참조 체인을 따르지 않습니다.  
   
  이 연습에서는 사용자 지정 구성 요소에 자동으로 표시 하는 방법을 보여 줍니다.는 **도구 상자** 빌드될 때 구성 요소입니다. 이 연습에서 설명하는 작업은 다음과 같습니다.  
   
--   Windows Forms 프로젝트를 만드는 중입니다.  
+- Windows Forms 프로젝트를 만드는 중입니다.  
   
--   사용자 지정 구성 요소를 만드는 중입니다.  
+- 사용자 지정 구성 요소를 만드는 중입니다.  
   
--   사용자 지정 구성 요소의 인스턴스를 만드는 중입니다.  
+- 사용자 지정 구성 요소의 인스턴스를 만드는 중입니다.  
   
--   언로드 및 사용자 지정 구성 요소를 다시 로드 합니다.  
+- 언로드 및 사용자 지정 구성 요소를 다시 로드 합니다.  
   
  완료 했으면 확인 하 게 합니다 **도구 상자** 사용자가 만든 구성 요소를 사용 하 여 채워집니다.  
   

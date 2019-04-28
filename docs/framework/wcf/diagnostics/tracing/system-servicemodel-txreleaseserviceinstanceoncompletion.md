@@ -3,11 +3,11 @@ title: System.ServiceModel.TxReleaseServiceInstanceOnCompletion
 ms.date: 03/30/2017
 ms.assetid: e167bad3-861f-43e4-9e78-9c275cf64a29
 ms.openlocfilehash: 5edde9eebf2f11ebdb55e12c2a225e55afdeb11d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779511"
 ---
 # <a name="systemservicemodeltxreleaseserviceinstanceoncompletion"></a>System.ServiceModel.TxReleaseServiceInstanceOnCompletion
 ReleaseServiceInstanceOnTransactionComplete ServiceBehaviorAttribute가 true로 설정되었으므로 '{0}' 트랜잭션이 완료될 때 서비스 인스턴스가 릴리스되었습니다.  

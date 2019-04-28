@@ -11,11 +11,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: 5d737319-0c34-4df9-a23d-188fc840becd
 ms.openlocfilehash: 651f08812032aa1c5aacc04fdb3d7f491f12b607
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784009"
 ---
 # <a name="parameter-list-visual-basic"></a>매개 변수 목록(Visual Basic)
 프로시저를 호출할 때에 필요한 매개 변수를 지정 합니다. 여러 매개 변수는 쉼표로 구분 됩니다. 다음은 하나의 매개 변수에 대 한 구문입니다.  
@@ -63,23 +63,23 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
   
 ## <a name="rules"></a>규칙  
   
--   **괄호입니다.** 매개 변수 목록을 지정 하는 경우 괄호로 묶습니다 해야 있습니다. 매개 변수가 없는 경우 빈 목록을 묶는 괄호를 여전히 사용할 수 있습니다. 이 요소는 프로시저 임을 명확히 설명 하 여 코드의 가독성을 개선 합니다.  
+- **괄호입니다.** 매개 변수 목록을 지정 하는 경우 괄호로 묶습니다 해야 있습니다. 매개 변수가 없는 경우 빈 목록을 묶는 괄호를 여전히 사용할 수 있습니다. 이 요소는 프로시저 임을 명확히 설명 하 여 코드의 가독성을 개선 합니다.  
   
--   **선택적 매개 변수입니다.** 사용 하는 경우는 `Optional` 매개 변수 한정자를 모든 후속 매개 변수 목록의 선택적 및를 사용 하 여 선언할 수는 `Optional` 한정자입니다.  
+- **선택적 매개 변수입니다.** 사용 하는 경우는 `Optional` 매개 변수 한정자를 모든 후속 매개 변수 목록의 선택적 및를 사용 하 여 선언할 수는 `Optional` 한정자입니다.  
   
      모든 선택적 매개 변수 선언을 제공 해야 합니다는 `defaultvalue` 절.  
   
      자세한 내용은 [선택적 매개 변수](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)합니다.  
   
--   **매개 변수 배열입니다.** 지정 해야 합니다 `ByVal` 에 대 한는 `ParamArray` 매개 변수입니다.  
+- **매개 변수 배열입니다.** 지정 해야 합니다 `ByVal` 에 대 한는 `ParamArray` 매개 변수입니다.  
   
      둘 다 사용할 수 없습니다 `Optional` 고 `ParamArray` 동일한 매개 변수 목록입니다.  
   
      자세한 내용은 [매개 변수 배열](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)합니다.  
   
--   **전달 메커니즘입니다.** 모든 인수에 대 한 기본 메커니즘은 `ByVal`, 프로시저를 의미 하는 내부 변수 요소를 변경할 수 없습니다. 그러나 요소 참조 형식이 면 프로시저를 수정할 수 내용이 나 기본 개체의 멤버는 대체 없거나 개체 자체를 다시 할당 하는 경우에.  
+- **전달 메커니즘입니다.** 모든 인수에 대 한 기본 메커니즘은 `ByVal`, 프로시저를 의미 하는 내부 변수 요소를 변경할 수 없습니다. 그러나 요소 참조 형식이 면 프로시저를 수정할 수 내용이 나 기본 개체의 멤버는 대체 없거나 개체 자체를 다시 할당 하는 경우에.  
   
--   **매개 변수 이름입니다.** 매개 변수의 데이터 형식 배열인 경우에 따라 `parametername` 괄호 바로 뒤에 있습니다. 매개 변수 이름에 대 한 자세한 내용은 참조 하세요. [선언 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다.  
+- **매개 변수 이름입니다.** 매개 변수의 데이터 형식 배열인 경우에 따라 `parametername` 괄호 바로 뒤에 있습니다. 매개 변수 이름에 대 한 자세한 내용은 참조 하세요. [선언 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다.  
   
 ## <a name="example"></a>예제  
  다음 예제와 `Function` 두 매개 변수를 정의 하는 프로시저입니다.  

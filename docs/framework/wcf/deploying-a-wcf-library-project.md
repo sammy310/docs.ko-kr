@@ -3,11 +3,11 @@ title: WCF 라이브러리 프로젝트 배포
 ms.date: 03/30/2017
 ms.assetid: 9f9222fe-d358-443c-9a49-12c5498e35e7
 ms.openlocfilehash: 1ba26a7e68fe262dc5f4f569647af1ebb94e03a8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785127"
 ---
 # <a name="deploying-a-wcf-library-project"></a>WCF 라이브러리 프로젝트 배포
 이 항목에서는 Windows Communication Foundation (WCF) 서비스 라이브러리 프로젝트를 배포할 수 방법을 설명 합니다.  

@@ -1,18 +1,18 @@
 ---
-title: '방법: FrameworkElement의 크기에 애니메이션 효과 적용'
+title: '방법: FrameworkElement의 크기에 애니메이션 효과 주기'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], FrameworkElement size
 - FrameworkElement [WPF], animating size of
 ms.assetid: d4cd5a13-c20d-4a6f-a2ba-14f2c9ce4cef
 ms.openlocfilehash: d1995deec5ab2c9bf405911af43b4d242d599119
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776911"
 ---
-# <a name="how-to-animate-the-size-of-a-frameworkelement"></a>방법: FrameworkElement의 크기에 애니메이션 효과 적용
+# <a name="how-to-animate-the-size-of-a-frameworkelement"></a>방법: FrameworkElement의 크기에 애니메이션 효과 주기
 크기에 애니메이션 효과를 <xref:System.Windows.FrameworkElement>, 애니메이션을 적용할 수 있거나 해당 <xref:System.Windows.FrameworkElement.Width%2A> 하 고 <xref:System.Windows.FrameworkElement.Height%2A> 속성 또는 애니메이션된을 사용 하 여 <xref:System.Windows.Media.ScaleTransform>입니다.  
   
  다음 예제에서 이러한 두 가지 방법을 사용 하 여 두 단추의 크기에 애니메이션을 적용 합니다. 애니메이션을 통해 하나의 단추 크기가 해당 <xref:System.Windows.FrameworkElement.Width%2A> 속성과 다른 애니메이션으로 크기가 조정 됩니다는 <xref:System.Windows.Media.ScaleTransform> 적용할 해당 <xref:System.Windows.UIElement.RenderTransform%2A> 속성입니다. 각 단추에는 몇 가지 텍스트가 포함 됩니다. 처음에 텍스트가 표시 되는 두 단추에서 동일 있지만 두 번째 단추의 텍스트를 왜곡 단추 크기를 조정 하는 대로 합니다.  

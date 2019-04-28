@@ -3,20 +3,20 @@ title: 응용 프로그램 구성
 ms.date: 03/30/2017
 ms.assetid: a2f995b0-669d-4721-b00f-4561ec7eb6a4
 ms.openlocfilehash: 94bf5f4bbee8bb8bb462c4bf91be75d1627ec567
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784997"
 ---
 # <a name="configuring-your-application"></a>응용 프로그램 구성
 Windows Communication Foundation (WCF).NET 구성 시스템을 사용 하 고 컴퓨터 및 응용 프로그램 범위에서 서비스를 구성할 수 있습니다.  
   
  WCF에서 정의한 구성 설정은 `<system.serviceModel>` 섹션 그룹입니다. WCF 서비스를 구성 하는 방법에 대 한 자세한 내용은 다음 항목을 참조 하세요.  
   
--   [서비스 구성](../../../../docs/framework/wcf/configuring-services.md)  
+- [서비스 구성](../../../../docs/framework/wcf/configuring-services.md)  
   
--   [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
+- [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
   
  응용 프로그램에서 정의한 구성 설정은 `<appSettings>` 섹션 그룹에 정의되어 있습니다. .NET 구성 파일에서 응용 프로그램 설정에 대 한 자세한 내용은 참조 하세요. [ \<appSettings >](https://go.microsoft.com/fwlink/?LinkId=95159)합니다.  
   

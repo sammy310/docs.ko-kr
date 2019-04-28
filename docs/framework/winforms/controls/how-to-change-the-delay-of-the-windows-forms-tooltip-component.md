@@ -11,11 +11,11 @@ helpviewer_keywords:
 - examples [Windows Forms], tooltips
 ms.assetid: 08979ba7-dd84-477b-ab17-8d06e759be99
 ms.openlocfilehash: cf257cccd272c16c3d7c3d403456265444fc8ac8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781240"
 ---
 # <a name="how-to-change-the-delay-of-the-windows-forms-tooltip-component"></a>방법: Windows Forms ToolTip 구성 요소의 지연 변경
 Windows Forms에 대해 설정할 수 있는 지연 값이 여러 개 <xref:System.Windows.Forms.ToolTip> 구성 요소입니다. 이러한 모든 속성에 대 한 측정 단위 시간 (밀리초)입니다. <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> 속성 표시할 도구 설명 문자열에 대 한 연결된 된 컨트롤에서 사용자를 가리켜야 기간을 결정 합니다. <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> 속성 간 한 도구 설명이 연결 된 컨트롤에서 마우스를 움직일 때 표시할 도구 설명 문자열의 후속 걸리는 시간 (밀리초)의 수를 설정 합니다. <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A> 속성 도구 설명 문자열이 표시 되는 시간의 길이 결정 합니다. 개별적으로 또는 값을 설정 하 여 이러한 값을 설정할 수는 <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> 속성, 속성에 할당 된 값에 따라 설정 되는 다른 지연은 <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> 속성입니다. 예를 들어, <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> N 값으로 설정 됩니다 <xref:System.Windows.Forms.ToolTip.InitialDelay%2A> N으로 설정 됩니다 <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A> 의 값으로 설정 됩니다 <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> 5로 나눈 (또는 N/5) 및 <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A> 5 번의 값에 해당 값으로 설정 됩니다는 <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> 속성 (또는 5N).  

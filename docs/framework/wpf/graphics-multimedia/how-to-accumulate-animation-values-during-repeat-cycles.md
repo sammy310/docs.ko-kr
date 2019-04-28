@@ -6,11 +6,11 @@ helpviewer_keywords:
 - animation [WPF], accumulating values across repeating cycles
 ms.assetid: 548df369-c7cc-4dab-b569-08b95ced2e7e
 ms.openlocfilehash: 4b739883322751e2df86e13bfd07249abdb10a08
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762178"
 ---
 # <a name="how-to-accumulate-animation-values-during-repeat-cycles"></a>방법: 반복 주기 동안 애니메이션 값 누적
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> 반복 주기에 대해 애니메이션 값 누적 하는 속성입니다.  
@@ -22,13 +22,13 @@ ms.locfileid: "59146018"
   
  다음 예제에서는 네 개의 사각형의 너비를 애니메이션으로이 동작을 보여 줍니다. 예제:  
   
--   사용 하 여 첫 번째 사각형에 애니메이션을 적용 <xref:System.Windows.Media.Animation.DoubleAnimation> 가져오거나 설정 합니다 <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> 속성을 `true`입니다.  
+- 사용 하 여 첫 번째 사각형에 애니메이션을 적용 <xref:System.Windows.Media.Animation.DoubleAnimation> 가져오거나 설정 합니다 <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> 속성을 `true`입니다.  
   
--   사용 하 여 두 번째 사각형에 애니메이션을 적용 <xref:System.Windows.Media.Animation.DoubleAnimation> 가져오거나 설정 합니다 <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> 속성의 기본값을 `false`입니다.  
+- 사용 하 여 두 번째 사각형에 애니메이션을 적용 <xref:System.Windows.Media.Animation.DoubleAnimation> 가져오거나 설정 합니다 <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> 속성의 기본값을 `false`입니다.  
   
--   사용 하 여 세 번째 사각형에 애니메이션을 적용 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 가져오거나 설정 합니다 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.IsCumulative%2A> 속성을 `true`입니다.  
+- 사용 하 여 세 번째 사각형에 애니메이션을 적용 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 가져오거나 설정 합니다 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.IsCumulative%2A> 속성을 `true`입니다.  
   
--   사용 하 여 마지막 사각형에 애니메이션을 적용 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 가져오거나 설정 합니다 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.IsCumulative%2A> 속성을 `false`입니다.  
+- 사용 하 여 마지막 사각형에 애니메이션을 적용 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 가져오거나 설정 합니다 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.IsCumulative%2A> 속성을 `false`입니다.  
   
  [!code-xaml[timingbehaviors_snip#IsCumulativeWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/IsCumulativeExample.xaml#iscumulativewholepage)]  
   

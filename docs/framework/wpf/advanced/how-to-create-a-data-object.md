@@ -10,11 +10,11 @@ helpviewer_keywords:
 - drag-and-drop [WPF], creating data objects
 ms.assetid: 022fa142-717d-4fea-a53c-3b52e9d91aff
 ms.openlocfilehash: deae8751518d9322e8d924a1b1fcbc20e25b35ed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776495"
 ---
 # <a name="how-to-create-a-data-object"></a>방법: 데이터 개체 만들기
 다음 예제에서는 다양 한 방법으로 제공 되는 생성자를 사용 하 여 데이터 개체 만들기를 보여 줍니다.는 <xref:System.Windows.DataObject> 클래스입니다.  

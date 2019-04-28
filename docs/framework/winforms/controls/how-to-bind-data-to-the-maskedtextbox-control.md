@@ -11,11 +11,11 @@ helpviewer_keywords:
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
 ms.openlocfilehash: ebc8eaf63c6b5280961a80ef11afb919810dbdb8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761379"
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>방법: MaskedTextBox 컨트롤에 데이터 바인딩
 데이터를 바인딩할 수 있습니다는 <xref:System.Windows.Forms.MaskedTextBox> 다른 Windows Forms 컨트롤에 같이 제어 합니다. 그러나 데이터베이스에서 데이터 형식의 마스크 정의 필요한 형식이 일치 하지 않으면, 데이터의 서식을 다시 지정 해야 합니다. 다음 절차를 사용 하 여 이렇게 하는 방법에 설명 합니다 <xref:System.Windows.Forms.Binding.Format> 및 <xref:System.Windows.Forms.Binding.Parse> 의 이벤트는 <xref:System.Windows.Forms.Binding> 클래스를 별도 전화 번호를 표시 및 편집할 수 있는 단일 필드로 확장 데이터베이스 필드를 전화 합니다.  
@@ -239,15 +239,15 @@ ms.locfileid: "59342234"
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
   
--   시각적 개체 만들기 C# 또는 Visual Basic 프로젝트입니다.  
+- 시각적 개체 만들기 C# 또는 Visual Basic 프로젝트입니다.  
   
--   추가 된 <xref:System.Windows.Forms.TextBox> 및 <xref:System.Windows.Forms.MaskedTextBox> 이전 절차에서 설명한 대로 폼에 컨트롤입니다.  
+- 추가 된 <xref:System.Windows.Forms.TextBox> 및 <xref:System.Windows.Forms.MaskedTextBox> 이전 절차에서 설명한 대로 폼에 컨트롤입니다.  
   
--   프로젝트의 기본 폼에 대 한 소스 코드 파일을 엽니다.  
+- 프로젝트의 기본 폼에 대 한 소스 코드 파일을 엽니다.  
   
--   이전 "코드" 섹션에 나와 있는 코드를 사용 하 여이 파일의 소스 코드를 대체 합니다.  
+- 이전 "코드" 섹션에 나와 있는 코드를 사용 하 여이 파일의 소스 코드를 대체 합니다.  
   
--   응용 프로그램을 컴파일합니다.  
+- 응용 프로그램을 컴파일합니다.  
   
 ## <a name="see-also"></a>참고자료
 

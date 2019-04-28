@@ -11,11 +11,11 @@ helpviewer_keywords:
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
 ms.openlocfilehash: 7eed5400744f1010cbf52dc8d3b3d0bc24aa4371
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776222"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>방법: 특정 시간에 인쇄 작업을 인쇄할 수 있는지 확인
 인쇄 대기열 항상 사용할 수 없는 하루 24 시간에 대 한 합니다. 하루 중 특정 시간에 사용할 수 없도록 설정할 수 있는 시작 및 종료 시간 속성을 갖습니다. 예를 들어, 오후 5 시 이후에 특정 부서 에서만 단독으로 사용에 대 한 프린터를 예약 합니다.이 기능은 사용할 수 있습니다. 해당 학과 사용 되는 다른 큐에서는 다른 부서에서 프린터를 처리 해야 합니다. 선호 하는 방식된 부서에 대 한 큐 수를 설정할 수 있지만 항상 사용 가능한, 다른 부서에 대 한 큐 오후 5 시 이후에 사용할 수 없게 설정할 수 됩니다.  
@@ -41,9 +41,9 @@ ms.locfileid: "59326868"
   
  합니다 **ReportQueueAndJobAvailability** 메서드를 확인 하는 경우 큐 나 인쇄 작업에 사용할 수 없는이 이번 하 여 시작 합니다. 둘 중 하나를 사용할 수 없는 경우 다음 확인 하는 경우 사용할 수 없는 큐입니다. 사용할 수 없는 경우이 팩트 및 경우 큐가 다시 사용할 수 있게 하는 경우 메서드를 보고 합니다. 그런 다음 작업을 확인 하 고 다음에 사용할 수 없는 경우 보고 될 때 범위 인쇄할 수 있는 경우. 마지막으로 메서드 작업을 인쇄할 수 때 가장 이른 시간을 보고 합니다. 이 다음 두 번 이상입니다.  
   
--   인쇄 큐가 사용할 수 있는 다음 시간입니다.  
+- 인쇄 큐가 사용할 수 있는 다음 시간입니다.  
   
--   인쇄 작업을 사용할 다음 시간입니다.  
+- 인쇄 작업을 사용할 다음 시간입니다.  
   
  하루 중 시간을 보고할 때는 <xref:System.DateTime.ToShortTimeString%2A> 메서드 호출 년, 월 및 일 출력에서이 메서드를 표시 하지 않습니다. 특정 연도, 월 또는 일 하는 인쇄 대기열 또는 인쇄 작업의 가용성을 제한할 수 없습니다.  
   

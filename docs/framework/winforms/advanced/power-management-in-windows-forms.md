@@ -9,11 +9,11 @@ helpviewer_keywords:
 - power states
 ms.assetid: ad04a801-5682-4d88-92c5-26eb9cdb209a
 ms.openlocfilehash: 6bb9b4f30a88ece93b17ff2510087b220d538738
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59154676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757653"
 ---
 # <a name="power-management-in-windows-forms"></a>Windows Forms의 전원 관리
 Windows Forms 응용 프로그램 Windows 운영 체제에서 전원 관리 기능 활용을 걸릴 수 있습니다. 응용 프로그램 컴퓨터의 전원 상태를 모니터링 하 고 상태 변경이 발생할 때 작업을 수행할 수 있습니다. 예를 들어, 응용 프로그램 휴대용 컴퓨터를 실행 하는 경우 컴퓨터의 배터리 충전량 특정 수준에 속하는 경우 응용 프로그램의 특정 기능을 사용 하지 않도록 설정 하는 것이 좋습니다.  

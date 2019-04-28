@@ -3,11 +3,11 @@ title: '서비스: 채널 수신기 및 채널'
 ms.date: 03/30/2017
 ms.assetid: 8ccbe0e8-7e55-441d-80de-5765f67542fa
 ms.openlocfilehash: 88bfdc879e4f3c7df6b2c4035c7ed7fdc2b4c41d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47396931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771459"
 ---
 # <a name="service-channel-listeners-and-channels"></a>서비스: 채널 수신기 및 채널
 
@@ -35,7 +35,7 @@ WCF는이 프로세스에 대 한 기본 클래스 도우미를 제공합니다.
 
 - <xref:System.ServiceModel.Channels.ChannelListenerBase> 클래스는 <xref:System.ServiceModel.Channels.IChannelListener>을 구현합니다. 이 클래스는 기본 상태 관리를 담당합니다.
 
-다음 논의 기반으로 합니다 [전송: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플입니다.
+다음 논의 기반으로 합니다 [전송 합니다. UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 샘플입니다.
 
 ## <a name="creating-a-channel-listener"></a>채널 수신기 만들기
 

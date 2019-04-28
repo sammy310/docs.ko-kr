@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30144
 ms.assetid: 67ae276e-80d4-4162-ba00-e546c9294340
 ms.openlocfilehash: cae65e1637c29ecfdec07d6a5df27e71b6460c01
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787389"
 ---
 # <a name="unable-to-link-to-resource-file-filename-error-message"></a>리소스 파일에 연결할 수 없습니다. '\<파일 이름 >': \<오류 메시지 >
 Visual Basic 컴파일러는 매니페스트를 사용 하 여 어셈블리를 생성 하려면 어셈블리 링커 (Al.exe, Alink 라고도)를 호출 합니다. 링커가 어셈블리의 네이티브 COM+ 리소스 파일에 연결하는 동안 오류를 보고했습니다.  

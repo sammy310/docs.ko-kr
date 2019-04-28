@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Control class [WPF], TreeView
 ms.assetid: 62212512-5a5c-4864-949e-b6a6a3a52c02
 ms.openlocfilehash: c0967aa506b087120c776389c2891ec9e0b0b64d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761405"
 ---
 # <a name="treeview-overview"></a>TreeView 개요
 <xref:System.Windows.Controls.TreeView> 컨트롤은 축소 가능한 노드를 사용 하 여 계층 구조에서 정보를 표시 하는 방법을 제공 합니다. 이 항목에서는 소개 합니다 <xref:System.Windows.Controls.TreeView> 고 <xref:System.Windows.Controls.TreeViewItem> 컨트롤 및 사용 하는 간단한 예제를 제공 합니다.  

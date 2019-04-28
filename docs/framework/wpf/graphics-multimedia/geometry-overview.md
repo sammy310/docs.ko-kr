@@ -9,11 +9,11 @@ helpviewer_keywords:
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
 ms.openlocfilehash: f4f109b51ed566d1996b0c59b4ecbe51caa022cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762896"
 ---
 # <a name="geometry-overview"></a>Geometry 개요
 이 개요에서는 사용 하는 방법을 설명 합니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> 도형을 설명 하는 클래스입니다. 이 항목의 차이점도 비교해 서 설명 <xref:System.Windows.Media.Geometry> 개체 및 <xref:System.Windows.Shapes.Shape> 요소입니다.  
@@ -55,11 +55,11 @@ ms.locfileid: "59180000"
   
  단순 기 하 도형 클래스를 포함 <xref:System.Windows.Media.LineGeometry>, <xref:System.Windows.Media.RectangleGeometry>, 및 <xref:System.Windows.Media.EllipseGeometry> 줄, 사각형, 원 등 기본 도형을 만드는 데 사용 되 고 있습니다.  
   
--   <xref:System.Windows.Media.LineGeometry> 줄 고 끝점의 시작점을 지정 하 여 정의 됩니다.  
+- <xref:System.Windows.Media.LineGeometry> 줄 고 끝점의 시작점을 지정 하 여 정의 됩니다.  
   
--   A <xref:System.Windows.Media.RectangleGeometry> 으로 정의 됩니다는 <xref:System.Windows.Rect> 상대 위치 및 해당 높이 너비를 지정 하는 구조입니다. 모퉁이가 둥근된 사각형을 설정 하 여 만들 수 있습니다 합니다 <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> 고 <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A> 속성입니다.  
+- A <xref:System.Windows.Media.RectangleGeometry> 으로 정의 됩니다는 <xref:System.Windows.Rect> 상대 위치 및 해당 높이 너비를 지정 하는 구조입니다. 모퉁이가 둥근된 사각형을 설정 하 여 만들 수 있습니다 합니다 <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> 고 <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A> 속성입니다.  
   
--   <xref:System.Windows.Media.EllipseGeometry> 중심점, x 반지름 및 y 반지름으로 정의 됩니다.  다음 예제에서는 렌더링 및 클리핑을 위한 단순 기하 도형을 만드는 방법을 보여 줍니다.  
+- <xref:System.Windows.Media.EllipseGeometry> 중심점, x 반지름 및 y 반지름으로 정의 됩니다.  다음 예제에서는 렌더링 및 클리핑을 위한 단순 기하 도형을 만드는 방법을 보여 줍니다.  
   
  더 복잡 한 도형을 뿐만 아니라 이러한 동일한 셰이프를 만들 수 있습니다를 <xref:System.Windows.Media.PathGeometry> 또는 함께 기 하 도형 개체는 있지만 이러한 클래스를 결합 하 여 이러한 기본 도형을 생성 하는 것에 대 한 간단한 수단을 제공 합니다.  
   
@@ -175,9 +175,9 @@ PathGeometry
 ## <a name="composite-geometries"></a>복합 기하 도형  
  사용 하 여 복합 기 하 도형 개체를 만들 수 있습니다는 <xref:System.Windows.Media.GeometryGroup>, <xref:System.Windows.Media.CombinedGeometry>, 또는 정적 호출 하 여 <xref:System.Windows.Media.Geometry> 메서드 <xref:System.Windows.Media.Geometry.Combine%2A>합니다.  
   
--   합니다 <xref:System.Windows.Media.CombinedGeometry> 개체 및 <xref:System.Windows.Media.Geometry.Combine%2A> 메서드 두 기 하 도형으로 정의 되는 영역을 결합 하 여 부울 연산을 수행 합니다. <xref:System.Windows.Media.Geometry> 영역이 없는 개체 삭제 됩니다. 두 개의 <xref:System.Windows.Media.Geometry> (있지만 이러한 두 기 하 도형도 복합 기 하 도형) 개체를 결합할 수 있습니다.  
+- 합니다 <xref:System.Windows.Media.CombinedGeometry> 개체 및 <xref:System.Windows.Media.Geometry.Combine%2A> 메서드 두 기 하 도형으로 정의 되는 영역을 결합 하 여 부울 연산을 수행 합니다. <xref:System.Windows.Media.Geometry> 영역이 없는 개체 삭제 됩니다. 두 개의 <xref:System.Windows.Media.Geometry> (있지만 이러한 두 기 하 도형도 복합 기 하 도형) 개체를 결합할 수 있습니다.  
   
--   합니다 <xref:System.Windows.Media.GeometryGroup> 클래스의 융 화를 만듭니다는 <xref:System.Windows.Media.Geometry> 해당 영역을 결합 하지 않고 포함 된 개체입니다. 임의 개수의 <xref:System.Windows.Media.Geometry> 개체를 추가할 수는 <xref:System.Windows.Media.GeometryGroup>합니다. 예제를 보려면 [복합 도형 만들기](how-to-create-a-composite-shape.md)를 참조하세요.  
+- 합니다 <xref:System.Windows.Media.GeometryGroup> 클래스의 융 화를 만듭니다는 <xref:System.Windows.Media.Geometry> 해당 영역을 결합 하지 않고 포함 된 개체입니다. 임의 개수의 <xref:System.Windows.Media.Geometry> 개체를 추가할 수는 <xref:System.Windows.Media.GeometryGroup>합니다. 예제를 보려면 [복합 도형 만들기](how-to-create-a-composite-shape.md)를 참조하세요.  
   
  결합 작업을 수행 하지 않는 때문에 사용 하 여 <xref:System.Windows.Media.GeometryGroup> 개체가 사용 하 여 성능상의 이점을 제공 <xref:System.Windows.Media.CombinedGeometry> 개체 또는 <xref:System.Windows.Media.Geometry.Combine%2A> 메서드.  
   
@@ -207,11 +207,11 @@ PathGeometry
 ## <a name="other-geometry-features"></a>기타 기하 도형 기능  
  <xref:System.Windows.Media.Geometry> 클래스에는 또한 다음과 같은 유용한 유틸리티 메서드도 제공 합니다.  
   
--   <xref:System.Windows.Media.Geometry.GetArea%2A> -의 영역을 가져옵니다는 <xref:System.Windows.Media.Geometry>합니다.  
+- <xref:System.Windows.Media.Geometry.GetArea%2A> -의 영역을 가져옵니다는 <xref:System.Windows.Media.Geometry>합니다.  
   
--   <xref:System.Windows.Media.Geometry.FillContains%2A> -다른 기 하 도형을 포함 되는지 여부를 결정 <xref:System.Windows.Media.Geometry>합니다.  
+- <xref:System.Windows.Media.Geometry.FillContains%2A> -다른 기 하 도형을 포함 되는지 여부를 결정 <xref:System.Windows.Media.Geometry>합니다.  
   
--   <xref:System.Windows.Media.Geometry.StrokeContains%2A> -결정 하는지 여부를의 스트로크를 <xref:System.Windows.Media.Geometry> 지정된 된 지점이 포함 됩니다.  
+- <xref:System.Windows.Media.Geometry.StrokeContains%2A> -결정 하는지 여부를의 스트로크를 <xref:System.Windows.Media.Geometry> 지정된 된 지점이 포함 됩니다.  
   
  참조 된 <xref:System.Windows.Media.Geometry> 메서드의 전체 목록은 클래스입니다.  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - status bars
 ms.assetid: eb1e59da-0a48-4ce5-af7d-13b8e75af4b1
 ms.openlocfilehash: e4146cf1897a2d83128a97fc3900aa7a10d59109
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59159694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756158"
 ---
 # <a name="statusstrip-control"></a>StatusStrip 컨트롤
 Windows Forms `StatusStrip` 컨트롤은 폼에서 응용 프로그램이 다양한 종류의 상태 정보를 표시할 수 있는, 대개 창 아래쪽에 표시되는 영역으로 사용됩니다. `StatusStrip` 컨트롤에는 일반적으로 상태를 나타내는 텍스트 또는 아이콘을 표시하는 `ToolStripStatusLabel` 컨트롤이 그 위에 있거나 프로세스 완료 상태를 그래픽으로 표시하는 <xref:System.Windows.Forms.ToolStripProgressBar>가 포함됩니다.  

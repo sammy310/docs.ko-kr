@@ -3,11 +3,11 @@ title: (Visual Basic)을 다른 모양으로 XML 프로젝션
 ms.date: 07/20/2015
 ms.assetid: 2da7ec97-34f7-443d-9a48-b162ac58236b
 ms.openlocfilehash: ed689e2f0e659eade83fa8e4ec147b0edcddefc8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766594"
 ---
 # <a name="projecting-xml-in-a-different-shape-visual-basic"></a>(Visual Basic)을 다른 모양으로 XML 프로젝션
 이 항목에서는 소스 XML과 다른 모양으로 XML을 프로젝션하는 예제를 보여 줍니다.  
@@ -230,7 +230,7 @@ End Module
 ## <a name="next-steps"></a>다음 단계  
  다음 예제에서는 Word 문서에서 텍스트를 모두 찾기 위해 쿼리합니다.  
   
--   [Word 문서 (Visual Basic)에서 텍스트 찾기](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [Word 문서 (Visual Basic)에서 텍스트 찾기](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
 ## <a name="see-also"></a>참고자료
 

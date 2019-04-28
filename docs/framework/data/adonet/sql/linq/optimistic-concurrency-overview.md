@@ -3,11 +3,11 @@ title: '낙관적 동시성: 개요'
 ms.date: 03/30/2017
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
 ms.openlocfilehash: 8f3bd35cc1391339d99d5aa0a4021e29fa81756c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767496"
 ---
 # <a name="optimistic-concurrency-overview"></a>낙관적 동시성: 개요
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 낙관적 동시성 제어를 지원합니다. 다음 표에서 낙관적 동시성에 적용 되는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 설명서:  
@@ -22,9 +22,9 @@ ms.locfileid: "59106550"
   
  에 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개체 모델을 *낙관적 동시성 충돌* 다음 조건 중 둘 다에 해당할 때 발생:  
   
--   클라이언트가 변경 내용을 데이터베이스로 전송하려고 합니다.  
+- 클라이언트가 변경 내용을 데이터베이스로 전송하려고 합니다.  
   
--   하나 이상의 업데이트 확인 값이 클라이언트가 마지막으로 읽은 후에 데이터베이스에서 업데이트되었습니다.  
+- 하나 이상의 업데이트 확인 값이 클라이언트가 마지막으로 읽은 후에 데이터베이스에서 업데이트되었습니다.  
   
  이 충돌을 해결하는 과정에는 충돌하는 개체의 멤버를 검색한 다음 수행할 작업을 결정하는 작업이 포함됩니다.  
   
@@ -49,44 +49,44 @@ ms.locfileid: "59106550"
 ## <a name="conflict-detection-and-resolution-checklist"></a>충돌 감지 및 해결 검사 목록  
  모든 상세 수준에서 충돌을 감지하고 해결할 수 있습니다. 한편으로는 추가 고려 사항 없이 세 가지 방법(<xref:System.Data.Linq.RefreshMode> 참조) 중 하나로 모든 충돌을 해결할 수도 있고 다른 한편으로는 충돌하는 모든 멤버에서 각 충돌 유형에 대한 특정 작업을 지정할 수도 있습니다.  
   
--   개체 모델에서 <xref:System.Data.Linq.Mapping.UpdateCheck> 옵션을 지정하거나 수정합니다.  
+- 개체 모델에서 <xref:System.Data.Linq.Mapping.UpdateCheck> 옵션을 지정하거나 수정합니다.  
   
      자세한 내용은 [방법: 동시성 충돌에 테스트할 멤버 지정](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)합니다.  
   
--   <xref:System.Data.Linq.DataContext.SubmitChanges%2A>에 대한 호출의 try/catch 블록에서 예외를 throw하려는 지점을 지정합니다.  
+- <xref:System.Data.Linq.DataContext.SubmitChanges%2A>에 대한 호출의 try/catch 블록에서 예외를 throw하려는 지점을 지정합니다.  
   
      자세한 내용은 [방법: 경우 동시성 예외가 throw 되는 지정](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md)합니다.  
   
--   검색하려는 충돌 정보의 양을 결정하고 이에 따라 try/catch 블록에 코드를 포함시킵니다.  
+- 검색하려는 충돌 정보의 양을 결정하고 이에 따라 try/catch 블록에 코드를 포함시킵니다.  
   
      자세한 내용은 [방법: 엔터티 충돌 정보 검색](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md) 고 [방법: 멤버 충돌 정보 검색](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md)합니다.  
   
--   에 포함 하면 `try` / `catch` 알게 다양 한 충돌을 해결 하고자 하는 방법을 코드.  
+- 에 포함 하면 `try` / `catch` 알게 다양 한 충돌을 해결 하고자 하는 방법을 코드.  
   
      자세한 내용은 [방법: 데이터베이스 값을 유지 하 여 충돌을 해결할](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md), [방법: 데이터베이스 값을 덮어써서 충돌 해결](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md), 및 [방법: 데이터베이스 값을 병합 하 여 충돌 해결](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md)합니다.  
   
 ## <a name="linq-to-sql-types-that-support-conflict-discovery-and-resolution"></a>충돌 검색 및 해결을 지원하는 LINQ to SQL 형식  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 낙관적 동시성의 충돌 해결을 지원하기 위한 클래스와 기능은 다음과 같습니다.  
   
--   <xref:System.Data.Linq.ObjectChangeConflict?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.ObjectChangeConflict?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.MemberChangeConflict?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.MemberChangeConflict?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.ChangeConflictCollection?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.ChangeConflictCollection?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.ChangeConflictException?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.ChangeConflictException?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.ChangeConflicts%2A?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.DataContext.ChangeConflicts%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.Refresh%2A?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.DataContext.Refresh%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.Mapping.UpdateCheck?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.Mapping.UpdateCheck?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.RefreshMode?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.RefreshMode?displayProperty=nameWithType>  
   
 ## <a name="see-also"></a>참고자료
 

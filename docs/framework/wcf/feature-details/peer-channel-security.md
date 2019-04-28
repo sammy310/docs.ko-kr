@@ -3,11 +3,11 @@ title: 피어 채널 보안
 ms.date: 03/30/2017
 ms.assetid: 2c59b164-3729-44f0-a967-f247c42de662
 ms.openlocfilehash: bc17c35bf088472cfbf36b2c6d7c868c8cc85f20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769397"
 ---
 # <a name="peer-channel-security"></a>피어 채널 보안
 피어 채널에서는 다양한 메시징에 따라 여러 배포 응용 프로그램 형식을 사용할 수 있습니다. 일부 예제에는 인터넷 범위의 콘텐츠 배포가 포함되며, 이를 통해 신뢰할 수 있는 소스는 미디어 또는 소프트웨어 업데이트와 같은 콘텐츠를 배포하고, 친구 그룹은 음악과 사진을 교환하며, 동료 팀은 하나의 문서를 공동으로 편집할 수 있습니다. 이러한 각각의 시나리오에는 고유 보안 모델이 필요합니다. 피어 채널 보안 모델은 이러한 시나리오를 설명하고, 여러 ID, 인증 및 권한 부여 모델 각각의 요구에 대해 안전한 보안 모델을 제공하기 위해 디자인되었습니다.  

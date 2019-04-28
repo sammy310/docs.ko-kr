@@ -13,11 +13,11 @@ ms.assetid: aa388ed3-7e3d-48ea-a0b5-c47ae19cec38
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5a28820479ca15ad72475ae9a7754bbbf99ce5c5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754715"
 ---
 # <a name="dirtycastandcalloninterface-mda"></a>dirtyCastAndCallOnInterface MDA
 `dirtyCastAndCallOnInterface` MDA(관리 디버깅 도우미)는 런타임에만 바인딩됨으로 표시된 클래스 인터페이스에 대해 vtable을 통해 초기에 바인딩된 호출을 시도할 때 활성화됩니다.  

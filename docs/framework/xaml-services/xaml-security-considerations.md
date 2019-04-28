@@ -9,8 +9,8 @@ ms.openlocfilehash: 124310497cc2a8e8a816ba90b2c68a16ed342ae6
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938790"
 ---
 # <a name="xaml-security-considerations"></a>XAML 보안 고려 사항
 이 항목에서는 XAML 및.NET Framework XAML 서비스 API를 사용 하는 경우 응용 프로그램의 보안을 위한 모범 사례를 설명 합니다.  
@@ -34,9 +34,9 @@ ms.locfileid: "59973455"
 ## <a name="xaml-namespaces-and-assembly-trust"></a>XAML 네임 스페이스 및 어셈블리 트러스트  
  응용 프로그램 도메인에 로드 된 신뢰할 수 있는 항목과 신뢰할 수 없는 어셈블리 정규화 되지 않은 기본 구문 및 XAML에서 어셈블리에 대 한 사용자 지정 XAML 네임 스페이스 매핑을 해석 하는 방법에 대 한 정의 구분 하지 않습니다. 따라서 것을 신뢰할 수 있는 어셈블리의 의도 한 XAML 네임 스페이스 매핑 스푸핑하여 XAML 소스의 선언 된 개체 및 속성 정보를 캡처하는 신뢰할 수 없는 어셈블리에 대 한 기술적으로 가능 합니다. 이 상황을 방지 하려면 보안 요구 사항이 있는 경우 다음 방법 중 하나를 사용 하 여 의도 한 XAML 네임 스페이스 매핑을 수행 해야:  
   
--   응용 프로그램의 XAML을 수행한 모든 XAML 네임 스페이스 매핑에 대 한 강력한 이름으로 정규화 된 어셈블리 이름을 사용 합니다.  
+- 응용 프로그램의 XAML을 수행한 모든 XAML 네임 스페이스 매핑에 대 한 강력한 이름으로 정규화 된 어셈블리 이름을 사용 합니다.  
   
--   특정 구성 하 여 참조 어셈블리의 고정된 된 집합을 매핑할 어셈블리 제한 <xref:System.Xaml.XamlSchemaContext> 에 XAML 판독기 및 XAML 개체 작성기입니다. <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>을 참조하세요.  
+- 특정 구성 하 여 참조 어셈블리의 고정된 된 집합을 매핑할 어셈블리 제한 <xref:System.Xaml.XamlSchemaContext> 에 XAML 판독기 및 XAML 개체 작성기입니다. <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>을 참조하세요.  
   
 ## <a name="xaml-type-mapping-and-type-system-access"></a>XAML 형식 매핑 및 형식 시스템 액세스  
  XAML에는 여러 가지 방법으로 CLR 기본 CLR 형식 시스템을 구현 하는 방법에 피어 자체 형식 시스템을 지원 합니다. 그러나 해당 형식 정보를 기반으로 하는 형식에 대 한 신뢰 결정 한다면 형식 인식의 특정 측면에 대 한 지원 형식을 CLR 형식 정보를 연기 해야 있습니다. XAML 형식 시스템의 특정 보고 기능의 일부 가상 메서드로 열려 되며 따라서 없습니다 완벽 하 게 원래.NET Framework XAML 서비스 구현에 의해 제어 때문입니다. 이러한 확장 지점을 XAML 형식 시스템은 자체 XAML의 확장성 및 기본 CLR 기반 구현 및 기본 XAML 스키마 컨텍스트 및 대체 가능한 형식 매핑 전략에 맞게 확장 가능 하기 때문에 존재 합니다. 자세한 내용은 다양 한 속성에서 특정 정보를 참조 하세요 <xref:System.Xaml.XamlType> 고 <xref:System.Xaml.XamlMember>입니다.  

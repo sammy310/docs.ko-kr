@@ -3,11 +3,11 @@ title: WCF Visual Studio 템플릿
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
 ms.openlocfilehash: b0cca0cd585a45b795db4d573659e0d19ecd78dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780668"
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio 템플릿
 Windows Communication Foundation (WCF) Visual Studio 템플릿은 미리 정의 된 프로젝트 및 항목 템플릿 신속 하 게 WCF 서비스와 관련 응용 프로그램을 빌드하려면 Visual Studio에서 사용할 수 있습니다.  
@@ -20,11 +20,11 @@ Windows Communication Foundation (WCF) Visual Studio 템플릿은 미리 정의 
   
  사용 하 여 새 프로젝트를 만들 때 합니다 **WCF 서비스** 템플릿을 새 프로젝트에 자동으로 다음 세 개의 파일이 포함 됩니다.  
   
--   서비스 계약 파일(IService1.cs 또는 IService1.vb). 서비스 계약 파일에 적용 하는 WCF 서비스 특성을 가진 인터페이스입니다. 이 파일은 서비스를 정의하는 방법을 보여 주는 간단한 서비스 정의를 제공하고 매개 변수 기반 작업과 간단한 데이터 계약 샘플을 포함합니다. WCF 서비스 프로젝트를 만든 후 코드 편집기에 표시 되는 기본 파일입니다.  
+- 서비스 계약 파일(IService1.cs 또는 IService1.vb). 서비스 계약 파일에 적용 하는 WCF 서비스 특성을 가진 인터페이스입니다. 이 파일은 서비스를 정의하는 방법을 보여 주는 간단한 서비스 정의를 제공하고 매개 변수 기반 작업과 간단한 데이터 계약 샘플을 포함합니다. WCF 서비스 프로젝트를 만든 후 코드 편집기에 표시 되는 기본 파일입니다.  
   
--   서비스 구현 파일(Service1.cs 또는 Service1.vb). 서비스 구현 파일은 서비스 계약 파일에 정의된 계약을 구현합니다.  
+- 서비스 구현 파일(Service1.cs 또는 Service1.vb). 서비스 구현 파일은 서비스 계약 파일에 정의된 계약을 구현합니다.  
   
--   응용 프로그램 구성 파일(App.config). 보안 HTTP 바인딩을 사용 하 여 WCF 서비스 모델의 기본 요소를 제공 하는 구성 파일입니다. 또한 서비스에 대한 엔드포인트를 포함하고 메타데이터 교환을 활성화합니다.  
+- 응용 프로그램 구성 파일(App.config). 보안 HTTP 바인딩을 사용 하 여 WCF 서비스 모델의 기본 요소를 제공 하는 구성 파일입니다. 또한 서비스에 대한 엔드포인트를 포함하고 메타데이터 교환을 활성화합니다.  
   
 > [!NOTE]
 >  Visual Studio를 사용 하 여 실행 하는 경우 프로젝트에 대 한 구성 파일로 App.config 파일을 인식 하도록 구성 되어 합니다 [WCF 서비스 호스트 (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), 기본 구성 인 합니다. 실행 파일에서 서비스 라이브러리를 호스팅할 경우 DLL의 구성 파일이 유효하지 않게 되므로 구성 코드를 실행 파일의 구성 파일로 이동해야 합니다.  
@@ -34,13 +34,13 @@ Windows Communication Foundation (WCF) Visual Studio 템플릿은 미리 정의 
   
  사용 하 여 새 프로젝트를 만들 때 합니다 **WCF 웹 응용 프로그램 서비스** 프로젝트 템플릿에 다음 4 개의 파일 포함:  
   
--   서비스 호스트 파일(service1.svc)  
+- 서비스 호스트 파일(service1.svc)  
   
--   서비스 계약 파일(IService1.cs 또는 IService1.vb).  
+- 서비스 계약 파일(IService1.cs 또는 IService1.vb).  
   
--   서비스 구현 파일(Service1.svc.cs 또는 Service1.svc.vb)  
+- 서비스 구현 파일(Service1.svc.cs 또는 Service1.svc.vb)  
   
--   웹 구성 파일(Web.config)  
+- 웹 구성 파일(Web.config)  
   
  템플릿은 가상 디렉터리에 배포할 웹 사이트를 자동으로 만들고 해당 디렉터리에 서비스를 호스트합니다.  
   

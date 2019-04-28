@@ -9,11 +9,11 @@ helpviewer_keywords:
 - shapes [Windows Forms], filling
 ms.assetid: 06088b31-bac9-4ef3-9ebe-06c2c764d6df
 ms.openlocfilehash: d6fe7a252029ff80f21d99f7342fabb1d29fbe24
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781292"
 ---
 # <a name="how-to-fill-a-shape-with-a-solid-color"></a>방법: 단색으로 도형 채우기
 단색으로 도형 채우기를 만들려면를 <xref:System.Drawing.SolidBrush> 개체를 전달 하는 <xref:System.Drawing.SolidBrush> 개체의 채우기 메서드 중 하나에 대 한 인수로 <xref:System.Drawing.Graphics> 클래스입니다. 다음 예제에서는 빨간색으로 타원을 채우는 방법을 보여 줍니다.  

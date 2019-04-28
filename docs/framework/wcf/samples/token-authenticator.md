@@ -3,30 +3,30 @@ title: Token Authenticator
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
 ms.openlocfilehash: 501f1801c1cb475a87c586f8bbc14146b9141047
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779173"
 ---
 # <a name="token-authenticator"></a>Token Authenticator
 이 샘플에서는 사용자 지정 토큰 인증자를 구현하는 방법을 보여 줍니다. Windows Communication Foundation (WCF)에서 토큰 인증자를 자체 일관성을 토큰과 연결 된 id를 인증 확인 메시지와 함께 사용 되는 토큰의 유효성 검사에 사용 됩니다.
 
  사용자 지정 토큰 인증자는 다음과 같은 여러 경우에 유용합니다.
 
--   토큰과 연관된 기본 인증 메커니즘을 재정의하려는 경우
+- 토큰과 연관된 기본 인증 메커니즘을 재정의하려는 경우
 
--   사용자 지정 토큰을 빌드하고 있는 경우
+- 사용자 지정 토큰을 빌드하고 있는 경우
 
  이 샘플은 다음을 보여 줍니다.
 
--   클라이언트에서 사용자 이름/암호 쌍을 사용하여 인증하는 방법.
+- 클라이언트에서 사용자 이름/암호 쌍을 사용하여 인증하는 방법.
 
--   서버에서 사용자 지정 토큰 인증자를 사용하여 클라이언트 자격 증명의 유효성을 검사하는 방법
+- 서버에서 사용자 지정 토큰 인증자를 사용하여 클라이언트 자격 증명의 유효성을 검사하는 방법
 
--   하는 방법을 사용자 지정 토큰 인증자를 사용 하 여 WCF 서비스 코드를 연결 합니다.
+- 하는 방법을 사용자 지정 토큰 인증자를 사용 하 여 WCF 서비스 코드를 연결 합니다.
 
--   서버의 X.509 인증서를 사용하여 서버를 인증하는 방법
+- 서버의 X.509 인증서를 사용하여 서버를 인증하는 방법
 
  이 샘플에는 사용자 지정 토큰 인증 프로세스 후 WCF에서 액세스할 수 있는 호출자의 id가 하는 방법을 보여 줍니다.
 
@@ -297,7 +297,7 @@ static void DisplayIdentityInformation()
 
  다음 부분에는 적절한 구성에서 실행할 수 있게 배치 파일을 수정하는 데에 도움이 되는 여러 섹션의 간략한 개요가 소개되어 있습니다.
 
--   서버 인증서 만들기
+- 서버 인증서 만들기
 
      Setup.bat 배치 파일에서 다음 행은 사용할 서버 인증서를 만듭니다. `%SERVER_NAME%`변수는 서버 이름을 지정합니다. 이 변수를 변경하여 고유의 서버 이름을 지정합니다. 이 배치 파일에서의 기본값은 localhost입니다.
 
@@ -311,7 +311,7 @@ static void DisplayIdentityInformation()
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   클라이언트의 신뢰할 수 있는 인증서 저장소에 서버 인증서 설치
+- 클라이언트의 신뢰할 수 있는 인증서 저장소에 서버 인증서 설치
 
      Setup.bat 배치 파일에서 다음 행은 클라이언트의 신뢰할 수 있는 사용자 저장소로 서버 인증서를 복사합니다. 이 단계는 Makecert.exe에서 생성한 인증서를 클라이언트 컴퓨터에서 절대적으로 신뢰하지는 않기 때문에 필요합니다. Microsoft에서 발급한 인증서와 같이 클라이언트가 신뢰할 수 있는 루트 인증서를 기반으로 하는 인증서가 이미 있는 경우 클라이언트 인증서 저장소를 서버 인증서로 채우는 이 단계를 수행할 필요가 없습니다.
 

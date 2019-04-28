@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
 ms.openlocfilehash: a7bdfc244b0ff1c2ed625235df7e74ced026c542
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773076"
 ---
 # <a name="how-to-enable-message-replay-detection"></a>방법: 메시지 재생 검색 사용
 공격자가 두 당사자 간에 메시지 스트림을 복사하고 하나 이상의 당사자에게 스트림을 재생하는 경우 재생 공격이 발생합니다. 완화되지 않은 경우 공격을 받기 쉬운 컴퓨터는 스트림을 올바른 메시지로 처리하여 항목에 대한 중복 주문과 같은 잘못된 결과의 범위에 있게 됩니다.  
@@ -30,13 +30,13 @@ ms.locfileid: "59343612"
   
 2. <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> 속성을 사용하여 <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> 클래스에 대한 참조를 반환하고 다음 속성을 적절히 설정합니다.  
   
-    1.  `DetectReplay`. 부울 값입니다. 이 값은 클라이언트가 서버로부터 재생을 검색해야 하는지 여부를 제어합니다. 기본값은 `true`입니다.  
+    1. `DetectReplay`. 부울 값입니다. 이 값은 클라이언트가 서버로부터 재생을 검색해야 하는지 여부를 제어합니다. 기본값은 `true`입니다.  
   
-    2.  `MaxClockSkew`. <xref:System.TimeSpan> 값입니다. 재생 메커니즘이 클라이언트와 서버 간에 허용하는 오차 횟수를 제어합니다. 보안 메커니즘은 보낸 타임스탬프를 검사하고 보낸 시간이 아주 오래되었는지 여부를 확인합니다. 기본값은 5분입니다.  
+    2. `MaxClockSkew`. <xref:System.TimeSpan> 값입니다. 재생 메커니즘이 클라이언트와 서버 간에 허용하는 오차 횟수를 제어합니다. 보안 메커니즘은 보낸 타임스탬프를 검사하고 보낸 시간이 아주 오래되었는지 여부를 확인합니다. 기본값은 5분입니다.  
   
-    3.  `ReplayWindow`. `TimeSpan` 값입니다. 이 값은 매개자를 통해 서버에서 메시지를 보낸 후 클라이언트에 도달하기까지 메시지가 네트워크에 있을 수 있는 시간을 제어합니다. 클라이언트는 재생 검색을 위해 최신 `ReplayWindow` 내에서 보낸 메시지 서명을 추적합니다.  
+    3. `ReplayWindow`. `TimeSpan` 값입니다. 이 값은 매개자를 통해 서버에서 메시지를 보낸 후 클라이언트에 도달하기까지 메시지가 네트워크에 있을 수 있는 시간을 제어합니다. 클라이언트는 재생 검색을 위해 최신 `ReplayWindow` 내에서 보낸 메시지 서명을 추적합니다.  
   
-    4.  `ReplayCacheSize`. 정수 값입니다. 클라이언트는 캐시에 메시지 서명을 저장합니다. 이 설정은 캐시에서 저장할 수 있는 서명 수를 지정합니다. 최신 재생 창 내에서 보낸 메시지 수가 캐시 한계에 도달하면 가장 오래 전에 캐시된 서명이 시간 제한에 도달할 때까지 새 메시지가 거부됩니다. 기본값은 500000입니다.  
+    4. `ReplayCacheSize`. 정수 값입니다. 클라이언트는 캐시에 메시지 서명을 저장합니다. 이 설정은 캐시에서 저장할 수 있는 서명 수를 지정합니다. 최신 재생 창 내에서 보낸 메시지 수가 캐시 한계에 도달하면 가장 오래 전에 캐시된 서명이 시간 제한에 도달할 때까지 새 메시지가 거부됩니다. 기본값은 500000입니다.  
   
 ### <a name="to-control-replay-detection-on-the-service-using-code"></a>코드를 사용하여 서비스에서 재생 검색을 제어하려면  
   
@@ -88,19 +88,19 @@ ms.locfileid: "59343612"
   
  보안 대화 세션을 사용하지 않는 경우에는 서버 팜 시나리오에서, 그리고 프로세스가 재활용되는 경우 재생 검색이 작동하지 않을 수도 있습니다. 이 내용은 다음과 같은 시스템 제공 바인딩에 적용됩니다.  
   
--   <xref:System.ServiceModel.BasicHttpBinding>.  
+- <xref:System.ServiceModel.BasicHttpBinding>.  
   
--   <xref:System.ServiceModel.WSHttpBinding> 속성이 <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A>로 설정된 `false`  
+- <xref:System.ServiceModel.WSHttpBinding> 속성이 <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A>로 설정된 `false`  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
   
--   코드를 컴파일하려면 다음 네임스페이스가 필요합니다.  
+- 코드를 컴파일하려면 다음 네임스페이스가 필요합니다.  
   
--   <xref:System>  
+- <xref:System>  
   
--   <xref:System.ServiceModel>  
+- <xref:System.ServiceModel>  
   
--   <xref:System.ServiceModel.Channels>  
+- <xref:System.ServiceModel.Channels>  
   
 ## <a name="see-also"></a>참고자료
 

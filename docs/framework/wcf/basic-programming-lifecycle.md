@@ -5,11 +5,11 @@ helpviewer_keywords:
 - service creation [WCF]
 ms.assetid: 7cf21bfe-23bd-46aa-8033-609f851dbf76
 ms.openlocfilehash: 6d9ea3b877e7c735cf789039b2a6956037372888
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782410"
 ---
 # <a name="basic-programming-lifecycle"></a>기본 프로그래밍 수명 주기
 Windows Communication Foundation (WCF) 응용 프로그램이 다른 응용 프로그램 플랫폼 또는 인터넷을 통해 컴퓨터의 동일한 지 여부를 통신할 수 있습니다. 이 항목에서는 WCF 응용 프로그램을 빌드하는 데 필요한 작업을 간략하게 설명 합니다. 작업 샘플 응용 프로그램을 참조 하세요 [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md)합니다.  

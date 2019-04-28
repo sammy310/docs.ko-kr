@@ -4,32 +4,32 @@ ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
 ms.openlocfilehash: 3313b2ad36260415d0ac505e01523dd999f85424
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792818"
 ---
 # <a name="claims-based-identity-model"></a>클레임 기반 ID 모델
 클레임 인식 응용 프로그램을 작성할 때 사용자 ID가 클레임 집합으로 응용 프로그램에 표시됩니다. 클레임이 하나는 사용자의 이름, 다른 전자 메일 주소를 수 있습니다. 외부 ID 시스템은 수신하는 ID 데이터가 신뢰할 수 있는 출처에서 제공되는 암호화 보증과 함께 각각의 요청을 작성한 사용자에 대해 파악하기 위해 필요한 모든 사항을 응용 프로그램에 제공하도록 구성됩니다.  
   
  이 모델에서는 Single Sign-On을 더욱 쉽게 달성할 수 있으며, 응용 프로그램이 더 이상 다음과 같은 작업을 수행할 필요가 없습니다.  
   
--   사용자 인증  
+- 사용자 인증  
   
--   사용자 계정 및 암호 저장  
+- 사용자 계정 및 암호 저장  
   
--   사용자 ID 세부 정보를 조회하기 위해 엔터프라이즈 디렉터리 호출  
+- 사용자 ID 세부 정보를 조회하기 위해 엔터프라이즈 디렉터리 호출  
   
--   다른 플랫폼 또는 회사의 ID 시스템과 통합  
+- 다른 플랫폼 또는 회사의 ID 시스템과 통합  
   
  이 모델에서는 응용 프로그램이 사용자를 인증한 시스템에서 제공하는 클레임을 기반으로 ID 관련 결정을 수행합니다. 이는 사용자의 이름을 사용한 단순 응용 프로그램 개인 설정부터 사용자에게 응용 프로그램에서 더욱 중요한 기능 및 리소스에 대한 액세스 권한 부여까지 모든 작업이 될 수 있습니다.  
   
  이 항목에서는 다음 내용에 대해 설명합니다.  
   
--   [클레임 기반 ID 소개](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
+- [클레임 기반 ID 소개](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
   
--   [클레임 기반 ID 모델에 대한 기본 시나리오](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
+- [클레임 기반 ID 모델에 대한 기본 시나리오](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
   
 <a name="BKMK_1"></a>   
 ## <a name="introduction-to-claims-based-identity"></a>클레임 기반 ID 소개  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 213fa9fda6b154d4548b4163cc7b5890bfcfb49c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771727"
 ---
 # <a name="iclrruntimeinfo-interface"></a>ICLRRuntimeInfo 인터페이스
 버전, 디렉터리 및 부하 상태를 포함 하 여 특정 공용 언어 런타임 (CLR)에 대 한 정보를 반환 하는 메서드를 제공 합니다. 이 인터페이스는 또한 런타임을 초기화 하지 않고 런타임 관련 기능을 제공 합니다. 여기에 런타임 상대적 [LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) 메서드를 모듈의 특정 런타임 [GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) 메서드를 통해 런타임 제공한 인터페이스는 [GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md)메서드.  

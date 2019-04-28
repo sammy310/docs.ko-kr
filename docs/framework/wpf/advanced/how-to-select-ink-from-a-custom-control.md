@@ -10,11 +10,11 @@ helpviewer_keywords:
 - custom controls [WPF], ink selection
 ms.assetid: 5f3a45c6-6d40-4017-9b47-933f134ceba3
 ms.openlocfilehash: 5c9b2f3d64e4cbb309772d6a1d9fa88f589df84c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768416"
 ---
 # <a name="how-to-select-ink-from-a-custom-control"></a>방법: 사용자 지정 컨트롤에서 잉크 선택
 추가 하 여는 <xref:System.Windows.Ink.IncrementalLassoHitTester> 사용자 지정 컨트롤에 설정할 수 있습니다. 사용자는 방식과 유사 하 게 올가미 도구를 사용 하 여 잉크를 선택할 수 있도록 컨트롤을 <xref:System.Windows.Controls.InkCanvas> 올가미를 사용 하 여 잉크를 선택 합니다.  

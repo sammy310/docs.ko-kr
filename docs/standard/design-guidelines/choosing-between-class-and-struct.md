@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
 author: KrzysztofCwalina
 ms.openlocfilehash: a47e43b2387362500d46c8e531f16d004d823c4c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778783"
 ---
 # <a name="choosing-between-class-and-struct"></a>클래스와 구조체 간의 선택
 모든 프레임 워크 디자이너 얼굴 기본 디자인 결정 사항 중 하나 (참조 형식) 클래스 또는 구조체 (값 형식) 형식이 디자인 여부입니다. 값 형식과 참조 동작의 차이점 이해 하는 것은이 선택 하는 중요 합니다.  
@@ -39,13 +39,13 @@ ms.locfileid: "54565867"
   
  **X AVOID** 형식에는 다음과 같은 특성을 모두 하지 않으면 구조체를 정의 합니다.  
   
--   단일 값을 기본 형식과 비슷한를 논리적으로 나타내는 (`int`, `double`등.).  
+- 단일 값을 기본 형식과 비슷한를 논리적으로 나타내는 (`int`, `double`등.).  
   
--   인스턴스 크기를 16 바이트를 있습니다.  
+- 인스턴스 크기를 16 바이트를 있습니다.  
   
--   변경할 수는 없습니다.  
+- 변경할 수는 없습니다.  
   
--   자주 넣을 않아도 됩니다.  
+- 자주 넣을 않아도 됩니다.  
   
  다른 모든 경우에 클래스 형식을 정의 해야 합니다.  
   

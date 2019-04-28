@@ -1,18 +1,18 @@
 ---
-title: '방법: 워크플로 및 워크플로 서비스에 대 한 SQL 지 속성 사용'
+title: '방법: 워크플로 및 워크플로 서비스에 SQL 지속성 사용'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
 ms.openlocfilehash: 84a9220e39c0d79dc53bee576735d1062c1c037c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779212"
 ---
-# <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>방법: 워크플로 및 워크플로 서비스에 대 한 SQL 지 속성 사용
+# <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>방법: 워크플로 및 워크플로 서비스에 SQL 지속성 사용
 
 이 항목에서는 프로그래밍 방식과 구성 파일을 사용하여 워크플로 및 워크플로 서비스에 지속성을 사용하도록 SQL 워크플로 인스턴스 저장소 기능을 구성하는 방법을 설명합니다.
 

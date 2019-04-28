@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7aeb813cafbf5b18739c4574c386398ac3c7a77b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778003"
 ---
 # <a name="callfunctionshim-function"></a>CallFunctionShim 함수
 지정한 이름 및 매개 변수는 지정 된 라이브러리에 있는 함수를 호출 합니다.  

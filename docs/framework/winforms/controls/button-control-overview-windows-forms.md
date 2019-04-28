@@ -8,11 +8,11 @@ helpviewer_keywords:
 - buttons [Windows Forms], about buttons
 ms.assetid: 255b291b-51a9-4a92-a1a4-2400cd82443f
 ms.openlocfilehash: 1ded871fdfab83407d8022ca0c4ce6b2c8a6c67c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938985"
 ---
 # <a name="button-control-overview-windows-forms"></a>Button 컨트롤 개요(Windows Forms)
 사용자는 Windows Forms <xref:System.Windows.Forms.Button> 컨트롤을 클릭하여 작업을 수행할 수 있습니다. 단추를 클릭하면 눌렀다 놓는 것처럼 표시됩니다. 단추를 클릭할 때마다는 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기가 호출 됩니다. 에 코드를 넣을 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기를 선택 하면 작업을 수행 합니다.  

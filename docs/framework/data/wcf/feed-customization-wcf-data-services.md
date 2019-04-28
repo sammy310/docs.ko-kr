@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
 ms.openlocfilehash: 51da86d6c0f565d1baa58452a661ccbaa321538c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765689"
 ---
 # <a name="feed-customization-wcf-data-services"></a>피드 사용자 지정(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 사용 하 여는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 데이터 피드로 노출 합니다. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 데이터 피드의 Atom 및 개체 JSON (JavaScript Notation) 형식을 지원합니다. Atom 피드를 사용 하는 경우 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 같은 엔터티 및 관계를 HTTP 메시지의 본문에 포함 될 수 있는 XML 형식으로 데이터를 serialize 하는 표준 방법을 제공 합니다. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 엔터티에 포함 된 데이터 및 Atom 요소 간의 기본 엔터티 속성 매핑을 정의 합니다. 자세한 내용은 참조 하세요. [OData: Atom 형식](https://go.microsoft.com/fwlink/?LinkID=185794)합니다.  
@@ -83,12 +83,12 @@ ms.locfileid: "59517319"
 ## <a name="feed-customization-considerations"></a>피드 사용자 지정 고려 사항  
  사용자 지정 피드 매핑을 정의할 때는 다음을 고려해야 합니다.  
   
--   [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 취급 매핑된 요소는 피드의 비어 있는 공백만 포함 하는 경우. 이 인해 공백만 포함 된 매핑된 요소는 동일한 공백을 사용 하 여 클라이언트 구체화 되지 않습니다. 클라이언트에서이 공백을 유지 하려면 값을 설정 해야 합니다 `KeepInContext` 에 `true` 피드 매핑 특성에서 합니다.  
+- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 취급 매핑된 요소는 피드의 비어 있는 공백만 포함 하는 경우. 이 인해 공백만 포함 된 매핑된 요소는 동일한 공백을 사용 하 여 클라이언트 구체화 되지 않습니다. 클라이언트에서이 공백을 유지 하려면 값을 설정 해야 합니다 `KeepInContext` 에 `true` 피드 매핑 특성에서 합니다.  
   
 ## <a name="versioning-requirements"></a>버전 관리 요구 사항  
  피드 사용자 지정에 대한 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 프로토콜 버전 관리 요구 사항은 다음과 같습니다.  
   
--   피드를 사용자 지정하는 경우 클라이언트와 데이터 서비스가 모두 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 프로토콜 버전 2.0 이상을 지원해야 합니다.  
+- 피드를 사용자 지정하는 경우 클라이언트와 데이터 서비스가 모두 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 프로토콜 버전 2.0 이상을 지원해야 합니다.  
   
  자세한 내용은 [데이터 서비스 버전 관리](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)합니다.  
   

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
 ms.openlocfilehash: e8d82ff8958af12842366911b6633ea6b2e0efbb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765868"
 ---
 # <a name="create-the-data-service"></a>데이터 서비스 만들기
 
@@ -52,11 +52,11 @@ ms.locfileid: "59517228"
 
 5. 다음 단계 중 하나를 수행 하 여 데이터 모델 데이터베이스에 연결 하 고 클릭 **다음**:
 
-    -   이미 구성 된 데이터베이스 연결 목록에 없으면 클릭 **새 연결** 새 연결을 만듭니다. 자세한 내용은 [방법: SQL Server 데이터베이스에 연결을 만들](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))합니다. 이 SQL Server 인스턴스에는 Northwind 샘플 데이터베이스가 연결되어 있어야 합니다.
+    - 이미 구성 된 데이터베이스 연결 목록에 없으면 클릭 **새 연결** 새 연결을 만듭니다. 자세한 내용은 [방법: SQL Server 데이터베이스에 연결을 만들](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))합니다. 이 SQL Server 인스턴스에는 Northwind 샘플 데이터베이스가 연결되어 있어야 합니다.
 
          \- 또는 -
 
-    -   Northwind 데이터베이스에 연결할 수 있도록 데이터베이스 연결이 이미 구성되어 있는 경우 연결 목록에서 해당 연결을 선택합니다.
+    - Northwind 데이터베이스에 연결할 수 있도록 데이터베이스 연결이 이미 구성되어 있는 경우 연결 목록에서 해당 연결을 선택합니다.
 
 6. 마법사의 마지막 페이지에서 데이터베이스의 모든 테이블에 대한 확인란을 선택하고 뷰 및 저장 프로시저에 대한 확인란의 선택을 취소합니다.
 

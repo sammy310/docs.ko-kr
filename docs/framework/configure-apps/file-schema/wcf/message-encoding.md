@@ -3,11 +3,11 @@ title: 메시지 인코딩
 ms.date: 03/30/2017
 ms.assetid: f30ee941-aca9-4c67-82a5-421568496f07
 ms.openlocfilehash: 7fb0d4a994eaf1497841691eb76261329a48599d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768994"
 ---
 # <a name="message-encoding"></a>메시지 인코딩
 인코딩은 유니코드 문자 집합을 바이트 시퀀스로 변환하는 프로세스입니다. 디코딩은 역프로세스입니다. Windows Communication Foundation (WCF)에 세 가지 유형의 SOAP 메시지에 대 한 인코딩을 포함 됩니다. 텍스트, 이진 및 (MTOM) Message Transmission Optimization Mechanism 합니다.  

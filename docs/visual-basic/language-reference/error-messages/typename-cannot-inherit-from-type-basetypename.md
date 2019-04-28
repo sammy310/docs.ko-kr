@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30910
 ms.assetid: 68fc05c5-5d55-4742-9a3b-ea04312594f4
 ms.openlocfilehash: dc979a66c73fdf15a4349a003680156e0ce27ed3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764363"
 ---
 # <a name="typename-cannot-inherit-from-type-basetypename-because-it-expands-the-access-of-the-base-type-outside-the-assembly"></a>'\<typename >'에서 상속할 수 없습니다 \<유형 > '\<basetypename >' 기본에 대 한 액세스를 확장 하므로 \<유형 > 어셈블리 외부에서
 기본 클래스에서 상속 하는 클래스 또는 인터페이스 또는 인터페이스의 하지만 덜 제한적인 액세스 수준이 있습니다.  
@@ -23,11 +23,11 @@ ms.locfileid: "58838952"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   파생된 클래스 또는 적어도 제한적으로 기본 클래스 또는 인터페이스의 인터페이스의 액세스 수준을 변경 합니다.  
+- 파생된 클래스 또는 적어도 제한적으로 기본 클래스 또는 인터페이스의 인터페이스의 액세스 수준을 변경 합니다.  
   
      또는  
   
--   덜 제한적인 액세스 수준에 필요한 경우 제거 된 `Inherits` 문입니다. 좀 더 제한 된 기본 클래스 또는 인터페이스에서 상속할 수 없습니다.  
+- 덜 제한적인 액세스 수준에 필요한 경우 제거 된 `Inherits` 문입니다. 좀 더 제한 된 기본 클래스 또는 인터페이스에서 상속할 수 없습니다.  
   
 ## <a name="see-also"></a>참고자료
 

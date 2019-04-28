@@ -3,11 +3,11 @@ title: Entity SQL과 Transact-SQL의 차이점
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
 ms.openlocfilehash: 75ce0b00962526b76ea9f4b9fdfb0d1e1e564cdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774753"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Entity SQL과 Transact-SQL의 차이점
 이 항목에서는 차이점을 설명 합니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 고 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]입니다.  
@@ -20,15 +20,15 @@ ms.locfileid: "59162739"
 ## <a name="support-for-collections"></a>컬렉션 지원  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 컬렉션을 고급 엔터티로 취급합니다. 예를 들어:  
   
--   컬렉션 식은 `from` 절에서 유효합니다.  
+- 컬렉션 식은 `from` 절에서 유효합니다.  
   
--   하위 쿼리 `in` 및 `exists`는 모든 컬렉션을 허용하도록 일반화되었습니다.  
+- 하위 쿼리 `in` 및 `exists`는 모든 컬렉션을 허용하도록 일반화되었습니다.  
   
      하위 쿼리는 일종의 컬렉션입니다. `e1 in e2` 및 `exists(e)`는 이러한 작업을 수행하는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 구문입니다.  
   
--   컬렉션에 대해 `union`, `intersect`, `except` 등의 Set 작업이 수행됩니다.  
+- 컬렉션에 대해 `union`, `intersect`, `except` 등의 Set 작업이 수행됩니다.  
   
--   컬렉션에 조인이 수행됩니다.  
+- 컬렉션에 조인이 수행됩니다.  
   
 ## <a name="support-for-expressions"></a>식 지원  
  [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 하위 쿼리 (테이블) 및 식 (행 및 열)에 있습니다.  

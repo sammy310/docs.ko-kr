@@ -3,11 +3,11 @@ title: 개체 지향 프로그래밍 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
 ms.openlocfilehash: 058d8b932e50f784d4a5cefa9fadfb31953687f0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783515"
 ---
 # <a name="object-oriented-programming-visual-basic"></a>개체 지향 프로그래밍 (Visual Basic)
 
@@ -177,7 +177,7 @@ End Class
 
 #### <a name="destructors"></a>소멸자
 
-소멸자는 클래스의 인스턴스를 소멸하는 데 사용됩니다. .NET Framework에서는 응용 프로그램의 관리되는 개체에 대해 가비지 수집기가 자동으로 메모리를 할당하고 해제하지만 응용 프로그램에서 만들어지는 관리되지 않는 개체를 정리하려면 여전히 소멸자가 필요할 수 있습니다. 각 클래스에는 소멸자가 하나씩만 있을 수 있습니다.
+소멸자는 클래스의 인스턴스를 소멸하는 데 사용됩니다. .NET Framework에서는 애플리케이션의 관리되는 개체에 대해 가비지 수집기가 자동으로 메모리를 할당하고 해제하지만 애플리케이션에서 만들어지는 관리되지 않는 개체를 정리하려면 여전히 소멸자가 필요할 수 있습니다. 각 클래스에는 소멸자가 하나씩만 있을 수 있습니다.
 
 .NET Framework의 소멸자 및 가비지 수집에 대한 자세한 내용은 [가비지 수집](../../../standard/garbage-collection/index.md)을 참조하세요.
 
@@ -281,7 +281,7 @@ MsgBox(SampleClass.SampleString)
 - [공유](../../../visual-basic/language-reference/modifiers/shared.md)
 - [Module 문](../../../visual-basic/language-reference/statements/module-statement.md)
 
-### <a name="anonymous-types"></a>익명 형식
+### <a name="anonymous-types"></a>무명 형식
 
 익명 형식을 사용하면 데이터 형식에 대한 클래스 정의를 작성하지 않고 개체를 만들 수 있습니다. 대신 컴파일러가 클래스를 생성합니다. 이 클래스는 사용할 수 있는 이름이 없고 개체를 선언할 때 지정하는 속성을 포함합니다.
 
@@ -293,7 +293,7 @@ Dim sampleObject =
     New With {Key .FirstProperty = "A", .SecondProperty = "B"}
 ```
 
-자세한 내용은 다음을 참조하세요. [익명 형식](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)합니다.
+자세한 내용은 다음을 참조하세요. [익명 형식](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)을 참조하세요.
 
 ## <a name="inheritance"></a>상속
 

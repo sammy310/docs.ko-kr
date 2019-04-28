@@ -3,11 +3,11 @@ title: '방법: (XPath 및 LINQ to XML) 관련된 요소 찾기 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 6b0ef058-d704-48a5-98cd-33f00d088af9
 ms.openlocfilehash: 58137a1bca93c0281424ba457569631a4b513a55
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780434"
 ---
 # <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>방법: (XPath 및 LINQ to XML) 관련된 요소 찾기 (Visual Basic)
 이 항목에서는 다른 요소의 값에 의해 참조되는 특성을 기준으로 선택하여 요소를 가져오는 방법을 비교합니다.  

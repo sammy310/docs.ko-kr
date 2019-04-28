@@ -10,11 +10,11 @@ helpviewer_keywords:
 - element colors [WPF], changing
 ms.assetid: 3b20d028-6f1c-4b25-95d2-fa68cefbdb4c
 ms.openlocfilehash: 87740a215136863199d962a2704cf691f27fc3bc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776651"
 ---
 # <a name="how-to-create-a-rollover-effect-using-events"></a>방법: 이벤트를 사용하여 롤오버 효과 만들기
 이 예제에서는 마우스 포인터가 요소에서 사용 하는 영역을 들어가고 대로 요소의 색을 변경 하는 방법을 보여 줍니다.  

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 91bb1a9416e577dbb5cc96e8be87033c53232811
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765273"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion 함수
 호스트가 명시적으로 CLR을 초기화 하기 전에 프로세스 내에서 사용할는 버전의 CLR (공용 언어 런타임)을 결정할 수 있습니다.  
@@ -72,15 +72,15 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
 3. 지정 된 함수의 `hostCallback` 다음 호출 시퀀스를 사용 하는 합니다.  
   
-    -   에 지정 된 함수는 `pBeginHostSetup` 매개 변수입니다.  
+    - 에 지정 된 함수는 `pBeginHostSetup` 매개 변수입니다.  
   
-    -   `CorBindToRuntimeEx` (또는 다른 런타임 초기화 함수)입니다.  
+    - `CorBindToRuntimeEx` (또는 다른 런타임 초기화 함수)입니다.  
   
-    -   [ICLRRuntimeHost::SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).  
+    - [ICLRRuntimeHost::SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).  
   
-    -   [ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).  
+    - [ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).  
   
-    -   에 지정 된 함수는 `pEndHostSetup` 매개 변수입니다.  
+    - 에 지정 된 함수는 `pEndHostSetup` 매개 변수입니다.  
   
  모든 호출은 `pBeginHostSetup` 에 `pEndHostSetup` 단일 스레드 또는 파이버를 동일한 논리 스택과 수행 되어야 합니다. 이 스레드는 스레드에서 다를 수 있습니다 `hostCallback` 라고 합니다.  
   

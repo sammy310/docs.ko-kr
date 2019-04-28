@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b38526cd-a62a-48cb-822a-e91dfa68e02d
 ms.openlocfilehash: 5eb81fd2a64f06f1252f71e251e58df568e7407c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772075"
 ---
 # <a name="obtaining-a-single-value-from-a-database"></a>데이터베이스에서 단일 값 가져오기
 테이블이나 데이터 스트림 형식보다는 단순히 단일 값인 데이터베이스 정보를 반환해야 하는 경우가 있습니다. COUNT와 같은 집계 함수의 결과 반환 하려는 하는 예를 들어 (\*), price 또는 AVG(Quantity) 합니다. 합니다 **명령** 개체를 사용 하 여 단일 값을 반환 하는 기능을 제공 합니다 **ExecuteScalar** 메서드. 합니다 **ExecuteScalar** 메서드는 스칼라 값을 결과 집합의 첫 번째 행의 첫 번째 열 값으로 반환 합니다.  

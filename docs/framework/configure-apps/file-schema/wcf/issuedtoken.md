@@ -3,11 +3,11 @@ title: <issuedToken>
 ms.date: 03/30/2017
 ms.assetid: b6eae4b7-a6cd-4e1a-b0f6-f407022550b0
 ms.openlocfilehash: 83061b283c9430af7bcda9cbc832811fa805ed4c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756288"
 ---
 # <a name="issuedtoken"></a>\<issuedToken>
 서비스에 대해 클라이언트를 인증할 때 사용되는 사용자 지정 토큰을 지정합니다.  

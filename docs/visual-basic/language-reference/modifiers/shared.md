@@ -12,11 +12,11 @@ helpviewer_keywords:
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
 ms.openlocfilehash: 12c81a9a0651088a348afeaff3b71935d289da53
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778744"
 ---
 # <a name="shared-visual-basic"></a>Shared(Visual Basic)
 선언 된 프로그래밍 요소를 하나 이상의 클래스 또는 구조체의 특정 인스턴스에 없습니다 클래스 또는 구조체와 연결 되도록 지정 합니다.  
@@ -30,25 +30,25 @@ ms.locfileid: "58816285"
   
 ## <a name="rules"></a>규칙  
   
--   **선언 컨텍스트입니다.** `Shared`는 모듈 수준에서만 사용할 수 있습니다. 즉, 선언 컨텍스트는 `Shared` 요소는 클래스 또는 구조체 여야 하며 소스 파일, 네임 스페이스 또는 프로시저 수는 없습니다.  
+- **선언 컨텍스트입니다.** `Shared`는 모듈 수준에서만 사용할 수 있습니다. 즉, 선언 컨텍스트는 `Shared` 요소는 클래스 또는 구조체 여야 하며 소스 파일, 네임 스페이스 또는 프로시저 수는 없습니다.  
   
--   **결합 된 한정자입니다.** 지정할 수 없습니다 `Shared` 와 함께 [재정의](../../../visual-basic/language-reference/modifiers/overrides.md)를 [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)를 [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)를 [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md), 또는 [ 정적](../../../visual-basic/language-reference/modifiers/static.md) 같은 선언에 있습니다.  
+- **결합 된 한정자입니다.** 지정할 수 없습니다 `Shared` 와 함께 [재정의](../../../visual-basic/language-reference/modifiers/overrides.md)를 [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)를 [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)를 [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md), 또는 [ 정적](../../../visual-basic/language-reference/modifiers/static.md) 같은 선언에 있습니다.  
   
--   **에 액세스합니다.** 클래스 또는 구조체 이름으로, 해당 클래스 또는 구조체의 특정 인스턴스 변수 이름의 하지 정규화 하 여 공유 요소에 액세스 합니다. 도 클래스 또는 해당 공유 멤버에 액세스 하는 구조체의 인스턴스를 만들 필요가 없습니다.  
+- **에 액세스합니다.** 클래스 또는 구조체 이름으로, 해당 클래스 또는 구조체의 특정 인스턴스 변수 이름의 하지 정규화 하 여 공유 요소에 액세스 합니다. 도 클래스 또는 해당 공유 멤버에 액세스 하는 구조체의 인스턴스를 만들 필요가 없습니다.  
   
      다음 예제에서는 공유 프로시저를 호출 <xref:System.Double.IsNaN%2A> 에 의해 노출 된 <xref:System.Double> 구조입니다.  
   
      `If Double.IsNaN(result) Then MsgBox("Result is mathematically undefined.")`  
   
--   **암시적 공유 합니다.** 사용할 수 없습니다는 `Shared` 한정자를 [Const 문](../../../visual-basic/language-reference/statements/const-statement.md)를 암시적으로 상수는 공유 합니다. 마찬가지로, 되도록 모듈 또는 인터페이스의 멤버를 선언할 수 없습니다 `Shared`, 없어도 암시적으로 공유 합니다.  
+- **암시적 공유 합니다.** 사용할 수 없습니다는 `Shared` 한정자를 [Const 문](../../../visual-basic/language-reference/statements/const-statement.md)를 암시적으로 상수는 공유 합니다. 마찬가지로, 되도록 모듈 또는 인터페이스의 멤버를 선언할 수 없습니다 `Shared`, 없어도 암시적으로 공유 합니다.  
   
 ## <a name="behavior"></a>동작  
   
--   **Storage.** 해당 클래스 또는 구조체의 만든 인스턴스의 수에 관계 없이 한 번만 공유 변수 또는 이벤트 메모리에 저장 됩니다. 마찬가지로, 공유 프로시저 또는 속성을 로컬 변수 집합을 하나만 보유합니다.  
+- **Storage.** 해당 클래스 또는 구조체의 만든 인스턴스의 수에 관계 없이 한 번만 공유 변수 또는 이벤트 메모리에 저장 됩니다. 마찬가지로, 공유 프로시저 또는 속성을 로컬 변수 집합을 하나만 보유합니다.  
   
--   **인스턴스 변수를 통해 액세스 합니다.** 해당 클래스 또는 구조체의 특정 인스턴스를 포함 하는 변수 이름으로 정규화 하 여 공유 요소에 액세스 하는 것이 가능 합니다. 이 문제는 일반적으로 예상 대로 작동, 있지만 컴파일러 경고 메시지를 생성 하 고 변수 대신 클래스 또는 구조체 이름을 통해 액세스 합니다.  
+- **인스턴스 변수를 통해 액세스 합니다.** 해당 클래스 또는 구조체의 특정 인스턴스를 포함 하는 변수 이름으로 정규화 하 여 공유 요소에 액세스 하는 것이 가능 합니다. 이 문제는 일반적으로 예상 대로 작동, 있지만 컴파일러 경고 메시지를 생성 하 고 변수 대신 클래스 또는 구조체 이름을 통해 액세스 합니다.  
   
--   **인스턴스 식을 통해 액세스 합니다.** 해당 클래스 또는 구조체의 인스턴스를 반환 하는 식을 통해 공유 요소를 액세스 하는 경우 컴파일러에서 식을 평가 하는 대신 클래스 또는 구조체 이름을 통해 액세스 합니다. 이 인스턴스를 반환 합니다. 뿐만 아니라 다른 작업을 수행 하는 식 했다면 예기치 않은 결과가 생성 됩니다. 다음은 이에 대한 예입니다.  
+- **인스턴스 식을 통해 액세스 합니다.** 해당 클래스 또는 구조체의 인스턴스를 반환 하는 식을 통해 공유 요소를 액세스 하는 경우 컴파일러에서 식을 평가 하는 대신 클래스 또는 구조체 이름을 통해 액세스 합니다. 이 인스턴스를 반환 합니다. 뿐만 아니라 다른 작업을 수행 하는 식 했다면 예기치 않은 결과가 생성 됩니다. 다음은 이에 대한 예입니다.  
   
     ```vb
     Sub main()  

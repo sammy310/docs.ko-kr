@@ -3,11 +3,11 @@ title: DEREF(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4c78e833-b260-453d-9bf4-eb39857dd0fa
 ms.openlocfilehash: 1ba562ba6542e6ab0d62f1f8348434ae4f4c9b13
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785309"
 ---
 # <a name="deref-entity-sql"></a>DEREF(Entity SQL)
 참조 값을 역참조하고 이 역참조의 결과를 생성합니다.  

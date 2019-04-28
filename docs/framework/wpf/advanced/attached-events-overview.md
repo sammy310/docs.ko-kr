@@ -13,11 +13,11 @@ helpviewer_keywords:
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
 ms.openlocfilehash: 7b7b0fcc9612994803bb23e985f44c483e708857
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777145"
 ---
 # <a name="attached-events-overview"></a>연결된 이벤트 개요
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]은 *연결된 이벤트*라는 이벤트의 유형 및 언어 구성 요소를 정의합니다. 연결된 이벤트의 개념을 사용하면 실제로 정의하거나 이벤트를 상속하는 요소가 아닌 임의의 요소에 특정 이벤트의 핸들러를 추가할 수 있습니다. 이 경우 이벤트를 잠재적으로 발생시키는 개체나 인스턴스를 처리하는 대상이 정의하지 않으며 또는 그렇지 않으면 이벤트를 "소유"합니다.  
@@ -64,9 +64,9 @@ ms.locfileid: "59613592"
   
  패턴은 다음과 같습니다.  
   
--   메서드 **추가*EventName*처리기** 두 매개 변수를 사용 합니다. 첫 번째 매개 변수는 이벤트 처리기 추가 되는 인스턴스입니다. 두 번째 매개 변수는 이벤트 처리기를 추가 합니다. 메서드는 이어야 합니다 `public` 및 `static`, 반환 값이 없습니다.  
+- 메서드 **추가*EventName*처리기** 두 매개 변수를 사용 합니다. 첫 번째 매개 변수는 이벤트 처리기 추가 되는 인스턴스입니다. 두 번째 매개 변수는 이벤트 처리기를 추가 합니다. 메서드는 이어야 합니다 `public` 및 `static`, 반환 값이 없습니다.  
   
--   메서드 **제거할*EventName*처리기** 두 매개 변수를 사용 합니다. 첫 번째 매개 변수는 이벤트 처리기를 제거 하는 인스턴스입니다. 두 번째 매개 변수는 제거할 이벤트 처리기입니다. 메서드는 이어야 합니다 `public` 및 `static`, 반환 값이 없습니다.  
+- 메서드 **제거할*EventName*처리기** 두 매개 변수를 사용 합니다. 첫 번째 매개 변수는 이벤트 처리기를 제거 하는 인스턴스입니다. 두 번째 매개 변수는 제거할 이벤트 처리기입니다. 메서드는 이어야 합니다 `public` 및 `static`, 반환 값이 없습니다.  
   
  합니다 **추가*EventName*처리기** 접근자 메서드를 용이 하 게는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 특성은 요소에서 선언 하는 이벤트 처리기를 연결 된 경우를 처리 합니다. **추가*EventName*처리기** 하 고 **제거*EventName*처리기** 메서드 또한 코드에 대 한 이벤트 처리기 저장소에 대 한 액세스를 사용 합니다 연결 된 이벤트입니다.  
   

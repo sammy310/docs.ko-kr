@@ -6,11 +6,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], how-to topics
 ms.assetid: 54682d3b-1cbf-4683-9351-012b8b4286b5
 ms.openlocfilehash: ea6994e653b3a06239634f5a0fddea84a07086e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777184"
 ---
 # <a name="using-application-settings-and-user-settings"></a>응용 프로그램 설정 및 사용자 설정 사용
 .NET Framework 2.0부터 수 만들고 응용 프로그램 실행 세션 간에 유지 되는 값에 액세스 합니다. 이러한 값 이라고 *설정을*합니다. 응용 프로그램의 중요 한 정보를 사용 해야 합니다. 또는 설정에는 사용자 기본 설정에 나타낼 수 있습니다. 예를 들어 일련의 응용 프로그램의 색 구성표에 대 한 사용자 기본 설정을 저장 하는 설정 만들 수 있습니다. 또는 응용 프로그램을 사용 하는 데이터베이스를 지정 하는 연결 문자열을 저장할 수 있습니다. 설정을 코드 외부에 있고 개별 사용자의 기본 설정을 저장 하는 프로필을 만드는 응용 프로그램에 중요 한 정보를 유지 하 둘 다를 수 있습니다.  

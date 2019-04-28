@@ -14,11 +14,11 @@ helpviewer_keywords:
 - declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
 ms.openlocfilehash: f546498e5282bcf58d07a06968bb4303e4e6d7b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784165"
 ---
 # <a name="module-statement"></a>Module 문
 모듈의 이름을 선언 하 고 변수, 속성, 이벤트 및 모듈을 구성 하는 프로시저의 정의 소개 합니다.  
@@ -38,9 +38,9 @@ End Module
  `accessmodifier`  
  선택 사항입니다. 다음 중 하나일 수 있습니다.  
   
--   [공용](../../../visual-basic/language-reference/modifiers/public.md)  
+- [공용](../../../visual-basic/language-reference/modifiers/public.md)  
   
--   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
+- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
  [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)을 참조하세요.  
   
@@ -67,31 +67,31 @@ End Module
 ## <a name="classes-and-modules"></a>클래스와 모듈  
  이러한 요소는 비슷한 점이 많이 몇 가지 중요 한 차이점도 있습니다.  
   
--   **용어입니다.** 이전 버전의 Visual Basic 등 두 유형의 모듈로 인식: *클래스 모듈* (.cls 파일) 및 *표준 모듈* (.bas 파일). 현재 버전에서는 이러한 *클래스* 하 고 *모듈*, 각각.  
+- **용어입니다.** 이전 버전의 Visual Basic 등 두 유형의 모듈로 인식: *클래스 모듈* (.cls 파일) 및 *표준 모듈* (.bas 파일). 현재 버전에서는 이러한 *클래스* 하 고 *모듈*, 각각.  
   
--   **공유 멤버입니다.** 공유 클래스의 멤버 인지 또는 인스턴스 멤버를 제어할 수 있습니다.  
+- **공유 멤버입니다.** 공유 클래스의 멤버 인지 또는 인스턴스 멤버를 제어할 수 있습니다.  
   
--   **개체 방향입니다.** 클래스는 개체 지향 되지만 모듈이 없습니다. 따라서 클래스는 개체로 인스턴스화할 수 있습니다. 자세한 내용은 [개체 및 클래스](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)합니다.  
+- **개체 방향입니다.** 클래스는 개체 지향 되지만 모듈이 없습니다. 따라서 클래스는 개체로 인스턴스화할 수 있습니다. 자세한 내용은 [개체 및 클래스](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)합니다.  
   
 ## <a name="rules"></a>규칙  
   
--   **한정자입니다.** 모든 모듈 멤버는 암시적 [공유](../../../visual-basic/language-reference/modifiers/shared.md)합니다. 사용할 수 없습니다는 `Shared` 키워드가 모든 멤버의 공유 상태를 변경할 수 없습니다는 멤버를 선언 하는 경우.  
+- **한정자입니다.** 모든 모듈 멤버는 암시적 [공유](../../../visual-basic/language-reference/modifiers/shared.md)합니다. 사용할 수 없습니다는 `Shared` 키워드가 모든 멤버의 공유 상태를 변경할 수 없습니다는 멤버를 선언 하는 경우.  
   
--   **상속.** 이외의 다른 모든 형식에서 상속할 수 없습니다. 모듈 <xref:System.Object>, 모든 모듈에서 상속 합니다. 특히 하나의 모듈에서 다른 상속할 수 없습니다.  
+- **상속.** 이외의 다른 모든 형식에서 상속할 수 없습니다. 모듈 <xref:System.Object>, 모든 모듈에서 상속 합니다. 특히 하나의 모듈에서 다른 상속할 수 없습니다.  
   
      사용할 수 없습니다는 [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md) 지정 하는 데도 모듈 정의 <xref:System.Object>합니다.  
   
--   **기본 속성입니다.** 모듈의 기본 속성을 정의할 수 없습니다. 자세한 내용은 [기본](../../../visual-basic/language-reference/modifiers/default.md)입니다.  
+- **기본 속성입니다.** 모듈의 기본 속성을 정의할 수 없습니다. 자세한 내용은 [기본](../../../visual-basic/language-reference/modifiers/default.md)입니다.  
   
 ## <a name="behavior"></a>동작  
   
--   **액세스 수준입니다.** 모듈 내에서 자신의 액세스 수준 가진 각 멤버를 선언할 수 있습니다. 모듈 멤버를 기본값으로 [공개](../../../visual-basic/language-reference/modifiers/public.md) 변수와 상수를 제외 하 고는 기본적으로 액세스 [개인](../../../visual-basic/language-reference/modifiers/private.md) 액세스 합니다. 모듈에 보다 제한적인 해당 멤버 중 하나를 지정 된 모듈 액세스 수준을 우선적으로 적용 합니다.  
+- **액세스 수준입니다.** 모듈 내에서 자신의 액세스 수준 가진 각 멤버를 선언할 수 있습니다. 모듈 멤버를 기본값으로 [공개](../../../visual-basic/language-reference/modifiers/public.md) 변수와 상수를 제외 하 고는 기본적으로 액세스 [개인](../../../visual-basic/language-reference/modifiers/private.md) 액세스 합니다. 모듈에 보다 제한적인 해당 멤버 중 하나를 지정 된 모듈 액세스 수준을 우선적으로 적용 합니다.  
   
--   **범위입니다.** 모듈은 해당 네임 스페이스 범위에서.  
+- **범위입니다.** 모듈은 해당 네임 스페이스 범위에서.  
   
      모든 모듈 멤버의 범위는 전체 모듈입니다. 표시 되는 모든 멤버가 *형식 승격*, 모듈을 포함 하는 네임 스페이스를 승격할 해당 범위에 이르게 합니다. 자세한 내용은 [형식 승격](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)합니다.  
   
--   **정규화 합니다.** 프로젝트에서 여러 모듈을 할 수 있습니다 하 고 둘 이상의 모듈에서 동일한 이름 가진 멤버를 선언할 수 있습니다. 그러나 모듈 외부에서 참조 되는 경우 적절 한 모듈 이름으로 이러한 멤버에 대 한 모든 참조를 정규화 해야 합니다. 자세한 내용은 [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)을 참조하세요.  
+- **정규화 합니다.** 프로젝트에서 여러 모듈을 할 수 있습니다 하 고 둘 이상의 모듈에서 동일한 이름 가진 멤버를 선언할 수 있습니다. 그러나 모듈 외부에서 참조 되는 경우 적절 한 모듈 이름으로 이러한 멤버에 대 한 모든 참조를 정규화 해야 합니다. 자세한 내용은 [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
  [!code-vb[VbVbalrStatements#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#69)]  

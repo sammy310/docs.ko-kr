@@ -3,11 +3,11 @@ title: ORDER BY(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
 ms.openlocfilehash: 4cf65637603fd6c20a33b1ae6ecd8b6ded36a246
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760300"
 ---
 # <a name="order-by-entity-sql"></a>ORDER BY(Entity SQL)
 SELECT 문에서 반환되는 개체에 적용하는 정렬 순서를 지정합니다.  
@@ -79,23 +79,23 @@ ORDER BY ...
 ## <a name="restricted-keywords"></a>제한된 키워드  
  다음 키워드를 `ORDER BY` 절에서 사용할 때는 따옴표로 묶어야 합니다.  
   
--   CROSS  
+- CROSS  
   
--   FULL  
+- FULL  
   
--   KEY  
+- KEY  
   
--   LEFT  
+- LEFT  
   
--   ORDER  
+- ORDER  
   
--   OUTER  
+- OUTER  
   
--   RIGHT  
+- RIGHT  
   
--   ROW  
+- ROW  
   
--   VALUE  
+- VALUE  
   
 ## <a name="ordering-nested-queries"></a>중첩 쿼리 순서  
  Entity Framework에서 중첩된 식은 쿼리 내 임의의 위치에 올 수 있습니다. 중첩 쿼리의 순서는 유지되지 않습니다.  

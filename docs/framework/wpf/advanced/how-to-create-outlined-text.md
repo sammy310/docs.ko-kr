@@ -12,11 +12,11 @@ helpviewer_keywords:
 - typography [WPF], outline effects
 ms.assetid: 4aa3cf6e-1953-4f26-8230-7c1409e5f28d
 ms.openlocfilehash: 237bdc097cd2a3fbfff6dd79bce401c2d091e211
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776772"
 ---
 # <a name="how-to-create-outlined-text"></a>방법: 윤곽선이 있는 텍스트 만들기
 대부분의 경우, 장식의 텍스트 문자열에 추가 하는 경우에 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 불연속 문자 또는 문자 모양을 컬렉션과 관련 된 텍스트를 사용 하는 응용 프로그램입니다. 예를 들어 선형 그라데이션 브러시를 만들고 적용 하는 <xref:System.Windows.Controls.Control.Foreground%2A> 의 속성을 <xref:System.Windows.Controls.TextBox> 개체입니다. 을 표시 하거나 텍스트 상자를 편집할 때 선형 그라데이션 브러시 현재 텍스트 문자열에서 문자 집합에 자동으로 적용 됩니다.  

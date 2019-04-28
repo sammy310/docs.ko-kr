@@ -6,11 +6,11 @@ helpviewer_keywords:
 - compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
 ms.openlocfilehash: 828edf2e5491394f5ac802b5c9babfb3df359e59
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758459"
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Visual Basic의 조건부 컴파일
 *조건부 컴파일*, 특정 코드 블록을 프로그램에서 선택적으로 컴파일되고 나머지는 무시 됩니다.  
@@ -29,11 +29,11 @@ ms.locfileid: "56967856"
 ## <a name="declaring-conditional-compilation-constants"></a>조건부 컴파일 상수를 선언합니다.  
  세 가지 방법 중 하나로 조건부 컴파일 상수를 설정할 수 있습니다.  
   
--   에 **프로젝트 디자이너**  
+- 에 **프로젝트 디자이너**  
   
--   명령줄 컴파일러를 사용 하는 경우 명령줄에서  
+- 명령줄 컴파일러를 사용 하는 경우 명령줄에서  
   
--   코드에서  
+- 코드에서  
   
  조건부 컴파일 상수는 특별 한 범위가 있으며 표준 코드에서 액세스할 수 없습니다. 조건부 컴파일 상수 범위가 설정 방법에 따라 달라 집니다. 다음 표에서 각 위에서 언급 한 세 가지 방법을 사용 하 여 선언 된 상수의 범위를 나열 합니다.  
   

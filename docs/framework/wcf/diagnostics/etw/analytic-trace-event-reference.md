@@ -5,11 +5,11 @@ helpviewer_keywords:
 - analytic tracing [WCF]. reference
 ms.assetid: e44540cf-44a1-4efc-b965-7fbfd2131d73
 ms.openlocfilehash: 0f8b4c15f2afefbc62b98dca66dcf3ccc31b1dc0
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753038"
 ---
 # <a name="analytic-trace-event-reference"></a>분석 추적 이벤트 참조
 다음 표에서 이벤트 수준, 식별자 및 WCF 분석 추적와 관련 된 메시지를 정의 합니다.  
@@ -108,8 +108,8 @@ ms.locfileid: "33808639"
 |[1430 - PendingConnectionsRatio](../../../../../docs/framework/wcf/diagnostics/etw/1430-pendingconnectionsratio.md)|자세히|보류 중인 연결 비율: %1/%2|할당량|  
 |[1431 - ConcurrentCallsRatio](../../../../../docs/framework/wcf/diagnostics/etw/1431-concurrentcallsratio.md)|자세히|동시 세션 비율: %1/%2|할당량|  
 |[1432 - ConcurrentSessionsRatio](../../../../../docs/framework/wcf/diagnostics/etw/1432-concurrentsessionsratio.md)|자세히|동시 세션 비율: %1/%2|할당량|  
-|[1433 - OutboundConnectionsPerEndpointRatio](../../../../../docs/framework/wcf/diagnostics/etw/1433-outboundconnectionsperendpointratio.md)|자세히|끝점당 아웃바운드 연결 비율: %1/%2|할당량|  
-|[1433 - OutboundConnectionsPerEndpointRatio](../../../../../docs/framework/wcf/diagnostics/etw/1433-outboundconnectionsperendpointratio.md)|자세히|끝점당 아웃바운드 연결 비율: %1/%2|할당량|  
+|[1433 - OutboundConnectionsPerEndpointRatio](../../../../../docs/framework/wcf/diagnostics/etw/1433-outboundconnectionsperendpointratio.md)|자세히|엔드포인트당 아웃바운드 연결 비율: %1/%2|할당량|  
+|[1433 - OutboundConnectionsPerEndpointRatio](../../../../../docs/framework/wcf/diagnostics/etw/1433-outboundconnectionsperendpointratio.md)|자세히|엔드포인트당 아웃바운드 연결 비율: %1/%2|할당량|  
 |[1436 - PendingMessagesPerChannelRatio](../../../../../docs/framework/wcf/diagnostics/etw/1436-pendingmessagesperchannelratio.md)|자세히|채널당 보류 중인 메시지 비율: %1/%2|할당량|  
 |[1438 - ConcurrentInstancesRatio](../../../../../docs/framework/wcf/diagnostics/etw/1438-concurrentinstancesratio.md)|자세히|동시 인스턴스 비율: %1/%2|할당량|  
 |[1439 - PendingAcceptsAtZero](../../../../../docs/framework/wcf/diagnostics/etw/1439-pendingacceptsatzero.md)|정보|보류 중인 수락 항목 없음|할당량|  
@@ -126,7 +126,7 @@ ms.locfileid: "33808639"
 |[3305 - ClientBaseCachedChannelFactoryCount](../../../../../docs/framework/wcf/diagnostics/etw/3305-clientbasecachedchannelfactorycount.md)|정보|캐시된 채널 팩터리 수는 '%1'입니다.  최대 '%2'개 채널 팩터리를 캐시할 수 있습니다.|ServiceModel|  
 |[3306 - ClientBaseChannelFactoryAgedOutofCache](../../../../../docs/framework/wcf/diagnostics/etw/3306-clientbasechannelfactoryagedoutofcache.md)|정보|캐시가 해당 한도 '%1'에 도달했기 때문에 채널 팩터리가 캐시에서 만료되었습니다.|ServiceModel|  
 |[3307 - ClientBaseChannelFactoryCacheHit](../../../../../docs/framework/wcf/diagnostics/etw/3307-clientbasechannelfactorycachehit.md)|정보|캐시에서 사용된 일치하는 채널 팩터리가 발견되었습니다.|ServiceModel|  
-|[3308 - ClientBaseUsingLocalChannelFactory](../../../../../docs/framework/wcf/diagnostics/etw/3308-clientbaseusinglocalchannelfactory.md)|정보|캐시에서 채널 팩터리를 사용 하지, 즉, 캐싱 사용 안 함 예를 들어|ServiceModel|  
+|[3308 - ClientBaseUsingLocalChannelFactory](../../../../../docs/framework/wcf/diagnostics/etw/3308-clientbaseusinglocalchannelfactory.md)|정보|캐시에서 채널 팩터리를 사용 하지, 즉 캐싱을 사용 하지 않도록 예를 들어 있습니다.|ServiceModel|  
 |[3309 - QueryCompositionExecuted](../../../../../docs/framework/wcf/diagnostics/etw/3309-querycompositionexecuted.md)|정보|'%1'을(를) 사용한 쿼리 작성이 요청 Uri: '%2'에서 실행되었습니다.|ServiceModel|  
 |[3310 - DispatchFailed](../../../../../docs/framework/wcf/diagnostics/etw/3310-dispatchfailed.md)|Error|'%1' 작업이 디스패치되었지만 오류가 발생했습니다.|ServiceModel|  
 |[3311 - DispatchSuccessful](../../../../../docs/framework/wcf/diagnostics/etw/3311-dispatchsuccessful.md)|정보|'%1' 작업이 성공적으로 디스패치되었습니다.|ServiceModel|  
@@ -136,7 +136,7 @@ ms.locfileid: "33808639"
 |[3319 - SocketAcceptEnqueued](../../../../../docs/framework/wcf/diagnostics/etw/3319-socketacceptenqueued.md)|자세히|연결 수락이 시작되었습니다.|TCP|  
 |[3320 - SocketAccepted](../../../../../docs/framework/wcf/diagnostics/etw/3320-socketaccepted.md)|자세히|ListenerId:%1에서 SocketId:%2이(가) 수락되었습니다.|TCP|  
 |[3321 - ConnectionPoolMiss](../../../../../docs/framework/wcf/diagnostics/etw/3321-connectionpoolmiss.md)|자세히|%1에 대한 풀에 사용 가능한 연결이 없고 %2개의 연결을 사용 중입니다.|채널|  
-|[3322 - DispatchFormatterDeserializeRequestStart](../../../../../docs/framework/wcf/diagnostics/etw/3322-dispatchformatterdeserializerequeststart.md)|자세히|디스패처가 요청 메시지의 역직렬화를 시작했습니다.|ServiceModel|  
+|[3322 - DispatchFormatterDeserializeRequestStart](../../../../../docs/framework/wcf/diagnostics/etw/3322-dispatchformatterdeserializerequeststart.md)|자세히|디스패처가 요청 메시지의 deserialization를 시작했습니다.|ServiceModel|  
 |[3323 - DispatchFormatterDeserializeRequestStop](../../../../../docs/framework/wcf/diagnostics/etw/3323-dispatchformatterdeserializerequeststop.md)|자세히|디스패처가 요청 메시지의 역직렬화를 완료했습니다.|ServiceModel|  
 |[3324 - DispatchFormatterSerializeReplyStart](../../../../../docs/framework/wcf/diagnostics/etw/3324-dispatchformatterserializereplystart.md)|자세히|디스패처가 회신 메시지의 직렬화를 시작했습니다.|ServiceModel|  
 |[3325 - DispatchFormatterSerializeReplyStop](../../../../../docs/framework/wcf/diagnostics/etw/3325-dispatchformatterserializereplystop.md)|자세히|디스패처가 회신 메시지의 직렬화를 완료했습니다.|ServiceModel|  
@@ -161,7 +161,7 @@ ms.locfileid: "33808639"
 |[3345 - SessionPreambleUnderstood](../../../../../docs/framework/wcf/diagnostics/etw/3345-sessionpreambleunderstood.md)|자세히|'%1'에 대한 세션 프리앰블이 확인되었습니다.|채널|  
 |[3346 - ConnectionReaderSendFault](../../../../../docs/framework/wcf/diagnostics/etw/3346-connectionreadersendfault.md)|Error|연결 판독기가 오류 '%1'을(를) 전송하고 있습니다.|채널|  
 |[3347 - SocketAcceptClosed](../../../../../docs/framework/wcf/diagnostics/etw/3347-socketacceptclosed.md)|자세히|소켓 수락이 종료되었습니다.|TCP|  
-|[3348 - ServiceHostFaulted](../../../../../docs/framework/wcf/diagnostics/etw/3348-servicehostfaulted.md)|위험|서비스 호스트에 오류가 발생했습니다.|TCP|  
+|[3348 - ServiceHostFaulted](../../../../../docs/framework/wcf/diagnostics/etw/3348-servicehostfaulted.md)|중요|서비스 호스트에 오류가 발생했습니다.|TCP|  
 |[3349 - ListenerOpenStart](../../../../../docs/framework/wcf/diagnostics/etw/3349-listeneropenstart.md)|자세히|'%1'에 대한 리스너가 열려 있습니다.|채널|  
 |[3350 - ListenerOpenStop](../../../../../docs/framework/wcf/diagnostics/etw/3350-listeneropenstop.md)|자세히|리스너 열기가 완료되었습니다.|채널|  
 |[3351 - ServerMaxPooledConnectionsQuotaReached](../../../../../docs/framework/wcf/diagnostics/etw/3351-servermaxpooledconnectionsquotareached.md)|자세히|서버 최대 풀 연결 할당량에 도달했습니다.|할당량|  
@@ -187,7 +187,7 @@ ms.locfileid: "33808639"
 |[3371 - MtomMessageEncodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3371-mtommessageencodingstart.md)|자세히|MtomMessageEncoder에서 메시지 인코딩이 시작되었습니다.|채널|  
 |[3372 - TextMessageEncodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3372-textmessageencodingstart.md)|자세히|TextMessageEncoder에서 메시지 인코딩이 시작되었습니다.|채널|  
 |[3373 - BinaryMessageDecodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3373-binarymessagedecodingstart.md)|자세히|BinaryMessageEncoder에서 메시지 디코딩이 시작되었습니다.|채널|  
-|[3374 - MtomMessageDecodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3374-mtommessagedecodingstart.md)|자세히|MtomMessageEncoder에서 메시지 디코딩이 시작 되었습니다.|채널|  
+|[3374 - MtomMessageDecodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3374-mtommessagedecodingstart.md)|자세히|Mtommessageencoder가 메시지 디코딩을 합니다.|채널|  
 |[3375 - TextMessageDecodingStart](../../../../../docs/framework/wcf/diagnostics/etw/3375-textmessagedecodingstart.md)|자세히|TextMessageEncoder에서 메시지 디코딩이 시작되었습니다.|채널|  
 |[3376 - HttpResponseReceiveStart](../../../../../docs/framework/wcf/diagnostics/etw/3376-httpresponsereceivestart.md)|정보|Http 전송에서 메시지 수신이 시작되었습니다.|HTTP|  
 |[3377 - SocketReadStop](../../../../../docs/framework/wcf/diagnostics/etw/3377-socketreadstop.md)|자세히|SocketId:%1이(가) '%3'에서 '%2'바이트를 읽었습니다.|TCP|  
@@ -253,17 +253,17 @@ ms.locfileid: "33808639"
 |[3800 - RoutingServiceClosingClient](../../../../../docs/framework/wcf/diagnostics/etw/3800-routingserviceclosingclient.md)|정보|라우팅 서비스에서 클라이언트 '%1'을(를) 닫는 중입니다.|RoutingServices|  
 |[3800 - RoutingServiceClosingClient](../../../../../docs/framework/wcf/diagnostics/etw/3800-routingserviceclosingclient.md)|경고|라우팅 서비스 클라이언트 '%1'에 오류가 발생했습니다.|RoutingServices|  
 |[3802 - RoutingServiceCompletingOneWay](../../../../../docs/framework/wcf/diagnostics/etw/3802-routingservicecompletingoneway.md)|정보|라우팅 서비스 단방향 메시지를 완료하는 중입니다.|RoutingServices|  
-|[3803 - RoutingServiceProcessingFailure](../../../../../docs/framework/wcf/diagnostics/etw/3803-routingserviceprocessingfailure.md)|Error|주소가 '%1'인 끝점에서 메시지를 처리하는 동안 라우팅 서비스에 오류가 발생했습니다.|RoutingServices|  
-|[3804 - RoutingServiceCreatingClientForEndpoint](../../../../../docs/framework/wcf/diagnostics/etw/3804-routingservicecreatingclientforendpoint.md)|정보|라우팅 서비스에서 끝점 '%1'에 대한 클라이언트를 만드는 중입니다.|RoutingServices|  
+|[3803 - RoutingServiceProcessingFailure](../../../../../docs/framework/wcf/diagnostics/etw/3803-routingserviceprocessingfailure.md)|Error|주소가 '%1'인 엔드포인트에서 메시지를 처리하는 동안 라우팅 서비스에 오류가 발생했습니다.|RoutingServices|  
+|[3804 - RoutingServiceCreatingClientForEndpoint](../../../../../docs/framework/wcf/diagnostics/etw/3804-routingservicecreatingclientforendpoint.md)|정보|라우팅 서비스에서 엔드포인트 '%1'에 대한 클라이언트를 만드는 중입니다.|RoutingServices|  
 |[3805 - RoutingServiceDisplayConfig](../../../../../docs/framework/wcf/diagnostics/etw/3805-routingservicedisplayconfig.md)|자세히|라우팅 서비스가 RouteOnHeadersOnly: %1, SoapProcessingEnabled: %2, EnsureOrderedDispatch: %3(으)로 구성되어 있습니다.|RoutingServices|  
 |[3807 - RoutingServiceCompletingTwoWay](../../../../../docs/framework/wcf/diagnostics/etw/3807-routingservicecompletingtwoway.md)|정보|라우팅 서비스 요청 회신 메시지를 완료하는 중입니다.|RoutingServices|  
-|[3809 - RoutingServiceMessageRoutedToEndpoints](../../../../../docs/framework/wcf/diagnostics/etw/3809-routingservicemessageroutedtoendpoints.md)|자세히|라우팅 서비스에서 ID가 '%1'인 메시지를 %2 끝점 목록으로 라우팅했습니다.|RoutingServices|  
+|[3809 - RoutingServiceMessageRoutedToEndpoints](../../../../../docs/framework/wcf/diagnostics/etw/3809-routingservicemessageroutedtoendpoints.md)|자세히|라우팅 서비스에서 ID가 '%1'인 메시지를 %2 엔드포인트 목록으로 라우팅했습니다.|RoutingServices|  
 |[3810 - RoutingServiceConfigurationApplied](../../../../../docs/framework/wcf/diagnostics/etw/3810-routingserviceconfigurationapplied.md)|정보|새 RoutingConfiguration이 라우팅 서비스에 적용되었습니다.|RoutingServices|  
 |[3815 - RoutingServiceProcessingMessage](../../../../../docs/framework/wcf/diagnostics/etw/3815-routingserviceprocessingmessage.md)|정보|라우팅 서비스에서 트랜잭션 %4에서 받은 ID: '%1', 동작: '%2', 인바운드 URL: '%3'인 메시지를 처리하는 중입니다.|RoutingServices|  
 |[3816 - RoutingServiceTransmittingMessage](../../../../../docs/framework/wcf/diagnostics/etw/3816-routingservicetransmittingmessage.md)|정보|라우팅 서비스에서 ID가 '%1'인 메시지[작업 %2]를 '%3'(으)로 전송하는 중입니다.|RoutingServices|  
 |[3817 - RoutingServiceCommittingTransaction](../../../../../docs/framework/wcf/diagnostics/etw/3817-routingservicecommittingtransaction.md)|정보|라우팅 서비스에서 ID가 '%1'인 트랜잭션을 커밋하는 중입니다.|RoutingServices|  
 |[3818 - RoutingServiceDuplexCallbackException](../../../../../docs/framework/wcf/diagnostics/etw/3818-routingserviceduplexcallbackexception.md)|Error|라우팅 서비스 구성 요소 %1에 중복 콜백 예외가 발생했습니다.|RoutingServices|  
-|[3819 - RoutingServiceMovedToBackup](../../../../../docs/framework/wcf/diagnostics/etw/3819-routingservicemovedtobackup.md)|정보|ID가 '%1'인 라우팅 서비스 메시지[작업 %2]를 백업 끝점 '%3'(으)로 이동했습니다.|RoutingServices|  
+|[3819 - RoutingServiceMovedToBackup](../../../../../docs/framework/wcf/diagnostics/etw/3819-routingservicemovedtobackup.md)|정보|ID가 '%1'인 라우팅 서비스 메시지[작업 %2]를 백업 엔드포인트 '%3'(으)로 이동했습니다.|RoutingServices|  
 |[3820 - RoutingServiceCreatingTransaction](../../../../../docs/framework/wcf/diagnostics/etw/3820-routingservicecreatingtransaction.md)|정보|라우팅 서비스에서 메시지를 처리하기 위해 ID가 '%1'인 새 트랜잭션을 만들었습니다.|RoutingServices|  
 |[3821 - RoutingServiceCloseFailed](../../../../../docs/framework/wcf/diagnostics/etw/3821-routingserviceclosefailed.md)|경고|아웃바운드 클라이언트 '%1'을(를) 닫는 동안 라우팅 서비스에 오류가 발생했습니다.|RoutingServices|  
 |[3822 - RoutingServiceSendingResponse](../../../../../docs/framework/wcf/diagnostics/etw/3822-routingservicesendingresponse.md)|정보|라우팅 서비스에서 동작이 '%1'인 응답 메시지를 다시 보내는 중입니다.|RoutingServices|  
@@ -278,7 +278,7 @@ ms.locfileid: "33808639"
 |[3831 - RoutingServiceHandledException](../../../../../docs/framework/wcf/diagnostics/etw/3831-routingservicehandledexception.md)|자세히|라우팅 서비스가 예외를 처리했습니다.|RoutingServices|  
 |[3832 - RoutingServiceTransmitSucceeded](../../../../../docs/framework/wcf/diagnostics/etw/3832-routingservicetransmitsucceeded.md)|정보|라우팅 서비스가 ID '%1인 메시지[작업 %2]를 '%3'(으)로 전송했습니다.|RoutingServices|  
 |[4001 - TransportListenerSessionsReceived](../../../../../docs/framework/wcf/diagnostics/etw/4001-transportlistenersessionsreceived.md)|자세히|'%1'을(를) 통해 전송 리스너 세션이 수신되었습니다.|ActivationServices|  
-|[4002 - FailFastException](../../../../../docs/framework/wcf/diagnostics/etw/4002-failfastexception.md)|위험|FailFastException이 발생했습니다.|ActivationServices|  
+|[4002 - FailFastException](../../../../../docs/framework/wcf/diagnostics/etw/4002-failfastexception.md)|중요|FailFastException이 발생했습니다.|ActivationServices|  
 |[4003 - ServiceStartPipeError](../../../../../docs/framework/wcf/diagnostics/etw/4003-servicestartpipeerror.md)|Error|서비스 시작 파이프 오류가 발생했습니다.|ActivationServices|  
 |[4008 - DispatchSessionStart](../../../../../docs/framework/wcf/diagnostics/etw/4008-dispatchsessionstart.md)|자세히|세션 디스패치가 시작되었습니다.|ActivationServices|  
 |[4008 - DispatchSessionStart](../../../../../docs/framework/wcf/diagnostics/etw/4008-dispatchsessionstart.md)|경고|보류 중인 항목이 '%2'개로 보류 중인 세션 큐가 꽉 차서 '%1'에 대한 세션을 디스패치하지 못했습니다.|ActivationServices|  
@@ -301,7 +301,7 @@ ms.locfileid: "33808639"
 |[4029 - PipeTransportListenerListeningStop](../../../../../docs/framework/wcf/diagnostics/etw/4029-pipetransportlistenerlisteningstop.md)|자세히|파이프 전송 리스너 수신이 중지됩니다.|ActivationServices|  
 |[4030 - DispatchSessionSuccess](../../../../../docs/framework/wcf/diagnostics/etw/4030-dispatchsessionsuccess.md)|정보|세션을 디스패치했습니다.|ActivationServices|  
 |[4031 - DispatchSessionFailed](../../../../../docs/framework/wcf/diagnostics/etw/4031-dispatchsessionfailed.md)|Error|세션을 디스패치하지 못했습니다.|ActivationServices|  
-|[4032 - WasConnectionTimedout](../../../../../docs/framework/wcf/diagnostics/etw/4032-wasconnectiontimedout.md)|위험|WAS 연결 시간이 초과되었습니다.|ActivationServices|  
+|[4032 - WasConnectionTimedout](../../../../../docs/framework/wcf/diagnostics/etw/4032-wasconnectiontimedout.md)|중요|WAS 연결 시간이 초과되었습니다.|ActivationServices|  
 |[4033 - RoutingTableLookupStart](../../../../../docs/framework/wcf/diagnostics/etw/4033-routingtablelookupstart.md)|자세히|라우팅 테이블 조회가 시작되었습니다.|ActivationServices|  
 |[4034 - RoutingTableLookupStop](../../../../../docs/framework/wcf/diagnostics/etw/4034-routingtablelookupstop.md)|자세히|라우팅 테이블 조회가 완료되었습니다.|ActivationServices|  
 |[4035 - PendingSessionQueueRatio](../../../../../docs/framework/wcf/diagnostics/etw/4035-pendingsessionqueueratio.md)|자세히|보류 중인 세션 큐 비율: %1/%2|할당량|  
@@ -319,12 +319,12 @@ ms.locfileid: "33808639"
 |[4811 - DiscoveryMessageWithNullRelatesTo](../../../../../docs/framework/wcf/diagnostics/etw/4811-discoverymessagewithnullrelatesto.md)|경고|메시지 머리글에 필요한 RelatesTo 속성이 없어 messageId='%2'인 %1 메시지가 DiscoveryClient에서 삭제되었습니다.|검색|  
 |[4812 - DiscoveryMessageWithNullReplyTo](../../../../../docs/framework/wcf/diagnostics/etw/4812-discoverymessagewithnullreplyto.md)|경고|ReplyTo 주소가 없어 messageId='%1'인 검색 요청 메시지가 삭제되었습니다.|검색|  
 |[4813 - DuplicateDiscoveryMessage](../../../../../docs/framework/wcf/diagnostics/etw/4813-duplicatediscoverymessage.md)|경고|중복되어 messageId='%2'인 %1 메시지가 삭제되었습니다.|검색|  
-|[4814 - EndpointDiscoverabilityDisabled](../../../../../docs/framework/wcf/diagnostics/etw/4814-endpointdiscoverabilitydisabled.md)|정보|EndpointAddress='%1' 및 ListenUri='%2'을(를) 사용하는 끝점의 검색 기능이 사용하지 않도록 설정되어 있습니다.|검색|  
-|[4814 - EndpointDiscoverabilityDisabled](../../../../../docs/framework/wcf/diagnostics/etw/4814-endpointdiscoverabilitydisabled.md)|정보|EndpointAddress='%1' 및 ListenUri='%2'을(를) 사용하는 끝점의 검색 기능이 사용하도록 설정되어 있습니다.|검색|  
-|[4816 - FindInitiatedInDiscoveryClientChannel](../../../../../docs/framework/wcf/diagnostics/etw/4816-findinitiatedindiscoveryclientchannel.md)|자세히|끝점 검색을 위해 DiscoveryClientChannel에서 찾기 작업이 시작되었습니다.|검색|  
-|[4817 - InnerChannelCreationFailed](../../../../../docs/framework/wcf/diagnostics/etw/4817-innerchannelcreationfailed.md)|경고|DiscoveryClientChannel에서 EndpointAddress='%1' 및 Via='%2'을(를) 사용하는 검색된 끝점으로 채널을 만들지 못했습니다. DiscoveryClientChannel은 이제 사용 가능한 다음 끝점으로 검색된 끝점을 사용하게 됩니다.|검색|  
-|[4818 - InnerChannelOpenFailed](../../../../../docs/framework/wcf/diagnostics/etw/4818-innerchannelopenfailed.md)|경고|DiscoveryClientChannel에서 EndpointAddress='%1' 및 Via='%2'을(를) 사용하는 검색된 끝점으로 채널을 열지 못했습니다. DiscoveryClientChannel은 이제 사용 가능한 다음 끝점으로 검색된 끝점을 사용하게 됩니다.|검색|  
-|[4819 - InnerChannelOpenSucceeded](../../../../../docs/framework/wcf/diagnostics/etw/4819-innerchannelopensucceeded.md)|정보|DiscoveryClientChannel에서 끝점을 성공적으로 검색하고 이를 사용하여 채널을 열었습니다. 클라이언트가 EndpointAddress='%1' 및 Via='%2'을(를) 사용하여 서비스에 연결되었습니다.|검색|  
+|[4814 - EndpointDiscoverabilityDisabled](../../../../../docs/framework/wcf/diagnostics/etw/4814-endpointdiscoverabilitydisabled.md)|정보|EndpointAddress='%1' 및 ListenUri='%2'을(를) 사용하는 엔드포인트의 검색 기능이 사용하지 않도록 설정되어 있습니다.|검색|  
+|[4814 - EndpointDiscoverabilityDisabled](../../../../../docs/framework/wcf/diagnostics/etw/4814-endpointdiscoverabilitydisabled.md)|정보|EndpointAddress='%1' 및 ListenUri='%2'을(를) 사용하는 엔드포인트의 검색 기능이 사용하도록 설정되어 있습니다.|검색|  
+|[4816 - FindInitiatedInDiscoveryClientChannel](../../../../../docs/framework/wcf/diagnostics/etw/4816-findinitiatedindiscoveryclientchannel.md)|자세히|엔드포인트 검색을 위해 DiscoveryClientChannel에서 찾기 작업이 시작되었습니다.|검색|  
+|[4817 - InnerChannelCreationFailed](../../../../../docs/framework/wcf/diagnostics/etw/4817-innerchannelcreationfailed.md)|경고|DiscoveryClientChannel에서 EndpointAddress='%1' 및 Via='%2'을(를) 사용하는 검색된 엔드포인트로 채널을 만들지 못했습니다. DiscoveryClientChannel은 이제 사용 가능한 다음 엔드포인트로 검색된 엔드포인트를 사용하게 됩니다.|검색|  
+|[4818 - InnerChannelOpenFailed](../../../../../docs/framework/wcf/diagnostics/etw/4818-innerchannelopenfailed.md)|경고|DiscoveryClientChannel에서 EndpointAddress='%1' 및 Via='%2'을(를) 사용하는 검색된 엔드포인트로 채널을 열지 못했습니다. DiscoveryClientChannel은 이제 사용 가능한 다음 엔드포인트로 검색된 엔드포인트를 사용하게 됩니다.|검색|  
+|[4819 - InnerChannelOpenSucceeded](../../../../../docs/framework/wcf/diagnostics/etw/4819-innerchannelopensucceeded.md)|정보|DiscoveryClientChannel에서 엔드포인트를 성공적으로 검색하고 이를 사용하여 채널을 열었습니다. 클라이언트가 EndpointAddress='%1' 및 Via='%2'을(를) 사용하여 서비스에 연결되었습니다.|검색|  
 |[4820 - SynchronizationContextReset](../../../../../docs/framework/wcf/diagnostics/etw/4820-synchronizationcontextreset.md)|정보|DiscoveryClientChannel에서 SynchronizationContext가 원래 값 %1(으)로 다시 설정되었습니다.|검색|  
 |[4821 - SynchronizationContextSetToNull](../../../../../docs/framework/wcf/diagnostics/etw/4821-synchronizationcontextsettonull.md)|정보|찾기 작업을 시작하기 전에 DiscoveryClientChannel에서 SynchronizationContext가 Null로 설정되었습니다.|검색|  
 |[5001 - DCSerializeWithSurrogateStart](../../../../../docs/framework/wcf/diagnostics/etw/5001-dcserializewithsurrogatestart.md)|자세히|DataContract의 %1 serialize와 함께 서로게이트가 시작됩니다.|Serialization|  
@@ -363,8 +363,8 @@ ms.locfileid: "33808639"
 |[57394 - HandledException](../../../../../docs/framework/wcf/diagnostics/etw/57394-handledexception.md)|정보|예외를 처리하는 중입니다.|인프라|  
 |[57395 - ShipAssertExceptionMessage](../../../../../docs/framework/wcf/diagnostics/etw/57395-shipassertexceptionmessage.md)|Error|예기치 않은 오류가 발생했습니다. 이 오류는 응용 프로그램에서 처리할 수 없습니다. 오류와 관련된 다음 메시지가 진단용으로 제공됩니다. %1.|인프라|  
 |[57396 - ThrowingException](../../../../../docs/framework/wcf/diagnostics/etw/57396-throwingexception.md)|경고|예외를 throw하고 있습니다. 원본: %1.|인프라|  
-|[57397 - UnhandledException](../../../../../docs/framework/wcf/diagnostics/etw/57397-unhandledexception.md)|위험|처리되지 않은 예외가 발생했습니다.|인프라|  
-|[57399 - TraceCodeEventLogCritical](../../../../../docs/framework/wcf/diagnostics/etw/57399-tracecodeeventlogcritical.md)|위험|EventLog에 기록합니다.|인프라|  
+|[57397 - UnhandledException](../../../../../docs/framework/wcf/diagnostics/etw/57397-unhandledexception.md)|중요|처리되지 않은 예외가 발생했습니다.|인프라|  
+|[57399 - TraceCodeEventLogCritical](../../../../../docs/framework/wcf/diagnostics/etw/57399-tracecodeeventlogcritical.md)|중요|EventLog에 기록합니다.|인프라|  
 |[57400 - TraceCodeEventLogError](../../../../../docs/framework/wcf/diagnostics/etw/57400-tracecodeeventlogerror.md)|Error|EventLog에 기록합니다.|인프라|  
 |[57401 - TraceCodeEventLogInfo](../../../../../docs/framework/wcf/diagnostics/etw/57401-tracecodeeventloginfo.md)|정보|EventLog에 기록합니다.|인프라|  
 |[57402 - TraceCodeEventLogVerbose](../../../../../docs/framework/wcf/diagnostics/etw/57402-tracecodeeventlogverbose.md)|자세히|EventLog에 기록합니다.|인프라|  

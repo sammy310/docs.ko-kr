@@ -3,11 +3,11 @@ title: '!= (같지 않음)(Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 3b4a02ad-ddfc-4c42-8dfa-676234461312
 ms.openlocfilehash: f5fdbbf2892781ce44dfe73e8cd80fbe0f74cf1c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760339"
 ---
 # <a name="-not-equal-to-entity-sql"></a>!= (같지 않음)(Entity SQL)
 두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값과 다른지 여부를 결정합니다. !=(같지 않음) 연산자는 기능이 <> 연산자와 동일합니다.  
