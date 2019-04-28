@@ -83,10 +83,10 @@ Azure SQL Database는 다음과 같은 이점을 제공합니다.
 
 마이그레이션 옵션 중 하나에 원래 관계형 데이터베이스 관리 시스템 (RDBMS), Oracle, IBM DB2, MySQL, PostgreSQL 또는 SQL Server를 포함 하 여 Azure VM에서 실행 되는 유사한 서버로 이동 하는 것입니다. 최소한의 변경 내용 또는 변경 없이 클라우드에서 가장 빠른 마이그레이션에 필요한 기존 응용 프로그램에 있는 경우 IaaS 클라우드에서로 직접 마이그레이션하는 공정 옵션을 수 있습니다. 가장 좋은 방법은 클라우드의 모든 이점을 활용 되지 않을 수 있습니다 하지만 가장 빠른 초기 경로 것입니다.
 
-현재까지 Microsoft Azure 지원 [331 다른 데이터베이스 서버](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/category/databases?page=1&subcategories=databases-all) IaaS Vm으로 배포 합니다. 여기에 SQL Server, Oracle, MySQL, PostgreSQL 및 IBM DB2와 같은 인기 있는 RDBMS MongoDB, Cassandra, DataStax, MariaDB, 및 Cloudera와 같은 다른 많은 NoSQL 데이터베이스 포함 됩니다.
+현재까지 Microsoft Azure에서는 [331개의 다양한 데이터베이스 서버](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/category/databases?page=1&subcategories=databases-all)를 지원하며 IaaS Vm으로 배포되어 있습니다. 여기에는 SQL Server와 Oracle, MySQL, PostgreSQL, IBM DB2와 같은 인기 있는 RDBMS와 MongoDB, Cassandra, DataStax, MariaDB, 및 Cloudera와 같은 아주 다양한 NoSQL 데이터베이스를 포함합니다.
 
 > [!NOTE]
-> 이동 되지만 Azure VM에 사용자 RDBMS (이기 때문에 IaaS) 데이터를 클라우드로 마이그레이션에 대 한 가장 빠른 방법은 있을 수 있으며,이 방법을 사용 하려면 (데이터베이스 관리자와 IT 전문가) IT 팀에 많은 투자를 해야 합니다. 엔터프라이즈 팀 설정 하 고 고가용성, 재해 복구 및 SQL Server에 대 한 패치를 관리 해야 합니다. 이 컨텍스트는 또한 모든 관리 권한이 있는 사용자 지정된 된 환경이 필요합니다.
+> Azure VM으로 사용자 RDBMS 데이터를 이전하는 것이 IaaS인 클라우드로 마이그레이션하는 가장 빠른 방법일 수 있지만, 이 방법을 사용 하려면 IT 팀(데이터베이스 관리자와 IT 전문가)에 많은 투자를 해야 합니다. 엔터프라이즈 팀은 SQL Server의 고 가용성과 재해 복구, 패치를 설정하고 관리할 수 있어야 합니다. 또한 이 컨텍스트에는 전체 관리 권한이 있는 사용자 지정된 환경이 필요합니다.
 
 ## <a name="when-to-migrate-to-sql-server-as-a-vm-iaas"></a>VM (IaaS)으로 SQL Server로 마이그레이션할 시기
 
