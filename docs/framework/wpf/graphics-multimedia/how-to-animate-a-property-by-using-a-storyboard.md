@@ -1,5 +1,5 @@
 ---
-title: '방법: Storyboard를 사용하여 속성에 애니메이션 효과 주기'
+title: '방법: 스토리보드를 사용하여 속성에 애니메이션 효과 주기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - Storyboards [WPF], animation
 ms.assetid: f4a314e9-1da2-4367-85fc-1232487efa7a
 ms.openlocfilehash: f6064368b4f5e4fa8324b4039d734d4430cd9174
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761210"
 ---
-# <a name="how-to-animate-a-property-by-using-a-storyboard"></a>방법: Storyboard를 사용하여 속성에 애니메이션 효과 주기
+# <a name="how-to-animate-a-property-by-using-a-storyboard"></a>방법: 스토리보드를 사용하여 속성에 애니메이션 효과 주기
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Animation.Storyboard> 속성에 애니메이션 효과를 합니다. 속성에 애니메이션 효과 사용 하 여는 <xref:System.Windows.Media.Animation.Storyboard>, 각 속성에 애니메이션 효과 만들 수도 대해 애니메이션을 만들를 <xref:System.Windows.Media.Animation.Storyboard> 애니메이션을 포함 하 합니다.  
   
  속성 형식에 따라 사용할 애니메이션 형식이 결정됩니다. 예를 들어 사용 하는 속성에 애니메이션 효과 <xref:System.Double> 값을 사용 하 여를 <xref:System.Windows.Media.Animation.DoubleAnimation>입니다. 합니다 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> 및 <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> 개체 및 속성 애니메이션 적용 되는 연결 된 속성을 지정 합니다.  

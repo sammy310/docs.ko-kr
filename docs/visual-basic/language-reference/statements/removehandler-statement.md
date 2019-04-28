@@ -10,11 +10,11 @@ helpviewer_keywords:
 - RemoveHandler statement [Visual Basic]
 ms.assetid: 647cd825-e877-4910-b4f1-8d168beebe6a
 ms.openlocfilehash: 8a9dc5874629c1687318496bd7c4016eb318c25a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783940"
 ---
 # <a name="removehandler-statement"></a>RemoveHandler 문
 이벤트와 이벤트 처리기 간의 연결을 제거합니다.  

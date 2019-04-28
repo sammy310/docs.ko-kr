@@ -11,11 +11,11 @@ helpviewer_keywords:
 - animation [WPF], non-Storyboard (local)
 ms.assetid: d411db70-4df7-487d-82bc-95a7c1b2e7f8
 ms.openlocfilehash: 93609cdeb4d879cbec0f90096e4fa2c131a2ec5e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59091709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761288"
 ---
 # <a name="how-to-animate-a-property-without-using-a-storyboard"></a>방법: 스토리보드를 사용하지 않고 속성에 애니메이션 효과 주기
 사용 하지 않고 속성에 애니메이션을 적용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Animation.Storyboard>합니다.  

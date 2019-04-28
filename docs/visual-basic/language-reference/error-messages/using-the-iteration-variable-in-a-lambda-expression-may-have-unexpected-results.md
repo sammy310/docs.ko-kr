@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42324
 ms.assetid: b5c2c4bd-3b2a-4a73-aaeb-55728eb03b68
 ms.openlocfilehash: 618fc88a2ca92ec911a3fbd82de580403d924430
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774844"
 ---
 # <a name="using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a>람다 식에 반복 변수를 사용하면 예기치 않은 결과가 발생할 수 있습니다.
 람다 식에 반복 변수를 사용 하 여 있을 예기치 않은 결과입니다. 대신 루프 내의 지역 변수를 만들고 반복 변수의 값을 할당 합니다.  
@@ -63,7 +63,7 @@ End Module
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   반복 변수의 값을 지역 변수에 할당 및 람다 식에 지역 변수를 사용 합니다.  
+- 반복 변수의 값을 지역 변수에 할당 및 람다 식에 지역 변수를 사용 합니다.  
   
 ```vb  
 Module Module1  

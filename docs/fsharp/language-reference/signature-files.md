@@ -3,13 +3,13 @@ title: 서명 파일
 description: 사용 하는 방법을 알아봅니다 F# 집합의 공개 서명에 대 한 정보를 저장 하는 서명 파일 F# 프로그램 형식, 네임 스페이스, 모듈 등의 요소입니다.
 ms.date: 06/15/2018
 ms.openlocfilehash: 88938309a7c2bd12428f06ba8088141fd5349e80
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770450"
 ---
-# <a name="signatures"></a>서명
+# <a name="signatures"></a>시그니처
 
 서명 파일에는 형식, 네임스페이스, 모듈 등 F# 프로그램 요소 집합의 공개 서명에 대한 정보가 포함됩니다. 이러한 프로그램 요소의 접근성을 지정하는 데 사용할 수 있습니다.
 
@@ -66,7 +66,7 @@ ms.locfileid: "53613416"
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssignatures/snippet9001.fs)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [F# 언어 참조](index.md)
 - [Access Control](access-control.md)

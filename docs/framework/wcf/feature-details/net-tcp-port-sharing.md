@@ -6,11 +6,11 @@ helpviewer_keywords:
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
 ms.openlocfilehash: b04266b15f786e3a5a93ac1e9fff1754c397ccd4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762754"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP 포트 공유
 Windows Communication Foundation (WCF) 고성능 통신을 위한 새로운 TCP 기반 네트워크 프로토콜 (net.tcp://)를 제공합니다. WCF에는 또한 새 시스템 구성 요소인 net.tcp 포트를 여러 사용자 프로세스 간에 공유할 수 있도록는 Net.TCP Port Sharing Service를 소개 합니다.  
@@ -27,11 +27,11 @@ Windows Communication Foundation (WCF) 고성능 통신을 위한 새로운 TCP 
 ## <a name="port-sharing-architecture"></a>포트 공유 아키텍처  
  WCF에서 포트 공유 아키텍처에는 세 가지 주요 구성 요소에 있습니다.  
   
--   작업자 프로세스: 모든 공유 포트를 사용 하 여 net.tcp://를 통해 통신을 처리 합니다.  
+- 작업자 프로세스: 모든 공유 포트를 사용 하 여 net.tcp://를 통해 통신을 처리 합니다.  
   
--   WCF TCP 전송: Net.tcp:// 프로토콜을 구현 합니다.  
+- WCF TCP 전송: Net.tcp:// 프로토콜을 구현 합니다.  
   
--   Net.TCP Port Sharing Service: 여러 작업자 프로세스를 동일한 TCP 포트를 공유할 수 있습니다.  
+- Net.TCP Port Sharing Service: 여러 작업자 프로세스를 동일한 TCP 포트를 공유할 수 있습니다.  
   
  Net.TCP Port Sharing Service는 이 서비스를 통해 연결되는 사용자 프로세스 대신 net.tcp:// 연결을 수락하는 사용자 모드 Windows 서비스입니다. 소켓 연결이 도착하면 포트 공유 서비스는 대상 주소를 가져오기 위해 들어오는 메시지 스트림을 검사합니다. 포트 공유 서비스는 이 주소에 따라 데이터 스트림을 최종적으로 처리하는 응용 프로그램으로 라우팅할 수 있습니다.  
   

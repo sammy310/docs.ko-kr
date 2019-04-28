@@ -9,22 +9,22 @@ helpviewer_keywords:
 - AnimationClocks [WPF]
 ms.assetid: e6542021-714c-4675-9567-04f1c7380834
 ms.openlocfilehash: 4fa9efc593461d26eabaee5e2f62c1a17da1b543
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761015"
 ---
 # <a name="how-to-animate-a-property-by-using-an-animationclock"></a>방법: AnimationClock을 사용하여 속성에 애니메이션 효과 주기
 이 예제에 사용 하는 방법을 보여 줍니다 <xref:System.Windows.Media.Animation.Clock> 속성 애니메이션을 적용 하는 개체입니다.  
   
  종속성 속성에 애니메이션을 적용하는 방법에는 다음 세 가지가 있습니다.  
   
--   만들기는 <xref:System.Windows.Media.Animation.AnimationTimeline> 를 사용 하 여 해당 속성을 사용 하 여 연결을 <xref:System.Windows.Media.Animation.Storyboard>입니다.  
+- 만들기는 <xref:System.Windows.Media.Animation.AnimationTimeline> 를 사용 하 여 해당 속성을 사용 하 여 연결을 <xref:System.Windows.Media.Animation.Storyboard>입니다.  
   
--   개체를 사용 하 여 <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> 단일 적용 방법 <xref:System.Windows.Media.Animation.AnimationTimeline> 대상 속성에 있습니다.  
+- 개체를 사용 하 여 <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> 단일 적용 방법 <xref:System.Windows.Media.Animation.AnimationTimeline> 대상 속성에 있습니다.  
   
--   만들기는 <xref:System.Windows.Media.Animation.AnimationClock> 에서 <xref:System.Windows.Media.Animation.AnimationTimeline> 속성에 적용 합니다.  
+- 만들기는 <xref:System.Windows.Media.Animation.AnimationClock> 에서 <xref:System.Windows.Media.Animation.AnimationTimeline> 속성에 적용 합니다.  
   
  <xref:System.Windows.Media.Animation.Storyboard> 개체 및 <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> 방법을 사용 하면 직접 만들어 시계를 배포 하지 않고 속성에 애니메이션 효과를 (예를 참조 하십시오 [Storyboard를 사용 하 여 속성에 애니메이션 효과](how-to-animate-a-property-by-using-a-storyboard.md) 및 [를 속성 없이 애니메이션 효과 주기 스토리 보드를 사용 하 여](how-to-animate-a-property-without-using-a-storyboard.md)); 클록 생성 및 자동으로 배포 됩니다.  
   

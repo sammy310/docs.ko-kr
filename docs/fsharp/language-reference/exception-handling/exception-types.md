@@ -3,11 +3,11 @@ title: 예외 형식
 description: 정의 및 사용 하는 방법을 알아봅니다 F# 예외 형식입니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: ed721dd0dc46a486fafeac2fa4c096800995ccb7
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772725"
 ---
 # <a name="exception-types"></a>예외 형식
 
@@ -37,8 +37,8 @@ exception exception-type of argument-type
 
 사용 하 여 정의 하는 예외 형식 합니다 `exception` 키워드 F# 에서 상속 되는 새 유형이 `System.Exception`합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
-- [Visual C++에서 예외 처리](index.md)
+- [예외 처리](index.md)
 - [예외: `raise` 함수](the-raise-function.md)
 - [예외 계층](https://msdn.microsoft.com/library/z4c5tckx.aspx)

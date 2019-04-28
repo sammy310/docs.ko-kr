@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 19ef7cb78791496de76e5741f8254ee88563c776
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763375"
 ---
 # <a name="iclrtaskmanager-interface"></a>ICLRTaskManager 인터페이스
 메서드는 CLR (공용 언어 런타임) 호스트 하는 명시적으로 요청을 허용 하는 새 작업 만들기, 현재 실행 중인 작업을 가져오고 설정 언어와 작업에 대 한 문화권을 제공 합니다.  

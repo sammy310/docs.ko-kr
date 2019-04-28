@@ -5,11 +5,11 @@ helpviewer_keywords:
 - graphics [WPF], custom Transforms
 ms.assetid: 919381ca-989f-47cf-86b4-1094060236e4
 ms.openlocfilehash: aeccb961db539d4cc6dea75fb487fba06e59d6de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769267"
 ---
 # <a name="how-to-use-a-matrixtransform-to-create-custom-transforms"></a>방법: MatrixTransform을 사용하여 사용자 지정 변환 만들기
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.MatrixTransform> 변환 (이동) 하는 위치 늘이기, 및의 기울이기는 <xref:System.Windows.Controls.Button>합니다.  

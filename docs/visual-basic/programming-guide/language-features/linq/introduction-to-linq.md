@@ -13,11 +13,11 @@ helpviewer_keywords:
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
 ms.openlocfilehash: 6987263854b0d0372bc08bb7e4d6efb498e265f1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781006"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Visual Basic의 LINQ 소개
 언어 통합 쿼리 (LINQ)는 Visual basic 쿼리 기능을 추가 하 고 모든 종류의 데이터를 사용 하 여 작업할 때 간단 하 고 강력한 기능을 제공 합니다. 쿼리 처리 될 때 데이터베이스에 보내거나 검색 하는 데이터의 각 형식에 대 한 다른 쿼리 구문을 사용 하 여 작업을 하는 대신 LINQ에서는 Visual Basic 언어의 일부로 쿼리를 소개 합니다. LINQ는 데이터의 형식에 관계없이 통합된 구문을 사용합니다.  
@@ -182,11 +182,11 @@ LINQ에서 제공하는 열거 가능 형식과 쿼리 가능 형식의 멤버�
 ## <a name="visual-basic-features-that-support-linq"></a>LINQ를 지 원하는 Visual Basic 기능  
  Visual Basic LINQ 쿼리를 수행 하기 위해 작성 해야 하는 코드의 양을 줄이고 linq를 사용 하 여 간단 하 게 하는 다른 주목할 만한 기능이 포함 되어 있습니다. 이러한 요구 사항은 다음과 같습니다.  
   
--   **익명 형식**, 쿼리 결과에 따라 새 형식을 만들 수 있도록 합니다.  
+- **익명 형식**, 쿼리 결과에 따라 새 형식을 만들 수 있도록 합니다.  
   
--   **암시적 형식 변수**, 형식 지정을 지연 하 수 있게 해 주는 및 컴파일러를 통해 쿼리 결과에 따라 형식을 유추 합니다.  
+- **암시적 형식 변수**, 형식 지정을 지연 하 수 있게 해 주는 및 컴파일러를 통해 쿼리 결과에 따라 형식을 유추 합니다.  
   
--   **확장 메서드**, 형식 자체를 수정 하지 않고 사용자 고유의 메서드를 사용 하 여 기존 형식을 확장할 수 있도록 합니다.  
+- **확장 메서드**, 형식 자체를 수정 하지 않고 사용자 고유의 메서드를 사용 하 여 기존 형식을 확장할 수 있도록 합니다.  
   
  자세한 내용은 참조 하세요 [Visual Basic 기능을 지원 LINQ](../../concepts/linq/features-that-support-linq.md)합니다.  
   

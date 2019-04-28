@@ -3,11 +3,11 @@ title: '방법: 구성 파일을 사용하여 서비스에 대한 메타데이�
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
 ms.openlocfilehash: 367ebeee5c12d809a758f1bee73dfaadda85788d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761457"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>방법: 구성 파일을 사용하여 서비스에 대한 메타데이터 게시
 Windows Communication Foundation (WCF) 서비스에 대 한 메타 데이터 게시를 보여 주는 두 방법 항목 중 하나입니다. 서비스에서 메타데이터를 게시하는 방법을 지정하는 두 가지 방법은 구성 파일을 사용하는 방법과 코드를 사용하는 방법입니다. 이 항목에서는 구성 파일을 사용하여 서비스에 대해 메타데이터를 게시하는 방법에 대해 설명합니다.  
@@ -140,21 +140,21 @@ namespace Metadata.Samples
   
 7. 이전 단계에 추가된 메타데이터 엔드포인트에 대해 `binding` 특성을 다음 중 하나로 설정합니다.  
   
-    -   HTTP 게시의 경우 `mexHttpBinding`  
+    - HTTP 게시의 경우 `mexHttpBinding`  
   
-    -   HTTPS 게시의 경우 `mexHttpsBinding`  
+    - HTTPS 게시의 경우 `mexHttpsBinding`  
   
-    -   명명된 파이프 게시의 경우 `mexNamedPipeBinding`  
+    - 명명된 파이프 게시의 경우 `mexNamedPipeBinding`  
   
-    -   TCP 게시의 경우 `mexTcpBinding`  
+    - TCP 게시의 경우 `mexTcpBinding`  
   
 8. 이전 단계에 추가된 메타데이터 엔드포인트에 대해 주소를 다음과 같이 설정합니다.  
   
-    -   기본 주소가 메타데이터 바인딩과 동일한 경우 호스트 응용 프로그램의 기본 주소를 게시 지점으로 사용하는 빈 문자열  
+    - 기본 주소가 메타데이터 바인딩과 동일한 경우 호스트 응용 프로그램의 기본 주소를 게시 지점으로 사용하는 빈 문자열  
   
-    -   호스트 응용 프로그램에 기본 주소가 있는 경우 상대 주소  
+    - 호스트 응용 프로그램에 기본 주소가 있는 경우 상대 주소  
   
-    -   절대 경로  
+    - 절대 경로  
   
 9. 콘솔 응용 프로그램을 빌드하고 실행합니다.  
   

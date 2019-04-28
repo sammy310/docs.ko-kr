@@ -9,11 +9,11 @@ helpviewer_keywords:
 - federation
 ms.assetid: e54897d7-aa6c-46ec-a278-b2430c8c2e10
 ms.openlocfilehash: 16b93126157ff129d5e0b815bc951873e7fa760d
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46525541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778354"
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>방법: WSFederationHttpBinding 만들기
 
@@ -95,7 +95,7 @@ Windows Communication Foundation (WCF), 합니다 <xref:System.ServiceModel.WSFe
 
 14. `binding` 요소의 `bindingConfiguration` 및 `<issuer>` 특성을 설정하여 이전 단계에서 만든 바인딩을 지정합니다.
 
-15. 클라이언트에서는 사용되지 않고 서비스에서는 선택적 요소입니다. `<issuerMetadata>` 요소를 <`message`> 요소의 자식으로 만듭니다. 그런 다음 `address` 요소의 `<issuerMetadata>` 특성에서 보안 토큰 서비스가 해당 메타데이터를 게시할 주소를 지정합니다. 선택적으로 `<identity>` 자식 요소를 추가하고 보안 토큰 서비스의 ID를 지정합니다.
+15. 클라이언트에서는 사용되지 않고 서비스에서는 선택적 요소입니다. 만들기는 `<issuerMetadata>` 의 자식 요소로 <`message`> 요소입니다. 그런 다음 `address` 요소의 `<issuerMetadata>` 특성에서 보안 토큰 서비스가 해당 메타데이터를 게시할 주소를 지정합니다. 선택적으로 `<identity>` 자식 요소를 추가하고 보안 토큰 서비스의 ID를 지정합니다.
 
 16. 클라이언트와 서비스 둘 다에서 선택적 요소입니다. `<claimTypeRequirements>` 요소를 `<message>` 요소의 자식으로 추가합니다. 필수 및 선택적 클레임을 지정 추가 하 여 서비스를 사용 하는 [ \<추가 >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-claimtyperequirements.md) 요소를 사용 하는 `<claimTypeRequirements>` 사용 하 여 입력 클레임을 지정 하는 `claimType` 특성입니다. `isOptional` 특성을 설정하여 지정된 클레임이 필수 또는 선택적 요소인지 지정합니다.
 
@@ -110,4 +110,4 @@ Windows Communication Foundation (WCF), 합니다 <xref:System.ServiceModel.WSFe
 
 - [페더레이션](federation.md)
 - [페더레이션 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [방법: WSFederationHttpBinding에서 보안 세션을 사용하지 않도록 설정](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [방법: WSFederationHttpBinding에서 보안 세션을 사용 하지 않도록 설정](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
