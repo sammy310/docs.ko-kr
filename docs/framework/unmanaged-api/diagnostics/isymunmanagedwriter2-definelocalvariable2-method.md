@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2caa9b48fc92a1b2e82f574d37d99758e19382c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777971"
 ---
-# <a name="isymunmanagedwriter2definelocalvariable2-method"></a><span data-ttu-id="626a4-102">ISymUnmanagedWriter2::DefineLocalVariable2 메서드</span><span class="sxs-lookup"><span data-stu-id="626a4-102">ISymUnmanagedWriter2::DefineLocalVariable2 Method</span></span>
-<span data-ttu-id="626a4-103">현재 어휘 범위에 단일 변수를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="626a4-103">Defines a single variable in the current lexical scope.</span></span> <span data-ttu-id="626a4-104">이 메서드는 다중 홈을 범위에 걸쳐 있는 동일한 이름의 변수에 대 한 여러 번 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="626a4-104">This method can be called multiple times for a variable of the same name that has multiple homes throughout a scope.</span></span> <span data-ttu-id="626a4-105">그러나이 경우,:의 값을 `startOffset` 및 `endOffset` 매개 변수는 겹치지 않아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="626a4-105">In this case, however, the values of the `startOffset` and `endOffset` parameters must not overlap.</span></span>  
+# <a name="isymunmanagedwriter2definelocalvariable2-method"></a><span data-ttu-id="07bd8-102">ISymUnmanagedWriter2::DefineLocalVariable2 메서드</span><span class="sxs-lookup"><span data-stu-id="07bd8-102">ISymUnmanagedWriter2::DefineLocalVariable2 Method</span></span>
+<span data-ttu-id="07bd8-103">현재 어휘 범위에 단일 변수를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="07bd8-103">Defines a single variable in the current lexical scope.</span></span> <span data-ttu-id="07bd8-104">이 메서드는 다중 홈을 범위에 걸쳐 있는 동일한 이름의 변수에 대 한 여러 번 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07bd8-104">This method can be called multiple times for a variable of the same name that has multiple homes throughout a scope.</span></span> <span data-ttu-id="07bd8-105">그러나이 경우,:의 값을 `startOffset` 및 `endOffset` 매개 변수는 겹치지 않아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="07bd8-105">In this case, however, the values of the `startOffset` and `endOffset` parameters must not overlap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="626a4-106">구문</span><span class="sxs-lookup"><span data-stu-id="626a4-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="07bd8-106">구문</span><span class="sxs-lookup"><span data-stu-id="07bd8-106">Syntax</span></span>  
   
 ```  
 HRESULT DefineLocalVariable2(  
@@ -42,41 +42,41 @@ HRESULT DefineLocalVariable2(
     [in] ULONG32      endOffset);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="626a4-107">매개 변수</span><span class="sxs-lookup"><span data-stu-id="626a4-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="07bd8-107">매개 변수</span><span class="sxs-lookup"><span data-stu-id="07bd8-107">Parameters</span></span>  
  `name`  
- <span data-ttu-id="626a4-108">[in] 로컬 변수 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="626a4-108">[in] The local variable name.</span></span>  
+ <span data-ttu-id="07bd8-108">[in] 로컬 변수 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="07bd8-108">[in] The local variable name.</span></span>  
   
  `attributes`  
- <span data-ttu-id="626a4-109">[in] 로컬 변수 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="626a4-109">[in] The local variable attributes.</span></span>  
+ <span data-ttu-id="07bd8-109">[in] 로컬 변수 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="07bd8-109">[in] The local variable attributes.</span></span>  
   
  `sigToken`  
- <span data-ttu-id="626a4-110">[in] 서명의 메타 데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="626a4-110">[in] The metadata token of the signature.</span></span>  
+ <span data-ttu-id="07bd8-110">[in] 서명의 메타 데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="07bd8-110">[in] The metadata token of the signature.</span></span>  
   
  `addrKind`  
- <span data-ttu-id="626a4-111">[in] 주소 유형입니다.</span><span class="sxs-lookup"><span data-stu-id="626a4-111">[in] The address type.</span></span>  
+ <span data-ttu-id="07bd8-111">[in] 주소 유형입니다.</span><span class="sxs-lookup"><span data-stu-id="07bd8-111">[in] The address type.</span></span>  
   
  `addr1`  
- <span data-ttu-id="626a4-112">[in] 매개 변수 사양에 대 한 첫 번째 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="626a4-112">[in] The first address for the parameter specification.</span></span>  
+ <span data-ttu-id="07bd8-112">[in] 매개 변수 사양에 대 한 첫 번째 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="07bd8-112">[in] The first address for the parameter specification.</span></span>  
   
  `addr2`  
- <span data-ttu-id="626a4-113">[in] 매개 변수 사양에 대 한 두 번째 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="626a4-113">[in] The second address for the parameter specification.</span></span>  
+ <span data-ttu-id="07bd8-113">[in] 매개 변수 사양에 대 한 두 번째 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="07bd8-113">[in] The second address for the parameter specification.</span></span>  
   
  `addr3`  
- <span data-ttu-id="626a4-114">[in] 매개 변수 사양의 세 번째 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="626a4-114">[in] The third address for the parameter specification.</span></span>  
+ <span data-ttu-id="07bd8-114">[in] 매개 변수 사양의 세 번째 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="07bd8-114">[in] The third address for the parameter specification.</span></span>  
   
  `startOffset`  
- <span data-ttu-id="626a4-115">[in] 변수의 시작 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="626a4-115">[in] The start offset for the variable.</span></span> <span data-ttu-id="626a4-116">이 매개 변수는 선택적 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="626a4-116">This parameter is optional.</span></span> <span data-ttu-id="626a4-117">0 인 경우이 매개 변수가 무시 되 고 변수가 전체 범위에서 정의 됩니다.</span><span class="sxs-lookup"><span data-stu-id="626a4-117">If it is 0, this parameter is ignored and the variable is defined throughout the entire scope.</span></span> <span data-ttu-id="626a4-118">0이 아닌 값 이면 현재 범위의 오프셋 내에 변수가 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="626a4-118">If it is a nonzero value, the variable falls within the offsets of the current scope.</span></span>  
+ <span data-ttu-id="07bd8-115">[in] 변수의 시작 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="07bd8-115">[in] The start offset for the variable.</span></span> <span data-ttu-id="07bd8-116">이 매개 변수는 선택적 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="07bd8-116">This parameter is optional.</span></span> <span data-ttu-id="07bd8-117">0 인 경우이 매개 변수가 무시 되 고 변수가 전체 범위에서 정의 됩니다.</span><span class="sxs-lookup"><span data-stu-id="07bd8-117">If it is 0, this parameter is ignored and the variable is defined throughout the entire scope.</span></span> <span data-ttu-id="07bd8-118">0이 아닌 값 이면 현재 범위의 오프셋 내에 변수가 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="07bd8-118">If it is a nonzero value, the variable falls within the offsets of the current scope.</span></span>  
   
  `endOffset`  
- <span data-ttu-id="626a4-119">[in] 변수의 끝 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="626a4-119">[in] The end offset for the variable.</span></span> <span data-ttu-id="626a4-120">이 매개 변수는 선택적 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="626a4-120">This parameter is optional.</span></span> <span data-ttu-id="626a4-121">0 인 경우이 매개 변수가 무시 되 고 변수가 전체 범위에서 정의 됩니다.</span><span class="sxs-lookup"><span data-stu-id="626a4-121">If it is 0, this parameter is ignored and the variable is defined throughout the entire scope.</span></span> <span data-ttu-id="626a4-122">0이 아닌 값 이면 현재 범위의 오프셋 내에 변수가 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="626a4-122">If it is a nonzero value, the variable falls within the offsets of the current scope.</span></span>  
+ <span data-ttu-id="07bd8-119">[in] 변수의 끝 오프셋입니다.</span><span class="sxs-lookup"><span data-stu-id="07bd8-119">[in] The end offset for the variable.</span></span> <span data-ttu-id="07bd8-120">이 매개 변수는 선택적 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="07bd8-120">This parameter is optional.</span></span> <span data-ttu-id="07bd8-121">0 인 경우이 매개 변수가 무시 되 고 변수가 전체 범위에서 정의 됩니다.</span><span class="sxs-lookup"><span data-stu-id="07bd8-121">If it is 0, this parameter is ignored and the variable is defined throughout the entire scope.</span></span> <span data-ttu-id="07bd8-122">0이 아닌 값 이면 현재 범위의 오프셋 내에 변수가 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="07bd8-122">If it is a nonzero value, the variable falls within the offsets of the current scope.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="626a4-123">반환 값</span><span class="sxs-lookup"><span data-stu-id="626a4-123">Return Value</span></span>  
- <span data-ttu-id="626a4-124">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="626a4-124">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="07bd8-123">반환 값</span><span class="sxs-lookup"><span data-stu-id="07bd8-123">Return Value</span></span>  
+ <span data-ttu-id="07bd8-124">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="07bd8-124">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="626a4-125">요구 사항</span><span class="sxs-lookup"><span data-stu-id="626a4-125">Requirements</span></span>  
- <span data-ttu-id="626a4-126">**헤더:** CorSym.idl</span><span class="sxs-lookup"><span data-stu-id="626a4-126">**Header:** CorSym.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="07bd8-125">요구 사항</span><span class="sxs-lookup"><span data-stu-id="07bd8-125">Requirements</span></span>  
+ <span data-ttu-id="07bd8-126">**헤더:** CorSym.idl</span><span class="sxs-lookup"><span data-stu-id="07bd8-126">**Header:** CorSym.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="626a4-127">참고자료</span><span class="sxs-lookup"><span data-stu-id="626a4-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="07bd8-127">참고자료</span><span class="sxs-lookup"><span data-stu-id="07bd8-127">See also</span></span>
 
-- [<span data-ttu-id="626a4-128">ISymUnmanagedWriter2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="626a4-128">ISymUnmanagedWriter2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
-- [<span data-ttu-id="626a4-129">DefineLocalVariable 메서드</span><span class="sxs-lookup"><span data-stu-id="626a4-129">DefineLocalVariable Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)
+- [<span data-ttu-id="07bd8-128">ISymUnmanagedWriter2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="07bd8-128">ISymUnmanagedWriter2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
+- [<span data-ttu-id="07bd8-129">DefineLocalVariable 메서드</span><span class="sxs-lookup"><span data-stu-id="07bd8-129">DefineLocalVariable Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)

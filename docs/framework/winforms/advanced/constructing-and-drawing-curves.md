@@ -7,21 +7,21 @@ helpviewer_keywords:
 - curves [Windows Forms], drawing
 ms.assetid: 76e92623-4130-4644-b867-faca58bdb3a2
 ms.openlocfilehash: 92e7b1e8b4ce37db633b5dafe212a252b854d1af
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935449"
 ---
-# <a name="constructing-and-drawing-curves"></a><span data-ttu-id="72be9-102">곡선 구성 및 그리기</span><span class="sxs-lookup"><span data-stu-id="72be9-102">Constructing and Drawing Curves</span></span>
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <span data-ttu-id="72be9-103">여러 종류의 곡선을 지원 합니다: 타원, 원호를 카디 날 곡선 스플라인 및 3 차원 곡선 스플라인 합니다.</span><span class="sxs-lookup"><span data-stu-id="72be9-103">supports several types of curves: ellipses, arcs, cardinal splines, and Bézier splines.</span></span> <span data-ttu-id="72be9-104">타원의 경계 사각형; 정의한 호에는 시작 각도 및 스윕 각도에서 정의 되는 타원의 일부입니다.</span><span class="sxs-lookup"><span data-stu-id="72be9-104">An ellipse is defined by its bounding rectangle; an arc is a portion of an ellipse defined by a starting angle and a sweep angle.</span></span> <span data-ttu-id="72be9-105">카디널 스플라인 포인트와 장력 매개 변수 배열에 의해 정의 된-곡선 배열의 각 요소 원활 하 게 전달 되 고 장력 매개 변수 곡률 방식에 영향을 줍니다.</span><span class="sxs-lookup"><span data-stu-id="72be9-105">A cardinal spline is defined by an array of points and a tension parameter — the curve passes smoothly through each point in the array, and the tension parameter influences the way the curve bends.</span></span> <span data-ttu-id="72be9-106">두 개의 끝점과 곡선 제어 지점을 통과 하지 않으므로 두 개의 제어점 베 지 어 스플라인을 정의 되어 있지만 제어점 방향에 영향을 줄 및 다른 끝점에서 곡선 흐르면서 수정.</span><span class="sxs-lookup"><span data-stu-id="72be9-106">A Bézier spline is defined by two endpoints and two control points  the curve does not pass through the control points, but the control points influence the direction and bend as the curve goes from one endpoint to the other.</span></span>  
+# <a name="constructing-and-drawing-curves"></a><span data-ttu-id="b8697-102">곡선 구성 및 그리기</span><span class="sxs-lookup"><span data-stu-id="b8697-102">Constructing and Drawing Curves</span></span>
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <span data-ttu-id="b8697-103">여러 종류의 곡선을 지원 합니다: 타원, 원호를 카디 날 곡선 스플라인 및 3 차원 곡선 스플라인 합니다.</span><span class="sxs-lookup"><span data-stu-id="b8697-103">supports several types of curves: ellipses, arcs, cardinal splines, and Bézier splines.</span></span> <span data-ttu-id="b8697-104">타원의 경계 사각형; 정의한 호에는 시작 각도 및 스윕 각도에서 정의 되는 타원의 일부입니다.</span><span class="sxs-lookup"><span data-stu-id="b8697-104">An ellipse is defined by its bounding rectangle; an arc is a portion of an ellipse defined by a starting angle and a sweep angle.</span></span> <span data-ttu-id="b8697-105">카디널 스플라인 포인트와 장력 매개 변수 배열에 의해 정의 된-곡선 배열의 각 요소 원활 하 게 전달 되 고 장력 매개 변수 곡률 방식에 영향을 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b8697-105">A cardinal spline is defined by an array of points and a tension parameter — the curve passes smoothly through each point in the array, and the tension parameter influences the way the curve bends.</span></span> <span data-ttu-id="b8697-106">두 개의 끝점과 곡선 제어 지점을 통과 하지 않으므로 두 개의 제어점 베 지 어 스플라인을 정의 되어 있지만 제어점 방향에 영향을 줄 및 다른 끝점에서 곡선 흐르면서 수정.</span><span class="sxs-lookup"><span data-stu-id="b8697-106">A Bézier spline is defined by two endpoints and two control points  the curve does not pass through the control points, but the control points influence the direction and bend as the curve goes from one endpoint to the other.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="72be9-107">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="72be9-107">In This Section</span></span>  
- [<span data-ttu-id="72be9-108">방법: 카디널 스플라인 그리기</span><span class="sxs-lookup"><span data-stu-id="72be9-108">How to: Draw Cardinal Splines</span></span>](how-to-draw-cardinal-splines.md)  
- <span data-ttu-id="72be9-109">카디널 스플라인 및 그리는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="72be9-109">Describes cardinal splines and how to draw them.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="b8697-107">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="b8697-107">In This Section</span></span>  
+ [<span data-ttu-id="b8697-108">방법: 카디널 스플라인 그리기</span><span class="sxs-lookup"><span data-stu-id="b8697-108">How to: Draw Cardinal Splines</span></span>](how-to-draw-cardinal-splines.md)  
+ <span data-ttu-id="b8697-109">카디널 스플라인 및 그리는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="b8697-109">Describes cardinal splines and how to draw them.</span></span>  
   
- [<span data-ttu-id="72be9-110">방법: 단일 3 차원 곡선 스플라인 그리기</span><span class="sxs-lookup"><span data-stu-id="72be9-110">How to: Draw a Single Bézier Spline</span></span>](how-to-draw-a-single-bezier-spline.md)  
- <span data-ttu-id="72be9-111">베 지 어 스플라인 및 하나를 그리는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="72be9-111">Describes a Bézier spline and how to draw one.</span></span>  
+ [<span data-ttu-id="b8697-110">방법: 단일 3 차원 곡선 스플라인 그리기</span><span class="sxs-lookup"><span data-stu-id="b8697-110">How to: Draw a Single Bézier Spline</span></span>](how-to-draw-a-single-bezier-spline.md)  
+ <span data-ttu-id="b8697-111">베 지 어 스플라인 및 하나를 그리는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="b8697-111">Describes a Bézier spline and how to draw one.</span></span>  
   
- [<span data-ttu-id="72be9-112">방법: 일련의 3 차원 곡선 스플라인 그리기</span><span class="sxs-lookup"><span data-stu-id="72be9-112">How to: Draw a Sequence of Bézier Splines</span></span>](how-to-draw-a-sequence-of-bezier-splines.md)  
- <span data-ttu-id="72be9-113">시퀀스의 몇 가지 3 차원 곡선 스플라인 그리기 하는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="72be9-113">Explains how to draw several Bézier splines in sequence.</span></span>
+ [<span data-ttu-id="b8697-112">방법: 일련의 3 차원 곡선 스플라인 그리기</span><span class="sxs-lookup"><span data-stu-id="b8697-112">How to: Draw a Sequence of Bézier Splines</span></span>](how-to-draw-a-sequence-of-bezier-splines.md)  
+ <span data-ttu-id="b8697-113">시퀀스의 몇 가지 3 차원 곡선 스플라인 그리기 하는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="b8697-113">Explains how to draw several Bézier splines in sequence.</span></span>

@@ -8,23 +8,23 @@ helpviewer_keywords:
 - StatusBar control [WPF]
 ms.assetid: aba45aed-7953-4b2c-bc29-315a9be6c440
 ms.openlocfilehash: 8998eba8a713cada62c8defc8d7500bf3bc036a3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791050"
 ---
-# <a name="statusbar"></a><span data-ttu-id="95dd4-102">StatusBar</span><span class="sxs-lookup"><span data-stu-id="95dd4-102">StatusBar</span></span>
-<span data-ttu-id="95dd4-103"><xref:System.Windows.Controls.Primitives.StatusBar> 응용 프로그램 상태 정보를 표시할 수 있는 창의 맨 아래에 있는 가로 영역입니다.</span><span class="sxs-lookup"><span data-stu-id="95dd4-103">A <xref:System.Windows.Controls.Primitives.StatusBar> is a horizontal area at the bottom of a window where an application can display status information.</span></span>  
+# <a name="statusbar"></a><span data-ttu-id="2536d-102">StatusBar</span><span class="sxs-lookup"><span data-stu-id="2536d-102">StatusBar</span></span>
+<span data-ttu-id="2536d-103"><xref:System.Windows.Controls.Primitives.StatusBar> 응용 프로그램 상태 정보를 표시할 수 있는 창의 맨 아래에 있는 가로 영역입니다.</span><span class="sxs-lookup"><span data-stu-id="2536d-103">A <xref:System.Windows.Controls.Primitives.StatusBar> is a horizontal area at the bottom of a window where an application can display status information.</span></span>  
   
- <span data-ttu-id="95dd4-104">다음 그림의 예를 보여 줍니다.는 <xref:System.Windows.Controls.Primitives.StatusBar>합니다.</span><span class="sxs-lookup"><span data-stu-id="95dd4-104">The following illustration shows an example of a <xref:System.Windows.Controls.Primitives.StatusBar>.</span></span>  
+ <span data-ttu-id="2536d-104">다음 그림의 예를 보여 줍니다.는 <xref:System.Windows.Controls.Primitives.StatusBar>합니다.</span><span class="sxs-lookup"><span data-stu-id="2536d-104">The following illustration shows an example of a <xref:System.Windows.Controls.Primitives.StatusBar>.</span></span>  
   
- <span data-ttu-id="95dd4-105">![상태 표시줄](./media/ss-ctl-statusbar.GIF "SS_CTL_statusbar")</span><span class="sxs-lookup"><span data-stu-id="95dd4-105">![Status bar](./media/ss-ctl-statusbar.GIF "SS_CTL_statusbar")</span></span>  
+ <span data-ttu-id="2536d-105">![상태 표시줄](./media/ss-ctl-statusbar.GIF "SS_CTL_statusbar")</span><span class="sxs-lookup"><span data-stu-id="2536d-105">![Status bar](./media/ss-ctl-statusbar.GIF "SS_CTL_statusbar")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="95dd4-106">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="95dd4-106">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="2536d-106">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="2536d-106">In This Section</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="95dd4-107">참조</span><span class="sxs-lookup"><span data-stu-id="95dd4-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="2536d-107">참조</span><span class="sxs-lookup"><span data-stu-id="2536d-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.StatusBar>  
   <xref:System.Windows.Controls.Primitives.StatusBarItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="95dd4-108">관련 단원</span><span class="sxs-lookup"><span data-stu-id="95dd4-108">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="2536d-108">관련 단원</span><span class="sxs-lookup"><span data-stu-id="2536d-108">Related Sections</span></span>
