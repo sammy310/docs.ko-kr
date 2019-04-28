@@ -3,17 +3,17 @@ title: 워크플로 일시 중지 및 다시 시작
 ms.date: 03/30/2017
 ms.assetid: 11f38339-79c7-4295-b610-24a7223bbf6d
 ms.openlocfilehash: aa0431b18f6d0e4b96d7494ec2e65acd355992c7
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61860960"
 ---
-# <a name="pausing-and-resuming-a-workflow"></a><span data-ttu-id="cd94e-102">워크플로 일시 중지 및 다시 시작</span><span class="sxs-lookup"><span data-stu-id="cd94e-102">Pausing and Resuming a Workflow</span></span>
-<span data-ttu-id="cd94e-103">워크플로는 <xref:System.Activities.Statements.Delay>와 같은 차단 활동과 책갈피에 대한 응답으로 일시 중지되고 다시 시작되지만, 지속성을 사용하여 명시적으로 워크플로를 일시 중지하고 언로드하고 다시 시작할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cd94e-103">Workflows will pause and resume in response to bookmarks and blocking activities such as <xref:System.Activities.Statements.Delay>, but a workflow can also be explicitly paused, unloaded, and resumed by using persistence.</span></span>  
+# <a name="pausing-and-resuming-a-workflow"></a><span data-ttu-id="e2629-102">워크플로 일시 중지 및 다시 시작</span><span class="sxs-lookup"><span data-stu-id="e2629-102">Pausing and Resuming a Workflow</span></span>
+<span data-ttu-id="e2629-103">워크플로는 <xref:System.Activities.Statements.Delay>와 같은 차단 활동과 책갈피에 대한 응답으로 일시 중지되고 다시 시작되지만, 지속성을 사용하여 명시적으로 워크플로를 일시 중지하고 언로드하고 다시 시작할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2629-103">Workflows will pause and resume in response to bookmarks and blocking activities such as <xref:System.Activities.Statements.Delay>, but a workflow can also be explicitly paused, unloaded, and resumed by using persistence.</span></span>  
   
-## <a name="pausing-a-workflow"></a><span data-ttu-id="cd94e-104">워크플로 일시 중지</span><span class="sxs-lookup"><span data-stu-id="cd94e-104">Pausing a Workflow</span></span>  
- <span data-ttu-id="cd94e-105">워크플로를 일시 중지하려면 <xref:System.Activities.WorkflowApplication.Unload%2A>를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="cd94e-105">To pause a workflow, use <xref:System.Activities.WorkflowApplication.Unload%2A>.</span></span>  <span data-ttu-id="cd94e-106">이 메서드는 워크플로가 유지되고 언로드되도록 요청하며 워크플로가 30초 안에 언로드되지 않는 경우 <xref:System.TimeoutException>을 throw합니다.</span><span class="sxs-lookup"><span data-stu-id="cd94e-106">This method requests that the workflow persist and unload, and will throw a <xref:System.TimeoutException> if the workflow does not unload in 30 seconds.</span></span>  
+## <a name="pausing-a-workflow"></a><span data-ttu-id="e2629-104">워크플로 일시 중지</span><span class="sxs-lookup"><span data-stu-id="e2629-104">Pausing a Workflow</span></span>  
+ <span data-ttu-id="e2629-105">워크플로를 일시 중지하려면 <xref:System.Activities.WorkflowApplication.Unload%2A>를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="e2629-105">To pause a workflow, use <xref:System.Activities.WorkflowApplication.Unload%2A>.</span></span>  <span data-ttu-id="e2629-106">이 메서드는 워크플로가 유지되고 언로드되도록 요청하며 워크플로가 30초 안에 언로드되지 않는 경우 <xref:System.TimeoutException>을 throw합니다.</span><span class="sxs-lookup"><span data-stu-id="e2629-106">This method requests that the workflow persist and unload, and will throw a <xref:System.TimeoutException> if the workflow does not unload in 30 seconds.</span></span>  
   
 ```csharp  
 try  
@@ -27,8 +27,8 @@ catch (TimeoutException e)
 }  
 ```  
   
-## <a name="resuming-a-workflow"></a><span data-ttu-id="cd94e-107">워크플로 다시 시작</span><span class="sxs-lookup"><span data-stu-id="cd94e-107">Resuming a Workflow</span></span>  
- <span data-ttu-id="cd94e-108">이전에 일시 중지되고 언로드된 워크플로를 다시 시작하려면 <xref:System.Activities.WorkflowApplication.Load%2A>를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="cd94e-108">To resume a previously paused and unloaded workflow, use <xref:System.Activities.WorkflowApplication.Load%2A>.</span></span> <span data-ttu-id="cd94e-109">이 메서드는 워크플로를 지속성 저장소에서 메모리로 로드합니다.</span><span class="sxs-lookup"><span data-stu-id="cd94e-109">This method loads a workflow from a persistence store into memory.</span></span>  
+## <a name="resuming-a-workflow"></a><span data-ttu-id="e2629-107">워크플로 다시 시작</span><span class="sxs-lookup"><span data-stu-id="e2629-107">Resuming a Workflow</span></span>  
+ <span data-ttu-id="e2629-108">이전에 일시 중지되고 언로드된 워크플로를 다시 시작하려면 <xref:System.Activities.WorkflowApplication.Load%2A>를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="e2629-108">To resume a previously paused and unloaded workflow, use <xref:System.Activities.WorkflowApplication.Load%2A>.</span></span> <span data-ttu-id="e2629-109">이 메서드는 워크플로를 지속성 저장소에서 메모리로 로드합니다.</span><span class="sxs-lookup"><span data-stu-id="e2629-109">This method loads a workflow from a persistence store into memory.</span></span>  
   
 ```csharp  
 WorkflowApplication application = new WorkflowApplication(activity);  
@@ -36,8 +36,8 @@ application.InstanceStore = instanceStore;
 application.Load(id);  
 ```  
   
-## <a name="example"></a><span data-ttu-id="cd94e-110">예제</span><span class="sxs-lookup"><span data-stu-id="cd94e-110">Example</span></span>  
- <span data-ttu-id="cd94e-111">다음 코드 샘플에서는 지속성을 사용하여 워크플로를 일시 중지하고 다시 시작하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="cd94e-111">The following code sample demonstrates how to pause and resume a workflow by using persistence.</span></span>  
+## <a name="example"></a><span data-ttu-id="e2629-110">예제</span><span class="sxs-lookup"><span data-stu-id="e2629-110">Example</span></span>  
+ <span data-ttu-id="e2629-111">다음 코드 샘플에서는 지속성을 사용하여 워크플로를 일시 중지하고 다시 시작하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e2629-111">The following code sample demonstrates how to pause and resume a workflow by using persistence.</span></span>  
   
 ```csharp  
 static string bkName = "bkName";  
