@@ -3,23 +3,23 @@ title: 조각 (F#)
 description: 기존 분할 영역을 사용 하는 방법에 알아봅니다 F# 데이터 형식 및 다른 데이터 형식에 대 한 사용자 고유의 조각을 정의 하는 방법입니다.
 ms.date: 01/22/2019
 ms.openlocfilehash: 1d8bb029ad18c8853ab58888959967ed279fb368
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925997"
 ---
-# <a name="slices"></a><span data-ttu-id="db1f8-103">조각</span><span class="sxs-lookup"><span data-stu-id="db1f8-103">Slices</span></span>
+# <a name="slices"></a><span data-ttu-id="22c9b-103">조각</span><span class="sxs-lookup"><span data-stu-id="22c9b-103">Slices</span></span>
 
-<span data-ttu-id="db1f8-104">F#, 조각은 데이터 형식의 하위 집합입니다.</span><span class="sxs-lookup"><span data-stu-id="db1f8-104">In F#, a slice is a subset of a data type.</span></span> <span data-ttu-id="db1f8-105">하거나 정의 해야 데이터 형식을 데이터 형식에서 조각을 가져올 수는 `GetSlice` 메서드 또는 [확장명을 입력](type-extensions.md) 범위입니다.</span><span class="sxs-lookup"><span data-stu-id="db1f8-105">To be able to take a slice from a data type, the data type must either define a `GetSlice` method or in a [type extension](type-extensions.md) that is in scope.</span></span> <span data-ttu-id="db1f8-106">이 문서에서는 기존 분할 영역을 사용 하는 방법을 설명 F# 형식 및 사용자 지정 하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="db1f8-106">This article explains how to take slices from existing F# types and how to define your own.</span></span>
+<span data-ttu-id="22c9b-104">F#, 조각은 데이터 형식의 하위 집합입니다.</span><span class="sxs-lookup"><span data-stu-id="22c9b-104">In F#, a slice is a subset of a data type.</span></span> <span data-ttu-id="22c9b-105">하거나 정의 해야 데이터 형식을 데이터 형식에서 조각을 가져올 수는 `GetSlice` 메서드 또는 [확장명을 입력](type-extensions.md) 범위입니다.</span><span class="sxs-lookup"><span data-stu-id="22c9b-105">To be able to take a slice from a data type, the data type must either define a `GetSlice` method or in a [type extension](type-extensions.md) that is in scope.</span></span> <span data-ttu-id="22c9b-106">이 문서에서는 기존 분할 영역을 사용 하는 방법을 설명 F# 형식 및 사용자 지정 하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="22c9b-106">This article explains how to take slices from existing F# types and how to define your own.</span></span>
 
-<span data-ttu-id="db1f8-107">조각이 비슷합니다 [인덱서](members/indexed-properties.md), 하지만 여러 세션 대신 기본 데이터 구조에서 단일 값이 구해지 기를 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="db1f8-107">Slices are similar to [indexers](members/indexed-properties.md), but instead of yielding a single value from the underlying data structure, they yield multiple ones.</span></span>
+<span data-ttu-id="22c9b-107">조각이 비슷합니다 [인덱서](members/indexed-properties.md), 하지만 여러 세션 대신 기본 데이터 구조에서 단일 값이 구해지 기를 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="22c9b-107">Slices are similar to [indexers](members/indexed-properties.md), but instead of yielding a single value from the underlying data structure, they yield multiple ones.</span></span>
 
-<span data-ttu-id="db1f8-108">F#현재는 문자열, 목록, 배열 및 2D 배열 조각화에 대 한 내장 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="db1f8-108">F# currently has intrinsic support for slicing strings, lists, arrays, and 2D arrays.</span></span>
+<span data-ttu-id="22c9b-108">F#현재는 문자열, 목록, 배열 및 2D 배열 조각화에 대 한 내장 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="22c9b-108">F# currently has intrinsic support for slicing strings, lists, arrays, and 2D arrays.</span></span>
 
-## <a name="basic-slicing-with-f-lists-and-arrays"></a><span data-ttu-id="db1f8-109">사용 하 여 기본 조각화 F# 목록 및 배열</span><span class="sxs-lookup"><span data-stu-id="db1f8-109">Basic slicing with F# lists and arrays</span></span>
+## <a name="basic-slicing-with-f-lists-and-arrays"></a><span data-ttu-id="22c9b-109">사용 하 여 기본 조각화 F# 목록 및 배열</span><span class="sxs-lookup"><span data-stu-id="22c9b-109">Basic slicing with F# lists and arrays</span></span>
 
-<span data-ttu-id="db1f8-110">분할 되는 가장 일반적인 데이터 형식은 F# 목록과 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="db1f8-110">The most common data types that are sliced are F# lists and arrays.</span></span> <span data-ttu-id="db1f8-111">다음 예제에서는 목록을 사용 하 여이 작업을 수행 하는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="db1f8-111">The following example demonstrates how to do this with lists:</span></span>
+<span data-ttu-id="22c9b-110">분할 되는 가장 일반적인 데이터 형식은 F# 목록과 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="22c9b-110">The most common data types that are sliced are F# lists and arrays.</span></span> <span data-ttu-id="22c9b-111">다음 예제에서는 목록을 사용 하 여이 작업을 수행 하는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="22c9b-111">The following example demonstrates how to do this with lists:</span></span>
 
 ```fsharp
 // Generate a list of 100 integers
@@ -38,7 +38,7 @@ let unboundedEnd = fullList.[94..]
 printfn "Unbounded end slice: %A" unboundedEnd
 ```
 
-<span data-ttu-id="db1f8-112">배열 조각화 같으며 목록 조각화:</span><span class="sxs-lookup"><span data-stu-id="db1f8-112">Slicing arrays is just like slicing lists:</span></span>
+<span data-ttu-id="22c9b-112">배열 조각화 같으며 목록 조각화:</span><span class="sxs-lookup"><span data-stu-id="22c9b-112">Slicing arrays is just like slicing lists:</span></span>
 
 ```fsharp
 // Generate an array of 100 integers
@@ -57,11 +57,11 @@ let unboundedEnd = fullArray.[94..]
 printfn "Unbounded end slice: %A" unboundedEnd
 ```
 
-## <a name="slicing-multidimensional-arrays"></a><span data-ttu-id="db1f8-113">다차원 배열 조각화</span><span class="sxs-lookup"><span data-stu-id="db1f8-113">Slicing multidimensional arrays</span></span>
+## <a name="slicing-multidimensional-arrays"></a><span data-ttu-id="22c9b-113">다차원 배열 조각화</span><span class="sxs-lookup"><span data-stu-id="22c9b-113">Slicing multidimensional arrays</span></span>
 
-<span data-ttu-id="db1f8-114">F#다차원 배열을 지원 합니다 F# 핵심 라이브러리입니다.</span><span class="sxs-lookup"><span data-stu-id="db1f8-114">F# supports multidimensional arrays in the F# core library.</span></span> <span data-ttu-id="db1f8-115">1 차원 배열과 마찬가지로 다차원 배열 조각도 유용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="db1f8-115">As with one-dimensional arrays, slices of multidimensional arrays can also be useful.</span></span> <span data-ttu-id="db1f8-116">그러나 특정 행과 열에 대 한 부분을 수행할 수 있도록 추가 차원이 미치는 구문은 약간 다릅니다 한다고 규정 합니다.</span><span class="sxs-lookup"><span data-stu-id="db1f8-116">However, the introduction of additional dimensions mandates a slightly different syntax so that you can take slices of specific rows and columns.</span></span>
+<span data-ttu-id="22c9b-114">F#다차원 배열을 지원 합니다 F# 핵심 라이브러리입니다.</span><span class="sxs-lookup"><span data-stu-id="22c9b-114">F# supports multidimensional arrays in the F# core library.</span></span> <span data-ttu-id="22c9b-115">1 차원 배열과 마찬가지로 다차원 배열 조각도 유용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="22c9b-115">As with one-dimensional arrays, slices of multidimensional arrays can also be useful.</span></span> <span data-ttu-id="22c9b-116">그러나 특정 행과 열에 대 한 부분을 수행할 수 있도록 추가 차원이 미치는 구문은 약간 다릅니다 한다고 규정 합니다.</span><span class="sxs-lookup"><span data-stu-id="22c9b-116">However, the introduction of additional dimensions mandates a slightly different syntax so that you can take slices of specific rows and columns.</span></span>
 
-<span data-ttu-id="db1f8-117">다음 예제에서는 2 차원 배열 조각화 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="db1f8-117">The following examples demonstrate how to slice a 2D array:</span></span>
+<span data-ttu-id="22c9b-117">다음 예제에서는 2 차원 배열 조각화 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="22c9b-117">The following examples demonstrate how to slice a 2D array:</span></span>
 
 ```fsharp
 // Generate a 3x3 2D matrix
@@ -89,13 +89,13 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-<span data-ttu-id="db1f8-118">F# 핵심 라이브러리를 정의 하지 않습니다 `GetSlice`3D 배열에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="db1f8-118">The F# core library does not define `GetSlice`for 3D arrays.</span></span> <span data-ttu-id="db1f8-119">정의 해야 합니다 또는 다른 배열을 한 차원 조각화 하려는 경우는 `GetSlice` 멤버 직접.</span><span class="sxs-lookup"><span data-stu-id="db1f8-119">If you wish to slice those or other arrays of more dimensions, you must define the `GetSlice` member yourself.</span></span>
+<span data-ttu-id="22c9b-118">F# 핵심 라이브러리를 정의 하지 않습니다 `GetSlice`3D 배열에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="22c9b-118">The F# core library does not define `GetSlice`for 3D arrays.</span></span> <span data-ttu-id="22c9b-119">정의 해야 합니다 또는 다른 배열을 한 차원 조각화 하려는 경우는 `GetSlice` 멤버 직접.</span><span class="sxs-lookup"><span data-stu-id="22c9b-119">If you wish to slice those or other arrays of more dimensions, you must define the `GetSlice` member yourself.</span></span>
 
-## <a name="defining-slices-for-other-data-structures"></a><span data-ttu-id="db1f8-120">기타 데이터 구조에 대 한 슬라이스를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="db1f8-120">Defining slices for other data structures</span></span>
+## <a name="defining-slices-for-other-data-structures"></a><span data-ttu-id="22c9b-120">기타 데이터 구조에 대 한 슬라이스를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="22c9b-120">Defining slices for other data structures</span></span>
 
-<span data-ttu-id="db1f8-121">F# 핵심 라이브러리는 형식의 제한 된 집합에 대 한 슬라이스를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="db1f8-121">The F# core library defines slices for a limited set of types.</span></span> <span data-ttu-id="db1f8-122">자세한 데이터 형식에 대 한 조각을 정의 하려는 경우 형식 정의 자체 또는 형식 확장에서이 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="db1f8-122">If you wish to define slices for more data types, you can do so either in the type definition itself or in a type extension.</span></span>
+<span data-ttu-id="22c9b-121">F# 핵심 라이브러리는 형식의 제한 된 집합에 대 한 슬라이스를 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="22c9b-121">The F# core library defines slices for a limited set of types.</span></span> <span data-ttu-id="22c9b-122">자세한 데이터 형식에 대 한 조각을 정의 하려는 경우 형식 정의 자체 또는 형식 확장에서이 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="22c9b-122">If you wish to define slices for more data types, you can do so either in the type definition itself or in a type extension.</span></span>
 
-<span data-ttu-id="db1f8-123">예를 들어 다음과 같습니다 하는 방법에 대 한 슬라이스를 정의할 수 있습니다는 <xref:System.ArraySegment%601> 편리한 데이터 조작을 위한 클래스:</span><span class="sxs-lookup"><span data-stu-id="db1f8-123">For example, here's how you might define slices for the <xref:System.ArraySegment%601> class to allow for convenient data manipulation:</span></span>
+<span data-ttu-id="22c9b-123">예를 들어 다음과 같습니다 하는 방법에 대 한 슬라이스를 정의할 수 있습니다는 <xref:System.ArraySegment%601> 편리한 데이터 조작을 위한 클래스:</span><span class="sxs-lookup"><span data-stu-id="22c9b-123">For example, here's how you might define slices for the <xref:System.ArraySegment%601> class to allow for convenient data manipulation:</span></span>
 
 ```fsharp
 open System
@@ -110,9 +110,9 @@ let arr = ArraySegment [| 1 .. 10 |]
 let slice = arr.[2..5] //[ 3; 4; 5]
 ```
 
-### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a><span data-ttu-id="db1f8-124">필요한 경우 boxing을 방지 하려면 인라인 처리 사용</span><span class="sxs-lookup"><span data-stu-id="db1f8-124">Use inlining to avoid boxing if it is necessary</span></span>
+### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a><span data-ttu-id="22c9b-124">필요한 경우 boxing을 방지 하려면 인라인 처리 사용</span><span class="sxs-lookup"><span data-stu-id="22c9b-124">Use inlining to avoid boxing if it is necessary</span></span>
 
-<span data-ttu-id="db1f8-125">좋습니다 구조체 실제로 된 형식에 대 한 조각을 정의 하는 경우 있습니다 `inline` 는 `GetSlice` 멤버입니다.</span><span class="sxs-lookup"><span data-stu-id="db1f8-125">If you are defining slices for a type that is actually a struct, we recommend that you `inline` the `GetSlice` member.</span></span> <span data-ttu-id="db1f8-126">F# 컴파일러 조각화의 결과로 모든 힙 할당을 방지 하는 선택적 인수를 최적화 합니다.</span><span class="sxs-lookup"><span data-stu-id="db1f8-126">The F# compiler optimizes away the optional arguments, avoiding any heap allocations as a result of slicing.</span></span> <span data-ttu-id="db1f8-127">이 같은 구문을 조각화 하는 데 매우 중요 <xref:System.Span%601> 힙에 할당할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="db1f8-127">This is critically important for slicing constructs such as <xref:System.Span%601> that cannot be allocated on the heap.</span></span>
+<span data-ttu-id="22c9b-125">좋습니다 구조체 실제로 된 형식에 대 한 조각을 정의 하는 경우 있습니다 `inline` 는 `GetSlice` 멤버입니다.</span><span class="sxs-lookup"><span data-stu-id="22c9b-125">If you are defining slices for a type that is actually a struct, we recommend that you `inline` the `GetSlice` member.</span></span> <span data-ttu-id="22c9b-126">F# 컴파일러 조각화의 결과로 모든 힙 할당을 방지 하는 선택적 인수를 최적화 합니다.</span><span class="sxs-lookup"><span data-stu-id="22c9b-126">The F# compiler optimizes away the optional arguments, avoiding any heap allocations as a result of slicing.</span></span> <span data-ttu-id="22c9b-127">이 같은 구문을 조각화 하는 데 매우 중요 <xref:System.Span%601> 힙에 할당할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="22c9b-127">This is critically important for slicing constructs such as <xref:System.Span%601> that cannot be allocated on the heap.</span></span>
 
 ```fsharp
 open System
@@ -135,6 +135,6 @@ printSpan sp.[0..3] // [|1; 2; 3|]
 printSpan sp.[1..2] // |2; 3|]
 ```
 
-## <a name="see-also"></a><span data-ttu-id="db1f8-128">참고자료</span><span class="sxs-lookup"><span data-stu-id="db1f8-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="22c9b-128">참고자료</span><span class="sxs-lookup"><span data-stu-id="22c9b-128">See also</span></span>
 
-- [<span data-ttu-id="db1f8-129">인덱싱된 속성</span><span class="sxs-lookup"><span data-stu-id="db1f8-129">Indexed properties</span></span>](members/indexed-properties.md)
+- [<span data-ttu-id="22c9b-129">인덱싱된 속성</span><span class="sxs-lookup"><span data-stu-id="22c9b-129">Indexed properties</span></span>](members/indexed-properties.md)
