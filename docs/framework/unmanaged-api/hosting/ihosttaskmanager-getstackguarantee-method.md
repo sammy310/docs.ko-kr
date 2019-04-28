@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ea1c1f998febccbc80fb10cef5a8dfd229e1987e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789404"
 ---
-# <a name="ihosttaskmanagergetstackguarantee-method"></a><span data-ttu-id="d0a4e-102">IHostTaskManager::GetStackGuarantee 메서드</span><span class="sxs-lookup"><span data-stu-id="d0a4e-102">IHostTaskManager::GetStackGuarantee Method</span></span>
-<span data-ttu-id="d0a4e-103">프로세스의 닫기 전에 있지만 스택 작업이 완료 되 면 사용할 수 있도록 보장 되는 스택 공간의 크기를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="d0a4e-103">Gets the amount of stack space that is guaranteed to be available after a stack operation completes, but before the closing of a process.</span></span>  
+# <a name="ihosttaskmanagergetstackguarantee-method"></a><span data-ttu-id="65ed7-102">IHostTaskManager::GetStackGuarantee 메서드</span><span class="sxs-lookup"><span data-stu-id="65ed7-102">IHostTaskManager::GetStackGuarantee Method</span></span>
+<span data-ttu-id="65ed7-103">프로세스의 닫기 전에 있지만 스택 작업이 완료 되 면 사용할 수 있도록 보장 되는 스택 공간의 크기를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="65ed7-103">Gets the amount of stack space that is guaranteed to be available after a stack operation completes, but before the closing of a process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d0a4e-104">구문</span><span class="sxs-lookup"><span data-stu-id="d0a4e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="65ed7-104">구문</span><span class="sxs-lookup"><span data-stu-id="65ed7-104">Syntax</span></span>  
   
 ```  
 HRESULT GetStackGuarantee(  
@@ -35,19 +35,19 @@ HRESULT GetStackGuarantee(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d0a4e-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d0a4e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="65ed7-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="65ed7-105">Parameters</span></span>  
  `pGuarantee`  
- <span data-ttu-id="d0a4e-106">[out] 사용할 수 있는 바이트 수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="d0a4e-106">[out] A pointer to the number of bytes that are available.</span></span>  
+ <span data-ttu-id="65ed7-106">[out] 사용할 수 있는 바이트 수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="65ed7-106">[out] A pointer to the number of bytes that are available.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d0a4e-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d0a4e-107">Requirements</span></span>  
- <span data-ttu-id="d0a4e-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="d0a4e-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="65ed7-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="65ed7-107">Requirements</span></span>  
+ <span data-ttu-id="65ed7-108">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="65ed7-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d0a4e-109">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="d0a4e-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="65ed7-109">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="65ed7-109">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="d0a4e-110">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="d0a4e-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="65ed7-110">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="65ed7-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="d0a4e-111">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d0a4e-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="65ed7-111">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="65ed7-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d0a4e-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="d0a4e-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="65ed7-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="65ed7-112">See also</span></span>
 
-- [<span data-ttu-id="d0a4e-113">IHostTaskManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d0a4e-113">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [<span data-ttu-id="65ed7-113">IHostTaskManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="65ed7-113">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
