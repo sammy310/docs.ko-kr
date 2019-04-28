@@ -3,11 +3,11 @@ title: SQL Server에서 데이터 암호화
 ms.date: 03/30/2017
 ms.assetid: 83b992f7-b351-4678-b4b9-f4ffd58134cc
 ms.openlocfilehash: 1acb720b8a4f8beb27bb1a5236efdb6f2bb44383
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877879"
 ---
 # <a name="data-encryption-in-sql-server"></a>SQL Server에서 데이터 암호화
 SQL Server에는 인증서, 비대칭 키 또는 대칭 키를 사용하여 데이터를 암호화하고 해독하는 기능이 있습니다. 또한 SQL Server 2005는 내부 인증서 저장소에서 이러한 모든 항목을 관리합니다. 이 저장소는 계층 구조에서 한 단계 상위에 있는 계층에서 인증서와 키를 보호하는 암호화 계층 구조를 사용합니다. SQL Server의 이 기능 영역을 비밀 저장소라고 합니다.  

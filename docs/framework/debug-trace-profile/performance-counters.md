@@ -9,30 +9,30 @@ ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 210a0a7d84f21360dce93627cdf6a27777c09968
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61874474"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework의 성능 카운터
 이 항목에서 확인할 수 있는 성능 카운터의 목록을 제공 합니다 [Windows 성능 모니터](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29)합니다.  
   
--   [예외 성능 카운터](#exception)  
+- [예외 성능 카운터](#exception)  
   
--   [interop 성능 카운터](#interop)  
+- [interop 성능 카운터](#interop)  
   
--   [JIT 성능 카운터](#jit)  
+- [JIT 성능 카운터](#jit)  
   
--   [로드 성능 카운터](#loading)  
+- [로드 성능 카운터](#loading)  
   
--   [잠금 및 스레드 성능 카운터](#lockthread)  
+- [잠금 및 스레드 성능 카운터](#lockthread)  
   
--   [메모리 성능 카운터](#memory)  
+- [메모리 성능 카운터](#memory)  
   
--   [네트워킹 성능 카운터](#networking)  
+- [네트워킹 성능 카운터](#networking)  
   
--   [보안 성능 카운터](#security)  
+- [보안 성능 카운터](#security)  
   
 <a name="exception"></a>   
 ## <a name="exception-performance-counters"></a>예외 성능 카운터  
@@ -161,21 +161,21 @@ ms.locfileid: "59184810"
   
  지원되는 네트워킹 성능 카운터의 클래스는 다음과 같습니다.  
   
--   일부 이벤트가 발생한 횟수를 측정하는 이벤트 카운터  
+- 일부 이벤트가 발생한 횟수를 측정하는 이벤트 카운터  
   
--   보내거나 받은 데이터 수량을 측정하는 데이터 카운터  
+- 보내거나 받은 데이터 수량을 측정하는 데이터 카운터  
   
--   각 프로세스의 소요 시간을 측정하는 기간 카운터 개체가 다른 상태에서 전환된 후 각 간격(일반적으로 초 단위)마다 개체에서 시간을 측정합니다.  
+- 각 프로세스의 소요 시간을 측정하는 기간 카운터 개체가 다른 상태에서 전환된 후 각 간격(일반적으로 초 단위)마다 개체에서 시간을 측정합니다.  
   
--   간격당(일반적으로 초당) 특정 전환을 수행하는 개체 수를 측정하는 간격당 카운터  
+- 간격당(일반적으로 초당) 특정 전환을 수행하는 개체 수를 측정하는 간격당 카운터  
   
  이벤트에 대한 네트워킹 성능 카운터는 다음과 같습니다.  
   
--   **Connections Established**  
+- **Connections Established**  
   
--   **Datagrams Received**  
+- **Datagrams Received**  
   
--   **Datagrams Sent**  
+- **Datagrams Sent**  
   
  이러한 성능 카운터는 프로세스가 시작된 이후의 개수를 제공합니다. 설정된 <xref:System.Net.Sockets.Socket> 연결 수에는 설정된 스트림 소켓 연결에 대한 응용 프로그램의 명시적 <xref:System.Net.Sockets.Socket> 메서드 호출 및 <xref:System.Net.Sockets.Socket> 클래스에 대한 다른 클래스(예: <xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, <xref:System.Net.WebClient> 및 <xref:System.Net.Sockets.TcpClient>)의 내부 호출이 포함됩니다.  
   
@@ -183,33 +183,33 @@ ms.locfileid: "59184810"
   
  데이터에 대한 네트워킹 성능 카운터는 다음과 같습니다.  
   
--   **Bytes Received**  
+- **Bytes Received**  
   
--   **Bytes Sent**  
+- **Bytes Sent**  
   
  위 카운터는 프로세스가 시작된 이후의 바이트 수를 제공합니다.  
   
  <xref:System.Net.HttpWebRequest> 개체가 전체 수명 주기나 일부만 통과하는 데 소요된 시간을 측정하는 다음 두 개의 기간 카운터가 있습니다.  
   
--   **HttpWebRequest Average Lifetime**  
+- **HttpWebRequest Average Lifetime**  
   
--   **HttpWebRequest Average Queue Time**  
+- **HttpWebRequest Average Queue Time**  
   
  **HttpWebRequest Average Lifetime** 카운터의 경우 대부분의 <xref:System.Net.HttpWebRequest> 개체 수명은 항상 개체를 만든 시간부터 응용 프로그램이 응답 스트림을 닫은 시간까지입니다. 두 가지 특수한 경우는 다음과 같습니다.  
   
--   응용 프로그램이 <xref:System.Net.HttpWebRequest.GetResponse%2A> 또는 <xref:System.Net.HttpWebRequest.BeginGetResponse%2A> 메서드를 호출하지 않는 경우 <xref:System.Net.HttpWebRequest> 개체의 수명은 무시됩니다.  
+- 응용 프로그램이 <xref:System.Net.HttpWebRequest.GetResponse%2A> 또는 <xref:System.Net.HttpWebRequest.BeginGetResponse%2A> 메서드를 호출하지 않는 경우 <xref:System.Net.HttpWebRequest> 개체의 수명은 무시됩니다.  
   
--   <xref:System.Net.HttpWebRequest> 개체가 <xref:System.Net.HttpWebRequest.GetResponse%2A> 또는 <xref:System.Net.HttpWebRequest.EndGetResponse%2A> 메서드를 호출할 때 <xref:System.Net.WebException>이 발생하는 경우 수명은 예외가 발생할 때 종료됩니다. 기술적으로, 기본 응답 스트림도 해당 시점에 닫힙니다(사용자에게 반환되는 응답 스트림은 실제로 응답 스트림의 복사본을 포함하는 메모리 스트림임).  
+- <xref:System.Net.HttpWebRequest> 개체가 <xref:System.Net.HttpWebRequest.GetResponse%2A> 또는 <xref:System.Net.HttpWebRequest.EndGetResponse%2A> 메서드를 호출할 때 <xref:System.Net.WebException>이 발생하는 경우 수명은 예외가 발생할 때 종료됩니다. 기술적으로, 기본 응답 스트림도 해당 시점에 닫힙니다(사용자에게 반환되는 응답 스트림은 실제로 응답 스트림의 복사본을 포함하는 메모리 스트림임).  
   
  간격당 특정 <xref:System.Net.HttpWebRequest> 개체 문제를 추적하는 4개의 카운터가 있습니다. 이러한 성능 카운터는 응용 프로그램 개발자, 관리자 및 지원 담당자가 <xref:System.Net.HttpWebRequest> 개체의 성능을 파악하는 데 도움이 됩니다. 해당 카운터는 다음과 같습니다.  
   
--   **HttpWebRequests Created/sec**  
+- **HttpWebRequests Created/sec**  
   
--   **HttpWebRequests Queued/sec**  
+- **HttpWebRequests Queued/sec**  
   
--   **HttpWebRequests Aborted/sec**  
+- **HttpWebRequests Aborted/sec**  
   
--   **HttpWebRequests Failed/sec**  
+- **HttpWebRequests Failed/sec**  
   
  **HttpWebRequests Aborted/sec** 카운터의 경우 <xref:System.Net.HttpWebRequest.Abort%2A>에 대한 내부 호출도 계산됩니다. 이러한 내부 호출은 일반적으로 응용 프로그램이 측정하려는 시간 제한에 의해 발생합니다.  
   
@@ -233,9 +233,9 @@ for (int i = 0; i < Array.Length; i++)
   
  네트워킹 성능 카운터는 다음 두 가지 범주에 나열됩니다.  
   
--   ".NET CLR 네트워킹" - .NET Framework 버전 2에서 도입되었으며 .NET Framework 버전 2 이상에서 지원되는 원래 성능 카운터  
+- ".NET CLR 네트워킹" - .NET Framework 버전 2에서 도입되었으며 .NET Framework 버전 2 이상에서 지원되는 원래 성능 카운터  
   
--   ".NET CLR 네트워킹 4.0.0.0" - 위의 모든 소켓 카운터 및 .NET Framework 버전 4 이상에서 지원되는 새 성능 카운터 이러한 새 카운터는 <xref:System.Net.HttpWebRequest> 개체에 대한 성능 정보를 제공합니다.  
+- ".NET CLR 네트워킹 4.0.0.0" - 위의 모든 소켓 카운터 및 .NET Framework 버전 4 이상에서 지원되는 새 성능 카운터 이러한 새 카운터는 <xref:System.Net.HttpWebRequest> 개체에 대한 성능 정보를 제공합니다.  
   
  애플리케이션에서 성능 카운터에 액세스하고 관리하는 방법에 대한 자세한 내용은 [성능 카운터](../../../docs/framework/debug-trace-profile/performance-counters.md)를 참조하세요.  
   

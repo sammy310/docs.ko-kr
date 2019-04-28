@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID75
 ms.assetid: 6ce3a161-7316-46bd-a785-0d50e5414020
 ms.openlocfilehash: 4f18c9216aa24840bc205534a97124d12698cb98
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61799182"
 ---
 # <a name="pathfile-access-error"></a>경로/파일 액세스 오류입니다.
 파일 액세스 또는 디스크 액세스 작업을 하는 동안 운영 체제 경로 파일 이름 간에 연결을 만들 수 없습니다.  

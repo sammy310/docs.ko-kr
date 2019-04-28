@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 061d98b2-baa7-4336-8ad2-c14de8134d91
 ms.openlocfilehash: efb7b86c3add99e596e6798c8267c09689899d56
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923931"
 ---
 # <a name="what-you-can-do-with-linq-to-sql"></a>LINQ to SQL을- 사용하여 할 수 있는 작업
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 에서는 SQL 개발자가 필요로 하는 모든 주요 기능을 지원합니다. 정보를 쿼리하고 테이블에 정보를 삽입, 업데이트 및 삭제할 수 있습니다.  

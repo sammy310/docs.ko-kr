@@ -11,11 +11,11 @@ helpviewer_keywords:
 - attribute blocks, Assembly keyword
 ms.assetid: 925e7471-3bdf-4b51-bb93-cbcfc6efc52f
 ms.openlocfilehash: 819fa9cf1bd25e9426fb1e75925a269fcf7a71cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801995"
 ---
 # <a name="assembly-visual-basic"></a>Assembly(Visual Basic)
 소스 파일의 시작 부분에 있는 특성이 전체 어셈블리에 적용 되도록 지정 합니다.  

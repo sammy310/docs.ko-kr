@@ -3,11 +3,11 @@ title: 실행 (Visual Basic) 방식에 따라 표준 쿼리 연산자 분류
 ms.date: 07/20/2015
 ms.assetid: 7f55b0be-9f6e-44f8-865c-6afbea50cc54
 ms.openlocfilehash: 6331ad0994e121d2d7007c9999f3a684b83efe6d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021767"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>실행 (Visual Basic) 방식에 따라 표준 쿼리 연산자 분류
 표준 쿼리 연산자 메서드의 LINQ to Objects 구현은 즉시 실행 또는 지연된 실행의 두 가지 기본 방식 중 하나로 실행됩니다. 지연된 실행을 사용하는 쿼리 연산자는 스트리밍 및 비스트리밍의 두 가지 범주로 추가로 구분할 수 있습니다. 여러 쿼리 연산자가 어떻게 실행되는지 알고 있으면 제공된 쿼리에서 얻을 결과를 이해하는 데 도움이 될 수 있습니다. 데이터 소스가 변경되거나 다른 쿼리 위에 쿼리를 빌드할 경우 특히 도움이 됩니다. 이 항목에서는 실행 방식에 따라 표준 쿼리 연산자를 분류합니다.  

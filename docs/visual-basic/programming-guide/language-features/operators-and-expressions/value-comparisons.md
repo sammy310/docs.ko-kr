@@ -11,11 +11,11 @@ helpviewer_keywords:
 - expressions [Visual Basic], comparing
 ms.assetid: 60da0c76-9458-4afc-97e9-44a7939c064c
 ms.openlocfilehash: 270b226d0a1aa7d08721e6f9ed36d68492685af3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864393"
 ---
 # <a name="value-comparisons-visual-basic"></a>값 비교(Visual Basic)
 숫자 변수 값을 비교 하는 식을 생성 하려면 비교 연산자를 사용할 수 있습니다. 이러한 식은 반환을 `Boolean` 비교가 true 인지에 따라 값 false입니다. 이러한 식의 예는 다음과 같습니다.  

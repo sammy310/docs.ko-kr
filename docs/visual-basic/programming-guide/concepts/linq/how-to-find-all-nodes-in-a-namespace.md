@@ -3,11 +3,11 @@ title: '방법: Namespace (Visual Basic)에서 모든 노드 찾기'
 ms.date: 07/20/2015
 ms.assetid: b735d7da-5727-48a3-ab57-a16378adc32e
 ms.openlocfilehash: c04447df1d4a3e29558a3bad172715d2bdee340b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855675"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>방법: Namespace (Visual Basic)에서 모든 노드 찾기
 해당 특정 네임스페이스에서 모든 노드를 찾기 위해 각 요소나 특성의 네임스페이스를 기준으로 필터링할 수 있습니다.  

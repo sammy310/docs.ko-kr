@@ -7,11 +7,11 @@ helpviewer_keywords:
 - geometries [WPF], combining
 ms.assetid: 54c3277c-6b6e-4b25-91be-fda0bbc706b4
 ms.openlocfilehash: c5ebe87abd4c2cf70f8fa17f1fcc773293f3ad27
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910098"
 ---
 # <a name="how-to-create-a-combined-geometry"></a>방법: 결합된 기하 도형 만들기
 이 예제에는 기 하 도형을 결합 하는 방법을 보여 줍니다. 사용 하 여 두 기 하 도형을 결합 하는 <xref:System.Windows.Media.CombinedGeometry> 개체입니다. 설정 해당 <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> 및 <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> 결합 하 여 설정 하는 두 기 하 도형 사용 하 여 속성을 <xref:System.Windows.Media.CombinedGeometry.GeometryCombineMode%2A> 기 하 도형을 함께 결합할 수는 어떻게 결정을 하는 속성을 `Union`, `Intersect`, `Exclude`, 또는 `Xor`.  

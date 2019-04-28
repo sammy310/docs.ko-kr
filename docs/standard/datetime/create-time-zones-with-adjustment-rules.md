@@ -1,5 +1,5 @@
 ---
-title: '방법: 표준 시간대 조정 규칙을 사용 하 여 만들기'
+title: '방법: 조정 규칙을 사용하여 표준 시간대 만들기'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,13 +13,13 @@ ms.assetid: c52ef192-13a9-435f-8015-3b12eae8c47c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 83905c97f37a0e49f6219da47e2f640ecfb8edfb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61901727"
 ---
-# <a name="how-to-create-time-zones-with-adjustment-rules"></a>방법: 표준 시간대 조정 규칙을 사용 하 여 만들기
+# <a name="how-to-create-time-zones-with-adjustment-rules"></a>방법: 조정 규칙을 사용하여 표준 시간대 만들기
 
 응용 프로그램에 필요한 정확한 표준 시간대 정보를 여러 가지 이유로 특정 시스템에 존재할 수 있습니다.
 

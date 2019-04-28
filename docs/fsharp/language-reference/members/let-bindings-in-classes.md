@@ -3,11 +3,11 @@ title: 클래스의 let 바인딩
 description: Private 필드 및 private 함수를 정의 하는 방법을 알아봅니다 F# 클래스를 사용 하 여 'let' 클래스 정의에서 바인딩.
 ms.date: 05/16/2016
 ms.openlocfilehash: 03dd583a141971284e6a8ddaad02272236cd1e4c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903770"
 ---
 # <a name="let-bindings-in-classes"></a>클래스의 let 바인딩
 
@@ -49,8 +49,8 @@ A `let` 아닙니다 바인딩을 정적 것을 인스턴스라고 부릅니다 
 
 멤버 정의 사용 하 여 키워드를 추가 하 여 클래스에서 private 필드를 정의할 수도 있습니다 `private` 정의 합니다. 이 코드를 다시 작성 하지 않고 멤버의 액세스 가능성을 변경 하려는 경우에 유용할 수 있습니다. 자세한 내용은 [액세스 제어](../access-control.md)를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [멤버](index.md)
 - [클래스의 `do` 바인딩](do-bindings-in-classes.md)
-- [`let` 바인딩](../functions/let-bindings.md)
+- [`let` Bindings](../functions/let-bindings.md)

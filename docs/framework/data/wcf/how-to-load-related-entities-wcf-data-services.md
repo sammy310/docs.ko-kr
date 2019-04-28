@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, loading data
 ms.assetid: 6f143d30-d997-4e6b-bcf0-d5c394ecb108
 ms.openlocfilehash: 75e1d583d2a4d519619a440800cdeb1403fedac2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936498"
 ---
 # <a name="how-to-load-related-entities-wcf-data-services"></a>방법: 관련된 엔터티 (WCF Data Services)를 로드 합니다.
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에서 관련 엔터티를 로드해야 하는 경우 <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> 클래스의 <xref:System.Data.Services.Client.DataServiceContext> 메서드를 사용할 수 있습니다. 사용할 수도 있습니다는 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 메서드를를 <xref:System.Data.Services.Client.DataServiceQuery%601> 관련된 엔터티가 같은 쿼리 응답에서 즉시 로드 되도록 해야 합니다.  

@@ -3,11 +3,11 @@ title: 스트림
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
 ms.openlocfilehash: f6ca887240ec4f6a304f0d5972790837c0121721
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007801"
 ---
 # <a name="stream"></a>스트림
 Stream 샘플에서는 스트리밍 전송 모드 통신의 사용 방법을 보여 줍니다. 이 서비스는 스트림을 보내고 받는 몇 가지 작업을 노출합니다. 이 샘플은 자체 호스팅됩니다. 클라이언트와 서버는 모두 콘솔 프로그램입니다.  

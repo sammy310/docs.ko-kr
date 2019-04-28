@@ -7,26 +7,26 @@ helpviewer_keywords:
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
 ms.openlocfilehash: a2d0ef1e70c88133d5f9c3d2ffe8dafa4983cfd9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904550"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation 정의
 Windows Communication Foundation (WCF)은 서비스 지향 응용 프로그램을 빌드하기 위한 프레임 워크입니다. WCF를 사용 하 여 보낼 수 있습니다 데이터 비동기 메시지로 서비스 끝점에서 간에. 서비스 엔드포인트는 IIS에서 호스팅하는 계속 사용 가능한 서비스의 일부분일 수도 있고 애플리케이션에서 호스팅되는 서비스일 수도 있습니다. 또한 엔드포인트는 서비스 엔드포인트에서 데이터를 요청하는 서비스의 클라이언트일 수 있습니다. 메시지는 XML로 전송되는 한 문자나 단어처럼 간단할 수도 있고 이진 데이터 스트림처럼 복잡할 수도 있습니다. 다음은 몇 가지 샘플 시나리오입니다.
 
--   비즈니스 트랜잭션을 처리하는 보안 서비스
+- 비즈니스 트랜잭션을 처리하는 보안 서비스
 
--   트래픽 보고서 또는 기타 모니터링 서비스와 같은 최신 데이터를 다른 서비스에 제공하는 서비스
+- 트래픽 보고서 또는 기타 모니터링 서비스와 같은 최신 데이터를 다른 서비스에 제공하는 서비스
 
--   두 사람이 실시간으로 통신하거나 데이터를 교환할 수 있도록 하는 채팅 서비스
+- 두 사람이 실시간으로 통신하거나 데이터를 교환할 수 있도록 하는 채팅 서비스
 
--   하나 이상의 서비스를 폴링해 데이터를 가져와서 논리적 프레젠테이션으로 표시하는 대시보드 애플리케이션
+- 하나 이상의 서비스를 폴링해 데이터를 가져와서 논리적 프레젠테이션으로 표시하는 대시보드 애플리케이션
 
--   Windows Workflow Foundation을 사용하여 구현되는 워크플로를 WCF 서비스로 노출
+- Windows Workflow Foundation을 사용하여 구현되는 워크플로를 WCF 서비스로 노출
 
--   서비스를 폴링해 최신 데이터 피드를 가져오는 Silverlight 애플리케이션
+- 서비스를 폴링해 최신 데이터 피드를 가져오는 Silverlight 애플리케이션
 
 WCF의 존재 하기 전 가능한를 이러한 응용 프로그램을 만드는 동안 WCF에서는 끝점의 개발 이전 보다 쉬워졌습니다. 요약 하자면, WCF 웹 서비스를 만들고 웹 서비스 클라이언트를 관리 하기 쉬운 접근 방법을 제공 하도록 설계 되었습니다.
 
@@ -34,51 +34,51 @@ WCF의 존재 하기 전 가능한를 이러한 응용 프로그램을 만드는
 
 WCF에는 다음과 같은 기능 집합이 포함 되어 있습니다. 자세한 내용은 [WCF 기능 정보](../../../docs/framework/wcf/feature-details/index.md)합니다.
 
--   **서비스 지향성**
+- **서비스 지향성**
 
      WS 표준을 사용 하 여 결과 WCF 만들 수 있습니다 *서비스 지향* 응용 프로그램입니다. SOA(서비스 지향 아키텍처) 방식에서는 웹 서비스를 사용하여 데이터를 보내고 받습니다. 이러한 서비스에서는 애플리케이션이 서로 하드 코드되지 않고 느슨하게 결합된다는 장점이 있습니다. 느슨하게 결합된 관계란 필수 계약이 충족되는 한 모든 플랫폼에서 만들어지는 모든 클라이언트가 어떤 서비스에나 연결할 수 있는 관계입니다.
 
--   **상호 운용성**
+- **상호 운용성**
 
      WCF 웹 서비스 상호 운용성을 위한 최신 업계 표준을 구현합니다. 지원 되는 표준에 대 한 자세한 내용은 참조 하세요. [상호 운용성 및 통합](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md)합니다.
 
--   **다양한 메시지 패턴**
+- **다양한 메시지 패턴**
 
      메시지가 교환되는 패턴에는 여러 가지가 있습니다. 그 중에서 가장 일반적인 패턴인 요청/회신 패턴에서는 한 엔드포인트에서 두 번째 엔드포인트의 데이터를 요청합니다. 그러면 두 번째 엔드포인트에서 회신을 합니다. 또한 단일 엔드포인트에서 회신을 기대하지 않고 메시지를 보내는 단방향 메시지와 같은 패턴도 있습니다. 보다 복잡한 패턴인 이중 교환 패턴은 두 엔드포인트가 하나의 연결을 설정하여 데이터를 주고 받는 것으로, 인스턴트 메시징 프로그램과 유사합니다. 다양 한 메시지 교환을 구현 하는 방법에 대 한 자세한 내용은 WCF를 사용 하 여 패턴 참조 [계약](../../../docs/framework/wcf/feature-details/contracts.md)합니다.
 
--   **서비스 메타데이터**
+- **서비스 메타데이터**
 
      WCF는 WSDL, XML 스키마, Ws-policy 등 업계 표준에 지정 된 형식을 사용 하 여 서비스 메타 데이터 게시를 지원 합니다. 이 메타 데이터를 자동으로 생성 하 고 WCF 서비스에 액세스 하기 위한 클라이언트 구성에 사용할 수 있습니다. 메타데이터는 HTTP 및 HTTPS를 통해 게시하거나 웹 서비스 메타데이터 교환 표준을 사용하여 게시할 수 있습니다. 자세한 내용은 [메타 데이터](../../../docs/framework/wcf/feature-details/metadata.md)입니다.
 
--   **데이터 계약**
+- **데이터 계약**
 
      WCF를 사용 하는 빌드 되었으므로 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], 적용 하려는 계약을 제공 하는 코드에 적합 한 메서드도 포함 됩니다. 널리 사용되는 계약 유형 중 하나는 데이터 계약입니다. 기본적으로 Visual C# 또는 Visual Basic을 사용하여 서비스 코드를 작성할 때 데이터를 가장 쉽게 처리하는 방법은 데이터 엔터티에 속하는 속성을 사용하여 해당 데이터 엔터티를 나타내는 클래스를 만드는 것입니다. WCF는이 쉬운 방식으로 데이터를 사용 하 여 작업에 대 한 포괄적인 시스템이 포함 되어 있습니다. 데이터를 나타내는 클래스를 만들면 서비스에서 메타데이터를 자동으로 생성하며, 이 메타데이터는 클라이언트가 사용자가 디자인한 데이터 형식을 준수할 수 있도록 합니다. 자세한 내용은 참조 하세요. [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 
--   **보안**
+- **보안**
 
      개인 정보를 보호하기 위해 메시지를 암호화할 수 있으며, 사용자가 인증을 해야 메시지를 받을 수 있도록 지정할 수 있습니다. SSL 또는 WS-SecureConversation 등의 널리 알려진 표준을 사용하여 보안을 구현할 수 있습니다. 자세한 내용은 [보안](../../../docs/framework/wcf/feature-details/security.md)을 참조하세요.
 
--   **다양한 전송 및 인코딩**
+- **다양한 전송 및 인코딩**
 
      기본 제공되는 여러 전송 프로토콜 및 인코딩 중 원하는 항목을 사용하여 메시지를 전송할 수 있습니다. 가장 일반적인 프로토콜 및 인코딩 텍스트 인코딩 하이퍼텍스트 전송 프로토콜 (HTTP)를 사용 하 여 World Wide Web에서 사용 하기 위해 SOAP 메시지를 보내는 것입니다. 또는 파이프 또는 MSMQ WCF 라는 TCP를 통해 메시지를 보낼 수 있습니다. 이러한 메시지는 텍스트로 인코딩할 수도 있고 최적화된 이진 형식을 사용하여 인코딩할 수도 있습니다.  이진 데이터는 MTOM 표준을 사용하여 보내는 것이 효율적입니다. 제공되는 전송 또는 인코딩 중에서 요구 사항에 적합한 항목이 없는 경우에는 사용자 지정 전송 또는 인코딩을 직접 만들 수 있습니다. 전송 및 인코딩 WCF에서 지 원하는 방법에 대 한 자세한 내용은 참조 하세요. [전송](../../../docs/framework/wcf/feature-details/transports.md)합니다.
 
--   **신뢰할 수 있는 메시지 및 대기 중인 메시지**
+- **신뢰할 수 있는 메시지 및 대기 중인 메시지**
 
      WCF는 Ws-reliable Messaging을 통해 구현 되 고 MSMQ를 사용 하 여 신뢰할 수 있는 세션을 사용 하 여 신뢰할 수 있는 메시지 교환을 지원 합니다. WCF의 안정적이 고 큐에 대기 중인 메시징 지원에 대 한 자세한 내용은 참조 하세요. [Queues and Reliable Sessions](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)합니다.
 
--   **지속적 메시지**
+- **지속적 메시지**
 
      지속적 메시지는 통신이 중단되어도 손실되지 않는 메시지입니다. 지속적 메시지 패턴의 메시지는 항상 데이터베이스에 저장됩니다. 통신이 중단되는 경우 연결이 복원되면 데이터베이스가 메시지 교환을 다시 시작할 수 있도록 해 줍니다. 또한는 Windows WF (Workflow Foundation)를 사용 하 여 지속적 메시지를 만들 수 있습니다. 자세한 내용은 [워크플로 서비스](../../../docs/framework/wcf/feature-details/workflow-services.md)합니다.
 
--   **트랜잭션**
+- **트랜잭션**
 
      또한 WCF에는 세 가지 트랜잭션 모델 중 하나를 사용 하 여 트랜잭션을 지원 합니다. Ws-atomicttransactions의 Api는 <xref:System.Transactions> 네임 스페이스 및 Microsoft Distributed Transaction Coordinator 합니다. WCF에서 지원 한 트랜잭션에 대 한 자세한 내용은 참조 [트랜잭션을](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md)합니다.
 
--   **AJAX 및 REST 지원**
+- **AJAX 및 REST 지원**
 
      REST는 Web 2.0 기술 발전에 대한 한 가지 예일 뿐입니다. WCF는 SOAP 봉투에 래핑되지 않은 "일반" XML 데이터 처리를 구성할 수 있습니다. WCF는 또한 ATOM (일반 RSS 표준)에 비-XML 형식으로 같은 개체 JSON (JavaScript Notation) 등의 특정 XML 형식 지원 하도록 확장할 수 있습니다.
 
--   **확장성**
+- **확장성**
 
      WCF 아키텍처 개수가 확장성 지점입니다. 추가적인 기능이 필요한 경우에는 여러 진입점을 통해 서비스 동작을 사용자 지정할 수 있습니다. 사용 가능한 확장성에 대 한 자세한 내용은 지점을 참조 [WCF 확장](../../../docs/framework/wcf/extending/index.md)합니다.
 

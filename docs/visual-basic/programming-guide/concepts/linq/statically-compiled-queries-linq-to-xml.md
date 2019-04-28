@@ -3,11 +3,11 @@ title: 정적으로 컴파일된 쿼리 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 3f4825c7-c3b0-48da-ba4e-8e97fb2a2f34
 ms.openlocfilehash: ff708dd14d27b34be797f1630dabe27a56c5a219
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908338"
 ---
 # <a name="statically-compiled-queries-linq-to-xml-visual-basic"></a>정적으로 컴파일된 쿼리 (LINQ to XML) (Visual Basic)
 <xref:System.Xml.XmlDocument>와는 달리 LINQ to XML의 가장 큰 성능 이점 중 하나는 LINQ to XML의 쿼리가 정적으로 컴파일된다는 점입니다. 반면 XPath 쿼리는 런타임에 해석되어야 합니다. 이 기능은 LINQ to XML에 기본 제공되므로 이를 활용하기 위해 별도의 단계를 수행할 필요는 없습니다. 그러나 이 두 가지 기술 중 하나를 선택해야 하는 경우를 위해 그 차이를 알고 있는 것이 좋습니다. 이 항목에서는 그 차이에 대해 설명합니다.  
@@ -79,13 +79,13 @@ reader.Close()
   
  그러나 <xref:System.Xml.XmlDocument> 메서드는 호출될 때마다 내부적으로 다음을 수행해야 하므로 <xref:System.Xml.XmlNode.SelectNodes%2A>는 일반적으로 LINQ to XML과 같이 효과적으로 수행되지 않습니다.  
   
--   XPath 식이 포함된 문자열을 구문 분석하여 문자열을 토큰으로 나눕니다.  
+- XPath 식이 포함된 문자열을 구문 분석하여 문자열을 토큰으로 나눕니다.  
   
--   XPath 식이 올바른지 확인하기 위해 토큰의 유효성을 검사합니다.  
+- XPath 식이 올바른지 확인하기 위해 토큰의 유효성을 검사합니다.  
   
--   식을 내부 식 트리로 변환합니다.  
+- 식을 내부 식 트리로 변환합니다.  
   
--   노드를 반복하여 식 계산 결과를 기준으로 결과 집합에 맞는 노드를 선택합니다.  
+- 노드를 반복하여 식 계산 결과를 기준으로 결과 집합에 맞는 노드를 선택합니다.  
   
  이는 이에 해당하는 LINQ to XML 쿼리에서 수행하는 작업보다 훨씬 많습니다. 구체적인 성능 차이는 쿼리 형식에 따라 다르지만 일반 LINQ to XML 쿼리의 경우 작업을 덜 수행하므로 <xref:System.Xml.XmlDocument>를 사용하여 XPath 식을 계산하는 것보다 성능이 더 좋습니다.  
   

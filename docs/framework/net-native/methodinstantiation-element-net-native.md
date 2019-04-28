@@ -5,11 +5,11 @@ ms.assetid: a3355d78-2a88-4109-8521-830d7cae260a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ae15e6d61267feb0388170ee27dcd939035329b0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61867083"
 ---
 # <a name="methodinstantiation-element-net-native"></a>\<MethodInstantiation > 요소 (.NET 네이티브)
 생성된 제네릭 메서드에 런타임 리플렉션 정책을 적용합니다.  

@@ -5,11 +5,11 @@ ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 67da51ae900a0b2d1c0728b22e58aa83e789684f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61861233"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>대형 응답성 .NET Framework 응용 프로그램 작성
 이 문서에서는 규모가 큰 .NET Framework 앱이나 파일 또는 데이터베이스와 같이 많은 양의 데이터를 처리하는 앱의 성능을 향상시키기 위한 팁을 제공합니다. 이러한 팁은 C# 및 Visual Basic 컴파일러를 관리 코드로 다시 작성하면서 수집되었으며, C# 컴파일러의 실제 몇 가지 예를 포함하고 있습니다. 
@@ -453,13 +453,13 @@ class Compilation { /*...*/
   
  이 문서에서는 앱의 응답성에 영향을 미칠 수 있는 성능 병목 현상 증상을 어떻게 알 수 있어야 하는지에 대해 설명했습니다(특히, 대규모 시스템이나 많은 양의 데이터를 처리하는 시스템의 경우). 일반적인 원인으로는 boxing, 문자열 조작, LINQ 및 람다, 비동기 메서드의 캐싱, 크기 제한 또는 삭제 정책이 없는 캐싱, 부적절한 사전 사용 및 구조 전달이 있습니다. 앱을 조정할 때는 다음과 같은 4가지 팩트에 주의하세요.  
   
--   너무 이르게 최적화하지 말 것 – 문제를 찾을 때는 생산성을 유지하고 앱을 조정합니다. 
+- 너무 이르게 최적화하지 말 것 – 문제를 찾을 때는 생산성을 유지하고 앱을 조정합니다. 
   
--   프로필은 거짓말하지 않음 – 측정하는 것이 아니라면 추측하는 것일 뿐입니다. 
+- 프로필은 거짓말하지 않음 – 측정하는 것이 아니라면 추측하는 것일 뿐입니다. 
   
--   좋은 도구가 모든 차별화를 이뤄냄 – PerfView를 다운로드하여 사용해 봅니다. 
+- 좋은 도구가 모든 차별화를 이뤄냄 – PerfView를 다운로드하여 사용해 봅니다. 
   
--   결국은 모두 할당에 관련된 문제임 – 이 부분이 바로 컴파일러 플랫폼 팀이 새 컴파일러의 성능을 향상시키기 위해 대부분의 시간을 사용하는 부분입니다. 
+- 결국은 모두 할당에 관련된 문제임 – 이 부분이 바로 컴파일러 플랫폼 팀이 새 컴파일러의 성능을 향상시키기 위해 대부분의 시간을 사용하는 부분입니다. 
   
 ## <a name="see-also"></a>참고자료
 

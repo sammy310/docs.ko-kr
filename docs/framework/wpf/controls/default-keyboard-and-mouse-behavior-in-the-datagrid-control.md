@@ -8,11 +8,11 @@ helpviewer_keywords:
 - mouse behavior [WPF], DataGrid
 ms.assetid: 563b8854-ca39-4d97-8235-17eaa0f93c8d
 ms.openlocfilehash: 6be464ce85bd3ba91dd6e6cc810ec7d04edc0c3d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911848"
 ---
 # <a name="default-keyboard-and-mouse-behavior-in-the-datagrid-control"></a>DataGrid 컨트롤에서의 기본 키보드 및 마우스 동작
 이 항목에서는 사용자 상호 작용 하는 방법을 설명 합니다 <xref:System.Windows.Controls.DataGrid> 키보드 및 마우스를 사용 하 여 제어 합니다.  
@@ -55,21 +55,21 @@ ms.locfileid: "59083324"
   
  다음 선택 키를 사용 하 여 다중 행 선택을 수정합니다.  
   
--   Shift+아래쪽 화살표  
+- Shift+아래쪽 화살표  
   
--   Shift+위쪽 화살표  
+- Shift+위쪽 화살표  
   
--   Shift+Page Down  
+- Shift+Page Down  
   
--   Shift+Page Up  
+- Shift+Page Up  
   
--   Ctrl+Shift+아래쪽 화살표  
+- Ctrl+Shift+아래쪽 화살표  
   
--   Ctrl+Shift+위쪽 화살표  
+- Ctrl+Shift+위쪽 화살표  
   
--   Ctrl+Shift+Home  
+- Ctrl+Shift+Home  
   
--   Ctrl+Shift+End  
+- Ctrl+Shift+End  
   
 ## <a name="default-mouse-behavior"></a>기본 마우스 동작  
  다음 표에서 대 한 기본 마우스 동작을 <xref:System.Windows.Controls.DataGrid>입니다.  

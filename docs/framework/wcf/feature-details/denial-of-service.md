@@ -5,11 +5,11 @@ helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
 ms.openlocfilehash: 4c49e721ce4934c041b6636776c72db7839a1b1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857092"
 ---
 # <a name="denial-of-service"></a>서비스 거부
 서비스 거부는 시스템을 가득 채워 메시지를 처리할 수 없거나 메시지가 매우 느리게 처리되는 경우에 발생합니다.  
@@ -19,22 +19,22 @@ ms.locfileid: "59228883"
   
  완화 방안은 다음과 같습니다.  
   
--   <xref:System.Xml.NameTable> 클래스에서 파생되고 최대 크기 할당량을 적용합니다. 가득 찼을 때 <xref:System.Xml.NameTable> 사용을 금지하거나 <xref:System.Xml.NameTable>을 전환할 수 없습니다.  
+- <xref:System.Xml.NameTable> 클래스에서 파생되고 최대 크기 할당량을 적용합니다. 가득 찼을 때 <xref:System.Xml.NameTable> 사용을 금지하거나 <xref:System.Xml.NameTable>을 전환할 수 없습니다.  
   
--   가능한 경우 위에서 설명한 속성 대신 <xref:System.Xml.XmlReader.MoveToAttribute%2A> 메서드와 함께 <xref:System.Xml.XmlReader.IsStartElement%2A> 메서드를 사용합니다. 이러한 메서드는 문자열을 반환하지 않으므로 <xref:System.Xml.NameTable> 컬렉션이 과도하게 채워지지 않습니다.  
+- 가능한 경우 위에서 설명한 속성 대신 <xref:System.Xml.XmlReader.MoveToAttribute%2A> 메서드와 함께 <xref:System.Xml.XmlReader.IsStartElement%2A> 메서드를 사용합니다. 이러한 메서드는 문자열을 반환하지 않으므로 <xref:System.Xml.NameTable> 컬렉션이 과도하게 채워지지 않습니다.  
   
 ## <a name="malicious-client-sends-excessive-license-requests-to-service"></a>악의적인 클라이언트가 과도한 라이선스 요청을 서비스로 전송  
  악의적인 클라이언트가 과도한 라이선스 요청으로 서비스를 채우면 서버가 메모리를 지나치게 많이 사용할 수 있습니다.  
   
  완화: 다음 속성을 사용 합니다 <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> 클래스:  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>: `SecurityContextToken` 또는 `SPNego` 협상 후에 서버에서 캐시하는 시간이 제한된 `SSL`의 최대 개수를 제어합니다.  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>: `SecurityContextToken` 또는 `SPNego` 협상 후에 서버에서 캐시하는 시간이 제한된 `SSL`의 최대 개수를 제어합니다.  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>: `SecurityContextTokens` 또는 `SPNego` 협상 후에 서버에서 발급하는 `SSL`의 수명을 제어합니다. 서버는 이 기간 동안 `SecurityContextToken`을 캐시합니다.  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>: `SecurityContextTokens` 또는 `SPNego` 협상 후에 서버에서 발급하는 `SSL`의 수명을 제어합니다. 서버는 이 기간 동안 `SecurityContextToken`을 캐시합니다.  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>: 서버에서 설정되었지만 응용 프로그램 메시지가 처리되지 않은 보안 대화의 최대 개수를 제어합니다. 이 할당량은 클라이언트가 서비스에서 보안 대화를 설정할 수 없도록 하여 서비스가 클라이언트별 상태를 유지 관리하게 하지만 사용하지는 않습니다.  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>: 서버에서 설정되었지만 응용 프로그램 메시지가 처리되지 않은 보안 대화의 최대 개수를 제어합니다. 이 할당량은 클라이언트가 서비스에서 보안 대화를 설정할 수 없도록 하여 서비스가 클라이언트별 상태를 유지 관리하게 하지만 사용하지는 않습니다.  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>: 서비스가 대화를 위해 클라이언트로부터 응용 프로그램 메시지를 받지 않고 보안 대화를 활성 상태로 유지하는 최대 시간을 제어합니다. 이 할당량은 클라이언트가 서비스에서 보안 대화를 설정할 수 없도록 하여 서비스가 클라이언트별 상태를 유지 관리하게 하지만 사용하지는 않습니다.  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>: 서비스가 대화를 위해 클라이언트로부터 응용 프로그램 메시지를 받지 않고 보안 대화를 활성 상태로 유지하는 최대 시간을 제어합니다. 이 할당량은 클라이언트가 서비스에서 보안 대화를 설정할 수 없도록 하여 서비스가 클라이언트별 상태를 유지 관리하게 하지만 사용하지는 않습니다.  
   
 ## <a name="wsdualhttpbinding-or-dual-custom-bindings-require-client-authentication"></a>WSDualHttpBinding 또는 이중 사용자 지정 바인딩에 클라이언트 인증이 필요함  
  기본적으로 <xref:System.ServiceModel.WSDualHttpBinding>은 보안을 사용합니다. 그러나 <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> 속성을 <xref:System.ServiceModel.MessageCredentialType.None>으로 설정하여 클라이언트 인증을 비활성화한 경우 악의적인 사용자가 제 3의 서비스에 대해 서비스 거부 공격을 발생시킬 수 있습니다. 이는 악의적인 클라이언트가 메시지 스트림을 제 3의 서비스로 보내도록 서비스에 지시할 수 있기 때문입니다.  

@@ -3,11 +3,11 @@ title: 지속성 참석자
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
 ms.openlocfilehash: 18614962708eafa192d8163638fce2b8154d6106
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61672655"
 ---
 # <a name="persistence-participants"></a>지속성 참석자
 지속성 참가자는 응용 프로그램 호스트에서 트리거된 지속성 작업(저장 또는 로드)에 참가할 수 있습니다. 합니다 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 두 가지 추상 클래스와 함께 제공 되 **PersistenceParticipant** 하 고 **PersistenceIOParticipant**, 지 속성 참가자를 만드는 데 사용할 수 있는 합니다. 지속성 참가자는 이 클래스 중 하나에서 파생되고 관련 메서드를 구현한 다음 클래스의 인스턴스를 <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A>의 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 컬렉션에 추가합니다. 응용 프로그램 호스트는 워크플로 인스턴스를 지속할 때 이 워크플로 확장을 검색하고 적당한 시간에 지속성 참가자에서 해당 메서드를 호출합니다.  
@@ -48,17 +48,17 @@ ms.locfileid: "59316364"
   
  워크플로 인스턴스를 로드하면 지속성 공급자는 해당 인스턴스에 잠금을 만듭니다. 그러면 인스턴스가 다중 노드 시나리오에서 둘 이상의 호스트에 로드되는 것이 방지됩니다. 잠겨 있는 워크플로 인스턴스를 로드 하려고 하면 다음과 같은 예외가 표시 됩니다. 예외 "System.ServiceModel.Persistence.InstanceLockException: 요청한 작업 때문에 완료할 수 없습니다 잠금을 예를 들어 ' 00000000-0000-0000-0000-000000000000' 획득할 수 없습니다 ". 이 오류는 다음 중 하나가 발생하는 경우 발생합니다.  
   
--   다중 노드 시나리오에서 인스턴스는 다른 호스트에 의해 로드됩니다.  이러한 충돌 유형을 해결하는 방법은 몇 가지가 있습니다. 잠금을 소유하고 있는 노드에 처리를 전송하거나 다른 호스트가 해당 작업을 저장할 수 있도록 강제로 로드합니다.  
+- 다중 노드 시나리오에서 인스턴스는 다른 호스트에 의해 로드됩니다.  이러한 충돌 유형을 해결하는 방법은 몇 가지가 있습니다. 잠금을 소유하고 있는 노드에 처리를 전송하거나 다른 호스트가 해당 작업을 저장할 수 있도록 강제로 로드합니다.  
   
--   단일 노드 시나리오에서는 호스트가 충돌합니다.  호스트가 다시 시작되면(프로세스 재생 또는 새 지속성 공급자 팩터리 만들기) 새 호스트는 잠금이 아직 만료되지 않았기 때문에 기존 호스트가 아직 잠근 인스턴스를 로드하려고 시도합니다.  
+- 단일 노드 시나리오에서는 호스트가 충돌합니다.  호스트가 다시 시작되면(프로세스 재생 또는 새 지속성 공급자 팩터리 만들기) 새 호스트는 잠금이 아직 만료되지 않았기 때문에 기존 호스트가 아직 잠근 인스턴스를 로드하려고 시도합니다.  
   
--   단일 노드 시나리오에서는 해당 인스턴스가 어느 지점에서 중단되고 다른 호스트 ID를 가진 새 지속성 공급자가 만들어집니다.  
+- 단일 노드 시나리오에서는 해당 인스턴스가 어느 지점에서 중단되고 다른 호스트 ID를 가진 새 지속성 공급자가 만들어집니다.  
   
  잠금 시간 제한의 기본값은 5분이며 <xref:System.ServiceModel.Persistence.PersistenceProvider.Load%2A>를 호출할 때 다른 시간 제한 값을 지정할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [방법: 사용자 지정 지 속성 참석자 만들기](how-to-create-a-custom-persistence-participant.md)  
+- [방법: 사용자 지정 지 속성 참석자 만들기](how-to-create-a-custom-persistence-participant.md)  
   
 ## <a name="see-also"></a>참고자료
 

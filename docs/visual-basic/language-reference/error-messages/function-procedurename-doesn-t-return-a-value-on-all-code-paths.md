@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42105
 ms.assetid: b6929bf4-a365-4a70-8dc9-6b0fc09e1468
 ms.openlocfilehash: badcfea4f24ba3858071e02ba47b8f77ab557f88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802379"
 ---
 # <a name="function-procedurename-doesnt-return-a-value-on-all-code-paths"></a>함수 '\<procedurename >' 일부 코드 경로의 값을 반환 하지 않습니다
 함수 '\<procedurename >' 일부 코드 경로의 값을 반환 하지 않습니다. 'Return' 문이 누락 되었습니까?  
@@ -21,11 +21,11 @@ ms.locfileid: "58824834"
   
  값을 반환할 수는 `Function` 다음 방법 중 하나에서 프로시저:  
   
--   값을 포함 한 [Return 문이](../../../visual-basic/language-reference/statements/return-statement.md)합니다.  
+- 값을 포함 한 [Return 문이](../../../visual-basic/language-reference/statements/return-statement.md)합니다.  
   
--   에 값을 할당 합니다 `Function` 프로시저 이름을 지정 하 고 다음을 수행할는 `Exit Function` 문.  
+- 에 값을 할당 합니다 `Function` 프로시저 이름을 지정 하 고 다음을 수행할는 `Exit Function` 문.  
   
--   에 값을 할당 합니다 `Function` 프로시저 이름을 지정 하 고 다음을 수행 합니다 `End Function` 문.  
+- 에 값을 할당 합니다 `Function` 프로시저 이름을 지정 하 고 다음을 수행 합니다 `End Function` 문.  
   
  컨트롤을 전달 하는 경우 `Exit Function` 또는 `End Function` 프로시저 이름에 값을 할당 하지 않은, 프로시저 반환 데이터 형식의 기본값을 반환 합니다. 자세한 내용은 "동작"를 참조 하세요 [Function 문](../../../visual-basic/language-reference/statements/function-statement.md)합니다.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "58824834"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   제어 흐름 논리를 확인 하 고 반환 하는 모든 문 앞에 값을 할당 해야 합니다.  
+- 제어 흐름 논리를 확인 하 고 반환 하는 모든 문 앞에 값을 할당 해야 합니다.  
   
      항상 사용 하는 경우 프로시저에서 모든 반환 값을 반환 하는 데 쉽습니다는 `Return` 문입니다. 이렇게 하면, 앞의 마지막 문이 `End Function` 이어야 합니다는 `Return` 문입니다.  
   

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - NumericUpDown control [Windows Forms], setting and returning values
 ms.assetid: 5bd8f8cd-4c12-49ea-9cc3-2a647d064689
 ms.openlocfilehash: c73200eb1c373f1d723ba82f2e6be5b625496b59
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902228"
 ---
 # <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>방법: Windows Forms NumericUpDown 컨트롤을 사용하여 숫자 값 설정 및 반환
 Windows Forms의 숫자 값을 <xref:System.Windows.Forms.NumericUpDown> 컨트롤에 의해 결정 됩니다 해당 <xref:System.Windows.Forms.NumericUpDown.Value%2A> 속성입니다. 다른 속성의 경우와 마찬가지로 컨트롤의 값에 대 한 조건부 테스트를 작성할 수 있습니다. 한 번 합니다 <xref:System.Windows.Forms.NumericUpDown.Value%2A> 속성이 설정 되어에서 작업을 수행 하는 코드를 작성 하 여 직접 조정할 수 있습니다 하거나 호출할 수 있습니다 합니다 <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> 및 <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> 메서드.  
@@ -55,7 +55,7 @@ Windows Forms의 숫자 값을 <xref:System.Windows.Forms.NumericUpDown> 컨트�
   
 ### <a name="to-return-the-numeric-value"></a>숫자 값을 반환 하려면  
   
--   액세스는 <xref:System.Windows.Forms.NumericUpDown.Value%2A> 코드에서 속성입니다.  
+- 액세스는 <xref:System.Windows.Forms.NumericUpDown.Value%2A> 코드에서 속성입니다.  
   
     ```vb  
     If NumericUpDown1.Value >= 65 Then  

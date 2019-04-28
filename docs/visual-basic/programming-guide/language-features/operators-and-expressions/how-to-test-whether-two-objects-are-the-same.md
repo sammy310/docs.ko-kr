@@ -10,18 +10,18 @@ helpviewer_keywords:
 - Visual Basic code, operators
 ms.assetid: f760e828-8704-4256-bc2d-c22a4c93b524
 ms.openlocfilehash: dbb268175d197e7b931af45a98f3a273c593e5a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864379"
 ---
 # <a name="how-to-test-whether-two-objects-are-the-same-visual-basic"></a>방법: 두 개체가 동일한 (Visual Basic) 인지 여부를 테스트합니다
 두 변수 개체를 참조 하는 경우 사용할 수 있습니다 합니다 `Is` 또는 `IsNot` 연산자 또는 둘 다에서 동일한 인스턴스를 참조 하는지 확인 합니다.  
   
 ### <a name="to-test-whether-two-objects-are-the-same"></a>두 개체가 같은지 여부를 테스트 하려면  
   
--   사용 된 [Is 연산자](../../../../visual-basic/language-reference/operators/is-operator.md) 또는 [IsNot 연산자](../../../../visual-basic/language-reference/operators/isnot-operator.md) 피연산자로 두 변수를 사용 하 여 합니다.  
+- 사용 된 [Is 연산자](../../../../visual-basic/language-reference/operators/is-operator.md) 또는 [IsNot 연산자](../../../../visual-basic/language-reference/operators/isnot-operator.md) 피연산자로 두 변수를 사용 하 여 합니다.  
   
      [!code-vb[VbVbalrOperators#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#69)]  
   

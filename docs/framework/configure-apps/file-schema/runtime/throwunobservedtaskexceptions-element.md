@@ -11,11 +11,11 @@ ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cdce2181490d32212cd2629e98267e43bbe0d334
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674001"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions > 요소
 작업 예외가 처리되지 않으면 실행 중인 프로세스를 종료할지를 지정합니다.  
@@ -69,9 +69,9 @@ ms.locfileid: "59189406"
   
  또한 다음 방법 중 하나에서 예외 동작을 지정할 수 있습니다.  
   
--   환경 변수를 설정 하 여 `COMPlus_ThrowUnobservedTaskExceptions` (`set COMPlus_ThrowUnobservedTaskExceptions=1`).  
+- 환경 변수를 설정 하 여 `COMPlus_ThrowUnobservedTaskExceptions` (`set COMPlus_ThrowUnobservedTaskExceptions=1`).  
   
--   DWORD 레지스트리를 설정 하 여 ThrowUnobservedTaskExceptions 값 = 1에서 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\합니다. NETFramework 키입니다.  
+- DWORD 레지스트리를 설정 하 여 ThrowUnobservedTaskExceptions 값 = 1에서 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\합니다. NETFramework 키입니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 응용 프로그램 구성 파일을 사용 하 여 작업의 예외 throw를 사용 하도록 설정 하는 방법을 보여 줍니다.  

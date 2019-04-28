@@ -3,11 +3,11 @@ title: 찾기 및 FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
 ms.openlocfilehash: 6efbfe34bbe5b15696d247c291f1d88006a53a36
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856520"
 ---
 # <a name="discovery-find-and-findcriteria"></a>찾기 및 FindCriteria
 찾기 작업은 하나 이상의 서비스를 검색하는 클라이언트에 의해 시작되며 검색 작업의 주요 동작 중 하나입니다. 찾기를 수행하면 네트워크를 통해 WS-Discovery Probe 메시지가 보내집니다. 지정된 조건과 일치하는 서비스는 WS-Discovery ProbeMatch 메시지를 사용하여 응답합니다. 검색 메시지에 대 한 자세한 내용은 참조는 [Ws-discovery 사양](https://go.microsoft.com/fwlink/?LinkID=122347)합니다.  
@@ -20,21 +20,21 @@ ms.locfileid: "59345783"
   
  검색 조건은 다음과 같습니다.  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> - 선택적 요소로서, 검색할 서비스의 계약 이름이거나 서비스를 검색할 때 일반적으로 사용되는 조건입니다. 둘 이상의 계약 이름이 지정되면 모든 계약과 일치하는 서비스 엔드포인트만 응답합니다. wcf에서 끝점 수 하나의 계약만 지원할 참고 합니다.  
+- <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> - 선택적 요소로서, 검색할 서비스의 계약 이름이거나 서비스를 검색할 때 일반적으로 사용되는 조건입니다. 둘 이상의 계약 이름이 지정되면 모든 계약과 일치하는 서비스 엔드포인트만 응답합니다. wcf에서 끝점 수 하나의 계약만 지원할 참고 합니다.  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> - 선택적 요소로서, 개별 서비스 엔드포인트를 분류하는 데 사용되는 절대 URI입니다. 여러 엔드포인트가 동일한 계약을 노출하는 상태에서 엔드포인트의 하위 집합을 검색하려는 경우 이 조건을 사용할 수 있습니다. 둘 이상의 범위가 지정되면 모든 범위와 일치하는 서비스 엔드포인트만 응답합니다.  
+- <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> - 선택적 요소로서, 개별 서비스 엔드포인트를 분류하는 데 사용되는 절대 URI입니다. 여러 엔드포인트가 동일한 계약을 노출하는 상태에서 엔드포인트의 하위 집합을 검색하려는 경우 이 조건을 사용할 수 있습니다. 둘 이상의 범위가 지정되면 모든 범위와 일치하는 서비스 엔드포인트만 응답합니다.  
   
--   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchBy%2A> - Probe 메시지의 범위와 엔드포인트의 범위를 일치시키는 동안 사용할 일치 알고리즘을 지정합니다. 다음과 같은 다섯 가지 범위 일치 규칙이 지원됩니다.  
+- <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchBy%2A> - Probe 메시지의 범위와 엔드포인트의 범위를 일치시키는 동안 사용할 일치 알고리즘을 지정합니다. 다음과 같은 다섯 가지 범위 일치 규칙이 지원됩니다.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType>는 기본 대/소문자 구분 문자열 비교를 수행합니다.  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType>는 기본 대/소문자 구분 문자열 비교를 수행합니다.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> 세그먼트 일치 하는 항목 구분 하 여 "/"입니다. 에 대 한 검색 `http://contoso/building1` 범위를 사용 하 여 서비스와 일치 `http://contoso/building/floor1`합니다. 일치 하지 않는 참고 `http://contoso/building100` 마지막 두 세그먼트가 일치 하지 않으므로 합니다.  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> 세그먼트 일치 하는 항목 구분 하 여 "/"입니다. 에 대 한 검색 `http://contoso/building1` 범위를 사용 하 여 서비스와 일치 `http://contoso/building/floor1`합니다. 일치 하지 않는 참고 `http://contoso/building100` 마지막 두 세그먼트가 일치 하지 않으므로 합니다.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType>는 LDAP URL을 사용하여 세그먼트별로 범위를 일치시킵니다.  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType>는 LDAP URL을 사용하여 세그먼트별로 범위를 일치시킵니다.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByUuid?displayProperty=nameWithType>는 UUID 문자열을 사용하여 범위를 정확히 일치시킵니다.  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByUuid?displayProperty=nameWithType>는 UUID 문자열을 사용하여 범위를 정확히 일치시킵니다.  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByNone?displayProperty=nameWithType>은 범위를 지정하지 않은 서비스만 일치시킵니다.  
+    - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByNone?displayProperty=nameWithType>은 범위를 지정하지 않은 서비스만 일치시킵니다.  
   
      범위 일치 규칙이 지정되지 않은 경우 <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix>가 사용됩니다.  
   

@@ -3,11 +3,11 @@ title: 리터럴
 description: 리터럴 형식에 알아봅니다는 F# 프로그래밍 언어입니다.
 ms.date: 02/08/2019
 ms.openlocfilehash: 28ce34dee3c3c3d4d0cfd4107e8cbc375a23032c
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904568"
 ---
 # <a name="literals"></a>리터럴
 
@@ -24,7 +24,7 @@ ms.locfileid: "56092165"
 |----|-----------|----------------|--------|
 |sbyte|부호 있는 8 비트 정수|y|`86y`<br /><br />`0b00000101y`|
 |byte|부호 없는 8 비트 자연 수|uy|`86uy`<br /><br />`0b00000101uy`|
-|int16|부호 있는 16 비트 정수|s|`86s`|
+|int16|부호 있는 16 비트 정수|초|`86s`|
 |uint16|부호 없는 16 비트 자연 수|us|`86us`|
 |int<br /><br />int32|부호 있는 32 비트 정수|l 또는 없음|`86`<br /><br />`86l`|
 |uint<br /><br />uint32|부호 없는 32 비트 자연 수|u 또는 ul|`86u`<br /><br />`86ul`|
@@ -33,7 +33,7 @@ ms.locfileid: "56092165"
 |uint64|부호 없는 64 비트 자연 수|UL|`86UL`|
 |단일 float32|32 비트 부동 소수점 숫자|F 또는 f|`4.14F` 또는 `4.14f`|
 |||lf|`0x00000000lf`|
-|float; double|64 비트 부동 소수점 숫자|없음|`4.14`, `2.3E+32` 또는 `2.3e+32`|
+|float; double|64 비트 부동 소수점 숫자|없음|`4.14` 또는 `2.3E+32` 또는 `2.3e+32`|
 |||LF|`0x0000000000000000LF`|
 |bigint|64 비트 표현으로 제한 되지 않는 정수|I|`9999999999999999999999999999I`|
 |decimal|고정된 소수점 또는 유리수로 표현 되는 소수|M 또는 m|`0.7833M` 또는 `0.7833m`|

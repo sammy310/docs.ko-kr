@@ -5,11 +5,11 @@ helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
 ms.openlocfilehash: f97826cb5154035b535b5eac3a8818d8b366d639
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858028"
 ---
 # <a name="data-contract-surrogates"></a>데이터 계약 서로게이트
 데이터 계약 *서로게이트* 데이터 계약 모델을 기반으로 하는 고급 기능입니다. 이 기능은 사용자가 형식을 메타데이터에 나타내거나 serialize 또는 deserialize하는 방식을 변경하려는 경우 형식 사용자 지정 및 대체에 사용하도록 디자인되었습니다. 서로게이트는 데이터 계약이 형식에 대해 지정되지 않은 경우, 필드와 속성에 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성이 표시되지 않은 경우 또는 사용자가 스키마 변형을 동적으로 만들려는 경우 사용할 수 있습니다.  
@@ -37,13 +37,13 @@ ms.locfileid: "59315350"
   
  [!code-csharp[C_IDataContractSurrogate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#3)]  
   
--   serialization 시 이 메서드에서 반환되는 매핑은 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> 메서드를 호출하여 이후에 원래 인스턴스를 서로게이트된 인스턴스로 변형하는 데 사용됩니다.  
+- serialization 시 이 메서드에서 반환되는 매핑은 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> 메서드를 호출하여 이후에 원래 인스턴스를 서로게이트된 인스턴스로 변형하는 데 사용됩니다.  
   
--   deserialization 시 이 메서드에서 반환되는 매핑은 serializer가 서로게이트 형식의 인스턴스로 deserialize하는 데 사용합니다. 그런 다음 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A>를 호출하여 서로게이트된 인스턴스를 원래 형식의 인스턴스로 변환합니다.  
+- deserialization 시 이 메서드에서 반환되는 매핑은 serializer가 서로게이트 형식의 인스턴스로 deserialize하는 데 사용합니다. 그런 다음 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A>를 호출하여 서로게이트된 인스턴스를 원래 형식의 인스턴스로 변환합니다.  
   
--   내보내기를 수행할 때 이 메서드에서 반환되는 서로게이트 형식은 메타데이터 생성에 사용할 데이터 계약을 가져오는 데 반영됩니다.  
+- 내보내기를 수행할 때 이 메서드에서 반환되는 서로게이트 형식은 메타데이터 생성에 사용할 데이터 계약을 가져오는 데 반영됩니다.  
   
--   가져오기를 수행할 때 초기 형식은 지원 참조 등의 목적에 사용할 데이터 계약을 가져오는 데 반영되는 서로게이트 형식으로 변경됩니다.  
+- 가져오기를 수행할 때 초기 형식은 지원 참조 등의 목적에 사용할 데이터 계약을 가져오는 데 반영되는 서로게이트 형식으로 변경됩니다.  
   
  <xref:System.Type> 매개 변수는 serialize, deserialize, 가져오기 또는 내보내기 중인 개체의 형식입니다. <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> 메서드는 서로게이트가 입력 형식을 처리하지 않을 경우 해당 입력 형식을 반환해야 합니다. 그렇지 않으면 서로게이트된 해당 형식을 반환합니다. 서로게이트 형식이 여러 개인 경우 이 메서드에 여러 가지 매핑을 정의할 수 있습니다.  
   

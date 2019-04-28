@@ -11,11 +11,11 @@ ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fd91cf0179ef9731c456b41fdc865e3eacdb33eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674157"
 ---
 # <a name="gcserver-element"></a>\<gcServer > 요소
 공용 언어 런타임이 서버 가비지 컬렉션을 실행하는지 여부를 지정합니다.  

@@ -6,8 +6,8 @@ ms.openlocfilehash: 668cfb3026b9ab7259665f5e53873a512b1e2238
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61916398"
 ---
 # <a name="instances"></a>인스턴스
 카운터 이름: 인스턴스입니다.  
@@ -17,9 +17,9 @@ ms.locfileid: "59975587"
   
  대체로 인스턴스 컨텍스트 수는 인스턴스 수와 같습니다. 그러나 다음 시나리오는 이 규칙의 예외입니다.  
   
--   서비스 메서드가 명시적으로 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A> 메서드를 호출합니다.  
+- 서비스 메서드가 명시적으로 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A> 메서드를 호출합니다.  
   
--   <xref:System.ServiceModel.ReleaseInstanceMode>가 <xref:System.ServiceModel.OperationBehaviorAttribute> 인스턴스에 적용됩니다.  
+- <xref:System.ServiceModel.ReleaseInstanceMode>가 <xref:System.ServiceModel.OperationBehaviorAttribute> 인스턴스에 적용됩니다.  
   
 ## <a name="see-also"></a>참고자료
 

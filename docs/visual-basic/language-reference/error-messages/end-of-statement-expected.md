@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30205
 ms.assetid: 53c7f825-a737-4b76-a1fa-f67745b8bd40
 ms.openlocfilehash: 1ce5c793a09df34ac17e70e3253e98108bf76fb8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803333"
 ---
 # <a name="end-of-statement-expected"></a>문의 끝이 필요합니다.
 문이 구문적으로 완료 되었지만 문을 완료 하는 요소 뒤에 추가 프로그래밍 요소입니다. 줄 종결자가 오는 모든 문의 끝에 필요 합니다.

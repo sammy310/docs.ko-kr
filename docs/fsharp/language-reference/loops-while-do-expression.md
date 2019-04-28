@@ -3,11 +3,11 @@ title: '루프: while...do 식'
 description: 참조 하는 방법을... 하는 동안 수행 식은 지정된 된 테스트 조건이 참인 동안 반복 실행 (루프)를 수행 하는데 사용 됩니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: d2a77e0bfefe3b6b026012e6b2938ba670326bcf
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904022"
 ---
 # <a name="loops-whiledo-expression"></a>루프: while...do 식
 
@@ -38,8 +38,8 @@ Found a 10!
 > [!NOTE]
 > 사용할 수 있습니다 `while...do` 시퀀스 식 및 기타 계산 식, 사용자 지정된 버전의 경우는 `while...do` 식이 사용 됩니다. 자세한 내용은 [시퀀스](sequences.md)를 [비동기 워크플로](asynchronous-workflows.md), 및 [계산 식](computation-expressions.md)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [F# 언어 참조](index.md)
-- [루프: `for...in` 식](loops-for-in-expression.md)
-- [루프: `for...to` 식](loops-for-to-expression.md)
+- [루프: `for...in` Expression](loops-for-in-expression.md)
+- [루프: `for...to` Expression](loops-for-to-expression.md)

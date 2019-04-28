@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms, keyboard input
 ms.assetid: 68f5bc70-14d5-45c9-b288-7d7b1493ee79
 ms.openlocfilehash: eaeee45e2c7856012b4ff20eefea3fca53679467
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800843"
 ---
 # <a name="keyboard-input-in-a-windows-forms-application"></a>Windows Forms 응용 프로그램의 키보드 입력
 Windows Forms에 사용 하면 특정 키 누름에 응답 하 고 가로채 수정 및 양식 응용 프로그램에서 키 누름을 사용 하 고 수준을 제어 하는 방법을 제공 하는 표준 키보드 이벤트가 포함 됩니다.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
 ms.openlocfilehash: be5c73e2ac9fcc45d136280c869148326cd91315
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857761"
 ---
 # <a name="service-channel-level-programming"></a>서비스 채널 수준 프로그래밍
 이 항목에서는 사용 하지 않고 Windows Communication Foundation (WCF) 서비스 응용 프로그램을 작성 하는 방법을 설명 합니다 <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> 및 관련된 개체 모델입니다.  

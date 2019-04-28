@@ -6,20 +6,20 @@ helpviewer_keywords:
 - Windows Forms, adding change notification for data binding
 ms.assetid: b5b10f90-0585-41d9-a377-409835262a92
 ms.openlocfilehash: 559cdee1cce84df1c4b838e249d11ba235a0c636
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011881"
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Windows Forms 데이터 바인딩의 변경 알림
 Windows Forms 데이터 바인딩의 가장 중요 한 개념 중 하나인 *변경 알림*합니다. 데이터 소스와 바인딩되는 컨트롤에 항상 최신 데이터를 갖도록 변경 알림 데이터 바인딩에 대 한 추가 해야 합니다. 구체적으로 바인딩된 컨트롤에 대 한 알림을 해당 데이터 원본에 대 한 변경 내용을 확인 하려는 하 고 데이터 소스 컨트롤의 바인딩된 속성에 대 한 변경 내용을 알립니다.  
   
  데이터 바인딩의 종류에 따라 변경 알림의 다양 한 종류가 있습니다.  
   
--   단순 바인딩 개체의 단일 인스턴스에서 단일 컨트롤 속성 바인딩되어 있습니다.  
+- 단순 바인딩 개체의 단일 인스턴스에서 단일 컨트롤 속성 바인딩되어 있습니다.  
   
--   목록 기반 바인딩을 목록에 있는 항목의 속성 또는 컨트롤 속성에 바인딩된 컨트롤 속성을 포함할 수 있는 개체의 목록에 바인딩됩니다.  
+- 목록 기반 바인딩을 목록에 있는 항목의 속성 또는 컨트롤 속성에 바인딩된 컨트롤 속성을 포함할 수 있는 개체의 목록에 바인딩됩니다.  
   
  또한 데이터 바인딩에 사용 하려는 Windows Forms 컨트롤을 만드는 경우 적용 해야 합니다는 *PropertyName*패턴 컨트롤을 컨트롤의 바인딩된 속성에 변경 내용이 전파 되도록 변경 합니다 데이터 원본입니다.  
   

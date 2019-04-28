@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
 ms.openlocfilehash: 633aaa4a9540d0895252e56dbeabd97200081fc9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877684"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>MARS(Multiple Active Result Sets) 사용
 MARS(Multiple Active Result Sets)는 단일 연결에서 여러 배치를 실행할 수 있도록 하는 SQL Server의 기능입니다. SQL Server에 MARS가 활성화되어 있으면 명령 개체를 사용할 때마다 연결에 세션이 추가됩니다.  
@@ -75,15 +75,15 @@ string connectionString = "Data Source=MSSQL1;" +
   
  배치 실행 환경에는 다음 구성 요소가 들어 있습니다.  
   
--   설정 옵션(예: ANSI_NULLS, DATE_FORMAT, LANGUAGE, TEXTSIZE)  
+- 설정 옵션(예: ANSI_NULLS, DATE_FORMAT, LANGUAGE, TEXTSIZE)  
   
--   보안 컨텍스트(사용자/응용 프로그램 역할)  
+- 보안 컨텍스트(사용자/응용 프로그램 역할)  
   
--   데이터베이스 컨텍스트(현재 데이터베이스)  
+- 데이터베이스 컨텍스트(현재 데이터베이스)  
   
--   실행 상태 변수 (예를 들어 @@ERROR, @@ROWCOUNT, @@FETCH_STATUS @@IDENTITY)  
+- 실행 상태 변수 (예를 들어 @@ERROR, @@ROWCOUNT, @@FETCH_STATUS @@IDENTITY)  
   
--   최상위 임시 테이블  
+- 최상위 임시 테이블  
   
  MARS가 활성화되면 기본 실행 환경이 연결에 지정됩니다. 지정된 연결에서 새 배치가 실행을 시작할 때마다 기본 환경의 복사본을 받습니다. 지정된 배치에서 코드가 실행될 때마다 해당 환경의 모든 변경 내용은 특정 배치로 범위가 지정됩니다. 실행이 종료되면 실행 설정은 기본 환경에 복사됩니다. 동일한 트랜잭션에서 여러 개의 명령을 실행하는 단일 배치를 순차적으로 실행하는 경우 의미 체계는 이전 클라이언트 또는 서버와 관련된 연결에서 노출한 의미 체계와 동일합니다.  
   

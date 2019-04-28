@@ -12,22 +12,22 @@ helpviewer_keywords:
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
 ms.openlocfilehash: d0a86d7fe53dba3da6bd63587561f82877bc2f06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913733"
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>방법: 런타임에 (Windows Forms) 크기 또는 그림의 위치 수정
 Windows Forms를 사용 하는 경우 <xref:System.Windows.Forms.PictureBox> 컨트롤을 폼에 설정할 수 있습니다는 <xref:System.Windows.Forms.PictureBox.SizeMode%2A> 되도록 속성:  
   
--   그림의 왼쪽된 위 모퉁이 컨트롤의 왼쪽된 위 모퉁이 사용 하 여 정렬  
+- 그림의 왼쪽된 위 모퉁이 컨트롤의 왼쪽된 위 모퉁이 사용 하 여 정렬  
   
--   컨트롤 내에서 가운데  
+- 컨트롤 내에서 가운데  
   
--   표시 되는 그림에 맞게 컨트롤의 크기를 조정 합니다.  
+- 표시 되는 그림에 맞게 컨트롤의 크기를 조정 합니다.  
   
--   컨트롤에 맞게 표시 사진을 스트레치합니다  
+- 컨트롤에 맞게 표시 사진을 스트레치합니다  
   
  (특히 비트맵 형식으로 하나) 그림 늘이기 이미지 품질에서 손실을 생성할 수 있습니다. 메타 파일은 런타임 시 이미지를 그리기 위한 그래픽 명령 목록에는 더 비트맵 보다 스트레치에 적합 합니다.  
   

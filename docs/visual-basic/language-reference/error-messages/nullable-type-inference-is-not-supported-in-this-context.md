@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36629
 ms.assetid: 0a1e2dbc-d9a4-433d-9306-c5540782b81d
 ms.openlocfilehash: 9f7f878649d8b96f050b56d5b878eb3d67e027ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918224"
 ---
 # <a name="nullable-type-inference-is-not-supported-in-this-context"></a>이 컨텍스트에서는 nullable 형식을 유추할 수 없습니다.
 값 형식 및 구조는 nullable 선언할 수 있습니다.  
@@ -34,7 +34,7 @@ Dim b As Integer?
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   사용 하 여는 `As` 절 null 허용으로 변수를 선언 합니다.  
+- 사용 하 여는 `As` 절 null 허용으로 변수를 선언 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

@@ -3,11 +3,11 @@ title: ADO.NET 아키텍처
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
 ms.openlocfilehash: 3f3fc0c8c125c57116da4f1de467d738ac36ca29
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61880089"
 ---
 # <a name="adonet-architecture"></a>ADO.NET 아키텍처
 기존의 데이터 처리는 연결 기반의 2계층 모델에 의존해 왔습니다. 그러나 다중 계층 아키텍처를 사용하는 데이터 처리가 증가함에 따라 프로그래머는 연결되지 않은 방법으로 전환하여 응용 프로그램의 확장성을 개선하고 있습니다.  
@@ -29,13 +29,13 @@ ADO.NET 아키텍처
 ### <a name="choosing-a-datareader-or-a-dataset"></a>DataReader 또는 DataSet 선택  
  응용 프로그램을 사용할지 여부를 결정 하는 `DataReader` (참조 [DataReader를 사용 하 여 데이터 검색](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)) 또는 `DataSet` (참조 [Dataset, Datatable 및 Dataview](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)), 함수의 유형을 고려 응용 프로그램에 필요한 기능입니다. `DataSet`을 사용하면 다음을 수행할 수 있습니다.  
   
--   데이터를 조작할 수 있도록 응용 프로그램에서 데이터를 로컬로 캐시합니다. 쿼리 결과만 읽으면 되는 경우에는 `DataReader`를 사용하는 것이 좋습니다.  
+- 데이터를 조작할 수 있도록 응용 프로그램에서 데이터를 로컬로 캐시합니다. 쿼리 결과만 읽으면 되는 경우에는 `DataReader`를 사용하는 것이 좋습니다.  
   
--   계층 간 데이터나 XML Web services의 데이터를 원격화합니다.  
+- 계층 간 데이터나 XML Web services의 데이터를 원격화합니다.  
   
--   Windows Forms 컨트롤에 바인딩하거나 여러 소스의 데이터를 결합하고 연관시키는 등 데이터와 동적으로 상호 작용합니다.  
+- Windows Forms 컨트롤에 바인딩하거나 여러 소스의 데이터를 결합하고 연관시키는 등 데이터와 동적으로 상호 작용합니다.  
   
--   데이터 소스에 대한 개방형 연결이 필요 없는 광범위한 데이터 처리를 수행하여 다른 클라이언트가 사용하는 연결을 제거합니다.  
+- 데이터 소스에 대한 개방형 연결이 필요 없는 광범위한 데이터 처리를 수행하여 다른 클라이언트가 사용하는 연결을 제거합니다.  
   
  `DataSet`에서 제공하는 기능이 필요하지 않은 경우에는 `DataReader`로 데이터를 정방향 읽기 전용 방식으로 반환하여 응용 프로그램의 성능을 향상시킬 수 있습니다. 있지만 `DataAdapter` 사용 하 여는 `DataReader` 의 내용에 맞게를 `DataSet` (참조 [DataAdapter에서 DataSet 채우기](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md))를 사용 하 여는 `DataReader`, 메모리 저장 하기 때문에 성능을 향상 시킬 수 있습니다 사용할 수 있는 합니다 `DataSet`를 만들고 내용을 채우는 데 필요한 처리를 방지 하 고는 `DataSet`합니다.  
   

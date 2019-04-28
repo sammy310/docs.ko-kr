@@ -3,11 +3,11 @@ title: Oracle 스키마 컬렉션
 ms.date: 03/30/2017
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
 ms.openlocfilehash: 016a21b2106e955fd9806c5fb62833bc37da1f2f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878477"
 ---
 # <a name="oracle-schema-collections"></a>Oracle 스키마 컬렉션
 
@@ -15,7 +15,7 @@ Microsoft .NET Framework Data Provider for Oracle에서는 공통 스키마 컬�
 
 - Columns
 
-- Indexes
+- 인덱스
 
 - IndexColumns
 
@@ -29,7 +29,7 @@ Microsoft .NET Framework Data Provider for Oracle에서는 공통 스키마 컬�
 
 - Users
 
-- 뷰
+- 보기
 
 - 함수
 
@@ -63,7 +63,7 @@ Microsoft .NET Framework Data Provider for Oracle에서는 공통 스키마 컬�
 |SCALE|Decimal|소수점 오른쪽의 숫자 자릿수입니다.|
 |NULLABLE|문자열|열에서 NULL을 허용하는지 여부를 지정합니다. 열에 NOT NULL 제약 조건이 없거나 열이 PRIMARY KEY의 일부인 경우 값은 N입니다.|
 
-## <a name="indexes"></a>Indexes
+## <a name="indexes"></a>인덱스
 
 |열 이름|데이터 형식|설명|
 |----------------|--------------|-----------------|
@@ -96,7 +96,7 @@ Microsoft .NET Framework Data Provider for Oracle에서는 공통 스키마 컬�
 |AVG_LEAF_BLOCKS_PER_KEY|Decimal|각각의 고유한 값이 가장 가까운 정수로 올림되어 나타나는 리프 블록의 평균 개수입니다. UNIQUE 및 PRIMARY KEY 제약 조건을 적용하는 인덱스의 경우 이 값은 항상 1입니다.|
 |AVG_DATA_BLOCKS_PER_KEY|Decimal|인덱스의 고유한 값이 가장 가까운 정수로 올림되도록 나타내는 테이블의 평균 데이터 블록 수입니다. 이 통계는 인덱싱된 열에 대해 지정된 값이 들어 있는 행을 포함하는 데이터 블록의 평균 개수입니다.|
 |CLUSTERING_FACTOR|Decimal|인덱스 값에 따른 테이블의 행 주문량을 나타냅니다.|
-|STATUS|문자열|파티션되지 않은 인덱스가 VALID인지 또는 UNUSABLE인지 여부입니다.|
+|상태|문자열|파티션되지 않은 인덱스가 VALID인지 또는 UNUSABLE인지 여부입니다.|
 |NUM_ROWS|Decimal|인덱스의 행 수입니다.|
 |SAMPLE_SIZE|Decimal|인덱스 분석에 사용할 샘플의 크기입니다.|
 |LAST_ANALYZED|DateTime|이 인덱스를 가장 최근에 분석한 날짜입니다.|
@@ -144,7 +144,7 @@ Microsoft .NET Framework Data Provider for Oracle에서는 공통 스키마 컬�
 |DATA_OBJECT_ID|Decimal|개체를 포함하는 세그먼트의 사전순 개체 번호입니다.|
 |LAST_DDL_TIME|DateTime|부여 및 해지 등의 DDL 명령으로 인한 개체의 최종 수정에 대한 타임스탬프입니다.|
 |TIMESTAMP|문자열|개체(문자 데이터)의 사양에 대한 타임스탬프입니다.|
-|STATUS|문자열|개체의 상태(VALID, INVALID 또는 N/A)입니다.|
+|상태|문자열|개체의 상태(VALID, INVALID 또는 N/A)입니다.|
 |TEMPORARY|문자열|임시 개체인지 여부입니다. 임시 개체일 경우 현재 세션은 이 개체 내에 위치하는 데이터만 볼 수 있습니다.|
 |GENERATED|문자열|이 개체 시스템의 이름이 생성되었습니까? (Y &AMP;#124; N).|
 |SECONDARY|문자열|Oracle9i 데이터 카트리지의 ODCIIndexCreate 메서드에서 만든 보조 개체 인지 여부를 (Y &#124; N).|
@@ -190,7 +190,7 @@ Microsoft .NET Framework Data Provider for Oracle에서는 공통 스키마 컬�
 |ID|Decimal|사용자의 ID 번호입니다.|
 |CREATEDATE|DateTime|사용자가 만든 날짜입니다.|
 
-## <a name="views"></a>뷰
+## <a name="views"></a>보기
 
 |열 이름|데이터 형식|설명|
 |----------------|--------------|-----------------|
@@ -219,7 +219,7 @@ Microsoft .NET Framework Data Provider for Oracle에서는 공통 스키마 컬�
 |CREATED|DateTime|개체가 만들어진 날짜입니다.|
 |LAST_DDL_TIME|DateTime|부여 및 해지 등의 DDL 명령으로 인한 개체의 최종 수정에 대한 타임스탬프입니다.|
 |TIMESTAMP|문자열|개체(문자 데이터)의 사양에 대한 타임스탬프입니다.|
-|STATUS|문자열|개체의 상태(VALID, INVALID 또는 N/A)입니다.|
+|상태|문자열|개체의 상태(VALID, INVALID 또는 N/A)입니다.|
 |TEMPORARY|문자열|임시 개체인지 여부입니다. 임시 개체일 경우 현재 세션은 이 개체 내에 위치하는 데이터만 볼 수 있습니다.|
 |GENERATED|문자열|이 개체 시스템의 이름이 생성되었습니까? (Y &AMP;#124; N).|
 |SECONDARY|문자열|Oracle9i 데이터 카트리지의 ODCIIndexCreate 메서드에서 만든 보조 개체 인지 여부를 (Y &#124; N).|
@@ -235,7 +235,7 @@ Microsoft .NET Framework Data Provider for Oracle에서는 공통 스키마 컬�
 |DATA_OBJECT_ID|Decimal|개체를 포함하는 세그먼트의 사전순 개체 번호입니다.|
 |LAST_DDL_TIME|DateTime|부여 및 해지 등의 DDL 명령으로 인한 개체의 최종 수정에 대한 타임스탬프입니다.|
 |TIMESTAMP|문자열|개체(문자 데이터)의 사양에 대한 타임스탬프입니다.|
-|STATUS|문자열|개체의 상태(VALID, INVALID 또는 N/A)입니다.|
+|상태|문자열|개체의 상태(VALID, INVALID 또는 N/A)입니다.|
 |TEMPORARY|문자열|임시 개체인지 여부입니다. 임시 개체일 경우 현재 세션은 이 개체 내에 위치하는 데이터만 볼 수 있습니다.|
 |GENERATED|문자열|이 개체 시스템의 이름이 생성되었습니까? (Y &AMP;#124; N).|
 |SECONDARY|문자열|Oracle9i 데이터 카트리지의 ODCIIndexCreate 메서드에서 만든 보조 개체 인지 여부를 (Y &#124; N).|
@@ -252,7 +252,7 @@ Microsoft .NET Framework Data Provider for Oracle에서는 공통 스키마 컬�
 |DATA_OBJECT_ID|Decimal|개체를 포함하는 세그먼트의 사전순 개체 번호입니다.|
 |LAST_DDL_TIME|DateTime|부여 및 해지 등의 DDL 명령으로 인한 개체의 최종 수정에 대한 타임스탬프입니다.|
 |TIMESTAMP|문자열|개체(문자 데이터)의 사양에 대한 타임스탬프입니다.|
-|STATUS|문자열|개체의 상태(VALID, INVALID 또는 N/A)입니다.|
+|상태|문자열|개체의 상태(VALID, INVALID 또는 N/A)입니다.|
 |TEMPORARY|문자열|임시 개체인지 여부입니다. 임시 개체일 경우 현재 세션은 이 개체 내에 위치하는 데이터만 볼 수 있습니다.|
 |GENERATED|문자열|이 개체 시스템의 이름이 생성되었습니까? (Y &AMP;#124; N).|
 |SECONDARY|문자열|Oracle9i 데이터 카트리지의 ODCIIndexCreate 메서드에서 만든 보조 개체 인지 여부를 (Y &#124; N).|
@@ -287,7 +287,7 @@ Microsoft .NET Framework Data Provider for Oracle에서는 공통 스키마 컬�
 |R_OWNER|문자열|참조 제약 조건에서 참조된 테이블의 소유자입니다.|
 |R_CONSTRAINT_NAME|문자열|참조된 테이블에 대한 UNIQUE 제약 조건 정의의 이름입니다.|
 |DELETE_RULE|문자열|참조 제약 조건에 대한 규칙(CASCADE 또는 NO ACTION)을 삭제합니다.|
-|STATUS|문자열|제약 조건의 상태(ENABLED 또는 DISABLED)를 적용합니다.|
+|상태|문자열|제약 조건의 상태(ENABLED 또는 DISABLED)를 적용합니다.|
 |DEFERRABLE|문자열|제약 조건의 지연 가능 여부입니다.|
 |VALIDATED|문자열|모든 데이터가 제약 조건(VALIDATED 또는 NOT VALIDATED)을 따르는지 여부입니다.|
 |GENERATED|문자열|제약 조건의 이름이 사용자인지 또는 시스템 생성인지 여부입니다.|
@@ -308,7 +308,7 @@ Microsoft .NET Framework Data Provider for Oracle에서는 공통 스키마 컬�
 |R_OWNER|문자열|참조 제약 조건에서 참조된 테이블의 소유자입니다.|
 |R_CONSTRAINT_NAME|문자열|참조된 테이블에 대한 UNIQUE 제약 조건 정의의 이름입니다.|
 |DELETE_RULE|문자열|참조 제약 조건에 대한 규칙(CASCADE 또는 NO ACTION)을 삭제합니다.|
-|STATUS|문자열|제약 조건의 상태(ENABLED 또는 DISABLED)를 적용합니다.|
+|상태|문자열|제약 조건의 상태(ENABLED 또는 DISABLED)를 적용합니다.|
 |DEFERRABLE|문자열|제약 조건의 지연 가능 여부입니다.|
 |VALIDATED|문자열|모든 데이터가 제약 조건(VALIDATED 또는 NOT VALIDATED)을 따르는지 여부입니다.|
 |GENERATED|문자열|제약 조건의 이름이 사용자인지 또는 시스템 생성인지 여부입니다.|
@@ -332,7 +332,7 @@ Microsoft .NET Framework Data Provider for Oracle에서는 공통 스키마 컬�
 |R_OWNER|문자열|참조 제약 조건에서 참조된 테이블의 소유자입니다.|
 |R_CONSTRAINT_NAME|문자열|참조된 테이블에 대한 UNIQUE 제약 조건 정의의 이름입니다.|
 |DELETE_RULE|문자열|참조 제약 조건에 대한 규칙(CASCADE 또는 NO ACTION)을 삭제합니다.|
-|STATUS|문자열|제약 조건의 상태(ENABLED 또는 DISABLED)를 적용합니다.|
+|상태|문자열|제약 조건의 상태(ENABLED 또는 DISABLED)를 적용합니다.|
 |VALIDATED|문자열|모든 데이터가 제약 조건(VALIDATED 또는 NOT VALIDATED)을 따르는지 여부입니다.|
 |GENERATED|문자열|제약 조건의 이름이 사용자인지 또는 시스템 생성인지 여부입니다.|
 |RELY|문자열|활성화된 제약 조건이 적용되는지 또는 적용되지 않는지 여부입니다.|

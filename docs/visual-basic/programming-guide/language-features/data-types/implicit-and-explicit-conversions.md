@@ -21,11 +21,11 @@ helpviewer_keywords:
 - implicit data type conversions [Visual Basic]
 ms.assetid: 77de1659-af8a-492c-967e-e7ef60ccce66
 ms.openlocfilehash: 82ff710629089cd14c7e982b4afa4301d0790811
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008258"
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>암시적 변환과 명시적 변환(Visual Basic)
 *암시적 변환* 소스 코드의 특수 구문이 필요 하지 않습니다. 다음 예제에서는 Visual Basic 암시적으로 변환 된 값 `k` 단 정밀도 부동 소수점 값에 할당 하기 전에 `q`입니다.  

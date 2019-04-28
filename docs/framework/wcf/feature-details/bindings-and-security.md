@@ -8,11 +8,11 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
 ms.openlocfilehash: 5e3a8bc58d0828f50feb7752eb438d41695460fa
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857794"
 ---
 # <a name="bindings-and-security"></a>바인딩 및 보안
 Windows Communication Foundation (WCF)를 사용 하 여 포함 된 시스템 제공 바인딩 WCF 응용 프로그램을 프로그래밍 하는 빠른 방법을 제공 합니다. 한 가지 예외를 통해 모든 바인딩의 기본 보안 스키마가 활성화됩니다. 이 항목은 보안 요구 사항에 적합한 바인딩을 선택하는 데 도움을 줍니다.  
@@ -35,21 +35,21 @@ Windows Communication Foundation (WCF)를 사용 하 여 포함 된 시스템 �
   
  이 바인딩은 다음을 포함하여 일정 범위의 기존 기술을 사용하도록 디자인되었습니다.  
   
--   ASP.NET 웹 서비스(ASMX), 버전 1  
+- ASP.NET 웹 서비스(ASMX), 버전 1  
   
--   WSE(Web Service Enhancement) 응용 프로그램  
+- WSE(Web Service Enhancement) 응용 프로그램  
   
--   웹 서비스 상호 운용성에 정의 된 기본 프로필 (WS-I) 사양 (<https://go.microsoft.com/fwlink/?LinkId=38955>).  
+- 웹 서비스 상호 운용성에 정의 된 기본 프로필 (WS-I) 사양 (<https://go.microsoft.com/fwlink/?LinkId=38955>).  
   
--   WS-I에 정의된 기본 보안 프로필  
+- WS-I에 정의된 기본 보안 프로필  
   
  기본적으로 이 바인딩은 보안 처리되어 있지 않습니다. ASMX 서비스와 상호 운용되도록 디자인되었습니다. 보안을 사용하는 경우 바인딩은 기본 인증, 다이제스트 및 통합 Windows 보안과 같이 IIS(인터넷 정보 서비스) 보안 메커니즘과 원활한 상호 운용을 위해 디자인됩니다. 자세한 내용은 [전송 보안 개요](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)합니다. 이 바인딩은 다음을 지원합니다.  
   
--   HTTPS 전송 보안.  
+- HTTPS 전송 보안.  
   
--   HTTP 기본 인증.  
+- HTTP 기본 인증.  
   
--   WS-Security.  
+- WS-Security.  
   
  자세한 내용은 다음을 참조하세요.<xref:System.ServiceModel.BasicHttpSecurity>, <xref:System.ServiceModel.BasicHttpMessageSecurity>, <xref:System.ServiceModel.BasicHttpMessageCredentialType> 및 <xref:System.ServiceModel.BasicHttpSecurityMode>.  
   
@@ -58,11 +58,11 @@ Windows Communication Foundation (WCF)를 사용 하 여 포함 된 시스템 �
   
  기본적으로 이 바인딩은 WS-Security 사양을 구현하고 WS-* 사양을 구현하는 서비스와의 상호 운용성을 제공합니다. 다음을 지원합니다.  
   
--   HTTPS 전송 보안.  
+- HTTPS 전송 보안.  
   
--   WS-Security.  
+- WS-Security.  
   
--   호출자를 인증하기 위한 SOAP 메시지 자격 증명 보안을 사용하여 HTTPS 전송 보호.  
+- 호출자를 인증하기 위한 SOAP 메시지 자격 증명 보안을 사용하여 HTTPS 전송 보호.  
   
  자세한 내용은 <xref:System.ServiceModel.WSHttpSecurity>, <xref:System.ServiceModel.MessageSecurityOverHttp>, <xref:System.ServiceModel.MessageCredentialType>, <xref:System.ServiceModel.SecurityMode>, <xref:System.ServiceModel.HttpTransportSecurity>를 <xref:System.ServiceModel.HttpClientCredentialType>, 및 <xref:System.ServiceModel.HttpProxyCredentialType>합니다.  
   
@@ -71,23 +71,23 @@ Windows Communication Foundation (WCF)를 사용 하 여 포함 된 시스템 �
   
  이 바인딩은 이중 서비스 응용 프로그램을 사용하도록 디자인되었습니다. 이 바인딩은 메시지 기반 전송 보안을 위한 WS-Security 사양을 구현합니다. 전송 보안을 사용할 수 없습니다. 기본적으로 다음 기능을 제공합니다.  
   
--   안정성을 위해 WS-Reliable Messaging을 구현합니다.  
+- 안정성을 위해 WS-Reliable Messaging을 구현합니다.  
   
--   전송 보안 및 인증을 위해 WS-Security를 구현합니다.  
+- 전송 보안 및 인증을 위해 WS-Security를 구현합니다.  
   
--   메시지 배달을 위해 HTTP를 사용합니다.  
+- 메시지 배달을 위해 HTTP를 사용합니다.  
   
--   텍스트/XML 메시지 인코딩을 사용합니다.  
+- 텍스트/XML 메시지 인코딩을 사용합니다.  
   
  WS-Security(메시지 계층 보안)를 사용하면 바인딩을 통해 다음 매개 변수를 구성할 수 있습니다.  
   
--   암호화 알고리즘을 결정하기 위한 보안 알고리즘 모음.  
+- 암호화 알고리즘을 결정하기 위한 보안 알고리즘 모음.  
   
--   다음에 대한 바인딩 옵션.  
+- 다음에 대한 바인딩 옵션.  
   
-    -   클라이언트에서 서비스 자격 증명 사용 가능한 out-of-band를 제공하는 경우.  
+    - 클라이언트에서 서비스 자격 증명 사용 가능한 out-of-band를 제공하는 경우.  
   
-    -   채널 설정의 일부로 서비스에서 협상된 서비스 자격 증명을 제공하는 경우.  
+    - 채널 설정의 일부로 서비스에서 협상된 서비스 자격 증명을 제공하는 경우.  
   
  자세한 내용은 <xref:System.ServiceModel.WSDualHttpSecurity> 및 <xref:System.ServiceModel.WSDualHttpSecurityMode>를 참조하세요.  
   
@@ -96,21 +96,21 @@ Windows Communication Foundation (WCF)를 사용 하 여 포함 된 시스템 �
   
  이 바인딩은 시스템 간 통신을 위해 최적화됩니다. 기본적으로 다음과 같은 특성이 있습니다.  
   
--   전송 계층 보안을 구현합니다.  
+- 전송 계층 보안을 구현합니다.  
   
--   전송 보안 및 인증을 위해 Windows 보안을 사용합니다.  
+- 전송 보안 및 인증을 위해 Windows 보안을 사용합니다.  
   
--   전송을 위해 TCP를 사용합니다.  
+- 전송을 위해 TCP를 사용합니다.  
   
--   이진 메시지 인코딩을 구현합니다.  
+- 이진 메시지 인코딩을 구현합니다.  
   
--   WS-Reliable Messaging을 구현합니다.  
+- WS-Reliable Messaging을 구현합니다.  
   
  다음과 같은 옵션을 사용할 수 있습니다.  
   
--   메시지 계층 보안(WS-Security 사용).  
+- 메시지 계층 보안(WS-Security 사용).  
   
--   메시지 자격 증명을 통한 전송 보안—TCP를 통한 TLS(전송 계층 보안)에 의해 제공되는 기밀성과 무결성 및 WS-Security에 의해 제공되는 권한에 대한 자격 증명.  
+- 메시지 자격 증명을 통한 전송 보안—TCP를 통한 TLS(전송 계층 보안)에 의해 제공되는 기밀성과 무결성 및 WS-Security에 의해 제공되는 권한에 대한 자격 증명.  
   
  자세한 내용은 <xref:System.ServiceModel.NetTcpSecurity>, <xref:System.ServiceModel.TcpTransportSecurity>를 <xref:System.ServiceModel.TcpClientCredentialType>를 <xref:System.ServiceModel.MessageSecurityOverTcp>, 및 <xref:System.ServiceModel.MessageCredentialType>합니다.  
   
@@ -119,17 +119,17 @@ Windows Communication Foundation (WCF)를 사용 하 여 포함 된 시스템 �
   
  이 바인딩은 일반적으로 동일한 시스템에서의 프로세스 간 통신을 위해 최적화됩니다. 기본적으로 이 바인딩에는 다음과 같은 특성이 있습니다.  
   
--   메시지 전송 및 인증을 위해 전송 보안을 사용합니다.  
+- 메시지 전송 및 인증을 위해 전송 보안을 사용합니다.  
   
--   메시지 배달을 위해 명명된 파이프를 사용합니다.  
+- 메시지 배달을 위해 명명된 파이프를 사용합니다.  
   
--   이진 메시지 인코딩을 구현합니다.  
+- 이진 메시지 인코딩을 구현합니다.  
   
--   암호화 및 메시지 서명.  
+- 암호화 및 메시지 서명.  
   
  다음과 같은 옵션을 사용할 수 있습니다.  
   
--   Windows 보안을 사용하여 인증.  
+- Windows 보안을 사용하여 인증.  
   
  자세한 내용은 <xref:System.ServiceModel.NetNamedPipeSecurity>, <xref:System.ServiceModel.NetNamedPipeSecurityMode> 및 <xref:System.ServiceModel.NamedPipeTransportSecurity>을 참조하십시오.  
   
@@ -140,9 +140,9 @@ Windows Communication Foundation (WCF)를 사용 하 여 포함 된 시스템 �
   
  기본적으로 이 바인딩은 전송 보안을 사용하고 다음과 같은 보안 특성을 제공합니다.  
   
--   보안을 사용할 수 없습니다(None).  
+- 보안을 사용할 수 없습니다(None).  
   
--   MSMQ 전송 보안입니다(Transport).  
+- MSMQ 전송 보안입니다(Transport).  
   
  자세한 내용은 <xref:System.ServiceModel.NetMsmqSecurity> 및 <xref:System.ServiceModel.NetMsmqSecurityMode>를 참조하세요.  
   
@@ -153,15 +153,15 @@ Windows Communication Foundation (WCF)를 사용 하 여 포함 된 시스템 �
   
  기본적으로 이 바인딩은 전송 보안을 사용하고 다음과 같은 보안 특성을 제공합니다.  
   
--   보안을 사용할 수 없습니다(None).  
+- 보안을 사용할 수 없습니다(None).  
   
--   MSMQ 전송 보안입니다(Transport).  
+- MSMQ 전송 보안입니다(Transport).  
   
--   SOAP 기반 메시지 보안입니다(Message).  
+- SOAP 기반 메시지 보안입니다(Message).  
   
--   동시 전송 및 메시지 보안입니다(Both).  
+- 동시 전송 및 메시지 보안입니다(Both).  
   
--   클라이언트 자격 증명 형식을 지원 합니다. None, Windows, UserName, Certificate, IssuedToken 합니다.  
+- 클라이언트 자격 증명 형식을 지원 합니다. None, Windows, UserName, Certificate, IssuedToken 합니다.  
   
  <xref:System.ServiceModel.MessageCredentialType.Certificate> 자격 증명은 보안 모드를 <xref:System.ServiceModel.NetMsmqSecurityMode.Both> 또는 <xref:System.ServiceModel.NetMsmqSecurityMode.Message> 중 하나로 설정하는 경우에만 지원됩니다.  
   

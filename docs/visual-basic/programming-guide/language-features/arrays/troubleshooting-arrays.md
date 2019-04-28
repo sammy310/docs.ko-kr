@@ -10,11 +10,11 @@ helpviewer_keywords:
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
 ms.openlocfilehash: 2b051d22fe3d331626f2e181c008043e576b7526
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908130"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>배열 문제 해결(Visual Basic)
 이 페이지는 배열에서 작업할 때 발생할 수 있는 몇 가지 일반적인 문제를 나열 합니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "58833375"
 ## <a name="compilation-errors-declaring-and-initializing-an-array"></a>컴파일 오류를 선언 하 고 배열을 초기화 하는 중  
  컴파일 오류는 선언, 만들기 및 배열 초기화에 대 한 오해에서 발생할 수 있습니다. 오류의 가장 일반적인 원인은 다음과 같습니다.  
   
--   제공 된 [새 운영자](../../../../visual-basic/language-reference/operators/new-operator.md) 차원 길이 지정 하는 배열 변수 선언 뒤에 절. 다음 코드 줄에는이 형식의 잘못 된 선언을 보여 줍니다.  
+- 제공 된 [새 운영자](../../../../visual-basic/language-reference/operators/new-operator.md) 차원 길이 지정 하는 배열 변수 선언 뒤에 절. 다음 코드 줄에는이 형식의 잘못 된 선언을 보여 줍니다.  
   
      `Dim INVALIDsingleDimByteArray(2) As Byte = New Byte()`  
   
@@ -30,15 +30,15 @@ ms.locfileid: "58833375"
   
      `Dim INVALIDjaggedByteArray(1)() As Byte = New Byte()()`  
   
--   최상위 배열이 가변된 배열 넘게 차원 길이 지정합니다. 다음 코드 줄에는이 형식의 잘못 된 선언을 보여 줍니다.  
+- 최상위 배열이 가변된 배열 넘게 차원 길이 지정합니다. 다음 코드 줄에는이 형식의 잘못 된 선언을 보여 줍니다.  
   
      `Dim INVALIDjaggedByteArray(1)(1) As Byte`  
   
--   생략 된 `New` 키워드 요소 값을 지정 하는 경우. 다음 코드 줄에는이 형식의 잘못 된 선언을 보여 줍니다.  
+- 생략 된 `New` 키워드 요소 값을 지정 하는 경우. 다음 코드 줄에는이 형식의 잘못 된 선언을 보여 줍니다.  
   
      `Dim INVALIDoneDimShortArray() As Short = Short() {0, 1, 2, 3}`  
   
--   제공 된 `New` 괄호 없이 절 (`{}`). 다음 코드 줄에는이 형식의 잘못 된 선언을 보여 줍니다.  
+- 제공 된 `New` 괄호 없이 절 (`{}`). 다음 코드 줄에는이 형식의 잘못 된 선언을 보여 줍니다.  
   
      `Dim INVALIDsingleDimByteArray() As Byte = New Byte()`  
   

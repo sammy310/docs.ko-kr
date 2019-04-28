@@ -24,11 +24,11 @@ helpviewer_keywords:
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
 ms.openlocfilehash: 95bfa3da5499c518dad0c235b539784fee2bb522
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61975977"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>방법: (Visual Basic) 상수 선언
 사용 된 `Const` 상수를 선언 하 고 해당 값을 설정 하는 문. 상수를 선언 하 여 값으로 의미 있는 이름을 할당 합니다. 상수 선언 되 면 수정 하거나 새 값을 지정할 수 없습니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "58843411"
   
 ### <a name="to-declare-a-constant"></a>상수를 선언 하려면  
   
--   액세스 지정자를 포함 하는 선언을 작성 합니다 `Const` 키워드 및 다음 예와 같이 식:  
+- 액세스 지정자를 포함 하는 선언을 작성 합니다 `Const` 키워드 및 다음 예와 같이 식:  
   
      [!code-vb[VbEnumsTask#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#8)]  
   
@@ -51,7 +51,7 @@ ms.locfileid: "58843411"
   
 ### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>명시적된 데이터 형식이 있는 상수를 선언 하려면  
   
--   포함 하는 선언을 작성 합니다 `As` 키워드 및는 명시적 데이터 형식, 다음 예제와 같이:  
+- 포함 하는 선언을 작성 합니다 `As` 키워드 및는 명시적 데이터 형식, 다음 예제와 같이:  
   
      [!code-vb[VbEnumsTask#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#9)]  
   
@@ -59,7 +59,7 @@ ms.locfileid: "58843411"
   
 ### <a name="to-declare-multiple-constants-on-a-single-line"></a>한 줄에 여러 상수를 선언 하려면  
   
--   다음 예제와 같이 공백, 쉼표와 선언을 구분 합니다.  
+- 다음 예제와 같이 공백, 쉼표와 선언을 구분 합니다.  
   
     ```  
     Public Const Four As Integer = 4, Five As Integer = 5, Six As Integer = 44  

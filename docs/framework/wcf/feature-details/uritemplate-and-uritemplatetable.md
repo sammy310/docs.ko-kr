@@ -3,11 +3,11 @@ title: UriTemplate 및 UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
 ms.openlocfilehash: b0dc3b2b747bc08da239490db7db3ba77d1e7ed8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918634"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate 및 UriTemplateTable
 웹 개발자는 서비스가 응답하는 URI의 셰이프 및 레이아웃을 설명할 수 있어야 합니다. Windows Communication Foundation (WCF) 개발자에 게 해당 Uri에 대 한 제어를 제공 하는 두 개의 새 클래스를 추가 합니다. <xref:System.UriTemplate> 및 <xref:System.UriTemplateTable> wcf에서 URI 기반 디스패치 엔진의 기초를 형성 합니다. 이러한 클래스는 템플릿 및 URI를 활용 하려면 개발자가 자신의 매핑 메커니즘에서 WCF 서비스를 구현 하지 않고도 사용할 수도 있습니다.  

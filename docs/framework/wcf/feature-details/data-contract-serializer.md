@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DataContractSerializer
 ms.assetid: 3d64837e-0a0c-4cc8-90ff-a5c6f313c63a
 ms.openlocfilehash: eba12a38ee852dcdc08f27bc9e3cb02332fd7071
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857105"
 ---
 # <a name="data-contract-serializer"></a>데이터 계약 직렬 변환기
 Windows Communication Foundation (WCF) 인프라를 사용 하 여 <xref:System.Runtime.Serialization.DataContractSerializer> 클래스를 기본 serializer로 합니다. 이 단원의 항목에서는 클래스를 독립 실행형 serializer로 사용하기 위한 자세한 정보를 제공합니다.  

@@ -13,7 +13,7 @@ ms.locfileid: "61812785"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>관계형 데이터베이스를 azure로 마이그레이션
 
-Vision: Azure는 가장 포괄적인 데이터베이스 마이그레이션은 제공합니다.
+목표: Azure에서는 가장 포괄적인 데이터베이스 마이그레이션을 제공합니다.
 
 Azure에서 IaaS VM(순수한 리프트 앤 시프트)에 직접 데이터베이스 서버를 마이그레이션하거나, 추가적인 이득을 얻기 위해 Azure SQL Database로 마이그레이션할 수 있습니다. Azure SQL Database에서는 관리되는 인스턴스와 서비스 형태의 전체 데이터베이스(DBaaS) 옵션을 제공합니다. 그림 3-1에서는 Azure에서 사용할 수 있는 다양한 관계형 데이터베이스 마이그레이션 경로를 보여 줍니다.
 
@@ -27,7 +27,7 @@ Azure에서 IaaS VM(순수한 리프트 앤 시프트)에 직접 데이터베이
 
 Azure SQL Database Managed Instance는 표준 Azure SQL 데이터베이스(단일 데이터베이스 모델)에서 제공되는 기능을 넘어선 격리 요구 사항이나 SQL Server 인스턴스 수준의 기능에 대한 추가적인 요구 사항이 있는 경우 최상의 옵션입니다. 마지막은 PaaS 중심의 선택이지만 기존 SQL 서버와 동일한 기능을 제공하지는 않습니다. 마이그레이션은 마찰을 일으킬 수 있습니다.
 
-예를 들어, SQL Server 기능 인스턴스 수준에서에서 심층 투자에 조직에서 SQL Managed Instance로 마이그레이션 도움이 되는 경우 인스턴스 수준 SQL Server 기능의 예제는 SQL 공용 언어 런타임 (CLR) 통합, SQL Server 에이전트 및 데이터베이스 간 쿼리 있습니다. 이러한 기능에 대 한 지원이 표준 Azure SQL Database (단일 데이터베이스 모델)에서 사용할 수 없는 경우
+예를 들어 인스턴스 수준의 SQL Server 기능에 많은 투자를 한 조직은 SQL Managed Instance로 마이그레이션할 때 이점을 얻을 수 있습니다. 인스턴스 수준 SQL Server 기능의 예로는 SQL 공용 언어 런타임(CLR) 통합과 SQL Server 에이전트, 크로스 데이터베이스 쿼리가 있습니다. 이러한 기능에 대한 지원은 표준 Azure SQL 데이터베이스(단일 데이터베이스 모델)에서 사용할 수 없습니다.
 
 규제가 엄격한 산업에서 운영되고 보안 목적으로 격리를 유지해야하는 조직은 SQL Managed Instance 모델을 선택하면 도움이 될 수 있습니다.
 

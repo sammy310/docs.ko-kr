@@ -3,11 +3,11 @@ title: 열거형
 description: 사용 하는 방법을 알아봅니다 F# 코드를 더 읽기 쉽고 쉽게 리터럴 대신 열거형입니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: a8839b73de074f62606b70ffe969a53b3db753bf
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921578"
 ---
 # <a name="enumerations"></a>열거형
 
@@ -50,7 +50,7 @@ type enum-name =
 
 또한으로 항상 내보내지는 열거형에 대 한 사례 `public`합니다. 이 C# 및.NET 플랫폼의 rest를 사용 하 여 정렬 됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [F# 언어 참조](index.md)
 - [캐스팅 및 변환](casting-and-conversions.md)
