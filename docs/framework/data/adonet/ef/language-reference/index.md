@@ -2,12 +2,6 @@
 title: Entity SQL 언어 참조
 ms.date: 03/30/2017
 ms.assetid: bb07282c-161d-47e8-856d-b2374ba18181
-ms.openlocfilehash: 158240678eec7eb4699263c4febe9b6991196e11
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231515"
 ---
 # <a name="entity-sql-language-reference"></a>Entity SQL 언어 참조
 이 단원에서는 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]에 사용되는 모델링 및 매핑 언어, [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에 대해 설명합니다.  

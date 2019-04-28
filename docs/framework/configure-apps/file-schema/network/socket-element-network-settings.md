@@ -9,11 +9,11 @@ helpviewer_keywords:
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
 ms.openlocfilehash: 82bfe3b6e3107ff787716657dbf0b31dcadde911
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674391"
 ---
 # <a name="socket-element-network-settings"></a>\<소켓 > 요소 (네트워크 설정)
 소켓 작업 완료 포트를 사용 하는지 여부를 지정 합니다.  
@@ -64,9 +64,9 @@ ms.locfileid: "59160162"
   
  이 `ipProtectionLevel` 특성 설정은 초기 들어오는 트래픽만 영향을 줍니다.  
   
--   소켓에서 들어오는 연결을 수신 대기 하는 TCP 서버.  
+- 소켓에서 들어오는 연결을 수신 대기 하는 TCP 서버.  
   
--   UDP 소켓에서 패킷을 받는 응용 프로그램입니다.  
+- UDP 소켓에서 패킷을 받는 응용 프로그램입니다.  
   
  이 구성 설정은 (트래픽 양쪽 방향에서 제한 없음)는 이미 설정 된 TCP 연결에 영향을 주지 않습니다 UDP 패킷을 보내는 응용 프로그램에 영향을 주지 않습니다.  
   

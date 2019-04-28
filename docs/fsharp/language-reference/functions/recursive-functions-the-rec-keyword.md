@@ -3,11 +3,11 @@ title: '재귀 함수: Rec 키워드'
 description: 설명 하는 방법을 F# 'rec' 키워드는 'let' 키워드를 사용 하 여 재귀 함수를 정의 하는 데 사용 됩니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: 9f9c7e1a4468de9551b3852d0e7b4381025b2699
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941010"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>재귀 함수: Rec 키워드
 
@@ -49,6 +49,6 @@ function2-body
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet4002.fs)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [함수](index.md)

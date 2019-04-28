@@ -8,11 +8,11 @@ helpviewer_keywords:
 - drawing [Windows Forms]
 ms.assetid: 362532c5-1a06-4257-bdc8-723461009ede
 ms.openlocfilehash: 08f87436ade62bb54295b012a1c24dc177ea9667
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938179"
 ---
 # <a name="graphics-and-drawing-in-windows-forms"></a>Windows Forms의 그래픽 및 그리기
 공용 언어 런타임에서는 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]라는 Windows [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)](그래픽 디바이스 인터페이스)의 고급 구현을 사용합니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]를 통해 그래픽을 만들고, 텍스트를 그리고, 그래픽 이미지를 개체로 조작할 수 있습니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]는 성능과 사용 편의성을 제공하도록 설계되었습니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]를 사용하여 Windows Forms 및 컨트롤에 그래픽 이미지를 렌더링할 수 있습니다. Web Forms에서 직접 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]를 사용할 수는 없지만 이미지 웹 서버 컨트롤을 통해 그래픽 이미지를 표시할 수 있습니다.  

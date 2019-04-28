@@ -2,17 +2,11 @@
 title: 컨트롤
 ms.date: 03/30/2017
 dev_langs:
-- csharp
-- vb
+  - csharp
+  - vb
 helpviewer_keywords:
-- controls [WPF], about WPF controls
+  - 'controls [WPF], about WPF controls'
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-ms.openlocfilehash: 5abafe1edfdbac1966a98d5eef28265e6504c868
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154416"
 ---
 # <a name="controls"></a>컨트롤
 <a name="introduction"></a>
@@ -33,11 +27,11 @@ ms.locfileid: "59154416"
 ## <a name="changing-the-appearance-of-a-control"></a>컨트롤의 모양 변경  
  일반적으로 애플리케이션의 모양과 느낌에 맞게 컨트롤의 모양을 변경합니다. 수행하려는 작업에 따라 다음 중 하나를 수행하여 컨트롤의 모양을 변경할 수 있습니다.  
   
--   컨트롤의 속성 값을 변경합니다.  
+- 컨트롤의 속성 값을 변경합니다.  
   
--   만들기는 <xref:System.Windows.Style> 컨트롤에 대 한 합니다.  
+- 만들기는 <xref:System.Windows.Style> 컨트롤에 대 한 합니다.  
   
--   새 <xref:System.Windows.Controls.ControlTemplate> 컨트롤에 대 한 합니다.  
+- 새 <xref:System.Windows.Controls.ControlTemplate> 컨트롤에 대 한 합니다.  
   
 ### <a name="changing-a-controls-property-value"></a>컨트롤의 속성 값 변경  
  많은 컨트롤 같은 컨트롤이 표시 하는 방법을 변경할 수 있도록 하는 속성이 합니다 <xref:System.Windows.Controls.Control.Background%2A> 의 <xref:System.Windows.Controls.Button>합니다. 모두 값 속성을 설정할 수 있습니다 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 및 코드입니다. 다음 예제에서는 합니다 <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, 및 <xref:System.Windows.Controls.Control.FontWeight%2A> 속성에는 <xref:System.Windows.Controls.Button> 에서 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다.  
@@ -87,13 +81,13 @@ ms.locfileid: "59154416"
 ## <a name="rich-content-in-controls"></a>컨트롤의 풍부한 콘텐츠  
  대부분의 클래스에서 상속 되는 <xref:System.Windows.Controls.Control> 클래스 풍부한 콘텐츠를 포함 하는 역량을 보유 합니다. 예를 들어를 <xref:System.Windows.Controls.Label> 문자열과 같은 개체를 포함할 수는 <xref:System.Windows.Controls.Image>, 또는 <xref:System.Windows.Controls.Panel>합니다.  다음 클래스는 다양 한 콘텐츠에 대 한 지원을 제공 하며 대부분의 컨트롤에 대 한 기본 클래스로 작동 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]합니다.  
   
--   <xref:System.Windows.Controls.ContentControl>-이 클래스에서 상속 된 클래스의 일부의 예로 <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Button>, 및 <xref:System.Windows.Controls.ToolTip>합니다.  
+- <xref:System.Windows.Controls.ContentControl>-이 클래스에서 상속 된 클래스의 일부의 예로 <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Button>, 및 <xref:System.Windows.Controls.ToolTip>합니다.  
   
--   <xref:System.Windows.Controls.ItemsControl>-이 클래스에서 상속 된 클래스의 일부의 예로 <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, 및 <xref:System.Windows.Controls.Primitives.StatusBar>합니다.  
+- <xref:System.Windows.Controls.ItemsControl>-이 클래스에서 상속 된 클래스의 일부의 예로 <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, 및 <xref:System.Windows.Controls.Primitives.StatusBar>합니다.  
   
--   <xref:System.Windows.Controls.HeaderedContentControl>-이 클래스에서 상속 된 클래스의 일부의 예로 <xref:System.Windows.Controls.TabItem>, <xref:System.Windows.Controls.GroupBox>, 및 <xref:System.Windows.Controls.Expander>합니다.  
+- <xref:System.Windows.Controls.HeaderedContentControl>-이 클래스에서 상속 된 클래스의 일부의 예로 <xref:System.Windows.Controls.TabItem>, <xref:System.Windows.Controls.GroupBox>, 및 <xref:System.Windows.Controls.Expander>합니다.  
   
--   <xref:System.Windows.Controls.HeaderedItemsControl>-이 클래스에서 상속 된 클래스의 일부의 예로 <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.TreeViewItem>, 및 <xref:System.Windows.Controls.ToolBar>합니다.  
+- <xref:System.Windows.Controls.HeaderedItemsControl>-이 클래스에서 상속 된 클래스의 일부의 예로 <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.TreeViewItem>, 및 <xref:System.Windows.Controls.ToolBar>합니다.  
 
  이러한 기본 클래스에 대 한 자세한 내용은 참조 하세요. [WPF 콘텐츠 모델](wpf-content-model.md)합니다.  
   

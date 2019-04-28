@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b16cc6a899b1ad5c814c29a93c6125250ca8186d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638842"
 ---
 # <a name="iclrpolicymanagersettimeout-method"></a>ICLRPolicyManager::SetTimeout 메서드
 지정 된 작업에 대 한 제한 시간 값을 설정합니다.  
@@ -40,13 +40,13 @@ HRESULT SetTimeout (
  `operation`  
  [in] 중 하나는 [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) 시간 제한을 설정 하는 공용 언어 런타임 (CLR) 작업을 나타내는 값입니다. 다음 값이 지원 됩니다.  
   
--   OPR_AppDomainUnload  
+- OPR_AppDomainUnload  
   
--   OPR_ProcessExit  
+- OPR_ProcessExit  
   
--   OPR_ThreadRudeAbortInCriticalRegion  
+- OPR_ThreadRudeAbortInCriticalRegion  
   
--   OPR_ThreadRudeAbortInNonCriticalRegion  
+- OPR_ThreadRudeAbortInNonCriticalRegion  
   
  `dwMilliseconds`  
  [in] 새 제한 시간 값을 시간 (밀리초)입니다. 무한 값 이면 작업이 시간 초과 되지 않습니다.  

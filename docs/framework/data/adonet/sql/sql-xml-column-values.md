@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d97ce4da-f09c-4d1e-85b7-a0ccedd7246a
 ms.openlocfilehash: 803357f9ae97eee2cbbf5e777dbc1210ded26ab2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670133"
 ---
 # <a name="sql-xml-column-values"></a>SQL XML 열 값
 SQL Server를 지원 합니다 `xml` 데이터 형식으로 개발자의 표준 동작을 사용 하 여이 형식이 포함 된 결과 집합을 검색할 수 있습니다는 <xref:System.Data.SqlClient.SqlCommand> 클래스. `xml` 열은 다른 열과 마찬가지 방식으로 검색할 수 있지만(예: <xref:System.Data.SqlClient.SqlDataReader>로) 열의 내용을 XML로 작업하려면 <xref:System.Xml.XmlReader>를 사용해야 합니다.  

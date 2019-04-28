@@ -6,11 +6,11 @@ helpviewer_keywords:
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
 ms.openlocfilehash: 829df66f49d5df5f5c8cf8d2b6cfa74f0a2172dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609895"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>UI 자동화 클라이언트에 대한 컨트롤 패턴 매핑
 > [!NOTE]
@@ -20,11 +20,11 @@ ms.locfileid: "59101135"
   
  다음 표는 컨트롤 패턴을 다음과 같은 범주로 정리하여 보여줍니다.  
   
--   지원됩니다. 컨트롤은 이 컨트롤 패턴을 지원해야 합니다.  
+- 지원됩니다. 컨트롤은 이 컨트롤 패턴을 지원해야 합니다.  
   
--   조건부 지원입니다. 컨트롤은 컨트롤의 상태에 따라 이 컨트롤 패턴을 지원할 수 있습니다.  
+- 조건부 지원입니다. 컨트롤은 컨트롤의 상태에 따라 이 컨트롤 패턴을 지원할 수 있습니다.  
   
--   지원되지 않습니다. 컨트롤은 이 컨트롤 패턴을 지원하지 않습니다. 사용자 지정 컨트롤이 이 컨트롤 패턴을 지원할 수 있습니다.  
+- 지원되지 않습니다. 컨트롤은 이 컨트롤 패턴을 지원하지 않습니다. 사용자 지정 컨트롤이 이 컨트롤 패턴을 지원할 수 있습니다.  
   
 > [!NOTE]
 >  일부 컨트롤은 컨트롤 기능에 따라 몇몇 컨트롤 패턴을 조건부로 지원합니다. 예를 들어, 메뉴 항목 컨트롤은 메뉴 컨트롤의 기능에 따라 <xref:System.Windows.Automation.InvokePattern>, <xref:System.Windows.Automation.ExpandCollapsePattern>, <xref:System.Windows.Automation.TogglePattern>또는 <xref:System.Windows.Automation.SelectionItemPattern> 컨트롤 패턴을 조건부로 지원합니다.  

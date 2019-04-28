@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 50855b30-d5fe-49a9-89d3-3f1bfd670958
 ms.openlocfilehash: fd2d98852ca44e3485ddcf4be29d505b39011698
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614429"
 ---
 # <a name="using-annotation-in-queries"></a>쿼리에 주석 사용
 주석을 사용하여 빌드 시간 후에 구성될 수 있는 값으로 추적 레코드에 임의 태그를 지정할 수 있습니다. "Mail Server"으로 태그를 지정 하는 여러 워크플로에 걸쳐 여러 추적 레코드를 사용할 수는 예를 들어 "메일 Server1" = =. 이렇게 하면 나중에 추적 레코드를 쿼리할 때 이 태그를 사용하여 모든 레코드를 쉽게 찾을 수 있습니다.  

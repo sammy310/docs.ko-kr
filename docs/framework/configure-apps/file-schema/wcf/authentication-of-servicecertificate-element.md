@@ -3,11 +3,11 @@ title: <authentication> <serviceCertificate> 요소
 ms.date: 03/30/2017
 ms.assetid: 733b67b4-08a1-4d25-9741-10046f9357ef
 ms.openlocfilehash: b96d53312d672eebd67de82f69cd9a0a2b5bd22e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59117771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704468"
 ---
 # <a name="authentication-of-servicecertificate-element"></a>\<인증 >의 \<serviceCertificate > 요소
 SSL/TLS 협상을 사용하여 가져온 서비스 인증서를 인증하기 위해 클라이언트 프록시에서 사용하는 설정을 지정합니다.  

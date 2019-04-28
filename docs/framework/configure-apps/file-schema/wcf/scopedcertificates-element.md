@@ -3,11 +3,11 @@ title: <scopedCertificates> 요소
 ms.date: 03/30/2017
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
 ms.openlocfilehash: 73e78a6ca27ed45e1eadc7121987b75f79bc6aa5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670640"
 ---
 # <a name="scopedcertificates-element"></a>\<scopedCertificates > 요소
 인증에 대해 범위가 지정된 특정 서비스가 제공하는 X.509 인증서 컬렉션을 나타냅니다. 이 컬렉션은 일반적으로 연합 시나리오에서 보안 토큰 서비스에 대한 서비스 인증서를 지정하는 데 사용됩니다.  

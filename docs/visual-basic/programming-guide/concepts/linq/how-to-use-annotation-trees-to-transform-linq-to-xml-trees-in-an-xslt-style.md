@@ -3,11 +3,11 @@ title: '방법: LINQ to XML 트리 (Visual Basic) XSLT 스타일에서 변환할
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
 ms.openlocfilehash: a8db5f9dc29b4053321c81c9da58e12610ef63c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61613450"
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>방법: LINQ to XML 트리 (Visual Basic) XSLT 스타일에서 변환할 주석 사용
 주석을 사용하여 XML 트리를 쉽게 변환할 수 있습니다.  
@@ -24,21 +24,21 @@ ms.locfileid: "58824873"
   
  이 방법을 요약하면 다음과 같습니다.  
   
--   첫째, 트리의 요소에 대체 요소로 주석을 답니다.  
+- 첫째, 트리의 요소에 대체 요소로 주석을 답니다.  
   
--   둘째, 전체 트리를 반복하여 각 요소를 주석으로 대체하는 새 트리를 만듭니다. 이 예제에서는 `XForm`이라는 함수에서 새 트리의 반복과 생성을 구현합니다.  
+- 둘째, 전체 트리를 반복하여 각 요소를 주석으로 대체하는 새 트리를 만듭니다. 이 예제에서는 `XForm`이라는 함수에서 새 트리의 반복과 생성을 구현합니다.  
   
  이 방법을 자세히 살펴보면 다음과 같습니다.  
   
--   모양을 변환할 요소의 집합을 반환하는 LINQ to XML 쿼리를 하나 이상 실행합니다. 쿼리의 각 요소에 새 <xref:System.Xml.Linq.XElement> 개체를 주석으로 추가합니다. 이 새 요소는 변환된 새 트리에서 주석이 달린 요소를 대체합니다. 예제에 나와 있듯이 이 코드는 간단하게 작성할 수 있습니다.  
+- 모양을 변환할 요소의 집합을 반환하는 LINQ to XML 쿼리를 하나 이상 실행합니다. 쿼리의 각 요소에 새 <xref:System.Xml.Linq.XElement> 개체를 주석으로 추가합니다. 이 새 요소는 변환된 새 트리에서 주석이 달린 요소를 대체합니다. 예제에 나와 있듯이 이 코드는 간단하게 작성할 수 있습니다.  
   
--   주석으로 추가된 새 요소는 새 자식 노드를 포함할 수 있으며 원하는 모양의 하위 트리를 형성할 수 있습니다.  
+- 주석으로 추가된 새 요소는 새 자식 노드를 포함할 수 있으며 원하는 모양의 하위 트리를 형성할 수 있습니다.  
   
--   특별한 규칙이 있습니다. 새 요소의 자식 노드가 이 목적을 위해 구성된 다른 네임스페이스(이 예제에서는 네임스페이스가 `http://www.microsoft.com/LinqToXmlTransform/2007`임)에 있으면 해당 자식 요소가 새 트리에 복사되지 않습니다. 대신 네임스페이스가 위에서 언급한 특수 네임스페이스이고 요소의 로컬 이름이 `ApplyTransforms`이면 소스 트리에 있는 요소의 자식 노드가 반복되고 새 트리에 복사됩니다. 단, 주석이 달린 자식 요소는 이러한 규칙에 따라 스스로 변환됩니다.  
+- 특별한 규칙이 있습니다. 새 요소의 자식 노드가 이 목적을 위해 구성된 다른 네임스페이스(이 예제에서는 네임스페이스가 `http://www.microsoft.com/LinqToXmlTransform/2007`임)에 있으면 해당 자식 요소가 새 트리에 복사되지 않습니다. 대신 네임스페이스가 위에서 언급한 특수 네임스페이스이고 요소의 로컬 이름이 `ApplyTransforms`이면 소스 트리에 있는 요소의 자식 노드가 반복되고 새 트리에 복사됩니다. 단, 주석이 달린 자식 요소는 이러한 규칙에 따라 스스로 변환됩니다.  
   
--   이 방법은 XSL의 변환 사양과 다소 유사합니다. 일련의 노드를 선택하는 쿼리는 템플릿에 대한 XPath 식과 유사합니다. 주석으로 저장된 새 <xref:System.Xml.Linq.XElement>를 만들 코드는 XSL의 시퀀스 생성자와 유사하고 `ApplyTransforms` 요소는 XSL의 `xsl:apply-templates` 요소와 기능 면에서 유사합니다.  
+- 이 방법은 XSL의 변환 사양과 다소 유사합니다. 일련의 노드를 선택하는 쿼리는 템플릿에 대한 XPath 식과 유사합니다. 주석으로 저장된 새 <xref:System.Xml.Linq.XElement>를 만들 코드는 XSL의 시퀀스 생성자와 유사하고 `ApplyTransforms` 요소는 XSL의 `xsl:apply-templates` 요소와 기능 면에서 유사합니다.  
   
--   이 방법을 사용하는 경우의 한 가지 이점은 쿼리를 만들 때 항상 수정되지 않은 소스 트리에 대한 쿼리를 작성한다는 점입니다. 트리의 수정이 작성하고 있는 쿼리에 미치는 영향에 대해 우려할 필요가 없습니다.  
+- 이 방법을 사용하는 경우의 한 가지 이점은 쿼리를 만들 때 항상 수정되지 않은 소스 트리에 대한 쿼리를 작성한다는 점입니다. 트리의 수정이 작성하고 있는 쿼리에 미치는 영향에 대해 우려할 필요가 없습니다.  
   
 ## <a name="transforming-a-tree"></a>트리 변환  
  이 첫 번째 예제에서는 모든 `Paragraph` 노드의 이름을 `para`로 바꿉니다.  
@@ -158,7 +158,7 @@ After Transform
 ## <a name="effecting-the-transform"></a>변환에 영향 미치기  
  작은 함수인 `XForm`은 주석이 달린 원래 트리에서 변환된 새 트리를 만듭니다.  
   
--   이 함수의 의사(pseudo) 코드는 매우 간단합니다.  
+- 이 함수의 의사(pseudo) 코드는 매우 간단합니다.  
   
 ```  
 The function takes an XElement as an argument and returns an XElement.   

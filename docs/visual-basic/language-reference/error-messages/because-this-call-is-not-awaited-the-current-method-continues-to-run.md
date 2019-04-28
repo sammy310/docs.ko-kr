@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
 ms.openlocfilehash: ba0838d562ac0ec0ea531161c437dec5ce66c3f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650000"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>이 호출이 대기되지 않으므로 호출이 완료되기 전에 현재 메서드가 계속 실행됩니다.
 이 호출이 대기되지 않으므로 호출이 완료되기 전에 현재 메서드가 계속 실행됩니다. 'Await' 연산자는 호출 결과에 적용하는 것이 좋습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "59304235"
   
 ### <a name="to-address-this-warning"></a>이 경고를 해결하려면  
   
--   비동기 호출이 완료될 때까지 기다리지 않으려고 하거나 호출된 메서드가 예외를 발생시키지 않는 경우에만 경고가 표시되지 않게 해야 합니다. 이 경우 변수에 호출의 작업 결과를 할당하여 경고가 표시되지 않게 할 수 있습니다.  
+- 비동기 호출이 완료될 때까지 기다리지 않으려고 하거나 호출된 메서드가 예외를 발생시키지 않는 경우에만 경고가 표시되지 않게 해야 합니다. 이 경우 변수에 호출의 작업 결과를 할당하여 경고가 표시되지 않게 할 수 있습니다.  
   
      다음 예제는 경고를 발생시키는 방법, 경고가 표시되지 않게 하는 방법 및 호출을 대기하는 방법을 보여줍니다.  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Master-Detail data paradigm
 ms.assetid: eb8dbdd8-5871-42bb-a16b-04e655fea677
 ms.openlocfilehash: ba6c932f519ffa5c3c70ecb21eb9b5d08c40fb28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931757"
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-xml-data"></a>방법: 계층적 XML 데이터에서 마스터-세부 정보 패턴 사용
 이 예제에 사용 하 여 마스터-세부 시나리오를 구현 하는 방법을 보여 줍니다 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터입니다.  

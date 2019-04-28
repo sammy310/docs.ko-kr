@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, using transactions
 ms.assetid: 1e8d04dd-b7cf-41e7-8560-54b4381beb0f
 ms.openlocfilehash: 367abc45b9383a77ba2917030316bda17b4be98c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933135"
 ---
 # <a name="transactions-in-wcf"></a>WCF에서 트랜잭션
 Windows Communication Foundation (WCF) 트랜잭션 기능에는 여러 구성 요소를 데이터 작업을 동시에 참여할 수 있습니다. 이 단원의 항목에서는 이 기능에 대해 자세히 설명합니다.  

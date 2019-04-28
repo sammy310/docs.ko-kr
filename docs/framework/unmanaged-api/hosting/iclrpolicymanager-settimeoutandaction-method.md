@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 18b896cebea83071bb2a8756157b48c62dcfda7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638712"
 ---
 # <a name="iclrpolicymanagersettimeoutandaction-method"></a>ICLRPolicyManager::SetTimeoutAndAction 메서드
 지정된 된 작업에 대 한 제한 시간 값을 설정 하 고는 CLR (공용 언어 런타임)는 작업이 수행 될 때 수행 해야 정책 작업을 지정 합니다.  
@@ -41,13 +41,13 @@ HRESULT SetTimeoutAndAction (
  `operation`  
  [in] 중 하나는 [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) 값을 나타내는 시간 제한 및 정책을 설정 하는 작업의 `action`합니다. 다음 값이 지원 됩니다.  
   
--   OPR_AppDomainUnload  
+- OPR_AppDomainUnload  
   
--   OPR_ProcessExit  
+- OPR_ProcessExit  
   
--   OPR_ThreadRudeAbortInCriticalRegion  
+- OPR_ThreadRudeAbortInCriticalRegion  
   
--   OPR_ThreadRudeAbortInNonCriticalRegion  
+- OPR_ThreadRudeAbortInNonCriticalRegion  
   
  `dwMilliseconds`  
  [in] 새 제한 시간 값을 시간 (밀리초)입니다. 값이 무한 원인 `operation` 을 시간 초과 되지 않습니다.  

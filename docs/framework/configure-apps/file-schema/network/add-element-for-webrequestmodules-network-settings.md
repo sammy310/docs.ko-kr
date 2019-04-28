@@ -11,11 +11,11 @@ helpviewer_keywords:
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
 ms.openlocfilehash: 4c1116c088c12ad3859714c8d75704d0156c12f7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705144"
 ---
 # <a name="add-element-for-webrequestmodules-network-settings"></a>\<추가 > webRequestModules (네트워크 설정)에 대 한 요소
 응용 프로그램에 사용자 지정 웹 요청 모듈을 추가합니다.  

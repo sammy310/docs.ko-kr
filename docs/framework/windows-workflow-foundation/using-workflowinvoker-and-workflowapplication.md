@@ -3,11 +3,11 @@ title: WorkflowInvoker 및 WorkflowApplication 사용
 ms.date: 03/30/2017
 ms.assetid: cd0e583c-a3f9-4fa2-b247-c7b3368c48a7
 ms.openlocfilehash: 29d152cd6011fb3b55aae60726d095dc44dd23a5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669565"
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>WorkflowInvoker 및 WorkflowApplication 사용
 Windows WF (Workflow Foundation)는 호스팅 워크플로의 여러 메서드를 제공 합니다. <xref:System.Activities.WorkflowInvoker> 는 메서드 호출과 같은 방식으로 워크플로를 호출하기 위한 간단한 방법을 제공하며, 지속성을 사용하지 않는 워크플로에만 사용될 수 있습니다. <xref:System.Activities.WorkflowApplication>은 수명 주기 이벤트 알림, 실행 제어, 책갈피 다시 시작 및 지속성을 비롯한 다양한 워크플로 실행 모델을 제공합니다. <xref:System.ServiceModel.Activities.WorkflowServiceHost>는 메시징 활동에 대한 지원을 제공하며 주로 워크플로 서비스에 사용됩니다. 이 항목에서는 <xref:System.Activities.WorkflowInvoker> 및 <xref:System.Activities.WorkflowApplication>을 사용하는 워크플로 호스팅을 소개합니다. 사용 하 여 워크플로 호스트 하는 방법에 대 한 자세한 내용은 <xref:System.ServiceModel.Activities.WorkflowServiceHost>를 참조 하세요 [워크플로 서비스](../wcf/feature-details/workflow-services.md) 하 고 [호스팅 워크플로 서비스 개요](../wcf/feature-details/hosting-workflow-services-overview.md)합니다.  

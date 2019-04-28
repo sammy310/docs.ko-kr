@@ -3,11 +3,11 @@ title: ADO.NET 응용 프로그램 보안
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
 ms.openlocfilehash: 32d3de15242aaf9cfacd9371289a5a0a675f884b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664196"
 ---
 # <a name="securing-adonet-applications"></a>ADO.NET 응용 프로그램 보안
 보안 ADO.NET 응용 프로그램을 작성하려면 사용자 입력의 유효성을 확인하지 않는 것과 같은 일반적인 코딩 문제를 피하는 것 외에도 여러 부분을 고려해야 합니다. 데이터에 액세스하는 응용 프로그램에는 공격자가 중요한 데이터를 검색, 조작 또는 제거하는 데 악용할 수 있는 여러 잠재적인 오류 지점이 있습니다. 따라서 응용 프로그램 디자인 단계의 위협 모델링 과정에서부터 최종 배포와 진행 중인 유지 관리에 이르기까지 보안의 모든 측면을 이해해야 합니다.  

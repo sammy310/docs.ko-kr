@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d98a0c1c3187b81c44fae6eee91d975169a40045
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61627946"
 ---
 # <a name="ememoryavailable-enumeration"></a>EMemoryAvailable 열거형
 컴퓨터의 사용 가능한 실제 메모리의 크기를 나타내는 값을 포함 합니다. 이러한 값을 이벤트에 메모리에서 반환 하는 상위 및 하위 논리적으로 매핑할는 `CreateMemoryResourceNotification` Windows api에서 함수입니다.  

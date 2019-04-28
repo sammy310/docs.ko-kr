@@ -9,11 +9,11 @@ helpviewer_keywords:
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
 ms.openlocfilehash: 15b37c71e6643b588c0378510965a9a3e7cb56e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61672577"
 ---
 # <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>방법: UserControl의 런타임 동작 테스트
 개발 하는 경우는 <xref:System.Windows.Forms.UserControl>, 해당 런타임 동작을 테스트 해야 합니다. 별도 Windows 기반 응용 프로그램 프로젝트를 만들고 테스트 폼에서 컨트롤을 배치할 수 있지만이 절차를 편리 하 게 아닙니다. 빠르고 쉽게 방법을 사용 하는 것은 **UserControl 테스트 컨테이너** Visual Studio에서 제공 합니다. 이 테스트 컨테이너는 Windows 컨트롤 라이브러리 프로젝트에서 직접 시작합니다.  

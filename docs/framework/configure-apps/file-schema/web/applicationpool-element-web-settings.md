@@ -6,11 +6,11 @@ helpviewer_keywords:
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
 ms.openlocfilehash: 16207c3f3c711d06b71cafb2b67c5d29f3f14e39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698579"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<응용 프로그램 풀 > 요소 (웹 설정)
 ASP.NET에서 ASP.NET 응용 프로그램 통합된 모드에서 실행 중인 경우 프로세스 전반 동작을 관리 하는 데 사용 되는 구성 설정을 지정 [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 이상 버전.  
@@ -66,11 +66,11 @@ ASP.NET에서 ASP.NET 응용 프로그램 통합된 모드에서 실행 중인 �
 ## <a name="example"></a>예제  
  다음 예제에서는 다음과 같은 경우에서 aspnet.config 파일에서 ASP.NET 프로세스 전반 동작을 구성 하는 방법을 보여 줍니다.  
   
--   응용 프로그램에서 호스트 되는 [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 응용 프로그램 풀.  
+- 응용 프로그램에서 호스트 되는 [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 응용 프로그램 풀.  
   
--   [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 통합된 모드에서 실행 됩니다.  
+- [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 통합된 모드에서 실행 됩니다.  
   
--   응용 프로그램을 사용 하는 [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] 이상 버전.  
+- 응용 프로그램을 사용 하는 [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] 이상 버전.  
   
  예제에서 값은 기본값입니다.  
   

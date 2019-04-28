@@ -3,11 +3,11 @@ title: <add> <claimTypeRequirements> 요소
 ms.date: 03/30/2017
 ms.assetid: 3234cd45-1478-468e-8b19-5c50815c4786
 ms.openlocfilehash: 47eb9f95fd024b7df24a16781b3d89fe6deb0b8c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701153"
 ---
 # <a name="add-of-claimtyperequirements-element"></a>\<추가 >의 \<claimTypeRequirements > 요소
 페더레이션 자격 증명에 표시되어야 하는 필수 클레임 및 선택적 클레임의 형식을 지정합니다. 예를 들어, 서비스는 특정 집합의 클레임 형식이어야 하는 들어오는 자격 증명에 대한 요구 사항을 기술합니다.  

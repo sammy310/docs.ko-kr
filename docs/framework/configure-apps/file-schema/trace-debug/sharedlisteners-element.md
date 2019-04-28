@@ -12,11 +12,11 @@ helpviewer_keywords:
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
 ms.openlocfilehash: 48cb59dfc0871822bfcff5e16d4283008a411479
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701218"
 ---
 # <a name="sharedlisteners-element"></a>\<sharedListeners > 요소
 소스 또는 추적 요소가 참조할 수 있는 수신기가 포함되어 있습니다.  이러한 수신기 기본적으로 모든 추적을 받지 않습니다 하 고 런타임 시 이러한 수신기를 검색할 수 없는 합니다. 공유 수신기로 식별 하는 수신기 이름으로 추적 소스를 추가할 수 있습니다.  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
 ms.openlocfilehash: fc2b7ed2004b842116d051b393f00506428def61
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665938"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>방법: 람다 식 (Visual Basic) 만들기
 A *람다 식* 은 함수 또는 서브루틴에 이름이 없습니다입니다. 람다 식은 대리자 형식이 유효한 모든 곳에서 사용할 수 있습니다.  

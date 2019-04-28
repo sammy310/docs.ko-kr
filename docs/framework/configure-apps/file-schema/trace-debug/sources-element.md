@@ -10,11 +10,11 @@ helpviewer_keywords:
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
 ms.openlocfilehash: 9104a4a302aa9c6094adbc13396074fdd4db4bbc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701270"
 ---
 # <a name="sources-element"></a>\<소스 > 요소
 추적 메시지를 시작 하는 추적 소스를 지정 합니다.  

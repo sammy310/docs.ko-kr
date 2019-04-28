@@ -10,11 +10,11 @@ helpviewer_keywords:
 - controls [Windows Forms], binding to DBNull values
 ms.assetid: 96494e6f-5f40-4f83-af97-bbd7192c2af8
 ms.openlocfilehash: cc3dde0db3dad6faff548951ff06a39d23248d53
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666562"
 ---
 # <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>방법: DBNull 데이터베이스 값에 Windows Forms 컨트롤 바인딩
 Windows Forms 컨트롤을 데이터 소스에 바인딩하고 데이터 소스가 <xref:System.DBNull> 값을 반환하는 경우 이벤트를 처리, 형식 지정 또는 구문 분석하지 않고 적절한 값을 대체할 수 있습니다. <xref:System.Windows.Forms.Binding.NullValue%2A> 속성은 데이터 소스 값을 형식 지정 또는 구문 분석할 때 <xref:System.DBNull>을 지정된 개체로 변환합니다.  
@@ -30,7 +30,7 @@ Windows Forms 컨트롤을 데이터 소스에 바인딩하고 데이터 소스�
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   System, System.Data, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조  
+- System, System.Data, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조  
   
  Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 내용은 [명령줄에서 빌드](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 하거나 [csc.exe를 사용한 명령줄 빌드](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다. 또한 새 프로젝트에 코드를 붙여 넣어 Visual Studio에서이 예제를 빌드할 수 있습니다.  
   

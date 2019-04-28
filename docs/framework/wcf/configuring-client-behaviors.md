@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: df5b32fa-e73b-4e8e-b66f-357c748e0173
 ms.openlocfilehash: 83fdc77bd17115f9952f2ca6c494ed0eb873cd9c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608777"
 ---
 # <a name="configuring-client-behaviors"></a>클라이언트 동작 구성
 두 가지 방법으로 동작을 구성 하는 Windows Communication Foundation (WCF):에 정의 된 동작 구성을 참조 하거나는 `<behavior>` 또는 프로그래밍 방식으로 호출을 클라이언트 응용 프로그램 구성 파일의 섹션 응용 프로그램입니다. 이 항목에서는 두 접근 방식 모두에 대해 설명합니다.  

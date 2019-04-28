@@ -10,11 +10,11 @@ helpviewer_keywords:
 - rendering images [WPF]
 ms.assetid: 5b92e74b-1b56-4756-ac64-d5e9e08d9854
 ms.openlocfilehash: 967159894e25721bdf380f851712e91d76088f87
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59205305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696268"
 ---
 # <a name="how-to-use-the-image-element"></a>방법: Image 요소 사용
 사용 하 여 응용 프로그램에서 이미지를 포함 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.Image> 요소입니다.  

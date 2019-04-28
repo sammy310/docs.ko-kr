@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 567e6533a9a9ac718f8b5acac769295c104f7f3c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61628101"
 ---
 # <a name="getcorsystemdirectory-function"></a>GetCORSystemDirectory 함수
 프로세스에 로드 되는 공용 언어 런타임 (CLR)의 설치 디렉터리를 반환 합니다. 설치 디렉터리는 정규화 된 이름, 예를 들어, "c:\windows\microsoft.net\framework\v1.0.3705"입니다.  

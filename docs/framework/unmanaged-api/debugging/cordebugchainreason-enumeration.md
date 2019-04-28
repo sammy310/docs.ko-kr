@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cac790ebbf25ee3095db293ba90612be37fff9b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609232"
 ---
 # <a name="cordebugchainreason-enumeration"></a>CorDebugChainReason 열거형
 호출 체인의 시작 이유를 하나 이상 나타냅니다.  

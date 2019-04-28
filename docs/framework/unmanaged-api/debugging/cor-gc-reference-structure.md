@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e1e31e95473136bf7e7c196eacc278fa8a1caab2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59093659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609466"
 ---
 # <a name="corgcreference-structure"></a>COR_GC_REFERENCE 구조체
 가비지 수집할 개체에 대한 정보를 포함합니다.  
@@ -49,19 +49,19 @@ typedef struct _COR_GC_REFERENCE {
 ## <a name="remarks"></a>설명  
  합니다 `type` 필드를 [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) 참조에서 제공 하는 위치를 나타내는 열거형 값입니다. 특정 `COR_GC_REFERENCE` 값에는 다음과 같은 유형의 관리 되는 개체를 반영할 수 있습니다.  
   
--   모든 관리 되는 스택 개체 (`CorGCReferenceType.CorReferenceStack`). 공용 언어 런타임에서 생성 된 개체를 비롯 하 여 관리 코드에 대 한 라이브 참조가 포함 됩니다.  
+- 모든 관리 되는 스택 개체 (`CorGCReferenceType.CorReferenceStack`). 공용 언어 런타임에서 생성 된 개체를 비롯 하 여 관리 코드에 대 한 라이브 참조가 포함 됩니다.  
   
--   개체 핸들 테이블의 (`CorGCReferenceType.CorHandle*`). 여기에 강력한 참조 (`HNDTYPE_STRONG` 및 `HNDTYPE_REFCOUNT`) 및 모듈의 정적 변수.  
+- 개체 핸들 테이블의 (`CorGCReferenceType.CorHandle*`). 여기에 강력한 참조 (`HNDTYPE_STRONG` 및 `HNDTYPE_REFCOUNT`) 및 모듈의 정적 변수.  
   
--   종료자 큐에서 개체 (`CorGCReferenceType.CorReferenceFinalizer`). 종료자 큐는 종료 자가 실행 될 때까지 개체 루트입니다.  
+- 종료자 큐에서 개체 (`CorGCReferenceType.CorReferenceFinalizer`). 종료자 큐는 종료 자가 실행 될 때까지 개체 루트입니다.  
   
  `extraData` 필드 참조의 원본 (또는 유형)에 따라 추가 데이터를 포함 합니다. 가능한 값은 다음과 같습니다.  
   
--   `DependentSource`. 경우는 `type` 됩니다 `CorGCREferenceType.CorHandleStrongDependent`,이 필드는 활성 상태로 유지 하는 경우 루트 개체에서 가비지 수집 되도록 하는 개체 `COR_GC_REFERENCE.Location`합니다.  
+- `DependentSource`. 경우는 `type` 됩니다 `CorGCREferenceType.CorHandleStrongDependent`,이 필드는 활성 상태로 유지 하는 경우 루트 개체에서 가비지 수집 되도록 하는 개체 `COR_GC_REFERENCE.Location`합니다.  
   
--   `RefCount`. 경우는 `type` 는 `CorGCREferenceType.CorHandleStrongRefCount`,이 필드는 핸들의 참조 횟수입니다.  
+- `RefCount`. 경우는 `type` 는 `CorGCREferenceType.CorHandleStrongRefCount`,이 필드는 핸들의 참조 횟수입니다.  
   
--   `Size`. 경우는 `type` 는 `CorGCREferenceType.CorHandleStrongSizedByref`,이 필드는 가비지 수집기가 개체 루트 계산 되는 개체 트리의 마지막 크기입니다. 이 계산은 반드시 최신는 참고 합니다.  
+- `Size`. 경우는 `type` 는 `CorGCREferenceType.CorHandleStrongSizedByref`,이 필드는 가비지 수집기가 개체 루트 계산 되는 개체 트리의 마지막 크기입니다. 이 계산은 반드시 최신는 참고 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

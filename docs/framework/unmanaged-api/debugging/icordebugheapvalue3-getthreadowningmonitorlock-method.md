@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1678f1de7c23387f028348dadbc7b61e2cdc035c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701023"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>ICorDebugHeapValue3::GetThreadOwningMonitorLock 메서드
 이 개체의 모니터 잠금을 소유 하는 관리 되는 스레드를 반환 합니다.  
@@ -56,9 +56,9 @@ HRESULT GetThreadOwningMonitorLock (
 ## <a name="remarks"></a>설명  
  이 개체의 모니터 잠금을 소유 하는 관리 되는 스레드:  
   
--   메서드는 S_OK를 반환합니다.  
+- 메서드는 S_OK를 반환합니다.  
   
--   Thread 개체 스레드가 종료 될 때까지 유효 합니다.  
+- Thread 개체 스레드가 종료 될 때까지 유효 합니다.  
   
  이 개체에 대 한 모니터 잠금을 소유 하는 관리 되는 스레드가 없는 경우 `ppThread` 및 `pAcquisitionCount` 변경 되지 메서드에서 S_FALSE를 반환 합니다.  
   

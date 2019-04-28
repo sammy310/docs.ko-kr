@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
 ms.openlocfilehash: 01fb70a7b37d6c9c119fff16a9d680d4139421cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664131"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>DataView로 정렬(LINQ to DataSet)
 특정 조건을 기준으로 데이터를 정렬한 다음 UI 컨트롤을 통해 클라이언트에 데이터를 제공하는 기능은 데이터 바인딩의 중요한 기능입니다. <xref:System.Data.DataView>에서는 데이터를 정렬하여 특정 정렬 기준에 따라 정렬된 데이터 행을 반환하는 여러 방법을 제공합니다. 문자열 기반 하는 것 외에도 정렬 기능 <xref:System.Data.DataView> 도 사용할 수 있도록 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 정렬 기준에 대 한 식입니다. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 문자열 기반 정렬 보다 훨씬 더 복잡 하 고 강력한 정렬 작업에 대 한 식을 사용 합니다. 이 항목에서는 <xref:System.Data.DataView>를 사용하여 정렬하는 두 가지 방법을 모두 설명합니다.  
@@ -65,9 +65,9 @@ ms.locfileid: "59109813"
 ## <a name="clearing-the-sort"></a>정렬 지우기  
  <xref:System.Data.DataView>의 정렬 정보는 설정된 후에 <xref:System.Data.DataView.Sort%2A> 속성을 사용하여 지울 수 있습니다. 두 가지 방법으로 <xref:System.Data.DataView>의 정렬 정보를 지울 수 있습니다.  
   
--   <xref:System.Data.DataView.Sort%2A> 속성을 `null`으로 설정합니다.  
+- <xref:System.Data.DataView.Sort%2A> 속성을 `null`으로 설정합니다.  
   
--   <xref:System.Data.DataView.Sort%2A> 속성을 빈 문자열로 설정합니다.  
+- <xref:System.Data.DataView.Sort%2A> 속성을 빈 문자열로 설정합니다.  
   
 ### <a name="example"></a>예제  
  다음 예제에서는 쿼리에서 <xref:System.Data.DataView>를 만든 다음 <xref:System.Data.DataView.Sort%2A> 속성을 빈 문자열로 설정하여 정렬을 지웁니다.  

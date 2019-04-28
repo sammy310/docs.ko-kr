@@ -3,11 +3,11 @@ title: 연산자 오버로드
 description: 전역 수준에서 클래스 또는 레코드 형식에 산술 연산자를 오버 로드 하는 방법을 알아봅니다 F#입니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: c4b52b02522b750aa55ca6cf4097295e35ab1739
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666250"
 ---
 # <a name="operator-overloading"></a>연산자 오버로드
 
@@ -155,6 +155,6 @@ static member (~-) (v : Vector)
 
 키워드 `inline` 호출 코드에 가장 잘 통합 되는 작은 함수는 전역 연산자를 사용 하 여 자주 사용 됩니다. 또한 making 연산자 함수 인라인을 사용 하면 제네릭 정적으로 확인 된 코드를 생성 하기 위해 정적으로 확인 된 형식 매개 변수를 사용 하 여 작업할 수 있도록 합니다. 자세한 내용은 [인라인 함수](functions/inline-functions.md) 하 고 [정적으로 확인 한 형식 매개](generics/statically-resolved-type-parameters.md)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [멤버](members/index.md)

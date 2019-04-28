@@ -6,11 +6,11 @@ helpviewer_keywords:
 - security [WCF], authorization
 ms.assetid: 8ea0b552-af65-45b0-a157-c6c111b8ce5e
 ms.openlocfilehash: 26aa445f3136fcb16e2eb9cdce6b245476297dfd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650576"
 ---
 # <a name="authorization-in-wcf"></a>WCF에서 권한 부여
 권한 부여는 서비스나 파일과 같은 리소스에 대한 액세스 및 권한을 제어하는 프로세스입니다. 이 섹션의에서 항목에서는에 Windows Communication Foundation (WCF)에서 다양 한 방법으로 기본 작업을 수행 하는 방법을 보여 줍니다.  

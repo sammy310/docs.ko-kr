@@ -10,11 +10,11 @@ helpviewer_keywords:
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
 ms.openlocfilehash: 50e36aa13439bafcca27a7153a8c5d6043f03975
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906973"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>상수 및 리터럴 데이터 형식(Visual Basic)
 리터럴 값인 변수의 값 또는 숫자 3 또는 문자열 "Hello"와 같은 식의 결과가 아니라 자체적으로 표현 됩니다. 상수는 리터럴 대신 해당 값이 달라질 변수와 달리 프로그램 전체에서이 동일한 값을 유지 하는 의미 있는 이름입니다.  

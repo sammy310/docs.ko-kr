@@ -8,11 +8,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], removing columns
 ms.assetid: 9e709f35-0a8c-4e7e-b4c4-bacb7a834077
 ms.openlocfilehash: 80ede9b7bc5bf667e03dc0a745fbc0b5f6c2663a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640475"
 ---
 # <a name="how-to-add-and-remove-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열 추가 및 제거
 Windows Forms <xref:System.Windows.Forms.DataGridView> 컨트롤 데이터를 표시 하기 위해 열을 포함 해야 합니다. 수동으로 컨트롤을 채우는 하려는 경우에 직접 열을 추가 해야 합니다. 또는 생성 되 고 열을 자동으로 채워지도록 데이터 원본에 컨트롤을 바인딩할 수 있습니다. 데이터 원본에 표시 하려는 것 보다 많은 열이 있으면 필요 없는 열을 제거할 수 있습니다.  

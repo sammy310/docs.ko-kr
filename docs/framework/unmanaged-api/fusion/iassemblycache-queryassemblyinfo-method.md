@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 81b647032b2e9474e3b4472552ed884cec92ffc3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697526"
 ---
 # <a name="iassemblycachequeryassemblyinfo-method"></a>IAssemblyCache::QueryAssemblyInfo 메서드
 지정된 된 어셈블리에 대 한 요청 된 데이터를 가져옵니다.  
@@ -41,9 +41,9 @@ HRESULT QueryAssemblyInfo (
  `dwFlags`  
  [in] 같은 값이 지원에 정의 된 플래그입니다. 다음 값이 지원 됩니다.  
   
--   QUERYASMINFO_FLAG_VALIDATE (0x00000001)  
+- QUERYASMINFO_FLAG_VALIDATE (0x00000001)  
   
--   QUERYASMINFO_FLAG_GETSIZE (0X00000002)  
+- QUERYASMINFO_FLAG_GETSIZE (0X00000002)  
   
  `pszAssemblyName`  
  [in] 데이터를 검색 하는 어셈블리의 이름입니다.  

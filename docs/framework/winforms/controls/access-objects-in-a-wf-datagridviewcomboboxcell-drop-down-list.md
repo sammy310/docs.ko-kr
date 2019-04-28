@@ -10,11 +10,11 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], accessing objects in DataGridViewComboBoxCell drop-down lists
 ms.assetid: bcbe794a-d1fa-47f8-b5a3-5f085b32097d
 ms.openlocfilehash: 17b7c93effe9338a9e2d6cb207a948a956d9b666
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640432"
 ---
 # <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>방법: Windows Forms DataGridViewComboBoxCell 드롭다운 목록에서 개체 액세스
 같은 합니다 <xref:System.Windows.Forms.ComboBox> 컨트롤을 <xref:System.Windows.Forms.DataGridViewComboBoxColumn> 및 <xref:System.Windows.Forms.DataGridViewComboBoxCell> 형식을 사용 하면 임의의 개체 드롭다운 목록에 추가할 수입니다. 이 기능을 사용 하 여 별도 컬렉션에서 해당 개체를 저장 하지 않고 드롭다운 목록에서 복잡 한 상태를 나타낼 수 있습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "59334278"
   
 ### <a name="to-retrieve-the-currently-selected-business-object"></a>현재 선택 된 비즈니스 개체를 검색 하려면  
   
--   셀을 가져옵니다 <xref:System.Windows.Forms.DataGridViewCell.Value%2A> 속성 및 비즈니스 개체 형식으로 캐스팅 합니다.  
+- 셀을 가져옵니다 <xref:System.Windows.Forms.DataGridViewCell.Value%2A> 속성 및 비즈니스 개체 형식으로 캐스팅 합니다.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#120](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#120)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#120](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#120)]  
@@ -66,7 +66,7 @@ ms.locfileid: "59334278"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   System 및 System.Windows.Forms 어셈블리에 대한 참조  
+- System 및 System.Windows.Forms 어셈블리에 대한 참조  
   
 ## <a name="see-also"></a>참고자료
 

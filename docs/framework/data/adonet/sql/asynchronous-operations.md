@@ -3,11 +3,11 @@ title: 비동기 작업
 ms.date: 03/30/2017
 ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
 ms.openlocfilehash: 72c2cc33185cb7fba5b8c8ce8d3805a6bb76f8d7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663975"
 ---
 # <a name="asynchronous-operations"></a>비동기 작업
 명령 실행 등의 일부 데이터베이스 작업은 완료하는 데 시간이 오래 걸릴 수 있습니다. 이 경우 단일 스레드 응용 프로그램에서는 다른 작업을 차단하고 명령이 종료되기를 기다린 다음 자신의 작업을 계속 수행할 수 있습니다. 그러나 장기 실행 작업을 배경 스레드에 할당할 수 있으면 작업을 수행하는 동안 전경 스레드를 계속 활성화된 상태로 유지할 수 있습니다. 예를 들어, Windows 응용 프로그램에서 장기 실행 작업을 배경 스레드에 위임하면 작업을 실행하면서 사용자 인터페이스 스레드가 응답을 유지할 수 있습니다.  

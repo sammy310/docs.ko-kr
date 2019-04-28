@@ -3,11 +3,11 @@ title: 엔터티 데이터 모델
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
 ms.openlocfilehash: 8e96890d97f652295a3fdb67c48ec37710280eec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667147"
 ---
 # <a name="entity-data-model"></a>엔터티 데이터 모델
 EDM(엔터티 데이터 모델)은 저장된 폼에 관계없이 데이터 구조를 설명하는 개념 집합입니다. EDM은 Peter Chen이 1976년에 설명한 엔터티-관계 모델에서 차용하지만 엔터티-관계 모델을 기반으로 하여 기존의 사용을 확장합니다.  

@@ -1,13 +1,7 @@
 ---
-title: F# 언어 참조
-description: 찾을 F# 언어 토큰, 개념, 형식, 식 및 컴파일러 지원 구문 항목에 대 한이 참조에서 언어 기능 정보입니다.
+title: 'F# 언어 참조'
+description: '찾을 F# 언어 토큰, 개념, 형식, 식 및 컴파일러 지원 구문 항목에 대 한이 참조에서 언어 기능 정보입니다.'
 ms.date: 05/16/2016
-ms.openlocfilehash: b70264b44b0820993cd77cb6c4f95a1547783174
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846638"
 ---
 # <a name="f-language-reference"></a>F# 언어 참조
 
@@ -95,7 +89,7 @@ ms.locfileid: "57846638"
 |[루프: `for...in` Expression](loops-for-in-expression.md)|범위 식, 시퀀스, 목록, 배열, 열거형을 지원하는 기타 구문 등 열거 가능한 컬렉션에서 특정 패턴의 일치를 반복하는 데 사용되는 루프 구문인 `for...in` 식에 대해 설명합니다.|
 |[루프: `while...do` Expression](loops-while-do-expression.md)|지정된 테스트 조건이 참인 동안 반복 실행(루프)을 수행하는 데 사용되는 `while...do` 식에 대해 설명합니다.|
 |[개체 식](object-expressions.md)|동적으로 생성된 익명 개체 형식의 새 인스턴스를 만드는 개체 식에 대해 설명합니다. 익명 개체 형식은 기존의 기본 형식, 인터페이스 또는 인터페이스의 집합을 기반으로 합니다.|
-|[지연 식](lazy-expressions.md)|즉시 평가 되지 않습니다 하지만 결과 실제로 필요한 경우 대신 계산 하는 계산 인 지연 식을 설명 합니다.|
+|[Lazy 식](lazy-expressions.md)|즉시 평가 되지 않습니다 하지만 결과 실제로 필요한 경우 대신 계산 하는 계산 인 지연 식을 설명 합니다.|
 |[계산 식](computation-expressions.md)|제어 흐름 구문 및 바인딩을 사용하여 순차화하고 결합할 수 있는 계산을 작성하도록 간편한 구문을 제공하는 F#의 계산 식에 대해 설명합니다. 함수형 프로그램에서 데이터, 컨트롤 및 부작용을 관리하는 데 사용할 수 있는 함수형 프로그래밍 기능인 *monads*에 대한 간편한 구문을 제공하는 데 사용할 수 있습니다. 계산 식의 한 가지 형식인 비동기 워크플로는 비동기 및 병렬 계산을 지원합니다. 자세한 내용은 [비동기 워크플로](asynchronous-workflows.md)를 참조하세요.|
 |[비동기 워크플로](asynchronous-workflows.md)|동기 코드를 자연스럽게 작성하는 방식과 매우 유사한 방식으로 비동기 코드를 작성할 수 있도록 하는 언어 기능인 비동기 워크플로에 대해 설명합니다.|
 |[코드 인용](code-quotations.md)|F# 코드 식을 프로그래밍 방식으로 생성하여 사용할 수 있도록 지원하는 언어 기능인 코드 인용에 대해 설명합니다.|

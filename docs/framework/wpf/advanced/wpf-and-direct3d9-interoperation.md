@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
 ms.openlocfilehash: 38f5eb36e3e5c055c5a354a67e15cde8049a2967
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669205"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>WPF 및 Direct3D9 상호 운용성
 Windows Presentation Foundation (WPF) 응용 프로그램에서 호스팅할 Direct3D9 콘텐츠를 포함할 수 있습니다. 이 항목에서는 WPF를 사용 하 여 효율적으로 상호 운용 되도록 Direct3D9 콘텐츠를 만드는 방법을 설명 합니다.  
@@ -32,9 +32,9 @@ Windows Presentation Foundation (WPF) 응용 프로그램에서 호스팅할 Dir
   
  다음 방법 중 하나를 호출 하 여 장치를 만듭니다.  
   
--   `IDirect3D9 * Direct3DCreate9(UINT SDKVersion);`  
+- `IDirect3D9 * Direct3DCreate9(UINT SDKVersion);`  
   
--   `HRESULT Direct3DCreate9Ex(UINT SDKVersion, IDirect3D9Ex **ppD3D);`  
+- `HRESULT Direct3DCreate9Ex(UINT SDKVersion, IDirect3D9Ex **ppD3D);`  
   
  Windows Vista 또는 이후 운영 체제에서 사용 된 `Direct3DCreate9Ex` Windows 표시 드라이버 모델 (WDDM)를 사용 하도록 구성 된 표시를 사용 하 여 메서드. 사용 된 `Direct3DCreate9` 다른 플랫폼에서 메서드.  
   
@@ -97,11 +97,11 @@ Windows Presentation Foundation (WPF) 응용 프로그램에서 호스팅할 Dir
   
  세 가지 방법으로 크기 조정 처리할 수 있습니다.  
   
--   레이아웃 시스템에 참여 하 고 크기를 변경할 경우 새 화면을 만듭니다. 가 소진 되어 수도 비디오 메모리 조각화 때문에 화면을 너무 많이 만들지 마십시오.  
+- 레이아웃 시스템에 참여 하 고 크기를 변경할 경우 새 화면을 만듭니다. 가 소진 되어 수도 비디오 메모리 조각화 때문에 화면을 너무 많이 만들지 마십시오.  
   
--   새 화면을 만들려면 고정된 기간 크기 조정 이벤트를 발생 하지 않은 때까지 기다립니다.  
+- 새 화면을 만들려면 고정된 기간 크기 조정 이벤트를 발생 하지 않은 때까지 기다립니다.  
   
--   만들기는 <xref:System.Windows.Threading.DispatcherTimer> 컨테이너 크기를 초당 여러 번 확인 하는 합니다.  
+- 만들기는 <xref:System.Windows.Threading.DispatcherTimer> 컨테이너 크기를 초당 여러 번 확인 하는 합니다.  
   
 ## <a name="multi-monitor-optimization"></a>다중 모니터 최적화  
  렌더링 시스템으로 이동 하는 경우 성능이 크게 저하 될 수 있습니다는 <xref:System.Windows.Interop.D3DImage> 다른 모니터로 합니다.  
@@ -132,11 +132,11 @@ Windows Presentation Foundation (WPF) 응용 프로그램에서 호스팅할 Dir
 ## <a name="wpf-software-rendering"></a>WPF 소프트웨어 렌더링  
  WPF는 다음과 같은 경우에는 소프트웨어에서 UI 스레드에서 동기적으로 렌더링합니다.  
   
--   인쇄  
+- 인쇄  
   
--   <xref:System.Windows.Media.Effects.BitmapEffect>  
+- <xref:System.Windows.Media.Effects.BitmapEffect>  
   
--   <xref:System.Windows.Media.Imaging.RenderTargetBitmap>  
+- <xref:System.Windows.Media.Imaging.RenderTargetBitmap>  
   
  이러한 상황 중 하나가 발생 하면 렌더링 시스템 호출을 <xref:System.Windows.Interop.D3DImage.CopyBackBuffer%2A> 소프트웨어 하드웨어 버퍼를 복사 하는 방법입니다. 기본 구현 호출을 `GetRenderTargetData` 에 화면을 사용 하 여 메서드. 이 호출은 잠금/잠금 해제 패턴 외부에서 발생 하기 때문에 실패할 수 있습니다. 이 경우에 `CopyBackBuffer` 메서드가 반환 되는 `null` 및 이미지가 표시 되지 않습니다.  
   

@@ -3,11 +3,11 @@ title: 데이터 분할 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 69c59379-b66e-422c-b324-5b5c07760ef7
 ms.openlocfilehash: 2da63a1f6b73c8592d6036a90fa374a0d4385f4c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665890"
 ---
 # <a name="partitioning-data-visual-basic"></a>데이터 분할 (Visual Basic)
 LINQ의 분할은 요소를 다시 정렬한 후 섹션 중 하나를 반환하지 않고 입력 시퀀스를 두 개의 섹션으로 나누는 작업을 가리킵니다.  

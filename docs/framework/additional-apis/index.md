@@ -2,21 +2,16 @@
 title: 추가 클래스 라이브러리 및 API
 ms.date: 01/29/2018
 helpviewer_keywords:
-- Additional class libraries
-- Additional managed libraries
-- .NET Framework out-of-band releases
-- out-of-band releases
+  - Additional class libraries
+  - Additional managed libraries
+  - .NET Framework out-of-band releases
+  - out-of-band releases
 ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: a48a145cd337a18c4ce63b281e1c82032d0532e7
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674414"
 ---
+
 # <a name="additional-class-libraries-and-apis"></a>추가 클래스 라이브러리 및 API
 
 .NET Framework는 지속적으로 발전 합니다. 플랫폼 간 개발을 개선 하 고 새로운 기능을 일찍 소개를 대역 외 (OOB)에서 새로운 기능이 릴리스됩니다. 이 항목에서는 설명서를 제공하는 OOB 프로젝트를 나열합니다.  

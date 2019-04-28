@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Else keyword [Visual Basic]
 ms.assetid: 154dd3d3-137b-4de6-a5aa-699b18dfb639
 ms.openlocfilehash: f249ac0816ae9375b081709900299a7ef8961880
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638170"
 ---
 # <a name="else-statement-visual-basic"></a>Else 문(Visual Basic)
 실행 하거나 조건부 어떤 다른 그룹의 문 실행 되거나 컴파일된 경우 컴파일할 문 그룹을 소개 합니다.  

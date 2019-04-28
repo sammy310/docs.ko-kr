@@ -10,22 +10,22 @@ helpviewer_keywords:
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
 ms.openlocfilehash: 9b2719ca000ab86b9ca40f9e78af46cbf598d16e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640532"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>관리되는 HTML 문서 개체 모델의 프레임에 액세스
 일부 HTML 문서도 구성 됩니다 *프레임*, 또는 자신의 고유 HTML 문서를 포함할 수 있는 창입니다. 프레임을 사용하면 탐색 모음과 같이 페이지 조각 하나 이상이 정적으로 유지되지만 다른 프레임의 콘텐츠가 지속적으로 바뀌는 HTML 페이지를 쉽게 만들 수 있습니다.  
   
  HTML 작성자는 다음 두 방법의 하나로 프레임을 만들 수 있습니다.  
   
--   고정된 창을 만드는 `FRAMESET` 및 `FRAME` 태그 사용.  
+- 고정된 창을 만드는 `FRAMESET` 및 `FRAME` 태그 사용.  
   
  또는  
   
--   런타임에 위치가 변경될 수 있는 부동 창을 만드는 `IFRAME` 태그 사용.  
+- 런타임에 위치가 변경될 수 있는 부동 창을 만드는 `IFRAME` 태그 사용.  
   
 1. 프레임은 HTML 문서를 포함하므로 DOM(문서 개체 모델)에서 창 요소 및 프레임 요소로 표현됩니다.  
   

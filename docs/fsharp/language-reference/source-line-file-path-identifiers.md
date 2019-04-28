@@ -3,11 +3,11 @@ title: 소스 줄, 파일 및 경로 식별자
 description: 기본 제공을 사용 하는 방법을 알아봅니다 F# 식별자 값 원본에 액세스할 수 있도록 하는 줄 번호, 디렉터리 및 코드에서 파일 이름입니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: 4b145fe1fe20e3d7f868558e33bab26204fb0125
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663624"
 ---
 # <a name="source-line-file-and-path-identifiers"></a>소스 줄, 파일 및 경로 식별자
 
@@ -49,7 +49,7 @@ Source Directory: C:\Users\username\Documents\Visual Studio 2017\Projects\Source
 Source File: C:\Users\username\Documents\Visual Studio 2017\Projects\SourceInfo\SourceInfo\Program.fs
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [컴파일러 지시문](compiler-directives.md)
 - [F# 언어 참조](index.md)

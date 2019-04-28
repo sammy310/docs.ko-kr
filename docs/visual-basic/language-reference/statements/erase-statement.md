@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Erase statement [Visual Basic]
 ms.assetid: 7a8133d7-b750-4d74-8b66-ba1dd9778d4b
 ms.openlocfilehash: bf3eb6476dc1485faeddab475f29e508175d3378
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638196"
 ---
 # <a name="erase-statement-visual-basic"></a>Erase 문(Visual Basic)
 배열 변수를 해제 하 고 해당 요소에 사용 되는 메모리 할당을 취소 하는 데 사용 합니다.  

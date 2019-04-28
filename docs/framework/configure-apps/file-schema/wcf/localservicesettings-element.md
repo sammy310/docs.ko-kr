@@ -3,11 +3,11 @@ title: <localServiceSettings> 요소
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
 ms.openlocfilehash: e987d14edde3af6aca2ceb392976abe3b6460c9c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614572"
 ---
 # <a name="localservicesettings-element"></a>\<localServiceSettings > 요소
 이 바인딩에 대한 로컬 서비스의 보안 설정을 지정합니다.  
@@ -76,13 +76,13 @@ ms.locfileid: "59102637"
   
  `localServiceSecuritySettings` 요소의 다음 특성을 사용하면 DOS(서비스 거부) 보안 공격을 줄일 수 있습니다.  
   
--   `maxCachedCookies`: SPNEGO 또는 SSL 협상 후에 서버에서 캐시하는 시간 제한 SecurityContextToken의 최대 개수를 제어합니다.  
+- `maxCachedCookies`: SPNEGO 또는 SSL 협상 후에 서버에서 캐시하는 시간 제한 SecurityContextToken의 최대 개수를 제어합니다.  
   
--   `issuedCookieLifetime`: SPNEGO 또는 SSL 협상 후에 서버에서 발급하는 SecurityContextToken의 수명을 제어합니다. 서버는 이 기간 동안 SecurityContextToken을 캐시합니다.  
+- `issuedCookieLifetime`: SPNEGO 또는 SSL 협상 후에 서버에서 발급하는 SecurityContextToken의 수명을 제어합니다. 서버는 이 기간 동안 SecurityContextToken을 캐시합니다.  
   
--   `maxPendingSessions`: 서버에서 설정되었지만 응용 프로그램 메시지가 처리되지 않은 보안 대화의 최대 개수를 제어합니다. 이 할당량은 클라이언트가 서비스에서 보안 대화를 설정할 수 없도록 하고 서비스에서 각 클라이언트의 상태를 유지 관리하게 하지만 사용하지는 않습니다.  
+- `maxPendingSessions`: 서버에서 설정되었지만 응용 프로그램 메시지가 처리되지 않은 보안 대화의 최대 개수를 제어합니다. 이 할당량은 클라이언트가 서비스에서 보안 대화를 설정할 수 없도록 하고 서비스에서 각 클라이언트의 상태를 유지 관리하게 하지만 사용하지는 않습니다.  
   
--   `inactivityTimeout`: 응용 프로그램 메시지가 수신되지 않을 때 서비스에서 보안 대화를 활성 상태로 유지하는 최대 시간을 제어합니다. 이 할당량은 클라이언트가 서비스에서 보안 대화를 설정할 수 없도록 하고 서비스에서 각 클라이언트의 상태를 유지 관리하게 하지만 사용하지는 않습니다.  
+- `inactivityTimeout`: 응용 프로그램 메시지가 수신되지 않을 때 서비스에서 보안 대화를 활성 상태로 유지하는 최대 시간을 제어합니다. 이 할당량은 클라이언트가 서비스에서 보안 대화를 설정할 수 없도록 하고 서비스에서 각 클라이언트의 상태를 유지 관리하게 하지만 사용하지는 않습니다.  
   
  보안 대화 세션에서 바인딩의 `inactivityTimeout` 및 `receiveTimeout` 특성은 모두 세션 시간 제한에 영향을 줍니다. 제한 시간은 두 속성 값 중 짧은 시간으로 결정됩니다.  
   

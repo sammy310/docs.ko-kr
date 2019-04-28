@@ -3,11 +3,11 @@ title: <serviceCertificate> <clientCredentials> 요소
 ms.date: 03/30/2017
 ms.assetid: e50c0ac5-f0df-4c90-b54b-fc602c1f84ea
 ms.openlocfilehash: 4fe196ef8737c7abde939e36c2bb7afd5a0d86b5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670302"
 ---
 # <a name="servicecertificate-of-clientcredentials-element"></a>\<serviceCertificate >의 \<clientCredentials > 요소
 클라이언트에 대해 서비스를 인증할 때 사용할 인증서를 지정합니다.  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 44a84b03c85cc1332c07ffbaf53187b7f01d0236
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609050"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue 함수
 형식 변환이 시간 기반인 경우 하나의 원시 성능 데이터 값을 지정된 형식으로 변화하거나 두 개의 원시 성능 데이터 값으로 변환합니다. 

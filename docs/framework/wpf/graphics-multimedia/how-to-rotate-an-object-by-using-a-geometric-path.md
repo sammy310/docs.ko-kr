@@ -9,11 +9,11 @@ helpviewer_keywords:
 - rotating objects by geometric paths [WPF]
 ms.assetid: cb31ca4d-f05a-4c6b-9a18-4b6faaf38d45
 ms.openlocfilehash: 3e35169da7297ec62e0114ab21f4ba81c0a656ea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651248"
 ---
 # <a name="how-to-rotate-an-object-by-using-a-geometric-path"></a>방법: 기하학적 경로를 사용하여 개체 회전
 이 예제에서 정의 된 기하학적 경로 따라 개체 회전 (피벗) 하는 방법을 보여 줍니다는 <xref:System.Windows.Media.PathGeometry> 개체입니다.  
@@ -21,9 +21,9 @@ ms.locfileid: "59229214"
 ## <a name="example"></a>예제  
  다음 예제에서는 세 가지 <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> 기하학적 경로 따라 사각형을 이동 하는 개체입니다.  
   
--   첫 번째 <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> 애니메이션을 적용 한 <xref:System.Windows.Media.RotateTransform> 사각형에 적용 되는 합니다. 애니메이션은 각도 값을 생성합니다. 이를 통해 사각형이 경로 윤곽을 따라 회전(피벗)하게 됩니다.  
+- 첫 번째 <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> 애니메이션을 적용 한 <xref:System.Windows.Media.RotateTransform> 사각형에 적용 되는 합니다. 애니메이션은 각도 값을 생성합니다. 이를 통해 사각형이 경로 윤곽을 따라 회전(피벗)하게 됩니다.  
   
--   다른 두 개체에 애니메이션 효과 주기를 <xref:System.Windows.Media.TranslateTransform.X%2A> 하 고 <xref:System.Windows.Media.TranslateTransform.Y%2A> 의 값을 <xref:System.Windows.Media.TranslateTransform> 사각형에 적용 되는 합니다. 이를 통해 사각형이 경로를 따라 가로 및 세로로 이동하게 됩니다.  
+- 다른 두 개체에 애니메이션 효과 주기를 <xref:System.Windows.Media.TranslateTransform.X%2A> 하 고 <xref:System.Windows.Media.TranslateTransform.Y%2A> 의 값을 <xref:System.Windows.Media.TranslateTransform> 사각형에 적용 되는 합니다. 이를 통해 사각형이 경로를 따라 가로 및 세로로 이동하게 됩니다.  
   
  [!code-xaml[PathAnimationGallery_snippet#RotateAnimationUsingPathWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_snippet/CS/rotateanimationusingpathexample.xaml#rotateanimationusingpathwholepage)]  
   

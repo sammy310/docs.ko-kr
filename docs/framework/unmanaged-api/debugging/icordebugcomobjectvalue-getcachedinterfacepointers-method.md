@@ -16,11 +16,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: da0e62250dbef9be93ccee7020e23c3f83e85592
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61749906"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacepointers-method"></a>ICorDebugComObjectValue::GetCachedInterfacePointers 메서드
 현재 런타임 호출 가능 래퍼 (RCW)에 캐시 하는 원시 인터페이스 포인터를 가져옵니다.  

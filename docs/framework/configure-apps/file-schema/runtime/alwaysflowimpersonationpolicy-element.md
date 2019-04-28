@@ -11,11 +11,11 @@ ms.assetid: ee622801-9e46-470b-85ab-88c4b1dd2ee1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ec411039363cfb118fee06dff88daf50bbc97a86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704936"
 ---
 # <a name="alwaysflowimpersonationpolicy-element"></a>\<alwaysFlowImpersonationPolicy > 요소
 가장을 수행하는 방법과 관계없이 Windows ID가 항상 비동기 지점 간을 흐르도록 지정합니다.  

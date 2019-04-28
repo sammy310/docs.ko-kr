@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2eeccc4dfd7a7147fe791444eeeca2bd3a844305
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638868"
 ---
 # <a name="iclrpolicymanager-interface"></a>ICLRPolicyManager 인터페이스
 정책 오류 및 시간 초과가 발생 시 수행할 작업을 지정 하려면 호스트를 사용할 수 있는 메서드를 제공 합니다.  

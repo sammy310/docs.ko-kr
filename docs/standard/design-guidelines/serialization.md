@@ -5,11 +5,11 @@ ms.technology: dotnet-standard
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
 author: KrzysztofCwalina
 ms.openlocfilehash: f0ef8ab378fb3898f2d2e134f0b38668f6794ef3
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650156"
 ---
 # <a name="serialization"></a>Serialization
 Serialization은 개체를 쉽게 유지 또는 전송할 수 있는 형식으로 변환 하는 프로세스입니다. 예를 들어 개체를 serialize 하, 대상 컴퓨터에서 역직렬화 HTTP를 사용 하 여 인터넷을 통해 전송할 수 있습니다.  
@@ -80,8 +80,7 @@ Serialization은 개체를 쉽게 유지 또는 전송할 수 있는 형식으�
   
  **✓ CONSIDER** 완벽 하 게 serialization 프로세스 제어 하려는 경우 런타임 직렬화 가능 패턴을 구현 합니다. 데이터가 serialize 또는 deserialize될 때 데이터를 변환하려는 경우를 예로 들 수 있습니다.  
   
- 이 패턴은 아주 단순합니다. 
-  <xref:System.Runtime.Serialization.ISerializable> 인터페이스를 구현하고, 개체가 deserialize될 때 사용되는 특별한 생성자를 제공하기만 하면 됩니다.  
+ 이 패턴은 아주 단순합니다. <xref:System.Runtime.Serialization.ISerializable> 인터페이스를 구현하고, 개체가 deserialize될 때 사용되는 특별한 생성자를 제공하기만 하면 됩니다.  
   
  **✓ DO** serialization 생성자를 보호 하 고 입력 하 고이 예제에 표시 된 대로 정확 하 게 명명 된 두 개의 매개 변수를 제공 합니다.  
   

@@ -3,11 +3,11 @@ title: SET(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 28b4deac-c7e4-4f09-b428-4d352ef2dc94
 ms.openlocfilehash: 4e2a387cf400a881dfd91c61b36ee3ce0f5a4431
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797776"
 ---
 # <a name="set-entity-sql"></a>SET(Entity SQL)
 SET 식은 중복 요소가 모두 제거된 새 컬렉션을 생성하여 개체 컬렉션을 집합으로 변환하는 데 사용됩니다.  

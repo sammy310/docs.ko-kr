@@ -10,11 +10,11 @@ helpviewer_keywords:
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
 ms.openlocfilehash: c43739e098a91d54d300fa7074d1563da179c0e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665795"
 ---
 # <a name="lambda-expressions-visual-basic"></a>람다 식(Visual Basic)
 A *람다 식* 은 함수 또는 서브루틴 대리자 유효한 모든 곳에서 사용할 수 있는 이름이 없는 합니다. 람다 식은 함수 또는 서브루틴 수 있으며 한 줄 또는 여러 줄 수 있습니다. 람다 식에는 현재 범위에서 값을 전달할 수 있습니다.  
@@ -43,27 +43,27 @@ A *람다 식* 은 함수 또는 서브루틴 대리자 유효한 모든 곳에�
 ## <a name="lambda-expression-syntax"></a>람다 식 구문  
  람다 식의 구문은 유사 표준 함수 또는 서브루틴의 합니다. 차이점은 다음과 같습니다.  
   
--   람다 식에 이름이 없습니다.  
+- 람다 식에 이름이 없습니다.  
   
--   람다 식은와 같은 한정자를 사용할 수 없습니다 `Overloads` 또는 `Overrides`합니다.  
+- 람다 식은와 같은 한정자를 사용할 수 없습니다 `Overloads` 또는 `Overrides`합니다.  
   
--   한 줄 람다 함수를 사용 하지 마십시오는 `As` 절 반환 형식을 지정 합니다. 대신, 형식 람다 식의 본문으로 계산 되는 값에서 유추 됩니다. 예를 들어, 람다 식의 본문이 `cust.City = "London"`, 해당 반환 형식은 `Boolean`합니다.  
+- 한 줄 람다 함수를 사용 하지 마십시오는 `As` 절 반환 형식을 지정 합니다. 대신, 형식 람다 식의 본문으로 계산 되는 값에서 유추 됩니다. 예를 들어, 람다 식의 본문이 `cust.City = "London"`, 해당 반환 형식은 `Boolean`합니다.  
   
--   여러 줄 람다 함수에 지정할 수 있습니다 하거나 반환 형식을 사용 하 여는 `As` 절을 생략 하거나는 `As` 절 반환 형식을 유추 되도록 합니다. 경우는 `As` 여러 줄 람다 함수에 대 한 절을 생략 하면, 반환 형식을 기준 형식 모두로 유추 됩니다를 `Return` 여러 줄 람다 함수에는 문. 합니다 *기준 형식* 다른 모든 형식을 변환할 수 있는 고유 형식입니다. 이 고유 형식을 확인할 수 없는 경우 기준 형식은 배열의 다른 모든 형식에 범위를 좁힐 수 있는 고유 형식이입니다. 이러한 고유 형식을 모두 확인할 수 없는 경우 기준 형식은 `Object`입니다. 이 경우 경우 `Option Strict` 로 설정 된 `On`, 컴파일러 오류가 발생 합니다.  
+- 여러 줄 람다 함수에 지정할 수 있습니다 하거나 반환 형식을 사용 하 여는 `As` 절을 생략 하거나는 `As` 절 반환 형식을 유추 되도록 합니다. 경우는 `As` 여러 줄 람다 함수에 대 한 절을 생략 하면, 반환 형식을 기준 형식 모두로 유추 됩니다를 `Return` 여러 줄 람다 함수에는 문. 합니다 *기준 형식* 다른 모든 형식을 변환할 수 있는 고유 형식입니다. 이 고유 형식을 확인할 수 없는 경우 기준 형식은 배열의 다른 모든 형식에 범위를 좁힐 수 있는 고유 형식이입니다. 이러한 고유 형식을 모두 확인할 수 없는 경우 기준 형식은 `Object`입니다. 이 경우 경우 `Option Strict` 로 설정 된 `On`, 컴파일러 오류가 발생 합니다.  
   
      예를 들어 식에 제공 된를 `Return` 형식의 값을 포함 하는 문을 `Integer`, `Long`, 및 `Double`, 결과 배열이 형식의 `Double`합니다. 둘 다 `Integer` 하 고 `Long` 변환할 `Double` 만 `Double`합니다. 따라서 기준 형식은 `Double` 입니다. 자세한 내용은 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)을 참조하세요.  
   
--   한 줄 함수의 본문에는 문이 아닌 값을 반환 하는 식 이어야 합니다. 방법이 없는 `Return` 문을 한 줄 함수에 대 한 합니다. 한 줄 함수에서 반환 된 값에는 함수 본문에 있는 식의 값이입니다.  
+- 한 줄 함수의 본문에는 문이 아닌 값을 반환 하는 식 이어야 합니다. 방법이 없는 `Return` 문을 한 줄 함수에 대 한 합니다. 한 줄 함수에서 반환 된 값에는 함수 본문에 있는 식의 값이입니다.  
   
--   서브루틴을 한 줄의 본문에는 한 줄 문 이어야 합니다.  
+- 서브루틴을 한 줄의 본문에는 한 줄 문 이어야 합니다.  
   
--   한 줄 함수와 서브루틴이 포함 하지 마십시오는 `End Function` 또는 `End Sub` 문입니다.  
+- 한 줄 함수와 서브루틴이 포함 하지 마십시오는 `End Function` 또는 `End Sub` 문입니다.  
   
--   람다 식 매개 변수의 데이터 형식을 사용 하 여 지정할 수 있습니다는 `As` 키워드 또는 매개 변수의 데이터 형식을 유추할 수 있습니다. 데이터 형식 중 하나 또는 모두를 유추할 수 해야 모든 매개 변수에 지정 해야 합니다.  
+- 람다 식 매개 변수의 데이터 형식을 사용 하 여 지정할 수 있습니다는 `As` 키워드 또는 매개 변수의 데이터 형식을 유추할 수 있습니다. 데이터 형식 중 하나 또는 모두를 유추할 수 해야 모든 매개 변수에 지정 해야 합니다.  
   
--   `Optional` 및 `Paramarray` 매개 변수는 허용 되지 않습니다.  
+- `Optional` 및 `Paramarray` 매개 변수는 허용 되지 않습니다.  
   
--   제네릭 매개 변수가 허용 되지 않습니다.  
+- 제네릭 매개 변수가 허용 되지 않습니다.  
   
 ## <a name="async-lambdas"></a>비동기 람다  
  사용 하 여 비동기 처리를 통합 하는 람다 식과 문을 쉽게 만들 수 있습니다 합니다 [비동기](../../../../visual-basic/language-reference/modifiers/async.md) 하 고 [Await 연산자](../../../../visual-basic/language-reference/operators/await-operator.md) 키워드입니다. 예를 들어 다음 Windows Forms 예제에는 비동기 메서드 `ExampleMethodAsync`를 호출하고 기다리는 이벤트 처리기가 포함되어 있습니다.  
@@ -118,15 +118,15 @@ End Class
   
  다음 예제에서는 광범위 한 중첩 된 람다 식의 액세스 권한 보여 줍니다. 반환된 된 람다 식이 실행 되는 시기 `Main` 으로 `aDel`, 이러한 요소에 액세스 합니다.  
   
--   이전에 정의 된 클래스의 필드: `aField`  
+- 이전에 정의 된 클래스의 필드: `aField`  
   
--   이전에 정의 된 클래스의 속성: `aProp`  
+- 이전에 정의 된 클래스의 속성: `aProp`  
   
--   메서드의 매개 변수 `functionWithNestedLambda`, 정의 됩니다. `level1`  
+- 메서드의 매개 변수 `functionWithNestedLambda`, 정의 됩니다. `level1`  
   
--   로컬 변수의 `functionWithNestedLambda`: `localVar`  
+- 로컬 변수의 `functionWithNestedLambda`: `localVar`  
   
--   중첩 된 람다 식의 매개 변수: `level2`  
+- 중첩 된 람다 식의 매개 변수: `level2`  
   
  [!code-vb[VbVbalrLambdas#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class3.vb#9)]  
   
@@ -143,11 +143,11 @@ End Class
   
 ## <a name="examples"></a>예제  
   
--   다음 예제에서는 정의 반환 하는 람다 식 `True` nullable 인수에 값을 할당된 하는 경우 및 `False` 의 값이 `Nothing`합니다.  
+- 다음 예제에서는 정의 반환 하는 람다 식 `True` nullable 인수에 값을 할당된 하는 경우 및 `False` 의 값이 `Nothing`합니다.  
   
      [!code-vb[VbVbalrLambdas#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#4)]  
   
--   다음 예제에서는 배열에서 마지막 요소의 인덱스를 반환 하는 람다 식을 정의 합니다.  
+- 다음 예제에서는 배열에서 마지막 요소의 인덱스를 반환 하는 람다 식을 정의 합니다.  
   
      [!code-vb[VbVbalrLambdas#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#5)]  
   

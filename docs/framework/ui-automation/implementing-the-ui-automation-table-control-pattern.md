@@ -7,11 +7,11 @@ helpviewer_keywords:
 - TableControl pattern
 ms.assetid: 880cd85c-aa8c-4fb5-9369-45491d34bb78
 ms.openlocfilehash: dc1ddfaa13b83d06b1d3211e9d21bd82bfeabc3c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646039"
 ---
 # <a name="implementing-the-ui-automation-table-control-pattern"></a>UI 자동화 Table 컨트롤 패턴 구현
 > [!NOTE]
@@ -25,16 +25,16 @@ ms.locfileid: "59144653"
 ## <a name="implementation-guidelines-and-conventions"></a>구현 지침 및 규칙  
  Table 컨트롤 패턴을 구현할 때는 다음 지침 및 규칙에 유의하세요.  
   
--   개별 셀의 내용은 <xref:System.Windows.Automation.Provider.IGridProvider>의 필수 동시 구현에서 제공된 배열 또는 2차원 논리적 좌표계를 통해 액세스합니다.  
+- 개별 셀의 내용은 <xref:System.Windows.Automation.Provider.IGridProvider>의 필수 동시 구현에서 제공된 배열 또는 2차원 논리적 좌표계를 통해 액세스합니다.  
   
--   열 또는 행 헤더는 테이블 개체 내에 포함되거나 테이블 개체와 연결된 별도의 헤더 개체에 포함될 수 있습니다.  
+- 열 또는 행 헤더는 테이블 개체 내에 포함되거나 테이블 개체와 연결된 별도의 헤더 개체에 포함될 수 있습니다.  
   
--   열 및 행 헤더에는 모든 지원 헤더는 물론 기본 헤더가 포함될 수 있습니다.  
+- 열 및 행 헤더에는 모든 지원 헤더는 물론 기본 헤더가 포함될 수 있습니다.  
   
 > [!NOTE]
 >  이 개념은 사용자가 "이름" 열을 정의한 [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] 스프레드시트에서 확실하게 알 수 있습니다. 이제 이 열에는 사용자가 정의한 "이름" 헤더와 응용 프로그램에서 할당한 해당 열의 영숫자 지정 두 개의 헤더가 있습니다.  
   
--   참조 [UI 자동화 Grid 컨트롤 패턴 구현](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md) 관련된 표 기능에 대 한 합니다.  
+- 참조 [UI 자동화 Grid 컨트롤 패턴 구현](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md) 관련된 표 기능에 대 한 합니다.  
   
  ![복잡 한 헤더 항목이 있는 테이블입니다. ](../../../docs/framework/ui-automation/media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
 복잡한 열 헤더가 있는 테이블의 예  

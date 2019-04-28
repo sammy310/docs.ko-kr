@@ -17,11 +17,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], container elements
 ms.assetid: 7062f8aa-d890-4232-9eed-92836e13fb6e
 ms.openlocfilehash: 4574bab62ca6d095ab66c17bf186da5f3d79bfb7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61637884"
 ---
 # <a name="imports-statement-net-namespace-and-type"></a>Imports 문(.NET 네임스페이스 및 형식)
 사용 하도록 설정에는 네임 스페이스 한정자 없이 참조 되는 이름을 입력 합니다.  

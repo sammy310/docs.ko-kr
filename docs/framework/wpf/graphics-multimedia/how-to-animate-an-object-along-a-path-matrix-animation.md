@@ -9,11 +9,11 @@ helpviewer_keywords:
 - matrix animation [WPF]
 ms.assetid: 7000e697-1414-468c-b915-cf66062fc49e
 ms.openlocfilehash: ab15126680b7d8c6936246a7dae2f67c7541233b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651443"
 ---
 # <a name="how-to-animate-an-object-along-a-path-matrix-animation"></a>방법: 경로를 따라 개체에 애니메이션 효과 주기(Matrix 애니메이션)
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> 클래스에서 정의 된 경로 따라 개체에 애니메이션 효과를 <xref:System.Windows.Media.PathGeometry>합니다.  
@@ -21,11 +21,11 @@ ms.locfileid: "59190927"
 ## <a name="example"></a>예제  
  다음 예제에서는 다음을 수행하여 경로를 따라 개체에 애니메이션 효과를 줍니다.  
   
--   적용 되는 <xref:System.Windows.Media.MatrixTransform> 이동 하기 위해 개체입니다.  
+- 적용 되는 <xref:System.Windows.Media.MatrixTransform> 이동 하기 위해 개체입니다.  
   
--   경로 사용 하 여 정의 된 <xref:System.Windows.Media.PathGeometry>합니다.  
+- 경로 사용 하 여 정의 된 <xref:System.Windows.Media.PathGeometry>합니다.  
   
--   만듭니다는 <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> 애니메이션을 적용 하는 데 사용 합니다 <xref:System.Windows.Media.Matrix> 의 속성을 <xref:System.Windows.Media.MatrixTransform>. <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> 사용 합니다 <xref:System.Windows.Media.PathGeometry> 생성 하는 데 사용 하 고 <xref:System.Windows.Media.Matrix> 값.  
+- 만듭니다는 <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> 애니메이션을 적용 하는 데 사용 합니다 <xref:System.Windows.Media.Matrix> 의 속성을 <xref:System.Windows.Media.MatrixTransform>. <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> 사용 합니다 <xref:System.Windows.Media.PathGeometry> 생성 하는 데 사용 하 고 <xref:System.Windows.Media.Matrix> 값.  
   
  [!code-xaml[PathAnimationGallery_snippet#MatrixAnimationUsingPathWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_snippet/CS/matrixanimationusingpathexample.xaml#matrixanimationusingpathwholepage)]  
   

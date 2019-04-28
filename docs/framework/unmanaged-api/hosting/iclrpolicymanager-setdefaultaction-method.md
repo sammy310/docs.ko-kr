@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3d339fbadc3260d20fac848ad7f1a9031c3443aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638803"
 ---
 # <a name="iclrpolicymanagersetdefaultaction-method"></a>ICLRPolicyManager::SetDefaultAction 메서드
 CLR (공용 언어 런타임)은 지정 된 작업이 수행 될 때 수행 해야 정책 동작을 지정 합니다.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data binding [WPF], creating views of data collections
 ms.assetid: b641e96c-c2f6-42ea-9c5d-bac81176ad65
 ms.openlocfilehash: 746331e69ee1e5eee795a0e35202f4889b72c53f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931523"
 ---
 # <a name="how-to-get-the-default-view-of-a-data-collection"></a>방법: 데이터 컬렉션의 기본 보기 가져오기
 뷰는 동일한 데이터 수집을 정렬, 필터링 또는 그룹화 기준에 따라 다른 방법으로 볼 수 있도록 합니다. 모든 컬렉션에 바인딩 소스로 컬렉션을 지정 하는 경우 실제 바인딩 소스로 사용 되는 하나의 공유 기본 보기를 있습니다. 이 예제에는 컬렉션의 기본 보기를 가져오는 방법을 보여 줍니다.  

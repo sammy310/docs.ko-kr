@@ -23,11 +23,11 @@ helpviewer_keywords:
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
 ms.openlocfilehash: 5081f80ad0da738ebb950bcd649af7a593582356
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638079"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next 문(Visual Basic)
 컬렉션의 각 요소에 대 한 문 그룹을 반복합니다.  
@@ -92,11 +92,11 @@ Next [ element ]
   
  `Exit For` 특정 조건에 대 한 평가 후에 대개 예는 `If`... `Then`... `Else` 구조입니다. 사용 하려는 `Exit For` 다음 조건에 대 한 합니다.  
   
--   계속 반복은 불필요 하거나 불가능 합니다. 잘못 된 값 이나 종료 요청 원인일 수 있습니다.  
+- 계속 반복은 불필요 하거나 불가능 합니다. 잘못 된 값 이나 종료 요청 원인일 수 있습니다.  
   
--   예외가 포착 되는 `Try`... `Catch`... `Finally`. 사용할 수 있습니다 `Exit For` 끝에 `Finally` 블록입니다.  
+- 예외가 포착 되는 `Try`... `Catch`... `Finally`. 사용할 수 있습니다 `Exit For` 끝에 `Finally` 블록입니다.  
   
--   여기도 무한히 여러 번 실행할 수는 루프가 무한 루프를 합니다. 이러한 상태를 발견 하는 경우 사용할 수 있습니다 `Exit For` 루프를 이스케이프 합니다. 자세한 내용은 참조 하세요. [수행 하는 중... 문이 루프](../../../visual-basic/language-reference/statements/do-loop-statement.md)합니다.  
+- 여기도 무한히 여러 번 실행할 수는 루프가 무한 루프를 합니다. 이러한 상태를 발견 하는 경우 사용할 수 있습니다 `Exit For` 루프를 이스케이프 합니다. 자세한 내용은 참조 하세요. [수행 하는 중... 문이 루프](../../../visual-basic/language-reference/statements/do-loop-statement.md)합니다.  
   
 ## <a name="iterators"></a>반복기  
  사용 하는 *반복기* 컬렉션에 대해 사용자 지정 반복을 수행 하 합니다. 반복기는 함수 일 수 있습니다 또는 `Get` 접근자입니다. 사용 된 `Yield` 문을 한 번에 하나씩 컬렉션의 각 요소를 반환 합니다.  

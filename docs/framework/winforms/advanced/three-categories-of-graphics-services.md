@@ -9,20 +9,20 @@ helpviewer_keywords:
 - typography
 ms.assetid: 068c0ef3-f6ee-4d58-a7b6-eb2531ead408
 ms.openlocfilehash: ccbd5e236b47d1d870c9b77cfa2b3880619cf3cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651521"
 ---
 # <a name="three-categories-of-graphics-services"></a>세 가지 범주의 그래픽 서비스
 Windows Forms의 그래픽 제공은 다음 세 가지 광범위 한 범주에 속합니다.  
   
--   2 차원 (2-d) 벡터 그래픽  
+- 2 차원 (2-d) 벡터 그래픽  
   
--   이미징  
+- 이미징  
   
--   입력 체계  
+- 입력 체계  
   
 ## <a name="2-d-vector-graphics"></a>2 차원 벡터 그래픽  
  2 차원 벡터 그래픽은 기본 형식입니다. 선, 곡선 및 도형; 등 좌표계의 점 집합으로 지정 됩니다. 예를 들어 직선 두 끝점으로 지정 된 및 사각형 왼쪽 위 구석에 해당 하 고 너비와 높이 지정 하는 숫자의 쌍의 위치를 제공 하는 지점으로 지정 됩니다. 간단한 경로 직선으로 연결 된 점의 배열에 의해 지정 됩니다. 베 지 어 스플라인을 지정 되는 정교한 곡선에서 4 개의 제어점입니다.  

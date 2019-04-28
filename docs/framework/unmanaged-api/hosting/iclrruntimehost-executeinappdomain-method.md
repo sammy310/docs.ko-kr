@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 86348c35a023e22d10c4ad2e08f5cb1104b895a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641413"
 ---
 # <a name="iclrruntimehostexecuteinappdomain-method"></a>ICLRRuntimeHost::ExecuteInAppDomain 메서드
 지정 된 <xref:System.AppDomain> 지정 된 관리 되는 코드를 실행 하는 합니다.  

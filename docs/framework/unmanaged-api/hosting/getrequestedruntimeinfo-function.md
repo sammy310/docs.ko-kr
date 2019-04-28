@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1290aa864a3f65e549bc26173dcd23648b8dee90
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61627982"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>GetRequestedRuntimeInfo 함수
 버전 및 디렉터리는 CLR (공용 언어 런타임) 응용 프로그램에서 요청한 정보를 가져옵니다.  
@@ -94,25 +94,25 @@ HRESULT GetRequestedRuntimeInfo (
   
  .NET framework 버전 2.0에서 사용 하 여 최신 버전에 대 한 정보를 얻을 수는 `GetRequestedRuntimeInfo` 같이 메서드:  
   
--   지정 된 `pExe`, `pwszVersion`, 및 `pConfigurationFile` 매개 변수를 null로 합니다.  
+- 지정 된 `pExe`, `pwszVersion`, 및 `pConfigurationFile` 매개 변수를 null로 합니다.  
   
--   RUNTIME_INFO_UPGRADE_VERSION 플래그를 지정 합니다 `RUNTIME_INFO_FLAGS` 열거형을 `runtimeInfoFlags` 매개 변수.  
+- RUNTIME_INFO_UPGRADE_VERSION 플래그를 지정 합니다 `RUNTIME_INFO_FLAGS` 열거형을 `runtimeInfoFlags` 매개 변수.  
   
  `GetRequestedRuntimeInfo` 메서드는 다음과 같은 상황에서 최신 CLR 버전을 반환 하지 않습니다.  
   
--   특정 CLR 버전을 로드 하도록 지정 하는 응용 프로그램 구성 파일에 있습니다. .NET Framework를 사용 하 여 구성 파일에 대 한 null을 지정 하는 경우에는 `pConfigurationFile` 매개 변수입니다.  
+- 특정 CLR 버전을 로드 하도록 지정 하는 응용 프로그램 구성 파일에 있습니다. .NET Framework를 사용 하 여 구성 파일에 대 한 null을 지정 하는 경우에는 `pConfigurationFile` 매개 변수입니다.  
   
--   합니다 [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) 이전 버전의 CLR 지정 메서드가 호출 되었습니다.  
+- 합니다 [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) 이전 버전의 CLR 지정 메서드가 호출 되었습니다.  
   
--   이전 버전의 CLR에 대해 컴파일된 응용 프로그램 실행 중입니다.  
+- 이전 버전의 CLR에 대해 컴파일된 응용 프로그램 실행 중입니다.  
   
  에 대 한 합니다 `runtimeInfoFlags` 매개 변수를 지정할 수 있습니다만 아키텍처 상수 중 하나는 `RUNTIME_INFO_FLAGS` 번 열거형:  
   
--   RUNTIME_INFO_REQUEST_IA64  
+- RUNTIME_INFO_REQUEST_IA64  
   
--   RUNTIME_INFO_REQUEST_AMD64  
+- RUNTIME_INFO_REQUEST_AMD64  
   
--   RUNTIME_INFO_REQUEST_X86  
+- RUNTIME_INFO_REQUEST_X86  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

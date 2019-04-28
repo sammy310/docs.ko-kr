@@ -9,11 +9,11 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], creating window lists
 ms.assetid: 04fb414b-811f-4a83-aab6-b4a24646dec5
 ms.openlocfilehash: ec0d8af81e320bea3d9d69305f91bd56666ba7cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746830"
 ---
 # <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>방법: MenuStrip (Windows Forms)이 포함 된 MDI 창 목록 만들기
 동일한 시간 및 복사에 열린 여러 문서 하 고 다른 한 문서에서 콘텐츠를 붙여 넣을 수 있는 응용 프로그램을 만들려면 (MDI) 다중 문서 인터페이스를 사용 합니다.  
@@ -75,11 +75,11 @@ ms.locfileid: "59299646"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   `Form1` 및 `Form2`라는 두 개의 <xref:System.Windows.Forms.Form> 컨트롤  
+- `Form1` 및 `Form2`라는 두 개의 <xref:System.Windows.Forms.Form> 컨트롤  
   
--   `menuStrip1`이라는 `Form1`의 <xref:System.Windows.Forms.MenuStrip> 컨트롤 및 `menuStrip2`라는 `Form2`의 <xref:System.Windows.Forms.MenuStrip> 컨트롤  
+- `menuStrip1`이라는 `Form1`의 <xref:System.Windows.Forms.MenuStrip> 컨트롤 및 `menuStrip2`라는 `Form2`의 <xref:System.Windows.Forms.MenuStrip> 컨트롤  
   
--   <xref:System?displayProperty=nameWithType> 및 <xref:System.Windows.Forms?displayProperty=nameWithType> 어셈블리에 대한 참조  
+- <xref:System?displayProperty=nameWithType> 및 <xref:System.Windows.Forms?displayProperty=nameWithType> 어셈블리에 대한 참조  
   
 ## <a name="see-also"></a>참고자료
 

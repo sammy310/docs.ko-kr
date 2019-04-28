@@ -9,11 +9,11 @@ helpviewer_keywords:
 - tab pages
 ms.assetid: 480633db-413a-45d2-9c8f-0427cc13adbe
 ms.openlocfilehash: 23fe9fa2b8405a6ebe66e8f0cee1d81d45f2395b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59219761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640373"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms TabControl에서 탭 추가 및 제거
 배치 하는 경우는 <xref:System.Windows.Forms.TabControl> 컨트롤이 폼에 기본적으로 두 개의 탭 포함 합니다. 추가 하거나 디자이너를 사용 하 여 탭을 제거할 수 있습니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "59219761"
   
 ### <a name="to-add-or-remove-a-tab-using-the-designer"></a>추가 하거나 디자이너를 사용 하 여 탭을 제거 하려면  
   
--   컨트롤의 스마트 태그를 클릭 **추가 탭** 또는 **탭 제거**  
+- 컨트롤의 스마트 태그를 클릭 **추가 탭** 또는 **탭 제거**  
   
      또는  
   

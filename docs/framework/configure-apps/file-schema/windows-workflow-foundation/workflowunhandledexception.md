@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 57adeab5-f06a-44b2-916b-0e177cf0f4a6
 ms.openlocfilehash: cfe3350ac42d1e0e837b79f25753f62dc2051dd2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61613393"
 ---
 # <a name="workflowunhandledexception"></a>\<workflowUnhandledException>
 워크플로 서비스 내에서 처리되지 않은 예외가 발생할 때 수행할 동작을 지정할 수 있는 서비스 동작입니다.  

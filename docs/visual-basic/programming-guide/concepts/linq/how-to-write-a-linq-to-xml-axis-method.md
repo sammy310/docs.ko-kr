@@ -3,11 +3,11 @@ title: '방법: LINQ to XML 축 메서드 (Visual Basic) 작성'
 ms.date: 07/20/2015
 ms.assetid: b676f025-a24c-4076-8713-aa809b2b8ce0
 ms.openlocfilehash: f10ee90076a71aa44f480639d3bc460ea59044ea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614598"
 ---
 # <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>방법: LINQ to XML 축 메서드 (Visual Basic) 작성
 XML 트리에서 컬렉션을 검색하는 축 메서드를 작성할 수 있습니다. 축 메서드를 작성하는 가장 좋은 방법 중 하나는 요소나 특성의 컬렉션을 반환하는 확장 메서드를 작성하는 것입니다. 애플리케이션의 요구 사항에 따라 요소나 특성의 특정 하위 집합을 반환하는 확장명 메서드를 작성할 수 있습니다.  

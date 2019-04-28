@@ -11,8 +11,8 @@ ms.openlocfilehash: 063c42249abbfb506fd15311659599b4777d397f
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649883"
 ---
 # <a name="classname-is-not-cls-compliant-because-the-interface-interfacename-it-implements-is-not-cls-compliant"></a>'\<응용 프로그램 이름 >' 때문에 CLS 규격이 아닙니다 인터페이스 '\<interfacename >'이 구현 CLS 규격이 아닙니다.
 클래스 또는 인터페이스가 `<CLSCompliant(True)>` 로 표시 또는 표시되지 않은 형식을 구현하거나 해당 형식에서 파생될 때 `<CLSCompliant(False)>` 로 표시되었습니다.  
@@ -29,6 +29,6 @@ ms.locfileid: "59975548"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   CLS 규격이 필요하면 다른 상속 계층 구조에서 이 형식을 정의합니다.  
+- CLS 규격이 필요하면 다른 상속 계층 구조에서 이 형식을 정의합니다.  
   
--   이 형식이 현재 상속 계층 구조 또는 구현 체계에 유지되어야 하는 경우 해당 정의에서 <xref:System.CLSCompliantAttribute> 를 제거하거나 `<CLSCompliant(False)>`로 표시합니다.  
+- 이 형식이 현재 상속 계층 구조 또는 구현 체계에 유지되어야 하는 경우 해당 정의에서 <xref:System.CLSCompliantAttribute> 를 제거하거나 `<CLSCompliant(False)>`로 표시합니다.  

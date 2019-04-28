@@ -3,11 +3,11 @@ title: LINQ to XML Annotations2
 ms.date: 07/20/2015
 ms.assetid: c3e8b3ff-fceb-4428-b0ca-1ed6f128aac8
 ms.openlocfilehash: edf8e0126c632deae6b6d4c235c4880d7b8687e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663429"
 ---
 # <a name="linq-to-xml-annotations"></a>LINQ to XML 주석
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서 주석을 사용하여 임의의 형식에 대한 임의의 개체를 XML 트리의 XML 구성 요소와 연결할 수 있습니다.  

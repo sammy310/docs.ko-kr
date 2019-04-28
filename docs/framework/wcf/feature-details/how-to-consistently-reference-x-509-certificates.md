@@ -8,11 +8,11 @@ helpviewer_keywords:
 - certificates [WCF], referencing X.509 certificates
 ms.assetid: a6de1c63-e450-4640-ad08-ad7302dbfbfc
 ms.openlocfilehash: bd911b1586f7f4a4816efa32480ef99ca12404f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699528"
 ---
 # <a name="how-to-consistently-reference-x509-certificates"></a>방법: 일관된 X.509 인증서 참조
 인증서의 해시, 발급자와 일련 번호 또는 SKI(주체 키 식별자) 등의 다양한 방법으로 인증서를 식별할 수 있습니다. SKI는 인증서 주체 공개 키의 고유 ID를 제공하며 XML 디지털 서명을 사용할 때 주로 사용됩니다. SKI 값은 일반적으로 X.509 인증서의 부분을 *X.509 인증서 확장명*합니다. Windows Communication Foundation (WCF) 기본값이 *참조 스타일* 발급자와 일련 번호를 사용 하는 인증서에서 SKI 확장이 없는 경우. 인증서에 SKI 확장이 있는 경우 기본 참조 스타일에서는 SKI를 사용하여 인증서를 가리킵니다. 응용 프로그램의 개발 중반쯤 SKI 확장을 사용 하는 인증서에 SKI 확장이 사용 하지 않는 인증서를 사용 하 여 전환할 경우 WCF에서 생성 된 메시지에 사용 되는 참조 스타일도 변경 합니다.  
@@ -28,13 +28,13 @@ ms.locfileid: "59176204"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  코드를 컴파일하려면 다음 네임스페이스가 필요합니다.  
   
--   <xref:System>  
+- <xref:System>  
   
--   <xref:System.ServiceModel>  
+- <xref:System.ServiceModel>  
   
--   <xref:System.ServiceModel.Channels>  
+- <xref:System.ServiceModel.Channels>  
   
--   <xref:System.ServiceModel.Security.Tokens>  
+- <xref:System.ServiceModel.Security.Tokens>  
   
 ## <a name="see-also"></a>참고자료
 

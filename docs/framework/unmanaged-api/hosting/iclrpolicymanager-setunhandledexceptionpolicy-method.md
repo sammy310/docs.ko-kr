@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9f988084310b920907bb7f212e7d40ca0d1c91db
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638543"
 ---
 # <a name="iclrpolicymanagersetunhandledexceptionpolicy-method"></a>ICLRPolicyManager::SetUnhandledExceptionPolicy 메서드
 처리 되지 않은 예외가 발생 하는 경우는 CLR (공용 언어 런타임)의 동작을 지정 합니다.  

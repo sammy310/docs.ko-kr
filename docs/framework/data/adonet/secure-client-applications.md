@@ -3,11 +3,11 @@ title: 안전한 클라이언트 응용 프로그램
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
 ms.openlocfilehash: 0c14089247e916b91cb385c7d715cce54acee57c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664209"
 ---
 # <a name="secure-client-applications"></a>안전한 클라이언트 응용 프로그램
 일반적으로 응용 프로그램은 데이터 손실을 야기하거나 시스템을 손상시킬 수 있는 취약성으로부터 보호되어야 하는 다양한 부분으로 구성됩니다. 안전한 사용자 인터페이스를 만들면 공격자가 데이터나 시스템 리소스에 액세스하기 전에 이를 차단함으로써 여러 가지 문제를 예방할 수 있습니다.  

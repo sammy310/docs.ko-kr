@@ -7,11 +7,11 @@ helpviewer_keywords:
 - End keyword [Visual Basic]
 ms.assetid: 42d6e088-ab0f-4cda-88e8-fdce3e5fcf4f
 ms.openlocfilehash: 96dc8ce6b0d3b7545f5caeef43358936e426f566
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638157"
 ---
 # <a name="end-keyword-statement-visual-basic"></a>최종 \<키워드 > 문 (Visual Basic)
 
@@ -95,7 +95,7 @@ End With
 
 합니다 [End 문](end-statement.md), 추가 키워드, 실행을 즉시 종료 합니다.
 
-## <a name="smart-device-developer-notes"></a>스마트 디바이스 개발자 노트  
+## <a name="smart-device-developer-notes"></a>스마트 장치 개발자 노트  
 
 `End` 추가 키워드, 문이 지원 되지 않습니다.  
   

@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID49
 ms.assetid: 7c7def45-b0ab-450f-ad3f-4383dfd9aed7
 ms.openlocfilehash: f7b0c3a6edbe0b950195306fa66287ff9b209bfe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935280"
 ---
 # <a name="bad-dll-calling-convention"></a>DLL 호출 규칙이 잘못되었습니다.
 인수는 동적 연결 라이브러리 (DLL)에 전달 된 루틴에서 예상 되 정확히 일치 해야 합니다. 호출 규칙 수, 형식 및 인수 순서를 사용 하 여 처리합니다. 프로그램 루틴을 인수 번호 또는 잘못 된 형식이 전달 되는 DLL에서 호출 하 고 있습니다.  

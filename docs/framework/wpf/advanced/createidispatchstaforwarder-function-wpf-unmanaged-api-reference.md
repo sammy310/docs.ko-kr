@@ -9,11 +9,11 @@ api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 57a02dfa-f091-4ace-9c06-1f4ab52b3527
 ms.openlocfilehash: a89b29cd459060c93d5ca77bb2154e1a10b02d03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61926453"
 ---
 # <a name="createidispatchstaforwarder-function-wpf-unmanaged-api-reference"></a>CreateIDispatchSTAForwarder 함수 (F 관리 되지 않는 API 참조)
 이 API는 Windows Presentation Foundation (WPF) 인프라를 지원 하며 코드에서 직접 사용할 수 없습니다.  

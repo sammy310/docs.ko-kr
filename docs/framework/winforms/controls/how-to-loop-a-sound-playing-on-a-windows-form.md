@@ -11,11 +11,11 @@ helpviewer_keywords:
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
 ms.openlocfilehash: a74acbbbcb5646a35de54a6000a0feae30f145a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638913"
 ---
 # <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>방법: Windows Form에서 재생되는 소리 반복
 다음 코드 예제에서는 반복해서 소리를 재생합니다. `stopPlayingButton_Click` 이벤트 처리기의 코드가 실행되면 현재 재생되는 모든 소리가 중지됩니다. 소리가 재생되지 않으면 아무것도 발생하지 않습니다.  
@@ -27,9 +27,9 @@ ms.locfileid: "59188515"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   System 및 System.Windows.Forms 어셈블리에 대한 참조  
+- System 및 System.Windows.Forms 어셈블리에 대한 참조  
   
--   파일 이름 `"c:\Windows\Media\chimes.wav"`를 유효한 파일 이름으로 바꿉니다.  
+- 파일 이름 `"c:\Windows\Media\chimes.wav"`를 유효한 파일 이름으로 바꿉니다.  
   
  Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 내용은 [명령줄에서 빌드](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 하거나 [csc.exe를 사용한 명령줄 빌드](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다. 또한 새 프로젝트에 코드를 붙여 넣어 Visual Studio에서이 예제를 빌드할 수 있습니다.  
   
@@ -38,17 +38,17 @@ ms.locfileid: "59188515"
   
  다음 조건에서 예외가 발생합니다.  
   
--   경로 이름 형식이 잘못되었습니다. 예를 들어 잘못된 문자를 포함하거나 공백만 포함합니다(<xref:System.ArgumentException> 클래스).  
+- 경로 이름 형식이 잘못되었습니다. 예를 들어 잘못된 문자를 포함하거나 공백만 포함합니다(<xref:System.ArgumentException> 클래스).  
   
--   경로가 읽기 전용입니다(<xref:System.IO.IOException> 클래스).  
+- 경로가 읽기 전용입니다(<xref:System.IO.IOException> 클래스).  
   
--   경로 이름이 `Nothing`입니다(<xref:System.ArgumentNullException> 클래스).  
+- 경로 이름이 `Nothing`입니다(<xref:System.ArgumentNullException> 클래스).  
   
--   경로 이름이 너무 깁니다(<xref:System.IO.PathTooLongException> 클래스).  
+- 경로 이름이 너무 깁니다(<xref:System.IO.PathTooLongException> 클래스).  
   
--   경로가 잘못되었습니다(<xref:System.IO.DirectoryNotFoundException> 클래스).  
+- 경로가 잘못되었습니다(<xref:System.IO.DirectoryNotFoundException> 클래스).  
   
--   경로가 콜론 “:”뿐입니다(<xref:System.NotSupportedException> 클래스).  
+- 경로가 콜론 “:”뿐입니다(<xref:System.NotSupportedException> 클래스).  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
  파일 이름을 바탕으로 파일 내용을 판단하면 안 됩니다. 예를 들어 Form1.vb 파일이 Visual Basic 소스 파일이 아닐 수도 있습니다. 애플리케이션에서 데이터를 사용하기 전에 모든 입력을 확인해야 합니다.  

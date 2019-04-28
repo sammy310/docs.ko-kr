@@ -3,20 +3,20 @@ title: 이 컴퓨터에 이 이름의 로그가 이미 만들어져 있습니다
 ms.date: 07/20/2015
 ms.assetid: 3dd78d9f-890e-4409-bebb-048fdf34711b
 ms.openlocfilehash: b3a488b668c00b8e9e77f6db6d99ea5b3f82c070
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58038159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940727"
 ---
 # <a name="a-log-has-already-been-created-with-this-name-on-this-machine"></a>이 컴퓨터에 이 이름의 로그가 이미 만들어져 있습니다.
 이미 사용 중인 이름으로 로그를 만들려고 했습니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   충돌하는 로그를 제거합니다.  
+- 충돌하는 로그를 제거합니다.  
   
--   로그에 다른 이름을 사용합니다.  
+- 로그에 다른 이름을 사용합니다.  
   
 ## <a name="see-also"></a>참고자료
 

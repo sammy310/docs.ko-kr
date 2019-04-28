@@ -5,11 +5,11 @@ helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
 ms.openlocfilehash: db0e4acc76f758004948857fc0b23a9cbc62f244
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669335"
 ---
 # <a name="workflow-persistence"></a>워크플로 유지
 워크플로 지속성은 프로세스 또는 컴퓨터 정보에 독립적인 영구 워크플로 인스턴스 상태 캡처입니다. 이 작업은 시스템 오류가 발생한 경우에 워크플로 인스턴스에 대한 잘 알려진 복구 지점을 제공하거나, 현재 작업 중이 아닌 워크플로 인스턴스를 언로드하여 메모리를 보존하거나, 워크플로 인스턴스의 상태를 서버 팜의 한 노드에서 다른 노드로 이동하기 위해 수행합니다.  
@@ -27,30 +27,30 @@ ms.locfileid: "57715544"
 ## <a name="implicit-persistence-points"></a>암시적 유지 지점  
  다음 목록에는 인스턴스 저장소가 워크플로에 연결되어 있을 때 워크플로가 유지되는 조건에 대한 예제가 포함되어 있습니다.  
   
--   경우는 **TransactionScope** 활동이 완료 된 또는 **TransactedReceiveScope** 활동이 완료 합니다.  
+- 경우는 **TransactionScope** 활동이 완료 된 또는 **TransactedReceiveScope** 활동이 완료 합니다.  
   
--   워크플로 인스턴스가 유휴 상태가 되는 경우와 **WorkflowIdleBehavior** 워크플로 호스트에 설정 됩니다. 이런 예를 들어 메시징 활동을 사용 하는 경우 또는 **지연** 활동입니다.  
+- 워크플로 인스턴스가 유휴 상태가 되는 경우와 **WorkflowIdleBehavior** 워크플로 호스트에 설정 됩니다. 이런 예를 들어 메시징 활동을 사용 하는 경우 또는 **지연** 활동입니다.  
   
--   WorkflowApplication 유휴 상태가 되는 경우와 **PersistableIdle** 응용 프로그램의 속성이로 설정 되어 **PersistableIdleAction.Persist**합니다.  
+- WorkflowApplication 유휴 상태가 되는 경우와 **PersistableIdle** 응용 프로그램의 속성이로 설정 되어 **PersistableIdleAction.Persist**합니다.  
   
--   워크플로 인스턴스를 유지하거나 언로드하도록 호스트 응용 프로그램에 지시할 경우  
+- 워크플로 인스턴스를 유지하거나 언로드하도록 호스트 응용 프로그램에 지시할 경우  
   
--   워크플로 인스턴스가 종료되거나 완료되는 경우  
+- 워크플로 인스턴스가 종료되거나 완료되는 경우  
   
--   경우는 **Persist** 활동을 실행 합니다.  
+- 경우는 **Persist** 활동을 실행 합니다.  
   
--   이전 버전의 Windows Workflow Foundation을 사용하여 개발된 워크플로 인스턴스에서 상호 운용 가능한 방식으로 실행되는 동안 유지 지점을 발견한 경우  
+- 이전 버전의 Windows Workflow Foundation을 사용하여 개발된 워크플로 인스턴스에서 상호 운용 가능한 방식으로 실행되는 동안 유지 지점을 발견한 경우  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [SQL 워크플로 인스턴스 저장소](sql-workflow-instance-store.md)  
+- [SQL 워크플로 인스턴스 저장소](sql-workflow-instance-store.md)  
   
--   [인스턴스 저장소](instance-stores.md)  
+- [인스턴스 저장소](instance-stores.md)  
   
--   [지속성 참석자](persistence-participants.md)  
+- [지속성 참석자](persistence-participants.md)  
   
--   [지속성 모범 사례](persistence-best-practices.md)  
+- [지속성 모범 사례](persistence-best-practices.md)  
   
--   [비지속형 워크플로 인스턴스](non-persisted-workflow-instances.md)  
+- [비지속형 워크플로 인스턴스](non-persisted-workflow-instances.md)  
   
--   [워크플로 일시 중지 및 다시 시작](pausing-and-resuming-a-workflow.md)
+- [워크플로 일시 중지 및 다시 시작](pausing-and-resuming-a-workflow.md)

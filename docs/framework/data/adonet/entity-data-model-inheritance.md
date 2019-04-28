@@ -3,11 +3,11 @@ title: '엔터티 데이터 모델: 상속'
 ms.date: 03/30/2017
 ms.assetid: 42c7ef24-710a-4af9-8493-cd41c399ecb0
 ms.openlocfilehash: 9f77f2ebb86ea050c124fbd1c6f2b30ed9e75a1c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667203"
 ---
 # <a name="entity-data-model-inheritance"></a>엔터티 데이터 모델: 상속
 (EDM (엔터티 데이터 모델)에 대 한 상속을 지 원하는 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md)합니다. EDM의 상속은 개체 지향 프로그래밍 언어의 클래스에 대한 상속과 유사합니다. 개체 지향 언어의 클래스를 사용 하 여 개념적 모델에서 정의한 엔터티 형식 처럼 (을 *파생 형식*) 다른 엔터티 형식에서 상속 되는 (합니다 *기본 형식*). 그러나 개체 지향 프로그래밍의 클래스와 달리 개념적 모델에서 파생된 된 형식 항상 모든 상속 된 [속성](../../../../docs/framework/data/adonet/property.md) 및 [탐색 속성](../../../../docs/framework/data/adonet/navigation-property.md) 기본 형식입니다. 파생 형식에서 상속된 속성을 재정의할 수는 없습니다.  

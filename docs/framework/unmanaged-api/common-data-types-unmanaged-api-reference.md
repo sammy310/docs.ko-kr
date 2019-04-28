@@ -5,11 +5,11 @@ ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aab6dad369b751b1d6a61214569cbb7d79b0e11d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59131172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651638"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>공통 데이터 유형(관리되지 않는 API 참조)
 이 항목에서는 C/C++ `typedef` 문에 의해 정의되는 .NET Framework용 관리되지 않는 API에서 사용하는 단순 데이터 형식을 소개합니다. 이러한 데이터 형식은 보통 C/C++ 원시 데이터 형식의 별칭입니다. 일반적으로 이러한 데이터 형식의 값은 불투명합니다. 즉, 이러한 값은 수정하지 않고도 다른 함수나 메서드로 전달할 수 있도록 특정 함수나 메서드에서 반환됩니다.  

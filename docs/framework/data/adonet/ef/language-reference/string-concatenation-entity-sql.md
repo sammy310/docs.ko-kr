@@ -3,11 +3,11 @@ title: + (문자열 연결) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 580130fa-6c7c-4f76-a47d-d22c27ccadf6
 ms.openlocfilehash: 5f2c031218a9e533889c696bc592e73a27b51d06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797672"
 ---
 # <a name="-string-concatenation-entity-sql"></a>+ (문자열 연결)(Entity SQL)
 두 문자열을 연결합니다.  

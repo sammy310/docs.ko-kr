@@ -3,11 +3,11 @@ title: 보안 고려 사항 및 추적에 대한 유용한 정보
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
 ms.openlocfilehash: 72d35230820e8466cd9c63a76b26c7a23bdfe024
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663715"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>보안 고려 사항 및 추적에 대한 유용한 정보
 이 항목에서는 WebHost를 사용할 때의 유용한 팁뿐만 아니라 중요한 정보가 노출되지 않도록 보호할 수 있는 방법에 대해 설명합니다.  
@@ -22,11 +22,11 @@ ms.locfileid: "59130796"
   
  다음 팁은 추적 파일의 내용이 실수로 노출되지 않도록 보호하는 데 도움이 될 수 있습니다.  
   
--   로그 파일이 WebHost 및 자체 호스트 시나리오 둘 다에서 ACL(액세스 제어 목록)을 통해 보호되는지 확인합니다.  
+- 로그 파일이 WebHost 및 자체 호스트 시나리오 둘 다에서 ACL(액세스 제어 목록)을 통해 보호되는지 확인합니다.  
   
--   웹 요청을 사용하여 쉽게 제공될 수 없는 파일 확장명을 선택합니다. 예를 들어 .xml 파일 확장명을 사용하는 것은 안전하지 않습니다. 제공될 수 있는 확장명 목록을 보기 위해 IIS 관리 설명서를 확인할 수 있습니다.  
+- 웹 요청을 사용하여 쉽게 제공될 수 없는 파일 확장명을 선택합니다. 예를 들어 .xml 파일 확장명을 사용하는 것은 안전하지 않습니다. 제공될 수 있는 확장명 목록을 보기 위해 IIS 관리 설명서를 확인할 수 있습니다.  
   
--   로그 파일 위치의 절대 경로를 지정합니다. 절대 경로는 웹 브라우저를 사용하여 외부 사용자가 해당 파일에 액세스하지 못하도록 WebHost vroot 공용 디렉터리의 외부에 있어야 합니다.  
+- 로그 파일 위치의 절대 경로를 지정합니다. 절대 경로는 웹 브라우저를 사용하여 외부 사용자가 해당 파일에 액세스하지 못하도록 WebHost vroot 공용 디렉터리의 외부에 있어야 합니다.  
   
  기본적으로 사용자 이름 및 암호와 같은 PII(개인적으로 식별할 수 있는 정보)와 키는 추적 및 기록된 메시지에 기록되지 않습니다. 그러나 컴퓨터 관리자는 다음과 같이 Machine.config 파일의 `enableLoggingKnownPII` 요소에 있는 `machineSettings` 특성을 사용하여 컴퓨터에서 실행되는 응용 프로그램이 알려진 PII(개인적으로 식별할 수 있는 정보)를 기록하도록 허용할 수 있습니다.  
   

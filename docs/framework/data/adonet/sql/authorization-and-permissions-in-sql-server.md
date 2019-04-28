@@ -3,11 +3,11 @@ title: SQL Server에서 권한 부여 및 권한
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
 ms.openlocfilehash: 398041d678ba3e4ae5a36dd7714fd2a9bfee1b40
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59185863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663962"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>SQL Server에서 권한 부여 및 권한
 데이터베이스 개체를 만들 때는 사용자가 해당 개체에 액세스할 수 있도록 권한을 명시적으로 부여해야 합니다. 모든 보안 개체에는 권한 문을 통해 보안 주체에게 부여할 수 있는 권한이 있습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "59185863"
 |REVOKE|권한을 취소합니다. 이것은 새 개체의 기본 상태입니다. 사용자나 역할에 대해 취소한 권한은 해당 보안 주체가 할당된 다른 그룹이나 역할로부터 여전히 상속될 수 있습니다.|  
 |DENY|DENY는 권한을 상속할 수 없도록 취소합니다. DENY는 다른 모든 권한보다 우선적으로 적용됩니다. 단, 개체 소유자 또는 `sysadmin`의 멤버에는 DENY가 적용되지 않습니다. `public` 역할에서 개체에 대한 권한을 DENY로 설정하면 해당 권한은 개체 소유자와 `sysadmin` 멤버를 제외한 모든 사용자와 역할에 대해 거부됩니다.|  
   
--   GRANT 문을 사용하면 그룹 또는 역할에 권한을 할당할 수 있으며 데이터베이스 사용자는 이 그룹 또는 역할에서 권한을 상속할 수 있습니다. 그러나 DENY 문은 다른 모든 권한 문보다 우선적으로 적용되므로 권한이 거부된 사용자는 다른 역할에서 해당 권한을 상속할 수 없습니다.  
+- GRANT 문을 사용하면 그룹 또는 역할에 권한을 할당할 수 있으며 데이터베이스 사용자는 이 그룹 또는 역할에서 권한을 상속할 수 있습니다. 그러나 DENY 문은 다른 모든 권한 문보다 우선적으로 적용되므로 권한이 거부된 사용자는 다른 역할에서 해당 권한을 상속할 수 없습니다.  
   
 > [!NOTE]
 >  `sysadmin` 고정 서버 역할의 멤버 및 개체 소유자의 권한은 거부할 수 없습니다.  

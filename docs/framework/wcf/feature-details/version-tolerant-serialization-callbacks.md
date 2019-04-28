@@ -12,11 +12,11 @@ helpviewer_keywords:
 - OnSerializedAttribute [WCF]
 ms.assetid: aa4a3a6f-05ec-4efd-bdbf-2181e13e6468
 ms.openlocfilehash: da13f9989b427da047c4a94f77907847ed2ae4d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932628"
 ---
 # <a name="version-tolerant-serialization-callbacks"></a>버전 독립적 Serialization 콜백
 데이터 계약 프로그래밍 모델에서는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 및 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 클래스에서 지원하는 버전 독립적 serialization 콜백 메서드를 완전히 지원합니다.  

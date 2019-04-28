@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 75bd7da67cbac958f0b34c8295454a719962c7ed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61628719"
 ---
 # <a name="epolicyaction-enumeration"></a>EPolicyAction 열거형
 호스트에서 설명 하는 작업에 대해 설정할 정책 작업을 설명 [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) 에 정의 된 오류 [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)합니다.  

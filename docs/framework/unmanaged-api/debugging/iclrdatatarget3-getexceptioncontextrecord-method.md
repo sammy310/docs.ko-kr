@@ -15,11 +15,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4b43ab8cdeff3866bb51e8634f367cf86ee483d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698020"
 ---
 # <a name="iclrdatatarget3getexceptioncontextrecord-method"></a>ICLRDataTarget3::GetExceptionContextRecord 메서드
 CLR(공용 언어 런타임) 데이터 액세스 서비스에 의해 호출되어 대상 프로세스와 연결된 컨텍스트 레코드를 검색합니다. 예를 들어 덤프 대상의 경우이 동일 컨텍스트 레코드를 통해 전달 된를 `ExceptionParam` 인수를 [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) Windows 디버그 도움말 라이브러리 (DbgHelp)의 함수입니다.  

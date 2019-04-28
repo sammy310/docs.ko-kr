@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8f83d2ac9ca96145fa89b283fec42c71858097f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651625"
 ---
 # <a name="icordebuggcreferenceenum-interface"></a>ICorDebugGCReferenceEnum 인터페이스
 가비지 수집되는 개체에 대한 열거자를 제공합니다.  
@@ -39,11 +39,11 @@ ms.locfileid: "59080831"
   
  합니다 [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) 이 메서드에서 입력 컬렉션에 개체 세 종류의 개체를 나타냅니다.  
   
--   모든 관리 되는 스택 개체입니다. 공용 언어 런타임에서 생성 된 개체를 비롯 하 여 관리 코드에 대 한 라이브 참조가 포함 됩니다.  
+- 모든 관리 되는 스택 개체입니다. 공용 언어 런타임에서 생성 된 개체를 비롯 하 여 관리 코드에 대 한 라이브 참조가 포함 됩니다.  
   
--   핸들 테이블의 개체입니다. 여기에 강력한 참조 (`HNDTYPE_STRONG` 및 `HNDTYPE_REFCOUNT`) 및 모듈의 정적 변수.  
+- 핸들 테이블의 개체입니다. 여기에 강력한 참조 (`HNDTYPE_STRONG` 및 `HNDTYPE_REFCOUNT`) 및 모듈의 정적 변수.  
   
--   종료자 큐의 개체입니다. 종료자 큐는 종료 자가 실행 될 때까지 개체 루트입니다.  
+- 종료자 큐의 개체입니다. 종료자 큐는 종료 자가 실행 될 때까지 개체 루트입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

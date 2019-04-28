@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c14b48a29993a65a0a0ab9fcb63bcb1e0d882042
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645372"
 ---
 # <a name="icordebugchaingetactiveframe-method"></a>ICorDebugChain::GetActiveFrame 메서드
 활성 가져옵니다 (즉, 가장 최근) 체인에서 프레임입니다.  

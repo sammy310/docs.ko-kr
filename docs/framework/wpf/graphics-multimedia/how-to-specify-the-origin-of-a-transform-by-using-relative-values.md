@@ -7,11 +7,11 @@ helpviewer_keywords:
 - graphics [WPF], origins of Transforms
 ms.assetid: f4dbc29d-93c7-41cd-96d8-5cfd8624b470
 ms.openlocfilehash: 48b3b0df8dab8516873495a996074eae57ffe00f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651144"
 ---
 # <a name="how-to-specify-the-origin-of-a-transform-by-using-relative-values"></a>방법: 상대 값을 사용하여 변환 원점 지정
 이 예제에서는 상대 값의 출처를 지정 하는 데는 <xref:System.Windows.UIElement.RenderTransform%2A> 에 적용 되는 한 <xref:System.Windows.FrameworkElement>합니다.  

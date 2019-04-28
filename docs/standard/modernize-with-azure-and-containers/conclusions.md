@@ -1,21 +1,21 @@
-﻿---
+---
 title: 결론
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 결론
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.openlocfilehash: 62a9a38ccbe696c34ef799b574c0f5a95bc8f726
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61628329"
 ---
 # <a name="conclusions"></a>결론
 
 - 컨테이너 기반 솔루션을 통해 궁극적으로 비용 절감 혜택을 얻을 수 있습니다. 컨테이너는 프로덕션 환경에서 종속성이 존재하지 않으므로 발생하는 문제를 제거하기 때문에 배포 문제가 해결됩니다. 이러한 이슈가 제거됨으로써 개발과 테스트, DevOps, 프로덕션 작업의 성능이 크게 개선됩니다.
 
-- Docker 컨테이너는 서버 기반 응용 프로그램이나 서비스 배포의 표준 단위가 되고 있습니다.
+- Docker 컨테이너는 서버 기반 애플리케이션 또는 서비스 배포의 표준 단위가 되고 있습니다.
 
 - 프로덕션 환경에서는 확장성이 뛰어난 Windows 컨테이너 기반 응용 프로그램을 게시하기 위해 오케스트레이터(예: Service Fabric이나 Kubernetes)를 사용해야 합니다.
 

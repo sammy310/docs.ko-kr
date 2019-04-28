@@ -3,11 +3,11 @@ title: <client>의 <endpoint>
 ms.date: 03/30/2017
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
 ms.openlocfilehash: 3af41ad5b5681b08aac44d984372ab5ac66caf5e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673227"
 ---
 # <a name="endpoint-of-client"></a>\<끝점 >의 \<클라이언트 >
 클라이언트에서 서버의 서비스 엔드포인트와 연결하는 데 사용하는 채널 엔드포인트의 contract, binding 및 address 속성을 지정합니다.  

@@ -3,11 +3,11 @@ title: System.ServiceModel.Channels.FailedPipeConnect
 ms.date: 03/30/2017
 ms.assetid: 9a827e0f-fb91-46bb-bd54-926d4b74d8a6
 ms.openlocfilehash: 472821d880433cd6a3292838a48bcb0b5bb34c43
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666737"
 ---
 # <a name="systemservicemodelchannelsfailedpipeconnect"></a>System.ServiceModel.Channels.FailedPipeConnect
 명명된 파이프 엔드포인트에 연결할 수 없습니다. 지정된 제한 시간 동안 다시 시도합니다.  

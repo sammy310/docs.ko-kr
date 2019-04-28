@@ -9,11 +9,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], about procedures
 ms.assetid: 4f779247-0b50-47e8-9e5c-ab5cf39ac0d2
 ms.openlocfilehash: 56099d334a03e85b816cf48983cbbead0784ef5b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665808"
 ---
 # <a name="how-to-create-a-procedure-visual-basic"></a>방법: 프로시저 (Visual Basic) 만들기
 선언문의 시작 사이 프로시저를 묶습니다 (`Sub` 나 `Function`) 및 선언문의 끝 (`End Sub` 또는 `End Function`). 프로시저의 모든 코드가 이러한 문 사이 존재 합니다.  

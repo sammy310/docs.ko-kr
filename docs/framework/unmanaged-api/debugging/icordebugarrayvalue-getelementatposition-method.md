@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 76100116f2ca3a9b9a99477ca2352d5fa1335ab2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645684"
 ---
 # <a name="icordebugarrayvaluegetelementatposition-method"></a>ICorDebugArrayValue::GetElementAtPosition 메서드
 0부터 시작 하는 1 차원 배열로 간주 하 여 지정된 된 위치에서 요소를 가져옵니다.  
@@ -44,7 +44,7 @@ HRESULT GetElementAtPosition (
  [out] 요소의 값을 나타내는 ICorDebugValue 개체의 주소에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
- 다차원 배열 레이아웃 배열 레이아웃의 c + + 스타일을 따릅니다.  
+ 다차원 배열의 레이아웃이 C++ 의 배열 레이아웃 스타일입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

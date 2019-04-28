@@ -3,11 +3,11 @@ title: CodeActivity 클래스를 사용하여 워크플로 활동 제작
 ms.date: 03/30/2017
 ms.assetid: cfe315c1-f86d-43ec-b9ce-2f8c469b1106
 ms.openlocfilehash: 549acec8b8101312d48bd20e63a4a988b798ff38
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669448"
 ---
 # <a name="workflow-activity-authoring-using-the-codeactivity-class"></a>CodeActivity 클래스를 사용하여 워크플로 활동 제작
 <xref:System.Activities.CodeActivity>에서 상속하여 만들어진 활동은 <xref:System.Activities.CodeActivity.Execute%2A> 메서드를 재정의하여 기본 명령형 동작을 구현합니다.
@@ -15,11 +15,11 @@ ms.locfileid: "59767398"
 ## <a name="using-codeactivitycontext"></a>CodeActivityContext 사용
  <xref:System.Activities.CodeActivity.Execute%2A> 형식의 `context` 매개 변수 멤버를 사용하여 <xref:System.Activities.CodeActivityContext> 메서드에서 워크플로 런타임 기능에 액세스할 수 있습니다. <xref:System.Activities.CodeActivityContext>를 통해 사용할 수 있는 기능은 다음과 같습니다.
 
--   변수와 인수의 값 가져오기 및 설정
+- 변수와 인수의 값 가져오기 및 설정
 
--   <xref:System.Activities.CodeActivityContext.Track%2A>을 사용하는 사용자 지정 추적 기능
+- <xref:System.Activities.CodeActivityContext.Track%2A>을 사용하는 사용자 지정 추적 기능
 
--   <xref:System.Activities.CodeActivityContext.GetProperty%2A>을 사용하여 활동의 실행 속성에 액세스
+- <xref:System.Activities.CodeActivityContext.GetProperty%2A>을 사용하여 활동의 실행 속성에 액세스
 
 #### <a name="to-create-a-custom-activity-that-inherits-from-codeactivity"></a>CodeActivity에서 상속되는 사용자 지정 활동을 만들려면
 

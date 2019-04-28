@@ -8,11 +8,11 @@ helpviewer_keywords:
 - media [WPF]
 ms.assetid: f7d96707-ffb5-486c-9e85-db6f0d5ac547
 ms.openlocfilehash: 2f46a548f28cffb1824ffbdc51f8d4d79c4c9d02
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650455"
 ---
 # <a name="audio-and-video-how-to-topics"></a>오디오 및 비디오 방법 항목
 다음 항목에 사용 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.MediaElement> 응용 프로그램에서 오디오 및 비디오 콘텐츠에 통합 합니다.  

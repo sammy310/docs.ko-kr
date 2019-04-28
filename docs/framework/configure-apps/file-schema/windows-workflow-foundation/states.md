@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: ebea5e7c-ad58-43c5-8f2d-cca25ae1b721
 ms.openlocfilehash: 30cb2efa4c00c8b292a8ace6a03306d6ac76a7f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797802"
 ---
 # <a name="states"></a>\<states>
 추적 레코드가 만들어질 때 추적된 워크플로 인스턴스에서 구독된 상태의 컬렉션을 나타냅니다.  

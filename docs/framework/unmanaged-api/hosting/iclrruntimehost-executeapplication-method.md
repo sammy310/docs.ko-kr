@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8ce7e9ff4041abd1e89330bd3a565b755875d3b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59194229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638504"
 ---
 # <a name="iclrruntimehostexecuteapplication-method"></a>ICLRRuntimeHost::ExecuteApplication 메서드
 ClickOnce 배포 매니페스트 기반 시나리오에서 새 도메인에서 활성화 될 응용 프로그램을 지정 하는 데 사용 합니다. 이러한 시나리오에 대 한 자세한 내용은 참조 하세요. [ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)합니다.  

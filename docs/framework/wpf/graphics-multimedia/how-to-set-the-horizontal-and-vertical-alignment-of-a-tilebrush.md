@@ -11,20 +11,20 @@ helpviewer_keywords:
 - horizontal alignment of Tilebrushes [WPF]
 ms.assetid: 65ae89bd-9246-4c9e-bde4-2fb991d4060d
 ms.openlocfilehash: ddef63bba7fce1bfb8d50b4f2dbaaddfa76709ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651330"
 ---
 # <a name="how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush"></a>방법: TileBrush의 가로 및 세로 맞춤 설정
 이 예제에서는 타일에서 콘텐츠의 가로 및 세로 맞춤을 제어하는 방법을 보여 줍니다. 가로 및 세로 맞춤을 제어 하는 <xref:System.Windows.Media.TileBrush>를 사용 하 여 해당 <xref:System.Windows.Media.TileBrush.AlignmentX%2A> 및 <xref:System.Windows.Media.TileBrush.AlignmentY%2A> 속성입니다.  
   
  <xref:System.Windows.Media.TileBrush.AlignmentX%2A> 하 고 <xref:System.Windows.Media.TileBrush.AlignmentY%2A> 의 속성을 <xref:System.Windows.Media.TileBrush> 되는 다음 조건 중 하나가 true 인 경우:  
   
--   합니다 <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성은 <xref:System.Windows.Media.Stretch.Uniform> 또는 <xref:System.Windows.Media.Stretch.UniformToFill> 하며 <xref:System.Windows.Media.TileBrush.Viewbox%2A> 및 <xref:System.Windows.Media.TileBrush.Viewport%2A> 가로 세로 비율이 다.  
+- 합니다 <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성은 <xref:System.Windows.Media.Stretch.Uniform> 또는 <xref:System.Windows.Media.Stretch.UniformToFill> 하며 <xref:System.Windows.Media.TileBrush.Viewbox%2A> 및 <xref:System.Windows.Media.TileBrush.Viewport%2A> 가로 세로 비율이 다.  
   
--   <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성은 <xref:System.Windows.Media.Stretch.None> 하며 <xref:System.Windows.Media.TileBrush.Viewbox%2A> 및 <xref:System.Windows.Media.TileBrush.Viewport%2A> 크기가 다릅니다.  
+- <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성은 <xref:System.Windows.Media.Stretch.None> 하며 <xref:System.Windows.Media.TileBrush.Viewbox%2A> 및 <xref:System.Windows.Media.TileBrush.Viewport%2A> 크기가 다릅니다.  
   
 ## <a name="example"></a>예제  
  콘텐츠를 정렬 하는 다음 예제는 <xref:System.Windows.Media.DrawingBrush>의 형식인 <xref:System.Windows.Media.TileBrush>, 해당 타일의 왼쪽 위 모퉁이에 있습니다. 예제에서는 콘텐츠를 정렬 하는 <xref:System.Windows.Media.TileBrush.AlignmentX%2A> 의 속성을 <xref:System.Windows.Media.DrawingBrush> 에 <xref:System.Windows.Media.AlignmentX.Left> 및 <xref:System.Windows.Media.TileBrush.AlignmentY%2A> 속성을 <xref:System.Windows.Media.AlignmentY.Top>합니다. 이 예제의 결과는 다음과 같습니다.  

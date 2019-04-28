@@ -3,11 +3,11 @@ title: <msmqIntegrationBinding>의 <security>
 ms.date: 03/30/2017
 ms.assetid: ae5c68a8-14a2-4c6e-b9e0-3e94e3e9135e
 ms.openlocfilehash: 8d79523db2a1567283b934abbd3de1adbbe6b0b5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670536"
 ---
 # <a name="security-of-msmqintegrationbinding"></a>\<보안 >의 \<msmqIntegrationBinding >
 MSMQ(메시지 큐) 통합 채널을 위한 전송 보안 설정을 정의합니다.  

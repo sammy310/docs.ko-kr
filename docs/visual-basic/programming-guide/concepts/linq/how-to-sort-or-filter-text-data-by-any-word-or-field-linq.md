@@ -3,11 +3,11 @@ title: '방법: 데이터 정렬 또는 필터링 텍스트에서 단어 또는 
 ms.date: 07/20/2015
 ms.assetid: 9df137fe-335b-46e0-aecf-ea8a9eddd4e3
 ms.openlocfilehash: 46c9149a7cb1809bf94162649de0a35110bbc697
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61613575"
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a>방법: 데이터 정렬 또는 필터링 텍스트에서 단어 또는 필드 (LINQ) (Visual Basic)
 다음 예제에서는 줄의 필드를 기준으로 쉼표로 구분된 값 등의 구조적 텍스트 줄을 정렬하는 방법을 보여 줍니다. 필드가 런타임에 동적으로 지정될 수도 있습니다. scores.csv의 필드가 학생의 ID 번호와 일련의 시험 성적 4개를 나타낸다고 가정합니다.  

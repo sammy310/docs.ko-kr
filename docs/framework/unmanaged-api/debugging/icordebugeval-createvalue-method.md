@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2c16f6d1334888fc389a7c39cf0a3865afca2085
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934747"
 ---
 # <a name="icordebugevalcreatevalue-method"></a>ICorDebugEval::CreateValue 메서드
 초기 값이 0 또는 null을 사용 하 여 지정 된 형식의 값을 만듭니다.  

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 11ced90b88f083eb69b06d197d64a8ef4252f9d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61750425"
 ---
 # <a name="icordebugcodegetaddress-method"></a>ICorDebugCode::GetAddress 메서드
 이 "ICorDebugCode" 인터페이스를 나타내는 코드 세그먼트의 상대 가상 주소를 RVA ()를 가져옵니다.  

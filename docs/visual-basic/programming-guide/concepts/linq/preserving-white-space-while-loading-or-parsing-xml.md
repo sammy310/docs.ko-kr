@@ -3,11 +3,11 @@ title: 로드 또는 XML2 구문 분석할 때 공백 유지
 ms.date: 07/20/2015
 ms.assetid: ef6518e0-2c8d-462c-8b92-a16e9dc737ad
 ms.openlocfilehash: 4fa000d9299515101bc01923db43d442577be828
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665860"
 ---
 # <a name="preserving-white-space-while-loading-or-parsing-xml"></a>XML을 로드 또는 구문 분석할 때 공백 유지
 이 항목에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]의 공백 동작을 제어하는 방법에 대해 설명합니다.  
@@ -21,13 +21,13 @@ ms.locfileid: "58818971"
 ## <a name="behavior-of-methods-that-populate-xml-trees"></a>XML 트리를 채우는 메서드의 동작  
  <xref:System.Xml.Linq.XElement> 및 <xref:System.Xml.Linq.XDocument> 클래스의 다음 메서드는 XML 트리를 채웁니다. 파일, <xref:System.IO.TextReader>, <xref:System.Xml.XmlReader> 또는 문자열에서 XML 트리를 채울 수 있습니다.  
   
--   <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>  
   
  메서드에서 <xref:System.Xml.Linq.LoadOptions>를 인수로 사용하지 않는 경우 무효 공백을 유지하지 않습니다.  
   

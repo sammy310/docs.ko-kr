@@ -10,11 +10,11 @@ helpviewer_keywords:
 - GDI+, polygons
 ms.assetid: a72213d2-d69a-4c2b-a75c-be7b20390c13
 ms.openlocfilehash: 2b1e3d387e4d056d9187c54dcef560544206c370
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641309"
 ---
 # <a name="polygons-in-gdi"></a>GDI+의 다각형
 다각형은 3 개 이상의 직선 면을 사용 하 여 닫힌된 도형입니다. 예를 들어 삼각형 세 변을 사용 하 여 다각형, 사각형은 네 면을 사용 하 여 다각형 이며 오각형 5 면을 사용 하 여 다각형입니다. 다음 그림에서는 여러 다각형을 보여 줍니다.  

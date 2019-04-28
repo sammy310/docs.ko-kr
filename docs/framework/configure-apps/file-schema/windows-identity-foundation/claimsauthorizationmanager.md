@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 9354eee3-f692-4ad6-8427-3169686b8bcc
 author: BrucePerlerMS
 ms.openlocfilehash: 59d47eda97e97629408ece12a1d1dfbe804feb3e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667316"
 ---
 # <a name="claimsauthorizationmanager"></a>\<claimsAuthorizationManager>
 들어오는 클레임에 대 한 클레임 권한 부여 관리자를 등록합니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "55268100"
   
 |특성|설명|  
 |---------------|-----------------|  
-|형식|사용자 지정 형식에서 파생 되는 <xref:System.Security.Claims.ClaimsAuthorizationManager> 클래스입니다. 지정 하는 방법에 대 한 자세한 내용은 합니다 `type` 특성을 참조 하십시오 [사용자 지정 형식 참조](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)합니다.|  
+|type|사용자 지정 형식에서 파생 되는 <xref:System.Security.Claims.ClaimsAuthorizationManager> 클래스입니다. 지정 하는 방법에 대 한 자세한 내용은 합니다 `type` 특성을 참조 하십시오 [사용자 지정 형식 참조](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없는 경우 없습니다 `type` 특성을 또는 경우에는 `type` 특성 참조를 <xref:System.Security.Claims.ClaimsAuthenticationManager> 클래스를 `<claimsAuthorizationManager>` 요소는 자식 요소를 사용 하지 않는; 클래스에서 파생 되는 반면 <xref:System.Security.Claims.ClaimsAuthorizationManager> 자식 구성 요소를 정의할 수 있습니다.  

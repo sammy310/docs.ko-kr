@@ -3,11 +3,11 @@ title: Word 문서 (Visual Basic)에서 텍스트 찾기
 ms.date: 07/20/2015
 ms.assetid: eea9819b-a78a-4552-bf13-8837fc0e7a37
 ms.openlocfilehash: f8414662e2013b152e471d6c4c003e602c0d277d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931549"
 ---
 # <a name="finding-text-in-word-documents-visual-basic"></a>Word 문서 (Visual Basic)에서 텍스트 찾기
 이 항목에서는 이전 쿼리를 확장하여 문서에 있는 문자열을 모두 찾습니다.  
@@ -305,7 +305,7 @@ StyleName:Code ><
 ## <a name="next-steps"></a>다음 단계  
  다음 단원에서는 WordprocessingML 문서에 대해 자세히 설명합니다.  
   
--   [자세한 내용은 office Open XML WordprocessingML 문서 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
+- [자세한 내용은 office Open XML WordprocessingML 문서 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
   
 ## <a name="see-also"></a>참고자료
 

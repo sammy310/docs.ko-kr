@@ -3,11 +3,11 @@ title: 쿼리 식(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c36f327b-e230-48d4-bbd5-78dc6478c447
 ms.openlocfilehash: 5f89028b9c501dd840f1dc9445418e4757967db8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614624"
 ---
 # <a name="query-expressions-entity-sql"></a>쿼리 식(Entity SQL)
 쿼리 식은 다양한 쿼리 연산자를 단일 구문에 결합합니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 식에서 다음을 비롯 한 다양 한 종류를 제공 합니다. [리터럴](../../../../../../docs/framework/data/adonet/ef/language-reference/literals-entity-sql.md), [매개 변수](../../../../../../docs/framework/data/adonet/ef/language-reference/parameters-entity-sql.md), [변수](../../../../../../docs/framework/data/adonet/ef/language-reference/variables-entity-sql.md), 연산자 [함수](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)집합 연산자, 및 등입니다. 자세한 내용은 [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)합니다.  

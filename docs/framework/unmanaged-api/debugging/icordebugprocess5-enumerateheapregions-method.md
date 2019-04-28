@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 61e30cf4ffe45578f7ad37de8295d227dbf313c9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61930197"
 ---
 # <a name="icordebugprocess5enumerateheapregions-method"></a>ICorDebugProcess5::EnumerateHeapRegions 메서드
 관리 되는 힙의 메모리 범위에 대 한 열거자를 가져옵니다.  

@@ -8,11 +8,11 @@ ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 27c8c1cac68aca1c40826ff549d62d9636d9b0c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704910"
 ---
 # <a name="disablefusionupdatesfromadmanager-element"></a>\<disableFusionUpdatesFromADManager > 요소
 런타임 호스트가 애플리케이션 도메인에 대한 구성 설정을 재정의할 수 있도록 허용하는 기본 동작을 사용하지 않도록 설정할지를 지정합니다.  

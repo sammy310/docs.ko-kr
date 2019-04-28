@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 611b4a543a1de7c6163ec45ff7f17d07726569ba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936495"
 ---
 # <a name="fusioninstallreference-structure"></a>FUSION_INSTALL_REFERENCE 구조체
 응용 프로그램에 전역 어셈블리 캐시에 설치 하는 어셈블리를 응용 프로그램에는 참조를 나타냅니다.  

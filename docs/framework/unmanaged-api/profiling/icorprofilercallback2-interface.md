@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 83c72704ccb01baf68a3cacb6252367e07909fa8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638414"
 ---
 # <a name="icorprofilercallback2-interface"></a>ICorProfilerCallback2 인터페이스
 코드 프로파일러는 프로파일러가 구독 한 이벤트가 발생할 때 알릴는 CLR (공용 언어 런타임)에서 사용 되는 메서드를 제공 합니다. 합니다 `ICorProfilerCallback2` 인터페이스의 확장은 합니다 [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) 인터페이스입니다. 즉,.NET Framework 버전 2.0에에서 도입 된 새 콜백을 제공 합니다.  

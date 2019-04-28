@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b886bf16e5465d3faac5286457784712ac1b72e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59081686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645151"
 ---
 # <a name="imetadatatables2-interface"></a>IMetaDataTables2 인터페이스
 확장 [IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md) 메타 데이터 스트림을 사용 하 여 작업 하기 위한 메서드를 포함 합니다.  

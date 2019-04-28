@@ -13,11 +13,11 @@ helpviewer_keywords:
 - execution [Visual Basic], stopping
 ms.assetid: 760bfb32-5c3f-4bdb-a432-9a6001c92db7
 ms.openlocfilehash: 1f386694bd7425ee530b9305ab684b730f9b73c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638118"
 ---
 # <a name="exit-statement-visual-basic"></a>Exit 문(Visual Basic)
 프로시저 또는 블록을 종료 하 고 프로시저 호출 또는 블록 정의 다음 문으로 제어를 즉시 전달 합니다.  

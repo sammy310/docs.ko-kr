@@ -5,13 +5,13 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 5477b8c4531780fdebf194e4f798564e59cd2953
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640288"
 ---
-# <a name="architecture-deployment-approaches"></a>아키텍처 배포 방법
+# <a name="architecture-deployment-approaches"></a>아키텍처 배포 접근 방식
 
 아키텍처에 관계 없이 비즈니스 응용 프로그램, 구현, 또는 해당 응용 프로그램의 배포를 디자인 하는 데 사용 하는 방법은 다를 수 있습니다. 서버 리스 함수에 실제 하드웨어에서 모든 응용 프로그램을 호스트 하는 기업입니다.
 
@@ -138,11 +138,11 @@ Docker 컨테이너에 대 한 자세한 내용은 참조 하세요. [Docker 란
 
 |         |IaaS     |PaaS     |컨테이너|서버 리스|
 |---------|---------|---------|---------|----------|
-|**배율**|VM       |인스턴스 |앱      |기능  |
-|**요약**|하드웨어|플랫폼|호스트 OS|런타임   |
-|**단위** |VM       |프로젝트  |이미지    |코드      |
+|**배율**|VM       |인스턴스 |앱      |함수  |
+|**Abstracts**|하드웨어|플랫폼|호스트 OS|런타임   |
+|**Unit** |VM       |프로젝트  |이미지    |코드      |
 |**수명(lifetime)**|개월|개월 기간 (일)|일 분|분 시간 (밀리초)|
-|**책임**|응용 프로그램, 종속성, 런타임 및 운영 체제|응용 프로그램 및 종속성|응용 프로그램, 종속성 및 런타임|기능
+|**책임**|응용 프로그램, 종속성, 런타임 및 운영 체제|응용 프로그램 및 종속성|응용 프로그램, 종속성 및 런타임|함수
 
 * **확장** 응용 프로그램을 확장 하는 데 사용 되는 장치를 말합니다
 * **추상화** 구현에 의해 추상화 되는 계층에 대 한 참조

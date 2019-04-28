@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Handles keyword [Visual Basic]
 ms.assetid: 1b051c0e-f499-42f6-acb5-6f4f27824b40
 ms.openlocfilehash: 50a449ea8a5131c878cf703f44695cd2e2304444
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638040"
 ---
 # <a name="handles-clause-visual-basic"></a>Handles 절(Visual Basic)
 지정된 이벤트를 처리하는 프로시저를 선언합니다.  

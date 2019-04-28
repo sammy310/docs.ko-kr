@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 9096e812-626a-409a-9eda-c31a60b84c55
 ms.openlocfilehash: 6fe02cfea91633da41c8ebc7d8a78dd005ad3f4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61613718"
 ---
 # <a name="workflowinstancequery"></a>\<workflowInstanceQuery>
 시작된 이벤트나 완료된 이벤트와 같이 워크플로 인스턴스 수명 주기의 변경 내용을 추적하는 쿼리를 나타냅니다.  
@@ -61,15 +61,15 @@ ms.locfileid: "59080906"
 ## <a name="remarks"></a>설명  
  <xref:System.Activities.Tracking.WorkflowInstanceQuery>는 다음 <xref:System.Activities.Tracking.TrackingRecord> 개체를 구독하는 데 사용됩니다.  
   
--   <xref:System.Activities.Tracking.WorkflowInstanceRecord>  
+- <xref:System.Activities.Tracking.WorkflowInstanceRecord>  
   
--   <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord>  
+- <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord>  
   
--   <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>  
+- <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>  
   
--   <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord>  
+- <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord>  
   
--   <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>  
+- <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>  
   
 ## <a name="example"></a>예제  
  다음 구성은 이 쿼리를 사용하여 `Started` 인스턴스 상태에 대한 워크플로 인스턴스 수준 추적 레코드를 구독합니다.  

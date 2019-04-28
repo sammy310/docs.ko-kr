@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3077e0494816a083d97839d66d06b18130e5dac8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645580"
 ---
 # <a name="icordebugassemblygetname-method"></a>ICorDebugAssembly::GetName 메서드
 어셈블리의 이름을 가져옵니다이 `ICorDebugAssembly` 인스턴스가 나타내는입니다.  

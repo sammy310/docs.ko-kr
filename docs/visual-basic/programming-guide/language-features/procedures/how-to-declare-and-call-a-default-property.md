@@ -11,11 +11,11 @@ helpviewer_keywords:
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
 ms.openlocfilehash: 9ca9a0ccdac3ac13429928233a0c09d58427ce74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665769"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>방법: 선언 및 Visual Basic의 기본 속성을 호출
 A *속성의 기본값을* 지정 하지 않고 코드에 액세스할 수 있는 클래스 또는 구조체 속성입니다. 코드 이름은 호출 하는 경우 클래스 또는 구조 및 제외 속성을 하 고 컨텍스트 속성에 대 한 액세스 허용, Visual Basic 있을 경우 해당 클래스 또는 구조체의 기본 속성에 대 한 액세스를 확인 합니다.  

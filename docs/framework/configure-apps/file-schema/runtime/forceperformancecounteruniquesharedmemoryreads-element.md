@@ -8,11 +8,11 @@ ms.assetid: 91149858-4810-4f65-9b48-468488172c9b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1d4a205f643c844b2fe77d3aa5211b4bc1f322fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674252"
 ---
 # <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<forcePerformanceCounterUniqueSharedMemoryReads> Element
 PerfCounter.dll이 .NET Framework 버전 1.1 애플리케이션에서 CategoryOptions 레지스트리 설정을 사용하여 성능 카운터 데이터를 범주별 공유 메모리에서 로드할지 또는 전역 메모리에서 로드할지를 결정하도록 지정합니다.  

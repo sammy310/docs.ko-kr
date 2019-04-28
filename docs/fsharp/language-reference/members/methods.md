@@ -3,11 +3,11 @@ title: 메서드
 description: 에 대해 알아봅니다 어떻게는 F# 메서드는 노출 기능 및 개체 및 유형의 동작을 구현 하는 데 사용 되는 형식과 연결 된 함수입니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: 03150cc67f79bfde58cf27e4a9d4dfa9e9ff3f55
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666497"
 ---
 # <a name="methods"></a>메서드
 
@@ -117,6 +117,6 @@ type C() =
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3406.fs)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [멤버](index.md)

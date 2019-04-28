@@ -3,11 +3,11 @@ title: 옵션
 description: 사용 하는 방법을 알아봅니다 F# 명명 된 값 또는 변수를 실제 값이 존재 하지 않을 경우 형식 옵션입니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: 6d32693bccc74c2cab642e4f626c9463092e8a39
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666484"
 ---
 # <a name="options"></a>옵션
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - variables [Visual Basic], creating
 ms.assetid: 35300be3-77b0-4bef-a156-034d3cdedde0
 ms.openlocfilehash: ee1e93b4e9819992f17738eb024004a4d66210d1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938244"
 ---
 # <a name="how-to-create-a-new-variable-visual-basic"></a>방법: 새 변수 (Visual Basic) 만들기
 변수를 만들 수는 [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md)합니다.  
