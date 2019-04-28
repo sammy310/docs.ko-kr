@@ -21,11 +21,11 @@ helpviewer_keywords:
 - Long data type
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
 ms.openlocfilehash: ca0f95342783d22559761294ccea6056cd3e4fa7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918452"
 ---
 # <a name="long-data-type-visual-basic"></a>Long 데이터 형식 (Visual Basic)
 
@@ -68,13 +68,13 @@ Dim number = &H_0FAC_0326_1489_D68CL
 
 ## <a name="programming-tips"></a>프로그래밍 팁
 
--   **Interop 고려 사항입니다.** 예제에서는 자동화 개체나 COM 개체에 대 한.NET Framework 용으로 작성 되지 구성 요소와 상호 작용 하는 경우에 유의 해야 `Long` 다른 환경에서 다른 데이터 너비 (32 비트)에 있습니다. 이러한 구성 요소는 32 비트 인수를 전달 하는 경우로 선언 `Integer` 대신 `Long` 새 Visual Basic 코드에서.  
+- **Interop 고려 사항입니다.** 예제에서는 자동화 개체나 COM 개체에 대 한.NET Framework 용으로 작성 되지 구성 요소와 상호 작용 하는 경우에 유의 해야 `Long` 다른 환경에서 다른 데이터 너비 (32 비트)에 있습니다. 이러한 구성 요소는 32 비트 인수를 전달 하는 경우로 선언 `Integer` 대신 `Long` 새 Visual Basic 코드에서.  
   
--   **확대 합니다.** 합니다 `Long` 데이터 형식으로 확장 되는지를 `Decimal`를 `Single`, 또는 `Double`합니다. 이는 `Long` 오류 발생 없이 <xref:System.OverflowException?displayProperty=nameWithType>를 이러한 형식 중 하나로 변환할 수 있음을 의미합니다.  
+- **확대 합니다.** 합니다 `Long` 데이터 형식으로 확장 되는지를 `Decimal`를 `Single`, 또는 `Double`합니다. 이는 `Long` 오류 발생 없이 <xref:System.OverflowException?displayProperty=nameWithType>를 이러한 형식 중 하나로 변환할 수 있음을 의미합니다.  
   
--   **형식 문자입니다.** 리터럴 형식 문자 `L`를 리터럴에 추가하면 `Long` 데이터 형식이 됩니다. 식별자 형식 문자 `&`를 식별자에 추가하면 `Long`가 됩니다.  
+- **형식 문자입니다.** 리터럴 형식 문자 `L`를 리터럴에 추가하면 `Long` 데이터 형식이 됩니다. 식별자 형식 문자 `&`를 식별자에 추가하면 `Long`가 됩니다.  
   
--   **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.Int64?displayProperty=nameWithType> 구조체입니다.  
+- **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.Int64?displayProperty=nameWithType> 구조체입니다.  
 
 ## <a name="see-also"></a>참고자료
 

@@ -3,11 +3,11 @@ title: XML 네임 스페이스 (Visual Basic)를 사용 하 여 작업
 ms.date: 07/20/2015
 ms.assetid: 428bf4b0-e348-4ffd-986b-d905d5a0e7fa
 ms.openlocfilehash: b2b9db9ed547858eb5358d5e3c871c6a84d22ae6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907792"
 ---
 # <a name="working-with-xml-namespaces-visual-basic"></a>XML 네임 스페이스 (Visual Basic)를 사용 하 여 작업
 이 단원의 항목에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서 네임스페이스를 지원하는 방법에 대해 설명합니다.  

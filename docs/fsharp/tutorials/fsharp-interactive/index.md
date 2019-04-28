@@ -3,11 +3,11 @@ title: F# Interactive(fsi.exe) 참조
 description: 에 대해 알아봅니다 하는 방법 F# Interactive (fsi.exe) 실행 하는 F# 대화형으로 나 콘솔에서 실행할 코드 F# 스크립트입니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: 9ec780ca51eaa5ae0aa791eb509d8ad0865dc26f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982747"
 ---
 # <a name="interactive-programming-with-f"></a>F # 사용한 대화형 프로그래밍\#
 

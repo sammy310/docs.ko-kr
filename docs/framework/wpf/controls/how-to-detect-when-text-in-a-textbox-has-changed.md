@@ -10,11 +10,11 @@ helpviewer_keywords:
 - detecting text change [WPF]
 ms.assetid: 1c39ee14-e37f-49fb-a0d1-a9824ca13584
 ms.openlocfilehash: 1adadb0f071815930d34f40ddf244ffc8c19131b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59091150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000976"
 ---
 # <a name="how-to-detect-when-text-in-a-textbox-has-changed"></a>방법: TextBox에서 텍스트가 변경되는 시점 감지
 이 예제에 사용 하는 방법을 보여 줍니다 합니다 <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> 메서드를 실행 하는 이벤트 때마다의 텍스트를 <xref:System.Windows.Controls.TextBox> 컨트롤이 변경 된 합니다.  

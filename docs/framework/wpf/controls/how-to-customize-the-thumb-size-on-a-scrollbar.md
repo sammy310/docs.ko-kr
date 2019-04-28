@@ -7,11 +7,11 @@ helpviewer_keywords:
 - thumb size [WPF]
 ms.assetid: fa32b866-5ca1-4e73-85e7-2ac64b80d194
 ms.openlocfilehash: 60ae7c4e95801036c5deb0c485645297509b830c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911055"
 ---
 # <a name="how-to-customize-the-thumb-size-on-a-scrollbar"></a>방법: ScrollBar의 Thumb 크기 사용자 지정
 이 항목에서는 설정 하는 방법에 설명 합니다 <xref:System.Windows.Controls.Primitives.Thumb> 의 <xref:System.Windows.Controls.Primitives.ScrollBar> 고정 된 크기 및 최소 크기를 지정 하는 방법에는 <xref:System.Windows.Controls.Primitives.Thumb> 의 <xref:System.Windows.Controls.Primitives.ScrollBar>.  

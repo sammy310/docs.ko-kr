@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40039
 ms.assetid: c5bd5914-ae71-416a-8bed-f76f644f78be
 ms.openlocfilehash: 84706719d151ea8df478f88610df34842f6f8702
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918361"
 ---
 # <a name="name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant"></a>이름을 \<namespacename > 루트 네임 스페이스에서 \<fullnamespacename > CLS 규격이 아님
 로 어셈블리 표시 됩니다 `<CLSCompliant(True)>`에 요소의 루트 네임 스페이스 이름 밑줄로 시작 하지만 (`_`).  
@@ -29,9 +29,9 @@ ms.locfileid: "58841539"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   CLS 규격에 필요한 경우 밑줄로 시작 하는 해당 요소 중 루트 네임 스페이스 이름을 변경 합니다.  
+- CLS 규격에 필요한 경우 밑줄로 시작 하는 해당 요소 중 루트 네임 스페이스 이름을 변경 합니다.  
   
--   네임 스페이스 이름을 그대로 유지 하는, 필요한 경우 다음 제거 합니다 <xref:System.CLSCompliantAttribute> 어셈블리에서로 표시 하거나 `<CLSCompliant(False)>`합니다.  
+- 네임 스페이스 이름을 그대로 유지 하는, 필요한 경우 다음 제거 합니다 <xref:System.CLSCompliantAttribute> 어셈블리에서로 표시 하거나 `<CLSCompliant(False)>`합니다.  
   
 ## <a name="see-also"></a>참고자료
 

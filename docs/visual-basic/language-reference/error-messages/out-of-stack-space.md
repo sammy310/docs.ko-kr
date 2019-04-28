@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID28
 ms.assetid: bfcd792b-ac29-4158-81fc-ea0c13f4ffa2
 ms.openlocfilehash: 29dbdf74808fc98bb856483c3fd8e3a09a72113b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925582"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>스택 공간이 부족합니다(Visual Basic).
 스택의는 실행 중인 프로그램의 요구를 사용 하 여 동적으로 메모리 증가 및 축소 하는 작업 영역입니다. 해당 제한은 초과 했습니다.  

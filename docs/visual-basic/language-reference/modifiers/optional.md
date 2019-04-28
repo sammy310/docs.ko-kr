@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
 ms.openlocfilehash: 67ceedffecdfba8ec0c2829a3af31d194f18bd88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920668"
 ---
 # <a name="optional-visual-basic"></a>Optional(Visual Basic)
 프로시저를 호출할 때 프로시저 인수를 생략할 수를 지정 합니다.  
@@ -25,13 +25,13 @@ ms.locfileid: "58820791"
   
  `Optional` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.  
   
--   [Declare 문](../../../visual-basic/language-reference/statements/declare-statement.md)  
+- [Declare 문](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Function 문](../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Function 문](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Property 문](../../../visual-basic/language-reference/statements/property-statement.md)  
+- [Property 문](../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)  
+- [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 > [!NOTE]
 >  선택적 매개 변수 없이 프로시저를 호출할 때에 위치 또는 이름으로 인수를 전달할 수 있습니다. 자세한 내용은 [위치 및 이름별 인수 전달](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)합니다.  
