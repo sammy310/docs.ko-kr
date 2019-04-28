@@ -19,16 +19,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ca922d8b582c0608073d4fd0ba986167ae470e34
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599500"
 ---
-# <a name="cordebugngenpolicy-enumeration"></a><span data-ttu-id="83488-102">CorDebugNGenPolicy 열거형</span><span class="sxs-lookup"><span data-stu-id="83488-102">CorDebugNGenPolicy Enumeration</span></span>
-<span data-ttu-id="83488-103">디버거가 네이티브 이미지 캐시에서 네이티브(NGen) 이미지를 로드하는지 여부를 결정하는 값을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="83488-103">Provides a value that determines whether a debugger loads native (NGen) images from the native image cache.</span></span>  
+# <a name="cordebugngenpolicy-enumeration"></a><span data-ttu-id="22d0b-102">CorDebugNGenPolicy 열거형</span><span class="sxs-lookup"><span data-stu-id="22d0b-102">CorDebugNGenPolicy Enumeration</span></span>
+<span data-ttu-id="22d0b-103">디버거가 네이티브 이미지 캐시에서 네이티브(NGen) 이미지를 로드하는지 여부를 결정하는 값을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="22d0b-103">Provides a value that determines whether a debugger loads native (NGen) images from the native image cache.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="83488-104">구문</span><span class="sxs-lookup"><span data-stu-id="83488-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="22d0b-104">구문</span><span class="sxs-lookup"><span data-stu-id="22d0b-104">Syntax</span></span>  
   
 ```cpp
 enum CorDebugNGENPolicy {  
@@ -36,24 +36,24 @@ enum CorDebugNGENPolicy {
 } CorDebugNGENPolicy;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="83488-105">멤버</span><span class="sxs-lookup"><span data-stu-id="83488-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="22d0b-105">멤버</span><span class="sxs-lookup"><span data-stu-id="22d0b-105">Members</span></span>  
   
-|<span data-ttu-id="83488-106">멤버 이름</span><span class="sxs-lookup"><span data-stu-id="83488-106">Member name</span></span>|<span data-ttu-id="83488-107">설명</span><span class="sxs-lookup"><span data-stu-id="83488-107">Description</span></span>|  
+|<span data-ttu-id="22d0b-106">멤버 이름</span><span class="sxs-lookup"><span data-stu-id="22d0b-106">Member name</span></span>|<span data-ttu-id="22d0b-107">설명</span><span class="sxs-lookup"><span data-stu-id="22d0b-107">Description</span></span>|  
 |-----------------|-----------------|  
-|`DISABLE_LOCAL_NIC`|<span data-ttu-id="83488-108">에 [!INCLUDE[win8_appname_long](../../../../includes/win8-appname-long-md.md)] 로컬 네이티브 이미지 캐시에서 이미지를 사용 하 여 앱을 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="83488-108">In a [!INCLUDE[win8_appname_long](../../../../includes/win8-appname-long-md.md)] app, the use of images from the local native image cache is disabled.</span></span> <span data-ttu-id="83488-109">데스크톱 앱에서이 설정은 효과가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="83488-109">In a desktop app, this setting has no effect.</span></span>|  
+|`DISABLE_LOCAL_NIC`|<span data-ttu-id="22d0b-108">에 [!INCLUDE[win8_appname_long](../../../../includes/win8-appname-long-md.md)] 로컬 네이티브 이미지 캐시에서 이미지를 사용 하 여 앱을 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="22d0b-108">In a [!INCLUDE[win8_appname_long](../../../../includes/win8-appname-long-md.md)] app, the use of images from the local native image cache is disabled.</span></span> <span data-ttu-id="22d0b-109">데스크톱 앱에서이 설정은 효과가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="22d0b-109">In a desktop app, this setting has no effect.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="83488-110">설명</span><span class="sxs-lookup"><span data-stu-id="83488-110">Remarks</span></span>  
- <span data-ttu-id="83488-111">합니다 `CorDebugNGENPolicy` 열거형을 사용 합니다 [ICorDebugProcess5::EnableNGENPolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="83488-111">The `CorDebugNGENPolicy` enumeration is used by the [ICorDebugProcess5::EnableNGENPolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md) method.</span></span> <span data-ttu-id="83488-112">로컬 네이티브 이미지 캐시에서 이미지의 사용을 해제 하면 디버거 최적화 된 네이티브 이미지 대신 디버깅 가능한 JIT 컴파일된 이미지를 로드 하 여 일관 된 디버깅 환경을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="83488-112">Disabling the use of images from the local native image cache provides for a consistent debugging experience by ensuring that the debugger loads debuggable JIT-compiled images instead of optimized native images.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="22d0b-110">설명</span><span class="sxs-lookup"><span data-stu-id="22d0b-110">Remarks</span></span>  
+ <span data-ttu-id="22d0b-111">합니다 `CorDebugNGENPolicy` 열거형을 사용 합니다 [ICorDebugProcess5::EnableNGENPolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="22d0b-111">The `CorDebugNGENPolicy` enumeration is used by the [ICorDebugProcess5::EnableNGENPolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md) method.</span></span> <span data-ttu-id="22d0b-112">로컬 네이티브 이미지 캐시에서 이미지의 사용을 해제 하면 디버거 최적화 된 네이티브 이미지 대신 디버깅 가능한 JIT 컴파일된 이미지를 로드 하 여 일관 된 디버깅 환경을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="22d0b-112">Disabling the use of images from the local native image cache provides for a consistent debugging experience by ensuring that the debugger loads debuggable JIT-compiled images instead of optimized native images.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="83488-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="83488-113">Requirements</span></span>  
- <span data-ttu-id="83488-114">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="83488-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="22d0b-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="22d0b-113">Requirements</span></span>  
+ <span data-ttu-id="22d0b-114">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="22d0b-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="83488-115">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="83488-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="22d0b-115">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="22d0b-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="83488-116">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="83488-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="22d0b-116">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="22d0b-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="83488-117">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="83488-117">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="22d0b-117">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="22d0b-117">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="83488-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="83488-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="22d0b-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="22d0b-118">See also</span></span>
 
-- [<span data-ttu-id="83488-119">디버깅 열거형</span><span class="sxs-lookup"><span data-stu-id="83488-119">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="22d0b-119">디버깅 열거형</span><span class="sxs-lookup"><span data-stu-id="22d0b-119">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

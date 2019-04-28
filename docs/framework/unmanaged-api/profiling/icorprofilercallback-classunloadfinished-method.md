@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9d01f3d7485b19c076d9cd3e83aeccbcf5e728f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61597982"
 ---
-# <a name="icorprofilercallbackclassunloadfinished-method"></a><span data-ttu-id="09eac-102">ICorProfilerCallback::ClassUnloadFinished 메서드</span><span class="sxs-lookup"><span data-stu-id="09eac-102">ICorProfilerCallback::ClassUnloadFinished Method</span></span>
-<span data-ttu-id="09eac-103">클래스 언로드 되었음을 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="09eac-103">Notifies the profiler that a class has finished unloading.</span></span>  
+# <a name="icorprofilercallbackclassunloadfinished-method"></a><span data-ttu-id="18fe3-102">ICorProfilerCallback::ClassUnloadFinished 메서드</span><span class="sxs-lookup"><span data-stu-id="18fe3-102">ICorProfilerCallback::ClassUnloadFinished Method</span></span>
+<span data-ttu-id="18fe3-103">클래스 언로드 되었음을 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="18fe3-103">Notifies the profiler that a class has finished unloading.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="09eac-104">구문</span><span class="sxs-lookup"><span data-stu-id="09eac-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="18fe3-104">구문</span><span class="sxs-lookup"><span data-stu-id="18fe3-104">Syntax</span></span>  
   
 ```  
 HRESULT ClassUnloadFinished(  
@@ -35,26 +35,26 @@ HRESULT ClassUnloadFinished(
     [in] HRESULT hrStatus);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="09eac-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="09eac-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="18fe3-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="18fe3-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="09eac-106">[in] 로드 되지 않은 클래스를 식별 합니다.</span><span class="sxs-lookup"><span data-stu-id="09eac-106">[in] Identifies the class that was unloaded.</span></span>  
+ <span data-ttu-id="18fe3-106">[in] 로드 되지 않은 클래스를 식별 합니다.</span><span class="sxs-lookup"><span data-stu-id="18fe3-106">[in] Identifies the class that was unloaded.</span></span>  
   
  `hrStatus`  
- <span data-ttu-id="09eac-107">[in] 클래스 로드 되었는지 여부를 하지 성공적으로 나타내는 HRESULT입니다.</span><span class="sxs-lookup"><span data-stu-id="09eac-107">[in] An HRESULT that indicates whether the class was unloaded successfully.</span></span>  
+ <span data-ttu-id="18fe3-107">[in] 클래스 로드 되었는지 여부를 하지 성공적으로 나타내는 HRESULT입니다.</span><span class="sxs-lookup"><span data-stu-id="18fe3-107">[in] An HRESULT that indicates whether the class was unloaded successfully.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="09eac-108">설명</span><span class="sxs-lookup"><span data-stu-id="09eac-108">Remarks</span></span>  
- <span data-ttu-id="09eac-109">일부 클래스를 언로드 후 계속 사용할 수는 `ClassUnloadFinished` 콜백 합니다.</span><span class="sxs-lookup"><span data-stu-id="09eac-109">Some parts of unloading the class might continue after the `ClassUnloadFinished` callback.</span></span> <span data-ttu-id="09eac-110">오류 HRESULT에서 `hrStatus` 오류가 발생 했음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="09eac-110">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="09eac-111">그러나 성공 HRESULT에서 `hrStatus` 언로드 클래스에 대 한 첫 번째 부분 성공 했다는 것만 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="09eac-111">However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the class has succeeded.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="18fe3-108">설명</span><span class="sxs-lookup"><span data-stu-id="18fe3-108">Remarks</span></span>  
+ <span data-ttu-id="18fe3-109">일부 클래스를 언로드 후 계속 사용할 수는 `ClassUnloadFinished` 콜백 합니다.</span><span class="sxs-lookup"><span data-stu-id="18fe3-109">Some parts of unloading the class might continue after the `ClassUnloadFinished` callback.</span></span> <span data-ttu-id="18fe3-110">오류 HRESULT에서 `hrStatus` 오류가 발생 했음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="18fe3-110">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="18fe3-111">그러나 성공 HRESULT에서 `hrStatus` 언로드 클래스에 대 한 첫 번째 부분 성공 했다는 것만 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="18fe3-111">However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the class has succeeded.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="09eac-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="09eac-112">Requirements</span></span>  
- <span data-ttu-id="09eac-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="09eac-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="18fe3-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="18fe3-112">Requirements</span></span>  
+ <span data-ttu-id="18fe3-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="18fe3-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="09eac-114">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="09eac-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="18fe3-114">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="18fe3-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="09eac-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="09eac-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="18fe3-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="18fe3-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="09eac-116">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="09eac-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="18fe3-116">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="18fe3-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="09eac-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="09eac-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="18fe3-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="18fe3-117">See also</span></span>
 
-- [<span data-ttu-id="09eac-118">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="09eac-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="09eac-119">ClassUnloadStarted 메서드</span><span class="sxs-lookup"><span data-stu-id="09eac-119">ClassUnloadStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classunloadstarted-method.md)
+- [<span data-ttu-id="18fe3-118">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="18fe3-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="18fe3-119">ClassUnloadStarted 메서드</span><span class="sxs-lookup"><span data-stu-id="18fe3-119">ClassUnloadStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classunloadstarted-method.md)
