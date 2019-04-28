@@ -5,30 +5,30 @@ helpviewer_keywords:
 - routing [WCF], message filters
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
 ms.openlocfilehash: fc4656a76894eb3a844bc9f2187847fd9eff0ffe
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786000"
 ---
 # <a name="message-filters"></a>메시지 필터
 라우팅 서비스는 내용 기반 라우팅을 구현하기 위해 주소, 엔드포인트 이름 또는 특정 XPath 문과 같은 메시지의 특정 섹션을 검사하는 <xref:System.ServiceModel.Dispatcher.MessageFilter> 구현을 사용합니다. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]에 제공되는 메시지 필터 중 요구 사항을 충족하는 필터가 없는 경우 기본 <xref:System.ServiceModel.Dispatcher.MessageFilter> 클래스의 새 구현을 만드는 방법으로 사용자 지정 필터를 만들 수 있습니다.  
   
  라우팅 서비스를 구성할 때 필터 요소를 정의 해야 합니다 (<xref:System.ServiceModel.Routing.Configuration.FilterElement> 개체)의 형식을 설명 하는 **MessageFilter** 검색할 특정 문자열과 같이 필터를 만드는 데 필요한 지원 데이터 및 에 대 한 메시지 내에서. 필터 요소를 만들 경우 개별 메시지 필터만 정의됩니다. 필터를 사용하여 메시지를 평가 및 라우트하려면 필터 테이블(<xref:System.ServiceModel.Routing.Configuration.FilterTableEntryCollection>)도 만들어야 합니다.  
   
- 필터 테이블의 각 항목은 필터 요소를 참조하며 메시지가 필터와 일치할 경우 메시지가 라우트될 클라이언트 엔드포인트를 지정합니다. 또한 필터 테이블 항목을 통해 백업 엔드포인트 컬렉션(<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>)을 지정할 수 있습니다. 여기에는 기본 엔드포인트로 보내는 중 전송 오류가 발생할 경우 메시지를 전송할 엔드포인트 목록이 정의됩니다. 전송이 성공하는 끝점이 나올 때까지 여기에 지정된 끝점에 대해 순서대로 전송이 시도됩니다.  
+ 필터 테이블의 각 항목은 필터 요소를 참조하며 메시지가 필터와 일치할 경우 메시지가 라우트될 클라이언트 엔드포인트를 지정합니다. 또한 필터 테이블 항목을 통해 백업 엔드포인트 컬렉션(<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>)을 지정할 수 있습니다. 여기에는 기본 엔드포인트로 보내는 중 전송 오류가 발생할 경우 메시지를 전송할 엔드포인트 목록이 정의됩니다. 전송이 성공하는 엔드포인트가 나올 때까지 여기에 지정된 엔드포인트에 대해 순서대로 전송이 시도됩니다.  
   
 ## <a name="message-filters"></a>메시지 필터  
- 라우팅 서비스에 사용되는 메시지 필터는 SOAP 동작, 메시지가 전송된 주소나 주소 접두사 또는 메시지를 보내는 끝점 이름 평가와 같은 일반적인 메시지 선택 기능을 제공합니다. 또한 필터를 `AND` 조건과 결합하면 메시지가 두 필터에 모두 일치하는 경우에만 엔드포인트에 라우트되도록 할 수 있습니다. 사용자 고유의 <xref:System.ServiceModel.Dispatcher.MessageFilter> 구현을 만들어 사용자 지정 필터를 만들 수도 있습니다.  
+ 라우팅 서비스에 사용되는 메시지 필터는 SOAP 동작, 메시지가 전송된 주소나 주소 접두사 또는 메시지를 보내는 엔드포인트 이름 평가와 같은 일반적인 메시지 선택 기능을 제공합니다. 또한 필터를 `AND` 조건과 결합하면 메시지가 두 필터에 모두 일치하는 경우에만 엔드포인트에 라우트되도록 할 수 있습니다. 사용자 고유의 <xref:System.ServiceModel.Dispatcher.MessageFilter> 구현을 만들어 사용자 지정 필터를 만들 수도 있습니다.  
   
  다음 표에서는 라우팅 서비스에 사용되는 <xref:System.ServiceModel.Routing.Configuration.FilterType>, 특정 메시지 필터를 구현하는 클래스 및 필수 <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A> 매개 변수를 보여 줍니다.  
   
 |필터 형식|설명|필터 데이터 의미|예제 필터|  
 |------------------|-----------------|-------------------------|--------------------|  
-|동작|<xref:System.ServiceModel.Dispatcher.ActionMessageFilter> 클래스를 사용하여 특정 작업이 포함된 메시지를 일치시킵니다.|필터링할 작업입니다.|\<filter name="action1" filterType="Action" filterData="http://namespace/contract/operation" />|  
+|작업|<xref:System.ServiceModel.Dispatcher.ActionMessageFilter> 클래스를 사용하여 특정 작업이 포함된 메시지를 일치시킵니다.|필터링할 작업입니다.|\<filter name="action1" filterType="Action" filterData="http://namespace/contract/operation" />|  
 |EndpointAddress|사용 하는 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> 클래스를 사용 하 여 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` 특정 주소가 포함 된 메시지를 일치 시킵니다.|To 헤더의 필터링할 주소입니다.|\<filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b"  />|  
 |EndpointAddressPrefix|사용 하는 <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> 클래스를 사용 하 여 <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` 특정 주소 접두사가 포함 된 메시지를 일치 시킵니다.|가장 긴 접두사 일치를 사용하여 필터링을 적용할 주소입니다.|\<filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/" />|  
-|그리고|반환 전에 항상 두 조건을 모두 평가하는 <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> 클래스를 사용합니다.|filterData는 사용 되지 않습니다. 대신 filter1 및 filter2가 있어야 하 고 (테이블)에 해당 메시지 필터의 이름을 **AND**적용 합니다.|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
+|And|반환 전에 항상 두 조건을 모두 평가하는 <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> 클래스를 사용합니다.|filterData는 사용 되지 않습니다. 대신 filter1 및 filter2가 있어야 하 고 (테이블)에 해당 메시지 필터의 이름을 **AND**적용 합니다.|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
 |사용자 지정|<xref:System.ServiceModel.Dispatcher.MessageFilter> 클래스를 확장하고 문자열을 사용하는 생성자를 포함하는 사용자 정의 형식입니다.|customType 특성은 만들 클래스의 정규화된 형식 이름입니다. filterData는 필터를 만들 때 생성자에 전달할 문자열입니다.|\<filter name="custom1" filterType="Custom" customType="CustomAssembly.CustomMsgFilter, CustomAssembly" filterData="Custom Data" />|  
 |EndpointName|<xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> 클래스를 사용하여 메시지가 도착하는 서비스 엔드포인트의 이름을 기반으로 메시지를 일치시킵니다.|서비스 끝점의 이름 예: "serviceEndpoint1"입니다.  이는 라우팅 서비스에서 노출되는 엔드포인트 중 하나여야 합니다.|\<filter name="stock1" filterType="Endpoint" filterData="SvcEndpoint" />|  
 |MatchAll|<xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> 클래스를 사용합니다. 이 필터는 도착하는 메시지를 모두 일치시킵니다.|filterData는 사용되지 않습니다. 이 필터는 항상 모든 메시지를 일치시킵니다.|\<filter name="matchAll1" filterType="MatchAll" />|  
@@ -103,7 +103,7 @@ ms.locfileid: "48839107"
 ```  
   
 ### <a name="filter-evaluation-priority"></a>필터 평가 우선 순위  
- 기본적으로 필터 테이블의 모든 항목은 동시에 평가되며, 평가되는 메시지는 일치하는 각 필터 항목에 연결된 엔드포인트로 라우트됩니다. 여러 필터가 `true`를 반환하고 메시지가 단방향 또는 이중인 경우 메시지는 일치하는 모든 필터에 대한 끝점으로 멀티캐스트됩니다. 요청-회신 메시지의 경우 클라이언트에 하나의 회신만 반환할 수 있으므로 멀티캐스트될 수 없습니다.  
+ 기본적으로 필터 테이블의 모든 항목은 동시에 평가되며, 평가되는 메시지는 일치하는 각 필터 항목에 연결된 엔드포인트로 라우트됩니다. 여러 필터가 `true`를 반환하고 메시지가 단방향 또는 이중인 경우 메시지는 일치하는 모든 필터에 대한 엔드포인트로 멀티캐스트됩니다. 요청-회신 메시지의 경우 클라이언트에 하나의 회신만 반환할 수 있으므로 멀티캐스트될 수 없습니다.  
   
  각 필터에 우선 순위를 지정하면 더 복잡한 라우팅 논리를 구현할 수 있습니다. 라우팅 서비스는 가장 우선 순위가 높은 필터부터 시작하여 모든 필터를 평가합니다. 메시지가 이 수준의 필터와 일치할 경우 우선 순위가 더 아래인 필터는 처리되지 않습니다. 예를 들어 들어오는 단방향 메시지는 먼저 우선 순위가 2인 모든 필터를 기준으로 평가됩니다. 이 우선 순위에서 메시지와 일치하는 필터가 없으므로 그 다음으로 우선 순위가 1인 필터와 메시지가 비교됩니다. 두 개의 우선 순위 1 필터가 메시지와 일치하며, 메시지가 단방향 메시지이므로 두 대상 엔드포인트 모두로 라우트됩니다.  우선 순위 1 필터 중에서 일치가 발견되었으므로 우선 순위가 0인 필터는 평가되지 않습니다.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "48839107"
 >  우선 순위 평가로 인해 성능이 저하될 수 있으므로 가능한 경우 우선 순위를 지정하는 대신 단독 필터를 사용하세요.  
   
 ### <a name="backup-lists"></a>백업 목록  
- 필터 테이블의 각 필터는 선택적으로 백업 목록을 지정할 수 있습니다. 백업 목록은 명명된 끝점 컬렉션입니다(<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>). 이 컬렉션에는 <xref:System.ServiceModel.CommunicationException>에 지정된 기본 엔드포인트로 보낼 때 <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.EndpointName%2A>이 발생하는 경우 메시지를 전송할 엔드포인트가 순서대로 나열된 목록이 포함됩니다. 다음 예제에서는 "backupServiceEndpoints" 두 개의 끝점이 포함 라는 백업 목록을 정의 합니다.  
+ 필터 테이블의 각 필터는 선택적으로 백업 목록을 지정할 수 있습니다. 백업 목록은 명명된 엔드포인트 컬렉션입니다(<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>). 이 컬렉션에는 <xref:System.ServiceModel.CommunicationException>에 지정된 기본 엔드포인트로 보낼 때 <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.EndpointName%2A>이 발생하는 경우 메시지를 전송할 엔드포인트가 순서대로 나열된 목록이 포함됩니다. 다음 예제에서는 "backupServiceEndpoints" 두 개의 끝점이 포함 라는 백업 목록을 정의 합니다.  
   
 ```xml  
 <filterTables>  

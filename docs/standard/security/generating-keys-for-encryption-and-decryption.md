@@ -17,11 +17,11 @@ ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c566c54343f1dd7c3da2701c2b7ea9f815e22e7b
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795215"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>암호화 및 해독용 키 생성
 키 만들기 및 관리는 암호화 프로세스의 중요한 부분입니다. 대칭 알고리즘을 사용할 때는 키와 IV(Initialization Vector)를 만들어야 합니다. 키는 데이터를 암호 해독해서는 안 되는 사람이 알 수 없도록 해야 합니다. IV는 기밀이어야 할 필요는 없지만 각 세션에서 변경되어야 합니다. 비대칭 알고리즘에서는 공개 키와 개인 키를 만들어야 합니다. 공개 키는 모든 사용자에게 공개될 수 있는 반면, 개인 키는 공개 키로 암호화된 데이터를 암호 해독하는 당사자만 알고 있어야 합니다. 이 섹션에서는 대칭 및 비대칭 알고리즘에 대한 키를 생성 및 관리하는 방법을 설명합니다.  
@@ -64,9 +64,9 @@ tdes.GenerateKey();
   
  공개/개인 키 쌍은 비대칭 알고리즘 클래스의 새 인스턴스를 만들 때마다 생성됩니다. 클래스의 새 인스턴스가 생성된 후 다음 두 메서드 중 하나를 사용하여 키 정보를 추출할 수 있습니다.  
   
--   <xref:System.Security.Cryptography.RSA.ToXmlString%2A> 메서드 - 키 정보의 XML 표현을 반환합니다.  
+- <xref:System.Security.Cryptography.RSA.ToXmlString%2A> 메서드 - 키 정보의 XML 표현을 반환합니다.  
   
--   <xref:System.Security.Cryptography.RSACryptoServiceProvider.ExportParameters%2A> 메서드 - 키 정보를 보유하는 <xref:System.Security.Cryptography.RSAParameters> 구조체를 반환합니다.  
+- <xref:System.Security.Cryptography.RSACryptoServiceProvider.ExportParameters%2A> 메서드 - 키 정보를 보유하는 <xref:System.Security.Cryptography.RSAParameters> 구조체를 반환합니다.  
   
  두 메서드는 공개 키 정보만 반환할지 또는 공개 키와 개인 키 정보를 모두 반환할지를 나타내는 부울 값을 허용합니다. **메서드를 사용하여** RSACryptoServiceProvider **클래스를** RSAParameters <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A> 구조체의 값으로 초기화할 수 있습니다.  
   

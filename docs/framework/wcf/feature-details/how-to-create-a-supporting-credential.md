@@ -3,11 +3,11 @@ title: '방법: 지원하는 자격 증명 만들기'
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
 ms.openlocfilehash: 7c6c4ea777f62541f8ca8fa79fdd024e5f5cf2ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787610"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>방법: 지원하는 자격 증명 만들기
 둘 이상의 자격 증명이 필요한 사용자 지정 보안 체계를 사용할 수 있습니다. 예를 들어 서비스는 클라이언트로부터 사용자 이름과 암호뿐 아니라 클라이언트가 18세 이상임을 입증하는 자격 증명을 요구할 수 있습니다. 두 번째 자격 증명은는 *자격 증명을 지 원하는*합니다. 이 항목에서는 Windows Communication Foundation (WCF) 클라이언트에서 이러한 자격 증명을 구현 하는 방법에 설명 합니다.  
@@ -39,28 +39,28 @@ ms.locfileid: "59326049"
   
  사용자 지정 바인딩을 만들 때의 첫 단계는 다음 세 가지 형식 중 하나일 수 있는 보안 바인딩 요소를 만드는 작업입니다.  
   
--   <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>  
   
--   <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>  
   
--   <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
   
  모든 클래스는 다음 네 가지 관련 속성을 포함하는 <xref:System.ServiceModel.Channels.SecurityBindingElement>에서 상속됩니다.  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.EndpointSupportingTokenParameters%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.EndpointSupportingTokenParameters%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.OperationSupportingTokenParameters%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.OperationSupportingTokenParameters%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.OptionalEndpointSupportingTokenParameters%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.OptionalEndpointSupportingTokenParameters%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.OptionalOperationSupportingTokenParameters%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.OptionalOperationSupportingTokenParameters%2A>  
   
 #### <a name="scopes"></a>범위  
  지원 자격 증명에 대한 두 가지 범위가 있습니다.  
   
--   *끝점 지원 토큰* 끝점의 모든 작업을 지원 합니다. 즉, 엔드포인트 작업을 호출할 때마다 지원 토큰이 나타내는 자격 증명을 사용할 수 있습니다.  
+- *끝점 지원 토큰* 끝점의 모든 작업을 지원 합니다. 즉, 엔드포인트 작업을 호출할 때마다 지원 토큰이 나타내는 자격 증명을 사용할 수 있습니다.  
   
--   *작업 지원 토큰* 특정 끝점 작업만 지원 합니다.  
+- *작업 지원 토큰* 특정 끝점 작업만 지원 합니다.  
   
  속성 이름이 나타내는 것처럼 지원 자격 증명은 필수 또는 옵션일 수 있습니다. 즉, 지원 자격 증명이 있으면 필요하지 않아도 사용되지만 없어도 인증이 실패하지 않습니다.  
   

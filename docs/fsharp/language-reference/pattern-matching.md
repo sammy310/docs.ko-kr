@@ -3,11 +3,11 @@ title: 패턴 일치
 description: 패턴을 사용 하는 방법을 알아봅니다 F# 논리 구조를 사용 하 여 데이터를 비교 하려면 데이터를 구성 부분으로 분해 하거나 데이터에서 정보를 추출 합니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: bb6b41f6d15612e4a65abd4a3d5d7291d84a8f3c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795462"
 ---
 # <a name="pattern-matching"></a>패턴 일치
 
@@ -37,12 +37,12 @@ match expression with
 |`as` 패턴|*패턴* 으로 *식별자*|`(a, b) as tuple1`|
 |또는 패턴|*pattern1* &#124; *pattern2*|<code>([h] &#124; [h; _])</code>|
 |및 패턴|*pattern1* &amp; *pattern2*|`(a, b) & (_, "test")`|
-|Cons 패턴|*식별자* :: *목록 id*|`h :: t`|
-|목록 패턴|[ *pattern_1*;...&lt; *pattern_n* ]|`[ a; b; c ]`|
+|Cons 패턴|*identifier* :: *list-identifier*|`h :: t`|
+|목록 패턴|[ *pattern_1*; ... ; *pattern_n* ]|`[ a; b; c ]`|
 |배열 패턴|[&#124; *pattern_1*;...; *pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
-|범위 패턴|( *패턴* )|`( a )`|
-|튜플 패턴|( *pattern_1*,..., *pattern_n* )|`( a, b )`|
-|레코드 패턴|{ *identifier1* = *pattern_1*;...&lt; *identifier_n* = *pattern_n* }|`{ Name = name; }`|
+|범위 패턴|( *pattern* )|`( a )`|
+|튜플 패턴|( *pattern_1*, ... , *pattern_n* )|`( a, b )`|
+|레코드 패턴|{ *identifier1* = *pattern_1*; ... ; *identifier_n* = *pattern_n* }|`{ Name = name; }`|
 |와일드 카드 패턴|_|`_`|
 |형식 주석이 함께 포함 된 패턴|*패턴* : *형식*|`a : int`|
 |형식 테스트 패턴|:? *형식* [로 *식별자* ]|`:? System.DateTime as dt`|
@@ -201,7 +201,7 @@ Null 패턴은 null 값을 허용 하는 형식을 사용 하 여 작업할 때 
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4817.fs)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [일치 식](match-expressions.md)
 - [활성 패턴](active-patterns.md)

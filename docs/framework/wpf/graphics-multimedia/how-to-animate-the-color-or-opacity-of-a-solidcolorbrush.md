@@ -10,11 +10,11 @@ helpviewer_keywords:
 - SolidColorBrush [WPF], animating opacity of
 ms.assetid: d9154354-843f-4713-bad1-35bb0ba6eaeb
 ms.openlocfilehash: e440cf49b8b16051361650f9659dc6006c2e7b56
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789248"
 ---
 # <a name="how-to-animate-the-color-or-opacity-of-a-solidcolorbrush"></a>방법: SolidColorBrush의 색 또는 불투명도에 애니메이션 효과 주기
 애니메이션을 적용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.SolidColorBrush.Color%2A> 하 고 <xref:System.Windows.Media.Brush.Opacity%2A> 의 <xref:System.Windows.Media.SolidColorBrush>합니다.  
@@ -22,11 +22,11 @@ ms.locfileid: "59072161"
 ## <a name="example"></a>예제  
  다음 예제에서는 3 개의 애니메이션을 사용 하 여 애니메이션 효과를 주는 합니다 <xref:System.Windows.Media.SolidColorBrush.Color%2A> 하 고 <xref:System.Windows.Media.Brush.Opacity%2A> 의 <xref:System.Windows.Media.SolidColorBrush>.  
   
--   첫 번째 애니메이션을 <xref:System.Windows.Media.Animation.ColorAnimation>, 브러시의 색을 변경 <xref:System.Windows.Media.Colors.Gray%2A> 마우스 사각형 안으로 이동할 때.  
+- 첫 번째 애니메이션을 <xref:System.Windows.Media.Animation.ColorAnimation>, 브러시의 색을 변경 <xref:System.Windows.Media.Colors.Gray%2A> 마우스 사각형 안으로 이동할 때.  
   
--   다음 애니메이션 다른 <xref:System.Windows.Media.Animation.ColorAnimation>, 브러시의 색을 변경 <xref:System.Windows.Media.Colors.Orange%2A> 마우스가 사각형을 벗어날 때입니다.  
+- 다음 애니메이션 다른 <xref:System.Windows.Media.Animation.ColorAnimation>, 브러시의 색을 변경 <xref:System.Windows.Media.Colors.Orange%2A> 마우스가 사각형을 벗어날 때입니다.  
   
--   마지막 애니메이션을 <xref:System.Windows.Media.Animation.DoubleAnimation>, 마우스 왼쪽된 단추를 누를 때 브러시의 불투명도 0.0으로 변경 합니다.  
+- 마지막 애니메이션을 <xref:System.Windows.Media.Animation.DoubleAnimation>, 마우스 왼쪽된 단추를 누를 때 브러시의 불투명도 0.0으로 변경 합니다.  
   
  [!code-csharp[brushanimations_snip#SolidColorBrushAnimationExample](~/samples/snippets/csharp/VS_Snippets_Wpf/brushanimations_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushanimationexample)]  
   
