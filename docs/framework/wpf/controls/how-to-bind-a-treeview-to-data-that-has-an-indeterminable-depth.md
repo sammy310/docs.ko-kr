@@ -5,11 +5,11 @@ helpviewer_keywords:
 - TreeView control [WPF], binding to data of indeterminate depth
 ms.assetid: daddcd74-1b0f-4ffd-baeb-ec934c5e0f53
 ms.openlocfilehash: 7da0a121cdb854c787c105c92cec70b7c4b3244e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911081"
 ---
 # <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a>방법: 깊이를 확인할 수 없는 데이터에 TreeView 바인딩
 바인딩할 하는 상황이 있을 수 있습니다는 <xref:System.Windows.Controls.TreeView> 깊이가 알려지지 않은 데이터 원본에 있습니다.  이 데이터를 기본적으로 폴더가 포함 폴더, 파일 시스템 등 회사의 조직 구조는 재귀 직원의 직속 부하로 다른 직원 있는 경우 발생할 수 있습니다.  

@@ -3,11 +3,11 @@ title: 종단 간 추적
 ms.date: 03/30/2017
 ms.assetid: f5ac7fc7-f97c-4313-b068-54e0c471b2aa
 ms.openlocfilehash: fd2964b39c758e41620fb453ddd8f61a1aa550aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59092140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912537"
 ---
 # <a name="end-to-end-tracing"></a>종단 간 추적
 종단 간 (e2e) 추적을 통해 개발자가 코드 경로가 실패 한 이유를 조사 하거나 용량 계획 및 성능 분석에 대 한 추적 정보를 제공 하는 Windows Communication Foundation (WCF) 인프라에서 코드 실행 합니다. Windows Communication Foundation (WCF) 오류의 원인을 진단 하기 위해 세 가지 상관 관계 메커니즘을 제공 합니다: 동작, 전송 및 전파 합니다.  

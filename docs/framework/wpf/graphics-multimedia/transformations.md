@@ -17,11 +17,11 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 ms.assetid: 712b543f-d8b2-4dcf-ba2c-f7921c61c6fd
 ms.openlocfilehash: a0b5268d1c7e319a6144a7d551dca45bdc3e64aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59227233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61926001"
 ---
 # <a name="transformations"></a>변형
 변환 하는 데 회전, 크기 조정, 변환 또는 기울이기 <xref:System.Windows.FrameworkElement> 개체입니다.  

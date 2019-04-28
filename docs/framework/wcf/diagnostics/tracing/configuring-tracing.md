@@ -5,11 +5,11 @@ helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
 ms.openlocfilehash: 8702091c185ba3d4956d3bd5d13ca191c12fce82
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912576"
 ---
 # <a name="configuring-tracing"></a>추적 구성
 이 항목에서는 추적을 사용하고, 추적을 내보내도록 추적 소스를 구성하고, 추적 수준을 설정하고, 종단 간 추적 상관 관계를 지원하도록 동작 추적 및 전파를 설정하고, 추적에 액세스하도록 추적 수신기를 설정하는 방법에 대해 설명합니다.  
@@ -22,9 +22,9 @@ ms.locfileid: "59162883"
 ## <a name="enabling-tracing"></a>추적 사용  
  Windows Communication Foundation (WCF) 진단 추적에 대 한 다음 데이터를 출력합니다.  
   
--   작업 호출, 코드 예외, 경고 및 기타 중요 처리 이벤트 등과 같이 응용 프로그램의 모든 구성 요소에서 프로세스 중요 시점에 대한 추적  
+- 작업 호출, 코드 예외, 경고 및 기타 중요 처리 이벤트 등과 같이 응용 프로그램의 모든 구성 요소에서 프로세스 중요 시점에 대한 추적  
   
--   추적 기능 오작동 시 Windows 오류 이벤트. 참조 [이벤트 로깅](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)합니다.  
+- 추적 기능 오작동 시 Windows 오류 이벤트. 참조 [이벤트 로깅](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)합니다.  
   
  WCF 추적의 맨 위에 빌드되 <xref:System.Diagnostics>합니다. 추적을 사용하려면 구성 파일 또는 코드에 추적 소스를 정의해야 합니다. WCF는 각 WCF 어셈블리에 대 한 추적 소스를 정의 합니다. `System.ServiceModel` 추적 소스는 가장 일반적인 WCF 추적 소스 이며 WCF 통신 스택, 사용자 코드 시작/종료를 시작/종료에서 전송에서 처리 중요 시점을 기록 합니다. `System.ServiceModel.MessageLogging` 추적 소스는 시스템을 통해 이동하는 모든 메시지를 기록합니다.  
   
@@ -58,19 +58,19 @@ ms.locfileid: "59162883"
 ## <a name="configuring-trace-sources-to-emit-traces"></a>추적을 내보내도록 추적 소스 구성  
  WCF는 각 어셈블리에 대 한 추적 소스를 정의 합니다. 어셈블리 내에 생성된 추적은 해당 소스에 대해 정의된 수신기를 통해 액세스합니다. 다음 추적 소스가 정의됩니다.  
   
--   System.ServiceModel: WCF 때마다 처리 하는 모든 단계의 로그 구성을 읽을, 전송에서 된 메시지를 처리 하는 사용자 코드에서 보안 처리 메시지를 디스패치 됩니다.  
+- System.ServiceModel: WCF 때마다 처리 하는 모든 단계의 로그 구성을 읽을, 전송에서 된 메시지를 처리 하는 사용자 코드에서 보안 처리 메시지를 디스패치 됩니다.  
   
--   System.ServiceModel.MessageLogging: 시스템을 통해 이동 하는 모든 메시지를 기록 합니다.  
+- System.ServiceModel.MessageLogging: 시스템을 통해 이동 하는 모든 메시지를 기록 합니다.  
   
--   System.IdentityModel  
+- System.IdentityModel  
   
--   System.ServiceModel.Activation  
+- System.ServiceModel.Activation  
   
--   System.IO.Log: .NET Framework 인터페이스에는 로그 파일 시스템 CLFS (Common)에 대 한 로깅입니다.  
+- System.IO.Log: .NET Framework 인터페이스에는 로그 파일 시스템 CLFS (Common)에 대 한 로깅입니다.  
   
--   System.Runtime.Serialization: 개체는 읽거나 쓸 때 기록 합니다.  
+- System.Runtime.Serialization: 개체는 읽거나 쓸 때 기록 합니다.  
   
--   CardSpace  
+- CardSpace  
   
  다음 구성 예제에 표시된 대로 같은(공유) 수신기를 사용하도록 각 추적 소스를 구성할 수 있습니다.  
   

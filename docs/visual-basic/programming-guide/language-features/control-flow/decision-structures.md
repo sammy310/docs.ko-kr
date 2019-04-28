@@ -10,11 +10,11 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
 ms.openlocfilehash: 4a76b2565c343e69ac3c11441035a7682a8f08ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907008"
 ---
 # <a name="decision-structures-visual-basic"></a>판단 구조(Visual Basic)
 Visual Basic을 사용 하 여 조건을 테스트 하 고 해당 테스트의 결과 따라 다른 작업을 수행할 수 있습니다. True 또는 false 이면 식의 다양 한 값 또는 일련의 문 실행할 때 생성 되는 다양 한 예외에 대 한 조건을 테스트할 수 있습니다.  
@@ -26,13 +26,13 @@ Visual Basic을 사용 하 여 조건을 테스트 하 고 해당 테스트의 �
 ## <a name="ifthenelse-construction"></a>다음과 같은 경우... 다음 중... 다른 생성  
  `If...Then...Else` 생성을 사용 하 여 하나 이상의 조건을 테스트 하 고 각 조건에 따라 하나 이상의 문을 실행할 수 있습니다. 조건을 테스트 하 고 다음과 같은 방법으로 작업을 수행할 수 있습니다.  
   
--   조건이 인 경우 하나 이상의 문 실행 `True`  
+- 조건이 인 경우 하나 이상의 문 실행 `True`  
   
--   조건이 인 경우 하나 이상의 문 실행 `False`  
+- 조건이 인 경우 하나 이상의 문 실행 `False`  
   
--   조건이 인 경우 일부 문은 실행 `True` 와 다른 경우 `False`  
+- 조건이 인 경우 일부 문은 실행 `True` 와 다른 경우 `False`  
   
--   이전 조건이 인 경우 추가 조건을 테스트 합니다. `False`  
+- 이전 조건이 인 경우 추가 조건을 테스트 합니다. `False`  
   
  이러한 모든 가능성을 제공 하는 제어 구조를 [경우... 다음 중... Else 문](../../../../visual-basic/language-reference/statements/if-then-else-statement.md)합니다. 하나의 테스트 및 실행 하기 위한 하나의 문 있는 경우 줄 버전을 사용할 수 있습니다. 조건 및 작업의 더 복잡 한 집합에 있는 경우에 여러 행 버전을 사용할 수 있습니다.  
   

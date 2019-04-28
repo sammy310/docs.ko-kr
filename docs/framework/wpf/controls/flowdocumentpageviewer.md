@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [WPF], FlowDocumentPageViewer
 ms.assetid: 1ed5a30e-f415-4c26-a52f-9f028a68f66f
 ms.openlocfilehash: ef041fad1bb9195d9fc6cba172de8c2fdc7507bd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911741"
 ---
 # <a name="flowdocumentpageviewer"></a>FlowDocumentPageViewer
 <xref:System.Windows.Controls.FlowDocumentPageViewer> 컨트롤은 보기 데 <xref:System.Windows.Documents.FlowDocument> 페이지 단위로 콘텐츠. 대비를 <xref:System.Windows.Controls.FlowDocumentScrollViewer>에 표시 <xref:System.Windows.Documents.FlowDocument> 스크롤 뷰어의 콘텐츠입니다.  

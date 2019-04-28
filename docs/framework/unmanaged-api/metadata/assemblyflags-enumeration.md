@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7c86a4fd2788c8ea2df5d9e54c5c221afd179704
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59091423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61905998"
 ---
 # <a name="assemblyflags-enumeration"></a>AssemblyFlags 열거형
 어셈블리의 런타임 기능을 설명 하는 값을 포함 합니다.  

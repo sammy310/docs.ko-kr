@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42017
 ms.assetid: 45f552c8-57c6-44c0-97d3-e510119b257a
 ms.openlocfilehash: 4fe79c74b6ff634223a4f10d8c5dc54bb77571cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921149"
 ---
 # <a name="late-bound-resolution-runtime-errors-could-occur"></a>런타임에 바인딩을 확인합니다. 런타임 오류가 발생할 수 있습니다.
 개체가 되도록 선언 된 변수에 할당 되는 [Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md)합니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "58822291"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   가능한 경우 특정 유형의 변수를 선언 합니다.  
+- 가능한 경우 특정 유형의 변수를 선언 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

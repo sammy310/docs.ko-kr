@@ -5,11 +5,11 @@ ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5ca8cf76745190bd9819dde522c34e57952cd1ca
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906323"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>런타임 지시문(rd.xml) 구성 파일 참조
 
@@ -183,8 +183,7 @@ ms.locfileid: "58410461"
 
 서로 다른 런타임 지시문 파일의 두 요소가 어셈블리나 형식 등의 같은 프로그램 요소에 대한 동일 정책 형식을 각기 다른 값으로 설정하려는 경우에는 다음과 같은 방법으로 충돌을 해결합니다.
 
-1. 
-  `Excluded` 요소가 있으면 우선적으로 적용됩니다.
+1. `Excluded` 요소가 있으면 우선적으로 적용됩니다.
 
 2. `Required`인 항목이 `Required`가 아닌 항목보다 우선적으로 적용됩니다.
 
@@ -338,8 +337,7 @@ ms.locfileid: "58410461"
 
 - 메서드가 제네릭이면 해당 메서드가 인스턴스화되는 형식이 `Browse` 정책으로 표시됩니다.
 
-- 
-  `MethodInfo.Invoke`를 통해 메서드를 호출할 수 있으며 <xref:System.Reflection.MethodInfo.CreateDelegate%2A?displayProperty=nameWithType>를 통해 대리자를 만들 수 있습니다.
+- `MethodInfo.Invoke`를 통해 메서드를 호출할 수 있으며 <xref:System.Reflection.MethodInfo.CreateDelegate%2A?displayProperty=nameWithType>를 통해 대리자를 만들 수 있습니다.
 
 필드에 `Dynamic` 정책을 적용하면 정책이 다음과 같이 변경됩니다.
 
@@ -361,15 +359,13 @@ ms.locfileid: "58410461"
 
 메서드에 `Activation` 정책을 적용하면 정책이 다음과 같이 변경됩니다.
 
-- 
-  <xref:System.Reflection.ConstructorInfo.Invoke%2A?displayProperty=nameWithType> 및 <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> 메서드를 통해 생성자를 호출할 수 있습니다. 메서드의 경우에는 `Activation` 정책이 생성자에만 적용됩니다.
+- <xref:System.Reflection.ConstructorInfo.Invoke%2A?displayProperty=nameWithType> 및 <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> 메서드를 통해 생성자를 호출할 수 있습니다. 메서드의 경우에는 `Activation` 정책이 생성자에만 적용됩니다.
 
 필드에는 `Activation` 정책을 적용해도 아무런 영향이 없습니다.
 
 #### <a name="the-effect-of-serialize-policy"></a>Serialize 정책의 영향
 
-
-  `Serialize` 정책을 적용하면 일반적인 리플렉션 기반 serializer를 사용할 수 있습니다. 그러나 Microsoft는 타사 serializer의 정확한 리플렉션 액세스 패턴을 확인할 수 없으므로 이 정책이 완전히 적용되지 않을 수도 있습니다.
+`Serialize` 정책을 적용하면 일반적인 리플렉션 기반 serializer를 사용할 수 있습니다. 그러나 Microsoft는 타사 serializer의 정확한 리플렉션 액세스 패턴을 확인할 수 없으므로 이 정책이 완전히 적용되지 않을 수도 있습니다.
 
 형식에 `Serialize` 정책을 적용하면 정책이 다음과 같이 변경됩니다.
 

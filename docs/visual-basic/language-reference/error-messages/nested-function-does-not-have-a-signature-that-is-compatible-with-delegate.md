@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36532
 ms.assetid: 493f292c-d81e-40ef-8b47-61f020571829
 ms.openlocfilehash: 04eae6d2c6d64e8a0f46ae3c2801a7eb6d893dca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918257"
 ---
 # <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-delegatename"></a>중첩 된 함수에서 대리자와 호환 되는 서명 되지 않은 '\<delegatename >'
 람다 식에 호환 되지 않는 서명이 대리자에 할당 되었습니다. 예를 들어, 다음 코드를 대리자 `Del` 은 두 개의 정수 매개 변수입니다.  
@@ -33,7 +33,7 @@ Delegate Function Del(ByVal p As Integer, ByVal q As Integer) As Integer
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   서명을 호환 되도록 할당 된 람다 식 또는 대리자 정의 조정 합니다.  
+- 서명을 호환 되도록 할당 된 람다 식 또는 대리자 정의 조정 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

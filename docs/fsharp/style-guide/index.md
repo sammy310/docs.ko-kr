@@ -3,11 +3,11 @@ title: F#스타일 가이드
 description: 좋음이 다섯 가지 원칙에 알아봅니다 F# 코드입니다.
 ms.date: 12/10/2018
 ms.openlocfilehash: 9f47257626e04b09b546de2ae315d48d791678be
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61901851"
 ---
 # <a name="f-style-guide"></a>F#스타일 가이드
 

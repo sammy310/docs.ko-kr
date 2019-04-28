@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30685
 ms.assetid: 756add7a-23d5-4b4f-a48d-8297d6459c73
 ms.openlocfilehash: 4415608bcfca63b43b3d9ebf17ce622ccd418775
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921006"
 ---
 # <a name="membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a>'\<membername >' 상속 된 인터페이스에서 모호\<interfacename1 >' 및 '\<interfacename2 >'
 여러 인터페이스에서 동일한 이름의 두 개 이상의 멤버를 상속 하는 인터페이스입니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "58820859"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   사용 하려는 기본 인터페이스 값 캐스팅 예를 들어:  
+- 사용 하려는 기본 인터페이스 값 캐스팅 예를 들어:  
   
     ```  
     Interface Left  

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
 ms.openlocfilehash: a0b97073b2f9363a64bfc4a4ede7ffa69e2bce42
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913265"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>방법: Windows Forms에서 컨트롤 배치
 컨트롤의 위치, Windows Forms 디자이너를 사용 하거나 지정 된 <xref:System.Windows.Forms.Control.Location%2A> 속성입니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "59334005"
   
 ### <a name="to-position-a-control-on-the-design-surface-of-the-windows-forms-designer"></a>Windows Forms 디자이너의 디자인 화면에서 컨트롤 위치  
   
--   컨트롤이 마우스를 사용 하 여 적절 한 위치로 끕니다.  
+- 컨트롤이 마우스를 사용 하 여 적절 한 위치로 끕니다.  
   
     > [!NOTE]
     >  컨트롤을 선택 하 고 화살표를 사용 하 여 키를 보다 정확 하 게 위치를 이동 합니다. 또한 *맞춤선* 정확 하 게 양식의 컨트롤을 배치 하는 데 도움이 됩니다. 자세한 내용은 [연습: Snaplines를 사용 하 여 Forms Windows에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)합니다.  

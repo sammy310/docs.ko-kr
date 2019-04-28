@@ -3,11 +3,11 @@ title: 일치 식
 description: 에 대해 알아봅니다 하는 방법을 F# 일치 식 패턴 집합을 사용 하 여 식의 비교를 기반으로 하는 분기 제어를 제공 합니다.
 ms.date: 04/19/2018
 ms.openlocfilehash: 8972cc012d2746cb720eeed1acee403948941425
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903957"
 ---
 # <a name="match-expressions"></a>일치 식
 
@@ -80,7 +80,7 @@ let foo() =
 foo() // returns 42
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [F# 언어 참조](index.md)
 - [활성 패턴](active-patterns.md)

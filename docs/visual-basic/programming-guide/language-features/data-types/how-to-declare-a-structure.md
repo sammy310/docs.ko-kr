@@ -8,11 +8,11 @@ helpviewer_keywords:
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
 ms.openlocfilehash: a52daddaa8701ccca9bd9b5b4a48535a6ffa19ed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906713"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>방법: 선언 구조체 (Visual Basic)
 먼저 사용 하 여 구조체 선언을 [Structure 문](../../../../visual-basic/language-reference/statements/structure-statement.md)를 종료 하 고는 `End Structure` 문. 두 문 사이 선언 해야 하나 이상의 *요소*합니다. 모든 데이터 형식의 요소 수는 있지만 비공유 변수 또는 비공유, 비 사용자 정의 이벤트를 하나 이상 이어야 합니다.  

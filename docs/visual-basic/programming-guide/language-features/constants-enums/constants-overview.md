@@ -5,11 +5,11 @@ helpviewer_keywords:
 - constants [Visual Basic]
 ms.assetid: 29016fe8-78b3-4dc8-90b8-1cfec2fa8ac9
 ms.openlocfilehash: 2939110de77718baf32e2a0d8f1aa52dba997cf3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907090"
 ---
 # <a name="constants-overview-visual-basic"></a>상수 개요(Visual Basic)
 상수는 숫자 또는 변경 되지 않는 문자열의 발생 하는 의미 있는 이름입니다. 상수 이름에서 알 수 있듯이 동일 하 게 유지에서 전체 응용 프로그램의 실행 하는 값을 저장 합니다. 크게 코드의 가독성을 향상 하 고 쉽게 상수를 사용 하 여 유지할 수 있습니다. 다시 나타나는 값을 포함 하는 코드에서 사용 하거나 기억 하거나 의미가 명확 하지 않은 어려운 특정 번호에 따라 달라 집니다.  

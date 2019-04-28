@@ -21,11 +21,11 @@ helpviewer_keywords:
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
 ms.openlocfilehash: 34bf38a59e4f2b1f975cf1836973d24d8a3bae32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904454"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid 컨트롤 개요(Windows Forms)
 > [!NOTE]
@@ -57,13 +57,13 @@ ms.locfileid: "59304739"
   
  <xref:System.Windows.Forms.DataGrid>에 유효한 데이터 소스는 다음과 같습니다.  
   
--   <xref:System.Data.DataTable> 클래스  
+- <xref:System.Data.DataTable> 클래스  
   
--   <xref:System.Data.DataView> 클래스  
+- <xref:System.Data.DataView> 클래스  
   
--   <xref:System.Data.DataSet> 클래스  
+- <xref:System.Data.DataSet> 클래스  
   
--   <xref:System.Data.DataViewManager> 클래스  
+- <xref:System.Data.DataViewManager> 클래스  
   
  소스가 데이터 세트인 경우 데이터 세트는 폼의 개체이거나 XML Web services에 의해 폼에 전달된 개체일 수 있습니다. 형식화된 데이터 세트나 형식화되지 않은 데이터 세트에 바인딩할 수 있습니다.  
   
@@ -71,11 +71,11 @@ ms.locfileid: "59304739"
   
  해당 요소가 public 속성을 노출하는 경우 다음 구조체에 바인딩할 수 있습니다.  
   
--   <xref:System.Collections.IList> 인터페이스를 구현하는 구성 요소 여기에는 1차원 배열이 포함됩니다.  
+- <xref:System.Collections.IList> 인터페이스를 구현하는 구성 요소 여기에는 1차원 배열이 포함됩니다.  
   
--   <xref:System.ComponentModel.IListSource> 인터페이스를 구현하는 구성 요소  
+- <xref:System.ComponentModel.IListSource> 인터페이스를 구현하는 구성 요소  
   
--   <xref:System.ComponentModel.IBindingList> 인터페이스를 구현하는 구성 요소  
+- <xref:System.ComponentModel.IBindingList> 인터페이스를 구현하는 구성 요소  
   
  가능한 데이터 소스에 대한 자세한 내용은 [Windows Forms에서 지원하는 데이터 소스](../data-sources-supported-by-windows-forms.md)를 참조하십시오.  
   

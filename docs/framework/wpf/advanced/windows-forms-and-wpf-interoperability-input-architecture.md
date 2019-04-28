@@ -14,22 +14,22 @@ helpviewer_keywords:
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
 ms.openlocfilehash: 2df754c0c47ea99c0892e0b9365da5589f2eab76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007099"
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Windows Forms 및 WPF 상호 운용성 입력 아키텍처
 간에 상호 운용 합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 두 기술 모두에서 해당 하는 키보드 입력된 처리 해야 합니다. 이 항목에서는 이러한 기술을 키보드 및 하이브리드 응용 프로그램에 원활한 상호 운용성을 사용 하도록 설정 하기 위해 메시지 처리를 구현 하는 방법을 설명 합니다.  
   
  이 항목에는 다음과 같은 하위 단원이 포함되어 있습니다.  
   
--   모덜리스 폼 및 대화 상자  
+- 모덜리스 폼 및 대화 상자  
   
--   WindowsFormsHost 키보드 및 메시지 처리  
+- WindowsFormsHost 키보드 및 메시지 처리  
   
--   ElementHost 키보드 및 메시지 처리  
+- ElementHost 키보드 및 메시지 처리  
   
 ## <a name="modeless-forms-and-dialog-boxes"></a>모덜리스 폼 및 대화 상자  
  호출을 <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A> 메서드를 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 에서 모덜리스 폼 또는 대화 상자를 열려면 요소를 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-기반 응용 프로그램입니다.  
@@ -39,13 +39,13 @@ ms.locfileid: "59335721"
 ## <a name="windowsformshost-keyboard-and-message-processing"></a>WindowsFormsHost 키보드 및 메시지 처리  
  호스팅되는 경우는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-기반 응용 프로그램에서 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 키보드 및 메시지 처리는 다음으로 이루어집니다.  
   
--   <xref:System.Windows.Forms.Integration.WindowsFormsHost> 에서 메시지를 획득 하는 클래스를 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에서 구현 하는 메시지 루프에는 <xref:System.Windows.Interop.ComponentDispatcher> 클래스.  
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost> 에서 메시지를 획득 하는 클래스를 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에서 구현 하는 메시지 루프에는 <xref:System.Windows.Interop.ComponentDispatcher> 클래스.  
   
--   합니다 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 서로게이트 클래스를 만듭니다 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 일반 되도록 메시지 루프 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 키보드 처리가 발생 합니다.  
+- 합니다 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 서로게이트 클래스를 만듭니다 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 일반 되도록 메시지 루프 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 키보드 처리가 발생 합니다.  
   
--   합니다 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 클래스가 구현 하는 <xref:System.Windows.Interop.IKeyboardInputSink> 인터페이스를 사용 하 여 포커스 관리 조정 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]합니다.  
+- 합니다 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 클래스가 구현 하는 <xref:System.Windows.Interop.IKeyboardInputSink> 인터페이스를 사용 하 여 포커스 관리 조정 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]합니다.  
   
--   <xref:System.Windows.Forms.Integration.WindowsFormsHost> 컨트롤 자체를 등록 하 고 해당 메시지 루프를 시작 합니다.  
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost> 컨트롤 자체를 등록 하 고 해당 메시지 루프를 시작 합니다.  
   
  다음 섹션에서는 이러한 부분 과정을 자세히 설명합니다.  
   
@@ -88,13 +88,13 @@ ms.locfileid: "59335721"
 ## <a name="elementhost-keyboard-and-message-processing"></a>ElementHost 키보드 및 메시지 처리  
  호스팅되는 경우는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 응용 프로그램을 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 키보드 및 메시지 처리는 다음으로 이루어집니다.  
   
--   <xref:System.Windows.Interop.HwndSource>하십시오 <xref:System.Windows.Interop.IKeyboardInputSink>, 및 <xref:System.Windows.Interop.IKeyboardInputSite> 인터페이스 구현.  
+- <xref:System.Windows.Interop.HwndSource>하십시오 <xref:System.Windows.Interop.IKeyboardInputSink>, 및 <xref:System.Windows.Interop.IKeyboardInputSite> 인터페이스 구현.  
   
--   Tab 키와 화살표 키입니다.  
+- Tab 키와 화살표 키입니다.  
   
--   명령 키 및 대화 상자 키입니다.  
+- 명령 키 및 대화 상자 키입니다.  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 액셀러레이터 처리 합니다.  
+- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 액셀러레이터 처리 합니다.  
   
  다음 섹션에서는 이러한 부분을 자세히 설명합니다.  
   
@@ -118,11 +118,11 @@ ms.locfileid: "59335721"
   
  때문에 기본값 <xref:System.Windows.Interop.HwndSource> 구현의 합니다 <xref:System.Windows.Interop.IKeyboardInputSink.TranslateChar%2A> 메서드가 반환 되는 `false`, WM_CHAR 메시지를 다음 논리를 사용 하 여 처리:  
   
--   <xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=nameWithType> 모든 WM_CHAR 메시지는 호스트 된 요소에 전달 되도록 확인 메서드를 재정의 합니다.  
+- <xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=nameWithType> 모든 WM_CHAR 메시지는 호스트 된 요소에 전달 되도록 확인 메서드를 재정의 합니다.  
   
--   ALT 키를 누르는 경우 메시지 WM_SYSCHAR입니다. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 통해이 메시지를 전처리 하지 않고 않습니다는 <xref:System.Windows.Forms.Control.IsInputChar%2A> 메서드. 따라서 합니다 <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> 메서드를 재정의 쿼리에 합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> 등록된 된 액셀러레이터 키에 대 한 합니다. 등록된 된 액셀러레이터 키가 있으면 <xref:System.Windows.Input.AccessKeyManager> 처리 합니다.  
+- ALT 키를 누르는 경우 메시지 WM_SYSCHAR입니다. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 통해이 메시지를 전처리 하지 않고 않습니다는 <xref:System.Windows.Forms.Control.IsInputChar%2A> 메서드. 따라서 합니다 <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> 메서드를 재정의 쿼리에 합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> 등록된 된 액셀러레이터 키에 대 한 합니다. 등록된 된 액셀러레이터 키가 있으면 <xref:System.Windows.Input.AccessKeyManager> 처리 합니다.  
   
--   ALT 키를 누르지 경우 합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager> 클래스 처리 되지 않은 입력을 처리 합니다. 입력이 액셀러레이터는 <xref:System.Windows.Input.AccessKeyManager> 처리 합니다. <xref:System.Windows.Input.InputManager.PostProcessInput> 처리 되지 않은 WM_CHAR 메시지에 대 한 이벤트를 처리 합니다.  
+- ALT 키를 누르지 경우 합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager> 클래스 처리 되지 않은 입력을 처리 합니다. 입력이 액셀러레이터는 <xref:System.Windows.Input.AccessKeyManager> 처리 합니다. <xref:System.Windows.Input.InputManager.PostProcessInput> 처리 되지 않은 WM_CHAR 메시지에 대 한 이벤트를 처리 합니다.  
   
  사용자가 ALT 키를 누르면 accelerator에 대 한 시각적 정보 전체 폼에 표시 됩니다. 이 동작을 지 원하는 모든 <xref:System.Windows.Forms.Integration.ElementHost> 활성 폼에서 컨트롤에 관계 없이 컨트롤에 포커스가 WM_SYSKEYDOWN 메시지를 수신 합니다.  
   

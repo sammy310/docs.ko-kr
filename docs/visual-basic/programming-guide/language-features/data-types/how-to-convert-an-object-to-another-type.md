@@ -5,11 +5,11 @@ helpviewer_keywords:
 - objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
 ms.openlocfilehash: 1e515c0f4ce8e787754c61a9b53d247fa93c49f2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906531"
 ---
 # <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>방법: Visual Basic에서 다른 형식으로 변환할 개체
 변환 하는 `Object` 같은 변환 키워드를 사용 하 여 다른 데이터 형식으로 변수 [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)합니다.  
@@ -31,7 +31,7 @@ End Sub
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   <xref:System?displayProperty=nameWithType> 네임스페이스에 대한 참조  
+- <xref:System?displayProperty=nameWithType> 네임스페이스에 대한 참조  
   
 ## <a name="see-also"></a>참고자료
 

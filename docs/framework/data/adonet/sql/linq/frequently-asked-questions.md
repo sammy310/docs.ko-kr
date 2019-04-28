@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
 ms.openlocfilehash: 16c06ddade79c2b3a48401f5620431e46e18f5ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903359"
 ---
 # <a name="frequently-asked-questions"></a>질문과 대답
 다음 단원에서는 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]를 구현할 때 발생할 수 있는 일반적인 문제에 대한 해결 방법을 제시합니다.  
@@ -34,18 +34,18 @@ ms.locfileid: "59323254"
   
  세부적인 연결 사용은 다음에 따라 달라집니다.  
   
--   연결 개체를 사용하여 <xref:System.Data.Linq.DataContext>를 만든 경우의 연결 상태  
+- 연결 개체를 사용하여 <xref:System.Data.Linq.DataContext>를 만든 경우의 연결 상태  
   
--   연결 문자열 설정(예: MARS(Multiple Active Result Sets) 사용). 자세한 내용은 [MARS(여러 활성 결과 집합)](../../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)를 참조하세요.  
+- 연결 문자열 설정(예: MARS(Multiple Active Result Sets) 사용). 자세한 내용은 [MARS(여러 활성 결과 집합)](../../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)를 참조하세요.  
   
 ## <a name="updating-without-querying"></a>쿼리하지 않고 업데이트  
  질문. 데이터베이스를 먼저 쿼리하지 않고 테이블 데이터를 업데이트할 수 있습니까?  
   
  대답: [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에는 설정 기반의 업데이트 명령이 없지만 다음 기술 중 하나를 사용하여 쿼리 없이 업데이트할 수 있습니다.  
   
--   <xref:System.Data.Linq.DataContext.ExecuteCommand%2A>를 사용하여 SQL 코드를 보냅니다.  
+- <xref:System.Data.Linq.DataContext.ExecuteCommand%2A>를 사용하여 SQL 코드를 보냅니다.  
   
--   개체의 새 인스턴스를 만든 후 업데이트에 영향을 주는 현재 값(필드)을 모두 초기화합니다. 그런 다음 <xref:System.Data.Linq.DataContext>를 사용하여 개체를 <xref:System.Data.Linq.Table%601.Attach%2A>에 연결하고 변경할 필드를 수정합니다.  
+- 개체의 새 인스턴스를 만든 후 업데이트에 영향을 주는 현재 값(필드)을 모두 초기화합니다. 그런 다음 <xref:System.Data.Linq.DataContext>를 사용하여 개체를 <xref:System.Data.Linq.Table%601.Attach%2A>에 연결하고 변경할 필드를 수정합니다.  
   
 ## <a name="unexpected-query-results"></a>예기치 않은 쿼리 결과  
  질문. 쿼리가 예기치 않은 결과를 반환합니다. 무슨 문제가 있는지 어떻게 확인합니까?  
@@ -57,9 +57,9 @@ ms.locfileid: "59323254"
   
  대답: [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 다음과 같은 두 가지 방법으로 데이터베이스에서 생성된 값을 저장 프로시저를 통해 반환합니다.  
   
--   출력 결과에 이름을 지정하는 방법  
+- 출력 결과에 이름을 지정하는 방법  
   
--   출력 매개 변수를 명시적으로 지정하는 방법  
+- 출력 매개 변수를 명시적으로 지정하는 방법  
   
  다음은 잘못된 출력의 예제입니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 결과를 매핑할 수 없기 때문에 항상 0을 반환합니다.  
   

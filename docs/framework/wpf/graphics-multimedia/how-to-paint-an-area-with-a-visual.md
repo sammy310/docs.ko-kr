@@ -10,11 +10,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with visuals
 ms.assetid: 35f92996-1d03-4542-acc4-3469dcf09492
 ms.openlocfilehash: b5376085dc36549cd2d3d72835ec291454124267
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59153454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921708"
 ---
 # <a name="how-to-paint-an-area-with-a-visual"></a>방법: 시각적 표시로 영역 그리기
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.VisualBrush> 클래스를 사용 하 여 영역 그리기를 <xref:System.Windows.Media.Visual>입니다.  

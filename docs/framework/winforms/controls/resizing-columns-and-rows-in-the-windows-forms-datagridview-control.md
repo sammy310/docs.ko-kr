@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], resizing columns and rows
 ms.assetid: 7532764d-e5c1-4943-a08b-6377a722d3b6
 ms.openlocfilehash: e1fa2d57cfb2cd374d691fe03a0e0bdbd3ad7141
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59138114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903190"
 ---
 # <a name="resizing-columns-and-rows-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤에서 열 및 행 크기 조정
 `DataGridView` 컨트롤의 열 및 행 크기 조정 동작을 사용자 지정에 대 한 다양 한 옵션을 제공 합니다. 일반적으로 `DataGridView` 셀 크기가 조정 되지 않습니다 해당 내용을 기반으로 합니다. 대신 된 셀 보다 크면 모든 표시 값을 잘립니다. 콘텐츠를 문자열로 표시할 수 있는, 셀 도구 설명에 표시 합니다.  

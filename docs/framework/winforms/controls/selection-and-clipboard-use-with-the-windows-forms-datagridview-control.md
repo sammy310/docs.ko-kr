@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], selecting cells
 ms.assetid: 82cffcad-8b30-4897-bddb-c3a79d751b83
 ms.openlocfilehash: 1836fbc1887082ca685c49bef2bc42bdb167578f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902254"
 ---
 # <a name="selection-and-clipboard-use-with-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤에서 선택 및 클립보드 사용
 `DataGridView` 컨트롤에서는 다양 한 사용자가 셀, 행 및 열을 선택할 수는 방법을 구성 하기 위한 옵션을 제공 합니다. 예를 들어, 설정할 수 있습니다. 단일 또는 여러 선택 영역, 전체 행 또는 열의 셀을 클릭할 때 선택 또는 전체 행 또는 열을 선택할 사용자가 머리글을 클릭할 경우에 셀 선택 영역도 있습니다. 선택에 대 한 고유한 사용자 인터페이스를 제공 하려는 경우에 일반적인 선택을 사용 하지 않도록 설정 하 고 모든 선택 항목을 프로그래밍 방식으로 처리할 수 있습니다. 또한 사용자가 선택한 값을 클립보드에 복사할 수 있습니다.  

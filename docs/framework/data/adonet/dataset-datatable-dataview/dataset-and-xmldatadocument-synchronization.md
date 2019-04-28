@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
 ms.openlocfilehash: ea597d7caca3174b17ce16a1e9d70c022e3e75c0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879816"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>데이터 집합 및 XmlDataDocument 동기화
 ADO.NET <xref:System.Data.DataSet>으로 데이터의 관계형 표현을 사용할 수 있습니다. 계층적으로 데이터에 액세스하기 위해 .NET Framework에서 사용 가능한 XML 클래스를 사용할 수 있습니다. 지금까지는 데이터의 이와 같은 두 가지 표현이 별도로 사용되어 왔습니다. 그러나.NET Framework를 통해 데이터의 관계형 및 계층적 표현에 대 한 실시간 및 동기적 액세스를 통해 합니다 **데이터 집합** 개체 및 <xref:System.Xml.XmlDataDocument> 개체를 각각.  
@@ -19,7 +19,7 @@ ADO.NET <xref:System.Data.DataSet>으로 데이터의 관계형 표현을 사용
   
  동기화 할 수 있는 여러 가지는 **데이터 집합** 사용 하 여는 **XmlDataDocument**합니다. 다음과 같은 작업을 수행할 수 있습니다.  
   
--   채우기는 **데이터 집합** 스키마 (즉, 관계형 구조) 및 데이터를 사용 하 여 다음 새 동기화 **XmlDataDocument**합니다. 이렇게 하면 기존 관계형 데이터를 계층적으로 표시할 수 있습니다. 예를 들어:  
+- 채우기는 **데이터 집합** 스키마 (즉, 관계형 구조) 및 데이터를 사용 하 여 다음 새 동기화 **XmlDataDocument**합니다. 이렇게 하면 기존 관계형 데이터를 계층적으로 표시할 수 있습니다. 예를 들어:  
   
     ```vb  
     Dim dataSet As DataSet = New DataSet  
@@ -37,7 +37,7 @@ ADO.NET <xref:System.Data.DataSet>으로 데이터의 관계형 표현을 사용
     XmlDataDocument xmlDoc = new XmlDataDocument(dataSet);  
     ```  
   
--   채우기는 **데이터 집합** 스키마로만 (같은 강력한 형식의 **데이터 집합**)를와 동기화 하 고는 **XmlDataDocument**, 로드를  **XmlDataDocument** XML 문서에서 합니다. 이렇게 하면 기존 계층적 데이터를 관계형으로 표시할 수 있습니다. 테이블 이름과 열 이름은 하 **데이터 집합** 스키마와 동기화 할 XML 요소의 이름과 일치 해야 합니다. 이 때 대/소문자도 일치해야 합니다.  
+- 채우기는 **데이터 집합** 스키마로만 (같은 강력한 형식의 **데이터 집합**)를와 동기화 하 고는 **XmlDataDocument**, 로드를  **XmlDataDocument** XML 문서에서 합니다. 이렇게 하면 기존 계층적 데이터를 관계형으로 표시할 수 있습니다. 테이블 이름과 열 이름은 하 **데이터 집합** 스키마와 동기화 할 XML 요소의 이름과 일치 해야 합니다. 이 때 대/소문자도 일치해야 합니다.  
   
      스키마를 **데이터 집합** 관계형 뷰에 노출 하려는 XML 요소와 일치 해야 합니다. 이렇게 하면 XML 문서는 아주 크게, 이 문서의 관계형 "창"은 매우 작게 만들 수 있습니다. 합니다 **XmlDataDocument** 도 전체 XML 문서를 유지 합니다 **데이터 집합** 극히 일부분만 노출 합니다. (이의 자세한 예제를 보려면 [XmlDataDocument로 데이터 집합 동기화](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md).)  
   
@@ -63,7 +63,7 @@ ADO.NET <xref:System.Data.DataSet>으로 데이터의 관계형 표현을 사용
   
      로드할 수 없습니다는 **XmlDataDocument** 와 동기화 하는 경우를 **데이터 집합** 데이터가 들어 있는입니다. 로드하는 경우에는 예외가 throw됩니다.  
   
--   새 **XmlDataDocument** 및 XML 문서 로부터 로드 하 여 다음을 사용 하 여 데이터의 관계형 뷰에 액세스 합니다 **데이터 집합** 의 속성을 **XmlDataDocument**합니다. 스키마를 설정 해야 합니다 **데이터 집합** 에서 데이터를 볼 수 있습니다는 **XmlDataDocument** 사용 하 여는 **데이터 집합**합니다. 마찬가지로 테이블 이름과 열 이름에 **데이터 집합** 스키마와 동기화 할 XML 요소의 이름과 일치 해야 합니다. 이 때 대/소문자도 일치해야 합니다.  
+- 새 **XmlDataDocument** 및 XML 문서 로부터 로드 하 여 다음을 사용 하 여 데이터의 관계형 뷰에 액세스 합니다 **데이터 집합** 의 속성을 **XmlDataDocument**합니다. 스키마를 설정 해야 합니다 **데이터 집합** 에서 데이터를 볼 수 있습니다는 **XmlDataDocument** 사용 하 여는 **데이터 집합**합니다. 마찬가지로 테이블 이름과 열 이름에 **데이터 집합** 스키마와 동기화 할 XML 요소의 이름과 일치 해야 합니다. 이 때 대/소문자도 일치해야 합니다.  
   
      다음 코드 예제에 있는 데이터의 관계형 뷰에 액세스 하는 방법을 보여 줍니다는 **XmlDataDocument**합니다.  
   

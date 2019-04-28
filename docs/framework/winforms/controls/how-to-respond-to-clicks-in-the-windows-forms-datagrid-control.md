@@ -13,11 +13,11 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
 ms.openlocfilehash: 55ca52390cd6c5d5af4a764ea4438d8ce935dfbb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913096"
 ---
 # <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>방법: Windows Forms DataGrid 컨트롤에서 클릭에 응답
 > [!NOTE]
@@ -27,7 +27,7 @@ ms.locfileid: "59191902"
   
 ### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a>DataGrid의 다른 셀을 선택 하면 검색  
   
--   에 <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> 이벤트 처리기를 적절 하 게 응답 하는 코드를 작성 합니다.  
+- 에 <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> 이벤트 처리기를 적절 하 게 응답 하는 코드를 작성 합니다.  
   
     ```vb  
     Private Sub myDataGrid_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles myDataGrid.CurrentCellChanged  
@@ -56,7 +56,7 @@ ms.locfileid: "59191902"
   
 ### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a>사용자가 클릭 한 DataGrid의 어느 부분을 확인 하려면  
   
--   호출 된 <xref:System.Windows.Forms.DataGrid.HitTest%2A> 과 같은 적절 한 이벤트 처리기에서 메서드를 <xref:System.Windows.Forms.Control.MouseDown> 또는 <xref:System.Windows.Forms.Control.Click> 이벤트입니다.  
+- 호출 된 <xref:System.Windows.Forms.DataGrid.HitTest%2A> 과 같은 적절 한 이벤트 처리기에서 메서드를 <xref:System.Windows.Forms.Control.MouseDown> 또는 <xref:System.Windows.Forms.Control.Click> 이벤트입니다.  
   
      <xref:System.Windows.Forms.DataGrid.HitTest%2A> 메서드가 반환 되는 <xref:System.Windows.Forms.DataGrid.HitTestInfo> 행과 열을 클릭 한 영역에 포함 된 개체입니다.  
   

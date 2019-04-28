@@ -6,11 +6,11 @@ helpviewer_keywords:
 - DatePicker control [WPF]
 ms.assetid: 619765c8-8d25-4315-aec2-79aea08fed9f
 ms.openlocfilehash: 555bf31b27ba233ffa54438077984b02b5e3084a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911987"
 ---
 # <a name="datepicker"></a>DatePicker
 합니다 <xref:System.Windows.Controls.DatePicker> 컨트롤을 사용 하면 사용자가 입력 하 여 두 텍스트 필드에 또는 드롭 다운을 사용 하 여 날짜를 선택할 <xref:System.Windows.Controls.Calendar> 제어 합니다.  

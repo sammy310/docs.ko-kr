@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
 ms.openlocfilehash: e3594db036edc3a6288b0373737c1ee26a691a57
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906739"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>방법: Dispose 시스템 리소스 (Visual Basic)
 사용할 수는 `Using` 코드 블록을 종료할 때 시스템 리소스의 삭제를 보장 하기 위해 블록입니다. 많은 양의 메모리를 사용 하는 다른 구성 요소는 또한 사용 하려는 또는 시스템 리소스를 사용 하는 경우에 유용 합니다.  

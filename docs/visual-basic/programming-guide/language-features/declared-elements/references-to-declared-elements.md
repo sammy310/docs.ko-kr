@@ -7,11 +7,11 @@ helpviewer_keywords:
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
 ms.openlocfilehash: 0fca02ab2dcb507c1129f18f31a25c7809fc9710
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917958"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>선언된 요소 참조(Visual Basic)
 코드에서 선언 된 요소를 참조 하는 경우 Visual Basic 컴파일러에서는 해당 이름의 적절 한 선언 참조 이름과 일치 합니다. 동일한 이름을 가진 둘 이상의 요소가 선언 된 경우 참조 하는 데는 이러한 요소는 제어할 수 있습니다 *한정* 이름입니다.  

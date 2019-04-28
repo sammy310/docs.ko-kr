@@ -11,11 +11,11 @@ helpviewer_keywords:
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
 ms.openlocfilehash: 7a8730834c5241ddb1271d689cdda8942741f15f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917932"
 ---
 # <a name="lifetime-in-visual-basic"></a>Visual Basic의 수명
 합니다 *수명* 선언 된 요소의 기간 자신이 하는 동안 사용할 수 있습니다. 변수는 수명이 하는 유일한 요소입니다. 이 목적을 위해 컴파일러가 처리 프로시저 매개 변수 및 변수의 특별 한 경우로 반환 합니다. 변수의 수명 값을 보관할 수 있는 기간을 나타냅니다. 해당 값은 해당 수명 동안 변경할 수 있지만 항상 어떤 값을 가집니다.  

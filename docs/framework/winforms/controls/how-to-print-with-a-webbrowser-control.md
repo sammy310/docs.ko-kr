@@ -14,11 +14,11 @@ helpviewer_keywords:
 - examples [Windows Forms], WebBrowser control
 ms.assetid: 3fb2a305-64ce-4b6c-9258-5330d3f21b6c
 ms.openlocfilehash: 3ec8edbca86dda1c67d03e5c0c34c54b2c365abf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59094946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913187"
 ---
 # <a name="how-to-print-with-a-webbrowser-control"></a>방법: WebBrowser 컨트롤을 사용하여 인쇄
 다음 코드 예제에서는 사용법을 <xref:System.Windows.Forms.WebBrowser> 표시 하지 않고 웹 페이지를 인쇄 하려면 컨트롤입니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "59094946"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   `System` 및 `System.Windows.Forms` 어셈블리에 대한 참조  
+- `System` 및 `System.Windows.Forms` 어셈블리에 대한 참조  
   
 ## <a name="see-also"></a>참고자료
 

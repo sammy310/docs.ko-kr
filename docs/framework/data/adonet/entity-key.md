@@ -3,24 +3,24 @@ title: 엔터티 키
 ms.date: 03/30/2017
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
 ms.openlocfilehash: 1484a73450d5a435f795f18f122c7fe8494cf197
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879188"
 ---
 # <a name="entity-key"></a>엔터티 키
 *엔터티 키* 는 [속성](../../../../docs/framework/data/adonet/property.md) 또는 집합의 속성에는 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md) id를 확인 하는 데 사용 되는 합니다. 엔터티 키를 구성하는 속성은 디자인 타임에 선택됩니다. 엔터티 키 속성의 값 내에서 엔터티 형식 인스턴스를 고유 하 게 식별 해야 합니다는 [엔터티 집합](../../../../docs/framework/data/adonet/entity-set.md) 런타임 시. 엔터티 키를 구성하는 속성을 선택하여 엔터티 집합에서 인스턴스의 고유성을 보장해야 합니다.  
   
  다음은 속성 집합이 엔터티 키가 되기 위한 요구 사항입니다.  
   
--   엔터티 집합 내의 두 엔터티 키는 같지 않아야 합니다. 즉, 엔터티 집합 내의 두 엔터티에서 키를 구성하는 모든 속성 값은 달라야 합니다. 그러나 엔터티 키를 구성하는 일부 값은 같을 수 있습니다.  
+- 엔터티 집합 내의 두 엔터티 키는 같지 않아야 합니다. 즉, 엔터티 집합 내의 두 엔터티에서 키를 구성하는 모든 속성 값은 달라야 합니다. 그러나 엔터티 키를 구성하는 일부 값은 같을 수 있습니다.  
   
--   Nullable이 아닌, 변경할 수 없는 집합이 엔터티 키로 구성 되어야 [기본 형식 속성](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)합니다.  
+- Nullable이 아닌, 변경할 수 없는 집합이 엔터티 키로 구성 되어야 [기본 형식 속성](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)합니다.  
   
--   지정된 엔터티 형식의 엔터티 키를 구성하는 속성은 변경할 수 없습니다. 지정된 엔터티 형식에 사용 가능한 엔터티 키를 여러 개 허용할 수는 없습니다. 서로게이트 키는 지원되지 않습니다.  
+- 지정된 엔터티 형식의 엔터티 키를 구성하는 속성은 변경할 수 없습니다. 지정된 엔터티 형식에 사용 가능한 엔터티 키를 여러 개 허용할 수는 없습니다. 서로게이트 키는 지원되지 않습니다.  
   
--   엔터티가 상속 계층 구조에 포함되어 있는 경우 루트 엔터티는 엔터티 키를 구성하는 모든 속성을 포함해야 하며, 루트 엔터티 형식에 엔터티 키를 정의해야 합니다. 자세한 내용은 참조 하세요. [엔터티 데이터 모델: 상속](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)합니다.  
+- 엔터티가 상속 계층 구조에 포함되어 있는 경우 루트 엔터티는 엔터티 키를 구성하는 모든 속성을 포함해야 하며, 루트 엔터티 형식에 엔터티 키를 정의해야 합니다. 자세한 내용은 참조 하세요. [엔터티 데이터 모델: 상속](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)합니다.  
   
 ## <a name="example"></a>예제  
  다음 다이어그램에서는 세 가지 엔터티 형식 `Book`, `Publisher` 및 `Author`가 포함된 개념적 모델을 보여 줍니다. 엔터티 키를 구성하는 각 엔터티 형식의 속성은 "(키)"로 표시됩니다. `Author` 엔터티 형식에는 두 가지 속성 `Name` 및 `Address`로 구성된 엔터티 키가 있습니다.  

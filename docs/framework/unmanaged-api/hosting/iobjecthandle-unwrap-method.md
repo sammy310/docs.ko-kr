@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4c18607d5373b415228846350a3dd0637ade1b45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917594"
 ---
 # <a name="iobjecthandleunwrap-method"></a>IObjectHandle::Unwrap 메서드
 간접 참조의 값으로 마샬링된 개체를 래핑 해제 됩니다.  

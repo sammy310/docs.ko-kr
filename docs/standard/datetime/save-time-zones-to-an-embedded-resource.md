@@ -1,5 +1,5 @@
 ---
-title: '방법: 포함된 리소스에 표준 시간대 저장'
+title: '방법: 포함 리소스에 표준 시간대 저장'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,13 +13,13 @@ ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c67a97193d186275e6a788f6b18bbc17c535f367
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912706"
 ---
-# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>방법: 포함된 리소스에 표준 시간대 저장
+# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>방법: 포함 리소스에 표준 시간대 저장
 
 표준 시간대 인식 응용 프로그램이 종종 특정 표준 시간대가 있어야 합니다. 그러나 때문에 개별 가용성 <xref:System.TimeZoneInfo> 로컬 시스템의 레지스트리에 저장 된 정보에 종속 된 개체, 관례적으로 사용할 수 있는 표준 시간대는 없을 수 있습니다. 사용자 지정 표준 시간대에 대 한 정보를 사용 하 여 인스턴스화된 또한는 <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> 메서드는 레지스트리의 다른 표준 시간대 정보를 사용 하 여 저장 되지 않습니다. 이러한 표준 시간대는 필요할 때 사용할 수 있도록를 직렬화 하 여 저장할 수 있으며 나중 역직렬화 하 여 복원할 수 있습니다.
 

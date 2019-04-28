@@ -9,11 +9,11 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], control flow
 ms.assetid: 5623ef47-52b1-4202-befd-9af36422ec6f
 ms.openlocfilehash: 14133dc764d6708d8b7a3366038bc3240e5cbc76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906661"
 ---
 # <a name="control-flow-in-visual-basic"></a>Visual Basic의 제어 흐름
 제어되지 않는 프로그램은 시작부터 끝까지 해당 문을 진행합니다. 일부 매우 간단한 프로그램은 이 단방향 흐름만으로 작성할 수 있습니다. 하지만 프로그래밍 언어의 대부분 기능과 유틸리티는 제어 문과 반복을 통해 실행 순서를 변경하는 기능을 기반으로 합니다.  
