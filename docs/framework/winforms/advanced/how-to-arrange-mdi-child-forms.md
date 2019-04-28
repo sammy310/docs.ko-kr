@@ -9,22 +9,22 @@ helpviewer_keywords:
 - MDI [Windows Forms], arranging child forms
 ms.assetid: a0786378-3206-4ccc-898e-7d3b38cc5089
 ms.openlocfilehash: c7a9d03ef60586e1162f088d662dfe44bbdcb591
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938114"
 ---
-# <a name="how-to-arrange-mdi-child-forms"></a><span data-ttu-id="7fb35-102">방법: MDI 자식 양식 정렬</span><span class="sxs-lookup"><span data-stu-id="7fb35-102">How to: Arrange MDI Child Forms</span></span>
-<span data-ttu-id="7fb35-103">응용 프로그램에는 바둑판식 배열, 계단식 배열, 정렬 등 열려 있는 MDI 자식 폼의 레이아웃을 제어하는 작업을 위한 메뉴 명령이 있는 경우가 많습니다.</span><span class="sxs-lookup"><span data-stu-id="7fb35-103">Often, applications will have menu commands for actions such as Tile, Cascade, and Arrange, which control the layout of the open MDI child forms.</span></span> <span data-ttu-id="7fb35-104"><xref:System.Windows.Forms.Form.LayoutMdi%2A> 메서드를 <xref:System.Windows.Forms.MdiLayout> 열거형 값 중 하나와 함께 사용하여 MDI 부모 폼에서 자식 폼을 다시 정렬할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7fb35-104">You can use the <xref:System.Windows.Forms.Form.LayoutMdi%2A> method with one of the <xref:System.Windows.Forms.MdiLayout> enumeration values to rearrange the child forms in an MDI parent form.</span></span>  
+# <a name="how-to-arrange-mdi-child-forms"></a><span data-ttu-id="21fa6-102">방법: MDI 자식 양식 정렬</span><span class="sxs-lookup"><span data-stu-id="21fa6-102">How to: Arrange MDI Child Forms</span></span>
+<span data-ttu-id="21fa6-103">응용 프로그램에는 바둑판식 배열, 계단식 배열, 정렬 등 열려 있는 MDI 자식 폼의 레이아웃을 제어하는 작업을 위한 메뉴 명령이 있는 경우가 많습니다.</span><span class="sxs-lookup"><span data-stu-id="21fa6-103">Often, applications will have menu commands for actions such as Tile, Cascade, and Arrange, which control the layout of the open MDI child forms.</span></span> <span data-ttu-id="21fa6-104"><xref:System.Windows.Forms.Form.LayoutMdi%2A> 메서드를 <xref:System.Windows.Forms.MdiLayout> 열거형 값 중 하나와 함께 사용하여 MDI 부모 폼에서 자식 폼을 다시 정렬할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="21fa6-104">You can use the <xref:System.Windows.Forms.Form.LayoutMdi%2A> method with one of the <xref:System.Windows.Forms.MdiLayout> enumeration values to rearrange the child forms in an MDI parent form.</span></span>  
   
- <span data-ttu-id="7fb35-105"><xref:System.Windows.Forms.MdiLayout> 열거형 값은 자식 폼을 계단식으로, 가로/세로 바둑판식으로 또는 MDI 폼 아래쪽에 정렬된 자식 폼 아이콘으로 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="7fb35-105">The <xref:System.Windows.Forms.MdiLayout> enumeration values display child forms as cascading, as horizontally or vertically tiled, or as child form icons arranged along the lower portion of the MDI form.</span></span> <span data-ttu-id="7fb35-106">이러한 값과 같은 효과가 Windows 명령과 **계단식 창 배열**, **windows 나란히 표시**를 **창 가로 정렬 보기**, 및 **바탕 화면을 표시** , 각각.</span><span class="sxs-lookup"><span data-stu-id="7fb35-106">These values have the same effect as the Windows commands **Cascade windows**, **Show windows side by side**, **Show windows stacked**, and **Show the desktop**, respectively.</span></span>  
+ <span data-ttu-id="21fa6-105"><xref:System.Windows.Forms.MdiLayout> 열거형 값은 자식 폼을 계단식으로, 가로/세로 바둑판식으로 또는 MDI 폼 아래쪽에 정렬된 자식 폼 아이콘으로 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="21fa6-105">The <xref:System.Windows.Forms.MdiLayout> enumeration values display child forms as cascading, as horizontally or vertically tiled, or as child form icons arranged along the lower portion of the MDI form.</span></span> <span data-ttu-id="21fa6-106">이러한 값과 같은 효과가 Windows 명령과 **계단식 창 배열**, **windows 나란히 표시**를 **창 가로 정렬 보기**, 및 **바탕 화면을 표시** , 각각.</span><span class="sxs-lookup"><span data-stu-id="21fa6-106">These values have the same effect as the Windows commands **Cascade windows**, **Show windows side by side**, **Show windows stacked**, and **Show the desktop**, respectively.</span></span>  
   
- <span data-ttu-id="7fb35-107">이러한 메서드는 메뉴 항목의 <xref:System.Windows.Forms.Control.Click> 이벤트에 의해 호출되는 이벤트 처리기로 사용되는 경우가 많습니다.</span><span class="sxs-lookup"><span data-stu-id="7fb35-107">Often, these methods are used as the event handlers called by a menu item's <xref:System.Windows.Forms.Control.Click> event.</span></span> <span data-ttu-id="7fb35-108">이러한 방식을 통해 "계단식 창 배열" 텍스트가 포함된 메뉴 항목이 MDI 자식 창에서 적절하게 표시될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7fb35-108">In this way, a menu item with the text "Cascade Windows" can have the desired effect on the MDI child windows.</span></span>  
+ <span data-ttu-id="21fa6-107">이러한 메서드는 메뉴 항목의 <xref:System.Windows.Forms.Control.Click> 이벤트에 의해 호출되는 이벤트 처리기로 사용되는 경우가 많습니다.</span><span class="sxs-lookup"><span data-stu-id="21fa6-107">Often, these methods are used as the event handlers called by a menu item's <xref:System.Windows.Forms.Control.Click> event.</span></span> <span data-ttu-id="21fa6-108">이러한 방식을 통해 "계단식 창 배열" 텍스트가 포함된 메뉴 항목이 MDI 자식 창에서 적절하게 표시될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="21fa6-108">In this way, a menu item with the text "Cascade Windows" can have the desired effect on the MDI child windows.</span></span>  
   
-### <a name="to-arrange-child-forms"></a><span data-ttu-id="7fb35-109">자식 폼을 정렬하려면</span><span class="sxs-lookup"><span data-stu-id="7fb35-109">To arrange child forms</span></span>  
+### <a name="to-arrange-child-forms"></a><span data-ttu-id="21fa6-109">자식 폼을 정렬하려면</span><span class="sxs-lookup"><span data-stu-id="21fa6-109">To arrange child forms</span></span>  
   
-1. <span data-ttu-id="7fb35-110">메서드에서 <xref:System.Windows.Forms.Form.LayoutMdi%2A> 메서드를 사용하여 MDI 부모 폼의 <xref:System.Windows.Forms.MdiLayout> 열거형을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="7fb35-110">In a method, use the <xref:System.Windows.Forms.Form.LayoutMdi%2A> method to set the <xref:System.Windows.Forms.MdiLayout> enumeration for the MDI parent form.</span></span> <span data-ttu-id="7fb35-111">다음 예제에서는 MDI 부모 폼(<xref:System.Windows.Forms.MdiLayout.Cascade?displayProperty=nameWithType>)의 자식 창에 대해 `Form1` 열거형 값을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="7fb35-111">The following example uses the <xref:System.Windows.Forms.MdiLayout.Cascade?displayProperty=nameWithType> enumeration value for the child windows of the MDI parent form (`Form1`).</span></span> <span data-ttu-id="7fb35-112">열거형에 대 한 이벤트 처리기에서 코드에 사용 되는 <xref:System.Windows.Forms.Control.Click> 의 이벤트를 **Cascade Windows** 메뉴 항목입니다.</span><span class="sxs-lookup"><span data-stu-id="7fb35-112">The enumeration is used in code during the event handler for the <xref:System.Windows.Forms.Control.Click> event of the **Cascade Windows** menu item.</span></span>  
+1. <span data-ttu-id="21fa6-110">메서드에서 <xref:System.Windows.Forms.Form.LayoutMdi%2A> 메서드를 사용하여 MDI 부모 폼의 <xref:System.Windows.Forms.MdiLayout> 열거형을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="21fa6-110">In a method, use the <xref:System.Windows.Forms.Form.LayoutMdi%2A> method to set the <xref:System.Windows.Forms.MdiLayout> enumeration for the MDI parent form.</span></span> <span data-ttu-id="21fa6-111">다음 예제에서는 MDI 부모 폼(<xref:System.Windows.Forms.MdiLayout.Cascade?displayProperty=nameWithType>)의 자식 창에 대해 `Form1` 열거형 값을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="21fa6-111">The following example uses the <xref:System.Windows.Forms.MdiLayout.Cascade?displayProperty=nameWithType> enumeration value for the child windows of the MDI parent form (`Form1`).</span></span> <span data-ttu-id="21fa6-112">열거형에 대 한 이벤트 처리기에서 코드에 사용 되는 <xref:System.Windows.Forms.Control.Click> 의 이벤트를 **Cascade Windows** 메뉴 항목입니다.</span><span class="sxs-lookup"><span data-stu-id="21fa6-112">The enumeration is used in code during the event handler for the <xref:System.Windows.Forms.Control.Click> event of the **Cascade Windows** menu item.</span></span>  
   
     ```vb  
     Protected Sub CascadeWindows_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)  
@@ -39,18 +39,18 @@ ms.locfileid: "59317235"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="7fb35-113">사용되는 <xref:System.Windows.Forms.MdiLayout> 열거형 값을 변경하여 창을 바둑판식으로 배열하고 아이콘으로 정렬할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7fb35-113">You can also tile windows and arranging windows as icons by changing the <xref:System.Windows.Forms.MdiLayout> enumeration value used.</span></span>  
+    >  <span data-ttu-id="21fa6-113">사용되는 <xref:System.Windows.Forms.MdiLayout> 열거형 값을 변경하여 창을 바둑판식으로 배열하고 아이콘으로 정렬할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="21fa6-113">You can also tile windows and arranging windows as icons by changing the <xref:System.Windows.Forms.MdiLayout> enumeration value used.</span></span>  
   
-2. <span data-ttu-id="7fb35-114">Visual C#을 사용하는 경우 폼 생성자에 다음 코드를 추가하여 이벤트 처리기를 등록합니다.</span><span class="sxs-lookup"><span data-stu-id="7fb35-114">If you’re using Visual C#, place the following code in the form's constructor to register the event handler.</span></span>  
+2. <span data-ttu-id="21fa6-114">Visual C#을 사용하는 경우 폼 생성자에 다음 코드를 추가하여 이벤트 처리기를 등록합니다.</span><span class="sxs-lookup"><span data-stu-id="21fa6-114">If you’re using Visual C#, place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="7fb35-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="7fb35-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="21fa6-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="21fa6-115">See also</span></span>
 
-- [<span data-ttu-id="7fb35-116">MDI(다중 문서 인터페이스) 응용 프로그램</span><span class="sxs-lookup"><span data-stu-id="7fb35-116">Multiple-Document Interface (MDI) Applications</span></span>](multiple-document-interface-mdi-applications.md)
-- [<span data-ttu-id="7fb35-117">방법: MDI 부모 폼 만들기</span><span class="sxs-lookup"><span data-stu-id="7fb35-117">How to: Create MDI Parent Forms</span></span>](how-to-create-mdi-parent-forms.md)
-- [<span data-ttu-id="7fb35-118">방법: MDI 자식 폼 만들기</span><span class="sxs-lookup"><span data-stu-id="7fb35-118">How to: Create MDI Child Forms</span></span>](how-to-create-mdi-child-forms.md)
-- [<span data-ttu-id="7fb35-119">방법: 활성 MDI 자식 확인</span><span class="sxs-lookup"><span data-stu-id="7fb35-119">How to: Determine the Active MDI Child</span></span>](how-to-determine-the-active-mdi-child.md)
-- [<span data-ttu-id="7fb35-120">방법: 활성 MDI 자식으로 데이터 전송</span><span class="sxs-lookup"><span data-stu-id="7fb35-120">How to: Send Data to the Active MDI Child</span></span>](how-to-send-data-to-the-active-mdi-child.md)
+- [<span data-ttu-id="21fa6-116">MDI(다중 문서 인터페이스) 응용 프로그램</span><span class="sxs-lookup"><span data-stu-id="21fa6-116">Multiple-Document Interface (MDI) Applications</span></span>](multiple-document-interface-mdi-applications.md)
+- [<span data-ttu-id="21fa6-117">방법: MDI 부모 폼 만들기</span><span class="sxs-lookup"><span data-stu-id="21fa6-117">How to: Create MDI Parent Forms</span></span>](how-to-create-mdi-parent-forms.md)
+- [<span data-ttu-id="21fa6-118">방법: MDI 자식 폼 만들기</span><span class="sxs-lookup"><span data-stu-id="21fa6-118">How to: Create MDI Child Forms</span></span>](how-to-create-mdi-child-forms.md)
+- [<span data-ttu-id="21fa6-119">방법: 활성 MDI 자식 확인</span><span class="sxs-lookup"><span data-stu-id="21fa6-119">How to: Determine the Active MDI Child</span></span>](how-to-determine-the-active-mdi-child.md)
+- [<span data-ttu-id="21fa6-120">방법: 활성 MDI 자식으로 데이터 전송</span><span class="sxs-lookup"><span data-stu-id="21fa6-120">How to: Send Data to the Active MDI Child</span></span>](how-to-send-data-to-the-active-mdi-child.md)

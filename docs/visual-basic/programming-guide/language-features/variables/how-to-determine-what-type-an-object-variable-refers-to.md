@@ -7,25 +7,25 @@ helpviewer_keywords:
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
 ms.openlocfilehash: 6499dfce880cc9ce16e5d77887afc0598692f48e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938205"
 ---
-# <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a><span data-ttu-id="9e48a-102">방법: 개체 변수 (Visual Basic)를 참조 형식 확인</span><span class="sxs-lookup"><span data-stu-id="9e48a-102">How to: Determine What Type an Object Variable Refers To (Visual Basic)</span></span>
-<span data-ttu-id="9e48a-103">개체 변수를 다른 곳에 저장 된 데이터에 대 한 포인터를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="9e48a-103">An object variable contains a pointer to data that is stored elsewhere.</span></span> <span data-ttu-id="9e48a-104">런타임에 해당 데이터 형식을 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9e48a-104">The type of that data can change during run time.</span></span> <span data-ttu-id="9e48a-105">언제 든 지 사용할 수 있습니다는 <xref:System.Type.GetTypeCode%2A> , 현재 런타임 형식을 확인 하는 방법 또는 [TypeOf 연산자](../../../../visual-basic/language-reference/operators/typeof-operator.md) 런타임 형식 현재 확인 하려면 지정된 된 형식과 호환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9e48a-105">At any moment, you can use the <xref:System.Type.GetTypeCode%2A> method to determine the current run-time type, or the [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) to find out if the current run-time type is compatible with a specified type.</span></span>  
+# <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a><span data-ttu-id="9c6d9-102">방법: 개체 변수 (Visual Basic)를 참조 형식 확인</span><span class="sxs-lookup"><span data-stu-id="9c6d9-102">How to: Determine What Type an Object Variable Refers To (Visual Basic)</span></span>
+<span data-ttu-id="9c6d9-103">개체 변수를 다른 곳에 저장 된 데이터에 대 한 포인터를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c6d9-103">An object variable contains a pointer to data that is stored elsewhere.</span></span> <span data-ttu-id="9c6d9-104">런타임에 해당 데이터 형식을 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c6d9-104">The type of that data can change during run time.</span></span> <span data-ttu-id="9c6d9-105">언제 든 지 사용할 수 있습니다는 <xref:System.Type.GetTypeCode%2A> , 현재 런타임 형식을 확인 하는 방법 또는 [TypeOf 연산자](../../../../visual-basic/language-reference/operators/typeof-operator.md) 런타임 형식 현재 확인 하려면 지정된 된 형식과 호환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c6d9-105">At any moment, you can use the <xref:System.Type.GetTypeCode%2A> method to determine the current run-time type, or the [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) to find out if the current run-time type is compatible with a specified type.</span></span>  
   
-### <a name="to-determine-the-exact-type-an-object-variable-currently-refers-to"></a><span data-ttu-id="9e48a-106">참조 형식을 결정 하려면 정확한 개체 변수에 현재</span><span class="sxs-lookup"><span data-stu-id="9e48a-106">To determine the exact type an object variable currently refers to</span></span>  
+### <a name="to-determine-the-exact-type-an-object-variable-currently-refers-to"></a><span data-ttu-id="9c6d9-106">참조 형식을 결정 하려면 정확한 개체 변수에 현재</span><span class="sxs-lookup"><span data-stu-id="9c6d9-106">To determine the exact type an object variable currently refers to</span></span>  
   
-1. <span data-ttu-id="9e48a-107">개체 변수를 호출 합니다 <xref:System.Object.GetType%2A> 검색 하는 메서드를 <xref:System.Type?displayProperty=nameWithType> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="9e48a-107">On the object variable, call the <xref:System.Object.GetType%2A> method to retrieve a <xref:System.Type?displayProperty=nameWithType> object.</span></span>  
+1. <span data-ttu-id="9c6d9-107">개체 변수를 호출 합니다 <xref:System.Object.GetType%2A> 검색 하는 메서드를 <xref:System.Type?displayProperty=nameWithType> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="9c6d9-107">On the object variable, call the <xref:System.Object.GetType%2A> method to retrieve a <xref:System.Type?displayProperty=nameWithType> object.</span></span>  
   
     ```  
     Dim myObject As Object  
     myObject.GetType()  
     ```  
   
-2. <span data-ttu-id="9e48a-108">에 <xref:System.Type?displayProperty=nameWithType> 클래스, 메서드 호출 하 여 공유 <xref:System.Type.GetTypeCode%2A> 검색할를 <xref:System.TypeCode> 개체의 형식에 대 한 열거형 값입니다.</span><span class="sxs-lookup"><span data-stu-id="9e48a-108">On the <xref:System.Type?displayProperty=nameWithType> class, call the shared method <xref:System.Type.GetTypeCode%2A> to retrieve the <xref:System.TypeCode> enumeration value for the object's type.</span></span>  
+2. <span data-ttu-id="9c6d9-108">에 <xref:System.Type?displayProperty=nameWithType> 클래스, 메서드 호출 하 여 공유 <xref:System.Type.GetTypeCode%2A> 검색할를 <xref:System.TypeCode> 개체의 형식에 대 한 열거형 값입니다.</span><span class="sxs-lookup"><span data-stu-id="9c6d9-108">On the <xref:System.Type?displayProperty=nameWithType> class, call the shared method <xref:System.Type.GetTypeCode%2A> to retrieve the <xref:System.TypeCode> enumeration value for the object's type.</span></span>  
   
     ```  
     Dim myObject As Object  
@@ -33,11 +33,11 @@ ms.locfileid: "59342871"
     MsgBox("myObject currently has type code " & CStr(datTyp))  
     ```  
   
-     <span data-ttu-id="9e48a-109">테스트할 수 있습니다 합니다 <xref:System.TypeCode> 열거형 값과 같은 관심는 모든 열거형 멤버에 대해 `Double`합니다.</span><span class="sxs-lookup"><span data-stu-id="9e48a-109">You can test the <xref:System.TypeCode> enumeration value against whichever enumeration members are of interest, such as `Double`.</span></span>  
+     <span data-ttu-id="9c6d9-109">테스트할 수 있습니다 합니다 <xref:System.TypeCode> 열거형 값과 같은 관심는 모든 열거형 멤버에 대해 `Double`합니다.</span><span class="sxs-lookup"><span data-stu-id="9c6d9-109">You can test the <xref:System.TypeCode> enumeration value against whichever enumeration members are of interest, such as `Double`.</span></span>  
   
-### <a name="to-determine-whether-an-object-variables-type-is-compatible-with-a-specified-type"></a><span data-ttu-id="9e48a-110">개체 여부를 확인 하려면 변수의 형식이 호환 지정된 된 형식</span><span class="sxs-lookup"><span data-stu-id="9e48a-110">To determine whether an object variable's type is compatible with a specified type</span></span>  
+### <a name="to-determine-whether-an-object-variables-type-is-compatible-with-a-specified-type"></a><span data-ttu-id="9c6d9-110">개체 여부를 확인 하려면 변수의 형식이 호환 지정된 된 형식</span><span class="sxs-lookup"><span data-stu-id="9c6d9-110">To determine whether an object variable's type is compatible with a specified type</span></span>  
   
--   <span data-ttu-id="9e48a-111">사용 하 여는 `TypeOf` 연산자와 조합 하는 [Is 연산자](../../../../visual-basic/language-reference/operators/is-operator.md) 사용 하 여 개체를 테스트 하려면를 `TypeOf`... `Is` 식입니다.</span><span class="sxs-lookup"><span data-stu-id="9e48a-111">Use the `TypeOf` operator in combination with the [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) to test the object with a `TypeOf`...`Is` expression.</span></span>  
+- <span data-ttu-id="9c6d9-111">사용 하 여는 `TypeOf` 연산자와 조합 하는 [Is 연산자](../../../../visual-basic/language-reference/operators/is-operator.md) 사용 하 여 개체를 테스트 하려면를 `TypeOf`... `Is` 식입니다.</span><span class="sxs-lookup"><span data-stu-id="9c6d9-111">Use the `TypeOf` operator in combination with the [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) to test the object with a `TypeOf`...`Is` expression.</span></span>  
   
     ```  
     If TypeOf objA Is System.Windows.Forms.Control Then  
@@ -45,19 +45,19 @@ ms.locfileid: "59342871"
     End If  
     ```  
   
-     <span data-ttu-id="9e48a-112">`TypeOf`... `Is` 식 반환 `True` 개체의 런타임 형식은 지정 된 형식과 호환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9e48a-112">The `TypeOf`...`Is` expression returns `True` if the object's run-time type is compatible with the specified type.</span></span>  
+     <span data-ttu-id="9c6d9-112">`TypeOf`... `Is` 식 반환 `True` 개체의 런타임 형식은 지정 된 형식과 호환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c6d9-112">The `TypeOf`...`Is` expression returns `True` if the object's run-time type is compatible with the specified type.</span></span>  
   
-     <span data-ttu-id="9e48a-113">호환성에 대 한 조건은 클래스, 구조체 또는 인터페이스에 지정된 된 형식 인지에 따라 달라 집니다.</span><span class="sxs-lookup"><span data-stu-id="9e48a-113">The criterion for compatibility depends on whether the specified type is a class, structure, or interface.</span></span> <span data-ttu-id="9e48a-114">일반적으로 형식은 호환 개체와 동일한 형식이에서 상속 하거나 지정 된 형식을 구현 합니다.</span><span class="sxs-lookup"><span data-stu-id="9e48a-114">In general, the types are compatible if the object is of the same type as, inherits from, or implements the specified type.</span></span> <span data-ttu-id="9e48a-115">자세한 내용은 [TypeOf 연산자](../../../../visual-basic/language-reference/operators/typeof-operator.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9e48a-115">For more information, see [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md).</span></span>  
+     <span data-ttu-id="9c6d9-113">호환성에 대 한 조건은 클래스, 구조체 또는 인터페이스에 지정된 된 형식 인지에 따라 달라 집니다.</span><span class="sxs-lookup"><span data-stu-id="9c6d9-113">The criterion for compatibility depends on whether the specified type is a class, structure, or interface.</span></span> <span data-ttu-id="9c6d9-114">일반적으로 형식은 호환 개체와 동일한 형식이에서 상속 하거나 지정 된 형식을 구현 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c6d9-114">In general, the types are compatible if the object is of the same type as, inherits from, or implements the specified type.</span></span> <span data-ttu-id="9c6d9-115">자세한 내용은 [TypeOf 연산자](../../../../visual-basic/language-reference/operators/typeof-operator.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9c6d9-115">For more information, see [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md).</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="9e48a-116">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="9e48a-116">Compiling the Code</span></span>  
- <span data-ttu-id="9e48a-117">참고는 지정된 된 형식의 변수 또는 식 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="9e48a-117">Note that the specified type cannot be a variable or expression.</span></span> <span data-ttu-id="9e48a-118">클래스, 구조체 또는 인터페이스와 같은 정의 된 유형의 이름 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9e48a-118">It must be the name of a defined type, such as a class, structure, or interface.</span></span> <span data-ttu-id="9e48a-119">여기에 내장 형식이 같은 `Integer` 고 `String`입니다.</span><span class="sxs-lookup"><span data-stu-id="9e48a-119">This includes intrinsic types such as `Integer` and `String`.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="9c6d9-116">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="9c6d9-116">Compiling the Code</span></span>  
+ <span data-ttu-id="9c6d9-117">참고는 지정된 된 형식의 변수 또는 식 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="9c6d9-117">Note that the specified type cannot be a variable or expression.</span></span> <span data-ttu-id="9c6d9-118">클래스, 구조체 또는 인터페이스와 같은 정의 된 유형의 이름 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c6d9-118">It must be the name of a defined type, such as a class, structure, or interface.</span></span> <span data-ttu-id="9c6d9-119">여기에 내장 형식이 같은 `Integer` 고 `String`입니다.</span><span class="sxs-lookup"><span data-stu-id="9c6d9-119">This includes intrinsic types such as `Integer` and `String`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9e48a-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="9e48a-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9c6d9-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="9c6d9-120">See also</span></span>
 
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Type.GetTypeCode%2A>
 - <xref:System.TypeCode>
-- [<span data-ttu-id="9e48a-121">개체 변수</span><span class="sxs-lookup"><span data-stu-id="9e48a-121">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [<span data-ttu-id="9e48a-122">개체 변수 값</span><span class="sxs-lookup"><span data-stu-id="9e48a-122">Object Variable Values</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [<span data-ttu-id="9e48a-123">Object 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="9e48a-123">Object Data Type</span></span>](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [<span data-ttu-id="9c6d9-121">개체 변수</span><span class="sxs-lookup"><span data-stu-id="9c6d9-121">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [<span data-ttu-id="9c6d9-122">개체 변수 값</span><span class="sxs-lookup"><span data-stu-id="9c6d9-122">Object Variable Values</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
+- [<span data-ttu-id="9c6d9-123">Object 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="9c6d9-123">Object Data Type</span></span>](../../../../visual-basic/language-reference/data-types/object-data-type.md)

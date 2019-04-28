@@ -3,17 +3,17 @@ title: 대리자의 가변성 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 38e9353f-74f8-4211-a8f0-7a495414df4a
 ms.openlocfilehash: 6d341c7c2b5adeebcafc5b0787b132ab6bd57e41
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787233"
 ---
-# <a name="variance-in-delegates-visual-basic"></a><span data-ttu-id="44aed-102">대리자의 가변성 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="44aed-102">Variance in Delegates (Visual Basic)</span></span>
+# <a name="variance-in-delegates-visual-basic"></a><span data-ttu-id="0d6c0-102">대리자의 가변성 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0d6c0-102">Variance in Delegates (Visual Basic)</span></span>
 
-<span data-ttu-id="44aed-103">.NET framework 3.5에는 모든 대리자의 대리자 형식과 메서드 시그니처를 일치 시키는 가변성 지원이 추가 되었습니다 C# 및 Visual Basic입니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-103">.NET Framework 3.5 introduced variance support for matching method signatures with delegate types in all delegates in C# and Visual Basic.</span></span> <span data-ttu-id="44aed-104">즉, 일치하는 시그니처가 있는 메서드만이 아니라 더 많은 파생된 형식(공변성(covariance))을 반환하는 메서드 또는 대리자 형식에 지정된 것보다 더 적은 수의 파생된 형식(반공변성(contravariance))을 가지고 있는 매개 변수를 수락하는 메서드도 대리자에 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-104">This means that you can assign to delegates not only methods that have matching signatures, but also methods that return more derived types (covariance) or that accept parameters that have less derived types (contravariance) than that specified by the delegate type.</span></span> <span data-ttu-id="44aed-105">여기에는 제네릭 및 비 제네릭 대리자가 모두 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-105">This includes both generic and non-generic delegates.</span></span>
+<span data-ttu-id="0d6c0-103">.NET framework 3.5에는 모든 대리자의 대리자 형식과 메서드 시그니처를 일치 시키는 가변성 지원이 추가 되었습니다 C# 및 Visual Basic입니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-103">.NET Framework 3.5 introduced variance support for matching method signatures with delegate types in all delegates in C# and Visual Basic.</span></span> <span data-ttu-id="0d6c0-104">즉, 일치하는 시그니처가 있는 메서드만이 아니라 더 많은 파생된 형식(공변성(covariance))을 반환하는 메서드 또는 대리자 형식에 지정된 것보다 더 적은 수의 파생된 형식(반공변성(contravariance))을 가지고 있는 매개 변수를 수락하는 메서드도 대리자에 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-104">This means that you can assign to delegates not only methods that have matching signatures, but also methods that return more derived types (covariance) or that accept parameters that have less derived types (contravariance) than that specified by the delegate type.</span></span> <span data-ttu-id="0d6c0-105">여기에는 제네릭 및 비 제네릭 대리자가 모두 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-105">This includes both generic and non-generic delegates.</span></span>
 
-<span data-ttu-id="44aed-106">다음과 같이 두 개의 클래스 및 두 개의 대리자(제네릭 및 비 제네릭)를 가지고 있는 코드를 예로 들어보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-106">For example, consider the following code, which has two classes and two delegates: generic and non-generic.</span></span>
+<span data-ttu-id="0d6c0-106">다음과 같이 두 개의 클래스 및 두 개의 대리자(제네릭 및 비 제네릭)를 가지고 있는 코드를 예로 들어보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-106">For example, consider the following code, which has two classes and two delegates: generic and non-generic.</span></span>
 
 ```vb
 Public Class First
@@ -27,7 +27,7 @@ Public Delegate Function SampleDelegate(ByVal a As Second) As First
 Public Delegate Function SampleGenericDelegate(Of A, R)(ByVal a As A) As R
 ```
 
-<span data-ttu-id="44aed-107">`SampleDelegate` 또는 `SampleDelegate(Of A, R)` 형식의 대리자를 만들 때 다음 메서드 중 하나를 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-107">When you create delegates of the `SampleDelegate` or `SampleDelegate(Of A, R)` types, you can assign any one of the following methods to those delegates.</span></span>
+<span data-ttu-id="0d6c0-107">`SampleDelegate` 또는 `SampleDelegate(Of A, R)` 형식의 대리자를 만들 때 다음 메서드 중 하나를 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-107">When you create delegates of the `SampleDelegate` or `SampleDelegate(Of A, R)` types, you can assign any one of the following methods to those delegates.</span></span>
 
 ```vb
 ' Matching signature.
@@ -56,7 +56,7 @@ Public Shared Function AFirstRSecond(
 End Function
 ```
 
-<span data-ttu-id="44aed-108">다음 코드 예제에서는 메서드 시그니처 및 대리자 형식 사이의 암시적 변환을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-108">The following code example illustrates the implicit conversion between the method signature and the delegate type.</span></span>
+<span data-ttu-id="0d6c0-108">다음 코드 예제에서는 메서드 시그니처 및 대리자 형식 사이의 암시적 변환을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-108">The following code example illustrates the implicit conversion between the method signature and the delegate type.</span></span>
 
 ```vb
 ' Assigning a method with a matching signature
@@ -76,15 +76,15 @@ Dim dGeneric As SampleGenericDelegate(Of Second, First) = AddressOf ASecondRFirs
 Dim dGenericConversion As SampleGenericDelegate(Of Second, First) = AddressOf AFirstRSecond
 ```
 
-<span data-ttu-id="44aed-109">더 많은 예제를 참조 하세요 [를 사용 하 여 대리자의 가변성 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) 하 고 [Func 및 Action 제네릭 대리자 (Visual Basic)를 사용 하 여 분산](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-109">For more examples, see [Using Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) and [Using Variance for Func and Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).</span></span>
+<span data-ttu-id="0d6c0-109">더 많은 예제를 참조 하세요 [를 사용 하 여 대리자의 가변성 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) 하 고 [Func 및 Action 제네릭 대리자 (Visual Basic)를 사용 하 여 분산](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-109">For more examples, see [Using Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) and [Using Variance for Func and Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).</span></span>
 
-## <a name="variance-in-generic-type-parameters"></a><span data-ttu-id="44aed-110">제네릭 형식 매개 변수에서의 가변성</span><span class="sxs-lookup"><span data-stu-id="44aed-110">Variance in Generic Type Parameters</span></span>
+## <a name="variance-in-generic-type-parameters"></a><span data-ttu-id="0d6c0-110">제네릭 형식 매개 변수에서의 가변성</span><span class="sxs-lookup"><span data-stu-id="0d6c0-110">Variance in Generic Type Parameters</span></span>
 
-<span data-ttu-id="44aed-111">제네릭 형식 매개 변수로 지정 된 다른 형식을 있는 제네릭 대리자에서 필요에 따라 서로 상속 된 경우 서로 할당 될 수 있도록, 대리자 간 암시적 변환을.NET Framework 4에서 이상 설정할 수 있습니다. 분산입니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-111">In .NET Framework 4 and later you can enable implicit conversion between delegates, so that generic delegates that have different types specified by generic type parameters can be assigned to each other, if the types are inherited from each other as required by variance.</span></span>
+<span data-ttu-id="0d6c0-111">제네릭 형식 매개 변수로 지정 된 다른 형식을 있는 제네릭 대리자에서 필요에 따라 서로 상속 된 경우 서로 할당 될 수 있도록, 대리자 간 암시적 변환을.NET Framework 4에서 이상 설정할 수 있습니다. 분산입니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-111">In .NET Framework 4 and later you can enable implicit conversion between delegates, so that generic delegates that have different types specified by generic type parameters can be assigned to each other, if the types are inherited from each other as required by variance.</span></span>
 
-<span data-ttu-id="44aed-112">암시적 변환을 사용하도록 설정하려면 `in` 및 `out` 키워드를 사용하여 대리자에서 제네릭 매개 변수를 공변(covariant) 또는 반공변(contravariant)으로 선언해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-112">To enable implicit conversion, you must explicitly declare generic parameters in a delegate as covariant or contravariant by using the `in` or `out` keyword.</span></span>
+<span data-ttu-id="0d6c0-112">암시적 변환을 사용하도록 설정하려면 `in` 및 `out` 키워드를 사용하여 대리자에서 제네릭 매개 변수를 공변(covariant) 또는 반공변(contravariant)으로 선언해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-112">To enable implicit conversion, you must explicitly declare generic parameters in a delegate as covariant or contravariant by using the `in` or `out` keyword.</span></span>
 
-<span data-ttu-id="44aed-113">다음 코드 예제에서는 공변(covariant) 제네릭 형식 매개 변수가 있는 대리자를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-113">The following code example shows how you can create a delegate that has a covariant generic type parameter.</span></span>
+<span data-ttu-id="0d6c0-113">다음 코드 예제에서는 공변(covariant) 제네릭 형식 매개 변수가 있는 대리자를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-113">The following code example shows how you can create a delegate that has a covariant generic type parameter.</span></span>
 
 ```vb
 ' Type T is declared covariant by using the out keyword.
@@ -97,9 +97,9 @@ Sub Test()
 End Sub
 ```
 
-<span data-ttu-id="44aed-114">메서드 시그니처를 대리자 형식과 일치시키는 용도로만 가변성 지원을 사용하고 `in` 및 `out` 키워드를 사용하지 않는 경우, 대리자를 동일한 람다 식 또는 메서드로 인스턴스화할 수는 있지만 한 대리자를 다른 대리자에 할당할 수는 없는 경우가 더러 있습니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-114">If you use only variance support to match method signatures with delegate types and do not use the `in` and `out` keywords, you may find that sometimes you can instantiate delegates with identical lambda expressions or methods, but you cannot assign one delegate to another.</span></span>
+<span data-ttu-id="0d6c0-114">메서드 시그니처를 대리자 형식과 일치시키는 용도로만 가변성 지원을 사용하고 `in` 및 `out` 키워드를 사용하지 않는 경우, 대리자를 동일한 람다 식 또는 메서드로 인스턴스화할 수는 있지만 한 대리자를 다른 대리자에 할당할 수는 없는 경우가 더러 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-114">If you use only variance support to match method signatures with delegate types and do not use the `in` and `out` keywords, you may find that sometimes you can instantiate delegates with identical lambda expressions or methods, but you cannot assign one delegate to another.</span></span>
 
-<span data-ttu-id="44aed-115">다음 코드 예에서 `SampleGenericDelegate(Of String)` 명시적으로 변환 될 수 없습니다 `SampleGenericDelegate(Of Object)`이지만 `String` 상속 `Object`합니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-115">In the following code example, `SampleGenericDelegate(Of String)` can't be explicitly converted to `SampleGenericDelegate(Of Object)`, although `String` inherits `Object`.</span></span> <span data-ttu-id="44aed-116">`T` 제네릭 매개 변수를 `out` 키워드로 표시하면 이 문제를 수정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-116">You can fix this problem by marking the generic parameter `T` with the `out` keyword.</span></span>
+<span data-ttu-id="0d6c0-115">다음 코드 예에서 `SampleGenericDelegate(Of String)` 명시적으로 변환 될 수 없습니다 `SampleGenericDelegate(Of Object)`이지만 `String` 상속 `Object`합니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-115">In the following code example, `SampleGenericDelegate(Of String)` can't be explicitly converted to `SampleGenericDelegate(Of Object)`, although `String` inherits `Object`.</span></span> <span data-ttu-id="0d6c0-116">`T` 제네릭 매개 변수를 `out` 키워드로 표시하면 이 문제를 수정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-116">You can fix this problem by marking the generic parameter `T` with the `out` keyword.</span></span>
 
 ```vb
 Public Delegate Function SampleGenericDelegate(Of T)() As T
@@ -119,59 +119,59 @@ Sub Test()
 End Sub
 ```
 
-### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a><span data-ttu-id="44aed-117">.NET Framework에 Variant 형식 매개 변수를 가지고 있는 제네릭 대리자</span><span class="sxs-lookup"><span data-stu-id="44aed-117">Generic Delegates That Have Variant Type Parameters in the .NET Framework</span></span>
+### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a><span data-ttu-id="0d6c0-117">.NET Framework에 Variant 형식 매개 변수를 가지고 있는 제네릭 대리자</span><span class="sxs-lookup"><span data-stu-id="0d6c0-117">Generic Delegates That Have Variant Type Parameters in the .NET Framework</span></span>
 
-<span data-ttu-id="44aed-118">.NET Framework 4에는 기존의 몇몇 제네릭 대리자에서 제네릭 형식 매개 변수에 대한 가변성 지원이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-118">.NET Framework 4 introduced variance support for generic type parameters in several existing generic delegates:</span></span>
+<span data-ttu-id="0d6c0-118">.NET Framework 4에는 기존의 몇몇 제네릭 대리자에서 제네릭 형식 매개 변수에 대한 가변성 지원이 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-118">.NET Framework 4 introduced variance support for generic type parameters in several existing generic delegates:</span></span>
 
-- <span data-ttu-id="44aed-119"><xref:System> 네임스페이스의 `Action` 대리자(예: <xref:System.Action%601> 및 <xref:System.Action%602>)</span><span class="sxs-lookup"><span data-stu-id="44aed-119">`Action` delegates from the <xref:System> namespace, for example, <xref:System.Action%601> and <xref:System.Action%602></span></span>
+- <span data-ttu-id="0d6c0-119"><xref:System> 네임스페이스의 `Action` 대리자(예: <xref:System.Action%601> 및 <xref:System.Action%602>)</span><span class="sxs-lookup"><span data-stu-id="0d6c0-119">`Action` delegates from the <xref:System> namespace, for example, <xref:System.Action%601> and <xref:System.Action%602></span></span>
 
-- <span data-ttu-id="44aed-120"><xref:System> 네임스페이스의 `Func` 대리자(예: <xref:System.Func%601> 및 <xref:System.Func%602>)</span><span class="sxs-lookup"><span data-stu-id="44aed-120">`Func` delegates from the <xref:System> namespace, for example, <xref:System.Func%601> and <xref:System.Func%602></span></span>
+- <span data-ttu-id="0d6c0-120"><xref:System> 네임스페이스의 `Func` 대리자(예: <xref:System.Func%601> 및 <xref:System.Func%602>)</span><span class="sxs-lookup"><span data-stu-id="0d6c0-120">`Func` delegates from the <xref:System> namespace, for example, <xref:System.Func%601> and <xref:System.Func%602></span></span>
 
-- <span data-ttu-id="44aed-121"><xref:System.Predicate%601> 대리자</span><span class="sxs-lookup"><span data-stu-id="44aed-121">The <xref:System.Predicate%601> delegate</span></span>
+- <span data-ttu-id="0d6c0-121"><xref:System.Predicate%601> 대리자</span><span class="sxs-lookup"><span data-stu-id="0d6c0-121">The <xref:System.Predicate%601> delegate</span></span>
 
-- <span data-ttu-id="44aed-122"><xref:System.Comparison%601> 대리자</span><span class="sxs-lookup"><span data-stu-id="44aed-122">The <xref:System.Comparison%601> delegate</span></span>
+- <span data-ttu-id="0d6c0-122"><xref:System.Comparison%601> 대리자</span><span class="sxs-lookup"><span data-stu-id="0d6c0-122">The <xref:System.Comparison%601> delegate</span></span>
 
-- <span data-ttu-id="44aed-123"><xref:System.Converter%602> 대리자</span><span class="sxs-lookup"><span data-stu-id="44aed-123">The <xref:System.Converter%602> delegate</span></span>
+- <span data-ttu-id="0d6c0-123"><xref:System.Converter%602> 대리자</span><span class="sxs-lookup"><span data-stu-id="0d6c0-123">The <xref:System.Converter%602> delegate</span></span>
 
-<span data-ttu-id="44aed-124">자세한 내용 및 예제를 참조 하세요 [Func 및 Action 제네릭 대리자 (Visual Basic)를 사용 하 여 분산](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-124">For more information and examples, see [Using Variance for Func and Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).</span></span>
+<span data-ttu-id="0d6c0-124">자세한 내용 및 예제를 참조 하세요 [Func 및 Action 제네릭 대리자 (Visual Basic)를 사용 하 여 분산](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-124">For more information and examples, see [Using Variance for Func and Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).</span></span>
 
-### <a name="declaring-variant-type-parameters-in-generic-delegates"></a><span data-ttu-id="44aed-125">제네릭 대리자에서 Variant 형식 매개 변수 선언</span><span class="sxs-lookup"><span data-stu-id="44aed-125">Declaring Variant Type Parameters in Generic Delegates</span></span>
+### <a name="declaring-variant-type-parameters-in-generic-delegates"></a><span data-ttu-id="0d6c0-125">제네릭 대리자에서 Variant 형식 매개 변수 선언</span><span class="sxs-lookup"><span data-stu-id="0d6c0-125">Declaring Variant Type Parameters in Generic Delegates</span></span>
 
-<span data-ttu-id="44aed-126">제네릭 대리자가 공변(covariant) 또는 반공변(contravariant) 제네릭 형식 매개 변수를 가지고 있는 경우 이를 *variant 제네릭 대리자*라고 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-126">If a generic delegate has covariant or contravariant generic type parameters, it can be referred to as a *variant generic delegate*.</span></span>
+<span data-ttu-id="0d6c0-126">제네릭 대리자가 공변(covariant) 또는 반공변(contravariant) 제네릭 형식 매개 변수를 가지고 있는 경우 이를 *variant 제네릭 대리자*라고 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-126">If a generic delegate has covariant or contravariant generic type parameters, it can be referred to as a *variant generic delegate*.</span></span>
 
-<span data-ttu-id="44aed-127">`out` 키워드를 사용하여 제네릭 대리자에서 제네릭 형식 매개 변수를 공변(covariant)으로 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-127">You can declare a generic type parameter covariant in a generic delegate by using the `out` keyword.</span></span> <span data-ttu-id="44aed-128">공변(covariant) 형식은 메서드 반환 형식으로만 사용할 수 있으며 메서드 인수의 형식으로는 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-128">The covariant type can be used only as a method return type and not as a type of method arguments.</span></span> <span data-ttu-id="44aed-129">다음 코드 예제에서는 공변(covariant) 제네릭 대리자를 선언하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-129">The following code example shows how to declare a covariant generic delegate.</span></span>
+<span data-ttu-id="0d6c0-127">`out` 키워드를 사용하여 제네릭 대리자에서 제네릭 형식 매개 변수를 공변(covariant)으로 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-127">You can declare a generic type parameter covariant in a generic delegate by using the `out` keyword.</span></span> <span data-ttu-id="0d6c0-128">공변(covariant) 형식은 메서드 반환 형식으로만 사용할 수 있으며 메서드 인수의 형식으로는 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-128">The covariant type can be used only as a method return type and not as a type of method arguments.</span></span> <span data-ttu-id="0d6c0-129">다음 코드 예제에서는 공변(covariant) 제네릭 대리자를 선언하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-129">The following code example shows how to declare a covariant generic delegate.</span></span>
 
 ```vb
 Public Delegate Function DCovariant(Of Out R)() As R
 ```
 
-<span data-ttu-id="44aed-130">`in` 키워드를 사용하여 제네릭 대리자에서 제네릭 형식 매개 변수를 반공변(contravariant)으로 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-130">You can declare a generic type parameter contravariant in a generic delegate by using the `in` keyword.</span></span> <span data-ttu-id="44aed-131">반공변(contravariant) 형식은 메서드 인수의 형식으로서만 사용할 수 있으며 메서드 반환 형식으로는 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-131">The contravariant type can be used only as a type of method arguments and not as a method return type.</span></span> <span data-ttu-id="44aed-132">다음 코드 예제에서는 반공변(contravariant) 제네릭 대리자를 선언하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-132">The following code example shows how to declare a contravariant generic delegate.</span></span>
+<span data-ttu-id="0d6c0-130">`in` 키워드를 사용하여 제네릭 대리자에서 제네릭 형식 매개 변수를 반공변(contravariant)으로 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-130">You can declare a generic type parameter contravariant in a generic delegate by using the `in` keyword.</span></span> <span data-ttu-id="0d6c0-131">반공변(contravariant) 형식은 메서드 인수의 형식으로서만 사용할 수 있으며 메서드 반환 형식으로는 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-131">The contravariant type can be used only as a type of method arguments and not as a method return type.</span></span> <span data-ttu-id="0d6c0-132">다음 코드 예제에서는 반공변(contravariant) 제네릭 대리자를 선언하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-132">The following code example shows how to declare a contravariant generic delegate.</span></span>
 
 ```vb
 Public Delegate Sub DContravariant(Of In A)(ByVal a As A)
 ```
 
 > [!IMPORTANT]
-> <span data-ttu-id="44aed-133">`ByRef` Visual Basic의 매개 변수는 variant로 표시할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-133">`ByRef` parameters in Visual Basic can't be marked as variant.</span></span>
+> <span data-ttu-id="0d6c0-133">`ByRef` Visual Basic의 매개 변수는 variant로 표시할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-133">`ByRef` parameters in Visual Basic can't be marked as variant.</span></span>
 
-<span data-ttu-id="44aed-134">동일한 대리자에서, 그러나 서로 다른 형식 매개 변수에 대해 분산 및 공변성(covariance)을 모두 지원하는 것도 가능합니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-134">It is also possible to support both variance and covariance in the same delegate, but for different type parameters.</span></span> <span data-ttu-id="44aed-135">다음 예제에서 이를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-135">This is shown in the following example.</span></span>
+<span data-ttu-id="0d6c0-134">동일한 대리자에서, 그러나 서로 다른 형식 매개 변수에 대해 분산 및 공변성(covariance)을 모두 지원하는 것도 가능합니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-134">It is also possible to support both variance and covariance in the same delegate, but for different type parameters.</span></span> <span data-ttu-id="0d6c0-135">다음 예제에서 이를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-135">This is shown in the following example.</span></span>
 
 ```vb
 Public Delegate Function DVariant(Of In A, Out R)(ByVal a As A) As R
 ```
 
-### <a name="instantiating-and-invoking-variant-generic-delegates"></a><span data-ttu-id="44aed-136">Variant 제네릭 대리자 인스턴스화 및 호출</span><span class="sxs-lookup"><span data-stu-id="44aed-136">Instantiating and Invoking Variant Generic Delegates</span></span>
+### <a name="instantiating-and-invoking-variant-generic-delegates"></a><span data-ttu-id="0d6c0-136">Variant 제네릭 대리자 인스턴스화 및 호출</span><span class="sxs-lookup"><span data-stu-id="0d6c0-136">Instantiating and Invoking Variant Generic Delegates</span></span>
 
-<span data-ttu-id="44aed-137">비 variant 대리자를 인스턴스화 및 호출하듯 variant 대리자를 인스턴스화 및 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-137">You can instantiate and invoke variant delegates just as you instantiate and invoke invariant delegates.</span></span> <span data-ttu-id="44aed-138">다음 예제에서는 람다 식을 사용하여 대리자가 인스턴스화됩니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-138">In the following example, the delegate is instantiated by a lambda expression.</span></span>
+<span data-ttu-id="0d6c0-137">비 variant 대리자를 인스턴스화 및 호출하듯 variant 대리자를 인스턴스화 및 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-137">You can instantiate and invoke variant delegates just as you instantiate and invoke invariant delegates.</span></span> <span data-ttu-id="0d6c0-138">다음 예제에서는 람다 식을 사용하여 대리자가 인스턴스화됩니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-138">In the following example, the delegate is instantiated by a lambda expression.</span></span>
 
 ```vb
 Dim dvariant As DVariant(Of String, String) = Function(str) str + " "
 dvariant("test")
 ```
 
-### <a name="combining-variant-generic-delegates"></a><span data-ttu-id="44aed-139">Variant 제네릭 대리자 결합</span><span class="sxs-lookup"><span data-stu-id="44aed-139">Combining Variant Generic Delegates</span></span>
+### <a name="combining-variant-generic-delegates"></a><span data-ttu-id="0d6c0-139">Variant 제네릭 대리자 결합</span><span class="sxs-lookup"><span data-stu-id="0d6c0-139">Combining Variant Generic Delegates</span></span>
 
-<span data-ttu-id="44aed-140">Variant 대리자는 결합할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-140">You should not combine variant delegates.</span></span> <span data-ttu-id="44aed-141"><xref:System.Delegate.Combine%2A> 메서드는 variant 대리자 변환을 지원하지 않으며 대리자가 정확히 동일한 형식일 것으로 예상합니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-141">The <xref:System.Delegate.Combine%2A> method does not support variant delegate conversion and expects delegates to be of exactly the same type.</span></span> <span data-ttu-id="44aed-142">사용 하 여 대리자를 결합 하면이 런타임 예외가 발생할 수 있습니다 합니다 <xref:System.Delegate.Combine%2A> 메서드 (에서 C# 및 Visual Basic) 또는 사용 하 여는 `+` 연산자 (에서 C#) 다음 코드 예제에 나와 있는 것 처럼 합니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-142">This can lead to a run-time exception when you combine delegates either by using the <xref:System.Delegate.Combine%2A> method (in C# and Visual Basic) or by using the `+` operator (in C#), as shown in the following code example.</span></span>
+<span data-ttu-id="0d6c0-140">Variant 대리자는 결합할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-140">You should not combine variant delegates.</span></span> <span data-ttu-id="0d6c0-141"><xref:System.Delegate.Combine%2A> 메서드는 variant 대리자 변환을 지원하지 않으며 대리자가 정확히 동일한 형식일 것으로 예상합니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-141">The <xref:System.Delegate.Combine%2A> method does not support variant delegate conversion and expects delegates to be of exactly the same type.</span></span> <span data-ttu-id="0d6c0-142">사용 하 여 대리자를 결합 하면이 런타임 예외가 발생할 수 있습니다 합니다 <xref:System.Delegate.Combine%2A> 메서드 (에서 C# 및 Visual Basic) 또는 사용 하 여는 `+` 연산자 (에서 C#) 다음 코드 예제에 나와 있는 것 처럼 합니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-142">This can lead to a run-time exception when you combine delegates either by using the <xref:System.Delegate.Combine%2A> method (in C# and Visual Basic) or by using the `+` operator (in C#), as shown in the following code example.</span></span>
 
 ```vb
 Dim actObj As Action(Of Object) = Sub(x) Console.WriteLine("object: {0}", x)
@@ -181,11 +181,11 @@ Dim actStr As Action(Of String) = Sub(x) Console.WriteLine("string: {0}", x)
 ' Dim actCombine = [Delegate].Combine(actStr, actObj)
 ```
 
-## <a name="variance-in-generic-type-parameters-for-value-and-reference-types"></a><span data-ttu-id="44aed-143">값 및 참조 형식에 대한 제네릭 형식 매개 변수에서의 가변성</span><span class="sxs-lookup"><span data-stu-id="44aed-143">Variance in Generic Type Parameters for Value and Reference Types</span></span>
+## <a name="variance-in-generic-type-parameters-for-value-and-reference-types"></a><span data-ttu-id="0d6c0-143">값 및 참조 형식에 대한 제네릭 형식 매개 변수에서의 가변성</span><span class="sxs-lookup"><span data-stu-id="0d6c0-143">Variance in Generic Type Parameters for Value and Reference Types</span></span>
 
-<span data-ttu-id="44aed-144">제네릭 형식 매개 변수에 대한 가변성은 참조 형식에 대해서만 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-144">Variance for generic type parameters is supported for reference types only.</span></span> <span data-ttu-id="44aed-145">예를 들어 `DVariant(Of Int)`로 암시적으로 변환할 수 없습니다 `DVariant(Of Object)` 또는 `DVariant(Of Long)`이므로 정수는 값 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-145">For example, `DVariant(Of Int)`can't be implicitly converted to `DVariant(Of Object)` or `DVariant(Of Long)`, because integer is a value type.</span></span>
+<span data-ttu-id="0d6c0-144">제네릭 형식 매개 변수에 대한 가변성은 참조 형식에 대해서만 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-144">Variance for generic type parameters is supported for reference types only.</span></span> <span data-ttu-id="0d6c0-145">예를 들어 `DVariant(Of Int)`로 암시적으로 변환할 수 없습니다 `DVariant(Of Object)` 또는 `DVariant(Of Long)`이므로 정수는 값 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-145">For example, `DVariant(Of Int)`can't be implicitly converted to `DVariant(Of Object)` or `DVariant(Of Long)`, because integer is a value type.</span></span>
 
-<span data-ttu-id="44aed-146">다음 예제에서는 제네릭 형식 매개 변수에서의 가변성이 값 형식에 대해 지원되지 않음을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-146">The following example demonstrates that variance in generic type parameters is not supported for value types.</span></span>
+<span data-ttu-id="0d6c0-146">다음 예제에서는 제네릭 형식 매개 변수에서의 가변성이 값 형식에 대해 지원되지 않음을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-146">The following example demonstrates that variance in generic type parameters is not supported for value types.</span></span>
 
 ```vb
 ' The type T is covariant.
@@ -207,11 +207,11 @@ Sub Test()
 End Sub
 ```
 
-## <a name="relaxed-delegate-conversion-in-visual-basic"></a><span data-ttu-id="44aed-147">Visual Basic의 완화 된 대리자 변환</span><span class="sxs-lookup"><span data-stu-id="44aed-147">Relaxed Delegate Conversion in Visual Basic</span></span>
+## <a name="relaxed-delegate-conversion-in-visual-basic"></a><span data-ttu-id="0d6c0-147">Visual Basic의 완화 된 대리자 변환</span><span class="sxs-lookup"><span data-stu-id="0d6c0-147">Relaxed Delegate Conversion in Visual Basic</span></span>
 
-<span data-ttu-id="44aed-148">완화 된 대리자 변환 보다 유연 하 게를를 대리자 형식과 메서드 시그니처를 일치 시킬 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-148">Relaxed delegate conversion enables more flexibility in matching method signatures with delegate types.</span></span> <span data-ttu-id="44aed-149">예를 들어, 매개 변수 사양을 생략 하 고 대리자에 메서드를 할당 하는 경우 함수 반환 값을 생략할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-149">For example, it lets you omit parameter specifications and omit function return values when you assign a method to a delegate.</span></span> <span data-ttu-id="44aed-150">자세한 내용은 [완화 된 대리자 변환](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="44aed-150">For more information, see [Relaxed Delegate Conversion](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).</span></span>
+<span data-ttu-id="0d6c0-148">완화 된 대리자 변환 보다 유연 하 게를를 대리자 형식과 메서드 시그니처를 일치 시킬 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-148">Relaxed delegate conversion enables more flexibility in matching method signatures with delegate types.</span></span> <span data-ttu-id="0d6c0-149">예를 들어, 매개 변수 사양을 생략 하 고 대리자에 메서드를 할당 하는 경우 함수 반환 값을 생략할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-149">For example, it lets you omit parameter specifications and omit function return values when you assign a method to a delegate.</span></span> <span data-ttu-id="0d6c0-150">자세한 내용은 [완화 된 대리자 변환](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="0d6c0-150">For more information, see [Relaxed Delegate Conversion](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="44aed-151">참고자료</span><span class="sxs-lookup"><span data-stu-id="44aed-151">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0d6c0-151">참고자료</span><span class="sxs-lookup"><span data-stu-id="0d6c0-151">See also</span></span>
 
-- [<span data-ttu-id="44aed-152">제네릭</span><span class="sxs-lookup"><span data-stu-id="44aed-152">Generics</span></span>](~/docs/standard/generics/index.md)
-- [<span data-ttu-id="44aed-153">Func 및 Action 제네릭 대리자에 가변성 사용(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="44aed-153">Using Variance for Func and Action Generic Delegates (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [<span data-ttu-id="0d6c0-152">제네릭</span><span class="sxs-lookup"><span data-stu-id="0d6c0-152">Generics</span></span>](~/docs/standard/generics/index.md)
+- [<span data-ttu-id="0d6c0-153">Func 및 Action 제네릭 대리자에 가변성 사용(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0d6c0-153">Using Variance for Func and Action Generic Delegates (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

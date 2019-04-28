@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 742be1467d2f1e6eb7d8567ddf85f8e65ea4b8d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794331"
 ---
-# <a name="inotifyconnection2unregisternotifysource-method"></a><span data-ttu-id="cdd7a-102">INotifyConnection2::UnregisterNotifySource 메서드</span><span class="sxs-lookup"><span data-stu-id="cdd7a-102">INotifyConnection2::UnregisterNotifySource Method</span></span>
-<span data-ttu-id="cdd7a-103">연결에서 지정 된 알림 원본 개체를 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="cdd7a-103">Removes a specified notification source object from the connection.</span></span>  
+# <a name="inotifyconnection2unregisternotifysource-method"></a><span data-ttu-id="d2e30-102">INotifyConnection2::UnregisterNotifySource 메서드</span><span class="sxs-lookup"><span data-stu-id="d2e30-102">INotifyConnection2::UnregisterNotifySource Method</span></span>
+<span data-ttu-id="d2e30-103">연결에서 지정 된 알림 원본 개체를 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="d2e30-103">Removes a specified notification source object from the connection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cdd7a-104">구문</span><span class="sxs-lookup"><span data-stu-id="cdd7a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d2e30-104">구문</span><span class="sxs-lookup"><span data-stu-id="d2e30-104">Syntax</span></span>  
   
 ```  
 HRESULT UnregisterNotifySource  
@@ -36,19 +36,19 @@ HRESULT UnregisterNotifySource
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="cdd7a-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="cdd7a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d2e30-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d2e30-105">Parameters</span></span>  
  `in_pNotifySource`  
- <span data-ttu-id="cdd7a-106">[in] 알림 등록을 취소할 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="cdd7a-106">[in] Notification object to be unregistered.</span></span>  
+ <span data-ttu-id="d2e30-106">[in] 알림 등록을 취소할 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="d2e30-106">[in] Notification object to be unregistered.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="cdd7a-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="cdd7a-107">Return Value</span></span>  
- <span data-ttu-id="cdd7a-108">메서드가 성공 하면 S_OK입니다.</span><span class="sxs-lookup"><span data-stu-id="cdd7a-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d2e30-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="d2e30-107">Return Value</span></span>  
+ <span data-ttu-id="d2e30-108">메서드가 성공 하면 S_OK입니다.</span><span class="sxs-lookup"><span data-stu-id="d2e30-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cdd7a-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="cdd7a-109">Requirements</span></span>  
- <span data-ttu-id="cdd7a-110">**헤더:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="cdd7a-110">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d2e30-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d2e30-109">Requirements</span></span>  
+ <span data-ttu-id="d2e30-110">**헤더:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="d2e30-110">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cdd7a-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="cdd7a-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d2e30-111">참고자료</span><span class="sxs-lookup"><span data-stu-id="d2e30-111">See also</span></span>
 
-- [<span data-ttu-id="cdd7a-112">INotifyConnection2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="cdd7a-112">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
-- [<span data-ttu-id="cdd7a-113">INotifySource2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="cdd7a-113">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [<span data-ttu-id="cdd7a-114">INotifySink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="cdd7a-114">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [<span data-ttu-id="cdd7a-115">RegisterNotifySource 메서드</span><span class="sxs-lookup"><span data-stu-id="cdd7a-115">RegisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)
+- [<span data-ttu-id="d2e30-112">INotifyConnection2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d2e30-112">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [<span data-ttu-id="d2e30-113">INotifySource2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d2e30-113">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [<span data-ttu-id="d2e30-114">INotifySink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d2e30-114">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [<span data-ttu-id="d2e30-115">RegisterNotifySource 메서드</span><span class="sxs-lookup"><span data-stu-id="d2e30-115">RegisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)

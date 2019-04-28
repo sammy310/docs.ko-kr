@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d32e3ac0ff3179a9bb32f82e5ca33fd89c4ec410
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939557"
 ---
-# <a name="isymunmanagedmethodgetsourcestartend-method"></a><span data-ttu-id="23ab0-102">ISymUnmanagedMethod::GetSourceStartEnd 메서드</span><span class="sxs-lookup"><span data-stu-id="23ab0-102">ISymUnmanagedMethod::GetSourceStartEnd Method</span></span>
-<span data-ttu-id="23ab0-103">이 메서드의 원본에 대 한 시작 및 끝 문서 위치를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="23ab0-103">Gets the start and end document positions for the source of this method.</span></span> <span data-ttu-id="23ab0-104">첫 번째 배열 위치 시작 이며 두 번째 배열 위치 끝입니다.</span><span class="sxs-lookup"><span data-stu-id="23ab0-104">The first array position is the start, and the second array position is the end.</span></span>  
+# <a name="isymunmanagedmethodgetsourcestartend-method"></a><span data-ttu-id="7dc9b-102">ISymUnmanagedMethod::GetSourceStartEnd 메서드</span><span class="sxs-lookup"><span data-stu-id="7dc9b-102">ISymUnmanagedMethod::GetSourceStartEnd Method</span></span>
+<span data-ttu-id="7dc9b-103">이 메서드의 원본에 대 한 시작 및 끝 문서 위치를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="7dc9b-103">Gets the start and end document positions for the source of this method.</span></span> <span data-ttu-id="7dc9b-104">첫 번째 배열 위치 시작 이며 두 번째 배열 위치 끝입니다.</span><span class="sxs-lookup"><span data-stu-id="7dc9b-104">The first array position is the start, and the second array position is the end.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="23ab0-105">구문</span><span class="sxs-lookup"><span data-stu-id="23ab0-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7dc9b-105">구문</span><span class="sxs-lookup"><span data-stu-id="7dc9b-105">Syntax</span></span>  
   
 ```  
 HRESULT GetSourceStartEnd(  
@@ -37,25 +37,25 @@ HRESULT GetSourceStartEnd(
     [out] BOOL                   *pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="23ab0-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="23ab0-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7dc9b-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="7dc9b-106">Parameters</span></span>  
  `docs`  
- <span data-ttu-id="23ab0-107">[in] 시작 및 종료 소스 문서입니다.</span><span class="sxs-lookup"><span data-stu-id="23ab0-107">[in] The starting and ending source documents.</span></span>  
+ <span data-ttu-id="7dc9b-107">[in] 시작 및 종료 소스 문서입니다.</span><span class="sxs-lookup"><span data-stu-id="7dc9b-107">[in] The starting and ending source documents.</span></span>  
   
  `lines`  
- <span data-ttu-id="23ab0-108">[in] 소스 문서의 시작 및 해당 줄을 종료 합니다.</span><span class="sxs-lookup"><span data-stu-id="23ab0-108">[in] The starting and ending lines in the corresponding source documents.</span></span>  
+ <span data-ttu-id="7dc9b-108">[in] 소스 문서의 시작 및 해당 줄을 종료 합니다.</span><span class="sxs-lookup"><span data-stu-id="7dc9b-108">[in] The starting and ending lines in the corresponding source documents.</span></span>  
   
  `columns`  
- <span data-ttu-id="23ab0-109">[in] 소스 문서의 시작 및 해당 열을 종료 합니다.</span><span class="sxs-lookup"><span data-stu-id="23ab0-109">[in] The starting and ending columns in the corresponding source documents.</span></span>  
+ <span data-ttu-id="7dc9b-109">[in] 소스 문서의 시작 및 해당 열을 종료 합니다.</span><span class="sxs-lookup"><span data-stu-id="7dc9b-109">[in] The starting and ending columns in the corresponding source documents.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="23ab0-110">[out] `true` 위치 고, 그렇지 않으면 정의 된 경우 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="23ab0-110">[out] `true` if positions were defined; otherwise, `false`.</span></span>  
+ <span data-ttu-id="7dc9b-110">[out] `true` 위치 고, 그렇지 않으면 정의 된 경우 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="7dc9b-110">[out] `true` if positions were defined; otherwise, `false`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="23ab0-111">반환 값</span><span class="sxs-lookup"><span data-stu-id="23ab0-111">Return Value</span></span>  
- <span data-ttu-id="23ab0-112">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="23ab0-112">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7dc9b-111">반환 값</span><span class="sxs-lookup"><span data-stu-id="7dc9b-111">Return Value</span></span>  
+ <span data-ttu-id="7dc9b-112">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="7dc9b-112">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="23ab0-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="23ab0-113">Requirements</span></span>  
- <span data-ttu-id="23ab0-114">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="23ab0-114">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7dc9b-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="7dc9b-113">Requirements</span></span>  
+ <span data-ttu-id="7dc9b-114">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="7dc9b-114">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="23ab0-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="23ab0-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7dc9b-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="7dc9b-115">See also</span></span>
 
-- [<span data-ttu-id="23ab0-116">ISymUnmanagedMethod 인터페이스</span><span class="sxs-lookup"><span data-stu-id="23ab0-116">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [<span data-ttu-id="7dc9b-116">ISymUnmanagedMethod 인터페이스</span><span class="sxs-lookup"><span data-stu-id="7dc9b-116">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

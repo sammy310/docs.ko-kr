@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 31bed2019eef5a37e1086624afdae3e8f2c58632
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61927233"
 ---
-# <a name="imetadataemit2savedeltatostream-method"></a><span data-ttu-id="21d97-102">IMetaDataEmit2::SaveDeltaToStream 메서드</span><span class="sxs-lookup"><span data-stu-id="21d97-102">IMetaDataEmit2::SaveDeltaToStream Method</span></span>
-<span data-ttu-id="21d97-103">편집 하며 계속 하기는 현재 세션에서 지정 된 스트림에 변경 내용을 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="21d97-103">Saves changes from the current edit-and-continue session to the specified stream.</span></span>  
+# <a name="imetadataemit2savedeltatostream-method"></a><span data-ttu-id="f3d1f-102">IMetaDataEmit2::SaveDeltaToStream 메서드</span><span class="sxs-lookup"><span data-stu-id="f3d1f-102">IMetaDataEmit2::SaveDeltaToStream Method</span></span>
+<span data-ttu-id="f3d1f-103">편집 하며 계속 하기는 현재 세션에서 지정 된 스트림에 변경 내용을 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="f3d1f-103">Saves changes from the current edit-and-continue session to the specified stream.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="21d97-104">구문</span><span class="sxs-lookup"><span data-stu-id="21d97-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f3d1f-104">구문</span><span class="sxs-lookup"><span data-stu-id="f3d1f-104">Syntax</span></span>  
   
 ```  
 HRESULT SaveDeltaToStream (  
@@ -36,23 +36,23 @@ HRESULT SaveDeltaToStream (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="21d97-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="21d97-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f3d1f-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f3d1f-105">Parameters</span></span>  
  `pIStream`  
- <span data-ttu-id="21d97-106">[in] 변경 내용을 저장 하는 쓰기 가능한 스트림에 대 한 인터페이스 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="21d97-106">[in] An interface pointer to the writable stream to which to save changes.</span></span>  
+ <span data-ttu-id="f3d1f-106">[in] 변경 내용을 저장 하는 쓰기 가능한 스트림에 대 한 인터페이스 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="f3d1f-106">[in] An interface pointer to the writable stream to which to save changes.</span></span>  
   
  `dwSaveFlags`  
- <span data-ttu-id="21d97-107">[in] 예약되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="21d97-107">[in] Reserved.</span></span> <span data-ttu-id="21d97-108">이 값은 0 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="21d97-108">This value must be zero.</span></span>  
+ <span data-ttu-id="f3d1f-107">[in] 예약되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f3d1f-107">[in] Reserved.</span></span> <span data-ttu-id="f3d1f-108">이 값은 0 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f3d1f-108">This value must be zero.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="21d97-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="21d97-109">Requirements</span></span>  
- <span data-ttu-id="21d97-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="21d97-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f3d1f-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f3d1f-109">Requirements</span></span>  
+ <span data-ttu-id="f3d1f-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="f3d1f-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="21d97-111">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="21d97-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="f3d1f-111">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="f3d1f-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="21d97-112">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="21d97-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="f3d1f-112">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="f3d1f-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="21d97-113">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="21d97-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f3d1f-113">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f3d1f-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="21d97-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="21d97-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f3d1f-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="f3d1f-114">See also</span></span>
 
-- [<span data-ttu-id="21d97-115">IMetaDataEmit2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="21d97-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="21d97-116">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="21d97-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="f3d1f-115">IMetaDataEmit2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f3d1f-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="f3d1f-116">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f3d1f-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

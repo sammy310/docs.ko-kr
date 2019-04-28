@@ -6,12 +6,12 @@ helpviewer_keywords:
 - samples [WPF]
 ms.assetid: 1fc53e12-dfe5-476e-be13-fc3714aaf640
 ms.openlocfilehash: fc4eb03e0488994d9e17337e56b8fa0ecbd62b56
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696095"
 ---
-# <a name="wpf-samples"></a><span data-ttu-id="2e4f9-102">WPF 샘플</span><span class="sxs-lookup"><span data-stu-id="2e4f9-102">WPF Samples</span></span>
+# <a name="wpf-samples"></a><span data-ttu-id="1b344-102">WPF 샘플</span><span class="sxs-lookup"><span data-stu-id="1b344-102">WPF Samples</span></span>
 
-<span data-ttu-id="2e4f9-103">Windows Presentation Foundation (WPF)을 보여 주는 샘플에 대 한 참조를 [Microsoft/WPF 샘플 리포지토리](https://github.com/Microsoft/WPF-Samples) github입니다.</span><span class="sxs-lookup"><span data-stu-id="2e4f9-103">For samples that demonstrate Windows Presentation Foundation (WPF), see the [Microsoft/WPF-Samples repo](https://github.com/Microsoft/WPF-Samples) on GitHub.</span></span>
+<span data-ttu-id="1b344-103">Windows Presentation Foundation (WPF)을 보여 주는 샘플에 대 한 참조를 [Microsoft/WPF 샘플 리포지토리](https://github.com/Microsoft/WPF-Samples) github입니다.</span><span class="sxs-lookup"><span data-stu-id="1b344-103">For samples that demonstrate Windows Presentation Foundation (WPF), see the [Microsoft/WPF-Samples repo](https://github.com/Microsoft/WPF-Samples) on GitHub.</span></span>

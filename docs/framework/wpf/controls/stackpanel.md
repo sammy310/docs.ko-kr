@@ -9,19 +9,19 @@ helpviewer_keywords:
 - controls [WPF], StackPanel
 ms.assetid: a82b824c-1b98-49a9-b7fd-2d9c154dd002
 ms.openlocfilehash: df78e1037f0bc444d5ae3820eda5d461a415e265
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791029"
 ---
-# <a name="stackpanel"></a><span data-ttu-id="e95f0-102">StackPanel</span><span class="sxs-lookup"><span data-stu-id="e95f0-102">StackPanel</span></span>
-<span data-ttu-id="e95f0-103"><xref:System.Windows.Controls.StackPanel> 요소 자식 요소를 가로 또는 세로로 누적 하는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e95f0-103">The <xref:System.Windows.Controls.StackPanel> element is used to stack child elements horizontally or vertically.</span></span>  
+# <a name="stackpanel"></a><span data-ttu-id="831cc-102">StackPanel</span><span class="sxs-lookup"><span data-stu-id="831cc-102">StackPanel</span></span>
+<span data-ttu-id="831cc-103"><xref:System.Windows.Controls.StackPanel> 요소 자식 요소를 가로 또는 세로로 누적 하는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="831cc-103">The <xref:System.Windows.Controls.StackPanel> element is used to stack child elements horizontally or vertically.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e95f0-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="e95f0-104">In This Section</span></span>  
- [<span data-ttu-id="e95f0-105">방법 항목</span><span class="sxs-lookup"><span data-stu-id="e95f0-105">How-to Topics</span></span>](stackpanel-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="831cc-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="831cc-104">In This Section</span></span>  
+ [<span data-ttu-id="831cc-105">방법 항목</span><span class="sxs-lookup"><span data-stu-id="831cc-105">How-to Topics</span></span>](stackpanel-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="e95f0-106">참조</span><span class="sxs-lookup"><span data-stu-id="e95f0-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="831cc-106">참조</span><span class="sxs-lookup"><span data-stu-id="831cc-106">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -36,9 +36,9 @@ ms.locfileid: "57361234"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="e95f0-107">관련 단원</span><span class="sxs-lookup"><span data-stu-id="e95f0-107">Related Sections</span></span>  
- [<span data-ttu-id="e95f0-108">레이아웃</span><span class="sxs-lookup"><span data-stu-id="e95f0-108">Layout</span></span>](../advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="831cc-107">관련 단원</span><span class="sxs-lookup"><span data-stu-id="831cc-107">Related Sections</span></span>  
+ [<span data-ttu-id="831cc-108">레이아웃</span><span class="sxs-lookup"><span data-stu-id="831cc-108">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="e95f0-109">연습: 내 첫 WPF 데스크톱 애플리케이션</span><span class="sxs-lookup"><span data-stu-id="e95f0-109">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="831cc-109">연습: 내 첫 WPF 데스크톱 애플리케이션</span><span class="sxs-lookup"><span data-stu-id="831cc-109">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="e95f0-110">ScrollViewer 개요</span><span class="sxs-lookup"><span data-stu-id="e95f0-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)
+ [<span data-ttu-id="831cc-110">ScrollViewer 개요</span><span class="sxs-lookup"><span data-stu-id="831cc-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

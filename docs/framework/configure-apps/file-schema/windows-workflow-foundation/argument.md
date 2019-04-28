@@ -4,27 +4,27 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: a7144d53-8023-4e90-971f-895e016fd58a
 ms.openlocfilehash: a920d60d703fe262bee96d75c420c526d54f88ab
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790327"
 ---
-# <a name="argument"></a><span data-ttu-id="045a1-101">\<argument></span><span class="sxs-lookup"><span data-stu-id="045a1-101">\<argument></span></span>
-<span data-ttu-id="045a1-102">활동 상태 쿼리와 연결된 인수를 나타내는 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="045a1-102">A configuration element that represents an argument associated with an activity state query.</span></span>  
+# <a name="argument"></a><span data-ttu-id="28fcf-101">\<argument></span><span class="sxs-lookup"><span data-stu-id="28fcf-101">\<argument></span></span>
+<span data-ttu-id="28fcf-102">활동 상태 쿼리와 연결된 인수를 나타내는 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="28fcf-102">A configuration element that represents an argument associated with an activity state query.</span></span>  
   
- <span data-ttu-id="045a1-103">추적 프로필 쿼리에 대 한 자세한 내용은 참조 하세요. [추적 프로필](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="045a1-103">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>  
+ <span data-ttu-id="28fcf-103">추적 프로필 쿼리에 대 한 자세한 내용은 참조 하세요. [추적 프로필](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="28fcf-103">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>  
   
-<span data-ttu-id="045a1-104">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="045a1-104">\<system.serviceModel></span></span>  
-<span data-ttu-id="045a1-105">\<tracking></span><span class="sxs-lookup"><span data-stu-id="045a1-105">\<tracking></span></span>  
-<span data-ttu-id="045a1-106">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="045a1-106">\<trackingProfile></span></span>  
-<span data-ttu-id="045a1-107">\<workflow></span><span class="sxs-lookup"><span data-stu-id="045a1-107">\<workflow></span></span>  
-<span data-ttu-id="045a1-108">\<activityStateQueries></span><span class="sxs-lookup"><span data-stu-id="045a1-108">\<activityStateQueries></span></span>  
-<span data-ttu-id="045a1-109">\<activityStateQuery></span><span class="sxs-lookup"><span data-stu-id="045a1-109">\<activityStateQuery></span></span>  
-<span data-ttu-id="045a1-110">\<arguments></span><span class="sxs-lookup"><span data-stu-id="045a1-110">\<arguments></span></span>  
-<span data-ttu-id="045a1-111">\<argument></span><span class="sxs-lookup"><span data-stu-id="045a1-111">\<argument></span></span>  
+<span data-ttu-id="28fcf-104">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="28fcf-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="28fcf-105">\<tracking></span><span class="sxs-lookup"><span data-stu-id="28fcf-105">\<tracking></span></span>  
+<span data-ttu-id="28fcf-106">\<trackingProfile></span><span class="sxs-lookup"><span data-stu-id="28fcf-106">\<trackingProfile></span></span>  
+<span data-ttu-id="28fcf-107">\<workflow></span><span class="sxs-lookup"><span data-stu-id="28fcf-107">\<workflow></span></span>  
+<span data-ttu-id="28fcf-108">\<activityStateQueries></span><span class="sxs-lookup"><span data-stu-id="28fcf-108">\<activityStateQueries></span></span>  
+<span data-ttu-id="28fcf-109">\<activityStateQuery></span><span class="sxs-lookup"><span data-stu-id="28fcf-109">\<activityStateQuery></span></span>  
+<span data-ttu-id="28fcf-110">\<arguments></span><span class="sxs-lookup"><span data-stu-id="28fcf-110">\<arguments></span></span>  
+<span data-ttu-id="28fcf-111">\<argument></span><span class="sxs-lookup"><span data-stu-id="28fcf-111">\<argument></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="045a1-112">구문</span><span class="sxs-lookup"><span data-stu-id="045a1-112">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="28fcf-112">구문</span><span class="sxs-lookup"><span data-stu-id="28fcf-112">Syntax</span></span>  
   
 ```xml
 <tracking>
@@ -41,26 +41,26 @@ ms.locfileid: "59210648"
 </tracking>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="045a1-113">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="045a1-113">Attributes and Elements</span></span>  
- <span data-ttu-id="045a1-114">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="045a1-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="28fcf-113">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="28fcf-113">Attributes and Elements</span></span>  
+ <span data-ttu-id="28fcf-114">다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="28fcf-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="045a1-115">특성</span><span class="sxs-lookup"><span data-stu-id="045a1-115">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="28fcf-115">특성</span><span class="sxs-lookup"><span data-stu-id="28fcf-115">Attributes</span></span>  
   
-|<span data-ttu-id="045a1-116">특성</span><span class="sxs-lookup"><span data-stu-id="045a1-116">Attribute</span></span>|<span data-ttu-id="045a1-117">설명</span><span class="sxs-lookup"><span data-stu-id="045a1-117">Description</span></span>|  
+|<span data-ttu-id="28fcf-116">특성</span><span class="sxs-lookup"><span data-stu-id="28fcf-116">Attribute</span></span>|<span data-ttu-id="28fcf-117">설명</span><span class="sxs-lookup"><span data-stu-id="28fcf-117">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="045a1-118">name</span><span class="sxs-lookup"><span data-stu-id="045a1-118">name</span></span>|<span data-ttu-id="045a1-119">인수의 이름을 지정하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="045a1-119">A string that specifies the name of the argument.</span></span>|  
+|<span data-ttu-id="28fcf-118">name</span><span class="sxs-lookup"><span data-stu-id="28fcf-118">name</span></span>|<span data-ttu-id="28fcf-119">인수의 이름을 지정하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="28fcf-119">A string that specifies the name of the argument.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="045a1-120">자식 요소</span><span class="sxs-lookup"><span data-stu-id="045a1-120">Child Elements</span></span>  
- <span data-ttu-id="045a1-121">없음</span><span class="sxs-lookup"><span data-stu-id="045a1-121">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="28fcf-120">자식 요소</span><span class="sxs-lookup"><span data-stu-id="28fcf-120">Child Elements</span></span>  
+ <span data-ttu-id="28fcf-121">없음</span><span class="sxs-lookup"><span data-stu-id="28fcf-121">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="045a1-122">부모 요소</span><span class="sxs-lookup"><span data-stu-id="045a1-122">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="28fcf-122">부모 요소</span><span class="sxs-lookup"><span data-stu-id="28fcf-122">Parent Elements</span></span>  
   
-|<span data-ttu-id="045a1-123">요소</span><span class="sxs-lookup"><span data-stu-id="045a1-123">Element</span></span>|<span data-ttu-id="045a1-124">설명</span><span class="sxs-lookup"><span data-stu-id="045a1-124">Description</span></span>|  
+|<span data-ttu-id="28fcf-123">요소</span><span class="sxs-lookup"><span data-stu-id="28fcf-123">Element</span></span>|<span data-ttu-id="28fcf-124">설명</span><span class="sxs-lookup"><span data-stu-id="28fcf-124">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="045a1-125">\<arguments></span><span class="sxs-lookup"><span data-stu-id="045a1-125">\<arguments></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md)|<span data-ttu-id="045a1-126">이 활동 쿼리와 연결되는 인수의 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="045a1-126">A collection of arguments associated with this activity query.</span></span>|  
+|[<span data-ttu-id="28fcf-125">\<arguments></span><span class="sxs-lookup"><span data-stu-id="28fcf-125">\<arguments></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md)|<span data-ttu-id="28fcf-126">이 활동 쿼리와 연결되는 인수의 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="28fcf-126">A collection of arguments associated with this activity query.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="045a1-127">설명</span><span class="sxs-lookup"><span data-stu-id="045a1-127">Remarks</span></span>  
- <span data-ttu-id="045a1-128">ActivityStateQuery의 한 가지 고유한 특징은 워크플로 실행을 추적할 때 데이터를 추출하는 기능입니다.</span><span class="sxs-lookup"><span data-stu-id="045a1-128">One unique feature of an ActivityStateQuery is the ability to extract data when tracking the execution of a workflow.</span></span> <span data-ttu-id="045a1-129">이 기능은 추적 레코드 사후 실행에 액세스할 때 추가 컨텍스트를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="045a1-129">This provides additional context when accessing the tracking records post execution.</span></span> <span data-ttu-id="045a1-130">사용할 수는 [ \<인수 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md)를 [ \<상태 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) 고 [ \<상태 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) 변수 또는 인수를 추출 하는 요소 워크플로의 모든 활동입니다.</span><span class="sxs-lookup"><span data-stu-id="045a1-130">You can use the [\<arguments>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md), [\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) and [\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) elements to extract any variable or argument from any activity in a workflow.</span></span> <span data-ttu-id="045a1-131">다음 예제에서는 활동의 `Closed` 추적 레코드를 내보낼 때 변수와 인수를 추출하는 활동 상태 쿼리를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="045a1-131">The following example shows an activity state query that extracts variables and arguments when the activity’s `Closed` tracking record is emitted.</span></span> <span data-ttu-id="045a1-132">ActivityStateRecord 사용해 서만 추출할 수 있으므로 구독 하는 추적 내에서 변수 및 인수를 사용 하 여 프로 파일링 [ \<activityStateQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="045a1-132">Variables and arguments can be extracted only with an ActivityStateRecord and thus are subscribed to within a tracking profile using [\<activityStateQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="28fcf-127">설명</span><span class="sxs-lookup"><span data-stu-id="28fcf-127">Remarks</span></span>  
+ <span data-ttu-id="28fcf-128">ActivityStateQuery의 한 가지 고유한 특징은 워크플로 실행을 추적할 때 데이터를 추출하는 기능입니다.</span><span class="sxs-lookup"><span data-stu-id="28fcf-128">One unique feature of an ActivityStateQuery is the ability to extract data when tracking the execution of a workflow.</span></span> <span data-ttu-id="28fcf-129">이 기능은 추적 레코드 사후 실행에 액세스할 때 추가 컨텍스트를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="28fcf-129">This provides additional context when accessing the tracking records post execution.</span></span> <span data-ttu-id="28fcf-130">사용할 수는 [ \<인수 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md)를 [ \<상태 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) 고 [ \<상태 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) 변수 또는 인수를 추출 하는 요소 워크플로의 모든 활동입니다.</span><span class="sxs-lookup"><span data-stu-id="28fcf-130">You can use the [\<arguments>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md), [\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) and [\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) elements to extract any variable or argument from any activity in a workflow.</span></span> <span data-ttu-id="28fcf-131">다음 예제에서는 활동의 `Closed` 추적 레코드를 내보낼 때 변수와 인수를 추출하는 활동 상태 쿼리를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="28fcf-131">The following example shows an activity state query that extracts variables and arguments when the activity’s `Closed` tracking record is emitted.</span></span> <span data-ttu-id="28fcf-132">ActivityStateRecord 사용해 서만 추출할 수 있으므로 구독 하는 추적 내에서 변수 및 인수를 사용 하 여 프로 파일링 [ \<activityStateQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="28fcf-132">Variables and arguments can be extracted only with an ActivityStateRecord and thus are subscribed to within a tracking profile using [\<activityStateQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md).</span></span>  
   
 ```xml  
 <activityStateQuery activityName="SendEmailActivity">  
@@ -76,9 +76,9 @@ ms.locfileid: "59210648"
 </activityStateQuery>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="045a1-133">참고자료</span><span class="sxs-lookup"><span data-stu-id="045a1-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="28fcf-133">참고자료</span><span class="sxs-lookup"><span data-stu-id="28fcf-133">See also</span></span>
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ArgumentElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>
-- [<span data-ttu-id="045a1-134">워크플로 추적</span><span class="sxs-lookup"><span data-stu-id="045a1-134">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [<span data-ttu-id="045a1-135">추적 프로필</span><span class="sxs-lookup"><span data-stu-id="045a1-135">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [<span data-ttu-id="28fcf-134">워크플로 추적</span><span class="sxs-lookup"><span data-stu-id="28fcf-134">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [<span data-ttu-id="28fcf-135">추적 프로필</span><span class="sxs-lookup"><span data-stu-id="28fcf-135">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

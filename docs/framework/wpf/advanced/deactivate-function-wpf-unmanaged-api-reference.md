@@ -9,34 +9,34 @@ api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 3e81be16-24c7-4399-b242-6268feaa49d7
 ms.openlocfilehash: ec1811998a60cda21c54a8e94e566ff4d06aa863
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928767"
 ---
-# <a name="deactivate-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="2b356-102">Deactivate 함수 (F 관리 되지 않는 API 참조)</span><span class="sxs-lookup"><span data-stu-id="2b356-102">Deactivate Function (WPF Unmanaged API Reference)</span></span>
-<span data-ttu-id="2b356-103">이 API는 Windows Presentation Foundation (WPF) 인프라를 지원 하며 코드에서 직접 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="2b356-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="deactivate-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="9ba79-102">Deactivate 함수 (F 관리 되지 않는 API 참조)</span><span class="sxs-lookup"><span data-stu-id="9ba79-102">Deactivate Function (WPF Unmanaged API Reference)</span></span>
+<span data-ttu-id="9ba79-103">이 API는 Windows Presentation Foundation (WPF) 인프라를 지원 하며 코드에서 직접 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="9ba79-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
   
- <span data-ttu-id="2b356-104">Windows 관리에 대 한 Windows Presentation Foundation (WPF) 인프라에서 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="2b356-104">Used by the Windows Presentation Foundation (WPF) infrastructure for windows management.</span></span>  
+ <span data-ttu-id="9ba79-104">Windows 관리에 대 한 Windows Presentation Foundation (WPF) 인프라에서 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="9ba79-104">Used by the Windows Presentation Foundation (WPF) infrastructure for windows management.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2b356-105">구문</span><span class="sxs-lookup"><span data-stu-id="2b356-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9ba79-105">구문</span><span class="sxs-lookup"><span data-stu-id="9ba79-105">Syntax</span></span>  
   
 ```cpp  
 void Deactivate()  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="2b356-106">요구 사항</span><span class="sxs-lookup"><span data-stu-id="2b356-106">Requirements</span></span>  
- <span data-ttu-id="2b356-107">**플랫폼:** 참조 [.NET Framework 시스템 요구 사항](../../get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="2b356-107">**Platforms:** See [.NET Framework System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9ba79-106">요구 사항</span><span class="sxs-lookup"><span data-stu-id="9ba79-106">Requirements</span></span>  
+ <span data-ttu-id="9ba79-107">**플랫폼:** 참조 [.NET Framework 시스템 요구 사항](../../get-started/system-requirements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9ba79-107">**Platforms:** See [.NET Framework System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2b356-108">**DLL:**</span><span class="sxs-lookup"><span data-stu-id="2b356-108">**DLL:**</span></span>  
+ <span data-ttu-id="9ba79-108">**DLL:**</span><span class="sxs-lookup"><span data-stu-id="9ba79-108">**DLL:**</span></span>  
   
- <span data-ttu-id="2b356-109">.NET framework 3.0 및 3.5. PresentationHostDLL.dll</span><span class="sxs-lookup"><span data-stu-id="2b356-109">In the .NET Framework 3.0 and 3.5: PresentationHostDLL.dll</span></span>  
+ <span data-ttu-id="9ba79-109">.NET framework 3.0 및 3.5. PresentationHostDLL.dll</span><span class="sxs-lookup"><span data-stu-id="9ba79-109">In the .NET Framework 3.0 and 3.5: PresentationHostDLL.dll</span></span>  
   
- <span data-ttu-id="2b356-110">.NET framework 4 이상: PresentationHost_v0400.dll</span><span class="sxs-lookup"><span data-stu-id="2b356-110">In the .NET Framework 4 and later: PresentationHost_v0400.dll</span></span>  
+ <span data-ttu-id="9ba79-110">.NET framework 4 이상: PresentationHost_v0400.dll</span><span class="sxs-lookup"><span data-stu-id="9ba79-110">In the .NET Framework 4 and later: PresentationHost_v0400.dll</span></span>  
   
- <span data-ttu-id="2b356-111">**.NET framework 버전:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2b356-111">**.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span></span>  
+ <span data-ttu-id="9ba79-111">**.NET framework 버전:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9ba79-111">**.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2b356-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="2b356-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9ba79-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="9ba79-112">See also</span></span>
 
-- [<span data-ttu-id="2b356-113">F 관리되지 않는 API 참조</span><span class="sxs-lookup"><span data-stu-id="2b356-113">WPF Unmanaged API Reference</span></span>](wpf-unmanaged-api-reference.md)
+- [<span data-ttu-id="9ba79-113">F 관리되지 않는 API 참조</span><span class="sxs-lookup"><span data-stu-id="9ba79-113">WPF Unmanaged API Reference</span></span>](wpf-unmanaged-api-reference.md)
