@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 998d4baf03123f1ffc174b2a7aeed0ff4a25b001
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723682"
 ---
-# <a name="icordebugmdagetdescription-method"></a><span data-ttu-id="b4e40-102">ICorDebugMDA::GetDescription 메서드</span><span class="sxs-lookup"><span data-stu-id="b4e40-102">ICorDebugMDA::GetDescription Method</span></span>
-<span data-ttu-id="b4e40-103">나타내는 관리 디버깅 도우미 (MDA)에 대 한 설명을 포함 하는 문자열을 가져옵니다 [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b4e40-103">Gets a string containing the description of the managed debugging assistant (MDA) represented by [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).</span></span>  
+# <a name="icordebugmdagetdescription-method"></a><span data-ttu-id="995c0-102">ICorDebugMDA::GetDescription 메서드</span><span class="sxs-lookup"><span data-stu-id="995c0-102">ICorDebugMDA::GetDescription Method</span></span>
+<span data-ttu-id="995c0-103">나타내는 관리 디버깅 도우미 (MDA)에 대 한 설명을 포함 하는 문자열을 가져옵니다 [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="995c0-103">Gets a string containing the description of the managed debugging assistant (MDA) represented by [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b4e40-104">구문</span><span class="sxs-lookup"><span data-stu-id="b4e40-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="995c0-104">구문</span><span class="sxs-lookup"><span data-stu-id="995c0-104">Syntax</span></span>  
   
 ```  
 HRESULT GetDescription (  
@@ -38,29 +38,29 @@ HRESULT GetDescription (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b4e40-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="b4e40-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="995c0-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="995c0-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="b4e40-106">[in] 설명을 저장 하는 문자열 버퍼의 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="b4e40-106">[in] The size of the string buffer that will store the description.</span></span>  
+ <span data-ttu-id="995c0-106">[in] 설명을 저장 하는 문자열 버퍼의 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="995c0-106">[in] The size of the string buffer that will store the description.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="b4e40-107">[out] 문자열 버퍼에 반환 된 바이트 수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="b4e40-107">[out] A pointer to the number of bytes returned in the string buffer.</span></span>  
+ <span data-ttu-id="995c0-107">[out] 문자열 버퍼에 반환 된 바이트 수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="995c0-107">[out] A pointer to the number of bytes returned in the string buffer.</span></span>  
   
  `szName`  
- <span data-ttu-id="b4e40-108">[out] MDA의 설명이 들어 있는 문자열 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="b4e40-108">[out] A string buffer containing the description of the MDA.</span></span>  
+ <span data-ttu-id="995c0-108">[out] MDA의 설명이 들어 있는 문자열 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="995c0-108">[out] A string buffer containing the description of the MDA.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b4e40-109">설명</span><span class="sxs-lookup"><span data-stu-id="b4e40-109">Remarks</span></span>  
- <span data-ttu-id="b4e40-110">문자열은 길이가 0 일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b4e40-110">The string can be zero in length.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="995c0-109">설명</span><span class="sxs-lookup"><span data-stu-id="995c0-109">Remarks</span></span>  
+ <span data-ttu-id="995c0-110">문자열은 길이가 0 일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="995c0-110">The string can be zero in length.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b4e40-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b4e40-111">Requirements</span></span>  
- <span data-ttu-id="b4e40-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="b4e40-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="995c0-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="995c0-111">Requirements</span></span>  
+ <span data-ttu-id="995c0-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="995c0-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b4e40-113">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b4e40-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="995c0-113">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="995c0-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b4e40-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b4e40-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="995c0-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="995c0-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b4e40-115">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b4e40-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="995c0-115">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="995c0-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b4e40-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="b4e40-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="995c0-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="995c0-116">See also</span></span>
 
-- [<span data-ttu-id="b4e40-117">ICorDebugMDA 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b4e40-117">ICorDebugMDA Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
-- [<span data-ttu-id="b4e40-118">관리 디버깅 도우미를 사용하여 오류 진단</span><span class="sxs-lookup"><span data-stu-id="b4e40-118">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="995c0-117">ICorDebugMDA 인터페이스</span><span class="sxs-lookup"><span data-stu-id="995c0-117">ICorDebugMDA Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
+- [<span data-ttu-id="995c0-118">관리 디버깅 도우미를 사용하여 오류 진단</span><span class="sxs-lookup"><span data-stu-id="995c0-118">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
