@@ -3,11 +3,11 @@ title: <additionalRequestParameters> 요소
 ms.date: 03/30/2017
 ms.assetid: da8109fb-581c-48f4-b718-3bbda1edc47d
 ms.openlocfilehash: bbd6f5ef78d26417a926140ba9eacb2b2eeffb77
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673565"
 ---
 # <a name="additionalrequestparameters-element"></a>\<additionalRequestParameters > 요소
 이 요소는 추가 요청 매개 변수를 지정하는 구성 요소 컬렉션을 포함합니다.  

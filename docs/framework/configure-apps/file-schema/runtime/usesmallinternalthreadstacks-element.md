@@ -8,11 +8,11 @@ ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b9833d768b84faaf6e1dcf8c9cb8b00b92adc3d1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673988"
 ---
 # <a name="usesmallinternalthreadstacks-element"></a>\<UseSmallInternalThreadStacks > 요소
 요청 된 CLR (공용 언어 런타임)는 메모리를 줄일 이러한 스레드에 대 한 기본 스택 크기를 사용 하는 대신 내부적으로 사용 되는 특정 스레드를 만들 때 명시적 스택 크기를 지정 하 여 사용 합니다.  

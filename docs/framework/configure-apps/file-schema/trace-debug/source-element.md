@@ -8,11 +8,11 @@ helpviewer_keywords:
 - <source> element
 - source element
 ms.openlocfilehash: 8860f5d3ed7ee0c04d1e8afd7614f3f73b470808
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673708"
 ---
 # <a name="source-element"></a>\<소스 > 요소
 추적 메시지를 시작하는 추적 소스를 지정합니다.  
