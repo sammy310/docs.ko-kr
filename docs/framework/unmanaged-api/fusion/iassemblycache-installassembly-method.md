@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7199fbc0c8760354269a50b647952729860c805b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697553"
 ---
-# <a name="iassemblycacheinstallassembly-method"></a><span data-ttu-id="0bb0c-102">IAssemblyCache::InstallAssembly 메서드</span><span class="sxs-lookup"><span data-stu-id="0bb0c-102">IAssemblyCache::InstallAssembly Method</span></span>
-<span data-ttu-id="0bb0c-103">전역 어셈블리 캐시에 지정된 된 어셈블리를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="0bb0c-103">Installs the specified assembly in the global assembly cache.</span></span>  
+# <a name="iassemblycacheinstallassembly-method"></a><span data-ttu-id="2bb6d-102">IAssemblyCache::InstallAssembly 메서드</span><span class="sxs-lookup"><span data-stu-id="2bb6d-102">IAssemblyCache::InstallAssembly Method</span></span>
+<span data-ttu-id="2bb6d-103">전역 어셈블리 캐시에 지정된 된 어셈블리를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="2bb6d-103">Installs the specified assembly in the global assembly cache.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0bb0c-104">구문</span><span class="sxs-lookup"><span data-stu-id="0bb0c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2bb6d-104">구문</span><span class="sxs-lookup"><span data-stu-id="2bb6d-104">Syntax</span></span>  
   
 ```  
 HRESULT InstallAssembly (  
@@ -37,27 +37,27 @@ HRESULT InstallAssembly (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0bb0c-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="0bb0c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2bb6d-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="2bb6d-105">Parameters</span></span>  
  `dwFlags`  
- <span data-ttu-id="0bb0c-106">[in] 같은 값이 지원에 정의 된 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="0bb0c-106">[in] Flags defined in Fusion.idl.</span></span> <span data-ttu-id="0bb0c-107">다음 값이 지원 됩니다.</span><span class="sxs-lookup"><span data-stu-id="0bb0c-107">The following values are supported:</span></span>  
+ <span data-ttu-id="2bb6d-106">[in] 같은 값이 지원에 정의 된 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="2bb6d-106">[in] Flags defined in Fusion.idl.</span></span> <span data-ttu-id="2bb6d-107">다음 값이 지원 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2bb6d-107">The following values are supported:</span></span>  
   
--   <span data-ttu-id="0bb0c-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)</span><span class="sxs-lookup"><span data-stu-id="0bb0c-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)</span></span>  
+- <span data-ttu-id="2bb6d-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)</span><span class="sxs-lookup"><span data-stu-id="2bb6d-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)</span></span>  
   
--   <span data-ttu-id="0bb0c-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)</span><span class="sxs-lookup"><span data-stu-id="0bb0c-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)</span></span>  
+- <span data-ttu-id="2bb6d-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)</span><span class="sxs-lookup"><span data-stu-id="2bb6d-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)</span></span>  
   
  `pszManifestFilePath`  
- <span data-ttu-id="0bb0c-110">[in] 설치할 어셈블리의 매니페스트에 대 한 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="0bb0c-110">[in] The path to the manifest for the assembly to install.</span></span>  
+ <span data-ttu-id="2bb6d-110">[in] 설치할 어셈블리의 매니페스트에 대 한 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="2bb6d-110">[in] The path to the manifest for the assembly to install.</span></span>  
   
  `pRefData`  
- <span data-ttu-id="0bb0c-111">[in] A [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) 설치에 대 한 데이터를 포함 하는 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="0bb0c-111">[in] A [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) structure that contains data for the installation.</span></span>  
+ <span data-ttu-id="2bb6d-111">[in] A [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) 설치에 대 한 데이터를 포함 하는 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="2bb6d-111">[in] A [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) structure that contains data for the installation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0bb0c-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="0bb0c-112">Requirements</span></span>  
- <span data-ttu-id="0bb0c-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="0bb0c-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2bb6d-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="2bb6d-112">Requirements</span></span>  
+ <span data-ttu-id="2bb6d-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="2bb6d-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0bb0c-114">**헤더:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="0bb0c-114">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="2bb6d-114">**헤더:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="2bb6d-114">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="0bb0c-115">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0bb0c-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="2bb6d-115">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2bb6d-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0bb0c-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="0bb0c-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2bb6d-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="2bb6d-116">See also</span></span>
 
-- [<span data-ttu-id="0bb0c-117">IAssemblyCache 인터페이스</span><span class="sxs-lookup"><span data-stu-id="0bb0c-117">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [<span data-ttu-id="2bb6d-117">IAssemblyCache 인터페이스</span><span class="sxs-lookup"><span data-stu-id="2bb6d-117">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)

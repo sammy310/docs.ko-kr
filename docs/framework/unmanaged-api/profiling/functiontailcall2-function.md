@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 06dd3b028f4f43ca8681c80a5caa4716104068dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598807"
 ---
-# <a name="functiontailcall2-function"></a><span data-ttu-id="d4ad9-102">FunctionTailcall2 함수</span><span class="sxs-lookup"><span data-stu-id="d4ad9-102">FunctionTailcall2 Function</span></span>
-<span data-ttu-id="d4ad9-103">현재 실행 중인 함수를 다른 함수에 대 한 마무리 호출이 수행 하려고 하는 스택 프레임에 대 한 정보를 제공 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="d4ad9-103">Notifies the profiler that the currently executing function is about to perform a tail call to another function and provides information about the stack frame.</span></span>  
+# <a name="functiontailcall2-function"></a><span data-ttu-id="c1add-102">FunctionTailcall2 함수</span><span class="sxs-lookup"><span data-stu-id="c1add-102">FunctionTailcall2 Function</span></span>
+<span data-ttu-id="c1add-103">현재 실행 중인 함수를 다른 함수에 대 한 마무리 호출이 수행 하려고 하는 스택 프레임에 대 한 정보를 제공 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="c1add-103">Notifies the profiler that the currently executing function is about to perform a tail call to another function and provides information about the stack frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d4ad9-104">구문</span><span class="sxs-lookup"><span data-stu-id="d4ad9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c1add-104">구문</span><span class="sxs-lookup"><span data-stu-id="c1add-104">Syntax</span></span>  
   
 ```  
 void __stdcall FunctionTailcall2 (  
@@ -36,47 +36,47 @@ void __stdcall FunctionTailcall2 (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d4ad9-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d4ad9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c1add-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="c1add-105">Parameters</span></span>  
  `funcId`  
- <span data-ttu-id="d4ad9-106">[in] 마무리 호출을 수행 하려고 하는 현재 실행 중인 함수의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="d4ad9-106">[in] The identifier of the currently executing function that is about to make a tail call.</span></span>  
+ <span data-ttu-id="c1add-106">[in] 마무리 호출을 수행 하려고 하는 현재 실행 중인 함수의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="c1add-106">[in] The identifier of the currently executing function that is about to make a tail call.</span></span>  
   
  `clientData`  
- <span data-ttu-id="d4ad9-107">[in] 프로파일러를 통해 이전에 지정 하는 매핑된 함수 식별자 [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)를 마무리 호출을 수행 하려고 하는 현재 실행 중인 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="d4ad9-107">[in] The remapped function identifier, which the profiler previously specified via [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md), of the currently executing function that is about to make a tail call.</span></span>  
+ <span data-ttu-id="c1add-107">[in] 프로파일러를 통해 이전에 지정 하는 매핑된 함수 식별자 [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)를 마무리 호출을 수행 하려고 하는 현재 실행 중인 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="c1add-107">[in] The remapped function identifier, which the profiler previously specified via [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md), of the currently executing function that is about to make a tail call.</span></span>  
   
  `func`  
- <span data-ttu-id="d4ad9-108">[in] `COR_PRF_FRAME_INFO` 스택 프레임에 대 한 정보를 가리키는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="d4ad9-108">[in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.</span></span>  
+ <span data-ttu-id="c1add-108">[in] `COR_PRF_FRAME_INFO` 스택 프레임에 대 한 정보를 가리키는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="c1add-108">[in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.</span></span>  
   
- <span data-ttu-id="d4ad9-109">프로파일러에 실행 엔진으로 다시 전달할 수 있는 불투명 핸들로이 처리 해야 합니다 [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="d4ad9-109">The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.</span></span>  
+ <span data-ttu-id="c1add-109">프로파일러에 실행 엔진으로 다시 전달할 수 있는 불투명 핸들로이 처리 해야 합니다 [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="c1add-109">The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d4ad9-110">설명</span><span class="sxs-lookup"><span data-stu-id="d4ad9-110">Remarks</span></span>  
- <span data-ttu-id="d4ad9-111">마무리 호출의 대상 함수는 현재 스택 프레임을 사용 하 고 마무리 호출을 수행한 함수 호출자에 게 직접 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d4ad9-111">The target function of the tail call will use the current stack frame, and will return directly to the caller of the function that made the tail call.</span></span> <span data-ttu-id="d4ad9-112">즉, 한 [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) 마무리 호출의 대상이 되는 함수에 대 한 콜백 발행 되지 것입니다.</span><span class="sxs-lookup"><span data-stu-id="d4ad9-112">This means that a [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) callback will not be issued for a function that is the target of a tail call.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c1add-110">설명</span><span class="sxs-lookup"><span data-stu-id="c1add-110">Remarks</span></span>  
+ <span data-ttu-id="c1add-111">마무리 호출의 대상 함수는 현재 스택 프레임을 사용 하 고 마무리 호출을 수행한 함수 호출자에 게 직접 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c1add-111">The target function of the tail call will use the current stack frame, and will return directly to the caller of the function that made the tail call.</span></span> <span data-ttu-id="c1add-112">즉, 한 [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) 마무리 호출의 대상이 되는 함수에 대 한 콜백 발행 되지 것입니다.</span><span class="sxs-lookup"><span data-stu-id="c1add-112">This means that a [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) callback will not be issued for a function that is the target of a tail call.</span></span>  
   
- <span data-ttu-id="d4ad9-113">값을 `func` 후 매개 변수가 올바르지 않습니다는 `FunctionTailcall2` 함수 반환 값이 변경 될 수 있습니다 되거나 제거 되어 합니다.</span><span class="sxs-lookup"><span data-stu-id="d4ad9-113">The value of the `func` parameter is not valid after the `FunctionTailcall2` function returns because the value may change or be destroyed.</span></span>  
+ <span data-ttu-id="c1add-113">값을 `func` 후 매개 변수가 올바르지 않습니다는 `FunctionTailcall2` 함수 반환 값이 변경 될 수 있습니다 되거나 제거 되어 합니다.</span><span class="sxs-lookup"><span data-stu-id="c1add-113">The value of the `func` parameter is not valid after the `FunctionTailcall2` function returns because the value may change or be destroyed.</span></span>  
   
- <span data-ttu-id="d4ad9-114">`FunctionTailcall2` 함수 콜백을 구현 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d4ad9-114">The `FunctionTailcall2` function is a callback; you must implement it.</span></span> <span data-ttu-id="d4ad9-115">구현을 사용 해야 합니다 `__declspec`(`naked`) 저장소 클래스 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="d4ad9-115">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
+ <span data-ttu-id="c1add-114">`FunctionTailcall2` 함수 콜백을 구현 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c1add-114">The `FunctionTailcall2` function is a callback; you must implement it.</span></span> <span data-ttu-id="c1add-115">구현을 사용 해야 합니다 `__declspec`(`naked`) 저장소 클래스 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="c1add-115">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
   
- <span data-ttu-id="d4ad9-116">실행 엔진은이 함수를 호출 하기 전에 모든 레지스터를 저장 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d4ad9-116">The execution engine does not save any registers before calling this function.</span></span>  
+ <span data-ttu-id="c1add-116">실행 엔진은이 함수를 호출 하기 전에 모든 레지스터를 저장 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c1add-116">The execution engine does not save any registers before calling this function.</span></span>  
   
--   <span data-ttu-id="d4ad9-117">항목에는 부동 소수점 FPU (단위)에 포함 하 여 사용 하는 모든 레지스터를 저장 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d4ad9-117">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
+- <span data-ttu-id="c1add-117">항목에는 부동 소수점 FPU (단위)에 포함 하 여 사용 하는 모든 레지스터를 저장 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c1add-117">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
   
--   <span data-ttu-id="d4ad9-118">종료 시 스택의 호출자에 의해 푸시된 모든 매개 변수에 팝 하 여 복원 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d4ad9-118">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
+- <span data-ttu-id="c1add-118">종료 시 스택의 호출자에 의해 푸시된 모든 매개 변수에 팝 하 여 복원 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c1add-118">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
   
- <span data-ttu-id="d4ad9-119">구현의 `FunctionTailcall2` 가비지 수집 지연 될 수 있으므로 차단 하지 않아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d4ad9-119">The implementation of `FunctionTailcall2` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="d4ad9-120">구현 해야 스택의 가비지 컬렉션에 게 친숙 한 상태의 수 없을 수도 가비지 수집을 시도 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d4ad9-120">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="d4ad9-121">런타임이 될 때까지 차단 됩니다 가비지 수집을 시도 하는 경우 `FunctionTailcall2` 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="d4ad9-121">If a garbage collection is attempted, the runtime will block until `FunctionTailcall2` returns.</span></span>  
+ <span data-ttu-id="c1add-119">구현의 `FunctionTailcall2` 가비지 수집 지연 될 수 있으므로 차단 하지 않아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c1add-119">The implementation of `FunctionTailcall2` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="c1add-120">구현 해야 스택의 가비지 컬렉션에 게 친숙 한 상태의 수 없을 수도 가비지 수집을 시도 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c1add-120">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="c1add-121">런타임이 될 때까지 차단 됩니다 가비지 수집을 시도 하는 경우 `FunctionTailcall2` 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="c1add-121">If a garbage collection is attempted, the runtime will block until `FunctionTailcall2` returns.</span></span>  
   
- <span data-ttu-id="d4ad9-122">또한는 `FunctionTailcall2` 함수를 호출 해서는 안 관리 코드로 또는는 관리 되는 메모리를 할당 합니다.</span><span class="sxs-lookup"><span data-stu-id="d4ad9-122">Also, the `FunctionTailcall2` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
+ <span data-ttu-id="c1add-122">또한는 `FunctionTailcall2` 함수를 호출 해서는 안 관리 코드로 또는는 관리 되는 메모리를 할당 합니다.</span><span class="sxs-lookup"><span data-stu-id="c1add-122">Also, the `FunctionTailcall2` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d4ad9-123">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d4ad9-123">Requirements</span></span>  
- <span data-ttu-id="d4ad9-124">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="d4ad9-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c1add-123">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c1add-123">Requirements</span></span>  
+ <span data-ttu-id="c1add-124">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="c1add-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d4ad9-125">**헤더:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="d4ad9-125">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="c1add-125">**헤더:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="c1add-125">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="d4ad9-126">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d4ad9-126">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c1add-126">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c1add-126">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d4ad9-127">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d4ad9-127">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c1add-127">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c1add-127">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d4ad9-128">참고자료</span><span class="sxs-lookup"><span data-stu-id="d4ad9-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c1add-128">참고자료</span><span class="sxs-lookup"><span data-stu-id="c1add-128">See also</span></span>
 
-- [<span data-ttu-id="d4ad9-129">FunctionEnter2 함수</span><span class="sxs-lookup"><span data-stu-id="d4ad9-129">FunctionEnter2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [<span data-ttu-id="d4ad9-130">FunctionLeave2 함수</span><span class="sxs-lookup"><span data-stu-id="d4ad9-130">FunctionLeave2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [<span data-ttu-id="d4ad9-131">SetEnterLeaveFunctionHooks2 메서드</span><span class="sxs-lookup"><span data-stu-id="d4ad9-131">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [<span data-ttu-id="d4ad9-132">프로파일링 전역 정적 함수</span><span class="sxs-lookup"><span data-stu-id="d4ad9-132">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [<span data-ttu-id="c1add-129">FunctionEnter2 함수</span><span class="sxs-lookup"><span data-stu-id="c1add-129">FunctionEnter2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
+- [<span data-ttu-id="c1add-130">FunctionLeave2 함수</span><span class="sxs-lookup"><span data-stu-id="c1add-130">FunctionLeave2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
+- [<span data-ttu-id="c1add-131">SetEnterLeaveFunctionHooks2 메서드</span><span class="sxs-lookup"><span data-stu-id="c1add-131">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [<span data-ttu-id="c1add-132">프로파일링 전역 정적 함수</span><span class="sxs-lookup"><span data-stu-id="c1add-132">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)

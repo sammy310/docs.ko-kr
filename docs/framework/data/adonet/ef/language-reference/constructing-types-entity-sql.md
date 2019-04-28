@@ -3,68 +3,68 @@ title: 형식 생성(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
 ms.openlocfilehash: 53aa7fcc82a476c8b8bd87b059e08bee6741c0d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605827"
 ---
-# <a name="constructing-types-entity-sql"></a><span data-ttu-id="bfbfb-102">형식 생성(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="bfbfb-102">Constructing Types (Entity SQL)</span></span>
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] <span data-ttu-id="bfbfb-103">세 가지 종류의 생성자를 제공 합니다: 행 생성자, 명명 된 형식 생성자 및 컬렉션 생성자입니다.</span><span class="sxs-lookup"><span data-stu-id="bfbfb-103">provides three kinds of constructors: row constructors, named type constructors, and collection constructors.</span></span>  
+# <a name="constructing-types-entity-sql"></a><span data-ttu-id="2aff9-102">형식 생성(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="2aff9-102">Constructing Types (Entity SQL)</span></span>
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] <span data-ttu-id="2aff9-103">세 가지 종류의 생성자를 제공 합니다: 행 생성자, 명명 된 형식 생성자 및 컬렉션 생성자입니다.</span><span class="sxs-lookup"><span data-stu-id="2aff9-103">provides three kinds of constructors: row constructors, named type constructors, and collection constructors.</span></span>  
   
-## <a name="row-constructors"></a><span data-ttu-id="bfbfb-104">행 생성자</span><span class="sxs-lookup"><span data-stu-id="bfbfb-104">Row Constructors</span></span>  
- <span data-ttu-id="bfbfb-105">[!INCLUDE[esql](../../../../../../includes/esql-md.md)]의 행 생성자를 사용하여 값 하나 이상을 기반으로 구조적으로 형식화된 익명 레코드를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbfb-105">You use row constructors in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] to construct anonymous, structurally typed records from one or more values.</span></span> <span data-ttu-id="bfbfb-106">행 생성자의 결과 형식은 필드 형식이 행 생성에 사용된 값의 형식과 동일한 행 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="bfbfb-106">The result type of a row constructor is a row type whose field types correspond to the types of the values used to construct the row.</span></span> <span data-ttu-id="bfbfb-107">예를 들어 다음 식은 `Record(a int, b string, c int)` 형식의 값을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbfb-107">For example, the following expression constructs a value of type `Record(a int, b string, c int)`:</span></span>  
+## <a name="row-constructors"></a><span data-ttu-id="2aff9-104">행 생성자</span><span class="sxs-lookup"><span data-stu-id="2aff9-104">Row Constructors</span></span>  
+ <span data-ttu-id="2aff9-105">[!INCLUDE[esql](../../../../../../includes/esql-md.md)]의 행 생성자를 사용하여 값 하나 이상을 기반으로 구조적으로 형식화된 익명 레코드를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="2aff9-105">You use row constructors in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] to construct anonymous, structurally typed records from one or more values.</span></span> <span data-ttu-id="2aff9-106">행 생성자의 결과 형식은 필드 형식이 행 생성에 사용된 값의 형식과 동일한 행 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="2aff9-106">The result type of a row constructor is a row type whose field types correspond to the types of the values used to construct the row.</span></span> <span data-ttu-id="2aff9-107">예를 들어 다음 식은 `Record(a int, b string, c int)` 형식의 값을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="2aff9-107">For example, the following expression constructs a value of type `Record(a int, b string, c int)`:</span></span>  
   
  `ROW(1 AS a, "abc" AS b, a + 34 AS c)`  
   
- <span data-ttu-id="bfbfb-108">행 생성자에서 식의 별칭을 제공하지 않으면 Entity Framework에서 별칭을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbfb-108">If you do not provide an alias for an expression in a row constructor, the Entity Framework will try to generate one.</span></span> <span data-ttu-id="bfbfb-109">자세한 내용은의 "별칭 지정 규칙" 섹션을 참조 하세요 [식별자](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbfb-109">For more information, see the "Aliasing Rules" section in [Identifiers](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md).</span></span>  
+ <span data-ttu-id="2aff9-108">행 생성자에서 식의 별칭을 제공하지 않으면 Entity Framework에서 별칭을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="2aff9-108">If you do not provide an alias for an expression in a row constructor, the Entity Framework will try to generate one.</span></span> <span data-ttu-id="2aff9-109">자세한 내용은의 "별칭 지정 규칙" 섹션을 참조 하세요 [식별자](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="2aff9-109">For more information, see the "Aliasing Rules" section in [Identifiers](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md).</span></span>  
   
- <span data-ttu-id="bfbfb-110">행 생성자에서 식에 별칭을 지정하는 데 다음 규칙이 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="bfbfb-110">The following rules apply to expression aliasing in a row constructor:</span></span>  
+ <span data-ttu-id="2aff9-110">행 생성자에서 식에 별칭을 지정하는 데 다음 규칙이 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="2aff9-110">The following rules apply to expression aliasing in a row constructor:</span></span>  
   
--   <span data-ttu-id="bfbfb-111">행 생성자의 식은 동일한 생성자 내의 다른 별칭을 참조할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="bfbfb-111">Expressions in a row constructor cannot refer to other aliases in the same constructor.</span></span>  
+- <span data-ttu-id="2aff9-111">행 생성자의 식은 동일한 생성자 내의 다른 별칭을 참조할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="2aff9-111">Expressions in a row constructor cannot refer to other aliases in the same constructor.</span></span>  
   
--   <span data-ttu-id="bfbfb-112">동일한 행 생성자 내의 서로 다른 두 식은 별칭이 같을 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="bfbfb-112">Two expressions in the same row constructor cannot have the same alias.</span></span>  
+- <span data-ttu-id="2aff9-112">동일한 행 생성자 내의 서로 다른 두 식은 별칭이 같을 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="2aff9-112">Two expressions in the same row constructor cannot have the same alias.</span></span>  
   
- <span data-ttu-id="bfbfb-113">행 생성자에 대 한 자세한 내용은 참조 하세요. [행](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbfb-113">For more information about row constructors, see [ROW](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md).</span></span>  
+ <span data-ttu-id="2aff9-113">행 생성자에 대 한 자세한 내용은 참조 하세요. [행](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="2aff9-113">For more information about row constructors, see [ROW](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md).</span></span>  
   
-## <a name="collection-constructors"></a><span data-ttu-id="bfbfb-114">컬렉션 생성자</span><span class="sxs-lookup"><span data-stu-id="bfbfb-114">Collection Constructors</span></span>  
- <span data-ttu-id="bfbfb-115">[!INCLUDE[esql](../../../../../../includes/esql-md.md)]의 컬렉션 생성자를 사용하여 값 목록에서 multiset 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="bfbfb-115">You use collection constructors in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] to create an instance of a multiset from a list of values.</span></span> <span data-ttu-id="bfbfb-116">생성자의 모든 값은 상호 호환되는 `T` 형식이어야 하며, 생성자는 `Multiset<T>` 형식의 컬렉션을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbfb-116">All the values in the constructor must be of mutually compatible type `T`, and the constructor produces a collection of type `Multiset<T>`.</span></span> <span data-ttu-id="bfbfb-117">예를 들어, 다음 식은 정수 컬렉션을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="bfbfb-117">For example, the following expression creates a collection of integers:</span></span>  
+## <a name="collection-constructors"></a><span data-ttu-id="2aff9-114">컬렉션 생성자</span><span class="sxs-lookup"><span data-stu-id="2aff9-114">Collection Constructors</span></span>  
+ <span data-ttu-id="2aff9-115">[!INCLUDE[esql](../../../../../../includes/esql-md.md)]의 컬렉션 생성자를 사용하여 값 목록에서 multiset 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="2aff9-115">You use collection constructors in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] to create an instance of a multiset from a list of values.</span></span> <span data-ttu-id="2aff9-116">생성자의 모든 값은 상호 호환되는 `T` 형식이어야 하며, 생성자는 `Multiset<T>` 형식의 컬렉션을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="2aff9-116">All the values in the constructor must be of mutually compatible type `T`, and the constructor produces a collection of type `Multiset<T>`.</span></span> <span data-ttu-id="2aff9-117">예를 들어, 다음 식은 정수 컬렉션을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="2aff9-117">For example, the following expression creates a collection of integers:</span></span>  
   
  `Multiset(1, 2, 3)`  
   
  `{1, 2, 3}`  
   
- <span data-ttu-id="bfbfb-118">빈 multiset 생성자는 요소 형식을 확인할 수 없으므로 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="bfbfb-118">Empty multiset constructors are not allowed because the type of the elements cannot be determined.</span></span> <span data-ttu-id="bfbfb-119">다음은 유효하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="bfbfb-119">The following is not valid:</span></span>  
+ <span data-ttu-id="2aff9-118">빈 multiset 생성자는 요소 형식을 확인할 수 없으므로 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="2aff9-118">Empty multiset constructors are not allowed because the type of the elements cannot be determined.</span></span> <span data-ttu-id="2aff9-119">다음은 유효하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2aff9-119">The following is not valid:</span></span>  
   
  `multiset() {}`  
   
- <span data-ttu-id="bfbfb-120">자세한 내용은 [MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbfb-120">For more information, see [MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md).</span></span>  
+ <span data-ttu-id="2aff9-120">자세한 내용은 [MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="2aff9-120">For more information, see [MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md).</span></span>  
   
-## <a name="named-type-constructors-namedtype-initializers"></a><span data-ttu-id="bfbfb-121">명명된 형식 생성자(NamedType 이니셜라이저)</span><span class="sxs-lookup"><span data-stu-id="bfbfb-121">Named Type Constructors (NamedType Initializers)</span></span>  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="bfbfb-122">에서 형식 생성자(이니셜라이저)는 명명된 복합 형식과 엔터티 형식 인스턴스를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bfbfb-122">allows type constructors (initializers) to create instances of named complex types and entity types.</span></span> <span data-ttu-id="bfbfb-123">예를 들어, 다음 식은 `Person` 형식의 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="bfbfb-123">For example, the following expression creates an instance of a `Person` type.</span></span>  
+## <a name="named-type-constructors-namedtype-initializers"></a><span data-ttu-id="2aff9-121">명명된 형식 생성자(NamedType 이니셜라이저)</span><span class="sxs-lookup"><span data-stu-id="2aff9-121">Named Type Constructors (NamedType Initializers)</span></span>  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="2aff9-122">에서 형식 생성자(이니셜라이저)는 명명된 복합 형식과 엔터티 형식 인스턴스를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2aff9-122">allows type constructors (initializers) to create instances of named complex types and entity types.</span></span> <span data-ttu-id="2aff9-123">예를 들어, 다음 식은 `Person` 형식의 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="2aff9-123">For example, the following expression creates an instance of a `Person` type.</span></span>  
   
  `Person("abc", 12)`  
   
- <span data-ttu-id="bfbfb-124">다음 식은 복합 형식의 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="bfbfb-124">The following expression creates an instance of a complex type.</span></span>  
+ <span data-ttu-id="2aff9-124">다음 식은 복합 형식의 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="2aff9-124">The following expression creates an instance of a complex type.</span></span>  
   
  `MyModel.ZipCode(‘98118’, ‘4567’)`  
   
- <span data-ttu-id="bfbfb-125">다음 식은 중첩된 복합 형식의 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="bfbfb-125">The following expression creates an instance of a nested complex type.</span></span>  
+ <span data-ttu-id="2aff9-125">다음 식은 중첩된 복합 형식의 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="2aff9-125">The following expression creates an instance of a nested complex type.</span></span>  
   
  `MyModel.AddressInfo('My street address', 'Seattle', 'WA', MyModel.ZipCode('98118', '4567'))`  
   
- <span data-ttu-id="bfbfb-126">다음 식은 중첩된 복합 형식을 가진 엔터티의 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="bfbfb-126">The following expression creates an instance of an entity with a nested complex type.</span></span>  
+ <span data-ttu-id="2aff9-126">다음 식은 중첩된 복합 형식을 가진 엔터티의 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="2aff9-126">The following expression creates an instance of an entity with a nested complex type.</span></span>  
   
  `MyModel.Person("Bill", MyModel.AddressInfo('My street address', 'Seattle', 'WA', MyModel.ZipCode('98118', '4567')))`  
   
- <span data-ttu-id="bfbfb-127">다음 예제에서는 복합 형식의 속성을 null로 초기화하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="bfbfb-127">The following example shows how to initialize a property of a complex type to null.</span></span> `MyModel.ZipCode(‘98118’, null)`  
+ <span data-ttu-id="2aff9-127">다음 예제에서는 복합 형식의 속성을 null로 초기화하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="2aff9-127">The following example shows how to initialize a property of a complex type to null.</span></span> `MyModel.ZipCode(‘98118’, null)`  
   
- <span data-ttu-id="bfbfb-128">생성자의 인수는 형식의 특성 선언과 동일한 순서인 것으로 가정됩니다.</span><span class="sxs-lookup"><span data-stu-id="bfbfb-128">The arguments to the constructor are assumed to be in the same order as the declaration of the attributes of the type.</span></span>  
+ <span data-ttu-id="2aff9-128">생성자의 인수는 형식의 특성 선언과 동일한 순서인 것으로 가정됩니다.</span><span class="sxs-lookup"><span data-stu-id="2aff9-128">The arguments to the constructor are assumed to be in the same order as the declaration of the attributes of the type.</span></span>  
   
- <span data-ttu-id="bfbfb-129">자세한 내용은 [명명 된 형식 생성자](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="bfbfb-129">For more information, see [Named Type Constructor](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md).</span></span>  
+ <span data-ttu-id="2aff9-129">자세한 내용은 [명명 된 형식 생성자](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="2aff9-129">For more information, see [Named Type Constructor](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bfbfb-130">참고자료</span><span class="sxs-lookup"><span data-stu-id="bfbfb-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2aff9-130">참고자료</span><span class="sxs-lookup"><span data-stu-id="2aff9-130">See also</span></span>
 
-- [<span data-ttu-id="bfbfb-131">엔터티 SQL 참조</span><span class="sxs-lookup"><span data-stu-id="bfbfb-131">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [<span data-ttu-id="bfbfb-132">Entity SQL 개요</span><span class="sxs-lookup"><span data-stu-id="bfbfb-132">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
-- [<span data-ttu-id="bfbfb-133">형식 시스템</span><span class="sxs-lookup"><span data-stu-id="bfbfb-133">Type System</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)
+- [<span data-ttu-id="2aff9-131">엔터티 SQL 참조</span><span class="sxs-lookup"><span data-stu-id="2aff9-131">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [<span data-ttu-id="2aff9-132">Entity SQL 개요</span><span class="sxs-lookup"><span data-stu-id="2aff9-132">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [<span data-ttu-id="2aff9-133">형식 시스템</span><span class="sxs-lookup"><span data-stu-id="2aff9-133">Type System</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)

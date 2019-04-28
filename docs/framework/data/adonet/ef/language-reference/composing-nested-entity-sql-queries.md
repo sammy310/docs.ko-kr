@@ -3,17 +3,17 @@ title: 중첩 Entity SQL 쿼리 작성
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
 ms.openlocfilehash: 4d6892e96cfbc9c5ba9d389aa03588c5133c7943
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606227"
 ---
-# <a name="composing-nested-entity-sql-queries"></a><span data-ttu-id="c0ed5-102">중첩 Entity SQL 쿼리 작성</span><span class="sxs-lookup"><span data-stu-id="c0ed5-102">Composing Nested Entity SQL Queries</span></span>
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="c0ed5-103">은 다양한 기능을 가진 언어입니다.</span><span class="sxs-lookup"><span data-stu-id="c0ed5-103">is a rich functional language.</span></span> <span data-ttu-id="c0ed5-104">빌딩 블록 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 식입니다.</span><span class="sxs-lookup"><span data-stu-id="c0ed5-104">The building block of [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is an expression.</span></span> <span data-ttu-id="c0ed5-105">기존 SQL과 달리 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 테이블 형식 결과 집합으로 제한 되지 않습니다: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 리터럴, 매개 변수 또는 중첩된 식을 포함할 수 있는 복잡 한 식 작성을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0ed5-105">Unlike conventional SQL, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is not limited to a tabular result set: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supports composing complex expressions that can have literals, parameters, or nested expressions.</span></span> <span data-ttu-id="c0ed5-106">식의 값을 매개 변수화 또는 다른 식으로 구성 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0ed5-106">A value in the expression can be parameterized or composed of some other expression.</span></span>  
+# <a name="composing-nested-entity-sql-queries"></a><span data-ttu-id="af382-102">중첩 Entity SQL 쿼리 작성</span><span class="sxs-lookup"><span data-stu-id="af382-102">Composing Nested Entity SQL Queries</span></span>
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="af382-103">은 다양한 기능을 가진 언어입니다.</span><span class="sxs-lookup"><span data-stu-id="af382-103">is a rich functional language.</span></span> <span data-ttu-id="af382-104">빌딩 블록 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 식입니다.</span><span class="sxs-lookup"><span data-stu-id="af382-104">The building block of [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is an expression.</span></span> <span data-ttu-id="af382-105">기존 SQL과 달리 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 테이블 형식 결과 집합으로 제한 되지 않습니다: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 리터럴, 매개 변수 또는 중첩된 식을 포함할 수 있는 복잡 한 식 작성을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="af382-105">Unlike conventional SQL, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is not limited to a tabular result set: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supports composing complex expressions that can have literals, parameters, or nested expressions.</span></span> <span data-ttu-id="af382-106">식의 값을 매개 변수화 또는 다른 식으로 구성 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="af382-106">A value in the expression can be parameterized or composed of some other expression.</span></span>  
   
-## <a name="nested-expressions"></a><span data-ttu-id="c0ed5-107">중첩된 식</span><span class="sxs-lookup"><span data-stu-id="c0ed5-107">Nested Expressions</span></span>  
- <span data-ttu-id="c0ed5-108">중첩된 식은 자신이 반환한 형식의 값이 허용되는 임의의 위치에 놓일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0ed5-108">A nested expression can be placed anywhere a value of the type it returns is accepted.</span></span> <span data-ttu-id="c0ed5-109">예를 들어:</span><span class="sxs-lookup"><span data-stu-id="c0ed5-109">For example:</span></span>  
+## <a name="nested-expressions"></a><span data-ttu-id="af382-107">중첩된 식</span><span class="sxs-lookup"><span data-stu-id="af382-107">Nested Expressions</span></span>  
+ <span data-ttu-id="af382-108">중첩된 식은 자신이 반환한 형식의 값이 허용되는 임의의 위치에 놓일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="af382-108">A nested expression can be placed anywhere a value of the type it returns is accepted.</span></span> <span data-ttu-id="af382-109">예를 들어:</span><span class="sxs-lookup"><span data-stu-id="af382-109">For example:</span></span>  
   
 ```  
 -- Returns a hierarchical collection of three elements at top-level.   
@@ -25,7 +25,7 @@ ROW(@x, {@x}, {@x, 4, 5}, {@x, 7, 8, 9})
 {{{@x}}};  
 ```  
   
- <span data-ttu-id="c0ed5-110">중첩 쿼리는 프로젝션 절에 위치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0ed5-110">A nested query can be placed in a projection clause.</span></span> <span data-ttu-id="c0ed5-111">예를 들어:</span><span class="sxs-lookup"><span data-stu-id="c0ed5-111">For example:</span></span>  
+ <span data-ttu-id="af382-110">중첩 쿼리는 프로젝션 절에 위치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="af382-110">A nested query can be placed in a projection clause.</span></span> <span data-ttu-id="af382-111">예를 들어:</span><span class="sxs-lookup"><span data-stu-id="af382-111">For example:</span></span>  
   
 ```  
 -- Returns a collection of rows where each row contains an Address entity.  
@@ -35,7 +35,7 @@ SELECT address, (SELECT DEREF(soh)
                     AS salesOrderHeader FROM AdventureWorksEntities.Address AS address  
 ```  
   
- <span data-ttu-id="c0ed5-112">[!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서 중첩 쿼리는 반드시 괄호로 묶어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c0ed5-112">In [!INCLUDE[esql](../../../../../../includes/esql-md.md)], nested queries must always be enclosed in parentheses:</span></span>  
+ <span data-ttu-id="af382-112">[!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서 중첩 쿼리는 반드시 괄호로 묶어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="af382-112">In [!INCLUDE[esql](../../../../../../includes/esql-md.md)], nested queries must always be enclosed in parentheses:</span></span>  
   
 ```  
 -- Pseudo-Entity SQL  
@@ -46,19 +46,19 @@ UNION ALL
 FROM … );  
 ```  
   
- <span data-ttu-id="c0ed5-113">다음 예제에서는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서 식을 올바르게 중첩하는 방법을 보여 줍니다. [방법: 두 개의 쿼리의 공용 구조체 정렬](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100))합니다.</span><span class="sxs-lookup"><span data-stu-id="c0ed5-113">The following example demonstrates how to properly nest expressions in [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [How to: Order the Union of Two Queries](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100)).</span></span>  
+ <span data-ttu-id="af382-113">다음 예제에서는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서 식을 올바르게 중첩하는 방법을 보여 줍니다. [방법: 두 개의 쿼리의 공용 구조체 정렬](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100))합니다.</span><span class="sxs-lookup"><span data-stu-id="af382-113">The following example demonstrates how to properly nest expressions in [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [How to: Order the Union of Two Queries](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100)).</span></span>  
   
-## <a name="nested-queries-in-projection"></a><span data-ttu-id="c0ed5-114">프로젝션의 중첩 쿼리</span><span class="sxs-lookup"><span data-stu-id="c0ed5-114">Nested Queries in Projection</span></span>  
- <span data-ttu-id="c0ed5-115">프로젝션 절의 중첩 쿼리는 서버의 Cartesian 제품 쿼리로 변환될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0ed5-115">Nested queries in the project clause might get translated into Cartesian product queries on the server.</span></span> <span data-ttu-id="c0ed5-116">SLQ Server를 비롯한 일부 백엔드 서버에서는 이로 인해 TempDB 테이블이 매우 커질 수 있으므로 서버 성능이 저하될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0ed5-116">In some backend servers, including SLQ Server, this can cause the TempDB table to get very large, which can adversely affect server performance.</span></span>  
+## <a name="nested-queries-in-projection"></a><span data-ttu-id="af382-114">프로젝션의 중첩 쿼리</span><span class="sxs-lookup"><span data-stu-id="af382-114">Nested Queries in Projection</span></span>  
+ <span data-ttu-id="af382-115">프로젝션 절의 중첩 쿼리는 서버의 Cartesian 제품 쿼리로 변환될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="af382-115">Nested queries in the project clause might get translated into Cartesian product queries on the server.</span></span> <span data-ttu-id="af382-116">SLQ Server를 비롯한 일부 백엔드 서버에서는 이로 인해 TempDB 테이블이 매우 커질 수 있으므로 서버 성능이 저하될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="af382-116">In some backend servers, including SLQ Server, this can cause the TempDB table to get very large, which can adversely affect server performance.</span></span>  
   
- <span data-ttu-id="c0ed5-117">다음은 이러한 쿼리의 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="c0ed5-117">The following is an example of such a query:</span></span>  
+ <span data-ttu-id="af382-117">다음은 이러한 쿼리의 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="af382-117">The following is an example of such a query:</span></span>  
   
 ```  
 SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2 FROM AdventureWorksModel.JobCandidate AS c  ) As Inner1 FROM AdventureWorksModel.EmployeeDepartmentHistory AS c  
 ```  
   
-## <a name="ordering-nested-queries"></a><span data-ttu-id="c0ed5-118">중첩 쿼리 순서</span><span class="sxs-lookup"><span data-stu-id="c0ed5-118">Ordering Nested Queries</span></span>  
- <span data-ttu-id="c0ed5-119">Entity Framework에서 중첩된 식은 쿼리 내 임의의 위치에 올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0ed5-119">In the Entity Framework, a nested expression can be placed anywhere in the query.</span></span> <span data-ttu-id="c0ed5-120">Entity SQL을 사용하면 보다 유연성 있게 쿼리를 작성할 수 있으므로 중첩 쿼리의 순서가 포함된 쿼리를 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c0ed5-120">Because Entity SQL allows great flexibility in writing queries, it is possible to write a query that contains an ordering of nested queries.</span></span> <span data-ttu-id="c0ed5-121">하지만 중첩 쿼리의 순서는 유지되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c0ed5-121">However, the order of a nested query is not preserved.</span></span>  
+## <a name="ordering-nested-queries"></a><span data-ttu-id="af382-118">중첩 쿼리 순서</span><span class="sxs-lookup"><span data-stu-id="af382-118">Ordering Nested Queries</span></span>  
+ <span data-ttu-id="af382-119">Entity Framework에서 중첩된 식은 쿼리 내 임의의 위치에 올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="af382-119">In the Entity Framework, a nested expression can be placed anywhere in the query.</span></span> <span data-ttu-id="af382-120">Entity SQL을 사용하면 보다 유연성 있게 쿼리를 작성할 수 있으므로 중첩 쿼리의 순서가 포함된 쿼리를 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="af382-120">Because Entity SQL allows great flexibility in writing queries, it is possible to write a query that contains an ordering of nested queries.</span></span> <span data-ttu-id="af382-121">하지만 중첩 쿼리의 순서는 유지되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="af382-121">However, the order of a nested query is not preserved.</span></span>  
   
 ```  
 -- The following query will order the results by last name.  
@@ -75,6 +75,6 @@ SELECT C2.FirstName, C2.LastName
         ORDER BY C1.LastName) as C2  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c0ed5-122">참고자료</span><span class="sxs-lookup"><span data-stu-id="c0ed5-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="af382-122">참고자료</span><span class="sxs-lookup"><span data-stu-id="af382-122">See also</span></span>
 
-- [<span data-ttu-id="c0ed5-123">Entity SQL 개요</span><span class="sxs-lookup"><span data-stu-id="c0ed5-123">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [<span data-ttu-id="af382-123">Entity SQL 개요</span><span class="sxs-lookup"><span data-stu-id="af382-123">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

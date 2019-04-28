@@ -17,27 +17,27 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7f61f8c77799bbc7a993683421eeee4fd7277d4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697708"
 ---
-# <a name="inotifyconnection2-interface"></a><span data-ttu-id="3f823-102">INotifyConnection2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="3f823-102">INotifyConnection2 Interface</span></span>
-<span data-ttu-id="3f823-103">등록 및 연결 알림 소스를 등록 취소에 대 한 메서드를 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f823-103">Declares methods for registering and unregistering a connection notification source.</span></span>  
+# <a name="inotifyconnection2-interface"></a><span data-ttu-id="03fd1-102">INotifyConnection2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="03fd1-102">INotifyConnection2 Interface</span></span>
+<span data-ttu-id="03fd1-103">등록 및 연결 알림 소스를 등록 취소에 대 한 메서드를 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="03fd1-103">Declares methods for registering and unregistering a connection notification source.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="3f823-104">메서드</span><span class="sxs-lookup"><span data-stu-id="3f823-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="03fd1-104">메서드</span><span class="sxs-lookup"><span data-stu-id="03fd1-104">Methods</span></span>  
   
-|<span data-ttu-id="3f823-105">메서드</span><span class="sxs-lookup"><span data-stu-id="3f823-105">Method</span></span>|<span data-ttu-id="3f823-106">설명</span><span class="sxs-lookup"><span data-stu-id="3f823-106">Description</span></span>|  
+|<span data-ttu-id="03fd1-105">메서드</span><span class="sxs-lookup"><span data-stu-id="03fd1-105">Method</span></span>|<span data-ttu-id="03fd1-106">설명</span><span class="sxs-lookup"><span data-stu-id="03fd1-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="3f823-107">RegisterNotifySource 메서드</span><span class="sxs-lookup"><span data-stu-id="3f823-107">RegisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|<span data-ttu-id="3f823-108">지정 된 알림 원본 개체를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="3f823-108">Installs a specified notification source object.</span></span>|  
-|[<span data-ttu-id="3f823-109">UnregisterNotifySource 메서드</span><span class="sxs-lookup"><span data-stu-id="3f823-109">UnregisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|<span data-ttu-id="3f823-110">연결에서 지정 된 알림 원본 개체를 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="3f823-110">Removes a specified notification source object from the connection.</span></span>|  
+|[<span data-ttu-id="03fd1-107">RegisterNotifySource 메서드</span><span class="sxs-lookup"><span data-stu-id="03fd1-107">RegisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|<span data-ttu-id="03fd1-108">지정 된 알림 원본 개체를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="03fd1-108">Installs a specified notification source object.</span></span>|  
+|[<span data-ttu-id="03fd1-109">UnregisterNotifySource 메서드</span><span class="sxs-lookup"><span data-stu-id="03fd1-109">UnregisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|<span data-ttu-id="03fd1-110">연결에서 지정 된 알림 원본 개체를 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="03fd1-110">Removes a specified notification source object from the connection.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="3f823-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="3f823-111">Requirements</span></span>  
- <span data-ttu-id="3f823-112">**헤더:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="3f823-112">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="03fd1-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="03fd1-111">Requirements</span></span>  
+ <span data-ttu-id="03fd1-112">**헤더:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="03fd1-112">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3f823-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="3f823-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="03fd1-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="03fd1-113">See also</span></span>
 
-- [<span data-ttu-id="3f823-114">INotifySink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="3f823-114">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [<span data-ttu-id="3f823-115">INotifySource2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="3f823-115">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [<span data-ttu-id="3f823-116">진단 기호 저장소 인터페이스</span><span class="sxs-lookup"><span data-stu-id="3f823-116">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="03fd1-114">INotifySink2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="03fd1-114">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [<span data-ttu-id="03fd1-115">INotifySource2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="03fd1-115">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [<span data-ttu-id="03fd1-116">진단 기호 저장소 인터페이스</span><span class="sxs-lookup"><span data-stu-id="03fd1-116">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
