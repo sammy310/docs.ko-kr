@@ -5,20 +5,20 @@ f1_keywords:
 - vbrID53
 ms.assetid: 57addb16-6f9a-444d-8af8-dda52431daca
 ms.openlocfilehash: cac84c3fa549760ee92601bbb07a379ea102b6dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801389"
 ---
 # <a name="file-not-found-visual-basic-run-time-error"></a>파일을 찾을 수 없습니다(Visual Basic 런타임 오류).
 파일을 찾을 수 없습니다 지정 합니다. 오류에는 다음과 같은 가능한 원인을 있습니다.  
   
--   문이 존재 하지 않는 파일을 참조 합니다.  
+- 문이 존재 하지 않는 파일을 참조 합니다.  
   
--   동적 연결 라이브러리 (DLL)의 프로시저를 호출 하려고 하지만 라이브러리 지정 합니다 `Lib` 절을 `Declare` 문을 찾을 수 없습니다.  
+- 동적 연결 라이브러리 (DLL)의 프로시저를 호출 하려고 하지만 라이브러리 지정 합니다 `Lib` 절을 `Declare` 문을 찾을 수 없습니다.  
   
--   프로젝트를 열거나 존재 하지 않는 텍스트 파일을 로드 하려고 했습니다.  
+- 프로젝트를 열거나 존재 하지 않는 텍스트 파일을 로드 하려고 했습니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   

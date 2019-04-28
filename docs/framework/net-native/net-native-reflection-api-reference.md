@@ -5,11 +5,11 @@ ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 031ec811315f4a9d9f1f73d34e32236d2cf27729
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61866836"
 ---
 # <a name="net-native-reflection-api-reference"></a>.NET 네이티브 리플렉션 API 참조
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 세 가지 새 예외 형식이 포함 됩니다. [System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)하십시오 [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), 및 [System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) . 세 가지 예외 형식 모두에 대해 다음 사항을 확인하세요.  
@@ -20,9 +20,9 @@ ms.locfileid: "59169080"
  이러한 예외를 코드에서 처리하지 마세요.  
  이러한 예외는 애플리케이션에 필요한 메타데이터가 없거나( [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) 및 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 예외), 애플리케이션에 필요한 구현 코드가 누락되었음( [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 예외)을 나타냅니다. 런타임 지시문(.rd.xml) 파일을 수정하여 필요한 메타데이터 또는 구현 코드를 런타임에 사용 가능하게 하는 방식으로 이러한 예외 조건을 수정합니다. 자세한 내용은 [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)을 참조하십시오. [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 및 [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 예외를 제거하는 런타임 지시문 파일에 대한 적절한 항목을 제공하는 두 개의 문제 해결사를 사용할 수 있습니다.  
   
--   형식의 경우 [MissingMetadataException 문제 해결사](https://dotnet.github.io/native/troubleshooter/type.html) 입니다.  
+- 형식의 경우 [MissingMetadataException 문제 해결사](https://dotnet.github.io/native/troubleshooter/type.html) 입니다.  
   
--   메서드의 경우 [MissingMetadataException 문제 해결사](https://dotnet.github.io/native/troubleshooter/method.html) 입니다.  
+- 메서드의 경우 [MissingMetadataException 문제 해결사](https://dotnet.github.io/native/troubleshooter/method.html) 입니다.  
   
 > [!NOTE]
 >  이 참조는 [!INCLUDE[net_native](../../../includes/net-native-md.md)]에 고유한 세 가지 예외 형식을 설명합니다. .NET Framework 핵심 리플렉션 API에 대 한 참조 설명서를 참조 합니다 <xref:System.Reflection>, <xref:System.Reflection.Context> 및 <xref:System.Reflection.Emit> 네임 스페이스입니다. .NET Framework 핵심 interop API에 대한 참조 설명서는 <xref:System.Runtime.InteropServices>를 참조하세요.  

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
 ms.openlocfilehash: 012ad8e6229958575030ee820a3b0b79cc50facc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863443"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>방법: (Visual Basic) 프로시저에 인수 전달
 프로시저를 호출 하는 경우에 인수 목록 괄호로 묶어 프로시저 이름을 뒤에 있습니다. 프로시저에 정의 하는 모든 필수 매개 변수에 해당 하는 인수를 제공 하 고 인수를 선택적으로 제공할 수는 `Optional` 매개 변수입니다. 지정 하지 않으면 경우는 `Optional` 호출에서 매개 변수를 후속 인수를 제공 하는 경우 인수 목록에서 해당 위치를 표시 하려면 쉼표를 포함 해야 합니다.  

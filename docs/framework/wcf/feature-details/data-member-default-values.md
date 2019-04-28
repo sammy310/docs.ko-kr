@@ -12,8 +12,8 @@ ms.openlocfilehash: 2d323566aa211ced9ed76302756ed5dc82c5d2c3
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857118"
 ---
 # <a name="data-member-default-values"></a>데이터 멤버 기본값
 에 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], 형식 개념이 *기본값*합니다. 예를 들어 참조 형식의 기본값은 `null`이고 정수 형식의 기본값은 0입니다. 기본값으로 설정할 경우 serialize된 데이터에서 데이터 멤버를 생략하는 것이 좋을 수도 있습니다. 멤버에 기본값이 있기 때문에 실제 값을 serialize할 필요가 없으므로 성능이 향상됩니다.  
@@ -50,9 +50,9 @@ ms.locfileid: "59973722"
 ### <a name="schema-representation"></a>스키마 표현  
  데이터 멤버의 XML 스키마 정의 언어 (XSD) 스키마 표현에 대 한 세부 정보를 때 합니다 `EmitDefaultValue` 속성이 `false` 에 설명 되어 [데이터 계약 스키마 참조](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)합니다. 여기서는 개요만 간략하게 설명합니다.  
   
--   경우는 <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> 로 설정 된 `false`, 특정 Windows Communication Foundation (WCF)를 주석으로 스키마에 표시 됩니다. 이 정보를 나타내는 상호 운용 가능한 방법은 없습니다. 특히 스키마의 "default" 특성은 이 용도로 사용되지 않고, `minOccurs` 특성은 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 설정의 영향만 받고, `nillable` 특성은 데이터 멤버 형식의 영향만 받습니다.  
+- 경우는 <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> 로 설정 된 `false`, 특정 Windows Communication Foundation (WCF)를 주석으로 스키마에 표시 됩니다. 이 정보를 나타내는 상호 운용 가능한 방법은 없습니다. 특히 스키마의 "default" 특성은 이 용도로 사용되지 않고, `minOccurs` 특성은 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 설정의 영향만 받고, `nillable` 특성은 데이터 멤버 형식의 영향만 받습니다.  
   
--   사용할 실제 기본값은 스키마에 표시되지 않습니다. 따라서 수신하는 엔드포인트에서 누락된 요소를 적절하게 해석해야 합니다.  
+- 사용할 실제 기본값은 스키마에 표시되지 않습니다. 따라서 수신하는 엔드포인트에서 누락된 요소를 적절하게 해석해야 합니다.  
   
  스키마 가져오기에서는 합니다 <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> 속성으로 자동 설정 됩니다 `false` 언급 한 WCF 관련 주석이 이전에 검색 될 때마다 합니다. 또한 `false` 웹 서비스를 사용할 때 일반적으로 발생하는 특정 상호 운용성 시나리오를 지원하기 위해 `nillable` 속성이 `false`로 설정된 참조 형식 값이 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]로 설정됩니다.  
   

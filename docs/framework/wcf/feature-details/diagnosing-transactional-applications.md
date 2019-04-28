@@ -3,11 +3,11 @@ title: 트랜잭션 응용 프로그램 진단
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
 ms.openlocfilehash: aca5f95e2085dfadf06da35dfd86af72c0b6092d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856741"
 ---
 # <a name="diagnosing-transactional-applications"></a>트랜잭션 응용 프로그램 진단
 이 항목에서는 트랜잭션 응용 프로그램 문제를 해결 하려면 Windows Communication Foundation (WCF) 관리 및 진단 기능을 사용 하는 방법을 설명 합니다.  
@@ -87,15 +87,15 @@ ms.locfileid: "59101714"
 ## <a name="tracing"></a>추적  
  추적을 사용하면 트랜잭션 응용 프로그램의 오류를 모니터링하고 분석할 수 있습니다. 다음 방법을 사용하여 추적을 사용할 수 있습니다.  
   
--   표준 WCF 추적  
+- 표준 WCF 추적  
   
      이 유형의 추적 WCF 응용 프로그램 추적와 같습니다. 자세한 내용은 [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)을 참조하세요.  
   
--   WS-AtomicTransaction 추적  
+- WS-AtomicTransaction 추적  
   
      WS-AtomicTransaction 추적을 사용 하 여 사용할 수는 [WS-AtomicTransaction 구성 유틸리티 (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)합니다. 이러한 추적을 통해 시스템 내의 트랜잭션 및 참여 상태를 정확하게 판단할 수 있습니다. 또한 내부 서비스 모델 추적을 사용하기 위해 `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` 레지스트리 키를 유효한 <xref:System.Diagnostics.SourceLevels> 열거형 값으로 설정할 수 있습니다. 메시지는 다른 WCF 응용 프로그램과 동일한 방식으로 로깅을 활성화할 수 있습니다.  
   
--   `System.Transactions` 추적  
+- `System.Transactions` 추적  
   
      OleTransactions 프로토콜을 사용하는 경우 프로토콜 메시지를 추적할 수 없습니다. <xref:System.Transactions> 인프라가 제공하는 추적 지원(OleTransactions 사용)을 통해 사용자는 트랜잭션에 발생된 이벤트를 확인할 수 있습니다. <xref:System.Transactions> 응용 프로그램에 대한 추적을 사용하기 위해 다음 코드를 `App.config` 구성 파일에 포함합니다.  
   

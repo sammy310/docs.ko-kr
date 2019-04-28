@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
 ms.openlocfilehash: 42980aa4691d8ecb9868336ecb270c9ad937b5a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876111"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>데이터 서비스 업데이트(WCF Data Services)
 사용 하는 경우는 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 라이브러리를 사용 하는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드 라이브러리 클라이언트 데이터 서비스 클래스의 인스턴스로 피드의 항목을 변환 합니다. 이러한 데이터 서비스 클래스는 <xref:System.Data.Services.Client.DataServiceContext>가 속해 있는 <xref:System.Data.Services.Client.DataServiceQuery%601>를 사용하여 추적됩니다. 클라이언트는 <xref:System.Data.Services.Client.DataServiceContext>의 메서드를 사용하여 보고하는 엔터티의 변경 내용을 추적합니다. 클라이언트는 이러한 메서드를 사용하여 추가된 엔터티와 삭제된 엔터티를 추적하고 속성 값 또는 엔터티 인스턴스 간의 관계에 대한 변경 내용도 추적할 수 있습니다. 이렇게 추적된 변경 내용은 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 메서드를 호출할 때 REST 기반 작업으로 데이터 서비스에 전송됩니다.  
@@ -54,13 +54,13 @@ ms.locfileid: "59517111"
   
  개체를 연결할 때는 다음 사항을 고려해야 합니다.  
   
--   개체는 <xref:System.Data.Services.Client.EntityStates.Unchanged> 상태로 연결됩니다.  
+- 개체는 <xref:System.Data.Services.Client.EntityStates.Unchanged> 상태로 연결됩니다.  
   
--   개체를 연결할 때 연결되는 개체와 관련된 개체는 연결되지 않습니다.  
+- 개체를 연결할 때 연결되는 개체와 관련된 개체는 연결되지 않습니다.  
   
--   엔터티가 컨텍스트에서 이미 추적되고 있는 경우에는 개체를 연결할 수 없습니다.  
+- 엔터티가 컨텍스트에서 이미 추적되고 있는 경우에는 개체를 연결할 수 없습니다.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.AttachTo%28System.String%2CSystem.Object%2CSystem.String%29> 매개 변수를 사용하는 `etag` 메서드 오버로드는 eTag 값과 함께 받은 엔터티 개체를 연결할 때 사용됩니다. 이 eTag 값은 연결된 개체의 변경 내용을 저장할 때 동시성을 확인하는 데 사용됩니다.  
+- <xref:System.Data.Services.Client.DataServiceContext.AttachTo%28System.String%2CSystem.Object%2CSystem.String%29> 매개 변수를 사용하는 `etag` 메서드 오버로드는 eTag 값과 함께 받은 엔터티 개체를 연결할 때 사용됩니다. 이 eTag 값은 연결된 개체의 변경 내용을 저장할 때 동시성을 확인하는 데 사용됩니다.  
   
  자세한 내용은 [방법: 기존 엔터티를 DataServiceContext에 연결](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md)합니다.  
   

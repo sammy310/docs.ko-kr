@@ -3,11 +3,11 @@ title: WCF 확장에 대한 사용자 지정 메타데이터 내보내기
 ms.date: 03/30/2017
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
 ms.openlocfilehash: 5134b57c59268b139239021bc2b4f6f4538ad27d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857963"
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>WCF 확장에 대한 사용자 지정 메타데이터 내보내기
 Windows Communication Foundation (WCF), 메타 데이터 내보내기는 서비스 끝점을 설명 하는 및 클라이언트 서비스를 사용 하는 방법을 이해 하는 데 사용할 수 있는 병렬의 표준화 된 표현으로 프로젝션 하는 프로세스입니다. 사용자 지정 메타데이터는 시스템에서 제공한 메타데이터 내보내기에서 내보낼 수 없는 XML 요소로 구성됩니다. 일반적으로 여기에는 사용자 정의 동작 및 바인딩 요소에 대한 사용자 지정 WSDL 요소를 비롯하여 바인딩 및 계약의 기능과 요구 사항에 대한 정책 어설션이 포함됩니다.  
@@ -28,9 +28,9 @@ Windows Communication Foundation (WCF), 메타 데이터 내보내기는 서비�
 ## <a name="exporting-custom-wsdl-elements"></a>사용자 지정 WSDL 요소 내보내기  
  작업 동작, 계약 동작, 엔드포인트 동작 또는 바인딩 요소(각각 <xref:System.ServiceModel.Description.IWsdlExportExtension>, <xref:System.ServiceModel.Description.IOperationBehavior>, <xref:System.ServiceModel.Description.IContractBehavior>, <xref:System.ServiceModel.Description.IEndpointBehavior>)에서 <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>을 구현하고, 내보낼 서비스에 대한 설명에 동작 또는 바인딩 요소를 삽입합니다. (동작을 삽입 하는 방법에 대 한 자세한 내용은 참조 하세요. [구성 및 동작을 사용 하 여 런타임 확장](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)). 각 엔드포인트에 대해 <xref:System.ServiceModel.Description.IWsdlExportExtension>이 호출되고 각 엔드포인트에서 계약을 먼저 내보냅니다(아직 내보내지 않은 경우). 필요에 따라 내보내기 프로세스에 참여할 수 있습니다.  
   
--   <xref:System.ServiceModel.Description.WsdlContractConversionContext> 메서드에서 내보낸 메타데이터를 수정하려면 <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A>를 사용합니다.  
+- <xref:System.ServiceModel.Description.WsdlContractConversionContext> 메서드에서 내보낸 메타데이터를 수정하려면 <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A>를 사용합니다.  
   
--   <xref:System.ServiceModel.Description.WsdlEndpointConversionContext> 메서드에서 엔드포인트에 대해 내보낸 메타데이터를 수정하려면 <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A>를 사용합니다.  
+- <xref:System.ServiceModel.Description.WsdlEndpointConversionContext> 메서드에서 엔드포인트에 대해 내보낸 메타데이터를 수정하려면 <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A>를 사용합니다.  
   
  <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A> 메서드는 내보낼 <xref:System.ServiceModel.Description.IWsdlExportExtension> 인스턴스 내의 모든 <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType> 구현에 대해 호출됩니다.  <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> 메서드는 내보낼 <xref:System.ServiceModel.Description.IWsdlExportExtension> 인스턴스가 있는 모든 <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> 구현에 대해 호출됩니다.  
   

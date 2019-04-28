@@ -24,11 +24,11 @@ helpviewer_keywords:
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
 ms.openlocfilehash: 5b1f8ccc402f7f5928a33f434664b0f28d108e6d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61828622"
 ---
 # <a name="declared-element-names-visual-basic"></a>선언된 요소 이름(Visual Basic)
 선언 된 모든 요소에 이름이 라고도 *식별자*, 코드를 참조 하는 데 사용 하는 하는 합니다.  
@@ -36,13 +36,13 @@ ms.locfileid: "58814070"
 ## <a name="rules"></a>규칙  
  Visual Basic의 요소 이름은 다음 규칙을 준수 해야 합니다.  
   
--   알파벳 문자 또는 밑줄로 시작 해야 합니다 (`_`).  
+- 알파벳 문자 또는 밑줄로 시작 해야 합니다 (`_`).  
   
--   만 영문자, 10 진수 숫자 및 밑줄만 포함 해야 합니다.  
+- 만 영문자, 10 진수 숫자 및 밑줄만 포함 해야 합니다.  
   
--   밑줄로 시작 하는 경우 하나 이상의 영문자 또는 10 진수 포함 해야 합니다.  
+- 밑줄로 시작 하는 경우 하나 이상의 영문자 또는 10 진수 포함 해야 합니다.  
   
--   긴 1,024 개 이상의 문자가 아니어야 합니다.  
+- 긴 1,024 개 이상의 문자가 아니어야 합니다.  
   
  1023 자 길이 제한을에 적용 됩니다는 정규화 된 이름, 전체 문자열 같은 `outerNamespace.middleNamespace.innerNamespace.thisClass.thisElement`합니다.  
   
@@ -75,9 +75,9 @@ ms.locfileid: "58814070"
   
  이스케이프 이름을 사용 해야 하는 일반적으로 경우에만:  
   
--   코드의 이름으로 사용 되는 키워드를 예약 하지 않은 Visual Basic 이전 버전에서 마이그레이션된 또는  
+- 코드의 이름으로 사용 되는 키워드를 예약 하지 않은 Visual Basic 이전 버전에서 마이그레이션된 또는  
   
--   지정 된 키워드가 예약 되지 않은 다른 언어로 작성 된 코드를 사용 하 여 작업할 합니다.  
+- 지정 된 키워드가 예약 되지 않은 다른 언어로 작성 된 코드를 사용 하 여 작업할 합니다.  
   
  그렇지 않으면 키워드를 사용 하 여 해당 이름이 충돌 하는 경우 요소 이름을 변경 하는 것이 좋습니다. 통합된 개발 환경 (IDE)이 작업을 수행 하는 쉬운 방법을 제공 합니다. 자세한 내용은 [Refactoring](/visualstudio/vb-ide/refactoring-vb)합니다.  
   

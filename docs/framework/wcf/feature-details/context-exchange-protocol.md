@@ -3,11 +3,11 @@ title: 컨텍스트 교환 프로토콜
 ms.date: 03/30/2017
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
 ms.openlocfilehash: a6bc0ac45282d94a6aea8dbbdb5a7d34163c692e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857352"
 ---
 # <a name="context-exchange-protocol"></a>컨텍스트 교환 프로토콜
 이 섹션에서는.NET Framework 버전 3.5 Windows Communication Foundation (WCF) 릴리스에서 새로 도입 된 컨텍스트 교환 프로토콜을 설명 합니다. 클라이언트 채널에서는 이 프로토콜을 사용하여 서비스에서 제공되는 컨텍스트를 수락하고, 동일한 클라이언트 채널 인스턴스를 통해 보내는 해당 서비스에 대한 모든 후속 요청에 이 컨텍스트를 적용합니다. 컨텍스트 교환 프로토콜 구현의 서버와 클라이언트 간에 컨텍스트를 전파 하는 데 다음 두 메커니즘 중 하나를 사용할 수 있습니다.: HTTP 쿠키 또는 SOAP 헤더입니다.  
@@ -21,16 +21,16 @@ ms.locfileid: "59217005"
   
  다음은 이 모드의 고정 조건 목록입니다.  
   
--   채널이 열린 후에 `SetContext`를 사용하여 컨텍스트를 다시 설정하려고 하면 <xref:System.InvalidOperationException>이 throw됩니다.  
+- 채널이 열린 후에 `SetContext`를 사용하여 컨텍스트를 다시 설정하려고 하면 <xref:System.InvalidOperationException>이 throw됩니다.  
   
--   보내는 메시지에 <xref:System.ServiceModel.Channels.ContextMessageProperty>를 사용하여 컨텍스트를 보내려고 하면 <xref:System.InvalidOperationException>이 throw됩니다.  
+- 보내는 메시지에 <xref:System.ServiceModel.Channels.ContextMessageProperty>를 사용하여 컨텍스트를 보내려고 하면 <xref:System.InvalidOperationException>이 throw됩니다.  
   
--   특정 컨텍스트를 사용하여 서버에서 메시지를 받은 경우 채널이 이미 특정 컨텍스트로 초기화되었으면 <xref:System.ServiceModel.ProtocolException>이 생성됩니다.  
+- 특정 컨텍스트를 사용하여 서버에서 메시지를 받은 경우 채널이 이미 특정 컨텍스트로 초기화되었으면 <xref:System.ServiceModel.ProtocolException>이 생성됩니다.  
   
     > [!NOTE]
     >  채널이 컨텍스트 집합 없이 명시적으로 열린 경우에만 서버에서 초기 컨텍스트를 받을 수 있습니다.  
   
--   들어오는 메시지의 <xref:System.ServiceModel.Channels.ContextMessageProperty>는 항상 null입니다.  
+- 들어오는 메시지의 <xref:System.ServiceModel.Channels.ContextMessageProperty>는 항상 null입니다.  
   
 ## <a name="mode-2-application-context-management"></a>모드 2: 응용 프로그램 컨텍스트 관리  
  <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A>가 `false`로 설정된 경우의 모드입니다. 이 모드에서 컨텍스트 채널은 컨텍스트를 관리하지 않습니다. <xref:System.ServiceModel.Channels.ContextMessageProperty>를 사용하여 컨텍스트를 검색, 관리 및 적용하는 것은 응용 프로그램의 역할입니다. `GetContext` 또는 `SetContext`를 호출하려고 하면 <xref:System.InvalidOperationException>이 발생합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "59217005"
   
  컨텍스트 교환 프로토콜을 지원해야 하는 서비스 엔드포인트에서는 이를 게시된 정책에 명시할 수 있습니다. 클라이언트가 SOAP 수준에서 컨텍스트 교환 프로토콜을 지원하기 위한 요구 사항 또는 클라이언트가 HTTP 쿠키 지원을 사용하기 위한 요구 사항을 나타내기 위해 두 개의 새로운 정책 어설션이 도입되었습니다. 서비스 측의 정책에 대한 이러한 어설션의 생성은 다음과 같이 <xref:System.ServiceModel.Channels.ContextBindingElement.ContextExchangeMechanism%2A> 속성의 값으로 제어됩니다.  
   
--   <xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader>의 경우 다음 어설션이 생성됩니다.  
+- <xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader>의 경우 다음 어설션이 생성됩니다.  
   
     ```xml  
     <IncludeContext   
@@ -61,7 +61,7 @@ ms.locfileid: "59217005"
     protectionLevel="Sign" />  
     ```  
   
--   <xref:System.ServiceModel.Channels.ContextExchangeMechanism.HttpCookie>의 경우 다음 어설션이 생성됩니다.  
+- <xref:System.ServiceModel.Channels.ContextExchangeMechanism.HttpCookie>의 경우 다음 어설션이 생성됩니다.  
   
     ```xml  
     <HttpUseCookie xmlns="http://schemas.xmlsoap.org/soap/http"/>  

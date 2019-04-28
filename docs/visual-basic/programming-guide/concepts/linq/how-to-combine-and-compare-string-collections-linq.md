@@ -3,11 +3,11 @@ title: '방법: (LINQ) (Visual Basic) 문자열 컬렉션 결합 및 비교'
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
 ms.openlocfilehash: a0083c49c344a45a977793254d8062f2a6aa155a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855233"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>방법: (LINQ) (Visual Basic) 문자열 컬렉션 결합 및 비교
 이 예제에서는 텍스트 줄이 포함된 파일을 병합하고 결과를 정렬하는 방법을 보여 줍니다. 특히, 두 개의 텍스트 줄 집합에 대한 단순 연결, 합집합 및 교집합을 수행하는 방법을 보여 줍니다.  

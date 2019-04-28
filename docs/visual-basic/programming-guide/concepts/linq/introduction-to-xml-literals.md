@@ -3,11 +3,11 @@ title: Visual Basic2의 XML 리터럴 소개
 ms.date: 07/20/2015
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
 ms.openlocfilehash: 68ba1e018d4ad9501532745a88090f0f756b5c17
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61834277"
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Visual Basic의 XML 리터럴 소개
 이 섹션에서는 Visual Basic에서 XML 트리 만들기에 대 한 정보를 제공 합니다.  

@@ -3,18 +3,18 @@ title: SQL Server에서 인증
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
 ms.openlocfilehash: f7fac0756da3bcc19ee6370468f0e0e65c428d35
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879018"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server에서 인증
 SQL Server에서는 Windows 인증 모드와 혼합 모드의 두 가지 인증 모드를 지원합니다.  
   
--   Windows 인증은 기본 인증이며 흔히 통합 보안이라고 하는데, 그 이유는 이 SQL Server 보안 모델이 Windows와 긴밀하게 통합되기 때문입니다. 이 보안 모델에서는 특정 Windows 사용자 및 그룹 계정에 SQL Server에 로그인할 수 있는 권한을 부여합니다. 이미 인증된 Windows 사용자는 추가 자격 증명을 제공할 필요가 없습니다.  
+- Windows 인증은 기본 인증이며 흔히 통합 보안이라고 하는데, 그 이유는 이 SQL Server 보안 모델이 Windows와 긴밀하게 통합되기 때문입니다. 이 보안 모델에서는 특정 Windows 사용자 및 그룹 계정에 SQL Server에 로그인할 수 있는 권한을 부여합니다. 이미 인증된 Windows 사용자는 추가 자격 증명을 제공할 필요가 없습니다.  
   
--   혼합 모드에서는 Windows 인증과 SQL Server 인증을 모두 지원하며 사용자 이름 및 암호 쌍이 SQL Server 내에서 유지 관리됩니다.  
+- 혼합 모드에서는 Windows 인증과 SQL Server 인증을 모두 지원하며 사용자 이름 및 암호 쌍이 SQL Server 내에서 유지 관리됩니다.  
   
 > [!IMPORTANT]
 >  가급적 Windows 인증을 사용하는 것이 좋습니다. Windows 인증은 일련의 암호화된 메시지를 사용하여 SQL Server에서 사용자를 인증합니다. SQL Server 로그인을 사용 하는 SQL Server 로그인 이름과 암호화 된 암호 수 있으므로 덜 안전한 네트워크를 통해 전달 됩니다.  
@@ -31,19 +31,19 @@ SQL Server에서는 Windows 인증 모드와 혼합 모드의 두 가지 인증 
 ## <a name="authentication-scenarios"></a>인증 시나리오  
  일반적으로 Windows 인증은 다음과 같은 환경에서 가장 적합합니다.  
   
--   도메인 컨트롤러가 있는 경우  
+- 도메인 컨트롤러가 있는 경우  
   
--   응용 프로그램과 데이터베이스가 동일한 컴퓨터에 있는 경우  
+- 응용 프로그램과 데이터베이스가 동일한 컴퓨터에 있는 경우  
   
--   SQL Server Express 또는 LocalDB의 인스턴스를 사용 하는 합니다.  
+- SQL Server Express 또는 LocalDB의 인스턴스를 사용 하는 합니다.  
   
  SQL Server 로그인은 대개 다음과 같은 환경에서 사용합니다.  
   
--   작업 그룹이 있는 경우  
+- 작업 그룹이 있는 경우  
   
--   사용자가 신뢰할 수 없는 여러 도메인에서 연결하는 경우  
+- 사용자가 신뢰할 수 없는 여러 도메인에서 연결하는 경우  
   
--   [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]과 같은 인터넷 응용 프로그램  
+- [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]과 같은 인터넷 응용 프로그램  
   
 > [!NOTE]
 >  Windows 인증을 지정하더라도 SQL Server 로그인이 비활성화되지는 않습니다. ALTER LOGIN DISABLE을 사용 하 여 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 문을 높은 SQL Server 로그인을 사용 하지 않도록 설정 합니다.  
@@ -51,11 +51,11 @@ SQL Server에서는 Windows 인증 모드와 혼합 모드의 두 가지 인증 
 ## <a name="login-types"></a>로그인 유형  
  SQL Server는 세 가지 유형의 로그인을 지원합니다.  
   
--   로컬 Windows 사용자 계정 또는 신뢰할 수 있는 도메인 계정. SQL Server는 Windows를 통해 Windows 사용자 계정을 인증합니다.  
+- 로컬 Windows 사용자 계정 또는 신뢰할 수 있는 도메인 계정. SQL Server는 Windows를 통해 Windows 사용자 계정을 인증합니다.  
   
--   Windows 그룹. Windows 그룹에 권한을 부여하면 해당 그룹에 속한 모든 Windows 사용자 로그인에도 동일한 권한이 부여됩니다.  
+- Windows 그룹. Windows 그룹에 권한을 부여하면 해당 그룹에 속한 모든 Windows 사용자 로그인에도 동일한 권한이 부여됩니다.  
   
--   SQL Server 로그인. SQL Server에서는 사용자 이름과 암호 해시를 모두 master 데이터베이스에 저장하고, 내부 인증 방법을 사용하여 로그인 시도가 유효한지 검사합니다.  
+- SQL Server 로그인. SQL Server에서는 사용자 이름과 암호 해시를 모두 master 데이터베이스에 저장하고, 내부 인증 방법을 사용하여 로그인 시도가 유효한지 검사합니다.  
   
 > [!NOTE]
 >  SQL Server는 인증서 또는 코드 서명 용도로 사용 되는 비대칭 키에서 만든 로그인을 제공 합니다. 이러한 로그인은 SQL Server에 연결하는 데 사용할 수 없습니다.  

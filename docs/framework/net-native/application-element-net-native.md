@@ -5,11 +5,11 @@ ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5b858b9daad22cdda6df30be7b28cdecfd275b8f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868609"
 ---
 # <a name="application-element-net-native"></a>\<응용 프로그램 > 요소 (.NET 네이티브)
 런타임에 메타데이터를 리플렉션에 사용할 수 있는 응용 프로그램 수준 형식 및 형식 멤버의 컨테이너로 사용되며, 앱의 모든 프로그램 요소에 대해 런타임 리플렉션 정책을 적용합니다.  
@@ -81,9 +81,9 @@ ms.locfileid: "59228304"
   
  `<Application>` 요소는 다음 두 가지 방법 중 하나로 사용할 수 있습니다.  
   
--   런타임에 해당 메타데이터가 필요한 프로그램 요소를 정의하는 컨테이너로 사용. 이 경우에는 `<Application>` 요소에 특성이 없어도 됩니다. 컴파일 타임에 컴파일러 도구는 .NET Framework 핵심 라이브러리를 비롯한 모든 라이브러리에서 `<Application>` 요소의 자식 요소가 식별한 프로그램 요소를 검색합니다. 반면 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 요소로 지정된 라이브러리에서는 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 요소의 자식 요소가 식별한 프로그램 요소만 검색합니다.  
+- 런타임에 해당 메타데이터가 필요한 프로그램 요소를 정의하는 컨테이너로 사용. 이 경우에는 `<Application>` 요소에 특성이 없어도 됩니다. 컴파일 타임에 컴파일러 도구는 .NET Framework 핵심 라이브러리를 비롯한 모든 라이브러리에서 `<Application>` 요소의 자식 요소가 식별한 프로그램 요소를 검색합니다. 반면 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 요소로 지정된 라이브러리에서는 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 요소의 자식 요소가 식별한 프로그램 요소만 검색합니다.  
   
--   리플렉션, serialization 및 interop에 대한 응용 프로그램 수준 정책을 설정하는 요소로 사용. `<Application>` 요소의 특성은 애플리케이션 수준 정책을 정의하며, 이 정책은 `<Application>` 또는 [\<Library&gt;](../../../docs/framework/net-native/library-element-net-native.md) 요소로 정의된 자식 요소에 의해 재정의될 수 있습니다.  
+- 리플렉션, serialization 및 interop에 대한 응용 프로그램 수준 정책을 설정하는 요소로 사용. `<Application>` 요소의 특성은 애플리케이션 수준 정책을 정의하며, 이 정책은 `<Application>` 또는 [\<Library&gt;](../../../docs/framework/net-native/library-element-net-native.md) 요소로 정의된 자식 요소에 의해 재정의될 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
 

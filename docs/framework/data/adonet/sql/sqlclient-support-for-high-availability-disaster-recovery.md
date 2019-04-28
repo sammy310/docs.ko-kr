@@ -3,11 +3,11 @@ title: 고가용성 및 재해 복구에 대한 SqlClient 지원
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 ms.openlocfilehash: 40054378319b81113dcb8f40cb82a8b1d02fc594
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876093"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>고가용성 및 재해 복구에 대한 SqlClient 지원
 이 항목에서는 고가용성, 재해 복구, AlwaysOn 가용성 그룹에 대한 SqlClient 지원([!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]에 추가됨)에 대해 설명합니다.  SQL Server 2012 AlwaysOn 가용성 그룹 기능이 추가 되었습니다. AlwaysOn 가용성 그룹에 대 한 자세한 내용은 SQL Server 온라인 설명서를 참조 합니다.  
@@ -21,9 +21,9 @@ ms.locfileid: "59307614"
   
  [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]에서 SqlClient에 다음 연결 속성이 추가되었습니다.  
   
--   `ApplicationIntent`  
+- `ApplicationIntent`  
   
--   `MultiSubnetFailover`  
+- `MultiSubnetFailover`  
   
  다음 항목을 사용하여 연결 문자열 키워드를 프로그래밍 방식으로 수정할 수 있습니다.  
   
@@ -45,17 +45,17 @@ ms.locfileid: "59307614"
   
  SQL Server 2012 장애 조치 클러스터 인스턴스 또는 가용성 그룹에서 서버에 연결 하려면 다음 지침을 따르십시오.  
   
--   단일 서브넷 또는 다중 서브넷에 연결할 때 `MultiSubnetFailover` 연결 속성을 사용합니다. 그러면 두 경우 모두 성능이 향상됩니다.  
+- 단일 서브넷 또는 다중 서브넷에 연결할 때 `MultiSubnetFailover` 연결 속성을 사용합니다. 그러면 두 경우 모두 성능이 향상됩니다.  
   
--   가용성 그룹에 연결하려면 가용성 그룹의 가용성 그룹 수신기를 연결 문자열의 서버로 지정합니다.  
+- 가용성 그룹에 연결하려면 가용성 그룹의 가용성 그룹 수신기를 연결 문자열의 서버로 지정합니다.  
   
--   SQL Server에 연결 하 여 64 개 IP 주소를 사용 하 여 구성 하는 인스턴스 연결 오류가 발생 합니다.  
+- SQL Server에 연결 하 여 64 개 IP 주소를 사용 하 여 구성 하는 인스턴스 연결 오류가 발생 합니다.  
   
--   사용 하는 응용 프로그램의 동작을 `MultiSubnetFailover` 연결 속성이 인증의 유형에 따라 영향을 받지 않습니다. SQL Server 인증, Kerberos 인증 또는 Windows 인증입니다.  
+- 사용 하는 응용 프로그램의 동작을 `MultiSubnetFailover` 연결 속성이 인증의 유형에 따라 영향을 받지 않습니다. SQL Server 인증, Kerberos 인증 또는 Windows 인증입니다.  
   
--   장애 조치 시간을 수용하고 응용 프로그램 연결 재시도를 줄이도록 `Connect Timeout` 값을 늘립니다.  
+- 장애 조치 시간을 수용하고 응용 프로그램 연결 재시도를 줄이도록 `Connect Timeout` 값을 늘립니다.  
   
--   분산 트랜잭션은 지원되지 않습니다.  
+- 분산 트랜잭션은 지원되지 않습니다.  
   
  읽기 전용 라우팅이 적용되지 않는 경우 다음과 같은 경우 보조 복제본 위치에 연결하면 실패합니다.  
   

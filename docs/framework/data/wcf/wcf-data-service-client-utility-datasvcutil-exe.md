@@ -7,21 +7,21 @@ helpviewer_keywords:
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
 ms.openlocfilehash: bb279e6fa16b82bffbebc777f791ce7a6e06255d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875331"
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>WCF Data Services 클라이언트 유틸리티(DataSvcUtil.exe)
 
 DataSvcUtil.exe는를 사용 하는 WCF Data Services에서 제공 하는 명령줄 도구는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드 및.NET Framework 클라이언트 응용 프로그램에서 데이터 서비스에 액세스 하는 데 필요한 클라이언트 데이터 서비스 클래스를 생성 합니다. 이 유틸리티는 다음 메타데이터 소스를 사용하여 데이터 클래스를 생성할 수 있습니다.
 
--   데이터 서비스의 루트 URI 이 유틸리티는 데이터 서비스에서 노출하는 데이터 모델을 설명하는 서비스 메타데이터 문서를 요청합니다. 자세한 내용은 참조 하세요. [OData: 서비스 메타 데이터 문서](https://go.microsoft.com/fwlink/?LinkId=186070)합니다.
+- 데이터 서비스의 루트 URI 이 유틸리티는 데이터 서비스에서 노출하는 데이터 모델을 설명하는 서비스 메타데이터 문서를 요청합니다. 자세한 내용은 참조 하세요. [OData: 서비스 메타 데이터 문서](https://go.microsoft.com/fwlink/?LinkId=186070)합니다.
 
--   에 정의 된 개념 스키마 정의 언어 (CSDL)을 사용 하 여 정의 된 데이터 모델 파일 (.csdl)는 [ \[MC-CSDL\]: Conceptual Schema Definition File Format](https://go.microsoft.com/fwlink/?LinkID=159072) 사양입니다.
+- 에 정의 된 개념 스키마 정의 언어 (CSDL)을 사용 하 여 정의 된 데이터 모델 파일 (.csdl)는 [ \[MC-CSDL\]: Conceptual Schema Definition File Format](https://go.microsoft.com/fwlink/?LinkID=159072) 사양입니다.
 
--   Entity Framework와 함께 제공되는 엔터티 데이터 모델 도구를 사용하여 만든 .edmx 파일. 자세한 내용은 참조는 [ \[MC-EDMX\]: Data Services 패키징 형식의 엔터티 데이터 모델](https://go.microsoft.com/fwlink/?LinkID=178833) 사양입니다.
+- Entity Framework와 함께 제공되는 엔터티 데이터 모델 도구를 사용하여 만든 .edmx 파일. 자세한 내용은 참조는 [ \[MC-EDMX\]: Data Services 패키징 형식의 엔터티 데이터 모델](https://go.microsoft.com/fwlink/?LinkID=178833) 사양입니다.
 
 자세한 내용은 [방법: 수동으로 클라이언트 데이터 서비스 클래스 생성](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)합니다.
 

@@ -22,11 +22,11 @@ helpviewer_keywords:
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
 ms.openlocfilehash: ac47b6d7fa4861d18646a23f442caccc4062852f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864497"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Visual Basic의 논리 및 비트 연산자
 논리 연산자 비교 `Boolean` 식 및 반환 된 `Boolean` 결과입니다. 합니다 `And`, `Or`, `AndAlso`, `OrElse`, 및 `Xor` 연산자는 *이진* 하는 동안 두 개의 피연산자를 고려 하기 때문에 `Not` 연산자는 *단항* 단일 피연산자 걸리기 때문에 있습니다. 이러한 연산자 중 일부에 정수 계열 값의 비트 논리 연산을 수행할 수도 있습니다.  
@@ -72,13 +72,13 @@ ms.locfileid: "58819309"
   
  값을 설정 하는 앞의 예제 `x` 1입니다. 다음과 같은 이유로 현상이 발생 합니다.  
   
--   값은 이진 형식으로 처리 됩니다.  
+- 값은 이진 형식으로 처리 됩니다.  
   
      이진 형식에서 3 011 =  
   
      이진 형식에서 5 101 =  
   
--   `And` 연산자는 한 번에 하나의 이진 위치 (비트)에서 이진 표현을 비교 합니다. 지정된 된 위치에 두 비트가 모두 1 이면 1 결과에 해당 위치에 배치 됩니다. 두 비트가 모두 0 인 경우 0은 결과에 해당 위치에 배치 됩니다. 앞의 예제에서이 같이 작동합니다.  
+- `And` 연산자는 한 번에 하나의 이진 위치 (비트)에서 이진 표현을 비교 합니다. 지정된 된 위치에 두 비트가 모두 1 이면 1 결과에 해당 위치에 배치 됩니다. 두 비트가 모두 0 인 경우 0은 결과에 해당 위치에 배치 됩니다. 앞의 예제에서이 같이 작동합니다.  
   
      011 (이진 형태로 3)  
   
@@ -86,7 +86,7 @@ ms.locfileid: "58819309"
   
      001 (이진 형식에서 결과)  
   
--   결과 10 진수로 처리 됩니다. 001 값은 1의 이진 표현 되므로 `x` = 1입니다.  
+- 결과 10 진수로 처리 됩니다. 001 값은 1의 이진 표현 되므로 `x` = 1입니다.  
   
  비트 `Or` 비교 비트 중 하나 또는 모두 1 이면 결과 비트는 1이 할당 한다는 점을 제외 하면 작업은 유사 합니다. `Xor` 정확히 하나의 비교 비트 (둘 다)이 1 이면 결과 비트는 1을 할당 합니다. `Not` 단일 피연산자를 사용 하 고 비트를 부호를 포함 하 여 모든 비트를 반전 결과에 해당 값을 할당 합니다. 부호 있는 양수, 즉 `Not` 항상 음수 값을 반환 합니다 및 음수 `Not` 항상 양수 또는 0 값을 반환 합니다.  
   

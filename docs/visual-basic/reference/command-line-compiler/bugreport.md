@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
 ms.openlocfilehash: e7b4ebc58b6fe9850b92ef945cb0d715e4369efe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61839568"
 ---
 # <a name="-bugreport"></a>-bugreport
 버그 보고서를 파일로 작성할 때는 사용할 수 있는 파일을 만듭니다.  
@@ -31,17 +31,17 @@ ms.locfileid: "58820913"
 ## <a name="remarks"></a>설명  
  다음 정보를 추가할 `file`:  
   
--   컴파일할 때 모든 소스 코드 파일의 복사본입니다.  
+- 컴파일할 때 모든 소스 코드 파일의 복사본입니다.  
   
--   컴파일에 사용 된 컴파일러 옵션의 목록입니다.  
+- 컴파일에 사용 된 컴파일러 옵션의 목록입니다.  
   
--   컴파일러, 공용 언어 런타임 및 운영 체제에 대 한 버전 정보입니다.  
+- 컴파일러, 공용 언어 런타임 및 운영 체제에 대 한 버전 정보입니다.  
   
--   컴파일러 출력입니다(있는 경우).  
+- 컴파일러 출력입니다(있는 경우).  
   
--   메시지가 표시 되는 문제를 설명입니다.  
+- 메시지가 표시 되는 문제를 설명입니다.  
   
--   메시지가 표시 되는 문제를 생각 하는 방법에 대 한 설명을 수정 되어야 합니다.  
+- 메시지가 표시 되는 문제를 생각 하는 방법에 대 한 설명을 수정 되어야 합니다.  
   
  모든 소스 코드 파일의 복사본에 포함 되어 있으므로 `file`을 최대한 짧은 프로그램에 코드 결함을 재현 하는 것이 좋습니다.  
   

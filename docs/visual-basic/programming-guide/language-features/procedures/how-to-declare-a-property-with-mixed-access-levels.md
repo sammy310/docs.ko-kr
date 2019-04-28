@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
 ms.openlocfilehash: e899b57e02f492b0e4909aca84c069e5b7688618
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863690"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>방법: 액세스 수준이 혼합된 (Visual Basic)를 사용 하 여 속성 선언
 하려는 경우는 `Get` 및 `Set` 속성 액세스 수준이 서로 달라에 프로시저를 좀 더 관대 한 수준에서 사용할 수 있습니다 합니다 `Property` 문과에서 보다 제한적인 수준 합니다 `Get` 또는 `Set` 문입니다. 일부 속성의 값을 가져올 수 있게 되기를 코드와 값을 변경 하려면 코드의 다른 일부 속성에 액세스 수준이 혼합된를 사용 합니다.  

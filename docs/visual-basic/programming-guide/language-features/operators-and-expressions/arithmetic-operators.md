@@ -14,11 +14,11 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
 ms.openlocfilehash: 635c791f81107a1800e2ef381f6bea78cbc18e18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61830364"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Visual Basic의 산술 연산자
 산술 연산자는 리터럴, 변수, 다른 식, 함수 및 속성 호출 및 상수를 나타내는 숫자 값의 계산을 포함 하는 친숙 한 산술 연산을 수행 하도록 사용 됩니다. 피연산자의 개별 비트 수준에서 역할 및를 왼쪽 또는 오른쪽의 비트 패턴을 이동할 비트 시프트 연산자는 산술 연산자를 사용 하 여 분류 합니다.  
@@ -70,13 +70,13 @@ ms.locfileid: "58820778"
   
  산술 shifts 순환있지 않습니다 즉, 결과의 한쪽 끝에서 벗어나 이동한 비트는 반대쪽 다시 도입 되지 않습니다. 이동 하 여 비워진 비트 위치는 다음과 같이 설정 됩니다.  
   
--   산술 왼쪽된 시프트에 대 한 0  
+- 산술 왼쪽된 시프트에 대 한 0  
   
--   양수의 산술 오른쪽 시프트에 대 한 0  
+- 양수의 산술 오른쪽 시프트에 대 한 0  
   
--   산술 오른쪽 시프트 연산 부호 없는 데이터 형식에 대 한 0 (`Byte`, `UShort`하십시오 `UInteger`, `ULong`)  
+- 산술 오른쪽 시프트 연산 부호 없는 데이터 형식에 대 한 0 (`Byte`, `UShort`하십시오 `UInteger`, `ULong`)  
   
--   음수의 산술 오른쪽 시프트에 대 한 1 (`SByte`, `Short`를 `Integer`, 또는 `Long`)  
+- 음수의 산술 오른쪽 시프트에 대 한 1 (`SByte`, `Short`를 `Integer`, 또는 `Long`)  
   
  다음 예에서는 이동는 `Integer` 왼쪽과 오른쪽 값입니다.  
   

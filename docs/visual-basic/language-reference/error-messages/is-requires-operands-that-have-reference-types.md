@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30020
 ms.assetid: 228afebd-1203-4bd3-8d7a-c5c56f3cedc4
 ms.openlocfilehash: b828de196a12128a9f34ee1f9ff1e57fee22c687
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61799192"
 ---
 # <a name="is-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-typename"></a>'Is' 피연산자는 참조 형식 이어야 하는데이 피연산자의 값 형식은 '\<typename >'
 `Is` 비교 연산자는 두 개의 개체 변수가 같은 인스턴스를 참조 하는지 여부를 결정 합니다. 이 비교 값 형식에 대해 정의 되지 않았습니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "58843853"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   적절 한 산술 비교 연산자를 사용 하 여 또는 `Like` 두 개의 값 형식을 비교 하는 연산자입니다.  
+- 적절 한 산술 비교 연산자를 사용 하 여 또는 `Like` 두 개의 값 형식을 비교 하는 연산자입니다.  
   
 ## <a name="see-also"></a>참고자료
 

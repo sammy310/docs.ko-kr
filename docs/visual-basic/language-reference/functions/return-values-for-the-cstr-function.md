@@ -12,11 +12,11 @@ helpviewer_keywords:
 - String data type [Visual Basic], converting
 ms.assetid: 3aa744e7-1419-45d5-85e3-e5abc2953673
 ms.openlocfilehash: 3653194c7e48533e664ac7513ca7f4f48d1c69f7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801532"
 ---
 # <a name="return-values-for-the-cstr-function-visual-basic"></a>CStr 함수의 반환 값(Visual Basic)
 다음 표에서 반환 값에 대 한 설명 `CStr` 의 다른 데이터 형식에 대 한 `expression`합니다.  

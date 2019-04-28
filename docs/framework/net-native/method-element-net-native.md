@@ -5,11 +5,11 @@ ms.assetid: 348b49e5-589d-4eb2-a597-d6ff60ab52d1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9fdc4441a8a11df5427badfaea95edb0abe52bde
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59131718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61867116"
 ---
 # <a name="method-element-net-native"></a>\<메서드 > 요소 (.NET 네이티브)
 생성자 또는 메서드에 런타임 리플렉션 정책을 적용합니다.  

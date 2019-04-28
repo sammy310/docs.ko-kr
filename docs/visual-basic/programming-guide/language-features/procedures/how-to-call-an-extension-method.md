@@ -6,11 +6,11 @@ helpviewer_keywords:
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
 ms.openlocfilehash: 5cb0684637a716dfec947740ba345c62eaabddd7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863677"
 ---
 # <a name="how-to-call-an-extension-method-visual-basic"></a>방법: 확장명 메서드 (Visual Basic) 호출
 확장 메서드를 사용 하면 기존 클래스에 메서드를 추가할 수 있습니다. 확장 메서드는 선언 되 고 범위로, 후 확장 하는 형식의 인스턴스 메서드처럼 호출할 수 있습니다. 확장 메서드를 작성 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 확장명 메서드 작성](./how-to-write-an-extension-method.md)합니다.  

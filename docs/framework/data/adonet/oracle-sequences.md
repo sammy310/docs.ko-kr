@@ -3,20 +3,20 @@ title: Oracle 시퀀스
 ms.date: 03/30/2017
 ms.assetid: 27cd371d-8252-414d-b5b2-5d31fa44b585
 ms.openlocfilehash: 8fe7513093d06f3928540f2de8cba902ce62b56e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59192656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878452"
 ---
 # <a name="oracle-sequences"></a>Oracle 시퀀스
 .NET Framework Data Provider for Oracle은 삽입을 수행한 후 <xref:System.Data.OracleClient.OracleDataAdapter>를 사용하여 서버에서 생성한 Oracle 시퀀스 키 값을 검색하는 작업을 지원합니다.  
   
  SQL Server와 Oracle은 기본 키로 지정할 수 있는 자동 증분 열의 생성을 지원합니다. 이러한 값은 서버에 의해 행으로 생성되어 테이블에 추가됩니다. 이를 위해서는 SQL Server에서는 열의 Identity 속성을 설정하고, Oracle에서는 시퀀스를 만듭니다. SQL Server의 자동 증분 열과 Oracle의 시퀀스의 차이점은 다음과 같습니다.  
   
--   SQL Server에서 열을 자동 증분 열로 표시하면 새 행을 삽입할 때 SQL Server에서 자동으로 열에 대해 새 값을 생성합니다.  
+- SQL Server에서 열을 자동 증분 열로 표시하면 새 행을 삽입할 때 SQL Server에서 자동으로 열에 대해 새 값을 생성합니다.  
   
--   Oracle에서는 테이블의 열에 대해 새 값을 생성하기 위해 시퀀스를 만들지만 시퀀스와 테이블 또는 열은 서로 독립적입니다. Oracle 시퀀스는 테이블이나 저장 프로시저와 같은 개체입니다.  
+- Oracle에서는 테이블의 열에 대해 새 값을 생성하기 위해 시퀀스를 만들지만 시퀀스와 테이블 또는 열은 서로 독립적입니다. Oracle 시퀀스는 테이블이나 저장 프로시저와 같은 개체입니다.  
   
  Oracle 데이터베이스에 시퀀스를 만들 때 시퀀스 시작 값과 값 간의 증분 값을 정의할 수 있습니다. 새 행을 제출하기 전에 시퀀스에서 새 값을 쿼리할 수도 있습니다. 즉, 데이터베이스에 새 행을 삽입하기 전에 코드에서 새 행의 키 값을 인식할 수 있습니다.  
   

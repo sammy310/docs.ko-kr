@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
 ms.openlocfilehash: 16a42a2808104a77e56e93564a679dfc578e73f6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58408875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857286"
 ---
 # <a name="data-contract-names"></a>데이터 계약 이름
 
@@ -36,8 +36,7 @@ ms.locfileid: "58408875"
 > `http://schemas.microsoft.com/2003/10/Serialization` 네임 스페이스 예약 되며 데이터 계약 네임 스페이스를 사용할 수 없습니다.
 
 > [!NOTE]
-> 
-  `delegate` 선언을 포함하는 데이터 계약 형식에서 기본 네임스페이스를 재정의할 수 없습니다.
+> `delegate` 선언을 포함하는 데이터 계약 형식에서 기본 네임스페이스를 재정의할 수 없습니다.
 
 ## <a name="data-contract-names"></a>데이터 계약 이름
 주어진 형식에 대한 데이터 계약의 기본 이름은 해당 형식의 이름입니다. 기본값을 재정의하려면 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>의 <xref:System.Runtime.Serialization.DataContractAttribute> 속성을 대체 이름으로 설정합니다. 제네릭 형식에 대한 특정 규칙은 이 항목의 뒷부분에 있는 "제네릭 형식에 대한 데이터 계약 이름"에서 설명합니다.
@@ -61,8 +60,7 @@ ms.locfileid: "58408875"
 [!code-csharp[C_DataContractNames#2](~/samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#2)]
 [!code-vb[C_DataContractNames#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#2)]
 
-이 예제에서 `Drawing<Square,RegularRedBrush>` 형식의 데이터 계약 이름은 "DrawingOfSquareRedBrush5HWGAU6h"이며, 여기서 "5HWGAU6h"는 "urn:shapes" 및 "urn:default" 네임스페이스의 해시입니다. 
-  `Drawing<Square,SpecialRedBrush>` 형식의 데이터 계약 이름은 "DrawingOfSquareRedBrushjpB5LgQ_S"이며, 여기서 "jpB5LgQ_S"는 "urn:shapes" 및 "urn:special" 네임스페이스의 해시입니다. 해시를 사용하지 않으면 두 이름이 동일하므로 이름이 충돌합니다.
+이 예제에서 `Drawing<Square,RegularRedBrush>` 형식의 데이터 계약 이름은 "DrawingOfSquareRedBrush5HWGAU6h"이며, 여기서 "5HWGAU6h"는 "urn:shapes" 및 "urn:default" 네임스페이스의 해시입니다. `Drawing<Square,SpecialRedBrush>` 형식의 데이터 계약 이름은 "DrawingOfSquareRedBrushjpB5LgQ_S"이며, 여기서 "jpB5LgQ_S"는 "urn:shapes" 및 "urn:special" 네임스페이스의 해시입니다. 해시를 사용하지 않으면 두 이름이 동일하므로 이름이 충돌합니다.
 
 ## <a name="customizing-data-contract-names-for-generic-types"></a>제네릭 형식에 대 한 사용자 지정 데이터 계약 이름
 
@@ -73,8 +71,7 @@ ms.locfileid: "58408875"
 [!code-csharp[c_DataContractNames#3](~/samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#3)]
 [!code-vb[c_DataContractNames#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#3)]
 
-이 경우에는 `Drawing<Square,RegularRedBrush>` 형식의 데이터 계약 이름이 "Drawing_using_RedBrush_brush_and_Square_shape"입니다. 
-  <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 속성에 "{#}"이 있으면 해시가 이름의 일부가 아니므로 형식의 이름을 지정할 때 충돌이 발생하기 쉽습니다. 예를 들어 `Drawing<Square,SpecialRedBrush>` 형식의 데이터 계약 이름이 동일할 수 있습니다.
+이 경우에는 `Drawing<Square,RegularRedBrush>` 형식의 데이터 계약 이름이 "Drawing_using_RedBrush_brush_and_Square_shape"입니다. <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 속성에 "{#}"이 있으면 해시가 이름의 일부가 아니므로 형식의 이름을 지정할 때 충돌이 발생하기 쉽습니다. 예를 들어 `Drawing<Square,SpecialRedBrush>` 형식의 데이터 계약 이름이 동일할 수 있습니다.
 
 ## <a name="see-also"></a>참고자료
 

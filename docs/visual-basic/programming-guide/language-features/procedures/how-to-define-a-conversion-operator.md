@@ -10,11 +10,11 @@ helpviewer_keywords:
 - operator overloading
 ms.assetid: 54203dfa-c24b-463f-9942-d5153e89e762
 ms.openlocfilehash: cf7bfdd09c7f3429f9c730a7aec34b24af3f2e9f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863716"
 ---
 # <a name="how-to-define-a-conversion-operator-visual-basic"></a>방법: 변환 연산자 (Visual Basic)를 정의 합니다.
 클래스 또는 구조체를 정의한 경우 해당 클래스 또는 구조체 형식 및 다른 데이터 형식 간의 형식 변환 연산자를 정의할 수 있습니다 (같은 `Integer`, `Double`, 또는 `String`).  

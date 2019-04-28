@@ -10,11 +10,11 @@ ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8d5a5658fcb6bbba72938a16a9e5c82fd779e2e3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868773"
 ---
 # <a name="code-access-security-basics"></a>코드 액세스 보안 기본 사항
 
@@ -105,8 +105,7 @@ public class MyClass
 
 보안 호출을 수행하기 전에 필요한 특정 형식의 권한을 나타내도록 권한 개체의 상태 데이터를 초기화해야 합니다. 예를 들어, 만들면를 <xref:System.Security.Permissions.FileIOPermission> 개체를 생성자를 사용 하 여 초기화 하는 **FileIOPermission** 개체 모든 파일에 액세스할 수 없거나 파일에 무제한 액세스를 나타냅니다. 또는 다른 사용할 수 있습니다 **FileIOPermission** 개체를 나타냅니다 (즉, 읽기, 추가 또는 쓰기) 및 개체를 보호 하려는 파일을 원하는 액세스 유형을 나타내는 매개 변수 개체를 전달 합니다.
 
-명령적 보안 구문을 사용하여 단일 보안 개체를 호출하는 것은 물론 권한 집합에 있는 권한 그룹을 초기화할 수도 있습니다. 예를 들어,이 방법은 안전 하 게 수행 해야만 [assert](../../../docs/framework/misc/using-the-assert-method.md) 한 메서드에서 여러 권한에 대해를 호출 합니다. 
-  <xref:System.Security.PermissionSet> 및 <xref:System.Security.NamedPermissionSet> 클래스를 사용하여 권한 그룹을 만든 다음 적절한 메서드를 호출하여 원하는 보안 호출을 호출합니다.
+명령적 보안 구문을 사용하여 단일 보안 개체를 호출하는 것은 물론 권한 집합에 있는 권한 그룹을 초기화할 수도 있습니다. 예를 들어,이 방법은 안전 하 게 수행 해야만 [assert](../../../docs/framework/misc/using-the-assert-method.md) 한 메서드에서 여러 권한에 대해를 호출 합니다. <xref:System.Security.PermissionSet> 및 <xref:System.Security.NamedPermissionSet> 클래스를 사용하여 권한 그룹을 만든 다음 적절한 메서드를 호출하여 원하는 보안 호출을 호출합니다.
 
 명령적 구문을 사용하여 요구 및 재정의를 수행할 수 있지만 요청은 수행할 수 없습니다. 권한 상태를 초기화하기 위해 필요한 정보가 런타임에만 알려지는 경우 선언적 구문 대신 명령적 구문을 요구 및 재정의에 사용할 수 있습니다. 예를 들어 호출자에게 특정 파일을 읽을 수 있는 권한이 있도록 해야 하지만 런타임까지 해당 파일의 이름을 알 수 없는 경우 명령적 요구를 사용합니다. 런타임에 조건이 유지되는지 및 테스트 결과에 따라 보안 요구를 수행할지 여부를 결정해야 하는 경우 선언적 검사 대신 명령적 검사를 사용하도록 선택할 수도 있습니다.
 

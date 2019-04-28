@@ -3,11 +3,11 @@ title: 조인 작업 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
 ms.openlocfilehash: c7bd81f729558c8ec41baacda99765eb2f862b29
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61834376"
 ---
 # <a name="join-operations-visual-basic"></a>조인 작업 (Visual Basic)
 두 데이터 소스를 *조인*하는 것은 한 데이터 소스의 개체를 공통 특성을 공유하는 다른 데이터 소스의 개체와 연결하는 것입니다.  
@@ -18,7 +18,7 @@ ms.locfileid: "58411150"
   
  다음 그림에서는 내부 조인 또는 왼쪽 우선 외부 조인에 포함된 두 집합 및 해당 집합 내의 요소를 개념적으로 보여줍니다.  
   
- ![내부를 보여 주는 두 개의 겹치는 원&#47;외부입니다.](./media/join-operations/join-method-overlapping-circles.png)  
+ ![내부/외부를 보여주는 두 개의 겹치는 원](./media/join-operations/join-method-overlapping-circles.png)  
   
 ## <a name="methods"></a>메서드  
   

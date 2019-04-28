@@ -3,11 +3,11 @@ title: '방법: DBML 파일을 수정하여 사용자 지정 코드 생성'
 ms.date: 03/30/2017
 ms.assetid: 50ad597a-8598-42d3-82dd-fc7d702ebc37
 ms.openlocfilehash: c3fa4d9db4076309ab7d6066cc7072797eaead54
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877346"
 ---
 # <a name="how-to-generate-customized-code-by-modifying-a-dbml-file"></a>방법: DBML 파일을 수정하여 사용자 지정 코드 생성
 Visual Basic을 생성할 수 있습니다 또는 C# 데이터베이스 태그 언어 (.dbml) 메타 데이터 파일에서 소스 코드입니다. 이 방법을 사용하면 응용 프로그램 매핑 코드를 생성하기 전에 기본 .dbml 파일을 사용자 지정할 수 있습니다. 이는 고급 기능에 해당합니다.  
