@@ -12,11 +12,11 @@ helpviewer_keywords:
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
 ms.openlocfilehash: b70594e002bbf08f0890586e78df901ccb26c7ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791823"
 ---
 # <a name="sub-procedures-visual-basic"></a>Sub 프로시저(Visual Basic)
 A `Sub` 절차는 일련의 Visual Basic 문으로 둘러싸인 합니다 `Sub` 및 `End Sub` 문. `Sub` 프로시저는 작업을 수행한 다음 호출 코드에 제어를 반환 하지만 호출 코드에 값을 반환 하지는 않습니다.  

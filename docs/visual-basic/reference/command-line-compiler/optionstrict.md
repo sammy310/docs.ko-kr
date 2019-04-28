@@ -9,11 +9,11 @@ helpviewer_keywords:
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
 ms.openlocfilehash: e18fe451ea4a80ac959ed61b66394920f8bf177f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788936"
 ---
 # <a name="-optionstrict"></a>-optionstrict
 암시적 형식 변환을 제한 하려면 엄격한 형식 의미 체계를 적용 합니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "59336085"
   
 ### <a name="to-set--optionstrict-programmatically"></a>-Optionstrict를 프로그래밍 방식으로 설정 하려면  
   
--   참조 [Option Strict 문](../../../visual-basic/language-reference/statements/option-strict-statement.md)합니다.  
+- 참조 [Option Strict 문](../../../visual-basic/language-reference/statements/option-strict-statement.md)합니다.  
   
 ## <a name="example"></a>예제  
  다음 코드에서는 `Test.vb` 엄격한 형식 의미 체계를 사용 합니다.  

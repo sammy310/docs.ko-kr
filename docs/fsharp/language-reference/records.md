@@ -3,11 +3,11 @@ title: 레코드
 description: 에 대해 알아봅니다 하는 방법 F# 레코드는 멤버를 사용 하 여 필요에 따라 명명 된 값의 간단한 집계를 나타냅니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: a499755383654ddaf76af12776ee93f27834b7b0
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795423"
 ---
 # <a name="records"></a>레코드
 
@@ -145,10 +145,10 @@ The records are equal.
 
 레코드에 대 한 같음, 참조 해야 하는 경우 추가 특성 `[<ReferenceEquality>]` 레코드 위에 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [F# 형식](fsharp-types.md)
 - [클래스](classes.md)
 - [F# 언어 참조](index.md)
-- [참조 같음](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
+- [Reference-Equality](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
 - [패턴 일치](pattern-matching.md)

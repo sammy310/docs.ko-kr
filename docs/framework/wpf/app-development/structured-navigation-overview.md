@@ -8,11 +8,11 @@ helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
 ms.openlocfilehash: 0cf2a37eaa812d27dc3d111b1459c9daae72dc5a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788832"
 ---
 # <a name="structured-navigation-overview"></a>구조적 탐색 개요
 호스팅될 수 있는 콘텐츠를 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame>, 또는 <xref:System.Windows.Navigation.NavigationWindow> 팩에서 식별할 수 있는 페이지로 구성 됩니다 [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] 하이퍼링크 탐색 하 고 있습니다. 하이퍼링크를 통해 정의되는 페이지 및 페이지 탐색 방법의 구조를 탐색 토폴로지라고 합니다. 이 토폴로지는 다양한 애플리케이션 형식, 특히 문서를 탐색하는 애플리케이션에 적합합니다. 해당 애플리케이션의 경우 한쪽 페이지가 다른 페이지에 대해 아무것도 알 필요 없이 사용자가 페이지 사이에서 이동할 수 있습니다.  
@@ -25,15 +25,15 @@ ms.locfileid: "59320073"
 ## <a name="structured-navigation"></a>구조적 탐색  
  구조적 탐색에서 한 페이지가 다른 페이지를 호출하면 다음 동작의 일부 또는 전체가 필요합니다.  
   
--   호출 페이지는 호출된 페이지로 이동하고 필요한 경우 호출된 페이지에 필요한 매개 변수를 전달합니다.  
+- 호출 페이지는 호출된 페이지로 이동하고 필요한 경우 호출된 페이지에 필요한 매개 변수를 전달합니다.  
   
--   사용자가 호출 페이지 사용을 마치면 호출된 페이지는 필요한 경우 특별히 호출 페이지로 돌아갑니다.  
+- 사용자가 호출 페이지 사용을 마치면 호출된 페이지는 필요한 경우 특별히 호출 페이지로 돌아갑니다.  
   
-    -   호출 페이지가 완료된 방식을 설명하는 상태 정보 반환(예: 사용자가 [확인] 단추나 [취소] 단추를 눌렀는지 여부).  
+    - 호출 페이지가 완료된 방식을 설명하는 상태 정보 반환(예: 사용자가 [확인] 단추나 [취소] 단추를 눌렀는지 여부).  
   
-    -   사용자로부터 수집된 데이터 반환(예: 새 직원 세부 정보).  
+    - 사용자로부터 수집된 데이터 반환(예: 새 직원 세부 정보).  
   
--   호출 페이지가 호출된 페이지로 돌아가면 호출된 페이지 인스턴스를 다른 인스턴스와 격리하기 위해 호출된 페이지가 탐색 기록에서 제거됩니다.  
+- 호출 페이지가 호출된 페이지로 돌아가면 호출된 페이지 인스턴스를 다른 인스턴스와 격리하기 위해 호출된 페이지가 탐색 기록에서 제거됩니다.  
   
  다음 그림에서는 이러한 동작을 설명 합니다.  
   
@@ -115,17 +115,17 @@ ms.locfileid: "59320073"
   
  매개 변수를 호출된 페이지로 전달할 필요는 없습니다. 대신에 다음을 수행할 수 있습니다.  
   
--   호출 페이지에서:  
+- 호출 페이지에서:  
   
-    1.  호출 된 인스턴스화할 <xref:System.Windows.Navigation.PageFunction%601> 기본 생성자를 사용 하 여 합니다.  
+    1. 호출 된 인스턴스화할 <xref:System.Windows.Navigation.PageFunction%601> 기본 생성자를 사용 하 여 합니다.  
   
-    2.  매개 변수를 저장할 <xref:System.Windows.Application.Properties%2A>합니다.  
+    2. 매개 변수를 저장할 <xref:System.Windows.Application.Properties%2A>합니다.  
   
-    3.  호출 된 이동할 <xref:System.Windows.Navigation.PageFunction%601>합니다.  
+    3. 호출 된 이동할 <xref:System.Windows.Navigation.PageFunction%601>합니다.  
   
--   호출 된 <xref:System.Windows.Navigation.PageFunction%601>:  
+- 호출 된 <xref:System.Windows.Navigation.PageFunction%601>:  
   
-    -   에 저장 된 매개 변수를 사용 하 여 검색 <xref:System.Windows.Application.Properties%2A>합니다.  
+    - 에 저장 된 매개 변수를 사용 하 여 검색 <xref:System.Windows.Application.Properties%2A>합니다.  
   
  그러나 간단히 살펴보겠지만 호출된 페이지에서 반환된 데이터를 수집하려고 호출된 페이지를 인스턴스화하고 여기로 이동하는 데는 코드를 사용해야 합니다. 이러한 이유로 <xref:System.Windows.Navigation.PageFunction%601> 이동할이 고 그렇지 않으면 활성 상태로 유지 해야, 다음에 <xref:System.Windows.Navigation.PageFunction%601>, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 인스턴스화하는 <xref:System.Windows.Navigation.PageFunction%601> 기본 생성자를 사용 하 여.  
   

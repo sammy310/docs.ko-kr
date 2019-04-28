@@ -3,11 +3,11 @@ title: '방법: 식 트리 (Visual Basic)를 실행 합니다.'
 ms.date: 07/20/2015
 ms.assetid: 9dfb5ab3-f48f-417e-975f-f8f6f1cdc18d
 ms.openlocfilehash: cccb0b301e1da6d82c616d56604ad46dfde83e2a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787181"
 ---
 # <a name="how-to-execute-expression-trees-visual-basic"></a>방법: 식 트리 (Visual Basic)를 실행 합니다.
 이 항목에서는 식 트리를 실행하는 방법을 보여 줍니다. 식 트리를 실행할 때 값이 반환될 수 있거나, 메서드 호출 등의 작업만 수행할 수도 있습니다.  
@@ -44,9 +44,9 @@ MsgBox(result)
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
   
--   아직 참조되지 않는 경우 System.Core.dll에 대한 프로젝트 참조를 추가합니다.  
+- 아직 참조되지 않는 경우 System.Core.dll에 대한 프로젝트 참조를 추가합니다.  
   
--   System.Linq.Expressions 네임스페이스를 포함합니다.  
+- System.Linq.Expressions 네임스페이스를 포함합니다.  
   
 ## <a name="see-also"></a>참고자료
 

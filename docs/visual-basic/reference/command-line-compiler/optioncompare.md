@@ -10,11 +10,11 @@ helpviewer_keywords:
 - /optioncompare compiler option [Visual Basic]
 ms.assetid: 7237b766-b44d-4cc5-9a3c-885348a7d9e4
 ms.openlocfilehash: b88cba4d16c5a770a72b47868d11b16cbba6cae8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788962"
 ---
 # <a name="-optioncompare"></a>-optioncompare
 문자열 비교 방법을 지정합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "59340440"
   
 ### <a name="to-set--optioncompare-programmatically"></a>-Optioncompare를 프로그래밍 방식으로 설정 하려면  
   
--   참조 [Option Compare 문](../../../visual-basic/language-reference/statements/option-compare-statement.md)합니다.  
+- 참조 [Option Compare 문](../../../visual-basic/language-reference/statements/option-compare-statement.md)합니다.  
   
 ## <a name="example"></a>예제  
  다음 코드에서는 `ProjFile.vb` 컴파일하고 이진 문자열 비교를 사용 합니다.  

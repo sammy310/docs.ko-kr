@@ -8,11 +8,11 @@ helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
 ms.openlocfilehash: fc7b86f3f2c2c6276681c324dbe9a390fdfdafd4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791458"
 ---
 # <a name="using-sessions"></a>세션 사용
 Windows Communication Foundation (WCF) 응용 프로그램에는 *세션* 메시지 그룹을 대화에 연결 합니다. WCF 세션에서 사용할 수 있는 세션 개체에 다릅니다. [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 응용 프로그램을 다른 동작을 지원 하 고 다양 한 방법으로 제어 됩니다. 세션 WCF에서 사용 하도록 설정 하는 기능에 설명 응용 프로그램 및 사용 하는 방법입니다.  
@@ -22,31 +22,31 @@ Windows Communication Foundation (WCF) 응용 프로그램에는 *세션* 메시
   
  WCF 세션에 다음과 같은 주요 개념적 기능이:  
   
--   이러한 기능은 호출 애플리케이션(WCF 클라이언트)에 의해 명시적으로 시작되고 종료됩니다.  
+- 이러한 기능은 호출 애플리케이션(WCF 클라이언트)에 의해 명시적으로 시작되고 종료됩니다.  
   
--   한 세션 동안 배달된 메시지는 수신된 순서대로 처리됩니다.  
+- 한 세션 동안 배달된 메시지는 수신된 순서대로 처리됩니다.  
   
--   세션은 메시지 그룹을 대화에 연결합니다. 여러 유형의 상관 관계를 사용할 수 있습니다. 예를 들어, 공유된 네트워크 연결을 기반으로 메시지와 연결될 수 있는 세션 기반 채널이 있는 반면 메시지 본문의 공유 태그를 기반으로 메시지와 연결될 수 있는 세션 기반 채널도 있습니다. 세션에서 파생될 수 있는 기능은 상관 관계의 특성에 따라 다릅니다.  
+- 세션은 메시지 그룹을 대화에 연결합니다. 여러 유형의 상관 관계를 사용할 수 있습니다. 예를 들어, 공유된 네트워크 연결을 기반으로 메시지와 연결될 수 있는 세션 기반 채널이 있는 반면 메시지 본문의 공유 태그를 기반으로 메시지와 연결될 수 있는 세션 기반 채널도 있습니다. 세션에서 파생될 수 있는 기능은 상관 관계의 특성에 따라 다릅니다.  
   
--   WCF 세션과 연결 된 일반 데이터 저장소가 없습니다.  
+- WCF 세션과 연결 된 일반 데이터 저장소가 없습니다.  
   
  에 대해 잘 알고 있다면 합니다 <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> 클래스의 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 제공 응용 프로그램 및 기능, 해당 유형의 세션 및 WCF 세션 간에 다음과 같은 차이점을 알 수 있습니다.  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 세션은 항상 서버에 의해 실행됩니다.  
+- [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 세션은 항상 서버에 의해 실행됩니다.  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 세션은 암시적으로 순서가 지정되지 않습니다.  
+- [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 세션은 암시적으로 순서가 지정되지 않습니다.  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 세션은 요청을 통해 일반 데이터 저장소 메커니즘을 제공합니다.  
+- [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 세션은 요청을 통해 일반 데이터 저장소 메커니즘을 제공합니다.  
   
  이 항목에서는 다음을 설명합니다.  
   
--   서비스 모델 계층에서 세션 기반 바인딩을 사용하는 경우 기본 실행 동작  
+- 서비스 모델 계층에서 세션 기반 바인딩을 사용하는 경우 기본 실행 동작  
   
--   형식에서 WCF 기반의 시스템 제공 바인딩을 제공 하는 기능입니다.  
+- 형식에서 WCF 기반의 시스템 제공 바인딩을 제공 하는 기능입니다.  
   
--   세션 요구 사항을 선언하는 계약을 만드는 방법  
+- 세션 요구 사항을 선언하는 계약을 만드는 방법  
   
--   세션의 생성과 종료 및 세션과 서비스 인스턴스와의 관계를 이해하고 제어하는 방법  
+- 세션의 생성과 종료 및 세션과 서비스 인스턴스와의 관계를 이해하고 제어하는 방법  
   
 ## <a name="default-execution-behavior-using-sessions"></a>세션을 사용한 기본 실행 동작  
  세션을 초기화하려는 바인딩은 *세션 기반* 바인딩에서 호출됩니다. 서비스 계약에서는 서비스 계약 인터페이스(또는 클래스)의 <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> 속성을 <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> 열거형 값 중 하나로 설정하여 세션 기반 바인딩을 필요로 하거나 허용하거나 거부하도록 지정합니다. 기본적으로이 속성의 값은 <xref:System.ServiceModel.SessionMode.Allowed>의미 하는 경우 클라이언트 세션 기반 바인딩은 WCF 서비스 구현으로 사용 하 여, 서비스를 설정 하 고 제공 된 세션을 사용 합니다.  
@@ -62,24 +62,24 @@ Windows Communication Foundation (WCF) 응용 프로그램에는 *세션* 메시
   
  WCF는 다음과 같은 유형의 세션 기반 응용 프로그램 동작을 제공합니다.  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType>는 통신의 양쪽 끝에서 특정 보안 대화에 동의한 보안 기반 세션을 지원합니다. 자세한 내용은 [Securing Services](../../../docs/framework/wcf/securing-services.md)합니다. 예를 들어, 보안 세션과 신뢰할 수 있는 세션 모두에 대한 지원이 포함된 <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> 바인딩은 기본적으로 메시지에 대해 암호화 및 디지털 서명을 수행하는 보안 세션만 사용합니다.  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType>는 통신의 양쪽 끝에서 특정 보안 대화에 동의한 보안 기반 세션을 지원합니다. 자세한 내용은 [Securing Services](../../../docs/framework/wcf/securing-services.md)합니다. 예를 들어, 보안 세션과 신뢰할 수 있는 세션 모두에 대한 지원이 포함된 <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> 바인딩은 기본적으로 메시지에 대해 암호화 및 디지털 서명을 수행하는 보안 세션만 사용합니다.  
   
--   <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> 바인딩은 모든 메시지가 소켓 수준에서 연결을 통해 상호 연결되도록 TCP/IP 기반 세션을 지원합니다.  
+- <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> 바인딩은 모든 메시지가 소켓 수준에서 연결을 통해 상호 연결되도록 TCP/IP 기반 세션을 지원합니다.  
   
--   WS-ReliableMessaging 사양을 구현하는 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> 요소는 신뢰할 수 있는 세션에 대한 지원을 제공합니다. 신뢰할 수 있는 세션에서는 메시지를 순서대로 정확히 한 번 배달하도록 구성하여 대화 중에 여러 노드에서 메시지가 전달되는 경우에도 메시지가 수신되도록 할 수 있습니다. 자세한 내용은 [신뢰할 수 있는 세션](../../../docs/framework/wcf/feature-details/reliable-sessions.md)합니다.  
+- WS-ReliableMessaging 사양을 구현하는 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> 요소는 신뢰할 수 있는 세션에 대한 지원을 제공합니다. 신뢰할 수 있는 세션에서는 메시지를 순서대로 정확히 한 번 배달하도록 구성하여 대화 중에 여러 노드에서 메시지가 전달되는 경우에도 메시지가 수신되도록 할 수 있습니다. 자세한 내용은 [신뢰할 수 있는 세션](../../../docs/framework/wcf/feature-details/reliable-sessions.md)합니다.  
   
--   <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> 바인딩은 MSMQ 데이터그램 세션을 제공합니다. 자세한 내용은 [WCF의 큐](../../../docs/framework/wcf/feature-details/queues-in-wcf.md)합니다.  
+- <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> 바인딩은 MSMQ 데이터그램 세션을 제공합니다. 자세한 내용은 [WCF의 큐](../../../docs/framework/wcf/feature-details/queues-in-wcf.md)합니다.  
   
  <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> 속성을 설정하면 계약에 필요한 세션 유형을 지정하지 않고 요구만 합니다.  
   
 ## <a name="creating-a-contract-that-requires-a-session"></a>세션이 필요한 계약 만들기  
  세션이 필요한 계약을 만들면 서비스 계약이 선언한 작업 그룹 모두가 같은 세션 내에서 실행되고 해당 메시지가 순서대로 배달되어야 합니다. 서비스 계약이 필요한 세션 지원 수준을 어설션하려면 서비스 계약 인터페이스 또는 클래스의 <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> 속성을 <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> 열거형 값으로 설정하여 계약에서 다음을 지정합니다.  
   
--   세션이 필요한지 여부  
+- 세션이 필요한지 여부  
   
--   클라이언트가 세션을 설정하도록 허용할지 여부  
+- 클라이언트가 세션을 설정하도록 허용할지 여부  
   
--   세션을 금지할지 여부  
+- 세션을 금지할지 여부  
   
  그러나 <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> 속성을 설정하면 계약에 필요한 세션 기반 동작 유형을 지정하지 않습니다. WCF 런타임에 확인에 지시 하는 서비스는, 그렇지 않으면 또는 세션을 설정할 수에 대 한 바인딩 (여기서 통신 채널을 생성)을 구성 서비스를 구현 하는 경우. 또한 바인딩은 보안 동작, 전송 동작, 신뢰할 수 있는 동작 또는 이러한 동작의 조합 중에서 선택한 세션 기반 동작 유형과 함께 해당 요구 사항을 충족할 수 있습니다. 정확한 동작은 선택한 <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> 값에 따라 다릅니다. 서비스에 대해 구성된 바인딩이 <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A>의 값을 준수하지 않는 경우 예외가 throw됩니다. 바인딩 및 세션을 지원하도록 바인딩이 만든 채널을 세션 기반이라고 합니다.  
   
@@ -93,11 +93,11 @@ Windows Communication Foundation (WCF) 응용 프로그램에는 *세션* 메시
 ## <a name="sessions-and-service-instances"></a>세션 및 서비스 인스턴스  
  인스턴스 만들기 동작 WCF에서 기본값을 사용 하면 WCF 클라이언트 개체 간의 모든 호출은 동일한 서비스 인스턴스에 의해 처리 됩니다. 따라서 애플리케이션 수준에서 세션은 로컬 호출 동작과 비슷하게 애플리케이션 동작을 사용한다고 간주할 수 있습니다. 예를 들어, 로컬 개체를 만들 때 다음이 수행됩니다.  
   
--   생성자가 호출됩니다.  
+- 생성자가 호출됩니다.  
   
--   WCF 클라이언트 개체 참조에 대 한 모든 후속 호출은 동일한 개체 인스턴스에 의해 처리 됩니다.  
+- WCF 클라이언트 개체 참조에 대 한 모든 후속 호출은 동일한 개체 인스턴스에 의해 처리 됩니다.  
   
--   개체 참조가 소멸되면 소멸자가 호출됩니다.  
+- 개체 참조가 소멸되면 소멸자가 호출됩니다.  
   
  세션에서는 기본 서비스 인스턴스 동작이 사용되는 한 클라이언트와 서비스 간의 비슷한 동작을 사용할 수 있습니다. 서비스 계약에서 세션이 필요하거나 지원하는 경우 <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A> 및 <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A> 속성을 설정하여 하나 이상의 계약 작업을 세션 시작 또는 세션 종료로 표시할 수 있습니다.  
   
@@ -115,19 +115,19 @@ Windows Communication Foundation (WCF) 응용 프로그램에는 *세션* 메시
   
  서비스는 클라이언트와 함께 세션을 시작하지 않습니다. WCF 클라이언트 응용 프로그램에서 세션 기반 채널의 수명과 세션 수명 사이는 직접적인 관계가 있습니다. 예를 들어, 클라이언트는 새 세션 기반 채널을 만들어 새 세션을 만들고 세션 기반 채널을 정상적으로 닫아서 기존 세션을 종료합니다. 클라이언트는 다음 중 하나를 호출하여 서비스 엔드포인트와 함께 세션을 시작합니다.  
   
--   <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType>에 대한 호출을 통해 반환된 채널의 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType>에 대한 호출을 통해 반환된 채널의 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> 생성 된 WCF 클라이언트 개체를 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)합니다.  
+- <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> 생성 된 WCF 클라이언트 개체를 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)합니다.  
   
--   두 가지 형식의 WCF 클라이언트 개체에 대 한 시작 작업 (기본적으로 모든 작업을 시작 하는). 첫 번째 작업 호출 되 면 WCF 클라이언트 개체를 자동으로 채널을 열고 세션을 시작 합니다.  
+- 두 가지 형식의 WCF 클라이언트 개체에 대 한 시작 작업 (기본적으로 모든 작업을 시작 하는). 첫 번째 작업 호출 되 면 WCF 클라이언트 개체를 자동으로 채널을 열고 세션을 시작 합니다.  
   
  일반적으로 클라이언트는 다음 중 하나를 호출하여 서비스 엔드포인트와 함께 세션을 종료합니다.  
   
--   <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>에 대한 호출을 통해 반환된 채널의 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>에 대한 호출을 통해 반환된 채널의 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> Svcutil.exe에 의해 생성 된 WCF 클라이언트 개체입니다.  
+- <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> Svcutil.exe에 의해 생성 된 WCF 클라이언트 개체입니다.  
   
--   WCF 클라이언트 개체 유형에 대 한 종료 작업 (기본적으로 작업은 종료) 계약 종료 작업을 명시적으로 지정 해야 합니다. 첫 번째 작업 호출 되 면 WCF 클라이언트 개체를 자동으로 채널을 열고 세션을 시작 합니다.  
+- WCF 클라이언트 개체 유형에 대 한 종료 작업 (기본적으로 작업은 종료) 계약 종료 작업을 명시적으로 지정 해야 합니다. 첫 번째 작업 호출 되 면 WCF 클라이언트 개체를 자동으로 채널을 열고 세션을 시작 합니다.  
   
  예제는 [방법: 만들기는 Service That Requires Sessions](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) 뿐만 [Default Service Behavior](../../../docs/framework/wcf/samples/default-service-behavior.md) 하 고 [Instancing](../../../docs/framework/wcf/samples/instancing.md) 샘플.  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - -optimize compiler option [Visual Basic]
 ms.assetid: fcba4a97-3622-4b87-a891-0f77deab4998
 ms.openlocfilehash: eb84e0a7038e7ff8cb399ac7222b6ac1661b5bc1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788975"
 ---
 # <a name="-optimize"></a>-optimize
 사용 하거나 컴파일러 최적화를 사용 하지 않도록 설정 합니다.  

@@ -3,11 +3,11 @@ title: 단락 및 해당 스타일 (Visual Basic) 검색
 ms.date: 07/20/2015
 ms.assetid: d9ed2238-d38e-4ad4-b88b-db7859df9bde
 ms.openlocfilehash: 3c6554c44c95db13aada0d9edf96cc2df595c6d1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787038"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-visual-basic"></a>단락 및 해당 스타일 (Visual Basic) 검색
 이 예제에서는 WordprocessingML 문서에서 단락 노드를 검색하는 쿼리를 작성합니다. 또한 각 단락의 스타일도 식별합니다.  

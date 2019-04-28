@@ -3,11 +3,11 @@ title: Basic Serialization 기술 샘플
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
 ms.openlocfilehash: dc190a93e45bf2b682aff0158ccd42bc09762d9a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795020"
 ---
 # <a name="basic-serialization-technology-sample"></a>Basic Serialization 기술 샘플
 [샘플 다운로드](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
@@ -62,21 +62,21 @@ ms.locfileid: "59315012"
   
  이 샘플에 사용된 클래스 및 기술이 아래에 간략하게 설명되어 있습니다.  
   
--   런타임 serialization  
+- 런타임 serialization  
   
-    -   <xref:System.Runtime.Serialization.IFormatter> 또는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 개체를 참조하기 위해 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>가 사용됩니다.  
+    - <xref:System.Runtime.Serialization.IFormatter> 또는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 개체를 참조하기 위해 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>가 사용됩니다.  
   
-    -   연결된 목록을 스트림에 이진 형식으로 serialize하기 위해 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>가 사용됩니다. 이진 포맷터는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 형식에서만 인식할 수 있는 형식을 사용하지만, 데이터가 간결해지는 장점이 있습니다.  
+    - 연결된 목록을 스트림에 이진 형식으로 serialize하기 위해 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>가 사용됩니다. 이진 포맷터는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 형식에서만 인식할 수 있는 형식을 사용하지만, 데이터가 간결해지는 장점이 있습니다.  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 연결된 된 목록을 스트림에 SOAP 형식으로 serialize 하는 데 사용 합니다. SOAP는 표준 형식입니다.  
+    - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 연결된 된 목록을 스트림에 SOAP 형식으로 serialize 하는 데 사용 합니다. SOAP는 표준 형식입니다.  
   
--   스트림 I/O  
+- 스트림 I/O  
   
-    -   serialize 및 deserialize를 위해 <xref:System.IO.Stream>이 사용됩니다. 이 샘플에서 사용되는 특정 스트림 형식은 <xref:System.IO.FileStream> 형식입니다. 그러나 serialization에는 <xref:System.IO.Stream>에서 파생되는 모든 형식을 사용할 수 있습니다.  
+    - serialize 및 deserialize를 위해 <xref:System.IO.Stream>이 사용됩니다. 이 샘플에서 사용되는 특정 스트림 형식은 <xref:System.IO.FileStream> 형식입니다. 그러나 serialization에는 <xref:System.IO.Stream>에서 파생되는 모든 형식을 사용할 수 있습니다.  
   
-    -   디스크에 파일을 생성하고 디스크의 파일을 읽기 위한 <xref:System.IO.File> 개체를 만들기 위해 <xref:System.IO.FileStream>이 사용됩니다.  
+    - 디스크에 파일을 생성하고 디스크의 파일을 읽기 위한 <xref:System.IO.File> 개체를 만들기 위해 <xref:System.IO.FileStream>이 사용됩니다.  
   
-    -   연결된 목록을 serialize 및 deserialize하기 위해 <xref:System.IO.FileStream>이 사용됩니다.  
+    - 연결된 목록을 serialize 및 deserialize하기 위해 <xref:System.IO.FileStream>이 사용됩니다.  
   
 ## <a name="see-also"></a>참고자료
 

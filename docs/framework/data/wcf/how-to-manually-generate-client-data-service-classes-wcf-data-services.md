@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: b98cb1d6-956a-4e50-add6-67e4f2587346
 ms.openlocfilehash: d197088f94614aac007c0adc310500ae4609f757
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788715"
 ---
 # <a name="how-to-manually-generate-client-data-service-classes-wcf-data-services"></a>방법: 수동으로 클라이언트 데이터 서비스 클래스 (WCF Data Services)를 생성
 WCF Data Services를 사용 하는 경우 클라이언트 데이터 서비스 클래스를 자동으로 생성할 수 있도록 Visual Studio와 통합 된 **서비스 참조 추가** Visual Studio 프로젝트에서 데이터 서비스에 대 한 참조를 추가 하려면 대화 상자. 자세한 내용은 [방법: 데이터 서비스 참조 추가](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)합니다. 코드 생성 도구 `DataSvcUtil.exe`를 사용하여 동일한 클라이언트 데이터 서비스 클래스를 수동으로 생성할 수도 있습니다. WCF Data Services에 포함 된이 도구는 데이터 서비스 정의에서.NET Framework 클래스를 생성 합니다. 이 도구를 사용하여 개념적 모델 파일(.csdl) 및 Visual Studio 프로젝트의 Entity Framework 모델을 나타내는 .edmx 파일에서 데이터 서비스 클래스를 생성할 수도 있습니다.
@@ -19,7 +19,7 @@ WCF Data Services를 사용 하는 경우 클라이언트 데이터 서비스 �
 
 ### <a name="to-generate-c-classes-that-support-data-binding"></a>데이터 바인딩을 지원하는 C# 클래스를 생성하려면
 
--   명령 프롬프트에서 줄 바꿈 없이 다음 명령을 실행합니다.
+- 명령 프롬프트에서 줄 바꿈 없이 다음 명령을 실행합니다.
 
     ```console
     "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /dataservicecollection /version:2.0 /language:CSharp /out:Northwind.cs /uri:http://localhost:12345/Northwind.svc
@@ -30,7 +30,7 @@ WCF Data Services를 사용 하는 경우 클라이언트 데이터 서비스 �
 
 ### <a name="to-generate-visual-basic-classes-that-support-data-binding"></a>데이터 바인딩을 지원하는 Visual Basic 클래스를 생성하려면
 
--   명령 프롬프트에서 줄 바꿈 없이 다음 명령을 실행합니다.
+- 명령 프롬프트에서 줄 바꿈 없이 다음 명령을 실행합니다.
 
     ```console
     "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /dataservicecollection /version:2.0 /language:VB /out:Northwind.vb /uri:http://localhost:12345/Northwind.svc
@@ -41,7 +41,7 @@ WCF Data Services를 사용 하는 경우 클라이언트 데이터 서비스 �
 
 ### <a name="to-generate-c-classes-based-on-the-service-uri"></a>서비스 URI를 기반으로 하여 C# 클래스를 생성하려면
 
--   명령 프롬프트에서 줄 바꿈 없이 다음 명령을 실행합니다.
+- 명령 프롬프트에서 줄 바꿈 없이 다음 명령을 실행합니다.
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\DataSvcUtil.exe" /language:CSharp /out:northwind.cs /uri:http://localhost:12345/Northwind.svc
@@ -52,7 +52,7 @@ WCF Data Services를 사용 하는 경우 클라이언트 데이터 서비스 �
 
 ### <a name="to-generate-visual-basic-classes-based-on-the-service-uri"></a>서비스 URI를 기반으로 하여 Visual Basic 클래스를 생성하려면
 
--   명령 프롬프트에서 줄 바꿈 없이 다음 명령을 실행합니다.
+- 명령 프롬프트에서 줄 바꿈 없이 다음 명령을 실행합니다.
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /out:Northwind.vb /uri:http://localhost:12345/Northwind.svc
@@ -63,7 +63,7 @@ WCF Data Services를 사용 하는 경우 클라이언트 데이터 서비스 �
 
 ### <a name="to-generate-c-classes-based-on-the-conceptual-model-file-csdl"></a>개념적 모델 파일(CSDL)을 기반으로 하여 C# 클래스를 생성하려면
 
--   명령 프롬프트에서 줄 바꿈 없이 다음 명령을 실행합니다.
+- 명령 프롬프트에서 줄 바꿈 없이 다음 명령을 실행합니다.
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:CSharp /in:Northwind.csdl /out:Northwind.cs
@@ -71,7 +71,7 @@ WCF Data Services를 사용 하는 경우 클라이언트 데이터 서비스 �
 
 ### <a name="to-generate-visual-basic-classes-based-on-the-conceptual-model-file-csdl"></a>개념적 모델 파일(CSDL)을 기반으로 하여 Visual Basic 클래스를 생성하려면
 
--   명령 프롬프트에서 줄 바꿈 없이 다음 명령을 실행합니다.
+- 명령 프롬프트에서 줄 바꿈 없이 다음 명령을 실행합니다.
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /in:Northwind.csdl /out:Northwind.vb
@@ -79,7 +79,7 @@ WCF Data Services를 사용 하는 경우 클라이언트 데이터 서비스 �
 
 ### <a name="to-generate-c-classes-based-on-the-edmx-file"></a>.edmx 파일을 기반으로 하여 C# 클래스를 생성하려면
 
--   명령 프롬프트에서 줄 바꿈 없이 다음 명령을 실행합니다.
+- 명령 프롬프트에서 줄 바꿈 없이 다음 명령을 실행합니다.
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:CSharp /in:Northwind.edmx /out:c:\northwind.cs
@@ -87,7 +87,7 @@ WCF Data Services를 사용 하는 경우 클라이언트 데이터 서비스 �
 
 ### <a name="to-generate-visual-basic-classes-based-on-the-edmx-file"></a>.edmx 파일을 기반으로 하여 Visual Basic 클래스를 생성하려면
 
--   명령 프롬프트에서 줄 바꿈 없이 다음 명령을 실행합니다.
+- 명령 프롬프트에서 줄 바꿈 없이 다음 명령을 실행합니다.
 
     ```
     "%windir%\Microsoft.NET\Framework\v3.5\datasvcutil.exe" /language:VB /in:Northwind.edmx /out:c:\northwind.vb

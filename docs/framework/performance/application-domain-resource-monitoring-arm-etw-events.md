@@ -8,26 +8,26 @@ ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2bb2b0dd95877fc6492f6d23a19c14688cd78f7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788065"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>ARM(응용 프로그램 도메인 리소스 모니터링) ETW 이벤트
 <a name="top"></a> 이들 이벤트는 응용 프로그램 도메인 상태에 대한 자세한 진단 정보를 제공합니다. 이들 이벤트를 사용하거나 애플리케이션 도메인 리소스 모니터링(ARM) 기능을 사용하여 같은 정보를 얻을 수 있습니다.  
   
  이 범주는 다음 이벤트로 구성됩니다.  
   
--   [ThreadCreated 이벤트](#threadcreated_event)  
+- [ThreadCreated 이벤트](#threadcreated_event)  
   
--   [AppDomainMemAllocated 이벤트](#appdomainmemallocated_event)  
+- [AppDomainMemAllocated 이벤트](#appdomainmemallocated_event)  
   
--   [AppDomainMemSurvived 이벤트](#appdomainmemsurvived_event)  
+- [AppDomainMemSurvived 이벤트](#appdomainmemsurvived_event)  
   
--   [ThreadAppDomainEnter 이벤트](#threadappdomainenter_event)  
+- [ThreadAppDomainEnter 이벤트](#threadappdomainenter_event)  
   
--   [ThreadTerminated 이벤트](#threadterminated_event)  
+- [ThreadTerminated 이벤트](#threadterminated_event)  
   
 <a name="threadcreated_event"></a>   
 ## <a name="threadcreated-event"></a>ThreadCreated 이벤트  

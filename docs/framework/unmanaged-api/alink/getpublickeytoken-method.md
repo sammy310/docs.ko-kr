@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0d1b28eadc9f09abff799f99d1d6012c98b1d3dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789846"
 ---
 # <a name="getpublickeytoken-method"></a>GetPublicKeyToken 메서드
 지정 된 키 파일 또는 키 컨테이너에 대 한 공개 키 토큰을 검색합니다.  

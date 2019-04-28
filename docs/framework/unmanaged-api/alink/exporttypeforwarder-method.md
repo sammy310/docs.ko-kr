@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5bdf9fb50fe06141df6f3818c784588b9e2138af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789924"
 ---
 # <a name="exporttypeforwarder-method"></a>ExportTypeForwarder 메서드
 형식 전달 자가 지정된 된 어셈블리의 type 테이블에 추가합니다.  

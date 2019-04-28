@@ -6,11 +6,11 @@ helpviewer_keywords:
 - regions [Windows Forms], using
 ms.assetid: 7809295b-870f-4107-a8b5-8386c298acd5
 ms.openlocfilehash: ec11b8c7d2eeb153eb4a8c8772fef24977310e13
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791107"
 ---
 # <a name="using-regions"></a>영역 사용
 합니다 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Region> 클래스를 사용 하면 사용자 지정 셰이프를 정의할 수 있습니다. 선, 다각형 및 곡선의 모양은 가능 합니다.  

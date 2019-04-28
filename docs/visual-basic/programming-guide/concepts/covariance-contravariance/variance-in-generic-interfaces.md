@@ -3,28 +3,28 @@ title: (Visual Basic) 제네릭 인터페이스의 가변성
 ms.date: 07/20/2015
 ms.assetid: cf4096d0-4bb3-45a9-9a6b-f01e29a60333
 ms.openlocfilehash: 50a1aeb5c17a0f193b9e90ca2167ef298f7ed237
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787220"
 ---
 # <a name="variance-in-generic-interfaces-visual-basic"></a>(Visual Basic) 제네릭 인터페이스의 가변성
 .NET Framework 4에서는 기존의 몇몇 제네릭 인터페이스에 대한 가변성 지원이 추가되었습니다. 가변성 지원은 이러한 인터페이스를 구현하는 클래스의 암시적 변환을 가능하게 합니다. 다음 인터페이스는 현재 variant입니다.  
   
--   <xref:System.Collections.Generic.IEnumerable%601>(T는 공변(covariant)임)  
+- <xref:System.Collections.Generic.IEnumerable%601>(T는 공변(covariant)임)  
   
--   <xref:System.Collections.Generic.IEnumerator%601>(T는 공변(covariant)임)  
+- <xref:System.Collections.Generic.IEnumerator%601>(T는 공변(covariant)임)  
   
--   <xref:System.Linq.IQueryable%601>(T는 공변(covariant)임)  
+- <xref:System.Linq.IQueryable%601>(T는 공변(covariant)임)  
   
--   <xref:System.Linq.IGrouping%602>(`TKey` 및 `TElement`는 공변(covariant)임)  
+- <xref:System.Linq.IGrouping%602>(`TKey` 및 `TElement`는 공변(covariant)임)  
   
--   <xref:System.Collections.Generic.IComparer%601>(T는 반공변(contravariant)임)  
+- <xref:System.Collections.Generic.IComparer%601>(T는 반공변(contravariant)임)  
   
--   <xref:System.Collections.Generic.IEqualityComparer%601>(T는 반공변(contravariant)임)  
+- <xref:System.Collections.Generic.IEqualityComparer%601>(T는 반공변(contravariant)임)  
   
--   <xref:System.IComparable%601>(T는 반공변(contravariant)임)  
+- <xref:System.IComparable%601>(T는 반공변(contravariant)임)  
   
  공변성(covariance)은 메서드가 인터페이스의 제네릭 형식 매개 변수에 정의된 것보다 더 많은 수의 파생된 반환 형식을 갖도록 허용합니다. 공변성(covariance) 기능을 설명하려면 `IEnumerable(Of Object)` 및 `IEnumerable(Of String)`이라는 제네릭 인터페이스를 고려하세요. `IEnumerable(Of String)` 인터페이스는 `IEnumerable(Of Object)` 인터페이스를 상속하지 않습니다. 그러나 `String` 형식은 `Object` 형식을 상속하며, 경우에 따라 이러한 인터페이스의 개체를 서로 할당할 수 있습니다. 다음 코드 예제에서 이를 확인할 수 있습니다.  
   

@@ -3,11 +3,11 @@ title: '방법: WebSocket을 통해 통신하는 WCF 서비스 만들기'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
 ms.openlocfilehash: 7125914e64ac3c7643f7338b1343654794cf45da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59346368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787532"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>방법: WebSocket을 통해 통신하는 WCF 서비스 만들기
 WCF 서비스 및 클라이언트는 <xref:System.ServiceModel.NetHttpBinding> 바인딩을 사용하여 WebSocket에서 통신할 수 있습니다.  WebSocket은 <xref:System.ServiceModel.NetHttpBinding>에서 서비스 계약이 콜백 계약을 정의한다고 판단할 때 사용됩니다. 이 항목은 WebSocket에서 통신하기 위해 <xref:System.ServiceModel.NetHttpBinding>을 사용하는 WCF 서비스와 클라이언트를 구현하는 방법을 설명합니다.  
@@ -108,7 +108,7 @@ WCF 서비스 및 클라이언트는 <xref:System.ServiceModel.NetHttpBinding> �
   
      콜백 계약 작업은 비동기 메서드로 구현됩니다.  
   
-    1.  클라이언트 코드를 구현합니다.  
+    1. 클라이언트 코드를 구현합니다.  
   
         ```csharp  
         class Program  
@@ -133,7 +133,7 @@ WCF 서비스 및 클라이언트는 <xref:System.ServiceModel.NetHttpBinding> �
   
          여기서 쉽게 구분할 수 있도록 CallbackHandler가 반복되었습니다. 클라이언트 응용 프로그램은 새 InstanceContext를 만들고 콜백 인스턴스의 구현을 지정합니다. 그런 다음 새로 만들어진 InstanceContext에 참조를 보내는 프록시 클래스의 인스턴스를 만듭니다. 클라이언트가 서비스를 호출하면 서비스는 지정된 콜백 계약을 사용하여 클라이언트를 호출합니다.  
   
-    2.  클라이언트 구성  
+    2. 클라이언트 구성  
   
         ```xml  
         <?xml version="1.0" encoding="utf-8" ?>  

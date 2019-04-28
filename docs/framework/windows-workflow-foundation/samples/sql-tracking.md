@@ -3,11 +3,11 @@ title: SQL 추적
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
 ms.openlocfilehash: f3c48b40e2d3d7dec2b9008b3de738f9b2983610
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785920"
 ---
 # <a name="sql-tracking"></a>SQL 추적
 이 샘플에서는 SQL 데이터베이스에 추적 레코드를 기록하는 사용자 지정 SQL 추적 참가자를 작성하는 방법을 보여 줍니다. Windows WF (Workflow Foundation) 워크플로 인스턴스 실행에 대 한 가시성을 얻을 수를 추적 하는 워크플로 제공 합니다. 추적 런타임에서는 워크플로를 실행하는 동안 워크플로 추적 레코드를 내보냅니다. 워크플로 추적에 대 한 자세한 내용은 참조 하세요. [워크플로 추적 및 트레이싱](../workflow-tracking-and-tracing.md)합니다.

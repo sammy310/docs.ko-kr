@@ -10,11 +10,11 @@ ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ef621d1cbbd04421b392e64f5507fcbe23860465
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788078"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR ETW 키워드 및 수준
 <a name="top"></a> 범주 및 수준별로 ETW(Windows용 이벤트 추적) 이벤트를 필터링할 수 있습니다. 이벤트 [CLR ETW 키워드](#keywords)를 통해 범주별로 이벤트를 필터링할 수 있습니다. 런타임 및 런다운 공급자를 위해 여러 키워드를 조합하여 사용할 수 있습니다. [이벤트 수준](#levels) 은 플래그로 식별됩니다.  
@@ -25,13 +25,13 @@ ms.locfileid: "59105744"
   
  다음 표에서는 키워드에 대해 설명합니다.  
   
--   [CLR ETW 런타임 키워드](#runtime)  
+- [CLR ETW 런타임 키워드](#runtime)  
   
--   [CLR ETW 런다운 키워드](#rundown)  
+- [CLR ETW 런다운 키워드](#rundown)  
   
--   [런타임 공급자를 위한 기호 확인용 키워드 조합](#runtime_combo)  
+- [런타임 공급자를 위한 기호 확인용 키워드 조합](#runtime_combo)  
   
--   [런다운 공급자를 위한 기호 확인용 키워드 조합](#rundown_combo)  
+- [런다운 공급자를 위한 기호 확인용 키워드 조합](#rundown_combo)  
   
 <a name="runtime"></a>   
 ### <a name="clr-etw-runtime-keywords"></a>CLR ETW 런타임 키워드  

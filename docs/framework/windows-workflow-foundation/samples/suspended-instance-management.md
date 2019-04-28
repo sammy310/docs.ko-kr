@@ -3,11 +3,11 @@ title: 일시 중단된 인스턴스 관리
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
 ms.openlocfilehash: ace4d2baef8f6b030790deaa5b1c20bb4b0cd30d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785907"
 ---
 # <a name="suspended-instance-management"></a>일시 중단된 인스턴스 관리
 이 샘플에서는 일시 중단된 워크플로 인스턴스를 관리하는 방법을 보여 줍니다.  <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>의 기본 동작은 `AbandonAndSuspend`입니다. 즉, 기본적으로 <xref:System.ServiceModel.WorkflowServiceHost>에서 호스트되는 워크플로 인스턴스에서 처리되지 않은 예외가 throw될 경우 인스턴스가 메모리에서 삭제(중단)되고 영속/지속적 버전의 인스턴스는 일시 중단된 인스턴스로 표시됩니다. 일시 중단된 워크플로 인스턴스는 일시 중단이 해제될 때까지 실행할 수 없습니다.
@@ -26,41 +26,41 @@ ms.locfileid: "59319562"
 
 1. 이 샘플에는 다음과 같은 Windows 구성 요소를 사용해야 합니다.
 
-    1.  MSMQ(Microsoft Message Queue) Server
+    1. MSMQ(Microsoft Message Queue) Server
 
-    2.  SQL Server Express
+    2. SQL Server Express
 
 2. SQL Server 데이터베이스를 설정합니다.
 
-    1.  Visual Studio 2010 명령 프롬프트에서 다음을 수행 하는 SuspendedInstanceManagement 샘플 디렉터리에서 "setup.cmd"를 실행 합니다.
+    1. Visual Studio 2010 명령 프롬프트에서 다음을 수행 하는 SuspendedInstanceManagement 샘플 디렉터리에서 "setup.cmd"를 실행 합니다.
 
-        1.  SQL Server Express를 사용하여 지속성 데이터베이스를 만듭니다. 지속성 데이터베이스가 이미 있으면 삭제된 다음 다시 만들어집니다.
+        1. SQL Server Express를 사용하여 지속성 데이터베이스를 만듭니다. 지속성 데이터베이스가 이미 있으면 삭제된 다음 다시 만들어집니다.
 
-        2.  지속성 데이터베이스를 설정합니다.
+        2. 지속성 데이터베이스를 설정합니다.
 
-        3.  지속성 데이터베이스를 설정할 때 정의된 InstanceStoreUsers 역할에 IIS APPPOOL\DefaultAppPool 및 NT AUTHORITY\Network Service를 추가합니다.
+        3. 지속성 데이터베이스를 설정할 때 정의된 InstanceStoreUsers 역할에 IIS APPPOOL\DefaultAppPool 및 NT AUTHORITY\Network Service를 추가합니다.
 
 3. 서비스 큐를 설정합니다.
 
-    1.  Visual Studio 2010에서 마우스 오른쪽 단추로 클릭 합니다 **SampleWorkflowApp** 프로젝트 및 클릭 **시작 프로젝트로 설정**합니다.
+    1. Visual Studio 2010에서 마우스 오른쪽 단추로 클릭 합니다 **SampleWorkflowApp** 프로젝트 및 클릭 **시작 프로젝트로 설정**합니다.
 
-    2.  컴파일 및 키를 눌러 SampleWorkflowApp를 실행 **F5**합니다. 이렇게 하면 필요한 큐가 만들어집니다.
+    2. 컴파일 및 키를 눌러 SampleWorkflowApp를 실행 **F5**합니다. 이렇게 하면 필요한 큐가 만들어집니다.
 
-    3.  키를 눌러 **Enter** SampleWorkflowApp를 중지 합니다.
+    3. 키를 눌러 **Enter** SampleWorkflowApp를 중지 합니다.
 
-    4.  명령 프롬프트에서 Compmgmt.msc를 실행하여 컴퓨터 관리 콘솔을 엽니다.
+    4. 명령 프롬프트에서 Compmgmt.msc를 실행하여 컴퓨터 관리 콘솔을 엽니다.
 
-    5.  확장 **서비스 및 응용 프로그램**, **메시지 큐**하십시오 **개인 큐**합니다.
+    5. 확장 **서비스 및 응용 프로그램**, **메시지 큐**하십시오 **개인 큐**합니다.
 
-    6.  마우스 오른쪽 단추로 클릭 합니다 **ReceiveTx** 선택한 큐 **속성**합니다.
+    6. 마우스 오른쪽 단추로 클릭 합니다 **ReceiveTx** 선택한 큐 **속성**합니다.
 
-    7.  선택 합니다 **보안** 탭을 허용 **Everyone** 에 대 한 권한이 있어야 **메시지 받기**를 **메시지 보기**, 및  **메시지를 보낼**합니다.
+    7. 선택 합니다 **보안** 탭을 허용 **Everyone** 에 대 한 권한이 있어야 **메시지 받기**를 **메시지 보기**, 및  **메시지를 보낼**합니다.
 
 4. 이제 샘플을 실행합니다.
 
-    1.  Visual Studio 2010에서는 SampleWorkflowApp 프로젝트를 다시 실행 키를 눌러 디버깅 하지 않고 **ctrl+f5**합니다. 두 엔드포인트 주소가 콘솔 창에 출력됩니다. 이 주소 중 하나를 응용 프로그램 엔드포인트에 대한 주소이고, 다른 하나는 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>의 주소입니다. 그런 다음 워크플로 인스턴스가 만들어지고, 해당 인스턴스에 대한 추적 레코드가 콘솔 창에 나타납니다. 워크플로 인스턴스를 예외를 throw하며, 인스턴스가 일시 중단되고 중단됩니다.
+    1. Visual Studio 2010에서는 SampleWorkflowApp 프로젝트를 다시 실행 키를 눌러 디버깅 하지 않고 **ctrl+f5**합니다. 두 엔드포인트 주소가 콘솔 창에 출력됩니다. 이 주소 중 하나를 응용 프로그램 엔드포인트에 대한 주소이고, 다른 하나는 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>의 주소입니다. 그런 다음 워크플로 인스턴스가 만들어지고, 해당 인스턴스에 대한 추적 레코드가 콘솔 창에 나타납니다. 워크플로 인스턴스를 예외를 throw하며, 인스턴스가 일시 중단되고 중단됩니다.
 
-    2.  명령줄 유틸리티를 사용하여 모든 인스턴스에 대해 추가 동작을 수행할 수 있습니다. 명령줄 인수에 대한 구문은 다음과 같습니다.
+    2. 명령줄 유틸리티를 사용하여 모든 인스턴스에 대해 추가 동작을 수행할 수 있습니다. 명령줄 인수에 대한 구문은 다음과 같습니다.
 
          `SuspendedInstanceManagement -Command:[CommandName] -Server:[ServerName] -Database:[DatabaseName] -InstanceId:[InstanceId]`
 

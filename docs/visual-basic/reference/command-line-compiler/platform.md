@@ -7,11 +7,11 @@ helpviewer_keywords:
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
 ms.openlocfilehash: db9b3d31ba9657d26c1fb76ce4002afad949a881
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788910"
 ---
 # <a name="-platform-visual-basic"></a>-플랫폼 (Visual Basic)
 출력 파일을 실행할 수 있는 CLR(공용 언어 런타임) 플랫폼 버전을 지정합니다.  
@@ -38,31 +38,31 @@ ms.locfileid: "59301167"
   
  일반적으로 Visual Basic에서 작성된 .NET Framework 어셈블리는 플랫폼에 관계없이 동일하게 실행됩니다. 그러나 플랫폼별로 동작이 다른 경우도 있습니다. 이러한 경우의 일반적인 예는 다음과 같습니다.  
   
--   포인터 형식과 같이 플랫폼에 따라 크기가 달라지는 멤버를 포함하는 구조체  
+- 포인터 형식과 같이 플랫폼에 따라 크기가 달라지는 멤버를 포함하는 구조체  
   
--   상수 크기를 포함하는 포인터 산술 연산  
+- 상수 크기를 포함하는 포인터 산술 연산  
   
--   핸들에 대해 `Integer` 대신 <xref:System.IntPtr>를 사용하는 잘못된 플랫폼 호출 또는 COM 선언  
+- 핸들에 대해 `Integer` 대신 <xref:System.IntPtr>를 사용하는 잘못된 플랫폼 호출 또는 COM 선언  
   
--   <xref:System.IntPtr>을 `Integer`로 캐스팅  
+- <xref:System.IntPtr>을 `Integer`로 캐스팅  
   
--   일부 플랫폼에만 있는 구성 요소를 통한 플랫폼 호출 또는 COM interop 사용  
+- 일부 플랫폼에만 있는 구성 요소를 통한 플랫폼 호출 또는 COM interop 사용  
   
  합니다 **-플랫폼** 옵션에 해당 코드가 실행 되는 아키텍처에 대 한 가정을 변경한 알고 있는 경우 몇 가지 문제를 줄일 수 있습니다. 구체적으로는 다음과 같습니다.  
   
--   응용 프로그램이 32비트 컴퓨터에서 실행되는데 64비트 플랫폼을 대상으로 지정하는 경우에는 오류 메시지가 훨씬 더 일찍 표시되며, 이 스위치를 사용하지 않아 발생하는 오류보다는 문제 자체에 대한 내용이 중점적으로 표시됩니다.  
+- 응용 프로그램이 32비트 컴퓨터에서 실행되는데 64비트 플랫폼을 대상으로 지정하는 경우에는 오류 메시지가 훨씬 더 일찍 표시되며, 이 스위치를 사용하지 않아 발생하는 오류보다는 문제 자체에 대한 내용이 중점적으로 표시됩니다.  
   
--   옵션에 대해 `x86` 플래그를 설정한 후 응용 프로그램을 64비트 컴퓨터에서 실행하면 응용 프로그램이 기본적으로 실행되지 않고 WOW 하위 시스템에서 실행됩니다.  
+- 옵션에 대해 `x86` 플래그를 설정한 후 응용 프로그램을 64비트 컴퓨터에서 실행하면 응용 프로그램이 기본적으로 실행되지 않고 WOW 하위 시스템에서 실행됩니다.  
   
  64비트 Windows 운영 체제:  
   
--   `-platform:x86`으로 컴파일된 어셈블리는 WOW64에서 실행되는 32비트 CLR에서 실행됩니다.  
+- `-platform:x86`으로 컴파일된 어셈블리는 WOW64에서 실행되는 32비트 CLR에서 실행됩니다.  
   
--   `-platform:anycpu`로 컴파일된 실행 파일은 64비트 CLR에서 실행됩니다.  
+- `-platform:anycpu`로 컴파일된 실행 파일은 64비트 CLR에서 실행됩니다.  
   
--   `-platform:anycpu`로 컴파일된 DLL은 이 DLL이 로드된 프로세스와 동일한 CLR에서 실행됩니다.  
+- `-platform:anycpu`로 컴파일된 DLL은 이 DLL이 로드된 프로세스와 동일한 CLR에서 실행됩니다.  
   
--   `-platform:anycpu32bitpreferred`로 컴파일된 실행 파일은 32비트 CLR에서 실행됩니다.  
+- `-platform:anycpu32bitpreferred`로 컴파일된 실행 파일은 32비트 CLR에서 실행됩니다.  
   
  64 비트 버전의 Windows에서 실행 되도록 응용 프로그램을 개발 하는 방법에 대 한 자세한 내용은 참조 하세요. [64 비트 응용 프로그램](../../../framework/64-bit-apps.md)합니다.  
   

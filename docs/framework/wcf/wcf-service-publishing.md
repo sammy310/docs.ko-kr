@@ -3,11 +3,11 @@ title: WCF 서비스 게시
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
 ms.openlocfilehash: 33725c2f393529a7e59ed0b3ae1db01a359fb9a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791211"
 ---
 # <a name="wcf-service-publishing"></a>WCF 서비스 게시
 
@@ -17,19 +17,19 @@ Windows Communication Foundation (WCF) 서비스 게시 사용 하면 실제로 
 
 WCF 서비스 라이브러리 템플릿 및 다음을 포함 하는 해당 항목 템플릿 집합에서 만든 WCF 서비스 게시를 WCF 서비스 게시 지원:
 
--   WCF 서비스 라이브러리 템플릿과 항목 템플릿
+- WCF 서비스 라이브러리 템플릿과 항목 템플릿
 
--   배포 서비스 라이브러리
+- 배포 서비스 라이브러리
 
 이러한 서비스 템플릿을 선택 하 여 찾을 수 있습니다 **파일** > **새 프로젝트** > [**Visual Basic** 하거나 **시각적 C#** ] > **WCF**합니다. (WCF 워크플로 서비스 응용 프로그램 및 WCF 서비스 응용 프로그램 포함)이이 위치에서 다른 WCF 템플릿의 경우 게시할 수 있습니다 사용 하 여 [한 번의 클릭으로 웹 응용 프로그램에 대 한 게시](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))합니다.
 
 다음과 같은 대상 위치에 서비스를 게시할 수 있습니다.
 
--   로컬 IIS
+- 로컬 IIS
 
--   파일 시스템
+- 파일 시스템
 
--   FTP 사이트
+- FTP 사이트
 
 ## <a name="using-wcf-service-publishing"></a>WCF 서비스 게시 사용
 
@@ -63,9 +63,9 @@ WCF 서비스 라이브러리 템플릿 및 다음을 포함 하는 해당 항�
 
  생성된 된 Web.config 파일에는 호스팅, 웹 및 다음 변경 내용 사용 하 여 WCF 서비스 라이브러리에 대 한 App.config의 내용에 대 한 유용한 웹 섹션이 포함 되어 있습니다.
 
--   기본 주소는 제외됩니다.
+- 기본 주소는 제외됩니다.
 
--   `<diagnostics>` 요소의 설정은 대상 플랫폼의 추적 설정을 유지하기 위해 제외됩니다.
+- `<diagnostics>` 요소의 설정은 대상 플랫폼의 추적 설정을 유지하기 위해 제외됩니다.
 
 ## <a name="publishing-wcf-services-with-non-http-bindings-to-iis"></a>HTTP가 아닌 바인딩을 사용하여 WCF 서비스를 IIS에 게시
  Iis 7.0을 사용 하는 경우 나중에 IIS에 HTTP가 아닌 바인딩을 사용 하 여 WCF 서비스를 게시할 수 있습니다. 몇 가지 사전 구성 작업을 수행해야 합니다. 자세한 내용은 항목을 참조 하세요 [Windows Process Activation Service에서 호스팅](../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)합니다.

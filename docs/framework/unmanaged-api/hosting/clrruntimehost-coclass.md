@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8bae2d134c412023d0f126453b5285662d994c78
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789599"
 ---
 # <a name="clrruntimehost-coclass"></a>CLRRuntimeHost Coclass
 런타임에서 코드 실행을 관리 하기 위한 인터페이스를 제공 합니다.  

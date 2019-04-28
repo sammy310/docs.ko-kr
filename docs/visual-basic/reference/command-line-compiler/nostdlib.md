@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /nostdlib compiler option [Visual Basic]
 ms.assetid: 140381b8-dc96-4ad5-ae11-792c9ed0be4d
 ms.openlocfilehash: 4f3dc61a6e78b0fb2135d4132c53e7efc22447a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789053"
 ---
 # <a name="-nostdlib-visual-basic"></a>-nostdlib (Visual Basic)
 컴파일러가를 자동으로 표준 라이브러리를 참조 하지 않습니다.  

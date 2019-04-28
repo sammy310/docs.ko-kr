@@ -9,11 +9,11 @@ helpviewer_keywords:
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
 ms.openlocfilehash: 05cbe8b18a0d9635091b373d0acddb2ba665cc37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794313"
 ---
 # <a name="serialization-guidelines"></a>Serialization 지침
 이 문서에서는 serialize될 API를 디자인할 때 고려해야 할 지침을 보여 줍니다.  
@@ -32,22 +32,22 @@ ms.locfileid: "59317339"
   
 ## <a name="guidelines"></a>지침  
   
--   새로운 형식을 디자인할 때는 serialization을 고려해야 합니다.  
+- 새로운 형식을 디자인할 때는 serialization을 고려해야 합니다.  
   
      프로그램에서 형식의 인스턴스를 유지하거나 전송해야 할 수 있으므로 serialization은 형식에 대해 중요한 디자인 고려 사항입니다.  
   
 ### <a name="choosing-the-right-serialization-technology-to-support"></a>지원할 올바른 Serialization 기술 선택  
  지정된 형식은 하나 이상의 serialization 기술을 지원하거나 serialization 기술을 전혀 지원하지 않을 수 있습니다.  
   
--   형식의 인스턴스가 웹 서비스에서 유지되거나 사용되어야 하는 경우 *데이터 계약 serialization*을 지원하는 것이 좋습니다.  
+- 형식의 인스턴스가 웹 서비스에서 유지되거나 사용되어야 하는 경우 *데이터 계약 serialization*을 지원하는 것이 좋습니다.  
   
--   형식이 직렬화될 때 생성되는 XML 형식을 더 구체적으로 제어해야 하는 경우 데이터 계약 serialization 대신 또는 데이터 계약 serialization과 함께 *XML serialization*을 지원하는 것이 좋습니다.  
+- 형식이 직렬화될 때 생성되는 XML 형식을 더 구체적으로 제어해야 하는 경우 데이터 계약 serialization 대신 또는 데이터 계약 serialization과 함께 *XML serialization*을 지원하는 것이 좋습니다.  
   
      이러한 지원은 XML 특성을 생성하는 등의 목적으로 데이터 계약 serialization에서 지원하지 않는 XML 구문을 사용해야 하는 일부 상호 운용성 시나리오에 필요할 수 있습니다.  
   
--   형식의 인스턴스에서 .NET Remoting 경계 간에 이동해야 하는 경우 *런타임 serialization*을 지원하는 것이 좋습니다.  
+- 형식의 인스턴스에서 .NET Remoting 경계 간에 이동해야 하는 경우 *런타임 serialization*을 지원하는 것이 좋습니다.  
   
--   일반적인 지속성 이유만으로는 런타임 serialization 또는 XML serialization을 지원하지 마십시오. 대신 데이터 계약 serialization을 사용하십시오.  
+- 일반적인 지속성 이유만으로는 런타임 serialization 또는 XML serialization을 지원하지 마십시오. 대신 데이터 계약 serialization을 사용하십시오.  
   
 #### <a name="supporting-data-contract-serialization"></a>데이터 계약 Serialization 지원  
  형식은 형식에 <xref:System.Runtime.Serialization.DataContractAttribute>를 적용하고 형식의 멤버(필드 및 속성)에 <xref:System.Runtime.Serialization.DataMemberAttribute>를 적용하여 데이터 계약 serialization을 지원할 수 있습니다.  

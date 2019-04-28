@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 321298ce942b35d11a861c87cdf6b8714179ea97
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786310"
 ---
 # <a name="icordebugterminate-method"></a>ICorDebug::Terminate 메서드
 종료는 `ICorDebug` 개체입니다.  

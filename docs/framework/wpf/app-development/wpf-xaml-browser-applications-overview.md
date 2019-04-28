@@ -11,11 +11,11 @@ helpviewer_keywords:
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
 ms.openlocfilehash: 81ae93871fa5e3fc46382ee9a1810808574fb043
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785882"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 브라우저 애플리케이션 개요
 <a name="introduction"></a>
@@ -23,15 +23,15 @@ ms.locfileid: "59320134"
   
  이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   
--   [새 XBAP(XAML 브라우저 응용 프로그램) 만들기](#creating_a_new_xaml_browser_application_xbap)  
+- [새 XBAP(XAML 브라우저 응용 프로그램) 만들기](#creating_a_new_xaml_browser_application_xbap)  
   
--   [XBAP 배포](#deploying_a_xbap)  
+- [XBAP 배포](#deploying_a_xbap)  
   
--   [호스트 웹 페이지와 통신](#communicating_with_the_host_web_page)  
+- [호스트 웹 페이지와 통신](#communicating_with_the_host_web_page)  
   
--   [XBAP 보안 고려 사항](#xbap_security_considerations)  
+- [XBAP 보안 고려 사항](#xbap_security_considerations)  
   
--   [XBAP 시작 시간 성능 고려 사항](#xbap_start_time_performance_considerations)  
+- [XBAP 시작 시간 성능 고려 사항](#xbap_start_time_performance_considerations)  
   
 <a name="creating_a_new_xaml_browser_application_xbap"></a>   
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>새 XBAP(XAML 브라우저 애플리케이션) 만들기  
@@ -131,17 +131,17 @@ ms.locfileid: "59320134"
   
  사용 하는 경우는 <xref:System.Windows.Controls.WebBrowser> WPF 응용 프로그램에서 컨트롤 원시 WebBrowser ActiveX 컨트롤을 내부적으로 인스턴스화합니다. 애플리케이션이 Internet Explorer에서 실행되는 부분 신뢰 XBAP인 경우 ActiveX 컨트롤은 Internet Explorer 프로세스의 전용 스레드에서 실행됩니다. 따라서 다음 제한 사항이 적용됩니다.  
   
--   <xref:System.Windows.Controls.WebBrowser> 컨트롤 보안 제한 사항을 포함 하 여 호스트 브라우저와 유사한 동작을 제공 해야 합니다. 이러한 보안 제한 사항 중 일부는 Internet Explorer 보안 설정을 통해 제어할 수 있습니다. 자세한 내용은 [보안](../security-wpf.md)을 참조하세요.  
+- <xref:System.Windows.Controls.WebBrowser> 컨트롤 보안 제한 사항을 포함 하 여 호스트 브라우저와 유사한 동작을 제공 해야 합니다. 이러한 보안 제한 사항 중 일부는 Internet Explorer 보안 설정을 통해 제어할 수 있습니다. 자세한 내용은 [보안](../security-wpf.md)을 참조하세요.  
   
--   XBAP가 HTML 페이지의 도메인 간에 로드되면 예외가 throw됩니다.  
+- XBAP가 HTML 페이지의 도메인 간에 로드되면 예외가 throw됩니다.  
   
--   입력은 WPF에서 별도 스레드에서 <xref:System.Windows.Controls.WebBrowser>을 키보드 입력을 가로챌 수 없으며 IME 상태가 공유 되지 않습니다.  
+- 입력은 WPF에서 별도 스레드에서 <xref:System.Windows.Controls.WebBrowser>을 키보드 입력을 가로챌 수 없으며 IME 상태가 공유 되지 않습니다.  
   
--   탐색 시간 또는 순서는 다른 스레드에서 실행 중인 ActiveX 컨트롤로 인해 달라질 수 있습니다. 예를 들어 페이지 탐색은 다른 탐색 요청을 시작할 때 항상 취소되는 것은 아닙니다.  
+- 탐색 시간 또는 순서는 다른 스레드에서 실행 중인 ActiveX 컨트롤로 인해 달라질 수 있습니다. 예를 들어 페이지 탐색은 다른 탐색 요청을 시작할 때 항상 취소되는 것은 아닙니다.  
   
--   WPF 애플리케이션은 별도의 스레드에서 실행되므로 사용자 지정 ActiveX 컨트롤이 통신하는 데 문제가 있을 수 있습니다.  
+- WPF 애플리케이션은 별도의 스레드에서 실행되므로 사용자 지정 ActiveX 컨트롤이 통신하는 데 문제가 있을 수 있습니다.  
   
--   <xref:System.Windows.Interop.HwndHost.MessageHook> 때문에 발생 하지 않습니다 <xref:System.Windows.Interop.HwndHost> 서브 클래스를 다른 스레드 또는 프로세스에서 실행 되는 창을 수 없습니다.  
+- <xref:System.Windows.Interop.HwndHost.MessageHook> 때문에 발생 하지 않습니다 <xref:System.Windows.Interop.HwndHost> 서브 클래스를 다른 스레드 또는 프로세스에서 실행 되는 창을 수 없습니다.  
   
 ### <a name="creating-a-full-trust-xbap"></a>완전 신뢰 XBAP 만들기  
  XBAP에 완전 신뢰가 필요한 경우 이 권한을 사용하도록 프로젝트를 변경할 수 있습니다. 다음 단계는 완전 권한을 설정하는 방법을 설명합니다.  
@@ -152,9 +152,9 @@ ms.locfileid: "59320134"
   
  이 설정으로 다음이 변경됩니다.  
   
--   프로젝트 파일에서 `<TargetZone>` 요소 값이 `Custom`으로 변경됩니다.  
+- 프로젝트 파일에서 `<TargetZone>` 요소 값이 `Custom`으로 변경됩니다.  
   
--   응용 프로그램 매니페스트 (app.manifest)에 `Unrestricted="true"` 특성에 추가 됩니다는 '<xref:System.Security.PermissionSet> 요소입니다.  
+- 응용 프로그램 매니페스트 (app.manifest)에 `Unrestricted="true"` 특성에 추가 됩니다는 '<xref:System.Security.PermissionSet> 요소입니다.  
   
     ```xml
     <PermissionSet class="System.Security.PermissionSet"   

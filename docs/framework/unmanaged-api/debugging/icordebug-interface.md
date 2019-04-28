@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 193232ce1006a9cf209db9330343386404948440
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786336"
 ---
 # <a name="icordebug-interface"></a>ICorDebug 인터페이스
 공용 언어 런타임 (CLR) 환경에서 응용 프로그램을 디버그 하는 데 사용할 수 있는 방법을 제공 합니다.  

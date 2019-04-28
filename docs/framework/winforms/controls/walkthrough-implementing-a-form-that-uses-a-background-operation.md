@@ -16,11 +16,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
 ms.openlocfilehash: 6399fb853162174895d892399fd3eb5226101515
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792199"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>연습: 백그라운드 작업을 사용하는 양식 구현
 를 완료 하려면 시간이 오래 걸리는 작업을 해야 하 고 원하지 않는 사용자 인터페이스 (UI) 응답을 중지 하거나 사용할 수 있습니다 "중단" 하는 경우는 <xref:System.ComponentModel.BackgroundWorker> 다른 스레드에서 작업을 실행 하는 클래스입니다.  
@@ -29,13 +29,13 @@ ms.locfileid: "59343404"
   
  이 연습에서 설명하는 작업은 다음과 같습니다.  
   
--   Windows 기반 애플리케이션 만들기  
+- Windows 기반 애플리케이션 만들기  
   
--   만들기는 <xref:System.ComponentModel.BackgroundWorker> 폼에서  
+- 만들기는 <xref:System.ComponentModel.BackgroundWorker> 폼에서  
   
--   비동기 이벤트 처리기 추가  
+- 비동기 이벤트 처리기 추가  
   
--   진행률 보고 및 취소에 대한 지원 추가  
+- 진행률 보고 및 취소에 대한 지원 추가  
   
  이 예제에서 사용 되는 코드의 전체 목록은 참조 하세요. [방법: 백그라운드 작업을 사용 하는 폼 구현](how-to-implement-a-form-that-uses-a-background-operation.md)합니다.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "59343404"
   
 #### <a name="to-create-a-backgroundworker-with-the-designer"></a>디자이너로 BackgroundWorker를 만들려면  
   
--   **구성 요소** 탭을 **도구 상자**를 끌어를 <xref:System.ComponentModel.BackgroundWorker> 폼에.  
+- **구성 요소** 탭을 **도구 상자**를 끌어를 <xref:System.ComponentModel.BackgroundWorker> 폼에.  
   
 ## <a name="adding-asynchronous-event-handlers"></a>비동기 이벤트 처리기 추가  
  에 대 한 이벤트 처리기를 추가할 준비가 된 <xref:System.ComponentModel.BackgroundWorker> 구성 요소의 비동기 이벤트입니다. 백그라운드로 실행되는 시간이 많이 소요되는 작업(예: 피보나치 수 계산)은 이러한 이벤트 처리기 중 하나에 의해 호출됩니다.  
@@ -145,7 +145,7 @@ ms.locfileid: "59343404"
   
 #### <a name="to-test-your-project"></a>프로젝트를 테스트하려면  
   
--   F5 키를 눌러 애플리케이션을 컴파일하고 실행합니다.  
+- F5 키를 눌러 애플리케이션을 컴파일하고 실행합니다.  
   
      계산 백그라운드에서 실행 되는 동안 표시 됩니다는 <xref:System.Windows.Forms.ProgressBar> 완료 될 때까지 계산 진행률이 표시 됩니다. 보류 중인 작업도 취소할 수 있습니다.  
   
@@ -154,11 +154,11 @@ ms.locfileid: "59343404"
 ## <a name="next-steps"></a>다음 단계  
  사용 하는 폼 구현 했으므로 <xref:System.ComponentModel.BackgroundWorker> 백그라운드에서 계산을 실행 하는 구성 요소가 비동기 작업에 대 한 다른 가능성을 살펴볼 수 있습니다.  
   
--   사용 하 여 <xref:System.ComponentModel.BackgroundWorker> 여러 동시 작업에 대 한 개체입니다.  
+- 사용 하 여 <xref:System.ComponentModel.BackgroundWorker> 여러 동시 작업에 대 한 개체입니다.  
   
--   다중 스레드 응용 프로그램을 디버깅 하려면 참조 [방법: 스레드 창 사용](/visualstudio/debugger/how-to-use-the-threads-window)합니다.  
+- 다중 스레드 응용 프로그램을 디버깅 하려면 참조 [방법: 스레드 창 사용](/visualstudio/debugger/how-to-use-the-threads-window)합니다.  
   
--   비동기 프로그래밍 모델을 지원하는 사용자 고유의 구성 요소를 구현합니다. 자세한 내용은 [이벤트 기반 비동기 패턴 개요](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)를 참조하세요.  
+- 비동기 프로그래밍 모델을 지원하는 사용자 고유의 구성 요소를 구현합니다. 자세한 내용은 [이벤트 기반 비동기 패턴 개요](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)를 참조하세요.  
   
     > [!CAUTION]
     >  모든 종류의 다중 스레딩을 사용할 때는 매우 심각하고 복잡한 버그에 잠재적으로 노출됩니다. 다중 스레딩을 사용하는 솔루션을 구현하기 전에 [관리되는 스레딩을 구현하는 최선의 방법](../../../standard/threading/managed-threading-best-practices.md)을 참조하세요.  

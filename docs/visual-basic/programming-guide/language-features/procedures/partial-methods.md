@@ -12,11 +12,11 @@ helpviewer_keywords:
 - inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
 ms.openlocfilehash: 765a667f18340c53909c3ff1e9fcc5f2ffc0f9bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791939"
 ---
 # <a name="partial-methods-visual-basic"></a>부분 메서드(Visual Basic)
 부분 메서드는 개발자가 코드에 사용자 지정 논리를 삽입할 수를 사용 합니다. 일반적으로 코드는 디자이너에서 생성 된 클래스의 일부입니다. 부분 메서드는 코드 생성기에서 만든 partial 클래스에 정의 되어 있고 변경 된 내용이 알림을 제공 되는 일반적으로 합니다. 개발자가 변경에 대 한 응답으로 사용자 지정 동작을 지정할 수 있도록 합니다.  
@@ -33,11 +33,11 @@ End Sub
   
  정의는 다음 조건을 충족 해야 합니다.  
   
--   메서드는 이어야 합니다는 `Sub`이 아니라는 `Function`합니다.  
+- 메서드는 이어야 합니다는 `Sub`이 아니라는 `Function`합니다.  
   
--   메서드의 본문 비어 있어야 합니다.  
+- 메서드의 본문 비어 있어야 합니다.  
   
--   액세스 한정자 여야 합니다 `Private`합니다.  
+- 액세스 한정자 여야 합니다 `Private`합니다.  
   
 ## <a name="implementation"></a>구현  
  구현에서는 주로 부분 메서드의 본문 입력 구성 됩니다. 구현 정의에서 별도 partial 클래스에는 일반적으로 고 생성된 된 코드를 확장 하 려 하는 개발자에 의해 기록 됩니다.  

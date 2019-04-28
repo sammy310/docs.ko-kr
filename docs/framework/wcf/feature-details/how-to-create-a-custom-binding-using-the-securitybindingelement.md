@@ -8,11 +8,11 @@ helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
 ms.openlocfilehash: 7966c1fe4cd94408455c6bb146fdd3ea55757702
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787857"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기
 Windows Communication Foundation (WCF)를 구성할 수 있지만 WCF 지 원하는 모든 보안 옵션을 구성할 때 완전 한 유연성을 제공 하지 않습니다는 여러 시스템 제공 바인딩이 포함 되어 있습니다. 이 항목에서는 개별 바인딩 요소에서 직접 사용자 지정 바인딩을 만드는 방법에 대해 설명하고, 이와 같은 바인딩을 만들 때 지정할 수 있는 일부 보안 설정에 대해 강조합니다. 사용자 지정 바인딩을 만드는 방법에 대 한 자세한 내용은 참조 하세요. [바인딩 확장](../../../../docs/framework/wcf/extending/extending-bindings.md)합니다.  
@@ -32,22 +32,22 @@ Windows Communication Foundation (WCF)를 구성할 수 있지만 WCF 지 원하
   
  전송 수준 보안이 제공될 경우 다음과 같은 추가 클래스가 사용됩니다.  
   
--   <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
   
--   <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
 ## <a name="required-binding-elements"></a>필요한 바인딩 요소  
  바인딩에 결합하여 사용할 수 있는 바인딩 요소는 많습니다. 그러나 이러한 조합이 모두 올바른 것은 아닙니다. 이 단원에서는 보안 바인딩에 있어야 하는 필수 요소에 대해 설명합니다.  
   
  올바른 보안 바인딩은 다음을 비롯한 많은 요인에 의해 결정됩니다.  
   
--   보안 모드  
+- 보안 모드  
   
--   전송 프로토콜  
+- 전송 프로토콜  
   
--   계약에 지정된 MEP(메시지 교환 패턴)  
+- 계약에 지정된 MEP(메시지 교환 패턴)  
   
  다음 표에서는 위 요인의 조합별로 올바른 바인딩 요소 스택 구성을 보여 줍니다. 이는 최소 요구 사항입니다. 메시지 인코딩 바인딩 요소, 트랜잭션 바인딩 요소 및 기타 바인딩 요소와 같은 추가 바인딩 요소를 바인딩에 추가할 수 있습니다.  
   
