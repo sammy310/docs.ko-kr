@@ -3,11 +3,11 @@ title: GROUPPARTITION(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d0482e9b-086c-451c-9dfa-ccb024a9efb6
 ms.openlocfilehash: 9f0f917380e6422da753282216529580f87f1a1a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774727"
 ---
 # <a name="grouppartition-entity-sql"></a>GROUPPARTITION(Entity SQL)
 집계가 관련된 현재 그룹 파티션에서 예측된 인수 값의 컬렉션을 반환합니다. `GroupPartition` 집계는 그룹 기반 집계이며 컬렉션 기반 형식을 포함하지 않습니다.  

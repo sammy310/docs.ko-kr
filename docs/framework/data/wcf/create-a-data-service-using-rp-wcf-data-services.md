@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: 7315c6d8-f452-4fb2-a0c1-76ab0593c146
 ms.openlocfilehash: 233b17de17b7f50547b2f4fbf6a543d7258183cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765910"
 ---
 # <a name="how-to-create-a-data-service-using-the-reflection-provider-wcf-data-services"></a>방법: 리플렉션 공급자 (WCF Data Services)를 사용 하 여 데이터 서비스 만들기
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 사용하면 클래스가 <xref:System.Linq.IQueryable%601> 인터페이스를 구현하는 개체로 노출되는 한 임의의 클래스를 기반으로 하여 데이터 모델을 정의할 수 있습니다. 자세한 내용은 [데이터 서비스 공급자](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)합니다.  

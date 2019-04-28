@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Subclass attribute in XAML [XAML Services]
 ms.assetid: 99f66072-8107-4362-ab99-8171dc83b469
 ms.openlocfilehash: 850fe8acf9e47149bd385e78b30e04ba77d7a8b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938868"
 ---
 # <a name="xsubclass-directive"></a>x:Subclass 지시문
 XAML 태그 컴파일 동작을 수정 하는 경우 `x:Class` 도 제공 됩니다. 기반이 되는 partial 클래스를 만드는 대신 `x:Class`에 제공 된 `x:Class` 중간 클래스로 만들어집니다 다음 제공 된 파생된 클래스는 기반으로 해야 하 고 `x:Class`입니다.  

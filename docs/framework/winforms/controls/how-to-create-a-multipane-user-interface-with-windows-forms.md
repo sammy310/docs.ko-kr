@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
 ms.openlocfilehash: 8650ba3b8011e50779080e31d94727609f2d08f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747097"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>방법: Windows Forms를 사용하여 다중 창 사용자 인터페이스 만들기
 다음 절차를 사용 하 여 Microsoft Outlook에서 사용 하는 비슷한 다중 창 사용자 인터페이스를 만듭니다는 **폴더** 목록에는 **메시지** 창 및 **미리보기** 창입니다. 이 정렬 폼에 컨트롤을 도킹을 통해 주로 수행 됩니다.  

@@ -3,11 +3,11 @@ title: 스트리밍 피드 샘플
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
 ms.openlocfilehash: 8b48bc5ec65d6ca30d6ffeed7ca68dc246f74d94
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779290"
 ---
 # <a name="streaming-feeds-sample"></a>스트리밍 피드 샘플
 이 샘플에서는 많은 수의 항목이 포함된 배포 피드를 관리하는 방법을 보여 줍니다. 서버에서 이 샘플은 항목을 네트워크 스트림에 쓰기 바로 전까지 피드 내에 개별 <xref:System.ServiceModel.Syndication.SyndicationItem> 개체를 만드는 동작을 지연시키는 방법을 보여 줍니다.  

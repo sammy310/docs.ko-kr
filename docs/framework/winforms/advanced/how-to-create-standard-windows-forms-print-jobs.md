@@ -11,11 +11,11 @@ helpviewer_keywords:
 - printing [Visual Basic], in Windows applications
 ms.assetid: 03342b90-9cfe-40b2-838b-b479a13c5dea
 ms.openlocfilehash: 816da93218e20f73f16c14769ed1a549dd3d8eb3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937659"
 ---
 # <a name="how-to-create-standard-windows-forms-print-jobs"></a>방법: 표준 Windows Forms 인쇄 작업 만들기
 Windows Forms의 인쇄의 기반은는 <xref:System.Drawing.Printing.PrintDocument> 구성 요소-구체적으로 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 이벤트입니다. 처리 하는 코드를 작성 하 여는 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 이벤트 인쇄 대상 및 인쇄 하는 방법을 지정할 수 있습니다.  

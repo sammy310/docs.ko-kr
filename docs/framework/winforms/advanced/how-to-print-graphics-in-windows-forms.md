@@ -10,11 +10,11 @@ helpviewer_keywords:
 - printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
 ms.openlocfilehash: 55459482d0994c581164128b17c08a7ca90d0717
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756564"
 ---
 # <a name="how-to-print-graphics-in-windows-forms"></a>방법: Windows Forms에서 그래픽 인쇄
 대부분의 경우 Windows 기반 응용 프로그램의 그래픽 인쇄 하려고 합니다. <xref:System.Drawing.Graphics> 클래스는 화면이 나 프린터와 같은 장치에 개체를 그리기 위한 메서드를 제공 합니다.  

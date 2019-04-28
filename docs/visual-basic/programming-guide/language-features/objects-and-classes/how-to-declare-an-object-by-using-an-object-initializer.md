@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
 ms.openlocfilehash: 775c40cbb62272f913297d5a58914a0c82c5a7d7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780837"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>방법: 개체 이니셜라이저 (Visual Basic)를 사용 하 여 개체 선언
 개체 이니셜라이저를 사용 하 여 선언 하 고 단일 문으로 클래스의 인스턴스를 인스턴스화할 수 있습니다. 또한 매개 변수화 된 생성자를 호출 하지 않고 동시에, 하나 이상의 멤버 인스턴스를 초기화할 수 있습니다.  

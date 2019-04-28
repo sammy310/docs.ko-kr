@@ -3,11 +3,11 @@ title: ODBC 스키마 컬렉션
 ms.date: 03/30/2017
 ms.assetid: 1bb126a5-ceec-4649-a4bc-8aa19e801046
 ms.openlocfilehash: ffe80120ceffbe29c0a117cf1194860c5782be8c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772049"
 ---
 # <a name="odbc-schema-collections"></a>ODBC 스키마 컬렉션
 
@@ -19,7 +19,7 @@ Microsoft SQL Server ODBC Driver에서는 공통 스키마 컬렉션 외에도 �
 
 - Tables
 
-- Indexes
+- 인덱스
 
 - Columns
 
@@ -29,7 +29,7 @@ Microsoft SQL Server ODBC Driver에서는 공통 스키마 컬렉션 외에도 �
 
 - ProcedureParameters
 
-- 뷰
+- 보기
 
 ### <a name="tables-and-views"></a>Tables 및 Views
 
@@ -41,7 +41,7 @@ Microsoft SQL Server ODBC Driver에서는 공통 스키마 컬렉션 외에도 �
 |TABLE_TYPE|문자열|
 |REMARKS|문자열|
 
-### <a name="indexes"></a>Indexes
+### <a name="indexes"></a>인덱스
 
 |열 이름|데이터 형식|
 |----------------|--------------|
@@ -168,9 +168,9 @@ Microsoft SQL Server Oracle ODBC Driver에서는 공통 스키마 컬렉션 외�
 
 - ProcedureParameters
 
-- 뷰
+- 보기
 
-- Indexes
+- 인덱스
 
 ### <a name="tables-and-views"></a>Tables 및 Views
 
@@ -239,7 +239,7 @@ Microsoft Jet ODBC Driver                                             .
 
 - Tables
 
-- Indexes
+- 인덱스
 
 - Columns
 
@@ -249,7 +249,7 @@ Microsoft Jet ODBC Driver                                             .
 
 - ProcedureParameters
 
-- 뷰
+- 보기
 
 ### <a name="tables-and-views"></a>Tables 및 Views
 

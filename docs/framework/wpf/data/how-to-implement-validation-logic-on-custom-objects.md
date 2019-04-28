@@ -11,11 +11,11 @@ helpviewer_keywords:
 - custom objects [WPF], implementing validation logic on
 ms.assetid: 751fda9b-44f9-4d63-b4f2-1df07ac41e0f
 ms.openlocfilehash: 8520504757e9e9ec9557b84ca2608b4cb99daf62
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931402"
 ---
 # <a name="how-to-implement-validation-logic-on-custom-objects"></a>방법: 사용자 지정 개체에 대한 유효성 검사 논리 구현
 이 예제에서는 사용자 지정 개체에서 유효성 검사 논리를 구현 하 고 다음에 바인딩하는 방법을 보여 줍니다.  

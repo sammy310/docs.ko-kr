@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 090183cad17aff6faf5e79639eadff086c1a26ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797464"
 ---
 # <a name="isymunmanagedwriterabort-method"></a>ISymUnmanagedWriter::Abort 메서드
 기호 저장소에 기호를 커밋하지 않고 기호 작성기를 닫습니다. 이 호출 후 기호 작성기를 추가로 업데이트할 무효화 됩니다. 기호 작성기를 닫고 기호를 커밋를 사용 합니다 [isymunmanagedwriter:: Close](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-close-method.md) 메서드 대신 합니다.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
 ms.openlocfilehash: d05e071b97c9a1f3043949a6619a187dd418f9b7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793681"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>트랜잭션 범위를 사용하여 암시적 트랜잭션 구현
 <xref:System.Transactions.TransactionScope> 클래스는 트랜잭션 자체와 상호 작용할 필요 없이 코드 블록을 트랜잭션에 참여하는 것으로 표시하는 단순한 방법을 제공합니다. 트랜잭션 범위는 자동으로 앰비언트 트랜잭션을 선택하고 관리할 수 있습니다. 사용하기 쉽고 효율적이므로 트랜잭션 응용 프로그램을 개발할 때는 <xref:System.Transactions.TransactionScope> 클래스를 사용하는 것이 좋습니다.  
@@ -71,11 +71,11 @@ void SomeMethod()
   
  <xref:System.Transactions.TransactionScope> 개체에는 다음 세 가지 옵션이 있습니다.  
   
--   앰비언트 트랜잭션에 참여하거나 앰비언트 트랜잭션이 없는 경우 새로 만듭니다.  
+- 앰비언트 트랜잭션에 참여하거나 앰비언트 트랜잭션이 없는 경우 새로 만듭니다.  
   
--   새 루트 범위로 설정합니다. 즉, 새 트랜잭션을 시작하고 해당 트랜잭션이 자체 범위 내부의 새 앰비언트 트랜잭션이 되도록 합니다.  
+- 새 루트 범위로 설정합니다. 즉, 새 트랜잭션을 시작하고 해당 트랜잭션이 자체 범위 내부의 새 앰비언트 트랜잭션이 되도록 합니다.  
   
--   트랜잭션에 참여하지 않습니다. 이렇게 하면 앰비언트 트랜잭션이 없습니다.  
+- 트랜잭션에 참여하지 않습니다. 이렇게 하면 앰비언트 트랜잭션이 없습니다.  
   
  <xref:System.Transactions.TransactionScopeOption.Required>를 사용하여 범위를 인스턴스화하고 앰비언트 트랜잭션이 있는 경우 범위가 해당 트랜잭션에 참여합니다. 반면 앰비언트 트랜잭션이 없으면 범위가 새 트랜잭션을 만들고 루트 범위가 됩니다. 기본값입니다. <xref:System.Transactions.TransactionScopeOption.Required>를 사용하는 경우 루트이든 앰비언트 트랜잭션에 참여하든 관계없이 범위 내부의 코드가 다르게 동작할 필요가 없습니다. 두 경우에서 모두 동일하게 작동해야 합니다.  
   

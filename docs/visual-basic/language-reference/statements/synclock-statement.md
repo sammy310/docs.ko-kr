@@ -10,11 +10,11 @@ helpviewer_keywords:
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
 ms.openlocfilehash: 3a12c3ac7250ee2904d571406d5008d451c9dc35
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783827"
 ---
 # <a name="synclock-statement"></a>SyncLock 문
 블록을 실행 하기 전에 문 블록에 대 한 배타적 잠금을 획득 합니다.  
@@ -46,25 +46,25 @@ End SyncLock
   
 ## <a name="rules"></a>규칙  
   
--   분기 합니다. 으로 분기할 수 없습니다는 `SyncLock` 블록 외부에서 차단 합니다.  
+- 분기 합니다. 으로 분기할 수 없습니다는 `SyncLock` 블록 외부에서 차단 합니다.  
   
--   잠금 개체 값입니다. 변수의 `lockobject` 일 수 없습니다 `Nothing`합니다. 사용 하기 전에 잠금 개체를 만들어야을 `SyncLock` 문입니다.  
+- 잠금 개체 값입니다. 변수의 `lockobject` 일 수 없습니다 `Nothing`합니다. 사용 하기 전에 잠금 개체를 만들어야을 `SyncLock` 문입니다.  
   
      값을 변경할 수 없습니다 `lockobject` 실행 하는 동안는 `SyncLock` 블록입니다. 메커니즘은 잠금 개체 그대로 유지 하는 필요 합니다.  
   
--   사용할 수 없습니다는 [Await](../../../visual-basic/language-reference/operators/await-operator.md) 연산자를 `SyncLock` 블록입니다.  
+- 사용할 수 없습니다는 [Await](../../../visual-basic/language-reference/operators/await-operator.md) 연산자를 `SyncLock` 블록입니다.  
   
 ## <a name="behavior"></a>동작  
   
--   메커니즘입니다. 스레드에 도달 하면 합니다 `SyncLock` 평가 문을 `lockobject` 식 식에서 반환 되는 개체에 대 한 배타적 잠금을 가져올 때까지 실행을 일시 중단 합니다. 다른 스레드가 도달 하면 합니다 `SyncLock` 문에서 가져오지 않습니다 잠금을 첫 번째 스레드가 실행 될 때까지 `End SyncLock` 문.  
+- 메커니즘입니다. 스레드에 도달 하면 합니다 `SyncLock` 평가 문을 `lockobject` 식 식에서 반환 되는 개체에 대 한 배타적 잠금을 가져올 때까지 실행을 일시 중단 합니다. 다른 스레드가 도달 하면 합니다 `SyncLock` 문에서 가져오지 않습니다 잠금을 첫 번째 스레드가 실행 될 때까지 `End SyncLock` 문.  
   
--   보호 된 데이터입니다. 경우 `lockobject` 은 `Shared` 변수는 배타적 잠금을 설정 하면 스레드 클래스의 모든 인스턴스에서 실행 합니다 `SyncLock` 다른 스레드가 실행 되는 동안 차단 합니다. 이 모든 인스턴스 간에 공유 되는 데이터를 보호 합니다.  
+- 보호 된 데이터입니다. 경우 `lockobject` 은 `Shared` 변수는 배타적 잠금을 설정 하면 스레드 클래스의 모든 인스턴스에서 실행 합니다 `SyncLock` 다른 스레드가 실행 되는 동안 차단 합니다. 이 모든 인스턴스 간에 공유 되는 데이터를 보호 합니다.  
   
      경우 `lockobject` 인스턴스 변수는 (되지 `Shared`), 잠금을 방지 실행의 현재 인스턴스에서 실행 하는 스레드는 `SyncLock` 동일한 인스턴스에 있는 다른 스레드와 동시에 블록입니다. 이 개별 인스턴스에 의해 유지 관리 하는 데이터를 보호 합니다.  
   
--   획득 및 해제 합니다. `SyncLock` 블록 처럼를 `Try...Finally` 는 생성 된 `Try` 블록에서 배타적 잠금을 획득 `lockobject` 및 `Finally` 차단 해제 합니다. 이 인해는 `SyncLock` 블록은 블록을 종료 하는 방법에 관계 없이 잠금 해제 합니다. 예외가 처리 되지 않은 경우에 마찬가지입니다.  
+- 획득 및 해제 합니다. `SyncLock` 블록 처럼를 `Try...Finally` 는 생성 된 `Try` 블록에서 배타적 잠금을 획득 `lockobject` 및 `Finally` 차단 해제 합니다. 이 인해는 `SyncLock` 블록은 블록을 종료 하는 방법에 관계 없이 잠금 해제 합니다. 예외가 처리 되지 않은 경우에 마찬가지입니다.  
   
--   프레임 워크를 호출 합니다. `SyncLock` 블록 획득 하 고 호출 하 여 배타적 잠금이 해제 합니다 `Enter` 및 `Exit` 의 메서드를 `Monitor` 클래스는 <xref:System.Threading> 네임 스페이스입니다.  
+- 프레임 워크를 호출 합니다. `SyncLock` 블록 획득 하 고 호출 하 여 배타적 잠금이 해제 합니다 `Enter` 및 `Exit` 의 메서드를 `Monitor` 클래스는 <xref:System.Threading> 네임 스페이스입니다.  
   
 ## <a name="programming-practices"></a>프로그래밍 방법  
  `lockobject` 식은 클래스에 단독으로 속해 있는 개체에 항상 평가 해야 합니다. 선언 해야 합니다는 `Private` 현재 인스턴스에 속한 데이터를 보호 하기 위해 개체 변수 또는 `Private Shared` 모든 인스턴스에 공통 된 데이터를 보호 하기 위해 개체 변수입니다.  

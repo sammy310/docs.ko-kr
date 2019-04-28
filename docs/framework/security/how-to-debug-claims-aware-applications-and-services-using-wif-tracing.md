@@ -4,55 +4,55 @@ ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
 ms.openlocfilehash: 43fa859aa84189817dffe74ecd72253ab9b82585
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940493"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>방법: WIF 추적을 사용하여 클레임 인식 애플리케이션 및 서비스 디버그
 ## <a name="applies-to"></a>적용 대상  
   
--   Microsoft® Windows® Identity Foundation(WIF)  
+- Microsoft® Windows® Identity Foundation(WIF)  
   
--   Service Trace Viewer 도구(SvcTraceViewer.exe)  
+- Service Trace Viewer 도구(SvcTraceViewer.exe)  
   
--   문제 해결 및 WIF 응용 프로그램 디버그  
+- 문제 해결 및 WIF 응용 프로그램 디버그  
   
 ## <a name="summary"></a>요약  
  이 방법에서는 WIF 추적을 구성하고 추적 로그를 수집하는 방법 및 추적 뷰어 도구를 사용하여 추적 로그를 분석하는 방법의 필수 단계를 설명합니다. WIF와 관련된 문제를 해결하는 데 필요한 작업에 추적 항목을 매핑하는 일반적인 방법을 제공합니다.  
   
 ## <a name="contents"></a>목차  
   
--   목표  
+- 목표  
   
--   단계 요약  
+- 단계 요약  
   
--   1단계 - Web.config 구성 파일을 사용하여 WIF 추적 구성  
+- 1단계 - Web.config 구성 파일을 사용하여 WIF 추적 구성  
   
--   2단계 - 추적 뷰어 도구를 사용하여 WIF 추적 파일 분석  
+- 2단계 - 추적 뷰어 도구를 사용하여 WIF 추적 파일 분석  
   
--   3단계 - WIF 관련 문제를 해결할 수 있는 솔루션 식별  
+- 3단계 - WIF 관련 문제를 해결할 수 있는 솔루션 식별  
   
--   관련 항목  
+- 관련 항목  
   
 ## <a name="objectives"></a>목표  
   
--   WIF 추적을 구성합니다.  
+- WIF 추적을 구성합니다.  
   
--   추적 뷰어 도구에서 추적 로그를 봅니다.  
+- 추적 뷰어 도구에서 추적 로그를 봅니다.  
   
--   추적 로그에서 WIF 관련 문제를 식별합니다.  
+- 추적 로그에서 WIF 관련 문제를 식별합니다.  
   
--   추적 로그에서 발견된 WIF 관련 문제에 정정 작업을 적용합니다.  
+- 추적 로그에서 발견된 WIF 관련 문제에 정정 작업을 적용합니다.  
   
 ## <a name="summary-of-steps"></a>단계 요약  
   
--   1단계 - Web.config 구성 파일을 사용하여 WIF 추적 구성  
+- 1단계 - Web.config 구성 파일을 사용하여 WIF 추적 구성  
   
--   2단계 - 추적 뷰어 도구를 사용하여 WIF 추적 파일 분석  
+- 2단계 - 추적 뷰어 도구를 사용하여 WIF 추적 파일 분석  
   
--   3단계 - WIF 관련 문제를 해결할 수 있는 솔루션 식별  
+- 3단계 - WIF 관련 문제를 해결할 수 있는 솔루션 식별  
   
 ## <a name="step-1--configure-wif-tracing-using-webconfig-configuration-file"></a>1단계 - Web.config 구성 파일을 사용하여 WIF 추적 구성  
  이 단계에서는 WIF가 해당 이벤트를 추적하고 추적 로그에 저장할 수 있도록 하는 변경 내용을 *Web.config* 파일의 구성 섹션에 추가합니다.  
@@ -108,4 +108,4 @@ ms.locfileid: "59321551"
   
 ## <a name="related-items"></a>관련 항목  
   
--   [Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)

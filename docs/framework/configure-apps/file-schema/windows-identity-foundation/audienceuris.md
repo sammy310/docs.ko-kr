@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 7a3d8515-d756-4afe-a22d-07cbe2217ee3
 author: BrucePerlerMS
 ms.openlocfilehash: 556c444d5e48e27036c4b49338f6e70de7ef5c5d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61750750"
 ---
 # <a name="audienceuris"></a>\<audienceUris>
 신뢰 당사자 (RP)의 식별자를 허용 되는 Uri 집합을 지정 합니다. 허용 되는 대상 Uri 중 하나에 대해 범위가 지정 되지 않는 한 토큰을 허용 하지 않습니다.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
 ms.openlocfilehash: 6d4a6c19dc0af8a2950754f32890ae9c3bcbad21
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769535"
 ---
 # <a name="listview-overview"></a>ListView 개요
 <xref:System.Windows.Controls.ListView> 컨트롤은 데이터 항목 집합을 다른 레이아웃 보기에 표시 하기 위한 인프라를 제공 합니다. 예를 들어 사용자가 데이터 항목을 표에 표시하고 해당 열을 정렬해야 할 수도 있습니다.  
@@ -58,9 +58,9 @@ ms.locfileid: "59186500"
 ## <a name="styling-a-listview-that-implements-a-gridview"></a>GridView를 구현하는 ListView에 스타일 지정  
  합니다 <xref:System.Windows.Controls.ListView> 컨트롤에 <xref:System.Windows.Controls.ListViewItem> 표시 되는 데이터 항목을 나타내는 개체입니다. 다음 속성을 사용하여 데이터 항목의 콘텐츠 및 스타일을 정의할 수 있습니다.  
   
--   에 <xref:System.Windows.Controls.ListView> 컨트롤을 사용 하 여 합니다 <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>, <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A>, 및 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> 속성입니다.  
+- 에 <xref:System.Windows.Controls.ListView> 컨트롤을 사용 하 여 합니다 <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>, <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A>, 및 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> 속성입니다.  
   
--   에 <xref:System.Windows.Controls.ListViewItem> 컨트롤을 사용 합니다 <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> 및 <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> 속성.  
+- 에 <xref:System.Windows.Controls.ListViewItem> 컨트롤을 사용 합니다 <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> 및 <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> 속성.  
   
  에 있는 셀 사이의 맞춤 문제를 방지 하려면를 <xref:System.Windows.Controls.GridView>를 사용 하지 마십시오는 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> 에 있는 항목의 너비에 영향을 주는 콘텐츠를 추가 하거나 속성을 설정 하는 <xref:System.Windows.Controls.ListView>. 설정 하면 정렬 문제가 발생할 수 있습니다 예를 들어 합니다 <xref:System.Windows.FrameworkElement.Margin%2A> 속성에는 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>합니다. 항목 너비에 영향을 주는 콘텐츠를 정의 하거나 속성을 지정 하는 <xref:System.Windows.Controls.GridView>의 속성을 사용 합니다 <xref:System.Windows.Controls.GridView> 클래스 및 관련된 클래스를 같은 <xref:System.Windows.Controls.GridViewColumn>합니다.  
   

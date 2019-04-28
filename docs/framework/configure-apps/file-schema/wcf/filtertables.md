@@ -3,11 +3,11 @@ title: <filterTables>
 ms.date: 03/30/2017
 ms.assetid: 41f1ac35-f559-473a-b2c3-8cc83a6a3831
 ms.openlocfilehash: c49c7cf3a196595556c2bf1b4ed4365bfe1e4cbf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704247"
 ---
 # <a name="filtertables"></a>\<filterTables>
 필터가 일치할 때 메시지를 보내기 위한 라우팅 필터와 대상 엔드포인트 간의 매핑을 포함하는 라우팅 테이블을 정의하기 위한 구성 섹션을 나타냅니다.  

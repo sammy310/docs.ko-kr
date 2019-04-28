@@ -4,39 +4,39 @@ ms.date: 03/30/2017
 ms.assetid: 5a9f5771-f5f6-4100-8501-406aa20d731a
 author: BrucePerlerMS
 ms.openlocfilehash: a357f153d61b6a8e1e105639bd68647dabdc26f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940480"
 ---
 # <a name="how-to-enable-token-replay-detection"></a>방법: 토큰 재생을 검색하도록 설정
 ## <a name="applies-to"></a>적용 대상  
   
--   Microsoft® Windows® Identity Foundation(WIF)  
+- Microsoft® Windows® Identity Foundation(WIF)  
   
--   ASP.NET® Web Forms  
+- ASP.NET® Web Forms  
   
 ## <a name="summary"></a>요약  
  이 방법은 WIF를 사용하는 ASP.NET 애플리케이션에서 토큰 재생 검색을 사용하도록 설정하기 위한 자세한 단계별 프로시저를 제공합니다. 또한 토큰 재생 검색이 사용되는지 확인하기 위해 애플리케이션을 테스트하는 방법에 대한 지침을 제공합니다. 이 방법 설명에 보안 토큰 서비스(STS)를 만들기 위한 자세한 지침은 없으며, 그 대신 ID 및 액세스 도구와 함께 제공되는 개발 STS를 사용합니다. 개발 STS가 실제 인증을 수행하는 것은 아니며, 테스트 목적으로만 사용됩니다. 이 방법을 완료하려면 ID 및 액세스 도구를 설치해야 합니다. 다음 위치에서 다운로드할 수 있습니다. [Id 및 액세스 도구](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 ## <a name="contents"></a>목차  
   
--   목표  
+- 목표  
   
--   개요  
+- 개요  
   
--   단계 요약  
+- 단계 요약  
   
--   1단계 – 간단한 ASP.NET Web Forms 애플리케이션 만들기 및 재생 검색 사용  
+- 1단계 – 간단한 ASP.NET Web Forms 애플리케이션 만들기 및 재생 검색 사용  
   
--   2단계 - 솔루션 테스트  
+- 2단계 - 솔루션 테스트  
   
 ## <a name="objectives"></a>목표  
   
--   ID 및 액세스 도구에서 WIF 및 개발 STS를 사용하는 간단한 ASP.NET 애플리케이션 만들기  
+- ID 및 액세스 도구에서 WIF 및 개발 STS를 사용하는 간단한 ASP.NET 애플리케이션 만들기  
   
--   토큰 재생 검색 사용 및 작동하는지 확인  
+- 토큰 재생 검색 사용 및 작동하는지 확인  
   
 ## <a name="overview"></a>개요  
  클라이언트에서 이미 사용한 STS 토큰을 사용하여 신뢰 당사자에 대해 인증을 시도할 경우 재생 공격이 발생합니다. 이 공격을 방지하기 위해 WIF에는 이전에 사용된 STS 토큰의 재생 검색 캐시가 포함됩니다. 사용하도록 설정된 재생 검색은 들어오는 요청의 토큰을 확인하고 토큰이 이전에 사용되었는지 여부를 확인합니다. 토큰이 이미 사용된 경우 요청이 거부되고 <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException> 예외가 throw됩니다.  
@@ -45,9 +45,9 @@ ms.locfileid: "59772923"
   
 ## <a name="summary-of-steps"></a>단계 요약  
   
--   1단계 – 간단한 ASP.NET Web Forms 애플리케이션 만들기 및 재생 검색 사용  
+- 1단계 – 간단한 ASP.NET Web Forms 애플리케이션 만들기 및 재생 검색 사용  
   
--   2단계 - 솔루션 테스트  
+- 2단계 - 솔루션 테스트  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application-and-enable-replay-detection"></a>1단계 – 간단한 ASP.NET Web Forms 애플리케이션 만들기 및 재생 검색 사용  
  이 단계에서는 새 ASP.NET Web Forms 애플리케이션을 만들고 *Web.config* 파일을 수정하여 재생 검색을 사용하도록 설정합니다.  

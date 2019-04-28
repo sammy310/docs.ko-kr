@@ -3,11 +3,11 @@ title: <protocolMapping>의 <add>
 ms.date: 03/30/2017
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
 ms.openlocfilehash: 85d09c920de2ca1ab4971551ff98ea58c4492f44
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704494"
 ---
 # <a name="add-of-protocolmapping"></a>\<추가 >의 \<protocolMapping >
 전송 프로토콜 체계 (예: http, net.tcp, net.pipe 등) 및 Windows Communication Foundation (WCF) 바인딩 간의 기본 프로토콜 매핑을 나타냅니다. 런타임에 기본 끝점을 만들 때 WCF 구성 된 매핑을 확인 하 고 특정 사용할 바인딩을 기준 주소를 결정 합니다.  

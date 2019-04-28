@@ -17,11 +17,11 @@ helpviewer_keywords:
 - baseline type [WPF]
 ms.assetid: cf3cb4e7-782a-4be7-b2d4-e0935e21e4e0
 ms.openlocfilehash: d586eef8d1308070da38a0a54c63c3ba64d30c8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776637"
 ---
 # <a name="how-to-create-a-text-decoration"></a>방법: 텍스트 장식 만들기
 <xref:System.Windows.TextDecoration> 개체가 시각적 장식 텍스트를 추가할 수 있습니다. 텍스트 장식의 네 가지가: 밑줄, 기준, 취소선 및 윗줄 합니다. 다음 예제에서는 텍스트를 기준으로 텍스트 장식의 위치를 보여 줍니다.  

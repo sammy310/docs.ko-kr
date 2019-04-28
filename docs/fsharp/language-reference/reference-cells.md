@@ -3,11 +3,11 @@ title: 참조 셀
 description: 설명 하는 방법 F# 참조 셀은 참조 의미론을 통해 변경할 수 있는 값을 만드는 데 사용할 수 있는 저장소 위치입니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: e4fcd3cf1abcf5f5e3b4d5439c9215b79ff8dbcd
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795405"
 ---
 # <a name="reference-cells"></a>참조 셀
 
@@ -54,8 +54,8 @@ let ref x = { contents = x }
 |--------------------------|-----------|----|----------|
 |`!`(역참조 연산자)|내부 값을 반환합니다.|`'a ref -> 'a`|`let (!) r = r.contents`|
 |`:=`(할당 연산자)|내부 값을 변경합니다.|`'a ref -> 'a -> unit`|`let (:=) r x = r.contents <- x`|
-|`ref`(연산자)|값을 새 참조 셀로 캡슐화합니다.|`'a -> 'a ref`|`let ref x = { contents = x }`|
-|`Value`(속성)|내부 값을 가져오거나 설정합니다.|`unit -> 'a`|`member x.Value = x.contents`|
+|`ref` (연산자)|값을 새 참조 셀로 캡슐화합니다.|`'a -> 'a ref`|`let ref x = { contents = x }`|
+|`Value` (속성)|내부 값을 가져오거나 설정합니다.|`unit -> 'a`|`member x.Value = x.contents`|
 |`contents`(레코드 필드)|내부 값을 가져오거나 설정합니다.|`'a`|`let ref x = { contents = x }`|
 
 내부 값에 액세스하는 데는 여러 가지 방법이 있습니다. 역참조 연산자(`!`)를 통해 반환되는 값은 할당 가능한 값이 아닙니다. 따라서 내부 값을 수정하는 경우에는 할당 연산자(`:=`)를 대신 사용해야 합니다.
@@ -79,7 +79,7 @@ C#프로그래머는 알아야 `ref` 에서 C# 와 동일한 작업을 아닙니
 
 값으로 표시 `mutable`에 자동으로 승격 될 수 있습니다 `'a ref` 클로저;에 의해 캡처된 참조 [값](values/index.md)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [F# 언어 참조](index.md)
 - [매개 변수 및 인수](parameters-and-arguments.md)

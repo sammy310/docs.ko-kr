@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: a03b153d-5ec6-4915-9031-6f0c3fd348be
 author: BrucePerlerMS
 ms.openlocfilehash: 0129c63fe17b63889a77ea1a56c0d7e657def859
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791731"
 ---
 # <a name="customcookiehandler"></a>\<customCookieHandler>
 사용자 지정 쿠키 처리기 형식을 설정합니다. 이 요소를 사용할 수만 있습니다 경우 합니다 `mode` 특성을 `<cookieHandler>` 요소는 "Custom" 합니다. 사용자 지정 형식에서 파생 되어야 합니다는 <xref:System.IdentityModel.Services.CookieHandler> 클래스입니다.  

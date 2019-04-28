@@ -16,11 +16,11 @@ helpviewer_keywords:
 - 3-D rendering [WPF]
 ms.assetid: 582a314e-e23d-4144-b45b-acbbd5579252
 ms.openlocfilehash: d2a0cdb7e49fb584d0824edcefe710313ba21d4a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934682"
 ---
 # <a name="introduction-to-wpf-in-visual-studio"></a>Visual Studio에서의 WPF 소개
 Visual Studio에서 Windows Presentation Foundation (WPF) Windows에서 기간 업무 데스크톱 응용 프로그램을 빌드하기 위한 통합된 프로그래밍 모델을 개발자에 게 제공 합니다.  

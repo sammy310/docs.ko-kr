@@ -5,13 +5,13 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: d165746ff2f03b0edc59a9284052323a0c1fd05b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784441"
 ---
-# <a name="serverless-design-examples"></a>서버 리스 디자인 예제
+# <a name="serverless-design-examples"></a>서버리스 디자인 예제
 
 에 대 한 많은 디자인 패턴은 서버 리스 합니다. 이 섹션에서는 서버 리스를 사용 하는 몇 가지 일반적인 시나리오를 캡처합니다. 새로운 모든 예제에서는 서로 공통 되는 이벤트 트리거 및 비즈니스 논리의 기본 조합입니다.
 

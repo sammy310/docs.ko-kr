@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e8da98e7-d22f-4f60-ac82-3fb0928a353f
 ms.openlocfilehash: 0e173f71201d5f98a04d2ad922469e4ff6666681
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929287"
 ---
 # <a name="how-to-declare-faults-in-service-contracts"></a>방법: 서비스 계약에서 오류 선언
 관리 코드에서 오류 조건이 발생하면 예외가 throw됩니다. Windows Communication Foundation (WCF) 응용 프로그램에서 서비스 계약 지정 오류 정보는 서비스 계약에서 SOAP 오류를 선언 하 여 클라이언트에 반환 됩니다. 예외와 오류 간의 관계의 개요를 보려면 [지정 및 계약 및 서비스에서 오류 처리](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)합니다.  

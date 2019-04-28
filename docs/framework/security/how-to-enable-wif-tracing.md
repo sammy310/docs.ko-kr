@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
 author: BrucePerlerMS
 ms.openlocfilehash: 83382a8375538acc04d293ee938a4e845d5e8820
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940454"
 ---
 # <a name="how-to-enable-wif-tracing"></a>방법: WIF 추적 사용
 ## <a name="applies-to"></a>적용 대상  
   
--   Microsoft® Windows® Identity Foundation(WIF)  
+- Microsoft® Windows® Identity Foundation(WIF)  
   
--   ASP.NET® Web Forms  
+- ASP.NET® Web Forms  
   
 ## <a name="summary"></a>요약  
  이 방법은 ASP.NET 애플리케이션에서 WIF 추적을 사용하도록 설정하기 위한 자세한 단계별 프로시저를 제공합니다. 또한 추적 수신기 및 로그가 제대로 작동하는지 확인하기 위해 애플리케이션을 테스트하는 방법에 대한 지침을 제공합니다. 이 방법 설명에 보안 토큰 서비스(STS)를 만들기 위한 자세한 지침은 없으며, 그 대신 ID 및 액세스 도구와 함께 제공되는 개발 STS를 사용합니다. 개발 STS가 실제 인증을 수행하는 것은 아니며, 테스트 목적으로만 사용됩니다. 이 방법을 완료하려면 ID 및 액세스 도구를 설치해야 합니다. 다음 위치에서 다운로드할 수 있습니다. [Id 및 액세스 도구](https://go.microsoft.com/fwlink/?LinkID=245849)  
@@ -25,30 +25,30 @@ ms.locfileid: "59769036"
   
 ## <a name="contents"></a>목차  
   
--   목표  
+- 목표  
   
--   개요  
+- 개요  
   
--   단계 요약  
+- 단계 요약  
   
--   1단계 – 간단한 ASP.NET Web Forms 애플리케이션 만들기 및 추적 사용  
+- 1단계 – 간단한 ASP.NET Web Forms 애플리케이션 만들기 및 추적 사용  
   
--   2단계 - 솔루션 테스트  
+- 2단계 - 솔루션 테스트  
   
 ## <a name="objectives"></a>목표  
   
--   ID 및 액세스 도구에서 WIF 및 개발 STS를 사용하는 간단한 ASP.NET 애플리케이션 만들기  
+- ID 및 액세스 도구에서 WIF 및 개발 STS를 사용하는 간단한 ASP.NET 애플리케이션 만들기  
   
--   추적 사용 및 작동하는지 확인  
+- 추적 사용 및 작동하는지 확인  
   
 ## <a name="overview"></a>개요  
  추적을 사용하면 토큰, 쿠키, 클레임, 프로토콜 메시지 등을 포함하여 WIF에 관련된 다양한 문제를 디버그 및 해결할 수 있습니다. WIF 추적은 WCF 추적과 비슷합니다. 예를 들어 추적의 자세한 정도를 선택하여 중요 메시지에서 모든 메시지까지 모든 것을 표시할 수 있습니다. WIF 추적은 Service Trace Viewer 도구를 사용하여 볼 수 있는 **.xml** 파일 또는 **.svclog** 파일에서 생성될 수 있습니다. 이 도구에는 **bin** Windows SDK의 설치 디렉터리 경로가 컴퓨터에서 예를 들어: **C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SvcTraceViewer.exe**.  
   
 ## <a name="summary-of-steps"></a>단계 요약  
   
--   1단계 – 간단한 ASP.NET Web Forms 애플리케이션 만들기 및 추적 사용  
+- 1단계 – 간단한 ASP.NET Web Forms 애플리케이션 만들기 및 추적 사용  
   
--   2단계 - 솔루션 테스트  
+- 2단계 - 솔루션 테스트  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application-and-enable-tracing"></a>1단계 – 간단한 ASP.NET Web Forms 애플리케이션 만들기 및 추적 사용  
  이 단계에서는 새 ASP.NET Web Forms 애플리케이션을 만들고 *Web.config* 파일을 수정하여 추적을 사용하도록 설정합니다.  

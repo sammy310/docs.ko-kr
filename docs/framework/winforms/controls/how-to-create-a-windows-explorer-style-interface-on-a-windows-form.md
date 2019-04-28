@@ -7,11 +7,11 @@ helpviewer_keywords:
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
 ms.openlocfilehash: dd70feaba29e29748ac56729632fa359582a6914
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746662"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>방법: Windows Form에 Windows 탐색기 스타일 인터페이스 만들기
 Windows 탐색기는 쉽게 사용할 수 있으므로 응용 프로그램에 대 한 공통 사용자 인터페이스 좋습니다.  
@@ -29,11 +29,11 @@ Windows 탐색기는 쉽게 사용할 수 있으므로 응용 프로그램에 �
   
 2. **도구 상자**:  
   
-    1.  끌어서를 <xref:System.Windows.Forms.SplitContainer> 컨트롤을 폼으로 합니다.  
+    1. 끌어서를 <xref:System.Windows.Forms.SplitContainer> 컨트롤을 폼으로 합니다.  
   
-    2.  끌어서를 <xref:System.Windows.Forms.TreeView> 컨트롤을 **SplitterPanel1** (의 패널을 합니다 <xref:System.Windows.Forms.SplitContainer> 표시 하는 컨트롤 **Panel1**).  
+    2. 끌어서를 <xref:System.Windows.Forms.TreeView> 컨트롤을 **SplitterPanel1** (의 패널을 합니다 <xref:System.Windows.Forms.SplitContainer> 표시 하는 컨트롤 **Panel1**).  
   
-    3.  끌어서를 <xref:System.Windows.Forms.ListView> 컨트롤을 **SplitterPanel2** (의 패널 합니다 <xref:System.Windows.Forms.SplitContainer> 표시 컨트롤 **Panel2**).  
+    3. 끌어서를 <xref:System.Windows.Forms.ListView> 컨트롤을 **SplitterPanel2** (의 패널 합니다 <xref:System.Windows.Forms.SplitContainer> 표시 컨트롤 **Panel2**).  
   
 3. CTRL 키를 차례로 클릭 하 여 모든 3 가지 컨트롤을 선택 합니다. 선택 하는 경우는 <xref:System.Windows.Forms.SplitContainer> 컨트롤, 패널 대신 분할 막대를 클릭 합니다.  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30143
 ms.assetid: 319e95b5-5176-4fe1-bc04-90075594b397
 ms.openlocfilehash: c2aab9db8a74665748fba92821fcdfa97a1cec6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792082"
 ---
 # <a name="unable-to-embed-resource-file-filename-error-message"></a>리소스 파일을 포함할 수 없습니다. '\<파일 이름 >': \<오류 메시지 >
 Visual Basic 컴파일러는 매니페스트를 사용 하 여 어셈블리를 생성 하려면 어셈블리 링커 (Al.exe, Alink 라고도)를 호출 합니다. 링커가 네이티브 COM+ 리소스 파일을 어셈블리에 직접 포함하는 동안 오류를 보고했습니다.  

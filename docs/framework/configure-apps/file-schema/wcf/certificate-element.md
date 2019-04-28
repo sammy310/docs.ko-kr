@@ -3,11 +3,11 @@ title: <certificate> 요소
 ms.date: 03/30/2017
 ms.assetid: 9b3d9233-ef35-477a-bf5d-efd1e80a52f4
 ms.openlocfilehash: eea8130911ca3780a6e4e753c17877e58c50b139
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704325"
 ---
 # <a name="certificate-element"></a>\<인증서 > 요소
 피어 투 피어 클라이언트의 메시지를 서명 및 암호화하는 데 사용하는 X.509 인증서를 지정합니다.  

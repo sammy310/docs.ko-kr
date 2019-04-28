@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d00f0efa-9084-4c17-843f-54904fcb4204
 ms.openlocfilehash: 700c29222d10177774e118e53fb51f177b723679
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760534"
 ---
 # <a name="method-based-query-syntax-examples-join-operators"></a>메서드 기반 쿼리 구문 예제: 조인 연산자
 이 항목의 예제에 사용 하는 방법을 보여 줍니다 합니다 <xref:System.Linq.Enumerable.Join%2A> 하 고 <xref:System.Linq.Enumerable.GroupJoin%2A> 쿼리 하는 메서드는 [AdventureWorks Sales 모델](https://archive.codeplex.com/?p=msftdbprodsamples) 메서드 기반 쿼리 구문을 사용 하 여. 이 예제에서 사용하는 AdventureWorks Sales 모델에서는 AdventureWorks 샘플 데이터베이스의 Contact, Address, Product, SalesOrderHeader 및 SalesOrderDetail 테이블을 사용합니다.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
 ms.openlocfilehash: ace1b40b25bd12ff7092459e468a90f382434bf4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938764"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>사용자 지정 형식 및 라이브러리에 대한 XAML 관련 CLR 특성
 이 항목에서는.NET Framework XAML 서비스에 정의 된 공용 언어 런타임 (CLR) 특성을 설명 합니다. 또한 응용 프로그램 어셈블리 또는 형식에 대 한 XAML 관련 시나리오는.NET Framework에 정의 된 CLR 특성 다른 설명 합니다. 이러한 CLR 특성을 사용 하 여 어셈블리, 형식 또는 멤버를 설정 하면 해당 형식과 관련 된 XAML 형식 시스템 정보를 제공 합니다. 정보는 XAML 노드 스트림에서 직접 처리 하거나 전용된 XAML 판독기 및 XAML 작성기를 통해.NET Framework XAML 서비스를 사용 하는 모든 XAML 소비자에 게 제공 됩니다.  
@@ -90,9 +90,9 @@ ms.locfileid: "59086212"
   
  **인수:** 두 가지 형태의 attribution 지원합니다.  
   
--   특성 사용된 형식이 속성의 이름을 지정 하는 문자열입니다.  
+- 특성 사용된 형식이 속성의 이름을 지정 하는 문자열입니다.  
   
--   속성의 이름을 지정 하는 문자열 및 <xref:System.Type> 명명된 된 속성을 정의 하는 형식에 대 한 합니다. 이 형식은 XAML 이름 범위 속성으로 연결 가능한 멤버를 지정 합니다.  
+- 속성의 이름을 지정 하는 문자열 및 <xref:System.Type> 명명된 된 속성을 정의 하는 형식에 대 한 합니다. 이 형식은 XAML 이름 범위 속성으로 연결 가능한 멤버를 지정 합니다.  
   
  <xref:System.Windows.Markup.NameScopePropertyAttribute> 특성 사용된 클래스에 대 한 XAML 이름 범위 값을 제공 하는 속성을 지정 합니다. XAML 이름 범위 속성을 구현 하는 개체를 참조 해야 합니다. <xref:System.Windows.Markup.INameScope> 실제 XAML 이름 범위, 해당 저장소 및 해당 동작을 보유 하 고 있습니다.  
   
@@ -219,9 +219,9 @@ ms.locfileid: "59086212"
   
  **인수:**  
   
--   되더라도 XAML 네임 스페이스의 식별자를 지정 하는 문자열입니다.  
+- 되더라도 XAML 네임 스페이스의 식별자를 지정 하는 문자열입니다.  
   
--   이전 인수에서 XAML 네임 스페이스를 포함할 수 있는 XAML 네임 스페이스의 식별자를 지정 하는 문자열입니다.  
+- 이전 인수에서 XAML 네임 스페이스를 포함할 수 있는 XAML 네임 스페이스의 식별자를 지정 하는 문자열입니다.  
   
  <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute> 다른 XAML 네임 스페이스는 XAML 네임 스페이스 포함 될 수 있는지를 지정 합니다. 일반적으로 포함하는 XAML 네임스페이스는 미리 정의된 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>에 표시됩니다. 이 기술은 라이브러리 및 이전 버전의 어휘에 대해 이전에 정의 된 태그와 호환 되도록 XAML 어휘 버전 관리에 사용 합니다.  
   
@@ -230,40 +230,40 @@ ms.locfileid: "59086212"
   
  **인수:**  
   
--   XAML 네임 스페이스 정의의 식별자를 지정 하는 문자열입니다.  
+- XAML 네임 스페이스 정의의 식별자를 지정 하는 문자열입니다.  
   
--   CLR 네임 스페이스의 이름을 지정 하는 문자열입니다. CLR 네임 스페이스, 어셈블리의 public 형식 정의 해야 하 고 XAML 사용에 대 한 사용 해야 하는 CLR 네임 스페이스 형식 중 하나 이상이 있습니다.  
+- CLR 네임 스페이스의 이름을 지정 하는 문자열입니다. CLR 네임 스페이스, 어셈블리의 public 형식 정의 해야 하 고 XAML 사용에 대 한 사용 해야 하는 CLR 네임 스페이스 형식 중 하나 이상이 있습니다.  
   
  <xref:System.Windows.Markup.XmlnsDefinitionAttribute> XAML 네임 스페이스 및 XAML 개체 작성기 또는 XAML 스키마 컨텍스트에서 형식 확인에 사용 되는 CLR 네임 스페이스 간 어셈블리별에 매핑을 지정 합니다.  
   
  둘 이상의 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 어셈블리에 적용할 수 있습니다. 다음과 같은 이유로 모든 조합에 대해이 작업을 수행할 수 있습니다.  
   
--   런타임 API 액세스;의 논리적 구성에 대 한 여러 CLR 네임 스페이스를 포함 하는 라이브러리 디자인 그러나 동일한 XAML 네임 스페이스를 참조 하 여 XAML에서 사용할 수 있으려면 해당 네임 스페이스의 모든 형식을 해야 합니다. 이 경우, 적용 여러 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 동일한를 사용 하 여 특성 <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> 다른 값 <xref:System.Windows.Markup.XmlnsDefinitionAttribute.ClrNamespace%2A> 값입니다. 일반적으로 기본 XAML 네임 스페이스를 프레임 워크 또는 응용 프로그램 의도 XAML 네임 스페이스에 대 한 매핑을 정의 하는 경우 특히 유용 합니다.  
+- 런타임 API 액세스;의 논리적 구성에 대 한 여러 CLR 네임 스페이스를 포함 하는 라이브러리 디자인 그러나 동일한 XAML 네임 스페이스를 참조 하 여 XAML에서 사용할 수 있으려면 해당 네임 스페이스의 모든 형식을 해야 합니다. 이 경우, 적용 여러 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 동일한를 사용 하 여 특성 <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> 다른 값 <xref:System.Windows.Markup.XmlnsDefinitionAttribute.ClrNamespace%2A> 값입니다. 일반적으로 기본 XAML 네임 스페이스를 프레임 워크 또는 응용 프로그램 의도 XAML 네임 스페이스에 대 한 매핑을 정의 하는 경우 특히 유용 합니다.  
   
--   여러 CLR 네임 스페이스를 포함 하는 라이브러리 디자인 하 고 해당 CLR 네임 스페이스의 형식 사용 간에 의도적인 XAML 네임 스페이스 분리 하려는 키를 누릅니다.  
+- 여러 CLR 네임 스페이스를 포함 하는 라이브러리 디자인 하 고 해당 CLR 네임 스페이스의 형식 사용 간에 의도적인 XAML 네임 스페이스 분리 하려는 키를 누릅니다.  
   
--   어셈블리의 CLR 네임 스페이스를 정의 하 고 둘 이상의 XAML 네임 스페이스를 통해 액세스할 수 있도록 하려는 키를 누릅니다. 이 시나리오는 동일한 코드 베이스를 사용 하 여 여러 개의 어휘를 지 원하는 경우에 발생 합니다.  
+- 어셈블리의 CLR 네임 스페이스를 정의 하 고 둘 이상의 XAML 네임 스페이스를 통해 액세스할 수 있도록 하려는 키를 누릅니다. 이 시나리오는 동일한 코드 베이스를 사용 하 여 여러 개의 어휘를 지 원하는 경우에 발생 합니다.  
   
--   XAML 언어 지원 하나 이상의 CLR 네임 스페이스를 정의합니다. 이러한 경우는 <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> 값 이어야 합니다 `http://schemas.microsoft.com/winfx/2006/xaml`합니다.  
+- XAML 언어 지원 하나 이상의 CLR 네임 스페이스를 정의합니다. 이러한 경우는 <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> 값 이어야 합니다 `http://schemas.microsoft.com/winfx/2006/xaml`합니다.  
   
 ### <a name="xmlnsprefixattribute"></a>XmlnsPrefixAttribute  
  **참조 설명서:**  <xref:System.Windows.Markup.XmlnsPrefixAttribute>  
   
  **인수:**  
   
--   XAML 네임 스페이스의 식별자를 지정 하는 문자열입니다.  
+- XAML 네임 스페이스의 식별자를 지정 하는 문자열입니다.  
   
--   권장 되는 접두사를 지정 하는 문자열입니다.  
+- 권장 되는 접두사를 지정 하는 문자열입니다.  
   
  <xref:System.Windows.Markup.XmlnsDefinitionAttribute> XAML 네임 스페이스는 데 권장 되는 접두사를 지정 합니다. .NET Framework XAML 서비스에서 serialize 되는 XAML 파일의 특성과 해당 요소를 작성할 때 접두사 유용 <xref:System.Xaml.XamlXmlWriter>, XAML 구현 라이브러리 XAML 디자인 환경과 상호 작용 하는 경우 편집 기능 또는 합니다.  
   
  둘 이상의 <xref:System.Windows.Markup.XmlnsPrefixAttribute> 어셈블리에 적용할 수 있습니다. 다음과 같은 이유로 모든 조합에 대해이 작업을 수행할 수 있습니다.  
   
--   어셈블리에 둘 이상의 XAML 네임 스페이스에 대 한 형식을 정의합니다. 이 경우 각 XAML 네임 스페이스에 대 한 서로 다른 접두사 값을 정의 해야 합니다.  
+- 어셈블리에 둘 이상의 XAML 네임 스페이스에 대 한 형식을 정의합니다. 이 경우 각 XAML 네임 스페이스에 대 한 서로 다른 접두사 값을 정의 해야 합니다.  
   
--   여러 개의 어휘를 지 원하는 및 서로 다른 접두사를 사용 하 여 각 어휘 및 XAML 네임 스페이스에 대 한 합니다.  
+- 여러 개의 어휘를 지 원하는 및 서로 다른 접두사를 사용 하 여 각 어휘 및 XAML 네임 스페이스에 대 한 합니다.  
   
--   XAML 언어 지원 어셈블리에서 정의 하 고 있는 한 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 에 대 한 `http://schemas.microsoft.com/winfx/2006/xaml`합니다. 이 경우 일반적으로 승격 해야 접두사 `x`합니다.  
+- XAML 언어 지원 어셈블리에서 정의 하 고 있는 한 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 에 대 한 `http://schemas.microsoft.com/winfx/2006/xaml`합니다. 이 경우 일반적으로 승격 해야 접두사 `x`합니다.  
   
 > [!NOTE]
 >  .NET framework XAML 서비스 XAML 관련 특성 정의 <xref:System.Windows.Markup.RootNamespaceAttribute>합니다. 이 특성은 프로젝트 시스템 지원에 대 한 어셈블리 수준 특성 및 관련이 없는 XAML 사용자 지정 형식에 대 한 합니다.  

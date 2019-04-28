@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2b3cc158c48e8bb9f833429bbddaa74ed459f1b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61930275"
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>ICorDebugProcess5::EnumerateHandles 메서드
 프로세스에서 개체 핸들에 대 한 열거자를 가져옵니다.  
@@ -46,11 +46,11 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
   
  `types` 매개 변수 컬렉션에 포함할 핸들 형식을 지정 합니다. `types` 다음 세 가지 멤버 중 하나일 수 있습니다 합니다 [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) 열거형:  
   
--   `CorHandleStrongOnly` (핸들 강력한 참조의 경우에 해당)입니다.  
+- `CorHandleStrongOnly` (핸들 강력한 참조의 경우에 해당)입니다.  
   
--   `CorHandleWeakOnly` (핸들 약한 참조의 경우에 해당)입니다.  
+- `CorHandleWeakOnly` (핸들 약한 참조의 경우에 해당)입니다.  
   
--   `CorHandleAll` (모든 핸들)입니다.  
+- `CorHandleAll` (모든 핸들)입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

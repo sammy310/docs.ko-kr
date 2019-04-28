@@ -13,20 +13,20 @@ ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f141f21f80275a592caf3f87a5cbe0def6869c0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795007"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>연습: 암호화 애플리케이션 만들기
 이 연습에서는 콘텐츠를 암호화 및 암호 해독하는 방법을 보여 줍니다. 코드 예제는 Windows Forms 응용 프로그램용으로 설계되었습니다. 이 응용 프로그램은 스마트 카드 사용과 같은 실제 시나리오를 보여 주지 않습니다. 대신, 암호화 및 암호 해독의 기초를 보여 줍니다.  
   
  이 연습에서는 암호화에 대한 다음 지침을 사용합니다.  
   
--   대칭 알고리즘인 <xref:System.Security.Cryptography.RijndaelManaged> 클래스를 사용하여 자동으로 생성된 해당 <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> 및 <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>를 통해 데이터를 암호화 및 암호 해독합니다.  
+- 대칭 알고리즘인 <xref:System.Security.Cryptography.RijndaelManaged> 클래스를 사용하여 자동으로 생성된 해당 <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> 및 <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>를 통해 데이터를 암호화 및 암호 해독합니다.  
   
--   비대칭 알고리즘인 <xref:System.Security.Cryptography.RSACryptoServiceProvider>를 사용하여 <xref:System.Security.Cryptography.RijndaelManaged>를 통해 암호화된 데이터에 대한 키를 암호화 및 암호 해독합니다. 비대칭 알고리즘은 키와 같은 적은 양의 데이터에 가장 적합합니다.  
+- 비대칭 알고리즘인 <xref:System.Security.Cryptography.RSACryptoServiceProvider>를 사용하여 <xref:System.Security.Cryptography.RijndaelManaged>를 통해 암호화된 데이터에 대한 키를 암호화 및 암호 해독합니다. 비대칭 알고리즘은 키와 같은 적은 양의 데이터에 가장 적합합니다.  
   
     > [!NOTE]
     >  암호화된 콘텐츠를 다른 사용자와 교환하는 대신 컴퓨터에서 데이터를 보호하려는 경우 <xref:System.Security.Cryptography.ProtectedData> 또는 <xref:System.Security.Cryptography.ProtectedMemory> 클래스를 사용하는 것이 좋습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "59341766"
 ## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
--   <xref:System.IO> 및 <xref:System.Security.Cryptography> 네임스페이스에 대한 참조  
+- <xref:System.IO> 및 <xref:System.Security.Cryptography> 네임스페이스에 대한 참조  
   
 ## <a name="creating-a-windows-forms-application"></a>Windows Forms 응용 프로그램 만들기  
  이 연습의 대다수 코드 예제는 단추 컨트롤에 대한 이벤트 처리기로 설계되었습니다. 다음 표에서는 샘플 응용 프로그램에 필요한 컨트롤 및 코드 예제와 일치하는 데 필요한 이름을 보여 줍니다.  
@@ -100,15 +100,15 @@ ms.locfileid: "59341766"
   
  암호화 패키지는 다음 형식을 사용합니다.  
   
--   키 길이, 0-3바이트  
+- 키 길이, 0-3바이트  
   
--   IV 길이, 4-7바이트  
+- IV 길이, 4-7바이트  
   
--   암호화된 키  
+- 암호화된 키  
   
--   IV  
+- IV  
   
--   암호화 텍스트  
+- 암호화 텍스트  
   
  키 및 IV의 길이를 사용하여 파일을 암호 해독하는 데 사용할 수 있는 암호화 패키지의 모든 부분에 대한 시작 지점 및 길이를 확인할 수 있습니다.  
   

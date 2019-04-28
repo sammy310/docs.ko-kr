@@ -6,11 +6,11 @@ helpviewer_keywords:
 - LINQ [Visual Basic], LINQ to XML
 ms.assetid: 01c62a79-6d58-468e-84fb-039c05947701
 ms.openlocfilehash: 91f622b9eecdd1aec8b9361493095e92a851988e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761842"
 ---
 # <a name="overview-of-linq-to-xml-in-visual-basic"></a>Visual Basic의 LINQ to XML 개요
 Visual Basic에 대 한 지원을 제공 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] XML 리터럴과 XML 축 속성을 통해. 이 옵션을 사용 하면 Visual Basic 코드에서 XML을 사용 하 여 작업에 대 한 친숙 하 고 편리한 구문을 사용할 수 있습니다. *XML 리터럴* 코드에서 직접 XML을 포함할 수 있도록 합니다. *XML 축 속성* 액세스 자식 노드, 하위 노드 및 XML 리터럴의 특성 수입니다. 자세한 내용은 [XML 리터럴 개요](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md) 하 고 [Visual Basic의 XML에 액세스](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)합니다.  

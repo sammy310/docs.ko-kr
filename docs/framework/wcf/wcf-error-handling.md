@@ -3,11 +3,11 @@ title: WCF 오류 처리
 ms.date: 03/30/2017
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
 ms.openlocfilehash: d70edacd2447fbe0b0b6db42b93f699ce7c17003
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791224"
 ---
 # <a name="wcf-error-handling"></a>WCF 오류 처리
 WCF 응용 프로그램에서 발생하는 오류는 다음 세 그룹 중 하나에 속합니다.  
@@ -26,13 +26,13 @@ WCF 응용 프로그램에서 발생하는 오류는 다음 세 그룹 중 하�
   
  WCF의 오류 처리는 다음 방법 중 하나 이상을 통해 수행됩니다.  
   
--   throw된 예외 직접 처리 이 방법은 통신 및 프록시/채널 오류에서만 수행됩니다.  
+- throw된 예외 직접 처리 이 방법은 통신 및 프록시/채널 오류에서만 수행됩니다.  
   
--   오류 계약 사용  
+- 오류 계약 사용  
   
--   <xref:System.ServiceModel.Dispatcher.IErrorHandler> 인터페이스 구현  
+- <xref:System.ServiceModel.Dispatcher.IErrorHandler> 인터페이스 구현  
   
--   <xref:System.ServiceModel.ServiceHost> 이벤트 처리  
+- <xref:System.ServiceModel.ServiceHost> 이벤트 처리  
   
 ## <a name="fault-contracts"></a>오류 계약  
  오류 계약을 사용하면 플랫폼에 독립적인 방법으로 서비스 작업 중에 발생할 수 있는 오류를 정의할 수 있습니다. 기본적으로 서비스 작업 내에서 throw된 모든 예외는 클라이언트에 <xref:System.ServiceModel.FaultException> 개체로 반환됩니다. <xref:System.ServiceModel.FaultException> 개체에는 정보가 거의 포함되어 있지 않습니다. 오류 계약을 정의하고 오류를 <xref:System.ServiceModel.FaultException%601>으로 반환하여 클라이언트에 전송되는 정보를 제어할 수 있습니다. 자세한 내용은 [지정 및 계약 및 서비스에서 오류 처리](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)합니다.  

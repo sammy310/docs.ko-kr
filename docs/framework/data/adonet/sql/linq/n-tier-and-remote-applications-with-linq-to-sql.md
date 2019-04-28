@@ -3,11 +3,11 @@ title: LINQ to SQL을 사용한 N 계층 및 원격 응용 프로그램
 ms.date: 03/30/2017
 ms.assetid: 854a1cdd-53cb-45f5-83ca-63962a9b3598
 ms.openlocfilehash: 7741368896b0bf5a2508d9b727fad386cce6177d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794500"
 ---
 # <a name="n-tier-and-remote-applications-with-linq-to-sql"></a>LINQ to SQL을 사용한 N 계층 및 원격 응용 프로그램
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]을 사용하는 n 계층 또는 다계층 응용 프로그램을 만들 수 있습니다. 일반적으로 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 데이터 컨텍스트, 엔터티 클래스 및 쿼리 생성 논리 중간 계층에는 DAL (데이터 액세스 계층)으로 있는 됩니다. 비즈니스 논리와 모든 비지속적 데이터는 엔터티와 데이터 컨텍스트의 부분 클래스와 메서드에 완전하게 구현되거나 별도의 클래스에 구현될 수 있습니다.
@@ -21,13 +21,13 @@ ms.locfileid: "59075184"
 ## <a name="additional-resources"></a>추가 리소스
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]을 사용하는 n 계층 응용 프로그램을 구현하는 방법에 대한 자세한 내용은 다음 항목을 참조하세요.
 
--   [ASP.NET을 사용하는 LINQ to SQL N 계층](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-aspnet.md)
+- [ASP.NET을 사용하는 LINQ to SQL N 계층](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-aspnet.md)
 
--   [웹 서비스를 사용하는 LINQ to SQL N 계층](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-web-services.md) 
+- [웹 서비스를 사용하는 LINQ to SQL N 계층](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-web-services.md) 
 
--   [N 계층 비즈니스 논리 구현](../../../../../../docs/framework/data/adonet/sql/linq/implementing-business-logic-linq-to-sql.md)
+- [N 계층 비즈니스 논리 구현](../../../../../../docs/framework/data/adonet/sql/linq/implementing-business-logic-linq-to-sql.md)
 
--   [N 계층 애플리케이션에서 데이터 검색 및 CUD 작업(LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md)
+- [N 계층 애플리케이션에서 데이터 검색 및 CUD 작업(LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md)
 
  ADO.NET 데이터 집합을 사용 하는 n 계층 응용 프로그램에 대 한 자세한 내용은 참조 하세요. [n 계층 응용 프로그램에서 데이터 집합 작업](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)합니다.
 

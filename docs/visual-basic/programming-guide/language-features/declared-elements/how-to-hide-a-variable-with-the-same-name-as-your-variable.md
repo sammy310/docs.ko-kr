@@ -13,18 +13,18 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
 ms.openlocfilehash: 744c7aed50690d5591d1e8248e121cb66ef39108
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794708"
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>방법: 변수 (Visual Basic) 이름이 같은 변수 숨기기
 변수를 숨길 수 있습니다 *섀도잉* 즉, 이름이 같은 변수를 사용 하 여 정의 하 여 합니다. 두 가지 방법으로 숨기려는 변수의 섀도잉할 수 있습니다.  
   
--   **범위를 통한 숨기기.** 숨기려는 변수를 포함 하는 영역 부분 내에서 다시 선언 하 여 범위를 통한 숨길 수 있습니다.  
+- **범위를 통한 숨기기.** 숨기려는 변수를 포함 하는 영역 부분 내에서 다시 선언 하 여 범위를 통한 숨길 수 있습니다.  
   
--   **상속을 통한 숨기기.** 숨기려는 변수의 클래스 수준에서 정의 하는 경우 숨길 수 있습니다 상속을 통해 사용 하 여 다시 선언 하 여 합니다 [그림자](../../../../visual-basic/language-reference/modifiers/shadows.md) 파생된 클래스에서 키워드입니다.  
+- **상속을 통한 숨기기.** 숨기려는 변수의 클래스 수준에서 정의 하는 경우 숨길 수 있습니다 상속을 통해 사용 하 여 다시 선언 하 여 합니다 [그림자](../../../../visual-basic/language-reference/modifiers/shadows.md) 파생된 클래스에서 키워드입니다.  
   
 ## <a name="two-ways-to-hide-a-variable"></a>두 가지 방법으로 변수를 숨기려면  
   

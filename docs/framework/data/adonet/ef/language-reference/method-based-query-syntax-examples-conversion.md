@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 19f66872-d5ab-49f8-969f-e53f9632a13d
 ms.openlocfilehash: bf6c889fff2635cd50597e72151c46fbb4d9b97d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760586"
 ---
 # <a name="method-based-query-syntax-examples-conversion"></a>메서드 기반 쿼리 구문 예제: 변환
 이 항목의 예제에 사용 하는 방법을 보여 줍니다는 <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToDictionary%2A> 하 고 <xref:System.Linq.Enumerable.ToList%2A> 쿼리 하는 메서드를 [AdventureWorks Sales 모델](https://archive.codeplex.com/?p=msftdbprodsamples) 메서드 기반 쿼리 구문을 사용 하 여 합니다. 이 예제에서 사용하는 AdventureWorks Sales 모델에서는 AdventureWorks 샘플 데이터베이스의 Contact, Address, Product, SalesOrderHeader 및 SalesOrderDetail 테이블을 사용합니다.  

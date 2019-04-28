@@ -15,11 +15,11 @@ ms.assetid: dd5de491-dafe-4b94-966d-99714b2e754a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 303c7db984b682d24a8f0e00160eb2d0827a84e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795150"
 ---
 # <a name="how-to-decrypt-xml-elements-with-asymmetric-keys"></a>방법: 비대칭 키를 사용하여 XML 요소 해독
 <xref:System.Security.Cryptography.Xml> 네임스페이스의 클래스를 사용하여 XML 문서 내의 요소를 암호화 및 암호 해독할 수 있습니다.  XML 암호화는 데이터가 쉽게 읽혀질 염려 없이 암호화된 XML 데이터를 교환하거나 저장하는 표준 방법입니다.  XML 암호화 표준에 대 한 자세한 내용은 World Wide Web Consortium (W3C) 권장 사항을 참조 하세요 [XML 서명 구문 및 처리](https://www.w3.org/TR/xmldsig-core/)합니다.  
@@ -70,9 +70,9 @@ ms.locfileid: "59314427"
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
   
--   이 예제를 컴파일하려면 `System.Security.dll`에 대한 참조를 포함해야 합니다.  
+- 이 예제를 컴파일하려면 `System.Security.dll`에 대한 참조를 포함해야 합니다.  
   
--   <xref:System.Xml>, <xref:System.Security.Cryptography> 및 <xref:System.Security.Cryptography.Xml> 네임스페이스를 포함합니다.  
+- <xref:System.Xml>, <xref:System.Security.Cryptography> 및 <xref:System.Security.Cryptography.Xml> 네임스페이스를 포함합니다.  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
  대칭 암호화 키를 일반 텍스트로 저장하거나 컴퓨터 간에 일반 텍스트로 대칭 키를 전송하지 마세요.  또한 비대칭 키 쌍의 개인 키를 일반 텍스트로 저장하거나 전송하지 마세요.  대칭 및 비대칭 암호화 키에 대 한 자세한 내용은 참조 하세요. [암호화 및 암호 해독용 키 생성](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)합니다.  

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
 ms.openlocfilehash: 0a319ba4259e66ed9a37aa2de9e97d2335b78663
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784048"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit 문(Visual Basic)
 파일에서 모든 변수에 명시적으로 강제 또는 암시적 변수 선언을 허용 합니다.  
@@ -57,7 +57,7 @@ Option Explicit { On | Off }
   
 #### <a name="to-set-option-explicit-on-the-command-line"></a>명령줄에서 Option Explicit을 설정 하려면  
   
--   포함 된 [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) 컴파일러 옵션을 **vbc** 명령.  
+- 포함 된 [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) 컴파일러 옵션을 **vbc** 명령.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 `Option Explicit` 문을 모든 변수의 명시적 선언을 강제 적용 합니다. 선언 되지 않은 변수를 사용 하려고 하면 컴파일 타임에 오류가 발생 합니다.  

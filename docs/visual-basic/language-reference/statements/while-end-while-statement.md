@@ -10,11 +10,11 @@ helpviewer_keywords:
 - While...End While statements [Visual Basic]
 ms.assetid: b931d1ce-e8ed-44d8-a13d-92a4f5458a1e
 ms.openlocfilehash: 00ca0ad24231128b25a988921386d6bd3265e9a0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934227"
 ---
 # <a name="whileend-while-statement-visual-basic"></a>While...End While 문(Visual Basic)
 지정된 된 조건과 일련의 문 실행 `True`합니다.  

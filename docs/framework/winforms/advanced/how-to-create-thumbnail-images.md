@@ -9,11 +9,11 @@ helpviewer_keywords:
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
 ms.openlocfilehash: b9afbac85dee90938e2bd55ebe19d3b02c0d66d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937642"
 ---
 # <a name="how-to-create-thumbnail-images"></a>방법: 썸네일 이미지 만들기
 축소판 그림 이미지를 이미지의 작은 버전이 있습니다. 호출 하 여 썸네일 이미지를 만들 수 있습니다 합니다 <xref:System.Drawing.Image.GetThumbnailImage%2A> 메서드는 <xref:System.Drawing.Image> 개체입니다.  

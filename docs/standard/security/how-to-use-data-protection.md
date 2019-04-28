@@ -19,11 +19,11 @@ ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2559ae686820b1972e457b013565aeb28842392e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933850"
 ---
 # <a name="how-to-use-data-protection"></a>방법: 데이터 보호 사용
 .NET Framework는 현재 사용자 계정 또는 컴퓨터의 정보를 사용하여 데이터를 암호화할 수 있게 해주는 DPAPI(데이터 보호 API)에 대한 액세스를 제공합니다.  DPAPI를 사용하는 경우 명시적으로 암호화 키를 생성 및 저장하는 어려운 문제가 완화됩니다.  
@@ -62,9 +62,9 @@ ms.locfileid: "59771844"
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
   
--   `System.Security.dll`에 대한 참조를 포함합니다.  
+- `System.Security.dll`에 대한 참조를 포함합니다.  
   
--   <xref:System>, <xref:System.IO>, <xref:System.Security.Cryptography> 및 <xref:System.Text> 네임스페이스를 포함합니다.  
+- <xref:System>, <xref:System.IO>, <xref:System.Security.Cryptography> 및 <xref:System.Text> 네임스페이스를 포함합니다.  
   
 ## <a name="see-also"></a>참고자료
 

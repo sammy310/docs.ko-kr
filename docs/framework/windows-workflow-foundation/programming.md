@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WF [WF], programming
 ms.assetid: f62354e2-6a2b-4e8c-a4bc-533fb96267a4
 ms.openlocfilehash: 3b4e56c332567cdf1aea94a836ef7dcdcd8a94fe
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794357"
 ---
 # <a name="windows-workflow-foundation-programming"></a>Windows Workflow Foundation 프로그래밍
 이 섹션의 능숙 Windows WF (Workflow Foundation) 프로그래머를 이해 해야 할 입문 항목 집합을 포함 합니다.  
@@ -24,8 +24,7 @@ ms.locfileid: "57703649"
  Windows WF (Workflow Foundation) 사용 하 여 사용할 수 있는 시스템 제공 활동을 설명 하는 항목입니다.  
   
  [Windows Workflow Foundation 데이터 모델](data-model.md)  
- 
-  [!INCLUDE[wf1](../../../includes/wf1-md.md)]의 변수, 인수 및 식을 설명합니다.  
+ [!INCLUDE[wf1](../../../includes/wf1-md.md)]의 변수, 인수 및 식을 설명합니다.  
   
  [워크플로에서 입력 대기](waiting-for-input-in-a-workflow.md)  
  책갈피와 메시징 활동을 사용하는 방법에 대해 설명합니다.  

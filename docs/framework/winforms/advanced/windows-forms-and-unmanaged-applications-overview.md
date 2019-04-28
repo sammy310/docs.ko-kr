@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
 ms.openlocfilehash: 63631378911a9ba95713e68fb19d8d08176c7562
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748178"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Windows Forms 및 관리되지 않는 애플리케이션 개요
 Windows Forms 애플리케이션과 컨트롤은 관리되지 않는 애플리케이션과 상호 운용될 수 있지만 몇 가지 주의할 사항이 있습니다. 다음 섹션에서는 Windows Forms 애플리케이션과 컨트롤이 지원하는 시나리오 및 구성과 지원하지 않는 시나리오 및 구성을 설명합니다.  
@@ -51,9 +51,9 @@ Windows Forms 애플리케이션과 컨트롤은 관리되지 않는 애플리�
   
  Windows Form이 COM 클라이언트 애플리케이션에서 제대로 작동하게 하려면 Windows Forms 메시지 루프에서 실행해야 합니다. 이렇게 하려면 다음 접근 방식 중 하나를 사용합니다.  
   
--   <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 메서드를 사용하여 Windows Form을 표시합니다. 자세한 내용은 [방법: ShowDialog 메서드로 Windows Form을 표시 하 여 COM Interop 지원](com-interop-by-displaying-a-windows-form-shadow.md)합니다.  
+- <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 메서드를 사용하여 Windows Form을 표시합니다. 자세한 내용은 [방법: ShowDialog 메서드로 Windows Form을 표시 하 여 COM Interop 지원](com-interop-by-displaying-a-windows-form-shadow.md)합니다.  
   
--   각 Windows Form을 새 스레드에 표시합니다. 자세한 내용은 [방법: 각 Windows Form을 별개의 스레드에서 표시 하 여 COM Interop 지원](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)합니다.  
+- 각 Windows Form을 새 스레드에 표시합니다. 자세한 내용은 [방법: 각 Windows Form을 별개의 스레드에서 표시 하 여 COM Interop 지원](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
 

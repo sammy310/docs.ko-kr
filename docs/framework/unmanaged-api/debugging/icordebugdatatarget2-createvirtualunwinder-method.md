@@ -5,11 +5,11 @@ ms.assetid: 354c8b4c-7d23-45c6-a7d7-3be4c2a5b772
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0c8befed8bc810344b2a3344212a6a4a854300e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763824"
 ---
 # <a name="icordebugdatatarget2createvirtualunwinder-method"></a>ICorDebugDataTarget2::CreateVirtualUnwinder Method
 초기 컨텍스트(반드시 스레드의 리프일 필요는 없음)에서 해제를 시작하는 새 스택 해제기를 만듭니다.  

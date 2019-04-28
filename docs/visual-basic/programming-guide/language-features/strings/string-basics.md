@@ -7,11 +7,11 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
 ms.openlocfilehash: 9d2d3c82f5512bc1e37e3b05086fbd364ee12298
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938335"
 ---
 # <a name="string-basics-in-visual-basic"></a>Visual Basic의 문자열 기본
 `String` 데이터 형식은 일련의 문자를 나타내며, 각각은 차례로 `Char` 데이터 형식의 인스턴스를 나타냅니다. 이 항목에서는 Visual Basic에서 문자열의 기본 개념을 소개 합니다.  

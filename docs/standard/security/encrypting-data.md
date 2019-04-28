@@ -14,11 +14,11 @@ ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a89df5067fdf6d82ee9836da2409194371b05bc0
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795241"
 ---
 # <a name="encrypting-data"></a>데이터 암호화
 대칭 암호화와 비대칭 암호화는 서로 다른 프로세스를 사용하여 수행됩니다. 대칭 암호화는 스트림에서 수행되므로 많은 양의 데이터를 암호화하는 데 유용합니다. 비대칭 암호화는 적은 수의 바이트에서 수행되므로 적은 양의 데이터에만 유용합니다.  

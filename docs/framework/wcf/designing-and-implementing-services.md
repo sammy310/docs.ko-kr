@@ -5,11 +5,11 @@ helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
 ms.openlocfilehash: ad7e713ac4cbbe5bf227f4ab93e8f88684dcb0d3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785023"
 ---
 # <a name="designing-and-implementing-services"></a>서비스 디자인 및 구현
 이 섹션에서는 정의 하 고 WCF 계약을 구현 하는 방법을 보여 줍니다. 서비스 계약에서는 엔드포인트가 외부와 통신하는 내용을 지정합니다. 더 구체적으로 말하면, 단방향 및 이중 request/reply와 같은 기본 메시지 교환 패턴에 구성된 특정 메시지 집합에 대한 문입니다. 서비스 계약이 논리적으로 관련된 메시지 교환 집합인 경우 서비스 작업은 단일 메시지 교환이 됩니다. 예를 들어 `Hello` 작업에서는 호출자가 인사말을 알릴 수 있도록 단일 메시지를 수락해야 하며 작업 의례에 따라 메시지를 반환하거나 반환하지 않을 수 있습니다.  
@@ -19,22 +19,22 @@ ms.locfileid: "59319679"
 ## <a name="overview"></a>개요  
  이 항목에서는 WCF 서비스 디자인 및 구현에 높은 수준의 개념 방향을 제시 합니다. 특정 디자인 및 구현에 대한 자세한 내용은 하위 항목에서 제공됩니다. 것이 좋습니다를 디자인 하 고 WCF 응용 프로그램을 구현 하기 전에:  
   
--   서비스 계약에 대한 정의, 작동 방식 및 생성 방법  
+- 서비스 계약에 대한 정의, 작동 방식 및 생성 방법  
   
--   런타임 구성 또는 호스팅 환경에서 지원되지 않을 수 있는 계약 상태 최소 요구 사항  
+- 런타임 구성 또는 호스팅 환경에서 지원되지 않을 수 있는 계약 상태 최소 요구 사항  
   
 ## <a name="service-contracts"></a>서비스 계약  
  서비스 계약은 다음을 지정합니다.  
   
--   계약이 노출하는 작업  
+- 계약이 노출하는 작업  
   
--   교환되는 메시지와 관련된 작업 서명  
+- 교환되는 메시지와 관련된 작업 서명  
   
--   이러한 메시지의 데이터 형식  
+- 이러한 메시지의 데이터 형식  
   
--   작업의 위치  
+- 작업의 위치  
   
--   서비스와의 통신을 지원하는 데 사용되는 특정 프로토콜 및 serialization 형식  
+- 서비스와의 통신을 지원하는 데 사용되는 특정 프로토콜 및 serialization 형식  
   
  예를 들어 구매 주문 계약에는 주문 정보 유형에 대한 입력을 수락하고 주문 식별자를 비롯한 성공 또는 실패 정보를 반환하는 `CreateOrder` 작업이 포함될 수 있습니다. 또한 주문 식별자를 수락하고 주문 상태 정보를 반환하는 `GetOrderStatus` 작업이 포함될 수 있습니다. 이러한 종류의 서비스 계약에서는 다음을 지정합니다.  
   

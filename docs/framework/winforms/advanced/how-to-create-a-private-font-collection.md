@@ -9,11 +9,11 @@ helpviewer_keywords:
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
 ms.openlocfilehash: f78d48c88b72388676f5e7ae963b98d8f1b4beac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937837"
 ---
 # <a name="how-to-create-a-private-font-collection"></a>방법: 개인 글꼴 컬렉션 만들기
 합니다 <xref:System.Drawing.Text.PrivateFontCollection> 클래스에서 상속 된 <xref:System.Drawing.Text.FontCollection> 추상 기본 클래스입니다. 사용할 수는 <xref:System.Drawing.Text.PrivateFontCollection> 응용 프로그램에 맞게 글꼴 집합도 유지 관리 하는 개체입니다. 개인 글꼴 컬렉션 컴퓨터에 설치 되지 않은 글꼴 뿐만 아니라 설치 된 시스템 글꼴을 포함할 수 있습니다. 글꼴 파일을 개인 글꼴 컬렉션에 추가할 호출을 <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> 메서드를 <xref:System.Drawing.Text.PrivateFontCollection> 개체입니다.  
@@ -25,11 +25,11 @@ ms.locfileid: "59210693"
 ## <a name="example"></a>예제  
  다음 예제에서는 다음 세 개의 글꼴 파일을 <xref:System.Drawing.Text.PrivateFontCollection> 개체:  
   
--   C:\\*systemroot*\Fonts\Arial.tff (Arial, 일반)  
+- C:\\*systemroot*\Fonts\Arial.tff (Arial, 일반)  
   
--   C:\\*systemroot*\Fonts\CourBI.tff (Courier New 굵게 기울임꼴)  
+- C:\\*systemroot*\Fonts\CourBI.tff (Courier New 굵게 기울임꼴)  
   
--   C:\\*systemroot*\Fonts\TimesBd.tff (Times New Roman 굵게 표시)  
+- C:\\*systemroot*\Fonts\TimesBd.tff (Times New Roman 굵게 표시)  
   
  코드의 배열을 검색 <xref:System.Drawing.FontFamily> 에서 개체를 <xref:System.Drawing.Text.FontCollection.Families%2A> 의 속성을 <xref:System.Drawing.Text.PrivateFontCollection> 개체입니다.  
   

@@ -3,11 +3,11 @@ title: do 바인딩
 description: 에 대해 알아봅니다 어떻게는 F# 함수 또는 값을 정의 하지 않고 코드를 실행 하는 바인딩 ' 않습니다'.
 ms.date: 05/16/2016
 ms.openlocfilehash: d29f8557fda06097d2e85748ab6286f0415730b3
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61683381"
 ---
 # <a name="do-bindings"></a>do 바인딩
 
@@ -28,7 +28,7 @@ ms.locfileid: "53614521"
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet201.fs)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [F# 언어 참조](../index.md)
 - [함수](index.md)

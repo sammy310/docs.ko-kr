@@ -8,11 +8,11 @@ helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
 ms.openlocfilehash: 5cb73dfeaac4f1c23724dc71b0f1f5d07fd28b5b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791237"
 ---
 # <a name="wcf-client-overview"></a>WCF 클라이언트 개요
 이 섹션에서는 클라이언트 응용 프로그램에 수행할 작업, 구성, 만들기 및 Windows Communication Foundation (WCF) 클라이언트를 사용 하는 방법 및 클라이언트 응용 프로그램을 보호 하는 방법을 설명 합니다.  
@@ -30,15 +30,15 @@ ms.locfileid: "59770388"
   
  다음 단원에서는 이러한 단계에 대해 설명하고 다음과 같은 문제를 간략하게 소개합니다.  
   
--   오류 처리  
+- 오류 처리  
   
--   클라이언트 구성 및 보안  
+- 클라이언트 구성 및 보안  
   
--   이중 서비스에 대한 콜백 개체 만들기  
+- 이중 서비스에 대한 콜백 개체 만들기  
   
--   비동기적으로 서비스 호출  
+- 비동기적으로 서비스 호출  
   
--   클라이언트 채널을 사용하여 서비스 호출  
+- 클라이언트 채널을 사용하여 서비스 호출  
   
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>서비스 계약, 바인딩 및 주소 가져오기  
  Wcf에서 서비스와 클라이언트를 관리 되는 특성, 인터페이스 및 메서드를 사용 하 여 계약을 모델링 합니다. 클라이언트 응용 프로그램에서 서비스에 연결하려면 서비스 계약에 대한 형식 정보를 가져와야 합니다. 일반적으로 이렇게 하면 사용 하 여 합니다 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), 사용자가 선택한 언어로 관리 되는 소스 코드 파일로 변환 서비스에서 메타 데이터를 다운로드 및 클라이언트를 만듭니다 WCF 클라이언트 개체를 구성 하는 데 사용할 수 있는 응용 프로그램 구성 파일입니다. 예를 들어, 호출할 WCF 클라이언트 개체를 만들려고 하는 경우는 `MyCalculatorService`, 하 고 해당 서비스에 대 한 메타 데이터에 게시 되는 것이 알고 `http://computerName/MyCalculatorService/Service.svc?wsdl`, 다음 코드 예제에서는 Svcutil.exe를 사용 하 여 가져오려고 하는 방법을 표시는 `ClientCode.vb` 파일 관리 코드에서 서비스 계약을 포함합니다.  
@@ -146,11 +146,11 @@ End Interface
   
  이중 서비스의 클라이언트는 다음을 수행해야 합니다.  
   
--   콜백 계약 클래스 구현  
+- 콜백 계약 클래스 구현  
   
--   콜백 계약 구현 클래스의 인스턴스를 만들고 사용 하 여 만들는 <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> WCF 클라이언트 생성자에 전달 하는 개체입니다.  
+- 콜백 계약 구현 클래스의 인스턴스를 만들고 사용 하 여 만들는 <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> WCF 클라이언트 생성자에 전달 하는 개체입니다.  
   
--   작업 호출 및 작업 콜백 처리  
+- 작업 호출 및 작업 콜백 처리  
   
  이중 WCF 클라이언트 개체 점만 콜백 서비스 구성을 포함 하 여 콜백을 지 원하는 데 필요한 기능을 노출 한다는 예외와 같은 함수입니다.  
   

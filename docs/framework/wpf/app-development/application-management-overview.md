@@ -8,11 +8,11 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
 ms.openlocfilehash: 687037d4299c8a53a2dcd644fd778081b5e7a0a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757353"
 ---
 # <a name="application-management-overview"></a>애플리케이션 관리 개요
 모든 애플리케이션은 애플리케이션 구현 및 관리에 적용하는 일반적인 기능 집합을 공유하는 경향이 있습니다. 이 항목에서는의 기능 개요를 제공 합니다 <xref:System.Windows.Application> 만들고 응용 프로그램을 관리 하기 위한 클래스입니다.  
@@ -20,17 +20,17 @@ ms.locfileid: "59100082"
 ## <a name="the-application-class"></a>Application 클래스  
  WPF에서 일반적인 응용 프로그램 범위 기능은에서 캡슐화 되는 <xref:System.Windows.Application> 클래스입니다. <xref:System.Windows.Application> 클래스에는 다음 기능이 포함 되어 있습니다.:  
   
--   애플리케이션 수명 추적 및 상호 작용  
+- 애플리케이션 수명 추적 및 상호 작용  
   
--   명령줄 매개 변수 검색 및 처리  
+- 명령줄 매개 변수 검색 및 처리  
   
--   처리되지 않은 예외의 검색 및 응답  
+- 처리되지 않은 예외의 검색 및 응답  
   
--   애플리케이션 범위 속성 및 리소스 공유  
+- 애플리케이션 범위 속성 및 리소스 공유  
   
--   독립 실행형 애플리케이션에서 창 관리  
+- 독립 실행형 애플리케이션에서 창 관리  
   
--   탐색 추적 및 관리  
+- 탐색 추적 및 관리  
   
 <a name="The_Application_Class"></a>   
 ## <a name="how-to-perform-common-tasks-using-the-application-class"></a>Application 클래스를 사용하여 일반적인 작업을 수행하는 방법  
@@ -71,7 +71,7 @@ ms.locfileid: "59100082"
   
 - 태그에는 `Application` 요소에 포함 해야 합니다는 `x:Class` 특성입니다. 응용 프로그램을 빌드할 때 `x:Class` 파일 태그를 만들려면 MSBuild이로 인해를 `partial` 에서 파생 된 클래스 <xref:System.Windows.Application> 에 지정 된 이름을 가진는 `x:Class` 특성입니다. XAML 스키마에 대 한 XML 네임 스페이스 선언 추가 해야이 (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`).
   
--   코드 숨김 클래스 여야 합니다는 `partial` 에 지정 된 된 동일한 이름 가진 클래스를 `x:Class` 태그의 특성 및에서 파생 되어야 합니다 <xref:System.Windows.Application>합니다. 이렇게 하면 코드 숨김 파일을 사용 하 여 연결할 수는 `partial` 응용 프로그램을 빌드할 때 태그 파일에 대해 생성 된 클래스 (참조 [WPF 응용 프로그램 빌드](building-a-wpf-application-wpf.md)).  
+- 코드 숨김 클래스 여야 합니다는 `partial` 에 지정 된 된 동일한 이름 가진 클래스를 `x:Class` 태그의 특성 및에서 파생 되어야 합니다 <xref:System.Windows.Application>합니다. 이렇게 하면 코드 숨김 파일을 사용 하 여 연결할 수는 `partial` 응용 프로그램을 빌드할 때 태그 파일에 대해 생성 된 클래스 (참조 [WPF 응용 프로그램 빌드](building-a-wpf-application-wpf.md)).  
   
 > [!NOTE]
 >  새 WPF 응용 프로그램 프로젝트 또는 Visual Studio를 사용 하 여 WPF 브라우저 응용 프로그램 프로젝트를 만들면 응용 프로그램 정의 기본으로 포함 되 고 태그와 코드 숨김을 모두 사용 하 여 정의 됩니다.  
@@ -195,17 +195,17 @@ ms.locfileid: "59100082"
 ### <a name="application-activation-and-deactivation"></a>애플리케이션 활성화 및 비활성화  
  Windows를 사용 하면 응용 프로그램 간에 전환할 수 있습니다. 가장 일반적인 방법은 ALT+TAB 키 조합을 사용하는 것입니다. 가 표시 되어 있는 경우 응용 프로그램을 전환할 수만 <xref:System.Windows.Window> 사용자가 선택할 수 있는 합니다. 현재 선택한 <xref:System.Windows.Window> 는 *활성 창* (라고도 합니다 *전경 창이*) 이며는 <xref:System.Windows.Window> 사용자 입력을 수신 하는. 활성 창 사용 하 여 응용 프로그램은는 *활성 응용 프로그램* (또는 *포그라운드 응용 프로그램이*). 다음과 같은 경우에 애플리케이션이 활성 애플리케이션이 됩니다.  
   
--   시작 되 고 표시를 <xref:System.Windows.Window>입니다.  
+- 시작 되 고 표시를 <xref:System.Windows.Window>입니다.  
   
--   선택 하 여 다른 응용 프로그램에서 전환 하는 사용자는 <xref:System.Windows.Window> 응용 프로그램에서입니다.  
+- 선택 하 여 다른 응용 프로그램에서 전환 하는 사용자는 <xref:System.Windows.Window> 응용 프로그램에서입니다.  
   
  처리 하 여 응용 프로그램이 활성화 될 때 감지할 수 있습니다는 <xref:System.Windows.Application.Activated?displayProperty=nameWithType> 이벤트입니다.  
   
  마찬가지로 다음과 같은 경우에는 애플리케이션이 비활성화됩니다.  
   
--   사용자가 현재 애플리케이션에서 다른 애플리케이션으로 전환하는 경우  
+- 사용자가 현재 애플리케이션에서 다른 애플리케이션으로 전환하는 경우  
   
--   애플리케이션이 종료되는 경우  
+- 애플리케이션이 종료되는 경우  
   
  처리 하 여 응용 프로그램 비활성화 될 때 감지할 수 있습니다는 <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> 이벤트입니다.  
   
@@ -225,13 +225,13 @@ ms.locfileid: "59100082"
 ### <a name="application-shutdown"></a>애플리케이션 종료  
  다음과 같은 이유로 애플리케이션이 종료되면 애플리케이션 수명이 끝납니다.  
   
--   사용자가 모든 <xref:System.Windows.Window>합니다.  
+- 사용자가 모든 <xref:System.Windows.Window>합니다.  
   
--   사용자가 주 <xref:System.Windows.Window>합니다.  
+- 사용자가 주 <xref:System.Windows.Window>합니다.  
   
--   사용자 로그 오프 하거나 종료 하 여 Windows 세션을 종료 합니다.  
+- 사용자 로그 오프 하거나 종료 하 여 Windows 세션을 종료 합니다.  
   
--   애플리케이션별 조건이 충족된 경우  
+- 애플리케이션별 조건이 충족된 경우  
   
  응용 프로그램 종료를 관리할 수 있도록 <xref:System.Windows.Application> 제공 합니다 <xref:System.Windows.Application.Shutdown%2A> 메서드는 <xref:System.Windows.Application.ShutdownMode%2A> 속성 및 <xref:System.Windows.Application.SessionEnding> 및 <xref:System.Windows.Application.Exit> 이벤트.  
   
@@ -241,11 +241,11 @@ ms.locfileid: "59100082"
 #### <a name="shutdown-mode"></a>종료 모드  
  대부분의 애플리케이션은 모든 창을 닫거나 주 창을 닫으면 종료됩니다. 하지만 다른 애플리케이션과 관련된 조건이 특정 애플리케이션의 종료 시점을 결정하는 경우가 있습니다. 응용 프로그램을 설정 하 여 종료 됩니다 조건을 지정할 수 있습니다 <xref:System.Windows.Application.ShutdownMode%2A> 중 하나를 사용 하 여 <xref:System.Windows.ShutdownMode> 열거형 값:  
   
--   <xref:System.Windows.ShutdownMode.OnLastWindowClose>  
+- <xref:System.Windows.ShutdownMode.OnLastWindowClose>  
   
--   <xref:System.Windows.ShutdownMode.OnMainWindowClose>  
+- <xref:System.Windows.ShutdownMode.OnMainWindowClose>  
   
--   <xref:System.Windows.ShutdownMode.OnExplicitShutdown>  
+- <xref:System.Windows.ShutdownMode.OnExplicitShutdown>  
   
  기본값인 <xref:System.Windows.Application.ShutdownMode%2A> 는 <xref:System.Windows.ShutdownMode.OnLastWindowClose>는 응용 프로그램을 사용자가 응용 프로그램의 마지막 창이 닫힐 때 자동으로 종료 되었음을 의미 합니다. 그러나 응용 프로그램을 종료 해야 주 창의 닫을 때, 경우 WPF를 자동으로 수행 하는 설정 하는 경우 <xref:System.Windows.Application.ShutdownMode%2A> 에 <xref:System.Windows.ShutdownMode.OnMainWindowClose>입니다. 다음 예제에서 이를 확인할 수 있습니다.  
   
@@ -259,13 +259,13 @@ ms.locfileid: "59100082"
 #### <a name="session-ending"></a>세션 종료  
  설명 하는 종료 조건은 <xref:System.Windows.Application.ShutdownMode%2A> 속성 응용 프로그램에 따라 다릅니다. 하지만 외부 조건에 따라 애플리케이션이 종료되는 경우도 있습니다. 가장 일반적인 외부 조건은는 다음 작업을 통해 Windows 세션을 종료할 때 발생 합니다.  
   
--   로그오프  
+- 로그오프  
   
--   종료  
+- 종료  
   
--   다시 시작  
+- 다시 시작  
   
--   최대 절전 모드  
+- 최대 절전 모드  
   
  Windows 세션이 종료 될 때 감지 하기 위해 처리할 수 있습니다는 <xref:System.Windows.Application.SessionEnding> 다음 예제의 그림과 같이 이벤트입니다.  
   
@@ -291,11 +291,11 @@ ms.locfileid: "59100082"
   
  <xref:System.Windows.Application.Exit> 독립 실행형 응용 프로그램과 Xbap에서 처리할 수 있습니다. Xbap에 대 한 <xref:System.Windows.Application.Exit> 다음과 같은 상황에서 작업 하는 경우 발생 합니다.  
   
--   XBAP에서 탐색 합니다.  
+- XBAP에서 탐색 합니다.  
   
--   [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)]XBAP를 호스팅하는 탭을 닫으면, 합니다.  
+- [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)]XBAP를 호스팅하는 탭을 닫으면, 합니다.  
   
--   브라우저가 닫힌 경우  
+- 브라우저가 닫힌 경우  
   
 #### <a name="exit-code"></a>종료 코드  
  대부분의 경우 애플리케이션은 운영 체제에서 사용자 요청에 대한 응답으로 시작하게 됩니다. 하지만 다른 애플리케이션에서 일부 특정 작업을 수행하기 위해 애플리케이션을 시작할 수도 있습니다. 시작된 애플리케이션이 종료될 경우 시작하는 애플리케이션에서 시작된 애플리케이션이 종료되는 조건을 알고 싶을 수 있습니다. 이러한 경우 Windows 응용 프로그램을 종료 시 응용 프로그램 종료 코드를 반환할 수 있습니다. 기본적으로 WPF 응용 프로그램을 종료 코드 값은 0 반환합니다.  
@@ -325,11 +325,11 @@ ms.locfileid: "59100082"
   
  사용자 환경의 관점에서는 애플리케이션에서 다음과 같은 작업의 일부 또는 전부를 수행하여 이러한 기본 동작을 방지하는 것이 바람직합니다.  
   
--   사용자에게 친숙한 정보 표시  
+- 사용자에게 친숙한 정보 표시  
   
--   애플리케이션을 실행 상태로 유지  
+- 애플리케이션을 실행 상태로 유지  
   
--   기록, 자세한 Windows 이벤트 로그에 개발자에 게 친숙 한 예외 정보입니다.  
+- 기록, 자세한 Windows 이벤트 로그에 개발자에 게 친숙 한 예외 정보입니다.  
   
  이 지원을 구현에 따라 달라 집니다 처리 되지 않은 예외를 탐지 하는 것은 <xref:System.Windows.Application.DispatcherUnhandledException> 이벤트가 발생 합니다.  
   

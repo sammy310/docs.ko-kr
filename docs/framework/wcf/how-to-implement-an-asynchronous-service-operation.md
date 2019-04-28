@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
 ms.openlocfilehash: 603ee57475b3e7b1af607d49050e3276fd3082d8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929079"
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>방법: 비동기 서비스 작업 구현
 Windows Communication Foundation (WCF) 응용 프로그램에서 서비스 작업이 호출 하는 방법을 클라이언트에 지시 하지 않고 동기적으로 열렸는지 또는 비동기적을 구현할 수 있습니다. 예를 들어 비동기 서비스 작업을 동기적으로 호출할 수 있습니다 및 동기 서비스 작업을 비동기적으로 호출할 수 있습니다. 클라이언트 응용 프로그램에서 작업을 비동기적으로 호출 하는 방법을 보여 주는 예제를 참조 하세요. [방법: 서비스 작업을 비동기적으로 호출](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)합니다. 동기 및 비동기 작업에 대 한 자세한 내용은 참조 하세요. [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md) 하 고 [동기 및 비동기 작업](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)합니다. 이 항목에서는 비동기 서비스 작업의 기본 구조에 대해 설명하지만 코드가 완성되지 않았습니다. 서비스 및 클라이언트 측의 전체 예제를 참조 하세요 [비동기](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms751505(v=vs.100))합니다.  
@@ -34,11 +34,11 @@ Windows Communication Foundation (WCF) 응용 프로그램에서 서비스 작�
   
 1. 다음을 포함한 서비스 계약 인터페이스:  
   
-    1.  동기 `SampleMethod` 작업.  
+    1. 동기 `SampleMethod` 작업.  
   
-    2.  비동기 `BeginSampleMethod` 작업.  
+    2. 비동기 `BeginSampleMethod` 작업.  
   
-    3.  비동기 `BeginServiceAsyncMethod` / `EndServiceAsyncMethod` 작업 쌍입니다.  
+    3. 비동기 `BeginServiceAsyncMethod` / `EndServiceAsyncMethod` 작업 쌍입니다.  
   
 2. <xref:System.IAsyncResult?displayProperty=nameWithType> 개체를 사용하여 서비스 구현.  
   

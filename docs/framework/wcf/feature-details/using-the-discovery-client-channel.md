@@ -3,11 +3,11 @@ title: Discovery 클라이언트 채널 사용
 ms.date: 03/30/2017
 ms.assetid: 1494242a-1d64-4035-8ecd-eb4f06c8d2ba
 ms.openlocfilehash: 298cafe34b20a3644f967acf15f831be5b0b90ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932694"
 ---
 # <a name="using-the-discovery-client-channel"></a>Discovery 클라이언트 채널 사용
 WCF 클라이언트 응용 프로그램을 작성하는 경우 호출할 서비스의 엔드포인트 주소를 알아야 합니다. 대부분의 경우 서비스의 엔드포인트 주소를 미리 알 수 없거나 시간 경과에 따라 서비스의 주소가 변경됩니다. Discovery 클라이언트 채널을 사용하면 WCF 클라이언트 응용 프로그램을 작성하고 호출할 서비스를 설명할 수 있습니다. 그러면 클라이언트 채널이 자동으로 프로브 요청을 보냅니다. 서비스가 응답하면 Discovery 클라이언트 채널은 프로브 응답에서 서비스의 엔드포인트 주소를 검색하고 이를 사용하여 서비스를 호출합니다.  

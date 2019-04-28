@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: da30e75bf4a58e66bb0dd8210368b162cf14c3f7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59091267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936476"
 ---
 # <a name="ihosttaskmanager-interface"></a>IHostTaskManager 인터페이스
 CLR (공용 언어 런타임)에서 표준 운영 체제 스레드 또는 파이버 함수를 사용 하는 대신 호스트를 통해 작업을 사용할 수 있는 메서드를 제공 합니다.  

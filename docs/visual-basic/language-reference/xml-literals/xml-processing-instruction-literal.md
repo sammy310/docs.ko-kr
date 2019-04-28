@@ -9,11 +9,11 @@ helpviewer_keywords:
 - processing instruction literal [Visual Basic]
 ms.assetid: cef4f7f8-0011-4f64-8602-795077ad4f15
 ms.openlocfilehash: 3fbb16a4d47801b671d37566573215d3a57afff1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938608"
 ---
 # <a name="xml-processing-instruction-literal-visual-basic"></a>XML 처리 명령 리터럴(Visual Basic)
 리터럴 나타내는 <xref:System.Xml.Linq.XProcessingInstruction> 개체입니다.  

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], AutoComplete
 ms.assetid: fd66d085-1af1-45d4-930a-cde944da2e16
 ms.openlocfilehash: d7919bf87444ef6c4a64ee236356e762da14853f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941481"
 ---
 # <a name="how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms"></a>방법: Windows Forms의 ToolStrip 컨트롤에 자동 완성 기능 활성화
 다음 절차를 결합 한 <xref:System.Windows.Forms.ToolStripLabel> 사용 하 여를 <xref:System.Windows.Forms.ToolStripComboBox> 는 삭제할 수 있습니다 표시할 항목의 목록을 같은 최근에 방문한 웹 사이트. 목록의 항목 중 첫 번째 문자를 일치 하는 문자를 입력 하는 경우 항목이 즉시 표시 됩니다.  

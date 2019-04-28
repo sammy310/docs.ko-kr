@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f0d9d4336b79b60e69f980b6d5931e2994732f30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792693"
 ---
 # <a name="iclriocompletionmanageroncomplete-method"></a>ICLRIoCompletionManager::OnComplete 메서드
 CLR (공용 언어 런타임)에 대 한 호출을 사용 하 여 수행 된 I/O 요청의 상태 알립니다 합니다 [ihostiocompletionmanager:: Bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md) 메서드.  
@@ -41,11 +41,11 @@ HRESULT OnComplete (
  `dwErrorCode`  
  [in] 바인딩 작업의 상태를 나타내는 HRESULT 값입니다.  
   
--   S_ok이 고, 작업을 성공적으로 완료 되었음을 나타냅니다.  
+- S_ok이 고, 작업을 성공적으로 완료 되었음을 나타냅니다.  
   
--   HOST_E_INTERRUPTED는 호출이 완료 되기 전에 종료를 나타냅니다.  
+- HOST_E_INTERRUPTED는 호출이 완료 되기 전에 종료를 나타냅니다.  
   
--   E_FAIL 알 수 없는, 복구할 수 없는 치명적인 오류가 발생 했음을 나타냅니다.  
+- E_FAIL 알 수 없는, 복구할 수 없는 치명적인 오류가 발생 했음을 나타냅니다.  
   
  `NumberOfBytesTransferred`  
  [in] I/O 요청을 처리 하는 동안 전송 된 바이트 수입니다.  

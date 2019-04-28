@@ -3,11 +3,11 @@ title: 상태 변경 이해
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
 ms.openlocfilehash: 5bfee392053d9f3fd529d68b533a046e53f20dd1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771624"
 ---
 # <a name="understanding-state-changes"></a>상태 변경 이해
 이 항목에서는 채널에 있는 상태와 전이, 채널 상태의 구조 지정에 사용되는 형식, 그리고 구현 방법에 대해 설명합니다.  
@@ -24,14 +24,14 @@ ms.locfileid: "33496665"
 ## <a name="icommunicationobject-communicationobject-and-states-and-state-transition"></a>ICommunicationObject, CommunicationObject와 상태 및 상태 전이  
  <xref:System.ServiceModel.ICommunicationObject>는 다양한 속성을 구성할 수 있는 만듦 상태에서 시작합니다. 열림 상태가 된 개체는 메시지 보내기와 받기에 사용할 수 있지만 해당 속성은 변경할 수 없는 것으로 간주됩니다. Closing 상태가 된 개체는 더 이상 새 보내기 또는 받기 요청을 처리할 수 없지만 기존 요청은 Close 제한 시간에 도달할 때까지 완료할 기회가 있습니다.  복구할 수 없는 오류가 발생한 경우 개체는 Faulted 상태로 전이되며, 해당 상태에서 오류에 대한 정보가 검사된 후 결국 닫힙니다. Closed 상태에 있는 개체는 기본적으로 상태 시스템의 끝에 도달한 것입니다. 개체가 한 상태에서 다음 상태로 전이되고 나면 이전 상태로 돌아가지 않습니다.  
   
- 다음 다이어그램은 <xref:System.ServiceModel.ICommunicationObject> 상태 및 상태 전이를 보여 줍니다. 상태 전이는 Abort, Open 또는 Close의 세 가지 메서드 중 하나를 호출하여 일으킬 수 있습니다. 다른 구현 관련 메서드를 호출하여 일으킬 수도 있습니다. Faulted 상태로의 전이는 통신 개체를 여는 도중이나 열고 난 후에 오류가 발생한 경우 일어날 수 있습니다.  
+ 다음 다이어그램은 <xref:System.ServiceModel.ICommunicationObject> 상태 및 상태 전이를 보여 줍니다. 상태 전환의 세 가지 방법 중 하나를 호출 하 여 발생할 수 있습니다. Abort, Open 또는 닫습니다. 다른 구현 관련 메서드를 호출하여 일으킬 수도 있습니다. Faulted 상태로의 전이는 통신 개체를 여는 도중이나 열고 난 후에 오류가 발생한 경우 일어날 수 있습니다.  
   
  모든 <xref:System.ServiceModel.ICommunicationObject>는 만듦 상태로 시작합니다. 이 상태에서는 응용 프로그램이 속성을 설정하여 개체를 구성할 수 있습니다. 개체가 Created 외의 상태가 되면 변경할 수 없는 것으로 간주됩니다.  
   
  ![채널 상태 전환](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
 그림 1입니다. ICommunicationObject 상태 시스템.  
   
- Windows Communication Foundation (WCF) 라는 추상 기본 클래스를 제공 <xref:System.ServiceModel.Channels.CommunicationObject> 를 구현 하는 <xref:System.ServiceModel.ICommunicationObject> 및 채널 상태 시스템입니다. 다음 그래픽은 <xref:System.ServiceModel.Channels.CommunicationObject>에 적용되는 수정된 상태 다이어그램입니다. 여기에는 <xref:System.ServiceModel.ICommunicationObject> 상태 시스템 외에도 추가 <xref:System.ServiceModel.Channels.CommunicationObject> 메서드가 호출되는 타이밍이 표시됩니다.  
+ Windows Communication Foundation (WCF) 라는 추상 기본 클래스를 제공 <xref:System.ServiceModel.Channels.CommunicationObject> 구현 하는 <xref:System.ServiceModel.ICommunicationObject> 및 채널 상태 시스템. 다음 그래픽은 <xref:System.ServiceModel.Channels.CommunicationObject>에 적용되는 수정된 상태 다이어그램입니다. 여기에는 <xref:System.ServiceModel.ICommunicationObject> 상태 시스템 외에도 추가 <xref:System.ServiceModel.Channels.CommunicationObject> 메서드가 호출되는 타이밍이 표시됩니다.  
   
  ![상태 변경](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
 그림 2. 이벤트 및 보호된 메서드 호출을 포함한 ICommunicationObject 상태 시스템의 CommunicationObject 구현  
@@ -80,7 +80,7 @@ ms.locfileid: "33496665"
   
  Open 메서드  
   
- 사전 조건: 상태는 Created.  
+ 사전 조건: 상태는 만들어집니다.  
   
  사후 조건: 상태는 Opened 또는 Faulted. 예외가 throw될 수 있습니다.  
   
@@ -95,9 +95,9 @@ ms.locfileid: "33496665"
   
  Close 메서드  
   
- 사전 조건: 없음.  
+ 사전 조건: 없음  
   
- 사후 조건: 상태는 Closed. 예외가 throw될 수 있습니다.  
+ 사후 조건: 닫힌 상태입니다. 예외가 throw될 수 있습니다.  
   
  Close() 메서드는 어느 상태에서나 호출할 수 있습니다. 여기서는 개체를 정상적으로 닫으려 합니다. 오류가 발생하면 개체를 종료합니다. 현재 상태가 Closing 또는 Closed이면 이 메서드에서는 아무 것도 하지 않습니다. 그렇지 않으면 상태를 Closing으로 설정합니다. 원래 상태가 Created, Opening 또는 Faulted이면 Abort()를 호출합니다(다음 다이어그램 참조). 원래 상태가 Opened이면 Closing 이벤트를 일으키는 OnClosing()과 OnClose() 및 OnClosed()를 순서대로 호출합니다. 이 과정 중에 예외가 throw되면 Close()에서는 Abort()를 호출하고 예외를 일으킵니다. OnClosed()에서는 상태를 Closed로 설정하고 Closed 이벤트를 일으킵니다. 다음 다이어그램은 Close 프로세스를 보다 자세히 나타낸 것입니다.  
   
@@ -106,8 +106,8 @@ ms.locfileid: "33496665"
   
  중단  
   
- 사전 조건: 없음.  
-사후 조건: 상태는 Closed. 예외가 throw될 수 있습니다.  
+ 사전 조건: 없음  
+사후 조건: 닫힌 상태입니다. 예외가 throw될 수 있습니다.  
   
  현재 상태가 Closed이거나 이전에 개체가 다른 스레드에서 Abort()를 실행하는 등의 방법으로 종료된 경우에는 Abort() 메서드에서 아무 것도 하지 않습니다. 그렇지 않은 경우에는 상태를 Closing으로 설정하고 Closing 이벤트를 일으키는 OnClosing()과 OnAbort() 및 OnClosed()를 순서대로 호출합니다. 개체를 닫는 경우가 아니라 종료하는 경우이기 때문에 OnClose는 호출하지 않습니다. OnClosed()에서는 상태를 Closed로 설정하고 Closed 이벤트를 일으킵니다. 이 과정에서 예외가 throw되면 Abort의 호출자에게 예외가 다시 throw됩니다. OnClosing(), OnClosed() 및 OnAbort()의 구현은 입력/출력 등을 차단하지 않아야 합니다. 다음 다이어그램은 Abort 프로세스를 보다 자세히 나타낸 것입니다.  
   
@@ -118,9 +118,9 @@ ms.locfileid: "33496665"
   
  Fault 메서드는 <xref:System.ServiceModel.Channels.CommunicationObject>에 적용되며 <xref:System.ServiceModel.ICommunicationObject> 인터페이스의 일부가 아닙니다. 여기서는 완전성을 위해 함께 설명합니다.  
   
- 사전 조건: 없음.  
+ 사전 조건: 없음  
   
- 사후 조건: 상태는 Faulted. 예외가 throw될 수 있습니다.  
+ 사후 조건: 상태가 Faulted입니다. 예외가 throw될 수 있습니다.  
   
  현재 상태가 Faulted 또는 Closed이면 Fault() 메서드에서 아무 것도 하지 않습니다. 그렇지 않은 경우에는 상태를 Faulted로 설정하고 Faulted 이벤트를 일으키는 OnFaulted()를 호출합니다. OnFaulted에서 예외가 throw되면 다시 throw됩니다.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "33496665"
   
 |상태|Abort 호출 여부|예외|  
 |-----------|----------------------------|---------------|  
-|만들어짐|N/A|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
+|만든 날짜|N/A|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Opening|N/A|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Opened|N/A|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Closing|예|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>|  

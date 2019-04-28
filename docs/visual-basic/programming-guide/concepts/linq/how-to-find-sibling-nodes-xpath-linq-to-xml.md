@@ -3,11 +3,11 @@ title: '방법: (XPath 및 LINQ to XML) 형제 노드 찾기 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 73082738-2113-4438-8545-98d5df0927cb
 ms.openlocfilehash: dad211c9c3716f760d28e4a18a61c885fc4dd58f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780395"
 ---
 # <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a>방법: (XPath 및 LINQ to XML) 형제 노드 찾기 (Visual Basic)
 특정 이름을 가진 노드의 형제를 모두 찾으려고 할 수 있습니다. 컨텍스트 노드도 해당 이름을 가진 경우 생성되는 컬렉션에 컨텍스트 노드가 포함될 수 있습니다.  

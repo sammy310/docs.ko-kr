@@ -5,20 +5,20 @@ f1_keywords:
 - vbrID59
 ms.assetid: 0926a3a4-177b-4452-9b33-d8a01e24cc21
 ms.openlocfilehash: 1bc75303bcc2f46e54c06e89347da28997e59786
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59324177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935254"
 ---
 # <a name="bad-record-length"></a>레코드 길이가 잘못되었습니다.
 이 오류의 가능한 원인:  
   
--   에 지정 된 레코드 변수의 길이 `FileGet`, `FileGetObject`, `FilePut` 또는 `FilePutObject` 문은 해당에 지정 된 길이에서 다른 `FileOpen` 문.  
+- 에 지정 된 레코드 변수의 길이 `FileGet`, `FileGetObject`, `FilePut` 또는 `FilePutObject` 문은 해당에 지정 된 길이에서 다른 `FileOpen` 문.  
   
--   변수를 `FilePut` 또는 `FilePutObject` 문이 하거나 가변 길이 문자열을 포함 합니다.  
+- 변수를 `FilePut` 또는 `FilePutObject` 문이 하거나 가변 길이 문자열을 포함 합니다.  
   
--   변수를 `FilePut` 또는 `FilePutObject` 되거나 포함 하는 `Variant` 형식입니다.  
+- 변수를 `FilePut` 또는 `FilePutObject` 되거나 포함 하는 `Variant` 형식입니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   

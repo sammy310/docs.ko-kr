@@ -12,11 +12,11 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 5a8d6afa-1b4b-4b24-8db8-501086ffdebe
 ms.openlocfilehash: 99561490786f3f3569f272138001ea5ad8937410
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792264"
 ---
 # <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>연습: 바인딩되지 않은 Windows Forms DataGridView 컨트롤 만들기
 데이터베이스에서 발생 하지 않는 테이블 형식 데이터를 표시 하려면 자주 좋습니다. 예를 들어 다음 문자열의 2 차원 배열의 내용을 표시 하는 것이 좋습니다. <xref:System.Windows.Forms.DataGridView> 클래스는 데이터 원본에 바인딩하지 않고 데이터를 표시 하는 쉽고 고도로 사용자 지정 가능한 방법을 제공 합니다. 이 연습을 채우는 방법을 보여는 <xref:System.Windows.Forms.DataGridView> 제어 하 고 추가 및 삭제 "바인딩되지 않은" 모드의 행을 관리 합니다. 기본적으로 사용자는 새 행을 추가할 수 있습니다. 행 추가 방지 하려면 설정 합니다 <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> 속성은 `false`합니다.  
@@ -75,22 +75,22 @@ ms.locfileid: "59343471"
   
 #### <a name="to-test-the-form"></a>폼을 테스트 하려면  
   
--   F5 키를 눌러 애플리케이션을 실행합니다.  
+- F5 키를 눌러 애플리케이션을 실행합니다.  
   
      표시 됩니다는 <xref:System.Windows.Forms.DataGridView> 에 나열 된 노래를 표시 하는 컨트롤 `PopulateDataGridView`합니다. 포함 된 새 행을 추가할 수 있습니다 합니다 **행 추가** 단추를 사용 하 여 선택한 행을 삭제할 수는 **행 삭제** 단추입니다. 바인딩되지 않은 <xref:System.Windows.Forms.DataGridView> 컨트롤은 데이터 저장소 및 데이터에 같은 외부 소스에 관계 없이 <xref:System.Data.DataSet> 또는 배열입니다.  
   
 ## <a name="next-steps"></a>다음 단계  
  이 응용 프로그램의 기본적인 이해를 제공 합니다 <xref:System.Windows.Forms.DataGridView> 컨트롤의 기능입니다. 동작과 모양을 사용자 지정할 수 있습니다는 <xref:System.Windows.Forms.DataGridView> 여러 가지 방법으로 제어 합니다.  
   
--   헤더 및 테두리 스타일을 변경 합니다. 자세한 내용은 [방법: 변경 된 테두리 및 모눈선 스타일에는 Windows Forms DataGridView 컨트롤](change-the-border-and-gridline-styles-in-the-datagrid.md)합니다.  
+- 헤더 및 테두리 스타일을 변경 합니다. 자세한 내용은 [방법: 변경 된 테두리 및 모눈선 스타일에는 Windows Forms DataGridView 컨트롤](change-the-border-and-gridline-styles-in-the-datagrid.md)합니다.  
   
--   사용 하도록 설정 하거나 사용자 입력을 제한 합니다 <xref:System.Windows.Forms.DataGridView> 제어 합니다. 자세한 내용은 [방법: 행 추가 방지 하 고 삭제는 Windows Forms DataGridView 컨트롤](prevent-row-addition-and-deletion-datagridview.md), 및 [방법: 에서 열을 설정 읽기 전용으로 Windows Forms DataGridView 컨트롤](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)합니다.  
+- 사용 하도록 설정 하거나 사용자 입력을 제한 합니다 <xref:System.Windows.Forms.DataGridView> 제어 합니다. 자세한 내용은 [방법: 행 추가 방지 하 고 삭제는 Windows Forms DataGridView 컨트롤](prevent-row-addition-and-deletion-datagridview.md), 및 [방법: 에서 열을 설정 읽기 전용으로 Windows Forms DataGridView 컨트롤](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)합니다.  
   
--   데이터베이스 관련 오류에 대 한 사용자 입력을 확인 합니다. 자세한 내용은 [연습: Forms DataGridView 컨트롤의 Windows에서 데이터 입력 중에 발생 하는 오류 처리](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)합니다.  
+- 데이터베이스 관련 오류에 대 한 사용자 입력을 확인 합니다. 자세한 내용은 [연습: Forms DataGridView 컨트롤의 Windows에서 데이터 입력 중에 발생 하는 오류 처리](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)합니다.  
   
--   가상 모드를 사용 하 여 매우 큰 데이터 집합을 처리 합니다. 자세한 내용은 [연습: Forms DataGridView 컨트롤의 Windows에서 가상 모드 구현](implementing-virtual-mode-wf-datagridview-control.md)합니다.  
+- 가상 모드를 사용 하 여 매우 큰 데이터 집합을 처리 합니다. 자세한 내용은 [연습: Forms DataGridView 컨트롤의 Windows에서 가상 모드 구현](implementing-virtual-mode-wf-datagridview-control.md)합니다.  
   
--   셀의 모양을 사용자 지정 합니다. 자세한 내용은 [방법: Windows Forms DataGridView 컨트롤에서 셀 모양 사용자 지정](customize-the-appearance-of-cells-in-the-datagrid.md) 고 [방법: Windows Forms DataGridView 컨트롤에 기본 셀 스타일 설정](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)합니다.  
+- 셀의 모양을 사용자 지정 합니다. 자세한 내용은 [방법: Windows Forms DataGridView 컨트롤에서 셀 모양 사용자 지정](customize-the-appearance-of-cells-in-the-datagrid.md) 고 [방법: Windows Forms DataGridView 컨트롤에 기본 셀 스타일 설정](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
 

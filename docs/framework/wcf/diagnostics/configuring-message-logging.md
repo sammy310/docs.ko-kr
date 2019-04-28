@@ -5,11 +5,11 @@ helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
 ms.openlocfilehash: e1d4c91ee282233e862ae14bf8d650ab2a754462
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785010"
 ---
 # <a name="configuring-message-logging"></a>메시지 로깅 구성
 이 항목에서는 다양한 시나리오에서 메시지 로깅을 구성하는 방법에 대해 설명합니다.  
@@ -83,11 +83,11 @@ ms.locfileid: "59112088"
 ### <a name="other-options"></a>기타 옵션  
  로깅 수준 이외에 다음과 같은 옵션을 지정할 수 있습니다.  
   
--   전체 메시지 기록 (`logEntireMessage` 특성): 이 값은 전체 메시지 (메시지 헤더 및 본문) 기록 되는지 여부를 지정 합니다. 기본값은 `false`로, 메시지 헤더만 기록됩니다. 이 설정은 서비스 및 전송 메시지 로깅 수준에 영향을 줍니다.  
+- 전체 메시지 기록 (`logEntireMessage` 특성): 이 값은 전체 메시지 (메시지 헤더 및 본문) 기록 되는지 여부를 지정 합니다. 기본값은 `false`로, 메시지 헤더만 기록됩니다. 이 설정은 서비스 및 전송 메시지 로깅 수준에 영향을 줍니다.  
   
--   기록할 최대 메시지 수 (`maxMessagesToLog` 특성): 이 값 로깅할 메시지의 최대 수를 지정 합니다. 모든 메시지(서비스, 전송 및 잘못된 형식의 메시지)가 이 할당량에 계산됩니다. 할당량에 도달하면 추적을 내보내고 추가 메시지는 기록되지 않습니다. 기본값은 10000입니다.  
+- 기록할 최대 메시지 수 (`maxMessagesToLog` 특성): 이 값 로깅할 메시지의 최대 수를 지정 합니다. 모든 메시지(서비스, 전송 및 잘못된 형식의 메시지)가 이 할당량에 계산됩니다. 할당량에 도달하면 추적을 내보내고 추가 메시지는 기록되지 않습니다. 기본값은 10000입니다.  
   
--   기록할 메시지 최대 크기 (`maxSizeOfMessageToLog` 특성): 이 값 (바이트)에서 기록할 메시지의 최대 크기를 지정 합니다. 이 크기 제한을 초과하는 메시지는 기록되지 않으며 해당 메시지에 대해 아무런 동작이 수행되지 않습니다. 이 설정은 모든 추적 수준에 영향을 줍니다. ServiceModel 추적을 사용하도록 설정된 경우, 경고 수준 추적을 첫 번째 로깅 지점(ServiceModelSend* 또는 TransportReceive)에서 내보내어 사용자에게 통보합니다. 서비스 수준 및 전송 수준 메시지의 기본값은 256K며 잘못된 형식의 메시지에 대한 기본값은 4K입니다.  
+- 기록할 메시지 최대 크기 (`maxSizeOfMessageToLog` 특성): 이 값 (바이트)에서 기록할 메시지의 최대 크기를 지정 합니다. 이 크기 제한을 초과하는 메시지는 기록되지 않으며 해당 메시지에 대해 아무런 동작이 수행되지 않습니다. 이 설정은 모든 추적 수준에 영향을 줍니다. ServiceModel 추적을 사용하도록 설정된 경우, 경고 수준 추적을 첫 번째 로깅 지점(ServiceModelSend* 또는 TransportReceive)에서 내보내어 사용자에게 통보합니다. 서비스 수준 및 전송 수준 메시지의 기본값은 256K며 잘못된 형식의 메시지에 대한 기본값은 4K입니다.  
   
     > [!CAUTION]
     >  `maxSizeOfMessageToLog`와 비교하기 위해 계산되는 메시지 크기는 serialization 이전의 메모리에 있는 메시지 크기로, 이 크기는 기록되는 메시지 문자열의 실제 길이와 다를 수 있으며 대부분의 경우 실제 크기보다 더 큽니다. 따라서 메시지가 기록되지 않을 수 있으므로 이를 감안하여`maxSizeOfMessageToLog` 특성을 필요한 메시지 크기보다 10% 더 크게 지정합니다. 또한 잘못된 형식의 메시지가 기록될 경우 메시지 로그에 사용되는 실제 디스크 공간은 `maxSizeOfMessageToLog`에 지정된 값의 최대 5배가 될 수 있습니다.  

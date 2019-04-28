@@ -7,11 +7,11 @@ helpviewer_keywords:
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
 ms.openlocfilehash: 5ae1c236835141b10bc704cd39f55de6e3e974b0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723127"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>방법: 상속 선택 대화 상자를 사용하여 양식 상속
 양식이나 다른 개체를 상속하는 가장 쉬운 방법은 **상속 선택** 대화 상자를 사용하는 것입니다. 이 대화 상자에서는 다른 솔루션에서 이미 만든 코드 또는 UI(사용자 인터페이스)를 활용할 수 있습니다.  

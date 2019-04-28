@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
 ms.openlocfilehash: cf3ae6f47f63c545edf3d65804daa049d4541788
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703532"
 ---
 # <a name="best-practices-data-contract-versioning"></a>모범 사례: 데이터 계약 버전 관리
 이 항목에서는 시간 경과에 따라 쉽게 발전할 수 있는 데이터 계약을 만드는 최선의 방법을 보여 줍니다. 데이터 계약에 대 한 자세한 내용은의 항목을 참조 하세요 [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md)합니다.  
@@ -39,9 +39,9 @@ ms.locfileid: "59334928"
   
  경우에 따라 응용 프로그램이 보낸 메시지에서 엄격한 스키마 준수를 보장해야 하지만 들어오는 메시지가 엄격하게 스키마를 준수한다고 확신할 수 없습니다. 이 경우 들어오는 메시지에 잘못 사용된 데이터가 포함될 위험이 있습니다. 불필요 한 값이 저장 되 고 WCF에 의해 반환 되므로 스키마에 맞지 않는 메시지가 전송 되 고 있습니다. 이 문제를 방지하려면 왕복 기능을 해제해야 합니다. 그런 경우 두 가지 방법이 있습니다.  
   
--   아무 형식에도 <xref:System.Runtime.Serialization.IExtensibleDataObject> 인터페이스를 구현하지 않습니다.  
+- 아무 형식에도 <xref:System.Runtime.Serialization.IExtensibleDataObject> 인터페이스를 구현하지 않습니다.  
   
--   <xref:System.ServiceModel.ServiceBehaviorAttribute> 속성을 <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A>로 설정하여 `true` 특성을 서비스 계약에 적용합니다.  
+- <xref:System.ServiceModel.ServiceBehaviorAttribute> 속성을 <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A>로 설정하여 `true` 특성을 서비스 계약에 적용합니다.  
   
  왕복에 대 한 자세한 내용은 참조 하세요. [이후 버전과 호환 데이터 계약](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)합니다.  
   
@@ -66,11 +66,11 @@ ms.locfileid: "59334928"
   
 8. 이후 버전에서 새 데이터 멤버를 추가할 수 있습니다. 항상 다음 규칙을 따라야 합니다.  
   
-    1.  <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 속성은 항상 기본값 `false`로 유지되어야 합니다.  
+    1. <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 속성은 항상 기본값 `false`로 유지되어야 합니다.  
   
-    2.  멤버에 대해 기본값 `null` 또는 0을 허용할 수 없는 경우 <xref:System.Runtime.Serialization.OnDeserializingAttribute>로 콜백 메서드를 제공하여 들어오는 스트림에 멤버가 없는 경우 적절한 기본값을 제공해야 합니다. 콜백에 대 한 자세한 내용은 참조 하세요. [버전 독립적 Serialization 콜백](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)합니다.  
+    2. 멤버에 대해 기본값 `null` 또는 0을 허용할 수 없는 경우 <xref:System.Runtime.Serialization.OnDeserializingAttribute>로 콜백 메서드를 제공하여 들어오는 스트림에 멤버가 없는 경우 적절한 기본값을 제공해야 합니다. 콜백에 대 한 자세한 내용은 참조 하세요. [버전 독립적 Serialization 콜백](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)합니다.  
   
-    3.  <xref:System.Runtime.Serialization.DataMemberAttribute.Order?displayProperty=nameWithType> 새로 추가 된 데이터 멤버의 모든 기존 데이터 멤버 이후에 표시 되도록 속성을 사용 해야 합니다. 이 작업을 수행 하는 권장된 방법은 아래와 같습니다. 데이터 계약의 첫 번째 버전의 데이터 멤버 없음 있어야 해당 `Order` 속성 집합입니다. 데이터 계약의 버전 2에서 추가된 모든 데이터 멤버의 `Order` 속성을 2로 설정해야 하며 데이터 계약의 버전 3에서 추가된 모든 데이터 멤버의 `Order` 속성을 3으로 설정해야 합니다. 둘 이상의 데이터 멤버를 동일한 `Order` 번호로 설정해도 됩니다.  
+    3. <xref:System.Runtime.Serialization.DataMemberAttribute.Order?displayProperty=nameWithType> 새로 추가 된 데이터 멤버의 모든 기존 데이터 멤버 이후에 표시 되도록 속성을 사용 해야 합니다. 이 작업을 수행 하는 권장된 방법은 아래와 같습니다. 데이터 계약의 첫 번째 버전의 데이터 멤버 없음 있어야 해당 `Order` 속성 집합입니다. 데이터 계약의 버전 2에서 추가된 모든 데이터 멤버의 `Order` 속성을 2로 설정해야 하며 데이터 계약의 버전 3에서 추가된 모든 데이터 멤버의 `Order` 속성을 3으로 설정해야 합니다. 둘 이상의 데이터 멤버를 동일한 `Order` 번호로 설정해도 됩니다.  
   
 9. 이전 버전에서 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 속성이 기본값 `false`로 설정된 경우에도 이후 버전에서 데이터 멤버를 제거하지 마세요.  
   

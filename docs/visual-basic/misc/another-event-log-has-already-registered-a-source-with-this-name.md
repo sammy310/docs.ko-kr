@@ -3,11 +3,11 @@ title: 다른 이벤트 로그에서 이미 이 이름으로 소스를 등록했
 ms.date: 07/20/2015
 ms.assetid: e6f5cd95-bb3f-4845-84fb-ae623a9bd44e
 ms.openlocfilehash: d932869504b2d8a5f3a948b190e5528bfcfa664f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940615"
 ---
 # <a name="another-event-log-has-already-registered-a-source-with-this-name"></a>다른 이벤트 로그에서 이미 이 이름으로 소스를 등록했습니다.
 지정한 소스가 다른 이벤트 로그와 함께 등록되어 있는 이벤트 로그에 항목을 쓰려고 했습니다.  

@@ -3,11 +3,11 @@ title: 연결 작업 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 4021e019-a8f7-477b-879e-07dd7f44feb9
 ms.openlocfilehash: 90e848b21c79278f81507831025045224c4cf634
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663563"
 ---
 # <a name="concatenation-operations-visual-basic"></a>연결 작업 (Visual Basic)
 연결은 한 시퀀스를 다른 시퀀스에 추가하는 작업을 나타냅니다.  

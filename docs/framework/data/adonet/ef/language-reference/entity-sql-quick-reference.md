@@ -3,11 +3,11 @@ title: Entity SQL 빠른 참조
 ms.date: 03/30/2017
 ms.assetid: e53dad9e-5e83-426e-abb4-be3e78e3d6dc
 ms.openlocfilehash: b4e3eaf8abd82b63fa2663b47f878ecfa9584897
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785257"
 ---
 # <a name="entity-sql-quick-reference"></a>Entity SQL 빠른 참조
 이 항목에서는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 쿼리에 대한 빠른 참조를 제공합니다. 이 항목의 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다.  

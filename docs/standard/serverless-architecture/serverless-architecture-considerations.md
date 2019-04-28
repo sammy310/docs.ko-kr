@@ -5,13 +5,13 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: b12a09c0fcef7e7ff954a3f959fb9e3080a6e859
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940948"
 ---
-# <a name="serverless-architecture-considerations"></a>서버 리스 아키텍처 고려 사항
+# <a name="serverless-architecture-considerations"></a>서버리스 아키텍처 고려 사항
 
 서버 리스 아키텍처를 채택 하는 몇 가지 문제 함께 제공 됩니다. 이 섹션에서는 알아야 할 일반적인 고려 사항 중 일부를 살펴봅니다. 솔루션 경우 이러한 모든 문제 모든 아키텍처 선택와 마찬가지로 서버 리스 환경으로 결정을 신중 하 게 장점 및 단점을 고려한 후에 이루어져야 합니다. 응용 프로그램의 요구에 따라 서버 리스 구현 되지 특정 구성 요소에 적합 한 솔루션을 결정할 수 있습니다.
 
@@ -55,7 +55,7 @@ ms.locfileid: "53155066"
 
 서버 리스 아키텍처에서 데이터에 대 한 자세한 내용은 참조 하세요. [분산 데이터 관리의 문제 및 솔루션](../microservices-architecture/architect-microservice-container-applications/distributed-data-management.md)합니다.
 
-## <a name="scaling"></a>배율 조정
+## <a name="scaling"></a>크기 조정
 
 것은 일반적인 오해는 서버 리스 의미 "서버가 없습니다." 사실 "서버가." 사실 있습니다은 백업 인프라를 크기 조정에 나올 때 이해 해야 합니다. 대부분의 서버 리스 플랫폼 이벤트 밀도 증가 하면 인프라를 확장 해야 하는 방법을 처리 하는 컨트롤 집합을 제공 합니다. 다양 한 옵션을 선택할 수 있지만 전략 함수에 따라 달라질 수 있습니다. 또한 동일한 호스트에는 함수가 동일한 크기 조정 옵션을 갖도록 함수는 일반적으로 관련된 호스트에서 실행 됩니다. 따라서 구성 및 전략을 수립할 함수 호스팅되는 크기 조정 요구 사항에 따라 함께 하는 데 필요한 것입니다.
 

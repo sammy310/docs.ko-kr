@@ -3,11 +3,11 @@ title: ADO.NET에서 Side-by-Side 실행
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
 ms.openlocfilehash: a8747d749ed7e751ba577a2cd29c2048065f2645
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664144"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>ADO.NET에서 Side-by-Side 실행
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]에서의 side-by-side 실행은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 여러 버전이 설치되어 있는 컴퓨터에서 응용 프로그램을 컴파일한 버전만 사용하여 응용 프로그램을 실행하는 기능입니다. Side-by-side-실행을 구성 하는 방법에 대 한 자세한 내용은 참조 하세요. [Side-by-side-실행](../../../../docs/framework/deployment/side-by-side-execution.md)합니다.  

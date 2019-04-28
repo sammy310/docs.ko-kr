@@ -19,11 +19,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
 ms.openlocfilehash: 80065cabcacdcf44b04fef7bacb978ca9c8077ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791908"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>프로시저 매개 변수 및 인수(Visual Basic)
 대부분의 경우 프로시저를 호출한 후 나타나는 상황에 대 한 일부 정보를 해야 합니다. 반복 또는 공유 작업을 수행 하는 프로시저는 각 호출에 대 한 다른 정보를 사용 합니다. 이 정보는 변수, 상수 및 호출할 때 프로시저에 전달 하는 식으로 구성 됩니다.  
@@ -49,11 +49,11 @@ ms.locfileid: "58825458"
   
  호출 코드에서는 해당 매개 변수를와 다른 데이터 형식과 같은 인수를 제공할 경우 `Byte` 에 `String` 매개 변수를 다음 중 하나를 수행 해야 합니다.  
   
--   인수만 지정 매개 변수 데이터 형식으로 변환할 데이터 형식  
+- 인수만 지정 매개 변수 데이터 형식으로 변환할 데이터 형식  
   
--   설정 `Option Strict Off` 암시적 축소 변환을; 수 있도록 또는  
+- 설정 `Option Strict Off` 암시적 축소 변환을; 수 있도록 또는  
   
--   변환 키워드를 사용 하 여 데이터 형식을 명시적으로 변환 합니다.  
+- 변환 키워드를 사용 하 여 데이터 형식을 명시적으로 변환 합니다.  
   
 ### <a name="type-parameters"></a>형식 매개 변수  
  A *제네릭 프로시저* 하나 이상의 정의 *형식 매개 변수* 일반 매개 변수 외에도 합니다. 제네릭 프로시저를 호출 데이터 형식 요구 사항을 각각의 개별 호출은 조정할 수 있도록 프로시저를 호출할 때마다 다른 데이터 형식을 전달 하도록 허용 합니다. [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)을 참조하세요.  

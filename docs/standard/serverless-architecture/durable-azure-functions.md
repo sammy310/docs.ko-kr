@@ -5,13 +5,13 @@ author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
 ms.openlocfilehash: 8ad354e1708eb88f016130f8235f534b967eb122
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776014"
 ---
-# <a name="durable-azure-functions"></a>Azure functions 지 속성
+# <a name="durable-azure-functions"></a>지속 가능한 Azure Functions
 
 Azure Functions를 사용 하 여 서버 리스 응용 프로그램을 만들 때 작업 상태 비저장 방식으로 실행 하려면 일반적으로 디자인 됩니다. 이 디자인 선택 이유가 되므로 플랫폼 눈금으로 어려워집니다 코드에서 실행 되 고 어떤 서버가 인지 알고 있어야 합니다. 또한 특정된 시점에서 활성 상태인 인스턴스 개수를 확인 하기 어려운 됩니다. 그러나는 알 수 하는 프로세스의 현재 상태를 필요로 하는 응용 프로그램의 클래스가 있습니다. 프로세스를 온라인 상점으로 주문을 제출 하는 것이 좋습니다. 체크 아웃 작업 프로세스의 상태를 파악 해야 하는 여러 작업으로 구성 된 워크플로 수 있습니다. 이러한 정보는 고객이 자신의 계정에도 신용 카드를 처리 하면 크레딧은 있으면 제품 재고를 포함할 수 있습니다. 자체 내부 워크플로 서비스나 심지어 타사 시스템에서 이러한 작업 수입니다.
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ListView controls [WPF], MouseDoubleClick event
 ms.assetid: 81b39369-655a-4585-ac58-4640e5bb8fed
 ms.openlocfilehash: 443e5c620ef5bf240d3e317f0234aac0b29b456f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770996"
 ---
 # <a name="how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview"></a>방법: ListView에서 각 항목에 대한 MouseDoubleClick 이벤트 처리
 항목에 대해 이벤트를 처리 하는 <xref:System.Windows.Controls.ListView>, 각 이벤트 처리기를 추가 해야 <xref:System.Windows.Controls.ListViewItem>합니다. 경우는 <xref:System.Windows.Controls.ListView> 바인딩된 데이터 원본에 명시적으로 만들지를 <xref:System.Windows.Controls.ListViewItem>, 추가 하 여 각 항목에 대 한 이벤트를 처리할 수 있지만 <xref:System.Windows.EventSetter> 의 스타일을 <xref:System.Windows.Controls.ListViewItem>.  

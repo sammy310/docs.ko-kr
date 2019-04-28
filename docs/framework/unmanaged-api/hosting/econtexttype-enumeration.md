@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3f3643bf4880532a46fe7f9f57b8077032013728
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59118081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796041"
 ---
 # <a name="econtexttype-enumeration"></a>EContextType 열거형
 현재 실행 중인 스레드의 보안 컨텍스트를 설명 합니다.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC31043
 ms.assetid: 5bd90c71-1b78-444b-91e1-4789451ef085
 ms.openlocfilehash: 5d58b531b670715716e849cd37227bc899195df6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935371"
 ---
 # <a name="arrays-declared-as-structure-members-cannot-be-declared-with-an-initial-size"></a>구조체 멤버로 선언된 배열은 초기 크기로 선언할 수 없습니다.
 구조의 배열 초기 크기를 사용 하 여 선언 됩니다. 구조체 요소를 초기화할 수 없습니다 및 배열 크기를 선언 하는 것은 한 가지 형태의 초기화 합니다.  

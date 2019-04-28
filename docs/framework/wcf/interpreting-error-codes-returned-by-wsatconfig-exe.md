@@ -3,11 +3,11 @@ title: wsatConfig.exe에서 반환된 오류 코드 해석
 ms.date: 03/30/2017
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
 ms.openlocfilehash: 47db39f2b350c2fa8c655a041ec0239e5d297644
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928819"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>wsatConfig.exe에서 반환된 오류 코드 해석
 이 항목에서는 WS-AtomicTransaction 구성 유틸리티(wsatConfig.exe)에서 생성한 모든 오류 코드 및 수행할 동작을 나열합니다.  

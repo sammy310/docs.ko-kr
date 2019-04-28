@@ -3,11 +3,11 @@ title: Byref
 description: Byref 및 byref와 유사한 형식에 대 한 자세한 F#에 낮은 수준의 프로그래밍에 사용 됩니다.
 ms.date: 09/02/2018
 ms.openlocfilehash: c0bad26672fbb9eb315eee1c3e275183ddeb9297
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59055367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703194"
 ---
 # <a name="byrefs"></a>Byref
 

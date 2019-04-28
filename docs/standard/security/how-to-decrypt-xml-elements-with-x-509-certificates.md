@@ -16,11 +16,11 @@ ms.assetid: bd015722-d88d-408d-8ca8-e4e475c441ed
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 72e5f1e72d3ce7ec954d61216bbac2e0e1b5a428
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795124"
 ---
 # <a name="how-to-decrypt-xml-elements-with-x509-certificates"></a>방법: X.509 인증서로 XML 요소 해독
 <xref:System.Security.Cryptography.Xml> 네임스페이스의 클래스를 사용하여 XML 문서 내의 요소를 암호화 및 암호 해독할 수 있습니다.  XML 암호화는 데이터가 쉽게 읽혀질 염려 없이 암호화된 XML 데이터를 교환하거나 저장하는 표준 방법입니다.  XML 암호화 표준에 대 한 자세한 내용은 World Wide Web Consortium (W3C) 사양을 참조에 있는 XML 암호화에 대 한 <https://www.w3.org/TR/xmldsig-core/>합니다.  
@@ -70,9 +70,9 @@ ms.locfileid: "59301206"
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
   
--   이 예제를 컴파일하려면 `System.Security.dll`에 대한 참조를 포함해야 합니다.  
+- 이 예제를 컴파일하려면 `System.Security.dll`에 대한 참조를 포함해야 합니다.  
   
--   <xref:System.Xml>, <xref:System.Security.Cryptography> 및 <xref:System.Security.Cryptography.Xml> 네임스페이스를 포함합니다.  
+- <xref:System.Xml>, <xref:System.Security.Cryptography> 및 <xref:System.Security.Cryptography.Xml> 네임스페이스를 포함합니다.  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
  이 예제에서 사용된 X.509 인증서는 테스트 전용입니다.  애플리케이션은 신뢰할 수 있는 인증 기관에서 생성된 X.509 인증서를 사용하거나 Microsoft Windows 인증서 서버에서 생성된 인증서를 사용해야 합니다.  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - <param> XML tag
 ms.assetid: 4e32e86f-f6f3-4301-b7fc-2f321fb54368
 ms.openlocfilehash: 4bcfe96361de9e196cb684ac4ba734f82442e25c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940896"
 ---
 # <a name="param-visual-basic"></a>\<매개 변수 > (Visual Basic)
 매개 변수 이름 및 설명을 정의합니다.  
@@ -33,9 +33,9 @@ ms.locfileid: "58825562"
   
  에 대 한 텍스트는 `<param>` 태그는 다음 위치에 표시 됩니다.  
   
--   IntelliSense의 매개 변수 정보입니다. 자세한 내용은 [IntelliSense 사용](/visualstudio/ide/using-intellisense)을 참조하세요.  
+- IntelliSense의 매개 변수 정보입니다. 자세한 내용은 [IntelliSense 사용](/visualstudio/ide/using-intellisense)을 참조하세요.  
   
--   개체 브라우저입니다. 자세한 내용은 [코드 구조 보기](/visualstudio/ide/viewing-the-structure-of-code)를 참조하세요.  
+- 개체 브라우저입니다. 자세한 내용은 [코드 구조 보기](/visualstudio/ide/viewing-the-structure-of-code)를 참조하세요.  
   
  [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   

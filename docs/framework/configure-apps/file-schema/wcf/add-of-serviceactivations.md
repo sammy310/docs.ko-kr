@@ -1,13 +1,13 @@
 ---
-title: <add>의 <serviceActivations>
+title: <serviceActivations>의 <add>
 ms.date: 03/30/2017
 ms.assetid: e5b01fc8-ee84-48b7-95fd-95ab54fa871f
 ms.openlocfilehash: 2a3ba6d41059a480fe610254c0407df16d149e3b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701465"
 ---
 # <a name="add-of-serviceactivations"></a>\<추가 >의 \<serviceActivations >
 
@@ -36,7 +36,7 @@ Windows Communication Foundation (WCF) 서비스 형식에 매핑되는 가상 �
 |특성|설명|
 |---------------|-----------------|
 |factory|서비스 활성화 요소를 생성하는 팩터리의 CLR 형식 이름을 지정하는 문자열입니다.|
-|service|서비스를 구현하는 ServiceType입니다(App_Code 폴더에 있는 경우 정규화된 Typename 또는 짧은 Typename).|
+|서비스|서비스를 구현하는 ServiceType입니다(App_Code 폴더에 있는 경우 정규화된 Typename 또는 짧은 Typename).|
 |relativeAddress|현재 IIS 응용 프로그램 내에서의 상대 주소입니다(예: "Service.svc"). WCF 4.0에서는 이 상대 주소에 알려진 파일 확장명(.svc, .xamlx, ...) 중 하나가 포함되어야 합니다. relativeUrl에 대한 물리적 파일이 존재할 필요는 없습니다.|
 
 ### <a name="child-elements"></a>자식 요소

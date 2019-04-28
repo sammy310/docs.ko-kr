@@ -10,11 +10,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
 ms.openlocfilehash: 6bbf7918ccff184e597204b35aa005ab17d8d8af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766299"
 ---
 # <a name="using-nested-graphics-containers"></a>중첩된 Graphics 컨테이너 사용
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 일시적으로 바꾸거나의 상태 부분을 보강 하는 데 사용할 수 있는 컨테이너를 제공 된 <xref:System.Drawing.Graphics> 개체입니다. 호출 하 여 컨테이너를 만들어야 합니다 <xref:System.Drawing.Graphics.BeginContainer%2A> 메서드는 <xref:System.Drawing.Graphics> 개체입니다. 호출할 수 있습니다 <xref:System.Drawing.Graphics.BeginContainer%2A> 반복 하 여 중첩 된 컨테이너를 구성 합니다. 호출할 때마다 <xref:System.Drawing.Graphics.BeginContainer%2A> 를 호출 하 여 이루어야 <xref:System.Drawing.Graphics.EndContainer%2A>합니다.  

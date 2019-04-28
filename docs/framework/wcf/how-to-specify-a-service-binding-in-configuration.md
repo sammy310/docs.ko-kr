@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
 ms.openlocfilehash: 911c13b2a24c1906fe3da787460209f12296c993
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928585"
 ---
 # <a name="how-to-specify-a-service-binding-in-configuration"></a>방법: 구성에서 서비스 바인딩 지정
 이 예제에서 `ICalculator` 계약이 기본 계산기 서비스에 대해 정의되고, 서비스가 `CalculatorService` 클래스에 구현된 다음 해당 엔드포인트가 Web.config 파일에 구성됩니다. 여기서 서비스는 <xref:System.ServiceModel.BasicHttpBinding>을 사용하는 것으로 지정됩니다. 구성 대신 코드를 사용 하 여이 서비스를 구성 하는 방법에 대 한 참조 [방법: 코드에서 서비스 바인딩 지정](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)합니다.  

@@ -11,20 +11,20 @@ helpviewer_keywords:
 - Windows Forms, interop
 ms.assetid: a9e04765-d2de-4389-a494-a9a6d07aa6ee
 ms.openlocfilehash: 39a9793f3046960032da32795e60314ea05a00fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779056"
 ---
 # <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>방법: 각 Windows Form을 별개의 스레드에서 표시하여 COM Interop 지원
 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> 메서드를 통해 만들 수 있는 폼을 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 메시지 루프에 표시하여 COM 상호 운용성 문제를 해결할 수 있습니다.  
   
  Windows Form이 COM 클라이언트 애플리케이션에서 제대로 작동하게 하려면 Windows Forms 메시지 루프에서 폼을 실행해야 합니다. 이렇게 하려면 다음 접근 방식 중 하나를 사용합니다.  
   
--   <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 메서드를 사용하여 Windows Form을 표시합니다. 자세한 내용은 [방법: ShowDialog 메서드로 Windows Form을 표시 하 여 COM Interop 지원](com-interop-by-displaying-a-windows-form-shadow.md)합니다.  
+- <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 메서드를 사용하여 Windows Form을 표시합니다. 자세한 내용은 [방법: ShowDialog 메서드로 Windows Form을 표시 하 여 COM Interop 지원](com-interop-by-displaying-a-windows-form-shadow.md)합니다.  
   
--   각 Windows Form을 별도 스레드에 표시합니다.  
+- 각 Windows Form을 별도 스레드에 표시합니다.  
   
  Visual Studio에서이 기능에 대해 폭넓게 지원이 됩니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "59072677"
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
   
--   `COMForm`, `Form1`및 `FormManager` 형식을 `COMWinform.dll`이라는 어셈블리로 컴파일합니다. [Packaging an Assembly for COM](../../interop/packaging-an-assembly-for-com.md)에 설명된 방법 중 하나를 사용하여 COM interop에 대한 어셈블리를 등록합니다. 이제 관리되지 않는 애플리케이션에서 어셈블리 및 해당 형식 라이브러리(.tlb) 파일을 사용할 수 있습니다. 예를 들어 Visual Basic 6.0 실행 프로젝트에서 형식 라이브러리를 참조로 사용할 수 있습니다.  
+- `COMForm`, `Form1`및 `FormManager` 형식을 `COMWinform.dll`이라는 어셈블리로 컴파일합니다. [Packaging an Assembly for COM](../../interop/packaging-an-assembly-for-com.md)에 설명된 방법 중 하나를 사용하여 COM interop에 대한 어셈블리를 등록합니다. 이제 관리되지 않는 애플리케이션에서 어셈블리 및 해당 형식 라이브러리(.tlb) 파일을 사용할 수 있습니다. 예를 들어 Visual Basic 6.0 실행 프로젝트에서 형식 라이브러리를 참조로 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
 

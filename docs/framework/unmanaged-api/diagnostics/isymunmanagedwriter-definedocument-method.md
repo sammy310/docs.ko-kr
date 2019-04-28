@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 726ac0e23f739f451e1a0ab66c4c36aa6edbe569
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934097"
 ---
 # <a name="isymunmanagedwriterdefinedocument-method"></a>ISymUnmanagedWriter::DefineDocument 메서드
 소스 문서를 정의합니다. 알려진된 언어, 공급 업체 및 문서 형식에 대 한 guid가 제공 됩니다.  

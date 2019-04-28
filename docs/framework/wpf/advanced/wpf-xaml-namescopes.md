@@ -11,11 +11,11 @@ helpviewer_keywords:
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
 ms.openlocfilehash: a46942188fd417b46ba4feb44d436800e1362098
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764649"
 ---
 # <a name="wpf-xaml-namescopes"></a>WPF XAML 이름 범위
 XAML 이름 범위는 XAML에 정의된 개체를 식별하는 개념입니다. XAML 이름 범위의 이름은 XAML로 정의된 개체 이름과 개체 트리에서 그에 해당하는 인스턴스 간의 관계를 설정하는 데 사용할 수 있습니다. 일반적으로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 관리 코드의 XAML 이름 범위는 XAML 애플리케이션의 개별 XAML 페이지 루트를 로드할 때 만들어집니다. XAML 이름 범위를 프로그래밍 개체로 정의한 합니다 <xref:System.Windows.Markup.INameScope> 인터페이스 및 실제 클래스에 의해 구현 됩니다 <xref:System.Windows.NameScope>합니다.  
@@ -76,13 +76,13 @@ XAML 이름 범위는 XAML에 정의된 개체를 식별하는 개념입니다. 
 ### <a name="xaml-namescope-implementations"></a>XAML 이름 범위 구현  
  다음 클래스 구현 <xref:System.Windows.Markup.INameScope> 직접.  
   
--   <xref:System.Windows.NameScope>  
+- <xref:System.Windows.NameScope>  
   
--   <xref:System.Windows.Style>  
+- <xref:System.Windows.Style>  
   
--   <xref:System.Windows.ResourceDictionary>  
+- <xref:System.Windows.ResourceDictionary>  
   
--   <xref:System.Windows.FrameworkTemplate>  
+- <xref:System.Windows.FrameworkTemplate>  
   
  <xref:System.Windows.ResourceDictionary> XAML 이름 또는 이름 범위;를 사용 하지 않습니다. 대신 키를 사용, 사전 구현 이기 때문입니다. 유일한 이유 <xref:System.Windows.ResourceDictionary> 구현 <xref:System.Windows.Markup.INameScope> 되며 true XAML 이름 범위 간의 차이 명확히 하는 사용자 코드에 예외를 발생 시킬 수 있도록 하는 방법을 <xref:System.Windows.ResourceDictionary> 키를 처리 및 XAML 이름 범위에 적용 되지 않습니다 보장 하는 <xref:System.Windows.ResourceDictionary> 부모 요소에 의해 합니다.  
   
@@ -90,9 +90,9 @@ XAML 이름 범위는 XAML에 정의된 개체를 식별하는 개념입니다. 
   
  다음 클래스를 사용 하 여 고유한 XAML 이름 범위를 정의 합니다 <xref:System.Windows.NameScope?displayProperty=nameWithType> 도우미 클래스 및 연결을 통해 XAML 이름 범위 구현에는 <xref:System.Windows.NameScope.NameScope%2A?displayProperty=nameWithType> 연결 된 속성:  
   
--   <xref:System.Windows.FrameworkElement>  
+- <xref:System.Windows.FrameworkElement>  
   
--   <xref:System.Windows.FrameworkContentElement>  
+- <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="see-also"></a>참고자료
 

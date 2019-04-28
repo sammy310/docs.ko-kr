@@ -3,11 +3,11 @@ title: XName 개체 (LINQ to XML)의 사전 원자화 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 06ea104b-f44c-4bb2-9c34-889ae025c80d
 ms.openlocfilehash: 250b7aa8060c8196c28725fded090e2a63a0ee54
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665847"
 ---
 # <a name="pre-atomization-of-xname-objects-linq-to-xml-visual-basic"></a>XName 개체 (LINQ to XML)의 사전 원자화 (Visual Basic)
 LINQ to XML의 성능을 향상시키는 한 가지 방법은 <xref:System.Xml.Linq.XName> 개체를 사전 원자화하는 것입니다. 사전 원자화는 <xref:System.Xml.Linq.XName> 및 <xref:System.Xml.Linq.XElement> 클래스의 생성자를 사용하여 XML 트리를 만들기 전에 문자열을 <xref:System.Xml.Linq.XAttribute> 개체에 할당하는 것입니다. 그런 다음 문자열을 생성자에 전달하여 문자열을 <xref:System.Xml.Linq.XName>으로 암시적으로 변환하는 대신 초기화된 <xref:System.Xml.Linq.XName> 개체를 전달합니다.  

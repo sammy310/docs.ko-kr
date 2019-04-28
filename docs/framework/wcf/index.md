@@ -2,15 +2,9 @@
 title: Windows Communication Foundation
 ms.date: 03/30/2017
 helpviewer_keywords:
-- Windows Communication Foundation [WCF]
-- WCF [WCF]
+  - 'Windows Communication Foundation [WCF]'
+  - 'WCF [WCF]'
 ms.assetid: 149348a6-bf82-4ccc-9604-fa7cc88c0749
-ms.openlocfilehash: 56054216dc6e90e789c230acb3d56565a9ba3d69
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804273"
 ---
 # <a name="developing-service-oriented-applications-with-wcf"></a>WCF를 사용하여 서비스 기반 응용 프로그램 개발
 설명서의 이 섹션에서는 서비스 지향 응용 프로그램 빌드를 위한 통합 프로그래밍 모델인 WCF(Windows Communication Foundation)에 대한 정보를 제공합니다. 이를 통해 개발자는 플랫폼 간에 통합되고 기존 투자와 상호 운용할 수 있는 안정적인 보안 트랜잭션된 솔루션을 빌드할 수 있습니다.
@@ -35,7 +29,7 @@ ms.locfileid: "33804273"
  Windows Communication Foundation 응용 프로그램을 만들기 위한 기본 사항에 대해 설명합니다.  
   
  [WCF 기능 정보](../../../docs/framework/wcf/feature-details/index.md)  
- 사용 해야 하는 WCF 기능 또는 기능을 선택할 수 있는 항목이 나와 있습니다.  
+ 사용 해야 하는 WCF 기능 또는 기능을 선택할 수 있는 항목을 보여 줍니다.  
   
  [WCF 확장](../../../docs/framework/wcf/extending/index.md)  
  WCF 런타임 구성 요소를 수정하고 확장하는 방법에 대한 설명  
@@ -68,7 +62,7 @@ ms.locfileid: "33804273"
  Windows Communication Foundation의 다양한 측면에 대한 지침을 제공하는 샘플  
   
  [Windows Communication Foundation 용어](../../../docs/framework/wcf/glossary.md)  
- Wcf 용어 목록이 특정 표시  
+ WCF 용어 목록은 특정 보여 줍니다.  
   
  [일반 참조](../../../docs/framework/wcf/general-reference.md)  
  이 단원에서는 Windows Communication Foundation 클라이언트 및 서비스 구성에 사용되는 요소에 대해 설명합니다.  

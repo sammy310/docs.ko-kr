@@ -15,11 +15,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], joining lines
 ms.assetid: 9fc480c2-3c75-4fd1-8ab5-296a99e820e2
 ms.openlocfilehash: 445d7f12f57137c6b06a074eeaf0574eb027a723
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723305"
 ---
 # <a name="how-to-join-lines"></a>방법: 선 조인
 선 조인에 끝 부분이 만나거나 겹치는 두 줄으로 구성 되는 일반적인 영역입니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 세 선 조인 스타일을 제공 합니다: 마이터, 빗면 및 반올림 합니다. 선 조인 스타일의 속성인는 <xref:System.Drawing.Pen> 클래스입니다. 선 조인 스타일을 지정 하는 경우는 <xref:System.Drawing.Pen> 개체에 연결 된 모든 줄에 조인 스타일을 적용할 <xref:System.Drawing.Drawing2D.GraphicsPath> 개체는 펜을 사용 하 여 그려집니다.  

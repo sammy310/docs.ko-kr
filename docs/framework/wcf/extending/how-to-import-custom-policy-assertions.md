@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
 ms.openlocfilehash: 64e639e5fd6200b525ef6face56f7df2e804d7ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767106"
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>방법: 사용자 지정 정책 어설션 가져오기
 정책 어설션은 서비스 엔드포인트의 기능 및 요구 사항에 대해 설명합니다.  클라이언트 응용 프로그램은 서비스 메타데이터에서 정책 어설션을 사용하여 서비스 엔드포인트에 대해 서비스 계약을 사용자 지정하거나 클라이언트 바인딩을 구성할 수 있습니다.  

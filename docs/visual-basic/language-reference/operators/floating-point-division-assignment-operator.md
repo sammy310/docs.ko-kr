@@ -11,11 +11,11 @@ helpviewer_keywords:
 - compound assignment statements [Visual Basic]
 ms.assetid: a1e22d0e-8380-4761-9da1-84fb51c34821
 ms.openlocfilehash: d9d3fa021654d3be1b9d304beb83caa737660264
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778471"
 ---
 # <a name="-operator-visual-basic"></a>/= 연산자(Visual Basic)
 변수 또는 속성의 값을 식의 값으로 나누고 부동 소수점 결과 변수 또는 속성에 할당 합니다.  

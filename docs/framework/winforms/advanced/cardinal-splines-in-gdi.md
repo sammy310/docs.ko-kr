@@ -10,11 +10,11 @@ helpviewer_keywords:
 - cardinal splines
 ms.assetid: 09b3797a-6294-422d-9adf-a5a0a7695c0c
 ms.openlocfilehash: 4588f6f606f0f479aeae1d143f23175ec4be32a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779134"
 ---
 # <a name="cardinal-splines-in-gdi"></a>GDI+의 카디널 스플라인
 카디널 스플라인에 더 큰 곡선을 형성 하는 개별 곡선 시퀀스입니다. 스플라인은 포인트와 장력 매개 변수 배열에 의해 지정 됩니다. 카디널 스플라인; 배열의 각 요소를 통해 원활 하 게 전달 날카로운 모퉁이가 없고 및 곡선의 다듬기에 갑작스러운 변경 하지 않고 있습니다. 다음 그림에서는 지점 및 카디널 스플라인을 집합의 각 요소를 통과 하는 집합을 보여 줍니다.  

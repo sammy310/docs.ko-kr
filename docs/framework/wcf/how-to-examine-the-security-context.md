@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
 ms.openlocfilehash: c6c36641463a45b79d437ae3910bbe7474d425cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929300"
 ---
 # <a name="how-to-examine-the-security-context"></a>방법: 보안 컨텍스트 검사
 Windows Communication Foundation (WCF) 서비스를 프로그래밍 하는 경우 서비스 보안 컨텍스트를 사용 하면 클라이언트 자격 증명 및 서비스를 사용 하 여 인증 하는 데 사용 되는 클레임에 대 한 세부 정보를 확인할 수 있습니다. <xref:System.ServiceModel.ServiceSecurityContext> 클래스의 속성을 사용하여 이를 수행할 수 있습니다.  
@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF) 서비스를 프로그래밍 하는 경�
   
 ### <a name="to-get-the-current-security-context"></a>현재 보안 컨텍스트를 가져오려면  
   
--   정적 <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> 속성에 액세스하여 현재 보안 컨텍스트를 가져옵니다. 참조에서 현재 컨텍스트의 모든 속성을 검사합니다.  
+- 정적 <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> 속성에 액세스하여 현재 보안 컨텍스트를 가져옵니다. 참조에서 현재 컨텍스트의 모든 속성을 검사합니다.  
   
 ### <a name="to-determine-the-identity-of-the-caller"></a>호출자의 ID를 확인하려면  
   
@@ -46,13 +46,13 @@ Windows Communication Foundation (WCF) 서비스를 프로그래밍 하는 경�
 ## <a name="compiling-the-code"></a>코드 컴파일  
  코드는 다음 네임스페이스를 사용합니다.  
   
--   <xref:System>  
+- <xref:System>  
   
--   <xref:System.ServiceModel>  
+- <xref:System.ServiceModel>  
   
--   <xref:System.IdentityModel.Policy>  
+- <xref:System.IdentityModel.Policy>  
   
--   <xref:System.IdentityModel.Claims>  
+- <xref:System.IdentityModel.Claims>  
   
 ## <a name="see-also"></a>참고자료
 

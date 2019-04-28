@@ -13,11 +13,11 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
 ms.openlocfilehash: b127c50f3319d4fe7c4890fc3bffb295baa37466
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936671"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod 연산자 (Visual Basic)
 두 숫자를 나누고 나머지만 반환 합니다.  
@@ -70,9 +70,9 @@ End Module
   
  관련 된 연산자는 다음과 같습니다.  
   
--   합니다 [\ 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) 나눗셈 몫의 정수 몫을 반환 합니다. 예를 들어 식 `14 \ 4` 3 평가 합니다.  
+- 합니다 [\ 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) 나눗셈 몫의 정수 몫을 반환 합니다. 예를 들어 식 `14 \ 4` 3 평가 합니다.  
   
--   합니다 [/ 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) 나머지 부분에서는 부동 소수점 숫자를 포함 하 여 전체 몫을 반환 합니다. 예를 들어 식 `14 / 4` 3.5로 계산 합니다.  
+- 합니다 [/ 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) 나머지 부분에서는 부동 소수점 숫자를 포함 하 여 전체 몫을 반환 합니다. 예를 들어 식 `14 / 4` 3.5로 계산 합니다.  
   
 ## <a name="attempted-division-by-zero"></a>0으로 나누기  
  하는 경우 `number2` 의 동작을 0으로 계산 되는 `Mod` 연산자는 피연산자의 데이터 형식에 따라 달라 집니다. 정수 나누기를 throw 한 <xref:System.DivideByZeroException> 예외입니다. 부동 소수점 나누기 반환 <xref:System.Double.NaN>합니다.  

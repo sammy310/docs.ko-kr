@@ -3,24 +3,24 @@ title: 공통 특성 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
 ms.openlocfilehash: e001c9a637d2e5e34e77158704e4ad81d6973a50
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794032"
 ---
 # <a name="common-attributes-visual-basic"></a>공통 특성 (Visual Basic)
 이 항목에서는 Visual Basic 프로그램에서 가장 일반적으로 사용 되는 특성을 설명 합니다.  
   
--   [전역 특성](#Global)  
+- [전역 특성](#Global)  
   
--   [사용되지 않는 특성](#Obsolete)  
+- [사용되지 않는 특성](#Obsolete)  
   
--   [조건부 특성](#Conditional)  
+- [조건부 특성](#Conditional)  
   
--   [호출자 정보 특성](#CallerInfo)  
+- [호출자 정보 특성](#CallerInfo)  
   
--   [Visual Basic 특성](#VB)  
+- [Visual Basic 특성](#VB)  
   
 ## <a name="Global"></a> 전역 특성  
  대부분의 특성은 클래스나 메서드와 같은 특정 언어 요소에 적용되지만 일부 특성은 전체 어셈블리나 모듈에 적용되는 전역 특성입니다. 예를 들어 다음과 같이 <xref:System.Reflection.AssemblyVersionAttribute> 특성을 사용하여 버전 정보를 어셈블리에 포함할 수 있습니다.  
@@ -33,11 +33,11 @@ ms.locfileid: "58834547"
   
  어셈블리 특성은 어셈블리에 대한 정보를 제공하는 값입니다. 어셈블리 특성은 다음 범주로 구분됩니다.  
   
--   어셈블리 ID 특성  
+- 어셈블리 ID 특성  
   
--   정보 특성  
+- 정보 특성  
   
--   어셈블리 매니페스트 특성  
+- 어셈블리 매니페스트 특성  
   
 ### <a name="assembly-identity-attributes"></a>어셈블리 ID 특성  
  name, version 및 culture의 세 가지 특성(해당하는 경우 강력한 이름 포함)이 어셈블리의 ID를 결정합니다. 이러한 특성은 어셈블리의 전체 이름을 구성하며 코드에서 어셈블리를 참조할 때 필요합니다. 특성을 사용하여 어셈블리의 버전 및 문화권을 설정할 수 있습니다. 그러나 이름 값은 어셈블리가 만들어질 때 어셈블리 매니페스트가 포함된 파일에 따라 컴파일러, [어셈블리 정보 대화 상자](/visualstudio/ide/reference/assembly-information-dialog-box)의 Visual Studio IDE 또는 어셈블리 링커(Al.exe)에서 설정됩니다. <xref:System.Reflection.AssemblyFlagsAttribute> 특성은 어셈블리의 여러 복사본이 공존할 수 있는지 여부를 지정합니다.  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0e8357d20edba993f5a7682f31c04afea4362afd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796060"
 ---
 # <a name="ehostbindingpolicymodifyflags-enumeration"></a>EHostBindingPolicyModifyFlags 열거형
 호스트를에서 CLR (공용 언어 런타임)는 대상 어셈블리에는 소스 어셈블리에서 정책 수정 내용을 적용할 때 수행 해야 하는 리디렉션 형식을 지정할 수 있습니다.  

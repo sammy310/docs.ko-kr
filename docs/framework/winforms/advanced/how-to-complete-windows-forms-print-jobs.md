@@ -10,11 +10,11 @@ helpviewer_keywords:
 - printing [Windows Forms], print jobs
 ms.assetid: 23ec74f7-34c5-4710-82a0-ee2914518548
 ms.openlocfilehash: 256b9a3d8842aaa4b032e67ebac9ca6a9e1ef34a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59293757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937854"
 ---
 # <a name="how-to-complete-windows-forms-print-jobs"></a>방법: Windows Forms 인쇄 작업 완료
 자주, 워드 프로세서 및 인쇄와 관련 된 기타 응용 프로그램에 인쇄 작업을 완료 되었음을 사용자에 게 메시지를 표시 하는 옵션을 제공 합니다. 처리 하 여 Windows Forms 프로그램에서이 기능을 제공할 수 있습니다 합니다 <xref:System.Drawing.Printing.PrintDocument.EndPrint> 의 이벤트는 <xref:System.Drawing.Printing.PrintDocument> 구성 요소입니다.  

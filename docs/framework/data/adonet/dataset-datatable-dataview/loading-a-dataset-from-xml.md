@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
 ms.openlocfilehash: 0c53e3a15bcbe61db7da1edb31ecd3fd562603f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785465"
 ---
 # <a name="loading-a-dataset-from-xml"></a>XML에서 데이터 집합 로드
 ADO.NET <xref:System.Data.DataSet>의 내용은 XML 스트림이나 문서로부터 만들 수 있습니다. 또한, .NET Framework를 사용하면 XML로부터 로드할 정보와 <xref:System.Data.DataSet>의 스키마나 관계형 구조를 만드는 방법을 매우 융통성 있게 선택할 수 있습니다.  

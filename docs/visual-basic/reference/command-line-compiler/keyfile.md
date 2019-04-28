@@ -7,11 +7,11 @@ helpviewer_keywords:
 - -keyfile compiler option [Visual Basic]
 ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
 ms.openlocfilehash: c13f34c23cad9c909c2c5bd3447f1a8fa53f9b4d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793965"
 ---
 # <a name="-keyfile"></a>-keyfile
 어셈블리에 강력한 이름을 지정하는 키 또는 키 쌍이 포함된 파일을 지정합니다.  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - constituent controls
 ms.assetid: 5c1ec98b-aa48-4823-986e-4712551cfdf1
 ms.openlocfilehash: 44b96218e674c754a1985f2f22a36707cd1776b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941377"
 ---
 # <a name="how-to-expose-properties-of-constituent-controls"></a>방법: Constituent 컨트롤의 속성 공개
 복합 컨트롤을 구성 하는 컨트롤 이라고 *구성 요소 컨트롤*합니다. 이러한 컨트롤은 일반적으로 전용으로 선언 및 하므로 개발자가 액세스할 수 없습니다. 미래의 사용자에 게 이러한 컨트롤의 속성을 제공 하려는 경우에 사용자에 게 노출 해야 있습니다. 사용자 컨트롤에서 속성을 만들고 사용 하 여 구성 요소 컨트롤의 속성을 노출 합니다 `get` 및 `set` 구성 요소 컨트롤의 개인 속성에 변경 내용을 적용 하려면 해당 속성의 접근자입니다.  

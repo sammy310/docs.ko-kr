@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c6a30dff869075a201a669d1e703bc003b011fc3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797522"
 ---
 # <a name="isymunmanagedvariablegetstartoffset-method"></a>ISymUnmanagedVariable::GetStartOffset 메서드
 부모 내에서이 변수의 시작 오프셋을 가져옵니다. 범위 내에서 로컬 변수 이면 시작 오프셋 범위에 대해 정의 된 오프셋 대체 됩니다.  

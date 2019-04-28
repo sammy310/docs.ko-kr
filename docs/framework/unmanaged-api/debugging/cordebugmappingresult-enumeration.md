@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c2fecc7160cb41e31bf88f1a461265ad8fdce166
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792706"
 ---
 # <a name="cordebugmappingresult-enumeration"></a>CorDebugMappingResult 열거형
 IP(명령 포인터)의 값을 가져온 방법에 대한 세부 정보를 제공합니다.  

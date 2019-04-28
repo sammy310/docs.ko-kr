@@ -3,11 +3,11 @@ title: 워크플로 서비스 호스트 확장
 ms.date: 03/30/2017
 ms.assetid: c0e8f7bb-cb13-49ec-852f-b85d7c23972f
 ms.openlocfilehash: e37a33643fb58d93be953720303cd069e72a690e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929794"
 ---
 # <a name="workflow-service-host-extensibility"></a>워크플로 서비스 호스트 확장
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]에서는 워크플로 서비스를 호스트하는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 클래스를 제공합니다. 이 클래스는 관리되는 응용 프로그램의 워크플로 서비스나 Windows 서비스를 자체 호스트할 때 사용되며, IIS(인터넷 정보 서비스) 또는 WAS(Windows Process Activation Service)에서 워크플로 서비스를 호스트할 때도 사용됩니다. <xref:System.ServiceModel.Activities.WorkflowServiceHost> 클래스는 사용자 지정 확장을 추가하고, 유휴 동작을 변경하고, 서비스가 아닌 워크플로(메시징 작업을 사용하지 않는 워크플로)를 호스트할 수 있는 확장명 지점을 제공합니다.  
@@ -18,13 +18,13 @@ ms.locfileid: "59196478"
 ## <a name="react-to-unhandled-exceptions"></a>처리되지 않은 예외에 응답  
  <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>를 사용하면 워크플로 서비스 내에서 처리되지 않은 예외가 발생할 경우 수행할 동작을 지정할 수 있습니다. <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior.Action%2A> 속성은 다음 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction> 값 중 하나를 지정합니다.  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Abandon> – 워크플로 서비스 인스턴스를 중단합니다.  
+- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Abandon> – 워크플로 서비스 인스턴스를 중단합니다.  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.AbandonAndSuspend> – 마지막으로 지속된 상태로 롤백하고 워크플로 서비스 인스턴스를 일시 중단합니다. 이는 워크플로가 이미 한 번 이상 지속된 경우에만 발생합니다. 그렇지 않은 경우 워크플로 인스턴스가 중단됩니다.  
+- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.AbandonAndSuspend> – 마지막으로 지속된 상태로 롤백하고 워크플로 서비스 인스턴스를 일시 중단합니다. 이는 워크플로가 이미 한 번 이상 지속된 경우에만 발생합니다. 그렇지 않은 경우 워크플로 인스턴스가 중단됩니다.  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Cancel> – 인스턴스를 취소합니다.  
+- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Cancel> – 인스턴스를 취소합니다.  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Terminate> – 인스턴스를 종료합니다.  
+- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Terminate> – 인스턴스를 종료합니다.  
   
  이 동작은 다음 예제와 같이 코드에서 구성할 수 있습니다.  
   

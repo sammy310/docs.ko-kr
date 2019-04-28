@@ -5,11 +5,11 @@ helpviewer_keywords:
 - modules, Visual Basic
 ms.assetid: 370bfc90-e8f2-4942-bdec-9897ce605d31
 ms.openlocfilehash: 0bb33b102358fd2d0290fd413b09448255522856
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778653"
 ---
 # <a name="modules-visual-basic"></a>모듈(Visual Basic)
 Visual Basic 문자열 조작, 파일 및 디렉터리 작업을 수행, 시스템 정보 가져오기 수학 계산 수행을 비롯 하 여 코드의 일반적인 태스크를 간소화할 수는 몇 가지 모듈을 제공 합니다. 다음 표에서 Visual Basic에서 제공 되는 모듈을 나열 합니다.  

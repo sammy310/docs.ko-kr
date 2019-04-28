@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms controls, filling client area
 ms.assetid: bc11f2e4-e90a-4830-b0e2-f43b6e2b8bec
 ms.openlocfilehash: d015dce7307bec092f6da1dc5ee31691a6baf1f0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941502"
 ---
 # <a name="how-to-dock-controls-on-windows-forms"></a>방법: Windows Forms에서 컨트롤 도킹
 폼의 가장자리에 컨트롤을 도킹 하거나 컨트롤의 컨테이너 (폼 또는 컨테이너 컨트롤)을 채울 수 있습니다. Windows 탐색기 창을 도킹 하는 예를 들어, 해당 <xref:System.Windows.Forms.TreeView> 창의 왼쪽에는 컨트롤 및 해당 <xref:System.Windows.Forms.ListView> 창의 왼쪽에서 오른쪽으로 컨트롤입니다. 사용 된 <xref:System.Windows.Forms.Control.Dock%2A> 표시 하는 모든 Windows Forms 컨트롤 도킹 모드를 정의 하는 속성입니다.  

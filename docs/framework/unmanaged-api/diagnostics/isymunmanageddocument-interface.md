@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 33213aced635549dd439cf679d89367a71baa7c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939778"
 ---
 # <a name="isymunmanageddocument-interface"></a>ISymUnmanagedDocument 인터페이스
 기호 저장소가 참조하는 문서를 나타냅니다. 문서는 uniform resource locator (URL) 및 문서 형식 GUID에 따라 정의 됩니다. URL을 사용 하 여 저장 하는 방법에 관계 없이 문서를 찾을 수 있으며 문서 유형 GUID 수 있습니다. 문서 소스를 기호 저장소에 저장 하 고이 인터페이스를 통해 검색할 수 있습니다.  

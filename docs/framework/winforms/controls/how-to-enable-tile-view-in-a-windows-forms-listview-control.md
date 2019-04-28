@@ -12,11 +12,11 @@ helpviewer_keywords:
 - ListView control [Windows Forms], tile view
 ms.assetid: c20e67a3-2d94-413d-9fcf-ecbd0fe251da
 ms.openlocfilehash: 14eb21fa0285275e510b865c5cee7d1fc82fd0fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941542"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>방법: Windows Forms ListView 컨트롤에서 Tile 보기 사용
 <xref:System.Windows.Forms.ListView> 컨트롤의 바둑판식 뷰 기능을 통해 그래픽 정보와 텍스트 정보 간의 시각적 균형을 제공할 수 있습니다. 바둑판식 뷰에서 항목에 대해 표시되는 텍스트 정보는 세부 정보 뷰에 대해 정의된 열 정보와 같습니다. 바둑판식 뷰는 <xref:System.Windows.Forms.ListView> 컨트롤의 그룹화 또는 삽입 표시 기능과 함께 작동합니다.  
@@ -52,9 +52,9 @@ ms.locfileid: "59326998"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   System 및 System.Windows.Forms 어셈블리에 대한 참조  
+- System 및 System.Windows.Forms 어셈블리에 대한 참조  
   
--   실행 파일과 동일한 디렉터리에 있는 book.ico로 명명된 아이콘 파일  
+- 실행 파일과 동일한 디렉터리에 있는 book.ico로 명명된 아이콘 파일  
   
  Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 내용은 [명령줄에서 빌드](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 하거나 [csc.exe를 사용한 명령줄 빌드](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다. 또한 새 프로젝트에 코드를 붙여 넣어 Visual Studio에서이 예제를 빌드할 수 있습니다.  
   

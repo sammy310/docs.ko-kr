@@ -12,11 +12,11 @@ helpviewer_keywords:
 - variables [Visual Basic], hiding inherited
 ms.assetid: 765728d9-7351-4a30-999d-b5f34f024412
 ms.openlocfilehash: ee147ecd00b88b538ace32844c42ac9c5022b2ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794695"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>방법: 상속된 된 변수 (Visual Basic) 숨기기
 파생된 클래스는 기본 클래스의 모든 정의 상속합니다. 기본 클래스의 요소와 동일한 이름으로 변수를 정의 하려는 경우 숨길 수 있습니다, 또는 *섀도*, 파생된 클래스에서 변수를 정의할 때 해당 기본 클래스 요소입니다. 이 작업을 수행 하는 경우 파생된 클래스에서 코드 숨김 메커니즘을 명시적으로 무시 되지 않는 한 변수를 액세스 합니다.  

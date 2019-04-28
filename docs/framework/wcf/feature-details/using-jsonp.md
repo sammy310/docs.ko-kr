@@ -3,11 +3,11 @@ title: JSONP 사용
 ms.date: 03/30/2017
 ms.assetid: f386718c-b4ba-4931-a610-40c27a46672a
 ms.openlocfilehash: 622fbdbf2674aea552cfd57f528d7cc5168cfda8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932836"
 ---
 # <a name="using-jsonp"></a>JSONP 사용
 
@@ -19,7 +19,7 @@ callback({"a" = \\"b\\"});
 
 위의 예제에서 `{"a" = \\"b\\"}` JSON 페이로드는 `callback` 함수 호출로 래핑됩니다. 콜백 함수는 현재 웹 페이지에 이미 정의되어 있어야 합니다. JSONP 응답의 콘텐츠 형식은 `application/javascript`합니다.
 
-JSONP는 자동으로 사용되도록 설정되지 않습니다. JSONP를 사용하도록 설정하려면 다음 예제와 같이 HTTP 표준 끝점(`javascriptCallbackEnabled` 또는 `true`) 중 하나에서 <xref:System.ServiceModel.Description.WebHttpEndpoint> 특성을 <xref:System.ServiceModel.Description.WebScriptEndpoint>로 설정합니다.
+JSONP는 자동으로 사용되도록 설정되지 않습니다. JSONP를 사용하도록 설정하려면 다음 예제와 같이 HTTP 표준 엔드포인트(`javascriptCallbackEnabled` 또는 `true`) 중 하나에서 <xref:System.ServiceModel.Description.WebHttpEndpoint> 특성을 <xref:System.ServiceModel.Description.WebScriptEndpoint>로 설정합니다.
 
 ```xml
 <system.serviceModel>

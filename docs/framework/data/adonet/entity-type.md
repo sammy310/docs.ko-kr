@@ -3,22 +3,22 @@ title: 엔터티 형식(entity type)
 ms.date: 03/30/2017
 ms.assetid: a6dee9ab-9e4a-48f2-a169-3f79cc15821c
 ms.openlocfilehash: 026b0aef7cf2de8fe222721191afa459859701ee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667177"
 ---
 # <a name="entity-type"></a>엔터티 형식(entity type)
 합니다 *엔터티 형식* 엔터티 데이터 모델 (EDM)를 사용 하 여 데이터의 구조를 설명 하기 위한 기본적인 빌딩 블록입니다. 개념적 모델에서 엔터티 형식은 고객이나 주문과 같은 최상위 개념의 구조를 나타냅니다. 엔터티 형식은 엔터티 형식 인스턴스의 템플릿입니다. 각 템플릿에는 다음 정보가 들어 있습니다.  
   
--   고유한 이름 (필수)  
+- 고유한 이름 (필수)  
   
--   [엔터티 키](../../../../docs/framework/data/adonet/entity-key.md) 하나 이상의 속성으로 정의 합니다. (필수)  
+- [엔터티 키](../../../../docs/framework/data/adonet/entity-key.md) 하나 이상의 속성으로 정의 합니다. (필수)  
   
--   데이터의 형태로 [속성](../../../../docs/framework/data/adonet/property.md)합니다. 필요에 따라  
+- 데이터의 형태로 [속성](../../../../docs/framework/data/adonet/property.md)합니다. 필요에 따라  
   
--   [탐색 속성](../../../../docs/framework/data/adonet/navigation-property.md) 간에 탐색할 수 있도록 [끝](../../../../docs/framework/data/adonet/association-end.md) 의 [연결](../../../../docs/framework/data/adonet/association-type.md) 다른 end로 합니다. 이 매개 변수는 선택 사항입니다.  
+- [탐색 속성](../../../../docs/framework/data/adonet/navigation-property.md) 간에 탐색할 수 있도록 [끝](../../../../docs/framework/data/adonet/association-end.md) 의 [연결](../../../../docs/framework/data/adonet/association-type.md) 다른 end로 합니다. 이 매개 변수는 선택 사항입니다.  
   
  응용 프로그램에서 엔터티 형식의 인스턴스는 특정 고객 또는 주문과 같은 특정 개체를 나타냅니다. 엔터티 형식의 각 인스턴스는 고유 해야 [엔터티 키](../../../../docs/framework/data/adonet/entity-key.md) 안에 [엔터티 집합](../../../../docs/framework/data/adonet/entity-set.md)합니다.  
   

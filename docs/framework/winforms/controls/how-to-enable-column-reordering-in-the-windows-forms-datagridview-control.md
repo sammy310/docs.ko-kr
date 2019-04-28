@@ -10,11 +10,11 @@ helpviewer_keywords:
 - columns [Windows Forms], reordering
 ms.assetid: cc20eae3-e4db-493f-95ce-a4215e29472a
 ms.openlocfilehash: 625c4987a45ed3749284e7abc7b6cde6d24821ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941468"
 ---
 # <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control"></a>방법: Windows Forms DataGridView 컨트롤에서 열 다시 정렬 사용
 <xref:System.Windows.Forms.DataGridView> 컨트롤에서 열 다시 정렬을 사용하도록 설정하면 사용자가 마우스로 열 머리글을 끌어서 열을 새 위치로 이동할 수 있습니다. <xref:System.Windows.Forms.DataGridView> 컨트롤에서 <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType> 속성 값은 사용자가 열을 다른 위치로 이동할 수 있는지 여부를 결정합니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "59161475"
   
 ### <a name="to-enable-column-reordering-programmatically"></a>프로그래밍 방식으로 열 다시 정렬을 사용하도록 설정하려면 다음을 수행합니다.  
   
--   <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType> 속성을 `true`으로 설정합니다.  
+- <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType> 속성을 `true`으로 설정합니다.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#060](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#060)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#060](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#060)]  
@@ -31,9 +31,9 @@ ms.locfileid: "59161475"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   `dataGridView1`이라는 <xref:System.Windows.Forms.DataGridView> 컨트롤  
+- `dataGridView1`이라는 <xref:System.Windows.Forms.DataGridView> 컨트롤  
   
--   <xref:System?displayProperty=nameWithType> 및 <xref:System.Windows.Forms?displayProperty=nameWithType> 어셈블리에 대한 참조  
+- <xref:System?displayProperty=nameWithType> 및 <xref:System.Windows.Forms?displayProperty=nameWithType> 어셈블리에 대한 참조  
   
 ## <a name="see-also"></a>참고자료
 

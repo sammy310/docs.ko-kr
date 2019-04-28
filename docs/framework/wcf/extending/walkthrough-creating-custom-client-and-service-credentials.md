@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
 ms.openlocfilehash: db137eb84108c6adbbf04a380934bb6da6936d61
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771425"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>연습: 사용자 지정 클라이언트 및 서비스 자격 증명 만들기
 이 항목에서는 사용자 지정 클라이언트와 서비스 자격 증명을 구현하는 방법 및 응용 프로그램 코드로부터 사용자 지정 자격 증명을 사용하는 방법을 보여 줍니다.  
@@ -18,9 +18,9 @@ ms.locfileid: "59343053"
 ## <a name="credentials-extensibility-classes"></a>자격 증명 확장성 클래스  
  합니다 <xref:System.ServiceModel.Description.ClientCredentials> 고 <xref:System.ServiceModel.Description.ServiceCredentials> 클래스는 Windows Communication Foundation (WCF) 보안 확장성 주 진입점입니다. 이러한 자격 증명 클래스는 API를 제공합니다. 이 API를 통해 응용 프로그램 코드에서는 자격 증명 정보를 설정하고, 자격 증명 형식을 보안 토큰으로 변환할 수 있습니다. (*보안 토큰* 폼 SOAP 메시지 내부에서 자격 증명 정보를 전송 하는 데 사용 됩니다.) 이러한 자격 증명 클래스의 책임은 다음과 같은 두 가지 영역으로 나눠 볼 수 있습니다.  
   
--   응용 프로그램에서 자격 증명 정보를 설정하도록 API 제공  
+- 응용 프로그램에서 자격 증명 정보를 설정하도록 API 제공  
   
--   <xref:System.IdentityModel.Selectors.SecurityTokenManager> 구현을 위한 팩터리 역할 수행  
+- <xref:System.IdentityModel.Selectors.SecurityTokenManager> 구현을 위한 팩터리 역할 수행  
   
  <xref:System.ServiceModel.Description.ClientCredentials> 및 <xref:System.ServiceModel.Description.ServiceCredentials> 클래스는 모두 <xref:System.ServiceModel.Security.SecurityCredentialsManager> 반환에 대한 계약을 정의하는 추상 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 클래스로부터 상속됩니다.  
   
@@ -29,22 +29,22 @@ ms.locfileid: "59343053"
 ## <a name="reasons-to-customize"></a>사용자 지정해야 하는 이유  
  클라이언트 또는 서비스 자격 증명 클래스를 사용자 지정해야 하는 이유는 여러 가지가 있습니다. 무엇 보다도 특히 다음과 같은 이유로 시스템 제공 자격 증명 형식을 처리와 관련 하 여 기본 WCF 보안 동작을 변경 하려면 요구 사항:  
   
--   다른 확장성 지점을 사용하여 변경할 수 없는 내용을 변경해야 합니다.  
+- 다른 확장성 지점을 사용하여 변경할 수 없는 내용을 변경해야 합니다.  
   
--   새 자격 증명 형식을 추가해야 합니다.  
+- 새 자격 증명 형식을 추가해야 합니다.  
   
--   새 사용자 지정 보안 토큰 형식을 추가해야 합니다.  
+- 새 사용자 지정 보안 토큰 형식을 추가해야 합니다.  
   
  이 항목에서는 사용자 지정 클라이언트와 서비스 자격 증명을 구현하는 방법 및 응용 프로그램 코드로부터 이들을 사용하는 방법에 대해 설명합니다.  
   
 ## <a name="first-in-a-series"></a>시리즈의 첫 번째 단계  
  사용자 지정 자격 증명 클래스를 만드는 이므로 첫 번째 단계만에 프로 비전 하는 자격 증명, 보안 토큰 serialization 또는 인증에 대 한 WCF 동작을 변경 하려면 자격 증명을 사용자 지정에 대 한 이유는 합니다. 이 단원의 다른 항목에서는 사용자 지정 serializer 및 인증자를 만드는 방법에 대해 설명합니다. 이와 관련하여 사용자 지정 자격 증명 클래스를 만드는 것이 이 시리즈의 첫 번째 항목입니다. 후속 작업(사용자 지정 serializer 및 인증자 만들기)은 사용자 지정 자격 증명을 만든 이후에야 수행할 수 있습니다. 이 항목을 기초로 한 추가 항목은 다음과 같습니다.  
   
--   [방법: 사용자 지정 보안 토큰 공급자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+- [방법: 사용자 지정 보안 토큰 공급자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
   
--   [방법: 사용자 지정 보안 토큰 인증자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
+- [방법: 사용자 지정 보안 토큰 인증자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
   
--   [방법: 사용자 지정 토큰 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)합니다.  
+- [방법: 사용자 지정 토큰 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)합니다.  
   
 ## <a name="procedures"></a>절차  
   

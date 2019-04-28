@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 83dec9b6ed3b1e538e0f1b7d13a33b8bdbc1cf54
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777730"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps 메서드
 이름, 이진 서명 및 상대 가상 주소를 포함 하 여 지정 된 멤버 정의 대 한 메타 데이터에 저장 된 정보를 가져옵니다는 <xref:System.Type> 지정 된 메타 데이터 토큰에서 참조 하는 멤버입니다. 간단한 도우미 메서드입니다.: 하는 경우 *mb* MethodDef, 이면 **GetMethodProps** 가 호출 되는 경우 *mb* 이면 한 FieldDef **GetFieldProps** 가 호출 됩니다. 이러한 세부 정보는 다른 방법을 참조 합니다. 

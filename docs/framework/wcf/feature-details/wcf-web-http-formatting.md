@@ -3,11 +3,11 @@ title: WCF 웹 HTTP 형식 지정
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
 ms.openlocfilehash: f3d3a2d992f234c690f3fb87514b700a6596a5fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935475"
 ---
 # <a name="wcf-web-http-formatting"></a>WCF 웹 HTTP 형식 지정
 WCF 웹 HTTP 프로그래밍 모델을 사용하면 서비스 작업의 응답을 반환하는 데 사용할 수 있는 가장 적절한 형식을 동적으로 결정할 수 있습니다. 적절한 형식을 결정하는 데 지원되는 방법은 자동 형식 지정과 명시적 형식 지정, 두 가지가 있습니다.  
@@ -125,15 +125,15 @@ public class Service : IService
   
  XML 또는 JSON 이외의 다른 형식을 지원해야 하는 경우 반환 형식이 <xref:System.ServiceModel.Channels.Message>인 작업을 정의합니다. 작업 코드 내에서 사용할 적절한 형식을 결정하고 다음 메서드 중 하나를 사용하여 <xref:System.ServiceModel.Channels.Message> 개체를 만듭니다.  
   
--   `WebOperationContext.CreateAtom10Response`  
+- `WebOperationContext.CreateAtom10Response`  
   
--   `WebOperationContext.CreateJsonResponse`  
+- `WebOperationContext.CreateJsonResponse`  
   
--   `WebOperationContext.CreateStreamResponse`  
+- `WebOperationContext.CreateStreamResponse`  
   
--   `WebOperationContext.CreateTextResponse`  
+- `WebOperationContext.CreateTextResponse`  
   
--   `WebOperationContext.CreateXmlResponse`  
+- `WebOperationContext.CreateXmlResponse`  
   
  이러한 각 메서드는 콘텐츠를 사용하여 적절한 형식의 메시지를 만듭니다. `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` 메서드를 사용하면 선호도가 높은 것부터 낮은 것 순으로 클라이언트가 선호하는 형식의 목록을 가져올 수 있습니다. 다음 예제에서는 `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements`를 사용하여 사용할 형식을 결정한 다음 적절한 응답 만들기 메서드를 사용하여 응답 메시지를 만드는 방법을 보여 줍니다.  
   

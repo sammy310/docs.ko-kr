@@ -11,11 +11,11 @@ helpviewer_keywords:
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
 ms.openlocfilehash: fb91d4b413db512021b90f0d4ba3049fe7333601
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59123800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773235"
 ---
 # <a name="packaging-fonts-with-applications"></a>애플리케이션과 함께 글꼴 패키징
 이 항목에서는 글꼴을 패키지 하는 방법에 대 한 개요를 제공 하면 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램입니다.  
@@ -158,17 +158,17 @@ ms.locfileid: "59123800"
 ## <a name="limitations-on-font-usage"></a>글꼴 사용의 제한 사항  
  다음 목록에는 패키징 및 글꼴을 사용 하 여 몇 가지 제한 사항이 설명 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램:  
   
--   **글꼴 포함 권한 비트:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램은 글꼴 포함 권한 비트를 확인하거나 적용하지 않습니다. 참조 된 [글꼴 패키징 소개](#introduction_to_packaging_fonts) 자세한 내용은 섹션입니다.  
+- **글꼴 포함 권한 비트:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램은 글꼴 포함 권한 비트를 확인하거나 적용하지 않습니다. 참조 된 [글꼴 패키징 소개](#introduction_to_packaging_fonts) 자세한 내용은 섹션입니다.  
   
--   **원래 사이트 글꼴:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램은 http 또는 ftp에 대 한 글꼴 참조를 허용 하지 않습니다 [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]합니다.  
+- **원래 사이트 글꼴:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램은 http 또는 ftp에 대 한 글꼴 참조를 허용 하지 않습니다 [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]합니다.  
   
--   **팩을 사용 하는 절대 URI: 표기법:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 만들 수 없습니다는 <xref:System.Windows.Media.FontFamily> 사용 하 여 프로그래밍 방식으로 "팩:" 절대의 일부로 [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] 글꼴에 대 한 참조입니다. 예를 들어 `"pack://application:,,,/resources/#Pericles Light"` 잘못 된 글꼴 참조입니다.  
+- **팩을 사용 하는 절대 URI: 표기법:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 만들 수 없습니다는 <xref:System.Windows.Media.FontFamily> 사용 하 여 프로그래밍 방식으로 "팩:" 절대의 일부로 [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] 글꼴에 대 한 참조입니다. 예를 들어 `"pack://application:,,,/resources/#Pericles Light"` 잘못 된 글꼴 참조입니다.  
   
--   **자동 글꼴 포함:** 디자인 타임에 응용 프로그램의 글꼴 사용을 검색 하 고 자동으로 응용 프로그램의 리소스에 글꼴을 포함 하는 것에 대 한 지원은 있습니다.  
+- **자동 글꼴 포함:** 디자인 타임에 응용 프로그램의 글꼴 사용을 검색 하 고 자동으로 응용 프로그램의 리소스에 글꼴을 포함 하는 것에 대 한 지원은 있습니다.  
   
--   **글꼴 하위 집합:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램은 고정되지 않은 문서에 대해서는 글꼴 하위 집합을 만드는 것을 지원하지 않습니다.  
+- **글꼴 하위 집합:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램은 고정되지 않은 문서에 대해서는 글꼴 하위 집합을 만드는 것을 지원하지 않습니다.  
   
--   올바르지 않은 참조가 있는 경우 애플리케이션에서는 사용 가능한 글꼴로 대체합니다.  
+- 올바르지 않은 참조가 있는 경우 애플리케이션에서는 사용 가능한 글꼴로 대체합니다.  
   
 ## <a name="see-also"></a>참고자료
 

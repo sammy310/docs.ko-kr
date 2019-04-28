@@ -3,11 +3,11 @@ title: 배열
 description: 만들기 및 배열을 사용 하는 방법을 알아봅니다는 F# 프로그래밍 언어입니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: 4a81a0994479ecd92b8556c4901fea23c3c0507b
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59610940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772712"
 ---
 # <a name="arrays"></a>배열
 

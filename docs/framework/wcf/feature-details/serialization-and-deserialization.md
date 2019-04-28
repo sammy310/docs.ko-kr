@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
 ms.openlocfilehash: d9afa49525f03c06f94b1b7b704fb3d9caa9e19d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748007"
 ---
 # <a name="serialization-and-deserialization"></a>Serialization 및 Deserialization
 Windows Communication Foundation (WCF)는 새 serialization 엔진을 포함 합니다 <xref:System.Runtime.Serialization.DataContractSerializer>합니다. <xref:System.Runtime.Serialization.DataContractSerializer> 는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 개체를 XML로, XML을 .NET Framework 개체로 변환합니다. 이 항목에서는 serializer가 작동하는 방식에 대해 설명합니다.  
@@ -109,11 +109,11 @@ Windows Communication Foundation (WCF)는 새 serialization 엔진을 포함 합
   
  그러나 이 방법은 다음과 같이 바람직하지 않은 특성을 갖습니다.  
   
--   성능. 데이터 복제가 비효율적입니다.  
+- 성능. 데이터 복제가 비효율적입니다.  
   
--   순환 참조. 개체가 다른 개체를 통해 자신을 참조하는 경우에도, 복제로 serialize하면 무한 루프가 발생합니다. 이 경우 serializer가 <xref:System.Runtime.Serialization.SerializationException> 을 throw합니다.  
+- 순환 참조. 개체가 다른 개체를 통해 자신을 참조하는 경우에도, 복제로 serialize하면 무한 루프가 발생합니다. 이 경우 serializer가 <xref:System.Runtime.Serialization.SerializationException> 을 throw합니다.  
   
--   의미. 경우에 따라 두 개의 참조가 똑같은 두 개의 개체로 이루어지는 것이 아니라, 하나의 동일한 개체로 이루어지도록 하는 것이 중요합니다.  
+- 의미. 경우에 따라 두 개의 참조가 똑같은 두 개의 개체로 이루어지는 것이 아니라, 하나의 동일한 개체로 이루어지도록 하는 것이 중요합니다.  
   
  이러한 이유로 인해, 일부 `DataContractSerializer` 생성자 오버로드에는 기본값이 `preserveObjectReferences` 인 `false`매개 변수가 있습니다. 이 매개 변수 설정 된 경우 `true`, 인코딩 개체 참조만 WCF 이해 하는 특수 메서드를 사용 합니다. `true`로 설정된 경우 XML 코드 예제는 이제 다음과 유사합니다.  
   
@@ -131,11 +131,11 @@ Windows Communication Foundation (WCF)는 새 serialization 엔진을 포함 합
   
  이 모드의 제한 사항을 파악하는 것도 중요합니다.  
   
--   `DataContractSerializer` 가 `preserveObjectReferences` 로 설정된 상태에서, `true` 에서 생성한 XML은 다른 기술과 상호 운용할 수 없고, 또한 `DataContractSerializer` 가 `preserveObjectReferences` 로 설정된 상태에서는 다른 `true`인스턴스에서만 이 XML에 액세스할 수 있습니다.  
+- `DataContractSerializer` 가 `preserveObjectReferences` 로 설정된 상태에서, `true` 에서 생성한 XML은 다른 기술과 상호 운용할 수 없고, 또한 `DataContractSerializer` 가 `preserveObjectReferences` 로 설정된 상태에서는 다른 `true`인스턴스에서만 이 XML에 액세스할 수 있습니다.  
   
--   이 기능에 대해서는 메타데이터(스키마)가 지원되지 않습니다. 생성된 스키마는 `preserveObjectReferences` 가 `false`로 설정된 경우에만 유효합니다.  
+- 이 기능에 대해서는 메타데이터(스키마)가 지원되지 않습니다. 생성된 스키마는 `preserveObjectReferences` 가 `false`로 설정된 경우에만 유효합니다.  
   
--   이 기능으로 인해 serialization 및 deserialization 프로세스 실행 속도가 느려질 수 있습니다. 데이터를 복제하지 않아도 되지만 이 모드에서 추가 개체 비교를 수행해야 합니다.  
+- 이 기능으로 인해 serialization 및 deserialization 프로세스 실행 속도가 느려질 수 있습니다. 데이터를 복제하지 않아도 되지만 이 모드에서 추가 개체 비교를 수행해야 합니다.  
   
 > [!CAUTION]
 >  `preserveObjectReferences` 모드를 사용하는 경우, `maxItemsInObjectGraph` 값을 올바른 할당량으로 설정하는 것이 특히 중요합니다. 이 모드에서 배열이 처리되는 방식 때문에, 공격자가 `maxItemsInObjectGraph` 할당량에 의해서만 제한되는 과다한 메모리 소비를 일으키는 작은 악의적인 메시지를 쉽게 작성할 수 있습니다.  
@@ -230,29 +230,29 @@ Windows Communication Foundation (WCF)는 새 serialization 엔진을 포함 합
   
  그러나 여러 가지 문제가 발생할 수 있습니다.  
   
--   보안. XML에 deserialize되고 있는 모든 형식이 로드됩니다. 이를 악용해 악의적인 형식이 로드될 수 있습니다. `NetDataContractSerializer` 속성 또는 생성자 매개 변수로 *Serialization 바인더* 를 사용하는 경우에만, 신뢰할 수 없는 데이터에 <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> 를 사용해야 합니다. 바인더는 안전한 형식만 로드할 수 있도록 허용합니다. 바인더 메커니즘은 <xref:System.Runtime.Serialization> 네임스페이스의 형식에서 사용하는 메커니즘과 동일합니다.  
+- 보안. XML에 deserialize되고 있는 모든 형식이 로드됩니다. 이를 악용해 악의적인 형식이 로드될 수 있습니다. `NetDataContractSerializer` 속성 또는 생성자 매개 변수로 *Serialization 바인더* 를 사용하는 경우에만, 신뢰할 수 없는 데이터에 <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> 를 사용해야 합니다. 바인더는 안전한 형식만 로드할 수 있도록 허용합니다. 바인더 메커니즘은 <xref:System.Runtime.Serialization> 네임스페이스의 형식에서 사용하는 메커니즘과 동일합니다.  
   
--   버전 관리. XML에 전체 형식 및 어셈블리 이름을 사용하면 형식 버전을 관리할 수 있는 방식이 제한됩니다. 형식 이름, 네임스페이스, 어셈블리 이름 및 어셈블리 버전은 변경할 수 없습니다. <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> 속성이나 생성자 매개 변수를 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple> 의 기본값 대신 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Full> 로 설정하면, 어셈블리 버전을 변경할 수 있지만 일반 매개 변수의 형식 버전은 변경할 수 없습니다.  
+- 버전 관리. XML에 전체 형식 및 어셈블리 이름을 사용하면 형식 버전을 관리할 수 있는 방식이 제한됩니다. 형식 이름, 네임스페이스, 어셈블리 이름 및 어셈블리 버전은 변경할 수 없습니다. <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> 속성이나 생성자 매개 변수를 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple> 의 기본값 대신 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Full> 로 설정하면, 어셈블리 버전을 변경할 수 있지만 일반 매개 변수의 형식 버전은 변경할 수 없습니다.  
   
--   상호 운용성. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식 및 어셈블리 이름은 XML에 포함되어 있기 때문에 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 이외의 다른 플랫폼에서는 결과 데이터에 액세스할 수 없습니다.  
+- 상호 운용성. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식 및 어셈블리 이름은 XML에 포함되어 있기 때문에 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 이외의 다른 플랫폼에서는 결과 데이터에 액세스할 수 없습니다.  
   
--   성능. 형식 및 어셈블리 이름을 작성하면 생성되는 XML의 크기가 크게 늘어납니다.  
+- 성능. 형식 및 어셈블리 이름을 작성하면 생성되는 XML의 크기가 크게 늘어납니다.  
   
  이 메커니즘은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 원격 서비스에서 사용하는 이진 또는 SOAP serialization과 비슷합니다(특히 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 및 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>).  
   
  `NetDataContractSerializer` 사용 방식은 `DataContractSerializer`사용 방식과 비슷하지만 다음과 같은 차이점이 있습니다.  
   
--   생성자를 사용하기 위해 루트 형식을 지정하지 않아도 됩니다. `NetDataContractSerializer`의 같은 인스턴스를 사용하여 형식을 serialize할 수 있습니다.  
+- 생성자를 사용하기 위해 루트 형식을 지정하지 않아도 됩니다. `NetDataContractSerializer`의 같은 인스턴스를 사용하여 형식을 serialize할 수 있습니다.  
   
--   생성자는 알려진 형식의 목록을 허용하지 않습니다. 형식 이름이 XML로 serialize되는 경우 알려진 형식 메커니즘은 필요하지 않습니다.  
+- 생성자는 알려진 형식의 목록을 허용하지 않습니다. 형식 이름이 XML로 serialize되는 경우 알려진 형식 메커니즘은 필요하지 않습니다.  
   
--   생성자는 데이터 계약 서로게이트를 허용하지 않습니다. 대신 <xref:System.Runtime.Serialization.ISurrogateSelector> 속성에 매핑되는 `surrogateSelector` 라고 하는 <xref:System.Runtime.Serialization.NetDataContractSerializer.SurrogateSelector%2A> 매개 변수를 허용합니다. 이것이 바로 레거시 서로게이트 메커니즘입니다.  
+- 생성자는 데이터 계약 서로게이트를 허용하지 않습니다. 대신 <xref:System.Runtime.Serialization.ISurrogateSelector> 속성에 매핑되는 `surrogateSelector` 라고 하는 <xref:System.Runtime.Serialization.NetDataContractSerializer.SurrogateSelector%2A> 매개 변수를 허용합니다. 이것이 바로 레거시 서로게이트 메커니즘입니다.  
   
--   생성자는 `assemblyFormat` 속성에 매핑되는 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle> 의 <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> 이라는 매개 변수를 허용합니다. 이전에 설명한 대로 이 메커니즘은 serializer의 버전 관리 기능을 향상시키는 데 사용할 수 있으며, 이진 또는 SOAP serialization의 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle> 메커니즘과 동일합니다.  
+- 생성자는 `assemblyFormat` 속성에 매핑되는 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle> 의 <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> 이라는 매개 변수를 허용합니다. 이전에 설명한 대로 이 메커니즘은 serializer의 버전 관리 기능을 향상시키는 데 사용할 수 있으며, 이진 또는 SOAP serialization의 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle> 메커니즘과 동일합니다.  
   
--   생성자는 <xref:System.Runtime.Serialization.StreamingContext> 속성에 매핑되는 `context` 라는 <xref:System.Runtime.Serialization.NetDataContractSerializer.Context%2A> 매개 변수를 허용합니다. 이 메커니즘은 정보를 serialize되고 있는 형식으로 전달할 수 있으며, 이 사용 방법은 다른 <xref:System.Runtime.Serialization.StreamingContext> 클래스에 사용된 <xref:System.Runtime.Serialization> 메커니즘의 사용 방법과 동일합니다.  
+- 생성자는 <xref:System.Runtime.Serialization.StreamingContext> 속성에 매핑되는 `context` 라는 <xref:System.Runtime.Serialization.NetDataContractSerializer.Context%2A> 매개 변수를 허용합니다. 이 메커니즘은 정보를 serialize되고 있는 형식으로 전달할 수 있으며, 이 사용 방법은 다른 <xref:System.Runtime.Serialization.StreamingContext> 클래스에 사용된 <xref:System.Runtime.Serialization> 메커니즘의 사용 방법과 동일합니다.  
   
--   <xref:System.Runtime.Serialization.NetDataContractSerializer.Serialize%2A> 및 <xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize%2A> 메서드는 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> 및 <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 메서드의 별칭입니다. 이러한 메서드는 이진 또는 SOAP serialization에 보다 일관된 프로그래밍 모델을 제공하기 위해 존재합니다.  
+- <xref:System.Runtime.Serialization.NetDataContractSerializer.Serialize%2A> 및 <xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize%2A> 메서드는 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> 및 <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 메서드의 별칭입니다. 이러한 메서드는 이진 또는 SOAP serialization에 보다 일관된 프로그래밍 모델을 제공하기 위해 존재합니다.  
   
  이러한 기능에 대 한 자세한 내용은 참조 하세요. [이진 Serialization](../../../../docs/standard/serialization/binary-serialization.md)합니다.  
   

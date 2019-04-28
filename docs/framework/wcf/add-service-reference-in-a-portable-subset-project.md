@@ -3,11 +3,11 @@ title: 이식 가능한 하위 집합 프로젝트에 서비스 참조 추가
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
 ms.openlocfilehash: 92ee180da531259b005b5782c180a139fd66847b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782423"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>이식 가능한 하위 집합 프로젝트에 서비스 참조 추가
 이식 가능한 하위 집합 프로젝트는.NET 어셈블리 프로그래머가 하나의 소스 트리를 유지 관리 하 고 여러.NET 구현 (예: 데스크톱, Silverlight, Windows Phone 및 XBOX)를 계속 지원 하면서 빌드 시스템을 사용 하도록 설정 합니다. 이식 가능한 하위 집합 프로젝트는 모든.NET 구현에서 사용할 수 있는.NET framework 어셈블리는.NET 이식 가능한 라이브러리만 참조 합니다.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - add element for <sharedListeners>
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
 ms.openlocfilehash: e7934ed5e71005cfd28271298ff6ce1eb8829a0d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701374"
 ---
 # <a name="add-element-for-sharedlisteners"></a>\<추가 > 요소에 대 한 \<sharedListeners >
 `sharedListeners` 컬렉션에 수신기를 추가합니다. `sharedListeners` 이 수신기의 컬렉션인 모든 [ \<소스 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) 또는 [ \<추적 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md) 참조할 수 있습니다.  기본적으로 수신기에는 `sharedListeners` 컬렉션에 있지 않은지를 `Listeners` 컬렉션입니다. 이름으로 추가 해야 합니다 [ \<소스 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) 또는 [ \<추적 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)합니다. 수신기에서 가져올 수 없는 `sharedListeners` 런타임 시 코드의 컬렉션입니다.  

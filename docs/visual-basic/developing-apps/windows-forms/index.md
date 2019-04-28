@@ -2,15 +2,9 @@
 title: Windows Forms 응용 프로그램 기초(Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- Windows applications
-- Windows Forms, Visual Basic
+  - Windows applications
+  - 'Windows Forms, Visual Basic'
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 99aa61d921217ab5638172a54697054e8421fd5c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972679"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Forms 응용 프로그램 기초(Visual Basic)
 사용자의 컴퓨터에서 로컬로 실행 되는 Windows Forms 응용 프로그램을 만드는 기능은 Visual Basic의 중요 한 부분입니다. Windows Forms를 사용 하 여 응용 프로그램 및 사용자 인터페이스를 만들려면 Visual Studio를 사용할 수 있습니다. Windows Forms 응용 프로그램의 클래스에 빌드되는 <xref:System.Windows.Forms> 네임 스페이스입니다.  
@@ -18,11 +12,11 @@ ms.locfileid: "56972679"
 ## <a name="designing-windows-forms-applications"></a>디자인 Windows Forms 응용 프로그램  
  Visual Studio를 사용 하 여 Windows Forms 및 Windows 서비스 응용 프로그램을 만들 수 있습니다. 자세한 내용은 다음 항목을 참조하세요.  
   
--   [Windows Forms 시작](../../../framework/winforms/getting-started-with-windows-forms.md)합니다. 만들고 Windows Forms 프로그래밍 방법에 대 한 정보를 제공 합니다.  
+- [Windows Forms 시작](../../../framework/winforms/getting-started-with-windows-forms.md)합니다. 만들고 Windows Forms 프로그래밍 방법에 대 한 정보를 제공 합니다.  
    
--   [Windows Forms 컨트롤](../../../framework/winforms/controls/index.md)합니다. Windows Forms 컨트롤의 사용을 자세히 설명 하는 항목의 컬렉션입니다.  
+- [Windows Forms 컨트롤](../../../framework/winforms/controls/index.md)합니다. Windows Forms 컨트롤의 사용을 자세히 설명 하는 항목의 컬렉션입니다.  
   
--   [Windows 서비스 응용 프로그램](../../../framework/windows-services/index.md)합니다. Windows 서비스를 만드는 방법을 설명 하는 항목을 나열 합니다.  
+- [Windows 서비스 응용 프로그램](../../../framework/windows-services/index.md)합니다. Windows 서비스를 만드는 방법을 설명 하는 항목을 나열 합니다.  
   
 ## <a name="building-rich-interactive-user-interfaces"></a>풍부한 대화형 사용자 인터페이스 빌드  
  Windows Forms의 스마트 클라이언트 구성 요소는 여 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], 읽기 및 쓰기 파일 시스템에 같은 일반적인 응용 프로그램 작업을 사용 하도록 설정 하는 관리 되는 라이브러리 집합입니다. Visual Studio와 같은 개발 환경을 사용 하 여, Windows Forms 응용 프로그램 정보를 표시 하 고 사용자 로부터 입력을 요청 하 고 전달 하는 원격 컴퓨터와 네트워크를 통해 만들 수 있습니다.  

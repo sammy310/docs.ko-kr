@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
 ms.openlocfilehash: 29ce9b165c3823d7d06008431294f67716ccf8e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933070"
 ---
 # <a name="using-the-xmlserializer-class"></a>XmlSerializer 클래스 사용
 Windows Communication Foundation (WCF) 두 가지 다른 serialization 기술을 사용 하 여 클라이언트 및 서비스, 프로세스를 serialization 이라고 간에 전송 되는 XML로 응용 프로그램에서 데이터를 변환할 수 있습니다.  
@@ -20,15 +20,15 @@ Windows Communication Foundation (WCF) 두 가지 다른 serialization 기술을
 ## <a name="datacontractserializer-as-the-default"></a>기본값인 DataContractSerializer  
  WCF는 기본적으로 다음을 사용 합니다.는 <xref:System.Runtime.Serialization.DataContractSerializer> 데이터 형식을 serialize 하는 클래스입니다. 이 serializer는 다음 형식을 지원합니다.  
   
--   기본 형식(예: 정수, 문자열 및 바이트 배열) 및 기본 형식으로 처리되는 <xref:System.Xml.XmlElement> 및 <xref:System.DateTime> 같은 일부 특수 형식  
+- 기본 형식(예: 정수, 문자열 및 바이트 배열) 및 기본 형식으로 처리되는 <xref:System.Xml.XmlElement> 및 <xref:System.DateTime> 같은 일부 특수 형식  
   
--   데이터 계약 형식(<xref:System.Runtime.Serialization.DataContractAttribute> 특성으로 표시된 형식)  
+- 데이터 계약 형식(<xref:System.Runtime.Serialization.DataContractAttribute> 특성으로 표시된 형식)  
   
--   <xref:System.SerializableAttribute> 인터페이스를 구현하는 형식을 포함하여 <xref:System.Runtime.Serialization.ISerializable> 특성으로 표시된 형식  
+- <xref:System.SerializableAttribute> 인터페이스를 구현하는 형식을 포함하여 <xref:System.Runtime.Serialization.ISerializable> 특성으로 표시된 형식  
   
--   <xref:System.Xml.Serialization.IXmlSerializable> 인터페이스를 구현하는 형식  
+- <xref:System.Xml.Serialization.IXmlSerializable> 인터페이스를 구현하는 형식  
   
--   많은 제네릭 컬렉션 형식을 비롯한 많은 일반 컬렉션 형식  
+- 많은 제네릭 컬렉션 형식을 비롯한 많은 일반 컬렉션 형식  
   
  많은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식은 끝의 두 범주에 해당하므로 serialize할 수 있습니다. serialize할 수 있는 형식의 배열도 serialize할 수 있습니다. 전체 목록을 참조 하세요 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)합니다.  
   
@@ -42,11 +42,11 @@ Windows Communication Foundation (WCF) 두 가지 다른 serialization 기술을
 ## <a name="manually-switching-to-the-xmlserializer"></a>XmlSerializer로 수동 전환  
  경우에 따라 수동으로 <xref:System.Xml.Serialization.XmlSerializer>로 전환해야 할 수도 있습니다. 예를 들어 다음과 같은 경우 수동 전환할 수 있습니다.  
   
--   응용 프로그램을 마이그레이션할 때는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 기존의 다시 사용 하려는 웹 서비스와 WCF <xref:System.Xml.Serialization.XmlSerializer>-새 데이터를 만드는 대신 호환 되는 형식을 계약 형식입니다.  
+- 응용 프로그램을 마이그레이션할 때는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 기존의 다시 사용 하려는 웹 서비스와 WCF <xref:System.Xml.Serialization.XmlSerializer>-새 데이터를 만드는 대신 호환 되는 형식을 계약 형식입니다.  
   
--   메시지에 표시되는 XML에 대한 정확한 제어가 중요하지만 WSDL(웹 서비스 기술 언어) 문서를 사용할 수 없는 경우(예: DataContractSerializer와 호환되지 않는 특정 표준화 및 게시된 스키마를 준수해야 하는 형식의 서비스를 만드는 경우)  
+- 메시지에 표시되는 XML에 대한 정확한 제어가 중요하지만 WSDL(웹 서비스 기술 언어) 문서를 사용할 수 없는 경우(예: DataContractSerializer와 호환되지 않는 특정 표준화 및 게시된 스키마를 준수해야 하는 형식의 서비스를 만드는 경우)  
   
--   레거시 SOAP 인코딩 표준을 따르는 서비스를 만드는 경우  
+- 레거시 SOAP 인코딩 표준을 따르는 서비스를 만드는 경우  
   
  위의 경우를 비롯한 여러 경우에서 다음 코드와 같이 <xref:System.Xml.Serialization.XmlSerializer> 특성을 서비스에 적용하여 `XmlSerializerFormatAttribute` 클래스로 수동 전환할 수 있습니다.  
   
@@ -101,11 +101,11 @@ Windows Communication Foundation (WCF) 두 가지 다른 serialization 기술을
   
  `IXmlSerializable`을 구현하는 형식에는 임의의 콘텐츠를 나타내는 형식, 단일 요소를 나타내는 형식 및 레거시 <xref:System.Data.DataSet> 형식 등 세 가지가 있습니다.  
   
--   콘텐츠 형식은 `XmlSchemaProviderAttribute` 특성에 지정된 스키마 공급자 메서드를 사용합니다. 이 메서드는 `null`을 반환하지 않으며 특성의 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute.IsAny%2A> 속성은 기본값인 `false`로 유지됩니다. 이는 `IXmlSerializable` 형식의 가장 일반적인 사용입니다.  
+- 콘텐츠 형식은 `XmlSchemaProviderAttribute` 특성에 지정된 스키마 공급자 메서드를 사용합니다. 이 메서드는 `null`을 반환하지 않으며 특성의 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute.IsAny%2A> 속성은 기본값인 `false`로 유지됩니다. 이는 `IXmlSerializable` 형식의 가장 일반적인 사용입니다.  
   
--   요소 형식은 `IXmlSerializable` 형식이 루트 요소 이름을 제어해야 하는 경우에 사용됩니다. 형식을 요소 형식으로 표시하려면 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute.IsAny%2A> 특성의 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 속성을 `true`로 설정하거나 스키마 공급자 메서드에서 `null`을 반환합니다. 스키마 공급자 메서드 사용은 요소 형식의 옵션이며 `null`에 메서드 이름 대신 `XmlSchemaProviderAttribute`을 지정할 수 있습니다. 그러나 `IsAny`가 `true`이고 스키마 공급자 메서드가 지정된 경우 메서드는 `null`을 반환해야 합니다.  
+- 요소 형식은 `IXmlSerializable` 형식이 루트 요소 이름을 제어해야 하는 경우에 사용됩니다. 형식을 요소 형식으로 표시하려면 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute.IsAny%2A> 특성의 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 속성을 `true`로 설정하거나 스키마 공급자 메서드에서 `null`을 반환합니다. 스키마 공급자 메서드 사용은 요소 형식의 옵션이며 `null`에 메서드 이름 대신 `XmlSchemaProviderAttribute`을 지정할 수 있습니다. 그러나 `IsAny`가 `true`이고 스키마 공급자 메서드가 지정된 경우 메서드는 `null`을 반환해야 합니다.  
   
--   레거시 <xref:System.Data.DataSet> 형식은 `IXmlSerializable` 특성으로 표시되지 않은 `XmlSchemaProviderAttribute` 형식입니다. 대신 이러한 형식은 스키마 생성 시 <xref:System.Xml.Serialization.IXmlSerializable.GetSchema%2A> 메서드를 사용합니다. 이 패턴은 `DataSet` 형식에 사용되고 해당 형식화된 데이터 집합은 이전 버전의 .NET Framework에서는 클래스를 파생하지만 현재는 더 이상 사용되지 않으며 레거시 용도로만 지원됩니다. 이 패턴을 사용하는 대신 `XmlSchemaProviderAttribute`를 항상 `IXmlSerializable` 형식에 적용하세요.  
+- 레거시 <xref:System.Data.DataSet> 형식은 `IXmlSerializable` 특성으로 표시되지 않은 `XmlSchemaProviderAttribute` 형식입니다. 대신 이러한 형식은 스키마 생성 시 <xref:System.Xml.Serialization.IXmlSerializable.GetSchema%2A> 메서드를 사용합니다. 이 패턴은 `DataSet` 형식에 사용되고 해당 형식화된 데이터 집합은 이전 버전의 .NET Framework에서는 클래스를 파생하지만 현재는 더 이상 사용되지 않으며 레거시 용도로만 지원됩니다. 이 패턴을 사용하는 대신 `XmlSchemaProviderAttribute`를 항상 `IXmlSerializable` 형식에 적용하세요.  
   
 ### <a name="ixmlserializable-content-types"></a>IXmlSerializable 콘텐츠 형식  
  이전에 정의한 콘텐츠 형식이며 `IXmlSerializable`을 구현하는 형식의 데이터 멤버를 serialize할 때 serializer는 데이터 멤버의 래퍼 요소를 쓰고 제어를 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> 메서드에 전달합니다. <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> 구현은 특성을 래퍼 요소에 추가하는 것을 포함하여 모든 XML을 쓸 수 있습니다. `WriteXml`이 완료되면 serializer는 요소를 닫습니다.  
@@ -133,37 +133,37 @@ Windows Communication Foundation (WCF) 두 가지 다른 serialization 기술을
   
  요소 형식의 serialize 및 deserialize는 콘텐츠 형식의 serialize 및 deserialize와 유사합니다. 그러나 다음과 같은 중요한 차이가 있습니다.  
   
--   `WriteXml` 구현은 정확히 하나의 요소를 씁니다. 물론 이 요소는 여러 개의 자식 요소를 포함할 수 있습니다. 이 단일 요소, 여러 개의 형제 요소 또는 혼합 콘텐츠 외부의 특성을 쓰면 안 됩니다. 요소는 비어 있을 수 있습니다.  
+- `WriteXml` 구현은 정확히 하나의 요소를 씁니다. 물론 이 요소는 여러 개의 자식 요소를 포함할 수 있습니다. 이 단일 요소, 여러 개의 형제 요소 또는 혼합 콘텐츠 외부의 특성을 쓰면 안 됩니다. 요소는 비어 있을 수 있습니다.  
   
--   `ReadXml` 구현은 래퍼 요소를 읽어서는 안 됩니다. `WriteXml`에서 생성하는 하나의 요소를 읽습니다.  
+- `ReadXml` 구현은 래퍼 요소를 읽어서는 안 됩니다. `WriteXml`에서 생성하는 하나의 요소를 읽습니다.  
   
--   예를 들어 데이터 계약의 데이터 멤버로 정기적으로 요소 형식을 serialize하는 경우 serializer는 콘텐츠 형식과 마찬가지로 `WriteXml`을 호출하기 전에 래퍼 요소를 출력합니다. 그러나 최상위 수준에서 요소 형식을 serialize할 때 serializer는 일반적으로 `WriteXml` 또는 `DataContractSerializer` 생성자에서 serializer를 생성할 때 루트 이름과 네임스페이스를 명시적으로 지정하지 않은 경우 `NetDataContractSerializer`에서 쓰는 요소를 둘러싼 래퍼 요소를 출력하지 않습니다. 자세한 내용은 [Serialization 및 Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)합니다.  
+- 예를 들어 데이터 계약의 데이터 멤버로 정기적으로 요소 형식을 serialize하는 경우 serializer는 콘텐츠 형식과 마찬가지로 `WriteXml`을 호출하기 전에 래퍼 요소를 출력합니다. 그러나 최상위 수준에서 요소 형식을 serialize할 때 serializer는 일반적으로 `WriteXml` 또는 `DataContractSerializer` 생성자에서 serializer를 생성할 때 루트 이름과 네임스페이스를 명시적으로 지정하지 않은 경우 `NetDataContractSerializer`에서 쓰는 요소를 둘러싼 래퍼 요소를 출력하지 않습니다. 자세한 내용은 [Serialization 및 Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)합니다.  
   
--   생성 시 루트 이름과 네임스페이스를 지정하지 않고 최상위 수준에서 요소 형식을 serialize하는 경우 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A> 및 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A>에서 아무 작업도 수행하지 않으며 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A>는 `WriteXml`을 호출합니다. 이 모드에서 serialize되는 개체는 `null`일 수 없으며 다형적으로 할당할 수 없습니다. 또한 개체 그래프 유지를 활성화할 수 없고 `NetDataContractSerializer`를 사용할 수 없습니다.  
+- 생성 시 루트 이름과 네임스페이스를 지정하지 않고 최상위 수준에서 요소 형식을 serialize하는 경우 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A> 및 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A>에서 아무 작업도 수행하지 않으며 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A>는 `WriteXml`을 호출합니다. 이 모드에서 serialize되는 개체는 `null`일 수 없으며 다형적으로 할당할 수 없습니다. 또한 개체 그래프 유지를 활성화할 수 없고 `NetDataContractSerializer`를 사용할 수 없습니다.  
   
--   생성 시 루트 이름과 네임스페이스를 지정하지 않고 최상위 수준에서 요소 형식을 deserialize하는 경우 <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A>가 임의 요소의 시작 부분을 찾으면 `true`를 반환합니다. <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 매개 변수를 `verifyObjectName`로 설정한 `true`는 실제로 개체를 읽기 전에 `IsStartObject`와 같은 방식으로 동작합니다. 그런 다음 `ReadObject`는 컨트롤을 `ReadXml` 메서드로 전달합니다.  
+- 생성 시 루트 이름과 네임스페이스를 지정하지 않고 최상위 수준에서 요소 형식을 deserialize하는 경우 <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A>가 임의 요소의 시작 부분을 찾으면 `true`를 반환합니다. <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 매개 변수를 `verifyObjectName`로 설정한 `true`는 실제로 개체를 읽기 전에 `IsStartObject`와 같은 방식으로 동작합니다. 그런 다음 `ReadObject`는 컨트롤을 `ReadXml` 메서드로 전달합니다.  
   
  요소 형식과 관련해서 내보낸 스키마는 스키마 공급자 메서드가 `XmlElement`에 다른 스키마를 추가할 수 있다는 점을 제외하고 이전 단원에서 설명한 대로 <xref:System.Xml.Schema.XmlSchemaSet> 형식에 대해 콘텐츠 형식과 동일합니다. 요소 형식에 `XmlRootAttribute` 특성을 사용할 수 없으며 이러한 형식에 대해 전역 요소 선언을 내보내지 않습니다.  
   
 ### <a name="differences-from-the-xmlserializer"></a>XmlSerializer와의 차이점  
  `IXmlSerializable` 인터페이스와 `XmlSchemaProviderAttribute` 및 `XmlRootAttribute` 특성도 <xref:System.Xml.Serialization.XmlSerializer>에서 인식됩니다. 그러나 데이터 계약 모델에서 처리되는 방법에 차이가 있습니다. 아래 목록에 중요한 차이가 요약되어 있습니다.  
   
--   `XmlSerializer`에서 사용할 수 있으려면 스키마 공급자 메서드가 public이어야 하지만 public이 아니어도 데이터 계약 모델에서 사용할 수 있습니다.  
+- `XmlSerializer`에서 사용할 수 있으려면 스키마 공급자 메서드가 public이어야 하지만 public이 아니어도 데이터 계약 모델에서 사용할 수 있습니다.  
   
--   데이터 계약 모델에서 `IsAny`가 `true`일 때는 스키마 공급자 메서드가 호출되지만 `XmlSerializer`를 사용할 때는 호출되지 않습니다.  
+- 데이터 계약 모델에서 `IsAny`가 `true`일 때는 스키마 공급자 메서드가 호출되지만 `XmlSerializer`를 사용할 때는 호출되지 않습니다.  
   
--   콘텐츠 또는 레거시 데이터 집합 형식에 `XmlRootAttribute` 특성이 없으면 `XmlSerializer`는 빈 네임스페이스에 전역 요소 선언을 내보냅니다. 데이터 계약 모델에서 사용되는 네임스페이스는 일반적으로 앞에서 설명한 데이터 계약 네임스페이스입니다.  
+- 콘텐츠 또는 레거시 데이터 집합 형식에 `XmlRootAttribute` 특성이 없으면 `XmlSerializer`는 빈 네임스페이스에 전역 요소 선언을 내보냅니다. 데이터 계약 모델에서 사용되는 네임스페이스는 일반적으로 앞에서 설명한 데이터 계약 네임스페이스입니다.  
   
  두 가지 serialization 기술에서 모두 사용할 형식을 만드는 경우 이러한 차이에 주의하세요.  
   
 ### <a name="importing-ixmlserializable-schema"></a>IXmlSerializable 스키마 가져오기  
  `IXmlSerializable` 형식에서 생성된 스키마를 가져오는 경우 다음과 같은 몇 가지 가능성이 있습니다.  
   
--   생성된 된 스키마에 설명 된 대로 올바른 데이터 계약 스키마를 수 있습니다 [데이터 계약 스키마 참조](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)합니다. 이 경우 스키마를 일반적인 방법으로 가져올 수 있으며 일반 데이터 계약 형식이 생성됩니다.  
+- 생성된 된 스키마에 설명 된 대로 올바른 데이터 계약 스키마를 수 있습니다 [데이터 계약 스키마 참조](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)합니다. 이 경우 스키마를 일반적인 방법으로 가져올 수 있으며 일반 데이터 계약 형식이 생성됩니다.  
   
--   생성된 스키마가 올바른 데이터 계약 스키마가 아닐 수 있습니다. 예를 들어 스키마 공급자 메서드가 데이터 계약 모델에서 지원되지 않는 XML 특성과 관련된 스키마를 생성할 수 있습니다. 이 경우 스키마를 `IXmlSerializable` 형식으로 가져올 수 있습니다. 이 가져오기 모드는 기본적으로 설정 되지 않지만 쉽게 – 예를 들어와 함께 사용할 수는 `/importXmlTypes` 명령줄 스위치를 합니다 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)합니다. 이에 자세히 설명 되어는 [스키마를 생성 하는 클래스를 가져와서](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)합니다. 형식 인스턴스에 대한 XML로 직접 작업해야 합니다. 보다 넓은 범위의 스키마를 지원하는 다른 serialization 기술을 사용할 수도 있습니다. `XmlSerializer` 사용에 대한 항목을 참조하세요.  
+- 생성된 스키마가 올바른 데이터 계약 스키마가 아닐 수 있습니다. 예를 들어 스키마 공급자 메서드가 데이터 계약 모델에서 지원되지 않는 XML 특성과 관련된 스키마를 생성할 수 있습니다. 이 경우 스키마를 `IXmlSerializable` 형식으로 가져올 수 있습니다. 이 가져오기 모드는 기본적으로 설정 되지 않지만 쉽게 – 예를 들어와 함께 사용할 수는 `/importXmlTypes` 명령줄 스위치를 합니다 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)합니다. 이에 자세히 설명 되어는 [스키마를 생성 하는 클래스를 가져와서](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)합니다. 형식 인스턴스에 대한 XML로 직접 작업해야 합니다. 보다 넓은 범위의 스키마를 지원하는 다른 serialization 기술을 사용할 수도 있습니다. `XmlSerializer` 사용에 대한 항목을 참조하세요.  
   
--   새 형식을 생성하는 대신 프록시의 기존 `IXmlSerializable` 형식을 다시 사용할 수 있습니다. 이 경우 스키마를 가져와서 형식 생성 항목에서 설명하는 참조된 형식 기능을 사용하여 다시 사용할 형식을 나타낼 수 있습니다. 이는 다시 사용할 형식이 포함된 어셈블리를 지정하는 svcutil.exe에 `/reference` 스위치를 사용하는 것에 같습니다.  
+- 새 형식을 생성하는 대신 프록시의 기존 `IXmlSerializable` 형식을 다시 사용할 수 있습니다. 이 경우 스키마를 가져와서 형식 생성 항목에서 설명하는 참조된 형식 기능을 사용하여 다시 사용할 형식을 나타낼 수 있습니다. 이는 다시 사용할 형식이 포함된 어셈블리를 지정하는 svcutil.exe에 `/reference` 스위치를 사용하는 것에 같습니다.  
   
 ### <a name="xmlserializer-legacy-behavior"></a>XmlSerializer 레거시 동작  
  .NET Framework 4.0 및 이전 버전에서는 XmlSerializer가 파일에 C# 코드를 작성해서 임시 serialization 어셈블리를 생성했습니다. 그런 다음 파일이 어셈블리로 컴파일됩니다.  이 동작은 serializer가 느리게 시작하는 등의 좋지 않은 결과가 있었습니다. .NET Framework 4.5에서는 이 동작이 컴파일러를 사용하지 않고도 어셈블리를 생성할 수 있도록 변경되었습니다. 일부 개발자는 생성된 C# 코드를 보고 싶어할 수 있습니다. 다음과 같이 구성하면 이 레거시 동작을 사용하도록 지정할 수 있습니다.  

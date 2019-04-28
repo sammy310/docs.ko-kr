@@ -3,11 +3,11 @@ title: Windows Workflow Foundation 기능 특성
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
 ms.openlocfilehash: fae42332c19a8b39070d9922b6fec4aadd73505b
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773710"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation 기능 특성
 
@@ -19,8 +19,7 @@ ms.locfileid: "57846547"
 
 ### <a name="getting-started-with-messaging-activities"></a>메시징 작업 시작
 
-- Visual Studio 2012에서 WCF 워크플로 서비스 응용 프로그램 프로젝트를 만듭니다. 
-  <xref:System.ServiceModel.Activities.Receive> 및 <xref:System.ServiceModel.Activities.SendReply> 쌍이 캔버스에 배치됩니다.
+- Visual Studio 2012에서 WCF 워크플로 서비스 응용 프로그램 프로젝트를 만듭니다. <xref:System.ServiceModel.Activities.Receive> 및 <xref:System.ServiceModel.Activities.SendReply> 쌍이 캔버스에 배치됩니다.
 
 - 프로젝트를 마우스 오른쪽 단추로 클릭 **서비스 참조 추가**합니다. 기존 웹 서비스 WSDL 가리키고 클릭 **확인**합니다. 생성된 된 활동을 표시 하려면 프로젝트를 빌드합니다 (사용 하 여 구현 <xref:System.ServiceModel.Activities.Send> 및 <xref:System.ServiceModel.Activities.ReceiveReply>) 도구 상자에 있습니다.
 
@@ -40,15 +39,13 @@ ms.locfileid: "57846547"
 
 - 메시징이 아닌 워크플로를 호스트하려면 메시지를 기반으로 하는 인스턴스를 만들 사용자 지정 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>를 추가합니다.
 
-- 
-  <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>에 <xref:System.ServiceModel.WorkflowServiceHost>를 추가한 다음 <xref:System.ServiceModel.Activities.WorkflowControlClient>를 사용하여 워크플로 인스턴스를 제어(예: 일시 중단 또는 종료)할 수 있습니다.
+- <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>에 <xref:System.ServiceModel.WorkflowServiceHost>를 추가한 다음 <xref:System.ServiceModel.Activities.WorkflowControlClient>를 사용하여 워크플로 인스턴스를 제어(예: 일시 중단 또는 종료)할 수 있습니다.
 
-- 
-  <xref:System.ServiceModel.WorkflowServiceHost>에 대한 샘플은 다음 단원에서 확인할 수 있습니다.
+- <xref:System.ServiceModel.WorkflowServiceHost>에 대한 샘플은 다음 단원에서 확인할 수 있습니다.
 
-    - [실행](./samples/execution.md)
+  - [실행](./samples/execution.md)
 
-    - 응용 프로그램: [일시 중단된 인스턴스 관리](./samples/suspended-instance-management.md)
+  - 응용 프로그램: [일시 중단된 인스턴스 관리](./samples/suspended-instance-management.md)
 
 - [워크플로 서비스 호스팅 개요](../wcf/feature-details/hosting-workflow-services-overview.md)
 
@@ -70,14 +67,13 @@ BestPriceFinder 서비스는 특정 경로 대 한 최상의 티켓 가격을 �
 
 - 메시지를 그룹화하는 데 사용되는 상관 관계의 예로 메시지를 그룹화하는 요청-회신 상관 관계가 있습니다.
 
-    - 에 <xref:System.ServiceModel.Activities.Receive> 활동을 클릭 합니다 <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> 속성 추가 <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> 위의 첫 번째 단계에서 만든 CorrelationHandle을 사용 하 여.
+  - 에 <xref:System.ServiceModel.Activities.Receive> 활동을 클릭 합니다 <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> 속성 추가 <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> 위의 첫 번째 단계에서 만든 CorrelationHandle을 사용 하 여.
 
-    - 만들기를 <xref:System.ServiceModel.Activities.SendReply> 마우스 오른쪽 단추로 클릭 하 여 활동은 <xref:System.ServiceModel.Activities.Receive> "SendReply 만들기"를 클릭 합니다. 워크플로에서 <xref:System.ServiceModel.Activities.Receive> 작업 뒤에 이 작업을 붙여 넣습니다.
+  - 만들기를 <xref:System.ServiceModel.Activities.SendReply> 마우스 오른쪽 단추로 클릭 하 여 활동은 <xref:System.ServiceModel.Activities.Receive> "SendReply 만들기"를 클릭 합니다. 워크플로에서 <xref:System.ServiceModel.Activities.Receive> 작업 뒤에 이 작업을 붙여 넣습니다.
 
 - 데이터를 서비스 인스턴스에 매핑하는 예로 데이터(예: 주문 ID)를 특정 워크플로 인스턴스에 매핑하는 콘텐츠 기반 상관 관계가 있습니다.
 
-    - 아무 메시징 작업에서나 `CorrelationInitializers` 속성을 클릭하고 위에서 만든 <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> 변수를 사용하여 <xref:System.ServiceModel.Activities.CorrelationHandle>를 추가합니다. 드롭다운 메뉴에서 원하는 메시지 속성(예: OrderID)을 두 번 클릭합니다. 
-  `CorrelatesWith` 속성을 위에서 사용한 <xref:System.ServiceModel.Activities.CorrelationHandle> 변수로 설정합니다.
+  - 아무 메시징 작업에서나 `CorrelationInitializers` 속성을 클릭하고 위에서 만든 <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> 변수를 사용하여 <xref:System.ServiceModel.Activities.CorrelationHandle>를 추가합니다. 드롭다운 메뉴에서 원하는 메시지 속성(예: OrderID)을 두 번 클릭합니다. `CorrelatesWith` 속성을 위에서 사용한 <xref:System.ServiceModel.Activities.CorrelationHandle> 변수로 설정합니다.
 
 - [상관 관계 개념 설명서](../wcf/feature-details/correlation.md)
 
@@ -135,9 +131,9 @@ WCF 구성 스키마 복잡 하며 기능 찾기 어려운 여러 사용자를 �
 
 - 샘플:
 
-    - [DataContractResolver](../wcf/samples/datacontractresolver.md)
+  - [DataContractResolver](../wcf/samples/datacontractresolver.md)
 
-    - [KnownAssemblyAttribute](../wcf/samples/knownassemblyattribute.md)
+  - [KnownAssemblyAttribute](../wcf/samples/knownassemblyattribute.md)
 
 ### <a name="data-contract-resolver-scenarios"></a>데이터 계약 확인자 시나리오
 
@@ -155,25 +151,25 @@ WCF 구성 스키마 복잡 하며 기능 찾기 어려운 여러 사용자를 �
 
 - 순서도 기능은 다음 클래스를 사용합니다.
 
-    - <xref:System.Activities.Statements.Flowchart>
+  - <xref:System.Activities.Statements.Flowchart>
 
-    - <xref:System.Activities.Statements.FlowNode>
+  - <xref:System.Activities.Statements.FlowNode>
 
-    - <xref:System.Activities.Statements.FlowDecision>
+  - <xref:System.Activities.Statements.FlowDecision>
 
-    - <xref:System.Activities.Statements.FlowStep>
+  - <xref:System.Activities.Statements.FlowStep>
 
-    - <xref:System.Activities.Statements.FlowSwitch%601>
+  - <xref:System.Activities.Statements.FlowSwitch%601>
 
 - 샘플:
 
-    - [Flowchart 작업에서 TryCatch를 사용하여 오류 처리](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
+  - [Flowchart 작업에서 TryCatch를 사용하여 오류 처리](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
 
-    - [채용 프로세스](./samples/hiring-process.md)
+  - [채용 프로세스](./samples/hiring-process.md)
 
 - 디자이너 설명서:
 
-    - [순서도 활동 디자이너](/visualstudio/workflow-designer/flowchart-activity-designers)
+  - [순서도 활동 디자이너](/visualstudio/workflow-designer/flowchart-activity-designers)
 
 ### <a name="flowchart-scenarios"></a>순서도 시나리오
 
@@ -201,15 +197,15 @@ WCF 구성 스키마 복잡 하며 기능 찾기 어려운 여러 사용자를 �
 
 - 샘플:
 
-    - [채용 프로세스](./samples/hiring-process.md)
+  - [채용 프로세스](./samples/hiring-process.md)
 
-    - [기업 구매 프로세스](./samples/corporate-purchase-process.md)
+  - [기업 구매 프로세스](./samples/corporate-purchase-process.md)
 
 - 디자이너 설명서:
 
-    - [Parallel 활동 디자이너](/visualstudio/workflow-designer/parallel-activity-designer)
+  - [Parallel 활동 디자이너](/visualstudio/workflow-designer/parallel-activity-designer)
 
-    - [ParallelForEach\<T > 활동 디자이너](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
+  - [ParallelForEach\<T > 활동 디자이너](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
 
 ### <a name="procedural-activity-scenarios"></a>절차 작업 시나리오
 
@@ -279,9 +275,9 @@ WCF 구성 스키마 복잡 하며 기능 찾기 어려운 여러 사용자를 �
 
 1. 콘텐츠 기반 라우팅(<xref:System.ServiceModel.Dispatcher.MessageFilter> 개체가 메시지를 검사하여 보낼 위치를 결정함)
 
-2. 프로토콜 브리징(전송 및 메시지)
+2. 프로토콜 브리징 (전송 및 메시지)
 
-3. 오류 처리(라우터가 통신 예외를 catch하고 백업 끝점으로 장애 조치됨)
+3. 오류 처리(라우터가 통신 예외를 catch하고 백업 엔드포인트로 장애 조치됨)
 
 4. <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601> 및 라우팅 구성의 동적(메모리 내) 업데이트
 
@@ -309,7 +305,7 @@ WCF 구성 스키마 복잡 하며 기능 찾기 어려운 여러 사용자를 �
 
 ## <a name="wcf-discovery"></a>WCF 검색
 
-WCF Discovery는 검색 메커니즘을 응용 프로그램 인프라에 통합할 수 있는 프레임 워크 기술입니다. 이 기술을 사용하여 서비스를 검색 가능하게 만들고 서비스를 검색하도록 클라이언트를 구성할 수 있습니다. 끝점을 사용하여 클라이언트를 더 이상 하드 코딩할 필요가 없으므로 응용 프로그램의 견고성과 내결함성이 강화됩니다. Discovery는 자동 구성 기능을 응용 프로그램에 빌드하는 완벽한 플랫폼입니다.
+WCF Discovery는 검색 메커니즘을 응용 프로그램 인프라에 통합할 수 있는 프레임 워크 기술입니다. 이 기술을 사용하여 서비스를 검색 가능하게 만들고 서비스를 검색하도록 클라이언트를 구성할 수 있습니다. 엔드포인트를 사용하여 클라이언트를 더 이상 하드 코딩할 필요가 없으므로 응용 프로그램의 견고성과 내결함성이 강화됩니다. Discovery는 자동 구성 기능을 응용 프로그램에 빌드하는 완벽한 플랫폼입니다.
 
 이 제품은 WS-Discovery 표준을 기반으로 하며 상호 운용 및 확장 가능한 제네릭으로 디자인되었습니다. 이 제품에서는 다음 두 가지 작업 모드가 지원됩니다.
 
@@ -327,7 +323,7 @@ WCF Discovery는 검색 메커니즘을 응용 프로그램 인프라에 통합�
 
 ### <a name="discovery-scenarios"></a>Discovery 시나리오
 
-서비스를 사용할 수 있게 될 시기를 알 수 없기 때문에 개발자가 끝점을 하드 코딩하는 대신 런타임에 서비스를 선택하려고 합니다. 응용 프로그램 구성 요소 간에 분리, 견고성 및 자동 구성이 더 필요합니다.
+서비스를 사용할 수 있게 될 시기를 알 수 없기 때문에 개발자가 엔드포인트를 하드 코딩하는 대신 런타임에 서비스를 선택하려고 합니다. 응용 프로그램 구성 요소 간에 분리, 견고성 및 자동 구성이 더 필요합니다.
 
 ## <a name="tracking"></a>추적
 

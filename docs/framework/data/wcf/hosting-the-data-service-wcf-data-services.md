@@ -9,32 +9,32 @@ helpviewer_keywords:
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
 ms.openlocfilehash: e738fa1feebdd91bdb84484340b31e599d7f5f76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765575"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>데이터 서비스 호스팅(WCF Data Services)
 WCF Data Services를 사용 하 여 데이터를 노출 하는 서비스를 만들 수 있습니다는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드 합니다. 이 데이터 서비스는 <xref:System.Data.Services.DataService%601>에서 상속되는 클래스로 정의됩니다. 이 클래스에서 요청 메시지를 처리 하 고, 데이터 원본에 대해 업데이트를 수행 하 고, OData에서 필요에 따라 응답 메시지를 생성 하는 데 필요한 기능을 제공 합니다. 그러나 데이터 서비스에 바인딩할 수 없으며 들어오는 HTTP 요청에 대 한 네트워크 소켓에서 수신 대기 합니다. 이 필요한 기능을 위해 데이터 서비스는 호스팅 구성 요소를 사용합니다.
 
  데이터 서비스 호스트는 데이터 서비스를 대신하여 다음 작업을 수행합니다.
 
--   요청을 수신 대기하고 이러한 요청을 데이터 서비스로 라우트합니다.
+- 요청을 수신 대기하고 이러한 요청을 데이터 서비스로 라우트합니다.
 
--   각 요청에 대한 데이터 서비스의 인스턴스를 만듭니다.
+- 각 요청에 대한 데이터 서비스의 인스턴스를 만듭니다.
 
--   데이터 서비스가 들어오는 요청을 처리하도록 요청합니다.
+- 데이터 서비스가 들어오는 요청을 처리하도록 요청합니다.
 
--   데이터 서비스를 대신하여 응답을 보냅니다.
+- 데이터 서비스를 대신하여 응답을 보냅니다.
 
  호스팅을 단순화 하기 위해 데이터 서비스, WCF Data Services는 Windows Communication Foundation (WCF)를 사용 하 여 통합 되도록 설계 되었습니다. 데이터 서비스에서 데이터 서비스 호스트 역할을 하는 기본 WCF 구현을 제공는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 응용 프로그램입니다. 따라서 다음 방법 중 하나로 데이터 서비스를 호스트할 수 있습니다.
 
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 응용 프로그램에서
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 응용 프로그램에서
 
--   자체 호스팅 WCF 서비스를 지원하는 관리되는 응용 프로그램에서
+- 자체 호스팅 WCF 서비스를 지원하는 관리되는 응용 프로그램에서
 
--   다른 사용자 지정 데이터 서비스 호스트에서
+- 다른 사용자 지정 데이터 서비스 호스트에서
 
 ## <a name="hosting-a-data-service-in-an-aspnet-application"></a>ASP.NET 응용 프로그램에서 데이터 서비스 호스팅
 
@@ -65,13 +65,13 @@ WCF Data Services를 사용 하 여 데이터를 노출 하는 서비스를 만�
 ## <a name="defining-a-custom-data-service-host"></a>사용자 지정 데이터 서비스 호스트 정의
  WCF 호스트 구현이 너무 제한적인 경우 데이터 서비스에 대한 사용자 지정 호스트도 정의할 수 있습니다. <xref:System.Data.Services.IDataServiceHost> 인터페이스를 구현하는 모든 클래스를 데이터 서비스에 대한 네트워크 호스트로 사용할 수 있습니다. 사용자 지정 호스트는 <xref:System.Data.Services.IDataServiceHost> 인터페이스를 구현해야 하며 다음과 같은 데이터 서비스 호스트의 기본 임무를 처리할 수 있어야 합니다.
 
--   데이터 서비스에 서비스 루트 경로를 제공합니다.
+- 데이터 서비스에 서비스 루트 경로를 제공합니다.
 
--   적절한 <xref:System.Data.Services.IDataServiceHost> 멤버 구현에 대한 요청 및 응답 헤더 정보를 처리합니다.
+- 적절한 <xref:System.Data.Services.IDataServiceHost> 멤버 구현에 대한 요청 및 응답 헤더 정보를 처리합니다.
 
--   데이터 서비스에서 발생한 예외를 처리합니다.
+- 데이터 서비스에서 발생한 예외를 처리합니다.
 
--   쿼리 문자열의 매개 변수 유효성을 검사합니다.
+- 쿼리 문자열의 매개 변수 유효성을 검사합니다.
 
 ## <a name="see-also"></a>참고자료
 

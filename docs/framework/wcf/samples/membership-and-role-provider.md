@@ -3,11 +3,11 @@ title: Membership and Role Provider
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
 ms.openlocfilehash: b5cb743fb3533d2f3a8016c9357d6ead498a5878
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756119"
 ---
 # <a name="membership-and-role-provider"></a>Membership and Role Provider
 Membership and Role Provider 샘플에서는 서비스에서 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 멤버 자격 및 역할 공급자를 사용하여 클라이언트를 인증하고 권한을 부여하는 방법을 보여 줍니다.  
@@ -19,15 +19,15 @@ Membership and Role Provider 샘플에서는 서비스에서 [!INCLUDE[vstecasp]
   
  이 샘플에서는 다음과 같은 작업을 수행하는 방법을 보여 줍니다.  
   
--   클라이언트에서 사용자 이름/암호 조합을 사용하여 인증하는 방법  
+- 클라이언트에서 사용자 이름/암호 조합을 사용하여 인증하는 방법  
   
--   서버에서 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 멤버 자격 공급자를 기준으로 클라이언트 자격 증명을 확인하는 방법  
+- 서버에서 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 멤버 자격 공급자를 기준으로 클라이언트 자격 증명을 확인하는 방법  
   
--   서버의 X.509 인증서를 사용하여 서버를 인증하는 방법  
+- 서버의 X.509 인증서를 사용하여 서버를 인증하는 방법  
   
--   서버에서 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 역할 공급자를 사용하여 인증된 클라이언트를 역할에 매핑하는 방법  
+- 서버에서 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 역할 공급자를 사용하여 인증된 클라이언트를 역할에 매핑하는 방법  
   
--   서버에서 `PrincipalPermissionAttribute`를 사용하여 서비스에 의해 노출되는 특정 메서드에 대한 액세스를 제어하는 방법  
+- 서버에서 `PrincipalPermissionAttribute`를 사용하여 서비스에 의해 노출되는 특정 메서드에 대한 액세스를 제어하는 방법  
   
  멤버 자격 및 역할 공급자는 SQL Server에서 지원하는 저장소를 사용하도록 구성됩니다. 연결 문자열과 다양한 옵션이 서비스 구성 파일에 지정됩니다. 멤버 자격 공급자의 이름은 `SqlMembershipProvider`로 지정되고 역할 공급자의 이름은 `SqlRoleProvider`로 지정됩니다.  
   
@@ -164,7 +164,7 @@ Membership and Role Provider 샘플에서는 서비스에서 [!INCLUDE[vstecasp]
   
 ### <a name="to-clean-up-after-the-sample"></a>샘플 실행 후 정리를 수행하려면  
   
--   샘플 실행을 완료한 후 샘플 폴더에서 Cleanup.bat를 실행합니다.  
+- 샘플 실행을 완료한 후 샘플 폴더에서 Cleanup.bat를 실행합니다.  
   
 > [!NOTE]
 >  다중 컴퓨터 구성에서 이 샘플을 실행할 경우에는 이 스크립트로 클라이언트의 서비스 인증서를 제거할 수 없습니다. 컴퓨터 인증서를 사용 하는 Windows Communication Foundation (WCF) 샘플을 실행 하는 경우에 CurrentUser-TrustedPeople 저장소에에서 설치 된 서비스 인증서를 선택 취소 해야 합니다. 이 작업을 수행 하려면 다음 명령을 사용 합니다. `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 예를 들어: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`합니다.  
@@ -174,7 +174,7 @@ Membership and Role Provider 샘플에서는 서비스에서 [!INCLUDE[vstecasp]
   
  아래에는 적절한 구성에서 실행할 수 있도록 배치 파일을 수정하는 데 도움이 되는 여러 관련 단원의 간략한 개요가 소개되어 있습니다.  
   
--   서버 인증서 만들기  
+- 서버 인증서 만들기  
   
      Setup.bat 배치 파일에서 다음 행은 사용할 서버 인증서를 만듭니다. %SERVER_NAME% 변수는 서버 이름을 지정합니다. 이 변수를 변경하여 고유의 서버 이름을 지정합니다. 이 배치 파일에서의 기본값은 localhost입니다.  
   
@@ -190,7 +190,7 @@ Membership and Role Provider 샘플에서는 서비스에서 [!INCLUDE[vstecasp]
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
--   클라이언트의 신뢰할 수 있는 인증서 저장소에 서버 인증서 설치  
+- 클라이언트의 신뢰할 수 있는 인증서 저장소에 서버 인증서 설치  
   
      Setup.bat 배치 파일에서 다음 행은 클라이언트의 신뢰할 수 있는 사용자 저장소로 서버 인증서를 복사합니다. 이 단계는 Makecert.exe에서 생성한 인증서를 클라이언트 컴퓨터에서 절대적으로 신뢰하지는 않기 때문에 필요합니다. Microsoft에서 발급한 인증서와 같이 클라이언트가 신뢰할 수 있는 루트 인증서를 기반으로 하는 인증서가 이미 있는 경우 클라이언트 인증서 저장소를 서버 인증서로 채우는 이 단계를 수행할 필요가 없습니다.  
   

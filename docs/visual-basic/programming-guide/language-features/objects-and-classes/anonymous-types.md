@@ -9,11 +9,11 @@ helpviewer_keywords:
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
 ms.openlocfilehash: 3dc2083e5b4fd06250a1387c32f0eba28e879b30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758498"
 ---
 # <a name="anonymous-types-visual-basic"></a>익명 형식(Visual Basic)
 Visual Basic 데이터 형식에 대 한 클래스 정의 작성 하지 않고 개체를 만드는 데 사용할 수 있는 익명 형식을 지원 합니다. 대신 컴파일러가 클래스를 생성합니다. 클래스는 사용 가능한 이름이 없으므로에서 직접 상속 <xref:System.Object>, 개체를 선언할 때 지정 하는 속성을 포함 합니다. 데이터 형식의 이름을 지정 하지 않으면 때문 이라고 하는 *무명 형식*합니다.  
@@ -53,22 +53,22 @@ Visual Basic 데이터 형식에 대 한 클래스 정의 작성 하지 않고 �
 ## <a name="key-properties"></a>키 속성  
  키 속성 키가 아닌 속성에서 몇 가지 근본적인 방식은 다릅니다.  
   
--   두 인스턴스가 같은지 여부를 확인 하기 위해 키 속성의 값만 비교 됩니다.  
+- 두 인스턴스가 같은지 여부를 확인 하기 위해 키 속성의 값만 비교 됩니다.  
   
--   키 속성의 값을 읽기 전용 이며 변경할 수 없습니다.  
+- 키 속성의 값을 읽기 전용 이며 변경할 수 없습니다.  
   
--   만 키 속성 값은 익명 형식에 대 한 컴파일러에서 생성 된 해시 코드 알고리즘에 포함 됩니다.  
+- 만 키 속성 값은 익명 형식에 대 한 컴파일러에서 생성 된 해시 코드 알고리즘에 포함 됩니다.  
   
 ### <a name="equality"></a>같음  
  무명 형식의 인스턴스는 동일한 익명 형식의 인스턴스인 경우에 같을 수 있습니다. 컴파일러는 다음 조건을 충족 하는 경우 두 인스턴스가 동일한 형식의 인스턴스로 처리:  
   
--   동일한 어셈블리에 선언 됩니다.  
+- 동일한 어셈블리에 선언 됩니다.  
   
--   해당 속성 이름과 동일한 유추 된 형식을 있고 동일한 순서로 선언 됩니다. 이름 비교는 대/소문자 구분 하지 않습니다.  
+- 해당 속성 이름과 동일한 유추 된 형식을 있고 동일한 순서로 선언 됩니다. 이름 비교는 대/소문자 구분 하지 않습니다.  
   
--   각각의 동일한 속성은 키 속성으로 표시 됩니다.  
+- 각각의 동일한 속성은 키 속성으로 표시 됩니다.  
   
--   각 선언에서 하나 이상의 속성이 키 속성이입니다.  
+- 각 선언에서 하나 이상의 속성이 키 속성이입니다.  
   
  키 속성이 없는 익명 형식의 인스턴스 자체에 같습니다.  
   
@@ -86,11 +86,11 @@ Visual Basic 데이터 형식에 대 한 클래스 정의 작성 하지 않고 �
 ## <a name="anonymous-types-from-query-expressions"></a>쿼리 식에서 무명 형식  
  쿼리 식에서는 무명 형식 만들 항상 필요 하지 않습니다. 가능한 경우 열 데이터를 저장할 기존 형식을 사용 합니다. 이 쿼리가 데이터 원본 또는 각 레코드의 필드 하나에에서 전체 레코드 중 하나를 반환할 때 발생 합니다. 다음 코드 예에서 `customers` 은 개체의 컬렉션을 `Customer` 클래스. 클래스에는 여러 속성이 및 순서에 관계 없이 쿼리 결과 하나 이상의 포함할 수 있습니다. 처음 두 예제에서는 익명 형식이 없습니다이 명명 된 형식의 요소를 선택 하는 쿼리 때문에 필요 합니다.  
   
--   `custs1` 때문에 문자열의 컬렉션을 포함 `cust.Name` 는 문자열입니다.  
+- `custs1` 때문에 문자열의 컬렉션을 포함 `cust.Name` 는 문자열입니다.  
   
      [!code-vb[VbVbalrAnonymousTypes#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#30)]  
   
--   `custs2` 컬렉션을 포함 `Customer` 때문에 개체의 각 요소 `customers` 는 `Customer` 개체 및 전체 요소는 쿼리에서 선택 합니다.  
+- `custs2` 컬렉션을 포함 `Customer` 때문에 개체의 각 요소 `customers` 는 `Customer` 개체 및 전체 요소는 쿼리에서 선택 합니다.  
   
      [!code-vb[VbVbalrAnonymousTypes#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#31)]  
   

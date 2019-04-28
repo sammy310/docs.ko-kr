@@ -3,11 +3,11 @@ title: XElement 클래스 개요 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 52331fcd-6023-4d19-b423-7b24f2d86ded
 ms.openlocfilehash: 7fbe1cc484ea3482bc455c161783bd7a4513d0bd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783632"
 ---
 # <a name="xelement-class-overview-visual-basic"></a>XElement 클래스 개요 (Visual Basic)
 <xref:System.Xml.Linq.XElement> 클래스는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]의 기본 클래스 중 하나이며 XML 요소를 나타냅니다. 이 클래스를 사용하여 요소를 만들거나, 요소의 내용을 변경하거나, 자식 요소를 추가, 변경 또는 삭제하거나, 특성을 요소에 추가하거나, 요소의 내용을 텍스트 형태로 serialize할 수 있습니다. 또한 <xref:System.Xml?displayProperty=nameWithType>, <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XmlWriter>과 같은 <xref:System.Xml.Xsl.XslCompiledTransform>의 다른 클래스와 상호 운용할 수도 있습니다.  
@@ -18,13 +18,13 @@ ms.locfileid: "58830711"
 ### <a name="constructing-xml-trees"></a>XML 트리 생성  
  다음과 같은 다양한 방법으로 XML 트리를 생성할 수 있습니다.  
   
--   코드에서 XML 트리를 생성할 수 있습니다. 자세한 내용은 [XML 트리 만들기 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)합니다.  
+- 코드에서 XML 트리를 생성할 수 있습니다. 자세한 내용은 [XML 트리 만들기 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)합니다.  
   
--   <xref:System.IO.TextReader>, 텍스트 파일 또는 웹 주소(URL)와 같은 다양한 소스에서 XML의 구문을 분석할 수 있습니다. 자세한 내용은 [XML 구문 분석 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)합니다.  
+- <xref:System.IO.TextReader>, 텍스트 파일 또는 웹 주소(URL)와 같은 다양한 소스에서 XML의 구문을 분석할 수 있습니다. 자세한 내용은 [XML 구문 분석 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)합니다.  
   
--   <xref:System.Xml.XmlReader>를 사용하여 트리를 채울 수 있습니다. 자세한 내용은 <xref:System.Xml.Linq.XNode.ReadFrom%2A>을 참조하세요.  
+- <xref:System.Xml.XmlReader>를 사용하여 트리를 채울 수 있습니다. 자세한 내용은 <xref:System.Xml.Linq.XNode.ReadFrom%2A>을 참조하세요.  
   
--   내용을 <xref:System.Xml.XmlWriter>에 쓸 수 있는 모듈이 있는 경우 <xref:System.Xml.Linq.XContainer.CreateWriter%2A> 메서드를 사용하여 작성기를 만들고 모듈에 작성기를 전달한 다음 <xref:System.Xml.XmlWriter>에 쓴 내용을 사용하여 XML 트리를 채울 수 있습니다.  
+- 내용을 <xref:System.Xml.XmlWriter>에 쓸 수 있는 모듈이 있는 경우 <xref:System.Xml.Linq.XContainer.CreateWriter%2A> 메서드를 사용하여 작성기를 만들고 모듈에 작성기를 전달한 다음 <xref:System.Xml.XmlWriter>에 쓴 내용을 사용하여 XML 트리를 채울 수 있습니다.  
   
  그러나 XML 트리를 만드는 가장 일반적인 방법은 다음과 같습니다.  
   

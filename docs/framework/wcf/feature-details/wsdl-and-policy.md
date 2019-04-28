@@ -3,11 +3,11 @@ title: WSDL 및 정책
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
 ms.openlocfilehash: caaa54f04bbb10ed3b3dd65b53ace633b88f9126
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929664"
 ---
 # <a name="wsdl-and-policy"></a>WSDL 및 정책
 이 항목에서는 Windows Communication Foundation (WCF) WSDL 1.1, Ws-policy 및 Ws-policyattachment 구현 세부 정보 뿐만 아니라 추가 Ws-policy 어설션 및 WSDL 1.1 확장 WCF에 의해 도입을 다룹니다.  

@@ -3,11 +3,11 @@ title: '방법: 프로그래밍 방식으로 WCF 서비스 및 클라이언트�
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
 ms.openlocfilehash: 54d838967fcc19501ff7385aba29e8d79025ce70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761548"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>방법: 프로그래밍 방식으로 WCF 서비스 및 클라이언트에 검색 기능 추가
 이 항목에서는 Windows Communication Foundation (WCF) 서비스를 검색할 수 있도록 설정 하는 방법에 설명 합니다. 기반이 되는 [Self-host](https://go.microsoft.com/fwlink/?LinkId=145523) 샘플입니다.  

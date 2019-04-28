@@ -5,11 +5,11 @@ ms.assetid: caa71820-8058-4b6a-93a2-25ee757d92d3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 82fcddd7a3f89a92cc79285930b30342333fbec2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940103"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriter-interface"></a>ISymUnmanagedAsyncMethodPropertiesWriter 인터페이스
 이 기능을 사용 하면 각 메서드 기호에 대 한 선택적 async 메서드 정보를 정의할 수 있습니다. 가 열린된 메서드를 사용 하 여 항상 사용 즉, 호출 사이 합니다 [OpenMethod 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md) 하며 [CloseMethod 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)합니다.  

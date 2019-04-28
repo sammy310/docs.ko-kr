@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 263c22a07f363c2752afb50779515de043976e93
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775065"
 ---
 # <a name="corprfgcrootflags-enumeration"></a>COR_PRF_GC_ROOT_FLAGS 열거형
 가비지 컬렉션 루트의 속성을 나타냅니다.  

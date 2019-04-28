@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: eedf2fbd-f407-4f62-bb1a-c00eb001b1dd
 ms.openlocfilehash: 49a2665240f5f35e0d4937e55c39eccf04b1444d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772166"
 ---
 # <a name="method-based-query-syntax-examples-element-operators-linq-to-dataset"></a>메서드 기반 쿼리 구문 예제: 요소 연산자 (LINQ to DataSet)
 이 항목의 예제에서는 <xref:System.Linq.Enumerable.First%2A> 및 <xref:System.Linq.Enumerable.ElementAt%2A> 메서드에서 쿼리 식 구문을 사용하여 <xref:System.Data.DataRow>의 <xref:System.Data.DataSet> 요소를 쿼리하는 방법을 보여 줍니다.  

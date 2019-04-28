@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bc8d936ac4fca704e7e3069209d8ff75d46b044d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763466"
 ---
 # <a name="iclrtaskyieldtask-method"></a>ICLRTask::YieldTask 메서드
 CLR (공용 언어 런타임) 태스크를 예약할 요청 하는 현재 [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) 인스턴스가 나타내는 및 프로세서 시간을 다른 작업을 사용할 수 있도록 합니다.  

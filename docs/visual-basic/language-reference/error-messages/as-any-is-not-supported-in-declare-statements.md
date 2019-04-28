@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30828
 ms.assetid: 7e5cf519-8b64-4ac5-8116-705fe26c846d
 ms.openlocfilehash: 3593f238c72cbcce911c72e42552d6a75188b628
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935332"
 ---
 # <a name="as-any-is-not-supported-in-declare-statements"></a>'Declare' 문에서는 'As Any'가 지원되지 않습니다.
 합니다 `Any` 데이터 형식을 사용한 `Declare` Visual Basic 6.0 및 이전 버전의 모든 종류의 데이터를 포함할 수 있는 인수 사용을 허용 하는 문입니다. 하지만 오버 로드를 허용, Visual Basic 지원 하 고 따라서로 전환 합니다 `Any` 데이터 형식은 사용 되지 않습니다.  

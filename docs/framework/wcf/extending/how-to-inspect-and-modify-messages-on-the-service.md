@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9c5b1cc7-84f3-45f8-9226-d59c278e8c42
 ms.openlocfilehash: 87f9cf5040ffb757799c51d598d0755847c5bfd9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767093"
 ---
 # <a name="how-to-inspect-and-modify-messages-on-the-service"></a>방법: 서비스에서 메시지 검사 및 수정
 검사 하거나 구현 하 여 Windows Communication Foundation (WCF) 클라이언트에서 들어오는 메시지나 나가는 메시지를 수정할 수는 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType> 서비스 런타임에 삽입 하 고 있습니다. 자세한 내용은 [디스패처 확장](../../../../docs/framework/wcf/extending/extending-dispatchers.md)합니다. 서비스의 해당 기능은 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>입니다.  
@@ -26,11 +26,11 @@ ms.locfileid: "59340648"
 ## <a name="example"></a>예제  
  다음 코드 예제는 아래 순서대로 나열되어 있습니다.  
   
--   서비스 검사자 구현  
+- 서비스 검사자 구현  
   
--   검사자를 삽입하는 서비스 동작  
+- 검사자를 삽입하는 서비스 동작  
   
--   서비스 응용 프로그램에서 동작을 로드 및 실행하는 구성 파일  
+- 서비스 응용 프로그램에서 동작을 로드 및 실행하는 구성 파일  
   
  [!code-csharp[Interceptors#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/interceptors.cs#7)]
  [!code-vb[Interceptors#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/interceptors.vb#7)]  

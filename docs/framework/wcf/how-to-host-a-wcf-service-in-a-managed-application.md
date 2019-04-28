@@ -1,16 +1,16 @@
 ---
-title: '방법: 관리되는 응용 프로그램에서 WCF 서비스 호스팅'
+title: '방법: 관리형 애플리케이션에서 WCF 서비스 호스트'
 ms.date: 09/17/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5eb29db0-b6dc-4e77-8c68-0a62f79d743b
 ms.openlocfilehash: 131d99457427e0818f78076d987f550a99ad7cf0
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929313"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>방법: 관리 되는 앱에서 WCF 서비스 호스팅
 
@@ -50,7 +50,7 @@ ms.locfileid: "47196853"
      [!code-vb[CFX_SelfHost4#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#2)]
 
     > [!NOTE]
-    > 정의 및 서비스 인터페이스를 구현 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 서비스 계약을 정의](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) 하 고 [방법: 서비스 계약을 구현](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)합니다.
+    > 정의 및 서비스 인터페이스를 구현 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 서비스 계약을 정의](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) 고 [방법: 서비스 계약을 구현](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)합니다.
 
 5. 서비스의 기본 주소를 사용하여 `Main` 메서드 맨 위에 <xref:System.Uri> 클래스의 인스턴스를 만듭니다.
 
@@ -99,7 +99,7 @@ ms.locfileid: "47196853"
 - <xref:System.Uri>
 - <xref:System.Configuration.ConfigurationManager.AppSettings%2A>
 - <xref:System.Configuration.ConfigurationManager>
-- [방법: IIS에서 WCF 서비스 호스트](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [방법: IIS에서 WCF 서비스 호스팅](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
 - [자체 호스팅](../../../docs/framework/wcf/samples/self-host.md)
 - [서비스 호스팅](../../../docs/framework/wcf/hosting-services.md)
 - [방법: 서비스 계약 정의](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)

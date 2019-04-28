@@ -3,23 +3,23 @@ title: LINQ Querying2 대 한 데이터 소스 활성화
 ms.date: 07/20/2015
 ms.assetid: c412f0cf-ff0e-4993-ab3d-1b49e23f00f8
 ms.openlocfilehash: f705db90f4838479621117bd9303f5a374d33d4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781032"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>LINQ 쿼리에 대한 데이터 소스 활성화
 
 다양한 방법으로 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]를 확장하여 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 패턴에서 원하는 데이터 소스를 쿼리할 수 있습니다. 데이터 소스의 예를 몇 가지 들자면 데이터 구조, 웹 서비스, 파일 시스템 또는 데이터베이스가 있습니다. 쿼리의 구문과 패턴은 변경되지 않으므로 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 패턴을 사용하면 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리가 활성화된 데이터 소스를 클라이언트가 쉽게 쿼리할 수 있습니다. 다음은 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]를 다양한 데이터 소스로 확장할 수 있는 방법입니다.
 
--   특정 형식에 이 형식의 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects 쿼리를 활성화하는 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스 구현
+- 특정 형식에 이 형식의 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects 쿼리를 활성화하는 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스 구현
 
--   형식을 확장하는 <xref:System.Linq.Enumerable.Where%2A> 및 <xref:System.Linq.Enumerable.Select%2A> 같은 표준 쿼리 연산자 메서드를 만들어 해당 형식의 사용자 지정 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 활성화
+- 형식을 확장하는 <xref:System.Linq.Enumerable.Where%2A> 및 <xref:System.Linq.Enumerable.Select%2A> 같은 표준 쿼리 연산자 메서드를 만들어 해당 형식의 사용자 지정 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 활성화
 
--   <xref:System.Linq.IQueryable%601> 인터페이스를 구현하는 데이터 소스에 대한 공급자 만들기. 이 인터페이스를 구현하는 공급자는 원격 실행과 같이 사용자 지정 방식으로 실행할 수 있는 식 트리의 형태로 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리를 받습니다.
+- <xref:System.Linq.IQueryable%601> 인터페이스를 구현하는 데이터 소스에 대한 공급자 만들기. 이 인터페이스를 구현하는 공급자는 원격 실행과 같이 사용자 지정 방식으로 실행할 수 있는 식 트리의 형태로 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리를 받습니다.
 
--   기존 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 기술을 이용하는 데이터 소스에 대한 공급자 만들기. 이러한 공급자를 사용하면 쿼리뿐만 아니라 사용자 정의 형식에 대한 삽입, 업데이트 및 삭제 작업과 매핑을 수행할 수 있습니다.
+- 기존 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 기술을 이용하는 데이터 소스에 대한 공급자 만들기. 이러한 공급자를 사용하면 쿼리뿐만 아니라 사용자 정의 형식에 대한 삽입, 업데이트 및 삭제 작업과 매핑을 수행할 수 있습니다.
 
 이 항목에서는 이러한 옵션에 대해 설명합니다.
 

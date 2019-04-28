@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c29656a4787c674886505a3be2508470460dfc10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939531"
 ---
 # <a name="isymunmanagedmethod-interface"></a>ISymUnmanagedMethod 인터페이스
 기호 저장소 내의 메서드를 나타냅니다. 이 인터페이스는 기호 관련 특성만 형식 관련 특성 대신 메서드의 대 한 액세스를 제공합니다.  

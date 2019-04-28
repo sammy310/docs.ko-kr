@@ -3,11 +3,11 @@ title: 추상 클래스
 description: 에 대해 알아봅니다 F# 추상 클래스 구현 되지 않은 일부 또는 모든 멤버를 유지 하는 및 개체 유형의 다양 한 집합의 공통 기능을 나타냅니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: fecd3b2d550c6b8f59fa614f5d00c5f730a4896a
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772777"
 ---
 # <a name="abstract-classes"></a>추상 클래스
 
@@ -55,7 +55,7 @@ Area of Square: 100.000000
 Area of Circle: 78.539816
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [클래스](classes.md)
 - [멤버](members/index.md)

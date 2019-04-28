@@ -14,11 +14,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
 ms.openlocfilehash: c1881ffa1c6fca546b086efea59d2263af853949
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792173"
 ---
 # <a name="walkthrough-running-an-operation-in-the-background"></a>연습: 백그라운드에서 작업 실행
 완료하는 데 오랜 시간이 걸리는 작업이 있으며 사용자 인터페이스에서 지연이 발생되지 않게 하려는 경우 <xref:System.ComponentModel.BackgroundWorker> 클래스를 사용하여 다른 스레드에서 작업을 실행할 수 있습니다.  
@@ -96,9 +96,9 @@ ms.locfileid: "59308447"
   
 ## <a name="next-steps"></a>다음 단계  
   
--   비동기 작업이 진행 됨에 따라 진행률을 보고 하는 폼을 구현 합니다. 자세한 내용은 [방법: 백그라운드 작업을 사용 하는 폼 구현](how-to-implement-a-form-that-uses-a-background-operation.md)합니다.  
+- 비동기 작업이 진행 됨에 따라 진행률을 보고 하는 폼을 구현 합니다. 자세한 내용은 [방법: 백그라운드 작업을 사용 하는 폼 구현](how-to-implement-a-form-that-uses-a-background-operation.md)합니다.  
   
--   구성 요소에 대 한 비동기 패턴을 지 원하는 클래스를 구현 합니다. 자세한 내용은 [이벤트 기반 비동기 패턴 구현](../../../standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)합니다.  
+- 구성 요소에 대 한 비동기 패턴을 지 원하는 클래스를 구현 합니다. 자세한 내용은 [이벤트 기반 비동기 패턴 구현](../../../standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
 

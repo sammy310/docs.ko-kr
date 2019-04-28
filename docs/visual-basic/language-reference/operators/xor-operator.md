@@ -15,11 +15,11 @@ helpviewer_keywords:
 - bitwise comparison [Visual Basic]
 ms.assetid: 036000a9-3934-4e7f-a9d0-a816de3d84a6
 ms.openlocfilehash: 0cba3a995fb1ab774c8a5308e58f0b6905fc23f3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781175"
 ---
 # <a name="xor-operator-visual-basic"></a>배타적 or 연산자(Visual Basic)
 두 논리 제외를 수행 `Boolean` 식이나 두 숫자 식에 비트 제외 합니다.  

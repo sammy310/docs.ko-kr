@@ -4,41 +4,41 @@ ms.date: 03/30/2017
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
 author: BrucePerlerMS
 ms.openlocfilehash: 48b1b4715e9e2613757a981ba692d84ad06a1ec6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940545"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>방법: Windows 인증을 사용하여 클레임 인식 ASP.NET 애플리케이션 빌드
 ## <a name="applies-to"></a>적용 대상  
   
--   Microsoft® Windows® Identity Foundation(WIF)  
+- Microsoft® Windows® Identity Foundation(WIF)  
   
--   ASP.NET® Web Forms  
+- ASP.NET® Web Forms  
   
 ## <a name="summary"></a>요약  
  이 방법은 Windows 인증을 사용하는 간단한 클레임 인식 ASP.NET Web Forms 애플리케이션을 만들기 위한 자세한 단계별 프로시저를 제공합니다. 또한 애플리케이션을 테스트하여 사용자가 Windows 인증으로 로그인할 때 클레임이 제공되는지 확인하는 방법에 대한 지침을 제공합니다.  
   
 ## <a name="contents"></a>목차  
   
--   목표  
+- 목표  
   
--   개요  
+- 개요  
   
--   단계 요약  
+- 단계 요약  
   
--   1단계 – 간단한 ASP.NET Web Forms 애플리케이션 만들기  
+- 1단계 – 간단한 ASP.NET Web Forms 애플리케이션 만들기  
   
--   2단계 – Windows 인증을 사용하여 클레임에 대한 ASP.NET Web Forms 애플리케이션 구성  
+- 2단계 – Windows 인증을 사용하여 클레임에 대한 ASP.NET Web Forms 애플리케이션 구성  
   
--   3단계 - 솔루션 테스트  
+- 3단계 - 솔루션 테스트  
   
 ## <a name="objectives"></a>목표  
   
--   Windows 인증을 사용하여 클레임에 대한 ASP.NET Web Forms 애플리케이션 구성  
+- Windows 인증을 사용하여 클레임에 대한 ASP.NET Web Forms 애플리케이션 구성  
   
--   ASP.NET Web Forms 애플리케이션 테스트하여 제대로 작동하는지 확인  
+- ASP.NET Web Forms 애플리케이션 테스트하여 제대로 작동하는지 확인  
   
 ## <a name="overview"></a>개요  
  .NET 4.5에서 WIF 및 해당 클레임 기반 권한 부여는 프레임워크의 필수적인 부분으로 포함되었습니다. 이전에는 ASP.NET 사용자의 클레임을 원할 경우 WIF를 설치하고 나서 인터페이스를 주체 개체(예: `Thread.CurrentPrincipal` 또는 `HttpContext.Current.User`)로 캐스팅해야 했습니다. 이제 클레임은 이러한 주체 개체를 통해 자동으로 제공됩니다.  
@@ -47,11 +47,11 @@ ms.locfileid: "59767970"
   
 ## <a name="summary-of-steps"></a>단계 요약  
   
--   1단계 – 간단한 ASP.NET Web Forms 애플리케이션 만들기  
+- 1단계 – 간단한 ASP.NET Web Forms 애플리케이션 만들기  
   
--   2단계 – Windows 인증을 사용하여 클레임에 대한 ASP.NET Web Forms 애플리케이션 구성  
+- 2단계 – Windows 인증을 사용하여 클레임에 대한 ASP.NET Web Forms 애플리케이션 구성  
   
--   3단계 - 솔루션 테스트  
+- 3단계 - 솔루션 테스트  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>1단계 – 간단한 ASP.NET Web Forms 애플리케이션 만들기  
  이 단계에서는 새로운 ASP.NET Web Forms 애플리케이션을 만듭니다.  

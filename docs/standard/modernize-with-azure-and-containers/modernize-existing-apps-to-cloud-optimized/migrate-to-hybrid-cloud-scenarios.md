@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: b04c6edecf5b63f191cb2e0f808fb1d0f801d0a3
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936732"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>하이브리드 클라우드로 마이그레이션 시나리오
 
@@ -33,9 +33,9 @@ Azure Stack은 하이브리드 클라우드 플랫폼을 사용 하면 조직의
 
 Azure Stack 사용자의 요구를 충족 하기 위해 두 가지 배포 옵션으로 제공 됩니다.
 
--   Azure Stack 통합 시스템
+- Azure Stack 통합 시스템
 
--   Azure Stack 개발 키트
+- Azure Stack 개발 키트
 
 ### <a name="azure-stack-integrated-systems"></a>Azure Stack 통합 시스템
 
@@ -47,23 +47,23 @@ Microsoft Azure Stack 개발 키트에는 평가 하 고 Azure Stack에 대해 �
 
 ### <a name="additional-resources"></a>추가 자료
 
--   **Azure 하이브리드 클라우드**
+- **Azure 하이브리드 클라우드**
 
     <https://azure.microsoft.com/overview/hybrid-cloud/>
 
--   **Azure Stack**
+- **Azure Stack**
 
     <https://azure.microsoft.com/overview/azure-stack/>
 
--   **Windows 컨테이너에 대 한 active Directory 서비스 계정**
+- **Windows 컨테이너에 대 한 active Directory 서비스 계정**
 
     <https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts>
 
--   **Active Directory 지원을 통해 컨테이너 만들기**
+- **Active Directory 지원을 통해 컨테이너 만들기**
 
     <https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/>
 
--   **Azure 하이브리드 혜택 라이선스**
+- **Azure 하이브리드 혜택 라이선스**
 
     <https://azure.microsoft.com/pricing/hybrid-benefit/>
 

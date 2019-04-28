@@ -9,11 +9,11 @@ helpviewer_keywords:
 - operator <<, Visual Basic left shift operator
 ms.assetid: fdb93d25-81ba-417f-b808-41207bfb8440
 ms.openlocfilehash: 75c16c27dc919ba365cbe3c28c61a1e46496b0ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768292"
 ---
 # <a name="-operator-visual-basic"></a>\<\< 연산자 (Visual Basic)
 비트 패턴에 산술 왼쪽된 시프트를 수행합니다.  
@@ -60,15 +60,15 @@ result = pattern << amount
   
  이전 예제의 결과 다음과 같습니다.  
   
--   `result1` 192 (0000 0000 1100 0000)입니다.  
+- `result1` 192 (0000 0000 1100 0000)입니다.  
   
--   `result2` 3072 (1100 0000 0000 0000)입니다.  
+- `result2` 3072 (1100 0000 0000 0000)입니다.  
   
--   `result3` -32768 (1000 0000 0000 0000)입니다.  
+- `result3` -32768 (1000 0000 0000 0000)입니다.  
   
--   `result4` 384 (0000 0001 1000 0000)입니다.  
+- `result4` 384 (0000 0001 1000 0000)입니다.  
   
--   `result5` 0 (왼쪽으로 이동된 15 자리)입니다.  
+- `result5` 0 (왼쪽으로 이동된 15 자리)입니다.  
   
  에 대 한 이동량 `result4` 17 같이 계산 됩니다. 1 및 15입니다.  
   

@@ -21,11 +21,11 @@ helpviewer_keywords:
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
 ms.openlocfilehash: f41585ba8816e0b1894a9f01163191848ae391e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663952"
 ---
 # <a name="types-of-bitmaps"></a>비트맵의 유형
 비트맵은 픽셀의 사각형 배열에서 각 픽셀의 색을 지정 하는 비트의 배열입니다. 각 픽셀에 사용 되는 비트 수가 해당 픽셀에 할당할 수 있는 색 수를 결정 합니다. 예를 들어, 각 픽셀을 4 비트로 표현할 경우 다음 지정된 된 픽셀 할당할 수 있습니다 다른 16 색 중 하나로 (2 ^4 = 16). 다음 표에서 지정 된 비트 수를 나타내는 픽셀에 할당할 수 있는 색 수가 몇 가지 예를 보여 줍니다.  

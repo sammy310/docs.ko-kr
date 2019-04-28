@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c5b65cdeb36b8abf17c74d41a7fc7dfb34fa5731
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939492"
 ---
 # <a name="isymunmanagednamespacegetvariables-method"></a>ISymUnmanagedNamespace::GetVariables 메서드
 이 네임 스페이스 내에서 전역 범위에서 정의 된 모든 변수를 반환 합니다.  

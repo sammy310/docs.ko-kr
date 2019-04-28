@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
 ms.openlocfilehash: 184970d33aae4af135153f9d6f6755770bdf84f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784061"
 ---
 # <a name="operator-statement"></a>Operator Statement
 연산자 기호, 피연산자 및 클래스 또는 구조체에서 연산자 프로시저를 정의 하는 코드를 선언 합니다.  
@@ -114,28 +114,28 @@ End Operator
 ## <a name="matched-pairs"></a>일치 하는 쌍  
  일치 하는 쌍으로 특정 연산자를 정의 해야 합니다. 이러한 쌍의 두 연산자를 정의 하는 경우 다른도 정의 해야 합니다. 일치 하는 쌍 다음과 같습니다.  
   
--   `=` 및 `<>`  
+- `=` 및 `<>`  
   
--   `>` 및 `<`  
+- `>` 및 `<`  
   
--   `>=` 및 `<=`  
+- `>=` 및 `<=`  
   
--   `IsTrue` 및 `IsFalse`  
+- `IsTrue` 및 `IsFalse`  
   
 ## <a name="data-type-restrictions"></a>데이터 형식 제한 사항  
  정의한 모든 연산자는 클래스 또는 구조체 정의를 포함 해야 합니다. 이 클래스 또는 구조체의 다음 데이터 형식으로 표시 되어야 함을 의미 합니다.  
   
--   단항 연산자의 피연산자입니다.  
+- 단항 연산자의 피연산자입니다.  
   
--   하나 이상의 이항 연산자의 피연산자입니다.  
+- 하나 이상의 이항 연산자의 피연산자입니다.  
   
--   피연산자 또는 변환 연산자의 반환 형식입니다.  
+- 피연산자 또는 변환 연산자의 반환 형식입니다.  
   
  특정 연산자에는 제한 사항 다음과 같이 입력 하는 추가 데이터:  
   
--   정의 하는 경우는 `IsTrue` 하 고 `IsFalse` 연산자를 모두 반환 해야 합니다 `Boolean` 형식.  
+- 정의 하는 경우는 `IsTrue` 하 고 `IsFalse` 연산자를 모두 반환 해야 합니다 `Boolean` 형식.  
   
--   정의 하는 경우는 `<<` 및 `>>` 연산자는 둘 다 지정 해야 합니다 `Integer` 에 대 한 입력을 `operandtype` 의 `operand2`합니다.  
+- 정의 하는 경우는 `<<` 및 `>>` 연산자는 둘 다 지정 해야 합니다 `Integer` 에 대 한 입력을 `operandtype` 의 `operand2`합니다.  
   
  두 피연산자의 형식에 해당 하는 반환 형식이 없습니다. 예를 들어, 비교 연산자와 같은 `=` 또는 `<>` 반환할 수 있습니다 `Boolean` 도 아닌 경우 `Boolean`합니다.  
   
@@ -144,11 +144,11 @@ End Operator
   
  정의할 수 없습니다는 `AndAlso` 연산자를 사용 하 여 직접는 `Operator` 문입니다. 사용할 수 있습니다 `AndAlso` 다음 조건을 충족 하는 경우:  
   
--   정의한 `And` 에 대 한 사용 하려는 같은 피연산자 유형에 따라 `AndAlso`합니다.  
+- 정의한 `And` 에 대 한 사용 하려는 같은 피연산자 유형에 따라 `AndAlso`합니다.  
   
--   정의 `And` 클래스 또는 구조체를 정의한 것과 동일한 형식을 반환 합니다.  
+- 정의 `And` 클래스 또는 구조체를 정의한 것과 동일한 형식을 반환 합니다.  
   
--   정의한 합니다 `IsFalse` 연산자를 정의한 클래스 또는 구조체에서 `And`합니다.  
+- 정의한 합니다 `IsFalse` 연산자를 정의한 클래스 또는 구조체에서 `And`합니다.  
   
  마찬가지로, 사용할 수 있습니다 `OrElse` 정의 하는 경우 `Or` 동일한 피연산자에서 클래스 또는 구조체의 반환 형식을 사용 하 여 정의한 `IsTrue` 클래스 또는 구조입니다.  
   
@@ -157,11 +157,11 @@ End Operator
   
  변환 프로시저를 선언 하는 경우 `Widening`, 프로시저 코드가 발생 한 모든 오류를 생성 하지 해야 합니다. 이것은 다음을 의미합니다.  
   
--   형식의 올바른 값을 반환 항상 해야 `type`합니다.  
+- 형식의 올바른 값을 반환 항상 해야 `type`합니다.  
   
--   모든 예외 및 다른 오류 조건을 처리 해야 합니다.  
+- 모든 예외 및 다른 오류 조건을 처리 해야 합니다.  
   
--   호출 하는 프로시저의 모든 오류 반환을 처리 해야 합니다.  
+- 호출 하는 프로시저의 모든 오류 반환을 처리 해야 합니다.  
   
  되도록 선언 해야 변환 프로시저 성공 하지 않을 수 있는 가능성이 없거나는 처리 되지 않은 예외가 발생할 수 있습니다, `Narrowing`합니다.  
   

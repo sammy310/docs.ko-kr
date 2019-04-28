@@ -3,11 +3,11 @@ title: 단일 단계 커밋 및 승격 가능한 단일 단계 알림을 사용�
 ms.date: 03/30/2017
 ms.assetid: 57beaf1a-fb4d-441a-ab1d-bc0c14ce7899
 ms.openlocfilehash: 73340f5f65de1d743e046cf669258ab5f6c66298
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793629"
 ---
 # <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>단일 단계 커밋 및 승격 가능한 단일 단계 알림을 사용한 최적화
 
@@ -50,8 +50,7 @@ ms.locfileid: "57371205"
 
 4. 이때 CN1은 SQL 2005 및 <xref:System.Data>와 관련된 메커니즘을 사용하여 트랜잭션을 에스컬레이션합니다.
 
-5. 
-  <xref:System.Transactions.ITransactionPromoter.Promote%2A> 메서드의 반환 값은 트랜잭션에 대한 전파 토큰을 포함하는 바이트 배열입니다. <xref:System.Transactions> 이 전파 토큰을 사용 하 여 로컬 트랜잭션에 통합할 수 있는 DTC 트랜잭션을 만듭니다.
+5. <xref:System.Transactions.ITransactionPromoter.Promote%2A> 메서드의 반환 값은 트랜잭션에 대한 전파 토큰을 포함하는 바이트 배열입니다. <xref:System.Transactions> 이 전파 토큰을 사용 하 여 로컬 트랜잭션에 통합할 수 있는 DTC 트랜잭션을 만듭니다.
 
 6. 이때 CN2는 <xref:System.Transactions.TransactionInterop>에 의해 메서드 중 하나를 호출하여 받은 데이터를 사용하여 트랜잭션을 SQL로 전달할 수 있습니다.
 

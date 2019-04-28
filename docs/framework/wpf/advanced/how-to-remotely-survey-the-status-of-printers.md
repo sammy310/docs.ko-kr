@@ -12,11 +12,11 @@ helpviewer_keywords:
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
 ms.openlocfilehash: dc187a4ea120661e8118ce79a966d3d4a3b40711
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768503"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>방법: 원격으로 프린터 상태 조사
 중간 규모 및 대규모 기업에는 언제든지 종이 걸림이나 용지 부족 또는 다른 문제 상황으로 인해 여러 프린터가 작동하지 않을 수 있습니다. 다양 한 프린터 속성에서 노출 된 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] Microsoft.NET Framework의 프린터의 상태를 신속 하 게 설문 조사를 수행 하기 위한 수단을 제공 합니다.  
@@ -39,9 +39,9 @@ ms.locfileid: "59340791"
   
  이 예제에서는 다음 사용 하 여 <xref:System.Printing.PrintServer.GetPrintQueues%2A> 서버의 모든 컬렉션을 만드는 큐 및 반복을 시작 합니다. 이 내부 루프에는 프린터의 상태를 검사하는 두 가지 방법에 해당하는 분기 구조가 포함되어 있습니다.  
   
--   플래그를 읽을 수는 <xref:System.Printing.PrintQueue.QueueStatus%2A> 형식의 속성 <xref:System.Printing.PrintQueueStatus>합니다.  
+- 플래그를 읽을 수는 <xref:System.Printing.PrintQueue.QueueStatus%2A> 형식의 속성 <xref:System.Printing.PrintQueueStatus>합니다.  
   
--   와 같은 각 관련 속성을 읽으려면 <xref:System.Printing.PrintQueue.IsOutOfPaper%2A>, 및 <xref:System.Printing.PrintQueue.IsPaperJammed%2A>합니다.  
+- 와 같은 각 관련 속성을 읽으려면 <xref:System.Printing.PrintQueue.IsOutOfPaper%2A>, 및 <xref:System.Printing.PrintQueue.IsPaperJammed%2A>합니다.  
   
  이 예제에서는 모든 방법을 보여 주어 사용자가 이전에 사용할 방법에 대 한를 받고의 플래그를 사용 하려는 경우 "y"를 사용 하 여 응답을 <xref:System.Printing.PrintQueue.QueueStatus%2A> 속성입니다. 두 가지 방법에 대한 자세한 내용은 아래를 참조하세요.  
   

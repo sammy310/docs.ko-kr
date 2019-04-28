@@ -9,11 +9,11 @@ helpviewer_keywords:
 - image formats [Windows Forms], converting between
 ms.assetid: 9d4a692d-73ac-4ce3-9e05-9ec321e8fbd6
 ms.openlocfilehash: 3072c07781a8e8e57b64b48e5b4c304c2a0a0efb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937763"
 ---
 # <a name="how-to-convert-a-bmp-image-to-a-png-image"></a>방법: BMP 이미지를 PNG 이미지로 변환
 이미지 파일 형식 간에 변환하려는 경우가 많습니다. <xref:System.Drawing.Image> 클래스의 <xref:System.Drawing.Image.Save%2A> 메서드를 호출하고 원하는 이미지 파일 형식에 대해 <xref:System.Drawing.Imaging.ImageFormat>을 지정하여 이 변환을 쉽게 수행할 수 있습니다.  
@@ -27,9 +27,9 @@ ms.locfileid: "59217018"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   Windows Forms 애플리케이션  
+- Windows Forms 애플리케이션  
   
--   `System.Drawing.Imaging` 네임스페이스에 대한 참조  
+- `System.Drawing.Imaging` 네임스페이스에 대한 참조  
   
 ## <a name="see-also"></a>참고자료
 

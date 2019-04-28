@@ -24,11 +24,11 @@ helpviewer_keywords:
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
 ms.openlocfilehash: 5fe12d18c7f403c1a50ed548a260ba39e83280eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746761"
 ---
 # <a name="user-defined-data-type"></a>사용자 정의 데이터 형식
 사용자가 정의한 형식으로 데이터를 저장 합니다. `Structure` 문은 형식을 정의 합니다.  
@@ -50,15 +50,15 @@ ms.locfileid: "58814200"
   
 ## <a name="programming-tips"></a>프로그래밍 팁  
   
--   **메모리 사용량** 모든 복합 데이터 형식에서와 마찬가지로 해당 멤버의 일반 저장소 할당량을 함께 추가 하 여 구조체의 총 메모리 소비량을 안전 하 게 계산할 수 없습니다. 또한 가정할 수 없습니다는 메모리에서 저장소의 순서가 사용자의 선언 순서와 동일 합니다. 구조체의 저장소 레이아웃을 제어 해야 하는 경우 적용할 수 있습니다 합니다 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 특성을 `Structure` 문입니다.  
+- **메모리 사용량** 모든 복합 데이터 형식에서와 마찬가지로 해당 멤버의 일반 저장소 할당량을 함께 추가 하 여 구조체의 총 메모리 소비량을 안전 하 게 계산할 수 없습니다. 또한 가정할 수 없습니다는 메모리에서 저장소의 순서가 사용자의 선언 순서와 동일 합니다. 구조체의 저장소 레이아웃을 제어 해야 하는 경우 적용할 수 있습니다 합니다 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 특성을 `Structure` 문입니다.  
   
--   **Interop 고려 사항입니다.** .NET Framework 용으로 작성 되지 구성 요소와 상호 작용 하는, 예를 들어 자동화 개체나 COM 개체를 다른 환경에서 사용자 정의 형식을 Visual Basic을 사용 하 여 호환 되지 않음을 명심 형식을 구성 합니다.  
+- **Interop 고려 사항입니다.** .NET Framework 용으로 작성 되지 구성 요소와 상호 작용 하는, 예를 들어 자동화 개체나 COM 개체를 다른 환경에서 사용자 정의 형식을 Visual Basic을 사용 하 여 호환 되지 않음을 명심 형식을 구성 합니다.  
   
--   **확대 합니다.** 자동 변환이 없는 구조체 데이터 형식에서입니다. 사용 하 여 구조체에서 변환 연산자를 정의할 수 있습니다 합니다 [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md), 고 되도록 각 변환 연산자를 선언할 수 있습니다 `Widening` 또는 `Narrowing`합니다.  
+- **확대 합니다.** 자동 변환이 없는 구조체 데이터 형식에서입니다. 사용 하 여 구조체에서 변환 연산자를 정의할 수 있습니다 합니다 [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md), 고 되도록 각 변환 연산자를 선언할 수 있습니다 `Widening` 또는 `Narrowing`합니다.  
   
--   **형식 문자입니다.** 구조 데이터 형식 식별자 형식 문자가 없거나 리터럴 형식 문자에 있습니다.  
+- **형식 문자입니다.** 구조 데이터 형식 식별자 형식 문자가 없거나 리터럴 형식 문자에 있습니다.  
   
--   **Framework 형식입니다.** .NET Framework에는 해당 형식이 없습니다. .NET Framework 클래스에서 상속 하는 모든 구조 <xref:System.ValueType?displayProperty=nameWithType>에 있지만에 해당 하는 개별 구조가 없습니다 <xref:System.ValueType?displayProperty=nameWithType>합니다.  
+- **Framework 형식입니다.** .NET Framework에는 해당 형식이 없습니다. .NET Framework 클래스에서 상속 하는 모든 구조 <xref:System.ValueType?displayProperty=nameWithType>에 있지만에 해당 하는 개별 구조가 없습니다 <xref:System.ValueType?displayProperty=nameWithType>합니다.  
   
 ## <a name="example"></a>예제  
  다음 패러다임 구조체 선언의 개요를 보여 줍니다.  

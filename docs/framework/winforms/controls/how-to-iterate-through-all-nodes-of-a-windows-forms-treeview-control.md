@@ -11,11 +11,11 @@ helpviewer_keywords:
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
 ms.openlocfilehash: 4b287cecddd63ec6535feb70118c3466c8960531
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941091"
 ---
 # <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>방법: Windows Forms TreeView 컨트롤의 모든 노드 반복
 Windows Forms의 모든 노드에 검사할 유용한 경우가 <xref:System.Windows.Forms.TreeView> 노드 값에 대해 몇 가지 계산을 수행 하기 위해 제어 합니다. 트리의 각 컬렉션의 각 노드를 반복하는 재귀 프로시저(C# 및 C++의 재귀 메서드)를 사용하여 이 작업을 수행할 수 있습니다.  

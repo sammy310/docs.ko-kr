@@ -21,11 +21,11 @@ helpviewer_keywords:
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
 ms.openlocfilehash: b4621da21200e6c9e2b174a0e2ba508a4f6bab92
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938712"
 ---
 # <a name="xml-character-entities-and-xaml"></a>XML 문자 엔터티 및 XAML
 XAML은 특수 문자를 위해 XML에 정의된 문자 엔터티를 사용합니다. 이 항목에서는 일부 특정 문자 엔터티 및 XAML의 다른 XML 개념에 대한 일반적인 고려 사항을 설명합니다.  

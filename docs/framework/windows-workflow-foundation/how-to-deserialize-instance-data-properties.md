@@ -3,28 +3,28 @@ title: '방법: 인스턴스 데이터 속성 Deserialize'
 ms.date: 03/30/2017
 ms.assetid: b13a3508-1b97-4359-b336-03d85fa23bc4
 ms.openlocfilehash: badea2b9731b1144a727a5d5b83c92072027e1f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761444"
 ---
 # <a name="how-to-deserialize-instance-data-properties"></a>방법: 인스턴스 데이터 속성 Deserialize
 경우에 따라서는 유지되고 있는 워크플로 인스턴스의 상태를 사용자나 워크플로 관리자가 수동으로 조사하고 싶을 수 있습니다. <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>에서는 다음과 같은 네 개의 열이 포함된 인스턴스 테이블에 대한 뷰를 제공합니다.  
   
--   ReadWritePrimitiveDataProperties  
+- ReadWritePrimitiveDataProperties  
   
--   WriteOnlyPrimitiveDataProperties  
+- WriteOnlyPrimitiveDataProperties  
   
--   ReadWriteComplexDataProperties  
+- ReadWriteComplexDataProperties  
   
--   WriteOnlyComplexDataProperties  
+- WriteOnlyComplexDataProperties  
   
- 기본 데이터 속성은 해당.NET Framework 형식이 다른 모든 형식에 복합 데이터 속성 참조 (예: Int32 또는 String), "일반적" 것으로 간주 되는를 참조 합니다. 기본 형식의 정확한 열거형은 이 코드 샘플의 뒷부분에 나와 있습니다.  
+ 기본 데이터 속성은.NET Framework 형식이 것으로 간주 됩니다 (예를 들어 Int32 및 문자열), "common" 다른 모든 형식에 복합 데이터 속성 참조 하는 동안 속성을 가리킵니다. 기본 형식의 정확한 열거형은 이 코드 샘플의 뒷부분에 나와 있습니다.  
   
  읽기/쓰기 속성은 인스턴스를 로드했을 때 워크플로 런타임으로 다시 반환되는 속성을 가리킵니다. WriteOnly 속성은 데이터베이스에 쓴 다음 다시 읽지 않는 속성입니다.  
   
- 이 샘플에서는 기본 데이터 속성을 deserialize하는 데 사용할 수 있는 코드를 제공합니다. ReadWritePrimitiveDataProperties 또는 WriteOnlyPrimitiveDataProperties 열에서 읽은 바이트 배열이,이 코드는 binary large object (BLOB)로 변환 된 <xref:System.Collections.Generic.Dictionary%602> 형식의 \<XName, 개체 > 여기서 각 키 값 쌍 속성 이름 및 해당 값을 나타냅니다.  
+ 이 샘플에서는 기본 데이터 속성을 deserialize하는 데 사용할 수 있는 코드를 제공합니다. ReadWritePrimitiveDataProperties 또는 WriteOnlyPrimitiveDataProperties 열에서 읽은 바이트 배열이 들어이 코드는 변환 binary large object (BLOB)를 <xref:System.Collections.Generic.Dictionary%602> 형식의 \<XName, 개체 > 여기서 각 키 값 쌍 속성 이름과 해당 값을 나타냅니다.  
   
  복합 데이터 속성을 deserialize하는 방법은 이 샘플에서 보여 주지 않습니다. 이와 같은 작업은 아직 지원되지 않습니다.  
   

@@ -1,15 +1,10 @@
 ---
-title: F# 함수형 프로그래밍 소개
-description: F# 함수형 프로그래밍의 기본 사항에 대해 알아봅니다.
+title: 'F# 함수형 프로그래밍 소개'
+description: 'F# 함수형 프로그래밍의 기본 사항에 대해 알아봅니다.'
 ms.date: 10/29/2018
-ms.openlocfilehash: d4a9bb0cd826b41aca96e12e2bcb5aab80c18eb4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "25724480"
 ---
-# <a name="introduction-to-functional-programming-in-f"></a>F# 함수형 프로그래밍 소개 #
+
+# <a name="introduction-to-functional-programming-in-f"></a>F #의 함수형 프로그래밍 소개\#
 
 함수형 프로그래밍은 함수와 변경할 수 없는 데이터의 사용을 강조하는 프로그래밍 스타일입니다. 형식화된 함수형 프로그래밍은 함수형 프로그래밍이 F#과 같은 정적 형식과 결합된 경우입니다. 일반적으로 함수형 프로그래밍에서는 다음과 같은 개념이 강조됩니다.
 
@@ -50,26 +45,26 @@ val addOne: x:int -> int
 
 이 시그니처는 "`addOne`은 `x`라는 `int`를 받아서 `int`를 생성합니다"라고 읽을 수 있습니다. `addOne`은 어떤 값을 정수 집합에서 정수 집합으로 _매핑_ 하는 형식입니다. `->` 토큰이 이 매핑을 나타냅니다. F#에서는 일반적으로 함수 시그니처를 보고 어떤 작업을 수행하는지 알 수 있습니다.
 
-그렇다면 시그니처는 왜 중요할까요? 형식화된 함수형 프로그래밍에서 함수의 구현은 종종 실제 형식 시그니처보다 덜 중요합니다! `addOne`이 런타임에 값 1을 정수에 추가한다는 사실은 흥미롭지만, 프로그램을 만드는 시점에 이 프로그램이 `int`를 받고 반환한다는 사실은 이 함수의 실제 사용법을 알려줍니다. 또한 이 함수를 올바르게 사용하면(형식 시그니처와 관련하여) 모든 문제 진단은 `addOne` 함수의 본문 내에서만 처리할 수 있습니다. 이는 형식화된 함수형 프로그래밍의 원동력입니다.
+따라서 서명이 중요 한 이유는? 형식화 된 함수형 프로그래밍에서는 함수의 구현은 종종 작은 실제 형식 시그니처 보다 중요 한! 팩트는 `addOne` 는 정수 값 1은 런타임 시 흥미로운 추가 수락 하 고 반환 하는 프로그램을 생성할 때 있지만 `int` 어떤 알립니다 실제로 사용법에이 함수는 합니다. 또한 올바르게 (관련 하 여 해당 형식 시그니처)이이 함수를 사용 하면 문제 진단 가능의 본문 내 에서만 `addOne` 함수입니다. 형식화 된 함수형 프로그래밍 원동력이입니다.
 
-### <a name="expressions"></a>표현식
+### <a name="expressions"></a>식
 
-표현식은 값으로 평가되는 구문입니다. 작업을 수행하는 명령문과는 대조적으로 표현식은 값을 반환하는 작업을 수행하는 것으로 생각할 수 있습니다. 표현식은 함수형 프로그래밍에서 명령문을 위해 거의 항상 사용됩니다.
+식에는 값으로 계산 되는 구문입니다. 작업을 수행 하는 문 달리 식 값을 제공 하는 작업을 수행 하는 생각할 수 있습니다. 식 문 함수형 프로그래밍에서을 위해 거의 항상 사용 됩니다.
 
-이전 함수 `addOne`을 살펴봅니다. 다음과 같이 `addOne`의 본문은 표현식입니다.
+이전 함수를 살펴보세요 `addOne`합니다. 본문 `addOne` 식:
 
 ```fsharp
 // 'x + 1' is an expression!
 let addOne x = x + 1
 ```
 
-이 표현식의 결과가 `addOne` 함수의 결과 유형을 정의합니다. 예를 들어, 이 함수를 구성하는 표현식을 `string`과 같은 다른 유형으로 변경할 수 있습니다.
+결과 형식을 정의 하는이 식의 결과 `addOne` 함수입니다. 이 함수를 구성 하는 식과 같은 다른 형식으로 변경 될 수 예를 들어, 한 `string`:
 
 ```fsharp
 let addOne x = x.ToString() + "1"
 ```
 
-함수의 시그니처는 이제 다음과 같습니다.
+함수의 서명이 되었습니다.
 
 ```fsharp
 val addOne: x:'a -> string
@@ -99,7 +94,7 @@ let addOneIfOdd input =
 
 ```fsharp
 let printString (str: string) =
-    printfn "String is: %s" s
+    printfn "String is: %s" str
 ```
 
 시그니처는 다음과 같습니다.
@@ -161,90 +156,15 @@ let addOneToValue x =
     x + 1
 ```
 
-값을 씁니다이 함수는 전역 값에 종속 되지 않습니다, 하지만 `x` 프로그램의 출력입니다. 근본적으로 이렇게 잘못 된 항목이 없는, 하지만 순수 함수가 아닙니다 의미가 있습니다.
+값을 씁니다이 함수는 전역 값에 종속 되지 않습니다, 하지만 `x` 프로그램의 출력입니다. 근본적으로 이렇게 잘못 된 항목이 없는, 하지만 순수 함수가 아닙니다 의미가 있습니다. 프로그램의 다른 파트는 출력 버퍼를 비롯 하 여 프로그램에 종속 된 경우이 함수를 호출한 프로그램의 다른 일부는 발생할 수 있습니다.
 
-제거 된 `printfn` 문이 마지막으로 사용 하면 함수가 순수:
+제거 된 `printfn` 문을 순수 함수를 사용 합니다.
 
 ```fsharp
 let addOneToValue x = x + 1
 ```
 
-아니지만이 함수 기본적으로 _더 나은_ 사용 하 여 이전 버전 보다는 `printfn` 문에서 반드시이 함수는 반환 하는 값입니다. 이 호출 함수를 한 번 또는 1 십억 번은 동일한 작업에서 여전히 결과:만 값을 생성 합니다. 이 예측 유용 함수형 프로그래밍에서는 순수 함수는 참조로 투명 하 게 되었음을 의미 합니다.
-
-### <a name="referential-transparency"></a>참조 투명성
-
-참조 투명성은 식과 함수의 속성입니다. 참조로 투명 하 게 식에 대 한 프로그램의 동작을 변경 하지 않고 해당 결과 값으로 바꿔야 할 수 있어야 합니다. 모든 순수 함수는 참조로 투명 하 게 합니다.
-
-순수 함수에서와 마찬가지로 참조 투명성 수학 관점에서 생각 하면 도움이 수 있습니다. 수치 연산 식에서 `y = f(x)`, `f(x)` 함수의 결과로 바꿀 수 있습니다와 같게 됩니다 및 `y`합니다. 이것이 함수형 프로그래밍에서 참조 투명성에 대해서도 마찬가지입니다.
-
-이전에 정의 된 호출 하는 것이 좋습니다. `addOneIfOdd` 두 번 작동 합니다.
-
-```fsharp
-// Checks if 'x' is odd by using the mod operator
-let isOdd x = x % 2 <> 0
-
-let addOneIfOdd input =
-    let result =
-        if isOdd input then
-            input + 1
-        else
-            input
-
-    result
-
-let res1 = addOneIffOdd 1 // Produces 2
-let res2 = addOneIffOdd 2 // Produces 2
-```
-
-인수를 대체 하 고 함수 본문을 사용 하 여 각 함수 호출을 대체할 수에서는 `input` 각 값을 사용 하 여:
-
-```fsharp
-// Checks if 'x' is odd by using the mod operator
-let isOdd x = x % 2 <> 0
-
-let addOneIfOdd input =
-    let result =
-        if isOdd input then
-            input + 1
-        else
-            input
-
-    result
-
-let res1 =
-    let result =
-        if isOdd 1 then
-            1 + 1
-        else
-            1
-
-    result
-let res2 =
-    let result =
-        if isOdd 2 then
-            2 + 1
-        else
-            2
-
-    result
-```
-
-둘 다 `res1` 하 고 `res2` 나타내는 함수가 호출 된 것 처럼 동일한 값을 가질 `addOneIfOdd` 참조가 이루어집니다!
-
-또한 함수를 순수 투명 하 게도 참조가 없습니다. 이전 정의 것이 좋습니다 `addOneTovalue`:
-
-```fsharp
-let addOneToValue x = 
-    printfn "x is %d" x
-    x + 1
-```
-
-이 함수를 호출할 때 해당 본문으로 대체 될 수도 있습니다 및 들 될 때마다 발생 합니다.
-
-* 출력에 추가 되기 전에 값을이 출력
-* 값이 1에 추가
-
-프로그래밍할 때 F#를 참조 투명성 순도 아니라 목표를 달성 하는 경우가 많습니다. 그러나 여전히 좋습니다 가능한 경우에 순수 함수를 작성 하는 것.
+아니지만이 함수 기본적으로 _더 나은_ 사용 하 여 이전 버전 보다는 `printfn` 문에서 반드시이 함수는 반환 하는 값입니다. 동일한 결과가 생성이 함수를 여러 번 호출 합니다: 값만 생성 합니다. 순도 제공한 예측 가능성에 대 한 대부분의 함수형 프로그래머 노력입니다.
 
 ### <a name="immutability"></a>불변성
 

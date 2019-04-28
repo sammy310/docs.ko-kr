@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 241e428e-5030-4b13-8a0a-69f05288d3d9
 ms.openlocfilehash: 60847f423c61b9e7f49a4a7594c965fb75354714
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794383"
 ---
 # <a name="sendmessagechannelcache"></a>\<sendMessageChannelCache>
 캐시 공유 수준, 채널 팩터리 캐시 설정 및 Send 메시징 활동을 사용 하 여 서비스 끝점에 메시지를 보내는 워크플로 위한 채널 캐시의 설정을 사용자 지정할 수 있는 서비스 동작입니다.  

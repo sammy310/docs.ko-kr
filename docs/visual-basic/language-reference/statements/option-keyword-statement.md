@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Option keyword [Visual Basic]
 ms.assetid: 6b2f41c4-2403-43b6-8a14-94a3775e5b47
 ms.openlocfilehash: 96ab02bf61f6b326c3f09615bf19f9e2ecae7e86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784022"
 ---
 # <a name="option-keyword-statement"></a>옵션 \<키워드 > 문
 전체 소스 파일에 적용 되는 컴파일러 옵션을 지정 하는 문을 소개 합니다.  

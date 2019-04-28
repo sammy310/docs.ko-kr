@@ -3,11 +3,11 @@ title: '방법: 그룹 파일 확장명 (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 904dc6d7-7162-4655-a7f4-5785d669bc5a
 ms.openlocfilehash: e40101e7de01d403c5bc55a0d4e68f776ddfc0c1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778081"
 ---
 # <a name="how-to-group-files-by-extension-linq-visual-basic"></a>방법: 그룹 파일 확장명 (LINQ) (Visual Basic)
 이 예제에서는 LINQ를 사용하여 파일 또는 폴더 목록에 대해 고급 그룹화 및 정렬 작업을 수행하는 방법을 보여 줍니다. 또한 <xref:System.Linq.Enumerable.Skip%2A> 및 <xref:System.Linq.Enumerable.Take%2A> 메서드를 사용하여 콘솔 창에서 출력을 페이징하는 방법을 보여 줍니다.  

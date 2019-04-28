@@ -11,11 +11,11 @@ helpviewer_keywords:
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
 ms.openlocfilehash: 0a8d95ffbabf03a0e6c9d88edb28c248b60f3252
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783879"
 ---
 # <a name="set-statement-visual-basic"></a>Set 문(Visual Basic)
 선언 된 `Set` 속성 프로시저 속성에 값을 할당 하는 데 사용 합니다.  
@@ -35,13 +35,13 @@ End Set
  `accessmodifier`  
  옵션 중 하나에 `Get` 및 `Set` 이 속성에는 문. 다음 중 하나일 수 있습니다.  
   
--   [보호됨](../../../visual-basic/language-reference/modifiers/protected.md)  
+- [보호됨](../../../visual-basic/language-reference/modifiers/protected.md)  
   
--   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
+- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
--   [전용](../../../visual-basic/language-reference/modifiers/private.md)  
+- [전용](../../../visual-basic/language-reference/modifiers/private.md)  
   
--   `Protected Friend`  
+- `Protected Friend`  
   
  [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)을 참조하세요.  
   
@@ -70,13 +70,13 @@ End Set
   
 ## <a name="rules"></a>규칙  
   
--   **혼합 된 액세스 수준입니다.** 서로 다른 액세스 수준에 대 한 필요에 따라 지정할 수는 읽기 / 쓰기 속성을 정의 하는 경우는 `Get` 또는 `Set` 절차, 하지만 둘 다. 이 작업을 수행 하는 경우 프로시저 액세스 수준 속성의 액세스 수준 보다 더 제한적 이어야 합니다. 예를 들어, 속성 선언 되 면 `Friend`를 선언할 수 있습니다 합니다 `Set` 프로시저 `Private`, 아닌 `Public`합니다.  
+- **혼합 된 액세스 수준입니다.** 서로 다른 액세스 수준에 대 한 필요에 따라 지정할 수는 읽기 / 쓰기 속성을 정의 하는 경우는 `Get` 또는 `Set` 절차, 하지만 둘 다. 이 작업을 수행 하는 경우 프로시저 액세스 수준 속성의 액세스 수준 보다 더 제한적 이어야 합니다. 예를 들어, 속성 선언 되 면 `Friend`를 선언할 수 있습니다 합니다 `Set` 프로시저 `Private`, 아닌 `Public`합니다.  
   
      정의 하는 경우는 `WriteOnly` 속성을 `Set` 프로시저 전체 속성을 나타냅니다. 선언할 수 없습니다는 서로 다른 액세스 수준 `Set`이므로 속성에 대 한 두 가지 액세스 수준이 설정 합니다.  
   
 ## <a name="behavior"></a>동작  
   
--   **속성 프로시저에서 반환합니다.** 경우는 `Set` 프로시저가 호출 코드에 반환 되 면 저장 될 값을 제공 하는 문을 계속 실행 합니다.  
+- **속성 프로시저에서 반환합니다.** 경우는 `Set` 프로시저가 호출 코드에 반환 되 면 저장 될 값을 제공 하는 문을 계속 실행 합니다.  
   
      `Set` 속성 프로시저 중 하나를 사용 하 여 반환할 수 있습니다 합니다 [Return 문이](../../../visual-basic/language-reference/statements/return-statement.md) 또는 [Exit 문을](../../../visual-basic/language-reference/statements/exit-statement.md)합니다.  
   

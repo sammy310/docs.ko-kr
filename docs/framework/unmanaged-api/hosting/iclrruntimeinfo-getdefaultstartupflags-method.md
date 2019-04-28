@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9c39ad4638c7db45c481bd3dfccb0a82759397aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771750"
 ---
 # <a name="iclrruntimeinfogetdefaultstartupflags-method"></a>ICLRRuntimeInfo::GetDefaultStartupFlags 메서드
 시작 플래그 및 런타임을 시작 하는 데 사용할 호스트 구성 파일을 가져옵니다.  

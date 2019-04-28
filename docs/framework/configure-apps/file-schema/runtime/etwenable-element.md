@@ -8,11 +8,11 @@ ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6ba411114bfb853e06c83adb42713d43f1452d9c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704806"
 ---
 # <a name="etwenable-element"></a>\<etwEnable > 요소
 공용 언어 런타임 이벤트에 대해 ETW(Windows용 이벤트 추적)를 사용하도록 설정할지를 지정합니다.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
 ms.openlocfilehash: 4d5cc91ca8bf71b2d5893f591652d777041e1a4d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757375"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>방법: Windows Forms BindingNavigator 컨트롤에 로드, 저장 및 취소 단추 추가
 합니다 <xref:System.Windows.Forms.BindingNavigator> 컨트롤은 특수 한 용도의 <xref:System.Windows.Forms.ToolStrip> 컨트롤 이동 및 데이터에 바인딩된 폼의 컨트롤을 조작 하기 위한 것입니다.  
@@ -40,15 +40,15 @@ ms.locfileid: "59304781"
   
 7. 에 **항목 컬렉션 편집기**, 다음 단계를 완료 합니다.  
   
-    1.  추가 <xref:System.Windows.Forms.ToolStripSeparator> 및 3 <xref:System.Windows.Forms.ToolStripButton> 적절 한 형식을 선택 하 여 항목 <xref:System.Windows.Forms.ToolStripItem> 를 클릭 하 고는 **추가** 단추입니다.  
+    1. 추가 <xref:System.Windows.Forms.ToolStripSeparator> 및 3 <xref:System.Windows.Forms.ToolStripButton> 적절 한 형식을 선택 하 여 항목 <xref:System.Windows.Forms.ToolStripItem> 를 클릭 하 고는 **추가** 단추입니다.  
   
-    2.  설정 된 <xref:System.Windows.Forms.ToolStripItem.Name%2A> 단추 중 속성 **LoadButton**, **저장 단추**, 및 **CancelButton**각각.  
+    2. 설정 된 <xref:System.Windows.Forms.ToolStripItem.Name%2A> 단추 중 속성 **LoadButton**, **저장 단추**, 및 **CancelButton**각각.  
   
-    3.  설정 합니다 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 단추 중 속성 **부하**를 **저장**, 및 **취소**합니다.  
+    3. 설정 합니다 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 단추 중 속성 **부하**를 **저장**, 및 **취소**합니다.  
   
-    4.  설정 된 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> 각 단추에 대 한 속성 **텍스트**합니다. 또는이 속성 설정할 수 있습니다 **이미지** 또는 **ImageAndText**에 표시할 이미지를 설정 하 고는 <xref:System.Windows.Forms.ToolStripItem.Image%2A> 속성입니다.  
+    4. 설정 된 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> 각 단추에 대 한 속성 **텍스트**합니다. 또는이 속성 설정할 수 있습니다 **이미지** 또는 **ImageAndText**에 표시할 이미지를 설정 하 고는 <xref:System.Windows.Forms.ToolStripItem.Image%2A> 속성입니다.  
   
-    5.  클릭 **확인** 대화 상자를 닫습니다. 단추에 추가 되는 <xref:System.Windows.Forms.ToolStrip>합니다.  
+    5. 클릭 **확인** 대화 상자를 닫습니다. 단추에 추가 되는 <xref:System.Windows.Forms.ToolStrip>합니다.  
   
 8. 폼을 마우스 오른쪽 단추로 클릭 하 고 선택 **코드 보기**합니다.  
   

@@ -3,11 +3,11 @@ title: SQL Server에서 쿼리 알림
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
 ms.openlocfilehash: e31a733635cf56a9c5e539dfb1d71d7d7037175a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645983"
 ---
 # <a name="query-notifications-in-sql-server"></a>SQL Server에서 쿼리 알림
 쿼리 알림은 Service Broker 인프라를 기반으로 하며 데이터가 변경된 경우 응용 프로그램에 이를 알릴 수 있습니다. 이 기능은 웹 응용 프로그램 같이 데이터베이스의 정보 캐시를 제공하고 원본 데이터가 변경되면 알림을 받아야 하는 응용 프로그램에 매우 유용합니다.  
@@ -28,15 +28,15 @@ ms.locfileid: "59336670"
   
  **SQL Server 설명서**  
   
--   [쿼리 알림 사용](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
+- [쿼리 알림 사용](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
   
--   [알림에 대 한 쿼리 만들기](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
+- [알림에 대 한 쿼리 만들기](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
--   [개발 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
+- [개발 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
   
--   [Service Broker 개발자 정보 센터](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
+- [Service Broker 개발자 정보 센터](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
--   [Developer's Guide (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
+- [Developer's Guide (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [쿼리 알림 사용](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)  

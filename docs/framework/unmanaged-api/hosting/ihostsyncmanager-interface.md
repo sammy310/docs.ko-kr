@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 200da8b87b52a29c2b075d1e06929031d3f588b7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769631"
 ---
 # <a name="ihostsyncmanager-interface"></a>IHostSyncManager 인터페이스
 CLR (공용 언어 런타임)에서 Win32 동기화 함수를 사용 하는 대신 호스트를 호출 하 여 동기화 기본 형식을 만들 수 있도록 하는 메서드를 제공 합니다.  

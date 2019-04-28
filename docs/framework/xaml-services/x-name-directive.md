@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Name attribute in XAML [XAML Services]
 ms.assetid: b7e61222-e8cf-48d2-acd0-6df3b7685d48
 ms.openlocfilehash: d25c8500250411083e9fb6b33b3f743e5cd103c0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796528"
 ---
 # <a name="xname-directive"></a>x:Name 지시문
 XAML 이름 범위에 대 한 XAML 정의 요소를 고유 하 게 식별합니다. XAML 이름 범위와 해당 고유성 모델 프레임 워크 Api를 제공 하거나 런타임에 XAML에서 생성 된 개체 그래프에 액세스 하는 동작을 구현 하는 경우 인스턴스화된 개체에 적용할 수 있습니다.  

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - GradientStop objects [WPF], animating position of
 ms.assetid: 6f5b8b47-6c32-4b8e-98ee-fdf6515ec843
 ms.openlocfilehash: eeaea4732855155bf711912644f2f5b3f5a4f8d0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651365"
 ---
 # <a name="how-to-animate-the-position-or-color-of-a-gradient-stop"></a>방법: 그라데이션 중지점의 위치 또는 색에 애니메이션 효과 주기
 애니메이션을 적용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.GradientStop.Color%2A> 하 고 <xref:System.Windows.Media.GradientStop.Offset%2A> 의 <xref:System.Windows.Media.GradientStop> 개체입니다.  
@@ -25,11 +25,11 @@ ms.locfileid: "59134812"
 ## <a name="example"></a>예제  
  다음 예제에서는 세 그라데이션 내에서 애니메이션을 <xref:System.Windows.Media.LinearGradientBrush>입니다. 이 예제에서는 다양 한 그라데이션 중지점에 애니메이션을 적용 하는 각 세 가지 애니메이션을 사용 합니다.  
   
--   첫 번째 애니메이션을 <xref:System.Windows.Media.Animation.DoubleAnimation>, 첫 번째 그라데이션 중지점의 애니메이션 <xref:System.Windows.Media.GradientStop.Offset%2A> 0.0에서 1.0의 0.0으로 다시 합니다. 결과적으로, 첫 번째 사각형의 왼쪽에서 오른쪽으로 왼쪽에서 그라데이션 만큼의 색을 왼쪽으로 다시 합니다.  
+- 첫 번째 애니메이션을 <xref:System.Windows.Media.Animation.DoubleAnimation>, 첫 번째 그라데이션 중지점의 애니메이션 <xref:System.Windows.Media.GradientStop.Offset%2A> 0.0에서 1.0의 0.0으로 다시 합니다. 결과적으로, 첫 번째 사각형의 왼쪽에서 오른쪽으로 왼쪽에서 그라데이션 만큼의 색을 왼쪽으로 다시 합니다.  
   
--   두 번째 애니메이션을 <xref:System.Windows.Media.Animation.ColorAnimation>, 두 번째 그라데이션 중지점의 애니메이션 효과 줍니다 <xref:System.Windows.Media.GradientStop.Color%2A> 에서 <xref:System.Windows.Media.Colors.Purple%2A> 에 <xref:System.Windows.Media.Colors.Yellow%2A> 다시 <xref:System.Windows.Media.Colors.Purple%2A>입니다. 결과적으로, 노란색, 보라색으로 다시로 자주색에서 그라데이션의 중간 색을 변경합니다.  
+- 두 번째 애니메이션을 <xref:System.Windows.Media.Animation.ColorAnimation>, 두 번째 그라데이션 중지점의 애니메이션 효과 줍니다 <xref:System.Windows.Media.GradientStop.Color%2A> 에서 <xref:System.Windows.Media.Colors.Purple%2A> 에 <xref:System.Windows.Media.Colors.Yellow%2A> 다시 <xref:System.Windows.Media.Colors.Purple%2A>입니다. 결과적으로, 노란색, 보라색으로 다시로 자주색에서 그라데이션의 중간 색을 변경합니다.  
   
--   세 번째 애니메이션 다른 <xref:System.Windows.Media.Animation.ColorAnimation>, 세 번째 그라데이션 중지점의 불투명도 애니메이션을 적용 <xref:System.Windows.Media.GradientStop.Color%2A> -1로 다시 합니다. 결과적으로, 세 번째 그라데이션 색 희미해 및 다시 불투명해 집니다.  
+- 세 번째 애니메이션 다른 <xref:System.Windows.Media.Animation.ColorAnimation>, 세 번째 그라데이션 중지점의 불투명도 애니메이션을 적용 <xref:System.Windows.Media.GradientStop.Color%2A> -1로 다시 합니다. 결과적으로, 세 번째 그라데이션 색 희미해 및 다시 불투명해 집니다.  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMGradientAnimationExamplesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/GradientStopAnimationExample.cs#graphicsmmgradientanimationexampleswholepage)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMGradientAnimationExamplesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/gradientstopanimationexample.vb#graphicsmmgradientanimationexampleswholepage)]

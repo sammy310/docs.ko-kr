@@ -7,11 +7,11 @@ helpviewer_keywords:
 - menu items [Windows Forms], hiding
 ms.assetid: 8f1b057e-3d8a-4f11-88df-935f7b29a836
 ms.openlocfilehash: 31c597a0e2cbf41484f19c8d4179823e9fb929ba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941208"
 ---
 # <a name="how-to-hide-toolstripmenuitems-using-the-designer"></a>방법: 디자이너를 사용하여 ToolStripMenuItems 숨기기
 메뉴 항목 숨기기는 응용 프로그램의 사용자 인터페이스 (UI)를 제어 하 고 사용자 명령을 제한 하는 방법입니다. 종종 전체 메뉴에 메뉴 항목을 모두 사용할 수 없는 경우 숨기려면 해야 합니다. 이 사용자에 대해 더 적은 방해 요소를 표시합니다. 또한 하려는 숨기고 메뉴 또는 메뉴 항목을 사용 하지 않도록 설정으로 숨기는 것 만으로도 사용자 바로 가기 키를 사용 하 여 메뉴 명령에 액세스 하는 것을 금지 하지 않습니다. 메뉴 항목을 사용 하지 않도록 설정 하는 방법은 참조 하세요. [방법: 디자이너를 사용 하 여 ToolStripMenuItems를 사용 하지 않도록 설정](how-to-disable-toolstripmenuitems-using-the-designer.md)합니다.  

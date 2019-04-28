@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 17514d95-f0f5-4789-8e28-346640dc227c
 author: BrucePerlerMS
 ms.openlocfilehash: 5202e162a7eb5fc4e36d6a6c0a2c18af48872a69
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791601"
 ---
 # <a name="nameclaimtype"></a>\<nameClaimType>
 지정 하는 클레임 형식을 가져오거나 설정 합니다 <xref:System.Security.Principal.IIdentity.Name%2A> 속성입니다. 클레임 형식에 대 한 검색 되는 <xref:System.Security.Claims.Claim> 의 컬렉션에 있는 <xref:System.Security.Claims.ClaimsIdentity> 반환한 개체는 <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> 이 토큰 처리기의 메서드. 일치 하는 클레임의 값이 이름으로 설정 됩니다는 <xref:System.Security.Principal.IIdentity> 이 토큰 처리기를 생성 합니다.  

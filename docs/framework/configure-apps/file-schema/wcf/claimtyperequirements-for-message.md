@@ -3,11 +3,11 @@ title: <claimTypeRequirements> 에 대한 <message>
 ms.date: 03/30/2017
 ms.assetid: f95c5ecd-abb6-4b77-a6d7-a38727f4a142
 ms.openlocfilehash: db6717022bf3af0c4922818668595dd3937e9c71
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704409"
 ---
 # <a name="claimtyperequirements-for-message"></a>\<claimTypeRequirements >에 대 한 \<메시지 >
 필요한 클레임 형식의 컬렉션을 지정합니다.  

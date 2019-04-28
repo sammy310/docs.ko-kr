@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
 ms.openlocfilehash: 15cf94d5ea191435723f754f35e43d65632142e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773500"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>방법: 순서도 워크플로 만들기
 기본 제공 활동뿐 아니라 사용자 지정 활동에서도 워크플로를 구성할 수 있습니다. 이 항목에서는 같은 모두 기본 제공 활동을 사용 하는 워크플로 만드는 방법을 단계별로 합니다 <xref:System.Activities.Statements.Flowchart> 활동 및 사용자 지정 활동을 이전 [방법: 활동 만들기](how-to-create-an-activity.md) 항목입니다. 이 워크플로는 숫자 추측 게임을 모델링합니다.  

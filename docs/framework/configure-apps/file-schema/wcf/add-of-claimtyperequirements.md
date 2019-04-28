@@ -3,11 +3,11 @@ title: <claimTypeRequirements>의 <add>
 ms.date: 03/30/2017
 ms.assetid: c68e83c9-39e8-4264-b1ce-b6a9eb5b98aa
 ms.openlocfilehash: 97d3ecca369aeffb7b2e8464f385eeae13bd470f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704481"
 ---
 # <a name="add-of-claimtyperequirements"></a>\<추가 >의 \<claimTypeRequirements >
 페더레이션 자격 증명에 표시되어야 하는 필수 클레임 및 선택적 클레임의 형식을 지정합니다. 예를 들어, 서비스는 특정 집합의 클레임 형식이어야 하는 들어오는 자격 증명에 대한 요구 사항을 기술합니다.  

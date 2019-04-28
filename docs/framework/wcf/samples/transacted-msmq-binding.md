@@ -3,11 +3,11 @@ title: 트랜잭션된 MSMQ 바인딩
 ms.date: 03/30/2017
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
 ms.openlocfilehash: 259ca8059ac1c4f62636a2320d5eb64daa7f56cf
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759988"
 ---
 # <a name="transacted-msmq-binding"></a>트랜잭션된 MSMQ 바인딩
 
@@ -90,8 +90,7 @@ public static void Main()
 ```
 
 > [!NOTE]
-> 
-  <xref:System.Messaging>을 사용하여 큐를 만들 때 큐 이름은 로컬 컴퓨터에 점(.)을, 그 경로에는 백슬래시 구분 기호를 사용합니다. Windows Communication Foundation (WCF) 끝점 net.msmq 체계를 사용 하 여 큐 주소를 사용 하 여를 로컬 컴퓨터를 나타내는 "localhost"를 사용 하며 해당 경로에 슬래시를 사용 합니다.
+> <xref:System.Messaging>을 사용하여 큐를 만들 때 큐 이름은 로컬 컴퓨터에 점(.)을, 그 경로에는 백슬래시 구분 기호를 사용합니다. Windows Communication Foundation (WCF) 끝점 net.msmq 체계를 사용 하 여 큐 주소를 사용 하 여를 로컬 컴퓨터를 나타내는 "localhost"를 사용 하며 해당 경로에 슬래시를 사용 합니다.
 
 클라이언트는 트랜잭션 범위를 만듭니다. 트랜잭션 범위 내에서 큐와 통신을 수행하여 모든 메시지가 큐로 전송되거나 어떤 메시지도 큐로 전송되지 않는 가장 작은 단위로 처리되도록 합니다. 트랜잭션은 트랜잭션 범위에서 <xref:System.Transactions.TransactionScope.Complete%2A>를 호출하여 커밋합니다.
 
@@ -229,8 +228,7 @@ Processing Purchase Order: 7b31ce51-ae7c-4def-9b8b-617e4288eafd
 2. 샘플을 실행하기 전에 서버와 클라이언트 모두에서 구성을 변경해야 합니다.
 
     > [!NOTE]
-    > 
-  `security mode`를 `None`으로 설정하는 것은 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 및 `Message` 보안을 `None`으로 설정하는 것과 같습니다.
+    > `security mode`를 `None`으로 설정하는 것은 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 및 `Message` 보안을 `None`으로 설정하는 것과 같습니다.
 
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.

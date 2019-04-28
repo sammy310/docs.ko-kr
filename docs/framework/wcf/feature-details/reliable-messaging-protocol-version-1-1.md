@@ -1,15 +1,15 @@
 ---
-title: Reliable Messaging 프로토콜 버전 1.1
+title: 안정적인 메시징 프로토콜 버전 1.1
 ms.date: 03/30/2017
 ms.assetid: 0da47b82-f8eb-42da-8bfe-e56ce7ba6f59
 ms.openlocfilehash: 6b8732e0b48797c219b53bb8bf70e1ba57e25c42
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55073228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933993"
 ---
-# <a name="reliable-messaging-protocol-version-11"></a>Reliable Messaging 프로토콜 버전 1.1
+# <a name="reliable-messaging-protocol-version-11"></a>안정적인 메시징 프로토콜 버전 1.1
 이 항목에서는 WS-ReliableMessaging 대 한 Windows Communication Foundation (WCF) 구현 세부 정보를 다룹니다 HTTP 전송을 사용 하 여 상호 운용에 필요한 2007 년 2 월 (버전 1.1) 프로토콜입니다. WCF에는 제약 조건 및 자세한 내용은이 항목에서에서 확인 된 내용과 함께 WS-ReliableMessaging 사양을 따릅니다. 부터 WS-ReliableMessaging 버전 1.1 프로토콜을 구현 되는 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]합니다.  
   
  WS-ReliableMessaging 2007년 2월 프로토콜을 구현 하 여 WCF에는 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>합니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "55073228"
 |-|-|  
 |wsrm|http://docs.oasis-open.org/ws-rx/wsrm/200702|  
 |netrm|http://schemas.microsoft.com/ws/2006/05/rm|  
-|s|http://www.w3.org/2003/05/soap-envelope|  
+|초|http://www.w3.org/2003/05/soap-envelope|  
 |wsa|http://schemas.xmlsoap.org/ws/2005/08/addressing|  
 |wsse|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wssecurity-secext-1.0.xsd|  
 |wsrmp|http://docs.oasis-open.org/ws-rx/wsrmp/200702|  

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 57ddbd8c6935f2c0275c132e30ea175c6f198fac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777704"
 ---
 # <a name="imetadataimportgetmethodsemantics-method"></a>IMetaDataImport::GetMethodSemantics 메서드
 토큰 쌍을 이루는 속성과 지정한 MethodDef 토큰이 참조 하는 메서드 및 이벤트 지정한 eventprop 참조 간의 관계를 나타내는 플래그를 가져옵니다.  
