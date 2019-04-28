@@ -5,18 +5,18 @@ ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c82d32fe5b1e62a19ff5e2920c5943f1303b2d64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599474"
 ---
 # <a name="serialization-and-metadata"></a>Serialization 및 메타데이터
 앱이 개체를 serialize 및 deserialize하는 경우에는 런타임에 필요한 메타데이터가 제공되도록 런타임 지시문(.rd.xml) 파일에 항목을 추가해야 할 수 있습니다. serializer에는 두 가지 범주가 있으며 각 범주는 런타임 지시문 파일에서 서로 다른 방식으로 처리해야 합니다.  
   
--   리플렉션 기반 타사 serializer. 이러한 serializer의 경우 런타임 지시문 파일을 수정해야 합니다. 여기에 대해서는 다음 섹션에서 설명합니다.  
+- 리플렉션 기반 타사 serializer. 이러한 serializer의 경우 런타임 지시문 파일을 수정해야 합니다. 여기에 대해서는 다음 섹션에서 설명합니다.  
   
--   .NET Framework 클래스 라이브러리에 포함된 리플렉션을 기반으로 하지 않는 serializer. 이러한 직렬 변환기의 경우 런타임 지시문 파일을 수정해야 할 수도 있습니다. 아래의 [Microsoft 직렬 변환기](#Microsoft) 섹션에서 여기에 대해 설명합니다.  
+- .NET Framework 클래스 라이브러리에 포함된 리플렉션을 기반으로 하지 않는 serializer. 이러한 직렬 변환기의 경우 런타임 지시문 파일을 수정해야 할 수도 있습니다. 아래의 [Microsoft 직렬 변환기](#Microsoft) 섹션에서 여기에 대해 설명합니다.  
   
 <a name="ThirdParty"></a>   
 ## <a name="third-party-serializers"></a>타사 serializer  

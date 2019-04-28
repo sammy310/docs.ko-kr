@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
 ms.openlocfilehash: b4682d60e213ad57308143b2c7ea06d123daf61d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607497"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>XmlDataDocument로 데이터 집합 동기화
 이 단원에서는 <xref:System.Data.DataSet>와 동기화된 강력한 형식의 <xref:System.Xml.XmlDataDocument>을 사용하여 구매 주문을 처리하는 한 가지 단계를 보여 줍니다. 다음 예제에서는 한 **데이터 집합** 소스 XML 문서의 일부만 일치 하는 스키마가 최소화 된 합니다. 예제에서는 사용를 **XmlDataDocument** 소스 XML 문서의 신뢰도 유지 하기 위해 사용 하도록 설정 합니다 **데이터 집합** XML 문서의 하위 집합을 노출 하는 데 사용할 합니다.  

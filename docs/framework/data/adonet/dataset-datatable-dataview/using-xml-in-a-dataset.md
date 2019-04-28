@@ -3,11 +3,11 @@ title: 데이터 집합에서 XML 사용
 ms.date: 03/30/2017
 ms.assetid: 35138159-e199-49ec-baf7-1ec6777e171e
 ms.openlocfilehash: 9e586ff0c6f28dd5919bc8b1bc640389a5cad610
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607089"
 ---
 # <a name="using-xml-in-a-dataset"></a>데이터 집합에서 XML 사용
 ADO.NET을 사용하면 XML 스트림이나 문서에서 <xref:System.Data.DataSet>을 채울 수 있습니다. XML 스트림이나 문서를 사용하여 데이터, 스키마 정보 또는 두 가지 모두를 <xref:System.Data.DataSet>에 제공할 수 있습니다. XML 스트림이나 문서에서 제공되는 정보를 <xref:System.Data.DataSet>에 있는 기존 데이터나 스키마 정보와 결합할 수 있습니다.  

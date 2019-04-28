@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1fcdd52e648b2461036921772b6b5684ba6aec22
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598149"
 ---
 # <a name="icorprofilercallbackexceptionoshandlerenter-method"></a>ICorProfilerCallback::ExceptionOSHandlerEnter 메서드
 구현되지 않았습니다. 관리 되지 않는 예외 정보를 필요로 하는 프로파일러는 다른 수단을 통해이 정보를 얻어야 합니다.  

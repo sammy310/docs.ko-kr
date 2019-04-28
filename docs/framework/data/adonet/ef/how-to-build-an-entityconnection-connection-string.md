@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5bd1a748-3df7-4d0a-a607-14f25e3175e9
 ms.openlocfilehash: 335c85d5234df4dd00d0ee65b2077996411081b3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606617"
 ---
 # <a name="how-to-build-an-entityconnection-connection-string"></a>방법: EntityConnection 연결 문자열 빌드
 이 항목에서는 <xref:System.Data.EntityClient.EntityConnection>을 작성하는 방법에 대한 예제를 제공합니다.  

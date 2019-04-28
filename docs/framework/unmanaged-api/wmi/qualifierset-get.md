@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b0dc76a2732bf9c1e4f3a26fa2d045bfbcd837ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61597006"
 ---
 # <a name="qualifiersetget-function"></a>QualifierSet_Get 함수
 지정한 명명된 한정자를 가져옵니다.  

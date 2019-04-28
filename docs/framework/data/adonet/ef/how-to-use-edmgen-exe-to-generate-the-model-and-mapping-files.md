@@ -3,24 +3,24 @@ title: '방법: EdmGen.exe를 사용하여 모델 및 매핑 파일 생성'
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
 ms.openlocfilehash: 915a9f3c53dba355480a3869602f963b195d53fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605992"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>방법: EdmGen.exe를 사용하여 모델 및 매핑 파일 생성
 이 항목에서는 EDM 생성기(EdmGen.exe) 도구를 사용하여 School 데이터베이스를 기반으로 하는 다음 파일을 생성하는 방법을 보여 줍니다.  
   
--   개념적 모델(.csdl 파일)  
+- 개념적 모델(.csdl 파일)  
   
--   저장소 모델(.ssdl 파일)  
+- 저장소 모델(.ssdl 파일)  
   
--   개념적 모델과 저장소 모델 간의 매핑(.msl 파일)  
+- 개념적 모델과 저장소 모델 간의 매핑(.msl 파일)  
   
--   Visual Basic 또는 C#의 개체 계층 코드  
+- Visual Basic 또는 C#의 개체 계층 코드  
   
--   뷰 파일  
+- 뷰 파일  
   
  EdmGen.exe 도구에서는 /mode:FullGeneration을 사용하여 위에 나열된 파일을 생성합니다. EdmGen.exe 명령에 대 한 자세한 내용은 참조 하십시오 [EDM 생성기 (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md)합니다.  
   

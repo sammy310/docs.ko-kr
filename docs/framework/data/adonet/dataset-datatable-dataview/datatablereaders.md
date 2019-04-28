@@ -3,11 +3,11 @@ title: DataTableReader
 ms.date: 03/30/2017
 ms.assetid: 97546ae2-0e42-4d26-961d-e0b244d81ded
 ms.openlocfilehash: a790335a25327563e3dab6093449345b99afd048
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607869"
 ---
 # <a name="datatablereaders"></a>DataTableReader
 <xref:System.Data.DataTableReader>는 <xref:System.Data.DataTable> 또는 <xref:System.Data.DataSet>의 내용을 하나 이상의 정방향 읽기 전용 결과 집합 형태로 제공합니다.  

@@ -19,11 +19,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ca922d8b582c0608073d4fd0ba986167ae470e34
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599500"
 ---
 # <a name="cordebugngenpolicy-enumeration"></a>CorDebugNGenPolicy 열거형
 디버거가 네이티브 이미지 캐시에서 네이티브(NGen) 이미지를 로드하는지 여부를 결정하는 값을 제공합니다.  

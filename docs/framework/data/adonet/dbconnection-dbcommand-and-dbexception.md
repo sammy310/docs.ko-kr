@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 58aab611-7e6f-4749-b983-28ab7ae87dbe
 ms.openlocfilehash: 759b2f36f9d38cdac0cfe4ff8e451b38012493e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59143834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607247"
 ---
 # <a name="dbconnection-dbcommand-and-dbexception"></a>DbConnection, DbCommand 및 DbException
 <xref:System.Data.Common.DbProviderFactory>와 <xref:System.Data.Common.DbConnection>을 만든 다음 명령과 데이터 판독기를 사용하여 데이터 소스에서 데이터를 검색할 수 있습니다.  

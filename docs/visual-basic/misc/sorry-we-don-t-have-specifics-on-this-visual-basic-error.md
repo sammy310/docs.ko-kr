@@ -3045,11 +3045,11 @@ f1_keywords:
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
 ms.openlocfilehash: 6a339fc91ce5e1b4ff3c5cbaacdae72f02fdf733
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58022974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61594778"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a>죄송 합니다. 이 Visual Basic 오류에 대한 구체적인 정보가 없습니다.
 죄송합니다. 이 오류에 대한 구체적인 정보가 없습니다. 오류 번호와 메시지 텍스트를 검색하여 웹에서 정보를 찾을 수 있습니다. 또는 다음 포럼 중 하나에서 다른 개발자에게 질문을 할 수 있습니다.  
@@ -3058,7 +3058,7 @@ ms.locfileid: "58022974"
  Visual Basic 언어 구문 및 컴파일러에 대 한 일반적인 토론 질문에 대 한 포럼을 제공 합니다.  
   
  [Visual Basic Interop 및 업그레이드](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbinterop)  
- 에 대 한 질문을 위한 포럼을 제공 하 고 Visual Basic 업그레이드 및 상호 운용성 기능을 사용 하 여 발급 합니다.  
+ 에 대 한 질문을 위한 포럼을 제공 하 고 Visual basic 업그레이드 및 상호 운용성 기능을 사용 하 여 발급 합니다.  
   
  [Visual Basic IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbide)  
  Visual Studio 환경에서 작업 하는 방법에 대 한 질문에 대 한 포럼을 제공 합니다.  

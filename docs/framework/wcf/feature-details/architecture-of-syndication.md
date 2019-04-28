@@ -3,24 +3,24 @@ title: 배포 아키텍처
 ms.date: 03/30/2017
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
 ms.openlocfilehash: 4083f7f7ef3fc986e9a7c430b8ed8cfe451c9d86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61596364"
 ---
 # <a name="architecture-of-syndication"></a>배포 아키텍처
 배포 API는 네트워크에서 배포된 콘텐츠를 다양한 형식으로 작성할 수 있는 형식 중립적 프로그래밍 모델을 제공하기 위해 디자인되었습니다. 추상 데이터 모델은 다음 클래스로 구성됩니다.  
   
--   <xref:System.ServiceModel.Syndication.SyndicationCategory>  
+- <xref:System.ServiceModel.Syndication.SyndicationCategory>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationFeed>  
+- <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationItem>  
+- <xref:System.ServiceModel.Syndication.SyndicationItem>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationLink>  
+- <xref:System.ServiceModel.Syndication.SyndicationLink>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationPerson>  
+- <xref:System.ServiceModel.Syndication.SyndicationPerson>  
   
  이러한 클래스는 이름이 다른 경우도 일부 있지만 Atom 1.0 사양에 정의된 구문에 밀접하게 매핑됩니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "59075914"
   
 ## <a name="extensibility"></a>확장성  
   
--   배포 프로토콜의 주요 기능은 확장성입니다. Atom 1.0 및 RSS 2.0에서는 사양에 정의되지 않은 배포 피드에 특성 및 요소를 추가할 수 있습니다. WCF 배포 프로그래밍 모델에서는 두 가지 사용자 지정 특성 및 확장:는 새 클래스 파생 및 자유로운 형식의 액세스 합니다. 자세한 내용은 [배포 확장성](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md)합니다.  
+- 배포 프로토콜의 주요 기능은 확장성입니다. Atom 1.0 및 RSS 2.0에서는 사양에 정의되지 않은 배포 피드에 특성 및 요소를 추가할 수 있습니다. WCF 배포 프로그래밍 모델에서는 두 가지 사용자 지정 특성 및 확장:는 새 클래스 파생 및 자유로운 형식의 액세스 합니다. 자세한 내용은 [배포 확장성](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
 

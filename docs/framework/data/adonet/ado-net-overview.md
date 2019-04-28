@@ -3,11 +3,11 @@ title: ADO.NET 개요
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
 ms.openlocfilehash: 7ec3b5f4dd08a39f96ed28e6666fd4b00bced903
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607364"
 ---
 # <a name="adonet-overview"></a>ADO.NET 개요
 ADO.NET은 OLE DB 및 ODBC를 통해 노출되는 데이터 소스, SQL Server 및 XML과 같은 데이터 소스에 대한 일관성 있는 액세스를 제공합니다. 데이터 공유 소비자 응용 프로그램은 ADO.NET을 통해 이러한 데이터 소스에 연결하여 포함된 데이터를 검색, 처리 및 업데이트할 수 있습니다.  

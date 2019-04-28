@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ad96224daf79b17d3902217af061173580f1478a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61597201"
 ---
 # <a name="icorprofilercallback4survivingreferences2-method"></a>ICorProfilerCallback4::SurvivingReferences2 메서드
 비압축 가비지 수집의 결과로 힙에 있는 개체의 레이아웃을 보고합니다. 이 메서드는 프로파일러 구현에 [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) 인터페이스입니다. 이 콜백은 대체 합니다 [ICorProfilerCallback2::SurvivingReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md) 메서드를 더 큰 범위의 길이가 ulong에서으로 표현 될 수 있습니다 어떤 초과 하는 개체를 보고할 수 있어.  

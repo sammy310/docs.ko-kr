@@ -3,11 +3,11 @@ title: 집계 함수(Entity Framework용 SqlClient)
 ms.date: 03/30/2017
 ms.assetid: 03303f01-b591-4efc-9875-f9c608edff0b
 ms.openlocfilehash: f2f2b557cd9f126ddd513a0f42d3ac95114c3822
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606782"
 ---
 # <a name="aggregate-functions-sqlclient-for-entity-framework"></a>집계 함수(Entity Framework용 SqlClient)
 .NET Framework Data Provider for SQL Server(SqlClient)에서는 집계 함수를 제공합니다. 집계 함수는 입력 값 집합에 대해 계산을 수행하여 하나의 값을 반환합니다. 이 함수는 SqlClient를 사용할 때 사용 가능한 SqlServer 네임스페이스에 있습니다. 공급자의 네임스페이스 속성이 있으면 특정 구문(예: 형식 및 함수)에 대해 이 공급자가 사용하는 접두사를 Entity Framework에서 찾을 수 있습니다.  

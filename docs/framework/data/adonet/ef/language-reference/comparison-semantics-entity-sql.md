@@ -3,11 +3,11 @@ title: 비교 의미 체계(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
 ms.openlocfilehash: 6b4c4177ebd6c45e00a1ac7774e40a43e0c14a74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605973"
 ---
 # <a name="comparison-semantics-entity-sql"></a>비교 의미 체계(Entity SQL)
 다음 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 연산자를 수행하면 형식 인스턴스 비교가 수반됩니다.  
@@ -15,53 +15,53 @@ ms.locfileid: "59083337"
 ## <a name="explicit-comparison"></a>명시적 비교  
  같음 연산:  
   
--   =  
+- =  
   
--   !=  
+- !=  
   
  정렬 연산:  
   
--   <  
+- <  
   
--   \<=  
+- \<=  
   
--   \>  
+- \>  
   
--   \>=  
+- \>=  
   
  Null 허용 여부 연산:  
   
--   IS NULL  
+- IS NULL  
   
--   IS NOT NULL  
+- IS NOT NULL  
   
 ## <a name="explicit-distinction"></a>명시적 구분  
  같음 구분:  
   
--   DISTINCT  
+- DISTINCT  
   
--   GROUP BY  
+- GROUP BY  
   
  정렬 구분:  
   
--   ORDER BY  
+- ORDER BY  
   
 ## <a name="implicit-distinction"></a>암시적 구분  
  Set 작업 및 조건자(같음):  
   
--   UNION  
+- UNION  
   
--   INTERSECT  
+- INTERSECT  
   
--   EXCEPT  
+- EXCEPT  
   
--   SET  
+- SET  
   
--   OVERLAPS  
+- OVERLAPS  
   
  항목 조건자(같음):  
   
--   IN  
+- IN  
   
 ## <a name="supported-combinations"></a>지원되는 조합  
  다음 표에서는 각 종류의 형식에 대해 지원되는 비교 연산자의 조합을 모두 보여 줍니다.  

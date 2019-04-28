@@ -3,11 +3,11 @@ title: System.ServiceModel.Channels.PeerServiceOpened
 ms.date: 03/30/2017
 ms.assetid: b06345f4-cde9-484d-b7fb-d67dc356aed6
 ms.openlocfilehash: 3a2003a89b2ea30309974487b3f207596d293ed5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61596377"
 ---
 # <a name="systemservicemodelchannelspeerserviceopened"></a>System.ServiceModel.Channels.PeerServiceOpened
 피어 서비스 모듈이 열려 지정된 주소에서 수신 대기를 시작했습니다.  

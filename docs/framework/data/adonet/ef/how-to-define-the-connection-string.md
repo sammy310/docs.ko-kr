@@ -3,11 +3,11 @@ title: '방법: 연결 문자열 정의'
 ms.date: 03/30/2017
 ms.assetid: 6027335d-4e26-420d-9151-6523289b1989
 ms.openlocfilehash: 7fb722acbb13b3502d004978581701cc70118ff8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606106"
 ---
 # <a name="how-to-define-the-connection-string"></a>방법: 연결 문자열 정의
 
@@ -32,8 +32,8 @@ ms.locfileid: "53129690"
 
 프로젝트에 응용 프로그램 구성 파일을 선택 하 여 하나를 추가할 수 있습니다 **새 항목 추가** 에서 합니다 **프로젝트** 메뉴에서 선택 하는 **일반** 범주 선택 **응용 프로그램 구성 파일**를 클릭 한 다음 **추가**합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [빠른 시작](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399182(v=vs.100))
-- [어떻게: 새.edmx 파일 만들기](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100))
+- [방법: 새.edmx 파일 만들기](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100))
 - [ADO.NET 엔터티 데이터 모델 도구](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

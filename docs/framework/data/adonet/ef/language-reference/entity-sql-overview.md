@@ -3,11 +3,11 @@ title: Entity SQL 개요
 ms.date: 03/30/2017
 ms.assetid: f0bb8120-e709-40a3-ac1e-5520dc47477d
 ms.openlocfilehash: 100d616462cd76e1dde8fc855787ec3118842fc8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606179"
 ---
 # <a name="entity-sql-overview"></a>Entity SQL 개요
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]은 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]에서 개념적 모델을 쿼리하는 데 사용할 수 있는 SQL 유사 언어입니다. 개념적 모델 엔터티 및 관계 데이터를 표시 하 고 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 이러한 엔터티 및 관계는 친숙 한 SQL을 사용한 적이 있는 형식으로 쿼리할 수 있습니다.  

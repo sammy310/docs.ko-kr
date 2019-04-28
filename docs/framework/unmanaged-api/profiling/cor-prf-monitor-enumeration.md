@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dbb39eb768069a737f3f89c771bf02fd6bc0c3b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599054"
 ---
 # <a name="corprfmonitor-enumeration"></a>COR_PRF_MONITOR 열거형
 프로파일러가 구독하려는 동작, 기능 또는 이벤트를 지정하는 데 사용되는 값을 포함합니다.  
@@ -102,15 +102,15 @@ typedef enum {
 ## <a name="members"></a>멤버  
  다음 섹션은 `COR_PRF_MONITOR` 범주별 열거형 멤버입니다. 범주는 다음과 같습니다.  
   
--   [플래그 설정 없음](#None)  
+- [플래그 설정 없음](#None)  
   
--   [콜백 플래그](#Callback)  
+- [콜백 플래그](#Callback)  
   
--   [기능 사용 플래그](#Feature)  
+- [기능 사용 플래그](#Feature)  
   
--   [구성 플래그](#Config)  
+- [구성 플래그](#Config)  
   
--   [복합 플래그](#Composite)  
+- [복합 플래그](#Composite)  
   
 <a name="None"></a>   
 ### <a name="no-flags-set"></a>플래그 설정 없음  

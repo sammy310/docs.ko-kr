@@ -3,11 +3,11 @@ title: ADO.NET 데이터 집합
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
 ms.openlocfilehash: 50e8e8f5e4b3ee2f5a41cb9dad11b5e701135d9e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607585"
 ---
 # <a name="adonet-datasets"></a>ADO.NET 데이터 집합
 <xref:System.Data.DataSet> 개체는 연결되지 않은 분산 데이터 시나리오를 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]을 사용하여 지원하는 데 핵심적인 역할을 수행합니다. 합니다 **데이터 집합** 데이터 소스에 관계 없이 일관성 있는 관계형 프로그래밍 모델을 제공 하는 데이터는 메모리 상주 표현입니다. 이 개체는 다양한 여러 데이터 소스에 사용하거나 XML 데이터에 사용할 수 있을 뿐 아니라 이 개체를 사용하여 응용 프로그램의 로컬 데이터를 관리할 수도 있습니다. 합니다 **데이터 집합** 관련된 테이블, 제약 조건 및 테이블 간의 관계를 포함 하 여 데이터의 전체 집합을 나타냅니다. 다음 그림에 표시 된 **데이터 집합** 개체 모델입니다.  

@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: af0b38e955ac10592dc5cd0d0e18b0cff08834af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599535"
 ---
 # <a name="ibindingdisplay-interface"></a>IBindingDisplay 인터페이스
 실행 중인 응용 프로그램에 대 한 현재 바인딩 정보를 표시 하는 메서드를 제공 합니다.  

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d927bd21903bda6fd8a34992145eb495a3342382
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59081959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598261"
 ---
 # <a name="icorprofilercallbackappdomainshutdownfinished-method"></a>ICorProfilerCallback::AppDomainShutdownFinished 메서드
 응용 프로그램 도메인을 프로세스에서 로드 되었음을 프로파일러에 알립니다.  

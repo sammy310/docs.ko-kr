@@ -3,11 +3,11 @@ title: 정식 함수 매핑에 대한 CLR 메서드
 ms.date: 03/30/2017
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
 ms.openlocfilehash: 16d447e82959f5ade7210b36dcf9d06bed9c9b00
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605719"
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>정식 함수 매핑에 대한 CLR 메서드
 
@@ -38,9 +38,9 @@ LINQ 시나리오의 경우, Entity Framework에 대한 쿼리에서는 정식 �
 
 ## <a name="systemstring-method-instance-mapping"></a>System.String 메서드(인스턴스) 매핑
 
-|System.String 메서드(인스턴스)|정식 함수|참고|
+|System.String 메서드(인스턴스)|정식 함수|노트|
 |---------------------------------------|------------------------|-----------|
-|Boolean Contains(String `value`)|`this` LIKE '%`value`%'|`value`가 상수가 아니면 IndexOf(`this`, `value`) > 0에 매핑됩니다.|
+|Boolean Contains(String `value`)|`this` LIKE '%`value`%'|하는 경우 `value` 가 상수가 아니면 IndexOf에 매핑됩니다 (`this`, `value`) > 0|
 |Boolean EndsWith(String `value`)|`this` LIKE `'`%`value`'|`value`가 상수가 아니면 Right(`this`, length(`value`)) = `value`에 매핑됩니다.|
 |Boolean StartsWith(String `value`)|`this` LIKE '`value`%'|`value`가 상수가 아니면 IndexOf(`this`, `value`) = 1에 매핑됩니다.|
 |길이|Length(`this`)||
@@ -60,17 +60,17 @@ LINQ 시나리오의 경우, Entity Framework에 대한 쿼리에서는 정식 �
 
 ## <a name="systemdatetime-method-static-mapping"></a>System.DateTime 메서드(정적) 매핑
 
-|System.DateTime 메서드(정적)|정식 함수|참고|
+|System.DateTime 메서드(정적)|정식 함수|노트|
 |---------------------------------------|------------------------|-----------|
 |Boolean Equals(DateTime `t1`, DateTime `t2`)|= 연산자||
 |System.DateTime.Now|CurrentDateTime()||
 |System.DateTime.UtcNow|CurrentUtcDateTime()||
 |Boolean op_Equality(DateTime `d1`, DateTime `d2`)|= 연산자||
 |Boolean op_GreaterThan(DateTime `t1`, DateTime `t2`)|> 연산자||
-|Boolean op_GreaterThanOrEqual(DateTime `t1`, DateTime `t2`)|>= 연산자||
+|Boolean op_GreaterThanOrEqual(DateTime `t1`, DateTime `t2`)|> = 연산자||
 |Boolean op_Inequality(DateTime `t1`, DateTime `t2`)|!= 연산자||
 |부울 op_LessThan (DateTime `t1`, DateTime `t2`)|< 연산자||
-|Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)|<= 연산자||
+|Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)|< = 연산자||
 |Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal `Interval` As DateInterval, \_<br /><br /> ByVal `DateValue` 날짜/시간으로 \_<br /><br /> 선택적 ByVal `FirstDayOfWeekValue` FirstDayOfWeek와 식, = \_<br /><br /> 선택적 ByVal `FirstWeekOfYearValue` FirstWeekOfYear로 VbFirstJan1 = \_<br /><br /> ) As Integer||자세한 내용은 DatePart 함수 단원을 참조하세요.|
 |Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime()||
 |Microsoft.VisualBasic.DateAndTime.Year(DateTime `TimeValue`)|Year()||
@@ -97,7 +97,7 @@ LINQ 시나리오의 경우, Entity Framework에 대한 쿼리에서는 정식 �
 
 나열된 속성의 `get` 메서드에 대한 매핑이 나와 있습니다.
 
-|System.DateTimeOffset 메서드(인스턴스)|정식 함수|참고|
+|System.DateTimeOffset 메서드(인스턴스)|정식 함수|노트|
 |-----------------------------------------------|------------------------|-----------|
 |Day|Day(`this`)|SQL Server 2005에 대해서는 지원되지 않습니다.|
 |Hour|Hour(`this`)|SQL Server 2005에 대해서는 지원되지 않습니다.|
@@ -114,7 +114,7 @@ LINQ 시나리오의 경우, Entity Framework에 대한 쿼리에서는 정식 �
 
 나열된 속성의 `get` 메서드에 대한 매핑이 나와 있습니다.
 
-|System.DateTimeOffset    (  )|정식 함수|참고|
+|System.DateTimeOffset    (  )|정식 함수|노트|
 |---------------------------------------------|------------------------|-----------|
 |System.DateTimeOffset.Now()|CurrentDateTimeOffset()|SQL Server 2005에 대해서는 지원되지 않습니다.|
 
@@ -122,7 +122,7 @@ LINQ 시나리오의 경우, Entity Framework에 대한 쿼리에서는 정식 �
 
 나열된 속성의 `get` 메서드에 대한 매핑이 나와 있습니다.
 
-|System.TimeSpan 메서드(인스턴스)|정식 함수|참고|
+|System.TimeSpan 메서드(인스턴스)|정식 함수|노트|
 |-----------------------------------------|------------------------|-----------|
 |시|Hour(`this`)|SQL Server 2005에 대해서는 지원되지 않습니다.|
 |밀리초|Millisecond(`this`)|SQL Server 2005에 대해서는 지원되지 않습니다.|

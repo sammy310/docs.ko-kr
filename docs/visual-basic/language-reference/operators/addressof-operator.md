@@ -9,11 +9,11 @@ helpviewer_keywords:
 - addresses, passing to API procedures
 ms.assetid: 8105a59d-60d8-4ab5-b221-5899cdfacbf4
 ms.openlocfilehash: 9d8515b6d5b0caf3552ed05a7e0cd4a271efaf54
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608348"
 ---
 # <a name="addressof-operator-visual-basic"></a>AddressOf 연산자(Visual Basic)
 특정 절차를 참조 하는 프로시저 대리자 인스턴스를 만듭니다.  

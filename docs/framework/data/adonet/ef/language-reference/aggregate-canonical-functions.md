@@ -3,11 +3,11 @@ title: 집계 정식 함수
 ms.date: 03/30/2017
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
 ms.openlocfilehash: f5d3584c6e9d35c9eb69b4f54cad45187416ee59
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607455"
 ---
 # <a name="aggregate-canonical-functions"></a>집계 정식 함수
 
@@ -23,8 +23,7 @@ null이 아닌 값의 평균을 반환합니다.
 
 **인수**
 
-
-  `Int32`, `Int64`, `Double` 및 `Decimal`입니다.
+`Int32`, `Int64`, `Double` 및 `Decimal`입니다.
 
 **반환 값**
 
@@ -75,8 +74,7 @@ null이 아닌 값의 최대값을 반환합니다.
 
 **인수**
 
-
-  `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`입니다.
+`Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`입니다.
 
 **반환 값**
 
@@ -93,8 +91,7 @@ null이 아닌 값의 최소값을 반환합니다.
 
 **인수**
 
-
-  `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`입니다.
+`Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`입니다.
 
 **반환 값**
 
@@ -111,8 +108,7 @@ null이 아닌 값의 표준 편차를 반환합니다.
 
 **인수**
 
-
-  `Int32`, `Int64`, `Double`, `Decimal`입니다.
+`Int32`, `Int64`, `Double`, `Decimal`입니다.
 
 **반환 값**
 
@@ -129,8 +125,7 @@ null이 아닌 값의 표준 편차를 반환합니다.
 
 **인수**
 
-
-  `Int32`, `Int64`, `Double`, `Decimal`입니다.
+`Int32`, `Int64`, `Double`, `Decimal`입니다.
 
 **반환 값**
 
@@ -147,8 +142,7 @@ null이 아닌 값의 합계를 반환합니다.
 
 **인수**
 
-
-  `Int32`, `Int64`, `Double`, `Decimal`입니다.
+`Int32`, `Int64`, `Double`, `Decimal`입니다.
 
 **반환 값**
 
@@ -165,8 +159,7 @@ null이 아닌 모든 값의 분산을 반환합니다.
 
 **인수**
 
-
-  `Int32`, `Int64`, `Double`, `Decimal`입니다.
+`Int32`, `Int64`, `Double`, `Decimal`입니다.
 
 **반환 값**
 
@@ -183,8 +176,7 @@ null이 아닌 모든 값의 모집단에 대한 분산을 반환합니다.
 
 **인수**
 
-
-  `Int32`, `Int64`, `Double`, `Decimal`입니다.
+`Int32`, `Int64`, `Double`, `Decimal`입니다.
 
 **반환 값**
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Instancing Sample [Windows Communication Foundation]
 ms.assetid: c290fa54-f6ae-45a1-9186-d9504ebc6ee6
 ms.openlocfilehash: 2cc3c54563b261d49264314f7306193accbe4040
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61596797"
 ---
 # <a name="instancing"></a>인스턴스 만들기
 Instancing 샘플에서는 클라이언트 요청에 응답하여 서비스 클래스의 인스턴스가 만들어지는 방법을 제어하는 인스턴스 만들기 동작 설정을 보여 줍니다. 샘플을 기반으로 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)를 구현 하는 `ICalculator` 서비스 계약입니다. 이 샘플은 `ICalculatorInstance`에서 상속되는 새 계약 `ICalculator`를 정의합니다. `ICalculatorInstance`에 의해 지정된 계약은 서비스 인스턴스의 상태를 검사하기 위한 세 개의 추가 작업을 제공합니다. 인스턴스 만들기 설정을 변경하여 클라이언트를 실행하면 동작의 변화를 확인할 수 있습니다.  
@@ -22,11 +22,11 @@ Instancing 샘플에서는 클라이언트 요청에 응답하여 서비스 클�
   
  사용할 수 있는 인스턴스 만들기 모드는 다음과 같습니다.  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerCall>: 각 클라이언트 요청에 대 한 새 서비스 인스턴스가 만들어집니다.  
+- <xref:System.ServiceModel.InstanceContextMode.PerCall>: 각 클라이언트 요청에 대 한 새 서비스 인스턴스가 만들어집니다.  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerSession>: 새 인스턴스를 각 새 클라이언트 세션에 대해 만들어지고 해당 세션 (세션을 지 원하는 바인딩이 필요)의 수명이 유지 관리 합니다.  
+- <xref:System.ServiceModel.InstanceContextMode.PerSession>: 새 인스턴스를 각 새 클라이언트 세션에 대해 만들어지고 해당 세션 (세션을 지 원하는 바인딩이 필요)의 수명이 유지 관리 합니다.  
   
--   <xref:System.ServiceModel.InstanceContextMode.Single>: 서비스 클래스의 단일 인스턴스 응용 프로그램의 수명에 대 한 모든 클라이언트 요청을 처리합니다.  
+- <xref:System.ServiceModel.InstanceContextMode.Single>: 서비스 클래스의 단일 인스턴스 응용 프로그램의 수명에 대 한 모든 클라이언트 요청을 처리합니다.  
   
  다음 코드 샘플과 같이 서비스 클래스는 `[ServiceBehavior(InstanceContextMode=<setting>)]` 특성을 사용하여 인스턴스 만들기 동작을 지정합니다. 주석 처리되는 줄을 변경하여 각 인스턴스 모드의 동작을 확인할 수 있습니다. 인스턴스 만들기 모드를 변경한 후 서비스를 다시 빌드해야 합니다. 클라이언트에서 인스턴스 만들기와 관련하여 지정해야 할 설정은 없습니다.  
   

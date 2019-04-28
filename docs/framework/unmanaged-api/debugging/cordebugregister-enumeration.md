@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fab5225225d4e4a4e07961b0f967cff2c1b07321
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599320"
 ---
 # <a name="cordebugregister-enumeration"></a>CorDebugRegister 열거형
 지정한 프로세서 아키텍처에 연결된 레지스터를 지정합니다.  
@@ -194,9 +194,9 @@ typedef enum CorDebugRegister {
 ## <a name="remarks"></a>설명  
  IA-64 프로세서에는 범용 데이터 레지스터와 부동 소수점 데이터 레지스터가 각각 128개씩 있지만 `REGISTER_IA64_R0` 및 `REGISTER_IA64_F0` 값만 제공됩니다. 나머지 값은 다음과 같이 결정할 수 있습니다.  
   
--   `REGISTER_IA64_R0`~`REGISTER_IA64_R1` 값의 경우 레지스터 번호를 `REGISTER_IA64_R127`에 더합니다. 그러면 IA-64 프로세서에서 1번~127번 데이터 레지스터에 해당하는 값이 생성됩니다.  
+- `REGISTER_IA64_R0`~`REGISTER_IA64_R1` 값의 경우 레지스터 번호를 `REGISTER_IA64_R127`에 더합니다. 그러면 IA-64 프로세서에서 1번~127번 데이터 레지스터에 해당하는 값이 생성됩니다.  
   
--   `REGISTER_IA64_F0`~`REGISTER_IA64_F1` 값의 경우 레지스터 번호를 `REGISTER_IA64_F127`에 더합니다. 그러면 IA-64 프로세서에서 1번~127번 FP 데이터 레지스터에 해당하는 값이 생성됩니다.  
+- `REGISTER_IA64_F0`~`REGISTER_IA64_F1` 값의 경우 레지스터 번호를 `REGISTER_IA64_F127`에 더합니다. 그러면 IA-64 프로세서에서 1번~127번 FP 데이터 레지스터에 해당하는 값이 생성됩니다.  
   
  예를 들어 IA-64 프로세서의 83번 데이터 레지스터를 지정해야 한다면 `REGISTER_IA64_R0` + 83을 사용합니다.  
   
