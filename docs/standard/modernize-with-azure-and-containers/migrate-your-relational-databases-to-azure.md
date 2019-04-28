@@ -35,15 +35,15 @@ Azure SQL Database에서 관리되는 인스턴스는 다음과 같은 특징이
 
 - Azure Virtual Network를 통한 보안 격리
 
-- 응용 프로그램 노출 호환성, 이러한 기능을 사용 하 여:
+- 다음 기능을 사용한 응용 프로그램 노출 호환성
 
   - SQL Server 에이전트 및 SQL Server Profiler
 
-  - 데이터베이스 간 참조 및 쿼리를 SQL CLR, 복제, 변경 데이터 캡처 (CDC) 및 Service Broker
+  - 크로스 데이터베이스 참조와 쿼리, SQL CLR, 복제, 변경 데이터 캡처(CDC) 및 Service Broker
 
-- 데이터베이스 크기 최대 35TB
+- 최대 35TB 데이터베이스 크기
 
-- 이러한 기능을 사용 하 여 최소 가동 중지 시간 마이그레이션:
+- 다음 기능을 사용한 최소 가동 중지 시간 마이그레이션
 
   - Azure Database Migration Service
 
