@@ -3,22 +3,22 @@ title: 데이터 집합 제약 조건에 XSD(XML 스키마) 제약 조건 매핑
 ms.date: 03/30/2017
 ms.assetid: 3d0d1a4b-9104-434f-ac04-6c01ab5716b5
 ms.openlocfilehash: a1690e99aeaeb7ed9c85fd28697ae22d34bb2018
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607901"
 ---
 # <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a>데이터 집합 제약 조건에 XSD(XML 스키마) 제약 조건 매핑
 XSD(XML 스키마 정의 언어)를 사용하여 요소와 특성에서 제약 조건을 지정할 수 있습니다. 관계형 스키마에 XML 스키마를 매핑하는 경우는 <xref:System.Data.DataSet>, XML 스키마 제약 조건을 테이블 및 열 내에서 적절 한 관계형 제약 조건에 매핑되는 **데이터 집합**합니다.  
   
  이 단원에서는 다음 XML 스키마 제약 조건의 매핑에 대해 설명합니다.  
   
--   고유성 제약 조건을 사용 하 여 지정 된 **고유** 요소입니다.  
+- 고유성 제약 조건을 사용 하 여 지정 된 **고유** 요소입니다.  
   
--   키 제약 조건을 사용 하 여 지정 된 **키** 요소입니다.  
+- 키 제약 조건을 사용 하 여 지정 된 **키** 요소입니다.  
   
--   Keyref 제약 조건을 사용 하 여 지정 된 **keyref** 요소입니다.  
+- Keyref 제약 조건을 사용 하 여 지정 된 **keyref** 요소입니다.  
   
  요소나 특성에서 제약 조건을 사용하여 문서의 모든 인스턴스에서 요소의 값에 특정 제한 사항을 지정할 수 있습니다. 에 key 제약 조건이 예를 들어,를 **CustomerID** 의 자식 요소를 **고객** 스키마 요소에에서 나타내는 값을 **CustomerID** 자식 요소 여야 합니다 모든 문서 인스턴스에서 고유 null 값이 허용 되지 않습니다.  
   

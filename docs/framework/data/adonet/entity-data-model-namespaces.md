@@ -3,11 +3,11 @@ title: '엔터티 데이터 모델: 네임스페이스'
 ms.date: 03/30/2017
 ms.assetid: 98ab4226-bb9f-44e7-af46-61a9b1a4e47c
 ms.openlocfilehash: 7772172512d35b9ce9cf07a992c1c5f0ecd8c55b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667160"
 ---
 # <a name="entity-data-model-namespaces"></a>엔터티 데이터 모델: 네임스페이스
 엔터티 데이터 모델 (EDM)의 네임 스페이스는 추상 컨테이너입니다 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md)를 [복합 형식은](../../../../docs/framework/data/adonet/complex-type.md), 및 [연결](../../../../docs/framework/data/adonet/association-type.md)합니다. EDM의 네임스페이스는 프로그래밍 언어의 네임스페이스와 유사하며, 포함하는 개체에 대한 컨텍스트를 제공하고 이름은 같지만 다른 네임스페이스에 포함된 개체를 구분하는 방법을 제공합니다.  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dfbdbb389f9945ffeea649bcddd45bee8caf2496
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698319"
 ---
 # <a name="efnstacktrace-function"></a>_EFN_StackTrace 함수
 비관리 코드와 관리 코드 간 각 전환에 대해 하나씩, `CONTEXT` 레코드 배열 및 관리되는 스택 추적의 텍스트 표시를 제공합니다.  
@@ -65,17 +65,17 @@ HRESULT CALLBACK _EFN_StackTrace(
 ## <a name="remarks"></a>설명  
  `_EFN_StackTrace` WinDbg 프로그래밍 인터페이스에서 구조를 호출할 수 있습니다. 매개 변수는 다음과 같이 사용 됩니다.  
   
--   하는 경우 `wszTextOut` isnull 및 `puiTextLength` 는 null이 아닌 함수에서 문자열 길이 반환 `puiTextLength`합니다.  
+- 하는 경우 `wszTextOut` isnull 및 `puiTextLength` 는 null이 아닌 함수에서 문자열 길이 반환 `puiTextLength`합니다.  
   
--   하는 경우 `wszTextOut` 가 null이 아닌 함수에 텍스트를 저장 `wszTextOut` 가리키는 위치까지 `puiTextLength`입니다. 버퍼 길이가 짧습니다 경우 충분 한 공간이 버퍼 또는 e_outofmemory가 반환 되었으면 성공적으로 반환 합니다.  
+- 하는 경우 `wszTextOut` 가 null이 아닌 함수에 텍스트를 저장 `wszTextOut` 가리키는 위치까지 `puiTextLength`입니다. 버퍼 길이가 짧습니다 경우 충분 한 공간이 버퍼 또는 e_outofmemory가 반환 되었으면 성공적으로 반환 합니다.  
   
--   전환에 대 한 부분 함수는 무시 됩니다 `pTransitionContexts` 고 `puiTransitionContextCount` 둘 다 null입니다. 이 경우 함수는 함수 이름만의 텍스트 출력을 사용 하 여 호출자에 게 제공합니다.  
+- 전환에 대 한 부분 함수는 무시 됩니다 `pTransitionContexts` 고 `puiTransitionContextCount` 둘 다 null입니다. 이 경우 함수는 함수 이름만의 텍스트 출력을 사용 하 여 호출자에 게 제공합니다.  
   
--   경우 `pTransitionContexts` isnull 및 `puiTransitionContextCount` 는 null이 아닌 반환에서 상황에 맞는 항목 수가 필요한 `puiTransitionContextCount`합니다.  
+- 경우 `pTransitionContexts` isnull 및 `puiTransitionContextCount` 는 null이 아닌 반환에서 상황에 맞는 항목 수가 필요한 `puiTransitionContextCount`합니다.  
   
--   하는 경우 `pTransitionContexts` 가 null이 아닌 함수 처리 길이의 구조의 배열로 `puiTransitionContextCount`합니다. 구조체의 크기가 지정 하 여 `uiSizeOfContext`, 크기 여야 [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) 또는 `CONTEXT` 아키텍처에 대 한 합니다.  
+- 하는 경우 `pTransitionContexts` 가 null이 아닌 함수 처리 길이의 구조의 배열로 `puiTransitionContextCount`합니다. 구조체의 크기가 지정 하 여 `uiSizeOfContext`, 크기 여야 [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) 또는 `CONTEXT` 아키텍처에 대 한 합니다.  
   
--   `wszTextOut` 다음 형식으로 기록 됩니다.  
+- `wszTextOut` 다음 형식으로 기록 됩니다.  
   
     ```  
     "<ModuleName>!<Function Name>[+<offset in hex>]  
@@ -84,11 +84,11 @@ HRESULT CALLBACK _EFN_StackTrace(
     ..."  
     ```  
   
--   16 진수 오프셋 0x0 인 경우 오프셋 없이 기록 됩니다.  
+- 16 진수 오프셋 0x0 인 경우 오프셋 없이 기록 됩니다.  
   
--   경우에 관리 코드가 없는 스레드에서 현재 컨텍스트에서 SOS_E_NOMANAGEDCODE 반환 합니다.  
+- 경우에 관리 코드가 없는 스레드에서 현재 컨텍스트에서 SOS_E_NOMANAGEDCODE 반환 합니다.  
   
--   합니다 `Flags` 매개 변수는 0 또는 각 앞에 EBP 및 ESP를 보려는 SOS_STACKTRACE_SHOWADDRESSES `module!functionname` 줄. 기본적으로 0입니다.  
+- 합니다 `Flags` 매개 변수는 0 또는 각 앞에 EBP 및 ESP를 보려는 SOS_STACKTRACE_SHOWADDRESSES `module!functionname` 줄. 기본적으로 0입니다.  
   
     ```  
     #define SOS_STACKTRACE_SHOWADDRESSES   0x00000001  

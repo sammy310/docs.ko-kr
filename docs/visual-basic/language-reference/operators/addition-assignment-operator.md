@@ -11,11 +11,11 @@ helpviewer_keywords:
 - compound assignment statements [Visual Basic]
 ms.assetid: d3e959f4-85d4-4e47-87c4-77b62335a5b3
 ms.openlocfilehash: 4b8f36397d0f52866ebe9fa188d6b163364aeffc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608335"
 ---
 # <a name="-operator-visual-basic"></a>+= 연산자(Visual Basic)
 숫자 변수 또는 속성의 값에 숫자 식의 값을 추가 하 고 그 결과 변수 또는 속성에 할당 합니다. 연결을 사용할 수도 있습니다는 `String` 식을 `String` 변수 또는 속성 및 변수 또는 속성에 결과 할당 합니다.  

@@ -9,13 +9,13 @@ helpviewer_keywords:
 - ipv6 element
 ms.assetid: 10b79aef-327b-4718-a892-e11f55e4d169
 ms.openlocfilehash: b8969cecf8ffb2ef23522f193bb322b1170e6111
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705066"
 ---
-# <a name="ipv6-element-network-settings"></a>\<ipv6 > 요소 (네트워크 설정)
+# <a name="ipv6-element-network-settings"></a>\<ipv6> 요소(네트워크 설정)
 인터넷 프로토콜 버전 6(ipv6)을 사용 하도록 설정의 사용 되지 않는 멤버의 응답을 <xref:System.Net.Dns> 클래스입니다.  
   
  \<configuration>  

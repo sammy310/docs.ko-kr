@@ -5,11 +5,11 @@ dev_langs:
 - vb
 ms.assetid: e22e5812-89c6-41f0-9302-bb899a46dbff
 ms.openlocfilehash: 82f840ab7dd26a4888ebf024d696f2c70701eb18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607234"
 ---
 # <a name="the-load-method"></a>로드 메서드
 <xref:System.Data.DataTable.Load%2A> 메서드를 사용하여 데이터 소스의 행과 함께 <xref:System.Data.DataTable>을 로드할 수 있습니다. 이 가장 간단한 형태로 단일 매개 변수를 허용 하는 오버 로드 된 메서드를 **DataReader**합니다. 이 형식으로 로드 하는 기능만 합니다 **DataTable** 행. 선택적으로 지정할 수 있습니다는 **LoadOption** 매개 변수 데이터 추가 하는 방법을 제어 하는 **DataTable**합니다.  

@@ -3,18 +3,18 @@ title: 대상 폴더가 파일입니다.
 ms.date: 07/20/2015
 ms.assetid: c5e40bcb-2414-4484-b2b9-a9c391ad0029
 ms.openlocfilehash: 3189b6284939fabaaff923b80e6e767b89df50b2
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58035084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61593933"
 ---
 # <a name="target-folder-is-a-file"></a>대상 폴더가 파일입니다.
 폴더 관련 작업을 수행하려는 동안 파일을 지정합니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   제공하는 경로를 확인하여 파일이 아니라 폴더를 지정해야 합니다.  
+- 제공하는 경로를 확인하여 파일이 아니라 폴더를 지정해야 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

@@ -3,11 +3,11 @@ title: <defaultPorts>의 <add>
 ms.date: 03/30/2017
 ms.assetid: f162ce42-963b-4779-96a7-d6d8b4ea0d2f
 ms.openlocfilehash: 5200c8893a89488b72c2c71d1a3703bf2aad1235
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704559"
 ---
 # <a name="add-of-defaultports"></a>\<추가 >의 \<a d d >
 클라이언트 응용 프로그램에서 수신하는 기본 통신 엔드포인트입니다.  

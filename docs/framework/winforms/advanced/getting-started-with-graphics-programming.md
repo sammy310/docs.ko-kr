@@ -8,11 +8,11 @@ helpviewer_keywords:
 - drawing
 ms.assetid: eb0f6d6f-9e52-4167-9592-ff4b82fb5869
 ms.openlocfilehash: f19a0e87c140a3fde8c43acc546ae11ea3b62d33
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747695"
 ---
 # <a name="getting-started-with-graphics-programming"></a>그래픽 프로그래밍 시작
 이 단원에서는 사용 하 여 시작 하는 방법을 보여 줍니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Windows Forms 응용 프로그램에서입니다. 다음 항목에서는 몇 가지를 완료 하는 방법을 보여 줍니다 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 그리기 및 도형 및 텍스트 입력 등의 작업입니다.  

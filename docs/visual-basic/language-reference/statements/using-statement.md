@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Using statement [Visual Basic]
 ms.assetid: 665d1580-dd54-4e96-a9a9-6be2a68948f1
 ms.openlocfilehash: fe53ea58dc98a4de793fe9dad1c3ceeac71622fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698657"
 ---
 # <a name="using-statement-visual-basic"></a>Using 문(Visual Basic)
 시작을 선언 된 `Using` 블록과 선택적으로 블록을 제어 하는 시스템 리소스를 가져옵니다.  
@@ -61,11 +61,11 @@ End Using
   
  `Using` 블록에는 세 부분으로 구성: 취득, 사용 및 삭제 합니다.  
   
--   *취득* 변수를 만들고 시스템 리소스를 가리키도록 초기화 하는 것을 의미 합니다. 합니다 `Using` 문은 하나 이상의 리소스를 얻을 수 있습니다 하거나 블록에 들어가기 전에 정확히 한 개의 리소스를 획득 하 고 제공 합니다 `Using` 문. 제공 하는 경우 `resourceexpression`에 제어를 전달 하기 전에 리소스를 가져와야 합니다 `Using` 문.  
+- *취득* 변수를 만들고 시스템 리소스를 가리키도록 초기화 하는 것을 의미 합니다. 합니다 `Using` 문은 하나 이상의 리소스를 얻을 수 있습니다 하거나 블록에 들어가기 전에 정확히 한 개의 리소스를 획득 하 고 제공 합니다 `Using` 문. 제공 하는 경우 `resourceexpression`에 제어를 전달 하기 전에 리소스를 가져와야 합니다 `Using` 문.  
   
--   *사용 현황* 리소스에 액세스 하 고 사용 하 여 작업을 수행 합니다. 사이 있는 문은 `Using` 고 `End Using` 리소스 사용을 나타냅니다.  
+- *사용 현황* 리소스에 액세스 하 고 사용 하 여 작업을 수행 합니다. 사이 있는 문은 `Using` 고 `End Using` 리소스 사용을 나타냅니다.  
   
--   *폐기* 의미를 호출 합니다 <xref:System.IDisposable.Dispose%2A> 개체에서 메서드 `resourcename`. 이 개체를를 해당 리소스를 완전히 종료할 수 있습니다. 합니다 `End Using` 문 아래에 있는 리소스를 삭제 합니다 `Using` 블록의 제어 합니다.  
+- *폐기* 의미를 호출 합니다 <xref:System.IDisposable.Dispose%2A> 개체에서 메서드 `resourcename`. 이 개체를를 해당 리소스를 완전히 종료할 수 있습니다. 합니다 `End Using` 문 아래에 있는 리소스를 삭제 합니다 `Using` 블록의 제어 합니다.  
   
 ## <a name="behavior"></a>동작  
  A `Using` 블록 처럼는 `Try`... `Finally` 는 생성 합니다 `Try` 블록은 리소스를 사용 및 `Finally` 블록을 삭제 합니다. 이 인해는 `Using` 블록은 블록을 종료 하는 방법에 관계 없이 리소스를 삭제 합니다. 예외가 처리 되지 않은 경우에 마찬가지 제외 하 고는 <xref:System.StackOverflowException>합니다.  

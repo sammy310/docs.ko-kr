@@ -3,20 +3,20 @@ title: 아키텍처 및 디자인
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
 ms.openlocfilehash: a4b597c8a62c661ace4485959589823094b9a08f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606846"
 ---
 # <a name="architecture-and-design"></a>아키텍처 및 디자인
 SQL 생성 모듈은 [Sample Provider](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) 명령 트리를 나타내는 식 트리의 방문자로 구현 됩니다. 생성은 식 트리에 대한 단일 패스로 수행됩니다.  
   
  트리의 노드는 아래쪽에서 위쪽으로 처리됩니다. 먼저 중간 구조 생성 됩니다. SqlSelectStatement 또는 SqlBuilder를 둘 다 ISqlFragment 구현 합니다. 그런 다음 이 구조에서 SQL 문 문자열이 생성됩니다. 중간 구조를 사용하는 이유는 두 가지입니다.  
   
--   논리적으로 SQL SELECT 문은 순서에 관계없이 채워집니다. FROM 절에 참여하는 노드는 WHERE, GROUP BY 및 ORDER BY 절에 참여하는 노드 전에 방문됩니다.  
+- 논리적으로 SQL SELECT 문은 순서에 관계없이 채워집니다. FROM 절에 참여하는 노드는 WHERE, GROUP BY 및 ORDER BY 절에 참여하는 노드 전에 방문됩니다.  
   
--   별칭의 이름을 바꾸려면 이름을 바꾸는 동안 충돌을 방지하기 위해 사용되는 모든 별칭을 식별해야 합니다. SqlBuilder에서 이름 바꾸기 선택을 지연하려면 Symbol 개체를 사용하여 이름을 바꿀 후보인 열을 나타냅니다.  
+- 별칭의 이름을 바꾸려면 이름을 바꾸는 동안 충돌을 방지하기 위해 사용되는 모든 별칭을 식별해야 합니다. SqlBuilder에서 이름 바꾸기 선택을 지연하려면 Symbol 개체를 사용하여 이름을 바꿀 후보인 열을 나타냅니다.  
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
   
@@ -30,9 +30,9 @@ SQL 생성 모듈은 [Sample Provider](https://code.msdn.microsoft.com/windowsde
 ### <a name="isqlfragment"></a>ISqlFragment  
  이 단원에서는 다음 두 가지 용도로 사용되는 ISqlFragment 인터페이스를 구현하는 클래스를 살펴봅니다.  
   
--   모든 방문자 메서드에 대한 일반 반환 형식  
+- 모든 방문자 메서드에 대한 일반 반환 형식  
   
--   최종 SQL 문자열을 작성하는 메서드 제공  
+- 최종 SQL 문자열을 작성하는 메서드 제공  
   
 ```  
 internal interface ISqlFragment {  
@@ -194,11 +194,11 @@ private bool IsParentAJoin{get}
   
  일반적으로 병합이 고려되는 노드가 비어 있지 않은 절 뒤에서 SQL 문 절이 계산되는 경우 해당 노드를 현재 문에 추가할 수 없습니다. 예를 들어, 다음 노드가 Filter인 경우 다음 조건에 해당하는 경우에만 이 노드를 현재 SqlSelectStatement에 통합할 수 있습니다.  
   
--   SELECT 목록이 비어 있습니다. SELECT 목록이 비어 있지 않으면 필터 앞의 노드에 의해 생성되며 조건자는 해당 SELECT 목록을 통해 생성된 열을 참조할 수 있습니다.  
+- SELECT 목록이 비어 있습니다. SELECT 목록이 비어 있지 않으면 필터 앞의 노드에 의해 생성되며 조건자는 해당 SELECT 목록을 통해 생성된 열을 참조할 수 있습니다.  
   
--   GROUPBY가 비어 있습니다. GROUPBY가 비어 있지 않은 경우 필터를 추가하면 그룹화 전의 필터링을 의미하므로 올바르지 않습니다.  
+- GROUPBY가 비어 있습니다. GROUPBY가 비어 있지 않은 경우 필터를 추가하면 그룹화 전의 필터링을 의미하므로 올바르지 않습니다.  
   
--   TOP 절이 비어 있습니다. TOP 절이 비어 있지 않은 경우 필터를 추가하면 TOP을 수행하기 전의 필터링을 의미하므로 올바르지 않습니다.  
+- TOP 절이 비어 있습니다. TOP 절이 비어 있지 않은 경우 필터를 추가하면 TOP을 수행하기 전의 필터링을 의미하므로 올바르지 않습니다.  
   
  이는 산술 식 또는 DbConstantExpression과 같은 관계형 노드가 아닌 노드에는 적용되지 않습니다. 이러한 노드는 항상 기존 SqlSelectStatement의 일부로 포함되기 때문입니다.  
   
@@ -236,35 +236,35 @@ private bool IsParentAJoin{get}
 ### <a name="relational-non-join-nodes"></a>관계형(비조인) 노드  
  다음 식 형식은 비조인 노드를 지원합니다.  
   
--   DbDistinctExpression  
+- DbDistinctExpression  
   
--   DbFilterExpression  
+- DbFilterExpression  
   
--   DbGroupByExpression  
+- DbGroupByExpression  
   
--   DbLimitExpession  
+- DbLimitExpession  
   
--   DbProjectExpression  
+- DbProjectExpression  
   
--   DbSkipExpression  
+- DbSkipExpression  
   
--   DbSortExpression  
+- DbSortExpression  
   
  이러한 노드 방문은 다음과 같은 패턴을 따릅니다.  
   
 1. 관계형 입력을 방문하고 결과로 생성되는 SqlSelectStatement를 가져옵니다. 관계형 노드의 입력은 다음 중 하나일 수 있습니다.  
   
-    -   익스텐트(예: DbScanExpression)를 포함하는 관계형 노드. 이러한 노드를 방문하면 SqlSelectStatement가 반환됩니다.  
+    - 익스텐트(예: DbScanExpression)를 포함하는 관계형 노드. 이러한 노드를 방문하면 SqlSelectStatement가 반환됩니다.  
   
-    -   집합 연산 식(예: UNION ALL). 결과는 대괄호로 래핑되어야 하며 새 SqlSelectStatement의 FROM 절에 삽입됩니다.  
+    - 집합 연산 식(예: UNION ALL). 결과는 대괄호로 래핑되어야 하며 새 SqlSelectStatement의 FROM 절에 삽입됩니다.  
   
 2. 입력을 통해 생성되는 SqlSelectStatement에 현재 노드를 추가할 수 있는지 여부를 확인합니다. SQL 문으로 식 그룹화 단원에서 이에 대해 설명합니다. 추가할 수 없는 경우에는 다음 작업이 수행됩니다.  
   
-    -   현재 SqlSelectStatement 개체를 꺼냅니다.  
+    - 현재 SqlSelectStatement 개체를 꺼냅니다.  
   
-    -   새 SqlSelectStatement 개체를 만들고 꺼낸 SqlSelectStatement를 새 SqlSelectStatement 개체의 FROM으로 추가합니다.  
+    - 새 SqlSelectStatement 개체를 만들고 꺼낸 SqlSelectStatement를 새 SqlSelectStatement 개체의 FROM으로 추가합니다.  
   
-    -   스택 맨 위에 새 개체를 삽입합니다.  
+    - 스택 맨 위에 새 개체를 삽입합니다.  
   
 3. 입력에서 올바른 기호로 입력 식 바인딩을 리디렉션합니다. 이 정보는 SqlSelectStatement 개체에서 유지 관리됩니다.  
   
@@ -289,11 +289,11 @@ ORDER BY sk1, sk2, ...
 ### <a name="join-expressions"></a>조인 식  
  다음은 조인 식으로 간주되며 VisitJoinExpression 메서드에 의해 공통적인 방식으로 처리됩니다.  
   
--   DbApplyExpression  
+- DbApplyExpression  
   
--   DbJoinExpression  
+- DbJoinExpression  
   
--   DbCrossJoinExpression  
+- DbCrossJoinExpression  
   
  방문 단계는 다음과 같습니다.  
   
@@ -305,15 +305,15 @@ ORDER BY sk1, sk2, ...
   
 2. ProcessJoinInputResult를 호출하여 입력을 방문한 결과를 사후 처리합니다. ProcessJoinInputResult는 조인 식의 자식을 방문하고 자식에 의해 생성된 SqlSelectStatement를 완료한 후 기호 테이블을 유지 관리합니다. 자식의 결과는 다음 중 하나일 수 있습니다.  
   
-    -   부모가 추가될 것과 다른 SqlSelectStatement. 이러한 경우에는 기본 열을 추가하여 SqlSelectStatement를 완성해야 할 수 있습니다. 입력이 조인이면 새 조인 기호를 만들어야 하고, 그렇지 않으면 일반 기호를 만듭니다.  
+    - 부모가 추가될 것과 다른 SqlSelectStatement. 이러한 경우에는 기본 열을 추가하여 SqlSelectStatement를 완성해야 할 수 있습니다. 입력이 조인이면 새 조인 기호를 만들어야 하고, 그렇지 않으면 일반 기호를 만듭니다.  
   
-    -   부모의 SqlSelectStatement에 대한 입력 목록에 추가되기만 하는 익스텐트(예: DbScanExpression)  
+    - 부모의 SqlSelectStatement에 대한 입력 목록에 추가되기만 하는 익스텐트(예: DbScanExpression)  
   
-    -   SqlSelectStatement 이외의 항목. 이 경우 대괄호로 래핑됩니다.  
+    - SqlSelectStatement 이외의 항목. 이 경우 대괄호로 래핑됩니다.  
   
-    -   부모가 추가된 동일한 SqlSelectStatement. 이러한 경우 FromExtents 목록의 기호가 이러한 기호를 모두 나타내는 하나의 새 JoinSymbol로 대체되어야 합니다.  
+    - 부모가 추가된 동일한 SqlSelectStatement. 이러한 경우 FromExtents 목록의 기호가 이러한 기호를 모두 나타내는 하나의 새 JoinSymbol로 대체되어야 합니다.  
   
-    -   처음 세 경우에는 AddFromSymbol이 호출되어 AS 절을 추가하고 기호 테이블을 업데이트합니다.  
+    - 처음 세 경우에는 AddFromSymbol이 호출되어 AS 절을 추가하고 기호 테이블을 업데이트합니다.  
   
  세 번째 단계로, 조인 조건(있는 경우)이 방문됩니다.  
   
@@ -337,18 +337,18 @@ ORDER BY sk1, sk2, ...
   
  Instance 속성이 먼저 방문되고 결과는 Symbol, JoinSymbol 또는 SymbolPair입니다. 이러한 세 경우가 처리되는 방식은 다음과 같습니다.  
   
--   JoinSymbol이 반환되는 경우 필요한 속성의 기호가 NameToExtent 속성에 포함됩니다. 조인 기호가 중첩 조인을 나타내면 새 기호 쌍이 인스턴스 별칭으로 사용될 기호를 추적하기 위한 조인 기호 및 이후 확인을 위한 실제 속성을 나타내는 기호와 함께 반환됩니다.  
+- JoinSymbol이 반환되는 경우 필요한 속성의 기호가 NameToExtent 속성에 포함됩니다. 조인 기호가 중첩 조인을 나타내면 새 기호 쌍이 인스턴스 별칭으로 사용될 기호를 추적하기 위한 조인 기호 및 이후 확인을 위한 실제 속성을 나타내는 기호와 함께 반환됩니다.  
   
--   SymbolPair가 반환되고 Column 부분이 조인 기호인 경우 조인 기호가 다시 반환되지만 이제 열 속성이 현재 속성 식이 나타내는 속성을 가리키도록 업데이트됩니다. 그렇지 않은 경우에는 SqlBuilder가 별칭인 SymbolPair 원본 및 열인 현재 속성의 기호와 함께 반환됩니다.  
+- SymbolPair가 반환되고 Column 부분이 조인 기호인 경우 조인 기호가 다시 반환되지만 이제 열 속성이 현재 속성 식이 나타내는 속성을 가리키도록 업데이트됩니다. 그렇지 않은 경우에는 SqlBuilder가 별칭인 SymbolPair 원본 및 열인 현재 속성의 기호와 함께 반환됩니다.  
   
--   기호가 반환되면 Visit 메서드에서 별칭인 해당 인스턴스 및 열 이름인 속성 이름과 함께 SqlBuilder 메서드를 반환합니다.  
+- 기호가 반환되면 Visit 메서드에서 별칭인 해당 인스턴스 및 열 이름인 속성 이름과 함께 SqlBuilder 메서드를 반환합니다.  
   
 ### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression  
  DbProjectExpression의 Projection 속성으로 사용되는 경우 DbNewInstanceExpression은 프로젝션된 열을 나타내는 인수의 쉼표로 구분된 목록을 생성합니다.  
   
  DbNewInstanceExpression이 컬렉션 반환 형식을 포함하고 인수로 제공되는 식의 새 컬렉션을 정의하는 경우 다음 세 경우가 별도로 처리됩니다.  
   
--   DbNewInstanceExpression이 DbElementExpression을 유일한 인수로 포함하는 경우 다음과 같이 변환됩니다.  
+- DbNewInstanceExpression이 DbElementExpression을 유일한 인수로 포함하는 경우 다음과 같이 변환됩니다.  
   
     ```  
     NewInstance(Element(X)) =>  SELECT TOP 1 …FROM X  

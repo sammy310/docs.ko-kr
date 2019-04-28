@@ -16,11 +16,11 @@ ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b39646655c175497533aa6dc358c6966acc27344
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754541"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>방법: 애플리케이션 코드에 추적 문 추가
 추적에 대 한 자주 사용 하는 방법이 수신기에 출력을 쓰기 위한 메서드: **쓰기**, **WriteIf**, **WriteLine**를 **WriteLineIf**를 **Assert**, 및 **실패**합니다. 이러한 메서드는 두 가지 범주로 나눌 수 있습니다. **작성할**, **WriteLine**, 및 **실패** 모든 출력을 내보내지만, 반면 **WriteIf**를 **WriteLineIf**, 및  **Assert** 부울 조건을 테스트를 작성 하거나 조건의 값에 기반을 기록 하지 마십시오. **WriteIf** 및 **WriteLineIf** 메서드는 조건이 `true`인 경우 출력을 내보내며 **Assert** 메서드는 조건이 `false`인 경우 출력을 내보냅니다.  

@@ -3,11 +3,11 @@ title: Entity Framework용 SqlClient에서 알려진 문제
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
 ms.openlocfilehash: a3df5a42b40e1851875c35165301af082f5d3269
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607750"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Entity Framework용 SqlClient에서 알려진 문제
 이 단원에서는 .NET Framework Data Provider for SQL Server(SqlClient)와 관련된 알려진 문제에 대해 설명합니다.  
@@ -25,15 +25,15 @@ ms.locfileid: "59073808"
   
  다음은 출력 쿼리에 CROSS APPLY 및/또는 OUTER APPLY 연산자가 포함될 수 있는 일반적인 시나리오입니다.  
   
--   페이징이 있는 상호 관련된 하위 쿼리  
+- 페이징이 있는 상호 관련된 하위 쿼리  
   
--   상호 관련된 하위 쿼리 또는 탐색으로 생성된 컬렉션에 대한 `AnyElement`  
+- 상호 관련된 하위 쿼리 또는 탐색으로 생성된 컬렉션에 대한 `AnyElement`  
   
--   요소 선택기를 허용하는 그룹화 메서드를 사용하는 LINQ 쿼리  
+- 요소 선택기를 허용하는 그룹화 메서드를 사용하는 LINQ 쿼리  
   
--   CROSS APPLY 또는 OUTER APPLY가 명시적으로 지정된 쿼리  
+- CROSS APPLY 또는 OUTER APPLY가 명시적으로 지정된 쿼리  
   
--   REF 구문보다 DEREF 구문을 우선 적용하는 쿼리  
+- REF 구문보다 DEREF 구문을 우선 적용하는 쿼리  
   
 ## <a name="skip-operator"></a>SKIP 연산자  
  [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]을 사용하는 경우 키가 아닌 열에 ORDER BY와 함께 SKIP을 사용하면 잘못된 결과가 반환될 수 있습니다. 키가 아닌 열에 중복 데이터가 있는 경우, 지정된 개수 이상의 행을 건너뛸 수 있습니다. 이런 현상은 SKIP이 [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]에 맞게 변환되는 방식 때문에 발생합니다. 예를 들어 다음 쿼리에서 `E.NonKeyColumn`에 중복 값이 있으면 5개가 넘는 행을 건너뛸 수 있습니다.  

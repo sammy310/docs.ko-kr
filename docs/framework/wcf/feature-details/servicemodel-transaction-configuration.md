@@ -5,11 +5,11 @@ helpviewer_keywords:
 - transactions [WCF], ServiceModel configuration
 ms.assetid: 5636067a-7fbd-4485-aaa2-8141c502acf3
 ms.openlocfilehash: d5bb81c618e3b27df32763948dbe56c9b37995e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747708"
 ---
 # <a name="servicemodel-transaction-configuration"></a>ServiceModel 트랜잭션 구성
 Windows Communication Foundation (WCF) 서비스의 트랜잭션을 구성 하기 위한 세 가지 특성을 제공 합니다. `transactionFlow`, `transactionProtocol`, 및 `transactionTimeout`합니다.  

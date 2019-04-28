@@ -3,11 +3,11 @@ title: <certificate> <clientCertificate> 요소
 ms.date: 03/30/2017
 ms.assetid: 00297efb-a7f2-4e03-bc2b-943d545610fc
 ms.openlocfilehash: 98e60d750dad1529ffb35055d26e278ceb7c873a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704351"
 ---
 # <a name="certificate-of-clientcertificate-element"></a>\<인증서 >의 \<clientCertificate > 요소
 메시지 서명 및 암호화에 사용되는 X.509 인증서를 지정합니다.  

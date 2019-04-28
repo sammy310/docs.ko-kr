@@ -3,11 +3,11 @@ title: 함수 변환 (Visual Basic)의 적용 가능성
 ms.date: 07/20/2015
 ms.assetid: 3b74e134-e19b-44bc-8d06-e26c48305040
 ms.openlocfilehash: 7efeab82dafc284f64a950eb7f5e4a6ee3f2e73d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61689842"
 ---
 # <a name="applicability-of-functional-transformation-visual-basic"></a>함수 변환 (Visual Basic)의 적용 가능성
 순수 함수 변환은 광범위한 상황에서 적용 가능합니다.  
@@ -16,15 +16,15 @@ ms.locfileid: "58827616"
   
  이 방법은 처음에는 적합한 대상으로 보이지 않을 수 있는 많은 문제에 적용 가능합니다. 함수 변환을 LINQ와 함께 사용하거나 별도로 사용하는 경우 다음 영역에 대한 함수 변환을 고려해야 합니다.  
   
--   XML 기반 문서. XML 언어의 제대로 구성된 데이터는 함수 변환을 통해 쉽게 조작할 수 있습니다. 자세한 내용은 [XML의 함수 변환 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)합니다.  
+- XML 기반 문서. XML 언어의 제대로 구성된 데이터는 함수 변환을 통해 쉽게 조작할 수 있습니다. 자세한 내용은 [XML의 함수 변환 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)합니다.  
   
--   다른 구조화된 파일 형식. Windows.ini 파일에서 일반 텍스트 문서에 이르는 대부분의 파일에는 분석과 변환에 적합한 구조가 있습니다.  
+- 다른 구조화된 파일 형식. Windows.ini 파일에서 일반 텍스트 문서에 이르는 대부분의 파일에는 분석과 변환에 적합한 구조가 있습니다.  
   
--   데이터 스트리밍 프로토콜. 데이터를 통신 프로토콜로 인코딩하고 통신 프로토콜에서 데이터를 디코딩하는 작업을 간단한 함수 변환으로 나타낼 수 있는 경우가 많습니다.  
+- 데이터 스트리밍 프로토콜. 데이터를 통신 프로토콜로 인코딩하고 통신 프로토콜에서 데이터를 디코딩하는 작업을 간단한 함수 변환으로 나타낼 수 있는 경우가 많습니다.  
   
--   RDBMS 및 OODBMS 데이터. XML과 같은 개체 지향 데이터베이스와 관계형 데이터베이스는 널리 사용되는 구조화된 데이터 소스입니다.  
+- RDBMS 및 OODBMS 데이터. XML과 같은 개체 지향 데이터베이스와 관계형 데이터베이스는 널리 사용되는 구조화된 데이터 소스입니다.  
   
--   수학, 통계 및 과학 솔루션. 이러한 분야에서는 중요한 문제를 시각화하거나, 예측하거나, 실제로 해결하는 데 도움을 주기 위해 큰 데이터 집합을 조작하는 일이 많습니다.  
+- 수학, 통계 및 과학 솔루션. 이러한 분야에서는 중요한 문제를 시각화하거나, 예측하거나, 실제로 해결하는 데 도움을 주기 위해 큰 데이터 집합을 조작하는 일이 많습니다.  
   
  에 설명 된 대로 [순수 함수로 리팩터링 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md), 순수 함수 사용은 함수형 프로그래밍의 예입니다. 순수 함수를 사용하면 즉각적인 혜택을 얻을 수 있을 뿐만 아니라 함수 변환 관점에서 문제에 대해 생각하는 귀중한 경험을 할 수 있습니다. 이 방법은 프로그램과 클래스 디자인에도 중요한 영향을 미칠 수 있습니다. 이는 문제가 위에서 설명한 데이터 변환 솔루션에 적합한 경우 특히 해당되는 사실입니다.  
   

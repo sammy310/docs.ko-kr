@@ -3,11 +3,11 @@ title: 기본 XAML 스키마 컨텍스트 및 WPF XAML 스키마 컨텍스트
 ms.date: 03/30/2017
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
 ms.openlocfilehash: 0d6a0aa80d8490c509fa9036f88d4f6863ff040c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61689400"
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>기본 XAML 스키마 컨텍스트 및 WPF XAML 스키마 컨텍스트
 XAML 스키마 컨텍스트는 특정 XAML 어휘를 사용 하는 XAML 프로덕션 간의 형식 매핑을 확인 하는 방법, 어셈블리를 로드 하는 방법, 어떻게 특정 판독기 및 기록기를 포함 하 여 동작을 작성 하는 개체 상호 작용 하는 방식을 정규화 하는 개념적 엔터티 설정은 해석 됩니다. 이 항목에서는.NET Framework XAML 서비스 및 CLR 형식 시스템을 기반으로 하는 연결 된 기본 XAML 스키마 컨텍스트의 기능을 설명 합니다. 이 항목에는 WPF에 사용 되는 XAML 스키마 컨텍스트를 설명 합니다.  
@@ -50,11 +50,11 @@ XAML 스키마 컨텍스트는 특정 XAML 어휘를 사용 하는 XAML 프로�
   
 2. CLR에 따라 다음 방법 중 하나이 고, 그렇지 <xref:System.Reflection.Assembly> API는 어셈블리를 로드 하는 데 사용 됩니다.  
   
-    -   매핑의 이름을 qualified 인 경우 호출 <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> 정규화 된 이름에 있습니다.  
+    - 매핑의 이름을 qualified 인 경우 호출 <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> 정규화 된 이름에 있습니다.  
   
-    -   이전 단계가 실패 하면 짧은 이름 (및 공개 키 토큰이 있는 경우)를 사용 하려면 <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>합니다.  
+    - 이전 단계가 실패 하면 짧은 이름 (및 공개 키 토큰이 있는 경우)를 사용 하려면 <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>합니다.  
   
-    -   이름 매개 변수 매핑에서 정규화 되지 않은, 경우 호출 <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>합니다.  
+    - 이름 매개 변수 매핑에서 정규화 되지 않은, 경우 호출 <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>합니다.  
   
 #### <a name="xamlbuildtask"></a>XamlBuildTask  
  `XamlBuildTask` Windows Communication Foundation (WCF) 및 Windows Workflow Foundation에 사용 됩니다.  
@@ -82,11 +82,11 @@ XAML 스키마 컨텍스트는 특정 XAML 어휘를 사용 하는 XAML 프로�
   
 2. 이 고, 그렇지 어셈블리를 로드 하는 다음 방법 중 하나:  
   
-    -   호출 <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> 정규화 된 이름에 있습니다.  
+    - 호출 <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> 정규화 된 이름에 있습니다.  
   
-    -   약식 이름 + 공개 키 토큰 조합이 BAML에서 로드 된 어셈블리와 일치 하는 경우 해당 어셈블리를 사용 합니다.  
+    - 약식 이름 + 공개 키 토큰 조합이 BAML에서 로드 된 어셈블리와 일치 하는 경우 해당 어셈블리를 사용 합니다.  
   
-    -   약식 이름 + 공개 키 토큰을 사용 하 여 호출 <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>합니다.  
+    - 약식 이름 + 공개 키 토큰을 사용 하 여 호출 <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>합니다.  
   
 ## <a name="see-also"></a>참고자료
 

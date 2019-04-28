@@ -3,11 +3,11 @@ title: 명령 트리에서 SQL 생성 - 최선의 방법
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
 ms.openlocfilehash: 6ac46b577f071bca6c79e23b8b77f9b267ac879b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606669"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>명령 트리에서 SQL 생성 - 최선의 방법
 
@@ -117,7 +117,7 @@ ON b.y = d.z
 
 입력 별칭 리디렉션을 설명하기 위해 DbFilterExpression, DbProjectExpression, DbCrossJoinExpression, DbJoinExpression, DbSortExpression, DbGroupByExpression, DbApplyExpression 및 DbSkipExpression과 같은 관계식의 구조를 살펴보겠습니다.
 
-이러한 각 형식에는 입력 컬렉션을 설명하는 하나 이상의 입력 속성이 있으며, 각 입력에 해당하는 바인딩 변수는 컬렉션 순회 중에 해당 입력의 각 요소를 나타내는 데 사용됩니다. 바인딩 변수는 DbFilterExpression의 Predicate 속성이나 DbProjectExpression의 Projection 속성 등에서 입력 요소를 참조할 때 사용됩니다.
+이러한 각 형식에는 입력 컬렉션을 설명하는 하나 이상의 입력 속성이 있으며, 각 입력에 해당하는 바인딩 변수는 컬렉션 순회 중에 해당 입력의 각 요소를 나타내는 데 사용됩니다. 바인딩 변수는 DbFilterExpression의 조건자 속성이나 DbProjectExpression의 Projection 속성 등에서 입력 요소를 참조할 때 사용됩니다.
 
 더 많은 관계식 노드를 단일 SQL SELECT 문에 집계하고 관계식의 일부(예: DbProjectExpression의 Projection 속성 일부)인 식을 계산하는 경우 여러 식 바인딩이 단일 익스텐트로 리디렉션되어야 하므로 사용하는 바인딩 변수는 입력의 별칭과 동일하지 않을 수 있습니다.  이 문제를 별칭 이름 바꾸기라고 합니다.
 

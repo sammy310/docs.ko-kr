@@ -13,11 +13,11 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
 ms.openlocfilehash: 8770a8761af4b55394d9280b21d2a6a5b71b6ed5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61594220"
 ---
 # <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>방법: LINQ (Visual Basic)를 사용 하 여 데이터베이스의 데이터를 수정 합니다.
 언어 통합 쿼리 (LINQ) 쿼리를 통해 쉽게 데이터베이스 정보에 액세스 하 고 데이터베이스에서 값을 수정 합니다.  

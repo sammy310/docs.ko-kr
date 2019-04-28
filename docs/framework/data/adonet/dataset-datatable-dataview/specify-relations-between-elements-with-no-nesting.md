@@ -3,11 +3,11 @@ title: 중첩 없이 요소 사이에 관계 지정
 ms.date: 03/30/2017
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
 ms.openlocfilehash: 4b7b216e58f36302db29c4b4b5176339521b0f17
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607919"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a>중첩 없이 요소 사이에 관계 지정
 요소가 중첩되지 않은 경우에는 암시적 관계가 만들어지지 않습니다. 하지만 사용 하 여 중첩 되지 않은 요소 간의 관계를 명시적으로 지정 있습니다 합니다 **msdata: relationship** 주석입니다.  

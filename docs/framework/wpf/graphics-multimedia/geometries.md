@@ -10,11 +10,11 @@ helpviewer_keywords:
 - hit-test objects [WPF]
 ms.assetid: 47ad531d-a4da-4e99-b12e-1de710c32493
 ms.openlocfilehash: 57e32d3e56c3f319f7ee8aa58020d37e46a6454d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762264"
 ---
 # <a name="geometries"></a>Geometry
 <xref:System.Windows.Media.Geometry> 렌더링 하는 데 사용 하는 다양 한 클래스는 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] 그래픽 개체 적중 테스트 및 클리핑 영역을 정의 합니다.  

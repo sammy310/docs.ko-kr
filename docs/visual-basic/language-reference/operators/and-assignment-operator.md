@@ -11,11 +11,11 @@ helpviewer_keywords:
 - compound assignment statements [Visual Basic]
 ms.assetid: 0cf262fc-1a05-419a-a503-60013f111c8a
 ms.openlocfilehash: a79e779d8fcf549daeabc494e0a55deee30b5d22
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608439"
 ---
 # <a name="amp-operator-visual-basic"></a>&amp;= 연산자 (Visual Basic)
 연결을 `String` 식을 `String` 변수 또는 속성 결과 변수 또는 속성에 할당 합니다.  

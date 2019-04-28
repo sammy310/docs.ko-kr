@@ -3,11 +3,11 @@ title: 메시지 인코더 선택
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
 ms.openlocfilehash: 0c960505d6c8368396cddebe37c76c8d95550727
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608387"
 ---
 # <a name="choosing-a-message-encoder"></a>메시지 인코더 선택
 이 항목에서는 Windows Communication Foundation (WCF)에 포함 된 메시지 인코더 선택 기준에 설명 합니다: 이진, 텍스트 및 전송 최적화 메커니즘 MTOM (Message).  
@@ -21,11 +21,11 @@ ms.locfileid: "58409486"
 ## <a name="system-provided-encoders"></a>시스템 제공 인코더  
  WCF에는 다음 세 가지 클래스로 표현 되는 세 가지 메시지 인코더가 포함 됩니다.  
   
--   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>: 텍스트 메시지 인코더로, 일반 XML 인코딩 및 SOAP 인코딩을 모두 지원합니다. 텍스트 메시지 인코더의 일반 XML 인코딩 모드는 텍스트 기반 SOAP 인코딩과 구별하기 위해 POX("Plain Old Xml")라고 합니다. POX를 사용하도록 설정하려면 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement.MessageVersion%2A> 속성을 <xref:System.ServiceModel.Channels.MessageVersion.None%2A>으로 설정합니다. 비 WCF 끝점을 사용 하 여 상호 운용 하도록 텍스트 메시지 인코더를 사용 합니다.  
+- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>: 텍스트 메시지 인코더로, 일반 XML 인코딩 및 SOAP 인코딩을 모두 지원합니다. 텍스트 메시지 인코더의 일반 XML 인코딩 모드는 텍스트 기반 SOAP 인코딩과 구별하기 위해 POX("Plain Old Xml")라고 합니다. POX를 사용하도록 설정하려면 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement.MessageVersion%2A> 속성을 <xref:System.ServiceModel.Channels.MessageVersion.None%2A>으로 설정합니다. 비 WCF 끝점을 사용 하 여 상호 운용 하도록 텍스트 메시지 인코더를 사용 합니다.  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>이진 메시지 인코더로, 간단한 이진 형식을 사용 하 여 WCF 통신 하도록 WCF에 대 한 최적화 및 상호 운용은 불가능 합니다. WCF에서 제공 하는 모든 인코더 중 대부분의 성능이 좋은 인코더 이기도 합니다.  
+- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>이진 메시지 인코더로, 간단한 이진 형식을 사용 하 여 WCF 통신 하도록 WCF에 대 한 최적화 및 상호 운용은 불가능 합니다. WCF에서 제공 하는 모든 인코더 중 대부분의 성능이 좋은 인코더 이기도 합니다.  
   
--   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>: 바인딩 요소로, MTOM 인코딩을 사용하여 메시지에 대해 메시지 버전 및 문자 인코딩을 지정합니다. MTOM은 WCF 메시지의 이진 데이터를 전송하기 위한 효율적인 기술입니다. MTOM 인코더는 효율성과 상호 운용성 간의 균형을 유지하려고 합니다. MTOM 인코딩은 대부분의 XML을 텍스트 형식으로 전송하지만, 큰 이진 데이터 블록의 경우에는 텍스트로 변환하지 않고 있는 그대로 전송하여 최적화합니다. WCF는 제공 인코더 중 효율성 측면에서 MTOM은 중간 텍스트 (가장 느림) 및 이진 (가장 빠름)입니다.  
+- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>: 바인딩 요소로, MTOM 인코딩을 사용하여 메시지에 대해 메시지 버전 및 문자 인코딩을 지정합니다. MTOM은 WCF 메시지의 이진 데이터를 전송하기 위한 효율적인 기술입니다. MTOM 인코더는 효율성과 상호 운용성 간의 균형을 유지하려고 합니다. MTOM 인코딩은 대부분의 XML을 텍스트 형식으로 전송하지만, 큰 이진 데이터 블록의 경우에는 텍스트로 변환하지 않고 있는 그대로 전송하여 최적화합니다. WCF는 제공 인코더 중 효율성 측면에서 MTOM은 중간 텍스트 (가장 느림) 및 이진 (가장 빠름)입니다.  
   
 ## <a name="how-to-choose-a-message-encoder"></a>메시지 인코더를 선택하는 방법  
  다음 표에서는 메시지 인코더를 선택하는 데 사용하는 일반 요소에 대해 설명합니다. 응용 프로그램의 중요한 요소에 우선 순위를 지정한 다음 이러한 요소에 가장 적합한 메시지 인코더를 선택합니다. 이 표에 나열되지 않은 모든 추가 요소 및 응용 프로그램에 필요할 수 있는 모든 사용자 지정 메시지 인코더를 고려해야 합니다.  

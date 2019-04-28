@@ -5,11 +5,11 @@ helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
 ms.openlocfilehash: 2d820087973e689514a0a19a7adc912f49e9d0a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61596780"
 ---
 # <a name="batching-messages-in-a-transaction"></a>트랜잭션에서 메시지 일괄 처리
 대기 중인 응용 프로그램은 트랜잭션을 사용하여 정확하고 안정적인 메시지 배달을 수행합니다. 트랜잭션은 비용이 많이 드는 작업이나 메시지 처리량을 상당히 줄일 수 있습니다. 메시지 처리량을 향상시키기 위한 한가지 방법은 응용 프로그램이 단일 트랜잭션 내에서 여러 메시지를 읽고 처리하는 것입니다. 성능이 좋아질수록 복구 작업도 늘어납니다. 즉, 일괄 처리하는 메시지 수가 증가하면 트랜잭션이 롤백 되는 경우 필요한 복구 작업의 크기도 증가합니다. 트랜잭션 및 세션에서 일괄 처리하는 메시지 사이에는 차이가 있습니다. A *세션* 단일 응용 프로그램에서 처리 되 고 하나의 단위로 커밋된는 관련된 메시지의 그룹화입니다. 세션은 일반적으로 관련 메시지 그룹을 함께 처리해야 하는 경우 사용됩니다. 이러한 예로 온라인 쇼핑 웹 사이트를 들 수 있습니다. *일괄 처리* 관련 없는 메시지 처리량을 증가 시키는 방식으로 메시지를 여러 처리 하는 데 사용 합니다. 세션에 대 한 자세한 내용은 참조 하십시오 [세션에서 대기 중인 메시지 그룹화](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)합니다. 또한 일괄 처리하는 메시지는 하나의 응용 프로그램에 의해 처리되고 하나의 단위로 커밋되지만 일괄 처리하는 메시지 간에 관계가 없을 수 있습니다. 한 트랜잭션의 메시지를 일괄 처리하는 것이 응용 프로그램이 실행되는 방법을 변경하지 않는 가장 적절한 방법입니다.  
@@ -20,13 +20,13 @@ ms.locfileid: "59310527"
 ## <a name="committing-a-transaction"></a>트랜잭션 커밋  
  일괄 처리된 트랜잭션은 다음을 기준으로 커밋됩니다.  
   
--   `MaxBatchSize`. <xref:System.ServiceModel.Description.TransactedBatchingBehavior> 동작의 속성입니다. 이 속성은 일괄 처리로 배치되는 최대 메시지 수를 결정합니다. 이 값에 도달하면 일괄 처리가 커밋됩니다. 값은 엄격하게 제한하지 않으며 이 값의 메시지를 받기 전에 일괄 처리를 커밋할 수 있습니다.  
+- `MaxBatchSize`. <xref:System.ServiceModel.Description.TransactedBatchingBehavior> 동작의 속성입니다. 이 속성은 일괄 처리로 배치되는 최대 메시지 수를 결정합니다. 이 값에 도달하면 일괄 처리가 커밋됩니다. 값은 엄격하게 제한하지 않으며 이 값의 메시지를 받기 전에 일괄 처리를 커밋할 수 있습니다.  
   
--   `Transaction Timeout`. 트랜잭션 시간 제한의 80%가 경과한 후, 일괄 처리가 커밋되고 새 일괄 처리가 만들어 집니다. 이는 완료할 트랜잭션의 지정된 시간이 20% 이하로 남은 경우, 일괄 처리가 커밋된다는 의미입니다.  
+- `Transaction Timeout`. 트랜잭션 시간 제한의 80%가 경과한 후, 일괄 처리가 커밋되고 새 일괄 처리가 만들어 집니다. 이는 완료할 트랜잭션의 지정된 시간이 20% 이하로 남은 경우, 일괄 처리가 커밋된다는 의미입니다.  
   
--   `TransactionScopeRequired`. WCF에는 발견 한 경우 메시지의 일괄 처리를 처리 하는 동안 `TransactionScopeRequired`  =  `false`, 일괄 처리를 커밋하고 새 일괄 처리를 사용 하 여 첫 번째 메시지를 받을 때 다시 열립니다 `TransactionScopeRequired`  =  `true` 고 `TransactionAutoComplete`  = `true`.  
+- `TransactionScopeRequired`. WCF에는 발견 한 경우 메시지의 일괄 처리를 처리 하는 동안 `TransactionScopeRequired`  =  `false`, 일괄 처리를 커밋하고 새 일괄 처리를 사용 하 여 첫 번째 메시지를 받을 때 다시 열립니다 `TransactionScopeRequired`  =  `true` 고 `TransactionAutoComplete`  = `true`.  
   
--   메시지가 더 이상 큐에 없는 경우 `MaxBatchSize`에 도달하지 않았거나 트랜잭션 시간 제한의 80%가 경과하지 않았더라도 현재 일괄 처리가 커밋됩니다.  
+- 메시지가 더 이상 큐에 없는 경우 `MaxBatchSize`에 도달하지 않았거나 트랜잭션 시간 제한의 80%가 경과하지 않았더라도 현재 일괄 처리가 커밋됩니다.  
   
 ## <a name="leaving-batching-mode"></a>일괄 처리 모드 종료  
  일괄 처리 메시지로 인해 트랜잭션이 중단되는 경우 다음 단계가 수행됩니다.  

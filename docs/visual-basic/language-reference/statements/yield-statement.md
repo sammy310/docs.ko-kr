@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Yield statement [Visual Basic]
 ms.assetid: f33126c5-d7c4-43e2-8e36-4ae3f0703d97
 ms.openlocfilehash: fea91731694f18625e43c5545b353851e72234a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698618"
 ---
 # <a name="yield-statement-visual-basic"></a>Yield 문(Visual Basic)
 컬렉션의 다음 요소를 보냅니다는 `For Each...Next` 문입니다.  
@@ -46,11 +46,11 @@ Yield expression
 ## <a name="iterator-functions-and-get-accessors"></a>반복기 함수 및 Get 접근자  
  반복기 함수 선언 또는 `Get` 접근자에는 다음 요구 사항을 충족 해야 합니다.  
   
--   여기에 포함 해야 합니다는 [반복기](../../../visual-basic/language-reference/modifiers/iterator.md) 한정자입니다.  
+- 여기에 포함 해야 합니다는 [반복기](../../../visual-basic/language-reference/modifiers/iterator.md) 한정자입니다.  
   
--   반환 형식은 <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, 또는 <xref:System.Collections.Generic.IEnumerator%601>여야 합니다.  
+- 반환 형식은 <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, 또는 <xref:System.Collections.Generic.IEnumerator%601>여야 합니다.  
   
--   모든 것이 없습니다 `ByRef` 매개 변수입니다.  
+- 모든 것이 없습니다 `ByRef` 매개 변수입니다.  
   
  반복기 함수를 이벤트, 인스턴스 생성자, 정적 생성자 또는 정적 소멸자에서 발생할 수 없습니다.  
   

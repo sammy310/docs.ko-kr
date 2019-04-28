@@ -16,11 +16,11 @@ helpviewer_keywords:
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
 ms.openlocfilehash: de2edc6b16689673c3be6703ff1a201febe73526
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698644"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With 문(Visual Basic)
 개체 또는 구문의 멤버에 액세스할 때 문에서 단순화된 구문을 사용할 수 있도록 단일 개체를 반복적으로 참조하는 일련의 문을 실행합니다.  구조체를 사용하면 멤버 또는 호출 메서드의 값을 읽을 수만 있으며, `With...End With` 문에서 사용된 구조체의 멤버에 값을 할당하도록 시도하는 경우 오류가 발생합니다.  
@@ -48,9 +48,9 @@ End With
   
  코드가 여러 문에서 동일한 개체에 액세스하는 경우 `With` 문을 사용하여 다음과 같은 이점을 얻을 수 있습니다.  
   
--   복합 식을 여러 번 평가하거나 멤버를 여러 번 참조하기 위해 결과를 임시 변수에 할당할 필요가 없습니다.  
+- 복합 식을 여러 번 평가하거나 멤버를 여러 번 참조하기 위해 결과를 임시 변수에 할당할 필요가 없습니다.  
   
--   반복적인 정규화 식을 제거하여 코드를 더욱 쉽게 읽을 수 있습니다.  
+- 반복적인 정규화 식을 제거하여 코드를 더욱 쉽게 읽을 수 있습니다.  
   
  `objectExpression`의 데이터 형식은 모든 클래스 또는 구조체 형식이거나 `Integer`와 같은 Visual Basic 기본 형식일 수도 있습니다.  `objectExpression`이 개체 이외의 모든 항목을 생성하는 경우 멤버 또는 호출 메서드의 값을 읽을 수만 있으며, `With...End With` 문에서 사용된 구조체의 멤버에 값을 할당하도록 시도하는 경우 오류가 발생합니다.  이는 구조체를 반환하고 `GetAPoint().x = 1`과 같은 함수 결과의 멤버에 즉시 액세스하여 값을 할당한 메서드를 호출한 경우 발생하는 오류와 동일합니다.  두 경우 모두 구조체가 호출 스택에만 존재하고 이러한 상황의 수정된 구조체 멤버가 프로그램의 다른 코드가 변경을 관찰할 수 있는 위치에 쓸 수 있는 방법이 없는 문제가 발생합니다.  
   

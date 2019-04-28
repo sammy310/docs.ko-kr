@@ -3,11 +3,11 @@ title: Visual Basic의 언어 통합 축(LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: d450a556-a134-4261-b011-44e399660894
 ms.openlocfilehash: 0de88ad55724f71f5671a044dbadcb2f6c59e829
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663468"
 ---
 # <a name="language-integrated-axes-in-visual-basic-linq-to-xml"></a>Visual Basic의 언어 통합 축(LINQ to XML)
 이 섹션에서는 쉽게 XML에 액세스할 수 있도록 Visual Basic 언어에 직접 빌드된 기능을 설명 합니다. 다양 한 linq에서 to XML 설명서 예제에는 이러한 통합 된 Visual Basic 축 사용합니다.  

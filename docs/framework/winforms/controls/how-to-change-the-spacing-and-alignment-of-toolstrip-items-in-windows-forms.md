@@ -10,11 +10,11 @@ helpviewer_keywords:
 - toolbars [Windows Forms], aligning items
 ms.assetid: cd483466-0f49-43df-addf-e2b5fcd64027
 ms.openlocfilehash: bed943466348447e30947c170e27027f324342c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746868"
 ---
 # <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>방법: Windows Forms에서 ToolStrip 항목의 간격 및 맞춤 변경
 합니다 <xref:System.Windows.Forms.ToolStrip> 컨트롤 크기 조정 간격 등의 레이아웃 기능을 완벽 하 게 지원 <xref:System.Windows.Forms.ToolStripItem> 의 서로 상대적인, 컨트롤 배열을 컨트롤에 <xref:System.Windows.Forms.ToolStrip>, 및 간격을 기준으로 컨트롤의는 <xref:System.Windows.Forms.ToolStrip>합니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "59323176"
   
 ### <a name="to-arrange-toolstrip-items-on-the-toolstrip"></a>ToolStrip에서 ToolStrip 항목을 정렬 하려면  
   
--   설정 된 <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A> 속성의 값을 <xref:System.Windows.Forms.ToolStripLayoutStyle> 원하는 합니다.  
+- 설정 된 <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A> 속성의 값을 <xref:System.Windows.Forms.ToolStripLayoutStyle> 원하는 합니다.  
   
     ```vb  
     ToolStripDropDown1.LayoutStyle = _  

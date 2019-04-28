@@ -3,11 +3,11 @@ title: 형식 생성(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
 ms.openlocfilehash: 53aa7fcc82a476c8b8bd87b059e08bee6741c0d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605827"
 ---
 # <a name="constructing-types-entity-sql"></a>형식 생성(Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 세 가지 종류의 생성자를 제공 합니다: 행 생성자, 명명 된 형식 생성자 및 컬렉션 생성자입니다.  
@@ -21,9 +21,9 @@ ms.locfileid: "59073782"
   
  행 생성자에서 식에 별칭을 지정하는 데 다음 규칙이 적용됩니다.  
   
--   행 생성자의 식은 동일한 생성자 내의 다른 별칭을 참조할 수 없습니다.  
+- 행 생성자의 식은 동일한 생성자 내의 다른 별칭을 참조할 수 없습니다.  
   
--   동일한 행 생성자 내의 서로 다른 두 식은 별칭이 같을 수 없습니다.  
+- 동일한 행 생성자 내의 서로 다른 두 식은 별칭이 같을 수 없습니다.  
   
  행 생성자에 대 한 자세한 내용은 참조 하세요. [행](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md)합니다.  
   
