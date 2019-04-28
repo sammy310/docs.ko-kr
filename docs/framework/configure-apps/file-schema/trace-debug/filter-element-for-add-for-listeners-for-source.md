@@ -10,11 +10,11 @@ helpviewer_keywords:
 - filter element for <add> for <listeners> for <source>
 ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
 ms.openlocfilehash: 3abfd0bdd40f98a9e4774677fc2cd5068c14333f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673773"
 ---
 # <a name="filter-element-for-add-for-listeners-for-source"></a>\<필터 > 요소에 대 한 \<추가 >에 대 한 \<수신기 >에 대 한 \<소스 >
 추적 소스의 `Listeners` 컬렉션에 있는 수신기에 필터를 추가합니다.  

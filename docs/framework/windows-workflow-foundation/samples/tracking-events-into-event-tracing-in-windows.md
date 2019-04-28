@@ -3,11 +3,11 @@ title: Windows에서 이벤트 추적으로 이벤트 추적
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
 ms.openlocfilehash: 129b82da068251d87bd9b0ca029b7e5a1c274936
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004811"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Windows에서 이벤트 추적으로 이벤트 추적
 이 샘플에는 Windows WF (Workflow Foundation) 워크플로 서비스에서 추적을 사용 하도록 설정 하 고 추적에서 이벤트 추적에 대 한 Windows (ETW) 이벤트를 내보내는 방법을 보여 줍니다. 이 샘플에서는 ETW 추적 참가자(<xref:System.Activities.Tracking.EtwTrackingParticipant>)를 사용하여 워크플로 추적 레코드를 ETW로 내보냅니다.

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
 ms.openlocfilehash: bb35a4d47f583aad710e178bdb12cb9adf6321e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017685"
 ---
 # <a name="control-authoring-overview"></a>컨트롤 제작 개요
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 컨트롤 모델의 확장성 덕분에 새 컨트롤을 만들 필요성이 상당히 줄어들었습니다. 그러나 어떤 경우에는 여전히 사용자 지정 컨트롤을 만들어야 할 수 있습니다. 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 사용자 지정 컨트롤과 다양한 컨트롤 제작 모델을 만들 필요성을 최소화시키는 기능에 대해 설명합니다. 또한 새 컨트롤을 만드는 방법을 설명합니다.  
@@ -22,18 +22,18 @@ ms.locfileid: "59340024"
 ## <a name="alternatives-to-writing-a-new-control"></a>새 컨트롤 작성에 대한 대안  
  지금까지 기존 컨트롤에서 사용자 지정 환경을 구현하려고 하면 배경색, 테두리 너비 및 글꼴 크기와 같은 컨트롤의 표준 속성을 변경하는 것으로 제한되어 있었습니다. 미리 정의된 이러한 매개 변수 이상으로 컨트롤의 모양이나 동작을 확장하려면 일반적으로 기존 컨트롤에서 상속받게 하고 컨트롤 그리기를 담당하는 메서드를 재정의하여 새 컨트롤을 만들어야 했습니다.  여전히 옵션이기는 하지만 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 사용하면 풍부한 콘텐츠 모델, 스타일, 템플릿 및 트리거를 사용하여 기존 컨트롤을 사용자 지정할 수 있습니다. 다음 목록에는 새 컨트롤을 만들지 않고 이러한 기능을 사용하여 사용자 지정 및 일관된 환경을 만드는 예제가 나와 있습니다.  
   
--   **풍부한 콘텐츠.** 많은 표준 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤이 풍부한 콘텐츠를 지원합니다. 예를 들어의 content 속성을 <xref:System.Windows.Controls.Button> 형식입니다 <xref:System.Object>, 이론적에 아무 것도 표시할 수 있습니다를 <xref:System.Windows.Controls.Button>.  단추 이미지와 텍스트를 표시 하도록 이미지를 추가할 수 있습니다 및 <xref:System.Windows.Controls.TextBlock> 에 <xref:System.Windows.Controls.StackPanel> 할당를 <xref:System.Windows.Controls.StackPanel> 에 <xref:System.Windows.Controls.ContentControl.Content%2A> 속성. 이러한 컨트롤은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 시각적 요소와 임의의 데이터를 표시할 수 있기 때문에 복잡한 시각화를 지원하기 위해 새 컨트롤을 만들거나 기존 컨트롤을 수정할 필요성이 적습니다. 콘텐츠 모델에 대 한 자세한 내용은 <xref:System.Windows.Controls.Button> 다른 콘텐츠 모델 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 참조 하십시오 [WPF 콘텐츠 모델](wpf-content-model.md)합니다.  
+- **풍부한 콘텐츠.** 많은 표준 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤이 풍부한 콘텐츠를 지원합니다. 예를 들어의 content 속성을 <xref:System.Windows.Controls.Button> 형식입니다 <xref:System.Object>, 이론적에 아무 것도 표시할 수 있습니다를 <xref:System.Windows.Controls.Button>.  단추 이미지와 텍스트를 표시 하도록 이미지를 추가할 수 있습니다 및 <xref:System.Windows.Controls.TextBlock> 에 <xref:System.Windows.Controls.StackPanel> 할당를 <xref:System.Windows.Controls.StackPanel> 에 <xref:System.Windows.Controls.ContentControl.Content%2A> 속성. 이러한 컨트롤은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 시각적 요소와 임의의 데이터를 표시할 수 있기 때문에 복잡한 시각화를 지원하기 위해 새 컨트롤을 만들거나 기존 컨트롤을 수정할 필요성이 적습니다. 콘텐츠 모델에 대 한 자세한 내용은 <xref:System.Windows.Controls.Button> 다른 콘텐츠 모델 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 참조 하십시오 [WPF 콘텐츠 모델](wpf-content-model.md)합니다.  
   
--   **스타일.** <xref:System.Windows.Style> 은 컨트롤의 속성을 나타내는 값의 컬렉션입니다. 스타일을 사용하면 새 컨트롤을 작성하지 않고도 원하는 컨트롤 모양과 동작을 재사용 가능한 표현으로 만들 수 있습니다. 예를 들어, 모든 것을 가정 하면 <xref:System.Windows.Controls.TextBlock> 컨트롤 14 글꼴 크기를 사용 하 여 빨간색, Arial 글꼴에 있습니다. 스타일을 리소스로 만들고 이에 따라 적절한 속성을 설정할 수 있습니다. 다음 모든 <xref:System.Windows.Controls.TextBlock> 응용 프로그램에 추가한 모양이 동일 해야 합니다.  
+- **스타일.** <xref:System.Windows.Style> 은 컨트롤의 속성을 나타내는 값의 컬렉션입니다. 스타일을 사용하면 새 컨트롤을 작성하지 않고도 원하는 컨트롤 모양과 동작을 재사용 가능한 표현으로 만들 수 있습니다. 예를 들어, 모든 것을 가정 하면 <xref:System.Windows.Controls.TextBlock> 컨트롤 14 글꼴 크기를 사용 하 여 빨간색, Arial 글꼴에 있습니다. 스타일을 리소스로 만들고 이에 따라 적절한 속성을 설정할 수 있습니다. 다음 모든 <xref:System.Windows.Controls.TextBlock> 응용 프로그램에 추가한 모양이 동일 해야 합니다.  
   
--   **데이터 템플릿.** <xref:System.Windows.DataTemplate> 데이터 컨트롤에 표시 되는 방식을 사용자 지정할 수 있습니다. 예를 들어, 한 <xref:System.Windows.DataTemplate> 에서 데이터를 표시 하는 방법을 지정할 수는 <xref:System.Windows.Controls.ListBox>합니다.  이에 대한 예제는 [데이터 템플릿 개요](../data/data-templating-overview.md)를 참조하세요.  데이터의 모양 사용자 지정 하는 것 외에도 <xref:System.Windows.DataTemplate> 제공 하는 다양 한 사용자 지정 Ui에서 UI 요소를 포함할 수 있습니다.  사용 하 여 예를 들어를 <xref:System.Windows.DataTemplate>를 만들 수 있습니다를 <xref:System.Windows.Controls.ComboBox> 각 항목에 포함 하는 확인란 합니다.  
+- **데이터 템플릿.** <xref:System.Windows.DataTemplate> 데이터 컨트롤에 표시 되는 방식을 사용자 지정할 수 있습니다. 예를 들어, 한 <xref:System.Windows.DataTemplate> 에서 데이터를 표시 하는 방법을 지정할 수는 <xref:System.Windows.Controls.ListBox>합니다.  이에 대한 예제는 [데이터 템플릿 개요](../data/data-templating-overview.md)를 참조하세요.  데이터의 모양 사용자 지정 하는 것 외에도 <xref:System.Windows.DataTemplate> 제공 하는 다양 한 사용자 지정 Ui에서 UI 요소를 포함할 수 있습니다.  사용 하 여 예를 들어를 <xref:System.Windows.DataTemplate>를 만들 수 있습니다를 <xref:System.Windows.Controls.ComboBox> 각 항목에 포함 하는 확인란 합니다.  
   
--   **컨트롤 템플릿.** 많은 컨트롤 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 사용을 <xref:System.Windows.Controls.ControlTemplate> 컨트롤의 구조 및 컨트롤의 기능에서 컨트롤의 모양을 분리 하는 모양을 정의할 수 있습니다. 다시 정의 하 여 컨트롤의 모양을 대폭 변경할 수 있습니다 해당 <xref:System.Windows.Controls.ControlTemplate>합니다.  예를 들어 신호등 모양의 컨트롤이 필요하다고 가정해 보겠습니다. 이 컨트롤에는 간단한 사용자 인터페이스 및 기능이 있습니다.  컨트롤은 세 개의 원으로, 한 번에 하나씩만 불을 켤 수 있습니다. 약간의 리플렉션을 후는 알 수 있습니다는 <xref:System.Windows.Controls.RadioButton> 한 번만의 기본 모양을 하나만 선택 된 기능을 제공 합니다 <xref:System.Windows.Controls.RadioButton> 신호등에서 등과 같습니다.  때문에 합니다 <xref:System.Windows.Controls.RadioButton> 해당 모양을 정의 하는 컨트롤 템플릿을 사용 재정의 하기 쉽습니다는 <xref:System.Windows.Controls.ControlTemplate> 컨트롤의 요구 사항에 맞게 라디오 단추를 사용 하 여 신호등을 확인 하 합니다.  
+- **컨트롤 템플릿.** 많은 컨트롤 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 사용을 <xref:System.Windows.Controls.ControlTemplate> 컨트롤의 구조 및 컨트롤의 기능에서 컨트롤의 모양을 분리 하는 모양을 정의할 수 있습니다. 다시 정의 하 여 컨트롤의 모양을 대폭 변경할 수 있습니다 해당 <xref:System.Windows.Controls.ControlTemplate>합니다.  예를 들어 신호등 모양의 컨트롤이 필요하다고 가정해 보겠습니다. 이 컨트롤에는 간단한 사용자 인터페이스 및 기능이 있습니다.  컨트롤은 세 개의 원으로, 한 번에 하나씩만 불을 켤 수 있습니다. 약간의 리플렉션을 후는 알 수 있습니다는 <xref:System.Windows.Controls.RadioButton> 한 번만의 기본 모양을 하나만 선택 된 기능을 제공 합니다 <xref:System.Windows.Controls.RadioButton> 신호등에서 등과 같습니다.  때문에 합니다 <xref:System.Windows.Controls.RadioButton> 해당 모양을 정의 하는 컨트롤 템플릿을 사용 재정의 하기 쉽습니다는 <xref:System.Windows.Controls.ControlTemplate> 컨트롤의 요구 사항에 맞게 라디오 단추를 사용 하 여 신호등을 확인 하 합니다.  
   
     > [!NOTE]
     >  하지만 <xref:System.Windows.Controls.RadioButton> 사용할 수는 <xref:System.Windows.DataTemplate>, <xref:System.Windows.DataTemplate> 이 예제의 충분 하지 않습니다.  <xref:System.Windows.DataTemplate> 콘텐츠 컨트롤의 모양을 정의 합니다. 경우는 <xref:System.Windows.Controls.RadioButton>, 콘텐츠를 나타내는 원의 오른쪽에 나타나는 모든 여부를 <xref:System.Windows.Controls.RadioButton> 선택 합니다.  신호등의 예제에서 라디오 버튼은 "불을 켤 수 있는" 원이어야 합니다. 신호등의 모양 요구 사항은의 기본 모양을 다르기 때문에 <xref:System.Windows.Controls.RadioButton>, 다시 정의 하는 데 필요한 것은 <xref:System.Windows.Controls.ControlTemplate>.  일반적을 <xref:System.Windows.DataTemplate> 컨트롤 및 콘텐츠 (또는 데이터)의 정의 <xref:System.Windows.Controls.ControlTemplate> 컨트롤 구성 되는 방식을 정의 하기 위해 사용 됩니다.  
   
--   **트리거.** <xref:System.Windows.Trigger> 동적으로 새 컨트롤을 만들지 않고 컨트롤의 동작과 모양을 변경할 수 있습니다. 예를 들어, 여러 개의 <xref:System.Windows.Controls.ListBox> 응용 프로그램에서 컨트롤의 각 항목에 들고 <xref:System.Windows.Controls.ListBox> 되며 굵은 빨간색 선택 하는 경우에 합니다. 직감을에서 상속 되는 클래스를 만드는 것 <xref:System.Windows.Controls.ListBox> 시키고 합니다 <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> 더 나은 방법은 선택한 항목의 모양을 변경 하는 방법은의 스타일에 트리거를 추가 하는 것을 <xref:System.Windows.Controls.ListBoxItem> 의 모양을 변경 하는 선택한 항목입니다. 트리거를 사용하면 속성 값을 변경하거나 속성 값을 기반으로 작업을 수행할 수 있습니다. <xref:System.Windows.EventTrigger> 이벤트가 발생할 때 작업을 수행할 수 있습니다.  
+- **트리거.** <xref:System.Windows.Trigger> 동적으로 새 컨트롤을 만들지 않고 컨트롤의 동작과 모양을 변경할 수 있습니다. 예를 들어, 여러 개의 <xref:System.Windows.Controls.ListBox> 응용 프로그램에서 컨트롤의 각 항목에 들고 <xref:System.Windows.Controls.ListBox> 되며 굵은 빨간색 선택 하는 경우에 합니다. 직감을에서 상속 되는 클래스를 만드는 것 <xref:System.Windows.Controls.ListBox> 시키고 합니다 <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> 더 나은 방법은 선택한 항목의 모양을 변경 하는 방법은의 스타일에 트리거를 추가 하는 것을 <xref:System.Windows.Controls.ListBoxItem> 의 모양을 변경 하는 선택한 항목입니다. 트리거를 사용하면 속성 값을 변경하거나 속성 값을 기반으로 작업을 수행할 수 있습니다. <xref:System.Windows.EventTrigger> 이벤트가 발생할 때 작업을 수행할 수 있습니다.  
   
  스타일, 템플릿 및 트리거에 대한 자세한 내용은 [스타일 지정 및 템플릿](styling-and-templating.md)을 참조하세요.  
   
@@ -51,11 +51,11 @@ ms.locfileid: "59340024"
 #### <a name="benefits-of-deriving-from-usercontrol"></a>UserControl에서 파생하는 이점  
  파생 하는 것이 좋습니다. <xref:System.Windows.Controls.UserControl> 모두 적용 하는 경우:  
   
--   애플리케이션을 빌드하는 방법과 유사하게 컨트롤을 빌드하려고 합니다.  
+- 애플리케이션을 빌드하는 방법과 유사하게 컨트롤을 빌드하려고 합니다.  
   
--   컨트롤이 기존 구성 요소로만 구성됩니다.  
+- 컨트롤이 기존 구성 요소로만 구성됩니다.  
   
--   복잡한 사용자 지정을 지원하지 않아도 됩니다.  
+- 복잡한 사용자 지정을 지원하지 않아도 됩니다.  
   
 ### <a name="deriving-from-control"></a>Control에서 파생  
  파생 된 <xref:System.Windows.Controls.Control> 클래스는 대부분의 기존 사용 모델은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤입니다. 상속 되는 컨트롤을 만들 때의 <xref:System.Windows.Controls.Control> 클래스 모양을 사용 하 여 정의한 템플릿. 그렇게 함으로써 작동 논리를 시각적 표현과 분리합니다. 이벤트 및 피해에 요소를 참조 하는 대신 명령 및 바인딩을 사용 하 여 UI 및 논리 분리를 보장할 수도 있습니다는 <xref:System.Windows.Controls.ControlTemplate> 가능 합니다.  컨트롤의 사용자 컨트롤의 UI와 컨트롤의 논리가 적절히 분리 되 하는 경우 재정의할 수 <xref:System.Windows.Controls.ControlTemplate> 모양을 사용자 지정할 수 있습니다. 사용자 지정 빌드 하지만 <xref:System.Windows.Controls.Control> 구성으로 간단 하지 않습니다는 <xref:System.Windows.Controls.UserControl>, 사용자 지정 <xref:System.Windows.Controls.Control> 최대한의 유연성을 제공 합니다.  
@@ -63,9 +63,9 @@ ms.locfileid: "59340024"
 #### <a name="benefits-of-deriving-from-control"></a>Control에서 파생하는 이점  
  파생 되는 것이 좋습니다 <xref:System.Windows.Controls.Control> 사용 하는 대신는 <xref:System.Windows.Controls.UserControl> 클래스 경우 다음이 적용 됩니다.  
   
--   통해 사용자 지정이 가능 컨트롤의 모양을 원하는 <xref:System.Windows.Controls.ControlTemplate>합니다.  
+- 통해 사용자 지정이 가능 컨트롤의 모양을 원하는 <xref:System.Windows.Controls.ControlTemplate>합니다.  
   
--   컨트롤이 다른 테마를 지원하게 하려고 합니다.  
+- 컨트롤이 다른 테마를 지원하게 하려고 합니다.  
   
 ### <a name="deriving-from-frameworkelement"></a>FrameworkElement에서 파생  
  파생 된 컨트롤 <xref:System.Windows.Controls.UserControl> 또는 <xref:System.Windows.Controls.Control> 기존 요소를 구성에 의존 합니다. 대부분의 시나리오에 적합 한 솔루션, 때문에 이것이에서 상속 되는 모든 개체 <xref:System.Windows.FrameworkElement> 수는 <xref:System.Windows.Controls.ControlTemplate>합니다. 그러나 컨트롤의 모양이 단순한 요소 컴퍼지션 이상의 기능을 필요로 하는 경우가 있습니다. 이러한 시나리오에 대 한 구성 요소를 기반으로 <xref:System.Windows.FrameworkElement> 적합 합니다.  
@@ -75,11 +75,11 @@ ms.locfileid: "59340024"
 #### <a name="benefits-of-deriving-from-frameworkelement"></a>FrameworkElement에서 파생하는 이점  
  파생 하는 것이 좋습니다. <xref:System.Windows.FrameworkElement> 경우 다음이 적용 됩니다.  
   
--   단순한 요소 컴퍼지션에서 제공하는 기능 이상으로 컨트롤의 모양을 정확하게 제어하려고 합니다.  
+- 단순한 요소 컴퍼지션에서 제공하는 기능 이상으로 컨트롤의 모양을 정확하게 제어하려고 합니다.  
   
--   자체 렌더링 논리를 정의하여 컨트롤의 모양을 정의하려고 합니다.  
+- 자체 렌더링 논리를 정의하여 컨트롤의 모양을 정의하려고 합니다.  
   
--   이동 가능한 것 보다 많은 새로운 방식으로 기존 요소를 구성 하려는 <xref:System.Windows.Controls.UserControl> 고 <xref:System.Windows.Controls.Control>입니다.  
+- 이동 가능한 것 보다 많은 새로운 방식으로 기존 요소를 구성 하려는 <xref:System.Windows.Controls.UserControl> 고 <xref:System.Windows.Controls.Control>입니다.  
   
 <a name="control_authoring_basics"></a>   
 ## <a name="control-authoring-basics"></a>컨트롤 제작 기본 사항  
@@ -88,33 +88,33 @@ ms.locfileid: "59340024"
 ### <a name="use-dependency-properties"></a>종속성 속성 사용  
  속성이 종속성 속성인 경우 다음을 수행할 수 있습니다.  
   
--   스타일에서 속성을 설정합니다.  
+- 스타일에서 속성을 설정합니다.  
   
--   속성을 데이터 소스에 바인딩합니다.  
+- 속성을 데이터 소스에 바인딩합니다.  
   
--   속성의 값으로 동적 리소스를 사용합니다.  
+- 속성의 값으로 동적 리소스를 사용합니다.  
   
--   속성에 애니메이션 효과를 줍니다.  
+- 속성에 애니메이션 효과를 줍니다.  
   
  컨트롤의 속성이 이 기능을 지원하도록 하려면 종속성 속성으로 구현해야 합니다. 다음 예제에서는 다음을 수행하여 `Value`라는 종속성 속성을 정의합니다.  
   
--   정의 된 <xref:System.Windows.DependencyProperty> 라는 식별자 `ValueProperty` 으로 `public` `static` `readonly` 필드.  
+- 정의 된 <xref:System.Windows.DependencyProperty> 라는 식별자 `ValueProperty` 으로 `public` `static` `readonly` 필드.  
   
--   호출 하 여 속성 시스템에 속성 이름을 등록 <xref:System.Windows.DependencyProperty.Register%2A?displayProperty=nameWithType>, 다음을 지정 합니다.  
+- 호출 하 여 속성 시스템에 속성 이름을 등록 <xref:System.Windows.DependencyProperty.Register%2A?displayProperty=nameWithType>, 다음을 지정 합니다.  
   
-    -   속성의 이름입니다.  
+    - 속성의 이름입니다.  
   
-    -   속성의 형식입니다.  
+    - 속성의 형식입니다.  
   
-    -   속성을 소유하는 형식입니다.  
+    - 속성을 소유하는 형식입니다.  
   
-    -   속성의 메타데이터입니다. 메타 데이터 속성의 기본값을 포함 한 <xref:System.Windows.CoerceValueCallback> 및 <xref:System.Windows.PropertyChangedCallback>합니다.  
+    - 속성의 메타데이터입니다. 메타 데이터 속성의 기본값을 포함 한 <xref:System.Windows.CoerceValueCallback> 및 <xref:System.Windows.PropertyChangedCallback>합니다.  
   
--   속성의 `get` 및 `set` 접근자를 구현하여 종속성 속성을 등록하는 데 사용된 이름과 동일한 이름인 `Value`라는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 래퍼 속성을 정의합니다. 합니다 `get` 하 고 `set` 접근자 에서만 호출할 <xref:System.Windows.DependencyObject.GetValue%2A> 및 <xref:System.Windows.DependencyObject.SetValue%2A> 각각. 것이 좋습니다는 종속성 속성의 접근자 추가 논리가 포함 되지 때문에 클라이언트와 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 접근자 및 호출을 무시할 수 있습니다 <xref:System.Windows.DependencyObject.GetValue%2A> 및 <xref:System.Windows.DependencyObject.SetValue%2A> 직접. 예를 들어 속성이 데이터 소스에 바인딩되면 해당 속성의 `set` 접근자가 호출되지 않습니다.  Get에 논리를 추가 하는 대신 set 접근자를 사용 하 여 합니다 <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.CoerceValueCallback>, 및 <xref:System.Windows.PropertyChangedCallback> 응답할 변경 되 면 값을 확인 하는 대리자입니다.  이 콜백에 대한 자세한 내용은 [종속성 속성 콜백 및 유효성 검사](../advanced/dependency-property-callbacks-and-validation.md)를 참조하세요.  
+- 속성의 `get` 및 `set` 접근자를 구현하여 종속성 속성을 등록하는 데 사용된 이름과 동일한 이름인 `Value`라는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 래퍼 속성을 정의합니다. 합니다 `get` 하 고 `set` 접근자 에서만 호출할 <xref:System.Windows.DependencyObject.GetValue%2A> 및 <xref:System.Windows.DependencyObject.SetValue%2A> 각각. 것이 좋습니다는 종속성 속성의 접근자 추가 논리가 포함 되지 때문에 클라이언트와 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 접근자 및 호출을 무시할 수 있습니다 <xref:System.Windows.DependencyObject.GetValue%2A> 및 <xref:System.Windows.DependencyObject.SetValue%2A> 직접. 예를 들어 속성이 데이터 소스에 바인딩되면 해당 속성의 `set` 접근자가 호출되지 않습니다.  Get에 논리를 추가 하는 대신 set 접근자를 사용 하 여 합니다 <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.CoerceValueCallback>, 및 <xref:System.Windows.PropertyChangedCallback> 응답할 변경 되 면 값을 확인 하는 대리자입니다.  이 콜백에 대한 자세한 내용은 [종속성 속성 콜백 및 유효성 검사](../advanced/dependency-property-callbacks-and-validation.md)를 참조하세요.  
   
--   메서드를 정의 합니다 <xref:System.Windows.CoerceValueCallback> 라는 `CoerceValue`합니다. `CoerceValue`는 `Value`가 `MinValue`보다 크거나 같고 `MaxValue`보다 작거나 같도록 합니다.  
+- 메서드를 정의 합니다 <xref:System.Windows.CoerceValueCallback> 라는 `CoerceValue`합니다. `CoerceValue`는 `Value`가 `MinValue`보다 크거나 같고 `MaxValue`보다 작거나 같도록 합니다.  
   
--   메서드를 정의 합니다 <xref:System.Windows.PropertyChangedCallback>명명 된 `OnValueChanged`합니다. `OnValueChanged` 만듭니다는 <xref:System.Windows.RoutedPropertyChangedEventArgs%601> 개체를 발생 시킬 준비를 `ValueChanged` 라우트된 이벤트입니다. 라우트된 이벤트는 다음 섹션에서 설명합니다.  
+- 메서드를 정의 합니다 <xref:System.Windows.PropertyChangedCallback>명명 된 `OnValueChanged`합니다. `OnValueChanged` 만듭니다는 <xref:System.Windows.RoutedPropertyChangedEventArgs%601> 개체를 발생 시킬 준비를 `ValueChanged` 라우트된 이벤트입니다. 라우트된 이벤트는 다음 섹션에서 설명합니다.  
   
  [!code-csharp[UserControlNumericUpDown#DependencyProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#dependencyproperty)]
  [!code-vb[UserControlNumericUpDown#DependencyProperty](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#dependencyproperty)]  
@@ -124,29 +124,29 @@ ms.locfileid: "59340024"
 ### <a name="use-routed-events"></a>라우트된 이벤트 사용  
  종속성 속성이 추가 기능으로 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 속성의 개념을 확장하는 것처럼 라우트된 이벤트가 표준 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 이벤트의 개념을 확장합니다. 라우트된 이벤트는 다음 동작을 지원하기 때문에 새로운 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤을 만들 때 이벤트를 라우트된 이벤트로 구현하는 것도 좋습니다.  
   
--   이벤트는 여러 컨트롤의 부모에서 처리될 수 ​​있습니다. 이벤트가 버블링 이벤트인 경우 요소 트리의 단일 부모가 이벤트를 구독할 수 있습니다. 그런 다음 애플리케이션 작성자는 하나의 처리기를 사용하여 여러 컨트롤의 이벤트에 응답할 수 있습니다. 예를 들어, 컨트롤의 각 항목의 일부인 경우는 <xref:System.Windows.Controls.ListBox> (에 포함 되어 있기 때문에 <xref:System.Windows.DataTemplate>), 응용 프로그램 개발자에 컨트롤의 이벤트에 대 한 이벤트 처리기를 정의할 수는 <xref:System.Windows.Controls.ListBox>합니다. 이벤트가 컨트롤 중 하나에서 발생할 때마다 이벤트 처리기가 호출됩니다.  
+- 이벤트는 여러 컨트롤의 부모에서 처리될 수 ​​있습니다. 이벤트가 버블링 이벤트인 경우 요소 트리의 단일 부모가 이벤트를 구독할 수 있습니다. 그런 다음 애플리케이션 작성자는 하나의 처리기를 사용하여 여러 컨트롤의 이벤트에 응답할 수 있습니다. 예를 들어, 컨트롤의 각 항목의 일부인 경우는 <xref:System.Windows.Controls.ListBox> (에 포함 되어 있기 때문에 <xref:System.Windows.DataTemplate>), 응용 프로그램 개발자에 컨트롤의 이벤트에 대 한 이벤트 처리기를 정의할 수는 <xref:System.Windows.Controls.ListBox>합니다. 이벤트가 컨트롤 중 하나에서 발생할 때마다 이벤트 처리기가 호출됩니다.  
   
--   라우트된 이벤트에 사용할 수는 <xref:System.Windows.EventSetter>, 응용 프로그램 개발자가 스타일 내에서 이벤트 처리기를 지정할 수 있습니다.  
+- 라우트된 이벤트에 사용할 수는 <xref:System.Windows.EventSetter>, 응용 프로그램 개발자가 스타일 내에서 이벤트 처리기를 지정할 수 있습니다.  
   
--   라우트된 이벤트에 사용할 수는 <xref:System.Windows.EventTrigger>, 속성에 애니메이션 효과 사용 하 여 유용한 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다. 자세한 내용은 [애니메이션 개요](../graphics-multimedia/animation-overview.md)를 참조하세요.  
+- 라우트된 이벤트에 사용할 수는 <xref:System.Windows.EventTrigger>, 속성에 애니메이션 효과 사용 하 여 유용한 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다. 자세한 내용은 [애니메이션 개요](../graphics-multimedia/animation-overview.md)를 참조하세요.  
   
  다음 예제는 다음을 수행하여 라우트된 이벤트를 정의합니다.  
   
--   정의 된 <xref:System.Windows.RoutedEvent> 라는 식별자 `ValueChangedEvent` 으로 `public` `static` `readonly` 필드.  
+- 정의 된 <xref:System.Windows.RoutedEvent> 라는 식별자 `ValueChangedEvent` 으로 `public` `static` `readonly` 필드.  
   
--   라우트된 이벤트를 호출 하 여 등록 된 <xref:System.Windows.EventManager.RegisterRoutedEvent%2A?displayProperty=nameWithType> 메서드. 예제를 호출할 때 다음 정보를 지정 합니다 <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>:  
+- 라우트된 이벤트를 호출 하 여 등록 된 <xref:System.Windows.EventManager.RegisterRoutedEvent%2A?displayProperty=nameWithType> 메서드. 예제를 호출할 때 다음 정보를 지정 합니다 <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>:  
   
-    -   이벤트의 이름은 `ValueChanged`입니다.  
+    - 이벤트의 이름은 `ValueChanged`입니다.  
   
-    -   라우팅 전략은 <xref:System.Windows.RoutingStrategy.Bubble>, 즉, 원본 (이벤트를 발생 시키는 개체)에서 이벤트 처리기를 먼저 호출 하 고 연속으로 가장 가까운에서 이벤트 처리기를 사용 하 여 시작 소스의 부모 요소에서 이벤트 처리기가 호출 하는 다음 부모 요소입니다.  
+    - 라우팅 전략은 <xref:System.Windows.RoutingStrategy.Bubble>, 즉, 원본 (이벤트를 발생 시키는 개체)에서 이벤트 처리기를 먼저 호출 하 고 연속으로 가장 가까운에서 이벤트 처리기를 사용 하 여 시작 소스의 부모 요소에서 이벤트 처리기가 호출 하는 다음 부모 요소입니다.  
   
-    -   이벤트 처리기의 유형은 <xref:System.Windows.RoutedPropertyChangedEventHandler%601>를 통해 생성 된를 <xref:System.Decimal> 형식입니다.  
+    - 이벤트 처리기의 유형은 <xref:System.Windows.RoutedPropertyChangedEventHandler%601>를 통해 생성 된를 <xref:System.Decimal> 형식입니다.  
   
-    -   이벤트의 소유 형식은 `NumericUpDown`입니다.  
+    - 이벤트의 소유 형식은 `NumericUpDown`입니다.  
   
--   `ValueChanged`라는 공용 이벤트를 선언하고 이벤트 접근자 선언을 포함합니다. 예제에서는 <xref:System.Windows.UIElement.AddHandler%2A> 에 `add` 접근자 선언의 및 <xref:System.Windows.UIElement.RemoveHandler%2A> 에 `remove` 접근자 선언을 사용 하 여는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이벤트 서비스.  
+- `ValueChanged`라는 공용 이벤트를 선언하고 이벤트 접근자 선언을 포함합니다. 예제에서는 <xref:System.Windows.UIElement.AddHandler%2A> 에 `add` 접근자 선언의 및 <xref:System.Windows.UIElement.RemoveHandler%2A> 에 `remove` 접근자 선언을 사용 하 여는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이벤트 서비스.  
   
--   `ValueChanged` 이벤트를 발생시키는 `OnValueChanged`라는 보호된 가상 메서드를 만듭니다.  
+- `ValueChanged` 이벤트를 발생시키는 `OnValueChanged`라는 보호된 가상 메서드를 만듭니다.  
   
  [!code-csharp[UserControlNumericUpDown#RoutedEvent](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#routedevent)]
  [!code-vb[UserControlNumericUpDown#RoutedEvent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#routedevent)]  
@@ -178,11 +178,11 @@ ms.locfileid: "59340024"
 #### <a name="attached-properties"></a>연결된 속성  
  다음 지침을 사용하여 사용자 지정 컨트롤에서 연결된 속성을 구현해야 합니다.  
   
--   가 `public` `static` `readonly` <xref:System.Windows.DependencyProperty> 형식의 *PropertyName* `Property` 사용 하 여 만들기가 있는 <xref:System.Windows.DependencyProperty.RegisterAttached%2A> 메서드. 에 전달 되는 속성 이름을 <xref:System.Windows.DependencyProperty.RegisterAttached%2A> 같아야 *PropertyName*합니다.  
+- 가 `public` `static` `readonly` <xref:System.Windows.DependencyProperty> 형식의 *PropertyName* `Property` 사용 하 여 만들기가 있는 <xref:System.Windows.DependencyProperty.RegisterAttached%2A> 메서드. 에 전달 되는 속성 이름을 <xref:System.Windows.DependencyProperty.RegisterAttached%2A> 같아야 *PropertyName*합니다.  
   
--   `Set`*PropertyName* 및 `Get`*PropertyName*이라는 `public` `static` CLR 메서드 쌍을 구현합니다. 두 메서드 모두에서 파생 된 클래스를 허용 해야 <xref:System.Windows.DependencyProperty> 첫 번째 인수로 합니다. `Set`*PropertyName* 메서드는 그 형식이 속성의 등록된 데이터 형식과 일치하는 인수도 수락합니다. `Get`*PropertyName* 메서드는 동일한 형식의 값을 반환해야 합니다. `Set`*PropertyName* 메서드가 누락된 경우 속성이 읽기 전용으로 표시됩니다.  
+- `Set`*PropertyName* 및 `Get`*PropertyName*이라는 `public` `static` CLR 메서드 쌍을 구현합니다. 두 메서드 모두에서 파생 된 클래스를 허용 해야 <xref:System.Windows.DependencyProperty> 첫 번째 인수로 합니다. `Set`*PropertyName* 메서드는 그 형식이 속성의 등록된 데이터 형식과 일치하는 인수도 수락합니다. `Get`*PropertyName* 메서드는 동일한 형식의 값을 반환해야 합니다. `Set`*PropertyName* 메서드가 누락된 경우 속성이 읽기 전용으로 표시됩니다.  
   
--   `Set` *PropertyName* 및 `Get` *PropertyName* 직접 라우팅해야 합니다 <xref:System.Windows.DependencyObject.GetValue%2A> 및 <xref:System.Windows.DependencyObject.SetValue%2A> 각각의 대상 종속성 메서드 개체입니다. 디자이너는 메서드 래퍼를 통해 호출하거나 대상 종속성 개체를 직접 호출하여 연결된 속성에 액세스할 수 있습니다.  
+- `Set` *PropertyName* 및 `Get` *PropertyName* 직접 라우팅해야 합니다 <xref:System.Windows.DependencyObject.GetValue%2A> 및 <xref:System.Windows.DependencyObject.SetValue%2A> 각각의 대상 종속성 메서드 개체입니다. 디자이너는 메서드 래퍼를 통해 호출하거나 대상 종속성 개체를 직접 호출하여 연결된 속성에 액세스할 수 있습니다.  
   
  연결된 속성에 대한 자세한 내용은 [연결된 속성 개요](../advanced/attached-properties-overview.md)를 참조하세요.  
   

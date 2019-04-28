@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, Tree control type
 ms.assetid: 312dd04d-a86b-4072-8b12-2beeabdff5e3
 ms.openlocfilehash: 001381eddf56022e2b3e934604e42d871a64d730
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996525"
 ---
 # <a name="ui-automation-support-for-the-tree-control-type"></a>Tree 컨트롤 형식에 대한 UI 자동화 지원
 > [!NOTE]
@@ -33,9 +33,9 @@ ms.locfileid: "59157263"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰는 다음과 같이 구성되어 있습니다.  
   
--   컨테이너 내의 0개 이상 항목(항목은 Tree Item, Data Item 또는 기타 컨트롤 형식에 따라 다를 수 있음).  
+- 컨테이너 내의 0개 이상 항목(항목은 Tree Item, Data Item 또는 기타 컨트롤 형식에 따라 다를 수 있음).  
   
--   0, 1 또는 2개의 스크롤 막대.  
+- 0, 1 또는 2개의 스크롤 막대.  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 콘텐츠 뷰는 컨테이너 내의 0개 이상 항목으로 이루어져 있습니다(항목은 Tree Item, Data Item 또는 기타 컨트롤 형식에 따라 다를 수 있음).  
   

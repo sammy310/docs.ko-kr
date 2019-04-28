@@ -12,11 +12,11 @@ helpviewer_keywords:
 - linkedConfiguration Element
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
 ms.openlocfilehash: 909ee7cbb7cd31cf213f305b23237cb69e295882
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674651"
 ---
 # <a name="linkedconfiguration-element"></a>\<linkedConfiguration > 요소
 
@@ -63,7 +63,7 @@ ms.locfileid: "55284611"
 
 - 구성 파일 마다 연결 된 구성 수에 제한이 없습니다.
 
-- 모든 연결 된 구성 파일의 동작과 비슷하게 하나의 파일로 병합 되는 `#include` C/c + +에서 지시문입니다.
+- 모든 연결 된 구성 파일의 동작과 비슷하게 하나의 파일로 병합 되는 `#include` c에서 지시문 /C++합니다.
 
 - 합니다  **\<linkedConfiguration >** 요소를 응용 프로그램 구성 파일에만 사용할 수는;에서 무시 됩니다 *Machine.config*합니다.
 

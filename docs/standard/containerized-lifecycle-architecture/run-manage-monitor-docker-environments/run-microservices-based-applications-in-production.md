@@ -1,17 +1,17 @@
 ---
-title: 프로덕션 환경에서 구성 및 마이크로 서비스 기반 응용 프로그램을 실행 합니다.
+title: 프로덕션 환경에서 구성된 마이크로서비스 기반 애플리케이션 실행
 description: 프로덕션 환경에서 컨테이너 기반 응용 프로그램을 실행 하는 주요 구성 요소에 알아봅니다
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: 52cf273194bff10192b06d236bda7c1cbea1abd8
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921591"
 ---
-# <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>프로덕션 환경에서 구성 및 마이크로 서비스 기반 응용 프로그램을 실행 합니다.
+# <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>프로덕션 환경에서 구성된 마이크로서비스 기반 애플리케이션 실행
 
 여러 마이크로 서비스에서 구성 된 응용 프로그램 배포의 복잡성을 단순화 하 고는 IT 관점에서 실행 가능한 있도록 오 케 스트레이 터 클러스터로 배포할 필요가 있습니다. 없이 오 케 스트레이 터 클러스터를 배포 하 고 복잡 한 마이크로 서비스 응용 프로그램을 확장 하기 어려울 것.
 

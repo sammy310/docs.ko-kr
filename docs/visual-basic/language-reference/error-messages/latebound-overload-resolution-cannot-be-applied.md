@@ -9,11 +9,11 @@ helpviewer_keywords:
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
 ms.openlocfilehash: 7f2ae3bb0e7c09d966c53fb17b1cbe675dfce8b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921110"
 ---
 # <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>런타임에 바인딩 오버 로드 확인에 적용할 수 없습니다 '\<procedurename >' 액세스 인스턴스가 인터페이스 형식 이므로
 컴파일러에서 오버 로드 된 속성 또는 프로시저에 대 한 참조를 확인 하려고 시도 하지만 인수 형식 이므로 참조 실패 `Object` 참조 하는 개체 인터페이스의 데이터 형식이 고 합니다. `Object` 인수를 사용 하면 런타임에 바인딩된으로 참조를 해결 하려면 컴파일러.  
@@ -24,7 +24,7 @@ ms.locfileid: "58814057"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   사용 하 여 `CType` 에 있는 인수를 캐스팅할 `Object` 호출 하려는 오버 로드의 서명에서 지정 된 형식입니다.  
+- 사용 하 여 `CType` 에 있는 인수를 캐스팅할 `Object` 호출 하려는 오버 로드의 서명에서 지정 된 형식입니다.  
   
      참고를 참조 하는 기본 인터페이스에 개체를 캐스팅 하는 데 도움이 되지는 않습니다. 이 오류를 방지 하려면 인수를 캐스팅 해야 합니다.  
   

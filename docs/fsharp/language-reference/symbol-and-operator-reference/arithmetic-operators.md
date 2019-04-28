@@ -3,11 +3,11 @@ title: 산술 연산자
 description: 제공 하는 산술 연산자에 알아봅니다는 F# 프로그래밍 언어입니다.
 ms.date: 04/04/2018
 ms.openlocfilehash: 826f334125a542855bf2fda43465618403d49d4c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925855"
 ---
 # <a name="arithmetic-operators"></a>산술 연산자
 
@@ -64,7 +64,7 @@ ms.locfileid: "53614586"
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3501.fs)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [기호 및 연산자 참조](index.md)
 - [연산자 오버로드](../operator-overloading.md)

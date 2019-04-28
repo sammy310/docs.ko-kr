@@ -9,11 +9,11 @@ helpviewer_keywords:
 - query interceptors [WCF Data Services]
 ms.assetid: 24b9df1b-b54b-4795-a033-edf333675de6
 ms.openlocfilehash: ad0673f72b1a81d6bcfaf0704ccd698eda7bb20c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936515"
 ---
 # <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>방법: (WCF Data Services) 데이터 서비스 메시지 가로채기
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 사용하면 사용자 지정 논리를 작업에 추가할 수 있도록 요청 메시지를 가로챌 수 있습니다. 메시지를 가로채 하려면 데이터 서비스에서 특별 한 특성이 있는 메서드를 사용 합니다. 자세한 내용은 [인터셉터](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)합니다.  
