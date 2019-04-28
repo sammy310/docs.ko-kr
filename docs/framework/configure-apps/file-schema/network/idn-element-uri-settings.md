@@ -3,11 +3,11 @@ title: <idn> 요소(URI 설정)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
 ms.openlocfilehash: 2d2729f9120d6b6fe673904ad2bf6d005ddf5469
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705118"
 ---
 # <a name="idn-element-uri-settings"></a>\<idn > 요소 (Uri 설정)
 다국어 도메인 이름 (IDN) 구문 분석 된 도메인 이름에 적용 됩니다 지정 합니다.  
@@ -60,15 +60,15 @@ ms.locfileid: "59321759"
   
  세 가지 idn 관련 값을 사용 하는 DNS 서버에 따라 가지가 있습니다.  
   
--   idn 사용 = All  
+- idn 사용 = All  
   
      이 값은 모든 유니코드 도메인 이름을 해당하는 Punycode 항목(IDN 이름)으로 변환합니다.  
   
--   사용 하도록 설정 하는 idn AllExceptIntranet =  
+- 사용 하도록 설정 하는 idn AllExceptIntranet =  
   
      이 값은 Punycode 항목 (IDN 이름)을 사용 하려면 로컬 인트라넷에 없는 모든 유니코드 도메인 이름을 변환 합니다. 이 경우를 처리 하기 위해 로컬 인트라넷에 있는 국가별 이름을 인트라넷에 사용 되는 DNS 서버가 유니코드 이름 확인을 지원 해야 합니다.  
   
--   idn 사용 = 없음  
+- idn 사용 = 없음  
   
      이 값은 Punycode를 사용하도록 어떠한 유니코드 도메인 이름도 변환하지 않습니다. .NET Framework 2.0 동작을 사용 하 여 일치 하는 기본 값입니다.  
   

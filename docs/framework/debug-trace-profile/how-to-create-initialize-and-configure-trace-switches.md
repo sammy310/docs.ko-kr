@@ -14,11 +14,11 @@ ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87170035df47e7605d25531df4b0759bf121ad80
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754351"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>방법: 추적 스위치 만들기, 초기화 및 구성
 추적 스위치를 사용하여 추적 출력을 활성화, 비활성화 및 필터링할 수 있습니다.  
@@ -75,11 +75,11 @@ ms.locfileid: "59325711"
   
 2. 프로젝트에 구성 파일(app.config 또는 Web.config)이 없는 경우 **프로젝트** 메뉴에서 **새 항목 추가**를 선택합니다.  
   
-    -   **Visual Basic:** 에 **새 항목 추가** 대화 상자에서 **응용 프로그램 구성 파일**합니다.  
+    - **Visual Basic:** 에 **새 항목 추가** 대화 상자에서 **응용 프로그램 구성 파일**합니다.  
   
          응용 프로그램 구성 파일이 만들어져 열립니다. 이 파일은 루트 요소가 `<configuration>.`인 XML 문서입니다.  
   
-    -   **Visual C#:** 에 **새 항목 추가** 대화 상자에서 **XML 파일**합니다. 이 파일 이름을 **app.config**로 지정합니다. XML 편집기에서 XML 선언 뒤에 다음 XML을 추가합니다.  
+    - **Visual C#:** 에 **새 항목 추가** 대화 상자에서 **XML 파일**합니다. 이 파일 이름을 **app.config**로 지정합니다. XML 편집기에서 XML 선언 뒤에 다음 XML을 추가합니다.  
   
         ```xml  
         <configuration>  

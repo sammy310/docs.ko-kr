@@ -12,22 +12,22 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
 ms.openlocfilehash: 9366c7ebe2e5b347f4795b15e6f2c2d0f3835482
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747521"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>연습: 시각적 상속 데모
 시각적 상속을 통해 기본 폼의 컨트롤을 보고 새 컨트롤을 추가할 수 있습니다. 이 연습에서는 기본 폼을 만들고 클래스 라이브러리로 컴파일합니다. 이 클래스 라이브러리를 다른 프로젝트로 가져와 기본 폼에서 상속하는 새 양식을 만듭니다. 이 연습에서는 다음 작업을 수행하는 방법을 배웁니다.  
   
--   기본 폼을 포함하는 클래스 라이브러리 프로젝트를 만듭니다.  
+- 기본 폼을 포함하는 클래스 라이브러리 프로젝트를 만듭니다.  
   
--   기본 폼의 파생 클래스가 수정할 수 있는 속성을 가진 단추를 추가합니다.  
+- 기본 폼의 파생 클래스가 수정할 수 있는 속성을 가진 단추를 추가합니다.  
   
--   기본 폼의 상속자가 수정할 수 없는 단추를 추가합니다.  
+- 기본 폼의 상속자가 수정할 수 없는 단추를 추가합니다.  
   
--   `BaseForm`에서 상속하는 폼을 포함하는 프로젝트를 만듭니다.  
+- `BaseForm`에서 상속하는 폼을 포함하는 프로젝트를 만듭니다.  
   
  궁극적으로, 이 연습에서는 상속된 폼의 private 컨트롤과 protected 컨트롤 간의 차이점을 보여 줍니다.  
   
@@ -76,11 +76,11 @@ ms.locfileid: "59307626"
   
 3. 속성 창에서 단추의 다음 속성을 설정합니다.  
   
-    -   설정 된 **텍스트** 속성을 **Say Hello**합니다.  
+    - 설정 된 **텍스트** 속성을 **Say Hello**합니다.  
   
-    -   설정 된 **(이름)** 속성을 **btnProtected**합니다.  
+    - 설정 된 **(이름)** 속성을 **btnProtected**합니다.  
   
-    -   설정 된 **한정자** 속성을 **Protected**합니다. 따라서에서 상속 하는 폼 **Form1** 속성을 수정 하려면 **btnProtected**합니다.  
+    - 설정 된 **한정자** 속성을 **Protected**합니다. 따라서에서 상속 하는 폼 **Form1** 속성을 수정 하려면 **btnProtected**합니다.  
   
 4. 두 번 클릭 합니다 **Say Hello** 에 대 한 이벤트 처리기를 추가 하려면 단추를 **클릭** 이벤트입니다.  
   
@@ -100,11 +100,11 @@ ms.locfileid: "59307626"
   
 2. 두 번째 단추를 추가하고 해당 속성을 다음과 같이 설정합니다.  
   
-    -   설정 된 **텍스트** 속성을 **Say Goodbye**합니다.  
+    - 설정 된 **텍스트** 속성을 **Say Goodbye**합니다.  
   
-    -   설정 된 **(이름)** 속성을 **btnPrivate**합니다.  
+    - 설정 된 **(이름)** 속성을 **btnPrivate**합니다.  
   
-    -   설정 된 **한정자** 속성을 **개인**합니다. 상속 하는 폼에 대 한 없게 **Form1** 속성을 수정 하려면 **btnPrivate**합니다.  
+    - 설정 된 **한정자** 속성을 **개인**합니다. 상속 하는 폼에 대 한 없게 **Form1** 속성을 수정 하려면 **btnPrivate**합니다.  
   
 3. 두 번 클릭 합니다 **Say Goodbye** 에 대 한 이벤트 처리기를 추가 하려면 단추를 **클릭** 이벤트입니다. 다음 코드 줄을 이벤트 프로시저에 배치합니다.  
   
@@ -148,9 +148,9 @@ ms.locfileid: "59307626"
   
 8. Visual C# 사용 중인 경우:  
   
-    1.  **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 **Form1** 에 **InheritanceTest** 프로젝트를 선택한 다음 **삭제**합니다. 표시 되는 메시지 상자에서 클릭 **확인** 삭제를 확인 합니다.  
+    1. **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 **Form1** 에 **InheritanceTest** 프로젝트를 선택한 다음 **삭제**합니다. 표시 되는 메시지 상자에서 클릭 **확인** 삭제를 확인 합니다.  
   
-    2.  Program.cs 파일을 열고 `Application.Run(new Form1());` 줄을 `Application.Run(new Form2());`으로 변경합니다.  
+    2. Program.cs 파일을 열고 `Application.Run(new Form1());` 줄을 `Application.Run(new Form2());`으로 변경합니다.  
   
 9. **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 합니다 **InheritanceTest** 프로젝트를 마우스 **시작 프로젝트로 설정**합니다.  
   

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 309c31dacd801f1c46a2d37932124638bc157cd6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61749048"
 ---
 # <a name="icordebugdatatargetgetplatform-method"></a>ICorDebugDataTarget::GetPlatform 메서드
 프로세서 아키텍처와 대상 프로세스가 실행 되는 운영 체제를 포함 하 여 플랫폼에 대 한 정보를 제공 합니다.  
@@ -44,9 +44,9 @@ HRESULT GetPlatform([out] CorDebugPlatform * pTargetPlatform);
   
  이 메서드는 성공 해야 합니다. 실패 한 경우 대상 플랫폼을 사용할 수 없는 합니다. 메서드는 다음과 같은 이유로 실패할 수 있습니다.  
   
--   대상에 대해 에뮬레이트 되는 플랫폼을 사용할 수 없는 합니다.  
+- 대상에 대해 에뮬레이트 되는 플랫폼을 사용할 수 없는 합니다.  
   
--   대상 플랫폼에는 실제 하드웨어를 사용할 수 없습니다.  
+- 대상 플랫폼에는 실제 하드웨어를 사용할 수 없습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

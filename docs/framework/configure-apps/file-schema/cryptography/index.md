@@ -2,20 +2,14 @@
 title: 암호화 설정 스키마
 ms.date: 03/30/2017
 helpviewer_keywords:
-- configuration schema [.NET Framework], cryptography
-- elements [.NET Framework], cryptography
-- schema configuration settings
-- cryptography, settings schema
-- cryptography, mapping algorithm names
-- configuration sections [.NET Framework]
-- configuration settings [.NET Framework], cryptography
+  - 'configuration schema [.NET Framework], cryptography'
+  - 'elements [.NET Framework], cryptography'
+  - schema configuration settings
+  - 'cryptography, settings schema'
+  - 'cryptography, mapping algorithm names'
+  - 'configuration sections [.NET Framework]'
+  - 'configuration settings [.NET Framework], cryptography'
 ms.assetid: 1f55050a-b2a3-4868-a3c0-da20826150f3
-ms.openlocfilehash: 00b04cc2175f4bb4cc0b74602cd3c26f4a4e342f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184459"
 ---
 # <a name="cryptography-settings-schema"></a>암호화 설정 스키마
 암호 설정 스키마에는 암호화 알고리즘을 구현하는 클래스에 알고리즘 이름을 매핑하는 방법을 지정하는 요소가 포함되어 있습니다.  

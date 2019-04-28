@@ -3,24 +3,24 @@ title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
 ms.openlocfilehash: 801fc6baed623c920e5a20163782bc9d6551a6da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752739"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 이 샘플에서는 세션 관리에 HTTP 쿠키를 사용하기 위해 사용자 지정 프로토콜 채널을 빌드하는 방법을 보여 줍니다. 이 채널을 통해 Windows Communication Foundation (WCF) 서비스와 ASMX 클라이언트 또는 WCF 클라이언트와 ASMX 서비스 간에 통신이 있습니다.  
   
  클라이언트가 세션 기반의 ASMX 웹 서비스에 있는 웹 메서드를 호출하면 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 엔진은 다음 작업을 수행합니다.  
   
--   고유 ID(세션 ID)를 생성합니다.  
+- 고유 ID(세션 ID)를 생성합니다.  
   
--   세션 개체를 생성하여 고유 ID에 연결합니다.  
+- 세션 개체를 생성하여 고유 ID에 연결합니다.  
   
--   고유 ID를 Set-Cookie HTTP 응답 헤더에 추가하여 클라이언트로 보냅니다.  
+- 고유 ID를 Set-Cookie HTTP 응답 헤더에 추가하여 클라이언트로 보냅니다.  
   
--   클라이언트로 보내는 세션 ID를 기반으로 이후의 호출에서 클라이언트를 식별합니다.  
+- 클라이언트로 보내는 세션 ID를 기반으로 이후의 호출에서 클라이언트를 식별합니다.  
   
  클라이언트는 이후에 서버로 보내는 요청에 이 세션 ID를 포함합니다. 서버는 클라이언트가 보낸 세션 ID를 사용하여 현재 HTTP 컨텍스트에 적절한 세션 개체를 로드합니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "59772988"
 ## <a name="service-channel"></a>서비스 채널  
  이 샘플은 `HttpCookieReplySessionChannelListener` 클래스에 서비스 채널을 제공합니다. 이 클래스는 <xref:System.ServiceModel.Channels.IChannelListener> 인터페이스를 구현하고 채널 스택의 하위 수준에 있는 <xref:System.ServiceModel.Channels.IReplyChannel> 채널을 <xref:System.ServiceModel.Channels.IReplySessionChannel>로 변환합니다. 이 프로세스는 다음과 같이 나눌 수 있습니다.  
   
--   채널 수신기가 열리면 채널 수신기는 내부 수신기로부터 내부 채널을 받습니다. 내부 수신기는 데이터그램 수신기이고 받은 채널의 수명은 수신기의 수명에서 분리되므로 내부 수신기를 닫고 내부 채널만 유지할 수 있습니다.  
+- 채널 수신기가 열리면 채널 수신기는 내부 수신기로부터 내부 채널을 받습니다. 내부 수신기는 데이터그램 수신기이고 받은 채널의 수명은 수신기의 수명에서 분리되므로 내부 수신기를 닫고 내부 채널만 유지할 수 있습니다.  
   
     ```  
                 this.innerChannelListener.Open(timeoutHelper.RemainingTime());  
@@ -48,7 +48,7 @@ ms.locfileid: "59772988"
     this.innerChannelListener.Close(timeoutHelper.RemainingTime());  
     ```  
   
--   열기 프로세스가 완료되면 내부 채널에서 메시지를 받도록 메시지 루프를 설정합니다.  
+- 열기 프로세스가 완료되면 내부 채널에서 메시지를 받도록 메시지 루프를 설정합니다.  
   
     ```  
     IAsyncResult result = BeginInnerReceiveRequest();  
@@ -63,7 +63,7 @@ ms.locfileid: "59772988"
     }  
     ```  
   
--   메시지가 도착하면 서비스 채널은 세션 식별자를 확인하고 적절한 세션 채널로 디멀티플렉싱됩니다. 채널 수신기는 세션 식별자를 세션 채널 인스턴스에 매핑하는 사전을 유지 관리합니다.  
+- 메시지가 도착하면 서비스 채널은 세션 식별자를 확인하고 적절한 세션 채널로 디멀티플렉싱됩니다. 채널 수신기는 세션 식별자를 세션 채널 인스턴스에 매핑하는 사전을 유지 관리합니다.  
   
     ```  
     Dictionary<string, IReplySessionChannel> channelMapping;  

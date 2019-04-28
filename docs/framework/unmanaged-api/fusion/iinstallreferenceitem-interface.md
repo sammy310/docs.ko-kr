@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cc7cc4ecf710090b2cbe55657a85cb081b2fe33c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757900"
 ---
 # <a name="iinstallreferenceitem-interface"></a>IInstallReferenceItem 인터페이스
 전역 어셈블리 캐시에 설치 된 항목을 나타냅니다.  
