@@ -13,20 +13,20 @@ helpviewer_keywords:
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
 ms.openlocfilehash: 4ae2366552426af0107c8d7a35bb5368fe30c8a7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791965"
 ---
 # <a name="optional-parameters-visual-basic"></a>선택적 매개 변수(Visual Basic)
 프로시저 매개 변수를 선택적 요소로 지정하여 프로시저를 호출할 때 인수를 지정하지 않아도 되도록 할 수 있습니다. *선택적 매개 변수* 으로 표시 됩니다는 `Optional` 프로시저 정의에서 키워드입니다. 이 때 적용되는 규칙은 다음과 같습니다.  
   
--   프로시저 정의의 모든 선택적 매개 변수에는 기본값을 지정해야 합니다.  
+- 프로시저 정의의 모든 선택적 매개 변수에는 기본값을 지정해야 합니다.  
   
--   선택적 매개 변수의 기본값은 상수 식이어야 합니다.  
+- 선택적 매개 변수의 기본값은 상수 식이어야 합니다.  
   
--   프로시저 정의에서 선택적 매개 변수 뒤에 오는 매개 변수도 모두 선택적 요소여야 합니다.  
+- 프로시저 정의에서 선택적 매개 변수 뒤에 오는 매개 변수도 모두 선택적 요소여야 합니다.  
   
  다음 구문은 선택적 매개 변수를 사용하여 프로시저를 선언하는 방법을 보여 줍니다.  
   

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 58b39d12-c953-40c4-88af-d7eb3343ca28
 author: BrucePerlerMS
 ms.openlocfilehash: ae263a4590cc523c64306ff5d53e54b5190ca510
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791648"
 ---
 # <a name="issuernameregistry"></a>\<issuerNameRegistry>
 토큰 처리기 컬렉션의 처리기에서 사용 되는 발급자 이름 레지스트리를 구성 합니다.  

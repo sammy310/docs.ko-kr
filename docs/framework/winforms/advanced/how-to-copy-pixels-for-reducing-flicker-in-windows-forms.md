@@ -14,11 +14,11 @@ helpviewer_keywords:
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
 ms.openlocfilehash: e3d1c2b681e98dc7c45467683924dd4022eb377e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59094036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937750"
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>방법: Windows Forms에서 깜빡임을 줄이기 위한 픽셀 복사
 간단한 그래픽에 애니메이션을 적용 하면 깜박임을 또는 원치 않는 다른 시각 효과 사용자 경우가 발생할 수 있습니다. 이 문제를 제한 하는 한 가지 방법은 그림에서 "bitblt" 프로세스를 사용 하는 것입니다. Bitblt "비트 블록 전송" 색 데이터의 원본 영역을 픽셀에서 픽셀의 대상 사각형에입니다.  

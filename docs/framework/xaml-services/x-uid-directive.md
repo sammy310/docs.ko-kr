@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Uid attribute [XAML Services]
 ms.assetid: 81defade-483b-4a89-b76d-9b25bba34010
 ms.openlocfilehash: c8f0580c987b87193b5b6a38559043e50fc7cb89
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938842"
 ---
 # <a name="xuid-directive"></a>x:Uid 지시문
 태그 요소에 대 한 고유 식별자를 제공합니다. 대부분의 시나리오에서이 고유 식별자는 XAML 지역화 프로세스와 도구에서 사용 됩니다.  

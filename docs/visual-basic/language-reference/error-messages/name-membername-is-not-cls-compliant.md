@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40031
 ms.assetid: e2b885dc-cbf9-49ff-bbbe-531657ea99f7
 ms.openlocfilehash: 06b20b4f61741f2174654d749df55c3c4348c547
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787467"
 ---
 # <a name="name-membername-is-not-cls-compliant"></a>이름 \<membername > CLS 규격이 아님
 로 표시 되어 어셈블리로 `<CLSCompliant(True)>` 밑줄로 시작 하는 이름 가진 멤버를 노출 하지만 (`_`).  
@@ -29,9 +29,9 @@ ms.locfileid: "58824626"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   소스 코드를 제어할 경우 멤버 이름을 밑줄로 시작 하지 않도록 변경 합니다.  
+- 소스 코드를 제어할 경우 멤버 이름을 밑줄로 시작 하지 않도록 변경 합니다.  
   
--   멤버 이름을 그대로 유지 하는, 필요한 경우 제거 합니다 <xref:System.CLSCompliantAttribute> 해당 정의에서 표시 하거나 `<CLSCompliant(False)>`합니다. 어셈블리를 여전히 표시할 수 있습니다 `<CLSCompliant(True)>`합니다.  
+- 멤버 이름을 그대로 유지 하는, 필요한 경우 제거 합니다 <xref:System.CLSCompliantAttribute> 해당 정의에서 표시 하거나 `<CLSCompliant(False)>`합니다. 어셈블리를 여전히 표시할 수 있습니다 `<CLSCompliant(True)>`합니다.  
   
 ## <a name="see-also"></a>참고자료
 

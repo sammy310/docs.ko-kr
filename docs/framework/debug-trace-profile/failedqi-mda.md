@@ -11,11 +11,11 @@ ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0ac478644561d2aab13d10811987d8d02c8d7608
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754728"
 ---
 # <a name="failedqi-mda"></a>failedQI MDA
 `failedQI` MDA(관리 디버깅 도우미)는 런타임이 RCW(런타임 호출 가능 래퍼)를 대신하여 COM 인터페이스 포인터에서 `QueryInterface`를 호출할 때 활성화되며 `QueryInterface` 호출이 실패합니다.  
@@ -25,11 +25,11 @@ ms.locfileid: "59217629"
   
 ## <a name="cause"></a>원인  
   
--   잘못된 컨텍스트에서 호출했습니다.  
+- 잘못된 컨텍스트에서 호출했습니다.  
   
--   잘못된 컨텍스트에서 호출이 시도되었기 때문에 등록된 프록시가 `QueryInterface` 호출에 실패합니다.  
+- 잘못된 컨텍스트에서 호출이 시도되었기 때문에 등록된 프록시가 `QueryInterface` 호출에 실패합니다.  
   
--   OLE 소유 프록시에서 실패 HRESULT가 반환되었습니다.  
+- OLE 소유 프록시에서 실패 HRESULT가 반환되었습니다.  
   
 ## <a name="resolution"></a>해결  
  COM 규칙에 MSDN 설명서를 참조하세요.  

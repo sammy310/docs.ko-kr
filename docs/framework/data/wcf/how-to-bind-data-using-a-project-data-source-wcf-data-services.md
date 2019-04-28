@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
 ms.openlocfilehash: e1111077a407dc32475976b15ff71170978e3184
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765507"
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>방법: 프로젝트 데이터 원본 (WCF Data Services)를 사용 하 여 데이터 바인딩
 
@@ -31,19 +31,19 @@ WCF Data Services 클라이언트 응용 프로그램에서 생성 된 데이터
 
      창에 대한 XAML 파일에 다음 개체 요소가 만들어집니다.
 
-    -   <xref:System.Windows.Data.CollectionViewSource>라는 `customersViewSource` 요소. 최상위 <xref:System.Windows.FrameworkElement.DataContext%2A> 개체 요소의 <xref:System.Windows.Controls.Grid> 속성은 새 <xref:System.Windows.Data.CollectionViewSource>로 설정됩니다.
+    - <xref:System.Windows.Data.CollectionViewSource>라는 `customersViewSource` 요소. 최상위 <xref:System.Windows.FrameworkElement.DataContext%2A> 개체 요소의 <xref:System.Windows.Controls.Grid> 속성은 새 <xref:System.Windows.Data.CollectionViewSource>로 설정됩니다.
 
-    -   <xref:System.Windows.Controls.ComboBox>라는 데이터 바인딩된 `CustomerID`
+    - <xref:System.Windows.Controls.ComboBox>라는 데이터 바인딩된 `CustomerID`
 
-    -   <xref:System.Windows.Controls.Label>
+    - <xref:System.Windows.Controls.Label>
 
 4. 끌기 합니다 **주문** 디자이너 탐색 속성입니다.
 
      창에 대한 XAML 파일에 다음 개체 요소가 추가로 만들어집니다.
 
-    -   소스가 <xref:System.Windows.Data.CollectionViewSource>인 `customersOrdersViewSource`라는 두 번째 `customerViewSource` 요소
+    - 소스가 <xref:System.Windows.Data.CollectionViewSource>인 `customersOrdersViewSource`라는 두 번째 `customerViewSource` 요소
 
-    -   <xref:System.Windows.Controls.DataGrid>라는 데이터 바인딩된 `ordersDataGrid` 컨트롤
+    - <xref:System.Windows.Controls.DataGrid>라는 데이터 바인딩된 `ordersDataGrid` 컨트롤
 
 5. (선택 사항) 추가 항목을 끌어 놓아 합니다 **고객** 노드에서 디자이너로 합니다.
 
@@ -82,13 +82,13 @@ WCF Data Services 클라이언트 응용 프로그램에서 생성 된 데이터
 
      폼에 다음 컨트롤이 만들어집니다.
 
-    -   <xref:System.Windows.Forms.BindingSource>라는 `customersBindingSource` 인스턴스.
+    - <xref:System.Windows.Forms.BindingSource>라는 `customersBindingSource` 인스턴스.
 
-    -   <xref:System.Windows.Forms.BindingNavigator>라는 `customersBindingNavigator` 인스턴스. 이 컨트롤은 필요 없으므로 삭제할 수 있습니다.
+    - <xref:System.Windows.Forms.BindingNavigator>라는 `customersBindingNavigator` 인스턴스. 이 컨트롤은 필요 없으므로 삭제할 수 있습니다.
 
-    -   <xref:System.Windows.Forms.ComboBox>라는 데이터 바인딩된 `CustomerID`
+    - <xref:System.Windows.Forms.ComboBox>라는 데이터 바인딩된 `CustomerID`
 
-    -   <xref:System.Windows.Forms.Label>
+    - <xref:System.Windows.Forms.Label>
 
 3. 끌기 합니다 **주문** 탐색 속성을 폼입니다.
 

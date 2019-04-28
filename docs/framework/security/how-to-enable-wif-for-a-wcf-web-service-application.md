@@ -7,38 +7,38 @@ ms.openlocfilehash: 6af0336e19df4ba2a99a52f8726e78ed92f5a79e
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940467"
 ---
 # <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>방법: WCF 웹 서비스 애플리케이션에 WIF 사용
 ## <a name="applies-to"></a>적용 대상  
   
--   Microsoft® Windows® Identity Foundation(WIF)  
+- Microsoft® Windows® Identity Foundation(WIF)  
   
--   Microsoft® Windows® Communication Foundation(WCF)  
+- Microsoft® Windows® Communication Foundation(WCF)  
   
 ## <a name="summary"></a>요약  
  이 방법 설명에서는 WCF 웹 서비스에서 WIF를 사용하기 위한 자세한 단계별 절차를 소개합니다. 또한, 응용 프로그램이 실행될 때 웹 서비스가 클레임을 올바로 표시하는지 확인하기 위해 응용 프로그램을 테스트하는 방법에 대한 지침을 제공합니다. 이 방법 설명에 보안 토큰 서비스(STS)를 만들기 위한 자세한 지침은 없으며, 그 대신 ID 및 액세스 도구와 함께 제공되는 개발 STS를 사용합니다. 개발 STS가 실제 인증을 수행하는 것은 아니며, 테스트 목적으로만 사용됩니다. 이 방법을 완료하려면 ID 및 액세스 도구를 설치해야 합니다. 다음 위치에서 다운로드할 수 있습니다. [Id 및 액세스 도구](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 ## <a name="contents"></a>목차  
   
--   목표  
+- 목표  
   
--   개요  
+- 개요  
   
--   단계 요약  
+- 단계 요약  
   
--   1단계 - 간단한 WCF 서비스 만들기  
+- 1단계 - 간단한 WCF 서비스 만들기  
   
--   2단계 - WCF 서비스용 클라이언트 응용 프로그램 만들기  
+- 2단계 - WCF 서비스용 클라이언트 응용 프로그램 만들기  
   
--   3단계 - 솔루션 테스트  
+- 3단계 - 솔루션 테스트  
   
 ## <a name="objectives"></a>목표  
   
--   발행된 토큰을 요구하는 WCF 서비스 만들기  
+- 발행된 토큰을 요구하는 WCF 서비스 만들기  
   
--   STS로부터 토큰을 요청하고 WCF 서비스로 토큰을 전달하는 WCF 클라이언트 만들기  
+- STS로부터 토큰을 요청하고 WCF 서비스로 토큰을 전달하는 WCF 클라이언트 만들기  
   
 ## <a name="overview"></a>개요  
  이 방법은 WCF 서비스를 개발할 때 개발자가 페더레이션 인증을 사용할 수 있는 방법을 보여주기 위한 것입니다. WCF 서비스에서 페더레이션을 사용할 때의 이점은 다음과 같습니다.  
@@ -55,11 +55,11 @@ ms.locfileid: "59977433"
   
 ## <a name="summary-of-steps"></a>단계 요약  
   
--   1단계 - 간단한 WCF 서비스 만들기  
+- 1단계 - 간단한 WCF 서비스 만들기  
   
--   2단계 - WCF 서비스용 클라이언트 응용 프로그램 만들기  
+- 2단계 - WCF 서비스용 클라이언트 응용 프로그램 만들기  
   
--   3단계 - 솔루션 테스트  
+- 3단계 - 솔루션 테스트  
   
 ## <a name="step-1--create-a-simple-wcf-service"></a>1단계 - 간단한 WCF 서비스 만들기  
  이 단계에서는 ID 및 액세스 도구에 포함되어 있는 개발 STS를 사용하는 새 WCF 서비스를 만듭니다.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - GDI+, Bezier splines
 ms.assetid: 5774ce1e-87d4-4bc7-88c4-4862052781b8
 ms.openlocfilehash: ff4e9eb18610b70c88e057d3d44020321bbb9f4f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779276"
 ---
 # <a name="b233zier-splines-in-gdi"></a>B&#233;zier GDI +의 스플라인
 베 지 어 스플라인을 네 지점에서 지정 된 곡선이: 두 끝점 (예: p1 및 p2) 및 두 개의 제어점 (c1 및 c2). 곡선 시작 된 p1 및 p2에서 끝납니다. 곡선의 제어점 통과 하지 않습니다 않지만 제어점 자석, 특정 방향으로 곡선을 가져와서 곡률 방식에 영향을 주는 역할을 합니다. 다음 그림은 끝점 및 제어점와 함께 베 지 어 곡선을 나타냅니다.  

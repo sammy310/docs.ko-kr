@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 58a39771bd89fc9c4947f80a3c87b4d340b5461c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934929"
 ---
 # <a name="icordebugappdomain2getarrayorpointertype-method"></a>ICorDebugAppDomain2::GetArrayOrPointerType 메서드
 지정된 된 형식에 대 한 포인터 또는 지정된 된 형식에 대 한 참조의 배열을 가져옵니다.  
@@ -54,11 +54,11 @@ HRESULT GetArrayOrPointerType (
 ## <a name="remarks"></a>설명  
  변수의 *elementType* 다음 중 하나 여야 합니다.  
   
--   ELEMENT_TYPE_PTR  
+- ELEMENT_TYPE_PTR  
   
--   ELEMENT_TYPE_BYREF  
+- ELEMENT_TYPE_BYREF  
   
--   ELEMENT_TYPE_ARRAY 또는 ELEMENT_TYPE_SZARRAY  
+- ELEMENT_TYPE_ARRAY 또는 ELEMENT_TYPE_SZARRAY  
   
  경우 값 *elementType* ELEMENT_TYPE_PTR 인지, ELEMENT_TYPE_BYREF *nRank* 0 이어야 합니다.  
   

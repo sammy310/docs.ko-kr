@@ -14,8 +14,8 @@ ms.openlocfilehash: b836659821b54698b675d48acd4e46466001d654
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937922"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>방법: 선형 그라데이션 만들기
 GDI + 가로, 세로 및 대각선 선형 그라데이션 제공합니다. 기본적으로 선형 그라데이션에 색이 균일 하 게 변경 합니다. 그러나 균일 하지 않은 방식으로 색이 변경 되도록 선형 그라데이션을 사용자 지정할 수 있습니다.  
@@ -35,7 +35,7 @@ GDI + 가로, 세로 및 대각선 선형 그라데이션 제공합니다. 기�
   
 ### <a name="to-use-horizontal-linear-gradients"></a>가로 선형 그라데이션 사용 하려면  
   
--   불투명 한 빨강 및 불투명 파란색 세 번째와 네 번째 인수로 각각 전달 합니다.  
+- 불투명 한 빨강 및 불투명 파란색 세 번째와 네 번째 인수로 각각 전달 합니다.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#21)]
      [!code-vb[System.Drawing.UsingaGradientBrush#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#21)]  
@@ -60,7 +60,7 @@ GDI + 가로, 세로 및 대각선 선형 그라데이션 제공합니다. 기�
 
 ### <a name="to-customize-linear-gradients"></a>선형 그라데이션 사용자 지정 하려면  
   
--   불투명 한 검정 픽셀과 불투명 한 빨강의 세 번째 및 네 번째 인수로 각각 전달 합니다.  
+- 불투명 한 검정 픽셀과 불투명 한 빨강의 세 번째 및 네 번째 인수로 각각 전달 합니다.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#22)]
      [!code-vb[System.Drawing.UsingaGradientBrush#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#22)]  
@@ -75,7 +75,7 @@ GDI + 가로, 세로 및 대각선 선형 그라데이션 제공합니다. 기�
   
 ### <a name="to-create-diagonal-linear-gradients"></a>대각선 선형 그라데이션을 만들려면  
   
--   불투명 파란색 픽셀과 불투명 한 녹색 세 번째와 네 번째 인수로 각각 전달 합니다.  
+- 불투명 파란색 픽셀과 불투명 한 녹색 세 번째와 네 번째 인수로 각각 전달 합니다.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#23)]
      [!code-vb[System.Drawing.UsingaGradientBrush#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  

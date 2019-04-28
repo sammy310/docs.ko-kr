@@ -4,52 +4,52 @@ ms.date: 03/30/2017
 ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
 author: BrucePerlerMS
 ms.openlocfilehash: b07a8930255786686fb1e587b2a29bbc708eff63
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59311034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940506"
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>방법: WIF를 사용하여 로그인 상태 표시
 ## <a name="applies-to"></a>적용 대상  
   
--   Microsoft® Windows® Identity Foundation(WIF) 4.5  
+- Microsoft® Windows® Identity Foundation(WIF) 4.5  
   
--   ASP.NET® Web Forms  
+- ASP.NET® Web Forms  
   
 ## <a name="summary"></a>요약  
  이 항목에서는 WIF 사용 가능 ASP.NET 애플리케이션에서 로그인 상태를 표시하는 방법을 설명합니다. WIF는 애플리케이션이 클레임을 인식하도록 설정하고 애플리케이션 리소스에 대한 인증 및 권한 부여를 관리하기 위한 메커니즘을 제공합니다.  
   
 ## <a name="contents"></a>목차  
   
--   개요  
+- 개요  
   
--   단계 요약  
+- 단계 요약  
   
--   1단계 – ID 및 액세스 도구 확장 설치  
+- 1단계 – ID 및 액세스 도구 확장 설치  
   
--   2단계 – 신뢰 당사자 ASP.NET 애플리케이션 만들기  
+- 2단계 – 신뢰 당사자 ASP.NET 애플리케이션 만들기  
   
--   3단계 – 로컬 개발 STS를 사용하여 사용자 인증  
+- 3단계 – 로컬 개발 STS를 사용하여 사용자 인증  
   
--   4단계 – ASP.NET 애플리케이션을 수정하여 로그인 상태 표시  
+- 4단계 – ASP.NET 애플리케이션을 수정하여 로그인 상태 표시  
   
--   5단계 – WIF 및 ASP.NET 애플리케이션 간 통합 테스트  
+- 5단계 – WIF 및 ASP.NET 애플리케이션 간 통합 테스트  
   
 ## <a name="overview"></a>개요  
  이 항목에서는 WIF를 사용하여 간단한 클레임 인식 애플리케이션을 만드는 방법 및 사용자가 로그인되어 있는지 여부를 쉽게 표시하는 방법을 보여 줍니다. 다음 단계에서는 ID 및 액세스 Visual Studio 확장과 함께 제공되는 로컬 개발 STS를 사용합니다. 로컬 개발 STS는 클레임을 애플리케이션에 통합하는 간단한 메서드를 제공하기 위해 테스트 및 개발 환경에서 사용되어야 합니다. 실제 인증을 수행하지 않고 자격 증명이 필요하지 않으므로 프로덕션 환경에서 사용하면 안 됩니다. 그러나 실제 인증을 사용하는 프로덕션 준비 애플리케이션의 경우 다음 단계의 명령형 코드가 동일합니다.  
   
 ## <a name="summary-of-steps"></a>단계 요약  
   
--   1단계 – ID 및 액세스 도구 확장 설치  
+- 1단계 – ID 및 액세스 도구 확장 설치  
   
--   2단계 – 신뢰 당사자 ASP.NET 애플리케이션 만들기  
+- 2단계 – 신뢰 당사자 ASP.NET 애플리케이션 만들기  
   
--   3단계 – 로컬 개발 STS를 사용하여 사용자 인증  
+- 3단계 – 로컬 개발 STS를 사용하여 사용자 인증  
   
--   4단계 – ASP.NET 애플리케이션을 수정하여 로그인 상태 표시  
+- 4단계 – ASP.NET 애플리케이션을 수정하여 로그인 상태 표시  
   
--   5단계 – WIF 및 ASP.NET 애플리케이션 간 통합 테스트  
+- 5단계 – WIF 및 ASP.NET 애플리케이션 간 통합 테스트  
   
 ## <a name="step-1--install-the-identity-and-access-extension"></a>1단계 – ID 및 액세스 도구 확장 설치  
  이 단계에서는 Visual Studio 2012에 대한 ID 및 액세스 확장을 구성하는 방법을 설명합니다. 이 확장은 STS 엔드포인트와 통신하도록 애플리케이션을 구성하는 프로세스를 자동화합니다.  

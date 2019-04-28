@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30298
 ms.assetid: 2d77b7f4-0640-4f89-9c65-f101fd2847c0
 ms.openlocfilehash: 8459ee7fec6d761161a721c88ccdc88e513fc95f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936697"
 ---
 # <a name="constructor-name-cannot-call-itself"></a>생성자 '\<이름 >' 자신을 호출할 수 없습니다.
 `Sub New` 클래스 또는 구조체에서 프로시저가 자신을 호출 합니다.  

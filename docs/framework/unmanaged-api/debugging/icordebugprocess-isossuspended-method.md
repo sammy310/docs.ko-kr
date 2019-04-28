@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 039dc0d9befb038e643abc4e2524c133234f460b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775572"
 ---
 # <a name="icordebugprocessisossuspended-method"></a>ICorDebugProcess::IsOSSuspended 메서드
 이 프로세스를 중지 하는 디버거 결과로 지정 된 스레드가 일시 중단 된 여부를 나타내는 값을 가져옵니다.  

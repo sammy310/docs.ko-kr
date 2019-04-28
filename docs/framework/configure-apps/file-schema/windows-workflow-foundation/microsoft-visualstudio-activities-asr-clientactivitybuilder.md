@@ -10,11 +10,11 @@ api_type:
 - Assembly
 ms.assetid: e7287d3f-59ee-448f-b7fe-b640508501a5
 ms.openlocfilehash: c7291de223a0cce5a2af1dbd4fecf394ad7c8a1d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794513"
 ---
 # <a name="microsoftvisualstudioactivitiesasrclientactivitybuilder"></a>Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder
 이 클래스는 워크플로 활동의 데이터를 제공하는 <xref:System.Activities.ActivityBuilder> 개체를 만들고 구성하는 데 사용합니다.  

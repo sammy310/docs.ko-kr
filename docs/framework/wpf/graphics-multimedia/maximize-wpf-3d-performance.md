@@ -5,11 +5,11 @@ helpviewer_keywords:
 - 3-D graphics [WPF]
 ms.assetid: 4bcf949d-d92f-4d8d-8a9b-1e4c61b25bf6
 ms.openlocfilehash: 8629748c37aae8e35bb928c5a8d5a9caa7046942
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785686"
 ---
 # <a name="maximize-wpf-3d-performance"></a>WPF 3D 성능 최대화
 사용 된 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3D 컨트롤을 빌드하고 응용 프로그램에서 3D 장면을 포함 하려면 성능 최적화를 고려해 야 할 중요 한 것입니다. 이 항목에서는 사용 하는 경우 성능을 최적화 하기 위한 권장 사항과 함께 응용 프로그램에 대 한 성능 영향을 미칠는 3D 클래스 및 속성의 목록을 제공 합니다.  

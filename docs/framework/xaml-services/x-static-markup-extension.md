@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
 ms.openlocfilehash: 3da2f6afc7e7ecf20c91f0badca38bc26083d3ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938942"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static 태그 확장
 에 정의 된 모든 값으로 정적 코드 엔터티 참조는 [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– 호환 방식으로 합니다. 참조 되는 정적 속성 XAML에서 속성 값을 제공 하기 사용할 수 있습니다.  
@@ -38,10 +38,10 @@ ms.locfileid: "59295712"
 
 참조 되는 코드 엔터티 중 하나 여야 합니다.  
   
--   상수  
--   정적 속성  
--   필드  
--   열거형 값
+- 상수  
+- 정적 속성  
+- 필드  
+- 열거형 값
 
 비정적 속성을 같은 기타 코드 엔터티를 지정 하면 인지는 XAML 태그 컴파일된 XAML 로드 타임 구문 분석 예외를 컴파일 타임 오류가 발생 합니다.  
 
@@ -74,11 +74,11 @@ ms.locfileid: "59295712"
 ## <a name="wpf-usage-notes"></a>WPF 사용 정보  
  WPF 프로그래밍에 사용할 기본 XAML 네임 스페이스에는 많은 유용한 정적 속성이 있고 유용한 정적 속성 중 대부분 필요 없이 쉽게 사용할 수 있는 형식 변환기와 같은 지원 `{x:Static}` 합니다. 정적 속성에 대 한 중 하나가 참인 경우 XAML 네임 스페이스에 대 한 접두사를 매핑되어야 합니다.  
   
--   Wpf에서 존재 하지만 WPF 기본 XAML 네임 스페이스의 일부가 아닌 형식을 참조 하는 ([!INCLUDE[TLA#tla_wpfxmlnsv1](../../../includes/tlasharptla-wpfxmlnsv1-md.md)]). 이 사용 하는 매우 일반적인 시나리오는 `x:Static`합니다. 예를 들어 사용할 수 있습니다는 `x:Static` XAML 네임 스페이스 매핑 사용 하 여 참조를 <xref:System> 의 정적 속성을 참조 하기 위해 CLR 네임 스페이스 및 mscorlib 어셈블리는 <xref:System.Environment> 클래스입니다.  
+- Wpf에서 존재 하지만 WPF 기본 XAML 네임 스페이스의 일부가 아닌 형식을 참조 하는 ([!INCLUDE[TLA#tla_wpfxmlnsv1](../../../includes/tlasharptla-wpfxmlnsv1-md.md)]). 이 사용 하는 매우 일반적인 시나리오는 `x:Static`합니다. 예를 들어 사용할 수 있습니다는 `x:Static` XAML 네임 스페이스 매핑 사용 하 여 참조를 <xref:System> 의 정적 속성을 참조 하기 위해 CLR 네임 스페이스 및 mscorlib 어셈블리는 <xref:System.Environment> 클래스입니다.  
   
--   사용자 지정 어셈블리에서 형식을 참조 합니다.  
+- 사용자 지정 어셈블리에서 형식을 참조 합니다.  
   
--   WPF 기본 XAML 네임 스페이스의 일부가 되려면 매핑되지 않은 CLR 네임 스페이스 내에서 형식이 없는 WPF 어셈블리에 존재 하는 형식을 참조입니다. WPF에 대 한 기본 XAML 네임 스페이스를 CLR 네임 스페이스의 매핑을 다양 한 WPF 어셈블리에 정의 하 여 수행 됩니다 (이 개념에 대 한 자세한 내용은 참조 하세요. [XAML 네임 스페이스 및 WPF XAML에 대 한 매핑을 Namespace](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)). 매핑되지 않은 CLR 네임 스페이스는 해당 CLR 네임 스페이스 클래스 정의 되지 않는 일반적으로 XAML에 대 한 같은 대부분의 구성 된 경우 있습니다 <xref:System.Windows.Threading>합니다.  
+- WPF 기본 XAML 네임 스페이스의 일부가 되려면 매핑되지 않은 CLR 네임 스페이스 내에서 형식이 없는 WPF 어셈블리에 존재 하는 형식을 참조입니다. WPF에 대 한 기본 XAML 네임 스페이스를 CLR 네임 스페이스의 매핑을 다양 한 WPF 어셈블리에 정의 하 여 수행 됩니다 (이 개념에 대 한 자세한 내용은 참조 하세요. [XAML 네임 스페이스 및 WPF XAML에 대 한 매핑을 Namespace](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)). 매핑되지 않은 CLR 네임 스페이스는 해당 CLR 네임 스페이스 클래스 정의 되지 않는 일반적으로 XAML에 대 한 같은 대부분의 구성 된 경우 있습니다 <xref:System.Windows.Threading>합니다.  
   
  WPF에 대 한 접두사와 XAML 네임 스페이스를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [XAML 네임 스페이스 및 WPF XAML에 대 한 매핑 Namespace](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)합니다.  
   

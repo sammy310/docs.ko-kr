@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3a574a04e5746a8b2c9c32160e82aa503b392729
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792641"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap 메서드
 지정한 Microsoft 중간 언어 (MSIL) 맵 항목을 사용 하 여 지정된 된 함수에 대 한 코드 맵을 설정 합니다.  
@@ -58,11 +58,11 @@ HRESULT SetILInstrumentedCodeMap(
   
  디버거에서 msil 오프셋 원래, 수정 되지 않은 MSIL 코드 내에서 각 이전 오프셋 나타내며 각 새 오프셋 새, 계측 된 코드 내에서 MSIL 오프셋 가리킵니다 가정 합니다. 지도 오름차순으로 정렬 되어야 합니다. 단계별 코드 실행이 제대로 작동 하려면, 다음이 지침을 따르세요.  
   
--   계측 된 MSIL 코드 순서를 변경 하지 않습니다.  
+- 계측 된 MSIL 코드 순서를 변경 하지 않습니다.  
   
--   원래 MSIL 코드를 제거 하지 마십시오.  
+- 원래 MSIL 코드를 제거 하지 마십시오.  
   
--   지도에 프로그램 데이터베이스 (PDB) 파일에서 모든 시퀀스 위치에 대 한 항목을 포함 합니다. 지도 누락 된 항목을 보간하지 않습니다. 따라서 다음과 같은 맵을 지정:  
+- 지도에 프로그램 데이터베이스 (PDB) 파일에서 모든 시퀀스 위치에 대 한 항목을 포함 합니다. 지도 누락 된 항목을 보간하지 않습니다. 따라서 다음과 같은 맵을 지정:  
   
      (0, 이전 0 새)  
   
@@ -70,17 +70,17 @@ HRESULT SetILInstrumentedCodeMap(
   
      (9 이전, 20 새)  
   
-    -   이전 오프셋 0, 1, 2, 3 또는 4의 새 오프셋 0에 매핑됩니다.  
+    - 이전 오프셋 0, 1, 2, 3 또는 4의 새 오프셋 0에 매핑됩니다.  
   
-    -   5, 6, 7 또는 8 이전 오프셋 새 오프셋 10으로 매핑됩니다.  
+    - 5, 6, 7 또는 8 이전 오프셋 새 오프셋 10으로 매핑됩니다.  
   
-    -   9 이상 이전 오프셋 20 새 오프셋에 매핑됩니다.  
+    - 9 이상 이전 오프셋 20 새 오프셋에 매핑됩니다.  
   
-    -   새 오프셋 0, 1, 2, 3, 4, 5, 6, 7, 8 또는 9 이전 오프셋 0에 매핑됩니다.  
+    - 새 오프셋 0, 1, 2, 3, 4, 5, 6, 7, 8 또는 9 이전 오프셋 0에 매핑됩니다.  
   
-    -   10, 11, 12, 13, 14, 15, 16, 17, 18 또는 19 새 오프셋 5 이전 오프셋에 매핑됩니다.  
+    - 10, 11, 12, 13, 14, 15, 16, 17, 18 또는 19 새 오프셋 5 이전 오프셋에 매핑됩니다.  
   
-    -   20 이상의 새 오프셋을 9 이전 오프셋에 매핑됩니다.  
+    - 20 이상의 새 오프셋을 9 이전 오프셋에 매핑됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

@@ -12,20 +12,20 @@ helpviewer_keywords:
 - text [Windows Forms], controls for input
 ms.assetid: df60565e-5447-4110-92a6-be1f6ff5faa3
 ms.openlocfilehash: ff9a0edb44a95f5853edf711e0a1559e3b2e3b15
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792147"
 ---
 # <a name="walkthrough-working-with-the-maskedtextbox-control"></a>연습: MaskedTextBox 컨트롤 사용
 이 연습에서 설명하는 작업은 다음과 같습니다.  
   
--   초기화는 <xref:System.Windows.Forms.MaskedTextBox> 컨트롤  
+- 초기화는 <xref:System.Windows.Forms.MaskedTextBox> 컨트롤  
   
--   사용 하는 <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> 문자 마스크에 맞지 않는 경우 사용자 경고를 발생 시 이벤트 처리기  
+- 사용 하는 <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> 문자 마스크에 맞지 않는 경우 사용자 경고를 발생 시 이벤트 처리기  
   
--   에 형식을 할당 합니다 <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> 속성과 사용 하는 <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> 커밋하려고 시도 하는 값 형식에 대해 유효 하지 않을 때 사용자를 경고 하도록 이벤트 처리기  
+- 에 형식을 할당 합니다 <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> 속성과 사용 하는 <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> 커밋하려고 시도 하는 값 형식에 대해 유효 하지 않을 때 사용자를 경고 하도록 이벤트 처리기  
   
 ## <a name="creating-the-project-and-adding-a-control"></a>프로젝트 만들기 및 컨트롤 추가  
   

@@ -7,20 +7,20 @@ helpviewer_keywords:
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
 ms.openlocfilehash: a93402be30cb461ac6a0ed9daa4a684598a85da1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932602"
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>연습: Windows Forms 컨트롤에서 스마트 태그를 사용하여 일반 작업 수행
 Windows Forms 응용 프로그램에 대 한 폼 및 컨트롤을 구성할 때에 반복적으로 수행 하는 많은 작업이 있습니다. 다음은 발생 하는 일반적으로 수행된 하는 작업의 일부입니다.  
   
--   추가 또는 탭에서 제거 된 <xref:System.Windows.Forms.TabControl>합니다.  
+- 추가 또는 탭에서 제거 된 <xref:System.Windows.Forms.TabControl>합니다.  
   
--   부모 컨트롤을 도킹 합니다.  
+- 부모 컨트롤을 도킹 합니다.  
   
--   방향 변경 된 <xref:System.Windows.Forms.SplitContainer> 제어 합니다.  
+- 방향 변경 된 <xref:System.Windows.Forms.SplitContainer> 제어 합니다.  
   
  개발 속도 높이려면, 많은 컨트롤 디자인 타임에 단일 제스처로에서 다음과 같은 일반적인 작업을 수행할 수 있도록 하는 상황에 맞는 메뉴가 있는 스마트 태그를 제공 합니다. 이러한 작업 이라고 *스마트 태그 동사*합니다.  
   
@@ -28,11 +28,11 @@ Windows Forms 응용 프로그램에 대 한 폼 및 컨트롤을 구성할 때�
   
  이 연습에서 설명하는 작업은 다음과 같습니다.  
   
--   Windows Forms 프로젝트 만들기  
+- Windows Forms 프로젝트 만들기  
   
--   스마트 태그를 사용 하 여  
+- 스마트 태그를 사용 하 여  
   
--   사용 하도록 설정 하 고 스마트 태그를 사용 하지 않도록 설정  
+- 사용 하도록 설정 하 고 스마트 태그를 사용 하지 않도록 설정  
   
  작업을 완료하면 이러한 중요한 레이아웃 기능이 수행하는 역할을 이해하게 됩니다.  
   

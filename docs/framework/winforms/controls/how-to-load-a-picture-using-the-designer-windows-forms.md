@@ -9,11 +9,11 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 4dc7b973-afb1-4276-8322-20825af96655
 ms.openlocfilehash: 6bdf7c3df0ffd97dd88a4c442a8a73593a0447ee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941065"
 ---
 # <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>방법: (Windows Forms) 디자이너를 사용 하 여 그림 로드
 Windows Forms를 사용 하 여 <xref:System.Windows.Forms.PictureBox> 컨트롤을 로드 하 고 설정 하 여 디자인 타임에 폼에 그림을 표시 합니다 <xref:System.Windows.Forms.PictureBox.Image%2A> 속성을 유효한 그림을 합니다. 다음 표에서 허용 되는 파일 형식을 보여 줍니다.  

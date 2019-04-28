@@ -3,11 +3,11 @@ title: 지연 된 실행과 지연 계산은 linq to XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 31998eed-b95e-47fb-a865-9de1f337d1fb
 ms.openlocfilehash: b5c3e2a484aa16df22742ddf77d6438ec2a699bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790535"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-visual-basic"></a>지연 된 실행과 지연 계산은 linq to XML (Visual Basic)
 쿼리 및 축 연산은 흔히 지연된 실행을 사용하도록 구현됩니다. 이 항목에서는 지연된 실행의 요구 사항 및 장점과 몇 가지 구현 고려 사항에 대해 설명합니다.  
@@ -20,16 +20,16 @@ ms.locfileid: "58839039"
 ## <a name="eager-vs-lazy-evaluation"></a>즉시 계산과 지연 계산 비교  
  지연된 실행을 구현하는 메서드를 작성하는 경우 지연 계산이나 즉시 계산 중에서 메서드 구현에 사용할 방법을 결정해야 합니다.  
   
--   *지연 계산(lazy evaluation)* 에서는 소스 컬렉션의 단일 요소가 반복기를 호출할 때마다 처리됩니다. 이것이 반복기가 구현되는 일반적인 방법입니다.  
+- *지연 계산(lazy evaluation)* 에서는 소스 컬렉션의 단일 요소가 반복기를 호출할 때마다 처리됩니다. 이것이 반복기가 구현되는 일반적인 방법입니다.  
   
--   *즉시 계산(eager evaluation)* 에서는 반복기를 처음 호출할 때 전체 컬렉션이 처리됩니다. 소스 컬렉션의 임시 복사본도 필요할 수 있습니다. 예를 들어, <xref:System.Linq.Enumerable.OrderBy%2A> 메서드는 첫 번째 요소를 반환하기 전에 전체 컬렉션을 정렬해야 합니다.  
+- *즉시 계산(eager evaluation)* 에서는 반복기를 처음 호출할 때 전체 컬렉션이 처리됩니다. 소스 컬렉션의 임시 복사본도 필요할 수 있습니다. 예를 들어, <xref:System.Linq.Enumerable.OrderBy%2A> 메서드는 첫 번째 요소를 반환하기 전에 전체 컬렉션을 정렬해야 합니다.  
   
  지연 계산은 컬렉션의 계산 전반에 오버헤드 처리를 균일하게 분산시키고 임시 데이터를 최소한으로 사용하기 때문에 대개 성능이 더 좋습니다. 물론 중간 결과를 구체화해야만 하는 연산도 있습니다.  
   
 ## <a name="next-steps"></a>다음 단계  
  이 자습서의 다음 항목에서는 지연된 실행을 보여 줍니다.  
   
--   [지연된 실행 예제 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-example.md)  
+- [지연된 실행 예제 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-example.md)  
   
 ## <a name="see-also"></a>참고자료
 

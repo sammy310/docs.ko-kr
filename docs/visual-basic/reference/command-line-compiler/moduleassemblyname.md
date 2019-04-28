@@ -7,11 +7,11 @@ helpviewer_keywords:
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
 ms.openlocfilehash: b0279c5ac658c7d0749f62066abbd705d0a271af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793902"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 이 모듈이 속할 어셈블리의 이름을 지정합니다.  
@@ -33,9 +33,9 @@ ms.locfileid: "58832417"
   
  `-moduleassemblyname` 옵션 다음에 해당할 경우에 필요 합니다.  
   
--   모듈의 데이터 형식에 대 한 액세스에 필요한를 `Friend` 참조 된 어셈블리의 형식입니다.  
+- 모듈의 데이터 형식에 대 한 액세스에 필요한를 `Friend` 참조 된 어셈블리의 형식입니다.  
   
--   참조 된 어셈블리에 모듈을 빌드는 어셈블리를 friend 어셈블리 액세스 권한을 부여한 합니다.  
+- 참조 된 어셈블리에 모듈을 빌드는 어셈블리를 friend 어셈블리 액세스 권한을 부여한 합니다.  
   
  모듈을 만드는 방법에 대 한 자세한 내용은 참조 하세요. [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)합니다. Friend 어셈블리에 대 한 자세한 내용은 참조 하세요. [Friend 어셈블리](../../../standard/assembly/friend-assemblies.md)합니다.  
   

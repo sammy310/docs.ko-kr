@@ -6,11 +6,11 @@ helpviewer_keywords:
 - merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
 ms.openlocfilehash: dbe1c0325499e7b925d504fc80f9034f9e387475
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936359"
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Windows Forms MenuStrip 컨트롤의 메뉴 항목 병합
 응용 프로그램을 다중 문서 인터페이스 (MDI)에 있는 경우 부모 폼의 메뉴에 메뉴 항목이 나 자식 폼의 전체 메뉴를 병합할 수 있습니다.  
@@ -20,9 +20,9 @@ ms.locfileid: "59231567"
 ## <a name="general-concepts"></a>일반 개념  
  병합 프로시저에는 대상 및 소스 컨트롤을 모두 포함 됩니다.  
   
--   대상이 <xref:System.Windows.Forms.MenuStrip> 메뉴 항목을 병합 되는 주 또는 MDI 부모 폼에서 제어 합니다.  
+- 대상이 <xref:System.Windows.Forms.MenuStrip> 메뉴 항목을 병합 되는 주 또는 MDI 부모 폼에서 제어 합니다.  
   
--   원본이 <xref:System.Windows.Forms.MenuStrip> 병합할 대상 메뉴에 메뉴 항목이 들어 있는 MDI 자식 폼의 컨트롤입니다.  
+- 원본이 <xref:System.Windows.Forms.MenuStrip> 병합할 대상 메뉴에 메뉴 항목이 들어 있는 MDI 자식 폼의 컨트롤입니다.  
   
  <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> 현재 MDI의 제목을 채워집니다 드롭다운 목록이 있는 부모 폼의 MDI 자식 메뉴 항목을 식별 하는 속성입니다. 예를 들어, 일반적으로 나열할 수에서 현재 열려 있는 MDI 자식 폼의 **창** 메뉴.  
   

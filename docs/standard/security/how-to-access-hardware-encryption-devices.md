@@ -16,11 +16,11 @@ ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 33af618ac3971df76683fd64346e1aa1e5977177
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795203"
 ---
 # <a name="how-to-access-hardware-encryption-devices"></a>방법: 하드웨어 암호화 디바이스에 액세스
 <xref:System.Security.Cryptography.CspParameters> 클래스를 사용하여 하드웨어 암호화 장치에 액세스할 수 있습니다. 예를 들어 이 클래스를 사용하여 스마트 카드, 하드웨어 난수 생성기 또는 특정 암호화 알고리즘의 하드웨어 구현과 응용 프로그램을 통합할 수 있습니다.  
@@ -54,8 +54,8 @@ ms.locfileid: "59773417"
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
   
--   <xref:System> 및 <xref:System.Security.Cryptography> 네임스페이스를 포함합니다.  
+- <xref:System> 및 <xref:System.Security.Cryptography> 네임스페이스를 포함합니다.  
   
--   스마트 카드 판독기 및 드라이버가 컴퓨터에 설치되어 있어야 합니다.  
+- 스마트 카드 판독기 및 드라이버가 컴퓨터에 설치되어 있어야 합니다.  
   
--   카드 판독기와 관련된 정보를 사용하여 <xref:System.Security.Cryptography.CspParameters> 개체를 초기화해야 합니다.  자세한 내용은 카드 판독기 설명서를 참조하세요.
+- 카드 판독기와 관련된 정보를 사용하여 <xref:System.Security.Cryptography.CspParameters> 개체를 초기화해야 합니다.  자세한 내용은 카드 판독기 설명서를 참조하세요.

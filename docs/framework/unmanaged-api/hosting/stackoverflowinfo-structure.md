@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ac0f5d522a24394369583692f8c564254529bf13
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796047"
 ---
 # <a name="stackoverflowinfo-structure"></a>StackOverflowInfo 구조체
 오버플로 인해 throw 된 예외 유형 발생 한 오버플로 및 정보를 저장 합니다.  

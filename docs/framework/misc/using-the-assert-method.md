@@ -19,11 +19,11 @@ ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 08b46d96f9fb950602766639559a375a25747010
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61869016"
 ---
 # <a name="using-the-assert-method"></a>Assert 메서드 사용
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -43,19 +43,19 @@ ms.locfileid: "59073730"
   
  다음 그림에서는 사용 하는 경우 어떻게 되는지 보여 줍니다 **Assert**합니다. 다음 문이 A, B, C, E 및 F 어셈블리와 두 개의 사용 권한 P1과 P1A에 대해 true라고 가정합니다.  
   
--   P1A는 C 드라이브의 .txt 파일을 읽을 수 있는 권한을 나타냅니다.  
+- P1A는 C 드라이브의 .txt 파일을 읽을 수 있는 권한을 나타냅니다.  
   
--   P1은 C 드라이브의 모든 파일을 읽을 수 있는 권한을 나타냅니다.  
+- P1은 C 드라이브의 모든 파일을 읽을 수 있는 권한을 나타냅니다.  
   
--   P1A와 P1은 둘 다 **FileIOPermission** 형식이 고 P1A는 P1의 하위 집합입니다.  
+- P1A와 P1은 둘 다 **FileIOPermission** 형식이 고 P1A는 P1의 하위 집합입니다.  
   
--   어셈블리 E와 F에는 P1A 권한이 부여되었습니다.  
+- 어셈블리 E와 F에는 P1A 권한이 부여되었습니다.  
   
--   어셈블리 C에는 P1 권한이 부여되었습니다.  
+- 어셈블리 C에는 P1 권한이 부여되었습니다.  
   
--   어셈블리 A와 B에는 P1 및 P1A 권한이 부여되지 않았습니다.  
+- 어셈블리 A와 B에는 P1 및 P1A 권한이 부여되지 않았습니다.  
   
--   메서드 A는 어셈블리 A에 포함되고, 메서드 B는 어셈블리 B에 포함됩니다.  
+- 메서드 A는 어셈블리 A에 포함되고, 메서드 B는 어셈블리 B에 포함됩니다.  
   
  ![Assert 메서드 어셈블리를 보여 주는 다이어그램입니다.](./media/using-the-assert-method/assert-method-assemblies.gif)    
   

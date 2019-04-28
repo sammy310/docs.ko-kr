@@ -3,47 +3,47 @@ title: 계약 중심 워크플로 서비스 개발
 ms.date: 03/30/2017
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
 ms.openlocfilehash: c326f91bc8673180db755a91ab080bcf0ba72052
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774207"
 ---
 # <a name="contract-first-workflow-service-development"></a>계약 중심 워크플로 서비스 개발
 부터 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows WF (Workflow Foundation) 기능에 웹 서비스 및 계약 중심 워크플로 개발의 형태로 워크플로 간의 통합 향상. 계약 중심 워크플로 개발 도구를 사용하면 코드에서 계약을 먼저 디자인할 수 있습니다. 그러면 이 도구는 계약의 작업을 위해 도구 상자에 활동 템플릿을 자동으로 생성합니다. 이 항목에서는 워크플로 서비스 맵의 활동 및 속성을 서비스 계약의 특성에 매핑하는 방법을 간략하게 설명합니다. 계약 중심 워크플로 서비스 만들기의 단계별 예제를 참조 하세요. [방법: 기존 서비스 계약을 사용 하는 워크플로 서비스 만들기](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)합니다.  
   
 ## <a name="in-this-topic"></a>항목 내용  
   
--   [워크플로 특성을 서비스 계약 특성 매핑](contract-first-workflow-service-development.md#MappingAttributes)  
+- [워크플로 특성을 서비스 계약 특성 매핑](contract-first-workflow-service-development.md#MappingAttributes)  
   
-    -   [서비스 계약 특성](contract-first-workflow-service-development.md#ServiceContract)  
+    - [서비스 계약 특성](contract-first-workflow-service-development.md#ServiceContract)  
   
-    -   [작업 계약 특성](contract-first-workflow-service-development.md#OperationContract)  
+    - [작업 계약 특성](contract-first-workflow-service-development.md#OperationContract)  
   
-    -   [메시지 계약 특성](contract-first-workflow-service-development.md#MessageContract)  
+    - [메시지 계약 특성](contract-first-workflow-service-development.md#MessageContract)  
   
-    -   [데이터 계약 특성](contract-first-workflow-service-development.md#DataContract)  
+    - [데이터 계약 특성](contract-first-workflow-service-development.md#DataContract)  
   
-    -   [오류 계약 특성](contract-first-workflow-service-development.md#FaultContract)  
+    - [오류 계약 특성](contract-first-workflow-service-development.md#FaultContract)  
   
--   [추가 지원 및 구현 정보](contract-first-workflow-service-development.md#AdditionalSupport)  
+- [추가 지원 및 구현 정보](contract-first-workflow-service-development.md#AdditionalSupport)  
   
-    -   [지원 되지 않는 서비스 계약 기능](contract-first-workflow-service-development.md#UnsupportedFeatures)  
+    - [지원 되지 않는 서비스 계약 기능](contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
-    -   [구성 된 메시징 활동 생성](contract-first-workflow-service-development.md#ActivityGeneration)  
+    - [구성 된 메시징 활동 생성](contract-first-workflow-service-development.md#ActivityGeneration)  
   
 ## <a name="MappingAttributes"></a> 워크플로 특성을 서비스 계약 특성 매핑  
  다음 단원의 표에는 여러 WCF 특성 및 속성과 해당 WCF 특성 및 속성을 계약 중심 워크플로의 메시징 활동 및 속성에 매핑하는 방법이 나와 있습니다.  
   
--   [서비스 계약 특성](contract-first-workflow-service-development.md#ServiceContract)  
+- [서비스 계약 특성](contract-first-workflow-service-development.md#ServiceContract)  
   
--   [작업 계약 특성](contract-first-workflow-service-development.md#OperationContract)  
+- [작업 계약 특성](contract-first-workflow-service-development.md#OperationContract)  
   
--   [메시지 계약 특성](contract-first-workflow-service-development.md#MessageContract)  
+- [메시지 계약 특성](contract-first-workflow-service-development.md#MessageContract)  
   
--   [데이터 계약 특성](contract-first-workflow-service-development.md#DataContract)  
+- [데이터 계약 특성](contract-first-workflow-service-development.md#DataContract)  
   
--   [오류 계약 특성](contract-first-workflow-service-development.md#FaultContract)  
+- [오류 계약 특성](contract-first-workflow-service-development.md#FaultContract)  
   
 ### <a name="ServiceContract"></a> 서비스 계약 특성  
   
@@ -109,22 +109,22 @@ ms.locfileid: "57721790"
   
 ## <a name="AdditionalSupport"></a> 추가 지원 및 구현 정보  
   
--   [지원 되지 않는 서비스 계약 기능](contract-first-workflow-service-development.md#UnsupportedFeatures)  
+- [지원 되지 않는 서비스 계약 기능](contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
--   [구성 된 메시징 활동 생성](contract-first-workflow-service-development.md#ActivityGeneration)  
+- [구성 된 메시징 활동 생성](contract-first-workflow-service-development.md#ActivityGeneration)  
   
 ### <a name="UnsupportedFeatures"></a> 지원 되지 않는 서비스 계약 기능  
   
--   계약에서 TPL(작업 병렬 라이브러리) 작업을 사용할 수 없습니다.  
+- 계약에서 TPL(작업 병렬 라이브러리) 작업을 사용할 수 없습니다.  
   
--   서비스 계약에서 상속이 지원되지 않습니다.  
+- 서비스 계약에서 상속이 지원되지 않습니다.  
   
 ### <a name="ActivityGeneration"></a> 구성 된 메시징 활동 생성  
  계약 중심 워크플로 서비스를 사용할 때는 미리 구성된 메시지 활동의 생성을 지원하기 위해 <xref:System.ServiceModel.Activities.Receive> 및 <xref:System.ServiceModel.Activities.SendReply> 활동에 두 개의 공용 정적 메서드가 추가됩니다.  
   
--   <xref:System.ServiceModel.Activities.Receive.FromOperationDescription%2A?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Activities.Receive.FromOperationDescription%2A?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Activities.SendReply.FromOperationDescription%2A?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Activities.SendReply.FromOperationDescription%2A?displayProperty=nameWithType>  
   
  이러한 메서드에서 생성된 활동은 계약 유효성 검사를 거쳐야 하므로 이러한 메서드는 <xref:System.ServiceModel.Activities.Receive> 및 <xref:System.ServiceModel.Activities.SendReply>에 대한 유효성 검사 논리의 일부로 내부적으로 사용됩니다. <xref:System.ServiceModel.Activities.Receive.OperationName%2A>, <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>, <xref:System.ServiceModel.Activities.Receive.Action%2A>, <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>, <xref:System.ServiceModel.Activities.Receive.ProtectionLevel%2A> 및 <xref:System.ServiceModel.Activities.Receive.KnownTypes%2A>는 모두 가져온 계약과 일치하도록 미리 구성되어 있습니다. 워크플로 디자이너에서 활동에 대 한 콘텐츠 속성 페이지에는 **메시지** 또는 **매개 변수** 섹션은 또한 계약과 일치 하도록 미리 구성 합니다.  
   

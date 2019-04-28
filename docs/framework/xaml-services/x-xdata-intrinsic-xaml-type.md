@@ -11,11 +11,11 @@ helpviewer_keywords:
 - x:XData XAML directive element [XAML Services]
 ms.assetid: 7ce209c2-621b-4977-b643-565f7e663534
 ms.openlocfilehash: c8044bc341ded6ef7b03bbdf701e724654460d54
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938829"
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>x:XData 내장 XAML 형식
 XAML 프로덕션 내에서 XML 데이터 아일랜드 배치를 사용 하도록 설정 합니다. XML 요소 내에서 `x:XData` 것 처럼 기본 XAML 네임 스페이스의 일부 또는 모든 다른 XAML 네임 스페이스 XAML 프로세서에서 처리 되지 않아야 합니다. `x:XData` 임의의 올바른 형식의 XML을 포함할 수 있습니다.  

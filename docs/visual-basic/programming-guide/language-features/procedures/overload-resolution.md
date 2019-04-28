@@ -11,11 +11,11 @@ helpviewer_keywords:
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
 ms.openlocfilehash: 4f81c7377423899c142c4270f325bbd7ed20b877
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792025"
 ---
 # <a name="overload-resolution-visual-basic"></a>오버로드 확인(Visual Basic)
 Visual Basic 컴파일러는 여러 오버 로드 된 버전에 정의 된 프로시저 호출을 발견 하면, 오버 로드를 호출 하는 결정 해야 합니다. 다음 단계를 수행 하 여 수행 합니다.  

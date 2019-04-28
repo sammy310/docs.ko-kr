@@ -15,11 +15,11 @@ helpviewer_keywords:
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
 ms.openlocfilehash: eb0adb2e8140b20c8d52eced02f177b8c3560354
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938855"
 ---
 # <a name="xtype-markup-extension"></a>x:Type 태그 확장
 CLR 제공 <xref:System.Type> 개체는 지정된 된 XAML 형식에 대 한 기본 형식입니다.  
@@ -71,11 +71,11 @@ CLR 제공 <xref:System.Type> 개체는 지정된 된 XAML 형식에 대 한 기
 ## <a name="xaml-2009"></a>XAML 2009  
  제네릭 형식 및 기능 동작을 수정에 대 한 추가 지원을 제공 하는 XAML 2009 `x:TypeArguments` 및 `x:Type` 이 지원을 제공 합니다.  
   
--   `x:TypeArguments` 및의 관련된 개체 요소를 제네릭 개체 인스턴스화에 대 한 루트 이외의 요소에 있을 수 있습니다. 자세한 내용은의 "XAML 2009" 섹션을 참조 하세요 [X:typearguments Directive](x-typearguments-directive.md)합니다.  
+- `x:TypeArguments` 및의 관련된 개체 요소를 제네릭 개체 인스턴스화에 대 한 루트 이외의 요소에 있을 수 있습니다. 자세한 내용은의 "XAML 2009" 섹션을 참조 하세요 [X:typearguments Directive](x-typearguments-directive.md)합니다.  
   
--   XAML 2009 태그에서 제네릭 형식의 제약 조건을 지정 하는 구문을 지원 합니다. 사용할 수 있습니다 `x:TypeArguments`, `x:Type`, 또는 두 기능을 조합 합니다.  
+- XAML 2009 태그에서 제네릭 형식의 제약 조건을 지정 하는 구문을 지원 합니다. 사용할 수 있습니다 `x:TypeArguments`, `x:Type`, 또는 두 기능을 조합 합니다.  
   
--   WPF XAML 구현 에서도 부하 유형을 사용 하는 특정 프레임 워크에 대 한 암시적 형식 변환 동작에이 기능을 추가 대 한 XAML 2009를 처리할 때 <xref:System.Type>합니다.  
+- WPF XAML 구현 에서도 부하 유형을 사용 하는 특정 프레임 워크에 대 한 암시적 형식 변환 동작에이 기능을 추가 대 한 XAML 2009를 처리할 때 <xref:System.Type>합니다.  
   
  Wpf에서 느슨한 XAML (태그 컴파일되지 않은 XAML)의 경우에 XAML 2009 기능을 사용할 수 있습니다. WPF에 대한 태그로 컴파일된 XAML 및 BAML 형식의 XAML은 현재 XAML 2009 키워드 및 기능을 지원하지 않습니다.  
   

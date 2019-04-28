@@ -8,11 +8,11 @@ helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
 ms.openlocfilehash: f33144c320b3648f9e201505a34ed8f1ecd5965b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748267"
 ---
 # <a name="service-identity-and-authentication"></a>서비스 ID 및 인증
 서비스의 *종단점 id* 서비스 설명 언어 WSDL (웹 서비스)에서 생성 된 값입니다. 모든 클라이언트에 전파되는 이 값은 서비스를 인증하는 데 사용합니다. 클라이언트가 엔드포인트에 대한 통신을 시작하고 서비스가 클라이언트에 대해 인증되면 클라이언트는 엔드포인트 ID 값과 엔드포인트 인증 프로세스에서 반환된 실제 값을 비교합니다. 두 값이 일치하는 경우 클라이언트는 예상 서비스 엔드포인트에 연결됩니다. 이 함수에 대해 보호할 *피싱* 클라이언트가 악성 서비스에서 호스팅되는 끝점에 리디렉션되지 하지 못하도록 하 여 합니다.  
@@ -26,9 +26,9 @@ ms.locfileid: "59145628"
   
  다음 단계를 통해 ID 처리를 수행합니다.  
   
--   디자인 타임에 클라이언트 개발자는 WSDL을 통해 노출된 엔드포인트의 메타데이터에서 서비스의 ID를 확인합니다.  
+- 디자인 타임에 클라이언트 개발자는 WSDL을 통해 노출된 엔드포인트의 메타데이터에서 서비스의 ID를 확인합니다.  
   
--   런타임에 클라이언트 응용 프로그램은 메시지를 서비스에 보내기 전에 서비스의 보안 자격 증명 클레임을 확인합니다.  
+- 런타임에 클라이언트 응용 프로그램은 메시지를 서비스에 보내기 전에 서비스의 보안 자격 증명 클레임을 확인합니다.  
   
  클라이언트에서의 ID 처리 작업은 서비스에 대한 클라이언트 인증과 유사합니다. 보안 서비스는 클라이언트의 자격 증명이 인증될 때까지 코드를 실행하지 않습니다. 마찬가지로 서비스 메타데이터에서 미리 알려진 정보에 따라 서비스의 자격 증명이 인증될 때까지 클라이언트에서 메시지를 서비스로 보내지 않습니다.  
   
@@ -78,21 +78,21 @@ ms.locfileid: "59145628"
   
  채널이 인증을 위해 X.509 인증서를 사용하여 메시지 수준 또는 전송 수준의 SSL(Secure Sockets Layer)을 인증하도록 구성된 경우 다음 ID 값이 유효합니다.  
   
--   DNS. WCF SSL 핸드셰이크 중 제공 된 인증서 DNS가 포함 되어 있는지 확인 하거나 `CommonName` (CN) 특성이 클라이언트의 DNS id에 지정 된 값과 동일 합니다. 이러한 검사는 서버 인증서 유효성 검사 확인 작업 이외에 추가로 수행됩니다. 기본적으로 WCF 서버 인증서를 신뢰할 수 있는 루트 기관에서 발급 되는 유효성을 검사 합니다.  
+- DNS. WCF SSL 핸드셰이크 중 제공 된 인증서 DNS가 포함 되어 있는지 확인 하거나 `CommonName` (CN) 특성이 클라이언트의 DNS id에 지정 된 값과 동일 합니다. 이러한 검사는 서버 인증서 유효성 검사 확인 작업 이외에 추가로 수행됩니다. 기본적으로 WCF 서버 인증서를 신뢰할 수 있는 루트 기관에서 발급 되는 유효성을 검사 합니다.  
   
--   인증서. SSL 핸드셰이크 중 WCF 원격 끝점이 id에 지정 된 정확한 인증서 값을 제공 하는지 확인 합니다.  
+- 인증서. SSL 핸드셰이크 중 WCF 원격 끝점이 id에 지정 된 정확한 인증서 값을 제공 하는지 확인 합니다.  
   
--   인증서 참조. 인증서와 동일합니다.  
+- 인증서 참조. 인증서와 동일합니다.  
   
--   RSA. SSL 핸드셰이크 중 WCF 원격 끝점이 id에 지정 된 정확한 RSA 키를 제공 하는지 확인 합니다.  
+- RSA. SSL 핸드셰이크 중 WCF 원격 끝점이 id에 지정 된 정확한 RSA 키를 제공 하는지 확인 합니다.  
   
  서비스가 인증을 목적으로 Windows 자격 증명을 통해 메시지 또는 전송 수준 SSL을 사용하여 인증하고 자격 증명을 협상하는 경우 다음 ID 값이 유효합니다.  
   
--   DNS. 협상은 DNS 이름을 검사할 수 있도록 서비스의 SPN을 전달합니다. SPN은 `host/<dns name>` 형식입니다.  
+- DNS. 협상은 DNS 이름을 검사할 수 있도록 서비스의 SPN을 전달합니다. SPN은 `host/<dns name>` 형식입니다.  
   
--   SPN. `host/myservice`와 같은 명시적 서비스 SPN이 반환됩니다.  
+- SPN. `host/myservice`와 같은 명시적 서비스 SPN이 반환됩니다.  
   
--   UPN. 서비스 계정의 UPN입니다. UPN은 형태로 `username` @ `domain`합니다. 예를 들어, 서비스가 사용자 계정으로 실행 중인 경우 `username@contoso.com`일 수 있습니다.  
+- UPN. 서비스 계정의 UPN입니다. UPN은 형태로 `username` @ `domain`합니다. 예를 들어, 서비스가 사용자 계정으로 실행 중인 경우 `username@contoso.com`일 수 있습니다.  
   
  <xref:System.ServiceModel.EndpointAddress.Identity%2A> 속성을 사용하여 ID를 프로그램 방식으로 지정하는 작업은 선택 사항입니다. ID를 지정하지 않고 클라이언트 자격 증명 형식이 Windows인 경우 기본값은 "host/" 리터럴이 접두사로 붙은 서비스 엔드포인트 주소의 호스트 이름 부분으로 값이 설정된 SPN입니다. ID를 지정하지 않고 클라이언트 자격 증명 형식이 Certificate인 경우 기본값은 `Certificate`입니다. 이 값은 메시지 수준 및 전송 수준 보안 모두에 적용됩니다.  
   

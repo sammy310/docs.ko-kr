@@ -8,11 +8,11 @@ helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
 ms.openlocfilehash: 4c5f1ab0b6fa56e4836a950ca3f2bbad19cfbff2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932797"
 ---
 # <a name="using-message-contracts"></a>메시지 계약 사용
 일반적으로 Windows Communication Foundation (WCF) 응용 프로그램을 빌드하는 경우 개발자는 데이터 구조 및 serialization 문제에 주의 기울여야 및 데이터 전달 되는 메시지의 구조를 사용 하 여 고려할 필요가 없습니다. 이러한 응용 프로그램의 경우 매개 변수 또는 반환 값에 대한 데이터 계약을 만드는 과정은 간단합니다. (자세한 내용은 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -244,11 +244,11 @@ public class PatientRecord
 ## <a name="soap-header-attributes"></a>SOAP 헤더 특성  
  SOAP 표준은 헤더에 있을 수 있는 다음 특성을 정의합니다.  
   
--   `Actor/Role`(SOAP 1.1에서는 `Actor`, SOAP 1.2에서는 `Role`)  
+- `Actor/Role`(SOAP 1.1에서는 `Actor`, SOAP 1.2에서는 `Role`)  
   
--   `MustUnderstand`  
+- `MustUnderstand`  
   
--   `Relay`  
+- `Relay`  
   
  `Actor` 또는 `Role` 특성은 지정된 헤더를 사용할 노드의 URI(Uniform Resource Identifier)를 지정합니다. `MustUnderstand` 특성은 헤더에서 노드 처리를 인식해야 하는지 여부를 지정합니다. `Relay` 특성은 헤더를 다운스트림 노드로 릴레이할지 여부를 지정합니다. WCF는 제외 하 고 들어오는 메시지에 이러한 특성의 처리를 수행 하지는 `MustUnderstand` 이 항목의 뒷부분에 나오는 "메시지 계약 버전 관리" 섹션에 지정 된 특성입니다. 그러나 다음 설명에서와 같이 필요에 따라 이러한 특성을 읽고 쓸 수 있습니다.  
   
@@ -323,9 +323,9 @@ public class BankingTransaction
   
  헤더 버전 관리를 위해 다음 규칙을 적용합니다.  
   
--   WCF 누락 된 헤더 개체를 수행 하지-해당 멤버를 기본값으로 유지 됩니다.  
+- WCF 누락 된 헤더 개체를 수행 하지-해당 멤버를 기본값으로 유지 됩니다.  
   
--   WCF에는 또한 예기치 않은 추가 헤더도 무시합니다. 이 규칙에 대한 한 가지 예외는 들어오는 SOAP 메시지에서 추가 헤더가 `MustUnderstand`로 설정된 `true` 특성을 가진 경우입니다. 이 경우 인식되어야 하는 헤더를 처리할 수 없으므로 예외가 throw됩니다.  
+- WCF에는 또한 예기치 않은 추가 헤더도 무시합니다. 이 규칙에 대한 한 가지 예외는 들어오는 SOAP 메시지에서 추가 헤더가 `MustUnderstand`로 설정된 `true` 특성을 가진 경우입니다. 이 경우 인식되어야 하는 헤더를 처리할 수 없으므로 예외가 throw됩니다.  
   
  메시지 본문은 유사한 버전 관리 규칙을 가지며, 누락된 메시지 본문 부분과 추가 메시지 본문 부분은 모두 무시됩니다.  
   
@@ -334,9 +334,9 @@ public class BankingTransaction
   
  다른 메시지 계약 형식으로부터 상속되는 메시지 계약 형식을 사용하여 메시지를 만들거나 액세스할 때는 다음 규칙을 적용하십시오.  
   
--   상속 계층 구조에서는 모든 메시지 헤더가 함께 수집되어 메시지에 대한 전체 헤더 집합을 형성합니다.  
+- 상속 계층 구조에서는 모든 메시지 헤더가 함께 수집되어 메시지에 대한 전체 헤더 집합을 형성합니다.  
   
--   상속 계층 구조에서는 모든 메시지 본문 부분이 함께 수집되어 전체 메시지 본문을 형성합니다. 본문 부분의 순서는 상속 계층 구조에서의 위치와 상관없이 일반 순서 지정 규칙에 따라 <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> 속성별로 지정된 다음 사전순으로 지정됩니다. 메시지 본문 부분이 상속 트리의 여러 수준에 표시되면 메시지 계약 상속을 사용하지 않는 것이 좋습니다. 기본 클래스 및 파생 클래스가 헤더 또는 본문 부분을 동일한 이름으로 정의하는 경우 해당 헤더 또는 본문 부분의 값을 저장하기 위해 기본-최상 클래스의 멤버가 사용됩니다.  
+- 상속 계층 구조에서는 모든 메시지 본문 부분이 함께 수집되어 전체 메시지 본문을 형성합니다. 본문 부분의 순서는 상속 계층 구조에서의 위치와 상관없이 일반 순서 지정 규칙에 따라 <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> 속성별로 지정된 다음 사전순으로 지정됩니다. 메시지 본문 부분이 상속 트리의 여러 수준에 표시되면 메시지 계약 상속을 사용하지 않는 것이 좋습니다. 기본 클래스 및 파생 클래스가 헤더 또는 본문 부분을 동일한 이름으로 정의하는 경우 해당 헤더 또는 본문 부분의 값을 저장하기 위해 기본-최상 클래스의 멤버가 사용됩니다.  
   
  다음과 같은 코드의 클래스를 예로 들어 볼 수 있습니다.  
   
@@ -361,26 +361,26 @@ public class PatientRecord : PersonRecord
 ## <a name="wsdl-considerations"></a>WSDL 고려 사항  
  메시지 계약을 사용하는 서비스로부터 WSDL(웹 서비스 기술 언어) 계약을 생성할 때는 메시지 계약 기능 중 일부가 결과 WSDL에서 반영되지 않을 수 있다는 점을 기억해야 합니다. 다음 사항을 고려하십시오.  
   
--   WSDL은 헤더 배열의 개념을 표현할 수 없습니다. <xref:System.ServiceModel.MessageHeaderArrayAttribute>를 사용하여 헤더 배열과 함께 메시지를 만들 때 결과 WSDL은 배열 대신 하나의 헤더만 반영합니다.  
+- WSDL은 헤더 배열의 개념을 표현할 수 없습니다. <xref:System.ServiceModel.MessageHeaderArrayAttribute>를 사용하여 헤더 배열과 함께 메시지를 만들 때 결과 WSDL은 배열 대신 하나의 헤더만 반영합니다.  
   
--   결과 WSDL 문서는 일부 보호 수준 정보를 반영하지 않을 수 있습니다.  
+- 결과 WSDL 문서는 일부 보호 수준 정보를 반영하지 않을 수 있습니다.  
   
--   WSDL에서 생성된 메시지 형식은 메시지 계약 형식의 클래스 이름과 동일한 이름을 가집니다.  
+- WSDL에서 생성된 메시지 형식은 메시지 계약 형식의 클래스 이름과 동일한 이름을 가집니다.  
   
--   여러 작업에서 동일한 메시지 계약을 사용할 때 여러 메시지 유형이 WSDL 문서에서 생성됩니다. 다음에 사용할 때에는 숫자 "2", "3" 등을 추가함으로써 고유한 이름을 만듭니다. WSDL을 다시 가져올 때 여러 메시지 계약 형식이 만들어지며 이름을 제외하고는 동일합니다.  
+- 여러 작업에서 동일한 메시지 계약을 사용할 때 여러 메시지 유형이 WSDL 문서에서 생성됩니다. 다음에 사용할 때에는 숫자 "2", "3" 등을 추가함으로써 고유한 이름을 만듭니다. WSDL을 다시 가져올 때 여러 메시지 계약 형식이 만들어지며 이름을 제외하고는 동일합니다.  
   
 ## <a name="soap-encoding-considerations"></a>SOAP 인코딩 고려 사항  
  하지만 WCF를 사용 하면 레거시 SOAP 인코딩 스타일 xml을 사용할 수 있습니다 용도 권장 되지 않습니다. 이 스타일을 사용할 때(서비스 계약에 적용된 `Use`에서 `Encoded` 속성을 <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType>로 설정), 다음 추가 사항을 고려해야 합니다.  
   
--   메시지 헤더는 지원되지 않습니다. 이는 특성 <xref:System.ServiceModel.MessageHeaderAttribute> 및 배열 특성 <xref:System.ServiceModel.MessageHeaderArrayAttribute>가 SOAP 인코딩과 호환되지 않음을 의미합니다.  
+- 메시지 헤더는 지원되지 않습니다. 이는 특성 <xref:System.ServiceModel.MessageHeaderAttribute> 및 배열 특성 <xref:System.ServiceModel.MessageHeaderArrayAttribute>가 SOAP 인코딩과 호환되지 않음을 의미합니다.  
   
--   메시지 계약이 래핑되지 않으면, 즉 <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> 속성이 `false`로 설정되면 메시지 계약에는 하나의 본문 부분만 있을 수 있습니다.  
+- 메시지 계약이 래핑되지 않으면, 즉 <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> 속성이 `false`로 설정되면 메시지 계약에는 하나의 본문 부분만 있을 수 있습니다.  
   
--   요청 메시지 계약에 대한 래퍼 요소의 이름은 작업 이름과 일치해야 합니다. 이름을 일치시키려면 메시지 계약의 `WrapperName` 속성을 사용하십시오.  
+- 요청 메시지 계약에 대한 래퍼 요소의 이름은 작업 이름과 일치해야 합니다. 이름을 일치시키려면 메시지 계약의 `WrapperName` 속성을 사용하십시오.  
   
--   응답 메시지 계약에 대한 래퍼 요소의 이름은 접미사가 'Response'인 작업의 이름과 동일해야 합니다. 이름을 일치시키려면 메시지 계약의 <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> 속성을 사용하십시오.  
+- 응답 메시지 계약에 대한 래퍼 요소의 이름은 접미사가 'Response'인 작업의 이름과 동일해야 합니다. 이름을 일치시키려면 메시지 계약의 <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> 속성을 사용하십시오.  
   
--   SOAP 인코딩은 개체 참조를 유지합니다. 예를 들어, 다음과 같은 코드를 생각해 볼 수 있습니다.  
+- SOAP 인코딩은 개체 참조를 유지합니다. 예를 들어, 다음과 같은 코드를 생각해 볼 수 있습니다.  
   
     ```csharp  
     [MessageContract(WrapperName="updateChangeRecord")]  

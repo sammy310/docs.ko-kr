@@ -6,11 +6,11 @@ helpviewer_keywords:
 - TextBox control [Windows Forms]
 ms.assetid: e5a06987-8aec-4271-b196-2245ba992d62
 ms.openlocfilehash: b687f83562b3a6f9dd5993f2af1c55ffe6dc8042
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932511"
 ---
 # <a name="textbox-control-windows-forms"></a>TextBox 컨트롤(Windows Forms)
 Windows Forms 텍스트 상자에는 사용자 로부터 입력 하거나 텍스트를 표시 하도록 사용 됩니다. `TextBox` 컨트롤은 일반적으로 편집 가능한 텍스트에 사용 하도 설정할 수 있지만 읽기 전용입니다. 입력란 수 여러 줄을 표시, 텍스트 컨트롤의 크기를 래핑하고 기본 서식을 추가 합니다. `TextBox` 컨트롤을 표시 하거나 컨트롤에 입력 텍스트의 서식을 사용 합니다.  

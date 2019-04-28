@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 3fbb22fa-2930-48b8-b437-def1de87c6a0
 ms.openlocfilehash: 65d26c0b9a41a6825108b73f822add4d91400055
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787688"
 ---
 # <a name="how-to-create-a-service-endpoint-in-code"></a>방법: 코드에서 서비스 엔드포인트 만들기
 이 예제에서는 계산기 서비스에 대해 `ICalculator` 계약을 정의하고, `CalculatorService` 클래스에서 서비스를 구현한 다음 코드로 엔드포인트를 정의합니다. 이 때 서비스가 <xref:System.ServiceModel.BasicHttpBinding> 클래스를 사용하도록 지정합니다.  

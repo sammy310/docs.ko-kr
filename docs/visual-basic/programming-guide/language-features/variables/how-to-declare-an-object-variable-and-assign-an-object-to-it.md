@@ -6,11 +6,11 @@ helpviewer_keywords:
 - declaring object variables [Visual Basic]
 ms.assetid: 2fa77dde-1fb2-439a-80d4-3e9787649fad
 ms.openlocfilehash: fb6411efc190dce335422369a8d2bbff564b9523
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938218"
 ---
 # <a name="how-to-declare-an-object-variable-and-assign-an-object-to-it-in-visual-basic"></a>방법: 개체 변수를 선언 하 고 Visual Basic의 개체를 할당
 변수를 선언 하는 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) 지정 하 여 `As Object` 에 [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md). 등호 뒤에 개체를 배치 하 여 이러한 변수에 개체 할당 (`=`) 할당 이나 초기화 절의 합니다.  
@@ -32,11 +32,11 @@ Dim thisObject As Object= "This is an Object"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   <xref:System> 네임스페이스에 대한 참조  
+- <xref:System> 네임스페이스에 대한 참조  
   
--   클래스, 구조체 또는 저장할 모듈의 `Dim` 문입니다.  
+- 클래스, 구조체 또는 저장할 모듈의 `Dim` 문입니다.  
   
--   할당 문을 배치 하는 프로시저입니다.  
+- 할당 문을 배치 하는 프로시저입니다.  
   
 ## <a name="see-also"></a>참고자료
 

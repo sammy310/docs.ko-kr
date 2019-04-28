@@ -10,11 +10,11 @@ helpviewer_keywords:
 - /vbruntime compiler option [Visual Basic]
 ms.assetid: 1aa0239e-511a-4c29-957d-fd72877b350a
 ms.openlocfilehash: a1988fcd19c6629d85ae0e739681fd39fe033c0d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796132"
 ---
 # <a name="-vbruntime"></a>-vbruntime
 컴파일러에서 Visual Basic 런타임 라이브러리에 대한 참조 없이 컴파일하거나 특정 런타임 라이브러리를 참조하여 컴파일하도록 지정합니다.  
@@ -50,35 +50,35 @@ ms.locfileid: "58843866"
   
  다음 런타임 멤버가 포함 됩니다.  
   
--   <xref:Microsoft.VisualBasic.CompilerServices.Conversions> 클래스  
+- <xref:Microsoft.VisualBasic.CompilerServices.Conversions> 클래스  
   
--   <xref:Microsoft.VisualBasic.Strings.AscW%28System.Char%29> 메서드  
+- <xref:Microsoft.VisualBasic.Strings.AscW%28System.Char%29> 메서드  
   
--   <xref:Microsoft.VisualBasic.Strings.AscW%28System.String%29> 메서드  
+- <xref:Microsoft.VisualBasic.Strings.AscW%28System.String%29> 메서드  
   
--   <xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29> 메서드  
+- <xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29> 메서드  
   
--   <xref:Microsoft.VisualBasic.Constants.vbBack> 상수  
+- <xref:Microsoft.VisualBasic.Constants.vbBack> 상수  
   
--   <xref:Microsoft.VisualBasic.Constants.vbCr> 상수  
+- <xref:Microsoft.VisualBasic.Constants.vbCr> 상수  
   
--   <xref:Microsoft.VisualBasic.Constants.vbCrLf> 상수  
+- <xref:Microsoft.VisualBasic.Constants.vbCrLf> 상수  
   
--   <xref:Microsoft.VisualBasic.Constants.vbFormFeed> 상수  
+- <xref:Microsoft.VisualBasic.Constants.vbFormFeed> 상수  
   
--   <xref:Microsoft.VisualBasic.Constants.vbLf> 상수  
+- <xref:Microsoft.VisualBasic.Constants.vbLf> 상수  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNewLine> 상수  
+- <xref:Microsoft.VisualBasic.Constants.vbNewLine> 상수  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNullChar> 상수  
+- <xref:Microsoft.VisualBasic.Constants.vbNullChar> 상수  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNullString> 상수  
+- <xref:Microsoft.VisualBasic.Constants.vbNullString> 상수  
   
--   <xref:Microsoft.VisualBasic.Constants.vbTab> 상수  
+- <xref:Microsoft.VisualBasic.Constants.vbTab> 상수  
   
--   <xref:Microsoft.VisualBasic.Constants.vbVerticalTab> 상수  
+- <xref:Microsoft.VisualBasic.Constants.vbVerticalTab> 상수  
   
--   일부 개체는 `My` 형식  
+- 일부 개체는 `My` 형식  
   
  사용 하 여 컴파일하는 경우는 `-vbruntime*` 옵션과 코드 핵심 기능이 포함 되어 있지 않으면 Visual Basic 런타임 라이브러리에서는 멤버를 참조, 컴파일러는 멤버를 사용할 수 없는 지정 하는 오류를 반환 합니다.  
   

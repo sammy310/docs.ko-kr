@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
 ms.openlocfilehash: caf9a66e8c42fb80955539aa9d3eb32179309004
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929690"
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>시스템 제공 상호 운용성 바인딩에서 지원하는 웹 서비스 프로토콜
 Windows Communication Foundation (WCF)는 일련의 웹 서비스 사양으로 알려진 사양 지 원하는 웹 서비스와 상호 운용 되도록 만들어졌습니다. 상호 운용성에 대 한 유용한 정보에 대 한 서비스 구성을 단순화 하기 위해 WCF에는 세 가지 상호 운용 가능한 시스템 제공 바인딩이 도입 되었습니다: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, 및 <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>합니다. WCF Advancement의 구조화 된 정보 표준 OASIS () 표준에 대 한 조직과 상호 운용성을 위해 하나의 상호 운용 가능한 시스템 제공 바인딩이 포함 됩니다. <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>합니다. WCF 메타 데이터 게시에 대 한 두 개의 상호 운용 가능한 시스템 제공 바인딩이 포함 됩니다. [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) 하 고 [ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)합니다. 이 항목에서는 시스템에서 제공하는 상호 운용 가능한 바인딩이 지원하는 사양을 나열합니다.  
@@ -63,9 +63,9 @@ Windows Communication Foundation (WCF)는 일련의 웹 서비스 사양으로 �
 ## <a name="wsfederationhttpbinding-and-ws2007federationhttpbinding"></a>wsFederationHttpBinding 및 ws2007FederationHttpBinding  
  합니다 [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) 하 고 [ \<ws2007FederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) 요소가 있는 세 번째 페더레이션된 시나리오를 지원 하기 위해 도입 된 당사자는 클라이언트를 인증 하는 데 토큰을 발급 합니다. `wsHttpBinding`에서 사용하는 프로토콜과 함께 `wsFederationHttpBinding`에서 사용합니다.  
   
--   토큰 발급에 대한 `WS-Trust`입니다.  
+- 토큰 발급에 대한 `WS-Trust`입니다.  
   
--   가장 일반적으로 발급되는 토큰 형식에 대한 WSS SAML(Security Assertions Markup Language) Token Profile 1.0 및 1.1입니다.  
+- 가장 일반적으로 발급되는 토큰 형식에 대한 WSS SAML(Security Assertions Markup Language) Token Profile 1.0 및 1.1입니다.  
   
  예제:  
   

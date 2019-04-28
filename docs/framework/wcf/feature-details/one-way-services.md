@@ -7,20 +7,20 @@ helpviewer_keywords:
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
 ms.openlocfilehash: 011bca07890e706b86f2a0b1dbf11acf77058548
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762490"
 ---
 # <a name="one-way-services"></a>단방향 서비스
 서비스 작업의 기본 동작은 요청-회신 패턴입니다. 요청-회신 패턴의 경우 서비스 작업이 `void` 메서드로 코드에 표현된 경우에도 클라이언트에서 회신 메시지를 기다립니다. 단방향 작업을 사용하는 경우 하나의 메시지만 전송됩니다. 수신자는 회신 메시지를 보내지 않으며 발신자도 메시지를 기다리지 않습니다.  
   
  다음과 같은 경우 단방향 디자인 패턴을 사용합니다.  
   
--   클라이언트가 작업을 호출해야 하며 작업 수준에서 작업 결과에 영향을 받지 않는 경우.  
+- 클라이언트가 작업을 호출해야 하며 작업 수준에서 작업 결과에 영향을 받지 않는 경우.  
   
--   <xref:System.ServiceModel.NetMsmqBinding> 또는 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 클래스를 사용하는 경우. (이 시나리오에 대 한 자세한 내용은 참조 하세요. [WCF의 큐](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
+- <xref:System.ServiceModel.NetMsmqBinding> 또는 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 클래스를 사용하는 경우. (이 시나리오에 대 한 자세한 내용은 참조 하세요. [WCF의 큐](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
   
  단방향 작업의 경우 오류 정보를 클라이언트로 전달하는 응답 메시지가 없습니다. 신뢰할 수 있는 세션과 같은 기본 바인딩의 기능을 사용하거나 두 개의 단방향 작업(하나는 서비스 작업을 호출하기 위한 클라이언트에서 서비스로의 단방향 계약이며, 다른 하나는 서비스가 클라이언트에서 구현하는 콜백을 사용하여 오류를 다시 클라이언트에 전달할 수 있는 서비스와 클라이언트 간 단방향 계약)을 사용하는 이중 서비스 계약을 디자인하여 오류 상태를 검색할 수 있습니다.  
   

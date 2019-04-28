@@ -3,11 +3,11 @@ title: 사용자 정의 함수(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 3f9e6bbd-8e5a-43e1-809f-f8a61338e522
 ms.openlocfilehash: 4922e7fada676a6c26042236ccdb6315d6d455ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879751"
 ---
 # <a name="user-defined-functions-entity-sql"></a>사용자 정의 함수(Entity SQL)
 Entity SQL에서는 쿼리에서 사용자 정의 함수를 호출할 수 있습니다. 이러한 함수를 쿼리에서 인라인으로 정의할 수 있습니다 (참조 [방법: 사용자 정의 함수 호출](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))) 또는 개념적 모델의 일부로 (참조 [방법: 개념적 모델의 사용자 지정 함수 정의](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))). Entity SQL 명령으로 정의 된 개념적 모델 함수는 [DefiningExpression](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#definingexpression-element-csdl) 의 요소를 [함수](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#function-element-csdl) 개념적 모델의 요소입니다.  

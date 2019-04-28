@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cc94c63edb602d87a7c08a9051eb2ef760834477
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791679"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>ICorProfilerInfo2::GetStringLayout 메서드
 문자열 개체의 레이아웃 정보를 가져옵니다. 이 메서드는 사용 되지 않습니다.는 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)],으로 인해 교체 되 고는 [ICorProfilerInfo3::GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) 메서드.  
@@ -52,11 +52,11 @@ HRESULT GetStringLayout(
 ## <a name="remarks"></a>설명  
  합니다 `GetStringLayout` 메서드는 상대적으로 오프셋을 가져옵니다는 `ObjectID` 다음 저장 되는 위치의 포인터:  
   
--   문자열 버퍼의 길이입니다.  
+- 문자열 버퍼의 길이입니다.  
   
--   자체 문자열의 길이입니다.  
+- 자체 문자열의 길이입니다.  
   
--   와이드 문자의 실제 문자열을 포함 하는 버퍼입니다.  
+- 와이드 문자의 실제 문자열을 포함 하는 버퍼입니다.  
   
  문자열은 null로 종료 될 수 있습니다.  
   

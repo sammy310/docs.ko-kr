@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 25733e459423500352595d6be0eee26ef75ca7e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789690"
 ---
 # <a name="ireferenceappid-interface"></a>IReferenceAppId 인터페이스
 현재 범위에서 응용 프로그램에 대 한 고유 식별자에 대 한 참조를 나타냅니다.  

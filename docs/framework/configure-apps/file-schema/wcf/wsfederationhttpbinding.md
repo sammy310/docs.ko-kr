@@ -5,11 +5,11 @@ helpviewer_keywords:
 - wsFederationBinding element
 ms.assetid: 9c3312b4-2137-4e71-bf3f-de1cf8e9be79
 ms.openlocfilehash: 8ed8f62f9415ed556a61ca53f27442a9355d8d7c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698852"
 ---
 # <a name="wsfederationhttpbinding"></a>\<wsFederationHttpBinding>
 
@@ -145,8 +145,7 @@ wsFederationBinding 요소
 
 페더레이션은 인증 및 권한 부여를 위해 여러 시스템에서 ID를 공유하는 기능입니다. 이러한 ID는 사용자나 시스템을 가리킬 수 있습니다. 페더레이션 HTTP는 SOAP 보안과 혼합 모드 보안을 모두 지원하지만 전송 보안만을 사용하여 지원하지는 않습니다. 이 바인딩은 WS-페더레이션 프로토콜 Windows Communication Foundation (WCF) 지원을 제공합니다. 이 바인딩으로 구성된 서비스는 HTTP 전송을 사용해야 합니다.
 
-바인딩은 바인딩 요소의 스택으로 구성됩니다. 
-  가 기본값인 로 설정된 경우
+바인딩은 바인딩 요소의 스택으로 구성됩니다. 가 기본값인 로 설정된 경우
 
 `wsFederationHttpBinding`에 있는 바인딩 요소의 스택은`wsHttpBinding`
 

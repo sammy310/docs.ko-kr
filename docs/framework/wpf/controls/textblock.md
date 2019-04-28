@@ -8,11 +8,11 @@ helpviewer_keywords:
 - TextBlock control [WPF]
 ms.assetid: ea5f7826-7a92-4de9-9eee-10ef700ce7b6
 ms.openlocfilehash: 31ef66ba7e584b88a38185a4d3ad02ca413fad34
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790951"
 ---
 # <a name="textblock"></a>TextBlock
 합니다 <xref:System.Windows.Controls.TextBlock> 컨트롤에 대 한 유연한 텍스트 지원을 제공 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다. 두 개 이상의 텍스트 단락이 필요하지 않은 기본 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 시나리오의 경우 요소가 대상으로 지정됩니다.  

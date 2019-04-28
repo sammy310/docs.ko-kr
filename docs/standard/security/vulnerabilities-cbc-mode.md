@@ -1,17 +1,17 @@
 ---
-title: 타이밍 취약점 패딩을 사용 하 여 CBC 모드 대칭적 암호 해독을
+title: 패딩을 사용하는 CBC 모드 대칭 암호 해독의 타이밍 취약성
 description: 검색 및 패딩을 사용 하 여 Cipher Block Chaining CBC () 모드 대칭 해독을 사용 하 여 타이밍 취약성을 완화 하는 방법에 알아봅니다.
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
 ms.openlocfilehash: 6d8c2593cdbc4bbff2b1507196989282b16aa9a8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933902"
 ---
-# <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>타이밍 취약점 패딩을 사용 하 여 CBC 모드 대칭적 암호 해독을
+# <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>패딩을 사용하는 CBC 모드 대칭 암호 해독의 타이밍 취약성
 
 Microsoft가는 것이 더 이상 안전 안정형 안쪽 여백을 제외 하 고 암호화 텍스트의 무결성을 확인 하지 않고 적용 된 경우 대칭 암호화의 Cipher Block Chaining (CBC) 모드를 사용 하 여 암호화 된 데이터를 암호 해독에 매우 구체적인 상황입니다. 이 결정을이 내리도록 현재 알려진된 암호화 연구를 기반으로 합니다. 
 
@@ -93,7 +93,7 @@ Oracle을 "알릴" 실행 하는 작업을 올바른 인지 여부에 대 한 �
 - 게이트 평가에 대 한 암호 해독 호출 타이밍 신호를 완화 합니다.
   - 보류 시간 계산에 안쪽 여백을 포함 하는 모든 데이터 세그먼트에 대 한 암호 해독 작업 걸리는 시간의 최대 크기를 초과 하는 최소가 있어야 합니다.
   - 지침에 따라 시간 계산을 수행 해야 [고해상도 타임 스탬프를 획득](/windows/desktop/sysinfo/acquiring-high-resolution-time-stamps)를 사용 하 여 <xref:System.Environment.TickCount?displayProperty=nameWithType> (오버플로) 롤포워드-조치 될 수 있습니다 (NTP 조정에 따라 두 가지 시스템 타임 스탬프를 뺀 또는 오류)입니다.
-  - 시간 계산의 모든 잠재적 예외를 포함 하 여 암호 해독 작업을 포함 하 여 관리 해야 또는 c + + 응용 프로그램 뿐 아니라 끝에 패딩 합니다.
+  - 시간 계산의 모든 잠재적 예외를 포함 하 여 암호 해독 작업을 포함 하 여 관리 해야 하거나 C++ 응용 프로그램 뿐 아니라 끝에 패딩 합니다.
   - 성공 또는 실패 확인 된 경우에 아직, 타이밍 성문 만료 되 면 오류를 반환 해야 합니다.
 - 인증 되지 않은 암호 해독을 수행 하는 서비스에에서 모니터링을 통해 대량의 "잘못 된" 메시지에 올라오는 검색할 설정 해야 합니다.
   - 이 신호는 거짓 긍정 (합법적인 방식으로 손상 된 데이터) 및 거짓 부정 (검색을 피할 충분히 긴 시간이 지남에 따라 공격 확산)는 것을 염두에 두십시오.

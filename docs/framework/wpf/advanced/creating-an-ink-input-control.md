@@ -15,26 +15,26 @@ helpviewer_keywords:
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
 ms.openlocfilehash: 105a44f90c1c654a21fc8920a149ad63b2dabc99
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928717"
 ---
 # <a name="creating-an-ink-input-control"></a>잉크 입력 컨트롤 만들기
 사용자 지정 컨트롤을 동적으로 만들 수 하 고이 정보를 정적으로 잉크를 렌더링 합니다. 즉, 사용자를 "flow"에서 태블릿 펜 후 잉크를 표시 하는 컨트롤에 추가 클립보드에서 붙여 넣거나 파일에서 로드 태블릿 펜을 통해 표시할 잉크가 스트로크를 그릴 때에 잉크를 렌더링 합니다. 동적으로 잉크를 렌더링 하려면 컨트롤을 사용 해야는 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>합니다. 잉크를 정적으로 렌더링 하려면 스타일러스 이벤트 메서드를 재정의 해야 합니다 (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, 및 <xref:System.Windows.UIElement.OnStylusUp%2A>)를 수집 하 <xref:System.Windows.Input.StylusPoint> 데이터를 만들고 추가할는 <xref:System.Windows.Controls.InkPresenter> (컨트롤에서 잉크를 렌더링).  
   
  이 항목에는 다음과 같은 하위 단원이 포함되어 있습니다.  
   
--   [방법: 잉크 스트로크를 만들어 스타일러스 지점 데이터를 수집 합니다.](#CollectingStylusPointDataAndCreatingInkStrokes)  
+- [방법: 잉크 스트로크를 만들어 스타일러스 지점 데이터를 수집 합니다.](#CollectingStylusPointDataAndCreatingInkStrokes)  
   
--   [방법: 마우스 입력을 허용 하도록 컨트롤을 사용 하도록 설정](#EnablingYourControlToAcceptInputTromTheMouse)  
+- [방법: 마우스 입력을 허용 하도록 컨트롤을 사용 하도록 설정](#EnablingYourControlToAcceptInputTromTheMouse)  
   
--   [과정](#PuttingItTogether)  
+- [과정](#PuttingItTogether)  
   
--   [추가 플러그 인 및 DynamicRenderers를 사용 하 여](#UsingAdditionalPluginsAndDynamicRenderers)  
+- [추가 플러그 인 및 DynamicRenderers를 사용 하 여](#UsingAdditionalPluginsAndDynamicRenderers)  
   
--   [결론](#AdvancedInkHandling_Conclusion)  
+- [결론](#AdvancedInkHandling_Conclusion)  
   
 <a name="CollectingStylusPointDataAndCreatingInkStrokes"></a>   
 ## <a name="how-to-collect-stylus-point-data-and-create-ink-strokes"></a>방법: 잉크 스트로크를 만들어 스타일러스 지점 데이터를 수집 합니다.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - controls [WPF], ToolTip
 ms.assetid: f06c1603-e9cb-4809-8a62-234607fc52f7
 ms.openlocfilehash: 08b30d8be83ef9d814d17c5d4ec0c95a26bacdad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790730"
 ---
 # <a name="tooltip-overview"></a>도구 설명 개요
 도구 설명이 같은 요소를 위로 마우스 포인터를 놓을 때 표시 되는 작은 팝업 창에 <xref:System.Windows.Controls.Button>입니다. 이 항목에서는 도구 설명을 소개하고 도구 설명 콘텐츠를 만들고 사용자 지정하는 방법을 설명합니다.  
@@ -24,9 +24,9 @@ ms.locfileid: "59170107"
   
  도구 설명 콘텐츠에는 하나 이상의 텍스트 줄, 이미지, 도형 및 기타 시각적 콘텐츠가 포함될 수 있습니다. 컨트롤에 대한 도구 설명을 정의하려면 다음 속성 중 하나를 도구 설명 콘텐츠로 설정합니다.  
   
--   <xref:System.Windows.FrameworkContentElement.ToolTip%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.FrameworkContentElement.ToolTip%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=nameWithType>  
   
  도구 설명을 정의 하는 컨트롤에서 상속 되는 여부에 따라 달라 집니다 사용할 속성을 <xref:System.Windows.FrameworkContentElement> 또는 <xref:System.Windows.FrameworkElement> 클래스입니다.  
   

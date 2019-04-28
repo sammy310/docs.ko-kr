@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c398663b84637d2551b0d94bd59b9e0994721ba5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792628"
 ---
 # <a name="strongnamesignatureverification-function"></a>StrongNameSignatureVerification 함수
 제공된 경로의 어셈블리 매니페스트에 지정된 플래그에 따라 확인되는 강력한 이름 서명이 포함되는지 여부를 나타내는 값을 가져옵니다.  
@@ -45,22 +45,22 @@ BOOLEAN StrongNameSignatureVerification (
  `dwInFlags`  
  [in] 확인 동작을 수정 하는 플래그입니다. 다음 값이 지원 됩니다.  
   
--   `SN_INFLAG_FORCE_VER` (0x00000001)-레지스트리 설정을 재정의 해야 하는 경우에 확인이 수행 합니다.  
+- `SN_INFLAG_FORCE_VER` (0x00000001)-레지스트리 설정을 재정의 해야 하는 경우에 확인이 수행 합니다.  
   
--   `SN_INFLAG_INSTALL` (0x00000002)-매니페스트를 확인 하는 첫 번째 시간 임을 지정 합니다.  
+- `SN_INFLAG_INSTALL` (0x00000002)-매니페스트를 확인 하는 첫 번째 시간 임을 지정 합니다.  
   
--   `SN_INFLAG_ADMIN_ACCESS` (0x00000004)-캐시는 관리 권한이 있는 사용자만 액세스할 수 있도록 지정 합니다.  
+- `SN_INFLAG_ADMIN_ACCESS` (0x00000004)-캐시는 관리 권한이 있는 사용자만 액세스할 수 있도록 지정 합니다.  
   
--   `SN_INFLAG_USER_ACCESS` (0x00000008)-어셈블리는 현재 사용자만 액세스할 수 있도록 지정 합니다.  
+- `SN_INFLAG_USER_ACCESS` (0x00000008)-어셈블리는 현재 사용자만 액세스할 수 있도록 지정 합니다.  
   
--   `SN_INFLAG_ALL_ACCESS` (0x00000010)-캐시의 액세스 제한이 않음을 지정 합니다.  
+- `SN_INFLAG_ALL_ACCESS` (0x00000010)-캐시의 액세스 제한이 않음을 지정 합니다.  
   
--   `SN_INFLAG_RUNTIME` (0x80000000)-내부 디버깅을 위해 예약 되어 있습니다.  
+- `SN_INFLAG_RUNTIME` (0x80000000)-내부 디버깅을 위해 예약 되어 있습니다.  
   
  `pdwOutFlags`  
  [out] 강력한 이름 서명을 확인 하는지 여부를 나타내는 플래그입니다. 다음 값을 사용할 수 있습니다.  
   
--   `SN_OUTFLAG_WAS_VERIFIED` (0x00000001)-이 값 설정할지 `false` 레지스트리 설정으로 인해 확인이 성공 했는지를 지정 합니다.  
+- `SN_OUTFLAG_WAS_VERIFIED` (0x00000001)-이 값 설정할지 `false` 레지스트리 설정으로 인해 확인이 성공 했는지를 지정 합니다.  
   
 ## <a name="return-value"></a>반환 값  
  `true` 확인에 성공 하면 그렇지 않으면 `false`합니다.  

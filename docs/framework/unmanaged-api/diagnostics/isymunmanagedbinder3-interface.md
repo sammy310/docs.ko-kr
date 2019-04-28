@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fdfd8e8fc419809a3a490639ada1c533f286fe8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939999"
 ---
 # <a name="isymunmanagedbinder3-interface"></a>ISymUnmanagedBinder3 인터페이스
 기호 바인더 인터페이스를 확장 합니다. 호출 하 여이 인터페이스를 가져올 `QueryInterface` 구현 하는 개체에는 `ISymUnmanagedBinder` 인터페이스입니다.  

@@ -3,11 +3,11 @@ title: 개체 상태 및 변경 내용 추적
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
 ms.openlocfilehash: 63b04d3a4b6e48594e9664833a6e539d62bbab0e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794396"
 ---
 # <a name="object-states-and-change-tracking"></a>개체 상태 및 변경 내용 추적
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개체는 항상 일부에 참여할 *상태*합니다. 예를 들어, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 새 개체를 만들 경우 개체는 `Unchanged` 상태입니다. 직접 만든 새 개체는 <xref:System.Data.Linq.DataContext>에 알려져 있지 않으며 `Untracked` 상태입니다. <xref:System.Data.Linq.DataContext.SubmitChanges%2A>를 실행하고 나면 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에 알려진 모든 개체는 `Unchanged` 상태가 됩니다. 유일한 예외는 데이터베이스에서 삭제된 개체로 이러한 개체는 `Deleted` 상태이고 해당 <xref:System.Data.Linq.DataContext> 인스턴스에서 사용할 수 없습니다.  
@@ -38,11 +38,11 @@ ms.locfileid: "59191157"
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 개체가 해당 테이블에서 삭제될 때(<xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>) 다음 작업을 처리합니다.  
   
--   <xref:System.Data.Linq.DataContext.SubmitChanges%2A>가 호출될 경우 `DELETE` 작업이 해당 개체에 대해 수행됩니다.  
+- <xref:System.Data.Linq.DataContext.SubmitChanges%2A>가 호출될 경우 `DELETE` 작업이 해당 개체에 대해 수행됩니다.  
   
--   관련 개체가 로드되었는지 여부에 상관없이 제거는 관련 개체에 전파되지 않습니다. 특히 관계 속성을 업데이트하기 위해 관련 개체가 로드되지는 않습니다.  
+- 관련 개체가 로드되었는지 여부에 상관없이 제거는 관련 개체에 전파되지 않습니다. 특히 관계 속성을 업데이트하기 위해 관련 개체가 로드되지는 않습니다.  
   
--   <xref:System.Data.Linq.DataContext.SubmitChanges%2A>가 실행된 후 개체는 `Deleted` 상태로 설정됩니다. 결과적으로 해당 `id`에서 개체나 개체의 <xref:System.Data.Linq.DataContext>를 사용할 수 없습니다. <xref:System.Data.Linq.DataContext> 인스턴스에 의해 유지 관리되는 내부 캐시는 개체가 데이터베이스에서 삭제된 이후에도 검색되거나 새로 추가되는 개체를 제거하지 않습니다.  
+- <xref:System.Data.Linq.DataContext.SubmitChanges%2A>가 실행된 후 개체는 `Deleted` 상태로 설정됩니다. 결과적으로 해당 `id`에서 개체나 개체의 <xref:System.Data.Linq.DataContext>를 사용할 수 없습니다. <xref:System.Data.Linq.DataContext> 인스턴스에 의해 유지 관리되는 내부 캐시는 개체가 데이터베이스에서 삭제된 이후에도 검색되거나 새로 추가되는 개체를 제거하지 않습니다.  
   
  <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>에 의해 추적되는 개체에서만 <xref:System.Data.Linq.DataContext>을 호출할 수 있습니다. `Untracked` 개체의 경우 <xref:System.Data.Linq.Table%601.Attach%2A>을 호출하기 전에 <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>를 호출해야 합니다. <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> 개체에서 `Untracked`를 호출하면 예외가 throw됩니다.  
   

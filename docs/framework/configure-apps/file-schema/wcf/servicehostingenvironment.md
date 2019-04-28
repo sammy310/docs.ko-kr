@@ -3,11 +3,11 @@ title: <serviceHostingEnvironment>
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
 ms.openlocfilehash: 24cf36aba81b5bb31eaac475361e2d07bc6f8b12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788403"
 ---
 # <a name="servicehostingenvironment"></a>\<serviceHostingEnvironment>
 이 요소는 특정 전송을 위해 서비스 호스팅 환경에서 인스턴스화하는 형식을 정의합니다. 이 요소가 비어 있으면 기본 형식이 사용됩니다. 이 요소는 응용 프로그램이나 컴퓨터 수준 구성 파일에서만 사용할 수 있습니다.  
@@ -63,25 +63,25 @@ ms.locfileid: "59215991"
 ## <a name="remarks"></a>설명  
  기본적으로 WCF 서비스는 호스트된 응용프로그램 도메인(AppDomain)에서 ASP.NET과 함께 실행됩니다. 동일한 AppDomain에서 WCF와 ASP.NET을 함께 사용할 수 있더라도 WCF 요청은 기본적으로 ASP.NET HTTP 파이프라인에 의해 처리되지 않습니다. 따라서 ASP.NET 응용 프로그램 플랫폼의 여러 요소를 WCF 서비스에 사용할 수 없습니다. 이러한 요소는 다음과 같습니다.  
   
--   ASP.NET 파일/URL 권한 부여  
+- ASP.NET 파일/URL 권한 부여  
   
--   ASP.NET 가장  
+- ASP.NET 가장  
   
--   쿠키 기반 세션 상태  
+- 쿠키 기반 세션 상태  
   
--   HttpContext.Current  
+- HttpContext.Current  
   
--   사용자 지정 HttpModule을 통한 파이프라인 확장성  
+- 사용자 지정 HttpModule을 통한 파이프라인 확장성  
   
  WCF 서비스가 ASP.NET 컨텍스트에서 작동해야 하고 이 서비스가 HTTP를 통해서만 통신하는 경우 WCF의 ASP.NET 호환 모드를 사용할 수 있습니다. 이 모드는 응용 프로그램 수준에서 `aspNetCompatibilityEnabled` 특성이 `true`로 설정되면 사용하도록 설정됩니다. 서비스 구현에서는 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 클래스를 사용하여 호환 모드에서 실행되는 기능을 선언해야 합니다. 호환 모드를 사용하는 경우 다음과 같습니다.  
   
--   ASP.NET 파일/URL 권한 부여가 WCF 인증 전에 적용됩니다. 권한 부여 결정은 요청의 전송 수준 ID에 따라 달라집니다. 메시지 수준의 ID가 무시됩니다.  
+- ASP.NET 파일/URL 권한 부여가 WCF 인증 전에 적용됩니다. 권한 부여 결정은 요청의 전송 수준 ID에 따라 달라집니다. 메시지 수준의 ID가 무시됩니다.  
   
--   WCF 서비스 작업이 ASP.NET 가장 컨텍스트에서 실행되기 시작합니다. ASP.NET 가장 및 WCF 가장이 모두 특정 서비스에 사용하도록 설정되면 WCF 가장 컨텍스트가 적용됩니다.  
+- WCF 서비스 작업이 ASP.NET 가장 컨텍스트에서 실행되기 시작합니다. ASP.NET 가장 및 WCF 가장이 모두 특정 서비스에 사용하도록 설정되면 WCF 가장 컨텍스트가 적용됩니다.  
   
--   HttpContext.Current는 WCF 서비스 코드에서 사용할 수 있으며, 서비스에서 HTTP가 아닌 끝점을 노출할 수 없습니다.  
+- HttpContext.Current는 WCF 서비스 코드에서 사용할 수 있으며, 서비스에서 HTTP가 아닌 끝점을 노출할 수 없습니다.  
   
--   WCF 요청은 ASP.NET 파이프라인에서 처리됩니다. 들어오는 요청에서 동작하도록 구성된 HttpModule에서는 WCF 요청도 처리할 수 있습니다. 여기에는 사용자 지정 타사 모듈뿐만 아니라 <xref:System.Web.SessionState.SessionStateModule>과 같은 ASP.NET 플랫폼 구성 요소가 포함될 수 있습니다.  
+- WCF 요청은 ASP.NET 파이프라인에서 처리됩니다. 들어오는 요청에서 동작하도록 구성된 HttpModule에서는 WCF 요청도 처리할 수 있습니다. 여기에는 사용자 지정 타사 모듈뿐만 아니라 <xref:System.Web.SessionState.SessionStateModule>과 같은 ASP.NET 플랫폼 구성 요소가 포함될 수 있습니다.  
   
 ## <a name="example"></a>예제  
  다음 코드 샘플에서는 ASP 호환 모드를 사용하도록 설정하는 방법을 보여 줍니다.  

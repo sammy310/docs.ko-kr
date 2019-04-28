@@ -3,11 +3,11 @@ title: ROW(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 06da96e8-55d7-486c-991a-4e514d837ff9
 ms.openlocfilehash: b83020601373ba93124dfb24308dd048bfa3c6dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797828"
 ---
 # <a name="row-entity-sql"></a>ROW(Entity SQL)
 값 하나 이상을 기반으로 하여 구조적으로 형식화된 익명 레코드를 생성합니다.  
@@ -39,9 +39,9 @@ ROW(1 AS a, "abc" AS b, a+34 AS c)
   
  행 생성자에서 식에 별칭을 지정하는 데 다음 규칙이 적용됩니다.  
   
--   행 생성자의 식은 동일한 생성자 내의 다른 별칭을 참조할 수 없습니다.  
+- 행 생성자의 식은 동일한 생성자 내의 다른 별칭을 참조할 수 없습니다.  
   
--   동일한 행 생성자 내의 서로 다른 두 식은 별칭이 같을 수 없습니다.  
+- 동일한 행 생성자 내의 서로 다른 두 식은 별칭이 같을 수 없습니다.  
   
  쿼리 생성자에 대 한 자세한 내용은 참조 하세요. [형식 생성](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)합니다.  
   

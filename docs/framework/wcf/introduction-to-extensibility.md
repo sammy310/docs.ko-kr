@@ -7,11 +7,11 @@ helpviewer_keywords:
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
 ms.openlocfilehash: 8d7b9c811c557b10160c2581a59f5ebf72882bfd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928611"
 ---
 # <a name="introduction-to-extensibility"></a>확장성 소개
 Windows Communication Foundation (WCF) 응용 프로그램 모델은 대부분의 분산된 응용 프로그램의 통신 요구 사항 해결 하도록 설계 되었습니다. 그러나 기본 응용 프로그램 모델과 시스템 제공 구현이 지원되지 않습니다. WCF 확장성 모델의 전체 응용 프로그램 모델을 대체 지점에도 모든 수준에서 시스템 동작을 수정할 수 있도록 하 여 사용자 지정 시나리오를 지원 됩니다. 이 항목에서는 다양한 확장명 영역에 대해 간략하게 설명하고 각 영역에 대한 자세한 내용을 제공합니다.  
@@ -19,11 +19,11 @@ Windows Communication Foundation (WCF) 응용 프로그램 모델은 대부분�
 ## <a name="areas-to-extend"></a>확장할 영역  
  확장 가능 영역:  
   
--   응용 프로그램 런타임. 이 영역에서는 응용 프로그램에 대한 메시지 처리 및 디스패치를 확장합니다. 또한 이 영역은 보안 시스템, 메타데이터 시스템, serialization 시스템 확장을 비롯하여 응용 프로그램을 기본 채널 시스템에 연결하는 바인딩 및 바인딩 요소 확장을 포함합니다.  
+- 응용 프로그램 런타임. 이 영역에서는 응용 프로그램에 대한 메시지 처리 및 디스패치를 확장합니다. 또한 이 영역은 보안 시스템, 메타데이터 시스템, serialization 시스템 확장을 비롯하여 응용 프로그램을 기본 채널 시스템에 연결하는 바인딩 및 바인딩 요소 확장을 포함합니다.  
   
--   채널 및 채널 런타임. 이 영역에서는 프로토콜, 전송 및 인코딩 지원을 제공하여 메시지 수준에서 작동하는 시스템을 확장합니다.  
+- 채널 및 채널 런타임. 이 영역에서는 프로토콜, 전송 및 인코딩 지원을 제공하여 메시지 수준에서 작동하는 시스템을 확장합니다.  
   
--   호스트 런타임. 이 영역에서는 호스트 응용 프로그램 도메인과 채널 및 응용 프로그램 런타임의 관계를 확장합니다.  
+- 호스트 런타임. 이 영역에서는 호스트 응용 프로그램 도메인과 채널 및 응용 프로그램 런타임의 관계를 확장합니다.  
   
 ### <a name="extending-the-application-runtime"></a>응용 프로그램 런타임 확장  
  WCF 응용 프로그램에서 응용 프로그램 자체에 대 한 보내는 메시지의 대상이 해당 채널인 메시지 사이의 구분이 됩니다. 채널 메시지는 보안 대화 설정, 신뢰할 수 있는 세션 설정과 같은 일부 채널 관련 기능을 지원합니다. 이러한 메시지는 응용 프로그램 런타임에 사용할 수 없으며, 응용 프로그램 계층이 포함되기 이전에 처리됩니다.  

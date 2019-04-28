@@ -6,11 +6,11 @@ helpviewer_keywords:
 - My reference
 ms.assetid: 6f803bd7-21ff-4569-b1fe-b00a6678b1e3
 ms.openlocfilehash: accf2464f7d8ead8bcd73c9704bea4fd5d2e410b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802390"
 ---
 # <a name="my-reference-visual-basic"></a>My 참조(Visual Basic)
 `My` 기능에서 자주 사용 되는 메서드, 속성 및 이벤트에 대 한 직관적인 액세스를 부여 하 여 프로그래밍을 쉽고 빠릅니다. 이 테이블에 포함 된 개체를 나열 `My`, 및 각를 사용 하 여 수행할 수 있는 작업입니다.  

@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 70828b8d4ebcc17fa178a53806ef7f55f7ba33e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939791"
 ---
 # <a name="isymunmanageddocumentwriter-interface"></a>ISymUnmanagedDocumentWriter 인터페이스
 기호 저장소가 참조하는 문서에 쓰기 위한 메서드를 제공합니다.  

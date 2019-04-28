@@ -12,11 +12,11 @@ helpviewer_keywords:
 ms.assetid: aa0b58ee-3956-494d-ab48-471ae5db8740
 author: KrzysztofCwalina
 ms.openlocfilehash: 7d940f10799df2efc6c6d031781e1ef7cf777dd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937399"
 ---
 # <a name="protected-members"></a>보호된 멤버
 단독으로 보호 된 멤버 모든 확장성을 제공 하지 않지만 내릴 수 서브클래싱 통해 확장성을 더 강력 합니다. 기본 공용 인터페이스를 불필요 하 게 복잡 하 게 만들지 않고 고급 사용자 지정 옵션을 표시 하려면 사용할 수 있습니다.  

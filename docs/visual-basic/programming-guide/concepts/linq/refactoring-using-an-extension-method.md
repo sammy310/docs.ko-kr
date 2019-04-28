@@ -3,11 +3,11 @@ title: 확장 메서드 (Visual Basic)를 사용 하 여 리팩터링
 ms.date: 07/20/2015
 ms.assetid: d87ae99a-cfa9-4a31-a5e4-9d6437be6810
 ms.openlocfilehash: 925ae6b1ae82576a830b06ef11232f7dad9875f2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787129"
 ---
 # <a name="refactoring-using-an-extension-method-visual-basic"></a>확장 메서드 (Visual Basic)를 사용 하 여 리팩터링
 이 예제에서는 앞의 예에서 [(Visual Basic) 단락의 텍스트 검색](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), 확장 메서드로 구현 된 순수 함수를 사용 하 여 문자열의 연결을 리팩터링 하 합니다.  
@@ -241,7 +241,7 @@ StyleName:Code >Hello World<
 ## <a name="next-steps"></a>다음 단계  
  다음 예제에서는 순수 함수를 사용하여 다른 방식으로 이 코드를 리팩터링하는 방법을 보여 줍니다.  
   
--   [순수 함수를 사용하여 리팩터링(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+- [순수 함수를 사용하여 리팩터링(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
 ## <a name="see-also"></a>참고자료
 

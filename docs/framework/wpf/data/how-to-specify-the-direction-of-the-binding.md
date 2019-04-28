@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data binding [WPF], direction of binding
 ms.assetid: 37334478-028b-4514-86c9-1420709f4818
 ms.openlocfilehash: 4334ed178e7f2ed90928db6b434eb8c9fee77bf7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931484"
 ---
 # <a name="how-to-specify-the-direction-of-the-binding"></a>방법: 바인딩 방향 지정
 이 예제에서는 바인딩으로 바인딩 대상(대상) 속성만 업데이트되는지, 바인딩 소스(소스) 속성만 업데이트되는지 아니면 대상 속성과 소스 속성이 모두 업데이트되는지 여부를 지정하는 방법을 보여 줍니다.  
@@ -19,15 +19,15 @@ ms.locfileid: "59206436"
 ## <a name="example"></a>예제  
  사용 된 <xref:System.Windows.Data.Binding.Mode%2A> 바인딩 방향을 지정 하는 속성입니다. 다음 열거 목록에서는 바인딩 업데이트에 사용할 수 있는 옵션을 보여 줍니다.  
   
--   <xref:System.Windows.Data.BindingMode.TwoWay> 대상 속성 또는 소스 속성이 변경 될 때마다 대상 속성이 나 속성을 업데이트 합니다.  
+- <xref:System.Windows.Data.BindingMode.TwoWay> 대상 속성 또는 소스 속성이 변경 될 때마다 대상 속성이 나 속성을 업데이트 합니다.  
   
--   <xref:System.Windows.Data.BindingMode.OneWay> source 속성을 변경 하는 경우에 대상 속성을 업데이트 합니다.  
+- <xref:System.Windows.Data.BindingMode.OneWay> source 속성을 변경 하는 경우에 대상 속성을 업데이트 합니다.  
   
--   <xref:System.Windows.Data.BindingMode.OneTime> 응용 프로그램을 시작 하는 경우에 되거나 대상 속성을 업데이트 합니다 <xref:System.Windows.FrameworkElement.DataContext%2A> 가 변경 합니다.  
+- <xref:System.Windows.Data.BindingMode.OneTime> 응용 프로그램을 시작 하는 경우에 되거나 대상 속성을 업데이트 합니다 <xref:System.Windows.FrameworkElement.DataContext%2A> 가 변경 합니다.  
   
--   <xref:System.Windows.Data.BindingMode.OneWayToSource> 대상 속성이 변경 되 면 소스 속성을 업데이트 합니다.  
+- <xref:System.Windows.Data.BindingMode.OneWayToSource> 대상 속성이 변경 되 면 소스 속성을 업데이트 합니다.  
   
--   <xref:System.Windows.Data.BindingMode.Default> 그러면 기본 <xref:System.Windows.Data.Binding.Mode%2A> 사용할 대상 속성의 값입니다.  
+- <xref:System.Windows.Data.BindingMode.Default> 그러면 기본 <xref:System.Windows.Data.Binding.Mode%2A> 사용할 대상 속성의 값입니다.  
   
  자세한 내용은 <xref:System.Windows.Data.BindingMode> 열거형을 참조하세요.  
   

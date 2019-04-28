@@ -8,11 +8,11 @@ helpviewer_keywords:
 - key frames [WPF], how-to topics
 ms.assetid: a5f9ab1a-d14c-4816-8540-3c5b8c8143d5
 ms.openlocfilehash: 6b4f5de92f19223a6692236fb3496a1dbbddef5c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59226432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785647"
 ---
 # <a name="key-frame-animation-how-to-topics"></a>키 프레임 애니메이션 방법 항목
 이 섹션의에서 항목에서는 두 속성 값과 컨트롤 보간 둘 이상의 애니메이션을 적용할 키 프레임 애니메이션을 사용 하는 방법을 보여 줍니다.  

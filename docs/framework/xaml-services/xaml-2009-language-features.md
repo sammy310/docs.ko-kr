@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
 ms.openlocfilehash: 05f811cd0d95f7605963dae851430fb6bf0e9f7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938808"
 ---
 # <a name="xaml-2009-language-features"></a>XAML 2009 언어 기능
 XAML 2009는 기존 XAML 언어 사양을 확장하는 새 XAML 언어 기능의 약식 용어입니다. XAML 2009에서는 여러 가지 새로운 지시문과 구문이 도입되었습니다. 여기에 포함 됩니다는 [X:arguments 지시문](x-arguments-directive.md); [X:factorymethod 지시문](x-factorymethod-directive.md); [X:reference 태그 확장명](x-reference-markup-extension.md), [X:typearguments 지시문 ](x-typearguments-directive.md); 공용 언어 기본 형식에 대 한 기본 제공 형식 (예를 들어 `x:Char`).  

@@ -3,20 +3,20 @@ title: 메시지 흐름 개요
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
 ms.openlocfilehash: d75a535a601612196ef66151a4685723e048848f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797487"
 ---
 # <a name="message-flow-overview"></a>메시지 흐름 개요
 상호 연결된 서비스가 포함된 분산 시스템에서는 서비스 간의 인과 관계를 확인해야 합니다. 상태 모니터링, 문제 해결 및 근본 원인 분석과 같은 중요한 시나리오를 지원하기 위해 요청 흐름의 일부인 다양한 구성 요소를 이해하는 것이 중요합니다. 다양한 서비스 간 추적을 상호 연결할 수 있도록 하기 위해 .NET Framework 4에서는 다음 기능을 통한 지원이 추가되었습니다.
 
--   분석 추적: 고성능 및 낮은 간단한 추적 기능에 대 한 Windows ETW (이벤트 추적)를 사용 하 여 합니다.
+- 분석 추적: 고성능 및 낮은 간단한 추적 기능에 대 한 Windows ETW (이벤트 추적)를 사용 하 여 합니다.
 
--   WCF/WF 서비스에 대 한 종단 간 활동 모델: 이 기능에서 생성 된 추적의 상관 관계를 지원 합니다 <xref:System.ServiceModel> 고 <xref:System.Workflow.ComponentModel> 네임 스페이스입니다.
+- WCF/WF 서비스에 대 한 종단 간 활동 모델: 이 기능에서 생성 된 추적의 상관 관계를 지원 합니다 <xref:System.ServiceModel> 고 <xref:System.Workflow.ComponentModel> 네임 스페이스입니다.
 
--   WF의 ETW 추적: 이 기능은 WF 서비스에서 생성 된 추적 레코드를 사용 하 여 워크플로의 현재 상태와 진행률에 대 한 가시성을 제공.
+- WF의 ETW 추적: 이 기능은 WF 서비스에서 생성 된 추적 레코드를 사용 하 여 워크플로의 현재 상태와 진행률에 대 한 가시성을 제공.
 
  추적이나 추적 레코드에 기록되는 오류를 사용하여 코드 결함이나 잘못된 형식의 메시지를 찾을 수 있습니다. 이벤트의 메시지 헤더에 있는 Correlation 노드의 ActivityId 속성을 사용하여 오류가 발생하는 활동을 확인할 수 있습니다. 작업 ID 별로 메시지 흐름 추적을 사용 하려면 [Configuring Message Flow Tracing](../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md)합니다. 이 항목에서는 초보자를 위한 자습서에서 만든 프로젝트에서 메시지 흐름 추적을 사용하도록 설정하는 방법을 보여 줍니다.
 

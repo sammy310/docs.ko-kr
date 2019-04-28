@@ -12,11 +12,11 @@ helpviewer_keywords:
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
 ms.openlocfilehash: 9b70824670b8f47a2346135cb31ad39bd55694d1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937555"
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>방법: 활성 MDI 자식 확인
 경우에 따라 현재 활성 자식 폼에 포커스가 있는 컨트롤에서 작동 하는 명령을 제공 합니다. 예를 들어 자식 폼의 텍스트 상자에서 선택한 텍스트를 클립보드로 복사 한다고 가정 합니다. 선택한 텍스트를 사용 하 여 클립보드에 복사 하는 프로시저를 만듭니다는 <xref:System.Windows.Forms.Control.Click> 표준 편집 메뉴에서 복사 메뉴 항목의 이벤트입니다.  

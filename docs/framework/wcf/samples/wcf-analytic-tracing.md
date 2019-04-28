@@ -3,11 +3,11 @@ title: WCF 분석 추적
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
 ms.openlocfilehash: 9ed89bdbe2469a96f2a959c9fda8442e80b6f7ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723357"
 ---
 # <a name="wcf-analytic-tracing"></a>WCF 분석 추적
 이 샘플에는 Windows Communication Foundation (WCF) ETW에 기록 하는 분석 추적 스트림에 고유한 추적 이벤트를 추가 하는 방법을 보여 줍니다. [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]합니다. 분석 추적은 성능을 크게 저하시키지 않으면서 서비스를 쉽게 확인할 수 있도록 하기 위한 것입니다. 이 샘플에 사용 하는 방법을 보여 줍니다는 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> WCF 서비스와 통합 하는 쓰기 이벤트에는 Api입니다.  
@@ -22,11 +22,11 @@ ms.locfileid: "59332315"
 ## <a name="self-hosting-vs-web-hosting"></a>자체 호스팅 및 웹 호스팅  
  웹 호스팅 서비스에 대 한 WCF의 분석 추적은 추적을 내보내는 서비스를 식별 하는 데 사용 되는 "HostReference" 라는 필드를 제공 합니다. 확장 가능한 사용자 추적이 이 모델에 관여할 수 있으며 이 샘플에서는 이 작업을 수행하기 위한 최선의 방법을 보여 줍니다. 웹 호스트의 형식을 참조할 때 파이프를 '&#124;' 문자는 실제로 결과 표시 문자열에는 다음 중 하나일 수 있습니다.  
   
--   응용 프로그램이 루트에 없는 경우  
+- 응용 프로그램이 루트에 없는 경우  
   
      \<SiteName>\<ApplicationVirtualPath>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   
--   응용 프로그램이 루트에 있는 경우  
+- 응용 프로그램이 루트에 있는 경우  
   
      \<SiteName>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   
@@ -77,13 +77,13 @@ ms.locfileid: "59332315"
   
 10. WCF 테스트 클라이언트를 사용하여 서비스를 테스트합니다.  
   
-    1.  WCF 테스트 클라이언트에서 두 번 클릭 **add ()** ICalculator 서비스 노드에서 합니다.  
+    1. WCF 테스트 클라이언트에서 두 번 클릭 **add ()** ICalculator 서비스 노드에서 합니다.  
   
          합니다 **add ()** 메서드가 두 개의 매개 변수를 사용 하 여 오른쪽 창에 나타납니다.  
   
-    2.  첫 번째 매개 변수에 2를 입력하고 두 번째 매개 변수에 3을 입력합니다.  
+    2. 첫 번째 매개 변수에 2를 입력하고 두 번째 매개 변수에 3을 입력합니다.  
   
-    3.  클릭 **Invoke** 메서드를 호출 합니다.  
+    3. 클릭 **Invoke** 메서드를 호출 합니다.  
   
 11. 로 이동 합니다 **이벤트 뷰어** 열려 있는 창입니다. 이동할 **이벤트 뷰어**, **Applications and Services Logs**합니다 **Microsoft**를 **Windows**, **응용 프로그램 서버-응용 프로그램**합니다.  
   

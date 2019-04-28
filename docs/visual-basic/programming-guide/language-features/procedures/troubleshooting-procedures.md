@@ -9,11 +9,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
 ms.openlocfilehash: 492a7474a38a7e41b7e3b3f59dfa118c30256ea4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791796"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>프로시저 문제 해결(Visual Basic)
 이 페이지는 프로시저를 사용 하 여 작업할 때 발생할 수 있는 몇 가지 일반적인 문제를 나열 합니다.  
@@ -46,9 +46,9 @@ ms.locfileid: "58830138"
 ## <a name="argument-not-being-modified-by-procedure-call"></a>수정 되지 않은 인수 프로시저 호출에서  
  호출 코드에서 인수를 기본 프로그래밍 요소를 변경 하는 절차를 허용 하려는 경우 참조로 전달 해야 합니다. 하지만 값으로 전달 하는 경우에 프로시저 참조 형식 인수 요소에 액세스할 수 있습니다.  
   
--   **내부 변수**합니다. 기본 변수 요소 자체의 값을 대체 하는 절차를 허용 하려면 프로시저 매개 변수를 선언 해야 합니다 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)합니다. 또한 호출 코드 묶지 마십시오 인수를 괄호로 재정의 되기 때문은 `ByRef` 전달 메커니즘입니다.  
+- **내부 변수**합니다. 기본 변수 요소 자체의 값을 대체 하는 절차를 허용 하려면 프로시저 매개 변수를 선언 해야 합니다 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)합니다. 또한 호출 코드 묶지 마십시오 인수를 괄호로 재정의 되기 때문은 `ByRef` 전달 메커니즘입니다.  
   
--   **형식 요소 참조**합니다. 매개 변수를 선언 하는 경우 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md), 프로시저 자체 내부 변수 요소를 수정할 수 없습니다. 그러나 인수가 참조 형식이 면 변수의 값을 바꿀 수 없습니다 없지만 프로시저 가리키는, 개체의 멤버를 수정할 수 있습니다. 예를 들어, 인수 배열 변수 이면 절차를 새 배열을 할당할 수 없지만 해당 요소 중 하나 이상을 변경할 수 있습니다. 변경 된 요소를 호출 하는 코드의 내부 배열 변수에 반영 됩니다.  
+- **형식 요소 참조**합니다. 매개 변수를 선언 하는 경우 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md), 프로시저 자체 내부 변수 요소를 수정할 수 없습니다. 그러나 인수가 참조 형식이 면 변수의 값을 바꿀 수 없습니다 없지만 프로시저 가리키는, 개체의 멤버를 수정할 수 있습니다. 예를 들어, 인수 배열 변수 이면 절차를 새 배열을 할당할 수 없지만 해당 요소 중 하나 이상을 변경할 수 있습니다. 변경 된 요소를 호출 하는 코드의 내부 배열 변수에 반영 됩니다.  
   
  다음 예제에서는 요소를 값으로 배열 변수를 가져오고 작동 하는 두 가지 절차를 정의 합니다. 프로시저 `increase` 각 요소에 추가 하기만 하면 됩니다. 프로시저 `replace` 매개 변수는 새 배열을 할당 `a()` 다음 각 요소에 하나를 추가 합니다. 그러나 다시 할당 영향을 주지 않습니다 호출 코드에서 기본 배열 변수 때문 `a()` 선언 `ByVal`합니다.  
   
@@ -75,13 +75,13 @@ ms.locfileid: "58830138"
   
  다음 항목을 매개 변수 목록에 포함 되어 있더라도 없는 프로시저의 서명 구성 요소:  
   
--   프로시저 한정자 키워드와 같은 `Public`, `Shared`, 및 `Static`  
+- 프로시저 한정자 키워드와 같은 `Public`, `Shared`, 및 `Static`  
   
--   매개 변수 이름  
+- 매개 변수 이름  
   
--   매개 변수 한정자 키워드와 같은 `ByRef` 및 `Optional`  
+- 매개 변수 한정자 키워드와 같은 `ByRef` 및 `Optional`  
   
--   반환 값 (변환 연산자 제외)의 데이터 형식  
+- 반환 값 (변환 연산자 제외)의 데이터 형식  
   
  위의 항목 중 하나 이상을 변경 하 여 프로시저를 오버 로드할 수 없습니다.  
   
@@ -95,11 +95,11 @@ ms.locfileid: "58830138"
   
  호출 하려는 오버 로드를 확인 한 경우 다음 규칙을 준수 주의 합니다.  
   
--   인수를 정확한 순서로 정확한 수를 제공 합니다.  
+- 인수를 정확한 순서로 정확한 수를 제공 합니다.  
   
--   이상적으로 인수가 정확히 동일한 데이터 형식을 해당 매개 변수로 있어야 합니다. 어떤 경우 든, 각 인수의 데이터 형식을 해당 매개 변수를 확장 해야 합니다. 사용 하더라도 마찬가지 합니다 [Option Strict 문](../../../../visual-basic/language-reference/statements/option-strict-statement.md) 로 `Off`합니다. 오버 로드에서 오버 로드는 인수 목록에 축소 변환이 필요한 경우 호출할 대상이 아닙니다.  
+- 이상적으로 인수가 정확히 동일한 데이터 형식을 해당 매개 변수로 있어야 합니다. 어떤 경우 든, 각 인수의 데이터 형식을 해당 매개 변수를 확장 해야 합니다. 사용 하더라도 마찬가지 합니다 [Option Strict 문](../../../../visual-basic/language-reference/statements/option-strict-statement.md) 로 `Off`합니다. 오버 로드에서 오버 로드는 인수 목록에 축소 변환이 필요한 경우 호출할 대상이 아닙니다.  
   
--   확대 해야 하는 인수를 제공 하는 경우 해당 데이터 형식을 해당 매개 변수 데이터 형식에 최대한 가깝게를 확인 합니다. 인수 데이터 형식에 동의 하는 두 개 이상의 오버 로드를 컴파일러가 확대 변환 부분이 최소한 필요로 하는 오버 로드를 호출 하 여 확인 합니다.  
+- 확대 해야 하는 인수를 제공 하는 경우 해당 데이터 형식을 해당 매개 변수 데이터 형식에 최대한 가깝게를 확인 합니다. 인수 데이터 형식에 동의 하는 두 개 이상의 오버 로드를 컴파일러가 확대 변환 부분이 최소한 필요로 하는 오버 로드를 호출 하 여 확인 합니다.  
   
  사용 하 여 데이터 형식 불일치의 가능성을 줄일 수는 [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) 변환 키워드 인수를 준비할 때.  
   

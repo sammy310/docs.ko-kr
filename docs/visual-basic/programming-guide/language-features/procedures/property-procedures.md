@@ -14,20 +14,20 @@ helpviewer_keywords:
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
 ms.openlocfilehash: 47e93ee17f160ce5cd701fd0a12ec16b3997ce9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791861"
 ---
 # <a name="property-procedures-visual-basic"></a>Property 프로시저(Visual Basic)
 속성 프로시저는 일련의 모듈, 클래스 또는 구조체에서 사용자 지정 속성을 조작 하는 Visual Basic 문 합니다. 속성 프로시저는 라고도 *속성 접근자*합니다.  
   
  Visual Basic 속성 절차를 제공합니다.  
   
--   `Get` 프로시저 속성의 값을 반환 합니다. 식에서 속성에 액세스 하면 호출 됩니다.  
+- `Get` 프로시저 속성의 값을 반환 합니다. 식에서 속성에 액세스 하면 호출 됩니다.  
   
--   `Set` 프로시저 개체 참조를 포함 하 여 값으로 속성을 설정 합니다. 속성에 값을 할당 하는 경우 호출 됩니다.  
+- `Set` 프로시저 개체 참조를 포함 하 여 값으로 속성을 설정 합니다. 속성에 값을 할당 하는 경우 호출 됩니다.  
   
  일반적으로 사용 하 여 쌍에 속성 프로시저를 정의 합니다 `Get` 및 `Set` 문, 있지만 속성이 읽기 전용 이면 두 프로시저 중 하나만 정의할 수 있습니다 ([Get 문은](../../../../visual-basic/language-reference/statements/get-statement.md)) 또는 쓰기 전용 ([설정 문을](../../../../visual-basic/language-reference/statements/set-statement.md)).  
   

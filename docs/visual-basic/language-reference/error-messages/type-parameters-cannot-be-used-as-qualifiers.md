@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC32098
 ms.assetid: bab05325-dde8-4621-a5f6-368b5b7b2d76
 ms.openlocfilehash: ba7348ae50965ffcf2719b20934451916c8fa95a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923723"
 ---
 # <a name="type-parameters-cannot-be-used-as-qualifiers"></a>형식 매개 변수는 한정자로 사용할 수 없습니다.
 프로그래밍 요소가 형식 매개 변수를 포함 하는 한정 문자열 한정 됩니다.  

@@ -3,18 +3,18 @@ title: 파일이 현재 읽기용으로 열려 있습니다.
 ms.date: 07/20/2015
 ms.assetid: 7f662a68-021a-4432-947a-6bde48061257
 ms.openlocfilehash: 7d29c86c7994f1f1ac3bec08021539da8fc53bac
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58045414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788481"
 ---
 # <a name="the-file-is-currently-open-for-reading"></a>파일이 현재 읽기용으로 열려 있습니다.
 현재 읽기용으로 열려 있는 파일에 액세스하려고 했습니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   파일을 닫고 작업을 다시 시도합니다.  
+- 파일을 닫고 작업을 다시 시도합니다.  
   
 ## <a name="see-also"></a>참고자료
 

@@ -3,11 +3,11 @@ title: 고급 LINQ to XML 프로그래밍 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 36018532-a55c-4538-8a27-98f475ea3415
 ms.openlocfilehash: f30f8f1c6dcdbabc1f32f4f7e216ce65a50396c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787207"
 ---
 # <a name="advanced-linq-to-xml-programming-visual-basic"></a>고급 LINQ to XML 프로그래밍 (Visual Basic)
 이 단원에서는 특정 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 시나리오의 고급 개발자에게만 해당될 수 있는 정보를 제공합니다.  

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 608612f6a0f4395092e33ce75fdbd249f19ae4f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771841"
 ---
 # <a name="iclrruntimehoststart-method"></a>ICLRRuntimeHost::Start 메서드
 프로세스에는 CLR (공용 언어 런타임)을 초기화합니다.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - examples [Windows Forms], drawing paths
 ms.assetid: f16ec921-56cf-46d1-9741-d7316ad06b23
 ms.openlocfilehash: a698b93aac29a0a7f5c959b29a3feb41eb447e8c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935410"
 ---
 # <a name="constructing-and-drawing-paths"></a>경로 구성 및 그리기
 경로 시퀀스 조작 하 고 하나의 단위로 그릴 수 있는 그래픽 기본형 (선, 사각형, 곡선, 텍스트 및 like)입니다. 경로 나눌 수 있습니다 *수치* 열림 또는 닫힘 된 합니다. 그림에는 여러 기본 형식을 포함할 수 있습니다.  

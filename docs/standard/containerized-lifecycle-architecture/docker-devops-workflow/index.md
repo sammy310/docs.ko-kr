@@ -4,13 +4,8 @@ description: Microsoft 도구를 사용 하 여 Microsoft 플랫폼 및 도구 D
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 80acd58d08900da8e79f6b7388da3b10f9e4e566
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59672305"
 ---
+
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Microsoft 도구를 사용하는 Docker 애플리케이션 DevOps 워크플로
 
 *Microsoft Visual Studio, Azure DevOps 서비스, Team Foundation Server 및 Azure Monitor는 포괄적인 에코 시스템 개발 및 IT 운영 팀 프로젝트를 관리 하 고 신속 하 게 구축 하는 도구를 제공 하는 테스트 및 배포에 대 한 컨테이너 화 된 제공 응용 프로그램입니다.*

@@ -3,11 +3,11 @@ title: 세션, 인스턴스 및 동시성
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
 ms.openlocfilehash: 994b95bb8ebc14a9997e1e9510389fdf16098d12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748020"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>세션, 인스턴스 및 동시성
 *세션* 은 두 개의 끝점 사이에 전송된 모든 메시지의 상관 관계입니다. *인스턴스 만들기* 는 사용자 정의 서비스 개체와 관련 <xref:System.ServiceModel.InstanceContext> 개체의 수명 제어를 의미합니다. *동시성* 은 <xref:System.ServiceModel.InstanceContext> 에서 동시에 실행되는 스레드 수의 제어를 의미하는 용어입니다.  
@@ -19,21 +19,21 @@ ms.locfileid: "59229071"
   
  WCF 세션에 다음과 같은 주요 개념적 기능이:  
   
--   이러한 기능은 호출 애플리케이션에 의해 명시적으로 시작되고 종료됩니다.  
+- 이러한 기능은 호출 애플리케이션에 의해 명시적으로 시작되고 종료됩니다.  
   
--   한 세션 동안 배달된 메시지는 수신된 순서대로 처리됩니다.  
+- 한 세션 동안 배달된 메시지는 수신된 순서대로 처리됩니다.  
   
--   세션은 메시지 그룹을 대화에 연결합니다. 상관 관계의 의미는 추상적입니다. 예를 들어, 공유된 네트워크 연결을 기반으로 메시지와 연결될 수 있는 세션 기반 채널이 있는 반면 메시지 본문의 공유 태그를 기반으로 메시지와 연결될 수 있는 세션 기반 채널도 있습니다. 세션에서 파생될 수 있는 기능은 상관 관계의 특성에 따라 다릅니다.  
+- 세션은 메시지 그룹을 대화에 연결합니다. 상관 관계의 의미는 추상적입니다. 예를 들어, 공유된 네트워크 연결을 기반으로 메시지와 연결될 수 있는 세션 기반 채널이 있는 반면 메시지 본문의 공유 태그를 기반으로 메시지와 연결될 수 있는 세션 기반 채널도 있습니다. 세션에서 파생될 수 있는 기능은 상관 관계의 특성에 따라 다릅니다.  
   
--   WCF 세션과 연결 된 일반 데이터 저장소가 없습니다.  
+- WCF 세션과 연결 된 일반 데이터 저장소가 없습니다.  
   
  에 대해 잘 알고 있다면 합니다 <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> 클래스의 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 제공 응용 프로그램 및 기능, 해당 유형의 세션 및 WCF 세션 간에 다음과 같은 차이점을 알 수 있습니다.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 세션은 항상 서버에 의해 실행됩니다.  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 세션은 항상 서버에 의해 실행됩니다.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 세션은 암시적으로 순서가 지정되지 않습니다.  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 세션은 암시적으로 순서가 지정되지 않습니다.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 세션은 요청을 통해 일반 데이터 저장소 메커니즘을 제공합니다.  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 세션은 요청을 통해 일반 데이터 저장소 메커니즘을 제공합니다.  
   
  클라이언트 애플리케이션과 서비스 애플리케이션은 서로 다른 방법으로 세션과 상호 작용합니다. 클라이언트 애플리케이션은 세션을 시작한 다음 세션 내에서 전송된 메시지를 수신하여 처리합니다. 서비스 애플리케이션은 세션을 확장성 지점으로 사용하여 추가 동작을 추가합니다. <xref:System.ServiceModel.InstanceContext> 와 직접 작업하거나 사용자 지정 인스턴스 컨텍스트 공급자를 구현하여 수행합니다.  
   
@@ -42,11 +42,11 @@ ms.locfileid: "59229071"
   
  사용할 수 있는 인스턴스 만들기 모드는 다음과 같습니다.  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerCall>: 새 <xref:System.ServiceModel.InstanceContext> (및 그에 따른 서비스 개체) 각 클라이언트 요청에 대해 만들어집니다.  
+- <xref:System.ServiceModel.InstanceContextMode.PerCall>: 새 <xref:System.ServiceModel.InstanceContext> (및 그에 따른 서비스 개체) 각 클라이언트 요청에 대해 만들어집니다.  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerSession>: 새 <xref:System.ServiceModel.InstanceContext> (및 그에 따른 서비스 개체) 각 새 클라이언트 세션에 대해 만들어지고 해당 세션 (세션을 지 원하는 바인딩이 필요)의 수명이 유지 관리 합니다.  
+- <xref:System.ServiceModel.InstanceContextMode.PerSession>: 새 <xref:System.ServiceModel.InstanceContext> (및 그에 따른 서비스 개체) 각 새 클라이언트 세션에 대해 만들어지고 해당 세션 (세션을 지 원하는 바인딩이 필요)의 수명이 유지 관리 합니다.  
   
--   <xref:System.ServiceModel.InstanceContextMode.Single>: 단일 <xref:System.ServiceModel.InstanceContext> (및 그에 따른 서비스 개체) 응용 프로그램의 수명에 대 한 모든 클라이언트 요청을 처리 합니다.  
+- <xref:System.ServiceModel.InstanceContextMode.Single>: 단일 <xref:System.ServiceModel.InstanceContext> (및 그에 따른 서비스 개체) 응용 프로그램의 수명에 대 한 모든 클라이언트 요청을 처리 합니다.  
   
  다음 코드 예제에서는 명시적으로 서비스 클래스에 설정되는 기본 <xref:System.ServiceModel.InstanceContextMode> 값인 <xref:System.ServiceModel.InstanceContextMode.PerSession> 을 보여 줍니다.  
   
@@ -75,11 +75,11 @@ public class CalculatorService : ICalculatorInstance
   
  사용할 수 있는 세 가지 동시성 모드는 다음과 같습니다.  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Single>: 각 인스턴스 컨텍스트를 한 번에 인스턴스 컨텍스트에서 메시지를 처리 하는 하나의 스레드의 최대값을 가질 수 있습니다. 동일한 인스턴스 컨텍스트를 사용하려는 다른 스레드는 원래 스레드가 인스턴스 컨텍스트를 종료할 때까지 차단되어야 합니다.  
+- <xref:System.ServiceModel.ConcurrencyMode.Single>: 각 인스턴스 컨텍스트를 한 번에 인스턴스 컨텍스트에서 메시지를 처리 하는 하나의 스레드의 최대값을 가질 수 있습니다. 동일한 인스턴스 컨텍스트를 사용하려는 다른 스레드는 원래 스레드가 인스턴스 컨텍스트를 종료할 때까지 차단되어야 합니다.  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Multiple>: 각 서비스 인스턴스 메시지를 동시에 처리 하는 여러 스레드를 가질 수 있습니다. 이 동시성 모드를 사용하려면 스레드로부터 안전하게 서비스를 구현해야 합니다.  
+- <xref:System.ServiceModel.ConcurrencyMode.Multiple>: 각 서비스 인스턴스 메시지를 동시에 처리 하는 여러 스레드를 가질 수 있습니다. 이 동시성 모드를 사용하려면 스레드로부터 안전하게 서비스를 구현해야 합니다.  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: 각 서비스 인스턴스에 한 번에 하나의 메시지를 처리 하지만 재진입 작업 호출을 허용 합니다. 서비스는 WCF 클라이언트 개체를 통해 호출 하는 경우에 이러한 호출을 허용 합니다.  
+- <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: 각 서비스 인스턴스에 한 번에 하나의 메시지를 처리 하지만 재진입 작업 호출을 허용 합니다. 서비스는 WCF 클라이언트 개체를 통해 호출 하는 경우에 이러한 호출을 허용 합니다.  
   
 > [!NOTE]
 >  둘 이상의 스레드를 안전하게 사용하는 코드를 이해하고 개발하기는 쉽지 않습니다. <xref:System.ServiceModel.ConcurrencyMode.Multiple> 또는 <xref:System.ServiceModel.ConcurrencyMode.Reentrant> 값을 사용하기 전에 이러한 모드에 대해 해당 서비스가 적절하게 디자인되었는지 확인합니다. 자세한 내용은 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>을 참조하세요.  

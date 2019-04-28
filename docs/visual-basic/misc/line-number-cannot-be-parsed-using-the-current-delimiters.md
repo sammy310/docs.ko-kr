@@ -5,18 +5,18 @@ f1_keywords:
 - vbrTextFieldParser_MalFormedDelimitedLine
 ms.assetid: 1f8d4c2d-0334-4da8-acff-5460159835b3
 ms.openlocfilehash: 776cf7ed231f63ec9ad4308305fe77d500a4fc1b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790548"
 ---
 # <a name="line-number-cannot-be-parsed-using-the-current-delimiters"></a>줄 \<수 > 현재 구분 기호를 사용 하 여 구문 분석할 수 없습니다
 지정된 것과 다른 구분 기호를 사용하기 때문에 지정한 줄을 구문 분석할 수 없습니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   줄을 올바르게 구문 분석할 수 있도록 `Delimiters` 를 조정하거나 줄을 처리하도록 예외 처리 코드를 삽입합니다.  
+- 줄을 올바르게 구문 분석할 수 있도록 `Delimiters` 를 조정하거나 줄을 처리하도록 예외 처리 코드를 삽입합니다.  
   
 ## <a name="see-also"></a>참고자료
 

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
 ms.openlocfilehash: ed5ed56366911c3676c4413711207ac0a8f85765
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925650"
 ---
 # <a name="basic-query-operations-visual-basic"></a>기본 쿼리 작업(Visual Basic)
 이 항목에서는에 대 한 간략 한 소개 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] Visual Basic의 경우에 쿼리에서 수행 하는 작업의 일반적인 종류의 일부에 대 한 식입니다. 자세한 내용은 다음 항목을 참조하세요.  
@@ -81,7 +81,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  데이터 원본에서 여러 필드를 선택 하는 두 가지 옵션이 있습니다.  
   
--   에 `Select` 절 결과에 포함할 필드를 지정 합니다. 컴파일러는 해당 속성으로 해당 필드가 있는 익명 형식을 정의 합니다. 자세한 내용은 [무명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)을 참조하세요.  
+- 에 `Select` 절 결과에 포함할 필드를 지정 합니다. 컴파일러는 해당 속성으로 해당 필드가 있는 익명 형식을 정의 합니다. 자세한 내용은 [무명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)을 참조하세요.  
   
      다음 예에서 반환 되는 요소는 무명 형식의 인스턴스 이기 때문에 참조할 수 없습니다를 형식 이름으로 다른 곳에서 코드에서. 컴파일러에서 지정 된 이름 형식에 대 한 일반적인 Visual Basic 코드에서 잘못 된 문자가 있습니다. 다음 예의 쿼리에 의해 반환 되는 컬렉션의 요소에서 `londonCusts4` 무명 형식의 인스턴스인  
   
@@ -89,7 +89,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
      또는  
   
--   결과에 포함 하 고 만들고에서 형식의 인스턴스를 초기화 하려는 특정 필드를 포함 하는 명명 된 형식 정의 `Select` 절. 반환 된 컬렉션 외부 개별 결과 사용 해야 하는 경우에 또는 메서드 호출에 매개 변수로 전달 해야 할 경우이 옵션을 사용 합니다. 형식의 `londonCusts5` 다음 예제는 IEnumerable (Of NamePhone).  
+- 결과에 포함 하 고 만들고에서 형식의 인스턴스를 초기화 하려는 특정 필드를 포함 하는 명명 된 형식 정의 `Select` 절. 반환 된 컬렉션 외부 개별 결과 사용 해야 하는 경우에 또는 메서드 호출에 매개 변수로 전달 해야 할 경우이 옵션을 사용 합니다. 형식의 `londonCusts5` 다음 예제는 IEnumerable (Of NamePhone).  
   
      [!code-vb[VbLINQBasicOps#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#7)]  
   

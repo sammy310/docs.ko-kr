@@ -8,11 +8,11 @@ helpviewer_keywords:
 - DirectCast keyword [Visual Basic]
 ms.assetid: 63e5a1d0-4d9e-4732-bf8f-e90c0c8784b8
 ms.openlocfilehash: 628ce4f06b91d0f514f71dea3aad8ea0fee6dccf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778549"
 ---
 # <a name="directcast-operator-visual-basic"></a>DirectCast 연산자(Visual Basic)
 상속 또는 구현에 따라 형식 변환 작업을 소개 합니다.  

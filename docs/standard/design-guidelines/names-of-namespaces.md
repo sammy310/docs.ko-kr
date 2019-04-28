@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
 author: KrzysztofCwalina
 ms.openlocfilehash: 0099c5c8a863023099b377e139461606de3e1e1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940987"
 ---
 # <a name="names-of-namespaces"></a>네임스페이스의 이름
 으로 다른 명명 지침을 사용 하 여 목표 네임 스페이스의 이름을 지정할 때 만드는 것 충분 한 명확성 프레임 워크를 사용 하 여 즉시 무엇이 있는지 아는 네임 스페이스의 내용을 짧을 수 프로그래머입니다. 다음 템플릿 네임 스페이스 이름에 대 한 일반 규칙을 지정 합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "54665138"
   
  네임 스페이스의 다른 범주에 대 한 형식 이름 충돌을 방지 하는 것에 대 한 지침이 있습니다.  
   
--   **응용 프로그램 모델 네임 스페이스**  
+- **응용 프로그램 모델 네임 스페이스**  
   
      단일 응용 프로그램 모델에 속한 네임 스페이스는 종종 매우 함께 사용 하지만 다른 응용 프로그램 모델의 네임 스페이스를 사용 하 여 사용할 거의 없습니다. 예를 들어 합니다 <xref:System.Windows.Forms?displayProperty=nameWithType> 네임 스페이스와 함께 사용 되는 거의 <xref:System.Web.UI?displayProperty=nameWithType> 네임 스페이스입니다. 다음은 잘 알려진 응용 프로그램 모델 네임 스페이스 그룹 목록입니다.  
   
@@ -60,11 +60,11 @@ ms.locfileid: "54665138"
   
      예를 들어 이라는 형식을 추가 하지 마십시오 `Page` 에 <xref:System.Web.UI.Adapters?displayProperty=nameWithType> 네임 스페이스 때문에 <xref:System.Web.UI?displayProperty=nameWithType> 네임 스페이스에는 이미 명명 된 형식이 포함 되어 `Page`입니다.  
   
--   **인프라 네임 스페이스**  
+- **인프라 네임 스페이스**  
   
      이 그룹에 일반적인 응용 프로그램을 개발 하는 동안 거의 가져온 네임 스페이스를 포함 합니다. 예를 들어 `.Design` 네임 스페이스는 프로그래밍 개발 도구 때 주로 사용 됩니다. 이러한 네임 스페이스의 형식을 사용 하 여 충돌을 방지 합니다. 중요 하지 않습니다.  
   
--   **핵심 네임 스페이스**  
+- **핵심 네임 스페이스**  
   
      모든 핵심 네임 스페이스 포함 `System` 네임 스페이스를 응용 프로그램 모델 및 인프라 네임 스페이스를 제외 합니다. 특히, 핵심 네임 스페이스를 포함 `System`, `System.IO`를 `System.Xml`, 및 `System.Net`합니다.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "54665138"
   
      예를 들어, 사용 하지 마십시오 `Stream` 형식 이름으로 합니다. 충돌 <xref:System.IO.Stream?displayProperty=nameWithType>, 매우 일반적으로 형식을 사용 합니다.  
   
--   **기술 네임 스페이스 그룹**  
+- **기술 네임 스페이스 그룹**  
   
      이 범주에 동일한 처음 두 개의 네임 스페이스 노드를 사용 하 여 모든 네임 스페이스를 포함 `(<Company>.<Technology>*`), 같은 `Microsoft.Build.Utilities` 및 `Microsoft.Build.Tasks`합니다. 것이 단일 기술을에 속하는 형식에 서로 충돌 하지 않는지 중요 합니다.  
   

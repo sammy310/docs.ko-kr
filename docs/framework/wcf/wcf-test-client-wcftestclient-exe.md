@@ -3,11 +3,11 @@ title: WCF 테스트 클라이언트(WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
 ms.openlocfilehash: cd6f0d7a98ca5bc5f6bee45ad296341a5b91b2a4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791198"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF 테스트 클라이언트(WcfTestClient.exe)
 Windows Communication Foundation (WCF) 테스트 클라이언트 (WcfTestClient.exe)는 테스트 매개 변수를 입력 하 여 해당 서비스에 입력을 사용 하면 서비스가 다시 보낸 응답을 확인 하는 GUI 도구입니다. 서비스를 매끄럽게 테스트할 WCF 서비스 호스트를 함께 사용 하면 환경을 제공 합니다.  
@@ -136,34 +136,34 @@ Windows Communication Foundation (WCF) 테스트 클라이언트 (WcfTestClient.
 ## <a name="features-supported-by-wcf-test-client"></a>WCF 테스트 클라이언트에서 지원되는 기능  
  다음은 WCF 테스트 클라이언트에서 지 원하는 기능 목록입니다.  
   
--   서비스 호출: 요청/응답 및 단방향 메시지입니다.  
+- 서비스 호출: 요청/응답 및 단방향 메시지입니다.  
   
--   바인딩: Svcutil.exe에서 지원되는 모든 바인딩.  
+- 바인딩: Svcutil.exe에서 지원되는 모든 바인딩.  
   
--   세션 제어  
+- 세션 제어  
   
--   메시지 계약  
+- 메시지 계약  
   
--   XML 직렬화  
+- XML 직렬화  
   
  다음은 WCF 테스트 클라이언트에서 지원 되지 않는 기능 목록을입니다.  
   
--   형식: <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>, <xref:System.Xml.XmlElement>, <xref:System.Xml.XmlAttribute>, <xref:System.Xml.XmlNode>, <xref:System.Xml.Serialization.IXmlSerializable> 인터페이스를 구현하는 형식(관련 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 특성 포함), <xref:System.Xml.Linq.XDocument> 및 <xref:System.Xml.Linq.XElement> 형식, ADO.NET <xref:System.Data.DataTable> 형식  
+- 형식: <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>, <xref:System.Xml.XmlElement>, <xref:System.Xml.XmlAttribute>, <xref:System.Xml.XmlNode>, <xref:System.Xml.Serialization.IXmlSerializable> 인터페이스를 구현하는 형식(관련 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 특성 포함), <xref:System.Xml.Linq.XDocument> 및 <xref:System.Xml.Linq.XElement> 형식, ADO.NET <xref:System.Data.DataTable> 형식  
   
--   이중 계약  
+- 이중 계약  
   
--   트랜잭션  
+- 트랜잭션  
   
--   보안: [!INCLUDE[infocard](../../../includes/infocard-md.md)] , 인증서 및 이름/암호  
+- 보안: [!INCLUDE[infocard](../../../includes/infocard-md.md)] , 인증서 및 이름/암호  
   
--   바인딩: WSFederationbinding, Context 바인딩 및 Https 바인딩, WebHttpbinding (Json 응답 메시지 지원).  
+- 바인딩: WSFederationbinding, Context 바인딩 및 Https 바인딩, WebHttpbinding (Json 응답 메시지 지원).  
   
 ## <a name="closing-wcf-test-client"></a>WCF 테스트 클라이언트 닫기  
  다음과 같은 방법으로 WCF 테스트 클라이언트를 닫을 수 있습니다.  
   
--   **파일** 메뉴에서 **끝내기**를 클릭합니다. 또는 WCF 테스트 클라이언트 주 창에서 클릭 **닫기**합니다. 이러한 작업의 또한 WCF 서비스 자동 호스트 종료와 Visual Studio에서 WCF 테스트 클라이언트를 시작한 경우 Visual Studio 디버깅 프로세스를 중지 합니다.  
+- **파일** 메뉴에서 **끝내기**를 클릭합니다. 또는 WCF 테스트 클라이언트 주 창에서 클릭 **닫기**합니다. 이러한 작업의 또한 WCF 서비스 자동 호스트 종료와 Visual Studio에서 WCF 테스트 클라이언트를 시작한 경우 Visual Studio 디버깅 프로세스를 중지 합니다.  
   
--   마우스 오른쪽 단추로 클릭 합니다 **WCF 서비스 호스트가** 클릭 한 다음 확인 하 고 알림 영역 아이콘 **종료 합니다.** 이 WCF 서비스 자동 호스트와 WCF 테스트 클라이언트를 종료 하 고 Visual Studio 디버깅 프로세스를 중지 합니다.  
+- 마우스 오른쪽 단추로 클릭 합니다 **WCF 서비스 호스트가** 클릭 한 다음 확인 하 고 알림 영역 아이콘 **종료 합니다.** 이 WCF 서비스 자동 호스트와 WCF 테스트 클라이언트를 종료 하 고 Visual Studio 디버깅 프로세스를 중지 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

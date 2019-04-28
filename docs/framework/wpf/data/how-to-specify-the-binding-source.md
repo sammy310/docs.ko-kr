@@ -10,11 +10,11 @@ helpviewer_keywords:
 - binding sources [WPF]
 ms.assetid: 55d47757-2648-4a52-987f-b767953f168c
 ms.openlocfilehash: 8c866502300c50e00f1393b9e3fb64099f027c43
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931432"
 ---
 # <a name="how-to-specify-the-binding-source"></a>방법: 바인딩 소스 지정
 데이터 바인딩에서 바인딩 소스 개체는 데이터를 가져온 개체를 참조합니다. 이 항목에서는 바인딩 소스를 지정하는 여러 가지 방법을 설명합니다.  

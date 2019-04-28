@@ -3,11 +3,11 @@ title: '가져오기 선언: Open 키워드'
 description: 에 대해 알아봅니다 F# 선언 및 모듈 또는 네임 스페이스 정규화 된 이름을 사용 하지 않고 참조할 수 있는 요소를 지정 하는 방법을 가져옵니다.
 ms.date: 04/04/2019
 ms.openlocfilehash: ad64190c3243c57a185f3b864270fca80590f079
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59055003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937503"
 ---
 # <a name="import-declarations-the-open-keyword"></a>가져오기 선언: `open` 키워드
 

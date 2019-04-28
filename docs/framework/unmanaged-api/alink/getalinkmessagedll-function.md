@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: edd83e62b08aa7892c01577cd8c46f9d965c0894
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789898"
 ---
 # <a name="getalinkmessagedll-function"></a>GetALinkMessageDll 함수
 페이지를 찾아서 메시지 DLL을 로드 합니다. 메시지 DLL 찾거나 로드할 수 없습니다 경우 0을 반환 합니다. 메시지 DLL 이름이 되는 언어 ID, 하위 디렉터리 또는 현재 디렉터리에 있어야 합니다.  

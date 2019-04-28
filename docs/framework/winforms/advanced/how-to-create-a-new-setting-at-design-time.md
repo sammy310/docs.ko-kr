@@ -6,11 +6,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
 ms.openlocfilehash: e371c60e3fb674e4243cec008e1098172725d4cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937724"
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>방법: 디자인 타임에 새 설정 만들기
 설정 디자이너를 사용 하 여 디자인 타임에 새 설정을 만들 수 있습니다. 설정 디자이너에 새 설정 만들기 및 해당 설정에 대 한 속성을 지정할 수 있는 모눈 스타일 인터페이스입니다. 이름, 값, 형식 및 새로운 설정에 대 한 범위를 지정 해야 합니다. 설정의 만든 후 코드에서 액세스할 수 있는 것입니다.  

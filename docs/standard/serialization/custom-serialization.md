@@ -18,11 +18,11 @@ helpviewer_keywords:
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
 ms.openlocfilehash: 83538dc971419ad7918c16c5ccbd2003d16e2c6b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931744"
 ---
 # <a name="custom-serialization"></a>사용자 지정 serialization
 사용자 지정 serialization은 형식의 serialization 및 deserialization을 제어하는 프로세스입니다. serialization을 제어하면 형식의 핵심 기능에 영향을 주지 않고 다양한 형식 사이에 직렬화 및 deserialize할 수 있는 기능인 직렬화 호환성을 유지할 수 있습니다. 예를 들어 첫 번째 버전의 형식에는 두 개의 필드만 있을 수 있습니다. 다음 버전의 형식에는 몇 개의 필드가 더 추가될 수 있습니다. 하지만 응용 프로그램의 두 번째 버전에서는 여전히 두 형식을 모두 serialize 및 deserialize할 수 있어야 합니다. 다음 단원에서는 serialization을 제어하는 방법에 대해 설명합니다.
@@ -35,13 +35,13 @@ ms.locfileid: "54627993"
 ## <a name="running-custom-methods-during-and-after-serialization"></a>serialization 도중 및 이후에 사용자 지정 메서드 실행  
  가장 효과적이고 쉬운 방법(.NET Framework의 버전 2.0에서 소개된 방법)은 serialization 도중과 이후에 데이터를 수정하는 데 사용되는 메서드에 다음 특성을 적용하는 것입니다.  
   
--   <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
+- <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
   
--   <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
+- <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
   
--   <xref:System.Runtime.Serialization.OnSerializedAttribute>  
+- <xref:System.Runtime.Serialization.OnSerializedAttribute>  
   
--   <xref:System.Runtime.Serialization.OnSerializingAttribute>  
+- <xref:System.Runtime.Serialization.OnSerializingAttribute>  
   
  이러한 특성을 통해 형식은 serialization 및 deserialization 프로세스의 네 단계 중 하나 또는 모두에 참여할 수 있습니다. 특성은 각 단계에서 호출되어야 하는 형식의 메서드를 지정합니다. 메서드는 serialization 스트림에 액세스할 수 없지만 대신 serialization 이전과 이후 또는 deserialization 이전과 이후에 개체를 변경할 수 있도록 허용합니다. 특성은 형식 상속 계층의 모든 수준에 적용될 수 있으며 각 메서드는 계층 구조의 기본부터 가장 많이 파생된 단계까지 호출됩니다. 이 메커니즘에서는 가장 많이 파생된 구현에서 serialization 및 deserialization을 담당하도록 하여 <xref:System.Runtime.Serialization.ISerializable> 인터페이스의 구현으로 인한 모든 문제와 복잡성을 피합니다. 또한 포맷터는 이 메커니즘을 통해 필드의 입력과 serialization 스트림에서의 검색을 무시할 수 있습니다. serialization 및 deserialization 제어에 대한 자세한 내용과 예제를 보려면 이전 링크를 클릭하십시오.  
   

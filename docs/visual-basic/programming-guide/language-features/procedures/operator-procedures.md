@@ -12,11 +12,11 @@ helpviewer_keywords:
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
 ms.openlocfilehash: 80c9a77494be95365899c6a25435fcfc5d2a7293
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791978"
 ---
 # <a name="operator-procedures-visual-basic"></a>연산자 프로시저(Visual Basic)
 연산자 프로시저는 일련의 표준 연산자의 동작을 정의 하는 Visual Basic 문 (같은 `*`, `<>`, 또는 `And`) 클래스 또는 구조체 정의에 있습니다. 또한이 호출 됩니다 *연산자 오버 로드*합니다.  
@@ -31,13 +31,13 @@ ms.locfileid: "59175021"
 ## <a name="types-of-operator-procedure"></a>연산자 프로시저의 형식  
  연산자 프로시저는 다음 형식 중 하나일 수 있습니다.  
   
--   정의 클래스 또는 구조체 형식의 인수가 있는 단항 연산자입니다.  
+- 정의 클래스 또는 구조체 형식의 인수가 있는 단항 연산자입니다.  
   
--   정의 클래스 또는 구조체 형식의 인수 중 하나가 이상는 이항 연산자입니다.  
+- 정의 클래스 또는 구조체 형식의 인수 중 하나가 이상는 이항 연산자입니다.  
   
--   클래스 또는 구조체 형식의 인수가 있는 변환 연산자를 정의 합니다.  
+- 클래스 또는 구조체 형식의 인수가 있는 변환 연산자를 정의 합니다.  
   
--   클래스 또는 구조체의 형식을 반환 하는 변환 연산자를 정의 합니다.  
+- 클래스 또는 구조체의 형식을 반환 하는 변환 연산자를 정의 합니다.  
   
  변환 연산자는 단항, 항상 및 항상 사용 `CType` 정의 하는 연산자입니다.  
   

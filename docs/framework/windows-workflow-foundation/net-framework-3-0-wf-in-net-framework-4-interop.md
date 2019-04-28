@@ -3,11 +3,11 @@ title: .NET Framework 4에서 Interop 활동과 함께 .NET Framework 3.0 WF 활
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
 ms.openlocfilehash: 33140ac85cd50140c0aa34d1986365fefc005c78
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934721"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>.NET Framework 4에서 Interop 활동과 함께 .NET Framework 3.0 WF 활동 사용
 <xref:System.Activities.Statements.Interop> 활동은 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 워크플로에서 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)](WF 3.5) 활동을 래핑하는 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)](WF 4.5) 활동입니다. WF 3 활동은 단일 리프 활동이거나 전체 활동 트리입니다. [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 활동의 실행(취소 및 예외 처리 포함)과 지속성은 실행 중인 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 워크플로 인스턴스의 컨텍스트 내에서 발생합니다.  
@@ -18,13 +18,13 @@ ms.locfileid: "59329416"
 ## <a name="criteria-for-using-a-wf-3-activity-with-an-interop-activity"></a>Interop 활동에서 WF 3 활동 사용을 위한 기준  
  WF 3 활동을 <xref:System.Activities.Statements.Interop> 활동 내에서 성공적으로 실행하려면 다음 기준을 충족해야 합니다.  
   
--   WF 3 활동이 <xref:System.Workflow.ComponentModel.Activity?displayProperty=nameWithType>에서 파생되어야 합니다.  
+- WF 3 활동이 <xref:System.Workflow.ComponentModel.Activity?displayProperty=nameWithType>에서 파생되어야 합니다.  
   
--   WF 3 활동이 `public`으로 선언되어야 하며 `abstract`가 될 수 없습니다.  
+- WF 3 활동이 `public`으로 선언되어야 하며 `abstract`가 될 수 없습니다.  
   
--   WF 3 활동에 공용 기본 생성자가 있어야 합니다.  
+- WF 3 활동에 공용 기본 생성자가 있어야 합니다.  
   
--   <xref:System.Activities.Statements.Interop> 작업이 지원하는 인터페이스 형식의 제한 사항 때문에 <xref:System.Workflow.Activities.HandleExternalEventActivity> 및 <xref:System.Workflow.Activities.CallExternalMethodActivity>를 직접 사용할 수는 없지만 워크플로 통신 작업 도구(WCA.exe)를 사용하여 만든 파생 작업을 사용할 수 있습니다. 참조 [Windows Workflow Foundation 도구](https://go.microsoft.com/fwlink/?LinkId=178889) 세부 정보에 대 한 합니다.  
+- <xref:System.Activities.Statements.Interop> 작업이 지원하는 인터페이스 형식의 제한 사항 때문에 <xref:System.Workflow.Activities.HandleExternalEventActivity> 및 <xref:System.Workflow.Activities.CallExternalMethodActivity>를 직접 사용할 수는 없지만 워크플로 통신 작업 도구(WCA.exe)를 사용하여 만든 파생 작업을 사용할 수 있습니다. 참조 [Windows Workflow Foundation 도구](https://go.microsoft.com/fwlink/?LinkId=178889) 세부 정보에 대 한 합니다.  
   
 ## <a name="configuring-a-wf-3-activity-within-an-interop-activity"></a>Interop 활동에서 WF 3 활동 구성  
  상호 운용 경계에서 WF 3 활동을 구성하여 데이터를 주고 받으려면 WF 3 활동의 속성 및 메타데이터 속성을 <xref:System.Activities.Statements.Interop> 활동에서 노출해야 합니다. WF 3 활동의 메타데이터 속성(예: <xref:System.Workflow.ComponentModel.Activity.Name%2A>)은 <xref:System.Activities.Statements.Interop.ActivityMetaProperties%2A> 컬렉션을 통해 노출됩니다. 이 컬렉션은 WF 3 활동의 메타데이터 속성 값을 정의하는 데 사용되는 이름-값 쌍의 컬렉션입니다. 메타데이터 속성은 <xref:System.Workflow.ComponentModel.DependencyPropertyOptions.Metadata> 플래그가 설정되는 종속성 속성에 의해 지원되는 속성입니다.  

@@ -3,11 +3,11 @@ title: WCF Discovery 개체 모델
 ms.date: 03/30/2017
 ms.assetid: 8365a152-eacd-4779-9130-bbc48fa5c5d9
 ms.openlocfilehash: b337eda40fc70a6d0e7b3aeccfc125e6e6bacf8f
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48046671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935540"
 ---
 # <a name="wcf-discovery-object-model"></a>WCF Discovery 개체 모델
 WCF Discovery는 런타임에 검색 가능한 서비스와 이러한 서비스를 찾아서 사용하는 클라이언트를 작성할 수 있는 통합된 프로그래밍 모델을 제공하는 일련의 형식으로 구성되어 있습니다.  
@@ -22,49 +22,49 @@ WCF Discovery는 런타임에 검색 가능한 서비스와 이러한 서비스�
 ## <a name="object-model"></a>개체 모델  
  WCF Discovery API는 다음과 같은 클래스를 정의합니다.  
   
--   <xref:System.ServiceModel.Discovery.AnnouncementClient>  
+- <xref:System.ServiceModel.Discovery.AnnouncementClient>  
   
--   <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>  
+- <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.AnnouncementService>  
+- <xref:System.ServiceModel.Discovery.AnnouncementService>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryClient>  
+- <xref:System.ServiceModel.Discovery.DiscoveryClient>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>  
+- <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>  
+- <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator>  
+- <xref:System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator>  
   
--   <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode>  
+- <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryProxy>  
+- <xref:System.ServiceModel.Discovery.DiscoveryProxy>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryService>  
+- <xref:System.ServiceModel.Discovery.DiscoveryService>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryVersion>  
+- <xref:System.ServiceModel.Discovery.DiscoveryVersion>  
   
--   <xref:System.ServiceModel.Discovery.DynamicEndpoint>  
+- <xref:System.ServiceModel.Discovery.DynamicEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>  
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>  
   
--   <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>  
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>  
   
--   <xref:System.ServiceModel.Discovery.FindCriteria>  
+- <xref:System.ServiceModel.Discovery.FindCriteria>  
   
--   <xref:System.ServiceModel.Discovery.FindRequestContext>  
+- <xref:System.ServiceModel.Discovery.FindRequestContext>  
   
--   <xref:System.ServiceModel.Discovery.FindResponse>  
+- <xref:System.ServiceModel.Discovery.FindResponse>  
   
--   <xref:System.ServiceModel.Discovery.ResolveCriteria>  
+- <xref:System.ServiceModel.Discovery.ResolveCriteria>  
   
--   <xref:System.ServiceModel.Discovery.ResolveResponse>  
+- <xref:System.ServiceModel.Discovery.ResolveResponse>  
   
--   <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>  
+- <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>  
  
--   <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
+- <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
+- <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
   
 ## <a name="announcementclient"></a>AnnouncementClient  
  <xref:System.ServiceModel.Discovery.AnnouncementClient> 클래스는 알림 메시지를 보내기 위한 동기 및 비동기 메서드를 제공합니다. 알림 메시지에는 Hello와 Bye라는 두 가지 유형이 있습니다. Hello 메시지는 서비스가 사용 가능하게 되었음을 알리는 데 사용되고 Bye 메시지는 기존 서비스가 사용 가능하지 않게 되었음을 알리는 데 사용됩니다. 개발자는 <xref:System.ServiceModel.Discovery.AnnouncementClient> 인스턴스를 만들어 <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>의 인스턴스를 생성자 매개 변수로 제공합니다.  
@@ -85,7 +85,7 @@ WCF Discovery는 런타임에 검색 가능한 서비스와 이러한 서비스�
  검색 프록시가 네트워크에 있는 경우 <xref:System.ServiceModel.Discovery.DiscoveryClient>가 검색 요청을 멀티캐스트 방식으로 보내면 검색 프록시가 멀티캐스트 비표시 오류(Suppression) Hello 메시지로 응답할 수 있습니다. <xref:System.ServiceModel.Discovery.DiscoveryClient>는 처리되지 않은 `ProxyAvailable` 또는 `Find` 요청에 대한 응답으로 Hello 메시지를 받으면 `Resolve` 이벤트를 발생시킵니다. `ProxyAvailable` 이벤트에는 검색 프록시에 대한 <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>가 포함되어 있습니다. 이 정보를 사용하여 애드혹 모드에서 관리 모드로 전환하는 것은 개발자에게 달려 있습니다.  
   
 ## <a name="discoveryendpoint"></a>DiscoveryEndpoint  
- <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>는 고정 검색 계약이 있는 표준 끝점을 나타냅니다. 이 표준 끝점은 서비스나 클라이언트에서 검색 메시지를 보내거나 받는 데 사용됩니다. 기본적으로 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>는 <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode.Managed?displayProperty=nameWithType> 모드와 WSDiscovery11 WS-Discovery 버전을 사용하도록 설정됩니다.  
+ <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>는 고정 검색 계약이 있는 표준 엔드포인트를 나타냅니다. 이 표준 끝점은 서비스나 클라이언트에서 검색 메시지를 보내거나 받는 데 사용됩니다. 기본적으로 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>는 <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode.Managed?displayProperty=nameWithType> 모드와 WSDiscovery11 WS-Discovery 버전을 사용하도록 설정됩니다.  
   
 ## <a name="discoverymessagesequencegenerator"></a>DiscoveryMessageSequenceGenerator  
  <xref:System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator>는 서비스에서 검색 또는 알림 메시지를 보낼 때 <xref:System.ServiceModel.Discovery.DiscoveryMessageSequence>를 생성하는 데 사용됩니다.  

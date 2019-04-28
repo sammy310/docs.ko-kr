@@ -8,11 +8,11 @@ helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
 ms.openlocfilehash: 1b4451b11fed2fd138985824d5f139e192c51f45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929846"
 ---
 # <a name="working-with-certificates"></a>인증서 작업
 WCF(Windows Communication Foundation) 보안을 프로그래밍하려면 일반적으로 X.509 디지털 인증서를 사용하여 클라이언트 및 서버를 인증하고, 암호화하고, 메시지에 디지털 서명합니다. 이 항목에서는 X.509 디지털 인증서 기능과 WCF에서 인증서 기능을 사용하는 방법을 간략하게 설명하며, 이러한 개념을 자세히 설명하거나 WCF 및 인증서를 사용하여 일반 작업을 수행하는 방법을 보여 주는 항목에 대한 링크를 제공합니다.  
@@ -29,27 +29,27 @@ WCF(Windows Communication Foundation) 보안을 프로그래밍하려면 일반�
 ## <a name="certificate-stores"></a>인증서 저장소  
  인증서는 저장소에 있습니다. 하위 저장소로 세분화되는 두 가지 주 저장소 위치가 있습니다. 컴퓨터의 관리자는 MMC 스냅인 도구를 사용하여 두 주 저장소를 모두 볼 수 있습니다. 관리자가 아닌 사용자는 현재 사용자 저장소만 볼 수 있습니다.  
   
--   **로컬 컴퓨터 저장소**. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]과 같은 시스템 프로세스에서 액세스한 인증서가 들어 있습니다. 클라이언트에 서버를 인증하는 인증서를 저장하려면 이 위치를 사용합니다.  
+- **로컬 컴퓨터 저장소**. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]과 같은 시스템 프로세스에서 액세스한 인증서가 들어 있습니다. 클라이언트에 서버를 인증하는 인증서를 저장하려면 이 위치를 사용합니다.  
   
--   **현재 사용자 저장소**. 대화형 응용 프로그램은 일반적으로 컴퓨터의 현재 사용자에 대한 인증서를 여기에 저장합니다. 클라이언트 응용 프로그램을 만들 경우 일반적으로 서비스에 사용자를 인증하는 인증서를 이 위치에 저장합니다.  
+- **현재 사용자 저장소**. 대화형 응용 프로그램은 일반적으로 컴퓨터의 현재 사용자에 대한 인증서를 여기에 저장합니다. 클라이언트 응용 프로그램을 만들 경우 일반적으로 서비스에 사용자를 인증하는 인증서를 이 위치에 저장합니다.  
   
  이러한 두 저장소는 하위 저장소로 세분화됩니다. WCF로 프로그래밍할 때 가장 중요한 하위 저장소는 다음과 같습니다.  
   
--   **신뢰할 수 있는 루트 인증 기관**. 이 저장소에 있는 인증서를 사용하여 인증서 체인을 만들 수 있습니다. 이러한 인증서 체인은 이 저장소에 있는 인증서 인증 기관으로 다시 추적될 수 있습니다.  
+- **신뢰할 수 있는 루트 인증 기관**. 이 저장소에 있는 인증서를 사용하여 인증서 체인을 만들 수 있습니다. 이러한 인증서 체인은 이 저장소에 있는 인증서 인증 기관으로 다시 추적될 수 있습니다.  
   
     > [!IMPORTANT]
     >  로컬 컴퓨터는 인증서를 신뢰할 수 있는 타사 인증 기관에서 가져오지 않았더라도 이 저장소에 있는 모든 인증서를 암시적으로 신뢰합니다. 따라서 발급자를 완전히 신뢰하고 결과를 이해하는 경우가 아니면 이 저장소에 인증서를 저장하지 마십시오.  
   
--   **개인**. 이 저장소는 컴퓨터 사용과 연관된 인증서에 사용됩니다. 일반적으로 이 저장소는 신뢰할 수 있는 루트 인증 기관 저장소에 있는 인증 기관 인증서 중 하나에서 발급한 인증서에 사용됩니다. 또한 여기에 있는 인증서는 응용 프로그램에서 자체 발급하고 신뢰할 수 있습니다.  
+- **개인**. 이 저장소는 컴퓨터 사용과 연관된 인증서에 사용됩니다. 일반적으로 이 저장소는 신뢰할 수 있는 루트 인증 기관 저장소에 있는 인증 기관 인증서 중 하나에서 발급한 인증서에 사용됩니다. 또한 여기에 있는 인증서는 응용 프로그램에서 자체 발급하고 신뢰할 수 있습니다.  
   
  인증서 저장소에 대한 자세한 내용은 [인증서 저장소](/windows/desktop/secauthn/certificate-stores)를 참조하세요.  
   
 ### <a name="selecting-a-store"></a>저장소 선택  
  인증서를 저장할 위치는 서비스 또는 클라이언트가 실행되는 방법과 시기에 따라 달라집니다. 다음과 같은 일반 규칙이 적용됩니다.  
   
--   WCF 서비스가 Windows 서비스에 호스팅된 경우 **로컬 컴퓨터** 저장소를 사용합니다. 인증서를 로컬 컴퓨터 저장소에 설치하려면 관리자 권한이 필요합니다.  
+- WCF 서비스가 Windows 서비스에 호스팅된 경우 **로컬 컴퓨터** 저장소를 사용합니다. 인증서를 로컬 컴퓨터 저장소에 설치하려면 관리자 권한이 필요합니다.  
   
--   서비스 또는 클라이언트가 사용자 계정에서 실행되는 애플리케이션인 경우 **현재 사용자** 저장소를 사용합니다.  
+- 서비스 또는 클라이언트가 사용자 계정에서 실행되는 애플리케이션인 경우 **현재 사용자** 저장소를 사용합니다.  
   
 ### <a name="accessing-stores"></a>저장소 액세스  
  저장소는 컴퓨터에 있는 폴더처럼 ACL(액세스 제어 목록)에 의해 보호됩니다. IIS(인터넷 정보 서비스)에 의해 호스팅되는 서비스를 만들 경우 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 프로세스가 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 계정에서 실행됩니다. 이 계정은 서비스에 사용되는 인증서가 들어 있는 저장소에 대한 액세스 권한이 있어야 합니다. 각각의 주 저장소는 기본 액세스 목록으로 보호되지만, 목록을 수정할 수 있습니다. 저장소 액세스를 위한 개별 역할을 만들 경우 해당 역할에 액세스 권한을 부여해야 합니다. WinHttpCertConfig.exe 도구를 사용 하 여 액세스 목록을 수정 하는 방법에 알아보려면 참조 [방법: 개발 중 사용할 임시 인증서 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)합니다. IIS에서 클라이언트 인증서 사용에 대한 자세한 내용은 [ASP.NET 웹 애플리케이션에서 인증을 위해 클라이언트 인증서를 사용하여 웹 서비스를 호출하는 방법](https://go.microsoft.com/fwlink/?LinkId=88914)을 참조하세요.  
@@ -74,11 +74,11 @@ WCF(Windows Communication Foundation) 보안을 프로그래밍하려면 일반�
   
  구성을 사용하여 속성을 설정할 수도 있습니다. 유효성 검사 모드를 지정하는 데 사용되는 요소는 다음과 같습니다.  
   
--   [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
+- [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
   
--   [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
+- [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
   
--   [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
+- [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
   
 ## <a name="custom-authentication"></a>사용자 지정 인증  
  `CertificateValidationMode` 속성을 사용하여 인증서가 인증되는 방법을 사용자 지정할 수도 있습니다. 기본적으로 수준은 `ChainTrust`로 설정됩니다. <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> 값을 사용하려면 `CustomCertificateValidatorType` 특성을 인증서의 유효성을 검사하는 데 사용된 어셈블리 및 형식으로 설정해야 합니다. 사용자 지정 유효성 검사기를 만들려면 추상 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 클래스에서 상속해야 합니다.  

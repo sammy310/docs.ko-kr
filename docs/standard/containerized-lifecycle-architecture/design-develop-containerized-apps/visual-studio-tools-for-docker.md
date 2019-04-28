@@ -6,11 +6,11 @@ ms.author: wiwagn
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
 ms.openlocfilehash: 431a0f34ba913c18c35e28ca45660495403bf688
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57844251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795596"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>Windows의 Visual Studio 2017에서 사용 하 여 Docker 도구
 
@@ -29,7 +29,7 @@ Docker에 대 한 Windows의 최신 버전을 계속 하려면 Docker 응용 프
 
 **추가 > Docker 지원** 하 고 **추가 > 컨테이너 오 케 스트레이 터 지원** 명령에는 ASP.NET Core 프로젝트에 대 한 프로젝트 노드의 오른쪽 클릭 메뉴 (또는 상황에 맞는 메뉴)에 위치한  **솔루션 탐색기**그림 4-31에서 표시 된 것 처럼:
 
-![Visual Studio에서 메뉴 옵션을 Docker 지원 추가](./media/add-docker-support-menu.png)
+![Visual Studio에서 Docker 지원 메뉴 옵션 추가](./media/add-docker-support-menu.png)
 
 **그림 4-31**. Visual Studio 2017 프로젝트에 Docker 지원 추가
 
@@ -37,7 +37,7 @@ Docker에 대 한 Windows의 최신 버전을 계속 하려면 Docker 응용 프
 
 선택 하 여 기존 ASP.NET Core 프로젝트에 Docker 지원을 추가할 수 있습니다 **추가** > **Docker 지원** 에서 **솔루션 탐색기**합니다. 또한 Docker 지원을 프로젝트를 만드는 동안 선택 하 여 사용할 수 있습니다 **Docker 지원 사용** 에 **새 ASP.NET Core 웹 응용 프로그램** 클릭 하면 열리는 대화 상자 **확인** 에 **새 프로젝트** 그림 4-32와 같이 대화 상자.
 
-![Visual Studio에서 새 ASP.NET Core 웹 앱에 대 한 Docker 지원 사용](./media/enable-docker-support-visual-studio.png)
+![Visual Studio에서 새 ASP.NET Core 웹앱에 Docker 지원 사용](./media/enable-docker-support-visual-studio.png)
 
 **그림 4-32**. Visual Studio 2017에서 프로젝트를 만드는 동안 Docker 지원을 사용 하도록 설정
 
@@ -46,7 +46,7 @@ Docker에 대 한 Windows의 최신 버전을 계속 하려면 Docker 응용 프
 > [!NOTE]
 > 그림 4-33과 같이 ASP.NET 프로젝트 (.NET Framework,.NET Core 프로젝트가 아니라)에 대 한 프로젝트를 만드는 동안 Docker Compose 지원을 사용 하면 컨테이너 오케스트레이션을 지원도 추가 됩니다.
 
-![Docker를 사용 하도록 설정 ASP.NET 프로젝트에 대 한 지원 구성](media/enable-docker-compose-support.png)
+![ASP.NET 프로젝트에 Docker Compose 지원 사용](media/enable-docker-compose-support.png)
 
 **그림 4-33**. Visual Studio 2017의 ASP.NET 프로젝트에 대 한 지원 Docker Compose를 사용 하도록 설정
 
@@ -58,11 +58,11 @@ Docker에 대 한 Windows의 최신 버전을 계속 하려면 Docker 응용 프
 
 프로젝트에 추가 하는 Dockerfile 컨테이너 오케스트레이션을 지원 프로젝트에 추가한 후 표시와 **docker compose** 솔루션에 추가 하는 폴더 **솔루션 탐색기**그림 4-34와 같이:
 
-![Visual Studio의 솔루션 탐색기에서 docker 파일](media/docker-support-solution-explorer.png)
+![Visual Studio의 솔루션 탐색기 내의 Docker 파일](media/docker-support-solution-explorer.png)
 
 **그림 4-34**합니다. Visual Studio 2017의 솔루션 탐색기에서 docker 파일
 
-하는 경우 *docker compose.yml* 이미 하기만 하면 Visual Studio에 필요한 구성 코드 줄을 추가 합니다.
+*docker-compose.yml*이 이미 있는 경우에는 Visual Studio에서 이 파일에 필수 구성 코드 줄을 추가합니다.
 
 ## <a name="configure-docker-tools"></a>Docker 도구를 구성 합니다.
 

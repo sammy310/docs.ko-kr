@@ -10,11 +10,11 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
 ms.openlocfilehash: c23ca51322f57dc13a85c3ea94e0d335dc50ca13
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791926"
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>값 및 참조로 인수 전달(Visual Basic)
 Visual Basic의 프로시저에 인수를 전달할 수 있습니다 *값별로* 하거나 *참조별*합니다. 이 *전달 메커니즘*, 프로시저가 호출 코드에서 인수를 기본 프로그래밍 요소를 수정할 수 있는지 여부를 결정 합니다. 프로시저 선언을 지정 하 여 각 매개 변수의 전달 메커니즘을 결정 합니다 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) 하거나 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) 키워드입니다.  
@@ -22,22 +22,22 @@ Visual Basic의 프로시저에 인수를 전달할 수 있습니다 *값별로*
 ## <a name="distinctions"></a>차이점  
  프로시저에 인수로 전달할 경우 서로 상호 작용 하는 몇 가지 다른 차이점 고려해 야 합니다.  
   
--   기본 프로그래밍 요소를 수정할 수 있는지 여부  
+- 기본 프로그래밍 요소를 수정할 수 있는지 여부  
   
--   인수 자체를 수정할 수 있는지 여부  
+- 인수 자체를 수정할 수 있는지 여부  
   
--   값별 또는 참조별 인수가 전달 되 고 있는지 여부  
+- 값별 또는 참조별 인수가 전달 되 고 있는지 여부  
   
--   값 형식 또는 참조 형식 인수 데이터 형식 인지  
+- 값 형식 또는 참조 형식 인수 데이터 형식 인지  
   
  자세한 내용은 참조 하세요. [수정할 간의 차이점 및 수정할 수 없는 인수](./differences-between-modifiable-and-nonmodifiable-arguments.md) 하 고 [차이 간의 값과 By Reference 인수를 전달](./differences-between-passing-an-argument-by-value-and-by-reference.md)합니다.  
   
 ## <a name="choice-of-passing-mechanism"></a>전달 메커니즘의 선택  
  각 인수에 대해 신중 하 게 전달 메커니즘을 선택 해야 합니다.  
   
--   **보호**합니다. 두 전달 메커니즘 중 하나를 선택할 가장 중요 한 조건을 변경 하려면 변수를 호출 됩니다. 인수를 전달 하는 장점은 `ByRef` 프로시저 해당 인수를 통해 호출 코드에 값을 반환할 수 있다는입니다. 인수를 전달 하는 장점은 `ByVal` 프로시저에 의해 변경 되는 변수를 보호 하는 합니다.  
+- **보호**합니다. 두 전달 메커니즘 중 하나를 선택할 가장 중요 한 조건을 변경 하려면 변수를 호출 됩니다. 인수를 전달 하는 장점은 `ByRef` 프로시저 해당 인수를 통해 호출 코드에 값을 반환할 수 있다는입니다. 인수를 전달 하는 장점은 `ByVal` 프로시저에 의해 변경 되는 변수를 보호 하는 합니다.  
   
--   **성능**합니다. 전달 메커니즘 코드의 성능에 영향을 줄 수 있습니다, 있지만 차이 일반적으로 중요 하지 않습니다. 이 한 가지 예외는 전달 되는 값 형식 `ByVal`합니다. 이 경우 Visual Basic 인수의 전체 데이터 콘텐츠를 복사합니다. 따라서 구조체와 같은 큰 값 형식의 경우이 더 효율적일 수 있습니다 전달 `ByRef`합니다.  
+- **성능**합니다. 전달 메커니즘 코드의 성능에 영향을 줄 수 있습니다, 있지만 차이 일반적으로 중요 하지 않습니다. 이 한 가지 예외는 전달 되는 값 형식 `ByVal`합니다. 이 경우 Visual Basic 인수의 전체 데이터 콘텐츠를 복사합니다. 따라서 구조체와 같은 큰 값 형식의 경우이 더 효율적일 수 있습니다 전달 `ByRef`합니다.  
   
      참조 형식에 대 한 데이터에 대 한 포인터만 복사 (4 바이트 32 비트 플랫폼에서는 64 비트 플랫폼에서 8 바이트)입니다. 따라서 형식의 인수를 전달할 수 있습니다 `String` 또는 `Object` 성능 영향을 주지 않고 값으로.  
   
@@ -50,15 +50,15 @@ Visual Basic의 프로시저에 인수를 전달할 수 있습니다 *값별로*
   
 ## <a name="when-to-pass-an-argument-by-value"></a>값으로 인수를 전달 하는 경우  
   
--   호출 코드 요소가 인수의 기반이 되는 요소를 수정할 수 없는 경우 해당 매개 변수를 선언 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)합니다. 코드 없이 수정할 수 없는 요소의 값을 변경할 수 있습니다.  
+- 호출 코드 요소가 인수의 기반이 되는 요소를 수정할 수 없는 경우 해당 매개 변수를 선언 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)합니다. 코드 없이 수정할 수 없는 요소의 값을 변경할 수 있습니다.  
   
--   기본 요소는 수정할 수 있지만 해당 값을 변경할 수 하는 절차를 원하지 않는 경우 매개 변수를 선언 `ByVal`합니다. 호출 코드에만 값으로 전달 수정할 수 있는 요소의 값을 변경할 수 있습니다.  
+- 기본 요소는 수정할 수 있지만 해당 값을 변경할 수 하는 절차를 원하지 않는 경우 매개 변수를 선언 `ByVal`합니다. 호출 코드에만 값으로 전달 수정할 수 있는 요소의 값을 변경할 수 있습니다.  
   
 ## <a name="when-to-pass-an-argument-by-reference"></a>참조로 인수를 전달 하는 경우  
   
--   프로시저에 호출 코드의 내부 요소를 변경 해야 하는 경우 해당 매개 변수를 선언 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)합니다.  
+- 프로시저에 호출 코드의 내부 요소를 변경 해야 하는 경우 해당 매개 변수를 선언 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)합니다.  
   
--   호출 코드에서 기본 요소를 변경 하는 절차에 따라 올바른 코드를 실행 하는 경우 매개 변수를 선언 `ByRef`합니다. 값으로 전달 하는 경우 또는 호출 코드에서 재정의 하는 경우는 `ByRef` 인수를 괄호로 묶어 전달 메커니즘 프로시저 호출에 예기치 않은 결과가 발생할 수 있습니다.  
+- 호출 코드에서 기본 요소를 변경 하는 절차에 따라 올바른 코드를 실행 하는 경우 매개 변수를 선언 `ByRef`합니다. 값으로 전달 하는 경우 또는 호출 코드에서 재정의 하는 경우는 `ByRef` 인수를 괄호로 묶어 전달 메커니즘 프로시저 호출에 예기치 않은 결과가 발생할 수 있습니다.  
   
 ## <a name="example"></a>예제  
   

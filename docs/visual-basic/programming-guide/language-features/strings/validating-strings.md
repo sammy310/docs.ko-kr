@@ -8,11 +8,11 @@ helpviewer_keywords:
 - validation [Visual Basic], strings
 ms.assetid: 9a1acf9b-7e2c-40cb-bba4-656ee2bc2ed0
 ms.openlocfilehash: ab7b41e03e561a619349176c6bf7e021e1399730
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938283"
 ---
 # <a name="validating-strings-in-visual-basic"></a>Visual Basic의 문자열 유효성 검사
 이 섹션에서는 Visual Basic에서 문자열의 유효성을 검사 하는 방법을 설명 합니다.  

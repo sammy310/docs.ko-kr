@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
 ms.openlocfilehash: 370970c80221e371db5a97303ef2650d14300b14
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770567"
 ---
 # <a name="popup-overview"></a>Popup 개요
 <xref:System.Windows.Controls.Primitives.Popup> 컨트롤은 지정 된 요소 또는 화면 좌표를 기준으로 현재 응용 프로그램 창 위에 떠 있는 별도 창에서 콘텐츠를 표시 하는 방법을 제공 합니다. 이 항목에서는 소개를 <xref:System.Windows.Controls.Primitives.Popup> 제어 하 고 해당 사용에 대 한 정보를 제공 합니다.  
@@ -34,13 +34,13 @@ ms.locfileid: "59102780"
 ## <a name="controls-that-implement-a-popup"></a>Popup을 구현하는 컨트롤  
  빌드할 수 있습니다 <xref:System.Windows.Controls.Primitives.Popup> 다른 컨트롤에는 컨트롤입니다. 다음 컨트롤은 구현는 <xref:System.Windows.Controls.Primitives.Popup> 특정 용도 대 한 제어 합니다.  
   
--   <xref:System.Windows.Controls.ToolTip>. 요소에 대 한 도구 설명을 만들려면 하려는 경우 사용 합니다 <xref:System.Windows.Controls.ToolTip> 및 <xref:System.Windows.Controls.ToolTipService> 클래스입니다. 자세한 내용은 [ToolTip 개요](tooltip-overview.md)를 참조하세요.  
+- <xref:System.Windows.Controls.ToolTip>. 요소에 대 한 도구 설명을 만들려면 하려는 경우 사용 합니다 <xref:System.Windows.Controls.ToolTip> 및 <xref:System.Windows.Controls.ToolTipService> 클래스입니다. 자세한 내용은 [ToolTip 개요](tooltip-overview.md)를 참조하세요.  
   
--   <xref:System.Windows.Controls.ContextMenu>. 요소에 대 한 상황에 맞는 메뉴를 만들려는 경우 사용 된 <xref:System.Windows.Controls.ContextMenu> 제어 합니다. 자세한 내용은 [ContextMenu 개요](contextmenu-overview.md)를 참조하세요.  
+- <xref:System.Windows.Controls.ContextMenu>. 요소에 대 한 상황에 맞는 메뉴를 만들려는 경우 사용 된 <xref:System.Windows.Controls.ContextMenu> 제어 합니다. 자세한 내용은 [ContextMenu 개요](contextmenu-overview.md)를 참조하세요.  
   
--   <xref:System.Windows.Controls.ComboBox>. 표시 되거나 숨겨진를 사용할 수 있는 드롭다운 목록 상자가 포함 된 선택 컨트롤을 만들려는 경우를 <xref:System.Windows.Controls.ComboBox> 제어 합니다.  
+- <xref:System.Windows.Controls.ComboBox>. 표시 되거나 숨겨진를 사용할 수 있는 드롭다운 목록 상자가 포함 된 선택 컨트롤을 만들려는 경우를 <xref:System.Windows.Controls.ComboBox> 제어 합니다.  
   
--   <xref:System.Windows.Controls.Expander>. 콘텐츠를 표시 하는 축소 가능한 영역을 사용 하 여 헤더를 표시 하는 컨트롤을 만들려는 경우, 사용 된 <xref:System.Windows.Controls.Expander> 제어 합니다. 자세한 내용은 [Expander 개요](expander-overview.md)를 참조하세요.  
+- <xref:System.Windows.Controls.Expander>. 콘텐츠를 표시 하는 축소 가능한 영역을 사용 하 여 헤더를 표시 하는 컨트롤을 만들려는 경우, 사용 된 <xref:System.Windows.Controls.Expander> 제어 합니다. 자세한 내용은 [Expander 개요](expander-overview.md)를 참조하세요.  
   
 <a name="PopupBehaviorandAppearance"></a>   
 ## <a name="popup-behavior-and-appearance"></a>Popup 동작 및 모양  

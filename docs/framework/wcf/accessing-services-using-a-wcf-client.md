@@ -8,11 +8,11 @@ helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
 ms.openlocfilehash: 6bf683cdd0a03a5d1dbc452c28e7b33911464f09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782436"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>WCF 클라이언트를 사용하여 서비스 액세스
 
@@ -178,11 +178,11 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 
 WCF 클라이언트에서 throw 된 많은 예외는 서비스의 예외로 인해 발생 합니다. 다음은 이를 보여 주는 몇 가지 예입니다.
 
--   <xref:System.Net.Sockets.SocketException>: 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다.
+- <xref:System.Net.Sockets.SocketException>: 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다.
 
--   <xref:System.ServiceModel.CommunicationException>: 기본 연결이 예기치 않게 닫혔습니다.
+- <xref:System.ServiceModel.CommunicationException>: 기본 연결이 예기치 않게 닫혔습니다.
 
--   <xref:System.ServiceModel.CommunicationObjectAbortedException>: 소켓 연결이 중단 되었습니다. 이는 메시지 처리 오류, 원격 호스트에 의해 초과되는 수신 제한 시간 또는 기본 네트워크 리소스 문제로 인해 발생할 수 있습니다.
+- <xref:System.ServiceModel.CommunicationObjectAbortedException>: 소켓 연결이 중단 되었습니다. 이는 메시지 처리 오류, 원격 호스트에 의해 초과되는 수신 제한 시간 또는 기본 네트워크 리소스 문제로 인해 발생할 수 있습니다.
 
 이러한 형식의 예외가 발생할 때 가장 좋은 문제 해결 방법은 서비스측에 추적 기능을 설정하고 발생한 예외를 확인하는 것입니다. 추적에 대 한 자세한 내용은 참조 하세요. [추적](../../../docs/framework/wcf/diagnostics/tracing/index.md) 하 고 [응용 프로그램 문제 해결을 사용 하 여 추적](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)합니다.
 

@@ -9,32 +9,32 @@ helpviewer_keywords:
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
 ms.openlocfilehash: 0a9dcd00d4bc3e64ae4fc9a1d4884fac18521825
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937971"
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>방법: 글꼴 패밀리 및 글꼴 만들기
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 글꼴 서체 하지만 다양 한 스타일을 사용 하 여 글꼴 패밀리로 그룹화합니다. 예를 들어, 굴림 글꼴 패밀리에는 다음 글꼴을 포함 되어 있습니다.  
   
--   Arial 일반  
+- Arial 일반  
   
--   Arial 굵게  
+- Arial 굵게  
   
--   Arial 기울임꼴  
+- Arial 기울임꼴  
   
--   Arial 굵은 기울임꼴  
+- Arial 굵은 기울임꼴  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 패밀리를 구성 하려면 네 가지 스타일을 사용 하 여: 일반, 굵게, 기울임꼴 및 굵은 기울임꼴 등입니다. 형용사와 같은 *범위를 좁힐* 하 고 *반올림* 스타일; 간주 되지 않습니다 이들은 제품군 이름 부분을 대신 합니다. 예를 들어, 굴림는 다음 멤버로 구성 된 글꼴 패밀리:  
   
--   Arial 좁은 일반  
+- Arial 좁은 일반  
   
--   굵게 아미  
+- 굵게 아미  
   
--   Arial 좁은 기울임꼴  
+- Arial 좁은 기울임꼴  
   
--   Arial 좁은 굵은 기울임꼴  
+- Arial 좁은 굵은 기울임꼴  
   
  사용 하 여 텍스트를 그리려면 먼저 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]를 구성 해야를 <xref:System.Drawing.FontFamily> 개체 및 <xref:System.Drawing.Font> 개체입니다. <xref:System.Drawing.FontFamily> 개체 (예: Arial) 서체를 지정 하며 <xref:System.Drawing.Font> 개체 크기, 스타일 및 단위를 지정 합니다.  
   

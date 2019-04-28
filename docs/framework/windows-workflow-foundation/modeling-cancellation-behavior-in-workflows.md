@@ -3,11 +3,11 @@ title: 워크플로의 취소 동작 모델링
 ms.date: 03/30/2017
 ms.assetid: d48f6cf3-cdde-4dd3-8265-a665acf32a03
 ms.openlocfilehash: 8bbd746d40e9114eacd5a752481d5316c3f30e57
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934708"
 ---
 # <a name="modeling-cancellation-behavior-in-workflows"></a>워크플로의 취소 동작 모델링
 워크플로 내에서 활동을 취소할 수도 있고(예: <xref:System.Activities.Statements.Parallel>의 평가 결과가 <xref:System.Activities.Statements.Parallel.CompletionCondition%2A>일 때 완료되지 않은 분기를 `true` 활동을 사용하여 취소하는 경우), 호스트가  <xref:System.Activities.WorkflowApplication.Cancel%2A>을 호출하는 경우에는 워크플로 외부에서 활동을 취소할 수도 있습니다. 취소 처리를 위해 워크플로 작성자는 <xref:System.Activities.Statements.CancellationScope> 활동 또는 <xref:System.Activities.Statements.CompensableActivity> 활동을 사용하거나 취소 논리를 제공하는 사용자 지정 활동을 만들 수 있습니다. 이 항목에서는 워크플로의 취소에 대해 간략하게 설명합니다.  
@@ -32,8 +32,7 @@ ms.locfileid: "57713394"
 **CancellationHandler 호출 합니다.**   
 **워크플로 b30ebb30-df46-4d90-a211-e31c38d8db3c 취소 합니다.**    
 > [!NOTE]
->  
-  <xref:System.Activities.Statements.CancellationScope> 활동이 취소되고 <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A>가 호출되는 경우 적절한 취소 논리를 제공하기 위해서는 해당 활동을 취소하기 전에 취소 대상 활동이 얼마나 진행되었는지 워크플로 작성자가 직접 확인해야 합니다. <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A>에서는 취소된 활동의 진행률에 대한 어떠한 정보도 제공하지 않습니다.  
+>  <xref:System.Activities.Statements.CancellationScope> 활동이 취소되고 <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A>가 호출되는 경우 적절한 취소 논리를 제공하기 위해서는 해당 활동을 취소하기 전에 취소 대상 활동이 얼마나 진행되었는지 워크플로 작성자가 직접 확인해야 합니다. <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A>에서는 취소된 활동의 진행률에 대한 어떠한 정보도 제공하지 않습니다.  
   
  워크플로의 루트를 지난 뒤에 처리되지 않은 예외가 버블링되고 <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> 처리기가 <xref:System.Activities.UnhandledExceptionAction.Cancel>을 반환하는 경우에도 호스트에서 워크플로를 취소할 수 있습니다. 이 예제에서는 워크플로가 시작된 후 <xref:System.ApplicationException>을 throw합니다. 이 예외는 워크플로에서 처리되지 않으므로 <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> 처리기가 호출됩니다. 이 처리기는 워크플로를 취소하도록 런타임에 지시를 내리고, 현재 실행 중인 <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> 활동의 <xref:System.Activities.Statements.CancellationScope>가 호출됩니다.  
   

@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 196a57b3e919ea4ccbc0b91e5b6f281ad3c30b62
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59118159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789885"
 ---
 # <a name="freewin32resblob-method"></a>FreeWin32ResBlob 메서드
 Win32 리소스 blob와 연결 된 리소스를 해제합니다.  

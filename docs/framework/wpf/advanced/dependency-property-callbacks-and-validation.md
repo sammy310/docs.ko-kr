@@ -12,11 +12,11 @@ helpviewer_keywords:
 - validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
 ms.openlocfilehash: 95a40b4a357b1a601eced6c8e5214871b95fcbd2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59219813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928559"
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>종속성 속성 콜백 및 유효성 검사
 이 항목에서는 유효성 검사 확인, 속성의 유효 값이 변경될 때마다 호출되는 콜백, 값 결정에 대한 가능한 외부 영향 재정의 등 속성 관련 기능에 대체 사용자 지정 구현을 사용하여 종속성 속성을 만드는 방법에 대해 설명합니다. 또한 이 항목에서는 이러한 기술을 사용한 기본 속성 시스템 동작 확장이 적절한 시나리오에 대해서도 설명합니다.  

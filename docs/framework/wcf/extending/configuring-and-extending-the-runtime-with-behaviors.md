@@ -5,11 +5,11 @@ helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
 ms.openlocfilehash: 71057ec219f46cb8b51eb9b44d8b93af540d1b01
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923281"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>동작을 사용하여 런타임 구성 및 확장
 동작을 사용 하 여 기본 동작을 수정 하 고 검사 하 고 서비스 구성의 유효성을 검사 하거나 Windows Communication Foundation (WCF) 클라이언트와 서비스 응용 프로그램에서 런타임 동작을 수정 하는 사용자 지정 확장을 추가할 수 있습니다. 이 항목에서는 동작 인터페이스에 대해 설명하고 이를 구현하는 방법 및 프로그래밍 방식이나 구성 파일을 통해 서비스 응용 프로그램의 서비스 설명 또는 클라이언트 응용 프로그램의 엔드포인트에 추가하는 방법에 대해 설명합니다. 시스템 제공 동작 사용에 대 한 자세한 내용은 참조 하십시오 [서비스 런타임 동작 지정](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) 하 고 [클라이언트 런타임 동작 지정](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)합니다.  
@@ -20,11 +20,11 @@ ms.locfileid: "59768204"
 ### <a name="behavior-methods"></a>동작 메서드  
  모든 동작은 `AddBindingParameters` 메서드는 `ApplyDispatchBehavior` 메서드를 `Validate` 메서드를 및 `ApplyClientBehavior` 한 가지 예외를 사용 하 여 메서드: 때문에 <xref:System.ServiceModel.Description.IServiceBehavior> 실행할 수 없습니다. 클라이언트에서 구현 하지 않는 `ApplyClientBehavior`합니다.  
   
--   런타임 생성 시 사용자 지정 개체를 사용하기 위해 이러한 개체를 사용자 지정 바인딩에서 액세스할 수 있는 컬렉션에 추가하거나 수정하려면 `AddBindingParameters` 메서드를 사용합니다. 예를 들어 보호 요구 사항에 지정된 내용은 채널 빌드 방식에 영향을 주지만 채널 개발자는 이를 모릅니다.  
+- 런타임 생성 시 사용자 지정 개체를 사용하기 위해 이러한 개체를 사용자 지정 바인딩에서 액세스할 수 있는 컬렉션에 추가하거나 수정하려면 `AddBindingParameters` 메서드를 사용합니다. 예를 들어 보호 요구 사항에 지정된 내용은 채널 빌드 방식에 영향을 주지만 채널 개발자는 이를 모릅니다.  
   
--   설명 트리와 해당 런타임 개체를 검사하여 일부 조건에 부합하는지 확인하려면 `Validate` 메서드를 사용합니다.  
+- 설명 트리와 해당 런타임 개체를 검사하여 일부 조건에 부합하는지 확인하려면 `Validate` 메서드를 사용합니다.  
   
--   서비스나 클라이언트의 특정 범위에 대해 런타임을 수정하고 설명 트리를 검사하려면 `ApplyDispatchBehavior` 및 `ApplyClientBehavior` 메서드를 사용합니다. 확장명 개체도 삽입할 수 있습니다.  
+- 서비스나 클라이언트의 특정 범위에 대해 런타임을 수정하고 설명 트리를 검사하려면 `ApplyDispatchBehavior` 및 `ApplyClientBehavior` 메서드를 사용합니다. 확장명 개체도 삽입할 수 있습니다.  
   
     > [!NOTE]
     >  이러한 메서드에 제공되는 설명 트리는 검사용입니다. 설명 트리가 수정되면 동작이 정의되지 않습니다.  
@@ -38,13 +38,13 @@ ms.locfileid: "59768204"
   
  WCF의 동작의 네 가지 종류가 있습니다.  
   
--   서비스 동작(<xref:System.ServiceModel.Description.IServiceBehavior> 형식)을 사용하면 <xref:System.ServiceModel.ServiceHostBase>를 비롯한 전체 서비스 런타임을 사용자 지정할 수 있습니다.  
+- 서비스 동작(<xref:System.ServiceModel.Description.IServiceBehavior> 형식)을 사용하면 <xref:System.ServiceModel.ServiceHostBase>를 비롯한 전체 서비스 런타임을 사용자 지정할 수 있습니다.  
   
--   엔드포인트 동작(<xref:System.ServiceModel.Description.IEndpointBehavior> 형식)을 사용하면 서비스 엔드포인트와 이에 연결된 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> 개체를 사용자 지정할 수 있습니다.  
+- 엔드포인트 동작(<xref:System.ServiceModel.Description.IEndpointBehavior> 형식)을 사용하면 서비스 엔드포인트와 이에 연결된 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> 개체를 사용자 지정할 수 있습니다.  
   
--   계약 동작(<xref:System.ServiceModel.Description.IContractBehavior> 형식)을 사용하면 각각 클라이언트 및 서비스 응용 프로그램에서 <xref:System.ServiceModel.Dispatcher.ClientRuntime> 및 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 클래스를 모두 사용자 지정할 수 있습니다.  
+- 계약 동작(<xref:System.ServiceModel.Description.IContractBehavior> 형식)을 사용하면 각각 클라이언트 및 서비스 응용 프로그램에서 <xref:System.ServiceModel.Dispatcher.ClientRuntime> 및 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 클래스를 모두 사용자 지정할 수 있습니다.  
   
--   작업 동작(<xref:System.ServiceModel.Description.IOperationBehavior> 형식)을 사용하면 클라이언트 및 서비스에서 <xref:System.ServiceModel.Dispatcher.ClientOperation> 및 <xref:System.ServiceModel.Dispatcher.DispatchOperation> 클래스를 사용자 지정할 수 있습니다.  
+- 작업 동작(<xref:System.ServiceModel.Description.IOperationBehavior> 형식)을 사용하면 클라이언트 및 서비스에서 <xref:System.ServiceModel.Dispatcher.ClientOperation> 및 <xref:System.ServiceModel.Dispatcher.DispatchOperation> 클래스를 사용자 지정할 수 있습니다.  
   
  이러한 동작은 응용 프로그램 구성 파일을 사용하여 사용자 지정 특성을 구현함으로써 다양한 설명 개체에 추가할 수 있고, 또는 적합한 설명 개체의 동작 컬렉션에 이를 바로 추가할 수 있습니다. 하지만 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.ServiceHost>에서의 <xref:System.ServiceModel.ChannelFactory%601> 호출 이전에 서비스 설명 또는 서비스 엔드포인트 설명 개체에 추가되어야 합니다.  
   

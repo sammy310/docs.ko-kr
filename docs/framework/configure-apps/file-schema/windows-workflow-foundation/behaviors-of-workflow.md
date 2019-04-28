@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 3c6017b6-0c4f-4192-bd67-9515f5d1ec82
 ms.openlocfilehash: b7c5cf93a82ac88c25f9c478ad52cf41eb6f6d65
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790301"
 ---
 # <a name="behaviors-of-workflow"></a>\<동작 > 워크플로
 이 요소에 포함 된 **serviceBehaviors** 컬렉션입니다.  컬렉션의 각 요소는 워크플로 서비스에서 사용하는 동작 요소를 정의합니다. 각 동작 요소는 고유한으로 식별 되 **이름을** 특성입니다.  

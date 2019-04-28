@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: ab483c7f-a091-4933-ba6b-708d96846d38
 ms.openlocfilehash: ff75895949c50cd369e4297ea77dc21106994067
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794411"
 ---
 # <a name="state-of-states"></a>\<상태 >의 \<상태 >
 추적 레코드를 내보내야 할 구독된 활동의 상태를 포함하는 구성 요소입니다.  

@@ -3,11 +3,11 @@ title: 상관 관계 문제 해결
 ms.date: 03/30/2017
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
 ms.openlocfilehash: fecfaf7374823bb19a4ad3d7f6cb2dbbdf139703
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932823"
 ---
 # <a name="troubleshooting-correlation"></a>상관 관계 문제 해결
 상관 관계는 워크플로 서비스 메시지를 서로 연결하거나 올바른 워크플로 인스턴스에 연결하는 데 사용되지만, 제대로 구성되지 않으면 메시지가 수신되지 않고 응용 프로그램이 올바르게 작동하지 않습니다. 이 항목에서는 상관 관계 문제를 해결하기 위한 몇 가지 방법을 간략히 설명하고 상관 관계를 사용할 때 발생할 수 있는 일반적인 문제도 설명합니다.
@@ -161,7 +161,7 @@ SendReply ReplyToStartOrder = new SendReply
 // Construct a workflow using StartOrder and ReplyToStartOrder.
 ```
 
- 지 속성 간 허용 되지 않습니다는 <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> 쌍 또는 <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> 쌍입니다. 두 활동이 모두 완료될 때까지 유지되는 비지속성 영역이 만들어집니다. 지연 활동과 같은 활동이 이 비지속성 영역에 있고 워크플로가 유휴 상태가 되도록 하는 경우 워크플로가 유휴 상태가 될 때 워크플로를 유지하도록 호스트를 구성한 경우에도 워크플로가 유지되지 않습니다. 유지 활동과 같은 활동이 비지속성 영역에 명시적으로 유지하려고 하는 경우 치명적 예외가 throw되고 워크플로가 중단되며 <xref:System.ServiceModel.FaultException>이 호출자에게 반환됩니다. 치명적 예외 메시지는 "System.InvalidOperationException: 지속성 작업은 비지속성 블록 내에 포함할 수 없습니다."입니다. 이 예외는 호출자에게 반환되지 않지만 추적을 사용하는 경우 나타날 수 있습니다. 호출자에게 반환되는 <xref:System.ServiceModel.FaultException> 메시지는 "WorkflowInstance '5836145b-7da2-49d0-a052-a49162adeab6'이(가) 완료되었으므로 작업을 수행할 수 없습니다."입니다.
+ 지 속성 간 허용 되지 않습니다는 <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> 쌍 또는 <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> 쌍입니다. 두 활동이 모두 완료될 때까지 유지되는 비지속성 영역이 만들어집니다. 지연 활동과 같은 활동이 이 비지속성 영역에 있고 워크플로가 유휴 상태가 되도록 하는 경우 워크플로가 유휴 상태가 될 때 워크플로를 유지하도록 호스트를 구성한 경우에도 워크플로가 유지되지 않습니다. 유지 활동과 같은 활동이 비지속성 영역에 명시적으로 유지하려고 하는 경우 치명적 예외가 throw되고 워크플로가 중단되며 <xref:System.ServiceModel.FaultException>이 호출자에게 반환됩니다. 심각한 예외 메시지는 "System.InvalidOperationException: 유지 없습니다 지 속성 블록 내에서 활동을 포함할 수 없습니다. "입니다. 이 예외는 호출자에게 반환되지 않지만 추적을 사용하는 경우 나타날 수 있습니다. 호출자에게 반환되는 <xref:System.ServiceModel.FaultException> 메시지는 "WorkflowInstance '5836145b-7da2-49d0-a052-a49162adeab6'이(가) 완료되었으므로 작업을 수행할 수 없습니다."입니다.
 
  요청-회신 상관 관계에 대 한 자세한 내용은 참조 하세요. [요청-회신](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)합니다.
 
@@ -188,7 +188,7 @@ MessageQuerySet = new MessageQuerySet
 }
 ```
 
- 상관 관계 데이터가 검색되지 않도록 XPath 쿼리가 잘못 구성된 경우 "상관 관계 쿼리에서 빈 결과 집합이 생성되었습니다. 엔드포인트에 대해 상관 관계 쿼리가 올바르게 구성되었는지 확인하세요."라는 메시지와 함께 오류가 반환됩니다. 이 문제를 신속하게 해결하는 한 가지 방법은 이전 단원에서 설명한 대로 XPath 쿼리를 리터럴 값으로 바꾸는 것입니다. XPath 쿼리 작성기를 사용 하는 경우이 문제가 발생할 수 있습니다는 **상관 관계 이니셜라이저 추가** 하거나 **CorrelatesOn 정의** 대화 상자와 워크플로 서비스에서는 메시지 계약을 사용 합니다. 다음 예제에서는 메시지 계약 클래스를 정의합니다.
+ XPath 쿼리는 잘못 구성 상관 관계 데이터가 검색 되는 경우 다음 메시지와 함께 오류가 반환 됩니다. "상관 관계 쿼리에서 빈 결과 집합을 생성 하는 데 사용 합니다. 엔드포인트에 대해 상관 관계 쿼리가 올바르게 구성되었는지 확인하세요."라는 메시지와 함께 오류가 반환됩니다. 이 문제를 신속하게 해결하는 한 가지 방법은 이전 단원에서 설명한 대로 XPath 쿼리를 리터럴 값으로 바꾸는 것입니다. XPath 쿼리 작성기를 사용 하는 경우이 문제가 발생할 수 있습니다는 **상관 관계 이니셜라이저 추가** 하거나 **CorrelatesOn 정의** 대화 상자와 워크플로 서비스에서는 메시지 계약을 사용 합니다. 다음 예제에서는 메시지 계약 클래스를 정의합니다.
 
 ```csharp
 [MessageContract]

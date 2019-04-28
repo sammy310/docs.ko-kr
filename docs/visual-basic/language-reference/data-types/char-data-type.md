@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
 ms.openlocfilehash: b50c902f69f7602dbad4663dc35bf0a2b932973f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796983"
 ---
 # <a name="char-data-type-visual-basic"></a>Char 데이터 형식(Visual Basic)
 0에서 65535 까지의 부호 없는 16 비트 (2 바이트) 코드 포인트를 저장 합니다. 각 *코드 포인트*, 또는 문자 코드를 단일 유니코드 문자를 나타냅니다.  
@@ -47,15 +47,15 @@ charVar = "Z"C
   
 ## <a name="programming-tips"></a>프로그래밍 팁  
   
--   **음수를 사용할 수 있습니다.** `Char` 부호 없는 형식 이며 음수 값을 나타낼 수 없습니다. 사용 하지 않아야 어떤 경우 든 `Char` 숫자 값을 포함 하도록 합니다.  
+- **음수를 사용할 수 있습니다.** `Char` 부호 없는 형식 이며 음수 값을 나타낼 수 없습니다. 사용 하지 않아야 어떤 경우 든 `Char` 숫자 값을 포함 하도록 합니다.  
   
--   **Interop 고려 사항입니다.** .NET Framework 용으로 작성 되지 구성 요소와 인터페이스 하는 경우 Automation 또는 COM 개체를 해야 문자 형식을 다른 데이터 너비 (8 비트)에 있는 다른 환경에서. 이러한 구성 요소는 8 비트 인수를 전달 하는 경우로 선언 `Byte` 대신 `Char` 새 Visual Basic 코드에서.  
+- **Interop 고려 사항입니다.** .NET Framework 용으로 작성 되지 구성 요소와 인터페이스 하는 경우 Automation 또는 COM 개체를 해야 문자 형식을 다른 데이터 너비 (8 비트)에 있는 다른 환경에서. 이러한 구성 요소는 8 비트 인수를 전달 하는 경우로 선언 `Byte` 대신 `Char` 새 Visual Basic 코드에서.  
   
--   **확대 합니다.** 합니다 `Char` 데이터 형식으로 확장 되는지를 `String`합니다. 즉, 변환할 수 있습니다 `Char` 하 `String` 발생 하지 것입니다 하 고는 <xref:System.OverflowException?displayProperty=nameWithType> 오류입니다.  
+- **확대 합니다.** 합니다 `Char` 데이터 형식으로 확장 되는지를 `String`합니다. 즉, 변환할 수 있습니다 `Char` 하 `String` 발생 하지 것입니다 하 고는 <xref:System.OverflowException?displayProperty=nameWithType> 오류입니다.  
   
--   **형식 문자입니다.** 리터럴 형식 문자를 추가 `C` 단일 문자 문자열 리터럴에 `Char` 데이터 형식입니다. `Char` 에 식별자 형식 문자가 없습니다.  
+- **형식 문자입니다.** 리터럴 형식 문자를 추가 `C` 단일 문자 문자열 리터럴에 `Char` 데이터 형식입니다. `Char` 에 식별자 형식 문자가 없습니다.  
   
--   **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.Char?displayProperty=nameWithType> 구조체입니다.  
+- **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.Char?displayProperty=nameWithType> 구조체입니다.  
   
 ## <a name="see-also"></a>참고자료
 

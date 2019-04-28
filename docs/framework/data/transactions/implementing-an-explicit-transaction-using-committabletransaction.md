@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
 ms.openlocfilehash: 1a02520ab7d1196b8071bda752ae30896958f372
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793720"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>CommittableTransaction을 사용하여 명시적 트랜잭션 구현
 <xref:System.Transactions.CommittableTransaction> 클래스를 암시적으로 사용하는 경우와 달리 <xref:System.Transactions.TransactionScope> 클래스는 응용 프로그램이 트랜잭션을 사용할 수 있는 명시적 방법을 제공합니다. 이 클래스는 여러 함수 호출이나 여러 스레드 호출에 같은 트랜잭션을 사용하려는 응용 프로그램에 유용합니다. <xref:System.Transactions.TransactionScope> 클래스와 달리 응용 프로그램 작성기에서 특별히 <xref:System.Transactions.CommittableTransaction.Commit%2A> 및 <xref:System.Transactions.Transaction.Rollback%2A> 메서드를 호출하여 트랜잭션을 커밋하거나 중단해야 합니다.  
@@ -22,9 +22,9 @@ ms.locfileid: "59105419"
   
  <xref:System.Transactions.CommittableTransaction> 클래스를 사용할 때는 다음 사항을 고려해야 합니다.  
   
--   <xref:System.Transactions.CommittableTransaction> 트랜잭션을 만들면 앰비언트 트랜잭션이 설정되지 않습니다. 해당되는 경우 리소스 관리자가 올바른 트랜잭션 컨텍스트에서 작동하려면 앰비언트 트랜잭션을 구체적으로 설정하고 다시 설정해야 합니다. 현재 앰비언트 트랜잭션을 설정하려면 전역 <xref:System.Transactions.Transaction.Current%2A> 개체의 정적 <xref:System.Transactions.Transaction> 속성을 설정합니다.  
+- <xref:System.Transactions.CommittableTransaction> 트랜잭션을 만들면 앰비언트 트랜잭션이 설정되지 않습니다. 해당되는 경우 리소스 관리자가 올바른 트랜잭션 컨텍스트에서 작동하려면 앰비언트 트랜잭션을 구체적으로 설정하고 다시 설정해야 합니다. 현재 앰비언트 트랜잭션을 설정하려면 전역 <xref:System.Transactions.Transaction.Current%2A> 개체의 정적 <xref:System.Transactions.Transaction> 속성을 설정합니다.  
   
--   <xref:System.Transactions.CommittableTransaction> 개체는 다시 사용할 수 없습니다. <xref:System.Transactions.CommittableTransaction> 개체가 커밋 또는 롤백되고 나면 다시 트랜잭션에 사용할 수 없습니다. 즉, 현재 앰비언트 트랜잭션 컨텍스트로 설정할 수 없습니다.  
+- <xref:System.Transactions.CommittableTransaction> 개체는 다시 사용할 수 없습니다. <xref:System.Transactions.CommittableTransaction> 개체가 커밋 또는 롤백되고 나면 다시 트랜잭션에 사용할 수 없습니다. 즉, 현재 앰비언트 트랜잭션 컨텍스트로 설정할 수 없습니다.  
   
 ## <a name="creating-a-committabletransaction"></a>CommittableTransaction 만들기  
  다음 샘플에서는 새 <xref:System.Transactions.CommittableTransaction>을 만들어 커밋합니다.  

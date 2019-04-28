@@ -3,11 +3,11 @@ title: 잘못된 패턴 문자열
 ms.date: 07/20/2015
 ms.assetid: ec1aecdb-5339-4a93-be71-eec56b1d7438
 ms.openlocfilehash: 7390b9b32eea248969813b52f8d9799798718de0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790600"
 ---
 # <a name="invalid-pattern-string"></a>잘못된 패턴 문자열
 검색의 `Like` 작업에서 지정된 패턴 문자열이 잘못되었습니다.  

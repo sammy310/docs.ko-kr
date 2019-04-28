@@ -1,13 +1,7 @@
 ---
 title: 제네릭
-description: 사용 하는 방법을 알아봅니다 F# 제네릭 함수 및 형식 코드를 반복 하지 않고 다양 한 형식 사용 하는 코드를 작성할 수 있습니다.
+description: '사용 하는 방법을 알아봅니다 F# 제네릭 함수 및 형식 코드를 반복 하지 않고 다양 한 형식 사용 하는 코드를 작성할 수 있습니다.'
 ms.date: 05/16/2016
-ms.openlocfilehash: bafb80893df2f3fab85840ee844bc78d1fb33428
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614378"
 ---
 # <a name="generics"></a>제네릭
 
@@ -92,7 +86,7 @@ F# 프로그램에서 사용할 수 있는 두 가지 종류의 형식 매개 �
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1705.fs)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [언어 참조](../index.md)
 - [유형](../fsharp-types.md)

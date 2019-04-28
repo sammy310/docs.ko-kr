@@ -3,11 +3,11 @@ title: WAS Activation 아키텍처
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
 ms.openlocfilehash: 9c1af21782b377a9fb01cbd05e4fe61f6a69f3ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932715"
 ---
 # <a name="was-activation-architecture"></a>WAS Activation 아키텍처
 이 항목에서는 Windows Process Activation Service(WAS라고도 함)의 구성 요소를 항목별로 정리하고 설명합니다.  
@@ -15,15 +15,15 @@ ms.locfileid: "59134058"
 ## <a name="activation-components"></a>활성화 구성 요소  
  WAS는 여러 가지 아키텍처 구성 요소로 구성됩니다.  
   
--   수신기 어댑터. 특정 네트워크 프로토콜에서 메시지를 받고, 들어오는 메시지를 올바른 작업자 프로세스로 라우트하기 위해 WAS와 통신하는 Windows 서비스입니다.  
+- 수신기 어댑터. 특정 네트워크 프로토콜에서 메시지를 받고, 들어오는 메시지를 올바른 작업자 프로세스로 라우트하기 위해 WAS와 통신하는 Windows 서비스입니다.  
   
--   WAS. 작업자 프로세스 만들기 및 수명을 관리하는 Windows 서비스입니다.  
+- WAS. 작업자 프로세스 만들기 및 수명을 관리하는 Windows 서비스입니다.  
   
--   제네릭 작업자 프로세스 실행 파일(w3wp.exe).  
+- 제네릭 작업자 프로세스 실행 파일(w3wp.exe).  
   
--   응용 프로그램 관리자. 작업자 프로세스 내에서 응용 프로그램을 호스팅하는 응용 프로그램 도메인 만들기 및 수명을 관리합니다.  
+- 응용 프로그램 관리자. 작업자 프로세스 내에서 응용 프로그램을 호스팅하는 응용 프로그램 도메인 만들기 및 수명을 관리합니다.  
   
--   프로토콜 처리기. 작업자 프로세스에서 실행되고 작업자 프로세스와 개별 수신기 어댑터 간 통신을 관리하는 프로토콜 관련 구성 요소입니다. 프로토콜 처리기 형식에는 프로세스 프로토콜 처리기와 AppDomain 프로토콜 처리기가 있습니다.  
+- 프로토콜 처리기. 작업자 프로세스에서 실행되고 작업자 프로세스와 개별 수신기 어댑터 간 통신을 관리하는 프로토콜 관련 구성 요소입니다. 프로토콜 처리기 형식에는 프로세스 프로토콜 처리기와 AppDomain 프로토콜 처리기가 있습니다.  
   
  WAS가 작업자 프로세스 인스턴스를 활성화하면 작업자 프로세스에 필요한 프로세스 프로토콜 처리기를 로드하고, 응용 프로그램 관리자를 사용하여 응용 프로그램을 호스트할 응용 프로그램 도메인을 만듭니다. 응용 프로그램 도메인은 응용 프로그램에서 사용하는 네트워크 프로토콜에 필요한 AppDomain 프로토콜 처리기와 응용 프로그램의 코드를 로드합니다.  
   

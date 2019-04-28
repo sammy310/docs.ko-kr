@@ -11,11 +11,11 @@ helpviewer_keywords:
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
 ms.openlocfilehash: fc38d239720b5d5a8e159f91749b03512568cd9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776261"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>방법: 인쇄 작업 문제 진단
 네트워크 관리자는 사용자로부터 인쇄 작업이 인쇄되지 않거나 느리게 인쇄되는 문제에 대한 불만을 흔히 처리합니다. 다양 한 인쇄 작업 속성에서 노출 된 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] Microsoft.NET Framework의 인쇄 작업의 신속한 원격 진단을 수행 하기 위한 수단을 제공 합니다.  
@@ -25,13 +25,13 @@ ms.locfileid: "59338477"
   
 1. 사용자가 불만족하는 인쇄 작업을 식별합니다. 사용자는 흔히 이런 작업을 정확하게 수행할 수 없습니다. 인쇄 서버 또는 프린터의 이름을 모를 수 있습니다. 설정에서 사용한 것과 다른 용어로 프린터의 위치를 설명할 수 있습니다 해당 <xref:System.Printing.PrintQueue.Location%2A> 속성입니다. 따라서 사용자가 현재 제출한 작업 목록을 생성하는 것이 좋습니다. 둘 이상인 경우 사용자와 인쇄 시스템 관리자 간의 통신을 사용하여 문제가 있는 작업을 찾을 수 있습니다. 하위단계는 다음과 같습니다.  
   
-    1.  모든 인쇄 서버 목록을 가져옵니다.  
+    1. 모든 인쇄 서버 목록을 가져옵니다.  
   
-    2.  서버를 반복하여 해당 인쇄 큐를 쿼리합니다.  
+    2. 서버를 반복하여 해당 인쇄 큐를 쿼리합니다.  
   
-    3.  서버 루프의 각 단계 내에서 해당 작업을 쿼리하는 모든 서버의 큐를 반복합니다.  
+    3. 서버 루프의 각 단계 내에서 해당 작업을 쿼리하는 모든 서버의 큐를 반복합니다.  
   
-    4.  큐 루프의 각 단계 내에서 해당 작업을 반복하고 불만이 있는 사용자가 제출한 작업에 대한 식별 정보를 수집합니다.  
+    4. 큐 루프의 각 단계 내에서 해당 작업을 반복하고 불만이 있는 사용자가 제출한 작업에 대한 식별 정보를 수집합니다.  
   
 2. 인쇄 작업 문제를 식별하는 경우 관련 속성을 검사하여 문제가 무엇인지를 확인합니다. 예를 들어 작업이 오류 상태이거나 작업이 인쇄되기 전에 큐를 제공하는 프린터가 오프라인으로 전환되었는지와 같은 문제입니다.  
   
@@ -49,9 +49,9 @@ ms.locfileid: "59338477"
   
  이 시점에서 애플리케이션에는 인쇄 작업의 상태를 검사하는 두 가지 방법에 해당하는 분기 구조가 포함되어 있습니다.  
   
--   플래그를 읽을 수는 <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> 형식의 속성 <xref:System.Printing.PrintJobStatus>합니다.  
+- 플래그를 읽을 수는 <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> 형식의 속성 <xref:System.Printing.PrintJobStatus>합니다.  
   
--   와 같은 각 관련 속성을 읽으려면 <xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A> 고 <xref:System.Printing.PrintSystemJobInfo.IsInError%2A>입니다.  
+- 와 같은 각 관련 속성을 읽으려면 <xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A> 고 <xref:System.Printing.PrintSystemJobInfo.IsInError%2A>입니다.  
   
  이 예제에서는 모든 방법을 보여 주어 사용자가 이전에 사용할 방법에 대 한를 받고의 플래그를 사용 하려는 경우 "Y"를 사용 하 여 응답을 <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> 속성입니다. 두 가지 방법에 대한 자세한 내용은 아래를 참조하세요. 마지막으로 애플리케이션이 **ReportQueueAndJobAvailability**라는 메서드를 사용하여 이 시간에 작업을 인쇄할 수 있는지 여부를 보고합니다. [인쇄 작업을 현재 인쇄할 수 있는지 확인](how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md)에서 이 메서드를 설명합니다.  
   

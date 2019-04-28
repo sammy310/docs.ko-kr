@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
 ms.openlocfilehash: 1c16c0936f729636aaa56e6e50c33e18c2b0f788
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929339"
 ---
 # <a name="guidelines-and-best-practices"></a>지침 및 최선의 구현 방법
 이 섹션에서는 Windows Communication Foundation (WCF) 응용 프로그램을 만들기 위한 지침을 제공 하는 항목을 포함 합니다.  

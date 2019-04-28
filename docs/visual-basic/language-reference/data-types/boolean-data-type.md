@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
 ms.openlocfilehash: 7b64302d801a08f976de0ec969983c821f7a8471
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796996"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boolean 데이터 형식(Visual Basic)
 만 될 수 있는 값을 포함 `True` 또는 `False`합니다. 키워드 `True` 하 고 `False` 의 두 가지 상태에 해당 `Boolean` 변수입니다.  
@@ -36,11 +36,11 @@ ms.locfileid: "58841223"
   
 ## <a name="programming-tips"></a>프로그래밍 팁  
   
--   **음수를 사용할 수 있습니다.** `Boolean` 숫자 형식이 아닌 및 음수 값을 나타낼 수 없습니다. 사용 하지 않아야 어떤 경우 든 `Boolean` 숫자 값을 포함 하도록 합니다.  
+- **음수를 사용할 수 있습니다.** `Boolean` 숫자 형식이 아닌 및 음수 값을 나타낼 수 없습니다. 사용 하지 않아야 어떤 경우 든 `Boolean` 숫자 값을 포함 하도록 합니다.  
   
--   **형식 문자입니다.** `Boolean` 에 리터럴 형식 문자 또는 식별자 형식 문자가 없습니다.  
+- **형식 문자입니다.** `Boolean` 에 리터럴 형식 문자 또는 식별자 형식 문자가 없습니다.  
   
--   **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.Boolean?displayProperty=nameWithType> 구조체입니다.  
+- **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.Boolean?displayProperty=nameWithType> 구조체입니다.  
   
 ## <a name="example"></a>예제  
  다음 예에서 `runningVB` 는 `Boolean` 간단한 예/아니요 설정을 저장 하는 변수입니다.  

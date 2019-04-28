@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
 ms.openlocfilehash: e0ac3b663b2a65e00524fe0fba7997125721487c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791718"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 구성 된 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) 및 <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM)를 사용 하 여 페더레이션 WS-페더레이션 프로토콜을 통해 인증 합니다. 구성 된 <xref:System.Security.Claims.ClaimsAuthorizationManager> 사용 하는 경우는 <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> 또는 <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> 클레임 기반 액세스 제어를 제공 하는 클래스입니다.  
@@ -52,9 +52,9 @@ ms.locfileid: "59297489"
 ## <a name="remarks"></a>설명  
  \<federationConfiguration > 요소는 두 가지 다른 시나리오에 대 한 설정을 제공 합니다.  
   
--   요소를 구성 하는 설정이 들어 WS-페더레이션 수동 웹 응용 프로그램에서 사용 하는 경우는 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) 및 <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM). 또한 보안 토큰 처리기 및 인증서와 클레임 인증 관리자 및 클레임 인증 관리자와 같은 구성 요소를 구성 하는 데 사용할 id 구성을 참조 합니다.  
+- 요소를 구성 하는 설정이 들어 WS-페더레이션 수동 웹 응용 프로그램에서 사용 하는 경우는 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) 및 <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM). 또한 보안 토큰 처리기 및 인증서와 클레임 인증 관리자 및 클레임 인증 관리자와 같은 구성 요소를 구성 하는 데 사용할 id 구성을 참조 합니다.  
   
--   사용 하는 경우는 <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> 또는 <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> 코드에서 클레임 기반 액세스 제어를 제공 하는 클래스, 요소는 클레임 권한 부여 관리자 및 권한 부여를 확인 하는 데 사용 되는 정책을 구성 하는 id 구성 참조 의사 결정 합니다. 이 수동 웹 시나리오; 하지 않은 시나리오에도 적용 예를 들어, Windows Communication Foundation (WCF) 응용 프로그램 또는 웹을 기반으로 하지 않는 응용 프로그램입니다. 응용 프로그램 수동 웹 응용 프로그램이 아닌 경우는 [ \<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) 요소 (및 해당 자식 정책 요소에 있는 경우)에서 참조 된 id 구성의는 `<federationConfiguration>` 요소 설정만 적용 됩니다. 다른 특성은 모두 무시됩니다.  
+- 사용 하는 경우는 <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> 또는 <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> 코드에서 클레임 기반 액세스 제어를 제공 하는 클래스, 요소는 클레임 권한 부여 관리자 및 권한 부여를 확인 하는 데 사용 되는 정책을 구성 하는 id 구성 참조 의사 결정 합니다. 이 수동 웹 시나리오; 하지 않은 시나리오에도 적용 예를 들어, Windows Communication Foundation (WCF) 응용 프로그램 또는 웹을 기반으로 하지 않는 응용 프로그램입니다. 응용 프로그램 수동 웹 응용 프로그램이 아닌 경우는 [ \<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) 요소 (및 해당 자식 정책 요소에 있는 경우)에서 참조 된 id 구성의는 `<federationConfiguration>` 요소 설정만 적용 됩니다. 다른 특성은 모두 무시됩니다.  
   
  시나리오에 관계 없이 런타임에서 기본 페더레이션 구성을 로드합니다. 동작을 다음과 같이 정의 됩니다.  
   

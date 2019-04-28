@@ -7,11 +7,11 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
 ms.openlocfilehash: 0aa47fd277cfe47b3d8f08b41ffca9c547dcbfe9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778536"
 ---
 # <a name="function-expression-visual-basic"></a>함수 식(Visual Basic)
 매개 변수 및 함수가 람다 식을 정의 하는 코드를 선언 합니다.  
@@ -40,19 +40,19 @@ End Function
 ## <a name="lambda-expression-syntax"></a>람다 식 구문  
  람다 식의 구문은 유사 표준 함수의 합니다. 차이점은 다음과 같습니다.  
   
--   람다 식에 이름이 없습니다.  
+- 람다 식에 이름이 없습니다.  
   
--   람다 식은와 같은 한정자를 사용할 수 없습니다 `Overloads` 또는 `Overrides`합니다.  
+- 람다 식은와 같은 한정자를 사용할 수 없습니다 `Overloads` 또는 `Overrides`합니다.  
   
--   람다 식 사용 하지 마십시오는 `As` 절 함수의 반환 형식을 지정 합니다. 대신 형식은 한 줄 람다 식의 본문으로 계산 되는 값 또는 여러 줄 람다 식의 반환 값에서 유추 됩니다. 예를 들어 한 줄 람다 식의 본문이 `Where cust.City = "London"`, 해당 반환 형식은 `Boolean`합니다.  
+- 람다 식 사용 하지 마십시오는 `As` 절 함수의 반환 형식을 지정 합니다. 대신 형식은 한 줄 람다 식의 본문으로 계산 되는 값 또는 여러 줄 람다 식의 반환 값에서 유추 됩니다. 예를 들어 한 줄 람다 식의 본문이 `Where cust.City = "London"`, 해당 반환 형식은 `Boolean`합니다.  
   
--   한 줄 람다 식의 본문에는 문이 아닌 식 이어야 합니다. Function 프로시저를 호출 하지만 sub 프로시저를 호출 하지 본문 구성할 수 있습니다.  
+- 한 줄 람다 식의 본문에는 문이 아닌 식 이어야 합니다. Function 프로시저를 호출 하지만 sub 프로시저를 호출 하지 본문 구성할 수 있습니다.  
   
--   데이터 형식 중 하나 또는 모두를 유추할 수 해야 모든 매개 변수에 지정 해야 합니다.  
+- 데이터 형식 중 하나 또는 모두를 유추할 수 해야 모든 매개 변수에 지정 해야 합니다.  
   
--   선택 사항 및 Paramarray 매개 변수는 허용 되지 않습니다.  
+- 선택 사항 및 Paramarray 매개 변수는 허용 되지 않습니다.  
   
--   제네릭 매개 변수가 허용 되지 않습니다.  
+- 제네릭 매개 변수가 허용 되지 않습니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 간단한 람다 식을 만드는 두 가지 방법을 보여 줍니다. 첫 번째 예제에서는 한 `Dim` 함수에 대 한 이름을 제공 합니다. 함수를 호출 하려면 매개 변수 값에 보냅니다.  

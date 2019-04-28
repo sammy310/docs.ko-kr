@@ -10,11 +10,11 @@ helpviewer_keywords:
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
 ms.openlocfilehash: 73f2004470d5d1da04199af75832cefd6348ce18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937672"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>방법: MDI 자식 양식 만들기
 MDI 자식 폼의 중요 한 요소는 [다중 문서 MDI (인터페이스) 응용 프로그램](multiple-document-interface-mdi-applications.md)같이 이러한 사용자 상호 작용의 중심 이므로 합니다.  

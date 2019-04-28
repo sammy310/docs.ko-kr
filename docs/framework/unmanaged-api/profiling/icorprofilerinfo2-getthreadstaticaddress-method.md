@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e8a842dd531576b1029c3924d12b1a4bd95bde37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791562"
 ---
 # <a name="icorprofilerinfo2getthreadstaticaddress-method"></a>ICorProfilerInfo2::GetThreadStaticAddress 메서드
 지정된 된 스레드에 범위에 있는 지정된 된 thread 정적 필드의 주소를 가져옵니다.  
@@ -53,9 +53,9 @@ HRESULT GetThreadStaticAddress(
 ## <a name="remarks"></a>설명  
  `GetThreadStaticAddress` 메서드 중 하나를 반환할 수 있습니다.  
   
--   지정 된 정적 필드에 지정 된 컨텍스트에서 주소 할당 되지 않은 경우 CORPROF_E_DATAINCOMPLETE HRESULT입니다.  
+- 지정 된 정적 필드에 지정 된 컨텍스트에서 주소 할당 되지 않은 경우 CORPROF_E_DATAINCOMPLETE HRESULT입니다.  
   
--   가비지 컬렉션 힙에 있을 수 있는 개체의 주소입니다. 가비지 수집 후 이러한 주소는 잘못 될 뒤 가비지 컬렉션 프로파일러는 유효한 지를 가정 하지 않아야 합니다.  
+- 가비지 컬렉션 힙에 있을 수 있는 개체의 주소입니다. 가비지 수집 후 이러한 주소는 잘못 될 뒤 가비지 컬렉션 프로파일러는 유효한 지를 가정 하지 않아야 합니다.  
   
  클래스의 클래스 생성자 완료 되기 전에 `GetThreadStaticAddress` 정적 필드 중 일부를 초기화할 수는 이미 있지만 CORPROF_E_DATAINCOMPLETE 정적 해당 모든 필드에 대 한 반환 하 고 가비지 컬렉션 개체를 응원 하 합니다.  
   

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
 ms.openlocfilehash: e269a168c5aa594684a41a98338d961447acd536
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792836"
 ---
 # <a name="claims-based-authorization-using-wif"></a>WIF를 사용하여 클레임 기반 권한 부여
 신뢰 당사자 응용 프로그램에서 권한 부여에 따라 인증된 ID가 액세스할 수 있도록 허용되는 리소스 및 이러한 리소스에서 수행할 수 있도록 허용되는 작업이 결정됩니다. 권한 부여가 부적절하거나 취약한 상태인 경우 정보가 노출되거나 데이터가 변조될 수 있습니다. 이 항목에서는 ACS(Windows Azure Access Control Service)와 같은 STS(보안 토큰 서비스) 및 WIF(Windows Identity Foundation)를 사용하여 클레임 인식 ASP.NET 웹 응용 프로그램과 서비스에 대한 권한 부여를 구현하기 위해 사용할 수 있는 방법에 대해 간략하게 설명합니다.  
@@ -25,13 +25,13 @@ ms.locfileid: "59312178"
 ### <a name="iprincipalisinrole-method"></a>IPrincipal.IsInRole 메서드  
  클레임 인식 애플리케이션에서 RBAC 방식을 구현하려면 비-클레임 인식 애플리케이션에서와 마찬가지로 **IPrinicpal** 인터페이스에서 **IsInRole()** 메서드를 사용합니다. 다음과 같은 여러 가지 방법으로 **IsInRole()** 메서드를 사용할 수 있습니다.  
   
--   **IPrincipal.IsInRole(“Administrator”)** 의 명시적 호출 이 방법에서는 결과가 부울입니다. 이는 조건문에서 사용되며, 코드에서 임의의 위치에 사용할 수 있습니다.  
+- **IPrincipal.IsInRole(“Administrator”)** 의 명시적 호출 이 방법에서는 결과가 부울입니다. 이는 조건문에서 사용되며, 코드에서 임의의 위치에 사용할 수 있습니다.  
   
--   보안 요청 **PrincipalPermission.Demand()** 사용 이 방법에서는 요청이 충족되지 않는 경우 결과가 예외입니다. 이는 예외 처리 전략에 맞아야 합니다. 부울 반환과 비교했을 때 예외가 발생하면 성능적인 측면에서 비용이 훨씬 많이 듭니다. 이는 코드에서 임의의 위치에 사용할 수 있습니다.  
+- 보안 요청 **PrincipalPermission.Demand()** 사용 이 방법에서는 요청이 충족되지 않는 경우 결과가 예외입니다. 이는 예외 처리 전략에 맞아야 합니다. 부울 반환과 비교했을 때 예외가 발생하면 성능적인 측면에서 비용이 훨씬 많이 듭니다. 이는 코드에서 임의의 위치에 사용할 수 있습니다.  
   
--   선언적 특성 **[PrincipalPermission(SecurityAction.Demand, Role = “Administrator”)]** 사용 이 방법은 메서드를 데코레이팅하는 데 사용되므로 선언적이라고 합니다. 메서드 구현 내의 코드 블록에는 사용할 수 없습니다. 요청이 충족되지 않는 경우 결과가 예외입니다. 예외 처리 전략에 맞는지 확인해야 합니다.  
+- 선언적 특성 **[PrincipalPermission(SecurityAction.Demand, Role = “Administrator”)]** 사용 이 방법은 메서드를 데코레이팅하는 데 사용되므로 선언적이라고 합니다. 메서드 구현 내의 코드 블록에는 사용할 수 없습니다. 요청이 충족되지 않는 경우 결과가 예외입니다. 예외 처리 전략에 맞는지 확인해야 합니다.  
   
--   **web.config**의 **\<authorization>** 섹션을 사용하여 URL 권한 부여 사용 이 방법은 URL 수준에서 권한 부여를 관리하는 경우 적합합니다. 이는 앞서 언급한 것 중에서 가장 정교하지 않은 수준입니다. 이 방법의 장점은 구성 파일에서 내용이 변경되므로 변경 내용을 활용하기 위해 코드를 컴파일하지 않는다는 점입니다.  
+- **web.config**의 **\<authorization>** 섹션을 사용하여 URL 권한 부여 사용 이 방법은 URL 수준에서 권한 부여를 관리하는 경우 적합합니다. 이는 앞서 언급한 것 중에서 가장 정교하지 않은 수준입니다. 이 방법의 장점은 구성 파일에서 내용이 변경되므로 변경 내용을 활용하기 위해 코드를 컴파일하지 않는다는 점입니다.  
   
 ### <a name="expressing-roles-as-claims"></a>역할을 클레임으로 표시  
  **IsInRole()** 메서드가 호출되면 현재 사용자에게 해당 역할이 있는지 확인하는 검사가 수행됩니다. 클레임 인식 응용 프로그램에서는 역할이 토큰에서 사용할 수 있는 역할 클레임 형식으로 표시됩니다. 역할 클레임 형식은 다음 URI를 사용하여 표시됩니다.  
@@ -40,11 +40,11 @@ ms.locfileid: "59312178"
   
  여러 가지 방법으로 역할 클레임 형식을 사용하여 토큰을 보강할 수 있습니다.  
   
--   **토큰 발급 중**. 사용자가 인증되면 Microsoft Azure ACS(Access Control Service)와 같은 페더레이션 공급자 또는 ID 공급자 STS에 의해 역할 클레임이 발급될 수 있습니다.  
+- **토큰 발급 중**. 사용자가 인증되면 Microsoft Azure ACS(Access Control Service)와 같은 페더레이션 공급자 또는 ID 공급자 STS에 의해 역할 클레임이 발급될 수 있습니다.  
   
--   **ClaimsAuthenticationManager를 사용하여 임의의 클레임을 클레임 역할 형식으로 변형** ClaimsAuthenticationManager는 WIF의 일부로 제공되는 구성 요소입니다. 이는 토큰을 검사하고 클레임을 추가, 변경 또는 제거하여 해당 토큰을 변형하면서 응용 프로그램을 시작할 때 요청을 가로챌 수 있도록 허용합니다. 클레임을 변환 하기 위해 ClaimsAuthenticationManager를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 구현 역할 WIF 및 ACS를 사용 하 여 클레임 인식 ASP.NET 응용 프로그램에서 Access Control (RBAC) 기반](https://go.microsoft.com/fwlink/?LinkID=247445)입니다.  
+- **ClaimsAuthenticationManager를 사용하여 임의의 클레임을 클레임 역할 형식으로 변형** ClaimsAuthenticationManager는 WIF의 일부로 제공되는 구성 요소입니다. 이는 토큰을 검사하고 클레임을 추가, 변경 또는 제거하여 해당 토큰을 변형하면서 응용 프로그램을 시작할 때 요청을 가로챌 수 있도록 허용합니다. 클레임을 변환 하기 위해 ClaimsAuthenticationManager를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 구현 역할 WIF 및 ACS를 사용 하 여 클레임 인식 ASP.NET 응용 프로그램에서 Access Control (RBAC) 기반](https://go.microsoft.com/fwlink/?LinkID=247445)입니다.  
   
--   **samlSecurityTokenRequirement 구성 섹션을 사용하여 임의의 클레임을 역할 형식으로 매핑** - 구성만 사용하여 클레임 변형을 완료하며 코딩이 필요하지 않은 선언적 방법입니다.  
+- **samlSecurityTokenRequirement 구성 섹션을 사용하여 임의의 클레임을 역할 형식으로 매핑** - 구성만 사용하여 클레임 변형을 완료하며 코딩이 필요하지 않은 선언적 방법입니다.  
   
 <a name="BKMK_2"></a>   
 ## <a name="claims-based-authorization"></a>클레임 기반 권한 부여  

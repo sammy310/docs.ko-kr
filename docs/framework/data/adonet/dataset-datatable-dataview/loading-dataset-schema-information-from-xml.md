@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
 ms.openlocfilehash: 06dcbbedf8c1533b3da52b447c121746ce705083
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785452"
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>XML에서 데이터 집합 스키마 정보 로드
 스키마를 <xref:System.Data.DataSet> (해당 테이블, 열, 관계 및 제약 조건) 정의할 수 있습니다 프로그래밍 방식으로 만든 합니다 **채우기** 또는 **FillSchema** 의 메서드는 <xref:System.Data.Common.DataAdapter>에서 로드 또는 XML 문서입니다. 로드할 **데이터 집합** 스키마 정보 XML 문서에서 사용할 수 있습니다 합니다 **ReadXmlSchema** 또는 **InferXmlSchema** 메서드의 **데이터집합**. **ReadXmlSchema** 로드 하거나 유추할 수 있습니다 **데이터 집합** XML 스키마 정의 언어 (XSD), 또는 인라인 XML 스키마를 사용 하 여 XML 문서를 포함 하는 문서에서 스키마 정보입니다. **InferXmlSchema** 지정 하는 특정 XML 네임 스페이스를 무시 하는 동안 XML 문서에서 스키마를 유추할 수 있습니다.  

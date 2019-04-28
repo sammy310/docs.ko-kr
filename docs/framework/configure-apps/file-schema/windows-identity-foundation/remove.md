@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 4058e2f1-7db4-4d1a-84dd-1b52836f2ae6
 author: BrucePerlerMS
 ms.openlocfilehash: 17c4d4289cf90b66d52986c054d4807ecff2b3d8
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793889"
 ---
 # <a name="remove"></a>\<remove>
 토큰 처리기 컬렉션에서 지정 된 보안 토큰 처리기를 제거합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "55758419"
   
 |특성|설명|  
 |---------------|-----------------|  
-|형식|제거할 토큰 처리기의 CLR 형식 이름입니다. 지정 하는 방법에 대 한 자세한 내용은 합니다 `type` 특성을 참조 하십시오 [사용자 지정 형식 참조](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references)합니다. 필수 요소.|  
+|type|제거할 토큰 처리기의 CLR 형식 이름입니다. 지정 하는 방법에 대 한 자세한 내용은 합니다 `type` 특성을 참조 하십시오 [사용자 지정 형식 참조](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references)합니다. 필수 요소.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  

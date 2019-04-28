@@ -8,11 +8,11 @@ helpviewer_keywords:
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
 ms.openlocfilehash: 911c2064e34ed8d0a341ffd9a52f852eab677e0a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771321"
 ---
 # <a name="popup-placement-behavior"></a>Popup 배치 동작
 <xref:System.Windows.Controls.Primitives.Popup> 컨트롤 응용 프로그램 위에 떠 있는 별도 창에서 콘텐츠를 표시 합니다. 위치를 지정할 수 있습니다는 <xref:System.Windows.Controls.Primitives.Popup> 컨트롤, 마우스를 또는 사용 하 여 화면을 기준으로 합니다 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, 및 <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> 속성입니다.  이러한 속성의 위치를 지정 하는 유연성을 제공 하기 위해 함께 작동 합니다 <xref:System.Windows.Controls.Primitives.Popup>합니다.  
@@ -36,13 +36,13 @@ ms.locfileid: "59161502"
 ## <a name="definitions-of-terms-the-anatomy-of-a-popup"></a>용어 정의: Popup 분석  
  다음 용어 이해에서 유용 하는 방법을 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>를 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, 및 <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> 서로 관련 속성 및 <xref:System.Windows.Controls.Primitives.Popup>:  
   
--   대상 개체  
+- 대상 개체  
   
--   대상 영역  
+- 대상 영역  
   
--   대상 원점  
+- 대상 원점  
   
--   Popup 맞춤 지점  
+- Popup 맞춤 지점  
   
  이러한 용어의 다양 한 측면을 참조 하는 편리한 방법을 제공 합니다 <xref:System.Windows.Controls.Primitives.Popup> 와 연관 된 컨트롤입니다.  
   
@@ -135,11 +135,11 @@ ms.locfileid: "59161502"
 ## <a name="when-the-popup-encounters-the-edge-of-the-screen"></a>Popup이 화면 가장자리와 만나는 경우  
  보안상의 이유로 <xref:System.Windows.Controls.Primitives.Popup> 화면 가장자리가 숨길 수 없습니다. 다음 세 가지 중 하나가 발생 하면는 <xref:System.Windows.Controls.Primitives.Popup> 화면 가장자리와 만나면:  
   
--   팝업을 가리는 모호 하 게 화면 가장자리는 <xref:System.Windows.Controls.Primitives.Popup>합니다.  
+- 팝업을 가리는 모호 하 게 화면 가장자리는 <xref:System.Windows.Controls.Primitives.Popup>합니다.  
   
--   Popup에 다른 Popup 맞춤 지점이 사용됩니다.  
+- Popup에 다른 Popup 맞춤 지점이 사용됩니다.  
   
--   Popup에 다른 대상 원점 및 Popup 맞춤 지점이 사용됩니다.  
+- Popup에 다른 대상 원점 및 Popup 맞춤 지점이 사용됩니다.  
   
  이러한 옵션은 이 섹션의 뒷부분에서 설명합니다.  
   

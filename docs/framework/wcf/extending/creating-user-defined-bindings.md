@@ -5,20 +5,20 @@ helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
 ms.openlocfilehash: 54a1c8e06991729ea8556d82d31897c522f6d173
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923242"
 ---
 # <a name="creating-user-defined-bindings"></a>사용자 정의 바인딩 만들기
 시스템에서 제공하지 않는 바인딩은 다음과 같은 여러 가지 방법으로 만들 수 있습니다.  
   
--   바인딩 요소로 채워지는 컨테이너인 <xref:System.ServiceModel.Channels.CustomBinding> 클래스에 따라 사용자 지정 바인딩을 만듭니다. 그런 다음 사용자 지정 바인딩을 서비스 엔드포인트에 추가합니다. 프로그램 방식이나 응용 프로그램 구성 파일을 통해 사용자 지정 바인딩을 만들 수 있습니다. 응용 프로그램 구성 파일에서 바인딩 요소를 사용하려면 바인딩 요소가 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>를 확장해야 합니다. 사용자 지정 바인딩에 대 한 자세한 내용은 참조 하세요. [사용자 지정 바인딩을](../../../../docs/framework/wcf/extending/custom-bindings.md) 고 <xref:System.ServiceModel.Channels.CustomBinding>입니다.  
+- 바인딩 요소로 채워지는 컨테이너인 <xref:System.ServiceModel.Channels.CustomBinding> 클래스에 따라 사용자 지정 바인딩을 만듭니다. 그런 다음 사용자 지정 바인딩을 서비스 엔드포인트에 추가합니다. 프로그램 방식이나 응용 프로그램 구성 파일을 통해 사용자 지정 바인딩을 만들 수 있습니다. 응용 프로그램 구성 파일에서 바인딩 요소를 사용하려면 바인딩 요소가 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>를 확장해야 합니다. 사용자 지정 바인딩에 대 한 자세한 내용은 참조 하세요. [사용자 지정 바인딩을](../../../../docs/framework/wcf/extending/custom-bindings.md) 고 <xref:System.ServiceModel.Channels.CustomBinding>입니다.  
   
--   표준 바인딩에서 파생되는 클래스를 만들 수 있습니다. 예를 들어, <xref:System.ServiceModel.WSHttpBinding>에서 클래스를 파생하고 <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A> 메서드를 재정의하여 바인딩 요소를 가져온 후 사용자 지정 바인딩 요소를 삽입하거나 특정 보안 값을 설정할 수 있습니다.  
+- 표준 바인딩에서 파생되는 클래스를 만들 수 있습니다. 예를 들어, <xref:System.ServiceModel.WSHttpBinding>에서 클래스를 파생하고 <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A> 메서드를 재정의하여 바인딩 요소를 가져온 후 사용자 지정 바인딩 요소를 삽입하거나 특정 보안 값을 설정할 수 있습니다.  
   
--   전체 바인딩 구현을 완벽하게 제어하도록 새 <xref:System.ServiceModel.Channels.Binding> 형식을 만들 수 있습니다.  
+- 전체 바인딩 구현을 완벽하게 제어하도록 새 <xref:System.ServiceModel.Channels.Binding> 형식을 만들 수 있습니다.  
   
 ## <a name="the-order-of-binding-elements"></a>바인딩 요소 순서  
  각 바인딩 요소는 메시지를 보내거나 받을 때의 처리 단계를 나타냅니다. 런타임에 바인딩 요소는 나가고 들어오는 채널 스택을 빌드하는 데 필요한 채널 및 수신기를 만듭니다.  

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - text boxes [Windows Forms], adding
 ms.assetid: d1a9c7f5-fa53-480a-a75c-158f8649ea2f
 ms.openlocfilehash: a91b67df1071c79707bb20a68efb4d5e6f083ae0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932550"
 ---
 # <a name="textbox-control-overview-windows-forms"></a>TextBox 컨트롤 개요(Windows Forms)
 Windows Forms 텍스트 상자에는 사용자 로부터 입력 하거나 텍스트를 표시 하도록 사용 됩니다. <xref:System.Windows.Forms.TextBox> 컨트롤은 일반적으로 편집 가능한 텍스트에 사용 하도 설정할 수 있지만 읽기 전용입니다. 입력란 수 여러 줄을 표시, 텍스트 컨트롤의 크기를 래핑하고 기본 서식을 추가 합니다. <xref:System.Windows.Forms.TextBox> 컨트롤은 컨트롤에 표시 되거나 입력 텍스트에 대 한 단일 형식 스타일을 제공 합니다. 여러 유형의 서식 있는 텍스트를 표시 하려면 사용 된 <xref:System.Windows.Forms.RichTextBox> 제어 합니다. 자세한 내용은 [RichTextBox 컨트롤 개요](richtextbox-control-overview-windows-forms.md)합니다.  

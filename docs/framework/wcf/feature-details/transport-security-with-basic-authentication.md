@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
 ms.openlocfilehash: 5c2ff8ac3b424a2541ba7604b5952b2a3ed0a21a
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933058"
 ---
 # <a name="transport-security-with-basic-authentication"></a>기본 인증을 사용하는 전송 보안
 다음 그림에는 Windows Communication Foundation (WCF) 서비스 및 클라이언트를 보여 줍니다. 서버에 SSL(Secure Sockets Layer)에 사용할 유효한 X.509 인증서가 있어야 하며 클라이언트에서 서버의 인증서를 신뢰해야 합니다. 또한 웹 서비스에는 이미 사용할 수 있는 SSL 구현이 있습니다. 자세한 내용은 기본 인증을 사용 하는 방법에 대 한 인터넷 정보 서비스 (IIS)를 참조 하세요. <https://go.microsoft.com/fwlink/?LinkId=83822>합니다.  
@@ -30,9 +30,9 @@ ms.locfileid: "59611057"
 ## <a name="service"></a>서비스  
  다음 코드와 구성은 독립적으로 실행되어야 합니다. 다음 작업 중 하나를 수행합니다.  
   
--   구성 없이 코드를 사용하여 독립 실행형 서비스를 만듭니다.  
+- 구성 없이 코드를 사용하여 독립 실행형 서비스를 만듭니다.  
   
--   제공된 구성을 사용하여 서비스를 만들지만 엔드포인트를 정의하지 않습니다.  
+- 제공된 구성을 사용하여 서비스를 만들지만 엔드포인트를 정의하지 않습니다.  
   
 ### <a name="code"></a>코드  
  다음 코드에서는 전송 보안에 Windows 도메인 사용자 이름과 암호를 사용하는 서비스 엔드포인트를 만드는 방법에 대해 설명합니다. 서비스에서 X.509 인증서를 사용하여 클라이언트를 인증하도록 요구할 수 있습니다. 자세한 내용은 [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) 고 [방법: SSL 인증서로 포트 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)합니다.  

@@ -3,11 +3,11 @@ title: SendMail 사용자 지정 활동
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
 ms.openlocfilehash: 89252098402deee991ea01b8e76082a5f4b8c389
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785946"
 ---
 # <a name="sendmail-custom-activity"></a>SendMail 사용자 지정 활동
 이 샘플에서는 워크플로 응용 프로그램 내에서 사용하기 위해 <xref:System.Activities.AsyncCodeActivity>로부터 파생되는 사용자 지정 활동을 만들어 SMTP를 사용하여 메일을 보내는 방법을 보여 줍니다. 기능을 사용 하는 사용자 지정 활동 <xref:System.Net.Mail.SmtpClient> 비동기적으로 전자 메일을 보내려면 및 인증 된 메일을 보냅니다. 또한 테스트 모드, 토큰 바꾸기, 파일 템플릿 및 테스트 드롭 경로와 같은 몇 가지 최종 사용자 기능도 제공합니다.  
@@ -107,13 +107,13 @@ new SendMail
   
  SMTP 서버 설정에 대 한 자세한 내용은 다음 링크를 참조 하세요.  
   
--   [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
+- [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
   
--   [SMTP 서비스 (IIS 6.0) 구성](https://go.microsoft.com/fwlink/?LinkId=150456)  
+- [SMTP 서비스 (IIS 6.0) 구성](https://go.microsoft.com/fwlink/?LinkId=150456)  
   
--   [IIS 7.0: SMTP 전자 메일 구성](https://go.microsoft.com/fwlink/?LinkId=150457)  
+- [IIS 7.0: SMTP 전자 메일 구성](https://go.microsoft.com/fwlink/?LinkId=150457)  
   
--   [SMTP 서비스를 설치 하는 방법](https://go.microsoft.com/fwlink/?LinkId=150458)  
+- [SMTP 서비스를 설치 하는 방법](https://go.microsoft.com/fwlink/?LinkId=150458)  
   
  타사에서 제공하는 SMTP 에뮬레이터를 다운로드할 수 있습니다.  
   

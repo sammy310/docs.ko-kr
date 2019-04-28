@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
 ms.openlocfilehash: f0802365ed07bdb57111d1b28e8d7ddfd800d41b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929599"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>기본적인 Windows Communication Foundation 개념
 이 문서에서는 Windows Communication Foundation (WCF) 아키텍처의 상위 수준 보기를 제공 합니다. 또한 핵심 개념 및 이러한 개념이 서로 어떻게 연결되는지에 대해 설명합니다. WCF 서비스 및 클라이언트의 가장 간단한 버전을 만드는 방법에 대 한 자습서를 참조 하세요 [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md)합니다. WCF 프로그래밍에 알아보려면 [기본 WCF 프로그래밍](../../../docs/framework/wcf/basic-wcf-programming.md)합니다.  
@@ -34,11 +34,11 @@ ms.locfileid: "59122306"
   
  통신 스택에 필요한 다른 요소는 제공된 모든 메시지의 형식을 지정하는 방법을 지정하는 인코딩입니다. WCF에는 다음 인코딩을 제공합니다.  
   
--   텍스트 인코딩, 상호 운용 가능한 인코딩.  
+- 텍스트 인코딩, 상호 운용 가능한 인코딩.  
   
--   MTOM(Message Transmission Optimization Mechanism) 인코딩, 비구조적 이진 데이터를 서비스 간에 효율적으로 보내기 위한 상호 운용 가능한 방법입니다.  
+- MTOM(Message Transmission Optimization Mechanism) 인코딩, 비구조적 이진 데이터를 서비스 간에 효율적으로 보내기 위한 상호 운용 가능한 방법입니다.  
   
--   효율적인 전송을 위한 이진 인코딩.  
+- 효율적인 전송을 위한 이진 인코딩.  
   
  WCF의 기본 제공 확장 점을 사용 하 여 추가 인코딩 메커니즘 (예: 압축 인코딩)를 추가할 수 있습니다.  
   

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - -langversion compiler option [Visual Basic]
 ms.assetid: 59b7b0c8-2dde-4e9b-94e7-0237f7e0bafb
 ms.openlocfilehash: db2cb1eb107973e9ce60ecb0d669c677d4fa2c51
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793960"
 ---
 # <a name="-langversion-visual-basic"></a>-langversion (Visual Basic)
 컴파일러가 지정된 된 Visual Basic 언어 버전에 포함 된 구문만 허용 하도록 합니다.  

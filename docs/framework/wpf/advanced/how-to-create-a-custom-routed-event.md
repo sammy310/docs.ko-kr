@@ -9,11 +9,11 @@ helpviewer_keywords:
 - events [WPF], routing
 ms.assetid: b79f459a-1c3f-4045-b2d4-1659cc8eaa3c
 ms.openlocfilehash: a3850875c8ca747f8709b55f8fe721d25be24304
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59091475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776690"
 ---
 # <a name="how-to-create-a-custom-routed-event"></a>방법: 사용자 지정 라우트된 이벤트 만들기
 이벤트 라우팅을 지원 하도록 사용자 지정 이벤트를 등록 해야는 <xref:System.Windows.RoutedEvent> 를 사용 하는 <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> 메서드. 이 예제에서는 사용자 지정 라우트된 이벤트를 만드는 데 대한 기본 사항을 설명합니다.  

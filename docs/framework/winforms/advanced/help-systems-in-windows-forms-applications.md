@@ -9,11 +9,11 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms], providing Help in Windows applications
 ms.assetid: 2a96a278-432c-41fc-9e3c-5bfedf5e1267
 ms.openlocfilehash: 1a02271d59a59f0a6e06a652a34922ba5dcdf1f3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937945"
 ---
 # <a name="help-systems-in-windows-forms-applications"></a>Windows Forms 응용 프로그램의 도움말 시스템
 하나의 가장 중요 한 행위를 응용 프로그램의 개발자는 사용자를 위해 수는 유용한 도움말 시스템입니다. 이것이 혼동 하거나 응용 될 때 설정 됩니다 것입니다. 사용 하 여 쉽게 이루어집니다 Windows 기반 응용 프로그램의 도움말 시스템을 제공 하는 [HelpProvider 구성 요소](../controls/helpprovider-component-windows-forms.md)합니다.  

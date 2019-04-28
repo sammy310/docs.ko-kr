@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 509d75e1e94a82e6a91cd235ab079603c267c70f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940324"
 ---
 # <a name="inotifysource2-interface"></a>INotifySource2 인터페이스
 알림 필터를 설정 하는 것에 대 한 메서드를 선언 합니다.  

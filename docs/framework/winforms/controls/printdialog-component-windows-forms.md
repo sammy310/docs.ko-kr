@@ -9,11 +9,11 @@ helpviewer_keywords:
 - printing [Windows Forms], print options
 ms.assetid: 09b54db1-d7c7-42fa-b98a-840e6b80a9ad
 ms.openlocfilehash: 35bc465b70d9e92f427a70590af45613555380cb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795488"
 ---
 # <a name="printdialog-component-windows-forms"></a>PrintDialog 구성 요소(Windows Forms)
 Windows Forms `PrintDialog` 구성 요소는 프린터를 선택하고, 인쇄할 페이지를 선택하고, Windows 기반 응용 프로그램에서 다른 인쇄 관련 설정을 결정하는 데 사용되는 미리 구성된 대화 상자입니다. 고유한 대화 상자를 구성하는 대신 이 대화 상자를 프린터 및 인쇄 관련 설정 선택을 위한 간단한 솔루션으로 사용합니다. 사용자가 모두 인쇄, 지정한 페이지 범위 인쇄 또는 선택 영역 인쇄 등 문서의 대부분을 인쇄할 수 있도록 할 수 있습니다. 표준 Windows 대화 상자를 사용하여 기본 기능이 사용자에게 익숙한 응용 프로그램을 만듭니다.  

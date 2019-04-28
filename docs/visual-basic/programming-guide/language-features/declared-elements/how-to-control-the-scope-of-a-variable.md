@@ -13,11 +13,11 @@ helpviewer_keywords:
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
 ms.openlocfilehash: 24a7ae3b8f3400beeaedb20ea6352ea44bdb7597
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794734"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>방법: 변수 (Visual Basic)의 범위 제어
 일반적으로 변수가 *범위*, 또는 참조를 선언 하는 영역 전체에 대 한 표시 합니다. 경우에 따라 변수의 *액세스 수준* 해당 범위에 영향을 줄 수 있습니다.  
@@ -28,13 +28,13 @@ ms.locfileid: "59324320"
   
 #### <a name="to-make-a-variable-visible-only-within-a-block"></a>변수를 블록 내 에서만 볼 수 있도록 하려면  
   
--   위치는 [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md) 변수는 시작 사이의 선언문 해당 블록의 예를 들어 종료 사이 대 한 합니다 `For` 및 `Next` 문을 `For` 루프입니다.  
+- 위치는 [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md) 변수는 시작 사이의 선언문 해당 블록의 예를 들어 종료 사이 대 한 합니다 `For` 및 `Next` 문을 `For` 루프입니다.  
   
      블록 내에서 변수를 참조할 수 있습니다.  
   
 #### <a name="to-make-a-variable-visible-only-within-a-procedure"></a>변수는 프로시저 내 에서만 볼 수 있도록 하려면  
   
--   위치는 `Dim` 문을 프로시저 내에 있지만 모든 블록 외부 변수 (같은 `With`... `End With` 블록).  
+- 위치는 `Dim` 문을 프로시저 내에 있지만 모든 블록 외부 변수 (같은 `With`... `End With` 블록).  
   
      프로시저에 포함 된 모든 블록을 포함 하 여 프로시저 내에서 변수를 참조할 수 있습니다.  
   

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - behavior [WCF], service performance
 ms.assetid: f9dc120c-dc24-49d5-930e-b22f5bc73423
 ms.openlocfilehash: e42f44b5fa103d5c083bdce3086b6499c5bb3673
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932810"
 ---
 # <a name="using-servicethrottlingbehavior-to-control-wcf-service-performance"></a>ServiceThrottlingBehavior를 사용하여 WCF 서비스 성능 제어
 <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> 클래스는 응용 프로그램 수준에서 생성되는 인스턴스 또는 세션의 수를 제한하기 위해 사용할 수 있는 속성을 노출합니다. 이 동작을 사용 하 여 Windows Communication Foundation (WCF) 응용 프로그램의 성능을 미세 조정할 수 있습니다.  

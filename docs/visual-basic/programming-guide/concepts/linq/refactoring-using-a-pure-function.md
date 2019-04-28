@@ -3,11 +3,11 @@ title: 순수 함수 (Visual Basic)를 사용 하 여 리팩터링
 ms.date: 07/20/2015
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
 ms.openlocfilehash: ac14385b87899490099dd0664264daef538319a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787116"
 ---
 # <a name="refactoring-using-a-pure-function-visual-basic"></a>순수 함수 (Visual Basic)를 사용 하 여 리팩터링
 다음 예제에서는 이전 예제를 리팩터링하여 [확장 메서드 (Visual Basic)를 사용 하 여 리팩터링](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)는 순수 정적 메서드 이동할단락의텍스트를찾기위해코드를이예제에서는순수함수를사용하려면`ParagraphText`.  
@@ -170,7 +170,7 @@ StyleName:Code >Hello World<
 ### <a name="next-steps"></a>다음 단계  
  다음 예제에서는 XML을 다른 모양으로 프로젝션하는 방법을 보여 줍니다.  
   
--   [(Visual Basic)을 다른 모양으로 XML 프로젝션](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+- [(Visual Basic)을 다른 모양으로 XML 프로젝션](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
 ## <a name="see-also"></a>참고자료
 

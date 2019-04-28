@@ -9,11 +9,11 @@ helpviewer_keywords:
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
 ms.openlocfilehash: f1dcc03a67880727893e55c13d65a804586b3f56
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788923"
 ---
 # <a name="-optioninfer"></a>-optioninfer
 변수 선언에서 지역 형식 유추를 사용하도록 설정합니다.  

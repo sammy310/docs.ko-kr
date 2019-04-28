@@ -4,12 +4,6 @@ description: 컨테이너 화 된 응용 프로그램 개발 경험을 여기서
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/23/2018
-ms.openlocfilehash: 5d569cf5edc9f1e39b9c53908b7fbe075d3f2bf5
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584358"
 ---
 # <a name="introduction-tothe-docker-application-life-cycle"></a>Docker 응용 프로그램 수명 주기 소개
 

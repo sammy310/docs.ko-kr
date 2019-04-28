@@ -18,11 +18,11 @@ helpviewer_keywords:
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
 ms.openlocfilehash: 699737ffbe0b136af8862931fadacec26772b928
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757003"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Visual Basic의 변수 선언
 이름 및 특성을 지정 하려면 변수를 선언 하면 됩니다. 변수에 대 한 선언문이 합니다 [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md)합니다. 해당 위치 및 내용을 변수의 특성을 결정 합니다.  
@@ -42,15 +42,15 @@ ms.locfileid: "58833284"
 ## <a name="declaring-data-type"></a>데이터 형식 선언  
  합니다 [으로](../../../../visual-basic/language-reference/statements/as-clause.md) 선언 문에 절을 사용 하면 데이터 형식 또는 변수를 선언 하는 개체 형식을 정의할 수 있습니다. 변수에 대 한 다음 형식 중 하나를 지정할 수 있습니다.  
   
--   등의 기본 데이터 형식 `Boolean`, `Long`, 또는 `Decimal`  
+- 등의 기본 데이터 형식 `Boolean`, `Long`, 또는 `Decimal`  
   
--   배열 또는 구조체와 같은 복합 데이터 형식  
+- 배열 또는 구조체와 같은 복합 데이터 형식  
   
--   개체 유형 또는 응용 프로그램 또는 다른 응용 프로그램에 정의 된 클래스  
+- 개체 유형 또는 응용 프로그램 또는 다른 응용 프로그램에 정의 된 클래스  
   
--   A [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 클래스와 같이 <xref:System.Windows.Forms.Label> 또는 <xref:System.Windows.Forms.TextBox>  
+- A [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 클래스와 같이 <xref:System.Windows.Forms.Label> 또는 <xref:System.Windows.Forms.TextBox>  
   
--   인터페이스와 같은 입력 <xref:System.IComparable> 또는 <xref:System.IDisposable>  
+- 인터페이스와 같은 입력 <xref:System.IComparable> 또는 <xref:System.IDisposable>  
   
  데이터 형식 반복할 필요 없이 하나의 문에서 여러 변수를 선언할 수 있습니다. 다음 문에서 변수 `i`, `j`, 및 `k` 형식으로 선언 된 `Integer`, `l` 하 고 `m` 으로 `Long`, 및 `x` 및 `y` 로`Single`:  
   

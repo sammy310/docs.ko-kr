@@ -14,10 +14,10 @@ helpviewer_keywords:
 ms.assetid: 55d5904a-f444-4eb5-abd3-6bc74dd14226
 ms.openlocfilehash: 99b04060d4e7c14313655010dc4fbd5ce1c90487
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788676"
 ---
 # <a name="how-to-persist-and-restore-application-scope-properties-across-application-sessions"></a>방법: 애플리케이션 세션 간의 애플리케이션 범위 속성 유지 및 복원
 이 예제에서는 응용 프로그램은 다음 경우에 응용 프로그램 범위 속성 복원 시작 하는 방법 및 응용 프로그램 종료 될 때 응용 프로그램 범위 속성을 유지 하는 방법을 보여 줍니다.  

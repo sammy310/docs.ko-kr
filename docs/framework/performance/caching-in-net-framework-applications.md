@@ -7,11 +7,11 @@ helpviewer_keywords:
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
 ms.openlocfilehash: a57489af2f2af59f128f5d86be844b43c9c49840
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788143"
 ---
 # <a name="caching-in-net-framework-applications"></a>.NET Framework 애플리케이션에서 캐싱
 캐싱을 사용하면 빠른 액세스를 위해 데이터를 메모리에 저장할 수 있습니다. 데이터에 다시 액세스할 때 애플리케이션은 원래 소스에서 검색하는 대신 캐시에서 데이터를 가져올 수 있습니다. 이 경우 성능과 확장성이 향상됩니다. 또한 캐싱을 사용하면 데이터 소스를 일시적으로 사용할 수 없는 경우에도 데이터를 사용할 수 있습니다.  
@@ -24,17 +24,17 @@ ms.locfileid: "59085782"
 ## <a name="caching-data"></a>데이터 캐싱  
  <xref:System.Runtime.Caching> 네임스페이스의 클래스를 사용하여 정보를 캐시할 수 있습니다. 이 네임스페이스의 캐싱 클래스는 다음과 같은 기능을 제공합니다.  
   
--   사용자 지정 캐시 구현을 만들기 위한 기초를 제공하는 추상 형식  
+- 사용자 지정 캐시 구현을 만들기 위한 기초를 제공하는 추상 형식  
   
--   구체적인 메모리 내 개체 캐시 구현  
+- 구체적인 메모리 내 개체 캐시 구현  
   
  추상 기본 캐싱 클래스(<xref:System.Runtime.Caching.ObjectCache>)는 다음과 같은 캐싱 작업을 정의합니다.  
   
--   캐시 항목 만들기 및 관리  
+- 캐시 항목 만들기 및 관리  
   
--   만료 및 제거 정보 지정  
+- 만료 및 제거 정보 지정  
   
--   캐시 항목의 변경 내용에 대한 응답으로 발생하는 이벤트 트리거  
+- 캐시 항목의 변경 내용에 대한 응답으로 발생하는 이벤트 트리거  
   
  <xref:System.Runtime.Caching.MemoryCache> 클래스는 <xref:System.Runtime.Caching.ObjectCache> 클래스의 메모리 내 개체 캐시 구현입니다. 대부분의 캐싱 작업에 <xref:System.Runtime.Caching.MemoryCache> 클래스를 사용할 수 있습니다.  
   
@@ -67,11 +67,11 @@ ms.locfileid: "59085782"
   
  캐싱을 확장하려면 다음 작업을 수행할 수 있습니다.  
   
--   <xref:System.Runtime.Caching.ObjectCache> 클래스에서 파생되는 사용자 지정 클래스를 만든 다음 파생 클래스에 사용자 지정 캐시 구현을 제공합니다.  
+- <xref:System.Runtime.Caching.ObjectCache> 클래스에서 파생되는 사용자 지정 클래스를 만든 다음 파생 클래스에 사용자 지정 캐시 구현을 제공합니다.  
   
--   <xref:System.Runtime.Caching.MemoryCache> 클래스에서 파생되는 클래스를 만들고 파생 클래스를 사용자 지정하거나 확장합니다. 이 작업을 수행하는 방법의 예제는 [ASP.NET 애플리케이션에서 여러 캐시 개체를 사용하여 애플리케이션 데이터 캐시](https://blogs.msdn.com/aspnetue/archive/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application.aspx)를 참조하세요.  
+- <xref:System.Runtime.Caching.MemoryCache> 클래스에서 파생되는 클래스를 만들고 파생 클래스를 사용자 지정하거나 확장합니다. 이 작업을 수행하는 방법의 예제는 [ASP.NET 애플리케이션에서 여러 캐시 개체를 사용하여 애플리케이션 데이터 캐시](https://blogs.msdn.com/aspnetue/archive/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application.aspx)를 참조하세요.  
   
--   <xref:System.Web.Caching.OutputCacheProvider> 클래스에서 파생되는 클래스를 만들고 사용자 지정 출력 캐시 공급자를 사용하도록 응용 프로그램을 구성합니다.  
+- <xref:System.Web.Caching.OutputCacheProvider> 클래스에서 파생되는 클래스를 만들고 사용자 지정 출력 캐시 공급자를 사용하도록 응용 프로그램을 구성합니다.  
   
  자세한 내용은 Scott Guthrie 블로그의 [Extensible Output Caching with ASP.NET 4 (VS 2010 and .NET 4.0 Series)](https://go.microsoft.com/fwlink/?LinkId=185772)(ASP.NET 4(VS 2010 및 .NET 4.0 시리즈)에서 확장 가능한 출력 캐싱) 항목을 참조하세요.  
   

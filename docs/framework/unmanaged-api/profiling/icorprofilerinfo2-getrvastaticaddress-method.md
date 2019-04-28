@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d3749c600d54671071efbec8322e050cde446c27
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791627"
 ---
 # <a name="icorprofilerinfo2getrvastaticaddress-method"></a>ICorProfilerInfo2::GetRVAStaticAddress 메서드
 지정 된 상대 가상 주소 (RVA) 정적 필드의 주소를 가져옵니다.  
@@ -49,9 +49,9 @@ HRESULT GetRVAStaticAddress(
 ## <a name="remarks"></a>설명  
  `GetRVAStaticAddress` 메서드 중 하나를 반환할 수 있습니다.  
   
--   지정 된 정적 필드에 지정 된 컨텍스트에서 주소 할당 되지 않은 경우 CORPROF_E_DATAINCOMPLETE HRESULT입니다.  
+- 지정 된 정적 필드에 지정 된 컨텍스트에서 주소 할당 되지 않은 경우 CORPROF_E_DATAINCOMPLETE HRESULT입니다.  
   
--   가비지 컬렉션 힙에 있을 수 있는 개체의 주소입니다. 이러한 주소 가비지 수집 후 프로파일러 가정 하지 않아야 유효한 지 하므로 가비지 컬렉션 후 잘못 될 수 있습니다.  
+- 가비지 컬렉션 힙에 있을 수 있는 개체의 주소입니다. 이러한 주소 가비지 수집 후 프로파일러 가정 하지 않아야 유효한 지 하므로 가비지 컬렉션 후 잘못 될 수 있습니다.  
   
  클래스의 클래스 생성자 완료 되기 전에 `GetRVAStaticAddress` 정적 필드 중 일부를 이미 초기화 될 수 있습니다 하 고 가비지 컬렉션 개체를 응원 있지만 해당 모든 정적 필드의 경우 CORPROF_E_DATAINCOMPLETE를 반환 합니다.  
   

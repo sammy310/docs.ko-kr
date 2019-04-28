@@ -9,11 +9,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
 ms.openlocfilehash: 8fc92bf84def50bed54a054ae634a8a08c8835c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936884"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>Graphics 개체의 상태 관리
 합니다 <xref:System.Drawing.Graphics> 클래스의 핵심은 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]합니다. 가져올 항목을 그리려면를 <xref:System.Drawing.Graphics> 개체 속성을 설정 하 고 해당 메서드를 호출할 <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>, 등).  
@@ -35,11 +35,11 @@ graphics.DrawRectangle(pen, 10, 10, 200, 100);
 ## <a name="graphics-state"></a>그래픽 상태  
  A <xref:System.Drawing.Graphics> 개체는 그리기 메서드를 같은 제공 둘 <xref:System.Drawing.Graphics.DrawLine%2A> 고 <xref:System.Drawing.Graphics.DrawRectangle%2A>합니다. <xref:System.Drawing.Graphics> 개체는 다음 범주로 나누어진 그래픽 상태를 유지 합니다.  
   
--   품질 설정  
+- 품질 설정  
   
--   변형  
+- 변형  
   
--   클리핑 영역  
+- 클리핑 영역  
   
 ### <a name="quality-settings"></a>품질 설정  
  <xref:System.Drawing.Graphics> 개체에 그려지는 항목의 품질에 영향을 주는 몇 가지 속성이 있습니다. 예를 들어, 설정할 수 있습니다는 <xref:System.Drawing.Graphics.TextRenderingHint%2A> 적용 된 텍스트 앤티앨리어싱 (있는 경우)의 형식을 지정 하는 속성입니다. 품질에 영향을 주는 다른 속성은 <xref:System.Drawing.Graphics.SmoothingMode%2A>, <xref:System.Drawing.Graphics.CompositingMode%2A>를 <xref:System.Drawing.Graphics.CompositingQuality%2A>, 및 <xref:System.Drawing.Graphics.InterpolationMode%2A>합니다.  

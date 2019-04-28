@@ -9,11 +9,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
 ms.openlocfilehash: 14f225f5587379b3efa7b6dc2475f1b697ebb281
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941143"
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>방법: Control 클래스에서 상속
 Windows Form에 사용 하 여 완전 한 사용자 지정 컨트롤을 만들려는 경우에서 상속 해야 하는 <xref:System.Windows.Forms.Control> 클래스입니다. 상속 하는 동안는 <xref:System.Windows.Forms.Control> 클래스는 수행한 자세한 계획 및 구현, 광범위 한 옵션을 사용 하 여도 제공 해야 합니다. 상속할 때 <xref:System.Windows.Forms.Control>, 컨트롤이 작동 되도록 하는 기본적인 기능을 상속 합니다. 고유한 기능은 <xref:System.Windows.Forms.Control> 클래스 키보드 및 마우스를 통해 사용자 입력 처리, 컨트롤의 크기와 범위를 정의 창 핸들을 제공 및 메시지 처리 및 보안을 제공 합니다. 이 경우에는 컨트롤의 그래픽 인터페이스의 실제 렌더링인 그리기를 통합하거나 특정 사용자 상호 작용 기능을 통합하지 않습니다. 사용자 지정 코드를 통해 이러한 모든 사항을 제공해야 합니다.  

@@ -3,11 +3,11 @@ title: <remove> <claimTypeRequirements> 요소
 ms.date: 03/30/2017
 ms.assetid: 8ef05bc4-1950-4ee4-95c5-1c6a394eff7e
 ms.openlocfilehash: 9ab1162ff5d86b8a9d43dae79ebf9c9321119206
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783099"
 ---
 # <a name="remove-of-claimtyperequirements-element"></a>\<제거 >의 \<claimTypeRequirements > 요소
 페더레이션 자격 증명에서 제거할 클레임의 형식을 지정합니다.  

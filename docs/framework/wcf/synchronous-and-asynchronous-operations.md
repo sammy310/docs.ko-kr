@@ -9,11 +9,11 @@ helpviewer_keywords:
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
 ms.openlocfilehash: 3d7e44a468388f6d9a8f30d7fea29ec465cd8664
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935514"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>동기 및 비동기 작업
 이 항목에서는 비동기 서비스 작업의 구현 및 호출에 대해 설명합니다.  
@@ -27,24 +27,24 @@ ms.locfileid: "59770869"
   
  서비스나 클라이언트 구현에서 서비스 계약이 독립되면 WCF 애플리케이션에서 다음과 같은 비동기 실행을 구현할 수 있습니다.  
   
--   클라이언트는 동기 메시지 교환을 사용하여 요청/응답 작업을 비동기적으로 호출할 수 있습니다.  
+- 클라이언트는 동기 메시지 교환을 사용하여 요청/응답 작업을 비동기적으로 호출할 수 있습니다.  
   
--   서비스는 동기 메시지 교환을 사용하여 요청/응답 작업을 비동기적으로 구현할 수 있습니다.  
+- 서비스는 동기 메시지 교환을 사용하여 요청/응답 작업을 비동기적으로 구현할 수 있습니다.  
   
--   클라이언트나 서비스의 구현에 관계없이 메시지 교환은 단방향일 수 있습니다.  
+- 클라이언트나 서비스의 구현에 관계없이 메시지 교환은 단방향일 수 있습니다.  
   
 ### <a name="suggested-asynchronous-scenarios"></a>제안된 비동기 시나리오  
  작업 서비스 구현에서 I/O 작업을 수행하는 경우와 같이 블로킹 호출을 만드는 경우 서비스 작업 구현에서 비동기 접근 방법을 사용하는 것이 좋습니다. 비동기 작업 구현 중인 경우에는 비동기 작업 및 메서드를 호출하여 비동기 호출 경로를 최대한 확장해 보세요. 예를 들면 `BeginOperationTwo()` 내에서 `BeginOperationOne()`를 호출합니다.  
   
--   다음과 같은 경우에는 클라이언트 또는 호출 응용 프로그램에서 비동기 접근 방법을 사용하세요.  
+- 다음과 같은 경우에는 클라이언트 또는 호출 응용 프로그램에서 비동기 접근 방법을 사용하세요.  
   
--   중간 계층 응용 프로그램에서 작업을 호출하는 경우. 이러한 시나리오에 대한 자세한 내용은 [중간 계층 클라이언트 애플리케이션](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)을 참조하세요.  
+- 중간 계층 응용 프로그램에서 작업을 호출하는 경우. 이러한 시나리오에 대한 자세한 내용은 [중간 계층 클라이언트 애플리케이션](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)을 참조하세요.  
   
--   ASP.NET 페이지 내에서 작업을 호출하는 경우에는 비동기 페이지를 사용하세요.  
+- ASP.NET 페이지 내에서 작업을 호출하는 경우에는 비동기 페이지를 사용하세요.  
   
--   Windows Forms 또는 WPF(Windows Presentation Foundation) 등의 단일 스레드 애플리케이션에서 작업을 호출하는 경우. 이벤트 기반의 비동기 호출 모델을 사용하는 경우에는 결과 이벤트가 UI 스레드에서 발생하기 때문에 사용자가 직접 여러 스레드를 처리할 필요 없이 응용 프로그램에 응답이 추가됩니다.  
+- Windows Forms 또는 WPF(Windows Presentation Foundation) 등의 단일 스레드 애플리케이션에서 작업을 호출하는 경우. 이벤트 기반의 비동기 호출 모델을 사용하는 경우에는 결과 이벤트가 UI 스레드에서 발생하기 때문에 사용자가 직접 여러 스레드를 처리할 필요 없이 응용 프로그램에 응답이 추가됩니다.  
   
--   일반적으로 동기 호출과 비동기 호출 중에서 선택해야 하는 경우에는 비동기 호출을 선택하세요.  
+- 일반적으로 동기 호출과 비동기 호출 중에서 선택해야 하는 경우에는 비동기 호출을 선택하세요.  
   
 ### <a name="implementing-an-asynchronous-service-operation"></a>비동기 서비스 작업 구현  
  다음 세 가지 방법 중 하나를 사용하여 비동기 작업을 구현할 수 있습니다.  
@@ -118,11 +118,11 @@ public class AsyncExample
   
  클라이언트 응용 프로그램에서 호출되는 방식에 관계없이 비동기적으로 실행되는 계약 작업 `X`를 정의하려면 다음을 수행합니다.  
   
--   패턴 `BeginOperation` 및 `EndOperation`을 사용하여 두 개의 메서드를 정의합니다.  
+- 패턴 `BeginOperation` 및 `EndOperation`을 사용하여 두 개의 메서드를 정의합니다.  
   
--   `BeginOperation` 메서드는 작업에 대한 `in` 및 `ref` 매개 변수를 포함하고 <xref:System.IAsyncResult> 형식을 반환합니다.  
+- `BeginOperation` 메서드는 작업에 대한 `in` 및 `ref` 매개 변수를 포함하고 <xref:System.IAsyncResult> 형식을 반환합니다.  
   
--   `EndOperation` 메서드는 <xref:System.IAsyncResult> 및 `out` 매개 변수뿐 아니라 `ref` 매개 변수를 포함하고 작업 반환 형식을 반환합니다.  
+- `EndOperation` 메서드는 <xref:System.IAsyncResult> 및 `out` 매개 변수뿐 아니라 `ref` 매개 변수를 포함하고 작업 반환 형식을 반환합니다.  
   
  다음 메서드를 예로 들 수 있습니다.  
   

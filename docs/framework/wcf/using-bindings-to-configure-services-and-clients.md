@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
 ms.openlocfilehash: 3b4f00617418d5f84a0da5d0e531e1f671b58bb1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791380"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>바인딩을 사용하여 서비스 및 클라이언트 구성
 바인딩은 엔드포인트에 연결하는 데 필요한 통신 세부 사항을 지정하는 개체입니다. 보다 구체적으로, 바인딩에는 해당 엔드포인트가나 클라이언트 채널에 사용할 전송, 통신 형식(메시지 인코딩) 및 프로토콜의 고유 정보를 정의하여 클라이언트 또는 서비스 런타임을 만드는 데 사용되는 구성 정보가 들어 있습니다. 작동 하는 Windows Communication Foundation (WCF) 서비스를 만들려면 각 끝점에 서비스 바인딩이 필요 합니다. 이 항목에서는 바인딩 정의, 바인딩이 정의되는 방법 및 엔드포인트에 대해 특정 바인딩이 지정되는 방법에 대해 설명합니다.  
@@ -29,13 +29,13 @@ ms.locfileid: "59323150"
 ## <a name="system-provided-bindings"></a>시스템 제공 바인딩  
  WCF에는 대부분의 응용 프로그램 요구 사항 및 시나리오에 맞게 설계 된 시스템 제공 바인딩 집합이 포함 되어 있습니다. 다음 클래스는 시스템 제공 바인딩의 몇 가지 예를 나타냅니다.  
   
--   <xref:System.ServiceModel.BasicHttpBinding>: 웹 서비스에 연결 하기 위한 적절 한 바인딩 WS 따르는 HTTP 프로토콜-Basic Profile 1.1 사양 (예를 들어, ASP.NET 웹 서비스 [ASMX]-기반 서비스).  
+- <xref:System.ServiceModel.BasicHttpBinding>: 웹 서비스에 연결 하기 위한 적절 한 바인딩 WS 따르는 HTTP 프로토콜-Basic Profile 1.1 사양 (예를 들어, ASP.NET 웹 서비스 [ASMX]-기반 서비스).  
   
--   <xref:System.ServiceModel.WSHttpBinding>: HTTP 프로토콜 바인딩입니다 웹 따르는 끝점에 연결 하기 위한 적합 한 서비스 사양 프로토콜입니다.  
+- <xref:System.ServiceModel.WSHttpBinding>: HTTP 프로토콜 바인딩입니다 웹 따르는 끝점에 연결 하기 위한 적합 한 서비스 사양 프로토콜입니다.  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>: .NET 이진 인코딩 및 프레이밍 함께 기술을 사용 하 여 명명 된 파이프 전송 Windows를 사용 하 여 동일한 컴퓨터에서 다른 WCF 끝점에 연결.  
+- <xref:System.ServiceModel.NetNamedPipeBinding>: .NET 이진 인코딩 및 프레이밍 함께 기술을 사용 하 여 명명 된 파이프 전송 Windows를 사용 하 여 동일한 컴퓨터에서 다른 WCF 끝점에 연결.  
   
--   <xref:System.ServiceModel.NetMsmqBinding>: .NET 이진 인코딩 및 프레이밍 기술을 함께 사용 하 여 메시지 큐 (MSMQ 라고도 함)를 사용 하 여 다른 WCF 끝점을 사용 하 여 대기 중인된 메시지 연결을 만듭니다.  
+- <xref:System.ServiceModel.NetMsmqBinding>: .NET 이진 인코딩 및 프레이밍 기술을 함께 사용 하 여 메시지 큐 (MSMQ 라고도 함)를 사용 하 여 다른 WCF 끝점을 사용 하 여 대기 중인된 메시지 연결을 만듭니다.  
   
  설명 된 시스템 제공 바인딩의 전체 목록을 참조 하세요 [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)합니다.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "59323150"
 ## <a name="code-and-configuration"></a>코드 및 구성  
  코드 또는 구성을 통해 바인딩을 정의하거나 구성할 수 있습니다. 이러한 두 방법은 사용되는 바인딩 형식에 관계가 없습니다. 예를 들어 시스템 제공 바인딩 또는 <xref:System.ServiceModel.Channels.CustomBinding> 바인딩을 사용하는지에 관계가 없습니다. 일반적으로 코드를 사용하면 컴파일 시 바인딩 정의를 완전히 제어할 수 있습니다. 시스템 관리자 또는 WCF 서비스 또는 바인딩 매개 변수를 변경 하는 클라이언트의 사용자 허용 반면에 구성을 사용 합니다. 특정 컴퓨터 요구를 예측 하 고 네트워크에 WCF 응용 프로그램을 배포 하는 상태를 방법이 없기 때문에이 유연성은 바람직한 경우가 많습니다. 바인딩(및 주소 지정) 정보를 코드와 구분하면 관리자가 응용 프로그램을 다시 컴파일하거나 다시 배포할 필요 없이 바인딩 세부 정보를 변경할 수 있습니다. 바인딩이 코드에서 정의된 경우 구성 파일에서 수행된 구성 기반 정의를 재정의합니다. 이러한 방법의 예는 다음 항목을 참조하세요.  
   
--   [방법: 관리 되는 응용 프로그램에서 WCF 서비스 호스팅](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md) 코드에서 바인딩을 만드는 방법의 예제를 제공 합니다.  
+- [방법: 관리 되는 응용 프로그램에서 WCF 서비스 호스팅](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md) 코드에서 바인딩을 만드는 방법의 예제를 제공 합니다.  
   
--   [자습서: Windows Communication Foundation 클라이언트 만들기](../../../docs/framework/wcf/how-to-create-a-wcf-client.md) 구성을 사용 하 여 클라이언트를 만드는 예제를 제공 합니다.  
+- [자습서: Windows Communication Foundation 클라이언트 만들기](../../../docs/framework/wcf/how-to-create-a-wcf-client.md) 구성을 사용 하 여 클라이언트를 만드는 예제를 제공 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

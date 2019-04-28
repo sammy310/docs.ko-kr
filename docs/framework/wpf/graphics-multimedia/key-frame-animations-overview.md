@@ -7,11 +7,11 @@ helpviewer_keywords:
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
 ms.openlocfilehash: eda91ab6d81150749dc542139949fb92684c0fe1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785816"
 ---
 # <a name="key-frame-animations-overview"></a>키 프레임 애니메이션 개요
 이 항목에서는 키 프레임 애니메이션을 소개합니다. 키 프레임 애니메이션을 사용하면 두 개 이상의 대상 값을 사용하여 애니메이션 효과를 주고 애니메이션의 보간 방법을 제어할 수 있습니다.  
@@ -28,11 +28,11 @@ ms.locfileid: "59316741"
   
  키 프레임 애니메이션으로 애니메이션 효과를 주려면 다음 단계를 완료합니다.  
   
--   애니메이션을 선언 하 고 지정 해당 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>를 from/to/by 애니메이션의 경우와 같이 합니다.  
+- 애니메이션을 선언 하 고 지정 해당 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>를 from/to/by 애니메이션의 경우와 같이 합니다.  
   
--   각 대상 값에 대해 적절 한 형식의 키 프레임을 만들고, 해당 값을 설정 하 고 <xref:System.Windows.Media.Animation.KeyTime>, 애니메이션의 추가할 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> 컬렉션입니다.  
+- 각 대상 값에 대해 적절 한 형식의 키 프레임을 만들고, 해당 값을 설정 하 고 <xref:System.Windows.Media.Animation.KeyTime>, 애니메이션의 추가할 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> 컬렉션입니다.  
   
--   From/To/By 애니메이션의 경우처럼 애니메이션을 속성에 연결합니다. storyboard를 사용하여 속성에 애니메이션을 적용하는 방법에 대한 자세한 내용은 [Storyboard 개요](storyboards-overview.md)를 참조하세요.  
+- From/To/By 애니메이션의 경우처럼 애니메이션을 속성에 연결합니다. storyboard를 사용하여 속성에 애니메이션을 적용하는 방법에 대한 자세한 내용은 [Storyboard 개요](storyboards-overview.md)를 참조하세요.  
   
  다음 예제에서는 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 애니메이션 효과를 주는 <xref:System.Windows.Shapes.Rectangle> 네 개의 서로 다른 위치에 요소입니다.  
   
@@ -85,33 +85,33 @@ ms.locfileid: "59316741"
   
  키 프레임의 주요 목적은 지정 하는 것을 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 및 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>합니다. 모든 키 프레임 형식은 이러한 두 가지 속성을 제공합니다.  
   
--   <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 속성에 해당 키 프레임에 대 한 대상 값을 지정 합니다.  
+- <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 속성에 해당 키 프레임에 대 한 대상 값을 지정 합니다.  
   
--   합니다 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 속성을 지정 하는 경우 (애니메이션의 내 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>) 키 프레임의 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 에 도달 합니다.  
+- 합니다 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 속성을 지정 하는 경우 (애니메이션의 내 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>) 키 프레임의 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 에 도달 합니다.  
   
  에 정의 된 순서 대로 키 프레임을 반복 하는 키 프레임 애니메이션이 시작 되 면 해당 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 속성입니다.  
   
--   애니메이션 대상 속성의 현재 값 간에 전환을 만듭니다 시간 0에 키 프레임이 없으면 있으면 및 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 첫 번째 키 프레임;이 고, 그렇지 애니메이션의 출력 값은 첫 번째 키 프레임의 값입니다.  
+- 애니메이션 대상 속성의 현재 값 간에 전환을 만듭니다 시간 0에 키 프레임이 없으면 있으면 및 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 첫 번째 키 프레임;이 고, 그렇지 애니메이션의 출력 값은 첫 번째 키 프레임의 값입니다.  
   
--   애니메이션 간에 전환을 만듭니다는 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 에서 두 번째 키 프레임으로 지정한 보간 방법을 사용 하 여 첫 번째 및 두 번째 키 프레임입니다. 첫 번째 키 프레임의 전환을 시작 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 될 때 종료 하 고 두 번째 키 프레임의 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 에 도달 합니다.  
+- 애니메이션 간에 전환을 만듭니다는 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 에서 두 번째 키 프레임으로 지정한 보간 방법을 사용 하 여 첫 번째 및 두 번째 키 프레임입니다. 첫 번째 키 프레임의 전환을 시작 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 될 때 종료 하 고 두 번째 키 프레임의 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 에 도달 합니다.  
   
--   애니메이션이 지속되면서 각 후속 키 프레임 및 해당 이전 키 프레임 간에 전환이 생성됩니다.  
+- 애니메이션이 지속되면서 각 후속 키 프레임 및 해당 이전 키 프레임 간에 전환이 생성됩니다.  
   
--   마지막으로 가장 큰 키 시간을 사용 하 여 키 프레임의 값은 애니메이션 전환 하는 애니메이션의 보다 작거나 같은 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>합니다.  
+- 마지막으로 가장 큰 키 시간을 사용 하 여 키 프레임의 값은 애니메이션 전환 하는 애니메이션의 보다 작거나 같은 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>합니다.  
   
  경우 애니메이션의 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 은 <xref:System.Windows.Duration.Automatic%2A> 또는 해당 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 마지막 키 프레임 애니메이션이 종료 시간과 같습니다. 그렇지 않고 애니메이션의 <xref:System.Windows.Duration> 될 때까지 키 프레임 값의 끝에 도달 하면 애니메이션 포함 마지막 키 프레임의 키 시간 보다 크면 해당 <xref:System.Windows.Duration>합니다. 모든 애니메이션 처럼 키 프레임 애니메이션을 사용 하 여 해당 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 있는지 여부를 보유 최종 값은 활성 기간의 끝에 도달 하면 결정할 속성입니다. 자세한 내용은 [타이밍 동작 개요](timing-behaviors-overview.md)를 참조하세요.  
   
  다음 예제에서는 합니다 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 보여 주기 위해 앞의 예제에 정의 된 개체 하는 방법을 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 및 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 속성의 작동 합니다.  
   
--   첫 번째 키 프레임은 애니메이션의 출력 값을 0으로 즉시 설정합니다.  
+- 첫 번째 키 프레임은 애니메이션의 출력 값을 0으로 즉시 설정합니다.  
   
--   두 번째 키 프레임은 0에서 350으로 애니메이션 효과를 줍니다. 이 키 프레임은 첫 번째 키 프레임이 종료된 후(시간 = 0초) 시작되고 2초 동안 재생된 후 시간 = 0:0:2에 종료됩니다.  
+- 두 번째 키 프레임은 0에서 350으로 애니메이션 효과를 줍니다. 이 키 프레임은 첫 번째 키 프레임이 종료된 후(시간 = 0초) 시작되고 2초 동안 재생된 후 시간 = 0:0:2에 종료됩니다.  
   
--   세 번째 키 프레임은 350에서 50으로 애니메이션 효과를 줍니다. 이 키 프레임은 두 번째 키 프레임이 종료된 후(시간 = 2초) 시작되고 5초 동안 재생된 후 시간 = 0:0:7에 종료됩니다.  
+- 세 번째 키 프레임은 350에서 50으로 애니메이션 효과를 줍니다. 이 키 프레임은 두 번째 키 프레임이 종료된 후(시간 = 2초) 시작되고 5초 동안 재생된 후 시간 = 0:0:7에 종료됩니다.  
   
--   네 번째 키 프레임은 50에서 200으로 애니메이션 효과를 줍니다. 이 키 프레임은 세 번째 키 프레임이 종료된 후(시간 = 7초) 시작되고 1초 동안 재생된 후 시간 = 0:0:8에 종료됩니다.  
+- 네 번째 키 프레임은 50에서 200으로 애니메이션 효과를 줍니다. 이 키 프레임은 세 번째 키 프레임이 종료된 후(시간 = 7초) 시작되고 1초 동안 재생된 후 시간 = 0:0:8에 종료됩니다.  
   
--   때문에 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 애니메이션의 속성을 10 초로 설정 된, 애니메이션 끝나기 전에 2 초에 대 한 최종 값을 보유 시간 = 0:0:10입니다.  
+- 때문에 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 애니메이션의 속성을 10 초로 설정 된, 애니메이션 끝나기 전에 2 초에 대 한 최종 값을 보유 시간 = 0:0:10입니다.  
   
  [!code-xaml[keyframes_ovw_snippet#BasicKeyFrameExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  
   
@@ -204,26 +204,26 @@ ms.locfileid: "59316741"
 ### <a name="timespan-values"></a>TimeSpan 값  
  사용할 수 있습니다 <xref:System.TimeSpan> 지정 하는 값을 <xref:System.Windows.Media.Animation.KeyTime>입니다. 값은 0보다 크거나 같고 애니메이션의 지속 시간보다 작거나 같아야 합니다. 다음 예제에서는 기간이 10초이고 해당 키 시간이 시간 값으로 지정된 4개의 키 프레임을 갖는 애니메이션을 보여 줍니다.  
   
--   첫 번째 키 프레임은 처음 3초 동안 기준 값에서 100까지 애니메이션 효과를 준 다음 시간 = 0:0:03에서 끝납니다.  
+- 첫 번째 키 프레임은 처음 3초 동안 기준 값에서 100까지 애니메이션 효과를 준 다음 시간 = 0:0:03에서 끝납니다.  
   
--   두 번째 키 프레임은 100에서 200으로 애니메이션 효과를 줍니다. 이 키 프레임은 첫 번째 키 프레임이 종료된 후(시간 = 3초) 시작되고 5초 동안 재생된 후 시간 = 0:0:8에 종료됩니다.  
+- 두 번째 키 프레임은 100에서 200으로 애니메이션 효과를 줍니다. 이 키 프레임은 첫 번째 키 프레임이 종료된 후(시간 = 3초) 시작되고 5초 동안 재생된 후 시간 = 0:0:8에 종료됩니다.  
   
--   세 번째 키 프레임은 200에서 500으로 애니메이션 효과를 줍니다. 이 키 프레임은 두 번째 키 프레임이 종료된 후(시간 = 8초) 시작되고 1초 동안 재생된 후 시간 = 0:0:9에 종료됩니다.  
+- 세 번째 키 프레임은 200에서 500으로 애니메이션 효과를 줍니다. 이 키 프레임은 두 번째 키 프레임이 종료된 후(시간 = 8초) 시작되고 1초 동안 재생된 후 시간 = 0:0:9에 종료됩니다.  
   
--   네 번째 키 프레임은 500에서 600으로 애니메이션 효과를 줍니다. 이 키 프레임은 세 번째 키 프레임이 종료된 후(시간 = 9초) 시작되고 1초 동안 재생된 후 시간 = 0:0:10에 종료됩니다.  
+- 네 번째 키 프레임은 500에서 600으로 애니메이션 효과를 줍니다. 이 키 프레임은 세 번째 키 프레임이 종료된 후(시간 = 9초) 시작되고 1초 동안 재생된 후 시간 = 0:0:10에 종료됩니다.  
   
  [!code-xaml[keyframes_ovw_snippet#TimeSpanKeyTimeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#timespankeytimeexample)]  
   
 ### <a name="percentage-values"></a>백분율 값  
  백분율 값을 키 프레임 애니메이션의 일정 비율에서 끝나도록 지정 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>합니다. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서는 숫자를 입력한 후 `%` 기호를 입력하여 백분율을 지정합니다. 코드를 사용 하 여는 <xref:System.Windows.Media.Animation.KeyTime.FromPercent%2A> 메서드를 전달는 <xref:System.Double> 백분율을 나타내는입니다. 값은 0보다 크거나 같고 100%보다 작거나 같아야 합니다. 다음 예제에서는 기간이 10초이고 해당 키 시간이 백분율로 지정된 4개의 키 프레임을 갖는 애니메이션을 보여 줍니다.  
   
--   첫 번째 키 프레임은 처음 3초 동안 기준 값에서 100까지 애니메이션 효과를 준 다음 시간 = 0:0:3에서 끝납니다.  
+- 첫 번째 키 프레임은 처음 3초 동안 기준 값에서 100까지 애니메이션 효과를 준 다음 시간 = 0:0:3에서 끝납니다.  
   
--   두 번째 키 프레임은 100에서 200으로 애니메이션 효과를 줍니다. 이 키 프레임은 첫 번째 키 프레임이 종료된 후(시간 = 3초) 시작되고 5초 동안 재생된 후 시간 = 0:0:8(0.8 * 10 = 8)에 종료됩니다.  
+- 두 번째 키 프레임은 100에서 200으로 애니메이션 효과를 줍니다. 이 키 프레임은 첫 번째 키 프레임이 종료된 후(시간 = 3초) 시작되고 5초 동안 재생된 후 시간 = 0:0:8(0.8 * 10 = 8)에 종료됩니다.  
   
--   세 번째 키 프레임은 200에서 500으로 애니메이션 효과를 줍니다. 이 키 프레임은 두 번째 키 프레임이 종료된 후(시간 = 8초) 시작되고 1초 동안 재생된 후 시간 = 0:0:9(0.9 * 10 = 9)에 종료됩니다.  
+- 세 번째 키 프레임은 200에서 500으로 애니메이션 효과를 줍니다. 이 키 프레임은 두 번째 키 프레임이 종료된 후(시간 = 8초) 시작되고 1초 동안 재생된 후 시간 = 0:0:9(0.9 * 10 = 9)에 종료됩니다.  
   
--   네 번째 키 프레임은 500에서 600으로 애니메이션 효과를 줍니다. 이 키 프레임은 세 번째 키 프레임이 종료된 후(시간 = 9초) 시작되고 1초 동안 재생된 후 시간 = 0:0:10(1 * 10 = 10)에 종료됩니다.  
+- 네 번째 키 프레임은 500에서 600으로 애니메이션 효과를 줍니다. 이 키 프레임은 세 번째 키 프레임이 종료된 후(시간 = 9초) 시작되고 1초 동안 재생된 후 시간 = 0:0:10(1 * 10 = 10)에 종료됩니다.  
   
  [!code-xaml[keyframes_ovw_snippet#PercentageKeyTimeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#percentagekeytimeexample)]  
   
@@ -232,13 +232,13 @@ ms.locfileid: "59316741"
   
  <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> 키 시간 나눈 사용 가능한 시간 동일 하 게 각 키 프레임의 종료 시간을 확인 하려면 키 프레임 수입니다. 다음 예제에서는 기간이 10 초를 사용 하 여 애니메이션을 보여 줍니다. 및 해당 키 시간이 4 개의 키 프레임으로 지정 된 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>합니다.  
   
--   첫 번째 키 프레임은 처음 2.5초 동안 기준 값에서 100까지 애니메이션 효과를 준 다음 시간 = 0:0:2.5에서 끝납니다.  
+- 첫 번째 키 프레임은 처음 2.5초 동안 기준 값에서 100까지 애니메이션 효과를 준 다음 시간 = 0:0:2.5에서 끝납니다.  
   
--   두 번째 키 프레임은 100에서 200으로 애니메이션 효과를 줍니다. 이 키 프레임은 첫 번째 키 프레임이 종료된 후(시간 = 2.5초) 시작되고 약 2.5초 동안 재생된 후 시간 = 0:0:5에 종료됩니다.  
+- 두 번째 키 프레임은 100에서 200으로 애니메이션 효과를 줍니다. 이 키 프레임은 첫 번째 키 프레임이 종료된 후(시간 = 2.5초) 시작되고 약 2.5초 동안 재생된 후 시간 = 0:0:5에 종료됩니다.  
   
--   세 번째 키 프레임은 200에서 500으로 애니메이션 효과를 줍니다. 이 키 프레임은 두 번째 키 프레임이 종료된 후(시간 = 5초) 시작되고 2.5초 동안 재생된 후 시간 = 0:0:7.5에 종료됩니다.  
+- 세 번째 키 프레임은 200에서 500으로 애니메이션 효과를 줍니다. 이 키 프레임은 두 번째 키 프레임이 종료된 후(시간 = 5초) 시작되고 2.5초 동안 재생된 후 시간 = 0:0:7.5에 종료됩니다.  
   
--   네 번째 키 프레임은 500에서 600으로 애니메이션 효과를 줍니다. 이 키 프레임은 두 번째 키 프레임이 종료된 후(시간 = 7.5초) 시작되고 2.5초 동안 재생된 후 시간 = 0:0:1에 종료됩니다.  
+- 네 번째 키 프레임은 500에서 600으로 애니메이션 효과를 줍니다. 이 키 프레임은 두 번째 키 프레임이 종료된 후(시간 = 7.5초) 시작되고 2.5초 동안 재생된 후 시간 = 0:0:1에 종료됩니다.  
   
  [!code-xaml[keyframes_ovw_snippet#UniformKeyTimeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#uniformkeytimeexample)]  
   
@@ -263,11 +263,11 @@ ms.locfileid: "59316741"
   
 2. 키 프레임 애니메이션이 정방향 반복을 완료하는 데 걸리는 총 시간을 나타내는 애니메이션의 *총 보간 시간*을 확인합니다.  
   
-    1.  경우 애니메이션의 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 아닙니다 <xref:System.Windows.Duration.Automatic%2A> 또는 <xref:System.Windows.Duration.Forever%2A>, 총 보간 시간은 애니메이션의 값인 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 속성입니다.  
+    1. 경우 애니메이션의 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 아닙니다 <xref:System.Windows.Duration.Automatic%2A> 또는 <xref:System.Windows.Duration.Forever%2A>, 총 보간 시간은 애니메이션의 값인 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 속성입니다.  
   
-    2.  그렇지 않으면 총 보간 시간은 가장 큽니다 <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> 있을 경우 해당 키 프레임 간에 지정 된 값입니다.  
+    2. 그렇지 않으면 총 보간 시간은 가장 큽니다 <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> 있을 경우 해당 키 프레임 간에 지정 된 값입니다.  
   
-    3.  이 값이 없으면 총 보간 시간은 1초입니다.  
+    3. 이 값이 없으면 총 보간 시간은 1초입니다.  
   
 3. 총 보간 시간 값을 확인 하는 데 <xref:System.Windows.Media.Animation.KeyTimeType.Percent> <xref:System.Windows.Media.Animation.KeyTime> 값입니다.  
   
