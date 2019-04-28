@@ -12,42 +12,42 @@ helpviewer_keywords:
 - buttons [Windows Forms], displaying tabs as
 ms.assetid: 7c6cc443-ed62-4d26-b94d-b8913b44f773
 ms.openlocfilehash: 05df05a52914f27a4b62cf7bde92e5d942b6ea06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904269"
 ---
-# <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a><span data-ttu-id="f4802-102">방법: Windows Forms TabControl의 모양 변경</span><span class="sxs-lookup"><span data-stu-id="f4802-102">How to: Change the Appearance of the Windows Forms TabControl</span></span>
-<span data-ttu-id="f4802-103">속성을 사용 하 여 Windows Forms에서 탭의 모양을 변경할 수 있습니다 합니다 <xref:System.Windows.Forms.TabControl> 하며 <xref:System.Windows.Forms.TabPage> 컨트롤에서 개별 탭에 구성 하는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="f4802-103">You can change the appearance of tabs in Windows Forms by using properties of the <xref:System.Windows.Forms.TabControl> and the <xref:System.Windows.Forms.TabPage> objects that make up the individual tabs on the control.</span></span> <span data-ttu-id="f4802-104">이러한 속성을 설정 하면 수 탭에서 이미지를 표시, 가로로 대신 세로 탭이 표시, 탭의 여러 행을 표시 및 사용 하도록 설정 또는 탭을 프로그래밍 방식으로 사용 하지 않도록 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="f4802-104">By setting these properties, you can display images on tabs, display tabs vertically instead of horizontally, display multiple rows of tabs, and enable or disable tabs programmatically.</span></span>  
+# <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a><span data-ttu-id="d0549-102">방법: Windows Forms TabControl의 모양 변경</span><span class="sxs-lookup"><span data-stu-id="d0549-102">How to: Change the Appearance of the Windows Forms TabControl</span></span>
+<span data-ttu-id="d0549-103">속성을 사용 하 여 Windows Forms에서 탭의 모양을 변경할 수 있습니다 합니다 <xref:System.Windows.Forms.TabControl> 하며 <xref:System.Windows.Forms.TabPage> 컨트롤에서 개별 탭에 구성 하는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="d0549-103">You can change the appearance of tabs in Windows Forms by using properties of the <xref:System.Windows.Forms.TabControl> and the <xref:System.Windows.Forms.TabPage> objects that make up the individual tabs on the control.</span></span> <span data-ttu-id="d0549-104">이러한 속성을 설정 하면 수 탭에서 이미지를 표시, 가로로 대신 세로 탭이 표시, 탭의 여러 행을 표시 및 사용 하도록 설정 또는 탭을 프로그래밍 방식으로 사용 하지 않도록 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0549-104">By setting these properties, you can display images on tabs, display tabs vertically instead of horizontally, display multiple rows of tabs, and enable or disable tabs programmatically.</span></span>  
   
-### <a name="to-display-an-icon-on-the-label-part-of-a-tab"></a><span data-ttu-id="f4802-105">탭 레이블 부분 아이콘을 표시 하려면</span><span class="sxs-lookup"><span data-stu-id="f4802-105">To display an icon on the label part of a tab</span></span>  
+### <a name="to-display-an-icon-on-the-label-part-of-a-tab"></a><span data-ttu-id="d0549-105">탭 레이블 부분 아이콘을 표시 하려면</span><span class="sxs-lookup"><span data-stu-id="d0549-105">To display an icon on the label part of a tab</span></span>  
   
-1. <span data-ttu-id="f4802-106">추가 <xref:System.Windows.Forms.ImageList> 컨트롤을 폼입니다.</span><span class="sxs-lookup"><span data-stu-id="f4802-106">Add an <xref:System.Windows.Forms.ImageList> control to the form.</span></span>  
+1. <span data-ttu-id="d0549-106">추가 <xref:System.Windows.Forms.ImageList> 컨트롤을 폼입니다.</span><span class="sxs-lookup"><span data-stu-id="d0549-106">Add an <xref:System.Windows.Forms.ImageList> control to the form.</span></span>  
   
-2. <span data-ttu-id="f4802-107">이미지 목록에 이미지를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="f4802-107">Add images to the image list.</span></span>  
+2. <span data-ttu-id="d0549-107">이미지 목록에 이미지를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0549-107">Add images to the image list.</span></span>  
   
-     <span data-ttu-id="f4802-108">이미지 목록에 대 한 자세한 내용은 참조 하세요. [ImageList 구성 요소](imagelist-component-windows-forms.md) 고 [방법: 제거 이미지는 Windows Forms ImageList 구성 요소 추가 또는](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="f4802-108">For more information about image lists, see [ImageList Component](imagelist-component-windows-forms.md) and [How to: Add or Remove Images with the Windows Forms ImageList Component](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).</span></span>  
+     <span data-ttu-id="d0549-108">이미지 목록에 대 한 자세한 내용은 참조 하세요. [ImageList 구성 요소](imagelist-component-windows-forms.md) 고 [방법: 제거 이미지는 Windows Forms ImageList 구성 요소 추가 또는](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="d0549-108">For more information about image lists, see [ImageList Component](imagelist-component-windows-forms.md) and [How to: Add or Remove Images with the Windows Forms ImageList Component](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).</span></span>  
   
-3. <span data-ttu-id="f4802-109">설정를 <xref:System.Windows.Forms.TabControl.ImageList%2A> 의 속성을 <xref:System.Windows.Forms.TabControl> 에 <xref:System.Windows.Forms.ImageList> 컨트롤.</span><span class="sxs-lookup"><span data-stu-id="f4802-109">Set the <xref:System.Windows.Forms.TabControl.ImageList%2A> property of the <xref:System.Windows.Forms.TabControl> to the <xref:System.Windows.Forms.ImageList> control.</span></span>  
+3. <span data-ttu-id="d0549-109">설정를 <xref:System.Windows.Forms.TabControl.ImageList%2A> 의 속성을 <xref:System.Windows.Forms.TabControl> 에 <xref:System.Windows.Forms.ImageList> 컨트롤.</span><span class="sxs-lookup"><span data-stu-id="d0549-109">Set the <xref:System.Windows.Forms.TabControl.ImageList%2A> property of the <xref:System.Windows.Forms.TabControl> to the <xref:System.Windows.Forms.ImageList> control.</span></span>  
   
-4. <span data-ttu-id="f4802-110">설정 합니다 <xref:System.Windows.Forms.TabPage.ImageIndex%2A> 의 속성은 <xref:System.Windows.Forms.TabPage> 목록에서 적절 한 이미지의 인덱스입니다.</span><span class="sxs-lookup"><span data-stu-id="f4802-110">Set the <xref:System.Windows.Forms.TabPage.ImageIndex%2A> property of the <xref:System.Windows.Forms.TabPage> to the index of an appropriate image in the list.</span></span>  
+4. <span data-ttu-id="d0549-110">설정 합니다 <xref:System.Windows.Forms.TabPage.ImageIndex%2A> 의 속성은 <xref:System.Windows.Forms.TabPage> 목록에서 적절 한 이미지의 인덱스입니다.</span><span class="sxs-lookup"><span data-stu-id="d0549-110">Set the <xref:System.Windows.Forms.TabPage.ImageIndex%2A> property of the <xref:System.Windows.Forms.TabPage> to the index of an appropriate image in the list.</span></span>  
   
-### <a name="to-create-multiple-rows-of-tabs"></a><span data-ttu-id="f4802-111">여러 행의 탭을 만들려면</span><span class="sxs-lookup"><span data-stu-id="f4802-111">To create multiple rows of tabs</span></span>  
+### <a name="to-create-multiple-rows-of-tabs"></a><span data-ttu-id="d0549-111">여러 행의 탭을 만들려면</span><span class="sxs-lookup"><span data-stu-id="d0549-111">To create multiple rows of tabs</span></span>  
   
-1. <span data-ttu-id="f4802-112">탭 페이지 수를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="f4802-112">Add the number of tab pages you want.</span></span>  
+1. <span data-ttu-id="d0549-112">탭 페이지 수를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0549-112">Add the number of tab pages you want.</span></span>  
   
-2. <span data-ttu-id="f4802-113">설정 합니다 <xref:System.Windows.Forms.TabControl.Multiline%2A> 의 속성을 <xref:System.Windows.Forms.TabControl> 에 `true`.</span><span class="sxs-lookup"><span data-stu-id="f4802-113">Set the <xref:System.Windows.Forms.TabControl.Multiline%2A> property of the <xref:System.Windows.Forms.TabControl> to `true`.</span></span>  
+2. <span data-ttu-id="d0549-113">설정 합니다 <xref:System.Windows.Forms.TabControl.Multiline%2A> 의 속성을 <xref:System.Windows.Forms.TabControl> 에 `true`.</span><span class="sxs-lookup"><span data-stu-id="d0549-113">Set the <xref:System.Windows.Forms.TabControl.Multiline%2A> property of the <xref:System.Windows.Forms.TabControl> to `true`.</span></span>  
   
-3. <span data-ttu-id="f4802-114">탭 여러 행에 표시 되지 않는 경우 설정 합니다 <xref:System.Windows.Forms.Control.Width%2A> 의 속성을 <xref:System.Windows.Forms.TabControl> 모든 탭 보다 더 작게 할 합니다.</span><span class="sxs-lookup"><span data-stu-id="f4802-114">If the tabs do not already appear in multiple rows, set the <xref:System.Windows.Forms.Control.Width%2A> property of the <xref:System.Windows.Forms.TabControl> to be narrower than all the tabs.</span></span>  
+3. <span data-ttu-id="d0549-114">탭 여러 행에 표시 되지 않는 경우 설정 합니다 <xref:System.Windows.Forms.Control.Width%2A> 의 속성을 <xref:System.Windows.Forms.TabControl> 모든 탭 보다 더 작게 할 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0549-114">If the tabs do not already appear in multiple rows, set the <xref:System.Windows.Forms.Control.Width%2A> property of the <xref:System.Windows.Forms.TabControl> to be narrower than all the tabs.</span></span>  
   
-### <a name="to-arrange-tabs-on-the-side-of-the-control"></a><span data-ttu-id="f4802-115">탭 컨트롤의 측면을 정렬 하려면</span><span class="sxs-lookup"><span data-stu-id="f4802-115">To arrange tabs on the side of the control</span></span>  
+### <a name="to-arrange-tabs-on-the-side-of-the-control"></a><span data-ttu-id="d0549-115">탭 컨트롤의 측면을 정렬 하려면</span><span class="sxs-lookup"><span data-stu-id="d0549-115">To arrange tabs on the side of the control</span></span>  
   
--   <span data-ttu-id="f4802-116">설정 합니다 <xref:System.Windows.Forms.TabControl.Alignment%2A> 의 속성을 <xref:System.Windows.Forms.TabControl> 에 <xref:System.Windows.Forms.TabAlignment.Left> 또는 <xref:System.Windows.Forms.TabAlignment.Right>.</span><span class="sxs-lookup"><span data-stu-id="f4802-116">Set the <xref:System.Windows.Forms.TabControl.Alignment%2A> property of the <xref:System.Windows.Forms.TabControl> to <xref:System.Windows.Forms.TabAlignment.Left> or <xref:System.Windows.Forms.TabAlignment.Right>.</span></span>  
+- <span data-ttu-id="d0549-116">설정 합니다 <xref:System.Windows.Forms.TabControl.Alignment%2A> 의 속성을 <xref:System.Windows.Forms.TabControl> 에 <xref:System.Windows.Forms.TabAlignment.Left> 또는 <xref:System.Windows.Forms.TabAlignment.Right>.</span><span class="sxs-lookup"><span data-stu-id="d0549-116">Set the <xref:System.Windows.Forms.TabControl.Alignment%2A> property of the <xref:System.Windows.Forms.TabControl> to <xref:System.Windows.Forms.TabAlignment.Left> or <xref:System.Windows.Forms.TabAlignment.Right>.</span></span>  
   
-### <a name="to-programmatically-enable-or-disable-all-controls-on-a-tab"></a><span data-ttu-id="f4802-117">프로그래밍 방식으로 사용 하도록 설정 또는 탭의 모든 컨트롤을 사용 하지 않도록 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="f4802-117">To programmatically enable or disable all controls on a tab</span></span>  
+### <a name="to-programmatically-enable-or-disable-all-controls-on-a-tab"></a><span data-ttu-id="d0549-117">프로그래밍 방식으로 사용 하도록 설정 또는 탭의 모든 컨트롤을 사용 하지 않도록 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="d0549-117">To programmatically enable or disable all controls on a tab</span></span>  
   
-1. <span data-ttu-id="f4802-118">설정 합니다 <xref:System.Windows.Forms.TabPage.Enabled%2A> 의 속성을 <xref:System.Windows.Forms.TabPage> 에 `true` 또는 `false`.</span><span class="sxs-lookup"><span data-stu-id="f4802-118">Set the <xref:System.Windows.Forms.TabPage.Enabled%2A> property of the <xref:System.Windows.Forms.TabPage> to `true` or `false`.</span></span>  
+1. <span data-ttu-id="d0549-118">설정 합니다 <xref:System.Windows.Forms.TabPage.Enabled%2A> 의 속성을 <xref:System.Windows.Forms.TabPage> 에 `true` 또는 `false`.</span><span class="sxs-lookup"><span data-stu-id="d0549-118">Set the <xref:System.Windows.Forms.TabPage.Enabled%2A> property of the <xref:System.Windows.Forms.TabPage> to `true` or `false`.</span></span>  
   
     ```vb  
     TabPage1.Enabled = False  
@@ -61,14 +61,14 @@ ms.locfileid: "59331340"
     tabPage1->Enabled = false;  
     ```  
   
-### <a name="to-display-tabs-as-buttons"></a><span data-ttu-id="f4802-119">단추와 탭을 표시 하려면</span><span class="sxs-lookup"><span data-stu-id="f4802-119">To display tabs as buttons</span></span>  
+### <a name="to-display-tabs-as-buttons"></a><span data-ttu-id="d0549-119">단추와 탭을 표시 하려면</span><span class="sxs-lookup"><span data-stu-id="d0549-119">To display tabs as buttons</span></span>  
   
--   <span data-ttu-id="f4802-120">설정 합니다 <xref:System.Windows.Forms.TabControl.Appearance%2A> 의 속성을 <xref:System.Windows.Forms.TabControl> 에 <xref:System.Windows.Forms.TabAppearance.Buttons> 또는 <xref:System.Windows.Forms.TabAppearance.FlatButtons>.</span><span class="sxs-lookup"><span data-stu-id="f4802-120">Set the <xref:System.Windows.Forms.TabControl.Appearance%2A> property of the <xref:System.Windows.Forms.TabControl> to <xref:System.Windows.Forms.TabAppearance.Buttons> or <xref:System.Windows.Forms.TabAppearance.FlatButtons>.</span></span>  
+- <span data-ttu-id="d0549-120">설정 합니다 <xref:System.Windows.Forms.TabControl.Appearance%2A> 의 속성을 <xref:System.Windows.Forms.TabControl> 에 <xref:System.Windows.Forms.TabAppearance.Buttons> 또는 <xref:System.Windows.Forms.TabAppearance.FlatButtons>.</span><span class="sxs-lookup"><span data-stu-id="d0549-120">Set the <xref:System.Windows.Forms.TabControl.Appearance%2A> property of the <xref:System.Windows.Forms.TabControl> to <xref:System.Windows.Forms.TabAppearance.Buttons> or <xref:System.Windows.Forms.TabAppearance.FlatButtons>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f4802-121">참고자료</span><span class="sxs-lookup"><span data-stu-id="f4802-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d0549-121">참고자료</span><span class="sxs-lookup"><span data-stu-id="d0549-121">See also</span></span>
 
-- [<span data-ttu-id="f4802-122">TabControl 컨트롤</span><span class="sxs-lookup"><span data-stu-id="f4802-122">TabControl Control</span></span>](tabcontrol-control-windows-forms.md)
-- [<span data-ttu-id="f4802-123">TabControl 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="f4802-123">TabControl Control Overview</span></span>](tabcontrol-control-overview-windows-forms.md)
-- [<span data-ttu-id="f4802-124">방법: 탭 페이지에 컨트롤 추가</span><span class="sxs-lookup"><span data-stu-id="f4802-124">How to: Add a Control to a Tab Page</span></span>](how-to-add-a-control-to-a-tab-page.md)
-- [<span data-ttu-id="f4802-125">방법: 탭 페이지를 사용 하지 않도록 설정</span><span class="sxs-lookup"><span data-stu-id="f4802-125">How to: Disable Tab Pages</span></span>](how-to-disable-tab-pages.md)
-- [<span data-ttu-id="f4802-126">방법: Windows Forms TabControl 사용 하 여 탭 추가 및 제거</span><span class="sxs-lookup"><span data-stu-id="f4802-126">How to: Add and Remove Tabs with the Windows Forms TabControl</span></span>](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [<span data-ttu-id="d0549-122">TabControl 컨트롤</span><span class="sxs-lookup"><span data-stu-id="d0549-122">TabControl Control</span></span>](tabcontrol-control-windows-forms.md)
+- [<span data-ttu-id="d0549-123">TabControl 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="d0549-123">TabControl Control Overview</span></span>](tabcontrol-control-overview-windows-forms.md)
+- [<span data-ttu-id="d0549-124">방법: 탭 페이지에 컨트롤 추가</span><span class="sxs-lookup"><span data-stu-id="d0549-124">How to: Add a Control to a Tab Page</span></span>](how-to-add-a-control-to-a-tab-page.md)
+- [<span data-ttu-id="d0549-125">방법: 탭 페이지를 사용 하지 않도록 설정</span><span class="sxs-lookup"><span data-stu-id="d0549-125">How to: Disable Tab Pages</span></span>](how-to-disable-tab-pages.md)
+- [<span data-ttu-id="d0549-126">방법: Windows Forms TabControl 사용 하 여 탭 추가 및 제거</span><span class="sxs-lookup"><span data-stu-id="d0549-126">How to: Add and Remove Tabs with the Windows Forms TabControl</span></span>](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)

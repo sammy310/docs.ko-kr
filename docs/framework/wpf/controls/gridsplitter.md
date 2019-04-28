@@ -9,19 +9,19 @@ helpviewer_keywords:
 - content [WPF], GridSplitter control
 ms.assetid: 98b007e8-ea6b-41b5-8120-ca7134e8239f
 ms.openlocfilehash: 9fd1b50e4c3f79218de2d0d54f98d645ebb5fd61
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911432"
 ---
-# <a name="gridsplitter"></a><span data-ttu-id="642b6-102">GridSplitter</span><span class="sxs-lookup"><span data-stu-id="642b6-102">GridSplitter</span></span>
-<span data-ttu-id="642b6-103">합니다 <xref:System.Windows.Controls.GridSplitter> 의 열 또는 행에 대 한 간격을 재배포는 <xref:System.Windows.Controls.Grid> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="642b6-103">The <xref:System.Windows.Controls.GridSplitter> redistributes space between columns or rows of a <xref:System.Windows.Controls.Grid> control.</span></span>  
+# <a name="gridsplitter"></a><span data-ttu-id="cb89f-102">GridSplitter</span><span class="sxs-lookup"><span data-stu-id="cb89f-102">GridSplitter</span></span>
+<span data-ttu-id="cb89f-103">합니다 <xref:System.Windows.Controls.GridSplitter> 의 열 또는 행에 대 한 간격을 재배포는 <xref:System.Windows.Controls.Grid> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="cb89f-103">The <xref:System.Windows.Controls.GridSplitter> redistributes space between columns or rows of a <xref:System.Windows.Controls.Grid> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="642b6-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="642b6-104">In This Section</span></span>  
- [<span data-ttu-id="642b6-105">방법 항목</span><span class="sxs-lookup"><span data-stu-id="642b6-105">How-to Topics</span></span>](gridsplitter-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="cb89f-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="cb89f-104">In This Section</span></span>  
+ [<span data-ttu-id="cb89f-105">방법 항목</span><span class="sxs-lookup"><span data-stu-id="cb89f-105">How-to Topics</span></span>](gridsplitter-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="642b6-106">참조</span><span class="sxs-lookup"><span data-stu-id="642b6-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="cb89f-106">참조</span><span class="sxs-lookup"><span data-stu-id="cb89f-106">Reference</span></span>  
  <xref:System.Windows.Controls.GridSplitter>  
   
-## <a name="related-sections"></a><span data-ttu-id="642b6-107">관련 단원</span><span class="sxs-lookup"><span data-stu-id="642b6-107">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="cb89f-107">관련 단원</span><span class="sxs-lookup"><span data-stu-id="cb89f-107">Related Sections</span></span>

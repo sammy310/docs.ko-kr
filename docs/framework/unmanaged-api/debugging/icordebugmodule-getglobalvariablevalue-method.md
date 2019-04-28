@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 00e747e43f67533771665313f4d420e4725945cd
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988093"
 ---
-# <a name="icordebugmodulegetglobalvariablevalue-method"></a><span data-ttu-id="46941-102">ICorDebugModule::GetGlobalVariableValue 메서드</span><span class="sxs-lookup"><span data-stu-id="46941-102">ICorDebugModule::GetGlobalVariableValue Method</span></span>
-<span data-ttu-id="46941-103">지정 된 전역 변수의 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="46941-103">Gets the value of the specified global variable.</span></span>  
+# <a name="icordebugmodulegetglobalvariablevalue-method"></a><span data-ttu-id="ba2b2-102">ICorDebugModule::GetGlobalVariableValue 메서드</span><span class="sxs-lookup"><span data-stu-id="ba2b2-102">ICorDebugModule::GetGlobalVariableValue Method</span></span>
+<span data-ttu-id="ba2b2-103">지정 된 전역 변수의 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="ba2b2-103">Gets the value of the specified global variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="46941-104">구문</span><span class="sxs-lookup"><span data-stu-id="46941-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ba2b2-104">구문</span><span class="sxs-lookup"><span data-stu-id="ba2b2-104">Syntax</span></span>  
   
 ```  
 HRESULT GetGlobalVariableValue(  
@@ -36,18 +36,18 @@ HRESULT GetGlobalVariableValue(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="46941-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="46941-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ba2b2-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="ba2b2-105">Parameters</span></span>  
  `fieldDef`  
- <span data-ttu-id="46941-106">[in] `mdFieldDef` 전역 변수를 설명 하는 메타 데이터를 참조 하는 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="46941-106">[in] An `mdFieldDef` token that references the metadata describing the global variable.</span></span>  
+ <span data-ttu-id="ba2b2-106">[in] `mdFieldDef` 전역 변수를 설명 하는 메타 데이터를 참조 하는 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="ba2b2-106">[in] An `mdFieldDef` token that references the metadata describing the global variable.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="46941-107">[out] 지정 된 전역 변수의 값을 나타내는 ICorDebugValue 개체의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="46941-107">[out] A pointer to the address of an ICorDebugValue object that represents the value of the specified global variable.</span></span>  
+ <span data-ttu-id="ba2b2-107">[out] 지정 된 전역 변수의 값을 나타내는 ICorDebugValue 개체의 주소에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="ba2b2-107">[out] A pointer to the address of an ICorDebugValue object that represents the value of the specified global variable.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="46941-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="46941-108">Requirements</span></span>  
- <span data-ttu-id="46941-109">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="46941-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ba2b2-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ba2b2-108">Requirements</span></span>  
+ <span data-ttu-id="ba2b2-109">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="ba2b2-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="46941-110">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="46941-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ba2b2-110">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ba2b2-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="46941-111">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="46941-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ba2b2-111">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ba2b2-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="46941-112">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="46941-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="ba2b2-112">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ba2b2-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

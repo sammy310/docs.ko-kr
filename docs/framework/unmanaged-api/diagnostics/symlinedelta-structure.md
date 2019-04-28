@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fabc8f77b12865d0d971b5934d7de27b52f3e813
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59159486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914643"
 ---
-# <a name="symlinedelta-structure"></a><span data-ttu-id="c6e71-102">SYMLINEDELTA 구조체</span><span class="sxs-lookup"><span data-stu-id="c6e71-102">SYMLINEDELTA Structure</span></span>
-<span data-ttu-id="c6e71-103">편집 결과로 이동 된 메서드에 대 한 기호 처리기에 대 한 정보를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="c6e71-103">Provides information to the symbol handler about methods that were moved as a result of edits.</span></span>  
+# <a name="symlinedelta-structure"></a><span data-ttu-id="3dcf3-102">SYMLINEDELTA 구조체</span><span class="sxs-lookup"><span data-stu-id="3dcf3-102">SYMLINEDELTA Structure</span></span>
+<span data-ttu-id="3dcf3-103">편집 결과로 이동 된 메서드에 대 한 기호 처리기에 대 한 정보를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="3dcf3-103">Provides information to the symbol handler about methods that were moved as a result of edits.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c6e71-104">구문</span><span class="sxs-lookup"><span data-stu-id="c6e71-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3dcf3-104">구문</span><span class="sxs-lookup"><span data-stu-id="3dcf3-104">Syntax</span></span>  
   
 ```  
 typedef struct _SYMLINEDELTA  
@@ -36,16 +36,16 @@ typedef struct _SYMLINEDELTA
     } SYMLINEDELTA;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="c6e71-105">멤버</span><span class="sxs-lookup"><span data-stu-id="c6e71-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="3dcf3-105">멤버</span><span class="sxs-lookup"><span data-stu-id="3dcf3-105">Members</span></span>  
   
-|<span data-ttu-id="c6e71-106">멤버</span><span class="sxs-lookup"><span data-stu-id="c6e71-106">Member</span></span>|<span data-ttu-id="c6e71-107">설명</span><span class="sxs-lookup"><span data-stu-id="c6e71-107">Description</span></span>|  
+|<span data-ttu-id="3dcf3-106">멤버</span><span class="sxs-lookup"><span data-stu-id="3dcf3-106">Member</span></span>|<span data-ttu-id="3dcf3-107">설명</span><span class="sxs-lookup"><span data-stu-id="3dcf3-107">Description</span></span>|  
 |------------|-----------------|  
-|`mdMethod`|<span data-ttu-id="c6e71-108">메서드의 메타 데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="c6e71-108">The method's metadata token.</span></span>|  
-|`delta`|<span data-ttu-id="c6e71-109">메서드가 이동 된 줄의 수입니다.</span><span class="sxs-lookup"><span data-stu-id="c6e71-109">The number of lines the method was moved.</span></span>|  
+|`mdMethod`|<span data-ttu-id="3dcf3-108">메서드의 메타 데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="3dcf3-108">The method's metadata token.</span></span>|  
+|`delta`|<span data-ttu-id="3dcf3-109">메서드가 이동 된 줄의 수입니다.</span><span class="sxs-lookup"><span data-stu-id="3dcf3-109">The number of lines the method was moved.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="c6e71-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="c6e71-110">Requirements</span></span>  
- <span data-ttu-id="c6e71-111">**헤더:** CorSym.idl</span><span class="sxs-lookup"><span data-stu-id="c6e71-111">**Header:** CorSym.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3dcf3-110">요구 사항</span><span class="sxs-lookup"><span data-stu-id="3dcf3-110">Requirements</span></span>  
+ <span data-ttu-id="3dcf3-111">**헤더:** CorSym.idl</span><span class="sxs-lookup"><span data-stu-id="3dcf3-111">**Header:** CorSym.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c6e71-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="c6e71-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3dcf3-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="3dcf3-112">See also</span></span>
 
-- [<span data-ttu-id="c6e71-113">진단 기호 저장소 구조체</span><span class="sxs-lookup"><span data-stu-id="c6e71-113">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+- [<span data-ttu-id="3dcf3-113">진단 기호 저장소 구조체</span><span class="sxs-lookup"><span data-stu-id="3dcf3-113">Diagnostics Symbol Store Structures</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

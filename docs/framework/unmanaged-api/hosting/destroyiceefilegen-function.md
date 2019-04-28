@@ -19,18 +19,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 37ff40e1c009b8e1e0509a4a3333d5a2a70bbfd2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59159889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906362"
 ---
-# <a name="destroyiceefilegen-function"></a><span data-ttu-id="68f2f-102">DestroyICeeFileGen 함수</span><span class="sxs-lookup"><span data-stu-id="68f2f-102">DestroyICeeFileGen Function</span></span>
-<span data-ttu-id="68f2f-103">제거는 [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="68f2f-103">Destroys an [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) object.</span></span>  
+# <a name="destroyiceefilegen-function"></a><span data-ttu-id="142dc-102">DestroyICeeFileGen 함수</span><span class="sxs-lookup"><span data-stu-id="142dc-102">DestroyICeeFileGen Function</span></span>
+<span data-ttu-id="142dc-103">제거는 [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="142dc-103">Destroys an [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) object.</span></span>  
   
- <span data-ttu-id="68f2f-104">이 함수에서 사용 중단에 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="68f2f-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="142dc-104">이 함수에서 사용 중단에 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="142dc-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="68f2f-105">구문</span><span class="sxs-lookup"><span data-stu-id="68f2f-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="142dc-105">구문</span><span class="sxs-lookup"><span data-stu-id="142dc-105">Syntax</span></span>  
   
 ```  
 HRESULT DestroyICeeFileGen (  
@@ -38,25 +38,25 @@ HRESULT DestroyICeeFileGen (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="68f2f-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="68f2f-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="142dc-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="142dc-106">Parameters</span></span>  
  `ceeFileGen`  
- <span data-ttu-id="68f2f-107">[in] `ICeeFileGen` 소멸 시킬 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="68f2f-107">[in] The `ICeeFileGen` object to destroy.</span></span>  
+ <span data-ttu-id="142dc-107">[in] `ICeeFileGen` 소멸 시킬 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="142dc-107">[in] The `ICeeFileGen` object to destroy.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="68f2f-108">반환 값</span><span class="sxs-lookup"><span data-stu-id="68f2f-108">Return Value</span></span>  
- <span data-ttu-id="68f2f-109">이 메서드는 표준 COM 오류 코드를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="68f2f-109">This method returns standard COM error codes.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="142dc-108">반환 값</span><span class="sxs-lookup"><span data-stu-id="142dc-108">Return Value</span></span>  
+ <span data-ttu-id="142dc-109">이 메서드는 표준 COM 오류 코드를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="142dc-109">This method returns standard COM error codes.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="68f2f-110">설명</span><span class="sxs-lookup"><span data-stu-id="68f2f-110">Remarks</span></span>  
- <span data-ttu-id="68f2f-111">`DestroyICeeFileGen` 제거 된 `ICeeFileGen` 하 여 만든 개체를 [CreateICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md) 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="68f2f-111">`DestroyICeeFileGen` destroys the `ICeeFileGen` object created by the [CreateICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md) function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="142dc-110">설명</span><span class="sxs-lookup"><span data-stu-id="142dc-110">Remarks</span></span>  
+ <span data-ttu-id="142dc-111">`DestroyICeeFileGen` 제거 된 `ICeeFileGen` 하 여 만든 개체를 [CreateICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md) 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="142dc-111">`DestroyICeeFileGen` destroys the `ICeeFileGen` object created by the [CreateICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md) function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="68f2f-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="68f2f-112">Requirements</span></span>  
- <span data-ttu-id="68f2f-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="68f2f-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="142dc-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="142dc-112">Requirements</span></span>  
+ <span data-ttu-id="142dc-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="142dc-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="68f2f-114">**헤더:** ICeeFileGen.h</span><span class="sxs-lookup"><span data-stu-id="68f2f-114">**Header:** ICeeFileGen.h</span></span>  
+ <span data-ttu-id="142dc-114">**헤더:** ICeeFileGen.h</span><span class="sxs-lookup"><span data-stu-id="142dc-114">**Header:** ICeeFileGen.h</span></span>  
   
- <span data-ttu-id="68f2f-115">**라이브러리:** MSCorPE.dll</span><span class="sxs-lookup"><span data-stu-id="68f2f-115">**Library:** MSCorPE.dll</span></span>  
+ <span data-ttu-id="142dc-115">**라이브러리:** MSCorPE.dll</span><span class="sxs-lookup"><span data-stu-id="142dc-115">**Library:** MSCorPE.dll</span></span>  
   
- <span data-ttu-id="68f2f-116">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="68f2f-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="142dc-116">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="142dc-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="68f2f-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="68f2f-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="142dc-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="142dc-117">See also</span></span>
 
-- [<span data-ttu-id="68f2f-118">사용되지 않는 CLR 호스팅 함수</span><span class="sxs-lookup"><span data-stu-id="68f2f-118">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="142dc-118">사용되지 않는 CLR 호스팅 함수</span><span class="sxs-lookup"><span data-stu-id="142dc-118">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

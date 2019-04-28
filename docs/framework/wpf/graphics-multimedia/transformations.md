@@ -17,22 +17,22 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 ms.assetid: 712b543f-d8b2-4dcf-ba2c-f7921c61c6fd
 ms.openlocfilehash: a0b5268d1c7e319a6144a7d551dca45bdc3e64aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59227233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61926001"
 ---
-# <a name="transformations"></a><span data-ttu-id="33998-102">변형</span><span class="sxs-lookup"><span data-stu-id="33998-102">Transformations</span></span>
-<span data-ttu-id="33998-103">변환 하는 데 회전, 크기 조정, 변환 또는 기울이기 <xref:System.Windows.FrameworkElement> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="33998-103">Transforms are used to rotate, scale, translate, or skew <xref:System.Windows.FrameworkElement> objects.</span></span>  
+# <a name="transformations"></a><span data-ttu-id="38e70-102">변형</span><span class="sxs-lookup"><span data-stu-id="38e70-102">Transformations</span></span>
+<span data-ttu-id="38e70-103">변환 하는 데 회전, 크기 조정, 변환 또는 기울이기 <xref:System.Windows.FrameworkElement> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="38e70-103">Transforms are used to rotate, scale, translate, or skew <xref:System.Windows.FrameworkElement> objects.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="33998-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="33998-104">In This Section</span></span>  
- [<span data-ttu-id="33998-105">Transform 개요</span><span class="sxs-lookup"><span data-stu-id="33998-105">Transforms Overview</span></span>](transforms-overview.md)  
- [<span data-ttu-id="33998-106">방법 항목</span><span class="sxs-lookup"><span data-stu-id="33998-106">How-to Topics</span></span>](transformations-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="38e70-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="38e70-104">In This Section</span></span>  
+ [<span data-ttu-id="38e70-105">Transform 개요</span><span class="sxs-lookup"><span data-stu-id="38e70-105">Transforms Overview</span></span>](transforms-overview.md)  
+ [<span data-ttu-id="38e70-106">방법 항목</span><span class="sxs-lookup"><span data-stu-id="38e70-106">How-to Topics</span></span>](transformations-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="33998-107">참고자료</span><span class="sxs-lookup"><span data-stu-id="33998-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="38e70-107">참고자료</span><span class="sxs-lookup"><span data-stu-id="38e70-107">See also</span></span>
 
 - <xref:System.Windows.Media.Transform>
-- [<span data-ttu-id="33998-108">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="33998-108">Graphics and Multimedia</span></span>](index.md)
-- [<span data-ttu-id="33998-109">WPF 그래픽 렌더링 개요</span><span class="sxs-lookup"><span data-stu-id="33998-109">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="33998-110">레이아웃</span><span class="sxs-lookup"><span data-stu-id="33998-110">Layout</span></span>](../advanced/layout.md)
+- [<span data-ttu-id="38e70-108">그래픽 및 멀티미디어</span><span class="sxs-lookup"><span data-stu-id="38e70-108">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="38e70-109">WPF 그래픽 렌더링 개요</span><span class="sxs-lookup"><span data-stu-id="38e70-109">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="38e70-110">레이아웃</span><span class="sxs-lookup"><span data-stu-id="38e70-110">Layout</span></span>](../advanced/layout.md)

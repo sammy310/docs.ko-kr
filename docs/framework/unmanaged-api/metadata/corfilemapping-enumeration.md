@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a3056836d289383161f9fa538c3c6349f88b6ba6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61905738"
 ---
-# <a name="corfilemapping-enumeration"></a><span data-ttu-id="ff58a-102">CorFileMapping 열거형</span><span class="sxs-lookup"><span data-stu-id="ff58a-102">CorFileMapping Enumeration</span></span>
-<span data-ttu-id="ff58a-103">에 대 한 호출에서 반환 되는 매핑 파일의 형식을 설명 하는 값을 포함 합니다 [imetadatainfo:: Getfilemapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="ff58a-103">Contains values that describe the type of file mapping that is returned from a call to the [IMetaDataInfo::GetFileMapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md) method.</span></span>  
+# <a name="corfilemapping-enumeration"></a><span data-ttu-id="9033b-102">CorFileMapping 열거형</span><span class="sxs-lookup"><span data-stu-id="9033b-102">CorFileMapping Enumeration</span></span>
+<span data-ttu-id="9033b-103">에 대 한 호출에서 반환 되는 매핑 파일의 형식을 설명 하는 값을 포함 합니다 [imetadatainfo:: Getfilemapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="9033b-103">Contains values that describe the type of file mapping that is returned from a call to the [IMetaDataInfo::GetFileMapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ff58a-104">구문</span><span class="sxs-lookup"><span data-stu-id="ff58a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9033b-104">구문</span><span class="sxs-lookup"><span data-stu-id="9033b-104">Syntax</span></span>  
   
 ```  
 typedef enum CorFileMapping {  
@@ -37,21 +37,21 @@ typedef enum CorFileMapping {
 } CorFileMapping;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="ff58a-105">멤버</span><span class="sxs-lookup"><span data-stu-id="ff58a-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="9033b-105">멤버</span><span class="sxs-lookup"><span data-stu-id="9033b-105">Members</span></span>  
   
-|<span data-ttu-id="ff58a-106">멤버</span><span class="sxs-lookup"><span data-stu-id="ff58a-106">Member</span></span>|<span data-ttu-id="ff58a-107">설명</span><span class="sxs-lookup"><span data-stu-id="ff58a-107">Description</span></span>|  
+|<span data-ttu-id="9033b-106">멤버</span><span class="sxs-lookup"><span data-stu-id="9033b-106">Member</span></span>|<span data-ttu-id="9033b-107">설명</span><span class="sxs-lookup"><span data-stu-id="9033b-107">Description</span></span>|  
 |------------|-----------------|  
-|`fmFlat`|<span data-ttu-id="ff58a-108">파일을 데이터 파일로 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="ff58a-108">The file is mapped as a data file.</span></span> <span data-ttu-id="ff58a-109">즉, 합니다 `SEC_IMAGE` 플래그는 Microsoft Win32 전달 되지 않으므로 `CreateFileMapping` 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="ff58a-109">That is, the `SEC_IMAGE` flag was not passed to the Microsoft Win32 `CreateFileMapping` function.</span></span>|  
-|`fmExecutableImage`|<span data-ttu-id="ff58a-110">파일 중 하나를 사용 하 여 실행을 위해 매핑된 합니다 `LoadLibrary` 함수 또는 `CreateFileMapping` 함수는 `SEC_IMAGE` 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="ff58a-110">The file is mapped for execution, by using either the `LoadLibrary` function or the `CreateFileMapping` function with the `SEC_IMAGE` flag.</span></span>|  
+|`fmFlat`|<span data-ttu-id="9033b-108">파일을 데이터 파일로 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="9033b-108">The file is mapped as a data file.</span></span> <span data-ttu-id="9033b-109">즉, 합니다 `SEC_IMAGE` 플래그는 Microsoft Win32 전달 되지 않으므로 `CreateFileMapping` 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="9033b-109">That is, the `SEC_IMAGE` flag was not passed to the Microsoft Win32 `CreateFileMapping` function.</span></span>|  
+|`fmExecutableImage`|<span data-ttu-id="9033b-110">파일 중 하나를 사용 하 여 실행을 위해 매핑된 합니다 `LoadLibrary` 함수 또는 `CreateFileMapping` 함수는 `SEC_IMAGE` 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="9033b-110">The file is mapped for execution, by using either the `LoadLibrary` function or the `CreateFileMapping` function with the `SEC_IMAGE` flag.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="ff58a-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ff58a-111">Requirements</span></span>  
- <span data-ttu-id="ff58a-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="ff58a-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9033b-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="9033b-111">Requirements</span></span>  
+ <span data-ttu-id="9033b-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="9033b-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ff58a-113">**헤더:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="ff58a-113">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="9033b-113">**헤더:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="9033b-113">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="ff58a-114">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ff58a-114">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="9033b-114">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9033b-114">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ff58a-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="ff58a-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9033b-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="9033b-115">See also</span></span>
 
-- [<span data-ttu-id="ff58a-116">메타데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="ff58a-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
-- [<span data-ttu-id="ff58a-117">GetFileMapping 메서드</span><span class="sxs-lookup"><span data-stu-id="ff58a-117">GetFileMapping Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)
+- [<span data-ttu-id="9033b-116">메타데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="9033b-116">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="9033b-117">GetFileMapping 메서드</span><span class="sxs-lookup"><span data-stu-id="9033b-117">GetFileMapping Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md)
