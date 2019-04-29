@@ -3,22 +3,22 @@ title: 연결 End 복합성
 ms.date: 03/30/2017
 ms.assetid: 340926ee-aefb-4bef-92cc-453e5251fd03
 ms.openlocfilehash: 59eed56204543adf405cfc7c71a49697a9e18374
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769665"
 ---
 # <a name="association-end-multiplicity"></a>연결 End 복합성
 *연결 end 복합성* 개수를 정의 [엔터티 형식의](../../../../docs/framework/data/adonet/entity-type.md) 한쪽 끝에 있을 수 있는 인스턴스를 [연결](../../../../docs/framework/data/adonet/association-type.md)합니다.  
   
  연결 End 복합성은 다음 값 중 하나일 수 있습니다.  
   
--   일 (1): 연결 end에는 정확히 하나의 엔터티 형식 인스턴스가 있음을 나타냅니다.  
+- 일 (1): 연결 end에는 정확히 하나의 엔터티 형식 인스턴스가 있음을 나타냅니다.  
   
--   0 또는 1 (0..1): 연결 end에 0 개 이상의 엔터티 형식 인스턴스가 있음을 나타냅니다.  
+- 0 또는 1 (0..1): 연결 end에 0 개 이상의 엔터티 형식 인스턴스가 있음을 나타냅니다.  
   
--   많은 (\*): 연결 end에 0, 1 또는 더 많은 엔터티 형식 인스턴스가 있음을 나타냅니다.  
+- 많은 (\*): 연결 end에 0, 1 또는 더 많은 엔터티 형식 인스턴스가 있음을 나타냅니다.  
   
  연결은 대체로 연결 End 복합성 특성을 사용합니다. 예를 들어 연결의 end 복합성이 한 개 및 여러 (\*)에 연결-일대다 연결 이라고 합니다. 다음 예에서 `PublishedBy` 연결은 일대다 연결입니다. 즉, 한 명의 발행자가 많은 책을 출판하고 책 하나는 한 명의 발행자에 의해 출판됩니다. `WrittenBy` 연결은 다대다 연결입니다. 한 권의 책에 저자가 여러 명일 수 있고 한 명의 저자가 여러 책을 쓸 수도 있습니다.  
   

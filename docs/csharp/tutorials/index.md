@@ -2,12 +2,12 @@
 title: C# 자습서
 description: C# 자습서를 탐색하여 C# 프로그램을 빌드하는 방법과 C# 언어 기능에 관해 학습합니다.
 ms.date: 10/25/2018
-ms.openlocfilehash: a82bd8e5ff28e0e006025de96f7da66505c0aff7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 72f159311397a0f4891709c16a4a6ecc937b5952
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706314"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63773899"
 ---
 # <a name="c-tutorials"></a>C# 자습서
 
@@ -50,6 +50,7 @@ Hello World 단원 다음에 나오는 모든 소개 자습서는 자체 로컬 
 * [Nullable 참조 형식](nullable-reference-types.md): nullable 참조 형식을 사용하여 null 참조에 대한 의도를 나타내는 방법을 설명합니다.
 * [Nullable 참조 형식을 사용하도록 프로젝트 업데이트](upgrade-to-nullable-references.md): Nullable 참조 형식을 사용하도록 기존 프로젝트를 업그레이드하는 기술을 보여 줍니다.
 * [패턴 일치를 사용하여 데이터 기능 확장](pattern-matching.md): 패턴 일치를 사용하여 핵심 기능 이상으로 형식을 확장하는 방법을 보여 줍니다.
+* [인덱스 및 범위를 사용하여 데이터 시퀀스 작업](ranges-indexes.md): 순차 데이터 컨테이너의 단일 요소 또는 범위에 액세스하기 위한 새로운 편리한 구문을 보여 줍니다.
 
 ## <a name="general-tutorials"></a>일반 자습서
 

@@ -4,11 +4,11 @@ description: 작성을 '복사 및 업데이트 레코드 expression' 복사는 
 author: ChrSteinert
 ms.date: 06/04/2016
 ms.openlocfilehash: 5f9b13ebf6c456aff73872b7522d7670c068dd88
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766053"
 ---
 # <a name="copy-and-update-record-expressions"></a>레코드 식 복사 및 업데이트
 
@@ -34,7 +34,7 @@ A *복사 및 업데이트 레코드 식* 은 기존 레코드를 복사 하 고
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1906.fs)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [레코드](records.md)
 - [F# 언어 참조](index.md)

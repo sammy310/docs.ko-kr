@@ -3,11 +3,11 @@ title: F# 형식
 description: 에 사용 되는 유형에 대해 알아봅니다 F# 방법과 F# 형식 이름이 지정 되 고 설명 합니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: b48376c80b48df210bf7bc699a769d40fec60864
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934643"
 ---
 # <a name="f-types"></a>F# 형식
 
