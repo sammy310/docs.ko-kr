@@ -11,24 +11,24 @@ helpviewer_keywords:
 - collapsing headers [WPF]
 ms.assetid: e9dfc8d6-4555-47b9-a4de-0acd64f8770a
 ms.openlocfilehash: a7dc0d2cc32d387f87221748ab94ac82c2dfc8b0
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911831"
 ---
-# <a name="expander"></a><span data-ttu-id="98592-102">Expander</span><span class="sxs-lookup"><span data-stu-id="98592-102">Expander</span></span>
-<span data-ttu-id="98592-103"><xref:System.Windows.Controls.Expander> 헤더를 확인 및 확장 하 여 최대 헤더 섹션을 축소 또는 추가 정보를 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="98592-103">An <xref:System.Windows.Controls.Expander> allows a user to view a header and expand that header to see further details, or to collapse a section up to a header.</span></span>  
+# <a name="expander"></a><span data-ttu-id="d4dd1-102">Expander</span><span class="sxs-lookup"><span data-stu-id="d4dd1-102">Expander</span></span>
+<span data-ttu-id="d4dd1-103"><xref:System.Windows.Controls.Expander> 헤더를 확인 및 확장 하 여 최대 헤더 섹션을 축소 또는 추가 정보를 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d4dd1-103">An <xref:System.Windows.Controls.Expander> allows a user to view a header and expand that header to see further details, or to collapse a section up to a header.</span></span>  
   
- <span data-ttu-id="98592-104">다음 그림의 확장 된 상태에서이 컨트롤의 예를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="98592-104">The following illustration provides an example of this control in its expanded position.</span></span>  
+ <span data-ttu-id="d4dd1-104">다음 그림의 확장 된 상태에서이 컨트롤의 예를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="d4dd1-104">The following illustration provides an example of this control in its expanded position.</span></span>  
   
  ![확장기 예제](./media/expander/expander-control-example.jpg)
   
-## <a name="in-this-section"></a><span data-ttu-id="98592-106">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="98592-106">In This Section</span></span>  
- [<span data-ttu-id="98592-107">Expander 개요</span><span class="sxs-lookup"><span data-stu-id="98592-107">Expander Overview</span></span>](expander-overview.md)  
- [<span data-ttu-id="98592-108">방법 항목</span><span class="sxs-lookup"><span data-stu-id="98592-108">How-to Topics</span></span>](expander-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="d4dd1-106">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="d4dd1-106">In This Section</span></span>  
+ [<span data-ttu-id="d4dd1-107">Expander 개요</span><span class="sxs-lookup"><span data-stu-id="d4dd1-107">Expander Overview</span></span>](expander-overview.md)  
+ [<span data-ttu-id="d4dd1-108">방법 항목</span><span class="sxs-lookup"><span data-stu-id="d4dd1-108">How-to Topics</span></span>](expander-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="98592-109">참조</span><span class="sxs-lookup"><span data-stu-id="98592-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="d4dd1-109">참조</span><span class="sxs-lookup"><span data-stu-id="d4dd1-109">Reference</span></span>  
  <xref:System.Windows.Controls.Expander>  
   
-## <a name="related-sections"></a><span data-ttu-id="98592-110">관련 단원</span><span class="sxs-lookup"><span data-stu-id="98592-110">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="d4dd1-110">관련 단원</span><span class="sxs-lookup"><span data-stu-id="d4dd1-110">Related Sections</span></span>
