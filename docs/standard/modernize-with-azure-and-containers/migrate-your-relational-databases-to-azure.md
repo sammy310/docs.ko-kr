@@ -96,13 +96,13 @@ Azure SQL Database는 다음과 같은 이점을 제공합니다.
 
 Azure SQL Database, Azure SQL Database 관리 되는 인스턴스 또는 Azure VM에서 SQL Server 대상 데이터베이스 인지를 Azure로 SQL Server, Oracle 및 MySQL 등의 관계형 데이터베이스를 마이그레이션하려면 Azure Database Migration Service를 사용할 수 있습니다.
 
-평가 보고를 사용 하면 자동화 된 워크플로 데이터베이스를 마이그레이션할 수 있도록 원하는 변경 작업을 안내 합니다. 준비가 될 때 서비스에서 Azure로 원본 데이터베이스를 마이그레이션합니다.
+평가보고 기능이 있는 자동화된 워크플로는 데이터베이스를 마이그레이션하기 전에 변경해야 할 사항을 안내합니다. 준비가 되면 서비스는 원본 데이터베이스를 Azure로 마이그레이션합니다.
 
-원래 RDBMS를 변경할 때마다 다시 테스트 해야 합니다. SQL 문장이 나 테스트 결과 따라 응용 프로그램에서 개체-관계형 매핑 (ORM) 코드를 변경 해야 할 수 있습니다.
+원래의 RDBMS를 변경할 때마다 다시 테스트해야 할 수 있습니다. 테스트 결과에 따라 응용 프로그램에서 SQL 문장이나 ORM (Object-Relational Mapping) 코드를 변경해야 할 수도 있습니다.
 
-다른 데이터베이스 (예를 들어, IBM DB2) 있고 리프트 앤 시프트 방식을 선택할 경우 하려는 해당 데이터베이스를 사용 하 여 Azure에서 IaaS Vm으로 계속 더 복잡 한 데이터 마이그레이션을 수행 하려면 원치 않는 경우. 새 스키마 및 다른 프로그래밍 라이브러리를 사용 하 여 다른 데이터베이스 형식으로 마이그레이션하는 경우 때문에 더 복잡 한 데이터 마이그레이션을 노력을 해야 합니다.
+다른 데이터베이스 (예 : IBM DB2)가 있고 리프트 엔 시프트 방식을 선택하는 경우, 보다 복잡한 데이터 마이그레이션을 수행하려는 경우가 아니면 Azure에서 이러한 데이터베이스를 IaaS VM으로 계속 사용할 수 있습니다. 더 복잡한 데이터 마이그레이션은 새로운 스키마와 다양한 프로그래밍 라이브러리를 사용하여 다양한 데이터베이스 유형으로 마이그레이션하기 때문에 추가적인 노력이 필요합니다.
 
-Azure Database Migration Service를 사용 하 여 데이터베이스를 마이그레이션하는 방법에 알아보려면 참조 [Azure SQL Database 관리 되는 인스턴스 및 Azure Database Migration Service를 사용 하 여 더 빠르게 클라우드에](https://channel9.msdn.com/Events/Build/2017/P4008)합니다.
+Azure Database Migration Service를 사용하여 데이터베이스를 마이그레이션하는 방법에 알아보려면 [Azure SQL Database Managed Instance와 Azure Database Migration Service를 사용하여 클라우드로 신속하게 이동하기](https://channel9.msdn.com/Events/Build/2017/P4008)를 참조합니다.
 
 ## <a name="additional-resources"></a>추가 자료
 
@@ -110,11 +110,11 @@ Azure Database Migration Service를 사용 하 여 데이터베이스를 마이�
 
     <https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas>
 
-- **Azure SQL DB 관리 되는 인스턴스 및 Database Migration Service를 사용 하 여 더 빠르게 클라우드로 가져오기**
+- **Azure SQL Database Managed Instance와 Database Migration Service를 사용하여 신속하게 클라우드 이동하기**
 
     <https://channel9.msdn.com/Events/Build/2017/P4008>
 
-- **클라우드에서 SQL Database로 SQL Server 데이터베이스 마이그레이션**
+- **클라우드 SQL Database로 SQL Server 데이터베이스 마이그레이션**
 
     <https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate>
 
