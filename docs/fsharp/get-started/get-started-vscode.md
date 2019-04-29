@@ -62,19 +62,19 @@ ms.locfileid: "59612890"
 
 [!code-fsharp[ToPigLatin](../../../samples/snippets/fsharp/getting-started/to-pig-latin.fsx)]
 
-이 함수는 형태의 단어 변환 [Pig Latin](https://en.wikipedia.org/wiki/Pig_Latin)합니다. 다음 단계를 사용 하 여 평가 하는 F# 대화형 (FSI).
+이 함수는 단어를 [Pig Latin](https://en.wikipedia.org/wiki/Pig_Latin) 형태로 변환합니다. 다음으로 F# Interactive (FSI)를 사용하여 평가합니다.
 
-(11 줄 이어야 함)은 전체 함수를 강조 표시 합니다. 이 강조 표시 되 면 저장 합니다 **Alt** 키 및 적중 **Enter**합니다. 아래 팝업 창을 보면 하 고 다음과 같이 표시 됩니다.
+전체 함수를 강조 표시합니다(11줄 길이여야 함). 강조 표시되면 **Alt** 키를 누른 상태에서 **Enter**를 누릅니다. 팝업창이 표시되며 다음과 같이 표시됩니다.
 
-![예 F# 대화형 Ionide를 사용 하 여 출력](media/getting-started-vscode/vscode-fsi.png)
+![Ionide를 사용한 F# Interactive 출력 예시](media/getting-started-vscode/vscode-fsi.png)
 
-이 세 가지 작업을 수행 했습니다.
+여기서 다음 세 가지 작업이 수행되었습니다.
 
-1. FSI 프로세스를 시작 하는 것입니다.
-2. 강조 표시 된 코드 FSI 프로세스를 통해 보낸 합니다.
-3. FSI 프로세스를 통해 전송 된 코드를 평가 합니다.
+1. FSI 프로세스를 시작했습니다.
+2. FSI 프로세스에서 강조 표시된 코드를 전송했습니다.
+3. FSI 프로세스에서 전송한 코드를 평가합니다.
 
-통해 전달 되는 내용 때문에 [함수](../language-reference/functions/index.md), 이제 FSI 사용 하 여 해당 함수를 호출할 수 있습니다. 대화형 창에서 다음을 입력 합니다.
+[함수](../language-reference/functions/index.md)를 전송했으므로 이제 FSI를 사용하여 해당 함수를 호출할 수 있습니다. 대화형 창에서 다음을 입력합니다.
 
 ```fsharp
 toPigLatin "banana";;
@@ -86,7 +86,7 @@ toPigLatin "banana";;
 val it : string = "ananabay"
 ```
 
-이제 첫 번째 문자로 모음을 사용 하 여 시도해 보겠습니다. 다음을 입력하세요.
+이제 모음을 첫 글자로 사용해 보겠습니다. 다음과 같이 입력합니다.
 
 ```fsharp
 toPigLatin "apple";;
@@ -98,10 +98,10 @@ toPigLatin "apple";;
 val it : string = "appleyay"
 ```
 
-예상 대로 작동 하는 함수 표시 됩니다. 축 하 여 방금 작성 한 첫 번째 F# Visual Studio Code에서 함수 및 FSI를 사용 하 여 평가!
+예상대로 함수가 작동합니다. 축하합니다. 첫 번째 F#함수를 Visual Studio Code에서 작성하고 FSI를 사용하여 평가했습니다!
 
 > [!NOTE]
-> FSI의 선이 끝납니다 했을 수에 따라 `;;`합니다. 즉, FSI을 사용 하면 여러 줄을 입력할 수 있습니다. `;;` 끝 FSI 코드가 완료 되었을 때를 알 수 있습니다.
+> FSI에서는 `;;`가 라인의 끝입니다. FSI에서는 여러 줄의 입력을 허용하기 때문입니다. 마지막에 있는 `;;`는 FSI가 코드의 마지막이라는 것을 인지할 수 있게 해줍니다. 
 
 ## <a name="explaining-the-code"></a>코드를 설명합니다.
 
