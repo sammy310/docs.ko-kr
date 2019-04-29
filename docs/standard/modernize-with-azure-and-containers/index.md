@@ -4,6 +4,12 @@ description: 리프트 앤 시프트 및 Azure 클라우드 및 이 전자책을
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
+ms.openlocfilehash: 7e56238e129cadd128240d51f03a5926e6de3e6b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61628421"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Azure 클라우드와 Windows 컨테이너를 사용하여 기존.NET 응용 프로그램을 최신으로 변경하기 (2 판)
 
@@ -94,14 +100,14 @@ All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 �
 | **장점**|
 | <li>재설계, 새로운 코드 불필요 <li> 최소한의 작업으로 빠른 마이그레이션 가능 <li> Azure에서 지원되는 공통점 <li> 기본 가용성 보장 <li> 클라우드로 이동 후  아주 쉬운 최신화 | <li> 재설계 불필요 <li> 최소한의 코드 및 구성 변경 <li> 컨테이너로 인해 향상된 배포와 DevOps 릴리스 민첩성 <li> 밀도 증가 및 배포 비용 감소 <li> 앱 및 종속성의 이식성 <li> 호스트 대상의 유연성 : PaaS나 IaaS 방식 | <li> 클라우드용 설계, 클리우드에서 최고의 이득을 얻을 수 있으나 새로운 코드 필요 <li> 마이크로 서비스 클라우드 전용 접근법 <li> 최신 중요 업무용 응용 프로그램, 클라우드 복원력이 있는 매우 뛰어난 확장성 <li> 완벽하게 관리되는 서비스 <li> 규모에 최적화 <li> 하위 시스템에 의한 자율적인 민첩성 최적화 <li> 배포 및 DevOps 기반 |
 | **당면 과제** |
-| <li> 운영 경비 변화 또는 데이터 센터 폐쇄가 아닌 클라우드 가격 축소 <li> 관리 되는 거의 없습니다. OS 또는 미들웨어 패치; 없습니다 Terraform, Spinnaker 또는 Puppet 같은 인프라 솔루션을 사용할 수 있습니다. | <li> 컨테이너 화는 개발자와 IT 운영에 대 한 학습 곡선의 추가 단계 <li> DevOps 및 CI/CD 파이프라인은 일반적으로 ''이 접근 방식에 대 한 합니다. 조직은의 문화권에 있는 현재 것 추가 챌린지를 그렇지 않은 경우| <li> 클라우드 네이티브 앱과 마이크로 서비스 아키텍처에 대 한 재개발 필요 하며 일반적으로 상당한 코드 리팩터링 또는 재작성 현대화 하는 경우 (시간 및 예산 증가) <li> DevOps 및 CI/CD 파이프라인은 일반적으로 ''이 접근 방식에 대 한 합니다. 조직은의 문화권에 있는 현재 것 추가 챌린지를 그렇지 않은 경우|
-> **표 1-1.** 기존 .NET 애플리케이션 및 서비스의 현대화 경로 이점 및 당면 과제
+| <li> 운영 비용이나 데이터 센터 폐쇄가 아닌 클라우드 가격 축소 <li> 관리가 어려움: OS나 미들웨어 패치 없음. Terraform이나 Spinnaker, Puppet 같은 인프라 솔루션을 사용할 수 있음. | <li> 컨테이너화는 개발자와 IT 운영에 대한 학습 곡선의 단계를 증가시킴 <li> DevOps 및 CI/CD 파이프라인은 일반적으로 이러한 방식에서 반드시 필요하며, 현재 조직에 없다면 추가적인 당면 과제입니다.| <li> 클라우드 네이티브 앱과 마이크로 서비스 아키텍처의 재개발이 필요하며 일반적으로 최신으로 변경하는 경우 상당한 코드 리팩터링이나 재작성이 필요합니다(시간 및 예산 증가). <li> DevOps 및 CI/CD 파이프라인은 일반적으로 이러한 방식에서 반드시 필요하며, 현재 조직에 없다면 추가적인 당면 과제입니다.|
+> **표 1-1.** 기존 .NET 애플리케이션과 서비스를 최신으로 변경하는 방법의 이점 및 당면 과제
 
-### <a name="key-technologies-and-architectures-by-maturity-level"></a>완성도별 핵심 기술 및 아키텍처
+### <a name="key-technologies-and-architectures-by-maturity-level"></a>성숙도별 핵심 기술 및 아키텍처
 
-.NET Framework 애플리케이션은 2001년 후반에 출시된 .NET Framework 버전 1.0으로 처음 시작되었습니다. 그런 다음 회사에서 최신 버전을 출시했습니다(예: 2.0, 3.5 및 .NET 4.x). 대부분의 이러한 응용 프로그램 및 Windows Server 인터넷 정보 서버 (IIS)에서 실행 하 고 SQL Server, Oracle, MySQL 또는 다른 RDBMS 같은 관계형 데이터베이스를 사용 합니다.
+초기 .NET Framework 애플리케이션은 2001년 후반에 출시된 .NET Framework 버전 1.0으로 시작되었습니다. 그런 다음 기업에서는 최신 버전(예: .NET 2.0과 3.5, 4.x)으로 넘어갔습니다. 이러한 응용 프로그램은 대부분 Windows Server와 인터넷 정보 서버(IIS)에서 동작하고 SQL Server나 Oracle, MySQL 또는 그 밖의 RDBMS와 같은 관계형 데이터베이스를 사용합니다.
 
-요즘 기존 .NET 애플리케이션은 .NET Framework 4.x 또는 .NET Framework 3.5에 기반을 두고 있으며, ASP.NET MVC, ASP.NET Web Forms, ASP.NET Web API, Windows Communication Foundation(WCF), ASP.NET SignalR 및 ASP.NET Web Pages 같은 웹 프레임워크를 사용합니다. 이러한 기존의 .NET Framework 기술은 Windows에 종속됩니다. 레거시 앱만 마이그레이션하고 애플리케이션 인프라에 대한 변경 사항을 최소화하고자 하는 경우에는 이러한 종속성을 고려하는 것이 중요합니다.
+최근 .NET 애플리케이션은 대부분 .NET Framework 4.x나 .NET Framework 3.5 기반이며, ASP.NET MVC와 ASP.NET Web Forms, ASP.NET Web API, Windows Communication Foundation(WCF), ASP.NET SignalR, ASP.NET Web Pages 같은 웹 프레임워크를 사용합니다. 이와 같은 기존의 .NET Framework 기술은 Windows에 종속됩니다. 단순히 레거시 앱만 마이그레이션하고 애플리케이션 인프라의 변경을 최소화하려면 이러한 종속성을 고려해야 합니다.
 
 그림 1-2에서는 각각의 세 가지 클라우드 성숙도에 해당하는 주요 기술과 아키텍처 스타일을 보여 줍니다.
 

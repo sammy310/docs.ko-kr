@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30269
 ms.assetid: 39489621-6617-4e5c-9b24-c2faf8273891
 ms.openlocfilehash: fe8d1d8e11e25bcd79894ed82a57dd06748c3d68
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920902"
 ---
 # <a name="methodname-has-multiple-definitions-with-identical-signatures"></a>'\<methodname >'에 시그니처가 동일한 정의가 여러 개
 A `Function` 또는 `Sub` 프로시저 선언에서 이전 선언과 동일한 프로시저 이름 및 인수 목록을 사용 합니다. 한 가지 가능한 원인은 원래 프로시저를 오버 로드 하려고 합니다. 오버 로드 된 프로시저에는 서로 다른 인수 목록이 있어야 합니다.  
@@ -21,7 +21,7 @@ A `Function` 또는 `Sub` 프로시저 선언에서 이전 선언과 동일한 �
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   프로시저 이름 또는 인수 목록 변경 하거나 중복 된 선언을 제거 합니다.  
+- 프로시저 이름 또는 인수 목록 변경 하거나 중복 된 선언을 제거 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

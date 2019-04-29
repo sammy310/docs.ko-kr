@@ -3,11 +3,11 @@ title: Entity Framework 데이터 공급자 작성
 ms.date: 03/30/2017
 ms.assetid: 092e88c4-a301-453a-b5c3-5740c6575a9f
 ms.openlocfilehash: 2aa27475c28bed521c636139b19454b0720960ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667294"
 ---
 # <a name="writing-an-entity-framework-data-provider"></a>Entity Framework 데이터 공급자 작성
 이 섹션에서는 작성 하는 방법을 설명는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 공급자를 SQL Server 이외의 데이터 소스를 지원 합니다. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] SQL Server를 지 원하는 공급자를 포함 합니다.  
@@ -17,17 +17,17 @@ ms.locfileid: "59228746"
   
  Entity Framework 데이터 공급자(ADO.NET 데이터 공급자 모델을 사용하여 작성됨)는 다음과 같은 기능을 수행합니다.  
   
--   EDM(엔터티 데이터 모델) 기본 형식을 공급자 형식에 매핑합니다.  
+- EDM(엔터티 데이터 모델) 기본 형식을 공급자 형식에 매핑합니다.  
   
--   공급자별 함수를 노출합니다.  
+- 공급자별 함수를 노출합니다.  
   
--   [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 쿼리를 지원하기 위해 지정된 DbQueryCommandTree에 대한 공급자별 명령을 생성합니다.  
+- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 쿼리를 지원하기 위해 지정된 DbQueryCommandTree에 대한 공급자별 명령을 생성합니다.  
   
--   [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]를 통한 업데이트를 지원하기 위해 지정된 DbModificationCommandTree에 대한 공급자별 업데이트 명령을 생성합니다.  
+- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]를 통한 업데이트를 지원하기 위해 지정된 DbModificationCommandTree에 대한 공급자별 업데이트 명령을 생성합니다.  
   
--   데이터베이스 기반의 모델 생성을 지원하기 위해 저장소 스키마 정의에 대한 매핑 파일을 노출합니다.  
+- 데이터베이스 기반의 모델 생성을 지원하기 위해 저장소 스키마 정의에 대한 매핑 파일을 노출합니다.  
   
--   개념적 모델을 통해 메타데이터(예: 테이블 및 뷰)를 노출합니다.  
+- 개념적 모델을 통해 메타데이터(예: 테이블 및 뷰)를 노출합니다.  
   
  ![b42a7a5c&#45;0ac0&#45;4911&#45;86be&#45;0460a78760ba](../../../../../docs/framework/data/adonet/ef/media/b42a7a5c-0ac0-4911-86be-0460a78760ba.gif "b42a7a5c-0ac0-4911-86be-0460a78760ba")  
   

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d335a62545f06a66d4044b59aa9499d3f7ede515
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774545"
 ---
 # <a name="corgcstats-structure"></a>COR_GC_STATS 구조체
 CLR (공용 언어 런타임)의 가비지 수집 메커니즘에 대 한 통계를 제공합니다.  

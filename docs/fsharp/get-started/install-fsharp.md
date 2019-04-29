@@ -3,11 +3,11 @@ title: F# 설치
 description: 환경에 따라 F#을 설치하는 방법을 알아봅니다.
 ms.date: 08/28/2018
 ms.openlocfilehash: 792c61c0522cd4d0c68a64572f2892ce33f71ea6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017022"
 ---
 # <a name="install-f"></a>F를 설치 합니다.\#
 

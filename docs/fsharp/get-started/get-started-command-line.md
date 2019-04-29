@@ -1,6 +1,6 @@
 ---
-title: 시작 F# 명령줄 도구를 사용 하 여
-description: 간단한 다중 프로젝트 솔루션을 구축 하는 방법에 알아봅니다 F# .NET Core CLI를 사용 하 여 운영 체제 (Windows, macOs 또는 Linux).
+title: 명령줄 도구를 사용하여 F# 시작
+description: .NET Core CLI를 사용하여 모든 운영 체제(Windows나 macOs, Linux)에서 간단한 F# 다중 프로젝트 솔루션을 구축하는 방법을 알아봅니다.
 ms.date: 03/26/2018
 ms.openlocfilehash: bc9b223fcf133ffe8b19d5284dcbd3c14a426235
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
@@ -36,9 +36,9 @@ FSNetCore
 
 ### <a name="write-a-class-library"></a>클래스 라이브러리 작성
 
-디렉터리를 변경 *FSNetCore*합니다.
+*FSNetCore*로 디렉터리를 변경합니다.
 
-사용 합니다 `dotnet new` 명령, 클래스 라이브러리 프로젝트를 만들기는 **src** 라이브러리 라는 폴더입니다.
+`dotnet new` 명령어를 사용하여 **src** 폴더에 Library라는 클래스 라이브러리 프로젝트를 만듭니다.
 
 ```console
 dotnet new classlib -lang F# -o src/Library
@@ -55,7 +55,7 @@ dotnet new classlib -lang F# -o src/Library
             └── Library.fsproj
 ```
 
-내용을 바꿉니다 `Library.fs` 다음 코드를 사용 하 여:
+`Library.fs`의 내용을 다음 코드로 변경합니다.
 
 ```fsharp
 module Library
@@ -72,17 +72,17 @@ let getJsonNetJson value =
 dotnet add src/Library/Library.fsproj package Newtonsoft.Json
 ```
 
-추가 합니다 `Library` 프로젝트를 합니다 `FSNetCore` 사용 하 여 솔루션을 [dotnet sln 추가](../../core/tools/dotnet-sln.md) 명령:
+다음과 같이 [dotnet sln add](../../core/tools/dotnet-sln.md)명령을 사용하여 `FSNetCore` 솔루션에 `Library` 프로젝트를 추가합니다.
 
 ```console
 dotnet sln add src/Library/Library.fsproj
 ```
 
-실행 `dotnet build` 프로젝트를 빌드합니다. 확인 되지 않은 종속성을 빌드할 때 복원 됩니다.
+`dotnet build`를 실행하여 프로젝트를 빌드합니다. 확인되지 않은 종속성은 빌드할 때 복원됩니다.
 
-### <a name="write-a-console-application-that-consumes-the-class-library"></a>클래스 라이브러리를 사용 하는 콘솔 응용 프로그램 작성
+### <a name="write-a-console-application-that-consumes-the-class-library"></a>클래스 라이브러리를 사용하는 콘솔 응용 프로그램 작성
 
-사용 합니다 `dotnet new` 명령에서 콘솔 응용 프로그램을 만들기는 **src** 앱 라는 폴더입니다.
+다음과 같이 `dotnet new` 명령을 사용하여 **src**의 App 폴더에 콘솔 응용 프로그램을 만듭니다.
 
 ```console
 dotnet new console -lang F# -o src/App
@@ -102,7 +102,7 @@ dotnet new console -lang F# -o src/App
             └── Library.fsproj
 ```
 
-내용을 대체 합니다 `Program.fs` 를 다음 코드로 파일:
+`Program.fs`파일의 내용을 다음 코드로 대체합니다.
 
 ```fsharp
 open System
@@ -119,21 +119,21 @@ let main argv =
     0 // return an integer exit code
 ```
 
-에 대 한 참조를 추가 합니다 `Library` 사용 하 여 프로젝트 [참조를 추가 하는 dotnet](../../core/tools/dotnet-add-reference.md)합니다.
+다음과 같이 [dotnet add reference](../../core/tools/dotnet-add-reference.md)를 사용하여 `Library`에 참조를 추가합니다.
 
 ```console
 dotnet add src/App/App.fsproj reference src/Library/Library.fsproj
 ```
 
-추가 합니다 `App` 프로젝트를 합니다 `FSNetCore` 사용 하 여 솔루션을 `dotnet sln add` 명령:
+다음과 같이 `dotnet sln add` 명령을 사용하여 `FSNetCore`솔루션에 `App` 프로젝트를 추가합니다.
 
 ```console
 dotnet sln add src/App/App.fsproj
 ```
 
-NuGet 종속성을 복원 `dotnet restore` 실행 `dotnet build` 프로젝트를 빌드합니다.
+`dotnet restore`로 NuGet 종속성을 복원하고 `dotnet build`을 실해하여 프로젝트를 빌드합니다.
 
-디렉터리를 변경 합니다 `src/App` 전달 프로젝트를 실행 하 고 프로젝트를 콘솔 `Hello World` 인수로:
+다음과 같이 `src/App` 콘솔 프로젝트로 디렉터리를 변경하고, `Hello World` 인수를 전달하여 프로젝트를 실행합니다.
 
 ```console
 cd src/App
@@ -151,4 +151,4 @@ I used to be World but now I'm ""World"" thanks to JSON.NET!
 
 ## <a name="next-steps"></a>다음 단계
 
-다음으로 체크 아웃 합니다 [둘러보기 F# ](../tour.md) 다양 한에 대해 자세히 알아보려면 F# 기능.
+다음으로 다양한 F#기능을 알아보기 위해 [F# 둘러보기](../tour.md)를 확인합니다.
