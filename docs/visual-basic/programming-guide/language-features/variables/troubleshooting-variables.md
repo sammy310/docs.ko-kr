@@ -6,11 +6,11 @@ helpviewer_keywords:
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
 ms.openlocfilehash: 55d0fdcdbed4f994e50e83e5a25baf83c3ad79cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756756"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>Visual Basic의 변수 문제 해결
 이 페이지는 Visual Basic의 변수를 사용 하 여 작업할 때 발생할 수 있는 몇 가지 일반적인 문제를 나열 합니다.  
@@ -18,9 +18,9 @@ ms.locfileid: "58831126"
 ## <a name="unable-to-access-members-of-an-object"></a>개체의 멤버에 액세스할 수 없습니다.  
  코드에서 개체의 속성이나 메서드에 액세스하려고 하면 다음과 같은 두 가지 오류가 발생할 수 있습니다.  
   
--   개체 변수를 특정 형식으로 선언한 다음 해당 형식으로 정의되지 않은 멤버를 참조하면 컴파일러에서 오류 메시지가 생성됩니다.  
+- 개체 변수를 특정 형식으로 선언한 다음 해당 형식으로 정의되지 않은 멤버를 참조하면 컴파일러에서 오류 메시지가 생성됩니다.  
   
--   개체 변수에 할당된 개체가 코드에서 액세스하려는 멤버를 노출하지 않는 경우 런타임 <xref:System.MemberAccessException> 이 발생합니다. 변수 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)에 멤버가 없는 경우에이 예외가 발생할 수 있습니다 `Public`합니다. 그 이유는 런타임 바인딩에서는 `Public` 멤버에만 액세스할 수 있기 때문입니다.  
+- 개체 변수에 할당된 개체가 코드에서 액세스하려는 멤버를 노출하지 않는 경우 런타임 <xref:System.MemberAccessException> 이 발생합니다. 변수 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)에 멤버가 없는 경우에이 예외가 발생할 수 있습니다 `Public`합니다. 그 이유는 런타임 바인딩에서는 `Public` 멤버에만 액세스할 수 있기 때문입니다.  
   
   [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) 의 형식 검사가 `On`으로 설정된 경우 개체 변수는 선언된 클래스의 메서드와 속성에만 액세스할 수 있습니다. 다음은 이에 대한 예입니다.  
 

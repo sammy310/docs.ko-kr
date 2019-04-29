@@ -8,24 +8,24 @@ helpviewer_keywords:
 - interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
 ms.openlocfilehash: 5f85eca1026d05d8dc3d862559ee48440edf2c4b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775936"
 ---
 # <a name="interfaces-visual-basic"></a>인터페이스(Visual Basic)
 *인터페이스*는 클래스가 구현할 수 있는 속성, 메서드 및 이벤트를 정의합니다. 인터페이스를 사용하면 기능을 밀접한 관련이 있는 속성, 메서드, 이벤트 등의 작은 그룹으로 정의할 수 있습니다. 이렇게 하면 기존 코드를 그대로 사용하여 인터페이스에 대한 고급 구현을 개발할 수 있기 때문에 호환성 문제가 줄어듭니다. 추가적인 인터페이스와 구현을 개발하여 언제든지 새로운 기능을 추가할 수 있습니다.  
   
  클래스를 상속하는 대신 인터페이스를 사용해야 하는 몇 가지 다른 이유가 있습니다.  
   
--   인터페이스는 특정 기능을 제공하기 위해 무관할 수 있는 다수의 개체 형식이 애플리케이션에서 요구되는 경우에 더 적합합니다.  
+- 인터페이스는 특정 기능을 제공하기 위해 무관할 수 있는 다수의 개체 형식이 애플리케이션에서 요구되는 경우에 더 적합합니다.  
   
--   인터페이스는 다중 인터페이스를 구현하는 단일 구현을 정의할 수 있기 때문에 기본 클래스보다 더 유연합니다.  
+- 인터페이스는 다중 인터페이스를 구현하는 단일 구현을 정의할 수 있기 때문에 기본 클래스보다 더 유연합니다.  
   
--   인터페이스는 기본 클래스로부터 구현을 상속할 필요가 없는 경우에 더 효율적입니다.  
+- 인터페이스는 기본 클래스로부터 구현을 상속할 필요가 없는 경우에 더 효율적입니다.  
   
--   인터페이스는 클래스 상속을 사용할 수 없는 경우에 유용합니다. 예를 들어 구조체는 클래스에서 상속할 수 없지만 인터페이스를 구현할 수는 있습니다.  
+- 인터페이스는 클래스 상속을 사용할 수 없는 경우에 유용합니다. 예를 들어 구조체는 클래스에서 상속할 수 없지만 인터페이스를 구현할 수는 있습니다.  
   
 ## <a name="declaring-interfaces"></a>인터페이스 선언  
  인터페이스 정의는 `Interface` 및 `End Interface` 문 내에 포함됩니다. `Interface` 문 다음에, 하나 이상의 상속된 인터페이스를 나열하는 `Inherits` 문을 선택적으로 추가할 수 있습니다. `Inherits` 문은 선언에서 주석을 제외하고는 다른 모든 문 앞에 와야 합니다. 인터페이스 정의에 나오는 나머지 문은 `Event`, `Sub`, `Function`, `Property`, `Interface`, `Class`, `Structure` 및 `Enum` 문입니다. 인터페이스는 구현 코드 또는 구현 코드와 관련된 문(예: `End Sub` 또는 `End Property`)을 포함할 수 없습니다.  
