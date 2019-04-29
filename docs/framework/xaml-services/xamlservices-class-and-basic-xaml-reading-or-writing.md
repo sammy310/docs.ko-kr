@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XamlServices class [XAML Services], how to use
 ms.assetid: 6ac27fad-3687-4d7a-add1-3e90675fdfde
 ms.openlocfilehash: c9ef6a215587750f66d2cf8b5b54cbc51f89037e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938738"
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>XAMLServices 클래스 및 기본 XAML 읽기 또는 쓰기
 <xref:System.Xaml.XamlServices> 는 .NET Framework XAML 서비스에서 제공되는 클래스로, 이 클래스를 사용하여 XAML 노드 스트림에 대한 특정 액세스가 필요 없는 XAML 시나리오 또는 해당 노드에서 가져온 XAML 형식 시스템의 정보를 처리할 수 있습니다. <xref:System.Xaml.XamlServices> API는 XAML 로드 경로를 지원하는 `Load` 또는 `Parse` , XAML 저장 경로를 지원하는 `Save` , 로드 경로와 저장 경로를 연결하는 기술을 제공하는 `Transform` 으로 요약할 수 있습니다. `Transform` 은 XAML 스키마를 다른 스키마로 변경하는 데 사용할 수 있습니다. 이 항목에서는 이러한 각 API 분류를 요약하고 특정 메서드 오버로드 간의 차이점을 설명합니다.  
@@ -25,9 +25,9 @@ ms.locfileid: "59162270"
   
  <xref:System.Xaml.XamlServices.Load%28System.IO.TextReader%29> 및 <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29> 는 이전 버전의 .NET Framework에서 형식을 읽어 오는 판독기에 의존하는 오버로드입니다. 이 오버로드를 사용하려면 기존에 판독기 인스턴스를 만들고 해당 `Create` API를 사용하여 관련 형식(텍스트 또는 XML)으로 XAML을 로드해야 합니다. 이미 다른 판독기에서 레코드 포인터를 이동했거나 다른 작업을 수행한 경우에는 이 과정이 중요하지 않습니다. <xref:System.Xaml.XamlServices.Load%2A> 에서 구현된 로드 경로 논리는 항상 루트에서 전체 XAML 입력을 처리합니다. 이 오버로드에 대한 시나리오는 다음과 같습니다.  
   
--   기존 XML 특정 텍스트 편집기에서 간단한 XAML 편집 기능을 제공하는 디자인 화면을 사용하는 경우  
+- 기존 XML 특정 텍스트 편집기에서 간단한 XAML 편집 기능을 제공하는 디자인 화면을 사용하는 경우  
   
--   전용 판독기를 사용하여 파일이나 스트림을 여는 핵심 <xref:System.IO> 시나리오의 변형. 논리가 XAML로 로드하기 전에 콘텐츠에 대해 기본적인 검사나 처리를 수행합니다.  
+- 전용 판독기를 사용하여 파일이나 스트림을 여는 핵심 <xref:System.IO> 시나리오의 변형. 논리가 XAML로 로드하기 전에 콘텐츠에 대해 기본적인 검사나 처리를 수행합니다.  
   
  파일 또는 스트림을 로드하거나, 판독기의 API로 로드해 XAML 입력을 래핑하는 <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>또는 <xref:System.Xaml.XamlReader> 를 로드할 수 있습니다.  
   
@@ -35,9 +35,9 @@ ms.locfileid: "59162270"
   
  더 높은 수준의 시나리오를 가능하게 하는 `Load` 서명은 <xref:System.Xaml.XamlServices.Load%28System.Xaml.XamlReader%29>입니다. 다음 중 하나의 경우에 이 서명을 사용할 수 있습니다.  
   
--   고유한 <xref:System.Xaml.XamlReader>구현을 정의한 경우  
+- 고유한 <xref:System.Xaml.XamlReader>구현을 정의한 경우  
   
--   기본 설정과 다른 <xref:System.Xaml.XamlReader> 설정을 지정해야 하는 경우  
+- 기본 설정과 다른 <xref:System.Xaml.XamlReader> 설정을 지정해야 하는 경우  
   
  기본이 아닌 설정의 예는 <xref:System.Xaml.XamlReaderSettings.AllowProtectedMembersOnRoot%2A>; <xref:System.Xaml.XamlReaderSettings.BaseUri%2A>; <xref:System.Xaml.XamlReaderSettings.IgnoreUidsOnPropertyElements%2A>; <xref:System.Xaml.XamlReaderSettings.LocalAssembly%2A>; <xref:System.Xaml.XamlReaderSettings.ValuesMustBeString%2A>중 하나의 설정입니다. <xref:System.Xaml.XamlServices> 에 대한 기본 판독기는 <xref:System.Xaml.XamlXmlReader>입니다. 고유한 <xref:System.Xaml.XamlXmlReader>를 설정과 함께 제공하는 경우 다음은 기본이 아닌 <xref:System.Xaml.XamlXmlReaderSettings>: <xref:System.Xaml.XamlXmlReaderSettings.CloseInput%2A>; <xref:System.Xaml.XamlXmlReaderSettings.SkipXmlCompatibilityProcessing%2A>; <xref:System.Xaml.XamlXmlReaderSettings.XmlLang%2A>; <xref:System.Xaml.XamlXmlReaderSettings.XmlSpacePreserve%2A>를 설정하는 속성입니다.  
   

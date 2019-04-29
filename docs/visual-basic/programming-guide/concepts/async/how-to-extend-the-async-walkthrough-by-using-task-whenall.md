@@ -3,11 +3,11 @@ title: '방법: Task.WhenAll (Visual Basic)를 사용 하 여 비동기 연습 �
 ms.date: 07/20/2015
 ms.assetid: c06d386d-e996-4da9-bf3d-05a3b6c0a258
 ms.openlocfilehash: 7ad2d9cdd85a7bdb67bbf091a38274fd20e5a66f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756509"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>방법: Task.WhenAll (Visual Basic)를 사용 하 여 비동기 연습 확장
  메서드를 사용하여 [연습: 사용 하 여 Async 및 Await (Visual Basic) 하 여 웹에 액세스](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) 를 사용 하 여를 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 메서드. 이 메서드는 작업 컬렉션으로 표시되는 여러 개의 비동기 작업을 비동기적으로 기다립니다.  
@@ -25,9 +25,9 @@ ms.locfileid: "59331886"
   
 1. `ProcessURLAsync` 메서드를 [연습: 비동기를 사용 하 여 웹 서비스에 액세스 하 고 (Visual Basic) Await](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)합니다.  
   
-    -   코드를 다운로드 하는 경우 [개발자 코드 샘플](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)AsyncWalkthrough 프로젝트를 열고 추가한 `ProcessURLAsync` MainWindow.xaml.vb 파일입니다.  
+    - 코드를 다운로드 하는 경우 [개발자 코드 샘플](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)AsyncWalkthrough 프로젝트를 열고 추가한 `ProcessURLAsync` MainWindow.xaml.vb 파일입니다.  
   
-    -   연습을 완료하여 코드를 개발한 경우 `GetURLContentsAsync` 메서드를 포함하는 애플리케이션에 `ProcessURLAsync`를 추가합니다. 이 응용 프로그램의 MainWindow.xaml.vb 파일은 "연습의 전체 코드 예제에서" 섹션의 첫 번째 예제입니다.  
+    - 연습을 완료하여 코드를 개발한 경우 `GetURLContentsAsync` 메서드를 포함하는 애플리케이션에 `ProcessURLAsync`를 추가합니다. 이 응용 프로그램의 MainWindow.xaml.vb 파일은 "연습의 전체 코드 예제에서" 섹션의 첫 번째 예제입니다.  
   
      `ProcessURLAsync` 메서드는 원래 연습의 `SumPageSizesAsync`에 `For Each` 루프 본문의 작업을 통합합니다. 이 메서드는 비동기적으로 지정된 웹 사이트의 내용을 바이트 배열로 다운로드한 다음 바이트 배열의 길이를 표시하고 반환합니다.  
   
@@ -98,9 +98,9 @@ ms.locfileid: "59331886"
   
 1. `ProcessURLAsync`의 다음 버전을 [연습: 비동기를 사용 하 여 웹 서비스에 액세스 하 고 (Visual Basic) Await](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)합니다.  
   
-    -   코드를 다운로드 하는 경우 [개발자 코드 샘플](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)AsyncWalkthrough_HttpClient 프로젝트를 열고 추가한 `ProcessURLAsync` MainWindow.xaml.vb 파일입니다.  
+    - 코드를 다운로드 하는 경우 [개발자 코드 샘플](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)AsyncWalkthrough_HttpClient 프로젝트를 열고 추가한 `ProcessURLAsync` MainWindow.xaml.vb 파일입니다.  
   
-    -   연습을 완료하여 코드를 개발한 경우 `HttpClient.GetByteArrayAsync` 메서드를 사용하는 애플리케이션에 `ProcessURLAsync`를 추가합니다. 이 응용 프로그램의 MainWindow.xaml.vb 파일은 "연습의 전체 코드 예제에서" 섹션의 두 번째 예제입니다.  
+    - 연습을 완료하여 코드를 개발한 경우 `HttpClient.GetByteArrayAsync` 메서드를 사용하는 애플리케이션에 `ProcessURLAsync`를 추가합니다. 이 응용 프로그램의 MainWindow.xaml.vb 파일은 "연습의 전체 코드 예제에서" 섹션의 두 번째 예제입니다.  
   
      `ProcessURLAsync` 메서드는 원래 연습의 `SumPageSizesAsync`에 `For Each` 루프 본문의 작업을 통합합니다. 이 메서드는 비동기적으로 지정된 웹 사이트의 내용을 바이트 배열로 다운로드한 다음 바이트 배열의 길이를 표시하고 반환합니다.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "59331886"
   
 ### <a name="to-test-the-taskwhenall-solutions"></a>Task.WhenAll 솔루션을 테스트하려면  
   
--   두 솔루션 중 하나에 대해 F5 키를 선택하여 프로그램을 실행한 다음 **시작** 단추를 선택합니다. 출력은 [연습: 비동기를 사용 하 여 웹 서비스에 액세스 하 고 (Visual Basic) Await](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)합니다. 그러나 웹 사이트가 매번 다른 순서로 나타납니다.  
+- 두 솔루션 중 하나에 대해 F5 키를 선택하여 프로그램을 실행한 다음 **시작** 단추를 선택합니다. 출력은 [연습: 비동기를 사용 하 여 웹 서비스에 액세스 하 고 (Visual Basic) Await](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)합니다. 그러나 웹 사이트가 매번 다른 순서로 나타납니다.  
   
 ## <a name="example"></a>예제  
  다음 코드에서는 `GetURLContentsAsync` 메서드를 사용하여 웹에서 콘텐츠를 다운로드하는 프로젝트에 대한 확장을 보여 줍니다.  
