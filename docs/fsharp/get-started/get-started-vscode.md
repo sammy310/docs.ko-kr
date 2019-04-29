@@ -64,17 +64,17 @@ ms.locfileid: "59612890"
 
 이 함수는 단어를 [Pig Latin](https://en.wikipedia.org/wiki/Pig_Latin) 형태로 변환합니다. 다음으로 F# Interactive (FSI)를 사용하여 평가합니다.
 
-전체 함수를 강조 표시합니다(11줄 길이여야 함). 강조 표시되면 **Alt** 키를 누른상태에서 **Enter**를 누릅니다. 팝업창이 표시되며 다음과 같이 표시됩니다.
+전체 함수를 강조 표시합니다(11줄 길이여야 함). 강조 표시되면 **Alt** 키를 누른 상태에서 **Enter**를 누릅니다. 팝업창이 표시되며 다음과 같이 표시됩니다.
 
-![Ionide를 사용하여 F# Interactive 출력 예시](media/getting-started-vscode/vscode-fsi.png)
+![Ionide를 사용한 F# Interactive 출력 예시](media/getting-started-vscode/vscode-fsi.png)
 
 여기서 다음 세 가지 작업이 수행되었습니다.
 
-1. FSI 프로세스를 시작 했습니다. 
-2. FSI 프로세스로 강조된 코드를 전송했습니다.
+1. FSI 프로세스를 시작했습니다.
+2. FSI 프로세스에서 강조 표시된 코드를 전송했습니다.
 3. FSI 프로세스에서 전송한 코드를 평가합니다.
 
-[함수](../language-reference/functions/index.md)를 전송했으므로 이제 FSI 사용하여 해당 함수를 호출할 수 있습니다. 대화형 창에서 다음을 입력 합니다.
+[함수](../language-reference/functions/index.md)를 전송했으므로 이제 FSI를 사용하여 해당 함수를 호출할 수 있습니다. 대화형 창에서 다음을 입력합니다.
 
 ```fsharp
 toPigLatin "banana";;
