@@ -17,11 +17,11 @@ helpviewer_keywords:
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
 ms.openlocfilehash: 147c61badd680277480226b809df97d46b636c7d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022300"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>상호 운용성 문제 해결(Visual Basic)
 COM 및 관리 코드의 상호 운용 하는 경우는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], 다음과 같은 일반적인 문제 중 하나 이상을 발생할 수 있습니다.  
@@ -100,11 +100,11 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 ## <a name="vbconinteroperabilitymarshalinganchor10"></a> ActiveX 컨트롤 문제  
  Visual Basic 6.0을 사용 하는 대부분의 ActiveX 컨트롤 문제 없이 Visual Basic.NET을 사용 하 여 작동 합니다. 중요 한 예외는 컨테이너 컨트롤 또는 시각적으로 다른 컨트롤을 포함 하는 컨트롤입니다. Visual Studio를 사용 하 여 올바르게 작동 하지 않는 이전 컨트롤의 몇 가지 예는 다음과 같습니다.  
   
--   Microsoft Forms 2.0 Frame 컨트롤  
+- Microsoft Forms 2.0 Frame 컨트롤  
   
--   Up-down 컨트롤, 라고도 spin 컨트롤  
+- Up-down 컨트롤, 라고도 spin 컨트롤  
   
--   Sheridan 탭 컨트롤  
+- Sheridan 탭 컨트롤  
   
  지원 되지 않는 ActiveX 컨트롤 문제에 대 한 몇 가지 대안만 있습니다. 원래 소스 코드를 소유 하는 경우 Visual Studio로 기존 컨트롤을 마이그레이션할 수 있습니다. 그렇지 않은 경우 업데이트에 대 한 소프트웨어 공급 업체를 사용 하 여 확인할 수 있습니다. NET 호환 버전을 대체 하는 컨트롤에 ActiveX 컨트롤을 지원 되지 않습니다.  
   

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d366a0093ca82d2e5b3c40729777a1b6c0766bda
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59092203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049546"
 ---
 # <a name="icorprofilerinfogetobjectsize-method"></a>ICorProfilerInfo::GetObjectSize 메서드
 지정된 된 개체의 크기를 가져옵니다.  
@@ -51,9 +51,9 @@ HRESULT GetObjectSize(
   
  반환 되는 크기는 `GetObjectSize` 메서드는 개체가 가비지 컬렉션 힙에 후 나타날 수 있는 맞춤 안쪽 여백을 포함 되지 않습니다. 사용 하는 경우는 `GetObjectSize` 메서드 가비지 컬렉션 힙에 개체에서 개체를 수동으로 필요에 따라 패딩 맞춤을 추가 합니다.  
   
--   32 비트 Windows에서 COR_PRF_GC_GEN_0, COR_PRF_GC_GEN_1, 및 COR_PRF_GC_GEN_2 4 바이트 맞춤을 사용 하 고 COR_PRF_GC_LARGE_OBJECT_HEAP 8 바이트 정렬을 사용 합니다.  
+- 32 비트 Windows에서 COR_PRF_GC_GEN_0, COR_PRF_GC_GEN_1, 및 COR_PRF_GC_GEN_2 4 바이트 맞춤을 사용 하 고 COR_PRF_GC_LARGE_OBJECT_HEAP 8 바이트 정렬을 사용 합니다.  
   
--   64 비트 Windows에 맞춤은 항상 8 바이트입니다.  
+- 64 비트 Windows에 맞춤은 항상 8 바이트입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

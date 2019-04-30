@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
 ms.openlocfilehash: cb109eaf43fee19b77ac690492b85919c9d78301
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054395"
 ---
 # <a name="take-clause-visual-basic"></a>Take 절(Visual Basic)
 컬렉션의 시작 위치에서 지정된 수의 연속 요소를 반환합니다.  

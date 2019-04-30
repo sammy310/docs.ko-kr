@@ -3,11 +3,11 @@ title: 웹 서비스 프로토콜 상호 운용성 가이드
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
 ms.openlocfilehash: 647212558b6be38e9b30239f7fb71213e6eb7d86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050352"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>웹 서비스 프로토콜 상호 운용성 가이드
 Windows Communication Foundation (WCF) 다양 한 웹 서비스 프로토콜을 구현합니다. 이러한 프로토콜의 대부분에는 구현자가 결정하는 여러 가지 옵션과 확장 지점이 포함되어 있습니다. 이 항목에서는 WCF를 구현 하는 웹 서비스 프로토콜의 목록을 제공 합니다. 이 단원의 다른 항목에서는 지원되는 각 프로토콜의 구현에 대해 자세히 설명합니다.  
@@ -76,29 +76,29 @@ Windows Communication Foundation (WCF) 다양 한 웹 서비스 프로토콜을 
   
  <xref:System.ServiceModel.Description.MetadataExporter>, <xref:System.ServiceModel.Description.MetadataImporter>, <xref:System.ServiceModel.Description.WsdlExporter>, <xref:System.ServiceModel.Description.WsdlImporter> 및 <xref:System.ServiceModel.Description.MetadataResolver> 클래스는 다음과 같은 메타데이터 사양을 지원합니다.  
   
--   [XML Schema Part 1: 구조 제 2 판](https://go.microsoft.com/fwlink/?LinkId=3536)  
+- [XML Schema Part 1: 구조 제 2 판](https://go.microsoft.com/fwlink/?LinkId=3536)  
   
--   [XML Schema Part 2: 데이터 형식 Second Edition](https://go.microsoft.com/fwlink/?LinkId=40138)  
+- [XML Schema Part 2: 데이터 형식 Second Edition](https://go.microsoft.com/fwlink/?LinkId=40138)  
   
--   [WSDL 1.1](https://go.microsoft.com/fwlink/?LinkId=96160)  
+- [WSDL 1.1](https://go.microsoft.com/fwlink/?LinkId=96160)  
   
--   [WS-Policy 1.2](https://go.microsoft.com/fwlink/?LinkId=96705)  
+- [WS-Policy 1.2](https://go.microsoft.com/fwlink/?LinkId=96705)  
   
--   [WS-Policy 1.5](https://go.microsoft.com/fwlink/?LinkId=96706)  
+- [WS-Policy 1.5](https://go.microsoft.com/fwlink/?LinkId=96706)  
   
--   [WS-PolicyAttachment 1.2](https://go.microsoft.com/fwlink/?LinkId=96707)  
+- [WS-PolicyAttachment 1.2](https://go.microsoft.com/fwlink/?LinkId=96707)  
   
--   [WS-MetadataExchange 1.1](https://go.microsoft.com/fwlink/?LinkId=94868)  
+- [WS-MetadataExchange 1.1](https://go.microsoft.com/fwlink/?LinkId=94868)  
   
--   [Ws-transfer Get 메타 데이터 검색](https://go.microsoft.com/fwlink/?LinkId=96708)  
+- [Ws-transfer Get 메타 데이터 검색](https://go.microsoft.com/fwlink/?LinkId=96708)  
   
  또한 WCF에서 다음 상호 운용성 프로필이 구현 됩니다.  
   
--   [Basic Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=69313)  
+- [Basic Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=69313)  
   
--   [단순 SOAP 바인딩 1.0](https://go.microsoft.com/fwlink/?LinkId=96710)  
+- [단순 SOAP 바인딩 1.0](https://go.microsoft.com/fwlink/?LinkId=96710)  
   
--   [기본 보안 프로필 1.0 초안](https://go.microsoft.com/fwlink/?LinkId=96711)  
+- [기본 보안 프로필 1.0 초안](https://go.microsoft.com/fwlink/?LinkId=96711)  
   
 ## <a name="see-also"></a>참고자료
 

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c3f6e4b0-1131-4c94-aa39-a197c5c2f2ca
 ms.openlocfilehash: 226b77d1c638ec4f8505140332ad35d4029ef0b0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050690"
 ---
 # <a name="understanding-generated-client-code"></a>생성된 클라이언트 코드 이해
 [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 는 클라이언트 응용 프로그램을 빌드하는 데 사용할 클라이언트 응용 프로그램 구성 파일과 클라이언트 코드를 생성합니다. 이 항목에서는 표준 서비스 계약 시나리오를 위해 생성된 코드 예제를 간략히 살펴 봅니다. 생성된 된 코드를 사용 하 여 클라이언트 응용 프로그램을 작성 하는 방법에 대 한 자세한 내용은 참조 하세요. [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md)합니다.  
@@ -20,15 +20,15 @@ ms.locfileid: "59189161"
   
  Svcutil.exe에는 생성된 형식 정보를 수정하는 많은 옵션이 있으므로 이 항목에서 모든 시나리오에 대해 설명하지는 않습니다. 그러나 다음 표준 작업에는 생성된 코드를 찾는 과정이 포함됩니다.  
   
--   서비스 계약 인터페이스 식별  
+- 서비스 계약 인터페이스 식별  
   
--   WCF 클라이언트 클래스를 식별합니다.  
+- WCF 클라이언트 클래스를 식별합니다.  
   
--   데이터 형식 식별  
+- 데이터 형식 식별  
   
--   이중 서비스에 대한 콜백 계약 식별  
+- 이중 서비스에 대한 콜백 계약 식별  
   
--   도우미 서비스 계약 채널 인터페이스 식별  
+- 도우미 서비스 계약 채널 인터페이스 식별  
   
 ### <a name="finding-service-contract-interfaces"></a>서비스 계약 인터페이스 찾기  
  서비스 계약을 모델링하는 인터페이스를 찾으려면 <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> 특성으로 표시된 인터페이스를 검색합니다. 다른 특성이 있고 특성 자체에 명시적 속성이 설정되어 있어 빠른 읽기로 이 특성을 찾기 어려울 수 있습니다. 서비스 계약 인터페이스와 클라이언트 계약 인터페이스는 두 가지 다른 형식입니다. 다음 코드 예제에서는 원래 서비스 계약을 보여 줍니다.  

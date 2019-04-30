@@ -15,11 +15,11 @@ helpviewer_keywords:
 - automatic sizing
 ms.assetid: b6706efb-d7a4-45ec-8cf4-08fa993e3afb
 ms.openlocfilehash: 57abf3527af146f1ce918bcabbc6a5a34bfb9b34
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011738"
 ---
 # <a name="best-practices-for-the-tablelayoutpanel-control"></a>TableLayoutPanel 컨트롤에 대한 모범 사례
 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤에 Windows Forms에서 사용 하기 전에 신중 하 게 고려해 야 하는 강력한 레이아웃 기능을 제공 합니다.  
@@ -30,17 +30,17 @@ ms.locfileid: "59773833"
 ### <a name="targeted-use"></a>대상된 사용  
  사용 된 <xref:System.Windows.Forms.TableLayoutPanel> 꼭 필요할 때만 제어 합니다. 크기 조정 가능한 레이아웃을 필요로 하는 모든 상황에서 하지 사용 해야 합니다. 다음 목록에서는 가장 많이 사용 하 여에서 향상 된 레이아웃을 <xref:System.Windows.Forms.TableLayoutPanel> 제어:  
   
--   서로 크기를 비례적으로 크기를 조정 하는 폼의 여러 부분이 있는 레이아웃입니다.  
+- 서로 크기를 비례적으로 크기를 조정 하는 폼의 여러 부분이 있는 레이아웃입니다.  
   
--   레이아웃을 수정 또는 추가 되거나 삭제 된 사용자 지정 가능한 필드가 있는 데이터 항목 형식과 같은 런타임에 동적으로 생성 될 기본 설정을 기반으로 합니다.  
+- 레이아웃을 수정 또는 추가 되거나 삭제 된 사용자 지정 가능한 필드가 있는 데이터 항목 형식과 같은 런타임에 동적으로 생성 될 기본 설정을 기반으로 합니다.  
   
--   전체 고정 크기로 유지 되어야 하는 레이아웃을 선택 합니다. 예를 들어 800 x 600, 보다 작게 유지 해야 하는 대화 상자가 있을 수 있지만 지역화 된 문자열을 지원 해야 합니다.  
+- 전체 고정 크기로 유지 되어야 하는 레이아웃을 선택 합니다. 예를 들어 800 x 600, 보다 작게 유지 해야 하는 대화 상자가 있을 수 있지만 지역화 된 문자열을 지원 해야 합니다.  
   
  다음 목록에서는 레이아웃을 사용 하 여에서 매우 유용 하지 않습니다는 <xref:System.Windows.Forms.TableLayoutPanel> 제어 합니다.  
   
--   간단한 데이터 입력 폼 단일 열을 사용 하 여 레이블 및 텍스트 입력 영역의 단일 열입니다.  
+- 간단한 데이터 입력 폼 단일 열을 사용 하 여 레이블 및 텍스트 입력 영역의 단일 열입니다.  
   
--   큰 단일 폼 크기를 조정 하면 사용 가능한 모든 공간을 채워야 하는 영역을 표시 합니다. 이 예제는 단일을 표시 하는 폼 <xref:System.Windows.Forms.PropertyGrid> 제어 합니다. 이 경우 아무 폼 크기가 조정 되 면을 확장 해야 하기 때문에 앵커를 사용 합니다.  
+- 큰 단일 폼 크기를 조정 하면 사용 가능한 모든 공간을 채워야 하는 영역을 표시 합니다. 이 예제는 단일을 표시 하는 폼 <xref:System.Windows.Forms.PropertyGrid> 제어 합니다. 이 경우 아무 폼 크기가 조정 되 면을 확장 해야 하기 때문에 앵커를 사용 합니다.  
   
  컨트롤에 포함 되도록 해야 신중 하 게 선택는 <xref:System.Windows.Forms.TableLayoutPanel> 제어 합니다. 공간을 30% 고정을 사용 하 여 늘릴 수 있는 텍스트에 대 한 경우 사용을 고려 합니다 <xref:System.Windows.Forms.Control.Anchor%2A> 속성에만 해당 합니다. 레이아웃에 필요한 공간을 예측할 수 있습니다, 아니면 사용 하 여 <xref:System.Windows.Forms.Control.Dock%2A> 하 고 <xref:System.Windows.Forms.Control.Anchor%2A> 남은 공간의 세부 정보를 예측 하는 것 보다 쉽습니다 및 <xref:System.Windows.Forms.Control.AutoSize%2A> 동작 합니다.  
   

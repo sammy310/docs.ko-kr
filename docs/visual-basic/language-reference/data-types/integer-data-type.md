@@ -22,21 +22,19 @@ helpviewer_keywords:
 - Integer data type
 ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
 ms.openlocfilehash: b0d24027f00c4ab4ba49f4948a9f5488a2eff3fd
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054408"
 ---
 # <a name="integer-data-type-visual-basic"></a>정수 데이터 형식 (Visual Basic)
 -2,147,483,648에서 2,147,483,647까지의 값 범위에 속하는 부호 있는 32비트(4바이트) 정수를 저장합니다.  
   
 ## <a name="remarks"></a>설명
- 
-  `Integer` 데이터 형식은 32비트 프로세서에서 최적의 성능을 제공합니다. 다른 정수 계열 형식은 메모리에서 로드하고 저장하는 속도가 더 느려집니다.  
+ `Integer` 데이터 형식은 32비트 프로세서에서 최적의 성능을 제공합니다. 다른 정수 계열 형식은 메모리에서 로드하고 저장하는 속도가 더 느려집니다.  
   
- 
-  `Integer`의 기본값은 0입니다.  
+ `Integer`의 기본값은 0입니다.  
 
 ## <a name="literal-assignments"></a>리터럴 할당
 
@@ -69,14 +67,13 @@ Dim number = &H_035826I
 
 ## <a name="programming-tips"></a>프로그래밍 팁
 
--   **Interop 고려 사항입니다.** 자동화 개체나 COM 개체와 같은.NET Framework 용으로 작성 되지 구성 요소와 상호 작용 하는 경우에 유의 해야 `Integer` 다른 환경에서 다른 데이터 너비 (16 비트)에 있습니다. 이러한 구성 요소에 16비트 인수를 전달하는 경우 새 Visual Basic 코드에서 이 인수를 `Short` 대신 `Integer`로 선언하십시오.  
+- **Interop 고려 사항입니다.** 자동화 개체나 COM 개체와 같은.NET Framework 용으로 작성 되지 구성 요소와 상호 작용 하는 경우에 유의 해야 `Integer` 다른 환경에서 다른 데이터 너비 (16 비트)에 있습니다. 이러한 구성 요소에 16비트 인수를 전달하는 경우 새 Visual Basic 코드에서 이 인수를 `Short` 대신 `Integer`로 선언하십시오.  
   
--   **확대 합니다.** 
-  `Integer` 데이터 형식은 `Long`, `Decimal`, `Single` 또는 `Double`로 확대 변환됩니다. 이는 `Integer` 오류 발생 없이 <xref:System.OverflowException?displayProperty=nameWithType>를 이러한 형식 중 하나로 변환할 수 있음을 의미합니다.  
+- **확대 합니다.** `Integer` 데이터 형식은 `Long`, `Decimal`, `Single` 또는 `Double`로 확대 변환됩니다. 이는 `Integer` 오류 발생 없이 <xref:System.OverflowException?displayProperty=nameWithType>를 이러한 형식 중 하나로 변환할 수 있음을 의미합니다.  
   
--   **형식 문자입니다.** 리터럴 형식 문자 `I`를 리터럴에 추가하면 `Integer` 데이터 형식이 됩니다. 식별자 형식 문자 `%`를 식별자에 추가하면 `Integer`가 됩니다.  
+- **형식 문자입니다.** 리터럴 형식 문자 `I`를 리터럴에 추가하면 `Integer` 데이터 형식이 됩니다. 식별자 형식 문자 `%`를 식별자에 추가하면 `Integer`가 됩니다.  
   
--   **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.Int32?displayProperty=nameWithType> 구조체입니다.  
+- **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.Int32?displayProperty=nameWithType> 구조체입니다.  
   
 ## <a name="range"></a>범위
 

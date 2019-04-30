@@ -12,11 +12,11 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 ms.assetid: 07a4584d-9fd8-4a1d-b7d9-ccf2efa5c84e
 ms.openlocfilehash: d2114e908077ec947164a28f48841282abefda2e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053745"
 ---
 # <a name="how-to-sort-query-results-by-using-linq-visual-basic"></a>방법: LINQ (Visual Basic)를 사용 하 여 쿼리 결과 정렬
 언어 통합 쿼리 (LINQ)를 사용 하면 쉽게 데이터베이스 정보에 액세스 하 고 쿼리를 실행 합니다.  

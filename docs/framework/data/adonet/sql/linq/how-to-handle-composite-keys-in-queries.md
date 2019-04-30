@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ce2f14fd-1038-458a-91e3-a078c61f0d10
 ms.openlocfilehash: 2621ab4db207d1b868fbe3778c30c744201b0506
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033815"
 ---
 # <a name="how-to-handle-composite-keys-in-queries"></a>방법: 쿼리에서 복합 키 처리
 일부 연산자는 인수를 하나만 받아들일 수 있습니다. 인수가 데이터베이스에서 둘 이상의 열을 포함하는 경우 조합을 나타내는 익명 형식을 만들어야 합니다.  

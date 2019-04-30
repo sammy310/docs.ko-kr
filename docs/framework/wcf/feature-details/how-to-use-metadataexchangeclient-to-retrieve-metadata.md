@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 0754e9dc-13c5-45c2-81b5-f3da466e5a87
 ms.openlocfilehash: 32acef65ee30d7b80b37c11bdd024e3c09a935ef
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038768"
 ---
 # <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>방법: MetadataExchangeClient를 사용하여 메타데이터 검색
 WS-MetadataExchange(MEX) 프로토콜을 사용하여 메타데이터를 다운로드하려면 <xref:System.ServiceModel.Description.MetadataExchangeClient> 클래스를 사용합니다. 검색된 메타데이터 파일은 <xref:System.ServiceModel.Description.MetadataSet> 개체로 반환됩니다. 반환된 <xref:System.ServiceModel.Description.MetadataSet> 개체에는 <xref:System.ServiceModel.Description.MetadataSection> 개체의 컬렉션이 들어 있으며, 각 개체에는 특정 메타데이터 언어와 식별자가 포함되어 있습니다. 반환된 메타데이터는 파일로 작성할 수 있으며, 반환된 메타데이터에 WSDL(웹 서비스 기술 언어) 문서가 있는 경우에는 <xref:System.ServiceModel.Description.WsdlImporter>를 사용하여 메타데이터를 가져올 수 있습니다.  

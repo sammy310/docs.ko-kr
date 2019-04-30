@@ -3,11 +3,11 @@ title: 공급자 매니페스트 지정
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
 ms.openlocfilehash: 3d396f6ecfc0eb4a884e4af0d84ef65d18c5586c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034008"
 ---
 # <a name="provider-manifest-specification"></a>공급자 매니페스트 지정
 이 단원에서는 데이터 저장소 공급자가 데이터 저장소의 형식 및 함수를 지원하는 방법에 대해 설명합니다.  
@@ -45,18 +45,18 @@ ms.locfileid: "59169912"
   
  다음 두 섹션이 있는 XML 파일을 작성합니다.  
   
--   저장소 형식 또는 함수의 "해당하는 EDM 항목" 측면에서 표현된 공급자 형식의 목록. 저장소 형식에는 해당하는 EDM 형식이 있고, 저장소 함수에는 해당하는 EDM 함수가 있습니다. 예를 들어, varchar은 SQL Server 형식이지만 해당하는 EDM 형식은 string입니다.  
+- 저장소 형식 또는 함수의 "해당하는 EDM 항목" 측면에서 표현된 공급자 형식의 목록. 저장소 형식에는 해당하는 EDM 형식이 있고, 저장소 함수에는 해당하는 EDM 함수가 있습니다. 예를 들어, varchar은 SQL Server 형식이지만 해당하는 EDM 형식은 string입니다.  
   
--   매개 변수와 반환 형식이 EDM 측면에서 표현된, 공급자가 지원하는 함수의 목록  
+- 매개 변수와 반환 형식이 EDM 측면에서 표현된, 공급자가 지원하는 함수의 목록  
   
 ### <a name="writing-a-provider-with-asymmetric-type-mapping"></a>비대칭 형식 매핑을 사용하여 공급자 작성  
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에 대한 데이터 저장소 공급자를 작성하는 경우 일부 형식에 대한 EDM-공급자 형식 매핑은 공급자-EDM 형식 매핑과 다를 수 있습니다. 예를 들어, 바인딩되지 않은 EDM PrimitiveTypeKind.String은 공급자에서 nvarchar(4000)에 매핑될 수 있지만 nvarchar(4000)은 EDM PrimitiveTypeKind.String(MaxLength=4000)에 매핑됩니다.  
   
  다음 두 섹션이 있는 XML 파일을 작성합니다.  
   
--   공급자 형식의 목록 EDM 용어로 표현 및 두 방향에 대 한 매핑을 정의 합니다. EDM-공급자 및 공급자-EDM입니다.  
+- 공급자 형식의 목록 EDM 용어로 표현 및 두 방향에 대 한 매핑을 정의 합니다. EDM-공급자 및 공급자-EDM입니다.  
   
--   매개 변수와 반환 형식이 EDM 측면에서 표현된, 공급자가 지원하는 함수의 목록  
+- 매개 변수와 반환 형식이 EDM 측면에서 표현된, 공급자가 지원하는 함수의 목록  
   
 ## <a name="provider-manifest-discoverability"></a>공급자 매니페스트 검색 기능  
  매니페스트는 엔터티 서비스의 몇 가지 구성 요소 형식(도구 또는 쿼리 등)에서 간접적으로 사용되지만 데이터 저장소 메타데이터 로더의 사용을 통해 메타데이터에서 보다 직접적으로 활용됩니다.  

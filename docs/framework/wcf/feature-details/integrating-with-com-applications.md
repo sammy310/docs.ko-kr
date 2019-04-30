@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF, COM integration
 ms.assetid: c98bda3e-6779-419e-8e6d-9aa94053026d
 ms.openlocfilehash: 51626da6e97e346f43cfe606a5164024580a2ac7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046998"
 ---
 # <a name="integrating-with-com-applications"></a>COM 응용 프로그램과 통합
 Windows Communication Foundation (WCF) 서비스는 WCF 서비스 모니커를 사용 하 여 기존 코드에 직접 통합할 수 있습니다. 서비스 모니커는 Office VBA, Visual Basic 6.0 또는 Visual C++ 6.0과 같은 다양한 범위의 COM 기반 개발 환경에서 사용할 수 있습니다.  

@@ -3,11 +3,11 @@ title: 엔터티 SQL 참조
 ms.date: 03/30/2017
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
 ms.openlocfilehash: 9b666b83674cb2374409e321a2b715e9910bdd0e
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034270"
 ---
 # <a name="entity-sql-reference"></a>엔터티 SQL 참조
 
@@ -30,7 +30,7 @@ ms.locfileid: "55826644"
 
 정식 함수는 모든 데이터 공급자에서 지원되며 모든 쿼리 기술에 사용될 수 있습니다. 다음 표에서 정식 함수를 나열합니다.
 
-|기능|형식|
+|함수|형식|
 |--------------|----------|
 |[집계 Entity SQL 정식 함수](aggregate-canonical-functions.md)|집계 Entity SQL 정식 함수를 설명합니다.|
 |[수학 정식 함수](math-canonical-functions.md)|수학 Entity SQL 정식 함수를 설명합니다.|

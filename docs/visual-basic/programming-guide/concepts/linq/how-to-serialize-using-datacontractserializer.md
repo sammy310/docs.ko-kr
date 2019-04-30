@@ -3,11 +3,11 @@ title: '방법: 직렬화를 사용 하 여 DataContractSerializer (Visual Basic
 ms.date: 07/20/2015
 ms.assetid: ecaea518-8a0f-4249-b4e5-9b3fb0cdd8ad
 ms.openlocfilehash: 9593dede3eb29aadc7ffb494e1d728cb8e679f0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054434"
 ---
 # <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a>방법: 직렬화를 사용 하 여 DataContractSerializer (Visual Basic)
 이 항목에서는 <xref:System.Runtime.Serialization.DataContractSerializer>를 사용하여 serialize하고 deserialize하는 예제를 보여 줍니다.  

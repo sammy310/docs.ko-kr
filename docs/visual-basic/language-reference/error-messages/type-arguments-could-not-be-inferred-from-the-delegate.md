@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36564
 ms.assetid: 21312807-e1cd-4ac1-ae1c-c28a9c25164d
 ms.openlocfilehash: 1024cf6f2c1fa112db29cb710eef190a5022d3af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013636"
 ---
 # <a name="type-arguments-could-not-be-inferred-from-the-delegate"></a>대리자에서 형식 인수를 유추할 수 없습니다.
 대입문이 `AddressOf` 를 사용하여 제네릭 프로시저의 주소를 대리자에게 할당하지만 형식 인수를 제네릭 프로시저에 제공하지 않습니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "58838601"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   `AddressOf` 식에서 제네릭 프로시저에 대한 형식 인수를 지정합니다.  
+- `AddressOf` 식에서 제네릭 프로시저에 대한 형식 인수를 지정합니다.  
   
 ## <a name="see-also"></a>참고자료
 

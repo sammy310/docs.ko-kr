@@ -12,11 +12,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: bef7b0ab-ce57-475a-a2d6-fb8a702a9417
 ms.openlocfilehash: 0baf54d27cf33eef7e4df7019ee98b42eba40205
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011803"
 ---
 # <a name="backgroundworker-component"></a>BackgroundWorker 구성 요소
 `BackgroundWorker` 양식이 나 컨트롤 작업을 비동기적으로 실행 하려면 구성 요소에 사용 하도록 설정 합니다.  

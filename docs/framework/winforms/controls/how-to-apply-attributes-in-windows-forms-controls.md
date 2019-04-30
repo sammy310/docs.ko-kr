@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Windows Forms controls, applying attributes
 ms.assetid: af0a3f7f-155b-4ba1-83c4-9cf721331a06
 ms.openlocfilehash: e86277c06e515b28bada3331cf4fd63e536319a4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053004"
 ---
 # <a name="how-to-apply-attributes-in-windows-forms-controls"></a>방법: Windows Forms 컨트롤에서 특성 적용
 구성 요소 및 디자인 환경은와 제대로 상호 작용을 런타임에 제대로 실행 하는 컨트롤을 개발 하려면 클래스 및 멤버에 특성을 올바르게 적용 해야 합니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "59079593"
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
   
--   호스팅하는 폼의 `AttributesDemoControl` 에 대 한 참조가 필요는 `AttributesDemoControl` 빌드하려면 어셈블리.  
+- 호스팅하는 폼의 `AttributesDemoControl` 에 대 한 참조가 필요는 `AttributesDemoControl` 빌드하려면 어셈블리.  
   
 ## <a name="see-also"></a>참고자료
 

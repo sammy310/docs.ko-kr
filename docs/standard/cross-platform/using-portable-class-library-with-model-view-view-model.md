@@ -12,11 +12,11 @@ ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8b48dc67e18411d82f03d29ab244d57575d6d720
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050499"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Model-View-View Model과 함께 이식 가능한 클래스 라이브러리 사용
 .NET Framework를 사용 하 여 [이식 가능한 클래스 라이브러리](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) 모델-뷰 모델 (MVVM) 패턴을 구현 하 여 여러 플랫폼 간에 어셈블리를 공유 합니다.
@@ -32,27 +32,27 @@ ms.locfileid: "56835787"
 ## <a name="classes-that-support-mvvm"></a>MVVM을 지 원하는 클래스
  대상 하는 경우는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight 또는 Windows Phone 7.5에 대 한 프로그램 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 프로젝트에 다음 클래스는 MVVM 패턴을 구현 하기 위한 사용할 수 있습니다:
 
--   <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType> 클래스
+- <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType> 클래스
 
--   <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType> 클래스
+- <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType> 클래스
 
--   <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType> 클래스
+- <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType> 클래스
 
--   <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType> 클래스
+- <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType> 클래스
 
--   <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType> 클래스
+- <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType> 클래스
 
--   <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType> 클래스
+- <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType> 클래스
 
--   <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType> 클래스
+- <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType> 클래스
 
--   <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType> 클래스
+- <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType> 클래스
 
--   <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType> 클래스
+- <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType> 클래스
 
--   <xref:System.Windows.Input.ICommand?displayProperty=nameWithType> 클래스
+- <xref:System.Windows.Input.ICommand?displayProperty=nameWithType> 클래스
 
--   모든 클래스는 <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> 네임 스페이스
+- 모든 클래스는 <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> 네임 스페이스
 
 ## <a name="implementing-mvvm"></a>MVVM을 구현
  MVVM을 구현 하려면 일반적으로 만든 모델과 뷰 모델을 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 때문에 프로젝트를 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 프로젝트 이식 가능 프로젝트를 참조할 수 없습니다. 동일한 프로젝트에서 또는 별도 프로젝트에서 모델 및 뷰 모델을 수 있습니다. 별도 프로젝트를 사용 하는 경우 모델 프로젝트에 뷰 모델 프로젝트에서 참조를 추가 합니다.

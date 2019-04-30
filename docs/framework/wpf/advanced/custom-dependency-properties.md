@@ -15,11 +15,11 @@ helpviewer_keywords:
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
 ms.openlocfilehash: 12843c74a7519d29e869be0342b18a1137f2dc5a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054252"
 ---
 # <a name="custom-dependency-properties"></a>사용자 지정 종속성 속성
 
@@ -47,21 +47,21 @@ ms.locfileid: "57372219"
 
 구현 하는 경우 속성을 클래스에서 클래스에서 파생 하기만 <xref:System.Windows.DependencyObject>를 사용 하 여 속성을 백업 하는 옵션이 있습니다를 <xref:System.Windows.DependencyProperty> 식별자 이므로 종속성 속성을 확인 합니다. 속성을 종속성 속성으로 만드는 것이 항상 필요하거나 적절한 것은 아니며 시나리오 요구에 따라 달라집니다. 때로는 개인 필드로 속성을 지원하는 일반적인 기술이 적합합니다. 그러나 속성에서 다음 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기능 중 하나 이상을 지원하기를 원할 때마다 속성을 종속성 속성으로 구현해야 합니다.
 
--   스타일에 속성을 설정하려고 합니다. 자세한 내용은 [스타일 지정 및 템플릿](../controls/styling-and-templating.md)을 참조하세요.
+- 스타일에 속성을 설정하려고 합니다. 자세한 내용은 [스타일 지정 및 템플릿](../controls/styling-and-templating.md)을 참조하세요.
 
--   속성에서 데이터 바인딩을 지원하게 하려고 합니다. 데이터 바인딩 종속성 속성에 대한 자세한 내용은 [두 컨트롤의 속성 바인딩](../data/how-to-bind-the-properties-of-two-controls.md)을 참조하세요.
+- 속성에서 데이터 바인딩을 지원하게 하려고 합니다. 데이터 바인딩 종속성 속성에 대한 자세한 내용은 [두 컨트롤의 속성 바인딩](../data/how-to-bind-the-properties-of-two-controls.md)을 참조하세요.
 
--   동적 리소스 참조를 사용하여 속성을 설정하려고 합니다. 자세한 내용은 [XAML 리소스](xaml-resources.md)를 참조하세요.
+- 동적 리소스 참조를 사용하여 속성을 설정하려고 합니다. 자세한 내용은 [XAML 리소스](xaml-resources.md)를 참조하세요.
 
--   요소 트리의 부모 요소에서 속성 값을 자동으로 상속받도록 하려고 합니다. 이 경우 등록 합니다 <xref:System.Windows.DependencyProperty.RegisterAttached%2A> 메서드를 속성 래퍼를 만드는 경우에 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 액세스 합니다. 자세한 내용은 [속성 값 상속](property-value-inheritance.md)을 참조하세요.
+- 요소 트리의 부모 요소에서 속성 값을 자동으로 상속받도록 하려고 합니다. 이 경우 등록 합니다 <xref:System.Windows.DependencyProperty.RegisterAttached%2A> 메서드를 속성 래퍼를 만드는 경우에 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 액세스 합니다. 자세한 내용은 [속성 값 상속](property-value-inheritance.md)을 참조하세요.
 
--   속성에 애니메이션 효과를 주려고 합니다. 자세한 내용은 [애니메이션 개요](../graphics-multimedia/animation-overview.md)를 참조하세요.
+- 속성에 애니메이션 효과를 주려고 합니다. 자세한 내용은 [애니메이션 개요](../graphics-multimedia/animation-overview.md)를 참조하세요.
 
--   속성 시스템, 환경 또는 사용자가 수행한 작업을 통해 또는 스타일을 읽고 사용하여 이전 속성 값이 변경되었을 때 속성 시스템에서 보고하도록 하려고 합니다. 속성 메타데이터를 사용하여 속성 시스템에서 속성 값이 명확하게 변경되었다는 것을 확인할 때마다 호출되는 콜백 메서드를 속성이 지정할 수 있습니다. 관련 개념은 속성 값 강제 변환입니다. 자세한 내용은 [종속성 속성 콜백 및 유효성 검사](dependency-property-callbacks-and-validation.md)를 참조하세요.
+- 속성 시스템, 환경 또는 사용자가 수행한 작업을 통해 또는 스타일을 읽고 사용하여 이전 속성 값이 변경되었을 때 속성 시스템에서 보고하도록 하려고 합니다. 속성 메타데이터를 사용하여 속성 시스템에서 속성 값이 명확하게 변경되었다는 것을 확인할 때마다 호출되는 콜백 메서드를 속성이 지정할 수 있습니다. 관련 개념은 속성 값 강제 변환입니다. 자세한 내용은 [종속성 속성 콜백 및 유효성 검사](dependency-property-callbacks-and-validation.md)를 참조하세요.
 
--   속성 값 변경 시 레이아웃 시스템에서 요소의 시각적 개체를 재구성해야 하는지 여부를 보고하는 것과 같이 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프로세스에서도 사용되는 설정된 메타데이터 규칙을 사용하려고 합니다. 또는 파생 클래스가 기본값과 같은 메타데이터 기반 특성을 변경할 수 있도록 메타데이터 재정의를 사용할 수 있도록 하려고 합니다.
+- 속성 값 변경 시 레이아웃 시스템에서 요소의 시각적 개체를 재구성해야 하는지 여부를 보고하는 것과 같이 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프로세스에서도 사용되는 설정된 메타데이터 규칙을 사용하려고 합니다. 또는 파생 클래스가 기본값과 같은 메타데이터 기반 특성을 변경할 수 있도록 메타데이터 재정의를 사용할 수 있도록 하려고 합니다.
 
--   Visual Studio WPF 디자이너를 받으려면 사용자 지정 컨트롤의 속성 등의 지원, 원하는 **속성** 창 편집 합니다. 자세한 내용은 [컨트롤 제작 개요](../controls/control-authoring-overview.md)를 참조하십시오.
+- Visual Studio WPF 디자이너를 받으려면 사용자 지정 컨트롤의 속성 등의 지원, 원하는 **속성** 창 편집 합니다. 자세한 내용은 [컨트롤 제작 개요](../controls/control-authoring-overview.md)를 참조하십시오.
 
 이러한 시나리오를 검토할 때는 완전히 새로운 속성을 구현하는 대신 기존 종속성 속성의 메타데이터를 재정의하여 시나리오를 얻을 수 있는지 여부도 고려해야 합니다. 메타데이터 재정의가 실용적인지 여부는 시나리오 유형과 해당 시나리오가 기존 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 종속성 속성 및 클래스의 구현과 얼마나 유사한지에 따라 다릅니다. 기존 속성에서 메타데이터 재정의에 대한 자세한 내용은 [종속성 속성 메타데이터](dependency-property-metadata.md)를 참조하세요.
 
@@ -70,13 +70,13 @@ ms.locfileid: "57372219"
 
 종속성 속성 정의는 4가지 고유한 개념으로 구성됩니다. 이러한 개념은 반드시 엄격한 절차적 단계는 아니며, 그중 일부는 구현 시 단일 코드 줄로 결합됩니다.
 
--   (선택 사항) 종속성 속성의 속성 메타데이터를 만듭니다.
+- (선택 사항) 종속성 속성의 속성 메타데이터를 만듭니다.
 
--   속성 시스템에 속성 이름을 등록하여 소유자 유형과 속성 값의 유형을 지정합니다. 또한 사용되는 경우 속성 메타데이터를 지정합니다.
+- 속성 시스템에 속성 이름을 등록하여 소유자 유형과 속성 값의 유형을 지정합니다. 또한 사용되는 경우 속성 메타데이터를 지정합니다.
 
--   정의 된 <xref:System.Windows.DependencyProperty> 식별자를 `public` `static` `readonly` 소유자 형식에 필드.
+- 정의 된 <xref:System.Windows.DependencyProperty> 식별자를 `public` `static` `readonly` 소유자 형식에 필드.
 
--   이름이 종속성 속성의 이름과 일치하는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] "래퍼" 속성을 정의합니다. [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] "래퍼" 속성의 `get` 및 `set` 접근자는 해당 속성을 지원하는 종속성 속성과 연결하도록 구현합니다.
+- 이름이 종속성 속성의 이름과 일치하는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] "래퍼" 속성을 정의합니다. [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] "래퍼" 속성의 `get` 및 `set` 접근자는 해당 속성을 지원하는 종속성 속성과 연결하도록 구현합니다.
 
 <a name="registering"></a>
 ### <a name="registering-the-property-with-the-property-system"></a>속성 시스템에 속성 등록
@@ -112,11 +112,11 @@ ms.locfileid: "57372219"
 
 마찬가지로 규칙에 따라 래퍼 속성의 이름을 같아야 선택 및의 첫 번째 매개 변수로 지정 된 이름으로는 <xref:System.Windows.DependencyProperty.Register%2A> 호출 속성을 등록 합니다. 속성이 규칙을 따르지 않는다고 해서 가능한 모든 용도에 사용하지 못한다는 것은 아니지만 몇 가지 주목할 만한 문제가 발생하게 됩니다.
 
--   스타일과 템플릿의 특정 측면이 작동하지 않습니다.
+- 스타일과 템플릿의 특정 측면이 작동하지 않습니다.
 
--   대부분의 도구와 디자이너는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]을 제대로 serialize하거나 속성별 수준에서 디자이너 환경 지원을 제공하기 위해 명명 규칙을 사용해야 합니다.
+- 대부분의 도구와 디자이너는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]을 제대로 serialize하거나 속성별 수준에서 디자이너 환경 지원을 제공하기 위해 명명 규칙을 사용해야 합니다.
 
--   [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 로더의 현재 구현은 래퍼를 완전히 무시하고 특성 값을 처리할 때 명명 규칙을 사용합니다. 자세한 내용은 [XAML로드 및 종속성 속성](xaml-loading-and-dependency-properties.md)을 참조하세요.
+- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 로더의 현재 구현은 래퍼를 완전히 무시하고 특성 값을 처리할 때 명명 규칙을 사용합니다. 자세한 내용은 [XAML로드 및 종속성 속성](xaml-loading-and-dependency-properties.md)을 참조하세요.
 
 <a name="metadata"></a>
 ### <a name="property-metadata-for-a-new-dependency-property"></a>새 종속성 속성의 속성 메타데이터
@@ -129,25 +129,25 @@ ms.locfileid: "57372219"
 
 #### <a name="setting-appropriate-metadata-flags"></a>적절한 메타데이터 플래그 설정
 
--   속성 (또는 값의 변경)에 영향을 줍니다 합니다 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], 특히에 영향을 줍니다 레이아웃 시스템 크기를 조정 하거나 페이지에서 요소를 렌더링 하는 방법 설정 플래그 중 하나 이상의: <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure>를 <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange>, <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender>합니다.
+- 속성 (또는 값의 변경)에 영향을 줍니다 합니다 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], 특히에 영향을 줍니다 레이아웃 시스템 크기를 조정 하거나 페이지에서 요소를 렌더링 하는 방법 설정 플래그 중 하나 이상의: <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure>를 <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange>, <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender>합니다.
 
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure> 이 속성에 대 한 변경에 대 한 변경에 필요 함을 나타냅니다 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 를 포함 하는 개체 더 많거나 적은 공간이 필요 부모 내에서 렌더링 합니다. 예를 들어 "Width" 속성은 이 플래그를 설정해야 합니다.
+    - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure> 이 속성에 대 한 변경에 대 한 변경에 필요 함을 나타냅니다 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 를 포함 하는 개체 더 많거나 적은 공간이 필요 부모 내에서 렌더링 합니다. 예를 들어 "Width" 속성은 이 플래그를 설정해야 합니다.
 
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange> 이 속성에 대 한 변경에 대 한 변경에 필요 함을 나타냅니다 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 전용된 공간에서 변경이 필요 하지 않지만 공간 내의 위치 지정이 변경 되었음을 나타내지는 일반적으로 렌더링 합니다. 예를 들어 "Alignment" 속성은 이 플래그를 설정해야 합니다.
+    - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange> 이 속성에 대 한 변경에 대 한 변경에 필요 함을 나타냅니다 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 전용된 공간에서 변경이 필요 하지 않지만 공간 내의 위치 지정이 변경 되었음을 나타내지는 일반적으로 렌더링 합니다. 예를 들어 "Alignment" 속성은 이 플래그를 설정해야 합니다.
 
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender> 나타냅니다 레이아웃과 측정값에 영향을 주지 것입니다 하지만 다른 렌더링이 필요한는 다른 변경이 발생 했습니다. 예를 들어 기존 요소의 색상을 변경하는 "Background"와 같은 속성이 있습니다.
+    - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender> 나타냅니다 레이아웃과 측정값에 영향을 주지 것입니다 하지만 다른 렌더링이 필요한는 다른 변경이 발생 했습니다. 예를 들어 기존 요소의 색상을 변경하는 "Background"와 같은 속성이 있습니다.
 
-    -   이러한 플래그는 종종 속성 시스템 또는 레이아웃 콜백의 자체 재정의 구현에 대한 메타데이터의 프로토콜로 사용됩니다. 예를 들어 있을 수 있습니다는 <xref:System.Windows.DependencyObject.OnPropertyChanged%2A> 를 호출 하는 콜백 <xref:System.Windows.UIElement.InvalidateArrange%2A> 인스턴스의 속성 값 변경을 보고 및 <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> 으로 `true` 해당 메타 데이터에서입니다.
+    - 이러한 플래그는 종종 속성 시스템 또는 레이아웃 콜백의 자체 재정의 구현에 대한 메타데이터의 프로토콜로 사용됩니다. 예를 들어 있을 수 있습니다는 <xref:System.Windows.DependencyObject.OnPropertyChanged%2A> 를 호출 하는 콜백 <xref:System.Windows.UIElement.InvalidateArrange%2A> 인스턴스의 속성 값 변경을 보고 및 <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> 으로 `true` 해당 메타 데이터에서입니다.
 
--   일부 속성은 위에 언급된 필수 크기의 변경 이상으로, 포함하는 부모 요소의 렌더링 특성에 영향을 줄 수 있습니다. 예로 <xref:System.Windows.Documents.Paragraph.MinOrphanLines%2A> 해당 속성을 변경 하면 단락이 포함 된 유동 문서의 전체 렌더링을 변경할 수 있는 흐름 문서 모델에 사용 되는 속성입니다. 사용 하 여 <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsParentArrange> 또는 <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsParentMeasure> 사용자 고유의 속성에서 유사한 사례를 식별 합니다.
+- 일부 속성은 위에 언급된 필수 크기의 변경 이상으로, 포함하는 부모 요소의 렌더링 특성에 영향을 줄 수 있습니다. 예로 <xref:System.Windows.Documents.Paragraph.MinOrphanLines%2A> 해당 속성을 변경 하면 단락이 포함 된 유동 문서의 전체 렌더링을 변경할 수 있는 흐름 문서 모델에 사용 되는 속성입니다. 사용 하 여 <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsParentArrange> 또는 <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsParentMeasure> 사용자 고유의 속성에서 유사한 사례를 식별 합니다.
 
--   기본적으로 종속성 속성은 데이터 바인딩을 지원합니다. 데이터 바인딩에 대한 현실적인 시나리오가 없거나 큰 개체에 대한 데이터 바인딩의 성능이 문제로 인식되는 경우 데이터 바인딩을 의도적으로 사용하지 않도록 설정할 수 있습니다.
+- 기본적으로 종속성 속성은 데이터 바인딩을 지원합니다. 데이터 바인딩에 대한 현실적인 시나리오가 없거나 큰 개체에 대한 데이터 바인딩의 성능이 문제로 인식되는 경우 데이터 바인딩을 의도적으로 사용하지 않도록 설정할 수 있습니다.
 
--   기본적으로 데이터 바인딩 <xref:System.Windows.Data.Binding.Mode%2A> 종속성 속성 기본값에 대 한 <xref:System.Windows.Data.BindingMode.OneWay>합니다. 가 되도록 바인딩을 항상 변경할 수 있습니다 <xref:System.Windows.Data.BindingMode.TwoWay> 바인딩 인스턴스마다; 세부 정보에 대 한 참조 [바인딩의 방향을 지정](../data/how-to-specify-the-direction-of-the-binding.md)합니다. 종속성 속성 작성자를 사용 하 여 속성을 확인 하도록 선택할 수 있습니다 하지만 <xref:System.Windows.Data.BindingMode.TwoWay> 기본적으로 바인딩 모드입니다. 기존 종속성 속성의 예로 <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A?displayProperty=nameWithType>;는이 속성에 대 한 시나리오는 <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> 설정 논리와의 합치기 <xref:System.Windows.Controls.MenuItem> 기본 테마 스타일을 사용 하 여 상호 작용 합니다. <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> 속성 논리를 사용 하 여 데이터 바인딩을 고유 하 게 다른 상태 속성 및 메서드 호출에 따라에서 속성의 상태를 유지 합니다. 바인딩하는 또 다른 예제에서는 속성 <xref:System.Windows.Data.BindingMode.TwoWay> 기본적으로는 <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>합니다.
+- 기본적으로 데이터 바인딩 <xref:System.Windows.Data.Binding.Mode%2A> 종속성 속성 기본값에 대 한 <xref:System.Windows.Data.BindingMode.OneWay>합니다. 가 되도록 바인딩을 항상 변경할 수 있습니다 <xref:System.Windows.Data.BindingMode.TwoWay> 바인딩 인스턴스마다; 세부 정보에 대 한 참조 [바인딩의 방향을 지정](../data/how-to-specify-the-direction-of-the-binding.md)합니다. 종속성 속성 작성자를 사용 하 여 속성을 확인 하도록 선택할 수 있습니다 하지만 <xref:System.Windows.Data.BindingMode.TwoWay> 기본적으로 바인딩 모드입니다. 기존 종속성 속성의 예로 <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A?displayProperty=nameWithType>;는이 속성에 대 한 시나리오는 <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> 설정 논리와의 합치기 <xref:System.Windows.Controls.MenuItem> 기본 테마 스타일을 사용 하 여 상호 작용 합니다. <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> 속성 논리를 사용 하 여 데이터 바인딩을 고유 하 게 다른 상태 속성 및 메서드 호출에 따라에서 속성의 상태를 유지 합니다. 바인딩하는 또 다른 예제에서는 속성 <xref:System.Windows.Data.BindingMode.TwoWay> 기본적으로는 <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>합니다.
 
--   설정 하 여 사용자 지정 종속성 속성에서 속성 상속을 사용할 수도 있습니다는 <xref:System.Windows.FrameworkPropertyMetadataOptions.Inherits> 플래그입니다. 속성 상속은 부모 요소와 자식 요소가 공통된 속성을 갖는 시나리오에 유용하며 자식 요소가 해당 특정 속성 값을 부모가 설정한 값과 동일한 값으로 설정하는 것이 적합합니다. 예제에서는 상속 가능한 속성은 <xref:System.Windows.FrameworkElement.DataContext%2A>, 데이터 프레젠테이션에 중요 한 마스터-세부 시나리오를 사용 하는 바인딩 작업에 사용 됩니다. 만들어 <xref:System.Windows.FrameworkElement.DataContext%2A> , 상속 가능한 모든 자식 요소는 데이터 컨텍스트를 상속도 합니다. 속성 값 상속으로 인해 페이지 또는 애플리케이션 루트에서 데이터 컨텍스트를 지정할 수 있으며 가능한 모든 하위 요소의 바인딩에 대해 다시 지정할 필요가 없습니다. <xref:System.Windows.FrameworkElement.DataContext%2A> 상속 기본값을 재정의 합니다. 하지만 항상 설정할 수 있습니다 로컬로 모든 특정 자식 요소에는 설명 하기 위해 좋은 예 이기도 자세한 내용은 참조 하세요 [계층적 데이터에 마스터-세부 패턴 사용](../data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)합니다. 속성 값 상속을 사용하면 성능이 저하될 수 있으므로 꼭 필요할 때만 사용해야 합니다. 자세한 내용은 [속성 값 상속](property-value-inheritance.md)을 참조하세요.
+- 설정 하 여 사용자 지정 종속성 속성에서 속성 상속을 사용할 수도 있습니다는 <xref:System.Windows.FrameworkPropertyMetadataOptions.Inherits> 플래그입니다. 속성 상속은 부모 요소와 자식 요소가 공통된 속성을 갖는 시나리오에 유용하며 자식 요소가 해당 특정 속성 값을 부모가 설정한 값과 동일한 값으로 설정하는 것이 적합합니다. 예제에서는 상속 가능한 속성은 <xref:System.Windows.FrameworkElement.DataContext%2A>, 데이터 프레젠테이션에 중요 한 마스터-세부 시나리오를 사용 하는 바인딩 작업에 사용 됩니다. 만들어 <xref:System.Windows.FrameworkElement.DataContext%2A> , 상속 가능한 모든 자식 요소는 데이터 컨텍스트를 상속도 합니다. 속성 값 상속으로 인해 페이지 또는 애플리케이션 루트에서 데이터 컨텍스트를 지정할 수 있으며 가능한 모든 하위 요소의 바인딩에 대해 다시 지정할 필요가 없습니다. <xref:System.Windows.FrameworkElement.DataContext%2A> 상속 기본값을 재정의 합니다. 하지만 항상 설정할 수 있습니다 로컬로 모든 특정 자식 요소에는 설명 하기 위해 좋은 예 이기도 자세한 내용은 참조 하세요 [계층적 데이터에 마스터-세부 패턴 사용](../data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)합니다. 속성 값 상속을 사용하면 성능이 저하될 수 있으므로 꼭 필요할 때만 사용해야 합니다. 자세한 내용은 [속성 값 상속](property-value-inheritance.md)을 참조하세요.
 
--   설정 된 <xref:System.Windows.FrameworkPropertyMetadataOptions.Journal> 종속성 속성을 검색 또는 탐색 저널링 서비스에서 사용 하는 경우를 나타내는 플래그입니다. 예로 <xref:System.Windows.Controls.Primitives.Selector.SelectedIndex%2A> 속성; 선택에서 선택한 모든 항목은 저널링 기록을 탐색할 때 컨트롤을 유지 해야 합니다.
+- 설정 된 <xref:System.Windows.FrameworkPropertyMetadataOptions.Journal> 종속성 속성을 검색 또는 탐색 저널링 서비스에서 사용 하는 경우를 나타내는 플래그입니다. 예로 <xref:System.Windows.Controls.Primitives.Selector.SelectedIndex%2A> 속성; 선택에서 선택한 모든 항목은 저널링 기록을 탐색할 때 컨트롤을 유지 해야 합니다.
 
 <a name="RODP"></a>
 ## <a name="read-only-dependency-properties"></a>읽기 전용 종속성 속성

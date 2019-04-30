@@ -3,11 +3,11 @@ title: NativeActivity 기본 클래스
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
 ms.openlocfilehash: f718d247e7110b46cdd13038c7c93c1e45612c75
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009983"
 ---
 # <a name="nativeactivity-base-class"></a>NativeActivity 기본 클래스
 
@@ -16,21 +16,21 @@ ms.locfileid: "59296591"
 ## <a name="using-nativeactivitycontext"></a>NativeActivityContext 사용
  <xref:System.Activities.NativeActivity.Execute%2A> 형식의 `context` 매개 변수 멤버를 사용하여 <xref:System.Activities.NativeActivityContext> 메서드에서 워크플로 런타임 기능에 액세스할 수 있습니다. <xref:System.Activities.NativeActivityContext>를 통해 사용할 수 있는 기능은 다음과 같습니다.
 
--   인수 및 변수 가져오기 및 설정
+- 인수 및 변수 가져오기 및 설정
 
--   <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>를 사용하여 자식 활동 예약
+- <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>를 사용하여 자식 활동 예약
 
--   <xref:System.Activities.NativeActivityContext.Abort%2A>를 사용하여 활동 실행 중단
+- <xref:System.Activities.NativeActivityContext.Abort%2A>를 사용하여 활동 실행 중단
 
--   <xref:System.Activities.NativeActivityContext.CancelChild%2A> 및 <xref:System.Activities.NativeActivityContext.CancelChildren%2A>을 사용하여 자식 실행 취소
+- <xref:System.Activities.NativeActivityContext.CancelChild%2A> 및 <xref:System.Activities.NativeActivityContext.CancelChildren%2A>을 사용하여 자식 실행 취소
 
--   <xref:System.Activities.NativeActivityContext.CreateBookmark%2A>, <xref:System.Activities.NativeActivityContext.RemoveBookmark%2A>, <xref:System.Activities.NativeActivityContext.ResumeBookmark%2A> 등과 같은 메서드를 사용하여 활동 책갈피 액세스
+- <xref:System.Activities.NativeActivityContext.CreateBookmark%2A>, <xref:System.Activities.NativeActivityContext.RemoveBookmark%2A>, <xref:System.Activities.NativeActivityContext.ResumeBookmark%2A> 등과 같은 메서드를 사용하여 활동 책갈피 액세스
 
--   <xref:System.Activities.CodeActivityContext.Track%2A>을 사용하는 사용자 지정 추적 기능
+- <xref:System.Activities.CodeActivityContext.Track%2A>을 사용하는 사용자 지정 추적 기능
 
--   <xref:System.Activities.CodeActivityContext.GetProperty%2A> 및 <xref:System.Activities.NativeActivityContext.GetValue%2A>를 사용하여 활동 실행 속성 및 값 속성 액세스
+- <xref:System.Activities.CodeActivityContext.GetProperty%2A> 및 <xref:System.Activities.NativeActivityContext.GetValue%2A>를 사용하여 활동 실행 속성 및 값 속성 액세스
 
--   <xref:System.Activities.NativeActivityContext.ScheduleAction%2A> 및 <xref:System.Activities.NativeActivityContext.ScheduleFunc%2A>을 사용하여 활동 동작 및 기능 예약
+- <xref:System.Activities.NativeActivityContext.ScheduleAction%2A> 및 <xref:System.Activities.NativeActivityContext.ScheduleFunc%2A>을 사용하여 활동 동작 및 기능 예약
 
 ### <a name="to-create-a-custom-activity-that-inherits-from-nativeactivity"></a>NativeActivity에서 상속되는 사용자 지정 활동을 만들려면
 

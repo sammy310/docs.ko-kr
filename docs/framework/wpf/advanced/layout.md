@@ -10,30 +10,30 @@ helpviewer_keywords:
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
 ms.openlocfilehash: 1ffc665cb7ec5893dddf4efff5021e600b16fc45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054367"
 ---
 # <a name="layout"></a>레이아웃
 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 레이아웃 시스템에 대해 설명합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 사용자 인터페이스를 만들려면 언제, 어떻게 레이아웃을 계산해야 하는지를 이해해야 합니다.  
   
  이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   
--   [요소 경계 상자](#LayoutSystem_BoundingBox)  
+- [요소 경계 상자](#LayoutSystem_BoundingBox)  
   
--   [레이아웃 시스템](#LayoutSystem_Overview)  
+- [레이아웃 시스템](#LayoutSystem_Overview)  
   
--   [자식 측정 및 정렬](#LayoutSystem_Measure_Arrange)  
+- [자식 측정 및 정렬](#LayoutSystem_Measure_Arrange)  
   
--   [패널 요소 및 사용자 지정 레이아웃 동작](#LayoutSystem_PanelsCustom)  
+- [패널 요소 및 사용자 지정 레이아웃 동작](#LayoutSystem_PanelsCustom)  
   
--   [레이아웃 성능 고려 사항](#LayoutSystem_Performance)  
+- [레이아웃 성능 고려 사항](#LayoutSystem_Performance)  
   
--   [하위 픽셀 렌더링 및 레이아웃 반올림](#LayoutSystem_LayoutRounding)  
+- [하위 픽셀 렌더링 및 레이아웃 반올림](#LayoutSystem_LayoutRounding)  
   
--   [새로운 기능](#LayoutSystem_whatsnext)  
+- [새로운 기능](#LayoutSystem_whatsnext)  
   
 <a name="LayoutSystem_BoundingBox"></a>   
 ## <a name="element-bounding-boxes"></a>요소 경계 상자  
@@ -120,19 +120,19 @@ ms.locfileid: "59330495"
 ## <a name="layout-performance-considerations"></a>레이아웃 성능 고려 사항  
  레이아웃은 재귀적인 프로세스입니다. 각 자식 요소는 <xref:System.Windows.Controls.Panel.Children%2A> 레이아웃 시스템이 호출 될 때마다 컬렉션 처리를 가져옵니다. 따라서 필요하지 않을 때 레이아웃 시스템을 트리거하는 것을 피해야 합니다. 다음은 보다 뛰어난 성능을 얻는 데 도움이 되는 고려 사항입니다.  
   
--   레이아웃 시스템에서 재귀적으로 업데이트하도록 하는 속성 값 변경에 주의해야 합니다.  
+- 레이아웃 시스템에서 재귀적으로 업데이트하도록 하는 속성 값 변경에 주의해야 합니다.  
   
      레이아웃 시스템을 초기화하는 값을 가진 종속성 속성은 공용 플래그로 표시됩니다. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> 및 <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> 레이아웃 시스템에서 업데이트 값이 변경 되는 속성에 대 한 재귀를 강제로 유용한 단서를 제공 합니다. 요소의 경계 상자 크기에 영향을 줄 수 있는 모든 속성을 해야 일반적으로 <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> 플래그가 true로 설정 합니다. 자세한 내용은 [종속성 속성 개요](dependency-properties-overview.md)를 참조하세요.  
   
--   사용 가능한 경우는 <xref:System.Windows.UIElement.RenderTransform%2A> of를 <xref:System.Windows.FrameworkElement.LayoutTransform%2A>입니다.  
+- 사용 가능한 경우는 <xref:System.Windows.UIElement.RenderTransform%2A> of를 <xref:System.Windows.FrameworkElement.LayoutTransform%2A>입니다.  
   
      A <xref:System.Windows.FrameworkElement.LayoutTransform%2A> 의 내용에 영향을 매우 유용한 방법일 수 있습니다는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]합니다. 그러나 변환 효과가 다른 요소의 위치에 영향을 줄에 없는 경우 것이 좋습니다 사용 하는 <xref:System.Windows.UIElement.RenderTransform%2A> 대신 있으므로 <xref:System.Windows.UIElement.RenderTransform%2A> 레이아웃 시스템을 호출 하지 않습니다. <xref:System.Windows.FrameworkElement.LayoutTransform%2A> 해당 변환을 적용 하 고 영향을 받는 요소의 새 위치를 고려 하는 재귀적 레이아웃 업데이트를 수행 합니다.  
   
--   에 대 한 불필요 한 호출 방지 <xref:System.Windows.UIElement.UpdateLayout%2A>합니다.  
+- 에 대 한 불필요 한 호출 방지 <xref:System.Windows.UIElement.UpdateLayout%2A>합니다.  
   
      <xref:System.Windows.UIElement.UpdateLayout%2A> 메서드는 재귀적 레이아웃 업데이트를 강제 하 고 자주 필요 하지 않습니다. 전체 업데이트가 필요하다고 확신하는 경우를 제외하고는 레이아웃 시스템에서만 이 메서드를 호출합니다.  
   
--   큰 작업할 때 <xref:System.Windows.Controls.Panel.Children%2A> 컬렉션을 사용 하는 것이 좋습니다는 <xref:System.Windows.Controls.VirtualizingStackPanel> 일반 대신 <xref:System.Windows.Controls.StackPanel>합니다.  
+- 큰 작업할 때 <xref:System.Windows.Controls.Panel.Children%2A> 컬렉션을 사용 하는 것이 좋습니다는 <xref:System.Windows.Controls.VirtualizingStackPanel> 일반 대신 <xref:System.Windows.Controls.StackPanel>합니다.  
   
      자식 컬렉션을 가상화 하 여는 <xref:System.Windows.Controls.VirtualizingStackPanel> 현재 부모의 뷰포트 내에 있는 메모리의 개체만 유지 합니다. 이를 통해 대부분의 시나리오에서 성능이 크게 향상됩니다.  
   

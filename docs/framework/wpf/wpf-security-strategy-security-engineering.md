@@ -11,24 +11,24 @@ helpviewer_keywords:
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
 ms.openlocfilehash: 27258110a8852c00990d73cd9ca8685c3ead315d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053836"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>WPF 보안 전략 - 보안 엔지니어링
 신뢰할 수 있는 컴퓨팅은 보안 코드 생성을 보장하기 위한 Microsoft 이니셔티브입니다. 신뢰할 수 있는 컴퓨팅 이니셔티브의 핵심 요소는 [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]입니다. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)]은 보안 코드 전달이 용이하도록 표준 엔지니어링 프로세스와 함께 사용되는 엔지니어링 방법입니다. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)]은 형식화, 측정 가능성 및 다음을 비롯한 추가 구조와 모범 사례를 결합하는 10단계로 이루어져 있습니다.  
   
--   보안 디자인 분석  
+- 보안 디자인 분석  
   
--   도구 기반 품질 검사  
+- 도구 기반 품질 검사  
   
--   침투 테스트  
+- 침투 테스트  
   
--   최종 보안 검토  
+- 최종 보안 검토  
   
--   릴리스 후 제품 보안 관리  
+- 릴리스 후 제품 보안 관리  
   
 ## <a name="wpf-specifics"></a>WPF 고유 정보  
  [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 엔지니어링 팀은 다음과 같은 주요 측면을 포함하는 [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)]을 적용하고 확장합니다.  
@@ -55,11 +55,11 @@ ms.locfileid: "59300569"
   
  위협 모델링은 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 전체에 적용되며 다음을 포함합니다.  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 파서가 파일을 읽고, 텍스트를 해당 개체 모델 클래스에 매핑하고, 실제 코드를 만드는 방법  
+- [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 파서가 파일을 읽고, 텍스트를 해당 개체 모델 클래스에 매핑하고, 실제 코드를 만드는 방법  
   
--   창 핸들(hWnd)이 만들어지고, 메시지를 보내고, 창의 내용을 렌더링하는 데 사용되는 방법  
+- 창 핸들(hWnd)이 만들어지고, 메시지를 보내고, 창의 내용을 렌더링하는 데 사용되는 방법  
   
--   데이터 바인딩이 리소스를 가져오고 시스템과 상호 작용하는 방법  
+- 데이터 바인딩이 리소스를 가져오고 시스템과 상호 작용하는 방법  
   
  이러한 위협 모델은 개발 프로세스 중 보안 디자인 요구 사항과 위협 완화를 식별하는 데 중요합니다.  
   
@@ -67,23 +67,23 @@ ms.locfileid: "59300569"
 ### <a name="source-analysis-and-editing-tools"></a>소스 분석 및 편집 도구  
  [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)]의 수동 보안 코드 검토 요소 외에도 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 팀은 소스 분석 및 관련된 편집 작업에 여러 가지 도구를 사용하여 보안 취약성을 줄입니다. 다음을 포함하여 다양한 소스 도구가 사용됩니다.  
   
--   **FXCop**: 상속 규칙에서 코드 액세스 보안 사용 및 비관리 코드와 안전 하 게 상호 운용 하는 방법에 이르기까지 관리 코드에서 일반적인 보안 문제를 찾습니다. [FXCop](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/bb429476%28v=vs.80%29)을 참조하세요.  
+- **FXCop**: 상속 규칙에서 코드 액세스 보안 사용 및 비관리 코드와 안전 하 게 상호 운용 하는 방법에 이르기까지 관리 코드에서 일반적인 보안 문제를 찾습니다. [FXCop](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/bb429476%28v=vs.80%29)을 참조하세요.  
   
--   **Prefix/Prefast**: 버퍼 오버런, 형식 문자열 문제 및 오류 검사 같은 비관리 코드에서 보안 취약성 및 일반적인 보안 문제를 찾습니다.  
+- **Prefix/Prefast**: 버퍼 오버런, 형식 문자열 문제 및 오류 검사 같은 비관리 코드에서 보안 취약성 및 일반적인 보안 문제를 찾습니다.  
   
--   **금지 된 Api**: 소스는 같은 보안 문제가 발생 하는 것에 대 한 잘 알려진 함수가 실수로 사용을 식별 하는 코드 검색 `strcpy`합니다. 이러한 함수는 식별된 후 보다 안전한 대체 항목으로 바뀝니다.  
+- **금지 된 Api**: 소스는 같은 보안 문제가 발생 하는 것에 대 한 잘 알려진 함수가 실수로 사용을 식별 하는 코드 검색 `strcpy`합니다. 이러한 함수는 식별된 후 보다 안전한 대체 항목으로 바뀝니다.  
   
 <a name="techniques"></a>   
 ### <a name="testing-techniques"></a>테스트 기술  
  [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]는 다음을 포함하는 다양한 보안 테스트 기술을 사용합니다.  
   
--   **Whitebox 테스트**: 테스터가 소스 코드를 본 다음 악용 테스트를 빌드  
+- **Whitebox 테스트**: 테스터가 소스 코드를 본 다음 악용 테스트를 빌드  
   
--   **Blackbox 테스트**: 테스터가 API 및 기능을 검사 하 여 보안 익를 찾으려고 시도 및 제품을 공격 하려고 합니다.  
+- **Blackbox 테스트**: 테스터가 API 및 기능을 검사 하 여 보안 익를 찾으려고 시도 및 제품을 공격 하려고 합니다.  
   
--   **다른 제품의 문제 재발 보안**: 경우에 관련된 제품의 보안 문제가 테스트 됩니다. 예를 들어 [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]과 관련된 약 60여 개 보안 문제의 적절한 변형이 식별되고 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]에 적용할 수 있는지 시도되었습니다.  
+- **다른 제품의 문제 재발 보안**: 경우에 관련된 제품의 보안 문제가 테스트 됩니다. 예를 들어 [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]과 관련된 약 60여 개 보안 문제의 적절한 변형이 식별되고 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]에 적용할 수 있는지 시도되었습니다.  
   
--   **파일 퍼지 테스트를 통해 도구 기반 침투 테스트**: 파일 퍼지 테스트는 파일 판독기의 악용의 다양 한 입력을 통해 범위를 입력 합니다. [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]에서 이 기술이 사용되는 한 가지 예는 이미지 디코딩 코드 오류 검사입니다.  
+- **파일 퍼지 테스트를 통해 도구 기반 침투 테스트**: 파일 퍼지 테스트는 파일 판독기의 악용의 다양 한 입력을 통해 범위를 입력 합니다. [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]에서 이 기술이 사용되는 한 가지 예는 이미지 디코딩 코드 오류 검사입니다.  
   
 <a name="critical_code"></a>   
 ### <a name="critical-code-management"></a>중요한 코드 관리  

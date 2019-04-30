@@ -3,11 +3,11 @@ title: '방법: WAS에서 WCF 서비스 호스팅'
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
 ms.openlocfilehash: 157c18d1640ccf1a61f871e5e3e9fef70b6a7e79
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039093"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>방법: WAS에서 WCF 서비스 호스팅
 호스 티 드 Windows Communication Foundation (WCF) 서비스를이 항목에서는 Windows Process Activation Service (WAS 라고도 함)를 만드는 데 필요한 기본 단계를 간략하게 설명 합니다. WAS는 HTTP가 아닌 전송 프로토콜에서 사용하는 IIS(Internet Information Services) 기능의 일반화인 새 프로세스 활성화 서비스입니다. WCF는 TCP, 명명 된 파이프 및 메시지 큐와 같은 WCF에서 지 원하는 HTTP가 아닌 프로토콜을 통해 수신 되는 활성화 요청을 통신 하는 수신기 어댑터 인터페이스를 사용 합니다.  
@@ -19,19 +19,19 @@ ms.locfileid: "59326504"
   
  WCF 서비스를 WAS에서 호스트 되는 표준 바인딩 일반적인 방법으로 사용 됩니다. 그러나 WAS에서 호스팅되는 서비스를 구성하기 위해 <xref:System.ServiceModel.NetTcpBinding> 및 <xref:System.ServiceModel.NetNamedPipeBinding>을 사용하는 경우 제약 조건을 충족해야 합니다. 서로 다른 엔드포인트가 동일한 전송을 사용하는 경우 바인딩 설정은 다음 7개의 속성과 일치해야 합니다.  
   
--   ConnectionBufferSize  
+- ConnectionBufferSize  
   
--   ChannelInitializationTimeout  
+- ChannelInitializationTimeout  
   
--   MaxPendingConnections  
+- MaxPendingConnections  
   
--   MaxOutputDelay  
+- MaxOutputDelay  
   
--   MaxPendingAccepts  
+- MaxPendingAccepts  
   
--   ConnectionPoolSettings.IdleTimeout  
+- ConnectionPoolSettings.IdleTimeout  
   
--   ConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint  
+- ConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint  
   
  그렇지 않으면 첫 번째로 초기화된 엔드포인트가 항상 해당 속성 값을 결정하고 나중에 추가된 엔드포인트가 이러한 설정과 일치하지 않을 경우 <xref:System.ServiceModel.ServiceActivationException>을 throw합니다.  
   

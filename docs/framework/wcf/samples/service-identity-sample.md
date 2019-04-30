@@ -6,8 +6,8 @@ ms.openlocfilehash: 72068002572ff82d2f166ffdd79e455cec7a2961
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051431"
 ---
 # <a name="service-identity-sample"></a>Service Identity 샘플
 이 Service Identity 샘플에서는 서비스의 ID를 설정하는 방법을 보여 줍니다. 클라이언트는 디자인 타임에 서비스의 메타데이터를 사용하여 ID를 검색한 다음 런타임에 서비스의 ID를 인증할 수 있습니다. 서비스 ID의 개념을 사용하면 클라이언트가 작업을 호출하기 전에 서비스를 인증함으로써 인증되지 않은 호출로부터 클라이언트를 보호할 수 있습니다. 보안 연결에서는 또한 서비스가 클라이언트의 액세스를 허용하기 전에 클라이언트의 자격 증명을 인증하는데, 이 부분은 샘플에서 다루지 않습니다. 샘플을 참조 하세요 [클라이언트](../../../../docs/framework/wcf/samples/client.md) 서버 인증을 보여 줍니다.
@@ -17,11 +17,11 @@ ms.locfileid: "59977862"
 
  이 샘플에서는 다음 기능을 보여 줍니다.
 
--   서비스의 여러 엔드포인트에서 서로 다른 형식의 ID를 설정하는 방법. 각 ID 형식은 서로 다른 기능을 갖습니다. 사용할 ID 형식은 엔드포인트의 바인딩에 사용되는 보안 자격 증명의 형식에 따라 달라집니다.
+- 서비스의 여러 엔드포인트에서 서로 다른 형식의 ID를 설정하는 방법. 각 ID 형식은 서로 다른 기능을 갖습니다. 사용할 ID 형식은 엔드포인트의 바인딩에 사용되는 보안 자격 증명의 형식에 따라 달라집니다.
 
--   ID는 구성에서 선언을 통해 또는 코드에서 명령을 통해 설정할 수 있습니다. 클라이언트와 서버 모두 구성을 사용하여 ID를 설정하는 것이 일반적입니다.
+- ID는 구성에서 선언을 통해 또는 코드에서 명령을 통해 설정할 수 있습니다. 클라이언트와 서버 모두 구성을 사용하여 ID를 설정하는 것이 일반적입니다.
 
--   클라이언트에서 사용자 지정 ID를 설정하는 방법. 사용자 지정 ID는 일반적으로 기존 ID 형식을 사용자 지정한 것으로서, 이를 통해 클라이언트가 서비스의 자격 증명에 제공된 다른 클레임 정보를 검사하여 서비스 호출에 앞서 권한 부여 결정을 내릴 수 있습니다.
+- 클라이언트에서 사용자 지정 ID를 설정하는 방법. 사용자 지정 ID는 일반적으로 기존 ID 형식을 사용자 지정한 것으로서, 이를 통해 클라이언트가 서비스의 자격 증명에 제공된 다른 클레임 정보를 검사하여 서비스 호출에 앞서 권한 부여 결정을 내릴 수 있습니다.
 
     > [!NOTE]
     >  이 샘플에서는 identity.com이라는 특정 인증서의 ID와 이 인증서 내부에 포함된 RSA 키를 검사합니다. 클라이언트의 구성에서 인증서 및 RSA ID 형식을 사용할 경우 이 값이 serialize되는 서비스에서 WSDL을 검사하면 이 값을 손쉽게 얻을 수 있습니다.
@@ -154,7 +154,7 @@ class CustomIdentityVerifier : IdentityVerifier
   
 ### <a name="to-clean-up-after-the-sample"></a>샘플 실행 후 정리를 수행하려면  
   
--   샘플 실행을 완료했으면 샘플 폴더에서 Cleanup.bat를 실행합니다.  
+- 샘플 실행을 완료했으면 샘플 폴더에서 Cleanup.bat를 실행합니다.  
   
     > [!NOTE]
     >  다중 컴퓨터 구성에서 이 샘플을 실행할 경우에는 이 스크립트로 클라이언트의 서비스 인증서를 제거할 수 없습니다. 컴퓨터 인증서를 사용 하는 Windows Communication Foundation (WCF) 샘플을 실행 하는 경우에 CurrentUser-TrustedPeople 저장소에에서 설치 된 서비스 인증서를 선택 취소 해야 합니다. 이 작업을 수행 하려면 다음 명령을 사용 합니다. `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 예를 들어: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`합니다.

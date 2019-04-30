@@ -1,5 +1,5 @@
 ---
-title: '방법: XAML에서 특수 문자 사용'
+title: '방법: XAML의 특수 문자 사용'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Unicode UTF-8 file format
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - special characters [WPF]
 ms.assetid: a57776d1-f353-4794-afa0-bfa3c712ed1c
 ms.openlocfilehash: 18934e06f45ca4b88f48bce8a310a07b460a5f53
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051085"
 ---
-# <a name="how-to-use-special-characters-in-xaml"></a>방법: XAML에서 특수 문자 사용
+# <a name="how-to-use-special-characters-in-xaml"></a>방법: XAML의 특수 문자 사용
 마크업 파일에서 만든 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 에 자동으로 저장 됩니다는 [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] utf-8 파일 형식 이므로 악센트 부호와 같은 대부분의 특수 문자가 올바르게 인코딩됩니다. 그러나 다르게 처리되는 일반적으로 사용되는 특수 문자 집합이 있습니다. 이러한 특수 문자에 따라 합니다 [!INCLUDE[TLA#tla_w3c](../../../../includes/tlasharptla-w3c-md.md)] [!INCLUDE[TL A#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 인코딩 표준입니다.  
   
  다음 표는 이 특수 문자 집합을 인코딩하는 구문을 보여 줍니다.  

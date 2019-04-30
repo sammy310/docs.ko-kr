@@ -10,32 +10,32 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
 ms.openlocfilehash: 4e005ea96df45da8326386f8b43aa5640ce810b1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050616"
 ---
 # <a name="pack-uris-in-wpf"></a>WPF의 Pack URI
 Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] 식별 하 고 다음을 비롯 한 다양 한 방식 파일을 로드 하는 데 사용 됩니다.  
   
--   지정 된 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 표시할 때 응용 프로그램이 처음 시작 합니다.  
+- 지정 된 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 표시할 때 응용 프로그램이 처음 시작 합니다.  
   
--   이미지 로드  
+- 이미지 로드  
   
--   페이지 탐색  
+- 페이지 탐색  
   
--   비실행 데이터 파일 로드  
+- 비실행 데이터 파일 로드  
   
  또한 [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] 식별 하 고 다양 한 다음을 비롯 한 위치에서에서 파일 로드를 사용할 수 있습니다.  
   
--   현재 어셈블리입니다.  
+- 현재 어셈블리입니다.  
   
--   참조된 어셈블리  
+- 참조된 어셈블리  
   
--   어셈블리에 상대적인 위치  
+- 어셈블리에 상대적인 위치  
   
--   애플리케이션의 원본 사이트  
+- 애플리케이션의 원본 사이트  
   
  식별 하 고 이러한 위치에서 이러한 형식의 파일을 로드 하는 것에 대 한 일관 된 메커니즘을 제공할 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 확장성을 이용 합니다 *pack URI 체계*합니다. 이 항목에서는 스키마의 개요를 제공, 팩을 생성 하는 방법에 설명 [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] 는 다양 한 시나리오에 대 한 설명 absolute 및 relative [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] 하 고 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 팩을 사용 하는 방법을 보여 주기 전에 해상도 [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] 두 태그에서 및 코드입니다.  
 
@@ -59,15 +59,15 @@ Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../../..
   
  패키지와 파트는 애플리케이션 및 파일과 유사합니다. 즉, 애플리케이션(패키지)은 다음을 비롯한 하나 이상의 파일(파트)을 포함할 수 있습니다.  
   
--   로컬 어셈블리로 컴파일되는 리소스 파일  
+- 로컬 어셈블리로 컴파일되는 리소스 파일  
   
--   참조된 어셈블리로 컴파일되는 리소스 파일  
+- 참조된 어셈블리로 컴파일되는 리소스 파일  
   
--   참조하는 어셈블리로 컴파일되는 리소스 파일  
+- 참조하는 어셈블리로 컴파일되는 리소스 파일  
   
--   콘텐츠 파일  
+- 콘텐츠 파일  
   
--   원본 사이트 파일  
+- 원본 사이트 파일  
   
  이러한 종류의 파일에 액세스 하려면 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 두 기관을 지원: 응용 프로그램: / / / 및 siteoforigin:///: / / /입니다. application:/// 인증 기관은 리소스 및 콘텐츠 파일을 비롯하여 컴파일 시 알려진 애플리케이션 데이터 파일을 식별합니다. siteoforigin:/// 인증 기관은 원본 사이트 파일을 식별합니다. 다음 그림에서는 각 인증 기관의 범위를 보여 줍니다.  
   
@@ -86,9 +86,9 @@ Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../../..
 ### <a name="local-assembly-resource-file"></a>로컬 어셈블리 리소스 파일  
  Pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 리소스에 대 한 로컬 어셈블리로 컴파일되는 파일은 다음 인증 기관과 경로 사용 합니다.  
   
--   **인증 기관**: application:///  
+- **인증 기관**: application:///  
   
--   **경로**: 로컬 어셈블리 프로젝트 폴더 루트에 상대적인 경로 포함 하는 리소스 파일의 이름입니다.  
+- **경로**: 로컬 어셈블리 프로젝트 폴더 루트에 상대적인 경로 포함 하는 리소스 파일의 이름입니다.  
   
  다음 예제에서는 pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 에 대 한는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 로컬 어셈블리의 프로젝트 폴더의 루트에 있는 리소스 파일입니다.  
   
@@ -102,21 +102,21 @@ Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../../..
 ### <a name="referenced-assembly-resource-file"></a>참조된 어셈블리 리소스 파일  
  Pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 리소스에 대 한 참조 된 어셈블리로 컴파일되는 파일은 다음 인증 기관과 경로 사용 합니다.  
   
--   **인증 기관**: application:///  
+- **인증 기관**: application:///  
   
--   **경로**: 참조 된 어셈블리로 컴파일되는 리소스 파일의 이름입니다. 경로는 다음 형식을 따라야 합니다.  
+- **경로**: 참조 된 어셈블리로 컴파일되는 리소스 파일의 이름입니다. 경로는 다음 형식을 따라야 합니다.  
   
      *AssemblyShortName*{*;Version*]{*;PublicKey*];component/*Path*  
   
-    -   **AssemblyShortName**: 참조된 어셈블리에 대한 약식 이름  
+    - **AssemblyShortName**: 참조된 어셈블리에 대한 약식 이름  
   
-    -   **;Version**[옵션]: 리소스 파일을 포함하는 참조된 어셈블리의 버전. 동일한 약식 이름을 갖는 두 개 이상의 참조된 어셈블리가 로드된 경우 사용됩니다.  
+    - **;Version**[옵션]: 리소스 파일을 포함하는 참조된 어셈블리의 버전. 동일한 약식 이름을 갖는 두 개 이상의 참조된 어셈블리가 로드된 경우 사용됩니다.  
   
-    -   **;PublicKey**[옵션]: 참조된 어셈블리를 서명하는 데 사용된 공개 키. 동일한 약식 이름을 갖는 두 개 이상의 참조된 어셈블리가 로드된 경우 사용됩니다.  
+    - **;PublicKey**[옵션]: 참조된 어셈블리를 서명하는 데 사용된 공개 키. 동일한 약식 이름을 갖는 두 개 이상의 참조된 어셈블리가 로드된 경우 사용됩니다.  
   
-    -   **;component**: 참조되는 어셈블리가 로컬 어셈블리에서 참조된다는 것을 지정  
+    - **;component**: 참조되는 어셈블리가 로컬 어셈블리에서 참조된다는 것을 지정  
   
-    -   **/Path**: 참조된 어셈블리 프로젝트 폴더의 루트에 상대적인 경로를 포함한 리소스 파일의 이름  
+    - **/Path**: 참조된 어셈블리 프로젝트 폴더의 루트에 상대적인 경로를 포함한 리소스 파일의 이름  
   
  다음 예제에서는 pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 에 대 한는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 참조 된 어셈블리의 프로젝트 폴더의 루트에 있는 리소스 파일입니다.  
   
@@ -138,9 +138,9 @@ Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../../..
 ## <a name="content-file-pack-uris"></a>콘텐츠 파일 Pack URI  
  Pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 는 다음 인증 기관과 경로 사용 하는 콘텐츠 파일:  
   
--   **인증 기관**: application:///  
+- **인증 기관**: application:///  
   
--   **경로**: 응용 프로그램의 주 실행 어셈블리의 파일 시스템 위치에 상대적인 경로 포함 하는 콘텐츠 파일의 이름입니다.  
+- **경로**: 응용 프로그램의 주 실행 어셈블리의 파일 시스템 위치에 상대적인 경로 포함 하는 콘텐츠 파일의 이름입니다.  
   
  다음 예제에서는 pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 에 대 한는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 실행 가능한 어셈블리와 동일한 폴더에 있는 콘텐츠 파일입니다.  
   
@@ -157,9 +157,9 @@ Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../../..
 ## <a name="site-of-origin-pack-uris"></a>원본 사이트 Pack URI  
  Pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 원본 사이트에 대 한 파일은 다음 인증 기관과 경로 사용 합니다.  
   
--   **인증 기관**: siteoforigin:///  
+- **인증 기관**: siteoforigin:///  
   
--   **경로**: 사이트는 실행 가능 어셈블리가 시작 된 위치에 상대적인 경로 포함 한 원본 파일의 이름입니다.  
+- **경로**: 사이트는 실행 가능 어셈블리가 시작 된 위치에 상대적인 경로 포함 한 원본 파일의 이름입니다.  
   
  다음 예제에서는 pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 에 대 한는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 원본 사이트 파일을 실행 가능 어셈블리가 시작 된 위치에 저장 합니다.  
   
@@ -175,17 +175,17 @@ Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../../..
   
  유형에 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 일반적으로 구성 된 파일 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` 항목에 해당 루트 요소로 다음 중 하나:  
   
--   <xref:System.Windows.Window?displayProperty=nameWithType>  
+- <xref:System.Windows.Window?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Controls.Page?displayProperty=nameWithType>  
+- <xref:System.Windows.Controls.Page?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Navigation.PageFunction%601?displayProperty=nameWithType>  
+- <xref:System.Windows.Navigation.PageFunction%601?displayProperty=nameWithType>  
   
--   <xref:System.Windows.ResourceDictionary?displayProperty=nameWithType>  
+- <xref:System.Windows.ResourceDictionary?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Documents.FlowDocument?displayProperty=nameWithType>  
+- <xref:System.Windows.Documents.FlowDocument?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType>  
+- <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType>  
   
 <a name="Absolute_vs_Relative_Pack_URIs"></a>   
 ## <a name="absolute-vs-relative-pack-uris"></a>절대 및 상대 Pack URI  
@@ -246,11 +246,11 @@ Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../../..
   
  [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 해결 방법에 대 한 적용 되지 않습니다 [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] 는 다음을 참조 하십시오.  
   
--   참조 된 어셈블리의 콘텐츠 파일: 하 여 이러한 파일 형식은 지원 되지 않습니다 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]합니다.  
+- 참조 된 어셈블리의 콘텐츠 파일: 하 여 이러한 파일 형식은 지원 되지 않습니다 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]합니다.  
   
--   참조 된 어셈블리에 포함 된 파일: [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] 식별 하는 참조 된 어셈블리의 이름을 둘 다 포함 되어 있으므로 고유 하며 `;component` 접미사.  
+- 참조 된 어셈블리에 포함 된 파일: [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] 식별 하는 참조 된 어셈블리의 이름을 둘 다 포함 되어 있으므로 고유 하며 `;component` 접미사.  
   
--   원본 사이트 파일: [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] 식별 하는 팩에서 식별할 수 있는 유일한 파일 이므로 고유 [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] siteoforigin:/// 인증 포함 된: / / / 기관.  
+- 원본 사이트 파일: [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] 식별 하는 팩에서 식별할 수 있는 유일한 파일 이므로 고유 [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] siteoforigin:/// 인증 포함 된: / / / 기관.  
   
  팩는 한 가지 단순화 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 확인 코드가 리소스 및 콘텐츠 파일의 위치와 다소 독립적일 수 있습니다. 예를 들어 팩은 콘텐츠 파일을 다시 구성 되는 로컬 어셈블리의 리소스 파일이 있다고 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 팩을 사용 하는 코드와 마찬가지로 똑같이 리소스 유지에 대 한 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]합니다.  
   
@@ -258,17 +258,17 @@ Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../../..
 ## <a name="programming-with-pack-uris"></a>Pack URI를 사용한 프로그래밍  
  많은 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 팩을 사용 하 여 설정할 수 있는 속성을 구현 하는 클래스 [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]등.  
   
--   <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Controls.Frame.Source%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Controls.Frame.Source%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Documents.Hyperlink.NavigateUri%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Documents.Hyperlink.NavigateUri%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Window.Icon%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Window.Icon%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Controls.Image.Source%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Controls.Image.Source%2A?displayProperty=nameWithType>  
   
  이러한 속성을 태그와 코드 모두에서 설정할 수 있습니다. 이 섹션에서는 두 경우에 대한 기본 구조를 설명한 다음 일반적인 시나리오 예제를 보여 줍니다.  
   
