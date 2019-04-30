@@ -17,11 +17,11 @@ helpviewer_keywords:
 - properties [Visual Basic], overriding
 ms.assetid: 612581e7-8a4c-4a5d-beff-3402fffa6f35
 ms.openlocfilehash: 91a1cedc66fd66e336b6e7976ad87ad638cb43c3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053901"
 ---
 # <a name="overridable-visual-basic"></a>Overridable(Visual Basic)
 속성 또는 프로시저를 동일 하 게 명명 된 속성 또는 프로시저가 파생된 클래스에서 재정의할 수 있음을 지정 합니다.  

@@ -3,11 +3,11 @@ title: 부분 신뢰 기능 호환성
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
 ms.openlocfilehash: b0d9b7bd8bd5f33ca344ea5674d08507ced209f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039067"
 ---
 # <a name="partial-trust-feature-compatibility"></a>부분 신뢰 기능 호환성
 Windows Communication Foundation (WCF) 부분 신뢰 환경에서 실행 하는 경우 기능의 제한 된 하위 집합을 지원 합니다. 부분 신뢰에서 지원되는 기능은 [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) 항목에서 설명한 대로 특정 시나리오 집합을 바탕으로 설계되었습니다.  
@@ -15,20 +15,20 @@ Windows Communication Foundation (WCF) 부분 신뢰 환경에서 실행 하는 
 ## <a name="minimum-permission-requirements"></a>최소 권한 요구 사항  
  WCF는 다음 표준 명명 된 권한 집합 중 하나에서 실행 중인 응용 프로그램에서 기능의 하위 집합을 지원 합니다.  
   
--   보통 신뢰 권한  
+- 보통 신뢰 권한  
   
--   인터넷 영역 권한  
+- 인터넷 영역 권한  
   
  더 제한적인 권한 가진 부분적으로 신뢰할 수 있는 응용 프로그램에서 WCF를 사용 하는 동안 런타임에 보안 예외가 발생할 수 있습니다.  
   
 ## <a name="contracts"></a>계약  
  부분 신뢰에서 계약을 실행할 때 다음과 같은 제한 사항이 적용됩니다.  
   
--   `[ServiceContract]` 인터페이스를 구현하는 서비스 클래스가 `public` 이어야 하며 `public` 생성자를 포함해야 합니다. 서비스 클래스가 `[OperationContract]` 메서드를 정의하는 경우 이 메서드는 `public`이어야 합니다. 서비스 클래스가 `[ServiceContract]` 인터페이스를 구현하는 경우에는 `private`인터페이스가 `[ServiceContract]` 일 때 이러한 메서드 구현이 명시적 또는 `public`일 수 있습니다.  
+- `[ServiceContract]` 인터페이스를 구현하는 서비스 클래스가 `public` 이어야 하며 `public` 생성자를 포함해야 합니다. 서비스 클래스가 `[OperationContract]` 메서드를 정의하는 경우 이 메서드는 `public`이어야 합니다. 서비스 클래스가 `[ServiceContract]` 인터페이스를 구현하는 경우에는 `private`인터페이스가 `[ServiceContract]` 일 때 이러한 메서드 구현이 명시적 또는 `public`일 수 있습니다.  
   
--   `[ServiceKnownType]` 특성을 사용할 때는 지정된 메서드가 `public`이어야 합니다.  
+- `[ServiceKnownType]` 특성을 사용할 때는 지정된 메서드가 `public`이어야 합니다.  
   
--   `[MessageContract]` 클래스와 해당 멤버는 `public`이어야 합니다. `[MessageContract]` 클래스는 응용 프로그램 어셈블리에 정의되어 있는 경우 `internal` 일 수 있으며 `internal` 멤버를 포함할 수 있습니다.  
+- `[MessageContract]` 클래스와 해당 멤버는 `public`이어야 합니다. `[MessageContract]` 클래스는 응용 프로그램 어셈블리에 정의되어 있는 경우 `internal` 일 수 있으며 `internal` 멤버를 포함할 수 있습니다.  
   
 ## <a name="system-provided-bindings"></a>시스템 제공 바인딩  
  <xref:System.ServiceModel.BasicHttpBinding> 및 <xref:System.ServiceModel.WebHttpBinding> 은 부분 신뢰 환경에서 완전히 지원됩니다. <xref:System.ServiceModel.WSHttpBinding> 은 전송 보안 모드에만 지원됩니다.  
@@ -44,11 +44,11 @@ Windows Communication Foundation (WCF) 부분 신뢰 환경에서 실행 하는 
 ### <a name="encoders"></a>인코더  
  다음 인코더를 사용할 수 있습니다.  
   
--   텍스트 인코더(<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>)  
+- 텍스트 인코더(<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>)  
   
--   이진 인코더(<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>)  
+- 이진 인코더(<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>)  
   
--   웹 메시지 인코더(<xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>)  
+- 웹 메시지 인코더(<xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>)  
   
  MTOM(Message Transmission Optimization Mechanism) 인코더는 지원되지 않습니다.  
   
@@ -61,15 +61,15 @@ Windows Communication Foundation (WCF) 부분 신뢰 환경에서 실행 하는 
 ## <a name="serialization"></a>Serialization  
  <xref:System.Runtime.Serialization.DataContractSerializer> 및 <xref:System.Xml.Serialization.XmlSerializer> 는 모두 부분 신뢰 환경에서 지원됩니다. 그러나 <xref:System.Runtime.Serialization.DataContractSerializer> 의 사용은 다음 조건에 따라 결정됩니다.  
   
--   serialize할 수 있는 모든 `[DataContract]` 형식은 `public`이어야 합니다.  
+- serialize할 수 있는 모든 `[DataContract]` 형식은 `public`이어야 합니다.  
   
--   `[DataMember]` 형식의 serialize할 수 있는 모든 `[DataContract]` 필드 또는 속성은 public이고 읽기/쓰기가 가능해야 합니다. Serialization 및 deserialization [readonly](https://go.microsoft.com/fwlink/?LinkID=98854) 필드에는 부분적으로 신뢰할 수 있는 응용 프로그램에서 WCF를 실행 하는 경우 지원 되지 않습니다.  
+- `[DataMember]` 형식의 serialize할 수 있는 모든 `[DataContract]` 필드 또는 속성은 public이고 읽기/쓰기가 가능해야 합니다. Serialization 및 deserialization [readonly](https://go.microsoft.com/fwlink/?LinkID=98854) 필드에는 부분적으로 신뢰할 수 있는 응용 프로그램에서 WCF를 실행 하는 경우 지원 되지 않습니다.  
   
--   `[Serializable]`/ISerializable 프로그래밍 모델은 부분 신뢰 환경에서 지원되지 않습니다.  
+- `[Serializable]`/ISerializable 프로그래밍 모델은 부분 신뢰 환경에서 지원되지 않습니다.  
   
--   코드 또는 시스템 수준 구성(machine.config)에서는 알려진 형식을 지정해야 합니다. 보안상의 이유로 애플리케이션 수준 구성에서는 알려진 형식을 지정할 수 없습니다.  
+- 코드 또는 시스템 수준 구성(machine.config)에서는 알려진 형식을 지정해야 합니다. 보안상의 이유로 애플리케이션 수준 구성에서는 알려진 형식을 지정할 수 없습니다.  
   
--   <xref:System.Runtime.Serialization.IObjectReference> 를 구현하는 형식은 부분 신뢰 환경에서 예외를 throw합니다.  
+- <xref:System.Runtime.Serialization.IObjectReference> 를 구현하는 형식은 부분 신뢰 환경에서 예외를 throw합니다.  
   
  부분적으로 신뢰할 수 있는 애플리케이션에서 [T:System.Runtime.Serialization.DataContractSerializer](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md) 를 안전하게 사용하는 경우의 보안에 대한 자세한 내용은 <xref:System.Runtime.Serialization.DataContractSerializer> 의 Serialization 단원을 참조하세요.  
   
@@ -88,9 +88,9 @@ Windows Communication Foundation (WCF) 부분 신뢰 환경에서 실행 하는 
 ## <a name="enabling-common-behaviors-to-run"></a>일반 동작이 실행되도록 설정  
  사용 하 여 표시 되지 않은 서비스 또는 끝점 동작은 합니다 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 에 추가 되는 특성 (APTCA)를 [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) 구성 파일의 섹션에는 응용 프로그램이 부분 신뢰에서 실행 될 때 실행 되지 않습니다 이 경우 환경과 예외가 throw 됩니다. 일반 동작을 실행하려면 다음 옵션 중 하나를 수행해야 합니다.  
   
--   부분 신뢰 애플리케이션으로 배포될 때 실행될 수 있도록 일반 동작을 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 특성으로 표시합니다. APTCA로 표시된 어셈블리가 실행되지 않도록 컴퓨터에 레지스트리 항목을 설정할 수 있습니다. 이어야 합니다.  
+- 부분 신뢰 애플리케이션으로 배포될 때 실행될 수 있도록 일반 동작을 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 특성으로 표시합니다. APTCA로 표시된 어셈블리가 실행되지 않도록 컴퓨터에 레지스트리 항목을 설정할 수 있습니다. 이어야 합니다.  
   
--   부분 신뢰 환경에서 애플리케이션을 실행하기 위해 사용자가 코드 액세스 보안 설정을 수정할 수 없는 완전 신뢰 애플리케이션으로서 애플리케이션이 배포되는지 확인합니다. 사용자가 보안 설정을 수정할 수 있는 경우 동작이 실행되지 않고 예외가 throw되지 않습니다. 이 확인 하려면 참조는 **levelfinal** 사용 하 여 옵션 [Caspol.exe (코드 액세스 보안 정책 도구)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)합니다.  
+- 부분 신뢰 환경에서 애플리케이션을 실행하기 위해 사용자가 코드 액세스 보안 설정을 수정할 수 없는 완전 신뢰 애플리케이션으로서 애플리케이션이 배포되는지 확인합니다. 사용자가 보안 설정을 수정할 수 있는 경우 동작이 실행되지 않고 예외가 throw되지 않습니다. 이 확인 하려면 참조는 **levelfinal** 사용 하 여 옵션 [Caspol.exe (코드 액세스 보안 정책 도구)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)합니다.  
   
  일반 동작의 예제를 참조 하세요. [방법: 엔터프라이즈에서 끝점 잠그기](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)합니다.  
   
@@ -115,25 +115,25 @@ Windows Communication Foundation (WCF) 부분 신뢰 환경에서 실행 하는 
   
  지원되는 추적 소스는 다음과 같습니다.  
   
--   <xref:System.ServiceModel>  
+- <xref:System.ServiceModel>  
   
--   <xref:System.Runtime.Serialization>  
+- <xref:System.Runtime.Serialization>  
   
--   <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>및 <xref:System.IdentityModel.Tokens>가 있습니다.  
+- <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>및 <xref:System.IdentityModel.Tokens>가 있습니다.  
   
  다음 추적 소스는 지원되지 않습니다.  
   
--   CardSpace  
+- CardSpace  
   
--   <xref:System.IO.Log>  
+- <xref:System.IO.Log>  
 
--   [System.ServiceModel.Internal.TransactionBridge](https://docs.microsoft.com/previous-versions/aa346556(v=vs.110))]
+- [System.ServiceModel.Internal.TransactionBridge](https://docs.microsoft.com/previous-versions/aa346556(v=vs.110))]
   
  <xref:System.Diagnostics.TraceOptions> 열거형에 대한 다음 멤버는 지정하지 않아야 합니다.  
   
--   <xref:System.Diagnostics.TraceOptions.Callstack?displayProperty=nameWithType>  
+- <xref:System.Diagnostics.TraceOptions.Callstack?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceOptions.ProcessId?displayProperty=nameWithType>  
+- <xref:System.Diagnostics.TraceOptions.ProcessId?displayProperty=nameWithType>  
   
  부분 신뢰 환경에서 추적을 사용하는 경우 애플리케이션에 추적 수신기의 출력을 저장할 권한이 있는지 확인합니다. 예를 들어 <xref:System.Diagnostics.TextWriterTraceListener> 를 사용하여 추적 출력을 텍스트 파일에 기록하는 경우 애플리케이션에 추적 파일을 기록하는 데 필요한 FileIOPermission이 있는지 확인합니다.  
   
@@ -148,11 +148,11 @@ Windows Communication Foundation (WCF) 부분 신뢰 환경에서 실행 하는 
   
  다음 추가 기능은 indigo2를 부분 신뢰 환경에서 실행하는 경우 사용할 수 없습니다.  
   
--   WMI(Windows Management Instrumentation)  
+- WMI(Windows Management Instrumentation)  
   
--   이벤트 로깅은 부분적으로만 사용할 수 있습니다( **진단** 단원에서의 설명 참조).  
+- 이벤트 로깅은 부분적으로만 사용할 수 있습니다( **진단** 단원에서의 설명 참조).  
   
--   성능 카운터  
+- 성능 카운터  
   
  부분 신뢰 환경에서 지원 되지 않는 WCF 기능을 사용 하 여 런타임에 예외가 발생할 수 있습니다.  
   

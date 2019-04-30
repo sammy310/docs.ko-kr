@@ -11,11 +11,11 @@ helpviewer_keywords:
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
 ms.openlocfilehash: 85806ee9fb01cd2ca07697230c46a8847fdf8c6a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053550"
 ---
 # <a name="dependency-property-security"></a>종속성 속성 보안
 종속성 속성은 일반적으로 public 속성으로 간주됩니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 속성 시스템의 특성으로 인해 종속성 속성 값에 대한 보안을 보장할 수 없습니다.  

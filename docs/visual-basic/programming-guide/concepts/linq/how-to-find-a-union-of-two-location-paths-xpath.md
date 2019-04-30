@@ -3,11 +3,11 @@ title: '방법: 두 위치 경로 (XPath 및 LINQ to XML)의 공용 구조체 �
 ms.date: 07/20/2015
 ms.assetid: c82c09b4-cb0a-47ec-8cc3-a124144c2788
 ms.openlocfilehash: 662cad329f4837d26b25d56f15d323fe623b05c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021676"
 ---
 # <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-visual-basic"></a>방법: 두 위치 경로 (XPath 및 LINQ to XML)의 공용 구조체 찾기 (Visual Basic)
 XPath를 사용하여 두 XPath 위치 경로의 통합을 찾을 수 있습니다.  

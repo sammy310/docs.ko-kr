@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 69897a7b646eb9f58e6b38588e302287b4241779
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62043682"
 ---
 # <a name="imetadataemit2getdeltasavesize-method"></a>IMetaDataEmit2::GetDeltaSaveSize 메서드
 편집 하며 계속 하기는 현재 세션에서 발생 하는 메타 데이터 크기의 변화를 나타내는 값을 가져옵니다.  

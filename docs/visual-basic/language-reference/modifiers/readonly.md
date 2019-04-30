@@ -11,11 +11,11 @@ helpviewer_keywords:
 - read-only variables
 ms.assetid: e868185d-6142-4359-a2fd-a7965cadfce8
 ms.openlocfilehash: 6e361cbe89f4c51f28199b008de817c2d48ef326
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051860"
 ---
 # <a name="readonly-visual-basic"></a>ReadOnly(Visual Basic)
 변수 또는 속성을 읽을 수 있지만 기록 되지 않습니다 지정 합니다.  
@@ -24,11 +24,11 @@ ms.locfileid: "58825393"
   
 ## <a name="rules"></a>규칙  
   
--   **선언 컨텍스트입니다.** `ReadOnly`는 모듈 수준에서만 사용할 수 있습니다. 즉, 선언 컨텍스트는 `ReadOnly` 요소 클래스, 구조체 또는 모듈 이어야 하며 원본 파일, 네임 스페이스 또는 프로시저 수는 없습니다.  
+- **선언 컨텍스트입니다.** `ReadOnly`는 모듈 수준에서만 사용할 수 있습니다. 즉, 선언 컨텍스트는 `ReadOnly` 요소 클래스, 구조체 또는 모듈 이어야 하며 원본 파일, 네임 스페이스 또는 프로시저 수는 없습니다.  
   
--   **결합 된 한정자입니다.** 지정할 수 없습니다 `ReadOnly` 와 함께 `Static` 같은 선언에 있습니다.  
+- **결합 된 한정자입니다.** 지정할 수 없습니다 `ReadOnly` 와 함께 `Static` 같은 선언에 있습니다.  
   
--   **값을 할당 합니다.** 사용 하는 코드는 `ReadOnly` 속성의 값을 설정할 수 없습니다. 하지만 기본 저장소에 액세스할 수 있는 코드에 할당 하거나 언제 든 지 값을 변경할 수 있습니다.  
+- **값을 할당 합니다.** 사용 하는 코드는 `ReadOnly` 속성의 값을 설정할 수 없습니다. 하지만 기본 저장소에 액세스할 수 있는 코드에 할당 하거나 언제 든 지 값을 변경할 수 있습니다.  
   
      값을 할당할 수 있습니다는 `ReadOnly` 변수 선언 또는 클래스 또는 구조체 정의 되어 있는 생성자만 합니다.  
   

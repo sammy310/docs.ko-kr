@@ -3,11 +3,11 @@ title: 마이그레이션 고려 사항(Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
 ms.openlocfilehash: b6224dcf883daef7b35ef50b7556fc568e433a46
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034036"
 ---
 # <a name="migration-considerations-entity-framework"></a>마이그레이션 고려 사항(Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework를 사용하면 기존 응용 프로그램보다 몇 가지 이점이 있습니다. 가장 중요한 이점 중 하나는 개념적 모델을 사용하여 응용 프로그램에서 사용되는 데이터 구조를 데이터 소스의 스키마와 구분할 수 있다는 것입니다. 이렇게 하면 응용 프로그램을 적절하게 변경하지 않아도 나중에 저장소 모델이나 데이터 소스 자체를 쉽게 변경할 수 있습니다. 사용 하는 이점에 대 한 자세한 내용은 합니다 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]를 참조 하세요 [Entity Framework 개요](../../../../../docs/framework/data/adonet/ef/overview.md) 및 [엔터티 데이터 모델](../../../../../docs/framework/data/adonet/entity-data-model.md)합니다.  
@@ -17,13 +17,13 @@ ms.locfileid: "59310423"
 ## <a name="general-migration-considerations"></a>일반적인 마이그레이션 고려 사항  
  모든 응용 프로그램을 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]로 마이그레이션할 때는 다음 사항을 고려해야 합니다.  
   
--   사용 하는 모든 응용 프로그램을 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 버전 3.5 SP1부터 마이그레이션될 수 Entity Framework로 응용 프로그램에서 사용 되는 데이터 원본에 대 한 데이터 공급자는 Entity Framework를 지원 하기만 합니다.  
+- 사용 하는 모든 응용 프로그램을 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 버전 3.5 SP1부터 마이그레이션될 수 Entity Framework로 응용 프로그램에서 사용 되는 데이터 원본에 대 한 데이터 공급자는 Entity Framework를 지원 하기만 합니다.  
   
--   공급자가 Entity Framework를 지원하지만 Entity Framework에서 데이터 소스 공급자의 모든 기능을 지원하지 않을 수도 있습니다.  
+- 공급자가 Entity Framework를 지원하지만 Entity Framework에서 데이터 소스 공급자의 모든 기능을 지원하지 않을 수도 있습니다.  
   
--   크거나 복잡한 응용 프로그램의 경우 한 번에 전체 응용 프로그램을 Entity Framework로 마이그레이션할 필요는 없습니다. 그러나 데이터 소스가 변경될 경우 Entity Framework를 사용하지 않는 응용 프로그램의 모든 부분을 변경해야 합니다.  
+- 크거나 복잡한 응용 프로그램의 경우 한 번에 전체 응용 프로그램을 Entity Framework로 마이그레이션할 필요는 없습니다. 그러나 데이터 소스가 변경될 경우 Entity Framework를 사용하지 않는 응용 프로그램의 모든 부분을 변경해야 합니다.  
   
--   [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]는 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 데이터 공급자를 사용하여 데이터 소스에 액세스하므로 Entity Framework에 사용되는 데이터 공급자 연결을 응용 프로그램의 다른 부분과 공유할 수 있습니다. 예를 들어, Entity Framework는 SqlClient 공급자를 사용하여 SQL Server 데이터베이스에 액세스합니다. 자세한 내용은 [Entity Framework 용 EntityClient 공급자](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)합니다.  
+- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]는 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 데이터 공급자를 사용하여 데이터 소스에 액세스하므로 Entity Framework에 사용되는 데이터 공급자 연결을 응용 프로그램의 다른 부분과 공유할 수 있습니다. 예를 들어, Entity Framework는 SqlClient 공급자를 사용하여 SQL Server 데이터베이스에 액세스합니다. 자세한 내용은 [Entity Framework 용 EntityClient 공급자](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)합니다.  
   
 ## <a name="common-migration-tasks"></a>일반적인 마이그레이션 작업  
  기존 응용 프로그램을 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]로 마이그레이션하는 경로는 응용 프로그램 종류와 기존 데이터 액세스 전략에 따라 달라집니다. 그러나 기존 응용 프로그램을 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]로 마이그레이션하는 경우 항상 다음 작업을 수행해야 합니다.  

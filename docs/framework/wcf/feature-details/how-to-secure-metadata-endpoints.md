@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
 ms.openlocfilehash: 8481048dd31652a69f9284a44145bd4abfed89bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047570"
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>방법: 메타데이터 엔드포인트 보안
 서비스의 메타데이터에는 악의적인 사용자가 활용할 수 있는 응용 프로그램에 대한 중요한 정보가 들어 있습니다. 또한 서비스의 소비자는 서비스의 메타데이터를 가져오기 위한 보안 메커니즘이 필요할 수도 있습니다. 따라서 보안 엔드포인트를 사용하여 메타데이터를 게시해야 하는 경우가 있습니다.  
@@ -88,9 +88,9 @@ ms.locfileid: "59307530"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  코드 예제에서는 다음 네임스페이스를 사용합니다.  
   
--   <xref:System.ServiceModel?displayProperty=nameWithType>  
+- <xref:System.ServiceModel?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Description?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Description?displayProperty=nameWithType>  
   
 ## <a name="see-also"></a>참고자료
 

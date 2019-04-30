@@ -3,11 +3,11 @@ title: 수정 SQL 생성
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
 ms.openlocfilehash: 13ed7186981e82d47f00b6a38a4328ed75f527f4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034138"
 ---
 # <a name="modification-sql-generation"></a>수정 SQL 생성
 
@@ -70,7 +70,7 @@ Property는 업데이트할 속성을 지정합니다. Property는 항상 해당
 
 Value는 속성을 업데이트할 새 값을 지정합니다. Value는 DbConstantExpression 또는 DbNullExpression 형식입니다.
 
-#### <a name="predicate-in-dbupdatecommandtree-and-dbdeletecommandtree"></a>DbUpdateCommandTree 및 DbDeleteCommandTree의 Predicate
+#### <a name="predicate-in-dbupdatecommandtree-and-dbdeletecommandtree"></a>DbUpdateCommandTree 및 DbDeleteCommandTree의 조건자
 
 Predicate는 대상 컬렉션에서 업데이트하거나 삭제할 멤버를 결정하는 데 사용되는 조건자를 지정합니다. Predicate는 DbExpression의 다음 하위 집합으로 작성된 식 트리입니다.
 

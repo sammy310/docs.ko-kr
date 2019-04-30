@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 80bf9de3eb274bf536b2794ba2ed14e7e9b553cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050053"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>IMetaDataEmit::SetClassLayout 메서드
 에 대 한 이전 호출에서 정의 된 클래스에 대 한 필드 레이아웃을 완료 [DefineTypeDef 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)합니다.  
@@ -56,9 +56,9 @@ HRESULT SetClassLayout (
   
  그러나 코드는 관리 되지 않는 정렬에 따라 배치 필드 경우가 있습니다. 이 경우 sequential 또는 explicit 레이아웃 및 호출을 선택 `SetClassLayout` 필드의 레이아웃을 완료 하려면:  
   
--   순차적 레이아웃: 압축 크기를 지정 합니다. 필드는 자연 스러운 크기 또는 어떤 결과 필드의 작은 오프셋의 압축 크기에 따라 정렬 됩니다. 설정할 `rFieldOffsets` 고 `ulClassSize` 0입니다.  
+- 순차적 레이아웃: 압축 크기를 지정 합니다. 필드는 자연 스러운 크기 또는 어떤 결과 필드의 작은 오프셋의 압축 크기에 따라 정렬 됩니다. 설정할 `rFieldOffsets` 고 `ulClassSize` 0입니다.  
   
--   명시적 레이아웃: 각 필드의 오프셋을 지정 하거나 클래스와 압축 크기를 지정 합니다.  
+- 명시적 레이아웃: 각 필드의 오프셋을 지정 하거나 클래스와 압축 크기를 지정 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

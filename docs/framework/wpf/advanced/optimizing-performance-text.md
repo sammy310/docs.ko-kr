@@ -12,11 +12,11 @@ helpviewer_keywords:
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
 ms.openlocfilehash: 0cc1ac9adf40948a5109b37336d45a2be833e54f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032684"
 ---
 # <a name="optimizing-performance-text"></a>성능 최적화: 텍스트
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 다양한 기능의 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 컨트롤을 사용하여 텍스트 콘텐츠를 표시할 수 있습니다. 일반적으로 세 가지 계층으로 텍스트 렌더링을 나눌 수 있습니다.  
@@ -33,19 +33,19 @@ ms.locfileid: "59317209"
 ## <a name="rendering-text-at-the-glyph-level"></a>문자 모양 수준에서 텍스트 렌더링  
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 에 대 한 직접 액세스를 사용 하 여 문자 모양 수준 태그를 포함 한 고급 텍스트 지원을 제공 <xref:System.Windows.Documents.Glyphs> 가로채서 텍스트 서식 지정 후 유지 하려는 고객에 대 한 합니다. 이러한 기능을 통해 다음과 같은 각 시나리오의 다양한 텍스트 렌더링 요구 사항을 충족시킬 수 있습니다.  
   
--   고정된 형식 문서의 화면 표시  
+- 고정된 형식 문서의 화면 표시  
   
--   인쇄 시나리오  
+- 인쇄 시나리오  
   
-    -   장치 프린터 언어로서의 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]  
+    - 장치 프린터 언어로서의 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]  
   
-    -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
+    - [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
   
-    -   이전 프린터 드라이버, [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 애플리케이션에서 고정된 형식으로의 출력  
+    - 이전 프린터 드라이버, [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 애플리케이션에서 고정된 형식으로의 출력  
   
-    -   인쇄 스풀 형식  
+    - 인쇄 스풀 형식  
   
--   이전 버전의 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 및 기타 컴퓨팅 디바이스에 대한 클라이언트를 포함하는 고정된 형식 문서 표시  
+- 이전 버전의 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 및 기타 컴퓨팅 디바이스에 대한 클라이언트를 포함하는 고정된 형식 문서 표시  
   
 > [!NOTE]
 >  <xref:System.Windows.Documents.Glyphs> 및 <xref:System.Windows.Media.GlyphRun> 고정 형식 문서 프레젠테이션과 인쇄 시나리오에 대 한 설계 되었습니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 일반 레이아웃에 대 한 몇 가지 요소를 제공 하 고 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 와 같은 시나리오 <xref:System.Windows.Controls.Label> 및 <xref:System.Windows.Controls.TextBlock>합니다. 레이아웃 및 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 시나리오에 대한 자세한 내용은 [WPF의 입력 체계](typography-in-wpf.md)를 참조하세요.  

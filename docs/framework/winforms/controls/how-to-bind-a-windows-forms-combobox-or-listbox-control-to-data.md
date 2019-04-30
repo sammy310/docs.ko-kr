@@ -16,11 +16,11 @@ helpviewer_keywords:
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: dfd7f081-8bea-4a41-86a3-86a1934828ef
 ms.openlocfilehash: b869898a20008343b6c6cbe4bc7e399fc86fb232
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054018"
 ---
 # <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>방법: 데이터에 Windows Forms ComboBox 또는 ListBox 컨트롤 바인딩
 바인딩할 수 있습니다 합니다 <xref:System.Windows.Forms.ComboBox> 고 <xref:System.Windows.Forms.ListBox> 데이터베이스의 데이터를 검색 하는 등의 작업을 수행 하는 데이터를 새 데이터를 입력 하거나 기존 데이터를 편집 합니다.  

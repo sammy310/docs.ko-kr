@@ -10,11 +10,11 @@ helpviewer_keywords:
 - serialization
 ms.assetid: 832ac524-21bc-419a-a27b-ca8bfc45840f
 ms.openlocfilehash: d9dc68d8e7eced031af404aaec20784573c9930a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62028241"
 ---
 # <a name="xml-and-soap-serialization"></a>XML 및 SOAP Serialization
 
@@ -74,8 +74,7 @@ SOAP로 인코딩된 serialization의 제어에 사용되는 특성을 나열합
 XML serialization을 제어하기 위한 최상위 구성 요소입니다.
 
 [\<dateTimeSerialization> 요소](datetimeserialization-element.md)  
-
-  <xref:System.DateTime> 개체의 serialization 모드를 제어합니다.
+<xref:System.DateTime> 개체의 serialization 모드를 제어합니다.
 
 [\<schemaImporterExtensions> 요소](schemaimporterextensions-element.md)  
 <xref:System.Xml.Serialization.XmlSchemaImporter> 클래스에서 사용하는 형식을 포함합니다.

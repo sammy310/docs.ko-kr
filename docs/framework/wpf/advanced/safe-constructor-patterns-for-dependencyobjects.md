@@ -7,11 +7,11 @@ helpviewer_keywords:
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
 ms.openlocfilehash: ba8b0a48b2b75a9191553392d5ec0a1f66575807
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053511"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>DependencyObject의 안전한 생성자 패턴
 일반적으로 클래스 생성자는 가상 메서드나 대리자와 같은 콜백을 호출하면 안 됩니다. 이는 생성자는 파생 클래스에 대한 생성자의 기본 초기화로 호출될 수 있기 때문입니다. 특정 개체의 불완전한 초기화 상태에서 가상 항목이 입력될 수 있습니다. 하지만 속성 시스템 자체는 내부적으로 콜백을 종속성 속성 시스템의 일부로 호출하고 표시합니다. 사용 하 여 종속성 속성 값을 설정 하는 것으로 간단한 작업 <xref:System.Windows.DependencyObject.SetValue%2A> 호출 잠재적으로 포함 하는 콜백을 어딘가에 결정에서 합니다. 이런 이유로 생성자 본문에서 종속성 속성 값을 설정할 때 주의해야 합니다. 형식이 기본 클래스로 사용될 경우 문제가 발생할 수 있습니다. 특정 패턴을 구현 하기 위한 방법이 <xref:System.Windows.DependencyObject> 여기서 설명 되는 종속성 속성 상태 및 고유 콜백과 사용 하 여 특정 문제를 방지 하는 생성자입니다.  

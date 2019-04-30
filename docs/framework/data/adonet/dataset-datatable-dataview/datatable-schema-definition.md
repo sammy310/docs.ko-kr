@@ -3,11 +3,11 @@ title: DataTable 스키마 정의
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
 ms.openlocfilehash: e8710e7d92558f525a6feaedf8d0635c5ce6e2c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034348"
 ---
 # <a name="datatable-schema-definition"></a>DataTable 스키마 정의
 테이블의 스키마나 구조는 열이나 제약 조건에 의해 표시됩니다. <xref:System.Data.DataTable>의 스키마는 <xref:System.Data.DataColumn> 개체를 비롯하여 <xref:System.Data.ForeignKeyConstraint> 및 <xref:System.Data.UniqueConstraint> 개체를 사용하여 정의합니다. 테이블 열은 데이터 소스 열에 매핑될 수 있습니다. 또한 이 열은 식에서 계산된 값을 포함하며 값을 자동으로 증가시키고 기본 키 값을 포함할 수 있습니다.  

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: babe098b16729cfcd41b48075a49b9ae9be7dfdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59117185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049806"
 ---
 # <a name="imetadatatablesgetblob-method"></a>IMetaDataTables::GetBlob 메서드
 Binary large object (BLOB)를 지정 된 열 인덱스에 대 한 포인터를 가져옵니다.  

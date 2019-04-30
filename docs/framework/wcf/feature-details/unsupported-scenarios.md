@@ -3,11 +3,11 @@ title: 지원되지 않는 시나리오
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
 ms.openlocfilehash: 12012f3e0c0c3b0d10c5faebfb2de881f5de3917
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050755"
 ---
 # <a name="unsupported-scenarios"></a>지원되지 않는 시나리오
 다양 한 이유로 Windows Communication Foundation (WCF)는 일부 특정 보안 시나리오를 지원 하지 않습니다. 예를 들어 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition SSPI 또는 Kerberos 인증 프로토콜을 구현 하지 않으며 WCF 지원 하지 않습니다 해당 플랫폼에서 Windows 인증을 사용 하 여 서비스를 실행 합니다. Windows XP Home Edition에서 WCF를 실행 하는 경우 사용자 이름/암호 및 HTTP/HTTPS 통합된 인증과 같은 다른 인증 메커니즘이 지원 됩니다.  
@@ -20,13 +20,13 @@ ms.locfileid: "59178778"
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP 및 보안 컨텍스트 토큰 쿠키 사용  
  WCF 가장을 지원 하지 않습니다 및 <xref:System.InvalidOperationException> 다음 조건이 충족 될 때 throw 됩니다.  
   
--   운영 체제가 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]인 경우  
+- 운영 체제가 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]인 경우  
   
--   인증 모드에서 Windows ID를 생성하는 경우  
+- 인증 모드에서 Windows ID를 생성하는 경우  
   
--   <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>의 <xref:System.ServiceModel.OperationBehaviorAttribute> 속성은 <xref:System.ServiceModel.ImpersonationOption.Required>로 설정됩니다.  
+- <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>의 <xref:System.ServiceModel.OperationBehaviorAttribute> 속성은 <xref:System.ServiceModel.ImpersonationOption.Required>로 설정됩니다.  
   
--   상태 기반 SCT(보안 컨텍스트 토큰)가 만들어지는 경우(기본값: 만들기 사용 안 함)  
+- 상태 기반 SCT(보안 컨텍스트 토큰)가 만들어지는 경우(기본값: 만들기 사용 안 함)  
   
  상태 기반 SCT는 사용자 지정 바인딩을 통해서만 만들 수 있습니다. 자세한 내용은 [방법: 보안 컨텍스트를 만들 보안 세션에 대 한 토큰](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) 코드에서 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 또는 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> 메서드를 사용하여 보안 바인딩 요소(<xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> 또는 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType>)를 만들고 `requireCancellation` 매개 변수를 `false`로 설정하여 토큰을 사용하도록 설정합니다. 매개 변수는 SCT 캐싱을 참조합니다. 값을 `false`로 설정하면 상태 기반 SCT 기능을 사용할 수 있습니다.  
   
@@ -68,18 +68,18 @@ ms.locfileid: "59178778"
   
  인증서에서 KSP를 사용하는지 여부를 파악하는 방법은 다음 두 가지입니다.  
   
--   `p/invoke`에 대해 `CertGetCertificateContextProperty`를 실행하고 반환되는 `dwProvType`에서 `CertGetCertificateContextProperty`이 있는지 확인합니다.  
+- `p/invoke`에 대해 `CertGetCertificateContextProperty`를 실행하고 반환되는 `dwProvType`에서 `CertGetCertificateContextProperty`이 있는지 확인합니다.  
   
--   사용 된 `certutil` 인증서를 쿼리 하기 위한 명령줄에서 명령을 합니다. 자세한 내용은 [인증서 문제 해결을 위한 Certutil 작업](https://go.microsoft.com/fwlink/?LinkId=120056)합니다.  
+- 사용 된 `certutil` 인증서를 쿼리 하기 위한 명령줄에서 명령을 합니다. 자세한 내용은 [인증서 문제 해결을 위한 Certutil 작업](https://go.microsoft.com/fwlink/?LinkId=120056)합니다.  
   
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>ASP.NET 가장 및 ASP.NET 호환성을 사용해야 하는 경우 메시지 보안 실패  
  WCF는 클라이언트 인증을 방해할 수 있으므로 다음 설정 조합을 지원 하지 않습니다.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 가장이 사용됩니다. 설정 하 여 Web.config 파일에 이렇게 합니다 `impersonate` 특성을 <`identity`> 요소를 `true`합니다.  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 가장이 사용됩니다. 설정 하 여 Web.config 파일에 이렇게 합니다 `impersonate` 특성을 <`identity`> 요소를 `true`합니다.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 호환성 모드를 설정 하 여 사용 합니다 `aspNetCompatibilityEnabled` 특성을 [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) 를 `true`.  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 호환성 모드를 설정 하 여 사용 합니다 `aspNetCompatibilityEnabled` 특성을 [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) 를 `true`.  
   
--   메시지 모드 보안이 사용됩니다.  
+- 메시지 모드 보안이 사용됩니다.  
   
  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 호환성 모드를 해제하면 문제가 해결됩니다. 또는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 호환성 모드가 필요 함, 사용 하지 않도록 설정 된 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 가장 기능 및 WCF에서 제공 가장을 대신 사용 합니다. 자세한 내용은 [위임 및 가장](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)합니다.  
   

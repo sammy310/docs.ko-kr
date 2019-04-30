@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, requirements
 ms.assetid: c43918db-9a36-426c-9e8a-e1bd6688a5b7
 ms.openlocfilehash: 5bd681b5f0be45526a3448ecf4afcf6ccbd41c98
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052601"
 ---
 # <a name="wcf-system-requirements"></a>WCF 시스템 요구 사항
 Windows Communication Foundation (WCF)는 분산된 응용 프로그램을 만드는 데 사용 되는 통신 인프라입니다. 다음 실행 하는 WCF를 사용 하도록 설정 하는 요구 사항을 나열 합니다.  

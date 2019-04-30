@@ -7,11 +7,11 @@ helpviewer_keywords:
 - serialization limitations of XamlWriter.Save
 ms.assetid: f86acc91-2b67-4039-8555-505734491d36
 ms.openlocfilehash: 89cb36dba63dccdf7e52b7fcafbe3d9fc2fea1e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053433"
 ---
 # <a name="serialization-limitations-of-xamlwritersave"></a>XamlWriter.Save의 serialization 제한
 합니다 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] <xref:System.Windows.Markup.XamlWriter.Save%2A> 의 콘텐츠를 serialize 할 수는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램을 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 파일입니다. 하지만 정확히 serialize되는 항목에 대한 눈에 띄는 몇 가지 제한 사항이 있습니다. 이러한 제한 사항과 몇몇 일반적인 고려 사항은 이 항목에서 설명합니다.  
@@ -36,8 +36,8 @@ ms.locfileid: "59113284"
 ## <a name="realistic-scenarios-for-use-of-xamlwritersave"></a>XAMLWriter.Save 사용에 대한 실제 시나리오  
  같습니다 꽤, 여전히 몇 가지 적절 한 시나리오를 사용 하 여에 대 한 제한 사항을 나열 하는 동안 <xref:System.Windows.Markup.XamlWriter.Save%2A> serialization에 대 한 합니다.  
   
--   벡터 또는 그래픽 출력: 렌더링 된 영역의 출력 재현 같은 벡터 나 그래픽을 다시 로드할 때 사용할 수 있습니다.  
+- 벡터 또는 그래픽 출력: 렌더링 된 영역의 출력 재현 같은 벡터 나 그래픽을 다시 로드할 때 사용할 수 있습니다.  
   
--   서식 있는 텍스트 및 유동 문서: 텍스트 및 그 모든 요소 서식 및 요소 포함은 출력에 유지 됩니다. 이는 클립보드 기능과 비슷한 메커니즘에 유용할 수 있습니다.  
+- 서식 있는 텍스트 및 유동 문서: 텍스트 및 그 모든 요소 서식 및 요소 포함은 출력에 유지 됩니다. 이는 클립보드 기능과 비슷한 메커니즘에 유용할 수 있습니다.  
   
--   비즈니스 개체 데이터를 보존 합니다. 저장 한 경우 데이터를 사용자 지정 요소와 같은 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터를 비즈니스 개체에 따라 기본 서 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 같은 사용자 지정 생성자 및 참조로 속성 값에 대 한 변환 규칙, 이러한 비즈니스 개체 수 serialization을 통해 지속 됩니다.
+- 비즈니스 개체 데이터를 보존 합니다. 저장 한 경우 데이터를 사용자 지정 요소와 같은 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터를 비즈니스 개체에 따라 기본 서 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 같은 사용자 지정 생성자 및 참조로 속성 값에 대 한 변환 규칙, 이러한 비즈니스 개체 수 serialization을 통해 지속 됩니다.

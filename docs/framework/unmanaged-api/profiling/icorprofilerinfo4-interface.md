@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 177e5ef8054f408dc8ec3475c56043394a636bc0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59194216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049455"
 ---
 # <a name="icorprofilerinfo4-interface"></a>ICorProfilerInfo4 인터페이스
 코드 프로파일러가 CLR (공용 언어 런타임) 이벤트 모니터링을 제어 하 고 요청 정보를 사용 하 여 통신에 사용 되는 메서드를 제공 합니다. . 합니다 `ICorProfilerInfo4` 인터페이스는 다른 확장 `ICorProfilerInfo` 인터페이스입니다. 추가 시간 (JIT) 컴파일을 지원 하기 위해 새 메서드를 제공 합니다 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]합니다.  

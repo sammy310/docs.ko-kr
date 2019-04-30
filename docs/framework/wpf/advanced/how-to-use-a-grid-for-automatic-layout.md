@@ -6,11 +6,11 @@ helpviewer_keywords:
 - automatic layout [WPF], grid use
 ms.assetid: ab9de407-e0c1-4047-bdf0-24951bf73879
 ms.openlocfilehash: 590ad7292fea572b20ccaa09ce2886724e004a6a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59227134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052406"
 ---
 # <a name="how-to-use-a-grid-for-automatic-layout"></a>방법: 자동 레이아웃에 눈금 사용
 이 예제에서는 지역화할 수 있는 애플리케이션을 만드는 자동 레이아웃 방법에서 그리드를 사용하는 방법을 설명합니다.  

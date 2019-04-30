@@ -3,11 +3,11 @@ title: Entity Framework 개요
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
 ms.openlocfilehash: a6649744c4ad719c760ebc6ce5d97b51815c8ee6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034060"
 ---
 # <a name="entity-framework-overview"></a>Entity Framework 개요
 
@@ -77,6 +77,6 @@ ms.locfileid: "53145795"
 
 [Entity Framework 리소스](../../../../../docs/framework/data/adonet/ef/resources.md) 개념 항목에 대 한 링크를 제공 하 고 외부 항목 및 구성에 대 한 리소스에 연결- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 응용 프로그램입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)

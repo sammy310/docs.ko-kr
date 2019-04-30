@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: bf0af444-890d-43e2-aeca-98589dd74ddf
 ms.openlocfilehash: 7d854a769ed580375e7463ba8661becc73ab8128
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032528"
 ---
 # <a name="convert-a-sequence-to-an-array"></a>시퀀스를 배열로 변환
 <xref:System.Linq.Enumerable.ToArray%2A>를 사용하여 시퀀스에서 배열을 만듭니다.  

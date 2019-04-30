@@ -3,11 +3,11 @@ title: WCF의 큐
 ms.date: 03/30/2017
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
 ms.openlocfilehash: 502f1ad74cd4bd6294db11a3e48f4c41068704ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59128767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049637"
 ---
 # <a name="queuing-in-wcf"></a>WCF의 큐
 이 섹션에서는 대기 중인된 통신에서 Windows Communication Foundation (WCF)를 사용 하는 방법을 설명 합니다.  
@@ -21,11 +21,11 @@ ms.locfileid: "59128767"
   
  WCF의 큐에 대기 중인된 바인딩에 대 한 유의할 사항은 다음과 같습니다.  
   
--   큐에 대기 되는 기본값에는 WCF 바인딩 때문에 작업을 단방향 해야 하는 모든 서비스 큐를 사용 하 여 이중 통신을 지원 하지 않습니다. 양방향 통신 샘플 ([양방향 통신](../../../../docs/framework/wcf/samples/two-way-communication.md)) 큐를 사용 하 여 이중 통신을 구현 하려면 두 개의 단방향 계약을 사용 하는 방법을 보여 줍니다.  
+- 큐에 대기 되는 기본값에는 WCF 바인딩 때문에 작업을 단방향 해야 하는 모든 서비스 큐를 사용 하 여 이중 통신을 지원 하지 않습니다. 양방향 통신 샘플 ([양방향 통신](../../../../docs/framework/wcf/samples/two-way-communication.md)) 큐를 사용 하 여 이중 통신을 구현 하려면 두 개의 단방향 계약을 사용 하는 방법을 보여 줍니다.  
   
--   WCF를 생성 하려면 메타 데이터 교환을 사용 하 여 클라이언트 WCF 클라이언트를 생성 하 고 적절 하 게 큐에 대기 중인된 통신을 구성 하는 바인딩 정보를 가져와서를 직접 쿼리할 수 있도록 서비스에서 추가 HTTP 끝점이 필요 합니다.  
+- WCF를 생성 하려면 메타 데이터 교환을 사용 하 여 클라이언트 WCF 클라이언트를 생성 하 고 적절 하 게 큐에 대기 중인된 통신을 구성 하는 바인딩 정보를 가져와서를 직접 쿼리할 수 있도록 서비스에서 추가 HTTP 끝점이 필요 합니다.  
   
--   대기 중인된 바인딩에 따라 WCF 외부의 추가 구성 필요 합니다. 예를 들어를 <xref:System.ServiceModel.NetMsmqBinding> WCF와 함께 제공 되는 클래스를 사용 하면 바인딩을 구성할 수 있을 뿐만 아니라 최소한으로 메시지 큐 (MSMQ)를 구성 해야 합니다.  
+- 대기 중인된 바인딩에 따라 WCF 외부의 추가 구성 필요 합니다. 예를 들어를 <xref:System.ServiceModel.NetMsmqBinding> WCF와 함께 제공 되는 클래스를 사용 하면 바인딩을 구성할 수 있을 뿐만 아니라 최소한으로 메시지 큐 (MSMQ)를 구성 해야 합니다.  
   
  다음 섹션에서는 특정 큐에 대기 중인된 바인딩을 WCF와 함께 제공 되는 MSMQ를 기반으로 합니다.  
   
@@ -48,9 +48,9 @@ ms.locfileid: "59128767"
 #### <a name="exactlyonce-and-durable-properties"></a>ExactlyOnce 및 Durable 속성  
  `ExactlyOnce` 및 `Durable` 속성은 큐 사이에서 메시지가 전송되는 방법에 영향을 줍니다.  
   
--   `ExactlyOnce`: 로 설정 하면 `true` 는 메시지를 배달 하는 경우 중복 되지 않습니다 (기본값), 대기 중인된 채널 확인 합니다. 또한 메시지가 손실되지 않습니다. 메시지를 전달할 수 없거나 메시지를 전달하기 전에 메시지 TTL(Time-To-Live)이 만료되면 실패 메시지가 배달 실패 이유와 함께 배달 못 한 편지 큐에 기록됩니다. `false`로 설정된 경우 대기 중인 채널에서 메시지를 전송하려고 시도합니다. 이 경우 필요에 따라 배달 못한 편지 큐를 선택할 수 있습니다.  
+- `ExactlyOnce`: 로 설정 하면 `true` 는 메시지를 배달 하는 경우 중복 되지 않습니다 (기본값), 대기 중인된 채널 확인 합니다. 또한 메시지가 손실되지 않습니다. 메시지를 전달할 수 없거나 메시지를 전달하기 전에 메시지 TTL(Time-To-Live)이 만료되면 실패 메시지가 배달 실패 이유와 함께 배달 못 한 편지 큐에 기록됩니다. `false`로 설정된 경우 대기 중인 채널에서 메시지를 전송하려고 시도합니다. 이 경우 필요에 따라 배달 못한 편지 큐를 선택할 수 있습니다.  
   
--   `Durable:``true`(기본값)로 설정되어 있으면 대기 중인 채널에서 MSMQ를 통해 메시지를 디스크에 영구히 저장합니다. 따라서 MSMQ 서비스를 중지했다가 다시 시작하면 디스크에 있는 메시지가 대상 큐에 전송되거나 서비스에 전달됩니다. `false`로 설정되어 있으면 메시지가 임시 저장소에 저장되므로 MSMQ 서비스를 중지했다가 다시 시작하면 손실됩니다.  
+- `Durable:``true`(기본값)로 설정되어 있으면 대기 중인 채널에서 MSMQ를 통해 메시지를 디스크에 영구히 저장합니다. 따라서 MSMQ 서비스를 중지했다가 다시 시작하면 디스크에 있는 메시지가 대상 큐에 전송되거나 서비스에 전달됩니다. `false`로 설정되어 있으면 메시지가 임시 저장소에 저장되므로 MSMQ 서비스를 중지했다가 다시 시작하면 손실됩니다.  
   
  `ExactlyOnce` 신뢰할 수 있는 전송을 위해 MSMQ에 트랜잭션 큐가 필요합니다. 또한 MSMQ에서 트랜잭션 큐를 읽으려면 트랜잭션이 필요합니다. 따라서 `NetMsmqBinding`을 사용할 때 `ExactlyOnce`가 `true`로 설정되어 있는 경우 메시지를 보내거나 받으려면 트랜잭션이 필요합니다. 마찬가지로 `ExactlyOnce`가 `false`일 때의 임시 메시징의 경우와 마찬가지로 MSMQ에 비트랜잭션 큐가 있어야 가장 효율적입니다. 따라서 `ExactlyOnce`를 `false`로 설정하거나 durable을 `false`로 설정하면 트랜잭션을 사용하여 메시지를 보내거나 받을 수 없습니다.  
   
@@ -66,9 +66,9 @@ ms.locfileid: "59128767"
   
  바인딩에는 다음과 같은 두 가지 속성이 필요합니다.  
   
--   `DeadLetterQueue`: 이 속성은 배달 못 한 편지 큐 요청 되었는지 여부를 나타내는 열거형입니다. 요청 시 열거형에는 배달 못 한 편지 큐도 포함됩니다. 값은 `None`, `System` 및 `Custom`입니다. 이러한 속성의 해석에 대 한 자세한 내용은 참조 하세요. [메시지 전송 오류 처리를 사용 하 여 배달 못 한 편지 큐](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+- `DeadLetterQueue`: 이 속성은 배달 못 한 편지 큐 요청 되었는지 여부를 나타내는 열거형입니다. 요청 시 열거형에는 배달 못 한 편지 큐도 포함됩니다. 값은 `None`, `System` 및 `Custom`입니다. 이러한 속성의 해석에 대 한 자세한 내용은 참조 하세요. [메시지 전송 오류 처리를 사용 하 여 배달 못 한 편지 큐](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
   
--   `CustomDeadLetterQueue`: 이 속성에는 응용 프로그램별 배달 못 한 편지 큐의 리소스 URI (Uniform Identifier) 주소입니다. 이 경우 필요한 `DeadLetterQueue`합니다.`Custom` 선택 됩니다.  
+- `CustomDeadLetterQueue`: 이 속성에는 응용 프로그램별 배달 못 한 편지 큐의 리소스 URI (Uniform Identifier) 주소입니다. 이 경우 필요한 `DeadLetterQueue`합니다.`Custom` 선택 됩니다.  
   
 #### <a name="poison-message-handling-properties"></a>포이즌 메시지 처리 속성  
  서비스에서 트랜잭션의 대상 큐에 있는 메시지를 읽을 때 서비스에서 여러 가지 이유로 메시지를 처리하지 못할 수 있습니다. 그러면 메시지를 큐에 넣고 다시 읽습니다. 반복적으로 실패하는 메시지를 처리하려면 바인딩에서 포이즌 메시지 처리 속성을 구성할 수 있습니다. `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay` 및 `ReceiveErrorHandling`의 네 가지 속성이 있습니다. 이러한 속성에 대 한 자세한 내용은 참조 하세요. [포이즌 메시지 처리](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)합니다.  
@@ -83,47 +83,47 @@ ms.locfileid: "59128767"
 #### <a name="other-properties"></a>기타 속성  
  이전 속성 외에도 다음과 같은 MSMQ별 속성이 바인딩에 노출됩니다.  
   
--   `UseSourceJournal`: 소스 저널링 설정을 나타내는 속성을 설정 됩니다. 소스 저널링은 전송 큐에서 성공적으로 전송한 메시지를 추적하는 MSMQ 기능입니다.  
+- `UseSourceJournal`: 소스 저널링 설정을 나타내는 속성을 설정 됩니다. 소스 저널링은 전송 큐에서 성공적으로 전송한 메시지를 추적하는 MSMQ 기능입니다.  
   
--   `UseMsmqTracing`: MSMQ 추적을 나타내는 속성을 설정 됩니다. MSMQ 추적은 MSMQ 큐 관리자를 호스트하는 컴퓨터에서 메시지를 보내거나 받을 때마다 보고서 큐에 보고서 메시지를 보냅니다.  
+- `UseMsmqTracing`: MSMQ 추적을 나타내는 속성을 설정 됩니다. MSMQ 추적은 MSMQ 큐 관리자를 호스트하는 컴퓨터에서 메시지를 보내거나 받을 때마다 보고서 큐에 보고서 메시지를 보냅니다.  
   
--   `QueueTransferProtocol`: 큐에 메시지 전송에 사용할 프로토콜의 열거형입니다. MSMQ는 네이티브 큐 간 전송 프로토콜과 SRMP(SOAP Reliable Messaging Protocol)라는 SOAP 기반 프로토콜을 구현합니다. SRMP는 큐 간 전송에 HTTP 전송을 사용할 때 사용됩니다. SRMP 보안은 큐 간 전송에 HTTPS를 사용할 때 사용됩니다.  
+- `QueueTransferProtocol`: 큐에 메시지 전송에 사용할 프로토콜의 열거형입니다. MSMQ는 네이티브 큐 간 전송 프로토콜과 SRMP(SOAP Reliable Messaging Protocol)라는 SOAP 기반 프로토콜을 구현합니다. SRMP는 큐 간 전송에 HTTP 전송을 사용할 때 사용됩니다. SRMP 보안은 큐 간 전송에 HTTPS를 사용할 때 사용됩니다.  
   
--   `UseActiveDirectory`: 큐 주소 확인에 대 한 Active Directory를 사용 해야 하는지 여부를 나타내는 부울 값입니다. 기본적으로 해제됩니다. 자세한 내용은 [서비스 끝점 및 큐 주소 지정](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)합니다.  
+- `UseActiveDirectory`: 큐 주소 확인에 대 한 Active Directory를 사용 해야 하는지 여부를 나타내는 부울 값입니다. 기본적으로 해제됩니다. 자세한 내용은 [서비스 끝점 및 큐 주소 지정](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)합니다.  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  합니다 `MsmqIntegrationBinding` C로 작성 된 기존 MSMQ 응용 프로그램과 통신 하는 WCF 끝점을 원할 때 사용 됩니다 C++, COM 또는 System.Messaging Api.  
   
  바인딩 속성은 `NetMsmqBinding`에서와 같습니다. 그러나 다음과 같은 차이가 적용됩니다.  
   
--   `MsmqIntegrationBinding`에 대한 작업 계약은 형식 매개 변수가 본문 형식인 <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601> 형식의 단일 매개 변수를 사용하도록 제한됩니다.  
+- `MsmqIntegrationBinding`에 대한 작업 계약은 형식 매개 변수가 본문 형식인 <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601> 형식의 단일 매개 변수를 사용하도록 제한됩니다.  
   
--   대부분의 MSMQ 네이티브 메시지 속성은 <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>에서 사용하도록 노출됩니다.  
+- 대부분의 MSMQ 네이티브 메시지 속성은 <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>에서 사용하도록 노출됩니다.  
   
--   메시지 본문 serialization 및 deserialization을 돕기 위해 XML 및 ActiveX와 같은 serializer가 제공됩니다.  
+- 메시지 본문 serialization 및 deserialization을 돕기 위해 XML 및 ActiveX와 같은 serializer가 제공됩니다.  
   
 ### <a name="sample-code"></a>샘플 코드  
  MSMQ를 사용하는 WCF 서비스를 작성하는 방법에 대한 단계별 지침은 다음 항목을 참조하세요.  
   
--   [방법: 메시지와 WCF 끝점 및 응용 프로그램 큐 메시지를 교환 합니다.](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+- [방법: 메시지와 WCF 끝점 및 응용 프로그램 큐 메시지를 교환 합니다.](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
   
--   [방법: 대기 중인 메시지와 WCF 끝점 교환](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+- [방법: 대기 중인 메시지와 WCF 끝점 교환](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
   
  WCF에서 MSMQ 사용을 보여 주는 전체 코드 샘플은 다음 항목을 참조하세요.  
   
--   [트랜잭션된 MSMQ 바인딩](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)  
+- [트랜잭션된 MSMQ 바인딩](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)  
   
--   [일시 대기 통신](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
+- [일시 대기 통신](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
   
--   [배달 못 한 편지 큐](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
+- [배달 못 한 편지 큐](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
   
--   [세션 및 큐](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
+- [세션 및 큐](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
   
--   [양방향 통신](../../../../docs/framework/wcf/samples/two-way-communication.md) 
+- [양방향 통신](../../../../docs/framework/wcf/samples/two-way-communication.md) 
   
--   [SRMP](../../../../docs/framework/wcf/samples/srmp.md)  
+- [SRMP](../../../../docs/framework/wcf/samples/srmp.md)  
   
--   [메시지 큐에 대한 메시지 보안](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
+- [메시지 큐에 대한 메시지 보안](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
   
 ## <a name="see-also"></a>참고자료
 

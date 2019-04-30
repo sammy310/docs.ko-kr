@@ -1,5 +1,5 @@
 ---
-title: '방법: 머리글을 클릭할 때 GridView 열 정렬'
+title: '방법: 머리글 클릭 시 GridView 열 정렬'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - GridView controls [WPF], ListView control
 ms.assetid: 4865d720-d147-40ed-83a7-af7587f8aad8
 ms.openlocfilehash: 3438ab91045a144a7fa1d531e9d7d55ad30e89ea
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57844290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052029"
 ---
-# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>방법: 머리글을 클릭할 때 GridView 열 정렬
+# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>방법: 머리글 클릭 시 GridView 열 정렬
 
 만드는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.ListView> 구현 하는 컨트롤을 <xref:System.Windows.Controls.GridView> 모드 및 사용자가 열 머리글을 클릭할 때 데이터 콘텐츠 정렬 보기.
 

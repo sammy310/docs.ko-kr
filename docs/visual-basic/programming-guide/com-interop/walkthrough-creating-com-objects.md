@@ -9,11 +9,11 @@ helpviewer_keywords:
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
 ms.openlocfilehash: 97e917d568b31860979e54598350d1ae7a6fdb25
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022313"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>연습: Visual Basic을 사용 하 여 COM 개체 만들기
 새 응용 프로그램 또는 구성 요소를 만들 때.NET Framework 어셈블리를 만드는 것이 좋습니다. 그러나 Visual Basic도 쉽게 COM에.NET Framework 구성 요소 노출 이 옵션을 사용 하면 COM 구성 요소를 필요로 하는 이전 응용 프로그램 도구 모음에 대 한 새 구성 요소를 제공할 수 있습니다. 이 연습에는 Visual Basic 노출을 사용 하는 방법을 보여 줍니다. [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] COM 개체를 사용 하 여 및 COM 클래스 템플릿을 사용 하지 않고 개체입니다.  

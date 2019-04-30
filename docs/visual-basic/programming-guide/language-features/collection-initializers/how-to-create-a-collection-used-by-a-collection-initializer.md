@@ -5,11 +5,11 @@ helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: c858db10-424d-47e0-92cd-e08087cc5ebc
 ms.openlocfilehash: 75c280b57df03bde173c740123cccda278536dc1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053628"
 ---
 # <a name="how-to-create-a-collection-used-by-a-collection-initializer-visual-basic"></a>방법: 컬렉션 이니셜라이저 (Visual Basic)에서 사용 하는 컬렉션 만들기
 Visual Basic 컴파일러에 대 한 검색 컬렉션 이니셜라이저를 사용 하 여 컬렉션을 만드는 경우는 `Add` 는 컬렉션 형식의 메서드 매개 변수는 `Add` 컬렉션 이니셜라이저의 값의 형식과 일치 하는 메서드. 이 `Add` 메서드 컬렉션을 컬렉션 이니셜라이저의 값으로 채우는 데 사용 됩니다.  

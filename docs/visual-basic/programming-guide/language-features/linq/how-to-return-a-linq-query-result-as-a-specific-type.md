@@ -10,11 +10,11 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
 ms.openlocfilehash: 5ccd71d93185f9478f6720419369df713d590c39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053758"
 ---
 # <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>방법: 특정 형식 (Visual Basic)으로 LINQ 쿼리 결과 반환 합니다.
 언어 통합 쿼리 (LINQ)를 사용 하면 쉽게 데이터베이스 정보에 액세스 하 고 쿼리를 실행 합니다. LINQ 쿼리는 기본적으로 익명 형식으로 개체의 목록을 반환합니다. 쿼리를 사용 하 여 특정 형식의 목록을 반환 하도록 지정할 수도 있습니다는 `Select` 절.  

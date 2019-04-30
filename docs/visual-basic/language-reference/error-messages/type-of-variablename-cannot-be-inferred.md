@@ -8,20 +8,20 @@ helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
 ms.openlocfilehash: e90e881546c12df2c8b19ff03a4d4c7304c4596c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58815877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052679"
 ---
 # <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>유형의 '\<variablename >' 루프 범위와 단계 변수가 같은 형식으로 확대 되지 않으므로 유추할 수 없습니다.
 사용자가 작성 한 `For...Next` 루프는 다음 조건으로 인해 컴파일러가 루프 제어 변수의 데이터 형식을 유추할 수 없습니다.  
   
--   `As` 절을 사용하여 루프 제어 변수의 데이터 형식을 지정하지 않았습니다.  
+- `As` 절을 사용하여 루프 제어 변수의 데이터 형식을 지정하지 않았습니다.  
   
--   루프 범위와 단계 변수에 두 개 이상의 데이터 형식이 포함되어 있습니다.  
+- 루프 범위와 단계 변수에 두 개 이상의 데이터 형식이 포함되어 있습니다.  
   
--   데이터 형식 간의 표준 변환이 없습니다.  
+- 데이터 형식 간의 표준 변환이 없습니다.  
   
  따라서 컴파일러는 루프 제어 변수의 데이터 형식을 유추할 수 없습니다.  
   
@@ -42,7 +42,7 @@ Dim n = 20
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   다른으로 확장 하는 형식 중 하나 이상 있도록 루프 범위와 단계 변수가 필요에 따라 유형을 변경 합니다. 앞의 예제에서의 형식 변경 `stepVar` 에 `Integer`입니다.  
+- 다른으로 확장 하는 형식 중 하나 이상 있도록 루프 범위와 단계 변수가 필요에 따라 유형을 변경 합니다. 앞의 예제에서의 형식 변경 `stepVar` 에 `Integer`입니다.  
   
     ```  
     Dim stepVar = 1  
@@ -54,7 +54,7 @@ Dim n = 20
     Dim stepVar As Integer = 1  
     ```  
   
--   루프 범위와 단계 변수에 적합 한 형식 변환 하려면 명시적 변환 함수를 사용 합니다. 앞의 예제에 적용 된 `Val` 함수를 `stepVar`입니다.  
+- 루프 범위와 단계 변수에 적합 한 형식 변환 하려면 명시적 변환 함수를 사용 합니다. 앞의 예제에 적용 된 `Val` 함수를 `stepVar`입니다.  
   
     ```  
     For i = 1 To 10 Step Val(stepVar)  

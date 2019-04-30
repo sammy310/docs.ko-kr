@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: eecf9d78-60e3-4fdc-8de0-e56c13a89414
 ms.openlocfilehash: 272976d3c581d3e8a5860ba5cf3f9695ca370d8c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034413"
 ---
 # <a name="creating-a-datatable"></a>DataTable 만들기
 <xref:System.Data.DataTable>은 메모리 내 관계형 데이터가 포함된 하나의 테이블을 나타내며, 독립적으로 만들어 사용하거나 다른 .NET Framework 개체에 의해 사용될 수도 있습니다. 이 경우에는 주로 <xref:System.Data.DataSet>의 멤버로 사용됩니다.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [WPF], GridSplitter
 ms.assetid: db0da67a-954f-42e6-bbf7-4e16b8cbb210
 ms.openlocfilehash: 800898a4b6fc655785c7db0d9463c34e5eeaa0b7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054876"
 ---
 # <a name="gridsplitter-how-to-topics"></a>GridSplitter 방법 항목
 이 섹션의에서 항목에서는 사용 하는 방법에 설명 합니다 <xref:System.Windows.Controls.GridSplitter> 제어 합니다.  

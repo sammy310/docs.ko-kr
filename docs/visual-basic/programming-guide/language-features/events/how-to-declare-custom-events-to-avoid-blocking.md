@@ -7,11 +7,11 @@ helpviewer_keywords:
 - custom events [Visual Basic]
 ms.assetid: 998b6a90-67c5-4d2c-8b11-366d3e355505
 ms.openlocfilehash: 6eea47ea2c8aee697eb34ca904dad22ca88e6ce4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051899"
 ---
 # <a name="how-to-declare-custom-events-to-avoid-blocking-visual-basic"></a>방법: (Visual Basic)를 차단 하지 않도록 사용자 지정 이벤트 선언
 이 하나의 이벤트 처리기는 후속 이벤트 처리기를 차단 하지 중요 한 몇 가지 경우가 있습니다. 사용자 지정 이벤트의 이벤트 처리기를 비동기적으로 호출 하도록 이벤트를 허용 합니다.  

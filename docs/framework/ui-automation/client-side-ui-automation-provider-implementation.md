@@ -7,11 +7,11 @@ helpviewer_keywords:
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
 ms.openlocfilehash: e68cf69830aef88f46ff2e288c5aad548db39bdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032385"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>클라이언트 쪽 UI 자동화 공급자 구현
 > [!NOTE]
@@ -39,13 +39,13 @@ ms.locfileid: "59224470"
   
  클라이언트의 자체 코드에 구현된 공급자가 <xref:System.Windows.Automation.ClientSettings.RegisterClientSideProviders%2A>을 사용하여 등록됩니다. 이 메서드는 <xref:System.Windows.Automation.ClientSideProviderDescription> 구조의 배열을 인수로 사용하고, 각각 다음과 같은 속성을 지정합니다.  
   
--   공급자 개체를 만드는 콜백 함수.  
+- 공급자 개체를 만드는 콜백 함수.  
   
--   공급자가 제공하는 컨트롤의 클래스 이름.  
+- 공급자가 제공하는 컨트롤의 클래스 이름.  
   
--   공급자가 제공하는 애플리케이션의 이미지 이름(일반적으로 실행 파일의 전체 이름).  
+- 공급자가 제공하는 애플리케이션의 이미지 이름(일반적으로 실행 파일의 전체 이름).  
   
--   대상 애플리케이션에서 발견된 창 클래스에 대해 클래스 이름이 일치되는 방법을 제어하는 플래그.  
+- 대상 애플리케이션에서 발견된 창 클래스에 대해 클래스 이름이 일치되는 방법을 제어하는 플래그.  
   
  마지막 두 매개 변수는 선택 사항입니다. 클라이언트가 여러 애플리케이션에 다양한 공급자를 사용하려는 경우 대상 애플리케이션의 이미지 이름을 지정할 수 있습니다. 예를 들어, 클라이언트는 Multiple View 패턴을 지원하는 알려진 애플리케이션에서 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 목록 뷰 컨트롤에 특정 공급자를 사용하고, 이 패턴을 지원하지 않는 다른 알려진 애플리케이션에서 비슷한 컨트롤에 다른 공급자를 사용할 수 있습니다.  
   

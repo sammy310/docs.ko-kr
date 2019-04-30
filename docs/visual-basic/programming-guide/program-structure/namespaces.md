@@ -17,11 +17,11 @@ helpviewer_keywords:
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
 ms.openlocfilehash: 792741dc4df7b65ddef124615032c06a7ff1bcb8
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050467"
 ---
 # <a name="namespaces-in-visual-basic"></a>Visual Basic의 네임스페이스
 네임스페이스는 어셈블리에 정의된 개체를 구성합니다. 어셈블리는 여러 네임스페이스를 포함할 수 있으며, 이러한 각 네임스페이스는 다른 네임스페이스를 포함할 수 있습니다. 클래스 라이브러리와 같은 대규모 개체 그룹을 사용할 때 네임스페이스는 모호성을 방지하고 참조를 단순화합니다.  

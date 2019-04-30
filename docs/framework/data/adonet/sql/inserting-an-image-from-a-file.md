@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
 ms.openlocfilehash: f2bc67b4130633fba3a6e42e2b6925fc09f835c3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032424"
 ---
 # <a name="inserting-an-image-from-a-file"></a>파일에서 이미지 삽입
 데이터 소스의 필드 형식에 따라 BLOB(Binary Large Object)를 이진 또는 문자 데이터로 데이터베이스에 쓸 수 있습니다. BLOB는 주로 문서와 그림이 포함된 `text`, `ntext` 및 `image` 데이터 형식을 나타내는 일반적인 용어입니다.  

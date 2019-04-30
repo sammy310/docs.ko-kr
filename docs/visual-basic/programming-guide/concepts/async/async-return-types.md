@@ -3,11 +3,11 @@ title: 비동기 반환 형식 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
 ms.openlocfilehash: 227a187f7046d128a7170b272f90f77cfaac61c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022105"
 ---
 # <a name="async-return-types-visual-basic"></a>비동기 반환 형식 (Visual Basic)
 비동기 메서드에는 세 가지 가능한 반환 형식, 즉 <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> 및 void가 있습니다. Visual Basic에서 void 반환 형식은 [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) 프로시저로 작성합니다. 비동기 메서드에 대 한 자세한 내용은 참조 하세요. [Async 및 Await (Visual Basic)를 사용한 비동기 프로그래밍](../../../../visual-basic/programming-guide/concepts/async/index.md)합니다.  

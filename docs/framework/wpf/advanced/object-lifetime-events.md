@@ -25,11 +25,11 @@ helpviewer_keywords:
 - lifetime events of objects [WPF]
 ms.assetid: face6fc7-465b-4502-bfe5-e88d2e729a78
 ms.openlocfilehash: 8ecc3f716061dfd08ac95652d1a9d8e06e26d949
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053225"
 ---
 # <a name="object-lifetime-events"></a>개체 수명 이벤트
 이 항목에서는 생성, 사용 및 소멸 등의 개체 수명 단계를 나타내는 특정 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이벤트에 대해 설명합니다.  
@@ -66,11 +66,11 @@ ms.locfileid: "59175794"
 ## <a name="lifetime-events-application-model-elements"></a>수명 이벤트 애플리케이션 모델 요소  
  요소는 다음 응용 프로그램 모델 요소에 대 한 공통 수명 이벤트를 토대로: <xref:System.Windows.Application>, <xref:System.Windows.Window>, <xref:System.Windows.Controls.Page>합니다 <xref:System.Windows.Navigation.NavigationWindow>, 및 <xref:System.Windows.Controls.Frame>합니다. 이러한 요소는 특정 목적과 관련된 추가 이벤트를 사용하여 공통 개체 수명 이벤트를 확장합니다. 다음 항목에서 이에 대해 자세히 설명합니다.  
   
--   <xref:System.Windows.Application>: [응용 프로그램 관리 개요](../app-development/application-management-overview.md)합니다.  
+- <xref:System.Windows.Application>: [응용 프로그램 관리 개요](../app-development/application-management-overview.md)합니다.  
   
--   <xref:System.Windows.Window>: [WPF Windows 개요](../app-development/wpf-windows-overview.md)합니다.  
+- <xref:System.Windows.Window>: [WPF Windows 개요](../app-development/wpf-windows-overview.md)합니다.  
   
--   <xref:System.Windows.Controls.Page>하십시오 <xref:System.Windows.Navigation.NavigationWindow>, 및 <xref:System.Windows.Controls.Frame>: [탐색 개요](../app-development/navigation-overview.md)합니다.  
+- <xref:System.Windows.Controls.Page>하십시오 <xref:System.Windows.Navigation.NavigationWindow>, 및 <xref:System.Windows.Controls.Frame>: [탐색 개요](../app-development/navigation-overview.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
 

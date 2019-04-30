@@ -8,11 +8,11 @@ helpviewer_keywords:
 - standards [XAML Services], RFC 3066
 ms.assetid: 7aac0078-a1c5-41f8-b8b0-975510d9dca0
 ms.openlocfilehash: 6495e980beea8731c47a774589919f160b4551ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053602"
 ---
 # <a name="xmllang-handling-in-xaml"></a>XAML의 xml:lang 처리
 `xml:lang` 특성은 요소에 대해 언어 및 문화권 정보를 XML 형식으로 선언하는 [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]에서 정의된 특성입니다. XAML을 사용해도 특성의 의미가 동일하게 유지되지만, 일부 추가적인 고려 사항이 적용됩니다.  

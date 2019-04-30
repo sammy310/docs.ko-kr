@@ -3,11 +3,11 @@ title: '방법: (LINQ to XML)는 단일 특성 검색 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 11b938d7-c011-4048-900e-8b9183c41c94
 ms.openlocfilehash: f56bdf86e4b63bc952c1d139aac9ee619b5a5f6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051288"
 ---
 # <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>방법: (LINQ to XML)는 단일 특성 검색 (Visual Basic)
 이 항목에서는 특성 이름이 제공되는 경우 요소의 단일 특성을 검색하는 방법에 대해 설명합니다. 이 방법은 특정 특성을 가진 요소를 찾으려는 경우 쿼리 식을 작성하는 데 유용합니다.  

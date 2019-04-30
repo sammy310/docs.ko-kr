@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
 ms.openlocfilehash: 10e60ebd71c4615354c25d3a61a04e9d12d7c800
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033828"
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET 및 LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 일부인는 [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 기술 제품군입니다. [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 공급자 모델에 의해 제공된 서비스에 기반을 두기 때문에 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 코드를 기존 [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 응용 프로그램과 조합하고 현재 [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 솔루션을 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]로 마이그레이션할 수 있습니다. 다음 그림에서는 이 관계를 간략하게 보여 줍니다.  

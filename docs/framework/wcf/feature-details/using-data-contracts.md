@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
 ms.openlocfilehash: 28033e3e90c5010eee63f35791b0c3c77e64d1ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050664"
 ---
 # <a name="using-data-contracts"></a>데이터 계약 사용
 *데이터 계약* 은 서비스와 클라이언트 사이에서 교환할 데이터를 추상적으로 설명한 공식 계약입니다. 즉, 클라이언트와 서비스가 같은 형식을 공유하지 않고 같은 데이터 계약만 공유해도 통신이 가능합니다. 데이터 계약에서는 각 매개 변수 또는 반환 형식에 대해 교환을 위해 serialize(XML로 변환)해야 할 데이터를 세밀하게 정의합니다.  
@@ -38,21 +38,21 @@ ms.locfileid: "59129937"
 ### <a name="notes"></a>노트  
  다음 참고 사항에서는 데이터 계약을 만들 때 고려해야 할 항목을 소개합니다.  
   
--   <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> 특성은 표시되지 않은 형식으로 사용한 경우에만 적용됩니다. 여기에는 <xref:System.Runtime.Serialization.DataContractAttribute>, <xref:System.SerializableAttribute>, <xref:System.Runtime.Serialization.CollectionDataContractAttribute>또는 <xref:System.Runtime.Serialization.EnumMemberAttribute> 특성 중 하나로 표시되지 않은 형식이나 다른 방법(예: <xref:System.Xml.Serialization.IXmlSerializable>)으로 serialize할 수 있는 것으로 표시된 형식이 포함됩니다.  
+- <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> 특성은 표시되지 않은 형식으로 사용한 경우에만 적용됩니다. 여기에는 <xref:System.Runtime.Serialization.DataContractAttribute>, <xref:System.SerializableAttribute>, <xref:System.Runtime.Serialization.CollectionDataContractAttribute>또는 <xref:System.Runtime.Serialization.EnumMemberAttribute> 특성 중 하나로 표시되지 않은 형식이나 다른 방법(예: <xref:System.Xml.Serialization.IXmlSerializable>)으로 serialize할 수 있는 것으로 표시된 형식이 포함됩니다.  
   
--   필드 및 속성에 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 적용할 수 있습니다.  
+- 필드 및 속성에 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 적용할 수 있습니다.  
   
--   멤버 액세스 가능성 수준(internal, private, protected 또는 public)은 데이터 계약에 어떤 방식으로도 영향을 주지 않습니다.  
+- 멤버 액세스 가능성 수준(internal, private, protected 또는 public)은 데이터 계약에 어떤 방식으로도 영향을 주지 않습니다.  
   
--   <xref:System.Runtime.Serialization.DataMemberAttribute> 특성은 정적 멤버에 적용하면 무시됩니다.  
+- <xref:System.Runtime.Serialization.DataMemberAttribute> 특성은 정적 멤버에 적용하면 무시됩니다.  
   
--   serialization을 수행하는 동안 속성 데이터 멤버에 대해 property-get 코드를 호출하여 serialize할 속성의 값을 가져옵니다.  
+- serialization을 수행하는 동안 속성 데이터 멤버에 대해 property-get 코드를 호출하여 serialize할 속성의 값을 가져옵니다.  
   
--   deserialize를 수행하는 동안 초기화되지 않은 개체가 형식에서 생성자를 호출하지 않고 먼저 만들어집니다. 그러면 모든 데이터 멤버가 deserialize됩니다.  
+- deserialize를 수행하는 동안 초기화되지 않은 개체가 형식에서 생성자를 호출하지 않고 먼저 만들어집니다. 그러면 모든 데이터 멤버가 deserialize됩니다.  
   
--   deserialization을 수행하는 동안 속성 데이터 멤버에 대해 property-set 코드를 호출하여 deserialize할 값으로 속성을 설정합니다.  
+- deserialization을 수행하는 동안 속성 데이터 멤버에 대해 property-set 코드를 호출하여 deserialize할 값으로 속성을 설정합니다.  
   
--   유효한 데이터 계약에서는 모든 데이터 멤버를 serialize할 수 있어야 합니다. 모든 serialize 가능 형식의 목록은 [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)을 참조하십시오.  
+- 유효한 데이터 계약에서는 모든 데이터 멤버를 serialize할 수 있어야 합니다. 모든 serialize 가능 형식의 목록은 [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)을 참조하십시오.  
   
      제네릭 형식은 비제네릭 형식과 완전히 같은 방식으로 처리됩니다. 제네릭 매개 변수에 대한 특수 요구 사항은 없습니다. 다음 형식을 예로 들 수 있습니다.  
   

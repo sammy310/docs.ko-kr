@@ -3,11 +3,11 @@ title: 서비스 디버그 동작
 ms.date: 03/30/2017
 ms.assetid: 9d8fd3fb-dc39-427a-8235-336a7e7162ba
 ms.openlocfilehash: bfed164093e10c070b24832cf5a3be362ad3bc56
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007918"
 ---
 # <a name="service-debug-behavior"></a>서비스 디버그 동작
 이 샘플에서는 서비스 디버그 동작 설정을 구성하는 방법을 보여 줍니다. 샘플을 기반으로 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)를 구현 하는 `ICalculator` 서비스 계약입니다. 이 샘플에서는 구성 파일에 서비스 디버그 동작을 명시적으로 정의합니다. 또한 코드에서 명령적으로 정의할 수 있습니다.  
@@ -33,12 +33,12 @@ ms.locfileid: "59772052"
   
  [\<serviceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) 서비스 디버그 동작 속성을 변경할 수 있는 구성 요소입니다. 사용자는 이 동작을 수정하여 다음을 수행할 수 있습니다.  
   
--   <xref:System.ServiceModel.FaultContractAttribute>를 사용하여 예외가 선언되지 않은 경우에도 서비스에서 응용 프로그램 코드에 의해 throw된 예외를 반환할 수 있습니다. 이 작업은 `includeExceptionDetailInFaults`를 `true`로 설정하여 수행합니다. 이 설정은 서버가 예기치 않은 예외를 throw하는 경우를 디버깅할 때 유용합니다.  
+- <xref:System.ServiceModel.FaultContractAttribute>를 사용하여 예외가 선언되지 않은 경우에도 서비스에서 응용 프로그램 코드에 의해 throw된 예외를 반환할 수 있습니다. 이 작업은 `includeExceptionDetailInFaults`를 `true`로 설정하여 수행합니다. 이 설정은 서버가 예기치 않은 예외를 throw하는 경우를 디버깅할 때 유용합니다.  
   
     > [!IMPORTANT]
     >  프로덕션 환경에서는 이 설정을 켜면 안전하지 않습니다. 예기치 않은 서버 예외에 클라이언트에 사용할 수 없는 정보가 포함될 수 있으므로 `includeExceptionDetailsInFaults`를 `true`로 설정하면 정보 누수가 발생할 수 있습니다.  
   
--   합니다 [ \<serviceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) 를 사용자 도움말 페이지를 사용 하지 않도록 설정 하거나 설정할 수 있습니다. 각 서비스는 서비스의 WSDL을 가져오기 위한 엔드포인트를 비롯하여 서비스에 대한 정보를 포함하는 도움말 페이지를 선택적으로 노출할 수 있습니다. 이는 `httpHelpPageEnabled`를 `true`로 설정하여 활성화할 수 있습니다. 이렇게 하면 서비스의 기본 주소에 대한 GET 요청으로 도움말 페이지가 반환될 수 있습니다. 이 주소는 다른 특성 `httpHelpPageUrl`을 설정하여 변경할 수 있습니다. HTTP 대신 HTTPS를 사용하여 보안을 유지할 수 있습니다. 이 작업은 `httpsHelpPageEnabled` 및 `httpsHelpPageUrl`을 설정하여 수행할 수 있습니다.  
+- 합니다 [ \<serviceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) 를 사용자 도움말 페이지를 사용 하지 않도록 설정 하거나 설정할 수 있습니다. 각 서비스는 서비스의 WSDL을 가져오기 위한 엔드포인트를 비롯하여 서비스에 대한 정보를 포함하는 도움말 페이지를 선택적으로 노출할 수 있습니다. 이는 `httpHelpPageEnabled`를 `true`로 설정하여 활성화할 수 있습니다. 이렇게 하면 서비스의 기본 주소에 대한 GET 요청으로 도움말 페이지가 반환될 수 있습니다. 이 주소는 다른 특성 `httpHelpPageUrl`을 설정하여 변경할 수 있습니다. HTTP 대신 HTTPS를 사용하여 보안을 유지할 수 있습니다. 이 작업은 `httpsHelpPageEnabled` 및 `httpsHelpPageUrl`을 설정하여 수행할 수 있습니다.  
   
  샘플을 실행하면 작업 요청 및 응답이 클라이언트 콘솔 창에 표시됩니다. 처음 세 가지 연산(더하기, 빼기 및 곱하기)은 성공해야 합니다. 마지막 연산("나누기 ")은 0으로 나누기 예외가 발생하여 실패합니다.  
   

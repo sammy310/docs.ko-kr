@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d8f830ca7e273b65dc9ec77566a02df6c32cd464
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62045541"
 ---
 # <a name="corpekind-enumeration"></a>CorPEKind 열거형
 에 대 한 호출에서 반환 된 pe (이식 가능) 파일을 설명 하는 값을 포함 [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)합니다.  

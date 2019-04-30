@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
 ms.openlocfilehash: 7db435e45ddc55346af5ea5fdbcce611173c774b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053537"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath XAML 구문
 합니다 <xref:System.Windows.PropertyPath> 개체가 지원 복잡 한 인라인 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 구문을 사용 하는 다양 한 속성을 설정 하기 위한는 <xref:System.Windows.PropertyPath> 형식을 값으로. 이 항목 문서는 <xref:System.Windows.PropertyPath> 구문 바인딩 및 애니메이션 구문에 적용 합니다.  
@@ -69,11 +69,11 @@ ms.locfileid: "59122917"
   
  괄호를 표시 하는이 속성을 <xref:System.Windows.PropertyPath> 부분 정규화를 사용 하 여 생성 해야 합니다. XML 네임스페이스를 사용하여 적절한 매핑이 있는 형식을 찾을 수 있습니다. `ownerType` 있는 형식을 검색을 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 처리기는를 통해 액세스할 수는 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 각 어셈블리에서 선언 합니다. 대부분 애플리케이션에서는 기본 XML 네임스페이스가 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 네임스페이스에 매핑되므로 접두사는 대개 사용자 지정 형식 또는 해당 네임스페이스 외부의 형식에만 필요합니다.  `propertyName`은 `ownerType`에 있는 속성의 이름으로 확인되어야 합니다. 일반적으로 이 구문은 다음 경우 중 하나에 사용됩니다.  
   
--   경로는 지정된 대상 형식이 없는 스타일 또는 템플릿인 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에 지정됩니다. 스타일이 아니고 템플릿이 아닌 경우에 속성은 형식이 아닌 인스턴스에 있으므로 일반적으로 이를 제외한 다른 경우에는 정규화된 사용이 적절하지 않습니다.  
+- 경로는 지정된 대상 형식이 없는 스타일 또는 템플릿인 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에 지정됩니다. 스타일이 아니고 템플릿이 아닌 경우에 속성은 형식이 아닌 인스턴스에 있으므로 일반적으로 이를 제외한 다른 경우에는 정규화된 사용이 적절하지 않습니다.  
   
--   속성은 연결된 속성입니다.  
+- 속성은 연결된 속성입니다.  
   
--   정적 속성이 바인딩 중입니다.  
+- 정적 속성이 바인딩 중입니다.  
   
  스토리 보드 대상으로 사용에 대 한 속성으로 지정 `propertyName` 이어야 합니다는 <xref:System.Windows.DependencyProperty>합니다.  
   
@@ -118,19 +118,19 @@ or
 ### <a name="escapes-for-property-path-strings"></a>속성 경로 문자열에 대한 이스케이프  
  특정 비즈니스 개체의 경우 제대로 구문 분석되려면 속성 경로 문자열에 이스케이프 시퀀스가 있어야 하는 경우가 있습니다. 이스케이프해야 하는 경우는 드뭅니다. 대부분의 이러한 문자에는 일반적으로 비즈니스 개체를 정의하는 데 사용되는 언어에 비슷한 명명 상호 작용 문제가 있기 때문입니다.  
   
--   인덱서([ ]) 안의 캐럿 문자(^)는 다음 문자를 이스케이프합니다.  
+- 인덱서([ ]) 안의 캐럿 문자(^)는 다음 문자를 이스케이프합니다.  
   
--   XML 언어 정의와 관련된 특정 문자를 이스케이프(XML 엔터티 사용)해야 합니다. "&" 문자를 이스케이프하려면 `&`를 사용합니다. ">" 끝 태그를 이스케이프하려면 `>`를 사용합니다.  
+- XML 언어 정의와 관련된 특정 문자를 이스케이프(XML 엔터티 사용)해야 합니다. "&" 문자를 이스케이프하려면 `&`를 사용합니다. ">" 끝 태그를 이스케이프하려면 `>`를 사용합니다.  
   
--   태그 확장을 처리하기 위해 WPF XAML 구문 분석기 동작과 관련된 특정 문자를 이스케이프해야 합니다(백슬래시 `\` 사용).  
+- 태그 확장을 처리하기 위해 WPF XAML 구문 분석기 동작과 관련된 특정 문자를 이스케이프해야 합니다(백슬래시 `\` 사용).  
   
-    -   백슬래시(`\`)는 그 자체로 이스케이프 문자입니다.  
+    - 백슬래시(`\`)는 그 자체로 이스케이프 문자입니다.  
   
-    -   등호(`=`)는 속성 값에서 속성 이름을 구분합니다.  
+    - 등호(`=`)는 속성 값에서 속성 이름을 구분합니다.  
   
-    -   쉼표(`,`)는 속성을 구분합니다.  
+    - 쉼표(`,`)는 속성을 구분합니다.  
   
-    -   오른쪽 중괄호(`}`)는 태그 확장의 끝입니다.  
+    - 오른쪽 중괄호(`}`)는 태그 확장의 끝입니다.  
   
 > [!NOTE]
 >  기술적으로 이러한 이스케이프는 스토리보드 속성 경로에도 적용되지만 대개 기존 WPF 개체에 대한 개체 모델을 통과하므로 이스케이프가 필요하지 않습니다.  

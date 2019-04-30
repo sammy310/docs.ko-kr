@@ -3,11 +3,11 @@ title: Federation 샘플
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
 ms.openlocfilehash: bc2c28300d9bfc3c30388f8d13e05a23a9f37287
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051914"
 ---
 # <a name="federation-sample"></a>Federation 샘플
 이 샘플에서는 연결된 보안을 보여 줍니다.  
@@ -17,13 +17,13 @@ ms.locfileid: "59769920"
   
  이 시나리오는 네 부분으로 구성되어 있습니다.  
   
--   BookStore 서비스  
+- BookStore 서비스  
   
--   BookStore STS  
+- BookStore STS  
   
--   HomeRealm STS  
+- HomeRealm STS  
   
--   BookStore 클라이언트  
+- BookStore 클라이언트  
   
  BookStore 서비스는 `BrowseBooks`와 `BuyBook`의 두 작업을 지원합니다. `BrowseBooks` 작업에 대해서는 익명 액세스를 허용하지만, `BuyBooks` 작업에 액세스하려면 인증 액세스가 필요합니다. 인증은 BookStore STS에서 발급한 토큰의 형태로 이루어집니다. BookStore 서비스의 구성 파일은 `wsFederationHttpBinding`을 사용하여 클라이언트를 BookStore STS로 연결합니다.  
   

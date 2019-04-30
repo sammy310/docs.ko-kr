@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7e6eb2a30dd6722309fd80c1611ad9200ab14ae5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62045451"
 ---
 # <a name="cornativelinkflags-enumeration"></a>CorNativeLinkFlags 열거형
 네이티브 코드를 연결할 때 링커에서 사용하는 플래그 값을 제공합니다.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
 ms.openlocfilehash: 75c7a0e50301ce80d51b9b2a10ed650a1600ec79
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047739"
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>방법: X.509 인증서를 사용하여 서비스 보안
 X.509 인증서를 사용 하 여 서비스를 보안은 대부분의 바인딩은 Windows Communication Foundation (WCF)에서 사용 하는 기본 기술입니다. 이 항목에서는 X.509 인증서와 함께 자체 호스팅된 서비스를 구성하는 단계에 대해 설명합니다.  
@@ -70,17 +70,17 @@ X.509 인증서를 사용 하 여 서비스를 보안은 대부분의 바인딩�
 ## <a name="compiling-the-code"></a>코드 컴파일  
  코드를 컴파일하려면 다음 네임스페이스가 필요합니다.  
   
--   <xref:System>  
+- <xref:System>  
   
--   <xref:System.ServiceModel>  
+- <xref:System.ServiceModel>  
   
--   <xref:System.ServiceModel.Channels>  
+- <xref:System.ServiceModel.Channels>  
   
--   <xref:System.Web.Services.Description>  
+- <xref:System.Web.Services.Description>  
   
--   <xref:System.Security.Cryptography.X509Certificates>  
+- <xref:System.Security.Cryptography.X509Certificates>  
   
--   <xref:System.Runtime.Serialization>  
+- <xref:System.Runtime.Serialization>  
   
 ## <a name="see-also"></a>참고자료
 

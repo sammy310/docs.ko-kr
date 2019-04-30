@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
 ms.openlocfilehash: 834160358d7b3e8e7f4c7c4f4fd06d403086e7e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032346"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>연습: WPF에서 Win32 컨트롤 호스팅
 Windows Presentation Foundation (WPF) 응용 프로그램을 만들기 위한 풍부한 환경을 제공 합니다. 그러나 Win32 코드에 상당한 투자를 해야 하는 경우는 것을 더욱 효율적으로 적어도 일부 다시 사용 하는의 WPF 응용 프로그램에서 코드 보다는 완전히 다시 작성 합니다. WPF는 Win32 창의 WPF 페이지를 호스트 하기 위한 간단한 메커니즘을 제공 합니다.  
@@ -47,9 +47,9 @@ Windows Presentation Foundation (WPF) 응용 프로그램을 만들기 위한 �
   
 6. 자식 컨트롤의 알림과 같이 호스트 창으로 전송되는 선택한 메시지를 처리합니다. 그런 경우 두 가지 방법이 있습니다.  
   
-    -   호스팅 클래스에서 메시지를 처리 하려는 경우 재정의 <xref:System.Windows.Interop.HwndHost.WndProc%2A> 메서드는 <xref:System.Windows.Interop.HwndHost> 클래스입니다.  
+    - 호스팅 클래스에서 메시지를 처리 하려는 경우 재정의 <xref:System.Windows.Interop.HwndHost.WndProc%2A> 메서드는 <xref:System.Windows.Interop.HwndHost> 클래스입니다.  
   
-    -   WPF의 메시지 처리를 처리 하려는 경우는 <xref:System.Windows.Interop.HwndHost> 클래스 <xref:System.Windows.Interop.HwndHost.MessageHook> 코드 숨김에서 이벤트입니다. 이 이벤트는 호스트된 창에서 받은 모든 메시지에 대해 발생합니다. 이 옵션을 선택 하는 경우는 여전히 재정의 해야 <xref:System.Windows.Interop.HwndHost.WndProc%2A>, 하지만 최소 구현만 필요 합니다.  
+    - WPF의 메시지 처리를 처리 하려는 경우는 <xref:System.Windows.Interop.HwndHost> 클래스 <xref:System.Windows.Interop.HwndHost.MessageHook> 코드 숨김에서 이벤트입니다. 이 이벤트는 호스트된 창에서 받은 모든 메시지에 대해 발생합니다. 이 옵션을 선택 하는 경우는 여전히 재정의 해야 <xref:System.Windows.Interop.HwndHost.WndProc%2A>, 하지만 최소 구현만 필요 합니다.  
   
 7. 재정의 <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> 하 고 <xref:System.Windows.Interop.HwndHost.WndProc%2A> 메서드의 <xref:System.Windows.Interop.HwndHost>합니다. 충족 하기 위해 이러한 메서드를 재정의 해야 합니다는 <xref:System.Windows.Interop.HwndHost> 계약 있지만 최소 구현을 제공 해야 할 수 있습니다.  
   
@@ -129,13 +129,13 @@ Windows Presentation Foundation (WPF) 응용 프로그램을 만들기 위한 �
 ## <a name="implement-communication-between-the-control-and-the-page"></a>컨트롤과 페이지 간의 통신 구현  
  Windows 메시지를 전송 하 여 해당 컨트롤을 조작 합니다. 컨트롤은 사용자가 호스트 창에 알림을 보내 상호 작용할 때 알려 줍니다. 합니다 [WPF에서 Win32 ListBox 컨트롤 호스팅](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control) 샘플에는 몇 가지 예가이 과정을 제공 하는 UI를 포함 합니다.  
   
--   목록에 항목을 추가합니다.  
+- 목록에 항목을 추가합니다.  
   
--   선택한 항목을 목록에서 삭제합니다.  
+- 선택한 항목을 목록에서 삭제합니다.  
   
--   현재 선택한 항목의 텍스트를 표시합니다.  
+- 현재 선택한 항목의 텍스트를 표시합니다.  
   
--   목록의 항목 수를 표시합니다.  
+- 목록의 항목 수를 표시합니다.  
   
  사용자 수 또한 항목을 선택 목록 상자에서를 클릭 하 여 기존 Win32 응용 프로그램에 대 한 것 처럼 합니다. 표시된 데이터는 사용자가 항목을 선택 또는 추가하여 목록 상자의 상태를 변경할 때마다 업데이트됩니다.  
   

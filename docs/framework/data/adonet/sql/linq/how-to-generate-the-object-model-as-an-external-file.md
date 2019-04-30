@@ -3,11 +3,11 @@ title: '방법: 외부 파일로 개체 모델 생성'
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
 ms.openlocfilehash: 2e439cd6628daa5b574be2049393dc2964896679
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033750"
 ---
 # <a name="how-to-generate-the-object-model-as-an-external-file"></a>방법: 외부 파일로 개체 모델 생성
 특성 기반 매핑을 사용하는 대신 SQLMetal 명령줄 도구를 사용하여 개체 모델을 외부 XML 파일로 생성할 수 있습니다. 자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요. 외부 XML 매핑 파일을 사용하면 코드를 간단하게 표시할 수 있습니다. 또한 응용 프로그램의 이진 파일을 다시 컴파일할 필요 없이 외부 파일을 수정하여 동작을 변경할 수 있습니다. 자세한 내용은 [외부 매핑](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)합니다.  

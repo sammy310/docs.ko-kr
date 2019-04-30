@@ -8,11 +8,11 @@ helpviewer_keywords:
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
 ms.openlocfilehash: dadfab948aff73714a2cf253100f89de3b4a2d57
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025444"
 ---
 # <a name="white-space-processing-in-xaml"></a>XAML의 공백 처리
 XAML에 대 한 언어 규칙에 따르면 해당 유효 공백에서 처리 되어야 합니다는 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 프로세서 구현 합니다. 이 항목에서는 이들 XAML 언어 규칙에 대해 설명합니다. 정의한 추가 공백 처리도 문서화 된 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] XAML 프로세서 및 serialization에 대 한 XAML 작성기 구현의 합니다.  
@@ -41,13 +41,13 @@ XAML에 대 한 언어 규칙에 따르면 해당 유효 공백에서 처리 되
 ## <a name="white-space-in-inner-text-and-string-primitives"></a>내부 텍스트 및 문자열 기본 형식의 공백  
  이전 정규화 규칙은 XAML 요소 내에 있는 내부 텍스트에 적용됩니다. 정규화 후에 다음과 같이 XAML 프로세서에서는 모든 내부 텍스트를 적절한 형식으로 변환합니다.  
   
--   속성 형식이 컬렉션이 아니지만 직접 <xref:System.Object> 형식이 아니면 XAML 프로세서에서는 형식 변환기를 사용하여 해당 형식으로 변환하려고 합니다. 여기서 변환에 실패하면 컴파일 시간 오류가 발생합니다.  
+- 속성 형식이 컬렉션이 아니지만 직접 <xref:System.Object> 형식이 아니면 XAML 프로세서에서는 형식 변환기를 사용하여 해당 형식으로 변환하려고 합니다. 여기서 변환에 실패하면 컴파일 시간 오류가 발생합니다.  
   
--   속성 형식이 컬렉션이고 내부 텍스트가 연속(중간 요소 태그 없음)이면 내부 텍스트가 단일 <xref:System.String>으로 구문 분석됩니다. 컬렉션 형식이 <xref:System.String>을 허용할 수 없으면 이로 인해 컴파일 시간 오류가 발생합니다.  
+- 속성 형식이 컬렉션이고 내부 텍스트가 연속(중간 요소 태그 없음)이면 내부 텍스트가 단일 <xref:System.String>으로 구문 분석됩니다. 컬렉션 형식이 <xref:System.String>을 허용할 수 없으면 이로 인해 컴파일 시간 오류가 발생합니다.  
   
--   속성 형식이 <xref:System.Object>이면 내부 텍스트가 단일 <xref:System.String>으로 구문 분석됩니다. <xref:System.Object> 형식이 단일 개체(<xref:System.String> 등)를 의미하기 때문에, 중간 요소 태그가 있으면 이로 인해 컴파일 시간 오류가 발생합니다.  
+- 속성 형식이 <xref:System.Object>이면 내부 텍스트가 단일 <xref:System.String>으로 구문 분석됩니다. <xref:System.Object> 형식이 단일 개체(<xref:System.String> 등)를 의미하기 때문에, 중간 요소 태그가 있으면 이로 인해 컴파일 시간 오류가 발생합니다.  
   
--   속성 형식이 컬렉션이고 내부 텍스트가 연속이 아니면 첫 번째 하위 문자열이 <xref:System.String> 으로 변환되고 컬렉션 항목으로 추가되고, 중간 요소가 컬렉션 항목으로 추가되고, 마지막으로 후행 하위 문자열(있는 경우)이 컬렉션에 세 번째 <xref:System.String> 항목으로 추가됩니다.  
+- 속성 형식이 컬렉션이고 내부 텍스트가 연속이 아니면 첫 번째 하위 문자열이 <xref:System.String> 으로 변환되고 컬렉션 항목으로 추가되고, 중간 요소가 컬렉션 항목으로 추가되고, 마지막으로 후행 하위 문자열(있는 경우)이 컬렉션에 세 번째 <xref:System.String> 항목으로 추가됩니다.  
   
 <a name="preserving_whitespace"></a>   
 ## <a name="preserving-white-space"></a>공백을 유지  

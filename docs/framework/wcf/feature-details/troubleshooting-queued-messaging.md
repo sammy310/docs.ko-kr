@@ -6,8 +6,8 @@ ms.openlocfilehash: c85b0701c870fe2b4a3c11dc384e890e1ed001dd
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050768"
 ---
 # <a name="troubleshooting-queued-messaging"></a>대기 중인 메시지 문제 해결
 이 섹션에서는 일반적인 질문 및 문제 해결 Windows Communication Foundation (WCF)에서 큐를 사용 하는 것에 대 한 도움말을 포함 합니다.  
@@ -29,11 +29,11 @@ ms.locfileid: "59977290"
   
  **A:** 다음 기능은 없는 MSMQ 3.0 MSMQ 4.0 에서만 사용할 수 있습니다.  
   
--   사용자 지정 배달 못한 편지 큐는 MSMQ 4.0에서만 지원됩니다.  
+- 사용자 지정 배달 못한 편지 큐는 MSMQ 4.0에서만 지원됩니다.  
   
--   MSMQ 3.0과 4.0은 포이즌 메시지를 처리하는 방식이 다릅니다.  
+- MSMQ 3.0과 4.0은 포이즌 메시지를 처리하는 방식이 다릅니다.  
   
--   MSMQ 4.0에서만 트랜잭션된 원격 읽기를 지원합니다.  
+- MSMQ 4.0에서만 트랜잭션된 원격 읽기를 지원합니다.  
   
  자세한 내용은 [Windows Vista, Windows Server 2003 및 Windows XP의 큐 기능 차이점](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)합니다.  
   
@@ -60,19 +60,19 @@ ms.locfileid: "59977290"
   
  **A:** 답변을 확인 하려면 다음 검사 목록을 통해 작동 합니다.  
   
--   트랜잭션 큐 요구 사항이 지정된 보증과 호환되는지 확인합니다. 다음 원칙에 주의하십시오.  
+- 트랜잭션 큐 요구 사항이 지정된 보증과 호환되는지 확인합니다. 다음 원칙에 주의하십시오.  
   
-    -   보증 "정확히 한 번"를 사용 하 여 지 속성 메시지 (데이터 그램 및 세션)를 보낼 수 있습니다 (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `true`) 트랜잭션 큐로만 합니다.  
+    - 보증 "정확히 한 번"를 사용 하 여 지 속성 메시지 (데이터 그램 및 세션)를 보낼 수 있습니다 (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `true`) 트랜잭션 큐로만 합니다.  
   
-    -   "한 번만" 보증이 지정된 세션만 보낼 수 있습니다.  
+    - "한 번만" 보증이 지정된 세션만 보낼 수 있습니다.  
   
-    -   트랜잭션 큐의 세션에서 메시지를 받으려면 트랜잭션이 필요합니다.  
+    - 트랜잭션 큐의 세션에서 메시지를 받으려면 트랜잭션이 필요합니다.  
   
-    -   보내거나 보증 없이 일시적 또는 지 속성 메시지 (데이터 그램만 해당)를 받을 수 있습니다 (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`)는 비트랜잭션 큐로만 합니다.  
+    - 보내거나 보증 없이 일시적 또는 지 속성 메시지 (데이터 그램만 해당)를 받을 수 있습니다 (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`)는 비트랜잭션 큐로만 합니다.  
   
--   배달 못한 편지 큐를 확인합니다. 거기에서 메시지를 찾은 경우에는 배달되지 않은 이유를 확인합니다.  
+- 배달 못한 편지 큐를 확인합니다. 거기에서 메시지를 찾은 경우에는 배달되지 않은 이유를 확인합니다.  
   
--   보내는 큐에서 연결 또는 주소 지정 문제를 확인합니다.  
+- 보내는 큐에서 연결 또는 주소 지정 문제를 확인합니다.  
   
  **Q:** 사용자 지정 배달 못 한 편지 큐를 지정 했습니다 있지만 발신자 응용 프로그램을 시작할 때 배달 못 한 편지 큐를 찾을 수 없는 예외가 발생 하거나 보내는 응용 프로그램에 배달 못 한 편지 큐 수 있는 권한이 없습니다. 이유가 무엇입니까?  
   
@@ -184,17 +184,17 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
   
  **A:** 이 문제의 가능한 세 가지 이유는 다음과 같습니다.  
   
--   도메인 모드에 있는 경우 트랜잭션된 원격 수신을 수행하려면 MSDTC(Microsoft Distributed Transaction Coordinator) 네트워크 액세스가 필요합니다. 사용 하 여 사용할 수 있습니다 **구성 요소 추가/제거**합니다.  
+- 도메인 모드에 있는 경우 트랜잭션된 원격 수신을 수행하려면 MSDTC(Microsoft Distributed Transaction Coordinator) 네트워크 액세스가 필요합니다. 사용 하 여 사용할 수 있습니다 **구성 요소 추가/제거**합니다.  
   
      ![사용을 보여 주는 스크린샷 네트워크 DTC 액세스 합니다.](./media/troubleshooting-queued-messaging/enable-distributed-transaction-coordinator-access.jpg)  
   
--   트랜잭션 관리자와의 통신을 위한 인증 모드를 확인합니다. 작업 그룹 모드에 있는 경우 "인증 필요"를 선택 해야 합니다. 도메인 모드에 있는 경우 "상호 인증 필요" 선택 해야 합니다.  
+- 트랜잭션 관리자와의 통신을 위한 인증 모드를 확인합니다. 작업 그룹 모드에 있는 경우 "인증 필요"를 선택 해야 합니다. 도메인 모드에 있는 경우 "상호 인증 필요" 선택 해야 합니다.  
   
      ![XA 트랜잭션 사용](../../../../docs/framework/wcf/feature-details/media/4f3695e0-fb0b-4c5b-afac-75f8860d2bb0.jpg "4f3695e0-fb0b-4c5b-afac-75f8860d2bb0")  
   
--   예외 목록에 MSDTC가 있는지 확인 합니다 **인터넷 연결 방화벽** 설정 합니다.  
+- 예외 목록에 MSDTC가 있는지 확인 합니다 **인터넷 연결 방화벽** 설정 합니다.  
   
--   [!INCLUDE[wv](../../../../includes/wv-md.md)]를 사용하고 있는지 확인하십시오. [!INCLUDE[wv](../../../../includes/wv-md.md)]의 MSMQ에서는 트랜잭션된 원격 읽기를 지원합니다. 이전 Windows 릴리스의 MSMQ에서는 트랜잭션된 원격 읽기를 지원하지 않습니다.  
+- [!INCLUDE[wv](../../../../includes/wv-md.md)]를 사용하고 있는지 확인하십시오. [!INCLUDE[wv](../../../../includes/wv-md.md)]의 MSMQ에서는 트랜잭션된 원격 읽기를 지원합니다. 이전 Windows 릴리스의 MSMQ에서는 트랜잭션된 원격 읽기를 지원하지 않습니다.  
   
  **Q:** 큐에서 읽는 서비스가 네트워크 서비스인 경우 예를 들어, 웹 호스트에서 액세스 거부 예외가 가져오나 이유 발생 큐에서 읽을 때?  
   

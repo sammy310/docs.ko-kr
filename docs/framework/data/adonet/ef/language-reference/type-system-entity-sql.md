@@ -3,20 +3,20 @@ title: 형식 시스템(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 818a505b-a196-41dd-aaac-2ccd5f7a2f1a
 ms.openlocfilehash: 0afeffd3ad180d6cc6175010140754e279988b38
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034114"
 ---
 # <a name="type-system-entity-sql"></a>형식 시스템(Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 형식의 수를 지원합니다.  
   
--   기본(단순) 형식 - `Int32` 및 `String.`  
+- 기본(단순) 형식 - `Int32` 및 `String.`  
   
--   명목 형식 - 스키마에서 정의됨. <xref:System.Data.Metadata.Edm.EntityType>, <xref:System.Data.Metadata.Edm.ComplexType> 및 <xref:System.Data.Metadata.Edm.RelationshipType>  
+- 명목 형식 - 스키마에서 정의됨. <xref:System.Data.Metadata.Edm.EntityType>, <xref:System.Data.Metadata.Edm.ComplexType> 및 <xref:System.Data.Metadata.Edm.RelationshipType>  
   
--   익명 형식 - 스키마에서 명시적으로 정의되지 않음. <xref:System.Data.Metadata.Edm.CollectionType>, <xref:System.Data.Metadata.Edm.RowType> 및 <xref:System.Data.Metadata.Edm.RefType>  
+- 익명 형식 - 스키마에서 명시적으로 정의되지 않음. <xref:System.Data.Metadata.Edm.CollectionType>, <xref:System.Data.Metadata.Edm.RowType> 및 <xref:System.Data.Metadata.Edm.RefType>  
   
  이 섹션에는 명시적으로 스키마에 정의 되지 않은 하지만 Entity SQL에서 지원 되는 익명 형식을 설명 합니다. 기본 형식과 명목 형식에 대 한 내용은 참조 하세요 [개념적 모델 형식 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl)합니다.  
   
@@ -31,13 +31,13 @@ ms.locfileid: "59134565"
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 참조를 통한 생성, 해체 및 탐색에 사용되는 다음 연산자를 지원합니다.  
   
--   [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)  
+- [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)  
   
--   [CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)  
+- [CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)  
   
--   [KEY](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)  
+- [KEY](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)  
   
--   [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)  
+- [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)  
   
  멤버 액세스(dot) 연산자(`.`)를 사용하여 참조를 탐색할 수 있습니다. 다음 조각에서는 r(참조) 속성을 탐색하여 Id 속성(Order)을 추출합니다.  
   

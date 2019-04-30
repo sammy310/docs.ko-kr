@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b979b5f4ee849b96cd29b6c8e2e6a8932e88c182
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049559"
 ---
 # <a name="icorprofilerinfo-interface"></a>ICorProfilerInfo 인터페이스
 코드 프로파일러는 CLR (공용 언어 런타임) 이벤트 모니터링 및 제어 정보를 요청 하려면와 통신 하 여 사용할 메서드를 제공 합니다.  

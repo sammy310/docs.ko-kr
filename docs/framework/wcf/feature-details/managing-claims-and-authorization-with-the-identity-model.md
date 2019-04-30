@@ -9,11 +9,11 @@ helpviewer_keywords:
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
 ms.openlocfilehash: 568fb1c2a18cfde5b15b844754f4356af0a576a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046634"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>ID 모델을 사용하여 클레임 및 권한 부여 관리
 권한 부여는 컴퓨터 리소스를 변경하거나 보거나 컴퓨터 리소스에 액세스할 수 있는 사용 권한이 있는 엔터티를 확인하는 프로세스입니다. 예를 들어 비즈니스에서 관리자만 직원 파일에 액세스할 수 있습니다. Windows Communication Foundation (WCF) 권한 부여 처리를 수행 하기 위한 두 가지 메커니즘을 지원 합니다. 첫 번째 메커니즘을 사용하면 기존의 CLR(공용 언어 런타임) 구문을 사용하여 권한 부여를 제어할 수 있습니다. 두 번째는 이라고 하는 클레임 기반 모델을 *Id 모델*합니다. WCF Id 모델을 사용 하 여 들어오는 메시지에서 클레임을 만들려면 Id 모델 클래스는 사용자 지정 권한 부여 체계에 대 한 새 클레임 형식을 지원 하도록 확장할 수 있습니다. 이 항목에서는 ID 모델 기능의 주요 프로그래밍 개념에 대한 개요와 이 기능에서 사용되는 매우 중요한 클래스의 목록을 제공합니다.  

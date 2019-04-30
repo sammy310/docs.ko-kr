@@ -5,11 +5,11 @@ helpviewer_keywords:
 - ',NET remoting [WCF]'
 ms.assetid: 24793465-65ae-4308-8c12-dce4fd12a583
 ms.openlocfilehash: 4040fb0ac223f91705a49b733f6a1f42d144068e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59091124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046608"
 ---
 # <a name="migrating-net-remoting-applications-to-wcf"></a>.NET Remoting 응용 프로그램을 WCF로 마이그레이션
 **이 항목은 이전 버전의 기존 응용 프로그램과의 호환성을 위해 유지되며 새로운 개발에 권장되지 않는 레거시 기술과 관련된 것입니다. WCF를 사용 하 여 분산된 응용 프로그램을 개발할 수 해야 합니다.**  

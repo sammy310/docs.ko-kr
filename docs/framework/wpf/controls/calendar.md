@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Calendar control [WPF]
 ms.assetid: ee844e4a-eefe-48e2-bd0d-1d82cc5e960b
 ms.openlocfilehash: 9a64c6cd6fc1cc53383f2617f7a7a78959e87c4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053587"
 ---
 # <a name="calendar"></a>일정
 일정에는 사용자를 시각적 일정 표시를 사용 하 여 날짜를 선택할 수 있습니다.  

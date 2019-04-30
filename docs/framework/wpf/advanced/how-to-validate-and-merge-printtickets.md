@@ -11,11 +11,11 @@ helpviewer_keywords:
 - PrintTicket [WPF], validation
 ms.assetid: 4fe2d501-d0b0-4fef-86af-6ffe6c162532
 ms.openlocfilehash: be8b299c99515394bc676cfd7a715cb82ac4d58c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051110"
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>방법: PrintTicket 유효성 검사 및 병합
 합니다 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [Print Schema](https://go.microsoft.com/fwlink/?LinkId=186397) 융통성 있고 확장 가능한 포함 <xref:System.Printing.PrintCapabilities> 및 <xref:System.Printing.PrintTicket> 요소입니다. 이전 인쇄 장치 기능을 항목별로 정리 하 고 후자 지정이 장치 문서, 개별 문서 또는 개별 페이지의 특정 시퀀스에 대해 해당 기능을 어떻게 사용 해야 합니다.  

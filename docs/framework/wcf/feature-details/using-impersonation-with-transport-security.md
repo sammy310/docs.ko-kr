@@ -3,11 +3,11 @@ title: 전송 보안을 통해 가장 사용
 ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
 ms.openlocfilehash: 6209007b60effe5403caf3db8855f029d0c47a0e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050677"
 ---
 # <a name="using-impersonation-with-transport-security"></a>전송 보안을 통해 가장 사용
 *가장* 은 클라이언트의 id를 사용 하는 서버 응용 프로그램의 기능입니다. 리소스에 대한 액세스 확인 시 일반적으로 서비스는 가장을 사용합니다. 서버 응용 프로그램은 서비스 계정을 사용하여 실행하지만 서버가 클라이언트 연결을 수락할 경우, 클라이언트의 자격 증명을 사용하여 액세스 검사를 수행하도록 클라이언트를 가장합니다. 전송 보안은 자격 증명을 전달하고 이러한 자격 증명을 사용하여 통신에 보안을 설정하기 위한 메커니즘입니다. 이 항목에서는 가장 기능을 사용 하 여 Windows Communication Foundation (WCF)에서 전송 보안을 사용 하 여 설명 합니다. 메시지 보안을 사용 하는 가장에 대 한 자세한 내용은 참조 하세요. [위임 및 가장](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)합니다.  
@@ -33,24 +33,24 @@ ms.locfileid: "59151439"
 ### <a name="named-pipe-transport"></a>명명된 파이프 전송  
  명명된 파이프 전송에서는 다음 항목이 사용됩니다.  
   
--   명명된 파이프 전송은 로컬 시스템에서만 사용됩니다. WCF의 명명 된 파이프 전송은 시스템 간 연결을 명시적으로 허용 하지 않습니다.  
+- 명명된 파이프 전송은 로컬 시스템에서만 사용됩니다. WCF의 명명 된 파이프 전송은 시스템 간 연결을 명시적으로 허용 하지 않습니다.  
   
--   명명된 파이프는 `Impersonate` 또는 `Delegate` 가장 수준으로 사용할 수 없습니다. 명명된 파이프는 이러한 가장 수준에서 컴퓨터 보장을 적용할 수 없습니다.  
+- 명명된 파이프는 `Impersonate` 또는 `Delegate` 가장 수준으로 사용할 수 없습니다. 명명된 파이프는 이러한 가장 수준에서 컴퓨터 보장을 적용할 수 없습니다.  
   
  명명 된 파이프에 대 한 자세한 내용은 참조 하세요. [전송 선택](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)합니다.  
   
 ### <a name="http-transport"></a>HTTP 전송  
  HTTP 전송을 사용 하는 바인딩 (<xref:System.ServiceModel.WSHttpBinding> 하 고 <xref:System.ServiceModel.BasicHttpBinding>)에 설명 된 대로 여러 인증 체계를 지 원하는 [Understanding HTTP Authentication](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)합니다. 지원되는 가장 수준은 인증 스키마에 따라 다릅니다. HTTP 파이프 전송에서는 다음 항목이 사용됩니다.  
   
--   `Anonymous` 인증 스키마는 가장을 무시합니다.  
+- `Anonymous` 인증 스키마는 가장을 무시합니다.  
   
--   합니다 `Basic` 인증 스키마만 지원 합니다 `Delegate` 수준입니다. 모든 하위 가장 수준이 업그레이드됩니다.  
+- 합니다 `Basic` 인증 스키마만 지원 합니다 `Delegate` 수준입니다. 모든 하위 가장 수준이 업그레이드됩니다.  
   
--   `Digest` 인증 스키마는 `Impersonate` 및 `Delegate` 수준만 지원합니다.  
+- `Digest` 인증 스키마는 `Impersonate` 및 `Delegate` 수준만 지원합니다.  
   
--   직접 선택하거나 협상을 통해 선택할 수 있는 `NTLM` 인증 스키마는 로컬 시스템에서 `Delegate` 수준만 지원합니다.  
+- 직접 선택하거나 협상을 통해 선택할 수 있는 `NTLM` 인증 스키마는 로컬 시스템에서 `Delegate` 수준만 지원합니다.  
   
--   스키마를 통해서만 선택할 수 있는 Kerberos 인증 체계는 지원되는 가장 수준으로만 사용할 수 있습니다.  
+- 스키마를 통해서만 선택할 수 있는 Kerberos 인증 체계는 지원되는 가장 수준으로만 사용할 수 있습니다.  
   
  HTTP 전송에 대 한 자세한 내용은 참조 하세요. [전송 선택](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)합니다.  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC32500
 ms.assetid: 6fa34c55-368e-4d7d-b488-07a3fffe045f
 ms.openlocfilehash: d27c326b6a88271ba4abf0144e71027f6671b17e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054382"
 ---
 # <a name="attribute-cannot-be-applied-because-the-format-of-the-guid-number-is-not-correct"></a>'\<특성 >' 때문에 적용할 수 없습니다. GUID의 형식은 '\<수 >' 올바르지 않습니다
 `COMClassAttribute` 특성 블록 GUID에 대 한 적절 한 형식에 맞지 않는 전역적으로 고유 식별자 (GUID)를 지정 합니다. `COMClassAttribute` Guid를 사용 하 여 클래스, 인터페이스 및 생성 이벤트를 고유 하 게 식별 합니다.  

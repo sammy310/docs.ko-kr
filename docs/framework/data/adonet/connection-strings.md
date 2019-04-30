@@ -3,11 +3,11 @@ title: ADO.NET의 연결 문자열
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
 ms.openlocfilehash: 1197335f3ba2a09b6e7303d31bc32383d1fd3436
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57844874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032765"
 ---
 # <a name="connection-strings-in-adonet"></a>ADO.NET의 연결 문자열
 
@@ -47,15 +47,13 @@ ms.locfileid: "57844874"
 ## <a name="in-this-section"></a>섹션 내용
 
 [연결 문자열 작성기](../../../../docs/framework/data/adonet/connection-string-builders.md)\
-
-  `ConnectionStringBuilder` 클래스를 사용하여 런타임에 유효한 연결 문자열을 구성하는 방법을 보여 줍니다.
+`ConnectionStringBuilder` 클래스를 사용하여 런타임에 유효한 연결 문자열을 구성하는 방법을 보여 줍니다.
 
 [연결 문자열 및 구성 파일](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)\
 구성 파일에서 연결 문자열을 저장하고 검색하는 방법을 보여 줍니다.
 
 [연결 문자열 구문](../../../../docs/framework/data/adonet/connection-string-syntax.md)\
-
-  `SqlClient`, `OracleClient`, `OleDb` 및 `Odbc`에 대한 공급자별 연결 문자열을 구성하는 방법을 설명합니다.
+`SqlClient`, `OracleClient`, `OleDb` 및 `Odbc`에 대한 공급자별 연결 문자열을 구성하는 방법을 설명합니다.
 
 [연결 정보 보호](../../../../docs/framework/data/adonet/protecting-connection-information.md)\
 데이터 소스 연결에 사용되는 정보를 보호하는 기법을 보여 줍니다.

@@ -3,11 +3,11 @@ title: 워크플로 추적 구성
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
 ms.openlocfilehash: c3e73c3801a41a9401ac2e636fda6362487a05af
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052770"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>워크플로 추적 구성
 
@@ -52,7 +52,7 @@ instance.Extensions.Add(trackingParticipant);
 
 워크플로 호스트 된 WCF 서비스로 노출 될 수 있습니다는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 서비스 호스트입니다. <xref:System.ServiceModel.Activities.WorkflowServiceHost>는 워크플로 기반 서비스에 대한 특수 .NET ServiceHost 구현입니다. 이 단원에서는 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]에서 실행되는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 워크플로 서비스에 대해 추적을 구성하는 방법에 대해 설명합니다. 이러한 추적 기능은 Web.config 파일(웹 호스팅 서비스의 경우) 또는 App.config 파일(콘솔 응용 프로그램과 같은 독립 실행형 응용 프로그램에서 호스트되는 서비스의 경우)을 통해 서비스 동작을 지정하거나, 코드를 통해 서비스 호스트에 대한 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 컬렉션에 추적별 동작을 추가하여 구성됩니다.
 
-<xref:System.ServiceModel.WorkflowServiceHost>에서 호스트되는 워크플로 서비스의 경우 다음 예제와 같이 구성 파일에서 <<xref:System.Activities.Tracking.EtwTrackingParticipant>> 요소를 사용하여 `behavior`를 추가할 수 있습니다.
+워크플로 서비스에서 호스트 되는 <xref:System.ServiceModel.WorkflowServiceHost>를 추가할 수 있습니다를 <xref:System.Activities.Tracking.EtwTrackingParticipant> 를 사용 하 여를 <`behavior`> 다음 예제에서와 같이 구성 파일에서 요소입니다.
 
 ```xml
 <behaviors>
@@ -141,8 +141,7 @@ if (null != workflowServiceHost)
 
 ### <a name="configuring-tracking-using-workflowinvoker"></a>WorkflowInvoker를 사용하여 추적 구성
 
-
-  <xref:System.Activities.WorkflowInvoker>를 사용하여 실행되는 워크플로에 대한 추적을 구성하려면 추적 공급자를 <xref:System.Activities.WorkflowInvoker> 인스턴스에 대한 확장으로 추가합니다. 다음 코드 예제는 합니다 [사용자 지정 추적](./samples/custom-tracking.md) 샘플입니다.
+<xref:System.Activities.WorkflowInvoker>를 사용하여 실행되는 워크플로에 대한 추적을 구성하려면 추적 공급자를 <xref:System.Activities.WorkflowInvoker> 인스턴스에 대한 확장으로 추가합니다. 다음 코드 예제는 합니다 [사용자 지정 추적](./samples/custom-tracking.md) 샘플입니다.
 
 ```csharp
 WorkflowInvoker invoker = new WorkflowInvoker(BuildSampleWorkflow());

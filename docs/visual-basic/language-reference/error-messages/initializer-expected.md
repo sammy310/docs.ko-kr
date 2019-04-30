@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30996
 ms.assetid: 6e183fe0-8888-43ed-a062-01571079455f
 ms.openlocfilehash: 0795fdc1c4b177e13979d7555cd7588217b8cb4c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013805"
 ---
 # <a name="initializer-expected"></a>이니셜라이저가 필요합니다.
 초기화 목록의 비어 있는 경우 다음 예제에서와 같이 개체 이니셜라이저를 사용 하 여 클래스의 인스턴스를 선언 하려고 했습니다.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b1cc02d1-23b1-4439-a998-0da1899f3442
 ms.openlocfilehash: 05122f7c980c4b7dfdb27eec73464a4f0556ba99
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034387"
 ---
 # <a name="creating-a-dataview"></a>DataView 만들기
 <xref:System.Data.DataView>를 만드는 방법은 두 가지입니다. 사용할 수는 **DataView** 생성자에 대 한 참조를 만들 수 있습니다는 <xref:System.Data.DataTable.DefaultView%2A> 의 속성은 <xref:System.Data.DataTable>합니다. 합니다 **DataView** 생성자 비워 둘 수 있습니다, 또는 중 하나를 수행 하는 **DataTable** 단일 인수로 또는 **DataTable** 필터 조건, 정렬 조건 및 행과 함께 상태 필터입니다. 에 사용할 수 있는 추가 인수에 대 한 자세한 합니다 **DataView**를 참조 하세요 [정렬 및 필터링 데이터](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)입니다.  

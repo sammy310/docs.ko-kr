@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WPF application [WPF], deploying
 ms.assetid: 88952ad2-5b74-48ca-a4c5-3f4fbb53ce12
 ms.openlocfilehash: 4aaeeed4ff6a130c6d3ddda696286222d7c9efaf
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052237"
 ---
 # <a name="build-and-deploy-how-to-topics"></a>빌드 및 배포 방법 항목
 다음 항목에는 다양 한 프로젝트 파일을 만드는 방법을 보여 줍니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 유형입니다.  

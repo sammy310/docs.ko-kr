@@ -3,11 +3,11 @@ title: '방법: 직렬화 가능한 엔터티 만들기'
 ms.date: 03/30/2017
 ms.assetid: a6c5bf6e-064a-4f77-b74c-76b3a5dec309
 ms.openlocfilehash: bbe40ec448bef5f62d4182d96f82c6308639e27f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033802"
 ---
 # <a name="how-to-make-entities-serializable"></a>방법: 직렬화 가능한 엔터티 만들기
 코드를 생성할 때 엔터티를 serialize 가능하게 만들 수 있습니다. 엔터티 클래스는 <xref:System.Runtime.Serialization.DataContractAttribute> 특성으로 데코레이팅되고 열은 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성으로 데코레이팅됩니다.  

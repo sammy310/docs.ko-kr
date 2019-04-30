@@ -11,11 +11,11 @@ helpviewer_keywords:
 - partitioning space [WPF]
 ms.assetid: a219b9e5-b205-4438-89b5-0a137ac463ab
 ms.openlocfilehash: ab51270644bf370944ebc933c765b40c528681c5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052185"
 ---
 # <a name="how-to-partition-space-by-using-the-dockpanel-element"></a>방법: DockPanel 요소를 사용하여 공간 분할
 다음 예제에서는 간단한 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 프레임 워크를 사용 하는 <xref:System.Windows.Controls.DockPanel> 요소입니다. <xref:System.Windows.Controls.DockPanel> 자식 요소에 사용 가능한 공간을 분할 합니다.  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XML [Visual Basic], accessing
 ms.assetid: 89a59d00-985e-4f5c-b59f-29b47bad11cb
 ms.openlocfilehash: 8f8283e7ed09e657a20addab0b203b3d99420d3a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025212"
 ---
 # <a name="xml-child-axis-property-visual-basic"></a>XML 자식 축 속성(Visual Basic)
 <xref:System.Xml.Linq.XElement> 개체, <xref:System.Xml.Linq.XDocument> 개체, <xref:System.Xml.Linq.XElement> 개체 컬렉션 또는 <xref:System.Xml.Linq.XDocument> 개체 컬렉션 중 하나의 자식에 액세스할 수 있도록 합니다.  

@@ -3,11 +3,11 @@ title: 워크플로 서비스 등록 도구(WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
 ms.openlocfilehash: 3ea0f737cc050ec3f918044e0e105a41011a3e25
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33506563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052575"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>워크플로 서비스 등록 도구(WFServicesReg.exe)
 워크플로 서비스 등록 도구(WFServicesReg.exe)는 Windows WF(Workflow Foundation) 서비스의 구성 요소를 추가, 제거 또는 복구하는 데 사용할 수 있는 독립 실행형 도구입니다.  
@@ -34,25 +34,25 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 ## <a name="registration"></a>등록  
  이 도구는 Web.config 파일을 검사하고 다음을 등록합니다.  
   
--   [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 참조 어셈블리  
+- [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 참조 어셈블리  
   
--   .xoml 파일의 빌드 공급자  
+- .xoml 파일의 빌드 공급자  
   
--   .xoml 및 .rules 파일의 HTTP 처리기  
+- .xoml 및 .rules 파일의 HTTP 처리기  
   
  이 도구는 Machine.config 파일을 검사하고 다음 확장을 등록합니다.  
   
--   behaviorExtensions  
+- behaviorExtensions  
   
--   bindingElementExtensions  
+- bindingElementExtensions  
   
--   bindingExtensions  
+- bindingExtensions  
   
  또한 다음과 같은 클라이언트 메타데이터 가져오기를 등록합니다.  
   
--   policyImporters  
+- policyImporters  
   
--   wsdlImporters  
+- wsdlImporters  
   
  이 도구는 또한 IIS 메타베이스에 .xoml과 .rules 스크립트 맵 및 처리기를 등록합니다.  
   
@@ -60,7 +60,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  64비트 시스템에서 도구는 `Enable32BitAppOnWin64` 스위치를 사용할 수 있는 경우 WOW 모드 스크립트 맵을 등록하고, `Enable32BitAppOnWin64` 스위치를 사용할 수 없는 경우 네이티브 64비트 스크립트 맵을 등록합니다.  
   
- [!INCLUDE[wv](../../../includes/wv-md.md)] 및 Windows Server 2008 (IIS 7.0 이상) 등록 된 컴퓨터,.xoml과.rules 처리기 집합 두: 하나는 통합된 모드 용이고 하나는 클래식 모드용입니다.  
+ [!INCLUDE[wv](../../../includes/wv-md.md)] 및 Windows Server 2008 (IIS 7.0 이상) 시스템에서는.xoml과.rules 처리기 집합 두 개가 등록 됩니다: 통합된 모드와 클래식 모드에 대 한 합니다.  
   
  64비트 시스템에서는 `Enable32BitAppOnWin64` 스위치의 상태에 관계없이 처리기 집합 세 개가 등록됩니다. 하나는 통합 모드용, 하나는 WOW 클래식 모드용, 하나는 네이티브 64비트 클래식 모드용입니다.  
   
@@ -85,4 +85,4 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
  특정 웹 사이트에 대 한 삭제 된 처리기를 복구 하려면 "WFServicesReg.exe /r"을 실행 해야 모든 웹 사이트의 처리기를 제거 하려면 "WFServicesReg.exe /c"를 실행 한 다음 모든 웹 사이트에 대 한 적절 한 처리기를 만들 수 있습니다.  
   
 ### <a name="configuring-handlers-after-switching-iis-mode"></a>IIS 모드 전환 후 처리기 구성  
- IIS가 공유 구성 모드에 있는 경우 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]를 설치하면 IIS 메타베이스가 공유 위치에 구성됩니다. IIS를 비공유 구성 모드로 전환하면 로컬 메타베이스에 필요한 처리기가 포함되지 않습니다. 로컬 메타 베이스를 제대로 구성 하려면 로컬 또는 실행 "WFServicesReg.exe /c", 로컬 메타 베이스를 구성 하는에 메타 베이스를 공유 하거나 가져올 수 있습니다.
+ IIS가 공유 구성 모드에 있는 경우 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]를 설치하면 IIS 메타베이스가 공유 위치에 구성됩니다. IIS를 비공유 구성 모드로 전환하면 로컬 메타베이스에 필요한 처리기가 포함되지 않습니다. 로컬 메타 베이스를 제대로 구성 하려면 로컬 또는 실행 "WFServicesReg.exe /c"를 로컬 메타 베이스를 구성 하는에 메타 베이스를 공유 하거나 가져올 수 있습니다.

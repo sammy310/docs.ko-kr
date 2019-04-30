@@ -3,11 +3,11 @@ title: WCF 웹 HTTP 서비스 도움말 페이지
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
 ms.openlocfilehash: 60fd909d6e7d3ba0e0c0254024ef7eb40263b59e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050415"
 ---
 # <a name="wcf-web-http-service-help-page"></a>WCF 웹 HTTP 서비스 도움말 페이지
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]에서는 WCF WEB HTTP 서비스에 대한 자동 도움말 페이지를 제공합니다. 이 도움말 페이지에는 각 작업에 대한 설명, 요청 및 응답 형식, 스키마 등이 표시됩니다. 이 기능은 기본적으로 사용하지 않도록 설정되어 있습니다. 때 사용자가 탐색 하는 WCF 웹 HTTP 서비스 및 추가 "/help" 예를 들어 URL의 끝에 `http://localhost:8000/Customers/Help`을 다음 표시 되는 같은 도움말 페이지입니다.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
 ms.openlocfilehash: 2f15bf569da6127d6c9d27be255590ce3784d7a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050703"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>배달 못 한 편지 큐를 사용하여 메시지 전송 오류 처리
 대기 중인 메시지를 배달하지 못할 수 있습니다. 이러한 실패 메시지는 배달 못 한 편지 큐에 기록됩니다. 네트워크 오류, 삭제된 큐, 꽉 찬 큐, 인증 오류 또는 정시 배달 실패와 같은 이유로 인해 배달 실패가 발생할 수 있습니다.  
@@ -30,18 +30,18 @@ ms.locfileid: "59174618"
   
  바인딩에는 다음과 같은 배달 못 한 편지 큐 속성이 있습니다.  
   
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>  
+- <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>  
   
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>  
+- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>  
   
 ## <a name="reading-messages-from-the-dead-letter-queue"></a>배달 못 한 편지 큐에서 메시지 읽기  
  배달 못 한 편지 큐에서 메시지를 읽는 응용 프로그램을 다음과 같은 사소한 차이 제외 하 고 응용 프로그램 큐에서 읽는 WCF 서비스와 비슷합니다.  
   
--   시스템 트랜잭션 배달 못 한 편지 큐에서 메시지를 읽으려면 URI(Uniform Resource Identifier)가 net.msmq://localhost/system$;DeadXact 형식이어야 합니다.  
+- 시스템 트랜잭션 배달 못 한 편지 큐에서 메시지를 읽으려면 URI(Uniform Resource Identifier)가 net.msmq://localhost/system$;DeadXact 형식이어야 합니다.  
   
--   배달 못 한 시스템 비트랜잭션 큐에서 메시지를 읽으려면 URI가 net.msmq://localhost/system$;DeadLetter 형식이어야 합니다.  
+- 배달 못 한 시스템 비트랜잭션 큐에서 메시지를 읽으려면 URI가 net.msmq://localhost/system$;DeadLetter 형식이어야 합니다.  
   
--   사용자 지정 배달 못 한 편지 큐에서 메시지를 읽기, URI 이어야 양식: //localhost/private/<\<*dlq 이름을 지정*> 여기서 *dlq 이름을 지정* 사용자 지정의 이름입니다 배달 못 한 편지 큐입니다.  
+- 사용자 지정 배달 못 한 편지 큐에서 메시지를 읽기, URI 이어야 양식: //localhost/private/<\<*dlq 이름을 지정*> 여기서 *dlq 이름을 지정* 사용자 지정의 이름입니다 배달 못 한 편지 큐입니다.  
   
  주소 큐 하는 방법에 대 한 자세한 내용은 참조 하세요. [서비스 끝점 및 큐 주소 지정](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)합니다.  
   

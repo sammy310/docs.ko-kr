@@ -12,11 +12,11 @@ helpviewer_keywords:
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
 ms.openlocfilehash: 8547e8e1eaf73b266d737e33acd79dd4ec539c6f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051171"
 ---
 # <a name="option-strict-statement"></a>Option Strict 문
 암시적 데이터 형식 변환을 확대 변환 으로만 제한 하 고 런타임에 바인딩을 허용 하지 않습니다.에 이어지는 암시적 형식 지정을 허용 하지 않습니다는 `Object` 형식입니다.  
@@ -37,11 +37,11 @@ Option Strict { On | Off }
 ## <a name="remarks"></a>설명  
  때 `Option Strict On` 또는 `Option Strict` 나타납니다 파일에서 다음과 같은 컴파일 타임 오류가 발생 합니다.  
   
--   암시적 축소 변환  
+- 암시적 축소 변환  
   
--   런타임에 바인딩  
+- 런타임에 바인딩  
   
--   `Object` 유형으로 이어지는 암시적 형식 지정  
+- `Object` 유형으로 이어지는 암시적 형식 지정  
   
 > [!NOTE]
 >  에 설정할 수 있는 경고 구성에는 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), 컴파일 시간 오류가 발생 하는 세 가지 조건에 해당 하는 세 가지 설정이 있습니다. 이러한 설정을 사용 하는 방법에 대 한 정보를 참조 하세요 [IDE에 경고 구성을 설정 하려면](../../../visual-basic/language-reference/statements/option-strict-statement.md#conditions) 이 항목의 뒷부분에 나오는.  
@@ -52,11 +52,11 @@ Option Strict { On | Off }
   
  설정한 경우 `Option Strict` 에 `On`, Visual Basic에서는 모든 프로그래밍 요소에 대해 지정 되어 있는지 확인 합니다. 데이터 형식은 명시적으로 지정 된 또는 로컬 형식 유추를 사용 하 여 지정할 수 있습니다. 모든 프로그래밍 요소에 대 한 데이터 형식을 지정 하는 것이 좋습니다, 다음과 같은 이유로:  
   
--   프로그램 변수 및 매개 변수에 대 한 IntelliSense 지원도를 수 있습니다. 이 옵션을 사용 하면 코드를 입력할 때 해당 속성 및 다른 구성원을 볼 수 있습니다.  
+- 프로그램 변수 및 매개 변수에 대 한 IntelliSense 지원도를 수 있습니다. 이 옵션을 사용 하면 코드를 입력할 때 해당 속성 및 다른 구성원을 볼 수 있습니다.  
   
--   컴파일러를에 형식 검사를 수행할 수 있습니다. 형식 검사 형식 변환 오류로 인해 런타임에 실패할 수 있는 문을 찾는 데 도움이 됩니다. 또한 이러한 메서드를 지원 하지 않는 개체에서 메서드 호출을 식별 합니다.  
+- 컴파일러를에 형식 검사를 수행할 수 있습니다. 형식 검사 형식 변환 오류로 인해 런타임에 실패할 수 있는 문을 찾는 데 도움이 됩니다. 또한 이러한 메서드를 지원 하지 않는 개체에서 메서드 호출을 식별 합니다.  
   
--   이 코드의 실행 속도 높입니다. 그 이유 중 하나는 프로그래밍 요소에 대 한 데이터 형식을 지정 하지 않으면, Visual Basic 컴파일러를 할당 하는 `Object` 형식입니다. 컴파일된 코드 사이 변환 해야 할 수 `Object` 및 다른 데이터 형식을 사용 하면 성능이 저하 됩니다.  
+- 이 코드의 실행 속도 높입니다. 그 이유 중 하나는 프로그래밍 요소에 대 한 데이터 형식을 지정 하지 않으면, Visual Basic 컴파일러를 할당 하는 `Object` 형식입니다. 컴파일된 코드 사이 변환 해야 할 수 `Object` 및 다른 데이터 형식을 사용 하면 성능이 저하 됩니다.  
   
 ## <a name="implicit-narrowing-conversion-errors"></a>암시적 축소 변환 오류  
  암시적 축소 변환 오류는 축소 변환인 암시적 데이터 형식 변환이 있을 경우 발생합니다.  
@@ -65,15 +65,15 @@ Option Strict { On | Off }
   
  변환 오류를 일으킬 수 있는 식에서 발생 하는 암시적 변환이 포함 됩니다. 자세한 내용은 다음 항목을 참조하세요.  
   
--   [+ 연산자](../../../visual-basic/language-reference/operators/addition-operator.md)  
+- [+ 연산자](../../../visual-basic/language-reference/operators/addition-operator.md)  
   
--   [+= 연산자](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
+- [+= 연산자](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
   
--   [\ 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
+- [\ 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
   
--   [/ = 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
+- [/ = 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
--   [Char 데이터 형식](../../../visual-basic/language-reference/data-types/char-data-type.md)  
+- [Char 데이터 형식](../../../visual-basic/language-reference/data-types/char-data-type.md)  
   
  사용 하 여 문자열을 연결 하는 [& 연산자](../../../visual-basic/language-reference/operators/concatenation-operator.md), 모든 문자열 변환을 확대 될 것으로 간주 됩니다. 암시적 축소 변환 오류를 경우에도 이러한 변환이 생성 되지 않습니다 있도록 `Option Strict` 켜져 있습니다.  
   
@@ -116,11 +116,11 @@ Option Strict { On | Off }
 ### <a name="conditions"></a> IDE에서 경고 구성을 설정 하려면  
  사용 하는 경우는 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 대신는 `Option Strict` 문을 제어할 수 추가 오류를 생성 하는 조건입니다. **경고 구성** 섹션을 **컴파일 페이지** 컴파일 타임 오류가 발생 하는 세 가지 조건에 해당 하는 설정이 때 `Option Strict` 켜져 합니다. 이러한 설정은 다음과 같습니다.  
   
--   **암시적 변환**  
+- **암시적 변환**  
   
--   **런타임에 바인딩; 호출이 실패할 수 있음**  
+- **런타임에 바인딩; 호출이 실패할 수 있음**  
   
--   **암시적 형식; 개체로 간주**  
+- **암시적 형식; 개체로 간주**  
   
  **Option Strict**를 **On**으로 설정하는 경우 이러한 세 가지 경고 구성 설정은 모두 **Error**로 설정됩니다. **Option Strict**를 **Off**로 설정하는 경우 세 가지 설정은 모두 **None**으로 설정됩니다.  
   

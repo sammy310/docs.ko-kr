@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40042
 ms.assetid: 1d6eae29-4ad3-4434-bde4-a53b6051adf5
 ms.openlocfilehash: 39054fb6bf82a344cb38613164cb42968aa632f7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051548"
 ---
 # <a name="type-of-optional-value-for-optional-parameter-parametername-is-not-cls-compliant"></a>선택적 매개 변수에 대 한 선택적 값의 형식이 \<parametername > CLS 규격이 아님
 프로시저는 `<CLSCompliant(True)>`로 표시되지만 비규격 형식의 기본값을 가진 [선택적](../../../visual-basic/language-reference/modifiers/optional.md) 매개 변수를 선언합니다.  
@@ -21,13 +21,13 @@ ms.locfileid: "55261427"
   
  다음 Visual Basic 데이터 형식은 CLS 규격이 아닙니다.  
   
--   [SByte 데이터 형식](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
+- [SByte 데이터 형식](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
   
--   [UInteger 데이터 형식](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
+- [UInteger 데이터 형식](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
   
--   [ULong 데이터 형식](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
+- [ULong 데이터 형식](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
   
--   [UShort 데이터 형식](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
+- [UShort 데이터 형식](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
   
  <xref:System.CLSCompliantAttribute> 특성을 프로그래밍 요소에 적용하는 경우 특성의 `isCompliant` 매개 변수를 `True` 또는 `False` 로 설정하여 준수 여부를 나타냅니다. 이 매개 변수에는 기본값이 없으며 값을 제공해야 합니다.  
   
@@ -39,8 +39,8 @@ ms.locfileid: "55261427"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   선택적 매개 변수는이 특정 형식의 기본 값을 가져야 합니다, 제거 <xref:System.CLSCompliantAttribute>합니다. 프로시저는 CLS 규격일 수 없습니다.  
+- 선택적 매개 변수는이 특정 형식의 기본 값을 가져야 합니다, 제거 <xref:System.CLSCompliantAttribute>합니다. 프로시저는 CLS 규격일 수 없습니다.  
   
--   프로시저가 CLS 규격이어야 하는 경우 이 기본값의 형식을 가장 가까운 CLS 규격 형식으로 변경합니다. 예를 들어 2,147,483,647을 초과하는 값 범위가 필요하지 않은 경우 `UInteger` 대신 `Integer` 을 사용할 수 있습니다. 확장된 범위가 필요한 경우 `UInteger` 를 `Long`으로 바꿀 수 있습니다.  
+- 프로시저가 CLS 규격이어야 하는 경우 이 기본값의 형식을 가장 가까운 CLS 규격 형식으로 변경합니다. 예를 들어 2,147,483,647을 초과하는 값 범위가 필요하지 않은 경우 `UInteger` 대신 `Integer` 을 사용할 수 있습니다. 확장된 범위가 필요한 경우 `UInteger` 를 `Long`으로 바꿀 수 있습니다.  
   
--   자동화 또는 COM 개체와 상호 작용하는 경우 일부 형식의 데이터 너비가 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]와 다르다는 점을 염두에 두어야 합니다. 예를 들어 `int`는 다른 환경에서 16비트인 경우가 많습니다. 이러한 구성 요소에서 16 비트 정수를 수락 하는 경우로 선언 `Short` 대신 `Integer` 관리 되는 Visual Basic 코드에서.
+- 자동화 또는 COM 개체와 상호 작용하는 경우 일부 형식의 데이터 너비가 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]와 다르다는 점을 염두에 두어야 합니다. 예를 들어 `int`는 다른 환경에서 16비트인 경우가 많습니다. 이러한 구성 요소에서 16 비트 정수를 수락 하는 경우로 선언 `Short` 대신 `Integer` 관리 되는 Visual Basic 코드에서.

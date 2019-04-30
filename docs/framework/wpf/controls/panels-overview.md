@@ -10,30 +10,30 @@ helpviewer_keywords:
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
 ms.openlocfilehash: 946e0f5ee90235498b8089732ae526ab6f35665c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051028"
 ---
 # <a name="panels-overview"></a>Panel 개요
 <xref:System.Windows.Controls.Panel> 요소는 요소의 렌더링을 제어 하는 구성 요소, 해당 크기와 차원, 위치, 자식 콘텐츠의 정렬 합니다. 합니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 다양 한 미리 정의 된 <xref:System.Windows.Controls.Panel> 사용자 지정을 작성할 수 있을 뿐만 아니라 요소 <xref:System.Windows.Controls.Panel> 요소입니다.  
   
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   
--   [Panel 클래스](#Panels_view_from_10000_feet)  
+- [Panel 클래스](#Panels_view_from_10000_feet)  
   
--   [패널 요소의 공통 멤버](#Panels_declared_members)  
+- [패널 요소의 공통 멤버](#Panels_declared_members)  
   
--   [파생 패널 요소](#Panels_derived_elements)  
+- [파생 패널 요소](#Panels_derived_elements)  
   
--   [사용자 인터페이스 패널](#Panels_main_UI_elements)  
+- [사용자 인터페이스 패널](#Panels_main_UI_elements)  
   
--   [중첩 Panel 요소](#Panels_nested_panel_elements)  
+- [중첩 Panel 요소](#Panels_nested_panel_elements)  
   
--   [사용자 지정 Panel 요소](#Panels_custom_panel_elements)  
+- [사용자 지정 Panel 요소](#Panels_custom_panel_elements)  
   
--   [지역화/세계화 지원](#Panels_global_localization)  
+- [지역화/세계화 지원](#Panels_global_localization)  
   
 <a name="Panels_view_from_10000_feet"></a>   
 ## <a name="the-panel-class"></a>Panel 클래스  

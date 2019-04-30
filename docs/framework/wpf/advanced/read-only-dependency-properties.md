@@ -6,11 +6,11 @@ helpviewer_keywords:
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
 ms.openlocfilehash: 45385e3e3eb8e756008a0d9ef560e061f9a31964
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053524"
 ---
 # <a name="read-only-dependency-properties"></a>읽기 전용 종속성 속성
 이 항목에서는 기존 읽기 전용 종속성 속성과 사용자 지정 읽기 전용 종속성 속성을 만드는 시나리오 및 방법을 포함하여 읽기 전용 종속성 속성을 설명합니다.  
@@ -31,11 +31,11 @@ ms.locfileid: "59162425"
   
  읽기 전용 종속성 속성을 만드는 프로세스의 많은 부분은 [사용자 지정 종속성 속성](custom-dependency-properties.md) 및 [종속성 속성 구현](how-to-implement-a-dependency-property.md) 항목에 설명된 것과 같습니다. 세 가지 중요한 차이점이 있습니다.  
   
--   속성을 등록할 때 호출 합니다 <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A> 메서드는 보통 대신 <xref:System.Windows.DependencyProperty.Register%2A> 속성 등록에 대 한 메서드.  
+- 속성을 등록할 때 호출 합니다 <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A> 메서드는 보통 대신 <xref:System.Windows.DependencyProperty.Register%2A> 속성 등록에 대 한 메서드.  
   
--   [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] "래퍼" 속성을 구현할 때 래퍼에도 집합 구현이 없는지 확인하세요. 그래야 읽기 전용 상태에서 표시하는 public 래퍼에 대한 불일치가 없습니다.  
+- [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] "래퍼" 속성을 구현할 때 래퍼에도 집합 구현이 없는지 확인하세요. 그래야 읽기 전용 상태에서 표시하는 public 래퍼에 대한 불일치가 없습니다.  
   
--   읽기 전용 등록에서 반환 되는 개체 <xref:System.Windows.DependencyPropertyKey> 대신 <xref:System.Windows.DependencyProperty>합니다. 이 필드는 멤버로 저장해야 하지만 일반적으로 형식의 public 멤버로 설정하지 않습니다.  
+- 읽기 전용 등록에서 반환 되는 개체 <xref:System.Windows.DependencyPropertyKey> 대신 <xref:System.Windows.DependencyProperty>합니다. 이 필드는 멤버로 저장해야 하지만 일반적으로 형식의 public 멤버로 설정하지 않습니다.  
   
  지원하는 private 필드 또는 값이 무엇이든 관계없이 읽기 전용 종속성 속성은 결정한 논리가 무엇이든 이를 사용하여 충분히 쓰기 가능합니다. 하지만 처음에 또는 런타임 논리의 일부로 속성을 설정하는 가장 직관적인 방법은 속성 시스템을 우회하고 private 지원 필드를 직접 설정하는 것이 아니라 속성 시스템의 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]를 사용하는 것입니다. 특히는의 시그니처 <xref:System.Windows.DependencyObject.SetValue%2A> 형식의 매개 변수를 받아들이는 <xref:System.Windows.DependencyPropertyKey>합니다. 에 대 한 액세스를 설정 하려고 하는 방법에 영향이 방법 및 위치이 값을 설정한이 프로그래밍 방식으로 응용 프로그램 논리 내에서 <xref:System.Windows.DependencyPropertyKey> 종속성 속성을 처음 등록할 때 만들어집니다. private로 설정할 수 있는 클래스 내에서 이 논리를 모두 처리할 경우 또는 어셈블리의 다른 부분에서 클래스를 설정해야 하는 경우 이 클래스를 internal로 설정할 수 있습니다. 호출 하는 한 가지 방법은 <xref:System.Windows.DependencyObject.SetValue%2A> 저장된 된 속성 값을 변경 해야 하는 클래스 인스턴스에 알리는 관련 이벤트의 클래스 이벤트 처리기 내에서. 쌍을 이루는 사용 하 여 종속성 속성을 함께 연결 하는 또 다른 방법은 <xref:System.Windows.PropertyChangedCallback> 고 <xref:System.Windows.CoerceValueCallback> 등록 하는 동안 이러한 속성의 메타 데이터의 일부로 콜백 합니다.  
   

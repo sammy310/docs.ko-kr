@@ -6,11 +6,11 @@ helpviewer_keywords:
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
 ms.openlocfilehash: 4c403fa6f0de34e970eb0c74df13d807e92f8a05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032359"
 ---
 # <a name="caching-in-ui-automation-clients"></a>UI 자동화 클라이언트의 캐싱
 > [!NOTE]
@@ -64,9 +64,9 @@ ms.locfileid: "59175827"
 ## <a name="retrieving-cached-properties"></a>캐시된 속성 검색  
  다음과 같은 메서드 및 속성을 통해 요소의 캐시된 속성을 검색할 수 있습니다.  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.Cached%2A>  
+- <xref:System.Windows.Automation.AutomationElement.Cached%2A>  
   
  요청된 속성이 캐시에 없는 경우 예외가 발생합니다.  
   
@@ -76,9 +76,9 @@ ms.locfileid: "59175827"
 ## <a name="retrieving-cached-control-patterns"></a>캐시된 컨트롤 패턴 검색  
  다음과 같은 메서드를 통해 요소의 캐시된 컨트롤 패턴을 검색할 수 있습니다.  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A>  
+- <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A>  
   
  해당 패턴에 캐시에 없으면, <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> 이 예외를 발생시키고 <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A> 이 `false`를 반환합니다.  
   

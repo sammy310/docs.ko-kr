@@ -5,11 +5,11 @@ dev_langs:
 - vb
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
 ms.openlocfilehash: a348fb7989a83ec9ee7903bd38896bedcf86ce3a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050742"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>인증서 인증을 사용하는 전송 보안
 이 항목에서는 전송 보안을 사용할 때 서버 및 클라이언트 인증에 X.509 인증서를 사용하는 방법에 대해 설명합니다. X.509 인증서에 대한 자세한 내용은[X.509 공개 키 인증서](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates)를 참조하세요. 인증서는 인증서의 타사 발급자 인 자주 변경 되는 인증 기관에서 발급 되어야 합니다. Windows Server 도메인의 경우 Active Directory 인증서 서비스를 사용하여 도메인에서 클라이언트 컴퓨터에 인증서를 발급할 수 있습니다. 자세한 내용은 참조 [Windows 2008 R2 인증서 서비스](https://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409)합니다. 이 시나리오에서는 SSL(Secure Sockets Layer)을 사용하여 구성된 IIS(인터넷 정보 서비스)에서 서비스가 호스팅됩니다. 서비스는 클라이언트에서 서버의 ID를 확인할 수 있도록 SSL(X.509) 인증서를 사용하여 구성됩니다. 클라이언트도 서비스에서 클라이언트의 ID를 확인할 수 있는 X.509 인증서를 사용하여 구성됩니다. 서버 인증서는 클라이언트에 의해 신뢰되어야 하며 클라이언트 인증서는 서버에 의해 신뢰되어야 합니다. 서비스와 클라이언트가 서로 ID를 확인하는 방법의 실제 메커니즘은 이 항목에서 다루지 않습니다. 자세한 내용은 참조 [Digital Signature on Wikipedia](https://go.microsoft.com/fwlink/?LinkId=253157)합니다.  

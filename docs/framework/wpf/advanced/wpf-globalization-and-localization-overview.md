@@ -6,11 +6,11 @@ helpviewer_keywords:
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
 ms.openlocfilehash: c97ae4f277395a75fb7522ffb74061001c10e07d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053966"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 전역화 및 지역화 개요
 
@@ -28,43 +28,43 @@ ms.locfileid: "58819582"
 
  디자인할 때를 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]– 기반 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], 모범 사례를 구현 하는 것이 좋습니다.  
   
--   작성 하 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 에서 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; 만들지 않도록 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 코드에서. 만들 때 사용자 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 를 사용 하 여 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], 기본 제공 지역화 Api 통해 노출 합니다.  
+- 작성 하 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 에서 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; 만들지 않도록 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 코드에서. 만들 때 사용자 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 를 사용 하 여 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], 기본 제공 지역화 Api 통해 노출 합니다.  
   
--   절대 위치와 고정된 크기를 사용 하 여 콘텐츠를 레이아웃할 수 방지 대신 상대적 크기나 자동 크기 조정 합니다.
+- 절대 위치와 고정된 크기를 사용 하 여 콘텐츠를 레이아웃할 수 방지 대신 상대적 크기나 자동 크기 조정 합니다.
   
-    -   사용 하 여 <xref:System.Windows.Window.SizeToContent%2A> 너비와 높이 설정 하 고 `Auto`입니다.  
+    - 사용 하 여 <xref:System.Windows.Window.SizeToContent%2A> 너비와 높이 설정 하 고 `Auto`입니다.  
   
-    -   사용 하지 마세요 <xref:System.Windows.Controls.Canvas> 레이아웃 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]s입니다.  
+    - 사용 하지 마세요 <xref:System.Windows.Controls.Canvas> 레이아웃 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]s입니다.  
   
-    -   사용 하 여 <xref:System.Windows.Controls.Grid> 및 해당 크기 공유 기능입니다.  
+    - 사용 하 여 <xref:System.Windows.Controls.Grid> 및 해당 크기 공유 기능입니다.  
   
--   지역화된 텍스트는 공간을 더 많이 필요로 하는 경우가 많으므로 여분의 공간을 여백으로 남겨 둡니다. 여분의 공간을 통해 여분의 문자를 표현할 수 있습니다.  
+- 지역화된 텍스트는 공간을 더 많이 필요로 하는 경우가 많으므로 여분의 공간을 여백으로 남겨 둡니다. 여분의 공간을 통해 여분의 문자를 표현할 수 있습니다.  
   
--   사용 하도록 설정 <xref:System.Windows.Controls.TextBlock.TextWrapping%2A> 에서 <xref:System.Windows.Controls.TextBlock> 클리핑을 피하기 위해.
+- 사용 하도록 설정 <xref:System.Windows.Controls.TextBlock.TextWrapping%2A> 에서 <xref:System.Windows.Controls.TextBlock> 클리핑을 피하기 위해.
   
--   `xml:lang` 특성을 설정합니다. 이 특성에는 특정 요소 및 해당 자식 요소의 문화권을을 설명합니다. 이 속성의 값에서 몇 가지 기능의 동작 변경 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]합니다. 예를 들어 하이픈 넣기, 맞춤법 검사, 숫자 대체, 복잡한 스크립트 셰이핑 및 글꼴 대체의 동작을 변경합니다. 참조 [WPF의 전역화](globalization-for-wpf.md) 설정에 대 한 자세한 내용은 합니다 [xml: lang XAML 처리](../../xaml-services/xml-lang-handling-in-xaml.md)합니다.  
+- `xml:lang` 특성을 설정합니다. 이 특성에는 특정 요소 및 해당 자식 요소의 문화권을을 설명합니다. 이 속성의 값에서 몇 가지 기능의 동작 변경 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]합니다. 예를 들어 하이픈 넣기, 맞춤법 검사, 숫자 대체, 복잡한 스크립트 셰이핑 및 글꼴 대체의 동작을 변경합니다. 참조 [WPF의 전역화](globalization-for-wpf.md) 설정에 대 한 자세한 내용은 합니다 [xml: lang XAML 처리](../../xaml-services/xml-lang-handling-in-xaml.md)합니다.  
   
--   다른 언어에 사용 되는 글꼴을 더욱 효과적으로 제어할를 사용자 지정된 합성 글꼴을 만듭니다. 기본적으로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Windows\Fonts 디렉터리에서 GlobalUserInterface.composite 글꼴을 사용 합니다.  
+- 다른 언어에 사용 되는 글꼴을 더욱 효과적으로 제어할를 사용자 지정된 합성 글꼴을 만듭니다. 기본적으로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Windows\Fonts 디렉터리에서 GlobalUserInterface.composite 글꼴을 사용 합니다.  
   
--   텍스트를 오른쪽에서 왼쪽 형식으로 표시 하는 문화권에서 지역화 될 수 있는 탐색 응용 프로그램을 만들 때, 명시적으로 설정 합니다 <xref:System.Windows.FlowDirection> 페이지를 상속 하지 않는 되도록 모든 페이지의 <xref:System.Windows.FlowDirection> 에서 <xref:System.Windows.Navigation.NavigationWindow>합니다.  
+- 텍스트를 오른쪽에서 왼쪽 형식으로 표시 하는 문화권에서 지역화 될 수 있는 탐색 응용 프로그램을 만들 때, 명시적으로 설정 합니다 <xref:System.Windows.FlowDirection> 페이지를 상속 하지 않는 되도록 모든 페이지의 <xref:System.Windows.FlowDirection> 에서 <xref:System.Windows.Navigation.NavigationWindow>합니다.  
   
--   브라우저 외부에서 호스팅되는 독립 실행형 탐색 응용 프로그램을 만들 때 설정 합니다 <xref:System.Windows.Application.StartupUri%2A> 초기 응용 프로그램에 대 한는 <xref:System.Windows.Navigation.NavigationWindow> 대신 페이지 (예를 들어 `<Application StartupUri="NavigationWindow.xaml">`). 이 디자인을 사용 하면 변경할 수 있습니다는 <xref:System.Windows.FlowDirection> 창 및 탐색 모음입니다. 자세한 내용 및 예제를 참조 하세요 [Globalization Homepage 샘플](https://go.microsoft.com/fwlink/?LinkID=159990)합니다.  
+- 브라우저 외부에서 호스팅되는 독립 실행형 탐색 응용 프로그램을 만들 때 설정 합니다 <xref:System.Windows.Application.StartupUri%2A> 초기 응용 프로그램에 대 한는 <xref:System.Windows.Navigation.NavigationWindow> 대신 페이지 (예를 들어 `<Application StartupUri="NavigationWindow.xaml">`). 이 디자인을 사용 하면 변경할 수 있습니다는 <xref:System.Windows.FlowDirection> 창 및 탐색 모음입니다. 자세한 내용 및 예제를 참조 하세요 [Globalization Homepage 샘플](https://go.microsoft.com/fwlink/?LinkID=159990)합니다.  
   
 ### <a name="best-practices-for-wpf-localization"></a>WPF 지역화 모범 사례
 
  지역화할 때는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]– 기반된 응용 프로그램 모범 사례를 구현 하는 것이 좋습니다.  
   
--   지역화 주석을 사용 하 여 지역화 담당자에 대 한 추가 컨텍스트를 제공 합니다.  
+- 지역화 주석을 사용 하 여 지역화 담당자에 대 한 추가 컨텍스트를 제공 합니다.  
   
--   지역화 특성을 사용 하 여 컨트롤을 선택적으로 생략 하는 대신 지역화 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 요소 속성입니다. 참조 [지역화 특성과 주석을](localization-attributes-and-comments.md) 자세한 내용은 합니다.  
+- 지역화 특성을 사용 하 여 컨트롤을 선택적으로 생략 하는 대신 지역화 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 요소 속성입니다. 참조 [지역화 특성과 주석을](localization-attributes-and-comments.md) 자세한 내용은 합니다.  
   
--   사용 하 여 `msbuild -t:updateuid` 및 `-t:checkuid` 추가 하 고 검사 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 의 속성에 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]입니다. 사용 하 여 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 속성 개발 및 지역화 간의 변경 내용을 추적 합니다. <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 속성에 새 개발 변경 내용을 지역화할 수 있습니다. 수동으로 추가한 경우 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 속성을 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], 작업은 지루할 정확도 낮아집니다.  
+- 사용 하 여 `msbuild -t:updateuid` 및 `-t:checkuid` 추가 하 고 검사 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 의 속성에 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]입니다. 사용 하 여 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 속성 개발 및 지역화 간의 변경 내용을 추적 합니다. <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 속성에 새 개발 변경 내용을 지역화할 수 있습니다. 수동으로 추가한 경우 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 속성을 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], 작업은 지루할 정확도 낮아집니다.  
   
-    -   편집 하거나 변경 하지 않는 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 지역화를 시작한 후에 속성입니다.  
+    - 편집 하거나 변경 하지 않는 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 지역화를 시작한 후에 속성입니다.  
   
-    -   중복을 사용 하지 않는 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 속성 (복사 및 붙여넣기 명령을 사용 하는 경우이 팁 기억).  
+    - 중복을 사용 하지 않는 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 속성 (복사 및 붙여넣기 명령을 사용 하는 경우이 팁 기억).  
   
-    -   설정 된 `UltimateResourceFallback` AssemblyInfo.* 대체 (fallback)에 대 한 적절 한 언어를 지정한 위치 (예를 들어 `[assembly: NeutralResourcesLanguage("en-US",   UltimateResourceFallbackLocation.Satellite)]`).  
+    - 설정 된 `UltimateResourceFallback` AssemblyInfo.* 대체 (fallback)에 대 한 적절 한 언어를 지정한 위치 (예를 들어 `[assembly: NeutralResourcesLanguage("en-US",   UltimateResourceFallbackLocation.Satellite)]`).  
   
          생략 하 여 주 어셈블리에서 소스 언어를 포함 하려는 경우는 `<UICulture>` 프로젝트 파일의 태그를 설정 합니다 `UltimateResourceFallback` 위성이 아닌 주 어셈블리와 위치 (예를 들어 `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.MainAssembly)]`).  
   
@@ -72,19 +72,19 @@ ms.locfileid: "58819582"
 
 지역화 하는 경우는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 몇 가지 옵션이 있습니다. 예를 들어, 응용 프로그램의 지역화 가능한 리소스를 바인딩할 수 있습니다는 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 파일, 지역화 가능 텍스트를 resx 테이블에에서 저장 또는 사용 하 여 지역화 담당자가 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 파일입니다. 이 섹션에서는 몇 가지 이점을 제공 하는 XAML의 BAML 양식을 사용 하는 지역화 워크플로를 설명 합니다.  
   
--   구성한 후에 지역화할 수 있습니다.  
+- 구성한 후에 지역화할 수 있습니다.  
   
--   개발 하는 동시에 지역화할 수 있도록 이전 버전의 BAML 양식의 XAML에서 지역화 된 BAML 양식의 XAML의 최신 버전으로도 업데이트할 수 있습니다.  
+- 개발 하는 동시에 지역화할 수 있도록 이전 버전의 BAML 양식의 XAML에서 지역화 된 BAML 양식의 XAML의 최신 버전으로도 업데이트할 수 있습니다.  
   
--   확인할 수 있습니다 원래 소스 요소와 의미 체계 컴파일 타임에 BAML 양식의 XAML의 컴파일된 형태 이므로 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다.  
+- 확인할 수 있습니다 원래 소스 요소와 의미 체계 컴파일 타임에 BAML 양식의 XAML의 컴파일된 형태 이므로 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다.  
   
 ### <a name="localization-build-process"></a>지역화 빌드 프로세스  
 
 개발 하는 경우는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 지역화를 위한 빌드 프로세스는 다음과 같습니다.  
   
--   개발자가 만들고 전역화 합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다. 프로젝트 파일에서 개발자 설정 `<UICulture>en-US</UICulture>` 응용 프로그램을 컴파일할 때 있도록 언어 중립적 주 어셈블리가 생성 됩니다. 이 어셈블리에는 지역화 가능한 모든 리소스가 포함된 위성 .resources.dll 파일이 있습니다. 필요에 따라 있습니다 수 소스 언어를 유지할 주 어셈블리에 있으므로 지역화 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 주 어셈블리에서의 추출을 지원 합니다.  
+- 개발자가 만들고 전역화 합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다. 프로젝트 파일에서 개발자 설정 `<UICulture>en-US</UICulture>` 응용 프로그램을 컴파일할 때 있도록 언어 중립적 주 어셈블리가 생성 됩니다. 이 어셈블리에는 지역화 가능한 모든 리소스가 포함된 위성 .resources.dll 파일이 있습니다. 필요에 따라 있습니다 수 소스 언어를 유지할 주 어셈블리에 있으므로 지역화 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 주 어셈블리에서의 추출을 지원 합니다.  
   
--   파일을 빌드, 컴파일될 때는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] XAML의 BAML 양식으로 변환 됩니다. 문화권에 중립적인 `MyDialog.exe` 와 문화권에 종속적인 (영어) `MyDialog.resources.dll` 파일이 영어권 고객에 게 릴리스됩니다.  
+- 파일을 빌드, 컴파일될 때는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] XAML의 BAML 양식으로 변환 됩니다. 문화권에 중립적인 `MyDialog.exe` 와 문화권에 종속적인 (영어) `MyDialog.resources.dll` 파일이 영어권 고객에 게 릴리스됩니다.  
   
 ### <a name="localization-workflow"></a>지역화 워크플로
 

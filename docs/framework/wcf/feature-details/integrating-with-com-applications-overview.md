@@ -5,11 +5,11 @@ helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
 ms.openlocfilehash: 182e5f41498d8f5e3fcbc4b84aa7e86b67ce3ccc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047011"
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM 응용 프로그램과 통합 개요
 Windows Communication Foundation (WCF)은 관리 코드 개발자와 연결 된 응용 프로그램을 만들기 위한 풍부한 환경 제공 합니다. 그러나 관리 되지 않는 COM 기반 코드에 상당한 투자를 포함 하 고 마이그레이션 하지 않으려는 경우 통합할 수 있습니다 여전히 WCF 웹 서비스 기존 코드에 직접 WCF 서비스 모니커를 사용 하 여. 서비스 모니커는 Office VBA, Visual Basic 6.0 또는 Visual C++ 6.0과 같은 다양한 범위의 COM 기반 개발 환경에서 사용할 수 있습니다.  
@@ -21,11 +21,11 @@ Windows Communication Foundation (WCF)은 관리 코드 개발자와 연결 된 
   
  다른 WCF 클라이언트 모니커를 사용 하는 경우, 공통 된 응용 프로그램 주소, 바인딩 및 서비스와 통신 하는 계약을 지정 합니다. 계약은 다음 방법 중 하나로 지정할 수 있습니다.  
   
--   형식화된 계약 – 계약이 클라이언트 컴퓨터에 COM 노출 형식으로 등록됩니다.  
+- 형식화된 계약 – 계약이 클라이언트 컴퓨터에 COM 노출 형식으로 등록됩니다.  
   
--   WSDL 계약 – 계약이 WSDL 문서 형식으로 제공됩니다.  
+- WSDL 계약 – 계약이 WSDL 문서 형식으로 제공됩니다.  
   
--   MEX 계약 – 계약이 MEX(메타데이터 교환) 엔드포인트에서 런타임에 검색됩니다.  
+- MEX 계약 – 계약이 MEX(메타데이터 교환) 엔드포인트에서 런타임에 검색됩니다.  
   
 ## <a name="parameters-supported-by-the-service-moniker"></a>서비스 모니커에서 지원하는 매개 변수  
  다음 표에서는 서비스 모니커에서 지원하는 매개 변수를 보여 줍니다.  

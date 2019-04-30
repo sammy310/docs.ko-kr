@@ -3,11 +3,11 @@ title: Windows Communication Foundation에 대해 Internet Information Services 
 ms.date: 03/30/2017
 ms.assetid: 1050d395-092e-44d3-b4ba-66be3b039ffb
 ms.openlocfilehash: 53ba48d47d30bd94ae5544920041cd430526223b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039769"
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>Windows Communication Foundation에 대해 Internet Information Services 7.0 구성
 
@@ -22,11 +22,11 @@ IIS(인터넷 정보 서비스) 7.0은 필요한 구성 요소를 선택적으�
 
  이 기능에는 다음과 같은 하위 구성 요소가 있습니다.
 
--   .NET 환경
+- .NET 환경
 
--   구성 API
+- 구성 API
 
--   프로세스 모델
+- 프로세스 모델
 
  만 WAS의 루트 노드를 선택 하는 경우는 **프로세스 모델** 하위 노드는 기본적으로 선택 됩니다. 이 설치에서는 웹 서버에 대한 지원이 없으므로 WAS만 설치됩니다.
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Button control [WPF]
 ms.assetid: a9d8f5a5-c98c-463e-808a-5a4e63173098
 ms.openlocfilehash: 277338ae11090fa3701135cd0ac761da0a887255
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051886"
 ---
 # <a name="button"></a>단추
 A <xref:System.Windows.Controls.Button> 마우스, 키보드, 스타일러스 또는 기타 입력된 장치 및 발생에서 사용자 입력에 반응 하는 컨트롤을 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다. A <xref:System.Windows.Controls.Button> 기본 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 텍스트와 같은 단순 콘텐츠를 포함할 수 고와 이미지 같은 복합 컨텐츠도 포함 될 수도 있습니다는 구성 요소 및 <xref:System.Windows.Controls.Panel> 컨트롤입니다.  

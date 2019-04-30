@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ParamArray keyword [Visual Basic], syntax
 ms.assetid: a5f18789-92bd-488f-9c7e-cf3719963635
 ms.openlocfilehash: b9dee0fc876c6e7a02d085db7db4bf1c5dd2c68d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053914"
 ---
 # <a name="paramarray-visual-basic"></a>ParamArray(Visual Basic)
 프로시저 매개 변수가 지정 된 형식의 요소 선택적 배열 임을 지정 합니다. `ParamArray` 매개 변수 목록의 마지막 매개 변수 에서만 사용할 수 있습니다.  

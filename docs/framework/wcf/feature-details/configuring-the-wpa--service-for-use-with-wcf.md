@@ -3,22 +3,22 @@ title: Windows Communication Foundation과 함께 사용하도록 Windows Proces
 ms.date: 03/30/2017
 ms.assetid: 1d50712e-53cd-4773-b8bc-a1e1aad66b78
 ms.openlocfilehash: a4c331465087c6910cb67a71d2153e08f82a6cd6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039704"
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>Windows Communication Foundation과 함께 사용하도록 Windows Process Activation Service 구성
 이 항목에서는에 Windows Process Activation Service (WAS 라고도 함)을 설정 하는 데 필요한 단계를 설명 [!INCLUDE[wv](../../../../includes/wv-md.md)] HTTP를 통해 통신 하지 않는 서비스 네트워크 프로토콜을 Windows Communication Foundation (WCF)를 호스트 합니다. 다음 단원에서는 이 구성 단계에 대해 간략히 설명합니다.  
   
--   설치 (또는 설치를 확인) WCF 활성화 구성 요소가 필요 합니다.  
+- 설치 (또는 설치를 확인) WCF 활성화 구성 요소가 필요 합니다.  
   
--   사용할 네트워크 프로토콜 바인딩으로 WAS 사이트를 만들거나 새 프로토콜 바인딩을 기존 사이트에 추가합니다.  
+- 사용할 네트워크 프로토콜 바인딩으로 WAS 사이트를 만들거나 새 프로토콜 바인딩을 기존 사이트에 추가합니다.  
   
--   서비스를 호스팅할 응용 프로그램을 만들고 이 응용 프로그램에서 필요한 네트워크 프로토콜을 사용하도록 설정합니다.  
+- 서비스를 호스팅할 응용 프로그램을 만들고 이 응용 프로그램에서 필요한 네트워크 프로토콜을 사용하도록 설정합니다.  
   
--   HTTP가 아닌 끝점을 노출 하는 WCF 서비스를 빌드하십시오.  
+- HTTP가 아닌 끝점을 노출 하는 WCF 서비스를 빌드하십시오.  
   
 ## <a name="configuring-a-site-with-non-http-bindings"></a>HTTP가 아닌 바인딩을 사용하여 사이트 구성  
  WAS에 HTTP가 아닌 바인딩을 사용하려면 사이트 바인딩을 WAS 구성에 추가해야 합니다. WAS에 대한 구성 저장소는 %windir%\system32\inetsrv\config 디렉터리에 있는 applicationHost.config 파일입니다. WAS와 IIS 7.0에서 이 구성 저장소를 공유합니다.  

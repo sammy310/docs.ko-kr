@@ -6,40 +6,40 @@ helpviewer_keywords:
 - documents [WPF], flow content elements
 ms.assetid: 70fa11cd-5fa7-4872-a1cc-04d80f1132be
 ms.openlocfilehash: df591304736adf1725b2b4235149bd426fe15216
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052354"
 ---
 # <a name="how-to-use-flow-content-elements"></a>방법: 유동 콘텐츠 요소 사용
 다음 예제에서는 다양한 유동 콘텐츠 요소 및 연결된 특성에 대한 선언적 사용을 보여 줍니다.  여기서 설명하는 요소와 특성은 다음과 같습니다.  
   
--   <xref:System.Windows.Documents.Bold> 요소  
+- <xref:System.Windows.Documents.Bold> 요소  
   
--   <xref:System.Windows.Documents.Block.BreakPageBefore%2A> 특성  
+- <xref:System.Windows.Documents.Block.BreakPageBefore%2A> 특성  
   
--   <xref:System.Windows.Documents.TextElement.FontSize%2A> 특성  
+- <xref:System.Windows.Documents.TextElement.FontSize%2A> 특성  
   
--   <xref:System.Windows.Documents.Italic> 요소  
+- <xref:System.Windows.Documents.Italic> 요소  
   
--   <xref:System.Windows.Documents.LineBreak> 요소  
+- <xref:System.Windows.Documents.LineBreak> 요소  
   
--   <xref:System.Windows.Documents.List> 요소  
+- <xref:System.Windows.Documents.List> 요소  
   
--   <xref:System.Windows.Documents.ListItem> 요소  
+- <xref:System.Windows.Documents.ListItem> 요소  
   
--   <xref:System.Windows.Documents.Paragraph> 요소  
+- <xref:System.Windows.Documents.Paragraph> 요소  
   
--   <xref:System.Windows.Documents.Run> 요소  
+- <xref:System.Windows.Documents.Run> 요소  
   
--   <xref:System.Windows.Documents.Section> 요소  
+- <xref:System.Windows.Documents.Section> 요소  
   
--   <xref:System.Windows.Documents.Span> 요소  
+- <xref:System.Windows.Documents.Span> 요소  
   
--   <xref:System.Windows.Documents.Typography.Variants%2A> 특성 (위 첨자 및 아래 첨자)  
+- <xref:System.Windows.Documents.Typography.Variants%2A> 특성 (위 첨자 및 아래 첨자)  
   
--   <xref:System.Windows.Documents.Underline> 요소  
+- <xref:System.Windows.Documents.Underline> 요소  
   
 ## <a name="example"></a>예제  
  [!code-xaml[FlowDocInlineSnippets#_InlineElementsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocInlineSnippets/CS/document.xaml#_inlineelementsxaml)]

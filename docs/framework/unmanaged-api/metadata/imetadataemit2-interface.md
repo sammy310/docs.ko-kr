@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87b5b60d75d5d28e100ec75192d0cacf51765927
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62042975"
 ---
 # <a name="imetadataemit2-interface"></a>IMetaDataEmit2 인터페이스
 확장 된 [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) 주로 제네릭 형식을 사용 하는 기능을 제공 하는 인터페이스입니다.  

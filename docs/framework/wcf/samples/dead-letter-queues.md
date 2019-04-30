@@ -3,11 +3,11 @@ title: 배달 못 한 편지 큐
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
 ms.openlocfilehash: 379b6901e835a6820d194edda1d7727df789bfd8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051964"
 ---
 # <a name="dead-letter-queues"></a>배달 못 한 편지 큐
 이 샘플에서는 배달에 실패한 메시지를 처리하는 방법을 보여 줍니다. 기반이 되는 [트랜잭션 된 MSMQ 바인딩](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) 샘플입니다. 이 샘플에서는 `netMsmqBinding` 바인딩을 사용합니다. 이 서비스는 자체적으로 호스트되는 콘솔 응용 프로그램으로서 이를 사용하여 서비스에서 대기된 메시지를 받는 것을 볼 수 있습니다.
@@ -24,15 +24,15 @@ ms.locfileid: "59334096"
 
  `NetMsmqBinding` 바인딩에서 배달 못 한 편지 큐는 다음과 같은 속성으로 표현됩니다.
 
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> 속성은 클라이언트에 필요한 배달 못 한 편지 큐의 종류를 표현합니다. 이 열거형에는 다음과 같은 값이 있습니다.
+- <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> 속성은 클라이언트에 필요한 배달 못 한 편지 큐의 종류를 표현합니다. 이 열거형에는 다음과 같은 값이 있습니다.
 
--   `None`: 배달 못 한 편지 큐는 클라이언트가 필요 합니다.
+- `None`: 배달 못 한 편지 큐는 클라이언트가 필요 합니다.
 
--   `System`: 시스템 배달 못 한 편지 큐는 배달 못 한 메시지를 저장할 사용 됩니다. 배달 못 한 편지 시스템 큐는 컴퓨터에서 실행되는 모든 응용 프로그램에서 공유합니다.
+- `System`: 시스템 배달 못 한 편지 큐는 배달 못 한 메시지를 저장할 사용 됩니다. 배달 못 한 편지 시스템 큐는 컴퓨터에서 실행되는 모든 응용 프로그램에서 공유합니다.
 
--   `Custom`: 사용 하 여 지정 된 사용자 지정 배달 못 한 편지 큐는 <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 속성은 배달 못 한 메시지를 저장 하는 데 사용 됩니다. 이 기능은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다. 이 기능은 응용 프로그램이 동일한 컴퓨터에서 실행되는 다른 응용 프로그램과 배달 못 한 편지 큐를 공유하지 않고 고유한 배달 못 한 편지 큐를 사용해야 하는 경우에 사용됩니다.
+- `Custom`: 사용 하 여 지정 된 사용자 지정 배달 못 한 편지 큐는 <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 속성은 배달 못 한 메시지를 저장 하는 데 사용 됩니다. 이 기능은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다. 이 기능은 응용 프로그램이 동일한 컴퓨터에서 실행되는 다른 응용 프로그램과 배달 못 한 편지 큐를 공유하지 않고 고유한 배달 못 한 편지 큐를 사용해야 하는 경우에 사용됩니다.
 
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 속성은 배달 못 한 편지 큐로 사용할 특정 큐를 표현합니다. 이 속성은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다.
+- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 속성은 배달 못 한 편지 큐로 사용할 특정 큐를 표현합니다. 이 속성은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다.
 
  이 샘플에서 클라이언트는 트랜잭션 범위 내에서 서비스로 일괄 처리 메시지를 보내고 이러한 메시지의 "TTL(Time-To-Live)" 값을 임의로 낮게 지정합니다(약 2초). 또한 클라이언트는 사용자 지정 배달 못 한 편지 큐를 지정하여 만료된 메시지를 큐에 삽입하는 데 사용합니다.
 
@@ -314,15 +314,15 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
 2. 서비스가 처음 실행되는 경우 서비스에서는 큐가 있는지 확인하고 큐가 없으면 큐를 만듭니다. 서비스를 처음 실행하여 큐를 만들거나 MSMQ 큐 관리자를 통해 큐를 만들 수 있습니다. Windows 2008에서 큐를 만들려면 다음 단계를 수행하세요.
 
-    1.  Visual Studio 2012의 서버 관리자를 엽니다.
+    1. Visual Studio 2012의 서버 관리자를 엽니다.
 
-    2.  확장 된 **기능** 탭 합니다.
+    2. 확장 된 **기능** 탭 합니다.
 
-    3.  마우스 오른쪽 단추로 클릭 **개인 메시지 큐**, 선택한 **새로 만들기**합니다 **개인 큐**합니다.
+    3. 마우스 오른쪽 단추로 클릭 **개인 메시지 큐**, 선택한 **새로 만들기**합니다 **개인 큐**합니다.
 
-    4.  확인 합니다 **트랜잭션** 상자입니다.
+    4. 확인 합니다 **트랜잭션** 상자입니다.
 
-    5.  입력 `ServiceModelSamplesTransacted` 새 대기열의 이름으로 합니다.
+    5. 입력 `ServiceModelSamplesTransacted` 새 대기열의 이름으로 합니다.
 
 3. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.
 

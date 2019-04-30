@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5e36cb91c3ef741badb04b54e2b62158ecf6ced1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62045632"
 ---
 # <a name="cormethodsemanticsattr-enumeration"></a>CorMethodSemanticsAttr 열거형
 메서드와 관련 속성 또는 이벤트 간의 관계를 설명하는 값을 포함합니다.  

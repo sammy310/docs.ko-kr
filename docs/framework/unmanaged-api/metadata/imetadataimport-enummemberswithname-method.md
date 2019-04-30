@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c2509945d2799b81e036888d146a51cee87fda09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62042720"
 ---
 # <a name="imetadataimportenummemberswithname-method"></a>IMetaDataImport::EnumMembersWithName 메서드
 지정한 이름을 가진 지정한 형식의 멤버를 나타내는 MemberDef 토큰을 열거합니다.  

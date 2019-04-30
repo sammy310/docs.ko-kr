@@ -9,11 +9,11 @@ helpviewer_keywords:
 - keys [WPF], Enter
 ms.assetid: a66f39d2-ef4a-43a5-b454-a4ea0fe88655
 ms.openlocfilehash: a99da5804bbc31897198b9b6d9e21da9f17dfe26
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051418"
 ---
 # <a name="how-to-detect-when-the-enter-key-pressed"></a>방법: 탐지를 누른 키를 입력 합니다.
 시기를 감지 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Input.Key.Enter> 키보드의 키가 눌러져 있습니다.  

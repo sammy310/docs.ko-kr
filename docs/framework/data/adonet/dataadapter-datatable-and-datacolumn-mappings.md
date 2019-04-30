@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
 ms.openlocfilehash: 54af7c2f449f8eb289841fb3eca357c6916404aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032697"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>DataAdapter DataTable 및 DataColumn 매핑
 A **DataAdapter** 0 개 이상의 컬렉션을 포함 <xref:System.Data.Common.DataTableMapping> 개체에 해당 **TableMappings** 속성입니다. A **DataTableMapping** 데이터 원본에 대해 쿼리에서 반환 된 데이터 간의 마스터 매핑을 제공 및 <xref:System.Data.DataTable>합니다. **DataTableMapping** 이름 자리에 전달 될 수 있습니다를 **DataTable** 이름를 **채우기** 메서드를 **DataAdapter**합니다. 다음 예에서는 **DataTableMapping** 라는 **AuthorsMapping** 에 대 한 합니다 **작성자** 테이블입니다.  

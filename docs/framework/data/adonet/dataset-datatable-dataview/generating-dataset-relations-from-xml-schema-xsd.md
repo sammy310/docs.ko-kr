@@ -3,20 +3,20 @@ title: XSD(XML 스키마)에서 데이터 집합 관계 생성
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
 ms.openlocfilehash: 29c0e9ee96c376c6da392692febccbbae3c6a33f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034322"
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>XSD(XML 스키마)에서 데이터 집합 관계 생성
 <xref:System.Data.DataSet>에서는 부모-자식 관계를 만들어 둘 이상의 열을 연결시킵니다. 나타내는 세 가지는 **데이터 집합** XML 스키마 정의 언어 (XSD) 스키마 내의 관계:  
   
--   중첩된 복합 형식을 지정합니다.  
+- 중첩된 복합 형식을 지정합니다.  
   
--   사용 된 **msdata: relationship** 주석입니다.  
+- 사용 된 **msdata: relationship** 주석입니다.  
   
--   지정는 **xs: keyref** 없이 **사용** 주석입니다.  
+- 지정는 **xs: keyref** 없이 **사용** 주석입니다.  
   
 ## <a name="nested-complex-types"></a>중첩된 복합 형식  
  스키마에서 중첩된 복합 형식의 정의는 요소의 부모-자식 관계를 나타냅니다. 다음 XML 스키마 조각에 따르면 **OrderDetail** 의 자식 요소를 **순서** 요소입니다.  

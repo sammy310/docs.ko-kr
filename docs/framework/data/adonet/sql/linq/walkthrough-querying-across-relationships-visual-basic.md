@@ -5,11 +5,11 @@ dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
 ms.openlocfilehash: abd4941697639ec7bdda545b1ead8d57091e9e7f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038443"
 ---
 # <a name="walkthrough-querying-across-relationships-visual-basic"></a>연습: 관계 간 쿼리(Visual Basic)
 이 연습에서는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *연결* 데이터베이스에서 외래 키 관계를 나타내는입니다.  
@@ -24,18 +24,18 @@ ms.locfileid: "59314661"
 ## <a name="overview"></a>개요  
  이 연습은 다음과 같은 세 가지 주요 작업으로 구성됩니다.  
   
--   Northwind 샘플 데이터베이스의 Orders 테이블을 나타내는 엔터티 클래스 추가  
+- Northwind 샘플 데이터베이스의 Orders 테이블을 나타내는 엔터티 클래스 추가  
   
--   `Customer` 및 `Customer` 클래스 간의 관계를 향상시키기 위해 `Order` 클래스에 주석 추가  
+- `Customer` 및 `Customer` 클래스 간의 관계를 향상시키기 위해 `Order` 클래스에 주석 추가  
   
--   `Order` 클래스를 사용하여 `Customer` 정보를 가져오는 과정을 테스트하는 쿼리 만들기 및 실행  
+- `Order` 클래스를 사용하여 `Customer` 정보를 가져오는 과정을 테스트하는 쿼리 만들기 및 실행  
   
 ## <a name="mapping-relationships-across-tables"></a>테이블 간 관계 매핑  
  `Customer` 클래스 정의 후에 `Order`가 외래 키로 `Orders.Customer`에 관련된다는 것을 나타내는 다음 코드가 포함된 `Customers.CustomerID` 엔터티 클래스 정의를 만듭니다.  
   
 #### <a name="to-add-the-order-entity-class"></a>Order 엔터티 클래스를 추가하려면  
   
--   `Customer` 클래스 뒤에 다음 코드를 입력하거나 붙여넣습니다.  
+- `Customer` 클래스 뒤에 다음 코드를 입력하거나 붙여넣습니다.  
   
      [!code-vb[DLinqWalk2VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#1)]  
   
@@ -44,7 +44,7 @@ ms.locfileid: "59314661"
   
 #### <a name="to-annotate-the-customer-class"></a>Customer 클래스에 주석을 달려면  
   
--   `Customer` 클래스에 다음 코드를 입력하거나 붙여넣습니다.  
+- `Customer` 클래스에 다음 코드를 입력하거나 붙여넣습니다.  
   
      [!code-vb[DLinqWalk2VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#2)]  
   

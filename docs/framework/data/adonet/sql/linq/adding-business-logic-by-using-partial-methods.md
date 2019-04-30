@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 3a73991e-fd4e-4610-93fb-7ced4dc6b7f9
 ms.openlocfilehash: ea7dbc4f760a446440cb7291413d69b1202f80e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033841"
 ---
 # <a name="adding-business-logic-by-using-partial-methods"></a>Partial 메서드를 사용하여 비즈니스 논리 추가
 Visual Basic을 사용자 지정할 수 있습니다 하 고 C# 에서 생성 된 코드에 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 사용 하 여 프로젝트 *부분 메서드*합니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 생성한 코드에는 부분 메서드의 일부로 시그니처를 정의합니다. 메서드를 구현하려면 사용자 고유의 부분 메서드를 추가합니다. 사용자 고유의 구현을 추가하지 않으면 컴파일러에서는 부분 메서드 시그니처를 취소하고 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]의 기본 메서드를 호출합니다.  

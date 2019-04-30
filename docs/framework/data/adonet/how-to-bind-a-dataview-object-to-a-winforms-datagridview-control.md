@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2b73d60a-6049-446a-85a7-3e5a68b183e2
 ms.openlocfilehash: 7035c96208f6cad1f606727894e9d05aa51024a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033932"
 ---
 # <a name="how-to-bind-a-dataview-object-to-a-windows-forms-datagridview-control"></a>방법: Windows Forms DataGridView 컨트롤에 DataView 개체 바인딩
 <xref:System.Windows.Forms.DataGridView> 컨트롤에서는 데이터를 표 형식으로 표시하는 강력하고 유연한 방법을 제공합니다. <xref:System.Windows.Forms.DataGridView> 컨트롤은 표준 Windows Forms 데이터 바인딩 모델을 지원하므로 <xref:System.Data.DataView> 및 다양한 데이터 소스에 바인딩합니다. 그러나 대부분의 경우 데이터 소스와의 상호 작용에 대한 세부 사항을 관리하는 <xref:System.Windows.Forms.BindingSource> 구성 요소에 바인딩합니다.  

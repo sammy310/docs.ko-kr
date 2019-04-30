@@ -3,11 +3,11 @@ title: 포이즌 메시지 처리
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
 ms.openlocfilehash: fe748ac40f03ed22cacb254ab464a6caf3d27a8c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046444"
 ---
 # <a name="poison-message-handling"></a>포이즌 메시지 처리
 A *포이즌 메시지* 응용 프로그램에 배달 시도 최대 횟수를 초과한 메시지입니다. 큐 기반 응용 프로그램에서 오류로 인해 메시지를 처리할 수 없는 경우 이러한 상황이 발생할 수 있습니다. 안정성 요청을 충족하려면 대기 중인 응용 프로그램이 트랜잭션에서 메시지를 받습니다. 대기 중인 메시지를 받은 트랜잭션을 중단하면 메시지가 큐에 남으므로 새 트랜잭션에서 해당 메시지가 다시 시도됩니다. 트랜잭션의 중단 문제가 해결되지 않은 경우에는 수신 응용 프로그램이 최대 전달 시도 횟수를 초과할 때까지 같은 메시지를 받고 중단하는 루프에 갇히고, 포이즌 메시지가 발생합니다.  
@@ -19,27 +19,27 @@ A *포이즌 메시지* 응용 프로그램에 배달 시도 최대 횟수를 �
 ## <a name="handling-poison-messages"></a>포이즌 메시지 처리  
  Wcf에서 포이즌 메시지 처리 응용 프로그램에 디스패치할 수 없는 메시지나 응용 프로그램에 디스패치되는 하지만 응용 프로그램별 인해 처리 하지 못한 메시지를 처리 하는 수신 응용 프로그램에 대 한 메커니즘을 제공 이유입니다. 포이즌 메시지 처리는 대기 중인 사용 가능한 각 바인딩에서 다음 속성으로 구성됩니다.  
   
--   `ReceiveRetryCount`. 응용 프로그램 큐에서 응용 프로그램으로 메시지 전달을 다시 시도하는 최대 횟수를 나타내는 정수 값입니다. 기본값은 5입니다. 이 값은 데이터베이스의 임시 교착 상태처럼 문제 해결을 즉시 다시 시도하는 경우 충분합니다.  
+- `ReceiveRetryCount`. 응용 프로그램 큐에서 응용 프로그램으로 메시지 전달을 다시 시도하는 최대 횟수를 나타내는 정수 값입니다. 기본값은 5입니다. 이 값은 데이터베이스의 임시 교착 상태처럼 문제 해결을 즉시 다시 시도하는 경우 충분합니다.  
   
--   `MaxRetryCycles`. 최대 재시도 주기 수를 나타내는 정수 값입니다. 재시도 주기는 응용 프로그램 큐에서 재시도 하위 큐로 메시지를 전송하고, 구성 가능한 지연 시간 이후 재시도 하위 큐에서 전달을 다시 시도할 응용 프로그램 큐로 메시지를 다시 전송하는 것으로 구성됩니다. 기본값은 2입니다. [!INCLUDE[wv](../../../../includes/wv-md.md)]에서는 메시지가 최대 (`ReceiveRetryCount` +1) * (`MaxRetryCycles` + 1)회까지 시도됩니다. `MaxRetryCycles`는 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 무시됩니다.  
+- `MaxRetryCycles`. 최대 재시도 주기 수를 나타내는 정수 값입니다. 재시도 주기는 응용 프로그램 큐에서 재시도 하위 큐로 메시지를 전송하고, 구성 가능한 지연 시간 이후 재시도 하위 큐에서 전달을 다시 시도할 응용 프로그램 큐로 메시지를 다시 전송하는 것으로 구성됩니다. 기본값은 2입니다. [!INCLUDE[wv](../../../../includes/wv-md.md)]에서는 메시지가 최대 (`ReceiveRetryCount` +1) * (`MaxRetryCycles` + 1)회까지 시도됩니다. `MaxRetryCycles`는 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 무시됩니다.  
   
--   `RetryCycleDelay`. 재시도 주기 사이의 지연 시간입니다. 기본값은 30분입니다. `MaxRetryCycles` 및 `RetryCycleDelay`는 함께 정기적인 지연 시간 이후 재시도로 문제를 해결하는 문제 해결 메커니즘을 제공합니다. 예를 들면, 이 핸들은 SQL Server의 보류 중인 트랜잭션 커밋에 설정된 잠긴 행을 처리합니다.  
+- `RetryCycleDelay`. 재시도 주기 사이의 지연 시간입니다. 기본값은 30분입니다. `MaxRetryCycles` 및 `RetryCycleDelay`는 함께 정기적인 지연 시간 이후 재시도로 문제를 해결하는 문제 해결 메커니즘을 제공합니다. 예를 들면, 이 핸들은 SQL Server의 보류 중인 트랜잭션 커밋에 설정된 잠긴 행을 처리합니다.  
   
--   `ReceiveErrorHandling`. 최대 재시도 횟수만큼 시도한 후에 전달하지 못한 메시지에 대해 수행할 작업을 나타내는 열거입니다. 이 값은 Fault, Drop, Reject 및 Move일 수 있습니다. 기본 옵션은 Fault입니다.  
+- `ReceiveErrorHandling`. 최대 재시도 횟수만큼 시도한 후에 전달하지 못한 메시지에 대해 수행할 작업을 나타내는 열거입니다. 이 값은 Fault, Drop, Reject 및 Move일 수 있습니다. 기본 옵션은 Fault입니다.  
   
--   Fault. 이 옵션은 `ServiceHost`에 오류를 일으키는 수신기에 오류를 보냅니다. 애플리케이션이 큐의 메시지를 계속 처리하려면 외부 메커니즘을 통해 애플리케이션 큐에서 메시지를 제거해야 합니다.  
+- Fault. 이 옵션은 `ServiceHost`에 오류를 일으키는 수신기에 오류를 보냅니다. 애플리케이션이 큐의 메시지를 계속 처리하려면 외부 메커니즘을 통해 애플리케이션 큐에서 메시지를 제거해야 합니다.  
   
--   Drop. 이 옵션은 포이즌 메시지를 삭제하므로 메시지가 응용 프로그램에 전달되지 않습니다. 메시지의 `TimeToLive` 속성이 이 시점에서 만료되면 메시지가 보낸 사람의 배달 못 한 큐에 표시될 수 있습니다. 그렇지 않으면 메시지는 아무 곳에서도 표시되지 않습니다. 이 옵션은 메시지가 손실된 경우 사용자가 수행할 작업을 지정하지 않았음을 나타냅니다.  
+- Drop. 이 옵션은 포이즌 메시지를 삭제하므로 메시지가 응용 프로그램에 전달되지 않습니다. 메시지의 `TimeToLive` 속성이 이 시점에서 만료되면 메시지가 보낸 사람의 배달 못 한 큐에 표시될 수 있습니다. 그렇지 않으면 메시지는 아무 곳에서도 표시되지 않습니다. 이 옵션은 메시지가 손실된 경우 사용자가 수행할 작업을 지정하지 않았음을 나타냅니다.  
   
--   Reject. 이 옵션은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다. 이 옵션은 메시지 큐(MSMQ)에 응용 프로그램이 메시지를 받을 수 없는 전송 큐 관리자에게 부정 승인을 다시 보내도록 지시합니다. 이 메시지는 전송 큐 관리자의 배달 못한 편지 큐에 배치됩니다.  
+- Reject. 이 옵션은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다. 이 옵션은 메시지 큐(MSMQ)에 응용 프로그램이 메시지를 받을 수 없는 전송 큐 관리자에게 부정 승인을 다시 보내도록 지시합니다. 이 메시지는 전송 큐 관리자의 배달 못한 편지 큐에 배치됩니다.  
   
--   Move. 이 옵션은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다. 이 옵션은 포이즌 메시지 처리 응용 프로그램이 나중에 처리할 수 있도록 포이즌 메시지를 포이즌 메시지 큐로 이동합니다. 포이즌 메시지 큐는 응용 프로그램 큐의 하위 큐입니다. 포이즌 메시지 처리 응용 프로그램을 포이즌 큐에서 메시지를 읽는 WCF 서비스를 수 있습니다. 포이즌 큐는 응용 프로그램 큐의 하위 큐 및 net.msmq://로 주소가 지정 될 수 있습니다\<*컴퓨터 이름*>/*applicationQueue*; poison, 여기서  *컴퓨터 이름* 큐 상주 하는 컴퓨터의 이름이 고 *applicationQueue* 응용 프로그램별 큐의 이름입니다.  
+- Move. 이 옵션은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다. 이 옵션은 포이즌 메시지 처리 응용 프로그램이 나중에 처리할 수 있도록 포이즌 메시지를 포이즌 메시지 큐로 이동합니다. 포이즌 메시지 큐는 응용 프로그램 큐의 하위 큐입니다. 포이즌 메시지 처리 응용 프로그램을 포이즌 큐에서 메시지를 읽는 WCF 서비스를 수 있습니다. 포이즌 큐는 응용 프로그램 큐의 하위 큐 및 net.msmq://로 주소가 지정 될 수 있습니다\<*컴퓨터 이름*>/*applicationQueue*; poison, 여기서  *컴퓨터 이름* 큐 상주 하는 컴퓨터의 이름이 고 *applicationQueue* 응용 프로그램별 큐의 이름입니다.  
   
  다음은 메시지에 대한 최대 전달 시도 횟수입니다.  
   
--   [!INCLUDE[wv](../../../../includes/wv-md.md)]의 경우, ((ReceiveRetryCount+1) * (MaxRetryCycles + 1))  
+- [!INCLUDE[wv](../../../../includes/wv-md.md)]의 경우, ((ReceiveRetryCount+1) * (MaxRetryCycles + 1))  
   
--   [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]의 경우, (ReceiveRetryCount + 1)  
+- [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]의 경우, (ReceiveRetryCount + 1)  
   
 > [!NOTE]
 >  전달된 메시지에 대해서는 다시 시도하지 않습니다.  
@@ -52,9 +52,9 @@ A *포이즌 메시지* 응용 프로그램에 배달 시도 최대 횟수를 �
   
  WCF는 두 개의 표준 큐에 대기 중인된 바인딩을 제공합니다.  
   
--   <xref:System.ServiceModel.NetMsmqBinding>. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 다른 WCF 끝점과 큐 기반 통신을 수행 하는 데 적합 한 바인딩입니다.  
+- <xref:System.ServiceModel.NetMsmqBinding>. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 다른 WCF 끝점과 큐 기반 통신을 수행 하는 데 적합 한 바인딩입니다.  
   
--   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. 기존 메시지 큐 응용 프로그램과 통신하는 데 적합한 바인딩입니다.  
+- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. 기존 메시지 큐 응용 프로그램과 통신하는 데 적합한 바인딩입니다.  
   
 > [!NOTE]
 >  WCF 서비스의 요구 사항을 기반으로 이러한 바인딩의 속성을 변경할 수 있습니다. 전체 포이즌 메시지 처리 메커니즘은 수신 응용 프로그램에 로컬입니다. 프로세스는 수신 응용 프로그램이 최종적으로 부정 승인을 중지하고 발신자에게 다시 보내지 않으면 송신 응용 프로그램에 표시되지 않습니다. 이 경우 메시지가 발신자의 배달 못 한 큐로 이동됩니다.  
@@ -97,11 +97,11 @@ A *포이즌 메시지* 응용 프로그램에 배달 시도 최대 횟수를 �
 ## <a name="windows-vista-windows-server-2003-and-windows-xp-differences"></a>Windows Vista, Windows Server 2003 및 Windows XP의 차이점  
  앞에서 설명한 대로 포이즌 메시지 처리 설정의 일부만 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에 적용됩니다. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 및 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 메시지 큐의 주요 차이점은 포이즌 메시지 처리와 관련된 것입니다.  
   
--   [!INCLUDE[wv](../../../../includes/wv-md.md)]의 메시지 큐는 하위 큐를 지원하지만 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]는 하위 큐를 지원하지 않습니다. 하위 큐는 포이즌 메시지 처리에 사용됩니다. 재시도 큐와 포이즌 큐는 포이즌 메시지 처리 설정에 따라 만들어지는 응용 프로그램 큐의 하위 큐입니다. `MaxRetryCycles`는 만들 재시도 하위 큐의 수를 지정합니다. 따라서 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 실행하는 경우 `MaxRetryCycles`는 무시되며 `ReceiveErrorHandling.Move`는 허용되지 않습니다.  
+- [!INCLUDE[wv](../../../../includes/wv-md.md)]의 메시지 큐는 하위 큐를 지원하지만 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]는 하위 큐를 지원하지 않습니다. 하위 큐는 포이즌 메시지 처리에 사용됩니다. 재시도 큐와 포이즌 큐는 포이즌 메시지 처리 설정에 따라 만들어지는 응용 프로그램 큐의 하위 큐입니다. `MaxRetryCycles`는 만들 재시도 하위 큐의 수를 지정합니다. 따라서 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 또는 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 실행하는 경우 `MaxRetryCycles`는 무시되며 `ReceiveErrorHandling.Move`는 허용되지 않습니다.  
   
--   [!INCLUDE[wv](../../../../includes/wv-md.md)]의 메시지 큐는 부정 승인을 지원하지만 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서는 지원하지 않습니다. 받는 큐 관리자에서 네거티브 승인을 사용하면 거부된 메시지가 보내는 큐 관리자의 배달 못한 편지 큐에 들어갑니다. 따라서 `ReceiveErrorHandling.Reject`는 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 허용되지 않습니다.  
+- [!INCLUDE[wv](../../../../includes/wv-md.md)]의 메시지 큐는 부정 승인을 지원하지만 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서는 지원하지 않습니다. 받는 큐 관리자에서 네거티브 승인을 사용하면 거부된 메시지가 보내는 큐 관리자의 배달 못한 편지 큐에 들어갑니다. 따라서 `ReceiveErrorHandling.Reject`는 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 허용되지 않습니다.  
   
--   [!INCLUDE[wv](../../../../includes/wv-md.md)]의 메시지 큐는 메시지 전달 시도 횟수를 보관하는 메시지 속성을 지원합니다. 이 중단 횟수 속성은 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 사용할 수 없습니다. WCF는이 속성 하지 않을 수도 정확한 값을 팜에 있는 둘 이상의 WCF 서비스에서 동일한 메시지를 읽으면 되므로 중단 횟수가 메모리에 유지 합니다.  
+- [!INCLUDE[wv](../../../../includes/wv-md.md)]의 메시지 큐는 메시지 전달 시도 횟수를 보관하는 메시지 속성을 지원합니다. 이 중단 횟수 속성은 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 및 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]에서 사용할 수 없습니다. WCF는이 속성 하지 않을 수도 정확한 값을 팜에 있는 둘 이상의 WCF 서비스에서 동일한 메시지를 읽으면 되므로 중단 횟수가 메모리에 유지 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

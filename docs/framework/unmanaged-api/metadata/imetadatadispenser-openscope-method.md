@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5b94987631f7dbbe39e585a8ea2c2252b9427613
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050170"
 ---
 # <a name="imetadatadispenseropenscope-method"></a>IMetaDataDispenser::OpenScope 메서드
 기존의 디스크에 파일을 열고 해당 메타 데이터를 메모리에 매핑합니다.  

@@ -3,11 +3,11 @@ title: ETW 추적
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
 ms.openlocfilehash: a5c2f173978f514aa4627caa476a595d8d45d4f9
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051926"
 ---
 # <a name="etw-tracing"></a>ETW 추적
 이 샘플에서는 ETW(Windows용 이벤트 추적) 및 이 샘플과 함께 제공된 `ETWTraceListener`를 사용하여 E2E(종단 간) 추적을 구현하는 방법을 보여 줍니다. 샘플을 기반으로 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) 및 ETW 추적을 포함 합니다.  

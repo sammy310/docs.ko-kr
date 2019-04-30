@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: aedbecc1-c33c-4fb4-8861-fdf7e1dc6b8a
 ms.openlocfilehash: 93aa679e02482e5c237c233655ee19f3bae17fd3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032853"
 ---
 # <a name="customizing-operations-by-using-stored-procedures"></a>저장 프로시저를 사용하여 작업 사용자 지정
 저장 프로시저는 기본 동작 재정의에 대한 일반적인 접근 방식을 나타냅니다. 이 항목의 예제에서는 저장 프로시저에 대해 생성된 메서드 래퍼를 사용하는 방법과 저장 프로시저를 직접 호출하는 방법을 보여 줍니다.  

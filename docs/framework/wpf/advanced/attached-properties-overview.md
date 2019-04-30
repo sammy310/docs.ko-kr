@@ -8,11 +8,11 @@ helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
 ms.openlocfilehash: de17fb30358bdf1a8e2a1d6cfc4f5f80fefa1268
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032242"
 ---
 # <a name="attached-properties-overview"></a>연결된 속성 개요
 
@@ -46,11 +46,11 @@ XAML에서 구문 *AttachedPropertyProvider*. *PropertyName*을 사용하여 연
 
 연결된 속성을 개체에 설정할 수 있지만, 속성 설정이 명확한 결과를 생성하거나 다른 개체에서 값을 사용함을 의미하지 않습니다. 일반적으로 다양한 논리적 관계 또는 클래스 계층 구조의 개체가 연결된 속성을 정의하는 형식에 각 보고서 공통 정보를 보고할 수 있도록 연결된 속성이 사용됩니다. 연결된 속성을 정의하는 형식은 이러한 모델 중 하나를 따릅니다.
 
--   연결된 속성의 값을 설정하는 요소의 부모 요소가 될 수 있도록 연결된 속성을 정의하는 형식을 사용할 수 있습니다. 그러면 형식은 일부 개체 트리 구조에 대조적으로 내부 논리를 통해 자식 개체를 반복하며, 값을 가져오며 다른 방법으로 이러한 값에 작업을 수행합니다.
+- 연결된 속성의 값을 설정하는 요소의 부모 요소가 될 수 있도록 연결된 속성을 정의하는 형식을 사용할 수 있습니다. 그러면 형식은 일부 개체 트리 구조에 대조적으로 내부 논리를 통해 자식 개체를 반복하며, 값을 가져오며 다른 방법으로 이러한 값에 작업을 수행합니다.
 
--   연결된 속성을 정의하는 형식은 가능한 다양한 부모 요소와 콘텐츠 모델에 대한 자식 요소로 사용됩니다.
+- 연결된 속성을 정의하는 형식은 가능한 다양한 부모 요소와 콘텐츠 모델에 대한 자식 요소로 사용됩니다.
 
--   연결된 속성을 정의하는 형식은 서비스를 나타냅니다. 다른 형식은 연결된 속성에 대한 값을 설정합니다. 그런 다음 속성을 설정하는 요소를 서비스의 컨텍스트에서 계산하는 경우, 연결된 속성 값은 서비스 클래스의 내부 논리를 통해 얻습니다.
+- 연결된 속성을 정의하는 형식은 서비스를 나타냅니다. 다른 형식은 연결된 속성에 대한 값을 설정합니다. 그런 다음 속성을 설정하는 요소를 서비스의 컨텍스트에서 계산하는 경우, 연결된 속성 값은 서비스 클래스의 내부 논리를 통해 얻습니다.
 
 ### <a name="an-example-of-a-parent-defined-attached-property"></a>부모 정의되어 연결된 속성의 예
 
@@ -102,9 +102,9 @@ Visual Studio WPF 디자이너 지원을 받을 수와 같은 다른 시나리�
 
 `public static object GetPropertyName(object target)`
 
--   구현에서 보다 구체적인 형식으로 `target` 개체를 지정할 수 있습니다. 예를 들어 합니다 <xref:System.Windows.Controls.DockPanel.GetDock%2A?displayProperty=nameWithType> 메서드 형식으로 매개 변수 <xref:System.Windows.UIElement>때문에 연결된 된 속성에 설정할, <xref:System.Windows.UIElement> 인스턴스.
+- 구현에서 보다 구체적인 형식으로 `target` 개체를 지정할 수 있습니다. 예를 들어 합니다 <xref:System.Windows.Controls.DockPanel.GetDock%2A?displayProperty=nameWithType> 메서드 형식으로 매개 변수 <xref:System.Windows.UIElement>때문에 연결된 된 속성에 설정할, <xref:System.Windows.UIElement> 인스턴스.
 
--   구현에서 보다 구체적인 형식으로 반환 값을 지정할 수 있습니다. 예를 들어 합니다 <xref:System.Windows.Controls.DockPanel.GetDock%2A> 메서드 형식으로 <xref:System.Windows.Controls.Dock>이므로 값을 해당 열거형 으로만 설정할 수 있습니다.
+- 구현에서 보다 구체적인 형식으로 반환 값을 지정할 수 있습니다. 예를 들어 합니다 <xref:System.Windows.Controls.DockPanel.GetDock%2A> 메서드 형식으로 <xref:System.Windows.Controls.Dock>이므로 값을 해당 열거형 으로만 설정할 수 있습니다.
 
 #### <a name="the-set-accessor"></a>Set 접근자
 
@@ -112,9 +112,9 @@ Visual Studio WPF 디자이너 지원을 받을 수와 같은 다른 시나리�
 
 `public static void SetPropertyName(object target, object value)`
 
--   구현에서 보다 구체적인 형식으로 `target` 개체를 지정할 수 있습니다. 예를 들어 합니다 <xref:System.Windows.Controls.DockPanel.SetDock%2A> 메서드 형식으로 <xref:System.Windows.UIElement>때문에 연결된 된 속성에 설정할, <xref:System.Windows.UIElement> 인스턴스.
+- 구현에서 보다 구체적인 형식으로 `target` 개체를 지정할 수 있습니다. 예를 들어 합니다 <xref:System.Windows.Controls.DockPanel.SetDock%2A> 메서드 형식으로 <xref:System.Windows.UIElement>때문에 연결된 된 속성에 설정할, <xref:System.Windows.UIElement> 인스턴스.
 
--   구현에서 보다 구체적인 형식으로 `value` 개체를 지정할 수 있습니다. 예를 들어 합니다 <xref:System.Windows.Controls.DockPanel.SetDock%2A> 메서드 형식으로 <xref:System.Windows.Controls.Dock>이므로 값을 해당 열거형 으로만 설정할 수 있습니다. 태그의 연결된 속성 사용에서 연결된 속성에 있는 경우, 이 메서드의 값은 XAML 로더에서 오는 입력값임을 기억하십시오. 해당 입력값은 태그에는 XAML 특성 값으로 지정된 값입니다. 따라서 형식 변환, 값 직렬 변환기 또는 사용하는 형식에 대한 태그 확장 지원이 있어야, 적절한 형식이 특성 값(궁극적으로 문자열만)에서 생성될 수 있습니다.
+- 구현에서 보다 구체적인 형식으로 `value` 개체를 지정할 수 있습니다. 예를 들어 합니다 <xref:System.Windows.Controls.DockPanel.SetDock%2A> 메서드 형식으로 <xref:System.Windows.Controls.Dock>이므로 값을 해당 열거형 으로만 설정할 수 있습니다. 태그의 연결된 속성 사용에서 연결된 속성에 있는 경우, 이 메서드의 값은 XAML 로더에서 오는 입력값임을 기억하십시오. 해당 입력값은 태그에는 XAML 특성 값으로 지정된 값입니다. 따라서 형식 변환, 값 직렬 변환기 또는 사용하는 형식에 대한 태그 확장 지원이 있어야, 적절한 형식이 특성 값(궁극적으로 문자열만)에서 생성될 수 있습니다.
 
 다음 예제에서는 종속성 속성 등록 (사용 하는 <xref:System.Windows.DependencyProperty.RegisterAttached%2A> 메서드), 뿐만 **Get_PropertyName_** 및 **Set_PropertyName_** 접근자입니다. 예제에서 연결된 속성 이름은 `IsBubbleSource`입니다. 따라서 접근자의 이름은 `GetIsBubbleSource` 및 `SetIsBubbleSource`입니다.
 
@@ -125,21 +125,21 @@ Visual Studio WPF 디자이너 지원을 받을 수와 같은 다른 시나리�
 
 WPF는 여러 정의 [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] 리플렉션 프로세스 및 리플렉션 및 속성 정보를 디자이너와 같은 일반 사용자에 게 연결 된 속성에 대 한 정보를 제공 하기 위한입니다. 연결된 속성에 제한이 없는 범위의 형식이 있기 때문에 디자이너는 XAML을 사용하는 특정 기술 구현에 정의된 모든 연결된 속성의 전역 목록을 사용하여 사용자의 과부하를 피할 수 있는 방법이 필요합니다. [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] WPF 정의 속성 창에서 연결 된 속성을 지정된 해야 표시 하는 위치는 상황의 범위에 연결 된 속성을 사용할 수 있습니다. 또한 사용자 고유의 사용자 지정 연결된 속성에 대한 이러한 특성을 적용하는 것이 좋습니다. [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)]의 용도 및 구문은 해당 참조 페이지에 설명되어 있습니다.
 
--   <xref:System.Windows.AttachedPropertyBrowsableAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableAttribute>
 
--   <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute>
 
--   <xref:System.Windows.AttachedPropertyBrowsableForTypeAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableForTypeAttribute>
 
--   <xref:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute>
 
 ## 연결 된 속성에 대해 자세히 알아보기 <a name="more"></a>
 
--   연결된 속성을 만드는 방법에 대한 자세한 내용은 [연결된 속성 등록](how-to-register-an-attached-property.md)을 참조하십시오.
+- 연결된 속성을 만드는 방법에 대한 자세한 내용은 [연결된 속성 등록](how-to-register-an-attached-property.md)을 참조하십시오.
 
--   종속성 속성 및 연결된 속성에 대한 고급 사용 시나리오는 [사용자 지정 종속성 속성](custom-dependency-properties.md)을 참조하십시오.
+- 종속성 속성 및 연결된 속성에 대한 고급 사용 시나리오는 [사용자 지정 종속성 속성](custom-dependency-properties.md)을 참조하십시오.
 
--   연결된 속성 및 종속성 속성으로 속성을 등록할 수도 있지만 "래퍼" 구현이 여전히 표시됩니다. 이 경우 속성은 해당 요소 또는 XAML 연결된 속성 구문을 통해 모든 요소에 설정될 수 있습니다. 표준 및 연결 된 사용에 대 한 적절 한 시나리오를 포함 하는 속성의 예로 <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>합니다.
+- 연결된 속성 및 종속성 속성으로 속성을 등록할 수도 있지만 "래퍼" 구현이 여전히 표시됩니다. 이 경우 속성은 해당 요소 또는 XAML 연결된 속성 구문을 통해 모든 요소에 설정될 수 있습니다. 표준 및 연결 된 사용에 대 한 적절 한 시나리오를 포함 하는 속성의 예로 <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>합니다.
 
 ## <a name="see-also"></a>참고자료
 

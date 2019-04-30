@@ -3,11 +3,11 @@ title: Poison Message Handling in MSMQ 4.0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
 ms.openlocfilehash: b4711d344a6ce08adc6e993c19f2c3d97f56e7b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052094"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Poison Message Handling in MSMQ 4.0
 이 샘플에서는 서비스에서 포이즌 메시지 처리를 수행하는 방법을 보여 줍니다. 이 샘플은 기반 합니다 [트랜잭션 된 MSMQ 바인딩](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) 샘플입니다. 이 샘플에서는 `netMsmqBinding`을 사용합니다. 이 서비스는 자체적으로 호스트되는 콘솔 응용 프로그램으로서 이를 사용하여 서비스에서 대기된 메시지를 받는 것을 볼 수 있습니다.
@@ -27,13 +27,13 @@ ms.locfileid: "59316468"
 
  메시지가 포이즌으로 표시되면 메시지는 <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> 열거의 설정에 따라 처리됩니다. 반복하려는 경우 가능한 값은 다음과 같습니다.
 
--   Fault (기본값): 수신기와 서비스 호스트가 오류입니다.
+- Fault (기본값): 수신기와 서비스 호스트가 오류입니다.
 
--   삭제 합니다. 메시지를 삭제 합니다.
+- 삭제 합니다. 메시지를 삭제 합니다.
 
--   이동 합니다. 포이즌 메시지 하위 큐로 메시지를 이동할 이 값은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다.
+- 이동 합니다. 포이즌 메시지 하위 큐로 메시지를 이동할 이 값은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다.
 
--   거부: 메시지 보낸 사람의 배달 못 한 편지 큐를 다시 보내는 메시지를 거부 합니다. 이 값은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다.
+- 거부: 메시지 보낸 사람의 배달 못 한 편지 큐를 다시 보내는 메시지를 거부 합니다. 이 값은 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서만 사용할 수 있습니다.
 
  이 샘플에서는 포이즌 메시지에 `Move` 처리를 사용하는 방법을 보여 줍니다. `Move`를 사용하면 메시지가 포이즌 하위 큐로 이동합니다.
 
@@ -277,15 +277,15 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
 2. 서비스가 처음 실행되는 경우 서비스에서는 큐가 있는지 확인하고 큐가 없으면 큐를 만듭니다. 서비스를 처음 실행하여 큐를 만들거나 MSMQ 큐 관리자를 통해 큐를 만들 수 있습니다. Windows 2008에서 큐를 만들려면 다음 단계를 수행하세요.
 
-    1.  Visual Studio 2012의 서버 관리자를 엽니다.
+    1. Visual Studio 2012의 서버 관리자를 엽니다.
 
-    2.  확장 된 **기능** 탭 합니다.
+    2. 확장 된 **기능** 탭 합니다.
 
-    3.  마우스 오른쪽 단추로 클릭 **개인 메시지 큐**, 선택한 **새로 만들기**합니다 **개인 큐**합니다.
+    3. 마우스 오른쪽 단추로 클릭 **개인 메시지 큐**, 선택한 **새로 만들기**합니다 **개인 큐**합니다.
 
-    4.  확인 합니다 **트랜잭션** 상자입니다.
+    4. 확인 합니다 **트랜잭션** 상자입니다.
 
-    5.  입력 `ServiceModelSamplesTransacted` 새 대기열의 이름으로 합니다.
+    5. 입력 `ServiceModelSamplesTransacted` 새 대기열의 이름으로 합니다.
 
 3. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.
 

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
 ms.openlocfilehash: 73e984193f87b20e0e00d8ab92a7c0fd67f7968f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59081556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046578"
 ---
 # <a name="message-security-with-a-user-name-client"></a>사용자 이름 클라이언트를 사용하는 메시지 보안
 다음 그림에는 Windows Communication Foundation (WCF) 서비스 및 메시지 수준 보안을 사용 하 여 보호 하는 클라이언트를 보여 줍니다. 서비스는 X.509 인증서를 사용하여 인증됩니다. 클라이언트는 사용자 이름 및 암호를 사용하여 인증합니다.  
@@ -33,9 +33,9 @@ ms.locfileid: "59081556"
 ## <a name="service"></a>서비스  
  다음 코드와 구성은 독립적으로 실행되어야 합니다. 다음 작업 중 하나를 수행합니다.  
   
--   구성 없이 코드를 사용하여 독립 실행형 서비스를 만듭니다.  
+- 구성 없이 코드를 사용하여 독립 실행형 서비스를 만듭니다.  
   
--   제공된 구성을 사용하여 서비스를 만들지만 엔드포인트를 정의하지 않습니다.  
+- 제공된 구성을 사용하여 서비스를 만들지만 엔드포인트를 정의하지 않습니다.  
   
 ### <a name="code"></a>코드  
  다음 코드에서는 메시지 보안을 사용하는 서비스 엔드포인트를 만드는 방법을 보여 줍니다.  

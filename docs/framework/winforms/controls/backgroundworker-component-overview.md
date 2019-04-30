@@ -18,26 +18,26 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 64e9b3ab-7443-4a77-ab17-b8b8c0cb3f62
 ms.openlocfilehash: da535da0b0d1416597d2a62a96cec544d7be68fb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011816"
 ---
 # <a name="backgroundworker-component-overview"></a>BackgroundWorker 구성 요소 개요
-일반적으로 수행하는 작업 중에는 실행 시간이 오래 걸릴 수 있는 것들이 많습니다. 예를 들면 다음과 같습니다.  
+일반적으로 수행하는 작업 중에는 실행 시간이 오래 걸릴 수 있는 것들이 많습니다. 예를 들어:  
   
--   이미지 다운로드  
+- 이미지 다운로드  
   
--   웹 서비스 호출  
+- 웹 서비스 호출  
   
--   파일 다운로드 및 업로드(피어 투 피어 응용 프로그램용 파일 포함)  
+- 파일 다운로드 및 업로드(피어 투 피어 응용 프로그램용 파일 포함)  
   
--   복잡한 로컬 계산  
+- 복잡한 로컬 계산  
   
--   데이터베이스 트랜잭션  
+- 데이터베이스 트랜잭션  
   
--   로컬 디스크 액세스(메모리 액세스에 비해 속도가 느림)  
+- 로컬 디스크 액세스(메모리 액세스에 비해 속도가 느림)  
   
  이러한 작업을 수행하는 동안에는 사용자 인터페이스가 응답하지 않을 수 있습니다. 응답성이 뛰어난 UI가 필요한데 이러한 작업과 관련하여 지연이 길어지는 경우 <xref:System.ComponentModel.BackgroundWorker> 구성 요소를 사용하면 문제를 편리하게 해결할 수 있습니다.  
   

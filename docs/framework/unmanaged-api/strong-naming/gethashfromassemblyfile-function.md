@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e56a509d08b19cf449177984e7b59481eb7b09a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59092164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049403"
 ---
 # <a name="gethashfromassemblyfile-function"></a>GetHashFromAssemblyFile 함수
 지정된 해시 알고리즘을 사용하여 지정된 어셈블리 파일의 해시를 가져옵니다.  

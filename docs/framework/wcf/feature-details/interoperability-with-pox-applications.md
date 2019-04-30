@@ -3,11 +3,11 @@ title: POX 응용 프로그램과 상호 운용
 ms.date: 03/30/2017
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
 ms.openlocfilehash: b7fdb4e16bce52025515ced065d0f48cffb7fa3f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046894"
 ---
 # <a name="interoperability-with-pox-applications"></a>POX 응용 프로그램과 상호 운용
 
@@ -31,9 +31,9 @@ POX 메시지를 사용 하 여 HTTP를 통해 통신 하는 WCF 서비스를 [ 
 
 이 사용자 지정 바인딩에는 다음과 같은 두 가지 요소가 포함되어 있습니다.
 
-- [\<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md)
+- [\<httpTransport>](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md)
 
-- [\<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md)
+- [\<textMessageEncoding>](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md)
 
 표준 WCF 텍스트 메시지 인코더를 사용 하도록 특수 하 게 구성 된 <xref:System.ServiceModel.Channels.MessageVersion.None%2A> XML 메시지 페이로드 도착 하지 않는 SOAP 봉투에 래핑되지 처리할 수 있도록 하는 값입니다.
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CheckBox control [WPF]
 ms.assetid: ee701cc2-968b-4683-8f81-3fafd8542700
 ms.openlocfilehash: 42d4d0e232d66c076a2f3ecfb2ae95a41b0557a5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052224"
 ---
 # <a name="checkbox"></a>CheckBox
 사용할 수는 <xref:System.Windows.Controls.CheckBox> 에 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 사용자 선택 하거나 선택을 취소할 수 있는 옵션을 나타내는 응용 프로그램의 합니다. 확인란 하나만 사용 하거나 둘 이상의 확인란을 그룹화 할 수 있습니다.  

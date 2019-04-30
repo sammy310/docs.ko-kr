@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
 ms.openlocfilehash: 1d6d45289c9278271a7c7bef5225ad024a5ab0fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052445"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>방법: 프로그래밍 방식으로 XPS 파일 인쇄
 한 오버 로드를 사용할 수는 <xref:System.Printing.PrintQueue.AddJob%2A> 인쇄 하는 방법 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 열지 않고 파일을 <xref:System.Windows.Controls.PrintDialog> 또는 원칙적으로 모든 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 전혀 합니다.  

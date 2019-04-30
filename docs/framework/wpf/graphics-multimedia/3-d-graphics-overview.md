@@ -9,11 +9,11 @@ helpviewer_keywords:
 - graphics [WPF], 3-D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
 ms.openlocfilehash: 79dc7a3578c395ae8cdf5933e1249441f97071a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053704"
 ---
 # <a name="3-d-graphics-overview"></a>3차원 그래픽 개요
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]의 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 기능을 사용하여 개발자는 태그 및 프로시저 코드로 3차원 그래픽을 그리고 변환하며 이러한 그래픽에 애니메이션 효과를 줄 수 있습니다. 개발자는 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] 및 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 그래픽을 결합하여 다양한 컨트롤을 만들거나, 복잡한 데이터 표시를 제공하거나, 애플리케이션 인터페이스의 사용자 환경을 개선할 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 지원은 모든 기능을 갖춘 게임 개발 플랫폼을 제공하기 위한 것은 아닙니다. 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 그래픽 시스템의 [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] 기능에 대해 간략하게 설명합니다.  
@@ -86,11 +86,11 @@ ms.locfileid: "59087991"
   
  모델의 표면의 특징을 정의할 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 사용 하는 <xref:System.Windows.Media.Media3D.Material> 추상 클래스입니다. Material의 구체적 하위 클래스는 모델 표면의 일부 모양 특성을 결정하며 이들 각각은 SolidColorBrush, TileBrush 또는 VisualBrush를 전달할 수 있는 Brush 속성도 제공합니다.  
   
--   <xref:System.Windows.Media.Media3D.DiffuseMaterial> 브러시는 모델 처럼 모델에 적용 됩니다 지정 합니다. DiffuseMaterial을 사용하면 브러시를 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 모델에 직접 사용하는 것과 가장 비슷한 효과를 내며 모델의 표면은 빛나는 것처럼 빛을 반사하지 않습니다.  
+- <xref:System.Windows.Media.Media3D.DiffuseMaterial> 브러시는 모델 처럼 모델에 적용 됩니다 지정 합니다. DiffuseMaterial을 사용하면 브러시를 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 모델에 직접 사용하는 것과 가장 비슷한 효과를 내며 모델의 표면은 빛나는 것처럼 빛을 반사하지 않습니다.  
   
--   <xref:System.Windows.Media.Media3D.SpecularMaterial> 하드 또는 반짝이 하이라이트를 반사할 수 있는 모델의 표면 인 것 처럼 브러시가 모델에 적용할 수를 지정 합니다. 에 대 한 값을 지정 하 여 하려는 질감에이 반사 품질 또는 "빛나는 정도 설정할 수 있습니다는 <xref:System.Windows.Media.Media3D.SpecularMaterial.SpecularPower%2A> 속성입니다.  
+- <xref:System.Windows.Media.Media3D.SpecularMaterial> 하드 또는 반짝이 하이라이트를 반사할 수 있는 모델의 표면 인 것 처럼 브러시가 모델에 적용할 수를 지정 합니다. 에 대 한 값을 지정 하 여 하려는 질감에이 반사 품질 또는 "빛나는 정도 설정할 수 있습니다는 <xref:System.Windows.Media.Media3D.SpecularMaterial.SpecularPower%2A> 속성입니다.  
   
--   <xref:System.Windows.Media.Media3D.EmissiveMaterial> 모델와 같은 브러시의 색으로 빛을 내보내는 것 처럼 질감이 적용 되도록 지정할 수 있습니다. 그러나 이로 인해 모델이 광원이 되는 것은 아니며 DiffuseMaterial 또는 SpecularMaterial을 사용하여 질감을 표현할 때와는 다른 방식으로 섀도잉에 참여합니다.  
+- <xref:System.Windows.Media.Media3D.EmissiveMaterial> 모델와 같은 브러시의 색으로 빛을 내보내는 것 처럼 질감이 적용 되도록 지정할 수 있습니다. 그러나 이로 인해 모델이 광원이 되는 것은 아니며 DiffuseMaterial 또는 SpecularMaterial을 사용하여 질감을 표현할 때와는 다른 방식으로 섀도잉에 참여합니다.  
   
  보다 나은 성능,의 뒷면을 <xref:System.Windows.Media.Media3D.GeometryModel3D> (카메라에서 모델의 반대쪽에 있기 때문에 보이지 않는 면)은 장면에서 선별 됩니다.  지정 하는 <xref:System.Windows.Media.Media3D.Material> 평면과 같이 모델의 뒷면에 적용 하려면 모델의 설정 <xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A> 속성입니다.  
   
@@ -111,13 +111,13 @@ ms.locfileid: "59087991"
   
  다음 광원은 기본 클래스에서 파생 <xref:System.Windows.Media.Media3D.Light>:  
   
--   <xref:System.Windows.Media.Media3D.AmbientLight>: 모든 개체 위치나 방향 관계 없이 균일 하 게 비추는 주변 광원을 제공 합니다.  
+- <xref:System.Windows.Media.Media3D.AmbientLight>: 모든 개체 위치나 방향 관계 없이 균일 하 게 비추는 주변 광원을 제공 합니다.  
   
--   <xref:System.Windows.Media.Media3D.DirectionalLight>: 비춥니다 것 처럼 비춥니다.  방향성 광원이는 <xref:System.Windows.Media.Media3D.DirectionalLight.Direction%2A> Vector3D 하지만 지정 된 위치가 없고로 지정 합니다.  
+- <xref:System.Windows.Media.Media3D.DirectionalLight>: 비춥니다 것 처럼 비춥니다.  방향성 광원이는 <xref:System.Windows.Media.Media3D.DirectionalLight.Direction%2A> Vector3D 하지만 지정 된 위치가 없고로 지정 합니다.  
   
--   <xref:System.Windows.Media.Media3D.PointLight>: 광원이 가까이 있는 것 처럼 비춥니다. PointLight는 위치가 있으며 해당 위치에서 빛을 발합니다. 장면의 개체는 광원과 관련된 해당 위치 및 거리에 따라 비춰집니다. <xref:System.Windows.Media.Media3D.PointLightBase> 노출 된 <xref:System.Windows.Media.Media3D.PointLightBase.Range%2A> 초과 모델 비춰 지지 조명에서 거리를 결정 하는 속성입니다. 또한 PointLight는 거리에 따라 광원의 강도가 감소되는 방식을 결정하는 감쇠 속성도 노출합니다. 광원 감쇠에 대해 상수, 선형 또는 정방형 보간을 지정할 수 있습니다.  
+- <xref:System.Windows.Media.Media3D.PointLight>: 광원이 가까이 있는 것 처럼 비춥니다. PointLight는 위치가 있으며 해당 위치에서 빛을 발합니다. 장면의 개체는 광원과 관련된 해당 위치 및 거리에 따라 비춰집니다. <xref:System.Windows.Media.Media3D.PointLightBase> 노출 된 <xref:System.Windows.Media.Media3D.PointLightBase.Range%2A> 초과 모델 비춰 지지 조명에서 거리를 결정 하는 속성입니다. 또한 PointLight는 거리에 따라 광원의 강도가 감소되는 방식을 결정하는 감쇠 속성도 노출합니다. 광원 감쇠에 대해 상수, 선형 또는 정방형 보간을 지정할 수 있습니다.  
   
--   <xref:System.Windows.Media.Media3D.SpotLight>: <xref:System.Windows.Media.Media3D.PointLight>에서 상속됩니다. SpotLight는 PointLight와 유사하게 비추며 위치와 방향이 모두 있습니다. 설정한 원뿔 모양 영역에 광원을 프로젝션 <xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A> 고 <xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A> 속성을 각도로 지정 합니다.  
+- <xref:System.Windows.Media.Media3D.SpotLight>: <xref:System.Windows.Media.Media3D.PointLight>에서 상속됩니다. SpotLight는 PointLight와 유사하게 비추며 위치와 방향이 모두 있습니다. 설정한 원뿔 모양 영역에 광원을 프로젝션 <xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A> 고 <xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A> 속성을 각도로 지정 합니다.  
   
  광원은 <xref:System.Windows.Media.Media3D.Model3D> 개체를 변환 및 조명 속성, 위치, 색, 방향 및 범위를 포함 하 여 애니메이션을 적용할 수 있도록 합니다.  
   

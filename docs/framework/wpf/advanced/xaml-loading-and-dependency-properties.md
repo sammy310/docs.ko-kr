@@ -10,11 +10,11 @@ helpviewer_keywords:
 - loading XML data [WPF]
 ms.assetid: 6eea9f4e-45ce-413b-a266-f08238737bf2
 ms.openlocfilehash: 4db87c5f266a9eed136f0651f48d11720abede65
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053862"
 ---
 # <a name="xaml-loading-and-dependency-properties"></a>XAML 로드 및 종속성 속성
 현재 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 구현할 때는 기본적으로 종속성 속성을 인식합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서는 이진 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]을 로드하고 종속성 속성인 특성을 처리할 때 종속성 속성에 대해 속성 시스템 메서드를 사용합니다. 이렇게 하면 속성 래퍼를 효과적으로 우회할 수 있습니다. 사용자 지정 종속성 속성을 구현 하면이 동작에 대해 고려해 야 하 속성 시스템 메서드 이외의 속성 래퍼에 다른 코드를 배치 하지 말아야 <xref:System.Windows.DependencyObject.GetValue%2A> 고 <xref:System.Windows.DependencyObject.SetValue%2A>입니다.  

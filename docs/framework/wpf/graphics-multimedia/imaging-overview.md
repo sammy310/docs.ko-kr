@@ -22,11 +22,11 @@ helpviewer_keywords:
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
 ms.openlocfilehash: dba2f8b07134560abd77832293ce2a81e55e4875
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053446"
 ---
 # <a name="imaging-overview"></a>이미징 개요
 이 항목에서는 [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]를 소개합니다. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]를 사용하여 개발자는 이미지를 표시 및 변환하고 서식을 지정할 수 있습니다.  
@@ -37,19 +37,19 @@ ms.locfileid: "59209712"
   
  [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]에 액세스하는 방법에는 관리되는 구성 요소와 관리되지 않는 구성 요소의 두 가지 방법이 있습니다. 관리되지 않는 구성 요소는 다음과 같은 기능을 제공합니다.  
   
--   새롭거나 또는 독자적인 이미지 형식에 대한 확장성 모델  
+- 새롭거나 또는 독자적인 이미지 형식에 대한 확장성 모델  
   
--   [!INCLUDE[TLA#tla_bmp](../../../../includes/tlasharptla-bmp-md.md)], [!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)], [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)], [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)], [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)], [!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)] 및 아이콘(.ico)을 포함하는 네이티브 이미지 형식에 대한 향상된 성능 및 보안  
+- [!INCLUDE[TLA#tla_bmp](../../../../includes/tlasharptla-bmp-md.md)], [!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)], [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)], [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)], [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)], [!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)] 및 아이콘(.ico)을 포함하는 네이티브 이미지 형식에 대한 향상된 성능 및 보안  
   
--   채널당 8비트(픽셀당 32비트)까지 높은 비트 수준의 이미지 데이터 보존  
+- 채널당 8비트(픽셀당 32비트)까지 높은 비트 수준의 이미지 데이터 보존  
   
--   비파괴 이미지 크기 조정, 자르기 및 회전  
+- 비파괴 이미지 크기 조정, 자르기 및 회전  
   
--   단순화된 색 관리  
+- 단순화된 색 관리  
   
--   파일 내 독점 메타데이터에 대한 지원  
+- 파일 내 독점 메타데이터에 대한 지원  
   
--   관리되는 구성 요소는 관리되지 않는 인프라를 활용하여 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], 애니메이션 및 그래픽 등의 기타 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 기능에 이미지를 원활하게 통합할 수 있도록 합니다. 관리 되는 구성 요소는 Windows Presentation Foundation (WPF) 이미징 코덱 확장성 모델을 자동에서 새 이미지 형식으로 인식에서 이점도 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램입니다.  
+- 관리되는 구성 요소는 관리되지 않는 인프라를 활용하여 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], 애니메이션 및 그래픽 등의 기타 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 기능에 이미지를 원활하게 통합할 수 있도록 합니다. 관리 되는 구성 요소는 Windows Presentation Foundation (WPF) 이미징 코덱 확장성 모델을 자동에서 새 이미지 형식으로 인식에서 이점도 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램입니다.  
   
  대부분의 관리 되는 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 에 <xref:System.Windows.Media.Imaging?displayProperty=nameWithType> 네임 스페이스와 같은 몇 가지 중요 한 형식은 있지만 <xref:System.Windows.Media.ImageBrush> 및 <xref:System.Windows.Media.ImageDrawing> 에 <xref:System.Windows.Media?displayProperty=nameWithType> 네임 스페이스 및 <xref:System.Windows.Controls.Image> 상주 하는 <xref:System.Windows.Controls?displayProperty=nameWithType> 네임 스페이스입니다.  
   
@@ -132,13 +132,13 @@ ms.locfileid: "59209712"
 #### <a name="stretching-images"></a>이미지 늘이기  
  <xref:System.Windows.Controls.Image.Stretch%2A> 속성 이미지는 해당 컨테이너를 채우도록 확장 하는 방법을 제어 합니다. 합니다 <xref:System.Windows.Controls.Image.Stretch%2A> 속성으로 정의 하는 다음 값을 허용 합니다 <xref:System.Windows.Media.Stretch> 열거형:  
   
--   <xref:System.Windows.Media.Stretch.None>: 이미지가 출력 영역을 채우도록 늘어나지 않습니다. 이미지가 출력 영역보다 큰 경우 이미지가 출력 영역으로 그려지고 맞지 않는 부분은 클리핑됩니다.  
+- <xref:System.Windows.Media.Stretch.None>: 이미지가 출력 영역을 채우도록 늘어나지 않습니다. 이미지가 출력 영역보다 큰 경우 이미지가 출력 영역으로 그려지고 맞지 않는 부분은 클리핑됩니다.  
   
--   <xref:System.Windows.Media.Stretch.Fill>: 이미지가 출력 영역에 맞게 크기가 조정 됩니다. 이미지의 높이 및 너비가 독립적으로 조정되므로 이미지의 원래 가로 세로 비율이 유지되지 않을 수 있습니다. 즉, 출력 컨테이너를 완전히 채우도록 이미지를 이동해야 할 수 있습니다.  
+- <xref:System.Windows.Media.Stretch.Fill>: 이미지가 출력 영역에 맞게 크기가 조정 됩니다. 이미지의 높이 및 너비가 독립적으로 조정되므로 이미지의 원래 가로 세로 비율이 유지되지 않을 수 있습니다. 즉, 출력 컨테이너를 완전히 채우도록 이미지를 이동해야 할 수 있습니다.  
   
--   <xref:System.Windows.Media.Stretch.Uniform>: 이미지가 출력 영역 내에 완전히 맞도록 크기가 조정 됩니다. 이미지의 가로 세로 비율이 유지됩니다.  
+- <xref:System.Windows.Media.Stretch.Uniform>: 이미지가 출력 영역 내에 완전히 맞도록 크기가 조정 됩니다. 이미지의 가로 세로 비율이 유지됩니다.  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>: 이미지의 원래 가로 세로 비율을 유지 하는 동안 출력 영역을 완전히 채우도록 확장 됩니다.  
+- <xref:System.Windows.Media.Stretch.UniformToFill>: 이미지의 원래 가로 세로 비율을 유지 하는 동안 출력 영역을 완전히 채우도록 확장 됩니다.  
   
  다음 예제에서는 사용 가능한 각 적용 <xref:System.Windows.Media.Stretch> 열거형에는 <xref:System.Windows.Controls.Image>합니다.  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - characters [Visual Basic], accessing in strings
 ms.assetid: 02c5206c-ffab-494d-b648-3b2ea358dc34
 ms.openlocfilehash: 840a769b0bb322ef7b878a312437c5ec200ab074
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054031"
 ---
 # <a name="how-to-access-characters-in-strings-in-visual-basic"></a>방법: Visual Basic의 문자열에서 문자 액세스
 이 예제를 사용 하는 방법에 설명 합니다 <xref:System.String.Chars%2A> 속성에 액세스 하는 문자열의 지정된 된 위치에 있는 문자가 있습니다.  

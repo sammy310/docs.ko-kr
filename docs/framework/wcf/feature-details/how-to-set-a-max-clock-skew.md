@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF, custom bindings
 ms.assetid: 491d1705-eb29-43c2-a44c-c0cf996f74eb
 ms.openlocfilehash: 1a8d99e5d2bd21a74318718f43b5d1c091ed073e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047544"
 ---
 # <a name="how-to-set-a-max-clock-skew"></a>방법: 최대 클럭 오차 설정
 두 개의 컴퓨터에서 클록 설정이 서로 다른 경우 시간 중심 기능이 비활성화될 수 있습니다. 이 가능성을 줄이기 위해 `MaxClockSkew` 설정을 <xref:System.TimeSpan>으로 설정할 수 있습니다. 이 속성은 다음 두 개의 클래스에서 사용할 수 있습니다.  

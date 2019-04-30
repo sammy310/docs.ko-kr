@@ -9,11 +9,11 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
 ms.openlocfilehash: d5924ff9336bc6e93022caf1b85d5fd98f7a617d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051587"
 ---
 # <a name="graphics-rendering-tiers"></a>그래픽 렌더링 계층
 렌더링 계층은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 실행하는 디바이스의 그래픽 하드웨어 기능과 성능 수준을 정의합니다.  
@@ -22,23 +22,23 @@ ms.locfileid: "59197388"
 ## <a name="graphics-hardware"></a>그래픽 하드웨어  
  렌더링 계층 수준에 가장 큰 영향을 미치는 그래픽 하드웨어 기능은 다음과 같습니다.  
   
--   **비디오 RAM** 그래픽 하드웨어의 비디오 메모리 양에 따라 그래픽을 합성하는 데 사용할 수 있는 버퍼의 크기와 수를 결정합니다.  
+- **비디오 RAM** 그래픽 하드웨어의 비디오 메모리 양에 따라 그래픽을 합성하는 데 사용할 수 있는 버퍼의 크기와 수를 결정합니다.  
   
--   **픽셀 셰이더** 픽셀 셰이더는 픽셀별 미치는 영향을 계산하는 그래픽 처리 함수입니다. 표시된 그래픽의 해상도에 따라 표시 프레임별로 수백만 픽셀을 처리해야 할 수도 있습니다.  
+- **픽셀 셰이더** 픽셀 셰이더는 픽셀별 미치는 영향을 계산하는 그래픽 처리 함수입니다. 표시된 그래픽의 해상도에 따라 표시 프레임별로 수백만 픽셀을 처리해야 할 수도 있습니다.  
   
--   **꼭짓점 셰이더** 꼭짓점 셰이더는 개체의 꼭짓점 데이터에서 수학 연산을 수행하는 그래픽 처리 함수입니다.  
+- **꼭짓점 셰이더** 꼭짓점 셰이더는 개체의 꼭짓점 데이터에서 수학 연산을 수행하는 그래픽 처리 함수입니다.  
   
--   **여러 질감 지원** 여러 질감 지원은 3D 그래픽 개체에서 혼합 작업 중에 두 개 이상의 개별 질감을 적용할 수 있는 기능을 나타냅니다. 여러 질감 지원 정도는 그래픽 하드웨어의 여러 질감 단위 수에 따라 결정됩니다.  
+- **여러 질감 지원** 여러 질감 지원은 3D 그래픽 개체에서 혼합 작업 중에 두 개 이상의 개별 질감을 적용할 수 있는 기능을 나타냅니다. 여러 질감 지원 정도는 그래픽 하드웨어의 여러 질감 단위 수에 따라 결정됩니다.  
   
 <a name="rendering_tier_definitions"></a>   
 ## <a name="rendering-tier-definitions"></a>렌더링 계층 정의  
  그래픽 하드웨어 기능에 따라 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애플리케이션의 렌더링 기능이 결정됩니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 시스템에서는 다음 세 개의 렌더링 계층을 정의합니다.  
   
--   **렌더링 계층 0** 그래픽 하드웨어 가속이 없습니다. 모든 그래픽 기능에서 소프트웨어 가속을 사용합니다. [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 버전 수준은 버전 9.0 미만입니다.  
+- **렌더링 계층 0** 그래픽 하드웨어 가속이 없습니다. 모든 그래픽 기능에서 소프트웨어 가속을 사용합니다. [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 버전 수준은 버전 9.0 미만입니다.  
   
--   **렌더링 계층 1** 일부 그래픽 기능에서는 그래픽 하드웨어 가속을 사용합니다. [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 버전 수준은 버전 9.0 이상입니다.  
+- **렌더링 계층 1** 일부 그래픽 기능에서는 그래픽 하드웨어 가속을 사용합니다. [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 버전 수준은 버전 9.0 이상입니다.  
   
--   **렌더링 계층 2** 대부분의 그래픽 기능에서는 그래픽 하드웨어 가속을 사용합니다. [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 버전 수준은 버전 9.0 이상입니다.  
+- **렌더링 계층 2** 대부분의 그래픽 기능에서는 그래픽 하드웨어 가속을 사용합니다. [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 버전 수준은 버전 9.0 이상입니다.  
   
  <xref:System.Windows.Media.RenderCapability.Tier%2A?displayProperty=nameWithType> 속성을 사용 하면 응용 프로그램 런타임 시 렌더링 계층을 검색할 수 있습니다. 렌더링 계층을 사용하여 디바이스에서 특정 하드웨어 가속 그래픽 기능을 지원하는지 결정합니다. 그러면 디바이스에서 지원하는 렌더링 계층에 따라 응용 프로그램에서 런타임 시 다른 코드 경로를 사용할 수 있습니다.  
   

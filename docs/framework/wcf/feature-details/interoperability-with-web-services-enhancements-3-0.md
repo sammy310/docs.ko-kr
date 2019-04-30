@@ -3,11 +3,11 @@ title: Web Services Enhancements 3.0과의 상호 운용성
 ms.date: 03/30/2017
 ms.assetid: e8e589d2-12c6-4794-8a11-1ee90b47dfaa
 ms.openlocfilehash: 19786393a09610b4bd6c593f89beece8b9a0d3f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038664"
 ---
 # <a name="interoperability-with-web-services-enhancements-30"></a>Web Services Enhancements 3.0과의 상호 운용성
 WCF 클라이언트 및 서비스의 2004 년 8 월 버전을 사용 하도록 구성 된 경우 Windows Communication Foundation (WCF) 클라이언트와 서비스는 Microsoft.NET (WSE) 클라이언트와 서비스에 대 한 Web Services Enhancements 3.0과 유선 수준으로 호환 합니다 Ws-addressing 사양입니다.  

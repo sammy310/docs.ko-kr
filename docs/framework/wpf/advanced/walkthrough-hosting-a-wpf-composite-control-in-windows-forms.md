@@ -5,11 +5,11 @@ helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
 ms.openlocfilehash: 75e60a3a9b39c0dd63a24a1e71c4823e7cb0bd74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052549"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>연습: Windows Forms에서 WPF 복합 컨트롤 호스팅
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 응용 프로그램을 만들기 위한 다양한 환경을 제공합니다. 그러나 상당한 투자 경우 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 코드 수 기존 확장 하는 것이 효과적인 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 응용 프로그램으로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 처음부터 다시 작성 하는 대신 합니다. 일반적인 시나리오는 하나를 포함 하거나 더 많은 컨트롤이 구현 하는 경우 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Windows Forms 응용 프로그램 내에서. WPF 컨트롤 사용자 지정 하는 방법에 대 한 자세한 내용은 참조 하십시오 [컨트롤 사용자 지정](../controls/control-customization.md)합니다.  
@@ -20,9 +20,9 @@ ms.locfileid: "59322838"
   
  이 연습에서 설명하는 작업은 다음과 같습니다.  
   
--   WPF 복합 컨트롤 구현  
+- WPF 복합 컨트롤 구현  
   
--   Windows Forms 호스트 애플리케이션 구현  
+- Windows Forms 호스트 애플리케이션 구현  
   
  이 연습에 설명 된 작업의 전체 코드 목록은 참조 하세요 [Windows Forms 샘플에서 WPF 복합 컨트롤 호스팅](https://go.microsoft.com/fwlink/?LinkID=159996)합니다.  
   
@@ -54,13 +54,13 @@ ms.locfileid: "59322838"
   
  프로젝트에는 다음과 같은 시스템 DLL에 대한 참조가 있어야 합니다. 이러한 DLL이 기본적으로 포함되지 않은 경우 프로젝트에 추가합니다.  
   
--   PresentationCore  
+- PresentationCore  
   
--   PresentationFramework  
+- PresentationFramework  
   
--   시스템  
+- 시스템  
   
--   WindowsBase  
+- WindowsBase  
   
 ### <a name="creating-the-user-interface"></a>사용자 인터페이스 만들기  
  합니다 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 복합 컨트롤은 구현에 대 한 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]합니다. 복합 컨트롤 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 5 이루어져 <xref:System.Windows.Controls.TextBox> 요소입니다. 각 <xref:System.Windows.Controls.TextBox> 요소에 연결 된 <xref:System.Windows.Controls.TextBlock> 레이블로 사용 되는 요소입니다. 두 개의 <xref:System.Windows.Controls.Button> 요소 아래에 **확인** 하 고 **취소**합니다. 사용자가 이 단추 중 하나를 클릭하면 컨트롤에서 사용자 지정 이벤트가 발생하여 호스트에 정보가 반환됩니다.  
@@ -139,11 +139,11 @@ namespace MyControls
 #### <a name="initializing-the-control"></a>컨트롤 초기화  
  다음 코드에서는 다음과 같은 몇 가지 기본 작업을 구현합니다.  
   
--   Private 이벤트를 선언 `OnButtonClick`, 및 관련된 대리자 `MyControlEventHandler`합니다.  
+- Private 이벤트를 선언 `OnButtonClick`, 및 관련된 대리자 `MyControlEventHandler`합니다.  
   
--   사용자 데이터를 저장하는 여러 private 전역 변수를 만듭니다. 이 데이터는 해당 속성을 통해 노출됩니다.  
+- 사용자 데이터를 저장하는 여러 private 전역 변수를 만듭니다. 이 데이터는 해당 속성을 통해 노출됩니다.  
   
--   처리기를 구현 `Init`, 컨트롤의 <xref:System.Windows.FrameworkElement.Loaded> 이벤트입니다. 이 처리기에서는 MyControl1.xaml에 정의된 값을 할당하여 전역 변수를 초기화합니다. 이 위해 사용 하 여는 <xref:System.Windows.FrameworkElement.Name%2A> 일반적인 할당할 <xref:System.Windows.Controls.TextBlock> 요소인 `nameLabel`, 해당 요소의 속성 설정에 액세스 해야 합니다.  
+- 처리기를 구현 `Init`, 컨트롤의 <xref:System.Windows.FrameworkElement.Loaded> 이벤트입니다. 이 처리기에서는 MyControl1.xaml에 정의된 값을 할당하여 전역 변수를 초기화합니다. 이 위해 사용 하 여는 <xref:System.Windows.FrameworkElement.Name%2A> 일반적인 할당할 <xref:System.Windows.Controls.TextBlock> 요소인 `nameLabel`, 해당 요소의 속성 설정에 액세스 해야 합니다.  
   
  기존 생성자를 삭제 하 고 다음 코드를 추가 하면 `MyControl1` 클래스입니다.  
   
@@ -152,11 +152,11 @@ namespace MyControls
 #### <a name="handling-the-buttons-click-events"></a>단추의 클릭 이벤트 처리  
  사용자 중 하나를 클릭 하 여 데이터 입력 작업이 완료 되었음을 나타냅니다 합니다 **확인** 단추 또는 **취소** 단추입니다. 두 단추를 사용 하는 동일한 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트 처리기 `ButtonClicked`합니다. 두 단추에 이름이 `btnOK` 또는 `btnCancel`, 수 있도록 하는 값을 검사 하 여 어떤 단추가 클릭 되었는지 확인 하려면 처리기는 `sender` 인수입니다. 처리기에서는 다음 작업을 수행합니다.  
   
--   만듭니다는 `MyControlEventArgs` 의 데이터를 포함 하는 개체는 <xref:System.Windows.Controls.TextBox> 요소입니다.  
+- 만듭니다는 `MyControlEventArgs` 의 데이터를 포함 하는 개체는 <xref:System.Windows.Controls.TextBox> 요소입니다.  
   
--   클릭할 경우 합니다 **취소** 단추를 설정 합니다 `MyControlEventArgs` 개체의 `IsOK` 속성을 `false`입니다.  
+- 클릭할 경우 합니다 **취소** 단추를 설정 합니다 `MyControlEventArgs` 개체의 `IsOK` 속성을 `false`입니다.  
   
--   발생 된 `OnButtonClick` 이벤트는 사용자가 완료 되 면 다시 전달 수집 된 데이터를 호스트에 알리기 위해.  
+- 발생 된 `OnButtonClick` 이벤트는 사용자가 완료 되 면 다시 전달 수집 된 데이터를 호스트에 알리기 위해.  
   
  다음 코드를 추가 하 `MyControl1` 후 클래스는 `Init` 메서드.  
   
@@ -209,15 +209,15 @@ namespace MyControls
   
 4. 다음 어셈블리에 대한 참조를 추가합니다.  
   
-    -   PresentationCore  
+    - PresentationCore  
   
-    -   PresentationFramework  
+    - PresentationFramework  
   
-    -   System.Xaml  
+    - System.Xaml  
   
-    -   WindowsBase  
+    - WindowsBase  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
 ### <a name="implementing-the-user-interface-for-the-application"></a>애플리케이션에 대한 사용자 인터페이스 구현  
  Windows Form 애플리케이션의 UI에는 WPF 복합 컨트롤과 상호 작용하는 여러 컨트롤이 포함되어 있습니다.  
@@ -296,9 +296,9 @@ namespace MyControls
   
  나머지 두 줄은 `Form1_Load` 메서드는 두 가지 컨트롤 이벤트에 처리기를 연결 합니다.  
   
--   `OnButtonClick` 사용자가 클릭할 때 복합 컨트롤에서 실행 되는 사용자 지정 이벤트를 **확인** 하거나 **취소** 단추입니다. 이 이벤트를 처리하여 사용자의 응답을 수신하고 사용자가 지정한 데이터를 수집합니다.  
+- `OnButtonClick` 사용자가 클릭할 때 복합 컨트롤에서 실행 되는 사용자 지정 이벤트를 **확인** 하거나 **취소** 단추입니다. 이 이벤트를 처리하여 사용자의 응답을 수신하고 사용자가 지정한 데이터를 수집합니다.  
   
--   <xref:System.Windows.FrameworkElement.Loaded> 발생 하는 표준 이벤트를 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 완전히 로드 된 경우를 제어 합니다. 이 예제에서는 컨트롤의 속성을 사용하여 여러 전역 변수를 초기화해야 하기 때문에 이 이벤트가 사용됩니다. 폼의 당시 <xref:System.Windows.Forms.Form.Load> 이벤트 컨트롤이 완전히 로드 되지 및 해당 값으로 설정 됩니다 계속 `null`합니다. 컨트롤의 될 때까지 기다려야 <xref:System.Windows.FrameworkElement.Loaded> 해당 속성에 액세스할 수 전에 이벤트가 발생 합니다.  
+- <xref:System.Windows.FrameworkElement.Loaded> 발생 하는 표준 이벤트를 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 완전히 로드 된 경우를 제어 합니다. 이 예제에서는 컨트롤의 속성을 사용하여 여러 전역 변수를 초기화해야 하기 때문에 이 이벤트가 사용됩니다. 폼의 당시 <xref:System.Windows.Forms.Form.Load> 이벤트 컨트롤이 완전히 로드 되지 및 해당 값으로 설정 됩니다 계속 `null`합니다. 컨트롤의 될 때까지 기다려야 <xref:System.Windows.FrameworkElement.Loaded> 해당 속성에 액세스할 수 전에 이벤트가 발생 합니다.  
   
  <xref:System.Windows.FrameworkElement.Loaded> 이벤트 처리기는 앞의 코드에 표시 됩니다. `OnButtonClick` 처리기는 다음 섹션에 설명 되어 있습니다.  
   

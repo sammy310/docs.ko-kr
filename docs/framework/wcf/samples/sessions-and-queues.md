@@ -3,11 +3,11 @@ title: 세션 및 큐
 ms.date: 03/30/2017
 ms.assetid: 47d7c5c2-1e6f-4619-8003-a0ff67dcfbd6
 ms.openlocfilehash: 623077450157b0bf87b85a85309adc10511b32b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007879"
 ---
 # <a name="sessions-and-queues"></a>세션 및 큐
 이 샘플에서는 MSMQ(메시지 큐) 전송을 통해 대기 중인 통신으로 일련의 관련된 메시지를 보내고 받는 방법을 보여 줍니다. 이 샘플에서는 `netMsmqBinding` 바인딩을 사용합니다. 이 서비스는 자체적으로 호스트되는 콘솔 응용 프로그램으로서 이를 사용하여 서비스에서 대기된 메시지를 받는 것을 볼 수 있습니다.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30007
 ms.assetid: 5f34cf47-6c6e-4954-bd8e-d6b020b75fb7
 ms.openlocfilehash: 54848fdbd2547fe021f0386843f9666760396cb0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013779"
 ---
 # <a name="reference-required-to-assembly-assemblyname-containing-the-base-class-classname"></a>참조 어셈블리에 필요한 '\<assemblyname >' 기본 클래스의 포함 된\<응용 프로그램 이름 >'
 참조 어셈블리에 필요한 '\<assemblyname >' 기본 클래스의 포함 된\<classname >'입니다. 하나를 프로젝트에 추가합니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "55273282"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   참조되지 않은 DLL 또는 어셈블리 이름을 프로젝트 참조에 포함합니다.  
+- 참조되지 않은 DLL 또는 어셈블리 이름을 프로젝트 참조에 포함합니다.  
   
 ## <a name="see-also"></a>참고자료
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
 ms.openlocfilehash: 5b234a00f3194fcf40a33d25302cff16d5999b05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039379"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Windows Process Activation Service에서의 호스팅
 Windows 프로세스 활성화 서비스 (WAS)는 정품 인증 및 호스트 Windows Communication Foundation (WCF) 서비스를 사용 하는 응용 프로그램을 포함 하는 작업자 프로세스의 수명을 관리 합니다. WAS 프로세스 모델은 HTTP에 대한 종속성을 제거하여 HTTP 서버의 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 프로세스 모델을 일반화합니다. 이렇게 하면 WCF services HTTP 및 메시지 기반 활성화를 지원 하 고 많은 수의 지정된 된 컴퓨터에서 응용 프로그램을 호스트 하는 기능을 제공 하는 호스팅 환경에서 Net.TCP와 같은 HTTP가 아닌 프로토콜을 모두 사용할 수 있습니다.  
@@ -18,13 +18,13 @@ Windows 프로세스 활성화 서비스 (WAS)는 정품 인증 및 호스트 Wi
   
  WAS 프로세스 모델에서는 보다 강력하고, 보다 집중적으로 관리할 수 있으며, 리소스를 효율적으로 사용하는 방식으로 응용 프로그램을 호스트할 수 있도록 여러 기능을 제공합니다.  
   
--   HTTP 및 HTTP가 아닌 네트워크 프로토콜을 사용하여 도착하는 들어오는 작업 항목에 대한 응답으로 응용 프로그램 및 작업자 프로세스 응용 프로그램의 메시지 기반 활성화가 동적으로 시작 및 중지  
+- HTTP 및 HTTP가 아닌 네트워크 프로토콜을 사용하여 도착하는 들어오는 작업 항목에 대한 응답으로 응용 프로그램 및 작업자 프로세스 응용 프로그램의 메시지 기반 활성화가 동적으로 시작 및 중지  
   
--   실행 중인 응용 프로그램의 상태를 유지 관리하기 위한 강력한 응용 프로그램 및 작업자 프로세스의 재활용  
+- 실행 중인 응용 프로그램의 상태를 유지 관리하기 위한 강력한 응용 프로그램 및 작업자 프로세스의 재활용  
   
--   중앙 집중화된 응용 프로그램 구성 및 관리  
+- 중앙 집중화된 응용 프로그램 구성 및 관리  
   
--   전체 IIS 설치를 위한 배포 공간 없이도 응용 프로그램에서 IIS 프로세스 모델 사용 가능  
+- 전체 IIS 설치를 위한 배포 공간 없이도 응용 프로그램에서 IIS 프로세스 모델 사용 가능  
   
  WAS 기능에 대 한 자세한 내용은 참조 하세요. [IIS 7.0 베타: IIS 7.0 웹 관리](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)합니다.  
   

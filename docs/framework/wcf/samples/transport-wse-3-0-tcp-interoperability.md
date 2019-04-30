@@ -3,11 +3,11 @@ title: '전송: WSE 3.0 TCP 상호 운용성'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
 ms.openlocfilehash: cc483e44e625534d87ea94e84fc984f0aff880f9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032734"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>전송: WSE 3.0 TCP 상호 운용성
 WSE 3.0 TCP Interoperability Transport 샘플에는 TCP 이중 세션을 사용자 지정 Windows Communication Foundation (WCF) 전송으로 구현 하는 방법을 보여 줍니다. 또한 채널 계층의 확장성을 사용하여 연결을 통해 기존에 배포된 시스템과 상호 작용할 수 있는 방법도 보여 줍니다. 다음 단계에는이 사용자 지정 WCF 전송을 작성 하는 방법을 보여 줍니다.  
@@ -43,16 +43,16 @@ WSE 3.0 TCP Interoperability Transport 샘플에는 TCP 이중 세션을 사용�
   
  기본 `WseTcpDuplexSessionChannel`은 연결된 소켓을 수신하는 것으로 가정합니다. 기본 클래스는 소켓 종료를 처리합니다. 소켓 닫기를 처리하는 세 위치는 다음과 같습니다.  
   
--   OnAbort -- 소켓을 강제로 닫습니다(강제 닫기).  
+- OnAbort -- 소켓을 강제로 닫습니다(강제 닫기).  
   
--   On[Begin]Close -- 소켓을 정상적으로 닫습니다(정상 닫기).  
+- On[Begin]Close -- 소켓을 정상적으로 닫습니다(정상 닫기).  
   
--   session.CloseOutputSession -- 아웃바운드 데이터 스트림을 종료합니다(절반 닫기).  
+- session.CloseOutputSession -- 아웃바운드 데이터 스트림을 종료합니다(절반 닫기).  
   
 ## <a name="channel-factory"></a>채널 팩터리  
  TCP 전송을 작성하는 다음 단계는 클라이언트 채널을 위한 <xref:System.ServiceModel.Channels.IChannelFactory>의 구현을 만드는 것입니다.  
   
--   `WseTcpChannelFactory` 파생 <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >. 이는 `OnCreateChannel`을 재정의하여 클라이언트 채널을 생성하는 팩터리입니다.  
+- `WseTcpChannelFactory` 파생 <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >. 이는 `OnCreateChannel`을 재정의하여 클라이언트 채널을 생성하는 팩터리입니다.  
   
  `protected override IDuplexSessionChannel OnCreateChannel(EndpointAddress remoteAddress, Uri via)`  
   
@@ -62,11 +62,11 @@ WSE 3.0 TCP Interoperability Transport 샘플에는 TCP 이중 세션을 사용�
   
  `}`  
   
--   `ClientWseTcpDuplexSessionChannel` 논리를 추가 `WseTcpDuplexSessionChannel` 에 TCP 서버에 연결할 `channel.Open` 시간입니다. 다음 코드에 나온 것처럼 먼저 호스트 이름이 IP 주소로 확인됩니다.  
+- `ClientWseTcpDuplexSessionChannel` 논리를 추가 `WseTcpDuplexSessionChannel` 에 TCP 서버에 연결할 `channel.Open` 시간입니다. 다음 코드에 나온 것처럼 먼저 호스트 이름이 IP 주소로 확인됩니다.  
   
  `hostEntry = Dns.GetHostEntry(Via.Host);`  
   
--   그런 다음에는 다음 코드에 나온 것처럼 호스트 이름이 루프의 사용 가능한 첫 번째 IP 주소에 연결됩니다.  
+- 그런 다음에는 다음 코드에 나온 것처럼 호스트 이름이 루프의 사용 가능한 첫 번째 IP 주소에 연결됩니다.  
   
  `IPAddress address = hostEntry.AddressList[i];`  
   
@@ -74,12 +74,12 @@ WSE 3.0 TCP Interoperability Transport 샘플에는 TCP 이중 세션을 사용�
   
  `socket.Connect(new IPEndPoint(address, port));`  
   
--   채널 계약의 일부로 도메인 관련 예외를 래핑합니다(예: `SocketException`의 <xref:System.ServiceModel.CommunicationException>).  
+- 채널 계약의 일부로 도메인 관련 예외를 래핑합니다(예: `SocketException`의 <xref:System.ServiceModel.CommunicationException>).  
   
 ## <a name="channel-listener"></a>채널 수신기  
  TCP 전송을 작성하는 다음 단계는 서버 채널을 수락하기 위한 <xref:System.ServiceModel.Channels.IChannelListener>의 구현을 만드는 것입니다.  
   
--   `WseTcpChannelListener` 파생 <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > 재정의에서 [Begin] Open 및 On [Begin]에 가까우면 여 수신 소켓의 수명을 제어 하 고 있습니다. OnOpen에서는 IP_ANY를 수신 대기하는 소켓이 만들어집니다. 더 고급 구현에서는 IPv6을 수신 대기하는 두 번째 소켓도 만들 수 있습니다. 또한 호스트 이름에 IP 주소를 지정할 수도 있습니다.  
+- `WseTcpChannelListener` 파생 <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > 재정의에서 [Begin] Open 및 On [Begin]에 가까우면 여 수신 소켓의 수명을 제어 하 고 있습니다. OnOpen에서는 IP_ANY를 수신 대기하는 소켓이 만들어집니다. 더 고급 구현에서는 IPv6을 수신 대기하는 두 번째 소켓도 만들 수 있습니다. 또한 호스트 이름에 IP 주소를 지정할 수도 있습니다.  
   
  `IPEndPoint localEndpoint = new IPEndPoint(IPAddress.Any, uri.Port);`  
   
@@ -179,18 +179,18 @@ Symbols:
   
 1. `TcpSyncStockService` 샘플을 설치했으면 다음 작업을 수행합니다.  
   
-    1.  Visual Studio에서 `TcpSyncStockService`를 엽니다. TcpSyncStockService 샘플은 WSE 3.0과 함께 설치되며 이 샘플 코드에 포함되어 있지 않습니다.  
+    1. Visual Studio에서 `TcpSyncStockService`를 엽니다. TcpSyncStockService 샘플은 WSE 3.0과 함께 설치되며 이 샘플 코드에 포함되어 있지 않습니다.  
   
-    2.  StockService 프로젝트를 시작 프로젝트로 설정합니다.  
+    2. StockService 프로젝트를 시작 프로젝트로 설정합니다.  
   
-    3.  StockService 프로젝트에서 StockService.cs를 열고 `StockService` 클래스의 [Policy] 특성을 주석으로 처리합니다. 이렇게 하면 샘플에서 보안을 사용하지 않습니다. WCF는 WSE 3.0 보안 끝점과 상호 운용할 수 있습니다, 있지만 사용자 지정 TCP 전송에 초점을 맞춘이 샘플을 유지 하려면 보안 비활성화 됩니다.  
+    3. StockService 프로젝트에서 StockService.cs를 열고 `StockService` 클래스의 [Policy] 특성을 주석으로 처리합니다. 이렇게 하면 샘플에서 보안을 사용하지 않습니다. WCF는 WSE 3.0 보안 끝점과 상호 운용할 수 있습니다, 있지만 사용자 지정 TCP 전송에 초점을 맞춘이 샘플을 유지 하려면 보안 비활성화 됩니다.  
   
-    4.  F5 키를 눌러 `TcpSyncStockService`를 시작합니다. 새 콘솔 창에서 서비스가 시작됩니다.  
+    4. F5 키를 눌러 `TcpSyncStockService`를 시작합니다. 새 콘솔 창에서 서비스가 시작됩니다.  
   
-    5.  Visual Studio에서 이 TCP 전송 샘플을 엽니다.  
+    5. Visual Studio에서 이 TCP 전송 샘플을 엽니다.  
   
-    6.  `TcpSyncStockService`를 실행하는 컴퓨터 이름과 일치하도록 TestCode.cs의 "hostname" 변수를 업데이트합니다.  
+    6. `TcpSyncStockService`를 실행하는 컴퓨터 이름과 일치하도록 TestCode.cs의 "hostname" 변수를 업데이트합니다.  
   
-    7.  F5 키를 눌러 TCP 전송 샘플을 시작합니다.  
+    7. F5 키를 눌러 TCP 전송 샘플을 시작합니다.  
   
-    8.  TCP 전송 테스트 클라이언트가 새 콘솔에서 시작됩니다. 클라이언트는 서비스에서 스톡 할당량을 요청한 다음 콘솔 창에 결과를 표시합니다.  
+    8. TCP 전송 테스트 클라이언트가 새 콘솔에서 시작됩니다. 클라이언트는 서비스에서 스톡 할당량을 요청한 다음 콘솔 창에 결과를 표시합니다.  

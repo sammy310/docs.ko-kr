@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
 ms.openlocfilehash: 824d2a08ddd36317fcdb8caa1690decb2f9c432a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039564"
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>방법: Atom 및 RSS로 피드 공개
 Windows Communication Foundation (WCF)를 사용 하면 배포 피드를 노출 하는 서비스를 만들 수 있습니다. 이 항목에서는 Atom 1.0 및 RSS 2.0을 사용하여 배포 피드를 노출하는 배포 서비스를 만드는 방법을 설명합니다. 이 서비스는 배포 형식 중 하나를 반환할 수 있는 하나의 엔드포인트를 노출합니다. 편의를 위해 이 샘플에서 사용되는 서비스는 자체 호스트됩니다. 프로덕션 환경에서 이 형식의 서비스는 IIS 또는 WAS에서 호스트됩니다. 다른 WCF 호스팅 옵션에 대 한 자세한 내용은 참조 하세요. [호스팅](../../../../docs/framework/wcf/feature-details/hosting.md)합니다.  

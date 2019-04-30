@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: cf09732a-ab54-4d98-89e2-4d0a1f28fbce
 ms.openlocfilehash: 99c52b93cee858511d50aba2f30f2b9f96d91ccd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59090942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034374"
 ---
 # <a name="creating-autoincrement-columns"></a>AutoIncrement 열 만들기
 열에 고유 값을 지정하려면 테이블에 새 행을 추가할 때 열 값이 자동으로 증가하도록 설정합니다. 자동 증분 만들려는 <xref:System.Data.DataColumn>로 설정 합니다 <xref:System.Data.DataColumn.AutoIncrement%2A> 열의 속성 **true**합니다. <xref:System.Data.DataColumn> 정의 된 값을 사용 하 여 시작한를 <xref:System.Data.DataColumn.AutoIncrementSeed%2A> 속성을 각 행의 값을 추가 하 고는 **AutoIncrement** 열에 정의 된 값으로 증가 <xref:System.Data.DataColumn.AutoIncrementStep%2A> 열의 속성.  

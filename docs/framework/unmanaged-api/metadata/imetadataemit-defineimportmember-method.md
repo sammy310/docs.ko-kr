@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 81acda4d395563fc8e0000e38036d1aaa0f14471
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62043222"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>IMetaDataEmit::DefineImportMember 메서드
 형식 또는 현재 범위를 벗어난 정의 되 고 해당 참조에 대 한 토큰을 정의 하는 모듈의 지정된 된 멤버에 대 한 참조를 만듭니다.  
@@ -72,11 +72,11 @@ HRESULT DefineImportMember (
   
  일반적으로 사용 하기 전에 `DefineImportMember` 메서드를 만들어야 합니다를 현재 범위, 형식 참조 또는 대상 멤버의 부모 클래스, 인터페이스 또는 모듈에 대 한 모듈 참조. 이 참조에 대 한 메타 데이터 토큰에 전달 되는 `tkParent` 인수입니다. 컴파일러 또는 링커 나중에 해결 될 경우 대상 멤버의 부모에 대 한 참조를 만들 필요가 없습니다. 요약:  
   
--   경우 대상 멤버 필드 또는 메서드를 사용 하 여 하나를 [imetadataemit:: Definetyperefbyname](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) 또는 [imetadataemit:: Defineimporttype](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md) 에 대 한 현재 범위에서 형식 참조를 만드는 메서드를 멤버의 부모 클래스 또는 부모 인터페이스입니다.  
+- 경우 대상 멤버 필드 또는 메서드를 사용 하 여 하나를 [imetadataemit:: Definetyperefbyname](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) 또는 [imetadataemit:: Defineimporttype](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md) 에 대 한 현재 범위에서 형식 참조를 만드는 메서드를 멤버의 부모 클래스 또는 부모 인터페이스입니다.  
   
--   대상 멤버를 전역 변수 또는 전역 함수 (즉, 없습니다 멤버 클래스 또는 인터페이스) 인 경우 사용 합니다 [imetadataemit:: Definemoduleref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md) 멤버의 부모에 대 한 현재 범위에서 모듈 참조를 만드는 방법 모듈입니다.  
+- 대상 멤버를 전역 변수 또는 전역 함수 (즉, 없습니다 멤버 클래스 또는 인터페이스) 인 경우 사용 합니다 [imetadataemit:: Definemoduleref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md) 멤버의 부모에 대 한 현재 범위에서 모듈 참조를 만드는 방법 모듈입니다.  
   
--   대상 멤버의 부모에 컴파일러나 링커 나중에 확인할 수는, 전달한 `mdTokenNil` 에서 `tkParent`합니다. 이 적용 되는 유일한 시나리오는 경우 전역 함수 또는 전역 변수를 현재 모듈에 연결 될.obj 파일에서 가져오는 이며 메타 데이터를 병합 합니다.  
+- 대상 멤버의 부모에 컴파일러나 링커 나중에 확인할 수는, 전달한 `mdTokenNil` 에서 `tkParent`합니다. 이 적용 되는 유일한 시나리오는 경우 전역 함수 또는 전역 변수를 현재 모듈에 연결 될.obj 파일에서 가져오는 이며 메타 데이터를 병합 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

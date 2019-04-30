@@ -9,11 +9,11 @@ helpviewer_keywords:
 - printing [Windows Forms], print support
 ms.assetid: a4a2960c-eb70-48e2-b641-cfb222704e46
 ms.openlocfilehash: 8e008f2cb4b2f32cdba676e68d9fd790530e2b06
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011855"
 ---
 # <a name="windows-forms-print-support"></a>Windows Forms 인쇄 지원
 Windows Forms의 인쇄를 사용 하는 주로 구성 합니다 [PrintDocument 구성 요소](../controls/printdocument-component-windows-forms.md) 를 인쇄 하려면 사용자를 사용 하도록 설정 하려면 구성 요소 및 [PrintPreviewDialog 컨트롤](../controls/printpreviewdialog-control-windows-forms.md) 컨트롤 [PrintDialog 구성 요소](../controls/printdialog-component-windows-forms.md) 하 고 [PageSetupDialog 구성 요소](../controls/pagesetupdialog-component-windows-forms.md) 구성 요소는 Windows 운영 체제에 익숙한 사용자에 게 친숙 한 그래픽 인터페이스를 제공 합니다.  

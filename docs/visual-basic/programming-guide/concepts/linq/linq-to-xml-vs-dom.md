@@ -3,11 +3,11 @@ title: LINQ to XML과 비교 DOM (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 18c36130-d598-40b7-9007-828232252978
 ms.openlocfilehash: 282df577808342a52a70f419b2a7559752103a0f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051496"
 ---
 # <a name="linq-to-xml-vs-dom-visual-basic"></a>LINQ to XML과 비교 DOM (Visual Basic)
 이 섹션에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]과 현재 주로 사용되는 XML 프로그래밍 API인 W3C DOM(문서 개체 모델)의 몇 가지 주요 차이점에 대해 설명합니다.  
@@ -79,11 +79,11 @@ Dim contacts = _
 ## <a name="working-directly-with-xml-elements"></a>XML 요소로 직접 작업  
  XML을 사용하여 프로그래밍하는 경우 XML 요소를 대개 집중적으로 다루고 특성도 집중적으로 다룰 수 있습니다. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 XML 요소 및 특성으로 직접 작업할 수 있습니다. 예를 들어, 다음을 수행할 수 있습니다.  
   
--   문서 개체를 전혀 사용하지 않고 XML 요소를 만듭니다. 이에 따라 XML 트리의 조각으로 작업해야 하는 경우 프로그래밍이 단순해집니다.  
+- 문서 개체를 전혀 사용하지 않고 XML 요소를 만듭니다. 이에 따라 XML 트리의 조각으로 작업해야 하는 경우 프로그래밍이 단순해집니다.  
   
--   XML 파일에서 `T:System.Xml.Linq.XElement` 개체를 직접 로드합니다.  
+- XML 파일에서 `T:System.Xml.Linq.XElement` 개체를 직접 로드합니다.  
   
--   `T:System.Xml.Linq.XElement` 개체를 파일이나 스트림으로 serialize합니다.  
+- `T:System.Xml.Linq.XElement` 개체를 파일이나 스트림으로 serialize합니다.  
   
  이와 비교할 때 W3C DOM에서는 XML 문서가 XML 트리의 논리 컨테이너로 사용됩니다. DOM에서 요소 및 특성을 비롯한 XML 노드는 XML 문서의 컨텍스트에서 만들어져야 합니다. DOM에서 이름 요소를 만드는 코드의 조각은 다음과 같습니다.  
   

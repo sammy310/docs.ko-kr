@@ -5,11 +5,11 @@ helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
 ms.openlocfilehash: 12c266a473aa7c20ab35d6047fedafbfa04dac4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050716"
 ---
 # <a name="transport-quotas"></a>전송 할당량
 전송 할당량은 연결이 과도한 리소스를 사용하는 경우를 결정하는 정책 메커니즘입니다. 할당량은 할당량 값을 초과하면 추가 리소스를 사용하지 못하도록 설정된 절대 한계입니다. 전송 할당량은 악의적이거나 의도하지 않은 서비스 거부 공격을 방지합니다.  
@@ -19,11 +19,11 @@ ms.locfileid: "59773268"
 ## <a name="types-of-transport-quotas"></a>전송 할당량 유형  
  WCF 전송에는 세 가지 유형의 할당량이 있습니다.  
   
--   *시간 제한* 오랜 시간에 대 한 리소스를 묶어 의존 하는 서비스 공격 거부를 완화 합니다.  
+- *시간 제한* 오랜 시간에 대 한 리소스를 묶어 의존 하는 서비스 공격 거부를 완화 합니다.  
   
--   *메모리 할당 제한* 단일 연결에서 시스템 메모리를 소진 하 고 다른 연결에 대 한 서비스 거부를 방지 합니다.  
+- *메모리 할당 제한* 단일 연결에서 시스템 메모리를 소진 하 고 다른 연결에 대 한 서비스 거부를 방지 합니다.  
   
--   *컬렉션 크기 제한* 간접적으로 메모리를 할당 하거나 공급에 제한이 있는 리소스 사용을 바인딩합니다.  
+- *컬렉션 크기 제한* 간접적으로 메모리를 할당 하거나 공급에 제한이 있는 리소스 사용을 바인딩합니다.  
   
 ## <a name="transport-quota-descriptions"></a>전송 할당량 설명  
  이 섹션에서는 표준 WCF 전송에 사용할 수 있는 전송 할당량을 설명합니다. HTTP (S), TCP/IP 및 명명 된 파이프 합니다. 사용자 지정 전송은 이 목록에 포함되지 않은 구성 가능한 할당량을 노출할 수 있습니다. 할당량에 대한 자세한 내용은 사용자 지정 전송 설명서를 참조하십시오.  

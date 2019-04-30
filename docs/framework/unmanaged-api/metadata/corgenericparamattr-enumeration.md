@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0aa9b84c9e16811f799a3cd2ad096508db3f7d34
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59220502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62045796"
 ---
 # <a name="corgenericparamattr-enumeration"></a>CorGenericParamAttr 열거형
 설명 하는 값을 포함 합니다 <xref:System.Type> 호출에서 사용된 된 제네릭 형식에 대 한 매개 변수 [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md)합니다.  

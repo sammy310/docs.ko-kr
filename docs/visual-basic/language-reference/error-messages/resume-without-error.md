@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID20
 ms.assetid: f9631804-fd36-4443-b36c-30db827e6176
 ms.openlocfilehash: 61332486b20af66af24eac06b222a38353578c16
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62055162"
 ---
 # <a name="resume-without-error"></a>오류 없이 계속됩니다.
 `Resume` 문을 오류 처리 코드 외부에 있거나 오류가 없는 경우에 코드 오류 처리기로 점프 합니다.  

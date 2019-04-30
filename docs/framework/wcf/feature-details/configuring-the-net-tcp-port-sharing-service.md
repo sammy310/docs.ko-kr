@@ -3,11 +3,11 @@ title: Net.TCP Port Sharing Service 구성
 ms.date: 03/30/2017
 ms.assetid: b6dd81fa-68b7-4e1b-868e-88e5901b7ea0
 ms.openlocfilehash: dbc27f0f15be41c5384d8a1f73f0226c3f0f83ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62040185"
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>Net.TCP Port Sharing Service 구성
 Net.TCP 전송을 사용하는 자체 호스팅 서비스는 네트워크 통신에 사용되는 기본 TCP 소켓의 동작을 제어하는 `ListenBacklog` 및 `MaxPendingAccepts` 등 여러 고급 설정을 제어할 수 있습니다. 그러나 전송 바인딩이 기본적으로 활성화되는 포트 공유를 사용할 수 없도록 설정한 경우 각 소켓에 대한 이러한 설정은 바인딩 수준에서만 적용됩니다.  

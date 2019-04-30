@@ -9,11 +9,11 @@ helpviewer_keywords:
 - RichTextBox control [WPF], about RichTextBox control
 ms.assetid: c94548b2-c1e9-4b62-b10c-dd8740eb23d8
 ms.openlocfilehash: 9aa0d33b3cb2c15ba9c1cb7e7d7be9a3125f66d3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052913"
 ---
 # <a name="richtextbox-overview"></a>RichTextBox 개요
 <xref:System.Windows.Controls.RichTextBox> 컨트롤 표시 하거나 단락, 이미지, 테이블 등을 포함 한 유동 콘텐츠를 편집할 수 있습니다. 이 항목에서는 소개 합니다 <xref:System.Windows.Controls.TextBox> 클래스 및 둘 다에서 사용 하는 방법의 예가 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 및 C#.  

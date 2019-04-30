@@ -17,13 +17,13 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a1a26db7785a8a378fa541308ecc6aee30fa87ec
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049286"
 ---
-# <a name="delete-function"></a>함수 삭제
+# <a name="delete-function"></a>Delete 함수
 
 CIM 클래스 정의에서 지정된 된 속성 및 모든 해당 한정자를 삭제합니다.
 

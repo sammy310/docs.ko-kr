@@ -3,11 +3,11 @@ title: 검색 프록시 구현
 ms.date: 03/30/2017
 ms.assetid: dda20e79-8df3-438e-a281-69d779d978ec
 ms.openlocfilehash: 5d9296d8ba70d4c9e8d8339fa3a032d9c4c62826
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047063"
 ---
 # <a name="implementing-a-discovery-proxy"></a>검색 프록시 구현
 이 단원에서는 검색 프록시를 구현하는 데 필요한 단계에 대해 설명합니다. 검색 프록시는 서비스의 리포지토리를 포함하는 독립 실행형 서비스입니다. 클라이언트는 검색 프록시를 쿼리하여 해당 검색 프록시가 인식하는 검색 가능한 서비스를 찾을 수 있습니다. 프록시를 서비스로 채우는 방식은 구현자의 재량에 따라 결정됩니다. 예를 들어 검색 프록시가 기존 서비스 리포지토리에 연결하여 해당 정보를 검색 가능하게 만들거나, 관리자가 관리 API를 사용하여 프록시에 검색 가능한 서비스를 추가하거나, 검색 프록시가 알림 기능을 사용하여 해당 내부 캐시를 업데이트할 수 있습니다.  

@@ -3,11 +3,11 @@ title: FileName에 지정된 파일은 유효한 XML 파일이 아닙니다.
 ms.date: 07/20/2015
 ms.assetid: c4c30bf3-e0ad-4bc8-89e0-2c3e49e9793b
 ms.openlocfilehash: 89499b07e767bd0b3a777db4e5155f64a4357f0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58921275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052315"
 ---
 # <a name="file-specified-in-filename-is-not-a-valid-xml-file"></a>FileName에 지정된 파일은 유효한 XML 파일이 아닙니다.
 

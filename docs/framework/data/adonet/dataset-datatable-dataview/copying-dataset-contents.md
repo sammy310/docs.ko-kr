@@ -6,20 +6,20 @@ dev_langs:
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
 ms.openlocfilehash: cb2a172ac4e6a0ce4852f4c7cf7044583d9ab6c4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034434"
 ---
 # <a name="copying-dataset-contents"></a>데이터 집합 콘텐츠 복사
 복사본을 만들 수 있습니다는 <xref:System.Data.DataSet> 원래 데이터는 영향을 주지 않고 데이터로 작업 하거나 사용할 수 있도록 데이터의 하위 집합으로는 **데이터 집합**합니다. 복사 하는 경우는 **데이터 집합**를 할 수 있습니다.  
   
--   정확한 복사본을 만듭니다는 **데이터 집합**, 스키마, 데이터, 행 상태 정보 및 행 버전을 포함 합니다.  
+- 정확한 복사본을 만듭니다는 **데이터 집합**, 스키마, 데이터, 행 상태 정보 및 행 버전을 포함 합니다.  
   
--   만들기는 **데이터 집합** 기존 스키마를 포함 하는 **데이터 집합**, 하지만 수정 된 행만 합니다. 수정 된 모든 행을 반환 하거나 특정을 지정할 수 있습니다 **DataRowState**합니다. 행 상태에 대 한 자세한 내용은 참조 하세요. [행 상태 및 행 버전](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)합니다.  
+- 만들기는 **데이터 집합** 기존 스키마를 포함 하는 **데이터 집합**, 하지만 수정 된 행만 합니다. 수정 된 모든 행을 반환 하거나 특정을 지정할 수 있습니다 **DataRowState**합니다. 행 상태에 대 한 자세한 내용은 참조 하세요. [행 상태 및 행 버전](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)합니다.  
   
--   스키마 나 관계형 구조만 복사 합니다 **데이터 집합** 없이 모든 행을 복사 합니다. <xref:System.Data.DataTable>를 사용하여 행을 기존 <xref:System.Data.DataTable.ImportRow%2A>로 가져올 수 있습니다.  
+- 스키마 나 관계형 구조만 복사 합니다 **데이터 집합** 없이 모든 행을 복사 합니다. <xref:System.Data.DataTable>를 사용하여 행을 기존 <xref:System.Data.DataTable.ImportRow%2A>로 가져올 수 있습니다.  
   
  정확한 복사본을 만들 합니다 **데이터 집합** 스키마와 데이터 모두를 포함 하는, 사용 하 여는 <xref:System.Data.DataSet.Copy%2A> 메서드를 **데이터 집합**. 다음 코드 예제에는의 정확한 복사본을 만드는 방법을 보여 줍니다 합니다 **데이터 집합**합니다.  
   

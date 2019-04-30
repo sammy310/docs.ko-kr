@@ -3,11 +3,11 @@ title: Windows Communication Foundation 샘플의 일회 설치 절차
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
 ms.openlocfilehash: 2b9d84089cdd987f2e2b1e3d23354505520a80f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052107"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 샘플의 일회 설치 절차
 대부분의 Windows Communication Foundation (WCF) 샘플 인터넷 정보 서비스 (IIS)에서 호스팅되고 공용 가상 디렉터리에서 실행 됩니다. 이 일회 설치 절차에서는 디스크에 폴더를 만듭니다. 또한 이라는 iis 가상 디렉터리 추가 **ServiceModelSamples**합니다.
@@ -48,9 +48,9 @@ ms.locfileid: "59773053"
   
 9. 실행 합니다 **Setupvroot.bat** 일괄 처리 파일. 다음 단계가 수행됩니다.  
   
-    -   IIS에 ServiceModelSamples라는 가상 디렉터리가 만들어집니다.  
+    - IIS에 ServiceModelSamples라는 가상 디렉터리가 만들어집니다.  
   
-    -   %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples and %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples\bin이라는 새 디스크 디렉터리가 만들어집니다.  
+    - %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples and %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples\bin이라는 새 디스크 디렉터리가 만들어집니다.  
   
      이러한 디렉터리를 수동으로 설정 하는 것을 선호 하는 경우 참조를 [가상 디렉터리 설치 지침](../../../../docs/framework/wcf/samples/virtual-directory-setup-instructions.md)합니다. 이 단계에서 수행한 모든 변경 작업을 되돌리려면 샘플 사용을 마친 후 cleanupvroot.bat를 실행합니다.  
   
@@ -66,11 +66,11 @@ ms.locfileid: "59773053"
 
 12. Setupcerttool.bat 파일을 실행합니다. 이 파일에는 \<InstallPath > \WF_WCF_Samples\WCF\Setup\ 폴더입니다.  이 스크립트는 다음 작업을 수행합니다.
 
-    -   FindPrivateKey 도구를 빌드합니다.
+    - FindPrivateKey 도구를 빌드합니다.
 
-    -   %ProgramFiles%\ServiceModelSampleTools라는 디렉터리를 만듭니다.
+    - %ProgramFiles%\ServiceModelSampleTools라는 디렉터리를 만듭니다.
 
-    -   이 디렉터리에 새 FindPrivateKey 도구를 복사합니다.
+    - 이 디렉터리에 새 FindPrivateKey 도구를 복사합니다.
 
      이 도구는 인증서를 사용하고 IIS에서 호스팅되는 샘플에 필요합니다.
 

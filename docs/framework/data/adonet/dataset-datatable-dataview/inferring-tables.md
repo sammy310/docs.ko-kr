@@ -3,20 +3,20 @@ title: 테이블 유추
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
 ms.openlocfilehash: 2c2a93d413f301dc3006b701e4bc7979a3fa7a1d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034257"
 ---
 # <a name="inferring-tables"></a>테이블 유추
 XML 문서로부터 <xref:System.Data.DataSet>의 스키마를 유추할 때 ADO.NET에서는 우선 테이블을 나타내는 XML 요소를 결정합니다. 다음 XML 구조에 대 한 테이블의 결과 **데이터 집합** 스키마:  
   
--   특성이 있는 요소  
+- 특성이 있는 요소  
   
--   자식 요소가 있는 요소  
+- 자식 요소가 있는 요소  
   
--   반복되는 요소  
+- 반복되는 요소  
   
 ## <a name="elements-with-attributes"></a>특성이 있는 요소  
  자신에 지정된 특성을 갖고 있는 요소는 유추된 테이블이 됩니다. 예를 들어, 다음과 같은 XML을 가정해 봅시다.  

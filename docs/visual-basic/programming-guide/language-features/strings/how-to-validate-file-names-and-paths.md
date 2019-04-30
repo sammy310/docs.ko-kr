@@ -8,11 +8,11 @@ helpviewer_keywords:
 - paths [Visual Basic], validating
 ms.assetid: f673462d-57b7-4120-b13a-6a7592f7ab2c
 ms.openlocfilehash: c8e01a0f5a3f99fdbc424d6cd7d224367c7bad08
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032177"
 ---
 # <a name="how-to-validate-file-names-and-paths-in-visual-basic"></a>방법: 파일 이름 및 Visual Basic에서 경로 확인
 이 예는 `Boolean` 문자열로 파일 이름이 나 경로 나타내는지 여부를 나타내는 값입니다. 유효성 검사 이름을 파일 시스템에서 허용 되지 않는 문자를 포함 하는 경우를 확인 합니다.  

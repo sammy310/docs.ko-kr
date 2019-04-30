@@ -3,11 +3,11 @@ title: 서비스 엔드포인트 및 큐 주소 지정
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
 ms.openlocfilehash: 4064b13b00d44f90a372df5364406fb16c1da9fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050391"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>서비스 엔드포인트 및 큐 주소 지정
 이 항목에서는 클라이언트가 큐에서 읽는 서비스에 주소를 지정하는 방법 및 서비스 엔드포인트가 큐에 매핑되는 방법을 설명합니다. 참고로, 다음 그림과 클래식 Windows Communication Foundation (WCF) 응용 프로그램 배포를 대기 합니다.  
@@ -34,11 +34,11 @@ ms.locfileid: "59172525"
   
  다음은 각 문자에 대한 설명입니다.  
   
--   \<*호스트 이름*> 대상 큐를 호스팅하는 컴퓨터의 이름입니다.  
+- \<*호스트 이름*> 대상 큐를 호스팅하는 컴퓨터의 이름입니다.  
   
--   [private]는 선택 사항입니다. 개인 큐인 대상 큐에 주소를 지정할 때 사용됩니다. 공개 큐에 주소를 지정하려면 private를 지정하지 않아야 합니다. MSMQ 경로 달리 있습니다는 "$" WCF URI 형태로 note 합니다.  
+- [private]는 선택 사항입니다. 개인 큐인 대상 큐에 주소를 지정할 때 사용됩니다. 공개 큐에 주소를 지정하려면 private를 지정하지 않아야 합니다. MSMQ 경로 달리 있습니다는 "$" WCF URI 형태로 note 합니다.  
   
--   \<*큐 이름*> 큐의 이름입니다. 큐 이름은 하위 큐를 참조할 수도 있습니다. Thus, \<*queue-name*> = \<*name-of-queue*>[;*sub-queue-name*].  
+- \<*큐 이름*> 큐의 이름입니다. 큐 이름은 하위 큐를 참조할 수도 있습니다. Thus, \<*queue-name*> = \<*name-of-queue*>[;*sub-queue-name*].  
   
  예 1: 개인 큐 PurchaseOrders abc atadatum.com 컴퓨터에서 호스트를 해결 하기 위해 URI net.msmq://abc.adatum.com/private/PurchaseOrders 것입니다.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "59172525"
 ### <a name="multiple-contracts-in-a-queue"></a>큐의 여러 계약  
  큐의 메시지는 서로 다른 계약을 구현할 수 있습니다. 이 경우 다음 중 하나가 충족되어야 모든 메시지를 읽고 처리할 수 있습니다.  
   
--   모든 계약을 구현하는 서비스 엔드포인트를 지정합니다. 이는 권장되는 방법입니다.  
+- 모든 계약을 구현하는 서비스 엔드포인트를 지정합니다. 이는 권장되는 방법입니다.  
   
--   서로 다른 계약으로 여러 엔드포인트를 지정하지만 모든 엔드포인트가 같은 `NetMsmqBinding` 개체를 사용해야 합니다. ServiceModel에서 디스패치 논리는 디스패치용 전송 채널에서 메시지를 읽는 메시지 펌프를 사용하므로, 서로 다른 엔드포인트로 계약 기반 메시지를 역 멀티플렉싱합니다. 메시지 펌프는 수신 대기 URI/바인딩 쌍에 대해 만들어집니다. 큐 주소는 대기 중인 수신기에 의해 수신 대기 URI로 사용됩니다. 모든 엔드포인트가 같은 바인딩 개체를 사용하는 경우 단일 메시지 펌프가 메시지를 읽고 계약을 기반으로 관련 엔드포인트에 역 멀티플렉싱하는 데 사용됩니다.  
+- 서로 다른 계약으로 여러 엔드포인트를 지정하지만 모든 엔드포인트가 같은 `NetMsmqBinding` 개체를 사용해야 합니다. ServiceModel에서 디스패치 논리는 디스패치용 전송 채널에서 메시지를 읽는 메시지 펌프를 사용하므로, 서로 다른 엔드포인트로 계약 기반 메시지를 역 멀티플렉싱합니다. 메시지 펌프는 수신 대기 URI/바인딩 쌍에 대해 만들어집니다. 큐 주소는 대기 중인 수신기에 의해 수신 대기 URI로 사용됩니다. 모든 엔드포인트가 같은 바인딩 개체를 사용하는 경우 단일 메시지 펌프가 메시지를 읽고 계약을 기반으로 관련 엔드포인트에 역 멀티플렉싱하는 데 사용됩니다.  
   
 ### <a name="srmp-messaging"></a>SRMP 메시징  
  앞에서 설명한 대로 큐 간 전송에 SRMP 프로토콜을 사용할 수 있습니다. 일반적으로 이 방법은 HTTP 전송이 전송 큐와 대상 큐 간에 메시지를 전송할 때 사용됩니다.  

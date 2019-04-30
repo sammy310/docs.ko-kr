@@ -3,11 +3,11 @@ title: '방법: 구성을 사용하지 않고 ASP.NET AJAX 엔드포인트 추�
 ms.date: 03/30/2017
 ms.assetid: b05c1742-8d0a-4673-9d71-725b18a3008e
 ms.openlocfilehash: 078580b96ab911f65790e58338951532cd7ad704
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047908"
 ---
 # <a name="how-to-add-an-aspnet-ajax-endpoint-without-using-configuration"></a>방법: 구성을 사용하지 않고 ASP.NET AJAX 엔드포인트 추가
 Windows Communication Foundation (WCF)를 사용 하면 클라이언트 웹 사이트의 JavaScript에서 호출할 수 있는 ASP.NET AJAX 사용 끝점을 노출 하는 서비스를 만들 수 있습니다. 이와 같은 엔드포인트를 만들려면 다른 모든 WCF 엔드포인트에서처럼 구성 파일을 사용하거나 구성 요소가 필요하지 않은 메서드를 사용할 수 있습니다. 이 항목에서는 두 번째 접근 방법을 보여 줍니다.  

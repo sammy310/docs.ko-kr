@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
 ms.openlocfilehash: 08be345557d10a528aa03234883eba1b3a31beaa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054941"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>XML 리터럴의 공백(Visual Basic)
 Visual Basic 컴파일러를 만들 때 XML 리터럴에서 유효 공백 문자만 포함 된 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 개체입니다. 불필요 한 공백 문자는 포함 되지 않습니다.  
@@ -18,11 +18,11 @@ Visual Basic 컴파일러를 만들 때 XML 리터럴에서 유효 공백 문자
 ## <a name="significant-and-insignificant-white-space"></a>유효 공백과 무효 공백  
  만 세 가지 영역에서 XML 리터럴의 공백 문자 사항이 중요 합니다.  
   
--   특성 값에 있을 때.  
+- 특성 값에 있을 때.  
   
--   요소의 텍스트 콘텐츠 일부가 텍스트에도 다른 문자가 시점과 합니다.  
+- 요소의 텍스트 콘텐츠 일부가 텍스트에도 다른 문자가 시점과 합니다.  
   
--   요소의 텍스트 콘텐츠에 대 한 포함된 식을에 있을 때.  
+- 요소의 텍스트 콘텐츠에 대 한 포함된 식을에 있을 때.  
   
  그렇지 않으면 컴파일러를 불필요 한 공백 문자를 처리 하 고에 포함 되지 않습니다는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 리터럴의 개체입니다.  
   

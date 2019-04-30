@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Columns property [WPF]
 ms.assetid: 3f8884f4-7e1f-456b-be06-fbd3cf469bf3
 ms.openlocfilehash: d379d1a98bff614ff9e16cdd340bb69644988743
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051470"
 ---
 # <a name="how-to-manipulate-a-tables-columns-through-the-columns-property"></a>방법: Columns 속성을 통해 테이블의 열 조작
 이 예제에서는 테이블의 열을 통해 수행할 수 있는 보다 일반적인 작업 중 일부는 <xref:System.Windows.Documents.Table.Columns%2A> 속성입니다.  

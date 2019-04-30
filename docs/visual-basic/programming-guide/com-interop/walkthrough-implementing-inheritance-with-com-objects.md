@@ -8,11 +8,11 @@ helpviewer_keywords:
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
 ms.openlocfilehash: 0b3977e73e3b2aa9e80e2dab08d15035283b8387
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022326"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>연습: COM 개체 (Visual Basic)를 사용한 상속 구현
 Visual Basic 클래스를 파생 시킬 수 있습니다 `Public` 이전 버전의 Visual Basic에서 생성 된 COM 개체의 클래스입니다. 속성 및 COM 개체에서 상속 된 클래스의 메서드를 재정의 하거나 속성 처럼 오버 로드 및 다른 기본 클래스의 메서드를 재정의 또는 오버 로드 될 수 있습니다. COM 개체에서 상속 다시 컴파일하지 않으려는 기존 클래스 라이브러리가 있는 경우에 유용 합니다.  
@@ -125,9 +125,9 @@ Visual Basic 클래스를 파생 시킬 수 있습니다 `Public` 이전 버전�
   
  속성 및 COM 클래스에서 상속 된 메서드를 재정의할 수 있습니다 즉 로컬 속성 또는 속성을 대체 하는 메서드 또는 기본 COM 클래스에서 상속 된 메서드를 선언할 수 있습니다. 상속 된 COM 속성을 재정의 하는 것에 대 한 규칙 다음 예외를 사용 하 여 다른 메서드와 속성을 재정의 하는 것에 대 한 규칙와 비슷합니다.  
   
--   모든 속성 또는 COM 클래스에서 상속 된 메서드를 재정의 하는 경우 다른 모든 상속 된 속성 및 메서드를 재정의 해야 합니다.  
+- 모든 속성 또는 COM 클래스에서 상속 된 메서드를 재정의 하는 경우 다른 모든 상속 된 속성 및 메서드를 재정의 해야 합니다.  
   
--   사용 하는 속성 `ByRef` 매개 변수를 재정의할 수 없습니다.  
+- 사용 하는 속성 `ByRef` 매개 변수를 재정의할 수 없습니다.  
   
 ## <a name="see-also"></a>참고자료
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
 ms.openlocfilehash: de00e428cc3d9d7a5688e853b0ff4295fec5b3e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052133"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>방법: 개체 (Visual Basic)의 멤버에 액세스
 개체 변수에 개체를 참조 하는 경우, 해당 메서드, 속성, 필드 및 이벤트와 같은 경우 해당 개체의 멤버를 사용 하려는 경우가 많습니다. 예를 들어 만든 후 새 <xref:System.Windows.Forms.Form> 개체를 설정 하려는 경우 해당 <xref:System.Windows.Forms.Control.Text%2A> 속성 또는 호출 해당 <xref:System.Windows.Forms.Control.Focus%2A> 메서드.  
@@ -20,7 +20,7 @@ ms.locfileid: "59322760"
   
 #### <a name="to-access-members-of-an-object"></a>개체의 멤버에 액세스  
   
--   멤버 액세스 연산자를 사용 하 여 (`.`) 간의 개체 변수 이름과 멤버 이름입니다.  
+- 멤버 액세스 연산자를 사용 하 여 (`.`) 간의 개체 변수 이름과 멤버 이름입니다.  
   
     ```  
     currentText = newForm.Text  

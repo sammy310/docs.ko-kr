@@ -11,11 +11,11 @@ helpviewer_keywords:
 - MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
 ms.openlocfilehash: 0bda03d3c01356317fbcc56d44199ff4f9484b5b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053940"
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit(Visual Basic)
 클래스는 기본 클래스로 사용할 수는 및에서 직접 개체를 만들 수를 지정 합니다.  
@@ -29,9 +29,9 @@ ms.locfileid: "58816566"
   
 ## <a name="rules"></a>규칙  
   
--   **선언 컨텍스트입니다.** 사용할 수 있습니다 `MustInherit` 에서만 `Class` 문입니다.  
+- **선언 컨텍스트입니다.** 사용할 수 있습니다 `MustInherit` 에서만 `Class` 문입니다.  
   
--   **결합 된 한정자입니다.** 지정할 수 없습니다 `MustInherit` 와 함께 `NotInheritable` 같은 선언에 있습니다.  
+- **결합 된 한정자입니다.** 지정할 수 없습니다 `MustInherit` 와 함께 `NotInheritable` 같은 선언에 있습니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 강제 상속 및 강제 재정의 보여 줍니다. 기본 클래스 `shape` 변수를 정의 `acrossLine`합니다. 클래스 `circle` 하 고 `square` 에서 파생 `shape`합니다. 정의의 상속 `acrossLine`에서 함수를 정의 해야 하지만 `area` 계산 각 종류의 모양에 대 한 다르기 때문입니다.  

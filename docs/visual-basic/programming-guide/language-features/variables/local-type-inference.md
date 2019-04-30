@@ -13,11 +13,11 @@ helpviewer_keywords:
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
 ms.openlocfilehash: e6214938262b987a1bae4a9ca1d5c945f8b7fe6e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052588"
 ---
 # <a name="local-type-inference-visual-basic"></a>지역 형식 유추(Visual Basic)
 Visual Basic 컴파일러를 사용 하 여 *형식 유추* 없이 선언 된 지역 변수의 데이터 형식을 결정 하는 `As` 절. 컴파일러는 초기화 식의 형식에서 변수의 형식을 유추합니다. 그러면 다음 예제에서와 같이 형식을 명시적으로 지정 하지 않고 변수를 선언할 수 있습니다. 선언으로 인해 둘 다 `num1` 고 `num2` 정수로 강력한 형식입니다.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Let statement [Visual Basic]
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
 ms.openlocfilehash: ff298f001a2d865446436e8099a2fbbef593a00a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054200"
 ---
 # <a name="let-clause-visual-basic"></a>Let 절(Visual Basic)
 값을 계산 하 고 쿼리 내에서 새 변수에 할당 합니다.  

@@ -3,11 +3,11 @@ title: XML에서 데이터 집합 관계형 구조 유추
 ms.date: 03/30/2017
 ms.assetid: cd2f41c6-6785-420e-aa43-3ceb0bdccdce
 ms.openlocfilehash: 9a9dc7d94728ea797a8930d3f77068fdd3ebfb5c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034244"
 ---
 # <a name="inferring-dataset-relational-structure-from-xml"></a>XML에서 데이터 집합 관계형 구조 유추
 <xref:System.Data.DataSet>의 관계형 구조 또는 스키마는 테이블, 열, 제약 조건 및 관계로 구성됩니다. XML에서 <xref:System.Data.DataSet>을 로드할 때 로드되는 XML에서 스키마를 명시적으로 또는 유추를 통해 미리 정의하거나 만들 수 있습니다. 내용과 스키마를 로드 하는 방법에 대 한 자세한 내용은 <xref:System.Data.DataSet> XML에서 참조 [XML에서 데이터 집합을 로드](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) 하 고 [XML에서 데이터 집합 스키마 정보 로드](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)합니다.  

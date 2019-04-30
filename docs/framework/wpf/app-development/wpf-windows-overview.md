@@ -29,11 +29,11 @@ helpviewer_keywords:
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
 ms.openlocfilehash: 5acebf0f88f3147bf274818f11697b480146701a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052731"
 ---
 # <a name="wpf-windows-overview"></a>WPF 창 개요
 Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프로그램을 사용 하 여 사용자 상호 작용 합니다. 창의 기본 용도는 데이터를 시각화하는 콘텐츠를 호스트하고 사용자가 데이터와 상호 작용할 수 있도록 하는 것입니다. 독립 실행형 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 사용 하 여 자체 창을 제공 합니다 <xref:System.Windows.Window> 클래스입니다. 이 항목에서는 소개 <xref:System.Windows.Window> 만들고 독립 실행형 응용 프로그램의 창 관리의 기본적인 내용을 다루기 전에 합니다.  
@@ -51,29 +51,29 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
   
  합니다 *비클라이언트 영역* 창에 의해 구현 됩니다 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 창에 다음을 비롯 한 대부분의 windows에 공통 된 부분이 포함 됩니다.  
   
--   테두리.  
+- 테두리.  
   
--   제목 표시줄.  
+- 제목 표시줄.  
   
--   아이콘.  
+- 아이콘.  
   
--   최소화, 최대화 및 복원 단추.  
+- 최소화, 최대화 및 복원 단추.  
   
--   닫기 단추.  
+- 닫기 단추.  
   
--   사용자가 창을 최소화, 최대화, 복원, 이동, 크기 조정 및 닫을 수 있는 메뉴 항목이 들어 있는 시스템 메뉴.  
+- 사용자가 창을 최소화, 최대화, 복원, 이동, 크기 조정 및 닫을 수 있는 메뉴 항목이 들어 있는 시스템 메뉴.  
   
  합니다 *클라이언트 영역* 창에 창의 비클라이언트 영역 내에서 영역 및 개발자가 컨트롤, 메뉴 모음 및 도구 모음 등의 응용 프로그램별 콘텐츠를 추가 하는 데 사용 됩니다.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], 창에 의해 캡슐화 되는 <xref:System.Windows.Window> 다음을 수행 하는 데 사용 하는 클래스:  
   
--   창을 표시합니다.  
+- 창을 표시합니다.  
   
--   창의 크기, 위치 및 모양을 구성합니다.  
+- 창의 크기, 위치 및 모양을 구성합니다.  
   
--   애플리케이션별 콘텐츠를 호스팅합니다.  
+- 애플리케이션별 콘텐츠를 호스팅합니다.  
   
--   창의 수명을 관리합니다.  
+- 창의 수명을 관리합니다.  
   
 <a name="DefiningAWindow"></a>   
 ## <a name="implementing-a-window"></a>창 구현  
@@ -88,11 +88,11 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
   
  사용 하도록 설정 된 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 태그 파일과 코드 숨김 파일을 함께 사용 하려면 다음이 필요 합니다.  
   
--   태그에는 `Window` 요소에 포함 해야 합니다는 `x:Class` 특성입니다. 응용 프로그램을 빌드할 때 `x:Class` 태그에서 발생 [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] 만들려는 `partial` 에서 파생 된 클래스 <xref:System.Windows.Window> 에 지정 된 이름을 가진는 `x:Class` 특성입니다. 추가 해야이 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 네임 스페이스 선언이 합니다 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 스키마 ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` ). 생성 된 `partial` 구현 클래스는 `InitializeComponent` 메서드, 이벤트를 등록 하 고 태그에서 구현 되는 속성을 설정 하기 위해 호출 됩니다.  
+- 태그에는 `Window` 요소에 포함 해야 합니다는 `x:Class` 특성입니다. 응용 프로그램을 빌드할 때 `x:Class` 태그에서 발생 [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] 만들려는 `partial` 에서 파생 된 클래스 <xref:System.Windows.Window> 에 지정 된 이름을 가진는 `x:Class` 특성입니다. 추가 해야이 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 네임 스페이스 선언이 합니다 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 스키마 ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` ). 생성 된 `partial` 구현 클래스는 `InitializeComponent` 메서드, 이벤트를 등록 하 고 태그에서 구현 되는 속성을 설정 하기 위해 호출 됩니다.  
   
--   코드 숨김 클래스 여야 합니다는 `partial` 으로 지정 된 된 동일한 이름 가진 클래스를 `x:Class` 태그에 특성에서 파생 되어야 합니다 <xref:System.Windows.Window>합니다. 이렇게 하면 코드 숨김 파일을 사용 하 여 연결할 수는 `partial` 응용 프로그램을 빌드할 때 태그 파일에 대해 생성 된 클래스 (참조 [WPF 응용 프로그램 빌드](building-a-wpf-application-wpf.md)).  
+- 코드 숨김 클래스 여야 합니다는 `partial` 으로 지정 된 된 동일한 이름 가진 클래스를 `x:Class` 태그에 특성에서 파생 되어야 합니다 <xref:System.Windows.Window>합니다. 이렇게 하면 코드 숨김 파일을 사용 하 여 연결할 수는 `partial` 응용 프로그램을 빌드할 때 태그 파일에 대해 생성 된 클래스 (참조 [WPF 응용 프로그램 빌드](building-a-wpf-application-wpf.md)).  
   
--   코드 숨김에서 합니다 <xref:System.Windows.Window> 클래스에서 호출 하는 생성자를 구현 해야 합니다는 `InitializeComponent` 메서드. `InitializeComponent` 구현 파일의 생성 된 태그에서 `partial` 클래스 이벤트를 등록 하 고 태그에 정의 된 속성을 설정 합니다.  
+- 코드 숨김에서 합니다 <xref:System.Windows.Window> 클래스에서 호출 하는 생성자를 구현 해야 합니다는 `InitializeComponent` 메서드. `InitializeComponent` 구현 파일의 생성 된 태그에서 `partial` 클래스 이벤트를 등록 하 고 태그에 정의 된 속성을 설정 합니다.  
   
 > [!NOTE]
 >  새로 추가한 경우 <xref:System.Windows.Window> 를 사용 하 여 프로젝트 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]는 <xref:System.Windows.Window> 태그와 코드 숨김을 모두 사용 하 여 구현 되 고으로 태그 및 코드 숨김 파일 간의 연결을 만드는 데 필요한 구성을 포함 여기서 설명합니다.  
@@ -108,9 +108,9 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
 ## <a name="configuring-a-window-definition-for-msbuild"></a>MSBuild에 대해 창 정의 구성  
  창을 구현 하는 방법에 대 한 구성 하는 방법 결정 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]합니다. 모두 사용 하 여 정의 된 창에 대 한 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 태그와 코드 숨김을:  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 마크업 파일으로 구성 됩니다 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` 항목입니다.  
+- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 마크업 파일으로 구성 됩니다 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` 항목입니다.  
   
--   코드 숨김 파일으로 구성 됩니다 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` 항목입니다.  
+- 코드 숨김 파일으로 구성 됩니다 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` 항목입니다.  
   
  다음 그림은이 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] 프로젝트 파일입니다.  
   
@@ -163,9 +163,9 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
 #### <a name="window-ownership"></a>창 소유권  
  사용 하 여 열려 있는 창을 <xref:System.Windows.Window.Show%2A> 메서드 만든 창 사용 하 여 암시적 관계가 없으므로 사용자가 창이 나 다음을 수행할 수는 서로 독립적으로 창이 나 상호 작용할 수 있습니다.  
   
--   다른 처리 (창 중 하나에 해당 <xref:System.Windows.Window.Topmost%2A> 속성이 설정 `true`).  
+- 다른 처리 (창 중 하나에 해당 <xref:System.Windows.Window.Topmost%2A> 속성이 설정 `true`).  
   
--   다른 창에 영향을 주지 않고 최소화, 최대화 및 복원합니다.  
+- 다른 창에 영향을 주지 않고 최소화, 최대화 및 복원합니다.  
   
  일부 창은 해당 창을 여는 창과의 관계를 필요로 합니다. 예를 들어는 [!INCLUDE[TLA#tla_ide](../../../../includes/tlasharptla-ide-md.md)] 속성 창과 도구 창을 가리는 동작을 생성에 사용 되는 창에 맞게 응용 프로그램 열릴 수 있습니다. 또한 이러한 창은 항상 해당 창을 만든 창과 함께 닫히고, 최소화되고, 최대화되고, 복원되어야 합니다. 창 하나를 만들어 이러한 관계를 설정할 수 있습니다 *고유의* 다른 설정 하 여를 <xref:System.Windows.Window.Owner%2A> 의 속성을 *소유 된 창* 에 대 한 참조를 사용 하 여를 *소유자 창*합니다. 다음 예제에서 이를 확인할 수 있습니다.  
   
@@ -174,9 +174,9 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
   
  소유권이 설정된 후:  
   
--   소유 된 창은의 값을 검사 하 여 소유자 창을 참조할 수는 <xref:System.Windows.Window.Owner%2A> 속성입니다.  
+- 소유 된 창은의 값을 검사 하 여 소유자 창을 참조할 수는 <xref:System.Windows.Window.Owner%2A> 속성입니다.  
   
--   소유자 창에 값을 검사 하 여 모든 창을 검색할 수 있습니다 해당 <xref:System.Windows.Window.OwnedWindows%2A> 속성입니다.  
+- 소유자 창에 값을 검사 하 여 모든 창을 검색할 수 있습니다 해당 <xref:System.Windows.Window.OwnedWindows%2A> 속성입니다.  
   
 <a name="Preventing"></a>   
 #### <a name="preventing-window-activation"></a>창 활성화 방지  
@@ -184,21 +184,21 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
   
  응용 프로그램에 표시 될 때 활성화 하지 않아야 하는 창이 설정할 수 있습니다 해당 <xref:System.Windows.Window.ShowActivated%2A> 속성을 `false` 호출 하기 전에 <xref:System.Windows.Window.Show%2A> 처음 메서드. 이렇게 하면 다음과 같은 결과가 나타납니다.  
   
--   창이 활성화되지 않습니다.  
+- 창이 활성화되지 않습니다.  
   
--   창의 <xref:System.Windows.Window.Activated> 이벤트가 발생 하지 않습니다.  
+- 창의 <xref:System.Windows.Window.Activated> 이벤트가 발생 하지 않습니다.  
   
--   현재 활성 창이 활성 상태로 유지됩니다.  
+- 현재 활성 창이 활성 상태로 유지됩니다.  
   
  그러나 사용자가 클라이언트 영역이나 비클라이언트 영역을 클릭하여 창을 활성화하면 해당 창이 활성화됩니다. 이 경우:  
   
--   창이 활성화됩니다.  
+- 창이 활성화됩니다.  
   
--   창의 <xref:System.Windows.Window.Activated> 이벤트가 발생 합니다.  
+- 창의 <xref:System.Windows.Window.Activated> 이벤트가 발생 합니다.  
   
--   이전에 활성 상태였던 창이 비활성화됩니다.  
+- 이전에 활성 상태였던 창이 비활성화됩니다.  
   
--   창의 <xref:System.Windows.Window.Deactivated> 고 <xref:System.Windows.Window.Activated> 사용자 작업에 대 한 응답에서 예상 대로 이벤트 이후에 발생 합니다.  
+- 창의 <xref:System.Windows.Window.Deactivated> 고 <xref:System.Windows.Window.Activated> 사용자 작업에 대 한 응답에서 예상 대로 이벤트 이후에 발생 합니다.  
   
 <a name="Window_Activation"></a>   
 ### <a name="window-activation"></a>창 활성화  
@@ -227,21 +227,21 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
 ### <a name="closing-a-window"></a>창 닫기  
  창의 수명은 사용자가 창을 닫을 때 끝나게 됩니다. 창은 다음을 포함하여 비클라이언트 영역의 요소를 사용하여 닫을 수 있습니다.  
   
--   **닫습니다** 의 항목은 **시스템** 메뉴.  
+- **닫습니다** 의 항목은 **시스템** 메뉴.  
   
--   ALT+F4 누르기.  
+- ALT+F4 누르기.  
   
--   키를 눌러 합니다 **닫기** 단추입니다.  
+- 키를 눌러 합니다 **닫기** 단추입니다.  
   
  클라이언트 영역에 창을 닫기 위한 추가적인 메커니즘을 제공할 수 있으며 이 메커니즘에는 일반적으로 다음이 포함됩니다.  
   
--   **종료** 항목에 **파일** 일반적으로 기본 응용 프로그램 창에 대 한 메뉴입니다.  
+- **종료** 항목에 **파일** 일반적으로 기본 응용 프로그램 창에 대 한 메뉴입니다.  
   
--   A **닫기** 항목에 **파일** 보조 응용 프로그램 창에 일반적으로 메뉴.  
+- A **닫기** 항목에 **파일** 보조 응용 프로그램 창에 일반적으로 메뉴.  
   
--   A **취소** 모달 대화 상자에서 일반적으로 단추입니다.  
+- A **취소** 모달 대화 상자에서 일반적으로 단추입니다.  
   
--   A **닫기** 모덜리스 대화 상자에서 일반적으로 단추입니다.  
+- A **닫기** 모덜리스 대화 상자에서 일반적으로 단추입니다.  
   
  이러한 사용자 지정 메커니즘 중 하나에 대 한 응답에서 창을 닫으려면 호출 해야 합니다 <xref:System.Windows.Window.Close%2A> 메서드. 다음 예제에서는 선택 하 여 창을 닫는 기능을 구현 합니다 **종료** 에 **파일** 메뉴.  
   
@@ -266,13 +266,13 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
   
  창의 비클라이언트 및 클라이언트 영역에서 제공 하는 메커니즘을 통해 명시적으로 닫을 수 있지만, 창 암시적으로 닫을 수도 응용 프로그램의 다른 부분에서 동작의 결과로 또는 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], 다음을 비롯 한:  
   
--   사용자가 로그 오프 하거나 Windows를 종료 합니다.  
+- 사용자가 로그 오프 하거나 Windows를 종료 합니다.  
   
--   창의 소유자가 닫히는 (참조 <xref:System.Windows.Window.Owner%2A>).  
+- 창의 소유자가 닫히는 (참조 <xref:System.Windows.Window.Owner%2A>).  
   
--   기본 응용 프로그램 창이 닫혀 있는 및 <xref:System.Windows.Application.ShutdownMode%2A> 는 <xref:System.Windows.ShutdownMode.OnMainWindowClose>합니다.  
+- 기본 응용 프로그램 창이 닫혀 있는 및 <xref:System.Windows.Application.ShutdownMode%2A> 는 <xref:System.Windows.ShutdownMode.OnMainWindowClose>합니다.  
   
--   <xref:System.Windows.Application.Shutdown%2A>가 호출된 경우  
+- <xref:System.Windows.Application.Shutdown%2A>가 호출된 경우  
   
 > [!NOTE]
 >  창을 닫은 뒤에는 다시 열 수 없습니다.  
@@ -293,11 +293,11 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
   
  초기 위치를 지정할 수도 있습니다는 <xref:System.Windows.Window> 먼저 표시 되 면 설정 하 여 합니다 <xref:System.Windows.Window.WindowStartupLocation%2A> 속성을 다음 중 하나로 <xref:System.Windows.WindowStartupLocation> 열거형 값:  
   
--   <xref:System.Windows.WindowStartupLocation.CenterOwner>(기본값)  
+- <xref:System.Windows.WindowStartupLocation.CenterOwner>(기본값)  
   
--   <xref:System.Windows.WindowStartupLocation.CenterScreen>  
+- <xref:System.Windows.WindowStartupLocation.CenterScreen>  
   
--   <xref:System.Windows.WindowStartupLocation.Manual>  
+- <xref:System.Windows.WindowStartupLocation.Manual>  
   
  로 지정 된 시작 위치는 경우 <xref:System.Windows.WindowStartupLocation.Manual>, 및 <xref:System.Windows.Window.Left%2A> 하 고 <xref:System.Windows.Window.Top%2A> 속성이 설정 되어 있는지, <xref:System.Windows.Window> 에 표시 된 위치에 대 한 Windows 묻습니다.  
   
@@ -325,13 +325,13 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
   
  창의 높이 너비를 사용 하도록 하려는 경우 창 크기에 맞는 크기의 콘텐츠를 사용할 수 있습니다는 <xref:System.Windows.Window.SizeToContent%2A> 속성에는 다음 값입니다.  
   
--   <xref:System.Windows.SizeToContent.Manual>. 아무런 영향이 없습니다(기본값).  
+- <xref:System.Windows.SizeToContent.Manual>. 아무런 영향이 없습니다(기본값).  
   
--   <xref:System.Windows.SizeToContent.Width>. 콘텐츠 너비에 맞추기 <xref:System.Windows.FrameworkElement.MinWidth%2A> 고 <xref:System.Windows.FrameworkElement.MaxWidth%2A> 콘텐츠의 너비입니다.  
+- <xref:System.Windows.SizeToContent.Width>. 콘텐츠 너비에 맞추기 <xref:System.Windows.FrameworkElement.MinWidth%2A> 고 <xref:System.Windows.FrameworkElement.MaxWidth%2A> 콘텐츠의 너비입니다.  
   
--   <xref:System.Windows.SizeToContent.Height>. 콘텐츠 높이에 맞추기 <xref:System.Windows.FrameworkElement.MinHeight%2A> 고 <xref:System.Windows.FrameworkElement.MaxHeight%2A> 콘텐츠의 높이입니다.  
+- <xref:System.Windows.SizeToContent.Height>. 콘텐츠 높이에 맞추기 <xref:System.Windows.FrameworkElement.MinHeight%2A> 고 <xref:System.Windows.FrameworkElement.MaxHeight%2A> 콘텐츠의 높이입니다.  
   
--   <xref:System.Windows.SizeToContent.WidthAndHeight>. 콘텐츠 너비와 높이 둘 다 설정 하는 것과 동일한 효과가에 맞추기 <xref:System.Windows.FrameworkElement.MinHeight%2A> 하 고 <xref:System.Windows.FrameworkElement.MaxHeight%2A> 콘텐츠 및 설정의 높이 <xref:System.Windows.FrameworkElement.MinWidth%2A> 및 <xref:System.Windows.FrameworkElement.MaxWidth%2A> 콘텐츠의 너비입니다.  
+- <xref:System.Windows.SizeToContent.WidthAndHeight>. 콘텐츠 너비와 높이 둘 다 설정 하는 것과 동일한 효과가에 맞추기 <xref:System.Windows.FrameworkElement.MinHeight%2A> 하 고 <xref:System.Windows.FrameworkElement.MaxHeight%2A> 콘텐츠 및 설정의 높이 <xref:System.Windows.FrameworkElement.MinWidth%2A> 및 <xref:System.Windows.FrameworkElement.MaxWidth%2A> 콘텐츠의 너비입니다.  
   
  다음 예는 창이 처음 표시될 때 콘텐츠에 맞도록 수직 및 수평으로 크기를 자동으로 조정하는 창을 보여 줍니다.  
   
@@ -381,11 +381,11 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
   
  창의 상태를 설정 하 여 구성할 수 있습니다 해당 <xref:System.Windows.Window.WindowState%2A> 속성을 다음 중 하나를 가질 수 있는 <xref:System.Windows.WindowState> 열거형 값:  
   
--   <xref:System.Windows.WindowState.Normal>(기본값)  
+- <xref:System.Windows.WindowState.Normal>(기본값)  
   
--   <xref:System.Windows.WindowState.Maximized>  
+- <xref:System.Windows.WindowState.Maximized>  
   
--   <xref:System.Windows.WindowState.Minimized>  
+- <xref:System.Windows.WindowState.Minimized>  
   
  다음 예제에서는 열릴 때 최대화되어 표시되는 창을 만드는 방법을 보여 줍니다.  
   
@@ -405,13 +405,13 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
   
  설정 하 여 창 크기 조정 하는 방법을 구성할 수 있습니다 해당 <xref:System.Windows.Window.ResizeMode%2A> 속성을 다음 중 하나일 수 있습니다 <xref:System.Windows.ResizeMode> 열거형 값:  
   
--   <xref:System.Windows.ResizeMode.NoResize>  
+- <xref:System.Windows.ResizeMode.NoResize>  
   
--   <xref:System.Windows.ResizeMode.CanMinimize>  
+- <xref:System.Windows.ResizeMode.CanMinimize>  
   
--   <xref:System.Windows.ResizeMode.CanResize>(기본값)  
+- <xref:System.Windows.ResizeMode.CanResize>(기본값)  
   
--   <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
+- <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
   
  와 마찬가지로 <xref:System.Windows.Window.WindowStyle%2A>, 창 크기 조정 모드에서 설정 가능성이 것 이므로 해당 수명 동안 변경 가능성이 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 태그입니다.  
   
@@ -425,13 +425,13 @@ Windows 통해 Windows Presentation Foundation (WPF) 독립 실행형 응용 프
   
  창의 테두리 유형을 제어 하려면 가져옵니다, 설정한 해당 <xref:System.Windows.Window.WindowStyle%2A> 의 다음 값 중 하나를 사용 하 여 속성을 <xref:System.Windows.WindowStyle> 열거형:  
   
--   <xref:System.Windows.WindowStyle.None>  
+- <xref:System.Windows.WindowStyle.None>  
   
--   <xref:System.Windows.WindowStyle.SingleBorderWindow>(기본값)  
+- <xref:System.Windows.WindowStyle.SingleBorderWindow>(기본값)  
   
--   <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
+- <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
   
--   <xref:System.Windows.WindowStyle.ToolWindow>  
+- <xref:System.Windows.WindowStyle.ToolWindow>  
   
  이러한 창 스타일의 효과 다음 그림에 나와 있습니다.  
   

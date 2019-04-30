@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d97f536d54ac1cb77c5d0413d2437508374ac7f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62042915"
 ---
 # <a name="imetadataemit2savedelta-method"></a>IMetaDataEmit2::SaveDelta 메서드
 편집 하며 계속 하기는 현재 세션에서 지정된 된 파일 변경 내용을 저장 합니다.  

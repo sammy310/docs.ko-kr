@@ -3,11 +3,11 @@ title: 데이터베이스와 통신
 ms.date: 03/30/2017
 ms.assetid: 659d9817-bcaa-457f-9639-169394177274
 ms.openlocfilehash: d767bbe706b4fc9efb00031fddf8f6bd3369b485
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59117146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032411"
 ---
 # <a name="communicating-with-the-database"></a>데이터베이스와 통신
 이 단원의 항목에서는 데이터베이스와의 통신을 설정하고 유지하는 몇 가지 기본 기능에 대해 설명합니다.  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
 ms.openlocfilehash: 70dda68112d47d3e5a0609a5df7696920477c698
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032866"
 ---
 # <a name="planning-for-application-performance"></a>응용 프로그램 성능 계획
 성능 목표를 달성 하는 성공 성능 전략을 개발 하는 정도에 따라 달라 집니다. 계획은 모든 제품 개발의 첫 번째 단계입니다. 이 항목에서는 적절 한 성능을 전략을 개발 하기 위한 몇 가지 간단한 규칙을 설명 합니다.  

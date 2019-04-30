@@ -3,11 +3,11 @@ title: '방법: Svcutil.exe를 사용하여 컴파일된 서비스 코드 유효
 ms.date: 03/30/2017
 ms.assetid: d0d820fb-41c2-45b8-8f22-0fa5aeebbbaa
 ms.openlocfilehash: 599f5624b7eb0c32cbcc0a78e6c7f989ce470b58
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038755"
 ---
 # <a name="how-to-use-svcutilexe-to-validate-compiled-service-code"></a>방법: Svcutil.exe를 사용하여 컴파일된 서비스 코드 유효성 검사
 사용할 수는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 서비스를 호스팅하지 않고 서비스 구현과 구성에서 오류를 검색 하 합니다.  

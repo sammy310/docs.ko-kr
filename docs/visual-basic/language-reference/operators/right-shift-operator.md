@@ -11,11 +11,11 @@ helpviewer_keywords:
 - right shift operators [Visual Basic]
 ms.assetid: 054dc6a6-47d9-47ef-82da-cfa2b59fbf8f
 ms.openlocfilehash: 8803dc2e25edde756958a243d429dd30c5c78bcf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053290"
 ---
 # <a name="-operator-visual-basic"></a>>> 연산자 (Visual Basic)
 비트 패턴에 산술 오른쪽 시프트를 수행합니다.  
@@ -64,15 +64,15 @@ result = pattern >> amount
   
  앞의 예제 결과 다음과 같습니다.  
   
--   `result1` 2560 (0000 1010 0000 0000)입니다.  
+- `result1` 2560 (0000 1010 0000 0000)입니다.  
   
--   `result2` 160 (0000 0000 1010 0000)입니다.  
+- `result2` 160 (0000 0000 1010 0000)입니다.  
   
--   `result3` 2 (0000 0000 0000 0010)입니다.  
+- `result3` 2 (0000 0000 0000 0010)입니다.  
   
--   `result4` 640 (0010 1000 0000 0000)입니다.  
+- `result4` 640 (0010 1000 0000 0000)입니다.  
   
--   `result5` 0 (오른쪽으로 15 자리 이동된).  
+- `result5` 0 (오른쪽으로 15 자리 이동된).  
   
  에 대 한 이동량 `result4` 18로 계산 됩니다가 2 및 15입니다.  
   
@@ -82,9 +82,9 @@ result = pattern >> amount
   
  앞의 예제 결과 다음과 같습니다.  
   
--   `negresult1` -512 (1111 1110 0000 0000)입니다.  
+- `negresult1` -512 (1111 1110 0000 0000)입니다.  
   
--   `negresult2` 이-1 (부호 비트 전파 됨 입니다).  
+- `negresult2` 이-1 (부호 비트 전파 됨 입니다).  
   
 ## <a name="see-also"></a>참고자료
 

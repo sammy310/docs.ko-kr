@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
 ms.openlocfilehash: a5a32220ad1f638bf2e93051e9b436d8270aec2f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039619"
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>인증을 위해 서비스 ID 재정의
 일반적으로 선택한 클라이언트 자격 증명 형식에 따라 서비스 메타데이터에 노출되는 ID 형식이 결정되므로 서비스에 ID를 설정할 필요가 없습니다. 예를 들어 다음 구성 코드에서는 합니다 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) 요소 집합과 `clientCredentialType` Windows 특성.  
@@ -27,24 +27,24 @@ ms.locfileid: "59082193"
 > [!NOTE]
 >  Windows 자격 증명 형식을 협상 없이 사용하려면 서비스의 사용자 계정이 Active Directory 도메인에 등록된 SPN에 대한 액세스 권한이 있어야 합니다. 다음과 같은 방법으로 이 작업을 수행할 수 있습니다.  
   
--   NetworkService 또는 LocalSystem 계정을 사용하여 서비스를 실행합니다. 해당 계정에 컴퓨터 시스템을 Active Directory 도메인에 연결할 때 설정 된 SPN에는 액세스할 수 있으므로 WCF 서비스의 메타 데이터 (WSDL)에서 서비스의 끝점 내에서 적절 한 SPN 요소를 자동으로 생성 합니다.  
+- NetworkService 또는 LocalSystem 계정을 사용하여 서비스를 실행합니다. 해당 계정에 컴퓨터 시스템을 Active Directory 도메인에 연결할 때 설정 된 SPN에는 액세스할 수 있으므로 WCF 서비스의 메타 데이터 (WSDL)에서 서비스의 끝점 내에서 적절 한 SPN 요소를 자동으로 생성 합니다.  
   
--   임의의 Active Directory 도메인 계정을 사용하여 서비스를 실행합니다. 이 경우 해당 도메인 계정의 SPN을 설정합니다. Setspn.exe 유틸리티 도구를 사용하여 이 작업을 수행할 수 있습니다. 서비스의 계정에 대 한 SPN을 만든 후 메타 데이터 (WSDL)를 통해 서비스 클라이언트에 SPN을 게시 하는 WCF를 구성 합니다. 이 작업은 응용 프로그램 구성 파일이나 코드를 통해 노출된 엔드포인트에 대한 엔드포인트 ID를 설정하여 수행합니다.  
+- 임의의 Active Directory 도메인 계정을 사용하여 서비스를 실행합니다. 이 경우 해당 도메인 계정의 SPN을 설정합니다. Setspn.exe 유틸리티 도구를 사용하여 이 작업을 수행할 수 있습니다. 서비스의 계정에 대 한 SPN을 만든 후 메타 데이터 (WSDL)를 통해 서비스 클라이언트에 SPN을 게시 하는 WCF를 구성 합니다. 이 작업은 응용 프로그램 구성 파일이나 코드를 통해 노출된 엔드포인트에 대한 엔드포인트 ID를 설정하여 수행합니다.  
   
  Spn에 대 한 자세한 정보, Kerberos 프로토콜 및 Active Directory에 대 한 참조 [Kerberos 기술 보완에 대 한 Windows](https://go.microsoft.com/fwlink/?LinkId=88330)합니다.  
   
 ### <a name="when-spn-or-upn-equals-the-empty-string"></a>SPN 또는 UPN이 빈 문자열인 경우  
  SPN 또는 UPN을 빈 문자열과 같게 설정하면 사용되는 보안 수준과 인증 모드에 따라 다른 많은 작업이 수행됩니다.  
   
--   전송 수준 보안을 사용하는 경우 NTLM(NT LanMan) 인증이 선택됩니다.  
+- 전송 수준 보안을 사용하는 경우 NTLM(NT LanMan) 인증이 선택됩니다.  
   
--   메시지 수준 보안을 사용하는 경우 인증 모드에 따라 인증이 실패할 수 있습니다.  
+- 메시지 수준 보안을 사용하는 경우 인증 모드에 따라 인증이 실패할 수 있습니다.  
   
--   `spnego` 모드를 사용하고 `AllowNtlm` 특성이 `false`로 설정된 경우 인증이 실패합니다.  
+- `spnego` 모드를 사용하고 `AllowNtlm` 특성이 `false`로 설정된 경우 인증이 실패합니다.  
   
--   `spnego` 모드를 사용하고 `AllowNtlm` 특성이 `true`로 설정된 경우 UPN이 비어 있으면 인증이 실패하지만 SPN이 비어 있으면 성공합니다.  
+- `spnego` 모드를 사용하고 `AllowNtlm` 특성이 `true`로 설정된 경우 UPN이 비어 있으면 인증이 실패하지만 SPN이 비어 있으면 성공합니다.  
   
--   "단일 쇼트"라고도 하는 Kerberos direct를 사용하는 경우 인증이 실패합니다.  
+- "단일 쇼트"라고도 하는 Kerberos direct를 사용하는 경우 인증이 실패합니다.  
   
 ### <a name="using-the-identity-element-in-configuration"></a>사용 하 여 \<identity > 구성에서 요소  
  이전에 Certificate에 표시된 바인딩에서 클라이언트 자격 증명 형식을 변경하면`,` 생성된 WSDL에 다음 코드에 표시된 ID 값에 대한 Base64로 serialize된 X.509 인증서가 포함됩니다. 이는 Windows 이외의 모든 클라이언트 자격 증명 형식에 대한 기본값입니다.  

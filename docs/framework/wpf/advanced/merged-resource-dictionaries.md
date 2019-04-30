@@ -6,11 +6,11 @@ helpviewer_keywords:
 - dictionaries [WPF], merged resources
 ms.assetid: d159531f-05d4-49fd-b951-c332de51e5bc
 ms.openlocfilehash: 17dd8e0c02d71fc7e72800fc578866188d03060e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053251"
 ---
 # <a name="merged-resource-dictionaries"></a>병합된 리소스 사전
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 리소스에서는 병합된 리소스 사전 기능을 지원합니다. 이 기능을 사용하면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애플리케이션의 리소스 부분을 컴파일된 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 애플리케이션 외부에서 정의할 수 있습니다. 그런 다음 리소스를 애플리케이션 간에 공유하고 지역화를 위해 더욱 간편하게 격리할 수도 있습니다.  
