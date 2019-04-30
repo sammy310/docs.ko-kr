@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
 ms.openlocfilehash: d709123895f361c1d2268a218b4163c8d195e1b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047968"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>방법: SSL 인증서를 사용하여 포트 구성
 사용 하 여 자체 호스팅된 Windows Communication Foundation (WCF) 서비스를 만들 때의 <xref:System.ServiceModel.WSHttpBinding> 클래스를 사용 하 여 전송 보안, X.509 인증서로 포트를 구성 해야 합니다. 자체 호스트된 서비스를 만들지 않는 경우에는 IIS(인터넷 정보 서비스)에서 서비스를 호스트할 수 있습니다. 자세한 내용은 [HTTP 전송 보안](../../../../docs/framework/wcf/feature-details/http-transport-security.md)합니다.  
@@ -27,15 +27,15 @@ ms.locfileid: "59345588"
   
  이 항목에서는 다음과 같은 여러 절차를 수행하는 방법에 대해 설명합니다.  
   
--   컴퓨터의 현재 포트 구성 결정  
+- 컴퓨터의 현재 포트 구성 결정  
   
--   인증서의 지문 가져오기(다음 두 절차에 필요)  
+- 인증서의 지문 가져오기(다음 두 절차에 필요)  
   
--   SSL 인증서를 포트 구성에 바인딩  
+- SSL 인증서를 포트 구성에 바인딩  
   
--   SSL 인증서를 포트 구성에 바인딩 및 클라이언트 인증서 지원  
+- SSL 인증서를 포트 구성에 바인딩 및 클라이언트 인증서 지원  
   
--   포트 번호에서 SSL 인증서 삭제  
+- 포트 번호에서 SSL 인증서 삭제  
   
  컴퓨터에 저장된 인증서를 수정하려면 관리자 권한이 필요합니다.  
   
@@ -71,9 +71,9 @@ ms.locfileid: "59345588"
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
     ```  
   
-    -   합니다 **-i** 스위치는 구문이 `IP`:`port` 와 도구를 컴퓨터의 포트 8012에 인증서를 설정 하도록 지시 합니다. 선택적으로, 번호 앞에 있는 4개의 0을 컴퓨터의 실제 IP 주소로 대체할 수 있습니다.  
+    - 합니다 **-i** 스위치는 구문이 `IP`:`port` 와 도구를 컴퓨터의 포트 8012에 인증서를 설정 하도록 지시 합니다. 선택적으로, 번호 앞에 있는 4개의 0을 컴퓨터의 실제 IP 주소로 대체할 수 있습니다.  
   
-    -   합니다 **-h** 스위치는 인증서의 지문을 지정 합니다.  
+    - 합니다 **-h** 스위치는 인증서의 지문을 지정 합니다.  
   
 2. [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 다음 예제와 같이 Netsh.exe 도구를 사용합니다.  
   
@@ -81,11 +81,11 @@ ms.locfileid: "59345588"
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF}   
     ```  
   
-    -   합니다 **certhash** 매개 변수는 인증서의 지문을 지정 합니다.  
+    - 합니다 **certhash** 매개 변수는 인증서의 지문을 지정 합니다.  
   
-    -   **ipport** 매개 변수는 IP 주소 및 포트를 지정 하 고과 똑같이 작동 합니다 **-i** 설명한 Httpcfg.exe 도구의 스위치입니다.  
+    - **ipport** 매개 변수는 IP 주소 및 포트를 지정 하 고과 똑같이 작동 합니다 **-i** 설명한 Httpcfg.exe 도구의 스위치입니다.  
   
-    -   합니다 **appid** 매개 변수는 소유 응용 프로그램을 식별 하는 데 사용할 수 있는 GUID입니다.  
+    - 합니다 **appid** 매개 변수는 소유 응용 프로그램을 식별 하는 데 사용할 수 있는 GUID입니다.  
   
 ### <a name="to-bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>SSL 인증서를 포트 번호에 바인딩하고 클라이언트 인증서를 지원하려면  
   

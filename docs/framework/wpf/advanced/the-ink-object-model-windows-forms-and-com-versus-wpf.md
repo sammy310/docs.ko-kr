@@ -1,5 +1,5 @@
 ---
-title: '잉크 개체 모델: Windows Forms 및 COM과 WPF'
+title: '잉크 개체 모델: Windows Forms/COM 및 WPF'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - events [WPF], tablet pen
 ms.assetid: 577835be-b145-4226-8570-1d309e9b3901
 ms.openlocfilehash: 68003943041fe0ba405eff1236c43a8e7e9c2b71
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051678"
 ---
-# <a name="the-ink-object-model-windows-forms-and-com-versus-wpf"></a>잉크 개체 모델: Windows Forms 및 COM과 WPF
+# <a name="the-ink-object-model-windows-forms-and-com-versus-wpf"></a>잉크 개체 모델: Windows Forms/COM 및 WPF
 
 디지털 잉크를 지 원하는 기본적으로 세 가지 플랫폼 가지: Tablet PC Windows Forms 플랫폼, Tablet PC COM 플랫폼 및 Windows Presentation Foundation (WPF) 플랫폼입니다.  Windows Forms 및 COM 플랫폼 공유에 대 한 유사한 개체 모델에 있지만 개체 모델을 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 플랫폼 크게 다릅니다.  이 항목에서는 개체 모델을 사용 하 여 작동 하는 개발자가 더 잘 이해할 수 다른 있도록 대략적으로 차이점을 설명 합니다.  
   

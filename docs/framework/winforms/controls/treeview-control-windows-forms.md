@@ -8,11 +8,11 @@ helpviewer_keywords:
 - TreeView control [Windows Forms]
 ms.assetid: 879438b4-4eac-45c6-b345-0229c9b21ab0
 ms.openlocfilehash: a479c288aaf3269c07ab02417226c8e78f5df59a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009250"
 ---
 # <a name="treeview-control-windows-forms"></a>TreeView 컨트롤(Windows Forms)
 Windows Forms `TreeView` 컨트롤은 Windows 운영 체제에서 Windows 탐색기 기능의 왼쪽 창에 파일 및 폴더가 표시되는 방식과 같은 노드 계층 구조를 표시합니다.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
 ms.openlocfilehash: d55c85ae0af567c5af0fd421b612809eaf5bb789
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037923"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>N 계층 응용 프로그램에서 데이터 검색 및 CUD 작업(LINQ to SQL)
 Customers 또는 Orders와 같은 엔터티 개체를 네트워크상의 클라이언트로 serialize하면 해당 엔터티가 원래 데이터 컨텍스트에서 분리됩니다. 데이터 컨텍스트에서는 분리된 엔터티 개체에 대해서는 변경 내용이나 다른 개체와의 관계를 더 이상 추적하지 않습니다. 이러한 특징은 클라이언트에서 데이터를 읽기만 하는 경우에는 문제가 되지 않습니다. 또한 클라이언트가 데이터베이스에 새 행을 추가할 수 있게 하는 것도 비교적 간단합니다. 그러나 응용 프로그램에서 클라이언트가 데이터를 업데이트하거나 삭제해야 하는 경우에는 <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>를 호출하기 전에 새 데이터 컨텍스트에 엔터티를 연결해야 합니다. 또한 원래 값을 기준으로 낙관적 동시성 검사를 사용하는 경우에는 어떤 방법으로든 데이터베이스에 원래 엔터티와 수정된 엔터티를 모두 제공해야 합니다. `Attach` 메서드는 분리된 엔터티를 새 데이터 컨텍스트에 연결하기 위해 제공됩니다.  
@@ -85,9 +85,9 @@ private void GetProdsByCat_Click(object sender, EventArgs e)
 ### <a name="middle-tier-implementation"></a>중간 계층 구현  
  다음 예제에서는 중간 계층에서 구현하는 인터페이스 메서드를 보여 줍니다. 다음 두 가지 주요 사항을 고려하세요.  
   
--   <xref:System.Data.Linq.DataContext>는 메서드 범위에서 선언됩니다.  
+- <xref:System.Data.Linq.DataContext>는 메서드 범위에서 선언됩니다.  
   
--   메서드는 실제 결과의 <xref:System.Collections.IEnumerable> 컬렉션을 반환합니다. serializer는 쿼리를 실행하여 클라이언트/프레젠테이션 계층에 결과를 다시 보냅니다. 중간 계층에서 쿼리 결과에 로컬로 액세스하려면 쿼리 변수에 대해 `ToList` 또는 `ToArray`를 호출하여 메서드를 강제로 실행한 후 해당 목록 또는 배열을 `IEnumerable`로 반환할 수 있습니다.  
+- 메서드는 실제 결과의 <xref:System.Collections.IEnumerable> 컬렉션을 반환합니다. serializer는 쿼리를 실행하여 클라이언트/프레젠테이션 계층에 결과를 다시 보냅니다. 중간 계층에서 쿼리 결과에 로컬로 액세스하려면 쿼리 변수에 대해 `ToList` 또는 `ToArray`를 호출하여 메서드를 강제로 실행한 후 해당 목록 또는 배열을 `IEnumerable`로 반환할 수 있습니다.  
   
 ```vb  
 Public Function GetProductsByCategory(ByVal categoryID As Integer) _  
@@ -210,11 +210,11 @@ public void DeleteOrder(Order order)
 ## <a name="updating-data"></a>데이터 업데이트  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 낙관적 동시성이 사용되는 다음과 같은 시나리오에서 업데이트를 지원합니다.  
   
--   타임스탬프 또는 RowVersion 번호를 기반으로 하는 낙관적 동시성  
+- 타임스탬프 또는 RowVersion 번호를 기반으로 하는 낙관적 동시성  
   
--   엔터티 속성 하위 집합의 원래 값을 기반으로 하는 낙관적 동시성  
+- 엔터티 속성 하위 집합의 원래 값을 기반으로 하는 낙관적 동시성  
   
--   원래 엔터티와 수정된 엔터티 모두를 기반으로 하는 낙관적 동시성  
+- 원래 엔터티와 수정된 엔터티 모두를 기반으로 하는 낙관적 동시성  
   
  Customer 및 Customer와 연결된 Order 개체의 컬렉션과 같이 엔터티와 해당 관계에 대해 업데이트나 삭제 작업을 수행할 수도 있습니다. 클라이언트에서 엔터티 개체의 그래프와 해당 자식(`EntitySet`) 컬렉션을 수정할 경우 낙관적 동시성 검사에 원래 값이 필요하면 클라이언트에서는 각 엔터티와 <xref:System.Data.Linq.EntitySet%601> 개체의 원래 값을 제공해야 합니다. 클라이언트에서 한 번의 메서드 호출로 관련된 업데이트, 삭제 및 삽입을 수행하려면 각 엔터티에 대해 수행할 작업 유형을 메서드 안에 지정할 수 있어야 합니다. 그런 다음 <xref:System.Data.Linq.ITable.Attach%2A>를 호출하기 전에 중간 계층에서 적절한 <xref:System.Data.Linq.ITable.InsertOnSubmit%2A> 메서드를 호출한 후 각 엔터티에 대해 <xref:System.Data.Linq.ITable.DeleteAllOnSubmit%2A>, <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> 또는 `Attach`(삽입의 경우 <xref:System.Data.Linq.DataContext.SubmitChanges%2A>가 필요하지 않음)을 호출해야 합니다. 업데이트를 시도하기 전에 원래 값을 가져오기 위한 방법으로 데이터베이스에서 데이터를 검색하지 마세요.  
   
@@ -379,11 +379,11 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
 ### <a name="expected-entity-members"></a>필요한 엔터티 멤버  
  앞에서 설명한 것처럼 `Attach` 메서드를 호출하기 전에 엔터티 개체의 일부 멤버만 설정해야 합니다. 설정해야 하는 엔터티 멤버는 다음과 같은 조건을 충족해야 합니다.  
   
--   엔터티 ID의 일부여야 합니다.  
+- 엔터티 ID의 일부여야 합니다.  
   
--   수정될 멤버여야 합니다.  
+- 수정될 멤버여야 합니다.  
   
--   타임스탬프이거나 <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> 특성이 `Never` 이외의 값으로 설정되어 있어야 합니다.  
+- 타임스탬프이거나 <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> 특성이 `Never` 이외의 값으로 설정되어 있어야 합니다.  
   
  테이블에 낙관적 동시성 검사를 위한 타임스탬프 또는 버전 번호가 사용되는 경우 <xref:System.Data.Linq.ITable.Attach%2A>를 호출하기 전에 이러한 멤버를 설정해야 합니다. 해당 Column 특성에 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> 속성이 true로 설정된 멤버는 낙관적 동시성 검사에 사용됩니다. 데이터베이스에 있는 버전 번호 또는 타임스탬프 값이 동일해야 요청된 업데이트가 제출됩니다.  
   

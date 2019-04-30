@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CheckBox control [Windows Forms], using to set options
 ms.assetid: 2ac70498-7e3e-4e07-8901-ccabaeb5fd3e
 ms.openlocfilehash: 881996563acef36a1981ca6236c155b8fc56ef0a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013207"
 ---
 # <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>방법: Windows Forms CheckBox 컨트롤을 사용하여 옵션 설정
 Windows Forms <xref:System.Windows.Forms.CheckBox> 컨트롤 True/False 사용자에 게 제공 하는 데 사용 됩니다 또는 예/아니요 옵션입니다. 컨트롤이 선택 될 때 확인 표시를 표시 합니다.  

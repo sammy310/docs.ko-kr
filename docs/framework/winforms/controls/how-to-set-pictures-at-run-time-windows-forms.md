@@ -14,18 +14,18 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
 ms.openlocfilehash: 8ed3ba9050a9117a53b5f4f1cccd26381f55ab32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013233"
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a>방법: (Windows Forms) 런타임에 그림 설정
 Windows Forms에서 표시 되는 이미지를 프로그래밍 방식으로 설정할 수 있습니다 <xref:System.Windows.Forms.PictureBox> 제어 합니다.  
   
 ### <a name="to-set-a-picture-programmatically"></a>그림을 프로그래밍 방식으로 설정 하려면  
   
--   설정 합니다 <xref:System.Windows.Forms.PictureBox.Image%2A> 사용 하 여 속성을 <xref:System.Drawing.Image.FromFile%2A> 메서드의 <xref:System.Drawing.Image> 클래스.  
+- 설정 합니다 <xref:System.Windows.Forms.PictureBox.Image%2A> 사용 하 여 속성을 <xref:System.Drawing.Image.FromFile%2A> 메서드의 <xref:System.Drawing.Image> 클래스.  
   
      아래 예제에서는 내 문서 폴더는 이미지의 위치에 대 한 설정 되었습니다. 이렇게 하면 수 없으므로 Windows 운영 체제를 실행 하는 대부분의 컴퓨터는이 디렉터리를 포함 합니다. 또한 최소한의 시스템 액세스 수준을 가진 사용자가 안전하게 애플리케이션을 실행할 수 있습니다. 아래 예제에서는 가정 된 폼을 <xref:System.Windows.Forms.PictureBox> 이미 추가 된 컨트롤입니다.  
   
@@ -67,7 +67,7 @@ Windows Forms에서 표시 되는 이미지를 프로그래밍 방식으로 설�
   
 ### <a name="to-clear-a-graphic"></a>그래픽을 지우려면  
   
--   먼저 이미지를 사용 하 고 메모리를 해제 하 고 그래픽을 해제 합니다. 나중에 가비지 컬렉션은 메모리를 확보할 메모리 관리 되는 문제입니다.  
+- 먼저 이미지를 사용 하 고 메모리를 해제 하 고 그래픽을 해제 합니다. 나중에 가비지 컬렉션은 메모리를 확보할 메모리 관리 되는 문제입니다.  
   
     ```vb  
     If Not (PictureBox1.Image Is Nothing) Then  

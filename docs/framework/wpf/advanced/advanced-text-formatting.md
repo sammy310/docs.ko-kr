@@ -10,11 +10,11 @@ helpviewer_keywords:
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
 ms.openlocfilehash: fa707ed9c409a2e6933629a658bfe650b43f3233
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032008"
 ---
 # <a name="advanced-text-formatting"></a>고급 텍스트 서식 지정
 Windows Presentation Foundation (WPF)을 강력한 제공 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] 응용 프로그램에서 텍스트를 포함 합니다. 레이아웃 및 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]와 같은 <xref:System.Windows.Controls.TextBlock>자주 제공 하 고 일반 텍스트 표현에 대 한 요소를 사용 합니다. 그리기 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]와 같은 <xref:System.Windows.Media.GlyphRunDrawing> 고 <xref:System.Windows.Media.FormattedText>, 그리기에 서식 있는 텍스트를 포함 하는 방법을 제공 합니다. 고급 수준에서 가장 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 서식 지정 엔진 텍스트 저장소 관리, 텍스트 실행 서식 관리 및 포함 된 개체 관리와 같은 텍스트 표현의 모든 측면을 제어 하는 확장 가능한 텍스트를 제공 합니다.  
@@ -55,11 +55,11 @@ Windows Presentation Foundation (WPF)을 강력한 제공 [!INCLUDE[TLA#tla_api#
   
  텍스트 저장소의 가상화를 처리 하려면 텍스트 저장소에서 파생 되어야 합니다 <xref:System.Windows.Media.TextFormatting.TextSource>합니다. <xref:System.Windows.Media.TextFormatting.TextSource> 텍스트 포맷터를 사용 하 여 텍스트 저장소에서 텍스트 실행을 검색 하는 메서드를 정의 합니다. <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> 줄에 서식 지정에 사용 되는 텍스트를 검색할 텍스트 포맷터에서 사용 하는 메서드가 실행 됩니다. 에 대 한 호출 <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> 다음 조건 중 하나가 발생할 때까지 텍스트 포맷터에서 반복적으로 이루어집니다.  
   
--   <xref:System.Windows.Media.TextFormatting.TextEndOfLine> 또는 하위 클래스가 반환 됩니다.  
+- <xref:System.Windows.Media.TextFormatting.TextEndOfLine> 또는 하위 클래스가 반환 됩니다.  
   
--   텍스트 포맷터를 만들 대 한 호출 또는 텍스트 포맷터의 호출에 지정 된 최대 선 너비를 초과 하는 텍스트 실행의 누적 된 너비 <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A> 메서드.  
+- 텍스트 포맷터를 만들 대 한 호출 또는 텍스트 포맷터의 호출에 지정 된 최대 선 너비를 초과 하는 텍스트 실행의 누적 된 너비 <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A> 메서드.  
   
--   [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] "CF", "LF" 또는 "CRLF"와 같은 줄 바꿈 시퀀스가 반환 됩니다.  
+- [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] "CF", "LF" 또는 "CRLF"와 같은 줄 바꿈 시퀀스가 반환 됩니다.  
   
 <a name="section4"></a>   
 ## <a name="providing-text-runs"></a>텍스트 실행 제공  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
 ms.openlocfilehash: b6537faa3be7ee28a934927fc95100a34a64e176
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009489"
 ---
 # <a name="toolstrip-technology-summary"></a>ToolStrip 기술 요약
 이 항목에서는 `ToolStrip` 제어 및 이를 사용하도록 지원하는 클래스에 대한 정보를 요약하여 설명합니다.  
@@ -25,23 +25,23 @@ ms.locfileid: "59120963"
 ## <a name="background"></a>배경  
  `ToolStrip` 컨트롤과 연결된 클래스를 사용하여 일관되고 전문적인 모양 및 동작을 제공하는 고급 도구 모음 기능을 만들 수 있습니다. `ToolStrip` 컨트롤 및 클래스는 이전 컨트롤에 비해 다음과 같은 향상된 기능을 제공합니다.  
   
--   더 일관된 이벤트 모델.  
+- 더 일관된 이벤트 모델.  
   
--   작업 목록 및 항목 컬렉션 편집기가 포함된 더 일관된 디자인 타임 동작.  
+- 작업 목록 및 항목 컬렉션 편집기가 포함된 더 일관된 디자인 타임 동작.  
   
--   `ToolStripManager` 및 `ToolStripRenderer`를 사용한 사용자 지정 렌더링.  
+- `ToolStripManager` 및 `ToolStripRenderer`를 사용한 사용자 지정 렌더링.  
   
--   `ToolStripContainer` 및 `ToolStripPanel`을 사용한 기본 제공 래프팅(도킹된 경우 도구 영역 내에서 가로 또는 세로 공간 공유).  
+- `ToolStripContainer` 및 `ToolStripPanel`을 사용한 기본 제공 래프팅(도킹된 경우 도구 영역 내에서 가로 또는 세로 공간 공유).  
   
--   <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> 속성을 사용한 디자인 타임 및 런타임 항목 다시 정렬.  
+- <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> 속성을 사용한 디자인 타임 및 런타임 항목 다시 정렬.  
   
--   <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> 속성을 사용한 오버플로 메뉴 항목에 대한 항목 위치 변경.  
+- <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> 속성을 사용한 오버플로 메뉴 항목에 대한 항목 위치 변경.  
   
--   `ToolStripContainer`, `ToolStripPanel` 및 `ToolStripContentPanel`을 통해 완전히 구성 가능한 컨트롤 위치.  
+- `ToolStripContainer`, `ToolStripPanel` 및 `ToolStripContentPanel`을 통해 완전히 구성 가능한 컨트롤 위치.  
   
--   `ToolStripControlHost`를 사용하여 `ToolStrip`, 기본 컨트롤 및 사용자 지정 컨트롤 호스트.  
+- `ToolStripControlHost`를 사용하여 `ToolStrip`, 기본 컨트롤 및 사용자 지정 컨트롤 호스트.  
   
--   `ToolStripPanel`을 사용하여 `ToolStrip` 컨트롤 병합.  
+- `ToolStripPanel`을 사용하여 `ToolStrip` 컨트롤 병합.  
   
  `ToolStrip`는 `MenuStrip`, `ContextMenuStrip` 및 `StatusStrip`의 확장 가능한 기본 클래스입니다. 이들 컨트롤은 각 구현이 적절한 동작을 처리하도록 확장된, 일반 동작 및 이벤트 처리를 상속하는 <xref:System.Windows.Forms.ToolStripItem> 컨테이너입니다. <xref:System.Windows.Forms.ToolStripItem>에서 파생되는 컨트롤이 다음 표에 나와 있습니다. 기본 `ToolStrip` 클래스는 이들 컨트롤에 대한 그리기, 사용자 입력 및 끌어서 놓기 이벤트를 처리합니다.  
   
@@ -63,26 +63,26 @@ ms.locfileid: "59120963"
 ### <a name="task-dialog-boxes"></a>작업 대화 상자  
  Visual Studio에서는 디자이너의 컨트롤에서 스마트 태그를 클릭하면 자주 사용되는 대부분 명령에 편리하게 액세스할 수 있는 작업 목록이 표시됩니다.  
   
--   [MenuStrip 작업 대화 상자](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
+- [MenuStrip 작업 대화 상자](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
   
--   [ToolStrip 작업 대화 상자](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233648(v=vs.100))  
+- [ToolStrip 작업 대화 상자](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233648(v=vs.100))  
   
--   [ContextMenuStrip 작업 대화 상자](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233646(v=vs.100))  
+- [ContextMenuStrip 작업 대화 상자](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233646(v=vs.100))  
   
--   [StatusStrip 작업 대화 상자](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233642(v=vs.100))  
+- [StatusStrip 작업 대화 상자](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233642(v=vs.100))  
   
--   [ToolStripContainer 작업 대화 상자](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233647(v=vs.100))  
+- [ToolStripContainer 작업 대화 상자](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233647(v=vs.100))  
   
 ### <a name="items-collection-editors"></a>항목 컬렉션 편집기  
  클릭 하면 Visual Studio에서 **항목 편집** 태스크의 목록 또는 선택한 컨트롤을 마우스 오른쪽 단추로 클릭 **항목 편집** 바로 가기 메뉴의 컨트롤에 대 한 컬렉션 편집기가 표시 됩니다. 컬렉션 편집기를 통해 컨트롤에 포함된 항목을 추가, 제거, 다시 정렬할 수 있습니다. 컨트롤 및 컨트롤 항목에 대한 속성을 보고 변경할 수도 있습니다.  
   
--   [MenuStrip 항목 컬렉션 편집기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
+- [MenuStrip 항목 컬렉션 편집기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
   
--   [StatusStrip 항목 컬렉션 편집기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233631(v=vs.100))  
+- [StatusStrip 항목 컬렉션 편집기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233631(v=vs.100))  
   
--   [ContextMenuStrip 항목 컬렉션 편집기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233641(v=vs.100))  
+- [ContextMenuStrip 항목 컬렉션 편집기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233641(v=vs.100))  
   
--   [ToolStrip 항목 컬렉션 편집기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233643(v=vs.100))  
+- [ToolStrip 항목 컬렉션 편집기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233643(v=vs.100))  
   
 ## <a name="hosting-controls"></a>컨트롤 호스트  
  <xref:System.Windows.Forms.ToolStripControlHost> 클래스는 <xref:System.Windows.Forms.ToolStripComboBox>, <xref:System.Windows.Forms.ToolStripTextBox> 및 <xref:System.Windows.Forms.ToolStripProgressBar> 컨트롤에 대한 기본 제공 래퍼를 제공합니다. 다른 기존 컨트롤이나 COM 컨트롤을 <xref:System.Windows.Forms.ToolStripControlHost>에서 호스트할 수도 있습니다.  

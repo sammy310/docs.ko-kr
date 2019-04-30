@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
 ms.openlocfilehash: c4c8529eb477b31eba464c9b156569819ec22941
-ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57251081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000118"
 ---
 # <a name="basic-wcf-programming"></a>기본 WCF 프로그래밍
 이 섹션에서는 Windows Communication Foundation (WCF) 응용 프로그램을 만들기 위한 기초를 제공 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [기본 프로그래밍 수명 주기](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
  디자인, 빌드 및 배포 하는 WCF 서비스 및 클라이언트 응용 프로그램의 수명 주기를 설명 합니다.  
   

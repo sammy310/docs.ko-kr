@@ -3,11 +3,11 @@ title: WCF 서비스에서 REST 스타일 서비스 호출
 ms.date: 03/30/2017
 ms.assetid: 77df81d8-7f53-4daf-8d2d-bf7996e94d5a
 ms.openlocfilehash: c2a3467fb5fe28194dcb8ee7715353f4cb6a1bff
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57842933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048220"
 ---
 # <a name="calling-a-rest-style-service-from-a-wcf-service"></a>WCF 서비스에서 REST 스타일 서비스 호출
 
@@ -117,7 +117,7 @@ public class MyRestClient : ClientBase<IRestInterface>, IRestInterface
 
 ## <a name="host-and-call-the-services"></a>서비스 호스트 및 호출
 
-필요한 끝점 및 동작을 추가하여 콘솔 응용 프로그램에서 두 서비스를 모두 호스트합니다. 그런 후 일반 WCF 서비스를 호출합니다.
+필요한 엔드포인트 및 동작을 추가하여 콘솔 응용 프로그램에서 두 서비스를 모두 호스트합니다. 그런 후 일반 WCF 서비스를 호출합니다.
 
 ```csharp
 public static void Main()

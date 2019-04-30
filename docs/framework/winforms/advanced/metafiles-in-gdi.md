@@ -10,11 +10,11 @@ helpviewer_keywords:
 - metafiles
 ms.assetid: 51da872c-c783-440f-8bf6-1e580a966c31
 ms.openlocfilehash: bb972f158496192aa38f10564209bb2781837414
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010033"
 ---
 # <a name="metafiles-in-gdi"></a>GDI+의 메타파일
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 제공 된 <xref:System.Drawing.Imaging.Metafile> 클래스를 기록 하 고 메타 파일을 표시할 수 있도록 합니다. 벡터 이미지 라고도 불리는 메타 파일 이미지 그리기 명령 및 설정의 시퀀스로 저장 되어 있는 경우 명령 및 설정에 기록를 <xref:System.Drawing.Imaging.Metafile> 개체를 메모리에 저장 하거나 파일 또는 스트림에 저장할 수 있습니다.  
@@ -22,11 +22,11 @@ ms.locfileid: "59119862"
 ## <a name="metafile-formats"></a>메타 파일 형식  
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 다음 형식으로 저장 된 메타 파일을 표시할 수 있습니다.  
   
--   Windows 메타 파일 (WMF)  
+- Windows 메타 파일 (WMF)  
   
--   EMF(확장 메타파일)  
+- EMF(확장 메타파일)  
   
--   EMF+  
+- EMF+  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] EMF, EMF + 형식으로 있지만 WMF 형식이 메타 파일을 기록할 수 있습니다.  
   

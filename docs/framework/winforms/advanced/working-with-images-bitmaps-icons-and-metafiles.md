@@ -10,15 +10,14 @@ helpviewer_keywords:
 - examples [Windows Forms], metafiles
 ms.assetid: a626d701-bd99-4fd8-b92f-7b8f794e042b
 ms.openlocfilehash: 61d534f8299c920f656abe4280cc3ea5e609c0b2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011920"
 ---
 # <a name="working-with-images-bitmaps-icons-and-metafiles"></a>이미지, 비트맵, 아이콘 및 메타파일 사용
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]는 래스터 이미지 작업을 위한 `Bitmap` 클래스와 벡터 이미지 작업을 위한 `Metafile` 클래스를 제공합니다. 
-  `Bitmap` 및 `Metafile` 클래스는 둘 다 `Image` 클래스에서 상속됩니다.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]는 래스터 이미지 작업을 위한 `Bitmap` 클래스와 벡터 이미지 작업을 위한 `Metafile` 클래스를 제공합니다. `Bitmap` 및 `Metafile` 클래스는 둘 다 `Image` 클래스에서 상속됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [방법: 화면에 기존 비트맵 그리기](how-to-draw-an-existing-bitmap-to-the-screen.md)  
@@ -34,8 +33,7 @@ ms.locfileid: "57710461"
  회전, 반사 및 왜곡된 이미지를 그리는 방법을 설명합니다.  
   
  [방법: 배율 조정 시 보간 모드를 이미지 품질 관리 사용](how-to-use-interpolation-mode-to-control-image-quality-during-scaling.md)  
- 
-  <xref:System.Drawing.Drawing2D.InterpolationMode> 열거형을 사용하여 이미지 품질을 변경하는 방법을 보여 줍니다.  
+ <xref:System.Drawing.Drawing2D.InterpolationMode> 열거형을 사용하여 이미지 품질을 변경하는 방법을 보여 줍니다.  
   
  [방법: 축소판 이미지 만들기](how-to-create-thumbnail-images.md)  
  축소판 이미지를 만드는 방법을 설명합니다.  

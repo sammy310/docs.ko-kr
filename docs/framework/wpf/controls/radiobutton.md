@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [WPF], RadioButton
 ms.assetid: 6c9ba847-eab7-4bba-9c74-6b56ef72067b
 ms.openlocfilehash: 32db3436b536cd1a27dd79e0e98cdc3e6f21c4c9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024131"
 ---
 # <a name="radiobutton"></a>RadioButton
 <xref:System.Windows.Controls.RadioButton> 컨트롤은 일반적으로 그룹화 사용자에 게 몇 가지 옵션 중 단일 선택 항목을 제공 하려면 한 번에 하나의 단추를 선택할 수 있습니다.  

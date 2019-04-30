@@ -3,11 +3,11 @@ title: 진단에 Windows Management Instrumentation 사용
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
 ms.openlocfilehash: 9acb1b280248f8552680ea3fbba831b3de53b2c3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048288"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>진단에 Windows Management Instrumentation 사용
 Windows Communication Foundation (WCF) WCF Windows Management Instrumentation (WMI) 공급자를 통해 런타임으로 서비스 검사 데이터를 노출 합니다.  
@@ -112,13 +112,13 @@ Windows Communication Foundation (WCF) WCF Windows Management Instrumentation (W
   
      이 PowerShell 스크립트는 "루트/servicemodel" WMI 네임 스페이스에 기본 제공 사용자 그룹 액세스 권한을 부여할 설명자 정의 SDDL (Security Language)을 사용 합니다. 다음 ACL을 지정합니다.  
   
-    -   BA(Built-In Administrator) – 이미 권한이 있습니다.  
+    - BA(Built-In Administrator) – 이미 권한이 있습니다.  
   
-    -   NS(Network Service) – 이미 권한이 있습니다.  
+    - NS(Network Service) – 이미 권한이 있습니다.  
   
-    -   LS(Local System) – 이미 권한이 있습니다.  
+    - LS(Local System) – 이미 권한이 있습니다.  
   
-    -   Built-In Users – 권한을 부여할 그룹입니다.  
+    - Built-In Users – 권한을 부여할 그룹입니다.  
   
 #### <a name="to-grant-provider-registration-access"></a>공급자 등록 권한을 부여하려면  
   

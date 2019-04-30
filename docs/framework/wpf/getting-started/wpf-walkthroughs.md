@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
 ms.openlocfilehash: 1ec147d4ec7b59a7ac8e01680266cbd24b644985
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010360"
 ---
 # <a name="wpf-walkthroughs"></a>WPF 연습
 연습에서는 일반적인 시나리오에 대 한 단계별 지침을 제공 합니다. 제품 또는 특정 기능 영역 파악을 효율적으로 시작할 수 있습니다.  
