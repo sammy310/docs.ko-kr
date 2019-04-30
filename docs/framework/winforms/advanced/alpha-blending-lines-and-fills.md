@@ -12,11 +12,11 @@ helpviewer_keywords:
 - shapes [Windows Forms], adding transparency
 ms.assetid: 5440f48c-3ac9-44c3-b170-c1c110bdbab8
 ms.openlocfilehash: 7a8286fb741effaf668b87e90da04f79d1490de2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61960942"
 ---
 # <a name="alpha-blending-lines-and-fills"></a>선 및 채우기 알파 혼합
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], 색은 알파, 빨강, 녹색 및 파랑에 대 한 각 8 비트를 사용 하 여 32 비트 값입니다. 알파 값을 나타내는 색의 투명도-범위를 색이 배경 색과 혼합 됩니다. 알파 값 범위는 0에서 255까지, 0은 완전히 투명 한 색을 나타내는 255에서 완전히 불투명 한 색을 나타냅니다.  

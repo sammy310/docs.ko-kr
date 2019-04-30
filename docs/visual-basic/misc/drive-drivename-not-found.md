@@ -5,11 +5,11 @@ f1_keywords:
 - vbrFileSystem_DriveNotFound1
 ms.assetid: 0250e9f2-3470-4fe4-8fda-be4fbf2e2a30
 ms.openlocfilehash: 9084e885ba98211623781b036e9f7407a44368ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970146"
 ---
 # <a name="drive-drivename-not-found"></a>드라이브 '\<drivename >' 찾을 수 없음
 드라이브를 찾을 수 없습니다. 네트워크 연결이 끊어졌거나, 액세스하려는 드라이브가 오프라인 상태이거나 존재하지 않습니다.  

@@ -3,11 +3,11 @@ title: Visual Studio Code에서 F# 시작
 description: Visual Studio Code와 Ionide 플러그인 도구 모음으로 F#을 사용하는 방법을 알아봅니다.
 ms.date: 12/23/2018
 ms.openlocfilehash: 7c2ecab14b3351d441249e7fc7cb3188a4ee7eba
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949552"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Visual Studio Code에서 F# 시작
 
@@ -33,48 +33,48 @@ ms.locfileid: "59612890"
 > [!NOTE]
 > 템플릿 옵션을 보이지 않으면 명령 팔레트에서 다음 명령을 실행 하 여 서식 파일을 새로 고쳐 보세요. `>F#: Refresh Project Templates`합니다.
 
-**Enter**를 눌러서 "F#: new project"를 선택합니다. 이렇게 하면 프로젝트 템플릿을 선택하는 다음 단계로 넘어갑니다.
+선택 "F#: 새 프로젝트 "를 눌러 **Enter**합니다. 이 프로젝트 템플릿을 선택 하는 다음 단계를 안내 합니다.
 
 `classlib` 템플릿을 선택하고 **Enter**를 칩니다.
 
 그런 다음에 프로젝트를 생성하기 위한 디렉터리를 선택합니다. 비워 두면 현재 디렉터리를 사용합니다.
 
-끝으로, 마지막 단계에서는 프로젝트의 이름을 지정합니다. F#에서는 [파스칼식 대/소문자](http://c2.com/cgi/wiki?PascalCase)를 프로젝트 이름으로 사용합니다. 이 문서에서는 `ClassLibraryDemo`를 이름으로 합니다. 자신이 원하는 프로젝트 이름을 입력한 후 **Enter**를 칩니다.
+마지막으로, 마지막 단계에서 프로젝트를 이름을 지정 합니다. F#사용 하 여 [파스칼식 대 / 소문자](http://c2.com/cgi/wiki?PascalCase) 프로젝트 이름에 대 한 합니다. 이 문서에서는 `ClassLibraryDemo` 이름으로 합니다. 프로젝트에 대해 원하는 이름을 입력 한 후 적중 **Enter**합니다.
 
-지금까지의 단계를 수행했다면 Visual Studio 코드의 좌측 작업 영역에 다음 내용이 표시됩니다.
+이전 단계를 수행한 경우 Visual Studio 코드에서 작업 영역의 왼쪽에 있는 다음 표시할 얻게 됩니다.
 
 1. F# 프로젝트 자체는 `ClassLibraryDemo` 폴더 하위에 존재합니다.
-2. [`Paket`](https://fsprojects.github.io/Paket/)을 통해 패키지를 추가하기 위한 올바른 디렉터리 구조.
+2. 통해 패키지를 추가 하기 위한 올바른 디렉터리 구조 [ `Paket` ](https://fsprojects.github.io/Paket/)합니다.
 3. [`FAKE`](https://fsharp.github.io/FAKE/)를 통한 크로스 플랫폼 빌드 스크립트.
 4. 패키지를 설치하고 종속성을 해결할 수 있는 `paket.exe` 실행 파일.
 5. 이 프로젝트를 Git 기반 소스 컨트롤에 추가하려는 경우 `.gitignore` 파일
 
-## <a name="writing-some-code"></a> 코드 작성
+## <a name="writing-some-code"></a>코드 작성
 
-*ClassLibraryDemo* 폴더를 엽니다. 다음과 같은 파일이 표시됩니다.
+*ClassLibraryDemo* 폴더를 엽니다.  다음과 같은 파일이 표시됩니다.
 
 1. 클래스가 정의된 F# 구현 파일인`ClassLibraryDemo.fs`
 2. 이 프로젝트를 빌드하는 데 사용되는 F# 프로젝트 파일인 `ClassLibraryDemo.fsproj`
-3. 소스 파일을 로드하는 F# 스크립트 파일인 `Script.fsx`
+3. `Script.fsx`에 F# 소스 파일을 로드 하는 스크립트 파일입니다.
 4. 프로젝트 종속성을 지정하는 Paket 파일인 `paket.references`
 
-`Script.fsx`를 열고 마지막에 다음 코드를 추가합니다.
+열기 `Script.fsx`의 끝에 다음 코드를 추가 합니다.
 
 [!code-fsharp[ToPigLatin](../../../samples/snippets/fsharp/getting-started/to-pig-latin.fsx)]
 
-이 함수는 단어를 [Pig Latin](https://en.wikipedia.org/wiki/Pig_Latin) 형태로 변환합니다. 다음으로 F# Interactive (FSI)를 사용하여 평가합니다.
+이 함수는 형태의 단어 변환 [Pig Latin](https://en.wikipedia.org/wiki/Pig_Latin)합니다. 다음 단계를 사용 하 여 평가 하는 F# 대화형 (FSI).
 
-전체 함수를 강조 표시합니다(11줄 길이여야 함). 강조 표시되면 **Alt** 키를 누른 상태에서 **Enter**를 누릅니다. 팝업창이 표시되며 다음과 같이 표시됩니다.
+(11 줄 이어야 함)은 전체 함수를 강조 표시 합니다. 이 강조 표시 되 면 저장 합니다 **Alt** 키 및 적중 **Enter**합니다. 아래 팝업 창을 보면 하 고 다음과 같이 표시 됩니다.
 
-![Ionide를 사용한 F# Interactive 출력 예시](media/getting-started-vscode/vscode-fsi.png)
+![예 F# 대화형 Ionide를 사용 하 여 출력](media/getting-started-vscode/vscode-fsi.png)
 
-여기서 다음 세 가지 작업이 수행되었습니다.
+이 세 가지 작업을 수행 했습니다.
 
-1. FSI 프로세스를 시작했습니다.
-2. FSI 프로세스에서 강조 표시된 코드를 전송했습니다.
-3. FSI 프로세스에서 전송한 코드를 평가합니다.
+1. FSI 프로세스를 시작 하는 것입니다.
+2. 강조 표시 된 코드 FSI 프로세스를 통해 보낸 합니다.
+3. FSI 프로세스를 통해 전송 된 코드를 평가 합니다.
 
-[함수](../language-reference/functions/index.md)를 전송했으므로 이제 FSI를 사용하여 해당 함수를 호출할 수 있습니다. 대화형 창에서 다음을 입력합니다.
+통해 전달 되는 내용 때문에 [함수](../language-reference/functions/index.md), 이제 FSI 사용 하 여 해당 함수를 호출할 수 있습니다. 대화형 창에서 다음을 입력 합니다.
 
 ```fsharp
 toPigLatin "banana";;
@@ -86,7 +86,7 @@ toPigLatin "banana";;
 val it : string = "ananabay"
 ```
 
-이제 모음을 첫 글자로 사용해 보겠습니다. 다음과 같이 입력합니다.
+이제 첫 번째 문자로 모음을 사용 하 여 시도해 보겠습니다. 다음을 입력하세요.
 
 ```fsharp
 toPigLatin "apple";;
@@ -98,10 +98,10 @@ toPigLatin "apple";;
 val it : string = "appleyay"
 ```
 
-예상대로 함수가 작동합니다. 축하합니다. 첫 번째 F#함수를 Visual Studio Code에서 작성하고 FSI를 사용하여 평가했습니다!
+예상 대로 작동 하는 함수 표시 됩니다. 축 하 여 방금 작성 한 첫 번째 F# Visual Studio Code에서 함수 및 FSI를 사용 하 여 평가!
 
 > [!NOTE]
-> FSI에서는 `;;`가 라인의 끝입니다. FSI에서는 여러 줄의 입력을 허용하기 때문입니다. 마지막에 있는 `;;`는 FSI가 코드의 마지막이라는 것을 인지할 수 있게 해줍니다. 
+> FSI의 선이 끝납니다 했을 수에 따라 `;;`합니다. 즉, FSI을 사용 하면 여러 줄을 입력할 수 있습니다. `;;` 끝 FSI 코드가 완료 되었을 때를 알 수 있습니다.
 
 ## <a name="explaining-the-code"></a>코드를 설명합니다.
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
 ms.openlocfilehash: e6f8ed3b893319e771eb0af96da7a58a7fad5c9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954264"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>XAML을 위한 형식 변환기 및 태그 확장
 형식 변환기 및 태그 확장은 XAML 형식 시스템과 XAML 작성기가 개체 그래프 구성 요소를 생성하는 데 사용하는 두 가지 기술입니다. 일부 특징을 공유하지만 형식 변환기 및 태그 확장은 XAML 노드 스트림에서 다르게 표현됩니다. 이 설명서 집합에서는 때때로 형식 변환기, 태그 확장 및 유사한 구문을 총체적으로 값 변환기라고 합니다.  
@@ -22,13 +22,13 @@ ms.locfileid: "59200989"
 ## <a name="value-converters"></a>값 변환기  
  XAML에서 값 변환기는 다양한 시나리오에 사용됩니다. 다음 목록에서는 XAML의 다양한 값 변환기 유형을 보여 줍니다.  
   
--   형식 변환기  
+- 형식 변환기  
   
--   태그 확장  
+- 태그 확장  
   
--   값 직렬 변환기  
+- 값 직렬 변환기  
   
--   XAML 텍스트 구문에 대한 논리를 제공하는 관련 클래스 또는 지원 클래스  
+- XAML 텍스트 구문에 대한 논리를 제공하는 관련 클래스 또는 지원 클래스  
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>형식 변환기  

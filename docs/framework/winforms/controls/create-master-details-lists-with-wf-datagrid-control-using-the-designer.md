@@ -7,11 +7,11 @@ helpviewer_keywords:
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
 ms.openlocfilehash: f586572c850927ffe71566287986e6db6112c689
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961362"
 ---
 # <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGrid 컨트롤에 마스터-세부 목록 만들기
 
@@ -42,15 +42,15 @@ ms.locfileid: "59332081"
   
 6. 구성 된 <xref:System.Windows.Forms.DataGrid> 는 마스터 데이터를 다음과 같이 지정 하려는 컨트롤:  
   
-    1.  선택 된 <xref:System.Data.DataSet> 드롭 다운 목록에서를 <xref:System.Windows.Forms.DataGrid.DataSource%2A> 속성입니다.  
+    1. 선택 된 <xref:System.Data.DataSet> 드롭 다운 목록에서를 <xref:System.Windows.Forms.DataGrid.DataSource%2A> 속성입니다.  
   
-    2.  드롭다운 목록에서 마스터 테이블 (예: "고객")을 선택 합니다 <xref:System.Windows.Forms.DataGrid.DataMember%2A> 속성입니다.  
+    2. 드롭다운 목록에서 마스터 테이블 (예: "고객")을 선택 합니다 <xref:System.Windows.Forms.DataGrid.DataMember%2A> 속성입니다.  
   
 7. 구성 된 <xref:System.Windows.Forms.DataGrid> 세부 정보 표에서 다음과 같이 지정 하려는 컨트롤:  
   
-    1.  선택 된 <xref:System.Data.DataSet> 드롭 다운 목록에서를 <xref:System.Windows.Forms.DataGrid.DataSource%2A> 속성입니다.  
+    1. 선택 된 <xref:System.Data.DataSet> 드롭 다운 목록에서를 <xref:System.Windows.Forms.DataGrid.DataSource%2A> 속성입니다.  
   
-    2.  드롭다운 목록에서 마스터 및 세부 테이블 간의 관계 (예: "Customers.CustOrd")를 선택 합니다 <xref:System.Windows.Forms.DataGrid.DataMember%2A> 속성입니다. 관계를 표시 하려면 더하기를 클릭 하 여 노드를 확장 (**+**) 드롭다운 목록에서 마스터 테이블 옆에 있는 기호입니다.  
+    2. 드롭다운 목록에서 마스터 및 세부 테이블 간의 관계 (예: "Customers.CustOrd")를 선택 합니다 <xref:System.Windows.Forms.DataGrid.DataMember%2A> 속성입니다. 관계를 표시 하려면 더하기를 클릭 하 여 노드를 확장 (**+**) 드롭다운 목록에서 마스터 테이블 옆에 있는 기호입니다.  
   
 ## <a name="see-also"></a>참고자료
 

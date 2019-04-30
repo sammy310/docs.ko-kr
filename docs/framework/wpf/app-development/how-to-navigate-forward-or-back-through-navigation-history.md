@@ -9,11 +9,11 @@ helpviewer_keywords:
 - navigation [WPF], through navigation history (forward)
 ms.assetid: 5939d574-5f53-469e-85f5-1f2b13607caa
 ms.openlocfilehash: 4c20ebfab45a24cf34b1476fb94dae6913fb4d99
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947760"
 ---
 # <a name="how-to-navigate-forward-or-back-through-navigation-history"></a>방법: 탐색 기록을 앞으로 또는 뒤로 탐색
 이 예제에서는 앞으로 또는 뒤로 탐색 기록에 항목을 탐색 하는 방법을 보여 줍니다.  
@@ -21,11 +21,11 @@ ms.locfileid: "57366662"
 ## <a name="example"></a>예제  
  콘텐츠에서 다음 호스트에서 실행 되는 코드 탐색 기록에서 한 번에 하나의 항목을 통해 앞뒤로 이동 수 있습니다.  
   
--   <xref:System.Windows.Navigation.NavigationWindow> 사용 하 여 <xref:System.Windows.Navigation.NavigationService>  
+- <xref:System.Windows.Navigation.NavigationWindow> 사용 하 여 <xref:System.Windows.Navigation.NavigationService>  
   
--   <xref:System.Windows.Controls.Frame> 사용 하 여 <xref:System.Windows.Navigation.NavigationService>  
+- <xref:System.Windows.Controls.Frame> 사용 하 여 <xref:System.Windows.Navigation.NavigationService>  
   
--   [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]  
+- [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]  
   
  한 항목 앞으로 탐색할 수 있습니다, 전에 먼저 체크 해야 검사 하 여 전방 탐색 기록에 항목이 있는지 합니다 **CanGoForward** 속성입니다. 한 항목 앞으로 탐색 하려면 호출을 **GoForward** 메서드. 이 다음 예제에 나와 있습니다.  
   

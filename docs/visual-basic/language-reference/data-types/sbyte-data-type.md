@@ -15,11 +15,11 @@ helpviewer_keywords:
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
 ms.openlocfilehash: 1da5de4971928ca23a23c4dcfc5f338c4d7a3875
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971784"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte 데이터 형식 (Visual Basic)
 
@@ -64,13 +64,13 @@ Dim number As SByte = &H_F9
 
 ## <a name="programming-tips"></a>프로그래밍 팁
   
--   **CLS 규격입니다.** 합니다 `SByte` 데이터 형식이 아닙니다 부분 합니다 [공용 언어 사양](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), CLS 규격 코드를 사용 하는 구성 요소를 사용할 수 없습니다 있도록 합니다.
+- **CLS 규격입니다.** 합니다 `SByte` 데이터 형식이 아닙니다 부분 합니다 [공용 언어 사양](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), CLS 규격 코드를 사용 하는 구성 요소를 사용할 수 없습니다 있도록 합니다.
 
--   **확대 합니다.** `SByte` 데이터 형식으로 확장 되는지를 `Short`, `Integer`, `Long`를 `Decimal`를 `Single`, 및 `Double`합니다. 즉, 변환할 수 있습니다 `SByte` 발생 없이 이러한 형식 중 하나에 <xref:System.OverflowException?displayProperty=nameWithType> 오류입니다.
+- **확대 합니다.** `SByte` 데이터 형식으로 확장 되는지를 `Short`, `Integer`, `Long`를 `Decimal`를 `Single`, 및 `Double`합니다. 즉, 변환할 수 있습니다 `SByte` 발생 없이 이러한 형식 중 하나에 <xref:System.OverflowException?displayProperty=nameWithType> 오류입니다.
   
--   **형식 문자입니다.** `SByte` 에 리터럴 형식 문자 또는 식별자 형식 문자가 없습니다.  
+- **형식 문자입니다.** `SByte` 에 리터럴 형식 문자 또는 식별자 형식 문자가 없습니다.  
   
--   **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.SByte?displayProperty=nameWithType> 구조체입니다.
+- **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.SByte?displayProperty=nameWithType> 구조체입니다.
   
 ## <a name="see-also"></a>참고자료
 

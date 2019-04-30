@@ -10,11 +10,11 @@ helpviewer_keywords:
 - regions
 ms.assetid: 52184f9b-16dd-4bbd-85be-029112644ceb
 ms.openlocfilehash: 33d4f4ecca7b9d777fa4eab5b6d031de10f03ccc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956810"
 ---
 # <a name="regions-in-gdi"></a>GDI+의 영역
 영역은 출력 장치의 표시 영역의 일부입니다. 지역 (단일 사각형) 단순 또는 복합 (다각형 및 닫힌된 곡선의 조합) 수 있습니다. 다음 그림에서는 두 지역: 사각형에서 생성 된 하나 및 다른 경로에서 생성 합니다.  

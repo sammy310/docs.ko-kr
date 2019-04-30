@@ -5,11 +5,11 @@ f1_keywords:
 - vbrArgument_SCNotSupported
 ms.assetid: 197d17cb-2904-4e12-8e45-aba23bddec8c
 ms.openlocfilehash: c9b2483ca51982d93f746d23d996d552a621c64d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942625"
 ---
 # <a name="this-system-does-not-contain-support-for-the-simplifiedchinese-locale"></a>이 시스템은 중국어 간체 로캘을 지원하지 않습니다.
 `VbStrConv.SimplifiedChinese` 열거형 멤버를 사용하려고 하지만 시스템에서 중국어 간체 로캘을 지원하지 않습니다.  

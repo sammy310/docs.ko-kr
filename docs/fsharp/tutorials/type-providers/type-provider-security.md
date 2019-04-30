@@ -3,11 +3,11 @@ title: 형식 공급자 보안
 description: 형식 공급자 보안에 대 한 자세한 F#, 형식 공급자의 신뢰 설정을 변경 하는 방법을 포함 합니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: 9ccb33d7298736c3d6b54980b6fe09bc9f2e0259
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61968235"
 ---
 # <a name="type-provider-security"></a>형식 공급자 보안
 
@@ -27,6 +27,6 @@ Visual Studio에서 직접 신뢰 설정을 변경 하려는 경우 다음 단�
 
 2. 선택 `Type Providers`, 형식 공급자의 목록에서 신뢰 하는 형식 공급자에 대 한 확인란을 선택 하 고 신뢰할 수 없는 것에 대 한 확인란의 선택을 취소 하 고 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [형식 공급자](index.md)

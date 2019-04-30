@@ -8,11 +8,11 @@ ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87ec70b2b27c8886ac9b567498d75f9294437bed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949268"
 ---
 # <a name="loader-etw-events"></a>로더 ETW 이벤트
 <a name="top"></a> 이들 이벤트는 응용 프로그램 도메인, 어셈블리 및 모듈 로드 및 언로드와 관련된 정보를 수집합니다.  
@@ -21,15 +21,15 @@ ms.locfileid: "59141533"
   
  로더 이벤트는 다음으로 다시 구분됩니다.  
   
--   [응용 프로그램 도메인 이벤트](#application_domain_events)  
+- [응용 프로그램 도메인 이벤트](#application_domain_events)  
   
--   [CLR 로더 어셈블리 이벤트](#clr_loader_assembly_events)  
+- [CLR 로더 어셈블리 이벤트](#clr_loader_assembly_events)  
   
--   [모듈 이벤트](#module_events)  
+- [모듈 이벤트](#module_events)  
   
--   [CLR 도메인 모듈 이벤트](#clr_domain_module_events)  
+- [CLR 도메인 모듈 이벤트](#clr_domain_module_events)  
   
--   [모듈 범위 이벤트](#module_range_events)  
+- [모듈 범위 이벤트](#module_range_events)  
   
 <a name="application_domain_events"></a>   
 ## <a name="application-domain-events"></a>애플리케이션 도메인 이벤트  
@@ -134,11 +134,11 @@ ms.locfileid: "59141533"
   
 ### <a name="remarks"></a>설명  
   
--   이름에 "Pdb"가 포함된 필드는 도구를 프로파일링하여 프로파일링 세션 중에 로드된 모듈과 일치하는 PDB를 찾는 방식으로 사용할 수 있습니다. 이들 필드 값은 일반적으로 로드된 모듈과 일치하는 PDB를 찾도록 도와주는 디버거에서 사용되는 모듈의 IMAGE_DIRECTORY_ENTRY_DEBUG 섹션에 작성된 데이터에 해당합니다.  
+- 이름에 "Pdb"가 포함된 필드는 도구를 프로파일링하여 프로파일링 세션 중에 로드된 모듈과 일치하는 PDB를 찾는 방식으로 사용할 수 있습니다. 이들 필드 값은 일반적으로 로드된 모듈과 일치하는 PDB를 찾도록 도와주는 디버거에서 사용되는 모듈의 IMAGE_DIRECTORY_ENTRY_DEBUG 섹션에 작성된 데이터에 해당합니다.  
   
--   "ManagedPdb"로 시작하는 필드 이름은 관리되는 컴파일러(예: C# 또는 Visual Basic 컴파일러)에서 생성된 MSIL 모듈에 해당하는 관리되는 PDB를 나타냅니다. 이 PDB는 관리되는 PDB 형식을 사용하고 원래 관리되는 소스 코드의 요소(예: 파일, 줄 번호 및 기호 이름)를 MSIL 모듈로 컴파일된 MSIL 요소에 매핑하는 방법을 설명합니다.  
+- "ManagedPdb"로 시작하는 필드 이름은 관리되는 컴파일러(예: C# 또는 Visual Basic 컴파일러)에서 생성된 MSIL 모듈에 해당하는 관리되는 PDB를 나타냅니다. 이 PDB는 관리되는 PDB 형식을 사용하고 원래 관리되는 소스 코드의 요소(예: 파일, 줄 번호 및 기호 이름)를 MSIL 모듈로 컴파일된 MSIL 요소에 매핑하는 방법을 설명합니다.  
   
--   "NativePdb"로 시작하는 필드 이름은 `NGEN createPDB`를 호출하여 생성된 NGen PDB를 나타냅니다. 이 PDB는 네이티브 PDB 형식을 사용하고 원래 관리되는 소스 코드의 요소(예: 파일, 줄 번호 및 기호 이름)를 NGen 모듈로 컴파일된 네이티브 요소에 매핑하는 방법을 설명합니다.  
+- "NativePdb"로 시작하는 필드 이름은 `NGEN createPDB`를 호출하여 생성된 NGen PDB를 나타냅니다. 이 PDB는 네이티브 PDB 형식을 사용하고 원래 관리되는 소스 코드의 요소(예: 파일, 줄 번호 및 기호 이름)를 NGen 모듈로 컴파일된 네이티브 요소에 매핑하는 방법을 설명합니다.  
   
  [맨 위로 이동](#top)  
   

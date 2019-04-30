@@ -8,20 +8,20 @@ ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 09b2848619256a255cc27f0268d46e5e6db8cbe4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949307"
 ---
 # <a name="interop-etw-events"></a>Interop ETW 이벤트
 <a name="top"></a> Interop 이벤트는 MSIL(Microsoft Intermediate Language) 스텁 생성 및 캐싱에 대한 정보를 캡처합니다.  
   
  이 범주는 다음 이벤트로 구성됩니다.  
   
--   [ILStubGenerated 이벤트](#ilstubgenerated_event)  
+- [ILStubGenerated 이벤트](#ilstubgenerated_event)  
   
--   [ILStubCacheHit 이벤트](#ilstubcachehit_event)  
+- [ILStubCacheHit 이벤트](#ilstubcachehit_event)  
   
 <a name="ilstubgenerated_event"></a>   
 ## <a name="ilstubgenerated-event"></a>ILStubGenerated 이벤트  

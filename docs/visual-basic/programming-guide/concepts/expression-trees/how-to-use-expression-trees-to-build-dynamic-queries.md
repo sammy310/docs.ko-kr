@@ -3,11 +3,11 @@ title: '방법: 식 트리를 사용 하 여 동적 쿼리 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
 ms.openlocfilehash: 2f91d95f888ab98902cc300afb61c41b62e64050
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966220"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>방법: 식 트리를 사용 하 여 동적 쿼리 (Visual Basic)
 LINQ에서는 식 트리를 사용하여 <xref:System.Linq.IQueryable%601>을 구현하는 데이터 소스를 대상으로 하는 구조적 쿼리를 나타냅니다. 예를 들어 LINQ 공급자는 관계형 데이터 저장소를 쿼리하기 위한 <xref:System.Linq.IQueryable%601> 인터페이스를 구현합니다. Visual Basic 컴파일러는 런타임에 식 트리를 작성 하는 코드에 이러한 데이터 소스를 대상으로 하는 쿼리를 컴파일합니다. 그런 다음 쿼리 공급자는 식 트리 데이터 구조를 트래버스하고 데이터 소스에 적합한 쿼리 언어로 변환할 수 있습니다.  
@@ -101,13 +101,13 @@ Next
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
   
--   **콘솔 응용 프로그램** 프로젝트를 새로 만듭니다.  
+- **콘솔 응용 프로그램** 프로젝트를 새로 만듭니다.  
   
--   아직 참조되지 않은 경우 System.Core.dll에 대한 참조를 추가합니다.  
+- 아직 참조되지 않은 경우 System.Core.dll에 대한 참조를 추가합니다.  
   
--   System.Linq.Expressions 네임스페이스를 포함합니다.  
+- System.Linq.Expressions 네임스페이스를 포함합니다.  
   
--   이 예제에서 코드를 복사 및 붙여 넣습니다 합니다 `Main` `Sub` 프로시저입니다.  
+- 이 예제에서 코드를 복사 및 붙여 넣습니다 합니다 `Main` `Sub` 프로시저입니다.  
   
 ## <a name="see-also"></a>참고자료
 

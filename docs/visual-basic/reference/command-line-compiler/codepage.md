@@ -7,11 +7,11 @@ helpviewer_keywords:
 - -codepage compiler option [Visual Basic]
 ms.assetid: be36ec33-6800-4505-838c-4124564f5cc9
 ms.openlocfilehash: fda75383435fdff718d1d50bc8583afc9858e7e2
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944705"
 ---
 # <a name="-codepage-visual-basic"></a>-codepage (Visual Basic)
 컴파일할 때 모든 소스 코드 파일에 사용할 코드 페이지를 지정합니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "46562179"
   
 |용어|정의|  
 |---|---|  
-|`id`|필수. 컴파일러에서 지정한 코드 페이지를 사용 하 여 `id` 원본 파일의 인코딩을 해석 합니다.|  
+|`id`|필수 요소. 컴파일러에서 지정한 코드 페이지를 사용 하 여 `id` 원본 파일의 인코딩을 해석 합니다.|  
   
 ## <a name="remarks"></a>설명  
  특정 인코딩을 사용 하 여 저장 된 소스 코드를 컴파일하는 데 사용할 수 있습니다 `-codepage` 사용할 코드 페이지를 지정 합니다. `-codepage` 옵션 컴파일에서 모든 소스 코드 파일에 적용 됩니다. 자세한 내용은 [.NET Framework의 문자 인코딩](../../../standard/base-types/character-encoding.md)합니다.  

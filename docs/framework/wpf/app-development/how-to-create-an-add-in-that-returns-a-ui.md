@@ -10,11 +10,11 @@ helpviewer_keywords:
 - add-in [WPF], returns a UI
 ms.assetid: 57f274b7-4c66-4b72-92eb-81939a393776
 ms.openlocfilehash: faed11bb02037ea42b31402d431e1bcdd8b70339
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947838"
 ---
 # <a name="how-to-create-an-add-in-that-returns-a-ui"></a>방법: UI를 반환하는 추가 기능 만들기
 이 예제에서는 WPF 독립 실행형 응용 프로그램 호스트에는 Windows Presentation Foundation (WPF)를 반환 하는 추가 기능을 만드는 방법을 보여 줍니다.  
@@ -25,9 +25,9 @@ ms.locfileid: "59115754"
   
  이 예제는이 시나리오를 사용 하도록 설정 하는.NET Framework 추가 기능 모델에 WPF 확장을 강조 표시 하 고 다음을 가정 합니다.  
   
--   .NET Framework 추가 기능에서 모델, 파이프라인, 추가 기능 및 호스트 개발을 포함 하 여 알고 있어야 합니다. 이러한 개념을 잘 모르는 경우 [추가 기능 및 확장성](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))합니다. 파이프라인, 추가 기능 및 호스트 응용 프로그램의 구현을 설명 하는 자습서를 참조 하세요. [연습: 확장 가능한 응용 프로그램을 만드는](../../add-ins/walkthrough-create-extensible-app.md)합니다.  
+- .NET Framework 추가 기능에서 모델, 파이프라인, 추가 기능 및 호스트 개발을 포함 하 여 알고 있어야 합니다. 이러한 개념을 잘 모르는 경우 [추가 기능 및 확장성](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))합니다. 파이프라인, 추가 기능 및 호스트 응용 프로그램의 구현을 설명 하는 자습서를 참조 하세요. [연습: 확장 가능한 응용 프로그램을 만드는](../../add-ins/walkthrough-create-extensible-app.md)합니다.  
   
--   WPF는.NET Framework 추가 기능 모델을 여기에서 찾을 수 있는 확장 프로그램 중 지식: [WPF 추가 기능 개요](wpf-add-ins-overview.md)합니다.  
+- WPF는.NET Framework 추가 기능 모델을 여기에서 찾을 수 있는 확장 프로그램 중 지식: [WPF 추가 기능 개요](wpf-add-ins-overview.md)합니다.  
   
 ## <a name="example"></a>예제  
  WPF UI를 반환 하는 추가 기능에서 만들려는 각 파이프라인 세그먼트에 추가 하 고 호스트 응용 프로그램에 대 한 특정 코드가 필요 합니다.  

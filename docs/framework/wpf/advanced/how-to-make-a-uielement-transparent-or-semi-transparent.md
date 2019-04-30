@@ -8,11 +8,11 @@ helpviewer_keywords:
 - UIElements [WPF], opacity
 ms.assetid: a49fc8d6-7b32-4f28-9122-39b632a19b4b
 ms.openlocfilehash: 1de9a7e11fee241ecb71242e9808e77b7e5e63b0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942872"
 ---
 # <a name="how-to-make-a-uielement-transparent-or-semi-transparent"></a>방법: UIElement를 투명하거나 반투명하게 만들기
 이 예제에서는 있도록는 <xref:System.Windows.UIElement> 투명 하거나 반투명 하 게 합니다. 설정 요소를 투명 하거나 반투명 하 게, 해당 <xref:System.Windows.UIElement.Opacity%2A> 속성입니다. 값이 `0.0` 요소를 완전히 투명 해지고 값을 사용 하면 `1.0` 요소를 완전히 불투명 하 게 만듭니다. 값 `0.5` 요소 50% 불투명 해지고 0.725 만듭니다. 요소의 <xref:System.Windows.UIElement.Opacity%2A> 로 설정 된 `1.0` 기본적으로 합니다.  

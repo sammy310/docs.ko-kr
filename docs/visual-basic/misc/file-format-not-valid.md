@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID321
 ms.assetid: d41e6286-6e4a-463b-87fa-e140723e5c7e
 ms.openlocfilehash: b21ef68e514bec7ac644adcddbd25574e18098cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971615"
 ---
 # <a name="file-format-not-valid"></a>파일 형식이 잘못되었습니다.
 파일을 구성 요소에 로드하려고 했지만 파일의 데이터 형식이 구성 요소와 호환되지 않거나, 구성 요소 데이터를 파일에 저장하려고 했지만 데이터 형식이 파일의 형식과 호환되지 않습니다.  

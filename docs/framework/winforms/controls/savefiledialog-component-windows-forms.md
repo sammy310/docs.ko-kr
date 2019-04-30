@@ -6,23 +6,21 @@ helpviewer_keywords:
 - SaveFileDialog component
 ms.assetid: 6f5d9321-37d7-4448-ac4c-a33c42b2a766
 ms.openlocfilehash: 552e6cae64ab3b30279e04512a87b18c2f2b068a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947981"
 ---
 # <a name="savefiledialog-component-windows-forms"></a>SaveFileDialog 구성 요소(Windows Forms)
-Windows Forms <xref:System.Windows.Forms.SaveFileDialog> 구성 요소는 미리 구성된 대화 상자입니다. Windows에서 사용하는 표준 파일 저장 대화 상자와 같습니다. 
-  <xref:System.Windows.Forms.CommonDialog> 클래스에서 상속됩니다.  
+Windows Forms <xref:System.Windows.Forms.SaveFileDialog> 구성 요소는 미리 구성된 대화 상자입니다. Windows에서 사용하는 표준 파일 저장 대화 상자와 같습니다. <xref:System.Windows.Forms.CommonDialog> 클래스에서 상속됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [SaveFileDialog 구성 요소 개요](savefiledialog-component-overview-windows-forms.md)  
  사용자가 파일을 지정된 위치에 저장하는 데 사용할 수 있는 미리 구성된 대화 상자를 표시할 수 있는 <xref:System.Windows.Forms.SaveFileDialog> 구성 요소의 일반적인 개념을 소개합니다.  
   
  [방법: SaveFileDialog 구성 요소를 사용 하 여 파일 저장](how-to-save-files-using-the-savefiledialog-component.md)  
- 
-  <xref:System.Windows.Forms.SaveFileDialog> 구성 요소의 인스턴스를 통해 런타임에 파일을 저장하는 방법을 설명합니다.  
+ <xref:System.Windows.Forms.SaveFileDialog> 구성 요소의 인스턴스를 통해 런타임에 파일을 저장하는 방법을 설명합니다.  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Forms.SaveFileDialog> 클래스  

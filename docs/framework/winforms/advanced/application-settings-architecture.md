@@ -8,11 +8,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
 ms.openlocfilehash: c2a62b61cb7b31c978a84a3d3f41c24f9fafb84d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946746"
 ---
 # <a name="application-settings-architecture"></a>애플리케이션 설정 아키텍처
 이 항목에서는 애플리케이션 설정 아키텍처가 작동하는 방식과 그룹화된 설정 및 설정 키와 같은 고급 아키텍처 기능에 대해 설명합니다.  
@@ -24,15 +24,15 @@ ms.locfileid: "59312568"
 ## <a name="defining-settings"></a>설정 정의  
  애플리케이션 설정 아키텍처는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]과 Windows Forms 모두에서 사용되며, 두 환경 간에 공유되는 많은 기본 클래스를 포함합니다. 가장 중요 한 <xref:System.Configuration.SettingsBase>는 컬렉션을 통해 설정에 대 한 액세스를 제공 하며 설정 로드 및 저장에 대 한 하위 수준 메서드를 제공 합니다. 파생 된 고유한 클래스를 구현 하는 각 환경 <xref:System.Configuration.SettingsBase> 해당 환경에 대 한 추가 설정 기능을 제공 합니다. Windows Forms 기반 응용 프로그램을 모든 응용 프로그램 설정에서 파생 된 클래스에 정의 되어야 합니다는 <xref:System.Configuration.ApplicationSettingsBase> 기본 클래스에는 다음과 같은 기능을 추가 하는 클래스:  
   
--   상위 수준 로드 및 저장 작업  
+- 상위 수준 로드 및 저장 작업  
   
--   사용자 범위 설정 지원  
+- 사용자 범위 설정 지원  
   
--   사용자 설정을 미리 정의된 기본값으로 되돌리기  
+- 사용자 설정을 미리 정의된 기본값으로 되돌리기  
   
--   이전 애플리케이션 버전에서 설정 업그레이드  
+- 이전 애플리케이션 버전에서 설정 업그레이드  
   
--   변경하거나 저장하기 전에 설정에 대한 유효성 검사  
+- 변경하거나 저장하기 전에 설정에 대한 유효성 검사  
   
  내에서 정의 된 특성의 수를 사용 하 여 설정을 설명할 수 있습니다 합니다 <xref:System.Configuration> 네임 스페이스에 설명 된 이러한 [응용 프로그램 설정 특성](application-settings-attributes.md)합니다. 설정을 정의 사용 하 여 적용 해야 합니다 <xref:System.Configuration.ApplicationScopedSettingAttribute> 또는 <xref:System.Configuration.UserScopedSettingAttribute>, 설정을 전체 응용 프로그램 또는 현재 사용자에만 적용 되는지 여부를 설명 합니다.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "59312568"
   
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]에서 처음 출시된 구성 시스템은 로컬 컴퓨터의 machine.config 파일 또는 응용 프로그램과 함께 배포되는 `app.`exe.config 파일을 통해 정적 응용 프로그램 구성 데이터를 제공할 수 있습니다. <xref:System.Configuration.LocalFileSettingsProvider> 클래스는 다음과 같은 방법으로이 기본 지원을 확장 합니다.  
   
--   애플리케이션 범위 설정은 machine.config 또는 `app.`exe.config 파일에 저장될 수 있습니다. Machine.config는 항상 읽기 전용이지만, `app`.exe.config는 보안 고려 사항에 따라 대부분의 애플리케이션에서 읽기 전용으로 제한됩니다.  
+- 애플리케이션 범위 설정은 machine.config 또는 `app.`exe.config 파일에 저장될 수 있습니다. Machine.config는 항상 읽기 전용이지만, `app`.exe.config는 보안 고려 사항에 따라 대부분의 애플리케이션에서 읽기 전용으로 제한됩니다.  
   
--   사용자 범위 설정은 `app`.exe.config 파일에 저장될 수 있으며, 이 경우 정적 기본값으로 처리됩니다.  
+- 사용자 범위 설정은 `app`.exe.config 파일에 저장될 수 있으며, 이 경우 정적 기본값으로 처리됩니다.  
   
--   기본값이 아닌 사용자 범위 설정은 새 파일인 *user*.config에 저장되며, 여기서 *user*는 현재 애플리케이션을 실행 중인 사람의 사용자 이름입니다. 사용 하 여 사용자 범위 설정에 대 한 기본값을 지정할 수 있습니다 <xref:System.Configuration.DefaultSettingValueAttribute>합니다. 사용자 범위 설정이 애플리케이션 실행 중에 자주 변경되기 때문에 `user`.config는 항상 읽기/쓰기입니다.  
+- 기본값이 아닌 사용자 범위 설정은 새 파일인 *user*.config에 저장되며, 여기서 *user*는 현재 애플리케이션을 실행 중인 사람의 사용자 이름입니다. 사용 하 여 사용자 범위 설정에 대 한 기본값을 지정할 수 있습니다 <xref:System.Configuration.DefaultSettingValueAttribute>합니다. 사용자 범위 설정이 애플리케이션 실행 중에 자주 변경되기 때문에 `user`.config는 항상 읽기/쓰기입니다.  
   
  세 가지 구성 파일은 모두 설정을 XML 형식으로 저장합니다. 애플리케이션 범위 설정의 최상위 XML 요소는 `<appSettings>`이며, 사용자 범위 설정에는 `<userSettings>`가 사용됩니다. 애플리케이션 범위 설정과 사용자 범위 설정의 기본값을 모두 포함하는 `app`.exe.config 파일은 다음과 같습니다.  
   

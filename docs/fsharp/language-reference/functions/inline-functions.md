@@ -3,11 +3,11 @@ title: 인라인 함수
 description: 사용 하는 방법을 알아봅니다 F# 호출 코드에 직접 통합 되는 인라인 함수입니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: 12c175e3e46e12d978fe02d3e1fe83142e71a25d
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966597"
 ---
 # <a name="inline-functions"></a>인라인 함수
 
@@ -39,7 +39,7 @@ ms.locfileid: "53610569"
 
 즉, 함수를 변환할 수 있는 모든 형식을 허용 하는지 **float**합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [함수](index.md)
 - [제약 조건](../generics/constraints.md)

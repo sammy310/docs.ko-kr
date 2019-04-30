@@ -14,11 +14,11 @@ helpviewer_keywords:
 - encoding PNG images [WPF]
 ms.assetid: 3d31d186-af73-47f0-b5a7-c26ae46409a6
 ms.openlocfilehash: 46d4a7ffbfe7a6a620c26447cce30f3a0bd35adc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59090855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947539"
 ---
 # <a name="how-to-encode-and-decode-a-png-image"></a>방법: PNG 이미지 인코딩 및 디코딩
 다음 예제를 디코딩 및 인코딩하는 방법을 보여는 [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)] 특정을 사용 하 여 이미지 <xref:System.Windows.Media.Imaging.PngBitmapDecoder> 고 <xref:System.Windows.Media.Imaging.PngBitmapEncoder> 개체입니다.  

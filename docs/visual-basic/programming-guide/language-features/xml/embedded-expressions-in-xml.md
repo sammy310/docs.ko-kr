@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
 ms.openlocfilehash: 4c96665994a7e56bc70f72b66d5922f5a6472a13
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961241"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>XML의 포함 식(Visual Basic)
 포함 식을 통해 식을 런타임에 계산 되는 식을 포함 하는 XML 리터럴을 만들 수 있습니다. 포함된 식에 대 한 구문은 `<%=` `expression` `%>`는 동일한 구문을 사용 하는 대로 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]입니다.  
@@ -42,27 +42,27 @@ ms.locfileid: "58827577"
 |XML 요소 특성|<xref:System.Xml.Linq.XAttribute> 또는 컬렉션 <xref:System.Xml.Linq.XAttribute>|무시됨|  
 |XML 문서 루트 요소|<xref:System.Xml.Linq.XElement> 또는 하나의 컬렉션 <xref:System.Xml.Linq.XElement> 개체와 임의 개수의 <xref:System.Xml.Linq.XProcessingInstruction> 고 <xref:System.Xml.Linq.XComment> 개체|무시됨|  
   
--   XML 요소 이름에 포함 된 식의 예:  
+- XML 요소 이름에 포함 된 식의 예:  
   
      [!code-vb[VbXMLSamples#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#32)]  
   
--   XML 요소의 내용에 포함 된 식의 예:  
+- XML 요소의 내용에 포함 된 식의 예:  
   
      [!code-vb[VbXMLSamples#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#33)]  
   
--   XML 요소 특성 이름에 포함 된 식의 예:  
+- XML 요소 특성 이름에 포함 된 식의 예:  
   
      [!code-vb[VbXMLSamples#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#34)]  
   
--   XML 요소 특성 값에 포함 된 식의 예:  
+- XML 요소 특성 값에 포함 된 식의 예:  
   
      [!code-vb[VbXMLSamples#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#35)]  
   
--   XML 요소 특성에 포함 된 식의 예:  
+- XML 요소 특성에 포함 된 식의 예:  
   
      [!code-vb[VbXMLSamples#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#36)]  
   
--   XML 문서 루트 요소에 포함 된 식의 예:  
+- XML 문서 루트 요소에 포함 된 식의 예:  
   
      [!code-vb[VbXMLSamples#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#37)]  
   

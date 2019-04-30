@@ -8,11 +8,11 @@ helpviewer_keywords:
 - determining whether.NET Framework 3.5 is installed [WPF]
 ms.assetid: 8556a9d2-1eb8-48ef-919c-5baf22a2a9a2
 ms.openlocfilehash: af2428ece79803953b8c90431d905824dd18fec8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947864"
 ---
 # <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>방법: .NET Framework 3.5 설치 여부 확인
 대상으로 하는 시스템에서 Windows Presentation Foundation (WPF) 응용 프로그램을 배포 하려면 관리자는 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]를 먼저 확인 해야 합니다 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 런타임이 있는지 합니다. 이 항목에서는 작성 된 스크립트 관리자 결정 하는 데 사용할 수 있는 HTML/javascript 여부를 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 를 시스템에 있는 합니다.  

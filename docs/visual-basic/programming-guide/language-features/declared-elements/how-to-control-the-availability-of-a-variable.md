@@ -12,18 +12,18 @@ helpviewer_keywords:
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
 ms.openlocfilehash: fb400b113e3f3305f5b724734b2bf9aa9425d03f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943353"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>방법: 변수 (Visual Basic)의 사용 가능성 제어
 지정 하 여 변수의 사용 가능성 제어 해당 *액세스 수준*합니다. 액세스 수준 변수에 쓰거나 읽을 수 있는 코드를 결정 합니다.  
   
--   *멤버 변수* (다른 프로시저 외부 모듈 수준에서 정의 됨) 기본적으로 공용 액세스를 확인 하는 코드에 액세스할 수 있습니다. 액세스 한정자를 지정 하 여이 변경할 수 있습니다.  
+- *멤버 변수* (다른 프로시저 외부 모듈 수준에서 정의 됨) 기본적으로 공용 액세스를 확인 하는 코드에 액세스할 수 있습니다. 액세스 한정자를 지정 하 여이 변경할 수 있습니다.  
   
--   *지역 변수* (프로시저 내에서 정의 됨)가 프로시저 내의 코드만 액세스할 수 있지만 공용 액세스를 명목상 있어야 합니다. 지역 변수에서의 액세스 수준을 변경할 수 없지만 포함 하는 프로시저의 액세스 수준을 변경할 수 있습니다.  
+- *지역 변수* (프로시저 내에서 정의 됨)가 프로시저 내의 코드만 액세스할 수 있지만 공용 액세스를 명목상 있어야 합니다. 지역 변수에서의 액세스 수준을 변경할 수 없지만 포함 하는 프로시저의 액세스 수준을 변경할 수 있습니다.  
   
  자세한 내용은 [액세스 수준을 Visual Basic의](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)합니다.  
   

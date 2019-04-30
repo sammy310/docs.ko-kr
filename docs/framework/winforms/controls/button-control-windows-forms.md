@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Button control [Windows Forms]
 ms.assetid: d38bc40c-8040-4f19-9e88-2c665b0ab80b
 ms.openlocfilehash: a71079b45259aab54480a5b97c09844b73be1661
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961592"
 ---
 # <a name="button-control-windows-forms"></a>Button 컨트롤(Windows Forms)
 사용자는 Windows Forms `Button` 컨트롤을 클릭하여 작업을 수행할 수 있습니다. `Button` 컨트롤은 텍스트와 이미지를 둘 다 표시할 수 있습니다. 단추를 클릭하면 눌렀다 놓는 것처럼 표시됩니다.  
@@ -23,12 +23,10 @@ ms.locfileid: "57704988"
  Windows Form에서 단추의 가장 기본적인 사용을 설명합니다.  
   
  [방법: Windows Forms 단추를 적용 단추로 지정](how-to-designate-a-windows-forms-button-as-the-accept-button.md)  
- 
-  `Button` 컨트롤을 기본 단추인 적용 단추로 지정하는 방법을 설명합니다.  
+ `Button` 컨트롤을 기본 단추인 적용 단추로 지정하는 방법을 설명합니다.  
   
  [방법: Windows Forms 단추를 취소 단추로 지정](how-to-designate-a-windows-forms-button-as-the-cancel-button.md)  
- 
-  `Button` 컨트롤을 사용자가 ESC 키를 누를 때마다 클릭되는 취소 단추로 지정하는 방법을 설명합니다.  
+ `Button` 컨트롤을 사용자가 ESC 키를 누를 때마다 클릭되는 취소 단추로 지정하는 방법을 설명합니다.  
   
  [Windows Forms Button 컨트롤 선택 방법](ways-to-select-a-windows-forms-button-control.md)  
  단추를 선택하는 방법을 나열합니다.  

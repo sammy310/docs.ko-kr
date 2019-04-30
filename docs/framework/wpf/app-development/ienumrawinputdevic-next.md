@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Next method [WPF]
 ms.assetid: 3698b44d-510e-4d18-b32b-85f17188ee26
 ms.openlocfilehash: 05867af48b64cd1898b13fa055859c8cc0367c8c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949580"
 ---
 # <a name="ienumrawinputdevicnext"></a>IEnumRAWINPUTDEVIC:Next
 다음 열거 `celt` [RAWINPUTDEVICE](/windows/desktop/api/winuser/ns-winuser-rawinputdevice) 구조에 반환 되는 열거자의 목록에서 `rgelt` 실제 열거 된 요소 수와 함께 `pceltFetched`입니다.  
@@ -34,7 +34,7 @@ HRESULT Next(
   
  `pceltFetched`  
   
- [out] `rgelt`에 실제로 제공된 요소 수에 대한 포인터입니다. `rgelt`가 1이면 호출자가 `NULL`을 전달할 수 있습니다.  
+ [out] `rgelt`에 실제로 제공된 요소 수에 대한 포인터입니다. `NULL`가 1이면 호출자가 `rgelt`을 전달할 수 있습니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  HRESULT: 제공 된 요소 수가 S_OK `celt`; 그렇지 않으면 S_FALSE입니다.

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], sort mode
 ms.assetid: 43715887-2df9-4da7-bcf1-b9c7c842b2bf
 ms.openlocfilehash: b8f6048946d367dd79b1ce0d23d84446ffdb1115
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956223"
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 열 정렬 모드
 <xref:System.Windows.Forms.DataGridView> 열의 경우 세 가지 정렬 모드 각 열에 대 한 정렬 모드를 통해 지정 됩니다 합니다 <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> 속성을 다음 중 하나로 설정할 수 있는 열의 <xref:System.Windows.Forms.DataGridViewColumnSortMode> 열거형 값입니다.  

@@ -3,11 +3,11 @@ title: 인코딩은 Nothing으로 설정할 수 없음
 ms.date: 07/20/2015
 ms.assetid: 59f7c731-8291-4a85-bf51-c225e48cdc84
 ms.openlocfilehash: 30b0b4a29fbdf931aa62263b75d1fa946e87b145
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58028447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970328"
 ---
 # <a name="encoding-cannot-be-set-to-nothing"></a>인코딩은 Nothing으로 설정할 수 없음
 `encoding` 매개 변수가 `Nothing` 으로 설정되었지만 유효한 값이 필요하기 때문에 파일에서 읽거나 쓰려는 시도가 실패했습니다.  
@@ -16,7 +16,7 @@ ms.locfileid: "58028447"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   `encoding` 매개 변수에 대한 유효한 값을 제공합니다.  
+- `encoding` 매개 변수에 대한 유효한 값을 제공합니다.  
   
 ## <a name="see-also"></a>참고자료
 

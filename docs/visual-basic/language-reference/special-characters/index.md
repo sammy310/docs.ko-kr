@@ -2,11 +2,11 @@
 title: 특수 문자 (Visual Basic 참조)
 ms.date: 10/31/2017
 ms.openlocfilehash: c179ac69833404f0ad7e36cfcada1643d91d604d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945147"
 ---
 # <a name="special-characters-visual-basic-reference"></a>특수 문자 (Visual Basic 참조)
 

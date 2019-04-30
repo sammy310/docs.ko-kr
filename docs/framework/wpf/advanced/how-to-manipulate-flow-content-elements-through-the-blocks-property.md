@@ -11,24 +11,24 @@ helpviewer_keywords:
 - Blocks property [WPF], manipulating flow content elements
 ms.assetid: aeda4ece-b979-4818-a093-ef938e908751
 ms.openlocfilehash: e0e1e1333a54946f3bdf474e353de0301eb42447
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942833"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>방법: Blocks 속성을 통해 유동 콘텐츠 요소 조작
 이러한 예제를 보여 줍니다을 통한 유동 콘텐츠 요소에서 수행할 수 있는 보다 일반적인 작업 중 일부는 **블록** 속성입니다. 이 속성에서 항목 추가 및 제거 하는 <xref:System.Windows.Documents.BlockCollection>합니다. 유동 콘텐츠 요소를 **블록** 속성을 포함 합니다.  
   
--   <xref:System.Windows.Documents.Figure>  
+- <xref:System.Windows.Documents.Figure>  
   
--   <xref:System.Windows.Documents.Floater>  
+- <xref:System.Windows.Documents.Floater>  
   
--   <xref:System.Windows.Documents.ListItem>  
+- <xref:System.Windows.Documents.ListItem>  
   
--   <xref:System.Windows.Documents.Section>  
+- <xref:System.Windows.Documents.Section>  
   
--   <xref:System.Windows.Documents.TableCell>  
+- <xref:System.Windows.Documents.TableCell>  
   
  이 예제에서 사용 하 여 오류가 발생 <xref:System.Windows.Documents.Section> 흐름 콘텐츠 요소 하지만 이러한 방법은 유동 콘텐츠 요소 컬렉션을 호스트 하는 모든 요소에 적용 합니다.  
   

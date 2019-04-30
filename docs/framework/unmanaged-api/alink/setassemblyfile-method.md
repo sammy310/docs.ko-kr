@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a19762cbec91871d7af617957896e4ee34944fba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949073"
 ---
 # <a name="setassemblyfile-method"></a>SetAssemblyFile 메서드
 만들려는 어셈블리의 이름을 할당 합니다. 바인딩되지 않은 모듈에 생성 때 사용할 수 없습니다.  

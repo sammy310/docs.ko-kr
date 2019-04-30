@@ -3,11 +3,11 @@ title: 선언적 제약 조건
 ms.date: 03/30/2017
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
 ms.openlocfilehash: e3ced8f6f88d698273ace5c8b74fe90b94fa9720
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945823"
 ---
 # <a name="declarative-constraints"></a>선언적 제약 조건
 선언적 제약 조건은 활동 및 활동과 다른 활동의 관계에 대한 강력한 유효성 검사 메서드를 제공합니다. 제약 조건이 제작 프로세스 중에 활동에 대해 구성되지만, 워크플로 호스트에서 추가 제약 조건을 지정할 수도 있습니다. 이 항목에서는 선언적 제약 조건을 사용하여 작업 유효성 검사를 제공하는 방법에 대해 간략하게 설명합니다.  
@@ -63,8 +63,7 @@ public sealed class SampleActivity : CodeActivity
 
 유효성 검사 중인 활동을 기준으로 워크플로의 다른 활동에 대한 정보를 제공하는 여러 유효성 검사 활동을 사용할 수 있습니다. <xref:System.Activities.Validation.GetParentChain>은 현재 활동과 루트 활동 사이의 모든 활동을 포함하는 활동 컬렉션을 반환합니다. <xref:System.Activities.Validation.GetChildSubtree>는 재귀 패턴의 자식 활동을 포함하는 활동 컬렉션을 제공하고 <xref:System.Activities.Validation.GetWorkflowTree>는 워크플로의 모든 활동을 가져옵니다.  
   
-다음 예제에서는 `CreateState` 활동을 정의합니다. 
-  `CreateState` 활동이 `CreateCountry` 활동에 포함되어야 하고, `GetParent` 메서드는 이 요구 사항을 적용하는 제약 조건을 반환합니다. `GetParent`는 <xref:System.Activities.Validation.GetParentChain> 활동을 <xref:System.Activities.Statements.ForEach%601> 활동과 함께 사용하여 `CreateState` 활동의 부모 활동을 조사하여 요구 사항이 충족되는지 확인합니다.  
+다음 예제에서는 `CreateState` 활동을 정의합니다. `CreateState` 활동이 `CreateCountry` 활동에 포함되어야 하고, `GetParent` 메서드는 이 요구 사항을 적용하는 제약 조건을 반환합니다. `GetParent`는 <xref:System.Activities.Validation.GetParentChain> 활동을 <xref:System.Activities.Statements.ForEach%601> 활동과 함께 사용하여 `CreateState` 활동의 부모 활동을 조사하여 요구 사항이 충족되는지 확인합니다.  
   
 ```csharp  
 public sealed class CreateState : CodeActivity  

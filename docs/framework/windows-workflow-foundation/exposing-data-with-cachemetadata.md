@@ -3,11 +3,11 @@ title: CacheMetadata를 사용하여 데이터 노출
 ms.date: 03/30/2017
 ms.assetid: 34832f23-e93b-40e6-a80b-606a855a00d9
 ms.openlocfilehash: a044c896e56541ee954fc33853376eb8293c6ede
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945706"
 ---
 # <a name="exposing-data-with-cachemetadata"></a>CacheMetadata를 사용하여 데이터 노출
 
@@ -15,8 +15,7 @@ ms.locfileid: "57482680"
 
 ## <a name="default-cachemetadata-behavior"></a>기본 CacheMetadata 동작
 
-
-  <xref:System.Activities.NativeActivity.CacheMetadata%2A>에서 파생되는 작업에 대한 <xref:System.Activities.NativeActivity>의 기본 구현에서는 다음 메서드 형식을 다음과 같은 방식으로 처리합니다.
+<xref:System.Activities.NativeActivity.CacheMetadata%2A>에서 파생되는 작업에 대한 <xref:System.Activities.NativeActivity>의 기본 구현에서는 다음 메서드 형식을 다음과 같은 방식으로 처리합니다.
 
 - <xref:System.Activities.InArgument%601>하십시오 <xref:System.Activities.OutArgument%601>, 또는 <xref:System.Activities.InOutArgument%601> (제네릭 인수): 이러한 인수 이름으로 인수로 런타임에 노출 됩니다 하 고 노출된 된 속성 이름 및 형식, 적절 한 인수 방향 및 일부 유효성 검사 데이터가 같은 입력 합니다.
 
@@ -32,8 +31,7 @@ ms.locfileid: "57482680"
 
 - <xref:System.Collections.ICollection> 형식의 <xref:System.Activities.ActivityDelegate>: 컬렉션의 모든 요소가 런타임에 공용 대리자로 노출 됩니다.
 
-
-  <xref:System.Activities.Activity.CacheMetadata%2A>, <xref:System.Activities.Activity> 및 <xref:System.Workflow.Activities.CodeActivity>에서 파생되는 작업에 대한 <xref:System.Activities.AsyncCodeActivity>도 다음과 같은 차이점을 제외하고 위와 동일하게 작동합니다.
+<xref:System.Activities.Activity.CacheMetadata%2A>, <xref:System.Activities.Activity> 및 <xref:System.Workflow.Activities.CodeActivity>에서 파생되는 작업에 대한 <xref:System.Activities.AsyncCodeActivity>도 다음과 같은 차이점을 제외하고 위와 동일하게 작동합니다.
 
 - <xref:System.Activities.Activity>에서 파생되는 클래스는 자식 작업이나 대리자를 예약할 수 없으므로 이러한 멤버는 가져온 자식 및 대리자로 노출됩니다.
 

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
 ms.openlocfilehash: 68401571645d77a41b827c13b3cfc3674076e218
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945043"
 ---
 # <a name="class-statement-visual-basic"></a>Class 문(Visual Basic)
 클래스의 이름을 선언 하 고 변수, 속성, 이벤트 및 클래스를 구성 하는 프로시저의 정의 소개 합니다.  
@@ -65,23 +65,23 @@ End Class
   
 ## <a name="rules"></a>규칙  
   
--   **중첩 합니다.** 다른 내에서 하나의 클래스를 정의할 수 있습니다. 외부 클래스 라고 합니다 *클래스를 포함 하*, 내부 클래스 라고는 *중첩 된 클래스*합니다.  
+- **중첩 합니다.** 다른 내에서 하나의 클래스를 정의할 수 있습니다. 외부 클래스 라고 합니다 *클래스를 포함 하*, 내부 클래스 라고는 *중첩 된 클래스*합니다.  
   
--   **상속.** 클래스를 사용 하는 경우는 [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md), 하나의 기본 클래스 또는 인터페이스를 지정할 수 있습니다. 클래스는 둘 이상의 요소에서 상속할 수 없습니다.  
+- **상속.** 클래스를 사용 하는 경우는 [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md), 하나의 기본 클래스 또는 인터페이스를 지정할 수 있습니다. 클래스는 둘 이상의 요소에서 상속할 수 없습니다.  
   
      클래스는 더 제한적인 액세스 수준 가진 다른 클래스에서 상속할 수 없습니다. 예를 들어, 한 `Public` 클래스에서 상속할 수 없습니다는 `Friend` 클래스입니다.  
   
      클래스는 그 안에 중첩 된 클래스에서 상속할 수 없습니다.  
   
--   **구현입니다.** 클래스를 사용 하는 경우는 [Implements 문](../../../visual-basic/language-reference/statements/implements-statement.md)에서 지정 하는 모든 인터페이스에 의해 정의 된 모든 멤버를 구현 해야 `interfacenames`합니다. 이 예외는 기본 클래스 멤버의 구현을 다시 수행 합니다. 자세한 내용은 "다시 구현"를 참조 하세요 [구현](../../../visual-basic/language-reference/statements/implements-clause.md)합니다.  
+- **구현입니다.** 클래스를 사용 하는 경우는 [Implements 문](../../../visual-basic/language-reference/statements/implements-statement.md)에서 지정 하는 모든 인터페이스에 의해 정의 된 모든 멤버를 구현 해야 `interfacenames`합니다. 이 예외는 기본 클래스 멤버의 구현을 다시 수행 합니다. 자세한 내용은 "다시 구현"를 참조 하세요 [구현](../../../visual-basic/language-reference/statements/implements-clause.md)합니다.  
   
--   **기본 속성입니다.** 클래스에서는 하나 이상의 속성으로 지정할 수는 *속성의 기본값을*입니다. 자세한 내용은 [기본](../../../visual-basic/language-reference/modifiers/default.md)입니다.  
+- **기본 속성입니다.** 클래스에서는 하나 이상의 속성으로 지정할 수는 *속성의 기본값을*입니다. 자세한 내용은 [기본](../../../visual-basic/language-reference/modifiers/default.md)입니다.  
   
 ## <a name="behavior"></a>동작  
   
--   **액세스 수준입니다.** 클래스 내의 자체 액세스 수준이 있는 각 멤버를 선언할 수 있습니다. 클래스 멤버는 기본적으로 [공개](../../../visual-basic/language-reference/modifiers/public.md) 변수와 상수를 제외 하 고는 기본적으로 액세스 [개인](../../../visual-basic/language-reference/modifiers/private.md) 액세스 합니다. 클래스에 보다 제한적인 해당 멤버 중 하나를 클래스 액세스 수준은 우선적으로 적용 합니다.  
+- **액세스 수준입니다.** 클래스 내의 자체 액세스 수준이 있는 각 멤버를 선언할 수 있습니다. 클래스 멤버는 기본적으로 [공개](../../../visual-basic/language-reference/modifiers/public.md) 변수와 상수를 제외 하 고는 기본적으로 액세스 [개인](../../../visual-basic/language-reference/modifiers/private.md) 액세스 합니다. 클래스에 보다 제한적인 해당 멤버 중 하나를 클래스 액세스 수준은 우선적으로 적용 합니다.  
   
--   **범위입니다.** 클래스는 해당 포함 된 네임 스페이스, 클래스, 구조체 또는 모듈 전체 범위입니다.  
+- **범위입니다.** 클래스는 해당 포함 된 네임 스페이스, 클래스, 구조체 또는 모듈 전체 범위입니다.  
   
      모든 클래스 멤버의 범위는 전체 클래스입니다.  
   
@@ -89,18 +89,18 @@ End Class
   
      클래스 멤버에는 선언 방법 및 위치에 따라 유효 기간이 있습니다. 자세한 내용은 [Visual Basic의 수명](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)합니다.  
   
--   **정규화 합니다.** 클래스 외부 코드 멤버의 이름을 해당 클래스의 이름으로 한 정해야 합니다.  
+- **정규화 합니다.** 클래스 외부 코드 멤버의 이름을 해당 클래스의 이름으로 한 정해야 합니다.  
   
      중첩 된 클래스 내의 코드는 프로그래밍 요소를 비 정규화 된 참조를 만드는 경우 Visual Basic 요소에 대해 먼저 검색을 포함 하는 클래스에 다음 중첩된 클래스에서 등 포함 하는 가장 바깥쪽 요소를 합니다.  
   
 ## <a name="classes-and-modules"></a>클래스와 모듈  
  이러한 요소는 비슷한 점이 많이 몇 가지 중요 한 차이점도 있습니다.  
   
--   **용어입니다.** 이전 버전의 Visual Basic 등 두 유형의 모듈로 인식: *클래스 모듈* (.cls 파일) 및 *표준 모듈* (.bas 파일). 현재 버전에서는 이러한 *클래스* 하 고 *모듈*, 각각.  
+- **용어입니다.** 이전 버전의 Visual Basic 등 두 유형의 모듈로 인식: *클래스 모듈* (.cls 파일) 및 *표준 모듈* (.bas 파일). 현재 버전에서는 이러한 *클래스* 하 고 *모듈*, 각각.  
   
--   **공유 멤버입니다.** 공유 클래스의 멤버 인지 또는 인스턴스 멤버를 제어할 수 있습니다.  
+- **공유 멤버입니다.** 공유 클래스의 멤버 인지 또는 인스턴스 멤버를 제어할 수 있습니다.  
   
--   **개체 방향입니다.** 클래스는 개체 지향 되지만 모듈이 없습니다. 클래스의 인스턴스가 하나 이상 만들 수 있습니다. 자세한 내용은 [개체 및 클래스](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)합니다.  
+- **개체 방향입니다.** 클래스는 개체 지향 되지만 모듈이 없습니다. 클래스의 인스턴스가 하나 이상 만들 수 있습니다. 자세한 내용은 [개체 및 클래스](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)합니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 `Class` 을 클래스와 몇 가지 멤버를 정의 합니다.  

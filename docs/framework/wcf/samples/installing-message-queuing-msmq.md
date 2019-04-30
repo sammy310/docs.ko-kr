@@ -3,11 +3,11 @@ title: 메시지 큐(MSMQ) 설치
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
 ms.openlocfilehash: 64736f8f0a34a53658dd2838738a3d36b3891d2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954949"
 ---
 # <a name="installing-message-queuing-msmq"></a>메시지 큐(MSMQ) 설치
 다음 절차에서는 메시지 큐 4.0 및 메시지 큐 3.0을 설치하는 방법을 보여 줍니다.  
@@ -37,9 +37,9 @@ ms.locfileid: "59305093"
   
 3. MSMQ(Microsoft Message Queue) Server, MSMQ(Microsoft Message Queue) Server Core를 차례로 확장한 후 설치할 다음과 같은 메시지 큐 기능 확인란을 선택합니다.  
   
-    -   MSMQ Active Directory 도메인 서비스 통합(도메인에 연결된 컴퓨터의 경우)  
+    - MSMQ Active Directory 도메인 서비스 통합(도메인에 연결된 컴퓨터의 경우)  
   
-    -   MSMQ HTTP 지원  
+    - MSMQ HTTP 지원  
   
 4. **확인**을 클릭합니다.  
   

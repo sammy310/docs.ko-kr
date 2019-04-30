@@ -3,11 +3,11 @@ title: X.509 Certificate Validator
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
 ms.openlocfilehash: 88364aabf5df3a4f41d83613c0c4328b2d5979a0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949918"
 ---
 # <a name="x509-certificate-validator"></a>X.509 Certificate Validator
 이 샘플에서는 사용자 지정 X.509 인증서 유효성 검사기를 구현하는 방법을 보여 줍니다. 이 방법은 기본 제공되는 X.509 인증서 유효성 검사기 중에서 응용 프로그램의 요구 사항에 적절한 것이 없는 경우에 유용합니다. 이 샘플에서는 자체 발급된 인증서를 승인하는 사용자 지정 유효성 검사기가 있는 서비스를 보여 줍니다. 그런 인증서를 사용하여 클라이언트가 서비스에 인증합니다.
@@ -16,11 +16,11 @@ ms.locfileid: "59772156"
 
  요약하면, 이 샘플에서는 다음 방법을 보여 줍니다.
 
--   X.509 인증서를 사용하여 클라이언트를 인증하는 방법.
+- X.509 인증서를 사용하여 클라이언트를 인증하는 방법.
 
--   서버에서 사용자 지정 X509CertificateValidator를 기준으로 클라이언트의 유효성을 검증하는 방법.
+- 서버에서 사용자 지정 X509CertificateValidator를 기준으로 클라이언트의 유효성을 검증하는 방법.
 
--   서버의 X.509 인증서를 사용하여 서버를 인증하는 방법
+- 서버의 X.509 인증서를 사용하여 서버를 인증하는 방법
 
  서비스에서는 서비스와의 통신에 사용할 수 있는 단일 엔드포인트를 노출하며, 이 엔드포인트는 App.config 구성 파일을 사용하여 정의합니다. 엔드포인트는 하나의 주소, 바인딩 및 계약으로 구성됩니다. 표준 바인딩이 구성 된 `wsHttpBinding` 는 기본적으로 사용 `WSSecurity` 및 클라이언트 인증서 인증 합니다. 서비스 동작에서는 클라이언트 X.509 인증서의 유효성을 검사하기 위한 사용자 지정 모드와 유효성 검사기 클래스의 형식을 지정합니다. 동작에서는 serviceCertificate 요소를 사용하여 서버 인증서도 지정합니다. 서버 인증서에 대 한 동일한 값을 포함 해야 합니다 `SubjectName` 으로 `findValue` 에 [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
 
@@ -254,7 +254,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 
  다음 부분에는 적절한 구성으로 실행되게 수정할 수 있도록 배치 파일의 다양한 섹션에 대한 간략한 개요가 소개되어 있습니다.
 
--   서버 인증서 만들기
+- 서버 인증서 만들기
 
      Setup.bat 배치 파일에서 다음 행은 사용할 서버 인증서를 만듭니다. %SERVER_NAME% 변수는 서버 이름을 지정합니다. 이 변수를 변경하여 고유의 서버 이름을 지정합니다. 기본값은 localhost입니다.
 
@@ -268,7 +268,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   클라이언트의 신뢰할 수 있는 인증서 저장소에 서버 인증서 설치:
+- 클라이언트의 신뢰할 수 있는 인증서 저장소에 서버 인증서 설치:
 
      Setup.bat 배치 파일에서 다음 행은 클라이언트의 신뢰할 수 있는 사용자 저장소로 서버 인증서를 복사합니다. 이 단계는 Makecert.exe에서 생성한 인증서를 클라이언트 시스템에서 암시적으로 신뢰하지는 않기 때문에 필요합니다. Microsoft에서 발급한 인증서와 같이 클라이언트가 신뢰할 수 있는 루트 인증서를 기반으로 하는 인증서가 이미 있는 경우 클라이언트 인증서 저장소를 서버 인증서로 채우는 이 단계를 수행할 필요가 없습니다.
 
@@ -276,7 +276,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
--   클라이언트 인증서 만들기:
+- 클라이언트 인증서 만들기:
 
      Setup.bat 배치 파일에서 다음 줄은 사용할 클라이언트 인증서를 만듭니다. %USER_NAME% 변수는 클라이언트 이름을 지정합니다. 이 값은 클라이언트 코드에서 찾는 이름이기 때문에 "test1"으로 설정됩니다. %USER_NAME% 값을 변경한 경우에는 Client.cs 소스 파일에서 해당 값을 변경하고 클라이언트를 다시 빌드해야 합니다.
 
@@ -292,7 +292,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%USER_NAME% -sky exchange -pe
     ```
 
--   서버의 신뢰할 수 있는 인증서 저장소에 클라이언트 인증서 설치:
+- 서버의 신뢰할 수 있는 인증서 저장소에 클라이언트 인증서 설치:
 
      Setup.bat 배치 파일에서 다음 줄은 신뢰할 수 있는 사용자 저장소로 클라이언트 인증서를 복사합니다. 이 단계는 Makecert.exe에서 생성한 인증서를 서버 시스템에서 암시적으로 신뢰하지는 않기 때문에 필요합니다. Microsoft에서 발급한 인증서와 같이 신뢰할 수 있는 루트 인증서를 기반으로 하는 인증서가 이미 있는 경우 서버 인증서 저장소를 클라이언트 인증서로 채우는 이 단계는 필요하지 않습니다.
 

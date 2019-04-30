@@ -3,11 +3,11 @@ title: WF에서 비동기 활동 만들기
 ms.date: 03/30/2017
 ms.assetid: 497e81ed-5eef-460c-ba55-fae73c05824f
 ms.openlocfilehash: 5d8659ee57f9bb576cd7066652a294717811432f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945888"
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>WF에서 비동기 활동 만들기
 <xref:System.Activities.AsyncCodeActivity>는 활동 작성자가 파생 활동에서 비동기 실행 논리를 구현하는 데 사용할 수 있는 기본 클래스를 제공합니다. 이 기능은 워크플로 스케줄러 스레드를 유지하지 않고 병렬로 실행 가능한 활동을 차단하지 않으면서 비동기 작업을 수행해야 하는 사용자 지정 활동에 유용합니다. 이 항목에서는 <xref:System.Activities.AsyncCodeActivity>를 사용하여 사용자 지정 비동기 활동을 만드는 방법을 간략하게 설명합니다.  

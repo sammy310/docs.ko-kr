@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f45379fe8640ef7e7b3917bac8d10ca956d75ffb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61957588"
 ---
 # <a name="ihostsecuritymanager-interface"></a>IHostSecurityManager 인터페이스
 에 대 한 액세스 및 현재 실행 중인 스레드의 보안 컨텍스트를 제어할 수 있는 방법을 제공 합니다.  
@@ -42,13 +42,13 @@ ms.locfileid: "59223760"
   
  CLR 관리 되는 스레드 컨텍스트를 내부적으로 처리합니다. 프로세스 관련 쿼리 `IHostSecurityManager` 다음과 같은 경우에서:  
   
--   종료자 스레드 종료 자가 실행 중입니다.  
+- 종료자 스레드 종료 자가 실행 중입니다.  
   
--   클래스 및 모듈 생성자 실행 중  
+- 클래스 및 모듈 생성자 실행 중  
   
--   작업자 스레드에 대 한 호출에 비동기 지점에는 [ihostthreadpoolmanager:: Queueuserworkitem](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md) 메서드.  
+- 작업자 스레드에 대 한 호출에 비동기 지점에는 [ihostthreadpoolmanager:: Queueuserworkitem](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md) 메서드.  
   
--   I/O 완료 포트의 서비스입니다.  
+- I/O 완료 포트의 서비스입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

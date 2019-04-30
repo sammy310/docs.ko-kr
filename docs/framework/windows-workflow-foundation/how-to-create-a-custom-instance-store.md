@@ -3,11 +3,11 @@ title: '방법: 사용자 지정 인스턴스 저장소 만들기'
 ms.date: 03/30/2017
 ms.assetid: 593c4e9d-8a49-4e12-8257-cee5e6b4c075
 ms.openlocfilehash: cacee7d95a543525ba031de0cc0636d05fc72fc8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945641"
 ---
 # <a name="how-to-create-a-custom-instance-store"></a>방법: 사용자 지정 인스턴스 저장소 만들기
 
@@ -15,15 +15,13 @@ ms.locfileid: "57707770"
 
 ## <a name="implementing-the-begintrycommand-method"></a>BeginTryCommand 메서드 구현
 
-지속성 엔진은 <xref:System.Runtime.DurableInstancing.InstanceStore.BeginTryCommand%2A>을 인스턴스 저장소에 보냅니다. 
-  `command` 매개 변수의 형식은 실행될 명령을 나타냅니다. 이 매개 변수는 다음 형식일 수 있습니다.
+지속성 엔진은 <xref:System.Runtime.DurableInstancing.InstanceStore.BeginTryCommand%2A>을 인스턴스 저장소에 보냅니다. `command` 매개 변수의 형식은 실행될 명령을 나타냅니다. 이 매개 변수는 다음 형식일 수 있습니다.
 
 - <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>: 지 속성 엔진은 워크플로 저장 매체에 유지 되어야 하는 경우이 명령을 인스턴스 저장소에 보냅니다. 워크플로 지속성 데이터는 <xref:System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceData%2A> 매개 변수의 `command` 멤버의 메서드에 제공됩니다.
 
 - <xref:System.Activities.DurableInstancing.LoadWorkflowCommand>: 지 속성 엔진은 워크플로를 저장 매체에 로드할 때이 명령을 인스턴스 저장소에 보냅니다. 로드되는 워크플로의 인스턴스 ID가 `instanceId` 매개 변수의 <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.InstanceView%2A> 속성의 `context` 매개 변수의 메서드에 제공됩니다.
 
-- <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>: 이 명령은 인스턴스를 저장할 때 지 속성 엔진 보냅니다는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 잠금 소유자로 등록 해야 합니다. 
-  <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.BindInstanceOwner%2A> 매개 변수의 `context` 메서드를 사용하여 현재 워크플로의 인스턴스 ID를 인스턴스 저장소에 제공해야 합니다.
+- <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>: 이 명령은 인스턴스를 저장할 때 지 속성 엔진 보냅니다는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 잠금 소유자로 등록 해야 합니다. <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.BindInstanceOwner%2A> 매개 변수의 `context` 메서드를 사용하여 현재 워크플로의 인스턴스 ID를 인스턴스 저장소에 제공해야 합니다.
 
      다음 코드 조각에서는 CreateWorkflowOwner 명령을 구현하여 명시적 잠금 소유자를 할당하는 방법을 보여 줍니다.
 
@@ -45,8 +43,7 @@ ms.locfileid: "57707770"
     childInstance.AddInitialInstanceValues(new Dictionary<XName, object>() { { WorkflowHostTypeName, WFInstanceScopeName } });
     ```
 
-- <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>: 지 속성 엔진은 잠금 소유자의 인스턴스 ID를 인스턴스 저장소에서 제거할 수 있습니다 하는 경우이 명령을 인스턴스 저장소에 보냅니다. 
-  <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>를 사용하기 때문에 잠금 소유자의 ID를 응용 프로그램에 제공해야 합니다.
+- <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>: 지 속성 엔진은 잠금 소유자의 인스턴스 ID를 인스턴스 저장소에서 제거할 수 있습니다 하는 경우이 명령을 인스턴스 저장소에 보냅니다. <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>를 사용하기 때문에 잠금 소유자의 ID를 응용 프로그램에 제공해야 합니다.
 
      다음 코드 조각에서는 <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>를 사용하여 잠금을 해제하는 방법에 대해 설명합니다.
 

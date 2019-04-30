@@ -10,11 +10,11 @@ helpviewer_keywords:
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
 ms.openlocfilehash: 9b7fa33d9af8d364491d1c72813cb62f34378557
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947890"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>방법: UI인 추가 기능 만들기
 이 예제에서는 WPF 독립 실행형 응용 프로그램에서 호스팅되는 Windows Presentation Foundation (WPF)는 추가 기능을 만드는 방법을 보여 줍니다.  
@@ -25,9 +25,9 @@ ms.locfileid: "59100303"
   
  이 예제는이 시나리오를 사용 하도록 설정 하는.NET Framework 추가 기능 모델에 WPF 확장을 강조 표시 하 고 다음을 가정 합니다.  
   
--   .NET Framework 추가 기능에서 모델, 파이프라인, 추가 기능 및 호스트 개발을 포함 하 여 알고 있어야 합니다. 이러한 개념을 잘 모르는 경우 [추가 기능 및 확장성](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))합니다. 파이프라인, 추가 기능 및 호스트 응용 프로그램의 구현을 설명 하는 자습서를 참조 하세요. [연습: 확장 가능한 응용 프로그램을 만드는](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100))합니다.  
+- .NET Framework 추가 기능에서 모델, 파이프라인, 추가 기능 및 호스트 개발을 포함 하 여 알고 있어야 합니다. 이러한 개념을 잘 모르는 경우 [추가 기능 및 확장성](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))합니다. 파이프라인, 추가 기능 및 호스트 응용 프로그램의 구현을 설명 하는 자습서를 참조 하세요. [연습: 확장 가능한 응용 프로그램을 만드는](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100))합니다.  
   
--   WPF 확장명.NET Framework 추가 기능 모델을 알고 있어야 합니다. 참조 [WPF 추가 기능 개요](wpf-add-ins-overview.md)합니다.  
+- WPF 확장명.NET Framework 추가 기능 모델을 알고 있어야 합니다. 참조 [WPF 추가 기능 개요](wpf-add-ins-overview.md)합니다.  
   
 ## <a name="example"></a>예제  
  WPF UI 인 추가 기능을 만드는 각 파이프라인 세그먼트에 추가 하 고 호스트 응용 프로그램에 대 한 특정 코드가 필요 합니다.  
@@ -87,9 +87,9 @@ ms.locfileid: "59100303"
   
  추가 UI와의 상호 작용을 처리 하기 위한 코드는 추가 기능의 응용 프로그램 도메인에서 실행 됩니다. 이러한 상호 작용에는 다음이 포함됩니다.  
   
--   처리를 <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다.  
+- 처리를 <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다.  
   
--   표시 된 <xref:System.Windows.MessageBox>합니다.  
+- 표시 된 <xref:System.Windows.MessageBox>합니다.  
   
  이 작업은 호스트 애플리케이션에서 완전히 격리됩니다.  
   

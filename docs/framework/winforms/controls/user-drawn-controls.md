@@ -10,20 +10,20 @@ helpviewer_keywords:
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
 ms.openlocfilehash: 06513fc44782c78d2d69b82130542949519c0107
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947955"
 ---
 # <a name="user-drawn-controls"></a>사용자가 그린 컨트롤
 .NET Framework 사용자 지정 컨트롤을 쉽게 개발할 수 있는 기능을 제공 합니다. 표준 컨트롤 코드 함께 바인딩된 집합이 인 사용자 컨트롤을 만들 수 있습니다 또는 등록부터 고유한 컨트롤을 디자인할 수 있습니다. 기존 컨트롤에서 상속 되는 컨트롤을 만들고의 고유 기능에 추가 상속을 사용할 수 있습니다. 어떤 방법을 사용 하는.NET Framework를 만들면 모든 컨트롤에 대 한 사용자 지정 그래픽 인터페이스를 그릴를 제공 합니다.  
   
  컨트롤의 그리기 컨트롤의 코드 실행 하 여 수행 됩니다 <xref:System.Windows.Forms.Control.OnPaint%2A> 메서드. 단일 인수를 <xref:System.Windows.Forms.Control.OnPaint%2A> 메서드는을 <xref:System.Windows.Forms.PaintEventArgs> 모든 정보 및 사용자 컨트롤을 렌더링 하는 데 필요한 기능을 제공 하는 개체입니다. <xref:System.Windows.Forms.PaintEventArgs> 속성으로 컨트롤의 렌더링에 사용할 두 개의 기본 개체를 제공 합니다.  
   
--   <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 개체-그릴 컨트롤의 부분을 나타내는 사각형입니다. 이 수는 전체 컨트롤 또는 컨트롤을 그리는 방법에 따라 컨트롤의 일부입니다.  
+- <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 개체-그릴 컨트롤의 부분을 나타내는 사각형입니다. 이 수는 전체 컨트롤 또는 컨트롤을 그리는 방법에 따라 컨트롤의 일부입니다.  
   
--   <xref:System.Drawing.Graphics> 개체-여러 그래픽 지향 개체 및 컨트롤을 그리는 데 필요한 기능을 제공 하는 메서드를 캡슐화 합니다.  
+- <xref:System.Drawing.Graphics> 개체-여러 그래픽 지향 개체 및 컨트롤을 그리는 데 필요한 기능을 제공 하는 메서드를 캡슐화 합니다.  
   
  에 대 한 자세한 합니다 <xref:System.Drawing.Graphics> 개체와 사용 하는 [방법: 그리는 데 필요한 그래픽 개체 만들기](../advanced/how-to-create-graphics-objects-for-drawing.md)합니다.  
   

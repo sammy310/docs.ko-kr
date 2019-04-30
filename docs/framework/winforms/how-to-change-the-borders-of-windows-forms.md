@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Windows Forms, changing the borders
 ms.assetid: b3d5fa56-80c6-4b10-b505-f9672307ed55
 ms.openlocfilehash: d2e5dd761b2422f6d7e92e7bb97dbdf425b8fedf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966844"
 ---
 # <a name="how-to-change-the-borders-of-windows-forms"></a>방법: Windows Forms의 테두리 변경
 Windows Forms의 모양과 동작을 결정할 때 선택할 수 있는 여러 테두리 스타일이 있습니다. <xref:System.Windows.Forms.Form.FormBorderStyle%2A> 속성을 변경하여 폼의 크기 조정 동작을 제어할 수 있습니다. 또한 <xref:System.Windows.Forms.Form.FormBorderStyle%2A>을 설정하면 캡션 표시줄 표시 방식 및 표시되는 단추에 영향을 줍니다. 자세한 내용은 <xref:System.Windows.Forms.FormBorderStyle>을 참조하세요.  
@@ -24,7 +24,7 @@ Windows Forms의 모양과 동작을 결정할 때 선택할 수 있는 여러 �
   
 ### <a name="to-set-the-border-style-of-windows-forms-programmatically"></a>Windows Forms의 테두리 스타일을 프로그래밍 방식으로 설정하려면  
   
--   <xref:System.Windows.Forms.Form.FormBorderStyle%2A> 속성을 원하는 스타일로 설정합니다. 폼의 테두리 스타일을 설정 하는 다음 코드 예제 `DlgBx1` 에 <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>입니다.  
+- <xref:System.Windows.Forms.Form.FormBorderStyle%2A> 속성을 원하는 스타일로 설정합니다. 폼의 테두리 스타일을 설정 하는 다음 코드 예제 `DlgBx1` 에 <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>입니다.  
   
     ```vb  
     DlgBx1.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog  

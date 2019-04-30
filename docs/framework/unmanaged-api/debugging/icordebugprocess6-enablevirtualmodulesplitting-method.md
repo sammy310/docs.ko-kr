@@ -5,11 +5,11 @@ ms.assetid: e7733bd3-68da-47f9-82ef-477db5f2e32d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bb41cc47351ccf22fcd522b7d4291c235312bfaa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948657"
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>ICorDebugProcess6::EnableVirtualModuleSplitting 메서드
 가상 모듈 분할을 사용하거나 사용하지 않도록 설정합니다.  
@@ -54,40 +54,40 @@ HRESULT EnableVirtualModuleSplitting(
 ## <a name="behavioral-differences"></a>동작 차이점  
  컨테이너 모듈의 동작 및 특성은 다음과 같습니다.  
   
--   컨테이너 모듈을 구성하는 모든 하위 모듈의 메타데이터는 병합됩니다.  
+- 컨테이너 모듈을 구성하는 모든 하위 모듈의 메타데이터는 병합됩니다.  
   
--   형식 이름이 변환될 수 있습니다.  
+- 형식 이름이 변환될 수 있습니다.  
   
--   합니다 [icordebugmodule:: Getname](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md) 메서드 디스크상 모듈 경로 반환 합니다.  
+- 합니다 [icordebugmodule:: Getname](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md) 메서드 디스크상 모듈 경로 반환 합니다.  
   
--   합니다 [icordebugmodule:: Getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md) 메서드는 이미지의 크기를 반환 합니다.  
+- 합니다 [icordebugmodule:: Getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md) 메서드는 이미지의 크기를 반환 합니다.  
   
--   ICorDebugAssembly3.EnumerateContainedAssemblies 메서드는 하위 모듈을 나열합니다.  
+- ICorDebugAssembly3.EnumerateContainedAssemblies 메서드는 하위 모듈을 나열합니다.  
   
--   ICorDebugAssembly3.GetContainerAssembly 메서드는 `S_FALSE`를 반환합니다.  
+- ICorDebugAssembly3.GetContainerAssembly 메서드는 `S_FALSE`를 반환합니다.  
   
  하위 모듈의 동작 및 특성은 다음과 같습니다.  
   
--   병합된 원래 어셈블리에 해당하는 축소된 메타데이터 집합을 포함합니다.  
+- 병합된 원래 어셈블리에 해당하는 축소된 메타데이터 집합을 포함합니다.  
   
--   메타데이터 이름이 변환되지 않습니다.  
+- 메타데이터 이름이 변환되지 않습니다.  
   
--   메타데이터 토큰이 빌드 프로세스에서 병합되기 전의 원래 어셈블리에 포함되어 있던 토큰과 일치할 가능성은 거의 없습니다.  
+- 메타데이터 토큰이 빌드 프로세스에서 병합되기 전의 원래 어셈블리에 포함되어 있던 토큰과 일치할 가능성은 거의 없습니다.  
   
--   합니다 [icordebugmodule:: Getname](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md) 메서드는 파일 경로가 아닌 어셈블리 이름을 반환 합니다.  
+- 합니다 [icordebugmodule:: Getname](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md) 메서드는 파일 경로가 아닌 어셈블리 이름을 반환 합니다.  
   
--   합니다 [icordebugmodule:: Getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md) 메서드 원래 병합 되지 않은 이미지 크기를 반환 합니다.  
+- 합니다 [icordebugmodule:: Getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md) 메서드 원래 병합 되지 않은 이미지 크기를 반환 합니다.  
   
--   ICorDebugModule3.EnumerateContainedAssemblies 메서드는 `S_FALSE`를 반환합니다.  
+- ICorDebugModule3.EnumerateContainedAssemblies 메서드는 `S_FALSE`를 반환합니다.  
   
--   ICorDebugAssembly3.GetContainerAssembly 메서드는 포함하는 모듈을 반환합니다.  
+- ICorDebugAssembly3.GetContainerAssembly 메서드는 포함하는 모듈을 반환합니다.  
   
 ## <a name="interfaces-retrieved-from-modules"></a>모듈에서 검색되는 인터페이스  
  다양한 인터페이스를 만들거나 모듈에서 검색할 수 있습니다. 여기에는 다음과 같은 항목이 포함됩니다.  
   
--   가 반환한 ICorDebugClass 개체를 [icordebugmodule:: Getclassfromtoken](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getclassfromtoken-method.md) 메서드.  
+- 가 반환한 ICorDebugClass 개체를 [icordebugmodule:: Getclassfromtoken](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getclassfromtoken-method.md) 메서드.  
   
--   가 반환한 ICorDebugAssembly 개체를 [icordebugmodule:: Getassembly](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getassembly-method.md) 메서드.  
+- 가 반환한 ICorDebugAssembly 개체를 [icordebugmodule:: Getassembly](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getassembly-method.md) 메서드.  
   
  이러한 개체는 항상 캐시 되기 [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)를 만들거나 컨테이너 모듈 또는 하위 모듈에서 쿼리 된 여부에 관계 없이 같은 포인터 id를 갖습니다. 하위 모듈은 이와 같은 캐시된 개체의 필터링된 보기를 제공하며 자체 복사본이 포함된 별도의 캐시를 제공하지는 않습니다.  
   

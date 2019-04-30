@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
 author: KrzysztofCwalina
 ms.openlocfilehash: 9a4cf94ca7fcada7dfc0886422b373abc807a0fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966480"
 ---
 # <a name="capitalization-conventions"></a>대/소문자 표기법
 형식, 멤버 및 매개 변수를 읽기 쉽게 확인 식별자를 일관 되 게 적용 하는 경우의 지침에는 간단한 방법 사용 하 여이 장 레이아웃을 만드는 경우는입니다.  
@@ -23,9 +23,9 @@ ms.locfileid: "54670175"
 ## <a name="capitalization-rules-for-identifiers"></a>식별자에 대 한 대/소문자 규칙  
  식별자에서 단어를 구별 하 식별자에서 각 단어의 첫 번째 글자를 대문자로 바꿉니다. 단어를 구분 하기 위해 밑줄을 사용 하지 않는 또는 식별자 어디에서 나 해당 문제에 대 한 합니다. 두 가지 적절 한 식별자의 사용에 따라 식별자를 활용 하려면:  
   
--   PascalCasing  
+- PascalCasing  
   
--   camelCasing  
+- camelCasing  
   
  매개 변수 이름 제외한 모든 식별자에 사용 되는 PascalCasing 규칙을 다음 예와에서 같이 (머리 글자어 길이가 두 문자를 통해) 각 단어의 첫 번째 문자를 대문자로 표시:  
   
@@ -67,7 +67,7 @@ ms.locfileid: "54670175"
   
  이들은 끝점 등 한 단어로 작성 하는 복합 단어입니다. 대/소문자 구분 지침을 위해 단일 단어 닫힌 형식의 복합 단어를 처리 합니다. 현재 사전을 사용 하 여 복합 단어 닫힌 형태로 기록 됩니다 결정 합니다.  
   
-|Pascal|카멜식 대 /|Not|  
+|Pascal|카멜식 대 /|not|  
 |------------|-----------|---------|  
 |`BitFlag`|`bitFlag`|`Bitflag`|  
 |`Callback`|`callback`|`CallBack`|  

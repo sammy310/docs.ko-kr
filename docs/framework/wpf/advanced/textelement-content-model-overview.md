@@ -10,11 +10,11 @@ helpviewer_keywords:
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
 ms.openlocfilehash: 990642d288481fff8eeef900a86070d54790f151
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981879"
 ---
 # <a name="textelement-content-model-overview"></a>TextElement 콘텐츠 모델 개요
 에 대 한 지원 되는 콘텐츠를 설명 하는이 콘텐츠 모델 개요를 <xref:System.Windows.Documents.TextElement>입니다. 합니다 <xref:System.Windows.Documents.Paragraph> 클래스의 형식인 <xref:System.Windows.Documents.TextElement>합니다. 콘텐츠 모델은 어떤 개체/요소가 다른 개체/요소에 포함될 수 있는지를 설명합니다. 이 개요에서 파생 된 개체에 사용 된 콘텐츠 모델 요약 <xref:System.Windows.Documents.TextElement>합니다. 자세한 내용은 [유동 문서 개요](flow-document-overview.md)합니다.  
@@ -57,11 +57,11 @@ ms.locfileid: "59336189"
 ## <a name="working-with-textelement-content-programmatically"></a>프로그래밍 방식으로 TextElement 콘텐츠 작업  
  콘텐츠를 <xref:System.Windows.Documents.TextElement> 컬렉션 등의 콘텐츠를 프로그래밍 방식으로 조작 하 여 이루어집니다 <xref:System.Windows.Documents.TextElement> 개체는 이러한 컬렉션을 사용 하 여 수행 됩니다. 사용 하는 세 가지 다른 컬렉션이 <xref:System.Windows.Documents.TextElement> -클래스를 파생 합니다.  
   
--   <xref:System.Windows.Documents.InlineCollection>: <xref:System.Windows.Documents.Inline> 요소의 컬렉션을 나타냅니다. <xref:System.Windows.Documents.InlineCollection>는 <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span> 및 <xref:System.Windows.Controls.TextBlock> 요소의 사용할 수 있는 자식 콘텐츠를 정의합니다.  
+- <xref:System.Windows.Documents.InlineCollection>: <xref:System.Windows.Documents.Inline> 요소의 컬렉션을 나타냅니다. <xref:System.Windows.Documents.InlineCollection>는 <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span> 및 <xref:System.Windows.Controls.TextBlock> 요소의 사용할 수 있는 자식 콘텐츠를 정의합니다.  
   
--   <xref:System.Windows.Documents.BlockCollection>: <xref:System.Windows.Documents.Block> 요소의 컬렉션을 나타냅니다. <xref:System.Windows.Documents.BlockCollection>은 <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater> 및 <xref:System.Windows.Documents.Figure> 요소의 사용할 수 있는 자식 콘텐츠를 정의합니다.  
+- <xref:System.Windows.Documents.BlockCollection>: <xref:System.Windows.Documents.Block> 요소의 컬렉션을 나타냅니다. <xref:System.Windows.Documents.BlockCollection>은 <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater> 및 <xref:System.Windows.Documents.Figure> 요소의 사용할 수 있는 자식 콘텐츠를 정의합니다.  
   
--   <xref:System.Windows.Documents.ListItemCollection>: 순서가 지정 특정 콘텐츠 항목을 나타내는 유동 콘텐츠 요소 또는 순서가 지정 되지 않은 <xref:System.Windows.Documents.List>합니다.  
+- <xref:System.Windows.Documents.ListItemCollection>: 순서가 지정 특정 콘텐츠 항목을 나타내는 유동 콘텐츠 요소 또는 순서가 지정 되지 않은 <xref:System.Windows.Documents.List>합니다.  
   
  조작할 수 있습니다 (추가 또는 제거 항목)의 각 속성을 사용 하 여 이러한 컬렉션에서 **인라인**를 **블록**, 및 **ListItems**합니다. 다음 예제를 사용 하 여 Span의 콘텐츠를 조작 하는 방법을 보여 줍니다 합니다 **인라인** 속성입니다.  
   

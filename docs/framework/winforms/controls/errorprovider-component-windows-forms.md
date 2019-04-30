@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms]
 ms.assetid: c0f2e231-c5c9-413d-a507-75af2db499b6
 ms.openlocfilehash: 314d386ed69c8c14d90b4fa8abb61f19b0465890
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971980"
 ---
 # <a name="errorprovider-component-windows-forms"></a>ErrorProvider 구성 요소(Windows Forms)
 Windows Forms `ErrorProvider` 무언가 영향을 주지 않는 방식으로 사용자에 게 표시할 구성 요소를 사용 합니다. 일반적으로 폼에서 사용자 입력 유효성 검사 또는 데이터 집합 내에서 오류 표시와 함께에서 사용 됩니다.  

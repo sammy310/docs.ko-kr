@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 59bfc6785d3ad195e219afc323b7fdb513d8fefc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59092567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949060"
 ---
 # <a name="setassemblyfile2-method"></a>SetAssemblyFile2 메서드
 이름 및 새 어셈블리에 대 한 옵션을 설정합니다. 바인딩되지 않은 모듈을 생성 하는 경우에이 메서드를 호출 하지 마세요.  

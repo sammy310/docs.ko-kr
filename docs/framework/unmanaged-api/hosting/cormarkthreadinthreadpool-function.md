@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a39b0f2546d84cf24a58d5367c87d0a862aead93
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985766"
 ---
 # <a name="cormarkthreadinthreadpool-function"></a>CorMarkThreadInThreadPool 함수
 관리 코드의 실행에 대 한 현재 실행 중인 스레드 풀 스레드를 표시합니다. .NET Framework 버전 2.0부터,이 함수는 효과가 없습니다. 필요 하지 않습니다 하 고 코드에서 제거할 수 있습니다. 이 함수에서 사용 되지 않습니다는 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다.  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
 ms.openlocfilehash: eb506680f370e3571f1c38276d4e5d5890887a63
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961709"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Windows Communication Foundation 4.5의 새로운 기능
 
@@ -98,7 +98,7 @@ Windows Communication Foundation (WCF) 서비스 구성 파일 또는 코드를 
 
 WCF 클라이언트 응용 프로그램에서는 <xref:System.ServiceModel.ChannelFactory%601> 클래스를 사용하여 WCF 서비스와의 통신 채널을 만듭니다. <xref:System.ServiceModel.ChannelFactory%601> 인스턴스를 만들 때는 다음 작업이 필요하기 때문에 약간의 오버헤드가 발생합니다.
 
-1. <xref:System.ServiceModel.Description.ContractDescription> 트리 생성
+1. 생성 된 <xref:System.ServiceModel.Description.ContractDescription> 트리
 
 2. 필요한 모든 CLR 형식 반영
 

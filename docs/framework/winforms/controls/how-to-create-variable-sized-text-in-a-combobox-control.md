@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms], drawing custom text
 ms.assetid: ce39b9ea-e626-49fe-bd5a-f567f6d157df
 ms.openlocfilehash: 9155893b3d47707e0e55ee33e30d7998654f9e93
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965518"
 ---
 # <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>방법: ComboBox 컨트롤에서 가변 크기 텍스트 만들기
 이 예제에서는 텍스트에 대 한 사용자 지정 그리기를 <xref:System.Windows.Forms.ComboBox> 제어 합니다. 특정 기준을 충족 하는 항목, 하는 경우 더 큰 글꼴로 그릴 이며 빨간색을 설정 합니다.  
@@ -58,14 +58,14 @@ End Sub
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   Windows 폼입니다.  
+- Windows 폼입니다.  
   
--   A <xref:System.Windows.Forms.ComboBox> 라는 컨트롤 `ListBox1` 의 세 가지 항목과 <xref:System.Windows.Forms.ComboBox.Items%2A> 속성입니다. 이 예제에서는 세 개 항목 이름은 `"One", Two", and Three"`합니다. 합니다 <xref:System.Windows.Forms.ComboBox.DrawMode%2A> 속성을 `ComboBox1` 로 변경 해야 <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>합니다.  
+- A <xref:System.Windows.Forms.ComboBox> 라는 컨트롤 `ListBox1` 의 세 가지 항목과 <xref:System.Windows.Forms.ComboBox.Items%2A> 속성입니다. 이 예제에서는 세 개 항목 이름은 `"One", Two", and Three"`합니다. 합니다 <xref:System.Windows.Forms.ComboBox.DrawMode%2A> 속성을 `ComboBox1` 로 변경 해야 <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>합니다.  
   
     > [!NOTE]
     >  이 기술에도 적용 됩니다는 <xref:System.Windows.Forms.ListBox> 컨트롤-대체할 수 있습니다를 <xref:System.Windows.Forms.ListBox> 에 대 한는 <xref:System.Windows.Forms.ComboBox>합니다.  
   
--   <xref:System.Windows.Forms?displayProperty=nameWithType> 및 <xref:System.Drawing?displayProperty=nameWithType> 네임스페이스에 대한 참조  
+- <xref:System.Windows.Forms?displayProperty=nameWithType> 및 <xref:System.Drawing?displayProperty=nameWithType> 네임스페이스에 대한 참조  
   
 ## <a name="see-also"></a>참고자료
 

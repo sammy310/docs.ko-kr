@@ -5,18 +5,18 @@ f1_keywords:
 - vbrAppModel_SingleInstanceCantConnect
 ms.assetid: 7c2c0cee-02a1-4157-be03-39d18e18408f
 ms.openlocfilehash: 7ffa9b185e16cfdf8223ce84e77d1a0e1fa67f65
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942614"
 ---
 # <a name="this-single-instance-application-could-not-connect-to-the-original-instance"></a>이 단일 인스턴스 애플리케이션을 원본 인스턴스에 연결할 수 없습니다.
 이 단일 인스턴스 애플리케이션을 원본 인스턴스에 연결할 수 없습니다. 이 문제가 발생할 수 있는 몇 가지 원인은 다음과 같습니다.  
   
--   원래 인스턴스의 응답이 중지되었습니다.  
+- 원래 인스턴스의 응답이 중지되었습니다.  
   
--   커널 개체를 만들 수 있는 권한이 애플리케이션에 없습니다. 커널 개체에 대 한 자세한 내용은 참조 하십시오 [뮤텍스](../../standard/threading/mutexes.md)합니다.  
+- 커널 개체를 만들 수 있는 권한이 애플리케이션에 없습니다. 커널 개체에 대 한 자세한 내용은 참조 하십시오 [뮤텍스](../../standard/threading/mutexes.md)합니다.  
   
      커널 개체의 기본 이름은 어셈블리의 GUID, 주 버전 번호 및 부 버전 번호를 연결하여 만들어집니다. 예를 들어 기본 이름은 `3639f15d-9547-43da-8145-60da347829915.1`일 수 있습니다.  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - MDI
 ms.assetid: 599faf75-13cf-49cc-ad3c-255545e5cb97
 ms.openlocfilehash: 0ce7c66946d03d566b21473711cb6b3315885236
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61952050"
 ---
 # <a name="multiple-document-interface-mdi-applications"></a>MDI 애플리케이션
 (MDI) 다중 문서 인터페이스 응용 프로그램을 사용 하면 별도 창에 표시 된 각 문서를 사용 하 여 동시에 여러 문서를 표시할 수 있습니다. MDI 응용 프로그램 창 메뉴 항목과 창 또는 문서를 전환할 수 있는 하위 메뉴가 있는 경우가 많습니다.  

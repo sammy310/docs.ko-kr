@@ -11,11 +11,11 @@ helpviewer_keywords:
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
 ms.openlocfilehash: b18ef2f291e20d8a150972a980ba063377b0bc3a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945342"
 ---
 # <a name="from-clause-visual-basic"></a>From 절(Visual Basic)
 하나 이상의 범위 변수 및 쿼리 하는 컬렉션을 지정합니다.  
@@ -48,21 +48,21 @@ From element [ As type ] In collection [ _ ]
   
  각 `From` 절 쿼리를 구체화 하는 추가 쿼리 절 조합 올 수 있습니다. 다음과 같은 방법으로 쿼리를 구체화할 수 있습니다.  
   
--   여러 컬렉션을 사용 하 여 암시적으로 결합 합니다 `From` 및 `Select` 절 또는 명시적으로 사용 하 여 합니다 `Join` 또는 `Group Join` 절.  
+- 여러 컬렉션을 사용 하 여 암시적으로 결합 합니다 `From` 및 `Select` 절 또는 명시적으로 사용 하 여 합니다 `Join` 또는 `Group Join` 절.  
   
--   사용 된 `Where` 절 쿼리 결과를 필터링 합니다.  
+- 사용 된 `Where` 절 쿼리 결과를 필터링 합니다.  
   
--   사용 하 여 결과 정렬 된 `Order By` 절.  
+- 사용 하 여 결과 정렬 된 `Order By` 절.  
   
--   사용 하 여 비슷한 결과 함께 그룹화 된 `Group By` 절.  
+- 사용 하 여 비슷한 결과 함께 그룹화 된 `Group By` 절.  
   
--   사용 하 여는 `Aggregate` 절에 집계 함수는 전체 쿼리 결과 대 한 평가를 식별 합니다.  
+- 사용 하 여는 `Aggregate` 절에 집계 함수는 전체 쿼리 결과 대 한 평가를 식별 합니다.  
   
--   사용 된 `Let` 절 값인 컬렉션 대신 식에 의해 결정 됩니다 하는 반복 변수를 도입 합니다.  
+- 사용 된 `Let` 절 값인 컬렉션 대신 식에 의해 결정 됩니다 하는 반복 변수를 도입 합니다.  
   
--   사용 하 여는 `Distinct` 절에 중복 되는 쿼리 결과 무시 합니다.  
+- 사용 하 여는 `Distinct` 절에 중복 되는 쿼리 결과 무시 합니다.  
   
--   사용 하 여 반환할 결과 부분을 식별 합니다 `Skip`, `Take`를 `Skip While`, 및 `Take While` 절.  
+- 사용 하 여 반환할 결과 부분을 식별 합니다 `Skip`, `Take`를 `Skip While`, 및 `Take While` 절.  
   
 ## <a name="example"></a>예제  
  다음 쿼리 식에 사용을 `From` 범위 변수를 선언 하는 절 `cust` 각각에 대해 `Customer` 개체는 `customers` 컬렉션입니다. `Where` 절 범위 변수를 사용 하 여 지정된 된 지역에서 고객에 게 출력을 제한 합니다. `For Each` 루프는 쿼리 결과에서 각 고객의 회사 이름을 표시 합니다.  

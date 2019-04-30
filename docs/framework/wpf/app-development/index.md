@@ -6,22 +6,22 @@ helpviewer_keywords:
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
 ms.openlocfilehash: 3b7e1d04173741088935104e8d4225691927a27b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61951595"
 ---
 # <a name="application-development"></a>애플리케이션 개발
 <a name="introduction"></a> Windows Presentation Foundation (WPF)은 다음 유형의 응용 프로그램 개발에 사용할 수 있는 프레젠테이션 프레임 워크:  
   
--   독립 실행형 애플리케이션(클라이언트 컴퓨터에 설치되어 실행되는 실행 가능한 어셈블리로 빌드된 전형적인 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 애플리케이션)  
+- 독립 실행형 애플리케이션(클라이언트 컴퓨터에 설치되어 실행되는 실행 가능한 어셈블리로 빌드된 전형적인 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 애플리케이션)  
   
--   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)](실행 가능한 어셈블리로 빌드되고 [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] 또는 Mozilla Firefox와 같은 웹 브라우저에서 호스트하는 탐색 페이지로 구성된 응용 프로그램)  
+- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)](실행 가능한 어셈블리로 빌드되고 [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] 또는 Mozilla Firefox와 같은 웹 브라우저에서 호스트하는 탐색 페이지로 구성된 응용 프로그램)  
   
--   사용자 지정 컨트롤 라이브러리(재사용 가능한 컨트롤을 포함하는 실행 불가능한 어셈블리)  
+- 사용자 지정 컨트롤 라이브러리(재사용 가능한 컨트롤을 포함하는 실행 불가능한 어셈블리)  
   
--   클래스 라이브러리(재사용 가능한 클래스를 포함하는 실행 불가능한 어셈블리)  
+- 클래스 라이브러리(재사용 가능한 클래스를 포함하는 실행 불가능한 어셈블리)  
   
 > [!NOTE]
 >  Windows 서비스에서 WPF 유형을 사용해서는 안 됩니다. Windows 서비스에서 이러한 기능을 사용하려고 하면 예상대로 작동하지 않을 수 있습니다.  
@@ -32,21 +32,21 @@ ms.locfileid: "59211064"
 ## <a name="application-management"></a>애플리케이션 관리  
  실행 가능한 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션에는 일반적으로 다음을 포함하는 핵심 기능 집합이 필요합니다.  
   
--   일반적인 애플리케이션 인프라 만들기 및 관리(시스템 및 입력 메시지를 수신하는 Windows 메시지 루프 및 진입점 메서드 만들기 포함)  
+- 일반적인 애플리케이션 인프라 만들기 및 관리(시스템 및 입력 메시지를 수신하는 Windows 메시지 루프 및 진입점 메서드 만들기 포함)  
   
--   애플리케이션의 수명 추적 및 상호 작용  
+- 애플리케이션의 수명 추적 및 상호 작용  
   
--   명령줄 매개 변수 검색 및 처리  
+- 명령줄 매개 변수 검색 및 처리  
   
--   애플리케이션 범위 속성 및 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 리소스 공유  
+- 애플리케이션 범위 속성 및 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 리소스 공유  
   
--   처리되지 않은 예외 검색 및 처리  
+- 처리되지 않은 예외 검색 및 처리  
   
--   종료 코드 반환  
+- 종료 코드 반환  
   
--   독립 실행형 애플리케이션에서 창 관리  
+- 독립 실행형 애플리케이션에서 창 관리  
   
--   탐색 창 및 프레임이 있는 독립 실행형 애플리케이션 및 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]에서 탐색 추적  
+- 탐색 창 및 프레임이 있는 독립 실행형 애플리케이션 및 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]에서 탐색 추적  
   
  이러한 기능은 *애플리케이션 정의*를 사용하여 애플리케이션에 추가되는 <xref:System.Windows.Application> 클래스에 의해 구현됩니다.  
   
@@ -62,13 +62,13 @@ ms.locfileid: "59211064"
 ## <a name="windows-and-dialog-boxes"></a>창 및 대화 상자  
  사용자는 창을 통해 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 독립 실행형 애플리케이션과 상호 작용합니다. 창의 목적은 애플리케이션 콘텐츠를 호스트하고 일반적으로 사용자가 콘텐츠와 상호 작용할 수 있도록 애플리케이션 기능을 노출하는 것입니다. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서 창은 다음을 지원하는 <xref:System.Windows.Window> 클래스에 의해 캡슐화됩니다.  
   
--   창 만들기 및 표시  
+- 창 만들기 및 표시  
   
--   소유자/피소유자 창 관계 설정  
+- 소유자/피소유자 창 관계 설정  
   
--   창 모양 구성(예: 크기, 위치, 아이콘, 제목 표시줄 텍스트, 테두리)  
+- 창 모양 구성(예: 크기, 위치, 아이콘, 제목 표시줄 텍스트, 테두리)  
   
--   창의 수명 추적 및 상호 작용  
+- 창의 수명 추적 및 상호 작용  
   
  자세한 내용은 [WPF 창 개요](wpf-windows-overview.md)를 참조하세요.  
   
@@ -84,23 +84,23 @@ ms.locfileid: "59211064"
 ## <a name="navigation"></a>탐색  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서는 페이지(<xref:System.Windows.Controls.Page>) 및 하이퍼링크(<xref:System.Windows.Documents.Hyperlink>)를 통한 웹 스타일 탐색을 지원합니다. 다음을 포함한 다양한 방법으로 탐색을 구현할 수 있습니다.  
   
--   웹 브라우저에 호스트되는 독립 실행형 페이지  
+- 웹 브라우저에 호스트되는 독립 실행형 페이지  
   
--   웹 브라우저에 호스트되는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]로 컴파일된 페이지  
+- 웹 브라우저에 호스트되는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]로 컴파일된 페이지  
   
--   독립 실행형 애플리케이션으로 컴파일되고 탐색 창(<xref:System.Windows.Navigation.NavigationWindow>)에서 호스트하는 페이지  
+- 독립 실행형 애플리케이션으로 컴파일되고 탐색 창(<xref:System.Windows.Navigation.NavigationWindow>)에서 호스트하는 페이지  
   
--   독립 실행형 페이지나 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 또는 독립 실행형 애플리케이션으로 컴파일된 페이지에서 호스트할 수 있는 프레임(<xref:System.Windows.Controls.Frame>)에서 호스트되는 페이지  
+- 독립 실행형 페이지나 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 또는 독립 실행형 애플리케이션으로 컴파일된 페이지에서 호스트할 수 있는 프레임(<xref:System.Windows.Controls.Frame>)에서 호스트되는 페이지  
   
  탐색을 쉽게 하려면 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서 다음을 구현합니다.  
   
--   응용 프로그램 내 탐색을 지원하기 위해 <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow>, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]에서 사용되는 탐색 요청을 처리하기 위한 공유 탐색 엔진 <xref:System.Windows.Navigation.NavigationService>  
+- 응용 프로그램 내 탐색을 지원하기 위해 <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow>, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]에서 사용되는 탐색 요청을 처리하기 위한 공유 탐색 엔진 <xref:System.Windows.Navigation.NavigationService>  
   
--   탐색을 시작하는 탐색 메서드  
+- 탐색을 시작하는 탐색 메서드  
   
--   탐색 수명을 추적하고 상호 작용하는 탐색 이벤트  
+- 탐색 수명을 추적하고 상호 작용하는 탐색 이벤트  
   
--   저널을 사용하여 뒤로/앞으로 탐색 저장(검사하고 조작할 수도 있음)  
+- 저널을 사용하여 뒤로/앞으로 탐색 저장(검사하고 조작할 수도 있음)  
   
  자세한 내용은 [탐색 개요](navigation-overview.md)를 참조하세요.  
   

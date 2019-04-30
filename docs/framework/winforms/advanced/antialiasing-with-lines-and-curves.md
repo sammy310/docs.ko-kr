@@ -10,11 +10,11 @@ helpviewer_keywords:
 - GDI+, antialiasing
 ms.assetid: 810da1a4-c136-4abf-88df-68e49efdd8d4
 ms.openlocfilehash: cbc9033f18f1ab255862c8f8e2891aa9b68cf8d6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961103"
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>선과 곡선의 앤티 앨리어싱
 사용 하는 경우 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 선을 그릴 시작 지점 및 끝 줄의 지점 제공 되지만 줄에 각 픽셀에 대 한 정보를 제공할 필요가 없습니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 특정 디스플레이 장치에 선을 표시 하려면 어떤 픽셀이 켜 집니다 결정할 디스플레이 드라이버 소프트웨어와 함께 작동 합니다.  

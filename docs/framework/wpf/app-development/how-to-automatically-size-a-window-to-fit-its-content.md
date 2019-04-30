@@ -1,5 +1,5 @@
 ---
-title: '방법: 자동으로 해당 콘텐츠에 맞게 창의 크기 조정'
+title: '방법: 콘텐츠에 맞게 자동으로 창 크기 조정'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - sizing windows to fit content [WPF]
 ms.assetid: 333ca72a-c2f3-4414-9303-3fdabaaa1b32
 ms.openlocfilehash: 920a7deac8efffe52a4837841b6327575e41b331
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947851"
 ---
-# <a name="how-to-automatically-size-a-window-to-fit-its-content"></a>방법: 자동으로 해당 콘텐츠에 맞게 창의 크기 조정
+# <a name="how-to-automatically-size-a-window-to-fit-its-content"></a>방법: 콘텐츠에 맞게 자동으로 창 크기 조정
 설정 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Window.SizeToContent%2A> 콘텐츠에 맞게 창의 크기 조정 하는 방법을 지정 하는 속성입니다.  
   
 ## <a name="example"></a>예제  

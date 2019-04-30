@@ -8,11 +8,11 @@ ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a575f6c067d22ddf35a238c36f66fe8e91f6be0c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949346"
 ---
 # <a name="net-framework-performance"></a>.NET Framework 성능
 성능이 우수한 앱을 만들려면 앱의 다른 모든 기능을 디자인하는 것처럼 성능을 디자인하고 계획해야 합니다. 앱의 성능을 측정할 수 있도록 Microsoft에서 제공하는 도구를 사용하고 필요한 경우 메모리 사용, 코드 처리량 및 응답성을 향상시킬 수 있습니다. 이 항목에는 Microsoft에서 제공하는 성능 분석 도구가 나열되어 있으며, 앱 개발의 특정 영역에 대한 성능을 설명하는 다른 항목의 링크가 제공되어 있습니다.  

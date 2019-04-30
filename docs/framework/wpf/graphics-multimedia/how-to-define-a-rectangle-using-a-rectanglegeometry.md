@@ -9,11 +9,11 @@ helpviewer_keywords:
 - rectangles [WPF], creating with RectangleGeometry class
 ms.assetid: e40b8a8e-54b8-416b-a9f2-be6dca9fdf0b
 ms.openlocfilehash: 146ca7017ee38ad5c1065e59662ac441e7bfbfe2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965414"
 ---
 # <a name="how-to-define-a-rectangle-using-a-rectanglegeometry"></a>방법: RectangleGeometry를 사용하여 사각형 정의
 이 예제를 사용 하는 방법에 설명 합니다 <xref:System.Windows.Media.RectangleGeometry> 사각형을 설명 하는 클래스입니다.  

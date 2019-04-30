@@ -3,32 +3,32 @@ title: Token Provider
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
 ms.openlocfilehash: 9c10d67093fb09cb97f2010926ebaa6176df86c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965661"
 ---
 # <a name="token-provider"></a>Token Provider
 이 샘플에서는 사용자 지정 토큰 공급자를 구현하는 방법을 보여 줍니다. 토큰 공급자를 Windows Communication Foundation (WCF)에서 보안 인프라에 자격 증명 제공에 사용 됩니다. 일반적으로 토큰 공급자는 대상을 검사하고 적절한 자격 증명을 발급하여 보안 인프라에서 메시지의 보안을 유지할 수 있도록 합니다. WCF는 기본 자격 증명 관리자 토큰 공급자를 사용 하 여 제공 됩니다. WCF도와 함께 제공 되는 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 토큰 공급자입니다. 사용자 지정 토큰 공급자는 다음과 같은 경우에 유용합니다.
 
--   이러한 토큰 공급자가 작동되지 않는 자격 증명 저장소가 있는 경우
+- 이러한 토큰 공급자가 작동되지 않는 자격 증명 저장소가 있는 경우
 
--   WCF 클라이언트 프레임 워크에서 자격 증명을 사용 하는 경우에 세부 정보를 제공 하는 사용자 지점에서 자격 증명을 변형에 대 한 사용자 고유의 사용자 지정 메커니즘을 제공 하려면.
+- WCF 클라이언트 프레임 워크에서 자격 증명을 사용 하는 경우에 세부 정보를 제공 하는 사용자 지점에서 자격 증명을 변형에 대 한 사용자 고유의 사용자 지정 메커니즘을 제공 하려면.
 
--   사용자 지정 토큰을 빌드하고 있는 경우
+- 사용자 지정 토큰을 빌드하고 있는 경우
 
  이 샘플에서는 사용자의 입력을 다른 형식을 변형하는 사용자 지정 토큰 공급자를 빌드하는 방법을 보여 줍니다.
 
  즉, 이 샘플에서는 다음 방법을 보여 줍니다.
 
--   클라이언트에서 사용자 이름/암호 쌍을 사용하여 인증하는 방법.
+- 클라이언트에서 사용자 이름/암호 쌍을 사용하여 인증하는 방법.
 
--   사용자 지정 토큰 공급자로 클라이언트를 구성하는 방법
+- 사용자 지정 토큰 공급자로 클라이언트를 구성하는 방법
 
--   사용자 이름과 암호가 일치하는지 확인하는 사용자 지정 <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>와 함께 암호를 사용하여 서버에서 클라이언트 자격 증명의 유효성을 검사하는 방법
+- 사용자 이름과 암호가 일치하는지 확인하는 사용자 지정 <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>와 함께 암호를 사용하여 서버에서 클라이언트 자격 증명의 유효성을 검사하는 방법
 
--   서버의 X.509 인증서를 사용하여 클라이언트에서 서버를 인증하는 방법
+- 서버의 X.509 인증서를 사용하여 클라이언트에서 서버를 인증하는 방법
 
  또한 이 샘플에서는 사용자 지정 토큰 인증 프로세스 후에 호출자의 ID에 액세스할 수 있는 방법을 보여 줍니다.
 
@@ -219,7 +219,7 @@ static void DisplayIdentityInformation()
 
  다음 부분에는 적절한 구성으로 실행되게 수정할 수 있도록 배치 파일의 다양한 섹션에 대한 간략한 개요가 소개되어 있습니다.
 
--   서버 인증서 만들기
+- 서버 인증서 만들기
 
      Setup.bat 배치 파일에서 다음 행은 사용할 서버 인증서를 만듭니다. `%SERVER_NAME%`변수는 서버 이름을 지정합니다. 이 변수를 변경하여 고유의 서버 이름을 지정합니다. 이 배치 파일의 기본값은 localhost입니다.
 
@@ -233,7 +233,7 @@ static void DisplayIdentityInformation()
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   클라이언트의 신뢰할 수 있는 인증서 저장소에 서버 인증서 설치:
+- 클라이언트의 신뢰할 수 있는 인증서 저장소에 서버 인증서 설치:
 
      Setup.bat 배치 파일에서 다음 행은 클라이언트의 신뢰할 수 있는 사용자 저장소로 서버 인증서를 복사합니다. 이 단계는 Makecert.exe에서 생성한 인증서를 클라이언트 컴퓨터에서 절대적으로 신뢰하지는 않기 때문에 필요합니다. Microsoft에서 발급한 인증서와 같이 클라이언트가 신뢰할 수 있는 루트 인증서를 기반으로 하는 인증서가 이미 있는 경우 클라이언트 인증서 저장소를 서버 인증서로 채우는 이 단계를 수행할 필요가 없습니다.
 

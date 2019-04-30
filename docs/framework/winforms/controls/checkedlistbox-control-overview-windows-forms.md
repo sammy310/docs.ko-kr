@@ -9,11 +9,11 @@ helpviewer_keywords:
 - list boxes [Windows Forms], about list boxes
 ms.assetid: e6cff3ce-e2ba-458e-851f-299e8e9c8abf
 ms.openlocfilehash: 8ff23ff449bc3b90fbd51bab1d73f8a7268bee05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956366"
 ---
 # <a name="checkedlistbox-control-overview-windows-forms"></a>CheckedListBox 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.CheckedListBox> 컨트롤을 <xref:System.Windows.Forms.ListBox> 제어 합니다. 이 거의 모든 기능을 목록 상자 않으며도 목록에서 항목 옆에 확인 표시가 표시할 수 있습니다. 두 컨트롤 간의 다른 차이점은 목록 상자 지원만 확인 하는 <xref:System.Windows.Forms.DrawMode.Normal?displayProperty=nameWithType>; 목록 상자 항목을 하나만 사용할 수 있습니다 하거나 하나도 선택 하지는 확인 합니다. 선택한 항목을 폼에 강조 표시 된 나타나고 선택한 항목 동일 하지는 참고 합니다.  

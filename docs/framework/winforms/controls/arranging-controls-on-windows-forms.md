@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms controls, positioning on form
 ms.assetid: b2d62ed8-c391-4a7e-b72e-6bbabfca73dc
 ms.openlocfilehash: 75da29036b1afe7275a19a3e1e11a33b0e266edc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954403"
 ---
 # <a name="arranging-controls-on-windows-forms"></a>Windows Forms에서 컨트롤 정렬
 다양한 방법으로 양식에 컨트롤을 배치하고 조작함으로써 사용자가 직관적이고 기능적으로 사용할 수 있는 사용자 인터페이스를 만들 수 있습니다.  

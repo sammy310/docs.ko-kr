@@ -6,11 +6,11 @@ helpviewer_keywords:
 - serialization, steps
 ms.assetid: 4bcbc883-2a91-418f-b968-6c86a25e9737
 ms.openlocfilehash: b697e8c590d0865b26eaa9f66a333504a5faece2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954052"
 ---
 # <a name="steps-in-the-serialization-process"></a>serialization 프로세스의 단계
 <xref:System.Runtime.Serialization.Formatter.Serialize*> 메서드가 [포맷터](xref:System.Runtime.Serialization.Formatter)에서 호출되면 개체 serialization이 다음 규칙 시퀀스에 따라 진행됩니다.

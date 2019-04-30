@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
 ms.openlocfilehash: 71e0ffc7f03a27a878aeb48eda9fbc58e5faae82
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945329"
 ---
 # <a name="group-by-clause-visual-basic"></a>Group By 절(Visual Basic)
 쿼리 결과의 요소를 그룹화합니다. 각 그룹에 집계 함수를 적용하는 데 사용할 수도 있습니다. 그룹화 작업은 하나 이상의 키를 기반으로 합니다.  
@@ -31,19 +31,19 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
 ## <a name="parts"></a>요소  
   
--   `listField1`, `listField2`  
+- `listField1`, `listField2`  
   
      선택 사항입니다. 그룹화된 결과에 포함할 필드를 명시적으로 식별하는 쿼리 변수의 하나 이상 필드입니다. 필드를 지정하지 않으면 쿼리 변수의 모든 필드가 그룹화된 결과에 포함됩니다.  
   
--   `keyExp1`  
+- `keyExp1`  
   
      필수 요소. 요소 그룹을 결정하는 데 사용할 키를 식별하는 식입니다. 둘 이상의 키를 지정하여 복합 키를 지정할 수 있습니다.  
   
--   `keyExp2`  
+- `keyExp2`  
   
      선택 사항입니다. 복합 키를 만들기 위해 `keyExp1` 와 결합되는 하나 이상의 추가 키입니다.  
   
--   `aggregateList`  
+- `aggregateList`  
   
      필수 요소. 그룹의 집계 방법을 식별하는 하나 이상의 식입니다. 그룹화된 결과의 멤버 이름을 식별하려면 다음 형식 중 하나일 수 있는 `Group` 키워드를 사용합니다.  
   

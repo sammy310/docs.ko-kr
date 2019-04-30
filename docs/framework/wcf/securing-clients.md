@@ -5,11 +5,11 @@ helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
 ms.openlocfilehash: b357ee12dce823e49e61171d21356ca36b74f7c5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949619"
 ---
 # <a name="securing-clients"></a>클라이언트에 보안 설정
 Windows Communication Foundation (WCF), 서비스는 클라이언트에 대 한 보안 요구 사항을 지정합니다. 즉, 서비스는 사용할 보안 모드 및 클라이언트가 자격 증명을 제공해야 하는지 여부를 지정합니다. 따라서 클라이언트 보안 설정 프로세스는 간단합니다. 서비스에서 가져온 메타데이터를 사용하여(게시된 경우) 클라이언트를 빌드하면 됩니다. 메타데이터는 클라이언트를 구성하는 방법을 지정합니다. 서비스에서 클라이언트가 자격 증명을 제공해야 하는 경우 요구 사항에 맞는 자격 증명을 가져와야 합니다. 이 항목에서는 이 과정을 자세히 설명합니다. 보안 서비스를 만드는 방법에 대 한 자세한 내용은 참조 하세요. [Securing Services](../../../docs/framework/wcf/securing-services.md)합니다.  
@@ -71,7 +71,7 @@ Windows Communication Foundation (WCF), 서비스는 클라이언트에 대 한 
   
  자격 증명의 일반 양식은 X.509 인증서입니다. 다음 두 가지 방법으로 자격 증명을 제공할 수 있습니다.  
   
--   클라이언트 코드에서 자격 증명 프로그래밍(`SetCertificate` 메서드 사용).  
+- 클라이언트 코드에서 자격 증명 프로그래밍(`SetCertificate` 메서드 사용).  
   
  추가 하 여는 [ \<동작 >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) 클라이언트에 대 한 구성 파일의 섹션 및 사용을 `clientCredentials` 요소 (아래 참조).  
   

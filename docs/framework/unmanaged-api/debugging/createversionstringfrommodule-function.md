@@ -19,11 +19,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3ed8b85475dc7327c1aac6f920aba627215e27c7
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965808"
 ---
 # <a name="createversionstringfrommodule-function"></a>CreateVersionStringFromModule 함수
 대상 프로세스의 CLR(공용 언어 런타임) 경로에서 버전 문자열을 만듭니다.  

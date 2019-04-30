@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], Help (using designer)
 ms.assetid: a8563d25-8a75-4bc7-a024-f1870591b50f
 ms.openlocfilehash: 207ceeafa2ea06340310577c636deb5ea1977aae
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942924"
 ---
 # <a name="integrating-user-help-in-windows-forms"></a>Windows Forms에 사용자 도움말 통합
 Windows 기반 응용 프로그램을 구축 하는 필수적 이지만 흔히 간과 aspect 도움말 시스템은 이것은 사용자가 혼란의 시간에 대 한 도움말입니다. 각 Windows Forms에서 두 가지 유형의 도움말을 지원 하 여 제공 합니다 [HelpProvider 구성 요소](../controls/helpprovider-component-windows-forms.md)합니다. 첫 번째 HTML 또는 HTML 도움말 1의 도움말 파일을 사용 하 여 사용자 가리키는 포함 됩니다. *x* 형식이 있습니다. 두 번째 표시할 수 있습니다 간단한 "What is/이"-개별 컨트롤; Help를 입력 합니다. 이 대화 상자에서 특히 유용 합니다. 두 유형의 도움말 동일한 양식에서 사용할 수 있습니다.  

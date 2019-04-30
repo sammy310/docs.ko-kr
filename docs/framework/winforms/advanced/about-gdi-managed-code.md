@@ -7,11 +7,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], GDI+
 ms.assetid: a98a76ab-e455-49c9-891c-0491ac932f2c
 ms.openlocfilehash: b1676189582596ad69981b330ffb081539e949da
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61960955"
 ---
 # <a name="about-gdi-managed-code"></a>GDI+ 관리 코드 정보
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]는 2차원 벡터 그래픽, 이미징 및 입력 체계를 제공하는 Windows 운영 체제의 일부입니다. [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)](이전 버전의 Windows에 포함된 그래픽 장치 인터페이스)에서는 새로운 기능을 추가하고 기존 기능을 최적화하여 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]가 향상되었습니다.  
@@ -28,8 +28,7 @@ ms.locfileid: "57705027"
  사용할 수 있는 이미지 형식 및 작업 방법을 설명합니다.  
   
  [좌표계 및 변형](coordinate-systems-and-transformations.md)  
- 
-  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]에서 그래픽을 변환하는 방법을 설명합니다.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]에서 그래픽을 변환하는 방법을 설명합니다.  
   
 ## <a name="reference"></a>참조  
  <xref:System.Drawing.Graphics?displayProperty=nameWithType>  
@@ -61,5 +60,4 @@ ms.locfileid: "57705027"
   
 ## <a name="related-sections"></a>관련 단원  
  [관리 되는 그래픽 클래스를 사용 하 여](using-managed-graphics-classes.md)입니다.  
- 
-  `Graphics` 프로그래밍 인터페이스를 사용하는 방법을 보여 주는 항목의 링크를 포함합니다.
+ `Graphics` 프로그래밍 인터페이스를 사용하는 방법을 보여 주는 항목의 링크를 포함합니다.

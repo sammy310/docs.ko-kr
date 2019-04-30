@@ -3,11 +3,11 @@ title: WF의 순서도 활동
 ms.date: 03/30/2017
 ms.assetid: e80d9734-b43a-4d21-a250-74400330a4c0
 ms.openlocfilehash: e311c97a35acd8bc973b2833f1de1bc017682d64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945680"
 ---
 # <a name="flowchart-activities-in-wf"></a>WF의 순서도 활동
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]는 순서도 내의 분기 및 실행을 제어하기 위한 여러 시스템 제공 활동을 제공합니다.  

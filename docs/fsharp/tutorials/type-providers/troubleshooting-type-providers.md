@@ -3,11 +3,11 @@ title: 형식 공급자 문제 해결
 description: 사용 하는 경우 발생할 수 있는 문제 형식에서 공급자에 대 한 잠재적인 솔루션을 검색 F#입니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: 6c675720e0b7c306a2916c94d8096d2f09c0daca
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61968222"
 ---
 # <a name="troubleshooting-type-providers"></a>형식 공급자 문제 해결
 
@@ -24,6 +24,6 @@ ms.locfileid: "53610335"
 |**유효 하지 않은 자격 증명**합니다. 데이터 원본 또는 웹 서비스에 대 한 유효 사용 권한이 있어야 합니다.|SQL 연결의 경우 사용자 이름 및 암호는 연결 문자열 또는 구성 파일에 지정 된 데이터베이스에 대 한 유효한 이어야 합니다. Windows 인증을 사용 하는 경우 데이터베이스에 액세스할 수 있어야 합니다. 데이터베이스 관리자는 각 데이터베이스 및 데이터베이스 내의 각 요소에 대 한 필요한 사용 권한을 액세스할 항목을 식별할 수 있습니다.<br /><br />웹 서비스 또는 데이터 서비스에 대 한 적절 한 자격 증명이 있어야 합니다. 대부분의 형식 공급자는 적절 한 사용자 이름 및 액세스 키를 사용 하 여 설정할 수 있는 자격 증명 속성을 포함 하는 DataContext 개체를 제공 합니다.|
 |**유효 하지 않은 경로**합니다. 파일의 경로가 잘못 되었습니다.|경로가 올바른지와 파일이 있는지 여부를 확인 합니다. 또한 경로에 모든 backlashes를 적절 하 게 견적 하거나 축 자 문자열 또는 삼중 따옴표가 붙은 문자열을 사용 합니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [형식 공급자](index.md)

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 2509302d-a74e-484f-9890-2acdbfa67a68
 ms.openlocfilehash: babae31a3be9775d07ca84c54e1177d297cab5cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956283"
 ---
 # <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a>Windows Form에서 ActiveX 컨트롤을 호스팅할 때의 고려 사항
 Windows Forms는 Windows Forms 컨트롤을 호스팅하도록 최적화되어 있지만 ActiveX 컨트롤을 사용할 수도 있습니다. ActiveX 컨트롤을 사용하는 애플리케이션을 계획할 때 다음 사항을 고려하세요.  
   
--   **보안** 공용 언어 런타임이 코드 액세스 보안과 관련하여 향상되었습니다. Windows Forms 기능이 있는 애플리케이션은 완전히 신뢰할 수 있는 환경에서 문제 없이 실행할 수 있으며, 대부분의 기능에 액세스할 수 있지만 부분적으로 신뢰할 수 있는 환경에서도 실행할 수 있습니다. Windows Forms 컨트롤은 브라우저에서 별다른 어려움 없이 간단하게 호스팅될 수 있지만, Windows Forms의 ActiveX 컨트롤은 향상된 보안 기능을 사용할 수 없습니다. ActiveX 컨트롤을 실행 하려면으로 설정 되는 비관리 코드 권한이 있어야 합니다 <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A?displayProperty=nameWithType> 속성입니다. 보안 및 비관리 코드 권한에 대 한 자세한 내용은 참조 하세요. <xref:System.Security.Permissions.SecurityPermissionAttribute>합니다.  
+- **보안** 공용 언어 런타임이 코드 액세스 보안과 관련하여 향상되었습니다. Windows Forms 기능이 있는 애플리케이션은 완전히 신뢰할 수 있는 환경에서 문제 없이 실행할 수 있으며, 대부분의 기능에 액세스할 수 있지만 부분적으로 신뢰할 수 있는 환경에서도 실행할 수 있습니다. Windows Forms 컨트롤은 브라우저에서 별다른 어려움 없이 간단하게 호스팅될 수 있지만, Windows Forms의 ActiveX 컨트롤은 향상된 보안 기능을 사용할 수 없습니다. ActiveX 컨트롤을 실행 하려면으로 설정 되는 비관리 코드 권한이 있어야 합니다 <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A?displayProperty=nameWithType> 속성입니다. 보안 및 비관리 코드 권한에 대 한 자세한 내용은 참조 하세요. <xref:System.Security.Permissions.SecurityPermissionAttribute>합니다.  
   
--   **TCO(총 소유 비용)** Windows Form에 추가된 ActiveX 컨트롤은 해당 Windows Form과 함께 전부 배포되므로 만들어지는 파일의 크기가 상당히 커질 수 있습니다. 또한 Windows Forms에서 ActiveX 컨트롤을 사용하려면 레지스트리에 기록해야 합니다. 이 작업은 레지스트리에 기록할 필요가 없는 Windows Forms 컨트롤에 비해 사용자의 컴퓨터를 간섭할 여지가 많습니다.  
+- **TCO(총 소유 비용)** Windows Form에 추가된 ActiveX 컨트롤은 해당 Windows Form과 함께 전부 배포되므로 만들어지는 파일의 크기가 상당히 커질 수 있습니다. 또한 Windows Forms에서 ActiveX 컨트롤을 사용하려면 레지스트리에 기록해야 합니다. 이 작업은 레지스트리에 기록할 필요가 없는 Windows Forms 컨트롤에 비해 사용자의 컴퓨터를 간섭할 여지가 많습니다.  
   
     > [!NOTE]
     >  ActiveX 컨트롤을 사용하려면 COM interop 래퍼를 사용해야 합니다. 자세한 내용은 [Visual Basic 및 Visual C#의 COM 상호 운용성](~/docs/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)을 참조하세요.  

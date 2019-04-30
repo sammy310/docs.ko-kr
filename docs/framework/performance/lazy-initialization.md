@@ -10,18 +10,18 @@ ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949944"
 ---
 # <a name="lazy-initialization"></a>초기화 지연
 개체 *초기화 지연*은 개체를 처음 사용할 때까지 생성이 지연된다는 의미입니다. (이 항목의 경우 *초기화 지연*과 *인스턴스화 지연*은 동의어임). 초기화 지연은 기본적으로 성능을 향상시키는 데 사용하며, 불필요한 계산을 방지하고, 프로그램 메모리 요구 사항을 줄입니다. 다음은 가장 일반적인 시나리오입니다.  
   
--   만드는 데 비용이 많이 드는 개체가 있으며 프로그램에서 이 개체를 사용하지 않는 경우가 있습니다. 예를 들어 초기화되기 위해 데이터베이스 연결이 필요한 큰 `Order` 개체 배열이 포함된 `Orders` 속성이 있는 `Customer` 개체가 메모리에 있다고 가정합니다. 사용자는 주문을 표시하거나 계산에서 데이터를 사용하도록 요청하지 않으면 시스템 메모리 또는 계산 주기를 사용하여 만들 이유가 없습니다. `Lazy<Orders>`를 사용하여 `Orders` 개체의 초기화 지연을 선언하면 개체를 사용하지 않을 때 시스템 리소스 낭비를 방지할 수 있습니다.  
+- 만드는 데 비용이 많이 드는 개체가 있으며 프로그램에서 이 개체를 사용하지 않는 경우가 있습니다. 예를 들어 초기화되기 위해 데이터베이스 연결이 필요한 큰 `Order` 개체 배열이 포함된 `Orders` 속성이 있는 `Customer` 개체가 메모리에 있다고 가정합니다. 사용자는 주문을 표시하거나 계산에서 데이터를 사용하도록 요청하지 않으면 시스템 메모리 또는 계산 주기를 사용하여 만들 이유가 없습니다. `Lazy<Orders>`를 사용하여 `Orders` 개체의 초기화 지연을 선언하면 개체를 사용하지 않을 때 시스템 리소스 낭비를 방지할 수 있습니다.  
   
--   만드는 데 비용이 많이 드는 개체가 있고 다른 비용이 많이 드는 작업이 완료될 때까지 생성을 지연시키려는 경우가 있습니다. 예를 들어, 프로그램을 시작할 때 여러 개체 인스턴스를 로드하지만 그중 일부만 즉시 필요합니다. 필요한 개체를 만들 때까지 필요하지 않은 개체의 초기화를 지연하여 프로그램의 시작 성능을 향상시킬 수 있습니다.  
+- 만드는 데 비용이 많이 드는 개체가 있고 다른 비용이 많이 드는 작업이 완료될 때까지 생성을 지연시키려는 경우가 있습니다. 예를 들어, 프로그램을 시작할 때 여러 개체 인스턴스를 로드하지만 그중 일부만 즉시 필요합니다. 필요한 개체를 만들 때까지 필요하지 않은 개체의 초기화를 지연하여 프로그램의 시작 성능을 향상시킬 수 있습니다.  
   
  초기화 지연을 수행하도록 고유 코드를 작성할 수 있지만 <xref:System.Lazy%601>를 대신 사용하는 것이 좋습니다. <xref:System.Lazy%601> 및 관련 유형에서도 스레드로부터 안전을 지원하고 일관된 예외 전파 정책을 제공합니다.  
   
@@ -128,11 +128,11 @@ ms.locfileid: "59182301"
   
  <xref:System.Threading.ThreadLocal%601>에서는 <xref:System.Lazy%601>와 거의 동일한 방식으로 개체를 래핑합니다. 단, 다음과 같은 중요한 차이점이 있습니다.  
   
--   각 스레드가 다른 스레드에서 액세스할 수 없는 고유한 개인 데이터를 사용하여 스레드 지역 변수를 초기화합니다.  
+- 각 스레드가 다른 스레드에서 액세스할 수 없는 고유한 개인 데이터를 사용하여 스레드 지역 변수를 초기화합니다.  
   
--   <xref:System.Threading.ThreadLocal%601.Value%2A?displayProperty=nameWithType> 속성은 읽기-쓰기이고 여러 번 수정할 수 있습니다. 따라서 예외 전파에 영향을 미칠 수 있습니다. 예를 들어 하나의 `get` 작업에서는 예외가 throw될 수 있지만, 다른 작업에서는 성공적으로 값을 초기화할 수 있습니다.  
+- <xref:System.Threading.ThreadLocal%601.Value%2A?displayProperty=nameWithType> 속성은 읽기-쓰기이고 여러 번 수정할 수 있습니다. 따라서 예외 전파에 영향을 미칠 수 있습니다. 예를 들어 하나의 `get` 작업에서는 예외가 throw될 수 있지만, 다른 작업에서는 성공적으로 값을 초기화할 수 있습니다.  
   
--   초기화 대리자가 제공되지 않으면 <xref:System.Threading.ThreadLocal%601>에서 형식의 기본값을 사용하여 래핑된 형식을 초기화합니다. 이런 점에서 <xref:System.Threading.ThreadLocal%601>은 <xref:System.ThreadStaticAttribute> 특성과 일치합니다.  
+- 초기화 대리자가 제공되지 않으면 <xref:System.Threading.ThreadLocal%601>에서 형식의 기본값을 사용하여 래핑된 형식을 초기화합니다. 이런 점에서 <xref:System.Threading.ThreadLocal%601>은 <xref:System.ThreadStaticAttribute> 특성과 일치합니다.  
   
  다음 예제에서는 `ThreadLocal<int>` 인스턴스에 액세스하는 모든 스레드가 고유한 데이터 복사본을 가져옵니다.  
   

@@ -8,20 +8,20 @@ ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7261e5ce06a4ac20b1e7c816ababf8c8ba129b29
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949281"
 ---
 # <a name="jit-tracing-etw-events"></a>JIT 추적 ETW 이벤트
 <a name="top"></a> 이들 이벤트는 JIT(Just-In-Time) 인라인 처리 및 JIT 마무리 호출의 성공 또는 실패와 관련된 정보를 수집합니다.  
   
  JIT 추적 이벤트는 다음 두 범주로 구성됩니다.  
   
--   [JIT 인라인 처리 이벤트](#jit_inlining_events)  
+- [JIT 인라인 처리 이벤트](#jit_inlining_events)  
   
--   [JIT 마무리 호출 이벤트](#jit_tail_call_events)  
+- [JIT 마무리 호출 이벤트](#jit_tail_call_events)  
   
 <a name="jit_inlining_events"></a>   
 ## <a name="jit-inlining-events"></a>JIT 인라인 처리 이벤트  

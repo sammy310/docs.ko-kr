@@ -1,5 +1,5 @@
 ---
-title: '방법: 시계의 상태가 변경될 때 알림 받기'
+title: '방법: 시계 상태 변경 시 알림 받기'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - notifications [WPF], clocks' state changes
 ms.assetid: ecb10fc9-d0c2-45c3-b0a1-7b11baa733da
 ms.openlocfilehash: dc3fffb88ce59ceb908d6febd2f078820513b641
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942140"
 ---
-# <a name="how-to-receive-notification-when-a-clocks-state-changes"></a>방법: 시계의 상태가 변경될 때 알림 받기
+# <a name="how-to-receive-notification-when-a-clocks-state-changes"></a>방법: 시계 상태 변경 시 알림 받기
 시계의 <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> 이벤트가 발생할 때 해당 <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> 시계가 시작 되거나 중지 될 때와 같은 유효 하지 않게 합니다. 이 이벤트를 사용 하 여 직접 등록할 수 있습니다는 <xref:System.Windows.Media.Animation.Clock>를 사용 하 여 등록할 수 있습니다 또는 <xref:System.Windows.Media.Animation.Timeline>.  
   
  다음 예제에서는 <xref:System.Windows.Media.Animation.Storyboard> 두 개의 <xref:System.Windows.Media.Animation.DoubleAnimation> 개체 두 개의 사각형의 너비를 애니메이션을 적용 하는 데 사용 됩니다. <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> 이벤트 clock 상태 변경 내용을 수신 대기 하는 데 사용 됩니다.  

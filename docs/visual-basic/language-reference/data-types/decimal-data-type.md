@@ -21,11 +21,11 @@ helpviewer_keywords:
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
 ms.openlocfilehash: 4d530a8c1f85d2f0045184c05df63849047a8204
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971772"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Decimal 데이터 형식(Visual Basic)
 부호 있는 10의 거듭제곱으로 조정 된 96 비트 (12 바이트) 정수 숫자를 나타내는 128 비트 (16 바이트) 값을 저장 합니다. 배율은 소수점의 오른쪽에 자릿수를 지정합니다. 이 범위는 0에서 28입니다. 가장 큰 가능한 값은 소수 자릿수가 0 (소수 자릿수 없이)를 사용 하 여 + /-79228162514264337593543950335 (7 + /-.9228162514264337593543950335E + 28). 소수 자릿수가 28 + /-7.9228162514264337593543950335 사이, 가장 큰 값은와 0.0000000000000000000000000001 1E-28) (+ + /-0이 아닌 가장 작은 값입니다.  
@@ -37,13 +37,13 @@ ms.locfileid: "58834103"
   
 ## <a name="programming-tips"></a>프로그래밍 팁  
   
--   **전체 자릿수입니다.** `Decimal` 부동 소수점 데이터 형식이 아닙니다. `Decimal` 구조 부호 비트가 및 자릿수를 소수 부분 값의 부분을 지정 하는 요소와 함께 이진 정수 값을 보유 합니다. 이 인해 `Decimal` 숫자 부동 소수점 형식 보다 메모리에 대 한 보다 정확한 표현 (`Single` 고 `Double`).  
+- **전체 자릿수입니다.** `Decimal` 부동 소수점 데이터 형식이 아닙니다. `Decimal` 구조 부호 비트가 및 자릿수를 소수 부분 값의 부분을 지정 하는 요소와 함께 이진 정수 값을 보유 합니다. 이 인해 `Decimal` 숫자 부동 소수점 형식 보다 메모리에 대 한 보다 정확한 표현 (`Single` 고 `Double`).  
   
--   **성능.** `Decimal` 데이터 형식은 모든 숫자 형식의 가장 느린 작업입니다. 데이터 형식을 선택 하기 전에 성능에 대해 전체 자릿수의 중요성을 평가 해야 합니다.  
+- **성능.** `Decimal` 데이터 형식은 모든 숫자 형식의 가장 느린 작업입니다. 데이터 형식을 선택 하기 전에 성능에 대해 전체 자릿수의 중요성을 평가 해야 합니다.  
   
--   **확대 합니다.** 합니다 `Decimal` 데이터 형식으로 확장 되는지를 `Single` 또는 `Double`합니다. 즉, 변환할 수 있습니다 `Decimal` 발생 하지 않고 이러한 형식 중 하나에 <xref:System.OverflowException?displayProperty=nameWithType> 오류입니다.  
+- **확대 합니다.** 합니다 `Decimal` 데이터 형식으로 확장 되는지를 `Single` 또는 `Double`합니다. 즉, 변환할 수 있습니다 `Decimal` 발생 하지 않고 이러한 형식 중 하나에 <xref:System.OverflowException?displayProperty=nameWithType> 오류입니다.  
   
--   **뒤에 오는 0입니다.** Visual Basic의 후행 0을 저장 하지 않습니다는 `Decimal` 리터럴. 그러나는 `Decimal` 변수 계산을 통해 얻은 후행 0 문자를 유지 합니다. 다음은 이에 대한 예입니다.  
+- **뒤에 오는 0입니다.** Visual Basic의 후행 0을 저장 하지 않습니다는 `Decimal` 리터럴. 그러나는 `Decimal` 변수 계산을 통해 얻은 후행 0 문자를 유지 합니다. 다음은 이에 대한 예입니다.  
   
     ```  
     Dim d1, d2, d3, d4 As Decimal  
@@ -59,9 +59,9 @@ ms.locfileid: "58834103"
   
      d1 = 2.375, d2 = 1.625, d3 = 4.000, d4 = 4  
   
--   **형식 문자입니다.** 리터럴 형식 문자 `D`를 리터럴에 추가하면 `Decimal` 데이터 형식이 됩니다. 식별자 형식 문자 `@`를 식별자에 추가하면 `Decimal`가 됩니다.  
+- **형식 문자입니다.** 리터럴 형식 문자 `D`를 리터럴에 추가하면 `Decimal` 데이터 형식이 됩니다. 식별자 형식 문자 `@`를 식별자에 추가하면 `Decimal`가 됩니다.  
   
--   **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.Decimal?displayProperty=nameWithType> 구조체입니다.  
+- **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.Decimal?displayProperty=nameWithType> 구조체입니다.  
   
 ## <a name="range"></a>범위  
  사용 해야 할 수는 `D` 를 큰 값으로 할당 하는 문자를 입력을 `Decimal` 변수 또는 상수입니다. 컴파일러는 리터럴으로 해석 하기 때문에이 요구 사항은 `Long` 않으면 리터럴 형식 문자는 다음 예제와 같이 리터럴, 따릅니다.  

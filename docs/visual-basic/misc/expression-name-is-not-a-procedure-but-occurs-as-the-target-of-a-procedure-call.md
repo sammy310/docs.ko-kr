@@ -5,11 +5,11 @@ f1_keywords:
 - vbrExpressionNotProcedure
 ms.assetid: 59169d44-a279-4aca-8f14-fba8d69d8959
 ms.openlocfilehash: 802f58a888a8e8e8e75ab3d539cc1032647af64c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970289"
 ---
 # <a name="expression-name-is-not-a-procedure-but-occurs-as-the-target-of-a-procedure-call"></a>식 '\<이름 >'은 (는) 프로시저가 있지만 프로시저 호출의 대상으로 발생 합니다.
 프로시저가 아닌 식에 대한 프로시저 호출을 만들었습니다.  

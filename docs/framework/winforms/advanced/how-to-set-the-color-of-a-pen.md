@@ -10,11 +10,11 @@ helpviewer_keywords:
 - colored pens
 ms.assetid: a9df06f9-a6d5-4d9b-a2d1-583943540775
 ms.openlocfilehash: dc067f5a131951bf3af7adc68e11b948d40fc0ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966878"
 ---
 # <a name="how-to-set-the-color-of-a-pen"></a>방법: 펜 색 설정
 이 예제에서는 기존 색이 달라 <xref:System.Drawing.Pen> 개체  
@@ -27,7 +27,7 @@ ms.locfileid: "59213417"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   A <xref:System.Drawing.Pen> 개체인 `myPen`합니다.  
+- A <xref:System.Drawing.Pen> 개체인 `myPen`합니다.  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
  호출 해야 <xref:System.Drawing.Pen.Dispose%2A> 시스템 리소스를 사용 하는 개체에 (같은 <xref:System.Drawing.Pen> 개체)을 사용 하 여 작업을 마친 후 합니다.  

@@ -6,8 +6,8 @@ ms.openlocfilehash: 1ff83d95dae06b787f8bc7ec8e1bf0f45c226532
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943938"
 ---
 # <a name="custom-binding-security"></a>Custom Binding Security
 이 샘플에서는 사용자 지정 바인딩을 사용하여 보안을 구성하는 방법을 보여 줍니다. 여기서는 사용자 지정 바인딩을 사용하여 메시지를 안전하게 전송하고 메시지 수준 보안을 가능하게 하는 방법을 보여 줍니다. 이러한 방법은 클라이언트와 서비스 간에 메시지를 전송하는 데 보안 전송이 요구되면서 동시에 메시지가 메시지 수준에서 보호되어야 하는 경우에 유용합니다. 이 구성은 시스템 제공 바인딩에서는 지원되지 않습니다.
@@ -19,9 +19,9 @@ ms.locfileid: "59973613"
 
  서비스 구성에서는 다음을 지원하는 사용자 지정 바인딩을 정의합니다.
 
--   TLS/SSL 프로토콜을 사용하여 보호되는 TCP 통신
+- TLS/SSL 프로토콜을 사용하여 보호되는 TCP 통신
 
--   Windows 메시지 보안
+- Windows 메시지 보안
 
  사용자 지정 바인딩 구성은 메시지 수준 보안을 동시에 사용하도록 하여 보안 전송을 가능하게 합니다. 바인딩 요소의 순서는 사용자 지정 바인딩을 정의 된 각 채널 스택의 계층을 나타내므로 중요 (참조 [사용자 지정 바인딩을](../../../../docs/framework/wcf/extending/custom-bindings.md)). 다음 샘플 구성과 같이 사용자 지정 바인딩은 서비스 및 클라이언트 구성 파일에 정의합니다.
 
@@ -76,7 +76,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
  다음 부분에는 이 샘플에 적용되는 배치 파일을 적절한 구성에서 실행하도록 수정하는 데 도움이 되는 여러 관련 단원의 간략한 개요가 소개되어 있습니다.
 
--   서버 인증서 만들기
+- 서버 인증서 만들기
 
      Setup.bat 파일에서 다음 줄은 사용할 서버 인증서를 만듭니다. `%SERVER_NAME%`변수는 서버 이름을 지정합니다. 이 변수를 변경하여 고유의 서버 이름을 지정합니다. 이 배치 파일에서 서버 이름의 기본값은 localhost입니다.
 
@@ -92,7 +92,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   클라이언트의 신뢰할 수 있는 인증서 저장소에 서버 인증서 설치
+- 클라이언트의 신뢰할 수 있는 인증서 저장소에 서버 인증서 설치
 
      Setup.bat 파일에서 다음 줄은 클라이언트의 신뢰할 수 있는 사용자 저장소로 서버 인증서를 복사합니다. 이 단계는 Makecert.exe에서 생성한 인증서를 클라이언트 컴퓨터에서 절대적으로 신뢰하지는 않기 때문에 필요합니다. Microsoft에서 발급한 인증서와 같이 클라이언트가 신뢰할 수 있는 루트 인증서를 기반으로 하는 인증서가 이미 있는 경우 클라이언트 인증서 저장소를 서버 인증서로 채우는 이 단계를 수행할 필요가 없습니다.
 
@@ -128,36 +128,36 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
 1. 서비스 컴퓨터에서 다음을 수행합니다.  
   
-    1.  서비스 컴퓨터에서 servicemodelsamples라는 가상 디렉터리를 만듭니다.  
+    1. 서비스 컴퓨터에서 servicemodelsamples라는 가상 디렉터리를 만듭니다.  
   
-    2.  \inetpub\wwwroot\servicemodelsamples에서 서비스 컴퓨터의 가상 디렉터리로 서비스 프로그램 파일을 복사합니다. \bin 하위 디렉터리에 파일을 복사해야 합니다.  
+    2. \inetpub\wwwroot\servicemodelsamples에서 서비스 컴퓨터의 가상 디렉터리로 서비스 프로그램 파일을 복사합니다. \bin 하위 디렉터리에 파일을 복사해야 합니다.  
   
-    3.  Setup.bat 및 Cleanup.bat 파일을 서비스 컴퓨터로 복사합니다.  
+    3. Setup.bat 및 Cleanup.bat 파일을 서비스 컴퓨터로 복사합니다.  
   
-    4.  관리자 권한으로 연 Visual Studio에 대 한 개발자 명령 프롬프트에서 다음 명령을 실행: `Setup.bat service`합니다. 이렇게 하면 배치 파일이 실행된 컴퓨터의 이름과 일치하는 주체 이름을 가진 서비스 인증서가 만들어집니다.  
+    4. 관리자 권한으로 연 Visual Studio에 대 한 개발자 명령 프롬프트에서 다음 명령을 실행: `Setup.bat service`합니다. 이렇게 하면 배치 파일이 실행된 컴퓨터의 이름과 일치하는 주체 이름을 가진 서비스 인증서가 만들어집니다.  
   
         > [!NOTE]
         >  Setup.bat 배치 파일은 Visual Studio 2010 명령 프롬프트에서 실행되도록 디자인되었습니다. PATH 환경 변수는 SDK가 설치되는 디렉터리를 가리켜야 합니다. 이 환경 변수는 Visual Studio 2010 명령 프롬프트 내에서 자동으로 설정됩니다.
 
-    5.  변경 된 [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) 이전 단계에서 생성 된 인증서의 주체 이름을 반영 하도록 Service.exe.config 파일에서 합니다.
+    5. 변경 된 [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) 이전 단계에서 생성 된 인증서의 주체 이름을 반영 하도록 Service.exe.config 파일에서 합니다.
 
-    6.  명령 프롬프트에서 Service.exe를 실행합니다.
+    6. 명령 프롬프트에서 Service.exe를 실행합니다.
 
 2. 클라이언트 컴퓨터에서 다음을 수행합니다.
 
-    1.  \client\bin\ 폴더에서 클라이언트 컴퓨터로 클라이언트 프로그램 파일을 복사합니다. Cleanup.bat 파일도 복사합니다.
+    1. \client\bin\ 폴더에서 클라이언트 컴퓨터로 클라이언트 프로그램 파일을 복사합니다. Cleanup.bat 파일도 복사합니다.
 
-    2.  Cleanup.bat를 실행하여 이전 샘플에서 이전의 모든 인증서를 제거합니다.
+    2. Cleanup.bat를 실행하여 이전 샘플에서 이전의 모든 인증서를 제거합니다.
 
-    3.  관리자 권한으로 Visual Studio 용 개발자 명령 프롬프트를 열고 서비스 컴퓨터에서 다음 명령을 실행 하는 서비스의 인증서를 내보냅니다 (대체 `%SERVER_NAME%` 컴퓨터의 정규화 된 이름을 사용 하 여 위치 서비스가 실행 되는):
+    3. 관리자 권한으로 Visual Studio 용 개발자 명령 프롬프트를 열고 서비스 컴퓨터에서 다음 명령을 실행 하는 서비스의 인증서를 내보냅니다 (대체 `%SERVER_NAME%` 컴퓨터의 정규화 된 이름을 사용 하 여 위치 서비스가 실행 되는):
 
         ```
         certmgr -put -r LocalMachine -s My -c -n %SERVER_NAME% %SERVER_NAME%.cer
         ```
 
-    4.  %SERVER_NAME%.cer을 클라이언트 컴퓨터에 복사합니다. %SERVER_NAME%은 서비스가 실행되고 있는 컴퓨터의 정규화된 이름으로 바꿉니다.
+    4. %SERVER_NAME%.cer을 클라이언트 컴퓨터에 복사합니다. %SERVER_NAME%은 서비스가 실행되고 있는 컴퓨터의 정규화된 이름으로 바꿉니다.
 
-    5.  관리자 권한으로 Visual Studio 용 개발자 명령 프롬프트를 열고 클라이언트 컴퓨터에서 다음 명령을 실행 하는 서비스의 인증서를 가져옵니다 (컴퓨터의 정규화 된 이름 사용 하 여 % SERVER_NAME % 대체 위치는 서비스가 실행 되 고):
+    5. 관리자 권한으로 Visual Studio 용 개발자 명령 프롬프트를 열고 클라이언트 컴퓨터에서 다음 명령을 실행 하는 서비스의 인증서를 가져옵니다 (컴퓨터의 정규화 된 이름 사용 하 여 % SERVER_NAME % 대체 위치는 서비스가 실행 되 고):
 
         ```
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople
@@ -165,7 +165,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
          신뢰할 수 있는 발급자에 의해 인증서가 발급된 경우 c, d 및 e 단계는 필요하지 않습니다.
 
-    6.  클라이언트의 App.config 파일을 다음과 같이 수정합니다.
+    6. 클라이언트의 App.config 파일을 다음과 같이 수정합니다.
 
         ```xml
         <client>
@@ -178,10 +178,10 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
         </client>
         ```
 
-    7.  도메인 환경에서 NetworkService 또는 LocalSystem 계정이 아닌 계정으로 서비스가 실행 중이면 서비스를 실행하는 데 사용되는 해당 계정에 기초하여 적절한 UPN 또는 SPN을 설정하기 위해 클라이언트의 App.config 파일에서 서비스 엔드포인트에 대한 엔드포인트 ID를 수정해야 할 수 있습니다. 끝점 id에 대 한 자세한 내용은 참조는 [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md) 항목입니다.
+    7. 도메인 환경에서 NetworkService 또는 LocalSystem 계정이 아닌 계정으로 서비스가 실행 중이면 서비스를 실행하는 데 사용되는 해당 계정에 기초하여 적절한 UPN 또는 SPN을 설정하기 위해 클라이언트의 App.config 파일에서 서비스 엔드포인트에 대한 엔드포인트 ID를 수정해야 할 수 있습니다. 끝점 id에 대 한 자세한 내용은 참조는 [서비스 Id 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md) 항목입니다.
 
-    8.  명령 프롬프트에서 Client.exe를 실행합니다.
+    8. 명령 프롬프트에서 Client.exe를 실행합니다.
 
 ### <a name="to-clean-up-after-the-sample"></a>샘플 실행 후 정리를 수행하려면
 
--   샘플 실행을 완료한 후 샘플 폴더에서 Cleanup.bat를 실행합니다.
+- 샘플 실행을 완료한 후 샘플 폴더에서 Cleanup.bat를 실행합니다.

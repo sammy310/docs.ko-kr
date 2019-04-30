@@ -7,11 +7,11 @@ helpviewer_keywords:
 - examples [Windows Forms], recoloring images
 ms.assetid: f28c54fd-9c80-4f6f-b242-55f7ffcda84b
 ms.openlocfilehash: b6ec90f5102b562a252218be84aa7b3141e05b83
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948072"
 ---
 # <a name="recoloring-images"></a>이미지 다시 칠하기
 다시 칠하기는 프로세스 이미지 색 조정입니다. 몇 가지 예가 다시 칠하기에 다른 색을 기준으로 색의 강도 조정, 모든 색 대비를 밝기 조정 및 회색 음영으로 색을 변환할 단색을 변경 됩니다.  

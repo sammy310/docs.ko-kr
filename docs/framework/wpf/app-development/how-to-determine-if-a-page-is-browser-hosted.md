@@ -10,10 +10,10 @@ helpviewer_keywords:
 ms.assetid: 737e0f26-8371-49b4-9579-70879e51e1aa
 ms.openlocfilehash: d154de2f885101d1bd0c4613dfb1604be8acbe6a
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59978343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947812"
 ---
 # <a name="how-to-determine-if-a-page-is-browser-hosted"></a>방법: 페이지가 브라우저에 호스트되는지 여부 확인
 확인 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.Page> 브라우저에서 호스팅됩니다.  

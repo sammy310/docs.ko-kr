@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WF [WF], glossary
 ms.assetid: ab682b2f-3779-45ca-b831-b7c03d7dbb3a
 ms.openlocfilehash: 61d9acab1161302937e240eb8ebb506ca9f1585c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945628"
 ---
 # <a name="windows-workflow-foundation-glossary-for-net-framework-45"></a>.NET Framework 4.5용 Windows Workflow Foundation 용어집
 
@@ -20,7 +20,7 @@ ms.locfileid: "57482849"
 
 |용어|정의|
 |----------|----------------|
-|작업(Activity)|Windows Workflow Foundation의 프로그램 동작 단위입니다. 단일 활동을 여러 개 결합하여 보다 복잡한 활동을 작성할 수 있습니다.|
+|작업(activity)|Windows Workflow Foundation의 프로그램 동작 단위입니다. 단일 활동을 여러 개 결합하여 보다 복잡한 활동을 작성할 수 있습니다.|
 |작업 동작(activity action)|워크플로 및 활동 실행을 위한 콜백을 노출하는 데 사용되는 데이터 구조입니다.|
 |인수(argument)|활동 내부/외부로의 데이터 흐름을 정의합니다. 각 인수에는 지정된 방향(입력, 출력 또는 입력/출력)이 있습니다. 이러한 방향은 활동의 입력, 출력 및 입력/출력 매개 변수를 나타냅니다.|
 |책갈피(bookmark)|활동을 일시 중단하고 다시 시작할 때까지 대기할 수 있는 지점입니다.|

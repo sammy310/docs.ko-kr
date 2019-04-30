@@ -6,8 +6,8 @@ ms.openlocfilehash: 53592db03c88e673d529ef04f2fbc6e182897457
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946668"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>인증에 대한 확장된 보호 ReadMe 샘플
 확장 된 보호는 공격자 ("man-에-the-중간")는 클라이언트의 자격 증명을 가로채 고 하는 클라이언트의 의도 한 서버의 보안 리소스에 액세스 하는 데 사용 중간자 개입 (mitm 메시지 가로채기) 공격 으로부터 보호 하기 위해 보안 이니셔티브입니다.  
@@ -27,9 +27,9 @@ ms.locfileid: "59979123"
   
 4. 이 샘플을 사용하려면 클라이언트에서 서버와의 보안 채널을 설정해야 하므로, IIS(인터넷 정보 서비스) 관리자에서 설치할 수 있는 서버 인증서가 있어야 합니다.  
   
-    1.  IIS 관리자-> 엽니다 (기능 보기 탭)에서 서버 인증서.  
+    1. IIS 관리자-> 엽니다 (기능 보기 탭)에서 서버 인증서.  
   
-    2.  이 샘플을 테스트하기 위해 자체 서명된 인증서를 만들 수 있습니다. Internet Explorer에서 인증서가 안전하지 않다는 메시지가 표시되지 않도록 하려면 인증서를 신뢰할 수 있는 인증서 루트 인증 기관 저장소에 설치하면 됩니다.  
+    2. 이 샘플을 테스트하기 위해 자체 서명된 인증서를 만들 수 있습니다. Internet Explorer에서 인증서가 안전하지 않다는 메시지가 표시되지 않도록 하려면 인증서를 신뢰할 수 있는 인증서 루트 인증 기관 저장소에 설치하면 됩니다.  
   
 5. 기본 웹 사이트의 작업 창으로 이동하여 편집 클릭-> 바인딩을 사이트입니다. 그런 다음 HTTPS 유형이 없으면 포트 번호 443으로 추가하고 위 단계에서 만든 SSL 인증서를 할당합니다.  
   

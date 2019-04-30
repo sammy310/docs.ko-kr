@@ -12,11 +12,11 @@ ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce97089ec71fc910079910957e784605387f3e06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966881"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>방법: 명령줄에서 Windows Forms 응용 프로그램 만들기
 다음 절차에서는 명령줄에서 Windows Forms 응용 프로그램을 만들고 실행하기 위해 완료해야 하는 기본 단계를 설명합니다. Visual Studio에서는 이러한 절차가 광범위하게 지원됩니다.  또한 참조 [연습: WPF에서 호스팅하는 Windows Forms 컨트롤](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)합니다.  
@@ -44,11 +44,11 @@ ms.locfileid: "59299874"
   
 4. 클래스에 `Main` 메서드를 추가합니다.  
   
-    1.  적용 된 <xref:System.STAThreadAttribute> C# `Main` Windows Forms 응용 프로그램을 지정 하는 메서드는 단일 스레드 아파트를 합니다. (특성 필요 없는 Visual basic에서는 기본적으로 단일 스레드 아파트 모델을 사용 하 여 Visual Basic을 사용 하 여 개발한 Windows forms 응용 프로그램 때문입니다.)  
+    1. 적용 된 <xref:System.STAThreadAttribute> C# `Main` Windows Forms 응용 프로그램을 지정 하는 메서드는 단일 스레드 아파트를 합니다. (특성 필요 없는 Visual basic에서는 기본적으로 단일 스레드 아파트 모델을 사용 하 여 Visual Basic을 사용 하 여 개발한 Windows forms 응용 프로그램 때문입니다.)  
   
-    2.  호출 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 응용 프로그램에 운영 체제 스타일을 적용 합니다.  
+    2. 호출 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 응용 프로그램에 운영 체제 스타일을 적용 합니다.  
   
-    3.  폼 인스턴스를 만들고 실행합니다.  
+    3. 폼 인스턴스를 만들고 실행합니다.  
   
      [!code-csharp[System.Windows.Forms.BasicForm#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.BasicForm#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#5)]  
@@ -59,11 +59,11 @@ ms.locfileid: "59299874"
   
 2. 폼을 컴파일합니다.  
   
-    -   C#을 사용 하는 경우 다음을 입력 합니다. `csc form1.cs`  
+    - C#을 사용 하는 경우 다음을 입력 합니다. `csc form1.cs`  
   
          `-or-`  
   
-    -   Visual Basic을 사용 하는 경우 다음을 입력 합니다. `vbc form1.vb`  
+    - Visual Basic을 사용 하는 경우 다음을 입력 합니다. `vbc form1.vb`  
   
 3. 명령 프롬프트에서 다음을 입력 합니다. `Form1.exe`  
   
@@ -111,7 +111,7 @@ ms.locfileid: "59299874"
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
   
--   코드를 컴파일하려면 응용 프로그램을 컴파일 및 실행하는 방법을 설명하는 이전 절차의 지침을 따릅니다.  
+- 코드를 컴파일하려면 응용 프로그램을 컴파일 및 실행하는 방법을 설명하는 이전 절차의 지침을 따릅니다.  
   
 ## <a name="see-also"></a>참고자료
 

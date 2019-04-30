@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:FieldModifier attribute
 ms.assetid: ed427cd4-2f35-4d24-bd2f-0fa7b71ec248
 ms.openlocfilehash: c20564bcf8a25b1b59887fbefe6419671e0d6c03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971873"
 ---
 # <a name="xfieldmodifier-directive"></a>x:FieldModifier 지시문
 명명 된 개체 참조에 대 한 필드 정의 된 XAML 컴파일 동작을 수정 <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> 대신 액세스는 <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> 기본 동작입니다.  
@@ -36,11 +36,11 @@ ms.locfileid: "59144549"
   
  에 대 한 값을 `x:FieldModifier` 특성 프로그래밍 언어에 따라 다르며 용도 특정 프레임 워크에서 다를 수 있습니다. 문자열을 사용 하 여 각 언어 구현 하는 방법에 따라 달라 집니다 해당 <xref:System.CodeDom.Compiler.CodeDomProvider> 및 반환에 대 한 의미를 정의 하는 형식 변환기 <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> 및 <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>, 해당 언어는 대/소문자 구분 여부 및 합니다.  
   
--   C#, 문자열 지정에 전달할 <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> 는 `public`합니다.  
+- C#, 문자열 지정에 전달할 <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> 는 `public`합니다.  
   
--   Microsoft Visual Basic.net에서 문자열 지정에 전달할 <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> 는 `Public`합니다.  
+- Microsoft Visual Basic.net에서 문자열 지정에 전달할 <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> 는 `Public`합니다.  
   
--   에 대 한 [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)], XAML에 대 한 대상이 없습니다. 현재 존재 하며 따라서 전달할 문자열 정의 되지 않습니다.  
+- 에 대 한 [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)], XAML에 대 한 대상이 없습니다. 현재 존재 하며 따라서 전달할 문자열 정의 되지 않습니다.  
   
  지정할 수도 있습니다 <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> (`internal` 에서 C#를 `Friend` Visual Basic의) 지정 하지만 <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> 일반적이 지 않습니다 때문에 `NotPublic` 동작은 이미 기본으로 합니다.  
   

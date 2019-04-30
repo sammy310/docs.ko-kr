@@ -6,11 +6,11 @@ helpviewer_keywords:
 - enumerating the contents of a Visual [WPF]
 ms.assetid: 2974ddb3-2997-4713-8fd2-e93d549c58a8
 ms.openlocfilehash: 4f0afc1075fe66c7f154fcef3cd883709db55316
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947474"
 ---
 # <a name="how-to-enumerate-drawing-content-of-a-visual"></a>방법: 시각적 개체의 그리기 콘텐츠 열거
 합니다 <xref:System.Windows.Media.Drawing> 의 콘텐츠를 열거 하는 것에 대 한 개체 모델을 제공 하는 개체는 <xref:System.Windows.Media.Visual>합니다.  

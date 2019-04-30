@@ -8,11 +8,11 @@ helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
 ms.openlocfilehash: d327605c084cd5fb1c65fbb786e871b421730b83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946681"
 ---
 # <a name="programming-wcf-security"></a>WCF 보안 프로그래밍
 이 항목에서는 보안 Windows Communication Foundation (WCF) 응용 프로그램을 만드는 데 기본 프로그래밍 작업을 설명 합니다. 이 항목에서는 인증, 기밀성 및 무결성을 통틀어 *전송 보안*합니다. 이 항목에서는 권한 부여 (리소스 또는 서비스에 대 한 액세스 제어);를 다루지 않습니다. 권한 부여에 대 한 내용은 참조 하세요 [권한 부여](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)합니다.  
@@ -33,17 +33,17 @@ ms.locfileid: "59313322"
   
      다음과 같은 세 가지 선택 옵션이 있습니다.  
   
-    1.  `Transport`  
+    1. `Transport`  
   
          전송 보안은 선택한 바인딩에서 사용하는 메커니즘에 종속됩니다. 예를 들어, `WSHttpBinding`을 사용하는 경우 보안 메커니즘은 SSL(Secure Sockets Layer)(또한 HTTPS에 대한 메커니즘)입니다. 일반적으로 전송 보안의 주요 이점은 사용 중인 전송에 관계 없이 처리 능력이 우수하다는 점입니다. 그러나는 것은 두 가지 제한이 있습니다. 첫 번째는 전송 메커니즘에 따라 사용자를 인증 하는 데 자격 증명 형식이 결정 됩니다. 이는 서비스가 다른 형식의 자격 증명을 요구하는 다른 서비스와 상호 작용해야 하는 경우에만 단점이 됩니다. 둘째는 메시지 수준에서 보안이 적용되지 않기 때문에 종단 간 방식 대신 hop-by-hop 방식으로 보안이 구현됩니다. 이 제한은 클라이언트와 서비스 사이의 메시지 경로에 매개자가 포함되어 있는 경우에만 문제가 됩니다. 사용 하는 전송에 대 한 자세한 내용은 참조 하세요. [전송 선택](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)합니다. 전송 보안을 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [전송 보안 개요](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)합니다.  
   
-    2.  `Message`  
+    2. `Message`  
   
          메시지 보안은 모든 메시지에 메시지를 보안된 상태로 유지하는 데 필요한 헤더와 데이터가 포함되어 있음을 의미합니다. 헤더의 구성이 다양하므로 여러 자격 증명을 포함할 수 있습니다. 이는 전송 메커니즘이 제공할 수 없는 특정 자격 증명 형식을 요구하는 다른 서비스와 상호 작용할 경우나 서비스마다 다른 자격 증명 형식을 요구하는 여러 서비스에서 메시지를 사용해야 하는 경우에 유용합니다.  
   
          자세한 내용은 [메시지 보안](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)합니다.  
   
-    3.  `TransportWithMessageCredential`  
+    3. `TransportWithMessageCredential`  
   
          이 선택 옵션에서는 전송 계층을 사용하여 메시지 전송을 보안하지만, 모든 메시지에 다른 서비스에 필요한 풍부한 자격 증명이 포함되어 있습니다. 이 옵션은 전송 보안의 성능 이점과 메시지 보안의 풍부한 자격 증명 이점을 결합합니다. <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSFederationHttpBinding>, <xref:System.ServiceModel.NetPeerTcpBinding> 및 <xref:System.ServiceModel.WSHttpBinding> 바인딩에서 이 옵션을 사용할 수 있습니다.  
   
@@ -56,19 +56,19 @@ ms.locfileid: "59313322"
 ## <a name="setting-the-client-credential-type"></a>클라이언트 자격 증명 형식 설정  
  클라이언트 자격 증명 형식을 적절하게 선택합니다. 자세한 내용은 [자격 증명 유형을 선택 하면](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)합니다. 다음과 같은 클라이언트 자격 증명 형식을 사용할 수 있습니다.  
   
--   `Windows`  
+- `Windows`  
   
--   `Certificate`  
+- `Certificate`  
   
--   `Digest`  
+- `Digest`  
   
--   `Basic`  
+- `Basic`  
   
--   `UserName`  
+- `UserName`  
   
--   `NTLM`  
+- `NTLM`  
   
--   `IssuedToken`  
+- `IssuedToken`  
   
  모드 설정 방법에 따라 자격 증명 형식을 설정해야 합니다. 다음 구성 예제에 표시된 것처럼 `wsHttpBinding`을 선택하고 모드를 "Message"로 설정한 경우 메시지 요소의 `clientCredentialType` 특성 값을 `None`, `Windows`, `UserName`, `Certificate`, `IssuedToken` 중 하나로 설정할 수 있습니다.  
   

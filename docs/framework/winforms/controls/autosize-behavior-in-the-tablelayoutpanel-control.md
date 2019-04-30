@@ -12,19 +12,19 @@ helpviewer_keywords:
 - AutoSizeMode property
 ms.assetid: 9233e0c3-2fa6-405e-8701-959479b1250e
 ms.openlocfilehash: 466edeee5f45ec72ef265ef4855049c7852641b0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954351"
 ---
 # <a name="autosize-behavior-in-the-tablelayoutpanel-control"></a>TableLayoutPanel 컨트롤의 AutoSize 동작
 ## <a name="distinct-autosize-behaviors"></a>고유 AutoSize 동작  
  <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤은 다음과 같은 방법으로 자동 크기 조정 동작을 지원 합니다.  
   
--   통해 여 <xref:System.Windows.Forms.Control.AutoSize%2A> 속성  
+- 통해 여 <xref:System.Windows.Forms.Control.AutoSize%2A> 속성  
   
--   통해 합니다 <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> 속성에는 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤의 열 및 행 스타일입니다.  
+- 통해 합니다 <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> 속성에는 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤의 열 및 행 스타일입니다.  
   
 ### <a name="the-autosize-property-with-row-and-column-styles"></a>행과 열 스타일을 사용 하 여 자동 크기 조정 속성  
  다음 표에서 간의 상호 작용 합니다 <xref:System.Windows.Forms.Control.AutoSize%2A> 속성 및 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤의 열 및 행 스타일입니다.  

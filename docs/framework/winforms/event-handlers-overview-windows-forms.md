@@ -11,11 +11,11 @@ helpviewer_keywords:
 - event handlers [Windows Forms], about event handlers
 ms.assetid: 228112e1-1711-42ee-8ffa-ff3555bffe66
 ms.openlocfilehash: 05acbfaf427060d015c2445360a7d73ebe97d070
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966835"
 ---
 # <a name="event-handlers-overview-windows-forms"></a>이벤트 처리기 개요(Windows Forms)
 이벤트 처리기는 이벤트에 바인딩된 메서드입니다. 이벤트가 발생 하면 이벤트 처리기 내의 코드가 실행 됩니다. 각 이벤트 처리기는 이벤트를 제대로 처리할 수 있도록 하는 두 개의 매개 변수를 제공 합니다. 다음 예제에서는 이벤트 처리기를 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Click> 이벤트입니다.  

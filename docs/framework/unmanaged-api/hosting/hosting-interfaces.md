@@ -9,11 +9,11 @@ ms.assetid: cc64cb05-38da-418e-815a-daac8e8e26e5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e330e0d06077d1eef63cf44f31bbcbf7c3431b59
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985545"
 ---
 # <a name="hosting-interfaces"></a>호스팅 인터페이스
 이 섹션에서는 관리 되지 않는 인터페이스를 설명 합니다. 호스트 응용 프로그램에는 CLR (공용 언어 런타임) 통합을 사용할 수 있습니다.  

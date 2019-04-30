@@ -7,11 +7,11 @@ helpviewer_keywords:
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
 ms.openlocfilehash: dbc78db0a3b6763af5270840fc56af648c7c6efc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962736"
 ---
 # <a name="document-serialization-and-storage"></a>문서 serialization 및 스토리지
 Microsoft.NET Framework는 만들고 고품질 문서를 표시 하기 위한 강력한 환경을 제공 합니다.  고정 문서 및 유동 문서를 고급 모두 지 원하는 향상 된 기능은 강력한 2D 함께 보기 컨트롤을 및 3D 그래픽 기능과.NET Framework 응용 프로그램의 품질과 사용자 환경 향상할 수 있습니다.  문서의 메모리 내 표현을 유연 하 게 관리할 수.NET Framework의 핵심 기능은 이며을 효율적으로 저장 하 고 데이터 저장소에서 문서를 로드할 수 있는 거의 모든 응용 프로그램의 필요 합니다.  내부 메모리 내 표현에서 외부 데이터 저장소로 문서를 변환하는 프로세스를 serialization이라고 합니다.  데이터 저장소를 읽고 원래 메모리 내 인스턴스를 다시 만드는 역프로세스는 deserialization이라고 합니다.  
@@ -24,19 +24,19 @@ Microsoft.NET Framework는 만들고 고품질 문서를 표시 하기 위한 �
   
 ### <a name="features-of-net-framework-30-document-serializers"></a>.NET Framework 3.0 문서 Serializer의 기능  
   
--   전반적인 문서 개체(논리적 트리 및 시각적 개체)에 직접 액세스하면 페이지를 매긴 콘텐츠, 2D/3D 요소, 이미지, 매체, 하이퍼링크, 주석 및 기타 지원 콘텐츠를 효율적으로 저장할 수 있습니다.  
+- 전반적인 문서 개체(논리적 트리 및 시각적 개체)에 직접 액세스하면 페이지를 매긴 콘텐츠, 2D/3D 요소, 이미지, 매체, 하이퍼링크, 주석 및 기타 지원 콘텐츠를 효율적으로 저장할 수 있습니다.  
   
--   동기 및 비동기 작업.  
+- 동기 및 비동기 작업.  
   
--   다음과 같은 고급 기능이 포함된 플러그 인 serializer 지원:  
+- 다음과 같은 고급 기능이 포함된 플러그 인 serializer 지원:  
   
-    -   모든.NET Framework 응용 프로그램에서 사용 하 여에 대 한 시스템 차원 액세스.  
+    - 모든.NET Framework 응용 프로그램에서 사용 하 여에 대 한 시스템 차원 액세스.  
   
-    -   간단한 애플리케이션 플러그 인 검색 기능.  
+    - 간단한 애플리케이션 플러그 인 검색 기능.  
   
-    -   사용자 지정 타사 플러그 인의 간단한 배포, 설치 및 업데이트.  
+    - 사용자 지정 타사 플러그 인의 간단한 배포, 설치 및 업데이트.  
   
-    -   사용자 지정 런타임 설정 및 옵션에 맞는 사용자 인터페이스 지원.  
+    - 사용자 지정 런타임 설정 및 옵션에 맞는 사용자 인터페이스 지원.  
   
 ### <a name="xps-print-path"></a>XPS 인쇄 경로  
  Microsoft.NET Framework [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 인쇄 경로 인쇄 출력을 통해 문서를 작성 하기 위한 확장 가능한 메커니즘을 제공 합니다.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]는 문서 파일 형식으로 사용되며 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]의 기본 인쇄 스풀 형식이기도 합니다.  중간 형식으로 변환하지 않아도 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 문서를 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 호환 프린터로 직접 보낼 수 있습니다.  인쇄 경로 출력 옵션과 기능에 대한 추가 정보는 [인쇄 개요](printing-overview.md)를 참조하세요.  

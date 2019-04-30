@@ -19,11 +19,11 @@ helpviewer_keywords:
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
 ms.openlocfilehash: 3e87dc6527b4351467b1155439ee8266157c16ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971719"
 ---
 # <a name="string-data-type-visual-basic"></a>String 데이터 형식(Visual Basic)
 0에서 65535 사이의 값의 부호 없는 16 비트 (2 바이트) 코드 포인트 순서 범위를 가집니다. 각 *코드 포인트*, 또는 문자 코드를 단일 유니코드 문자를 나타냅니다. 0에서 약 두 십억 문자열을 포함할 수 있습니다 (2 ^31) 유니코드 문자입니다.  
@@ -70,13 +70,13 @@ S = Microsoft.VisualBasic.Left(S, 4)
   
 ## <a name="programming-tips"></a>프로그래밍 팁  
   
--   **음수를 사용할 수 있습니다.** 문자를 소유 해야 `String` 부호 없는 및 음수 값을 나타낼 수 없습니다. 사용 하지 않아야 어떤 경우 든 `String` 숫자 값을 포함 하도록 합니다.  
+- **음수를 사용할 수 있습니다.** 문자를 소유 해야 `String` 부호 없는 및 음수 값을 나타낼 수 없습니다. 사용 하지 않아야 어떤 경우 든 `String` 숫자 값을 포함 하도록 합니다.  
   
--   **Interop 고려 사항입니다.** .NET Framework 용으로 작성 되지 구성 요소와 상호 작용 하는 경우 Automation 또는 COM 개체를 해야 문자열 문자를 다른 데이터 너비 (8 비트)에 있는 다른 환경에서. 이러한 구성 요소 8 비트 문자의 문자열 인수를 전달 하는 경우로 선언 `Byte()`, 배열을 `Byte` 요소 대신 `String` 새 Visual Basic 코드에서.  
+- **Interop 고려 사항입니다.** .NET Framework 용으로 작성 되지 구성 요소와 상호 작용 하는 경우 Automation 또는 COM 개체를 해야 문자열 문자를 다른 데이터 너비 (8 비트)에 있는 다른 환경에서. 이러한 구성 요소 8 비트 문자의 문자열 인수를 전달 하는 경우로 선언 `Byte()`, 배열을 `Byte` 요소 대신 `String` 새 Visual Basic 코드에서.  
   
--   **형식 문자입니다.** 식별자 형식 문자를 추가 `$` 모든 식별자를 리터럴에 `String` 데이터 형식입니다. `String` 에 리터럴 형식 문자가 없습니다. 컴파일러는 따옴표로 묶인 리터럴을 처리 하는 반면 (`" "`)으로 `String`입니다.  
+- **형식 문자입니다.** 식별자 형식 문자를 추가 `$` 모든 식별자를 리터럴에 `String` 데이터 형식입니다. `String` 에 리터럴 형식 문자가 없습니다. 컴파일러는 따옴표로 묶인 리터럴을 처리 하는 반면 (`" "`)으로 `String`입니다.  
   
--   **Framework 형식입니다.** .NET Framework의 해당 형식은 <xref:System.String?displayProperty=nameWithType> 클래스입니다.  
+- **Framework 형식입니다.** .NET Framework의 해당 형식은 <xref:System.String?displayProperty=nameWithType> 클래스입니다.  
   
 ## <a name="see-also"></a>참고자료
 

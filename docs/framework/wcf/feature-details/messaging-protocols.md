@@ -3,11 +3,11 @@ title: 메시징 프로토콜
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
 ms.openlocfilehash: a5292914cfebc79bf8a9af1c852dd8feec99eba4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948124"
 ---
 # <a name="messaging-protocols"></a>메시징 프로토콜
 
@@ -179,7 +179,7 @@ WCF 끝점을 사용 하 여 메시지를 지원 하도록 구성 된 경우는 
 
 - R3311: 요청 자가 포함 되어야 합니다 `wsa:To`, `wsa:Action`, 및 끝점 참조에 의해 지정 되는 모든 참조 매개 변수에 대 한 헤더입니다. WS-Addressing 2004/08을 사용하고 [reference properties]이 엔드포인트 참조에 지정된 경우에도 해당 헤더를 메시지에 추가해야 합니다.
 
-- B3312 요청 자가: 요청 자가 포함 될 수 있습니다 `MessageID`, `ReplyTo`, 및 `FaultTo` 헤더입니다. 이러한 헤더는 수신자 인프라에서 무시되고 응용 프로그램으로 전달됩니다.
+- B3312: 요청 자가 포함 될 수 있습니다 `MessageID`, `ReplyTo`, 및 `FaultTo` 헤더입니다. 이러한 헤더는 수신자 인프라에서 무시되고 응용 프로그램으로 전달됩니다.
 
 - R3313: HTTP를 사용 하 고 HTTP 응답 레그에 전송 중인 메시지가 없는 경우 응답자는 빈 본문과 HTTP 202 상태 코드를 사용 하 여 HTTP 응답을 보내야 합니다.
 

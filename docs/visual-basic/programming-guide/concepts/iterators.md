@@ -3,11 +3,11 @@ title: 반복기 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
 ms.openlocfilehash: 313ce0c79a71af1b602ecd4ccc9bd0ebceb5696e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966181"
 ---
 # <a name="iterators-visual-basic"></a>반복기 (Visual Basic)
 *반복기*는 목록 및 배열과 같은 컬렉션을 단계별로 실행하는 데 사용할 수 있습니다.  
@@ -44,21 +44,21 @@ End Function
   
  **항목 내용**  
   
--   [단순 반복기](#BKMK_SimpleIterator)  
+- [단순 반복기](#BKMK_SimpleIterator)  
   
--   [컬렉션 클래스 만들기](#BKMK_CollectionClass)  
+- [컬렉션 클래스 만들기](#BKMK_CollectionClass)  
   
--   [Try 블록](#BKMK_TryBlocks)  
+- [Try 블록](#BKMK_TryBlocks)  
   
--   [무명 메서드](#BKMK_AnonymousMethods)  
+- [무명 메서드](#BKMK_AnonymousMethods)  
   
--   [제네릭 목록과 함께 반복기 사용](#BKMK_GenericList)  
+- [제네릭 목록과 함께 반복기 사용](#BKMK_GenericList)  
   
--   [구문 정보](#BKMK_SyntaxInformation)  
+- [구문 정보](#BKMK_SyntaxInformation)  
   
--   [기술 구현](#BKMK_Technical)  
+- [기술 구현](#BKMK_Technical)  
   
--   [반복기 사용](#BKMK_UseOfIterators)  
+- [반복기 사용](#BKMK_UseOfIterators)  
   
 > [!NOTE]
 >  단순 반복기 예제를 제외 하 고 항목의 모든 예제를 포함 [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) 에 대 한 문을 합니다 `System.Collections` 및 `System.Collections.Generic` 네임 스페이스입니다.  
@@ -438,11 +438,11 @@ End Class
 ## <a name="BKMK_UseOfIterators"></a> 반복기 사용  
  반복기를 사용하면 복잡한 코드를 사용하여 목록 시퀀스를 채워야 하는 경우 `For Each` 루프의 단순성을 유지할 수 있습니다. 이 기능은 다음을 수행하려는 경우에 유용할 수 있습니다.  
   
--   첫 번째 `For Each` 루프 반복 후 목록 시퀀스를 수정합니다.  
+- 첫 번째 `For Each` 루프 반복 후 목록 시퀀스를 수정합니다.  
   
--   첫 번째 `For Each` 루프 반복 전에 큰 목록이 완전히 로드되지 않도록 합니다. 한 가지 예로 테이블 행을 일괄 로드하는 페이징 페치가 있으며, 또 다른 예로 .NET Framework 내에서 반복기를 구현하는 <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> 메서드가 있습니다.  
+- 첫 번째 `For Each` 루프 반복 전에 큰 목록이 완전히 로드되지 않도록 합니다. 한 가지 예로 테이블 행을 일괄 로드하는 페이징 페치가 있으며, 또 다른 예로 .NET Framework 내에서 반복기를 구현하는 <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> 메서드가 있습니다.  
   
--   반복기에서 목록 작성을 캡슐화합니다. 반복기 메서드에서 목록을 빌드한 후 루프에서 각 결과를 생성할 수 있습니다.  
+- 반복기에서 목록 작성을 캡슐화합니다. 반복기 메서드에서 목록을 빌드한 후 루프에서 각 결과를 생성할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
 

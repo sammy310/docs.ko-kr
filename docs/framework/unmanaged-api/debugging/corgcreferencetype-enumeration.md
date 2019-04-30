@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8a673c98b11fbca5f66e9e1ae61f224448c20797
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966207"
 ---
 # <a name="corgcreferencetype-enumeration"></a>CorGCReferenceType 열거형
 가비지가 수집될 개체의 소스를 식별합니다.  
@@ -69,9 +69,9 @@ typedef enum {
 ## <a name="remarks"></a>설명  
  `CorGCReferenceType` 열거형은 다음과 같이 사용 합니다.  
   
--   값으로는 `type` 필드를 [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) 구조 참조 또는 핸들의 원본을 나타냅니다.  
+- 값으로는 `type` 필드를 [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) 구조 참조 또는 핸들의 원본을 나타냅니다.  
   
--   로 `types` 인수를 [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) 메서드를 열거에 포함 하는 핸들의 형식을 지정 합니다.  
+- 로 `types` 인수를 [ICorDebugProcess5::EnumerateHandles](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md) 메서드를 열거에 포함 하는 핸들의 형식을 지정 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

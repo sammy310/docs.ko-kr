@@ -11,26 +11,26 @@ helpviewer_keywords:
 - properties [WPF], Inlines [WPF], manipulating flow Content elements
 ms.assetid: 510780d2-3da1-4360-8763-7054bda22ea3
 ms.openlocfilehash: cfff958bb4c87e6bfecf2d280224cda233c31806
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942848"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-inlines-property"></a>방법: Inlines 속성을 통해 유동 콘텐츠 요소 조작
 이러한 예제는 인라인 유동 콘텐츠 요소에서 수행할 수 있는 보다 일반적인 작업 중 일부를 보여 (및 이러한 요소는 컨테이너와 같은 <xref:System.Windows.Controls.TextBlock>)를 통해 합니다 **인라인** 속성입니다. 이 속성에서 항목 추가 및 제거 하는 <xref:System.Windows.Documents.InlineCollection>합니다. 유동 콘텐츠 요소는 **인라인** 속성을 포함 합니다.  
   
--   <xref:System.Windows.Documents.Bold>  
+- <xref:System.Windows.Documents.Bold>  
   
--   <xref:System.Windows.Documents.Hyperlink>  
+- <xref:System.Windows.Documents.Hyperlink>  
   
--   <xref:System.Windows.Documents.Italic>  
+- <xref:System.Windows.Documents.Italic>  
   
--   <xref:System.Windows.Documents.Paragraph>  
+- <xref:System.Windows.Documents.Paragraph>  
   
--   <xref:System.Windows.Documents.Span>  
+- <xref:System.Windows.Documents.Span>  
   
--   <xref:System.Windows.Documents.Underline>  
+- <xref:System.Windows.Documents.Underline>  
   
  이러한 예제를 사용 하 여 발생할 <xref:System.Windows.Documents.Span> 흐름 콘텐츠 요소 이지만 이러한 기술에 적용할 수 있는 모든 요소나 컨트롤을 호스팅하는 <xref:System.Windows.Documents.InlineCollection> 컬렉션입니다.  
   

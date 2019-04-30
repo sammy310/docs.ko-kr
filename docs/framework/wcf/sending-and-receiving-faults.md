@@ -8,11 +8,11 @@ helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
 ms.openlocfilehash: 2757f98066931ca1b5e3ef147cee2c819ee22606
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949606"
 ---
 # <a name="sending-and-receiving-faults"></a>오류 보내기 및 받기
 SOAP 오류는 오류 조건 정보를 서비스에서 클라이언트로 전달하고 이중 클라이언트의 경우에는 상호 운용 가능한 방식으로 클라이언트에서 서비스로 전달합니다. 일반적으로 서비스는 사용자 지정 오류 내용을 정의하고 이들을 반환할 수 있는 작업을 지정합니다. (자세한 내용은 [정 및 지정 오류](../../../docs/framework/wcf/defining-and-specifying-faults.md).) 이 항목에서는 해당 오류 조건이 발생한 경우 서비스 또는 이중 클라이언트가 그러한 오류를 보낼 수 있는 방법과 클라이언트 또는 서비스 응용 프로그램이 이러한 오류를 처리하는 방법에 대해 설명합니다. Windows Communication Foundation (WCF) 응용 프로그램의 오류 처리 개요를 참조 하세요 [지정 및 계약 및 서비스에서 오류 처리](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)합니다.  
@@ -47,9 +47,9 @@ SOAP 오류는 오류 조건 정보를 서비스에서 클라이언트로 전달
 ## <a name="handling-faults"></a>오류 처리  
  WCF 클라이언트에서 클라이언트 응용 프로그램에 관심 있는 통신 하는 동안 발생 하는 SOAP 오류는 관리 되는 예외로 발생 합니다. 프로그램의 실행 하는 동안 발생할 수 있는 많은 예외 있기는 통신 결과로 다음과 같은 두 종류의 예외를 처리 하는 WCF 클라이언트 프로그래밍 모델을 사용 하 여 응용 프로그램 기대할 수 있습니다.  
   
--   <xref:System.TimeoutException>  
+- <xref:System.TimeoutException>  
   
--   <xref:System.ServiceModel.CommunicationException>  
+- <xref:System.ServiceModel.CommunicationException>  
   
  작업이 지정된 제한 시간을 초과하면 <xref:System.TimeoutException> 개체가 throw됩니다.  
   
@@ -81,13 +81,13 @@ SOAP 오류는 오류 조건 정보를 서비스에서 클라이언트로 전달
   
  일반적으로 클라이언트 개체 채널은 다음 중 한 가지 방법으로 닫힙니다.  
   
--   WCF 클라이언트 개체를 재활용 시기입니다.  
+- WCF 클라이언트 개체를 재활용 시기입니다.  
   
--   클라이언트 응용 프로그램이 <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType>를 호출하는 경우  
+- 클라이언트 응용 프로그램이 <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType>를 호출하는 경우  
   
--   클라이언트 응용 프로그램이 <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>를 호출하는 경우  
+- 클라이언트 응용 프로그램이 <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>를 호출하는 경우  
   
--   클라이언트 응용 프로그램이 세션에 대한 종료 작업을 호출하는 경우  
+- 클라이언트 응용 프로그램이 세션에 대한 종료 작업을 호출하는 경우  
   
  모든 경우에 채널을 닫으면 응용 프로그램 수준에서 복잡한 기능을 지원할 메시지를 보낼 수 있는 기본 채널을 닫도록 채널에 지시합니다. 예를 들어 계약에 세션이 필요한 경우 세션이 설정될 때까지 바인딩 과정에서 서비스 채널과 메시지를 교환하여 세션을 설정합니다. 채널이 닫히면 기본 세션 채널은 세션이 종료되었음을 서비스에 알립니다. 이 때 채널이 이미 중단되었거나 닫혔거나 사용할 수 없는 경우(예: 네트워크 케이블이 연결되지 않은 경우) 클라이언트 채널은 세션이 종료되었으며 예외가 발생할 수 있음을 서비스 채널에 알릴 수 없습니다.  
   

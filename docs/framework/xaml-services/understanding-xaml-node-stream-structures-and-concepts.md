@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
 ms.openlocfilehash: babf98b7dd30cd60e72e310ae8ba8c9a42d9125f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954091"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>XAML 노드 스트림 구조 및 개념 이해
 
@@ -45,13 +45,13 @@ XAML 노드 스트림을 검사하기 위한 기본 읽기 노드 루프는 다�
 
 - 현재 노드 또는 현재 레코드로 보고된 <xref:System.Xaml.XamlNodeType> 에 따라 다음 중 하나를 호출하여 노드 내용에 대한 정보를 가져옵니다.
 
-    - <xref:System.Xaml.XamlXmlReader.NodeType%2A> 이 <xref:System.Xaml.XamlNodeType.StartMember> 또는 <xref:System.Xaml.XamlNodeType.EndMember>인 경우 <xref:System.Xaml.XamlXmlReader.Member%2A> 를 호출하여 멤버에 대한 <xref:System.Xaml.XamlMember> 정보를 가져옵니다. 멤버가 <xref:System.Xaml.XamlDirective>일 수도 있으므로 이전 개체의 형식이 정의된 기존 멤버가 아닐 수도 있습니다. 예를 들어 개체에 적용된 `x:Name` 은 <xref:System.Xaml.XamlMember.IsDirective%2A> 가 true이고 멤버의 <xref:System.Xaml.XamlMember.Name%2A> 이 `Name`이며 이 지시문이 XAML 언어 XAML 네임스페이스 아래에 있음을 나타내는 기타 속성이 있는 XAML 멤버로 나타납니다.
+  - <xref:System.Xaml.XamlXmlReader.NodeType%2A> 이 <xref:System.Xaml.XamlNodeType.StartMember> 또는 <xref:System.Xaml.XamlNodeType.EndMember>인 경우 <xref:System.Xaml.XamlXmlReader.Member%2A> 를 호출하여 멤버에 대한 <xref:System.Xaml.XamlMember> 정보를 가져옵니다. 멤버가 <xref:System.Xaml.XamlDirective>일 수도 있으므로 이전 개체의 형식이 정의된 기존 멤버가 아닐 수도 있습니다. 예를 들어 개체에 적용된 `x:Name` 은 <xref:System.Xaml.XamlMember.IsDirective%2A> 가 true이고 멤버의 <xref:System.Xaml.XamlMember.Name%2A> 이 `Name`이며 이 지시문이 XAML 언어 XAML 네임스페이스 아래에 있음을 나타내는 기타 속성이 있는 XAML 멤버로 나타납니다.
 
-    - <xref:System.Xaml.XamlXmlReader.NodeType%2A> 이 <xref:System.Xaml.XamlNodeType.StartObject> 또는 <xref:System.Xaml.XamlNodeType.EndObject>인 경우 <xref:System.Xaml.XamlXmlReader.Type%2A> 를 호출하여 개체에 대한 <xref:System.Xaml.XamlType> 정보를 가져옵니다.
+  - <xref:System.Xaml.XamlXmlReader.NodeType%2A> 이 <xref:System.Xaml.XamlNodeType.StartObject> 또는 <xref:System.Xaml.XamlNodeType.EndObject>인 경우 <xref:System.Xaml.XamlXmlReader.Type%2A> 를 호출하여 개체에 대한 <xref:System.Xaml.XamlType> 정보를 가져옵니다.
 
-    - <xref:System.Xaml.XamlXmlReader.NodeType%2A> 이 <xref:System.Xaml.XamlNodeType.Value>인 경우 <xref:System.Xaml.XamlXmlReader.Value%2A>를 호출합니다. 멤버에 대한 가장 간단한 값 식이거나 개체에 대한 초기화 텍스트인 경우에만 노드가 값입니다(그러나 이 항목의 이후 섹션에서 설명하는 형식 변환 동작에 주의해야 함).
+  - <xref:System.Xaml.XamlXmlReader.NodeType%2A> 이 <xref:System.Xaml.XamlNodeType.Value>인 경우 <xref:System.Xaml.XamlXmlReader.Value%2A>를 호출합니다. 멤버에 대한 가장 간단한 값 식이거나 개체에 대한 초기화 텍스트인 경우에만 노드가 값입니다(그러나 이 항목의 이후 섹션에서 설명하는 형식 변환 동작에 주의해야 함).
 
-    - <xref:System.Xaml.XamlXmlReader.NodeType%2A> 이 <xref:System.Xaml.XamlNodeType.NamespaceDeclaration>인 경우 <xref:System.Xaml.XamlXmlReader.Namespace%2A> 를 호출하여 네임스페이스 노드에 대한 네임스페이스 정보를 가져옵니다.
+  - <xref:System.Xaml.XamlXmlReader.NodeType%2A> 이 <xref:System.Xaml.XamlNodeType.NamespaceDeclaration>인 경우 <xref:System.Xaml.XamlXmlReader.Namespace%2A> 를 호출하여 네임스페이스 노드에 대한 네임스페이스 정보를 가져옵니다.
 
 - <xref:System.Xaml.XamlXmlReader.Read%2A> 를 호출하여 XAML 판독기를 XAML 노드 스트림의 다음 노드로 진행하고 다시 단계를 반복합니다.
 
@@ -140,15 +140,15 @@ XAML 노드 스트림에서 다음 동작에 의존할 수 있습니다.
 
 - `Value` 노드는 값 자체를 나타내며 "EndValue"가 없습니다. `EndMember`만 뒤에 올 수 있습니다.
 
-    - 구문에서 사용할 수 있는 개체의 XAML 초기화 텍스트는 개체-값 구조를 생성하지 않습니다. 대신, `_Initialization` 이라는 멤버에 대한 전용 멤버 노드가 만들어지고 해당 멤버 노드에 초기화 값 문자열이 포함됩니다. 있는 경우 `_Initialization` 은 항상 첫 번째 `StartMember`입니다. 일부 XAML 서비스 표현에서는 XAML 언어 XAML 이름 범위로`_Initialization` 을 정규화하여 `_Initialization` 이 지원 형식에서 정의된 속성이 아님을 명확히 할 수 있습니다.
+  - 구문에서 사용할 수 있는 개체의 XAML 초기화 텍스트는 개체-값 구조를 생성하지 않습니다. 대신, `_Initialization` 이라는 멤버에 대한 전용 멤버 노드가 만들어지고 해당 멤버 노드에 초기화 값 문자열이 포함됩니다. 있는 경우 `_Initialization` 은 항상 첫 번째 `StartMember`입니다. 일부 XAML 서비스 표현에서는 XAML 언어 XAML 이름 범위로`_Initialization` 을 정규화하여 `_Initialization` 이 지원 형식에서 정의된 속성이 아님을 명확히 할 수 있습니다.
 
-    - 멤버-값 조합은 값의 특성 설정을 나타냅니다. 결국 이 값을 처리하는 데 값 변환기가 사용될 수 있으며 값은 일반 문자열입니다. 그러나 XAML 개체 작성기에서 이 노드 스트림을 처리할 때까지는 평가되지 않습니다. XAML 개체 작성기는 필요한 XAML 스키마 컨텍스트, 형식 시스템 매핑 및 값 변환에 필요한 기타 지원을 소유합니다.
+  - 멤버-값 조합은 값의 특성 설정을 나타냅니다. 결국 이 값을 처리하는 데 값 변환기가 사용될 수 있으며 값은 일반 문자열입니다. 그러나 XAML 개체 작성기에서 이 노드 스트림을 처리할 때까지는 평가되지 않습니다. XAML 개체 작성기는 필요한 XAML 스키마 컨텍스트, 형식 시스템 매핑 및 값 변환에 필요한 기타 지원을 소유합니다.
 
 - `EndMember` 노드 뒤에는 이후 멤버에 대한 `StartMember` 노드 또는 멤버 소유자에 대한 `EndObject` 노드가 올 수 있습니다.
 
 - `EndObject` 노드 뒤에는 `EndMember` 노드가 올 수 있습니다. 개체가 컬렉션 항목의 피어인 경우 `StartObject` 가 뒤에 올 수도 있습니다. 또는 이후의 `Namespace` 에 적용되는 `StartObject`노드가 뒤에 올 수 있습니다.
 
-    - 전체 노드 스트림을 닫는 고유한 경우 루트의 `EndObject` 뒤에는 아무것도 오지 않습니다. 이제 판독기가 파일의 끝이며 <xref:System.Xaml.XamlReader.Read%2A> 에서 `false`를 반환합니다.
+  - 전체 노드 스트림을 닫는 고유한 경우 루트의 `EndObject` 뒤에는 아무것도 오지 않습니다. 이제 판독기가 파일의 끝이며 <xref:System.Xaml.XamlReader.Read%2A> 에서 `false`를 반환합니다.
 
 <a name="value_converters_and_the_xaml_node_stream"></a>
 

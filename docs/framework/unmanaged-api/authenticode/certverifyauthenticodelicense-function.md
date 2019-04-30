@@ -11,11 +11,11 @@ ms.assetid: 00118de7-33c6-41c4-8e1f-5d5e35e0da83
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: abbf893b3d49101b5cc9d38ffc31b171ff023f8a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965037"
 ---
 # <a name="certverifyauthenticodelicense-function"></a>CertVerifyAuthenticodeLicense 함수
 Authenticode XrML 라이선스의 유효성을 확인합니다.  
@@ -40,17 +40,17 @@ HRESULT CertVerifyAuthenticodeLicense (
  `dwFlags`  
  [in] 선택적 항목으로, 다음 값의 조합입니다.  
   
--   AXL_REVOCATION_NO_CHECK  
+- AXL_REVOCATION_NO_CHECK  
   
--   AXL_REVOCATION_CHECK_END_CERT_ONLY  
+- AXL_REVOCATION_CHECK_END_CERT_ONLY  
   
--   AXL_REVOCATION_CHECK_ENTIRE_CHAIN  
+- AXL_REVOCATION_CHECK_ENTIRE_CHAIN  
   
--   AXL_URL_CACHE_ONLY_RETRIEVAL  
+- AXL_URL_CACHE_ONLY_RETRIEVAL  
   
--   AXL_LIFETIME_SIGNING  
+- AXL_LIFETIME_SIGNING  
   
--   AXL_TRUST_MICROSOFT_ROOT_ONLY  
+- AXL_TRUST_MICROSOFT_ROOT_ONLY  
   
  `pSignerInfo`  
  [out] 서명자의 정보를 받는 데 사용되는 매개 변수입니다. 라이선스가 서명되지 않은 경우에는 `dwError` 가 TRUST_E_NOSIGNATURE로 설정됩니다. 호출자를 사용 하 여 리소스를 해제 하는 것은 [CertFreeAuthenticodeSignerInfo](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodesignerinfo-function.md) 사용 후 함수입니다.  

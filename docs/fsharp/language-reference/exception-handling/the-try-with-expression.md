@@ -3,11 +3,11 @@ title: '예외: try...with 식'
 description: 사용 하는 방법을 알아봅니다는 F# 'try...with' 예외 처리에 대 한 식입니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: 742e0b595525c69b83a55682c3c8b9b650326ac7
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945537"
 ---
 # <a name="exceptions-the-trywith-expression"></a>예외: try...with 식
 
@@ -38,9 +38,9 @@ with
 
 |무늬|설명|
 |-------|-----------|
-|:? *예외 형식*|지정 된.NET 예외 형식과 일치합니다.|
+|:? *exception-type*|지정 된.NET 예외 형식과 일치합니다.|
 |:? *예외 형식* 으로 *식별자*|지정된 된.NET 예외 형식에는 일치 하지만 예외를 명명 된 값을 제공 합니다.|
-|*예외 이름을*(*인수*)|일치 하는 F# 예외 형식 및 인수를 바인딩합니다.|
+|*exception-name*(*arguments*)|일치 하는 F# 예외 형식 및 인수를 바인딩합니다.|
 |*identifier*|모든 예외에 일치 하 고 예외 개체에 이름을 바인딩합니다. 같음 **:? 으로 System.Exception**_식별자_|
 |*식별자* 때 *조건*|조건이 true 인 경우 모든 예외를 찾습니다.|
 
@@ -56,8 +56,8 @@ with
 > [!NOTE]
 > 사용할 수 있습니다 `try...with` 비동기 워크플로 및 기타 계산 식에는 사용자 지정된 버전의 경우는 `try...with` 식이 사용 됩니다. 자세한 내용은 [비동기 워크플로](../asynchronous-workflows.md), 및 [계산 식](../computation-expressions.md)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
-- [Visual C++에서 예외 처리](index.md)
+- [예외 처리](index.md)
 - [예외 형식](exception-types.md)
 - [예외: `try...finally` 식](the-try-finally-expression.md)

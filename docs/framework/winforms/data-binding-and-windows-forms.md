@@ -13,22 +13,22 @@ helpviewer_keywords:
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
 ms.openlocfilehash: 3d420e5cb4d9e7f2ad6f8136b8dd33f5901326d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967039"
 ---
 # <a name="data-binding-and-windows-forms"></a>데이터 바인딩 및 Windows Forms
 Windows Forms에서는 기존의 데이터 소스뿐 아니라 데이터를 포함하는 거의 모든 구조에 바인딩할 수 있습니다. 런타임에 계산하거나 파일에서 읽거나 다른 컨트롤의 값에서 파생하는 값 배열에 바인딩할 수 있습니다.  
   
  또한 컨트롤의 속성을 데이터 소스에 바인딩할 수도 있습니다. 일반적인 데이터 바인딩에서는 대개 표시 속성(예: <xref:System.Windows.Forms.Control.Text%2A> 컨트롤의 <xref:System.Windows.Forms.TextBox> 속성)을 데이터 소스에 바인딩합니다. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]를 사용하면 바인딩을 통해 다른 속성도 설정할 수 있습니다. 바인딩을 사용하여 수행할 수 있는 작업은 다음과 같습니다.  
   
--   이미지 컨트롤의 그래픽 설정  
+- 이미지 컨트롤의 그래픽 설정  
   
--   컨트롤 하나 이상의 배경색 설정  
+- 컨트롤 하나 이상의 배경색 설정  
   
--   컨트롤의 크기 설정  
+- 컨트롤의 크기 설정  
   
  기본적으로 데이터 바인딩은 폼에 있는 컨트롤의 런타임 액세스 가능 속성을 자동으로 설정하는 방법입니다.  
   

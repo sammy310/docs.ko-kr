@@ -10,11 +10,11 @@ helpviewer_keywords:
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
 ms.openlocfilehash: 9aefe6be17e5d72c86c2c47bf0d373d0a081ca76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59114272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966920"
 ---
 # <a name="using-keyboard-events"></a>키보드 이벤트 사용
 대부분 Windows Forms 프로그램에서는 키보드 이벤트를 처리하는 방식으로 키보드 입력을 처리합니다. 이 항목에서는 각 이벤트를 사용하는 시기 및 각 이벤트에 대해 제공되는 데이터에 대한 세부 정보를 포함하여 키보드 이벤트에 대한 개요를 제공합니다.  도 참조 하세요 [이벤트 처리기 개요 (Windows Forms)](event-handlers-overview-windows-forms.md) 하 고 [이벤트 개요 (Windows Forms)](events-overview-windows-forms.md)합니다.  
@@ -22,11 +22,11 @@ ms.locfileid: "59114272"
 ## <a name="keyboard-events"></a>키보드 이벤트  
  Windows Forms에서는 사용자가 키보드 키를 누를 때 발생하는 두 가지 이벤트와 사용자가 키보드 키를 놓을 때 발생하는 한 가지 이벤트를 제공합니다.  
   
--   한 번 발생하는 <xref:System.Windows.Forms.Control.KeyDown> 이벤트.  
+- 한 번 발생하는 <xref:System.Windows.Forms.Control.KeyDown> 이벤트.  
   
--   사용자가 같은 키를 누르고 있을 때 여러 번 발생할 수 있는 <xref:System.Windows.Forms.Control.KeyPress> 이벤트.  
+- 사용자가 같은 키를 누르고 있을 때 여러 번 발생할 수 있는 <xref:System.Windows.Forms.Control.KeyPress> 이벤트.  
   
--   사용자가 키를 놓을 때 한 번 발생하는 <xref:System.Windows.Forms.Control.KeyUp> 이벤트.  
+- 사용자가 키를 놓을 때 한 번 발생하는 <xref:System.Windows.Forms.Control.KeyUp> 이벤트.  
   
  사용자가 키를 누를 때 Windows Forms에서는 키보드 메시지가 문자 키 또는 물리적 키를 지정하는지에 따라 발생할 이벤트를 결정합니다. 문자 및 물리적 키에 대 한 자세한 내용은 참조 하세요. [키보드 입력 작동 방식](how-keyboard-input-works.md)합니다.  
   

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - GIF encoding [WPF]
 ms.assetid: 9cdd9ec7-71eb-444b-b9e3-991958461163
 ms.openlocfilehash: 35bd08f0d5e4d2ee9b8731706c9f1d770d67f633
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947617"
 ---
 # <a name="how-to-encode-and-decode-a-gif-image"></a>방법: GIF 이미지 인코딩 및 디코딩
 다음 예제를 디코딩 및 인코딩하는 방법을 보여는 [!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)] 특정을 사용 하 여 이미지 <xref:System.Windows.Media.Imaging.GifBitmapDecoder> 고 <xref:System.Windows.Media.Imaging.GifBitmapEncoder> 개체입니다.  

@@ -8,20 +8,20 @@ ms.assetid: 0ed69f73-5c01-4514-bd63-979c6e38d41d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 11a19dce496423883e5fed62375c6db8ed5efdb1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949203"
 ---
 # <a name="security-etw-events"></a>보안 ETW 이벤트
 <a name="top"></a> 보안 이벤트는 강력한 이름 확인 및 Authenticode 확인 중에 발생합니다.  
   
  이 범주는 다음 이벤트로 구성됩니다.  
   
--   [StrongNameVerificationStart_V1 및 StrongNameVerificationStop_V1 이벤트](#strongnameverificationstart_v1_and_strongnameverificationstop_v1_events)  
+- [StrongNameVerificationStart_V1 및 StrongNameVerificationStop_V1 이벤트](#strongnameverificationstart_v1_and_strongnameverificationstop_v1_events)  
   
--   [AuthenticodeVerificationStart_V1 및 AuthenticodeVerificationStop_V1 이벤트](#authenticodeverificationstart_v1_and_authenticodeverificationstop_v1_events)  
+- [AuthenticodeVerificationStart_V1 및 AuthenticodeVerificationStop_V1 이벤트](#authenticodeverificationstart_v1_and_authenticodeverificationstop_v1_events)  
   
 <a name="strongnameverificationstart_v1_and_strongnameverificationstop_v1_events"></a>   
 ## <a name="strongnameverificationstartv1-and-strongnameverificationstopv1-events"></a>StrongNameVerificationStart_V1 및 StrongNameVerificationStop_V1 이벤트  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
 ms.openlocfilehash: 20e83306925e91e579aca52f2e7c209c8c686dee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946629"
 ---
 # <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a>이벤트 처리기에서 람다 식이 제거되지 않습니다.
 람다 식은 이벤트 처리기에서 제거 되지 않습니다. 변수에 람다 식을 할당 하 고 변수를 사용 하 여 추가 하 고 이벤트를 제거 합니다.  
@@ -60,7 +60,7 @@ End Module
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   경고를 방지 하 고 람다 식을 제거 하려면 변수에 람다 식을 할당 하 고 모두에서 변수를 사용 합니다 `AddHandler` 고 `RemoveHandler` 문을 다음 예와에서 같이 합니다.  
+- 경고를 방지 하 고 람다 식을 제거 하려면 변수에 람다 식을 할당 하 고 모두에서 변수를 사용 합니다 `AddHandler` 고 `RemoveHandler` 문을 다음 예와에서 같이 합니다.  
   
 ```vb  
 Module Module1  

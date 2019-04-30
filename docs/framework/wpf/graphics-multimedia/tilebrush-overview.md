@@ -9,11 +9,11 @@ helpviewer_keywords:
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
 ms.openlocfilehash: a610acfef416a978ab8ecd9a561a135ecf3611cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973752"
 ---
 # <a name="tilebrush-overview"></a>TileBrush 개요
 <xref:System.Windows.Media.TileBrush> 개체를 사용 하면 다양 한 이미지를 사용 하 여 영역을 그리는 방법에 대 한 제어를 사용 하 여 얻게 <xref:System.Windows.Media.Drawing>, 또는 <xref:System.Windows.Media.Visual>합니다. 이 항목에서는 사용 하는 방법에 설명 합니다 <xref:System.Windows.Media.TileBrush> 더 잘 제어 하는 방법에 대 한 기능을 <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, 또는 <xref:System.Windows.Media.VisualBrush> 영역을 그립니다.  
@@ -40,11 +40,11 @@ TileMode가 Tile인 TileBrush의 구성 요소
 ## <a name="brush-content"></a>브러시 콘텐츠  
  세 가지 유형의 가지 <xref:System.Windows.Media.TileBrush> 다른 유형의 콘텐츠를 사용 하 여 각각을 그립니다.  
   
--   브러시가 <xref:System.Windows.Media.ImageBrush>,이 콘텐츠는 이미지를 <xref:System.Windows.Media.ImageBrush.ImageSource%2A> 속성의 내용을 지정 된 <xref:System.Windows.Media.ImageBrush>.  
+- 브러시가 <xref:System.Windows.Media.ImageBrush>,이 콘텐츠는 이미지를 <xref:System.Windows.Media.ImageBrush.ImageSource%2A> 속성의 내용을 지정 된 <xref:System.Windows.Media.ImageBrush>.  
   
--   브러시가 <xref:System.Windows.Media.DrawingBrush>,이 콘텐츠는 그림입니다. 합니다 <xref:System.Windows.Media.DrawingBrush.Drawing%2A> 속성의 내용을 지정 된 <xref:System.Windows.Media.DrawingBrush>합니다.  
+- 브러시가 <xref:System.Windows.Media.DrawingBrush>,이 콘텐츠는 그림입니다. 합니다 <xref:System.Windows.Media.DrawingBrush.Drawing%2A> 속성의 내용을 지정 된 <xref:System.Windows.Media.DrawingBrush>합니다.  
   
--   브러시가 <xref:System.Windows.Media.VisualBrush>,이 콘텐츠는 시각적 개체입니다. <xref:System.Windows.Media.VisualBrush.Visual%2A> 속성의 내용을 지정 된 <xref:System.Windows.Media.VisualBrush>합니다.  
+- 브러시가 <xref:System.Windows.Media.VisualBrush>,이 콘텐츠는 시각적 개체입니다. <xref:System.Windows.Media.VisualBrush.Visual%2A> 속성의 내용을 지정 된 <xref:System.Windows.Media.VisualBrush>합니다.  
   
  크기와 위치를 지정할 수 있습니다 <xref:System.Windows.Media.TileBrush> 를 사용 하 여 콘텐츠를 <xref:System.Windows.Media.TileBrush.Viewbox%2A> 속성인 일반적 이지만 <xref:System.Windows.Media.TileBrush.Viewbox%2A> 기본값으로 설정 합니다. 기본적으로 <xref:System.Windows.Media.TileBrush.Viewbox%2A> 완전히 브러시의 콘텐츠를 포함 하도록 구성 합니다. 구성에 대 한 자세한 내용은 합니다 <xref:System.Windows.Controls.Viewbox>, 참조는 <xref:System.Windows.Controls.Viewbox> 속성 페이지.  
   
@@ -52,13 +52,13 @@ TileMode가 Tile인 TileBrush의 구성 요소
 ## <a name="the-base-tile"></a>기본 타일  
  <xref:System.Windows.Media.TileBrush> 기본 타일에 해당 콘텐츠를 프로젝션 합니다. 합니다 <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성 컨트롤 어떻게 <xref:System.Windows.Media.TileBrush> 콘텐츠가 기본 타일을 채우도록 확장 됩니다. 합니다 <xref:System.Windows.Media.TileBrush.Stretch%2A> 속성으로 정의 하는 다음 값을 허용 합니다 <xref:System.Windows.Media.Stretch> 열거형:  
   
--   <xref:System.Windows.Media.Stretch.None>: 브러시의 콘텐츠가 타일을 채우도록 확장 되지 않습니다.  
+- <xref:System.Windows.Media.Stretch.None>: 브러시의 콘텐츠가 타일을 채우도록 확장 되지 않습니다.  
   
--   <xref:System.Windows.Media.Stretch.Fill>: 브러시의 콘텐츠가 타일에 맞게 크기가 조정 됩니다. 콘텐츠의 높이 및 너비가 독립적으로 조정되므로 콘텐츠의 원래 가로 세로 비율이 유지되지 않을 수 있습니다. 즉, 출력 타일을 완전히 채우도록 브러시 콘텐츠를 이동해야 할 수 있습니다.  
+- <xref:System.Windows.Media.Stretch.Fill>: 브러시의 콘텐츠가 타일에 맞게 크기가 조정 됩니다. 콘텐츠의 높이 및 너비가 독립적으로 조정되므로 콘텐츠의 원래 가로 세로 비율이 유지되지 않을 수 있습니다. 즉, 출력 타일을 완전히 채우도록 브러시 콘텐츠를 이동해야 할 수 있습니다.  
   
--   <xref:System.Windows.Media.Stretch.Uniform>: 브러시의 콘텐츠가 타일 내에 완전히 맞도록 크기가 조정 됩니다. 콘텐츠의 가로 세로 비율이 유지됩니다.  
+- <xref:System.Windows.Media.Stretch.Uniform>: 브러시의 콘텐츠가 타일 내에 완전히 맞도록 크기가 조정 됩니다. 콘텐츠의 가로 세로 비율이 유지됩니다.  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>: 콘텐츠의 원래 가로 세로 비율을 유지 하는 동안 출력 영역을 완전히 채우도록 브러시의 콘텐츠 크기가 조정 됩니다.  
+- <xref:System.Windows.Media.Stretch.UniformToFill>: 콘텐츠의 원래 가로 세로 비율을 유지 하는 동안 출력 영역을 완전히 채우도록 브러시의 콘텐츠 크기가 조정 됩니다.  
   
  다음 이미지는 다양 한 보여줍니다 <xref:System.Windows.Media.TileBrush.Stretch%2A> 설정 합니다.  
   
@@ -99,15 +99,15 @@ TileMode가 Tile인 TileBrush의 구성 요소
 ### <a name="tiling-behavior"></a>바둑판식 배열 동작  
  A <xref:System.Windows.Media.TileBrush> 기본 타일 완전히 채우지는 못하고 출력 영역을 바둑판식 배열 모드가 이외의 경우에 바둑판식 배열된 패턴을 생성 <xref:System.Windows.Media.TileMode.None> 지정 됩니다. 완전히 타일 브러시의 타일이 출력 영역을 채우지 않고 때 해당 <xref:System.Windows.Media.TileBrush.TileMode%2A> 속성 및 여부를 지정 기본 타일이 출력 영역을 채우도록 복제 해야 할 그렇다면 어떻게 기본 타일을 복제 하는 합니다. 합니다 <xref:System.Windows.Media.TileBrush.TileMode%2A> 속성으로 정의 하는 다음 값을 허용 합니다 <xref:System.Windows.Media.TileMode> 열거형:  
   
--   <xref:System.Windows.Media.TileMode.None>: 기본 타일만이 그려집니다.  
+- <xref:System.Windows.Media.TileMode.None>: 기본 타일만이 그려집니다.  
   
--   <xref:System.Windows.Media.TileMode.Tile>: 기본 타일이 그려지고 나머지 영역은 반복 하 여 기본 타일 한 타일의 오른쪽 가장자리는 다음의 왼쪽된 가장자리에 인접 한 마찬가지로 아래 및 위의 채워집니다.  
+- <xref:System.Windows.Media.TileMode.Tile>: 기본 타일이 그려지고 나머지 영역은 반복 하 여 기본 타일 한 타일의 오른쪽 가장자리는 다음의 왼쪽된 가장자리에 인접 한 마찬가지로 아래 및 위의 채워집니다.  
   
--   <xref:System.Windows.Media.TileMode.FlipX>: 동일 <xref:System.Windows.Media.TileMode.Tile>, 타일의 대체 열이 좌우로 있지만.  
+- <xref:System.Windows.Media.TileMode.FlipX>: 동일 <xref:System.Windows.Media.TileMode.Tile>, 타일의 대체 열이 좌우로 있지만.  
   
--   <xref:System.Windows.Media.TileMode.FlipY>: 동일 <xref:System.Windows.Media.TileMode.Tile>, 타일의 대체 행이 상하로 있지만.  
+- <xref:System.Windows.Media.TileMode.FlipY>: 동일 <xref:System.Windows.Media.TileMode.Tile>, 타일의 대체 행이 상하로 있지만.  
   
--   <xref:System.Windows.Media.TileMode.FlipXY>: <xref:System.Windows.Media.TileMode.FlipX> 및 <xref:System.Windows.Media.TileMode.FlipY>의 조합입니다.  
+- <xref:System.Windows.Media.TileMode.FlipXY>: <xref:System.Windows.Media.TileMode.FlipX> 및 <xref:System.Windows.Media.TileMode.FlipY>의 조합입니다.  
   
  다음 이미지는 여러 다른 바둑판식 배열 모드를 보여 줍니다.  
   

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: df9cc0cc86237b1ec439a4ec4fa6a75429c416d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985779"
 ---
 # <a name="corvalidateimage-function"></a>_CorValidateImage 함수
 관리 되는 모듈 이미지의 유효성을 검사 하 고 로드 된 후 운영 체제 로더에 알립니다.  
@@ -53,23 +53,23 @@ STDAPI _CorValidateImage (
 ## <a name="remarks"></a>설명  
  Windows XP 이상 버전에서 운영 체제 로더는 공용 개체 파일 형식 (COFF) 헤더의 COM 설명자 디렉터리 비트를 검사 하 여 관리 되는 모듈에 대 한 확인 합니다. 설정 비트는 관리 되는 모듈을 나타냅니다. MsCorEE.dll 및 호출 로드 로더는 관리 되는 모듈을 검색 하는 경우 `_CorValidateImage`, 다음 작업을 수행 하는:  
   
--   이미지 관리 되는 유효한 모듈 인지 확인 합니다.  
+- 이미지 관리 되는 유효한 모듈 인지 확인 합니다.  
   
--   CLR (공용 언어 런타임)의 진입점으로 이미지의 진입점을 변경합니다.  
+- CLR (공용 언어 런타임)의 진입점으로 이미지의 진입점을 변경합니다.  
   
--   64 비트 버전 Windows의 경우 PE32에서 PE32 + 형식으로 변환 하 여 메모리에 있는 이미지를 수정 합니다.  
+- 64 비트 버전 Windows의 경우 PE32에서 PE32 + 형식으로 변환 하 여 메모리에 있는 이미지를 수정 합니다.  
   
--   관리 되는 모듈 이미지가 로드 될 때 로더를 반환 합니다.  
+- 관리 되는 모듈 이미지가 로드 될 때 로더를 반환 합니다.  
   
  실행 가능 이미지는 운영 체제 로더 호출을 [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) 실행 파일에 지정 된 진입점에 관계 없이 함수입니다. 로더가 DLL 어셈블리 이미지에 대 한 호출을 [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) 함수입니다.  
   
  `_CorExeMain` 또는 `_CorDllMain` 다음 작업을 수행 합니다.  
   
--   CLR을 초기화합니다.  
+- CLR을 초기화합니다.  
   
--   어셈블리의 CLR 헤더에서 관리 되는 진입점을 찾습니다.  
+- 어셈블리의 CLR 헤더에서 관리 되는 진입점을 찾습니다.  
   
--   실행을 시작합니다.  
+- 실행을 시작합니다.  
   
  로더 호출을 [_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) 관리 되는 경우 함수 모듈 이미지가 로드 되지 합니다. 그러나이 함수는 작업을 수행 하지 않습니다. 만 반환합니다.  
   

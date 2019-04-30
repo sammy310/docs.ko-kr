@@ -9,11 +9,11 @@ helpviewer_keywords:
 - navigation [WPF], to page
 ms.assetid: 2a556fc0-748b-417f-a58a-0d05a7afb66f
 ms.openlocfilehash: c8e808180682bfd97f397d8cadd1e4deafd7eb06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947743"
 ---
 # <a name="how-to-navigate-to-a-page"></a>방법: 페이지 탐색
 이 예제는 페이지를 탐색할 수 있습니다에서 여러 가지 방법으로 <xref:System.Windows.Navigation.NavigationWindow>합니다.  
@@ -21,9 +21,9 @@ ms.locfileid: "59141052"
 ## <a name="example"></a>예제  
  있기를 <xref:System.Windows.Navigation.NavigationWindow> 다음 중 하나를 사용 하는 페이지로 이동 합니다.  
   
--   <xref:System.Windows.Navigation.NavigationWindow.Source%2A> 속성  
+- <xref:System.Windows.Navigation.NavigationWindow.Source%2A> 속성  
   
--   <xref:System.Windows.Navigation.NavigationWindow.Navigate%2A> 메서드  
+- <xref:System.Windows.Navigation.NavigationWindow.Navigate%2A> 메서드  
   
  [!code-csharp[HOWTONavigationSnippets#NavigateToPageCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/MainWindow.xaml.cs#navigatetopagecode)]
  [!code-vb[HOWTONavigationSnippets#NavigateToPageCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/mainwindow.xaml.vb#navigatetopagecode)]  

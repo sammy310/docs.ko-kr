@@ -15,11 +15,11 @@ ms.assetid: 7dfa36b4-e773-4c75-a3ff-ff1af3ce4c4f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f1049187dabbea64599617bb4372ed50515a51e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949190"
 ---
 # <a name="sql-server-programming-and-host-protection-attributes"></a>SQL Server 프로그래밍 및 호스트 보호 특성
 SQL Server 호스트에서 관리 코드를 로드 및 실행하려면 코드 액세스 보안과 호스트 리소스 보호 둘 다를 위해 호스트의 요구 사항을 충족해야 합니다.  코드 액세스 보안 요구 사항은 세 개의 SQL Server 사용 권한 집합 중 하나에 의해 지정 됩니다. SAFE, EXTERNAL-ACCESS 또는 UNSAFE 합니다. SAFE 또는 EXTERNAL-ACCESS 권한 집합 내에서 코드를 실행하는 경우 <xref:System.Security.Permissions.HostProtectionAttribute> 특성이 적용된 특정 형식이나 멤버를 사용하면 안 됩니다. <xref:System.Security.Permissions.HostProtectionAttribute>는 호스트에서 허용되지 않을 수 있는 형식이나 메서드인 특정 코드 구문을 식별한다는 점에서 보안 권한이 아니라 안정성 보장입니다.  <xref:System.Security.Permissions.HostProtectionAttribute>를 사용하면 호스트의 안정성을 보호하는 데 도움이 되는 프로그래밍 모델이 적용됩니다.  
@@ -27,11 +27,11 @@ SQL Server 호스트에서 관리 코드를 로드 및 실행하려면 코드 �
 ## <a name="host-protection-attributes"></a>호스트 보호 특성  
  호스트 보호 특성은 호스트 프로그래밍 모델에 맞지 않는 형식이나 멤버를 식별하고 다음과 같은 증가하는 안정성 위협 수준을 나타냅니다.  
   
--   달리 유해하지 않습니다.  
+- 달리 유해하지 않습니다.  
   
--   서버에서 관리하는 사용자 코드가 불안정해질 수 있습니다.  
+- 서버에서 관리하는 사용자 코드가 불안정해질 수 있습니다.  
   
--   서버 프로세스 자체가 불안정해질 수 있습니다.  
+- 서버 프로세스 자체가 불안정해질 수 있습니다.  
   
  SQL Server에서는 <xref:System.Security.Permissions.HostProtectionResource> 값 <xref:System.Security.Permissions.HostProtectionResource.SharedState>, <xref:System.Security.Permissions.HostProtectionResource.Synchronization>, <xref:System.Security.Permissions.HostProtectionResource.MayLeakOnAbort> 또는 <xref:System.Security.Permissions.HostProtectionResource.ExternalProcessMgmt>를 지정하는 <xref:System.Security.Permissions.HostProtectionAttribute>가 있는 형식 또는 멤버의 사용을 허용하지 않습니다. 이 때문에 어셈블리에서 공유 상태를 사용하도록 설정하거나, 동기화를 수행하거나, 종료 시 리소스 누수가 발생할 수 있거나, SQL Server 프로세스의 무결성에 영향을 주는 멤버를 호출할 수 없습니다.  
   

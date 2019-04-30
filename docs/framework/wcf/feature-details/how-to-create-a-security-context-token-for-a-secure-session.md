@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
 ms.openlocfilehash: 0b0da7e60cb54a1c3d6eb6d2d557f7312da1e9ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61950308"
 ---
 # <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>방법: 보안 세션에 대한 보안 컨텍스트 토큰 만들기
 보안 세션에서 상태 저장 SCT(보안 컨텍스트 토큰)을 사용하면 세션에서 서비스 재활용의 영향을 받지 않을 수 있습니다. 예를 들어, 상태 비저장 SCT를 보안 세션에서 사용할 때 IIS(인터넷 정보 서비스)를 다시 설정하면 서비스와 연결된 세션 데이터가 손실됩니다. 이 세션 데이터에는 SCT 토큰 캐시가 포함되어 있습니다. 따라서 클라이언트가 서비스에 상태 비저장 SCT를 다음에 보낼 때 SCT와 연결된 키를 검색할 수 없기 때문에 오류가 반환됩니다. 그러나 상태 저장 SCT를 사용하는 경우에는 SCT와 연결된 키가 SCT에 포함됩니다. 키가 SCT에 포함되어 메시지에 포함되므로 서비스 재활용이 보안 세션에 영향을 주지 않습니다. 기본적으로 Windows Communication Foundation (WCF)는 보안 세션에서 상태 비저장 Sct를 사용합니다. 이 항목에서는 보안 세션에서 상태 저장 SCT를 사용하는 방법에 대해 자세히 설명합니다.  
@@ -26,15 +26,15 @@ ms.locfileid: "59189343"
   
 ### <a name="to-use-stateful-scts-in-a-secure-session"></a>보안 세션에서 상태 저장 SCT를 사용하려면  
   
--   상태 저장 SCT를 사용하는 보안 세션을 통해 SOAP 메시지를 보호하도록 지정하는 사용자 지정 바인딩을 만듭니다.  
+- 상태 저장 SCT를 사용하는 보안 세션을 통해 SOAP 메시지를 보호하도록 지정하는 사용자 지정 바인딩을 만듭니다.  
   
-    1.  추가 하 여 사용자 지정 바인딩 정의 [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) 서비스 구성 파일에 있습니다.  
+    1. 추가 하 여 사용자 지정 바인딩 정의 [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) 서비스 구성 파일에 있습니다.  
   
         ```xml  
         <customBinding>  
         ```  
   
-    2.  추가 된 [ \<바인딩 >](../../../../docs/framework/misc/binding.md) 자식 요소를 합니다 [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)합니다.  
+    2. 추가 된 [ \<바인딩 >](../../../../docs/framework/misc/binding.md) 자식 요소를 합니다 [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)합니다.  
   
          구성 파일에서 `name` 특성을 고유한 이름으로 설정하여 바인딩 이름을 지정합니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "59189343"
         <binding name="StatefulSCTSecureSession">  
         ```  
   
-    3.  추가 하 여이 서비스에서 전송 된 메시지에 대 한 인증 모드를 지정 된 [ \<보안 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) 자식 요소를를 [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)합니다.  
+    3. 추가 하 여이 서비스에서 전송 된 메시지에 대 한 인증 모드를 지정 된 [ \<보안 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) 자식 요소를를 [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)합니다.  
   
          `authenticationMode` 특성을 `SecureConversation`으로 설정하여 보안 세션을 사용하도록 지정합니다. `requireSecurityContextCancellation` 특성을 `false`로 설정하여 상태 저장 SCT를 사용하도록 지정합니다.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "59189343"
                   requireSecurityContextCancellation="false">  
         ```  
   
-    4.  추가 하 여 보안 세션이 설정 되는 동안 클라이언트에서 인증 하는 방법을 지정는 [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) 자식 요소는 [ \<보안 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)합니다.  
+    4. 추가 하 여 보안 세션이 설정 되는 동안 클라이언트에서 인증 하는 방법을 지정는 [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) 자식 요소는 [ \<보안 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)합니다.  
   
          `authenticationMode` 특성을 설정하여 클라이언트를 인증하는 방법을 지정합니다.  
   
@@ -59,13 +59,13 @@ ms.locfileid: "59189343"
         <secureConversationBootstrap authenticationMode="UserNameForCertificate" />  
         ```  
   
-    5.  와 같은 인코딩 요소를 추가 하 여 메시지 인코딩을 지정 [ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md)합니다.  
+    5. 와 같은 인코딩 요소를 추가 하 여 메시지 인코딩을 지정 [ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md)합니다.  
   
         ```xml  
         <textMessageEncoding />  
         ```  
   
-    6.  와 같은 전송 요소를 추가 하 여 전송을 지정 합니다 [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md)합니다.  
+    6. 와 같은 전송 요소를 추가 하 여 전송을 지정 합니다 [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md)합니다.  
   
         ```xml  
         <httpTransport />  

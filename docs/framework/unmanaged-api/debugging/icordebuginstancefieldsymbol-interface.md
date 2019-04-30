@@ -5,11 +5,11 @@ ms.assetid: a4a8f259-b83a-4425-ae8b-72b067dbc0d9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b5c0759989e069169c7e68b71206d9a50b04ad63
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946401"
 ---
 # <a name="icordebuginstancefieldsymbol-interface"></a>ICorDebugInstanceFieldSymbol 인터페이스
 인스턴스 필드에 대한 디버그 기호 정보를 나타냅니다.  

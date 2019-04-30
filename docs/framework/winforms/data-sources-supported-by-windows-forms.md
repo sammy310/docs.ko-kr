@@ -16,11 +16,11 @@ helpviewer_keywords:
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
 ms.openlocfilehash: b648d62c9128f0864d60ace1ca56700f594b78c5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967091"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Windows Forms에서 지원하는 데이터 소스
 일반적으로 데이터 바인딩은 데 사용 된 응용 프로그램 내에서 데이터베이스에 저장 된 데이터를 활용 합니다. Windows Forms 데이터 바인딩에 특정 최소 요구 사항이 충족 된다면 배열 및 컬렉션 등의 다른 구조에 있는 데이터 뿐만 아니라 데이터베이스에서 데이터를 액세스할 수 있습니다.  
@@ -47,15 +47,15 @@ ms.locfileid: "59124620"
  [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 데이터 개체  
  [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 데이터 구조에 대 한 바인딩에 적합 한 개수를 제공합니다. 각 해당 숙련도 및 복잡성에 따라 다릅니다.  
   
--   <xref:System.Data.DataColumn>. <xref:System.Data.DataColumn> 는의 필수 구성 요소를 <xref:System.Data.DataTable>를 열 수를 하나의 테이블을 구성 합니다. 각 <xref:System.Data.DataColumn> 에 <xref:System.Data.DataColumn.DataType%2A> 열 (예를 들어, 자동차를 설명 하는 테이블에 있는 자동차의 제조업체)에 저장 된 데이터의 종류를 결정 하는 속성입니다. 바인딩할 수 있습니다 단순 컨트롤 (같은 <xref:System.Windows.Forms.TextBox> 컨트롤의 <xref:System.Windows.Forms.Control.Text%2A> 속성) 데이터 테이블 내의 열입니다.  
+- <xref:System.Data.DataColumn>. <xref:System.Data.DataColumn> 는의 필수 구성 요소를 <xref:System.Data.DataTable>를 열 수를 하나의 테이블을 구성 합니다. 각 <xref:System.Data.DataColumn> 에 <xref:System.Data.DataColumn.DataType%2A> 열 (예를 들어, 자동차를 설명 하는 테이블에 있는 자동차의 제조업체)에 저장 된 데이터의 종류를 결정 하는 속성입니다. 바인딩할 수 있습니다 단순 컨트롤 (같은 <xref:System.Windows.Forms.TextBox> 컨트롤의 <xref:System.Windows.Forms.Control.Text%2A> 속성) 데이터 테이블 내의 열입니다.  
   
--   <xref:System.Data.DataTable>. A <xref:System.Data.DataTable> 의 행과 열이 있는 테이블의 표현인 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]합니다. 두 컬렉션을 포함 하는 데이터 테이블: <xref:System.Data.DataColumn>합니다 (해당 테이블에 입력할 수 있는 데이터 종류 결정)는 지정된 된 테이블의 데이터 열을 나타내는 및 <xref:System.Data.DataRow>, 지정된 된 테이블의 데이터 행을 나타내는입니다. 바인딩할 수 있습니다 복합 컨트롤을 데이터 테이블에 포함 된 정보 (바인딩 등의 <xref:System.Windows.Forms.DataGridView> 컨트롤을 데이터 테이블에). 그러나에 바인딩하는 경우는 <xref:System.Data.DataTable>, 테이블의 기본 보기에 실제로 바인딩는 합니다.  
+- <xref:System.Data.DataTable>. A <xref:System.Data.DataTable> 의 행과 열이 있는 테이블의 표현인 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]합니다. 두 컬렉션을 포함 하는 데이터 테이블: <xref:System.Data.DataColumn>합니다 (해당 테이블에 입력할 수 있는 데이터 종류 결정)는 지정된 된 테이블의 데이터 열을 나타내는 및 <xref:System.Data.DataRow>, 지정된 된 테이블의 데이터 행을 나타내는입니다. 바인딩할 수 있습니다 복합 컨트롤을 데이터 테이블에 포함 된 정보 (바인딩 등의 <xref:System.Windows.Forms.DataGridView> 컨트롤을 데이터 테이블에). 그러나에 바인딩하는 경우는 <xref:System.Data.DataTable>, 테이블의 기본 보기에 실제로 바인딩는 합니다.  
   
--   <xref:System.Data.DataView>. <xref:System.Data.DataView> 필터링 하거나 정렬할 수 있는 단일 데이터 테이블의 사용자 지정 뷰입니다. 데이터 보기는 "스냅숏" 복합 바인딩된 컨트롤에서 사용 하는 데이터입니다. 단순 바인딩 또는 복합 바인딩할 데이터 뷰의 데이터 따르면 깨끗 하 고 업데이트 하는 데이터 원본 대신 데이터의 고정된 "그림"을 바인딩하는 알고 있어야 합니다.  
+- <xref:System.Data.DataView>. <xref:System.Data.DataView> 필터링 하거나 정렬할 수 있는 단일 데이터 테이블의 사용자 지정 뷰입니다. 데이터 보기는 "스냅숏" 복합 바인딩된 컨트롤에서 사용 하는 데이터입니다. 단순 바인딩 또는 복합 바인딩할 데이터 뷰의 데이터 따르면 깨끗 하 고 업데이트 하는 데이터 원본 대신 데이터의 고정된 "그림"을 바인딩하는 알고 있어야 합니다.  
   
--   <xref:System.Data.DataSet>. <xref:System.Data.DataSet> 는 테이블, 관계 및 제약 조건 데이터베이스의 데이터의 컬렉션입니다. 단순 바인딩 또는 복잡 한 바인딩 데이터 집합 내의 데이터에 따르면 기본값으로 바인딩하는 유의 <xref:System.Data.DataViewManager> 에 대 한는 <xref:System.Data.DataSet> (다음 글머리 기호 참조).  
+- <xref:System.Data.DataSet>. <xref:System.Data.DataSet> 는 테이블, 관계 및 제약 조건 데이터베이스의 데이터의 컬렉션입니다. 단순 바인딩 또는 복잡 한 바인딩 데이터 집합 내의 데이터에 따르면 기본값으로 바인딩하는 유의 <xref:System.Data.DataViewManager> 에 대 한는 <xref:System.Data.DataSet> (다음 글머리 기호 참조).  
   
--   <xref:System.Data.DataViewManager>. <xref:System.Data.DataViewManager> 전체 사용자 지정 뷰입니다 <xref:System.Data.DataSet>비슷합니다는 <xref:System.Data.DataView>, 비슷하지만 관계가 포함 합니다. 사용 하 여는 <xref:System.Data.DataViewManager.DataViewSettings%2A> 컬렉션을 설정할 수 있습니다 기본 필터 및 모든 보기에 대 한 정렬 옵션을 <xref:System.Data.DataViewManager> 에 지정된 된 테이블에 대 한 합니다.  
+- <xref:System.Data.DataViewManager>. <xref:System.Data.DataViewManager> 전체 사용자 지정 뷰입니다 <xref:System.Data.DataSet>비슷합니다는 <xref:System.Data.DataView>, 비슷하지만 관계가 포함 합니다. 사용 하 여는 <xref:System.Data.DataViewManager.DataViewSettings%2A> 컬렉션을 설정할 수 있습니다 기본 필터 및 모든 보기에 대 한 정렬 옵션을 <xref:System.Data.DataViewManager> 에 지정된 된 테이블에 대 한 합니다.  
   
 ## <a name="see-also"></a>참고자료
 
