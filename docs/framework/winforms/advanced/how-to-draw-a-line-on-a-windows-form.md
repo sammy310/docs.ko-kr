@@ -13,11 +13,11 @@ helpviewer_keywords:
 - drawing lines
 ms.assetid: 55c1dbeb-75d0-430c-9814-a24b8971ad8c
 ms.openlocfilehash: aab04b9236175cedd154b817db5a6f6450503105
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004161"
 ---
 # <a name="how-to-draw-a-line-on-a-windows-form"></a>방법: Windows Form에서 선 그리기
 이 예제에서는 폼에 선을 그립니다. 일반적으로 폼에 그리는 경우 처리 하는 양식의 <xref:System.Windows.Forms.Control.Paint> 이벤트 사용 하 여 그리기를 수행 하 고는 <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> 의 속성은 <xref:System.Windows.Forms.PaintEventArgs>이 예제에서 보여준 것 처럼  

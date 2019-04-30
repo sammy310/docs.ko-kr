@@ -9,11 +9,11 @@ helpviewer_keywords:
 - vertical space
 ms.assetid: aa47af39-1e71-40ee-bb75-2d2478f81bd0
 ms.openlocfilehash: 8dc45e1cedca6a4c73ada057168e0d3194bef741
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59192279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009329"
 ---
 # <a name="toolstrippanel-control"></a>ToolStripPanel 컨트롤
 `ToolStripPanel` 컨트롤은 <xref:System.Windows.Forms.ToolStripContainer>의 4개 패널 및 중앙 패널이 필요하지 않은 경우 <xref:System.Windows.Forms.ToolStrip> 컨트롤을 도킹 및 정렬할 때 도구 영역 내에서 가로 또는 세로 공간을 공유할 수 있게 해줍니다.  

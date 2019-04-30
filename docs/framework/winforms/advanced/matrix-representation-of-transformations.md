@@ -17,11 +17,11 @@ helpviewer_keywords:
 - affine transformations
 ms.assetid: 0659fe00-9e0c-41c4-9118-016f2404c905
 ms.openlocfilehash: c87be8eaf715e373da75dd8f91889b0e396dba0d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967525"
 ---
 # <a name="matrix-representation-of-transformations"></a>변환에 대한 매트릭스 표현
 m × n 행렬은 행 m과 n 열으로 정렬 하는 숫자 집합입니다. 다음 그림에서는 몇 가지 매트릭스를 보여 줍니다.  

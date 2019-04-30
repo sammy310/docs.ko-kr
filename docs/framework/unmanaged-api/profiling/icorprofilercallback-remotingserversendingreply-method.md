@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 024b1f3f7e08dc21582789de7f3899e8e44d5e39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62041836"
 ---
 # <a name="icorprofilercallbackremotingserversendingreply-method"></a>ICorProfilerCallback::RemotingServerSendingReply 메서드
 프로세스에서 원격 메서드 호출 요청 처리를 완료 하 고 채널을 통해 회신을 전송 하려고 프로파일러에 알립니다.  
@@ -39,11 +39,11 @@ HRESULT RemotingServerSendingReply(
  `pCookie`  
  [in] 에 제공 된 값을 사용 하 여 해당 하는 GUID에 대 한 포인터 [icorprofilercallback:: Remotingclientreceivingreply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) 이러한 조건에서:  
   
--   원격 GUID 쿠키 활성화 됩니다.  
+- 원격 GUID 쿠키 활성화 됩니다.  
   
--   채널은 메시지 전송에 성공 합니다.  
+- 채널은 메시지 전송에 성공 합니다.  
   
--   GUID 쿠키는 클라이언트 쪽 프로세스에서 활성 상태입니다.  
+- GUID 쿠키는 클라이언트 쪽 프로세스에서 활성 상태입니다.  
   
  따라서 쉽게 페어링 원격 호출 및 논리 호출 스택 생성 합니다.  
   

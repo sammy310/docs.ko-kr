@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
 ms.openlocfilehash: ec6eaadae1dd7a7db84538c24e396a14db1a65a4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007321"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverter 및 XAML
 이 항목에서는 문자열에서 형식 변환의 용도를 일반 XAML 언어 기능으로 소개합니다. .NET framework에서 <xref:System.ComponentModel.TypeConverter> 클래스 XAML 특성 사용에서 속성 값으로 사용할 수 있는 관리 되는 사용자 지정 클래스 구현의 일부로 특정 용도로 사용 됩니다. 적용 해야 할 수는 사용자 지정 클래스를 작성 하는 경우 XAML 설정할 수 있는 특성 값으로 사용할 수 있으려면 클래스의 인스턴스를 <xref:System.ComponentModel.TypeConverterAttribute> 클래스에 사용자 지정 작성 <xref:System.ComponentModel.TypeConverter> 클래스 중 하나 또는 둘 다.  
@@ -59,13 +59,13 @@ ms.locfileid: "59164991"
   
  <xref:System.ComponentModel.TypeConverter> XAML 처리를 위한 문자열에서 변환 하는 데 관련 된 네 가지 멤버를 정의 합니다.  
   
--   <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>  
+- <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>  
+- <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>  
+- <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>  
+- <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>  
   
  이 중에서 가장 중요 한 방법은 <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>합니다. 이 메서드는 입력 문자열을 필요한 개체 형식으로 변환합니다. 엄격히 말해,는 <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> 훨씬 광범위 한 형식 변환기의 의도 된 대상 형식으로 변환 하므로 XAML 용도 대해서 런타임 변환 지원과 같이 XAML 이상으로 확장 하는 용도로 사용 하는 메서드를 구현할 수 있습니다 처리할 수 있는 코드 경로 <xref:System.String> 중요 한 정보를 입력 합니다.  
   

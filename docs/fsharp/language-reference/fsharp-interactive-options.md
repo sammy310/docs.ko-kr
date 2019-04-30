@@ -3,11 +3,11 @@ title: F# Interactive 옵션
 description: 지 원하는 명령줄 옵션에 알아보려면 F# Interactive, fsi.exe 합니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: cca1ef6671878acb1b837d6590139d5de7b7167d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996803"
 ---
 # <a name="f-interactive-options"></a>F# Interactive 옵션
 
@@ -55,12 +55,12 @@ F#대화형 `fsi.exe`, 대화형으로 실행할 수 있습니다 또는 스크�
 |**--quiet**|표시 안 함 F# Interactive의 출력을 합니다 **stdout** 스트림 합니다.|
 |**--quotations-debug**|파생 되는 식에 대 한 추가 디버깅 정보를 내보내지 않아야는 지정 F# 따옴표로 묶인 리터럴 및 반영된 정의 합니다. 디버그 정보를 사용자 지정 특성에 추가 됩니다는 F# 식 트리 노드가 있습니다. 참조 [코드 인용](code-quotations.md) 하 고 [Expr.CustomAttributes](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3)합니다.|
 |**--readline**[**+**&#124;**-**]|대화형 모드에서 탭 완성 기능을 사용 하지 않도록 설정 하거나 사용 합니다.|
-|**--reference:&lt;filename&gt;**<br /><br />**-r:&lt;파일 이름&gt;**|와 동일 합니다 **fsc.exe** 컴파일러 옵션입니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조하세요.|
+|**--reference:&lt;filename&gt;**<br /><br />**-r:&lt;filename&gt;**|와 동일 합니다 **fsc.exe** 컴파일러 옵션입니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조하세요.|
 |**--shadowcopyreferences**[**+**&#124;**-**]|참조 하 여 잠기지 않도록 합니다 F# 대화형 프로세스입니다.|
 |**--simpleresolution**|MSBuild 확인 대신 디렉터리 기반의 규칙을 사용 하 여 어셈블리 참조를 확인 합니다.|
 |**--tailcalls**[**+**&#124;**-**]|스택 프레임을 테일 재귀 함수에 대해 다시 사용 하면 테일 IL 명령 사용할 수 없도록 설정 하거나 사용 합니다. 기본적으로 이 옵션은 사용하도록 설정됩니다.|
 |**--targetprofile:&lt;string&gt;**|이 어셈블리의 대상 프레임 워크 프로필을 지정합니다. 유효한 값은 mscorlib, netcore netstandard입니다.  기본값은 mscorlib.|
-|**-사용:&lt;파일 이름&gt;**|시작 시 주어진된 파일 초기 입력으로 사용할 인터프리터를 알려 줍니다.|
+|**--use:&lt;filename&gt;**|시작 시 주어진된 파일 초기 입력으로 사용할 인터프리터를 알려 줍니다.|
 |**--utf8output**|Fsc.exe 컴파일러 옵션과 동일 합니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조하세요.|
 |**--warn:&lt;warning-level&gt;**|와 동일 합니다 **fsc.exe** 컴파일러 옵션입니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조하세요.|
 |**--warnaserror**[**+**&#124;**-**]|와 동일 합니다 **fsc.exe** 컴파일러 옵션입니다. 자세한 내용은 [컴파일러 옵션](compiler-options.md)을 참조하세요.|

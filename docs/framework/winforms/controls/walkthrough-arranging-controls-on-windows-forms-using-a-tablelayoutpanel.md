@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
 ms.openlocfilehash: 392d548a5f89c31d94af9134b8cc3a37b28d8c6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009112"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>연습: TableLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬
 일부 애플리케이션에는 폼 크기가 조정되거나 내용의 크기가 변경될 때 적절하게 정렬되는 레이아웃을 가진 폼이 필요합니다. 동적 레이아웃이 필요하며 코드에서 명시적으로 <xref:System.Windows.Forms.Control.Layout> 이벤트를 처리하지 않으려는 경우 레이아웃 패널을 사용하는 것이 좋습니다.  
@@ -28,21 +28,21 @@ ms.locfileid: "59341623"
   
  이 연습에서 설명하는 작업은 다음과 같습니다.  
   
--   Windows Forms 프로젝트 만들기  
+- Windows Forms 프로젝트 만들기  
   
--   행 및 열에서 컨트롤 정렬  
+- 행 및 열에서 컨트롤 정렬  
   
--   설정 행 및 열 속성  
+- 설정 행 및 열 속성  
   
--   행 및 열 컨트롤을 사용 하 여 확장  
+- 행 및 열 컨트롤을 사용 하 여 확장  
   
--   오버플로 자동 처리  
+- 오버플로 자동 처리  
   
--   도구 상자에서 두 번 클릭하여 컨트롤 삽입  
+- 도구 상자에서 두 번 클릭하여 컨트롤 삽입  
   
--   윤곽선을 그려 컨트롤 삽입  
+- 윤곽선을 그려 컨트롤 삽입  
   
--   다른 부모에 기존 컨트롤 다시 할당  
+- 다른 부모에 기존 컨트롤 다시 할당  
   
  작업을 완료하면 이러한 중요한 레이아웃 기능이 수행하는 역할을 이해하게 됩니다.  
   
@@ -158,25 +158,25 @@ ms.locfileid: "59341623"
   
 #### <a name="to-demonstrate-that-multiple-controls-within-cells-are-not-permitted"></a>셀 내에서 여러 컨트롤은 허용 되지 않음을 보여 줍니다.  
   
--   끌어서를 <xref:System.Windows.Forms.Button> 에서 제어 합니다 **도구 상자** 에 <xref:System.Windows.Forms.TableLayoutPanel> 제어 하 고 사용 된 셀 중 하나에 놓습니다. <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤은 삭제할 수 없습니다는 <xref:System.Windows.Forms.Button> 셀으로 끌 제어 합니다.  
+- 끌어서를 <xref:System.Windows.Forms.Button> 에서 제어 합니다 **도구 상자** 에 <xref:System.Windows.Forms.TableLayoutPanel> 제어 하 고 사용 된 셀 중 하나에 놓습니다. <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤은 삭제할 수 없습니다는 <xref:System.Windows.Forms.Button> 셀으로 끌 제어 합니다.  
   
 ## <a name="swapping-controls"></a>교환 컨트롤  
  <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 사용 하면 두 개의 다른 셀 컨트롤을 교환할 수 있습니다.  
   
 #### <a name="to-swap-controls"></a>컨트롤을 바꾸려면  
   
--   중 하나를 끌어는 <xref:System.Windows.Forms.Button> 점유 셀 및 놓습니다 점유 창의 다른 셀에서 컨트롤입니다. 참고로 다른 두 개의 하나의 셀에서 이동 됩니다.  
+- 중 하나를 끌어는 <xref:System.Windows.Forms.Button> 점유 셀 및 놓습니다 점유 창의 다른 셀에서 컨트롤입니다. 참고로 다른 두 개의 하나의 셀에서 이동 됩니다.  
   
 ## <a name="next-steps"></a>다음 단계  
  레이아웃 패널 및 컨트롤의 조합을 사용하여 복잡한 레이아웃을 얻을 수 있습니다. 다음과 같은 사항을 더 살펴보는 것이 좋습니다.  
   
--   크기 조정 중 하나를 시도 <xref:System.Windows.Forms.Button> 컨트롤 크기 및 레이아웃에 미치는 영향을 확인 합니다.  
+- 크기 조정 중 하나를 시도 <xref:System.Windows.Forms.Button> 컨트롤 크기 및 레이아웃에 미치는 영향을 확인 합니다.  
   
--   다양 한 여러 컨트롤에 붙여 넣습니다는 <xref:System.Windows.Forms.TableLayoutPanel> 제어 하 고 컨트롤을 삽입 하는 방법을 확인 합니다.  
+- 다양 한 여러 컨트롤에 붙여 넣습니다는 <xref:System.Windows.Forms.TableLayoutPanel> 제어 하 고 컨트롤을 삽입 하는 방법을 확인 합니다.  
   
--   레이아웃 패널에 다른 레이아웃 패널을 포함할 수 있습니다. <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 기존 컨트롤에 끌어다 놓습니다.  
+- 레이아웃 패널에 다른 레이아웃 패널을 포함할 수 있습니다. <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 기존 컨트롤에 끌어다 놓습니다.  
   
--   <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 부모 폼에 도킹합니다. 폼의 크기를 조정하고 레이아웃에 미치는 영향을 확인합니다.  
+- <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 부모 폼에 도킹합니다. 폼의 크기를 조정하고 레이아웃에 미치는 영향을 확인합니다.  
   
 ## <a name="see-also"></a>참고자료
 

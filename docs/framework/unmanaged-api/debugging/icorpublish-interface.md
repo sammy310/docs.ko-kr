@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7581d68f5c2b575403ddc84d06147f012e7ab39e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993587"
 ---
 # <a name="icorpublish-interface"></a>ICorPublish 인터페이스
 해당 프로세스의 프로세스에 대 한 정보 및 응용 프로그램 도메인에 대 한 정보를 게시 하는 것에 대 한 일반적인 인터페이스로 사용 합니다.  

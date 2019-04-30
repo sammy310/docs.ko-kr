@@ -3,11 +3,11 @@ title: 오류 계약
 ms.date: 03/30/2017
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
 ms.openlocfilehash: 21c4894b3927b6fdcf9aff16ea07020eeb073977
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990129"
 ---
 # <a name="fault-contract"></a>오류 계약
 Fault Contract 샘플은 오류 정보를 서비스에서 클라이언트로 전달하는 방법을 보여 줍니다. 샘플을 기반으로 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md), 내부 예외를 오류로 변환 하는 서비스에 추가 하는 일부 추가 코드를 사용 하 여 합니다. 클라이언트는 서비스에서 오류 조건을 강제하기 위해 0으로 나누기를 시도합니다.  

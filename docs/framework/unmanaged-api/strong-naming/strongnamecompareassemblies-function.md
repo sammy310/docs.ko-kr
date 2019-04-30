@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2a49252d00f75b4d0b6325aeae0aab22f8ada5e4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000326"
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies 함수
 두 어셈블리가 강력한 이름 서명에 의해서만 다른지 여부를 결정합니다.  
@@ -48,11 +48,11 @@ BOOLEAN StrongNameCompareAssemblies (
  `pdwResult`  
  [out] 다음 값 중 하나입니다.  
   
--   `SN_CMP_DIFFERENT` (0)-어셈블리에 다른 데이터가 포함 되어 있는지를 지정 합니다.  
+- `SN_CMP_DIFFERENT` (0)-어셈블리에 다른 데이터가 포함 되어 있는지를 지정 합니다.  
   
--   `SN_CMP_IDENTICAL` (1)-어셈블리가 정확히 동일한 지, 해당 서명과 체크섬을 포함 하 여 지정 합니다.  
+- `SN_CMP_IDENTICAL` (1)-어셈블리가 정확히 동일한 지, 해당 서명과 체크섬을 포함 하 여 지정 합니다.  
   
--   `SN_CMP_SIGONLY` (2)-는 어셈블리를 서명 및 체크섬에 의해서만 달라 지는 것을 지정 합니다.  
+- `SN_CMP_SIGONLY` (2)-는 어셈블리를 서명 및 체크섬에 의해서만 달라 지는 것을 지정 합니다.  
   
 ## <a name="return-value"></a>반환 값  
  `true` 성공적으로 완료 됩니다. 그렇지 않으면 `false`합니다.  

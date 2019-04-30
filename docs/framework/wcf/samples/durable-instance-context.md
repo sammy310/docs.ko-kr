@@ -3,11 +3,11 @@ title: 영속 인스턴스 컨텍스트
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
 ms.openlocfilehash: 25772e7f119ddd5a144d223f402e815380b3eba5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990272"
 ---
 # <a name="durable-instance-context"></a>영속 인스턴스 컨텍스트
 이 샘플에는 영 속 인스턴스 컨텍스트를 사용 하도록 설정 하려면 Windows Communication Foundation (WCF) 런타임 사용자 지정 하는 방법을 보여 줍니다. 여기서는 SQL Server 2005를 백업 저장소(이 경우 SQL Server 2005 Express)로 사용합니다. 사용자 지정 저장소 메커니즘에 액세스하는 방법도 제공합니다.  
@@ -233,11 +233,11 @@ else
   
  WCF를 사용 하면 새 상태 및 확장 가능한 개체 패턴을 사용 하는 동작을 추가 하 여 해당 InstanceContext 런타임 구성 요소를 확장 합니다. 새로운 기능을 사용 하 여 기존 런타임 클래스를 확장 하거나 또는 개체에 새 상태 기능을 추가할 확장명 가능한 개체 패턴 WCF에서 사용 됩니다. 세 가지 인터페이스에에서 있는 확장명 가능한 개체 패턴-IExtensibleObject\<T >를 IExtension\<T >를 및 IExtensionCollection\<T >:  
   
--   IExtensibleObject\<T > 인터페이스는 해당 기능을 사용자 지정 하는 확장을 허용 하는 개체에 의해 구현 됩니다.  
+- IExtensibleObject\<T > 인터페이스는 해당 기능을 사용자 지정 하는 확장을 허용 하는 개체에 의해 구현 됩니다.  
   
--   IExtension\<T > 인터페이스 T. 형식의 클래스 확장인 개체에 의해 구현 됩니다  
+- IExtension\<T > 인터페이스 T. 형식의 클래스 확장인 개체에 의해 구현 됩니다  
   
--   IExtensionCollection\<T > 인터페이스는 형식에 따라 IExtensions를 검색할 수 있는 IExtensions의 컬렉션입니다.  
+- IExtensionCollection\<T > 인터페이스는 형식에 따라 IExtensions를 검색할 수 있는 IExtensions의 컬렉션입니다.  
   
  따라서 IExtension 인터페이스를 구현하고 필요한 상태를 정의하는 InstanceContextExtension 클래스를 만들어 컨텍스트 ID를 저장해야 합니다. 이 클래스는 사용할 저장소 관리자를 보유하는 상태도 제공합니다. 새 상태가 저장된 다음에는 수정할 수 없습니다. 따라서 상태가 생성되어 인스턴스에 제공되고 저장된 다음에는 읽기 전용 속성으로만 액세스할 수 있습니다.  
   

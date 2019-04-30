@@ -3,11 +3,11 @@ title: System.ServiceModel.TxCompletionStatusAbortedOnSessionClose
 ms.date: 03/30/2017
 ms.assetid: 7e142e9d-e81b-4309-974a-02e9cc064ea0
 ms.openlocfilehash: 7b1f6a2f4a344b566c76d0095942b84a8a4e76f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991629"
 ---
 # <a name="systemservicemodeltxcompletionstatusabortedonsessionclose"></a>System.ServiceModel.TxCompletionStatusAbortedOnSessionClose
 세션을 닫고 TransactionAutoCompleteOnSessionClose OperationBehaviorAttribute가 false로 설정되었을 때 지정된 트랜잭션이 완료되지 않았기 때문에 해당 트랜잭션이 중단되었습니다.  

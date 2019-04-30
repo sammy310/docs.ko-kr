@@ -8,11 +8,11 @@ helpviewer_keywords:
 - DomainUpDown control [Windows Forms], about DomainUpDown control
 ms.assetid: 3f40f9c1-20ad-4331-b9b5-b0127eb36eb3
 ms.openlocfilehash: bfe3e7239f77c6f1a0d9bb46a96c704653b43364
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972070"
 ---
 # <a name="domainupdown-control-overview-windows-forms"></a>DomainUpDown 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.DomainUpDown> 컨트롤은 한 쌍의 목록에서 위로 또는 아래로 이동 단추 및 텍스트 상자를 나열 하는 기본적으로 조합 합니다. 컨트롤이 표시 하 고 선택 목록에서 텍스트 문자열을 설정 합니다. 사용자 단추 목록에서 이동를 클릭 하 여, 위쪽 및 아래쪽 화살표 키를 눌러 또는 목록의 항목을 일치 하는 문자열을 입력 하 여 문자열을 선택할 수 있습니다. 이 컨트롤에 대 한 한 가지 가능한 용도 이름의 사전순으로 정렬된 된 목록에서 항목 선택입니다.  

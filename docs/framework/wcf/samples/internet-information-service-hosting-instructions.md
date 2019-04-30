@@ -3,11 +3,11 @@ title: 인터넷 정보 서비스 호스팅 지침
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
 ms.openlocfilehash: f5aa276bc1178f3e7c61af7505fcf54df8b934e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954858"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>인터넷 정보 서비스 호스팅 지침
 IIS(인터넷 정보 서비스)에서 호스팅하는 샘플을 실행하려면 IIS가 올바르게 설치되어 있고 실행 중인지 확인해야 합니다.  
@@ -46,13 +46,13 @@ IIS(인터넷 정보 서비스)에서 호스팅하는 샘플을 실행하려면 
   
 8. 다음 항목이 선택되었는지 확인합니다.  
   
-    1.  **.NET 확장성**  
+    1. **.NET 확장성**  
   
-    2.  **ASP.NET**  
+    2. **ASP.NET**  
   
-    3.  **ISAPI 확장**  
+    3. **ISAPI 확장**  
   
-    4.  **ISAPI 필터**  
+    4. **ISAPI 필터**  
   
 9. 항목 아래에서 **World Wide Web 서비스**를 확장 하 고 **일반 Http 기능**합니다.  
   
@@ -104,13 +104,13 @@ IIS(인터넷 정보 서비스)에서 호스팅하는 샘플을 실행하려면 
   
 8. 다음 항목이 선택되었는지 확인합니다.  
   
-    1.  **.NET 확장성**  
+    1. **.NET 확장성**  
   
-    2.  **ASP.NET**  
+    2. **ASP.NET**  
   
-    3.  **ISAPI 확장**  
+    3. **ISAPI 확장**  
   
-    4.  **ISAPI 필터**  
+    4. **ISAPI 필터**  
   
 9. 항목을 확장 **웹 관리 도구**를 선택한 후 **IIS 관리 콘솔**합니다.  
   

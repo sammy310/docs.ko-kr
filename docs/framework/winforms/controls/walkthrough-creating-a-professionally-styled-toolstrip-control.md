@@ -11,22 +11,22 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
 ms.openlocfilehash: 526cb509d780abdbf3db6e15504616de19daae83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009099"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>연습: 전문적인 스타일의 ToolStrip 컨트롤 만들기
 응용 프로그램을 제공할 수 있습니다 <xref:System.Windows.Forms.ToolStrip> 에서 파생 된 고유한 클래스를 작성 하 여 전문적인 모양 및 동작을 제어 합니다 <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 형식입니다.  
   
  이 연습에 사용 하는 방법을 보여 줍니다 <xref:System.Windows.Forms.ToolStrip> 와 비슷한 복합 컨트롤을 만드는 컨트롤을 **탐색 창** Microsoft® Outlook®에서 제공 합니다. 다음 태스크를이 연습에 설명 되어 있습니다.  
   
--   Windows 컨트롤 라이브러리 프로젝트를 만드는 중입니다.  
+- Windows 컨트롤 라이브러리 프로젝트를 만드는 중입니다.  
   
--   StackView 컨트롤을 디자인 합니다.  
+- StackView 컨트롤을 디자인 합니다.  
   
--   사용자 지정 렌더러를 구현 합니다.  
+- 사용자 지정 렌더러를 구현 합니다.  
   
  작업을 완료 하는 경우에 전문적인 모양의 Microsoft Office® XP 컨트롤을 사용 하 여 재사용 가능한 사용자 지정 클라이언트 컨트롤을 해야 합니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "59336553"
 ## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 사항이 필요합니다.  
   
--   만들고 Visual Studio를 설치한 컴퓨터에서 Windows Forms 응용 프로그램 프로젝트를 실행 하는 일을 할 수 있는 충분 한 권한입니다.  
+- 만들고 Visual Studio를 설치한 컴퓨터에서 Windows Forms 응용 프로그램 프로젝트를 실행 하는 일을 할 수 있는 충분 한 권한입니다.  
   
 ## <a name="creating-a-windows-control-library-project"></a>Windows 컨트롤 라이브러리 프로젝트 만들기  
  첫 번째 단계에서는 컨트롤 라이브러리 프로젝트를 만드는 것입니다.  
@@ -178,11 +178,11 @@ ms.locfileid: "59336553"
 ## <a name="next-steps"></a>다음 단계  
  이 연습에서는 전문적인 모양의 Office XP 컨트롤을 사용 하 여 재사용 가능한 사용자 지정 클라이언트 컨트롤을 만들었습니다. 사용할 수는 <xref:System.Windows.Forms.ToolStrip> 다양 한 용도로 다른 컨트롤의 패밀리:  
   
--   사용 하 여 컨트롤에 대 한 바로 가기 메뉴를 만들 <xref:System.Windows.Forms.ContextMenuStrip>합니다. 자세한 내용은 [ContextMenu 구성 요소 개요](contextmenu-component-overview-windows-forms.md)합니다.  
+- 사용 하 여 컨트롤에 대 한 바로 가기 메뉴를 만들 <xref:System.Windows.Forms.ContextMenuStrip>합니다. 자세한 내용은 [ContextMenu 구성 요소 개요](contextmenu-component-overview-windows-forms.md)합니다.  
   
--   자동으로 채워진된 표준 메뉴를 사용 하 여 폼을 만듭니다. 자세한 내용은 [연습: 폼에 표준 메뉴 항목 제공](walkthrough-providing-standard-menu-items-to-a-form.md)합니다.  
+- 자동으로 채워진된 표준 메뉴를 사용 하 여 폼을 만듭니다. 자세한 내용은 [연습: 폼에 표준 메뉴 항목 제공](walkthrough-providing-standard-menu-items-to-a-form.md)합니다.  
   
--   도킹 된 여러 문서 MDI (인터페이스) 양식을 만듭니다 <xref:System.Windows.Forms.ToolStrip> 컨트롤입니다. 자세한 내용은 [방법: 메뉴 병합 및 ToolStrip 컨트롤을 사용 하 여 MDI 폼 만들기](how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)합니다.  
+- 도킹 된 여러 문서 MDI (인터페이스) 양식을 만듭니다 <xref:System.Windows.Forms.ToolStrip> 컨트롤입니다. 자세한 내용은 [방법: 메뉴 병합 및 ToolStrip 컨트롤을 사용 하 여 MDI 폼 만들기](how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
 

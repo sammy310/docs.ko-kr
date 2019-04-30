@@ -5,11 +5,11 @@ helpviewer_keywords:
 - My.Computer object
 ms.assetid: cc814d79-6f7f-4e54-8b9d-5ecfdd77a0b8
 ms.openlocfilehash: f0fbd2a795d90cb88a4b185669a6393c5ef22752
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031085"
 ---
 # <a name="mycomputer-object"></a>My.Computer 개체
 오디오, 시계, 키보드, 파일 시스템과 같은 컴퓨터 구성 요소를 조작하기 위한 속성을 제공합니다.  

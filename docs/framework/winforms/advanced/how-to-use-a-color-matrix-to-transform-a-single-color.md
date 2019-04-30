@@ -9,11 +9,11 @@ helpviewer_keywords:
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
 ms.openlocfilehash: 78fc498b0689026fb74ec0c422948c1879495560
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954834"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>방법: 색 매트릭스를 사용하여 단색으로 변환
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 제공 된 <xref:System.Drawing.Image> 고 <xref:System.Drawing.Bitmap> 저장 및 이미지 조작을 위한 클래스입니다. <xref:System.Drawing.Image> 및 <xref:System.Drawing.Bitmap> 개체는 32 비트 숫자도 각 픽셀의 색을 저장 합니다. 각각 8 비트가 빨간색, 녹색, 파랑 및 알파에 대 한 합니다. 각 네 가지 구성 요소에는 0부터 농도가 없음을 나타내고 255 전체 강도 나타내는 0부터 255 까지의 숫자입니다. 색의 투명도 지정 하는 알파 구성 요소: 0은 완전히 투명 하 고 255는 완전히 불투명 한 합니다.  

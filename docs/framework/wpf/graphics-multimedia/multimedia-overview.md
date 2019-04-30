@@ -6,11 +6,11 @@ helpviewer_keywords:
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
 ms.openlocfilehash: 66cb28fce9485898711b9029baf8a17dd9b2c011
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62030381"
 ---
 # <a name="multimedia-overview"></a>멀티미디어 개요
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]의 멀티미디어 기능을 통해 오디오 및 비디오를 응용 프로그램에 통합하여 사용자 환경을 개선할 수 있습니다. 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 멀티미디어 기능을 소개합니다.  
@@ -37,11 +37,11 @@ ms.locfileid: "59340492"
 ### <a name="independent-mode"></a>독립 모드  
  독립 모드에서 미디어 콘텐츠는 미디어 재생을 주도합니다. 독립 모드에서는 다음과 같은 옵션을 사용할 수 있습니다.  
   
--   미디어의 <xref:System.Uri> 직접 지정할 수 있습니다.  
+- 미디어의 <xref:System.Uri> 직접 지정할 수 있습니다.  
   
--   미디어 재생을 직접 제어할 수 있습니다.  
+- 미디어 재생을 직접 제어할 수 있습니다.  
   
--   미디어 <xref:System.Windows.Controls.MediaElement.Position%2A> 고 <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A> 속성을 수정할 수 있습니다.  
+- 미디어 <xref:System.Windows.Controls.MediaElement.Position%2A> 고 <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A> 속성을 수정할 수 있습니다.  
   
  설정 하거나 미디어를 로드 합니다 <xref:System.Windows.Controls.MediaElement> 개체의 <xref:System.Windows.Controls.MediaElement.Source%2A> 속성 또는 전화 800-659-3579 합니다 <xref:System.Windows.Media.MediaPlayer> 개체의 <xref:System.Windows.Media.MediaPlayer.Open%2A> 메서드.  
   
@@ -52,11 +52,11 @@ ms.locfileid: "59340492"
 ### <a name="clock-mode"></a>클록 모드  
  클록 모드에서는 <xref:System.Windows.Media.MediaTimeline> 이 미디어를 재생 합니다. 클록 모드에는 다음과 같은 특징이 있습니다.  
   
--   미디어의 <xref:System.Uri> 를 통해 간접적으로 설정 된 <xref:System.Windows.Media.MediaTimeline>합니다.  
+- 미디어의 <xref:System.Uri> 를 통해 간접적으로 설정 된 <xref:System.Windows.Media.MediaTimeline>합니다.  
   
--   미디어 재생을 클록으로 제어할 수 있습니다. 미디어 개체의 컨트롤 메서드를 사용할 수 없습니다.  
+- 미디어 재생을 클록으로 제어할 수 있습니다. 미디어 개체의 컨트롤 메서드를 사용할 수 없습니다.  
   
--   미디어를 설정 하 여 로드를 <xref:System.Windows.Media.MediaTimeline> 개체의 <xref:System.Windows.Media.MediaTimeline.Source%2A> 속성, 타임 라인에서 클록을 만들고 클록을 미디어 개체에 할당 합니다. 미디어 이러한 방식으로 로드 됩니다 때를 <xref:System.Windows.Media.MediaTimeline> 내부를 <xref:System.Windows.Media.Animation.Storyboard> 대상은 <xref:System.Windows.Controls.MediaElement>합니다.  
+- 미디어를 설정 하 여 로드를 <xref:System.Windows.Media.MediaTimeline> 개체의 <xref:System.Windows.Media.MediaTimeline.Source%2A> 속성, 타임 라인에서 클록을 만들고 클록을 미디어 개체에 할당 합니다. 미디어 이러한 방식으로 로드 됩니다 때를 <xref:System.Windows.Media.MediaTimeline> 내부를 <xref:System.Windows.Media.Animation.Storyboard> 대상은 <xref:System.Windows.Controls.MediaElement>합니다.  
   
  클록 모드에서 미디어 재생을 제어 하는 <xref:System.Windows.Media.Animation.ClockController> 제어 메서드를 사용 해야 합니다. <xref:System.Windows.Media.Animation.ClockController> 에서 가져온 합니다 <xref:System.Windows.Media.Animation.ClockController> 의 속성을 <xref:System.Windows.Media.MediaClock>입니다. 컨트롤 메서드를 사용 하려는 경우는 <xref:System.Windows.Controls.MediaElement> 또는 <xref:System.Windows.Media.MediaPlayer> 클록 모드에서 개체를 <xref:System.InvalidOperationException> throw 됩니다.  
   

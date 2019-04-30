@@ -10,11 +10,11 @@ helpviewer_keywords:
 - transformations [Windows Forms], local
 ms.assetid: b601d66d-d572-4f11-9d2e-92f0dc8893f3
 ms.openlocfilehash: e4ed103e781cc2e59d62c11f3233357c77b81cb9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004579"
 ---
 # <a name="global-and-local-transformations"></a>전역 및 지역 변환
 전역 변환은 그린 모든 항목에 적용 되는 변환 된 지정 <xref:System.Drawing.Graphics> 개체입니다. 반면 로컬 변환 하는 그릴 특정 항목에 적용 되는 변환입니다.  

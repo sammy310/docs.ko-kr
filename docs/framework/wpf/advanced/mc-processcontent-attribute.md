@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: 2689b2c8-b4dc-4b71-b9bd-f95e619122d7
 ms.openlocfilehash: 865b1a3ccc30ff5efab4b08956bf7ba2bba4769c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017899"
 ---
 # <a name="mcprocesscontent-attribute"></a>mc:ProcessContent 특성
 지정 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 직계 부모 요소에서 무시 될 수 있습니다 하는 경우에 요소에서는 관련 부모 요소에 의해 처리 되는 콘텐츠를 아직 해야를 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 지정으로 인해 프로세서 [mc: Ignorable 특성](mc-ignorable-attribute.md) . 합니다 `mc:ProcessContent` 특성에 대 한 및 사용자 지정 네임 스페이스 매핑에 대 한 태그 호환성 지원 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 버전 관리 합니다.  

@@ -10,18 +10,18 @@ helpviewer_keywords:
 - DataObject class [WPF]
 ms.assetid: 5967d557-1867-420f-a524-ae3af78402da
 ms.openlocfilehash: 9dc195ece60739cf0c137a2893c9e9150e0d4d3f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010620"
 ---
 # <a name="data-and-data-objects"></a>데이터 및 데이터 개체
 끌어서 놓기 작업의 일부로 전송 되는 데이터는 데이터 개체에 저장 됩니다.  개념적으로, 데이터 개체의 다음 쌍을 하나 이상의 구성 됩니다.  
   
--   <xref:System.Object> 실제 데이터를 포함 하는 합니다.  
+- <xref:System.Object> 실제 데이터를 포함 하는 합니다.  
   
--   해당 데이터 형식 식별자입니다.  
+- 해당 데이터 형식 식별자입니다.  
   
  데이터 자체를 기준으로 나타낼 수 있는 아무 것도 구성할 수 있습니다 <xref:System.Object>합니다.  해당 데이터 형식은 문자열 또는 <xref:System.Type> 데이터 형식에 대 한 힌트에 제공 합니다.  여러 데이터/형식 쌍; 호스팅 데이터 개체 지원 이 통해 단일 데이터 개체를 여러 형식으로 데이터를에서 제공 합니다.  
   

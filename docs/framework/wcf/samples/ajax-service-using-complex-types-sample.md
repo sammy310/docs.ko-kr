@@ -3,11 +3,11 @@ title: AJAX Service Using Complex Types 샘플
 ms.date: 03/30/2017
 ms.assetid: 88242b99-4811-4cbe-8201-52ddf48fb174
 ms.openlocfilehash: cde7e48d0f0c44d68266d60399ac197d322a42cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002887"
 ---
 # <a name="ajax-service-using-complex-types-sample"></a>AJAX Service Using Complex Types 샘플
 이 샘플에는 Windows Communication Foundation (WCF)를 사용 하 여 복합 형식의 인스턴스를 만들고 간에 서비스 및 클라이언트 JavaScript 개체 표기법 (JSON)으로 전송 하는 ASP.NET Asynchronous JavaScript and XML (AJAX) 서비스를 만드는 방법을 보여 줍니다. 웹 브라우저 클라이언트에서 JavaScript 코드를 사용하여 AJAX 서비스에 액세스할 수 있습니다. 이 샘플을 기반으로 합니다 [기본 AJAX 서비스](../../../../docs/framework/wcf/samples/basic-ajax-service.md) 샘플입니다.  

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b4eeecc22db5786f66b3d484b521989e71817d8e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59185044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995126"
 ---
 # <a name="icordebugmanagedcallback2changeconnection-method"></a>ICorDebugManagedCallback2::ChangeConnection 메서드
 지정 된 연결과 관련 된 작업 집합이 변경 된 디버거에 알립니다.  
@@ -46,9 +46,9 @@ HRESULT ChangeConnection (
 ## <a name="remarks"></a>설명  
  `ChangeConnection` 콜백 중 다음과 같은 경우에 발생 합니다.  
   
--   때 디버거 연결을 포함 하는 프로세스에 연결 합니다. 이 경우 런타임은 생성 되며 디스패치를 [ICorDebugManagedCallback2::CreateConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-createconnection-method.md) 이벤트 및 `ChangeConnection` 프로세스의 각 연결에 대 한 이벤트입니다. `ChangeConnection` 이벤트가 생성 된 후 해당 연결의 작업 집합이 변경 되었는지 여부에 관계 없이 모든 기존 연결에 대해 생성 됩니다.  
+- 때 디버거 연결을 포함 하는 프로세스에 연결 합니다. 이 경우 런타임은 생성 되며 디스패치를 [ICorDebugManagedCallback2::CreateConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-createconnection-method.md) 이벤트 및 `ChangeConnection` 프로세스의 각 연결에 대 한 이벤트입니다. `ChangeConnection` 이벤트가 생성 된 후 해당 연결의 작업 집합이 변경 되었는지 여부에 관계 없이 모든 기존 연결에 대해 생성 됩니다.  
   
--   호스트를 호출 하는 경우 [iclrdebugmanager:: Setconnectiontasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md) 에 [호스팅 API](../../../../docs/framework/unmanaged-api/hosting/index.md)합니다.  
+- 호스트를 호출 하는 경우 [iclrdebugmanager:: Setconnectiontasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md) 에 [호스팅 API](../../../../docs/framework/unmanaged-api/hosting/index.md)합니다.  
   
  디버거는 새 변경 내용을 선택 하는 프로세스의 모든 스레드를 검색 해야 합니다.  
   

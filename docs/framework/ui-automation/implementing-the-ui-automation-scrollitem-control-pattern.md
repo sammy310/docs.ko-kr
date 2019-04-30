@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Scroll Item control pattern
 ms.assetid: 903bab5c-80c1-44d7-bdc2-0a418893b987
 ms.openlocfilehash: c0bb852fa6c117ae8eb2644a0be75f20367b2054
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983309"
 ---
 # <a name="implementing-the-ui-automation-scrollitem-control-pattern"></a>UI 자동화 ScrollItem 컨트롤 패턴 구현
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "59095024"
 ## <a name="implementation-guidelines-and-conventions"></a>구현 지침 및 규칙  
  Scroll Item 컨트롤 패턴을 구현할 때는 다음 지침 및 규칙에 유의하세요.  
   
--   창 또는 캔버스 컨트롤 내에 포함된 항목은 IScrollItemProvider 인터페이스를 구현하는 데 필요하지 않습니다. 그 대신, <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>에 대해 유효한 위치를 노출해야 합니다. 이렇게 하면 UI 자동화 클라이언트 응용 프로그램이 컨테이너의 <xref:System.Windows.Automation.ScrollPattern> 컨트롤 패턴 메서드를 사용하여 자식 항목을 표시할 수 있습니다.  
+- 창 또는 캔버스 컨트롤 내에 포함된 항목은 IScrollItemProvider 인터페이스를 구현하는 데 필요하지 않습니다. 그 대신, <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>에 대해 유효한 위치를 노출해야 합니다. 이렇게 하면 UI 자동화 클라이언트 응용 프로그램이 컨테이너의 <xref:System.Windows.Automation.ScrollPattern> 컨트롤 패턴 메서드를 사용하여 자식 항목을 표시할 수 있습니다.  
   
 <a name="Required_Members_for_IScrollItemProvider"></a>   
 ## <a name="required-members-for-iscrollitemprovider"></a>IScrollItemProvider에 필요한 멤버  

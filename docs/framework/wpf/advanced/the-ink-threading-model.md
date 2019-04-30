@@ -14,22 +14,22 @@ helpviewer_keywords:
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
 ms.openlocfilehash: 80e7ef202c46a23069766512cf4e67bb21a49564
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007390"
 ---
 # <a name="the-ink-threading-model"></a>잉크 스레딩 모델
 Tablet pc 잉크의 이점 중 하나는 마치 많은 쓰기와 같은 일반 펜과 종이 사용 하 여 것입니다.  태블릿 펜이를 위해 마우스 않으며 사용자가 쓸 때 잉크를 렌더링 하는 보다 훨씬 빠른 속도로 입력된 데이터를 수집 합니다.  차단 될 수 있으므로 응용 프로그램의 사용자 인터페이스 (UI) 스레드에서 펜 데이터와 렌더링 잉크를 수집 하기 위한 충분 하지 않습니다.  이 해결 하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 사용자 잉크를 쓸 때 응용 프로그램에서는 두 개의 추가 스레드를 사용 합니다.  
   
  다음 목록은 수집 하 고 디지털 잉크를 렌더링에 참여 하는 스레드를 보여 줍니다.  
   
--   펜 스레드-스레드 스타일러스에서 입력입니다.  (실제로 스레드 풀 이지만이 항목에서는 펜 스레드는이를 나타냅니다.)  
+- 펜 스레드-스레드 스타일러스에서 입력입니다.  (실제로 스레드 풀 이지만이 항목에서는 펜 스레드는이를 나타냅니다.)  
   
--   응용 프로그램 사용자 인터페이스 스레드 응용 프로그램의 사용자 인터페이스를 제어 하는 스레드입니다.  
+- 응용 프로그램 사용자 인터페이스 스레드 응용 프로그램의 사용자 인터페이스를 제어 하는 스레드입니다.  
   
--   동적 렌더링 스레드-사용자 동안 잉크를 렌더링 하는 스레드는 스트로크를 그립니다. Window Presentation Foundation에서 설명 했 듯이 동적 렌더링 스레드는 응용 프로그램의 다른 UI 요소를 렌더링 하는 스레드가 아닌 다른 [스레딩 모델](threading-model.md)합니다.  
+- 동적 렌더링 스레드-사용자 동안 잉크를 렌더링 하는 스레드는 스트로크를 그립니다. Window Presentation Foundation에서 설명 했 듯이 동적 렌더링 스레드는 응용 프로그램의 다른 UI 요소를 렌더링 하는 스레드가 아닌 다른 [스레딩 모델](threading-model.md)합니다.  
   
  잉크 입력 기능 모델이 동일 응용 프로그램을 사용 합니다 <xref:System.Windows.Controls.InkCanvas> 또는 사용자 지정 컨트롤에서 비슷하게 [잉크 입력 컨트롤 만들기](creating-an-ink-input-control.md)합니다.  이 항목에서는 설명의 측면에서 스레딩 있지만 <xref:System.Windows.Controls.InkCanvas>, 사용자 지정 컨트롤을 만들 때 동일한 개념이 적용 합니다.  
   
@@ -40,17 +40,17 @@ Tablet pc 잉크의 이점 중 하나는 마치 많은 쓰기와 같은 일반 �
   
 1. 사용자가 스트로크를 그리는 동안 발생 하는 작업  
   
-    1.  사용자가 스트로크를 그릴, 펜 스레드에서 스타일러스 지점을 제공 합니다.  스타일러스 플러그 인을 포함 하는 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>와 펜 스레드에서 스타일러스 지점을 적용 하기 전에 수정 하 게는 <xref:System.Windows.Controls.InkCanvas> 를 수신 합니다.  
+    1. 사용자가 스트로크를 그릴, 펜 스레드에서 스타일러스 지점을 제공 합니다.  스타일러스 플러그 인을 포함 하는 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>와 펜 스레드에서 스타일러스 지점을 적용 하기 전에 수정 하 게는 <xref:System.Windows.Controls.InkCanvas> 를 수신 합니다.  
   
-    2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 스타일러스 지점을 동적 렌더링 스레드에서 렌더링 합니다. 이전 단계와 동시에 발생합니다.  
+    2. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 스타일러스 지점을 동적 렌더링 스레드에서 렌더링 합니다. 이전 단계와 동시에 발생합니다.  
   
-    3.  <xref:System.Windows.Controls.InkCanvas> 스타일러스 포인트 UI 스레드를 수신 합니다.  
+    3. <xref:System.Windows.Controls.InkCanvas> 스타일러스 포인트 UI 스레드를 수신 합니다.  
   
 2. 사용자가 스트로크를 종료 한 후 발생 하는 작업  
   
-    1.  사용자가 스트로크를 그리는 마치면 합니다 <xref:System.Windows.Controls.InkCanvas> 만듭니다를 <xref:System.Windows.Ink.Stroke> 개체에 추가 합니다는 <xref:System.Windows.Controls.InkPresenter>를 정적으로 렌더링 하는 합니다.  
+    1. 사용자가 스트로크를 그리는 마치면 합니다 <xref:System.Windows.Controls.InkCanvas> 만듭니다를 <xref:System.Windows.Ink.Stroke> 개체에 추가 합니다는 <xref:System.Windows.Controls.InkPresenter>를 정적으로 렌더링 하는 합니다.  
   
-    2.  UI 스레드 경고는 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 스트로크를 정적으로 렌더링 하는 하므로 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 스트로크의 시각적 표시를 제거 합니다.  
+    2. UI 스레드 경고는 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 스트로크를 정적으로 렌더링 하는 하므로 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 스트로크의 시각적 표시를 제거 합니다.  
   
 ## <a name="ink-collection-and-stylus-plug-ins"></a>잉크 수집 및 스타일러스 플러그 인  
  각 <xref:System.Windows.UIElement> 에 <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>합니다.  합니다 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 개체는 <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> 받고 펜 스레드에서 스타일러스 지점을 수정할 수 있습니다. 합니다 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 개체에서 해당 순서에 따라 스타일러스 지점이 수신는 <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>합니다.  
@@ -85,16 +85,16 @@ Tablet pc 잉크의 이점 중 하나는 마치 많은 쓰기와 같은 일반 �
   
 1. 사용자가 스트로크를 시작 합니다.  
   
-    1.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 시각적 트리를 만듭니다.  
+    1. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 시각적 트리를 만듭니다.  
   
 2. 사용자가 스트로크를 그리고 있습니다.  
   
-    1.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 시각적 트리를 만듭니다.  
+    1. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 시각적 트리를 만듭니다.  
   
 3. 사용자가 스트로크를 종료 합니다.  
   
-    1.  <xref:System.Windows.Controls.InkPresenter> 스트로크 해당 시각적 트리를 추가 합니다.  
+    1. <xref:System.Windows.Controls.InkPresenter> 스트로크 해당 시각적 트리를 추가 합니다.  
   
-    2.  미디어 통합 계층 (MIL) 스트로크를 정적으로 렌더링합니다.  
+    2. 미디어 통합 계층 (MIL) 스트로크를 정적으로 렌더링합니다.  
   
-    3.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 시각적 개체를 정리 합니다.
+    3. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 시각적 개체를 정리 합니다.

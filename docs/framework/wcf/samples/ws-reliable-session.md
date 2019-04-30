@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Reliable session
 ms.assetid: 86e914f2-060b-432b-bd17-333695317745
 ms.openlocfilehash: c682db98ac72019d434e06ae79d87b69c85c275e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006310"
 ---
 # <a name="ws-reliable-session"></a>WS 신뢰할 수 있는 세션
 이 샘플에서는 신뢰할 수 있는 세션의 사용법을 보여 줍니다. 신뢰할 수 있는 세션은 신뢰할 수 있는 메시징 및 세션 지원을 제공합니다. 신뢰할 수 있는 메시징 기능은 실패 시 통신을 다시 시도하고 메시지 차례로 도착과 같은 배달 보증을 지정할 수 있게 합니다. 세션은 호출 간에 클라이언트의 상태를 유지합니다. 이 샘플에서는 클라이언트 상태를 유지 관리하기 위한 세션을 구현하고 차례로 배달 보증을 지정합니다.  

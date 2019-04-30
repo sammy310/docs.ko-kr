@@ -1,14 +1,14 @@
 ---
-title: WCF 클라이언트 리소스를 해제 하려면 중단 및 닫기 사용
+title: 닫기 및 중단을 사용하여 WCF 클라이언트 리소스 해제
 description: Dispose는 실패 하 고 네트워크 실패 시 예외를 throw 수 있습니다. 원치 않는 동작이 될 수 있습니다. 대신, 닫기 사용 하 고 리소스를 해제 하려면 클라이언트 네트워크 실패 했을 때 중단 합니다.
 ms.date: 11/12/2018
 ms.assetid: aff82a8d-933d-4bdc-b0c2-c2f7527204fb
 ms.openlocfilehash: 58f828d9cd85806f5f04c349a7de18828ab5f6f2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007580"
 ---
 # <a name="close-and-abort-release-resources-safely-when-network-connections-have-dropped"></a>닫기 및 네트워크 연결을 삭제 한 경우에 안전 하 게 중단 릴리스 리소스
 
@@ -21,8 +21,7 @@ ms.locfileid: "57678971"
 
 C# "using" 문을 사용하면 결과적으로 `Dispose`()가 호출됩니다. 이는 네트워크 오류 발생 시에 예외를 throw할 수 있는 `Close`()와 동일합니다. "using" 블록의 닫는 중괄호에서 `Dispose`() 호출이 암시적으로 발생하므로 이 예외 원인은 코드를 작성하는 사용자와 읽는 사용자 모두가 알아차리지 못합니다. 이로 인해 응용 프로그램 오류가 발생할 가능성이 있습니다.
 
-
-  `DemonstrateProblemUsingCanThrow` 메서드에서 나타나는 첫 번째 문제는 닫는 중괄호로 인해 예외가 throw되고 닫는 중괄호 뒤의 코드가 실행되지 않는다는 것입니다.
+`DemonstrateProblemUsingCanThrow` 메서드에서 나타나는 첫 번째 문제는 닫는 중괄호로 인해 예외가 throw되고 닫는 중괄호 뒤의 코드가 실행되지 않는다는 것입니다.
 
 ```csharp
 using (CalculatorClient client = new CalculatorClient())
@@ -34,8 +33,7 @@ Console.WriteLine("Hope this code wasn't important, because it might not happen.
 
 using 블록 안의 어떠한 항목도 예외를 throw하지 않거나 using 블록 안의 모든 예외가 catch될 경우에도 닫는 중괄호에서 암시적 `Console.WriteLine`() 호출이 예외를 throw할 수 있으므로 `Dispose`이 발생하지 않을 수 있습니다.
 
-
-  `DemonstrateProblemUsingCanThrowAndMask` 메서드에서 나타나는 두 번째 문제는 예외를 throw하는 닫는 중괄호와 관련된 또 다른 문제입니다.
+`DemonstrateProblemUsingCanThrowAndMask` 메서드에서 나타나는 두 번째 문제는 예외를 throw하는 닫는 중괄호와 관련된 또 다른 문제입니다.
 
 ```csharp
 using (CalculatorClient client = new CalculatorClient())
@@ -46,8 +44,7 @@ using (CalculatorClient client = new CalculatorClient())
 } // <-- this line might throw an exception.
 ```
 
-
-  `Dispose`()가 "finally" 블록 안에서 발생하므로 `ApplicationException`()가 실패할 경우 `Dispose`은 using 블록 외부에서 표시되지 않습니다. 외부 코드가 `ApplicationException`이 발생하는 시점을 알아야 할 경우 "using" 구문은 이 예외를 마스킹하여 문제를 일으킬 수 있습니다.
+`Dispose`()가 "finally" 블록 안에서 발생하므로 `ApplicationException`()가 실패할 경우 `Dispose`은 using 블록 외부에서 표시되지 않습니다. 외부 코드가 `ApplicationException`이 발생하는 시점을 알아야 할 경우 "using" 구문은 이 예외를 마스킹하여 문제를 일으킬 수 있습니다.
 
 마지막으로 이 샘플에서는 `DemonstrateCleanupWithExceptions`에 예외가 발생할 경우 올바르게 정리하는 방법을 보여 줍니다. 이를 위해 오류를 보고하고 `Abort`를 호출하는 try/catch 블록이 사용됩니다. 참조 된 [예상 예외](../../../../docs/framework/wcf/samples/expected-exceptions.md) 클라이언트 호출에서 예외를 catch 하는 방법에 대 한 자세한 세부 정보에 대 한 샘플.
 

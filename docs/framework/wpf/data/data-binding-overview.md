@@ -11,11 +11,11 @@ helpviewer_keywords:
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
 ms.openlocfilehash: f849cf306f4de0cbaa7623ded4ab7045bb5112a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024270"
 ---
 # <a name="data-binding-overview"></a>데이터 바인딩 개요
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 데이터 바인딩은 응용 프로그램이 데이터를 제공하고 상호 작용할 수 있는 간단하고 일관된 방법을 제공합니다. 다양한 데이터 소스에서 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 개체 및 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]의 형태로 데이터에 요소를 바인딩할 수 있습니다. <xref:System.Windows.Controls.ContentControl>같은 <xref:System.Windows.Controls.Button> 하 고 <xref:System.Windows.Controls.ItemsControl>같은 <xref:System.Windows.Controls.ListBox> 고 <xref:System.Windows.Controls.ListView> 단일 데이터 항목의 유연한 스타일 또는 데이터 항목의 컬렉션을 사용 하도록 설정 하는 기본 제공 기능이 있습니다. 데이터를 기반으로 정렬, 필터 및 그룹 보기를 생성할 수 있습니다.  
@@ -36,15 +36,15 @@ ms.locfileid: "59315324"
   
  위 그림은 작업 항목 목록을 표시하는 애플리케이션의 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]입니다. 애플리케이션은 데이터 바인딩의 다음 기능을 보여 줍니다.  
   
--   콘텐츠를 <xref:System.Windows.Controls.ListBox> 컬렉션에 바인딩된 *AuctionItem* 개체입니다. *AuctionItem* 개체에는 *Description*, *StartPrice*, *StartDate*, *Category*, *SpecialFeatures* 등의 속성이 있습니다.  
+- 콘텐츠를 <xref:System.Windows.Controls.ListBox> 컬렉션에 바인딩된 *AuctionItem* 개체입니다. *AuctionItem* 개체에는 *Description*, *StartPrice*, *StartDate*, *Category*, *SpecialFeatures* 등의 속성이 있습니다.  
   
--   데이터 (*AuctionItem* 개체)에 표시 된 <xref:System.Windows.Controls.ListBox> 각 항목에 대 한 설명과 현재 가격이 표시 되도록 템플릿으로 만들어집니다. 이렇게 사용 하는 <xref:System.Windows.DataTemplate>합니다. 또한 각 항목의 모양은 표시되는 *AuctionItem*의 *SpecialFeatures* 값에 따라 달라집니다. *AuctionItem*의 *SpecialFeatures* 값이 *Color*이면 항목에는 파란색 테두리가 포함됩니다. *Highlight* 값이면 항목에는 주황색 테두리와 별모양이 포함됩니다. [데이터 템플릿](#data_templating) 섹션에서는 데이터 템플릿을 살펴봅니다.  
+- 데이터 (*AuctionItem* 개체)에 표시 된 <xref:System.Windows.Controls.ListBox> 각 항목에 대 한 설명과 현재 가격이 표시 되도록 템플릿으로 만들어집니다. 이렇게 사용 하는 <xref:System.Windows.DataTemplate>합니다. 또한 각 항목의 모양은 표시되는 *AuctionItem*의 *SpecialFeatures* 값에 따라 달라집니다. *AuctionItem*의 *SpecialFeatures* 값이 *Color*이면 항목에는 파란색 테두리가 포함됩니다. *Highlight* 값이면 항목에는 주황색 테두리와 별모양이 포함됩니다. [데이터 템플릿](#data_templating) 섹션에서는 데이터 템플릿을 살펴봅니다.  
   
--   사용자 그룹, 필터링 하거나, 사용 하 여 데이터를 정렬할 수는 <xref:System.Windows.Controls.CheckBox>es 제공 합니다. 위의 이미지는 "Group by category" 및 "Sort by category and date" <xref:System.Windows.Controls.CheckBox>es 선택 됩니다. 데이터가 제품 범주에 따라 그룹화되고 범주 이름이 사전순으로 표시되어 있음을 알 수 있습니다. 그림에서 확인하기는 어렵지만 항목은 각 범주 내에서 시작 날짜별로 정렬됩니다. 이 작업에는 *컬렉션 뷰*가 사용됩니다. [컬렉션에 바인딩](#binding_to_collections) 섹션에서는 컬렉션 뷰를 살펴봅니다.  
+- 사용자 그룹, 필터링 하거나, 사용 하 여 데이터를 정렬할 수는 <xref:System.Windows.Controls.CheckBox>es 제공 합니다. 위의 이미지는 "Group by category" 및 "Sort by category and date" <xref:System.Windows.Controls.CheckBox>es 선택 됩니다. 데이터가 제품 범주에 따라 그룹화되고 범주 이름이 사전순으로 표시되어 있음을 알 수 있습니다. 그림에서 확인하기는 어렵지만 항목은 각 범주 내에서 시작 날짜별로 정렬됩니다. 이 작업에는 *컬렉션 뷰*가 사용됩니다. [컬렉션에 바인딩](#binding_to_collections) 섹션에서는 컬렉션 뷰를 살펴봅니다.  
   
--   사용자가 항목을 선택 합니다 <xref:System.Windows.Controls.ContentControl> 선택한 항목의 세부 정보를 표시 합니다. 이를 *마스터-세부 시나리오*라고 합니다. [마스터-세부 시나리오Scenario](#master_detail_scenario) 섹션에서는 바인딩 시나리오 유형을 살펴봅니다.  
+- 사용자가 항목을 선택 합니다 <xref:System.Windows.Controls.ContentControl> 선택한 항목의 세부 정보를 표시 합니다. 이를 *마스터-세부 시나리오*라고 합니다. [마스터-세부 시나리오Scenario](#master_detail_scenario) 섹션에서는 바인딩 시나리오 유형을 살펴봅니다.  
   
--   형식의 합니다 *StartDate* 속성이 <xref:System.DateTime>를 밀리초 단위로 시간을 포함 하는 날짜를 반환 하는 합니다. 이 애플리케이션에는 더 짧은 날짜 문자열이 표시되도록 사용자 지정 변환기가 사용되었습니다. [데이터 변환](#data_conversion) 섹션에서는 변환기를 살펴봅니다.  
+- 형식의 합니다 *StartDate* 속성이 <xref:System.DateTime>를 밀리초 단위로 시간을 포함 하는 날짜를 반환 하는 합니다. 이 애플리케이션에는 더 짧은 날짜 문자열이 표시되도록 사용자 지정 변환기가 사용되었습니다. [데이터 변환](#data_conversion) 섹션에서는 변환기를 살펴봅니다.  
   
  사용자가 *Add Product* 단추를 클릭하면 다음과 같이 표시됩니다.  
   
@@ -64,11 +64,11 @@ ms.locfileid: "59315324"
   
  위 그림과 같이 데이터 바인딩은 기본적으로 바인딩 대상과 바인딩 소스를 연결합니다. 그림에서는 다음 기본 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 데이터 바인딩 개념을 보여 줍니다.  
   
--   일반적으로 각 바인딩에는 네 가지 구성 요소인 바인딩 대상 개체, 대상 속성, 바인딩 소스 및 사용할 바인딩 소스의 값 경로가 있습니다. 예를 들어 내용의 바인딩하려는 <xref:System.Windows.Controls.TextBox> 에 *이름* 의 속성은 *직원* 개체 대상 개체를 <xref:System.Windows.Controls.TextBox>, 대상 속성이 <xref:System.Windows.Controls.TextBox.Text%2A> 속성을 사용 하 여 값이 *이름*, 및 원본 개체를 *직원* 개체.  
+- 일반적으로 각 바인딩에는 네 가지 구성 요소인 바인딩 대상 개체, 대상 속성, 바인딩 소스 및 사용할 바인딩 소스의 값 경로가 있습니다. 예를 들어 내용의 바인딩하려는 <xref:System.Windows.Controls.TextBox> 에 *이름* 의 속성은 *직원* 개체 대상 개체를 <xref:System.Windows.Controls.TextBox>, 대상 속성이 <xref:System.Windows.Controls.TextBox.Text%2A> 속성을 사용 하 여 값이 *이름*, 및 원본 개체를 *직원* 개체.  
   
--   대상 속성은 종속성 속성이어야 합니다. 대부분의 <xref:System.Windows.UIElement> 속성은 종속성 속성 및 읽기 전용으로 제외한 대부분의 종속성 속성을 기본적으로 데이터 바인딩을 지원 합니다. (만 <xref:System.Windows.DependencyObject> 종속성 속성 및 모든 형식을 정의할 수 있습니다 <xref:System.Windows.UIElement>에서 파생 <xref:System.Windows.DependencyObject>.)  
+- 대상 속성은 종속성 속성이어야 합니다. 대부분의 <xref:System.Windows.UIElement> 속성은 종속성 속성 및 읽기 전용으로 제외한 대부분의 종속성 속성을 기본적으로 데이터 바인딩을 지원 합니다. (만 <xref:System.Windows.DependencyObject> 종속성 속성 및 모든 형식을 정의할 수 있습니다 <xref:System.Windows.UIElement>에서 파생 <xref:System.Windows.DependencyObject>.)  
   
--   그림에는 지정되지 않았지만 바인딩 소스 개체는 사용자 지정 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체로 제한되지 않습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 데이터 바인딩은 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체 및 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 형식의 데이터를 지원합니다. 바인딩 소스 수 몇 가지 예제를 제공 하기를 <xref:System.Windows.UIElement>, 목록 개체는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 연관 된 개체 [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] 포함 된 XmlNode 데이터 나 웹 서비스에 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터. 자세한 내용은 [바인딩 소스 개요](binding-sources-overview.md)를 참조하세요.  
+- 그림에는 지정되지 않았지만 바인딩 소스 개체는 사용자 지정 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체로 제한되지 않습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 데이터 바인딩은 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 개체 및 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 형식의 데이터를 지원합니다. 바인딩 소스 수 몇 가지 예제를 제공 하기를 <xref:System.Windows.UIElement>, 목록 개체는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 연관 된 개체 [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] 포함 된 XmlNode 데이터 나 웹 서비스에 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터. 자세한 내용은 [바인딩 소스 개요](binding-sources-overview.md)를 참조하세요.  
   
  다른 [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] 항목을 읽을 때 바인딩을 설정하고 있다면 바인딩 소스*에* 바인딩 대상을 바인딩하고 있다는 것을 기억하세요. 예를 들어, 일부 기본 표시 하는 경우 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 에서 데이터를 <xref:System.Windows.Controls.ListBox> 바인딩하는 데이터 바인딩을 사용 하 여, 프로그램 <xref:System.Windows.Controls.ListBox> 에 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 데이터.  
   
@@ -82,13 +82,13 @@ ms.locfileid: "59315324"
   
  ![데이터 바인딩 데이터 흐름](./media/databinding-dataflow.png "DataBinding_DataFlow")  
   
--   <xref:System.Windows.Data.BindingMode.OneWay> 바인딩 소스 속성이 자동으로 대상 속성을 업데이트 하는 변경 되지만 대상 속성에 대 한 변경 내용이 다시 소스 속성에 전파 되지 않습니다. 이 바인딩 유형은 바인드되는 컨트롤이 암시적으로 읽기 전용인 경우에 적합합니다. 예를 들어 주식 시세표시기와 같은 원본에 바인드할 수 있거나 대상 속성에는 테이블의 데이터 바인딩된 배경색과 같이 변경을 위해 제공된 컨트롤 인터페이스가 없을 수 있습니다. 대상 속성의 변경 내용을 모니터링할 필요가 없는 경우 <xref:System.Windows.Data.BindingMode.OneWay> 바인딩 모드를 사용하면 <xref:System.Windows.Data.BindingMode.TwoWay> 바인딩 모드의 오버헤드가 방지됩니다.  
+- <xref:System.Windows.Data.BindingMode.OneWay> 바인딩 소스 속성이 자동으로 대상 속성을 업데이트 하는 변경 되지만 대상 속성에 대 한 변경 내용이 다시 소스 속성에 전파 되지 않습니다. 이 바인딩 유형은 바인드되는 컨트롤이 암시적으로 읽기 전용인 경우에 적합합니다. 예를 들어 주식 시세표시기와 같은 원본에 바인드할 수 있거나 대상 속성에는 테이블의 데이터 바인딩된 배경색과 같이 변경을 위해 제공된 컨트롤 인터페이스가 없을 수 있습니다. 대상 속성의 변경 내용을 모니터링할 필요가 없는 경우 <xref:System.Windows.Data.BindingMode.OneWay> 바인딩 모드를 사용하면 <xref:System.Windows.Data.BindingMode.TwoWay> 바인딩 모드의 오버헤드가 방지됩니다.  
   
--   <xref:System.Windows.Data.BindingMode.TwoWay> 변경 내용이 원본 속성 또는 대상 속성을 자동으로 다른 업데이트를 설정 하는 바인딩. 이 바인딩 유형은 편집 가능한 폼이나 기타 완전한 대화형 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 시나리오에 적합합니다. 대부분의 속성 기본값 <xref:System.Windows.Data.BindingMode.OneWay> 바인딩만 만들지만 일부 종속성 속성 (같은 사용자가 편집 가능한 컨트롤의 속성에 일반적으로 <xref:System.Windows.Controls.TextBox.Text%2A> 의 속성 <xref:System.Windows.Controls.TextBox> 및 <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> 의 속성 <xref:System.Windows.Controls.CheckBox>) 기본값으로<xref:System.Windows.Data.BindingMode.TwoWay> 바인딩. 종속성 속성이 기본적으로 단방향 또는 양방향으로 바인드되는지를 프로그래밍 방식으로 결정하려면 <xref:System.Windows.DependencyProperty.GetMetadata%2A>를 사용하여 속성의 속성 메타데이터를 가져온 후 <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A> 속성의 부울 값을 확인합니다.  
+- <xref:System.Windows.Data.BindingMode.TwoWay> 변경 내용이 원본 속성 또는 대상 속성을 자동으로 다른 업데이트를 설정 하는 바인딩. 이 바인딩 유형은 편집 가능한 폼이나 기타 완전한 대화형 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 시나리오에 적합합니다. 대부분의 속성 기본값 <xref:System.Windows.Data.BindingMode.OneWay> 바인딩만 만들지만 일부 종속성 속성 (같은 사용자가 편집 가능한 컨트롤의 속성에 일반적으로 <xref:System.Windows.Controls.TextBox.Text%2A> 의 속성 <xref:System.Windows.Controls.TextBox> 및 <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> 의 속성 <xref:System.Windows.Controls.CheckBox>) 기본값으로<xref:System.Windows.Data.BindingMode.TwoWay> 바인딩. 종속성 속성이 기본적으로 단방향 또는 양방향으로 바인드되는지를 프로그래밍 방식으로 결정하려면 <xref:System.Windows.DependencyProperty.GetMetadata%2A>를 사용하여 속성의 속성 메타데이터를 가져온 후 <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A> 속성의 부울 값을 확인합니다.  
   
--   <xref:System.Windows.Data.BindingMode.OneWayToSource> 반대 <xref:System.Windows.Data.BindingMode.OneWay> ; 바인딩 소스 속성이 업데이트 대상 속성이 변경 되 면 합니다. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]에서 소스 값을 다시 평가하면 되는 경우가 한 가지 예제 시나리오입니다.  
+- <xref:System.Windows.Data.BindingMode.OneWayToSource> 반대 <xref:System.Windows.Data.BindingMode.OneWay> ; 바인딩 소스 속성이 업데이트 대상 속성이 변경 되 면 합니다. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]에서 소스 값을 다시 평가하면 되는 경우가 한 가지 예제 시나리오입니다.  
   
--   그림에서 설명 하지는 <xref:System.Windows.Data.BindingMode.OneTime> 바인딩 소스 속성이 대상 속성을 초기화 하면 있지만 후속 변경 내용이 전파 되지 않습니다. 이는 데이터 컨텍스트가 변경되고 있거나 데이터 컨텍스트의 개체가 변경될 경우 변경 내용이 대상 속성에 반영되지 않습니다. 이 바인딩 유형은 현재 상태의 스냅숏이 사용하기에 적절하거나 데이터가 실제로 정적인 상황에서 데이터를 사용하는 경우에 적합합니다. 또한 이 바인딩 유형은 원본 속성의 일부 값으로 대상 속성을 초기화하려고 하며 데이터 컨텍스트가 사전에 알려지지 않은 경우에도 유용합니다. 이는 기본적으로 원본 값이 변경되지 않은 경우에 더 나은 성능을 제공하는 <xref:System.Windows.Data.BindingMode.OneWay> 바인딩의 더 간단한 형태입니다.  
+- 그림에서 설명 하지는 <xref:System.Windows.Data.BindingMode.OneTime> 바인딩 소스 속성이 대상 속성을 초기화 하면 있지만 후속 변경 내용이 전파 되지 않습니다. 이는 데이터 컨텍스트가 변경되고 있거나 데이터 컨텍스트의 개체가 변경될 경우 변경 내용이 대상 속성에 반영되지 않습니다. 이 바인딩 유형은 현재 상태의 스냅숏이 사용하기에 적절하거나 데이터가 실제로 정적인 상황에서 데이터를 사용하는 경우에 적합합니다. 또한 이 바인딩 유형은 원본 속성의 일부 값으로 대상 속성을 초기화하려고 하며 데이터 컨텍스트가 사전에 알려지지 않은 경우에도 유용합니다. 이는 기본적으로 원본 값이 변경되지 않은 경우에 더 나은 성능을 제공하는 <xref:System.Windows.Data.BindingMode.OneWay> 바인딩의 더 간단한 형태입니다.  
   
  소스 변경 내용을 검색 하는 (적용할 <xref:System.Windows.Data.BindingMode.OneWay> 하 고 <xref:System.Windows.Data.BindingMode.TwoWay> 바인딩), 소스와 같은 적절 한 속성 변경 알림 메커니즘을 구현 해야 합니다 <xref:System.ComponentModel.INotifyPropertyChanged>합니다. 참조 [속성 변경 알림 구현](how-to-implement-property-change-notification.md) 의 예는 <xref:System.ComponentModel.INotifyPropertyChanged> 구현 합니다.  
   
@@ -174,9 +174,9 @@ ms.locfileid: "59315324"
   
  A <xref:System.Windows.Data.BindingExpression> 호출의 반환 값을 통해 개체를 얻을 수 <xref:System.Windows.Data.BindingOperations.GetBindingExpression%2A> 데이터 바인딩된 개체입니다. 다음 항목에서는 설명의 사용 중 일부는 <xref:System.Windows.Data.BindingExpression> 클래스:  
   
--   [바인딩된 대상 속성에서 바인딩 개체 가져오기](how-to-get-the-binding-object-from-a-bound-target-property.md)  
+- [바인딩된 대상 속성에서 바인딩 개체 가져오기](how-to-get-the-binding-object-from-a-bound-target-property.md)  
   
--   [TextBox 텍스트의 소스를 업데이트하는 시점 제어](how-to-control-when-the-textbox-text-updates-the-source.md)  
+- [TextBox 텍스트의 소스를 업데이트하는 시점 제어](how-to-control-when-the-textbox-text-updates-the-source.md)  
   
 <a name="data_conversion"></a>   
 ## <a name="data-conversion"></a>데이터 변환  
@@ -201,13 +201,13 @@ ms.locfileid: "59315324"
   
  데이터 변환기를 구현하는 것이 좋은 몇 가지 일반적인 시나리오는 다음과 같습니다.  
   
--   데이터를 문화권에 따라 다르게 표시해야 하는 경우. 예를 들어 특정 문화권에서 사용되는 값 또는 표준에 따라 통화 변환기 또는 달력 날짜/시간 변환기를 구현해야 할 수 있습니다.  
+- 데이터를 문화권에 따라 다르게 표시해야 하는 경우. 예를 들어 특정 문화권에서 사용되는 값 또는 표준에 따라 통화 변환기 또는 달력 날짜/시간 변환기를 구현해야 할 수 있습니다.  
   
--   사용되는 데이터가 반드시 속성의 텍스트 값을 변경하는 데 사용될 필요는 없지만, 이미지의 소스 또는 표시 텍스트의 색이나 스타일과 같은 몇 가지 다른 값을 변경하는 데 사용되는 경우. 텍스트 필드를 표 셀의 Background 속성에 바인딩하는 것과 같이 적절해 보이지 않는 속성의 바인딩을 변환하는 방식으로 이 인스턴스에서 변환기를 사용할 수 있습니다.  
+- 사용되는 데이터가 반드시 속성의 텍스트 값을 변경하는 데 사용될 필요는 없지만, 이미지의 소스 또는 표시 텍스트의 색이나 스타일과 같은 몇 가지 다른 값을 변경하는 데 사용되는 경우. 텍스트 필드를 표 셀의 Background 속성에 바인딩하는 것과 같이 적절해 보이지 않는 속성의 바인딩을 변환하는 방식으로 이 인스턴스에서 변환기를 사용할 수 있습니다.  
   
--   두 개 이상의 컨트롤 또는 컨트롤의 여러 속성이 같은 데이터에 바인딩됩니다. 이 경우 기본 바인딩은 텍스트만 표시할 수 있는 반면, 기타 바인딩은 특정 표시 문제를 처리하지만 소스 정보와 같은 바인딩을 사용합니다.  
+- 두 개 이상의 컨트롤 또는 컨트롤의 여러 속성이 같은 데이터에 바인딩됩니다. 이 경우 기본 바인딩은 텍스트만 표시할 수 있는 반면, 기타 바인딩은 특정 표시 문제를 처리하지만 소스 정보와 같은 바인딩을 사용합니다.  
   
--   지금까지에서는 설명 하지 않았습니다 <xref:System.Windows.Data.MultiBinding>, 대상 속성에 바인딩의 컬렉션입니다. 경우를 <xref:System.Windows.Data.MultiBinding>, 사용자 지정을 사용 하 여 <xref:System.Windows.Data.IMultiValueConverter> 바인딩의 값에서 최종 값을 생성 합니다. 예를 들어 빨간색, 파란색 및 녹색 값을 기준으로 색을 계산할 수 있고 이러한 값은 같거나 다른 바인딩 소스 개체의 값일 수 있습니다. 참조 된 <xref:System.Windows.Data.MultiBinding> 예제 및 정보에 대 한 클래스 페이지입니다.  
+- 지금까지에서는 설명 하지 않았습니다 <xref:System.Windows.Data.MultiBinding>, 대상 속성에 바인딩의 컬렉션입니다. 경우를 <xref:System.Windows.Data.MultiBinding>, 사용자 지정을 사용 하 여 <xref:System.Windows.Data.IMultiValueConverter> 바인딩의 값에서 최종 값을 생성 합니다. 예를 들어 빨간색, 파란색 및 녹색 값을 기준으로 색을 계산할 수 있고 이러한 값은 같거나 다른 바인딩 소스 개체의 값일 수 있습니다. 참조 된 <xref:System.Windows.Data.MultiBinding> 예제 및 정보에 대 한 클래스 페이지입니다.  
   
 <a name="binding_to_collections"></a>   
 ## <a name="binding-to-collections"></a>컬렉션에 바인딩  
@@ -362,9 +362,9 @@ ms.locfileid: "59315324"
   
  <xref:System.Windows.Controls.ValidationRule> 개체 속성의 값이 유효한 지 확인 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에 다음 두 가지 유형의 기본 제공 <xref:System.Windows.Controls.ValidationRule> 개체:  
   
--   <xref:System.Windows.Controls.ExceptionValidationRule> 바인딩 소스 속성을 업데이트 하는 동안 throw 된 예외를 확인 합니다. 이전 예제에서 `StartPrice`는 정수 형식입니다. 사용자가 정수로 변환될 수 없는 값을 입력하면 예외가 throw되어 바인딩이 잘못된 것으로 표시됩니다. 설정 하는 대체 구문은 <xref:System.Windows.Controls.ExceptionValidationRule> 명시적으로 설정 하는 것을 <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> 속성을 `true` 에서 프로그램 <xref:System.Windows.Data.Binding> 또는 <xref:System.Windows.Data.MultiBinding> 개체입니다.  
+- <xref:System.Windows.Controls.ExceptionValidationRule> 바인딩 소스 속성을 업데이트 하는 동안 throw 된 예외를 확인 합니다. 이전 예제에서 `StartPrice`는 정수 형식입니다. 사용자가 정수로 변환될 수 없는 값을 입력하면 예외가 throw되어 바인딩이 잘못된 것으로 표시됩니다. 설정 하는 대체 구문은 <xref:System.Windows.Controls.ExceptionValidationRule> 명시적으로 설정 하는 것을 <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> 속성을 `true` 에서 프로그램 <xref:System.Windows.Data.Binding> 또는 <xref:System.Windows.Data.MultiBinding> 개체입니다.  
   
--   A <xref:System.Windows.Controls.DataErrorValidationRule> 개체를 구현 하는 개체에 의해 발생 하는 오류를 검사 합니다 <xref:System.ComponentModel.IDataErrorInfo> 인터페이스입니다. 이 유효성 검사 규칙을 사용 하 여 예제를 참조 하세요. <xref:System.Windows.Controls.DataErrorValidationRule>합니다. 설정 하는 대체 구문은 <xref:System.Windows.Controls.DataErrorValidationRule> 명시적으로 설정 하는 것을 <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> 속성을 `true` 에서 프로그램 <xref:System.Windows.Data.Binding> 또는 <xref:System.Windows.Data.MultiBinding> 개체입니다.  
+- A <xref:System.Windows.Controls.DataErrorValidationRule> 개체를 구현 하는 개체에 의해 발생 하는 오류를 검사 합니다 <xref:System.ComponentModel.IDataErrorInfo> 인터페이스입니다. 이 유효성 검사 규칙을 사용 하 여 예제를 참조 하세요. <xref:System.Windows.Controls.DataErrorValidationRule>합니다. 설정 하는 대체 구문은 <xref:System.Windows.Controls.DataErrorValidationRule> 명시적으로 설정 하는 것을 <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> 속성을 `true` 에서 프로그램 <xref:System.Windows.Data.Binding> 또는 <xref:System.Windows.Data.MultiBinding> 개체입니다.  
   
  파생 하 여 사용자 고유의 유효성 검사 규칙을 만들 수도 있습니다는 <xref:System.Windows.Controls.ValidationRule> 클래스 및 구현 된 <xref:System.Windows.Controls.ValidationRule.Validate%2A> 메서드. 다음 예제에서 사용 하는 규칙을 보여 줍니다.는 *Add Product Listing* "Start Date" <xref:System.Windows.Controls.TextBox> 에서 합니다 [데이터 바인딩이란?](#what_is_data_binding) 섹션:  
   

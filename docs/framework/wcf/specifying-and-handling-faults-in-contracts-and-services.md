@@ -5,11 +5,11 @@ helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
 ms.openlocfilehash: 7c64bdb0cf60fff2dad49c3ffc48629c53abecad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006406"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>계약 및 서비스에서 오류 지정 및 처리
 Windows Communication Foundation (WCF) 응용 프로그램 관리 되는 예외 개체를 SOAP 오류 개체를 SOAP 오류 개체를 관리 되는 예외 개체에 매핑하여 오류 상황을 처리 합니다. 이 단원의 항목에서는 사용자 지정 SOAP 오류와 같은 오류 조건을 노출하도록 계약을 디자인하는 방법, 이러한 오류를 서비스 구현의 일부로 반환하는 방법 및 클라이언트가 이러한 오류를 catch하는 방법에 대해 설명합니다.  
@@ -25,9 +25,9 @@ Windows Communication Foundation (WCF) 응용 프로그램 관리 되는 예외 
   
  일반적으로 서비스 및 이중 클라이언트는 다음 단계를 수행하여 오류 처리를 해당 응용 프로그램에 통합합니다.  
   
--   예외 조건을 사용자 지정 SOAP 오류에 매핑합니다.  
+- 예외 조건을 사용자 지정 SOAP 오류에 매핑합니다.  
   
--   클라이언트 및 서비스가 SOAP 오류를 예외로 보내고 받습니다.  
+- 클라이언트 및 서비스가 SOAP 오류를 예외로 보내고 받습니다.  
   
  또한 WCF 클라이언트 및 서비스 디버깅을 위해 선언 되지 않은 soap 오류를 사용할 수 있으며 기본 오류 동작을 확장할 수 있습니다. 다음 단원에서는 이러한 작업 및 개념에 대해 설명합니다.  
   

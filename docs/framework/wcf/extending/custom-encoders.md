@@ -3,11 +3,11 @@ title: 사용자 지정 인코더
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
 ms.openlocfilehash: 7602e18a03f73f66dfd028d810c003db0b6653bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996907"
 ---
 # <a name="custom-encoders"></a>사용자 지정 인코더
 이 항목에서는 사용자 지정 인코더를 만드는 방법을 설명합니다.  
@@ -30,11 +30,11 @@ ms.locfileid: "59190576"
   
  WCF는 다음과 같은 유형의 파생 된 바인딩 요소를 제공 합니다 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 텍스트, 이진 및 메시지 전송 (Optimization Mechanism) 인코딩에 제공할 수 있는 클래스:  
   
--   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>: 가장 뛰어나지만 XML 메시지에 대 한 효율성이 인코더. 웹 서비스 또는 웹 서비스 클라이언트는 일반적으로 텍스트 XML을 이해할 수 있습니다. 대량의 이진 데이터 블록을 텍스트로 전송하는 것은 비효율적입니다.  
+- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>: 가장 뛰어나지만 XML 메시지에 대 한 효율성이 인코더. 웹 서비스 또는 웹 서비스 클라이언트는 일반적으로 텍스트 XML을 이해할 수 있습니다. 대량의 이진 데이터 블록을 텍스트로 전송하는 것은 비효율적입니다.  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>: 문자 인코딩을 지정 하는 바인딩 요소 및 메시지 버전 관리 사용 되며 이진 기반 XML 메시지를 나타냅니다. 이 가장 효율적인 인코딩 옵션인 하지만 최소 상호 운용 가능한 WCF 끝점에서만 지원 됩니다.  
+- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>: 문자 인코딩을 지정 하는 바인딩 요소 및 메시지 버전 관리 사용 되며 이진 기반 XML 메시지를 나타냅니다. 이 가장 효율적인 인코딩 옵션인 하지만 최소 상호 운용 가능한 WCF 끝점에서만 지원 됩니다.  
   
--   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>: 메시지 전송 (Optimization Mechanism) 인코딩을 사용 하는 메시지에 사용 되는 메시지 버전 관리 및 문자 인코딩을 지정 하는 바인딩 요소를 나타냅니다. MTOM은 WCF 메시지의 이진 데이터를 전송하기 위한 효율적인 기술입니다. MTOM 인코더는 효율성과 호환성 간의 균형을 유지하려고 합니다. MTOM 인코딩은 대부분의 XML을 텍스트 형식으로 전송하지만, 큰 이진 데이터 블록의 경우에는 텍스트로 변환하지 않고 있는 그대로 전송하여 최적화합니다.  
+- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>: 메시지 전송 (Optimization Mechanism) 인코딩을 사용 하는 메시지에 사용 되는 메시지 버전 관리 및 문자 인코딩을 지정 하는 바인딩 요소를 나타냅니다. MTOM은 WCF 메시지의 이진 데이터를 전송하기 위한 효율적인 기술입니다. MTOM 인코더는 효율성과 호환성 간의 균형을 유지하려고 합니다. MTOM 인코딩은 대부분의 XML을 텍스트 형식으로 전송하지만, 큰 이진 데이터 블록의 경우에는 텍스트로 변환하지 않고 있는 그대로 전송하여 최적화합니다.  
   
  바인딩 요소는 이진, MTOM 또는 텍스트 <xref:System.ServiceModel.Channels.MessageEncoderFactory>를 만듭니다. 팩터리는 이진, MTOM 또는 텍스트 <xref:System.ServiceModel.Channels.MessageEncoderFactory> 인스턴스를 만듭니다. 일반적으로 인스턴스는 하나만 있습니다. 그러나 세션을 사용하는 경우에는 세션마다 다른 인코더가 제공될 수 있습니다. 이진 인코더는 이를 사용하여 동적 사전을 조정합니다(XML 인프라 참조).  
   
@@ -69,19 +69,19 @@ ms.locfileid: "59190576"
 ## <a name="writing-your-own-encoder"></a>사용자 고유의 인코더 작성  
  사용자 지정 메시지 인코더를 구현하려면 다음 추상 기본 클래스에 대한 사용자 지정 구현을 제공해야 합니다.  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder>  
+- <xref:System.ServiceModel.Channels.MessageEncoder>  
   
--   <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
+- <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
   
--   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
   
  메시지의 메모리 내 표현을 스트림에 기록할 수 있는 표현으로 변환하여 <xref:System.ServiceModel.Channels.MessageEncoder> 클래스 내에 캡슐화합니다. 이 클래스는 특정 유형의 XML 인코딩을 지원하는 XML 판독기 및 XML 작성기의 팩터리 역할을 합니다.  
   
--   재정의해야 하는 이 클래스의 주요 메서드는 다음과 같습니다.  
+- 재정의해야 하는 이 클래스의 주요 메서드는 다음과 같습니다.  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 개체를 가져와서 <xref:System.IO.Stream> 개체에 씁니다.  
+- <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 개체를 가져와서 <xref:System.IO.Stream> 개체에 씁니다.  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> - <xref:System.IO.Stream> 개체와 최대 헤더 크기를 가져오고 <xref:System.ServiceModel.Channels.Message> 개체를 반환합니다.  
+- <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> - <xref:System.IO.Stream> 개체와 최대 헤더 크기를 가져오고 <xref:System.ServiceModel.Channels.Message> 개체를 반환합니다.  
   
  이러한 메서드에 작성하는 코드로, 표준 전송 프로토콜과 사용자 지정 인코딩 간의 변환을 처리합니다.  
   

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 30a68b85-d3af-4946-83c1-1e2d010d0511
 ms.openlocfilehash: 9e803b6450fb8c9ade4adde5bf98fb1c3c62c861
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971277"
 ---
 # <a name="walkthrough-handling-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>연습: Windows Forms DataGridView 컨트롤에서 데이터 입력 중에 발생하는 오류 처리
 내부 데이터 저장소에서 오류를 처리 하는 것은 데이터 입력 응용 프로그램에 필요한 기능입니다. Windows Forms <xref:System.Windows.Forms.DataGridView> 컨트롤을 사용 하면이 쉽게 노출 하 여는 <xref:System.Windows.Forms.DataGridView.DataError> 데이터 저장소는 끊어진된 비즈니스 규칙 또는 제약 조건 위반을 감지 하는 경우 발생 하는 이벤트입니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "59313222"
 ## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 사항이 필요합니다.  
   
--   Northwind SQL Server 샘플 데이터베이스가 있는 서버에 액세스 합니다.  
+- Northwind SQL Server 샘플 데이터베이스가 있는 서버에 액세스 합니다.  
   
 ## <a name="creating-the-form"></a>폼 만들기  
   
@@ -71,22 +71,22 @@ ms.locfileid: "59313222"
   
 #### <a name="to-test-the-form"></a>폼을 테스트 하려면  
   
--   F5 키를 눌러 애플리케이션을 실행합니다.  
+- F5 키를 눌러 애플리케이션을 실행합니다.  
   
      표시 됩니다는 <xref:System.Windows.Forms.DataGridView> 컨트롤 Customers 테이블의 데이터로 채워집니다. 에 중복 값을 입력 하는 경우 `CustomerID` 편집 커밋, 셀 값을 자동으로 복원 되 고 표시 됩니다는 <xref:System.Windows.Forms.MessageBox> 데이터 입력 오류를 표시 하는 합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
  이 응용 프로그램의 기본적인 이해를 제공 합니다 <xref:System.Windows.Forms.DataGridView> 컨트롤의 기능입니다. 동작과 모양을 사용자 지정할 수 있습니다는 <xref:System.Windows.Forms.DataGridView> 여러 가지 방법으로 제어 합니다.  
   
--   헤더 및 테두리 스타일을 변경 합니다. 자세한 내용은 [방법: 변경 된 테두리 및 모눈선 스타일에는 Windows Forms DataGridView 컨트롤](change-the-border-and-gridline-styles-in-the-datagrid.md)합니다.  
+- 헤더 및 테두리 스타일을 변경 합니다. 자세한 내용은 [방법: 변경 된 테두리 및 모눈선 스타일에는 Windows Forms DataGridView 컨트롤](change-the-border-and-gridline-styles-in-the-datagrid.md)합니다.  
   
--   사용 하도록 설정 하거나 사용자 입력을 제한 합니다 <xref:System.Windows.Forms.DataGridView> 제어 합니다. 자세한 내용은 [방법: 행 추가 방지 하 고 삭제는 Windows Forms DataGridView 컨트롤](prevent-row-addition-and-deletion-datagridview.md), 및 [방법: 에서 열을 설정 읽기 전용으로 Windows Forms DataGridView 컨트롤](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)합니다.  
+- 사용 하도록 설정 하거나 사용자 입력을 제한 합니다 <xref:System.Windows.Forms.DataGridView> 제어 합니다. 자세한 내용은 [방법: 행 추가 방지 하 고 삭제는 Windows Forms DataGridView 컨트롤](prevent-row-addition-and-deletion-datagridview.md), 및 [방법: 에서 열을 설정 읽기 전용으로 Windows Forms DataGridView 컨트롤](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)합니다.  
   
--   사용자 입력의 유효성을 검사 합니다 <xref:System.Windows.Forms.DataGridView> 제어 합니다. 자세한 내용은 [연습: Forms DataGridView 컨트롤을 Windows의 데이터 유효성 검사](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)합니다.  
+- 사용자 입력의 유효성을 검사 합니다 <xref:System.Windows.Forms.DataGridView> 제어 합니다. 자세한 내용은 [연습: Forms DataGridView 컨트롤을 Windows의 데이터 유효성 검사](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)합니다.  
   
--   가상 모드를 사용 하 여 매우 큰 데이터 집합을 처리 합니다. 자세한 내용은 [연습: Forms DataGridView 컨트롤의 Windows에서 가상 모드 구현](implementing-virtual-mode-wf-datagridview-control.md)합니다.  
+- 가상 모드를 사용 하 여 매우 큰 데이터 집합을 처리 합니다. 자세한 내용은 [연습: Forms DataGridView 컨트롤의 Windows에서 가상 모드 구현](implementing-virtual-mode-wf-datagridview-control.md)합니다.  
   
--   셀의 모양을 사용자 지정 합니다. 자세한 내용은 [방법: Windows Forms DataGridView 컨트롤에서 셀 모양 사용자 지정](customize-the-appearance-of-cells-in-the-datagrid.md) 고 [방법: Windows Forms DataGridView 컨트롤에 기본 셀 스타일 설정](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)합니다.  
+- 셀의 모양을 사용자 지정 합니다. 자세한 내용은 [방법: Windows Forms DataGridView 컨트롤에서 셀 모양 사용자 지정](customize-the-appearance-of-cells-in-the-datagrid.md) 고 [방법: Windows Forms DataGridView 컨트롤에 기본 셀 스타일 설정](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
 

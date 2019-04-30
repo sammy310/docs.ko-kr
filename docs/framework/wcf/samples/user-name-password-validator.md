@@ -3,11 +3,11 @@ title: User Name Password Validator
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
 ms.openlocfilehash: 52c22660e56d63121181bdcb618e0bed598ca585
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006436"
 ---
 # <a name="user-name-password-validator"></a>User Name Password Validator
 이 샘플에서는 사용자 지정 UserNamePassword 유효성 검사기를 구현하는 방법을 보여 줍니다. 사용자 이름/암호 쌍이 데이터베이스 같은 외부 저장소에 저장되어 있는 경우처럼 기본 제공되는 UserNamePassword 유효성 검사 모드가 응용 프로그램 요구 사항에 맞지 않는 경우 유용합니다. 이 샘플에서는 두 개의 특정 사용자 이름/암호 쌍을 확인하는 사용자 지정 유효성 검사기가 있는 서비스를 보여 줍니다. 클라이언트에서는 이러한 사용자 이름/암호 쌍을 사용하여 서비스의 인증을 얻습니다.
@@ -26,11 +26,11 @@ ms.locfileid: "59773937"
 
  요약하면, 이 샘플에서는 다음 방법을 보여 줍니다.
 
--   사용자 이름 토큰을 사용하여 클라이언트를 인증하는 방법
+- 사용자 이름 토큰을 사용하여 클라이언트를 인증하는 방법
 
--   서버에서 사용자 지정 UserNamePasswordValidator를 기준으로 클라이언트 자격 증명의 유효성을 검사하는 방법과 사용자 이름 및 암호 유효성 검사 논리에서 클라이언트로 사용자 지정 오류를 전파하는 방법
+- 서버에서 사용자 지정 UserNamePasswordValidator를 기준으로 클라이언트 자격 증명의 유효성을 검사하는 방법과 사용자 이름 및 암호 유효성 검사 논리에서 클라이언트로 사용자 지정 오류를 전파하는 방법
 
--   서버의 X.509 인증서를 사용하여 서버를 인증하는 방법
+- 서버의 X.509 인증서를 사용하여 서버를 인증하는 방법
 
  서비스에서는 서비스와의 통신에 사용할 수 있는 단일 엔드포인트를 노출하며, 이 엔드포인트는 App.config 구성 파일을 사용하여 정의합니다. 엔드포인트는 하나의 주소, 바인딩 및 계약으로 구성됩니다. 표준 바인딩이 구성 된 `wsHttpBinding` WS Securityand 사용자 이름 인증을 사용 하 여 기본값으로입니다. 서비스 동작에서는 클라이언트 사용자 이름/암호 쌍의 유효성 검사를 위해 `Custom` 모드와 유효성 검사기 클래스 형식을 지정합니다. 동작에서는 `serviceCertificate` 요소를 사용하여 서버 인증서도 지정합니다. 서버 인증서에 대 한 동일한 값을 포함 해야 합니다 `SubjectName` 으로 `findValue` 에 [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
 
@@ -254,7 +254,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 
  아래에는 적절한 구성에서 실행할 수 있도록 배치 파일을 수정하는 데 도움이 되는 여러 관련 단원의 간략한 개요가 소개되어 있습니다.
 
--   서버 인증서 만들기
+- 서버 인증서 만들기
 
      Setup.bat 배치 파일에서 다음 행은 사용할 서버 인증서를 만듭니다. %SERVER_NAME% 변수는 서버 이름을 지정합니다. 이 변수를 변경하여 고유의 서버 이름을 지정합니다. 기본값은 localhost입니다.
 
@@ -268,7 +268,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   클라이언트의 신뢰할 수 있는 인증서 저장소에 서버 인증서 설치:
+- 클라이언트의 신뢰할 수 있는 인증서 저장소에 서버 인증서 설치:
 
      Setup.bat 배치 파일에서 다음 행은 클라이언트의 신뢰할 수 있는 사용자 저장소로 서버 인증서를 복사합니다. 이 단계는 Makecert.exe에서 생성한 인증서를 클라이언트 컴퓨터에서 절대적으로 신뢰하지는 않기 때문에 필요합니다. Microsoft에서 발급한 인증서와 같이 클라이언트가 신뢰할 수 있는 루트 인증서를 기반으로 하는 인증서가 이미 있는 경우 클라이언트 인증서 저장소를 서버 인증서로 채우는 이 단계를 수행할 필요가 없습니다.
 

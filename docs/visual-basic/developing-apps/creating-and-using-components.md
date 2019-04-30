@@ -5,11 +5,11 @@ helpviewer_keywords:
 - components [Visual Basic]
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
 ms.openlocfilehash: ca336e2ffa3831167088d92bfca017ce2226d8a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014325"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Visual Basic에서 구성 요소 만들기 및 사용
 *구성 요소*는 <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> 인터페이스를 구현하는 클래스이거나 <xref:System.ComponentModel.IComponent>를 구현하는 클래스에서 직접 또는 간접적으로 파생되는 클래스입니다. [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 구성 요소는 재사용 가능한 개체이고, 다른 개체와 상호 작용할 수 있으며, 외부 리소스 및 디자인 타임 지원에 대한 제어를 제공합니다.  
@@ -23,40 +23,40 @@ ms.locfileid: "58828084"
   
  <xref:System.ComponentModel.Component> 및 <xref:System.ComponentModel.MarshalByValueComponent> 클래스는 <xref:System.ComponentModel.IComponent> 인터페이스의 기본 구현입니다. 이러한 클래스 간의 기본 차이점은 <xref:System.ComponentModel.Component> 클래스는 참조에 의해 마샬링되지만 <xref:System.ComponentModel.IComponent>는 값에 의해 마샬링된다는 점입니다. 다음 목록에서는 구현에 대한 다양한 지침을 제공합니다.  
   
--   구성 요소가 참조에 의해 마샬링되어야 하는 경우 <xref:System.ComponentModel.Component>에서 파생합니다.  
+- 구성 요소가 참조에 의해 마샬링되어야 하는 경우 <xref:System.ComponentModel.Component>에서 파생합니다.  
   
--   구성 요소가 값에 의해 마샬링되어야 하는 경우 <xref:System.ComponentModel.MarshalByValueComponent>에서 파생합니다.  
+- 구성 요소가 값에 의해 마샬링되어야 하는 경우 <xref:System.ComponentModel.MarshalByValueComponent>에서 파생합니다.  
   
--   단일 상속으로 인해 구성 요소가 기본 구현 중 하나에서 파생될 수 없는 경우 <xref:System.ComponentModel.IComponent>를 구현합니다.  
+- 단일 상속으로 인해 구성 요소가 기본 구현 중 하나에서 파생될 수 없는 경우 <xref:System.ComponentModel.IComponent>를 구현합니다.  
   
 ## <a name="component-classes"></a>구성 요소 클래스  
  <xref:System.ComponentModel> 네임스페이스는 구성 요소와 컨트롤의 런타임 및 디자인 타임 동작을 구현하는 데 사용되는 클래스를 제공합니다. 이 네임스페이스에는 특성 및 형식 변환기를 구현하고, 데이터 소스에 바인딩하고, 구성 요소 사용을 허가하기 위한 기본 클래스 및 인터페이스가 포함됩니다.  
   
  핵심 구성 요소 클래스는 다음과 같습니다.  
   
--   <xref:System.ComponentModel.Component>. <xref:System.ComponentModel.IComponent> 인터페이스에 대한 기본 구현입니다. 이 클래스를 통해 애플리케이션 간에 개체를 공유할 수 있습니다.  
+- <xref:System.ComponentModel.Component>. <xref:System.ComponentModel.IComponent> 인터페이스에 대한 기본 구현입니다. 이 클래스를 통해 애플리케이션 간에 개체를 공유할 수 있습니다.  
   
--   <xref:System.ComponentModel.MarshalByValueComponent>. <xref:System.ComponentModel.IComponent> 인터페이스에 대한 기본 구현입니다.  
+- <xref:System.ComponentModel.MarshalByValueComponent>. <xref:System.ComponentModel.IComponent> 인터페이스에 대한 기본 구현입니다.  
   
--   <xref:System.ComponentModel.Container>. <xref:System.ComponentModel.IContainer> 인터페이스에 대한 기본 구현입니다. 이 클래스는 0 또는 추가 구성 요소를 캡슐화합니다.  
+- <xref:System.ComponentModel.Container>. <xref:System.ComponentModel.IContainer> 인터페이스에 대한 기본 구현입니다. 이 클래스는 0 또는 추가 구성 요소를 캡슐화합니다.  
   
  구성 요소 라이선싱에 사용되는 일부 클래스는 다음과 같습니다.  
   
--   <xref:System.ComponentModel.License>. 모든 라이선스에 대한 추상 기본 클래스입니다. 라이선스는 구성 요소의 특정 인스턴스에 부여됩니다.  
+- <xref:System.ComponentModel.License>. 모든 라이선스에 대한 추상 기본 클래스입니다. 라이선스는 구성 요소의 특정 인스턴스에 부여됩니다.  
   
--   <xref:System.ComponentModel.LicenseManager>. 라이선스를 구성 요소에 추가하고 <xref:System.ComponentModel.LicenseProvider>를 관리하기 위한 속성과 메서드를 제공합니다.  
+- <xref:System.ComponentModel.LicenseManager>. 라이선스를 구성 요소에 추가하고 <xref:System.ComponentModel.LicenseProvider>를 관리하기 위한 속성과 메서드를 제공합니다.  
   
--   <xref:System.ComponentModel.LicenseProvider>. 라이선스 공급자를 구현하기 위한 추상 기본 클래스입니다.  
+- <xref:System.ComponentModel.LicenseProvider>. 라이선스 공급자를 구현하기 위한 추상 기본 클래스입니다.  
   
--   <xref:System.ComponentModel.LicenseProviderAttribute>. 클래스와 함께 사용할 <xref:System.ComponentModel.LicenseProvider> 클래스를 지정합니다.  
+- <xref:System.ComponentModel.LicenseProviderAttribute>. 클래스와 함께 사용할 <xref:System.ComponentModel.LicenseProvider> 클래스를 지정합니다.  
   
  구성 요소를 설명 및 유지하는 데 일반적으로 사용되는 클래스입니다.  
   
--   <xref:System.ComponentModel.TypeDescriptor>. 구성 요소의 특성, 속성 및 이벤트와 같이, 구성 요소의 특성에 대한 정보를 제공합니다.  
+- <xref:System.ComponentModel.TypeDescriptor>. 구성 요소의 특성, 속성 및 이벤트와 같이, 구성 요소의 특성에 대한 정보를 제공합니다.  
   
--   <xref:System.ComponentModel.EventDescriptor>. 이벤트에 대한 정보를 제공합니다.  
+- <xref:System.ComponentModel.EventDescriptor>. 이벤트에 대한 정보를 제공합니다.  
   
--   <xref:System.ComponentModel.PropertyDescriptor>. 속성에 대한 정보를 제공합니다.  
+- <xref:System.ComponentModel.PropertyDescriptor>. 속성에 대한 정보를 제공합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
  [컨트롤 및 구성 요소 제작 문제 해결](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  

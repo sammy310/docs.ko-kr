@@ -11,10 +11,10 @@ helpviewer_keywords:
 ms.assetid: a4808397-c6d5-406a-83e0-0091f0c15ae4
 ms.openlocfilehash: fb58d50a63cca41420aa102ca0c8b63f3b14c0d6
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59980189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006735"
 ---
 # <a name="how-to-call-a-page-function"></a>방법: 페이지 함수 호출
 페이지 함수를 호출 하는 방법을 보여 주는이 예제는 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 페이지입니다.  

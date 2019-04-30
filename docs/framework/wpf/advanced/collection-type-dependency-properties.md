@@ -11,11 +11,11 @@ helpviewer_keywords:
 - collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
 ms.openlocfilehash: 9ce0b70bfdd70b47857167ff14e62ed2bbda569d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010698"
 ---
 # <a name="collection-type-dependency-properties"></a>컬렉션 형식 종속성 속성
 이 항목에서는 속성 형식이 컬렉션 형식인 종속성 속성을 구현하는 방법에 대한 지침과 제안된 패턴을 제공합니다.  

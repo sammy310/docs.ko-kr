@@ -3,11 +3,11 @@ title: 추적 확장
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
 ms.openlocfilehash: c56f886857e8d391a243e3af4a13353f14116247
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990147"
 ---
 # <a name="extending-tracing"></a>추적 확장
 이 샘플에는 클라이언트 및 서비스 코드에 사용자 정의 동작 추적을 작성 하 여 Windows Communication Foundation (WCF) 추적 기능을 확장 하는 방법을 보여 줍니다. 이렇게 하면 사용자가 작업의 논리 단위에 대한 추적 동작 및 그룹 추적을 만들 수 있습니다. 전송(같은 엔드포인트 내)과 전파(엔드포인트 사이)를 통해 동작을 상호 연결시킬 수도 있습니다. 이 샘플에서는 클라이언트와 서버 모두에 대해 추적이 사용됩니다. 클라이언트와 서비스 구성 파일에서 추적을 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [Tracing and Message Logging](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)합니다.  

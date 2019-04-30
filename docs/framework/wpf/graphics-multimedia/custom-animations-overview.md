@@ -9,11 +9,11 @@ helpviewer_keywords:
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
 ms.openlocfilehash: 268d218097233aee795154226cc6f7c3ce318f5c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010152"
 ---
 # <a name="custom-animations-overview"></a>사용자 지정 애니메이션 개요
 이 항목에서는 사용자 지정 키 프레임, 애니메이션 클래스를 만들거나, 프레임당 콜백을 사용하여 애니메이션 시스템을 무시하는 방식으로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션 시스템을 확장하는 방법 및 시기에 대해 설명합니다.  
@@ -28,11 +28,11 @@ ms.locfileid: "59313946"
 ## <a name="extending-the-animation-system"></a>애니메이션 시스템 확장  
  사용하려는 기본 제공 기능 수준에 따라, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션 시스템을 확장하는 다양한 방법이 있습니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션 엔진에는 다음과 같은 세 가지 기본 확장 지점이 있습니다.  
   
--   중 하나에서 상속 하 여 사용자 지정 키 프레임 개체를 만드는 합니다  *\<유형 >* 등의 키 프레임 클래스 <xref:System.Windows.Media.Animation.DoubleKeyFrame>합니다. 이 방법은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션 엔진의 기본 제공 기능 대부분을 사용합니다.  
+- 중 하나에서 상속 하 여 사용자 지정 키 프레임 개체를 만드는 합니다  *\<유형 >* 등의 키 프레임 클래스 <xref:System.Windows.Media.Animation.DoubleKeyFrame>합니다. 이 방법은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션 엔진의 기본 제공 기능 대부분을 사용합니다.  
   
--   상속 하 여 사용자 고유의 애니메이션 클래스를 만듭니다 <xref:System.Windows.Media.Animation.AnimationTimeline> 중 하나는  *\<유형 >* AnimationBase 클래스입니다.  
+- 상속 하 여 사용자 고유의 애니메이션 클래스를 만듭니다 <xref:System.Windows.Media.Animation.AnimationTimeline> 중 하나는  *\<유형 >* AnimationBase 클래스입니다.  
   
--   프레임당 콜백을 사용하여 프레임별로 애니메이션을 생성합니다. 이 방법은 애니메이션 및 타이밍 시스템을 완전히 무시합니다.  
+- 프레임당 콜백을 사용하여 프레임별로 애니메이션을 생성합니다. 이 방법은 애니메이션 및 타이밍 시스템을 완전히 무시합니다.  
   
  다음 표에서는 애니메이션 시스템을 확장하기 위한 몇 가지 시나리오에 대해 설명합니다.  
   
@@ -47,11 +47,11 @@ ms.locfileid: "59313946"
 ## <a name="create-a-custom-key-frame"></a>사용자 지정 키 프레임 만들기  
  사용자 지정 키 프레임 클래스를 만드는 것은 애니메이션 시스템을 확장하는 가장 간단한 방법입니다. 이 방법은 키 프레임 애니메이션에 대해 다른 보간 방법을 사용하려는 경우에 사용합니다.  [키 프레임 애니메이션 개요](key-frame-animations-overview.md)에 설명된 것처럼 키 프레임 애니메이션은 키 프레임 개체를 사용하여 해당 출력 값을 생성합니다. 각 키 프레임 개체는 다음 세 가지 기능을 수행합니다.  
   
--   사용 하 여 대상 값 지정 해당 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 속성입니다.  
+- 사용 하 여 대상 값 지정 해당 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 속성입니다.  
   
--   해당 값에 도달 해야 사용 하 여 시간을 지정 해당 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 속성입니다.  
+- 해당 값에 도달 해야 사용 하 여 시간을 지정 해당 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 속성입니다.  
   
--   InterpolateValueCore 메서드를 구현하여 이전 키 프레임의 값과 고유한 값 간을 보간합니다.  
+- InterpolateValueCore 메서드를 구현하여 이전 키 프레임의 값과 고유한 값 간을 보간합니다.  
   
  **구현 지침**  
   
@@ -87,13 +87,13 @@ ms.locfileid: "59313946"
   
  파생 된 <xref:System.Windows.Media.Animation.AnimationTimeline> 클래스 및 멤버를 재정의 합니다.  
   
--   <xref:System.Windows.Freezable.CreateInstanceCore%2A> –를 재정의 해야 새 클래스를 구체적인 경우 <xref:System.Windows.Freezable.CreateInstanceCore%2A> 클래스의 새 인스턴스를 반환 합니다.  
+- <xref:System.Windows.Freezable.CreateInstanceCore%2A> –를 재정의 해야 새 클래스를 구체적인 경우 <xref:System.Windows.Freezable.CreateInstanceCore%2A> 클래스의 새 인스턴스를 반환 합니다.  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> – 애니메이션의 현재 값을 반환 하려면이 메서드를 재정의 합니다. 세 가지 매개 변수를 사용 합니다: 기본 원본 값, 기본 대상 값 및 <xref:System.Windows.Media.Animation.AnimationClock>합니다. 사용 하 여는 <xref:System.Windows.Media.Animation.AnimationClock> 현재 시간 또는 애니메이션에 대 한 진행률을 가져오려고 합니다. 기본 원본 및 대상 값을 사용할 것인지 여부를 선택할 수 있습니다.  
+- <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> – 애니메이션의 현재 값을 반환 하려면이 메서드를 재정의 합니다. 세 가지 매개 변수를 사용 합니다: 기본 원본 값, 기본 대상 값 및 <xref:System.Windows.Media.Animation.AnimationClock>합니다. 사용 하 여는 <xref:System.Windows.Media.Animation.AnimationClock> 현재 시간 또는 애니메이션에 대 한 진행률을 가져오려고 합니다. 기본 원본 및 대상 값을 사용할 것인지 여부를 선택할 수 있습니다.  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> --애니메이션으로 지정 된 기본 대상 값을 사용 하는지 여부를 나타내려면이 속성을 재정의 하는 중의 <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> 메서드.  
+- <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> --애니메이션으로 지정 된 기본 대상 값을 사용 하는지 여부를 나타내려면이 속성을 재정의 하는 중의 <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> 메서드.  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> –이 속성을 재정의 합니다 <xref:System.Type> 애니메이션의 출력 생성 합니다.  
+- <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> –이 속성을 재정의 합니다 <xref:System.Type> 애니메이션의 출력 생성 합니다.  
   
  이 클래스가 데이터를 저장하는 데 종속성 속성을 사용하지 않거나 생성 후 추가 초기화를 요구할 경우 추가 메서드를 재정의해야 할 수 있습니다. 자세한 내용은 [Freezable 개체 개요](../advanced/freezable-objects-overview.md)를 참조하세요.  
   

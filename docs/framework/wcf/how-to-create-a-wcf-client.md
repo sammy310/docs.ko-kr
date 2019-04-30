@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
 ms.openlocfilehash: a16a0ccabfd0f9fbe69db1ea88d4613185f3c1da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002081"
 ---
 # <a name="tutorial-create-a-windows-communication-foundation-client"></a>자습서: Windows Communication Foundation 클라이언트 만들기
 
@@ -47,7 +47,7 @@ WCF 응용 프로그램을 만드는 다음 작업을 WCF 서비스에서 메타
 
 2. 참조를 추가 합니다 **GettingStartedClient** 프로젝트를 <xref:System.ServiceModel> 어셈블리: 
 
-    1.  에 **솔루션 탐색기** 창에서를 **참조** 아래에 폴더를 **GettingStartedClient** 프로젝트를 선택한 후 **참조추가** 바로 가기 메뉴에서. 
+    1. 에 **솔루션 탐색기** 창에서를 **참조** 아래에 폴더를 **GettingStartedClient** 프로젝트를 선택한 후 **참조추가** 바로 가기 메뉴에서. 
 
     2. 에 **참조 추가** 창 아래에 있는 **어셈블리** 창의 왼쪽에서 선택 **Framework**합니다.
     

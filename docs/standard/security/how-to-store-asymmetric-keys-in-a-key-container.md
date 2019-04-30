@@ -18,11 +18,11 @@ ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c6fada360eda46dc695ab732a2573b135d823f0a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018750"
 ---
 # <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>방법: 키 컨테이너에 비대칭 키 저장
 비대칭 개인 키는 로컬 컴퓨터에 축자로 저장하거나 일반 텍스트로 저장해서는 안 됩니다. 개인 키를 저장해야 하는 경우에는 키 컨테이너를 사용해야 합니다. 키 컨테이너에 대한 자세한 내용은 [컴퓨터 수준 및 사용자 수준 RSA 키 컨테이너 이해](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100))를 참조하세요.  

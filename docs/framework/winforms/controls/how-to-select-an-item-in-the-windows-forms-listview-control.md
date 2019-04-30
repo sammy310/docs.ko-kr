@@ -14,8 +14,8 @@ ms.openlocfilehash: b3cfcc6c2873dfb0eb95cf7950adc6b2bb73e74c
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013363"
 ---
 # <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a>방법: Windows Forms ListView 컨트롤에서 항목 선택
 이 예제에서는 프로그래밍 방식으로 Windows Forms에서 항목을 선택 하는 방법에 설명 <xref:System.Windows.Forms.ListView> 제어 합니다. 프로그래밍 방식으로 항목을 선택 하면 자동으로 바뀌지 않습니다에 포커스를 <xref:System.Windows.Forms.ListView> 제어 합니다. 따라서 일반적으로 하려는 항목을 선택할 때 강조 하는 항목을 설정 합니다.  
@@ -27,9 +27,9 @@ ms.locfileid: "59977615"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   A <xref:System.Windows.Forms.ListView> 제어 라는 `listView1` 하나 이상의 항목이 포함 된 합니다.  
+- A <xref:System.Windows.Forms.ListView> 제어 라는 `listView1` 하나 이상의 항목이 포함 된 합니다.  
   
--   <xref:System?displayProperty=nameWithType> 및 <xref:System.Windows.Forms?displayProperty=nameWithType> 네임스페이스에 대한 참조  
+- <xref:System?displayProperty=nameWithType> 및 <xref:System.Windows.Forms?displayProperty=nameWithType> 네임스페이스에 대한 참조  
   
 ## <a name="see-also"></a>참고자료
 

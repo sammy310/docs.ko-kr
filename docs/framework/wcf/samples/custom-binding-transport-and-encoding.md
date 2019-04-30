@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 6c0b353d-79ee-4e61-b348-be49ad0e9a16
 ms.openlocfilehash: d293ccb45a3af85ca5ca23fec9e3c01a55564581
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003355"
 ---
 # <a name="custom-binding-transport-and-encoding"></a>사용자 지정 바인딩 전송 및 인코딩
 사용자 지정 바인딩은 개별 바인딩 요소의 순서 있는 목록에 의해 정의됩니다. 이 샘플에서는 다양한 전송 및 메시지 인코딩 요소를 사용하여 사용자 지정 바인딩을 구성하는 방법을 보여 줍니다.  

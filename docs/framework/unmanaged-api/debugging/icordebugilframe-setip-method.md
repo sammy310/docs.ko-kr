@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a25e52c6b858aaa602ffade0e407b1aaf6e5c67e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995591"
 ---
 # <a name="icordebugilframesetip-method"></a>ICorDebugILFrame::SetIP 메서드
 Microsoft의 MSIL (intermediate language) 코드에서 지정된 된 오프셋된 위치에 명령 포인터를 설정합니다.  

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - disjunction operator [Visual Basic]
 ms.assetid: 41ed6905-bf3d-468a-9e3b-03c10d461891
 ms.openlocfilehash: 0277b6f24e62ed5f0cad3dae225c86fffc4c09b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013519"
 ---
 # <a name="or-operator-visual-basic"></a>Or 연산자(Visual Basic)
 두 논리합 연산을 수행 `Boolean` 식이나 두 숫자 식의 비트 논리합 연산을 수행 합니다.  

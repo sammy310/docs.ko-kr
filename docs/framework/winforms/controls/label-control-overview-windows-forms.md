@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Label control [Windows Forms], about Label control
 ms.assetid: dcad7f44-11b7-4c55-b0c0-d984ade43d7d
 ms.openlocfilehash: cc38b0f3ded9e3c2a5a4146eb6bb474921d1e19f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012864"
 ---
 # <a name="label-control-overview-windows-forms"></a>Label 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.Label> 컨트롤은 텍스트 또는 사용자가 편집할 수 없는 이미지를 표시 하는 데 사용 됩니다. 사용 하는 폼에 개체를 식별 하는-컨트롤에 대 한 설명을 하면 단추를 클릭 하면 예를 들어, 제공 또는 런타임 이벤트 또는 응용 프로그램에서 프로세스에 대 한 응답에서 정보를 표시 합니다. 예를 들어, 입력란, 목록 상자, 콤보 상자를 설명 캡션을 추가할 레이블을 사용할 수 있습니다. 또한 런타임 시 이벤트에 대 한 응답에서 레이블에 의해 표시 되는 텍스트를 변경 하는 코드를 작성할 수 있습니다. 예를 들어, 응용 프로그램 변경 내용을 처리 하는 데 몇 분을 사용 하는 경우 경우 레이블에 처리 상태 메시지를 표시할 수 있습니다.  

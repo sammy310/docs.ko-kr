@@ -9,11 +9,11 @@ helpviewer_keywords:
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
 ms.openlocfilehash: 91e335f4d5adaa5279fb16805604f2e2848eeb8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002393"
 ---
 # <a name="timing-events-overview"></a>타이밍 이벤트 개요
 이 항목에서는에서 사용할 수 있는 5 가지 타이밍 이벤트를 사용 하는 방법 설명 <xref:System.Windows.Media.Animation.Timeline> 고 <xref:System.Windows.Media.Animation.Clock> 개체입니다.  
@@ -23,11 +23,11 @@ ms.locfileid: "59167169"
   
  속성에 애니메이션 효과를 주는 여러 가지 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
--   **스토리 보드 개체를 사용 하 여** (태그 및 코드): 사용할 수 있습니다 <xref:System.Windows.Media.Animation.Storyboard> 개체를 정렬 하 고 하나 이상의 개체에 애니메이션을 배포 합니다. 예를 들어 참조 [Storyboard를 사용 하 여 속성에 애니메이션 효과](how-to-animate-a-property-by-using-a-storyboard.md)합니다.  
+- **스토리 보드 개체를 사용 하 여** (태그 및 코드): 사용할 수 있습니다 <xref:System.Windows.Media.Animation.Storyboard> 개체를 정렬 하 고 하나 이상의 개체에 애니메이션을 배포 합니다. 예를 들어 참조 [Storyboard를 사용 하 여 속성에 애니메이션 효과](how-to-animate-a-property-by-using-a-storyboard.md)합니다.  
   
--   **로컬 애니메이션을 사용 하 여** (코드만): 적용할 수 있습니다 <xref:System.Windows.Media.Animation.AnimationTimeline> 애니메이션 효과 주는 속성에 직접 개체입니다. 예제를 보려면 [Storyboard를 사용하지 않고 속성에 애니메이션 효과 주기](how-to-animate-a-property-without-using-a-storyboard.md)를 참조하세요.  
+- **로컬 애니메이션을 사용 하 여** (코드만): 적용할 수 있습니다 <xref:System.Windows.Media.Animation.AnimationTimeline> 애니메이션 효과 주는 속성에 직접 개체입니다. 예제를 보려면 [Storyboard를 사용하지 않고 속성에 애니메이션 효과 주기](how-to-animate-a-property-without-using-a-storyboard.md)를 참조하세요.  
   
--   **시계를 사용 하 여** (코드만): 명시적으로 클록 생성을 관리 하 고 애니메이션 클록을 직접 배포할 수 있습니다.  예를 들어 참조 [AnimationClock을 사용 하 여 속성에 애니메이션 효과](how-to-animate-a-property-by-using-an-animationclock.md)합니다.  
+- **시계를 사용 하 여** (코드만): 명시적으로 클록 생성을 관리 하 고 애니메이션 클록을 직접 배포할 수 있습니다.  예를 들어 참조 [AnimationClock을 사용 하 여 속성에 애니메이션 효과](how-to-animate-a-property-by-using-an-animationclock.md)합니다.  
   
  이 개요의 예제를 사용 하는 태그 및 코드에서 사용할 수 있습니다, 되므로 <xref:System.Windows.Media.Animation.Storyboard> 개체입니다. 그러나 설명된 개념을 속성에 애니메이션 효과를 주는 다른 방법에도 적용할 수 있습니다.  
   

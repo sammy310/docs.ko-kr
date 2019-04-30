@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
 ms.openlocfilehash: 28c70ca860083808c93fa58b498e22ea4e4ca6cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048051"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Windows 인증 오류 디버깅
 Windows 인증을 보안 메커니즘으로 사용하면 SSPI(보안 지원 공급자 인터페이스)에서 보안 프로세스를 처리합니다. SSPI 계층에 보안 오류가 발생 하면 Windows Communication Foundation (WCF)으로 표시 됩니다. 이 항목에서는 오류 진단에 도움이 되는 프레임워크 및 일련의 질문을 제공합니다.  
@@ -45,13 +45,13 @@ Windows 인증을 보안 메커니즘으로 사용하면 SSPI(보안 지원 공�
   
  특히 네 가지 계정 형식에는 다음이 포함됩니다.  
   
--   로컬 사용자: 시스템 전용 사용자 프로필입니다. 예를 들면 `MachineName\Administrator` 또는 `MachineName\ProfileName` 등입니다.  
+- 로컬 사용자: 시스템 전용 사용자 프로필입니다. 예를 들면 `MachineName\Administrator` 또는 `MachineName\ProfileName` 등입니다.  
   
--   로컬 시스템: 도메인에 가입 되지 않은 컴퓨터에서 기본 제공 계정인 SYSTEM.  
+- 로컬 시스템: 도메인에 가입 되지 않은 컴퓨터에서 기본 제공 계정인 SYSTEM.  
   
--   도메인 사용자: Windows 도메인 사용자 계정입니다. 예: `DomainName\ProfileName`  
+- 도메인 사용자: Windows 도메인 사용자 계정입니다. 예: `DomainName\ProfileName`  
   
--   도메인 컴퓨터: Windows 도메인에 가입 된 컴퓨터에서 실행 중인 컴퓨터 id 사용 하 여 프로세스입니다. 예: `MachineName\Network Service`  
+- 도메인 컴퓨터: Windows 도메인에 가입 된 컴퓨터에서 실행 중인 컴퓨터 id 사용 하 여 프로세스입니다. 예: `MachineName\Network Service`  
   
 > [!NOTE]
 >  서비스 자격 증명은 <xref:System.ServiceModel.ICommunicationObject.Open%2A> 클래스의 <xref:System.ServiceModel.ServiceHost> 메서드가 호출될 때 캡처됩니다. 클라이언트 자격 증명은 클라이언트가 메시지를 보낼 때마다 읽어 옵니다.  
@@ -85,15 +85,15 @@ Windows 인증을 보안 메커니즘으로 사용하면 SSPI(보안 지원 공�
   
 2. SSPI 협상이 필요합니다.  
   
-    1.  표준 바인딩을 사용하는 경우 `NegotiateServiceCredential` 속성을 `true`로 설정합니다.  
+    1. 표준 바인딩을 사용하는 경우 `NegotiateServiceCredential` 속성을 `true`로 설정합니다.  
   
-    2.  사용자 지정 바인딩을 사용하는 경우 `AuthenticationMode` 요소의 `Security` 속성을 `SspiNegotiated`로 설정합니다.  
+    2. 사용자 지정 바인딩을 사용하는 경우 `AuthenticationMode` 요소의 `Security` 속성을 `SspiNegotiated`로 설정합니다.  
   
 3. NTLM 사용을 허용하지 않고 Kerberos를 사용하려면 SSPI 협상이 필요합니다.  
   
-    1.  `ChannelFactory.Credentials.Windows.AllowNtlm = false` 문과 함께 코드에서 이 작업을 수행합니다.  
+    1. `ChannelFactory.Credentials.Windows.AllowNtlm = false` 문과 함께 코드에서 이 작업을 수행합니다.  
   
-    2.  `allowNtlm` 특성을 `false`로 설정하여 구성 파일에서 이 작업을 수행할 수도 있습니다. 이 특성에 포함 된 [ \<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md)합니다.  
+    2. `allowNtlm` 특성을 `false`로 설정하여 구성 파일에서 이 작업을 수행할 수도 있습니다. 이 특성에 포함 된 [ \<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md)합니다.  
   
 ### <a name="ntlm-protocol"></a>NTLM 프로토콜  
   

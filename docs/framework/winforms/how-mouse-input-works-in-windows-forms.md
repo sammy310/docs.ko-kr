@@ -6,11 +6,11 @@ helpviewer_keywords:
 - mouse [Windows Forms], input
 ms.assetid: 48fc5240-75a6-44bf-9fce-6aa21b49705a
 ms.openlocfilehash: c9193ffa9ef34f1e43a92feec230fa2282264147
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59203017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966987"
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>Windows Forms에서 마우스 입력이 작동하는 방식
 수신 및 마우스 입력을 처리는 모든 Windows 응용 프로그램의 중요 한 부분입니다. 응용 프로그램에서 작업을 수행 하려면 마우스 이벤트를 처리할 수도 있고 적중 테스트를 수행 하려면 마우스 위치 정보 또는 기타 작업을 사용할 수 있습니다. 또한 응용 프로그램에서 컨트롤 마우스 입력을 처리 하는 방식을 변경할 수 있습니다. 이 항목에서는 detail 및 마우스에 대 한 시스템 설정을 변경 하는 방법에서 이러한 마우스 이벤트를 설명 합니다. 마우스를 사용 하 여 제공 되는 데이터에 대 한 자세한 정보에 대 한 이벤트와 순서는 마우스 클릭 이벤트가 발생 하는, 참조 [Windows Forms의 마우스 이벤트](mouse-events-in-windows-forms.md)합니다.  

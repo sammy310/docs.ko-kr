@@ -8,11 +8,11 @@ helpviewer_keywords:
 - directories [Windows Forms], browsing
 ms.assetid: d71a0c5e-898a-4eea-be74-93bdf50d1852
 ms.openlocfilehash: 6359ea9683b9a418b7fe92dacc6140865dd01a11
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011335"
 ---
 # <a name="folderbrowserdialog-component-windows-forms"></a>FolderBrowserDialog 구성 요소(Windows Forms)
 Windows Forms `FolderBrowserDialog` 구성 요소는 사용자가 찾아보기 및 폴더를 선택 하거나 만들 수 있습니다 새 인터페이스를 표시 합니다. 보완 하는 것은 [OpenFileDialog 구성 요소](openfiledialog-component-windows-forms.md) 을 찾아 파일을 선택 하는 데 사용 되는 구성 요소입니다.  

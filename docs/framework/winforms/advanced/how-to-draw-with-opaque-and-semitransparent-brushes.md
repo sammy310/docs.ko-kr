@@ -11,11 +11,11 @@ helpviewer_keywords:
 - brushes [Windows Forms], using semi-transparent
 ms.assetid: a4f6f6b8-3bc8-440a-84af-d62ef0f8ff40
 ms.openlocfilehash: a302b8bf978afcead5768fadeb6336c1ece986ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004133"
 ---
 # <a name="how-to-draw-with-opaque-and-semitransparent-brushes"></a>방법: 불투명 및 반투명 브러시를 사용하여 그리기
 셰이프를 채울 때 <xref:System.Drawing.Brush> 개체를 <xref:System.Drawing.Graphics> 클래스의 채우기 메서드 중 하나에 전달해야 합니다. <xref:System.Drawing.SolidBrush.%23ctor%2A> 생성자의 매개 변수 중 하나는 <xref:System.Drawing.Color> 개체입니다. 불투명 셰이프를 채우려면 색의 알파 구성 요소를 255로 설정합니다. 반투명 셰이프를 채우려면 알파 구성 요소를 1에서 254 사이의 임의 값으로 설정합니다.  

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
 ms.openlocfilehash: 8fd63c2abedcd416937e2c281486bdc1716a275f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022404"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>연습: Windows Api 호출 (Visual Basic)
 Windows Api는 Windows 운영 체제의 일부인 동적 연결 라이브러리 (Dll)입니다. 프로시저를 직접 작성 하기 어려운 경우 작업을 수행 하려면 사용할 수 있습니다. Windows 라는 함수를 제공 하는 예를 들어 `FlashWindowEx` 밝은 영역과 어두운 음영을 교대로 응용 프로그램의 제목 표시줄을 만들 수 있습니다.  

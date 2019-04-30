@@ -25,11 +25,11 @@ helpviewer_keywords:
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
 ms.openlocfilehash: 9553a66538297db9c2fa134e018f35ab9e2ddf37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001555"
 ---
 # <a name="input-overview"></a>입력 개요
 <a name="introduction"></a> 합니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 하위 시스템은 강력한 제공 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] 다양 한 장치에서에서 입력을 가져오는, 마우스, 키보드, 터치 및 스타일러스를 포함 합니다. 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]가 제공하는 서비스에 대해 설명하고 입력 시스템의 아키텍처를 살펴봅니다.
@@ -144,43 +144,43 @@ ms.locfileid: "59320017"
 ### <a name="prerequisites"></a>전제 조건
  터치에 응답하는 애플리케이션을 개발하려면 다음 구성 요소가 필요합니다.
 
--   Visual Studio 2010
+- Visual Studio 2010
 
--   Windows 7
+- Windows 7
 
--   Windows Touch를 지원하는 터치 스크린과 같은 디바이스
+- Windows Touch를 지원하는 터치 스크린과 같은 디바이스
 
 ### <a name="terminology"></a>용어
  터치에 대해 설명할 때 다음 용어가 사용됩니다.
 
--   **터치**는 Windows 7에서 인식되는 사용자 입력 형식입니다. 일반적으로 터치 스크린에 손가락을 대면 터치가 시작됩니다. 랩톱 컴퓨터에서 일반적으로 사용되는 터치 패드와 같은 디바이스는 디바이스가 손가락의 위치와 움직임을 마우스 입력으로 단순히 변환하는 경우 터치를 지원하지 않습니다.
+- **터치**는 Windows 7에서 인식되는 사용자 입력 형식입니다. 일반적으로 터치 스크린에 손가락을 대면 터치가 시작됩니다. 랩톱 컴퓨터에서 일반적으로 사용되는 터치 패드와 같은 디바이스는 디바이스가 손가락의 위치와 움직임을 마우스 입력으로 단순히 변환하는 경우 터치를 지원하지 않습니다.
 
--   **멀티 터치**는 둘 이상의 지점에서 동시에 발생하는 터치입니다. Windows 7 및 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 멀티 터치를 지원합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에 대한 설명서에서 터치를 설명할 때마다 이 개념이 멀티 터치에 적용됩니다.
+- **멀티 터치**는 둘 이상의 지점에서 동시에 발생하는 터치입니다. Windows 7 및 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 멀티 터치를 지원합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에 대한 설명서에서 터치를 설명할 때마다 이 개념이 멀티 터치에 적용됩니다.
 
--   터치가 개체에 적용되는 물리적 액션으로 해석되면 **조작**이 발생합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 조작 이벤트는 입력을 변환, 확장 또는 회전 조작으로 해석합니다.
+- 터치가 개체에 적용되는 물리적 액션으로 해석되면 **조작**이 발생합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 조작 이벤트는 입력을 변환, 확장 또는 회전 조작으로 해석합니다.
 
--   `touch device`는 터치 스크린에서 한 손가락과 같은 터치식 입력을 생성하는 장치를 나타냅니다.
+- `touch device`는 터치 스크린에서 한 손가락과 같은 터치식 입력을 생성하는 장치를 나타냅니다.
 
 ### <a name="controls-that-respond-to-touch"></a>터치에 반응하는 컨트롤
  보기에서 스크롤된 콘텐츠가 있는 경우 컨트롤에서 손가락을 드래그하여 다음 컨트롤을 스크롤할 수 있습니다.
 
--   <xref:System.Windows.Controls.ComboBox>
+- <xref:System.Windows.Controls.ComboBox>
 
--   <xref:System.Windows.Controls.ContextMenu>
+- <xref:System.Windows.Controls.ContextMenu>
 
--   <xref:System.Windows.Controls.DataGrid>
+- <xref:System.Windows.Controls.DataGrid>
 
--   <xref:System.Windows.Controls.ListBox>
+- <xref:System.Windows.Controls.ListBox>
 
--   <xref:System.Windows.Controls.ListView>
+- <xref:System.Windows.Controls.ListView>
 
--   <xref:System.Windows.Controls.MenuItem>
+- <xref:System.Windows.Controls.MenuItem>
 
--   <xref:System.Windows.Controls.TextBox>
+- <xref:System.Windows.Controls.TextBox>
 
--   <xref:System.Windows.Controls.ToolBar>
+- <xref:System.Windows.Controls.ToolBar>
 
--   <xref:System.Windows.Controls.TreeView>
+- <xref:System.Windows.Controls.TreeView>
 
  합니다 <xref:System.Windows.Controls.ScrollViewer> 정의 <xref:System.Windows.Controls.ScrollViewer.PanningMode%2A?displayProperty=nameWithType> 여부 터치 패닝을 가로, 세로, 가로 및 세로 또는 둘 다 지정할 수 있는 연결 된 속성입니다. <xref:System.Windows.Controls.ScrollViewer.PanningDeceleration%2A?displayProperty=nameWithType> 얼마나 빨리 스크롤 속도가 사용자가 터치 스크린에서 손가락을 뗄 때 속성을 지정 합니다. <xref:System.Windows.Controls.ScrollViewer.PanningRatio%2A?displayProperty=nameWithType> 조작 오프셋을 변환할 스크롤 오프셋의 비율을 지정 하는 연결 된 속성입니다.
 
@@ -189,25 +189,25 @@ ms.locfileid: "59320017"
 
  세 클래스 모두 다음과 같은 이벤트를 정의합니다. 이 이벤트는 정의 클래스에 관계없이 유사하게 동작합니다.
 
--   <xref:System.Windows.UIElement.TouchDown>
+- <xref:System.Windows.UIElement.TouchDown>
 
--   <xref:System.Windows.UIElement.TouchMove>
+- <xref:System.Windows.UIElement.TouchMove>
 
--   <xref:System.Windows.UIElement.TouchUp>
+- <xref:System.Windows.UIElement.TouchUp>
 
--   <xref:System.Windows.UIElement.TouchEnter>
+- <xref:System.Windows.UIElement.TouchEnter>
 
--   <xref:System.Windows.UIElement.TouchLeave>
+- <xref:System.Windows.UIElement.TouchLeave>
 
--   <xref:System.Windows.UIElement.PreviewTouchDown>
+- <xref:System.Windows.UIElement.PreviewTouchDown>
 
--   <xref:System.Windows.UIElement.PreviewTouchMove>
+- <xref:System.Windows.UIElement.PreviewTouchMove>
 
--   <xref:System.Windows.UIElement.PreviewTouchUp>
+- <xref:System.Windows.UIElement.PreviewTouchUp>
 
--   <xref:System.Windows.UIElement.GotTouchCapture>
+- <xref:System.Windows.UIElement.GotTouchCapture>
 
--   <xref:System.Windows.UIElement.LostTouchCapture>
+- <xref:System.Windows.UIElement.LostTouchCapture>
 
  키보드 및 마우스 이벤트와 마찬가지로 터치 이벤트는 라우트된 이벤트입니다. `Preview`로 시작하는 이벤트는 터널링 이벤트이고 `Touch`로 시작하는 이벤트는 버블링 이벤트입니다. 라우트된 이벤트에 대한 자세한 내용은 [라우트된 이벤트 개요](routed-events-overview.md)를 참조하세요. 이러한 이벤트를 처리할 때 호출 하 여 모든 요소를 기준으로 입력의 위치를 얻을 수 있습니다 합니다 <xref:System.Windows.Input.TouchEventArgs.GetTouchPoint%2A> 또는 <xref:System.Windows.Input.TouchEventArgs.GetIntermediateTouchPoints%2A> 메서드.
 
@@ -232,11 +232,11 @@ ms.locfileid: "59320017"
 ### <a name="manipulation-events"></a>조작 이벤트
  응용 프로그램 사용자가 개체를 조작할 수 있게 하는 위치 하는 경우는 <xref:System.Windows.UIElement> 클래스 조작 이벤트를 정의 합니다. 터치 위치를 단순히 보고하는 터치 이벤트와 달리 조작 이벤트는 입력을 해석할 수 있는 방법을 보고합니다. 변환, 확장 및 회전이라는 세 가지 형식의 조작이 있습니다. 다음 목록은 세 가지 형식의 조작을 호출하는 방법을 설명합니다.
 
--   개체에 손가락을 대고 터치 스크린에서 손가락을 움직이면 변환 조작을 호출합니다. 그러면 일반적으로 개체를 이동합니다.
+- 개체에 손가락을 대고 터치 스크린에서 손가락을 움직이면 변환 조작을 호출합니다. 그러면 일반적으로 개체를 이동합니다.
 
--   개체 위에 두 개의 손가락을 놓고 손가락을 서로 더 가깝게 또는 멀리 움직여 확장 조작을 호출합니다. 그러면 일반적으로 개체의 크기를 조정합니다.
+- 개체 위에 두 개의 손가락을 놓고 손가락을 서로 더 가깝게 또는 멀리 움직여 확장 조작을 호출합니다. 그러면 일반적으로 개체의 크기를 조정합니다.
 
--   개체에 두 손가락을 놓고 손가락을 서로 회전하면 회전 조작을 호출합니다. 그러면 일반적으로 개체를 회전합니다.
+- 개체에 두 손가락을 놓고 손가락을 서로 회전하면 회전 조작을 호출합니다. 그러면 일반적으로 개체를 회전합니다.
 
  둘 이상의 조작 형식이 동시에 발생할 수 있습니다.
 
@@ -246,17 +246,17 @@ ms.locfileid: "59320017"
 
  <xref:System.Windows.UIElement> 다음 조작 이벤트를 정의 합니다.
 
--   <xref:System.Windows.UIElement.ManipulationStarting>
+- <xref:System.Windows.UIElement.ManipulationStarting>
 
--   <xref:System.Windows.UIElement.ManipulationStarted>
+- <xref:System.Windows.UIElement.ManipulationStarted>
 
--   <xref:System.Windows.UIElement.ManipulationDelta>
+- <xref:System.Windows.UIElement.ManipulationDelta>
 
--   <xref:System.Windows.UIElement.ManipulationInertiaStarting>
+- <xref:System.Windows.UIElement.ManipulationInertiaStarting>
 
--   <xref:System.Windows.UIElement.ManipulationCompleted>
+- <xref:System.Windows.UIElement.ManipulationCompleted>
 
--   <xref:System.Windows.UIElement.ManipulationBoundaryFeedback>
+- <xref:System.Windows.UIElement.ManipulationBoundaryFeedback>
 
  기본적으로 <xref:System.Windows.UIElement> 이러한 조작 이벤트를 수신 하지 않습니다. 조작 이벤트를 수신 하는 <xref:System.Windows.UIElement>로 설정 <xref:System.Windows.UIElement.IsManipulationEnabled%2A?displayProperty=nameWithType> 에 `true`입니다.
 
@@ -300,13 +300,13 @@ ms.locfileid: "59320017"
 
  다음 목록에서는 앞의 그림에 나와 있는 터치 이벤트와 조작 이벤트의 관계에 대해 설명합니다.
 
--   첫 번째 터치 장치가 생성 하는 경우는 <xref:System.Windows.UIElement.TouchDown> 이벤트에는 <xref:System.Windows.UIElement>, 조작 논리 호출 합니다 <xref:System.Windows.UIElement.CaptureTouch%2A> 생성 하는 방법을 <xref:System.Windows.UIElement.GotTouchCapture> 이벤트.
+- 첫 번째 터치 장치가 생성 하는 경우는 <xref:System.Windows.UIElement.TouchDown> 이벤트에는 <xref:System.Windows.UIElement>, 조작 논리 호출 합니다 <xref:System.Windows.UIElement.CaptureTouch%2A> 생성 하는 방법을 <xref:System.Windows.UIElement.GotTouchCapture> 이벤트.
 
--   경우는 <xref:System.Windows.UIElement.GotTouchCapture> 발생 하면 조작 논리 호출 합니다 <xref:System.Windows.Input.Manipulation.AddManipulator%2A?displayProperty=nameWithType> 생성 하는 방법을 <xref:System.Windows.UIElement.ManipulationStarting> 이벤트입니다.
+- 경우는 <xref:System.Windows.UIElement.GotTouchCapture> 발생 하면 조작 논리 호출 합니다 <xref:System.Windows.Input.Manipulation.AddManipulator%2A?displayProperty=nameWithType> 생성 하는 방법을 <xref:System.Windows.UIElement.ManipulationStarting> 이벤트입니다.
 
--   경우는 <xref:System.Windows.UIElement.TouchMove> 이벤트 발생, 조작 논리에서 생성 합니다 <xref:System.Windows.UIElement.ManipulationDelta> 이벤트 전에 발생 하는 <xref:System.Windows.UIElement.ManipulationInertiaStarting> 이벤트.
+- 경우는 <xref:System.Windows.UIElement.TouchMove> 이벤트 발생, 조작 논리에서 생성 합니다 <xref:System.Windows.UIElement.ManipulationDelta> 이벤트 전에 발생 하는 <xref:System.Windows.UIElement.ManipulationInertiaStarting> 이벤트.
 
--   마지막 터치 장치가 요소 발생 합니다 <xref:System.Windows.UIElement.TouchUp> 경우 조작 논리에서 생성 된 <xref:System.Windows.UIElement.ManipulationInertiaStarting> 이벤트.
+- 마지막 터치 장치가 요소 발생 합니다 <xref:System.Windows.UIElement.TouchUp> 경우 조작 논리에서 생성 된 <xref:System.Windows.UIElement.ManipulationInertiaStarting> 이벤트.
 
 <a name="focus"></a>
 ## <a name="focus"></a>포커스

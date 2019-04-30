@@ -11,11 +11,11 @@ helpviewer_keywords:
 - menu items [Windows Forms], multicasting event-handling methods
 ms.assetid: 5a20749a-41b5-4acc-8eb1-9e5040b0a2c4
 ms.openlocfilehash: eec6a754b885cd169e5542221caefb3233c4c8af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967024"
 ---
 # <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>방법: Windows Forms에서 단일 이벤트 처리기에 여러 이벤트 연결
 응용 프로그램 디자인에서 있습니다 경우가 동일한 절차를 수행 하는 여러 이벤트 또는 단일 이벤트 처리기를 사용 하 여 여러 이벤트에 대 한 합니다. 예를 들어, 동일한 기능을 노출 하는 경우 폼에서 단추와 마찬가지로 동일한 이벤트를 발생 시킬 수 있는 메뉴 명령이에 강력한 시간 보호기가 경우가 많습니다. 속성 창의 이벤트 보기를 사용 하 여이 수행할 수 있습니다 C# 를 사용 하 여 또는 합니다 `Handles` 키워드 및 **클래스 이름** 및 **메서드 이름** 드롭다운 목록 상자는 Visual Basic 코드 편집기에서.  

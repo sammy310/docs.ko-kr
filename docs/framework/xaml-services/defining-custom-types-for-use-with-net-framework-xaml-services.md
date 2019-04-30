@@ -5,11 +5,11 @@ helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
 ms.openlocfilehash: be9c0e26574a15279ce89af2c7862abaa8713360
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971953"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>.NET Framework XAML 서비스에서 사용할 사용자 지정 형식 정의
 비즈니스 개체는 사용자 지정 형식을 정의 하거나 특정 프레임 워크에서 종속성을 갖지 않는 형식은 따르면 XAML에 대 한 몇 가지 최상의 방법이 있습니다. 이러한 사례를 따르는 경우.NET Framework XAML 서비스 XAML 판독기 및 XAML 작성기 수 형식의 XAML 특성을 검색 하 고 XAML 노드 스트림의 XAML 형식 시스템을 사용 하 여 적절 한 표현 합니다. 이 항목에서는 형식 정의 멤버 정의 및 CLR 형식 또는 멤버의 특성에 대 한 모범 사례를 설명 합니다.  
@@ -17,9 +17,9 @@ ms.locfileid: "59164439"
 ## <a name="constructor-patterns-and-type-definitions-for-xaml"></a>XAML에 대 한 형식 정의와 생성자 패턴  
  XAML에서 개체 요소로 인스턴스화하려면 사용자 지정 클래스에는 다음 요구 사항을 충족 해야 합니다.  
   
--   사용자 지정 클래스는 public 이어야 하며 기본 (매개 변수가 없는) public 생성자를 노출 해야 합니다. 구조체에 대한 자세한 내용은 다음 섹션을 참조하세요.  
+- 사용자 지정 클래스는 public 이어야 하며 기본 (매개 변수가 없는) public 생성자를 노출 해야 합니다. 구조체에 대한 자세한 내용은 다음 섹션을 참조하세요.  
   
--   사용자 지정 클래스에는 중첩된 클래스가 아니어야 합니다. "점" 전체 이름 경로에 추가 클래스 네임 스페이스 나누기 모호 하 고 연결 된 속성과 같은 기타 XAML 기능을 방해 합니다.  
+- 사용자 지정 클래스에는 중첩된 클래스가 아니어야 합니다. "점" 전체 이름 경로에 추가 클래스 네임 스페이스 나누기 모호 하 고 연결 된 속성과 같은 기타 XAML 기능을 방해 합니다.  
   
  개체 요소로 개체를 인스턴스화할 수 있습니다, 하는 경우 생성된 된 개체 수 속성 요소 형식의 기본 형식으로 개체를 사용 하는 모든 속성을 입력 합니다.  
   
@@ -72,9 +72,9 @@ ms.locfileid: "59164439"
   
  `public static object Get`*PropertyName* `(object`  `target` `)`  
   
--   구현에서 보다 구체적인 형식으로 `target` 개체를 지정할 수 있습니다. 범위에 연결 가능 멤버를 사용 하는 데 사용할 수 있습니다. 원하는 범위를 벗어나는 사용량에는 XAML 구문 분석 오류가 발생 한 후 표시 되는 잘못 된 캐스팅 예외가 throw 됩니다. 매개 변수 이름을 `target` 요구 되지 않지만 라는 `target` 대부분의 구현에서 규칙에 따라 합니다.  
+- 구현에서 보다 구체적인 형식으로 `target` 개체를 지정할 수 있습니다. 범위에 연결 가능 멤버를 사용 하는 데 사용할 수 있습니다. 원하는 범위를 벗어나는 사용량에는 XAML 구문 분석 오류가 발생 한 후 표시 되는 잘못 된 캐스팅 예외가 throw 됩니다. 매개 변수 이름을 `target` 요구 되지 않지만 라는 `target` 대부분의 구현에서 규칙에 따라 합니다.  
   
--   구현에서 보다 구체적인 형식으로 반환 값을 지정할 수 있습니다.  
+- 구현에서 보다 구체적인 형식으로 반환 값을 지정할 수 있습니다.  
   
  지원에 <xref:System.ComponentModel.TypeConverter> 연결 가능한 멤버의 특성 사용에 대 한 사용 가능한 텍스트 구문을 적용 <xref:System.ComponentModel.TypeConverterAttribute> 에 `Get` *PropertyName* 접근자 합니다. 적용 합니다 `get` 대신는 `set` 임의의; 보일 수 있습니다이 규칙 개념을 지원할 수 있지만 직렬화 할 수 있는 읽기 전용 연결 가능한 멤버에는 디자이너 시나리오에서 유용 합니다.  
   
@@ -83,9 +83,9 @@ ms.locfileid: "59164439"
   
  `public static void Set` *PropertyName* `(object`  `target` `, object`  `value` `)`  
   
--   `target` 이전 섹션에 설명 된 대로 동일한 논리와 결과 사용 하 여 구현에서 보다 구체적인 형식으로 개체를 지정할 수 있습니다.  
+- `target` 이전 섹션에 설명 된 대로 동일한 논리와 결과 사용 하 여 구현에서 보다 구체적인 형식으로 개체를 지정할 수 있습니다.  
   
--   구현에서 보다 구체적인 형식으로 `value` 개체를 지정할 수 있습니다.  
+- 구현에서 보다 구체적인 형식으로 `value` 개체를 지정할 수 있습니다.  
   
  이 메서드에 대 한 값이 XAML 사용 특성 양식에서 일반적으로 입력 해야 합니다. 특성 및 특성 양식에서 값 변환기 지원이 있어야 텍스트 구문에 대 한 합니다 `Get` *PropertyName* 접근자입니다.  
   

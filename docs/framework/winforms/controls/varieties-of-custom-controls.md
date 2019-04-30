@@ -12,11 +12,11 @@ helpviewer_keywords:
 - controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
 ms.openlocfilehash: 765befcf88247e4b2101b13c4937352ba4b070fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009151"
 ---
 # <a name="varieties-of-custom-controls"></a>사용자 지정 컨트롤의 종류
 .NET Framework를 사용하여 새 컨트롤을 개발 및 구현할 수 있습니다. 상속을 통해서 기존 컨트롤 및 친숙한 사용자 정의 컨트롤의 기능을 확장할 수 있습니다. 또한 고유한 그리기를 수행하는 사용자 지정 컨트롤을 작성할 수도 있습니다.  
@@ -31,17 +31,17 @@ ms.locfileid: "59170708"
   
  <xref:System.Windows.Forms.Control> 클래스는 Windows Forms 응용 프로그램에서 시각적 개체 표시를 제공 하려면 다음 작업을 수행 합니다.  
   
--   창 핸들을 노출합니다.  
+- 창 핸들을 노출합니다.  
   
--   메시지 라우팅을 관리합니다.  
+- 메시지 라우팅을 관리합니다.  
   
--   마우스 및 키보드 이벤트 및 다른 많은 사용자 인터페이스 이벤트를 제공합니다.  
+- 마우스 및 키보드 이벤트 및 다른 많은 사용자 인터페이스 이벤트를 제공합니다.  
   
--   고급 레이아웃 기능을 제공합니다.  
+- 고급 레이아웃 기능을 제공합니다.  
   
--   와 같은 시각적 개체 표시에 관련 된 많은 속성을 포함 <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>를 <xref:System.Windows.Forms.Control.Height%2A>, 및 <xref:System.Windows.Forms.Control.Width%2A>합니다.  
+- 와 같은 시각적 개체 표시에 관련 된 많은 속성을 포함 <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>를 <xref:System.Windows.Forms.Control.Height%2A>, 및 <xref:System.Windows.Forms.Control.Width%2A>합니다.  
   
--   Microsoft® ActiveX® 컨트롤 역할을 하는 Windows Forms 컨트롤에 필요한 보안 및 스레딩 지원을 제공합니다.  
+- Microsoft® ActiveX® 컨트롤 역할을 하는 Windows Forms 컨트롤에 필요한 보안 및 스레딩 지원을 제공합니다.  
   
  인프라의 상당 부분이 기본 클래스에서 제공되므로 비교적 쉽게 사용자 고유의 Windows Forms 컨트롤을 개발할 수 있습니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "59170708"
   
  다음과 같은 경우 <xref:System.Windows.Forms.UserControl> 클래스에서 상속합니다.  
   
--   여러 Windows Forms 컨트롤의 기능을 다시 사용 가능한 단일 단위로 결합하려는 경우  
+- 여러 Windows Forms 컨트롤의 기능을 다시 사용 가능한 단일 단위로 결합하려는 경우  
   
 ### <a name="extended-controls"></a>확장된 컨트롤  
  기존 Windows Forms 컨트롤에서 상속된 컨트롤을 파생시킬 수 있습니다. 이 접근 방식을 통해 Windows Forms 컨트롤의 고유 기능을 모두 유지한 다음 사용자 지정 속성, 메서드 또는 다른 기능을 추가하여 해당 기능을 확장할 수 있습니다. 이 옵션을 사용하여 기본 컨트롤의 그리기 논리를 재정의한 다음 모양을 변경하여 해당 사용자 인터페이스를 확장할 수 있습니다.  
@@ -74,9 +74,9 @@ ms.locfileid: "59170708"
   
  다음과 같은 경우 Windows Forms 컨트롤에서 상속합니다.  
   
--   필요한 기능이 대부분 기존 Windows Forms 컨트롤에 이미 있는 것과 동일한 경우  
+- 필요한 기능이 대부분 기존 Windows Forms 컨트롤에 이미 있는 것과 동일한 경우  
   
--   사용자 지정 그래픽 사용자 인터페이스가 필요하지 않거나 기존 컨트롤에 대한 새 그래픽 사용자 인터페이스를 디자인하려는 경우  
+- 사용자 지정 그래픽 사용자 인터페이스가 필요하지 않거나 기존 컨트롤에 대한 새 그래픽 사용자 인터페이스를 디자인하려는 경우  
   
 ### <a name="custom-controls"></a>사용자 지정 컨트롤  
  다른 컨트롤을 만드는 방법은에서 상속 하 여 처음부터 새로 만드는 <xref:System.Windows.Forms.Control>합니다. <xref:System.Windows.Forms.Control> 클래스는 모든 마우스 및 키보드 이벤트를 처리를 비롯 하 여 컨트롤에 필요한 기본 기능을 하지만 컨트롤별 기능이 나 그래픽 인터페이스를 제공 합니다.  
@@ -91,9 +91,9 @@ ms.locfileid: "59170708"
   
  다음과 같은 경우 <xref:System.Windows.Forms.Control> 클래스에서 상속합니다.  
   
--   컨트롤의 사용자 지정 그래픽 표현을 제공하려는 경우  
+- 컨트롤의 사용자 지정 그래픽 표현을 제공하려는 경우  
   
--   표준 컨트롤을 통해 사용할 수 없는 사용자 지정 기능을 구현해야 하는 경우  
+- 표준 컨트롤을 통해 사용할 수 없는 사용자 지정 기능을 구현해야 하는 경우  
   
 ### <a name="activex-controls"></a>ActiveX 컨트롤  
  Windows Forms 인프라는 Windows Forms 컨트롤을 호스팅하도록 최적화되어 있지만 ActiveX 컨트롤을 사용할 수도 있습니다. Visual Studio에서는 이 작업이 지원됩니다. 자세한 내용은 [방법: Windows Forms에 ActiveX 컨트롤 추가](how-to-add-activex-controls-to-windows-forms.md)합니다.  

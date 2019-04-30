@@ -3,11 +3,11 @@ title: 형식 공급자
 description: 에 대해 알아봅니다 어떻게는 F# 형식 공급자는 형식, 속성 및 프로그램에서 사용할 메서드를 제공 하는 구성 요소입니다.
 ms.date: 04/02/2018
 ms.openlocfilehash: 39000fd1ca2af78afd1c333816fe9d5c0e2517cb
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967767"
 ---
 # <a name="type-providers"></a>형식 공급자
 
@@ -37,7 +37,7 @@ F# 형식 공급자는 사용자 프로그램에서 사용할 형식, 속성 및
 
 필요한 경우 다음을 할 수 있습니다 [사용자 고유의 사용자 지정 형식 공급자를 만들](creating-a-type-provider.md), 또는 다른 사용자가 생성 된 형식 공급자를 참조 합니다. 예를 들어 조직에 규모가 크고 점점 더 수가 증가하는 명명된 데이터 집합(각각 자체적으로 안정적인 데이터 스키마 포함)을 제공하는 데이터 서비스가 있다고 가정합니다. 강력한 방식으로 스키마를 읽고 프로그래머에 설정된 사용할 수 있는 최신 데이터 집합을 제공하는 형식 공급자를 만들도록 선택할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [자습서: 형식 공급자 만들기](creating-a-type-provider.md)
 - [F# 언어 참조](../../language-reference/index.md)

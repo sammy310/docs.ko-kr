@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
 ms.openlocfilehash: 360f19e558f97e1807b329ad18e429fa893bbf86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053160"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>연습: ElementHost 컨트롤을 사용하여 속성 매핑
 
@@ -21,13 +21,13 @@ ms.locfileid: "59300920"
 
 이 연습에서 설명하는 작업은 다음과 같습니다.
 
--   프로젝트 만들기.
+- 프로젝트 만들기.
 
--   새 속성 매핑 정의.
+- 새 속성 매핑 정의.
 
--   기본 속성 매핑 제거.
+- 기본 속성 매핑 제거.
 
--   기본 속성 매핑 확장.
+- 기본 속성 매핑 확장.
 
 이 연습에 설명 된 작업의 전체 코드 목록은 참조 하세요 [ElementHost 컨트롤 샘플을 사용 하 여 속성 매핑](https://go.microsoft.com/fwlink/?LinkID=160018)합니다.
 
@@ -37,7 +37,7 @@ ms.locfileid: "59300920"
 
 이 연습을 완료하려면 다음 구성 요소가 필요합니다.
 
--   Visual Studio 2017
+- Visual Studio 2017
 
 ## <a name="creating-the-project"></a>프로젝트 만들기
 
@@ -47,13 +47,13 @@ ms.locfileid: "59300920"
 
 2. **솔루션 탐색기**, 다음에 대 한 참조를 추가 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 어셈블리입니다.
 
-    -   PresentationCore
+    - PresentationCore
 
-    -   PresentationFramework
+    - PresentationFramework
 
-    -   WindowsBase
+    - WindowsBase
 
-    -   WindowsFormsIntegration
+    - WindowsFormsIntegration
 
 3. 맨 위에 다음 코드를 복사 합니다 `Form1` 코드 파일.
 
@@ -101,7 +101,7 @@ ms.locfileid: "59300920"
 
 ### <a name="to-remove-a-default-property-mapping"></a>기본 속성 매핑을 제거하려면
 
--   다음 코드에 대 한 정의를 복사 합니다 `Form1` 클래스입니다.
+- 다음 코드에 대 한 정의를 복사 합니다 `Form1` 클래스입니다.
 
      [!code-csharp[PropertyMappingWithElementHost#13](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#13)]
      [!code-vb[PropertyMappingWithElementHost#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#13)]
@@ -114,7 +114,7 @@ ms.locfileid: "59300920"
 
 ### <a name="to-extend-a-default-property-mapping"></a>기본 속성 매핑을 확장하려면
 
--   다음 코드에 대 한 정의를 복사 합니다 `Form1` 클래스입니다.
+- 다음 코드에 대 한 정의를 복사 합니다 `Form1` 클래스입니다.
 
      [!code-csharp[PropertyMappingWithElementHost#15](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#15)]
      [!code-vb[PropertyMappingWithElementHost#15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#15)]
@@ -132,11 +132,11 @@ ms.locfileid: "59300920"
 
      `Form1_Load` 메서드 핸들을 <xref:System.Windows.Forms.Form.Load> 이벤트 하 고 다음과 같은 초기화를 수행 합니다.
 
-    -   만듭니다는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button> 요소입니다.
+    - 만듭니다는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button> 요소입니다.
 
-    -   연습에서 이전에 정의한 메서드를 호출하여 속성 매핑을 설정합니다.
+    - 연습에서 이전에 정의한 메서드를 호출하여 속성 매핑을 설정합니다.
 
-    -   매핑된 속성에 초기 값을 할당합니다.
+    - 매핑된 속성에 초기 값을 할당합니다.
 
 2. F5 키를 눌러 애플리케이션을 빌드하고 실행합니다.
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
 ms.openlocfilehash: c065b06e7542913ae7fb495a0f69ff09dc4238b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020479"
 ---
 # <a name="drawing-objects-overview"></a>Drawing 개체 개요
 이 항목에서는 소개 <xref:System.Windows.Media.Drawing> 개체 및 도형, 비트맵, 텍스트 및 미디어를 효율적으로 그리는 데 사용 하는 방법에 설명 합니다. 사용 하 여 <xref:System.Windows.Media.Drawing> 클립 아트를 만들 때 개체를 사용 하 여 그리는 <xref:System.Windows.Media.DrawingBrush>를 사용 하 여 또는 <xref:System.Windows.Media.Visual> 개체.  
@@ -23,25 +23,25 @@ ms.locfileid: "59325516"
 ## <a name="what-is-a-drawing-object"></a>그리기 개체란?  
  <xref:System.Windows.Media.Drawing> 도형, 비트맵, 비디오 또는 텍스트 줄 같은 보이는 콘텐츠를 설명 하는 개체입니다. 그리기 형식마다 다른 콘텐츠 형식을 설명합니다. 다음은 여러 그리기 개체 형식을 보여 주는 목록입니다.  
   
--   <xref:System.Windows.Media.GeometryDrawing> -도형을 그립니다.  
+- <xref:System.Windows.Media.GeometryDrawing> -도형을 그립니다.  
   
--   <xref:System.Windows.Media.ImageDrawing> – 이미지를 그립니다.  
+- <xref:System.Windows.Media.ImageDrawing> – 이미지를 그립니다.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> – 텍스트를 그립니다.  
+- <xref:System.Windows.Media.GlyphRunDrawing> – 텍스트를 그립니다.  
   
--   <xref:System.Windows.Media.VideoDrawing> – 오디오 또는 비디오 파일을 재생합니다.  
+- <xref:System.Windows.Media.VideoDrawing> – 오디오 또는 비디오 파일을 재생합니다.  
   
--   <xref:System.Windows.Media.DrawingGroup> -다른 그리기를 그립니다. 다른 그리기를 단일 합성 그리기로 결합하려면 그리기 그룹을 사용합니다.  
+- <xref:System.Windows.Media.DrawingGroup> -다른 그리기를 그립니다. 다른 그리기를 단일 합성 그리기로 결합하려면 그리기 그룹을 사용합니다.  
   
  <xref:System.Windows.Media.Drawing> 개체는 다목적입니다. 여러 가지 방법으로 사용할 수는 <xref:System.Windows.Media.Drawing> 개체입니다.  
   
--   사용 하 여 이미지로 표시할 수 있습니다는 <xref:System.Windows.Media.DrawingImage> 및 <xref:System.Windows.Controls.Image> 제어 합니다.  
+- 사용 하 여 이미지로 표시할 수 있습니다는 <xref:System.Windows.Media.DrawingImage> 및 <xref:System.Windows.Controls.Image> 제어 합니다.  
   
--   와 함께 사용할 수 있습니다는 <xref:System.Windows.Media.DrawingBrush> 와 같은 개체를 그릴 합니다 <xref:System.Windows.Controls.Page.Background%2A> 의 <xref:System.Windows.Controls.Page>합니다.  
+- 와 함께 사용할 수 있습니다는 <xref:System.Windows.Media.DrawingBrush> 와 같은 개체를 그릴 합니다 <xref:System.Windows.Controls.Page.Background%2A> 의 <xref:System.Windows.Controls.Page>합니다.  
   
--   모양을 설명 하는 데 사용할 수 있습니다는 <xref:System.Windows.Media.DrawingVisual>합니다.  
+- 모양을 설명 하는 데 사용할 수 있습니다는 <xref:System.Windows.Media.DrawingVisual>합니다.  
   
--   콘텐츠를 열거 하는 데 사용할 수 있습니다는 <xref:System.Windows.Media.Visual>합니다.  
+- 콘텐츠를 열거 하는 데 사용할 수 있습니다는 <xref:System.Windows.Media.Visual>합니다.  
   
  WPF는 도형, 비트맵, 텍스트 및 미디어를 그릴 수 있는 다른 형식의 개체를 제공합니다. 예를 들어 사용할 수도 있습니다 <xref:System.Windows.Shapes.Shape> 도형을 그릴 개체 및 <xref:System.Windows.Controls.MediaElement> 컨트롤은 응용 프로그램에 비디오를 추가 하는 또 다른 방법은 제공 합니다. 따라서 사용 해야 <xref:System.Windows.Media.Drawing> 개체? 성능 이점을 얻을 수 있는 프레임 워크 수준 기능 저하를 감수 해야 하거나 필요한 경우 <xref:System.Windows.Freezable> 기능입니다. 때문에 <xref:System.Windows.Media.Drawing> 개체에 대 한 지원 부족 [레이아웃](../advanced/layout.md), 입력 및 포커스를 성능을 제공 하므로 사용 하 여 하위 수준 그리기 및 배경, 클립 아트를 설명 하는 데 적합 <xref:System.Windows.Media.Visual> 개체입니다.  
   

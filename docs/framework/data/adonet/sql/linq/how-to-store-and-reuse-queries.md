@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: a012bd79-1809-45e3-adea-0229532396cc
 ms.openlocfilehash: 1aac20c3f9c421d353938a83b9e321d35abd244e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033646"
 ---
 # <a name="how-to-store-and-reuse-queries"></a>방법: 쿼리 저장 및 다시 사용
 구조적으로 유사한 쿼리를 여러 번 실행하는 응용 프로그램이 있는 경우 일반적으로 쿼리를 한 번 컴파일하고 다른 매개 변수와 함께 여러 번 실행하여 성능을 향상시킬 수 있습니다. 예를 들어, 응용 프로그램에서 특정 도시의 모든 고객을 검색해야 하며 사용자가 런타임에 양식에서 도시를 지정하는 경우를 생각해 봅니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 사용을 지원 *컴파일된 쿼리* 이 목적입니다.  

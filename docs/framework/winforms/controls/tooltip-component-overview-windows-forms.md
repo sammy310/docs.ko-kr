@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ToolTip component [Windows Forms], about ToolTip component
 ms.assetid: 3fbc6f08-c882-4acd-a960-a08efe3c7e6e
 ms.openlocfilehash: 3fbe883501d1ce36ca25ea07631f98042f451e07
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009337"
 ---
 # <a name="tooltip-component-overview-windows-forms"></a>ToolTip 구성 요소 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ToolTip> 구성 요소는 사용자가 컨트롤을 가리킬 때 텍스트를 표시합니다. 도구 설명은 모든 컨트롤에 연결될 수 있습니다. 이 구성 요소의 사용 예: 폼에 공간을 절약 하기 단추에 작은 아이콘을 표시 하 도구 설명을 사용 하 여 단추의 기능을 설명 합니다.  

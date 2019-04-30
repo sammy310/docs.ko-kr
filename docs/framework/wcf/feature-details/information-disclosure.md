@@ -3,11 +3,11 @@ title: 정보 공개
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
 ms.openlocfilehash: b42faeb4043302e5e70379cc4e1de3cb8bd96af4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972603"
 ---
 # <a name="information-disclosure"></a>정보 공개
 정보 공개를 사용하여 공격자가 시스템에 대해 유용한 정보를 얻을 수 있습니다. 따라서 항상 노출하려는 정보의 내용과 악의가 있는 사용자가 사용해도 되는지 여부를 고려합니다. 다음은 가능한 정보 공개 공격을 나열하고 각 공격에 대한 완화 방안을 제공합니다.  
@@ -32,16 +32,16 @@ ms.locfileid: "59195906"
   
  완화 방안에는 다음이 포함됩니다.  
   
--   서비스 참조는 신뢰할 수 있는 것으로 간주합니다. 서비스 참조 인스턴스를 전송할 때마다 손상되지 않았는지 확인해야 합니다.  
+- 서비스 참조는 신뢰할 수 있는 것으로 간주합니다. 서비스 참조 인스턴스를 전송할 때마다 손상되지 않았는지 확인해야 합니다.  
   
--   일부 응용 프로그램에서 서비스 참조의 데이터 및 원격 호스트에서 제공하는 신뢰 데이터를 기반으로 신뢰를 대화형으로 구축하는 사용자 경험을 제공할 수 있습니다. WCF는 이러한 기능에 대 한 확장성 지점을 제공 하지만 사용자가 구현한 해야 합니다.  
+- 일부 응용 프로그램에서 서비스 참조의 데이터 및 원격 호스트에서 제공하는 신뢰 데이터를 기반으로 신뢰를 대화형으로 구축하는 사용자 경험을 제공할 수 있습니다. WCF는 이러한 기능에 대 한 확장성 지점을 제공 하지만 사용자가 구현한 해야 합니다.  
   
 ## <a name="ntlm"></a>NTLM  
  기본적으로 Windows 도메인 환경의 경우 Windows 인증은 Kerberos 프로토콜을 사용하여 사용자를 인증하고 권한을 부여합니다. 일부 이유로 인해 Kerberos 프로토콜을 사용할 수 없는 경우 NTLM(NT LAN Manager)을 대신 사용합니다. <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> 속성을 `false`로 설정하면 이 동작을 비활성화할 수 있습니다. NTLM을 사용하는 경우 고려해야 할 문제는 다음과 같습니다.  
   
--   NTLM은 클라이언트 사용자 이름을 노출합니다. 사용자 이름을 기밀로 유지해야 하는 경우 바인딩의 `AllowNTLM` 속성을 `false`로 설정합니다.  
+- NTLM은 클라이언트 사용자 이름을 노출합니다. 사용자 이름을 기밀로 유지해야 하는 경우 바인딩의 `AllowNTLM` 속성을 `false`로 설정합니다.  
   
--   NTLM은 서버 인증을 제공하지 않습니다. 따라서 NTLM을 인증 프로토콜로 사용하는 경우 클라이언트가 올바른 서비스와 통신하는지 확인할 수 없습니다.  
+- NTLM은 서버 인증을 제공하지 않습니다. 따라서 NTLM을 인증 프로토콜로 사용하는 경우 클라이언트가 올바른 서비스와 통신하는지 확인할 수 없습니다.  
   
 ### <a name="specifying-client-credentials-or-invalid-identity-forces-ntlm-usage"></a>클라이언트 자격 증명 또는 잘못된 ID를 지정하면 강제로 NTLM 사용  
  클라이언트를 만들 때 도메인 이름 없이 클라이언트 자격 증명을 지정하거나 잘못된 서버 ID를 지정하면 NTLM이 Kerberos 프로토콜 대신 사용됩니다(`AlllowNtlm` 속성을 `true`로 설정한 경우). NTLM이 서버 인증을 수행하지 않기 때문에 정보가 잠재적으로 공개될 수 있습니다.  

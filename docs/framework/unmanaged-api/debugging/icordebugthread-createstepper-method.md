@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 89182739633984011aaab3d7900d376b6db5ef99
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57476206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61987191"
 ---
 # <a name="icordebugthreadcreatestepper-method"></a>ICorDebugThread::CreateStepper 메서드
 이 ICorDebugThread의 활성 프레임을 단계별로 있도록 ICorDebugStepper 개체를 만듭니다.  

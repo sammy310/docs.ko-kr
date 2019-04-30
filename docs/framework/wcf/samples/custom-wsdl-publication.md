@@ -3,22 +3,22 @@ title: 사용자 지정 WSDL 게시
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
 ms.openlocfilehash: 2085c145a58ecaa4ad2dd8ffbd6933b92e735a6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990589"
 ---
 # <a name="custom-wsdl-publication"></a>사용자 지정 WSDL 게시
 이 샘플을 통해 다음을 수행하는 방법을 알 수 있습니다.  
   
--   <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType>을 사용자 지정 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> 특성에 구현하여 특성 속성을 WSDL 주석으로 내보내기.  
+- <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType>을 사용자 지정 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> 특성에 구현하여 특성 속성을 WSDL 주석으로 내보내기.  
   
--   <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType>을 구현하여 사용자 지정 WSDL 주석 가져오기.  
+- <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType>을 구현하여 사용자 지정 WSDL 주석 가져오기.  
   
--   사용자 지정 계약 동작과 사용자 지정 작업 동작에 각각 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> 및 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType>을 구현하여 가져온 주석을 가져온 계약 및 작업의 CodeDOM에 주석으로 씁니다.  
+- 사용자 지정 계약 동작과 사용자 지정 작업 동작에 각각 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> 및 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType>을 구현하여 가져온 주석을 가져온 계약 및 작업의 CodeDOM에 주석으로 씁니다.  
   
--   사용 하 여는 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> WSDL을 다운로드 하는 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> 사용자 지정 WSDL 가져오기를 사용 하 여 WSDL을 가져오려면 및 <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> / / /으로 WSDL 주석 사용 하 여 Windows Communication Foundation (WCF) 클라이언트 코드를 생성 및 ' ' 주석 C# 및 Visual 기본입니다.  
+- 사용 하 여는 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> WSDL을 다운로드 하는 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> 사용자 지정 WSDL 가져오기를 사용 하 여 WSDL을 가져오려면 및 <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> / / /으로 WSDL 주석 사용 하 여 Windows Communication Foundation (WCF) 클라이언트 코드를 생성 및 ' ' 주석 C# 및 Visual 기본입니다.  
   
 > [!NOTE]
 >  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  

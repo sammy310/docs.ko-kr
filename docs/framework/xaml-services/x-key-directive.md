@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
 ms.openlocfilehash: 6ac878f24de594f8557ded8b0c3356217021b035
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971823"
 ---
 # <a name="xkey-directive"></a>x:Key 지시문
 고유 하 게 생성 및 XAML 정의 된 사전에서 참조 되는 요소를 식별 합니다. 추가 된 `x:Key` XAML 개체 요소 값은 WPF의 예를 들어 리소스 사전의 리소스를 식별 하는 가장 일반적인 방법은 <xref:System.Windows.ResourceDictionary>합니다.  
@@ -61,9 +61,9 @@ ms.locfileid: "59223721"
 ## <a name="wpf-usage-notes"></a>WPF 사용 정보  
  부모의 자식 개체는 개체를 <xref:System.Collections.IDictionary> 구현에서는 WPF <xref:System.Windows.ResourceDictionary>, 일반적으로 포함 해야 합니다는 `x:Key` 특성 및 키 값을 해당 사전 내에서 고유 해야 합니다. 두 가지 주목할 만한 예외가 있습니다.  
   
--   일부 WPF 형식은 사전 사용에 대 한 암시적 키를 선언합니다. 예를 들어,를 <xref:System.Windows.Style> 사용 하 여는 <xref:System.Windows.Style.TargetType%2A>, 또는 <xref:System.Windows.DataTemplate> 사용 하 여를 <xref:System.Windows.DataTemplate.DataType%2A>에 있을 수 있습니다를 <xref:System.Windows.ResourceDictionary> 암시적 키를 사용 합니다.  
+- 일부 WPF 형식은 사전 사용에 대 한 암시적 키를 선언합니다. 예를 들어,를 <xref:System.Windows.Style> 사용 하 여는 <xref:System.Windows.Style.TargetType%2A>, 또는 <xref:System.Windows.DataTemplate> 사용 하 여를 <xref:System.Windows.DataTemplate.DataType%2A>에 있을 수 있습니다를 <xref:System.Windows.ResourceDictionary> 암시적 키를 사용 합니다.  
   
--   WPF 병합 된 리소스 사전 개념을 지원 합니다. 키 병합된 된 사전 간에 공유할 수 있으며 공유 키 동작을 사용 하 여 액세스할 수 있습니다 <xref:System.Windows.FrameworkContentElement.FindResource%2A>합니다. 자세한 내용은 [병합된 리소스 사전](../wpf/advanced/merged-resource-dictionaries.md)을 참조하세요.  
+- WPF 병합 된 리소스 사전 개념을 지원 합니다. 키 병합된 된 사전 간에 공유할 수 있으며 공유 키 동작을 사용 하 여 액세스할 수 있습니다 <xref:System.Windows.FrameworkContentElement.FindResource%2A>합니다. 자세한 내용은 [병합된 리소스 사전](../wpf/advanced/merged-resource-dictionaries.md)을 참조하세요.  
   
  전체적인 WPF XAML 구현 및 응용 프로그램 모델에서 키 고유성 XAML 태그 컴파일러에서 확인 하지 않습니다. 대신 없거나 고유 하지 않은 `x:Key` 값 로드할 때 XAML 파서 오류가 발생 합니다. 그러나 Visual Studio WPF에 대 한 사전 처리 디자인 단계에서 이러한 오류를 참고할 종종 수 있습니다.  
   
@@ -101,11 +101,11 @@ keyObject
 |-|-|  
 |`keyObject`|개체에 대 한 키로 사용 되는 개체의 요소는 지정 된 `object` 특수 사전에서.|  
   
--   이러한 종류의 사용에 대 한 컨테이너/부모 여기 표시 되지 않습니다. `object` 특수 사전 구현을 나타내는 개체 요소의 자식이 될 예정입니다. `keyObject` 개체 인스턴스 (또는 값 형식의 값)로 예상 되는 특정 특수 사전 구현 위한 키로 적합 합니다.  
+- 이러한 종류의 사용에 대 한 컨테이너/부모 여기 표시 되지 않습니다. `object` 특수 사전 구현을 나타내는 개체 요소의 자식이 될 예정입니다. `keyObject` 개체 인스턴스 (또는 값 형식의 값)로 예상 되는 특정 특수 사전 구현 위한 키로 적합 합니다.  
   
--   WPF에는이 사용에 필요한 사전을 구현 하지 않습니다. 개체 키 기능은 더 일반 XAML 언어는 XAML에서 사전을 만드는 것이 바람직한 특정 사용자 지정 사전 시나리오에 유용할 수 있습니다. 문자열이 아닌 키를 사용 하 여 리소스에 대 한 암시적 스타일 같은 WPF 기능에 대 한 설정 하거나 키를 지정 하는 다른 기술을 존재 하므로 개체 키를 사용 하 여 필요 하지 않습니다.  
+- WPF에는이 사용에 필요한 사전을 구현 하지 않습니다. 개체 키 기능은 더 일반 XAML 언어는 XAML에서 사전을 만드는 것이 바람직한 특정 사용자 지정 사전 시나리오에 유용할 수 있습니다. 문자열이 아닌 키를 사용 하 여 리소스에 대 한 암시적 스타일 같은 WPF 기능에 대 한 설정 하거나 키를 지정 하는 다른 기술을 존재 하므로 개체 키를 사용 하 여 필요 하지 않습니다.  
   
--   *keyObject* 는 직접 개체 인스턴스가 아니라 개체 요소 형식에서 태그 확장 사용을 수도 있습니다.  
+- *keyObject* 는 직접 개체 인스턴스가 아니라 개체 요소 형식에서 태그 확장 사용을 수도 있습니다.  
   
 ## <a name="silverlight-usage-notes"></a>Silverlight 사용 정보  
  `x:Key` Silverlight 용은 별도로 설명 됩니다. 자세한 내용은 참조 하세요. [XAML Namespace (x:) 언어 기능 (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081)합니다.  

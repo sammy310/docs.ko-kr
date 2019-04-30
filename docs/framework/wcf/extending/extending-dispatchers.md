@@ -5,11 +5,11 @@ helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
 ms.openlocfilehash: ac20e24eb9148ed9d403b7a9c2c260009f39d492
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967622"
 ---
 # <a name="extending-dispatchers"></a>디스패처 확장
 디스패처는 기본 채널에서 들어오는 메시지를 끌어와서 응용 프로그램 코드에서 이를 메서드 호출로 변환하여 결과를 다시 호출자에게 보내는 역할을 합니다. 디스패처 확장을 사용하여 이 처리를 수정할 수 있습니다.  메시지의 내용 또는 매개 변수를 검사하거나 수정하는 메시지 또는 매개 변수 검사자를 구현할 수 있습니다.  메시지가 작업으로 라우트되는 방식을 변경하거나 일부 다른 기능을 제공할 수 있습니다.  
@@ -40,37 +40,37 @@ ms.locfileid: "59335032"
 ## <a name="scenarios"></a>시나리오  
  디스패처를 확장하는 데에는 다음과 같은 여러 가지 이유가 있습니다.  
   
--   사용자 지정 메시지 유효성 확인. 메시지가 특정 스키마에 유효하도록 지정할 수 있습니다. 이 작업은 메시지 인터셉터 인터페이스를 구현하여 수행할 수 있습니다. 예를 들어 참조 [메시지 검사자](../../../../docs/framework/wcf/samples/message-inspectors.md)합니다.  
+- 사용자 지정 메시지 유효성 확인. 메시지가 특정 스키마에 유효하도록 지정할 수 있습니다. 이 작업은 메시지 인터셉터 인터페이스를 구현하여 수행할 수 있습니다. 예를 들어 참조 [메시지 검사자](../../../../docs/framework/wcf/samples/message-inspectors.md)합니다.  
   
--   사용자 지정 메시지 로깅. 끝점을 통해 이동하는 응용 프로그램 메시지의 일부를 검사하고 기록할 수 있습니다. 이 작업도 메시지 인터셉터 인터페이스를 통해 수행할 수 있습니다.  
+- 사용자 지정 메시지 로깅. 끝점을 통해 이동하는 응용 프로그램 메시지의 일부를 검사하고 기록할 수 있습니다. 이 작업도 메시지 인터셉터 인터페이스를 통해 수행할 수 있습니다.  
   
--   사용자 지정 메시지 변환. 런타임에 메시지에 특정 변환을 적용할 수 있습니다(예: 버전 관리). 이 작업도 메시지 인터셉터 인터페이스를 통해 수행할 수 있습니다.  
+- 사용자 지정 메시지 변환. 런타임에 메시지에 특정 변환을 적용할 수 있습니다(예: 버전 관리). 이 작업도 메시지 인터셉터 인터페이스를 통해 수행할 수 있습니다.  
   
--   사용자 지정 데이터 모델. 사용자는 WCF에서 기본적으로 지원 이외의 데이터 serialization 모델을 가질 수 있습니다 (즉, <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>, 및 원시 메시지). 이 작업은 메시지 포맷터 인터페이스를 구현하여 수행할 수 있습니다. 예를 들어 참조 [작업 포맷터와 작업 선택기](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)합니다.  
+- 사용자 지정 데이터 모델. 사용자는 WCF에서 기본적으로 지원 이외의 데이터 serialization 모델을 가질 수 있습니다 (즉, <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>, 및 원시 메시지). 이 작업은 메시지 포맷터 인터페이스를 구현하여 수행할 수 있습니다. 예를 들어 참조 [작업 포맷터와 작업 선택기](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)합니다.  
   
--   사용자 지정 매개 변수 유효성 검사. XML 형식이 아닌 다른 형식의 매개 변수가 유효하도록 지정할 수 있습니다. 이 작업은 매개 변수 검사자 인터페이스를 사용하여 수행할 수 있습니다.  
+- 사용자 지정 매개 변수 유효성 검사. XML 형식이 아닌 다른 형식의 매개 변수가 유효하도록 지정할 수 있습니다. 이 작업은 매개 변수 검사자 인터페이스를 사용하여 수행할 수 있습니다.  
   
--   사용자 지정 작업 디스패치. 동작 이외의 다른 요소, 예를 들면 본문 요소나 사용자 지정 메시지 속성에 대한 디스패치를 구현할 수 있습니다. 이 작업은 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 인터페이스를 사용하여 수행할 수 있습니다. 예를 들어 참조 [작업 포맷터와 작업 선택기](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)합니다.  
+- 사용자 지정 작업 디스패치. 동작 이외의 다른 요소, 예를 들면 본문 요소나 사용자 지정 메시지 속성에 대한 디스패치를 구현할 수 있습니다. 이 작업은 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 인터페이스를 사용하여 수행할 수 있습니다. 예를 들어 참조 [작업 포맷터와 작업 선택기](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)합니다.  
   
--   개체 풀링. 모든 호출에 새 인스턴스를 할당하는 대신 인스턴스를 풀링할 수 있습니다. 이 작업은 인스턴스 공급자 인터페이스를 사용하여 구현할 수 있습니다. 예를 들어 참조 [풀링](../../../../docs/framework/wcf/samples/pooling.md)합니다.  
+- 개체 풀링. 모든 호출에 새 인스턴스를 할당하는 대신 인스턴스를 풀링할 수 있습니다. 이 작업은 인스턴스 공급자 인터페이스를 사용하여 구현할 수 있습니다. 예를 들어 참조 [풀링](../../../../docs/framework/wcf/samples/pooling.md)합니다.  
   
--   인스턴스 대여. .NET Framework Remoting의 대여 패턴과 유사한, 인스턴스 수명에 대한 대여 패턴을 구현할 수 있습니다. 이 작업은 인스턴스 컨텍스트 수명 인터페이스를 사용하여 수행할 수 있습니다.  
+- 인스턴스 대여. .NET Framework Remoting의 대여 패턴과 유사한, 인스턴스 수명에 대한 대여 패턴을 구현할 수 있습니다. 이 작업은 인스턴스 컨텍스트 수명 인터페이스를 사용하여 수행할 수 있습니다.  
   
--   사용자 지정 오류 처리. 로컬 오류를 처리하는 방법 및 오류에 대해 클라이언트에 다시 통신하는 방법을 제어할 수 있습니다. 이 작업은 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 인터페이스를 사용하여 구현할 수 있습니다.  
+- 사용자 지정 오류 처리. 로컬 오류를 처리하는 방법 및 오류에 대해 클라이언트에 다시 통신하는 방법을 제어할 수 있습니다. 이 작업은 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 인터페이스를 사용하여 구현할 수 있습니다.  
   
--   사용자 지정 권한 부여 동작. 계약 또는 작업 런타임 부분을 확장하고 메시지에 있는 토큰에 따라 보안 검사를 추가하여 사용자 지정 액세스 제어를 구현할 수 있습니다. 이 작업은 메시지 인터셉터 또는 매개 변수 인터셉터 인터페이스를 사용하여 수행할 수 있습니다. 예제를 보려면 [보안 확장성](../../../../docs/framework/wcf/samples/security-extensibility.md)합니다.  
+- 사용자 지정 권한 부여 동작. 계약 또는 작업 런타임 부분을 확장하고 메시지에 있는 토큰에 따라 보안 검사를 추가하여 사용자 지정 액세스 제어를 구현할 수 있습니다. 이 작업은 메시지 인터셉터 또는 매개 변수 인터셉터 인터페이스를 사용하여 수행할 수 있습니다. 예제를 보려면 [보안 확장성](../../../../docs/framework/wcf/samples/security-extensibility.md)합니다.  
   
     > [!CAUTION]
     >  WCF 응용 프로그램의 보안을 손상 시킬 가능성이 보안 속성을 변경 하기 때문에 주의 하 여 보안 관련 수정 작업을 수행 하는 배포 전에 철저 하 게 테스트 것이 좋습니다.  
   
--   사용자 지정 WCF 런타임 유효성 검사기. WCF 응용 프로그램과 관련 된 엔터프라이즈 수준의 정책을 적용할 서비스, 계약 및 바인딩을 검사 하는 사용자 지정 유효성 검사기를 설치할 수 있습니다. (예를 들어 참조 [방법: 엔터프라이즈에서 끝점 잠그기](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).)  
+- 사용자 지정 WCF 런타임 유효성 검사기. WCF 응용 프로그램과 관련 된 엔터프라이즈 수준의 정책을 적용할 서비스, 계약 및 바인딩을 검사 하는 사용자 지정 유효성 검사기를 설치할 수 있습니다. (예를 들어 참조 [방법: 엔터프라이즈에서 끝점 잠그기](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).)  
   
 ### <a name="using-the-dispatchruntime-class"></a>DispatchRuntime 클래스 사용  
  서비스나 개별 끝점의 기본 동작을 수정하거나 다음 서비스 프로세스(또는 이중 클라이언트의 경우 클라이언트 프로세스) 중 하나 또는 모두에 대해 사용자 지정 수정 작업을 구현하는 개체를 삽입하려면 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 클래스를 사용합니다.  
   
--   들어오는 메시지를 개체로 변환하고 이러한 개체를 서비스 개체에 대한 메서드 호출로 해제  
+- 들어오는 메시지를 개체로 변환하고 이러한 개체를 서비스 개체에 대한 메서드 호출로 해제  
   
--   서비스 작업 호출에 대한 응답에서 수신한 개체를 아웃바운드 메시지로 변환  
+- 서비스 작업 호출에 대한 응답에서 수신한 개체를 아웃바운드 메시지로 변환  
   
  <xref:System.ServiceModel.Dispatcher.DispatchRuntime>을 사용하면 메시지가 인식되지 않는 경우에도 특정 계약을 통해 모든 메시지에 대한 채널 또는 끝점 디스패처를 가로채서 확장할 수 있습니다. 계약에 선언된 메시지와 일치하지 않는 메시지가 도착하면 이 메시지는 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.UnhandledDispatchOperation%2A> 속성에 의해 반환된 작업에 디스패치됩니다. 특정 작업에 대한 모든 메시지를 가로채거나 확장하려면 <xref:System.ServiceModel.Dispatcher.DispatchOperation> 클래스를 참조하세요.  
   
@@ -84,17 +84,17 @@ ms.locfileid: "59335032"
   
 4. 보안 관련 구성 요소는 다음과 같은 속성을 사용할 수 있습니다.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>은 감사 이벤트가 작성되는 위치를 나타냅니다.  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>은 감사 이벤트가 작성되는 위치를 나타냅니다.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A>는 들어오는 메시지가 제공하는 자격 증명을 사용하여 서비스가 가장을 시도하는지 여부를 제어합니다.  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A>는 들어오는 메시지가 제공하는 자격 증명을 사용하여 서비스가 가장을 시도하는지 여부를 제어합니다.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A>은 성공적인 메시지 권한 부여 이벤트가 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>에서 지정된 이벤트 로그에 작성되는지 여부를 제어합니다.  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A>은 성공적인 메시지 권한 부여 이벤트가 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>에서 지정된 이벤트 로그에 작성되는지 여부를 제어합니다.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A>는 <xref:System.Threading.Thread.CurrentPrincipal%2A> 속성을 설정하는 방법을 제어합니다.  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A>는 <xref:System.Threading.Thread.CurrentPrincipal%2A> 속성을 설정하는 방법을 제어합니다.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A>은 권한 부여 이벤트에 대한 감사를 수행하는 방법을 지정합니다.  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A>은 권한 부여 이벤트에 대한 감사를 수행하는 방법을 지정합니다.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A>는 로깅 프로세스 중에 발생하는 중요하지 않은 예외가 표시되지 않도록 할지 여부를 지정합니다.  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A>는 로깅 프로세스 중에 발생하는 중요하지 않은 예외가 표시되지 않도록 할지 여부를 지정합니다.  
   
  일반적으로 사용자 지정 확장 개체는 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 속성에 할당되거나 서비스 동작(<xref:System.ServiceModel.Description.IServiceBehavior>를 구현하는 개체), 계약 동작(<xref:System.ServiceModel.Description.IContractBehavior>를 구현하는 개체) 또는 끝점 동작(<xref:System.ServiceModel.Description.IEndpointBehavior>를 구현하는 개체)에 의해 컬렉션에 삽입됩니다. 그런 다음 프로그래밍 방식을 사용하거나 사용자 지정 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> 개체를 구현하여 설치 동작 개체를 해당 동작 컬렉션에 추가하므로, 애플리케이션 구성 파일을 사용하여 동작을 삽입할 수 있습니다.  
   
@@ -109,23 +109,23 @@ ms.locfileid: "59335032"
   
  다음 속성에서는 작업 수준에서 런타임 실행을 제어합니다.  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.Action%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReplyAction%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.FaultContractInfos%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.IsOneWay%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.IsTerminating%2A> 및 <xref:System.ServiceModel.Dispatcher.DispatchOperation.Name%2A> 속성은 작업에 대해 해당하는 값을 가져옵니다.  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.Action%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReplyAction%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.FaultContractInfos%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.IsOneWay%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.IsTerminating%2A> 및 <xref:System.ServiceModel.Dispatcher.DispatchOperation.Name%2A> 속성은 작업에 대해 해당하는 값을 가져옵니다.  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionAutoComplete%2A> 및 <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionRequired%2A>는 트랜잭션 동작을 지정합니다.  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionAutoComplete%2A> 및 <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionRequired%2A>는 트랜잭션 동작을 지정합니다.  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceBeforeCall%2A> 및 <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceAfterCall%2A> 속성은 <xref:System.ServiceModel.InstanceContext>를 기준으로 사용자 정의 서비스 개체의 수명을 제어합니다.  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceBeforeCall%2A> 및 <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceAfterCall%2A> 속성은 <xref:System.ServiceModel.InstanceContext>를 기준으로 사용자 정의 서비스 개체의 수명을 제어합니다.  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.DeserializeRequest%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.SerializeReply%2A> 및 <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> 속성을 사용하면 메시지에서 개체로 또는 개체에서 메시지로의 변환에 대해 명시적으로 제어할 수 있습니다.  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.DeserializeRequest%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.SerializeReply%2A> 및 <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> 속성을 사용하면 메시지에서 개체로 또는 개체에서 메시지로의 변환에 대해 명시적으로 제어할 수 있습니다.  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.Impersonation%2A> 속성은 작업 가장 수준을 지정합니다.  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.Impersonation%2A> 속성은 작업 가장 수준을 지정합니다.  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.CallContextInitializers%2A> 속성은 작업에 대한 사용자 지정 호출 컨텍스트 확장을 삽입합니다.  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.CallContextInitializers%2A> 속성은 작업에 대한 사용자 지정 호출 컨텍스트 확장을 삽입합니다.  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.AutoDisposeParameters%2A> 속성은 매개 변수 개체가 삭제되는 시점을 제어합니다.  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.AutoDisposeParameters%2A> 속성은 매개 변수 개체가 삭제되는 시점을 제어합니다.  
   
--   사용자 지정 호출자 개체를 삽입하는 <xref:System.ServiceModel.Dispatcher.DispatchOperation.Invoker%2A> 속성입니다.  
+- 사용자 지정 호출자 개체를 삽입하는 <xref:System.ServiceModel.Dispatcher.DispatchOperation.Invoker%2A> 속성입니다.  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A> 속성을 사용하면 매개 변수와 반환 값을 검사하거나 수정하는 데 사용할 수 있는 사용자 지정 매개 변수 검사자를 삽입할 수 있습니다.  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A> 속성을 사용하면 매개 변수와 반환 값을 검사하거나 수정하는 데 사용할 수 있는 사용자 지정 매개 변수 검사자를 삽입할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
 

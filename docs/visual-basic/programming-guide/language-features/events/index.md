@@ -6,11 +6,11 @@ helpviewer_keywords:
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 ms.openlocfilehash: 73a740d8fa9b9f293e4babb1d2edef81aaeae8aa
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973201"
 ---
 # <a name="events-visual-basic"></a>이벤트(Visual Basic)
 일련의 순서를 실제로 실행 되는 절차로 Visual Studio 프로젝트를 시각화할 수 있지만 대부분의 프로그램은 이벤트 구동 방식-라는 외부 발생 요인에 따라 결정 됩니다 실행 흐름이 *이벤트*합니다.  
@@ -53,11 +53,11 @@ ms.locfileid: "57201107"
   
  `WithEvents` 문 및 `Handles` 절은 선언적 구문을 사용하여 이벤트 처리를 보다 쉽게 코딩하고 읽고 디버그할 수 있도록 하므로 이벤트 처리기에 가장 적합합니다. 그러나 `WithEvents` 변수를 사용할 때는 다음과 같은 제한 사항이 적용됩니다.  
   
--   `WithEvents` 변수를 개체 변수로 사용할 수 없습니다. 즉, `Object`로 선언할 수 없습니다. 따라서 변수를 선언할 때는 클래스 이름을 지정해야 합니다.  
+- `WithEvents` 변수를 개체 변수로 사용할 수 없습니다. 즉, `Object`로 선언할 수 없습니다. 따라서 변수를 선언할 때는 클래스 이름을 지정해야 합니다.  
   
--   공유 이벤트 클래스 인스턴스에 연결 하지는 때문에 사용할 수 없습니다 `WithEvents` 선언적으로 공유 이벤트를 처리할 수 있습니다. 마찬가지로 `WithEvents` 또는 `Handles`를 사용하여 `Structure`의 이벤트를 처리할 수 없습니다. 두 경우 모두 `AddHandler` 문을 사용해서 해당 이벤트를 처리할 수 있습니다.  
+- 공유 이벤트 클래스 인스턴스에 연결 하지는 때문에 사용할 수 없습니다 `WithEvents` 선언적으로 공유 이벤트를 처리할 수 있습니다. 마찬가지로 `WithEvents` 또는 `Handles`를 사용하여 `Structure`의 이벤트를 처리할 수 없습니다. 두 경우 모두 `AddHandler` 문을 사용해서 해당 이벤트를 처리할 수 있습니다.  
   
--   `WithEvents` 변수 배열을 만들 수 없습니다.  
+- `WithEvents` 변수 배열을 만들 수 없습니다.  
   
  `WithEvents` 변수는 단일 이벤트 처리기로 하나 이상의 이벤트 종류를 처리하거나, 하나 이상의 이벤트 처리기로 동일한 종류의 이벤트를 처리하도록 할 수 있습니다.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "57201107"
   
 ### <a name="to-handle-events-from-a-base-class"></a>기본 클래스의 이벤트를 처리하려면  
   
--   이벤트 처리기 프로시저의 선언 줄에 `Handles MyBase.`*eventname* 문을 추가하여 파생 클래스에서 이벤트 처리기를 선언합니다. 여기서 *eventname*은 처리하는 기본 클래스의 이벤트 이름입니다. 예를 들어:  
+- 이벤트 처리기 프로시저의 선언 줄에 `Handles MyBase.`*eventname* 문을 추가하여 파생 클래스에서 이벤트 처리기를 선언합니다. 여기서 *eventname*은 처리하는 기본 클래스의 이벤트 이름입니다. 예를 들어:  
   
      [!code-vb[VbVbalrEvents#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#12)]  
   

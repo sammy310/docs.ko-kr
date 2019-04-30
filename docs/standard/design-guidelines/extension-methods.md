@@ -5,11 +5,11 @@ ms.technology: dotnet-standard
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
 author: KrzysztofCwalina
 ms.openlocfilehash: bd5f67c3bd766625e7c22b3ca9986cfbca8854bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026421"
 ---
 # <a name="extension-methods"></a>확장명 메서드
 확장 메서드는 정적 메서드를 인스턴스 메서드 호출 구문을 사용 하 여 호출할 수 있도록 언어 기능. 이러한 메서드는 메서드를의 동작에 인스턴스를 나타내는 하나 이상의 매개 변수를 수행 해야 합니다.  
@@ -22,9 +22,9 @@ ms.locfileid: "54621762"
   
  **✓ CONSIDER** 확장 메서드를 사용 하 여 다음과 같은 시나리오 중 하나:  
   
--   도우미를 제공 하는 핵심 인터페이스 측면에서 기능을 언급 하는 경우 인터페이스의 모든 구현 관련 기능을 작성할 수 있습니다. 구체적인 구현은 인터페이스가 고, 그렇지 할당할 수 없습니다 때문입니다. 예를 들어 합니다 `LINQ to Objects` 연산자는 모두에 대 한 확장 메서드로 구현 됩니다 <xref:System.Collections.Generic.IEnumerable%601> 형식입니다. 따라서 모든 `IEnumerable<>` 구현에서 자동으로 LINQ를 사용할 수 있습니다.  
+- 도우미를 제공 하는 핵심 인터페이스 측면에서 기능을 언급 하는 경우 인터페이스의 모든 구현 관련 기능을 작성할 수 있습니다. 구체적인 구현은 인터페이스가 고, 그렇지 할당할 수 없습니다 때문입니다. 예를 들어 합니다 `LINQ to Objects` 연산자는 모두에 대 한 확장 메서드로 구현 됩니다 <xref:System.Collections.Generic.IEnumerable%601> 형식입니다. 따라서 모든 `IEnumerable<>` 구현에서 자동으로 LINQ를 사용할 수 있습니다.  
   
--   일부 형식에 종속 되지만 이러한 종속성 인스턴스 메서드는 제공 하는 경우 종속성 관리 규칙 중단 됩니다. 예를 들어, 종속 <xref:System.String> 를 <xref:System.Uri?displayProperty=nameWithType> 바람직하지 않을 것 등 `String.ToUri()` 반환 되는 인스턴스 메서드 `System.Uri` 종속성 관리 측면에서 잘못 된 디자인 됩니다. 정적 확장 메서드 `Uri.ToUri(this string str)` 반환 `System.Uri` 훨씬 더 나은 디자인 됩니다.  
+- 일부 형식에 종속 되지만 이러한 종속성 인스턴스 메서드는 제공 하는 경우 종속성 관리 규칙 중단 됩니다. 예를 들어, 종속 <xref:System.String> 를 <xref:System.Uri?displayProperty=nameWithType> 바람직하지 않을 것 등 `String.ToUri()` 반환 되는 인스턴스 메서드 `System.Uri` 종속성 관리 측면에서 잘못 된 디자인 됩니다. 정적 확장 메서드 `Uri.ToUri(this string str)` 반환 `System.Uri` 훨씬 더 나은 디자인 됩니다.  
   
  **X AVOID** 에서 확장 메서드를 정의 <xref:System.Object?displayProperty=nameWithType>합니다.  
   

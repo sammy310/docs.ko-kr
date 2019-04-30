@@ -3,11 +3,11 @@ title: 구성 샘플
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
 ms.openlocfilehash: 48f66c4110d048f714dae0943f97f3f4aa7cd419
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002250"
 ---
 # <a name="configuration-sample"></a>구성 샘플
 이 샘플에서는 구성 파일을 사용하여 서비스를 검색 가능하게 만드는 방법을 보여 줍니다.  
@@ -27,15 +27,15 @@ ms.locfileid: "59768243"
 ## <a name="service-configuration"></a>서비스 구성  
  이 샘플의 구성 파일에서는 다음 두 가지 기능을 보여 줍니다.  
   
--   표준 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>를 통해 서비스를 검색할 수 있게 만듭니다.  
+- 표준 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>를 통해 서비스를 검색할 수 있게 만듭니다.  
   
--   서비스의 응용 프로그램 엔드포인트에 대한 검색 관련 정보를 조정하고 표준 엔드포인트의 검색 관련 설정 중 일부를 조정합니다.  
+- 서비스의 응용 프로그램 엔드포인트에 대한 검색 관련 정보를 조정하고 표준 엔드포인트의 검색 관련 설정 중 일부를 조정합니다.  
   
  검색 가능하도록 설정하려면 서비스의 응용 프로그램 구성 파일에서 몇 가지 변경 작업을 수행해야 합니다.  
   
--   `<service>` 요소에 검색 끝점을 추가해야 합니다. 이는 표준 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 엔드포인트로서, 런타임에서 검색 서비스와 연결하는 시스템 엔드포인트입니다. 검색 서비스는 이 엔드포인트에서 메시지를 수신 대기합니다.  
+- `<service>` 요소에 검색 끝점을 추가해야 합니다. 이는 표준 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 엔드포인트로서, 런타임에서 검색 서비스와 연결하는 시스템 엔드포인트입니다. 검색 서비스는 이 엔드포인트에서 메시지를 수신 대기합니다.  
   
--   `<serviceDiscovery>` 섹션에 `<serviceBehaviors>` 동작을 추가합니다. 이 동작은 런타임에 서비스를 검색할 수 있게 해 주며, 앞에서 설명한 검색 엔드포인트를 사용하여 검색 `Probe` 및 `Resolve` 메시지를 수신 대기합니다. 이 두 가지 항목을 추가하면 서비스를 지정된 검색 엔드포인트에서 검색할 수 있게 됩니다.  
+- `<serviceDiscovery>` 섹션에 `<serviceBehaviors>` 동작을 추가합니다. 이 동작은 런타임에 서비스를 검색할 수 있게 해 주며, 앞에서 설명한 검색 엔드포인트를 사용하여 검색 `Probe` 및 `Resolve` 메시지를 수신 대기합니다. 이 두 가지 항목을 추가하면 서비스를 지정된 검색 엔드포인트에서 검색할 수 있게 됩니다.  
   
  다음 구성 코드 조각에서는 응용 프로그램 엔드포인트와 검색 엔드포인트가 정의된 서비스를 보여 줍니다.  
   

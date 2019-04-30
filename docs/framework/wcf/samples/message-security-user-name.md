@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WS Security
 ms.assetid: c63cfc87-6b20-4949-93b3-bcd4b732b0a2
 ms.openlocfilehash: 947ef3c2120377fe33e0062d1ed508ddda432314
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972460"
 ---
 # <a name="message-security-user-name"></a>Message Security User Name
 이 샘플에서는 클라이언트에 대해 사용자 이름 인증과 함께 WS-Security를 사용하고 서버의 X.509v3 인증서를 사용하는 서버 인증을 요구하는 응용 프로그램을 구현하는 방법을 보여 줍니다. 클라이언트와 서버 간의 모든 응용 프로그램 메시지는 서명 및 암호화됩니다. 기본적으로 클라이언트에 의해 제공되는 사용자 이름과 암호는 유효한 Windows 계정에 로그온하는 데 사용됩니다. 이 샘플은 기반 합니다 [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)합니다. 이 샘플은 IIS(인터넷 정보 서비스)에 의해 호스트되는 클라이언트 콘솔 프로그램(Client.exe) 및 서비스 라이브러리(Service.dll)로 구성됩니다. 이 서비스는 요청-회신 통신 패턴을 정의하는 계약을 구현합니다.  
@@ -19,9 +19,9 @@ ms.locfileid: "59335331"
   
  또한 이 샘플에서는 다음을 보여 줍니다.  
   
--   추가 권한 부여를 수행할 수 있도록 하는 Windows 계정에 대한 기본 매핑  
+- 추가 권한 부여를 수행할 수 있도록 하는 Windows 계정에 대한 기본 매핑  
   
--   서비스 코드에서 호출자의 ID 정보에 액세스하는 방법  
+- 서비스 코드에서 호출자의 ID 정보에 액세스하는 방법  
   
  서비스는 서비스와의 통신에 사용할 수 있는 단일 끝점을 노출하며, 이 끝점은 Web.config 구성 파일을 사용하여 정의합니다. 엔드포인트는 하나의 주소, 바인딩 및 계약으로 구성됩니다. 표준 바인딩이 구성 된 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), 메시지 보안을 사용 하 여 기본값은입니다. 이 샘플에는 표준 설정 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) 클라이언트 사용자 이름 인증을 사용 하도록 합니다. 동작은 서비스 인증에 사용자 자격 증명을 사용하도록 지정합니다. 서버 인증서 주체 이름에 대 한 동일한 값을 포함 해야 합니다는 `findValue` 특성을 [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)합니다.  
   
@@ -147,7 +147,7 @@ Press <ENTER> to terminate client.
   
  다음은 배치 파일의 여러 다른 섹션에 대한 간략한 개요입니다.  
   
--   서버 인증서 만들기  
+- 서버 인증서 만들기  
   
      Setup.bat 배치 파일에서 다음 행은 사용할 서버 인증서를 만듭니다.  
   
@@ -163,7 +163,7 @@ Press <ENTER> to terminate client.
   
      %SERVER_NAME% 변수는 서버 이름을 지정합니다. 인증서는 LocalMachine 저장소에 저장됩니다. `setup.bat service`와 같은 서비스의 인수와 함께 Setup.bat 배치 파일을 실행할 경우 %SERVER_NAME%은 컴퓨터의 정규화된 도메인 이름을 포함하고  그렇지 않은 경우 기본적으로 localhost입니다.  
   
--   클라이언트의 신뢰할 수 있는 인증서 저장소에 서버 인증서 설치  
+- 클라이언트의 신뢰할 수 있는 인증서 저장소에 서버 인증서 설치  
   
      다음 줄은 클라이언트의 신뢰할 수 있는 사용자 저장소에 서버 인증서를 복사합니다. 이 단계는 Makecert.exe에서 생성한 인증서를 클라이언트 컴퓨터에서 절대적으로 신뢰하지는 않기 때문에 필요합니다. Microsoft에서 발급한 인증서와 같이 클라이언트가 신뢰할 수 있는 루트 인증서를 기반으로 하는 인증서가 이미 있는 경우 클라이언트 인증서 저장소를 서버 인증서로 채우는 이 단계를 수행할 필요가 없습니다.  
   
@@ -171,7 +171,7 @@ Press <ENTER> to terminate client.
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
--   인증서의 개인 키에 대한 사용 권한 부여  
+- 인증서의 개인 키에 대한 사용 권한 부여  
   
      Setup.bat 배치 파일의 다음 줄은 LocalMachine 저장소에 저장된 서버 인증서를 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 작업자 프로세스 계정에서 액세스할 수 있게 합니다.  
   
@@ -234,7 +234,7 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-clean-up-after-the-sample"></a>샘플 실행 후 정리를 수행하려면  
   
--   샘플 실행을 완료한 후 샘플 폴더에서 Cleanup.bat를 실행합니다.  
+- 샘플 실행을 완료한 후 샘플 폴더에서 Cleanup.bat를 실행합니다.  
   
     > [!NOTE]
     >  다중 컴퓨터 구성에서 이 샘플을 실행할 경우에는 이 스크립트로 클라이언트의 서비스 인증서를 제거할 수 없습니다. 컴퓨터 인증서를 사용 하는 Windows Communication Foundation (WCF) 샘플을 실행 하는 경우에 CurrentUser-TrustedPeople 저장소에에서 설치 된 서비스 인증서를 선택 취소 해야 합니다. 이 작업을 수행 하려면 다음 명령을 사용 합니다. `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 예를 들어: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`합니다.  

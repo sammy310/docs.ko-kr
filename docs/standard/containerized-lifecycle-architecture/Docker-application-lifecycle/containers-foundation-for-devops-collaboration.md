@@ -1,17 +1,17 @@
 ---
-title: DevOps 공동 작업을 위한 기초로 컨테이너
+title: DevOps 공동 작업의 기반으로 사용되는 컨테이너
 description: DevOps를 간소화 하는 컨테이너의 키 역할을 이해 합니다.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: 4b40837bf2b74d801b9794c88e79eb03bcd72e95
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012232"
 ---
-# <a name="containers-as-the-foundation-for-devops-collaboration"></a>DevOps 공동 작업을 위한 기초로 컨테이너
+# <a name="containers-as-the-foundation-for-devops-collaboration"></a>DevOps 공동 작업의 기반으로 사용되는 컨테이너
 
 컨테이너 및 Docker 기술을 매우 기본적으로 개발자와 공유할 수는 소프트웨어 및 종속성 쉽게 IT 운영 및 프로덕션 환경 일반적인 "작동 내 컴퓨터에서" 변명을 제거 하는 동안. 컨테이너는 서로 다른 환경 간에 응용 프로그램 충돌을 해결 합니다. 직접 컨테이너 및 Docker 하지 개발자와 IT 운영에 더 가깝게를 모을 쉽게 효율적으로 공동 작업할 수 있습니다. 컨테이너 워크플로 채택 하 고 많은 고객이 검색 했으므로 있지만 이전 릴리스에 대 한 더 복잡 한 구성을 통해 구현 하 고 파이프라인을 구축 해야 했습니다 DevOps 연속성을 제공 합니다. 컨테이너는 DevOps의 빌드/테스트/배포 파이프라인을 간소화합니다.
 

@@ -3,11 +3,11 @@ title: 청크 채널
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
 ms.openlocfilehash: a60cae7ad3dcfdaa139b8be974ed2d3996b5211d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002380"
 ---
 # <a name="chunking-channel"></a>청크 채널
 Windows Communication Foundation (WCF)를 사용 하 여 큰 메시지를 보낼 때 해당 메시지를 버퍼링 하는 데 사용 되는 메모리의 양을 제한 하는 것이 좋습니다. 가능한 한 가지 솔루션은 본문에 대량의 데이터가 있다고 가정하고 메시지 본문을 스트리밍하는 것입니다. 그러나 일부 프로토콜에서는 전체 메시지를 버퍼링해야 합니다. 이와 같은 두 가지 예로 신뢰할 수 있는 메시징과 보안을 들 수 있습니다. 가능한 또 다른 솔루션은 큰 메시지를 청크라는 더 작은 메시지로 나누고 이러한 청크를 한 번에 하나씩 보낸 다음 받는 쪽에서 큰 메시지를 다시 구성하는 것입니다. 응용 프로그램은 이 청크 및 청크 취소를 직접 수행하거나 사용자 지정 채널을 사용하여 수행할 수 있습니다. 이 Chunking Channel 샘플에서는 사용자 지정 프로토콜이나 계층화된 채널을 사용하여 임의 크기의 메시지를 청크 및 청크 취소하는 방법을 보여 줍니다.  
@@ -240,30 +240,30 @@ interface ITestService
   
  주목할 만한 몇 가지 세부 사항은 다음과 같습니다.  
   
--   Send는 `ThrowIfDisposedOrNotOpened`가 Opened인지 확인하기 위해 먼저 `CommunicationState`를 호출합니다.  
+- Send는 `ThrowIfDisposedOrNotOpened`가 Opened인지 확인하기 위해 먼저 `CommunicationState`를 호출합니다.  
   
--   보내기는 동기화되므로 각 세션에 대해 한 번에 하나의 메시지만 보낼 수 있습니다. 청크된 메시지를 보낼 때 다시 설정되는 `ManualResetEvent`이라는 `sendingDone`가 있습니다. 끝 청크 메시지가 보내지고 나면 이 이벤트가 설정됩니다. Send 메서드는 보내는 메시지를 보내려고 시도하기 전에 이 이벤트가 설정되기를 기다립니다.  
+- 보내기는 동기화되므로 각 세션에 대해 한 번에 하나의 메시지만 보낼 수 있습니다. 청크된 메시지를 보낼 때 다시 설정되는 `ManualResetEvent`이라는 `sendingDone`가 있습니다. 끝 청크 메시지가 보내지고 나면 이 이벤트가 설정됩니다. Send 메서드는 보내는 메시지를 보내려고 시도하기 전에 이 이벤트가 설정되기를 기다립니다.  
   
--   Send는 보내는 도중 동기화된 상태 변경을 방지하기 위해 `CommunicationObject.ThisLock`을 잠급니다. <xref:System.ServiceModel.Channels.CommunicationObject> 상태 및 상태 시스템에 대한 자세한 내용은 <xref:System.ServiceModel.Channels.CommunicationObject> 설명서를 참조하세요.  
+- Send는 보내는 도중 동기화된 상태 변경을 방지하기 위해 `CommunicationObject.ThisLock`을 잠급니다. <xref:System.ServiceModel.Channels.CommunicationObject> 상태 및 상태 시스템에 대한 자세한 내용은 <xref:System.ServiceModel.Channels.CommunicationObject> 설명서를 참조하세요.  
   
--   Send에 전달되는 시간 제한은 모든 청크의 보내기를 포함하는 전체 Send 작업의 시간 제한으로 사용됩니다.  
+- Send에 전달되는 시간 제한은 모든 청크의 보내기를 포함하는 전체 Send 작업의 시간 제한으로 사용됩니다.  
   
--   전체 원본 메시지 본문의 버퍼링을 방지하기 위해 사용자 지정 <xref:System.Xml.XmlDictionaryWriter> 디자인이 선택되었습니다. <xref:System.Xml.XmlDictionaryReader>를 사용하여 본문에서 `message.GetReaderAtBodyContents`를 가져올 경우에는 전체 본문이 버퍼링됩니다. 대신 사용자 지정 했으므로 <xref:System.Xml.XmlDictionaryWriter> 에 전달 된 `message.WriteBodyContents`합니다. 메시지가 작성기에서 WriteBase64를 호출할 경우 작성기는 청크를 메시지에 패키지하고 내부 채널을 사용하여 보냅니다. 청크가 보내질 때까지 WriteBase64는 차단됩니다.  
+- 전체 원본 메시지 본문의 버퍼링을 방지하기 위해 사용자 지정 <xref:System.Xml.XmlDictionaryWriter> 디자인이 선택되었습니다. <xref:System.Xml.XmlDictionaryReader>를 사용하여 본문에서 `message.GetReaderAtBodyContents`를 가져올 경우에는 전체 본문이 버퍼링됩니다. 대신 사용자 지정 했으므로 <xref:System.Xml.XmlDictionaryWriter> 에 전달 된 `message.WriteBodyContents`합니다. 메시지가 작성기에서 WriteBase64를 호출할 경우 작성기는 청크를 메시지에 패키지하고 내부 채널을 사용하여 보냅니다. 청크가 보내질 때까지 WriteBase64는 차단됩니다.  
   
 ## <a name="implementing-the-receive-operation"></a>Receive 작업 구현  
  상위 수준에서 Receive 작업은 먼저 들어오는 메시지가 `null`이 아니고 해당 동작이 `ChunkingAction`인지 확인합니다. 두 조건을 충족하지 않을 경우 메시지는 Receive에서 변경되지 않은 상태로 반환됩니다. 두 조건을 충족할 경우 Receive는 새 `ChunkingReader`와 `ChunkingMessage`를 호출하여 이를 래핑하는 새 `GetNewChunkingMessage` 메시지를 만듭니다. 새 `ChunkingMessage`를 반환하기 전에 Receive는 threadpool 스레드를 사용하여 `ReceiveChunkLoop`를 실행합니다. 따라서 끝 청크 메시지가 수신되거나 수신 시간 제한에 도달할 때까지 루프에서 `innerChannel.Receive`가 호출되고 `ChunkingReader`에 청크가 보내집니다.  
   
  주목할 만한 몇 가지 세부 사항은 다음과 같습니다.  
   
--   Send와 마찬가지로 Receive는 `ThrowIfDisposedOrNotOepned`가 Opened인지 확인하기 위해 먼저 `CommunicationState`를 호출합니다.  
+- Send와 마찬가지로 Receive는 `ThrowIfDisposedOrNotOepned`가 Opened인지 확인하기 위해 먼저 `CommunicationState`를 호출합니다.  
   
--   또한 Receive는 동기화되므로 세션에서 한 번에 하나의 메시지만 수신할 수 있습니다. 시작 청크 메시지가 수신되고 나면 끝 청크 메시지가 수신될 때까지 수신되는 이후의 모든 메시지가 청크로 간주되므로 이 기능이 특히 중요합니다. 현재 청크 취소하는 중인 메시지에 속하는 모든 청크가 수신될 때까지 Receive는 내부 채널에서 메시지를 끌어올 수 없습니다. 이를 위해 Receive는 끝 청크 메시지가 수신될 때 설정되고 새 시작 청크 메시지가 수신될 때 다시 설정되는 `ManualResetEvent`라는 `currentMessageCompleted`를 사용합니다.  
+- 또한 Receive는 동기화되므로 세션에서 한 번에 하나의 메시지만 수신할 수 있습니다. 시작 청크 메시지가 수신되고 나면 끝 청크 메시지가 수신될 때까지 수신되는 이후의 모든 메시지가 청크로 간주되므로 이 기능이 특히 중요합니다. 현재 청크 취소하는 중인 메시지에 속하는 모든 청크가 수신될 때까지 Receive는 내부 채널에서 메시지를 끌어올 수 없습니다. 이를 위해 Receive는 끝 청크 메시지가 수신될 때 설정되고 새 시작 청크 메시지가 수신될 때 다시 설정되는 `ManualResetEvent`라는 `currentMessageCompleted`를 사용합니다.  
   
--   Send와 달리 Receive에서는 동기화된 상태 전환이 수신 중에 허용됩니다. 예를 들어, Close가 수신 중에 호출되어 원본 메시지의 보류 중인 수신이 완료되거나 지정된 시간 제한 값에 도달할 때까지 대기할 수 있습니다.  
+- Send와 달리 Receive에서는 동기화된 상태 전환이 수신 중에 허용됩니다. 예를 들어, Close가 수신 중에 호출되어 원본 메시지의 보류 중인 수신이 완료되거나 지정된 시간 제한 값에 도달할 때까지 대기할 수 있습니다.  
   
--   Receive에 전달되는 시간 제한은 모든 청크의 수신을 포함하는 전체 Receive 작업의 시간 제한으로 사용됩니다.  
+- Receive에 전달되는 시간 제한은 모든 청크의 수신을 포함하는 전체 Receive 작업의 시간 제한으로 사용됩니다.  
   
--   메시지를 소비하는 계층이 들어오는 청크 메시지의 속도보다 느린 속도로 메시지 본문을 소비하는 중이면 `ChunkingReader`는 `ChunkingBindingElement.MaxBufferedChunks`에 지정된 한도까지 이러한 들어오는 청크를 버퍼링합니다. 해당 한도에 도달하고 나면 버퍼링된 청크가 소비되거나 수신 시간 제한에 도달할 때까지 청크를 더 이상 하위 계층에서 끌어오지 않습니다.  
+- 메시지를 소비하는 계층이 들어오는 청크 메시지의 속도보다 느린 속도로 메시지 본문을 소비하는 중이면 `ChunkingReader`는 `ChunkingBindingElement.MaxBufferedChunks`에 지정된 한도까지 이러한 들어오는 청크를 버퍼링합니다. 해당 한도에 도달하고 나면 버퍼링된 청크가 소비되거나 수신 시간 제한에 도달할 때까지 청크를 더 이상 하위 계층에서 끌어오지 않습니다.  
   
 ## <a name="communicationobject-overrides"></a>CommunicationObject 재정의  
   

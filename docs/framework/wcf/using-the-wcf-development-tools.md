@@ -3,11 +3,11 @@ title: WCF 개발 도구 사용
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
 ms.openlocfilehash: 1ffa3be4a6b8976ab978ea995e8b2c1faaacf0ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051717"
 ---
 # <a name="using-the-wcf-development-tools"></a>WCF 개발 도구 사용
 이 섹션에서는 WCFservice 개발을 활용할 수 있는 Visual Studio 개발 도구를 설명 합니다.  

@@ -3,11 +3,11 @@ title: 주소 지정
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
 ms.openlocfilehash: a59c3b354404169c2baadd4ab8c2702728d9a891
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002939"
 ---
 # <a name="addressing"></a>주소 지정
 Addressing 샘플에서는 엔드포인트 주소의 다양한 측면과 기능을 보여 줍니다. 샘플을 기반으로 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)합니다. 이 샘플에서 서비스는 자체 호스트됩니다. 서비스와 클라이언트는 모두 콘솔 응용 프로그램입니다. 서비스는 상대 및 절대 엔드포인트 주소를 조합하여 여러 엔드포인트를 정의합니다.  

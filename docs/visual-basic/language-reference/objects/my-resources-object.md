@@ -9,11 +9,11 @@ helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
 ms.openlocfilehash: ee4d30b82ceada5c4f3fc4ad95dc8eeedd9355b0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970835"
 ---
 # <a name="myresources-object"></a>My.Resources 개체
 응용 프로그램의 리소스에 액세스 하기 위한 속성 및 클래스를 제공 합니다.  
@@ -32,11 +32,11 @@ ms.locfileid: "58821740"
   
  각 리소스에 이름, 범주 및 값 및 이러한 리소스 설정에 따라 리소스를 액세스 하는 속성에 표시 되는 방식을 결정 합니다 `My.Resources` 개체입니다. 리소스에 추가 합니다 **프로젝트 디자이너**:  
   
--   속성의 이름이 확인 하는 이름  
+- 속성의 이름이 확인 하는 이름  
   
--   리소스 데이터는 속성의 값  
+- 리소스 데이터는 속성의 값  
   
--   범주에는 속성의 형식을 결정합니다.  
+- 범주에는 속성의 형식을 결정합니다.  
   
 |범주|속성 데이터 형식|  
 |---|---|  

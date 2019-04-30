@@ -13,18 +13,18 @@ helpviewer_keywords:
 - tab pages
 ms.assetid: 66d4dfca-41e8-44e3-9c80-fb7ac4cb1619
 ms.openlocfilehash: 723e05803b1f7d2bc56476248987085dbe5e23f0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011114"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a>방법: Windows Forms TabControl을 사용하여 탭 추가 및 제거
 기본적으로 <xref:System.Windows.Forms.TabControl> 컨트롤에는 두 개의 <xref:System.Windows.Forms.TabPage> 컨트롤입니다. 이러한 탭을 통해 액세스할 수 있습니다는 <xref:System.Windows.Forms.TabControl.TabPages%2A> 속성입니다.  
   
 ### <a name="to-add-a-tab-programmatically"></a>프로그래밍 방식으로 탭을 추가 하려면  
   
--   사용 된 <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> 메서드를 <xref:System.Windows.Forms.TabControl.TabPages%2A> 속성.  
+- 사용 된 <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> 메서드를 <xref:System.Windows.Forms.TabControl.TabPages%2A> 속성.  
   
     ```vb  
     Dim myTabPage As New TabPage()  
@@ -47,11 +47,11 @@ ms.locfileid: "59101603"
   
 ### <a name="to-remove-a-tab-programmatically"></a>프로그래밍 방식으로 탭을 제거 하려면  
   
--   선택한 탭을 제거 하려면 사용 합니다 <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> 메서드는 <xref:System.Windows.Forms.TabControl.TabPages%2A> 속성.  
+- 선택한 탭을 제거 하려면 사용 합니다 <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> 메서드는 <xref:System.Windows.Forms.TabControl.TabPages%2A> 속성.  
   
      또는  
   
--   모든 탭을 제거 하려면 사용 합니다 <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> 메서드는 <xref:System.Windows.Forms.TabControl.TabPages%2A> 속성.  
+- 모든 탭을 제거 하려면 사용 합니다 <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> 메서드는 <xref:System.Windows.Forms.TabControl.TabPages%2A> 속성.  
   
     ```vb  
     ' Removes the selected tab:  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - commanding [WPF]
 ms.assetid: 9a7ccd30-095b-4f34-b284-8fb7e8f95a9b
 ms.openlocfilehash: c72aa41aeb4c2da5577f1581a8f65afbefb222c6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57350750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031241"
 ---
 # <a name="input-wpf"></a>입력 (WPF)
 Windows Presentation Foundation (WPF)에 여러 유형의 입력에 대 한 지원이 포함 됩니다. 이 입력 텍스트, 터치, 마우스, 명령, 포커스, 터치, 끌어서 놓기, 및 디지털 잉크를 포함합니다. 이 섹션에서는 WPF의 입력에 관련 된 항목을 설명 합니다.  

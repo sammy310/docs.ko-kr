@@ -5,11 +5,11 @@ helpviewer_keywords:
 - certificates [WCF], retrieving thumbprint
 ms.assetid: da3101aa-78cd-4c34-9652-d1f24777eeab
 ms.openlocfilehash: 51debbbcfec2fd5b82460e1dd1d6ece8e77bfc13
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000781"
 ---
 # <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>방법: 인증서 지문 검색
 인증을 위해 X.509 인증서를 사용 하는 Windows Communication Foundation (WCF) 응용 프로그램을 작성, 하는 경우 인증서에 있는 클레임을 지정 하는 데 필요한 경우가 있습니다. 예를 들어 <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> 메서드에 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> 열거를 사용하는 경우 지문 클레임을 제공해야 합니다. 클레임 값을 찾는 과정은 두 단계로 이루어집니다. 첫째, 인증서에 대한 MMC(Microsoft Management Console) 스냅인을 엽니다. ([방법: MMC 스냅인을 사용 하 여 인증서를 보려면](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).) 둘째, 여기서 설명하는 대로 적절한 인증서를 찾아 해당 지문(또는 다른 클레임 값)을 복사합니다.  

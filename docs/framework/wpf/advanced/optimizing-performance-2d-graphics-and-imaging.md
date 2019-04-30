@@ -13,11 +13,11 @@ helpviewer_keywords:
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
 ms.openlocfilehash: 4fca9231872a268470c9bcfa73e7a0c0a26d300c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981944"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>성능 최적화: 2D 그래픽 및 이미징
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 응용 프로그램 요구 사항에 맞게 최적화할 수 있는 다양한 범위의 2D 그래픽 및 이미징 기능을 제공합니다. 이 항목에서는 이러한 영역의 성능 최적화에 대한 정보를 제공합니다.  
@@ -34,13 +34,13 @@ ms.locfileid: "59074991"
   
  네 가지가 <xref:System.Windows.Media.Drawing> 개체:  
   
--   <xref:System.Windows.Media.GeometryDrawing> 도형을 그립니다.  
+- <xref:System.Windows.Media.GeometryDrawing> 도형을 그립니다.  
   
--   <xref:System.Windows.Media.ImageDrawing> 이미지를 그립니다.  
+- <xref:System.Windows.Media.ImageDrawing> 이미지를 그립니다.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> 텍스트를 그립니다.  
+- <xref:System.Windows.Media.GlyphRunDrawing> 텍스트를 그립니다.  
   
--   <xref:System.Windows.Media.DrawingGroup> 다른 그리기를 그립니다. 다른 그리기를 단일 합성 그리기로 결합하려면 그리기 그룹을 사용합니다.  
+- <xref:System.Windows.Media.DrawingGroup> 다른 그리기를 그립니다. 다른 그리기를 단일 합성 그리기로 결합하려면 그리기 그룹을 사용합니다.  
   
  <xref:System.Windows.Media.GeometryDrawing> 개체는 기 하 도형 콘텐츠를 렌더링 하는 데 사용 됩니다. 합니다 <xref:System.Windows.Media.Geometry> 클래스와 같은에서 파생 되는 구체적인 클래스 <xref:System.Windows.Media.CombinedGeometry>를 <xref:System.Windows.Media.EllipseGeometry>, 및 <xref:System.Windows.Media.PathGeometry>, 2D 그래픽 렌더링을 위한 수단을 제공할 뿐만 아니라 적중 테스트 및 클리핑 지원을 제공 합니다. 기하 도형 개체를 사용하면 컨트롤 영역을 정의하거나 이미지에 적용할 클립 영역을 정의하는 등의 작업을 수행할 수 있습니다. 기하 도형 개체는 사각형 및 원과 같은 단순 영역 또는 둘 이상의 기하 도형 개체에서 만들어진 복합 영역이 될 수 있습니다. 더 복잡 한 기하학적 영역을 결합 하 여 만들 수 있습니다 <xref:System.Windows.Media.PathSegment>-개체와 같은 파생 <xref:System.Windows.Media.ArcSegment>를 <xref:System.Windows.Media.BezierSegment>, 및 <xref:System.Windows.Media.QuadraticBezierSegment>합니다.  
   
@@ -70,13 +70,13 @@ ms.locfileid: "59074991"
   
  이미지를 사용할 경우 더 나은 성능을 얻으려면 다음 권장 사항을 고려하세요.  
   
--   애플리케이션에서 썸네일 이미지를 표시해야 할 경우 크기를 줄인 버전의 이미지를 만듭니다. 기본적으로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 이미지를 로드하여 전체 크기로 디코딩합니다. 썸네일 버전의 이미지만 필요한 경우 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 이미지를 전체 크기로 디코딩한 다음 썸네일 크기로 배율을 조정하는 것은 불필요한 작업입니다. 이러한 불필요한 오버헤드를 방지하려면 이미지를 썸네일 크기로 디코딩하도록 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에 요청하거나 썸네일 크기 이미지를 로드하도록 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에 요청하면 됩니다.  
+- 애플리케이션에서 썸네일 이미지를 표시해야 할 경우 크기를 줄인 버전의 이미지를 만듭니다. 기본적으로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 이미지를 로드하여 전체 크기로 디코딩합니다. 썸네일 버전의 이미지만 필요한 경우 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 이미지를 전체 크기로 디코딩한 다음 썸네일 크기로 배율을 조정하는 것은 불필요한 작업입니다. 이러한 불필요한 오버헤드를 방지하려면 이미지를 썸네일 크기로 디코딩하도록 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에 요청하거나 썸네일 크기 이미지를 로드하도록 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에 요청하면 됩니다.  
   
--   이미지를 항상 기본 크기가 아니라 원하는 크기로 디코딩합니다. 위에 언급한 것처럼 이미지를 기본 전체 크기가 아니라 원하는 크기로 디코딩하도록 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에 요청합니다. 이렇게 하면 애플리케이션의 작업 집합이 줄어들 뿐만 아니라 실행 속도가 빨라집니다.  
+- 이미지를 항상 기본 크기가 아니라 원하는 크기로 디코딩합니다. 위에 언급한 것처럼 이미지를 기본 전체 크기가 아니라 원하는 크기로 디코딩하도록 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에 요청합니다. 이렇게 하면 애플리케이션의 작업 집합이 줄어들 뿐만 아니라 실행 속도가 빨라집니다.  
   
--   가능한 경우 여러 이미지로 구성된 필름 스트립과 같은 단일 이미지로 이미지를 결합합니다.  
+- 가능한 경우 여러 이미지로 구성된 필름 스트립과 같은 단일 이미지로 이미지를 결합합니다.  
   
--   자세한 내용은 [이미징 개요](../graphics-multimedia/imaging-overview.md)를 참조하세요.  
+- 자세한 내용은 [이미징 개요](../graphics-multimedia/imaging-overview.md)를 참조하세요.  
   
 ### <a name="bitmapscalingmode"></a>BitmapScalingMode  
  비트맵의 배율에 애니메이션 효과를 주면 기본 고품질 이미지 샘플 다시 만들기 알고리즘에 시스템 리소스가 많이 사용되므로 프레임 속도가 떨어지고 애니메이션이 끊길 수 있습니다. 설정 하 여 합니다 <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A> 의 속성을 <xref:System.Windows.Media.RenderOptions> 개체를 <xref:System.Windows.Media.BitmapScalingMode.LowQuality> 비트맵 크기를 조정할 때 보다 부드러운 애니메이션을 만들 수 있습니다. <xref:System.Windows.Media.BitmapScalingMode.LowQuality> 모드 지시를 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이미지를 처리할 때 품질 최적화 알고리즘에서 속도 최적화 알고리즘을 전환 하려면 렌더링 엔진입니다.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
 ms.openlocfilehash: 71c454edc6a124f732f1e6b56e25c28671fa11b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053173"
 ---
 # <a name="wpf-and-win32-interoperation"></a>WPF 및 Win32 상호 운용성
 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 코드를 상호 운용하는 방법을 개괄적으로 설명합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 응용 프로그램을 만들기 위한 다양한 환경을 제공합니다. 그러나 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 코드에 상당한 투자를 한 경우 해당 코드 중 일부를 재사용하는 것이 더욱 효과적일 수 있습니다.  
@@ -21,9 +21,9 @@ ms.locfileid: "59314414"
 ## <a name="wpf-and-win32-interoperation-basics"></a>WPF 및 Win32 상호 운용성 기본 사항  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]와 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 코드 간에는 상호 운용성에 대한 두 가지 기본 기법이 있습니다.  
   
--   [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 창에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠를 호스팅합니다. 이 기법을 사용하면 표준 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 창 및 애플리케이션의 프레임워크 내에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 고급 그래픽 기능을 사용할 수 있습니다.  
+- [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 창에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠를 호스팅합니다. 이 기법을 사용하면 표준 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 창 및 애플리케이션의 프레임워크 내에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 고급 그래픽 기능을 사용할 수 있습니다.  
   
--   [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠에서 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 창을 호스트합니다. 이 기법을 사용하면 다른 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠의 컨텍스트에서 기존 사용자 지정 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 컨트롤을 사용하고 경계 간에 데이터를 전달할 수 있습니다.  
+- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠에서 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 창을 호스트합니다. 이 기법을 사용하면 다른 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠의 컨텍스트에서 기존 사용자 지정 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 컨트롤을 사용하고 경계 간에 데이터를 전달할 수 있습니다.  
   
  이 항목에서는 이러한 각 기법을 개념적인 측면에서 소개합니다. 호스팅 보여 주는 자세한 코드 중심 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]를 참조 하세요 [연습: Win32에서 WPF 콘텐츠 호스팅](walkthrough-hosting-wpf-content-in-win32.md)합니다. 호스팅 보여 주는 자세한 코드 중심 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]를 참조 하세요 [연습: WPF에서 Win32 컨트롤 호스팅](walkthrough-hosting-a-win32-control-in-wpf.md)합니다.  
   
@@ -33,13 +33,13 @@ ms.locfileid: "59314414"
   
  이 경우 프로젝트 수준에서 한 가지 문제가 발생하는데, 바로 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 파일을 [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] 프로젝트로 컴파일할 수 없다는 것입니다.  이 문제는 다음과 같은 몇 가지 프로젝트 분할 기법을 통해 해결할 수 있습니다.  
   
--   모두 포함 하는 C# DLL을 만드는 사용자 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지를 컴파일된 어셈블리를 한 후에 [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] 실행 파일을 포함 하는 [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] 참조로 합니다.  
+- 모두 포함 하는 C# DLL을 만드는 사용자 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지를 컴파일된 어셈블리를 한 후에 [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] 실행 파일을 포함 하는 [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] 참조로 합니다.  
   
--   만들 C#에 대 한 실행 합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] content 및 하 게 참조를 [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] 포함 하는 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 콘텐츠.  
+- 만들 C#에 대 한 실행 합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] content 및 하 게 참조를 [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] 포함 하는 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 콘텐츠.  
   
--   사용 하 여 <xref:System.Windows.Markup.XamlReader.Load%2A> 하나를 로드할 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 컴파일하는 대신 런타임 시 프로그램 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다.  
+- 사용 하 여 <xref:System.Windows.Markup.XamlReader.Load%2A> 하나를 로드할 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 컴파일하는 대신 런타임 시 프로그램 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다.  
   
--   사용 하지 마세요 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 전혀 모든 프로그램 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에서 요소 트리를 작성 하는 코드에서 <xref:System.Windows.Application>합니다.  
+- 사용 하지 마세요 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 전혀 모든 프로그램 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에서 요소 트리를 작성 하는 코드에서 <xref:System.Windows.Application>합니다.  
   
  가장 적합한 방법을 사용하세요.  
   
@@ -68,13 +68,13 @@ ms.locfileid: "59314414"
   
 5. 처리기(또는 처리기에서 호출하는 함수)에서 다음을 수행합니다.  
   
-    1.  새 <xref:System.Windows.Interop.HwndSource> 부모 창 HWND 사용 하 여 개체와 해당 `parent` 매개 변수입니다.  
+    1. 새 <xref:System.Windows.Interop.HwndSource> 부모 창 HWND 사용 하 여 개체와 해당 `parent` 매개 변수입니다.  
   
-    2.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠 클래스의 인스턴스를 만듭니다.  
+    2. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠 클래스의 인스턴스를 만듭니다.  
   
-    3.  에 대 한 참조를 할당 합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠 개체는 <xref:System.Windows.Interop.HwndSource> 개체 <xref:System.Windows.Interop.HwndSource.RootVisual%2A> 속성입니다.  
+    3. 에 대 한 참조를 할당 합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠 개체는 <xref:System.Windows.Interop.HwndSource> 개체 <xref:System.Windows.Interop.HwndSource.RootVisual%2A> 속성입니다.  
   
-    4.  합니다 <xref:System.Windows.Interop.HwndSource> 개체 <xref:System.Windows.Interop.HwndSource.Handle%2A> 속성 창 핸들 (HWND)이 포함 됩니다. 애플리케이션의 관리되지 않는 부분에서 사용할 수 있는 HWND를 가져오려면 `Handle.ToPointer()`를 HWND로 캐스팅합니다.  
+    4. 합니다 <xref:System.Windows.Interop.HwndSource> 개체 <xref:System.Windows.Interop.HwndSource.Handle%2A> 속성 창 핸들 (HWND)이 포함 됩니다. 애플리케이션의 관리되지 않는 부분에서 사용할 수 있는 HWND를 가져오려면 `Handle.ToPointer()`를 HWND로 캐스팅합니다.  
   
 6. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠 개체에 대한 참조를 보유하는 정적 필드가 포함된 관리 클래스를 구현합니다. 이 클래스에 대 한 참조를 가져올 수 있습니다는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠 개체에 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 코드 이지만, 더 중요 한 것을 방지 하 <xref:System.Windows.Interop.HwndSource> 실수로 가비지 수집 되지 않게 합니다.  
   
@@ -103,11 +103,11 @@ ms.locfileid: "59314414"
   
 6. 컨트롤 알림과 같은 선택된 창 메시지를 처리합니다. 다음과 같이 두 가지 방법이 있습니다. 두 방법 모두 메시지 스트림에 대해 동일한 액세스 권한을 제공하므로, 프로그래밍 편리성에 따라 선택하면 됩니다.  
   
-    -   메시지의 재정의의 모든 메시지 (뿐 아니라 종료 메시지)에 대 한 처리를 구현 합니다 <xref:System.Windows.Interop.HwndHost> 메서드 <xref:System.Windows.Interop.HwndHost.WndProc%2A>합니다.  
+    - 메시지의 재정의의 모든 메시지 (뿐 아니라 종료 메시지)에 대 한 처리를 구현 합니다 <xref:System.Windows.Interop.HwndHost> 메서드 <xref:System.Windows.Interop.HwndHost.WndProc%2A>합니다.  
   
-    -   호스팅 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 처리 하 여 메시지를 처리 하는 요소는 <xref:System.Windows.Interop.HwndHost.MessageHook> 이벤트입니다. 이 이벤트는 호스팅된 창의 기본 창 프로시저에 전송된 모든 메시지에서 발생합니다.  
+    - 호스팅 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 처리 하 여 메시지를 처리 하는 요소는 <xref:System.Windows.Interop.HwndHost.MessageHook> 이벤트입니다. 이 이벤트는 호스팅된 창의 기본 창 프로시저에 전송된 모든 메시지에서 발생합니다.  
   
-    -   프로세스에서 사용 되지 않는 창의 메시지를 처리할 수 없지만 <xref:System.Windows.Interop.HwndHost.WndProc%2A>합니다.  
+    - 프로세스에서 사용 되지 않는 창의 메시지를 처리할 수 없지만 <xref:System.Windows.Interop.HwndHost.WndProc%2A>합니다.  
   
 7. 관리되지 않는 `SendMessage` 함수를 호출하는 플랫폼 호출을 사용하여 호스팅된 창과 통신합니다.  
   
@@ -120,35 +120,35 @@ ms.locfileid: "59314414"
   
 #### <a name="notable-differences-in-output-behavior"></a>출력 동작의 주요 차이점  
   
--   <xref:System.Windows.FrameworkElement>에는 <xref:System.Windows.Interop.HwndHost> UI 변경 내재 된 몇 가지 속성에 기본 클래스입니다. 와 같은 속성을 포함 <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>를 요소 내에 부모 요소의 레이아웃을 변경 하는 합니다. 그러나 이러한 속성의 대부분은 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]에 대응되는 속성이 있더라도 해당 속성에 매핑되지 않습니다. 이러한 속성 및 해당 의미는 렌더링 기술에 따라 많이 달라지므로 매핑이 실용적이지 않게 됩니다. 따라서 같은 속성을 설정 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 에서 <xref:System.Windows.Interop.HwndHost> 영향을 주지 않습니다.  
+- <xref:System.Windows.FrameworkElement>에는 <xref:System.Windows.Interop.HwndHost> UI 변경 내재 된 몇 가지 속성에 기본 클래스입니다. 와 같은 속성을 포함 <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>를 요소 내에 부모 요소의 레이아웃을 변경 하는 합니다. 그러나 이러한 속성의 대부분은 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]에 대응되는 속성이 있더라도 해당 속성에 매핑되지 않습니다. 이러한 속성 및 해당 의미는 렌더링 기술에 따라 많이 달라지므로 매핑이 실용적이지 않게 됩니다. 따라서 같은 속성을 설정 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 에서 <xref:System.Windows.Interop.HwndHost> 영향을 주지 않습니다.  
   
--   <xref:System.Windows.Interop.HwndHost> 일 수 없습니다 회전, 크기 조정 된, 비대칭, 또는 고, 그렇지 영향을 변환 합니다.  
+- <xref:System.Windows.Interop.HwndHost> 일 수 없습니다 회전, 크기 조정 된, 비대칭, 또는 고, 그렇지 영향을 변환 합니다.  
   
--   <xref:System.Windows.Interop.HwndHost> 지원 하지 않습니다는 <xref:System.Windows.UIElement.Opacity%2A> 속성 (알파 혼합). 내부 콘텐츠 인 경우는 <xref:System.Windows.Interop.HwndHost> 수행 <xref:System.Drawing> 없는 자체 위반에 알파 정보가 포함 된 작업 하지만 <xref:System.Windows.Interop.HwndHost> 전체만 불투명도 지 원하는 = 1.0 (100%).  
+- <xref:System.Windows.Interop.HwndHost> 지원 하지 않습니다는 <xref:System.Windows.UIElement.Opacity%2A> 속성 (알파 혼합). 내부 콘텐츠 인 경우는 <xref:System.Windows.Interop.HwndHost> 수행 <xref:System.Drawing> 없는 자체 위반에 알파 정보가 포함 된 작업 하지만 <xref:System.Windows.Interop.HwndHost> 전체만 불투명도 지 원하는 = 1.0 (100%).  
   
--   <xref:System.Windows.Interop.HwndHost> 다른 맨 위에 표시 됩니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 동일한 최상위 창에 있는 요소입니다. 그러나를 <xref:System.Windows.Controls.ToolTip> 나 <xref:System.Windows.Controls.ContextMenu> 생성 된 메뉴는 별도 최상위 창 및 따라서 동작할지 올바르게 사용 하 여 <xref:System.Windows.Interop.HwndHost>입니다.  
+- <xref:System.Windows.Interop.HwndHost> 다른 맨 위에 표시 됩니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 동일한 최상위 창에 있는 요소입니다. 그러나를 <xref:System.Windows.Controls.ToolTip> 나 <xref:System.Windows.Controls.ContextMenu> 생성 된 메뉴는 별도 최상위 창 및 따라서 동작할지 올바르게 사용 하 여 <xref:System.Windows.Interop.HwndHost>입니다.  
   
--   <xref:System.Windows.Interop.HwndHost> 부모의 클립 영역을 고려 하지 않습니다 <xref:System.Windows.UIElement>합니다. 이 잠재적으로 문제가 배치 하려는 경우는 <xref:System.Windows.Interop.HwndHost> 스크롤 영역 내에 클래스 또는 <xref:System.Windows.Controls.Canvas>합니다.  
+- <xref:System.Windows.Interop.HwndHost> 부모의 클립 영역을 고려 하지 않습니다 <xref:System.Windows.UIElement>합니다. 이 잠재적으로 문제가 배치 하려는 경우는 <xref:System.Windows.Interop.HwndHost> 스크롤 영역 내에 클래스 또는 <xref:System.Windows.Controls.Canvas>합니다.  
   
 #### <a name="notable-differences-in-input-behavior"></a>입력 동작의 주요 차이점  
   
--   일반적으로 입력된 장치 내에서 범위가 지정 되는 동안 합니다 <xref:System.Windows.Interop.HwndHost> 호스팅된 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 지역 입력된 이벤트로 직접 이동 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]합니다.  
+- 일반적으로 입력된 장치 내에서 범위가 지정 되는 동안 합니다 <xref:System.Windows.Interop.HwndHost> 호스팅된 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 지역 입력된 이벤트로 직접 이동 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]합니다.  
   
--   마우스가 하는 동안를 <xref:System.Windows.Interop.HwndHost>, 응용 프로그램을 수신 하지 않습니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 마우스 이벤트 및 값을 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성 <xref:System.Windows.UIElement.IsMouseOver%2A> 됩니다 `false`합니다.  
+- 마우스가 하는 동안를 <xref:System.Windows.Interop.HwndHost>, 응용 프로그램을 수신 하지 않습니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 마우스 이벤트 및 값을 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성 <xref:System.Windows.UIElement.IsMouseOver%2A> 됩니다 `false`합니다.  
   
--   하는 동안를 <xref:System.Windows.Interop.HwndHost> 키보드 포커스가 응용 프로그램을 받지 것입니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 키보드 이벤트 및 값을 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성 <xref:System.Windows.UIElement.IsKeyboardFocusWithin%2A> 됩니다 `false`합니다.  
+- 하는 동안를 <xref:System.Windows.Interop.HwndHost> 키보드 포커스가 응용 프로그램을 받지 것입니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 키보드 이벤트 및 값을 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성 <xref:System.Windows.UIElement.IsKeyboardFocusWithin%2A> 됩니다 `false`합니다.  
   
--   내에서 포커스가 표시 되는 경우는 <xref:System.Windows.Interop.HwndHost> 내의 다른 컨트롤로 변경 합니다 <xref:System.Windows.Interop.HwndHost>, 응용 프로그램을 받지 것입니다는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이벤트 <xref:System.Windows.UIElement.GotFocus> 또는 <xref:System.Windows.UIElement.LostFocus>.  
+- 내에서 포커스가 표시 되는 경우는 <xref:System.Windows.Interop.HwndHost> 내의 다른 컨트롤로 변경 합니다 <xref:System.Windows.Interop.HwndHost>, 응용 프로그램을 받지 것입니다는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이벤트 <xref:System.Windows.UIElement.GotFocus> 또는 <xref:System.Windows.UIElement.LostFocus>.  
   
--   관련 스타일러스 속성과 이벤트는 유사 하며 스타일러스가 하는 동안 정보를 보고 하지 않습니다 <xref:System.Windows.Interop.HwndHost>합니다.  
+- 관련 스타일러스 속성과 이벤트는 유사 하며 스타일러스가 하는 동안 정보를 보고 하지 않습니다 <xref:System.Windows.Interop.HwndHost>합니다.  
   
 <a name="tabbing_mnemonics_accelerators"></a>   
 ## <a name="tabbing-mnemonics-and-accelerators"></a>탭 이동, 니모닉 및 액셀러레이터 키  
  합니다 <xref:System.Windows.Interop.IKeyboardInputSink> 하 고 <xref:System.Windows.Interop.IKeyboardInputSite> 인터페이스를 사용 하면 혼합에 대 한 원활한 키보드 환경을 만들려면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 응용 프로그램:  
   
--   [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]와 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 구성 요소 간 탭 이동  
+- [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]와 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 구성 요소 간 탭 이동  
   
--   포커스가 Win32 구성 요소 내에 있을 때와 WPF 구성 요소에 있을 때 모두 작동하는 니모닉 및 액셀러레이터 키.  
+- 포커스가 Win32 구성 요소 내에 있을 때와 WPF 구성 요소에 있을 때 모두 작동하는 니모닉 및 액셀러레이터 키.  
   
  <xref:System.Windows.Interop.HwndHost> 하 고 <xref:System.Windows.Interop.HwndSource> 클래스는 둘 다의 구현을 제공 <xref:System.Windows.Interop.IKeyboardInputSink>, 있지만 보다 고급 시나리오에 대해 원하는 모든 입력된 메시지를 처리 하지 않을 수 있습니다. 원하는 키보드 동작을 얻기 위해 적절한 메서드를 재정의합니다.  
   

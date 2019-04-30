@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control patterns, Selection
 ms.assetid: 449c3068-a5d6-4f66-84c6-1bcc7dd4d209
 ms.openlocfilehash: 6b5e0e4e0a14410c23833db6cc90d23e7959ad22
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983270"
 ---
 # <a name="implementing-the-ui-automation-selection-control-pattern"></a>UI 자동화 Selection 컨트롤 패턴 구현
 > [!NOTE]
@@ -25,16 +25,16 @@ ms.locfileid: "59087726"
 ## <a name="implementation-guidelines-and-conventions"></a>구현 지침 및 규칙  
  Selection 컨트롤 패턴을 구현할 때는 다음 지침 및 규칙에 유의하세요.  
   
--   <xref:System.Windows.Automation.Provider.ISelectionProvider> 를 구현하는 컨트롤을 통해 자식 항목을 하나 또는 여러 개 선택할 수 있습니다. 예를 들어 목록 상자, 목록 뷰, 트리 뷰는 여러 개의 선택을 지원하는 반면 콤보 상자, 슬라이더, 라디오 단추 그룹은 단일 선택을 지원합니다.  
+- <xref:System.Windows.Automation.Provider.ISelectionProvider> 를 구현하는 컨트롤을 통해 자식 항목을 하나 또는 여러 개 선택할 수 있습니다. 예를 들어 목록 상자, 목록 뷰, 트리 뷰는 여러 개의 선택을 지원하는 반면 콤보 상자, 슬라이더, 라디오 단추 그룹은 단일 선택을 지원합니다.  
   
--   **볼륨** 슬라이더 컨트롤과 같이 최소, 최대, 연속 범위를 가진 컨트롤은 <xref:System.Windows.Automation.Provider.IRangeValueProvider> 대신 <xref:System.Windows.Automation.Provider.ISelectionProvider>를 구현해야 합니다.  
+- **볼륨** 슬라이더 컨트롤과 같이 최소, 최대, 연속 범위를 가진 컨트롤은 <xref:System.Windows.Automation.Provider.IRangeValueProvider> 대신 <xref:System.Windows.Automation.Provider.ISelectionProvider>를 구현해야 합니다.  
   
--   <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>표시 속성 **대화 상자의** 화면 해상도 **슬라이더 또는** 의 **색 선택** 선택 컨트롤(아래 그림 참조) 등과 같이 [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] 를 구현하는 자식 컨트롤을 관리하는 단일 선택 컨트롤은 <xref:System.Windows.Automation.Provider.ISelectionProvider>를 구현해야 하며, 해당 자식 항목은 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> 및 <xref:System.Windows.Automation.Provider.ISelectionItemProvider>둘 다 구현해야 합니다.  
+- <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>표시 속성 **대화 상자의** 화면 해상도 **슬라이더 또는** 의 **색 선택** 선택 컨트롤(아래 그림 참조) 등과 같이 [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] 를 구현하는 자식 컨트롤을 관리하는 단일 선택 컨트롤은 <xref:System.Windows.Automation.Provider.ISelectionProvider>를 구현해야 하며, 해당 자식 항목은 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> 및 <xref:System.Windows.Automation.Provider.ISelectionItemProvider>둘 다 구현해야 합니다.  
   
  ![노란색이 강조 표시 된 색 선택 합니다. ](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 색 견본 문자열 매핑의 예  
   
--   메뉴는 <xref:System.Windows.Automation.SelectionPattern>을 지원하지 않습니다. 그래픽과 텍스트 둘 다 포함된 메뉴 항목을 작업하고(예: **에서** 보기 **메뉴의** 미리 보기 창 [!INCLUDE[TLA#tla_outlook](../../../includes/tlasharptla-outlook-md.md)]항목) 상태를 전달해야 하는 경우 <xref:System.Windows.Automation.Provider.IToggleProvider>를 구현해야 합니다.  
+- 메뉴는 <xref:System.Windows.Automation.SelectionPattern>을 지원하지 않습니다. 그래픽과 텍스트 둘 다 포함된 메뉴 항목을 작업하고(예: **에서** 보기 **메뉴의** 미리 보기 창 [!INCLUDE[TLA#tla_outlook](../../../includes/tlasharptla-outlook-md.md)]항목) 상태를 전달해야 하는 경우 <xref:System.Windows.Automation.Provider.IToggleProvider>를 구현해야 합니다.  
   
 <a name="Required_Members_for_ISelectionProvider"></a>   
 ## <a name="required-members-for-iselectionprovider"></a>ISelectionProvider에 필요한 멤버  

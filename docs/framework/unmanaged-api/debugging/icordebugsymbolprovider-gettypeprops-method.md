@@ -5,11 +5,11 @@ ms.assetid: 35ac4140-91ea-4c77-b1c4-1daf41986ca5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a5f9867dbdc244ed22948dbe9a07a7ea06292d6a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994099"
 ---
 # <a name="icordebugsymbolprovidergettypeprops-method"></a>Icordebugsymbolprovider:: Gettypeprops 메서드
 vtable에 RVA(상대 가상 주소)가 제공된 경우 해당 제네릭 매개 변수의 서명 수와 같은 형식의 속성 정보를 반환합니다.  

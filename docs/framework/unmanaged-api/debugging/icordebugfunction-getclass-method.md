@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ea71e984be42e3b1a7b4b9fa6df878aca911c412
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995763"
 ---
 # <a name="icordebugfunctiongetclass-method"></a>ICorDebugFunction::GetClass 메서드
 이 함수는 멤버의 클래스를 나타내는 ICorDebugClass 개체를 가져옵니다.  

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
 ms.openlocfilehash: d4dab1a72d1e240bc428b2c6b83a722584e35ecc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971797"
 ---
 # <a name="short-data-type-visual-basic"></a>Short 데이터 형식 (Visual Basic)
 부호 있는 16 비트 (2 바이트) 정수 값 범위에 있는-32,768부터 32,767 까지의 저장 합니다.  
@@ -62,11 +62,11 @@ Dim number = &H_3264S
 
 ## <a name="programming-tips"></a>프로그래밍 팁
 
--   **확대 합니다.** `Short` 데이터 형식으로 확장 되는지를 `Integer`를 `Long`, `Decimal`를 `Single`, 또는 `Double`합니다. 이는 `Short` 오류 발생 없이 <xref:System.OverflowException?displayProperty=nameWithType>를 이러한 형식 중 하나로 변환할 수 있음을 의미합니다.  
+- **확대 합니다.** `Short` 데이터 형식으로 확장 되는지를 `Integer`를 `Long`, `Decimal`를 `Single`, 또는 `Double`합니다. 이는 `Short` 오류 발생 없이 <xref:System.OverflowException?displayProperty=nameWithType>를 이러한 형식 중 하나로 변환할 수 있음을 의미합니다.  
   
--   **형식 문자입니다.** 리터럴 형식 문자 `S`를 리터럴에 추가하면 `Short` 데이터 형식이 됩니다. `Short` 에 식별자 형식 문자가 없습니다.  
+- **형식 문자입니다.** 리터럴 형식 문자 `S`를 리터럴에 추가하면 `Short` 데이터 형식이 됩니다. `Short` 에 식별자 형식 문자가 없습니다.  
   
--   **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.Int16?displayProperty=nameWithType> 구조체입니다.  
+- **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.Int16?displayProperty=nameWithType> 구조체입니다.  
   
 ## <a name="see-also"></a>참고자료
 

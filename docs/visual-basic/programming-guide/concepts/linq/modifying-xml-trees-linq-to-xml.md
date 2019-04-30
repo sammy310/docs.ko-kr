@@ -3,11 +3,11 @@ title: XML 트리 수정 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 4ae511a5-4fc9-4178-9c8e-761357deae3f
 ms.openlocfilehash: 4673902880822e6e4ed0bc144aedc2428faa5b69
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031800"
 ---
 # <a name="modifying-xml-trees-linq-to-xml-visual-basic"></a>XML 트리 수정 (LINQ to XML) (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]은 XML 트리의 메모리 내 저장소입니다. 소스에서 XML 트리를 로드하거나 XML 트리의 구문을 분석한 후 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]을 통해 메모리 내 트리를 수정하고 serialize한 다음 파일에 저장하거나 원격 서버에 보낼 수 있습니다.  

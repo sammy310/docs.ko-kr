@@ -8,16 +8,14 @@ helpviewer_keywords:
 - Windows Forms, images
 ms.assetid: 7152b45b-a55c-49bc-8c78-ae002a844f71
 ms.openlocfilehash: 2ce19642b37946db7a172e61004688059dba61db
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003940"
 ---
 # <a name="images-bitmaps-and-metafiles"></a>이미지, 비트맵 및 메타파일
-
-  `Image` 클래스는 래스터 이미지(비트맵) 및 벡터 이미지(메타파일) 작업을 위한 메서드를 제공하는 추상 기본 클래스입니다. `Bitmap` 클래스와 <xref:System.Drawing.Imaging.Metafile> 클래스는 모두 `Image` 클래스에서 상속됩니다. `Bitmap` 클래스는 래스터 이미지를 로드, 저장 및 조작하기 위한 추가 메서드를 제공하여 `Image` 클래스의 기능을 확장합니다. 
-  <xref:System.Drawing.Imaging.Metafile> 클래스는 벡터 이미지를 기록 및 검사하기 위한 추가 메서드를 제공하여 `Image` 클래스의 기능을 확장합니다.  
+`Image` 클래스는 래스터 이미지(비트맵) 및 벡터 이미지(메타파일) 작업을 위한 메서드를 제공하는 추상 기본 클래스입니다. `Bitmap` 클래스와 <xref:System.Drawing.Imaging.Metafile> 클래스는 모두 `Image` 클래스에서 상속됩니다. `Bitmap` 클래스는 래스터 이미지를 로드, 저장 및 조작하기 위한 추가 메서드를 제공하여 `Image` 클래스의 기능을 확장합니다. <xref:System.Drawing.Imaging.Metafile> 클래스는 벡터 이미지를 기록 및 검사하기 위한 추가 메서드를 제공하여 `Image` 클래스의 기능을 확장합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [비트맵의 유형](types-of-bitmaps.md)  

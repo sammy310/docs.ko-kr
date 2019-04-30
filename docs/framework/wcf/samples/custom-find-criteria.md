@@ -3,11 +3,11 @@ title: 사용자 지정 찾기 조건
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
 ms.openlocfilehash: d676d7b2edbfb517f3fd8fe0c99fe7cc54eca2a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006371"
 ---
 # <a name="custom-find-criteria"></a>사용자 지정 찾기 조건
 이 샘플에서는 논리를 사용하여 사용자 지정 범위 일치를 만드는 방법과 사용자 지정 검색 서비스를 구현하는 방법을 보여 줍니다. 클라이언트에서는 사용자 지정 범위 일치 기능을 사용하여 WCF 검색의 시스템 제공 찾기 기능을 구체화하고 보다 세부적으로 빌드합니다. 이 샘플에서 다루는 시나리오는 다음과 같습니다.  
@@ -20,9 +20,9 @@ ms.locfileid: "59332536"
   
 ## <a name="demonstrates"></a>세부 항목  
   
--   사용자 지정 검색 서비스 만들기  
+- 사용자 지정 검색 서비스 만들기  
   
--   알고리즘에 따른 사용자 지정 범위 일치 구현  
+- 알고리즘에 따른 사용자 지정 범위 일치 구현  
   
 ## <a name="discussion"></a>토론  
  클라이언트는 "OR" 형식 일치 조건을 찾습니다. 엔드포인트의 범위가 클라이언트에서 제공한 범위와 일치하면 서비스가 다시 응답합니다. 이 경우 클라이언트는 다음 목록의 범위가 있는 계산기 서비스를 찾습니다.  

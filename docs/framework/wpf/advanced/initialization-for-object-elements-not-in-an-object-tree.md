@@ -11,11 +11,11 @@ helpviewer_keywords:
 - initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
 ms.openlocfilehash: 6f3c8611b83977431038573eb1c5c880acbefdc4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001470"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>개체 트리에 없는 개체 요소 초기화
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 초기화의 몇 가지 측면은 일반적으로 논리적 트리 또는 시각적 트리에 연결되는 요소에 의존하는 프로세스로 지연됩니다. 이 항목에서는 두 트리에 연결되지 않는 요소를 초기화하기 위해 필요할 수 있는 단계를 설명합니다.  

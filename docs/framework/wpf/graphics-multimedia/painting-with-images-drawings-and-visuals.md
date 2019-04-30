@@ -13,11 +13,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
 ms.openlocfilehash: 826c5a0656a9a7e7cff0e96fc6755c5c9c717993
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002287"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>이미지, 그림 및 시각적 표시로 그리기
 이 항목에서는 사용 하는 방법을 설명 <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, 및 <xref:System.Windows.Media.VisualBrush> 이미지를 사용 하 여 영역을 그릴 개체를 <xref:System.Windows.Media.Drawing>, 또는 <xref:System.Windows.Media.Visual>합니다.  
@@ -57,15 +57,15 @@ DrawingBrush로 그린 개체
   
  A <xref:System.Windows.Media.DrawingBrush> 영역을 그립니다를 <xref:System.Windows.Media.Drawing> 개체입니다. <xref:System.Windows.Media.Drawing> 도형, 비트맵, 비디오 또는 텍스트 줄 같은 보이는 콘텐츠를 설명 하는 개체입니다. 그리기 형식마다 다른 콘텐츠 형식을 설명합니다. 다음은 여러 그리기 개체 형식을 보여 주는 목록입니다.  
   
--   <xref:System.Windows.Media.GeometryDrawing> -도형을 그립니다.  
+- <xref:System.Windows.Media.GeometryDrawing> -도형을 그립니다.  
   
--   <xref:System.Windows.Media.ImageDrawing> – 이미지를 그립니다.  
+- <xref:System.Windows.Media.ImageDrawing> – 이미지를 그립니다.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> – 텍스트를 그립니다.  
+- <xref:System.Windows.Media.GlyphRunDrawing> – 텍스트를 그립니다.  
   
--   <xref:System.Windows.Media.VideoDrawing> – 오디오 또는 비디오 파일을 재생합니다.  
+- <xref:System.Windows.Media.VideoDrawing> – 오디오 또는 비디오 파일을 재생합니다.  
   
--   <xref:System.Windows.Media.DrawingGroup> -다른 그리기를 그립니다. 다른 그리기를 단일 합성 그리기로 결합하려면 그리기 그룹을 사용합니다.  
+- <xref:System.Windows.Media.DrawingGroup> -다른 그리기를 그립니다. 다른 그리기를 단일 합성 그리기로 결합하려면 그리기 그룹을 사용합니다.  
   
  에 대 한 자세한 내용은 <xref:System.Windows.Media.Drawing> 개체를 참조 합니다 [Drawing 개체 개요](drawing-objects-overview.md)합니다.  
   
@@ -89,9 +89,9 @@ DrawingBrush로 그린 개체
   
  두 가지 방법으로 지정할 수는 <xref:System.Windows.Media.VisualBrush.Visual%2A> 의 콘텐츠는 <xref:System.Windows.Media.VisualBrush>합니다.  
   
--   새 <xref:System.Windows.Media.Visual> 를 설정 하는 데 사용 합니다 <xref:System.Windows.Media.VisualBrush.Visual%2A> 의 속성을 <xref:System.Windows.Media.VisualBrush>합니다. 예를 들어 참조 된 [예제: 시각적 개체로 개체 그리기](#examplevisualbrush1) 에 나오는 섹션입니다.  
+- 새 <xref:System.Windows.Media.Visual> 를 설정 하는 데 사용 합니다 <xref:System.Windows.Media.VisualBrush.Visual%2A> 의 속성을 <xref:System.Windows.Media.VisualBrush>합니다. 예를 들어 참조 된 [예제: 시각적 개체로 개체 그리기](#examplevisualbrush1) 에 나오는 섹션입니다.  
   
--   기존 항목 사용 <xref:System.Windows.Media.Visual>, 대상의 중복 이미지를 만드는 <xref:System.Windows.Media.Visual>합니다. 사용할 수 있습니다는 <xref:System.Windows.Media.VisualBrush> 리플렉션 및 확대와 같은 흥미로운 효과 만들 수 있습니다. 예를 들어 참조 된 [예제: 리플렉션 만들기](#examplevisualbrush2) 섹션입니다.  
+- 기존 항목 사용 <xref:System.Windows.Media.Visual>, 대상의 중복 이미지를 만드는 <xref:System.Windows.Media.Visual>합니다. 사용할 수 있습니다는 <xref:System.Windows.Media.VisualBrush> 리플렉션 및 확대와 같은 흥미로운 효과 만들 수 있습니다. 예를 들어 참조 된 [예제: 리플렉션 만들기](#examplevisualbrush2) 섹션입니다.  
   
  정의 하는 경우 새 <xref:System.Windows.Media.VisualBrush.Visual%2A> 에 대 한는 <xref:System.Windows.Media.VisualBrush> 하 고 <xref:System.Windows.Media.Visual> 는 <xref:System.Windows.UIElement> (예: 패널 또는 컨트롤)에서 실행 되는 레이아웃 시스템을 <xref:System.Windows.UIElement> 와 해당 자식 요소 때를 <xref:System.Windows.Media.VisualBrush.AutoLayoutContent%2A> 속성이 `true`. 그러나 루트 <xref:System.Windows.UIElement> 기본적으로 시스템의 나머지 부분과에서 격리 됩니다: 스타일 및 외부 레이아웃에이 경계 낫다는 개념 수 없습니다. 루트의 크기를 명시적으로 지정 해야 하므로 <xref:System.Windows.UIElement>만 부모 이기 때문은 <xref:System.Windows.Media.VisualBrush> 하므로 해당 수 없습니다. 자동으로 크기가 조정 자체 그려지는 영역 및 합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]의 레이아웃에 대한 자세한 내용은 [레이아웃](../advanced/layout.md)을 참조하세요.  
   

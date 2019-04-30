@@ -13,11 +13,11 @@ ms.assetid: c323687e-b196-487b-beba-f38f9b3f961b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5f33be207dd6166b16a04844f3d92b6e017d1c7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018790"
 ---
 # <a name="replacing-a-principal-object"></a>Principal 개체 바꾸기
 인증 서비스를 제공하는 애플리케이션은 지정된 스레드에 대해 **Principal** 개체(<xref:System.Security.Principal.IPrincipal>)를 대체할 수 있어야 합니다. 또한 보안 시스템은 **Principal** 개체를 대체하는 기능을 보호할 수 있어야 합니다. 악의적으로 연결된 잘못된 **Principal** 은 허위 ID 또는 역할을 요청함으로써 애플리케이션의 보안을 손상시킵니다. 따라서 **Principal** 개체를 대체할 수 있는 기능이 필요한 애플리케이션에서는 보안 주체 컨트롤에 대한 <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType> 개체가 허가되어야 합니다. (이 사용 권한은 역할을 기반으로 하는 보안 검사를 수행하거나 **Principal** 개체를 만들 때는 필요하지 않습니다.)  

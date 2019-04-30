@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
 ms.openlocfilehash: d8a1a12a4d8ab5e6f4b0fe6ad6c2a3759aa65aa9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034512"
 ---
 # <a name="annotating-typed-datasets"></a>형식화된 데이터 집합에 주석 지정
 주석을 사용하면 원본으로 사용하는 스키마를 수정하지 않고 형식화된 <xref:System.Data.DataSet>의 요소 이름을 수정할 수 있습니다. 기본 스키마의 요소 이름 수정 형식화 된 없었다는 **데이터 집합** 수행 하지는 데이터 원본에 없는 뿐만 아니라 데이터 원본에 없는 개체에 대 한 참조를 손실 하는 개체를 가리킵니다.  

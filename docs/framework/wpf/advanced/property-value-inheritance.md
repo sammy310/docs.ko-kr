@@ -7,11 +7,11 @@ helpviewer_keywords:
 - properties [WPF], value inheritance
 ms.assetid: d7c338f9-f2bf-48ed-832c-7be58ac390e4
 ms.openlocfilehash: 48543d2cfc11fc33dff6239cdfd7bfcd946e986a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981918"
 ---
 # <a name="property-value-inheritance"></a>속성 값 상속
 속성 값 상속은 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 속성 시스템의 기능입니다. 속성 값 상속을 통해 요소 트리의 자식 요소가 부모 요소에서 특정 속성 값을 얻어 가장 근접한 부모 요소의 아무 곳에서나 설정되었을 때 해당 값을 상속합니다. 부모 요소는 속성 값 상속을 통해 값을 얻었을 수 있으므로 시스템이 완전히 페이지 루트로 되돌아갈 수 있습니다. 속성 값 상속은 기본 속성 시스템 동작이 아닙니다. 속성이 자식 요소에서 속성 값 상속을 시작하게 하려면 특정 메타데이터 설정을 사용하여 속성을 설정해야 합니다.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
 ms.openlocfilehash: 45f8b097bfdb8d3d7994e53ea05146aa6de0fc21
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020922"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>방법: 만들기 및 ObservableCollection에 바인딩
 만들고에서 파생 되는 컬렉션에 바인딩하는 방법을 보여 주는이 예제는 <xref:System.Collections.ObjectModel.ObservableCollection%601> 항목이 추가 되거나 제거 될 때 알림을 제공 하는 컬렉션 클래스 클래스.  

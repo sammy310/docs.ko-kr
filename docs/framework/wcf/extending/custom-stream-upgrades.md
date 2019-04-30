@@ -6,8 +6,8 @@ ms.openlocfilehash: 8c769321702deb774c04613d5fe5eb2fde069063
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967910"
 ---
 # <a name="custom-stream-upgrades"></a>사용자 지정 스트림 업그레이드
 TCP, 명명된 파이프 등의 스트림 지향 전송은 클라이언트와 서버 간의 연속 바이트 스트림에서 작동합니다. 이 스트림은 <xref:System.IO.Stream> 개체에 의해 나타날 수 있습니다. 스트림 업그레이드에서 클라이언트는 선택적 프로토콜 계층을 채널 스택에 추가하려고 하고 통신 채널의 반대쪽에서도 추가하도록 요청합니다. 스트림 업그레이드는 원래 <xref:System.IO.Stream> 개체를 업그레이드된 개체로 바꾸는 과정으로 이루어집니다.  
@@ -32,35 +32,35 @@ TCP, 명명된 파이프 등의 스트림 지향 전송은 클라이언트와 �
 ## <a name="how-to-implement-a-stream-upgrade"></a>스트림 업그레이드 구현 방법  
  Windows Communication Foundation (WCF) 4 개를 제공 합니다. `abstract` 구현할 수 있는 클래스:  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeProvider?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeProvider?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement?displayProperty=nameWithType>  
   
  사용자 지정 스트림 업그레이드를 구현하려면 다음을 수행합니다. 이 절차에서는 클라이언트 및 서버 컴퓨터 둘 다에 최소 스트림 업그레이드 프로세스를 구현합니다.  
   
 1. <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>를 구현하는 클래스를 만듭니다.  
   
-    1.  <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A> 메서드를 재정의하여 업그레이드할 스트림을 사용하고 업그레이드된 스트림을 반환합니다. 이 메서드는 동기적으로 작동합니다. 비동기적으로 업그레이드를 시작하는 유사한 메서드가 있습니다.  
+    1. <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A> 메서드를 재정의하여 업그레이드할 스트림을 사용하고 업그레이드된 스트림을 반환합니다. 이 메서드는 동기적으로 작동합니다. 비동기적으로 업그레이드를 시작하는 유사한 메서드가 있습니다.  
   
-    2.  <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> 메서드를 재정의하여 추가 업그레이드를 확인합니다.  
+    2. <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> 메서드를 재정의하여 추가 업그레이드를 확인합니다.  
   
 2. <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>를 구현하는 클래스를 만듭니다.  
   
-    1.  <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade%2A> 메서드를 재정의하여 업그레이드할 스트림을 사용하고 업그레이드된 스트림을 반환합니다. 이 메서드는 동기적으로 작동합니다. 비동기적으로 업그레이드를 수락하는 유사한 메서드가 있습니다.  
+    1. <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade%2A> 메서드를 재정의하여 업그레이드할 스트림을 사용하고 업그레이드된 스트림을 반환합니다. 이 메서드는 동기적으로 작동합니다. 비동기적으로 업그레이드를 수락하는 유사한 메서드가 있습니다.  
   
-    2.  <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> 메서드를 재정의하여 업그레이드 프로세스의 이 시점에서 이 업그레이드 수락자가 요청된 업그레이드를 지원하는지 여부를 확인합니다.  
+    2. <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> 메서드를 재정의하여 업그레이드 프로세스의 이 시점에서 이 업그레이드 수락자가 요청된 업그레이드를 지원하는지 여부를 확인합니다.  
   
 3. <xref:System.ServiceModel.Channels.StreamUpgradeProvider>를 구현하는 클래스를 만듭니다. <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeAcceptor%2A> 및 <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeInitiator%2A> 메서드를 재정의하여 2단계와 1단계에서 정의된 수락자와 개시자의 인스턴스를 반환합니다.  
   
 4. <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>를 구현하는 클래스를 만듭니다.  
   
-    1.  클라이언트의 <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildClientStreamUpgradeProvider%2A> 메서드와 서비스의 <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildServerStreamUpgradeProvider%2A> 메서드를 재정의합니다.  
+    1. 클라이언트의 <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildClientStreamUpgradeProvider%2A> 메서드와 서비스의 <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildServerStreamUpgradeProvider%2A> 메서드를 재정의합니다.  
   
-    2.  클라이언트의 <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> 메서드와 서비스의 <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> 메서드를 재정의하여 업그레이드 바인딩 요소를 <xref:System.ServiceModel.Channels.BindingContext.BindingParameters%2A>에 추가합니다.  
+    2. 클라이언트의 <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> 메서드와 서비스의 <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> 메서드를 재정의하여 업그레이드 바인딩 요소를 <xref:System.ServiceModel.Channels.BindingContext.BindingParameters%2A>에 추가합니다.  
   
 5. 서버 및 클라이언트 컴퓨터의 바인딩에 새 스트림 업그레이드 바인딩 요소를 추가합니다.  
   

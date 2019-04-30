@@ -10,11 +10,11 @@ helpviewer_keywords:
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
 ms.openlocfilehash: 1d00c222dabf446c7c102307c3b904d3f1ff4bca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007281"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>연습: WPF 애플리케이션에서 애플리케이션 데이터 캐싱
 캐싱을 사용하면 빠른 액세스를 위해 데이터를 메모리에 저장할 수 있습니다. 데이터에 다시 액세스할 때 애플리케이션은 원래 소스에서 검색하는 대신 캐시에서 데이터를 가져올 수 있습니다. 이 경우 성능과 확장성이 향상됩니다. 또한 캐싱을 사용하면 데이터 소스를 일시적으로 사용할 수 없는 경우에도 데이터를 사용할 수 있습니다.
@@ -28,24 +28,24 @@ ms.locfileid: "59314398"
 
  이 연습에서 수행할 작업은 다음과 같습니다.
 
--   WPF 응용 프로그램 프로젝트를 만드는 중입니다.
+- WPF 응용 프로그램 프로젝트를 만드는 중입니다.
 
--   에 대 한 참조를 추가 합니다 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]합니다.
+- 에 대 한 참조를 추가 합니다 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]합니다.
 
--   캐시를 초기화합니다.
+- 캐시를 초기화합니다.
 
--   텍스트 파일의 내용을 포함 하는 캐시 항목을 추가 합니다.
+- 텍스트 파일의 내용을 포함 하는 캐시 항목을 추가 합니다.
 
--   캐시 엔트리에 대 한 제거 정책을 제공합니다.
+- 캐시 엔트리에 대 한 제거 정책을 제공합니다.
 
--   캐시 된 파일의 경로 모니터링 하 고 캐시 인스턴스에 대 한 알림 모니터링된 항목을 변경 합니다.
+- 캐시 된 파일의 경로 모니터링 하 고 캐시 인스턴스에 대 한 알림 모니터링된 항목을 변경 합니다.
 
 ## <a name="prerequisites"></a>전제 조건
  이 연습을 완료하려면 다음 사항이 필요합니다.
 
--   Microsoft Visual Studio 2010
+- Microsoft Visual Studio 2010
 
--   적은 양의 텍스트를 포함 하는 텍스트 파일입니다. (텍스트 파일의 내용을 메시지 상자에 표시 됩니다.) 이 연습에 제공 된 코드를 사용 하는 다음 파일을 가정 합니다.
+- 적은 양의 텍스트를 포함 하는 텍스트 파일입니다. (텍스트 파일의 내용을 메시지 상자에 표시 됩니다.) 이 연습에 제공 된 코드를 사용 하는 다음 파일을 가정 합니다.
 
      `c:\cache\cacheText.txt`
 
@@ -109,9 +109,9 @@ ms.locfileid: "59314398"
 
 7. 다음이 단계를 수행 하 여 캐싱 어셈블리에 대 한 참조를 추가 합니다.
 
-    1.  **솔루션 탐색기**프로젝트의 이름을 마우스 오른쪽 단추로 클릭 한 다음 클릭 **참조 추가**합니다.
+    1. **솔루션 탐색기**프로젝트의 이름을 마우스 오른쪽 단추로 클릭 한 다음 클릭 **참조 추가**합니다.
 
-    2.  선택 된 **.NET** 탭을 선택 `System.Runtime.Caching`를 클릭 하 고 **확인**합니다.
+    2. 선택 된 **.NET** 탭을 선택 `System.Runtime.Caching`를 클릭 하 고 **확인**합니다.
 
 #### <a name="to-change-the-target-net-framework-in-a-visual-c-project"></a>Visual C# 프로젝트에서.NET Framework 대상을 변경 하려면
 
@@ -125,9 +125,9 @@ ms.locfileid: "59314398"
 
 4. 다음이 단계를 수행 하 여 캐싱 어셈블리에 대 한 참조를 추가 합니다.
 
-    1.  마우스 오른쪽 단추로 클릭 합니다 **참조가** 폴더 및 클릭 한 다음 **참조 추가**합니다.
+    1. 마우스 오른쪽 단추로 클릭 합니다 **참조가** 폴더 및 클릭 한 다음 **참조 추가**합니다.
 
-    2.  선택 된 **.NET** 탭을 선택 `System.Runtime.Caching`를 클릭 하 고 **확인**합니다.
+    2. 선택 된 **.NET** 탭을 선택 `System.Runtime.Caching`를 클릭 하 고 **확인**합니다.
 
 ## <a name="adding-a-button-to-the-wpf-window"></a>WPF 창에 단추 추가
  다음으로 단추 컨트롤을 추가 하 고 단추에 대 한 이벤트 처리기를 만듭니다 `Click` 이벤트입니다. 나중에 텍스트 파일의 내용을 캐시 되어 표시 단추를 클릭 하면 되도록 코드를 추가 합니다.
@@ -143,13 +143,13 @@ ms.locfileid: "59314398"
 ## <a name="initializing-the-cache-and-caching-an-entry"></a>캐시를 초기화 하 고 항목 캐싱
  다음으로, 다음 작업을 수행 하는 코드를 추가 합니다.
 
--   캐시 클래스의 인스턴스를 만들-즉, 인스턴스화 새 <xref:System.Runtime.Caching.MemoryCache> 개체입니다.
+- 캐시 클래스의 인스턴스를 만들-즉, 인스턴스화 새 <xref:System.Runtime.Caching.MemoryCache> 개체입니다.
 
--   캐시 사용을 <xref:System.Runtime.Caching.HostFileChangeMonitor> 텍스트 파일에 변경 사항을 모니터링 하는 개체입니다.
+- 캐시 사용을 <xref:System.Runtime.Caching.HostFileChangeMonitor> 텍스트 파일에 변경 사항을 모니터링 하는 개체입니다.
 
--   텍스트 파일을 읽고 캐시 항목으로 해당 콘텐츠를 캐시 합니다.
+- 텍스트 파일을 읽고 캐시 항목으로 해당 콘텐츠를 캐시 합니다.
 
--   캐시 된 텍스트 파일의 내용을 표시 합니다.
+- 캐시 된 텍스트 파일의 내용을 표시 합니다.
 
 #### <a name="to-create-the-cache-object"></a>캐시 개체를 만들려면
 

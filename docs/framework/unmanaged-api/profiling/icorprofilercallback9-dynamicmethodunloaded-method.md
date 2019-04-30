@@ -11,11 +11,11 @@ api_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 96cdfb79c1573648173305d6ee789aa8db030ff8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992006"
 ---
 # <a name="icorprofilercallback9dynamicmethodunloaded-method"></a>ICorProfilerCallback9::DynamicMethodUnloaded 메서드
 [.NET Framework 4.7.2 이상 버전에서 지원 됨]  

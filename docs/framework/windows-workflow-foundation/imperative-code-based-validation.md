@@ -3,11 +3,11 @@ title: 명령 코드 기반 유효성 검사
 ms.date: 03/30/2017
 ms.assetid: ae12537c-455e-42b1-82f4-cea4c46c023e
 ms.openlocfilehash: 333e1e200825dd1fc8ed750abbecbb309da66663
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009775"
 ---
 # <a name="imperative-code-based-validation"></a>명령 코드 기반 유효성 검사
 
@@ -15,12 +15,10 @@ ms.locfileid: "57707835"
   
 ## <a name="using-code-based-validation"></a>코드 기반 유효성 검사 사용
 
-코드 기반 유효성 검사는 <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity> 및 <xref:System.Activities.NativeActivity>의 파생 활동에서 지원됩니다. 
-  <xref:System.Activities.CodeActivity.CacheMetadata%2A> 재정의에 유효성 검사 코드를 배치할 수 있으며, 메타데이터 인수에 유효성 검사 오류 또는 경고를 추가할 수 있습니다. 다음 예에서 `Cost`가 `Price`보다 크면 메타데이터에 유효성 검사 오류가 추가됩니다.  
+코드 기반 유효성 검사는 <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity> 및 <xref:System.Activities.NativeActivity>의 파생 활동에서 지원됩니다. <xref:System.Activities.CodeActivity.CacheMetadata%2A> 재정의에 유효성 검사 코드를 배치할 수 있으며, 메타데이터 인수에 유효성 검사 오류 또는 경고를 추가할 수 있습니다. 다음 예에서 `Cost`가 `Price`보다 크면 메타데이터에 유효성 검사 오류가 추가됩니다.  
   
 > [!NOTE]
-> 
-  `Cost` 및 `Price`는 활동에 대한 인수는 아니지만 디자인 타임에 설정되는 속성입니다. 따라서 이러한 값은 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 재정의에서 유효성을 검사할 수 있습니다. 인수를 통해 흐르는 데이터 값은 런타임이 될 때가지 흐르지 않으므로 디자인 타임에서 유효성을 검사할 수 없습니다. 활동 인수는 `RequiredArgument` 특성 및 오버로드 그룹을 사용하여 바인딩되도록 유효성을 검사할 수 있습니다. 이 예제 코드에서는 `RequiredArgument` 인수에 대한 `Description` 특성을 확인하여 바인딩되어 있지 않을 경우 유효성 검사 오류가 발생합니다. 필수 인수에서 나와 [필요한 인수 및 오버 로드 그룹](required-arguments-and-overload-groups.md)합니다.  
+> `Cost` 및 `Price`는 활동에 대한 인수는 아니지만 디자인 타임에 설정되는 속성입니다. 따라서 이러한 값은 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 재정의에서 유효성을 검사할 수 있습니다. 인수를 통해 흐르는 데이터 값은 런타임이 될 때가지 흐르지 않으므로 디자인 타임에서 유효성을 검사할 수 없습니다. 활동 인수는 `RequiredArgument` 특성 및 오버로드 그룹을 사용하여 바인딩되도록 유효성을 검사할 수 있습니다. 이 예제 코드에서는 `RequiredArgument` 인수에 대한 `Description` 특성을 확인하여 바인딩되어 있지 않을 경우 유효성 검사 오류가 발생합니다. 필수 인수에서 나와 [필요한 인수 및 오버 로드 그룹](required-arguments-and-overload-groups.md)합니다.  
   
 ```csharp  
 public sealed class CreateProduct : CodeActivity  

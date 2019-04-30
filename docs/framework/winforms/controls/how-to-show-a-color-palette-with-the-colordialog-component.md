@@ -15,11 +15,11 @@ helpviewer_keywords:
 - colors [Windows Forms], showing palettes
 ms.assetid: ee050f61-dbc8-4436-ba22-51360981ab48
 ms.openlocfilehash: 587b2c3a502ec8a1cb2f4f7c0d981baa0f18ead6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012994"
 ---
 # <a name="how-to-show-a-color-palette-with-the-colordialog-component"></a>방법: ColorDialog 구성 요소를 사용하여 색상표 표시
 합니다 [ColorDialog](colordialog-component-windows-forms.md) 색상표를 표시 하 고 사용자가 선택한 색을 포함 하는 속성을 반환 하는 구성 요소입니다.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fd6db0b8-c29c-48ff-b768-31d28e7a148c
 ms.openlocfilehash: 7b8d7cf8ab2335c064062ed3ab4072d81e8042fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033659"
 ---
 # <a name="how-to-resolve-conflicts-by-overwriting-database-values"></a>방법: 데이터베이스 값을 덮어써서 충돌 해결
 변경 내용을 전송하기 전에 예상 데이터베이스 값과 실제 데이터베이스 값의 차이점을 조정하려면 <xref:System.Data.Linq.RefreshMode.KeepCurrentValues>를 사용하여 데이터베이스 값을 덮어씁니다. 자세한 내용은 참조 하세요. [낙관적 동시성: 개요](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)합니다.  

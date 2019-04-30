@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 45abb39fa7266e19bbd375b476f2ab48bfc5914d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62041329"
 ---
 # <a name="icorprofilerinfogetclassidinfo-method"></a>ICorProfilerInfo::GetClassIDInfo 메서드
 지정된 된 클래스에 대 한 부모 모듈 및 메타 데이터 토큰을 가져옵니다.  

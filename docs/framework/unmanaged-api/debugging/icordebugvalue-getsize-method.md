@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 41a9ff2c94c98a5acc930d68e648b0ea577a82c3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986845"
 ---
 # <a name="icordebugvaluegetsize-method"></a>ICorDebugValue::GetSize 메서드
 이 "ICorDebugValue" 개체를 바이트 단위로 크기를 가져옵니다.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], customizing rows
 ms.assetid: 6db61607-7e57-4a84-8d63-9d6a7ed7f9ff
 ms.openlocfilehash: cb3a826262a49a8653e3a344bd126d434f2522dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009190"
 ---
 # <a name="how-to-use-the-row-template-to-customize-rows-in-the-windows-forms-datagridview-control"></a>방법: 행 템플릿을 사용하여 Windows Forms DataGridView 컨트롤에서 행 사용자 지정
 <xref:System.Windows.Forms.DataGridView> 컨트롤은 데이터 바인딩을 통해 또는 호출 하는 경우 컨트롤에 추가 하는 모든 행에 대 한 기준으로 행 템플릿을 사용 합니다 <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType> 메서드를 사용 하 여 기존 행을 지정 하지 않고 있습니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "59073060"
   
 ### <a name="to-use-the-row-template"></a>행 템플릿을 사용 하 여  
   
--   검색 된 개체의 속성을 설정 합니다 <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType> 속성입니다.  
+- 검색 된 개체의 속성을 설정 합니다 <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType> 속성입니다.  
   
      [!code-cpp[System.Windows.Forms.DataGridView.RowTemplate#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.RowTemplate/CPP/datagridviewrowtemplate.cpp#1)]
      [!code-csharp[System.Windows.Forms.DataGridView.RowTemplate#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.RowTemplate/CS/datagridviewrowtemplate.cs#1)]
@@ -37,9 +37,9 @@ ms.locfileid: "59073060"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   `dataGridView1`이라는 <xref:System.Windows.Forms.DataGridView> 컨트롤  
+- `dataGridView1`이라는 <xref:System.Windows.Forms.DataGridView> 컨트롤  
   
--   <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType> 및 <xref:System.Windows.Forms?displayProperty=nameWithType> 어셈블리에 대한 참조  
+- <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType> 및 <xref:System.Windows.Forms?displayProperty=nameWithType> 어셈블리에 대한 참조  
   
 ## <a name="see-also"></a>참고자료
 

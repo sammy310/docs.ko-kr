@@ -6,11 +6,11 @@ helpviewer_keywords:
 - option lists in Windows Forms
 ms.assetid: 5bc064c7-bc1f-4b62-8f4b-252f864b118e
 ms.openlocfilehash: 92d5f330fbd5269e15bf52dc11ad998939aa18e4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009073"
 ---
 # <a name="windows-forms-controls-used-to-list-options"></a>옵션 목록 표시에 사용하는 Windows Forms 컨트롤
 옵션을 선택 목록을 사용자에 게 제공 하려는 경우 Windows 폼에 다양 한 컨트롤을 추가할 수 있습니다. 크기에 따라 제한 하려면 사용자 입력을 추가할 수 있습니다는 <xref:System.Windows.Forms.ListBox> 컨트롤을 <xref:System.Windows.Forms.ComboBox> 컨트롤 또는 <xref:System.Windows.Forms.CheckedListBox> 컨트롤입니다. 다음 링크를 사용 하 여 요구에 적합 한 최상의 컨트롤을 결정 합니다.  

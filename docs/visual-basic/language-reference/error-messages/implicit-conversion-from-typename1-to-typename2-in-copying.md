@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
 ms.openlocfilehash: 7b02659d96b08c592b25ddf3ef1f99114c3ee269
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013831"
 ---
 # <a name="implicit-conversion-from-typename1-to-typename2-in-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument"></a>암시적으로 변환 '\<typename1 >'를 '\<typename2 >'에 'ByRef' 매개 변수의 값을 복사 '\<parametername >' 인수에 다시 합니다.
 프로시저를 사용 하 여 호출 되는 [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) 해당 매개 변수 보다 다양 한 형식의 인수입니다.  
@@ -27,9 +27,9 @@ ms.locfileid: "58831763"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   가능 하면 Visual Basic 모든 변환을 수행 하지 않아도 되므로 프로시저 매개 변수와 동일한 형식의 호출 인수를 사용 합니다.  
+- 가능 하면 Visual Basic 모든 변환을 수행 하지 않아도 되므로 프로시저 매개 변수와 동일한 형식의 호출 인수를 사용 합니다.  
   
--   매개 변수 형식과 다른 인수 형식을 사용하여 프로시저를 호출해야 하지만 호출 인수에 값을 반환할 필요가 없는 경우 매개 변수를 [ByRef](../../../visual-basic/language-reference/modifiers/byval.md) 가 아니라 `ByRef`로 정의합니다.  
+- 매개 변수 형식과 다른 인수 형식을 사용하여 프로시저를 호출해야 하지만 호출 인수에 값을 반환할 필요가 없는 경우 매개 변수를 [ByRef](../../../visual-basic/language-reference/modifiers/byval.md) 가 아니라 `ByRef`로 정의합니다.  
   
 ## <a name="see-also"></a>참고자료
 

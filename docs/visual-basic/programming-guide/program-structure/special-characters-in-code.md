@@ -31,11 +31,11 @@ helpviewer_keywords:
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
 ms.openlocfilehash: 65fcd10521742e287c7934080b3352a06668df7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967988"
 ---
 # <a name="special-characters-in-code-visual-basic"></a>코드의 특수 문자(Visual Basic)
 경우에 따라 영문자 또는 숫자 하지 않은 문자 즉, 코드에서 특수 문자를 사용 해야 합니다. 문장 부호 및 특수 문자는 Visual Basic 문자 집합의 프로그램 텍스트 컴파일러 또는 컴파일된 프로그램이 수행 하는 작업을 정의 하는 데 구성에서 사용이 다양 한 경우 이러한 특수 문자는 수행할 작업을 지정하지 않습니다.  

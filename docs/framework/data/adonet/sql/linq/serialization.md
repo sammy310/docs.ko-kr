@@ -6,35 +6,35 @@ dev_langs:
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
 ms.openlocfilehash: b6778522b5757c0ece899f7465d3ab500038fc49
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037039"
 ---
 # <a name="serialization"></a>Serialization
 이 항목에서는 설명 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] serialization 기능입니다. 디자인 타임에 코드 생성 도중 serialization을 추가하는 방법과 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 클래스의 런타임 serialization 동작에 대한 정보가 제공됩니다.  
   
  다음 방법 중 하나로 디자인 타임에 serialization 코드를 추가할 수 있습니다.  
   
--   에 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]를 변경 합니다 **Serialization 모드** 속성을 **Unidirectional**합니다.  
+- 에 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]를 변경 합니다 **Serialization 모드** 속성을 **Unidirectional**합니다.  
   
--   SQLMetal 명령줄에서 추가 된 **/serialization** 옵션입니다. 자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요.  
+- SQLMetal 명령줄에서 추가 된 **/serialization** 옵션입니다. 자세한 내용은 [SqlMetal.exe(코드 생성 도구)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)를 참조하세요.  
   
 ## <a name="overview"></a>개요  
  생성 한 코드 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 기본적으로 지연 된 로드 기능을 제공 합니다. 지연된 로드를 사용하면 중간 계층에서 매우 편리하게 데이터를 필요한 때 투명하게 로드할 수 있습니다. 그러나 지연된 로드를 원하는지 여부에 상관없이 serializer가 지연된 로드를 트리거하기 때문에 이것은 serialization에서 문제가 됩니다. 실제로 개체가 serialize될 때 모든 지연 로드된 아웃바운드 참조 아래의 전이적 닫기가 serialize됩니다.  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] serialization 기능은 주로 다음과 같은 두 개의 메커니즘을 통해 이 문제를 해결합니다.  
   
--   지연된 로드를 해제하기 위한 <xref:System.Data.Linq.DataContext> 모드(<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>). 자세한 내용은 <xref:System.Data.Linq.DataContext>을 참조하세요.  
+- 지연된 로드를 해제하기 위한 <xref:System.Data.Linq.DataContext> 모드(<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>). 자세한 내용은 <xref:System.Data.Linq.DataContext>을 참조하세요.  
   
--   생성된 엔터티에서 <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType> 및 <xref:System.Runtime.Serialization.DataMemberAttribute?displayProperty=nameWithType> 특성을 생성하기 위한 코드 생성 스위치. serialization 아래의 지연 로드 클래스 동작을 비롯한 이 개념이 이 항목의 주제입니다.  
+- 생성된 엔터티에서 <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType> 및 <xref:System.Runtime.Serialization.DataMemberAttribute?displayProperty=nameWithType> 특성을 생성하기 위한 코드 생성 스위치. serialization 아래의 지연 로드 클래스 동작을 비롯한 이 개념이 이 항목의 주제입니다.  
   
 ### <a name="definitions"></a>정의  
   
--   *DataContract serializer*: .NET Framework 3.0 또는 이후 버전의 Windows Communication Framework (WCF) 구성 요소에서 사용 되는 serializer를 기본입니다.  
+- *DataContract serializer*: .NET Framework 3.0 또는 이후 버전의 Windows Communication Framework (WCF) 구성 요소에서 사용 되는 serializer를 기본입니다.  
   
--   *단방향 serialization*: Serialize 된 버전 (주기 않으려면) 단방향 연결 속성만 포함 하는 클래스입니다. 규칙에 따라 기본 및 외래 키 관계의 부모 쪽에 대한 속성이 serialization용으로 표시됩니다. 양방향 연결의 다른 쪽은 serialize되지 않습니다.  
+- *단방향 serialization*: Serialize 된 버전 (주기 않으려면) 단방향 연결 속성만 포함 하는 클래스입니다. 규칙에 따라 기본 및 외래 키 관계의 부모 쪽에 대한 속성이 serialization용으로 표시됩니다. 양방향 연결의 다른 쪽은 serialize되지 않습니다.  
   
      단방향 serialization은 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 지원되는 유일한 serialization 형식입니다.  
   

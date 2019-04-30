@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2e300d4645939a131ceb8206999d95056b96a678
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59118952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992929"
 ---
 # <a name="ihostassemblymanager-interface"></a>IHostAssemblyManager 인터페이스
 호스트 또는 호스트의 CLR (공용 언어 런타임)에서 로드 해야 하는 어셈블리 집합을 지정 하는 데 사용할 수 있는 메서드를 제공 합니다.  

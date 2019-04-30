@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
 ms.openlocfilehash: a4f87303954494e8e32d32e68fb3f1244f25680a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011722"
 ---
 # <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms 컨트롤에서 BindingSource 구성 요소 바인딩
 폼에 컨트롤을 추가 하 고 응용 프로그램에 대 한 사용자 인터페이스를 확인한 후 런타임 시 사용자가 변경 하 고 수 응용 프로그램과 관련 된 데이터를 저장 되도록 데이터 원본에 컨트롤을 바인딩할 수 있습니다.  
@@ -31,9 +31,9 @@ ms.locfileid: "59304560"
   
 2. 에 **속성** 창:  
   
-    1.  확장 된 **(DataBindings)** 노드.  
+    1. 확장 된 **(DataBindings)** 노드.  
   
-    2.  다음 화살표를 클릭 합니다 <xref:System.Windows.Forms.TextBox.Text%2A> 속성입니다.  
+    2. 다음 화살표를 클릭 합니다 <xref:System.Windows.Forms.TextBox.Text%2A> 속성입니다.  
   
          합니다 **DataSource** UI 형식 편집기를 엽니다.  
   

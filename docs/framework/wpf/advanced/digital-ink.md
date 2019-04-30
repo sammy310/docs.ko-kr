@@ -8,11 +8,11 @@ helpviewer_keywords:
 - digital ink [WPF]
 ms.assetid: d0d6df69-daf9-4cf3-b7f9-ffee588037a3
 ms.openlocfilehash: 1f68eafba64f45a77687d09d2e1ab709a76c0e33
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010564"
 ---
 # <a name="digital-ink"></a>디지털 잉크
 이 섹션에서는 설명의 디지털 링크에 사용 된 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]합니다. 일반적으로만 Tablet PC SDK 디지털 잉크가 되었습니다 핵심 Windows Presentation Foundation에서에서 사용할 수 있습니다. 즉, Windows Presentation Foundation의 기능을 사용 하 여 이제 모든 기능을 갖춘 Tablet PC 응용 프로그램을 개발할 수 있습니다.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - examples [Visual Basic], strings
 ms.assetid: ae4c79e0-08ea-489f-bdb2-5eb6d355f284
 ms.openlocfilehash: b690aa78a2cf07b0db5bdd28d7d71ed4a79fbf61
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032086"
 ---
 # <a name="how-to-search-within-a-string-visual-basic"></a>방법: 검색 문자열 (Visual Basic)
 이 예제에서는 호출을 <xref:System.String.IndexOf%2A> 메서드는 <xref:System.String> 부분 문자열의 첫 번째 발생의 인덱스를 보고 하는 개체입니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "58823300"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   `Imports` 문을 지정 하는 <xref:System> 네임 스페이스입니다. 자세한 내용은 [Imports 문(.NET 네임스페이스 및 형식)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)을 참조하세요.  
+- `Imports` 문을 지정 하는 <xref:System> 네임 스페이스입니다. 자세한 내용은 [Imports 문(.NET 네임스페이스 및 형식)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)을 참조하세요.  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
  <xref:System.String.IndexOf%2A> 메서드 맨 처음 발견 되는 부분 문자열의 첫 번째 문자의 위치를 보고 합니다. 인덱스는 0 기반, 즉, 문자열의 첫 번째 문자에는 인덱스가 0입니다.  

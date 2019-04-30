@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
 ms.openlocfilehash: 57802cad0a75ed21bba02a11fec39f821835c5ea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967247"
 ---
 # <a name="events-overview-windows-forms"></a>이벤트 개요(Windows Forms)
 이벤트는 코드에서 응답, 즉 "처리"할 수 있는 작업입니다. 마우스를 클릭하거나 키를 누르는 등의 사용자 작업, 프로그램 코드 또는 시스템에 의해 이벤트가 생성될 수 있습니다.  

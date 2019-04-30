@@ -8,11 +8,11 @@ helpviewer_keywords:
 - classes [WPF], SystemParameters
 ms.assetid: 02e7a5de-94eb-4953-b91c-52e6c872ad5b
 ms.openlocfilehash: 344fb54b48bcbf188b36a29d8205c21deff713c4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001457"
 ---
 # <a name="how-to-use-systemparameters"></a>방법: SystemParameters 사용
 액세스 속성을 사용 하는 방법을 보여주는이 예제 <xref:System.Windows.SystemParameters> 스타일을 지정 하거나 단추를 사용자 지정 합니다.  

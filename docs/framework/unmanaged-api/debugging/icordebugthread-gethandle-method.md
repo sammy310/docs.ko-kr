@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 900fece1dd29f73f77b85ff08e4deff1396f8aaf
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994021"
 ---
 # <a name="icordebugthreadgethandle-method"></a>ICorDebugThread::GetHandle 메서드
 이 ICorDebugThread의 활성 부분에 대 한 현재 핸들을 가져옵니다.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
 ms.openlocfilehash: 9a08fdeaa3517b1483af3f9958ad2db1c64648b8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031343"
 ---
 # <a name="globalization-for-wpf"></a>WPF의 전역화
 이 항목에서는 소개를 작성할 때 알고 있어야 하는 문제 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 글로벌 시장 용 응용 프로그램입니다. 전역화 프로그래밍 요소에 정의 된 [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] 에서 `System.Globalization`합니다.
@@ -69,59 +69,59 @@ ms.locfileid: "59084169"
 
  현재 지원되는 스크립트는 다음과 같습니다.
 
--   아랍어
+- 아랍어
 
--   벵골어
+- 벵골어
 
--   데바나가리어
+- 데바나가리어
 
--   키릴 자모
+- 키릴 자모
 
--   그리스어
+- 그리스어
 
--   구자라트어
+- 구자라트어
 
--   굴묵키어
+- 굴묵키어
 
--   히브리어
+- 히브리어
 
--   표의 문자 스크립트
+- 표의 문자 스크립트
 
--   칸나다어
+- 칸나다어
 
--   라오어
+- 라오어
 
--   라틴어
+- 라틴어
 
--   말라얄람어
+- 말라얄람어
 
--   몽골어
+- 몽골어
 
--   오리야어
+- 오리야어
 
--   시리아어
+- 시리아어
 
--   타밀어
+- 타밀어
 
--   텔루구어
+- 텔루구어
 
--   타나 문자
+- 타나 문자
 
--   태국어*
+- 태국어*
 
--   티베트어
+- 티베트어
 
  * 이 릴리스에서는 태국어 텍스트의 표시 및 편집이 지원되며, 단어 구분은 지원되지 않습니다.
 
  현재 지원되지 않는 스크립트는 다음과 같습니다.
 
--   크메르어
+- 크메르어
 
--   한국어 옛 한글
+- 한국어 옛 한글
 
--   미얀마어
+- 미얀마어
 
--   스리랑카어
+- 스리랑카어
 
  모든 쓰기 시스템 엔진 지원 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴입니다. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 글꼴 포함 될 수 있습니다는 [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 레이아웃 테이블을 더 잘 국가별 글꼴과 최고급 글꼴을 디자인 하는 글꼴 생성기를 사용 하도록 설정 합니다. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 글꼴 레이아웃 테이블에 대 한 정보가 문자 모양 대체, 문자 모양 위치 지정, 양쪽 맞춤 및 기준선 위치 지정 텍스트 레이아웃을 개선 하기 위해 텍스트 처리 응용 프로그램을 사용 하도록 설정 합니다.
 
@@ -133,9 +133,9 @@ ms.locfileid: "59084169"
 ### <a name="international-layout"></a>국가별 레이아웃
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 가로, 양방향 및 세로 레이아웃을 지원하는 매우 편리한 방법을 제공합니다. 프레젠테이션 프레임 워크에서는 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 레이아웃을 정의 하려면 속성을 사용할 수 있습니다. 흐름 방향 패턴은 다음과 같습니다.
 
--   *LeftToRight* - 라틴어, 동아시아어 등을 위한 가로 레이아웃.
+- *LeftToRight* - 라틴어, 동아시아어 등을 위한 가로 레이아웃.
 
--   *RightToLeft* - 아랍어, 히브리어 등을 위한 양방향.
+- *RightToLeft* - 아랍어, 히브리어 등을 위한 양방향.
 
 <a name="developing_localizable_apps"></a>
 ## <a name="developing-localizable-applications"></a>지역화 가능 애플리케이션 개발

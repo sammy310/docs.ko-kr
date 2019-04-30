@@ -9,11 +9,11 @@ helpviewer_keywords:
 - drawing [WPF], polylines
 ms.assetid: 65db8935-d047-4295-87c4-b427ff3ad293
 ms.openlocfilehash: 4f55ecc206be0ef4947923047e796c36131c70ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59114848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003212"
 ---
 # <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>방법: Polyline 요소를 사용하여 폴리라인 그리기
 이 예제에서는 사용 하 여 일련의 연결 된 줄은 다중선 그리기를 <xref:System.Windows.Shapes.Polyline> 요소입니다.  

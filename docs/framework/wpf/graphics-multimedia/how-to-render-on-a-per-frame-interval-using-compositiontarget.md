@@ -9,11 +9,11 @@ helpviewer_keywords:
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
 ms.openlocfilehash: 00b416d423a4bdc8bab576add2d77fd305ea6e0f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008930"
 ---
 # <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>방법: CompositionTarget을 사용하여 프레임별 간격에 렌더링
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션 엔진은 프레임 기반 애니메이션을 만들기 위한 다양한 기능을 제공합니다. 그러나 프레임당 렌더링을 좀 더 미세하게 제어해야 하는 애플리케이션 시나리오도 있습니다. <xref:System.Windows.Media.CompositionTarget> 프레임당 콜백을 기준으로 사용자 지정 애니메이션을 만드는 기능을 제공 하는 개체입니다.  

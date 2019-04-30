@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Label control [Windows Forms], sizing to fit contents
 ms.assetid: 99648964-63b2-438c-980e-d24103ad602b
 ms.openlocfilehash: 110aab0c0826bb4b06e22158afd6af37b5406be4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971199"
 ---
 # <a name="how-to-size-a-windows-forms-label-control-to-fit-its-contents"></a>방법: 내용에 맞게 Windows Forms Label 컨트롤 크기 조정
 Windows Forms <xref:System.Windows.Forms.Label> 줄 또는 여러 줄 컨트롤 수 있으며 자동으로 크기를 조정할 수에 맞게 해당 캡션 또는 크기가 하거나 해결할 수 있습니다. <xref:System.Windows.Forms.Label.AutoSize%2A> 속성을 사용 하면 컨트롤의 크기를 크게 또는 작게 캡션에 맞게 캡션을 런타임에 변경 될 경우 특히 유용 합니다.  

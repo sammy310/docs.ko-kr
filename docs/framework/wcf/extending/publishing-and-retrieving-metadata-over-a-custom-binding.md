@@ -3,11 +3,11 @@ title: 사용자 지정 바인딩을 통해 메타데이터 게시 및 검색
 ms.date: 03/30/2017
 ms.assetid: 904e11b4-d90e-45c6-9ee5-c3472c90008c
 ms.openlocfilehash: 33777358262465e9ecbadd75df8abf066bafcd01
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991213"
 ---
 # <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a>사용자 지정 바인딩을 통해 메타데이터 게시 및 검색
 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>에서는 메타데이터 엔드포인트를 서비스에 추가할 수 있도록 지원합니다. 이러한 메타 데이터 끝점에 있는 URL에 HTTP GET 요청에 응답할 수는 `?wsdl` querystring 및 Ws-metadataexchange (MEX) 사양에 정의 된 대로 Ws-transfer GET 요청을 합니다. MEX 엔드포인트는 <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType> 계약을 구현합니다.  

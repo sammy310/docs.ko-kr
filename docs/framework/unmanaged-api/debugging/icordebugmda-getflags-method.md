@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7a35e9f7cf43105db05408f285cd89dbd839a4cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59093490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969041"
 ---
 # <a name="icordebugmdagetflags-method"></a>ICorDebugMDA::GetFlags 메서드
 연결 된 MDA (관리 디버깅 도우미)으로 표시 된 플래그를 가져옵니다 [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)합니다.  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9000f35e9a8f7ecc6c40cf0ef9c220fc9f4f9c10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59185928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985688"
 ---
 # <a name="customdumpitem-structure"></a>CustomDumpItem 구조체
 오류 보고에 사용자 지정 덤프에 추가할 항목을 설명 합니다.  

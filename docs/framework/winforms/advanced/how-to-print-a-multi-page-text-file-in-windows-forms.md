@@ -11,11 +11,11 @@ helpviewer_keywords:
 - printing [Windows Forms], text
 ms.assetid: 362427f8-03d4-4826-b49f-60ab066ad322
 ms.openlocfilehash: b17ddcb22f3e1b7dc181e977a0227db5490b66fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003914"
 ---
 # <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>방법: Windows Forms에서 다중 페이지 텍스트 파일 인쇄
 Windows 기반 애플리케이션에서 텍스트를 인쇄하는 것은 매우 일반적입니다. <xref:System.Drawing.Graphics> 클래스는 화면이나 프린터와 같은 장치에 개체(그래픽 또는 텍스트)를 그리기 위한 메서드를 제공합니다.  
@@ -54,11 +54,11 @@ Windows 기반 애플리케이션에서 텍스트를 인쇄하는 것은 매우 
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   C:\\ 드라이브의 루트에 있는, 인쇄할 텍스트를 포함하는 testPage.txt라는 텍스트 파일 다른 파일을 인쇄하려면 코드를 편집합니다.  
+- C:\\ 드라이브의 루트에 있는, 인쇄할 텍스트를 포함하는 testPage.txt라는 텍스트 파일 다른 파일을 인쇄하려면 코드를 편집합니다.  
   
--   System, System.Windows.Forms, System.Drawing 어셈블리에 대한 참조  
+- System, System.Windows.Forms, System.Drawing 어셈블리에 대한 참조  
   
--   Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 내용은 [명령줄에서 빌드](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 하거나 [csc.exe를 사용한 명령줄 빌드](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다. 또한 새 프로젝트에 코드를 붙여 넣어 Visual Studio에서이 예제를 빌드할 수 있습니다.  
+- Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 내용은 [명령줄에서 빌드](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 하거나 [csc.exe를 사용한 명령줄 빌드](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다. 또한 새 프로젝트에 코드를 붙여 넣어 Visual Studio에서이 예제를 빌드할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
 

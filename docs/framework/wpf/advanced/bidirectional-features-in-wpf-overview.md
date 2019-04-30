@@ -6,11 +6,11 @@ helpviewer_keywords:
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
 ms.openlocfilehash: 575598f48b3cfdf636be78a9de6e0c9a7fd9c208
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032021"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF의 양방향 기능 개요
 다른 개발 플랫폼과 달리 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 혼합된 왼쪽에서 오른쪽을 오른쪽으로 동일한 문서에 데이터를 유지 하는 예를 들어, 양방향 콘텐츠의 신속한 개발을 지 원하는 많은 기능이 있습니다. 동시에, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 아랍어 및 히브리어 사용자와 같은 양방향 기능이 필요한 사용자를 위한 뛰어난 경험을 만듭니다.  
@@ -166,11 +166,11 @@ ms.locfileid: "59079827"
   
  이 속성은 숫자에 대한 문화권을 결정하는 방법을 지정합니다. 3 가지 걸리는 <xref:System.Windows.Media.NumberCultureSource> 열거형 값입니다.  
   
--   재정의: 숫자 문화권이 <xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A> 속성입니다.  
+- 재정의: 숫자 문화권이 <xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A> 속성입니다.  
   
--   텍스트: 숫자 문화권이 텍스트 실행의 문화권입니다. 이 태그에서 것 `xml:lang`, 또는 해당 별칭인 `Language` 속성 (<xref:System.Windows.FrameworkElement.Language%2A> 또는 <xref:System.Windows.FrameworkContentElement.Language%2A>). 기본 클래스에서 파생 되는 것 또한 <xref:System.Windows.FrameworkContentElement>합니다. 이러한 클래스를 포함 <xref:System.Windows.Documents.Paragraph?displayProperty=nameWithType>하십시오 <xref:System.Windows.Documents.Table?displayProperty=nameWithType>, <xref:System.Windows.Documents.TableCell?displayProperty=nameWithType> 등.  
+- 텍스트: 숫자 문화권이 텍스트 실행의 문화권입니다. 이 태그에서 것 `xml:lang`, 또는 해당 별칭인 `Language` 속성 (<xref:System.Windows.FrameworkElement.Language%2A> 또는 <xref:System.Windows.FrameworkContentElement.Language%2A>). 기본 클래스에서 파생 되는 것 또한 <xref:System.Windows.FrameworkContentElement>합니다. 이러한 클래스를 포함 <xref:System.Windows.Documents.Paragraph?displayProperty=nameWithType>하십시오 <xref:System.Windows.Documents.Table?displayProperty=nameWithType>, <xref:System.Windows.Documents.TableCell?displayProperty=nameWithType> 등.  
   
--   사용자: 숫자 문화권이 현재 스레드의 문화권입니다. 이 속성의 모든 서브 클래스에 대 한 기본값은 <xref:System.Windows.FrameworkElement> 와 같은 <xref:System.Windows.Controls.Page>하십시오 <xref:System.Windows.Window> 및 <xref:System.Windows.Controls.TextBlock>합니다.  
+- 사용자: 숫자 문화권이 현재 스레드의 문화권입니다. 이 속성의 모든 서브 클래스에 대 한 기본값은 <xref:System.Windows.FrameworkElement> 와 같은 <xref:System.Windows.Controls.Page>하십시오 <xref:System.Windows.Window> 및 <xref:System.Windows.Controls.TextBlock>합니다.  
   
  **CultureOverride**:  
   
@@ -180,15 +180,15 @@ ms.locfileid: "59079827"
   
  이 속성에는 수행할 숫자 대체의 형식을 지정합니다. 다음 중 하나를 사용 <xref:System.Windows.Media.NumberSubstitutionMethod> 열거형 값입니다.  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: 대체 메서드가 숫자 문화권에 따라 결정 됩니다 <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> 속성입니다. 이 값이 기본값입니다.  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: 대체 메서드가 숫자 문화권에 따라 결정 됩니다 <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> 속성입니다. 이 값이 기본값입니다.  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.Context>: 숫자 문화권은 아랍어 또는 페르시아어 문화권 인 경우 숫자가 컨텍스트에 따라 지정 합니다.  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.Context>: 숫자 문화권은 아랍어 또는 페르시아어 문화권 인 경우 숫자가 컨텍스트에 따라 지정 합니다.  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.European>: 숫자는 항상 유럽 숫자로 렌더링 됩니다.  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.European>: 숫자는 항상 유럽 숫자로 렌더링 됩니다.  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>: 문화권에 의해 지정 된 대로 숫자 문화권에 대 한 국가별 숫자를 사용 하 여 숫자가 렌더링 되도록 <xref:System.Globalization.CultureInfo.NumberFormat%2A>합니다.  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>: 문화권에 의해 지정 된 대로 숫자 문화권에 대 한 국가별 숫자를 사용 하 여 숫자가 렌더링 되도록 <xref:System.Globalization.CultureInfo.NumberFormat%2A>합니다.  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>: 숫자는 숫자 문화권에 대 한 전통 숫자를 사용 하 여 렌더링 됩니다. 대부분의 문화권에서 이것이 동일 <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>합니다. 그러나 <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational> 모든 아랍어 문화권에 대 한 아랍어 숫자가 결과이 값이 있는 반면 일부 아랍어 문화권에 대해 라틴 숫자가 결과입니다.  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>: 숫자는 숫자 문화권에 대 한 전통 숫자를 사용 하 여 렌더링 됩니다. 대부분의 문화권에서 이것이 동일 <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>합니다. 그러나 <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational> 모든 아랍어 문화권에 대 한 아랍어 숫자가 결과이 값이 있는 반면 일부 아랍어 문화권에 대해 라틴 숫자가 결과입니다.  
   
  이 값은 양방향 콘텐츠 개발자에게 무슨 의미입니까? 대부분의 경우에서 개발자 정의에 필요할 <xref:System.Windows.FlowDirection> 및 각 텍스트 언어 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 예를 들어 요소 `Language="ar-SA"` 및 <xref:System.Windows.Media.NumberSubstitution> 논리에 따라 올바른 숫자를 표시 하므로 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]합니다. 다음 예제에서 아랍어와 영어 숫자를 사용 하는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 아랍어 버전의에서 실행 하는 응용 프로그램 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]합니다.  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Button control [Windows Forms], designating as cancel button
 ms.assetid: 252f0834-e54b-44d9-96f7-ee5f50e94f2c
 ms.openlocfilehash: 8170190145e76a86f5343bc42b39be7fb9d61a0f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010724"
 ---
 # <a name="how-to-designate-a-windows-forms-button-as-the-cancel-button"></a>방법: Windows Forms Button을 취소 단추로 지정
 모든 Windows Form에 지정할 수 있습니다는 <xref:System.Windows.Forms.Button> 취소 단추를 제어 합니다. 사용자에 관계 없이 폼에서 다른 컨트롤에 포커스가 ESC 키를 누를 때마다 취소 단추를 클릭 합니다. 신속 하 게 조치를 커밋하지 않고 작업을 종료할 수 있도록 프로그래밍할 때 일반적으로 이러한 단추를 사용 합니다.  

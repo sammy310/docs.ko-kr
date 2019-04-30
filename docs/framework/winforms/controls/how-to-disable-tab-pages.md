@@ -10,11 +10,11 @@ helpviewer_keywords:
 - TabControl control [Windows Forms], disabling pages
 ms.assetid: adcc6618-8a34-4ee1-bbe3-47e732de6a59
 ms.openlocfilehash: 21592fdd74c43d40310e0fcbc96af6565a42e08b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013454"
 ---
 # <a name="how-to-disable-tab-pages"></a>방법: 탭 페이지를 사용하지 않도록 설정
 일부 경우에 Windows Forms 응용 프로그램 내에서 사용할 수 있는 데이터에 대 한 액세스를 제한 해야 합니다. 데이터는 탭 컨트롤의 탭 페이지에 표시 된 경우의 예로 들 수 있습니다. 관리자는 게스트 또는 하위 수준의 사용자를 제한 하려고 하는 탭 페이지에 대 한 정보를 있을 수 있습니다.  

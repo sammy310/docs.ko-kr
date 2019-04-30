@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7b523c5819994e6da0332188311b4b631e3f9072
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000586"
 ---
 # <a name="icorprofilerinfo3-interface"></a>ICorProfilerInfo3 인터페이스
 코드 프로파일러가 이벤트 모니터링을 제어하고 정보를 요청하기 위해 CLR(공용 언어 런타임)과 통신하는 데 사용하는 메서드를 제공합니다. 합니다 `ICorProfilerInfo3` 인터페이스의 확장은 합니다 [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) 인터페이스입니다. [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] 이상 버전에서 지원되는 새 메서드를 제공합니다.  

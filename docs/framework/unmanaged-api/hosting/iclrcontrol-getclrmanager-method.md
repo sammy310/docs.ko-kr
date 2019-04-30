@@ -21,8 +21,8 @@ ms.openlocfilehash: 09079c8847b7cb995d97a4577d03982602bbadfa
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969899"
 ---
 # <a name="iclrcontrolgetclrmanager-method"></a>ICLRControl::GetCLRManager 메서드
 호스트의 CLR (공용 언어 런타임)을 구성 하 여 관리자 형식의 모든 인스턴스에 대 한 인터페이스 포인터를 가져옵니다.  
@@ -40,19 +40,19 @@ HRESULT GetCLRManager (
  `riid`  
  [in] `IID` manager 형식을 반환 합니다. 다음 `IID` 값이 지원 됩니다.  
   
--   IID_ICLRDebugManager: 형식임 `ppObject` 형식이 [ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)합니다.  
+- IID_ICLRDebugManager: 형식임 `ppObject` 형식이 [ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)합니다.  
   
--   IID_ICLRErrorReportingManager: 형식임 `ppObject` 형식이 [ICLRErrorReportingManager](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)합니다.  
+- IID_ICLRErrorReportingManager: 형식임 `ppObject` 형식이 [ICLRErrorReportingManager](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)합니다.  
   
--   IID_ICLRGCManager: 형식임 `ppObject` 형식이 [ICLRGCManager](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)합니다.  
+- IID_ICLRGCManager: 형식임 `ppObject` 형식이 [ICLRGCManager](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)합니다.  
   
--   IID_ICLRHostProtectionManager: 형식임 `ppObject` 형식이 [ICLRHostProtectionManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)합니다.  
+- IID_ICLRHostProtectionManager: 형식임 `ppObject` 형식이 [ICLRHostProtectionManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)합니다.  
   
--   IID_ICLROnEventManager: 형식임 `ppObject` 형식이 [ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)합니다.  
+- IID_ICLROnEventManager: 형식임 `ppObject` 형식이 [ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)합니다.  
   
--   IID_ICLRPolicyManager: 형식임 `ppObject` 형식이 [ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)합니다.  
+- IID_ICLRPolicyManager: 형식임 `ppObject` 형식이 [ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)합니다.  
   
--   IID_ICLRTaskManager: 형식임 `ppObject` 형식이 [ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)합니다.  
+- IID_ICLRTaskManager: 형식임 `ppObject` 형식이 [ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)합니다.  
   
  `ppObject`  
  [out] 잘못 된 관리자 유형이 요청 된 경우 null을 요청한 관리자에 대 한 인터페이스 포인터.  

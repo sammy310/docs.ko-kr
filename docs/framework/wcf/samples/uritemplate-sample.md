@@ -3,20 +3,20 @@ title: UriTemplate 샘플
 ms.date: 03/30/2017
 ms.assetid: 0aaf91d0-ce18-468d-8006-bc9bc2e48231
 ms.openlocfilehash: 5f8a969a9ddea633d12ebe2d922c152dbb0d7241
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007619"
 ---
 # <a name="uritemplate-sample"></a>UriTemplate 샘플
 <xref:System.UriTemplate> 클래스에서는 공통의 구조를 공유하는 URI 집합으로 작업하는 데 사용되는 메서드를 제공합니다. 이 샘플에서는 `UriTemplate`와 관련된 다음 핵심 개념을 보여 줍니다.  
   
--   템플릿 만들기용 구문.  
+- 템플릿 만들기용 구문.  
   
--   `UriTemplate`에서 <xref:System.UriTemplate.BindByName%2A> 및 <xref:System.UriTemplate.BindByPosition%2A>을 사용하여 URI 인스턴스화.  
+- `UriTemplate`에서 <xref:System.UriTemplate.BindByName%2A> 및 <xref:System.UriTemplate.BindByPosition%2A>을 사용하여 URI 인스턴스화.  
   
--   <xref:System.UriTemplateTable.Match%2A> 및 `BindByName`의 역작업인 `BindByPosition`.  
+- <xref:System.UriTemplateTable.Match%2A> 및 `BindByName`의 역작업인 `BindByPosition`.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   

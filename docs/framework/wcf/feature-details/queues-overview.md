@@ -5,11 +5,11 @@ helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
 ms.openlocfilehash: e34f2033ec0f7dac784634d06712d65786503299
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991265"
 ---
 # <a name="queues-overview"></a>큐 개요
 이 단원에서는 큐를 사용하는 통신의 일반 개념과 핵심 개념을 소개합니다. 다음 섹션에서는 여기에 설명 된 큐 개념 Windows Communication Foundation (WCF)를 명시 되는 방법에 대 한 세부 정보로 이동 합니다.  
@@ -36,9 +36,9 @@ ms.locfileid: "59099770"
 ## <a name="queues-and-transactions"></a>큐 및 트랜잭션  
  트랜잭션을 사용하면 일련의 작업을 그룹으로 묶어 한 작업이 실패하면 모든 작업이 실패하게 만들 수 있습니다. 트랜잭션을 사용하는 방법의 예로는 ATM을 통해 저축예금 계정에서 당좌예금 계정으로 $1,000를 이체하는 경우가 있습니다. 여기에는 다음 작업이 필요합니다.  
   
--   저축예금 계정에서 $1,000를 출금합니다.  
+- 저축예금 계정에서 $1,000를 출금합니다.  
   
--   당좌계금 계정에 $1,000를 입금합니다.  
+- 당좌계금 계정에 $1,000를 입금합니다.  
   
  첫 번째 작업이 성공해서 저축예금 계정에서 $1,000가 출금되었는데 두 번째 작업이 실패하면 저축예금 계정에서 이미 출금된 $1,000가 손실됩니다. 계정을 유효한 상태로 유지하려면 한 작업이 실패했을 때 두 작업이 모두 실패해야 합니다.  
   
@@ -59,9 +59,9 @@ ms.locfileid: "59099770"
   
  메시지가 대상 큐에 도달하지 못하거나 TTL(Time-To-Live)이 만료되는 등의 오류가 발생하는 경우 오류는 별도로 처리해야 합니다. 따라서 대기 중인 응용 프로그램에서 다음 두 가지의 논리 집합을 기록하는 경우가 종종 발생합니다.  
   
--   하나는 메시지를 보내고 받는 보통의 클라이언트 및 서비스 논리입니다.  
+- 하나는 메시지를 보내고 받는 보통의 클라이언트 및 서비스 논리입니다.  
   
--   실패한 전송 또는 배달의 메시지를 처리하기 위한 보정 논리입니다.  
+- 실패한 전송 또는 배달의 메시지를 처리하기 위한 보정 논리입니다.  
   
  뒤의 단원에서는 이러한 개념에 대해 설명합니다.  
   

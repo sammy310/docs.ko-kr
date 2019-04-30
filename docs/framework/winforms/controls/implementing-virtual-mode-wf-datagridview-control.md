@@ -13,11 +13,11 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 74eb5276-5ab8-4ce0-8005-dae751d85f7c
 ms.openlocfilehash: 7f6bf1703a6536f4d22b3a2fbe412579c59d39dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973773"
 ---
 # <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a>연습: Windows Forms DataGridView 컨트롤에서 가상 모드 구현
 매우 많은 양의의 표 형식 데이터를 표시 하려는 경우는 <xref:System.Windows.Forms.DataGridView> 컨트롤을 설정할 수 있습니다 합니다 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 속성을 `true` 명시적으로 해당 데이터 저장소를 사용 하 여 컨트롤의 상호 작용을 관리 합니다. 이렇게 하면이 상황에서 컨트롤의 성능을 미세 조정할 수 있습니다.  
@@ -112,16 +112,16 @@ ms.locfileid: "59344327"
   
 #### <a name="to-test-the-form"></a>폼을 테스트 하려면  
   
--   애플리케이션을 컴파일하고 실행합니다.  
+- 애플리케이션을 컴파일하고 실행합니다.  
   
      표시 됩니다는 <xref:System.Windows.Forms.DataGridView> 컨트롤 세 고객 레코드를 사용 하 여 채워집니다. 여러 행에 있는 셀의 값을 수정할 수 있으며 편집 모드에 두 번 및 한 번 전체 행을 원래 값으로 되돌리려면 편집 모드 외부 ESC 키를 누릅니다. 수정, 추가 또는 컨트롤에서 행을 삭제 하는 경우 `Customer` 데이터 저장소의 개체는 수정, 추가 또는 삭제 합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
  이 응용 프로그램의 가상 모드 구현 하려면 처리 해야 하는 이벤트에 대 한 기본적인 이해를 제공 합니다 <xref:System.Windows.Forms.DataGridView> 제어 합니다. 다양 한 방법으로에서이 기본 응용 프로그램을 향상 시킬 수 있습니다.  
   
--   외부 데이터베이스에서 값을 캐시 하는 데이터 저장소를 구현 합니다. 캐시를 검색 하 고 클라이언트 컴퓨터에서 적은 양의 메모리를 사용 하는 동안 표시 하기 위해 필요한 것만 포함 되도록 필요에 따라 값을 삭제 해야 합니다.  
+- 외부 데이터베이스에서 값을 캐시 하는 데이터 저장소를 구현 합니다. 캐시를 검색 하 고 클라이언트 컴퓨터에서 적은 양의 메모리를 사용 하는 동안 표시 하기 위해 필요한 것만 포함 되도록 필요에 따라 값을 삭제 해야 합니다.  
   
--   요구 사항에 따라 데이터 저장소의 성능을 미세 조정 합니다. 예를 들어, 다음 더 큰 캐시 크기를 사용 하 고 데이터베이스 쿼리의 수를 최소화 하 여 클라이언트 컴퓨터 메모리 제한 보다는 느린 네트워크 연결에 대 한 보정 하는 것이 좋습니다.  
+- 요구 사항에 따라 데이터 저장소의 성능을 미세 조정 합니다. 예를 들어, 다음 더 큰 캐시 크기를 사용 하 고 데이터베이스 쿼리의 수를 최소화 하 여 클라이언트 컴퓨터 메모리 제한 보다는 느린 네트워크 연결에 대 한 보정 하는 것이 좋습니다.  
   
  외부 데이터베이스에서 값을 캐시 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: Forms DataGridView 컨트롤의 Windows에서-Just-in-time 데이터 로드를 사용 하 여 가상 모드 구현](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)합니다.  
   

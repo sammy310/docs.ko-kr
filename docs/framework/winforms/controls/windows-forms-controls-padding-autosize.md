@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Windows Forms, layout
 ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
 ms.openlocfilehash: 230c7cb80ce6b8a29f7334ed0f8d297fd829faf9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009086"
 ---
 # <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>연습: Padding, Margin 및 AutoSize 속성을 사용하여 Windows Forms 컨트롤 레이아웃
 폼의 정확한 컨트롤 배치는 많은 응용 프로그램에서 우선 순위가 높습니다. 합니다 **Windows Forms 디자이너** 이렇게 하려면 여러 레이아웃 도구를 제공 합니다. 가장 중요 한 세 가지는 <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, 및 <xref:System.Windows.Forms.Control.AutoSize%2A> 속성을 모든 Windows Forms 컨트롤에 있는 합니다.  
@@ -37,13 +37,13 @@ ms.locfileid: "59302467"
   
  이 연습에서 설명하는 작업은 다음과 같습니다.  
   
--   Windows Forms 프로젝트 만들기  
+- Windows Forms 프로젝트 만들기  
   
--   컨트롤에 대 한 여백 설정  
+- 컨트롤에 대 한 여백 설정  
   
--   컨트롤에 대 한 안쪽 여백 설정  
+- 컨트롤에 대 한 안쪽 여백 설정  
   
--   자동으로 컨트롤 크기 조정  
+- 자동으로 컨트롤 크기 조정  
   
  작업을 완료하면 이러한 중요한 레이아웃 기능이 수행하는 역할을 이해하게 됩니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "59302467"
 ## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 사항이 필요합니다.  
   
--   만들고 Visual Studio를 설치한 컴퓨터에서 Windows Forms 응용 프로그램 프로젝트를 실행 하는 일을 할 수 있는 충분 한 권한입니다.  
+- 만들고 Visual Studio를 설치한 컴퓨터에서 Windows Forms 응용 프로그램 프로젝트를 실행 하는 일을 할 수 있는 충분 한 권한입니다.  
   
 ## <a name="creating-the-project"></a>프로젝트 만들기  
  첫 번째 단계는 프로젝트를 만들고 폼을 설정하는 것입니다.  
@@ -178,11 +178,11 @@ ms.locfileid: "59302467"
 ## <a name="next-steps"></a>다음 단계  
  Windows Forms 응용 프로그램에서 컨트롤 정렬에 대 한 여러 레이아웃 기능이 있습니다. 보십시오 일부 조합은 다음과 같습니다.  
   
--   사용 하 여 양식 작성을 <xref:System.Windows.Forms.TableLayoutPanel> 제어 합니다. 세부 정보를 참조 하세요. [연습: TableLayoutPanel을 사용 하 여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)합니다. 값을 변경 합니다 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤의 <xref:System.Windows.Forms.Control.Padding%2A> 속성인 뿐만 <xref:System.Windows.Forms.Control.Margin%2A> 해당 자식 컨트롤의 속성.  
+- 사용 하 여 양식 작성을 <xref:System.Windows.Forms.TableLayoutPanel> 제어 합니다. 세부 정보를 참조 하세요. [연습: TableLayoutPanel을 사용 하 여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)합니다. 값을 변경 합니다 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤의 <xref:System.Windows.Forms.Control.Padding%2A> 속성인 뿐만 <xref:System.Windows.Forms.Control.Margin%2A> 해당 자식 컨트롤의 속성.  
   
--   사용 하 여 동일한 실험 시도 <xref:System.Windows.Forms.FlowLayoutPanel> 제어 합니다. 세부 정보를 참조 하세요. [연습: FlowLayoutPanel을 사용 하 여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)합니다.  
+- 사용 하 여 동일한 실험 시도 <xref:System.Windows.Forms.FlowLayoutPanel> 제어 합니다. 세부 정보를 참조 하세요. [연습: FlowLayoutPanel을 사용 하 여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)합니다.  
   
--   자식 컨트롤을 도킹 하 여 실험을 <xref:System.Windows.Forms.Panel> 제어 합니다. 합니다 <xref:System.Windows.Forms.Control.Padding%2A> 속성이의 보다 일반적인 인식 합니다 <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A> 속성을 수행할 수는 경우에는 자식 컨트롤을 배치 하 여를 <xref:System.Windows.Forms.Panel> 컨트롤과 자식 컨트롤의 설정 <xref:System.Windows.Forms.Control.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Fill>. 설정 된 <xref:System.Windows.Forms.Panel> 컨트롤의 <xref:System.Windows.Forms.Control.Padding%2A> 속성 다양 한 값을 미치는 영향을 확인 합니다.  
+- 자식 컨트롤을 도킹 하 여 실험을 <xref:System.Windows.Forms.Panel> 제어 합니다. 합니다 <xref:System.Windows.Forms.Control.Padding%2A> 속성이의 보다 일반적인 인식 합니다 <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A> 속성을 수행할 수는 경우에는 자식 컨트롤을 배치 하 여를 <xref:System.Windows.Forms.Panel> 컨트롤과 자식 컨트롤의 설정 <xref:System.Windows.Forms.Control.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Fill>. 설정 된 <xref:System.Windows.Forms.Panel> 컨트롤의 <xref:System.Windows.Forms.Control.Padding%2A> 속성 다양 한 값을 미치는 영향을 확인 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

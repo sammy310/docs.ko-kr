@@ -3,11 +3,11 @@ title: 큐 및 신뢰할 수 있는 세션
 ms.date: 03/30/2017
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
 ms.openlocfilehash: 1fb7d7db36aa51c63789b6daf0ac3689c87ace5c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946694"
 ---
 # <a name="queues-and-reliable-sessions"></a>큐 및 신뢰할 수 있는 세션
 큐 및 신뢰할 수 있는 세션은 신뢰할 수 있는 메시징을 구현 하는 Windows Communication Foundation (WCF) 기능. 이 단원의 항목에서는 WCF 신뢰할 수 있는 메시징 기능을 설명 합니다.  
@@ -16,15 +16,15 @@ ms.locfileid: "59196829"
   
  신뢰할 수 있는 메시징의 주요 요소는 다음과 같습니다.  
   
--   메시지 전송 실패 또는 전송 실패와 상관없이 소스에서 대상으로 보낸 메시지에 대한 보증을 전송합니다.  
+- 메시지 전송 실패 또는 전송 실패와 상관없이 소스에서 대상으로 보낸 메시지에 대한 보증을 전송합니다.  
   
--   소스와 대상을 서로 구분하면 소스 및 대상의 실패와 복구를 따로 관리할 수 있으며 소스나 대상을 사용할 수 없는 경우라도 메시지를 안전하게 전송 및 배달할 수 있습니다.  
+- 소스와 대상을 서로 구분하면 소스 및 대상의 실패와 복구를 따로 관리할 수 있으며 소스나 대상을 사용할 수 없는 경우라도 메시지를 안전하게 전송 및 배달할 수 있습니다.  
   
  하지만 신뢰할 수 있는 메시징에는 대기 시간이 길다는 단점이 있습니다. 대기 시간이란 메시지가 소스에서 대상까지 도달하는 데 걸리는 시간입니다. 따라서 WCF, 신뢰할 수 있는 메시징에 대 한 다음과 같은 유형의 제공 합니다.  
   
--   [신뢰할 수 있는 세션](../../../../docs/framework/wcf/feature-details/reliable-sessions.md), 대기 시간이 길다는 단점 없이 안전 하 게 전송  
+- [신뢰할 수 있는 세션](../../../../docs/framework/wcf/feature-details/reliable-sessions.md), 대기 시간이 길다는 단점 없이 안전 하 게 전송  
   
--   [WCF의 큐](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md), 신뢰할 수 있는 전송 및 원본과 대상 간의 분리를 제공 하는 합니다.  
+- [WCF의 큐](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md), 신뢰할 수 있는 전송 및 원본과 대상 간의 분리를 제공 하는 합니다.  
   
 ## <a name="reliable-sessions"></a>신뢰할 수 있는 세션  
  신뢰할 수 있는 세션에서는 메시징 엔드포인트(소스와 대상)를 분리하는 매개자의 형식이나 개수에 상관없이, WS-ReliableMessaging 프로토콜을 사용하여 소스와 대상 간의 안전한 종단 간 메시지 전송을 제공합니다. 여기에는 엔드포인트 간의 메시지 흐름에 필요한, SOAP를 사용하지 않는 전송 매개자(예: HTTP 프록시) 또는 SOAP를 사용하는 매개자(예: SOAP 기반 라우터나 브리지)가 포함됩니다. 전송에 실패한 경우 신뢰할 수 있는 세션은 메모리 내 전송 창을 사용하여 SOAP 메시지 수준 오류를 마스킹하고 다시 연결합니다.  

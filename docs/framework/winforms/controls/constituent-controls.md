@@ -10,11 +10,11 @@ helpviewer_keywords:
 - user controls [Windows Forms], constituent controls
 ms.assetid: 5565e720-198b-4bbd-a2bd-c447ba641798
 ms.openlocfilehash: 76a5a4f9b02a71616d247a1bb0f03cc0aec1d70d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956076"
 ---
 # <a name="constituent-controls"></a>구성 요소 컨트롤
 사용자 정의 컨트롤을 구성하는 컨트롤, 즉 *구성 요소컨트롤*은 사용자 지정 그래픽 렌더링을 수행할 때 사용 범위가 상대적으로 제한됩니다. 모든 Windows Forms 컨트롤을 통해 자신의 고유한 렌더링 처리 <xref:System.Windows.Forms.Control.OnPaint%2A> 메서드. 이 메서드는 protected로 선언되므로 개발자가 액세스할 수 없으며, 이에 따라 컨트롤을 그릴 때 실행되는 것을 막을 수 없습니다. 그러나 이러한 이유로 구성 요소 컨트롤의 모양에 적용되는 코드를 추가할 수 없는 것은 아닙니다. 이벤트 처리기를 추가하면 추가적 렌더링을 수행할 수 있습니다. 예를 들어, 제작 하는 <xref:System.Windows.Forms.UserControl> 라는 단추가 있는 `MyButton`합니다. 에 의해 제공 된 것 이외의 추가 렌더링 하려는 경우는 <xref:System.Web.UI.WebControls.Button>, 다음과 비슷한 사용자 정의 컨트롤에 코드 추가 합니다.  

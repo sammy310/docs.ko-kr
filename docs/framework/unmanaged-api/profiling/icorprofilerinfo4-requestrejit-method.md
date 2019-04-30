@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5ddad2497f18aa510ade41f58ba20c9de1a46ce5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000638"
 ---
 # <a name="icorprofilerinfo4requestrejit-method"></a>ICorProfilerInfo4::RequestReJIT 메서드
 지정된 함수의 모든 인스턴스에 대한 JIT 다시 컴파일을 요청합니다.  

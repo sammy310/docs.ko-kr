@@ -12,11 +12,11 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 5f445633-529c-4091-8a2c-13035ac8c41b
 ms.openlocfilehash: 6be388292ce2c73b9ef555ea6b00c986c99dc11a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010139"
 ---
 # <a name="drawings-how-to-topics"></a>그리기 방법 항목
 이 섹션의에서 항목에서는 사용 하는 방법에 설명 <xref:System.Windows.Media.Drawing> 도형, 이미지 또는 텍스트를 그릴 개체입니다.  

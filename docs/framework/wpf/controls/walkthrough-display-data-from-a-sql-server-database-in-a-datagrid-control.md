@@ -9,11 +9,11 @@ helpviewer_keywords:
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
 ms.openlocfilehash: 274ec2e8ef16190da53061bb197bc3b1a1fadcf8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024085"
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>연습: DataGrid 컨트롤에는 SQL Server 데이터베이스에서 데이터를 표시 합니다.
 
@@ -23,9 +23,9 @@ ms.locfileid: "59336111"
 
 이 연습을 완료하려면 다음 구성 요소가 필요합니다.
 
--   Visual Studio.
+- Visual Studio.
 
--   SQL Server 또는 연결 된 AdventureWorks 샘플 데이터베이스가 있는 SQL Server Express의 실행 중인 인스턴스에 액세스 합니다. AdventureWorks 데이터베이스를 다운로드할 수 있습니다 합니다 [GitHub](https://github.com/Microsoft/sql-server-samples/releases)합니다.
+- SQL Server 또는 연결 된 AdventureWorks 샘플 데이터베이스가 있는 SQL Server Express의 실행 중인 인스턴스에 액세스 합니다. AdventureWorks 데이터베이스를 다운로드할 수 있습니다 합니다 [GitHub](https://github.com/Microsoft/sql-server-samples/releases)합니다.
 
 ## <a name="create-entity-classes"></a>엔터티 클래스 만들기
 

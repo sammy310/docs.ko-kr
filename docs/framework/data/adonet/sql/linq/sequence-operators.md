@@ -3,20 +3,20 @@ title: 시퀀스 연산자
 ms.date: 03/30/2017
 ms.assetid: 4d332d32-3806-4451-b7af-25af269194ae
 ms.openlocfilehash: 62cb654922af9df65b0ec9abb67bdc33fda09339
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033438"
 ---
 # <a name="sequence-operators"></a>시퀀스 연산자
 일반적으로 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 다음과 같은 하나 이상의 품질을 갖는 시퀀스 연산자를 지원하지 않습니다.  
   
--   인덱스 매개 변수로 람다를 사용하는 연산자  
+- 인덱스 매개 변수로 람다를 사용하는 연산자  
   
--   <xref:System.Linq.Queryable.TakeWhile%2A>과 같이 연속적인 행의 속성을 사용하는 시퀀스 연산자  
+- <xref:System.Linq.Queryable.TakeWhile%2A>과 같이 연속적인 행의 속성을 사용하는 시퀀스 연산자  
   
--   <xref:System.Collections.Generic.IComparer%601>과 같이 임의의 CLR 구현을 사용하는 연산자  
+- <xref:System.Collections.Generic.IComparer%601>과 같이 임의의 CLR 구현을 사용하는 연산자  
   
 |지원되지 않는 예제|  
 |-----------------------------|  

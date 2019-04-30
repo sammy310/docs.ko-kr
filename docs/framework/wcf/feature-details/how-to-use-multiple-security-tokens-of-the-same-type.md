@@ -6,13 +6,13 @@ ms.openlocfilehash: 7de5d52587e1796ecfa05048024f8847a555655c
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59976445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972837"
 ---
 # <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>방법: 동일한 형식의 여러 보안 토큰 사용
--   [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0의 경우 클라이언트 메시지에 지정된 형식의 토큰을 하나만 포함할 수 있었지만, 이제 클라이언트 메시지에 특정 형식의 여러 토큰을 포함할 수 있습니다. 이 항목에서는 동일한 형식의 토큰을 클라이언트 메시지에 여러 개 포함하는 방법을 보여 줍니다.  
+- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0의 경우 클라이언트 메시지에 지정된 형식의 토큰을 하나만 포함할 수 있었지만, 이제 클라이언트 메시지에 특정 형식의 여러 토큰을 포함할 수 있습니다. 이 항목에서는 동일한 형식의 토큰을 클라이언트 메시지에 여러 개 포함하는 방법을 보여 줍니다.  
   
--   서비스는 이러한 방식으로 구성할 수 없습니다. 서비스는 지원하는 토큰을 하나만 포함할 수 있습니다.  
+- 서비스는 이러한 방식으로 구성할 수 없습니다. 서비스는 지원하는 토큰을 하나만 포함할 수 있습니다.  
   
 ### <a name="to-use-multiple-security-tokens-of-the-same-type"></a>동일한 형식의 보안 토큰을 여러 개 사용하려면  
   

@@ -3,11 +3,11 @@ title: 예외 및 오류 처리
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
 ms.openlocfilehash: c29b3900a36d8d5c41fee49c408a2e3fdf67680b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991421"
 ---
 # <a name="handling-exceptions-and-faults"></a>예외 및 오류 처리
 예외는 서비스 또는 클라이언트 구현 내에서 로컬 오류 통신에 사용됩니다. 이와 반대로 오류는 서버에서 클라이언트로 또는 그 반대로 가는 경우와 같이 서비스 경계 너머로 이루어지는 오류 통신에도 사용되는 말입니다. 오류 외에, 전송 채널에서 전송별 메커니즘을 사용하여 전송 수준의 오류 통신을 수행하는 경우도 많습니다. 예를 들어 HTTP 전송에서는 404 등의 상태 코드를 사용하여 엔드포인트 URL이 없는 경우(오류를 다시 보낼 엔드포인트가 없음)를 나타냅니다. 이 문서는 사용자 지정 채널 작성자를 위한 안내 자료를 제공하는 세 개의 단원으로 구성되어 있습니다. 첫 단원에서는 예외를 정의하고 throw하는 방법에 대한 안내 자료를 제공합니다. 둘째 단원에서는 오류 생성 및 소비에 대한 안내 자료를 제공합니다. 셋째 단원에서는 추적 정보를 제공하여 사용자 지정 채널 사용자의 응용 프로그램 실행 문제 해결을 돕는 방법에 대해 설명합니다.  
@@ -309,9 +309,9 @@ public class MessageFault
 ## <a name="tracing"></a>추적  
  .NET Framework에서는 디버거를 첨부하고 코드를 실행할 수 없는 경우 프로덕션 응용 프로그램 또는 일시적인 문제의 진단을 돕는 방법으로서 프로그램 실행을 추적하는 메커니즘을 제공합니다. 이 메커니즘의 핵심 구성 요소는 <xref:System.Diagnostics?displayProperty=nameWithType> 네임스페이스에 있으며 다음으로 구성됩니다.  
   
--   <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>는 쓰려는 추적 정보의 소스이고 <xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>는 <xref:System.Diagnostics.TraceSource>로부터 추적할 정보를 받아 수신기별 대상으로 출력하는 구체적인 수신기의 추상 기본 클래스입니다. 예를 들어 <xref:System.Diagnostics.XmlWriterTraceListener>에서는 추적 정보를 XML 파일로 출력합니다. 마지막으로 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>은 응용 프로그램 사용자가 추적의 자세한 정도를 추적할 수 있게 해 주며 일반적으로 구성에 지정됩니다.  
+- <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>는 쓰려는 추적 정보의 소스이고 <xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>는 <xref:System.Diagnostics.TraceSource>로부터 추적할 정보를 받아 수신기별 대상으로 출력하는 구체적인 수신기의 추상 기본 클래스입니다. 예를 들어 <xref:System.Diagnostics.XmlWriterTraceListener>에서는 추적 정보를 XML 파일로 출력합니다. 마지막으로 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>은 응용 프로그램 사용자가 추적의 자세한 정도를 추적할 수 있게 해 주며 일반적으로 구성에 지정됩니다.  
   
--   핵심 구성 요소 외에도 사용할 수 있습니다 합니다 [Service Trace Viewer 도구 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) WCF 검색 및 보기를 추적 합니다. 도구를 사용 하 여 작성 및 WCF에 의해 생성 된 추적 파일을 위해 특별히 설계 <xref:System.Diagnostics.XmlWriterTraceListener>합니다. 다음 그림에서는 추적에 관련된 다양한 구성 요소를 소개합니다.  
+- 핵심 구성 요소 외에도 사용할 수 있습니다 합니다 [Service Trace Viewer 도구 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) WCF 검색 및 보기를 추적 합니다. 도구를 사용 하 여 작성 및 WCF에 의해 생성 된 추적 파일을 위해 특별히 설계 <xref:System.Diagnostics.XmlWriterTraceListener>합니다. 다음 그림에서는 추적에 관련된 다양한 구성 요소를 소개합니다.  
   
  ![예외 및 오류 처리](../../../../docs/framework/wcf/extending/media/wcfc-tracinginchannelsc.gif "wcfc_TracingInChannelsc")  
   

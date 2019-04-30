@@ -3,11 +3,11 @@ title: 전송 보안을 사용하여 메시지에 보안 설정
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
 ms.openlocfilehash: f32e932bb6616911baa8991cb46a5940c8d285ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990966"
 ---
 # <a name="securing-messages-using-transport-security"></a>전송 보안을 사용하여 메시지에 보안 설정
 이 단원에서는 큐에 보내는 메시지를 보안 설정하는 데 사용할 수 있는 메시지 큐(MSMQ) 전송 보안에 대해 설명합니다.  
@@ -25,11 +25,11 @@ ms.locfileid: "59160890"
   
  <xref:System.ServiceModel.NetMsmqBinding> 및 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>을 사용하는 전송 보안은 전송 큐 및 대상 큐 간의 전송 시 MSMQ 메시지가 보안되는 방법에 영향을 주며, 메시지 보안은 다음을 의미합니다.  
   
--   메시지가 훼손되지 않도록 메시지에 서명합니다.  
+- 메시지가 훼손되지 않도록 메시지에 서명합니다.  
   
--   메시지가 보이지 않거나 훼손되지 않도록 메시지를 암호화합니다. 암호화하는 것이 좋지만 반드시 암호화할 필요는 없습니다.  
+- 메시지가 보이지 않거나 훼손되지 않도록 메시지를 암호화합니다. 암호화하는 것이 좋지만 반드시 암호화할 필요는 없습니다.  
   
--   거부 방지를 위해 메시지를 보낸 사람을 식별하는 대상 큐 관리자입니다.  
+- 거부 방지를 위해 메시지를 보낸 사람을 식별하는 대상 큐 관리자입니다.  
   
  MSMQ에서 인증 여부와 관계없이 대상 큐에는 ACL(액세스 제어 목록)이 있어 클라이언트가 메시지를 대상 큐에 보낼 수 있는 권한이 있는지 여부를 확인합니다. 또한 대상 큐에서 메시지를 받을 수 있는 권한이 있는지 수신 응용 프로그램을 확인합니다.  
   

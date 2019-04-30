@@ -9,11 +9,11 @@ helpviewer_keywords:
 - composite controls [WPF], hosting WPF in
 ms.assetid: 486369a9-606a-4a3b-b086-a06f2119c7b0
 ms.openlocfilehash: e5b98a33f29759a81ba1cbc1fefbd45c0e5bf736
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007151"
 ---
 # <a name="walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms"></a>연습: Windows Forms에서 3-D WPF 복합 컨트롤 호스팅
 
@@ -23,17 +23,17 @@ ms.locfileid: "59330170"
 
 이 연습에서 설명하는 작업은 다음과 같습니다.
 
--   만들기는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>합니다.
+- 만들기는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>합니다.
 
--   Windows Forms 호스트 프로젝트를 만드는 중입니다.
+- Windows Forms 호스트 프로젝트를 만드는 중입니다.
 
--   호스팅하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>합니다.
+- 호스팅하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>합니다.
 
 ## <a name="prerequisites"></a>전제 조건
 
 이 연습을 완료하려면 다음 구성 요소가 필요합니다.
 
--   Visual Studio 2017
+- Visual Studio 2017
 
 <a name="To_Create_the_UserControl"></a>
 ## <a name="create-the-usercontrol"></a>UserControl 만들기
@@ -57,11 +57,11 @@ ms.locfileid: "59330170"
 
 3. 다음에 대 한 참조를 추가 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 어셈블리:
 
-    -   PresentationCore
+    - PresentationCore
 
-    -   PresentationFramework
+    - PresentationFramework
 
-    -   WindowsBase
+    - WindowsBase
 
 4. 에 대 한 참조를 추가 합니다 `HostingWpfUserControlInWf` 프로젝트입니다.
 

@@ -11,24 +11,24 @@ helpviewer_keywords:
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
 ms.openlocfilehash: 8de87e17d1baedccfe18bfded3ccab7ab59f0a09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012479"
 ---
 # <a name="rendering-a-windows-forms-control"></a>Windows Forms 컨트롤 렌더링
 렌더링을 사용자의 화면에 시각적 표현을 만드는 프로세스를 가리킵니다. Windows Forms를 사용 하 여 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (새 Windows 그래픽 라이브러리) 렌더링 합니다. 에 대 한 액세스를 제공 하는 관리 되는 클래스 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 에 <xref:System.Drawing?displayProperty=nameWithType> 네임 스페이스 및 해당 하위 네임 스페이스입니다.  
   
  컨트롤 렌더링에는 다음 요소가 관련 됩니다.  
   
--   기본 클래스에서 제공 하는 그리기 기능 <xref:System.Windows.Forms.Control?displayProperty=nameWithType>합니다.  
+- 기본 클래스에서 제공 하는 그리기 기능 <xref:System.Windows.Forms.Control?displayProperty=nameWithType>합니다.  
   
--   필수 요소는 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 그래픽 라이브러리입니다.  
+- 필수 요소는 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 그래픽 라이브러리입니다.  
   
--   기 하 도형 그리기 영역입니다.  
+- 기 하 도형 그리기 영역입니다.  
   
--   그래픽 리소스를 해제 하기 위한 절차입니다.  
+- 그래픽 리소스를 해제 하기 위한 절차입니다.  
   
 ## <a name="drawing-functionality-provided-by-control"></a>컨트롤에서 제공 하는 그리기 기능  
  기본 클래스 <xref:System.Windows.Forms.Control> 그리기 기능을 통해 제공 해당 <xref:System.Windows.Forms.Control.Paint> 이벤트입니다. 컨트롤을 발생 시킵니다는 <xref:System.Windows.Forms.Control.Paint> 표시를 업데이트 해야 할 때마다 이벤트입니다. .NET Framework의 이벤트에 대 한 자세한 내용은 참조 하세요. [이벤트 처리 및 발생](../../../standard/events/index.md)합니다.  

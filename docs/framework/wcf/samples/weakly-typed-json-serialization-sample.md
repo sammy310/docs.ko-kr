@@ -3,11 +3,11 @@ title: 약한형 JSON Serialization 샘플
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
 ms.openlocfilehash: b0e9617ad5d616e8921fbf142085f2758f3e0cd4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006358"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>약한형 JSON Serialization 샘플
 사용자 정의 형식을 지정된 통신 형식으로 serialize하거나 통신 형식을 사용자 정의 형식으로 다시 deserialize할 경우 서비스와 클라이언트 모두에서 지정된 사용자 정의 형식을 사용할 수 있어야 합니다. 보통 이렇게 하기 위해 이 사용자 정의 형식에 <xref:System.Runtime.Serialization.DataContractAttribute> 특성을 적용하고 해당 멤버에 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 적용합니다. 이 메커니즘 경우에 개체 JSON (JavaScript Notation) 개체로 작업 하는 항목에 설명 된 대로 [방법: 직렬화 및 역직렬화 JSON 데이터](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)합니다.  

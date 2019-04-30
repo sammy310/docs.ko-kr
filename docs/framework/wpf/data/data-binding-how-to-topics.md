@@ -8,11 +8,11 @@ helpviewer_keywords:
 - binding data [WPF], how-to topics
 ms.assetid: a3b2563e-d879-41a7-9dfd-ac56b27fdcad
 ms.openlocfilehash: 49929dc5afaa9bc1e97589d244c2bdbbd14cdb00
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023756"
 ---
 # <a name="data-binding-how-to-topics"></a>데이터 바인딩 방법 항목
 이 섹션의에서 항목에서는 다양 한 공용 언어 런타임 (CLR) 개체 및 XML 형식의 데이터 원본에서에서 데이터 요소를 바인딩할 데이터 바인딩을 사용 하는 방법에 설명 합니다.  

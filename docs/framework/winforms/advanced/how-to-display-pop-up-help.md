@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Help [Windows Forms], adding to dialog boxes
 ms.assetid: 218aa81e-e87e-4d67-af05-11627bbdce3b
 ms.openlocfilehash: f805840ea3b1a8aef6a289dba064c468a4da0cb0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004343"
 ---
 # <a name="how-to-display-pop-up-help"></a>방법: 팝업 도움말 표시
 통해 Windows Forms에 도움말을 표시 하는 한 가지 방법은는 **도움말** 단추를 통해 액세스할 수 있는 제목 표시줄의 오른쪽에 있는 <xref:System.Windows.Forms.Form.HelpButton%2A> 속성입니다. 이 도움말 표시 유형은 대화 상자에서 사용하기에 적합합니다. 모달 대화 상자를 먼저 닫아야 다른 창으로 포커스를 이동할 수 있으므로 모달 형식으로 표시되는 대화 상자(<xref:System.Windows.Forms.Form.ShowDialog%2A> 메서드 사용)에서 외부 도움말 시스템을 가져오려면 문제가 발생합니다. 또한 사용 하 여는 **도움말** 단추는 필요 없습니다 **최소화** 단추 또는 **최대화** 단추가 제목 표시줄에 표시 합니다. 이 표준 대화 상자 규칙, 일반적으로 폼에는 있지만 **최소화** 하 고 **최대화** 단추입니다.  

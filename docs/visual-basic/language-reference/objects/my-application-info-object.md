@@ -6,11 +6,11 @@ helpviewer_keywords:
 - My.Application.AssemblyInfo object
 ms.assetid: 2f4782ed-3da2-4d88-b341-0c6f480fb7bb
 ms.openlocfilehash: 560541d6f662988c56c973cc63788da4eefd74da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051834"
 ---
 # <a name="myapplicationinfo-object"></a>My.Application.Info 개체
 버전 번호, 설명, 로드 된 어셈블리 등 응용 프로그램에 대 한 정보를 가져오기 위한 속성을 제공 합니다.  

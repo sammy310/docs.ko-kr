@@ -11,20 +11,20 @@ helpviewer_keywords:
 - Windows Forms, context-sensitive Help
 ms.assetid: 6b10c2cc-c577-4cb5-9669-e37b33416af9
 ms.openlocfilehash: 177b61cab99d21a844298632020244fa424d8d2a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971225"
 ---
 # <a name="helpprovider-component-overview-windows-forms"></a>HelpProvider 구성 요소 개요(Windows Forms)
 Windows Forms [HelpProvider](helpprovider-component-windows-forms.md) 구성 요소는 Windows 응용 프로그램을 사용 하 여 HTML 도움말 1.x 도움말 파일 (HTML Help Workshop으로 생성 된.chm 파일 또는.htm 파일)를 연결할 때 사용 됩니다. 다양 한 방법에에서 대 한 도움말을 제공할 수 있습니다.  
   
--   Windows Forms에서 컨트롤에 대 한 상황에 맞는 도움말을 제공 합니다.  
+- Windows Forms에서 컨트롤에 대 한 상황에 맞는 도움말을 제공 합니다.  
   
--   특정 대화 상자 또는 대화 상자에서 특정 컨트롤에서 상황에 맞는 도움말을 제공 합니다.  
+- 특정 대화 상자 또는 대화 상자에서 특정 컨트롤에서 상황에 맞는 도움말을 제공 합니다.  
   
--   도움말 파일을 목차, 색인 또는 검색 기능을의 기본 페이지 등의 특정 영역을 엽니다.  
+- 도움말 파일을 목차, 색인 또는 검색 기능을의 기본 페이지 등의 특정 영역을 엽니다.  
   
 ## <a name="using-the-help-provider"></a>Help Provider를 사용 하 여  
  추가 <xref:System.Windows.Forms.HelpProvider> Windows 폼에 구성 요소에는 다른 컨트롤의 도움말 속성을 노출 하는 폼에 허용 된 <xref:System.Windows.Forms.HelpProvider> 구성 요소입니다. 이 옵션을 사용 하면 Windows 폼의 컨트롤에 대 한 도움말을 제공할 수 있습니다. 사용 하 여 도움말 파일을 연결할 수 있습니다 합니다 <xref:System.Windows.Forms.HelpProvider> 구성 요소를 사용 하 여는 <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> 속성입니다. 호출 하 여 제공 된 도움말의 형식을 지정할 <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> 의 값을 제공 하는 <xref:System.Windows.Forms.HelpNavigator> 지정된 된 컨트롤에 대 한 열거형입니다. 호출 하 여 도움말에 대 한 키워드 또는 항목을 제공 합니다 <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> 메서드.  

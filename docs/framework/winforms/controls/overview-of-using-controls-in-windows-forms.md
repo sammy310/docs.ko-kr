@@ -10,11 +10,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
 ms.openlocfilehash: 247ec4fc11f33587e77c49244b239a574c8f3cfc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012713"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>Windows Forms에서 컨트롤 사용 개요
 이 항목에서는 Windows Forms 응용 프로그램의 필수 요소에 설명 하 고 컨트롤을 사용 하 여 Windows Forms 응용 프로그램에서 이벤트를 처리 하는 간단한 예제를 제공 합니다.  
@@ -22,9 +22,9 @@ ms.locfileid: "59207359"
 ## <a name="simple-windows-forms-applications"></a>간단한 Windows Forms 응용 프로그램  
  Windows Forms 응용 프로그램을 최소한 다음 요소로 구성 됩니다.  
   
--   파생 된 클래스를 하나 이상의 <xref:System.Windows.Forms.Form?displayProperty=nameWithType>합니다.  
+- 파생 된 클래스를 하나 이상의 <xref:System.Windows.Forms.Form?displayProperty=nameWithType>합니다.  
   
--   `Main` 메서드를 호출 하는 `static` (`shared` Visual Basic의) <xref:System.Windows.Forms.Application.Run%2A> 메서드와 전달은 <xref:System.Windows.Forms.Form> 인스턴스를 합니다. <xref:System.Windows.Forms.Application.Run%2A> 메서드 운영 체제에서 응용 프로그램에 메시지를 처리 합니다.  
+- `Main` 메서드를 호출 하는 `static` (`shared` Visual Basic의) <xref:System.Windows.Forms.Application.Run%2A> 메서드와 전달은 <xref:System.Windows.Forms.Form> 인스턴스를 합니다. <xref:System.Windows.Forms.Application.Run%2A> 메서드 운영 체제에서 응용 프로그램에 메시지를 처리 합니다.  
   
  다음 코드 예제는 Windows Forms 응용 프로그램의 필수 요소를 보여 줍니다.  
   

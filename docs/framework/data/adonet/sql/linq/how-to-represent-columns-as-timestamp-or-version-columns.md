@@ -3,11 +3,11 @@ title: '방법: 열을 타임스탬프 또는 버전 열로 표현'
 ms.date: 03/30/2017
 ms.assetid: 5afd5ce8-1d20-4bc3-a34f-49d95449f493
 ms.openlocfilehash: db73bf4880d8f5556247f7b037fca24b0ddc56d6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037741"
 ---
 # <a name="how-to-represent-columns-as-timestamp-or-version-columns"></a>방법: 열을 타임스탬프 또는 버전 열로 표현
 사용 하 여는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> 의 속성을 <xref:System.Data.Linq.Mapping.ColumnAttribute> 특성을 나타내도록 필드 또는 속성을 데이터베이스 타임 스탬프 또는 버전 번호를 포함 하는 데이터베이스 열을 지정 합니다.  

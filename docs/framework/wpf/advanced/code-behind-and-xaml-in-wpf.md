@@ -6,26 +6,26 @@ helpviewer_keywords:
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
 ms.openlocfilehash: 4a77060661cb0d71b0209cbcdeba23ffc2c6e5c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010672"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>WPF의 코드 숨김 및 XAML
 <a name="introduction"></a> 코드 숨김 태그 정의 된 개체와 결합 되는 코드를 설명 하는 용어는 때를 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지는 태그 컴파일된 합니다. 이 항목에서는 코드에 대 한 대체 인라인 코드 메커니즘 및 코드 숨김에 대 한 요구 사항 설명 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다.  
   
  이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   
--   [필수 조건](#Prerequisites)  
+- [필수 조건](#Prerequisites)  
   
--   [코드 숨김 및 XAML 언어](#codebehind_and_the_xaml_language)  
+- [코드 숨김 및 XAML 언어](#codebehind_and_the_xaml_language)  
   
--   [코드 숨김, 이벤트 처리기 및 WPF의 Partial 클래스 요구 사항](#Code_behind__Event_Handler__and_Partial_Class)  
+- [코드 숨김, 이벤트 처리기 및 WPF의 Partial 클래스 요구 사항](#Code_behind__Event_Handler__and_Partial_Class)  
   
--   [x:Code](#x_Code)  
+- [x:Code](#x_Code)  
   
--   [인라인 코드 제한 사항](#Inline_Code_Limitations)  
+- [인라인 코드 제한 사항](#Inline_Code_Limitations)  
   
 <a name="Prerequisites"></a>   
 ## <a name="prerequisites"></a>전제 조건  
@@ -38,15 +38,15 @@ ms.locfileid: "59088577"
 <a name="Code_behind__Event_Handler__and_Partial_Class"></a>   
 ## <a name="code-behind-event-handler-and-partial-class-requirements-in-wpf"></a>코드 숨김, 이벤트 처리기 및 WPF의 Partial 클래스 요구 사항  
   
--   Partial 클래스는 루트 요소를 지 원하는 형식에서 파생 되어야 합니다.  
+- Partial 클래스는 루트 요소를 지 원하는 형식에서 파생 되어야 합니다.  
   
--   태그 컴파일 빌드 작업의 기본 동작에 따라 비워 둘 수 있습니다 파생 partial 클래스 정의의 코드 숨김 우변 note 합니다. 컴파일된 결과 지정 되지 않은 경우에 부분 클래스에 대 한 기본 지원 형식 페이지 루트를 가정 합니다. 그러나이 동작에 의존 아닙니다이 가장 좋습니다.  
+- 태그 컴파일 빌드 작업의 기본 동작에 따라 비워 둘 수 있습니다 파생 partial 클래스 정의의 코드 숨김 우변 note 합니다. 컴파일된 결과 지정 되지 않은 경우에 부분 클래스에 대 한 기본 지원 형식 페이지 루트를 가정 합니다. 그러나이 동작에 의존 아닙니다이 가장 좋습니다.  
   
--   코드 숨김에 쓰기 이벤트 처리기는 인스턴스 메서드여야 하 고 정적 메서드 일 수 없습니다. 이러한 메서드는 partial 클래스에서 지정 된 CLR 네임 스페이스 내에서 정의 해야 `x:Class`합니다. 지시 하기 위해 이벤트 처리기의 이름을 정규화 할 수 없습니다는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서가 다른 클래스 범위에서 이벤트 연결에 대 한 이벤트 처리기를 찾도록 합니다.  
+- 코드 숨김에 쓰기 이벤트 처리기는 인스턴스 메서드여야 하 고 정적 메서드 일 수 없습니다. 이러한 메서드는 partial 클래스에서 지정 된 CLR 네임 스페이스 내에서 정의 해야 `x:Class`합니다. 지시 하기 위해 이벤트 처리기의 이름을 정규화 할 수 없습니다는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서가 다른 클래스 범위에서 이벤트 연결에 대 한 이벤트 처리기를 찾도록 합니다.  
   
--   처리기는 지원 형식 시스템에서 적절 한 이벤트에 대 한 대리자를 일치 해야 합니다.  
+- 처리기는 지원 형식 시스템에서 적절 한 이벤트에 대 한 대리자를 일치 해야 합니다.  
   
--   Microsoft Visual Basic 언어에 대 한 특히 따르면 언어별 `Handles` 인스턴스 및 이벤트 처리기의 선언에서 특성을 사용 하 여 처리기를 연결 하는 대신에서 사용 하 여 처리기를 연결할 키워드 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다. 그러나이 기술은는 몇 가지 제한 사항이 있으므로 합니다 `Handles` 키워드의 특정 기능을 모두 지원할 수 없습니다는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 같은 특정 이벤트 시스템 라우트된 이벤트 시나리오 또는 연결 된 이벤트입니다. 자세한 내용은 참조 하세요 [Visual Basic 및 WPF 이벤트 처리](visual-basic-and-wpf-event-handling.md)합니다.  
+- Microsoft Visual Basic 언어에 대 한 특히 따르면 언어별 `Handles` 인스턴스 및 이벤트 처리기의 선언에서 특성을 사용 하 여 처리기를 연결 하는 대신에서 사용 하 여 처리기를 연결할 키워드 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다. 그러나이 기술은는 몇 가지 제한 사항이 있으므로 합니다 `Handles` 키워드의 특정 기능을 모두 지원할 수 없습니다는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 같은 특정 이벤트 시스템 라우트된 이벤트 시나리오 또는 연결 된 이벤트입니다. 자세한 내용은 참조 하세요 [Visual Basic 및 WPF 이벤트 처리](visual-basic-and-wpf-event-handling.md)합니다.  
   
 <a name="x_Code"></a>   
 ## <a name="xcode"></a>x:Code  

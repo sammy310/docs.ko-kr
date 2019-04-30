@@ -11,24 +11,24 @@ helpviewer_keywords:
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
 ms.openlocfilehash: 5c22c2862ae8b948787fd5e6ca16109aa2f52aef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031254"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>스타일러스에서 입력 가로채기
 합니다 <xref:System.Windows.Input.StylusPlugIns> 아키텍처를 통해 하위 수준 제어를 구현 하기 위한 메커니즘을 제공 <xref:System.Windows.Input.Stylus> 입력과 디지털 잉크 생성 <xref:System.Windows.Ink.Stroke> 개체입니다. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 클래스는 사용자 지정 동작을 구현 하 고 최적의 성능을 위해 스타일러스 장치에서 가져온 데이터의 스트림으로 적용 메커니즘을 제공 합니다.  
   
  이 항목에는 다음과 같은 하위 단원이 포함되어 있습니다.  
   
--   [아키텍처](#Architecture)  
+- [아키텍처](#Architecture)  
   
--   [스타일러스 플러그 인을 구현합니다.](#ImplementingStylusPlugins)  
+- [스타일러스 플러그 인을 구현합니다.](#ImplementingStylusPlugins)  
   
--   [InkCanvas에 플러그 인 추가](#AddingYourPluginToAnInkCanvas)  
+- [InkCanvas에 플러그 인 추가](#AddingYourPluginToAnInkCanvas)  
   
--   [결론](#Conclusion)  
+- [결론](#Conclusion)  
   
 <a name="Architecture"></a>   
 ## <a name="architecture"></a>아키텍처  

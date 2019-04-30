@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms, creating a new form
 ms.assetid: c725559c-803e-4725-80fa-96aba93de29a
 ms.openlocfilehash: 409dd945ebd26d212f62745ce6751f7507641bb2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009060"
 ---
 # <a name="creating-a-new-windows-form"></a>새 Windows Form 만들기
 이 항목에는 첫 번째 Windows Forms 응용 프로그램을 만드는 방법을 설명하는 항목의 링크가 포함되어 있습니다. 또한 이 섹션의 항목에서는 Windows Forms 응용 프로그램을 만들 때 알고 있어야 하는 일부 기본 용어와 지침을 소개합니다. Windows Forms 응용 프로그램에 대 한 자세한 내용은 이러한, 이벤트 및 이벤트 처리, 그리고 사용자 로부터 입력을 처리 하는 방법에 사용할 수 있습니다 컨트롤에는 관련된 항목 목록을 참조 하십시오.  

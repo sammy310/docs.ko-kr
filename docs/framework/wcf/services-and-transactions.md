@@ -5,11 +5,11 @@ helpviewer_keywords:
 - service contracts [WCF], designing services and transactions
 ms.assetid: 864813ff-2709-4376-912d-f5c8d318c460
 ms.openlocfilehash: 9dfe34406bfda2c16bd2f0cd53796b2fcef07b57
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59138335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967923"
 ---
 # <a name="services-and-transactions"></a>서비스 및 트랜잭션
 Windows Communication Foundation (WCF) 응용 프로그램 클라이언트 내에서 트랜잭션을 시작 하 고 서비스 작업 내에서 트랜잭션을 조정할 수 있습니다. 클라이언트는 트랜잭션을 초기화하고 여러 서비스 작업을 호출하며 서비스 작업이 하나의 단위로 커밋되는지 또는 롤백되는지 확인합니다.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
 ms.openlocfilehash: 6a546a982b7c000e7fb5304daf7eac95d6da7e92
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990329"
 ---
 # <a name="default-nettcpbinding"></a>기본 NetTcpBinding
 이 샘플에서는 <xref:System.ServiceModel.NetTcpBinding> 바인딩을 사용하는 방법을 보여 줍니다. 이 샘플은 기반 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) 계산기 서비스를 구현 하는 합니다. 이 샘플에서 서비스는 자체 호스트됩니다. 서비스와 클라이언트 모두 콘솔 응용 프로그램입니다.  

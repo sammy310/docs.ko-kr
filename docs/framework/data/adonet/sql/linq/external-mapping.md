@@ -3,31 +3,31 @@ title: 외부 매핑
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
 ms.openlocfilehash: 4b493279307f61847b72048c5bfa9dc14a38fe29
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037897"
 ---
 # <a name="external-mapping"></a>외부 매핑
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 지원 *외부 매핑*, 있습니다 사용 하 여 별도 XML 파일을 데이터베이스의 데이터 모델과 개체 모델 간의 매핑을 지정 하는 프로세스입니다. 외부 매핑 파일을 사용하면 다음과 같은 장점이 있습니다.  
   
--   매핑 코드를 응용 프로그램 코드와 따로 유지할 수 있어 응용 프로그램 코드를 간단하게 표시할 수 있습니다.  
+- 매핑 코드를 응용 프로그램 코드와 따로 유지할 수 있어 응용 프로그램 코드를 간단하게 표시할 수 있습니다.  
   
--   외부 매핑 파일을 구성 파일처럼 사용할 수 있습니다. 예를 들어 외부 매핑 파일을 바꾸는 방법으로 이진 파일을 배포한 후 응용 프로그램의 동작을 업데이트할 수 있습니다.  
+- 외부 매핑 파일을 구성 파일처럼 사용할 수 있습니다. 예를 들어 외부 매핑 파일을 바꾸는 방법으로 이진 파일을 배포한 후 응용 프로그램의 동작을 업데이트할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
  매핑 파일은 XML 파일이어야 하며 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 스키마 정의 파일(.xsd)에 대해 유효성이 검사되어야 합니다.  
   
  이 때 적용되는 규칙은 다음과 같습니다.  
   
--   매핑 파일은 XML 파일이어야 합니다.  
+- 매핑 파일은 XML 파일이어야 합니다.  
   
--   XML 매핑 파일은 XML 스키마 정의 파일에 대해 유효해야 합니다. 자세한 내용은 [방법: DBML 및 외부 매핑 파일 유효성 검사](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)합니다.  
+- XML 매핑 파일은 XML 스키마 정의 파일에 대해 유효해야 합니다. 자세한 내용은 [방법: DBML 및 외부 매핑 파일 유효성 검사](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)합니다.  
   
--   외부 매핑은 특성 기반 매핑을 재정의합니다. 즉, 외부 매핑 소스를 사용하여 <xref:System.Data.Linq.DataContext>를 만들면 <xref:System.Data.Linq.DataContext>에서는 사용자가 클래스에 만든 모든 매핑 특성을 무시합니다. 이 동작은 외부 매핑 파일에 클래스가 포함되었는지 여부에 관계없이 항상 적용됩니다.  
+- 외부 매핑은 특성 기반 매핑을 재정의합니다. 즉, 외부 매핑 소스를 사용하여 <xref:System.Data.Linq.DataContext>를 만들면 <xref:System.Data.Linq.DataContext>에서는 사용자가 클래스에 만든 모든 매핑 특성을 무시합니다. 이 동작은 외부 매핑 파일에 클래스가 포함되었는지 여부에 관계없이 항상 적용됩니다.  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 특성 기반 매핑과 외부 매핑의 혼합 사용을 지원하지 않습니다.  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 특성 기반 매핑과 외부 매핑의 혼합 사용을 지원하지 않습니다.  
   
 ## <a name="xml-schema-definition-file"></a>XML 스키마 정의 파일  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 외부 매핑은 다음 XML 스키마 정의에 대해 유효해야 합니다.  

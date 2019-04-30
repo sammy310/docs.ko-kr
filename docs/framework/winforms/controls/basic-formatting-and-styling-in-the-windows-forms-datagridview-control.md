@@ -6,11 +6,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], formatting
 ms.assetid: b9b90836-1f56-4aa9-8db8-edc78fe830e8
 ms.openlocfilehash: 5e967c1bbe54095cc11e48b014600158da7fe6a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011686"
 ---
 # <a name="basic-formatting-and-styling-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤에서 기본 형식 및 스타일 지정
 `DataGridView` 컨트롤을 사용 하면 쉽게 셀의 기본 모양과 셀 값의 표시 형식을 정의할 수 있습니다. 모양을 정의할 수 있으며, 개별 셀, 특정 열과 행의 셀 또는 컨트롤의 모든 셀에 대 한 속성을 설정 하 여 스타일 서식 지정 된 `DataGridViewCellStyle` 다양 한를 통해 액세스 되는 개체 `DataGridView` 속성을 제어 합니다. 또한 처리 하 여 셀 값 등의 요인에 따라 동적으로 이러한 스타일을 수정할 수는 `CellFormatting` 이벤트입니다.  

@@ -3,11 +3,11 @@ title: XMLSerializer 샘플
 ms.date: 03/30/2017
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
 ms.openlocfilehash: 70c6eb07780296672d663c7d5b9259192b189aad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007450"
 ---
 # <a name="xmlserializer-sample"></a>XMLSerializer 샘플
 이 샘플에서는 <xref:System.Xml.Serialization.XmlSerializer>와 호환되는 형식을 serialize 및 deserialize하는 방법을 보여 줍니다. Windows Communication Foundation (WCF) 포맷터의 기본값은 <xref:System.Runtime.Serialization.DataContractSerializer> 클래스입니다. <xref:System.Xml.Serialization.XmlSerializer> 클래스를 사용할 수 없는 경우 <xref:System.Runtime.Serialization.DataContractSerializer> 클래스를 사용하여 형식을 serialize 및 deserialize할 수 있습니다. 이는 XML에 대한 정밀한 제어가 필요한 경우(예: 데이터의 일부가 XML 요소가 아닌 XML 특성이어야 하는 경우)에 자주 발생합니다. 또한는 <xref:System.Xml.Serialization.XmlSerializer> 자주 선택 되는 자동으로 비 WCF 서비스용 클라이언트를 만들 때.  

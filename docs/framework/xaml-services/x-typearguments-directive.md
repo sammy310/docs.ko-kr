@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
 ms.openlocfilehash: 1d1b10b4da1263843bdce5447f0716569c7700e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982594"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments 지시문
 전달 된 제네릭 형식의 생성자에 제네릭 인수를 입력 합니다.  
@@ -62,13 +62,13 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 ## <a name="xaml-2006-and-wpf-generic-xaml-usages"></a>XAML 2006 및 WPF 일반 XAML 사용  
  XAML 2006 사용 및 WPF 응용 프로그램에 사용 되는 XAML의 경우는 다음과 같은 제한 사항이 `x:TypeArguments` 및 일반 XAML에서 제네릭 형식 사용:  
   
--   XAML 파일의 루트 요소에만 제네릭 형식을 참조 하는 제네릭 XAML 사용을 지원할 수 있습니다.  
+- XAML 파일의 루트 요소에만 제네릭 형식을 참조 하는 제네릭 XAML 사용을 지원할 수 있습니다.  
   
--   루트 요소는 하나 이상의 형식 인수가 있는 제네릭 형식에 매핑되어야 합니다. 예로 <xref:System.Windows.Navigation.PageFunction%601>합니다. 페이지는 WPF의 XAML 제네릭 사용 지원에 대 한 기본 시나리오.  
+- 루트 요소는 하나 이상의 형식 인수가 있는 제네릭 형식에 매핑되어야 합니다. 예로 <xref:System.Windows.Navigation.PageFunction%601>합니다. 페이지는 WPF의 XAML 제네릭 사용 지원에 대 한 기본 시나리오.  
   
--   제네릭에 대 한 루트 요소 XAML 개체 요소를 사용 하 여 partial 클래스를 선언 해야 합니다 `x:Class`합니다. 빌드 작업 WPF를 정의 하는 경우에 마찬가지입니다.  
+- 제네릭에 대 한 루트 요소 XAML 개체 요소를 사용 하 여 partial 클래스를 선언 해야 합니다 `x:Class`합니다. 빌드 작업 WPF를 정의 하는 경우에 마찬가지입니다.  
   
--   `x:TypeArguments` 중첩 된 제네릭 제약을 참조할 수 없습니다.  
+- `x:TypeArguments` 중첩 된 제네릭 제약을 참조할 수 없습니다.  
   
 ## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 또는 WPF 3.0 또는 3.5 WPF 없이 XAML 2006 종속성  
  XAML 2006 또는 XAML 2009에 대 한.NET Framework XAML 서비스에서 제네릭 XAML 사용에 WPF 관련 대 한 제한이 완화 됩니다. XAML 태그는 지원 형식 시스템 및 개체 모델을 지원할 수 있는 모든 위치에서 일반 개체 요소를 인스턴스화할 수 있습니다.  

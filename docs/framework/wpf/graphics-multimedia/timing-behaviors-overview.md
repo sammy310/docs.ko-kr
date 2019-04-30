@@ -6,11 +6,11 @@ helpviewer_keywords:
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
 ms.openlocfilehash: c3403a8602cc874e993bd649851b77d7bf652cce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002341"
 ---
 # <a name="timing-behaviors-overview"></a>타이밍 동작 개요
 이 항목에서는 애니메이션 및 기타의 타이밍 동작을 설명 <xref:System.Windows.Media.Animation.Timeline> 개체입니다.  
@@ -106,9 +106,9 @@ ms.locfileid: "59129599"
   
  다음 예제는 <xref:System.Windows.Media.Animation.Storyboard> 자식이 두 <xref:System.Windows.Media.Animation.DoubleAnimation> 개체입니다. 둘 다 <xref:System.Windows.Media.Animation.DoubleAnimation> 개체에 애니메이션 효과 주기 합니다 <xref:System.Windows.FrameworkElement.Width%2A> 의 <xref:System.Windows.Shapes.Rectangle> 0 ~ 100입니다. 합니다 <xref:System.Windows.Shapes.Rectangle> 요소에 애니메이션이 적용 되지 않은 <xref:System.Windows.FrameworkElement.Width%2A> 값 500 [장치 독립적 픽셀]입니다.  
   
--   합니다 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 첫 번째 속성 <xref:System.Windows.Media.Animation.DoubleAnimation> 로 설정 되어 <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, 기본 값입니다. 결과적으로 사각형의 너비 후 100을 유지 합니다 <xref:System.Windows.Media.Animation.DoubleAnimation> 종료 합니다.  
+- 합니다 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 첫 번째 속성 <xref:System.Windows.Media.Animation.DoubleAnimation> 로 설정 되어 <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, 기본 값입니다. 결과적으로 사각형의 너비 후 100을 유지 합니다 <xref:System.Windows.Media.Animation.DoubleAnimation> 종료 합니다.  
   
--   합니다 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 속성의 두 번째 <xref:System.Windows.Media.Animation.DoubleAnimation> 로 설정 된 <xref:System.Windows.Media.Animation.FillBehavior.Stop>합니다. 결과적으로 <xref:System.Windows.FrameworkElement.Width%2A> 두 번째 <xref:System.Windows.Shapes.Rectangle> 후 500 되돌아갑니다는 <xref:System.Windows.Media.Animation.DoubleAnimation> 종료 합니다.  
+- 합니다 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 속성의 두 번째 <xref:System.Windows.Media.Animation.DoubleAnimation> 로 설정 된 <xref:System.Windows.Media.Animation.FillBehavior.Stop>합니다. 결과적으로 <xref:System.Windows.FrameworkElement.Width%2A> 두 번째 <xref:System.Windows.Shapes.Rectangle> 후 500 되돌아갑니다는 <xref:System.Windows.Media.Animation.DoubleAnimation> 종료 합니다.  
   
  [!code-xaml[animation_ovws_snippet#TBFillBehaviorExample](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbfillbehaviorexample)]  
   
@@ -116,11 +116,11 @@ ms.locfileid: "59129599"
 ## <a name="properties-that-control-the-speed-of-a-timeline"></a>타임라인의 속도를 제어하는 속성  
  <xref:System.Windows.Media.Animation.Timeline> 클래스는 해당 속도 지정 하는 것에 대 한 세 가지 속성을 제공 합니다.  
   
--   <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> – 시간이 진행 되는 부모 기준으로 하는 속도 지정 합니다.는 <xref:System.Windows.Media.Animation.Timeline>합니다. 1 보다 큰 값의 속도 높일 합니다 <xref:System.Windows.Media.Animation.Timeline> 및 해당 자식 <xref:System.Windows.Media.Animation.Timeline> 개체, 값 0과 1 사이의 속도가 저하 됩니다. 값이 1 이면 <xref:System.Windows.Media.Animation.Timeline> 부모와 같은 속도로 진행 합니다. 합니다 <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> 컨테이너 타임 라인의 설정은 모든 자식 <xref:System.Windows.Media.Animation.Timeline> 개체도 합니다.  
+- <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> – 시간이 진행 되는 부모 기준으로 하는 속도 지정 합니다.는 <xref:System.Windows.Media.Animation.Timeline>합니다. 1 보다 큰 값의 속도 높일 합니다 <xref:System.Windows.Media.Animation.Timeline> 및 해당 자식 <xref:System.Windows.Media.Animation.Timeline> 개체, 값 0과 1 사이의 속도가 저하 됩니다. 값이 1 이면 <xref:System.Windows.Media.Animation.Timeline> 부모와 같은 속도로 진행 합니다. 합니다 <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> 컨테이너 타임 라인의 설정은 모든 자식 <xref:System.Windows.Media.Animation.Timeline> 개체도 합니다.  
   
--   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> – 비율을 지정 합니다.는 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 타임 라인 소요 된 시간의 가속화 합니다. 예는 [방법: 가속 또는 감속 애니메이션](how-to-accelerate-or-decelerate-an-animation.md)합니다. 
+- <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> – 비율을 지정 합니다.는 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 타임 라인 소요 된 시간의 가속화 합니다. 예는 [방법: 가속 또는 감속 애니메이션](how-to-accelerate-or-decelerate-an-animation.md)합니다. 
   
--   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> --비율을 지정 하는 중의 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 타임 라인의 감속 합니다. 예는 [방법: 가속 또는 감속 애니메이션](how-to-accelerate-or-decelerate-an-animation.md)합니다.  
+- <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> --비율을 지정 하는 중의 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 타임 라인의 감속 합니다. 예는 [방법: 가속 또는 감속 애니메이션](how-to-accelerate-or-decelerate-an-animation.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
 

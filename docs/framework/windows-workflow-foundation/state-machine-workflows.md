@@ -3,11 +3,11 @@ title: 상태 시스템 워크플로
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
 ms.openlocfilehash: 85d7fff680b11428173dc2684b30bf2b1f46640b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004679"
 ---
 # <a name="state-machine-workflows"></a>상태 시스템 워크플로
 상태 시스템은 잘 알려진 프로그램 개발용 패러다임입니다. <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> 및 기타 작업과 함께 <xref:System.Activities.Statements.Transition> 활동은 상태 시스템 워크플로 프로그램을 빌드하는 데 사용할 수 있습니다. 이 항목에서는 상태 시스템 워크플로를 만드는 방법에 대해 간략하게 설명합니다.  
@@ -15,11 +15,11 @@ ms.locfileid: "59222993"
 ## <a name="state-machine-workflow-overview"></a>상태 시스템 워크플로 서비스 개요  
  상태 시스템 워크플로는 이벤트 구동 방식으로 워크플로를 모델링할 수 있는 모델링 스타일을 제공합니다. <xref:System.Activities.Statements.StateMachine> 활동에는 상태 시스템의 논리를 구성하는 상태 및 전환이 포함되어 있으므로 활동을 사용할 수 있는 모든 위치에서 사용할 수 있습니다. 상태 시스템 런타임에는 다음과 같은 클래스가 있습니다.  
   
--   <xref:System.Activities.Statements.StateMachine>  
+- <xref:System.Activities.Statements.StateMachine>  
   
--   <xref:System.Activities.Statements.State>  
+- <xref:System.Activities.Statements.State>  
   
--   <xref:System.Activities.Statements.Transition>  
+- <xref:System.Activities.Statements.Transition>  
   
  상태 시스템 워크플로를 만들기 위해 상태가 <xref:System.Activities.Statements.StateMachine> 활동에 추가되고 상태 간 흐름을 제어하기 위해 전환이 사용됩니다. 다음 스크린샷에서에서 합니다 [초보자를 위한 자습서](getting-started-tutorial.md) 단계 [방법: 상태 시스템 워크플로 만드는](how-to-create-a-state-machine-workflow.md), 세 가지 상태 및 세 가지 전환을 사용 하 여 상태 시스템 워크플로 보여 줍니다. **Initialize Target** 워크플로에서 첫 번째 상태를 나타내며 초기 상태입니다. 해당 상태로 이끄는 선으로 지정 하는이 **시작** 노드. 워크플로의 최종 상태 라고 **FinalState**, 워크플로가 완료 되는 시점을 나타냅니다.  
   

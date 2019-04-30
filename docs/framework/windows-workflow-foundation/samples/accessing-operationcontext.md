@@ -3,11 +3,11 @@ title: OperationContext 액세스
 ms.date: 03/30/2017
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
 ms.openlocfilehash: c104ceb22117d7cc53050a6513a4aea58fdff8c1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005604"
 ---
 # <a name="accessing-operationcontext"></a>OperationContext 액세스
 이 샘플에서는 설명 하는 방법을 메시징 활동 (<xref:System.ServiceModel.Activities.Receive> 및 <xref:System.ServiceModel.Activities.Send>)에 액세스 하려면 사용자 지정 범위 활동을 사용 하 여 사용할 수 있습니다 <xref:System.ServiceModel.OperationContext.Current%2A> 고 보내거나 들어오는 메시지 내의 사용자 지정 메시지 헤더를 검색 하거나 첨부 합니다.  
@@ -28,13 +28,13 @@ ms.locfileid: "59772884"
   
 2. URL ACL이 추가되었으면 다음 단계를 사용합니다.  
   
-    1.  솔루션을 빌드합니다.  
+    1. 솔루션을 빌드합니다.  
   
-    2.  솔루션을 마우스 오른쪽 단추로 클릭 하 고 선택 하 여 여러 개의 시작 프로젝트 설정 **시작 프로젝트 설정**합니다.  
+    2. 솔루션을 마우스 오른쪽 단추로 클릭 하 고 선택 하 여 여러 개의 시작 프로젝트 설정 **시작 프로젝트 설정**합니다.  
   
-    3.  추가 **서비스** 하 고 **클라이언트** (해당 순서) 대로 여러 시작 프로젝트로 합니다.  
+    3. 추가 **서비스** 하 고 **클라이언트** (해당 순서) 대로 여러 시작 프로젝트로 합니다.  
   
-    4.  애플리케이션을 실행합니다. 클라이언트 콘솔에 워크플로가 두 번 실행되고 있다고 표시되고 서비스 창에는 해당 워크플로의 인스턴스 ID가 표시됩니다.  
+    4. 애플리케이션을 실행합니다. 클라이언트 콘솔에 워크플로가 두 번 실행되고 있다고 표시되고 서비스 창에는 해당 워크플로의 인스턴스 ID가 표시됩니다.  
   
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  

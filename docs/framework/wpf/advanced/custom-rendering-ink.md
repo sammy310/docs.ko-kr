@@ -10,26 +10,26 @@ helpviewer_keywords:
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
 ms.openlocfilehash: b41ded25bd4eb704c6f0d67c8da1c0e6643cac5b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010633"
 ---
 # <a name="custom-rendering-ink"></a>잉크 렌더링 사용자 지정
 합니다 <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> 스트로크의 속성을 사용 하면 해당 크기, 색 및 셰이프 등 스트로크의 모양을 지정할 수 있습니다 하지만 어떤 모양을 사용자 지정 하려는 경우가 있을 수 있습니다 <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> 허용 합니다. 에어브러시, 오일 페인트 및 다른 많은 효과가 있는 모양을 렌더링하여 잉크 모양을 사용자 지정하려는 경우도 있을 수 있습니다. 사용자 지정을 구현 하 여 잉크 렌더링 사용자 지정 하는 Windows Presentation Foundation (WPF) 허용 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 고 <xref:System.Windows.Ink.Stroke> 개체입니다.  
   
  이 항목에는 다음과 같은 하위 단원이 포함되어 있습니다.  
   
--   [아키텍처](#Architecture)  
+- [아키텍처](#Architecture)  
   
--   [동적 렌더러 구현](#ImplementingADynamicRenderer)  
+- [동적 렌더러 구현](#ImplementingADynamicRenderer)  
   
--   [사용자 지정 스트로크 구현](#ImplementingCustomStrokes)  
+- [사용자 지정 스트로크 구현](#ImplementingCustomStrokes)  
   
--   [사용자 지정 InkCanvas 구현](#ImplementingACustomInkCanvas)  
+- [사용자 지정 InkCanvas 구현](#ImplementingACustomInkCanvas)  
   
--   [결론](#Conclusion)  
+- [결론](#Conclusion)  
   
 <a name="Architecture"></a>   
 ## <a name="architecture"></a>아키텍처  
@@ -75,11 +75,11 @@ ms.locfileid: "59323722"
   
  사용자 지정 스트로크에서 렌더링을 <xref:System.Windows.Controls.InkCanvas> 다음을 수행 합니다.  
   
--   파생 된 클래스를 만들기는 <xref:System.Windows.Controls.InkCanvas>합니다.  
+- 파생 된 클래스를 만들기는 <xref:System.Windows.Controls.InkCanvas>합니다.  
   
--   사용자 지정 할당 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 에 <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A?displayProperty=nameWithType> 속성입니다.  
+- 사용자 지정 할당 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 에 <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A?displayProperty=nameWithType> 속성입니다.  
   
--   <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> 메서드를 재정의합니다. 이 메서드에서 InkCanvas에 추가된 원래 스트로크를 제거합니다. 만든 다음 사용자 지정 스트로크를 추가 합니다 <xref:System.Windows.Controls.InkCanvas.Strokes%2A> 속성 및 기본 클래스를 새 호출 <xref:System.Windows.Controls.InkCanvasStrokeCollectedEventArgs> 사용자 지정 스트로크를 포함 하는 합니다.  
+- <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> 메서드를 재정의합니다. 이 메서드에서 InkCanvas에 추가된 원래 스트로크를 제거합니다. 만든 다음 사용자 지정 스트로크를 추가 합니다 <xref:System.Windows.Controls.InkCanvas.Strokes%2A> 속성 및 기본 클래스를 새 호출 <xref:System.Windows.Controls.InkCanvasStrokeCollectedEventArgs> 사용자 지정 스트로크를 포함 하는 합니다.  
   
  다음 C# 코드에 사용자 지정 방법을 보여 줍니다 <xref:System.Windows.Controls.InkCanvas> 사용자 지정을 사용 하는 클래스 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 하 고 사용자 지정 스트로크를 수집 합니다.  
   

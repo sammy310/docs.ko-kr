@@ -3,11 +3,11 @@ title: '방법: (LINQ) (Visual Basic) 디렉터리 트리의 중복 파일 쿼�
 ms.date: 07/20/2015
 ms.assetid: 387d7c97-95dd-4a50-9761-7e9cf8ae9e6a
 ms.openlocfilehash: 81955b18755f41a582aed7768c709c8e77cffba6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024341"
 ---
 # <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>방법: (LINQ) (Visual Basic) 디렉터리 트리의 중복 파일 쿼리
 동일한 이름을 가진 파일이 둘 이상의 폴더에 있는 경우도 있습니다. 예를 들어 Visual Studio 설치 폴더 아래의 여러 폴더에 readme.htm 파일이 있습니다. 이 예제에서는 지정된 루트 폴더 아래에서 이러한 중복 파일 이름을 쿼리하는 방법을 보여 줍니다. 두 번째 예제에서는 크기 및 생성 시간도 일치하는 파일을 쿼리하는 방법을 보여 줍니다.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
 ms.openlocfilehash: 7d19c32994fdfc5587c06b979886f20ab2a04508
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048276"
 ---
 # <a name="auditing-security-events"></a>보안 이벤트 감사
 Windows Communication Foundation (WCF)를 사용 하 여 만든 응용 프로그램 감사 기능을 사용 하 여 보안 이벤트 (성공, 실패 또는 둘 다)를 기록할 수 있습니다. 이벤트는 Windows의 시스템 이벤트 로그에 기록되며 이벤트 뷰어를 사용하여 검사할 수 있습니다.  
@@ -21,9 +21,9 @@ Windows Communication Foundation (WCF)를 사용 하 여 만든 응용 프로그
 ## <a name="audit-level-and-behavior"></a>감사 수준 및 동작  
  보안 감사에는 다음과 같은 두 가지 수준이 있습니다.  
   
--   서비스 인증 수준 - 호출자에게 권한이 부여됩니다.  
+- 서비스 인증 수준 - 호출자에게 권한이 부여됩니다.  
   
--   메시지 수준에는 WCF 메시지의 유효성을 검사 하 고 호출자를 인증 합니다.  
+- 메시지 수준에는 WCF 메시지의 유효성을 검사 하 고 호출자를 인증 합니다.  
   
  감사 성공 또는 실패 이라고 수준 모두를 확인할 수 있습니다 합니다 *감사 동작*합니다.  
   

@@ -3,11 +3,11 @@ title: 측정 단위
 description: 어떻게 부동 소수점을 알아보고 부호 있는 정수 값 F# , 측정 단위 길이, 볼륨 및 대용량을 나타내기 위해 일반적으로 사용 되는 연결 될 수 있습니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: 935dbff3545f92736ce8c51de86a168429dc194f
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982542"
 ---
 # <a name="units-of-measure"></a>측정 단위
 
@@ -117,6 +117,6 @@ That temperature in degrees Celsius is    32.22.
 
 단위 라이브러리에서 사용할 수는 `FSharp.Data.UnitSystems.SI` 네임 스페이스입니다. 기호 형식으로 모두의 SI 단위를 포함 (같은 `m` 미터에 대 한)에 `UnitSymbols` 하위 네임 스페이스와 전체 이름 (같은 `meter` 미터에 대 한)에서 `UnitNames` 하위 네임 스페이스입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [F# 언어 참조](index.md)

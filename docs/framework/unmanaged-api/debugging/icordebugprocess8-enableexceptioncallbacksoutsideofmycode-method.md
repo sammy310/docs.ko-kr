@@ -7,11 +7,11 @@ ms.assetid: b3af44ec-7d41-425b-aed9-0c4379e5cbe9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 08937e87b8bd2249b8608f8ec1ed1f7734961b3b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948566"
 ---
 # <a name="icordebugprocess8enableexceptioncallbacksoutsideofmycode-method"></a>ICorDebugProcess8::EnableExceptionCallbacksOutsideOfMyCode 메서드
 [[!INCLUDE[net_v46](../../../../includes/net-v46-md.md)] 이상 버전에서 지원됨]  
@@ -33,9 +33,9 @@ HRESULT EnableExceptionCallbacksOutsideOfMyCode(
 ## <a name="remarks"></a>설명  
  `enableExceptionsOutsideOfJMC`의 값이 `false`인 경우:  
   
--   DEBUG_EXCEPTION_FIRST_CHANCE 예외 디버거 콜백이 발생 하지 않습니다.  
+- DEBUG_EXCEPTION_FIRST_CHANCE 예외 디버거 콜백이 발생 하지 않습니다.  
   
--   DEBUG_EXCEPTION_CATCH_HANDLER_FOUND 예외를 발생 하지 것입니다 콜백에서 디버거는 예외가 사용자 코드로 이스케이프 되지 않는 경우 (즉, 예외 출처에서 예외 처리기를 경로 JustMyCode 또는 JMC로 표시 된 메서드가 없습니다).  
+- DEBUG_EXCEPTION_CATCH_HANDLER_FOUND 예외를 발생 하지 것입니다 콜백에서 디버거는 예외가 사용자 코드로 이스케이프 되지 않는 경우 (즉, 예외 출처에서 예외 처리기를 경로 JustMyCode 또는 JMC로 표시 된 메서드가 없습니다).  
   
  `enableExceptionsOutsideOfJMC` 의 기본값은 `true`입니다.  
   

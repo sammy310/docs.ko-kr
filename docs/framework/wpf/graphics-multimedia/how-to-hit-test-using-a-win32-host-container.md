@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Win32 host containers [WPF], hit tests using
 ms.assetid: 9491f7f3-d8ba-4573-a888-2f064d1349dc
 ms.openlocfilehash: ac5cae5bcd94dc8bf80ff95b8971914e1fa5ba2c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59081465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025108"
 ---
 # <a name="how-to-hit-test-using-a-win32-host-container"></a>방법: Win32 호스트 컨테이너를 사용하여 적중 테스트
 내에서 시각적 개체를 만들 수는 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 시각적 개체에 대 한 호스트 창 컨테이너를 제공 하 여 창입니다. 포함된 시각적 개체에 대한 이벤트 처리를 제공하려면 호스트 창 컨테이너의 메시지 필터 루프에 전달된 메시지를 처리합니다. 참조 [자습서: Win32 응용 프로그램에서 시각적 개체 호스팅](tutorial-hosting-visual-objects-in-a-win32-application.md) 에서 시각적 개체를 호스트 하는 방법에 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 창입니다.  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
 ms.openlocfilehash: 04517e5089f55c2d2b08a492439026d33ed9069d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991076"
 ---
 # <a name="saml-tokens-and-claims"></a>SAML 토큰 및 클레임
 SAML security Assertions Markup Language () *토큰* 클레임의 XML 표현 됩니다. Windows Communication Foundation (WCF) 페더레이션된 보안 시나리오에서 사용 하 여 SAML 토큰에는 기본적으로 *발급 된 토큰*합니다.  

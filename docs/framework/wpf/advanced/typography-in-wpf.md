@@ -5,11 +5,11 @@ helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
 ms.openlocfilehash: 0fba0b8814597f58018c4c5feba85082ef035e1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031319"
 ---
 # <a name="typography-in-wpf"></a>WPF의 입력 체계
 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 주요 입력 체계 기능을 소개합니다. 이러한 기능에는 텍스트 렌더링의 향상된 품질 및 성능, [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 입력 체계 지원, 향상된 국가별 텍스트, 향상된 글꼴 지원 및 새 텍스트 API(응용 프로그래밍 인터페이스)가 포함됩니다.  
@@ -45,39 +45,39 @@ ClearType y 방향 앤티앨리어싱으로 표시된 텍스트
 ## <a name="enhanced-international-text-support"></a>향상된 국가별 텍스트 지원  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 다음과 같은 기능을 제공하여 향상된 국가별 텍스트를 지원합니다.  
   
--   모든 쓰기 시스템에서 적응형 단위를 사용하는 자동 줄 간격.  
+- 모든 쓰기 시스템에서 적응형 단위를 사용하는 자동 줄 간격.  
   
--   광범위한 국가별 텍스트 지원. 자세한 내용은 [WPF의 세계화](globalization-for-wpf.md)를 참조하세요.  
+- 광범위한 국가별 텍스트 지원. 자세한 내용은 [WPF의 세계화](globalization-for-wpf.md)를 참조하세요.  
   
--   언어 기반 줄 바꿈, 하이픈 및 양쪽 맞춤.  
+- 언어 기반 줄 바꿈, 하이픈 및 양쪽 맞춤.  
   
 <a name="Enhanced_Font_Support"></a>   
 ## <a name="enhanced-font-support"></a>향상된 글꼴 지원  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 다음과 같은 기능을 제공하여 향상된 글꼴을 지원합니다.  
   
--   모든 텍스트에 대한 유니코드. 글꼴 동작 및 선택에 문자 집합이나 코드 페이지가 더 이상 필요하지 않습니다.  
+- 모든 텍스트에 대한 유니코드. 글꼴 동작 및 선택에 문자 집합이나 코드 페이지가 더 이상 필요하지 않습니다.  
   
--   시스템 로캘과 같이 전역 설정에 독립적인 글꼴 동작.  
+- 시스템 로캘과 같이 전역 설정에 독립적인 글꼴 동작.  
   
--   별도 <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStretch>, 및 <xref:System.Windows.FontStyle> 정의 대 한 형식을 <xref:System.Windows.Media.FontFamily>합니다. [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 프로그래밍에서보다 더 많은 유연성을 제공하며, 기울임꼴과 굵게의 부울 조합을 사용하여 글꼴 패밀리를 정의합니다.  
+- 별도 <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStretch>, 및 <xref:System.Windows.FontStyle> 정의 대 한 형식을 <xref:System.Windows.Media.FontFamily>합니다. [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 프로그래밍에서보다 더 많은 유연성을 제공하며, 기울임꼴과 굵게의 부울 조합을 사용하여 글꼴 패밀리를 정의합니다.  
   
--   글꼴 이름과 독립적으로 처리되는 쓰기 방향(가로 및 세로).  
+- 글꼴 이름과 독립적으로 처리되는 쓰기 방향(가로 및 세로).  
   
--   [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 파일에서 합성 글꼴 기술을 사용하여 글꼴 연결 및 글꼴 대체. 합성 글꼴은 모든 범위의 다국어 글꼴 생성을 허용합니다. 또한 합성 글꼴은 없는 문자 모양을 표시하지 않는 메커니즘을 제공합니다. 자세한 내용은 설명을 참조는 <xref:System.Windows.Media.FontFamily> 클래스입니다.  
+- [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 파일에서 합성 글꼴 기술을 사용하여 글꼴 연결 및 글꼴 대체. 합성 글꼴은 모든 범위의 다국어 글꼴 생성을 허용합니다. 또한 합성 글꼴은 없는 문자 모양을 표시하지 않는 메커니즘을 제공합니다. 자세한 내용은 설명을 참조는 <xref:System.Windows.Media.FontFamily> 클래스입니다.  
   
--   단일 언어 글꼴 그룹을 사용하여 합성 글꼴에서 국가별 글꼴 작성. 따라서 여러 언어에 대한 글꼴을 개발할 때 리소스 비용이 절감됩니다.  
+- 단일 언어 글꼴 그룹을 사용하여 합성 글꼴에서 국가별 글꼴 작성. 따라서 여러 언어에 대한 글꼴을 개발할 때 리소스 비용이 절감됩니다.  
   
--   합성 글꼴을 문서에 포함하여 문서에 이식성 제공. 자세한 내용은 설명을 참조는 <xref:System.Windows.Media.FontFamily> 클래스입니다.  
+- 합성 글꼴을 문서에 포함하여 문서에 이식성 제공. 자세한 내용은 설명을 참조는 <xref:System.Windows.Media.FontFamily> 클래스입니다.  
   
 <a name="New_Text_APIs"></a>   
 ## <a name="new-text-application-programming-interfaces-apis"></a>새 텍스트 API(응용 프로그래밍 인터페이스)  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 응용 프로그램에 텍스트를 포함할 때 개발자가 사용할 여러 가지 텍스트 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]를 제공합니다. 이러한 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]는 세 가지 범주로 그룹화됩니다.  
   
--   **레이아웃 및 사용자 인터페이스**. [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)]에 대한 일반적인 텍스트 컨트롤입니다.  
+- **레이아웃 및 사용자 인터페이스**. [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)]에 대한 일반적인 텍스트 컨트롤입니다.  
   
--   **간단한 텍스트 그리기**. 개체에 직접 텍스트를 그릴 수 있습니다.  
+- **간단한 텍스트 그리기**. 개체에 직접 텍스트를 그릴 수 있습니다.  
   
--   **고급 텍스트 서식 지정**. 사용자 지정 텍스트 엔진을 구현할 수 있습니다.  
+- **고급 텍스트 서식 지정**. 사용자 지정 텍스트 엔진을 구현할 수 있습니다.  
   
 ### <a name="layout-and-user-interface"></a>레이아웃 및 사용자 인터페이스  
  가장 높은 수준의 기능을 텍스트 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 일반적인 제공 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 와 같은 컨트롤 <xref:System.Windows.Controls.Label>를 <xref:System.Windows.Controls.TextBlock>, 및 <xref:System.Windows.Controls.TextBox>합니다. 이러한 컨트롤은 애플리케이션 내에서 기본 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 요소를 제공하며, 텍스트를 제공하고 텍스트와 상호 작용하는 쉬운 방법을 제공합니다. 와 같은 컨트롤 <xref:System.Windows.Controls.RichTextBox> 고 <xref:System.Windows.Controls.PasswordBox> 더 고급 또는 특수화 텍스트 처리 사용 합니다. 와 같은 클래스 <xref:System.Windows.Documents.TextRange>, <xref:System.Windows.Documents.TextSelection>, 및 <xref:System.Windows.Documents.TextPointer> 유용한 텍스트 조작을 사용 하도록 설정 합니다. 이러한 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 컨트롤 속성을 같은 제공 <xref:System.Windows.Controls.Control.FontFamily%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, 및 <xref:System.Windows.Controls.Control.FontStyle%2A>, 텍스트를 렌더링 하는 데 사용 되는 글꼴을 제어할 수 있도록 합니다.  

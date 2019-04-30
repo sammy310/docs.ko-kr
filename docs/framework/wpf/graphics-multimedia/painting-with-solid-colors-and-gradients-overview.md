@@ -10,11 +10,11 @@ helpviewer_keywords:
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
 ms.openlocfilehash: 7945660f40e44596fe36a6b9d53223a0e264a064
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009463"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>단색 및 그라데이션을 사용한 그리기 개요
 이 항목에서는 사용 하는 방법을 설명 <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush>, 및 <xref:System.Windows.Media.RadialGradientBrush> 단색, 선형 그라데이션 및 방사형 그라데이션을 그릴 개체입니다.  
@@ -27,15 +27,15 @@ ms.locfileid: "59148306"
 ### <a name="using-a-solidcolorbrush-in-xaml"></a>"XAML"에서 SolidColorBrush 사용  
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서 단색으로 영역을 그리려면 다음 옵션 중 하나를 사용합니다.  
   
--   미리 정의된 단색 브러시를 이름으로 선택합니다.  예를 들어, 단추를 설정할 수 있습니다 <xref:System.Windows.Controls.Control.Background%2A> "Red" 또는 "mediumblue 로" 합니다.  단색 브러시 목록을 다른 미리 정의의 정적 속성 참조는 <xref:System.Windows.Media.Brushes> 클래스입니다. 다음은 예제입니다.  
+- 미리 정의된 단색 브러시를 이름으로 선택합니다.  예를 들어, 단추를 설정할 수 있습니다 <xref:System.Windows.Controls.Control.Background%2A> "Red" 또는 "mediumblue 로" 합니다.  단색 브러시 목록을 다른 미리 정의의 정적 속성 참조는 <xref:System.Windows.Media.Brushes> 클래스입니다. 다음은 예제입니다.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushNamedColor1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushnamedcolor1xaml)]  
   
--   단색으로 조합할 빨강, 녹색 및 파랑의 양을 지정하여 32비트 색상표에서 색을 선택합니다.  32비트 색상표에서 색을 지정하기 위한 형식은 "*#rrggbb*"입니다. 여기서 *rr*은 빨강의 상대적 양을 지정하는 2자리 16진수 숫자이고 *gg*는 녹색의 양을 지정하고, *bb*는 파랑의 양을 지정합니다.  또한 "#*aarrggbb*"로 색을 지정할 수도 있습니다. 여기서 *aa*는 색의 *알파* 값 또는 투명도를 지정합니다. 이 방법은 사용하면 부분적으로 투명한 색을 만들 수 있습니다.  다음 예제에서는 <xref:System.Windows.Controls.Control.Background%2A> 의 <xref:System.Windows.Controls.Button> 16 진수 표기법을 사용 하는 완전히 불투명 한 빨강으로 설정 됩니다.  
+- 단색으로 조합할 빨강, 녹색 및 파랑의 양을 지정하여 32비트 색상표에서 색을 선택합니다.  32비트 색상표에서 색을 지정하기 위한 형식은 "*#rrggbb*"입니다. 여기서 *rr*은 빨강의 상대적 양을 지정하는 2자리 16진수 숫자이고 *gg*는 녹색의 양을 지정하고, *bb*는 파랑의 양을 지정합니다.  또한 "#*aarrggbb*"로 색을 지정할 수도 있습니다. 여기서 *aa*는 색의 *알파* 값 또는 투명도를 지정합니다. 이 방법은 사용하면 부분적으로 투명한 색을 만들 수 있습니다.  다음 예제에서는 <xref:System.Windows.Controls.Control.Background%2A> 의 <xref:System.Windows.Controls.Button> 16 진수 표기법을 사용 하는 완전히 불투명 한 빨강으로 설정 됩니다.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushHex1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushhex1xaml)]  
   
--   속성 태그 구문을 설명 하는 데는 <xref:System.Windows.Media.SolidColorBrush>합니다. 이 구문은 좀 더 복잡하지만 브러시의 불투명도 등의 추가 설정을 지정할 수 있습니다. 다음 예제에서는 <xref:System.Windows.Controls.Control.Background%2A> 의 두 속성 <xref:System.Windows.Controls.Button> 요소는 완전히 불투명 한 빨강으로 설정 됩니다. 첫 번째 브러시 색은 미리 정의된 색 이름을 사용하여 설명됩니다. 두 번째 브러시 색은 16진수 표기법을 사용하여 설명됩니다.  
+- 속성 태그 구문을 설명 하는 데는 <xref:System.Windows.Media.SolidColorBrush>합니다. 이 구문은 좀 더 복잡하지만 브러시의 불투명도 등의 추가 설정을 지정할 수 있습니다. 다음 예제에서는 <xref:System.Windows.Controls.Control.Background%2A> 의 두 속성 <xref:System.Windows.Controls.Button> 요소는 완전히 불투명 한 빨강으로 설정 됩니다. 첫 번째 브러시 색은 미리 정의된 색 이름을 사용하여 설명됩니다. 두 번째 브러시 색은 16진수 표기법을 사용하여 설명됩니다.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushPropertyTag1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushpropertytag1xaml)]  
   
@@ -43,11 +43,11 @@ ms.locfileid: "59148306"
 ### <a name="painting-with-a-solidcolorbrush-in-code"></a>코드에서 SolidColorBrush를 사용하여 그리기  
  단색으로 영역을 그리려면 다음 옵션 중 하나를 사용합니다.  
   
--   제공한 미리 정의 된 브러시 중 하나를 사용 하 여 <xref:System.Windows.Media.Brushes> 클래스입니다. 다음 예제에서는 <xref:System.Windows.Controls.Control.Background%2A> 의 <xref:System.Windows.Controls.Button> 로 설정 된 <xref:System.Windows.Media.Brushes.Red%2A>합니다.  
+- 제공한 미리 정의 된 브러시 중 하나를 사용 하 여 <xref:System.Windows.Media.Brushes> 클래스입니다. 다음 예제에서는 <xref:System.Windows.Controls.Control.Background%2A> 의 <xref:System.Windows.Controls.Button> 로 설정 된 <xref:System.Windows.Media.Brushes.Red%2A>합니다.  
   
      [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushPredefinedBrush1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushpredefinedbrush1csharp)]  
   
--   만들기는 <xref:System.Windows.Media.SolidColorBrush> 설정 및 해당 <xref:System.Windows.Media.SolidColorBrush.Color%2A> 사용 하 여 속성을 <xref:System.Windows.Media.Color> 구조입니다. 미리 정의 된 색을 사용할 수는 <xref:System.Windows.Media.Colors> 클래스 만들 수 있습니다를 <xref:System.Windows.Media.Color> 정적을 사용 하 여 <xref:System.Windows.Media.Color.FromArgb%2A> 메서드.  
+- 만들기는 <xref:System.Windows.Media.SolidColorBrush> 설정 및 해당 <xref:System.Windows.Media.SolidColorBrush.Color%2A> 사용 하 여 속성을 <xref:System.Windows.Media.Color> 구조입니다. 미리 정의 된 색을 사용할 수는 <xref:System.Windows.Media.Colors> 클래스 만들 수 있습니다를 <xref:System.Windows.Media.Color> 정적을 사용 하 여 <xref:System.Windows.Media.Color.FromArgb%2A> 메서드.  
   
      다음 예제에서는 설정 하는 방법을 보여 줍니다 합니다 <xref:System.Windows.Media.SolidColorBrush.Color%2A> 의 속성을 <xref:System.Windows.Media.SolidColorBrush> 미리 정의 된 색을 사용 하 여 합니다.  
   
@@ -81,9 +81,9 @@ ms.locfileid: "59148306"
   
  <xref:System.Windows.Media.GradientStop> 그라데이션 브러시의 기본 빌딩 블록입니다.  그라데이션 중지점 지정 된 <xref:System.Windows.Media.GradientStop.Color%2A> 에 <xref:System.Windows.Media.GradientStop.Offset%2A> 그라데이션 축을 따라 합니다.  
   
--   그라데이션 중지점의 <xref:System.Windows.Media.GradientStop.Color%2A> 속성은 그라데이션 중지점의 색을 지정 합니다. 미리 정의 된 색을 사용 하 여 색을 설정할 수 있습니다 (제공한는 <xref:System.Windows.Media.Colors> 클래스) 또는 ScRGB 또는 ARGB 값을 지정 합니다. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서는 16진수 표기법을 사용하여 색을 설명할 수도 있습니다. 자세한 내용은 참조는 <xref:System.Windows.Media.Color> 구조입니다.  
+- 그라데이션 중지점의 <xref:System.Windows.Media.GradientStop.Color%2A> 속성은 그라데이션 중지점의 색을 지정 합니다. 미리 정의 된 색을 사용 하 여 색을 설정할 수 있습니다 (제공한는 <xref:System.Windows.Media.Colors> 클래스) 또는 ScRGB 또는 ARGB 값을 지정 합니다. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서는 16진수 표기법을 사용하여 색을 설명할 수도 있습니다. 자세한 내용은 참조는 <xref:System.Windows.Media.Color> 구조입니다.  
   
--   그라데이션 중지점의 <xref:System.Windows.Media.GradientStop.Offset%2A> 속성은 그라데이션 축에서 그라데이션 중지점의 색의 위치를 지정 합니다. 오프셋은을 <xref:System.Double> 0에서 1로 범위입니다. 그라데이션 중지점의 오프셋 값이 0에 가까울수록 색이 그라데이션의 시작에 더 가깝습니다. 그라데이션 중지점의 오프셋 값이 1에 가까울수록 색이 그라데이션의 끝에 더 가깝습니다.  
+- 그라데이션 중지점의 <xref:System.Windows.Media.GradientStop.Offset%2A> 속성은 그라데이션 축에서 그라데이션 중지점의 색의 위치를 지정 합니다. 오프셋은을 <xref:System.Double> 0에서 1로 범위입니다. 그라데이션 중지점의 오프셋 값이 0에 가까울수록 색이 그라데이션의 시작에 더 가깝습니다. 그라데이션 중지점의 오프셋 값이 1에 가까울수록 색이 그라데이션의 끝에 더 가깝습니다.  
   
  그라데이션 중지점 사이에 있는 각 점의 색은 두 경계 그라데이션 중지점으로 지정되는 색 조합으로 선형 보간됩니다. 다음 그림에서는 이전 예제의 그라데이션 중지점을 강조해서 보여 줍니다. 그라데이션 중지점에는 동그라미가 그려져 있고 그라데이션 축은 점선으로 표시됩니다.  
   

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
 ms.openlocfilehash: 1ce0e661d88b7c4d5719c4f11ef0912c5bacb587
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008360"
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>WPF에서 Shape 및 기본 그리기 개요
 이 항목에서는 사용 하 여 그리는 방법에 대해 간략히 설명 <xref:System.Windows.Shapes.Shape> 개체입니다. A <xref:System.Windows.Shapes.Shape> 유형의 <xref:System.Windows.UIElement> 화면에 도형을 그릴 수 있도록 합니다. UI 요소 이므로 <xref:System.Windows.Shapes.Shape> 내에서 개체를 사용할 수 있습니다 <xref:System.Windows.Controls.Panel> 요소 및 대부분의 컨트롤입니다.  
@@ -28,13 +28,13 @@ ms.locfileid: "59189135"
 ## <a name="shape-objects"></a>Shape 개체  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 다양 한 쉬운 준비 <xref:System.Windows.Shapes.Shape> 개체입니다.  모든 도형 개체에서 상속 된 <xref:System.Windows.Shapes.Shape> 클래스입니다. 사용 가능한 도형 개체를 포함 <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>를 <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>를 <xref:System.Windows.Shapes.Polyline>, 및 <xref:System.Windows.Shapes.Rectangle>합니다. <xref:System.Windows.Shapes.Shape> 개체에는 다음 공용 속성을 공유합니다.  
   
--   <xref:System.Windows.Shapes.Shape.Stroke%2A>: 도형의 윤곽선을 그리는 방법을 설명 합니다.  
+- <xref:System.Windows.Shapes.Shape.Stroke%2A>: 도형의 윤곽선을 그리는 방법을 설명 합니다.  
   
--   <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>: 도형의 윤곽선 두께 설명 합니다.  
+- <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>: 도형의 윤곽선 두께 설명 합니다.  
   
--   <xref:System.Windows.Shapes.Shape.Fill%2A>: 도형의 내부가 그려지는 방법을 설명 합니다.  
+- <xref:System.Windows.Shapes.Shape.Fill%2A>: 도형의 내부가 그려지는 방법을 설명 합니다.  
   
--   디바이스 독립적 픽셀 단위로 측정된 좌표 및 꼭지점을 지정하는 데이터 속성입니다.  
+- 디바이스 독립적 픽셀 단위로 측정된 좌표 및 꼭지점을 지정하는 데이터 속성입니다.  
   
  파생 되므로 <xref:System.Windows.UIElement>, 패널 및 대부분의 컨트롤 내에서 셰이프 개체를 사용할 수 있습니다. <xref:System.Windows.Controls.Canvas> 패널은 자식 개체의 절대 위치 지정을 지원 하기 때문에 복잡 한 그리기를 만들기 위한 특히 적합 합니다.  
   
@@ -154,13 +154,13 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  Stretch 속성은 다음 값 중 하나를 사용합니다.  
   
--   <xref:System.Windows.Media.Stretch.None>: <xref:System.Windows.Shapes.Shape> 개체의 콘텐츠가 확장 되지 않습니다.  
+- <xref:System.Windows.Media.Stretch.None>: <xref:System.Windows.Shapes.Shape> 개체의 콘텐츠가 확장 되지 않습니다.  
   
--   <xref:System.Windows.Media.Stretch.Fill>: <xref:System.Windows.Shapes.Shape> 개체의 콘텐츠가 레이아웃 공간을 채우도록 확장 됩니다.  가로 세로 비율은 유지되지 않습니다.  
+- <xref:System.Windows.Media.Stretch.Fill>: <xref:System.Windows.Shapes.Shape> 개체의 콘텐츠가 레이아웃 공간을 채우도록 확장 됩니다.  가로 세로 비율은 유지되지 않습니다.  
   
--   <xref:System.Windows.Media.Stretch.Uniform>: <xref:System.Windows.Shapes.Shape> 개체의 콘텐츠가 원래 가로 세로 비율을 유지 하면서 레이아웃 공간에 맞게 가능한 만큼 확장 됩니다.  
+- <xref:System.Windows.Media.Stretch.Uniform>: <xref:System.Windows.Shapes.Shape> 개체의 콘텐츠가 원래 가로 세로 비율을 유지 하면서 레이아웃 공간에 맞게 가능한 만큼 확장 됩니다.  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>: <xref:System.Windows.Shapes.Shape> 개체의 내용을 원래 가로 세로 비율을 유지 하면서 레이아웃 공간을 완전히 채우도록 확장 합니다.  
+- <xref:System.Windows.Media.Stretch.UniformToFill>: <xref:System.Windows.Shapes.Shape> 개체의 내용을 원래 가로 세로 비율을 유지 하면서 레이아웃 공간을 완전히 채우도록 확장 합니다.  
   
  인 경우는 <xref:System.Windows.Shapes.Shape> 개체의 콘텐츠가 확장는 <xref:System.Windows.Shapes.Shape> 확장 후 개체의 윤곽선을 그려집니다.  
   

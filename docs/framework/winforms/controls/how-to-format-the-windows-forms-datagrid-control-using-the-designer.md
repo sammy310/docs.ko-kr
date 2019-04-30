@@ -10,11 +10,11 @@ helpviewer_keywords:
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
 ms.openlocfilehash: fbe2aa724274022446498a89618f37787f0fa8bd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013376"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGrid 컨트롤 서식 지정
 
@@ -25,11 +25,11 @@ ms.locfileid: "59333576"
   
  서식 지정의 세 가지 기본 요소를 가지는 <xref:System.Windows.Forms.DataGrid> 제어:  
   
--   데이터 표시 되는 기본 스타일을 설정 하는 속성을 설정할 수 있습니다.  
+- 데이터 표시 되는 기본 스타일을 설정 하는 속성을 설정할 수 있습니다.  
   
--   그런 다음이 기초로 런타임에 표시 되는 특정 테이블 방식을 사용자 지정할 수 있습니다.  
+- 그런 다음이 기초로 런타임에 표시 되는 특정 테이블 방식을 사용자 지정할 수 있습니다.  
   
--   마지막으로, 색 뿐만 아니라 데이터 표에 표시 된 열을 수정할 수 있습니다 하 고 기타 서식 표시 됩니다.  
+- 마지막으로, 색 뿐만 아니라 데이터 표에 표시 된 열을 수정할 수 있습니다 하 고 기타 서식 표시 됩니다.  
   
  데이터 표 서식 지정에 사용 되는 첫 단계로,의 속성을 설정할 수는 <xref:System.Windows.Forms.DataGrid> 자체입니다. 이러한 색 및 형식을 선택할 수는 변경할 수 있습니다 다음 데이터 테이블 및 열 표시에 따라 기본을 형성 합니다.  
   

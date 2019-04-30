@@ -3,11 +3,11 @@ title: 큰 데이터 및 스트리밍
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
 ms.openlocfilehash: 25ecc1db8218dfb49f591998140d86f551c5a0d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038612"
 ---
 # <a name="large-data-and-streaming"></a>큰 데이터 및 스트리밍
 Windows Communication Foundation (WCF)는 XML 기반 통신 인프라. 일반적으로 XML 데이터에 정의 된 표준 텍스트 형식으로 인코딩된 때문에 합니다 [XML 1.0 사양](https://go.microsoft.com/fwlink/?LinkId=94838)연결, 시스템 개발자와 설계자가 일반적으로 염려 하는 전송 된 메시지의 통신 사용량 (또는 크기)에서 네트워크 및 XML의 텍스트 기반 인코딩은 이진 데이터의 효율적인 전송에 대 한 특수 한 문제를 제기 합니다.  
@@ -48,11 +48,11 @@ Windows Communication Foundation (WCF)는 XML 기반 통신 인프라. 일반적
   
  그러한 큰 데이터 콘텐츠의 전송이 이루어지는 가장 흔한 시나리오는 다음과 같은 이진 데이터 개체를 전송하는 경우입니다.  
   
--   메시지 시퀀스로 쉽게 분해할 수 없음  
+- 메시지 시퀀스로 쉽게 분해할 수 없음  
   
--   시기 적절하게 배달되어야 함  
+- 시기 적절하게 배달되어야 함  
   
--   전송을 시작할 때 전체를 사용할 수 없는 데이터.  
+- 전송을 시작할 때 전체를 사용할 수 없는 데이터.  
   
  이러한 제약이 없는 데이터의 경우에는 보통 큰 메시지 하나보다 세션 범위 내의 메시지 시퀀스로 보내는 것이 더 좋습니다. 자세한 내용은이 항목의 뒷부분에 나오는 "스트리밍 데이터" 섹션을 참조 하세요.  
   
@@ -112,9 +112,9 @@ class MyData
   
  MTOM의 경우 앞의 데이터 계약이 다음 규칙에 따라 serialize됩니다.  
   
--   `binaryBuffer`가 `null`이 아니며 각각 Base64 인코딩에 비해 MTOM 구체화 오버헤드를 정당화하기에 충분한 데이터를 포함한 경우(MIME 헤더 등) 데이터는 구체화되어 메시지와 함께 이진 MIME 부분으로 전송됩니다. 임계값을 초과하지 않은 경우 데이터는 Base64로 인코딩됩니다.  
+- `binaryBuffer`가 `null`이 아니며 각각 Base64 인코딩에 비해 MTOM 구체화 오버헤드를 정당화하기에 충분한 데이터를 포함한 경우(MIME 헤더 등) 데이터는 구체화되어 메시지와 함께 이진 MIME 부분으로 전송됩니다. 임계값을 초과하지 않은 경우 데이터는 Base64로 인코딩됩니다.  
   
--   문자열과 이진이 아닌 다른 모든 형식은 크기에 관계없이 항상 메시지 본문 내의 문자열로 표현됩니다.  
+- 문자열과 이진이 아닌 다른 모든 형식은 크기에 관계없이 항상 메시지 본문 내의 문자열로 표현됩니다.  
   
  앞의 예처럼 명시적인 데이터 계약을 사용하는 경우나, 작업에서 매개 변수 목록을 사용하는 경우나, 중첩된 데이터 계약이 있는 경우나, 컬렉션 내에 데이터 계약 개체를 전송하는 경우나 MTOM 인코딩에 대한 영향은 동일합니다. 바이트 배열은 항상 최적화 후보이며 최적화 임계값을 충족하면 최적화됩니다.  
   
@@ -129,21 +129,21 @@ class MyData
 ### <a name="restrictions"></a>제한  
  스트리밍이 활성화 되어 있으면 WCF 기능 중 상당수를 사용할 수 없습니다.  
   
--   메시지 본문의 디지털 서명은 메시지 콘텐츠 전체의 해시 계산을 필요로 하기 때문에 수행할 수 없습니다. 스트리밍을 사용하면 메시지 헤더를 생성하여 보낼 때 콘텐츠를 전부 사용할 수 없기 때문에 디지털 서명을 계산할 수 없습니다.  
+- 메시지 본문의 디지털 서명은 메시지 콘텐츠 전체의 해시 계산을 필요로 하기 때문에 수행할 수 없습니다. 스트리밍을 사용하면 메시지 헤더를 생성하여 보낼 때 콘텐츠를 전부 사용할 수 없기 때문에 디지털 서명을 계산할 수 없습니다.  
   
--   암호화에서는 디지털 서명에 의존하여 데이터가 올바르게 생성되었는지 확인합니다.  
+- 암호화에서는 디지털 서명에 의존하여 데이터가 올바르게 생성되었는지 확인합니다.  
   
--   신뢰할 수 있는 세션에서는 전송 중에 메시지가 손실된 경우 다시 배달할 수 있도록 클라이언트에 보낸 메시지를 버퍼링하고, 메시지를 서비스 구현으로 전달하기 전에 서비스에 보관하여 메시지가 시퀀스에 맞지 않게 수신된 경우 메시지 시퀀스를 보존합니다.  
+- 신뢰할 수 있는 세션에서는 전송 중에 메시지가 손실된 경우 다시 배달할 수 있도록 클라이언트에 보낸 메시지를 버퍼링하고, 메시지를 서비스 구현으로 전달하기 전에 서비스에 보관하여 메시지가 시퀀스에 맞지 않게 수신된 경우 메시지 시퀀스를 보존합니다.  
   
  이러한 기능적 제약 때문에 스트리밍에는 전송 수준 보안 옵션만 사용할 수 있으며 신뢰할 수 있는 세션을 켤 수 없습니다. 스트리밍은 다음 시스템 정의 바인딩에서만 사용할 수 있습니다.  
   
--   <xref:System.ServiceModel.BasicHttpBinding>  
+- <xref:System.ServiceModel.BasicHttpBinding>  
   
--   <xref:System.ServiceModel.NetTcpBinding>  
+- <xref:System.ServiceModel.NetTcpBinding>  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>  
+- <xref:System.ServiceModel.NetNamedPipeBinding>  
   
--   <xref:System.ServiceModel.WebHttpBinding>  
+- <xref:System.ServiceModel.WebHttpBinding>  
   
  <xref:System.ServiceModel.NetTcpBinding> 및 <xref:System.ServiceModel.NetNamedPipeBinding>의 기본 전송에는 신뢰할 수 있는 고유한 배달 및 연결 기반 세션 지원이 있기 때문에 HTTP와 달리 이 두 바인딩은 실제로 이러한 제약 조건에 의해 최소한의 영향만 받습니다.  
   
@@ -160,11 +160,11 @@ class MyData
 ### <a name="enabling-streaming"></a>스트리밍 활성화  
  다음 방법을 사용하여 스트리밍을 활성화할 수 있습니다.  
   
--   스트리밍 모드에서 요청을 보내기 및 승인, 버퍼링 모드에서 응답 승인 및 반환(<xref:System.ServiceModel.TransferMode.StreamedRequest>).  
+- 스트리밍 모드에서 요청을 보내기 및 승인, 버퍼링 모드에서 응답 승인 및 반환(<xref:System.ServiceModel.TransferMode.StreamedRequest>).  
   
--   버퍼링 모드에서 요청을 보내기 및 승인, 스트리밍 모드에서 응답 승인 및 반환(<xref:System.ServiceModel.TransferMode.StreamedResponse>).  
+- 버퍼링 모드에서 요청을 보내기 및 승인, 스트리밍 모드에서 응답 승인 및 반환(<xref:System.ServiceModel.TransferMode.StreamedResponse>).  
   
--   스트리밍 모드에서 양방향으로 요청 및 응답을 보내고 받기. (<xref:System.ServiceModel.TransferMode.Streamed>).  
+- 스트리밍 모드에서 양방향으로 요청 및 응답을 보내고 받기. (<xref:System.ServiceModel.TransferMode.Streamed>).  
   
  전송 모드를 모든 바인딩의 기본 설정인 <xref:System.ServiceModel.TransferMode.Buffered>로 설정하면 스트리밍을 비활성화할 수 있습니다. 다음 코드에서는 구성에 전송 모드를 설정하는 방법을 보여 줍니다.  
   

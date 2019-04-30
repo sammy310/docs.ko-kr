@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
 ms.openlocfilehash: 40e376f2c2584490273ec27b78fe5315cbb0315e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033724"
 ---
 # <a name="how-to-map-database-relationships"></a>방법: 데이터베이스 관계 매핑
 항상 동일하게 유지되는 모든 데이터 관계를 엔터티 클래스에서 속성 참조로 인코딩할 수 있습니다. 예를 들어 Northwind 샘플 데이터베이스에서는 일반적으로 고객이 주문을 하기 때문에 고객과 고객 주문 간의 관계가 항상 모델에 존재합니다.  
@@ -22,11 +22,11 @@ ms.locfileid: "59152882"
   
  이 항목의 뒷부분에 나오는 예제처럼 대부분의 관계는 일대다입니다. 다음과 같이 일대일 및 다대다 관계를 나타낼 수도 있습니다.  
   
--   한 일: 포함 하 여 이러한 종류의 관계를 나타내는 <xref:System.Data.Linq.EntitySet%601> 양쪽 모두에 있습니다.  
+- 한 일: 포함 하 여 이러한 종류의 관계를 나타내는 <xref:System.Data.Linq.EntitySet%601> 양쪽 모두에 있습니다.  
   
      예를 들어를 `Customer` - `SecurityCode` 고객의 보안 코드를에서 찾을 수 없습니다 있도록 만든 관계를 `Customer` 테이블 및 인증 된 사람만 액세스할 수 있습니다.  
   
--   다 대 다: 다 대 다 관계 링크 테이블의 기본 키에서에서 (라고도 합니다 *접합* 테이블) 일반적 다른 두 테이블의 외래 키 조합으로 구성 됩니다.  
+- 다 대 다: 다 대 다 관계 링크 테이블의 기본 키에서에서 (라고도 합니다 *접합* 테이블) 일반적 다른 두 테이블의 외래 키 조합으로 구성 됩니다.  
   
      예를 들어 있는 `Employee` - `Project` 링크 테이블을 사용 하 여 형성 된 다 대 다 관계 `EmployeeProject`합니다. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 `Employee`, `Project` 및 `EmployeeProject`라는 세 개의 클래스를 사용하여 이러한 관계를 모델링해야 합니다. 이 경우 `Employee` 및 `Project` 간의 관계를 변경하려면 기본 키 `EmployeeProject`의 업데이트가 필요한 것처럼 보일 수 있습니다. 그러나 이 상황을 모델링하는 최선의 방법은 기존 `EmployeeProject`를 삭제하고 새 `EmployeeProject`를 만드는 것입니다.  
   

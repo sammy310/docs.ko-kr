@@ -5,11 +5,11 @@ helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
 ms.openlocfilehash: 2dd4f82e8a100074850b21d298e91dc5dc15c59d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61999260"
 ---
 # <a name="event-logging-in-wcf"></a>WCF에서 이벤트 로깅
 Windows Communication Foundation (WCF)는 Windows 이벤트 로그에는 내부 이벤트를 추적합니다.  
@@ -20,19 +20,19 @@ Windows Communication Foundation (WCF)는 Windows 이벤트 로그에는 내부 
 ### <a name="application-event-log"></a>응용 프로그램 이벤트 로그  
  합니다 **응용 프로그램 이벤트 로그** WCF에 의해 생성 된 이벤트의 대부분을 포함 합니다. 대부분의 항목은 응용 프로그램에서 특정 기능을 시작하지 못한 것을 나타냅니다. 다음과 같은 경우를 예로 들 수 있습니다.  
   
--   메시지 로깅/추적: WCF 추적 및 메시지 로깅 실패 하면 이벤트 로그에 이벤트를 씁니다. 그러나 모든 추적 실패가 이벤트를 트리거하는 것은 아닙니다. 이벤트 로그가 추적 오류로 가득 차을 방지 하려면 WCF는 이러한 이벤트에 대 일 분 블랙 아웃 기간을 구현 합니다. 이 이벤트 로그에 추적 실패를 기록 하는 WCF, 하는 경우 수행 되지 않습니다 다시 10 분 이상에 대 한 것을 의미 합니다.  
+- 메시지 로깅/추적: WCF 추적 및 메시지 로깅 실패 하면 이벤트 로그에 이벤트를 씁니다. 그러나 모든 추적 실패가 이벤트를 트리거하는 것은 아닙니다. 이벤트 로그가 추적 오류로 가득 차을 방지 하려면 WCF는 이러한 이벤트에 대 일 분 블랙 아웃 기간을 구현 합니다. 이 이벤트 로그에 추적 실패를 기록 하는 WCF, 하는 경우 수행 되지 않습니다 다시 10 분 이상에 대 한 것을 의미 합니다.  
   
--   공유 수신기: WCF TCP Port Sharing Service를 시작 하는 데 실패할 경우 이벤트를 기록 합니다.  
+- 공유 수신기: WCF TCP Port Sharing Service를 시작 하는 데 실패할 경우 이벤트를 기록 합니다.  
   
--   [!INCLUDE[infocard](../../../../../includes/infocard-md.md)]: 서비스가 시작 되지 않을 때 이벤트를 기록 합니다.  
+- [!INCLUDE[infocard](../../../../../includes/infocard-md.md)]: 서비스가 시작 되지 않을 때 이벤트를 기록 합니다.  
   
--   시작 실패 또는 크래시 등의 위험 및 오류 이벤트  
+- 시작 실패 또는 크래시 등의 위험 및 오류 이벤트  
   
--   메시지 로깅 켜 짐: 메시지 로깅이 설정 되 면 이벤트를 기록 합니다. 이는 관리자에게 중요한 응용 프로그램 관련 정보가 메시지 헤더 및 본문에 기록될 수 있다는 것을 알리기 위해서입니다.  
+- 메시지 로깅 켜 짐: 메시지 로깅이 설정 되 면 이벤트를 기록 합니다. 이는 관리자에게 중요한 응용 프로그램 관련 정보가 메시지 헤더 및 본문에 기록될 수 있다는 것을 알리기 위해서입니다.  
   
--   `enableLoggingKnownPII` 파일의 `machineSettings` 요소에서 `machine.config` 특성이 설정되면 이벤트가 기록됩니다. 이 특성에서는 시스템에서 실행 중인 응용 프로그램 중 알려진 PII(개인적으로 식별할 수 있는 정보)의 로그가 허용되는 것이 있는지 여부를 지정합니다.  
+- `enableLoggingKnownPII` 파일의 `machineSettings` 요소에서 `machine.config` 특성이 설정되면 이벤트가 기록됩니다. 이 특성에서는 시스템에서 실행 중인 응용 프로그램 중 알려진 PII(개인적으로 식별할 수 있는 정보)의 로그가 허용되는 것이 있는지 여부를 지정합니다.  
   
--   특정 응용 프로그램에 대해 `logKnownPii` 또는 `app.config` 파일에서 `web.config` 특성이 PII 로깅을 켜도록 `true`로 설정되어 있지만 `enableLoggingKnownPII` 파일의 `machineSettings` 요소에 있는 `machine.config` 특성이 `false`로 설정되어 있으면 이벤트가 기록됩니다. 또한 `logKnownPii` 및 `enableLoggingKnownPII`가 모두 `true`로 설정되어 있으면 이벤트가 기록됩니다. 이러한 구성 설정에 대 한 자세한 내용은 보안 섹션을 참조 합니다 [메시지 로깅 구성](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) 항목입니다.  
+- 특정 응용 프로그램에 대해 `logKnownPii` 또는 `app.config` 파일에서 `web.config` 특성이 PII 로깅을 켜도록 `true`로 설정되어 있지만 `enableLoggingKnownPII` 파일의 `machineSettings` 요소에 있는 `machine.config` 특성이 `false`로 설정되어 있으면 이벤트가 기록됩니다. 또한 `logKnownPii` 및 `enableLoggingKnownPII`가 모두 `true`로 설정되어 있으면 이벤트가 기록됩니다. 이러한 구성 설정에 대 한 자세한 내용은 보안 섹션을 참조 합니다 [메시지 로깅 구성](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) 항목입니다.  
   
 ### <a name="security-event-log"></a>보안 이벤트 로그  
  합니다 **보안 이벤트 로그** WCF에서 기록 하는 보안 감사 이벤트가 포함 됩니다.  

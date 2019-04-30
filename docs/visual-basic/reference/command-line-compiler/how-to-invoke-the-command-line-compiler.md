@@ -8,11 +8,11 @@ helpviewer_keywords:
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
 ms.openlocfilehash: 67cad0df3f10ff1fa1f6a58546fe150232fe1283
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032073"
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>방법: 명령줄 컴파일러 (Visual Basic) 호출
 MS-DOS 프롬프트 라고도 하는 명령줄에 실행 파일의 이름을 입력 하 여 명령줄 컴파일러를 호출할 수 있습니다. 기본 Windows 명령 프롬프트에서에서 컴파일하는 경우에 실행 파일에 정규화 된 경로 입력 해야 합니다. 이 기본 동작을 재정의 하려면 Visual Studio 용 개발자 명령 프롬프트를 사용 하거나 경로 환경 변수를 수정 합니다. 둘 다 컴파일러 이름을 입력 하 여 모든 디렉터리에서 컴파일할 수 있습니다.  

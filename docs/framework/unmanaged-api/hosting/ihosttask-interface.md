@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cb15da31d91565d49df83099045f742866eebcaa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59081504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992838"
 ---
 # <a name="ihosttask-interface"></a>IHostTask 인터페이스
 CLR (공용 언어 런타임) 작업을 관리 하는 호스트와 통신할 수 있도록 하는 메서드를 제공 합니다.  

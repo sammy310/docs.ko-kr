@@ -5,11 +5,11 @@ helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
 ms.openlocfilehash: 4d5fe4c92f0d456942219bc3f7014f09a005aa5d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048298"
 ---
 # <a name="choosing-a-transport"></a>전송 선택
 이 항목에서는 Windows Communication Foundation (WCF)에 포함 된 세 개의 주요 전송 사이의 선택 기준을에 설명 합니다. HTTP, TCP 및 명명 된 파이프 합니다. 또한 WCF는 메시지 큐 (MSMQ 라고도 함) 전송 하지만이 문서는 메시지 큐를 다루지 않습니다.  

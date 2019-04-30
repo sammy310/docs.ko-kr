@@ -14,11 +14,11 @@ helpviewer_keywords:
 - fonts [Windows Forms], selecting
 ms.assetid: 35692c1b-0937-4b7a-9207-1ae6bdc244a0
 ms.openlocfilehash: 40679136ea62a437009b308a8b206cf251b46222
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012999"
 ---
 # <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>방법: FontDialog 구성 요소를 사용하여 글꼴 목록 표시
 합니다 [FontDialog](fontdialog-component-windows-forms.md) 구성 요소 글꼴을 선택할 수 있을 뿐만 아니라 해당 가중치 및 크기와 같은 표시 요소를 변경할 수 있습니다.  

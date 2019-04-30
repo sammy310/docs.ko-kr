@@ -7,11 +7,11 @@ helpviewer_keywords:
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
 ms.openlocfilehash: 3950df8b6f4b48a035c6ebf37d8d65c18cb82e1e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010334"
 ---
 # <a name="how-to-implement-binding-validation"></a>방법: 바인딩 유효성 검사 구현
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> 및 사용자 지정 유효성 검사 규칙을 기반으로 하는 잘못 된 값을 입력 하는 경우 사용자에 게 시각적 피드백을 제공 하는 스타일 트리거.  

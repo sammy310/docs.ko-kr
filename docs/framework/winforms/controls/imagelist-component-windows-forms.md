@@ -6,11 +6,11 @@ helpviewer_keywords:
 - image controls
 ms.assetid: 83b48634-782b-464d-9b7d-568dc6e0bef2
 ms.openlocfilehash: 61939c427a8a74ef85f269d9e8788d4c3c3b3035
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971156"
 ---
 # <a name="imagelist-component-windows-forms"></a>ImageList 구성 요소(Windows Forms)
 Windows Forms `ImageList` 구성 요소는 컨트롤에 의해 표시될 수 있는 이미지를 저장하는 데 사용됩니다. 이미지 목록을 통해 일관된 단일 이미지 카탈로그에 대한 코드를 작성할 수 있습니다.  

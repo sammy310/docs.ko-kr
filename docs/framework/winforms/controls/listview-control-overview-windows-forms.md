@@ -9,11 +9,11 @@ helpviewer_keywords:
 - list views
 ms.assetid: c9ef56c1-3bb1-4101-9f4e-e95e720f2756
 ms.openlocfilehash: a60c415427a1be994f8081725f20e867dca66aa1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012804"
 ---
 # <a name="listview-control-overview-windows-forms"></a>ListView 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ListView> 컨트롤은 아이콘이 포함된 항목 목록을 표시합니다. 목록 뷰를 사용하여 Windows 탐색기의 오른쪽 창과 같은 사용자 인터페이스를 만들 수 있습니다. 컨트롤에는 네 가지 보기 모드에 있습니다. 큰 아이콘, 작은 아이콘, 목록 및 세부 정보입니다.  

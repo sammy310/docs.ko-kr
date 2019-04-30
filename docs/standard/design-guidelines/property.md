@@ -8,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: 127cbc0c-cbed-48fd-9c89-7c5d4f98f163
 author: KrzysztofCwalina
 ms.openlocfilehash: e4ed4fd39a9ebd63b9d5dbff38dc15647d65934f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026318"
 ---
 # <a name="property-design"></a>속성 디자인
 속성 메서드 기술적으로 매우 유사 하지만, 사용 시나리오는 큰 차이가 됩니다. 스마트 필드로 보여야 합니다. 필드가 호출 구문 및 메서드의 유연성을가지고 있습니다.  

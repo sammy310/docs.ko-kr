@@ -16,11 +16,11 @@ helpviewer_keywords:
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
 ms.openlocfilehash: 42a36351ad70bc16b6cad63450ee5fcb3ed4f1ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971810"
 ---
 # <a name="date-data-type-visual-basic"></a>Date 데이터 형식(Visual Basic)
 0001년 1월 1일부터 9999년 12월 31일까지의 날짜와 오전 12:00:00(자정)부터 오후 11:59:59.9999999까지의 시간을 나타내는 IEEE 64비트(8비트) 값을 보유합니다. 각 증분은 일반 달력에서 1년 1월 1일 시작 이후 경과된 시간의 100나노초를 나타냅니다. 최대값은 10000년 1월 1일 시작 이전 100나노초를 나타냅니다.  
@@ -61,11 +61,11 @@ Dim dateInMay As New System.DateTime(1993, 5, 31, 12, 14, 0)
   
 ## <a name="programming-tips"></a>프로그래밍 팁  
   
--   **Interop 고려 사항입니다.** 자동화 개체나 COM 개체와 같이 .NET Framework용으로 작성되지 않은 구성 요소를 조작하는 경우 다른 환경의 날짜/시간 형식이 Visual Basic `Date` 형식과 호환되지 않는 것에 유의하세요. 이러한 구성 요소에 날짜/시간 인수를 전달하는 경우 새로운 Visual Basic 코드에서 이 인수를 `Date` 대신 `Double`로 선언하고 변환 메서드 <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> 및 <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>를 사용합니다.  
+- **Interop 고려 사항입니다.** 자동화 개체나 COM 개체와 같이 .NET Framework용으로 작성되지 않은 구성 요소를 조작하는 경우 다른 환경의 날짜/시간 형식이 Visual Basic `Date` 형식과 호환되지 않는 것에 유의하세요. 이러한 구성 요소에 날짜/시간 인수를 전달하는 경우 새로운 Visual Basic 코드에서 이 인수를 `Date` 대신 `Double`로 선언하고 변환 메서드 <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> 및 <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>를 사용합니다.  
   
--   **형식 문자입니다.** `Date` 에 리터럴 형식 문자 또는 식별자 형식 문자가 없습니다. 그러나 컴파일러가 숫자 기호(`# #`)로 묶인 리터럴을 `Date`로 처리합니다.  
+- **형식 문자입니다.** `Date` 에 리터럴 형식 문자 또는 식별자 형식 문자가 없습니다. 그러나 컴파일러가 숫자 기호(`# #`)로 묶인 리터럴을 `Date`로 처리합니다.  
   
--   **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.DateTime?displayProperty=nameWithType> 구조체입니다.  
+- **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.DateTime?displayProperty=nameWithType> 구조체입니다.  
   
 ## <a name="example"></a>예제  
  `Date` 데이터 형식의 변수 또는 상수는 날짜와 시간을 모두 보유합니다. 다음은 이에 대한 예입니다.  

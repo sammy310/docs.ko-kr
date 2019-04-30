@@ -16,24 +16,24 @@ helpviewer_keywords:
 - text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
 ms.openlocfilehash: 4784ddd563ccec0f7e6271700781ee1b5d3ac105
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013324"
 ---
 # <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>방법: Windows Forms RichTextBox 컨트롤을 사용하여 파일 저장
 Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤 몇 가지 형식 중 하나에 표시 될 정보를 작성할 수 있습니다.  
   
--   일반 텍스트  
+- 일반 텍스트  
   
--   유니코드 일반 텍스트  
+- 유니코드 일반 텍스트  
   
--   서식 있는 텍스트 (Rtf)  
+- 서식 있는 텍스트 (Rtf)  
   
--   OLE 개체 대신 공백 사용 하 여 RTF  
+- OLE 개체 대신 공백 사용 하 여 RTF  
   
--   OLE 개체의 텍스트 표현 사용 하 여 일반 텍스트  
+- OLE 개체의 텍스트 표현 사용 하 여 일반 텍스트  
   
  파일을 저장 하려면 호출을 <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> 메서드. 사용할 수도 있습니다는 **SaveFile** 스트림에 데이터를 저장 하는 방법입니다. 자세한 내용은 <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>을 참조하세요.  
   

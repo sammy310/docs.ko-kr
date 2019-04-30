@@ -3,11 +3,11 @@ title: 전파
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
 ms.openlocfilehash: faa0e6ecb53963587e3fc253cd8beae1dc2c4bf5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971381"
 ---
 # <a name="propagation"></a>전파
 Windows Communication Foundation (WCF) 추적 모델의 동작 전파에 설명 합니다.  
@@ -26,11 +26,11 @@ Windows Communication Foundation (WCF) 추적 모델의 동작 전파에 설명 
 ## <a name="propagation-definition"></a>전파 정의  
  다음 조건이 모두 충족되면 동작 M의 gAId가 동작 N에 전파됩니다.  
   
--   N은 M으로 인해 만들어집니다.  
+- N은 M으로 인해 만들어집니다.  
   
--   M의 gAId가 N에 알려집니다.  
+- M의 gAId가 N에 알려집니다.  
   
--   N의 gAId가 M의 gAId와 같습니다.  
+- N의 gAId가 M의 gAId와 같습니다.  
   
  다음 XML 스키마에 설명된 것처럼 gAId는 ActivityId 메시지 헤더를 통해 전파됩니다.  
   

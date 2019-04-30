@@ -13,11 +13,11 @@ ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bfa11083fad7a3ccc6a208f5f0e4b68e9e1bc18c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000430"
 ---
 # <a name="setting-up-a-profiling-environment"></a>프로파일링 환경 설정
 > [!NOTE]
@@ -25,9 +25,9 @@ ms.locfileid: "59098184"
   
  관리되는 프로세스(응용 프로그램 또는 서비스)가 시작되면 CLR(공용 언어 런타임)을 로드합니다. CLR이 초기화되면 다음 두 가지 환경 변수를 평가하여 프로세스를 프로파일러에 연결해야 할지를 결정합니다.  
   
--   COR_ENABLE_PROFILING: 이 환경 변수가 있고 1로 설정 된 경우에 CLR이 프로파일러에 연결 합니다.  
+- COR_ENABLE_PROFILING: 이 환경 변수가 있고 1로 설정 된 경우에 CLR이 프로파일러에 연결 합니다.  
   
--   COR_PROFILER: COR_ENABLE_PROFILING 패스를 확인 하는 경우 CLR이 CLSID 또는 ProgID 저장 되 었어야 이전에 레지스트리에 있는 프로파일러에 연결 합니다. COR_PROFILER 환경 변수는 다음 두 가지 예제와 같이 문자열로 정의됩니다.  
+- COR_PROFILER: COR_ENABLE_PROFILING 패스를 확인 하는 경우 CLR이 CLSID 또는 ProgID 저장 되 었어야 이전에 레지스트리에 있는 프로파일러에 연결 합니다. COR_PROFILER 환경 변수는 다음 두 가지 예제와 같이 문자열로 정의됩니다.  
   
     ```  
     set COR_PROFILER={32E2F4DA-1BEA-47ea-88F9-C5DAF691C94A}  
@@ -45,23 +45,23 @@ ms.locfileid: "59098184"
 ## <a name="environment-variable-scope"></a>환경 변수 범위  
  COR_ENABLE_PROFILING 및 COR_PROFILER 환경 변수를 설정하는 방법에 따라 영향을 미치는 범위가 결정됩니다. 다음 방법의 하나로 이들 변수를 설정할 수 있습니다.  
   
--   변수를 설정 하는 경우는 [icordebug:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) 호출 시 실행 중인 응용 프로그램에만 적용 됩니다. 변수는 환경을 상속하는 해당 응용 프로그램에 의해 시작된 기타 응용 프로그램에도 적용됩니다.  
+- 변수를 설정 하는 경우는 [icordebug:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) 호출 시 실행 중인 응용 프로그램에만 적용 됩니다. 변수는 환경을 상속하는 해당 응용 프로그램에 의해 시작된 기타 응용 프로그램에도 적용됩니다.  
   
--   명령 프롬프트 창에서 변수를 설정하면 해당 창에서 시작된 모든 응용 프로그램에 변수가 적용됩니다.  
+- 명령 프롬프트 창에서 변수를 설정하면 해당 창에서 시작된 모든 응용 프로그램에 변수가 적용됩니다.  
   
--   사용자 수준에서 변수를 설정하는 경우 파일 탐색기로 시작하는 모든 응용 프로그램에 해당 변수가 적용됩니다. 변수를 설정하고 나서 연 명령 프롬프트 창에는 이 환경 설정이 포함되고 해당 창에서 시작하는 모든 응용 프로그램도 포함됩니다. 사용자 수준 환경 변수를 설정 하려면 마우스 오른쪽 단추로 클릭 **내 컴퓨터**, 클릭 **속성**를 클릭 합니다 **고급** 탭을 클릭 **환경 변수**, 및 변수를 추가 합니다 **사용자 변수** 목록입니다.  
+- 사용자 수준에서 변수를 설정하는 경우 파일 탐색기로 시작하는 모든 응용 프로그램에 해당 변수가 적용됩니다. 변수를 설정하고 나서 연 명령 프롬프트 창에는 이 환경 설정이 포함되고 해당 창에서 시작하는 모든 응용 프로그램도 포함됩니다. 사용자 수준 환경 변수를 설정 하려면 마우스 오른쪽 단추로 클릭 **내 컴퓨터**, 클릭 **속성**를 클릭 합니다 **고급** 탭을 클릭 **환경 변수**, 및 변수를 추가 합니다 **사용자 변수** 목록입니다.  
   
--   컴퓨터 수준에서 변수를 설정하는 경우 해당 컴퓨터에서 시작되는 모든 응용 프로그램에 해당 변수가 적용됩니다. 해당 컴퓨터에서 연 명령 프롬프트 창에는 이 환경 설정이 포함되고 해당 창에서 시작하는 모든 응용 프로그램도 포함됩니다. 즉, 해당 컴퓨터의 모든 관리되는 프로세스가 프로파일러를 사용하여 시작됩니다. 컴퓨터 수준 환경 변수를 설정 하려면 마우스 오른쪽 단추로 클릭 **내 컴퓨터**, 클릭 **속성**를 클릭 합니다 **고급** 탭을 클릭 **환경 변수**, 변수를 추가 합니다 **시스템 변수** 목록 및 컴퓨터를 다시 시작 합니다. 다시 시작하고 나면 변수를 시스템 수준에서 사용할 수 있습니다.  
+- 컴퓨터 수준에서 변수를 설정하는 경우 해당 컴퓨터에서 시작되는 모든 응용 프로그램에 해당 변수가 적용됩니다. 해당 컴퓨터에서 연 명령 프롬프트 창에는 이 환경 설정이 포함되고 해당 창에서 시작하는 모든 응용 프로그램도 포함됩니다. 즉, 해당 컴퓨터의 모든 관리되는 프로세스가 프로파일러를 사용하여 시작됩니다. 컴퓨터 수준 환경 변수를 설정 하려면 마우스 오른쪽 단추로 클릭 **내 컴퓨터**, 클릭 **속성**를 클릭 합니다 **고급** 탭을 클릭 **환경 변수**, 변수를 추가 합니다 **시스템 변수** 목록 및 컴퓨터를 다시 시작 합니다. 다시 시작하고 나면 변수를 시스템 수준에서 사용할 수 있습니다.  
   
  Windows 서비스를 프로파일링할 경우 환경 변수를 설정하고 프로파일러 DLL을 등록하고 나서 컴퓨터를 다시 시작해야 합니다. 이러한 고려 사항에 대 한 자세한 내용은 섹션을 참조 하세요 [Windows 서비스 프로 파일링](#windows_service)합니다.  
   
 ## <a name="additional-considerations"></a>추가 고려 사항  
   
--   클래스에서 구현 하는 프로파일러를 [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) 하 고 [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) 인터페이스입니다. .NET Framework 버전 2.0에서 프로파일러는 `ICorProfilerCallback2`를 구현해야 합니다. 구현하지 않으면 `ICorProfilerCallback2`가 로드되지 않습니다.  
+- 클래스에서 구현 하는 프로파일러를 [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) 하 고 [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) 인터페이스입니다. .NET Framework 버전 2.0에서 프로파일러는 `ICorProfilerCallback2`를 구현해야 합니다. 구현하지 않으면 `ICorProfilerCallback2`가 로드되지 않습니다.  
   
--   특정 환경에서 한 번에 한 프로파일러에서만 프로세스를 프로파일링할 수 있습니다. 두 가지 프로파일러를 서로 다른 환경에서 등록할 수 있지만 각 프로파일러는 개별 프로세스를 프로파일링해야 합니다. 프로파일러는 프로파일링되고 있는 프로세스와 같은 주소 공간으로 매핑되는 in-process COM 서버 DLL로 구현되어야 합니다. 이는 프로파일러가 in-process로 실행됨을 의미합니다. .NET Framework는 다른 형식의 COM 서버를 지원하지 않습니다. 예를 들어 프로파일러가 원격 컴퓨터에서 응용 프로그램을 모니터링하려고 하면 프로파일러가 각 컴퓨터에서 수집기 에이전트를 구현해야 합니다. 이들 에이전트를 결과를 일괄 처리하고 중앙 데이터 수집 컴퓨터에 전달합니다.  
+- 특정 환경에서 한 번에 한 프로파일러에서만 프로세스를 프로파일링할 수 있습니다. 두 가지 프로파일러를 서로 다른 환경에서 등록할 수 있지만 각 프로파일러는 개별 프로세스를 프로파일링해야 합니다. 프로파일러는 프로파일링되고 있는 프로세스와 같은 주소 공간으로 매핑되는 in-process COM 서버 DLL로 구현되어야 합니다. 이는 프로파일러가 in-process로 실행됨을 의미합니다. .NET Framework는 다른 형식의 COM 서버를 지원하지 않습니다. 예를 들어 프로파일러가 원격 컴퓨터에서 응용 프로그램을 모니터링하려고 하면 프로파일러가 각 컴퓨터에서 수집기 에이전트를 구현해야 합니다. 이들 에이전트를 결과를 일괄 처리하고 중앙 데이터 수집 컴퓨터에 전달합니다.  
   
--   프로파일러는 in-process로 인스턴스화되는 COM 개체이므로 각 프로파일링된 응용 프로그램에는 자체 프로파일러 복사본이 있습니다. 따라서 단일 프로파일러 인스턴스는 여러 응용 프로그램에서 데이터를 처리할 필요가 없습니다. 그러나 다른 프로파일링된 응용 프로그램에서 로그 파일을 덮어쓰지 않도록 방지하려면 프로파일러의 로깅 코드에 논리를 추가해야 합니다.  
+- 프로파일러는 in-process로 인스턴스화되는 COM 개체이므로 각 프로파일링된 응용 프로그램에는 자체 프로파일러 복사본이 있습니다. 따라서 단일 프로파일러 인스턴스는 여러 응용 프로그램에서 데이터를 처리할 필요가 없습니다. 그러나 다른 프로파일링된 응용 프로그램에서 로그 파일을 덮어쓰지 않도록 방지하려면 프로파일러의 로깅 코드에 논리를 추가해야 합니다.  
   
 ## <a name="initializing-the-profiler"></a>프로파일러 초기화  
  두 가지 환경 변수 확인을 모두 통과하면 CLR에서는 COM `CoCreateInstance` 함수와 비슷한 방식으로 프로파일러의 인스턴스를 만듭니다. 프로파일러는 직접 호출을 통해 `CoCreateInstance`에 로드되지 않습니다. 따라서 스레딩 모델을 설정해야 하는 `CoInitialize`가 호출되지 않습니다. CLR에서 호출 된 [icorprofilercallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) 프로파일러에서 메서드. 이 메서드의 서명은 다음과 같습니다.  

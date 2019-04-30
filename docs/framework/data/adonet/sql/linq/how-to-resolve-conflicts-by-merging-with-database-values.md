@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1988b79c-3bfc-4c5c-a08a-86cf638bbe17
 ms.openlocfilehash: 429bca7501bd58440ee894345855141a2a2ed12c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033711"
 ---
 # <a name="how-to-resolve-conflicts-by-merging-with-database-values"></a>방법: 데이터베이스 값을 병합하여 충돌 해결
 변경 내용을 다시 제출하기 전에 예상 데이터베이스 값과 실제 데이터베이스 값의 차이점을 조정하려면 <xref:System.Data.Linq.RefreshMode.KeepChanges>를 사용하여 데이터베이스 값과 현재 클라이언트 멤버 값을 병합합니다. 자세한 내용은 참조 하세요. [낙관적 동시성: 개요](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)합니다.  

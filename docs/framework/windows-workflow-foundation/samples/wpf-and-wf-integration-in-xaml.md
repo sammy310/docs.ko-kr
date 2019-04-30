@@ -3,11 +3,11 @@ title: XAML의 WPF 및 WF 통합
 ms.date: 03/30/2017
 ms.assetid: a4f53b48-fc90-4315-bca0-ba009562f488
 ms.openlocfilehash: 188702cfc13d7e353238e108066cc3d5f1c8bda9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004715"
 ---
 # <a name="wpf-and-wf-integration-in-xaml"></a>XAML의 WPF 및 WF 통합
 이 샘플에는 단일 XAML 문서에서 Windows Presentation Foundation (WPF) 및 Windows WF (Workflow Foundation) 기능을 사용 하는 응용 프로그램을 만드는 방법을 보여 줍니다. 이를 위해이 샘플에서는 Windows WF (Workflow Foundation) 및 XAML 확장성을 사용 합니다.

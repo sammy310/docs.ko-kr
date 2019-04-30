@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c2547fcb-58eb-4377-9948-1b8d76a0f3d7
 ms.openlocfilehash: 53d3ba6969705940c403795d3764c021f0829c64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033685"
 ---
 # <a name="how-to-specify-concurrency-conflict-checking"></a>방법: 동시성 충돌 확인 지정
 <xref:System.Data.Linq.DataContext.SubmitChanges%2A>를 호출하는 경우 동시성 충돌을 검사할 데이터베이스의 열을 지정할 수 있습니다. 자세한 내용은 [방법: 동시성 충돌에 테스트할 멤버 지정](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)합니다.  

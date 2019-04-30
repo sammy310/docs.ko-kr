@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9d71b7e1265110a70329377ce8ab7430e1943c49
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61984297"
 ---
 # <a name="ihostsecuritycontext-interface"></a>IHostSecurityContext 인터페이스
 CLR (공용 언어 런타임을) 호스트에서 구현 하는 보안 컨텍스트 정보를 유지할 수 있습니다.  

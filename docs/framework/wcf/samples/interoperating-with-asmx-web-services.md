@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
 ms.openlocfilehash: 327cb3f376ef37278d8ea58f32fdb8eeb7b67c51
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59974505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989874"
 ---
 # <a name="interoperating-with-asmx-web-services"></a>ASMX 웹 서비스와의 상호 운영성
 이 샘플에는 Windows Communication Foundation (WCF) 클라이언트 응용 프로그램을 기존 ASMX 웹 서비스와 통합 하는 방법을 보여 줍니다.  

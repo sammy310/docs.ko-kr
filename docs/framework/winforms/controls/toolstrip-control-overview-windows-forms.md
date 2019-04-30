@@ -10,11 +10,11 @@ helpviewer_keywords:
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
 ms.openlocfilehash: 3e532b040d3c7859220b7f73958b63e7208b988c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009528"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>ToolStrip 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ToolStrip> 컨트롤 및 해당 관련된 클래스 도구 모음, 상태 표시줄 및 메뉴를 사용자 인터페이스 요소를 결합 하는 것에 대 한 일반적인 프레임 워크를 제공 합니다. <xref:System.Windows.Forms.ToolStrip> 컨트롤 도구 모음의 가로 또는 세로 공간을 공유할 수 있는 내부 활성화와 편집, 사용자 지정 레이아웃 및 래프팅 (rafting)를 비롯 한 다양 한 디자인 타임 환경을 제공 합니다.  
@@ -24,19 +24,19 @@ Windows Forms <xref:System.Windows.Forms.ToolStrip> 컨트롤 및 해당 관련�
 ## <a name="features-of-the-toolstrip-controls"></a>ToolStrip 컨트롤의 기능  
  사용 된 <xref:System.Windows.Forms.ToolStrip> 컨트롤:  
   
--   컨테이너 간에 공통 사용자 인터페이스를 제공 합니다.  
+- 컨테이너 간에 공통 사용자 인터페이스를 제공 합니다.  
   
--   쉽게 사용자 지정 만들기를 지 원하는 일반적인된 도구 모음 사용자 인터페이스 및 레이아웃 기능, 고급 텍스트 및 이미지, 드롭다운 단추 및 컨트롤을 래프팅, 도킹 단추와 같은 오버플로 단추 및 다시 정렬 런타임 <xref:System.Windows.Forms.ToolStrip> 항목입니다.  
+- 쉽게 사용자 지정 만들기를 지 원하는 일반적인된 도구 모음 사용자 인터페이스 및 레이아웃 기능, 고급 텍스트 및 이미지, 드롭다운 단추 및 컨트롤을 래프팅, 도킹 단추와 같은 오버플로 단추 및 다시 정렬 런타임 <xref:System.Windows.Forms.ToolStrip> 항목입니다.  
   
--   오버플로 및 런타임 항목 다시 정렬을 지원 합니다. 오버플로 기능 이동 항목 드롭다운 메뉴에 표시할 만큼 충분 한 공간이 없을 때를 <xref:System.Windows.Forms.ToolStrip>입니다.  
+- 오버플로 및 런타임 항목 다시 정렬을 지원 합니다. 오버플로 기능 이동 항목 드롭다운 메뉴에 표시할 만큼 충분 한 공간이 없을 때를 <xref:System.Windows.Forms.ToolStrip>입니다.  
   
--   일반적인 모양 및 동작의 일반적인 렌더링 모델을 통해 운영 체제를 지원 합니다.  
+- 일반적인 모양 및 동작의 일반적인 렌더링 모델을 통해 운영 체제를 지원 합니다.  
   
--   다른 컨트롤에 대 한 이벤트를 처리 하는 동일한 방식으로 모든 컨테이너 및 포함 된 항목에 대해 일관 되 게 이벤트를 처리 합니다.  
+- 다른 컨트롤에 대 한 이벤트를 처리 하는 동일한 방식으로 모든 컨테이너 및 포함 된 항목에 대해 일관 되 게 이벤트를 처리 합니다.  
   
--   항목을 끌어올 <xref:System.Windows.Forms.ToolStrip> 간 또는 한 <xref:System.Windows.Forms.ToolStrip>합니다.  
+- 항목을 끌어올 <xref:System.Windows.Forms.ToolStrip> 간 또는 한 <xref:System.Windows.Forms.ToolStrip>합니다.  
   
--   고급 레이아웃을 사용 하 여 드롭다운 목록 컨트롤 및 사용자 인터페이스 형식 편집기 만들기를 <xref:System.Windows.Forms.ToolStripDropDown>입니다.  
+- 고급 레이아웃을 사용 하 여 드롭다운 목록 컨트롤 및 사용자 인터페이스 형식 편집기 만들기를 <xref:System.Windows.Forms.ToolStripDropDown>입니다.  
   
  사용 합니다 <xref:System.Windows.Forms.ToolStripControlHost> 에서 다른 컨트롤을 사용 하는 클래스를 <xref:System.Windows.Forms.ToolStrip> 얻고이 <xref:System.Windows.Forms.ToolStrip> 에 기능.  
   

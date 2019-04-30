@@ -8,11 +8,11 @@ helpviewer_keywords:
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
 ms.openlocfilehash: 9adcd19ea48d62f4fdcab3380252ae8ec8398296
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010542"
 ---
 # <a name="dependency-property-value-precedence"></a>종속성 속성 값 우선 순위
 <a name="introduction"></a> 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 속성 시스템의 작업 방식이 종속성 속성 값에 영향을 주는 방식을 설명하고 속성 시스템의 일면이 속성의 유효 값이 적용되는 우선 순위에 관해 설명합니다.  
@@ -47,9 +47,9 @@ ms.locfileid: "59315688"
   
 4. **TemplatedParent 템플릿 속성.** 요소에는 <xref:System.Windows.FrameworkElement.TemplatedParent%2A> 템플릿의 일부로 만들어진 경우 (한 <xref:System.Windows.Controls.ControlTemplate> 또는 <xref:System.Windows.DataTemplate>). 적용 시기에 대한 자세한 내용은 이 항목의 뒷부분에 있는 [TemplatedParent](#templatedparent)를 참조하십시오. 템플릿 내에서는 다음과 같은 우선 순위가 적용됩니다.  
   
-    1.  트리거되는 <xref:System.Windows.FrameworkElement.TemplatedParent%2A> 템플릿.  
+    1. 트리거되는 <xref:System.Windows.FrameworkElement.TemplatedParent%2A> 템플릿.  
   
-    2.  속성 집합 (일반적으로 통해 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 특성)에 <xref:System.Windows.FrameworkElement.TemplatedParent%2A> 템플릿.  
+    2. 속성 집합 (일반적으로 통해 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 특성)에 <xref:System.Windows.FrameworkElement.TemplatedParent%2A> 템플릿.  
   
 5. **암시적 스타일.** `Style` 속성에만 적용됩니다. `Style` 속성은 해당 요소의 유형과 일치하는 키를 가진 스타일 리소스로 채워집니다. 해당 스타일 리소스가 페이지나 애플리케이션에 있어야 합니다. 암시적 스타일 리소스의 조회는 테마로 이어지지 않습니다.  
   
@@ -61,9 +61,9 @@ ms.locfileid: "59315688"
   
 9. **기본(테마) 스타일.** 이 스타일이 적용되는 시기, 그리고 테마 스타일에 있는 템플릿과 테마 스타일의 관계에 대한 자세한 내용은 이 항목의 뒷부분에 있는 [기본(테마) 스타일](#themestyles)을 참조하십시오. 기본 스타일 내에서는 다음과 같은 우선 순위가 적용됩니다.  
   
-    1.  테마 스타일의 활성 트리거.  
+    1. 테마 스타일의 활성 트리거.  
   
-    2.  테마 스타일의 setter.  
+    2. 테마 스타일의 setter.  
   
 10. **상속.** 몇 가지 종속성 속성은 상위 요소에서 하위 요소로 값을 상속하므로 애플리케이션 전체에서 각 요소에 따로 설정할 필요가 없습니다. 자세한 내용은 [속성 값 상속](property-value-inheritance.md)을 참조하십시오.  
   
@@ -77,11 +77,11 @@ ms.locfileid: "59315688"
 ## <a name="the-style-property"></a>스타일 속성  
  앞서 설명한 조회 순서 하나를 제외한 모든 가능한 종속성 속성에 적용 됩니다:는 <xref:System.Windows.FrameworkElement.Style%2A> 속성입니다. <xref:System.Windows.FrameworkElement.Style%2A> 속성은 고유한 것 없습니다 스타일을 적용할에 우선 순위 항목 5-8이 적용 되지 않습니다. 또한 애니메이션이 나 강제 변환 <xref:System.Windows.FrameworkElement.Style%2A> 권장 되지 않습니다 (및 애니메이션 <xref:System.Windows.FrameworkElement.Style%2A> 사용자 지정 애니메이션 클래스 필요). 하는 방법은 세 가지가 남습니다이 <xref:System.Windows.FrameworkElement.Style%2A> 속성을 설정할 수 있습니다.  
   
--   **명시적 스타일.** <xref:System.Windows.FrameworkElement.Style%2A> 속성이 직접 설정 됩니다. 대부분의 시나리오에서 스타일은 인라인으로 정의되지 않고 명시적 키를 통해 리소스로 참조됩니다. 이 경우는 스타일 속성 자체가 우선 순위 항목 3인 로컬 값처럼 작동합니다.  
+- **명시적 스타일.** <xref:System.Windows.FrameworkElement.Style%2A> 속성이 직접 설정 됩니다. 대부분의 시나리오에서 스타일은 인라인으로 정의되지 않고 명시적 키를 통해 리소스로 참조됩니다. 이 경우는 스타일 속성 자체가 우선 순위 항목 3인 로컬 값처럼 작동합니다.  
   
--   **암시적 스타일.** <xref:System.Windows.FrameworkElement.Style%2A> 속성이 직접 설정 되지 않습니다. 그러나는 <xref:System.Windows.FrameworkElement.Style%2A> 리소스 조회 시퀀스 (페이지, 응용 프로그램)의 일부 수준에서 존재 하 고 스타일을 적용 하는 형식과 일치 하는 리소스 키를 사용 하 여 키로 사용 됩니다. 이 경우에 <xref:System.Windows.FrameworkElement.Style%2A> 속성 자체가 항목 5 시퀀스에서 식별 하는 우선 순위에 따라 작동 합니다. 이 조건을 사용 하 여 검색할 수 있습니다 <xref:System.Windows.DependencyPropertyHelper> 에 대해 합니다 <xref:System.Windows.FrameworkElement.Style%2A> 속성을 찾고 <xref:System.Windows.BaseValueSource.ImplicitStyleReference> 결과에 합니다.  
+- **암시적 스타일.** <xref:System.Windows.FrameworkElement.Style%2A> 속성이 직접 설정 되지 않습니다. 그러나는 <xref:System.Windows.FrameworkElement.Style%2A> 리소스 조회 시퀀스 (페이지, 응용 프로그램)의 일부 수준에서 존재 하 고 스타일을 적용 하는 형식과 일치 하는 리소스 키를 사용 하 여 키로 사용 됩니다. 이 경우에 <xref:System.Windows.FrameworkElement.Style%2A> 속성 자체가 항목 5 시퀀스에서 식별 하는 우선 순위에 따라 작동 합니다. 이 조건을 사용 하 여 검색할 수 있습니다 <xref:System.Windows.DependencyPropertyHelper> 에 대해 합니다 <xref:System.Windows.FrameworkElement.Style%2A> 속성을 찾고 <xref:System.Windows.BaseValueSource.ImplicitStyleReference> 결과에 합니다.  
   
--   **기본 스타일**, 즉 **테마 스타일.** 합니다 <xref:System.Windows.FrameworkElement.Style%2A> 속성을 직접 설정 되지 않으며 사실에 따라 읽기는 `null` 실행된 시간까지 합니다. 이 경우 스타일은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프레젠테이션 엔진에 포함된 런타임 테마 평가에서 옵니다.  
+- **기본 스타일**, 즉 **테마 스타일.** 합니다 <xref:System.Windows.FrameworkElement.Style%2A> 속성을 직접 설정 되지 않으며 사실에 따라 읽기는 `null` 실행된 시간까지 합니다. 이 경우 스타일은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프레젠테이션 엔진에 포함된 런타임 테마 평가에서 옵니다.  
   
  테마에 없는 암시적 스타일 형식-정확 하 게 일치 해야 합니다는 `MyButton` `Button`-파생된 클래스에 대 한 스타일을 암시적으로 사용 하지 것입니다 `Button`합니다.  
   

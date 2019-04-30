@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ec8b8f97-5d01-4f31-9b97-d1556df6a4bc
 ms.openlocfilehash: 3dbedfb7065ac4b1a570a3f6cdbcdcc2177f20cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037793"
 ---
 # <a name="how-to-filter-related-data"></a>방법: 관련 데이터 필터링
 <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> 메서드를 사용하여 검색된 데이터의 양을 제한하기 위한 하위 쿼리를 지정합니다.  

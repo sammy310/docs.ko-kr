@@ -10,11 +10,11 @@ helpviewer_keywords:
 - drawing lines [Windows Forms], texture
 ms.assetid: dc9118cc-f3c2-42e5-8173-f46d41d18fd5
 ms.openlocfilehash: c0f90c298f48aeb96893bb09241faddc08d8a49d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004289"
 ---
 # <a name="how-to-draw-a-line-filled-with-a-texture"></a>방법: 질감으로 채워진 선 그리기
 대신 단색을 사용 하 여 줄을 그릴 텍스처를 사용 하 여 줄을 그릴 수 있습니다. 선 및 곡선 질감으로 그릴 만들기를 <xref:System.Drawing.TextureBrush> 개체를 전달 <xref:System.Drawing.TextureBrush> 개체를 <xref:System.Drawing.Pen.%23ctor%2A> 생성자. 질감 브러시와 연결 된 비트맵은 평면 (눈에 보이지 않게) 타일을 사용 하 고 스트로크 펜의 바둑판식으로 배열 된 질감의 특정 픽셀을 얻는 펜은 직선이 나 곡선을 그릴 때 키를 누릅니다.  

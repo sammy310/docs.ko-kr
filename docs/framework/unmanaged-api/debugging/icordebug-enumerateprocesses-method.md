@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7bc82c506cf7e223e672a62ca74b215cac870e50
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59123844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989547"
 ---
 # <a name="icordebugenumerateprocesses-method"></a>ICorDebug::EnumerateProcesses 메서드
 디버그 중인 프로세스에 대 한 열거자를 가져옵니다.  

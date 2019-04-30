@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID63
 ms.assetid: 1fcc33f8-822a-4de9-a6e3-228ddb5824a6
 ms.openlocfilehash: abd0a1467c0991a40b93e74a1d7a7889367fb8ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61977030"
 ---
 # <a name="bad-record-number"></a>레코드 개수가 잘못되었습니다.
 `a FileGet`, `FilePut`, `FileGetObject`또는 `FilePutObject` 문의 레코드 번호가 0보다 작거나 같습니다.  

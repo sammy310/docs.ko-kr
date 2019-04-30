@@ -12,11 +12,11 @@ helpviewer_keywords:
 - ContentControl class [WPF], displaying content
 ms.assetid: 214da5ef-547a-4cf8-9b07-4aa8a0e52cdd
 ms.openlocfilehash: 4f866e0366a7781c287b3ebae7b668c2b296a5cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023916"
 ---
 # <a name="wpf-content-model"></a>WPF 콘텐츠 모델
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 다양한 형식의 콘텐츠를 표시하는 것을 기본 용도로 하는 많은 컨트롤 형식 및 컨트롤과 유사한 형식을 제공하는 프레젠테이션 플랫폼입니다. 사용할 컨트롤이나 파생시킬 컨트롤을 결정하려면 특정 컨트롤이 가장 잘 표시할 수 있는 개체 유형을 이해해야 합니다.  
@@ -43,45 +43,45 @@ ms.locfileid: "59134610"
 ### <a name="controls-that-contain-a-single-arbitrary-object"></a>임의의 단일 개체가 들어 있는 컨트롤  
  <xref:System.Windows.Controls.ContentControl> 클래스에는 하나의 임의의 콘텐츠가 포함 되어 있습니다. 해당 콘텐츠 속성은 <xref:System.Windows.Controls.ContentControl.Content%2A>합니다. 다음 컨트롤에서 상속 <xref:System.Windows.Controls.ContentControl> 하며 해당 콘텐츠 모델을 사용 합니다.  
   
--   <xref:System.Windows.Controls.Button>  
+- <xref:System.Windows.Controls.Button>  
   
--   <xref:System.Windows.Controls.Primitives.ButtonBase>  
+- <xref:System.Windows.Controls.Primitives.ButtonBase>  
   
--   <xref:System.Windows.Controls.CheckBox>  
+- <xref:System.Windows.Controls.CheckBox>  
   
--   <xref:System.Windows.Controls.ComboBoxItem>  
+- <xref:System.Windows.Controls.ComboBoxItem>  
   
--   <xref:System.Windows.Controls.ContentControl>  
+- <xref:System.Windows.Controls.ContentControl>  
   
--   <xref:System.Windows.Controls.Frame>  
+- <xref:System.Windows.Controls.Frame>  
   
--   <xref:System.Windows.Controls.GridViewColumnHeader>  
+- <xref:System.Windows.Controls.GridViewColumnHeader>  
   
--   <xref:System.Windows.Controls.GroupItem>  
+- <xref:System.Windows.Controls.GroupItem>  
   
--   <xref:System.Windows.Controls.Label>  
+- <xref:System.Windows.Controls.Label>  
   
--   <xref:System.Windows.Controls.ListBoxItem>  
+- <xref:System.Windows.Controls.ListBoxItem>  
   
--   <xref:System.Windows.Controls.ListViewItem>  
+- <xref:System.Windows.Controls.ListViewItem>  
   
--   <xref:System.Windows.Navigation.NavigationWindow>  
+- <xref:System.Windows.Navigation.NavigationWindow>  
   
--   <xref:System.Windows.Controls.RadioButton>  
+- <xref:System.Windows.Controls.RadioButton>  
   
--   <xref:System.Windows.Controls.Primitives.RepeatButton>  
+- <xref:System.Windows.Controls.Primitives.RepeatButton>  
   
--   <xref:System.Windows.Controls.ScrollViewer>  
+- <xref:System.Windows.Controls.ScrollViewer>  
   
--   <xref:System.Windows.Controls.Primitives.StatusBarItem>  
+- <xref:System.Windows.Controls.Primitives.StatusBarItem>  
   
--   <xref:System.Windows.Controls.Primitives.ToggleButton>  
+- <xref:System.Windows.Controls.Primitives.ToggleButton>  
   
--   <xref:System.Windows.Controls.ToolTip>  
+- <xref:System.Windows.Controls.ToolTip>  
   
--   <xref:System.Windows.Controls.UserControl>  
+- <xref:System.Windows.Controls.UserControl>  
   
--   <xref:System.Windows.Window>  
+- <xref:System.Windows.Window>  
   
  4 다음 그림에 표시 된 단추 <xref:System.Windows.Controls.ContentControl.Content%2A> 문자열로 설정 됩니다는 <xref:System.DateTime> 개체를 <xref:System.Windows.Shapes.Rectangle>, 및 <xref:System.Windows.Controls.Panel> 를 포함 하는 <xref:System.Windows.Shapes.Ellipse> 및 <xref:System.Windows.Controls.TextBlock>:  
   
@@ -94,11 +94,11 @@ ms.locfileid: "59134610"
   
  다음 컨트롤에서 상속 <xref:System.Windows.Controls.HeaderedContentControl> 하며 해당 콘텐츠 모델을 사용 합니다.  
   
--   <xref:System.Windows.Controls.Expander>  
+- <xref:System.Windows.Controls.Expander>  
   
--   <xref:System.Windows.Controls.GroupBox>  
+- <xref:System.Windows.Controls.GroupBox>  
   
--   <xref:System.Windows.Controls.TabItem>  
+- <xref:System.Windows.Controls.TabItem>  
   
  다음 그림에서는 두 <xref:System.Windows.Controls.TabItem> 개체입니다. 첫 번째 <xref:System.Windows.Controls.TabItem> 했습니다 <xref:System.Windows.UIElement> 개체로 합니다 <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> 및 <xref:System.Windows.Controls.ContentControl.Content%2A>합니다. <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> 로 설정 되어를 <xref:System.Windows.Controls.StackPanel> 를 포함 하는 <xref:System.Windows.Shapes.Ellipse> 및 <xref:System.Windows.Controls.TextBlock>합니다. <xref:System.Windows.Controls.ContentControl.Content%2A> 로 설정 되어를 <xref:System.Windows.Controls.StackPanel> 를 포함 하는 <xref:System.Windows.Controls.TextBlock> 및 <xref:System.Windows.Controls.Label>. 두 번째 <xref:System.Windows.Controls.TabItem> 문자열에는 <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> 와 <xref:System.Windows.Controls.TextBlock> 에 <xref:System.Windows.Controls.ContentControl.Content%2A>합니다.  
   
@@ -111,37 +111,37 @@ ms.locfileid: "59134610"
   
  다음 컨트롤에서 상속 <xref:System.Windows.Controls.ItemsControl> 하며 해당 콘텐츠 모델을 사용 합니다.  
   
--   <xref:System.Windows.Controls.Menu>  
+- <xref:System.Windows.Controls.Menu>  
   
--   <xref:System.Windows.Controls.Primitives.MenuBase>  
+- <xref:System.Windows.Controls.Primitives.MenuBase>  
   
--   <xref:System.Windows.Controls.ContextMenu>  
+- <xref:System.Windows.Controls.ContextMenu>  
   
--   <xref:System.Windows.Controls.ComboBox>  
+- <xref:System.Windows.Controls.ComboBox>  
   
--   <xref:System.Windows.Controls.ItemsControl>  
+- <xref:System.Windows.Controls.ItemsControl>  
   
--   <xref:System.Windows.Controls.ListBox>  
+- <xref:System.Windows.Controls.ListBox>  
   
--   <xref:System.Windows.Controls.ListView>  
+- <xref:System.Windows.Controls.ListView>  
   
--   <xref:System.Windows.Controls.TabControl>  
+- <xref:System.Windows.Controls.TabControl>  
   
--   <xref:System.Windows.Controls.TreeView>  
+- <xref:System.Windows.Controls.TreeView>  
   
--   <xref:System.Windows.Controls.Primitives.Selector>  
+- <xref:System.Windows.Controls.Primitives.Selector>  
   
--   <xref:System.Windows.Controls.Primitives.StatusBar>  
+- <xref:System.Windows.Controls.Primitives.StatusBar>  
   
  다음 그림에 표시 된 <xref:System.Windows.Controls.ListBox> 이러한 유형의 항목을 포함 하는:  
   
--   문자열  
+- 문자열  
   
--   <xref:System.DateTime> 개체입니다.  
+- <xref:System.DateTime> 개체입니다.  
   
--   <xref:System.Windows.UIElement>  
+- <xref:System.Windows.UIElement>  
   
--   A <xref:System.Windows.Controls.Panel> 를 포함 하는 <xref:System.Windows.Shapes.Ellipse> 및 <xref:System.Windows.Controls.TextBlock>합니다.  
+- A <xref:System.Windows.Controls.Panel> 를 포함 하는 <xref:System.Windows.Shapes.Ellipse> 및 <xref:System.Windows.Controls.TextBlock>합니다.  
   
  ![네 형식의 콘텐츠가 있는 ListBox를 보여주는 스크린샷.](./media/wpf-content-model/control-content-model-listbox.png)  
   
@@ -150,11 +150,11 @@ ms.locfileid: "59134610"
   
  다음 컨트롤에서 상속 <xref:System.Windows.Controls.HeaderedItemsControl> 하며 해당 콘텐츠 모델을 사용 합니다.  
   
--   <xref:System.Windows.Controls.MenuItem>  
+- <xref:System.Windows.Controls.MenuItem>  
   
--   <xref:System.Windows.Controls.ToolBar>  
+- <xref:System.Windows.Controls.ToolBar>  
   
--   <xref:System.Windows.Controls.TreeViewItem>  
+- <xref:System.Windows.Controls.TreeViewItem>  
   
 <a name="classes_that_contain_a_collection_of_uielement_objects"></a>   
 ## <a name="classes-that-contain-a-collection-of-uielement-objects"></a>UIElement 개체 컬렉션을 포함하는 클래스  
@@ -162,27 +162,27 @@ ms.locfileid: "59134610"
   
  다음 클래스에서 상속 된 <xref:System.Windows.Controls.Panel> 클래스 및 해당 콘텐츠 모델을 사용 합니다.  
   
--   <xref:System.Windows.Controls.Canvas>  
+- <xref:System.Windows.Controls.Canvas>  
   
--   <xref:System.Windows.Controls.DockPanel>  
+- <xref:System.Windows.Controls.DockPanel>  
   
--   <xref:System.Windows.Controls.Grid>  
+- <xref:System.Windows.Controls.Grid>  
   
--   <xref:System.Windows.Controls.Primitives.TabPanel>  
+- <xref:System.Windows.Controls.Primitives.TabPanel>  
   
--   <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>  
+- <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>  
   
--   <xref:System.Windows.Controls.Primitives.ToolBarPanel>  
+- <xref:System.Windows.Controls.Primitives.ToolBarPanel>  
   
--   <xref:System.Windows.Controls.Primitives.UniformGrid>  
+- <xref:System.Windows.Controls.Primitives.UniformGrid>  
   
--   <xref:System.Windows.Controls.StackPanel>  
+- <xref:System.Windows.Controls.StackPanel>  
   
--   <xref:System.Windows.Controls.VirtualizingPanel>  
+- <xref:System.Windows.Controls.VirtualizingPanel>  
   
--   <xref:System.Windows.Controls.VirtualizingStackPanel>  
+- <xref:System.Windows.Controls.VirtualizingStackPanel>  
   
--   <xref:System.Windows.Controls.WrapPanel>  
+- <xref:System.Windows.Controls.WrapPanel>  
   
  자세한 내용은 [패널 개요](panels-overview.md)를 참조하세요.  
   
@@ -190,23 +190,23 @@ ms.locfileid: "59134610"
 ## <a name="classes-that-affect-the-appearance-of-a-uielement"></a>UIElement의 모양에 영향을 주는 클래스  
  합니다 <xref:System.Windows.Controls.Decorator> 또는 단일 자식 그 주위에 시각적 효과 적용 하는 클래스 <xref:System.Windows.UIElement>합니다. 해당 콘텐츠 속성은 <xref:System.Windows.Controls.Decorator.Child%2A>합니다. 다음 클래스에서 상속 <xref:System.Windows.Controls.Decorator> 하며 해당 콘텐츠 모델을 사용 합니다.  
   
--   <xref:System.Windows.Documents.AdornerDecorator>  
+- <xref:System.Windows.Documents.AdornerDecorator>  
   
--   <xref:System.Windows.Controls.Border>  
+- <xref:System.Windows.Controls.Border>  
   
--   <xref:System.Windows.Controls.Primitives.BulletDecorator>  
+- <xref:System.Windows.Controls.Primitives.BulletDecorator>  
   
--   <xref:Microsoft.Windows.Themes.ButtonChrome>  
+- <xref:Microsoft.Windows.Themes.ButtonChrome>  
   
--   <xref:Microsoft.Windows.Themes.ClassicBorderDecorator>  
+- <xref:Microsoft.Windows.Themes.ClassicBorderDecorator>  
   
--   <xref:System.Windows.Controls.InkPresenter>  
+- <xref:System.Windows.Controls.InkPresenter>  
   
--   <xref:Microsoft.Windows.Themes.ListBoxChrome>  
+- <xref:Microsoft.Windows.Themes.ListBoxChrome>  
   
--   <xref:Microsoft.Windows.Themes.SystemDropShadowChrome>  
+- <xref:Microsoft.Windows.Themes.SystemDropShadowChrome>  
   
--   <xref:System.Windows.Controls.Viewbox>  
+- <xref:System.Windows.Controls.Viewbox>  
   
  다음 그림에 표시를 <xref:System.Windows.Controls.TextBox> 있는 (으로 데코 레이트 된)을 <xref:System.Windows.Controls.Border> 묶습니다.  
   

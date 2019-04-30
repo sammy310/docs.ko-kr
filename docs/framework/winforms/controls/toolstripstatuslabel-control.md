@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], ToolStripStatusLabel
 ms.assetid: 099bc74a-a29f-4f15-af0d-7c517ef50c7e
 ms.openlocfilehash: abda20e9add4691fd3ced2a4cf688dc25cca7530
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59194112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009358"
 ---
 # <a name="toolstripstatuslabel-control"></a>ToolStripStatusLabel 컨트롤
 합니다 <xref:System.Windows.Forms.ToolStripStatusLabel> 의 표시 영역을 제공 된 <xref:System.Windows.Forms.StatusStrip> 텍스트, 이미지 또는 둘 다에 대 한 합니다.  

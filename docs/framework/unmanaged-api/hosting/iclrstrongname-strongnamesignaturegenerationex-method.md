@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c5d2539bc732cdc41c7514fd5d81c449ed8f17a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992890"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegenerationex-method"></a>ICLRStrongName::StrongNameSignatureGenerationEx 메서드
 지정된 된 플래그에 따라 지정된 된 어셈블리의 강력한 이름 시그니처를 생성합니다.  
@@ -69,9 +69,9 @@ HRESULT StrongNameSignatureGenerationEx (
  `dwFlags`  
  [in] 하나 이상의 다음 값 중:  
   
--   `SN_SIGN_ALL_FILES` (0x00000001)-연결 된 모듈에 대 한 모든 해시를 다시 계산 합니다.  
+- `SN_SIGN_ALL_FILES` (0x00000001)-연결 된 모듈에 대 한 모든 해시를 다시 계산 합니다.  
   
--   `SN_TEST_SIGN` (0x00000002)-테스트-어셈블리를 서명 합니다.  
+- `SN_TEST_SIGN` (0x00000002)-테스트-어셈블리를 서명 합니다.  
   
 ## <a name="return-value"></a>반환 값  
  `S_OK` 메서드가 성공적으로 완료 하는 경우 그렇지 않으면 실패를 나타내는 HRESULT 값을 (참조 [일반적인 HRESULT 값](https://go.microsoft.com/fwlink/?LinkId=213878) 목록에 대 한).  

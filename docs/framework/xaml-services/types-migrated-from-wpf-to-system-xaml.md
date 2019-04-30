@@ -7,11 +7,11 @@ helpviewer_keywords:
 - System.Xaml [XAML Services], types migrated from WPF
 ms.assetid: d79dabf5-a2ec-4e8d-a37a-67c4ba8a2b91
 ms.openlocfilehash: dcfad1c2b2f95783e2b348a3a1111501f958143f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006635"
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>WPF에서 System.Xaml로 마이그레이션된 형식
 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] 하 고 [!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)]모두 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 및 Windows Workflow Foundation XAML 언어 구현이 포함 되었습니다. WPF XAML 구현에 대해 확장성을 제공한 공용 형식은 대부분 WindowsBase, PresentationCore 및 PresentationFramework 어셈블리에 있었습니다. 마찬가지로,을 Windows Workflow Foundation XAML에 대 한 확장성을 제공한 공용 형식은 System.Workflow.ComponentModel 어셈블리에 존재 합니다. [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]에서는 XAML 관련 형식 중 일부가 System.Xaml 어셈블리로 마이그레이션되었습니다. XAML 언어 서비스의 공용 .NET Framework 구현은 원래 특정 프레임워크의 XAML 구현에서 정의되었지만 현재 전반적인 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] XAML 언어 지원의 일부인 많은 XAML 확장성 시나리오를 사용할 수 있게 합니다. 이 항목에서는 마이그레이션되는 형식을 나열하고 마이그레이션과 관련된 문제를 논의합니다.  
@@ -27,11 +27,11 @@ ms.locfileid: "59116482"
 ### <a name="workflow-xaml-support-types"></a>워크플로 XAML 지원 형식  
  Windows Workflow Foundation XAML 지원 형식을 제공 하 고 대부분의 경우에 해당 하는 WPF와 동일한 짧은 이름을 가졌습니다. 다음은 Windows Workflow Foundation XAML 지원 형식의 목록입니다.  
   
--   <xref:System.Workflow.ComponentModel.Serialization.ContentPropertyAttribute>  
+- <xref:System.Workflow.ComponentModel.Serialization.ContentPropertyAttribute>  
   
--   <xref:System.Workflow.ComponentModel.Serialization.RuntimeNamePropertyAttribute>  
+- <xref:System.Workflow.ComponentModel.Serialization.RuntimeNamePropertyAttribute>  
   
--   <xref:System.Workflow.ComponentModel.Serialization.XmlnsPrefixAttribute>  
+- <xref:System.Workflow.ComponentModel.Serialization.XmlnsPrefixAttribute>  
   
  이러한 지원 형식은 여전히에 대 한 Windows Workflow Foundation 어셈블리 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 특정 Windows Workflow Foundation 응용 프로그램에 대 한 계속 사용할 수 있습니다 하 고 있지만 이러한를 참조할 수 없습니다 응용 프로그램이 나 사용 하지 않는 프레임 워크에서 Windows Workflow Foundation입니다.  
   
@@ -43,11 +43,11 @@ ms.locfileid: "59116482"
 ## <a name="markupextension-supporting-service-classes"></a>MarkupExtension 지원 서비스 클래스  
  WPF용[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 및 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] 에서는 <xref:System.Windows.Markup.MarkupExtension> implementers 및 <xref:System.ComponentModel.TypeConverter> 구현에서 XAML의 형식/속성 사용을 지원하기 위해 사용할 수 있었던 여러 서비스를 제공했습니다. 이러한 서비스는 다음과 같습니다.  
   
--   <xref:System.Windows.Markup.IProvideValueTarget>  
+- <xref:System.Windows.Markup.IProvideValueTarget>  
   
--   <xref:System.Windows.Markup.IUriContext>  
+- <xref:System.Windows.Markup.IUriContext>  
   
--   <xref:System.Windows.Markup.IXamlTypeResolver>  
+- <xref:System.Windows.Markup.IXamlTypeResolver>  
   
 > [!NOTE]
 >  태그 확장과 관련된 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 의 또 다른 서비스는 <xref:System.Windows.Markup.IReceiveMarkupExtension> 인터페이스입니다. <xref:System.Windows.Markup.IReceiveMarkupExtension> 이 마이그레이션되지 않았으며 `[Obsolete]` 에 대해 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]로 표시됩니다. 이전에 <xref:System.Windows.Markup.IReceiveMarkupExtension> 을 사용한 시나리오에서는 대신 <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute> 특성 콜백을 사용해야 합니다. <xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute> 도 `[Obsolete]`로 표시됩니다.  
@@ -75,35 +75,35 @@ ms.locfileid: "59116482"
 ## <a name="xaml-related-attributes"></a>XAML 관련 특성  
  WPF XAML은 XAML 동작에 대한 특징을 나타내기 위해 CLR 형식에 적용할 수 있는 여러 특성을 포함했습니다. 다음은 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 및 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]에서 WPF 어셈블리에 있었던 특성 목록입니다. 이러한 특성은 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서 System.Xaml로 마이그레이션되었습니다.  
   
--   <xref:System.Windows.Markup.AmbientAttribute>  
+- <xref:System.Windows.Markup.AmbientAttribute>  
   
--   <xref:System.Windows.Markup.ContentPropertyAttribute>  
+- <xref:System.Windows.Markup.ContentPropertyAttribute>  
   
--   <xref:System.Windows.Markup.ContentWrapperAttribute>  
+- <xref:System.Windows.Markup.ContentWrapperAttribute>  
   
--   <xref:System.Windows.Markup.DependsOnAttribute>  
+- <xref:System.Windows.Markup.DependsOnAttribute>  
   
--   <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute>  
+- <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute>  
   
--   <xref:System.Windows.Markup.NameScopePropertyAttribute>  
+- <xref:System.Windows.Markup.NameScopePropertyAttribute>  
   
--   <xref:System.Windows.Markup.RootNamespaceAttribute>  
+- <xref:System.Windows.Markup.RootNamespaceAttribute>  
   
--   <xref:System.Windows.Markup.RuntimeNamePropertyAttribute>  
+- <xref:System.Windows.Markup.RuntimeNamePropertyAttribute>  
   
--   <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>  
+- <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>  
   
--   <xref:System.Windows.Markup.ValueSerializerAttribute>  
+- <xref:System.Windows.Markup.ValueSerializerAttribute>  
   
--   <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>  
+- <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>  
   
--   <xref:System.Windows.Markup.XmlLangPropertyAttribute>  
+- <xref:System.Windows.Markup.XmlLangPropertyAttribute>  
   
--   <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute>  
+- <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute>  
   
--   <xref:System.Windows.Markup.XmlnsDefinitionAttribute>  
+- <xref:System.Windows.Markup.XmlnsDefinitionAttribute>  
   
--   <xref:System.Windows.Markup.XmlnsPrefixAttribute>  
+- <xref:System.Windows.Markup.XmlnsPrefixAttribute>  
   
 <a name="miscellaneous_classes"></a>   
 ## <a name="miscellaneous-classes"></a>기타 클래스  

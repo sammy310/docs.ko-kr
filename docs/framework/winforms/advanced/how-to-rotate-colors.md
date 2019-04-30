@@ -9,11 +9,11 @@ helpviewer_keywords:
 - examples [Windows Forms], rotating colors
 ms.assetid: e2e4c300-159c-4f4a-9b56-103b0f7cbc05
 ms.openlocfilehash: 241d2824fc2d87a0505eb6e790c865bfa7d8ef90
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967355"
 ---
 # <a name="how-to-rotate-colors"></a>방법: 색 회전
 4 차원 색 공간에서 회전은 시각화 하기가 어렵습니다. 에서는 수 쉽게 동의 고정 색 구성 요소 중 하나를 유지 하 여 회전을 시각화 합니다. 1 자리 알파 구성 요소 (완전 불투명) 한다고 가정 합니다. 그런 다음 다음 그림에 나와 있는 것 처럼 빨강, 녹색 및 파랑 축이 있는 3 차원 색 공간을를 시각화할 수 있습니다 했습니다.  

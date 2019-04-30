@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
 ms.openlocfilehash: 7b284a8f085ab7e93651c829ac16e47fb63a8b51
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034478"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>XML Web Service에서 데이터 집합 사용
 <xref:System.Data.DataSet>은 인터넷에서 데이터 전송을 쉽게 할 수 있도록 비연결 디자인으로 설계되었습니다. 합니다 **데이터 집합** 는 "직렬화"에 대 한 입력으로 지정할 수도 있고 추가 코딩 없이 XML Web services에서 출력의 콘텐츠를 스트리밍하는 데 필요한 합니다 **데이터 집합** XML 웹 서비스에서 클라이언트 및 백 합니다. **데이터 집합** DiffGram 형식을 사용 하 여 XML 스트림을로 암시적으로 변환, 네트워크를 통해 보내고 다음으로 XML 스트림에서 재구성을 **데이터 집합** 수신측에 합니다. 이렇게 하여 간단하고 융통성 있는 방법으로 XML Web services를 사용하여 관계형 데이터를 전송하고 반환할 수 있습니다. DiffGram 형식에 대 한 자세한 내용은 참조 하세요. [Diffgram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)합니다.  

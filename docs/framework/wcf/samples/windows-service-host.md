@@ -6,11 +6,11 @@ helpviewer_keywords:
 - NT Service Host Sample [Windows Communication Foundation]
 ms.assetid: 1b2f45c5-2bed-4979-b0ee-8f9efcfec028
 ms.openlocfilehash: 85d089813a455784fde679e9200a9b29b956af8e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006415"
 ---
 # <a name="windows-service-host"></a>Windows Service 호스트
 이 샘플에서는 관리 되는 Windows 서비스에서 호스팅되는 Windows Communication Foundation (WCF) 서비스를 보여 줍니다. Windows 서비스의 서비스 애플릿을 사용 하 여 제어 됩니다 **제어판** 시스템 다시 부팅 후 자동으로 시작 되도록 구성할 수 있습니다. 이 샘플은 클라이언트 프로그램과 Windows 서비스 프로그램으로 구성됩니다. 서비스는 .exe 프로그램으로 구현되고 자체 호스팅 코드가 포함됩니다. WAS(Windows Process Activation Services) 또는 IIS(인터넷 정보 서비스) 등의 다른 호스팅 환경에서는 직접 호스팅 코드를 작성할 필요가 없습니다.
