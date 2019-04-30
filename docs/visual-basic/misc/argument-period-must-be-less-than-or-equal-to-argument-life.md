@@ -5,19 +5,19 @@ f1_keywords:
 - vbrFinancial_PeriodLELife
 ms.assetid: dc575d41-b376-4b05-bbbe-6de1e98385f1
 ms.openlocfilehash: fcf343a224efd7fac3767dd37d93136c95242b08
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61977121"
 ---
-# <a name="argument-period-must-be-less-than-or-equal-to-argument-life"></a><span data-ttu-id="930fe-102">'Period' 인수는 'Life' 인수보다 작거나 같아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="930fe-102">Argument 'Period' must be less than or equal to argument 'Life'</span></span>
-<span data-ttu-id="930fe-103">자산 감가상각이 계산되는 기간을 지정하는 `Period` 인수 값이 `Life` 인수 값보다 큽니다.</span><span class="sxs-lookup"><span data-stu-id="930fe-103">The value of the `Period` argument, which specifies the period for which asset depreciation is calculated, is greater than the value of the `Life` argument.</span></span>  
+# <a name="argument-period-must-be-less-than-or-equal-to-argument-life"></a><span data-ttu-id="de8cc-102">'Period' 인수는 'Life' 인수보다 작거나 같아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="de8cc-102">Argument 'Period' must be less than or equal to argument 'Life'</span></span>
+<span data-ttu-id="de8cc-103">자산 감가상각이 계산되는 기간을 지정하는 `Period` 인수 값이 `Life` 인수 값보다 큽니다.</span><span class="sxs-lookup"><span data-stu-id="de8cc-103">The value of the `Period` argument, which specifies the period for which asset depreciation is calculated, is greater than the value of the `Life` argument.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="930fe-104">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="930fe-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="de8cc-104">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="de8cc-104">To correct this error</span></span>  
   
--   <span data-ttu-id="930fe-105">`Life` 와 `Period` 인수는 같은 단위로 표현되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="930fe-105">Ensure that the `Life` and `Period` arguments are expressed in the same units.</span></span> <span data-ttu-id="930fe-106">예를 들어 `Life` 가 월 단위로 측정되면 `Period` 도 월 단위로 측정되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="930fe-106">For example, if `Life` is measured in months, `Period` should be as well.</span></span>  
+- <span data-ttu-id="de8cc-105">`Life` 와 `Period` 인수는 같은 단위로 표현되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="de8cc-105">Ensure that the `Life` and `Period` arguments are expressed in the same units.</span></span> <span data-ttu-id="de8cc-106">예를 들어 `Life` 가 월 단위로 측정되면 `Period` 도 월 단위로 측정되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="de8cc-106">For example, if `Life` is measured in months, `Period` should be as well.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="930fe-107">참고자료</span><span class="sxs-lookup"><span data-stu-id="930fe-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="de8cc-107">참고자료</span><span class="sxs-lookup"><span data-stu-id="de8cc-107">See also</span></span>
 
-- [<span data-ttu-id="930fe-108">값 또는 참조로 인수 전달</span><span class="sxs-lookup"><span data-stu-id="930fe-108">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [<span data-ttu-id="de8cc-108">값 또는 참조로 인수 전달</span><span class="sxs-lookup"><span data-stu-id="de8cc-108">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

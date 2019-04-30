@@ -8,27 +8,27 @@ helpviewer_keywords:
 - WPF application [WPF], windows
 ms.assetid: dc091d04-68cf-4592-9695-75fda037db76
 ms.openlocfilehash: 798f8def03cb396224b7ba61bd17974609a5ff54
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971155"
 ---
-# <a name="windows-in-wpf-applications"></a><span data-ttu-id="c11d8-102">WPF 응용 프로그램의 창</span><span class="sxs-lookup"><span data-stu-id="c11d8-102">Windows in WPF Applications</span></span>
-<span data-ttu-id="c11d8-103">사용자가 windows 통해 응용 프로그램과 상호 작용 합니다.</span><span class="sxs-lookup"><span data-stu-id="c11d8-103">Users interact with applications through windows.</span></span> <span data-ttu-id="c11d8-104">창의 기본 목적은 호스트 하 고 콘텐츠를 표시 하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="c11d8-104">The fundamental purpose of a window is to host and display content.</span></span> <span data-ttu-id="c11d8-105">콘텐츠는 창 호스트 유형에 따라 데이터의 응용 프로그램 작동 하는지, 미디어, Extensible Application Markup Language (XAML) 페이지, 웹 페이지, 문서, 데이터베이스 테이블 및 레코드 및 시스템 정보를 포함할 수 있는 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="c11d8-105">The type of content that a window hosts depends on the type of data that an application operates over, which can include media, Extensible Application Markup Language (XAML) pages, Web pages, documents, database tables and records, and system information.</span></span>  
+# <a name="windows-in-wpf-applications"></a><span data-ttu-id="effa4-102">WPF 응용 프로그램의 창</span><span class="sxs-lookup"><span data-stu-id="effa4-102">Windows in WPF Applications</span></span>
+<span data-ttu-id="effa4-103">사용자가 windows 통해 응용 프로그램과 상호 작용 합니다.</span><span class="sxs-lookup"><span data-stu-id="effa4-103">Users interact with applications through windows.</span></span> <span data-ttu-id="effa4-104">창의 기본 목적은 호스트 하 고 콘텐츠를 표시 하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="effa4-104">The fundamental purpose of a window is to host and display content.</span></span> <span data-ttu-id="effa4-105">콘텐츠는 창 호스트 유형에 따라 데이터의 응용 프로그램 작동 하는지, 미디어, Extensible Application Markup Language (XAML) 페이지, 웹 페이지, 문서, 데이터베이스 테이블 및 레코드 및 시스템 정보를 포함할 수 있는 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="effa4-105">The type of content that a window hosts depends on the type of data that an application operates over, which can include media, Extensible Application Markup Language (XAML) pages, Web pages, documents, database tables and records, and system information.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c11d8-106">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="c11d8-106">In This Section</span></span>  
- [<span data-ttu-id="c11d8-107">WPF 창 개요</span><span class="sxs-lookup"><span data-stu-id="c11d8-107">WPF Windows Overview</span></span>](wpf-windows-overview.md)  
- [<span data-ttu-id="c11d8-108">대화 상자 개요</span><span class="sxs-lookup"><span data-stu-id="c11d8-108">Dialog Boxes Overview</span></span>](dialog-boxes-overview.md)  
- [<span data-ttu-id="c11d8-109">방법 항목</span><span class="sxs-lookup"><span data-stu-id="c11d8-109">How-to Topics</span></span>](window-management-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="effa4-106">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="effa4-106">In This Section</span></span>  
+ [<span data-ttu-id="effa4-107">WPF 창 개요</span><span class="sxs-lookup"><span data-stu-id="effa4-107">WPF Windows Overview</span></span>](wpf-windows-overview.md)  
+ [<span data-ttu-id="effa4-108">대화 상자 개요</span><span class="sxs-lookup"><span data-stu-id="effa4-108">Dialog Boxes Overview</span></span>](dialog-boxes-overview.md)  
+ [<span data-ttu-id="effa4-109">방법 항목</span><span class="sxs-lookup"><span data-stu-id="effa4-109">How-to Topics</span></span>](window-management-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="c11d8-110">참조</span><span class="sxs-lookup"><span data-stu-id="c11d8-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="effa4-110">참조</span><span class="sxs-lookup"><span data-stu-id="effa4-110">Reference</span></span>  
  <xref:System.Windows.Window>  
   
  <xref:System.Windows.Navigation.NavigationWindow>  
   
-## <a name="related-sections"></a><span data-ttu-id="c11d8-111">관련 단원</span><span class="sxs-lookup"><span data-stu-id="c11d8-111">Related Sections</span></span>  
- [<span data-ttu-id="c11d8-112">응용 프로그램 관리 개요</span><span class="sxs-lookup"><span data-stu-id="c11d8-112">Application Management Overview</span></span>](application-management-overview.md)  
-  [<span data-ttu-id="c11d8-113">탐색 개요</span><span class="sxs-lookup"><span data-stu-id="c11d8-113">Navigation Overview</span></span>](navigation-overview.md)  
-  [<span data-ttu-id="c11d8-114">호스팅</span><span class="sxs-lookup"><span data-stu-id="c11d8-114">Hosting</span></span>](hosting-wpf-applications.md)  
-  [<span data-ttu-id="c11d8-115">빌드 및 배포</span><span class="sxs-lookup"><span data-stu-id="c11d8-115">Build and Deploy</span></span>](building-and-deploying-wpf-applications.md)
+## <a name="related-sections"></a><span data-ttu-id="effa4-111">관련 단원</span><span class="sxs-lookup"><span data-stu-id="effa4-111">Related Sections</span></span>  
+ [<span data-ttu-id="effa4-112">응용 프로그램 관리 개요</span><span class="sxs-lookup"><span data-stu-id="effa4-112">Application Management Overview</span></span>](application-management-overview.md)  
+  [<span data-ttu-id="effa4-113">탐색 개요</span><span class="sxs-lookup"><span data-stu-id="effa4-113">Navigation Overview</span></span>](navigation-overview.md)  
+  [<span data-ttu-id="effa4-114">호스팅</span><span class="sxs-lookup"><span data-stu-id="effa4-114">Hosting</span></span>](hosting-wpf-applications.md)  
+  [<span data-ttu-id="effa4-115">빌드 및 배포</span><span class="sxs-lookup"><span data-stu-id="effa4-115">Build and Deploy</span></span>](building-and-deploying-wpf-applications.md)

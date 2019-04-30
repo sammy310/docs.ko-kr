@@ -9,16 +9,16 @@ helpviewer_keywords:
 - content [WPF], sequentially positioning
 ms.assetid: f0acb1b4-df71-4c5a-b4a4-98f189002537
 ms.openlocfilehash: 530c41938ae4abb893fd91d64804c7aaa2d430b5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023795"
 ---
-# <a name="wrappanel"></a><span data-ttu-id="0bc24-102">WrapPanel</span><span class="sxs-lookup"><span data-stu-id="0bc24-102">WrapPanel</span></span>
-<span data-ttu-id="0bc24-103"><xref:System.Windows.Controls.WrapPanel> 요소에서 왼쪽에서 오른쪽, 콘텐츠를 포함 하는 상자의 가장자리에서 다음 줄으로 자식 요소를 배치 합니다.</span><span class="sxs-lookup"><span data-stu-id="0bc24-103">The <xref:System.Windows.Controls.WrapPanel> element positions child elements in sequential position from left to right, breaking content to the next line at the edge of its containing box.</span></span>  
+# <a name="wrappanel"></a><span data-ttu-id="340d6-102">WrapPanel</span><span class="sxs-lookup"><span data-stu-id="340d6-102">WrapPanel</span></span>
+<span data-ttu-id="340d6-103"><xref:System.Windows.Controls.WrapPanel> 요소에서 왼쪽에서 오른쪽, 콘텐츠를 포함 하는 상자의 가장자리에서 다음 줄으로 자식 요소를 배치 합니다.</span><span class="sxs-lookup"><span data-stu-id="340d6-103">The <xref:System.Windows.Controls.WrapPanel> element positions child elements in sequential position from left to right, breaking content to the next line at the edge of its containing box.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="0bc24-104">참조</span><span class="sxs-lookup"><span data-stu-id="0bc24-104">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="340d6-104">참조</span><span class="sxs-lookup"><span data-stu-id="340d6-104">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -33,9 +33,9 @@ ms.locfileid: "57362151"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="0bc24-105">관련 단원</span><span class="sxs-lookup"><span data-stu-id="0bc24-105">Related Sections</span></span>  
- [<span data-ttu-id="0bc24-106">레이아웃</span><span class="sxs-lookup"><span data-stu-id="0bc24-106">Layout</span></span>](../advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="340d6-105">관련 단원</span><span class="sxs-lookup"><span data-stu-id="340d6-105">Related Sections</span></span>  
+ [<span data-ttu-id="340d6-106">레이아웃</span><span class="sxs-lookup"><span data-stu-id="340d6-106">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="0bc24-107">연습: 내 첫 WPF 데스크톱 애플리케이션</span><span class="sxs-lookup"><span data-stu-id="0bc24-107">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="340d6-107">연습: 내 첫 WPF 데스크톱 애플리케이션</span><span class="sxs-lookup"><span data-stu-id="340d6-107">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="0bc24-108">ScrollViewer 개요</span><span class="sxs-lookup"><span data-stu-id="0bc24-108">ScrollViewer Overview</span></span>](scrollviewer-overview.md)
+ [<span data-ttu-id="340d6-108">ScrollViewer 개요</span><span class="sxs-lookup"><span data-stu-id="340d6-108">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

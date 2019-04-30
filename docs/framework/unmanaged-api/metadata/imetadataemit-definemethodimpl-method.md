@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 05b2530bde2f4532e94610a683e7bbc2f59540aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62044046"
 ---
-# <a name="imetadataemitdefinemethodimpl-method"></a><span data-ttu-id="b9c62-102">IMetaDataEmit::DefineMethodImpl 메서드</span><span class="sxs-lookup"><span data-stu-id="b9c62-102">IMetaDataEmit::DefineMethodImpl Method</span></span>
-<span data-ttu-id="b9c62-103">인터페이스에서 상속 된 메서드 구현에 대 한 정의 만들고 해당 메서드 구현을 정의에 토큰을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="b9c62-103">Creates a definition for implementation of a method inherited from an interface, and returns a token to that method-implementation definition.</span></span>  
+# <a name="imetadataemitdefinemethodimpl-method"></a><span data-ttu-id="297fa-102">IMetaDataEmit::DefineMethodImpl 메서드</span><span class="sxs-lookup"><span data-stu-id="297fa-102">IMetaDataEmit::DefineMethodImpl Method</span></span>
+<span data-ttu-id="297fa-103">인터페이스에서 상속 된 메서드 구현에 대 한 정의 만들고 해당 메서드 구현을 정의에 토큰을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="297fa-103">Creates a definition for implementation of a method inherited from an interface, and returns a token to that method-implementation definition.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b9c62-104">구문</span><span class="sxs-lookup"><span data-stu-id="b9c62-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="297fa-104">구문</span><span class="sxs-lookup"><span data-stu-id="297fa-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineMethodImpl (   
@@ -37,26 +37,26 @@ HRESULT DefineMethodImpl (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b9c62-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="b9c62-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="297fa-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="297fa-105">Parameters</span></span>  
  `td`  
- <span data-ttu-id="b9c62-106">[in] `mdTypedef` 토큰 구현 하는 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="b9c62-106">[in] The `mdTypedef` token of the implementing class.</span></span>  
+ <span data-ttu-id="297fa-106">[in] `mdTypedef` 토큰 구현 하는 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="297fa-106">[in] The `mdTypedef` token of the implementing class.</span></span>  
   
  `tkBody`  
- <span data-ttu-id="b9c62-107">[in] 합니다 `mdMethodDef` 또는 `mdMethodRef` 코드 본문의 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="b9c62-107">[in] The `mdMethodDef` or `mdMethodRef` token of the code body.</span></span>  
+ <span data-ttu-id="297fa-107">[in] 합니다 `mdMethodDef` 또는 `mdMethodRef` 코드 본문의 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="297fa-107">[in] The `mdMethodDef` or `mdMethodRef` token of the code body.</span></span>  
   
  `tkDecl`  
- <span data-ttu-id="b9c62-108">[in] 합니다 `mdMethodDef` 또는 `mdMethodRef` 구현 되는 인터페이스 메서드의 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="b9c62-108">[in] The `mdMethodDef` or `mdMethodRef` token of the interface method being implemented.</span></span>  
+ <span data-ttu-id="297fa-108">[in] 합니다 `mdMethodDef` 또는 `mdMethodRef` 구현 되는 인터페이스 메서드의 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="297fa-108">[in] The `mdMethodDef` or `mdMethodRef` token of the interface method being implemented.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b9c62-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b9c62-109">Requirements</span></span>  
- <span data-ttu-id="b9c62-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="b9c62-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="297fa-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="297fa-109">Requirements</span></span>  
+ <span data-ttu-id="297fa-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="297fa-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b9c62-111">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b9c62-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="297fa-111">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="297fa-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b9c62-112">**라이브러리:** MSCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="b9c62-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="297fa-112">**라이브러리:** MSCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="297fa-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="b9c62-113">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b9c62-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="297fa-113">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="297fa-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b9c62-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="b9c62-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="297fa-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="297fa-114">See also</span></span>
 
-- [<span data-ttu-id="b9c62-115">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b9c62-115">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="b9c62-116">IMetaDataEmit2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b9c62-116">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="297fa-115">IMetaDataEmit 인터페이스</span><span class="sxs-lookup"><span data-stu-id="297fa-115">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="297fa-116">IMetaDataEmit2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="297fa-116">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

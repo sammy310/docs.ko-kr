@@ -10,32 +10,32 @@ helpviewer_keywords:
 - properties [WPF]
 ms.assetid: d6e0197f-f2c4-48ed-b45b-b9cdb64aab1c
 ms.openlocfilehash: 8e65e89fb0406d9d2849e0a1be4b1aa764b935ab
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62030348"
 ---
-# <a name="properties-wpf"></a><span data-ttu-id="e4084-102">속성(WPF)</span><span class="sxs-lookup"><span data-stu-id="e4084-102">Properties (WPF)</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="e4084-103">에서는 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 속성의 기능을 확장하는 데 사용할 수 있는 서비스 집합을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="e4084-103">provides a set of services that can be used to extend the functionality of a [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] property.</span></span> <span data-ttu-id="e4084-104">일반적으로 이러한 서비스를 WPF 속성 시스템이라고 통칭합니다.</span><span class="sxs-lookup"><span data-stu-id="e4084-104">Collectively, these services are typically referred to as the WPF property system.</span></span> <span data-ttu-id="e4084-105">[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 속성 시스템에서 지원하는 속성을 종속성 속성이라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="e4084-105">A property that is backed by the [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] property system is known as a dependency property.</span></span>  
+# <a name="properties-wpf"></a><span data-ttu-id="43280-102">속성(WPF)</span><span class="sxs-lookup"><span data-stu-id="43280-102">Properties (WPF)</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="43280-103">에서는 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 속성의 기능을 확장하는 데 사용할 수 있는 서비스 집합을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="43280-103">provides a set of services that can be used to extend the functionality of a [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] property.</span></span> <span data-ttu-id="43280-104">일반적으로 이러한 서비스를 WPF 속성 시스템이라고 통칭합니다.</span><span class="sxs-lookup"><span data-stu-id="43280-104">Collectively, these services are typically referred to as the WPF property system.</span></span> <span data-ttu-id="43280-105">[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 속성 시스템에서 지원하는 속성을 종속성 속성이라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="43280-105">A property that is backed by the [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] property system is known as a dependency property.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e4084-106">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="e4084-106">In This Section</span></span>  
-- [<span data-ttu-id="e4084-107">종속성 속성 개요</span><span class="sxs-lookup"><span data-stu-id="e4084-107">Dependency Properties Overview</span></span>](dependency-properties-overview.md)
-- [<span data-ttu-id="e4084-108">연결된 속성 개요</span><span class="sxs-lookup"><span data-stu-id="e4084-108">Attached Properties Overview</span></span>](attached-properties-overview.md)
-- [<span data-ttu-id="e4084-109">사용자 지정 종속성 속성</span><span class="sxs-lookup"><span data-stu-id="e4084-109">Custom Dependency Properties</span></span>](custom-dependency-properties.md)
-- [<span data-ttu-id="e4084-110">종속성 속성 메타데이터</span><span class="sxs-lookup"><span data-stu-id="e4084-110">Dependency Property Metadata</span></span>](dependency-property-metadata.md)
-- [<span data-ttu-id="e4084-111">종속성 속성 콜백 및 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="e4084-111">Dependency Property Callbacks and Validation</span></span>](dependency-property-callbacks-and-validation.md)
-- [<span data-ttu-id="e4084-112">프레임워크 속성 메타데이터</span><span class="sxs-lookup"><span data-stu-id="e4084-112">Framework Property Metadata</span></span>](framework-property-metadata.md)
-- [<span data-ttu-id="e4084-113">종속성 속성 값 우선 순위</span><span class="sxs-lookup"><span data-stu-id="e4084-113">Dependency Property Value Precedence</span></span>](dependency-property-value-precedence.md)
-- [<span data-ttu-id="e4084-114">읽기 전용 종속성 속성</span><span class="sxs-lookup"><span data-stu-id="e4084-114">Read-Only Dependency Properties</span></span>](read-only-dependency-properties.md)
-- [<span data-ttu-id="e4084-115">속성 값 상속</span><span class="sxs-lookup"><span data-stu-id="e4084-115">Property Value Inheritance</span></span>](property-value-inheritance.md)
-- [<span data-ttu-id="e4084-116">종속성 속성 보안</span><span class="sxs-lookup"><span data-stu-id="e4084-116">Dependency Property Security</span></span>](dependency-property-security.md)
-- [<span data-ttu-id="e4084-117">DependencyObjects의 안전한 생성자 패턴</span><span class="sxs-lookup"><span data-stu-id="e4084-117">Safe Constructor Patterns for DependencyObjects</span></span>](safe-constructor-patterns-for-dependencyobjects.md)
-- [<span data-ttu-id="e4084-118">컬렉션 형식 종속성 속성</span><span class="sxs-lookup"><span data-stu-id="e4084-118">Collection-Type Dependency Properties</span></span>](collection-type-dependency-properties.md)
-- [<span data-ttu-id="e4084-119">XAML 로드 및 종속성 속성</span><span class="sxs-lookup"><span data-stu-id="e4084-119">XAML Loading and Dependency Properties</span></span>](xaml-loading-and-dependency-properties.md)
-- [<span data-ttu-id="e4084-120">방법 항목</span><span class="sxs-lookup"><span data-stu-id="e4084-120">How-to Topics</span></span>](properties-how-to-topics.md)
+## <a name="in-this-section"></a><span data-ttu-id="43280-106">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="43280-106">In This Section</span></span>  
+- [<span data-ttu-id="43280-107">종속성 속성 개요</span><span class="sxs-lookup"><span data-stu-id="43280-107">Dependency Properties Overview</span></span>](dependency-properties-overview.md)
+- [<span data-ttu-id="43280-108">연결된 속성 개요</span><span class="sxs-lookup"><span data-stu-id="43280-108">Attached Properties Overview</span></span>](attached-properties-overview.md)
+- [<span data-ttu-id="43280-109">사용자 지정 종속성 속성</span><span class="sxs-lookup"><span data-stu-id="43280-109">Custom Dependency Properties</span></span>](custom-dependency-properties.md)
+- [<span data-ttu-id="43280-110">종속성 속성 메타데이터</span><span class="sxs-lookup"><span data-stu-id="43280-110">Dependency Property Metadata</span></span>](dependency-property-metadata.md)
+- [<span data-ttu-id="43280-111">종속성 속성 콜백 및 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="43280-111">Dependency Property Callbacks and Validation</span></span>](dependency-property-callbacks-and-validation.md)
+- [<span data-ttu-id="43280-112">프레임워크 속성 메타데이터</span><span class="sxs-lookup"><span data-stu-id="43280-112">Framework Property Metadata</span></span>](framework-property-metadata.md)
+- [<span data-ttu-id="43280-113">종속성 속성 값 우선 순위</span><span class="sxs-lookup"><span data-stu-id="43280-113">Dependency Property Value Precedence</span></span>](dependency-property-value-precedence.md)
+- [<span data-ttu-id="43280-114">읽기 전용 종속성 속성</span><span class="sxs-lookup"><span data-stu-id="43280-114">Read-Only Dependency Properties</span></span>](read-only-dependency-properties.md)
+- [<span data-ttu-id="43280-115">속성 값 상속</span><span class="sxs-lookup"><span data-stu-id="43280-115">Property Value Inheritance</span></span>](property-value-inheritance.md)
+- [<span data-ttu-id="43280-116">종속성 속성 보안</span><span class="sxs-lookup"><span data-stu-id="43280-116">Dependency Property Security</span></span>](dependency-property-security.md)
+- [<span data-ttu-id="43280-117">DependencyObjects의 안전한 생성자 패턴</span><span class="sxs-lookup"><span data-stu-id="43280-117">Safe Constructor Patterns for DependencyObjects</span></span>](safe-constructor-patterns-for-dependencyobjects.md)
+- [<span data-ttu-id="43280-118">컬렉션 형식 종속성 속성</span><span class="sxs-lookup"><span data-stu-id="43280-118">Collection-Type Dependency Properties</span></span>](collection-type-dependency-properties.md)
+- [<span data-ttu-id="43280-119">XAML 로드 및 종속성 속성</span><span class="sxs-lookup"><span data-stu-id="43280-119">XAML Loading and Dependency Properties</span></span>](xaml-loading-and-dependency-properties.md)
+- [<span data-ttu-id="43280-120">방법 항목</span><span class="sxs-lookup"><span data-stu-id="43280-120">How-to Topics</span></span>](properties-how-to-topics.md)
   
-## <a name="reference"></a><span data-ttu-id="e4084-121">참조</span><span class="sxs-lookup"><span data-stu-id="e4084-121">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="43280-121">참조</span><span class="sxs-lookup"><span data-stu-id="43280-121">Reference</span></span>  
  <xref:System.Windows.DependencyProperty>  
   
  <xref:System.Windows.PropertyMetadata>  
@@ -44,13 +44,13 @@ ms.locfileid: "57352609"
   
  <xref:System.Windows.DependencyObject>  
   
-## <a name="related-sections"></a><span data-ttu-id="e4084-122">관련 단원</span><span class="sxs-lookup"><span data-stu-id="e4084-122">Related Sections</span></span>  
- [<span data-ttu-id="e4084-123">WPF 아키텍처</span><span class="sxs-lookup"><span data-stu-id="e4084-123">WPF Architecture</span></span>](wpf-architecture.md)  
-  [<span data-ttu-id="e4084-124">WPF의 XAML</span><span class="sxs-lookup"><span data-stu-id="e4084-124">XAML in WPF</span></span>](xaml-in-wpf.md)  
-  [<span data-ttu-id="e4084-125">기본 요소</span><span class="sxs-lookup"><span data-stu-id="e4084-125">Base Elements</span></span>](base-elements.md)  
-  [<span data-ttu-id="e4084-126">요소 트리 및 serialization</span><span class="sxs-lookup"><span data-stu-id="e4084-126">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
-  [<span data-ttu-id="e4084-127">이벤트</span><span class="sxs-lookup"><span data-stu-id="e4084-127">Events</span></span>](events-wpf.md)  
-  [<span data-ttu-id="e4084-128">입력</span><span class="sxs-lookup"><span data-stu-id="e4084-128">Input</span></span>](input-wpf.md)  
-  [<span data-ttu-id="e4084-129">리소스</span><span class="sxs-lookup"><span data-stu-id="e4084-129">Resources</span></span>](resources-wpf.md)  
-  [<span data-ttu-id="e4084-130">WPF 콘텐츠 모델</span><span class="sxs-lookup"><span data-stu-id="e4084-130">WPF Content Model</span></span>](../controls/wpf-content-model.md)  
-  [<span data-ttu-id="e4084-131">스레딩 모델</span><span class="sxs-lookup"><span data-stu-id="e4084-131">Threading Model</span></span>](threading-model.md)
+## <a name="related-sections"></a><span data-ttu-id="43280-122">관련 단원</span><span class="sxs-lookup"><span data-stu-id="43280-122">Related Sections</span></span>  
+ [<span data-ttu-id="43280-123">WPF 아키텍처</span><span class="sxs-lookup"><span data-stu-id="43280-123">WPF Architecture</span></span>](wpf-architecture.md)  
+  [<span data-ttu-id="43280-124">WPF의 XAML</span><span class="sxs-lookup"><span data-stu-id="43280-124">XAML in WPF</span></span>](xaml-in-wpf.md)  
+  [<span data-ttu-id="43280-125">기본 요소</span><span class="sxs-lookup"><span data-stu-id="43280-125">Base Elements</span></span>](base-elements.md)  
+  [<span data-ttu-id="43280-126">요소 트리 및 serialization</span><span class="sxs-lookup"><span data-stu-id="43280-126">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
+  [<span data-ttu-id="43280-127">이벤트</span><span class="sxs-lookup"><span data-stu-id="43280-127">Events</span></span>](events-wpf.md)  
+  [<span data-ttu-id="43280-128">입력</span><span class="sxs-lookup"><span data-stu-id="43280-128">Input</span></span>](input-wpf.md)  
+  [<span data-ttu-id="43280-129">리소스</span><span class="sxs-lookup"><span data-stu-id="43280-129">Resources</span></span>](resources-wpf.md)  
+  [<span data-ttu-id="43280-130">WPF 콘텐츠 모델</span><span class="sxs-lookup"><span data-stu-id="43280-130">WPF Content Model</span></span>](../controls/wpf-content-model.md)  
+  [<span data-ttu-id="43280-131">스레딩 모델</span><span class="sxs-lookup"><span data-stu-id="43280-131">Threading Model</span></span>](threading-model.md)
