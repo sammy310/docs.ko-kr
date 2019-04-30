@@ -18,50 +18,50 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9503c12da9e98fbd43f3904aad25c5d10655cec2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994645"
 ---
-# <a name="icordebugnativeframe2ischild-method"></a><span data-ttu-id="a16c2-102">ICorDebugNativeFrame2::IsChild 메서드</span><span class="sxs-lookup"><span data-stu-id="a16c2-102">ICorDebugNativeFrame2::IsChild Method</span></span>
-<span data-ttu-id="a16c2-103">현재 프레임 자식 프레임 인지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="a16c2-103">Determines whether the current frame is a child frame.</span></span>  
+# <a name="icordebugnativeframe2ischild-method"></a><span data-ttu-id="db0c8-102">ICorDebugNativeFrame2::IsChild 메서드</span><span class="sxs-lookup"><span data-stu-id="db0c8-102">ICorDebugNativeFrame2::IsChild Method</span></span>
+<span data-ttu-id="db0c8-103">현재 프레임 자식 프레임 인지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="db0c8-103">Determines whether the current frame is a child frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a16c2-104">구문</span><span class="sxs-lookup"><span data-stu-id="a16c2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="db0c8-104">구문</span><span class="sxs-lookup"><span data-stu-id="db0c8-104">Syntax</span></span>  
   
 ```  
 HRESULT IsChild([out] BOOL * pIsChild);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a16c2-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="a16c2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="db0c8-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="db0c8-105">Parameters</span></span>  
  `pIsChild`  
- <span data-ttu-id="a16c2-106">[out] 현재 프레임 자식 프레임을 여부를 지정 하는 부울 값입니다.</span><span class="sxs-lookup"><span data-stu-id="a16c2-106">[out] A Boolean value that specifies whether the current frame is a child frame.</span></span>  
+ <span data-ttu-id="db0c8-106">[out] 현재 프레임 자식 프레임을 여부를 지정 하는 부울 값입니다.</span><span class="sxs-lookup"><span data-stu-id="db0c8-106">[out] A Boolean value that specifies whether the current frame is a child frame.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a16c2-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="a16c2-107">Return Value</span></span>  
- <span data-ttu-id="a16c2-108">이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="a16c2-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="db0c8-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="db0c8-107">Return Value</span></span>  
+ <span data-ttu-id="db0c8-108">이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="db0c8-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="a16c2-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a16c2-109">HRESULT</span></span>|<span data-ttu-id="a16c2-110">설명</span><span class="sxs-lookup"><span data-stu-id="a16c2-110">Description</span></span>|  
+|<span data-ttu-id="db0c8-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="db0c8-109">HRESULT</span></span>|<span data-ttu-id="db0c8-110">설명</span><span class="sxs-lookup"><span data-stu-id="db0c8-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="a16c2-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="a16c2-111">S_OK</span></span>|<span data-ttu-id="a16c2-112">자식 상태가 반환 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="a16c2-112">The child status was successfully returned.</span></span>|  
-|<span data-ttu-id="a16c2-113">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="a16c2-113">E_FAIL</span></span>|<span data-ttu-id="a16c2-114">자식 상태를 반환 하지 못했습니다.</span><span class="sxs-lookup"><span data-stu-id="a16c2-114">The child status could not be returned.</span></span>|  
-|<span data-ttu-id="a16c2-115">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="a16c2-115">E_INVALIDARG</span></span>|<span data-ttu-id="a16c2-116">`pIsChild`가 null입니다.</span><span class="sxs-lookup"><span data-stu-id="a16c2-116">`pIsChild` is null.</span></span>|  
+|<span data-ttu-id="db0c8-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="db0c8-111">S_OK</span></span>|<span data-ttu-id="db0c8-112">자식 상태가 반환 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="db0c8-112">The child status was successfully returned.</span></span>|  
+|<span data-ttu-id="db0c8-113">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="db0c8-113">E_FAIL</span></span>|<span data-ttu-id="db0c8-114">자식 상태를 반환 하지 못했습니다.</span><span class="sxs-lookup"><span data-stu-id="db0c8-114">The child status could not be returned.</span></span>|  
+|<span data-ttu-id="db0c8-115">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="db0c8-115">E_INVALIDARG</span></span>|<span data-ttu-id="db0c8-116">`pIsChild`가 null입니다.</span><span class="sxs-lookup"><span data-stu-id="db0c8-116">`pIsChild` is null.</span></span>|  
   
-## <a name="exceptions"></a><span data-ttu-id="a16c2-117">예외</span><span class="sxs-lookup"><span data-stu-id="a16c2-117">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="db0c8-117">예외</span><span class="sxs-lookup"><span data-stu-id="db0c8-117">Exceptions</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a16c2-118">설명</span><span class="sxs-lookup"><span data-stu-id="a16c2-118">Remarks</span></span>  
- <span data-ttu-id="a16c2-119">합니다 `IsChild` 메서드가 반환 되는 `true` 프레임 개체 메서드를 호출 하는 다른 프레임의 자식인 경우.</span><span class="sxs-lookup"><span data-stu-id="a16c2-119">The `IsChild` method returns `true` if the frame object on which you call the method is a child of another frame.</span></span> <span data-ttu-id="a16c2-120">이 경우 사용 합니다 [IsMatchingParentFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md) 프레임 부모 인지 여부를 확인 하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="a16c2-120">If this is the case, use the [IsMatchingParentFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md) method to check whether a frame is its parent.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="db0c8-118">설명</span><span class="sxs-lookup"><span data-stu-id="db0c8-118">Remarks</span></span>  
+ <span data-ttu-id="db0c8-119">합니다 `IsChild` 메서드가 반환 되는 `true` 프레임 개체 메서드를 호출 하는 다른 프레임의 자식인 경우.</span><span class="sxs-lookup"><span data-stu-id="db0c8-119">The `IsChild` method returns `true` if the frame object on which you call the method is a child of another frame.</span></span> <span data-ttu-id="db0c8-120">이 경우 사용 합니다 [IsMatchingParentFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md) 프레임 부모 인지 여부를 확인 하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="db0c8-120">If this is the case, use the [IsMatchingParentFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md) method to check whether a frame is its parent.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a16c2-121">요구 사항</span><span class="sxs-lookup"><span data-stu-id="a16c2-121">Requirements</span></span>  
- <span data-ttu-id="a16c2-122">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="a16c2-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="db0c8-121">요구 사항</span><span class="sxs-lookup"><span data-stu-id="db0c8-121">Requirements</span></span>  
+ <span data-ttu-id="db0c8-122">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="db0c8-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a16c2-123">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a16c2-123">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="db0c8-123">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="db0c8-123">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a16c2-124">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a16c2-124">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="db0c8-124">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="db0c8-124">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a16c2-125">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a16c2-125">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="db0c8-125">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="db0c8-125">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a16c2-126">참고자료</span><span class="sxs-lookup"><span data-stu-id="a16c2-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="db0c8-126">참고자료</span><span class="sxs-lookup"><span data-stu-id="db0c8-126">See also</span></span>
 
-- [<span data-ttu-id="a16c2-127">ICorDebugNativeFrame2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a16c2-127">ICorDebugNativeFrame2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)
-- [<span data-ttu-id="a16c2-128">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="a16c2-128">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="a16c2-129">디버깅</span><span class="sxs-lookup"><span data-stu-id="a16c2-129">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="db0c8-127">ICorDebugNativeFrame2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="db0c8-127">ICorDebugNativeFrame2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)
+- [<span data-ttu-id="db0c8-128">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="db0c8-128">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="db0c8-129">디버깅</span><span class="sxs-lookup"><span data-stu-id="db0c8-129">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

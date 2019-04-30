@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2b19efdedc21f66e4692ce1850eb3947f856e436
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993800"
 ---
-# <a name="icordebugtype2gettypeid-method"></a><span data-ttu-id="6bbe3-102">ICorDebugType2::GetTypeID 메서드</span><span class="sxs-lookup"><span data-stu-id="6bbe3-102">ICorDebugType2::GetTypeID Method</span></span>
-<span data-ttu-id="6bbe3-103">가져옵니다를 [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) 이 형식에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="6bbe3-103">Gets a [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) for this type.</span></span>  
+# <a name="icordebugtype2gettypeid-method"></a><span data-ttu-id="85bff-102">ICorDebugType2::GetTypeID 메서드</span><span class="sxs-lookup"><span data-stu-id="85bff-102">ICorDebugType2::GetTypeID Method</span></span>
+<span data-ttu-id="85bff-103">가져옵니다를 [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) 이 형식에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="85bff-103">Gets a [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) for this type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6bbe3-104">구문</span><span class="sxs-lookup"><span data-stu-id="6bbe3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="85bff-104">구문</span><span class="sxs-lookup"><span data-stu-id="85bff-104">Syntax</span></span>  
   
 ```  
 HRESULT GetTypeID(  
@@ -35,33 +35,33 @@ HRESULT GetTypeID(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6bbe3-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="6bbe3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="85bff-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="85bff-105">Parameters</span></span>  
  `id`  
- <span data-ttu-id="6bbe3-106">[out] 에 대 한 포인터를 [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) 이 icordebugtype 합니다.</span><span class="sxs-lookup"><span data-stu-id="6bbe3-106">[out] A pointer to the [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) for this ICorDebugType.</span></span>  
+ <span data-ttu-id="85bff-106">[out] 에 대 한 포인터를 [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) 이 icordebugtype 합니다.</span><span class="sxs-lookup"><span data-stu-id="85bff-106">[out] A pointer to the [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) for this ICorDebugType.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="6bbe3-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="6bbe3-107">Return Value</span></span>  
- <span data-ttu-id="6bbe3-108">반환 값은 성공 시 `S_OK`이고 실패 시에는 오류 `HRESULT` 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="6bbe3-108">The return value is `S_OK` on success, or a failure `HRESULT` code on failure.</span></span> <span data-ttu-id="6bbe3-109">`HRESULT` 코드는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="6bbe3-109">The `HRESULT` codes include the following:</span></span>  
+## <a name="return-value"></a><span data-ttu-id="85bff-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="85bff-107">Return Value</span></span>  
+ <span data-ttu-id="85bff-108">반환 값은 성공 시 `S_OK`이고 실패 시에는 오류 `HRESULT` 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="85bff-108">The return value is `S_OK` on success, or a failure `HRESULT` code on failure.</span></span> <span data-ttu-id="85bff-109">`HRESULT` 코드는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="85bff-109">The `HRESULT` codes include the following:</span></span>  
   
-|<span data-ttu-id="6bbe3-110">반환 코드</span><span class="sxs-lookup"><span data-stu-id="6bbe3-110">Return code</span></span>|<span data-ttu-id="6bbe3-111">설명</span><span class="sxs-lookup"><span data-stu-id="6bbe3-111">Description</span></span>|  
+|<span data-ttu-id="85bff-110">반환 코드</span><span class="sxs-lookup"><span data-stu-id="85bff-110">Return code</span></span>|<span data-ttu-id="85bff-111">설명</span><span class="sxs-lookup"><span data-stu-id="85bff-111">Description</span></span>|  
 |-----------------|-----------------|  
-|`S_OK`|<span data-ttu-id="6bbe3-112">메서드가 정상적으로 실행되었습니다.</span><span class="sxs-lookup"><span data-stu-id="6bbe3-112">Method succeeded.</span></span> <span data-ttu-id="6bbe3-113">메서드는 유효한 검색 했음을 [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="6bbe3-113">The method has retrieved a valid [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md).</span></span>|  
-|`CORDBG_E_CLASS_NOT_LOADED`|<span data-ttu-id="6bbe3-114">형식 로드 되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="6bbe3-114">The type has not been loaded.</span></span>|  
-|`CORDBG_E_UNSUPPORTED`|<span data-ttu-id="6bbe3-115">형식이 지원 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6bbe3-115">The type is not supported.</span></span>|  
+|`S_OK`|<span data-ttu-id="85bff-112">메서드가 정상적으로 실행되었습니다.</span><span class="sxs-lookup"><span data-stu-id="85bff-112">Method succeeded.</span></span> <span data-ttu-id="85bff-113">메서드는 유효한 검색 했음을 [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="85bff-113">The method has retrieved a valid [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md).</span></span>|  
+|`CORDBG_E_CLASS_NOT_LOADED`|<span data-ttu-id="85bff-114">형식 로드 되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="85bff-114">The type has not been loaded.</span></span>|  
+|`CORDBG_E_UNSUPPORTED`|<span data-ttu-id="85bff-115">형식이 지원 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="85bff-115">The type is not supported.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6bbe3-116">설명</span><span class="sxs-lookup"><span data-stu-id="6bbe3-116">Remarks</span></span>  
- <span data-ttu-id="6bbe3-117">이 메서드는 ICorDebugType 수도 있습니다 하지에 로드 된 런타임을 있는 형식을 나타내는에서 매핑을 제공 된 [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md), 런타임에 로드 형식을 식별 하는 불투명 역할 처리 합니다.</span><span class="sxs-lookup"><span data-stu-id="6bbe3-117">This method provides a mapping from the ICorDebugType, which represents a type that may or may not have been loaded into the runtime, to a [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md), which serves as an opaque handle that identifies a type loaded into the runtime.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="85bff-116">설명</span><span class="sxs-lookup"><span data-stu-id="85bff-116">Remarks</span></span>  
+ <span data-ttu-id="85bff-117">이 메서드는 ICorDebugType 수도 있습니다 하지에 로드 된 런타임을 있는 형식을 나타내는에서 매핑을 제공 된 [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md), 런타임에 로드 형식을 식별 하는 불투명 역할 처리 합니다.</span><span class="sxs-lookup"><span data-stu-id="85bff-117">This method provides a mapping from the ICorDebugType, which represents a type that may or may not have been loaded into the runtime, to a [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md), which serves as an opaque handle that identifies a type loaded into the runtime.</span></span>  
   
- <span data-ttu-id="6bbe3-118">ICorDebugType 나타내는 형식이 아직이 메서드는 반환 된 로드 경우 `CORDBG_E_CLASS_NOT_LOADED`합니다.</span><span class="sxs-lookup"><span data-stu-id="6bbe3-118">When the type that the ICorDebugType represents has not yet been loaded, this method returns `CORDBG_E_CLASS_NOT_LOADED`.</span></span>  <span data-ttu-id="6bbe3-119">반환 형식이 지원 되지 않는 경우 `CORDBG_E_UNSUPPORTED`합니다.</span><span class="sxs-lookup"><span data-stu-id="6bbe3-119">If the type is not supported, it returns `CORDBG_E_UNSUPPORTED`.</span></span>  
+ <span data-ttu-id="85bff-118">ICorDebugType 나타내는 형식이 아직이 메서드는 반환 된 로드 경우 `CORDBG_E_CLASS_NOT_LOADED`합니다.</span><span class="sxs-lookup"><span data-stu-id="85bff-118">When the type that the ICorDebugType represents has not yet been loaded, this method returns `CORDBG_E_CLASS_NOT_LOADED`.</span></span>  <span data-ttu-id="85bff-119">반환 형식이 지원 되지 않는 경우 `CORDBG_E_UNSUPPORTED`합니다.</span><span class="sxs-lookup"><span data-stu-id="85bff-119">If the type is not supported, it returns `CORDBG_E_UNSUPPORTED`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6bbe3-120">요구 사항</span><span class="sxs-lookup"><span data-stu-id="6bbe3-120">Requirements</span></span>  
- <span data-ttu-id="6bbe3-121">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="6bbe3-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="85bff-120">요구 사항</span><span class="sxs-lookup"><span data-stu-id="85bff-120">Requirements</span></span>  
+ <span data-ttu-id="85bff-121">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="85bff-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6bbe3-122">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6bbe3-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="85bff-122">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="85bff-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6bbe3-123">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6bbe3-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="85bff-123">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="85bff-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6bbe3-124">**.NET Framework 버전:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6bbe3-124">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
+ <span data-ttu-id="85bff-124">**.NET Framework 버전:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="85bff-124">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6bbe3-125">참고자료</span><span class="sxs-lookup"><span data-stu-id="6bbe3-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="85bff-125">참고자료</span><span class="sxs-lookup"><span data-stu-id="85bff-125">See also</span></span>
 
-- [<span data-ttu-id="6bbe3-126">ICorDebugType2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="6bbe3-126">ICorDebugType2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-interface.md)
+- [<span data-ttu-id="85bff-126">ICorDebugType2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="85bff-126">ICorDebugType2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-interface.md)

@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 77a2ccaf6f972fadd8396378dc7777ec4c85120d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970055"
 ---
-# <a name="iapartmentcallbackdocallback-method"></a><span data-ttu-id="e3807-102">IApartmentCallback::DoCallback 메서드</span><span class="sxs-lookup"><span data-stu-id="e3807-102">IApartmentCallback::DoCallback Method</span></span>
-<span data-ttu-id="e3807-103">아파트 내의 지정된 된 함수를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="e3807-103">Executes the specified function within an apartment.</span></span>  
+# <a name="iapartmentcallbackdocallback-method"></a><span data-ttu-id="064b5-102">IApartmentCallback::DoCallback 메서드</span><span class="sxs-lookup"><span data-stu-id="064b5-102">IApartmentCallback::DoCallback Method</span></span>
+<span data-ttu-id="064b5-103">아파트 내의 지정된 된 함수를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="064b5-103">Executes the specified function within an apartment.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e3807-104">구문</span><span class="sxs-lookup"><span data-stu-id="e3807-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="064b5-104">구문</span><span class="sxs-lookup"><span data-stu-id="064b5-104">Syntax</span></span>  
   
 ```  
 HRESULT _stdcall DoCallback(  
@@ -36,22 +36,22 @@ HRESULT _stdcall DoCallback(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e3807-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="e3807-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="064b5-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="064b5-105">Parameters</span></span>  
  `pFunc`  
- <span data-ttu-id="e3807-106">[in] 아파트 내에서 실행 되는 함수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="e3807-106">[in] A pointer to the function to be executed within the apartment.</span></span>  
+ <span data-ttu-id="064b5-106">[in] 아파트 내에서 실행 되는 함수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="064b5-106">[in] A pointer to the function to be executed within the apartment.</span></span>  
   
  `pData`  
- <span data-ttu-id="e3807-107">[in] 함수의 인수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="e3807-107">[in] A pointer to the function's argument.</span></span>  
+ <span data-ttu-id="064b5-107">[in] 함수의 인수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="064b5-107">[in] A pointer to the function's argument.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e3807-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e3807-108">Requirements</span></span>  
- <span data-ttu-id="e3807-109">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="e3807-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="064b5-108">요구 사항</span><span class="sxs-lookup"><span data-stu-id="064b5-108">Requirements</span></span>  
+ <span data-ttu-id="064b5-109">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="064b5-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e3807-110">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="e3807-110">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="064b5-110">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="064b5-110">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="e3807-111">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="e3807-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="064b5-111">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="064b5-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="e3807-112">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e3807-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="064b5-112">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="064b5-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e3807-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="e3807-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="064b5-113">참고자료</span><span class="sxs-lookup"><span data-stu-id="064b5-113">See also</span></span>
 
-- [<span data-ttu-id="e3807-114">IApartmentCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e3807-114">IApartmentCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iapartmentcallback-interface.md)
+- [<span data-ttu-id="064b5-114">IApartmentCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="064b5-114">IApartmentCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iapartmentcallback-interface.md)
