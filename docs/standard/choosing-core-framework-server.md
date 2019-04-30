@@ -21,7 +21,7 @@ ms.locfileid: "57678802"
 * 마이크로 서비스를 대상으로 합니다.
 * Docker 컨테이너를 사용하고 있습니다.
 * 고성능 및 확장 가능한 시스템이 필요합니다.
-* .NET 버전이 애플리케이션별로 함께 필요합니다.
+* .NET 버전이 애플리케이션 별로 함께 필요합니다.
 
 다음과 같은 경우에는 서버 애플리케이션에 .NET Framework를 사용합니다.
 
@@ -38,13 +38,13 @@ ms.locfileid: "57678802"
 
 애플리케이션(웹/서비스)이 여러 플랫폼 (Windows, Linux 및 macOS)에서 실행되어야 하는 경우 .NET Core를 사용합니다.
 
-.NET Core는 앞에서 언급한 운영 체제를 개발 워크스테이션으로 지원합니다. Visual Studio는 Windows 및 macOS용 IDE(통합 개발 환경)를 제공합니다. 또한 macOS, Linux 및 Windows에서 실행되는 Visual Studio Code를 사용할 수 있습니다. Visual Studio Code는 IntelliSense 및 디버깅을 포함하여 .NET Core를 지원합니다. Sublime, Emacs 및 VI 같은 대부분의 타사 편집기는 .NET Core에서 작동합니다. 이러한 타사 편집기는 [Omnisharp](https://www.omnisharp.net/)를 사용하여 편집기 IntelliSense를 가져옵니다. 어떤 코드 편집기도 사용하지 않고, 지원되는 모든 플랫폼에서 사용할 수 있는 [.NET Core CLI 도구](../core/tools/index.md)를 직접 사용할 수도 있습니다.
+.NET Core는 앞에서 언급한 운영 체제를 개발 워크스테이션으로 지원합니다. Visual Studio는 Windows 및 macOS 용 IDE(통합 개발 환경)를 제공합니다. 또한 macOS, Linux 및 Windows에서 실행되는 Visual Studio Code를 사용할 수 있습니다. Visual Studio Code는 IntelliSense 및 디버깅을 포함하여 .NET Core를 지원합니다. Sublime, Emacs 및 VI 같은 대부분의 타사 편집기는 .NET Core에서 작동합니다. 이러한 타사 편집기는 [Omnisharp](https://www.omnisharp.net/)를 사용하여 편집기 IntelliSense를 가져옵니다. 어떤 코드 편집기도 사용하지 않고, 지원되는 모든 플랫폼에서 사용할 수 있는 [.NET Core CLI 도구](../core/tools/index.md)를 직접 사용할 수도 있습니다.
 
 ### <a name="microservices-architecture"></a>마이크로 서비스 아키텍처
 
 마이크로 서비스 아키텍처를 사용하면 서비스 경계를 벗어나 여러 기술을 융합할 수 있습니다. 이러한 기술 융합을 통해 다른 마이크로 서비스나 서비스에서 작동하는 새로운 마이크로 서비스에 .NET Core를 점진적으로 적용할 수 있습니다.  예를 들어 .NET Framework, Java, Ruby 또는 다른 모놀리식 기술로 개발된 서비스나 마이크로 서비스를 융합할 수 있습니다.
 
-사용 가능한 많은 인프라 플랫폼이 있습니다. [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)은 크고 복잡한 마이크로 서비스 시스템용으로 설계되었습니다. [Azure App Service](https://azure.microsoft.com/services/app-service/)는 상태 비저장 마이크로 서비스에 적합합니다. Docker를 바탕으로 하는 마이크로 서비스 대안의 경우 [컨테이너](#containers) 섹션에 설명된 대로 모든 종류의 마이크로 서비스 접근 방식과 맞습니다. 이러한 모든 플랫폼은 .NET Core를 지원하므로 마이크로 서비스를 호스팅하는 데 적합합니다.
+사용 가능한 많은 인프라 플랫폼이 있습니다. [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)은 크고 복잡한 마이크로 서비스 시스템용으로 설계되었습니다. [Azure App Service](https://azure.microsoft.com/services/app-service/)는 상태 비저장 마이크로 서비스에 적합합니다. Docker를 바탕으로 하는 마이크로 서비스 대안의 경우 [컨테이너](#containers) 섹션에 설명된 대로 모든 종류의 마이크로 서비스 접근 방식과 맞습니다. 이러한 모든 플랫폼은 .NET Core를 지원하므로 마이크로 서비스를 호스팅 하는 데 적합합니다.
 
 마이크로 서비스 아키텍처에 대한 자세한 내용은 [.NET 마이크로 서비스. 컨테이너화된 .NET 애플리케이션을 위한 아키텍처](microservices-architecture/index.md)를 참조하세요.
 
@@ -52,7 +52,7 @@ ms.locfileid: "57678802"
 
 컨테이너는 일반적으로 마이크로 서비스 아키텍처와 함께 사용됩니다. 또한 컨테이너는 모든 아키텍처 패턴을 따르는 웹앱 또는 서비스를 컨테이너화하는 데 사용할 수 있습니다. .NET Framework를 Windows 컨테이너에서 사용할 수 있지만 .NET Core의 모듈화된 간단한 특성이 컨테이너에 더 적합합니다. 컨테이너를 만들고 배포할 때 컨테이너 이미지의 크기가 .NET Framework보다 .NET Core를 사용할 때 훨씬 더 작습니다. 플랫폼 간 사용되므로 예를 들어 서버 앱을 Linux Docker 컨테이너에 배포할 수 있습니다.
 
-Docker 컨테이너는 고유한 Linux 또는 Windows 인프라나 [Azure Kubernetes Service](https://azure.microsoft.com/services/kubernetes-service/) 같은 클라우드 서비스에서 호스트할 수 있습니다. Azure Kubernetes Service는 클라우드에서 컨테이너 기반 애플리케이션을 관리, 오케스트레이션 및 확장할 수 있습니다.
+Docker 컨테이너는 고유한 Linux 또는 Windows 인프라나 [Azure Kubernetes Service](https://azure.microsoft.com/services/kubernetes-service/) 같은 클라우드 서비스에서 호스트 할 수 있습니다. Azure Kubernetes Service는 클라우드에서 컨테이너 기반 애플리케이션을 관리, 오케스트레이션 및 확장할 수 있습니다.
 
 ### <a name="a-need-for-high-performance-and-scalable-systems"></a>고성능 및 확장 가능한 시스템에 대한 요구 사항
 
@@ -99,7 +99,7 @@ Docker 컨테이너는 고유한 Linux 또는 Windows 인프라나 [Azure Kubern
 
 ### <a name="a-need-to-use-a-platform-that-doesnt-support-net-core"></a>.NET Core를 지원하지 않는 플랫폼을 사용하는 필요성
 
-일부 Microsoft 또는 타사 플랫폼에서는 .NET Core를 지원하지 않습니다. 일부 Azure 서비스에서는 .NET Core에서 사용할 수 없는 SDK를 제공합니다. 현재 Azure Services는 모두 .NET Core를 사용하므로 이 상황은 전환되고 있습니다. 그 동안에는 클라이언트 SDK 대신 상응하는 REST API를 항상 사용할 수 있습니다.
+일부 Microsoft 또는 타사 플랫폼에서는 .NET Core를 지원하지 않습니다. 일부 Azure 서비스에서는 .NET Core에서 사용할 수 없는 SDK를 제공합니다. 현재 Azure Services는 모두 .NET Core를 사용하므로 이 상황은 전환되고 있습니다. 그동안에는 클라이언트 SDK 대신 상응하는 REST API를 항상 사용할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 
