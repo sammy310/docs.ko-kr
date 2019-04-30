@@ -19,16 +19,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3ed8b85475dc7327c1aac6f920aba627215e27c7
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965808"
 ---
-# <a name="createversionstringfrommodule-function"></a><span data-ttu-id="91b3b-102">CreateVersionStringFromModule 함수</span><span class="sxs-lookup"><span data-stu-id="91b3b-102">CreateVersionStringFromModule Function</span></span>
-<span data-ttu-id="91b3b-103">대상 프로세스의 CLR(공용 언어 런타임) 경로에서 버전 문자열을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="91b3b-103">Creates a version string from a common language runtime (CLR) path in a target process.</span></span>  
+# <a name="createversionstringfrommodule-function"></a><span data-ttu-id="e64a4-102">CreateVersionStringFromModule 함수</span><span class="sxs-lookup"><span data-stu-id="e64a4-102">CreateVersionStringFromModule Function</span></span>
+<span data-ttu-id="e64a4-103">대상 프로세스의 CLR(공용 언어 런타임) 경로에서 버전 문자열을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="e64a4-103">Creates a version string from a common language runtime (CLR) path in a target process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="91b3b-104">구문</span><span class="sxs-lookup"><span data-stu-id="91b3b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e64a4-104">구문</span><span class="sxs-lookup"><span data-stu-id="e64a4-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateVersionStringFromModule (  
@@ -41,48 +41,48 @@ HRESULT CreateVersionStringFromModule (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="91b3b-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="91b3b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e64a4-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="e64a4-105">Parameters</span></span>  
  `pidDebuggee`  
- <span data-ttu-id="91b3b-106">[in] 대상 CLR이 로드되는 프로세스의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="91b3b-106">[in] Identifier of the process in which the target CLR is loaded.</span></span>  
+ <span data-ttu-id="e64a4-106">[in] 대상 CLR이 로드되는 프로세스의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="e64a4-106">[in] Identifier of the process in which the target CLR is loaded.</span></span>  
   
  `szModuleName`  
- <span data-ttu-id="91b3b-107">[in] 프로세스에서 로드된 대상 CLR의 전체 경로 또는 상대 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="91b3b-107">[in] Full or relative path to the target CLR that is loaded in the process.</span></span>  
+ <span data-ttu-id="e64a4-107">[in] 프로세스에서 로드된 대상 CLR의 전체 경로 또는 상대 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="e64a4-107">[in] Full or relative path to the target CLR that is loaded in the process.</span></span>  
   
  `pBuffer`  
- <span data-ttu-id="91b3b-108">[out] 대상 CLR에 대한 버전 문자열을 저장하기 위한 버퍼를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="91b3b-108">[out] Return buffer for storing the version string for the target CLR.</span></span>  
+ <span data-ttu-id="e64a4-108">[out] 대상 CLR에 대한 버전 문자열을 저장하기 위한 버퍼를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="e64a4-108">[out] Return buffer for storing the version string for the target CLR.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="91b3b-109">[in] `pBuffer`의 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="91b3b-109">[in] Size of `pBuffer`.</span></span>  
+ <span data-ttu-id="e64a4-109">[in] `pBuffer`의 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="e64a4-109">[in] Size of `pBuffer`.</span></span>  
   
  `pdwLength`  
- <span data-ttu-id="91b3b-110">[out] `pBuffer`에서 반환된 버전 문자열의 길이입니다.</span><span class="sxs-lookup"><span data-stu-id="91b3b-110">[out] Length of the version string returned by `pBuffer`.</span></span>  
+ <span data-ttu-id="e64a4-110">[out] `pBuffer`에서 반환된 버전 문자열의 길이입니다.</span><span class="sxs-lookup"><span data-stu-id="e64a4-110">[out] Length of the version string returned by `pBuffer`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="91b3b-111">반환 값</span><span class="sxs-lookup"><span data-stu-id="91b3b-111">Return Value</span></span>  
- <span data-ttu-id="91b3b-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="91b3b-112">S_OK</span></span>  
- <span data-ttu-id="91b3b-113">`pBuffer`에 반환된 대상 CLR에 대한 버전 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="91b3b-113">The version string for the target CLR was successfully returned in `pBuffer`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e64a4-111">반환 값</span><span class="sxs-lookup"><span data-stu-id="e64a4-111">Return Value</span></span>  
+ <span data-ttu-id="e64a4-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="e64a4-112">S_OK</span></span>  
+ <span data-ttu-id="e64a4-113">`pBuffer`에 반환된 대상 CLR에 대한 버전 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="e64a4-113">The version string for the target CLR was successfully returned in `pBuffer`.</span></span>  
   
- <span data-ttu-id="91b3b-114">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="91b3b-114">E_INVALIDARG</span></span>  
- <span data-ttu-id="91b3b-115">`szModuleName`이 null이거나 `pBuffer` 또는 `cchBuffer`가 null입니다.</span><span class="sxs-lookup"><span data-stu-id="91b3b-115">`szModuleName` is null, or either `pBuffer` or `cchBuffer` is null.</span></span> <span data-ttu-id="91b3b-116">`pBuffer` 및 `cchBuffer`는 둘 다 null이거나 null이 아니어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="91b3b-116">`pBuffer` and `cchBuffer` must both be null or non-null.</span></span>  
+ <span data-ttu-id="e64a4-114">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="e64a4-114">E_INVALIDARG</span></span>  
+ <span data-ttu-id="e64a4-115">`szModuleName`이 null이거나 `pBuffer` 또는 `cchBuffer`가 null입니다.</span><span class="sxs-lookup"><span data-stu-id="e64a4-115">`szModuleName` is null, or either `pBuffer` or `cchBuffer` is null.</span></span> <span data-ttu-id="e64a4-116">`pBuffer` 및 `cchBuffer`는 둘 다 null이거나 null이 아니어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e64a4-116">`pBuffer` and `cchBuffer` must both be null or non-null.</span></span>  
   
- <span data-ttu-id="91b3b-117">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span><span class="sxs-lookup"><span data-stu-id="91b3b-117">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span></span>  
- <span data-ttu-id="91b3b-118">`pdwLength`가 `cchBuffer`보다 큰 경우</span><span class="sxs-lookup"><span data-stu-id="91b3b-118">`pdwLength` is greater than `cchBuffer`.</span></span> <span data-ttu-id="91b3b-119">이는 `pBuffer` 및 `cchBuffer` 둘 다에 대해 null을 전달하고 `pdwLength`를 사용하여 필요한 버퍼 크기를 쿼리한 경우의 예상 결과일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="91b3b-119">This may be an expected result if you have passed null for both `pBuffer` and `cchBuffer`, and queried the necessary buffer size by using `pdwLength`.</span></span>  
+ <span data-ttu-id="e64a4-117">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span><span class="sxs-lookup"><span data-stu-id="e64a4-117">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span></span>  
+ <span data-ttu-id="e64a4-118">`pdwLength`가 `cchBuffer`보다 큰 경우</span><span class="sxs-lookup"><span data-stu-id="e64a4-118">`pdwLength` is greater than `cchBuffer`.</span></span> <span data-ttu-id="e64a4-119">이는 `pBuffer` 및 `cchBuffer` 둘 다에 대해 null을 전달하고 `pdwLength`를 사용하여 필요한 버퍼 크기를 쿼리한 경우의 예상 결과일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e64a4-119">This may be an expected result if you have passed null for both `pBuffer` and `cchBuffer`, and queried the necessary buffer size by using `pdwLength`.</span></span>  
   
- <span data-ttu-id="91b3b-120">HRESULT_FROM_WIN32(ERROR_MOD_NOT_FOUND)</span><span class="sxs-lookup"><span data-stu-id="91b3b-120">HRESULT_FROM_WIN32(ERROR_MOD_NOT_FOUND)</span></span>  
- <span data-ttu-id="91b3b-121">`szModuleName`이 대상 프로세스의 유효한 CLR에 대한 경로를 포함하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="91b3b-121">`szModuleName` does not contain a path to a valid CLR in the target process.</span></span>  
+ <span data-ttu-id="e64a4-120">HRESULT_FROM_WIN32(ERROR_MOD_NOT_FOUND)</span><span class="sxs-lookup"><span data-stu-id="e64a4-120">HRESULT_FROM_WIN32(ERROR_MOD_NOT_FOUND)</span></span>  
+ <span data-ttu-id="e64a4-121">`szModuleName`이 대상 프로세스의 유효한 CLR에 대한 경로를 포함하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e64a4-121">`szModuleName` does not contain a path to a valid CLR in the target process.</span></span>  
   
- <span data-ttu-id="91b3b-122">E_FAIL(또는 다른 E_ 반환 코드)</span><span class="sxs-lookup"><span data-stu-id="91b3b-122">E_FAIL (or other E_ return codes)</span></span>  
- <span data-ttu-id="91b3b-123">`pidDebuggee`가 유효한 프로세스 또는 다른 실패를 참조하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="91b3b-123">`pidDebuggee` does not refer to a valid process, or other failure.</span></span>  
+ <span data-ttu-id="e64a4-122">E_FAIL(또는 다른 E_ 반환 코드)</span><span class="sxs-lookup"><span data-stu-id="e64a4-122">E_FAIL (or other E_ return codes)</span></span>  
+ <span data-ttu-id="e64a4-123">`pidDebuggee`가 유효한 프로세스 또는 다른 실패를 참조하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e64a4-123">`pidDebuggee` does not refer to a valid process, or other failure.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="91b3b-124">설명</span><span class="sxs-lookup"><span data-stu-id="91b3b-124">Remarks</span></span>  
- <span data-ttu-id="91b3b-125">이 함수는 `pidDebuggee`로 식별된 CLR 프로세스 및 `szModuleName`으로 지정된 문자열 경로를 수락합니다.</span><span class="sxs-lookup"><span data-stu-id="91b3b-125">This function accepts a CLR process that is identified by `pidDebuggee` and a string path that is specified by `szModuleName`.</span></span> <span data-ttu-id="91b3b-126">`pBuffer`가 가리키는 버퍼에 버전 문자열이 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="91b3b-126">The version string is returned in the buffer that `pBuffer` points to.</span></span> <span data-ttu-id="91b3b-127">이 문자열은 함수 사용자에게 불투명합니다. 즉, 버전 문자열 자체에는 내포된 의미가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="91b3b-127">This string is opaque to the function user; that is, there is no intrinsic meaning in the version string itself.</span></span> <span data-ttu-id="91b3b-128">이 함수의 컨텍스트에서 되 고 [CreateDebuggingInterfaceFromVersion 함수](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="91b3b-128">It is used solely in the context of this function and the [CreateDebuggingInterfaceFromVersion function](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e64a4-124">설명</span><span class="sxs-lookup"><span data-stu-id="e64a4-124">Remarks</span></span>  
+ <span data-ttu-id="e64a4-125">이 함수는 `pidDebuggee`로 식별된 CLR 프로세스 및 `szModuleName`으로 지정된 문자열 경로를 수락합니다.</span><span class="sxs-lookup"><span data-stu-id="e64a4-125">This function accepts a CLR process that is identified by `pidDebuggee` and a string path that is specified by `szModuleName`.</span></span> <span data-ttu-id="e64a4-126">`pBuffer`가 가리키는 버퍼에 버전 문자열이 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="e64a4-126">The version string is returned in the buffer that `pBuffer` points to.</span></span> <span data-ttu-id="e64a4-127">이 문자열은 함수 사용자에게 불투명합니다. 즉, 버전 문자열 자체에는 내포된 의미가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="e64a4-127">This string is opaque to the function user; that is, there is no intrinsic meaning in the version string itself.</span></span> <span data-ttu-id="e64a4-128">이 함수의 컨텍스트에서 되 고 [CreateDebuggingInterfaceFromVersion 함수](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="e64a4-128">It is used solely in the context of this function and the [CreateDebuggingInterfaceFromVersion function](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md).</span></span>  
   
- <span data-ttu-id="91b3b-129">이 함수는 두 번 호출해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="91b3b-129">This function should be called twice.</span></span> <span data-ttu-id="91b3b-130">처음 호출할 때는 `pBuffer` 및 `cchBuffer` 둘 다에 대해 null을 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="91b3b-130">When you call it the first time, pass null for both `pBuffer` and `cchBuffer`.</span></span> <span data-ttu-id="91b3b-131">이렇게 하면 `pBuffer`에 필요한 버퍼의 크기가 `pdwLength`에 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="91b3b-131">When you do this, the size of the buffer necessary for `pBuffer` will be returned in `pdwLength`.</span></span> <span data-ttu-id="91b3b-132">그런 다음 두 번째로 함수를 호출하고 버퍼에 `pBuffer`에, 해당 크기를 `cchBuffer`에 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="91b3b-132">You can then call the function a second time, and pass the buffer in `pBuffer` and its size in `cchBuffer`.</span></span>  
+ <span data-ttu-id="e64a4-129">이 함수는 두 번 호출해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e64a4-129">This function should be called twice.</span></span> <span data-ttu-id="e64a4-130">처음 호출할 때는 `pBuffer` 및 `cchBuffer` 둘 다에 대해 null을 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="e64a4-130">When you call it the first time, pass null for both `pBuffer` and `cchBuffer`.</span></span> <span data-ttu-id="e64a4-131">이렇게 하면 `pBuffer`에 필요한 버퍼의 크기가 `pdwLength`에 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="e64a4-131">When you do this, the size of the buffer necessary for `pBuffer` will be returned in `pdwLength`.</span></span> <span data-ttu-id="e64a4-132">그런 다음 두 번째로 함수를 호출하고 버퍼에 `pBuffer`에, 해당 크기를 `cchBuffer`에 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e64a4-132">You can then call the function a second time, and pass the buffer in `pBuffer` and its size in `cchBuffer`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="91b3b-133">요구 사항</span><span class="sxs-lookup"><span data-stu-id="91b3b-133">Requirements</span></span>  
- <span data-ttu-id="91b3b-134">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="91b3b-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e64a4-133">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e64a4-133">Requirements</span></span>  
+ <span data-ttu-id="e64a4-134">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="e64a4-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="91b3b-135">**헤더:** dbgshim.h</span><span class="sxs-lookup"><span data-stu-id="91b3b-135">**Header:** dbgshim.h</span></span>  
+ <span data-ttu-id="e64a4-135">**헤더:** dbgshim.h</span><span class="sxs-lookup"><span data-stu-id="e64a4-135">**Header:** dbgshim.h</span></span>  
   
- <span data-ttu-id="91b3b-136">**라이브러리:** dbgshim.dll</span><span class="sxs-lookup"><span data-stu-id="91b3b-136">**Library:** dbgshim.dll</span></span>  
+ <span data-ttu-id="e64a4-136">**라이브러리:** dbgshim.dll</span><span class="sxs-lookup"><span data-stu-id="e64a4-136">**Library:** dbgshim.dll</span></span>  
   
- <span data-ttu-id="91b3b-137">**.NET framework 버전:** 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="91b3b-137">**.NET Framework Versions:** 3.5 SP1</span></span>
+ <span data-ttu-id="e64a4-137">**.NET framework 버전:** 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="e64a4-137">**.NET Framework Versions:** 3.5 SP1</span></span>

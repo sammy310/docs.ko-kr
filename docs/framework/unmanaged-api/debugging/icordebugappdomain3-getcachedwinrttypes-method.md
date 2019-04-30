@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 73a08e83d67c973294938a030b95b906aec6be6d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962606"
 ---
-# <a name="icordebugappdomain3getcachedwinrttypes-method"></a><span data-ttu-id="8d1e0-102">ICorDebugAppDomain3::GetCachedWinRTTypes 메서드</span><span class="sxs-lookup"><span data-stu-id="8d1e0-102">ICorDebugAppDomain3::GetCachedWinRTTypes Method</span></span>
-<span data-ttu-id="8d1e0-103">모든 캐시에 대 한 열거자를 가져옵니다 [!INCLUDE[wrt](../../../../includes/wrt-md.md)] 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="8d1e0-103">Gets an enumerator for all cached [!INCLUDE[wrt](../../../../includes/wrt-md.md)] types.</span></span>  
+# <a name="icordebugappdomain3getcachedwinrttypes-method"></a><span data-ttu-id="1067c-102">ICorDebugAppDomain3::GetCachedWinRTTypes 메서드</span><span class="sxs-lookup"><span data-stu-id="1067c-102">ICorDebugAppDomain3::GetCachedWinRTTypes Method</span></span>
+<span data-ttu-id="1067c-103">모든 캐시에 대 한 열거자를 가져옵니다 [!INCLUDE[wrt](../../../../includes/wrt-md.md)] 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="1067c-103">Gets an enumerator for all cached [!INCLUDE[wrt](../../../../includes/wrt-md.md)] types.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8d1e0-104">구문</span><span class="sxs-lookup"><span data-stu-id="8d1e0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1067c-104">구문</span><span class="sxs-lookup"><span data-stu-id="1067c-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCachedWinRTTypes (   
@@ -35,19 +35,19 @@ HRESULT GetCachedWinRTTypes (
 ;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8d1e0-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="8d1e0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1067c-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="1067c-105">Parameters</span></span>  
  `ppGuidToTypeEnum`  
- <span data-ttu-id="8d1e0-106">[out] 에 대 한 포인터를 [ICorDebugGuidToTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md) 의 관리 되는 표현을 열거할 수 있는 인터페이스 개체 [!INCLUDE[wrt](../../../../includes/wrt-md.md)] 현재 응용 프로그램 도메인에 로드 된 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="8d1e0-106">[out] A pointer to an [ICorDebugGuidToTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md) interface object that can enumerate the managed representations of [!INCLUDE[wrt](../../../../includes/wrt-md.md)] types currently loaded in the application domain.</span></span>  
+ <span data-ttu-id="1067c-106">[out] 에 대 한 포인터를 [ICorDebugGuidToTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md) 의 관리 되는 표현을 열거할 수 있는 인터페이스 개체 [!INCLUDE[wrt](../../../../includes/wrt-md.md)] 현재 응용 프로그램 도메인에 로드 된 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="1067c-106">[out] A pointer to an [ICorDebugGuidToTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md) interface object that can enumerate the managed representations of [!INCLUDE[wrt](../../../../includes/wrt-md.md)] types currently loaded in the application domain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8d1e0-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="8d1e0-107">Requirements</span></span>  
- <span data-ttu-id="8d1e0-108">**플랫폼:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8d1e0-108">**Platforms:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1067c-107">요구 사항</span><span class="sxs-lookup"><span data-stu-id="1067c-107">Requirements</span></span>  
+ <span data-ttu-id="1067c-108">**플랫폼:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1067c-108">**Platforms:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]</span></span>  
   
- <span data-ttu-id="8d1e0-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8d1e0-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="1067c-109">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1067c-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="8d1e0-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8d1e0-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1067c-110">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1067c-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8d1e0-111">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8d1e0-111">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="1067c-111">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1067c-111">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8d1e0-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="8d1e0-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1067c-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="1067c-112">See also</span></span>
 
-- [<span data-ttu-id="8d1e0-113">ICorDebugAppDomain3 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8d1e0-113">ICorDebugAppDomain3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-interface.md)
+- [<span data-ttu-id="1067c-113">ICorDebugAppDomain3 인터페이스</span><span class="sxs-lookup"><span data-stu-id="1067c-113">ICorDebugAppDomain3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-interface.md)

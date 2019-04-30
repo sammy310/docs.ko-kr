@@ -9,23 +9,23 @@ helpviewer_keywords:
 - hosting applications [WPF]
 ms.assetid: 1f73067d-c60a-4e9a-b513-c817ee7da3a1
 ms.openlocfilehash: 7259c6275b4a87eb7c4ef083dda55b24c1564e9b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947929"
 ---
-# <a name="hosting-wpf-applications"></a><span data-ttu-id="bc411-102">WPF 응용 프로그램 호스팅</span><span class="sxs-lookup"><span data-stu-id="bc411-102">Hosting WPF Applications</span></span>
-<span data-ttu-id="bc411-103">WPF XAML 브라우저 응용 프로그램 (Xbap)는 웹 서버에 배포 하 고 브라우저에서 시작할 수 있는 리치 클라이언트 응용 프로그램.</span><span class="sxs-lookup"><span data-stu-id="bc411-103">WPF XAML Browser Applications (XBAPs) are rich-client applications that can be deployed to a Web server and started in a browser.</span></span> <span data-ttu-id="bc411-104">WPF 호스트 (PresentationHost.exe) 셸 및 XBAP 및 XAML 파일에 대 한 MIME 처리기로 등록 됩니다.</span><span class="sxs-lookup"><span data-stu-id="bc411-104">The WPF Host (PresentationHost.exe) is registered as the shell and MIME handler for XBAP and XAML files.</span></span> <span data-ttu-id="bc411-105">따라서 Internet Explorer XBAP가 시작 될 때 WPF 호스트를 시작 하려면 알고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bc411-105">Therefore, Internet Explorer knows to start the WPF Host when an XBAP is launched.</span></span> <span data-ttu-id="bc411-106">Firefox 사용자도 호스트 Xbap Firefox를 사용 하도록 설정 하는 Firefox 추가 기능을 설치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bc411-106">Firefox users can install Firefox add-ons that enable Firefox to host XBAPs as well.</span></span> <span data-ttu-id="bc411-107">WPF에서 호스팅 Api를 제공 하는 네이티브 브라우저를 사용 하 여 다른 브라우저 또는 독립 실행형 응용 프로그램에서 XBAP은 호스트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bc411-107">An XBAP can be hosted in other browsers or stand-alone applications by using the native browser hosting APIs provided by WPF.</span></span>  
+# <a name="hosting-wpf-applications"></a><span data-ttu-id="78d83-102">WPF 응용 프로그램 호스팅</span><span class="sxs-lookup"><span data-stu-id="78d83-102">Hosting WPF Applications</span></span>
+<span data-ttu-id="78d83-103">WPF XAML 브라우저 응용 프로그램 (Xbap)는 웹 서버에 배포 하 고 브라우저에서 시작할 수 있는 리치 클라이언트 응용 프로그램.</span><span class="sxs-lookup"><span data-stu-id="78d83-103">WPF XAML Browser Applications (XBAPs) are rich-client applications that can be deployed to a Web server and started in a browser.</span></span> <span data-ttu-id="78d83-104">WPF 호스트 (PresentationHost.exe) 셸 및 XBAP 및 XAML 파일에 대 한 MIME 처리기로 등록 됩니다.</span><span class="sxs-lookup"><span data-stu-id="78d83-104">The WPF Host (PresentationHost.exe) is registered as the shell and MIME handler for XBAP and XAML files.</span></span> <span data-ttu-id="78d83-105">따라서 Internet Explorer XBAP가 시작 될 때 WPF 호스트를 시작 하려면 알고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="78d83-105">Therefore, Internet Explorer knows to start the WPF Host when an XBAP is launched.</span></span> <span data-ttu-id="78d83-106">Firefox 사용자도 호스트 Xbap Firefox를 사용 하도록 설정 하는 Firefox 추가 기능을 설치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="78d83-106">Firefox users can install Firefox add-ons that enable Firefox to host XBAPs as well.</span></span> <span data-ttu-id="78d83-107">WPF에서 호스팅 Api를 제공 하는 네이티브 브라우저를 사용 하 여 다른 브라우저 또는 독립 실행형 응용 프로그램에서 XBAP은 호스트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="78d83-107">An XBAP can be hosted in other browsers or stand-alone applications by using the native browser hosting APIs provided by WPF.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="bc411-108">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="bc411-108">In This Section</span></span>  
- [<span data-ttu-id="bc411-109">WPF XAML 브라우저 응용 프로그램 개요</span><span class="sxs-lookup"><span data-stu-id="bc411-109">WPF XAML Browser Applications Overview</span></span>](wpf-xaml-browser-applications-overview.md)  
-   [<span data-ttu-id="bc411-110">WPF 호스트(PresentationHost.exe)</span><span class="sxs-lookup"><span data-stu-id="bc411-110">WPF Host (PresentationHost.exe)</span></span>](wpf-host-presentationhost-exe.md)  
-  [<span data-ttu-id="bc411-111">.NET 애플리케이션 배포를 지원하기 위한 Firefox 추가 기능</span><span class="sxs-lookup"><span data-stu-id="bc411-111">Firefox Add-ons to Support .NET Application Deployment</span></span>](firefox-add-ons-to-support-net-application-deployment.md)  
-  [<span data-ttu-id="bc411-112">네이티브 WPF 브라우저 호스팅 지원 API</span><span class="sxs-lookup"><span data-stu-id="bc411-112">Native WPF Browser Hosting Support APIs</span></span>](native-wpf-browser-hosting-support-apis.md)  
+## <a name="in-this-section"></a><span data-ttu-id="78d83-108">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="78d83-108">In This Section</span></span>  
+ [<span data-ttu-id="78d83-109">WPF XAML 브라우저 응용 프로그램 개요</span><span class="sxs-lookup"><span data-stu-id="78d83-109">WPF XAML Browser Applications Overview</span></span>](wpf-xaml-browser-applications-overview.md)  
+   [<span data-ttu-id="78d83-110">WPF 호스트(PresentationHost.exe)</span><span class="sxs-lookup"><span data-stu-id="78d83-110">WPF Host (PresentationHost.exe)</span></span>](wpf-host-presentationhost-exe.md)  
+  [<span data-ttu-id="78d83-111">.NET 애플리케이션 배포를 지원하기 위한 Firefox 추가 기능</span><span class="sxs-lookup"><span data-stu-id="78d83-111">Firefox Add-ons to Support .NET Application Deployment</span></span>](firefox-add-ons-to-support-net-application-deployment.md)  
+  [<span data-ttu-id="78d83-112">네이티브 WPF 브라우저 호스팅 지원 API</span><span class="sxs-lookup"><span data-stu-id="78d83-112">Native WPF Browser Hosting Support APIs</span></span>](native-wpf-browser-hosting-support-apis.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="bc411-113">관련 단원</span><span class="sxs-lookup"><span data-stu-id="bc411-113">Related Sections</span></span>  
- [<span data-ttu-id="bc411-114">응용 프로그램 관리 개요</span><span class="sxs-lookup"><span data-stu-id="bc411-114">Application Management Overview</span></span>](application-management-overview.md)  
-  [<span data-ttu-id="bc411-115">WPF의 창</span><span class="sxs-lookup"><span data-stu-id="bc411-115">Windows in WPF</span></span>](windows-in-wpf-applications.md)  
-  [<span data-ttu-id="bc411-116">탐색 개요</span><span class="sxs-lookup"><span data-stu-id="bc411-116">Navigation Overview</span></span>](navigation-overview.md)  
-  [<span data-ttu-id="bc411-117">빌드 및 배포</span><span class="sxs-lookup"><span data-stu-id="bc411-117">Build and Deploy</span></span>](building-and-deploying-wpf-applications.md)
+## <a name="related-sections"></a><span data-ttu-id="78d83-113">관련 단원</span><span class="sxs-lookup"><span data-stu-id="78d83-113">Related Sections</span></span>  
+ [<span data-ttu-id="78d83-114">응용 프로그램 관리 개요</span><span class="sxs-lookup"><span data-stu-id="78d83-114">Application Management Overview</span></span>](application-management-overview.md)  
+  [<span data-ttu-id="78d83-115">WPF의 창</span><span class="sxs-lookup"><span data-stu-id="78d83-115">Windows in WPF</span></span>](windows-in-wpf-applications.md)  
+  [<span data-ttu-id="78d83-116">탐색 개요</span><span class="sxs-lookup"><span data-stu-id="78d83-116">Navigation Overview</span></span>](navigation-overview.md)  
+  [<span data-ttu-id="78d83-117">빌드 및 배포</span><span class="sxs-lookup"><span data-stu-id="78d83-117">Build and Deploy</span></span>](building-and-deploying-wpf-applications.md)

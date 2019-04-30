@@ -8,16 +8,16 @@ helpviewer_keywords:
 - BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
 ms.openlocfilehash: 20e83306925e91e579aca52f2e7c209c8c686dee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946629"
 ---
-# <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a><span data-ttu-id="e0b2d-102">이벤트 처리기에서 람다 식이 제거되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e0b2d-102">Lambda expression will not be removed from this event handler</span></span>
-<span data-ttu-id="e0b2d-103">람다 식은 이벤트 처리기에서 제거 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e0b2d-103">Lambda expression will not be removed from this event handler.</span></span> <span data-ttu-id="e0b2d-104">변수에 람다 식을 할당 하 고 변수를 사용 하 여 추가 하 고 이벤트를 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0b2d-104">Assign the lambda expression to a variable and use the variable to add and remove the event.</span></span>  
+# <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a><span data-ttu-id="f6dc6-102">이벤트 처리기에서 람다 식이 제거되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f6dc6-102">Lambda expression will not be removed from this event handler</span></span>
+<span data-ttu-id="f6dc6-103">람다 식은 이벤트 처리기에서 제거 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f6dc6-103">Lambda expression will not be removed from this event handler.</span></span> <span data-ttu-id="f6dc6-104">변수에 람다 식을 할당 하 고 변수를 사용 하 여 추가 하 고 이벤트를 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="f6dc6-104">Assign the lambda expression to a variable and use the variable to add and remove the event.</span></span>  
   
- <span data-ttu-id="e0b2d-105">람다 식을 이벤트 처리기를 사용할 때 예상 하는 동작을 나타나지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e0b2d-105">When lambda expressions are used with event handlers, you may not see the behavior you expect.</span></span> <span data-ttu-id="e0b2d-106">컴파일러는 동일 하는 경우에 각 람다 식 정의 대 한 새 메서드를 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0b2d-106">The compiler generates a new method for each lambda expression definition, even if they are identical.</span></span> <span data-ttu-id="e0b2d-107">따라서 다음 코드에서는 `False`합니다.</span><span class="sxs-lookup"><span data-stu-id="e0b2d-107">Therefore, the following code displays `False`.</span></span>  
+ <span data-ttu-id="f6dc6-105">람다 식을 이벤트 처리기를 사용할 때 예상 하는 동작을 나타나지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f6dc6-105">When lambda expressions are used with event handlers, you may not see the behavior you expect.</span></span> <span data-ttu-id="f6dc6-106">컴파일러는 동일 하는 경우에 각 람다 식 정의 대 한 새 메서드를 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="f6dc6-106">The compiler generates a new method for each lambda expression definition, even if they are identical.</span></span> <span data-ttu-id="f6dc6-107">따라서 다음 코드에서는 `False`합니다.</span><span class="sxs-lookup"><span data-stu-id="f6dc6-107">Therefore, the following code displays `False`.</span></span>  
   
 ```vb  
 Module Module1  
@@ -33,7 +33,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="e0b2d-108">람다 식을 이벤트 처리기를 사용할 때 예기치 않은 결과가 발생할 수 있습니다이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e0b2d-108">When lambda expressions are used with event handlers, this may cause unexpected results.</span></span> <span data-ttu-id="e0b2d-109">다음 예제에서는 람다 식을 추가 하 여 `AddHandler` 에서 제거 되지 않습니다는 `RemoveHandler` 문입니다.</span><span class="sxs-lookup"><span data-stu-id="e0b2d-109">In the following example, the lambda expression added by `AddHandler` is not removed by the `RemoveHandler` statement.</span></span>  
+ <span data-ttu-id="f6dc6-108">람다 식을 이벤트 처리기를 사용할 때 예기치 않은 결과가 발생할 수 있습니다이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f6dc6-108">When lambda expressions are used with event handlers, this may cause unexpected results.</span></span> <span data-ttu-id="f6dc6-109">다음 예제에서는 람다 식을 추가 하 여 `AddHandler` 에서 제거 되지 않습니다는 `RemoveHandler` 문입니다.</span><span class="sxs-lookup"><span data-stu-id="f6dc6-109">In the following example, the lambda expression added by `AddHandler` is not removed by the `RemoveHandler` statement.</span></span>  
   
 ```vb  
 Module Module1  
@@ -54,13 +54,13 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="e0b2d-110">이 메시지는 기본적으로 경고입니다.</span><span class="sxs-lookup"><span data-stu-id="e0b2d-110">By default, this message is a warning.</span></span> <span data-ttu-id="e0b2d-111">경고를 숨기거나 오류로 처리하는 방법에 대한 자세한 내용은 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e0b2d-111">For more information about how to hide warnings or treat warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
+ <span data-ttu-id="f6dc6-110">이 메시지는 기본적으로 경고입니다.</span><span class="sxs-lookup"><span data-stu-id="f6dc6-110">By default, this message is a warning.</span></span> <span data-ttu-id="f6dc6-111">경고를 숨기거나 오류로 처리하는 방법에 대한 자세한 내용은 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="f6dc6-111">For more information about how to hide warnings or treat warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
- <span data-ttu-id="e0b2d-112">**오류 ID:** BC42326</span><span class="sxs-lookup"><span data-stu-id="e0b2d-112">**Error ID:** BC42326</span></span>  
+ <span data-ttu-id="f6dc6-112">**오류 ID:** BC42326</span><span class="sxs-lookup"><span data-stu-id="f6dc6-112">**Error ID:** BC42326</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="e0b2d-113">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="e0b2d-113">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="f6dc6-113">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="f6dc6-113">To correct this error</span></span>  
   
--   <span data-ttu-id="e0b2d-114">경고를 방지 하 고 람다 식을 제거 하려면 변수에 람다 식을 할당 하 고 모두에서 변수를 사용 합니다 `AddHandler` 고 `RemoveHandler` 문을 다음 예와에서 같이 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0b2d-114">To avoid the warning and remove the lambda expression, assign the lambda expression to a variable and use the variable in both the `AddHandler` and `RemoveHandler` statements, as shown in the following example.</span></span>  
+- <span data-ttu-id="f6dc6-114">경고를 방지 하 고 람다 식을 제거 하려면 변수에 람다 식을 할당 하 고 모두에서 변수를 사용 합니다 `AddHandler` 고 `RemoveHandler` 문을 다음 예와에서 같이 합니다.</span><span class="sxs-lookup"><span data-stu-id="f6dc6-114">To avoid the warning and remove the lambda expression, assign the lambda expression to a variable and use the variable in both the `AddHandler` and `RemoveHandler` statements, as shown in the following example.</span></span>  
   
 ```vb  
 Module Module1  
@@ -84,8 +84,8 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e0b2d-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="e0b2d-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f6dc6-115">참고자료</span><span class="sxs-lookup"><span data-stu-id="f6dc6-115">See also</span></span>
 
-- [<span data-ttu-id="e0b2d-116">람다 식</span><span class="sxs-lookup"><span data-stu-id="e0b2d-116">Lambda Expressions</span></span>](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [<span data-ttu-id="e0b2d-117">완화된 대리자 변환</span><span class="sxs-lookup"><span data-stu-id="e0b2d-117">Relaxed Delegate Conversion</span></span>](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
-- [<span data-ttu-id="e0b2d-118">이벤트</span><span class="sxs-lookup"><span data-stu-id="e0b2d-118">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [<span data-ttu-id="f6dc6-116">람다 식</span><span class="sxs-lookup"><span data-stu-id="f6dc6-116">Lambda Expressions</span></span>](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [<span data-ttu-id="f6dc6-117">완화된 대리자 변환</span><span class="sxs-lookup"><span data-stu-id="f6dc6-117">Relaxed Delegate Conversion</span></span>](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [<span data-ttu-id="f6dc6-118">이벤트</span><span class="sxs-lookup"><span data-stu-id="f6dc6-118">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)

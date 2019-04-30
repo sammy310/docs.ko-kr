@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b8f2b08662e719a3308a62ab5b60f5dc490f2a6a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985675"
 ---
-# <a name="ebindpolicylevels-enumeration"></a><span data-ttu-id="d35ea-102">EBindPolicyLevels 열거형</span><span class="sxs-lookup"><span data-stu-id="d35ea-102">EBindPolicyLevels Enumeration</span></span>
-<span data-ttu-id="d35ea-103">어셈블리 정책 적용 또는 수정 하는 수준을 지정 하는 플래그를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="d35ea-103">Provides flags to specify the level at which to apply or modify assembly policy.</span></span>  
+# <a name="ebindpolicylevels-enumeration"></a><span data-ttu-id="eb1f4-102">EBindPolicyLevels 열거형</span><span class="sxs-lookup"><span data-stu-id="eb1f4-102">EBindPolicyLevels Enumeration</span></span>
+<span data-ttu-id="eb1f4-103">어셈블리 정책 적용 또는 수정 하는 수준을 지정 하는 플래그를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="eb1f4-103">Provides flags to specify the level at which to apply or modify assembly policy.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d35ea-104">구문</span><span class="sxs-lookup"><span data-stu-id="d35ea-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eb1f4-104">구문</span><span class="sxs-lookup"><span data-stu-id="eb1f4-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -41,32 +41,32 @@ typedef enum {
 } EBindPolicyLevels;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="d35ea-105">멤버</span><span class="sxs-lookup"><span data-stu-id="d35ea-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="eb1f4-105">멤버</span><span class="sxs-lookup"><span data-stu-id="eb1f4-105">Members</span></span>  
   
-|<span data-ttu-id="d35ea-106">멤버</span><span class="sxs-lookup"><span data-stu-id="d35ea-106">Member</span></span>|<span data-ttu-id="d35ea-107">설명</span><span class="sxs-lookup"><span data-stu-id="d35ea-107">Description</span></span>|  
+|<span data-ttu-id="eb1f4-106">멤버</span><span class="sxs-lookup"><span data-stu-id="eb1f4-106">Member</span></span>|<span data-ttu-id="eb1f4-107">설명</span><span class="sxs-lookup"><span data-stu-id="eb1f4-107">Description</span></span>|  
 |------------|-----------------|  
-|`ePolicyLevelAdmin`|<span data-ttu-id="d35ea-108">관리자 수준에서 정책이 적용 수를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d35ea-108">Specifies that policy should be applied at the administrator level.</span></span>|  
-|`ePolicyLevelApp`|<span data-ttu-id="d35ea-109">응용 프로그램 수준 정책이 적용 수를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d35ea-109">Specifies that policy should be applied at the application level.</span></span>|  
-|`ePolicyLevelHost`|<span data-ttu-id="d35ea-110">호스트 수준 정책이 적용 수를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d35ea-110">Specifies that policy should be applied at the host level.</span></span>|  
-|`ePolicyLevelNone`|<span data-ttu-id="d35ea-111">없는 정책 수준 플래그를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="d35ea-111">Specifies no policy-level flags.</span></span>|  
-|`ePolicyLevelPublisher`|<span data-ttu-id="d35ea-112">게시자 수준의 정책이 적용 수를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d35ea-112">Specifies that policy should be applied at the publisher level.</span></span>|  
-|`ePolicyLevelRetargetable`|<span data-ttu-id="d35ea-113">변수 수준에서 정책을 적용할 수 해야 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d35ea-113">Specifies that policy should be applicable at variable levels.</span></span>|  
-|`ePolicyPortability`|<span data-ttu-id="d35ea-114">정책에.NET Framework 어셈블리의 구현 간에 이식성을 지원 해야 한다고 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d35ea-114">Specifies that policy should support portability between implementations of a .NET Framework assembly.</span></span> <span data-ttu-id="d35ea-115">참조 된 [ \<supportPortability >](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md) 구성 파일 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="d35ea-115">See the [\<supportPortability>](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md) configuration file element.</span></span>|  
-|`ePolicyUnifiedToCLR`|<span data-ttu-id="d35ea-116">정책에 통합 된 CLR (공용 언어 런타임) 하도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d35ea-116">Specifies that policy should be unified to that of the common language runtime (CLR).</span></span>|  
+|`ePolicyLevelAdmin`|<span data-ttu-id="eb1f4-108">관리자 수준에서 정책이 적용 수를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="eb1f4-108">Specifies that policy should be applied at the administrator level.</span></span>|  
+|`ePolicyLevelApp`|<span data-ttu-id="eb1f4-109">응용 프로그램 수준 정책이 적용 수를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="eb1f4-109">Specifies that policy should be applied at the application level.</span></span>|  
+|`ePolicyLevelHost`|<span data-ttu-id="eb1f4-110">호스트 수준 정책이 적용 수를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="eb1f4-110">Specifies that policy should be applied at the host level.</span></span>|  
+|`ePolicyLevelNone`|<span data-ttu-id="eb1f4-111">없는 정책 수준 플래그를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="eb1f4-111">Specifies no policy-level flags.</span></span>|  
+|`ePolicyLevelPublisher`|<span data-ttu-id="eb1f4-112">게시자 수준의 정책이 적용 수를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="eb1f4-112">Specifies that policy should be applied at the publisher level.</span></span>|  
+|`ePolicyLevelRetargetable`|<span data-ttu-id="eb1f4-113">변수 수준에서 정책을 적용할 수 해야 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="eb1f4-113">Specifies that policy should be applicable at variable levels.</span></span>|  
+|`ePolicyPortability`|<span data-ttu-id="eb1f4-114">정책에.NET Framework 어셈블리의 구현 간에 이식성을 지원 해야 한다고 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="eb1f4-114">Specifies that policy should support portability between implementations of a .NET Framework assembly.</span></span> <span data-ttu-id="eb1f4-115">참조 된 [ \<supportPortability >](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md) 구성 파일 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="eb1f4-115">See the [\<supportPortability>](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md) configuration file element.</span></span>|  
+|`ePolicyUnifiedToCLR`|<span data-ttu-id="eb1f4-116">정책에 통합 된 CLR (공용 언어 런타임) 하도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="eb1f4-116">Specifies that policy should be unified to that of the common language runtime (CLR).</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d35ea-117">설명</span><span class="sxs-lookup"><span data-stu-id="d35ea-117">Remarks</span></span>  
- <span data-ttu-id="d35ea-118">이 열거형의 메서드에 전달 되는 [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) 인터페이스 응용 프로그램 정책에서 변경 내용을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d35ea-118">This enumeration is passed to methods of the [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) interface to specify changes in application policy.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="eb1f4-117">설명</span><span class="sxs-lookup"><span data-stu-id="eb1f4-117">Remarks</span></span>  
+ <span data-ttu-id="eb1f4-118">이 열거형의 메서드에 전달 되는 [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) 인터페이스 응용 프로그램 정책에서 변경 내용을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="eb1f4-118">This enumeration is passed to methods of the [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) interface to specify changes in application policy.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d35ea-119">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d35ea-119">Requirements</span></span>  
- <span data-ttu-id="d35ea-120">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="d35ea-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="eb1f4-119">요구 사항</span><span class="sxs-lookup"><span data-stu-id="eb1f4-119">Requirements</span></span>  
+ <span data-ttu-id="eb1f4-120">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="eb1f4-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d35ea-121">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="d35ea-121">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="eb1f4-121">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="eb1f4-121">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="d35ea-122">**라이브러리:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="d35ea-122">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="eb1f4-122">**라이브러리:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="eb1f4-122">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="d35ea-123">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d35ea-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="eb1f4-123">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="eb1f4-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d35ea-124">참고자료</span><span class="sxs-lookup"><span data-stu-id="d35ea-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eb1f4-124">참고자료</span><span class="sxs-lookup"><span data-stu-id="eb1f4-124">See also</span></span>
 
-- [<span data-ttu-id="d35ea-125">ICLRAssemblyIdentityManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d35ea-125">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [<span data-ttu-id="d35ea-126">호스팅 열거형</span><span class="sxs-lookup"><span data-stu-id="d35ea-126">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="eb1f4-125">ICLRAssemblyIdentityManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="eb1f4-125">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [<span data-ttu-id="eb1f4-126">호스팅 열거형</span><span class="sxs-lookup"><span data-stu-id="eb1f4-126">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

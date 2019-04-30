@@ -17,36 +17,36 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 43c40e833e3a250239e9e90667196a2a74a96e0b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59187657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969964"
 ---
-# <a name="iclrassemblyreferencelist-interface"></a><span data-ttu-id="fd280-102">ICLRAssemblyReferenceList 인터페이스</span><span class="sxs-lookup"><span data-stu-id="fd280-102">ICLRAssemblyReferenceList Interface</span></span>
-<span data-ttu-id="fd280-103">CLR (공용 언어 런타임)에서 호스트 되지에서 로드 되는 어셈블리 목록을 관리 합니다.</span><span class="sxs-lookup"><span data-stu-id="fd280-103">Manages a list of assemblies that are loaded by the common language runtime (CLR) and not by the host.</span></span>  
+# <a name="iclrassemblyreferencelist-interface"></a><span data-ttu-id="6ec6a-102">ICLRAssemblyReferenceList 인터페이스</span><span class="sxs-lookup"><span data-stu-id="6ec6a-102">ICLRAssemblyReferenceList Interface</span></span>
+<span data-ttu-id="6ec6a-103">CLR (공용 언어 런타임)에서 호스트 되지에서 로드 되는 어셈블리 목록을 관리 합니다.</span><span class="sxs-lookup"><span data-stu-id="6ec6a-103">Manages a list of assemblies that are loaded by the common language runtime (CLR) and not by the host.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="fd280-104">메서드</span><span class="sxs-lookup"><span data-stu-id="fd280-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="6ec6a-104">메서드</span><span class="sxs-lookup"><span data-stu-id="6ec6a-104">Methods</span></span>  
   
-|<span data-ttu-id="fd280-105">메서드</span><span class="sxs-lookup"><span data-stu-id="fd280-105">Method</span></span>|<span data-ttu-id="fd280-106">설명</span><span class="sxs-lookup"><span data-stu-id="fd280-106">Description</span></span>|  
+|<span data-ttu-id="6ec6a-105">메서드</span><span class="sxs-lookup"><span data-stu-id="6ec6a-105">Method</span></span>|<span data-ttu-id="6ec6a-106">설명</span><span class="sxs-lookup"><span data-stu-id="6ec6a-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="fd280-107">IsAssemblyReferenceInList 메서드</span><span class="sxs-lookup"><span data-stu-id="fd280-107">IsAssemblyReferenceInList Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-isassemblyreferenceinlist-method.md)|<span data-ttu-id="fd280-108">제공 된 포인터 목록에서 어셈블리를 참조 하는지 여부를 나타내는 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="fd280-108">Gets a value that indicates whether the supplied pointer references an assembly in the list.</span></span>|  
-|[<span data-ttu-id="fd280-109">IsStringAssemblyReferenceInList 메서드</span><span class="sxs-lookup"><span data-stu-id="fd280-109">IsStringAssemblyReferenceInList Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-isstringassemblyreferenceinlist-method.md)|<span data-ttu-id="fd280-110">제공 된 이름 목록에 있는 어셈블리의 이름을 일치 하는지 여부를 나타내는 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="fd280-110">Gets a value that indicates whether the supplied name matches the name of an assembly in the list.</span></span>|  
+|[<span data-ttu-id="6ec6a-107">IsAssemblyReferenceInList 메서드</span><span class="sxs-lookup"><span data-stu-id="6ec6a-107">IsAssemblyReferenceInList Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-isassemblyreferenceinlist-method.md)|<span data-ttu-id="6ec6a-108">제공 된 포인터 목록에서 어셈블리를 참조 하는지 여부를 나타내는 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="6ec6a-108">Gets a value that indicates whether the supplied pointer references an assembly in the list.</span></span>|  
+|[<span data-ttu-id="6ec6a-109">IsStringAssemblyReferenceInList 메서드</span><span class="sxs-lookup"><span data-stu-id="6ec6a-109">IsStringAssemblyReferenceInList Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-isstringassemblyreferenceinlist-method.md)|<span data-ttu-id="6ec6a-110">제공 된 이름 목록에 있는 어셈블리의 이름을 일치 하는지 여부를 나타내는 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="6ec6a-110">Gets a value that indicates whether the supplied name matches the name of an assembly in the list.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="fd280-111">설명</span><span class="sxs-lookup"><span data-stu-id="fd280-111">Remarks</span></span>  
- <span data-ttu-id="fd280-112">호출 된 [iclrassemblyidentitymanager:: Getclrassemblyreferencelist](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getclrassemblyreferencelist-method.md) 인스턴스에 대 한 포인터를 가져올 방법 `ICLRAssemblyReferenceList`합니다.</span><span class="sxs-lookup"><span data-stu-id="fd280-112">Call the [ICLRAssemblyIdentityManager::GetCLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getclrassemblyreferencelist-method.md) method to get a pointer to an instance of `ICLRAssemblyReferenceList`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6ec6a-111">설명</span><span class="sxs-lookup"><span data-stu-id="6ec6a-111">Remarks</span></span>  
+ <span data-ttu-id="6ec6a-112">호출 된 [iclrassemblyidentitymanager:: Getclrassemblyreferencelist](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getclrassemblyreferencelist-method.md) 인스턴스에 대 한 포인터를 가져올 방법 `ICLRAssemblyReferenceList`합니다.</span><span class="sxs-lookup"><span data-stu-id="6ec6a-112">Call the [ICLRAssemblyIdentityManager::GetCLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getclrassemblyreferencelist-method.md) method to get a pointer to an instance of `ICLRAssemblyReferenceList`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fd280-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="fd280-113">Requirements</span></span>  
- <span data-ttu-id="fd280-114">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="fd280-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6ec6a-113">요구 사항</span><span class="sxs-lookup"><span data-stu-id="6ec6a-113">Requirements</span></span>  
+ <span data-ttu-id="6ec6a-114">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="6ec6a-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fd280-115">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="fd280-115">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="6ec6a-115">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="6ec6a-115">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="fd280-116">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="fd280-116">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="6ec6a-116">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="6ec6a-116">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="fd280-117">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fd280-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="6ec6a-117">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6ec6a-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fd280-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="fd280-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6ec6a-118">참고자료</span><span class="sxs-lookup"><span data-stu-id="6ec6a-118">See also</span></span>
 
-- [<span data-ttu-id="fd280-119">ICLRAssemblyIdentityManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="fd280-119">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [<span data-ttu-id="fd280-120">IHostAssemblyStore 인터페이스</span><span class="sxs-lookup"><span data-stu-id="fd280-120">IHostAssemblyStore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
-- [<span data-ttu-id="fd280-121">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="fd280-121">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="6ec6a-119">ICLRAssemblyIdentityManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="6ec6a-119">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [<span data-ttu-id="6ec6a-120">IHostAssemblyStore 인터페이스</span><span class="sxs-lookup"><span data-stu-id="6ec6a-120">IHostAssemblyStore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
+- [<span data-ttu-id="6ec6a-121">호스팅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="6ec6a-121">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

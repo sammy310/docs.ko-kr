@@ -10,26 +10,26 @@ helpviewer_keywords:
 - PropertyNameChanged pattern [Windows Forms], applying
 ms.assetid: aa47ddf6-5223-40c4-833f-a78992194836
 ms.openlocfilehash: 36670eee6235277a7fe98770192df9ae05d3dd03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966818"
 ---
-# <a name="how-to-apply-the-propertynamechanged-pattern"></a><span data-ttu-id="47cfc-102">방법: PropertyNameChanged 패턴 적용</span><span class="sxs-lookup"><span data-stu-id="47cfc-102">How to: Apply the PropertyNameChanged Pattern</span></span>
-<span data-ttu-id="47cfc-103">다음 코드 예제를 적용 하는 방법에 설명 합니다 *PropertyName*패턴을 사용자 지정 컨트롤을 합니다.</span><span class="sxs-lookup"><span data-stu-id="47cfc-103">The following code example demonstrates how to apply the *PropertyName*Changed pattern to a custom control.</span></span> <span data-ttu-id="47cfc-104">Windows Forms 데이터 바인딩 엔진에서 사용 되는 사용자 지정 컨트롤을 구현 하는 경우이 패턴을 적용 합니다.</span><span class="sxs-lookup"><span data-stu-id="47cfc-104">Apply this pattern when you implement custom controls that are used with the Windows Forms data binding engine.</span></span>  
+# <a name="how-to-apply-the-propertynamechanged-pattern"></a><span data-ttu-id="65f6a-102">방법: PropertyNameChanged 패턴 적용</span><span class="sxs-lookup"><span data-stu-id="65f6a-102">How to: Apply the PropertyNameChanged Pattern</span></span>
+<span data-ttu-id="65f6a-103">다음 코드 예제를 적용 하는 방법에 설명 합니다 *PropertyName*패턴을 사용자 지정 컨트롤을 합니다.</span><span class="sxs-lookup"><span data-stu-id="65f6a-103">The following code example demonstrates how to apply the *PropertyName*Changed pattern to a custom control.</span></span> <span data-ttu-id="65f6a-104">Windows Forms 데이터 바인딩 엔진에서 사용 되는 사용자 지정 컨트롤을 구현 하는 경우이 패턴을 적용 합니다.</span><span class="sxs-lookup"><span data-stu-id="65f6a-104">Apply this pattern when you implement custom controls that are used with the Windows Forms data binding engine.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="47cfc-105">예제</span><span class="sxs-lookup"><span data-stu-id="47cfc-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="65f6a-105">예제</span><span class="sxs-lookup"><span data-stu-id="65f6a-105">Example</span></span>  
  [!code-csharp[System.Windows.Forms.ChangeNotification#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ChangeNotification/CS/Form1.cs#3)]
  [!code-vb[System.Windows.Forms.ChangeNotification#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ChangeNotification/VB/Form1.vb#3)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="47cfc-106">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="47cfc-106">Compiling the Code</span></span>  
- <span data-ttu-id="47cfc-107">이전 코드 예제를 컴파일하려면:</span><span class="sxs-lookup"><span data-stu-id="47cfc-107">To compile the previous code example:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="65f6a-106">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="65f6a-106">Compiling the Code</span></span>  
+ <span data-ttu-id="65f6a-107">이전 코드 예제를 컴파일하려면:</span><span class="sxs-lookup"><span data-stu-id="65f6a-107">To compile the previous code example:</span></span>  
   
--   <span data-ttu-id="47cfc-108">빈 코드 파일에 코드를 붙여 넣습니다.</span><span class="sxs-lookup"><span data-stu-id="47cfc-108">Paste the code into an empty code file.</span></span> <span data-ttu-id="47cfc-109">포함 된 Windows Form에 사용자 지정 컨트롤을 사용 해야는 `Main` 메서드.</span><span class="sxs-lookup"><span data-stu-id="47cfc-109">You must use the custom control on a Windows Form that contains a `Main` method.</span></span>  
+- <span data-ttu-id="65f6a-108">빈 코드 파일에 코드를 붙여 넣습니다.</span><span class="sxs-lookup"><span data-stu-id="65f6a-108">Paste the code into an empty code file.</span></span> <span data-ttu-id="65f6a-109">포함 된 Windows Form에 사용자 지정 컨트롤을 사용 해야는 `Main` 메서드.</span><span class="sxs-lookup"><span data-stu-id="65f6a-109">You must use the custom control on a Windows Form that contains a `Main` method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="47cfc-110">참고자료</span><span class="sxs-lookup"><span data-stu-id="47cfc-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="65f6a-110">참고자료</span><span class="sxs-lookup"><span data-stu-id="65f6a-110">See also</span></span>
 
-- [<span data-ttu-id="47cfc-111">방법: INotifyPropertyChanged 인터페이스 구현</span><span class="sxs-lookup"><span data-stu-id="47cfc-111">How to: Implement the INotifyPropertyChanged Interface</span></span>](how-to-implement-the-inotifypropertychanged-interface.md)
-- [<span data-ttu-id="47cfc-112">Windows Forms 데이터 바인딩의 변경 알림</span><span class="sxs-lookup"><span data-stu-id="47cfc-112">Change Notification in Windows Forms Data Binding</span></span>](change-notification-in-windows-forms-data-binding.md)
-- [<span data-ttu-id="47cfc-113">Windows Forms 데이터 바인딩</span><span class="sxs-lookup"><span data-stu-id="47cfc-113">Windows Forms Data Binding</span></span>](windows-forms-data-binding.md)
+- [<span data-ttu-id="65f6a-111">방법: INotifyPropertyChanged 인터페이스 구현</span><span class="sxs-lookup"><span data-stu-id="65f6a-111">How to: Implement the INotifyPropertyChanged Interface</span></span>](how-to-implement-the-inotifypropertychanged-interface.md)
+- [<span data-ttu-id="65f6a-112">Windows Forms 데이터 바인딩의 변경 알림</span><span class="sxs-lookup"><span data-stu-id="65f6a-112">Change Notification in Windows Forms Data Binding</span></span>](change-notification-in-windows-forms-data-binding.md)
+- [<span data-ttu-id="65f6a-113">Windows Forms 데이터 바인딩</span><span class="sxs-lookup"><span data-stu-id="65f6a-113">Windows Forms Data Binding</span></span>](windows-forms-data-binding.md)

@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 64d7f138094e03ca76ec78a50a6f37aa3d9ca2f0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59091735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61968768"
 ---
-# <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a><span data-ttu-id="1dcc2-102">ISymUnmanagedReader::GetMethodsFromDocumentPosition 메서드</span><span class="sxs-lookup"><span data-stu-id="1dcc2-102">ISymUnmanagedReader::GetMethodsFromDocumentPosition Method</span></span>
-<span data-ttu-id="1dcc2-103">문서에서 지정된 된 위치에 중단점을 포함 하는 각 메서드의 배열을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="1dcc2-103">Returns an array of methods, each of which contains the breakpoint at the given position in a document.</span></span>  
+# <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a><span data-ttu-id="5f0ee-102">ISymUnmanagedReader::GetMethodsFromDocumentPosition 메서드</span><span class="sxs-lookup"><span data-stu-id="5f0ee-102">ISymUnmanagedReader::GetMethodsFromDocumentPosition Method</span></span>
+<span data-ttu-id="5f0ee-103">문서에서 지정된 된 위치에 중단점을 포함 하는 각 메서드의 배열을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="5f0ee-103">Returns an array of methods, each of which contains the breakpoint at the given position in a document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1dcc2-104">구문</span><span class="sxs-lookup"><span data-stu-id="1dcc2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5f0ee-104">구문</span><span class="sxs-lookup"><span data-stu-id="5f0ee-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMethodsFromDocumentPosition (  
@@ -40,31 +40,31 @@ HRESULT GetMethodsFromDocumentPosition (
         length_is (*pcMethod)] ISymUnmanagedMethod* pRetVal[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1dcc2-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="1dcc2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5f0ee-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="5f0ee-105">Parameters</span></span>  
  `document`  
- <span data-ttu-id="1dcc2-106">[in] 지정 된 문서입니다.</span><span class="sxs-lookup"><span data-stu-id="1dcc2-106">[in] The specified document.</span></span>  
+ <span data-ttu-id="5f0ee-106">[in] 지정 된 문서입니다.</span><span class="sxs-lookup"><span data-stu-id="5f0ee-106">[in] The specified document.</span></span>  
   
  `line`  
- <span data-ttu-id="1dcc2-107">[in] 지정 된 문서 줄입니다.</span><span class="sxs-lookup"><span data-stu-id="1dcc2-107">[in] The line of the specified document.</span></span>  
+ <span data-ttu-id="5f0ee-107">[in] 지정 된 문서 줄입니다.</span><span class="sxs-lookup"><span data-stu-id="5f0ee-107">[in] The line of the specified document.</span></span>  
   
  `column`  
- <span data-ttu-id="1dcc2-108">[in] 지정 된 문서 열입니다.</span><span class="sxs-lookup"><span data-stu-id="1dcc2-108">[in] The column of the specified document.</span></span>  
+ <span data-ttu-id="5f0ee-108">[in] 지정 된 문서 열입니다.</span><span class="sxs-lookup"><span data-stu-id="5f0ee-108">[in] The column of the specified document.</span></span>  
   
  `cMethod`  
- <span data-ttu-id="1dcc2-109">[in] `pRetVal` 배열의 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="1dcc2-109">[in] The size of the `pRetVal` array.</span></span>  
+ <span data-ttu-id="5f0ee-109">[in] `pRetVal` 배열의 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="5f0ee-109">[in] The size of the `pRetVal` array.</span></span>  
   
  `pcMethod`  
- <span data-ttu-id="1dcc2-110">[out] 반환 된 요소의 수를 수신 하는 변수에 대 한 포인터를 `pRetVal` 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="1dcc2-110">[out] A pointer to a variable that receives the number of elements returned in the `pRetVal` array.</span></span>  
+ <span data-ttu-id="5f0ee-110">[out] 반환 된 요소의 수를 수신 하는 변수에 대 한 포인터를 `pRetVal` 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="5f0ee-110">[out] A pointer to a variable that receives the number of elements returned in the `pRetVal` array.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="1dcc2-111">[out] 각각 가리키는 포인터 배열을 [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) 중단점을 포함 하는 메서드를 나타내는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="1dcc2-111">[out] An array of pointers, each of which points to an [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents a method containing the breakpoint.</span></span>  
+ <span data-ttu-id="5f0ee-111">[out] 각각 가리키는 포인터 배열을 [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) 중단점을 포함 하는 메서드를 나타내는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="5f0ee-111">[out] An array of pointers, each of which points to an [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents a method containing the breakpoint.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="1dcc2-112">반환 값</span><span class="sxs-lookup"><span data-stu-id="1dcc2-112">Return Value</span></span>  
- <span data-ttu-id="1dcc2-113">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="1dcc2-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5f0ee-112">반환 값</span><span class="sxs-lookup"><span data-stu-id="5f0ee-112">Return Value</span></span>  
+ <span data-ttu-id="5f0ee-113">메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="5f0ee-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1dcc2-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="1dcc2-114">Requirements</span></span>  
- <span data-ttu-id="1dcc2-115">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="1dcc2-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5f0ee-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5f0ee-114">Requirements</span></span>  
+ <span data-ttu-id="5f0ee-115">**헤더:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="5f0ee-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1dcc2-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="1dcc2-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5f0ee-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="5f0ee-116">See also</span></span>
 
-- [<span data-ttu-id="1dcc2-117">ISymUnmanagedReader 인터페이스</span><span class="sxs-lookup"><span data-stu-id="1dcc2-117">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="5f0ee-117">ISymUnmanagedReader 인터페이스</span><span class="sxs-lookup"><span data-stu-id="5f0ee-117">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8cf7978af4081b84a361e0a96a6c9da7180cb217
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59194047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61951725"
 ---
-# <a name="ihostiocompletionmanagercreateiocompletionport-method"></a><span data-ttu-id="8db34-102">IHostIoCompletionManager::CreateIoCompletionPort 메서드</span><span class="sxs-lookup"><span data-stu-id="8db34-102">IHostIoCompletionManager::CreateIoCompletionPort Method</span></span>
-<span data-ttu-id="8db34-103">호스트에 새 I/O 완료 포트를 만든 요청 합니다.</span><span class="sxs-lookup"><span data-stu-id="8db34-103">Requests that the host create a new I/O completion port.</span></span>  
+# <a name="ihostiocompletionmanagercreateiocompletionport-method"></a><span data-ttu-id="240cf-102">IHostIoCompletionManager::CreateIoCompletionPort 메서드</span><span class="sxs-lookup"><span data-stu-id="240cf-102">IHostIoCompletionManager::CreateIoCompletionPort Method</span></span>
+<span data-ttu-id="240cf-103">호스트에 새 I/O 완료 포트를 만든 요청 합니다.</span><span class="sxs-lookup"><span data-stu-id="240cf-103">Requests that the host create a new I/O completion port.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8db34-104">구문</span><span class="sxs-lookup"><span data-stu-id="8db34-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="240cf-104">구문</span><span class="sxs-lookup"><span data-stu-id="240cf-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateIoCompletionPort (  
@@ -35,35 +35,35 @@ HRESULT CreateIoCompletionPort (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8db34-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="8db34-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="240cf-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="240cf-105">Parameters</span></span>  
  `phPort`  
- <span data-ttu-id="8db34-106">[out] 새로 만든된 I/O 완료 포트 또는 0 (영)을 포트를 만들 수 없는 경우에 대 한 핸들에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="8db34-106">[out] A pointer to a handle to the newly created I/O completion port, or 0 (zero), if the port could not be created.</span></span>  
+ <span data-ttu-id="240cf-106">[out] 새로 만든된 I/O 완료 포트 또는 0 (영)을 포트를 만들 수 없는 경우에 대 한 핸들에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="240cf-106">[out] A pointer to a handle to the newly created I/O completion port, or 0 (zero), if the port could not be created.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="8db34-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="8db34-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="240cf-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="240cf-107">Return Value</span></span>  
   
-|<span data-ttu-id="8db34-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="8db34-108">HRESULT</span></span>|<span data-ttu-id="8db34-109">설명</span><span class="sxs-lookup"><span data-stu-id="8db34-109">Description</span></span>|  
+|<span data-ttu-id="240cf-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="240cf-108">HRESULT</span></span>|<span data-ttu-id="240cf-109">설명</span><span class="sxs-lookup"><span data-stu-id="240cf-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="8db34-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="8db34-110">S_OK</span></span>|<span data-ttu-id="8db34-111">`CreateIoCompletionPort` 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="8db34-111">`CreateIoCompletionPort` returned successfully.</span></span>|  
-|<span data-ttu-id="8db34-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="8db34-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="8db34-113">프로세스에는 CLR (공용 언어 런타임)에 로드 되지 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="8db34-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="8db34-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="8db34-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="8db34-115">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="8db34-115">The call timed out.</span></span>|  
-|<span data-ttu-id="8db34-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="8db34-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="8db34-117">호출자가 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8db34-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="8db34-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="8db34-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="8db34-119">이벤트가 차단 된 스레드가 취소 된 또는 파이버를 대기 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8db34-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="8db34-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="8db34-120">E_FAIL</span></span>|<span data-ttu-id="8db34-121">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="8db34-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="8db34-122">메서드 E_FAIL을 반환 하는 경우 CLR은 프로세스 내에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="8db34-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="8db34-123">메서드를 호스트 하는 데 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="8db34-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="8db34-124">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="8db34-124">E_OUTOFMEMORY</span></span>|<span data-ttu-id="8db34-125">요청된 된 리소스를 할당할 수 있는 메모리가 부족 합니다.</span><span class="sxs-lookup"><span data-stu-id="8db34-125">Not enough memory was available to allocate the requested resource.</span></span>|  
+|<span data-ttu-id="240cf-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="240cf-110">S_OK</span></span>|<span data-ttu-id="240cf-111">`CreateIoCompletionPort` 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="240cf-111">`CreateIoCompletionPort` returned successfully.</span></span>|  
+|<span data-ttu-id="240cf-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="240cf-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="240cf-113">프로세스에는 CLR (공용 언어 런타임)에 로드 되지 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="240cf-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="240cf-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="240cf-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="240cf-115">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="240cf-115">The call timed out.</span></span>|  
+|<span data-ttu-id="240cf-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="240cf-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="240cf-117">호출자가 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="240cf-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="240cf-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="240cf-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="240cf-119">이벤트가 차단 된 스레드가 취소 된 또는 파이버를 대기 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="240cf-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="240cf-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="240cf-120">E_FAIL</span></span>|<span data-ttu-id="240cf-121">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="240cf-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="240cf-122">메서드 E_FAIL을 반환 하는 경우 CLR은 프로세스 내에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="240cf-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="240cf-123">메서드를 호스트 하는 데 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="240cf-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="240cf-124">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="240cf-124">E_OUTOFMEMORY</span></span>|<span data-ttu-id="240cf-125">요청된 된 리소스를 할당할 수 있는 메모리가 부족 합니다.</span><span class="sxs-lookup"><span data-stu-id="240cf-125">Not enough memory was available to allocate the requested resource.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="8db34-126">설명</span><span class="sxs-lookup"><span data-stu-id="8db34-126">Remarks</span></span>  
- <span data-ttu-id="8db34-127">CLR에서는 `CreateIoCompletionPort` 만들도록 새 I/O 완료 포트를 호스트에 요청 하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="8db34-127">The CLR calls the `CreateIoCompletionPort` method to request that the host create a new I/O completion port.</span></span> <span data-ttu-id="8db34-128">I/O 작업에 대 한 호출을 통해이 포트에 바인딩되기는 [ihostiocompletionmanager:: Bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="8db34-128">It binds I/O operations to this port through a call to the [IHostIoCompletionManager::Bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md) method.</span></span> <span data-ttu-id="8db34-129">호스트 상태를 보고 다시 CLR에 호출한 [iclriocompletionmanager:: Oncomplete](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-oncomplete-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="8db34-129">The host reports status back to the CLR by calling [ICLRIoCompletionManager::OnComplete](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-oncomplete-method.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="240cf-126">설명</span><span class="sxs-lookup"><span data-stu-id="240cf-126">Remarks</span></span>  
+ <span data-ttu-id="240cf-127">CLR에서는 `CreateIoCompletionPort` 만들도록 새 I/O 완료 포트를 호스트에 요청 하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="240cf-127">The CLR calls the `CreateIoCompletionPort` method to request that the host create a new I/O completion port.</span></span> <span data-ttu-id="240cf-128">I/O 작업에 대 한 호출을 통해이 포트에 바인딩되기는 [ihostiocompletionmanager:: Bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="240cf-128">It binds I/O operations to this port through a call to the [IHostIoCompletionManager::Bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md) method.</span></span> <span data-ttu-id="240cf-129">호스트 상태를 보고 다시 CLR에 호출한 [iclriocompletionmanager:: Oncomplete](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-oncomplete-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="240cf-129">The host reports status back to the CLR by calling [ICLRIoCompletionManager::OnComplete](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-oncomplete-method.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8db34-130">요구 사항</span><span class="sxs-lookup"><span data-stu-id="8db34-130">Requirements</span></span>  
- <span data-ttu-id="8db34-131">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="8db34-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="240cf-130">요구 사항</span><span class="sxs-lookup"><span data-stu-id="240cf-130">Requirements</span></span>  
+ <span data-ttu-id="240cf-131">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="240cf-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8db34-132">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="8db34-132">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="240cf-132">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="240cf-132">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="8db34-133">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="8db34-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="240cf-133">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="240cf-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="8db34-134">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8db34-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="240cf-134">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="240cf-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8db34-135">참고자료</span><span class="sxs-lookup"><span data-stu-id="8db34-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="240cf-135">참고자료</span><span class="sxs-lookup"><span data-stu-id="240cf-135">See also</span></span>
 
-- [<span data-ttu-id="8db34-136">ICLRIoCompletionManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8db34-136">ICLRIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)
-- [<span data-ttu-id="8db34-137">IHostIoCompletionManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8db34-137">IHostIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)
+- [<span data-ttu-id="240cf-136">ICLRIoCompletionManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="240cf-136">ICLRIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)
+- [<span data-ttu-id="240cf-137">IHostIoCompletionManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="240cf-137">IHostIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)

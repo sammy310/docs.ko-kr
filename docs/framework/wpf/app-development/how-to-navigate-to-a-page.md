@@ -9,29 +9,29 @@ helpviewer_keywords:
 - navigation [WPF], to page
 ms.assetid: 2a556fc0-748b-417f-a58a-0d05a7afb66f
 ms.openlocfilehash: c8e808180682bfd97f397d8cadd1e4deafd7eb06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947743"
 ---
-# <a name="how-to-navigate-to-a-page"></a><span data-ttu-id="51d68-102">방법: 페이지 탐색</span><span class="sxs-lookup"><span data-stu-id="51d68-102">How to: Navigate to a Page</span></span>
-<span data-ttu-id="51d68-103">이 예제는 페이지를 탐색할 수 있습니다에서 여러 가지 방법으로 <xref:System.Windows.Navigation.NavigationWindow>합니다.</span><span class="sxs-lookup"><span data-stu-id="51d68-103">This example illustrates several ways in which a page can be navigated to from a <xref:System.Windows.Navigation.NavigationWindow>.</span></span>  
+# <a name="how-to-navigate-to-a-page"></a><span data-ttu-id="d9ce8-102">방법: 페이지 탐색</span><span class="sxs-lookup"><span data-stu-id="d9ce8-102">How to: Navigate to a Page</span></span>
+<span data-ttu-id="d9ce8-103">이 예제는 페이지를 탐색할 수 있습니다에서 여러 가지 방법으로 <xref:System.Windows.Navigation.NavigationWindow>합니다.</span><span class="sxs-lookup"><span data-stu-id="d9ce8-103">This example illustrates several ways in which a page can be navigated to from a <xref:System.Windows.Navigation.NavigationWindow>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="51d68-104">예제</span><span class="sxs-lookup"><span data-stu-id="51d68-104">Example</span></span>  
- <span data-ttu-id="51d68-105">있기를 <xref:System.Windows.Navigation.NavigationWindow> 다음 중 하나를 사용 하는 페이지로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="51d68-105">It is possible for a <xref:System.Windows.Navigation.NavigationWindow> to navigate to a page using one of the following:</span></span>  
+## <a name="example"></a><span data-ttu-id="d9ce8-104">예제</span><span class="sxs-lookup"><span data-stu-id="d9ce8-104">Example</span></span>  
+ <span data-ttu-id="d9ce8-105">있기를 <xref:System.Windows.Navigation.NavigationWindow> 다음 중 하나를 사용 하는 페이지로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="d9ce8-105">It is possible for a <xref:System.Windows.Navigation.NavigationWindow> to navigate to a page using one of the following:</span></span>  
   
--   <span data-ttu-id="51d68-106"><xref:System.Windows.Navigation.NavigationWindow.Source%2A> 속성</span><span class="sxs-lookup"><span data-stu-id="51d68-106">The <xref:System.Windows.Navigation.NavigationWindow.Source%2A> property.</span></span>  
+- <span data-ttu-id="d9ce8-106"><xref:System.Windows.Navigation.NavigationWindow.Source%2A> 속성</span><span class="sxs-lookup"><span data-stu-id="d9ce8-106">The <xref:System.Windows.Navigation.NavigationWindow.Source%2A> property.</span></span>  
   
--   <span data-ttu-id="51d68-107"><xref:System.Windows.Navigation.NavigationWindow.Navigate%2A> 메서드</span><span class="sxs-lookup"><span data-stu-id="51d68-107">The <xref:System.Windows.Navigation.NavigationWindow.Navigate%2A> method.</span></span>  
+- <span data-ttu-id="d9ce8-107"><xref:System.Windows.Navigation.NavigationWindow.Navigate%2A> 메서드</span><span class="sxs-lookup"><span data-stu-id="d9ce8-107">The <xref:System.Windows.Navigation.NavigationWindow.Navigate%2A> method.</span></span>  
   
  [!code-csharp[HOWTONavigationSnippets#NavigateToPageCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/MainWindow.xaml.cs#navigatetopagecode)]
  [!code-vb[HOWTONavigationSnippets#NavigateToPageCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/mainwindow.xaml.vb#navigatetopagecode)]  
   
 > [!NOTE]
->  [!INCLUDE[TLA#tla_uri#initcap#plural](../../../../includes/tlasharptla-urisharpinitcapsharpplural-md.md)] <span data-ttu-id="51d68-108">상대 또는 절대 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="51d68-108">can be either relative or absolute.</span></span> <span data-ttu-id="51d68-109">자세한 내용은 [WPF의 Pack URI](pack-uris-in-wpf.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="51d68-109">For more information, see [Pack URIs in WPF](pack-uris-in-wpf.md).</span></span>  
+>  [!INCLUDE[TLA#tla_uri#initcap#plural](../../../../includes/tlasharptla-urisharpinitcapsharpplural-md.md)] <span data-ttu-id="d9ce8-108">상대 또는 절대 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d9ce8-108">can be either relative or absolute.</span></span> <span data-ttu-id="d9ce8-109">자세한 내용은 [WPF의 Pack URI](pack-uris-in-wpf.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d9ce8-109">For more information, see [Pack URIs in WPF](pack-uris-in-wpf.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="51d68-110">참고자료</span><span class="sxs-lookup"><span data-stu-id="51d68-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d9ce8-110">참고자료</span><span class="sxs-lookup"><span data-stu-id="d9ce8-110">See also</span></span>
 
 - <xref:System.Windows.Controls.Frame>
 - <xref:System.Windows.Controls.Page>
