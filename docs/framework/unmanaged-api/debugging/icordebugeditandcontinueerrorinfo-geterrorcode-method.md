@@ -18,15 +18,15 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a0ef1e6511bf8e452a336ba6ea02359fe41e07cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996114"
 ---
-# <a name="icordebugeditandcontinueerrorinfogeterrorcode-method"></a><span data-ttu-id="01f2a-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode 메서드</span><span class="sxs-lookup"><span data-stu-id="01f2a-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode Method</span></span>
-<span data-ttu-id="01f2a-103">`GetErrorCode`는 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="01f2a-103">`GetErrorCode` is obsolete.</span></span> <span data-ttu-id="01f2a-104">이 메서드를 호출 하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="01f2a-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinueerrorinfogeterrorcode-method"></a><span data-ttu-id="4078a-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode 메서드</span><span class="sxs-lookup"><span data-stu-id="4078a-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode Method</span></span>
+<span data-ttu-id="4078a-103">`GetErrorCode`는 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4078a-103">`GetErrorCode` is obsolete.</span></span> <span data-ttu-id="4078a-104">이 메서드를 호출 하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="4078a-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="01f2a-105">참고자료</span><span class="sxs-lookup"><span data-stu-id="01f2a-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4078a-105">참고자료</span><span class="sxs-lookup"><span data-stu-id="4078a-105">See also</span></span>
 
-- [<span data-ttu-id="01f2a-106">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="01f2a-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="4078a-106">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4078a-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -9,26 +9,26 @@ helpviewer_keywords:
 - Scroll Bar control [Windows Forms]
 ms.assetid: f5e9cda7-d8f3-406b-b0e6-bdb4375d6eb0
 ms.openlocfilehash: 7937b2b65691bbb2581dea88df8ce315dcfda3e6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971186"
 ---
-# <a name="hscrollbar-and-vscrollbar-controls-windows-forms"></a><span data-ttu-id="199b0-102">HScrollBar 및 VScrollBar 컨트롤(Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="199b0-102">HScrollBar and VScrollBar Controls (Windows Forms)</span></span>
-<span data-ttu-id="199b0-103">Windows Forms 스크롤 막대 컨트롤을 통해 응용 프로그램 또는 컨트롤 내에서 가로로 또는 세로로 스크롤하여 긴 항목 목록이나 대용량 정보를 쉽게 탐색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="199b0-103">Windows Forms scroll bar controls are used to provide easy navigation through a long list of items or a large amount of information by scrolling either horizontally or vertically within an application or control.</span></span> <span data-ttu-id="199b0-104">스크롤 막대는 Windows 인터페이스의 공통 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="199b0-104">Scroll bars are a common element of the Windows interface.</span></span>  
+# <a name="hscrollbar-and-vscrollbar-controls-windows-forms"></a><span data-ttu-id="6b857-102">HScrollBar 및 VScrollBar 컨트롤(Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="6b857-102">HScrollBar and VScrollBar Controls (Windows Forms)</span></span>
+<span data-ttu-id="6b857-103">Windows Forms 스크롤 막대 컨트롤을 통해 응용 프로그램 또는 컨트롤 내에서 가로로 또는 세로로 스크롤하여 긴 항목 목록이나 대용량 정보를 쉽게 탐색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6b857-103">Windows Forms scroll bar controls are used to provide easy navigation through a long list of items or a large amount of information by scrolling either horizontally or vertically within an application or control.</span></span> <span data-ttu-id="6b857-104">스크롤 막대는 Windows 인터페이스의 공통 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="6b857-104">Scroll bars are a common element of the Windows interface.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="199b0-105">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="199b0-105">In This Section</span></span>  
- [<span data-ttu-id="199b0-106">HScrollBar 및 VScrollBar 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="199b0-106">HScrollBar and VScrollBar Controls Overview</span></span>](hscrollbar-and-vscrollbar-controls-overview-windows-forms.md)  
- <span data-ttu-id="199b0-107">사용자가 대용량 정보를 가로로 및 세로로 스크롤할 수 있게 하는 <xref:System.Windows.Forms.HScrollBar> 및 <xref:System.Windows.Forms.VScrollBar> 컨트롤의 일반적인 개념을 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="199b0-107">Introduces the general concepts of the <xref:System.Windows.Forms.HScrollBar> and <xref:System.Windows.Forms.VScrollBar> controls, which allow users to scroll horizontally and vertically through large amounts of information.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="6b857-105">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="6b857-105">In This Section</span></span>  
+ [<span data-ttu-id="6b857-106">HScrollBar 및 VScrollBar 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="6b857-106">HScrollBar and VScrollBar Controls Overview</span></span>](hscrollbar-and-vscrollbar-controls-overview-windows-forms.md)  
+ <span data-ttu-id="6b857-107">사용자가 대용량 정보를 가로로 및 세로로 스크롤할 수 있게 하는 <xref:System.Windows.Forms.HScrollBar> 및 <xref:System.Windows.Forms.VScrollBar> 컨트롤의 일반적인 개념을 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="6b857-107">Introduces the general concepts of the <xref:System.Windows.Forms.HScrollBar> and <xref:System.Windows.Forms.VScrollBar> controls, which allow users to scroll horizontally and vertically through large amounts of information.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="199b0-108">참조</span><span class="sxs-lookup"><span data-stu-id="199b0-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="6b857-108">참조</span><span class="sxs-lookup"><span data-stu-id="6b857-108">Reference</span></span>  
  <xref:System.Windows.Forms.HScrollBar>  
- <span data-ttu-id="199b0-109">이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="199b0-109">Describes this class and has links to all its members.</span></span>  
+ <span data-ttu-id="6b857-109">이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="6b857-109">Describes this class and has links to all its members.</span></span>  
   
  <xref:System.Windows.Forms.VScrollBar>  
- <span data-ttu-id="199b0-110">이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="199b0-110">Describes this class and has links to all its members.</span></span>  
+ <span data-ttu-id="6b857-110">이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="6b857-110">Describes this class and has links to all its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="199b0-111">관련 단원</span><span class="sxs-lookup"><span data-stu-id="199b0-111">Related Sections</span></span>  
- [<span data-ttu-id="199b0-112">Windows Forms에 사용할 수 있는 컨트롤</span><span class="sxs-lookup"><span data-stu-id="199b0-112">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)  
- <span data-ttu-id="199b0-113">사용 방법에 대한 정보 링크를 포함하는 Windows Forms 컨트롤의 전체 목록을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="199b0-113">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>
+## <a name="related-sections"></a><span data-ttu-id="6b857-111">관련 단원</span><span class="sxs-lookup"><span data-stu-id="6b857-111">Related Sections</span></span>  
+ [<span data-ttu-id="6b857-112">Windows Forms에 사용할 수 있는 컨트롤</span><span class="sxs-lookup"><span data-stu-id="6b857-112">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="6b857-113">사용 방법에 대한 정보 링크를 포함하는 Windows Forms 컨트롤의 전체 목록을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="6b857-113">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>

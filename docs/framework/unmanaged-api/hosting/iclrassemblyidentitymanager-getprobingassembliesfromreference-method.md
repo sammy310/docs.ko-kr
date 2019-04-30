@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8e926fb2753367370e9aca726806eb8747e32048
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59153740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985129"
 ---
-# <a name="iclrassemblyidentitymanagergetprobingassembliesfromreference-method"></a><span data-ttu-id="3ecbb-102">ICLRAssemblyIdentityManager::GetProbingAssembliesFromReference 메서드</span><span class="sxs-lookup"><span data-stu-id="3ecbb-102">ICLRAssemblyIdentityManager::GetProbingAssembliesFromReference Method</span></span>
-<span data-ttu-id="3ecbb-103">가져옵니다는 [ICLRProbingAssemblyEnum](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-interface.md) 지정 된 id 형식 사용 하 여 어셈블리에서 참조 된 어셈블리 id에 대 한 열거자입니다.</span><span class="sxs-lookup"><span data-stu-id="3ecbb-103">Gets an [ICLRProbingAssemblyEnum](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-interface.md) enumerator for the assembly identities referenced by the assembly with the specified identity type.</span></span>  
+# <a name="iclrassemblyidentitymanagergetprobingassembliesfromreference-method"></a><span data-ttu-id="ccc69-102">ICLRAssemblyIdentityManager::GetProbingAssembliesFromReference 메서드</span><span class="sxs-lookup"><span data-stu-id="ccc69-102">ICLRAssemblyIdentityManager::GetProbingAssembliesFromReference Method</span></span>
+<span data-ttu-id="ccc69-103">가져옵니다는 [ICLRProbingAssemblyEnum](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-interface.md) 지정 된 id 형식 사용 하 여 어셈블리에서 참조 된 어셈블리 id에 대 한 열거자입니다.</span><span class="sxs-lookup"><span data-stu-id="ccc69-103">Gets an [ICLRProbingAssemblyEnum](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-interface.md) enumerator for the assembly identities referenced by the assembly with the specified identity type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3ecbb-104">구문</span><span class="sxs-lookup"><span data-stu-id="3ecbb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ccc69-104">구문</span><span class="sxs-lookup"><span data-stu-id="ccc69-104">Syntax</span></span>  
   
 ```  
 HRESULT GetProbingAssembliesFromReference (  
@@ -38,41 +38,41 @@ HRESULT GetProbingAssembliesFromReference (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3ecbb-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="3ecbb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ccc69-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="ccc69-105">Parameters</span></span>  
  `dwMachineType`  
- <span data-ttu-id="3ecbb-106">[in] WinNT.h에 정의 된 대로 프로세서 아키텍처를 지정 하는 유효한 값입니다.</span><span class="sxs-lookup"><span data-stu-id="3ecbb-106">[in] A valid value that specifies the processor architecture, as defined in WinNT.h.</span></span>  
+ <span data-ttu-id="ccc69-106">[in] WinNT.h에 정의 된 대로 프로세서 아키텍처를 지정 하는 유효한 값입니다.</span><span class="sxs-lookup"><span data-stu-id="ccc69-106">[in] A valid value that specifies the processor architecture, as defined in WinNT.h.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="3ecbb-107">[in] 향후 확장성을 위해 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="3ecbb-107">[in] Provided for future extensibility.</span></span> <span data-ttu-id="3ecbb-108">CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT에는 CLR (공용 언어 런타임)의 현재 버전을 지 원하는 유일한 값입니다.</span><span class="sxs-lookup"><span data-stu-id="3ecbb-108">CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT is the only value that the current version of the common language runtime (CLR) supports.</span></span>  
+ <span data-ttu-id="ccc69-107">[in] 향후 확장성을 위해 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="ccc69-107">[in] Provided for future extensibility.</span></span> <span data-ttu-id="ccc69-108">CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT에는 CLR (공용 언어 런타임)의 현재 버전을 지 원하는 유일한 값입니다.</span><span class="sxs-lookup"><span data-stu-id="ccc69-108">CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT is the only value that the current version of the common language runtime (CLR) supports.</span></span>  
   
  `pwzReferenceIdentity`  
- <span data-ttu-id="3ecbb-109">[in] 일반적으로 호출에서 반환 되는 불투명 한 어셈블리 바인딩 id에는 [iclrassemblyidentitymanager:: Getbindingidentityfromfile](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getbindingidentityfromfile-method.md) 또는 [iclrassemblyidentitymanager:: Getbindingidentityfromstream](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getbindingidentityfromstream-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="3ecbb-109">[in] An opaque assembly binding identity, typically returned from a call to the [ICLRAssemblyIdentityManager::GetBindingIdentityFromFile](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getbindingidentityfromfile-method.md) or [ICLRAssemblyIdentityManager::GetBindingIdentityFromStream](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getbindingidentityfromstream-method.md) method.</span></span>  
+ <span data-ttu-id="ccc69-109">[in] 일반적으로 호출에서 반환 되는 불투명 한 어셈블리 바인딩 id에는 [iclrassemblyidentitymanager:: Getbindingidentityfromfile](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getbindingidentityfromfile-method.md) 또는 [iclrassemblyidentitymanager:: Getbindingidentityfromstream](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getbindingidentityfromstream-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="ccc69-109">[in] An opaque assembly binding identity, typically returned from a call to the [ICLRAssemblyIdentityManager::GetBindingIdentityFromFile](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getbindingidentityfromfile-method.md) or [ICLRAssemblyIdentityManager::GetBindingIdentityFromStream](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getbindingidentityfromstream-method.md) method.</span></span>  
   
  `ppProbingAssemblyEnum`  
- <span data-ttu-id="3ecbb-110">[out] 에 대 한 인터페이스 포인터를 `ICLRProbingAssemblyEnum` 으로 식별 되는 어셈블리가 참조 하는 어셈블리에 대 한 참조를 포함 하는 열거자 `pwzReferenceIdentity`합니다.</span><span class="sxs-lookup"><span data-stu-id="3ecbb-110">[out] An interface pointer to an `ICLRProbingAssemblyEnum` enumerator that contains references to the assemblies referenced by the assembly identified by `pwzReferenceIdentity`.</span></span>  
+ <span data-ttu-id="ccc69-110">[out] 에 대 한 인터페이스 포인터를 `ICLRProbingAssemblyEnum` 으로 식별 되는 어셈블리가 참조 하는 어셈블리에 대 한 참조를 포함 하는 열거자 `pwzReferenceIdentity`합니다.</span><span class="sxs-lookup"><span data-stu-id="ccc69-110">[out] An interface pointer to an `ICLRProbingAssemblyEnum` enumerator that contains references to the assemblies referenced by the assembly identified by `pwzReferenceIdentity`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3ecbb-111">반환 값</span><span class="sxs-lookup"><span data-stu-id="3ecbb-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ccc69-111">반환 값</span><span class="sxs-lookup"><span data-stu-id="ccc69-111">Return Value</span></span>  
   
-|<span data-ttu-id="3ecbb-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="3ecbb-112">HRESULT</span></span>|<span data-ttu-id="3ecbb-113">설명</span><span class="sxs-lookup"><span data-stu-id="3ecbb-113">Description</span></span>|  
+|<span data-ttu-id="ccc69-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="ccc69-112">HRESULT</span></span>|<span data-ttu-id="ccc69-113">설명</span><span class="sxs-lookup"><span data-stu-id="ccc69-113">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="3ecbb-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="3ecbb-114">S_OK</span></span>|<span data-ttu-id="3ecbb-115">메서드가 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="3ecbb-115">The method returned successfully.</span></span>|  
-|<span data-ttu-id="3ecbb-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="3ecbb-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="3ecbb-117">CLR이 로드 된 프로세스에 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="3ecbb-117">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="3ecbb-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="3ecbb-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="3ecbb-119">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="3ecbb-119">The call timed out.</span></span>|  
-|<span data-ttu-id="3ecbb-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="3ecbb-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="3ecbb-121">호출자가 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3ecbb-121">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="3ecbb-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="3ecbb-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="3ecbb-123">이벤트가 차단 된 스레드가 취소 된 또는 파이버를 대기 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3ecbb-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="3ecbb-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="3ecbb-124">E_FAIL</span></span>|<span data-ttu-id="3ecbb-125">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="3ecbb-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="3ecbb-126">메서드가 E_FAIL을 반환 하는 경우 CLR은 프로세스 내에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="3ecbb-126">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="3ecbb-127">메서드를 호스트 하는 데 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="3ecbb-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="ccc69-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="ccc69-114">S_OK</span></span>|<span data-ttu-id="ccc69-115">메서드가 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="ccc69-115">The method returned successfully.</span></span>|  
+|<span data-ttu-id="ccc69-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="ccc69-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="ccc69-117">CLR이 로드 된 프로세스에 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="ccc69-117">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="ccc69-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="ccc69-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="ccc69-119">호출 시간이 초과 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="ccc69-119">The call timed out.</span></span>|  
+|<span data-ttu-id="ccc69-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="ccc69-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="ccc69-121">호출자가 잠금을 소유 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ccc69-121">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="ccc69-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="ccc69-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="ccc69-123">이벤트가 차단 된 스레드가 취소 된 또는 파이버를 대기 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ccc69-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="ccc69-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="ccc69-124">E_FAIL</span></span>|<span data-ttu-id="ccc69-125">알 수 없는 치명적인 오류가 발생 했습니다.</span><span class="sxs-lookup"><span data-stu-id="ccc69-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="ccc69-126">메서드가 E_FAIL을 반환 하는 경우 CLR은 프로세스 내에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="ccc69-126">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="ccc69-127">메서드를 호스트 하는 데 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="ccc69-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="3ecbb-128">요구 사항</span><span class="sxs-lookup"><span data-stu-id="3ecbb-128">Requirements</span></span>  
- <span data-ttu-id="3ecbb-129">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="3ecbb-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ccc69-128">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ccc69-128">Requirements</span></span>  
+ <span data-ttu-id="ccc69-129">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="ccc69-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3ecbb-130">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="3ecbb-130">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="ccc69-130">**헤더:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ccc69-130">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="3ecbb-131">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="3ecbb-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="ccc69-131">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="ccc69-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="3ecbb-132">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3ecbb-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ccc69-132">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ccc69-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3ecbb-133">참고자료</span><span class="sxs-lookup"><span data-stu-id="3ecbb-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ccc69-133">참고자료</span><span class="sxs-lookup"><span data-stu-id="ccc69-133">See also</span></span>
 
-- [<span data-ttu-id="3ecbb-134">ICLRAssemblyIdentityManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="3ecbb-134">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [<span data-ttu-id="3ecbb-135">ICLRAssemblyReferenceList 인터페이스</span><span class="sxs-lookup"><span data-stu-id="3ecbb-135">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
-- [<span data-ttu-id="3ecbb-136">ICLRProbingAssemblyEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="3ecbb-136">ICLRProbingAssemblyEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-interface.md)
+- [<span data-ttu-id="ccc69-134">ICLRAssemblyIdentityManager 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ccc69-134">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [<span data-ttu-id="ccc69-135">ICLRAssemblyReferenceList 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ccc69-135">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
+- [<span data-ttu-id="ccc69-136">ICLRProbingAssemblyEnum 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ccc69-136">ICLRProbingAssemblyEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-interface.md)

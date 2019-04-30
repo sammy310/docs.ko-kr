@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 28e6ad309af808638400fc27255acdee381b4c6e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992318"
 ---
-# <a name="imetadataimportenumpermissionsets-method"></a><span data-ttu-id="70b25-102">IMetaDataImport::EnumPermissionSets 메서드</span><span class="sxs-lookup"><span data-stu-id="70b25-102">IMetaDataImport::EnumPermissionSets Method</span></span>
-<span data-ttu-id="70b25-103">지정한 메타데이터 범위의 개체에 대한 권한을 열거합니다.</span><span class="sxs-lookup"><span data-stu-id="70b25-103">Enumerates permissions for the objects in a specified metadata scope.</span></span>  
+# <a name="imetadataimportenumpermissionsets-method"></a><span data-ttu-id="25db9-102">IMetaDataImport::EnumPermissionSets 메서드</span><span class="sxs-lookup"><span data-stu-id="25db9-102">IMetaDataImport::EnumPermissionSets Method</span></span>
+<span data-ttu-id="25db9-103">지정한 메타데이터 범위의 개체에 대한 권한을 열거합니다.</span><span class="sxs-lookup"><span data-stu-id="25db9-103">Enumerates permissions for the objects in a specified metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="70b25-104">구문</span><span class="sxs-lookup"><span data-stu-id="70b25-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="25db9-104">구문</span><span class="sxs-lookup"><span data-stu-id="25db9-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumPermissionSets  
@@ -40,42 +40,42 @@ HRESULT EnumPermissionSets
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="70b25-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="70b25-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="25db9-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="25db9-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="70b25-106">[out에서] 열거자에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="70b25-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="70b25-107">이 메서드의 첫 번째 호출에 대 한 NULL 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="70b25-107">This must be NULL for the first call of this method.</span></span>  
+ <span data-ttu-id="25db9-106">[out에서] 열거자에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="25db9-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="25db9-107">이 메서드의 첫 번째 호출에 대 한 NULL 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="25db9-107">This must be NULL for the first call of this method.</span></span>  
   
  `tk`  
- <span data-ttu-id="70b25-108">[in] 가능한 가장 넓은 범위를 검색 하려면 NULL 검색의 범위를 제한 하는 메타 데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="70b25-108">[in] A metadata token that limits the scope of the search, or NULL to search the widest scope possible.</span></span>  
+ <span data-ttu-id="25db9-108">[in] 가능한 가장 넓은 범위를 검색 하려면 NULL 검색의 범위를 제한 하는 메타 데이터 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="25db9-108">[in] A metadata token that limits the scope of the search, or NULL to search the widest scope possible.</span></span>  
   
  `dwActions`  
- <span data-ttu-id="70b25-109">[in] 나타내는 플래그를 <xref:System.Security.Permissions.SecurityAction> 에 포함할 값 `rPermission`, 또는 모든 작업을 반환 하는 0입니다.</span><span class="sxs-lookup"><span data-stu-id="70b25-109">[in] Flags representing the <xref:System.Security.Permissions.SecurityAction> values to include in `rPermission`, or zero to return all actions.</span></span>  
+ <span data-ttu-id="25db9-109">[in] 나타내는 플래그를 <xref:System.Security.Permissions.SecurityAction> 에 포함할 값 `rPermission`, 또는 모든 작업을 반환 하는 0입니다.</span><span class="sxs-lookup"><span data-stu-id="25db9-109">[in] Flags representing the <xref:System.Security.Permissions.SecurityAction> values to include in `rPermission`, or zero to return all actions.</span></span>  
   
  `rPermission`  
- <span data-ttu-id="70b25-110">[out] 권한 토큰을 저장 하는 데 사용 되는 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="70b25-110">[out] The array used to store the Permission tokens.</span></span>  
+ <span data-ttu-id="25db9-110">[out] 권한 토큰을 저장 하는 데 사용 되는 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="25db9-110">[out] The array used to store the Permission tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="70b25-111">[in] `rPermission` 배열의 최대 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="70b25-111">[in] The maximum size of the `rPermission` array.</span></span>  
+ <span data-ttu-id="25db9-111">[in] `rPermission` 배열의 최대 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="25db9-111">[in] The maximum size of the `rPermission` array.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="70b25-112">[out] 권한이 토큰에서 반환 된 수가 `rPermission`합니다.</span><span class="sxs-lookup"><span data-stu-id="70b25-112">[out] The number of Permission tokens returned in `rPermission`.</span></span>  
+ <span data-ttu-id="25db9-112">[out] 권한이 토큰에서 반환 된 수가 `rPermission`합니다.</span><span class="sxs-lookup"><span data-stu-id="25db9-112">[out] The number of Permission tokens returned in `rPermission`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="70b25-113">반환 값</span><span class="sxs-lookup"><span data-stu-id="70b25-113">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="25db9-113">반환 값</span><span class="sxs-lookup"><span data-stu-id="25db9-113">Return Value</span></span>  
   
-|<span data-ttu-id="70b25-114">HRESULT</span><span class="sxs-lookup"><span data-stu-id="70b25-114">HRESULT</span></span>|<span data-ttu-id="70b25-115">설명</span><span class="sxs-lookup"><span data-stu-id="70b25-115">Description</span></span>|  
+|<span data-ttu-id="25db9-114">HRESULT</span><span class="sxs-lookup"><span data-stu-id="25db9-114">HRESULT</span></span>|<span data-ttu-id="25db9-115">설명</span><span class="sxs-lookup"><span data-stu-id="25db9-115">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="70b25-116">`EnumPermissionSets` 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="70b25-116">`EnumPermissionSets` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="70b25-117">열거할 토큰이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="70b25-117">There are no tokens to enumerate.</span></span> <span data-ttu-id="70b25-118">이런 경우 `pcTokens` 0입니다.</span><span class="sxs-lookup"><span data-stu-id="70b25-118">In that case, `pcTokens` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="25db9-116">`EnumPermissionSets` 성공적으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="25db9-116">`EnumPermissionSets` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="25db9-117">열거할 토큰이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="25db9-117">There are no tokens to enumerate.</span></span> <span data-ttu-id="25db9-118">이런 경우 `pcTokens` 0입니다.</span><span class="sxs-lookup"><span data-stu-id="25db9-118">In that case, `pcTokens` is zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="70b25-119">요구 사항</span><span class="sxs-lookup"><span data-stu-id="70b25-119">Requirements</span></span>  
- <span data-ttu-id="70b25-120">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="70b25-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="25db9-119">요구 사항</span><span class="sxs-lookup"><span data-stu-id="25db9-119">Requirements</span></span>  
+ <span data-ttu-id="25db9-120">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="25db9-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="70b25-121">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="70b25-121">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="25db9-121">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="25db9-121">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="70b25-122">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="70b25-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="25db9-122">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="25db9-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="70b25-123">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="70b25-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="25db9-123">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="25db9-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="70b25-124">참고자료</span><span class="sxs-lookup"><span data-stu-id="70b25-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="25db9-124">참고자료</span><span class="sxs-lookup"><span data-stu-id="25db9-124">See also</span></span>
 
-- [<span data-ttu-id="70b25-125">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="70b25-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="70b25-126">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="70b25-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="25db9-125">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="25db9-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="25db9-126">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="25db9-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

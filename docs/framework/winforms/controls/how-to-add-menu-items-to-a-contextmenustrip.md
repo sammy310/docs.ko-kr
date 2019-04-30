@@ -10,18 +10,18 @@ helpviewer_keywords:
 - context menus [Windows Forms], adding menu items
 ms.assetid: 1ec14776-3ea2-4752-bd22-4fae0fd19e1a
 ms.openlocfilehash: 534bbd2c2edb68dca0f2a1c2997ff1ba762ef07c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011049"
 ---
-# <a name="how-to-add-menu-items-to-a-contextmenustrip"></a><span data-ttu-id="f2be7-102">방법: ContextMenuStrip에 메뉴 항목 추가</span><span class="sxs-lookup"><span data-stu-id="f2be7-102">How to: Add Menu Items to a ContextMenuStrip</span></span>
-<span data-ttu-id="f2be7-103">한 번에 하나의 메뉴 항목 또는 여러 항목을 추가할 수 있습니다는 <xref:System.Windows.Forms.ContextMenuStrip>합니다.</span><span class="sxs-lookup"><span data-stu-id="f2be7-103">You can add just one menu item or several items at a time to a <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>  
+# <a name="how-to-add-menu-items-to-a-contextmenustrip"></a><span data-ttu-id="84589-102">방법: ContextMenuStrip에 메뉴 항목 추가</span><span class="sxs-lookup"><span data-stu-id="84589-102">How to: Add Menu Items to a ContextMenuStrip</span></span>
+<span data-ttu-id="84589-103">한 번에 하나의 메뉴 항목 또는 여러 항목을 추가할 수 있습니다는 <xref:System.Windows.Forms.ContextMenuStrip>합니다.</span><span class="sxs-lookup"><span data-stu-id="84589-103">You can add just one menu item or several items at a time to a <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>  
   
-### <a name="to-add-a-single-menu-item-to-a-contextmenustrip"></a><span data-ttu-id="f2be7-104">ContextMenuStrip에 단일 메뉴 항목을 추가 하려면</span><span class="sxs-lookup"><span data-stu-id="f2be7-104">To add a single menu item to a ContextMenuStrip</span></span>  
+### <a name="to-add-a-single-menu-item-to-a-contextmenustrip"></a><span data-ttu-id="84589-104">ContextMenuStrip에 단일 메뉴 항목을 추가 하려면</span><span class="sxs-lookup"><span data-stu-id="84589-104">To add a single menu item to a ContextMenuStrip</span></span>  
   
--   <span data-ttu-id="f2be7-105">사용 된 <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> 하나의 메뉴 항목을 추가 하는 방법을 <xref:System.Windows.Forms.ContextMenuStrip>입니다.</span><span class="sxs-lookup"><span data-stu-id="f2be7-105">Use the <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> method to add one menu item to a <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>  
+- <span data-ttu-id="84589-105">사용 된 <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> 하나의 메뉴 항목을 추가 하는 방법을 <xref:System.Windows.Forms.ContextMenuStrip>입니다.</span><span class="sxs-lookup"><span data-stu-id="84589-105">Use the <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> method to add one menu item to a <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>  
   
     ```vb  
     Me.contextMenuStrip1.Items.Add(Me.toolStripMenuItem1)  
@@ -31,9 +31,9 @@ ms.locfileid: "59135085"
     this.contextMenuStrip1.Items.Add(toolStripMenuItem1);  
     ```  
   
-### <a name="to-add-several-menu-items-to-a-contextmenustrip"></a><span data-ttu-id="f2be7-106">ContextMenuStrip에 몇 가지 메뉴 항목을 추가 하려면</span><span class="sxs-lookup"><span data-stu-id="f2be7-106">To add several menu items to a ContextMenuStrip</span></span>  
+### <a name="to-add-several-menu-items-to-a-contextmenustrip"></a><span data-ttu-id="84589-106">ContextMenuStrip에 몇 가지 메뉴 항목을 추가 하려면</span><span class="sxs-lookup"><span data-stu-id="84589-106">To add several menu items to a ContextMenuStrip</span></span>  
   
--   <span data-ttu-id="f2be7-107">사용 된 <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> 몇 가지 메뉴 항목을 추가 하는 메서드를 <xref:System.Windows.Forms.ContextMenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="f2be7-107">Use the <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> method to add several menu items to a <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>  
+- <span data-ttu-id="84589-107">사용 된 <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> 몇 가지 메뉴 항목을 추가 하는 메서드를 <xref:System.Windows.Forms.ContextMenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="84589-107">Use the <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> method to add several menu items to a <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>  
   
     ```vb  
     Me.contextMenuStrip1.Items.AddRange(New _  
@@ -47,6 +47,6 @@ ms.locfileid: "59135085"
           this.toolStripMenuItem1, this.toolStripMenuItem2});  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="f2be7-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="f2be7-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="84589-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="84589-108">See also</span></span>
 
-- [<span data-ttu-id="f2be7-109">ContextMenuStrip 컨트롤</span><span class="sxs-lookup"><span data-stu-id="f2be7-109">ContextMenuStrip Control</span></span>](contextmenustrip-control.md)
+- [<span data-ttu-id="84589-109">ContextMenuStrip 컨트롤</span><span class="sxs-lookup"><span data-stu-id="84589-109">ContextMenuStrip Control</span></span>](contextmenustrip-control.md)
