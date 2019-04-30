@@ -1,1 +1,9 @@
-<span data-ttu-id="5201d-101">GUI(그래픽 사용자 인터페이스)</span><span class="sxs-lookup"><span data-stu-id="5201d-101">graphical user interface (GUI)</span></span>
+---
+ms.openlocfilehash: f5c956dad3ecf70baf50c2932481a060ea3add7c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700670"
+---
+<span data-ttu-id="0f9cf-101">GUI(그래픽 사용자 인터페이스)</span><span class="sxs-lookup"><span data-stu-id="0f9cf-101">graphical user interface (GUI)</span></span>

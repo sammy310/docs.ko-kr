@@ -1,1 +1,9 @@
-<span data-ttu-id="dba02-101">.NET Framework 버전 4</span><span class="sxs-lookup"><span data-stu-id="dba02-101">.NET Framework version 4</span></span>
+---
+ms.openlocfilehash: 61cadc0aaaec7c2c6b80fa812d3782ddf328c111
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669538"
+---
+<span data-ttu-id="130dd-101">.NET Framework 버전 4</span><span class="sxs-lookup"><span data-stu-id="130dd-101">.NET Framework version 4</span></span>

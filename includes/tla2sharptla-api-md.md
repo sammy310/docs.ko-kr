@@ -1,1 +1,9 @@
-<span data-ttu-id="f1a6e-101">API</span><span class="sxs-lookup"><span data-stu-id="f1a6e-101">API</span></span>
+---
+ms.openlocfilehash: d93d10ff0fbef1b4aa0ddc24e10e907746d3c85a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703314"
+---
+<span data-ttu-id="9b99b-101">API</span><span class="sxs-lookup"><span data-stu-id="9b99b-101">API</span></span>

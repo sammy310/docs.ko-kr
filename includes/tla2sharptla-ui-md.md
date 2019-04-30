@@ -1,1 +1,9 @@
-<span data-ttu-id="e07b6-101">UI</span><span class="sxs-lookup"><span data-stu-id="e07b6-101">UI</span></span>
+---
+ms.openlocfilehash: 9d57875196c613785a1eee010c55223a0f1aa821
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699501"
+---
+<span data-ttu-id="f1a83-101">UI</span><span class="sxs-lookup"><span data-stu-id="f1a83-101">UI</span></span>

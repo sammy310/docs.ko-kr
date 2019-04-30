@@ -1,1 +1,9 @@
-<span data-ttu-id="b4d71-101">CLR</span><span class="sxs-lookup"><span data-stu-id="b4d71-101">CLR</span></span>
+---
+ms.openlocfilehash: ea01041724ba0e871f81a8a07b8bbeb5fd7b6448
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699308"
+---
+<span data-ttu-id="c7b5f-101">CLR</span><span class="sxs-lookup"><span data-stu-id="c7b5f-101">CLR</span></span>
