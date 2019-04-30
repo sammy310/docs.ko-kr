@@ -9,11 +9,11 @@ ms.assetid: 77526f65-b71c-4483-9d19-3a3751fd8a45
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8c76db644ffee478003d834460c155c4ec6d0070
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944614"
 ---
 # <a name="constants-unmanaged-api-reference"></a>상수(관리되지 않는 API 참조)
 이 항목에서는 언어 유형, 언어 공급 업체 및 CorSym.idl에 정의 되어 있는 문서 형식 상수를 설명 합니다.  

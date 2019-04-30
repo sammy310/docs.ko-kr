@@ -8,11 +8,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], displaying data
 ms.assetid: b170b52a-2ebd-4948-ac2f-e52d494cebb2
 ms.openlocfilehash: c153d422470ff20491567aed70557e461dc2b4e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972226"
 ---
 # <a name="displaying-data-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤에서 데이터 표시
 `DataGridView` 컨트롤은 다양 한 외부 데이터 원본에서에서 데이터를 표시 하는 데 사용 합니다. 또는 컨트롤에 행 및 열을 추가 하 고 수동으로 데이터로 채울 수 있습니다.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - adorners [WPF], how-to topics
 ms.assetid: e29d7516-d5e6-4500-bd4f-775e6f830984
 ms.openlocfilehash: 930d0834570529bd958006818cddb8f5692066d7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981684"
 ---
 # <a name="adorners-how-to-topics"></a>표시기 방법 항목
 다음 예제를 사용 하 여 일반적인 작업을 수행 하는 방법을 보여 줍니다는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 표시기 프레임 워크입니다.  

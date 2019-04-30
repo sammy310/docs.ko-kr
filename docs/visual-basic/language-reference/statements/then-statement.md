@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Then keyword [Visual Basic]
 ms.assetid: 41fdb422-d222-4c10-b5b0-c421c79e9070
 ms.openlocfilehash: d7e62e5a36abe917d8b16177fe76715f915ee769
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61958823"
 ---
 # <a name="then-statement"></a>Then 문
 컴파일하거나 테스트 조건이 true 인 경우 실행할 문 블록을 소개 합니다.  

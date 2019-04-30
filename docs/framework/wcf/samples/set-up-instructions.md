@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Communication Foundation Samples [WCF], setup
 ms.assetid: 0be7d232-485b-4f6d-9ed0-b4243c907376
 ms.openlocfilehash: fc68759e3057b6a1fd2a2ca4e0bffe81cea5f095
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967650"
 ---
 # <a name="set-up-instructions"></a>설치 지침
 이 항목 집합에서는 Windows Communication Foundation (WCF) 서비스를 실행 하는 데 필요한 서비스를 설정 하는 방법을 설명 합니다.  

@@ -5,22 +5,22 @@ f1_keywords:
 - vbrID35
 ms.assetid: 661fdb90-ee7d-40ce-b30b-5e7267bd957a
 ms.openlocfilehash: 397648618ea3764efafb5cff41deaef320bbeff3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982438"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Sub 또는 Function이 정의되지 않았습니다(Visual Basic).
 A `Sub` 또는 `Function` 호출 수를 정의 해야 합니다. 이 오류가 발생하는 원인은 다음과 같습니다.  
   
--   프로시저 이름의 철자가 틀린 경우입니다.  
+- 프로시저 이름의 철자가 틀린 경우입니다.  
   
--   다른 프로젝트에서 명시적으로 해당 프로젝트에 대 한 참조를 추가 하지 않고 프로시저를 호출 하려고 합니다 **참조가** 대화 상자.  
+- 다른 프로젝트에서 명시적으로 해당 프로젝트에 대 한 참조를 추가 하지 않고 프로시저를 호출 하려고 합니다 **참조가** 대화 상자.  
   
--   호출 하는 프로시저로 표시 되지 않는 프로시저를 지정 합니다.  
+- 호출 하는 프로시저로 표시 되지 않는 프로시저를 지정 합니다.  
   
--   Windows 동적 연결 라이브러리 (DLL) 루틴 또는 지정된 된 라이브러리 또는 코드 리소스에 있지 않은 Macintosh 코드 리소스 루틴을 선언 합니다.  
+- Windows 동적 연결 라이브러리 (DLL) 루틴 또는 지정된 된 라이브러리 또는 코드 리소스에 있지 않은 Macintosh 코드 리소스 루틴을 선언 합니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   

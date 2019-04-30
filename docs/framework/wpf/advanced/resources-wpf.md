@@ -9,11 +9,11 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 ms.assetid: 12ae4b67-cd0c-4c4d-a188-2c3de173bbb9
 ms.openlocfilehash: 3097fe627377e98ab283a5b6178acb9f74fc487c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981892"
 ---
 # <a name="resources-wpf"></a>리소스(WPF)
 리소스는 애플리케이션의 여러 위치에서 다시 사용할 수 있는 개체입니다. WPF는 다양 한 유형의 리소스를 지원합니다. 이러한 리소스는 주로 두 가지 유형의 리소스: XAML 리소스 및 리소스 데이터 파일입니다. XAML 리소스의 예로 브러시와 스타일이 있습니다. 리소스 데이터 파일은 응용 프로그램 해야 하는 실행 불가능 데이터 파일.  

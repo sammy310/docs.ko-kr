@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms controls, grouping
 ms.assetid: 7e1cd708-fdb1-49d8-9ca2-5640b276bf2e
 ms.openlocfilehash: 662343af42f72816a5a673d2cd6d839a5dca9190
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971303"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms 패널 컨트롤에서 컨트롤 그룹화
 Windows Forms <xref:System.Windows.Forms.Panel> 컨트롤은 다른 컨트롤을 그룹화 하는 데 사용 됩니다. 컨트롤을 그룹화 하는 방법은 세 가지가 있습니다. 하나는 시각적으로 관련 된 일반 사용자 인터페이스;에 대 한 폼 요소 그룹화 프로그래밍 방식으로 그룹화 라디오 단추의 예를 들어, 다른 하나는 마지막으로 디자인 타임에 컨트롤을 한 단위로 이동입니다.  

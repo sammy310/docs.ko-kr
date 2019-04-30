@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a6c715183d3ae04130b729a9680335d65959836a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946733"
 ---
 # <a name="isframeworkassembly-function"></a>IsFrameworkAssembly 함수
 지정된 된 어셈블리 관리 되는지 여부를 나타내는 값을 가져옵니다.  

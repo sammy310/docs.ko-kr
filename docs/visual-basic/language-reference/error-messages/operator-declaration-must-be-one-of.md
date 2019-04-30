@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC33000
 ms.assetid: 15c5d8eb-3a8c-4141-8f41-33151afabf97
 ms.openlocfilehash: 4283547109ec312cc4fe07a054bbb8db3bff660f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946603"
 ---
 # <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not--"></a>연산자 선언 중 하나 여야 합니다: +,-, *,\,/, ^, &amp;, Mod, 처럼를 Or, Xor, 되지 \< \<, >>...
 오버 로드 된 연산자만 선언할 수 있습니다. 다음 표에서 연산자를 선언할 수 있습니다.  

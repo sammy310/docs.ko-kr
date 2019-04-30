@@ -9,11 +9,11 @@ helpviewer_keywords:
 - StaticResource markup extensions [WPF]
 ms.assetid: 97af044c-71f1-4617-9a94-9064b68185d2
 ms.openlocfilehash: 8319e451268152e95326c02027157db72df631b8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981905"
 ---
 # <a name="staticresource-markup-extension"></a>StaticResource 태그 확장
 에 대 한 값을 제공 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 이미 정의 된 리소스에 대 한 참조를 확인 하 여 속성 특성입니다. 해당 리소스에 대 한 조회 동작은 현재 태그에서 이전에 로드 된 리소스는 로드 시간 조회, 유사 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지와 다른 응용 프로그램 소스 및 해당 리소스 값으로이 생성 되는 런타임 개체의 속성 값입니다.  

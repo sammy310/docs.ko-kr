@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1cb5f9decbcdfb71f67a5132dc59773f1de8b0a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985805"
 ---
 # <a name="corimageunloading-function"></a>_CorImageUnloading 함수
 관리 되는 모듈 이미지가 언로드될 때 로더에 알립니다.  

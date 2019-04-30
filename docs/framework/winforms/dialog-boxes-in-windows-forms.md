@@ -7,15 +7,14 @@ helpviewer_keywords:
 - dialogs [Windows Forms], using in Windows Forms
 ms.assetid: d43d022b-451b-490d-9386-dc79d98fbf8a
 ms.openlocfilehash: e9fc4500ef11249b84e5cba99d4a890fb472ef3e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967078"
 ---
 # <a name="dialog-boxes-in-windows-forms"></a>Windows Forms 대화 상자
-대화 상자는 사용자와 상호 작용하고 정보를 검색하는 데 사용됩니다. 간단히 말해서 대화 상자는 <xref:System.Windows.Forms.FormBorderStyle> 열거형 속성이 `FixedDialog`로 설정된 폼입니다. Visual Studio에서 Windows Forms 디자이너를 사용 하 여 사용자 고유의 사용자 지정 대화 상자를 생성할 수 있습니다. 
-  `Label`, `Textbox` 및 `Button`과 같은 컨트롤을 추가하여 특정 필요에 맞게 대화 상자를 사용자 지정합니다. 합니다 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 와 같은 미리 정의 된 대화 상자에도 포함 **파일 열기** 및 응용 프로그램에 사용할 수 있는 메시지 상자입니다. 자세한 내용은 [대화 상자 컨트롤 및 구성 요소](./controls/dialog-box-controls-and-components-windows-forms.md)합니다.  
+대화 상자는 사용자와 상호 작용하고 정보를 검색하는 데 사용됩니다. 간단히 말해서 대화 상자는 <xref:System.Windows.Forms.FormBorderStyle> 열거형 속성이 `FixedDialog`로 설정된 폼입니다. Visual Studio에서 Windows Forms 디자이너를 사용 하 여 사용자 고유의 사용자 지정 대화 상자를 생성할 수 있습니다. `Label`, `Textbox` 및 `Button`과 같은 컨트롤을 추가하여 특정 필요에 맞게 대화 상자를 사용자 지정합니다. 합니다 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 와 같은 미리 정의 된 대화 상자에도 포함 **파일 열기** 및 응용 프로그램에 사용할 수 있는 메시지 상자입니다. 자세한 내용은 [대화 상자 컨트롤 및 구성 요소](./controls/dialog-box-controls-and-components-windows-forms.md)합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [방법: Windows Forms 대화 상자 표시](how-to-display-dialog-boxes-for-windows-forms.md)  

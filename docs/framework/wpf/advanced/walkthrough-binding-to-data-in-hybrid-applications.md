@@ -9,30 +9,30 @@ helpviewer_keywords:
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
 ms.openlocfilehash: f6fd1f2f5d0a729ee5610b81d4bfdca052a6e01e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981814"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>연습: 하이브리드 애플리케이션에서 데이터에 바인딩
 사용 하 여 기본 데이터에 대 한 액세스를 사용 하 여 사용자에 게 제공 하는 데 필수적입니다 데이터 소스 컨트롤에 바인딩 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 또는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]합니다. 이 연습에서는 모두 포함 하는 하이브리드 응용 프로그램에서 데이터 바인딩을 사용 하는 방법을 보여 줍니다 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 고 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤입니다.  
   
  이 연습에서 설명하는 작업은 다음과 같습니다.  
   
--   프로젝트 만들기.  
+- 프로젝트 만들기.  
   
--   데이터 템플릿 정의  
+- 데이터 템플릿 정의  
   
--   폼 레이아웃 지정  
+- 폼 레이아웃 지정  
   
--   데이터 바인딩 지정  
+- 데이터 바인딩 지정  
   
--   상호 운용성을 사용하여 데이터 표시  
+- 상호 운용성을 사용하여 데이터 표시  
   
--   프로젝트에 데이터 소스 추가  
+- 프로젝트에 데이터 소스 추가  
   
--   데이터 소스에 바인딩  
+- 데이터 소스에 바인딩  
   
  이 연습에 설명 된 작업의 전체 코드 목록은 참조 하세요 [하이브리드 응용 프로그램 샘플의 데이터 바인딩](https://go.microsoft.com/fwlink/?LinkID=159983)합니다.  
   
@@ -41,9 +41,9 @@ ms.locfileid: "59300868"
 ## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
--   Visual Studio.  
+- Visual Studio.  
   
--   Microsoft SQL Server에서 실행 되는 Northwind 샘플 데이터베이스에 액세스 합니다.  
+- Microsoft SQL Server에서 실행 되는 Northwind 샘플 데이터베이스에 액세스 합니다.  
   
 ## <a name="creating-the-project"></a>프로젝트 만들기  
   
@@ -53,9 +53,9 @@ ms.locfileid: "59300868"
   
 2. 솔루션 탐색기에서 다음 어셈블리에 대한 참조를 추가합니다.  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
-    -   System.Windows.Forms  
+    - System.Windows.Forms  
   
 3. MainWindow.xaml을 엽니다는 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]합니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "59300868"
   
 #### <a name="to-define-the-data-template"></a>데이터 템플릿을 정의하려면  
   
--   에 다음 XAML을 복사 합니다 <xref:System.Windows.Controls.Grid> 요소의 선언 합니다.  
+- 에 다음 XAML을 복사 합니다 <xref:System.Windows.Controls.Grid> 요소의 선언 합니다.  
   
      [!code-xaml[WPFWithWFAndDatabinding#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#3)]  
   
@@ -83,13 +83,13 @@ ms.locfileid: "59300868"
   
 #### <a name="to-set-up-the-grid-layout"></a>그리드 레이아웃을 설정하려면  
   
--   에 다음 XAML을 복사 합니다 <xref:System.Windows.Controls.Grid> 요소의 선언 합니다.  
+- 에 다음 XAML을 복사 합니다 <xref:System.Windows.Controls.Grid> 요소의 선언 합니다.  
   
      [!code-xaml[WPFWithWFAndDatabinding#4](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#4)]  
   
 #### <a name="to-set-up-the-label-controls"></a>레이블 컨트롤을 설정하려면  
   
--   에 다음 XAML을 복사 합니다 <xref:System.Windows.Controls.Grid> 요소의 선언 합니다.  
+- 에 다음 XAML을 복사 합니다 <xref:System.Windows.Controls.Grid> 요소의 선언 합니다.  
   
      [!code-xaml[WPFWithWFAndDatabinding#5](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#5)]  
   
@@ -100,7 +100,7 @@ ms.locfileid: "59300868"
   
 #### <a name="to-specify-data-bindings"></a>데이터 바인딩을 지정하려면  
   
--   에 다음 XAML을 복사 합니다 <xref:System.Windows.Controls.Grid> 요소의 선언 합니다.  
+- 에 다음 XAML을 복사 합니다 <xref:System.Windows.Controls.Grid> 요소의 선언 합니다.  
   
      합니다 <xref:System.Windows.Data.Binding> 바인딩합니다 클래스는 <xref:System.Windows.Controls.TextBox> 컨트롤을 데이터베이스에서 적절 한 필드입니다.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "59300868"
   
 #### <a name="to-display-data-in-the-datagridview-control"></a>DataGridView 컨트롤에 데이터를 표시하려면  
   
--   에 다음 XAML을 복사 합니다 <xref:System.Windows.Controls.Grid> 요소의 선언 합니다.  
+- 에 다음 XAML을 복사 합니다 <xref:System.Windows.Controls.Grid> 요소의 선언 합니다.  
   
      [!code-xaml[WPFWithWFAndDatabinding#7](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#7)]  
   

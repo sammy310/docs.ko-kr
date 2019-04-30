@@ -9,11 +9,11 @@ helpviewer_keywords:
 - pens [Windows Forms], setting alignment
 ms.assetid: a202af36-4d31-4401-a126-b232f51db581
 ms.openlocfilehash: bc2ac2587554215ef3b2c2580413fbbb894aa687
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967301"
 ---
 # <a name="how-to-set-pen-width-and-alignment"></a>방법: 펜 굵기 및 맞춤 설정
 만들 때를 <xref:System.Drawing.Pen>를 생성자에 인수 중 하나로 펜 굵기를 제공할 수 있습니다. 펜 너비를 변경할 수도 있습니다는 <xref:System.Drawing.Pen.Width%2A> 의 속성을 <xref:System.Drawing.Pen> 클래스입니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "59074978"
   
 ### <a name="to-vary-the-width-of-a-pen"></a>펜의 너비를 변경 하려면  
   
--   값을 설정 합니다 <xref:System.Drawing.Pen.Alignment%2A> 속성을 <xref:System.Drawing.Drawing2D.PenAlignment.Center> (기본값)는 녹색 펜을 사용 하 여 그린 픽셀 중심에 위치 합니다 이론적인 선의 지정 합니다. 다음 그림에서는 결과 줄을 표시 합니다.  
+- 값을 설정 합니다 <xref:System.Drawing.Pen.Alignment%2A> 속성을 <xref:System.Drawing.Drawing2D.PenAlignment.Center> (기본값)는 녹색 펜을 사용 하 여 그린 픽셀 중심에 위치 합니다 이론적인 선의 지정 합니다. 다음 그림에서는 결과 줄을 표시 합니다.  
   
      ![녹색 강조 표시를 사용 하 여 black 얇은 선입니다.](./media/how-to-set-pen-width-and-alignment/green-pixels-centered-line.gif)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "59074978"
   
 ### <a name="to-change-the-alignment-of-a-pen"></a>펜의 맞춤을 변경 하려면  
   
--   값을 설정 합니다 <xref:System.Drawing.Pen.Alignment%2A> 속성을 <xref:System.Drawing.Drawing2D.PenAlignment.Center> 녹색 펜을 사용 하 여 그린 픽셀 사각형의 경계에서 가운데 맞춤 될는 지정 합니다.  
+- 값을 설정 합니다 <xref:System.Drawing.Pen.Alignment%2A> 속성을 <xref:System.Drawing.Drawing2D.PenAlignment.Center> 녹색 펜을 사용 하 여 그린 픽셀 사각형의 경계에서 가운데 맞춤 될는 지정 합니다.  
   
      다음 그림에서는 결과 사각형을 보여 줍니다.
   
@@ -48,7 +48,7 @@ ms.locfileid: "59074978"
   
 ### <a name="to-create-an-inset-pen"></a>삽입 펜을 만들려면  
   
--   앞의 코드 예제에서 세 번째 문은 다음과 같이 수정 하 여 녹색 펜의 맞춤을 변경 합니다.  
+- 앞의 코드 예제에서 세 번째 문은 다음과 같이 수정 하 여 녹색 펜의 맞춤을 변경 합니다.  
   
      [!code-csharp[System.Drawing.UsingAPen#43](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#43)]
      [!code-vb[System.Drawing.UsingAPen#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#43)]  

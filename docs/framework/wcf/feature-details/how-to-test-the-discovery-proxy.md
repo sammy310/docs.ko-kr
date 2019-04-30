@@ -3,11 +3,11 @@ title: '방법: 검색 프록시 테스트'
 ms.date: 03/30/2017
 ms.assetid: d96e3fa2-3c42-4e5d-8244-2694081bdc32
 ms.openlocfilehash: 856b86241299585b80d58c6d37582463736a5935
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972915"
 ---
 # <a name="how-to-test-the-discovery-proxy"></a>방법: 검색 프록시 테스트
 이 항목은 검색 프록시를 구현하는 방법에 대해 설명하는 네 항목 중 네 번째 항목입니다. 이전 항목인 [방법: 검색 프록시를 사용 하 여 서비스를 검색 하는 클라이언트 응용 프로그램을 구현](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md), 검색 프록시를 사용 하 여 서비스를 찾으려면 다음 서비스를 호출 하는 WCF 클라이언트 응용 프로그램을 구현 합니다. 이 항목에서는 검색 프록시, 서비스 및 클라이언트 응용 프로그램이 올바로 작동하는지 확인하는 방법에 대해 설명합니다.  

@@ -5,11 +5,11 @@ ms.assetid: faa538c2-60c9-4064-b996-1b4c24ebd751
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7349a20da35eb0b87894440026a0974d49ae2aa0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948644"
 ---
 # <a name="icordebugprocess6getcode-method"></a>ICorDebugProcess6::GetCode 메서드
 특정 코드 주소에서 관리 코드에 대한 정보를 가져옵니다.  

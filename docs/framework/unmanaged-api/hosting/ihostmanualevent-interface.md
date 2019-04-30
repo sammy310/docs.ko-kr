@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ad580f7cab81323e09a24dc12db39f223be3aeb4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973071"
 ---
 # <a name="ihostmanualevent-interface"></a>IHostManualEvent 인터페이스
 호스트에서 구현 하는 수동 재설정 이벤트의 표시를 제공합니다.  

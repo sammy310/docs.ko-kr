@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9c2d6a66eca080b480b508afea36c33b3e0aeec0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989042"
 ---
 # <a name="icordebugevalnewobject-method"></a>ICorDebugEval::NewObject 메서드
 새 개체 인스턴스를 할당 하 고 지정된 된 생성자 메서드를 호출 합니다.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms controls, list of
 ms.assetid: 5e65a6c3-5d6f-480d-beb8-b28f865f07e3
 ms.openlocfilehash: 3a82642c985b7ec1cee885cdda7b054adbe3dfee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969470"
 ---
 # <a name="windows-forms-controls-by-function"></a>기능별 Windows Forms 컨트롤
 Windows Forms 컨트롤 및 다양 한 기능을 수행 하는 구성 요소를 제공 합니다. 다음 표에서 Windows Forms 컨트롤 및 일반 함수에 따라 구성 요소를 나열합니다. 또한 컨트롤을 여러 개 있는 동일한 기능을 제공 하는 경우 권장 되는 컨트롤을 대체 하는 컨트롤에 대 한 메모와 함께 나열 됩니다. 별도 후속 테이블의 대체 컨트롤과 해당 권장 되는 대체를 사용 하 여 나열 됩니다.  

@@ -3,11 +3,11 @@ title: System.ServiceModel.Channels.PeerNeighborMessageReceived
 ms.date: 03/30/2017
 ms.assetid: c787b86c-08c9-4d44-80ce-a6d189deb732
 ms.openlocfilehash: b3ebeba18db149858e49715406d2bfe133dd959a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61950321"
 ---
 # <a name="systemservicemodelchannelspeerneighbormessagereceived"></a>System.ServiceModel.Channels.PeerNeighborMessageReceived
 피어 환경에서 메시지를 받았습니다.  

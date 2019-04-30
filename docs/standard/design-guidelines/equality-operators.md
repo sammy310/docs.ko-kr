@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: bc496a91-fefb-4ce0-ab4c-61f09964119a
 author: KrzysztofCwalina
 ms.openlocfilehash: ef1a0aff1ac59434d9d9a6f0371bf236f637050e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61960338"
 ---
 # <a name="equality-operators"></a>같음 연산자
 이 섹션에서는 같음 연산자를 오버 로드에 대해 설명 하 고 가리킵니다 `operator==` 고 `operator!=` 같음 연산자입니다.  

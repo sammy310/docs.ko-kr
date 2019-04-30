@@ -13,11 +13,11 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 ms.assetid: 2a5a41a3-1aa8-4236-b1f0-2382af7bf715
 ms.openlocfilehash: 4a3ef3a8254153fa8695ffacd9829ca9316d77a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61959980"
 ---
 # <a name="object-variable-declaration-visual-basic"></a>개체 변수 선언(Visual Basic)
 개체 변수를 선언 하는 일반적인 선언문을 사용 합니다. 지정 데이터 형식에 대 한 `Object` (즉, 합니다 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)) 또는 보다 구체적인 클래스는 개체를 만들려는 합니다.  
@@ -49,19 +49,19 @@ Dim objC As System.OperatingSystem
 ### <a name="advantages-of-early-binding"></a>초기 바인딩의 장점  
  특정 클래스로 개체 변수를 선언 하면 여러 이점이 있습니다.  
   
--   자동 형식 검사  
+- 자동 형식 검사  
   
--   특정 클래스의 모든 멤버에 대 한 액세스 보장  
+- 특정 클래스의 모든 멤버에 대 한 액세스 보장  
   
--   코드 편집기에서 Microsoft IntelliSense 지원  
+- 코드 편집기에서 Microsoft IntelliSense 지원  
   
--   코드의 가독성 향상된  
+- 코드의 가독성 향상된  
   
--   코드에서 오류를 줄일 수  
+- 코드에서 오류를 줄일 수  
   
--   에 전달 된 오류 컴파일 시간 대신 런타임에  
+- 에 전달 된 오류 컴파일 시간 대신 런타임에  
   
--   빠른 코드 실행  
+- 빠른 코드 실행  
   
 ## <a name="access-to-object-variable-members"></a>개체 변수 멤버에 대 한 액세스  
  때 `Option Strict` 꺼져 `On`, 메서드 및 속성 선언 된 클래스의 개체 변수에 액세스할 수 있습니다. 다음은 이에 대한 예입니다.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - date and time picker controls
 ms.assetid: 1dac1fbd-8f67-4910-9ccb-2c5462d0d855
 ms.openlocfilehash: 236017834f3a965ee0ddfc1a74121679f086050b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971342"
 ---
 # <a name="datetimepicker-control-windows-forms"></a>DateTimePicker 컨트롤(Windows Forms)
 Windows Forms `DateTimePicker` 컨트롤 날짜 또는 시간 목록에서 단일 항목을 선택할 수 있습니다. 날짜를 나타내는 데, 두 부분으로 표시: 텍스트와 목록 옆의 아래쪽 화살표를 클릭할 때 표시 되는 모눈에 표시 된 날짜를 사용 하 여 드롭다운 목록입니다.  

@@ -3,11 +3,11 @@ title: 유연한 형식
 description: 사용 하는 방법을 알아봅니다 F# 유연한 형식 주석은 매개 변수, 변수 또는 값에 지정 된 형식과 호환 되는 형식을 나타냅니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: 32857cc317bc6b4b7baf53b623b551e8e0733e41
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981385"
 ---
 # <a name="flexible-types"></a>유연한 형식
 
@@ -67,7 +67,7 @@ seq [1; 2; 3; 4; ...]
 
 F#, 다른 개체 지향 언어와 마찬가지로 가지 컨텍스트를 파생 형식 또는 인터페이스를 구현 하는 형식을 기본 형식 또는 인터페이스 형식으로 자동 변환 됩니다. 이러한 자동 변환 형식은 형식 인수 또는 함수 형식 반환 형식과 같은 보다 복잡 한 형식의 일부로 종속 된 위치에 때가 아니라 하지만 직접 인수를 수행 합니다. 따라서 되도록 적용 하는 형식이 더 복잡 한 형식의 일부가 유연한 형식 표기법은 주로 유용 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [F# 언어 참조](index.md)
 - [제네릭](generics/index.md)

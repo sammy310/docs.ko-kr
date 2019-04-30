@@ -13,11 +13,11 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 477a7398-5971-4de3-b24c-f49f32bdb28a
 ms.openlocfilehash: 1be9ff06e749d14b46946e899c6ffb6c3a950d65
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972171"
 ---
 # <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>방법: Windows Forms LinkLabel 컨트롤에서 웹 페이지 표시(Visual Basic)
 이 예제에서는 기본 브라우저에서 웹 페이지는 Windows Forms를 클릭할 때 표시 <xref:System.Windows.Forms.LinkLabel> 제어 합니다.  
@@ -40,11 +40,11 @@ End Sub
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   라는 Windows 폼을 `Form1`입니다.  
+- 라는 Windows 폼을 `Form1`입니다.  
   
--   `LinkLabel1`이라는 <xref:System.Windows.Forms.LinkLabel> 컨트롤  
+- `LinkLabel1`이라는 <xref:System.Windows.Forms.LinkLabel> 컨트롤  
   
--   현재 인터넷에 연결 합니다.  
+- 현재 인터넷에 연결 합니다.  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
  에 대 한 호출을 <xref:System.Diagnostics.Process.Start%2A> 메서드 완전 신뢰가 필요 합니다. 자세한 내용은 <xref:System.Security.SecurityException>을 참조하세요.  

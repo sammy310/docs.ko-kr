@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 2424c137-c7c2-4aa9-8d5d-a066e12fefda
 ms.openlocfilehash: 56e8720a6130d2908fbfb83bd243a54fae9a2406
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972928"
 ---
 # <a name="how-to-set-up-a-signature-confirmation"></a>방법: 서명 확인 설정
 *서명 확인* 받은 회신이 발신자의 원본 메시지에 대 한 응답에서 생성 된는 되도록 메시지 개시자에 대 한 메커니즘입니다. 서명 확인은 WS-Security 1.1 사양에서 정의됩니다. 엔드포인트가 WS-Security 1.0을 지원할 경우, 서명 확인을 사용할 수 없습니다.  

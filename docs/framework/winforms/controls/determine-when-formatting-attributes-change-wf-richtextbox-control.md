@@ -12,11 +12,11 @@ helpviewer_keywords:
 - SelChange event
 ms.assetid: bdfed015-f77a-41e5-b38f-f8629b2fa166
 ms.openlocfilehash: a90affde9de36f1c83d5b7c21b40580cdf53402e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972291"
 ---
 # <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>방법: Windows Forms RichTextBox 컨트롤에서 서식 특성의 변경 시기 확인
 Windows Forms의 일반적인 용도 <xref:System.Windows.Forms.RichTextBox> 글꼴 옵션 등 단락 스타일 특성을 사용 하 여 텍스트 서식을 제어 하는 합니다. 응용 프로그램 대부분의 워드프로세싱 응용 프로그램과 마찬가지로 도구 모음을 표시 하기 위해 서식 지정 하는 텍스트의 모든 변경 내용을 추적할 수 해야 합니다.  

@@ -3,11 +3,11 @@ title: 메시지 로깅에 대한 보안 고려 사항
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
 ms.openlocfilehash: 372449c816f32ee30b89bf4ba2e46f82c56b3228
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61998155"
 ---
 # <a name="security-concerns-for-message-logging"></a>메시지 로깅에 대한 보안 고려 사항
 이 항목에서는 메시지 로깅에 의해 생성된 이벤트뿐 아니라 중요한 데이터가 메시지 로그에서 노출되지 않도록 보호하는 방법에 대해 설명합니다.  
@@ -21,11 +21,11 @@ ms.locfileid: "59170666"
   
  다음 팁은 로그 파일의 내용이 실수로 노출되지 않도록 보호하는 데 도움이 될 수 있습니다.  
   
--   로그 파일이 웹 호스트 및 자체 호스트 시나리오 둘 다에서 ACL(액세스 제어 목록)을 통해 보호되는지 확인합니다.  
+- 로그 파일이 웹 호스트 및 자체 호스트 시나리오 둘 다에서 ACL(액세스 제어 목록)을 통해 보호되는지 확인합니다.  
   
--   웹 요청을 사용하여 쉽게 제공될 수 없는 파일 확장명을 선택합니다. 예를 들어 .xml 파일 확장명을 사용하는 것은 안전하지 않습니다. 제공될 수 있는 확장명 목록을 보기 위해 IIS(인터넷 정보 서비스) 관리 설명서를 확인할 수 있습니다.  
+- 웹 요청을 사용하여 쉽게 제공될 수 없는 파일 확장명을 선택합니다. 예를 들어 .xml 파일 확장명을 사용하는 것은 안전하지 않습니다. 제공될 수 있는 확장명 목록을 보기 위해 IIS(인터넷 정보 서비스) 관리 설명서를 확인할 수 있습니다.  
   
--   로그 파일 위치의 절대 경로를 지정합니다. 절대 경로는 웹 브라우저를 사용하여 외부 사용자가 해당 파일에 액세스하지 못하도록 웹 호스트 vroot 공용 디렉터리의 외부에 있어야 합니다.  
+- 로그 파일 위치의 절대 경로를 지정합니다. 절대 경로는 웹 브라우저를 사용하여 외부 사용자가 해당 파일에 액세스하지 못하도록 웹 호스트 vroot 공용 디렉터리의 외부에 있어야 합니다.  
   
  기본적으로 사용자 이름 및 암호와 같은 PII(개인적으로 식별할 수 있는 정보)와 키는 추적 및 기록된 메시지에 기록되지 않습니다. 그러나 컴퓨터 관리자는 Machine.config 파일의 `enableLoggingKnownPII` 요소에 있는 `machineSettings` 특성을 사용하여 컴퓨터에서 실행되는 응용 프로그램이 알려진 PII(개인적으로 식별할 수 있는 정보)를 기록하도록 허용할 수 있습니다. 다음 구성 파일에서 이 작업을 수행하는 방법을 보여 줍니다.  
   
@@ -99,13 +99,13 @@ ms.locfileid: "59170666"
 ## <a name="events-triggered-by-message-logging"></a>메시지 로깅을 통해 트리거되는 이벤트  
  다음은 메시지 로깅을 통해 내보내지는 모든 이벤트의 목록입니다.  
   
--   로그온 메시지: 이 이벤트는 구성 또는 WMI를 통해 메시지 로깅을 사용 하도록 설정 하면 내보내집니다. 이벤트의 내용은 "메시지 로깅이 켜졌습니다. 메시지 본문과 같이 통신 중에 암호화된 경우에도 중요한 정보가 일반 텍스트로 기록됩니다."입니다.  
+- 로그온 메시지: 이 이벤트는 구성 또는 WMI를 통해 메시지 로깅을 사용 하도록 설정 하면 내보내집니다. 이벤트의 내용은 "메시지 로깅이 켜졌습니다. 메시지 본문과 같이 통신 중에 암호화된 경우에도 중요한 정보가 일반 텍스트로 기록됩니다."입니다.  
   
--   메시지를 로그 오프: 이 이벤트는 WMI를 통해 메시지 로깅을 비활성화 되 면 내보내집니다. 이벤트의 내용은 "메시지 로깅이 꺼졌습니다."입니다.  
+- 메시지를 로그 오프: 이 이벤트는 WMI를 통해 메시지 로깅을 비활성화 되 면 내보내집니다. 이벤트의 내용은 "메시지 로깅이 꺼졌습니다."입니다.  
   
--   알려진된 PII를 로그온 합니다. 이 이벤트는 알려진된 PII의 로깅이 사용 되 면 내보내집니다. 이런 경우는 `enableLoggingKnownPii` 특성을 `machineSettings` 합니다 Machine.config 파일의 요소를로 `true`, 및 `logKnownPii` 특성을 `source` App.config또는Web.config파일의요소를로`true`.  
+- 알려진된 PII를 로그온 합니다. 이 이벤트는 알려진된 PII의 로깅이 사용 되 면 내보내집니다. 이런 경우는 `enableLoggingKnownPii` 특성을 `machineSettings` 합니다 Machine.config 파일의 요소를로 `true`, 및 `logKnownPii` 특성을 `source` App.config또는Web.config파일의요소를로`true`.  
   
--   알려진된 PII 없습니다 로그: 이 이벤트는 알려진된 PII의 로깅이 허용 되지 않습니다 때 내보내집니다. 이런 경우를 `logKnownPii` 특성을 `source` App.config 또는 Web.config 파일의 요소를로 `true`, 하지만 `enableLoggingKnownPii` 특성를 `machineSettings` 합니다Machine.config파일의요소를로`false`. 예외가 throw되지 않습니다.  
+- 알려진된 PII 없습니다 로그: 이 이벤트는 알려진된 PII의 로깅이 허용 되지 않습니다 때 내보내집니다. 이런 경우를 `logKnownPii` 특성을 `source` App.config 또는 Web.config 파일의 요소를로 `true`, 하지만 `enableLoggingKnownPii` 특성를 `machineSettings` 합니다Machine.config파일의요소를로`false`. 예외가 throw되지 않습니다.  
   
  이러한 이벤트는 Windows에 포함된 이벤트 뷰어 도구에서 볼 수 있습니다. 이 대 한 자세한 내용은 참조 하세요. [이벤트 로깅](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)합니다.  
   

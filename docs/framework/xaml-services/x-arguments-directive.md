@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Arguments directive
 ms.assetid: 87cc10b0-b610-4025-b6b0-ab27ca27c92e
 ms.openlocfilehash: a87542513ffeeec7efc526d4218f921d1b7579a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61953961"
 ---
 # <a name="xarguments-directive"></a>x:Arguments 지시문
 패키지의 기본이 아닌 생성자 개체 요소 선언에서 XAML, 또는 팩터리 메서드 개체 선언에 대 한 생성 인수입니다.  

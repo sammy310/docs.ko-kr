@@ -3,11 +3,11 @@ title: 작업 포맷터와 작업 선택기
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
 ms.openlocfilehash: 45b489aeb88f57fe442cef9ffed1a2ee079b75e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989692"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>작업 포맷터와 작업 선택기
 이 샘플에서는 WCF에 필요한 것에서 다른 형식으로 메시지 데이터를 허용 하도록 Windows Communication Foundation (WCF) 확장성 요소를 사용할 수 있는 방법을 보여 줍니다. 기본적으로 WCF 포맷터는 메서드 매개 변수 아래에 포함 되도록 예상 합니다 `soap:body` 요소입니다. 이 샘플에서는 대신 HTTP GET 쿼리 문자열의 매개 변수 데이터를 구문 분석하고 이 데이터를 사용하여 메서드를 호출하는 사용자 지정 작업 포맷터를 구현하는 방법을 보여 줍니다.  
@@ -16,15 +16,15 @@ ms.locfileid: "59318925"
   
  이를 위해 이 샘플에서는 다음을 제공합니다.  
   
--   `QueryStringFormatter`(클라이언트와 서버에 대해 각각 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> 및 <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>를 구현하고 쿼리 문자열의 데이터를 처리합니다.)  
+- `QueryStringFormatter`(클라이언트와 서버에 대해 각각 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> 및 <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>를 구현하고 쿼리 문자열의 데이터를 처리합니다.)  
   
--   `UriOperationSelector`(서버에서 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>를 구현하여 GET 요청의 작업 이름을 기반으로 작업 디스패치를 수행합니다.)  
+- `UriOperationSelector`(서버에서 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>를 구현하여 GET 요청의 작업 이름을 기반으로 작업 디스패치를 수행합니다.)  
   
--   `EnableHttpGetRequestsBehavior` 엔드포인트 동작과 해당 구성(런타임에 필요한 작업 선택기를 추가합니다.)  
+- `EnableHttpGetRequestsBehavior` 엔드포인트 동작과 해당 구성(런타임에 필요한 작업 선택기를 추가합니다.)  
   
--   런타임에 새 작업 포맷터를 삽입하는 방법을 보여 줍니다.  
+- 런타임에 새 작업 포맷터를 삽입하는 방법을 보여 줍니다.  
   
--   이 샘플에서 클라이언트와 서비스는 모두 콘솔 응용 프로그램(.exe)입니다.  
+- 이 샘플에서 클라이언트와 서비스는 모두 콘솔 응용 프로그램(.exe)입니다.  
   
 > [!NOTE]
 >  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
@@ -36,15 +36,15 @@ ms.locfileid: "59318925"
   
  요청:  
   
--   이 샘플에서는 <xref:System.ComponentModel.TypeConverter> 클래스를 사용하여 요청 메시지의 매개 변수 데이터를 문자열로 변환하고 문자열을 매개 변수 데이터로 변환합니다. 특정 형식에 대해 <xref:System.ComponentModel.TypeConverter>를 사용할 수 없는 경우 샘플 포맷터는 예외를 throw합니다.  
+- 이 샘플에서는 <xref:System.ComponentModel.TypeConverter> 클래스를 사용하여 요청 메시지의 매개 변수 데이터를 문자열로 변환하고 문자열을 매개 변수 데이터로 변환합니다. 특정 형식에 대해 <xref:System.ComponentModel.TypeConverter>를 사용할 수 없는 경우 샘플 포맷터는 예외를 throw합니다.  
   
--   클라이언트의 `IClientMessageFormatter.SerializeRequest` 메서드에서 포맷터는 적절한 받는 사람 주소가 포함된 URI를 만들고 작업 이름을 접미사로 추가합니다. 이 이름은 서버의 적절한 작업으로 디스패치하는 데 사용됩니다. 그런 다음 포맷터는 매개 변수 개체의 배열을 가져와서 매개 변수 이름 및 <xref:System.ComponentModel.TypeConverter> 클래스를 통해 변환된 값을 사용하여 매개 변수 데이터를 URI 쿼리 문자열로 serialize합니다. 그런 다음 <xref:System.ServiceModel.Channels.MessageHeaders.To%2A> 및 <xref:System.ServiceModel.Channels.MessageProperties.Via%2A> 속성이 이 URI로 설정됩니다. <xref:System.ServiceModel.Channels.MessageProperties>는 <xref:System.ServiceModel.Channels.Message.Properties%2A> 속성을 통해 액세스됩니다.  
+- 클라이언트의 `IClientMessageFormatter.SerializeRequest` 메서드에서 포맷터는 적절한 받는 사람 주소가 포함된 URI를 만들고 작업 이름을 접미사로 추가합니다. 이 이름은 서버의 적절한 작업으로 디스패치하는 데 사용됩니다. 그런 다음 포맷터는 매개 변수 개체의 배열을 가져와서 매개 변수 이름 및 <xref:System.ComponentModel.TypeConverter> 클래스를 통해 변환된 값을 사용하여 매개 변수 데이터를 URI 쿼리 문자열로 serialize합니다. 그런 다음 <xref:System.ServiceModel.Channels.MessageHeaders.To%2A> 및 <xref:System.ServiceModel.Channels.MessageProperties.Via%2A> 속성이 이 URI로 설정됩니다. <xref:System.ServiceModel.Channels.MessageProperties>는 <xref:System.ServiceModel.Channels.Message.Properties%2A> 속성을 통해 액세스됩니다.  
   
--   서버의 `IDispatchMessageFormatter.DeserializeRequest` 메서드에서 포맷터는 들어오는 요청 메시지 속성에서 `Via` URI를 검색합니다. 포맷터는 URI 쿼리 문자열의 이름-값 쌍을 매개 변수 이름과 값으로 구문 분석하고 매개 변수 이름과 값을 사용하여 메서드로 전달되는 매개 변수의 배열을 채웁니다. 작업 디스패치가 이미 발생했으므로 이 메서드에서는 작업 이름 접미사가 무시됩니다.  
+- 서버의 `IDispatchMessageFormatter.DeserializeRequest` 메서드에서 포맷터는 들어오는 요청 메시지 속성에서 `Via` URI를 검색합니다. 포맷터는 URI 쿼리 문자열의 이름-값 쌍을 매개 변수 이름과 값으로 구문 분석하고 매개 변수 이름과 값을 사용하여 메서드로 전달되는 매개 변수의 배열을 채웁니다. 작업 디스패치가 이미 발생했으므로 이 메서드에서는 작업 이름 접미사가 무시됩니다.  
   
  응답:  
   
--   이 샘플에서 HTTP GET는 요청에만 사용됩니다. 포맷터는 XML 메시지를 생성하는 데 사용된 원래 포맷터에 응답 보내기 작업을 위임합니다. 이 샘플의 목적 중 하나는 이러한 위임 포맷터를 구현하는 방법을 보여 주는 데 있습니다.  
+- 이 샘플에서 HTTP GET는 요청에만 사용됩니다. 포맷터는 XML 메시지를 생성하는 데 사용된 원래 포맷터에 응답 보내기 작업을 위임합니다. 이 샘플의 목적 중 하나는 이러한 위임 포맷터를 구현하는 방법을 보여 주는 데 있습니다.  
   
 ### <a name="uripathsuffixoperationselector-class"></a>UriPathSuffixOperationSelector 클래스  
  사용자는 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 인터페이스를 사용하여 특정 메시지를 디스패치할 작업에 대한 고유 논리를 구현할 수 있습니다.  
@@ -94,16 +94,16 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
   
  서버측:  
   
--   <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> 인터페이스는 HTTP GET 요청을 읽고 응답 쓰기의 원래 포맷터에 위임할 수 있도록 구현되어야 합니다. 이 작업은 클라이언트와 같은 `EnableHttpGetRequestsBehavior.ReplaceFormatterBehavior` 도우미 메서드(이전의 코드 샘플 참조)를 호출하여 수행됩니다.  
+- <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> 인터페이스는 HTTP GET 요청을 읽고 응답 쓰기의 원래 포맷터에 위임할 수 있도록 구현되어야 합니다. 이 작업은 클라이언트와 같은 `EnableHttpGetRequestsBehavior.ReplaceFormatterBehavior` 도우미 메서드(이전의 코드 샘플 참조)를 호출하여 수행됩니다.  
   
--   이 작업은 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>을 호출하기 전에 수행되어야 합니다. 이 샘플에서는 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>을 호출하기 전에 포맷터를 수동으로 수정하는 방법을 보여 줍니다. 같은 결과를 얻을 수 있는 다른 방법은 열기 전에 <xref:System.ServiceModel.ServiceHost>를 호출하는 `EnableHttpGetRequestsBehavior.ReplaceFormatterBehavior`에서 클래스를 파생하는 것입니다. 자세한 예는 호스팅 설명서와 샘플을 참조하십시오.  
+- 이 작업은 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>을 호출하기 전에 수행되어야 합니다. 이 샘플에서는 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>을 호출하기 전에 포맷터를 수동으로 수정하는 방법을 보여 줍니다. 같은 결과를 얻을 수 있는 다른 방법은 열기 전에 <xref:System.ServiceModel.ServiceHost>를 호출하는 `EnableHttpGetRequestsBehavior.ReplaceFormatterBehavior`에서 클래스를 파생하는 것입니다. 자세한 예는 호스팅 설명서와 샘플을 참조하십시오.  
   
 ### <a name="user-experience"></a>사용자 환경  
  서버측:  
   
--   서버 `ICalculator` 구현은 변경할 필요가 없습니다.  
+- 서버 `ICalculator` 구현은 변경할 필요가 없습니다.  
   
--   서비스의 App.config에서는 `messageVersion` 요소의 `textMessageEncoding` 특성을 `None`으로 설정하는 사용자 지정 POX 바인딩을 사용해야 합니다.  
+- 서비스의 App.config에서는 `messageVersion` 요소의 `textMessageEncoding` 특성을 `None`으로 설정하는 사용자 지정 POX 바인딩을 사용해야 합니다.  
   
     ```xml  
     <bindings>  
@@ -116,7 +116,7 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
     </bindings>  
     ```  
   
--   서비스의 App.config에서는 또한 사용자 지정 `EnableHttpGetRequestsBehavior`를 동작 확장명 섹션에 추가한 다음 사용하여 이를 지정해야 합니다.  
+- 서비스의 App.config에서는 또한 사용자 지정 `EnableHttpGetRequestsBehavior`를 동작 확장명 섹션에 추가한 다음 사용하여 이를 지정해야 합니다.  
   
     ```xml  
     <behaviors>  
@@ -136,13 +136,13 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
     </extensions>  
     ```  
   
--   <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>을 호출하기 전에 작업 포맷터를 추가합니다.  
+- <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>을 호출하기 전에 작업 포맷터를 추가합니다.  
   
  클라이언트에서:  
   
--   클라이언트 구현은 변경할 필요가 없습니다.  
+- 클라이언트 구현은 변경할 필요가 없습니다.  
   
--   클라이언트의 App.config에서는 `messageVersion` 요소의 `textMessageEncoding` 특성을 `None`으로 설정하는 사용자 지정 POX 바인딩을 사용해야 합니다. 서비스와 다른 한 가지 차이점은 클라이언트는 나가는 받는 사람 주소를 수정할 수 있도록 수동 주소 지정을 사용하도록 설정해야 한다는 점에 있습니다.  
+- 클라이언트의 App.config에서는 `messageVersion` 요소의 `textMessageEncoding` 특성을 `None`으로 설정하는 사용자 지정 POX 바인딩을 사용해야 합니다. 서비스와 다른 한 가지 차이점은 클라이언트는 나가는 받는 사람 주소를 수정할 수 있도록 수동 주소 지정을 사용하도록 설정해야 한다는 점에 있습니다.  
   
     ```xml  
     <bindings>  
@@ -155,9 +155,9 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
     </bindings>  
     ```  
   
--   클라이언트의 App.config에서는 서버와 같은 사용자 지정 `EnableHttpGetRequestsBehavior`를 지정해야 합니다.  
+- 클라이언트의 App.config에서는 서버와 같은 사용자 지정 `EnableHttpGetRequestsBehavior`를 지정해야 합니다.  
   
--   <xref:System.ServiceModel.ChannelFactory%601.CreateChannel>을 호출하기 전에 작업 포맷터를 추가합니다.  
+- <xref:System.ServiceModel.ChannelFactory%601.CreateChannel>을 호출하기 전에 작업 포맷터를 추가합니다.  
   
  샘플을 실행하면 작업 요청 및 응답이 클라이언트 콘솔 창에 표시됩니다. 네 가지 작업(Add, Subtract, Multiply 및 Divide)이 모두 성공해야 합니다.  
   

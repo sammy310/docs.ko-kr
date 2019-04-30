@@ -3,11 +3,11 @@ title: null 허용 연산자
 description: 사용할 수 있는 null 허용 연산자에 알아봅니다는 F# 프로그래밍 언어입니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: b17c0de2d81a1ef88b31d833a49ff9e3f9d34e8d
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61960461"
 ---
 # <a name="nullable-operators"></a>null 허용 연산자
 
@@ -83,7 +83,7 @@ query {
 } |> Seq.iter (fun row -> printfn "%d %s" (row.TestData1.GetValueOrDefault()) row.Name)
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [형식 공급자](../../tutorials/type-providers/index.md)
 - [쿼리 식](../query-expressions.md)

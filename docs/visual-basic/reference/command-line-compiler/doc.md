@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
 ms.openlocfilehash: 13005eb55b430f6ff9b3a6408582a02e53838742
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969210"
 ---
 # <a name="-doc"></a>-doc
 XML 파일에 대해 문서 주석을 처리합니다.  
@@ -36,9 +36,9 @@ XML 파일에 대해 문서 주석을 처리합니다.
   
  소스 코드 파일에서 문서 주석은 다음 정의보다 앞에 올 수 있습니다.  
   
--   [class](../../../visual-basic/language-reference/statements/class-statement.md) 또는 [interface](../../../visual-basic/language-reference/statements/interface-statement.md) 같은 사용자 정의 형식  
+- [class](../../../visual-basic/language-reference/statements/class-statement.md) 또는 [interface](../../../visual-basic/language-reference/statements/interface-statement.md) 같은 사용자 정의 형식  
   
--   field, [event](../../../visual-basic/language-reference/statements/event-statement.md), [property](../../../visual-basic/language-reference/statements/property-statement.md), [function](../../../visual-basic/language-reference/statements/function-statement.md) 또는 [subroutine](../../../visual-basic/language-reference/statements/sub-statement.md) 같은 멤버  
+- field, [event](../../../visual-basic/language-reference/statements/event-statement.md), [property](../../../visual-basic/language-reference/statements/property-statement.md), [function](../../../visual-basic/language-reference/statements/function-statement.md) 또는 [subroutine](../../../visual-basic/language-reference/statements/sub-statement.md) 같은 멤버  
   
  Visual Studio [IntelliSense](/visualstudio/ide/using-intellisense) 기능에서 생성된 XML 파일을 사용하려면 XML 파일의 파일 이름을 지원하려는 어셈블리와 동일하게 지정할 수 있습니다. 어셈블리가 Visual Studio 프로젝트에서 참조되면 .xml 파일도 검색되도록 XML 파일이 어셈블리와 동일한 디렉터리에 있는지 확인합니다. IntelliSense에서 프로젝트 내의 코드나 프로젝트에서 참조하는 프로젝트 내의 코드를 작업하는 데는 XML 문서 파일이 필요하지 않습니다.  
   

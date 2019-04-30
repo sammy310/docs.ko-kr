@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 480fc27bd41f7ca559ceee379b7f6f81c94da0ba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989198"
 ---
 # <a name="icordebugdatatarget-interface"></a>ICorDebugDataTarget 인터페이스
 특정 대상 프로세스에 대한 액세스를 제공하는 콜백 인터페이스를 제공합니다.  
@@ -37,13 +37,13 @@ ms.locfileid: "59188710"
 ## <a name="remarks"></a>설명  
  `ICorDebugDataTarget` 및 해당 메서드는 다음과 같은 특징이 있습니다.  
   
--   디버깅 서비스는 메모리 및 대상 프로세스에서 다른 데이터에 액세스 하는이 인터페이스의 메서드를 호출 합니다.  
+- 디버깅 서비스는 메모리 및 대상 프로세스에서 다른 데이터에 액세스 하는이 인터페이스의 메서드를 호출 합니다.  
   
--   디버거 클라이언트는 특정 대상 (예를 들어 활성 프로세스 또는 덤프 메모리)에 대해 적절 하 게이 인터페이스를 구현 해야 합니다.  
+- 디버거 클라이언트는 특정 대상 (예를 들어 활성 프로세스 또는 덤프 메모리)에 대해 적절 하 게이 인터페이스를 구현 해야 합니다.  
   
--   합니다 `ICorDebugDataTarget` 메서드를 다른 구현 된 메서드 내 에서만 호출할 수 있습니다 `ICorDebug*` 인터페이스입니다. 이렇게 하면 디버거 클라이언트에는 스레드를 통해 호출 시기를 제어 합니다.  
+- 합니다 `ICorDebugDataTarget` 메서드를 다른 구현 된 메서드 내 에서만 호출할 수 있습니다 `ICorDebug*` 인터페이스입니다. 이렇게 하면 디버거 클라이언트에는 스레드를 통해 호출 시기를 제어 합니다.  
   
--   `ICorDebugDataTarget` 구현 항상 대상에 대 한 최신 정보를 반환 해야 합니다.  
+- `ICorDebugDataTarget` 구현 항상 대상에 대 한 최신 정보를 반환 해야 합니다.  
   
  대상 프로세스를 중지 하는 동안 어떤 방식으로든에서 변경 되지 `ICorDebug*` 인터페이스 (및 따라서 `ICorDebugDataTarget` 메서드) 호출 합니다. 활성 프로세스 및 해당 상태의 변경 내용을 대상 경우 합니다 [iclrdebugging:: Openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) 대체 ICorDebugProcess 인스턴스를 제공 하기 위해 다시 호출 될 메서드가 있습니다.  
   

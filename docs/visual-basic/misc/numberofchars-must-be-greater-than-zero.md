@@ -5,18 +5,18 @@ f1_keywords:
 - vbrTextFieldParser_NumberOfCharsMustBePositive
 ms.assetid: 3eea4bbf-cd49-4d19-adfb-0e2adf087065
 ms.openlocfilehash: 0b2dc0b7b308877d7029c9a32047296cace9a456
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944913"
 ---
 # <a name="numberofchars-must-be-greater-than-zero"></a>NumberOfChars는 0보다 커야 합니다.
 `PeekChars` 개체의 `TextFieldParser` 메서드를 사용하는 경우 `NumberOfChars` 보다 큰 `0`값을 제공해야 합니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   `NumberOfChars` 를 `0`보다 큰 값으로 변경합니다.  
+- `NumberOfChars` 를 `0`보다 큰 값으로 변경합니다.  
   
 ## <a name="see-also"></a>참고자료
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30043
 ms.assetid: 7973aa82-a681-440c-9bca-242627d7ba86
 ms.openlocfilehash: 5ff82b932f9bea4c7fd087651e34277ef94bc27c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946642"
 ---
 # <a name="keyword-is-valid-only-within-an-instance-method"></a>'\<키워드 >'는 인스턴스 메서드 내 에서만 유효
 합니다 `Me`, `MyClass`, 및 `MyBase` 키워드 특정 클래스 인스턴스를 참조 하세요. 공유 내에서 사용할 수 없습니다 `Function` 또는 `Sub` 프로시저입니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "58820721"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   프로시저에서 키워드를 제거 하거나 제거 합니다 `Shared` 프로시저 선언에서 키워드입니다.  
+- 프로시저에서 키워드를 제거 하거나 제거 합니다 `Shared` 프로시저 선언에서 키워드입니다.  
   
 ## <a name="see-also"></a>참고자료
 

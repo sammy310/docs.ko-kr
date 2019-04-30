@@ -5,13 +5,13 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 60d225d9794d5c15b0cd8e42800ccad4d7872756
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967821"
 ---
-# <a name="serverless-architecture"></a>서버 리스 아키텍처
+# <a name="serverless-architecture"></a>서버리스 아키텍처
 
 사용 하는 방법은 여러 가지가 있습니다 [서버 리스](http://azure.com/serverless) 아키텍처입니다. 이 장에서 서버 리스를 통합 하는 일반적인 아키텍처의 예제를 살펴봅니다. 또한 추가 문제가 발생할 수도 있고 서버 리스를 구현 하는 경우 추가로 고려해 야 할 문제에 대해서도 다룹니다. 마지막으로, 몇 가지 디자인 예제에는 다양 한 서버 리스 사용 사례를 보여 주는 제공 됩니다.
 

@@ -3,11 +3,11 @@ title: 캐스팅 및 변환
 description: 에 대해 알아봅니다 하는 방법을 F# 프로그래밍 언어 다양 한 기본 형식 간의 산술 변환에 대 한 변환 연산자를 제공 합니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: 2a12d48106a267edfc67c9e7b3d3a7bd41d8261c
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966623"
 ---
 # <a name="casting-and-conversions-f"></a>캐스팅 및 변환(F#)
 
@@ -116,6 +116,6 @@ let base1 = upcast d1
 
 형식 테스트에 대 한 자세한 내용은 참조 하세요. [일치 식](match-Expressions.md)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [F# 언어 참조](index.md)

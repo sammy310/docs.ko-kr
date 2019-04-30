@@ -7,11 +7,11 @@ helpviewer_keywords:
 - conversions [Visual Basic], relaxed delegate
 ms.assetid: 64f371d0-5416-4f65-b23b-adcbf556e81c
 ms.openlocfilehash: 57e863d9781721a997ae49e1a5c9d8f3562a1bd0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973287"
 ---
 # <a name="relaxed-delegate-conversion-visual-basic"></a>완화된 대리자 변환(Visual Basic)
 완화 된 대리자 변환을 사용 하면 해당 시그니처가 동일 하지 않은 경우에 대리자 또는 처리기에 sub 및 함수를 할당할 수 있습니다. 따라서 대리자를 바인딩할 메서드 호출을 이미 허용 바인딩을 사용 하 여 일치 됩니다.  
@@ -19,7 +19,7 @@ ms.locfileid: "58842722"
 ## <a name="parameters-and-return-type"></a>매개 변수 및 반환 형식  
  낮은 수준의 변환을 서명이 완전히 일치 하는 대신 다음 조건이 충족 되어야 필요한 경우 `Option Strict` 로 설정 된 `On`:  
   
--   할당 된 함수의 해당 매개 변수의 데이터 형식으로 각 대리자 매개 변수의 데이터 형식에서 확대 변환이 있어야 하거나 `Sub`합니다. 다음 예제에서는 대리자 `Del1` 하나의 매개 변수가 `Integer`합니다. 매개 변수 `m` 할당 된 람다 식에서 확대 변환이 없는 데이터 형식이 있어야 `Integer`와 같은 `Long` 또는 `Double`합니다.  
+- 할당 된 함수의 해당 매개 변수의 데이터 형식으로 각 대리자 매개 변수의 데이터 형식에서 확대 변환이 있어야 하거나 `Sub`합니다. 다음 예제에서는 대리자 `Del1` 하나의 매개 변수가 `Integer`합니다. 매개 변수 `m` 할당 된 람다 식에서 확대 변환이 없는 데이터 형식이 있어야 `Integer`와 같은 `Long` 또는 `Double`합니다.  
   
      [!code-vb[VbVbalrRelaxedDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#1)]  
   
@@ -29,7 +29,7 @@ ms.locfileid: "58842722"
   
      [!code-vb[VbVbalrRelaxedDelegates#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#8)]  
   
--   할당 된 함수의 반환 형식에서 반대 방향으로의 확대 변환이 있어야 합니다. 또는 `Sub` 대리자의 반환 형식입니다. 다음 예제에서 각 할당 된 람다 식의 본문으로 확대 되는 데이터 형식으로 계산 되어야 `Integer` 의 반환 형식인 `del1` 는 `Integer`합니다.  
+- 할당 된 함수의 반환 형식에서 반대 방향으로의 확대 변환이 있어야 합니다. 또는 `Sub` 대리자의 반환 형식입니다. 다음 예제에서 각 할당 된 람다 식의 본문으로 확대 되는 데이터 형식으로 계산 되어야 `Integer` 의 반환 형식인 `del1` 는 `Integer`합니다.  
   
      [!code-vb[VbVbalrRelaxedDelegates#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#3)]  
   

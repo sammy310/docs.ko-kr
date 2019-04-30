@@ -9,11 +9,11 @@ helpviewer_keywords:
 - up-down controls [Windows Forms], spin button controls
 ms.assetid: fb7cf017-e931-4a95-9d21-8caee4ee122a
 ms.openlocfilehash: 83d674e3fb7ff7e715b75c635b891cd4e9703a21
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972057"
 ---
 # <a name="domainupdown-control-windows-forms"></a>DomainUpDown 컨트롤(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.DomainUpDown> 컨트롤 같습니다 조합을 텍스트 상자 및 단추 쌍 목록을 통해 위로 또는 아래로 이동 합니다. 컨트롤이 표시 하 고 선택 목록에서 텍스트 문자열을 설정 합니다. 사용자 단추 목록에서 이동를 클릭 하 여, 위쪽 및 아래쪽 화살표 키를 눌러 또는 목록의 항목을 일치 하는 문자열을 입력 하 여 문자열을 선택할 수 있습니다. 이 컨트롤에 대 한 한 가지 가능한 용도 이름의 사전순으로 정렬된 된 목록에서 항목 선택입니다. (목록을 정렬 하려면 설정 합니다 <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> 속성을 `true`.) 이 컨트롤의 기능 목록 상자 또는 콤보 상자에 매우 유사 하지만 매우 작은 공간을 차지 합니다.  

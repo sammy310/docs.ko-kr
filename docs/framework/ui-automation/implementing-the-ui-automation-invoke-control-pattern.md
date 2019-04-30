@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
 ms.openlocfilehash: 5c9d94aca6b9b53c505fa7419406a0d2fc4a0ae7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983348"
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>UI 자동화 Invoke 컨트롤 패턴 구현
 > [!NOTE]
@@ -25,30 +25,30 @@ ms.locfileid: "59134786"
 ## <a name="implementation-guidelines-and-conventions"></a>구현 지침 및 규칙  
  Invoke 컨트롤 패턴을 구현할 때는 다음 지침 및 규칙에 유의하세요.  
   
--   동일한 동작이 다른 컨트롤 패턴 공급자를 통해 노출되지 않으면 컨트롤이 <xref:System.Windows.Automation.Provider.IInvokeProvider> 를 구현합니다. 예를 들어, 컨트롤의 <xref:System.Windows.Automation.InvokePattern.Invoke%2A> 메서드가 <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> 또는 <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> 메서드와 동일한 작업을 수행하는 경우 이 컨트롤은 <xref:System.Windows.Automation.Provider.IInvokeProvider>를 구현하지 않아야 합니다.  
+- 동일한 동작이 다른 컨트롤 패턴 공급자를 통해 노출되지 않으면 컨트롤이 <xref:System.Windows.Automation.Provider.IInvokeProvider> 를 구현합니다. 예를 들어, 컨트롤의 <xref:System.Windows.Automation.InvokePattern.Invoke%2A> 메서드가 <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> 또는 <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> 메서드와 동일한 작업을 수행하는 경우 이 컨트롤은 <xref:System.Windows.Automation.Provider.IInvokeProvider>를 구현하지 않아야 합니다.  
   
--   일반적으로 컨트롤은 미리 정의된 키보드 바로 가기 또는 몇 가지 키 입력의 조합을 클릭하거나, 두 번 클릭하거나, ENTER 키를 눌러 호출합니다.  
+- 일반적으로 컨트롤은 미리 정의된 키보드 바로 가기 또는 몇 가지 키 입력의 조합을 클릭하거나, 두 번 클릭하거나, ENTER 키를 눌러 호출합니다.  
   
--   <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> 는 활성화된 컨트롤에서 발생합니다(연결된 작업을 수행하는 컨트롤에 대한 응답으로) 가능하면, 컨트롤이 작업을 완료하여 차단하지 않고 반환된 후에 이벤트가 발생해야 합니다. 다음 시나리오에서 호출 요청을 처리하기 전에 Invoked 이벤트가 발생해야 합니다.  
+- <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> 는 활성화된 컨트롤에서 발생합니다(연결된 작업을 수행하는 컨트롤에 대한 응답으로) 가능하면, 컨트롤이 작업을 완료하여 차단하지 않고 반환된 후에 이벤트가 발생해야 합니다. 다음 시나리오에서 호출 요청을 처리하기 전에 Invoked 이벤트가 발생해야 합니다.  
   
-    -   작업이 완료될 때까지 기다리는 것은 실제로 불가능합니다.  
+    - 작업이 완료될 때까지 기다리는 것은 실제로 불가능합니다.  
   
-    -   작업에는 사용자 개입이 필요합니다.  
+    - 작업에는 사용자 개입이 필요합니다.  
   
-    -   작업은 시간이 오래 걸리므로 상당한 시간 동안 호출 클라이언트가 차단됩니다.  
+    - 작업은 시간이 오래 걸리므로 상당한 시간 동안 호출 클라이언트가 차단됩니다.  
   
--   컨트롤 호출로 인해 심각한 부작용이 발생하는 경우, 이러한 부작용은 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A> 속성을 통해 노출되어야 합니다. 예를 들어, <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> 가 선택 항목과 연결되지 않은 경우에도 <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> 로 인해 다른 컨트롤이 선택될 수 있습니다.  
+- 컨트롤 호출로 인해 심각한 부작용이 발생하는 경우, 이러한 부작용은 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A> 속성을 통해 노출되어야 합니다. 예를 들어, <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> 가 선택 항목과 연결되지 않은 경우에도 <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> 로 인해 다른 컨트롤이 선택될 수 있습니다.  
   
--   마우스 포인터(또는 마우스를 위에 올려 놓기) 효과는 일반적으로 Invoked 이벤트로 간주되지 않습니다. 하지만 가리키기 상태를 기반으로 작업을 수행(시각적 효과를 발생시키는 것과 반대 개념)하는 컨트롤은 <xref:System.Windows.Automation.InvokePattern> 컨트롤 패턴을 지원해야 합니다.  
+- 마우스 포인터(또는 마우스를 위에 올려 놓기) 효과는 일반적으로 Invoked 이벤트로 간주되지 않습니다. 하지만 가리키기 상태를 기반으로 작업을 수행(시각적 효과를 발생시키는 것과 반대 개념)하는 컨트롤은 <xref:System.Windows.Automation.InvokePattern> 컨트롤 패턴을 지원해야 합니다.  
   
 > [!NOTE]
 >  이 구현은 컨트롤을 마우스 관련 부작용의 결과로만 호출할 수 있는 경우 접근성 문제로 간주됩니다.  
   
--   컨트롤을 호출하는 것은 항목을 선택하는 것과 다릅니다. 그러나 컨트롤에 따라, 컨트롤 호출로 인해 항목이 잘못된 방식으로 선택될 수 있습니다. 예를 들어, 내 문서 폴더에서 [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] 문서 목록 항목을 호출하면 항목이 선택되고 문서가 열리는 두 가지 작업이 수행됩니다.  
+- 컨트롤을 호출하는 것은 항목을 선택하는 것과 다릅니다. 그러나 컨트롤에 따라, 컨트롤 호출로 인해 항목이 잘못된 방식으로 선택될 수 있습니다. 예를 들어, 내 문서 폴더에서 [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] 문서 목록 항목을 호출하면 항목이 선택되고 문서가 열리는 두 가지 작업이 수행됩니다.  
   
--   호출하는 즉시 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에서 요소가 사라질 수 있습니다. 그 결과, 이벤트 콜백에서 제공하는 요소로부터 정보를 요청하는 작업에 실패할 수 있습니다. 이러한 문제의 해결 방법으로 캐시된 정보를 프리페치하는 것이 좋습니다.  
+- 호출하는 즉시 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에서 요소가 사라질 수 있습니다. 그 결과, 이벤트 콜백에서 제공하는 요소로부터 정보를 요청하는 작업에 실패할 수 있습니다. 이러한 문제의 해결 방법으로 캐시된 정보를 프리페치하는 것이 좋습니다.  
   
--   컨트롤은 여러 개의 컨트롤 패턴을 구현할 수 있습니다. 예를 들어, [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] 도구 모음의 채우기 색 컨트롤은 <xref:System.Windows.Automation.InvokePattern> 및 <xref:System.Windows.Automation.ExpandCollapsePattern> 컨트롤 패턴 둘 다 구현합니다. <xref:System.Windows.Automation.ExpandCollapsePattern> 은 메뉴를 노출하고 <xref:System.Windows.Automation.InvokePattern> 은 선택된 색으로 활성 상태의 선택 항목을 채웁니다.  
+- 컨트롤은 여러 개의 컨트롤 패턴을 구현할 수 있습니다. 예를 들어, [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] 도구 모음의 채우기 색 컨트롤은 <xref:System.Windows.Automation.InvokePattern> 및 <xref:System.Windows.Automation.ExpandCollapsePattern> 컨트롤 패턴 둘 다 구현합니다. <xref:System.Windows.Automation.ExpandCollapsePattern> 은 메뉴를 노출하고 <xref:System.Windows.Automation.InvokePattern> 은 선택된 색으로 활성 상태의 선택 항목을 채웁니다.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iinvokeprovider"></a>IInvokeProvider에 필요한 멤버  

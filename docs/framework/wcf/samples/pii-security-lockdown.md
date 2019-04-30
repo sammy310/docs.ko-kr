@@ -3,20 +3,20 @@ title: PII 보안 잠금
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
 ms.openlocfilehash: 13ed280e9b7de2b205e0878761dbf97e168f06d3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989653"
 ---
 # <a name="pii-security-lockdown"></a>PII 보안 잠금
 이 샘플에 사용 하 여 Windows Communication Foundation (WCF) 서비스의 여러 보안 관련 기능을 제어 하는 방법을 보여 줍니다.  
   
--   서비스의 구성 파일에서 중요한 정보 암호화  
+- 서비스의 구성 파일에서 중요한 정보 암호화  
   
--   중첩된 서비스 하위 디렉터리에서 설정을 재정의할 수 없도록 구성 파일에서 요소 잠금  
+- 중첩된 서비스 하위 디렉터리에서 설정을 재정의할 수 없도록 구성 파일에서 요소 잠금  
   
--   추적 및 메시지 로그에서 PII(개인적으로 식별할 수 있는 정보)의 로깅 제어  
+- 추적 및 메시지 로그에서 PII(개인적으로 식별할 수 있는 정보)의 로깅 제어  
   
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
@@ -124,9 +124,9 @@ ms.locfileid: "59326647"
   
  또한 DPAPI 및 RSA를 사용하여 구성 파일 요소를 암호화할 수 있습니다. 자세한 내용은 다음 링크를 참조하세요.  
   
--   [보안 된 ASP.NET 응용 프로그램 빌드: 인증, 권한 부여 및 보안 통신](https://go.microsoft.com/fwlink/?LinkId=95137)  
+- [보안 된 ASP.NET 응용 프로그램 빌드: 인증, 권한 부여 및 보안 통신](https://go.microsoft.com/fwlink/?LinkId=95137)  
   
--   [방법: ASP.NET 2.0에서에서 구성 섹션 암호화 RSA를 사용 하 여](https://go.microsoft.com/fwlink/?LinkId=95138)  
+- [방법: ASP.NET 2.0에서에서 구성 섹션 암호화 RSA를 사용 하 여](https://go.microsoft.com/fwlink/?LinkId=95138)  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   

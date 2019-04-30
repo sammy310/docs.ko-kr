@@ -3,24 +3,24 @@ title: 특성 개요(Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
 ms.openlocfilehash: bb012b49c76963306d723d7732b4c7054bf13ebb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61968053"
 ---
 # <a name="attributes-overview-visual-basic"></a>특성 개요(Visual Basic)
 특성은 메타데이터 또는 선언적 정보를 코드(어셈블리, 형식, 메서드, 속성 등)에 연결하는 강력한 방법을 제공합니다. 특성이 프로그램 엔터티와 연결되면 *리플렉션*이라는 기법을 사용하여 런타임에 특성이 쿼리될 수 있습니다. 자세한 내용은 [리플렉션(Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)을 참조하세요.  
   
  특성에는 다음과 같은 속성이 있습니다.  
   
--   특성은 프로그램에 메타데이터를 추가합니다. *메타데이터*는 프로그램에 정의된 형식에 대한 정보입니다. 모든 .NET 어셈블리에는 어셈블리에 정의된 형식 및 형식 멤버를 설명하는 지정된 메타데이터 집합이 포함됩니다. 필요한 추가 정보를 지정하는 사용자 지정 특성을 추가할 수 있습니다. 자세한 내용은 [사용자 지정 특성 만들기(Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)를 참조하세요.  
+- 특성은 프로그램에 메타데이터를 추가합니다. *메타데이터*는 프로그램에 정의된 형식에 대한 정보입니다. 모든 .NET 어셈블리에는 어셈블리에 정의된 형식 및 형식 멤버를 설명하는 지정된 메타데이터 집합이 포함됩니다. 필요한 추가 정보를 지정하는 사용자 지정 특성을 추가할 수 있습니다. 자세한 내용은 [사용자 지정 특성 만들기(Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)를 참조하세요.  
   
--   전체 어셈블리, 모듈 또는 좀 더 작은 프로그램 요소(예: 클래스 및 속성)에 하나 이상의 특성을 적용할 수 있습니다.  
+- 전체 어셈블리, 모듈 또는 좀 더 작은 프로그램 요소(예: 클래스 및 속성)에 하나 이상의 특성을 적용할 수 있습니다.  
   
--   메서드 및 속성의 경우와 같은 방식으로 특성은 인수를 수락할 수 있습니다.  
+- 메서드 및 속성의 경우와 같은 방식으로 특성은 인수를 수락할 수 있습니다.  
   
--   프로그램은 리플렉션을 사용하여 자체 메타데이터 또는 다른 프로그램의 메타데이터를 검사할 수 있습니다. 자세한 내용은 [리플렉션을 사용하여 특성 액세스(Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)를 참조하세요.  
+- 프로그램은 리플렉션을 사용하여 자체 메타데이터 또는 다른 프로그램의 메타데이터를 검사할 수 있습니다. 자세한 내용은 [리플렉션을 사용하여 특성 액세스(Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)를 참조하세요.  
   
 ## <a name="using-attributes"></a>특성 사용  
  특정 특성이 유효한 선언 형식을 제한할 수  있지만 거의 모든 선언에 특성을 사용할 수 있습니다. Visual Basic의 경우 특성은 꺾쇠 괄호(\<>) 안에 포함됩니다. 특성은 적용되는 요소 바로 앞에 표시되어야 하며 같은 줄에 위치합니다.  
@@ -107,40 +107,40 @@ Module: CLSCompliant(True)>
 ## <a name="common-uses-for-attributes"></a>특성의 일반적인 용도  
  다음 목록에는 코드에서 특성이 사용되는 일반적인 경우가 나와 있습니다.  
   
--   SOAP 프로토콜을 통해 메서드를 호출할 수 있음을 나타내기 위해 웹 서비스에서 `WebMethod` 특성을 사용하여 메서드에 표시. 자세한 내용은 <xref:System.Web.Services.WebMethodAttribute>을 참조하세요.  
+- SOAP 프로토콜을 통해 메서드를 호출할 수 있음을 나타내기 위해 웹 서비스에서 `WebMethod` 특성을 사용하여 메서드에 표시. 자세한 내용은 <xref:System.Web.Services.WebMethodAttribute>을 참조하세요.  
   
--   네이티브 코드와 상호 운용될 경우 메서드 매개 변수를 마샬링하는 방법 설명. 자세한 내용은 <xref:System.Runtime.InteropServices.MarshalAsAttribute>을 참조하세요.  
+- 네이티브 코드와 상호 운용될 경우 메서드 매개 변수를 마샬링하는 방법 설명. 자세한 내용은 <xref:System.Runtime.InteropServices.MarshalAsAttribute>을 참조하세요.  
   
--   클래스, 메서드 및 인터페이스에 대한 COM 속성 설명  
+- 클래스, 메서드 및 인터페이스에 대한 COM 속성 설명  
   
--   <xref:System.Runtime.InteropServices.DllImportAttribute> 클래스를 사용하는 비관리 코드 호출  
+- <xref:System.Runtime.InteropServices.DllImportAttribute> 클래스를 사용하는 비관리 코드 호출  
   
--   제목, 버전, 설명 또는 상표를 기준으로 어셈블리 설명  
+- 제목, 버전, 설명 또는 상표를 기준으로 어셈블리 설명  
   
--   지속성을 위해 serialize할 클래스의 멤버 설명  
+- 지속성을 위해 serialize할 클래스의 멤버 설명  
   
--   XML serialization를 위해 클래스 멤버 및 XML 노드 간을 매핑하는 방법 설명  
+- XML serialization를 위해 클래스 멤버 및 XML 노드 간을 매핑하는 방법 설명  
   
--   메서드에 대한 보안 요구 사항 설명  
+- 메서드에 대한 보안 요구 사항 설명  
   
--   보안을 적용하는 데 사용되는 특징 지정  
+- 보안을 적용하는 데 사용되는 특징 지정  
   
--   코드를 쉽게 디버그할 수 있도록 하기 위해 JIT(Just-In-Time) 컴파일러를 통해 최적화 제어  
+- 코드를 쉽게 디버그할 수 있도록 하기 위해 JIT(Just-In-Time) 컴파일러를 통해 최적화 제어  
   
--   메서드 호출자에 대한 정보 얻기  
+- 메서드 호출자에 대한 정보 얻기  
   
 ## <a name="related-sections"></a>관련 단원  
  자세한 내용은 다음을 참조하세요.  
   
--   [사용자 지정 특성 만들기(Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  
+- [사용자 지정 특성 만들기(Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  
   
--   [리플렉션을 사용하여 특성 액세스(Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
+- [리플렉션을 사용하여 특성 액세스(Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
   
--   [방법: C를 만들기 /C++ 특성 (Visual Basic)를 사용 하 여 공용 구조체](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [방법: C를 만들기 /C++ 특성 (Visual Basic)를 사용 하 여 공용 구조체](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
   
--   [일반 특성(Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)  
+- [일반 특성(Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)  
   
--   [호출자 정보(Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)  
+- [호출자 정보(Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)  
   
 ## <a name="see-also"></a>참고자료
 

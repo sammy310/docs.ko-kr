@@ -3,11 +3,11 @@ title: WCF 호스팅 샘플
 ms.date: 03/30/2017
 ms.assetid: 8a6ec5d4-d191-49cc-bb0f-a07639dc60d4
 ms.openlocfilehash: a2b6767ac85a45587f68e0175cb80487baa640c3
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61968118"
 ---
 # <a name="hosting"></a>호스팅
 이 섹션에는 호스팅 Windows Communication Foundation (WCF) 서비스를 보여 주는 샘플이 들어 있습니다.  

@@ -3,11 +3,11 @@ title: System.ServiceModel.Channels.PeerMaintainerActivity
 ms.date: 03/30/2017
 ms.assetid: ef28d086-d7fb-4e81-82e9-45a54647783b
 ms.openlocfilehash: ea4c8110a8f820e0c6204fbd22b3d5b747709fba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61950464"
 ---
 # <a name="systemservicemodelchannelspeermaintaineractivity"></a>System.ServiceModel.Channels.PeerMaintainerActivity
 PeerMaintainer 모듈이 특정 작업을 수행하고 있습니다(상세 정보는 추적 메시지 본문에 포함).  

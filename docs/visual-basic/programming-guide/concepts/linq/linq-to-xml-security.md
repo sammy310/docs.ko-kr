@@ -3,11 +3,11 @@ title: LINQ to XML 보안 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d99b4af2-d447-4a3b-991b-6da0231a8637
 ms.openlocfilehash: fb811b86eef9123bf079b9eb45ff1eaa29fde7b3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955859"
 ---
 # <a name="linq-to-xml-security-visual-basic"></a>LINQ to XML 보안 (Visual Basic)
 이 항목에서는 LINQ to XML과 관련된 보안 문제에 대해 설명합니다. 또한 보안 노출을 경감하는 몇 가지 지침을 제공합니다.  
@@ -26,25 +26,25 @@ ms.locfileid: "58839706"
   
  보안 수준이 낮은 운영 환경에서는 XML 및 <xref:System.Xml?displayProperty=nameWithType>, <xref:System.Xml.Schema?displayProperty=nameWithType>, <xref:System.Xml.XPath?displayProperty=nameWithType> 및 <xref:System.Xml.Xsl?displayProperty=nameWithType>의 클래스 사용과 관련된 많은 보안 문제가 있습니다. 이러한 문제는 다음과 같지만 다음 문제로만 제한되지는 않습니다.  
   
--   XSD, XPath 및 XSLT는 많은 시간이나 메모리를 사용하는 작업을 지정할 수 있는 문자열 기반 언어입니다. 문자열이 악성이 아닌지 확인하거나 이러한 문자열을 확인할 때 시스템 리소스를 과도하게 사용하게 될 가능성을 모니터링하고 완화하는 것은 신뢰할 수 없는 소스에서 XSD, XPath 또는 XSLT 문자열을 가져오는 애플리케이션 프로그래머의 책임입니다.  
+- XSD, XPath 및 XSLT는 많은 시간이나 메모리를 사용하는 작업을 지정할 수 있는 문자열 기반 언어입니다. 문자열이 악성이 아닌지 확인하거나 이러한 문자열을 확인할 때 시스템 리소스를 과도하게 사용하게 될 가능성을 모니터링하고 완화하는 것은 신뢰할 수 없는 소스에서 XSD, XPath 또는 XSLT 문자열을 가져오는 애플리케이션 프로그래머의 책임입니다.  
   
--   인라인 스키마를 비롯한 XSD 스키마는 기본적으로 서비스 거부 공격에 취약하므로 신뢰할 수 없는 소스에서 스키마를 받아들이지 않아야 합니다.  
+- 인라인 스키마를 비롯한 XSD 스키마는 기본적으로 서비스 거부 공격에 취약하므로 신뢰할 수 없는 소스에서 스키마를 받아들이지 않아야 합니다.  
   
--   XSD와 XSLT에는 다른 파일에 대한 참조가 포함될 수 있으며 이러한 참조로 인해 영역 간 공격과 도메인 간 공격이 발생할 수 있습니다.  
+- XSD와 XSLT에는 다른 파일에 대한 참조가 포함될 수 있으며 이러한 참조로 인해 영역 간 공격과 도메인 간 공격이 발생할 수 있습니다.  
   
--   DTD의 외부 엔터티로 인해 영역 간 공격과 도메인 간 공격이 발생할 수 있습니다.  
+- DTD의 외부 엔터티로 인해 영역 간 공격과 도메인 간 공격이 발생할 수 있습니다.  
   
--   DTD는 서비스 거부 공격에 취약합니다.  
+- DTD는 서비스 거부 공격에 취약합니다.  
   
--   매우 깊은 XML 문서는 서비스 거부 문제를 일으킬 수 있으므로 XML 문서의 깊이를 제한할 수 있습니다.  
+- 매우 깊은 XML 문서는 서비스 거부 문제를 일으킬 수 있으므로 XML 문서의 깊이를 제한할 수 있습니다.  
   
--   신뢰할 수 없는 어셈블리에서 <xref:System.Xml.NameTable>, <xref:System.Xml.XmlNamespaceManager> 및 <xref:System.Xml.XmlResolver> 개체와 같은 지원 구성 요소를 받아들이지 않습니다.  
+- 신뢰할 수 없는 어셈블리에서 <xref:System.Xml.NameTable>, <xref:System.Xml.XmlNamespaceManager> 및 <xref:System.Xml.XmlResolver> 개체와 같은 지원 구성 요소를 받아들이지 않습니다.  
   
--   큰 문서 공격을 완화하기 위해 데이터를 청크로 읽습니다.  
+- 큰 문서 공격을 완화하기 위해 데이터를 청크로 읽습니다.  
   
--   XSLT 스타일시트의 스크립트 블록은 많은 공격에 노출될 수 있습니다.  
+- XSLT 스타일시트의 스크립트 블록은 많은 공격에 노출될 수 있습니다.  
   
--   동적 XPath 식을 생성하기 전에 신중하게 유효성을 검사합니다.  
+- 동적 XPath 식을 생성하기 전에 신중하게 유효성을 검사합니다.  
   
 ## <a name="linq-to-xml-security-issues"></a>LINQ to XML 보안 문제  
  이 항목의 보안 문제는 특정 순서로 제공되지 않습니다. 모든 문제는 중요하며 적절하게 처리되어야 합니다.  

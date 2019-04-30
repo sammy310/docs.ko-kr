@@ -7,11 +7,11 @@ helpviewer_keywords:
 - formatting [Windows Forms]
 ms.assetid: b66057a6-5983-4864-b4e7-8cbc88a7010c
 ms.openlocfilehash: daac7dca27ac5dca8df4db24c9a3e22dae831377
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948007"
 ---
 # <a name="using-the-designer-with-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤에 디자이너 사용
 Visual Studio에 대 한 디자이너 지원을 제공 합니다 `DataGridView` 컨트롤 코드를 작성 하지 않고도 많은 설정 작업을 수행할 수 있도록 합니다. 이러한 작업에는 열을 수정할 데이터 원본에 컨트롤 데이터를 표시 하는 데 사용 되는 바인딩 및 컨트롤의 기본 동작과 모양을 조정 포함 됩니다.  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7edf103e397c6e3e1577b5ed4bc8fc0df264b843
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993852"
 ---
 # <a name="icordebugthreadenum-interface"></a>ICorDebugThreadEnum 인터페이스
 ICorDebugEnum 메서드를 구현 하 고 배열 ICorDebugThread를 열거 합니다.  
