@@ -8,24 +8,24 @@ helpviewer_keywords:
 - 'resources [WPF], '
 ms.assetid: 9f986a6d-7cc8-45ac-bb0f-43177a57649d
 ms.openlocfilehash: 8ad776b8ed18d74a6804b0efd8853c7af6efee0e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053485"
 ---
-# <a name="resources-how-to-topics"></a><span data-ttu-id="427c3-102">리소스 방법 항목</span><span class="sxs-lookup"><span data-stu-id="427c3-102">Resources How-to Topics</span></span>
-<span data-ttu-id="427c3-103">이 섹션의에서 항목에서는 Windows Presentation Foundation (WPF) 리소스를 사용 하는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="427c3-103">The topics in this section describe how to use Windows Presentation Foundation (WPF) resources.</span></span>  
+# <a name="resources-how-to-topics"></a><span data-ttu-id="87428-102">리소스 방법 항목</span><span class="sxs-lookup"><span data-stu-id="87428-102">Resources How-to Topics</span></span>
+<span data-ttu-id="87428-103">이 섹션의에서 항목에서는 Windows Presentation Foundation (WPF) 리소스를 사용 하는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="87428-103">The topics in this section describe how to use Windows Presentation Foundation (WPF) resources.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="427c3-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="427c3-104">In This Section</span></span>  
- [<span data-ttu-id="427c3-105">리소스 정의 및 참조</span><span class="sxs-lookup"><span data-stu-id="427c3-105">Define and Reference a Resource</span></span>](how-to-define-and-reference-a-resource.md)  
- [<span data-ttu-id="427c3-106">애플리케이션 리소스 사용</span><span class="sxs-lookup"><span data-stu-id="427c3-106">Use Application Resources</span></span>](how-to-use-application-resources.md)  
- [<span data-ttu-id="427c3-107">SystemFonts 사용</span><span class="sxs-lookup"><span data-stu-id="427c3-107">Use SystemFonts</span></span>](how-to-use-systemfonts.md)  
- [<span data-ttu-id="427c3-108">시스템 글꼴 키 사용</span><span class="sxs-lookup"><span data-stu-id="427c3-108">Use System Fonts Keys</span></span>](how-to-use-system-fonts-keys.md)  
- [<span data-ttu-id="427c3-109">SystemParameters 사용</span><span class="sxs-lookup"><span data-stu-id="427c3-109">Use SystemParameters</span></span>](how-to-use-systemparameters.md)  
- [<span data-ttu-id="427c3-110">시스템 매개 변수 키 사용</span><span class="sxs-lookup"><span data-stu-id="427c3-110">Use System Parameters Keys</span></span>](how-to-use-system-parameters-keys.md)  
+## <a name="in-this-section"></a><span data-ttu-id="87428-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="87428-104">In This Section</span></span>  
+ [<span data-ttu-id="87428-105">리소스 정의 및 참조</span><span class="sxs-lookup"><span data-stu-id="87428-105">Define and Reference a Resource</span></span>](how-to-define-and-reference-a-resource.md)  
+ [<span data-ttu-id="87428-106">애플리케이션 리소스 사용</span><span class="sxs-lookup"><span data-stu-id="87428-106">Use Application Resources</span></span>](how-to-use-application-resources.md)  
+ [<span data-ttu-id="87428-107">SystemFonts 사용</span><span class="sxs-lookup"><span data-stu-id="87428-107">Use SystemFonts</span></span>](how-to-use-systemfonts.md)  
+ [<span data-ttu-id="87428-108">시스템 글꼴 키 사용</span><span class="sxs-lookup"><span data-stu-id="87428-108">Use System Fonts Keys</span></span>](how-to-use-system-fonts-keys.md)  
+ [<span data-ttu-id="87428-109">SystemParameters 사용</span><span class="sxs-lookup"><span data-stu-id="87428-109">Use SystemParameters</span></span>](how-to-use-systemparameters.md)  
+ [<span data-ttu-id="87428-110">시스템 매개 변수 키 사용</span><span class="sxs-lookup"><span data-stu-id="87428-110">Use System Parameters Keys</span></span>](how-to-use-system-parameters-keys.md)  
   
-## <a name="reference"></a><span data-ttu-id="427c3-111">참조</span><span class="sxs-lookup"><span data-stu-id="427c3-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="87428-111">참조</span><span class="sxs-lookup"><span data-stu-id="87428-111">Reference</span></span>  
  <xref:System.Windows.FrameworkTemplate.Resources%2A>  
   
  <xref:System.Windows.SystemColors>  
@@ -34,5 +34,5 @@ ms.locfileid: "57356229"
   
  <xref:System.Windows.SystemFonts>  
   
-## <a name="related-sections"></a><span data-ttu-id="427c3-112">관련 단원</span><span class="sxs-lookup"><span data-stu-id="427c3-112">Related Sections</span></span>  
- [<span data-ttu-id="427c3-113">XAML 리소스</span><span class="sxs-lookup"><span data-stu-id="427c3-113">XAML Resources</span></span>](xaml-resources.md)
+## <a name="related-sections"></a><span data-ttu-id="87428-112">관련 단원</span><span class="sxs-lookup"><span data-stu-id="87428-112">Related Sections</span></span>  
+ [<span data-ttu-id="87428-113">XAML 리소스</span><span class="sxs-lookup"><span data-stu-id="87428-113">XAML Resources</span></span>](xaml-resources.md)

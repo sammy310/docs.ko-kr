@@ -8,30 +8,30 @@ helpviewer_keywords:
 - BC32008
 ms.assetid: dc6abba0-a9ad-450f-8899-87265bc84abc
 ms.openlocfilehash: c308805f5e73d740ff18a40d95b9cc2576ac95fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013597"
 ---
-# <a name="typename-is-a-delegate-type"></a><span data-ttu-id="a8d55-102">'\<typename >' 대리자 형식이</span><span class="sxs-lookup"><span data-stu-id="a8d55-102">'\<typename>' is a delegate type</span></span>
-<span data-ttu-id="a8d55-103">'\<typename >' 대리자 형식이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a8d55-103">'\<typename>' is a delegate type.</span></span> <span data-ttu-id="a8d55-104">인수 목록으로 단일 AddressOf 식만 허용 하는 대리자 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="a8d55-104">Delegate construction permits only a single AddressOf expression as an argument list.</span></span> <span data-ttu-id="a8d55-105">종종 AddressOf 식은 대리자 구문 대신 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a8d55-105">Often an AddressOf expression can be used instead of a delegate construction.</span></span>  
+# <a name="typename-is-a-delegate-type"></a><span data-ttu-id="4f360-102">'\<typename >' 대리자 형식이</span><span class="sxs-lookup"><span data-stu-id="4f360-102">'\<typename>' is a delegate type</span></span>
+<span data-ttu-id="4f360-103">'\<typename >' 대리자 형식이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4f360-103">'\<typename>' is a delegate type.</span></span> <span data-ttu-id="4f360-104">인수 목록으로 단일 AddressOf 식만 허용 하는 대리자 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="4f360-104">Delegate construction permits only a single AddressOf expression as an argument list.</span></span> <span data-ttu-id="4f360-105">종종 AddressOf 식은 대리자 구문 대신 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4f360-105">Often an AddressOf expression can be used instead of a delegate construction.</span></span>  
   
- <span data-ttu-id="a8d55-106">`New` 대리자 클래스의 인스턴스를 만들고 절 대리자 생성자에는 잘못 된 인수 목록을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="a8d55-106">A `New` clause creating an instance of a delegate class supplies an invalid argument list to the delegate constructor.</span></span>  
+ <span data-ttu-id="4f360-106">`New` 대리자 클래스의 인스턴스를 만들고 절 대리자 생성자에는 잘못 된 인수 목록을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="4f360-106">A `New` clause creating an instance of a delegate class supplies an invalid argument list to the delegate constructor.</span></span>  
   
- <span data-ttu-id="a8d55-107">하나만 제공할 수 있습니다 `AddressOf` 새 대리자 인스턴스를 만들 때 식입니다.</span><span class="sxs-lookup"><span data-stu-id="a8d55-107">You can supply only a single `AddressOf` expression when creating a new delegate instance.</span></span>  
+ <span data-ttu-id="4f360-107">하나만 제공할 수 있습니다 `AddressOf` 새 대리자 인스턴스를 만들 때 식입니다.</span><span class="sxs-lookup"><span data-stu-id="4f360-107">You can supply only a single `AddressOf` expression when creating a new delegate instance.</span></span>  
   
- <span data-ttu-id="a8d55-108">전달 하지 않으면 모든 인수 대리자 생성자에는 잘못 된 단일 인수를 전달 하는 경우 또는 둘 이상의 인수를 전달 하는 경우이 오류가 발생할 수 있습니다 `AddressOf` 식입니다.</span><span class="sxs-lookup"><span data-stu-id="a8d55-108">This error can result if you do not pass any arguments to the delegate constructor, if you pass more than one argument, or if you pass a single argument that is not a valid `AddressOf` expression.</span></span>  
+ <span data-ttu-id="4f360-108">전달 하지 않으면 모든 인수 대리자 생성자에는 잘못 된 단일 인수를 전달 하는 경우 또는 둘 이상의 인수를 전달 하는 경우이 오류가 발생할 수 있습니다 `AddressOf` 식입니다.</span><span class="sxs-lookup"><span data-stu-id="4f360-108">This error can result if you do not pass any arguments to the delegate constructor, if you pass more than one argument, or if you pass a single argument that is not a valid `AddressOf` expression.</span></span>  
   
- <span data-ttu-id="a8d55-109">**오류 ID:** BC32008</span><span class="sxs-lookup"><span data-stu-id="a8d55-109">**Error ID:** BC32008</span></span>  
+ <span data-ttu-id="4f360-109">**오류 ID:** BC32008</span><span class="sxs-lookup"><span data-stu-id="4f360-109">**Error ID:** BC32008</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="a8d55-110">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="a8d55-110">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="4f360-110">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="4f360-110">To correct this error</span></span>  
   
--   <span data-ttu-id="a8d55-111">단일을 사용 하 여 `AddressOf` 대리자 클래스에 대 한 인수 목록에 있는 식의 `New` 절.</span><span class="sxs-lookup"><span data-stu-id="a8d55-111">Use a single `AddressOf` expression in the argument list for the delegate class in the `New` clause.</span></span>  
+- <span data-ttu-id="4f360-111">단일을 사용 하 여 `AddressOf` 대리자 클래스에 대 한 인수 목록에 있는 식의 `New` 절.</span><span class="sxs-lookup"><span data-stu-id="4f360-111">Use a single `AddressOf` expression in the argument list for the delegate class in the `New` clause.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a8d55-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="a8d55-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4f360-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="4f360-112">See also</span></span>
 
-- [<span data-ttu-id="a8d55-113">New 연산자</span><span class="sxs-lookup"><span data-stu-id="a8d55-113">New Operator</span></span>](../../../visual-basic/language-reference/operators/new-operator.md)
-- [<span data-ttu-id="a8d55-114">AddressOf 연산자</span><span class="sxs-lookup"><span data-stu-id="a8d55-114">AddressOf Operator</span></span>](../../../visual-basic/language-reference/operators/addressof-operator.md)
-- [<span data-ttu-id="a8d55-115">대리자</span><span class="sxs-lookup"><span data-stu-id="a8d55-115">Delegates</span></span>](../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [<span data-ttu-id="a8d55-116">방법: 대리자 메서드 호출</span><span class="sxs-lookup"><span data-stu-id="a8d55-116">How to: Invoke a Delegate Method</span></span>](../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)
+- [<span data-ttu-id="4f360-113">New 연산자</span><span class="sxs-lookup"><span data-stu-id="4f360-113">New Operator</span></span>](../../../visual-basic/language-reference/operators/new-operator.md)
+- [<span data-ttu-id="4f360-114">AddressOf 연산자</span><span class="sxs-lookup"><span data-stu-id="4f360-114">AddressOf Operator</span></span>](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [<span data-ttu-id="4f360-115">대리자</span><span class="sxs-lookup"><span data-stu-id="4f360-115">Delegates</span></span>](../../../visual-basic/programming-guide/language-features/delegates/index.md)
+- [<span data-ttu-id="4f360-116">방법: 대리자 메서드 호출</span><span class="sxs-lookup"><span data-stu-id="4f360-116">How to: Invoke a Delegate Method</span></span>](../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)

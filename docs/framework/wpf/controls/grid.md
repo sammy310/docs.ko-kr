@@ -9,19 +9,19 @@ helpviewer_keywords:
 - Grid control [WPF]
 ms.assetid: cf2cc94c-bbc2-4e54-a601-605038ab63fe
 ms.openlocfilehash: c0be95d84aa1b4b8b05e623f9012664de1a401a6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054889"
 ---
-# <a name="grid"></a><span data-ttu-id="f5413-102">표</span><span class="sxs-lookup"><span data-stu-id="f5413-102">Grid</span></span>
-<span data-ttu-id="f5413-103"><xref:System.Windows.Controls.Grid> 요소 콘텐츠를 행과 열을 정확 하 게 배치 하는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f5413-103">The <xref:System.Windows.Controls.Grid> element is used to precisely position content in rows and columns.</span></span>  
+# <a name="grid"></a><span data-ttu-id="9d3c5-102">표</span><span class="sxs-lookup"><span data-stu-id="9d3c5-102">Grid</span></span>
+<span data-ttu-id="9d3c5-103"><xref:System.Windows.Controls.Grid> 요소 콘텐츠를 행과 열을 정확 하 게 배치 하는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9d3c5-103">The <xref:System.Windows.Controls.Grid> element is used to precisely position content in rows and columns.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f5413-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="f5413-104">In This Section</span></span>  
- [<span data-ttu-id="f5413-105">방법 항목</span><span class="sxs-lookup"><span data-stu-id="f5413-105">How-to Topics</span></span>](grid-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="9d3c5-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="9d3c5-104">In This Section</span></span>  
+ [<span data-ttu-id="9d3c5-105">방법 항목</span><span class="sxs-lookup"><span data-stu-id="9d3c5-105">How-to Topics</span></span>](grid-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="f5413-106">참조</span><span class="sxs-lookup"><span data-stu-id="f5413-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="9d3c5-106">참조</span><span class="sxs-lookup"><span data-stu-id="9d3c5-106">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -36,9 +36,9 @@ ms.locfileid: "57352141"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="f5413-107">관련 단원</span><span class="sxs-lookup"><span data-stu-id="f5413-107">Related Sections</span></span>  
- [<span data-ttu-id="f5413-108">레이아웃</span><span class="sxs-lookup"><span data-stu-id="f5413-108">Layout</span></span>](../advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="9d3c5-107">관련 단원</span><span class="sxs-lookup"><span data-stu-id="9d3c5-107">Related Sections</span></span>  
+ [<span data-ttu-id="9d3c5-108">레이아웃</span><span class="sxs-lookup"><span data-stu-id="9d3c5-108">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="f5413-109">연습: 내 첫 WPF 데스크톱 애플리케이션</span><span class="sxs-lookup"><span data-stu-id="f5413-109">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="9d3c5-109">연습: 내 첫 WPF 데스크톱 애플리케이션</span><span class="sxs-lookup"><span data-stu-id="9d3c5-109">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="f5413-110">ScrollViewer 개요</span><span class="sxs-lookup"><span data-stu-id="f5413-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)
+ [<span data-ttu-id="9d3c5-110">ScrollViewer 개요</span><span class="sxs-lookup"><span data-stu-id="9d3c5-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: af9ca932a4c4a12a2c89571f40162a4ecbd5c33d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046139"
 ---
-# <a name="corargtype-enumeration"></a><span data-ttu-id="5092b-102">CorArgType 열거형</span><span class="sxs-lookup"><span data-stu-id="5092b-102">CorArgType Enumeration</span></span>
-<span data-ttu-id="5092b-103">런타임 핸들의 네이티브 형식을 설명하는 값을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="5092b-103">Contains values that describe the native type of a runtime handle.</span></span>  
+# <a name="corargtype-enumeration"></a><span data-ttu-id="35007-102">CorArgType 열거형</span><span class="sxs-lookup"><span data-stu-id="35007-102">CorArgType Enumeration</span></span>
+<span data-ttu-id="35007-103">런타임 핸들의 네이티브 형식을 설명하는 값을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="35007-103">Contains values that describe the native type of a runtime handle.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5092b-104">구문</span><span class="sxs-lookup"><span data-stu-id="5092b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="35007-104">구문</span><span class="sxs-lookup"><span data-stu-id="35007-104">Syntax</span></span>  
   
 ```  
 typedef enum CorArgType {  
@@ -46,13 +46,13 @@ typedef enum CorArgType {
 } CorArgType;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="5092b-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="5092b-105">Requirements</span></span>  
- <span data-ttu-id="5092b-106">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="5092b-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="35007-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="35007-105">Requirements</span></span>  
+ <span data-ttu-id="35007-106">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="35007-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5092b-107">**헤더:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="5092b-107">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="35007-107">**헤더:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="35007-107">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="5092b-108">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5092b-108">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="35007-108">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="35007-108">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5092b-109">참고자료</span><span class="sxs-lookup"><span data-stu-id="5092b-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="35007-109">참고자료</span><span class="sxs-lookup"><span data-stu-id="35007-109">See also</span></span>
 
-- [<span data-ttu-id="5092b-110">메타데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="5092b-110">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="35007-110">메타데이터 열거형</span><span class="sxs-lookup"><span data-stu-id="35007-110">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

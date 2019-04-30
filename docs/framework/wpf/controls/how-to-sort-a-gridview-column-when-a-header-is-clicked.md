@@ -1,5 +1,5 @@
 ---
-title: '방법: 머리글을 클릭할 때 GridView 열 정렬'
+title: '방법: 머리글 클릭 시 GridView 열 정렬'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - GridView controls [WPF], ListView control
 ms.assetid: 4865d720-d147-40ed-83a7-af7587f8aad8
 ms.openlocfilehash: 3438ab91045a144a7fa1d531e9d7d55ad30e89ea
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57844290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052029"
 ---
-# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a><span data-ttu-id="a5d48-102">방법: 머리글을 클릭할 때 GridView 열 정렬</span><span class="sxs-lookup"><span data-stu-id="a5d48-102">How to: Sort a GridView Column When a Header Is Clicked</span></span>
+# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a><span data-ttu-id="d0a70-102">방법: 머리글 클릭 시 GridView 열 정렬</span><span class="sxs-lookup"><span data-stu-id="d0a70-102">How to: Sort a GridView Column When a Header Is Clicked</span></span>
 
-<span data-ttu-id="a5d48-103">만드는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.ListView> 구현 하는 컨트롤을 <xref:System.Windows.Controls.GridView> 모드 및 사용자가 열 머리글을 클릭할 때 데이터 콘텐츠 정렬 보기.</span><span class="sxs-lookup"><span data-stu-id="a5d48-103">This example shows how to create a <xref:System.Windows.Controls.ListView> control that implements a <xref:System.Windows.Controls.GridView> view mode and sorts the data content when a user clicks a column header.</span></span>
+<span data-ttu-id="d0a70-103">만드는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.ListView> 구현 하는 컨트롤을 <xref:System.Windows.Controls.GridView> 모드 및 사용자가 열 머리글을 클릭할 때 데이터 콘텐츠 정렬 보기.</span><span class="sxs-lookup"><span data-stu-id="d0a70-103">This example shows how to create a <xref:System.Windows.Controls.ListView> control that implements a <xref:System.Windows.Controls.GridView> view mode and sorts the data content when a user clicks a column header.</span></span>
 
-## <a name="example"></a><span data-ttu-id="a5d48-104">예제</span><span class="sxs-lookup"><span data-stu-id="a5d48-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="d0a70-104">예제</span><span class="sxs-lookup"><span data-stu-id="d0a70-104">Example</span></span>
 
-<span data-ttu-id="a5d48-105">다음 예제에서는 정의 <xref:System.Windows.Controls.GridView> 바인딩되는 세 개의 열으로는 <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, 및 <xref:System.DateTime.Day%2A>의 속성을 <xref:System.DateTime> 구조.</span><span class="sxs-lookup"><span data-stu-id="a5d48-105">The following example defines a <xref:System.Windows.Controls.GridView> with three columns that bind to the <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, and <xref:System.DateTime.Day%2A>, properties of the <xref:System.DateTime> structure.</span></span>
+<span data-ttu-id="d0a70-105">다음 예제에서는 정의 <xref:System.Windows.Controls.GridView> 바인딩되는 세 개의 열으로는 <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, 및 <xref:System.DateTime.Day%2A>의 속성을 <xref:System.DateTime> 구조.</span><span class="sxs-lookup"><span data-stu-id="d0a70-105">The following example defines a <xref:System.Windows.Controls.GridView> with three columns that bind to the <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, and <xref:System.DateTime.Day%2A>, properties of the <xref:System.DateTime> structure.</span></span>
 
 ```xaml
 <GridView>
@@ -39,7 +39,7 @@ ms.locfileid: "57844290"
 </GridView>
 ```
 
-<span data-ttu-id="a5d48-106">다음 예제에서는으로 정의 된 데이터 항목을 <xref:System.Collections.ArrayList> 의 <xref:System.DateTime> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="a5d48-106">The following example shows the data items that are defined as an <xref:System.Collections.ArrayList> of <xref:System.DateTime> objects.</span></span> <span data-ttu-id="a5d48-107"><xref:System.Collections.ArrayList> 으로 정의 됩니다 합니다 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 에 대 한는 <xref:System.Windows.Controls.ListView> 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="a5d48-107">The <xref:System.Collections.ArrayList> is defined as the <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> for the <xref:System.Windows.Controls.ListView> control.</span></span>
+<span data-ttu-id="d0a70-106">다음 예제에서는으로 정의 된 데이터 항목을 <xref:System.Collections.ArrayList> 의 <xref:System.DateTime> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="d0a70-106">The following example shows the data items that are defined as an <xref:System.Collections.ArrayList> of <xref:System.DateTime> objects.</span></span> <span data-ttu-id="d0a70-107"><xref:System.Collections.ArrayList> 으로 정의 됩니다 합니다 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 에 대 한는 <xref:System.Windows.Controls.ListView> 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="d0a70-107">The <xref:System.Collections.ArrayList> is defined as the <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> for the <xref:System.Windows.Controls.ListView> control.</span></span>
 
 ```xaml
 <ListView.ItemsSource>
@@ -60,7 +60,7 @@ ms.locfileid: "57844290"
 </ListView.ItemsSource>
 ```
 
-<span data-ttu-id="a5d48-108">[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 태그의 `s` 및 `p` 식별자는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지의 메타데이터에 정의된 네임스페이스 매핑을 참조합니다.</span><span class="sxs-lookup"><span data-stu-id="a5d48-108">The `s` and `p` identifiers in the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tags refer to namespace mappings that are defined in the metadata of the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page.</span></span> <span data-ttu-id="a5d48-109">다음 예제에서는 이 메타데이터 정의를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a5d48-109">The following example shows the metadata definition.</span></span>
+<span data-ttu-id="d0a70-108">[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 태그의 `s` 및 `p` 식별자는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지의 메타데이터에 정의된 네임스페이스 매핑을 참조합니다.</span><span class="sxs-lookup"><span data-stu-id="d0a70-108">The `s` and `p` identifiers in the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tags refer to namespace mappings that are defined in the metadata of the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page.</span></span> <span data-ttu-id="d0a70-109">다음 예제에서는 이 메타데이터 정의를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d0a70-109">The following example shows the metadata definition.</span></span>
 
 ```xaml
 <Window
@@ -71,7 +71,7 @@ ms.locfileid: "57844290"
     xmlns:p="clr-namespace:System;assembly=mscorlib">
 ```
 
-<span data-ttu-id="a5d48-110">예제에서는 열 콘텐츠에 따라 데이터를 정렬 하려면 처리할 이벤트 처리기를 정의 합니다 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 열 헤더 단추를 누를 때 발생 하는 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="a5d48-110">To sort the data according to the contents of a column, the example defines an event handler to handle the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event that occurs when you press the column header button.</span></span> <span data-ttu-id="a5d48-111">다음 예제에 대 한 이벤트 처리기를 지정 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.GridViewColumnHeader> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="a5d48-111">The following example shows how to specify an event handler for the <xref:System.Windows.Controls.GridViewColumnHeader> control.</span></span>
+<span data-ttu-id="d0a70-110">예제에서는 열 콘텐츠에 따라 데이터를 정렬 하려면 처리할 이벤트 처리기를 정의 합니다 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 열 헤더 단추를 누를 때 발생 하는 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="d0a70-110">To sort the data according to the contents of a column, the example defines an event handler to handle the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event that occurs when you press the column header button.</span></span> <span data-ttu-id="d0a70-111">다음 예제에 대 한 이벤트 처리기를 지정 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.GridViewColumnHeader> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0a70-111">The following example shows how to specify an event handler for the <xref:System.Windows.Controls.GridViewColumnHeader> control.</span></span>
 
 ```xaml
 <ListView x:Name='lv' Height="150" HorizontalAlignment="Center"
@@ -80,7 +80,7 @@ ms.locfileid: "57844290"
  >
 ```
 
-<span data-ttu-id="a5d48-112">다음 예제에서는 열 머리글 단추를 누를 때마다 정렬 방향을 오름차순과 내림차순으로 번갈아 변경하도록 이벤트 처리기를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="a5d48-112">The example defines the event handler so that the sort direction changes between ascending order and descending order each time you press the column header button.</span></span> <span data-ttu-id="a5d48-113">다음 예제에서는 이벤트 처리기를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a5d48-113">The following example shows the event handler.</span></span>
+<span data-ttu-id="d0a70-112">다음 예제에서는 열 머리글 단추를 누를 때마다 정렬 방향을 오름차순과 내림차순으로 번갈아 변경하도록 이벤트 처리기를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="d0a70-112">The example defines the event handler so that the sort direction changes between ascending order and descending order each time you press the column header button.</span></span> <span data-ttu-id="d0a70-113">다음 예제에서는 이벤트 처리기를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d0a70-113">The following example shows the event handler.</span></span>
 
 ```csharp
 public partial class Window1 : Window
@@ -199,7 +199,7 @@ Partial Public Class Window1
 End Class
 ```
 
-<span data-ttu-id="a5d48-114">다음 예제에서는 데이터를 정렬하기 위해 이벤트 처리기가 호출하는 정렬 알고리즘을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a5d48-114">The following example shows the sorting algorithm that is called by the event handler to sort the data.</span></span> <span data-ttu-id="a5d48-115">새 정렬을 수행 <xref:System.ComponentModel.SortDescription> 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="a5d48-115">The sort is performed by creating a new <xref:System.ComponentModel.SortDescription> structure.</span></span>
+<span data-ttu-id="d0a70-114">다음 예제에서는 데이터를 정렬하기 위해 이벤트 처리기가 호출하는 정렬 알고리즘을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d0a70-114">The following example shows the sorting algorithm that is called by the event handler to sort the data.</span></span> <span data-ttu-id="d0a70-115">새 정렬을 수행 <xref:System.ComponentModel.SortDescription> 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="d0a70-115">The sort is performed by creating a new <xref:System.ComponentModel.SortDescription> structure.</span></span>
 
 ```csharp
 private void Sort(string sortBy, ListSortDirection direction)
@@ -225,10 +225,10 @@ Private Sub Sort(ByVal sortBy As String, ByVal direction As ListSortDirection)
 End Sub
 ```
 
-## <a name="see-also"></a><span data-ttu-id="a5d48-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="a5d48-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d0a70-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="d0a70-116">See also</span></span>
 
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [<span data-ttu-id="a5d48-117">ListView 개요</span><span class="sxs-lookup"><span data-stu-id="a5d48-117">ListView Overview</span></span>](listview-overview.md)
-- [<span data-ttu-id="a5d48-118">GridView 개요</span><span class="sxs-lookup"><span data-stu-id="a5d48-118">GridView Overview</span></span>](gridview-overview.md)
-- [<span data-ttu-id="a5d48-119">방법 항목</span><span class="sxs-lookup"><span data-stu-id="a5d48-119">How-to Topics</span></span>](listview-how-to-topics.md)
+- [<span data-ttu-id="d0a70-117">ListView 개요</span><span class="sxs-lookup"><span data-stu-id="d0a70-117">ListView Overview</span></span>](listview-overview.md)
+- [<span data-ttu-id="d0a70-118">GridView 개요</span><span class="sxs-lookup"><span data-stu-id="d0a70-118">GridView Overview</span></span>](gridview-overview.md)
+- [<span data-ttu-id="d0a70-119">방법 항목</span><span class="sxs-lookup"><span data-stu-id="d0a70-119">How-to Topics</span></span>](listview-how-to-topics.md)

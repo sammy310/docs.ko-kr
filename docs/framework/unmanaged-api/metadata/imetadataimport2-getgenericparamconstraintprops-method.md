@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e0503c5bd924793df8143c89e358618fb8844c6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049871"
 ---
-# <a name="imetadataimport2getgenericparamconstraintprops-method"></a><span data-ttu-id="40e1a-102">IMetaDataImport2::GetGenericParamConstraintProps 메서드</span><span class="sxs-lookup"><span data-stu-id="40e1a-102">IMetaDataImport2::GetGenericParamConstraintProps Method</span></span>
-<span data-ttu-id="40e1a-103">지정 된 제약 조건 토큰이 나타내는 제네릭 매개 변수 제약 조건이 있는 연결 된 메타 데이터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="40e1a-103">Gets the metadata associated with the generic parameter constraint represented by the specified constraint token.</span></span>  
+# <a name="imetadataimport2getgenericparamconstraintprops-method"></a><span data-ttu-id="fb50e-102">IMetaDataImport2::GetGenericParamConstraintProps 메서드</span><span class="sxs-lookup"><span data-stu-id="fb50e-102">IMetaDataImport2::GetGenericParamConstraintProps Method</span></span>
+<span data-ttu-id="fb50e-103">지정 된 제약 조건 토큰이 나타내는 제네릭 매개 변수 제약 조건이 있는 연결 된 메타 데이터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="fb50e-103">Gets the metadata associated with the generic parameter constraint represented by the specified constraint token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="40e1a-104">구문</span><span class="sxs-lookup"><span data-stu-id="40e1a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fb50e-104">구문</span><span class="sxs-lookup"><span data-stu-id="fb50e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetGenericParamConstraintProps (  
@@ -37,26 +37,26 @@ HRESULT GetGenericParamConstraintProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="40e1a-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="40e1a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fb50e-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="fb50e-105">Parameters</span></span>  
  `gpc`  
- <span data-ttu-id="40e1a-106">[in] 토큰 메타 데이터를 반환 하는 제네릭 매개 변수 제약 조건입니다.</span><span class="sxs-lookup"><span data-stu-id="40e1a-106">[in] The token to the generic parameter constraint for which to return the metadata.</span></span>  
+ <span data-ttu-id="fb50e-106">[in] 토큰 메타 데이터를 반환 하는 제네릭 매개 변수 제약 조건입니다.</span><span class="sxs-lookup"><span data-stu-id="fb50e-106">[in] The token to the generic parameter constraint for which to return the metadata.</span></span>  
   
  `ptGenericParam`  
- <span data-ttu-id="40e1a-107">[out] 제한 된 제네릭 매개 변수를 나타내는 토큰에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="40e1a-107">[out] A pointer to the token that represents the generic parameter that is constrained.</span></span>  
+ <span data-ttu-id="fb50e-107">[out] 제한 된 제네릭 매개 변수를 나타내는 토큰에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="fb50e-107">[out] A pointer to the token that represents the generic parameter that is constrained.</span></span>  
   
  `ptkConstraintType`  
- <span data-ttu-id="40e1a-108">[out] 에 제약 조건을 나타내는 TypeDef, TypeRef, 또는 TypeSpec 토큰에 대 한 포인터 `ptGenericParam`합니다.</span><span class="sxs-lookup"><span data-stu-id="40e1a-108">[out] A pointer to a TypeDef, TypeRef, or TypeSpec token that represents a constraint on `ptGenericParam`.</span></span>  
+ <span data-ttu-id="fb50e-108">[out] 에 제약 조건을 나타내는 TypeDef, TypeRef, 또는 TypeSpec 토큰에 대 한 포인터 `ptGenericParam`합니다.</span><span class="sxs-lookup"><span data-stu-id="fb50e-108">[out] A pointer to a TypeDef, TypeRef, or TypeSpec token that represents a constraint on `ptGenericParam`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="40e1a-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="40e1a-109">Requirements</span></span>  
- <span data-ttu-id="40e1a-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="40e1a-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fb50e-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="fb50e-109">Requirements</span></span>  
+ <span data-ttu-id="fb50e-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="fb50e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="40e1a-111">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="40e1a-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="fb50e-111">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="fb50e-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="40e1a-112">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="40e1a-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="fb50e-112">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="fb50e-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="40e1a-113">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="40e1a-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="fb50e-113">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fb50e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="40e1a-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="40e1a-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fb50e-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="fb50e-114">See also</span></span>
 
-- [<span data-ttu-id="40e1a-115">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="40e1a-115">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [<span data-ttu-id="40e1a-116">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="40e1a-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="fb50e-115">IMetaDataImport2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="fb50e-115">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="fb50e-116">IMetaDataImport 인터페이스</span><span class="sxs-lookup"><span data-stu-id="fb50e-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

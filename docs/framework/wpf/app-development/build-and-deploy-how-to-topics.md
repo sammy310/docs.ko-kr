@@ -8,28 +8,28 @@ helpviewer_keywords:
 - WPF application [WPF], deploying
 ms.assetid: 88952ad2-5b74-48ca-a4c5-3f4fbb53ce12
 ms.openlocfilehash: 4aaeeed4ff6a130c6d3ddda696286222d7c9efaf
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052237"
 ---
-# <a name="build-and-deploy-how-to-topics"></a><span data-ttu-id="5fc53-102">빌드 및 배포 방법 항목</span><span class="sxs-lookup"><span data-stu-id="5fc53-102">Build and Deploy How-to Topics</span></span>
-<span data-ttu-id="5fc53-103">다음 항목에는 다양 한 프로젝트 파일을 만드는 방법을 보여 줍니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 유형입니다.</span><span class="sxs-lookup"><span data-stu-id="5fc53-103">The following topics show how to create project files for the various [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application types.</span></span>  
+# <a name="build-and-deploy-how-to-topics"></a><span data-ttu-id="d5691-102">빌드 및 배포 방법 항목</span><span class="sxs-lookup"><span data-stu-id="d5691-102">Build and Deploy How-to Topics</span></span>
+<span data-ttu-id="d5691-103">다음 항목에는 다양 한 프로젝트 파일을 만드는 방법을 보여 줍니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 유형입니다.</span><span class="sxs-lookup"><span data-stu-id="d5691-103">The following topics show how to create project files for the various [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application types.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="5fc53-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="5fc53-104">In This Section</span></span>  
- [<span data-ttu-id="5fc53-105">IIS 5.0 및 IIS 6.0을 구성하여 WPF 애플리케이션 배포</span><span class="sxs-lookup"><span data-stu-id="5fc53-105">Configure IIS 5.0 and IIS 6.0 to Deploy WPF Applications</span></span>](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)  
- [<span data-ttu-id="5fc53-106">Visual Studio를 구성하여 웹 서비스를 호출하는 XAML 브라우저 애플리케이션 디버깅</span><span class="sxs-lookup"><span data-stu-id="5fc53-106">Configure Visual Studio to Debug a XAML Browser Application to Call a Web Service</span></span>](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
- [<span data-ttu-id="5fc53-107">설치된 WPF 버전 확인</span><span class="sxs-lookup"><span data-stu-id="5fc53-107">Determine the Installed Version of WPF</span></span>](how-to-determine-the-installed-version-of-wpf.md)  
- [<span data-ttu-id="5fc53-108">.NET Framework 3.0 설치 여부 확인</span><span class="sxs-lookup"><span data-stu-id="5fc53-108">Detect Whether the .NET Framework 3.0 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-0-is-installed.md)  
- [<span data-ttu-id="5fc53-109">.NET Framework 3.5 설치 여부 확인</span><span class="sxs-lookup"><span data-stu-id="5fc53-109">Detect Whether the .NET Framework 3.5 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-5-is-installed.md)  
- [<span data-ttu-id="5fc53-110">Firefox용 WPF 플러그 인 설치 여부 확인</span><span class="sxs-lookup"><span data-stu-id="5fc53-110">Detect Whether the WPF Plug-In for Firefox Is Installed</span></span>](how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)  
+## <a name="in-this-section"></a><span data-ttu-id="d5691-104">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="d5691-104">In This Section</span></span>  
+ [<span data-ttu-id="d5691-105">IIS 5.0 및 IIS 6.0을 구성하여 WPF 애플리케이션 배포</span><span class="sxs-lookup"><span data-stu-id="d5691-105">Configure IIS 5.0 and IIS 6.0 to Deploy WPF Applications</span></span>](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)  
+ [<span data-ttu-id="d5691-106">Visual Studio를 구성하여 웹 서비스를 호출하는 XAML 브라우저 애플리케이션 디버깅</span><span class="sxs-lookup"><span data-stu-id="d5691-106">Configure Visual Studio to Debug a XAML Browser Application to Call a Web Service</span></span>](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
+ [<span data-ttu-id="d5691-107">설치된 WPF 버전 확인</span><span class="sxs-lookup"><span data-stu-id="d5691-107">Determine the Installed Version of WPF</span></span>](how-to-determine-the-installed-version-of-wpf.md)  
+ [<span data-ttu-id="d5691-108">.NET Framework 3.0 설치 여부 확인</span><span class="sxs-lookup"><span data-stu-id="d5691-108">Detect Whether the .NET Framework 3.0 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-0-is-installed.md)  
+ [<span data-ttu-id="d5691-109">.NET Framework 3.5 설치 여부 확인</span><span class="sxs-lookup"><span data-stu-id="d5691-109">Detect Whether the .NET Framework 3.5 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-5-is-installed.md)  
+ [<span data-ttu-id="d5691-110">Firefox용 WPF 플러그 인 설치 여부 확인</span><span class="sxs-lookup"><span data-stu-id="d5691-110">Detect Whether the WPF Plug-In for Firefox Is Installed</span></span>](how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="5fc53-111">관련 단원</span><span class="sxs-lookup"><span data-stu-id="5fc53-111">Related Sections</span></span>  
- [<span data-ttu-id="5fc53-112">WPF 응용 프로그램 빌드</span><span class="sxs-lookup"><span data-stu-id="5fc53-112">Building a WPF Application</span></span>](building-a-wpf-application-wpf.md)  
+## <a name="related-sections"></a><span data-ttu-id="d5691-111">관련 단원</span><span class="sxs-lookup"><span data-stu-id="d5691-111">Related Sections</span></span>  
+ [<span data-ttu-id="d5691-112">WPF 응용 프로그램 빌드</span><span class="sxs-lookup"><span data-stu-id="d5691-112">Building a WPF Application</span></span>](building-a-wpf-application-wpf.md)  
   
- [<span data-ttu-id="5fc53-113">WPF 응용 프로그램 배포</span><span class="sxs-lookup"><span data-stu-id="5fc53-113">Deploying a WPF Application</span></span>](deploying-a-wpf-application-wpf.md)  
+ [<span data-ttu-id="d5691-113">WPF 응용 프로그램 배포</span><span class="sxs-lookup"><span data-stu-id="d5691-113">Deploying a WPF Application</span></span>](deploying-a-wpf-application-wpf.md)  
   
- [<span data-ttu-id="5fc53-114">연습: 내 첫 WPF 데스크톱 애플리케이션</span><span class="sxs-lookup"><span data-stu-id="5fc53-114">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="d5691-114">연습: 내 첫 WPF 데스크톱 애플리케이션</span><span class="sxs-lookup"><span data-stu-id="d5691-114">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- <span data-ttu-id="5fc53-115">[방법: 새 WPF 브라우저 응용 프로그램 프로젝트 만들기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="5fc53-115">[How to: Create a New WPF Browser Application Project](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))</span></span>
+ <span data-ttu-id="d5691-115">[방법: 새 WPF 브라우저 응용 프로그램 프로젝트 만들기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="d5691-115">[How to: Create a New WPF Browser Application Project](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))</span></span>

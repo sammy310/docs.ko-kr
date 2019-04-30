@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d204ec29304fe0c4596950cd17c48d0c1d2ac616
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050157"
 ---
-# <a name="imetadatadispenserexfindassembly-method"></a><span data-ttu-id="81c3a-102">IMetaDataDispenserEx::FindAssembly 메서드</span><span class="sxs-lookup"><span data-stu-id="81c3a-102">IMetaDataDispenserEx::FindAssembly Method</span></span>
-<span data-ttu-id="81c3a-103">이 메서드가 구현되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="81c3a-103">This method is not implemented.</span></span> <span data-ttu-id="81c3a-104">를 호출 하는 경우 E_NOTIMPL을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="81c3a-104">If called, it returns E_NOTIMPL.</span></span>  
+# <a name="imetadatadispenserexfindassembly-method"></a><span data-ttu-id="4d304-102">IMetaDataDispenserEx::FindAssembly 메서드</span><span class="sxs-lookup"><span data-stu-id="4d304-102">IMetaDataDispenserEx::FindAssembly Method</span></span>
+<span data-ttu-id="4d304-103">이 메서드가 구현되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="4d304-103">This method is not implemented.</span></span> <span data-ttu-id="4d304-104">를 호출 하는 경우 E_NOTIMPL을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="4d304-104">If called, it returns E_NOTIMPL.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="81c3a-105">구문</span><span class="sxs-lookup"><span data-stu-id="81c3a-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4d304-105">구문</span><span class="sxs-lookup"><span data-stu-id="4d304-105">Syntax</span></span>  
   
 ```  
 HRESULT FindAssembly(  
@@ -41,38 +41,38 @@ HRESULT FindAssembly(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="81c3a-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="81c3a-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4d304-106">매개 변수</span><span class="sxs-lookup"><span data-stu-id="4d304-106">Parameters</span></span>  
  `szAppBase`  
- <span data-ttu-id="81c3a-107">[in] 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="81c3a-107">[in] Not used.</span></span>  
+ <span data-ttu-id="4d304-107">[in] 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4d304-107">[in] Not used.</span></span>  
   
  `szPrivateBin`  
- <span data-ttu-id="81c3a-108">[in] 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="81c3a-108">[in] Not used.</span></span>  
+ <span data-ttu-id="4d304-108">[in] 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4d304-108">[in] Not used.</span></span>  
   
  `szGlobalBin`  
- <span data-ttu-id="81c3a-109">[in] 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="81c3a-109">[in] Not used.</span></span>  
+ <span data-ttu-id="4d304-109">[in] 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4d304-109">[in] Not used.</span></span>  
   
  `szAssemblyName`  
- <span data-ttu-id="81c3a-110">[in] 어셈블리를 찾을 수입니다.</span><span class="sxs-lookup"><span data-stu-id="81c3a-110">[in] The assembly to be found.</span></span>  
+ <span data-ttu-id="4d304-110">[in] 어셈블리를 찾을 수입니다.</span><span class="sxs-lookup"><span data-stu-id="4d304-110">[in] The assembly to be found.</span></span>  
   
  `szName`  
- <span data-ttu-id="81c3a-111">[out] 어셈블리의 단순한 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="81c3a-111">[out] The simple name of the assembly.</span></span>  
+ <span data-ttu-id="4d304-111">[out] 어셈블리의 단순한 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="4d304-111">[out] The simple name of the assembly.</span></span>  
   
  `cchName`  
- <span data-ttu-id="81c3a-112">[in] 크기 (바이트)의 `szName`합니다.</span><span class="sxs-lookup"><span data-stu-id="81c3a-112">[in] The size, in bytes, of `szName`.</span></span>  
+ <span data-ttu-id="4d304-112">[in] 크기 (바이트)의 `szName`합니다.</span><span class="sxs-lookup"><span data-stu-id="4d304-112">[in] The size, in bytes, of `szName`.</span></span>  
   
  `pcName`  
- <span data-ttu-id="81c3a-113">[out] 에 실제로 반환 된 문자 수가 `szName`합니다.</span><span class="sxs-lookup"><span data-stu-id="81c3a-113">[out] The number of characters actually returned in `szName`.</span></span>  
+ <span data-ttu-id="4d304-113">[out] 에 실제로 반환 된 문자 수가 `szName`합니다.</span><span class="sxs-lookup"><span data-stu-id="4d304-113">[out] The number of characters actually returned in `szName`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="81c3a-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="81c3a-114">Requirements</span></span>  
- <span data-ttu-id="81c3a-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="81c3a-115">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4d304-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="4d304-114">Requirements</span></span>  
+ <span data-ttu-id="4d304-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="4d304-115">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="81c3a-116">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="81c3a-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="4d304-116">**헤더:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="4d304-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="81c3a-117">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="81c3a-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="4d304-117">**라이브러리:** MsCorEE.dll에서 리소스로 사용</span><span class="sxs-lookup"><span data-stu-id="4d304-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="81c3a-118">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="81c3a-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="4d304-118">**.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4d304-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="81c3a-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="81c3a-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4d304-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="4d304-119">See also</span></span>
 
-- [<span data-ttu-id="81c3a-120">IMetaDataDispenserEx 인터페이스</span><span class="sxs-lookup"><span data-stu-id="81c3a-120">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [<span data-ttu-id="81c3a-121">IMetaDataDispenser 인터페이스</span><span class="sxs-lookup"><span data-stu-id="81c3a-121">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+- [<span data-ttu-id="4d304-120">IMetaDataDispenserEx 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4d304-120">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [<span data-ttu-id="4d304-121">IMetaDataDispenser 인터페이스</span><span class="sxs-lookup"><span data-stu-id="4d304-121">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
