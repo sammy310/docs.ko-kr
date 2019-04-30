@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f12442eb5596ff3dca49cf24e27040f3e92d3a7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991928"
 ---
 # <a name="icorprofilerinfobegininprocdebugging-method"></a>ICorProfilerInfo::BeginInprocDebugging 메서드
 초기화는 프로세스 디버깅을 지원 합니다. 이 메서드는.NET Framework 버전 2.0에서에서 사용 되지 않습니다.  

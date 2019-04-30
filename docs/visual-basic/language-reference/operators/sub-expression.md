@@ -7,11 +7,11 @@ helpviewer_keywords:
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
 ms.openlocfilehash: 5b26a091dc8eb7415702c3c2853a569324def7d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013506"
 ---
 # <a name="sub-expression-visual-basic"></a>하위 식(Visual Basic)
 매개 변수 및 서브루틴 람다 식을 정의 하는 코드를 선언 합니다.  
@@ -40,17 +40,17 @@ End Sub
 ## <a name="lambda-expression-syntax"></a>람다 식 구문  
  람다 식의 구문은 유사 표준 서브루틴의 합니다. 차이점은 다음과 같습니다.  
   
--   람다 식에 이름이 없습니다.  
+- 람다 식에 이름이 없습니다.  
   
--   람다 식을와 같은 한정자를 사용할 수 없습니다 `Overloads` 또는 `Overrides`합니다.  
+- 람다 식을와 같은 한정자를 사용할 수 없습니다 `Overloads` 또는 `Overrides`합니다.  
   
--   한 줄 람다 식의 본문에는 식이 아닌 문 이어야 합니다. Sub 프로시저를 호출 하지만 function 프로시저를 호출 하지 본문 구성할 수 있습니다.  
+- 한 줄 람다 식의 본문에는 식이 아닌 문 이어야 합니다. Sub 프로시저를 호출 하지만 function 프로시저를 호출 하지 본문 구성할 수 있습니다.  
   
--   람다 식에서 모든 매개 변수에 지정 된 데이터 형식 또는 모든 매개 변수를 유추할 수 있어야 합니다.  
+- 람다 식에서 모든 매개 변수에 지정 된 데이터 형식 또는 모든 매개 변수를 유추할 수 있어야 합니다.  
   
--   선택 사항 및 `ParamArray` 매개 변수는 람다 식에서 허용 되지 않습니다.  
+- 선택 사항 및 `ParamArray` 매개 변수는 람다 식에서 허용 되지 않습니다.  
   
--   제네릭 매개 변수 람다 식에서 허용 되지 않습니다.  
+- 제네릭 매개 변수 람다 식에서 허용 되지 않습니다.  
   
 ## <a name="example"></a>예제  
  다음은 콘솔에 값을 기록 하는 람다 식의 예입니다. 두 줄 및 여러 줄 람다 식 구문은 서브루틴을 보여 줍니다. 더 많은 예제를 참조 하세요 [람다 식](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)합니다.  

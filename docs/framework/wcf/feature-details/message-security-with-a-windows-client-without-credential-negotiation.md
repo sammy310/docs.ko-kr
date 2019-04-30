@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
 ms.openlocfilehash: 43bc222bb69aafa3fa3492d79d35fbc492055ead
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038607"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>자격 증명 협상 없이 Windows 클라이언트를 사용하는 메시지 보안
 다음 시나리오에는 Windows Communication Foundation (WCF) 클라이언트 및 Kerberos 프로토콜에 의해 보호 되는 서비스를 보여 줍니다.  
@@ -36,9 +36,9 @@ ms.locfileid: "59344834"
 ## <a name="service"></a>서비스  
  다음 코드와 구성은 독립적으로 실행되어야 합니다. 다음 작업 중 하나를 수행합니다.  
   
--   구성 없이 코드를 사용하여 독립 실행형 서비스를 만듭니다.  
+- 구성 없이 코드를 사용하여 독립 실행형 서비스를 만듭니다.  
   
--   제공된 구성을 사용하여 서비스를 만들지만 엔드포인트를 정의하지 않습니다.  
+- 제공된 구성을 사용하여 서비스를 만들지만 엔드포인트를 정의하지 않습니다.  
   
 ### <a name="code"></a>코드  
  다음 코드에서는 메시지 보안을 사용하는 서비스 엔드포인트를 만듭니다. 코드는 서비스 자격 증명 협상과 SCT(보안 컨텍스트 토큰) 설정을 비활성화합니다.  
@@ -95,9 +95,9 @@ ms.locfileid: "59344834"
 ## <a name="client"></a>클라이언트  
  다음 코드와 구성은 독립적으로 실행되어야 합니다. 다음 작업 중 하나를 수행합니다.  
   
--   이 코드와 클라이언트 코드를 사용하여 독립 실행형 클라이언트를 만듭니다.  
+- 이 코드와 클라이언트 코드를 사용하여 독립 실행형 클라이언트를 만듭니다.  
   
--   엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들어:  
+- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들어:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  

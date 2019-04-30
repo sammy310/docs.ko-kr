@@ -8,11 +8,11 @@ helpviewer_keywords:
 - encoder parameters [Windows Forms], determining supported
 ms.assetid: f47ae459-e3ce-4d41-a140-2f6c6aea3f44
 ms.openlocfilehash: 2626eee239d9876125340dd133c5a9b3e45c3d7e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004330"
 ---
 # <a name="how-to-determine-the-parameters-supported-by-an-encoder"></a>방법: 인코더에서 지원하는 매개 변수 확인
 품질 및 압축 수준 등의 이미지 매개 변수를 조정할 수 있지만 매개 변수는 지정 된 이미지 인코더가 지 알고 있어야 합니다. 합니다 <xref:System.Drawing.Image> 클래스를 제공 합니다 <xref:System.Drawing.Image.GetEncoderParameterList%2A> 메서드 특정 인코더에 대 한 지원 되는 이미지 매개 변수를 확인할 수 있도록 합니다. GUID를 사용 하 여 인코더를 지정 합니다. 합니다 <xref:System.Drawing.Image.GetEncoderParameterList%2A> 메서드는 배열을 반환 <xref:System.Drawing.Imaging.EncoderParameter> 개체입니다.  
@@ -26,9 +26,9 @@ ms.locfileid: "59204577"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   Windows Forms 애플리케이션  
+- Windows Forms 애플리케이션  
   
--   A <xref:System.Windows.Forms.PaintEventArgs>에서의 매개 변수인 <xref:System.Windows.Forms.PaintEventHandler>합니다.   
+- A <xref:System.Windows.Forms.PaintEventArgs>에서의 매개 변수인 <xref:System.Windows.Forms.PaintEventHandler>합니다.   
   
 ## <a name="see-also"></a>참고자료
 

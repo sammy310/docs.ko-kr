@@ -8,11 +8,11 @@ helpviewer_keywords:
 - My.WebServices object
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
 ms.openlocfilehash: a60f32c4f581e42f240fca55ce496776c5511ba3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050291"
 ---
 # <a name="mywebservices-object"></a>My.WebServices 개체
 만들기 및 현재 프로젝트에서 참조 하는 각 XML 웹 서비스의 단일 인스턴스 액세스에 대 한 속성을 제공 합니다.  

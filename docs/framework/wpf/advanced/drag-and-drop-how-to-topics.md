@@ -7,11 +7,11 @@ helpviewer_keywords:
 - drag-and-drop [WPF], how-to topics
 ms.assetid: 559c0804-c62a-4640-b6b9-cbd2aa9fb99c
 ms.openlocfilehash: 87c1425e6eaf03b900e07cfd9fc489ef01b1607a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010438"
 ---
 # <a name="drag-and-drop-how-to-topics"></a>끌어서 놓기 방법 항목
 다음 예제를 사용 하 여 일반적인 작업을 수행 하는 방법을 보여 줍니다는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 끌어서 놓기 프레임 워크입니다.  

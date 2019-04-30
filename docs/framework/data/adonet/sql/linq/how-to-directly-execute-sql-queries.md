@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e491b9bf-741a-4296-9f51-76c25ddf6a82
 ms.openlocfilehash: 6423959ed5036cc8ab2a88bb7273ef7aa95c8958
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037767"
 ---
 # <a name="how-to-directly-execute-sql-queries"></a>방법: SQL 쿼리 직접 실행
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]을 작성한 쿼리를 텍스트 형식의 매개 변수가 있는 SQL 쿼리로 변환하고 SQL 서버에 전달하여 처리합니다.  

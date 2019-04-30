@@ -3,11 +3,11 @@ title: 비제네릭 ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
 ms.openlocfilehash: 353128d1c313be62222e091c084e5b5e37a92b58
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004915"
 ---
 # <a name="non-generic-foreach"></a>비제네릭 ForEach
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]의 도구 상자에는 <xref:System.Activities.Statements.ForEach%601> 컬렉션을 반복할 수 있도록 하는 <xref:System.Collections.Generic.IEnumerable%601>을 비롯한 흐름 제어 활동이 제공됩니다.  
@@ -97,9 +97,9 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
   
 1. 선택한 프로젝트를 솔루션의 시작 프로젝트로 설정합니다.  
   
-    1.  **CodeTestClient** 코드를 사용 하 여 작업을 사용 하는 방법을 보여 줍니다.  
+    1. **CodeTestClient** 코드를 사용 하 여 작업을 사용 하는 방법을 보여 줍니다.  
   
-    2.  **DesignerTestClient** 디자이너 내에서 작업을 사용 하는 방법을 보여 줍니다.  
+    2. **DesignerTestClient** 디자이너 내에서 작업을 사용 하는 방법을 보여 줍니다.  
   
 2. 프로젝트를 빌드하고 실행합니다.  
   

@@ -6,10 +6,10 @@ helpviewer_keywords:
 ms.assetid: bc5de6b6-1a63-42a3-919a-67d21bae24e0
 ms.openlocfilehash: 1dedc6d771e75acd0d657bb5430c178428c0f0ac
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59976705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990253"
 ---
 # <a name="duplex"></a>이중
 Duplex 샘플은 이중 계약을 정의 및 구현하는 방법을 보여 줍니다. 이중 통신은 클라이언트가 서비스와의 세션을 설정할 때 이루어지며, 서비스가 클라이언트로 메시지를 다시 보낼 수 있는 채널을 제공합니다. 이 샘플은 기반 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)합니다. 이중 계약은 클라이언트에서 서비스로의 기본 인터페이스와 서비스에서 클라이언트의 콜백 인터페이스의 쌍으로 정의됩니다. 이 샘플에서 `ICalculatorDuplex` 인터페이스를 사용하여 클라이언트는 수학 연산을 수행하고 세션 도중 결과를 계산할 수 있습니다. 서비스는 `ICalculatorDuplexCallback` 인터페이스에서 결과를 반환합니다. 클라이언트와 서비스 간에 전송되는 메시지 집합을 서로 연결하기 위해 컨텍스트를 설정해야 하므로 이중 계약에는 세션이 필요합니다.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - typography [WPF]
 ms.assetid: e4ef38db-b7d1-4bda-87ab-8bb738440ddc
 ms.openlocfilehash: d8073ff272dd4c295dba11096126a535621727d0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981931"
 ---
 # <a name="typography"></a>입력 체계
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 텍스트 콘텐츠의 풍부한 표현에 대 한 지원이 포함 됩니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 텍스트는 [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]을 사용하여 렌더링되어 텍스트의 명확성 및 가독성이 향상됩니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 도 지원 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 하 여 정의 된 것 이상의 추가 기능을 제공 하는 글꼴을 [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] 형식입니다.  

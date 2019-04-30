@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
 ms.openlocfilehash: 8dd463c895efcddfe288fe1dc8571981872d9d80
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033615"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>방법: 매개 변수를 사용하는 저장 프로시저 사용
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 출력 매개 변수를 참조 매개 변수에 매핑하고 값 형식에 대해 매개 변수를 nullable로 선언합니다.  

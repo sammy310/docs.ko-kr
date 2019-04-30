@@ -8,11 +8,11 @@ helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
 ms.openlocfilehash: 6b710df45379ccce4daf340b4dbe2701d3c96604
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62019087"
 ---
 # <a name="adorners-overview"></a>표시기 개요
 표시기는 특수 한 유형의 <xref:System.Windows.FrameworkElement>사용자에 게 시각 신호를 제공 하는 데 사용 합니다. 표시기는 다른 용도로 요소에 기능 핸들을 추가하거나 컨트롤에 대한 상태 정보를 제공하는 데 사용할 수 있습니다.  
@@ -23,13 +23,13 @@ ms.locfileid: "59320472"
   
  표시기에 대한 일반 애플리케이션은 다음과 같습니다.  
   
--   기능 핸들을 추가 <xref:System.Windows.UIElement> 사용자 (예: 크기 조정, 회전, 위치 변경) 어떤 방식으로든에서 요소를 조작할 수 있도록 합니다.  
+- 기능 핸들을 추가 <xref:System.Windows.UIElement> 사용자 (예: 크기 조정, 회전, 위치 변경) 어떤 방식으로든에서 요소를 조작할 수 있도록 합니다.  
   
--   다양한 상태를 나타내거나 다양한 이벤트에 대한 응답으로 시각적 피드백을 제공합니다.  
+- 다양한 상태를 나타내거나 다양한 이벤트에 대한 응답으로 시각적 피드백을 제공합니다.  
   
--   에 시각적 장식을 오버레이 <xref:System.Windows.UIElement>입니다.  
+- 에 시각적 장식을 오버레이 <xref:System.Windows.UIElement>입니다.  
   
--   시각적으로 마스킹 하거나 재정의의 일부 또는 전체를 <xref:System.Windows.UIElement>입니다.  
+- 시각적으로 마스킹 하거나 재정의의 일부 또는 전체를 <xref:System.Windows.UIElement>입니다.  
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 시각적 요소를 표시하는 기본 프레임워크를 제공합니다. 다음 표에 개체 및 해당 용도를 표시할 때 사용되는 기본 유형이 나와 있습니다. 다음은 여러 사용법의 예입니다.  
   

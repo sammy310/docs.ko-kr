@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data binding [WPF], binding to XElement
 ms.assetid: 6a629a49-fe1c-465d-b76a-3dcbf4307b64
 ms.openlocfilehash: afecb87dcfce1a8c48f1b2108edeae3cfd2aa16f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020961"
 ---
 # <a name="how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results"></a>방법: XDocument, XElement 또는 LINQ for XML 쿼리 결과에 바인딩
 XML 데이터를 바인딩하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.ItemsControl> 를 사용 하 여 <xref:System.Xml.Linq.XDocument>입니다.  

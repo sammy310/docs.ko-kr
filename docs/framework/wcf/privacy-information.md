@@ -7,11 +7,11 @@ helpviewer_keywords:
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
 ms.openlocfilehash: e506908299109f94be6d190017b381fe7b4ee044
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032994"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 개인 정보 취급 방침
 Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할 것을 약속합니다. 버전 3.0, Windows Communication Foundation (WCF)를 사용 하 여 응용 프로그램을 빌드할 때 응용 프로그램의 최종 사용자가 개인 정보 보호를 달라질 수 있습니다. 예를 들어 응용 프로그램에서 사용자 연락처 정보를 명시적으로 수집하거나, 정보를 요청하거나 인터넷을 통해 정보를 웹 사이트로 보낼 수 있습니다. 응용 프로그램에 Microsoft 기술을 포함하는 경우 해당 기술의 동작이 개인 정보 보호에 영향을 줄 수 있습니다. WCF 보내지 않습니다 모든 정보를 Microsoft 응용 프로그램에서 우리에 게 보낼 사용자 또는 최종 사용자가 선택 하지 않으면.  
@@ -38,9 +38,9 @@ Microsoft는 최종 사용자의 개인 정보 보호를 위해 최선을 다할
   
  인증은 클라이언트와 서비스 간에 자격 증명을 전달하여 수행됩니다. 다음과 같이 전송 수준 보안이나 SOAP 메시지 수준 보안을 통해 인증을 수행할 수 있습니다.  
   
--   SOAP 메시지 보안에서는 사용자 이름/암호, X.509 인증서, Kerberos 티켓 및 SAML 토큰 같은 자격 증명을 통해 인증이 수행됩니다. 이러한 모든 자격 증명에는 발급자에 따라 개인 정보가 포함될 수 있습니다.  
+- SOAP 메시지 보안에서는 사용자 이름/암호, X.509 인증서, Kerberos 티켓 및 SAML 토큰 같은 자격 증명을 통해 인증이 수행됩니다. 이러한 모든 자격 증명에는 발급자에 따라 개인 정보가 포함될 수 있습니다.  
   
--   전송 보안을 사용하는 경우 HTTP 인증 체계(기본, 다이제스트, 협상, Negotiate, Windows 통합 인증, NTLM, 없음 및 익명) 같은 일반적인 전송 인증 메커니즘과 폼 인증을 통해 인증이 수행됩니다.  
+- 전송 보안을 사용하는 경우 HTTP 인증 체계(기본, 다이제스트, 협상, Negotiate, Windows 통합 인증, NTLM, 없음 및 익명) 같은 일반적인 전송 인증 메커니즘과 폼 인증을 통해 인증이 수행됩니다.  
   
  인증을 통해 통신하는 엔드포인트 간에 보안 세션이 설정될 수 있습니다. 세션은 보안 세션의 수명 동안 지속되는 GUID로 식별됩니다. 다음 표에서는 보관되는 데이터와 위치를 보여 줍니다.  
   

@@ -3,11 +3,11 @@ title: XML 트리 쿼리(Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2e35c1ab-08c8-4378-9ca8-8ff344756eda
 ms.openlocfilehash: 0d3855a562ce5ec43b28fba21b2ab4db0583a2d3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024640"
 ---
 # <a name="querying-xml-trees-visual-basic"></a>XML 트리 쿼리(Visual Basic)
 이 단원에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리의 예제를 제공합니다.  

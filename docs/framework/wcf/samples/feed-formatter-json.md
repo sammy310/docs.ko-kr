@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: f9c0b295-55e7-48ea-b308-ba51c7d31143
 ms.openlocfilehash: c3e3378cd2465e26e4b6ff7b4c12a55050301095
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59976198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990108"
 ---
 # <a name="feed-formatter-json"></a>피드 포맷터(JSON)
 이 샘플에서는 사용자 지정 <xref:System.ServiceModel.Syndication.SyndicationFeed> 및 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>를 사용하여 JSON(JavaScript Object Notation) 형식으로 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 클래스의 인스턴스를 serialize하는 방법을 보여 줍니다.  

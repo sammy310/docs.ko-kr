@@ -6,11 +6,11 @@ helpviewer_keywords:
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
 ms.openlocfilehash: d3c7ae9da9c18e53da393928e34dcfbf04fc891c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024692"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Visual Basic에서 문화권이 문자열에 영향을 주는 방식
 이 도움말 페이지는 Visual Basic 문자열 변환과 비교를 수행 하려면 문화권 정보를 사용 하는 방법을 설명 합니다.  
@@ -29,9 +29,9 @@ ms.locfileid: "58834623"
   
  합니다 `Str` (숫자를 문자열로 변환) 및 `Val` 문자열 및 숫자 간에 변환 하는 경우 (변환 문자열을 숫자로) 함수에서는 응용 프로그램의 culture 정보를 넣지 마십시오. 대신, 마침표 (.)만 유효한 소수 구분 기호로 인식합니다. 이러한 함수의 문화권 인식에서 유사한 점은 다음과 같습니다.  
   
--   **현재 문화권을 사용 하는 변환입니다.** `CStr` 하 고 `Format` 함수는 문자열을 숫자로 변환할 하며 `CDbl` 및 `CInt` 함수는 문자열을 숫자로 변환 합니다.  
+- **현재 문화권을 사용 하는 변환입니다.** `CStr` 하 고 `Format` 함수는 문자열을 숫자로 변환할 하며 `CDbl` 및 `CInt` 함수는 문자열을 숫자로 변환 합니다.  
   
--   **특정 문화권을 사용 하는 변환입니다.** 각 숫자 개체에는 `ToString(IFormatProvider)` 문자열을 숫자로 변환 하는 메서드 및 `Parse(String, IFormatProvider)` 메서드는 문자열을 숫자로 변환 합니다. 예를 들어 합니다 `Double` 형식을 제공 합니다 <xref:System.Double.ToString%28System.IFormatProvider%29> 및 <xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29> 메서드.  
+- **특정 문화권을 사용 하는 변환입니다.** 각 숫자 개체에는 `ToString(IFormatProvider)` 문자열을 숫자로 변환 하는 메서드 및 `Parse(String, IFormatProvider)` 메서드는 문자열을 숫자로 변환 합니다. 예를 들어 합니다 `Double` 형식을 제공 합니다 <xref:System.Double.ToString%28System.IFormatProvider%29> 및 <xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29> 메서드.  
   
  자세한 내용은 <xref:Microsoft.VisualBasic.Conversion.Str%2A> 및 <xref:Microsoft.VisualBasic.Conversion.Val%2A>를 참조하세요.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "58834623"
 ## <a name="comparing-strings"></a>문자열 비교  
  다음 두 가지 중요 한 경우 문자열 비교 해야 하는 위치:  
   
--   **사용자에 게 표시할 데이터를 정렬 합니다.** 문자열이 제대로 정렬 되므로 현재 문화권에 따라 작업을 사용 합니다.  
+- **사용자에 게 표시할 데이터를 정렬 합니다.** 문자열이 제대로 정렬 되므로 현재 문화권에 따라 작업을 사용 합니다.  
   
--   **두 응용 프로그램 내부 문자열 (일반적으로 보안을 위해) 정확히 일치 하는 경우를 결정 합니다.** 현재 문화권을 무시 하는 작업을 사용 합니다.  
+- **두 응용 프로그램 내부 문자열 (일반적으로 보안을 위해) 정확히 일치 하는 경우를 결정 합니다.** 현재 문화권을 무시 하는 작업을 사용 합니다.  
   
  두 가지 유형의 Visual Basic을 사용한 비교를 수행할 수 있습니다 <xref:Microsoft.VisualBasic.Strings.StrComp%2A> 함수입니다. 선택적 지정 `Compare` 비교의 형식을 제어 하는 인수: `Text` 대부분의 입력 및 출력에 대 한 `Binary` 정확히 일치를 확인 합니다.  
   

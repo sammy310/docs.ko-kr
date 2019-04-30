@@ -3,11 +3,11 @@ title: SQL-CLR 사용자 지정 대/소문자 매핑
 ms.date: 03/30/2017
 ms.assetid: d916c7fb-4b56-4214-acbe-5e23365047b2
 ms.openlocfilehash: bc92d54cad6a977268ef3f000c684d5f195a933d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037052"
 ---
 # <a name="sql-clr-custom-type-mappings"></a>SQL-CLR 사용자 지정 대/소문자 매핑
 SQL Server와 CLR(공용 언어 런타임) 간의 형식 매핑은 SQLMetal 명령줄 도구 또는 개체 관계형 디자이너(O/R 디자이너)를 사용할 때 자동으로 지정됩니다.  

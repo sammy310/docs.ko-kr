@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
 ms.openlocfilehash: 3cf9d133aee5a2c3d93c1a464c96fdaebcf230f3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018396"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>연습: Microsoft Expression Blend를 사용하여 단추 만들기
 이 연습을 만드는 과정을 단계별로 안내를 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Microsoft Expression Blend를 사용 하 여 사용자 지정된 단추입니다.  
@@ -117,17 +117,17 @@ ms.locfileid: "59300463"
   
 10. **GlassCube 투명 같이 확인 합니다.** 설정 된 <xref:System.Windows.Shapes.Shape.Fill%2A> 를 사용 하 여 숨겨 요건 선형 그라데이션을 불투명 75% 이며이 번갈아 사용 색 흰색 및 투명 6 약 균등 하 게 하는 간격을 따라 합니다. 값은 그라데이션 중지점으로 설정 합니다.  
   
-    -   그라데이션 중지점 1: 알파 값이 75%를 사용 하 여 백서  
+    - 그라데이션 중지점 1: 알파 값이 75%를 사용 하 여 백서  
   
-    -   그라데이션 중지점 2: 투명  
+    - 그라데이션 중지점 2: 투명  
   
-    -   그라데이션 중지점 3: 알파 값이 75%를 사용 하 여 백서  
+    - 그라데이션 중지점 3: 알파 값이 75%를 사용 하 여 백서  
   
-    -   그라데이션 중지점 4: 투명  
+    - 그라데이션 중지점 4: 투명  
   
-    -   그라데이션 중지점 5: 알파 값이 75%를 사용 하 여 백서  
+    - 그라데이션 중지점 5: 알파 값이 75%를 사용 하 여 백서  
   
-    -   그라데이션 중지점 6: 투명  
+    - 그라데이션 중지점 6: 투명  
   
      이 "물결선" 투명 모양을 만듭니다.  
   
@@ -173,9 +173,9 @@ ms.locfileid: "59300463"
   
 6. **IsFocused에 대 한 속성 트리거를 만듭니다.** 와 동일한 절차를 사용 하 여 <xref:System.Windows.UIElement.IsMouseOver%2A> (이 섹션의 첫 번째 단계 참조)에 대 한 다른 속성 트리거 만들기를 <xref:System.Windows.UIElement.IsFocused%2A> 속성입니다. 하는 동안 **트리거 기록**, 다음 작업 트리거를 추가 합니다.  
   
-    -   **glassCube** 가져옵니다는 <xref:System.Windows.UIElement.Opacity%2A> 100%입니다.  
+    - **glassCube** 가져옵니다는 <xref:System.Windows.UIElement.Opacity%2A> 100%입니다.  
   
-    -   **차원적** 가져옵니다는 <xref:System.Windows.Shapes.Shape.Stroke%2A> "{DynamicResource {X:static SystemColors.HighlightBrushKey}}"의 사용자 지정 식 값입니다.  
+    - **차원적** 가져옵니다는 <xref:System.Windows.Shapes.Shape.Stroke%2A> "{DynamicResource {X:static SystemColors.HighlightBrushKey}}"의 사용자 지정 식 값입니다.  
   
  이 연습에서 마지막 단계에서는 단추에 애니메이션 추가 하겠습니다. 이러한 애니메이션 이벤트에 의해 트리거되는지-특히 합니다 <xref:System.Windows.UIElement.MouseEnter> 및 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다.  
   
@@ -208,19 +208,19 @@ ms.locfileid: "59300463"
   
 5. **다른 이벤트 트리거를 만들고 다른 애니메이션 연결 합니다.** 애니메이션을 하나 더 추가 해 보겠습니다. 이전 이벤트 트리거 애니메이션을 만드는 데 사용한 것 비슷한 절차를 사용 합니다.  
   
-    1.  사용 하 여 새 이벤트 트리거는 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다.  
+    1. 사용 하 여 새 이벤트 트리거는 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다.  
   
-    2.  새 타임 라인을 사용 하 여 연결 된 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다.  
+    2. 새 타임 라인을 사용 하 여 연결 된 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다.  
   
      ![새 일정을 만드는 방법](./media/custom-button-blend-clickeventtrigger1.png "custom_button_blend_ClickEventTrigger1")  
   
-    1.  이 timeline에 대 한 두 개의 키프레임, 0.0 초에서 1 및 0.3 초에 두 번째를 만듭니다.  
+    1. 이 timeline에 대 한 두 개의 키프레임, 0.0 초에서 1 및 0.3 초에 두 번째를 만듭니다.  
   
-    2.  강조 표시 하는 0.3 초에 키 프레임을 사용 하 여 설정 합니다 **변형 각도 회전** 360도 까지입니다.  
+    2. 강조 표시 하는 0.3 초에 키 프레임을 사용 하 여 설정 합니다 **변형 각도 회전** 360도 까지입니다.  
   
      ![회전 변형을 만드는 방법](./media/custom-button-blend-rotatetransform.gif "custom_button_blend_RotateTransform")  
   
-    1.  F5 키를 눌러 애플리케이션을 실행합니다. 단추를 클릭합니다. 투명 효과 레이어가 회전 하는 확인 합니다.  
+    1. F5 키를 눌러 애플리케이션을 실행합니다. 단추를 클릭합니다. 투명 효과 레이어가 회전 하는 확인 합니다.  
   
 ## <a name="conclusion"></a>결론  
  사용자 지정된 단추를 완료 했습니다. 응용 프로그램의 모든 단추에 적용 된 단추 템플릿을 사용 하 여이 연습 했습니다. 템플릿 편집 모드를 유지 하는 경우 (다음 그림 참조) 및 단추 만들기, 모양 및 아닌 기본 단추와 같은 사용자 지정 단추 처럼 동작 하 표시 됩니다.  
@@ -237,15 +237,15 @@ ms.locfileid: "59300463"
   
  결론적으로 단추 템플릿 사용자 지정 프로세스 알아보았습니다 Microsoft Expression Blend에서 다음을 수행 하는 방법.  
   
--   컨트롤의 모양을 사용자 지정 합니다.  
+- 컨트롤의 모양을 사용자 지정 합니다.  
   
--   속성 트리거를 설정 합니다. 속성 트리거 컨트롤 뿐만 아니라 대부분의 개체에 사용할 수 있기 때문에 매우 유용 합니다.  
+- 속성 트리거를 설정 합니다. 속성 트리거 컨트롤 뿐만 아니라 대부분의 개체에 사용할 수 있기 때문에 매우 유용 합니다.  
   
--   이벤트 트리거를 설정 합니다. 이벤트 트리거 컨트롤 뿐만 아니라 대부분의 개체에 사용할 수 있기 때문에 매우 유용 합니다.  
+- 이벤트 트리거를 설정 합니다. 이벤트 트리거 컨트롤 뿐만 아니라 대부분의 개체에 사용할 수 있기 때문에 매우 유용 합니다.  
   
--   애니메이션을 만듭니다.  
+- 애니메이션을 만듭니다.  
   
--   Bitmapeffect 추가 그라데이션, 만들기, 변환에 사용 및 개체의 기본 속성을 설정 합니다.  
+- Bitmapeffect 추가 그라데이션, 만들기, 변환에 사용 및 개체의 기본 속성을 설정 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

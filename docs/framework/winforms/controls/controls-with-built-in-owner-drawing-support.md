@@ -9,11 +9,11 @@ helpviewer_keywords:
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
 ms.openlocfilehash: 1807170b2f5df2333ec3b271a11f9b929c1e7993
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011582"
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>소유자가 그린 기본 제공 컨트롤 지원
 사용자 지정 그리기라고도 하는 Windows Forms의 소유자 그리기는 특정 컨트롤을 시각적 모양으로 변경하는 기술입니다.  
@@ -38,27 +38,27 @@ ms.locfileid: "59087185"
   
  다음 Windows Forms 컨트롤은 모든 버전의 .NET Framework에서 소유자 그리기를 지원합니다.  
   
--   <xref:System.Windows.Forms.ListBox>  
+- <xref:System.Windows.Forms.ListBox>  
   
--   <xref:System.Windows.Forms.ComboBox>  
+- <xref:System.Windows.Forms.ComboBox>  
   
--   <xref:System.Windows.Forms.MenuItem> (사용한 <xref:System.Windows.Forms.MainMenu> 고 <xref:System.Windows.Forms.ContextMenu>)  
+- <xref:System.Windows.Forms.MenuItem> (사용한 <xref:System.Windows.Forms.MainMenu> 고 <xref:System.Windows.Forms.ContextMenu>)  
   
--   <xref:System.Windows.Forms.TabControl>  
+- <xref:System.Windows.Forms.TabControl>  
   
  다음 컨트롤은 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]에서만 소유자 그리기를 지원합니다.  
   
--   <xref:System.Windows.Forms.ToolTip>  
+- <xref:System.Windows.Forms.ToolTip>  
   
--   <xref:System.Windows.Forms.ListView>  
+- <xref:System.Windows.Forms.ListView>  
   
--   <xref:System.Windows.Forms.TreeView>  
+- <xref:System.Windows.Forms.TreeView>  
   
  다음 컨트롤은 소유자 그리기를 지원하며 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]에서는 새로운 기능입니다.  
   
--   <xref:System.Windows.Forms.DataGridView>  
+- <xref:System.Windows.Forms.DataGridView>  
   
--   <xref:System.Windows.Forms.ToolStrip>  
+- <xref:System.Windows.Forms.ToolStrip>  
   
  다음 섹션에서는 이 컨트롤에 대한 각각의 추가 세부 정보를 제공합니다.  
   
@@ -74,19 +74,19 @@ ms.locfileid: "59087185"
   
  코드 예제를 포함한 자세한 내용은 다음 항목을 참조하십시오.  
   
--   <xref:System.Windows.Forms.ListBox.DrawMode%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListBox.DrawMode%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListBox.MeasureItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListBox.MeasureItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListBox.DrawItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListBox.DrawItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ComboBox.DrawMode%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ComboBox.DrawMode%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ComboBox.MeasureItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ComboBox.MeasureItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ComboBox.DrawItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ComboBox.DrawItem?displayProperty=nameWithType>  
   
--   [방법: ComboBox 컨트롤에서 가변 크기 텍스트 만들기](how-to-create-variable-sized-text-in-a-combobox-control.md)  
+- [방법: ComboBox 컨트롤에서 가변 크기 텍스트 만들기](how-to-create-variable-sized-text-in-a-combobox-control.md)  
   
 ### <a name="menuitem-component"></a>MenuItem 구성 요소  
  합니다 <xref:System.Windows.Forms.MenuItem> 구성 요소에 단일 메뉴 항목을 나타냅니다는 <xref:System.Windows.Forms.MainMenu> 또는 <xref:System.Windows.Forms.ContextMenu> 구성 요소입니다.  
@@ -95,11 +95,11 @@ ms.locfileid: "59087185"
   
  코드 예제를 포함한 자세한 내용은 다음 항목을 참조하십시오.  
   
--   <xref:System.Windows.Forms.MenuItem.OwnerDraw%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.MenuItem.OwnerDraw%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.MenuItem.DrawItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.MenuItem.DrawItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.MenuItem.MeasureItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.MenuItem.MeasureItem?displayProperty=nameWithType>  
   
 ### <a name="tabcontrol-control"></a>TabControl 컨트롤  
  <xref:System.Windows.Forms.TabControl> 컨트롤을 사용 하면 컨트롤에서 개별 탭을 그릴 수 있습니다. 소유자 그리기는 탭을만;에 영향을 줍니다. <xref:System.Windows.Forms.TabPage> 내용에 영향을 받지 않습니다.  
@@ -108,9 +108,9 @@ ms.locfileid: "59087185"
   
  코드 예제를 포함한 자세한 내용은 다음 항목을 참조하십시오.  
   
--   <xref:System.Windows.Forms.TabControl.DrawMode%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.TabControl.DrawMode%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.TabControl.DrawItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.TabControl.DrawItem?displayProperty=nameWithType>  
   
 ### <a name="tooltip-component"></a>ToolTip 구성 요소  
  <xref:System.Windows.Forms.ToolTip> 구성 요소를 사용 하면 표시 되 면 도구 설명 전체를 그릴 수 있습니다.  
@@ -119,11 +119,11 @@ ms.locfileid: "59087185"
   
  코드 예제를 포함한 자세한 내용은 다음 항목을 참조하십시오.  
   
--   <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ToolTip.Draw?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ToolTip.Draw?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ToolTip.Popup?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ToolTip.Popup?displayProperty=nameWithType>  
   
 ### <a name="listview-control"></a>ListView 컨트롤  
  <xref:System.Windows.Forms.ListView> 컨트롤을 사용 하면 컨트롤에서 개별 항목, 하위 항목 및 열 머리글을 그릴 수 있습니다.  
@@ -136,13 +136,13 @@ ms.locfileid: "59087185"
   
  코드 예제를 포함한 자세한 내용은 다음 항목을 참조하십시오.  
   
--   <xref:System.Windows.Forms.ListView.OwnerDraw%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListView.OwnerDraw%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListView.DrawColumnHeader?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListView.DrawColumnHeader?displayProperty=nameWithType>  
   
 ### <a name="treeview-control"></a>TreeView 컨트롤  
  <xref:System.Windows.Forms.TreeView> 컨트롤을 사용 하면 컨트롤의 개별 노드를 그릴 수 있습니다.  
@@ -153,9 +153,9 @@ ms.locfileid: "59087185"
   
  코드 예제를 포함한 자세한 내용은 다음 항목을 참조하십시오.  
   
--   <xref:System.Windows.Forms.TreeView.DrawMode%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.TreeView.DrawMode%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType>  
   
 ### <a name="datagridview-control"></a>DataGridView 컨트롤  
  <xref:System.Windows.Forms.DataGridView> 컨트롤을 사용 하면 컨트롤에서 개별 셀 및 행을 그릴 수 있습니다.  
@@ -166,15 +166,15 @@ ms.locfileid: "59087185"
   
  코드 예제를 포함한 자세한 내용은 다음 항목을 참조하십시오.  
   
--   <xref:System.Windows.Forms.DataGridView.CellPainting>  
+- <xref:System.Windows.Forms.DataGridView.CellPainting>  
   
--   <xref:System.Windows.Forms.DataGridView.RowPrePaint>  
+- <xref:System.Windows.Forms.DataGridView.RowPrePaint>  
   
--   <xref:System.Windows.Forms.DataGridView.RowPostPaint>  
+- <xref:System.Windows.Forms.DataGridView.RowPostPaint>  
   
--   [방법: Windows Forms DataGridView 컨트롤에서 셀 모양 사용자 지정](customize-the-appearance-of-cells-in-the-datagrid.md)  
+- [방법: Windows Forms DataGridView 컨트롤에서 셀 모양 사용자 지정](customize-the-appearance-of-cells-in-the-datagrid.md)  
   
--   [방법: Windows Forms DataGridView 컨트롤에서 행 모양 사용자 지정](customize-the-appearance-of-rows-in-the-datagrid.md)  
+- [방법: Windows Forms DataGridView 컨트롤에서 행 모양 사용자 지정](customize-the-appearance-of-rows-in-the-datagrid.md)  
   
 ### <a name="toolstrip-control"></a>ToolStrip 컨트롤  
  <xref:System.Windows.Forms.ToolStrip> 및 파생 된 컨트롤을 사용 하면 모양의 모든 측면을 사용자 지정할 수 있습니다.  
@@ -183,11 +183,11 @@ ms.locfileid: "59087185"
   
  코드 예제를 포함한 자세한 내용은 다음 항목을 참조하십시오.  
   
--   <xref:System.Windows.Forms.ToolStripRenderer>  
+- <xref:System.Windows.Forms.ToolStripRenderer>  
   
--   [방법: 만들기 및 사용자 지정 렌더러를 Windows Forms의 ToolStrip 컨트롤에 대 한 설정](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
+- [방법: 만들기 및 사용자 지정 렌더러를 Windows Forms의 ToolStrip 컨트롤에 대 한 설정](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
   
--   [방법: ToolStrip 컨트롤 그리기 사용자 지정](how-to-custom-draw-a-toolstrip-control.md)  
+- [방법: ToolStrip 컨트롤 그리기 사용자 지정](how-to-custom-draw-a-toolstrip-control.md)  
   
 ## <a name="see-also"></a>참고자료
 

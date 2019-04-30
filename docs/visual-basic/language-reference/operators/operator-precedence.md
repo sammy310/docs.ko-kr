@@ -15,11 +15,11 @@ helpviewer_keywords:
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
 ms.openlocfilehash: 568927eb4759c214311ad34a5b45e28094dd80be
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013532"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Visual Basic에서의 연산자 우선 순위
 각 파트 평가 되 고 호출 하는 미리 결정 된 순서 대로 확인 식에서 여러 작업 발생 *연산자 우선 순위*합니다.  
@@ -27,13 +27,13 @@ ms.locfileid: "58830034"
 ## <a name="precedence-rules"></a>우선 순위 규칙  
  식에서 연산자는 둘 이상의 범주에서에 포함 하는 경우 다음 규칙에 따라 계산 됩니다.  
   
--   산술 연산 및 연결 연산자는 다음 섹션에 설명 된 우선 순위를 있고 모든 비교, 논리 보다 높은 우선 순위 및 비트 연산자입니다.  
+- 산술 연산 및 연결 연산자는 다음 섹션에 설명 된 우선 순위를 있고 모든 비교, 논리 보다 높은 우선 순위 및 비트 연산자입니다.  
   
--   모든 비교 연산자는 동등한 우선 순위 및 논리 및 비트 연산자 보다 높은 우선 순위를 갖지만 산술 및 연결 연산자 보다 우선 순위가 모든 경우  
+- 모든 비교 연산자는 동등한 우선 순위 및 논리 및 비트 연산자 보다 높은 우선 순위를 갖지만 산술 및 연결 연산자 보다 우선 순위가 모든 경우  
   
--   논리 및 비트 연산자는 다음 섹션에 설명 된 우선 순위를 있고 모든 산술 연산, 연결 및 비교 연산자 보다 우선 순위가 낮습니다.  
+- 논리 및 비트 연산자는 다음 섹션에 설명 된 우선 순위를 있고 모든 산술 연산, 연결 및 비교 연산자 보다 우선 순위가 낮습니다.  
   
--   우선 순위가 같은 연산자는 왼쪽에서 오른쪽으로 계산 됩니다 식에서 나타나는 순서입니다.  
+- 우선 순위가 같은 연산자는 왼쪽에서 오른쪽으로 계산 됩니다 식에서 나타나는 순서입니다.  
   
 ## <a name="precedence-order"></a>우선 순위  
  연산자 우선 순위 순서로 평가 됩니다.  

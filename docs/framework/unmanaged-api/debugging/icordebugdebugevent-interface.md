@@ -5,11 +5,11 @@ ms.assetid: a226737a-cb99-4e97-bd94-9a37094ded41
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 550cb6379ef0d5d17a3446b3f21120208b5a3dad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989172"
 ---
 # <a name="icordebugdebugevent-interface"></a>ICorDebugDebugEvent 인터페이스
 모든 `ICorDebug` 디버그 이벤트가 파생되는 기본 인터페이스를 정의합니다.  
@@ -24,9 +24,9 @@ ms.locfileid: "59110190"
 ## <a name="remarks"></a>설명  
  다음 인터페이스는 `ICorDebugDebugEvent` 인터페이스에서 파생됩니다.  
   
--   [ICorDebugExceptionDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-interface.md)  
+- [ICorDebugExceptionDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-interface.md)  
   
--   [ICorDebugModuleDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduledebugevent-interface.md)  
+- [ICorDebugModuleDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduledebugevent-interface.md)  
   
 > [!NOTE]
 >  이 인터페이스는 .NET 네이티브에서만 사용할 수 있습니다. .NET 네이티브 외부의 ICorDebug 시나리오에 대해 `QueryInterface`를 호출하여 인터페이스 포인터를 검색하려고 하면 `E_NOINTERFACE`가 반환됩니다.  

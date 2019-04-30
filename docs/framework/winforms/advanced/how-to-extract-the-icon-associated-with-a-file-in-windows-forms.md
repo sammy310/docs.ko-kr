@@ -10,11 +10,11 @@ helpviewer_keywords:
 - extracting icons associated with a file type [Windows Forms]
 ms.assetid: 88e2ad8b-c34f-415a-84f2-dad756b5c928
 ms.openlocfilehash: d754dc5e8a57b3c4e2e5439bb2524a22d44813c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004044"
 ---
 # <a name="how-to-extract-the-icon-associated-with-a-file-in-windows-forms"></a>방법: Windows Forms에서 파일과 연결된 아이콘 추출
 여러 파일에는 시각적 연결된 된 파일 형식으로 제공 하는 아이콘이 포함 되어 있습니다. 예를 들어 Microsoft Word 문서를 Word 문서로 하 게 식별 하는 아이콘을 포함 합니다. 목록 컨트롤 또는 테이블 컨트롤에서 파일을 표시 하는 경우에 각 파일 이름 옆에 있는 파일 형식을 나타내는 아이콘을 표시 하는 것이 좋습니다. 사용 하 여이 작업을 쉽게 수행할 수 있습니다는 <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A> 메서드.  
@@ -28,7 +28,7 @@ ms.locfileid: "59112556"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  예제를 컴파일하려면:  
   
--   Windows 폼 호출에 위의 코드를 붙여넣고 합니다 `ExtractAssociatedIconExample` 폼의 생성자에서 메서드 또는 <xref:System.Windows.Forms.Form.Load> 이벤트 처리 메서드.  
+- Windows 폼 호출에 위의 코드를 붙여넣고 합니다 `ExtractAssociatedIconExample` 폼의 생성자에서 메서드 또는 <xref:System.Windows.Forms.Form.Load> 이벤트 처리 메서드.  
   
      폼을 가져옵니다는 있는지 확인 해야 합니다 <xref:System.IO> 네임 스페이스입니다.  
   

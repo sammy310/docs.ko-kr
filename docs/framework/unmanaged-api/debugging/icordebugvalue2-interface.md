@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6718bbfdb1825b9f01698d76deec3fab16cb2ac6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59091605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993687"
 ---
 # <a name="icordebugvalue2-interface"></a>ICorDebugValue2 인터페이스
 "ICorDebugType" 개체에 대 한 지원을 제공 하는 "ICorDebugValue" 인터페이스를 확장 합니다.  

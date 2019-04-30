@@ -8,11 +8,11 @@ helpviewer_keywords:
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
 ms.openlocfilehash: 81a19d063f31b3c28fc15a061b5173495e83f6fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009125"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>연습: FlowLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬
 일부 애플리케이션에는 폼 크기가 조정되거나 내용의 크기가 변경될 때 적절하게 정렬되는 레이아웃을 가진 폼이 필요합니다. 동적 레이아웃이 필요하며 코드에서 명시적으로 <xref:System.Windows.Forms.Control.Layout> 이벤트를 처리하지 않으려는 경우 레이아웃 패널을 사용하는 것이 좋습니다.  
@@ -23,23 +23,23 @@ ms.locfileid: "59321889"
   
  <xref:System.Windows.Forms.FlowLayoutPanel> 은 특정 흐름 방향(수평 또는 수직)으로 내용을 정렬합니다. 컨트롤 내용을 한 행에서 다음 행으로 또는 한 열에서 다음 열로 줄 바꿈할 수 있습니다. 또는 컨트롤 내용이 줄 바꿈되는 대신 잘릴 수 있습니다. 이 연습에서 설명하는 작업은 다음과 같습니다.  
   
--   Windows Forms 프로젝트 만들기  
+- Windows Forms 프로젝트 만들기  
   
--   가로 및 세로로 컨트롤 정렬  
+- 가로 및 세로로 컨트롤 정렬  
   
--   흐름 방향 변경  
+- 흐름 방향 변경  
   
--   흐름 나누기 삽입  
+- 흐름 나누기 삽입  
   
--   안쪽 여백 및 여백을 사용하여 컨트롤 정렬  
+- 안쪽 여백 및 여백을 사용하여 컨트롤 정렬  
   
--   도구 상자에서 두 번 클릭하여 컨트롤 삽입  
+- 도구 상자에서 두 번 클릭하여 컨트롤 삽입  
   
--   윤곽선을 그려 컨트롤 삽입  
+- 윤곽선을 그려 컨트롤 삽입  
   
--   캐럿을 사용하여 컨트롤 삽입  
+- 캐럿을 사용하여 컨트롤 삽입  
   
--   다른 부모에 기존 컨트롤 다시 할당  
+- 다른 부모에 기존 컨트롤 다시 할당  
   
  작업을 완료하면 이러한 중요한 레이아웃 기능이 수행하는 역할을 이해하게 됩니다.  
   
@@ -179,13 +179,13 @@ ms.locfileid: "59321889"
 ## <a name="next-steps"></a>다음 단계  
  레이아웃 패널 및 컨트롤의 조합을 사용하여 복잡한 레이아웃을 얻을 수 있습니다. 다음과 같은 사항을 더 살펴보는 것이 좋습니다.  
   
--   <xref:System.Windows.Forms.Button> 컨트롤 중 하나의 크기를 더 크게 조정하고 레이아웃에 미치는 영향을 확인합니다.  
+- <xref:System.Windows.Forms.Button> 컨트롤 중 하나의 크기를 더 크게 조정하고 레이아웃에 미치는 영향을 확인합니다.  
   
--   레이아웃 패널에 다른 레이아웃 패널을 포함할 수 있습니다. <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 기존 컨트롤에 끌어다 놓습니다.  
+- 레이아웃 패널에 다른 레이아웃 패널을 포함할 수 있습니다. <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 기존 컨트롤에 끌어다 놓습니다.  
   
--   <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤을 부모 폼에 도킹합니다. 폼의 크기를 조정하고 레이아웃에 미치는 영향을 확인합니다.  
+- <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤을 부모 폼에 도킹합니다. 폼의 크기를 조정하고 레이아웃에 미치는 영향을 확인합니다.  
   
--   컨트롤 중 하나의 <xref:System.Windows.Forms.Control.Visible%2A> 속성을 `false` 로 설정하고 그에 대한 응답으로 <xref:System.Windows.Forms.FlowLayoutPanel> 이 어떻게 재배치되는지 확인합니다.  
+- 컨트롤 중 하나의 <xref:System.Windows.Forms.Control.Visible%2A> 속성을 `false` 로 설정하고 그에 대한 응답으로 <xref:System.Windows.Forms.FlowLayoutPanel> 이 어떻게 재배치되는지 확인합니다.  
   
 ## <a name="see-also"></a>참고자료
 

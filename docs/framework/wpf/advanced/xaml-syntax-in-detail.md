@@ -30,11 +30,11 @@ helpviewer_keywords:
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
 ms.openlocfilehash: bf4118c6e811f409715b7b6684851b8b3e8bbb25
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981372"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 구문 정보
 이 항목에서는 XAML 구문 요소에 설명 하는 데 사용 되는 용어를 정의 합니다. 이러한 용어는 특히 및 XAML 또는 System.Xaml 수준에서 XAML 언어 지원을 사용 하도록 설정 하는 기본 XAML 개념을 사용 하는 다른 프레임 워크에 대 한 WPF 설명서에 대 한 모두이 문서의 나머지 부분에서 자주 사용 됩니다. 이 항목에서는 확장 항목에 도입 하는 기본 용어 [XAML 개요 (WPF)](xaml-overview-wpf.md)합니다.  
@@ -58,9 +58,9 @@ ms.locfileid: "59298892"
 ## <a name="object-element-syntax"></a>개체 요소 구문  
  *개체 요소 구문을* XML 요소를 선언 하 여 CLR 클래스 또는 구조체를 인스턴스화하는 XAML 태그 구문입니다. 이 구문 요소에 대 한 구문의 HTML과 같은 다른 태그 언어와 유사합니다. 개체 요소 구문은 왼쪽된 꺾쇠 괄호 (\<) 클래스 또는 구조체를 인스턴스화할 액션이의 형식 이름 바로 뒤, 합니다. 0 개 이상의 공간 형식 이름, 따르면 및 0 개 이상의 특성 선언할 수도 개체 요소의 각 특성 이름을 구분 하는 하나 이상의 공백으로 = "value" 쌍입니다. 마지막으로 다음 중 하나를 참 이어야 합니다.  
   
--   요소 및 태그를 슬래시 (/)는 오른쪽 꺾쇠 괄호 (>) 바로 뒤에 여 닫아야 합니다.  
+- 요소 및 태그를 슬래시 (/)는 오른쪽 꺾쇠 괄호 (>) 바로 뒤에 여 닫아야 합니다.  
   
--   오른쪽 꺾쇠 괄호 (>)에서 여는 태그를 완료 해야 합니다. 다른 개체 요소, 속성 요소 또는 내부 텍스트를 여는 태그를 따르면 됩니다. 콘텐츠를 여기 포함 될 수 있습니다 정확 하 게 요소 개체 모델에서 일반적으로 제한 됩니다. 또한 개체 요소의 닫는 태그를 해당 하는 적절 한 중첩에 존재 하 고 다른 중괄호와 닫는 태그 쌍을 사용 하 여 분산 해야 합니다.  
+- 오른쪽 꺾쇠 괄호 (>)에서 여는 태그를 완료 해야 합니다. 다른 개체 요소, 속성 요소 또는 내부 텍스트를 여는 태그를 따르면 됩니다. 콘텐츠를 여기 포함 될 수 있습니다 정확 하 게 요소 개체 모델에서 일반적으로 제한 됩니다. 또한 개체 요소의 닫는 태그를 해당 하는 적절 한 중첩에 존재 하 고 다른 중괄호와 닫는 태그 쌍을 사용 하 여 분산 해야 합니다.  
   
  .NET에서 구현 된 XAML 개체 요소 형식, 속성 또는 이벤트 및 CLR 네임 스페이스와 어셈블리에 XAML 네임 스페이스에는 특성으로 매핑하는 규칙 집합이 있습니다. WPF 및.NET Framework에 대 한 XAML 개체 요소를 매핑할 [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] 형식에 정의 된 대로 참조 어셈블리 및 해당 형식의 멤버에 특성이 매핑됩니다. XAML에서 CLR 형식에서 참조 하는 경우 해당 형식의 상속된 된 멤버에 액세스할을 수 있습니다.  
   
@@ -154,11 +154,11 @@ ms.locfileid: "59298892"
 ## <a name="collection-syntax"></a>컬렉션 구문  
  XAML 사양에 값 형식이 컬렉션이 속성을 식별 하는 XAML 프로세서 구현 합니다. .NET의 일반 XAML 프로세서 구현 관리 코드와 CLR 기반으로 하며 다음 중 하나를 통해 컬렉션 형식을 식별 합니다.  
   
--   구현 형식 <xref:System.Collections.IList>합니다.  
+- 구현 형식 <xref:System.Collections.IList>합니다.  
   
--   구현 형식 <xref:System.Collections.IDictionary>합니다.  
+- 구현 형식 <xref:System.Collections.IDictionary>합니다.  
   
--   형식에서 파생 <xref:System.Array> (XAML의 배열에 대 한 자세한 내용은 참조 하세요. [X:array 태그 확장](../../xaml-services/x-array-markup-extension.md).)  
+- 형식에서 파생 <xref:System.Array> (XAML의 배열에 대 한 자세한 내용은 참조 하세요. [X:array 태그 확장](../../xaml-services/x-array-markup-extension.md).)  
   
  속성 형식의 컬렉션인 경우 유추 된 컬렉션 형식 개체 요소 태그에 지정할 필요 하지 않습니다. 대신 컬렉션의 항목 될 하는 요소는 속성 요소의 자식 요소를 하나 이상으로 지정 됩니다. 이러한 각 항목 로드 중 개체에 계산 되 고 호출 하 여 컬렉션에 추가 된 `Add` 암시적된 컬렉션 메서드. 예를 들어를 <xref:System.Windows.Style.Triggers%2A> 의 속성 <xref:System.Windows.Style> 특수 한 컬렉션 형식을 <xref:System.Windows.TriggerCollection>를 구현 하는 <xref:System.Collections.IList>. 인스턴스화하는 데 필요한 것을 <xref:System.Windows.TriggerCollection> 태그에서 개체 요소. 하나 이상 지정 하는 대신 <xref:System.Windows.Trigger> 항목 내의 요소로 합니다 `Style.Triggers` 속성 요소 위치 <xref:System.Windows.Trigger> (또는 파생된 클래스) 강력한 형식화 및 암시적 항목 종류로 예상 형식이 <xref:System.Windows.TriggerCollection>.  
   
@@ -264,9 +264,9 @@ ms.locfileid: "59298892"
   
  연결 된 속성 구문을 사용 하 여 속성 요소 구문을 유사한 겉으로 또한 지정 된 *typeName*. *propertyName* 조합 합니다. 다음과 같은 두 가지 중요한 차이점이 있습니다.  
   
--   사용할 수는 *typeName*. *propertyName* 특성 구문을 통해 연결된 된 속성을 설정 하는 경우에 조합 합니다. 연결 된 속성은 유일한 경우 속성 이름을 한 정하는 여기서은 특성 구문 요구 사항입니다.  
+- 사용할 수는 *typeName*. *propertyName* 특성 구문을 통해 연결된 된 속성을 설정 하는 경우에 조합 합니다. 연결 된 속성은 유일한 경우 속성 이름을 한 정하는 여기서은 특성 구문 요구 사항입니다.  
   
--   또한 연결 된 속성에 대 한 속성 요소 구문을 사용할 수 있습니다. 그러나 일반적인 속성 요소 구문에 대 한 합니다 *typeName* property 요소를 포함 하는 개체 요소를 지정 합니다. 연결된 된 속성을 참조 하는 경우 해당 *typeName* 개체 요소가 포함 하는 것이 아니라 연결된 된 속성을 정의 하는 클래스입니다.  
+- 또한 연결 된 속성에 대 한 속성 요소 구문을 사용할 수 있습니다. 그러나 일반적인 속성 요소 구문에 대 한 합니다 *typeName* property 요소를 포함 하는 개체 요소를 지정 합니다. 연결된 된 속성을 참조 하는 경우 해당 *typeName* 개체 요소가 포함 하는 것이 아니라 연결된 된 속성을 정의 하는 클래스입니다.  
   
 <a name="attached_events"></a>   
 ## <a name="attached-events"></a>연결된 이벤트  

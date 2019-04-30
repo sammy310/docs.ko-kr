@@ -8,11 +8,11 @@ helpviewer_keywords:
 - RichTextBox control [WPF], how-to topics
 ms.assetid: 36e9f98e-f968-42d8-adb6-9e78c814aec0
 ms.openlocfilehash: f4f0cb15e1dc50fee7ca76e8cfbf31e6eaccd02b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59092190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971082"
 ---
 # <a name="richtextbox-how-to-topics"></a>RichTextBox 방법 항목
 이 섹션에서는 사용 하 여 일반적인 작업을 수행 하는 방법을 보여 주는 예제를 제공 합니다 <xref:System.Windows.Controls.RichTextBox> 제어 합니다.  

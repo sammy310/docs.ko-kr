@@ -3,11 +3,11 @@ title: 신뢰된 외관 서비스
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
 ms.openlocfilehash: 4921b2746b9df362a0bb3e6048602d41f3f2faaf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007697"
 ---
 # <a name="trusted-facade-service"></a>신뢰된 외관 서비스
 이 시나리오 샘플에는 Windows Communication Foundation (WCF)를 사용 하 여 다른 서비스로 호출자의 id 정보를 전달 하는 방법을 보여 줍니다. 보안 인프라.  
@@ -16,11 +16,11 @@ ms.locfileid: "59768197"
   
  이 샘플은 다음 구성 요소로 구성되어 있습니다.  
   
--   계산기 클라이언트  
+- 계산기 클라이언트  
   
--   계산기 외관 서비스  
+- 계산기 외관 서비스  
   
--   계산기 백 엔드 서비스  
+- 계산기 백 엔드 서비스  
   
  외관 서비스는 요청의 유효성을 검사하고 호출자를 인증합니다. 인증과 유효성 검사에 성공하고 나면 주변 네트워크에서 내부 네트워크로의 제어된 통신 채널을 사용하여 백 엔드 서비스에 요청을 전달합니다. 외관 서비스는 호출자의 ID에 대한 정보를 전달된 요청의 일부로 포함하므로 백 엔드 서비스는 이 정보를 해당 처리에서 사용할 수 있습니다. 호출자의 ID는 메시지 `Username` 헤더 내의 `Security` 보안 토큰을 사용하여 전송됩니다. 샘플 WCF 보안 인프라를 사용 하 여 전송에서이 정보를 추출 하 여 `Security` 헤더입니다.  
   
@@ -234,7 +234,7 @@ Press <ENTER> to terminate client.
   
  다음은 배치 파일의 여러 다른 섹션에 대한 간략한 개요입니다.  
   
--   서버 인증서 만들기  
+- 서버 인증서 만들기  
   
      Setup.bat 배치 파일에서 다음 행은 사용할 서버 인증서를 만듭니다.  
   
@@ -250,7 +250,7 @@ Press <ENTER> to terminate client.
   
      `%SERVER_NAME%` 변수는 서버 이름을 지정합니다. 기본값은 localhost입니다. 인증서는 LocalMachine 저장소에 저장됩니다.  
   
--   클라이언트의 신뢰할 수 있는 인증서 저장소에 외관 서비스의 인증서 설치  
+- 클라이언트의 신뢰할 수 있는 인증서 저장소에 외관 서비스의 인증서 설치  
   
      다음 줄은 클라이언트의 신뢰할 수 있는 사용자 저장소에 외관 서비스의 인증서를 복사합니다. 이 단계는 Makecert.exe에서 생성한 인증서를 클라이언트 컴퓨터에서 절대적으로 신뢰하지는 않기 때문에 필요합니다. Microsoft에서 발급한 인증서와 같이 클라이언트가 신뢰할 수 있는 루트 인증서를 기반으로 하는 인증서가 이미 있는 경우 클라이언트 인증서 저장소를 서버 인증서로 채우는 이 단계를 수행할 필요가 없습니다.  
   

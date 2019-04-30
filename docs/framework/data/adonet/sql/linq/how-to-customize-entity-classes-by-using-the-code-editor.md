@@ -3,11 +3,11 @@ title: '방법: 코드 편집기를 사용하여 엔터티 클래스 사용자 �
 ms.date: 03/30/2017
 ms.assetid: ec28332f-9f3c-4e0a-baca-60f9141a68c0
 ms.openlocfilehash: 05a523f8b98c7b64350b67c217baba07dca14de3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037832"
 ---
 # <a name="how-to-customize-entity-classes-by-using-the-code-editor"></a>방법: 코드 편집기를 사용하여 엔터티 클래스 사용자 지정
 Visual Studio를 사용 하 여 개발자가 사용할 수는 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 만들거나 자신의 엔터티 클래스 사용자 지정 합니다.  

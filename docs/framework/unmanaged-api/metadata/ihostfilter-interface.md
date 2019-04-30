@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bc22de2d30d0f928653206ab9e356577a84c572c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62044927"
 ---
 # <a name="ihostfilter-interface"></a>IHostFilter 인터페이스
 지정된 된 토큰을 처리할 수를 표시 하는 메서드를 제공 합니다.  

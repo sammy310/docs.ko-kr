@@ -3,11 +3,11 @@ title: Service Trace Viewer 도구(SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
 ms.openlocfilehash: dd00b72396fe40a7577fabd5704a240f91d1e268
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051767"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Service Trace Viewer 도구(SvcTraceViewer.exe)
 Windows Communication Foundation (WCF) Service Trace Viewer 도구를 사용 하면 WCF에 의해 생성 되는 진단 추적을 분석할 수 있습니다. Service Trace Viewer는 쉽게 병합, 보기 및 진단, 복구 및 WCF 서비스 문제를 확인할 수 있도록 로그에 추적 메시지를 필터링 하는 방법을 제공 합니다.  

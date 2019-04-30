@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
 ms.openlocfilehash: bcd142785d8ee736c6a1b41950fae80e4d26fa18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013649"
 ---
 # <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>변수 형식이 '\<variablename >'는 바깥쪽 범위의 필드에 바인딩되어 있으므로 유추 되지 것입니다
 변수 형식이 '\<variablename >'는 바깥쪽 범위의 필드에 바인딩되어 있으므로 유추 되지 것입니다. 이름을 변경 하거나 '\<variablename >', 또는 정규화 된 이름 (예: 'Me.variablename' 또는 'MyBase.variablename')를 사용 합니다.  
@@ -44,19 +44,19 @@ End Class
   
 ### <a name="to-address-this-warning"></a>이 경고를 해결하려면  
   
--   클래스의 필드 이름을 수도 없는 식별자에 해당 이름을 변경 하 여 루프 제어 변수의 로컬을 확인 합니다.  
+- 클래스의 필드 이름을 수도 없는 식별자에 해당 이름을 변경 하 여 루프 제어 변수의 로컬을 확인 합니다.  
   
     ```  
     For I = 1 To 10  
     ```  
   
--   바인딩되도록 합니다 루프 제어 변수의 클래스 필드를 접두사로 사용 하 여 `Me.` 변수 이름에 있습니다.  
+- 바인딩되도록 합니다 루프 제어 변수의 클래스 필드를 접두사로 사용 하 여 `Me.` 변수 이름에 있습니다.  
   
     ```  
     For Me.Index = 1 To 10  
     ```  
   
--   지역 형식 유추에 의존 하는 대신 사용 하 여는 `As` 루프 제어 변수의 형식을 지정 하는 절.  
+- 지역 형식 유추에 의존 하는 대신 사용 하 여는 `As` 루프 제어 변수의 형식을 지정 하는 절.  
   
     ```  
     For Index As Integer = 1 To 10  

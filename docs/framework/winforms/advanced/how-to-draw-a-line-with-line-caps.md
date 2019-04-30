@@ -11,11 +11,11 @@ helpviewer_keywords:
 - drawing lines [Windows Forms], line caps
 ms.assetid: eb68c3e1-c400-4886-8a04-76978a429cb6
 ms.openlocfilehash: c4a78569f6c0b14c32154611412d6b3ccd8a84ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004204"
 ---
 # <a name="how-to-draw-a-line-with-line-caps"></a>방법: 선 끝이 있는 선 그리기
 선 끝이 호출 하는 여러 도형 중 하나에서 시작 또는 줄의 끝에 그릴 수 있습니다. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 여러 선 끝 모양을 화살촉 라운드, 사각형, 다이아몬드 등을 지원합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "59146213"
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
   
--   Windows Form 만들기 및 폼의 처리 <xref:System.Windows.Forms.Control.Paint> 이벤트입니다. 예제 코드를 붙여 합니다 <xref:System.Windows.Forms.Control.Paint> 전달 하는 이벤트 처리기 `e` 으로 <xref:System.Windows.Forms.PaintEventArgs>합니다.  
+- Windows Form 만들기 및 폼의 처리 <xref:System.Windows.Forms.Control.Paint> 이벤트입니다. 예제 코드를 붙여 합니다 <xref:System.Windows.Forms.Control.Paint> 전달 하는 이벤트 처리기 `e` 으로 <xref:System.Windows.Forms.PaintEventArgs>합니다.  
   
 ## <a name="see-also"></a>참고자료
 

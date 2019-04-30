@@ -9,44 +9,44 @@ helpviewer_keywords:
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
 ms.openlocfilehash: 5b759baebb7192c1ee94b4aa925198864ba7a31a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007164"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>연습: WPF에서 Windows Forms 컨트롤 정렬
 이 연습에서는 사용 하는 방법을 보여 줍니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 정렬 레이아웃 기능 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 하이브리드 응용 프로그램에서 제어 합니다.  
   
  이 연습에서 설명하는 작업은 다음과 같습니다.  
   
--   프로젝트 만들기.  
+- 프로젝트 만들기.  
   
--   기본 레이아웃 설정 사용  
+- 기본 레이아웃 설정 사용  
   
--   콘텐츠에 맞게 크기 조정  
+- 콘텐츠에 맞게 크기 조정  
   
--   절대 위치 사용  
+- 절대 위치 사용  
   
--   명시적으로 크기 지정  
+- 명시적으로 크기 지정  
   
--   레이아웃 속성 설정  
+- 레이아웃 속성 설정  
   
--   z 순서 제한 사항 이해  
+- z 순서 제한 사항 이해  
   
--   도킹  
+- 도킹  
   
--   표시 유형 설정  
+- 표시 유형 설정  
   
--   늘어나지 않는 컨트롤 호스트  
+- 늘어나지 않는 컨트롤 호스트  
   
--   배율 조정  
+- 배율 조정  
   
--   회전  
+- 회전  
   
--   안쪽 여백 및 여백 설정  
+- 안쪽 여백 및 여백 설정  
   
--   동적 레이아웃 컨테이너 사용  
+- 동적 레이아웃 컨테이너 사용  
   
  이 연습에 설명 된 작업의 전체 코드 목록은 참조 하세요 [WPF 샘플에서 Windows Forms 컨트롤 정렬](https://go.microsoft.com/fwlink/?LinkID=159971)합니다.  
   
@@ -64,11 +64,11 @@ ms.locfileid: "59338776"
   
 2. 솔루션 탐색기에서 다음 어셈블리에 대한 참조를 추가합니다.  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
-    -   System.Windows.Forms  
+    - System.Windows.Forms  
   
-    -   System.Drawing  
+    - System.Drawing  
   
 3. MainWindow.xaml을 두 번 클릭하여 XAML 보기에서 엽니다.  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - From/to/by animation
 ms.assetid: 59afba57-6fc1-44c8-987e-8a5f4142adad
 ms.openlocfilehash: 56522ee5bd4391e43c261558b2fa622234c9ea3b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008787"
 ---
 # <a name="how-to-control-an-animation-using-from-to-and-by"></a>방법: From, To 및 By를 사용하여 애니메이션 제어
 "From/To/By" 또는 "기본 애니메이션"은 두 대상 값 사이 전환을 만듭니다 (참조 [애니메이션 개요](animation-overview.md) 다양 한 유형의 애니메이션 소개). 기본 애니메이션의 대상 값을 설정 하려면 해당 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>하십시오 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, 및 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 속성입니다.  다음 표에서 요약 하는 방법을 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, 및 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 속성을 함께 사용할 수 있습니다. 또는 개별적으로 애니메이션의 대상 값을 확인 하 합니다.  

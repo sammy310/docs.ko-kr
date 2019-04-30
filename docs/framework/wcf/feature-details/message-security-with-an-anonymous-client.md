@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
 ms.openlocfilehash: 613b85e18109faa2a4386090e91aaddcfd8e0b68
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038587"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>익명 클라이언트를 사용하는 메시지 보안
 
@@ -36,11 +36,11 @@ ms.locfileid: "57680311"
 
 - 구성 없이 코드를 사용하여 독립 실행형 서비스를 만듭니다.
 
-- 제공된 구성을 사용하여 서비스를 만들지만 끝점을 정의하지 않습니다.
+- 제공된 구성을 사용하여 서비스를 만들지만 엔드포인트를 정의하지 않습니다.
 
 ### <a name="code"></a>코드
 
-다음 코드에서는 메시지 보안을 사용하는 서비스 끝점을 만드는 방법을 보여 줍니다.
+다음 코드에서는 메시지 보안을 사용하는 서비스 엔드포인트를 만드는 방법을 보여 줍니다.
 
 [!code-csharp[C_SecurityScenarios#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#8)]
 [!code-vb[C_SecurityScenarios#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#8)]
@@ -94,7 +94,7 @@ ms.locfileid: "57680311"
 
 - 이 코드와 클라이언트 코드를 사용하여 독립 실행형 클라이언트를 만듭니다.
 
-- 끝점 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들면 다음과 같습니다.
+- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들어:
 
     [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
     [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]

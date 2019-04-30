@@ -9,11 +9,11 @@ helpviewer_keywords:
 - HTML [Windows Forms], accessing in Windows Forms
 ms.assetid: 53db79fa-8a5e-448e-88c2-f54ace3860b6
 ms.openlocfilehash: f2306e3405aa0ff37060d987bdc82b58fbaa7784
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011270"
 ---
 # <a name="how-to-access-the-html-source-in-the-managed-html-document-object-model"></a>방법: 관리형 HTML 문서 개체 모델에서 HTML 원본 액세스
 <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> 컨트롤의 <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> 및 <xref:System.Windows.Forms.WebBrowser> 속성은 현재 문서의 HTML을 처음 표시되었을 때의 상태로 반환합니다. 그러나 <xref:System.Windows.Forms.HtmlElement.AppendChild%2A> 및 <xref:System.Windows.Forms.HtmlElement.InnerHtml%2A>과 같은 메서드 및 속성 호출을 사용하여 페이지를 수정하는 경우 <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> 및 <xref:System.Windows.Forms.WebBrowser.DocumentText%2A>를 호출해도 해당 변경 내용이 표시되지 않습니다. DOM의 최신 HTML 소스를 가져오려면 HTML 요소에 대해 <xref:System.Windows.Forms.HtmlElement.OuterHtml%2A> 속성을 호출해야 합니다.  

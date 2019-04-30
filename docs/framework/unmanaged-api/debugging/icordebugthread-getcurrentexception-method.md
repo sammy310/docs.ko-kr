@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c4baa4eb4da48b923ab0137ca25d9d819c94e33d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994034"
 ---
 # <a name="icordebugthreadgetcurrentexception-method"></a>ICorDebugThread::GetCurrentException 메서드
 현재 관리 코드에 의해 throw 되는 예외를 나타내는 ICorDebugValue 개체에 대 한 인터페이스 포인터를 가져옵니다.  

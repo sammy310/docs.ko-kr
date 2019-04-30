@@ -3,11 +3,11 @@ title: ASP.NET 클라이언트에서 데이터 바인딩
 ms.date: 03/30/2017
 ms.assetid: 68b49fa6-94e7-4d4c-a34e-902a2b3770b6
 ms.openlocfilehash: 07e03a4580795b3424f63cec8f93fea2039b6733
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990628"
 ---
 # <a name="data-binding-in-an-aspnet-client"></a>ASP.NET 클라이언트에서 데이터 바인딩
 이 샘플에는 Web Forms 응용 프로그램에서 일반적인 Windows Communication Foundation (WCF) 서비스에서 반환 되는 데이터를 바인딩하는 방법을 보여 줍니다.  

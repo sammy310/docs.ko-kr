@@ -6,8 +6,8 @@ ms.openlocfilehash: 4ef0714acad12db1414e34fbb476b4ae7d1d9fb2
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006340"
 ---
 # <a name="usage-of-standard-endpoints"></a>표준 엔드포인트 사용
 
@@ -143,13 +143,13 @@ public class CustomEndpoint : ServiceEndpoint
 
 2. 여러 개의 프로젝트가 시작되도록 설정합니다.
 
-    1.  **솔루션 탐색기**Standard Endpoints 솔루션을 마우스 오른쪽 단추로 클릭 하 고 선택한 **속성**합니다.
+    1. **솔루션 탐색기**Standard Endpoints 솔루션을 마우스 오른쪽 단추로 클릭 하 고 선택한 **속성**합니다.
 
-    2.  **공용 속성**를 선택 **시작 프로젝트**를 클릭 하 고 **여러 개의 시작 프로젝트**합니다.
+    2. **공용 속성**를 선택 **시작 프로젝트**를 클릭 하 고 **여러 개의 시작 프로젝트**합니다.
 
-    3.  서비스 프로젝트를 사용 하 여 목록의 처음으로 이동 합니다.는 **동작** 로 설정 **시작**합니다.
+    3. 서비스 프로젝트를 사용 하 여 목록의 처음으로 이동 합니다.는 **동작** 로 설정 **시작**합니다.
 
-    4.  사용 하 여 클라이언트 프로젝트를 Service 프로젝트 다음에 이동 합니다 **동작** 로 설정 **시작**합니다.
+    4. 사용 하 여 클라이언트 프로젝트를 Service 프로젝트 다음에 이동 합니다 **동작** 로 설정 **시작**합니다.
 
          이렇게 하면 Client 프로젝트가 Service 프로젝트 다음에 실행됩니다.
 

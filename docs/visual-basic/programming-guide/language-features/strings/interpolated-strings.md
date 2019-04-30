@@ -2,11 +2,11 @@
 title: 보간된 문자열 (Visual Basic)
 ms.date: 10/31/2017
 ms.openlocfilehash: 408f3232258b3b4c7fe6ec160149f8ac70b84b03
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59610680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024562"
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>보간된 문자열 (Visual Basic 참조)
 

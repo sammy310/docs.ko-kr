@@ -9,11 +9,11 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning
 ms.assetid: bb54bce5-880f-4a36-af68-8cf92058dc1c
 ms.openlocfilehash: 122c20e7c3e48eaa4b4986ce2cb45411dae00723
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011010"
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>방법: Windows Forms에서 맞춤선과 모눈을 사용하여 컨트롤 정렬
 Visual Studio의 레이아웃 기능을 사용 하 여 컨트롤을 폼에 배치 될 위치를 정확 하 게 지정할 수 있습니다. 컨트롤을 폼에 추가 하거나 폼에 이동 행과 Windows Forms 디자이너 그리드의 열을 자동으로 정렬할 수 있습니다 하거나 맞춤선 기능을 사용 하 여 컨트롤을 정렬할 수 있습니다.  
@@ -23,7 +23,7 @@ Visual Studio의 레이아웃 기능을 사용 하 여 컨트롤을 폼에 배�
   
 ### <a name="to-snap-all-controls-to-the-grid"></a>모든 컨트롤을 눈금에 맞춤을  
   
--   선택 된 **SnapToGrid** Windows Forms 디자이너에서 레이아웃 모드 **옵션** 대화 상자.  
+- 선택 된 **SnapToGrid** Windows Forms 디자이너에서 레이아웃 모드 **옵션** 대화 상자.  
   
      자세한 내용은 [Windows Forms 디자이너, 옵션 대화 상자, 일반](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))합니다. 모든 컨트롤 그리드에서 요소에 따라 맞춰집니다.  
   
@@ -31,7 +31,7 @@ Visual Studio의 레이아웃 기능을 사용 하 여 컨트롤을 폼에 배�
   
 ### <a name="to-align-controls-using-snaplines"></a>맞춤선을 사용 하 여 컨트롤을 맞추려면  
   
--   선택 된 **맞춤선** Windows Forms 디자이너에서 레이아웃 모드 **옵션** 대화 상자.  
+- 선택 된 **맞춤선** Windows Forms 디자이너에서 레이아웃 모드 **옵션** 대화 상자.  
   
      자세한 내용은 [연습: Snaplines를 사용 하 여 Forms Windows에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)합니다. 이제 폼에서 컨트롤을 정렬 하려면 맞춤선을 사용할 수 있습니다.  
   

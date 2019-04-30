@@ -6,11 +6,11 @@ helpviewer_keywords:
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
 ms.openlocfilehash: d5652c1f52d7cee4921d0c6b50973b494458ecd2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032957"
 ---
 # <a name="printing-how-to-topics"></a>인쇄 방법 항목
 이 섹션의에서 항목에서는 인쇄를 사용 하는 방법을 보여 줍니다 및 인쇄 시스템 관리 기능에 포함 된 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 뿐만 아니라 새 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 인쇄 경로입니다.  

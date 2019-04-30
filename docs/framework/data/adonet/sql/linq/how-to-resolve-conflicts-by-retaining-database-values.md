@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b475cf72-9e64-4f6e-99c1-af7737bc85ef
 ms.openlocfilehash: 8440ffe61e254403357970d771aea207a6eb6092
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037664"
 ---
 # <a name="how-to-resolve-conflicts-by-retaining-database-values"></a>방법: 데이터베이스 값을 유지하여 충돌 해결
 변경 내용을 다시 전송하기 전에 예상 데이터베이스 값과 실제 데이터베이스 값의 차이를 조정하려면 <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues>를 사용하여 데이터베이스에서 찾은 값을 유지합니다. 그런 다음 개체 모델의 현재 값을 덮어씁니다. 자세한 내용은 참조 하세요. [낙관적 동시성: 개요](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)합니다.  

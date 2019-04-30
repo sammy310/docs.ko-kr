@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data [WPF]
 ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
 ms.openlocfilehash: ee45771a289804395387f9d6d49b667da1a76024
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020545"
 ---
 # <a name="data"></a>데이터
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 데이터 바인딩은 응용 프로그램이 데이터를 제공하고 상호 작용할 수 있는 간단하고 일관된 방법을 제공합니다. 다양한 데이터 소스에서 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 개체 및 XML의 형태로 데이터에 요소를 바인딩할 수 있습니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 또한 끌어서 놓기 작업을 통해 데이터 전송을 위한 메커니즘을 제공합니다.  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 240544330fa352cbfdc01944e4be6bcad28dc96f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000222"
 ---
 # <a name="next-function"></a>Next 함수
 에 대 한 호출을 시작 하는 열거형의 다음 속성을 검색 [BeginEnumeration](beginenumeration.md)합니다.

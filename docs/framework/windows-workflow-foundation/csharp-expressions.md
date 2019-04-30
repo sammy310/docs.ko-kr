@@ -3,30 +3,30 @@ title: C# 식
 ms.date: 03/30/2017
 ms.assetid: 29110be7-f4e3-407e-8dbe-78102eb21115
 ms.openlocfilehash: 2ffc380d9c65ec398084bfcbeadfe0fd2c3d6720
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009814"
 ---
 # <a name="c-expressions"></a>C# 식
 부터 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], C# 식의 Windows WF (Workflow Foundation) 지원 됩니다. 새 C# 워크플로 프로젝트 대상으로 하는 Visual Studio 2012에서 만든 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 사용 하 여 C# 식 및 Visual Basic 워크플로 프로젝트를 Visual Basic 식을 사용 합니다. Visual Basic 식을 사용하는 기존 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 워크플로 프로젝트는 프로젝트 언어에 관계없이 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]로 마이그레이션할 수 있으며 지원됩니다. 이 항목에서는 [!INCLUDE[wf1](../../../includes/wf1-md.md)]의 C# 식에 대해 간략하게 설명합니다.
 
 ## <a name="using-c-expressions-in-workflows"></a>워크플로에서 C# 식 사용
 
--   [워크플로 디자이너에서 C# 식 사용](csharp-expressions.md#WFDesigner)
+- [워크플로 디자이너에서 C# 식 사용](csharp-expressions.md#WFDesigner)
 
-    -   [이전 버전과 호환성](csharp-expressions.md#BackwardCompat)
+    - [이전 버전과 호환성](csharp-expressions.md#BackwardCompat)
 
--   [코드 워크플로에서 C# 식 사용](csharp-expressions.md#CodeWorkflows)
+- [코드 워크플로에서 C# 식 사용](csharp-expressions.md#CodeWorkflows)
 
--   [XAML 워크플로에서 C# 식 사용](csharp-expressions.md#XamlWorkflows)
+- [XAML 워크플로에서 C# 식 사용](csharp-expressions.md#XamlWorkflows)
 
-    -   [컴파일된 Xaml](csharp-expressions.md#CompiledXaml)
+    - [컴파일된 Xaml](csharp-expressions.md#CompiledXaml)
 
-    -   [느슨한 Xaml](csharp-expressions.md#LooseXaml)
+    - [느슨한 Xaml](csharp-expressions.md#LooseXaml)
 
--   [XAMLX 워크플로 서비스에서 C# 식 사용](csharp-expressions.md#WFServices)
+- [XAMLX 워크플로 서비스에서 C# 식 사용](csharp-expressions.md#WFServices)
 
 ### <a name="WFDesigner"></a> 워크플로 디자이너에서 C# 식 사용
  부터 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], C# 식의 Windows WF (Workflow Foundation) 지원 됩니다. Visual Studio 2012에서 만들어진 C# 워크플로 프로젝트 대상으로 하는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Visual Basic 워크플로 프로젝트에서는 Visual Basic 식을 사용 하는 동안 C# 식을 사용 합니다. 원하는 C# 식을 지정 하려면 입력란에 입력 **C# 식 입력**합니다. 이 레이블은 디자이너에서 활동이 선택된 경우 속성 창에 표시되거나 워크플로 디자이너의 활동에 표시됩니다. 다음 예제에서는 `WriteLine`의 `Sequence` 내에 두 개의 `NoPersistScope` 활동이 포함되어 있습니다.
@@ -176,22 +176,22 @@ static void CompileExpressions(DynamicActivity dynamicActivity)
 
  동적 활동에서 C# 식을 컴파일하는 `CompileExpressions` 오버로드에는 몇 가지 차이점이 있습니다.
 
--   `CompileExpressions`에 대한 매개 변수는 `DynamicActivity`입니다.
+- `CompileExpressions`에 대한 매개 변수는 `DynamicActivity`입니다.
 
--   형식 이름 및 네임스페이스는 `DynamicActivity.Name` 속성을 사용하여 검색됩니다.
+- 형식 이름 및 네임스페이스는 `DynamicActivity.Name` 속성을 사용하여 검색됩니다.
 
--   `TextExpressionCompilerSettings.ForImplementation`이 `true`로 설정됩니다.
+- `TextExpressionCompilerSettings.ForImplementation`이 `true`로 설정됩니다.
 
--   `CompiledExpressionInvoker.SetCompiledExpressionRootForImplementation` 대신 `CompiledExpressionInvoker.SetCompiledExpressionRoot`이 호출됩니다.
+- `CompiledExpressionInvoker.SetCompiledExpressionRootForImplementation` 대신 `CompiledExpressionInvoker.SetCompiledExpressionRoot`이 호출됩니다.
 
  코드에서 식 사용 하 여 작업에 대 한 자세한 내용은 참조 하세요. [제작 워크플로, 활동 및 식을 사용 하 여 명령적 코드](authoring-workflows-activities-and-expressions-using-imperative-code.md)합니다.
 
 ### <a name="XamlWorkflows"></a> XAML 워크플로에서 C# 식 사용
  XAML 워크플로에서는 C# 식이 지원됩니다. 컴파일된 XAML 워크플로는 형식으로 컴파일되고, 느슨한 XAML 워크플로는 런타임에 의해 로드된 후 워크플로가 실행될 때 활동 트리로 컴파일됩니다.
 
--   [컴파일된 Xaml](csharp-expressions.md#CompiledXaml)
+- [컴파일된 Xaml](csharp-expressions.md#CompiledXaml)
 
--   [느슨한 Xaml](csharp-expressions.md#LooseXaml)
+- [느슨한 Xaml](csharp-expressions.md#LooseXaml)
 
 #### <a name="CompiledXaml"></a> 컴파일된 Xaml
  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]를 대상으로 하는 C# 워크플로 프로젝트의 일부로서 형식으로 컴파일되는 컴파일된 XAML 워크플로에서는 C# 식이 지원됩니다. 컴파일된 XAML은 Visual Studio에서 워크플로 작성의 기본 형식 및 C# 워크플로 프로젝트에서 만든 대상으로 하는 Visual Studio [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] C# 식을 사용 합니다.

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e23232b55a841672ee193b980c310995ba688e00
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049364"
 ---
 # <a name="strongnamegetblob-function"></a>StrongNameGetBlob 함수
 지정된 주소에 있는 실행 파일의 이진 표현으로 지정된 버퍼를 채웁니다.  

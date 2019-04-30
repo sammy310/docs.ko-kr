@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 778359a7d26b6e2f19984a1f7ff06a527f2449f0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993730"
 ---
 # <a name="icordebugvaluebreakpoint-interface"></a>ICorDebugValueBreakpoint 인터페이스
 특정 값에 액세스할 수 있도록 ICorDebugBreakpoint 인터페이스를 확장 합니다.  

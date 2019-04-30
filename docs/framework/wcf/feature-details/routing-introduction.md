@@ -3,11 +3,11 @@ title: 라우팅 소개
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
 ms.openlocfilehash: d0f07d0dd171de428f7d556d84dfda04e35880b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991096"
 ---
 # <a name="routing-introduction"></a>라우팅 소개
 라우팅 서비스는 메시지 내용에 따라 메시지를 라우트할 수 있는 제네릭 플러그형 SOAP 매개자를 제공합니다. 라우팅 서비스를 사용하면 서비스 집계, 서비스 버전 관리, 우선 순위 라우팅 및 멀티캐스트 라우팅과 같은 시나리오를 구현할 수 있도록 하는 복합적인 라우팅 논리를 만들 수 있습니다. 또한 라우팅 서비스는 오류 처리 기능을 제공하므로 기본 대상 엔드포인트로 메시지를 보내는 중 오류가 발생할 경우 이 기능을 통해 메시지를 보낼 백업 엔드포인트 목록을 설정할 수 있습니다.  
@@ -156,9 +156,9 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
   
  많은 라우팅 서비스 구성에서 하나의 특정 엔드포인트로만 메시지를 라우트하는 단독 필터 논리를 사용하지만 주어진 메시지를 여러 대상 엔드포인트로 라우트해야 하는 경우도 있습니다. 메시지를 여러 대상으로 멀티캐스트하려면 다음 조건이 충족되어야 합니다.  
   
--   클라이언트 응용 프로그램은 요청에 대한 응답으로 하나의 회신만 수신할 수 있으므로 채널 셰이프가 요청-회신이면 안 됩니다.  
+- 클라이언트 응용 프로그램은 요청에 대한 응답으로 하나의 회신만 수신할 수 있으므로 채널 셰이프가 요청-회신이면 안 됩니다.  
   
--   메시지를 평가할 때 여러 필터에서 `true`를 반환해야 합니다.  
+- 메시지를 평가할 때 여러 필터에서 `true`를 반환해야 합니다.  
   
  이러한 조건이 충족되면 `true`를 반환하는 모든 필터의 모든 엔드포인트로 메시지가 라우트됩니다. 다음 예제에서는 메시지의 끝점 주소는 경우 두 끝점에 메시지가 라우트되는 라우팅 구성을 정의 `http://localhost:8000/routingservice/router/rounding`합니다.  
   
@@ -195,33 +195,33 @@ rc.FilterTable.Add(new EndpointAddressMessageFilter(new EndpointAddress(
   
  **요청 처리**  
   
--   가져오기의 **MessageVersion** 아웃 바운드 바인딩/채널의 합니다.  
+- 가져오기의 **MessageVersion** 아웃 바운드 바인딩/채널의 합니다.  
   
--   원본 메시지에 대한 본문 판독기를 가져옵니다.  
+- 원본 메시지에 대한 본문 판독기를 가져옵니다.  
   
--   동일한 작업, 본문 판독기 및 새 새 메시지를 만듭니다 **MessageVersion**합니다.  
+- 동일한 작업, 본문 판독기 및 새 새 메시지를 만듭니다 **MessageVersion**합니다.  
   
--   하는 경우 <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing.None**, To, From, FaultTo 복사 및 RelatesTo 헤더를 새 메시지입니다.  
+- 하는 경우 <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing.None**, To, From, FaultTo 복사 및 RelatesTo 헤더를 새 메시지입니다.  
   
--   모든 메시지 속성을 새 메시지에 복사합니다.  
+- 모든 메시지 속성을 새 메시지에 복사합니다.  
   
--   응답을 처리할 때 사용할 원본 요청 메시지를 저장합니다.  
+- 응답을 처리할 때 사용할 원본 요청 메시지를 저장합니다.  
   
--   새 요청 메시지를 반환합니다.  
+- 새 요청 메시지를 반환합니다.  
   
  **응답 처리**  
   
--   가져오기는 **MessageVersion** 원본 요청 메시지입니다.  
+- 가져오기는 **MessageVersion** 원본 요청 메시지입니다.  
   
--   수신한 응답 메시지에 대한 본문 판독기를 가져옵니다.  
+- 수신한 응답 메시지에 대한 본문 판독기를 가져옵니다.  
   
--   동일한 작업, 본문 판독기를 사용 하 여 새 응답 메시지를 만들기 및 **MessageVersion** 원본 요청 메시지입니다.  
+- 동일한 작업, 본문 판독기를 사용 하 여 새 응답 메시지를 만들기 및 **MessageVersion** 원본 요청 메시지입니다.  
   
--   하는 경우 <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing.None**, To, From, FaultTo 복사 및 RelatesTo 헤더를 새 메시지입니다.  
+- 하는 경우 <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing.None**, To, From, FaultTo 복사 및 RelatesTo 헤더를 새 메시지입니다.  
   
--   메시지 속성을 새 메시지에 복사합니다.  
+- 메시지 속성을 새 메시지에 복사합니다.  
   
--   새 응답 메시지를 반환합니다.  
+- 새 응답 메시지를 반환합니다.  
   
  기본적으로 **SoapProcessingBehavior** 하 여 클라이언트 끝점에 자동으로 추가 됩니다는 <xref:System.ServiceModel.Routing.RoutingBehavior> 서비스가 시작할 때; SOAP 처리를 사용 하 여 모든 클라이언트 끝점에 추가 되는지 여부를 제어할 수는 있지만 합니다 <xref:System.ServiceModel.Routing.RoutingConfiguration.SoapProcessingEnabled%2A> 속성입니다. 또한 SOAP 처리에 대한 더 세부적인 제어가 필요한 경우에는 특정 엔드포인트에 동작을 직접 추가하고 엔드포인트 수준에서 이 동작을 사용하거나 사용하지 않도록 설정할 수 있습니다.  
   

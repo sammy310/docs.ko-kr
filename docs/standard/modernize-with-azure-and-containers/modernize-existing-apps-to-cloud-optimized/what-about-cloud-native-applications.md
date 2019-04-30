@@ -1,17 +1,17 @@
 ---
-title: 클라우드 네이티브 응용 프로그램의 경우는 어떨까요?
+title: 클라우드 네이티브 애플리케이션은 어떻습니까?
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 클라우드 네이티브 응용 프로그램의 경우는 어떨까요?
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
 ms.openlocfilehash: 10f7761b7c0d2ddd8cb9247b1a02aa49cdc4e5d4
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012128"
 ---
-# <a name="what-about-cloud-native-applications"></a>클라우드 네이티브 응용 프로그램의 경우는 어떨까요?
+# <a name="what-about-cloud-native-applications"></a>클라우드 네이티브 애플리케이션은 어떻습니까?
 
 [클라우드 네이티브](https://azure.microsoft.com/overview/cloudnative/) 응용 프로그램이 이 가이드의 주요한 대상은 아니지만 최신화 성숙도 수준을 이해하고 클라우드에 최적화된 응용 프로그램과 구분하는 데 도움이 됩니다.
 

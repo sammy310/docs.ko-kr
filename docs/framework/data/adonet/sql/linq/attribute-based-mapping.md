@@ -3,11 +3,11 @@ title: 특성 기반 매핑
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
 ms.openlocfilehash: d7d7c14ca12e40af643d164069cf7b0f3165fa20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032970"
 ---
 # <a name="attribute-based-mapping"></a>특성 기반 매핑
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] SQL Server 데이터베이스를 매핑하는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 특성을 적용 하거나 또는 외부 매핑 파일을 사용 하 여 개체 모델입니다. 이 항목에서는 특성 기반 접근 방법에 대해 간략하게 설명합니다.  

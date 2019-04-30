@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ContextMenuStrips [Windows Forms], relating
 ms.assetid: 6fc40a42-5d69-427f-aa30-0a146193226b
 ms.openlocfilehash: 5fe880a44afdbd79116541809972d1456aefb9c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010989"
 ---
 # <a name="how-to-associate-a-contextmenustrip-with-a-control"></a>방법: 컨트롤에 ContextMenuStrip 연결
 컨트롤 및 바로 가기 메뉴를 만든 후 다음 절차를 따라 사용자가 컨트롤을 마우스 오른쪽 단추로 클릭할 때 지정된 바로 가기 메뉴를 표시합니다. 이러한 절차에서는 <xref:System.Windows.Forms.ContextMenuStrip>을 Windows Form 및 <xref:System.Windows.Forms.ToolStrip> 컨트롤과 연결합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "59323247"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   System, System.Data, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조  
+- System, System.Data, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조  
   
  Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 내용은 [명령줄에서 빌드](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 하거나 [csc.exe를 사용한 명령줄 빌드](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다. 또한 새 프로젝트에 코드를 붙여 넣어 Visual Studio에서이 예제를 빌드할 수 있습니다.  
   

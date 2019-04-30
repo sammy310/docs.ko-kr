@@ -8,11 +8,11 @@ helpviewer_keywords:
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
 ms.openlocfilehash: 4b0552ab9f565d9118415bc2da2823762f34fe2c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007411"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>.NET 응용 프로그램 배포를 지원하기 위한 Firefox 추가 기능
 Windows Presentation Foundation (WPF) Firefox 및 Firefox에 대 한.NET Framework Assistant에 대 한 플러그 인을 사용 하도록 설정 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]느슨한, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], 및 Mozilla Firefox 브라우저를 사용 하 여 ClickOnce 응용 프로그램입니다.  
@@ -27,9 +27,9 @@ Windows Presentation Foundation (WPF) Firefox 및 Firefox에 대 한.NET Framewo
 ## <a name="net-framework-assistant-for-firefox"></a>Firefox용 .NET Framework Assistant  
  Firefox 용.NET Framework Assistant Firefox 브라우저에서 실행할 독립 실행형 ClickOnce 응용 프로그램을 수 있습니다. Firefox 용.NET Framework Assistant 함수 동일 하 게 Firefox 브라우저 전후 설치 되어 있는 경우입니다. Firefox 브라우저를 시작할 때 및 [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)] 가 설치 된 Firefox 찾습니다 및 Firefox에 대 한.NET Framework Assistant를 설치 합니다. 사용자는 다음을 수행 하는 Firefox 용.NET Framework Assistant 구성할 수 있습니다.  
   
--   ClickOnce 응용 프로그램을 실행 하기 전에 확인 합니다.  
+- ClickOnce 응용 프로그램을 실행 하기 전에 확인 합니다.  
   
--   설치 된 모든 버전의.NET Framework 또는 최신 버전에만 보고 합니다.  
+- 설치 된 모든 버전의.NET Framework 또는 최신 버전에만 보고 합니다.  
   
  Firefox 용.NET Framework Assistant가 포함 된 [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]합니다. Firefox 용.NET Framework Assistant를 제거 하는 방법에 대 한 내용은 [Firefox 용.NET Framework Assistant를 제거 하는 방법](https://go.microsoft.com/fwlink/?LinkId=177944)합니다.  
   

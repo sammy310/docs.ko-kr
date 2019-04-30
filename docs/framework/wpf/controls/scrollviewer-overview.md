@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
 ms.openlocfilehash: a3302d9c360b0918a1fce956af3e3aa14f29361b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024029"
 ---
 # <a name="scrollviewer-overview"></a>ScrollViewer 개요
 사용자 인터페이스 내의 콘텐츠는 대개 컴퓨터 화면의 표시 영역보다 더 큽니다. 합니다 <xref:System.Windows.Controls.ScrollViewer> 컨트롤의 콘텐츠 스크롤을 사용 하는 편리한 방법을 제공 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램입니다. 이 항목에서는 소개 된 <xref:System.Windows.Controls.ScrollViewer> 요소 몇 가지 사용 예제를 제공 합니다.  

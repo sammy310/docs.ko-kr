@@ -9,11 +9,11 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning
 ms.assetid: 7dc1a157-6fee-4995-8ebc-b65bdc0909a8
 ms.openlocfilehash: 6f36914387519b027fcf4cb6bf1e7654e551b3eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010997"
 ---
 # <a name="how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control"></a>방법: TableLayoutPanel 컨트롤에서 컨트롤 맞춤 및 늘이기
 정렬 하는 컨트롤에서 stretch를 <xref:System.Windows.Forms.TableLayoutPanel> 사용 하 여를 <xref:System.Windows.Forms.Control.Anchor%2A> 및 <xref:System.Windows.Forms.Control.Dock%2A> 속성.  

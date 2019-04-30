@@ -3,11 +3,11 @@ title: 진입점
 description: 진입점으로 설정 하는 방법을 알아봅니다는 F# 실행 공식적으로 시작 하는 실행 파일로 컴파일된 프로그램입니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: 915ab17b9a4fc7fd4d0ae344cb273b1d348a02f1
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996829"
 ---
 # <a name="entry-point"></a>진입점
 
@@ -42,7 +42,7 @@ Arguments passed to function : [|"1"; "2"; "3"|]
 
 프로그램에 없는 **EntryPoint** 진입점을 컴파일해야 하 고 마지막 파일의 최상위 수준 바인딩을 명시적으로 나타내는 특성의 진입점으로 사용 됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [함수](index.md)
 - [let 바인딩](let-bindings.md)

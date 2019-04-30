@@ -15,11 +15,11 @@ helpviewer_keywords:
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
 ms.openlocfilehash: 0768f811653543b3370310ccc0b59890273baf52
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011088"
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>방법: Windows Forms에 사용자 인터페이스가 없는 컨트롤 추가
 보이지 않는 컨트롤 (또는 구성 요소)에 응용 프로그램 기능을 제공합니다. 다른 컨트롤과 달리 구성 요소 사용자에 게 사용자 인터페이스를 제공 하지 않으며 따라서 Windows Forms 디자이너 화면에 표시 될 필요가 없습니다. 구성 요소를 폼에 추가 되 면 Windows Forms 디자이너 구성 요소를 모두 표시 되는 폼의 맨 아래에 크기를 조정할 수 있는 트레이 표시 합니다. 컨트롤에 구성 요소 트레이에 추가 되 면 구성 요소를 선택 하 고 폼에서 다른 컨트롤과 마찬가지로 해당 속성을 설정할 수 있습니다.  

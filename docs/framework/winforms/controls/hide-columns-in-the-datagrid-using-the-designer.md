@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 ms.assetid: a81c38e6-2527-426a-bcb1-be691403be04
 ms.openlocfilehash: aa81eb7470b818fa2b65200503e5ce65b467c0f2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011296"
 ---
 # <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열 숨기기
 Windows Forms <xref:System.Windows.Forms.DataGridView> 컨트롤에서 사용할 수 있는 열 중 일부만 표시하려는 경우도 있습니다. 직원을 표시 하려는 하는 예를 들어, 다른 사용자 로부터 숨기고 관리 자격 증명이 있는 사용자에 게 급여 열입니다. 또는 다음 중에서 일부만 표시 하려는 많은 열이 포함 된 데이터 원본에 컨트롤을 바인딩하는 것이 좋습니다. 이 경우 숨기기 보다는 표시 하는 데 관심이 없는 열은 일반적으로 제거 합니다. 자세한 내용은 [방법: 추가 및 제거 열에는 Windows Forms DataGridView 컨트롤 디자이너를 사용 하 여](add-and-remove-columns-in-the-datagrid-using-the-designer.md)입니다.  

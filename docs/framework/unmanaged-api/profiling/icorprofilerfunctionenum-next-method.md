@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 62e70a2fe421651aac9a4921ca885c53c864c4f7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991954"
 ---
 # <a name="icorprofilerfunctionenumnext-method"></a>ICorProfilerFunctionEnum::Next 메서드
 시퀀스에서 열거자의 현재 위치부터 시작하여 순차적 함수 컬렉션에서 지정된 개수의 연속 함수를 가져옵니다.  

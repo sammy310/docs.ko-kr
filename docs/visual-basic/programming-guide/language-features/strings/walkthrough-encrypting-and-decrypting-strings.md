@@ -8,11 +8,11 @@ helpviewer_keywords:
 - strings [Visual Basic], decrypting
 ms.assetid: 1f51e40a-2f88-43e2-a83e-28a0b5c0d6fd
 ms.openlocfilehash: 1d003df87327e14a6cbd65222f86c3dc4df169ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024484"
 ---
 # <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>연습: 암호화 및 Visual Basic의 문자열을 암호 해독
 이 연습에서는 사용 하는 방법을 보여 줍니다 합니다 <xref:System.Security.Cryptography.DESCryptoServiceProvider> 암호화 및 3des(triple Data Encryption Standard의 암호화 서비스 공급자 (CSP) 버전을 사용 하 여 문자열을 해독 하는 클래스 (<xref:System.Security.Cryptography.TripleDES>) 알고리즘입니다. 첫 번째 단계는 3DES 알고리즘을 캡슐화 하 고 base-64로 인코딩된 문자열로 암호화 된 데이터를 저장 하는 간단한 래퍼 클래스를 만드는 것입니다. 그런 다음 해당 래퍼를 사용 하 여 안전 하 게 공개적으로 액세스할 텍스트 파일에서 사용자 개인 데이터를 저장 합니다.  

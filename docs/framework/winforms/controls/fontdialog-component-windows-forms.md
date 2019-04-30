@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Font dialog box [Windows Forms], Windows Forms
 ms.assetid: 54015df3-aab2-4338-84e5-ba78cedbfdfc
 ms.openlocfilehash: de3a6b8f59d5ae83d55ea408f70d54d37761f693
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971355"
 ---
 # <a name="fontdialog-component-windows-forms"></a>FontDialog 구성 요소(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.FontDialog> 구성 요소는 미리 구성된 대화 상자입니다. 동일 **글꼴** Windows 운영 체제에서 노출 하는 대화 상자. 구성 요소에서 상속 된 <xref:System.Windows.Forms.CommonDialog> 클래스입니다.  
@@ -25,8 +25,7 @@ Windows Forms <xref:System.Windows.Forms.FontDialog> 구성 요소는 미리 구
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Forms.FontDialog>  
- 
-  <xref:System.Windows.Forms.FontDialog> 클래스 및 해당 멤버에 대한 참조 정보를 제공합니다.  
+ <xref:System.Windows.Forms.FontDialog> 클래스 및 해당 멤버에 대한 참조 정보를 제공합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
  [대화 상자 컨트롤 및 구성 요소](dialog-box-controls-and-components-windows-forms.md)  

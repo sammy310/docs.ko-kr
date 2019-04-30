@@ -5,11 +5,11 @@ dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
 ms.openlocfilehash: 326caf550e8b138b4b968f0021a7fc475dc58c8d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037013"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>연습: 간단한 개체 모델 및 쿼리(Visual Basic)
 이 연습에서는 간단한 기본 종단 간 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 시나리오에 대해 설명합니다. 샘플 Northwind 데이터베이스의 Customers 테이블을 모델링하는 엔터티 클래스를 만듭니다. 그런 다음 단순 쿼리를 만들어 London에 있는 고객을 나열합니다.  
@@ -22,24 +22,24 @@ ms.locfileid: "59338074"
   
 ## <a name="prerequisites"></a>전제 조건  
   
--   이 연습에서는 파일을 저장하기 위해 전용 폴더("c:\linqtest")가 사용됩니다. 연습을 시작하기 전에 먼저 이 폴더를 만듭니다.  
+- 이 연습에서는 파일을 저장하기 위해 전용 폴더("c:\linqtest")가 사용됩니다. 연습을 시작하기 전에 먼저 이 폴더를 만듭니다.  
   
--   이 연습을 수행하려면 Northwind 샘플 데이터베이스가 있어야 합니다. 이 데이터베이스가 개발 컴퓨터에 없는 경우 Microsoft 다운로드 사이트에서 다운로드할 수 있습니다. 자세한 내용은 [샘플 데이터베이스 다운로드](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)합니다. 이 데이터베이스를 다운로드한 후 파일을 c:\linqtest 폴더에 복사합니다.  
+- 이 연습을 수행하려면 Northwind 샘플 데이터베이스가 있어야 합니다. 이 데이터베이스가 개발 컴퓨터에 없는 경우 Microsoft 다운로드 사이트에서 다운로드할 수 있습니다. 자세한 내용은 [샘플 데이터베이스 다운로드](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)합니다. 이 데이터베이스를 다운로드한 후 파일을 c:\linqtest 폴더에 복사합니다.  
   
 ## <a name="overview"></a>개요  
  이 연습은 다음과 같은 여섯 가지 주요 작업으로 구성됩니다.  
   
--   만들기는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio에서 솔루션입니다.  
+- 만들기는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio에서 솔루션입니다.  
   
--   데이터베이스 테이블에 클래스 매핑  
+- 데이터베이스 테이블에 클래스 매핑  
   
--   데이터베이스 열을 나타내도록 클래스의 속성 지정  
+- 데이터베이스 열을 나타내도록 클래스의 속성 지정  
   
--   Northwind 데이터베이스에 대한 연결 지정  
+- Northwind 데이터베이스에 대한 연결 지정  
   
--   데이터베이스에 대해 실행할 단순 쿼리 만들기  
+- 데이터베이스에 대해 실행할 단순 쿼리 만들기  
   
--   쿼리 실행 및 결과 검토  
+- 쿼리 실행 및 결과 검토  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>LINQ to SQL 솔루션 만들기  
  빌드 및 실행에 필요한 참조를 포함 하는 Visual Studio 솔루션을 만든이 첫 번째 태스크는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 프로젝트입니다.  
@@ -80,22 +80,22 @@ ms.locfileid: "59338074"
   
 #### <a name="to-create-an-entity-class-and-map-it-to-a-database-table"></a>엔터티 클래스를 만들어 데이터베이스 테이블에 매핑하려면  
   
--   다음 코드를 `Sub Main` 바로 위에 있는 Module1.vb에 입력하거나 붙여넣습니다.  
+- 다음 코드를 `Sub Main` 바로 위에 있는 Module1.vb에 입력하거나 붙여넣습니다.  
   
      [!code-vb[DLinqWalk1VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#2)]  
   
 ## <a name="designating-properties-on-the-class-to-represent-database-columns"></a>데이터베이스 열을 나타내도록 클래스의 속성 지정  
  이 단계에서는 다음과 같은 몇 가지 작업을 수행합니다.  
   
--   <xref:System.Data.Linq.Mapping.ColumnAttribute> 특성을 사용하여 데이터베이스 테이블의 열을 나타내도록 엔터티 클래스의 `CustomerID` 및 `City` 속성을 지정합니다.  
+- <xref:System.Data.Linq.Mapping.ColumnAttribute> 특성을 사용하여 데이터베이스 테이블의 열을 나타내도록 엔터티 클래스의 `CustomerID` 및 `City` 속성을 지정합니다.  
   
--   데이터베이스의 기본 키 열을 나타내도록 `CustomerID` 속성을 지정합니다.  
+- 데이터베이스의 기본 키 열을 나타내도록 `CustomerID` 속성을 지정합니다.  
   
--   전용 저장소에 `_CustomerID` 및 `_City` 필드를 지정합니다. 그러면 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 비즈니스 논리가 포함된 공용 접근자를 사용하는 대신 값을 직접 저장하고 검색할 수 있습니다.  
+- 전용 저장소에 `_CustomerID` 및 `_City` 필드를 지정합니다. 그러면 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 비즈니스 논리가 포함된 공용 접근자를 사용하는 대신 값을 직접 저장하고 검색할 수 있습니다.  
   
 #### <a name="to-represent-characteristics-of-two-database-columns"></a>두 데이터베이스 열의 특징을 나타내려면  
   
--   다음 코드를 `End Class` 바로 앞의 Module1.vb에 입력하거나 붙여넣습니다.  
+- 다음 코드를 `End Class` 바로 앞의 Module1.vb에 입력하거나 붙여넣습니다.  
   
      [!code-vb[DLinqWalk1VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#3)]  
   
@@ -106,7 +106,7 @@ ms.locfileid: "59338074"
   
 #### <a name="to-specify-the-database-connection"></a>데이터베이스 연결을 지정하려면  
   
--   다음 코드를 `Sub Main` 메서드에 입력하거나 붙여넣습니다.  
+- 다음 코드를 `Sub Main` 메서드에 입력하거나 붙여넣습니다.  
   
      `northwnd.mdf` 파일은 linqtest 폴더 내에 있는 것으로 간주합니다. 자세한 내용은 이 연습 앞부분의 사전 요구 사항 단원을 참조하세요.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "59338074"
   
 #### <a name="to-create-a-simple-query"></a>단순 쿼리를 작성하려면  
   
--   다음 코드를 `Sub Main` 선언 뒤의 `Table(Of Customer)` 메서드에 입력하거나 붙여넣습니다.  
+- 다음 코드를 `Sub Main` 선언 뒤의 `Table(Of Customer)` 메서드에 입력하거나 붙여넣습니다.  
   
      [!code-vb[DLinqWalk1AVB#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1AVB/vb/Module1.vb#5)]  
   

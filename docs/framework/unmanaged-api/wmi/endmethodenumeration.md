@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e7f29c365e9f6ba85f85ceb232f7af89446af2a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62040601"
 ---
 # <a name="endmethodenumeration-function"></a>EndMethodEnumeration 함수
 에 대 한 호출을 시작 하는 열거형 시퀀스를 종료 합니다 [BeginMethodEnumeration 함수](beginmethodenumeration.md)합니다.  

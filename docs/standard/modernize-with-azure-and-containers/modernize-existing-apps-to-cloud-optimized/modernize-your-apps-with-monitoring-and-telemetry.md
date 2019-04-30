@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: cd54861600127191b852e0a966baae6e0fe7914e
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012115"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>모니터링 및 원격 분석을 사용하여 앱을 최신화
 
@@ -35,15 +35,15 @@ OMS 포털 또는 모든 브라우저에서 실행 하는 Azure portal을 통해
 
 합니다 [컨테이너 모니터링 솔루션](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers) 사용 하면 Log Analytics에에서 보고 하 고이 단일 위치에서 Docker 및 Windows 컨테이너 호스트를 관리 합니다. 솔루션은를 실행 하는 및 실행 중인 컨테이너는 컨테이너 이미지를 실행 합니다. 컨테이너를 사용 하 여 사용 중인 명령을 포함 하 여 자세한 감사 정보를 볼 수 있습니다. 원격 Docker 또는 Windows 호스트를 확인 하지 않고도 중앙 집중식된 로그를 검색 하 여 컨테이너를 해결할 수도 있습니다. 컨테이너 호스트에서 성가 시 고 소비 과도 한 리소스 수를 확인할 수 있습니다. 또한 중앙화 된 CPU, 메모리, 저장소 및 네트워크 사용량 및 컨테이너에 대 한 성능 정보를 볼 수 있습니다. Windows를 실행 하는 컴퓨터에 중앙 집중화를 Windows Server에서 로그를 비교 합니다. Hyper-v 및 Docker 컨테이너입니다. 솔루션에서는 다음과 같은 컨테이너 오 케 스트레이 터를 지원합니다.
 
--   Docker Swarm
+- Docker Swarm
 
--   DC/OS
+- DC/OS
 
--   Kubernetes
+- Kubernetes
 
--   Service Fabric
+- Service Fabric
 
--   Red Hat OpenShift
+- Red Hat OpenShift
 
 그림 4-11 다양 한 컨테이너 호스트와 에이전트와 OMS 간의 관계를 보여 줍니다.
 
@@ -53,45 +53,45 @@ OMS 포털 또는 모든 브라우저에서 실행 하는 Azure portal을 통해
 
 Log Analytics 컨테이너 모니터링 솔루션을 사용할 수 있습니다.
 
--   단일 위치에서 모든 컨테이너 호스트에 대 한 정보를 참조 하세요.
+- 단일 위치에서 모든 컨테이너 호스트에 대 한 정보를 참조 하세요.
 
--   알고 있는 컨테이너를 실행 하는 어떤 이미지를 실행 및 실행 하는 것입니다.
+- 알고 있는 컨테이너를 실행 하는 어떤 이미지를 실행 및 실행 하는 것입니다.
 
--   컨테이너에 대 한 작업에 대 한 감사 내역을 참조 하세요.
+- 컨테이너에 대 한 작업에 대 한 감사 내역을 참조 하세요.
 
--   Docker 호스트에 원격 로그인이 없는 중앙 집중식된 로그를 검색 하 여이 문제를 해결 합니다.
+- Docker 호스트에 원격 로그인이 없는 중앙 집중식된 로그를 검색 하 여이 문제를 해결 합니다.
 
--   "시끄러운 이웃" 수 있으며 과도 한 리소스를 호스트에서 사용 하는 컨테이너를 찾습니다.
+- "시끄러운 이웃" 수 있으며 과도 한 리소스를 호스트에서 사용 하는 컨테이너를 찾습니다.
 
--   중앙화 된 CPU, 메모리, 저장소 및 네트워크 사용량 및 컨테이너에 대 한 성능 정보를 봅니다.
+- 중앙화 된 CPU, 메모리, 저장소 및 네트워크 사용량 및 컨테이너에 대 한 성능 정보를 봅니다.
 
 ### <a name="additional-resources"></a>추가 자료
 
--   **Microsoft Azure의 모니터링 개요**
+- **Microsoft Azure의 모니터링 개요**
 
 <https://docs.microsoft.com/azure/azure-monitor/overview>
 
--   **Application Insights란?**
+- **Application Insights란?**
 
 <https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview>
 
--   **Log Analytics 란?**
+- **Log Analytics 란?**
 
 <https://docs.microsoft.com/azure/log-analytics/log-analytics-overview>
 
--   **Azure Monitor의 컨테이너 모니터링 솔루션**
+- **Azure Monitor의 컨테이너 모니터링 솔루션**
 
 <https://docs.microsoft.com/azure/azure-monitor/insights/containers>
 
--   **Azure Monitor 개요**
+- **Azure Monitor 개요**
 
 <https://docs.microsoft.com/azure/azure-monitor/overview>
 
--   **Operations Management Suite (OMS) 란?**
+- **Operations Management Suite (OMS) 란?**
 
 <https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview>
 
--   **OMS 사용 하 여 Service Fabric에서 Windows Server 컨테이너 모니터링**
+- **OMS 사용 하 여 Service Fabric에서 Windows Server 컨테이너 모니터링**
 
 <https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver>
 

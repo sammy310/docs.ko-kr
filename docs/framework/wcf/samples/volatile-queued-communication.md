@@ -3,11 +3,11 @@ title: 일시 대기 통신
 ms.date: 03/30/2017
 ms.assetid: 0d012f64-51c7-41d0-8e18-c756f658ee3d
 ms.openlocfilehash: ad29efb2c2b22945cda09f3aecc57ef50ed97f5f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006332"
 ---
 # <a name="volatile-queued-communication"></a>일시 대기 통신
 
@@ -83,8 +83,7 @@ public static void Main()
 MSMQ 큐 이름은 구성 파일의 appSettings 섹션에 지정됩니다. 서비스의 엔드포인트는 구성 파일의 system.serviceModel 섹션에 정의되며 `netMsmqBinding` 바인딩을 지정합니다.
 
 > [!NOTE]
-> 
-  <xref:System.Messaging>을 사용하여 큐를 만들 때 큐 이름은 로컬 컴퓨터에 점(.)을, 그 경로에는 백슬래시 구분 기호를 사용합니다. Windows Communication Foundation (WCF) 끝점 주소에서는 net.msmq 지정: 체계, "localhost"는 로컬 컴퓨터 및 해당 경로에 슬래시를 사용 합니다.
+> <xref:System.Messaging>을 사용하여 큐를 만들 때 큐 이름은 로컬 컴퓨터에 점(.)을, 그 경로에는 백슬래시 구분 기호를 사용합니다. Windows Communication Foundation (WCF) 끝점 주소에서는 net.msmq 지정: 체계, "localhost"는 로컬 컴퓨터 및 해당 경로에 슬래시를 사용 합니다.
 
 메시지의 보증과 함께 메시지가 지속적인지 또는 일시적인지도 구성에서 지정합니다.
 
@@ -218,8 +217,7 @@ Stock Tick zzz9:43.3
 2. 샘플을 실행하기 전에 서버와 클라이언트 모두에서 구성을 변경해야 합니다.
 
     > [!NOTE]
-    > 
-  `security mode`를 `None`으로 설정하는 것은 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 및 `Message` 보안을 `None`으로 설정하는 것과 같습니다.
+    > `security mode`를 `None`으로 설정하는 것은 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 및 `Message` 보안을 `None`으로 설정하는 것과 같습니다.
 
 > [!IMPORTANT]
 > 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.

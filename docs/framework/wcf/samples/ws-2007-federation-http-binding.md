@@ -3,11 +3,11 @@ title: WS 2007 페더레이션 HTTP 바인딩
 ms.date: 03/30/2017
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
 ms.openlocfilehash: 550a88552658864e3eedb70463e676ad6f9a2511
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007515"
 ---
 # <a name="ws-2007-federation-http-binding"></a>WS 2007 페더레이션 HTTP 바인딩
 이 샘플에서는 버전 1.3의 WS-Trust 사양을 지원하는 페더레이션 시나리오를 작성하는 데 사용할 수 있는 표준 바인딩인 <xref:System.ServiceModel.WS2007FederationHttpBinding>을 보여 줍니다.  

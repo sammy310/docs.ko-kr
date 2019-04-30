@@ -12,18 +12,18 @@ helpviewer_keywords:
 - carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
 ms.openlocfilehash: 47404f02a753fe143dd573bdf73143416872af9d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012921"
 ---
 # <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>방법: Windows Forms TextBox 컨트롤에서 여러 줄 표시
 기본적으로 Windows Forms <xref:System.Windows.Forms.TextBox> 컨트롤을 한 줄 텍스트를 표시 하 고 스크롤 막대를 표시 하지 않습니다. 텍스트가 사용 가능한 공간 보다 긴 경우 텍스트의 일부만 표시 됩니다. 설정 하 여이 기본 동작을 변경할 수는 <xref:System.Windows.Forms.TextBox.Multiline%2A>, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>, 및 <xref:System.Windows.Forms.TextBox.ScrollBars%2A> 속성을 적절 한 값입니다.  
   
 ### <a name="to-display-a-carriage-return-in-the-textbox-control"></a>TextBox 컨트롤에 캐리지 리턴을 표시 하려면  
   
--   여러 줄에 캐리지 리턴을 표시할 <xref:System.Windows.Forms.TextBox>를 사용 하 여는 <xref:System.Environment.NewLine%2A> 속성입니다.  
+- 여러 줄에 캐리지 리턴을 표시할 <xref:System.Windows.Forms.TextBox>를 사용 하 여는 <xref:System.Environment.NewLine%2A> 속성입니다.  
   
      주의 이스케이프 문자의 해석 (\\)는 언어에 따라 다릅니다. Visual Basic에서는 `Chr$(13) & Chr$(10)` 캐리지 리턴 및 줄 바꿈 문자 조합에 대 한 합니다.  
   

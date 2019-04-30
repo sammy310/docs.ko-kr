@@ -3,34 +3,34 @@ title: 라우팅 서비스
 ms.date: 03/30/2017
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
 ms.openlocfilehash: 905c84d801a27e588e2c539f987d6280aae7b994
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991058"
 ---
 # <a name="routing-service"></a>라우팅 서비스
 라우팅 서비스는 메시지 라우터 역할을 하는 제네릭 SOAP 매개자입니다. 라우팅 서비스의 핵심 기능은 메시지 내용을 기반으로 메시지를 라우트할 수 있는, 즉 메시지 헤더나 메시지 본문 같은 메시지 자체에 포함된 값을 기반으로 메시지를 클라이언트 엔드포인트에 전달할 수 있는 기능입니다.  
   
  <xref:System.ServiceModel.Routing.RoutingService> 에서 Windows Communication Foundation (WCF) 서비스로 구현 되는 <xref:System.ServiceModel.Routing> 네임 스페이스입니다. 라우팅 서비스는 메시지를 받은 다음 메시지 내용을 기반으로 각 메시지를 하나 이상의 클라이언트 엔드포인트에 라우트하는 하나 이상의 서비스 엔드포인트를 노출합니다. 라우팅 서비스는 다음과 같은 기능을 제공합니다.  
   
--   내용 기반 라우팅  
+- 내용 기반 라우팅  
   
-    -   서비스 집계  
+    - 서비스 집계  
   
-    -   서비스 버전 관리  
+    - 서비스 버전 관리  
   
-    -   우선 순위 라우팅  
+    - 우선 순위 라우팅  
   
-    -   동적 구성  
+    - 동적 구성  
   
--   프로토콜 브리징  
+- 프로토콜 브리징  
   
--   SOAP 처리  
+- SOAP 처리  
   
--   고급 오류 처리  
+- 고급 오류 처리  
   
--   백업 엔드포인트  
+- 백업 엔드포인트  
   
  위에 나열된 이점을 제공하는 매개자 서비스를 만들 수는 있지만 종종 이러한 구현이 특정 시나리오나 솔루션으로 제한되어 새 응용 프로그램에 적용되지 않을 수 있습니다.  
   
@@ -48,13 +48,13 @@ ms.locfileid: "59129443"
   
  메시지 필터를 필터 테이블로 그룹화하면 다음과 같은 여러 라우팅 시나리오를 처리할 수 있는 라우팅 논리를 생성할 수 있습니다.  
   
--   서비스 집계  
+- 서비스 집계  
   
--   서비스 버전 관리  
+- 서비스 버전 관리  
   
--   우선 순위 라우팅  
+- 우선 순위 라우팅  
   
--   동적 구성  
+- 동적 구성  
   
  메시지 필터 및 필터 테이블에 대 한 자세한 내용은 참조 하세요. [라우팅 소개](../../../../docs/framework/wcf/feature-details/routing-introduction.md) 하 고 [메시지 필터](../../../../docs/framework/wcf/feature-details/message-filters.md)합니다.  
   
@@ -97,13 +97,13 @@ ms.locfileid: "59129443"
 ## <a name="streaming"></a>스트리밍  
  스트리밍을 지원하도록 바인딩을 설정하는 경우 라우팅 서비스는 성공적으로 메시지를 스트리밍할 수 있습니다.  그러나 메시지를 버퍼링해야 할 수 있는 경우도 있습니다.  
   
--   멀티캐스트(추가 메시지 복사본을 만들기 위한 버퍼)  
+- 멀티캐스트(추가 메시지 복사본을 만들기 위한 버퍼)  
   
--   장애 조치(메시지를 백업에 전송해야 하는 경우의 버퍼)  
+- 장애 조치(메시지를 백업에 전송해야 하는 경우의 버퍼)  
   
--   System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly가 false임(필터가 본문을 검사할 수 있도록 MessageBuffer와 함께 MessageFilterTable을 표시하기 위한 버퍼)  
+- System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly가 false임(필터가 본문을 검사할 수 있도록 MessageBuffer와 함께 MessageFilterTable을 표시하기 위한 버퍼)  
   
--   동적 구성  
+- 동적 구성  
   
 ## <a name="see-also"></a>참고자료
 

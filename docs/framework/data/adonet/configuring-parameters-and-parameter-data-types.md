@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
 ms.openlocfilehash: e4414e33efb077e00e4b38e3e53d218ecd7343a7
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034556"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>매개 변수 및 매개 변수 데이터 형식 구성
 
@@ -90,13 +90,13 @@ Command 개체는 매개 변수를 통해 SQL 문이나 저장 프로시저에 �
 `DbCommandBuilder` 클래스를 사용하여 저장 프로시저에서 매개 변수를 파생할 수 있습니다. `SqlCommandBuilder` 및 `OleDbCommandBuilder` 클래스는 모두 정적 메서드인 `DeriveParameters`를 제공합니다. 이 메서드는 자동으로 명령 개체의 매개 변수 컬렉션을 저장 프로시저의 매개 변수 정보로 채웁니다. `DeriveParameters` 는 명령에 대한 기존 매개 변수 정보를 모두 덮어씁니다.
 
 > [!NOTE]
-> 매개 변수 정보를 파생하는 경우 해당 정보를 검색하는 데 데이터 소스에 대한 추가 라운드트립이 필요하므로 성능이 저하됩니다. 디자인 타임에 매개 변수 정보를 알고 있으면 매개 변수를 명시적으로 설정하여 응용 프로그램의 성능을 향상시킬 수 있습니다.
+> 매개 변수 정보를 파생하는 경우 해당 정보를 검색하는 데 데이터 소스에 대한 추가 라운드트립이 필요하므로 성능이 저하됩니다. 디자인 타임에 매개 변수 정보를 알고 있으면 매개 변수를 명시적으로 설정하여 애플리케이션의 성능을 향상시킬 수 있습니다.
 
 자세한 내용은 [commandbuilder를 사용 하를 사용 하 여 명령 생성](generating-commands-with-commandbuilders.md)합니다.
 
 ## <a name="using-parameters-with-a-sqlcommand-and-a-stored-procedure"></a>SqlCommand 및 저장된 프로시저를 사용 하 여 매개 변수를 사용 하 여
 
-저장 프로시저는 데이터 구동 응용 프로그램에 많은 이점을 제공합니다. 저장 프로시저를 사용하면 데이터베이스 작업이 단일 명령으로 캡슐화되고, 최고의 성능을 나타내도록 최적화되며, 추가 보안 기능을 통해 향상될 수 있습니다. SQL 문처럼 저장 프로시저 이름 뒤에 매개 변수 인수를 붙여 전달하여 저장 프로시저를 호출할 수 있지만 <xref:System.Data.Common.DbCommand.Parameters%2A> [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 개체의 <xref:System.Data.Common.DbCommand> 컬렉션을 사용하면 저장 프로시저 매개 변수를 보다 분명하게 정의할 수 있으며 출력 매개 변수와 반환 값에 액세스할 수 있습니다.
+저장 프로시저는 데이터 구동 애플리케이션에 많은 이점을 제공합니다. 저장 프로시저를 사용하면 데이터베이스 작업이 단일 명령으로 캡슐화되고, 최고의 성능을 나타내도록 최적화되며, 추가 보안 기능을 통해 향상될 수 있습니다. SQL 문처럼 저장 프로시저 이름 뒤에 매개 변수 인수를 붙여 전달하여 저장 프로시저를 호출할 수 있지만 <xref:System.Data.Common.DbCommand.Parameters%2A> [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 개체의 <xref:System.Data.Common.DbCommand> 컬렉션을 사용하면 저장 프로시저 매개 변수를 보다 분명하게 정의할 수 있으며 출력 매개 변수와 반환 값에 액세스할 수 있습니다.
 
 > [!NOTE]
 > 매개 변수화된 문은 `sp_executesql,` 을 사용하여 서버에서 실행되므로 쿼리 계획을 다시 사용할 수 있습니다. `sp_executesql` 일괄 처리의 로컬 커서 또는 변수는 `sp_executesql`을 호출하는 일괄 처리에 표시되지 않습니다. 데이터베이스 컨텍스트의 변경은 `sp_executesql` 문의 실행이 끝날 때까지만 지속됩니다. 자세한 내용은 [sp_executesql (TRANSACT-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql)합니다.

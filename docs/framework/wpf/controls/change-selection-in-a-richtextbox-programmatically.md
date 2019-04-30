@@ -9,11 +9,11 @@ helpviewer_keywords:
 - changing selections in a RichTextBox [WPF]
 ms.assetid: f1213205-1ad7-4cd2-b115-460173cc5aa3
 ms.openlocfilehash: b8acfe7cde1fe5dae96cd6324f75c5b146be9ec9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001717"
 ---
 # <a name="change-selection-in-a-richtextbox-programmatically"></a>프로그래밍 방식으로 RichTextBox의 선택 변경
 현재 선택 영역을 프로그래밍 방식으로 변경 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.RichTextBox>합니다. 이 옵션을이 선택 사용자의 사용자 인터페이스를 사용 하 여 콘텐츠를 선택한 경우와 동일 합니다.  

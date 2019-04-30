@@ -3,21 +3,20 @@ title: 보안
 ms.date: 03/30/2017
 ms.assetid: 737ec121-bfc5-4b75-a504-2d53c2c8af39
 ms.openlocfilehash: c27ac9cf41436332d560e11987e3ce4b68576895
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004694"
 ---
 # <a name="security"></a>보안
 SQL 워크플로 인스턴스 저장소에서는 다음과 같은 데이터베이스 보안 역할을 사용하여 지속성 데이터베이스의 인스턴스 상태 정보에 대한 액세스에 보안을 설정합니다.  
   
--   **System.Activities.DurableInstancing.InstanceStoreUsers**. 이 역할에는 공용 뷰에 대한 읽기 및 쓰기 액세스 권한과 인스턴스 생성, 로드 및 저장과 관련된 저장 프로시저에 대한 실행 권한이 있습니다.  
+- **System.Activities.DurableInstancing.InstanceStoreUsers**. 이 역할에는 공용 뷰에 대한 읽기 및 쓰기 액세스 권한과 인스턴스 생성, 로드 및 저장과 관련된 저장 프로시저에 대한 실행 권한이 있습니다.  
   
--   **System.Activities.DurableInstancing.InstanceStoreObservers**. 이 역할에는 공용 뷰에 대한 읽기 전용 액세스 권한이 있습니다.  
+- **System.Activities.DurableInstancing.InstanceStoreObservers**. 이 역할에는 공용 뷰에 대한 읽기 전용 액세스 권한이 있습니다.  
   
--   **System.Activities.DurableInstancing.WorkflowActivationUsers**. 이 역할은 인스턴스 활성화 프로세스에 포함되는 저장 프로시저에 대한 실행 권한이 있습니다. 인스턴스 활성화에 대 한 자세한 내용은 참조 하세요. [인스턴스 활성화](instance-activation.md)합니다. 
-  [!INCLUDE[dublin](../../../includes/dublin-md.md)]의 워크플로 관리 서비스와 같은 제네릭 호스트가 실행되는 사용자 계정은 이 데이터베이스 역할에 추가되어야 합니다.  
+- **System.Activities.DurableInstancing.WorkflowActivationUsers**. 이 역할은 인스턴스 활성화 프로세스에 포함되는 저장 프로시저에 대한 실행 권한이 있습니다. 인스턴스 활성화에 대 한 자세한 내용은 참조 하세요. [인스턴스 활성화](instance-activation.md)합니다. [!INCLUDE[dublin](../../../includes/dublin-md.md)]의 워크플로 관리 서비스와 같은 제네릭 호스트가 실행되는 사용자 계정은 이 데이터베이스 역할에 추가되어야 합니다.  
   
  Windows Server App Fabric을 사용 하 여 지 속성 저장소에 대 한 보안에 대 한 자세한 내용은 참조 하세요. [App Fabric 지 속성 저장소에 대 한 보안 구성](https://go.microsoft.com/fwlink/?LinkId=201208)  
   

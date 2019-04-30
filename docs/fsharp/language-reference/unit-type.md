@@ -3,11 +3,11 @@ title: 단위 형식
 description: 에 대해 알아봅니다 하는 방법을 F# 'unit' 유형은 자리를 값이 필요한 언어 구문을 사용 하 여 필요한 되었거나 필요한 값이 없는 경우에 자주 사용 됩니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: f1866ff12f36f4f8d3eaa1275551c42fc4ade216
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982529"
 ---
 # <a name="unit-type"></a>단위 형식
 
@@ -22,7 +22,7 @@ ms.locfileid: "53611986"
 
 ## <a name="remarks"></a>설명
 
-모든 F# 식은 값으로 계산 되어야 합니다. 형식의 값을 원하는 값을 생성 하지 않습니다 하는 식에 대 한 `unit` 사용 됩니다. 합니다 `unit` 종류와 비슷합니다는 `void` C# 및 c + +와 같은 언어를 입력 합니다.
+모든 F# 식은 값으로 계산 되어야 합니다. 형식의 값을 원하는 값을 생성 하지 않습니다 하는 식에 대 한 `unit` 사용 됩니다. `unit` 형식와 유사 합니다 `void` 와 같은 언어에서 입력 C# 및 C++.
 
 합니다 `unit` 형식은 단일 값 및 해당 값은 토큰에 나타난 `()`합니다.
 
@@ -34,7 +34,7 @@ ms.locfileid: "53611986"
 
 이 경고는 함수형 프로그래밍;의 특징 다른.NET 프로그래밍 언어에에서는 표시 되지 않습니다. 함수 없는 부작용을 순수 함수형 프로그램에서 최종 반환 값은 함수 호출의 유일한 결과입니다. 따라서 결과 무시 하는 경우 가능한 프로그래밍 오류입니다. 하지만 F# 순수 하 게 제대로 작동 하지 않는 프로그래밍 언어, 것이 좋습니다 가능한 함수형 프로그래밍 스타일을 따릅니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [기본](primitive-types.md)
 - [F# 언어 참조](index.md)

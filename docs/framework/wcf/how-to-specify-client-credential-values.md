@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
 ms.openlocfilehash: ecb8f7ef74f1f0625454eb2d6cebf9d282a5ece3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003030"
 ---
 # <a name="how-to-specify-client-credential-values"></a>방법: 클라이언트 자격 증명 값 지정
 Windows Communication Foundation (WCF)를 사용 하는, 서비스 클라이언트가 서비스에 인증 하는 방법을 지정할 수 있습니다. 예를 들면 서비스는 클라이언트가 인증서를 사용하여 인증하도록 규정할 수 있습니다.  

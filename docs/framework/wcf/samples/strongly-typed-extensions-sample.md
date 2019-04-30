@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
 ms.openlocfilehash: eeef3fd05c66031fb2be573b1c1f56a35a3301ae
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007788"
 ---
 # <a name="strongly-typed-extensions-sample"></a>강력한 형식 확장 샘플
 이 샘플에서는 예를 들기 위해 <xref:System.ServiceModel.Syndication.SyndicationFeed> 클래스를 사용하지만 이 샘플에 나온 패턴은 확장 데이터를 지원하는 모든 배포 클래스에서 사용할 수 있습니다.  

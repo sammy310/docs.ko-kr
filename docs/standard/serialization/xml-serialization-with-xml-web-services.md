@@ -18,11 +18,11 @@ helpviewer_keywords:
 - serialization, attributes
 ms.assetid: a416192f-8102-458e-bc0a-0b8f3f784da9
 ms.openlocfilehash: 79cc53be0f099151db1b64190c844b1d57205a44
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018071"
 ---
 # <a name="xml-serialization-with-xml-web-services"></a>XML Web Services의 XML Serialization
 XML serialization은 XML Web services 아키텍처에 사용되며 <xref:System.Xml.Serialization.XmlSerializer> 클래스에 의해 수행되는 내부 전송 메커니즘입니다. XML Web services로 생성된 XML을 제어하려면 [XML serialization을 제어하는 특성](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) 및 [인코드된 SOAP serialization을 제어하는 특성](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)에 나열된 특성을 XML Web services(.asmx)를 만드는 데 사용된 파일의 클래스, 반환 값, 매개 변수 및 필드에 적용할 수 있습니다. XML 웹 서비스를 만드는 방법에 대 한 자세한 내용은 참조 하세요. [ASP.NET XML Web Services를 사용 하 여](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ba0z6a33(v=vs.100))입니다.  

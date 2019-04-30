@@ -7,10 +7,10 @@ helpviewer_keywords:
 ms.assetid: caa7462e-2149-4bdb-8850-802b80b93cbf
 ms.openlocfilehash: 7154b52f6bbd45756702deccbec3d8d45778b641
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59980137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050300"
 ---
 # <a name="myuser-object"></a>My.User 개체
 현재 사용자에 대한 정보에 액세스할 수 있습니다.  

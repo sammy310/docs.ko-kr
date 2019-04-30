@@ -12,11 +12,11 @@ helpviewer_keywords:
 - sensitive data
 ms.assetid: 488d2899-b09f-4cee-92f0-6f9f9fc4f944
 ms.openlocfilehash: 1b8de27e872914ba59d73126d2a9a7c42609165e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051821"
 ---
 # <a name="writeonly-visual-basic"></a>WriteOnly(Visual Basic)
 속성을 쓸 수는 있지만 읽을 수는 있는지를 지정 합니다.  
@@ -34,15 +34,15 @@ ms.locfileid: "58829030"
 > [!IMPORTANT]
 >  정의 하 고 사용 하는 경우를 `WriteOnly` 속성을 다음 추가 보호 조치는 것이 좋습니다.  
   
--   **재정의합니다.** 속성을 클래스의 멤버인 경우 기본적으로 사용 하 고 허용 [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), 및 선언 하지 마십시오 `Overridable` 또는 `MustOverride`합니다. 이렇게 하면 파생된 클래스를 재정의 통해 원치 않는 액세스 하지 못하도록 않습니다.  
+- **재정의합니다.** 속성을 클래스의 멤버인 경우 기본적으로 사용 하 고 허용 [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), 및 선언 하지 마십시오 `Overridable` 또는 `MustOverride`합니다. 이렇게 하면 파생된 클래스를 재정의 통해 원치 않는 액세스 하지 못하도록 않습니다.  
   
--   **액세스 수준입니다.** 하나 이상의 변수에서 속성의 중요 한 데이터를 보관 하는 경우 선언할 [개인](../../../visual-basic/language-reference/modifiers/private.md) 다른 코드가 없어야 액세스할 수 있도록 합니다.  
+- **액세스 수준입니다.** 하나 이상의 변수에서 속성의 중요 한 데이터를 보관 하는 경우 선언할 [개인](../../../visual-basic/language-reference/modifiers/private.md) 다른 코드가 없어야 액세스할 수 있도록 합니다.  
   
--   **암호화 합니다.** 일반 텍스트 대신 암호화 된 형태로 모든 중요 한 데이터를 저장 합니다. 어떤 이유로 든 악성 코드에는 메모리의 해당 영역에 대 한 액세스 권한을 획득, 한 경우 더 어렵습니다 되도록 데이터를 사용 합니다. 암호화는 중요 한 데이터를 serialize 해야 하는 경우에 유용 이기도 합니다.  
+- **암호화 합니다.** 일반 텍스트 대신 암호화 된 형태로 모든 중요 한 데이터를 저장 합니다. 어떤 이유로 든 악성 코드에는 메모리의 해당 영역에 대 한 액세스 권한을 획득, 한 경우 더 어렵습니다 되도록 데이터를 사용 합니다. 암호화는 중요 한 데이터를 serialize 해야 하는 경우에 유용 이기도 합니다.  
   
--   **다시 설정 합니다.** 클래스, 구조체 또는 속성을 정의 하는 모듈 종료 될 때 다른 의미가 값 또는 기본값에 중요 한 데이터를 다시 설정 합니다. 이 일반 액세스에 대 한 메모리 영역 해제 될 때 추가 보호를 제공 합니다.  
+- **다시 설정 합니다.** 클래스, 구조체 또는 속성을 정의 하는 모듈 종료 될 때 다른 의미가 값 또는 기본값에 중요 한 데이터를 다시 설정 합니다. 이 일반 액세스에 대 한 메모리 영역 해제 될 때 추가 보호를 제공 합니다.  
   
--   **지 속성** 예를 들어 디스크에 모든 중요 한 데이터를 피할 수 지속 되지 않습니다. 또한 클립보드에 모든 중요 한 데이터를 기록 하지 마십시오.  
+- **지 속성** 예를 들어 디스크에 모든 중요 한 데이터를 피할 수 지속 되지 않습니다. 또한 클립보드에 모든 중요 한 데이터를 기록 하지 마십시오.  
   
  `WriteOnly` 한정자는이 컨텍스트에서 사용할 수 있습니다.  
   

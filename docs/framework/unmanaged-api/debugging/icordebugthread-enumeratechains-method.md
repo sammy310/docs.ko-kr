@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e01f94e9574ebc032bc45490fd88ff92e9104aa3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994047"
 ---
 # <a name="icordebugthreadenumeratechains-method"></a>ICorDebugThread::EnumerateChains 메서드
 이 ICorDebugThread 개체의 모든 스택 체인을 포함 하는 ICorDebugChainEnum 열거자에 대 한 인터페이스 포인터를 가져옵니다.  
@@ -42,11 +42,11 @@ HRESULT EnumerateChains (
 ## <a name="remarks"></a>설명  
  스택 체인 스레드의 실제 호출 스택을 나타냅니다. 다음과 같은 경우 스택 체인 경계를 만듭니다.  
   
--   관리-비관리 또는 관리 되지 않는 관리로 전환 합니다.  
+- 관리-비관리 또는 관리 되지 않는 관리로 전환 합니다.  
   
--   컨텍스트 전환 합니다.  
+- 컨텍스트 전환 합니다.  
   
--   사용자 스레드의 하이재킹 디버거.  
+- 사용자 스레드의 하이재킹 디버거.  
   
  단일 컨텍스트에 순수 관리 코드를 실행 하는 스레드에 대 한 간단한 경우 스레드 스택 체인 간의 일대일로 대응 존재 합니다.  
   

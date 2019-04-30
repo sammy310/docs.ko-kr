@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Control class [WPF], TreeView [WPF], creating
 ms.assetid: 1defbb78-b8e7-4c0e-b650-576453ac828d
 ms.openlocfilehash: 7edb4933ebcc0f0d2cb02754238c2342ee9dd4a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59205149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031917"
 ---
 # <a name="how-to-create-simple-or-complex-treeviews"></a>방법: 간단하거나 복잡한 TreeView 만들기
 이 예제에는 간단 하거나 복잡 한를 만드는 방법을 보여 줍니다 <xref:System.Windows.Controls.TreeView> 컨트롤입니다.  

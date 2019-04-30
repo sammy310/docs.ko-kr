@@ -3,11 +3,11 @@ title: '방법: 신뢰할 수 있는 세션 내에서 메시지 보안'
 ms.date: 03/30/2017
 ms.assetid: aee33e50-936f-4486-9ca8-c1520c19a62d
 ms.openlocfilehash: ee35f2a36ca08814423b5a3d0b1432bacd28c2e5
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973006"
 ---
 # <a name="how-to-secure-messages-within-reliable-sessions"></a>방법: 신뢰할 수 있는 세션 내에서 메시지 보안
 
@@ -21,8 +21,7 @@ ms.locfileid: "56333055"
 
 1. 클라이언트가 서비스에서 인증받는 데 사용해야 하는 클라이언트 자격 증명 형식을 지정합니다.
 
-끝점 구성 요소를 포함 하는 첫 번째 작업에서 중요 한 것을 `bindingConfiguration` (이 예제의) 이라는 바인딩 구성을 참조 하는 특성 `MessageSecurity`합니다. [  **\<바인딩 >** ](../../../../docs/framework/misc/binding.md) 구성 요소에는 다음을 설정 하 여 신뢰할 수 있는 세션을 사용 하도록 설정 하려면이 이름을 참조 합니다 `enabled` 특성을 [  **\<reliableSession >** ](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) 요소를 `true`입니다. 
-  `ordered` 특성을 `true`로 설정하여 신뢰할 수 있는 세션 내에서 순서가 지정된 배달 보증을 사용하는 것이 필요할 수 있습니다.
+끝점 구성 요소를 포함 하는 첫 번째 작업에서 중요 한 것을 `bindingConfiguration` (이 예제의) 이라는 바인딩 구성을 참조 하는 특성 `MessageSecurity`합니다. [  **\<바인딩 >** ](../../../../docs/framework/misc/binding.md) 구성 요소에는 다음을 설정 하 여 신뢰할 수 있는 세션을 사용 하도록 설정 하려면이 이름을 참조 합니다 `enabled` 특성을 [  **\<reliableSession >** ](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) 요소를 `true`입니다. `ordered` 특성을 `true`로 설정하여 신뢰할 수 있는 세션 내에서 순서가 지정된 배달 보증을 사용하는 것이 필요할 수 있습니다.
 
 이 구성 절차의 기반이 되는 예제의 소스 복사에 대 한 참조를 [WS 신뢰할 수 있는 세션](../../../../docs/framework/wcf/samples/ws-reliable-session.md)합니다.
 

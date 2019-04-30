@@ -6,20 +6,20 @@ helpviewer_keywords:
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
 ms.openlocfilehash: dfd256fa7ccd8f089fab6eb1d42579deb2c4a64d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44183173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022417"
 ---
 # <a name="com-interop-visual-basic"></a>COM Interop(Visual Basic)
-COM(구성 요소 개체 모델)을 통해 개체는 기능을 다른 구성 요소에 노출하고 응용 프로그램을 호스트할 수 있습니다. 오늘날 대부분의 소프트웨어에는 COM 개체가 포함됩니다. 새 응용 프로그램에는 .NET 어셈블리가 제일 나은 선택이지만 때로는 COM 개체를 채택해야 할 수 있습니다. 이 섹션에는 만들기 및 Visual Basic을 사용한 COM 개체를 사용 하 여 관련 된 문제 중 일부를 다룹니다.  
+COM(구성 요소 개체 모델)을 통해 개체는 기능을 다른 구성 요소에 노출하고 애플리케이션을 호스트할 수 있습니다. 오늘날 대부분의 소프트웨어에는 COM 개체가 포함됩니다. 새 애플리케이션에는 .NET 어셈블리가 제일 나은 선택이지만 때로는 COM 개체를 채택해야 할 수 있습니다. 이 섹션에는 만들기 및 Visual Basic을 사용한 COM 개체를 사용 하 여 관련 된 문제 중 일부를 다룹니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [COM Interop 소개](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
  COM 상호 운용성의 개요를 제공합니다.  
   
- [방법: Visual Basic에서 COM 개체 참조](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
+ [방법: Visual Basic에서 COM 참조 개체](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
  형식 라이브러리가 포함된 COM 개체에 참조를 추가하는 방법을 설명합니다.  
   
  [방법: ActiveX 컨트롤을 사용하여 작업](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
@@ -34,14 +34,14 @@ COM(구성 요소 개체 모델)을 통해 개체는 기능을 다른 구성 요
  [방법: 부호 없는 형식을 사용하는 Windows 함수 호출](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
  서명되지 않은 형식의 매개 변수가 있는 Windows 함수를 호출하는 방법을 보여 줍니다.  
   
- [연습: Visual Basic을 사용하여 COM 개체 만들기](../../../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
+ [연습: Visual Basic을 사용 하 여 COM 개체 만들기](../../../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
  COM 클래스 템플릿을 사용하거나 사용하지 않고 COM 개체를 만드는 프로세스를 단계별로 진행합니다.  
   
  [상호 운용성 문제 해결](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
  COM을 사용할 경우 발생할 수 있는 일부 문제를 설명합니다.  
   
  [.NET Framework 응용 프로그램의 COM 상호 운용성](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
- 같은 응용 프로그램에서 COM 개체 및 .NET Framework 개체를 사용하는 방법의 개요를 제공합니다.  
+ 같은 애플리케이션에서 COM 개체 및 .NET Framework 개체를 사용하는 방법의 개요를 제공합니다.  
   
  [연습: COM 개체를 사용한 상속 구현](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  기존 COM 개체를 새 개체의 기반으로 사용하는 방법을 설명합니다.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
 ms.openlocfilehash: f7f1ed2fbca4ab8892cb6c439ae8841fa8828bf0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008969"
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>방법: 바인딩된 컨트롤 만들기 및 표시된 데이터 서식 지정
 Windows Forms 데이터 바인딩 데이터 바인딩된 컨트롤을 사용 하 여 표시 되는 데이터의 서식을 지정할 수 있습니다 합니다 **서식 지정 및 고급 바인딩** 대화 상자.  

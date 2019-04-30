@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 014e5c9951091046ae07374794743e82affcd5ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967741"
 ---
 # <a name="ihostcontrol-interface"></a>IHostControl 인터페이스
 어셈블리의 로드를 구성 하 고 호스팅 인터페이스를 호스트 지원 결정 하기 위한 메서드를 제공 합니다.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
 ms.openlocfilehash: b5a36d39e6e38f121bf3155c822681fb198f0850
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006423"
 ---
 # <a name="message-security-certificate"></a>메시지 보안 인증서
 이 샘플에서는 클라이언트에 대해 X.509 v3 인증서를 통한 WS-Security 인증을 사용하며 서버의 X.509 v3 인증서를 사용한 서버 인증을 수행해야 하는 응용 프로그램의 구현 방법을 보여 줍니다. 이 샘플에서는 클라이언트와 서버 간의 모든 응용 프로그램 메시지가 서명 및 암호화되도록 기본 설정을 사용합니다. 이 샘플은 기반 합니다 [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) 인터넷 정보 서비스 (IIS)에서 호스팅되는 서비스 라이브러리 및 클라이언트 콘솔 프로그램으로 구성 됩니다. 이 서비스는 요청-회신 통신 패턴을 정의하는 계약을 구현합니다.  
@@ -204,7 +204,7 @@ Press <ENTER> to terminate client.
   
  Message Security 샘플에 포함된 Setup.bat 배치 파일을 사용하면 인증서 기반 보안이 필요한 자체 호스팅 응용 프로그램을 실행하도록 관련 인증서가 있는 클라이언트와 서버를 구성할 수 있습니다. 이 배치 파일을 세 가지 모드로 실행할 수 있습니다. 단일 컴퓨터 모드 형식에서 실행 되도록 **setup.bat** 개발자 명령 프롬프트에서 Visual Studio에 서비스 모드 유형에 대 한 **setup.bat service**; 및 클라이언트 모드 형식에 대 한 **setup.bat client**. 다중 컴퓨터 구성에서 샘플을 실행할 경우 클라이언트 및 서버 모드를 사용합니다. 자세한 내용은 이 항목의 끝에 있는 설치 절차를 참조하세요. 다음 부분에는 적절한 구성으로 실행되게 수정할 수 있도록 배치 파일의 다양한 섹션에 대한 간략한 개요가 소개되어 있습니다.  
   
--   클라이언트 인증서 만들기  
+- 클라이언트 인증서 만들기  
   
      배치 파일의 다음 줄에서는 클라이언트 인증서를 만듭니다. 지정된 클라이언트 이름은 만든 인증서의 제목 이름에 사용됩니다. 인증서는 `My` 저장소 위치에 있는 `CurrentUser` 저장소에 저장됩니다.  
   
@@ -215,7 +215,7 @@ Press <ENTER> to terminate client.
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe  
     ```  
   
--   서버의 신뢰할 수 있는 인증서 저장소에 클라이언트 인증서 설치  
+- 서버의 신뢰할 수 있는 인증서 저장소에 클라이언트 인증서 설치  
   
      배치 파일의 다음 줄에서는 서버에서 관련된 신뢰 여부를 결정할 수 있도록 서버의 TrustedPeople 저장소에 클라이언트 인증서를 복사합니다. 순서로 TrustedPeople 저장소에 설치 된 인증서에 대 한 Windows Communication Foundation (WCF) 서비스에서 신뢰 하려면 클라이언트 인증서 유효성 검사 모드 설정 해야 합니다 `PeerOrChainTrust` 또는 `PeerTrust`합니다. 구성 파일을 사용하여 이 작업을 수행하는 방법을 보려면 앞서 소개된 서비스 구성 샘플을 참조하십시오.  
   
@@ -226,7 +226,7 @@ Press <ENTER> to terminate client.
     certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople   
     ```  
   
--   서버 인증서 만들기  
+- 서버 인증서 만들기  
   
      Setup.bat 배치 파일에서 다음 행은 사용할 서버 인증서를 만듭니다.  
   
@@ -242,7 +242,7 @@ Press <ENTER> to terminate client.
   
      %SERVER_NAME% 변수는 서버 이름을 지정합니다. 인증서는 LocalMachine 저장소에 저장됩니다. 서비스의 인수와 함께 Setup.bat 배치 파일을 실행할 경우 (예: **setup.bat service**) % SERVER_NAME %는 컴퓨터의 정규화 된 도메인 이름을 포함 합니다. 그렇지 않은 경우 기본적으로 localhost입니다.  
   
--   클라이언트의 신뢰할 수 있는 인증서 저장소에 서버 인증서 설치  
+- 클라이언트의 신뢰할 수 있는 인증서 저장소에 서버 인증서 설치  
   
      다음 줄은 클라이언트의 신뢰할 수 있는 사용자 저장소에 서버 인증서를 복사합니다. 이 단계는 Makecert.exe에서 생성한 인증서를 클라이언트 컴퓨터에서 절대적으로 신뢰하지는 않기 때문에 필요합니다. Microsoft에서 발급한 인증서와 같이 클라이언트가 신뢰할 수 있는 루트 인증서를 기반으로 하는 인증서가 이미 있는 경우 클라이언트 인증서 저장소를 서버 인증서로 채우는 이 단계를 수행할 필요가 없습니다.  
   
@@ -250,7 +250,7 @@ Press <ENTER> to terminate client.
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
--   인증서의 개인 키에 대한 사용 권한 부여  
+- 인증서의 개인 키에 대한 사용 권한 부여  
   
      Setup.bat 파일의 다음 줄은 LocalMachine 저장소에 저장된 서버 인증서를 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 작업자 프로세스 계정에서 액세스할 수 있게 합니다.  
   
@@ -329,7 +329,7 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-clean-up-after-the-sample"></a>샘플 실행 후 정리를 수행하려면  
   
--   샘플 실행을 완료한 후 샘플 폴더에서 Cleanup.bat를 실행합니다.  
+- 샘플 실행을 완료한 후 샘플 폴더에서 Cleanup.bat를 실행합니다.  
   
     > [!NOTE]
     >  다중 컴퓨터 구성에서 이 샘플을 실행할 경우에는 이 스크립트로 클라이언트의 서비스 인증서를 제거할 수 없습니다. 컴퓨터 인증서를 사용 하는 Windows Communication Foundation (WCF) 샘플을 실행 하는 경우에 CurrentUser-TrustedPeople 저장소에에서 설치 된 서비스 인증서를 선택 취소 해야 합니다. 이 작업을 수행 하려면 다음 명령을 사용 합니다. `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 예를 들어: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`합니다.  

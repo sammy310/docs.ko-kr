@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d9279808e4ad15b693d06ac8a99dd33a609e5a8f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992513"
 ---
 # <a name="imetadataemitgetsavesize-method"></a>IMetaDataEmit::GetSaveSize 메서드
 현재 범위에서 어셈블리 및 해당 메타 데이터의 이진 예상된 크기를 가져옵니다.  
@@ -40,11 +40,11 @@ HRESULT GetSaveSize (
  `fSave`  
  [in] 값을 [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) 정확 하거나 대략적인 크기를 가져올 것인지를 지정 하는 열거형입니다. 세 개의 값이 유효한: cssAccurate, cssQuick, 및 cssDiscardTransientCAs:  
   
--   cssAccurate 정확한 저장 크기를 반환 하지만 계산 하는 데 시간이 오래 걸립니다.  
+- cssAccurate 정확한 저장 크기를 반환 하지만 계산 하는 데 시간이 오래 걸립니다.  
   
--   cssQuick은 안전을 위해 패딩 크기를 반환 하지만 계산 시간이 줄어듭니다.  
+- cssQuick은 안전을 위해 패딩 크기를 반환 하지만 계산 시간이 줄어듭니다.  
   
--   cssDiscardTransientCAs 지시 `GetSaveSize` 는 발생할 수 있습니다 제거 사용자 지정 특성을 무시할 수 있습니다.  
+- cssDiscardTransientCAs 지시 `GetSaveSize` 는 발생할 수 있습니다 제거 사용자 지정 특성을 무시할 수 있습니다.  
   
  `pdwSaveSize`  
  [out] 파일을 저장 하는 데 필요한 크기에 대 한 포인터입니다.  

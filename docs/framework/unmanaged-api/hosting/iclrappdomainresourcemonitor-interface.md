@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 15bdbc001838e3d13a9789c8f54daa80f3b6ef9a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59219826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985207"
 ---
 # <a name="iclrappdomainresourcemonitor-interface"></a>ICLRAppDomainResourceMonitor 인터페이스
 응용 프로그램 도메인의 메모리 및 CPU 사용량을 검사 하는 방법을 제공 합니다.  
@@ -37,15 +37,15 @@ ms.locfileid: "59219826"
 ## <a name="remarks"></a>설명  
  `ICLRAppDomainResourceMonitor` 인터페이스는 다음 관리 되는 속성에 유사한 기능을 제공 합니다.  
   
--   <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
+- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
   
--   <xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType>  
+- <xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType>  
   
--   <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType>  
+- <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType>  
   
--   <xref:System.AppDomain.MonitoringSurvivedProcessMemorySize%2A?displayProperty=nameWithType>  
+- <xref:System.AppDomain.MonitoringSurvivedProcessMemorySize%2A?displayProperty=nameWithType>  
   
--   <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType>  
+- <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType>  
   
 ## <a name="requirements"></a>요구 사항  
  **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  

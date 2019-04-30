@@ -3,24 +3,24 @@ title: WCF의 보안 동작
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
 ms.openlocfilehash: d1bffef127fe295aa41b1287da1c7104464ae0bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990914"
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF의 보안 동작
 Windows Communication Foundation (WCF), 동작 서비스 수준 또는 끝점 수준에서 런타임 동작을 수정합니다. (일반적으로 참조 동작에 대 한 자세한 내용은 [서비스 런타임 동작 지정](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *보안 동작* 감사 로그 및 자격 증명, 인증, 권한 부여에 대 한 제어를 허용 합니다. 프로그래밍 또는 구성을 통해 동작을 사용할 수 있습니다. 이 항목에서는 보안 기능과 관련된 다음 동작의 구성에 대해 중점적으로 설명합니다.  
   
--   [\<serviceCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
+- [\<serviceCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
   
--   [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).  
+- [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).  
   
--   [\<serviceAuthorization>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md).  
+- [\<serviceAuthorization>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md).  
   
--   [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md).  
+- [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md).  
   
--   [\<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md), 또한 클라이언트가 메타 데이터에 액세스할 수 있는 보안 끝점을 지정할 수 있습니다.  
+- [\<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md), 또한 클라이언트가 메타 데이터에 액세스할 수 있는 보안 끝점을 지정할 수 있습니다.  
   
 ## <a name="setting-credentials-with-behaviors"></a>동작을 통한 자격 증명 설정  
  사용 된 [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) 및 [ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) 서비스 또는 클라이언트에 대 한 자격 증명 값을 설정 합니다. 기본 바인딩 구성은 자격 증명을 설정해야 할지 여부를 결정합니다. 예를 들어, 보안 모드가 `None`으로 설정된 경우 클라이언트 및 서비스 둘 다 서로 간에 인증되지 않으며 모든 형식의 자격 증명이 필요하지 않습니다.  
@@ -78,9 +78,9 @@ Windows Communication Foundation (WCF), 동작 서비스 수준 또는 끝점 �
   
  사용 해야 합니다 [ \<allowedAudienceUris >](../../../../docs/framework/configure-apps/file-schema/wcf/allowedaudienceuris.md) 활용 하는 페더레이션된 응용 프로그램에서 컬렉션을 *보안 토큰 서비스* 발급 (STS) `SamlSecurityToken` 보안 토큰입니다. STS는 보안 토큰을 발급할 때 보안 토큰에 `SamlAudienceRestrictionCondition`을 추가하여 보안 토큰을 사용할 웹 서비스의 URI를 지정할 수 있습니다. 따라서 발급된 보안 토큰이 해당 웹 서비스용인지 검사하도록 지정하여 수신자 웹 서비스의 `SamlSecurityTokenAuthenticator`가 이를 확인하도록 할 수 있습니다. 이렇게 하려면 다음을 수행하세요.  
   
--   설정 합니다 `audienceUriMode` 의 특성 [ \<issuedTokenAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md) 하 `Always` 또는 `BearerKeyOnly`합니다.  
+- 설정 합니다 `audienceUriMode` 의 특성 [ \<issuedTokenAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md) 하 `Always` 또는 `BearerKeyOnly`합니다.  
   
--   이 컬렉션에 URI를 추가하여 유효한 URI 집합을 지정합니다. 이 작업을 수행 하려면 삽입는 [ \<추가 >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md) 각 URI에 대 한  
+- 이 컬렉션에 URI를 추가하여 유효한 URI 집합을 지정합니다. 이 작업을 수행 하려면 삽입는 [ \<추가 >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md) 각 URI에 대 한  
   
  자세한 내용은 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>을 참조하세요.  
   

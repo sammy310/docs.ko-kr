@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Visual Basic code, labeling statements
 ms.assetid: 38f1ff43-2054-42cb-963b-1998e60c6ed4
 ms.openlocfilehash: 69ec8c7625410f140c59ba8dd492dca76857eb96
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050439"
 ---
 # <a name="how-to-label-statements-visual-basic"></a>방법: 레이블 문 (Visual Basic)
 문 블록은 콜론으로 구분 하는 코드 줄으로 이루어져 있습니다. 코드를 식별 하는 문자열 또는 정수 앞에 줄 수 있다고 *레이블이 지정 된*합니다. 문 레이블은 사용에 대 한 문을 사용 하 여 같은 식별 하는 코드 줄을 표시 하 되 `On Error Goto`합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "58828643"
   
 ### <a name="to-label-a-line-of-code"></a>코드 줄 레이블을 지정 하려면  
   
--   소스 코드 줄의 시작 부분에 콜론 뒤에 식별자를 배치 합니다.  
+- 소스 코드 줄의 시작 부분에 콜론 뒤에 식별자를 배치 합니다.  
   
      예를 들어, 다음 코드 줄은 레이블이 지정 된 `Jump` 고 `120`, 각각.  
   

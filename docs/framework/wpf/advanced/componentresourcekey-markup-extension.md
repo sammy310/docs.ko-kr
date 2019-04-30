@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
 ms.openlocfilehash: 5f72d6c3273cfda4276383cfe72f90196e5d4340
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037754"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey 태그 확장
 정의 하 고 외부 어셈블리에서 로드 되는 리소스에 대 한 키를 참조 합니다. 따라서 리소스 조회 클래스 또는 어셈블리의 명시적 리소스 사전 보다는 어셈블리의 대상 형식을 지정할 수 있습니다.  
@@ -52,9 +52,9 @@ ms.locfileid: "59169756"
 ## <a name="remarks"></a>설명  
  위의 사용법에서 볼 수 있듯이 {`ComponentResourceKey`} 태그 확장 사용은 두 위치에서 찾을 수:  
   
--   컨트롤 작성자가 제공한 테마 리소스 사전 내에서 키의 정의입니다.  
+- 컨트롤 작성자가 제공한 테마 리소스 사전 내에서 키의 정의입니다.  
   
--   어셈블리에서 테마 리소스에 액세스 하면 컨트롤 템플릿을 하지만 컨트롤의 테마에서 제공 하는 리소스에서 제공 되는 속성 값을 사용 하려면.  
+- 어셈블리에서 테마 리소스에 액세스 하면 컨트롤 템플릿을 하지만 컨트롤의 테마에서 제공 하는 리소스에서 제공 되는 속성 값을 사용 하려면.  
   
  테마에서 제공 하는 구성 요소 리소스를 참조 하는 것에 대 한 것이 좋습니다를 사용 하는 `{DynamicResource}` 대신 `{StaticResource}`합니다. 이 사용법에 표시 됩니다. `{DynamicResource}` 테마 자체는 사용자가 변경할 수 있으므로 것이 좋습니다. 구성 요소 리소스를 가장 일치 하는 테마를 지원 하기 위한 컨트롤 작성자의 의도 하려는 경우를 동적 사용자 구성 요소 리소스 참조를 사용 해야 합니다.  
   

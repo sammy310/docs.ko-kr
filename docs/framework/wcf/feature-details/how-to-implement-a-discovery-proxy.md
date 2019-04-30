@@ -3,22 +3,22 @@ title: '방법: 검색 프록시 구현'
 ms.date: 03/30/2017
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
 ms.openlocfilehash: b3e0b5cef01998c1e509586ba1fab3924eb7bc0b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000911"
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>방법: 검색 프록시 구현
 이 항목에서는 검색 프록시를 구현하는 방법을 설명합니다. Windows Communication Foundation (WCF)에서 검색 기능에 대 한 자세한 내용은 참조 하세요. [WCF 검색 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)합니다. 검색 프록시는 <xref:System.ServiceModel.Discovery.DiscoveryProxy> 추상 클래스를 확장하는 클래스를 만들어 구현할 수 있습니다. 이 샘플에서는 많은 다른 지원 클래스가 정의되고 사용됩니다. `OnResolveAsyncResult`, `OnFindAsyncResult` 및 `AsyncResult` 이러한 클래스는 <xref:System.IAsyncResult> 인터페이스를 구현합니다. 에 대 한 자세한 내용은 <xref:System.IAsyncResult> 참조 [System.IAsyncResult 인터페이스](xref:System.IAsyncResult)합니다.
 
  이 항목에서는 검색 프록시 구현을 크게 다음 세 부분으로 나누어서 설명합니다.
 
--   데이터 저장소를 포함하고 <xref:System.ServiceModel.Discovery.DiscoveryProxy> 추상 클래스를 확장하는 클래스 정의
+- 데이터 저장소를 포함하고 <xref:System.ServiceModel.Discovery.DiscoveryProxy> 추상 클래스를 확장하는 클래스 정의
 
--   `AsyncResult` 도우미 클래스 구현
+- `AsyncResult` 도우미 클래스 구현
 
--   검색 프록시 호스팅
+- 검색 프록시 호스팅
 
 ### <a name="to-create-a-new-console-application-project"></a>새 콘솔 응용 프로그램 프로젝트를 만들려면
 
@@ -28,9 +28,9 @@ ms.locfileid: "59321018"
 
 3. 프로젝트에 대한 다음 참조를 추가합니다.
 
-    1.  System.ServiceModel.dll
+    1. System.ServiceModel.dll
 
-    2.  System.Servicemodel.Discovery.dll
+    2. System.Servicemodel.Discovery.dll
 
     > [!CAUTION]
     >  이러한 어셈블리는 4.0 이상 버전이어야 합니다.

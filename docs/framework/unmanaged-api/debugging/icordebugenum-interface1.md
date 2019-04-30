@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9afaeebfdb98a404ea53b0b5ec147f8c8104e14d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989068"
 ---
 # <a name="icordebugenum-interface"></a>ICorDebugEnum 인터페이스
 
@@ -39,47 +39,47 @@ ms.locfileid: "59148813"
 ## <a name="remarks"></a>설명  
  파생 되는 다음 열거자 `ICorDebugEnum`:  
   
--   "ICorDebugAppDomainEnum"  
+- "ICorDebugAppDomainEnum"  
   
--   "ICorDebugAssemblyEnum"  
+- "ICorDebugAssemblyEnum"  
   
--   [ICorDebugBlockingObjectEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugblockingobjectenum-interface.md)  
+- [ICorDebugBlockingObjectEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugblockingobjectenum-interface.md)  
   
--   "ICorDebugBreakpointEnum"  
+- "ICorDebugBreakpointEnum"  
   
--   "ICorDebugChainEnum"  
+- "ICorDebugChainEnum"  
   
--   "ICorDebugCodeEnum"  
+- "ICorDebugCodeEnum"  
   
--   "ICorDebugErrorInfoEnum"  
+- "ICorDebugErrorInfoEnum"  
   
--   [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)  
+- [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)  
   
--   "ICorDebugFrameEnum"  
+- "ICorDebugFrameEnum"  
   
--   [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)  
+- [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)  
   
--   [ICorDebugGuidToTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md)  
+- [ICorDebugGuidToTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md)  
   
--   [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)  
+- [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)  
   
--   [ICorDebugHeapSegmentEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md)  
+- [ICorDebugHeapSegmentEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md)  
   
--   "ICorDebugModuleEnum"  
+- "ICorDebugModuleEnum"  
   
--   "ICorDebugObjectEnum"  
+- "ICorDebugObjectEnum"  
   
--   "ICorDebugProcessEnum"  
+- "ICorDebugProcessEnum"  
   
--   "ICorDebugStepperEnum"  
+- "ICorDebugStepperEnum"  
   
--   "ICorDebugThreadEnum"  
+- "ICorDebugThreadEnum"  
   
--   "ICorDebugTypeEnum"  
+- "ICorDebugTypeEnum"  
   
--   "ICorDebugValueEnum"  
+- "ICorDebugValueEnum"  
   
--   [ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)  
+- [ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)  
   
 > [!NOTE]
 >  이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  

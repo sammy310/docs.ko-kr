@@ -3,11 +3,11 @@ title: 워크플로 및 활동과 XAML 간 serialize
 ms.date: 03/30/2017
 ms.assetid: 37685b32-24e3-4d72-88d8-45d5fcc49ec2
 ms.openlocfilehash: 70ee2e8e0c457e9db2853935ef95b86c7f903fc3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004642"
 ---
 # <a name="serializing-workflows-and-activities-to-and-from-xaml"></a>워크플로 및 활동과 XAML 간 serialize
 어셈블리에 포함되어 있는 형식으로 컴파일하는 것 외에 워크플로 정의를 XAML로 serialize할 수도 있습니다. serialize된 이 정의를 다시 로드하여 편집 또는 검사하거나, 빌드 시스템에 전달하여 컴파일하거나, 로드 및 호출할 수 있습니다. 이 항목에서는 워크플로 정의의 serialize와 XAML 워크플로 정의의 사용에 대해 간략하게 설명합니다.  

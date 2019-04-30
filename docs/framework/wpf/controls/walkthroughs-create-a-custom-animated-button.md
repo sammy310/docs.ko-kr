@@ -1,5 +1,5 @@
 ---
-title: '연습: 사용자 지정 애니메이션된 단추 만들기'
+title: '연습: 사용자 지정 애니메이션 효과가 있는 단추 만들기'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - custom animated buttons [WPF]
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - animation [WPF], buttons [WPF]
 ms.assetid: e9532c72-460f-4898-9332-613fa21d746a
 ms.openlocfilehash: 3c601641a0eb1024722b4f449f0ab23e54fe93dd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024471"
 ---
-# <a name="walkthroughs-create-a-custom-animated-button"></a>연습: 사용자 지정 애니메이션된 단추 만들기
+# <a name="walkthroughs-create-a-custom-animated-button"></a>연습: 사용자 지정 애니메이션 효과가 있는 단추 만들기
 해당 이름에서 알 수 있듯이, Windows Presentation Foundation (WPF) 고객에 대 한 풍부한 기능의 프레젠테이션 경험 하기에 적합 합니다. 이러한 연습은 모양과 동작 (애니메이션 포함) 단추를 사용자 지정 하는 방법을 보여 줍니다. 이 사용자 지정이 이루어집니다 사용 된 스타일 및 템플릿 수 있으므로 응용 프로그램에서 모든 단추에이 사용자 지정 단추를 쉽게 적용할 수 있습니다. 다음 그림에서는 만들려는 사용자 지정된 단추를 보여 줍니다.  
   
  ![사용자가 만든 사용자 지정된 단추](./media/custom-button-blend-intro.jpg "custom_button_blend_Intro")  

@@ -3,11 +3,11 @@ title: 메시지 큐에 대한 메시지 보안
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
 ms.openlocfilehash: 9e9067c38d86bb74c569b6d648d84c7c9ff6fac6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989817"
 ---
 # <a name="message-security-over-message-queuing"></a>메시지 큐에 대한 메시지 보안
 이 샘플에서는 클라이언트에 대해 X.509v3 인증서를 통한 WS-Security 인증을 사용하며 MSMQ를 통해 서버의 X.509v3 인증서를 사용한 서버 인증을 수행해야 하는 응용 프로그램의 구현 방법을 보여 줍니다. 메시지 보안에서는 MSMQ 저장소에 있는 메시지의 암호화가 유지되며 응용 프로그램에서 메시지의 자체 인증을 수행할 수 있도록 하는 것이 더 좋습니다.
@@ -20,15 +20,15 @@ ms.locfileid: "59770791"
 
 2. 서비스가 처음 실행되는 경우 서비스에서는 큐가 있는지 확인하고 큐가 없으면 큐를 만듭니다. 서비스를 처음 실행하여 큐를 만들거나 MSMQ 큐 관리자를 통해 큐를 만들 수 있습니다. Windows 2008에서 큐를 만들려면 다음 단계를 수행하세요.
 
-    1.  Visual Studio 2012의 서버 관리자를 엽니다.
+    1. Visual Studio 2012의 서버 관리자를 엽니다.
 
-    2.  확장 된 **기능** 탭 합니다.
+    2. 확장 된 **기능** 탭 합니다.
 
-    3.  마우스 오른쪽 단추로 클릭 **개인 메시지 큐**, 선택한 **새로 만들기**합니다 **개인 큐**합니다.
+    3. 마우스 오른쪽 단추로 클릭 **개인 메시지 큐**, 선택한 **새로 만들기**합니다 **개인 큐**합니다.
 
-    4.  확인 합니다 **트랜잭션** 상자입니다.
+    4. 확인 합니다 **트랜잭션** 상자입니다.
 
-    5.  입력 `ServiceModelSamplesTransacted` 새 대기열의 이름으로 합니다.
+    5. 입력 `ServiceModelSamplesTransacted` 새 대기열의 이름으로 합니다.
 
 3. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.
 
@@ -77,7 +77,7 @@ ms.locfileid: "59770791"
   
 ### <a name="to-clean-up-after-the-sample"></a>샘플 실행 후 정리를 수행하려면  
   
--   샘플 실행을 완료했으면 샘플 폴더에서 Cleanup.bat를 실행합니다.  
+- 샘플 실행을 완료했으면 샘플 폴더에서 Cleanup.bat를 실행합니다.  
   
     > [!NOTE]
     >  다중 컴퓨터 구성에서 이 샘플을 실행할 경우에는 이 스크립트로 클라이언트의 서비스 인증서를 제거할 수 없습니다. 컴퓨터 인증서를 사용 하는 Windows Communication Foundation (WCF) 샘플을 실행 하는 경우에 CurrentUser-TrustedPeople 저장소에에서 설치 된 서비스 인증서를 선택 취소 해야 합니다. 이 작업을 수행 하려면 다음 명령을 사용 합니다. `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 예를 들어: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`합니다.
@@ -287,7 +287,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 
 ## <a name="comments"></a>설명
 
--   클라이언트 인증서 만들기
+- 클라이언트 인증서 만들기
 
      배치 파일의 다음 줄에서는 클라이언트 인증서를 만듭니다. 지정된 클라이언트 이름은 만든 인증서의 제목 이름에 사용됩니다. 인증서는 `My` 저장소 위치에 있는 `CurrentUser` 저장소에 저장됩니다.
 
@@ -298,7 +298,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe
     ```
 
--   서버의 신뢰할 수 있는 인증서 저장소에 클라이언트 인증서 설치.
+- 서버의 신뢰할 수 있는 인증서 저장소에 클라이언트 인증서 설치.
 
      배치 파일의 다음 줄에서는 서버에서 관련된 신뢰 여부를 결정할 수 있도록 서버의 TrustedPeople 저장소에 클라이언트 인증서를 복사합니다. Windows Communication Foundation (WCF) 서비스에서 신뢰 하려면 TrustedPeople 저장소에 설치 된 인증서를 클라이언트 인증서 유효성 검사 모드 설정 해야 합니다 `PeerOrChainTrust` 또는 `PeerTrust` 값입니다. 구성 파일을 사용하여 이런 작업을 수행하는 방법을 보려면 앞서 소개된 서비스 구성 샘플을 참조하십시오.
 
@@ -309,7 +309,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
     certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople
     ```
 
--   서버 인증서 만들기
+- 서버 인증서 만들기
 
      Setup.bat 배치 파일에서 다음 줄은 사용할 서버 인증서를 만듭니다.
 
@@ -325,7 +325,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 
      %SERVER_NAME% 변수는 서버 이름을 지정합니다. 인증서는 LocalMachine 저장소에 저장됩니다. 서비스의 인수와 함께 설치 배치 파일을 실행할 경우 (예: `setup.bat service`) % SERVER_NAME %는 컴퓨터의 정규화 된 도메인 이름을 포함 합니다. 그렇지 않은 경우 기본적으로 localhost
 
--   클라이언트의 신뢰할 수 있는 인증서 저장소에 서버 인증서 설치
+- 클라이언트의 신뢰할 수 있는 인증서 저장소에 서버 인증서 설치
 
      다음 줄은 클라이언트의 신뢰할 수 있는 사용자 저장소에 서버 인증서를 복사합니다. 이 단계는 Makecert.exe에서 생성한 인증서를 클라이언트 컴퓨터에서 절대적으로 신뢰하지는 않기 때문에 필요합니다. Microsoft에서 발급한 인증서와 같이 클라이언트가 신뢰할 수 있는 루트 인증서를 기반으로 하는 인증서가 이미 있는 경우 클라이언트 인증서 저장소를 서버 인증서로 채우는 이 단계를 수행할 필요가 없습니다.
 

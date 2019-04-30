@@ -11,11 +11,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], default values for new rows
 ms.assetid: 8d127963-d9f8-4e4e-9f7f-beb66688f1f2
 ms.openlocfilehash: 8a90cbef7032fd3753a6c9ec0b856a4e2ea1db27
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009736"
 ---
 # <a name="how-to-specify-default-values-for-new-rows-in-the-windows-forms-datagridview-control"></a>방법: Windows Forms DataGridView 컨트롤에서 새 행에 대한 기본값 지정
 응용 프로그램 새로 추가 된 행에 대 한 값을 기본 차면 데이터 입력을 보다 편리 하 게 만들 수 있습니다. 사용 하 여 합니다 <xref:System.Windows.Forms.DataGridView> 클래스를 채울 수 있습니다 기본 값을 <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> 이벤트입니다. 이 이벤트는 사용자가 새 레코드에 대 한 행을 입력할 때 발생 합니다. 코드에서이 이벤트를 처리 하는 경우에 원하는 값이 선택한 셀을 채울 수 있습니다.  
@@ -29,11 +29,11 @@ ms.locfileid: "59193696"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   `dataGridView1`이라는 <xref:System.Windows.Forms.DataGridView> 컨트롤  
+- `dataGridView1`이라는 <xref:System.Windows.Forms.DataGridView> 컨트롤  
   
--   A `NewCustomerId` 고유 생성에 대 한 함수 `CustomerID` 값입니다.  
+- A `NewCustomerId` 고유 생성에 대 한 함수 `CustomerID` 값입니다.  
   
--   <xref:System?displayProperty=nameWithType> 및 <xref:System.Windows.Forms?displayProperty=nameWithType> 어셈블리에 대한 참조  
+- <xref:System?displayProperty=nameWithType> 및 <xref:System.Windows.Forms?displayProperty=nameWithType> 어셈블리에 대한 참조  
   
 ## <a name="see-also"></a>참고자료
 

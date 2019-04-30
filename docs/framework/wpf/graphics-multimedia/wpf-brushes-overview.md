@@ -8,11 +8,11 @@ helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
 ms.openlocfilehash: 14e3d095d50f41e5b20a79d76c464bcf28c99327
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053095"
 ---
 # <a name="wpf-brushes-overview"></a>WPF 브러시 개요
 모든 화면에 표시 되는 브러시 그려 졌 기 때문에 표시 됩니다. 예를 들어, 단추, 텍스트, 전경색 및 도형의 채우기의 배경을 설명 하는 브러시를 사용 됩니다. 이 항목에서는 사용 하 여 그리기의 개념을 소개 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 브러시 및 예제를 제공 합니다. 브러시를 사용하여 간단한 단색부터 복잡한 패턴 및 이미지 집합에 이르는 모든 방식으로 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 개체를 그릴 수 있습니다.  
@@ -131,9 +131,9 @@ VisualBrush를 사용 하 여 그린 사각형
 ## <a name="paint-using-predefined-and-system-brushes"></a>미리 정의 된 및 시스템 브러시를 사용 하 여 그리기  
  편의 위해 Windows Presentation Foundation (WPF) 미리 정의 된 집합 및 개체를 그리는 데 사용할 수 있는 시스템 브러시를 제공 합니다.  
   
--   목록을 사용할 수 있는 미리 정의 된 브러시에 대 한 참조를 <xref:System.Windows.Media.Brushes> 클래스입니다. 미리 정의 된 브러시를 사용 하는 방법을 보여 주는 예제를 보려면 [단색으로 영역 그리기](how-to-paint-an-area-with-a-solid-color.md)합니다.  
+- 목록을 사용할 수 있는 미리 정의 된 브러시에 대 한 참조를 <xref:System.Windows.Media.Brushes> 클래스입니다. 미리 정의 된 브러시를 사용 하는 방법을 보여 주는 예제를 보려면 [단색으로 영역 그리기](how-to-paint-an-area-with-a-solid-color.md)합니다.  
   
--   목록은 사용 가능한 시스템 브러시 참조를 <xref:System.Windows.SystemColors> 클래스입니다. 예를 들어 참조 [시스템 브러시로 영역 그리기](how-to-paint-an-area-with-a-system-brush.md)합니다.  
+- 목록은 사용 가능한 시스템 브러시 참조를 <xref:System.Windows.SystemColors> 클래스입니다. 예를 들어 참조 [시스템 브러시로 영역 그리기](how-to-paint-an-area-with-a-system-brush.md)합니다.  
   
 <a name="commonbrushfeatures"></a>   
 ## <a name="common-brush-features"></a>브러시의 일반적인 기능  

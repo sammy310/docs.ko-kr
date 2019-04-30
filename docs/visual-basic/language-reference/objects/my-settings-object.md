@@ -8,11 +8,11 @@ helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
 ms.openlocfilehash: a962f7cce961b1ee6829702a6815ba02c534efb4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050313"
 ---
 # <a name="mysettings-object"></a>My.Settings 개체
 응용 프로그램의 설정에 액세스 하기 위한 속성 및 메서드를 제공 합니다.  
@@ -25,13 +25,13 @@ ms.locfileid: "58840369"
   
  각 설정에는 **이름**, **형식**, **범위**, 및 **값**, 이러한 설정을 확인 하는 방법을 각 설정에 액세스 하는 속성 에 표시 되는 `My.Settings` 개체:  
   
--   **이름** 속성의 이름을 결정 합니다.  
+- **이름** 속성의 이름을 결정 합니다.  
   
--   **형식** 속성의 유형을 결정 합니다.  
+- **형식** 속성의 유형을 결정 합니다.  
   
--   **범위** 읽기 전용 속성 인지 여부를 나타냅니다. 값이 **응용 프로그램**, 속성이 읽기 전용 값이 **사용자**, 속성이 읽기 / 쓰기입니다.  
+- **범위** 읽기 전용 속성 인지 여부를 나타냅니다. 값이 **응용 프로그램**, 속성이 읽기 전용 값이 **사용자**, 속성이 읽기 / 쓰기입니다.  
   
--   **값** 속성의 기본값입니다.  
+- **값** 속성의 기본값입니다.  
   
 ## <a name="methods"></a>메서드  
   

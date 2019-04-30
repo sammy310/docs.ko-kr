@@ -3,11 +3,11 @@ title: 상호 통신
 ms.date: 03/30/2017
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
 ms.openlocfilehash: 6ce0d15bca15fff52ea6c4ab210dd08664e19824
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007684"
 ---
 # <a name="two-way-communication"></a>상호 통신
 이 샘플에서는 MSMQ를 통해 트랜잭션된 대기 중인 양방향 통신을 수행하는 방법을 보여 줍니다. 이 샘플에서는 `netMsmqBinding` 바인딩을 사용합니다. 이 경우 서비스는 자체적으로 호스트되는 콘솔 응용 프로그램으로서 이를 사용하여 서비스에서 대기 중인 메시지 받는 것을 볼 수 있습니다.  

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
 ms.openlocfilehash: a6baf073e25635f0a6dd666d681d8bc641128ea0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982373"
 ---
 # <a name="routed-events-overview"></a>라우트된 이벤트 개요
 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 라우트된 이벤트의 개념을 설명합니다. 이 항목에서는 라우트된 이벤트 용어를 정의하고, 라우트된 이벤트가 요소 트리를 통해 라우트되는 방식을 설명하고, 라우트된 이벤트를 처리하는 방법을 요약하고, 자체 사용자 지정 라우트된 이벤트를 만드는 방법을 소개합니다.
@@ -86,11 +86,11 @@ ms.locfileid: "59330456"
 ## <a name="routing-strategies"></a>라우트 전략  
  라우트된 이벤트는 다음 세 가지 라우트 전략 중 하나를 사용합니다.  
   
--   **버블링:** 이벤트 소스에서 이벤트 처리기를 호출 합니다. 라우트된 이벤트는 요소 트리 루트에 도달할 때까지 다음 부모 요소로 라우트됩니다. 대부분의 라우트된 이벤트는 버블링 라우트 전략을 사용합니다. 버블링 라우트된 이벤트는 일반적으로 개별 컨트롤 또는 기타 UI 요소에서 입력 또는 상태 변경을 보고하는 데 사용됩니다.  
+- **버블링:** 이벤트 소스에서 이벤트 처리기를 호출 합니다. 라우트된 이벤트는 요소 트리 루트에 도달할 때까지 다음 부모 요소로 라우트됩니다. 대부분의 라우트된 이벤트는 버블링 라우트 전략을 사용합니다. 버블링 라우트된 이벤트는 일반적으로 개별 컨트롤 또는 기타 UI 요소에서 입력 또는 상태 변경을 보고하는 데 사용됩니다.  
   
--   **직접:** 소스 요소 자체만 응답 처리기를 호출할 수 있는 기회를 제공 됩니다. 이 전략은 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]에서 이벤트에 사용하는 “라우트”와 비슷합니다. 표준 달리 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 이벤트를 라우트된 이벤트 클래스 처리를 지 원하는 직접 (클래스 처리는 이후 섹션에서 설명 됨)에서 사용할 수 있습니다 <xref:System.Windows.EventSetter> 및 <xref:System.Windows.EventTrigger>합니다.  
+- **직접:** 소스 요소 자체만 응답 처리기를 호출할 수 있는 기회를 제공 됩니다. 이 전략은 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]에서 이벤트에 사용하는 “라우트”와 비슷합니다. 표준 달리 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 이벤트를 라우트된 이벤트 클래스 처리를 지 원하는 직접 (클래스 처리는 이후 섹션에서 설명 됨)에서 사용할 수 있습니다 <xref:System.Windows.EventSetter> 및 <xref:System.Windows.EventTrigger>합니다.  
   
--   **터널링 합니다.** 처음에 요소 트리 루트에 있는 이벤트 처리기가 호출 됩니다. 그 다음에 라우트된 이벤트는 경로를 따라 있는 다음 자식 요소를 통해 경로를 이동하여 라우트된 이벤트 소스인 노드 요소(라우트된 이벤트를 발생시킨 요소)를 향합니다. 터널링 라우트된 이벤트는 보통 컨트롤 합치기의 일부로 사용 또는 처리되므로 복합 부분의 이벤트가 의도적으로 전체 컨트롤에 관련된 이벤트에 의해 억제되거나 대체될 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 제공된 입력 이벤트는 터널링/버블링 쌍으로 구현됩니다. 쌍에 사용되는 명명 규칙 때문에 터널링 이벤트를 미리 보기 이벤트라고도 합니다.  
+- **터널링 합니다.** 처음에 요소 트리 루트에 있는 이벤트 처리기가 호출 됩니다. 그 다음에 라우트된 이벤트는 경로를 따라 있는 다음 자식 요소를 통해 경로를 이동하여 라우트된 이벤트 소스인 노드 요소(라우트된 이벤트를 발생시킨 요소)를 향합니다. 터널링 라우트된 이벤트는 보통 컨트롤 합치기의 일부로 사용 또는 처리되므로 복합 부분의 이벤트가 의도적으로 전체 컨트롤에 관련된 이벤트에 의해 억제되거나 대체될 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 제공된 입력 이벤트는 터널링/버블링 쌍으로 구현됩니다. 쌍에 사용되는 명명 규칙 때문에 터널링 이벤트를 미리 보기 이벤트라고도 합니다.  
   
 <a name="why_use"></a>   
 ## <a name="why-use-routed-events"></a>라우트된 이벤트를 사용하는 이유는 무엇인가요?  
@@ -104,9 +104,9 @@ ms.locfileid: "59330456"
   
  라우트 측면 외에 특정 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이벤트가 표준 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 이벤트 대신에 라우트된 이벤트로 구현될 수 있는 두 가지 다른 이유가 있습니다. 자체 이벤트를 구현할 경우 다음 원칙을 고려할 수도 있습니다.  
   
--   특정 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 와 같은 스타일 및 템플릿 기능 <xref:System.Windows.EventSetter> 및 <xref:System.Windows.EventTrigger> 참조 된 이벤트를 라우트된 이벤트 여야 필요 합니다. 이는 앞에서 언급한 이벤트 식별자 시나리오입니다.  
+- 특정 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 와 같은 스타일 및 템플릿 기능 <xref:System.Windows.EventSetter> 및 <xref:System.Windows.EventTrigger> 참조 된 이벤트를 라우트된 이벤트 여야 필요 합니다. 이는 앞에서 언급한 이벤트 식별자 시나리오입니다.  
   
--   라우트된 이벤트는 등록된 인스턴스 처리기가 라우트된 이벤트에 액세스하기 전에 클래스가 라우트된 이벤트를 처리할 기회를 가지는 정적 메서드를 지정하는 데 사용될 수 있는 클래스 처리 메커니즘을 지원합니다. 이 메커니즘은 컨트롤 디자인에서 매우 유용합니다. 클래스는 이벤트가 인스턴스에서 처리되어 실수로 억제될 수 있는 이벤트 기반 클래스 동작을 강제 실행할 수 있기 때문입니다.  
+- 라우트된 이벤트는 등록된 인스턴스 처리기가 라우트된 이벤트에 액세스하기 전에 클래스가 라우트된 이벤트를 처리할 기회를 가지는 정적 메서드를 지정하는 데 사용될 수 있는 클래스 처리 메커니즘을 지원합니다. 이 메커니즘은 컨트롤 디자인에서 매우 유용합니다. 클래스는 이벤트가 인스턴스에서 처리되어 실수로 억제될 수 있는 이벤트 기반 클래스 동작을 강제 실행할 수 있기 때문입니다.  
   
  위 고려 사항은 각각 이 항목의 개별 섹션에서 설명합니다.  
   
@@ -147,21 +147,21 @@ ms.locfileid: "59330456"
   
  그러나 여기서 수신기에서에서 계속 실행할 수 처리기 라우트된 이벤트에 응답 하는 "handledEventsToo" 메커니즘이 있습니다. 여기서 <xref:System.Windows.RoutedEventArgs.Handled%2A> 는 `true` 이벤트 데이터에서입니다. 즉, 이벤트 데이터를 처리됨으로 표시해도 실제로 이벤트 경로는 중지되지 않습니다. 또는 코드에만 handledEventsToo 메커니즘을 사용할 수 있습니다는 <xref:System.Windows.EventSetter>:  
   
--   일반 작동 하는 언어별 이벤트 구문을 사용 하는 대신 코드에서 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 이벤트를 호출 합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 메서드 <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> 여 처리기를 추가 합니다. `handledEventsToo` 값을 `true`로 지정합니다.  
+- 일반 작동 하는 언어별 이벤트 구문을 사용 하는 대신 코드에서 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 이벤트를 호출 합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 메서드 <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> 여 처리기를 추가 합니다. `handledEventsToo` 값을 `true`로 지정합니다.  
   
--   에 <xref:System.Windows.EventSetter>로 설정 합니다 <xref:System.Windows.EventSetter.HandledEventsToo%2A> 특성을 `true`.  
+- 에 <xref:System.Windows.EventSetter>로 설정 합니다 <xref:System.Windows.EventSetter.HandledEventsToo%2A> 특성을 `true`.  
   
  동작 외에 <xref:System.Windows.RoutedEventArgs.Handled%2A> 라우트된 이벤트의 개념에서 상태 생성 <xref:System.Windows.RoutedEventArgs.Handled%2A> 응용 프로그램을 디자인 하 고 이벤트 처리기 코드를 작성 해야 하는 방법에 영향을 미칩니다. 개념화 할 수 있습니다 <xref:System.Windows.RoutedEventArgs.Handled%2A> 으로 라우트된 이벤트에 의해 노출 되는 간단한 프로토콜입니다. 달려 있지만 방법에 대 한 개념적 디자인은이 프로토콜을 사용 하는 방법을 정확히 값 <xref:System.Windows.RoutedEventArgs.Handled%2A> 을 사용할 수는 다음과 같습니다.  
   
--   라우트된 이벤트가 처리됨으로 표시되면 해당 경로를 따라 있는 다른 요소가 해당 라우트된 이벤트를 다시 처리할 필요가 없습니다.  
+- 라우트된 이벤트가 처리됨으로 표시되면 해당 경로를 따라 있는 다른 요소가 해당 라우트된 이벤트를 다시 처리할 필요가 없습니다.  
   
--   라우트된 이벤트를 처리 됨으로 표시 되지 않는 경우 이전 경로 따라 있었던 다른 수신기 선택 하는 처리기 또는 등록 하지 않도록 선택 하는 이벤트 데이터를 조작 하 고 설정 된 처리기가 등록 했거나 <xref:System.Windows.RoutedEventArgs.Handled%2A> 에 `true`입니다. 또는 현재 수신기가 경로의 첫 번째 지점일 수도 있습니다. 이제 현재 수신기의 처리기에는 세 가지 가능한 작업 과정이 있습니다.  
+- 라우트된 이벤트를 처리 됨으로 표시 되지 않는 경우 이전 경로 따라 있었던 다른 수신기 선택 하는 처리기 또는 등록 하지 않도록 선택 하는 이벤트 데이터를 조작 하 고 설정 된 처리기가 등록 했거나 <xref:System.Windows.RoutedEventArgs.Handled%2A> 에 `true`입니다. 또는 현재 수신기가 경로의 첫 번째 지점일 수도 있습니다. 이제 현재 수신기의 처리기에는 세 가지 가능한 작업 과정이 있습니다.  
   
-    -   아무 작업도 수행하지 않습니다. 이벤트는 처리되지 않고 다음 수신기로 라우트됩니다.  
+    - 아무 작업도 수행하지 않습니다. 이벤트는 처리되지 않고 다음 수신기로 라우트됩니다.  
   
-    -   이벤트에 대한 응답으로 코드를 실행하지만 수행된 작업이 이벤트를 처리됨으로 표시하도록 보장할 만큼 충분히 효과적인지에 대한 결정을 내립니다. 이벤트는 다음 수신기로 라우트됩니다.  
+    - 이벤트에 대한 응답으로 코드를 실행하지만 수행된 작업이 이벤트를 처리됨으로 표시하도록 보장할 만큼 충분히 효과적인지에 대한 결정을 내립니다. 이벤트는 다음 수신기로 라우트됩니다.  
   
-    -   이벤트에 대한 응답으로 코드를 실행합니다. 처리기에 전달된 이벤트 데이터에서 이벤트를 처리됨으로 표시합니다. 이는 수행된 작업이 처리됨으로 표시하도록 보장할 만큼 충분히 효과적이라고 생각되기 때문입니다. 이벤트는 여전히 하지만 다음 수신기로 라우팅합니다 <xref:System.Windows.RoutedEventArgs.Handled%2A> = `true` 되므로 해당 이벤트 데이터에서 `handledEventsToo` 수신기 추가 처리기를 호출할 수 있습니다.  
+    - 이벤트에 대한 응답으로 코드를 실행합니다. 처리기에 전달된 이벤트 데이터에서 이벤트를 처리됨으로 표시합니다. 이는 수행된 작업이 처리됨으로 표시하도록 보장할 만큼 충분히 효과적이라고 생각되기 때문입니다. 이벤트는 여전히 하지만 다음 수신기로 라우팅합니다 <xref:System.Windows.RoutedEventArgs.Handled%2A> = `true` 되므로 해당 이벤트 데이터에서 `handledEventsToo` 수신기 추가 처리기를 호출할 수 있습니다.  
   
  앞에서 언급 한 라우트 동작을 통해이 개념적 설명은: 하기가 더 어렵습니다 (하지만 코드 또는 스타일에서는 가능) 경로 따라 있는 이전 처리기가 이미 를설정하는경우에호출되는라우트된이벤트에대한처리기를연결<xref:System.Windows.RoutedEventArgs.Handled%2A>하려면 `true`합니다.  
   

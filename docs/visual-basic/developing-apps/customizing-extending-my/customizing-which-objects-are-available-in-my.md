@@ -6,11 +6,11 @@ helpviewer_keywords:
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
 ms.openlocfilehash: c0b47521c6a62071466ae4193cd8553bdfb3dcde
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58890373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014234"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>My에 사용할 수 있는 개체 사용자 지정(Visual Basic)
 

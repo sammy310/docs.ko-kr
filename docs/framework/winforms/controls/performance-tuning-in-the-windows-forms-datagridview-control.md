@@ -7,11 +7,11 @@ helpviewer_keywords:
 - performance tuning [Windows Forms], data grids
 ms.assetid: 6ccbff28-a0ff-41e4-b601-61b31b61851d
 ms.openlocfilehash: 79f74db4ebd095156207a6218f59c0e9ae423085
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012648"
 ---
 # <a name="performance-tuning-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 성능 조정
 많은 양의 데이터를 작업할 때의 `DataGridView` 신중 하 게 사용 하지 않는 한 컨트롤 많은 양의 메모리를에서 사용할 수 있습니다. 제한 된 메모리를 사용 하 여 클라이언트에 메모리가 많이 하는 기능은 사용 하지 않음으로써이 오버 헤드의 일부를 방지할 수 있습니다. 데이터 유지 관리의 일부 또는 전부를 관리할 수도 있습니다 및 검색 시나리오에 대 한 메모리 사용량을 사용자 지정 하기 위해 가상 모드를 사용 하 여 직접 작업 합니다.  

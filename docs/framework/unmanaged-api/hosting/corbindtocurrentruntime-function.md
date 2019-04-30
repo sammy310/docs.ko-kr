@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d0acb322fa3348f0bb2d819529a370110580343c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985883"
 ---
 # <a name="corbindtocurrentruntime-function"></a>CorBindToCurrentRuntime 함수
 XML 파일에 저장 된 버전 정보를 사용 하 여 프로세스에는 CLR (공용 언어 런타임)을 로드 합니다. XML 파일의 형식은 표준 응용 프로그램 구성 파일을 따라 모델링 됩니다. 구성 파일에 대한 자세한 내용은 [구성 파일 스키마](../../../../docs/framework/configure-apps/file-schema/index.md)를 참조하세요.  

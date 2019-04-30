@@ -12,11 +12,11 @@ helpviewer_keywords:
 - list views [Windows Forms], displaying icons
 ms.assetid: 9d577542-8595-429b-99e5-078770ec9d35
 ms.openlocfilehash: 8e4ae744eecbe894767114179dd63651828b191b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013441"
 ---
 # <a name="how-to-display-icons-for-the-windows-forms-listview-control"></a>방법: Windows Forms ListView 컨트롤에 대한 아이콘 표시
 Windows Forms <xref:System.Windows.Forms.ListView> 컨트롤 3 개 이미지 목록에서 아이콘을 표시할 수 있습니다. 목록, 세부 정보 및 SmallIcon 보기에 지정 된 이미지 목록의 이미지에 표시 된 <xref:System.Windows.Forms.ListView.SmallImageList%2A> 속성입니다. 큰 아이콘 보기에 지정 된 이미지 목록의 이미지를 표시 합니다 <xref:System.Windows.Forms.ListView.LargeImageList%2A> 속성입니다. 목록 보기에서 설정 아이콘의 추가 집합을 표시할 수도 있습니다는 <xref:System.Windows.Forms.ListView.StateImageList%2A> 크고 작은 아이콘과 옆에 있는 속성입니다. 이미지 목록에 대 한 자세한 내용은 참조 하세요. [ImageList 구성 요소](imagelist-component-windows-forms.md) 고 [방법: 제거 이미지는 Windows Forms ImageList 구성 요소 추가 또는](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)합니다.  

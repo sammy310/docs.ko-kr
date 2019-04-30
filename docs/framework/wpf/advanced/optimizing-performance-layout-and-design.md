@@ -10,11 +10,11 @@ helpviewer_keywords:
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
 ms.openlocfilehash: 8a76dd5de9f374d77345eeab3d259624546fed7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050222"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>성능 최적화: 레이아웃 및 디자인
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램의 디자인 작업은 레이아웃 계산과 개체 참조의 유효성 검사 과정에서 불필요한 오버헤드를 초래하여 성능에 영향을 줄 수 있습니다. 또한 개체 생성 작업은 특히 런타임에 애플리케이션의 성능 특성에 영향을 줄 수 있습니다.  
@@ -26,25 +26,25 @@ ms.locfileid: "59107070"
   
  레이아웃 시스템은 컬렉션의 각 자식 멤버에 대해 두 개의 단계인 측정 단계 및 정렬 단계를 수행합니다. 각 자식 개체의 재정의 된 구현을 제공 합니다 <xref:System.Windows.UIElement.Measure%2A> 고 <xref:System.Windows.UIElement.Arrange%2A> 고유한 특정 레이아웃 동작을 제공 하기 위해 메서드. 가장 간단한 레이아웃은 화면에서 크기 조정, 배치 및 그리기를 수행할 요소가 되는 재귀 시스템입니다.  
   
--   자식 <xref:System.Windows.UIElement> 개체는 먼저 핵심 속성이 측정 되도록 하 여 레이아웃 프로세스를 시작 합니다.  
+- 자식 <xref:System.Windows.UIElement> 개체는 먼저 핵심 속성이 측정 되도록 하 여 레이아웃 프로세스를 시작 합니다.  
   
--   개체의 <xref:System.Windows.FrameworkElement> 와 같은 크기에 관련 된 속성이 <xref:System.Windows.FrameworkElement.Width%2A>를 <xref:System.Windows.FrameworkElement.Height%2A>, 및 <xref:System.Windows.FrameworkElement.Margin%2A>, 평가 됩니다.  
+- 개체의 <xref:System.Windows.FrameworkElement> 와 같은 크기에 관련 된 속성이 <xref:System.Windows.FrameworkElement.Width%2A>를 <xref:System.Windows.FrameworkElement.Height%2A>, 및 <xref:System.Windows.FrameworkElement.Margin%2A>, 평가 됩니다.  
   
--   <xref:System.Windows.Controls.Panel>-같은 논리가 적용 됩니다는 <xref:System.Windows.Controls.DockPanel.Dock%2A> 의 속성을 <xref:System.Windows.Controls.DockPanel>, 또는 <xref:System.Windows.Controls.StackPanel.Orientation%2A> 의 속성은 <xref:System.Windows.Controls.StackPanel>.  
+- <xref:System.Windows.Controls.Panel>-같은 논리가 적용 됩니다는 <xref:System.Windows.Controls.DockPanel.Dock%2A> 의 속성을 <xref:System.Windows.Controls.DockPanel>, 또는 <xref:System.Windows.Controls.StackPanel.Orientation%2A> 의 속성은 <xref:System.Windows.Controls.StackPanel>.  
   
--   모든 자식 개체가 측정된 후 콘텐츠가 정렬 또는 배치됩니다.  
+- 모든 자식 개체가 측정된 후 콘텐츠가 정렬 또는 배치됩니다.  
   
--   자식 개체의 컬렉션이 화면에 그려집니다.  
+- 자식 개체의 컬렉션이 화면에 그려집니다.  
   
  다음 작업 중 하나가 발생할 경우 레이아웃 단계 프로세스가 다시 호출됩니다.  
   
--   자식 개체가 컬렉션에 추가됩니다.  
+- 자식 개체가 컬렉션에 추가됩니다.  
   
--   <xref:System.Windows.FrameworkElement.LayoutTransform%2A> 자식 개체에 적용 됩니다.  
+- <xref:System.Windows.FrameworkElement.LayoutTransform%2A> 자식 개체에 적용 됩니다.  
   
--   <xref:System.Windows.UIElement.UpdateLayout%2A> 자식 개체에 대 한 호출 됩니다.  
+- <xref:System.Windows.UIElement.UpdateLayout%2A> 자식 개체에 대 한 호출 됩니다.  
   
--   측정 또는 정렬 단계에 영향을 주는 메타데이터로 표시된 종속성 속성의 값에 변경이 발생할 경우  
+- 측정 또는 정렬 단계에 영향을 주는 메타데이터로 표시된 종속성 속성의 값에 변경이 발생할 경우  
   
 ### <a name="use-the-most-efficient-panel-where-possible"></a>가능한 경우 가장 효율적인 패널 사용  
  레이아웃 프로세스의 복잡성은 직접 동작을 기반으로 레이아웃의는 <xref:System.Windows.Controls.Panel>-사용할 요소를 파생 합니다. 예를 들어를 <xref:System.Windows.Controls.Grid> 또는 <xref:System.Windows.Controls.StackPanel> 보다 훨씬 더 많은 기능을 제공 하는 컨트롤을 <xref:System.Windows.Controls.Canvas> 제어 합니다. 기능이 많이 제공될수록 성능 비용이 증가합니다. 그러나 기능이 필요 하지 않은 경우는 <xref:System.Windows.Controls.Grid> 컨트롤에서는 같은 비용이 덜 드는 대안을 사용 해야는 <xref:System.Windows.Controls.Canvas> 또는 사용자 지정 패널입니다.  

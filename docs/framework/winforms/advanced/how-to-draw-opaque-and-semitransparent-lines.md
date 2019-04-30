@@ -11,11 +11,11 @@ helpviewer_keywords:
 - alpha blending [Windows Forms], drawing lines
 ms.assetid: 8f2508af-f495-4223-b5cc-646cbbb520eb
 ms.openlocfilehash: 7408722dc13e83828cfca3f0615a2730e3c53461
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004031"
 ---
 # <a name="how-to-draw-opaque-and-semitransparent-lines"></a>방법: 불투명 및 반투명 선 그리기
 선을 그리는 경우 <xref:System.Drawing.Pen> 개체를 <xref:System.Drawing.Graphics> 클래스의 <xref:System.Drawing.Graphics.DrawLine%2A> 메서드에 전달해야 합니다. <xref:System.Drawing.Pen.%23ctor%2A> 생성자의 매개 변수 중 하나는 <xref:System.Drawing.Color> 개체입니다. 불투명 선을 그리려면 색의 알파 구성 요소를 255로 설정합니다. 반투명 선을 그리려면 알파 구성 요소를 1에서 254 사이의 임의 값으로 설정합니다.  

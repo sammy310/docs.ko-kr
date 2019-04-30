@@ -3,11 +3,11 @@ title: 메시지 상관 관계
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
 ms.openlocfilehash: ed6fc8f5d16ae2d604cdbdf4659ecfaaa83bfa02
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989770"
 ---
 # <a name="message-correlation"></a>메시지 상관 관계
 이 샘플에서는 메시지 큐 (MSMQ) 응용 프로그램을 Windows Communication Foundation (WCF) 서비스에 MSMQ 메시지를 보낼 수 있습니다 하는 방법 및 메시지를 요청/응답 시나리오의 발신자와 수신자 응용 프로그램 간에 상호 연결 하는 방법을 보여 줍니다. 이 샘플에서는 msmqIntegrationBinding 바인딩을 사용합니다. 이 경우 서비스는 자체 호스팅 콘솔 응용 프로그램으로, 이를 사용하여 대기 중인 메시지를 받는 서비스를 확인할 수 있습니다. k  
@@ -275,15 +275,15 @@ static void DisplayOrderStatus()
 
 2. 서비스가 처음 실행되는 경우 서비스에서는 큐가 있는지 확인하고 큐가 없으면 큐를 만듭니다. 서비스를 처음 실행하여 큐를 만들거나 MSMQ 큐 관리자를 통해 큐를 만들 수 있습니다. Windows 2008에서 큐를 만들려면 다음 단계를 수행하세요.
 
-    1.  Visual Studio 2012의 서버 관리자를 엽니다.
+    1. Visual Studio 2012의 서버 관리자를 엽니다.
 
-    2.  확장 된 **기능** 탭 합니다.
+    2. 확장 된 **기능** 탭 합니다.
 
-    3.  마우스 오른쪽 단추로 클릭 **개인 메시지 큐**, 선택한 **새로 만들기**합니다 **개인 큐**합니다.
+    3. 마우스 오른쪽 단추로 클릭 **개인 메시지 큐**, 선택한 **새로 만들기**합니다 **개인 큐**합니다.
 
-    4.  확인 합니다 **트랜잭션** 상자입니다.
+    4. 확인 합니다 **트랜잭션** 상자입니다.
 
-    5.  입력 `ServiceModelSamplesTransacted` 새 대기열의 이름으로 합니다.
+    5. 입력 `ServiceModelSamplesTransacted` 새 대기열의 이름으로 합니다.
 
 3. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.
 

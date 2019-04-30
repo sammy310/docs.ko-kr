@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a67e8ce19a2acf5b4ee1d114858e00d93cb183b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62044137"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>IMetaDataEmit::DefineMethod 메서드
 지정된 된 시그니처를 사용 하 여 메서드 또는 전역 함수에 대 한 정의 만들고 해당 메서드 정의에 토큰을 반환 합니다.  
@@ -90,9 +90,9 @@ HRESULT DefineMethod (
 ## <a name="defining-a-method-for-pinvoke"></a>PInvoke에 대 한 메서드를 정의합니다.  
  PInvoke를 통해 호출할 각 관리 되지 않는 함수에 대 한 관리 되지 않는 대상 함수를 나타내는 관리 되는 메서드를 정의 해야 합니다. 관리 되는 메서드를 정의 하려면 사용 하 여 `DefineMethod` PInvoke 사용 되는 방식에 따라 특정 값으로 설정 된 매개 변수 중 일부를 사용 하 여:  
   
--   PInvoke-관리 되지 않는 DLL에 상주 하는 외부 관리 되지 않는 메서드 호출이 포함 됩니다.  
+- PInvoke-관리 되지 않는 DLL에 상주 하는 외부 관리 되지 않는 메서드 호출이 포함 됩니다.  
   
--   로컬 PInvoke-에 현재 관리 되는 모듈에 포함 된 네이티브 관리 되지 않는 메서드 호출이 포함 됩니다.  
+- 로컬 PInvoke-에 현재 관리 되는 모듈에 포함 된 네이티브 관리 되지 않는 메서드 호출이 포함 됩니다.  
   
  매개 변수 설정은 다음 표에 제공 됩니다.  
   

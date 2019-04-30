@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 03cac2b8433d6491d1fa474a0d4064ef4e260d6e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993228"
 ---
 # <a name="ihostmemorymanagervirtualfree-method"></a>IHostMemoryManager::VirtualFree 메서드
 역할을 해당 하는 Win32 함수에 대 한 논리적 래퍼입니다. Win32 구현의 `VirtualFree` 해제, 커밋 또는 해제 하 고 호출 하는 프로세스의 가상 주소 공간 내의 페이지 영역을 커밋 해제 합니다.  

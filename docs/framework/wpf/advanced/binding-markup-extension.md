@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
 ms.openlocfilehash: 3455c7ccdedb432fc05c7dc9e80f0f7509f4fa0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010685"
 ---
 # <a name="binding-markup-extension"></a>Binding 태그 확장
 데이터 바인딩된 값을 중간 식 개체를 만들고 요소 및 해당 런타임 바인딩에 적용 되는 데이터 컨텍스트를 해석 하기 위해 속성 값을 연기 합니다.  
@@ -54,55 +54,55 @@ ms.locfileid: "59170315"
   
  이러한 속성 값의 몇 가지 XAML을 텍스트 구문에서 네이티브 형식 변환을 지원 하지 않으며 따라서 태그 확장이 특성 값으로 설정 하려면 필요 여부를 지정 하는 개체 유형이 필요 합니다. 자세한 내용은 각 속성에 대 한.NET Framework 클래스 라이브러리의 XAML 특성 사용 섹션 확인 XAML 특성 구문을 사용 하 여 사용 하는 문자열 또는 태그 확장을 추가 하지 않고 사용 기본적으로 동일한에서 지정한 값으로는 `Binding` 식을 각 주위에 따옴표를 배치 하지 마십시오 예외 `bindProp` = `value` 에 `Binding` 식입니다.  
   
--   <xref:System.Windows.Data.BindingBase.BindingGroupName%2A>: 바인딩 가능한 그룹을 식별 하는 문자열입니다. 이 비교적 고급 바인딩 개념입니다. 참조 페이지를 참조 하십시오 <xref:System.Windows.Data.BindingBase.BindingGroupName%2A>합니다.  
+- <xref:System.Windows.Data.BindingBase.BindingGroupName%2A>: 바인딩 가능한 그룹을 식별 하는 문자열입니다. 이 비교적 고급 바인딩 개념입니다. 참조 페이지를 참조 하십시오 <xref:System.Windows.Data.BindingBase.BindingGroupName%2A>합니다.  
   
--   <xref:System.Windows.Data.Binding.BindsDirectlyToSource%2A>: 부울 일 수 있습니다 `true` 또는 `false`합니다. 기본값은 `false`입니다.  
+- <xref:System.Windows.Data.Binding.BindsDirectlyToSource%2A>: 부울 일 수 있습니다 `true` 또는 `false`합니다. 기본값은 `false`입니다.  
   
--   <xref:System.Windows.Data.Binding.Converter%2A>:으로 설정할 수는 `bindProp` = `value` 문자열 식에 있지만 그러려면 참조가 필요 합니다. 개체 값에 대해 같은 [StaticResource 태그 확장](staticresource-markup-extension.md)합니다. 이 경우 값은 사용자 지정 변환기 클래스의 인스턴스입니다.  
+- <xref:System.Windows.Data.Binding.Converter%2A>:으로 설정할 수는 `bindProp` = `value` 문자열 식에 있지만 그러려면 참조가 필요 합니다. 개체 값에 대해 같은 [StaticResource 태그 확장](staticresource-markup-extension.md)합니다. 이 경우 값은 사용자 지정 변환기 클래스의 인스턴스입니다.  
   
--   <xref:System.Windows.Data.Binding.ConverterCulture%2A>: 표준 기반 식별자가 식에서 설정할 수 있음 에 대 한 참조 항목을 참조 <xref:System.Windows.Data.Binding.ConverterCulture%2A>합니다.  
+- <xref:System.Windows.Data.Binding.ConverterCulture%2A>: 표준 기반 식별자가 식에서 설정할 수 있음 에 대 한 참조 항목을 참조 <xref:System.Windows.Data.Binding.ConverterCulture%2A>합니다.  
   
--   <xref:System.Windows.Data.Binding.ConverterParameter%2A>:으로 설정할 수는 `bindProp` = `value` 식에 있지만이 문자열은 전달 된 매개 변수의 형식에 따라 달라 집니다. 이 사용량 같은 중첩 된 개체 참조가 필요 합니다. 값에 대 한 참조 형식에 전달 하는 경우 [StaticResource 태그 확장](staticresource-markup-extension.md)합니다.  
+- <xref:System.Windows.Data.Binding.ConverterParameter%2A>:으로 설정할 수는 `bindProp` = `value` 식에 있지만이 문자열은 전달 된 매개 변수의 형식에 따라 달라 집니다. 이 사용량 같은 중첩 된 개체 참조가 필요 합니다. 값에 대 한 참조 형식에 전달 하는 경우 [StaticResource 태그 확장](staticresource-markup-extension.md)합니다.  
   
--   <xref:System.Windows.Data.Binding.ElementName%2A>:와 함께 사용할 수 없습니다 <xref:System.Windows.Data.Binding.RelativeSource%2A> 고 <xref:System.Windows.Data.Binding.Source%2A>각 이러한 특정 바인딩 방법론을 나타내는 바인딩 속성입니다. 참조 [데이터 바인딩 개요](../data/data-binding-overview.md)합니다.  
+- <xref:System.Windows.Data.Binding.ElementName%2A>:와 함께 사용할 수 없습니다 <xref:System.Windows.Data.Binding.RelativeSource%2A> 고 <xref:System.Windows.Data.Binding.Source%2A>각 이러한 특정 바인딩 방법론을 나타내는 바인딩 속성입니다. 참조 [데이터 바인딩 개요](../data/data-binding-overview.md)합니다.  
   
--   <xref:System.Windows.Data.BindingBase.FallbackValue%2A>:으로 설정할 수는 `bindProp` = `value` 식에 있지만이 문자열은 전달 되는 값의 유형에 따라 달라 집니다. 중첩 된 같은 개체 참조가 필요 합니다. 참조 형식을 전달 하는 경우 [StaticResource 태그 확장](staticresource-markup-extension.md)합니다.  
+- <xref:System.Windows.Data.BindingBase.FallbackValue%2A>:으로 설정할 수는 `bindProp` = `value` 식에 있지만이 문자열은 전달 되는 값의 유형에 따라 달라 집니다. 중첩 된 같은 개체 참조가 필요 합니다. 참조 형식을 전달 하는 경우 [StaticResource 태그 확장](staticresource-markup-extension.md)합니다.  
   
--   <xref:System.Windows.Data.Binding.IsAsync%2A>: 부울 일 수 있습니다 `true` 또는 `false`합니다. 기본값은 `false`입니다.  
+- <xref:System.Windows.Data.Binding.IsAsync%2A>: 부울 일 수 있습니다 `true` 또는 `false`합니다. 기본값은 `false`입니다.  
   
--   <xref:System.Windows.Data.Binding.Mode%2A>: *값* 에서 이름인 상수는 <xref:System.Windows.Data.BindingMode> 열거형입니다. 예를 들어, `{Binding Mode=OneWay}`을 입력합니다.  
+- <xref:System.Windows.Data.Binding.Mode%2A>: *값* 에서 이름인 상수는 <xref:System.Windows.Data.BindingMode> 열거형입니다. 예를 들어, `{Binding Mode=OneWay}`을 입력합니다.  
   
--   <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A>: 부울 일 수 있습니다 `true` 또는 `false`합니다. 기본값은 `false`입니다.  
+- <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A>: 부울 일 수 있습니다 `true` 또는 `false`합니다. 기본값은 `false`입니다.  
   
--   <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A>: 부울 일 수 있습니다 `true` 또는 `false`합니다. 기본값은 `false`입니다.  
+- <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A>: 부울 일 수 있습니다 `true` 또는 `false`합니다. 기본값은 `false`입니다.  
   
--   <xref:System.Windows.Data.Binding.NotifyOnValidationError%2A>: 부울 일 수 있습니다 `true` 또는 `false`합니다. 기본값은 `false`입니다.  
+- <xref:System.Windows.Data.Binding.NotifyOnValidationError%2A>: 부울 일 수 있습니다 `true` 또는 `false`합니다. 기본값은 `false`입니다.  
   
--   <xref:System.Windows.Data.Binding.Path%2A>: 데이터 개체 또는 일반 개체 모델에 대 한 경로 설명 하는 문자열입니다. 형식은이 항목의 적절 하 게 설명할 수 없는 개체 모델을 탐색 하는 데 다른 여러 규칙을 제공 합니다. 참조 [PropertyPath XAML 구문](propertypath-xaml-syntax.md)합니다.  
+- <xref:System.Windows.Data.Binding.Path%2A>: 데이터 개체 또는 일반 개체 모델에 대 한 경로 설명 하는 문자열입니다. 형식은이 항목의 적절 하 게 설명할 수 없는 개체 모델을 탐색 하는 데 다른 여러 규칙을 제공 합니다. 참조 [PropertyPath XAML 구문](propertypath-xaml-syntax.md)합니다.  
   
--   <xref:System.Windows.Data.Binding.RelativeSource%2A>: 비교와 함께 <xref:System.Windows.Data.Binding.ElementName%2A> 고 <xref:System.Windows.Data.Binding.Source%2A>각 이러한 특정 바인딩 방법론을 나타내는 바인딩 속성입니다. 참조 [데이터 바인딩 개요](../data/data-binding-overview.md)합니다. 중첩 된 필요 [RelativeSource 태그 확장](relativesource-markupextension.md) 사용량 값을 지정 합니다.  
+- <xref:System.Windows.Data.Binding.RelativeSource%2A>: 비교와 함께 <xref:System.Windows.Data.Binding.ElementName%2A> 고 <xref:System.Windows.Data.Binding.Source%2A>각 이러한 특정 바인딩 방법론을 나타내는 바인딩 속성입니다. 참조 [데이터 바인딩 개요](../data/data-binding-overview.md)합니다. 중첩 된 필요 [RelativeSource 태그 확장](relativesource-markupextension.md) 사용량 값을 지정 합니다.  
   
--   <xref:System.Windows.Data.Binding.Source%2A>:와 함께 사용할 수 없습니다 <xref:System.Windows.Data.Binding.RelativeSource%2A> 고 <xref:System.Windows.Data.Binding.ElementName%2A>각 이러한 특정 바인딩 방법론을 나타내는 바인딩 속성입니다. 참조 [데이터 바인딩 개요](../data/data-binding-overview.md)합니다. 일반적으로는 중첩 된 확장 사용 필요를 [StaticResource 태그 확장](staticresource-markup-extension.md) 키가 지정 된 리소스 사전에서 개체 데이터 소스를 나타내는입니다.  
+- <xref:System.Windows.Data.Binding.Source%2A>:와 함께 사용할 수 없습니다 <xref:System.Windows.Data.Binding.RelativeSource%2A> 고 <xref:System.Windows.Data.Binding.ElementName%2A>각 이러한 특정 바인딩 방법론을 나타내는 바인딩 속성입니다. 참조 [데이터 바인딩 개요](../data/data-binding-overview.md)합니다. 일반적으로는 중첩 된 확장 사용 필요를 [StaticResource 태그 확장](staticresource-markup-extension.md) 키가 지정 된 리소스 사전에서 개체 데이터 소스를 나타내는입니다.  
   
--   <xref:System.Windows.Data.BindingBase.StringFormat%2A>: 바인딩된 데이터에 대 한 문자열 형식 규칙을 설명 하는 문자열입니다. 이 비교적 고급 바인딩 개념입니다. 참조 페이지를 참조 하십시오 <xref:System.Windows.Data.BindingBase.StringFormat%2A>합니다.  
+- <xref:System.Windows.Data.BindingBase.StringFormat%2A>: 바인딩된 데이터에 대 한 문자열 형식 규칙을 설명 하는 문자열입니다. 이 비교적 고급 바인딩 개념입니다. 참조 페이지를 참조 하십시오 <xref:System.Windows.Data.BindingBase.StringFormat%2A>합니다.  
   
--   <xref:System.Windows.Data.BindingBase.TargetNullValue%2A>:으로 설정할 수는 `bindProp` = `value` 식에 있지만이 문자열은 전달 된 매개 변수의 형식에 따라 달라 집니다. 중첩 된 같은 개체 참조가 필요 합니다. 참조 형식을 값으로 전달 하는 경우 [StaticResource 태그 확장](staticresource-markup-extension.md)합니다.  
+- <xref:System.Windows.Data.BindingBase.TargetNullValue%2A>:으로 설정할 수는 `bindProp` = `value` 식에 있지만이 문자열은 전달 된 매개 변수의 형식에 따라 달라 집니다. 중첩 된 같은 개체 참조가 필요 합니다. 참조 형식을 값으로 전달 하는 경우 [StaticResource 태그 확장](staticresource-markup-extension.md)합니다.  
   
--   <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>: *값* 에서 이름인 상수는 <xref:System.Windows.Data.UpdateSourceTrigger> 열거형입니다. 예를 들어, `{Binding UpdateSourceTrigger=LostFocus}`을 입력합니다. 특정 컨트롤에는 잠재적으로 서로 다른 기본 값이 바인딩 속성의 경우 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>을 참조하세요.  
+- <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>: *값* 에서 이름인 상수는 <xref:System.Windows.Data.UpdateSourceTrigger> 열거형입니다. 예를 들어, `{Binding UpdateSourceTrigger=LostFocus}`을 입력합니다. 특정 컨트롤에는 잠재적으로 서로 다른 기본 값이 바인딩 속성의 경우 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>을 참조하세요.  
   
--   <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>: 부울 일 수 있습니다 `true` 또는 `false`합니다. 기본값은 `false`입니다. 설명 부분을 참조하세요.  
+- <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>: 부울 일 수 있습니다 `true` 또는 `false`합니다. 기본값은 `false`입니다. 설명 부분을 참조하세요.  
   
--   <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>: 부울 일 수 있습니다 `true` 또는 `false`합니다. 기본값은 `false`입니다. 설명 부분을 참조하세요.  
+- <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>: 부울 일 수 있습니다 `true` 또는 `false`합니다. 기본값은 `false`입니다. 설명 부분을 참조하세요.  
   
--   <xref:System.Windows.Data.Binding.XPath%2A>: XML 데이터 원본의 XMLDOM에 경로 설명 하는 문자열입니다. 참조 [XMLDataProvider 및 XPath 쿼리를 사용 하 여 XML 데이터를 바인딩할](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)합니다.  
+- <xref:System.Windows.Data.Binding.XPath%2A>: XML 데이터 원본의 XMLDOM에 경로 설명 하는 문자열입니다. 참조 [XMLDataProvider 및 XPath 쿼리를 사용 하 여 XML 데이터를 바인딩할](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)합니다.  
   
  다음의 속성은 <xref:System.Windows.Data.Binding> 를 사용 하 여 설정할 수 없는 합니다 `Binding` 태그 확장 /`{Binding}` 식 형식입니다.  
   
--   <xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A>:이 속성에 콜백 구현에 대 한 참조를 사용 해야 합니다. XAML 구문에서 콜백을/이벤트 처리기 이외의 메서드를 참조할 수 없습니다.  
+- <xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A>:이 속성에 콜백 구현에 대 한 참조를 사용 해야 합니다. XAML 구문에서 콜백을/이벤트 처리기 이외의 메서드를 참조할 수 없습니다.  
   
--   <xref:System.Windows.Data.Binding.ValidationRules%2A>: 속성의 제네릭 컬렉션을 가져와서 <xref:System.Windows.Controls.ValidationRule> 개체입니다. 속성 요소로 표현할 수는 <xref:System.Windows.Data.Binding> 사용량에 대 한 즉시 사용할 수 없는 특성 구문 분석 기술이 되었지만 요소 개체를 `Binding` 식입니다. 참조 항목을 참조 <xref:System.Windows.Data.Binding.ValidationRules%2A>합니다.  
+- <xref:System.Windows.Data.Binding.ValidationRules%2A>: 속성의 제네릭 컬렉션을 가져와서 <xref:System.Windows.Controls.ValidationRule> 개체입니다. 속성 요소로 표현할 수는 <xref:System.Windows.Data.Binding> 사용량에 대 한 즉시 사용할 수 없는 특성 구문 분석 기술이 되었지만 요소 개체를 `Binding` 식입니다. 참조 항목을 참조 <xref:System.Windows.Data.Binding.ValidationRules%2A>합니다.  
   
--   <xref:System.Windows.Data.Binding.XmlNamespaceManager%2A>  
+- <xref:System.Windows.Data.Binding.XmlNamespaceManager%2A>  
   
 ## <a name="remarks"></a>설명  
   

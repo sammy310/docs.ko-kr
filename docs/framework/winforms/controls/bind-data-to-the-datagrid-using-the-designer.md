@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
 ms.openlocfilehash: 59a025535e850cf3c773a2a078511d41058bb24c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011727"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에 데이터 바인딩
 디자이너를 사용 하 여 연결할 수는 <xref:System.Windows.Forms.DataGridView> 데이터베이스, 비즈니스 개체 또는 웹 서비스를 포함 하는 여러 다른 종류의 데이터 소스 컨트롤입니다. 컨트롤에 자동으로 바인딩되어 컨트롤에 디자이너를 사용 하 여 데이터 원본에 바인딩하는 경우는 <xref:System.Windows.Forms.BindingSource> 데이터 소스를 나타내는 구성 요소입니다. 또한 열은 데이터 소스에서 제공하는 스키마 정보와 일치하는 컨트롤에 자동으로 생성됩니다.  

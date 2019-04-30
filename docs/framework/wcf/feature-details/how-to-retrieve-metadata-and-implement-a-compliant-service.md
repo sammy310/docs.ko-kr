@@ -3,11 +3,11 @@ title: '방법: 메타데이터 검색 및 규정 준수 서비스 구현'
 ms.date: 03/30/2017
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
 ms.openlocfilehash: edf8fe2f174202d19b075ec218f059ea9b988843
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000794"
 ---
 # <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>방법: 메타데이터 검색 및 규정 준수 서비스 구현
 서비스를 디자인하는 사람과 구현하는 사람이 다른 경우가 많습니다. 상호 운용하는 응용 프로그램이 중요한 환경에서는 WSDL(웹 서비스 기술 언어)로 계약을 디자인하거나 설명할 수 있으며 개발자는 제공된 계약에 따라 서비스를 구현해야 합니다. 기존 서비스를 Windows Communication Foundation (WCF) 마이그레이션 있지만 통신 형식을 유지할 수도 있습니다. 또한 이중 계약에서는 호출자가 콜백 계약도 구현해야 합니다.  
@@ -39,17 +39,17 @@ ms.locfileid: "59322669"
   
  코드 내용은 다음과 같습니다.  
   
--   계약 요구 사항을 준수하는 서비스 계약 인터페이스(구현된 경우)(`ISampleService`).  
+- 계약 요구 사항을 준수하는 서비스 계약 인터페이스(구현된 경우)(`ISampleService`).  
   
--   서비스 계약 인터페이스와 <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>을 모두 확장하는 클라이언트와 클라이언트 응용 프로그램에 사용하기 위한 도우미 인터페이스(`ISampleServiceChannel`)  
+- 서비스 계약 인터페이스와 <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>을 모두 확장하는 클라이언트와 클라이언트 응용 프로그램에 사용하기 위한 도우미 인터페이스(`ISampleServiceChannel`)  
   
--   <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>를 확장하고 클라이언트 응용 프로그램에 사용하기 위한 도우미 클래스(`SampleServiceClient`)  
+- <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>를 확장하고 클라이언트 응용 프로그램에 사용하기 위한 도우미 클래스(`SampleServiceClient`)  
   
--   서비스에서 생성된 구성 파일  
+- 서비스에서 생성된 구성 파일  
   
--   간단한 `ISampleService` 서비스 구현  
+- 간단한 `ISampleService` 서비스 구현  
   
--   클라이언트측 구성 파일을 서비스측 버전으로 변환  
+- 클라이언트측 구성 파일을 서비스측 버전으로 변환  
   
 [!code-csharp[ClientProxyCodeSample#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/clientproxycodesample/cs/proxycode.cs#1)]
 

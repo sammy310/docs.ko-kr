@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
 ms.openlocfilehash: ec4ad84a39afe21ef77507732e5e0e417d45f3e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034530"
 ---
 # <a name="adding-data-to-a-datatable"></a>DataTable에 데이터 추가
 <xref:System.Data.DataTable>을 만들고 열 및 제약 조건을 사용하여 해당 테이블의 구조를 정의한 후에는 새 데이터 행을 테이블에 추가할 수 있습니다. 새 행을 추가하려면 새 변수의 형식을 <xref:System.Data.DataRow>로 선언합니다. 새 **DataRow** 를 호출 하면 개체가 반환 되는 <xref:System.Data.DataTable.NewRow%2A> 메서드. **DataTable** 만듭니다 합니다 **DataRow** 개체에 정의 된 대로 테이블의 구조를 기반 합니다 <xref:System.Data.DataColumnCollection>합니다.  

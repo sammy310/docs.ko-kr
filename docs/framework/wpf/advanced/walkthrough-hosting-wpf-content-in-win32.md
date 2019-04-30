@@ -7,11 +7,11 @@ helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
 ms.openlocfilehash: ad31d5f58ae3d22ce8760a396b1f9696912dc475
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053212"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>연습: Win32에서 WPF 콘텐츠 호스팅
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 응용 프로그램을 만들기 위한 다양한 환경을 제공합니다. 그러나 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 코드에 상당한 투자를 한 경우 원본 코드를 다시 작성하는 대신 응용 프로그램에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기능을 추가하는 것이 더 효과적일 수 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 호스팅에 대 한 간단한 메커니즘을 제공 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에서 콘텐츠를 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 창입니다.  
@@ -41,13 +41,13 @@ ms.locfileid: "59296110"
   
 4. 처리를 [WM_CREATE](/windows/desktop/winmsg/wm-create)알림 창 프로시저에서 다음을 수행 합니다.  
   
-    1.  부모 창을 해당 <xref:System.Windows.Interop.HwndSource> 매개 변수로 사용하여 새 `parent` 개체를 만듭니다.  
+    1. 부모 창을 해당 <xref:System.Windows.Interop.HwndSource> 매개 변수로 사용하여 새 `parent` 개체를 만듭니다.  
   
-    2.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠 클래스의 인스턴스를 만듭니다.  
+    2. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠 클래스의 인스턴스를 만듭니다.  
   
-    3.  에 대 한 참조를 할당 합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠 개체를 <xref:System.Windows.Interop.HwndSource.RootVisual%2A> 의 속성은 <xref:System.Windows.Interop.HwndSource>합니다.  
+    3. 에 대 한 참조를 할당 합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠 개체를 <xref:System.Windows.Interop.HwndSource.RootVisual%2A> 의 속성은 <xref:System.Windows.Interop.HwndSource>합니다.  
   
-    4.  콘텐츠에 대한 HWND를 가져옵니다. <xref:System.Windows.Interop.HwndSource.Handle%2A> 개체의 <xref:System.Windows.Interop.HwndSource> 속성에는 창 핸들(HWND)이 포함됩니다. 애플리케이션의 관리되지 않는 부분에서 사용할 수 있는 HWND를 가져오려면 `Handle.ToPointer()`를 HWND로 캐스팅합니다.  
+    4. 콘텐츠에 대한 HWND를 가져옵니다. <xref:System.Windows.Interop.HwndSource.Handle%2A> 개체의 <xref:System.Windows.Interop.HwndSource> 속성에는 창 핸들(HWND)이 포함됩니다. 애플리케이션의 관리되지 않는 부분에서 사용할 수 있는 HWND를 가져오려면 `Handle.ToPointer()`를 HWND로 캐스팅합니다.  
   
 5. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠에 대한 참조를 보유할 정적 필드가 포함된 관리되는 클래스를 구현합니다. 이 클래스를 통해 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 코드에서 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 콘텐츠에 대한 참조를 가져올 수 있습니다.  
   
@@ -65,13 +65,13 @@ ms.locfileid: "59296110"
  이 섹션에서는 설명 호스트 하는 방법 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 에서는 기본 콘텐츠 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 응용 프로그램입니다. 콘텐츠 자체는 [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]에서 관리되는 클래스로 구현됩니다. 대부분의 경우 간단한 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프로그래밍입니다. 콘텐츠 구현의 주요 사항에 대해서는 [WPF 콘텐츠 구현](#implementing_the_wpf_page)합니다.
 
 <a name="autoNestedSectionsOUTLINE1"></a>
--   [기본 응용 프로그램](#the_basic_application)
+- [기본 응용 프로그램](#the_basic_application)
 
--   [WPF 콘텐츠 호스트](#hosting_the_wpf_page)
+- [WPF 콘텐츠 호스트](#hosting_the_wpf_page)
 
--   [WPF 콘텐츠에 대한 참조 보유](#holding_a_reference)
+- [WPF 콘텐츠에 대한 참조 보유](#holding_a_reference)
 
--   [WPF 콘텐츠와 통신](#communicating_with_the_page)
+- [WPF 콘텐츠와 통신](#communicating_with_the_page)
 
 <a name="the_basic_application"></a>
 ### <a name="the-basic-application"></a>기본 애플리케이션
@@ -87,11 +87,11 @@ ms.locfileid: "59296110"
 
  템플릿은 다음을 포함하여 기본 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 응용 프로그램을 만듭니다.
 
--   애플리케이션에 대한 진입점
+- 애플리케이션에 대한 진입점
 
--   연결된 창 프로시저(WndProc)가 있는 창
+- 연결된 창 프로시저(WndProc)가 있는 창
 
--   포함 된 메뉴로 **파일** 하 고 **도움말** 머리글입니다. 합니다 **파일** 메뉴에는 **종료** 항목을 응용 프로그램을 닫습니다. 합니다 **도움말** 메뉴에는 **에 대 한** 는 간단한 대화 상자를 시작 하는 항목입니다.
+- 포함 된 메뉴로 **파일** 하 고 **도움말** 머리글입니다. 합니다 **파일** 메뉴에는 **종료** 항목을 응용 프로그램을 닫습니다. 합니다 **도움말** 메뉴에는 **에 대 한** 는 간단한 대화 상자를 시작 하는 항목입니다.
 
  호스트할 코드 작성을 시작 하기 전에 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠를 해야 할 두 가지 기본 템플릿 수정 합니다.
 
@@ -170,11 +170,11 @@ ms.locfileid: "59296110"
  호스트 하 고 사용할 수는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 실제 구현에 대 한 지식 없이 콘텐츠입니다. 경우는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 콘텐츠를 별도의 패키징된 [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)],이 빌드할 수 있는 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 언어입니다. 다음은 샘플에서 사용된 [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] 구현의 간단한 연습입니다. 이 섹션에는 다음 하위 섹션이 포함되어 있습니다.
 
 <a name="autoNestedSectionsOUTLINE2"></a>
--   [레이아웃](#page_layout)
+- [레이아웃](#page_layout)
 
--   [호스트 창에 데이터 반환](#returning_data_to_window)
+- [호스트 창에 데이터 반환](#returning_data_to_window)
 
--   [WPF 속성 설정](#set_page_properties)
+- [WPF 속성 설정](#set_page_properties)
 
 <a name="page_layout"></a>
 ### <a name="layout"></a>레이아웃

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - My.Computer.Clock object
 ms.assetid: a362b270-8a1b-404a-95c8-516a60c607dd
 ms.openlocfilehash: 593f39d6d481d053a772193ffcb4b92bda654e47
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054499"
 ---
 # <a name="mycomputerclock-object"></a>My.Computer.Clock 개체
 시스템 시계에서 현재 현지 시간 및 협정 세계시(그리니치 표준시와 같음)에 액세스하기 위한 속성을 제공합니다.  

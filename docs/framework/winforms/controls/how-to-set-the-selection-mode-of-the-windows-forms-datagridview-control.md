@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], selection mode
 ms.assetid: 2f241643-7f82-4583-8757-03494f63b465
 ms.openlocfilehash: 2e430dfb170943178f6db27c0bd2c1ef0f972882
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013116"
 ---
 # <a name="how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control"></a>방법: Windows Forms DataGridView 컨트롤의 선택 모드 설정
 다음 코드 예제에서는 구성 하는 방법에 설명 된 <xref:System.Windows.Forms.DataGridView> 컨트롤 자동으로 한 행 내에서 아무 곳 이나 클릭 하 여 전체 행을 선택한 다음 이므로 한 번에 하나의 행을 선택할 수 있습니다.  
@@ -26,9 +26,9 @@ ms.locfileid: "59200560"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   `dataGridView1`이라는 <xref:System.Windows.Forms.DataGridView> 컨트롤  
+- `dataGridView1`이라는 <xref:System.Windows.Forms.DataGridView> 컨트롤  
   
--   <xref:System?displayProperty=nameWithType> 및 <xref:System.Windows.Forms?displayProperty=nameWithType> 어셈블리에 대한 참조  
+- <xref:System?displayProperty=nameWithType> 및 <xref:System.Windows.Forms?displayProperty=nameWithType> 어셈블리에 대한 참조  
   
 ## <a name="see-also"></a>참고자료
 

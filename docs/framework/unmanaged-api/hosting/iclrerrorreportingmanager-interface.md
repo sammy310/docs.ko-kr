@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a20b79dd5eda9c431511cc49e7e3adaa9486b2aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969847"
 ---
 # <a name="iclrerrorreportingmanager-interface"></a>ICLRErrorReportingManager 인터페이스
 오류 보고에 대 한 사용자 지정 스택 덤프를 구성 하려면 호스트를 사용할 수 있는 메서드를 제공 합니다.  

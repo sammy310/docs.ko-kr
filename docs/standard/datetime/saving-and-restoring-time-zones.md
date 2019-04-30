@@ -1,5 +1,5 @@
 ---
-title: 저장 및 표준 시간대 복원
+title: 표준 시간대 저장 및 복원
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -20,13 +20,13 @@ ms.assetid: 4028b310-e7ce-49d4-a646-1e83bfaf6f9d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9d783f9e0d098e472dcf67aea394804d6eef2662
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026525"
 ---
-# <a name="saving-and-restoring-time-zones"></a>저장 및 표준 시간대 복원
+# <a name="saving-and-restoring-time-zones"></a>표준 시간대 저장 및 복원
 
 <xref:System.TimeZoneInfo> 미리 정의 된 표준 시간대 데이터를 검색할 레지스트리 의존 하는 클래스입니다. 그러나 레지스트리는 동적 구조입니다. 또한 레지스트리에 포함 된 표준 시간대 정보는 운영 체제에서 현재 연도 대 한 시간 조정 및 변환을 처리 하는 데 주로 사용 됩니다. 여기에 정확 하 게 표준 시간대 데이터에 의존 하는 응용 프로그램에 대 한 두 가지 주요 의미가 있습니다.
 

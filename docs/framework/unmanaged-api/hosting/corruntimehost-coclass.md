@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2143fc13db1757ac2fa8a9c5a43f104a0c519ca0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985831"
 ---
 # <a name="corruntimehost-coclass"></a>CorRuntimeHost Coclass
 공용 언어 런타임에서 실행 되는 응용 프로그램 관리에 대 한 인터페이스를 제공 합니다.  

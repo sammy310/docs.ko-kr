@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID68
 ms.assetid: 9a89beda-140e-4b32-8d0a-2dc598ef279a
 ms.openlocfilehash: 2738ce692f5eb2df433cd5cb1a5e1ae4a5968cab
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970081"
 ---
 # <a name="device-unavailable"></a>디바이스를 사용할 수 없습니다.
 네트워크 연결이 끊어졌거나, 액세스하려는 디바이스가 오프라인 상태이거나 존재하지 않습니다.  

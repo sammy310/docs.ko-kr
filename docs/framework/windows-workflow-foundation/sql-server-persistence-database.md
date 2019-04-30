@@ -3,22 +3,22 @@ title: SQL Server 지속성 데이터베이스
 ms.date: 03/30/2017
 ms.assetid: 4e594eec-2a31-4d49-ad31-aca2ecbb1f69
 ms.openlocfilehash: f69a6b3a67407a2273e04ba3e652693a3a10f9a4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59171547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004655"
 ---
 # <a name="sql-server-persistence-database"></a>SQL Server 지속성 데이터베이스
 이 단원에서는 SQL 워크플로 인스턴스 저장소에서 지원하는 공용 데이터베이스 뷰에 대한 세부 정보를 제공하고, 기본 인스턴스 데이터 속성을 deserialize하는 방법과 비지속형 인스턴스를 쿼리하는 방법을 보여 줍니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [지속성 데이터베이스 스키마](persistence-database-schema.md)  
+- [지속성 데이터베이스 스키마](persistence-database-schema.md)  
   
--   [방법: 인스턴스 데이터 속성 deserialize](how-to-deserialize-instance-data-properties.md)  
+- [방법: 인스턴스 데이터 속성 deserialize](how-to-deserialize-instance-data-properties.md)  
   
--   [방법: 비지 속성 인스턴스 쿼리](how-to-query-for-non-persisted-instances.md)  
+- [방법: 비지 속성 인스턴스 쿼리](how-to-query-for-non-persisted-instances.md)  
   
 ## <a name="see-also"></a>참고자료
 

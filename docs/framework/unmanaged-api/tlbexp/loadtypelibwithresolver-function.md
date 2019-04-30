@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5c14080e3ac128a6a7fbb48586f59d8a5ea4105f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049338"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver 함수
 형식 라이브러리를 로드 하 고 제공 된 사용 [ITypeLibResolver 인터페이스](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) 내부적으로 참조 된 형식 라이브러리를 해결 하려면.  
@@ -43,11 +43,11 @@ HRESULT LoadTypeLibWithResolver(
  `regkind`  
  [in] A [REGKIND 열거형](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/ne-oleauto-tagregkind) 형식 라이브러리를 등록 하는 방법을 제어 하는 플래그입니다. 가능한 값은:  
   
--   `REGKIND_DEFAULT`: 기본 등록 동작을 사용 합니다.  
+- `REGKIND_DEFAULT`: 기본 등록 동작을 사용 합니다.  
   
--   `REGKIND_REGISTER`: 이 형식 라이브러리를 등록 합니다.  
+- `REGKIND_REGISTER`: 이 형식 라이브러리를 등록 합니다.  
   
--   `REGKIND_NONE`: 이 형식 라이브러리를 등록 하지 마십시오.  
+- `REGKIND_NONE`: 이 형식 라이브러리를 등록 하지 마십시오.  
   
  `pTlbResolver`  
  [in] 구현에 대 한 포인터를 [ITypeLibResolver 인터페이스](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)합니다.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - resource keys [WPF], SystemFonts class
 ms.assetid: 036ebea7-5677-4f60-8ba4-56c9f9d9b8bd
 ms.openlocfilehash: e924f4c14d98380d9f4c0defe27d9f98c3293114
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001613"
 ---
 # <a name="how-to-use-system-fonts-keys"></a>방법: 시스템 글꼴 키 사용
 시스템 리소스는 개발자가 시스템 설정과 일관된 시각적 효과를 만들 수 있도록 몇 가지 시스템 메트릭을 리소스로 노출합니다. <xref:System.Windows.SystemFonts> 시스템 글꼴 값과 값에 바인딩되는 시스템 글꼴 리소스를 포함 하는 클래스인-예를 들어 <xref:System.Windows.SystemFonts.CaptionFontFamily%2A> 고 <xref:System.Windows.SystemFonts.CaptionFontFamilyKey%2A>입니다.  

@@ -1,5 +1,5 @@
 ---
-title: '방법: 날짜 및 시간 산술 연산의 표준 시간대 사용'
+title: '방법: 날짜 및 시간 산술 연산에서 표준 시간대 사용'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,13 +13,13 @@ ms.assetid: 83dd898d-1338-415d-8cd6-445377ab7871
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 053ca2d10deadf58d5bb8b4628fb5dee815d82c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026499"
 ---
-# <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>방법: 날짜 및 시간 산술 연산의 표준 시간대 사용
+# <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>방법: 날짜 및 시간 산술 연산에서 표준 시간대 사용
 
 일반적으로 날짜를 수행 하 고 사용 하 여 산술 시간 있습니다 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 결과 값은 모든 표준 시간대 조정 규칙을 반영 하지 않습니다. 이것이 true가 날짜 및 시간 값의 표준 시간대 명확 하 게 식별할 수 있는 경우에 (경우에 예를 들어 합니다 <xref:System.DateTime.Kind%2A> 속성 <xref:System.DateTimeKind.Local>). 이 항목에서는 특정 표준 시간대에 속하는 날짜 및 시간 값에 산술 연산을 수행 하는 방법을 보여 줍니다. 산술 연산 작업의 결과는 표준 시간대의 조정 규칙을 반영합니다.
 

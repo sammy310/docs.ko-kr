@@ -3,11 +3,11 @@ title: SQL Server CLR 통합 소개
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
 ms.openlocfilehash: dc7d19bf361ed5fcda1fd5edf64eeb5e4ce15a71
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033880"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>SQL Server CLR 통합 소개
 CLR(공용 언어 런타임)은 Microsoft .NET Framework의 핵심으로, 모든 .NET Framework 코드에 실행 환경을 제공합니다. CLR 내에서 실행되는 코드를 관리 코드라고 합니다. CLR에서는 JIT(Just-In-Time) 컴파일, 메모리 할당 및 관리, 형식 안전성 적용, 예외 처리, 스레드 관리 및 보안 같은 프로그램 실행을 위한 다양한 기능과 서비스를 제공합니다.  
@@ -20,7 +20,7 @@ CLR(공용 언어 런타임)은 Microsoft .NET Framework의 핵심으로, 모든
   
  **SQL Server 온라인 설명서**  
   
--   [공용 언어 런타임 (CLR) 통합 개요](https://go.microsoft.com/fwlink/?LinkId=115242)  
+- [공용 언어 런타임 (CLR) 통합 개요](https://go.microsoft.com/fwlink/?LinkId=115242)  
   
 ## <a name="enabling-clr-integration"></a>CLR 통합 활성화  
  Microsoft SQL Server에서 CLR(공용 언어 런타임) 통합 기능은 기본적으로 사용하지 않도록 설정되어 있으며 CLR 통합을 사용하여 구현되는 개체를 사용하려면 이를 활성화해야 합니다. Transact-SQL을 사용하여 CLR 통합을 활성화하려면 다음과 같이 `clr enabled` 저장 프로시저의 `sp_configure` 옵션을 사용합니다.  
@@ -38,7 +38,7 @@ GO
   
  **SQL Server 온라인 설명서**  
   
--   [CLR 통합 사용](https://go.microsoft.com/fwlink/?LinkId=115230)  
+- [CLR 통합 사용](https://go.microsoft.com/fwlink/?LinkId=115230)  
   
 ## <a name="deploying-a-clr-assembly"></a>CLR 어셈블리 배포  
  테스트 서버에서 테스트되고 확인된 CLR 메서드는 배포 스크립트를 사용하여 프로덕션 서버에 배포할 수 있습니다. 배포 스크립트는 수동으로 생성하거나 SQL Server Management Studio를 사용하여 생성할 수 있습니다. 자세한 내용을 보려면 현재 사용하고 있는 SQL Server 버전에 해당하는 SQL Server 온라인 설명서 버전을 참조하세요.  
@@ -54,7 +54,7 @@ GO
   
  **SQL Server 온라인 설명서**  
   
--   [CLR 통합 보안](https://go.microsoft.com/fwlink/?LinkId=115234)  
+- [CLR 통합 보안](https://go.microsoft.com/fwlink/?LinkId=115234)  
   
 ## <a name="debugging-a-clr-assembly"></a>CLR 어셈블리 디버깅  
  Microsoft SQL Server는 데이터베이스에서의 Transact-SQL 및 CLR(공용 언어 런타임) 개체 디버깅을 지원합니다. 디버깅은 여러 언어에서 수행되므로 사용자는 Transact-SQL에서 CLR 개체로 또는 CLR 개체에서 Transact-SQL로 매끄럽게 단계를 수행할 수 있습니다.  
@@ -63,7 +63,7 @@ GO
   
  **SQL Server 온라인 설명서**  
   
--   [CLR 데이터베이스 개체 디버깅](https://go.microsoft.com/fwlink/?LinkId=115236)  
+- [CLR 데이터베이스 개체 디버깅](https://go.microsoft.com/fwlink/?LinkId=115236)  
   
 ## <a name="see-also"></a>참고자료
 

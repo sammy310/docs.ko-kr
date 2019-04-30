@@ -3,11 +3,11 @@ title: 개체 참조
 ms.date: 03/30/2017
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
 ms.openlocfilehash: 2a2da82d913d43aa9bc3ccfeb9f1f1eda12b0562
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008061"
 ---
 # <a name="object-references"></a>개체 참조
 이 샘플에서는 서버와 클라이언트 간에 개체를 참조로 전달하는 방법을 보여 줍니다. 샘플에서는 시뮬레이트된 *사교*합니다. 인맥 네트워크는 친구 목록을 포함하는 `Person` 클래스로 구성되며, 이 목록의 친구는 `Person` 클래스의 인스턴스이며 자체적으로도 친구 목록을 가지고 있습니다. 이를 기반으로 개체 그래프가 생성됩니다. 서비스는 이러한 인맥 네트워크에 대한 작업을 노출합니다.  

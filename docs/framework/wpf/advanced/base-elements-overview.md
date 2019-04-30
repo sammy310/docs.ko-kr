@@ -5,11 +5,11 @@ helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
 ms.openlocfilehash: 0cd69a4d2d6087c1ebf93bb5931511f32a4c9c5f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032060"
 ---
 # <a name="base-elements-overview"></a>기본 요소 개요
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 클래스에는 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 설명서에서 일반적으로 기본 요소 클래스라고 하는 네 가지 클래스에서 파생된 클래스가 많습니다. 이러한 클래스는 <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>를 <xref:System.Windows.ContentElement>, 및 <xref:System.Windows.FrameworkContentElement>합니다. 합니다 <xref:System.Windows.DependencyObject> 둘 다의 공통 기본 클래스 이므로 클래스와도 관련 <xref:System.Windows.UIElement> 및 <xref:System.Windows.ContentElement>  
@@ -31,49 +31,49 @@ ms.locfileid: "59110060"
   
  파생 된 클래스를 만든 경우 <xref:System.Windows.DependencyObject>를 상속 하는 다음 기능을 합니다.  
   
--   <xref:System.Windows.DependencyObject.GetValue%2A> 및 <xref:System.Windows.DependencyObject.SetValue%2A> 지원 및 일반 속성 시스템 지원 합니다.  
+- <xref:System.Windows.DependencyObject.GetValue%2A> 및 <xref:System.Windows.DependencyObject.SetValue%2A> 지원 및 일반 속성 시스템 지원 합니다.  
   
--   종속성 속성 및 종속성 속성으로 구현되는 연결된 속성을 사용할 수 있는 기능  
+- 종속성 속성 및 종속성 속성으로 구현되는 연결된 속성을 사용할 수 있는 기능  
   
  파생 된 클래스를 만들면 <xref:System.Windows.UIElement>, 그 외에에서 제공 하는 다음 기능이 상속 <xref:System.Windows.DependencyObject>:  
   
--   애니메이션 속성 값에 대한 기본 지원 - 자세한 내용은 [애니메이션 개요](../graphics-multimedia/animation-overview.md)를 참조하세요.  
+- 애니메이션 속성 값에 대한 기본 지원 - 자세한 내용은 [애니메이션 개요](../graphics-multimedia/animation-overview.md)를 참조하세요.  
   
--   기본 입력 이벤트 지원 및 명령 지원 - 자세한 내용은 [입력 개요](input-overview.md) 및 [명령 개요](commanding-overview.md)를 참조하세요.  
+- 기본 입력 이벤트 지원 및 명령 지원 - 자세한 내용은 [입력 개요](input-overview.md) 및 [명령 개요](commanding-overview.md)를 참조하세요.  
   
--   레이아웃 시스템에 정보를 제공하도록 재정의될 수 있는 가상 메서드  
+- 레이아웃 시스템에 정보를 제공하도록 재정의될 수 있는 가상 메서드  
   
  파생 된 클래스를 만들면 <xref:System.Windows.FrameworkElement>, 그 외에에서 제공 하는 다음 기능이 상속 <xref:System.Windows.UIElement>:  
   
--   스타일 지정 및 스토리보드 지원 - 자세한 내용은 <xref:System.Windows.Style> 하 고 [Storyboard 개요](../graphics-multimedia/storyboards-overview.md)합니다.  
+- 스타일 지정 및 스토리보드 지원 - 자세한 내용은 <xref:System.Windows.Style> 하 고 [Storyboard 개요](../graphics-multimedia/storyboards-overview.md)합니다.  
   
--   데이터 바인딩 지원 - 자세한 내용은 [데이터 바인딩 개요](../data/data-binding-overview.md)를 참조하세요.  
+- 데이터 바인딩 지원 - 자세한 내용은 [데이터 바인딩 개요](../data/data-binding-overview.md)를 참조하세요.  
   
--   동적 리소스 참조 지원 - 자세한 내용은 [XAML 리소스](xaml-resources.md)를 참조하세요.  
+- 동적 리소스 참조 지원 - 자세한 내용은 [XAML 리소스](xaml-resources.md)를 참조하세요.  
   
--   속성 값 상속 지원 및 프레임워크 서비스(예: 데이터 바인딩, 스타일 또는 레이아웃의 프레임워크 구현)에 대한 속성 조건을 보고하는 데 도움이 되는 메타데이터의 기타 플래그 - 자세한 내용은 [프레임워크 속성 메타데이터](framework-property-metadata.md)를 참조하세요.  
+- 속성 값 상속 지원 및 프레임워크 서비스(예: 데이터 바인딩, 스타일 또는 레이아웃의 프레임워크 구현)에 대한 속성 조건을 보고하는 데 도움이 되는 메타데이터의 기타 플래그 - 자세한 내용은 [프레임워크 속성 메타데이터](framework-property-metadata.md)를 참조하세요.  
   
--   논리 트리의 개념 - 자세한 내용은 [WPF의 트리](trees-in-wpf.md)를 참조하세요.  
+- 논리 트리의 개념 - 자세한 내용은 [WPF의 트리](trees-in-wpf.md)를 참조하세요.  
   
--   레이아웃 시스템의 실제 WPF 프레임 워크 수준 구현에 대 한 지원을 포함 하는 <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> 레이아웃에 영향을 해당 속성을 검색할 수 있는 재정의 변경 합니다.  
+- 레이아웃 시스템의 실제 WPF 프레임 워크 수준 구현에 대 한 지원을 포함 하는 <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> 레이아웃에 영향을 해당 속성을 검색할 수 있는 재정의 변경 합니다.  
   
  파생 된 클래스를 만들면 <xref:System.Windows.ContentElement>, 그 외에에서 제공 하는 다음 기능이 상속 <xref:System.Windows.DependencyObject>:  
   
--   애니메이션 지원 - 자세한 내용은 [애니메이션 개요](../graphics-multimedia/animation-overview.md)를 참조하세요.  
+- 애니메이션 지원 - 자세한 내용은 [애니메이션 개요](../graphics-multimedia/animation-overview.md)를 참조하세요.  
   
--   기본 입력 이벤트 지원 및 명령 지원 - 자세한 내용은 [입력 개요](input-overview.md) 및 [명령 개요](commanding-overview.md)를 참조하세요.  
+- 기본 입력 이벤트 지원 및 명령 지원 - 자세한 내용은 [입력 개요](input-overview.md) 및 [명령 개요](commanding-overview.md)를 참조하세요.  
   
  파생 된 클래스를 만들면 <xref:System.Windows.FrameworkContentElement>, 그 외에 제공한 다음 기능을 얻을 수 <xref:System.Windows.ContentElement>:  
   
--   스타일 지정 및 스토리보드 지원 - 자세한 내용은 <xref:System.Windows.Style> 하 고 [애니메이션 개요](../graphics-multimedia/animation-overview.md)합니다.  
+- 스타일 지정 및 스토리보드 지원 - 자세한 내용은 <xref:System.Windows.Style> 하 고 [애니메이션 개요](../graphics-multimedia/animation-overview.md)합니다.  
   
--   데이터 바인딩 지원 - 자세한 내용은 [데이터 바인딩 개요](../data/data-binding-overview.md)를 참조하세요.  
+- 데이터 바인딩 지원 - 자세한 내용은 [데이터 바인딩 개요](../data/data-binding-overview.md)를 참조하세요.  
   
--   동적 리소스 참조 지원 - 자세한 내용은 [XAML 리소스](xaml-resources.md)를 참조하세요.  
+- 동적 리소스 참조 지원 - 자세한 내용은 [XAML 리소스](xaml-resources.md)를 참조하세요.  
   
--   속성 값 상속 지원 및 프레임워크 서비스(예: 데이터 바인딩, 스타일 또는 레이아웃의 프레임워크 구현)에 대한 속성 조건을 보고하는 데 도움이 되는 메타데이터의 기타 플래그 - 자세한 내용은 [프레임워크 속성 메타데이터](framework-property-metadata.md)를 참조하세요.  
+- 속성 값 상속 지원 및 프레임워크 서비스(예: 데이터 바인딩, 스타일 또는 레이아웃의 프레임워크 구현)에 대한 속성 조건을 보고하는 데 도움이 되는 메타데이터의 기타 플래그 - 자세한 내용은 [프레임워크 속성 메타데이터](framework-property-metadata.md)를 참조하세요.  
   
--   레이아웃 시스템 수정에 대 한 액세스를 상속 하지 않습니다 (같은 <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>). 레이아웃 시스템 구현은 에서만 사용할 <xref:System.Windows.FrameworkElement>합니다. 그러나 상속을 <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> 레이아웃 및 모든 콘텐츠 호스트를 보고 하는 속성에 대 한 변경 내용을 검색할 수 있는 재정의 합니다.  
+- 레이아웃 시스템 수정에 대 한 액세스를 상속 하지 않습니다 (같은 <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>). 레이아웃 시스템 구현은 에서만 사용할 <xref:System.Windows.FrameworkElement>합니다. 그러나 상속을 <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> 레이아웃 및 모든 콘텐츠 호스트를 보고 하는 속성에 대 한 변경 내용을 검색할 수 있는 재정의 합니다.  
   
  컨텐츠 모델은 다양한 클래스에서 사용할 수 있도록 문서화되어 있습니다. 클래스의 콘텐츠 모델은 파생될 적절한 클래스를 찾을 때 고려해야 할 요소입니다. 자세한 내용은 [WPF 콘텐츠 모델](../controls/wpf-content-model.md)을 참조하세요.  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - columns [Windows Forms], read-only
 ms.assetid: b4ef7a75-ab33-4ee3-b2cf-201530e454e9
 ms.openlocfilehash: a735b9bef9f9e3488941e05b2aa9444e6ecdc4b8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012882"
 ---
 # <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열을 읽기 전용으로 설정
 기본적으로 텍스트 및 숫자 데이터를 Windows Forms에 표시 된 사용자가 수정할 수 <xref:System.Windows.Forms.DataGridView> 제어 합니다. 수정에 대 한 고려 하지 않은 데이터를 표시 하려는 경우 읽기 전용 데이터를 포함 하는 열을 확인 해야 합니다. 완전히 읽기 전용 컨트롤을 확인 하는 방법에 대 한 정보를 참조 하세요. [방법: 행 추가 방지 하 고 삭제는 Windows Forms DataGridView 컨트롤 디자이너를 사용 하 여](prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md)입니다.  

@@ -3,11 +3,11 @@ title: NamedPipe 활성화
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
 ms.openlocfilehash: 3e6084e8334eddc16b115cc1199819c6ab637666
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051847"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe 활성화
 
@@ -71,7 +71,7 @@ public class CalculatorService : ICalculator
 }
 ```
 
-샘플에서는 보안 없이 수정된 `netNamedPipeBinding` 바인딩을 사용합니다. 클라이언트 및 서비스 구성 파일에 바인딩이 지정됩니다. 서비스의 바인딩 형식은 다음 샘플 구성과 같이 끝점 요소의 `binding` 특성에 지정됩니다.
+샘플에서는 보안 없이 수정된 `netNamedPipeBinding` 바인딩을 사용합니다. 클라이언트 및 서비스 구성 파일에 바인딩이 지정됩니다. 서비스의 바인딩 형식은 다음 샘플 구성과 같이 엔드포인트 요소의 `binding` 특성에 지정됩니다.
 
 보안이 설정된 명명된 파이프 바인딩을 사용하려면 서버의 보안 모드를 원하는 보안 설정으로 변경하고 클라이언트에서 svcutil.exe를 다시 실행하여 업데이트된 클라이언트 구성 파일을 가져옵니다.
 
@@ -114,7 +114,7 @@ public class CalculatorService : ICalculator
   </system.serviceModel>
 ```
 
-클라이언트의 끝점 정보는 다음 샘플 코드와 같이 구성됩니다.
+클라이언트의 엔드포인트 정보는 다음 샘플 코드와 같이 구성됩니다.
 
 ```xml
 <system.serviceModel>

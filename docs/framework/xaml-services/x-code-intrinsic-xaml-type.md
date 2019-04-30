@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Code directive element
 ms.assetid: 87986b13-1a2e-4830-ae36-15f9dc5629e8
 ms.openlocfilehash: 7bb78b05be7b3edc4471bc276010eabd92a07a14
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971849"
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>x:Code 내장 XAML 형식
 XAML 프로덕션 내에서 코드를 배치할 수 있습니다. 이러한 코드 XAML, 또는 런타임에 의해 해석 등 사용에 대 한 XAML 프로덕션의 왼쪽을 컴파일되지 않는 XAML 프로세서 구현 하 여 컴파일될 수 있습니다.  
@@ -38,15 +38,15 @@ XAML 프로덕션 내에서 코드를 배치할 수 있습니다. 이러한 코�
 ## <a name="wpf-usage-notes"></a>WPF 사용 정보  
  코드 내에서 선언 된 `x:Code` WPF에 몇 가지 주목할 만한 제한 사항이 있습니다.  
   
--   `x:Code` 지시문 요소는 XAML 프로덕션의 루트 요소의 직계 자식 요소 여야 합니다.  
+- `x:Code` 지시문 요소는 XAML 프로덕션의 루트 요소의 직계 자식 요소 여야 합니다.  
   
--   [X:class 지시문](x-class-directive.md) 부모 root 요소에서 제공 해야 합니다.  
+- [X:class 지시문](x-class-directive.md) 부모 root 요소에서 제공 해야 합니다.  
   
--   코드 내에 배치 `x:Code` 만들어지는 이미 해당 XAML 페이지에 대 한 partial 클래스의 범위 내에 있는 컴파일 작업으로 간주 됩니다. 따라서 정의한 모든 코드는 partial 클래스의 멤버 또는 변수 여야 합니다.  
+- 코드 내에 배치 `x:Code` 만들어지는 이미 해당 XAML 페이지에 대 한 partial 클래스의 범위 내에 있는 컴파일 작업으로 간주 됩니다. 따라서 정의한 모든 코드는 partial 클래스의 멤버 또는 변수 여야 합니다.  
   
--   Partial 클래스 내에 클래스를 중첩 하는 대신 추가 클래스를 정의할 수 없습니다 (중첩 허용 되지만 아니므로 일반적인 XAML에서 중첩된 클래스를 참조할 수 없습니다). 기존 partial 클래스에 사용 되는 네임 스페이스 이외의 CLR 네임 스페이스를 정의 하거나 추가할 수 없습니다.  
+- Partial 클래스 내에 클래스를 중첩 하는 대신 추가 클래스를 정의할 수 없습니다 (중첩 허용 되지만 아니므로 일반적인 XAML에서 중첩된 클래스를 참조할 수 없습니다). 기존 partial 클래스에 사용 되는 네임 스페이스 이외의 CLR 네임 스페이스를 정의 하거나 추가할 수 없습니다.  
   
--   Partial 클래스 CLR 네임 스페이스 외부 코드 엔터티에 대 한 참조는 모두 정규화 해야 합니다. 멤버 선언 되는 부분 클래스 재정의 가능한 멤버에 대 한 재정의 경우이 언어별 override 키워드를 사용 하 여 지정 해야 합니다. 멤버에 선언 된 경우 `x:Code` 범위는 XAML에서 생성 된 partial 클래스의 멤버와 충돌, 이러한 방식으로 컴파일러에서 충돌을 보고 하는 XAML 파일 컴파일 없거나 로드 합니다.  
+- Partial 클래스 CLR 네임 스페이스 외부 코드 엔터티에 대 한 참조는 모두 정규화 해야 합니다. 멤버 선언 되는 부분 클래스 재정의 가능한 멤버에 대 한 재정의 경우이 언어별 override 키워드를 사용 하 여 지정 해야 합니다. 멤버에 선언 된 경우 `x:Code` 범위는 XAML에서 생성 된 partial 클래스의 멤버와 충돌, 이러한 방식으로 컴파일러에서 충돌을 보고 하는 XAML 파일 컴파일 없거나 로드 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

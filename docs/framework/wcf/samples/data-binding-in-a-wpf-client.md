@@ -3,11 +3,11 @@ title: Wndows Presentation Foundation 클라이언트에서 데이터 바인딩
 ms.date: 03/30/2017
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
 ms.openlocfilehash: 1bc6dd2ef981115068cbd4cd491a14fea70d7e3a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59305444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990602"
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Wndows Presentation Foundation 클라이언트에서 데이터 바인딩
 이 샘플에서는 WPF(Windows Presentation Foundation) 클라이언트에서 데이터 바인딩을 사용하는 방법을 보여 줍니다. 샘플은 클라이언트에 반환 될 앨범 배열을 무작위로 생성 하는 Windows Communication Foundation (WCF) 서비스를 사용 합니다. 각 앨범에는 이름, 가격 및 앨범 트랙 목록이 있습니다. 앨범 트랙에는 이름과 기간이 있습니다. 서비스에서 반환 되는 정보를 Windows Presentation Foundation (WPF) 클라이언트에서 제공 하는 사용자 인터페이스 (UI)에 자동으로 바인딩됩니다.  

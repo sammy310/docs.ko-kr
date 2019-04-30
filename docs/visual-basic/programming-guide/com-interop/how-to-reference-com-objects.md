@@ -9,11 +9,11 @@ helpviewer_keywords:
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
 ms.openlocfilehash: 0327c497025630747e526503556f4a1705948850
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022391"
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>방법: Visual Basic에서 COM 참조 개체
 Visual basic의 경우 형식 라이브러리가 포함 된 COM 개체에 대 한 참조를 추가 합니다. COM 라이브러리에 대 한 interop 어셈블리를 만들이 필요 합니다. COM 개체의 멤버에 대 한 참조는 interop 어셈블리에 라우팅되어 실제 COM 개체에 전달 됩니다. Interop 어셈블리에 COM 개체의 응답은 라우팅되고 전달할 프로그램 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 응용 프로그램입니다.  
@@ -38,11 +38,11 @@ Visual basic의 경우 형식 라이브러리가 포함 된 COM 개체에 대 �
   
 2. 다음 정보를 제공 하는 명령 프롬프트에서 Tlbimp를 호출 합니다.  
   
-    -   형식 라이브러리를 포함 하는 DLL의 이름 및 위치  
+    - 형식 라이브러리를 포함 하는 DLL의 이름 및 위치  
   
-    -   이름 및 네임 스페이스 정보를 배치할 위치  
+    - 이름 및 네임 스페이스 정보를 배치할 위치  
   
-    -   대상 interop 어셈블리의 이름 및 위치  
+    - 대상 interop 어셈블리의 이름 및 위치  
   
      다음 코드는 예제를 제공합니다.  
   

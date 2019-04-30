@@ -7,11 +7,11 @@ helpviewer_keywords:
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
 ms.openlocfilehash: d2f55db90fb130416ee4dcb15d440b6d367c0b06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008759"
 ---
 # <a name="gridview-overview"></a>GridView 개요
 <xref:System.Windows.Controls.GridView> 보기 모드는에 대 한 보기 모드 중 하나는 <xref:System.Windows.Controls.ListView> 제어 합니다. <xref:System.Windows.Controls.GridView> 클래스와 해당 지원 클래스와 사용자 일반적으로 단추를 대화식 열 헤더로 사용 하는 테이블에서 항목 컬렉션 보기를 사용 하도록 설정 합니다. 이 항목에 소개 된 <xref:System.Windows.Controls.GridView> 클래스 및 용도 간략하게 설명 합니다.  
@@ -73,30 +73,30 @@ ms.locfileid: "59201301"
   
  다음은 사용 하 여의 기능을 자세히 설명 <xref:System.Windows.Controls.GridView> 사용자 상호 작용 합니다.  
   
--   **끌어서 놓기 메서드를 사용하여 열을 다시 정렬.**  
+- **끌어서 놓기 메서드를 사용하여 열을 다시 정렬.**  
   
      사용자의 열을 다시 정렬할 수를 <xref:System.Windows.Controls.GridView> 열 머리글 위에 있는 동안 마우스 왼쪽된 단추를 누르면 해당 열을 새 위치로 끌어로 합니다. 사용자가 열 헤더를 끌어오는 동안 헤더의 부동 버전과 함께 열을 삽입할 위치를 표시하는 검은 실선이 표시됩니다.  
   
      헤더의 부동 버전에 대 한 기본 스타일을 수정 하려는 경우 지정는 <xref:System.Windows.Controls.ControlTemplate> 에 대 한는 <xref:System.Windows.Controls.GridViewColumnHeader> 유형입니다 때 트리거되어를 <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> 속성이 <xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>합니다. 자세한 내용은 [끌어 온 GridView 열 헤더의 스타일 만들기](how-to-create-a-style-for-a-dragged-gridview-column-header.md)를 참조하세요.  
   
--   **콘텐츠에 맞게 열의 크기 조정.**  
+- **콘텐츠에 맞게 열의 크기 조정.**  
   
      콘텐츠에 맞게 열의 크기를 조정하려면 열 헤더의 오른쪽에 있는 위치 조정 막대를 두 번 클릭할 수 있습니다.  
   
     > [!NOTE]
     >  설정할 수 있습니다 합니다 <xref:System.Windows.Controls.GridViewColumn.Width%2A> 속성을 `Double.NaN` 동일한 효과 얻는 데 있습니다.  
   
--   **행 항목 선택.**  
+- **행 항목 선택.**  
   
      사용자가 하나 이상의 항목을 선택할 수는 <xref:System.Windows.Controls.GridView>합니다.  
   
      변경 하려는 경우는 <xref:System.Windows.Style> 선택한 항목의 참조 [스타일 선택한 항목을 ListView에서 트리거를 사용 하 여](how-to-use-triggers-to-style-selected-items-in-a-listview.md)입니다.  
   
--   **처음에 화면에 표시되지 않는 콘텐츠를 보려면 스크롤.**  
+- **처음에 화면에 표시되지 않는 콘텐츠를 보려면 스크롤.**  
   
      경우 크기는 <xref:System.Windows.Controls.GridView> 은 하지 충분히 표시할 모든 항목, 사용자가 가로로 스크롤될 수 또는 세로 스크롤 막대를 사용 하 여 통해 제공 되는 <xref:System.Windows.Controls.ScrollViewer> 컨트롤입니다. <xref:System.Windows.Controls.Primitives.ScrollBar> 모든 콘텐츠가 특정 방향으로 표시 하는 경우 숨겨집니다. 열 표제는 세로 스크롤 막대로는 스크롤되지 않지만 가로로는 스크롤됩니다.  
   
--   **열 표제 단추를 클릭하여 열과 상호 작용.**  
+- **열 표제 단추를 클릭하여 열과 상호 작용.**  
   
      열 헤더 단추를 클릭하면, 정렬 알고리즘을 제공한 경우 열에 표시되는 데이터를 정렬할 수 있습니다.  
   
@@ -110,17 +110,17 @@ ms.locfileid: "59201301"
 ## <a name="gridview-supporting-classes"></a>GridView 지원 클래스  
  다음 클래스는 <xref:System.Windows.Controls.GridView> 보기 모드입니다.  
   
--   <xref:System.Windows.Controls.GridViewColumn>  
+- <xref:System.Windows.Controls.GridViewColumn>  
   
--   <xref:System.Windows.Controls.GridViewColumnHeader>  
+- <xref:System.Windows.Controls.GridViewColumnHeader>  
   
--   <xref:System.Windows.Controls.GridViewRowPresenter>  
+- <xref:System.Windows.Controls.GridViewRowPresenter>  
   
--   <xref:System.Windows.Controls.GridViewHeaderRowPresenter>  
+- <xref:System.Windows.Controls.GridViewHeaderRowPresenter>  
   
--   <xref:System.Windows.Controls.GridViewColumnCollection>  
+- <xref:System.Windows.Controls.GridViewColumnCollection>  
   
--   <xref:System.Windows.Controls.GridViewColumnHeaderRole>  
+- <xref:System.Windows.Controls.GridViewColumnHeaderRole>  
   
 ## <a name="see-also"></a>참고자료
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
 ms.openlocfilehash: 9f13f9d95c40b964c5eb416c590a5d603d714bac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991018"
 ---
 # <a name="schema-import-and-export"></a>스키마 가져오기 및 내보내기
 Windows Communication Foundation (WCF)는 새 serialization 엔진을 포함 합니다 <xref:System.Runtime.Serialization.DataContractSerializer>합니다. `DataContractSerializer`는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 개체와 XML을 양방향으로 변환합니다. 자체는 serializer 외에도 WCF에는 연결 된 스키마를 가져오고 내보내는 메커니즘이 포함 되어 있습니다. *스키마* 정식, 되 고 컴퓨터가 읽을 수 있는 설명 serializer가 생성 하거나 deserializer가 액세스할 수 있는 XML의 셰이프입니다. WCF에서는 여러 타사 플랫폼과 상호 운용할 수 있는 스키마 표현으로 World Wide Web Consortium (W3C) XML 스키마 정의 언어 (XSD)를 사용 합니다.  
@@ -33,11 +33,11 @@ Windows Communication Foundation (WCF)는 새 serialization 엔진을 포함 합
   
  생성된 된 형식의 몇 가지 데이터 계약 모범 사례를 따릅니다 (있는 [모범 사례: Data Contract Versioning](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)):  
   
--   이 형식은 <xref:System.Runtime.Serialization.IExtensibleDataObject> 인터페이스를 구현합니다. 자세한 내용은 [호환 가능한 데이터 계약](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)을 참조하세요.  
+- 이 형식은 <xref:System.Runtime.Serialization.IExtensibleDataObject> 인터페이스를 구현합니다. 자세한 내용은 [호환 가능한 데이터 계약](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)을 참조하세요.  
   
--   데이터 멤버는 private 필드를 래핑하는 public 속성으로 구현됩니다.  
+- 데이터 멤버는 private 필드를 래핑하는 public 속성으로 구현됩니다.  
   
--   클래스는 부분 클래스로, 생성된 코드를 수정하지 않고 추가 클래스를 만들 수 있습니다.  
+- 클래스는 부분 클래스로, 생성된 코드를 수정하지 않고 추가 클래스를 만들 수 있습니다.  
   
  <xref:System.Runtime.Serialization.XsdDataContractExporter>를 사용하면 반대로 작업할 수 있습니다. 즉 `DataContractSerializer`로 serialize할 수 있는 형식을 사용하고 XSD 스키마 문서를 생성할 수 있습니다.  
   

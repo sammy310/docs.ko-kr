@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 1cdb8740-871a-456c-9bd9-db96ca8d79b3
 author: KrzysztofCwalina
 ms.openlocfilehash: 94900dee72230a1b9d099d78168acc508af62af7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026460"
 ---
 # <a name="designing-for-extensibility"></a>확장성을 위한 디자인
 프레임 워크 디자인의 중요 한 측면 있는지 확인 하는 프레임 워크의 확장성을 신중 하 게 고려 했습니다. 그러려면, 비용 및 다양 한 확장성 메커니즘을 사용 하 여 연결 된 혜택을 파악 해야 합니다. 이 장에서 확장성 메커니즘을 결정 하 고-서브클래싱, 이벤트, 가상 멤버, 콜백 및 등-프레임 워크의 요구 사항을 충족할 수 있습니다.  
@@ -33,6 +33,6 @@ ms.locfileid: "53127357"
   
  *사용 권한에서 교육, inc. 피어슨 재인쇄 [Framework 디자인 지침: 다시 사용할 수 있는.NET 라이브러리, 2nd Edition에 대 한 규칙, 관용구 패턴과](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina를 Brad Abrams Addison Wesley Professional에서 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로 게시 합니다.*  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
