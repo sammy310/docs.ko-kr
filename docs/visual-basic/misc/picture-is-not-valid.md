@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID481
 ms.assetid: 6ac18c39-042b-423a-9d95-25a7745c84dd
 ms.openlocfilehash: 3413aaecb332b711cb93c86156ab2c6f48110213
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944751"
 ---
 # <a name="picture-is-not-valid"></a>그림이 잘못되었습니다.
 폼 또는 컨트롤의 `Picture` 속성에 비트맵, 아이콘 또는 Windows 메타파일 이외의 그래픽 형식을 할당하려고 했습니다.  

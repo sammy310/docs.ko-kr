@@ -1,5 +1,5 @@
 ---
-title: '방법: 미리 정의 된 UTC 및 현지 표준 시간대 개체에 액세스'
+title: '방법: 미리 정의된 UTC 및 현지 표준 시간대 개체에 액세스'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,13 +16,13 @@ ms.assetid: 961fb70b-83f0-4dab-a042-cb5fcd817cf5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c10c07c08a4e676cf3c84a5722814eaed85f74a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026616"
 ---
-# <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>방법: 미리 정의 된 UTC 및 현지 표준 시간대 개체에 액세스
+# <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>방법: 미리 정의된 UTC 및 현지 표준 시간대 개체에 액세스
 
 <xref:System.TimeZoneInfo> 클래스는 두 개의 속성을 제공 <xref:System.TimeZoneInfo.Utc%2A> 및 <xref:System.TimeZoneInfo.Local%2A>, 미리 정의 된 표준 시간대 개체에 대 한 코드 액세스 권한이 부여입니다. 이 항목에서는 이러한 속성들이 반환하는 <xref:System.TimeZoneInfo> 개체에 액세스하는 방법에 설명합니다.
 

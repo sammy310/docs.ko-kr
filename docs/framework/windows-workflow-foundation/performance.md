@@ -3,11 +3,11 @@ title: Windows Workflow Foundation 4 성능
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
 ms.openlocfilehash: f7590591bfac374f6de637f57fad9853b82ca20c
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006934"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 성능
 
@@ -59,7 +59,7 @@ ms.locfileid: "57845737"
  WF4에서는 XAML이 선언적 경험을 제공하며 .NET을 사용하여 빌드된 작업과 형식을 참조하여 XML 태그로 전체 워크플로 정의를 정의할 수 있도록 합니다. 사용자 지정 코드 숨김 논리를 포함하지 않는 WF3의 XOML 형식으로는 이러한 작업을 수행하는 것이 어려웠습니다. .NET 4의 새 XAML 스택은 워크플로 아티팩트를 직렬화/역직렬화에서 성능을 향상 하 고으로 선언적 프로그래밍을 더 효율적이 고 강력 합니다.
 
 ### <a name="workflow-designer"></a>Workflow Designer
- WF4에서는 선언적 프로그래밍을 지원하므로 큰 워크플로의 경우 디자인 타임 성능을 위해 보다 엄격한 요구 사항이 명시적으로 부과됩니다. WF4의 Workflow Designer에서는 WF3에 비해 큰 워크플로에 대한 확장성이 향상되었습니다. WF3 디자이너에서는 몇백 개의 작업으로 구성된 워크플로도 거의 로드할 수 없는 반면에 WF4 디자이너는 UI 가상화 지원을 통해 1000개 작업으로 구성된 큰 워크플로를 몇 초 만에 쉽게 로드할 수 있습니다.
+ WF4에서는 선언적 프로그래밍을 지원하므로 큰 워크플로의 경우 디자인 타임 성능을 위해 보다 엄격한 요구 사항이 명시적으로 부과됩니다. WF4의 워크플로 디자이너에서는 WF3에 비해 큰 워크플로에 대한 확장성이 향상되었습니다. WF3 디자이너에서는 몇백 개의 작업으로 구성된 워크플로도 거의 로드할 수 없는 반면에 WF4 디자이너는 UI 가상화 지원을 통해 1000개 작업으로 구성된 큰 워크플로를 몇 초 만에 쉽게 로드할 수 있습니다.
 
 ## <a name="component-level-performance-comparisons"></a>구성 요소 수준 성능 비교
  이 단원에는 WF3 및 WF4 워크플로의 개별 작업을 직접 비교한 결과 데이터가 포함되어 있습니다.  지속성과 같은 주요 영역이 개별 작업 구성 요소보다 성능에 더 큰 영향을 줍니다.  이제 구성 요소가 직접 코딩된 오케스트레이션 논리와 비교될 수 있을 만큼 빠르기 때문에 WF4의 개별 구성 요소 성능 향상은 중요합니다.  예제는 다음 섹션에서 설명 합니다. "서비스 컴퍼지션 시나리오"
@@ -209,8 +209,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 
  ![상관 관계 범위 WF4 워크플로](./media/performance/wf4-correlationscope-workflow.gif)
 
- 
-  <xref:System.ServiceModel.Activities.Receive> 작업은 워크플로 인스턴스를 만듭니다.  받은 메시지에 전달된 값은 회신 메시지에서 에코됩니다.  회신 후의 시퀀스에는 워크플로의 나머지 부분이 포함됩니다.  위의 사례에서는 주석 작업 한 개만 표시됩니다.  주석 작업 수가 워크플로 복잡성을 시뮬레이션하기 위해 변경됩니다.  주석 작업은 아무 작업도 수행하지 않는 WF3 <xref:System.Workflow.Activities.CodeActivity>에 해당합니다. 주석 작업에 대 한 자세한 내용은이 문서의 앞부분에서 "구성 요소 수준 성능 비교" 섹션을 참조 하세요.
+ <xref:System.ServiceModel.Activities.Receive> 작업은 워크플로 인스턴스를 만듭니다.  받은 메시지에 전달된 값은 회신 메시지에서 에코됩니다.  회신 후의 시퀀스에는 워크플로의 나머지 부분이 포함됩니다.  위의 사례에서는 주석 작업 한 개만 표시됩니다.  주석 작업 수가 워크플로 복잡성을 시뮬레이션하기 위해 변경됩니다.  주석 작업은 아무 작업도 수행하지 않는 WF3 <xref:System.Workflow.Activities.CodeActivity>에 해당합니다. 주석 작업에 대 한 자세한 내용은이 문서의 앞부분에서 "구성 요소 수준 성능 비교" 섹션을 참조 하세요.
 
 ##### <a name="test-results"></a>테스트 결과
 
@@ -294,8 +293,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 
  ![WF3 및 WF4에 대 한 복잡 한 워크플로](./media/performance/complex-workflow-wf3-wf4.gif)
 
- 위에 표시된 WF3 워크플로에서는 비어 있는 <xref:System.Workflow.Activities.CodeActivity> 작업이 사용됩니다.  위의 WF4 워크플로는 `Comment` 작업을 사용합니다.  
-  `Comment` 작업은 이 문서의 앞부분에 있는 구성 요소 수준 성능 비교 단원에서 설명되었습니다.
+ 위에 표시된 WF3 워크플로에서는 비어 있는 <xref:System.Workflow.Activities.CodeActivity> 작업이 사용됩니다.  위의 WF4 워크플로는 `Comment` 작업을 사용합니다.  `Comment` 작업은 이 문서의 앞부분에 있는 구성 요소 수준 성능 비교 단원에서 설명되었습니다.
 
  ![WF3과 WF4 워크플로에 대 한 복잡 한 워크플로 메모리 사용을 보여 주는 세로 막대형 차트](./media/performance/complex-memory-usage-wf3-wf4.gif)
 
@@ -378,25 +376,25 @@ public class Workflow1 : Activity
 
  WF4 SQL 지속성 공급자는 데이터베이스 계층에서 더 많은 작업을 수행합니다.  SQL 데이터베이스는 병목이 될 수 있으므로 SQL 데이터베이스의 CPU 및 디스크 사용을 모니터링하는 것이 중요합니다.  워크플로 응용 프로그램의 성능을 테스트하는 경우 SQL 데이터베이스의 다음 성능 카운터를 포함해야 합니다.
 
--   PhysicalDisk\\% Disk Read Time
+- PhysicalDisk\\% Disk Read Time
 
--   PhysicalDisk\\% Disk Time
+- PhysicalDisk\\% Disk Time
 
--   PhysicalDisk\\% 디스크 쓰기 시간
+- PhysicalDisk\\% 디스크 쓰기 시간
 
--   PhysicalDisk\\% 평균 Disk Queue Length
+- PhysicalDisk\\% 평균 Disk Queue Length
 
--   PhysicalDisk\Avg. Disk Read Queue Length
+- PhysicalDisk\Avg. Disk Read Queue Length
 
--   PhysicalDisk\Avg. Disk Write Queue Length
+- PhysicalDisk\Avg. Disk Write Queue Length
 
--   PhysicalDisk\Current Disk Queue Length
+- PhysicalDisk\Current Disk Queue Length
 
--   프로세서 정보\\% 프로세서 시간
+- 프로세서 정보\\% 프로세서 시간
 
--   SQLServer:Latches\Average Latch Wait Time (ms)
+- SQLServer:Latches\Average Latch Wait Time (ms)
 
--   SQLServer:Latches\Latch Waits/sec
+- SQLServer:Latches\Latch Waits/sec
 
 ### <a name="tracking"></a>추적
  워크플로 추적을 사용하여 워크플로 진행률을 추적할 수 있습니다.  추적 이벤트에 포함되는 정보는 추적 프로필에서 결정됩니다.  추적 프로필이 복잡할수록 추적 비용이 증가합니다.
@@ -409,13 +407,13 @@ public class Workflow1 : Activity
 
  SQL 대신 ETW를 추적에 사용할 경우 다음과 같은 이점이 있습니다.
 
--   추적 이벤트 수집을 다른 프로세스로 구분할 수 있습니다.  이렇게 하면 이벤트 기록 방법의 유연성이 증가합니다.
+- 추적 이벤트 컬렉션을 다른 프로세스로 구분할 수 있습니다.  이렇게 하면 이벤트 기록 방법의 유연성이 증가합니다.
 
--   ETW 추적 이벤트는 WCF ETW 이벤트 또는 SQL Server 또는 커널 공급자와 같은 다른 ETW 공급자와 쉽게 결합 됩니다.
+- ETW 추적 이벤트는 WCF ETW 이벤트 또는 SQL Server 또는 커널 공급자와 같은 다른 ETW 공급자와 쉽게 결합 됩니다.
 
--   워크플로 작성자가 WF3 SQL 추적 서비스의 일괄 처리 모드와 같은 특정 추적 구현에서 보다 효율적으로 작동하도록 워크플로를 변경할 필요가 없습니다.
+- 워크플로 작성자가 WF3 SQL 추적 서비스의 일괄 처리 모드와 같은 특정 추적 구현에서 보다 효율적으로 작동하도록 워크플로를 변경할 필요가 없습니다.
 
--   관리자가 호스트 프로세스를 재생하지 않고 추적을 설정하거나 해제할 수 있습니다.
+- 관리자가 호스트 프로세스를 재생하지 않고 추적을 설정하거나 해제할 수 있습니다.
 
  ETW 추적의 성능 이점에는 단점도 수반됩니다.  시스템의 리소스 부담이 큰 경우 ETW 이벤트가 손실될 수 있습니다.  이벤트 처리는 정상적인 프로그램 실행을 차단하지 않으므로 모든 ETW 이벤트가 해당 구독자에게 브로드캐스트될 것을 보장할 수 없습니다.  이런 이유로 ETW 추적은 상태 모니터링에 유용하지만 감사에는 적합하지 않습니다.
 

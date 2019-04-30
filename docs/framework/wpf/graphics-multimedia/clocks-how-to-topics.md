@@ -10,11 +10,11 @@ helpviewer_keywords:
 - animation [WPF], clocks
 ms.assetid: c687b2a5-b151-41e2-9ade-df2fc1a16b04
 ms.openlocfilehash: bb625c116b1c58071ec0f51729df07f43600f36f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970965"
 ---
 # <a name="clocks-how-to-topics"></a>Clock 방법 항목
 다음 항목을 사용 하는 방법에 설명 된 <xref:System.Windows.Media.Animation.Clock> 개체에 대 한 타이밍 상태 정보를 유지 관리를 <xref:System.Windows.Media.Animation.Timeline>입니다.  

@@ -6,44 +6,44 @@ helpviewer_keywords:
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
 ms.openlocfilehash: 03f785da018cacdec643fa196bdd0c6d5d7c7f70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020311"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>WPF 버전 4.5의 새로운 기능
 <a name="introduction"></a> 이 항목에서는의 새로운 기능과 향상 된 기능에 대 한 정보가 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 4.5 버전입니다.  
   
  이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   
--   [리본 컨트롤](#ribbon_control)  
+- [리본 컨트롤](#ribbon_control)  
   
--   [그룹화된 큰 데이터 집합을 표시할 때의 성능 개선](#grouped_virtualization)  
+- [그룹화된 큰 데이터 집합을 표시할 때의 성능 개선](#grouped_virtualization)  
   
--   [VirtualizingPanel의 새로운 기능](#VirtualizingPanel)  
+- [VirtualizingPanel의 새로운 기능](#VirtualizingPanel)  
   
--   [정적 속성에 바인딩](#static_properties)  
+- [정적 속성에 바인딩](#static_properties)  
   
--   [UI가 아닌 스레드에서 컬렉션 액세스](#xthread_access)  
+- [UI가 아닌 스레드에서 컬렉션 액세스](#xthread_access)  
   
--   [동기적 및 비동기적으로 데이터 유효성 검사](#INotifyDataErrorInfo)  
+- [동기적 및 비동기적으로 데이터 유효성 검사](#INotifyDataErrorInfo)  
   
--   [데이터 바인딩 원본을 자동으로 업데이트](#delay)  
+- [데이터 바인딩 원본을 자동으로 업데이트](#delay)  
   
--   [ICustomTypeProvider를 구현하는 형식에 바인딩](#ICustomTypeProvider)  
+- [ICustomTypeProvider를 구현하는 형식에 바인딩](#ICustomTypeProvider)  
   
--   [바인딩 식에서 데이터 바인딩 정보 검색](#binding_state)  
+- [바인딩 식에서 데이터 바인딩 정보 검색](#binding_state)  
   
--   [유효한 DataContext 개체 확인](#DisconnectedSource)  
+- [유효한 DataContext 개체 확인](#DisconnectedSource)  
   
--   [데이터 값이 변경될 때 데이터의 위치 변경(라이브 셰이핑)](#live_shaping)  
+- [데이터 값이 변경될 때 데이터의 위치 변경(라이브 셰이핑)](#live_shaping)  
   
--   [이벤트에 대한 약한 참조 설정을 위한 지원 개선](#weak_event_pattern)  
+- [이벤트에 대한 약한 참조 설정을 위한 지원 개선](#weak_event_pattern)  
   
--   [Dispatcher 클래스에 대한 새로운 메서드](#async)  
+- [Dispatcher 클래스에 대한 새로운 메서드](#async)  
   
--   [이벤트에 대한 태그 확장](#events_markup_extenions)  
+- [이벤트에 대한 태그 확장](#events_markup_extenions)  
   
 <a name="ribbon_control"></a>   
 ## <a name="ribbon-control"></a>리본 컨트롤  
@@ -64,9 +64,9 @@ ms.locfileid: "59325828"
 ## <a name="binding-to-static-properties"></a>정적 속성에 바인딩  
  데이터 바인딩 원본으로 정적 속성을 사용할 수 있습니다. 데이터 바인딩 엔진은 정적 이벤트가 발생할 경우 속성 값이 변경되는 것을 인식합니다.  예를 들어 `SomeClass` 클래스가 `MyProperty`라는 정적 속성을 정의하는 경우 `SomeClass`는 `MyProperty` 값이 변경될 때 발생하는 정적 이벤트를 정의할 수 있습니다.  정적 이벤트는 다음 서명 중 하나를 사용할 수 있습니다.  
   
--   `public static event EventHandler MyPropertyChanged;`  
+- `public static event EventHandler MyPropertyChanged;`  
   
--   `public static event EventHandler<PropertyChangedEventArgs> StaticPropertyChanged;`  
+- `public static event EventHandler<PropertyChangedEventArgs> StaticPropertyChanged;`  
   
  첫 번째 경우에서 클래스 표시 라는 정적 이벤트를 *PropertyName* `Changed` 통과 하는 <xref:System.EventArgs> 이벤트 처리기에 있습니다.  두 번째 경우 클래스 라는 정적 이벤트를 노출 `StaticPropertyChanged` 통과 하는 <xref:System.ComponentModel.PropertyChangedEventArgs> 이벤트 처리기에 있습니다. 정적 속성을 구현하는 클래스에서 두 메서드 중 하나를 사용하여 속성-변경 알림이 발생하도록 선택할 수 있습니다.  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - My.User object [Visual Basic], developing applications
 ms.assetid: c8af61bd-4dd3-4a0f-9af5-795b594b240b
 ms.openlocfilehash: 0372fbf63f6d12e266674f92225183911aa4ca30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014130"
 ---
 # <a name="performing-tasks-with-myapplication-mycomputer-and-myuser-visual-basic"></a>My.Application, My.Computer 및 My.User를 사용한 작업 수행(Visual Basic)
 세 개의 핵심 `My` 액세스 정보 및 일반적으로 사용 되는 기능을 제공 하는 개체가 `My.Application` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>), `My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>), 및 `My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>). 현재 응용 프로그램, 응용 프로그램에 설치 된 컴퓨터 또는 응용 프로그램의 현재 사용자에 관련 된 정보를 각각 액세스 하려면 이러한 개체를 사용할 수 있습니다.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: ca3c956e-725a-441b-b4e3-eab5d472f41c
 author: KrzysztofCwalina
 ms.openlocfilehash: 0e5b33839372e303b96bd6b84949f9a82da2f689
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026313"
 ---
 # <a name="naming-parameters"></a>매개 변수 이름 지정
 가독성의 이유를 초과 비주얼 디자인 도구 Intellisense 및 검색 기능을 하는 클래스를 제공 하는 경우 매개 변수는 문서에 디자이너에 표시 되기 때문에 매개 변수 이름에 대 한 지침을 따르는 것이 반드시 합니다.  

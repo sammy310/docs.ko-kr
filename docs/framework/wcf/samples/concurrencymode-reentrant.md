@@ -3,11 +3,11 @@ title: ConcurrencyMode 재진입
 ms.date: 03/30/2017
 ms.assetid: b2046c38-53d8-4a6c-a084-d6c7091d92b1
 ms.openlocfilehash: 2170b029f1cb4a85a1b2688fc1143ffcd1682fe6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002331"
 ---
 # <a name="concurrencymode-reentrant"></a>ConcurrencyMode 재진입
 이 샘플에서는 서비스 구현에서 ConcurrencyMode.Reentrant 사용의 필요성과 의미를 보여 줍니다. ConcurrencyMode.Reentrant는 서비스나 콜백이 특정 시점에 하나의 메시지만 처리한다는 것을 의미합니다(`ConcurencyMode.Single`과 유사함). 스레드로부터의 안전성을 보장 하기 위해 Windows Communication Foundation (WCF) 잠급니다는 `InstanceContext` 다른 메시지를 처리할 수 있도록 메시지를 처리 합니다. 재진입 모드의 경우 서비스가 나가는 호출을 수행하기 직전에 `InstanceContext`의 잠금이 해제되므로 이 샘플에 나온 것처럼 재진입할 수 있는 후속 호출은 다음에 서비스에 들어갈 때 잠길 수 있습니다. 이 동작을 설명하기 위해 이 샘플에서는 클라이언트와 서비스가 이중 계약을 사용하여 서로 메시지를 보낼 수 있는 방법을 보여 줍니다.  

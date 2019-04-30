@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ComboBox control [WPF]
 ms.assetid: fe0c2f62-fec2-4c41-a37e-5773d284170c
 ms.openlocfilehash: d8684ac382fefa308b671d5459125bd755960142
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017930"
 ---
 # <a name="combobox"></a>ComboBox
 <xref:System.Windows.Controls.ComboBox> 제어 옵션의 목록을 사용 하 여 사용자를 표시 합니다. 목록 표시 하거나 숨길 컨트롤이 확장 되 고 축소 합니다. 해당 기본 상태인 하나 밖에 표시 목록 축소 됩니다. 옵션의 전체 목록을 보려면 단추를 클릭 합니다.  

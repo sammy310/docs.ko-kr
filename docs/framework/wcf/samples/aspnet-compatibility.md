@@ -3,11 +3,11 @@ title: ASP.NET 호환성
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
 ms.openlocfilehash: 01381dc579f5ae3eadd2f913a0e09d7d259794a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002666"
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET 호환성
 이 샘플에는 Windows Communication Foundation (WCF)에서 ASP.NET 호환성 모드를 사용 하도록 설정 하는 방법을 보여 줍니다. ASP.NET 등의 기능 파일/URL 권한 부여, 세션 상태를 사용 하 여 ASP.NET 호환성 모드 ASP.NET 응용 프로그램 파이프라인에 완전히 참여 하 고 가능에서 실행 되는 서비스 및 <xref:System.Web.HttpContext> 클래스입니다. <xref:System.Web.HttpContext> 클래스에는 쿠키, 세션 및 다른 ASP.NET 기능에 액세스할 수 있습니다. 이 모드에서는 바인딩에 HTTP 전송이 사용되고 서비스 자체가 IIS에서 호스트되어야 합니다.  

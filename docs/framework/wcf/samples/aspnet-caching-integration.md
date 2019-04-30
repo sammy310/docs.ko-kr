@@ -3,11 +3,11 @@ title: ASP.NET 캐싱 통합
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
 ms.openlocfilehash: 8ed546459479e9986d6bbecf6eaca350d2d73c98
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002731"
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET 캐싱 통합
 이 샘플에서는 WCF 웹 HTTP 프로그래밍 모델을 사용하여 ASP.NET 출력 캐시를 활용하는 방법을 보여 줍니다. 이 항목에서는 ASP.NET 출력 캐시 통합 기능을 중점적으로 설명합니다.  
@@ -34,11 +34,11 @@ ms.locfileid: "59770024"
 ## <a name="to-run-the-sample"></a>이 샘플을 실행하려면  
  이 샘플은 다음의 세 프로젝트로 구성되어 있습니다.  
   
--   **서비스**: ASP.NET에서 호스팅되는 WCF HTTP 서비스가 포함 하는 웹 응용 프로그램 프로젝트입니다.  
+- **서비스**: ASP.NET에서 호스팅되는 WCF HTTP 서비스가 포함 하는 웹 응용 프로그램 프로젝트입니다.  
   
--   **클라이언트**: 서비스를 호출하는 콘솔 응용 프로그램 프로젝트입니다.  
+- **클라이언트**: 서비스를 호출하는 콘솔 응용 프로그램 프로젝트입니다.  
   
--   **일반적인**: 클라이언트와 서비스에서 사용 하는 고객 형식을 포함 하는 공유 라이브러리입니다.  
+- **일반적인**: 클라이언트와 서비스에서 사용 하는 고객 형식을 포함 하는 공유 라이브러리입니다.  
   
  Client 콘솔 응용 프로그램이 실행되면 클라이언트에서는 서비스로 요청을 보내고 응답의 관련 정보를 콘솔 창에 씁니다.  
   

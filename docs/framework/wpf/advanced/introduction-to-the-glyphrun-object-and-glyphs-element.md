@@ -10,11 +10,11 @@ helpviewer_keywords:
 - typography [WPF], GlyphRun object
 ms.assetid: 746ca769-a331-4435-9b95-f72a883b67c1
 ms.openlocfilehash: 0e5ec2b89f015c7e061b59fea755eb368f1ac7a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031306"
 ---
 # <a name="introduction-to-the-glyphrun-object-and-glyphs-element"></a>GlyphRun 개체 및 Glyphs 요소 소개
 이 항목에 설명 합니다 <xref:System.Windows.Media.GlyphRun> 개체 및 <xref:System.Windows.Documents.Glyphs> 요소입니다.  
@@ -27,13 +27,13 @@ ms.locfileid: "59341051"
   
 2. 인쇄 시나리오  
   
-    -   장치 프린터 언어로서의 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]  
+    - 장치 프린터 언어로서의 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]  
   
-    -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
+    - [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
   
-    -   이전 프린터 드라이버, [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 애플리케이션에서 고정된 형식으로의 출력  
+    - 이전 프린터 드라이버, [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 애플리케이션에서 고정된 형식으로의 출력  
   
-    -   인쇄 스풀 형식  
+    - 인쇄 스풀 형식  
   
 3. 이전 버전의 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 및 기타 컴퓨팅 디바이스에 대한 클라이언트를 포함하는 고정된 형식 문서 표시  
   
@@ -67,15 +67,15 @@ ms.locfileid: "59341051"
 ### <a name="indices-property"></a>Indices 속성  
  <xref:System.Windows.Documents.Glyphs.Indices%2A> 속성은 문자 모양 사양의 문자열입니다. 문자 모양의 시퀀스가 단일 클러스터를 구성하는 경우 클러스터 첫 번째 문자 모양의 사양 앞에 문자 모양의 개수와 클러스터를 구성하는 코드 포인트 수에 대한 사양이 있습니다. <xref:System.Windows.Documents.Glyphs.Indices%2A> 속성 다음 속성을 하나의 문자열에서 수집 합니다.  
   
--   문자 모양 인덱스  
+- 문자 모양 인덱스  
   
--   문자 모양의 사전 너비  
+- 문자 모양의 사전 너비  
   
--   문자 모양 첨부 벡터 조합  
+- 문자 모양 첨부 벡터 조합  
   
--   코드 포인트에서 문자 모양으로 클러스터 매핑  
+- 코드 포인트에서 문자 모양으로 클러스터 매핑  
   
--   문자 모양 플래그  
+- 문자 모양 플래그  
   
  각 문자 모양 사양에는 다음 형식이 있습니다.  
   

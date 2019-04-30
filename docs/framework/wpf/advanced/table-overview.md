@@ -10,34 +10,34 @@ helpviewer_keywords:
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
 ms.openlocfilehash: 6485aa9f2094b734f796ff38a33f4e0d3434e004
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053108"
 ---
 # <a name="table-overview"></a>테이블 개요
 <xref:System.Windows.Documents.Table> 유동 문서 콘텐츠의 그리드 기반 프레젠테이션을 지 원하는 블록 수준 요소가입니다. 이 요소의 유연성 덕분에 이 요소는 매우 유용하지만 이해하고 제대로 사용하기가 더 복잡합니다.  
   
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   
--   [테이블 기본 사항](#table_basics)  
+- [테이블 기본 사항](#table_basics)  
   
--   [Table은 Grid와 어떻게 다를까요?](#table_vs_Grid)  
+- [Table은 Grid와 어떻게 다를까요?](#table_vs_Grid)  
   
--   [기본 테이블 구조](#basic_table_structure)  
+- [기본 테이블 구조](#basic_table_structure)  
   
--   [테이블 포함](#table_containment)  
+- [테이블 포함](#table_containment)  
   
--   [행 그룹](#row_groupings)  
+- [행 그룹](#row_groupings)  
   
--   [백그라운드 렌더링 우선 순위](#rendering_precedence)  
+- [백그라운드 렌더링 우선 순위](#rendering_precedence)  
   
--   [행 및 열 확장](#spanning_rows_or_columns)  
+- [행 및 열 확장](#spanning_rows_or_columns)  
   
--   [코드로 테이블 빌드](#building_a_table_with_code)  
+- [코드로 테이블 빌드](#building_a_table_with_code)  
   
--   [관련 항목] 
+- [관련 항목] 
   
 <a name="table_basics"></a>   
 ## <a name="table-basics"></a>테이블 기본 사항  
@@ -50,15 +50,15 @@ ms.locfileid: "59317664"
 ### <a name="basic-table-structure"></a>기본 테이블 구조  
  <xref:System.Windows.Documents.Table> 열으로 구성 된 그리드 기반 프레젠테이션을 제공 (나타낸 <xref:System.Windows.Documents.TableColumn> 요소) 및 행 (나타내는 <xref:System.Windows.Documents.TableRow> 요소). <xref:System.Windows.Documents.TableColumn> 요소 콘텐츠를 호스트 하지 않는 열 및 열 특성만 정의 합니다. <xref:System.Windows.Documents.TableRow> 요소에서 호스트 되어야 합니다는 <xref:System.Windows.Documents.TableRowGroup> 해당 테이블에 행의 그룹화를 정의 하는 요소입니다. <xref:System.Windows.Documents.TableCell> 테이블에서 제공 하는 실제 콘텐츠가 들어 있는 요소에서 호스트 되어야 합니다는 <xref:System.Windows.Documents.TableRow> 요소입니다. <xref:System.Windows.Documents.TableCell> 파생 된 요소만 포함할 수 있습니다 <xref:System.Windows.Documents.Block>합니다.  에 대 한 유효한 자식 요소는 <xref:System.Windows.Documents.TableCell> 포함 합니다.  
   
--   <xref:System.Windows.Documents.BlockUIContainer>  
+- <xref:System.Windows.Documents.BlockUIContainer>  
   
--   <xref:System.Windows.Documents.List>  
+- <xref:System.Windows.Documents.List>  
   
--   <xref:System.Windows.Documents.Paragraph>  
+- <xref:System.Windows.Documents.Paragraph>  
   
--   <xref:System.Windows.Documents.Section>  
+- <xref:System.Windows.Documents.Section>  
   
--   <xref:System.Windows.Documents.Table>  
+- <xref:System.Windows.Documents.Table>  
   
 > [!NOTE]
 >  <xref:System.Windows.Documents.TableCell> 요소 직접 텍스트 콘텐츠를 호스팅하지 않을 수도 있습니다. 콘텐츠 요소와 같은 흐름에 대 한 포함 규칙에 대 한 자세한 내용은 <xref:System.Windows.Documents.TableCell>를 참조 하세요 [유동 문서 개요](flow-document-overview.md)합니다.  
@@ -78,19 +78,19 @@ ms.locfileid: "59317664"
 ### <a name="table-containment"></a>테이블 포함  
  <xref:System.Windows.Documents.Table> 파생 되는 <xref:System.Windows.Documents.Block> 요소에 대 한 일반적인 규칙을 준수 하 고 <xref:System.Windows.Documents.Block> 수준 요소입니다.  <xref:System.Windows.Documents.Table> 다음 요소 중 하나에서 요소를 포함 될 수 있습니다.  
   
--   <xref:System.Windows.Documents.FlowDocument>  
+- <xref:System.Windows.Documents.FlowDocument>  
   
--   <xref:System.Windows.Documents.TableCell>  
+- <xref:System.Windows.Documents.TableCell>  
   
--   <xref:System.Windows.Controls.ListBoxItem>  
+- <xref:System.Windows.Controls.ListBoxItem>  
   
--   <xref:System.Windows.Controls.ListViewItem>  
+- <xref:System.Windows.Controls.ListViewItem>  
   
--   <xref:System.Windows.Documents.Section>  
+- <xref:System.Windows.Documents.Section>  
   
--   <xref:System.Windows.Documents.Floater>  
+- <xref:System.Windows.Documents.Floater>  
   
--   <xref:System.Windows.Documents.Figure>  
+- <xref:System.Windows.Documents.Figure>  
   
 <a name="row_groupings"></a>   
 ### <a name="row-groupings"></a>행 그룹  

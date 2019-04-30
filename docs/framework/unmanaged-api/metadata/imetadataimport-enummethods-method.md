@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bab625b8415183b9cf90c35cba140c4d28095805
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992448"
 ---
 # <a name="imetadataimportenummethods-method"></a>IMetaDataImport::EnumMethods 메서드
 지정한 형식의 메서드를 나타내는 MethodDef 토큰을 열거합니다.  

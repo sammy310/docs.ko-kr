@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF Data Services, loading data
 ms.assetid: 32f9b588-c832-44c4-a7e0-fcce635df59a
 ms.openlocfilehash: ee7b0b40d74d908dc4f25372273f852662370df0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59518008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037132"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>지연 콘텐츠 로드(WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 기본적으로 쿼리에서 반환되는 데이터 양을 제한합니다. 그러나 필요한 경우 데이터 서비스에서 관련 엔터티, 페이징 응답 데이터 및 이진 데이터 스트림을 포함한 추가 데이터를 명시적으로 로드할 수 있습니다. 이 항목에서는 이러한 지연된 콘텐츠를 응용 프로그램에 로드하는 방법을 설명합니다.  
@@ -22,14 +22,14 @@ ms.locfileid: "59518008"
 ## <a name="related-entities"></a>관련 엔터티  
  쿼리를 실행하면 주소가 지정된 엔터티 집합의 엔터티만 반환됩니다. 예를 들어, Northwind 데이터 서비스에 대한 쿼리가 `Customers` 엔터티를 반환하는 경우 `Orders` 및 `Customers` 간에 관계가 있어도 기본적으로 관련 `Orders` 엔터티가 반환되지 않습니다. 또한 데이터 서비스에서 페이징을 사용하도록 설정한 경우 서비스에서 이후 데이터 페이지를 명시적으로 로드해야 합니다. 관련 엔터티를 로드하는 방법에는 다음 두 가지가 있습니다.  
   
--   **즉시 로드**: 사용할 수는 `$expand` 는 쿼리에서 반환 엔터티에 연결 하 여 관련 된 엔터티를 요청 하는 쿼리 옵션 요청 된 쿼리를 제공 하는 설정입니다. 데이터 서비스에 전송되는 쿼리에 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 옵션을 추가하려면 <xref:System.Data.Services.Client.DataServiceQuery%601>의 `$expand` 메서드를 사용합니다. 다음 예제와 같이 관련 엔터티 집합을 쉼표로 구분하여 여러 개 요청할 수 있습니다. 쿼리에서 요청한 모든 엔터티가 하나의 응답으로 반환됩니다. 다음 예제에서는 `Order_Details` 엔터티 집합과 함께 `Customers` 및 `Orders`를 반환합니다.  
+- **즉시 로드**: 사용할 수는 `$expand` 는 쿼리에서 반환 엔터티에 연결 하 여 관련 된 엔터티를 요청 하는 쿼리 옵션 요청 된 쿼리를 제공 하는 설정입니다. 데이터 서비스에 전송되는 쿼리에 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 옵션을 추가하려면 <xref:System.Data.Services.Client.DataServiceQuery%601>의 `$expand` 메서드를 사용합니다. 다음 예제와 같이 관련 엔터티 집합을 쉼표로 구분하여 여러 개 요청할 수 있습니다. 쿼리에서 요청한 모든 엔터티가 하나의 응답으로 반환됩니다. 다음 예제에서는 `Order_Details` 엔터티 집합과 함께 `Customers` 및 `Orders`를 반환합니다.  
   
      [!code-csharp[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#expandorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#expandorderdetailsspecific)]  
   
      [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에서는 `$expand` 쿼리 옵션을 사용하여 단일 쿼리에 포함할 수 있는 엔터티 집합의 수를 12개로 제한합니다.  
   
--   **명시적 로드**: 호출할 수 있습니다 합니다 <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> 메서드는 <xref:System.Data.Services.Client.DataServiceContext> 명시적으로 관련된 엔터티를 로드 하는 인스턴스. <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> 메서드를 호출할 때마다 데이터 서비스에 대해 별도의 요청이 만들어집니다. 다음 예제에서는 `Order_Details` 엔터티에 대한 `Orders`를 명시적으로 로드합니다.  
+- **명시적 로드**: 호출할 수 있습니다 합니다 <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> 메서드는 <xref:System.Data.Services.Client.DataServiceContext> 명시적으로 관련된 엔터티를 로드 하는 인스턴스. <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> 메서드를 호출할 때마다 데이터 서비스에 대해 별도의 요청이 만들어집니다. 다음 예제에서는 `Order_Details` 엔터티에 대한 `Orders`를 명시적으로 로드합니다.  
   
      [!code-csharp[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#loadrelatedorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#loadrelatedorderdetailsspecific)]  

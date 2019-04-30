@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
 ms.openlocfilehash: 8564499b9ff55514179314217b7d40d8d3cdf6a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031150"
 ---
 # <a name="type-typename-has-no-constructors"></a>형식 '\<typename >'에 생성자가 없습니다
 형식이 `Sub New()` 호출을 지원하지 않습니다. 컴파일러 또는 이진 파일이 손상되었기 때문일 수 있습니다.  

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - Shape objects [WPF]
 ms.assetid: 893253b8-c2df-4f22-961d-cbc533d64c79
 ms.openlocfilehash: c25e26130adc7f012d375f35a173a4b5dc9871f0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008178"
 ---
 # <a name="shapes"></a>도형
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 사용 하 여 기본 모양 그리기에 대 한 지원을 제공 합니다 <xref:System.Windows.Shapes.Shape> 클래스입니다. Shape 개체에서 파생 <xref:System.Windows.FrameworkElement> 이와 같이 레이아웃 시스템에 참여 하 고 사용 하 여 단순히 그릴 수 있습니다 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]합니다.  

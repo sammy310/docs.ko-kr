@@ -9,11 +9,11 @@ helpviewer_keywords:
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
 ms.openlocfilehash: 7ee4ce1d6efdc4927fc2d20100f0b12f7405261f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972356"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Windows Forms 디자이너의 디자인 타임 오류
 이 문서에서는 Windows Forms 디자이너를 로드하지 못할 때 Microsoft Visual Studio에 표시되는 디자인 타임 오류 목록의 의미와 용도에 대해 설명합니다. 이 오류 목록이 표시되면 디자이너에서 버그가 아닌 코드의 오류를 수정하는 보조 기능으로 해석해야 합니다.  
@@ -25,11 +25,11 @@ ms.locfileid: "59213144"
   
  오류 범주 머리글을 클릭하거나 확장/축소 펼침 단추를 클릭하여 오류 범주를 확장하거나 축소할 수 있습니다. 오류 범주를 확장하면 다음과 같은 추가 도움말이 표시됩니다.  
   
--   이 오류의 인스턴스  
+- 이 오류의 인스턴스  
   
--   이 오류에 대한 도움말  
+- 이 오류에 대한 도움말  
   
--   이 오류에 대한 포럼 게시물  
+- 이 오류에 대한 포럼 게시물  
   
 ### <a name="instances-of-this-error"></a>이 오류의 인스턴스  
  추가 도움말은 현재 프로젝트에서 오류 메시지의 모든 인스턴스를 나열합니다. 대부분의 오류는 다음과 같은 형식으로 정확한 위치를 포함합니다. *[프로젝트 이름]* *[양식 이름]* 줄:*[줄 번호]* 열:*[열 번호]* **코드로 이동** 링크를 통해 오류가 발생하는 코드의 위치로 이동합니다.  
@@ -45,9 +45,9 @@ ms.locfileid: "59213144"
 ### <a name="forum-posts-about-this-error"></a>이 오류에 대한 포럼 게시물  
  추가 도움말은 오류와 관련된 MSDN 포럼 게시물에 대한 링크를 포함합니다. 포럼은 오류 메시지의 문자열에 따라 검색됩니다. 다음과 같은 포럼을 검색하도록 시도할 수 있습니다.  
   
--   [Windows Forms 디자이너 포럼](https://go.microsoft.com/fwlink/?LinkId=203524)  
+- [Windows Forms 디자이너 포럼](https://go.microsoft.com/fwlink/?LinkId=203524)  
   
--   [Windows Forms 포럼](https://go.microsoft.com/fwlink/?LinkId=203523)  
+- [Windows Forms 포럼](https://go.microsoft.com/fwlink/?LinkId=203523)  
   
 ### <a name="ignore-and-continue"></a>무시 후 계속  
  오류 상태를 무시하고 디자이너를 계속 로드할 수 있습니다. 이 작업을 선택하면 예기치 않은 동작이 발생할 수 있습니다. 예를 들어 컨트롤이 디자인 화면에 표시되지 않을 수 있습니다.  

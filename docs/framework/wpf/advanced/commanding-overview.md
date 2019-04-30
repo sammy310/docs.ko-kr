@@ -14,11 +14,11 @@ helpviewer_keywords:
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
 ms.openlocfilehash: 4071f7f08c2b25a2ec551832f57a2b9a7facc91d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037091"
 ---
 # <a name="commanding-overview"></a>명령 개요
 <a name="introduction"></a> 명령은 장치 입력보다 더 의미 있는 수준의 입력 처리를 제공하는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]의 입력 메커니즘입니다. 이러한 명령의 예로는 많은 애플리케이션의 **복사**, **잘라내기** 및 **붙여넣기** 작업을 들 수 있습니다.  
@@ -27,15 +27,15 @@ ms.locfileid: "59139037"
   
  이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   
--   [명령이란?](#commands_at_10000_feet)  
+- [명령이란?](#commands_at_10000_feet)  
   
--   [WPF의 간단한 명령 예제](#simple_command)  
+- [WPF의 간단한 명령 예제](#simple_command)  
   
--   [WPF 명령의 네 가지 주요 개념](#Four_main_Concepts)  
+- [WPF 명령의 네 가지 주요 개념](#Four_main_Concepts)  
   
--   [명령 라이브러리](#Command_Library)  
+- [명령 라이브러리](#Command_Library)  
   
--   [사용자 지정 명령 만들기](#creating_commands)  
+- [사용자 지정 명령 만들기](#creating_commands)  
   
 <a name="commands_at_10000_feet"></a>   
 ## <a name="what-are-commands"></a>명령이란?  
@@ -60,13 +60,13 @@ ms.locfileid: "59139037"
 ## <a name="four-main-concepts-in-wpf-commanding"></a>WPF 명령의 네 가지 주요 개념  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 라우트된 명령 모델은 명령, 명령 소스, 명령 대상 및 명령 바인딩 네 가지 주요 개념으로 나눌 수 있습니다.  
   
--   *명령*은 실행할 작업입니다.  
+- *명령*은 실행할 작업입니다.  
   
--   *명령 소스*는 명령을 호출하는 개체입니다.  
+- *명령 소스*는 명령을 호출하는 개체입니다.  
   
--   *명령 대상*은 명령이 실행되는 개체입니다.  
+- *명령 대상*은 명령이 실행되는 개체입니다.  
   
--   *명령 바인딩*은 명령 논리를 명령에 매핑하는 개체입니다.  
+- *명령 바인딩*은 명령 논리를 명령에 매핑하는 개체입니다.  
   
  이전 예제에서 <xref:System.Windows.Input.ApplicationCommands.Paste%2A> 명령은 명령이며, <xref:System.Windows.Controls.MenuItem>은 명령 원본이며, <xref:System.Windows.Controls.TextBox>는 명령 대상이며, 명령 바인딩은 <xref:System.Windows.Controls.TextBox> 컨트롤에 의해 제공됩니다.  <xref:System.Windows.Input.CommandBinding>이 항상 명령 대상 클래스인 컨트롤에 의해 제공되는 것은 아닙니다.  매우 자주 <xref:System.Windows.Input.CommandBinding>은 애플리케이션 개발자에 의해 만들어져야 하거나, <xref:System.Windows.Input.CommandBinding>은 명령 대상의 상위 항목에 연결될 수 있습니다.  
   
@@ -88,11 +88,11 @@ ms.locfileid: "59139037"
   
  <xref:System.Windows.Input.ICommandSource>는 <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> 및 <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>의 세 가지 속성을 노출합니다.  
   
--   <xref:System.Windows.Input.ICommandSource.Command%2A>는 명령 소스가 호출될 때 실행할 명령입니다.  
+- <xref:System.Windows.Input.ICommandSource.Command%2A>는 명령 소스가 호출될 때 실행할 명령입니다.  
   
--   <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>은 명령을 실행하는 개체입니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 <xref:System.Windows.Input.ICommandSource>의 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> 속성은 <xref:System.Windows.Input.ICommand>가 <xref:System.Windows.Input.RoutedCommand>인 경우에만 적용 가능합니다.  <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>이 <xref:System.Windows.Input.ICommandSource>에서 설정되고 해당 명령이 <xref:System.Windows.Input.RoutedCommand>가 아닌 경우 명령 대상은 무시됩니다. <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>이 설정되어 있지 않으면 키보드 포커스가 있는 요소가 명령 대상이 됩니다.  
+- <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>은 명령을 실행하는 개체입니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 <xref:System.Windows.Input.ICommandSource>의 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> 속성은 <xref:System.Windows.Input.ICommand>가 <xref:System.Windows.Input.RoutedCommand>인 경우에만 적용 가능합니다.  <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>이 <xref:System.Windows.Input.ICommandSource>에서 설정되고 해당 명령이 <xref:System.Windows.Input.RoutedCommand>가 아닌 경우 명령 대상은 무시됩니다. <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>이 설정되어 있지 않으면 키보드 포커스가 있는 요소가 명령 대상이 됩니다.  
   
--   <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>는 명령을 구현하는 처리기에 정보를 전달하는 데 사용되는 사용자 정의 데이터 형식입니다.  
+- <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>는 명령을 구현하는 처리기에 정보를 전달하는 데 사용되는 사용자 정의 데이터 형식입니다.  
   
  <xref:System.Windows.Input.ICommandSource>를 구현하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 클래스는 <xref:System.Windows.Controls.Primitives.ButtonBase>, <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Documents.Hyperlink> 및 <xref:System.Windows.Input.InputBinding>입니다.  <xref:System.Windows.Controls.Primitives.ButtonBase>, <xref:System.Windows.Controls.MenuItem> 및 <xref:System.Windows.Documents.Hyperlink>는 클릭할 때 명령을 호출하며, <xref:System.Windows.Input.InputBinding>은 이와 연결된 <xref:System.Windows.Input.InputGesture>가 수행될 때 명령을 호출합니다.  
   

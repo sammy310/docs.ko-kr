@@ -9,11 +9,11 @@ helpviewer_keywords:
 - getting started [Windows Forms], Windows Forms
 ms.assetid: a031aa58-5027-4082-b590-df7c12c77dec
 ms.openlocfilehash: 27c26d3575c2a931f407a475c655f29d042a8653
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966930"
 ---
 # <a name="getting-started-with-windows-forms"></a>Windows Forms 시작
 Windows forms에서 강력한 Windows 기반 응용 프로그램을 만들 수 있습니다. 다음 항목에서는 Windows Forms 데이터를 표시, 사용자 입력을 처리 및 보안 강화 하 고 손쉽게 응용 프로그램 배포를 활용 하는 방법을 자세히 설명 합니다.  

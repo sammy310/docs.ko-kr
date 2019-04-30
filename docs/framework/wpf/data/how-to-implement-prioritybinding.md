@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
 ms.openlocfilehash: aaf2caff1e2684e08c7eb65125536f1070203d70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020857"
 ---
 # <a name="how-to-implement-prioritybinding"></a>방법: PriorityBinding 구현
 <xref:System.Windows.Data.PriorityBinding> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 바인딩 목록을 지정 하 여 작동 합니다. 바인딩 목록은 가장 낮은 우선 순위를 높은 우선 순위에서 정렬 되어 있습니다. 가장 높은 우선 순위 바인딩 값을 반환 하는 경우 성공적으로 처리 될 때 다음 있습니다 되지 목록에 다른 바인딩을 처리 해야 합니다. 우선 순위가 높은 바인딩이 평가할 오래 걸리는 경우 수, 더 높은 우선 순위의 바인딩 값을 성공적으로 반환 될 때까지 다음 우선 순위가 가장 높은 값을 성공적으로 반환 하는 사용 됩니다.  

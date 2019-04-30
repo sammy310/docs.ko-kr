@@ -6,11 +6,11 @@ helpviewer_keywords:
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
 ms.openlocfilehash: a9d01b7cebea845ad67d846af5b08f59977b8cd6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62036233"
 ---
 # <a name="localization-attributes-and-comments"></a>지역화 특성 및 주석
 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 소스 코드 내의 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 지역화 주석은 속성이며 개발자에 의해 제공되어 지역화에 대한 규칙과 힌트를 제공합니다. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 지역화 주석에는 두 가지 정보 집합(지역화 가능성 특성 및 자유 형식 지역화 주석)이 포함됩니다. 지역화 가능성 특성은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 지역화 API가 사용하여 지역화할 리소스를 나타냅니다. 자유 형식 주석은 애플리케이션 작성자가 포함하려고 하는 정보입니다.  
@@ -27,11 +27,11 @@ ms.locfileid: "59301856"
   
 3. 할당할 수 있는 값은 다음과 같습니다.  
   
-    -   **None** - 주석과 특성이 모두 어셈블리 안에 유지되고 별도의 파일이 생성되지 않습니다.  
+    - **None** - 주석과 특성이 모두 어셈블리 안에 유지되고 별도의 파일이 생성되지 않습니다.  
   
-    -   **CommentsOnly** - 어셈블리에서 주석만 제거하고 별도의 LocFile 파일에 둡니다.  
+    - **CommentsOnly** - 어셈블리에서 주석만 제거하고 별도의 LocFile 파일에 둡니다.  
   
-    -   **All** - 주석과 특성을 어셈블리에서 모두 제거하고 둘 다 별도의 LocFile에 둡니다.  
+    - **All** - 주석과 특성을 어셈블리에서 모두 제거하고 둘 다 별도의 LocFile에 둡니다.  
   
 4. 지역화 가능한 리소스가 [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)]에서 추출된 경우 지역화 가능성 특성을 [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] 지역화 API에서 준수합니다.  
   
@@ -74,11 +74,11 @@ ms.locfileid: "59301856"
   
  다음 세 가지 형식의 특성이 있습니다.  
   
--   **Category** 지역화 담당자 도구에서 값을 수정할 수 있어야 하는지 여부를 지정합니다. <xref:System.Windows.LocalizabilityAttribute.Category%2A>을 참조하세요.  
+- **Category** 지역화 담당자 도구에서 값을 수정할 수 있어야 하는지 여부를 지정합니다. <xref:System.Windows.LocalizabilityAttribute.Category%2A>을 참조하세요.  
   
--   **가독성**. 지역화 담당자 도구에서 값을 읽고 표시해야 하는지 여부를 지정합니다. <xref:System.Windows.LocalizabilityAttribute.Readability%2A>을 참조하세요.  
+- **가독성**. 지역화 담당자 도구에서 값을 읽고 표시해야 하는지 여부를 지정합니다. <xref:System.Windows.LocalizabilityAttribute.Readability%2A>을 참조하세요.  
   
--   **수정 가능성**. 지역화 담당자 도구에서 값 수정을 허용하는지 여부를 지정합니다. <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>을 참조하세요.  
+- **수정 가능성**. 지역화 담당자 도구에서 값 수정을 허용하는지 여부를 지정합니다. <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>을 참조하세요.  
   
  이러한 특성은 공백으로 구분하여 임의의 순서로 지정할 수 있습니다. 중복된 특성이 지정된 경우 마지막 특성이 이전 특성을 재정의합니다. 예를 들어 Localization.Attributes = “Unmodifiable Modifiable”은 Modifiability를 마지막 값인 Modifiable로 설정합니다.  
   

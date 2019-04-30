@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], displaying images in cells
 ms.assetid: 53b13d31-1b56-476d-9ab4-18bfac138a22
 ms.openlocfilehash: 90aaff419ecc2c890a8b3802f3aaf12092febb73
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013402"
 ---
 # <a name="how-to-display-images-in-cells-of-the-windows-forms-datagridview-control"></a>방법: Windows Forms DataGridView 컨트롤의 셀에 이미지 표시
 그림 또는 그래픽 데이터 행에 표시할 수 있는 값 중 하나를입니다. 대부분의 경우 이러한 그래픽 직원의 사진을 또는 회사 로고의 형태를 취하 합니다.  
@@ -33,11 +33,11 @@ ms.locfileid: "59082999"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   `dataGridView1`이라는 <xref:System.Windows.Forms.DataGridView> 컨트롤  
+- `dataGridView1`이라는 <xref:System.Windows.Forms.DataGridView> 컨트롤  
   
--   라는 포함 된 아이콘 리소스를 `tree.ico`입니다.  
+- 라는 포함 된 아이콘 리소스를 `tree.ico`입니다.  
   
--   <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType> 및 <xref:System.Drawing?displayProperty=nameWithType> 어셈블리에 대한 참조  
+- <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType> 및 <xref:System.Drawing?displayProperty=nameWithType> 어셈블리에 대한 참조  
   
 ## <a name="see-also"></a>참고자료
 

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 745742df-0eda-479b-83f8-29bd8a80db96
 ms.openlocfilehash: e1f7a7da1ab2ce0ad7d7908ecd1f896d229b8e1a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037910"
 ---
 # <a name="formulate-projections"></a>프로젝션 작성
 다음 예제에서는 표시 하는 방법을 `select` 문에서 C# 하 고 `Select` Visual Basic의 문 쿼리 프로젝션 구성 하는 기타 기능을 사용 하 여 결합할 수 있습니다.  
@@ -66,11 +66,11 @@ ms.locfileid: "59223305"
 ## <a name="example"></a>예제  
  다음 예제에서는 중첩된 쿼리를 사용하여 다음 결과를 반환합니다.  
   
--   모든 주문의 시퀀스와 해당 `OrderID`입니다.  
+- 모든 주문의 시퀀스와 해당 `OrderID`입니다.  
   
--   할인이 있는 주문 항목에 대한 시퀀스입니다.  
+- 할인이 있는 주문 항목에 대한 시퀀스입니다.  
   
--   운송 비용이 포함되지 않은 총 금액입니다.  
+- 운송 비용이 포함되지 않은 총 금액입니다.  
   
  [!code-csharp[DLinqQueryExamples#65](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#65)]
  [!code-vb[DLinqQueryExamples#65](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#65)]  

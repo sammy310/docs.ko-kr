@@ -3,22 +3,22 @@ title: '방법: 필터 사용'
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
 ms.openlocfilehash: 5d3ed4a1d64edee274e60f5bf156b4294902df8c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972863"
 ---
 # <a name="how-to-use-filters"></a>방법: 필터 사용
 이 항목에서는 여러 필터를 사용하는 라우팅 구성을 만드는 데 필요한 기본 단계에 대해 간략하게 설명합니다. 이 예제에서 메시지는 regularCalc와 roundingCalc라는 두 계산기 서비스 구현으로 라우트됩니다. 두 구현 모두 같은 연산을 지원하지만 한 서비스에서 반환 전에 가장 가까운 정수 값으로 모든 계산을 반올림합니다. 클라이언트 응용 프로그램은 서비스의 반올림 버전을 사용할 것인지 여부를 지정해야 합니다. 서비스 기본 설정이 지정되지 않으면 메시지는 두 서비스 사이에서 부하 분산됩니다. 두 서비스에 의해 노출되는 연산은 다음과 같습니다.  
   
--   Add  
+- Add  
   
--   빼기  
+- 빼기  
   
--   곱하기  
+- 곱하기  
   
--   나누기  
+- 나누기  
   
  두 서비스 모두 같은 연산을 구현하고, 따라서 메시지에 지정된 작업이 고유하지 않으므로 Action 필터는 사용할 수 없습니다. 대신 메시지가 올바른 엔드포인트로 라우트되도록 추가 작업을 수행해야 합니다.  
   
@@ -137,10 +137,10 @@ ms.locfileid: "59295525"
     > [!NOTE]
     >  PrefixEndpointAddress 필터는 일치를 수행할 때 호스트 이름을 평가하지 않습니다. 하나의 호스트가 다양한 호스트 이름을 사용하여 참조될 수 있고, 이러한 다양한 이름은 모두 클라이언트 응용 프로그램에서 호스트를 참조하는 유효한 방법일 수 있기 때문입니다. 예를 들어 다음 항목은 모두 같은 호스트를 참조할 수 있습니다.  
     >   
-    > -   localhost  
-    > -   127.0.0.1  
-    > -   `www.contoso.com`  
-    > -   ContosoWeb01  
+    > - localhost  
+    > - 127.0.0.1  
+    > - `www.contoso.com`  
+    > - ContosoWeb01  
   
 4. 마지막 필터는 사용자 지정 헤더 없이 일반 엔드포인트에 도착하는 메시지의 라우팅을 지원해야 합니다. 이 시나리오의 경우 메시지는 regularCalc 서비스와 roundingCalc 서비스 사이를 번갈아 전환해야 합니다. 이러한 메시지의 "라운드 로빈" 라우팅을 지원 하려면 각 메시지 처리에 대해 일치 시킬 하나의 필터 인스턴스를 허용 하는 사용자 지정 필터를 사용 합니다.  다음 예제에서는 RoundRobinMessageFilter의 두 인스턴스를 정의하며, 이 두 인스턴스는 하나로 그룹화되어 서로 번갈아 전환되어야 함을 나타냅니다.  
   

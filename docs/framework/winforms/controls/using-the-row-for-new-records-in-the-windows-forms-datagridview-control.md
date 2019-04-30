@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
 ms.openlocfilehash: 67c87b28f04b028f329663d6cf8215370a00ef2f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009177"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤에서 새 레코드에 대한 행 사용
 사용 하는 경우는 <xref:System.Windows.Forms.DataGridView> 응용 프로그램에서 데이터 편집을 위해 종종 하려는 사용자에 게 데이터 저장소에 새 데이터 행을 추가 하는 기능을 제공 합니다. <xref:System.Windows.Forms.DataGridView> 컨트롤은 항상 마지막 행으로 표시 된 새 레코드에 대 한 행을 제공 하 여이 기능을 지원 합니다. 행 헤더에 별표 (*) 기호로 표시 됩니다. 다음 섹션에서는 설명 하는 몇 가지 새 레코드에 대 한 행을 사용 하 여 프로그램 사용 하도록 설정 하는 것이 좋습니다.  
@@ -29,9 +29,9 @@ ms.locfileid: "59184823"
 ## <a name="the-rows-collection"></a>행 컬렉션  
  새 레코드에 대 한 행에 포함 된 <xref:System.Windows.Forms.DataGridView> 컨트롤의 <xref:System.Windows.Forms.DataGridView.Rows%2A> 컬렉션 두 가지 측면에서 다르게 하지만 동작:  
   
--   새 레코드에 대 한 행을 제거할 수 없습니다는 <xref:System.Windows.Forms.DataGridView.Rows%2A> 컬렉션 프로그래밍 방식으로 합니다. <xref:System.InvalidOperationException> 이 시도 하는 경우 throw 됩니다. 또한 사용자 새 레코드에 대 한 행을 삭제할 수 없습니다. 합니다 <xref:System.Windows.Forms.DataGridViewRowCollection.Clear%2A?displayProperty=nameWithType> 메서드를이 행을 제거 하지 않습니다는 <xref:System.Windows.Forms.DataGridView.Rows%2A> 컬렉션입니다.  
+- 새 레코드에 대 한 행을 제거할 수 없습니다는 <xref:System.Windows.Forms.DataGridView.Rows%2A> 컬렉션 프로그래밍 방식으로 합니다. <xref:System.InvalidOperationException> 이 시도 하는 경우 throw 됩니다. 또한 사용자 새 레코드에 대 한 행을 삭제할 수 없습니다. 합니다 <xref:System.Windows.Forms.DataGridViewRowCollection.Clear%2A?displayProperty=nameWithType> 메서드를이 행을 제거 하지 않습니다는 <xref:System.Windows.Forms.DataGridView.Rows%2A> 컬렉션입니다.  
   
--   새 레코드의 행을 한 후 행을 추가할 수 있습니다. <xref:System.InvalidOperationException> 이 시도 하는 경우 발생 합니다. 결과적으로, 새 레코드에 대 한 행은 항상 마지막 행에는 <xref:System.Windows.Forms.DataGridView> 제어 합니다. 메서드에 <xref:System.Windows.Forms.DataGridViewRowCollection> 행을 추가 하는-<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>를 <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>, 및 <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>-모든 메서드를 호출 삽입 내부적으로 새 레코드에 대 한 행이 있는 경우.  
+- 새 레코드의 행을 한 후 행을 추가할 수 있습니다. <xref:System.InvalidOperationException> 이 시도 하는 경우 발생 합니다. 결과적으로, 새 레코드에 대 한 행은 항상 마지막 행에는 <xref:System.Windows.Forms.DataGridView> 제어 합니다. 메서드에 <xref:System.Windows.Forms.DataGridViewRowCollection> 행을 추가 하는-<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>를 <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>, 및 <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>-모든 메서드를 호출 삽입 내부적으로 새 레코드에 대 한 행이 있는 경우.  
   
 ## <a name="visual-customization-of-the-row-for-new-records"></a>새 레코드에 대 한 행의 시각적 사용자 지정  
  새 레코드에 대 한 행 만들어질 때 지정 된 행에 기반을 <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> 속성입니다. 이 행에 대해 지정 되지 않은 모든 셀 스타일은 다른 속성에서 상속 됩니다. 셀 스타일 상속에 대 한 자세한 내용은 참조 하세요. [Windows Forms DataGridView 컨트롤의 셀 스타일](cell-styles-in-the-windows-forms-datagridview-control.md)합니다.  

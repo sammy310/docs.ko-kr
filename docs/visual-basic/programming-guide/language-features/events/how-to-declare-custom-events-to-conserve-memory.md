@@ -7,11 +7,11 @@ helpviewer_keywords:
 - custom events [Visual Basic]
 ms.assetid: 87ebee87-260c-462f-979c-407874debd19
 ms.openlocfilehash: e4132f51f4dd85ad964042d05f7c5bc0a2e6e3cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973162"
 ---
 # <a name="how-to-declare-custom-events-to-conserve-memory-visual-basic"></a>방법: (Visual Basic) 메모리를 절약 하는 사용자 지정 이벤트 선언
 이 응용 프로그램의 메모리 사용량을 낮게 유지 하는 중요 한 몇 가지 경우가 있습니다. 사용자 지정 이벤트를 처리 하는 이벤트에 대해서만 메모리를 사용 하도록 응용 프로그램을 허용 합니다.  

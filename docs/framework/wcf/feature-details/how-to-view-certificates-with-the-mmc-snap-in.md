@@ -5,11 +5,11 @@ helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
 ms.openlocfilehash: 69f79b64250ff46524e7b4720d13351774875a3f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972733"
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>방법: MMC 스냅인을 사용 하 여 인증서 보기
 보안 클라이언트 또는 서비스를 만들 때 사용할 수 있습니다는 [인증서](working-with-certificates.md) 자격 증명으로 합니다. 예를 들어, 일반적인 자격 증명 형식은 X.509 인증서를 사용 하 여 만든는 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType> 메서드. 

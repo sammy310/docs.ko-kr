@@ -7,11 +7,11 @@ helpviewer_keywords:
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
 ms.openlocfilehash: 84525e58487ce9b0bc26f77ff8dbced734bc90a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008475"
 ---
 # <a name="opacity-masks-overview"></a>불투명 마스크 개요
 불투명 마스크를 사용하여 요소 또는 시각적 개체의 부분을 투명하게 또는 부분적으로 투명하게 만들 수 있습니다. 적용할 불투명 마스크를 만들려면를 <xref:System.Windows.Media.Brush> 에 <xref:System.Windows.UIElement.OpacityMask%2A> 요소의 속성 또는 <xref:System.Windows.Media.Visual>합니다.  브러시가 요소 또는 시각적 개체에 매핑되고, 각 브러시 픽셀의 불투명도 값을 사용하여 요소 또는 시각적 개체의 각 해당 픽셀에 대한 결과 불투명도가 결정됩니다.  
@@ -36,21 +36,21 @@ ms.locfileid: "59080087"
 ## <a name="creating-an-opacity-mask"></a>불투명 마스크 만들기  
  불투명 마스크를 만들려면는 <xref:System.Windows.Media.Brush> 에 적용 된 <xref:System.Windows.UIElement.OpacityMask%2A> 요소 또는 시각적 개체의 속성입니다. 모든 형식을 사용할 수 있습니다 <xref:System.Windows.Media.Brush> 를 불투명 마스크로 합니다.  
   
--   <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush>: 요소 또는 시각적 개체가 보기에서 확인 하는 데 사용 합니다.  
+- <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush>: 요소 또는 시각적 개체가 보기에서 확인 하는 데 사용 합니다.  
   
      다음 이미지는 <xref:System.Windows.Media.LinearGradientBrush> 불투명 마스크로 사용 합니다.  
   
      ![LinearGradientBrush 불투명도 마스크가 있는 개체](./media/wcpsdk-graphicsmm-brushes-lineagradientopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_lineagradientopacitymasksingle")  
 LinearGradientBrush 불투명 마스크 예제  
   
--   <xref:System.Windows.Media.ImageBrush>: 소프트 또는 찢어진 가장자리 효과 및 질감을 만들려면 사용 합니다.  
+- <xref:System.Windows.Media.ImageBrush>: 소프트 또는 찢어진 가장자리 효과 및 질감을 만들려면 사용 합니다.  
   
      다음 이미지는 <xref:System.Windows.Media.ImageBrush> 불투명 마스크로 사용 합니다.  
   
      ![ImageBrush 불투명도 마스크가 있는 개체](./media/wcpsdk-graphicsmm-brushes-imageasopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_imageasopacitymasksingle")  
 LinearGradientBrush 불투명 마스크 예제  
   
--   <xref:System.Windows.Media.DrawingBrush>: 도형, 이미지 및 그라데이션 패턴에서 복잡 한 불투명 마스크를 만들려면 사용 합니다.  
+- <xref:System.Windows.Media.DrawingBrush>: 도형, 이미지 및 그라데이션 패턴에서 복잡 한 불투명 마스크를 만들려면 사용 합니다.  
   
      다음 이미지는 <xref:System.Windows.Media.DrawingBrush> 불투명 마스크로 사용 합니다.  
   

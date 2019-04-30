@@ -8,11 +8,11 @@ helpviewer_keywords:
 - element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
 ms.openlocfilehash: c247ada67f6554362f287cf252dd49856c4995da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955586"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>코드에서 요소 이름으로 사용되는 키워드(Visual Basic)
 모든 프로그램 요소-변수, 클래스 또는 멤버와 같은-제한 된 키워드와 동일한 이름을 가질 수 있습니다. 예를 들어 라는 변수를 만들 수 있습니다 `Loop`합니다. 그러나 프로그램 버전을 가리키도록-제한적으로 동일한 이름이 있는 `Loop` 키워드-전체 한정 문자열 앞에 또는 대괄호로 묶어야 합니다 (`[ ]`) 다음 예제와 같이 합니다.  

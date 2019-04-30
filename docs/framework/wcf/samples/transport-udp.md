@@ -3,11 +3,11 @@ title: '전송: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
 ms.openlocfilehash: 8d72ab5c7d8c461cd2ce4d4003d449ac9fe7e807
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007723"
 ---
 # <a name="transport-udp"></a>전송: UDP
 UDP 전송 샘플을 UDP 유니캐스트 및 멀티 캐스트를 사용자 지정 Windows Communication Foundation (WCF) 전송으로 구현 하는 방법에 설명 합니다. 이 샘플에서는 채널 프레임 워크를 사용 하 여 WCF 모범 사례를 따르면 wcf에서 사용자 지정 전송을 만드는 권장된 절차를 설명 합니다. 사용자 지정 전송을 만드는 단계는 다음과 같습니다.  
@@ -32,15 +32,15 @@ UDP 전송 샘플을 UDP 유니캐스트 및 멀티 캐스트를 사용자 지�
 ## <a name="message-exchange-patterns"></a>메시지 교환 패턴  
  사용자 지정 전송을 작성하는 첫 번째 단계는 전송에 필요한 MEP(메시지 교환 패턴)를 결정하는 것입니다. 다음과 같은 세 개의 MEP가 있습니다.  
   
--   데이터그램(IInputChannel/IOutputChannel)  
+- 데이터그램(IInputChannel/IOutputChannel)  
   
      데이터그램 MEP를 사용하면 클라이언트가 메시지를 보낸 후 회신을 기다리지 않는 "fire and forget" 교환을 사용하여 메시지를 보냅니다. 실행 후 제거 교환은 성공적인 전달에 대한 out-of-band 확인이 필요한 교환입니다. 메시지는 전송 중에 손실되어 서비스에 전달되지 않을 수 있습니다. 보내기 작업이 클라이언트 쪽에서 완료되더라도 원격 엔드포인트에서 메시지를 수신했다고 보장할 수는 없습니다. 데이터그램은 메시징을 위한 기본적인 빌딩 블록으로, 이 위에 신뢰할 수 있는 프로토콜 및 보안 프로토콜을 포함한 고유 프로토콜을 빌드할 수 있습니다. 클라이언트 데이터그램 채널은 <xref:System.ServiceModel.Channels.IOutputChannel> 인터페이스를 구현하고, 서비스 데이터그램 채널은 <xref:System.ServiceModel.Channels.IInputChannel> 인터페이스를 구현합니다.  
   
--   요청-응답(IRequestChannel/IReplyChannel)  
+- 요청-응답(IRequestChannel/IReplyChannel)  
   
      이 MEP에서는 메시지가 전송되고 회신이 수신됩니다. 이 패턴은 요청-응답 쌍으로 구성됩니다. 요청-응답 호출의 예로 RPC(원격 프로시저 호출)와 브라우저 GET를 들 수 있습니다. 이 패턴을 반이중이라고도 합니다. 이 MEP에서 클라이언트 채널은 <xref:System.ServiceModel.Channels.IRequestChannel>을 구현하고 서비스 채널은 <xref:System.ServiceModel.Channels.IReplyChannel>을 구현합니다.  
   
--   이중(IDuplexChannel)  
+- 이중(IDuplexChannel)  
   
      이중 MEP를 사용하면 임의 개수의 메시지를 클라이언트에서 보내고 임의의 순서로 받을 수 있습니다. 이중 MEP는 말로 전달되는 각 단어가 메시지에 해당하는 전화 통화와 같습니다. 이 MEP에서는 양측의 송/수신이 가능하기 때문에 클라이언트와 서비스 채널에서 <xref:System.ServiceModel.Channels.IDuplexChannel> 인터페이스를 구현합니다.  
   
@@ -52,17 +52,17 @@ UDP 전송 샘플을 UDP 유니캐스트 및 멀티 캐스트를 사용자 지�
 ### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>ICommunicationObject 및 WCF 개체 수명 주기  
  WCF에 같은 개체의 수명 주기 관리에 사용 되는 일반적인 상태 시스템이 <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory>, 및 <xref:System.ServiceModel.Channels.IChannelListener> 통신에 사용 되는 합니다. 이러한 통신 개체의 상태는 5가지로 나타낼 수 있습니다. 이러한 상태는 <xref:System.ServiceModel.CommunicationState> 열거형으로 나타내며 다음과 같습니다.  
   
--   만들어집니다. 상태는 <xref:System.ServiceModel.ICommunicationObject> 가 처음 인스턴스화 되었을 때. 이 상태에서는 I/O(입/출력)이 발생하지 않습니다.  
+- 만들어집니다. 상태는 <xref:System.ServiceModel.ICommunicationObject> 가 처음 인스턴스화 되었을 때. 이 상태에서는 I/O(입/출력)이 발생하지 않습니다.  
   
--   Opening: 개체가이 상태로 전환 될 때 <xref:System.ServiceModel.ICommunicationObject.Open%2A> 라고 합니다. 이때 속성은 변경할 수 없으며 입/출력이 시작될 수 있습니다. Created 상태에서만 이 상태로 전환될 수 있습니다.  
+- Opening: 개체가이 상태로 전환 될 때 <xref:System.ServiceModel.ICommunicationObject.Open%2A> 라고 합니다. 이때 속성은 변경할 수 없으며 입/출력이 시작될 수 있습니다. Created 상태에서만 이 상태로 전환될 수 있습니다.  
   
--   열: 열기 프로세스가 완료 될 때이 상태로 전환 개체입니다. Opening 상태에서만 이 상태로 전환될 수 있습니다. 이때 개체는 전송을 위해 충분히 사용 가능한 상태입니다.  
+- 열: 열기 프로세스가 완료 될 때이 상태로 전환 개체입니다. Opening 상태에서만 이 상태로 전환될 수 있습니다. 이때 개체는 전송을 위해 충분히 사용 가능한 상태입니다.  
   
--   닫기: 개체가이 상태로 전환 될 때 <xref:System.ServiceModel.ICommunicationObject.Close%2A> 정상적인 종료를 위해 호출 됩니다. Opened 상태에서만 이 상태로 전환될 수 있습니다.  
+- 닫기: 개체가이 상태로 전환 될 때 <xref:System.ServiceModel.ICommunicationObject.Close%2A> 정상적인 종료를 위해 호출 됩니다. Opened 상태에서만 이 상태로 전환될 수 있습니다.  
   
--   닫힙니다. Closed에서 상태의 개체는 더 이상 사용할 수 없습니다. 일반적으로 검사를 위해 대부분의 구성에 액세스할 수 있지만 통신은 이루어질 수 없습니다. 이 상태는 삭제된 상태와 같습니다.  
+- 닫힙니다. Closed에서 상태의 개체는 더 이상 사용할 수 없습니다. 일반적으로 검사를 위해 대부분의 구성에 액세스할 수 있지만 통신은 이루어질 수 없습니다. 이 상태는 삭제된 상태와 같습니다.  
   
--   오류가 발생 했습니다. Faulted 상태의 개체는 검사에 액세스할 수 있지만 더 이상 사용할 수 없습니다. 복구 불가능한 오류가 발생하면 해당 개체는 이 상태로 전환됩니다. 이 상태에서만 전환에는 `Closed` 상태입니다.  
+- 오류가 발생 했습니다. Faulted 상태의 개체는 검사에 액세스할 수 있지만 더 이상 사용할 수 없습니다. 복구 불가능한 오류가 발생하면 해당 개체는 이 상태로 전환됩니다. 이 상태에서만 전환에는 `Closed` 상태입니다.  
   
  각 상태 전환 시 실행되는 이벤트가 있습니다. <xref:System.ServiceModel.ICommunicationObject.Abort%2A> 메서드는 언제든지 호출 가능하며, 개체가 현재 상태에서 Closed 상태로 즉시 전환되게 합니다. <xref:System.ServiceModel.ICommunicationObject.Abort%2A>를 호출하면 완료되지 않은 작업이 모두 종료됩니다.  
   
@@ -70,13 +70,13 @@ UDP 전송 샘플을 UDP 유니캐스트 및 멀티 캐스트를 사용자 지�
 ## <a name="channel-factory-and-channel-listener"></a>채널 팩터리 및 채널 수신기  
  사용자 지정 전송을 작성하는 다음 단계는 클라이언트 채널을 위한 <xref:System.ServiceModel.Channels.IChannelFactory> 및 서비스 채널을 위한 <xref:System.ServiceModel.Channels.IChannelListener>의 구현을 만드는 것입니다. 채널 계층은 채널을 만들기 위해 팩토리 패턴을 사용합니다. WCF는이 프로세스에 대 한 기본 클래스 도우미를 제공합니다.  
   
--   <xref:System.ServiceModel.Channels.CommunicationObject> 클래스는 <xref:System.ServiceModel.ICommunicationObject>를 구현하고 2단계에서 설명한 상태 시스템을 적용합니다. 
+- <xref:System.ServiceModel.Channels.CommunicationObject> 클래스는 <xref:System.ServiceModel.ICommunicationObject>를 구현하고 2단계에서 설명한 상태 시스템을 적용합니다. 
 
--   <xref:System.ServiceModel.Channels.ChannelManagerBase> 클래스는 <xref:System.ServiceModel.Channels.CommunicationObject>를 구현하고 <xref:System.ServiceModel.Channels.ChannelFactoryBase> 및 <xref:System.ServiceModel.Channels.ChannelListenerBase>에 대한 통합 기본 클래스를 제공합니다. <xref:System.ServiceModel.Channels.ChannelManagerBase> 클래스는 <xref:System.ServiceModel.Channels.ChannelBase>을 구현하는 기본 클래스인 <xref:System.ServiceModel.Channels.IChannel>와 함께 사용됩니다.  
+- <xref:System.ServiceModel.Channels.ChannelManagerBase> 클래스는 <xref:System.ServiceModel.Channels.CommunicationObject>를 구현하고 <xref:System.ServiceModel.Channels.ChannelFactoryBase> 및 <xref:System.ServiceModel.Channels.ChannelListenerBase>에 대한 통합 기본 클래스를 제공합니다. <xref:System.ServiceModel.Channels.ChannelManagerBase> 클래스는 <xref:System.ServiceModel.Channels.ChannelBase>을 구현하는 기본 클래스인 <xref:System.ServiceModel.Channels.IChannel>와 함께 사용됩니다.  
   
--   <xref:System.ServiceModel.Channels.ChannelFactoryBase> 클래스 구현 <xref:System.ServiceModel.Channels.ChannelManagerBase> 및 <xref:System.ServiceModel.Channels.IChannelFactory> 통합 된 `CreateChannel` 오버 로드를 하나의 `OnCreateChannel` 추상 메서드.  
+- <xref:System.ServiceModel.Channels.ChannelFactoryBase> 클래스 구현 <xref:System.ServiceModel.Channels.ChannelManagerBase> 및 <xref:System.ServiceModel.Channels.IChannelFactory> 통합 된 `CreateChannel` 오버 로드를 하나의 `OnCreateChannel` 추상 메서드.  
   
--   <xref:System.ServiceModel.Channels.ChannelListenerBase> 클래스는 <xref:System.ServiceModel.Channels.IChannelListener>을 구현합니다. 이 클래스는 기본 상태 관리를 담당합니다.  
+- <xref:System.ServiceModel.Channels.ChannelListenerBase> 클래스는 <xref:System.ServiceModel.Channels.IChannelListener>을 구현합니다. 이 클래스는 기본 상태 관리를 담당합니다.  
   
  이 샘플에서 팩터리 구현은 UdpChannelFactory.cs에 포함되어 있고, 수신기 구현은 UdpChannelListener.cs에 포함되어 있습니다. <xref:System.ServiceModel.Channels.IChannel> 구현은 UdpOutputChannel.cs 및 UdpInputChannel.cs에 있습니다.  
   
@@ -255,9 +255,9 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
 ## <a name="adding-a-standard-binding"></a>표준 바인딩 추가  
  바인딩 요소를 다음 두 가지 방법으로 사용할 수 있습니다.  
   
--   사용자 지정 바인딩을 통해: 사용자 지정 바인딩에 임의의 바인딩 요소 집합에 따라 고유한 바인딩을 만들 수 있습니다.  
+- 사용자 지정 바인딩을 통해: 사용자 지정 바인딩에 임의의 바인딩 요소 집합에 따라 고유한 바인딩을 만들 수 있습니다.  
   
--   해당 바인딩 요소가 포함된 시스템 제공 바인딩 사용 WCF와 같은 다양 한 시스템 정의 바인딩은 이러한를 제공 합니다 `BasicHttpBinding`하십시오 `NetTcpBinding`, 및 `WsHttpBinding`합니다. 이러한 바인딩 각각은 제대로 정의된 프로필에 연결됩니다.  
+- 해당 바인딩 요소가 포함된 시스템 제공 바인딩 사용 WCF와 같은 다양 한 시스템 정의 바인딩은 이러한를 제공 합니다 `BasicHttpBinding`하십시오 `NetTcpBinding`, 및 `WsHttpBinding`합니다. 이러한 바인딩 각각은 제대로 정의된 프로필에 연결됩니다.  
   
  샘플에서는 `SampleProfileUdpBinding`에서 파생된 <xref:System.ServiceModel.Channels.Binding>의 프로필 바인딩을 구현합니다. `SampleProfileUdpBinding`은 최대 네 개의 바인딩 요소, 즉 `UdpTransportBindingElement`, `TextMessageEncodingBindingElement CompositeDuplexBindingElement` 및 `ReliableSessionBindingElement`를 포함합니다.  
   

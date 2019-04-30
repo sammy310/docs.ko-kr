@@ -3,11 +3,11 @@ title: LINQ to SQL의 보안
 ms.date: 03/30/2017
 ms.assetid: d49787f7-414e-4c71-aa33-80a5895536b1
 ms.openlocfilehash: 6af073a86b0feaba2fdcd9facd9474bb334096e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037000"
 ---
 # <a name="security-in-linq-to-sql"></a>LINQ to SQL의 보안
 데이터베이스에 연결할 때는 항상 보안 위험이 따릅니다. LINQ to SQL에서는 SQL Server에서 데이터를 사용하는 여러 가지 새로운 방법을 제공하지만 추가적인 보안 메커니즘은 지원하지 않습니다.  
@@ -25,13 +25,13 @@ ms.locfileid: "59078146"
   
  통합 보안을 사용하지 않는 경우에는 연결 문자열에 일반 텍스트 암호를 사용해야 합니다. 연결 문자열을 보호하는 가장 좋은 방법은 다음과 같습니다. 아래 항목은 위험 수준에 따라 오름차순으로 나열되어 있습니다.   
   
--   통합 보안을 사용합니다.  
+- 통합 보안을 사용합니다.  
   
--   암호를 사용하여 연결 문자열을 보호하고 연결 문자열의 경유를 최소화합니다.  
+- 암호를 사용하여 연결 문자열을 보호하고 연결 문자열의 경유를 최소화합니다.  
   
--   연결 문자열 대신 노출 기간이 제한되는 <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> 클래스를 사용합니다. <xref:System.Data.Linq.DataContext?displayProperty=nameWithType>을 사용하여 LINQ to SQL <xref:System.Data.SqlClient.SqlConnection> 클래스를 인스턴스화할 수 있습니다.  
+- 연결 문자열 대신 노출 기간이 제한되는 <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> 클래스를 사용합니다. <xref:System.Data.Linq.DataContext?displayProperty=nameWithType>을 사용하여 LINQ to SQL <xref:System.Data.SqlClient.SqlConnection> 클래스를 인스턴스화할 수 있습니다.  
   
--   모든 연결 문자열의 수명과 접근할 수 있는 지점을 최소화합니다.  
+- 모든 연결 문자열의 수명과 접근할 수 있는 지점을 최소화합니다.  
   
 ## <a name="see-also"></a>참고자료
 

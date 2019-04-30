@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
 ms.openlocfilehash: 079decb76b45566f354418d671145f0c284628c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007736"
 ---
 # <a name="tracing-and-message-logging"></a>추적 및 메시지 로깅
 이 샘플에서는 추적 및 메시지 로깅을 사용하도록 설정하는 방법을 보여 줍니다. 결과 추적 및 메시지 로그를 사용 하 여 표시 되는 [Service Trace Viewer 도구 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)합니다. 이 샘플은 기반 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)합니다.  
@@ -52,11 +52,11 @@ ms.locfileid: "59322136"
   
  사용자 정의 동작 추적을 만들어 ServiceModel이 제공되는 추적을 확장할 수 있습니다. 사용자 정의 동작 추적을 통해 사용자는 추적 동작을 만들어 다음을 수행할 수 있습니다.  
   
--   추적을 작업의 논리 단위로 그룹화합니다.  
+- 추적을 작업의 논리 단위로 그룹화합니다.  
   
--   전송과 전파를 통해 동작을 상호 연결합니다.  
+- 전송과 전파를 통해 동작을 상호 연결합니다.  
   
--   WCF 추적 (예: 로그 파일의 디스크 공간 비용)의 성능 비용을 줄일 수 있습니다.  
+- WCF 추적 (예: 로그 파일의 디스크 공간 비용)의 성능 비용을 줄일 수 있습니다.  
   
  사용자 정의 동작 추적에 대 한 자세한 내용은 참조 하십시오 합니다 [추적 확장](../../../../docs/framework/wcf/samples/extending-tracing.md) 샘플입니다.  
   

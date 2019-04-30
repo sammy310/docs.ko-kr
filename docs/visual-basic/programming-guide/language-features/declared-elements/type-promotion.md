@@ -11,11 +11,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
 ms.openlocfilehash: f7ac6bfb944da8bd50e035ba97b2b513176dc661
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973305"
 ---
 # <a name="type-promotion-visual-basic"></a>형식 승격(Visual Basic)
 모듈의 프로그래밍 요소를 선언 하면 Visual Basic 모듈을 포함 하는 네임 스페이스에 해당 범위를 승격 합니다. 이 이라고 *형식 승격*합니다.  
@@ -54,9 +54,9 @@ ms.locfileid: "58838874"
 ## <a name="recommendations"></a>권장 사항  
  다음 권장 사항을 바람직한 프로그래밍 관행을 나타냅니다.  
   
--   **고유 이름입니다.** 프로그래밍 요소의 이름을 지정 하는 완전히 제어할 경우 때 항상 고유 이름을 사용 하는 것이 좋습니다. 동일한 이름 추가 자격 요구 및 코드를 읽기 어렵게 만들 수 있습니다. 사소한 오류와 예기치 않은 결과가 발생할 수도 있습니다.  
+- **고유 이름입니다.** 프로그래밍 요소의 이름을 지정 하는 완전히 제어할 경우 때 항상 고유 이름을 사용 하는 것이 좋습니다. 동일한 이름 추가 자격 요구 및 코드를 읽기 어렵게 만들 수 있습니다. 사소한 오류와 예기치 않은 결과가 발생할 수도 있습니다.  
   
--   **정규화 합니다.** 모듈과 동일한 네임 스페이스의 다른 요소를 사용 하 여 작업할 때 가장 안전한 방법은 항상 모든 프로그래밍 요소에 대 한 정규화를 사용 하는 것입니다. 형식 승격 모듈 멤버의 수 이며 해당 멤버를 완벽 하 게 적합 하지 않습니다, 경우 실수로 다른 프로그래밍 요소를 액세스할 수 있습니다.  
+- **정규화 합니다.** 모듈과 동일한 네임 스페이스의 다른 요소를 사용 하 여 작업할 때 가장 안전한 방법은 항상 모든 프로그래밍 요소에 대 한 정규화를 사용 하는 것입니다. 형식 승격 모듈 멤버의 수 이며 해당 멤버를 완벽 하 게 적합 하지 않습니다, 경우 실수로 다른 프로그래밍 요소를 액세스할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
 

@@ -3,11 +3,11 @@ title: SQL-CLR 형식 매핑
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
 ms.openlocfilehash: a2c70f5243dc3506a26824c83beb3ff454482f10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037702"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR 형식 매핑
 LINQ to SQL에서 관계형 데이터베이스의 데이터 모델은 사용자가 선택한 프로그래밍 언어로 표현되는 개체 모델에 매핑됩니다. 응용 프로그램을 실행하면 LINQ to SQL에서는 개체 모델의 통합 언어 쿼리를 SQL로 변환하여 실행을 위해 데이터베이스로 전송합니다. 데이터베이스에서 결과가 반환되면 LINQ to SQL에서는 해당 결과를 사용자의 프로그래밍 언어로 작업할 수 있는 개체로 다시 변환합니다.  
@@ -16,23 +16,23 @@ LINQ to SQL에서 관계형 데이터베이스의 데이터 모델은 사용자�
   
  이 항목에서는 다음 사항에 대해 설명합니다.  
   
--   [기본 형식 매핑](#DefaultTypeMapping)  
+- [기본 형식 매핑](#DefaultTypeMapping)  
   
--   [형식 매핑 런타임 동작 매트릭스](#BehaviorMatrix)  
+- [형식 매핑 런타임 동작 매트릭스](#BehaviorMatrix)  
   
--   [CLR 및 SQL 실행 간의 동작 차이](#BehaviorDiffs)  
+- [CLR 및 SQL 실행 간의 동작 차이](#BehaviorDiffs)  
   
--   [Enum 매핑](#EnumMapping)  
+- [Enum 매핑](#EnumMapping)  
   
--   [숫자 매핑](#NumericMapping)  
+- [숫자 매핑](#NumericMapping)  
   
--   [텍스트 및 XML 매핑](#TextMapping)  
+- [텍스트 및 XML 매핑](#TextMapping)  
   
--   [날짜 및 시간 매핑](#DateMapping)  
+- [날짜 및 시간 매핑](#DateMapping)  
   
--   [이진 매핑](#BinaryMapping)  
+- [이진 매핑](#BinaryMapping)  
   
--   [기타 매핑](#MiscMapping)  
+- [기타 매핑](#MiscMapping)  
   
 <a name="DefaultTypeMapping"></a>   
 ## <a name="default-type-mapping"></a>기본 형식 매핑  
@@ -58,21 +58,21 @@ LINQ to SQL에서 관계형 데이터베이스의 데이터 모델은 사용자�
   
  예를 들어 다음은 CLR과 SQL Server 사이의 몇 가지 동작 차이점입니다.  
   
--   SQL Server에서는 일부 데이터 형식이 CLR에서 이에 해당되는 데이터 형식과 다르게 정렬됩니다. 예를 들어 SQL Server의 `UNIQUEIDENTIFIER` 데이터 형식은 CLR의 <xref:System.Guid?displayProperty=nameWithType> 데이터 형식과 다르게 정렬됩니다.  
+- SQL Server에서는 일부 데이터 형식이 CLR에서 이에 해당되는 데이터 형식과 다르게 정렬됩니다. 예를 들어 SQL Server의 `UNIQUEIDENTIFIER` 데이터 형식은 CLR의 <xref:System.Guid?displayProperty=nameWithType> 데이터 형식과 다르게 정렬됩니다.  
   
--   SQL Server에서는 일부 문자열의 비교 연산이 CLR과 다르게 처리됩니다. SQL Server의 경우 문자열 비교 동작은 서버의 데이터 정렬 설정에 따라 다릅니다. 자세한 내용은 [데이터 정렬 작업](https://go.microsoft.com/fwlink/?LinkId=115330) Microsoft SQL Server 온라인 설명서의 합니다.  
+- SQL Server에서는 일부 문자열의 비교 연산이 CLR과 다르게 처리됩니다. SQL Server의 경우 문자열 비교 동작은 서버의 데이터 정렬 설정에 따라 다릅니다. 자세한 내용은 [데이터 정렬 작업](https://go.microsoft.com/fwlink/?LinkId=115330) Microsoft SQL Server 온라인 설명서의 합니다.  
   
--   SQL Server에서는 매핑된 일부 함수에 대해 CLR과는 다른 값을 반환할 수 있습니다. 예를 들어 두 문자열이 후행 공백에서만 차이가 있는 경우 SQL Server에서는 두 문자열이 동일한 것으로 간주되는 반면 CLR에서는 두 문자열이 다른 것으로 간주되기 때문에 같음 함수가 각각 다른 값을 반환합니다.  
+- SQL Server에서는 매핑된 일부 함수에 대해 CLR과는 다른 값을 반환할 수 있습니다. 예를 들어 두 문자열이 후행 공백에서만 차이가 있는 경우 SQL Server에서는 두 문자열이 동일한 것으로 간주되는 반면 CLR에서는 두 문자열이 다른 것으로 간주되기 때문에 같음 함수가 각각 다른 값을 반환합니다.  
   
 <a name="EnumMapping"></a>   
 ## <a name="enum-mapping"></a>Enum 매핑  
  LINQ to SQL에서는 다음과 같은 두 가지 방법으로 CLR <xref:System.Enum?displayProperty=nameWithType> 형식을 SQL Server 형식에 매핑합니다.  
   
--   SQL 숫자 형식에 대한 매핑(`TINYINT`, `SMALLINT`, `INT`, `BIGINT`)  
+- SQL 숫자 형식에 대한 매핑(`TINYINT`, `SMALLINT`, `INT`, `BIGINT`)  
   
      CLR <xref:System.Enum?displayProperty=nameWithType> 형식을 SQL 숫자 형식에 매핑할 경우 CLR <xref:System.Enum?displayProperty=nameWithType>의 기본 정수 값이 SQL Server 데이터베이스 열의 값에 매핑됩니다. 예를 들어 <xref:System.Enum?displayProperty=nameWithType>라는 `DaysOfWeek`에 기본 정수 값이 3인 `Tue`라는 멤버가 포함된 경우 해당 멤버는 데이터베이스 값 3에 매핑됩니다.  
   
--   SQL 텍스트 형식에 대한 매핑(`CHAR`, `NCHAR`, `VARCHAR`, `NVARCHAR`)  
+- SQL 텍스트 형식에 대한 매핑(`CHAR`, `NCHAR`, `VARCHAR`, `NVARCHAR`)  
   
      CLR <xref:System.Enum?displayProperty=nameWithType> 형식을 SQL 텍스트 형식에 매핑할 경우 SQL 데이터베이스 값이 CLR <xref:System.Enum?displayProperty=nameWithType> 멤버의 이름에 매핑됩니다. 예를 들어 <xref:System.Enum?displayProperty=nameWithType>라는 `DaysOfWeek`에 기본 정수 값이 3인 `Tue`라는 멤버가 포함된 경우 해당 멤버는 데이터베이스 값 `Tue`에 매핑됩니다.  
   
@@ -154,13 +154,13 @@ LINQ to SQL에서 관계형 데이터베이스의 데이터 모델은 사용자�
 ### <a name="xml-types"></a>XML 형식  
  SQL Server `XML` 데이터 형식은 Microsoft SQL Server 2005부터 사용할 수 있습니다. SQL Server `XML` 데이터 형식은 <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XDocument> 또는 <xref:System.String>에 매핑할 수 있습니다. <xref:System.Xml.Linq.XElement>로 읽어 들일 수 없는 XML 조각이 열에 저장된 경우 런타임 오류를 방지하기 위해 해당 열을 <xref:System.String>에 매핑해야 합니다. <xref:System.String>에 매핑해야 하는 XML 조각은 다음과 같습니다.  
   
--   XML 요소의 시퀀스  
+- XML 요소의 시퀀스  
   
--   특성  
+- 특성  
   
--   PI(공용 식별자)  
+- PI(공용 식별자)  
   
--   설명  
+- 설명  
   
  매핑할 수는 있지만 <xref:System.Xml.Linq.XElement> 하 고 <xref:System.Xml.Linq.XDocument> 에 표시 된 대로 SQL Server에는 [형식 매핑 런타임 동작 매트릭스](#BehaviorMatrix), <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 메서드가 이러한 형식에 대 한 기본 SQL Server 형식 매핑이 없습니다.  
   

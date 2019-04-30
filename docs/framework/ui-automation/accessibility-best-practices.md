@@ -6,11 +6,11 @@ helpviewer_keywords:
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
 ms.openlocfilehash: a20ecb8fb8d2ea4efdd244c3460dc9c07e22b538
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033230"
 ---
 # <a name="accessibility-best-practices"></a>액세스 가능성에 대한 유용한 정보
 > [!NOTE]
@@ -78,9 +78,9 @@ ms.locfileid: "59074237"
   
  애플리케이션에서는 다음 키보드 인터페이스를 제공해야 합니다.  
   
--   단추, 링크 또는 목록 상자와 같이 사용자가 조작할 수 있는 모든 컨트롤에 대한 탭 정지  
+- 단추, 링크 또는 목록 상자와 같이 사용자가 조작할 수 있는 모든 컨트롤에 대한 탭 정지  
   
--   논리적 탭 순서  
+- 논리적 탭 순서  
   
 <a name="Show_the_Keyboard_Focus"></a>   
 ### <a name="show-the-keyboard-focus"></a>키보드 포커스 표시  
@@ -90,11 +90,11 @@ ms.locfileid: "59074237"
   
  애플리케이션에서는 키보드 포커스를 통해 다음을 수행해야 합니다.  
   
--   키보드 포커스가 항상 한 항목에 있어야 함  
+- 키보드 포커스가 항상 한 항목에 있어야 함  
   
--   키보드 포커스가 표시되고 분명해야 함  
+- 키보드 포커스가 표시되고 분명해야 함  
   
--   선택 항목 및/또는 포커스가 있는 항목이 시각적으로 강조되어야 함  
+- 선택 항목 및/또는 포커스가 있는 항목이 시각적으로 강조되어야 함  
   
 <a name="Support_Navigation_Standards_and_Powerful_Navigation"></a>   
 ### <a name="support-navigation-standards-and-powerful-navigation-schemes"></a>탐색 표준 및 강력한 탐색 체계 지원  
@@ -102,11 +102,11 @@ ms.locfileid: "59074237"
   
  애플리케이션에서는 다음 키보드 인터페이스를 제공해야 합니다.  
   
--   모든 명령, 메뉴 및 컨트롤에 대한 바로 가기 키 및 밑줄이 표시된 액세스 키  
+- 모든 명령, 메뉴 및 컨트롤에 대한 바로 가기 키 및 밑줄이 표시된 액세스 키  
   
--   중요 링크에 대한 키보드 바로 가기  
+- 중요 링크에 대한 키보드 바로 가기  
   
--   모든 메뉴 항목에는 액세스 키가 있고 모든 단추와 모든 명령에는 액셀러레이터 키가 있습니다.  
+- 모든 메뉴 항목에는 액세스 키가 있고 모든 단추와 모든 명령에는 액셀러레이터 키가 있습니다.  
   
 <a name="Do_not_let_Mouse_Location_Interfere_with_Keyboard"></a>   
 ### <a name="do-not-let-mouse-location-interfere-with-keyboard-navigation"></a>마우스 위치가 키보드 탐색을 방해하면 안 됨  

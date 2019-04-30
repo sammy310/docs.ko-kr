@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
 author: KrzysztofCwalina
 ms.openlocfilehash: ae1b7ce83f6698cef470aabf07a12d89042ab8a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026395"
 ---
 # <a name="general-naming-conventions"></a>일반 명명 규칙
 이 섹션에서는 일반 명명 규칙 단어 선택와 관련 된 약어 및 머리글자어 및 권장 사항을 사용 하 여 언어별 이름을 사용 하지 않도록 하는 방법에 대 한 지침을 설명 합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "54667689"
   
  **✓ DO** 드문 경우 식별자 의미가 없는 해당 형식 이상의 때의 언어 관련 이름 대신 일반 CLR 형식 이름을 사용 합니다.  
   
- 변환할 메서드 예를 들어 <xref:System.Int64> 명명할 `ToInt64`가 아닌 `ToLong` (때문에 <xref:System.Int64> 은 C#에 대 한 CLR 이름-특정 별칭 `long`). 다음 표에서 CLR 형식 이름 (뿐만 아니라 해당 형식 이름은 C#, Visual Basic 및 c + +)를 사용 하 여 몇 가지 기본 데이터 형식을 표시 합니다.  
+ 변환할 메서드 예를 들어 <xref:System.Int64> 명명할 `ToInt64`가 아닌 `ToLong` (때문에 <xref:System.Int64> 은 C#에 대 한 CLR 이름-특정 별칭 `long`). 다음 표에서 몇 가지 기본 데이터 형식을 CLR을 사용 하 여 형식 이름 (해당 형식 이름은 뿐만 아니라 C#, Visual Basic의 경우 및 C++).  
   
 |C#|Visual Basic|C++|CLR|  
 |---------|------------------|-----------|---------|  

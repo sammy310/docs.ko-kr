@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bdc889dd6b2854654bfe43b24afbe4cc19863c80
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59227823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993696"
 ---
 # <a name="icordebugvalue-interface"></a>ICorDebugValue 인터페이스
 디버깅 중인 프로세스에서 값을 나타냅니다. 읽기 또는 쓰기 값 값일 수 있습니다.  

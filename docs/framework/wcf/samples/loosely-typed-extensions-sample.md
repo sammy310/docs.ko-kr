@@ -3,11 +3,11 @@ title: 느슨한 형 확장 샘플
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
 ms.openlocfilehash: 2f80c3379ba9d7e0649a36c5dd1bd552c1da68c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006579"
 ---
 # <a name="loosely-typed-extensions-sample"></a>느슨한 형 확장 샘플
 배포 개체 모델은 확장 데이터, 즉 배포 피드의 XML 표현에는 있지만 <xref:System.ServiceModel.Syndication.SyndicationFeed> 및 <xref:System.ServiceModel.Syndication.SyndicationItem>과 같은 클래스에서 명시적으로 노출되지 않는 정보로 작업할 수 있도록 풍부한 지원을 제공합니다. 이 샘플에서는 확장명 데이터로 작업하는 기본적인 기술을 보여 줍니다.  
@@ -54,15 +54,15 @@ w.w3.org/2001/XMLSchema" xmlns="">
   
  이 문서에는 다음과 같은 확장명 데이터가 포함되어 있습니다.  
   
--   `myAttribute` 요소의 `<feed>` 특성  
+- `myAttribute` 요소의 `<feed>` 특성  
   
--   `<simpleString>` 요소입니다.  
+- `<simpleString>` 요소입니다.  
   
--   `<DataContractExtension>` 요소입니다.  
+- `<DataContractExtension>` 요소입니다.  
   
--   `<XmlSerializerExtension>` 요소입니다.  
+- `<XmlSerializerExtension>` 요소입니다.  
   
--   `<xElementExtension>` 요소입니다.  
+- `<xElementExtension>` 요소입니다.  
   
 ## <a name="writing-extension-data"></a>확장명 데이터 쓰기  
  특성 확장명은 다음 샘플 코드에서와 같이 <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> 컬렉션에 항목을 추가하여 만듭니다.  

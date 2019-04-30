@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 83468e13e1e028b031c31791910c4dd2d792f232
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992123"
 ---
 # <a name="icorprofilerinfogetappdomaininfo-method"></a>ICorProfilerInfo::GetAppDomainInfo 메서드
 응용 프로그램 도메인 ID를 수락합니다. 응용 프로그램 도메인 이름 및 해당 이름을 포함하는 프로세스 ID를 반환합니다.  

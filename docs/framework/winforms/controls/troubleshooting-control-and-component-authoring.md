@@ -12,26 +12,26 @@ helpviewer_keywords:
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
 ms.openlocfilehash: 3ae8a889bf69913d234e31804335ddb08560c30c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009216"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>컨트롤 및 구성 요소 제작 문제 해결
 이 항목에서는 구성 요소와 컨트롤을 개발할 때 발생하는 다음과 같은 일반적인 문제를 나열합니다. 자세한 내용은 [구성 요소를 사용한 프로그래밍](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120))을 참조하세요.  
   
--   도구 상자에 컨트롤을 추가할 수 없습니다.  
+- 도구 상자에 컨트롤을 추가할 수 없습니다.  
   
--   Windows Forms 사용자 정의 컨트롤 또는 구성 요소를 디버깅할 수 없습니다.  
+- Windows Forms 사용자 정의 컨트롤 또는 구성 요소를 디버깅할 수 없습니다.  
   
--   상속된 컨트롤 또는 구성 요소에서 이벤트가 두 번 발생합니다.  
+- 상속된 컨트롤 또는 구성 요소에서 이벤트가 두 번 발생합니다.  
   
--   디자인 타임 오류: "구성 요소를 만들지 못했습니다. '*구성 요소 이름*'"  
+- 디자인 타임 오류: "구성 요소를 만들지 못했습니다. '*구성 요소 이름*'"  
   
--   STAThreadAttribute  
+- STAThreadAttribute  
   
--   도구 상자에 구성 요소 아이콘이 표시되지 않습니다.  
+- 도구 상자에 구성 요소 아이콘이 표시되지 않습니다.  
   
 ## <a name="cannot-add-control-to-toolbox"></a>도구 상자에 컨트롤을 추가할 수 없습니다.  
  다른 프로젝트에서 만든 사용자 지정 컨트롤 또는 타사 컨트롤을 **도구 상자**에 추가하려는 경우 수동으로 수행해야 합니다. 현재 프로젝트가 컨트롤 또는 구성 요소를 포함하는 경우 **도구 상자**에 자동으로 표시되어야 합니다. 자세한 내용은 [연습: 사용자 지정 구성 요소를 사용 하 여 도구 상자에 자동으로 채우기](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)합니다.  
@@ -42,11 +42,11 @@ ms.locfileid: "59343417"
   
 2. **도구 상자 항목 선택** 대화 상자에서 구성 요소를 추가합니다.  
   
-    -   .NET Framework 구성 요소 또는 컨트롤을 추가하려면 **.NET Framework 구성 요소** 탭을 클릭합니다.  
+    - .NET Framework 구성 요소 또는 컨트롤을 추가하려면 **.NET Framework 구성 요소** 탭을 클릭합니다.  
   
          -또는-  
   
-    -   COM 구성 요소 또는 ActiveX 컨트롤을 추가하려면 **COM 구성 요소** 탭을 클릭합니다.  
+    - COM 구성 요소 또는 ActiveX 컨트롤을 추가하려면 **COM 구성 요소** 탭을 클릭합니다.  
   
 3. 컨트롤이 대화 상자에 표시되면 선택되었는지 확인한 다음 **확인**을 클릭합니다.  
   
@@ -54,15 +54,15 @@ ms.locfileid: "59343417"
   
 4. 컨트롤이 대화 상자에 나열되지 않는 경우 다음을 수행합니다.  
   
-    1.  **찾아보기** 단추를 클릭합니다.  
+    1. **찾아보기** 단추를 클릭합니다.  
   
-    2.  컨트롤을 포함하는 .dll 파일이 포함된 폴더로 이동합니다.  
+    2. 컨트롤을 포함하는 .dll 파일이 포함된 폴더로 이동합니다.  
   
-    3.  .dll 파일을 선택하고 **열기**를 클릭합니다.  
+    3. .dll 파일을 선택하고 **열기**를 클릭합니다.  
   
          컨트롤이 대화 상자에 나타납니다.  
   
-    4.  컨트롤이 선택되었는지 확인한 다음 **확인**을 클릭합니다.  
+    4. 컨트롤이 선택되었는지 확인한 다음 **확인**을 클릭합니다.  
   
          컨트롤이 **도구 상자**에 추가됩니다.  
   

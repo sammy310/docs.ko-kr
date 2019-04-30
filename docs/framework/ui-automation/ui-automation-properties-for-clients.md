@@ -9,11 +9,11 @@ helpviewer_keywords:
 - UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
 ms.openlocfilehash: a75b502dc02f0541b9debb6cd1ae23ba10eed8b1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033056"
 ---
 # <a name="ui-automation-properties-for-clients"></a>클라이언트의 UI 자동화 속성
 > [!NOTE]
@@ -41,11 +41,11 @@ ms.locfileid: "59116365"
   
  자세한 내용은 다음 참조 항목을 참조하세요.  
   
--   <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>  
+- <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.FindAll%2A>  
+- <xref:System.Windows.Automation.AutomationElement.FindAll%2A>  
   
--   <xref:System.Windows.Automation.TreeWalker.Condition%2A>  
+- <xref:System.Windows.Automation.TreeWalker.Condition%2A>  
   
 <a name="Retrieving_Properties"></a>   
 ## <a name="retrieving-properties"></a>속성 검색  
@@ -53,9 +53,9 @@ ms.locfileid: "59116365"
   
  또한 다음 메서드 중 하나를 사용하여 <xref:System.Windows.Automation.AutomationElement> 또는 <xref:System.Windows.Automation.AutomationElement.Cached%2A> 구조에서 사용할 수 없는 속성을 비롯한 <xref:System.Windows.Automation.AutomationElement.Current%2A> 또는 컨트롤 패턴 속성을 검색할 수 있습니다.  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>  
   
  이러한 메서드는 전체 범위 속성에 대한 액세스는 물론 약간 향상된 성능을 제공합니다.  
   

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Scroll control pattern
 ms.assetid: 73d64242-6cbb-424c-92dd-dc69530b7899
 ms.openlocfilehash: bb473b7f10aa400dc42303e1acc15c2bdcd34516
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983426"
 ---
 # <a name="implementing-the-ui-automation-scroll-control-pattern"></a>UI 자동화 Scroll 컨트롤 패턴 구현
 > [!NOTE]
@@ -30,17 +30,17 @@ ms.locfileid: "59154533"
 ## <a name="implementation-guidelines-and-conventions"></a>구현 지침 및 규칙  
  Scroll 컨트롤 패턴을 구현할 때는 다음 지침 및 규칙에 유의하세요.  
   
--   이 컨트롤의 자식 항목은 <xref:System.Windows.Automation.Provider.IScrollItemProvider>를 구현해야 합니다.  
+- 이 컨트롤의 자식 항목은 <xref:System.Windows.Automation.Provider.IScrollItemProvider>를 구현해야 합니다.  
   
--   컨테이너 컨트롤의 스크롤 막대는 <xref:System.Windows.Automation.ScrollPattern> 컨트롤 패턴을 지원하지 않습니다. 이 스크롤 막대는 <xref:System.Windows.Automation.RangeValuePattern> 컨트롤 패턴을 지원해야 합니다.  
+- 컨테이너 컨트롤의 스크롤 막대는 <xref:System.Windows.Automation.ScrollPattern> 컨트롤 패턴을 지원하지 않습니다. 이 스크롤 막대는 <xref:System.Windows.Automation.RangeValuePattern> 컨트롤 패턴을 지원해야 합니다.  
   
--   스크롤이 백분율로 측정되면, 스크롤 눈금과 관련된 모든 값 또는 양은 0에서 100까지의 범위로 정규화되어야 합니다.  
+- 스크롤이 백분율로 측정되면, 스크롤 눈금과 관련된 모든 값 또는 양은 0에서 100까지의 범위로 정규화되어야 합니다.  
   
--   <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> 및 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> 는 <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>와 관계가 없습니다.  
+- <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> 및 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> 는 <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>와 관계가 없습니다.  
   
--   하는 경우 <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty>  =  `false` 한 다음 <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> 100%로 설정 해야 하 고 <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> 로 설정 해야 <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>합니다. 마찬가지로, <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> = `false` 일 경우 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> 는 100%로 설정되어야 하며 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> 는 <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>를 참조하세요. 따라서 클라이언트가 원하지 않는 스크롤 방향이 활성화되어 있는 경우 UI 자동화 클라이언트는 <xref:System.Windows.Automation.ScrollPattern.SetScrollPercent%2A> 경합 상태 [를 방지하면서](https://support.microsoft.com/default.aspx?scid=kb;en-us;317723) 메서드 내에서 이러한 속성 값을 사용할 수 있습니다.  
+- 하는 경우 <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty>  =  `false` 한 다음 <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> 100%로 설정 해야 하 고 <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> 로 설정 해야 <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>합니다. 마찬가지로, <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> = `false` 일 경우 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> 는 100%로 설정되어야 하며 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> 는 <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>를 참조하세요. 따라서 클라이언트가 원하지 않는 스크롤 방향이 활성화되어 있는 경우 UI 자동화 클라이언트는 <xref:System.Windows.Automation.ScrollPattern.SetScrollPercent%2A> 경합 상태 [를 방지하면서](https://support.microsoft.com/default.aspx?scid=kb;en-us;317723) 메서드 내에서 이러한 속성 값을 사용할 수 있습니다.  
   
--   <xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A> 는 로캘과 관련됩니다. HorizontalScrollPercent = 100.0으로 설정하는 경우 왼쪽에서 오른쪽으로 읽는 언어(예: 영어)에서 컨트롤의 스크롤 위치는 맨 오른쪽 위치에 해당하는 값으로 설정해야 합니다. 또는 오른쪽에서 왼쪽으로 읽는 언어(예: 아랍어)의 경우 HorizontalScrollPercent = 100.0으로 설정할 경우 스크롤 위치는 맨 왼쪽 위치로 설정해야 합니다.  
+- <xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A> 는 로캘과 관련됩니다. HorizontalScrollPercent = 100.0으로 설정하는 경우 왼쪽에서 오른쪽으로 읽는 언어(예: 영어)에서 컨트롤의 스크롤 위치는 맨 오른쪽 위치에 해당하는 값으로 설정해야 합니다. 또는 오른쪽에서 왼쪽으로 읽는 언어(예: 아랍어)의 경우 HorizontalScrollPercent = 100.0으로 설정할 경우 스크롤 위치는 맨 왼쪽 위치로 설정해야 합니다.  
   
 <a name="Required_Members_for_IScrollProvider"></a>   
 ## <a name="required-members-for-iscrollprovider"></a>IScrollProvider에 필요한 멤버  

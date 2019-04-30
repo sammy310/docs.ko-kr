@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], display modes
 ms.assetid: 9755a030-3f3f-4705-a661-ba5a48a81875
 ms.openlocfilehash: 673780909f6d66168548893e99d79bbfec70a0e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011434"
 ---
 # <a name="data-display-modes-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 데이터 디스플레이 모드
 <xref:System.Windows.Forms.DataGridView> 세 가지 모드로 컨트롤 데이터를 표시할 수 있습니다: 바인딩, 바인딩 해제 됨 및 가상. 요구 사항에 따라 가장 적합 한 모드를 선택 합니다.  

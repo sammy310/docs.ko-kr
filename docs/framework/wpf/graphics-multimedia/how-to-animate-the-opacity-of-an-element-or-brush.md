@@ -1,18 +1,18 @@
 ---
-title: '방법: 요소 또는 브러시의 불투명도에 애니메이션 효과 적용'
+title: '방법: 요소 또는 브러시의 불투명도에 애니메이션 효과 주기'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - opacity [WPF], animating
 - animation [WPF], Opacity property
 ms.assetid: 572af23b-39dd-48d1-9db5-4bca56a4b3d3
 ms.openlocfilehash: f07138a0b68fff050133d477074571c60cd8651e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020194"
 ---
-# <a name="how-to-animate-the-opacity-of-an-element-or-brush"></a>방법: 요소 또는 브러시의 불투명도에 애니메이션 효과 적용
+# <a name="how-to-animate-the-opacity-of-an-element-or-brush"></a>방법: 요소 또는 브러시의 불투명도에 애니메이션 효과 주기
 보기 내부 및 외부 페이드 프레임 워크 요소가 하도록 애니메이션을 적용할 수 해당 <xref:System.Windows.UIElement.Opacity%2A> 하거나 속성에 애니메이션 효과 주기 수를 <xref:System.Windows.Media.Brush.Opacity%2A> 의 속성을 <xref:System.Windows.Media.Brush> (또는 브러시) 칠할 하는 데 사용 합니다. 요소의 불투명도 애니메이션 적용를 사용 하면 및 자식 뷰 내부 및 외부로 페이드 있지만 더 선별적으로 시도해볼 요소의 부분 페이드 되도록 하면 요소를 그리는 데 사용 되는 브러시에 애니메이션을 적용 합니다. 예를 들어 단추의 배경을 그리는 데 사용 되는 브러시의 불투명도 애니메이션 수 있습니다. 이렇게 하면 해당 텍스트를 완전히 불투명 하 게 두고 뷰의 페이드 인 / 아웃 단추의 배경.  
   
 > [!NOTE]

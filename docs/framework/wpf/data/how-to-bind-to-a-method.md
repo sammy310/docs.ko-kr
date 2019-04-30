@@ -7,11 +7,11 @@ helpviewer_keywords:
 - methods [WPF], binding to
 ms.assetid: 5f55e71e-2182-42a0-88d1-700cc1427a7a
 ms.openlocfilehash: 6cdad46fd6d9ef3bc4ce1a13fedb6ff1d639d93e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59123242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967845"
 ---
 # <a name="how-to-bind-to-a-method"></a>방법: 메서드에 바인딩
 다음 예제에서는 사용 하는 메서드를 바인딩하는 방법을 보여 줍니다 <xref:System.Windows.Data.ObjectDataProvider>합니다.  

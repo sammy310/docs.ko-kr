@@ -5,11 +5,11 @@ helpviewer_keywords:
 - operators [Visual Basic]
 ms.assetid: d1fb027c-872b-4ccc-afc8-2380e3f65d4a
 ms.openlocfilehash: 7e65e8e015c88c95c527e148aca6ecb2641afa61
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62028654"
 ---
 # <a name="operators-listed-by-functionality-visual-basic"></a>기능별 연산자 목록(Visual Basic)
 아래에 나열 된 범주 중 하나를 참조 하거나 도움말 목차 Visual Basic 연산자의 사전순 목록을 보려면의이 부분을 엽니다.  

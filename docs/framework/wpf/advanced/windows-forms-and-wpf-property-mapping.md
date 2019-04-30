@@ -9,22 +9,22 @@ helpviewer_keywords:
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 999d8298-9c04-467d-a453-86e41002057d
 ms.openlocfilehash: a7d78837a141ed322da42629501cee6dcc9143e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053134"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Windows Forms 및 WPF 속성 매핑
 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 및 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기술을 두 가지 서로 유사 하지만 다른 속성 모델이 포함 됩니다. *속성 매핑* 두 아키텍처 간의 상호 운용을 지원 하며 다음 기능을 제공 합니다.  
   
--   에서는 호스트 된 컨트롤 또는 요소를 매핑할 호스트 환경에서 관련 된 속성을 변경 하기가 쉽습니다.  
+- 에서는 호스트 된 컨트롤 또는 요소를 매핑할 호스트 환경에서 관련 된 속성을 변경 하기가 쉽습니다.  
   
--   속성을 사용 하는 가장 일반적으로 매핑하기 위한 기본 처리를 제공 합니다.  
+- 속성을 사용 하는 가장 일반적으로 매핑하기 위한 기본 처리를 제공 합니다.  
   
--   쉽게 제거를, 재정의 또는 기본 속성을 확장할 수 있습니다.  
+- 쉽게 제거를, 재정의 또는 기본 속성을 확장할 수 있습니다.  
   
--   호스트의 속성 값이 변경 된 자동으로 검색 및 호스트 컨트롤 또는 요소를 변환할를 확인 합니다.  
+- 호스트의 속성 값이 변경 된 자동으로 검색 및 호스트 컨트롤 또는 요소를 변환할를 확인 합니다.  
   
 > [!NOTE]
 >  속성 변경 이벤트 호스팅 컨트롤이 나 요소 계층 구조 위로 전파 되지 않습니다. 속성의 로컬 값을 직접 설정, 스타일, 상속, 데이터 바인딩 또는 속성의 값을 변경 하는 다른 메커니즘으로 인해 변경 되지 않는 경우에 속성 변환이 수행 되지 않습니다.  
@@ -54,66 +54,66 @@ ms.locfileid: "59088823"
 ## <a name="updates-to-parent-properties"></a>부모 속성에 대 한 업데이트  
  대부분의 부모 속성 변경으로 인해 호스팅된 자식 컨트롤에는 알림입니다. 다음은 해당 값 변경 알림이 발생 하지는 속성을 설명 합니다.  
   
--   <xref:System.Windows.Controls.Control.Background%2A>  
+- <xref:System.Windows.Controls.Control.Background%2A>  
   
--   <xref:System.Windows.FrameworkElement.Cursor%2A>  
+- <xref:System.Windows.FrameworkElement.Cursor%2A>  
   
--   <xref:System.Windows.FrameworkElement.ForceCursor%2A>  
+- <xref:System.Windows.FrameworkElement.ForceCursor%2A>  
   
--   <xref:System.Windows.UIElement.Visibility%2A>  
+- <xref:System.Windows.UIElement.Visibility%2A>  
   
  예의 값을 변경 하는 경우는 <xref:System.Windows.Controls.Control.Background%2A> 의 속성을 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 요소는 <xref:System.Windows.Forms.Control.BackColor%2A> 호스팅된 컨트롤의 속성이 변경 되지 않습니다.  
   
 ## <a name="property-mapping-with-the-elementhost-control"></a>ElementHost 컨트롤을 사용 하 여 속성 매핑  
  다음 속성에는 기본 제공 변경 알림을 제공합니다. 호출 하지 마십시오는 <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> 메서드가 이러한 속성을 매핑할 경우:  
   
--   AutoSize  
+- AutoSize  
   
--   BackColor  
+- BackColor  
   
--   BackgroundImage  
+- BackgroundImage  
   
--   BackgroundImageLayout  
+- BackgroundImageLayout  
   
--   BindingContext  
+- BindingContext  
   
--   CausesValidation  
+- CausesValidation  
   
--   ContextMenu  
+- ContextMenu  
   
--   ContextMenuStrip  
+- ContextMenuStrip  
   
--   Cursor  
+- Cursor  
   
--   도킹  
+- 도킹  
   
--   사용  
+- 사용  
   
--   글꼴  
+- 글꼴  
   
--   ForeColor  
+- ForeColor  
   
--   위치  
+- 위치  
   
--   여백  
+- 여백  
   
--   안쪽 여백  
+- 안쪽 여백  
   
--   부모  
+- 부모  
   
--   Region  
+- Region  
   
--   RightToLeft  
+- RightToLeft  
   
--   크기  
+- 크기  
   
--   TabIndex  
+- TabIndex  
   
--   TabStop  
+- TabStop  
   
--   텍스트  
+- 텍스트  
   
--   표시  
+- 표시  
   
  <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤에 기본 변환 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 속성을 해당 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 다음 변환 표를 사용 하 여 해당 합니다.  
   

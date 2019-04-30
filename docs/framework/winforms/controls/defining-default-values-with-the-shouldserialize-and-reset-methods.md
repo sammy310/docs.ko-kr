@@ -9,20 +9,20 @@ helpviewer_keywords:
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
 ms.openlocfilehash: f1f5a668c5d4f52ef7dd9f60a31c04f2173165f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59090617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972369"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>ShouldSerialize 및 Reset 메서드를 사용하여 기본값 정의
 `ShouldSerialize` 및 `Reset` 가지가 선택적 속성에 대해 제공할 수 있는 속성에는 없는 경우는 간단한 기본 값입니다. 속성의 기본값에 하는 경우 적용 해야 합니다 <xref:System.ComponentModel.DefaultValueAttribute> 대신 특성 클래스 생성자에 기본값을 제공 합니다. 이러한 메커니즘 중 하나는 디자이너에서 다음 기능을 사용할 수 있습니다:  
   
--   속성이는 기본값에서 수정 된 경우 속성 브라우저에 시각적 표시를 제공 합니다.  
+- 속성이는 기본값에서 수정 된 경우 속성 브라우저에 시각적 표시를 제공 합니다.  
   
--   사용자 속성을 마우스 오른쪽 단추로 클릭 하 고 선택할 수 **재설정** 속성을 기본값으로 복원 합니다.  
+- 사용자 속성을 마우스 오른쪽 단추로 클릭 하 고 선택할 수 **재설정** 속성을 기본값으로 복원 합니다.  
   
--   디자이너는 더 효율적인 코드를 생성합니다.  
+- 디자이너는 더 효율적인 코드를 생성합니다.  
   
     > [!NOTE]
     >  적용 중 하나는 <xref:System.ComponentModel.DefaultValueAttribute> 바꾸거나 `Reset` *PropertyName* 및 `ShouldSerialize` *PropertyName* 메서드. 둘 다 사용 하지 마세요.  

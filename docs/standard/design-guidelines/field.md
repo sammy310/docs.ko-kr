@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: 7cb4b0f3-7a10-4c93-b84d-733f7134fcf8
 author: KrzysztofCwalina
 ms.openlocfilehash: 3ab8fe279605c4795bb3a26557d0241b186b273a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026408"
 ---
 # <a name="field-design"></a>필드 디자인
 캡슐화의 원리는 개체 지향 디자인의 가장 중요 한 개념 중 하나를입니다. 개체 내에 저장 된 데이터 개체에만 액세스할 수 있는 되도록 하는 것이 원칙입니다.  

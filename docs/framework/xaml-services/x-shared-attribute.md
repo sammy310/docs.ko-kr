@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Shared attribute in XAML [XAML Services]
 ms.assetid: c8cff434-2785-405f-9f95-16deb34c9e64
 ms.openlocfilehash: da35f209b632bdf9e4ab2298239a505df69d6048
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982633"
 ---
 # <a name="xshared-attribute"></a>x:Shared 특성
 로 설정 하면 `false`, 요청 특성 사용된 하는 리소스에 대 한 모든 요청에 대해 동일한 인스턴스를 공유 하는 대신 각 요청에 대 한 새 인스턴스를 만들 수 있도록 WPF 리소스 검색 동작을 수정 합니다.  
@@ -45,9 +45,9 @@ ms.locfileid: "59125745"
   
  Wpf에서 `x:Shared` 다음 조건 에서만 유효 합니다.  
   
--   합니다 <xref:System.Windows.ResourceDictionary> 인 항목을 포함 하는 `x:Shared` 컴파일해야 합니다. <xref:System.Windows.ResourceDictionary> 테마에 대 한 하거나 느슨한 XAML 내에서 사용할 수 없습니다.  
+- 합니다 <xref:System.Windows.ResourceDictionary> 인 항목을 포함 하는 `x:Shared` 컴파일해야 합니다. <xref:System.Windows.ResourceDictionary> 테마에 대 한 하거나 느슨한 XAML 내에서 사용할 수 없습니다.  
   
--   <xref:System.Windows.ResourceDictionary> 항목이 포함 된 다른 내에 중첩 되어야 하지 <xref:System.Windows.ResourceDictionary>합니다. 예를 들어 사용할 수 없습니다 `x:Shared` 항목에 대 한는 <xref:System.Windows.ResourceDictionary> 내는 <xref:System.Windows.Style> 는 이미는 <xref:System.Windows.ResourceDictionary> 항목입니다.  
+- <xref:System.Windows.ResourceDictionary> 항목이 포함 된 다른 내에 중첩 되어야 하지 <xref:System.Windows.ResourceDictionary>합니다. 예를 들어 사용할 수 없습니다 `x:Shared` 항목에 대 한는 <xref:System.Windows.ResourceDictionary> 내는 <xref:System.Windows.Style> 는 이미는 <xref:System.Windows.ResourceDictionary> 항목입니다.  
   
 ## <a name="see-also"></a>참고자료
 

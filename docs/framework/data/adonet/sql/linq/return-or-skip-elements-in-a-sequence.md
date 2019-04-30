@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
 ms.openlocfilehash: 885e6bc011041320a3dc7b17d84b2541bf030adf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033464"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>시퀀스에서 요소 반환 또는 건너뛰기
 <xref:System.Linq.Queryable.Take%2A> 연산자를 사용하여 지정된 수의 시퀀스 요소를 반환한 다음 나머지는 건너뜁니다.  
@@ -22,9 +22,9 @@ ms.locfileid: "59168313"
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 하위 쿼리와 함께 SQL <xref:System.Linq.Queryable.Skip%2A> 절을 사용하여 `NOT EXISTS`을 변환합니다. 이 변환에는 다음과 같은 제한 사항이 있습니다.  
   
--   인수는 집합이어야 합니다. 다중 집합은 정렬된 경우에도 지원되지 않습니다.  
+- 인수는 집합이어야 합니다. 다중 집합은 정렬된 경우에도 지원되지 않습니다.  
   
--   생성된 쿼리는 <xref:System.Linq.Queryable.Skip%2A>이 적용된 기본 쿼리에 대해 생성된 쿼리보다 더 복잡할 수 있습니다. 이러한 복잡성은 성능을 감소시키거나 시간이 초과될 수도 있습니다.  
+- 생성된 쿼리는 <xref:System.Linq.Queryable.Skip%2A>이 적용된 기본 쿼리에 대해 생성된 쿼리보다 더 복잡할 수 있습니다. 이러한 복잡성은 성능을 감소시키거나 시간이 초과될 수도 있습니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 `Take`를 사용하여 고용된 처음 다섯 명의 `Employees`를 선택합니다. 컬렉션은 우선 `HireDate`로 정렬됩니다.  

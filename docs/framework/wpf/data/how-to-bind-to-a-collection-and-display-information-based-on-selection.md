@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data binding [WPF], binding to collections
 ms.assetid: 952a7d76-dd29-49e5-86f5-32c4530e70eb
 ms.openlocfilehash: bb7d4c89e63982a3052857dcb50d04d36d9517dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967947"
 ---
 # <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>방법: 선택 영역에 따라 컬렉션 및 표시 정보에 바인딩
 간단한 마스터-세부 시나리오에 데이터 바인딩된 <xref:System.Windows.Controls.ItemsControl> 와 같은 <xref:System.Windows.Controls.ListBox>합니다. 선택한 항목에 대 한 자세한 정보를 표시할 사용자 선택에 따라 있습니다. 이 예제에서는이 시나리오를 구현 하는 방법을 보여 줍니다.  

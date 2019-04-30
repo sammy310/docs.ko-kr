@@ -3,11 +3,11 @@ title: Pick 활동 사용
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
 ms.openlocfilehash: 0b2fbeb9b32406dd913d7e1ee87ac167113d0f28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004733"
 ---
 # <a name="using-the-pick-activity"></a>Pick 활동 사용
 이 샘플에서는 <xref:System.Activities.Statements.Pick> 활동을 사용하는 방법을 보여 줍니다.
@@ -24,17 +24,17 @@ ms.locfileid: "59302983"
 
  디자이너는 워크플로 디자이너 버전의 샘플에는 디자이너에서 워크플로 만드는 방법을 보여 줍니다. 여기에 포함되는 파일은 다음과 같습니다.
 
--   Program.cs: 포함 된 `Main` 샘플 워크플로 실행 하는 함수입니다.
+- Program.cs: 포함 된 `Main` 샘플 워크플로 실행 하는 함수입니다.
 
--   ReadString.cs: 사용자 지정 활동을 콘솔에서 일부 입력을 읽습니다.
+- ReadString.cs: 사용자 지정 활동을 콘솔에서 일부 입력을 읽습니다.
 
--   Sequence1.xaml: Pick을 사용 하는 디자이너를 사용 하 여 만든 워크플로.
+- Sequence1.xaml: Pick을 사용 하는 디자이너를 사용 하 여 만든 워크플로.
 
  코딩 된 버전의 샘플 코딩 된 워크플로 디자이너에서 워크플로 만드는 방법을 보여 줍니다. 여기에 포함되는 파일은 다음과 같습니다.
 
--   Program.cs: 포함 된 `Main` 샘플 워크플로 실행 하는 함수입니다.
+- Program.cs: 포함 된 `Main` 샘플 워크플로 실행 하는 함수입니다.
 
--   ReadString.cs: 사용자 지정 활동을 콘솔에서 일부 입력을 읽습니다.
+- ReadString.cs: 사용자 지정 활동을 콘솔에서 일부 입력을 읽습니다.
 
 #### <a name="to-use-this-sample"></a>이 샘플을 사용하려면
 

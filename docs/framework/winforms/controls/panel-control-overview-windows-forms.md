@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Panel control [Windows Forms], about Panel control
 ms.assetid: b6b83636-2c39-4dad-89d6-f0fa41049a74
 ms.openlocfilehash: d4976b3725d04162ac10242c486f57c4d2598769
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012687"
 ---
 # <a name="panel-control-overview-windows-forms"></a>Panel 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.Panel> 컨트롤은 다른 컨트롤에 대 한 식별 가능한 그룹화를 제공 하는 데 사용 됩니다. 일반적으로 폼 함수로 세분화 하기 패널을 사용 합니다. 예를 들어, 어떤 야간 운송 같은 메일 옵션을 지정 하는 주문 양식과 할 수 있습니다. 그룹화는 패널에서 모든 옵션 논리 시각적 표시를 제공 합니다. 디자인 타임에 컨트롤을 쉽게 이동할 수 있습니다. 모든-이동 하는 경우는 <xref:System.Windows.Forms.Panel> 모든 포함 된 컨트롤이, 너무 제어 합니다. 패널에 그룹화 된 컨트롤을 통해 액세스할 수 있습니다 해당 <xref:System.Windows.Forms.Control.Controls%2A> 속성입니다. 이 속성의 컬렉션을 반환 <xref:System.Windows.Forms.Control> 되므로 일반적으로 컨트롤을 캐스팅 해야 경우 해당 특정 형식에 이러한 방식으로 검색 합니다.  

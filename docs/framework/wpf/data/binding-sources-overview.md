@@ -7,11 +7,11 @@ helpviewer_keywords:
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
 ms.openlocfilehash: 72ef84cb53c6eff1fc2fb9459b40e780869243a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023782"
 ---
 # <a name="binding-sources-overview"></a>바인딩 소스 개요
 데이터 바인딩에서 바인딩 소스 개체는 데이터를 가져오는 개체를 의미합니다. 이 항목에서는 바인딩 소스로 사용할 수 있는 개체 형식에 대해 설명합니다.  
@@ -42,13 +42,13 @@ ms.locfileid: "59145927"
 ### <a name="other-characteristics"></a>기타 특성  
  다음은 고려해야 할 기타 중요 사항의 목록입니다.  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서 개체를 만들려는 경우 클래스에 기본 생성자가 있어야 합니다. 일부 [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] 언어와 같은 C#를 기본 생성자를 만들 수 있습니다.  
+- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서 개체를 만들려는 경우 클래스에 기본 생성자가 있어야 합니다. 일부 [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] 언어와 같은 C#를 기본 생성자를 만들 수 있습니다.  
   
--   바인딩의 바인딩 소스 속성으로 사용하는 속성은 클래스의 공용 속성이어야 합니다. 명시적으로 정의된 인터페이스 속성은 바인딩 용도로 액세스할 수 없으며, 기본 구현이 없는 보호, 전용, 내부 또는 가상 속성이 될 수 없습니다.  
+- 바인딩의 바인딩 소스 속성으로 사용하는 속성은 클래스의 공용 속성이어야 합니다. 명시적으로 정의된 인터페이스 속성은 바인딩 용도로 액세스할 수 없으며, 기본 구현이 없는 보호, 전용, 내부 또는 가상 속성이 될 수 없습니다.  
   
--   공용 필드에 바인딩할 수 없습니다.  
+- 공용 필드에 바인딩할 수 없습니다.  
   
--   클래스에서 선언된 속성의 형식은 바인딩에 전달되는 형식입니다. 그러나 궁극적으로 바인딩에서 사용되는 형식은 바인딩 소스 속성의 형식이 아니라 바인딩 대상 속성의 형식에 따라 달라집니다. 형식이 다른 경우 사용자 지정 속성이 처음 바인딩에 전달되는 방법을 처리하는 변환기를 작성하는 것이 좋습니다. 자세한 내용은 <xref:System.Windows.Data.IValueConverter>을 참조하세요.  
+- 클래스에서 선언된 속성의 형식은 바인딩에 전달되는 형식입니다. 그러나 궁극적으로 바인딩에서 사용되는 형식은 바인딩 소스 속성의 형식이 아니라 바인딩 대상 속성의 형식에 따라 달라집니다. 형식이 다른 경우 사용자 지정 속성이 처음 바인딩에 전달되는 방법을 처리하는 변환기를 작성하는 것이 좋습니다. 자세한 내용은 <xref:System.Windows.Data.IValueConverter>을 참조하세요.  
   
 <a name="objects"></a>   
 ## <a name="using-entire-objects-as-a-binding-source"></a>전체 개체를 바인딩 소스로 사용  
@@ -80,11 +80,11 @@ ms.locfileid: "59145927"
   
  이 표에서는 데이터 바인딩의 사용 권한 요구 사항에 대한 다음 중요 사항을 설명합니다.  
   
--   [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 속성의 경우 바인딩 엔진이 리플렉션을 사용하여 바인딩 소스 속성에 액세스할 수 있는 한 데이터 바인딩이 작동됩니다. 그렇지 않은 경우 바인딩 엔진이 속성을 찾을 수 없다는 경고를 생성하고 대체 값 또는 기본값(사용 가능한 경우)을 사용합니다.  
+- [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 속성의 경우 바인딩 엔진이 리플렉션을 사용하여 바인딩 소스 속성에 액세스할 수 있는 한 데이터 바인딩이 작동됩니다. 그렇지 않은 경우 바인딩 엔진이 속성을 찾을 수 없다는 경고를 생성하고 대체 값 또는 기본값(사용 가능한 경우)을 사용합니다.  
   
--   컴파일 타임 또는 런타임에 정의된 동적 개체의 속성에 바인딩할 수 있습니다.  
+- 컴파일 타임 또는 런타임에 정의된 동적 개체의 속성에 바인딩할 수 있습니다.  
   
--   항상 종속성 속성에 바인딩할 수 있습니다.  
+- 항상 종속성 속성에 바인딩할 수 있습니다.  
   
  [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 바인딩에 대한 사용 권한 요구 사항은 비슷합니다. 부분 신뢰 샌드박스에서 <xref:System.Windows.Data.XmlDataProvider> 지정 된 데이터에 액세스할 수 있는 권한이 없는 경우 실패 합니다.  
   

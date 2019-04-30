@@ -11,11 +11,11 @@ helpviewer_keywords:
 - media [WPF], controlling playback of
 ms.assetid: 6885a730-e054-4c16-8c1e-ffe17b1f7c32
 ms.openlocfilehash: bb7319fc7ccec0220cbd79a32d5d015f9f2422d0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61984048"
 ---
 # <a name="how-to-control-a-mediaelement-play-pause-stop-volume-and-speed"></a>방법: MediaElement 제어(재생, 일시 중지, 정지, 볼륨 및 속도)
 다음 예제에서는 사용 하 여 미디어 재생을 제어 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.MediaElement>합니다. 이 예제에서는 재생, 일시 중지, 중지 및 미디어에서 앞뒤로 건너뛸 뿐만 볼륨 및 속도 비율을 조정할 수 있는 간단한 미디어 플레이어를 만듭니다.  

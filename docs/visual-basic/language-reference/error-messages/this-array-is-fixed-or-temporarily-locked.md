@@ -5,20 +5,20 @@ f1_keywords:
 - vbrID10
 ms.assetid: de6713a6-51d7-4edb-8515-d5fb544e2091
 ms.openlocfilehash: c74d9524ff64101ba6002e133b93c9b80e8f50a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982451"
 ---
 # <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a>이 배열은 고정되었거나 임시로 잠겨 있습니다(Visual Basic).
 이 오류는 다음과 같은 가능한 원인을:  
   
--   사용 하 여 `ReDim` 고정 크기 배열 요소의 수를 변경 합니다.  
+- 사용 하 여 `ReDim` 고정 크기 배열 요소의 수를 변경 합니다.  
   
--   하나의 요소가 전달 인수로 프로시저에는 모듈 수준 동적 배열 차원을 다시 지정 하려고 합니다. 배열 방지 하기 위해 잠겨 요소를 전달 하면 프로시저 내의 참조 매개 변수에 대 한 메모리 할당을 취소 합니다.  
+- 하나의 요소가 전달 인수로 프로시저에는 모듈 수준 동적 배열 차원을 다시 지정 하려고 합니다. 배열 방지 하기 위해 잠겨 요소를 전달 하면 프로시저 내의 참조 매개 변수에 대 한 메모리 할당을 취소 합니다.  
   
--   값을 할당 하려고를 `Variant` 배열을 포함 하는 변수 하지만 `Variant` 현재 잠겨 있습니다.  
+- 값을 할당 하려고를 `Variant` 배열을 포함 하는 변수 하지만 `Variant` 현재 잠겨 있습니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   

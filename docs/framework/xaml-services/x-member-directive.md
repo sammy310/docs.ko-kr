@@ -3,11 +3,11 @@ title: x:Member 지시문
 ms.date: 03/30/2017
 ms.assetid: 4d8394ef-644c-4331-b6c5-be855d392980
 ms.openlocfilehash: 66d34ad6bc5b6bb98eba6219130035dc413b486f
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61951218"
 ---
 # <a name="xmember-directive"></a>x:Member 지시문
 태그로 XAML 멤버를 선언합니다.  

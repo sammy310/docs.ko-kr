@@ -9,18 +9,18 @@ helpviewer_keywords:
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
 ms.openlocfilehash: 04d5f9e6f128d9b4ed3f07a5faebe06ae4ffdebf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011257"
 ---
 # <a name="how-to-access-the-managed-html-document-object-model"></a>방법: 관리형 HTML 문서 개체 모델 액세스
 다음과 같은 두 가지 유형의 애플리케이션에서 관리되는 HTML DOM(문서 개체 모델)에 액세스할 수 있습니다.  
   
--   관리되는 <xref:System.Windows.Forms.WebBrowser> 컨트롤을 호스팅하는 Windows Forms 응용 프로그램(.exe). 이러한 두 가지 기술은 서로를 보완하며 <xref:System.Windows.Forms.WebBrowser> 컨트롤을 통해 사용자에게 페이지를 표시하고 HTML DOM을 통해 문서의 논리 구조를 나타냅니다.  
+- 관리되는 <xref:System.Windows.Forms.WebBrowser> 컨트롤을 호스팅하는 Windows Forms 응용 프로그램(.exe). 이러한 두 가지 기술은 서로를 보완하며 <xref:System.Windows.Forms.WebBrowser> 컨트롤을 통해 사용자에게 페이지를 표시하고 HTML DOM을 통해 문서의 논리 구조를 나타냅니다.  
   
--   Internet Explorer 내에서 호스팅되는 <xref:System.Windows.Forms.UserControl>. <xref:System.Windows.Forms.UserControl>이 호스팅되는 페이지를 나타내는 HTML DOM에 액세스하여 문서 구조를 변경하거나 모달 대화 상자를 여는 등 여러 작업을 수행할 수 있습니다.  
+- Internet Explorer 내에서 호스팅되는 <xref:System.Windows.Forms.UserControl>. <xref:System.Windows.Forms.UserControl>이 호스팅되는 페이지를 나타내는 HTML DOM에 액세스하여 문서 구조를 변경하거나 모달 대화 상자를 여는 등 여러 작업을 수행할 수 있습니다.  
   
 ### <a name="to-access-dom-from-a-windows-forms-application"></a>Windows Forms 애플리케이션에서 DOM에 액세스하려면  
   

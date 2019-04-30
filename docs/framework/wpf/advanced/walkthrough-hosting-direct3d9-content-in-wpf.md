@@ -6,40 +6,40 @@ helpviewer_keywords:
 - WPF [WPF], hosting Direct3D9 content
 ms.assetid: 60983736-0ab5-42cc-8b16-e9fbde261a43
 ms.openlocfilehash: 07cfa5bed6e5af131a60a303f0702f18413043e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007128"
 ---
 # <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>연습: WPF에서 Direct3D9 콘텐츠 호스팅
 이 연습에서는 Windows Presentation Foundation (WPF) 응용 프로그램에서 호스팅할 Direct3D9 콘텐츠를 호스트 하는 방법을 보여 줍니다.  
   
  이 연습에서는 다음 작업을 수행합니다.  
   
--   Direct3D9 콘텐츠를 호스트할 WPF 프로젝트를 만듭니다.  
+- Direct3D9 콘텐츠를 호스트할 WPF 프로젝트를 만듭니다.  
   
--   Direct3D9 콘텐츠를 가져옵니다.  
+- Direct3D9 콘텐츠를 가져옵니다.  
   
--   Direct3D9 콘텐츠를 사용 하 여 표시 된 <xref:System.Windows.Interop.D3DImage> 클래스입니다.  
+- Direct3D9 콘텐츠를 사용 하 여 표시 된 <xref:System.Windows.Interop.D3DImage> 클래스입니다.  
   
  작업을 완료 하는 경우에 WPF 응용 프로그램에서 호스팅할 Direct3D9 콘텐츠를 호스트 하는 방법을 알 수 있습니다.  
   
 ## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
--   Visual Studio.  
+- Visual Studio.  
   
--   DirectX SDK 9 이상입니다.  
+- DirectX SDK 9 이상입니다.  
   
--   WPF와 호환 가능한 형식에서 호스팅할 Direct3D9 콘텐츠를 포함 하는 DLL입니다. 자세한 내용은 [WPF 및 Direct3D9 상호 운용성](wpf-and-direct3d9-interoperation.md) 고 [연습: WPF에서 호스팅할 Direct3D9 콘텐츠 만들기](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)합니다.  
+- WPF와 호환 가능한 형식에서 호스팅할 Direct3D9 콘텐츠를 포함 하는 DLL입니다. 자세한 내용은 [WPF 및 Direct3D9 상호 운용성](wpf-and-direct3d9-interoperation.md) 고 [연습: WPF에서 호스팅할 Direct3D9 콘텐츠 만들기](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)합니다.  
   
 ## <a name="creating-the-wpf-project"></a>WPF 프로젝트 만들기  
  첫 번째 단계는 WPF 응용 프로그램에 대 한 프로젝트를 만드는 것입니다.  
   
 #### <a name="to-create-the-wpf-project"></a>WPF 프로젝트를 만들려면  
   
--   새 WPF 응용 프로그램 프로젝트 만들기의 Visual C# `D3DHost`합니다. 자세한 내용은 [연습: 내 첫 WPF 데스크톱 응용 프로그램](../getting-started/walkthrough-my-first-wpf-desktop-application.md)합니다.  
+- 새 WPF 응용 프로그램 프로젝트 만들기의 Visual C# `D3DHost`합니다. 자세한 내용은 [연습: 내 첫 WPF 데스크톱 응용 프로그램](../getting-started/walkthrough-my-first-wpf-desktop-application.md)합니다.  
   
      MainWindow.xaml 열립니다는 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]합니다.  
   

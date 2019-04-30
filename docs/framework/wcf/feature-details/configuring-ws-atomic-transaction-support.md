@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
 ms.openlocfilehash: 987d6c12262fd6530c6ef6f14cedeec269d3f2f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048117"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>WS-Atomic Transaction 지원 구성
 이 항목에서는 WS-AT 구성 유틸리티를 사용하여 WS-AT(WS-AtomicTransaction) 지원을 구성하는 방법에 대해 설명합니다.  
@@ -106,17 +106,17 @@ ms.locfileid: "59315181"
   
 4. 에 **값 데이터** 입력 상자를 사용 하도록 설정 하려는 추적 수준을 지정 하려면 유효한 값 중 하나를 입력 합니다.  
   
--   0: 해제  
+- 0: 해제  
   
--   1: 위험  
+- 1: 위험  
   
--   3: 오류. 이 값이 기본값입니다.  
+- 3: 오류. 이 값이 기본값입니다.  
   
--   7: 경고  
+- 7: 경고  
   
--   15: 정보  
+- 15: 정보  
   
--   31: 자세한 정보  
+- 31: 자세한 정보  
   
 ## <a name="see-also"></a>참고자료
 

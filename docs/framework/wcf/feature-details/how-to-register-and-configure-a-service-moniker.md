@@ -6,11 +6,11 @@ helpviewer_keywords:
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
 ms.openlocfilehash: dfac833cc7517af00d0264fc5d11fc83ae543569
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000807"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>방법: 서비스 모니커 등록 및 구성
 형식화 된 계약을 사용 하 여 COM 응용 프로그램 내에서 Windows Communication Foundation (WCF) 서비스 모니커를 사용 하기 전에 필수 특성 사용된 형식이 COM에 등록 하며 필요한 바인딩을 사용 하 여 COM 응용 프로그램과 모니커를 구성 합니다. 구성입니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "59313582"
   
 ### <a name="to-configure-the-com-application-and-the-moniker-with-the-required-binding-configuration"></a>필요한 바인딩 구성을 사용하여 COM 응용 프로그램과 모니커를 구성하려면  
   
--   바인딩 정의 배치 (에서 생성 합니다 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 생성 된 클라이언트 응용 프로그램 구성 파일에서) 클라이언트 응용 프로그램의 구성 파일. 예를 들어 이름이 CallCenterClient.exe인 Visual Basic 6.0 실행 파일에 대해 실행 파일과 동일한 디렉터리 내의 CallCenterConfig.exe.config 파일에 구성을 저장해야 합니다. 이제 클라이언트 응용 프로그램에서 모니커를 사용할 수 있습니다. 참고는 표준 바인딩 WCF에서 제공 하는 형식 중 하나를 사용 하는 경우 바인딩 구성이 필요 하지 않습니다.  
+- 바인딩 정의 배치 (에서 생성 합니다 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 생성 된 클라이언트 응용 프로그램 구성 파일에서) 클라이언트 응용 프로그램의 구성 파일. 예를 들어 이름이 CallCenterClient.exe인 Visual Basic 6.0 실행 파일에 대해 실행 파일과 동일한 디렉터리 내의 CallCenterConfig.exe.config 파일에 구성을 저장해야 합니다. 이제 클라이언트 응용 프로그램에서 모니커를 사용할 수 있습니다. 참고는 표준 바인딩 WCF에서 제공 하는 형식 중 하나를 사용 하는 경우 바인딩 구성이 필요 하지 않습니다.  
   
      다음 형식이 등록됩니다.  
   

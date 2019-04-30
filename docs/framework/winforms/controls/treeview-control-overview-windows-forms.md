@@ -7,11 +7,11 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], about TreeView control
 ms.assetid: 0ece823a-9508-478a-bbdb-7d7c3bae51d5
 ms.openlocfilehash: 046713745e7de18cefe5b4883af73034af2cfb31
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009229"
 ---
 # <a name="treeview-control-overview-windows-forms"></a>TreeView 컨트롤 개요(Windows Forms)
 
@@ -19,8 +19,7 @@ Windows Forms <xref:System.Windows.Forms.TreeView> 컨트롤을 통해 Windows �
 
 ## <a name="key-properties"></a>키 속성
 
-<xref:System.Windows.Forms.TreeView> 컨트롤의 키 속성은 <xref:System.Windows.Forms.TreeView.Nodes%2A> 및 <xref:System.Windows.Forms.TreeView.SelectedNode%2A>입니다. <xref:System.Windows.Forms.TreeView.Nodes%2A> 속성에는 트리 뷰의 최상위 노드 목록이 포함됩니다. <xref:System.Windows.Forms.TreeView.SelectedNode%2A> 속성은 현재 선택된 노드를 설정합니다. 노드 옆에 아이콘을 표시할 수 있습니다. 컨트롤은 트리 뷰의 <xref:System.Windows.Forms.TreeView.ImageList%2A> 속성에 명명된 <xref:System.Windows.Forms.ImageList>의 이미지를 사용합니다. 
-  <xref:System.Windows.Forms.TreeView.ImageIndex%2A> 속성은 트리 뷰의 노드에 대한 기본 이미지를 설정합니다. 이미지를 표시 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: Windows Forms TreeView 컨트롤에 대 한 아이콘 설정](how-to-set-icons-for-the-windows-forms-treeview-control.md)합니다. Visual Studio 2005를 사용 하는 경우 액세스에 사용할 수 있는 표준 이미지의 대규모 라이브러리에는 <xref:System.Windows.Forms.TreeView> 제어 합니다.
+<xref:System.Windows.Forms.TreeView> 컨트롤의 키 속성은 <xref:System.Windows.Forms.TreeView.Nodes%2A> 및 <xref:System.Windows.Forms.TreeView.SelectedNode%2A>입니다. <xref:System.Windows.Forms.TreeView.Nodes%2A> 속성에는 트리 뷰의 최상위 노드 목록이 포함됩니다. <xref:System.Windows.Forms.TreeView.SelectedNode%2A> 속성은 현재 선택된 노드를 설정합니다. 노드 옆에 아이콘을 표시할 수 있습니다. 컨트롤은 트리 뷰의 <xref:System.Windows.Forms.TreeView.ImageList%2A> 속성에 명명된 <xref:System.Windows.Forms.ImageList>의 이미지를 사용합니다. <xref:System.Windows.Forms.TreeView.ImageIndex%2A> 속성은 트리 뷰의 노드에 대한 기본 이미지를 설정합니다. 이미지를 표시 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: Windows Forms TreeView 컨트롤에 대 한 아이콘 설정](how-to-set-icons-for-the-windows-forms-treeview-control.md)합니다. Visual Studio 2005를 사용 하는 경우 액세스에 사용할 수 있는 표준 이미지의 대규모 라이브러리에는 <xref:System.Windows.Forms.TreeView> 제어 합니다.
 
 ## <a name="see-also"></a>참고자료
 

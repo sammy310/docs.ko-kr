@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
 author: KrzysztofCwalina
 ms.openlocfilehash: f9fe3045d8bd8b4d625c5cd49bc18574ebb740de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026434"
 ---
 # <a name="exceptions-and-performance"></a>예외 및 성능
 예외와 관련 된 한 가지 일반적인 문제는 예외를 지속적으로 실패 하는 코드를 사용 하는 경우 구현의 성능은 허용 되지 경우 이 맞는 말입니다. 멤버에서 예외를 throw 하는 경우 해당 성능이 크기가 커져 느린 수 있습니다. 그러나 오류 코드를 사용 하 여 허용 하지 않는 예외 지침을 준수할 엄격 하 게 하는 동안 적절 한 성능을 달성 하는 것이 같습니다. 이 섹션에서 설명 하는 두 가지 패턴에는이 작업을 수행 하는 방법을 제안 합니다.  

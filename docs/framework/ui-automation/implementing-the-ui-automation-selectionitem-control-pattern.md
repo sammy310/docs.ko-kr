@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control patterns, Selection Item
 ms.assetid: 76b0949a-5b23-4cfc-84cc-154f713e2e12
 ms.openlocfilehash: 00a2dae818091c20649deae79c093a61b6e93732
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983257"
 ---
 # <a name="implementing-the-ui-automation-selectionitem-control-pattern"></a>UI 자동화 SelectionItem 컨트롤 패턴 구현
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "59183757"
 ## <a name="implementation-guidelines-and-conventions"></a>구현 지침 및 규칙  
  Selection Item 컨트롤 패턴을 구현할 때는 다음 지침 및 규칙에 유의하세요.  
   
--   <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>표시 속성 **대화 상자의** 화면 해상도 **슬라이더와 같이** 를 구현하는 자식 컨트롤을 관리하는 단일 선택 컨트롤은 <xref:System.Windows.Automation.Provider.ISelectionProvider> 를 구현해야 하며, 해당 자식 항목은 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> 및 <xref:System.Windows.Automation.Provider.ISelectionItemProvider>둘 다 구현해야 합니다.  
+- <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>표시 속성 **대화 상자의** 화면 해상도 **슬라이더와 같이** 를 구현하는 자식 컨트롤을 관리하는 단일 선택 컨트롤은 <xref:System.Windows.Automation.Provider.ISelectionProvider> 를 구현해야 하며, 해당 자식 항목은 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> 및 <xref:System.Windows.Automation.Provider.ISelectionItemProvider>둘 다 구현해야 합니다.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iselectionitemprovider"></a>ISelectionItemProvider에 필요한 멤버  
@@ -38,7 +38,7 @@ ms.locfileid: "59183757"
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|메서드|없음|  
 |<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|이벤트(event)|컨테이너의 선택 항목이 현저히 변경되어 <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> 상수가 허용하는 것보다 더 많은 <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> 및 <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> 이벤트를 보내야 하는 경우에 발생합니다.|  
   
--   하는 경우의 결과 <xref:System.Windows.Automation.SelectionItemPattern.Select%2A>, <xref:System.Windows.Automation.SelectionItemPattern.AddToSelection%2A>, 또는 <xref:System.Windows.Automation.SelectionItemPattern.RemoveFromSelection%2A> 단일 항목이 선택 된를 <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> 발생시킬지; 보내십시오 <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent> /  <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> 적절 하 게 합니다.  
+- 하는 경우의 결과 <xref:System.Windows.Automation.SelectionItemPattern.Select%2A>, <xref:System.Windows.Automation.SelectionItemPattern.AddToSelection%2A>, 또는 <xref:System.Windows.Automation.SelectionItemPattern.RemoveFromSelection%2A> 단일 항목이 선택 된를 <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> 발생시킬지; 보내십시오 <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent> /  <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> 적절 하 게 합니다.  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>예외  

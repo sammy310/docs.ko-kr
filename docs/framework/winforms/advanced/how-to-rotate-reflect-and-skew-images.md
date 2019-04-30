@@ -10,11 +10,11 @@ helpviewer_keywords:
 - images [Windows Forms], skewing
 ms.assetid: a3bf97eb-63ed-425a-ba07-dcc65efb567c
 ms.openlocfilehash: 505028c491228ffdf9c11d0c71dcd5e1afdc5103
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59114051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967184"
 ---
 # <a name="how-to-rotate-reflect-and-skew-images"></a>방법: 이미지 회전, 반사 및 기울이기
 회전, 반사 하 고 원본 이미지의 왼쪽 위, 오른쪽 위 및 왼쪽 아래 모퉁이 대 한 대상 점을 지정 하 여 이미지를 기울일 수 있습니다. 세 개의 대상 지점 원본 사각형이 이미지는 평행 사변형에 매핑되는 3x3 유사 변형을 결정 합니다.  

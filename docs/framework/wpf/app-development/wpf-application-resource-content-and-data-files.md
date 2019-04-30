@@ -18,20 +18,20 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
 ms.openlocfilehash: 075f70e3ef053507dfe3d408246d179bb57c5891
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032255"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF 애플리케이션 리소스, 콘텐츠 및 데이터 파일
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 비실행 데이터와 같이 포함 된 파일에 응용 프로그램은 종종 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], 이미지, 비디오 및 오디오 합니다. Windows Presentation Foundation (WPF) 구성, 식별 하 고 이러한 종류의 응용 프로그램 데이터 파일 이라고 하는 데이터 파일을 사용 하 여에 대 한 특별 한 지원을 제공 합니다. 이러한 지원에는 다음을 포함한 특정 애플리케이션 데이터 파일 형식 집합이 포함됩니다.  
   
--   **리소스 파일**: 실행 파일 또는 라이브러리에 컴파일되는 데이터 파일 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 어셈블리입니다.  
+- **리소스 파일**: 실행 파일 또는 라이브러리에 컴파일되는 데이터 파일 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 어셈블리입니다.  
   
--   **파일 콘텐츠**: 실행 파일을 사용 하 여 명시적으로 연결 된 독립형 데이터 파일 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 어셈블리입니다.  
+- **파일 콘텐츠**: 실행 파일을 사용 하 여 명시적으로 연결 된 독립형 데이터 파일 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 어셈블리입니다.  
   
--   **원본 사이트 파일**: 실행 파일을 사용 하 여 연결 되지 않은 독립형 데이터 파일 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 어셈블리입니다.  
+- **원본 사이트 파일**: 실행 파일을 사용 하 여 연결 되지 않은 독립형 데이터 파일 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 어셈블리입니다.  
   
  이 세 가지 파일 형식을 구분하는 한 가지 중요한 차이점은 리소스 파일과 콘텐츠 파일은 빌드할 때 인식된다는 점입니다. 어셈블리는 명시적으로 이 파일을 인식합니다. 그러나 원본 파일의 사이트에 대 한 어셈블리로 있을 지식이 없는 전혀 또는 팩을 통해 암시적으로 인식 [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] 참조; 후자의 경우 대/소문자는 원본 파일의 참조 사이트 실제로 존재 하는지 보장 되지 않습니다.  
   
@@ -45,11 +45,11 @@ ms.locfileid: "59211928"
   
  다음과 같은 경우에 리소스 파일을 사용해야 합니다.  
   
--   어셈블리로 컴파일한 뒤에는 리소스 파일의 콘텐츠를 업데이트할 필요가 없는 경우.  
+- 어셈블리로 컴파일한 뒤에는 리소스 파일의 콘텐츠를 업데이트할 필요가 없는 경우.  
   
--   파일 종속성의 수를 줄여 애플리케이션 배포의 복잡성을 줄이려는 경우.  
+- 파일 종속성의 수를 줄여 애플리케이션 배포의 복잡성을 줄이려는 경우.  
   
--   응용 프로그램 데이터 파일을 지역화 해야 (참조 [WPF 전역화 및 지역화 개요](../advanced/wpf-globalization-and-localization-overview.md)).  
+- 응용 프로그램 데이터 파일을 지역화 해야 (참조 [WPF 전역화 및 지역화 개요](../advanced/wpf-globalization-and-localization-overview.md)).  
   
 > [!NOTE]
 >  이 섹션에 설명 된 리소스 파일은 리소스 파일에 설명 된 다르지 [XAML 리소스](../advanced/xaml-resources.md) 포함 또는 연결 된 리소스에 설명 된 것과 다르며 [응용 프로그램 리소스 관리 (.NET) ](/visualstudio/ide/managing-application-resources-dotnet).  
@@ -175,13 +175,13 @@ ms.locfileid: "59211928"
 ## <a name="site-of-origin-files"></a>원본 사이트 파일  
  리소스 파일에 정의 된 대로, 함께 배포 되는 어셈블리와 명시적인 관계를 가집니다는 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>합니다. 하지만 다음과 같이 어셈블리와 애플리케이션 데이터 파일 사이에 암시적 관계 또는 존재하지 않는 관계를 설정해야 할 경우가 종종 있습니다.  
   
--   컴파일 타임에 파일이 없습니다.  
+- 컴파일 타임에 파일이 없습니다.  
   
--   런타임까지 어셈블리에 필요한 파일을 모르는 경우.  
+- 런타임까지 어셈블리에 필요한 파일을 모르는 경우.  
   
--   연결된 어셈블리를 재컴파일하지 않고 파일을 업데이트할 수 있어야 하는 경우.  
+- 연결된 어셈블리를 재컴파일하지 않고 파일을 업데이트할 수 있어야 하는 경우.  
   
--   애플리케이션에서 오디오나 비디오와 같은 대용량 데이터 파일을 사용하며 사용자가 필요할 때에만 이를 다운로드하도록 하려는 경우.  
+- 애플리케이션에서 오디오나 비디오와 같은 대용량 데이터 파일을 사용하며 사용자가 필요할 때에만 이를 다운로드하도록 하려는 경우.  
   
  이러한 종류의 기존 사용 하 여 파일을 로드 하는 것이 불가능 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] file:/// 및 http:// 스키마와 같은 스키마를 합니다.  
   

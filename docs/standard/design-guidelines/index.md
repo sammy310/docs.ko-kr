@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
 author: KrzysztofCwalina
 ms.openlocfilehash: c20430f9cdcd71cc2e178d38aeed48f9fa4e75c5
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56834900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026382"
 ---
 # <a name="framework-design-guidelines"></a>프레임워크 디자인 지침
 이 섹션에서는 확장 하 고.NET Framework와 상호 작용 하는 라이브러리를 디자인 하기 위한 지침을 제공 합니다. 목표는 개발에 사용 되는 프로그래밍 언어의 독립적인 통합된 프로그래밍 모델을 제공 하 여 API 일관성과 사용 편의성을 확인 하는 라이브러리 디자이너가 데 도움이 됩니다. 클래스 및.NET Framework를 확장 하는 구성 요소를 개발할 때 이러한 디자인 지침을 따르는 것이 좋습니다. 일관성 없는 라이브러리 디자인 부정적인 개발자 생산성에 영향을 줍니다 및 도입을 방지 합니다.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], DataGrid control compared
 ms.assetid: d412c786-140e-4210-8a56-a68467530a55
 ms.openlocfilehash: 6802ef375d8d15826725e68f5065317192523178
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972213"
 ---
 # <a name="differences-between-the-windows-forms-datagridview-and-datagrid-controls"></a>Windows Forms DataGridView 및 DataGrid 컨트롤 간의 차이점
 합니다 <xref:System.Windows.Forms.DataGridView> 컨트롤은 대체 하는 새 컨트롤을 <xref:System.Windows.Forms.DataGrid> 컨트롤입니다. 합니다 <xref:System.Windows.Forms.DataGridView> 컨트롤에서 누락 된 다양 한 기본 및 고급 기능을 제공 합니다 <xref:System.Windows.Forms.DataGrid> 제어 합니다. 또한 아키텍처는 <xref:System.Windows.Forms.DataGridView> 컨트롤을 사용 하면 훨씬 쉽게 확장 및 보다 사용자 지정할 수는 <xref:System.Windows.Forms.DataGrid> 제어 합니다.  

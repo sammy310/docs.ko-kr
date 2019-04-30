@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f70e7958cc9ac198738ed72732fe7b6563c89067
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970068"
 ---
 # <a name="iclrcontrol-interface"></a>ICLRControl 인터페이스
 참조 하는 데 사용 하는 CLR (공용 언어 런타임)의 측면을 구성 하는 메서드를 제공 합니다.  

@@ -3,11 +3,11 @@ title: 연결 집합(association set)
 ms.date: 03/30/2017
 ms.assetid: a65247b6-ce59-44ea-974c-14ae20a7995f
 ms.openlocfilehash: af9297d9c827b12ed8611e99930234511f7f661c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034606"
 ---
 # <a name="association-set"></a>연결 집합(association set)
 *연결 집합* 는 대 한 논리적 컨테이너 [연결](../../../../docs/framework/data/adonet/association-type.md) 동일한 형식의 인스턴스. 연결 집합은 데이터 모델링 구문이 아니므로 데이터 또는 관계의 구조를 설명하지 않습니다. 대신 연결 집합은 연결 인스턴스를 그룹화하여 데이터 저장소에 매핑할 수 있도록 호스팅 또는 저장소 환경(예: 공용 언어 런타임 또는 SQL Server 데이터베이스)에 대한 구문을 제공합니다.  
@@ -16,11 +16,11 @@ ms.locfileid: "59204486"
   
  연결 집합 정의에는 다음 정보가 들어 있습니다.  
   
--   연결 집합 이름 (필수)  
+- 연결 집합 이름 (필수)  
   
--   연결 집합에 인스턴스가 포함될 연결 (필수)  
+- 연결 집합에 인스턴스가 포함될 연결 (필수)  
   
--   두 개의 [연결 집합 end](../../../../docs/framework/data/adonet/association-set-end.md)합니다.  
+- 두 개의 [연결 집합 end](../../../../docs/framework/data/adonet/association-set-end.md)합니다.  
   
 ## <a name="example"></a>예제  
  다음 다이어그램에서는 두 연결 `PublishedBy` 및 `WrittenBy`의 개념적 모델을 보여 줍니다. 연결 집합에 대한 정보는 다이어그램에 표시되지 않지만 다음 다이어그램에서는 이 모델을 기반으로 하여 연결 집합 및 엔터티 집합의 예제를 보여 줍니다.  

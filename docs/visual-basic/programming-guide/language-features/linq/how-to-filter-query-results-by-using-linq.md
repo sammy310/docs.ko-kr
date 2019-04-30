@@ -12,11 +12,11 @@ helpviewer_keywords:
 - filtering data [Visual Basic]
 ms.assetid: ef103092-9bed-4134-97f4-2db696e83c12
 ms.openlocfilehash: fc4d43ef9181f1a290d37c137b4fc6f7f16588b7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001028"
 ---
 # <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>방법: LINQ (Visual Basic)를 사용 하 여 쿼리 결과 필터링
 언어 통합 쿼리 (LINQ)를 사용 하면 쉽게 데이터베이스 정보에 액세스 하 고 쿼리를 실행 합니다.  

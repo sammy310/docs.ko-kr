@@ -3,11 +3,11 @@ title: HTTP 전송 보안
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
 ms.openlocfilehash: b7415dcc1e6c4a5d47d9e7b6e70a86ab1b898783
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000846"
 ---
 # <a name="http-transport-security"></a>HTTP 전송 보안
 HTTP를 전송으로 사용하는 경우 SSL(Secure Sockets Layer) 구현에서 보안을 제공합니다. SSL은 서비스를 클라이언트에 인증한 다음 채널에 기밀성(암호화)을 제공하기 위해 인터넷에서 널리 사용됩니다. 이 항목에서는 SSL 작동 원리 및 Windows Communication Foundation (WCF)에서 구현 되는 방법을 설명 합니다.  
@@ -31,9 +31,9 @@ HTTP를 전송으로 사용하는 경우 SSL(Secure Sockets Layer) 구현에서 
 ## <a name="implementing-ssl-with-wcf"></a>WCF를 사용하여 SSL 구현  
  HTTP 전송 보안 (또는 SSL) WCF 외부에서 제공 됩니다. 다음 두 가지 방법 중 하나로 SSL을 구현할 수 있습니다. 결정 요인은 응용 프로그램 호스팅 방법입니다.  
   
--   인터넷 정보 서비스 (IIS) WCF 호스트를 사용 하는 경우 SSL 서비스를 설정 하려면 IIS 인프라를 사용 합니다.  
+- 인터넷 정보 서비스 (IIS) WCF 호스트를 사용 하는 경우 SSL 서비스를 설정 하려면 IIS 인프라를 사용 합니다.  
   
--   자체 호스팅된 WCF 응용 프로그램을 만드는 경우 HttpCfg.exe 도구를 사용 하 여 주소에 SSL 인증서를 바인딩할 수 있습니다.  
+- 자체 호스팅된 WCF 응용 프로그램을 만드는 경우 HttpCfg.exe 도구를 사용 하 여 주소에 SSL 인증서를 바인딩할 수 있습니다.  
   
 ### <a name="using-iis-for-transport-security"></a>전송 보안에 IIS 사용  
   

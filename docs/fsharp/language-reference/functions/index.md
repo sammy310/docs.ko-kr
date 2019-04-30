@@ -3,11 +3,11 @@ title: 함수
 description: 함수에 대 한 자세한 F# 방법과 F# 일반적인 함수형 프로그래밍 구문도 지원 합니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: 6e9ef916388745d2dd6874295d06dca656971b3f
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996790"
 ---
 # <a name="functions"></a>함수
 
@@ -202,7 +202,7 @@ let result4 = Pipeline2 2
 
 특정 형식의 메서드는 오버로드할 수 있지만 함수를 오버로드할 수는 없습니다. 자세한 내용은 [메서드](../members/methods.md)를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [값](../values/index.md)
 - [F# 언어 참조](../index.md)

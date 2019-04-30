@@ -13,11 +13,11 @@ helpviewer_keywords:
 - sorting data in views [WPF]
 ms.assetid: f4c43578-01b7-4774-a953-acb95a13b94a
 ms.openlocfilehash: 32f73d3c3ba213778654f0d1ee7bbae16b9d845b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020727"
 ---
 # <a name="how-to-sort-data-in-a-view"></a>방법: 보기에서 데이터 정렬
 이 예제에는 뷰에서 데이터를 정렬 하는 방법을 설명 합니다.  
