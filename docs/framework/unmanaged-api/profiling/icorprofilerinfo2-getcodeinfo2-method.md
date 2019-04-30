@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1acf77c250b47bb32a83227a427dd3fe4f909a33
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62041028"
 ---
-# <a name="icorprofilerinfo2getcodeinfo2-method"></a><span data-ttu-id="1e618-102">ICorProfilerInfo2::GetCodeInfo2 메서드</span><span class="sxs-lookup"><span data-stu-id="1e618-102">ICorProfilerInfo2::GetCodeInfo2 Method</span></span>
-<span data-ttu-id="1e618-103">지정된 `FunctionID`와 연결된 네이티브 코드의 범위를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="1e618-103">Gets the extents of native code associated with the specified `FunctionID`.</span></span>  
+# <a name="icorprofilerinfo2getcodeinfo2-method"></a><span data-ttu-id="ba6c7-102">ICorProfilerInfo2::GetCodeInfo2 메서드</span><span class="sxs-lookup"><span data-stu-id="ba6c7-102">ICorProfilerInfo2::GetCodeInfo2 Method</span></span>
+<span data-ttu-id="ba6c7-103">지정된 `FunctionID`와 연결된 네이티브 코드의 범위를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="ba6c7-103">Gets the extents of native code associated with the specified `FunctionID`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1e618-104">구문</span><span class="sxs-lookup"><span data-stu-id="1e618-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ba6c7-104">구문</span><span class="sxs-lookup"><span data-stu-id="ba6c7-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCodeInfo2(  
@@ -38,38 +38,38 @@ HRESULT GetCodeInfo2(
     COR_PRF_CODE_INFO codeInfos[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1e618-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="1e618-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ba6c7-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="ba6c7-105">Parameters</span></span>  
  `functionID`  
- <span data-ttu-id="1e618-106">[in] 네이티브 코드가 연결된 함수의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="1e618-106">[in] The ID of the function with which the native code is associated.</span></span>  
+ <span data-ttu-id="ba6c7-106">[in] 네이티브 코드가 연결된 함수의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="ba6c7-106">[in] The ID of the function with which the native code is associated.</span></span>  
   
  `cCodeInfos`  
- <span data-ttu-id="1e618-107">[in] `codeInfos` 배열의 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="1e618-107">[in] The size of the `codeInfos` array.</span></span>  
+ <span data-ttu-id="ba6c7-107">[in] `codeInfos` 배열의 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="ba6c7-107">[in] The size of the `codeInfos` array.</span></span>  
   
  `pcCodeInfos`  
- <span data-ttu-id="1e618-108">[out] 총 수에 대 한 포인터 [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) 구조를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1e618-108">[out] A pointer to the total number of [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) structures available.</span></span>  
+ <span data-ttu-id="ba6c7-108">[out] 총 수에 대 한 포인터 [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) 구조를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ba6c7-108">[out] A pointer to the total number of [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) structures available.</span></span>  
   
  `codeInfos`  
- <span data-ttu-id="1e618-109">[out] 호출자가 제공한 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="1e618-109">[out] A caller-provided buffer.</span></span> <span data-ttu-id="1e618-110">메서드가 반환된 후에는 각각 네이티브 코드 블록을 설명하는 `COR_PRF_CODE_INFO` 구조체의 배열을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="1e618-110">After the method returns, it contains an array of `COR_PRF_CODE_INFO` structures, each of which describes a block of native code.</span></span>  
+ <span data-ttu-id="ba6c7-109">[out] 호출자가 제공한 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="ba6c7-109">[out] A caller-provided buffer.</span></span> <span data-ttu-id="ba6c7-110">메서드가 반환된 후에는 각각 네이티브 코드 블록을 설명하는 `COR_PRF_CODE_INFO` 구조체의 배열을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="ba6c7-110">After the method returns, it contains an array of `COR_PRF_CODE_INFO` structures, each of which describes a block of native code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1e618-111">설명</span><span class="sxs-lookup"><span data-stu-id="1e618-111">Remarks</span></span>  
- <span data-ttu-id="1e618-112">범위는 MSIL(Microsoft Intermediate Language) 오프셋의 오름차순으로 정렬됩니다.</span><span class="sxs-lookup"><span data-stu-id="1e618-112">The extents are sorted in order of increasing Microsoft intermediate language (MSIL) offset.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ba6c7-111">설명</span><span class="sxs-lookup"><span data-stu-id="ba6c7-111">Remarks</span></span>  
+ <span data-ttu-id="ba6c7-112">범위는 MSIL(Microsoft Intermediate Language) 오프셋의 오름차순으로 정렬됩니다.</span><span class="sxs-lookup"><span data-stu-id="ba6c7-112">The extents are sorted in order of increasing Microsoft intermediate language (MSIL) offset.</span></span>  
   
- <span data-ttu-id="1e618-113">`GetCodeInfo2`가 반환된 후 `codeInfos` 버퍼가 모든 `COR_PRF_CODE_INFO` 구조체를 포함하기에 충분히 큰지 확인해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1e618-113">After `GetCodeInfo2` returns, you must verify that the `codeInfos` buffer was large enough to contain all the `COR_PRF_CODE_INFO` structures.</span></span> <span data-ttu-id="1e618-114">이렇게 하려면 `cCodeInfos` 값을 `cchName` 매개 변수의 값과 비교합니다.</span><span class="sxs-lookup"><span data-stu-id="1e618-114">To do this, compare the value of `cCodeInfos` with the value of the `cchName` parameter.</span></span> <span data-ttu-id="1e618-115">`cCodeInfos`를 `COR_PRF_CODE_INFO` 구조체의 크기로 나눈 값이 `pcCodeInfos`보다 작으면 더 큰 `codeInfos` 버퍼를 할당하고 `cCodeInfos`를 더 큰 새 크기로 업데이트한 다음 `GetCodeInfo2`를 다시 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="1e618-115">If `cCodeInfos` divided by the size of a `COR_PRF_CODE_INFO` structure is smaller than `pcCodeInfos`, allocate a larger `codeInfos` buffer, update `cCodeInfos` with the new, larger size, and call `GetCodeInfo2` again.</span></span>  
+ <span data-ttu-id="ba6c7-113">`GetCodeInfo2`가 반환된 후 `codeInfos` 버퍼가 모든 `COR_PRF_CODE_INFO` 구조체를 포함하기에 충분히 큰지 확인해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ba6c7-113">After `GetCodeInfo2` returns, you must verify that the `codeInfos` buffer was large enough to contain all the `COR_PRF_CODE_INFO` structures.</span></span> <span data-ttu-id="ba6c7-114">이렇게 하려면 `cCodeInfos` 값을 `cchName` 매개 변수의 값과 비교합니다.</span><span class="sxs-lookup"><span data-stu-id="ba6c7-114">To do this, compare the value of `cCodeInfos` with the value of the `cchName` parameter.</span></span> <span data-ttu-id="ba6c7-115">`cCodeInfos`를 `COR_PRF_CODE_INFO` 구조체의 크기로 나눈 값이 `pcCodeInfos`보다 작으면 더 큰 `codeInfos` 버퍼를 할당하고 `cCodeInfos`를 더 큰 새 크기로 업데이트한 다음 `GetCodeInfo2`를 다시 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="ba6c7-115">If `cCodeInfos` divided by the size of a `COR_PRF_CODE_INFO` structure is smaller than `pcCodeInfos`, allocate a larger `codeInfos` buffer, update `cCodeInfos` with the new, larger size, and call `GetCodeInfo2` again.</span></span>  
   
- <span data-ttu-id="1e618-116">또는 길이가 0인 `codeInfos` 버퍼로 `GetCodeInfo2`를 먼저 호출하여 올바른 버퍼 크기를 구합니다.</span><span class="sxs-lookup"><span data-stu-id="1e618-116">Alternatively, you can first call `GetCodeInfo2` with a zero-length `codeInfos` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="1e618-117">그런 다음 `codeInfos` 버퍼 크기를 `pcCodeInfos`에서 반환된 값에 `COR_PRF_CODE_INFO` 구조체의 크기를 곱한 값으로 설정하고 `GetCodeInfo2`를 다시 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="1e618-117">You can then set the `codeInfos` buffer size to the value returned in `pcCodeInfos`, multiplied by the size of a `COR_PRF_CODE_INFO` structure, and call `GetCodeInfo2` again.</span></span>  
+ <span data-ttu-id="ba6c7-116">또는 길이가 0인 `codeInfos` 버퍼로 `GetCodeInfo2`를 먼저 호출하여 올바른 버퍼 크기를 구합니다.</span><span class="sxs-lookup"><span data-stu-id="ba6c7-116">Alternatively, you can first call `GetCodeInfo2` with a zero-length `codeInfos` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="ba6c7-117">그런 다음 `codeInfos` 버퍼 크기를 `pcCodeInfos`에서 반환된 값에 `COR_PRF_CODE_INFO` 구조체의 크기를 곱한 값으로 설정하고 `GetCodeInfo2`를 다시 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="ba6c7-117">You can then set the `codeInfos` buffer size to the value returned in `pcCodeInfos`, multiplied by the size of a `COR_PRF_CODE_INFO` structure, and call `GetCodeInfo2` again.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1e618-118">요구 사항</span><span class="sxs-lookup"><span data-stu-id="1e618-118">Requirements</span></span>  
- <span data-ttu-id="1e618-119">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="1e618-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ba6c7-118">요구 사항</span><span class="sxs-lookup"><span data-stu-id="ba6c7-118">Requirements</span></span>  
+ <span data-ttu-id="ba6c7-119">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="ba6c7-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1e618-120">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="1e618-120">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="ba6c7-120">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ba6c7-120">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="1e618-121">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1e618-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ba6c7-121">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ba6c7-121">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1e618-122">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1e618-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ba6c7-122">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ba6c7-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1e618-123">참고자료</span><span class="sxs-lookup"><span data-stu-id="1e618-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ba6c7-123">참고자료</span><span class="sxs-lookup"><span data-stu-id="ba6c7-123">See also</span></span>
 
-- [<span data-ttu-id="1e618-124">GetCodeInfo3 메서드</span><span class="sxs-lookup"><span data-stu-id="1e618-124">GetCodeInfo3 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getcodeinfo3-method.md)
-- [<span data-ttu-id="1e618-125">ICorProfilerInfo2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="1e618-125">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
-- [<span data-ttu-id="1e618-126">프로파일링 인터페이스</span><span class="sxs-lookup"><span data-stu-id="1e618-126">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="1e618-127">프로파일링</span><span class="sxs-lookup"><span data-stu-id="1e618-127">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="ba6c7-124">GetCodeInfo3 메서드</span><span class="sxs-lookup"><span data-stu-id="ba6c7-124">GetCodeInfo3 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getcodeinfo3-method.md)
+- [<span data-ttu-id="ba6c7-125">ICorProfilerInfo2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ba6c7-125">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [<span data-ttu-id="ba6c7-126">프로파일링 인터페이스</span><span class="sxs-lookup"><span data-stu-id="ba6c7-126">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="ba6c7-127">프로파일링</span><span class="sxs-lookup"><span data-stu-id="ba6c7-127">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

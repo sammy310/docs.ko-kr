@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 50b682a7b3a4aadf7559120745265ef266cf2870
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948748"
 ---
-# <a name="icordebugprocess5getgcheapinformation-method"></a><span data-ttu-id="d03d9-102">ICorDebugProcess5::GetGCHeapInformation 메서드</span><span class="sxs-lookup"><span data-stu-id="d03d9-102">ICorDebugProcess5::GetGCHeapInformation Method</span></span>
-<span data-ttu-id="d03d9-103">현재 열거 가능 여부를 포함 하 여 가비지 컬렉션 힙에 대 한 일반 정보를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="d03d9-103">Provides general information about the garbage collection heap, including whether it is currently enumerable.</span></span>  
+# <a name="icordebugprocess5getgcheapinformation-method"></a><span data-ttu-id="d7cb1-102">ICorDebugProcess5::GetGCHeapInformation 메서드</span><span class="sxs-lookup"><span data-stu-id="d7cb1-102">ICorDebugProcess5::GetGCHeapInformation Method</span></span>
+<span data-ttu-id="d7cb1-103">현재 열거 가능 여부를 포함 하 여 가비지 컬렉션 힙에 대 한 일반 정보를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="d7cb1-103">Provides general information about the garbage collection heap, including whether it is currently enumerable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d03d9-104">구문</span><span class="sxs-lookup"><span data-stu-id="d03d9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d7cb1-104">구문</span><span class="sxs-lookup"><span data-stu-id="d7cb1-104">Syntax</span></span>  
   
 ```  
 HRESULT GetGCHeapInformation(  
@@ -35,23 +35,23 @@ HRESULT GetGCHeapInformation(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d03d9-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d03d9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d7cb1-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="d7cb1-105">Parameters</span></span>  
  `pHeapInfo`  
- <span data-ttu-id="d03d9-106">[out] 에 대 한 포인터를 [COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) 가비지 컬렉션 힙에 대 한 일반 정보를 제공 하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="d03d9-106">[out] A pointer to a [COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) value that provides general information about the garbage collection heap.</span></span>  
+ <span data-ttu-id="d7cb1-106">[out] 에 대 한 포인터를 [COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) 가비지 컬렉션 힙에 대 한 일반 정보를 제공 하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="d7cb1-106">[out] A pointer to a [COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) value that provides general information about the garbage collection heap.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d03d9-107">설명</span><span class="sxs-lookup"><span data-stu-id="d03d9-107">Remarks</span></span>  
- <span data-ttu-id="d03d9-108">`ICorDebugProcess5::GetGCHeapInformation` 힙을 열거 하기 전에 메서드를 호출 해야 또는 개별 힙 지역 가비지 수집 프로세스의 구조는 현재 유효 합니다.</span><span class="sxs-lookup"><span data-stu-id="d03d9-108">The `ICorDebugProcess5::GetGCHeapInformation` method must be called before enumerating the heap or individual heap regions to ensure that the garbage collection structures in the process are currently valid.</span></span> <span data-ttu-id="d03d9-109">가비지 컬렉션 힙에 컬렉션이 진행 중인 동안 진행할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="d03d9-109">The garbage collection heap cannot be walked while a collection is in progress.</span></span> <span data-ttu-id="d03d9-110">이 고, 그렇지 열거형 유효 하지 않은 가비지 수집 구조를 캡처할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d03d9-110">Otherwise, the enumeration may capture garbage collection structures that are invalid.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d7cb1-107">설명</span><span class="sxs-lookup"><span data-stu-id="d7cb1-107">Remarks</span></span>  
+ <span data-ttu-id="d7cb1-108">`ICorDebugProcess5::GetGCHeapInformation` 힙을 열거 하기 전에 메서드를 호출 해야 또는 개별 힙 지역 가비지 수집 프로세스의 구조는 현재 유효 합니다.</span><span class="sxs-lookup"><span data-stu-id="d7cb1-108">The `ICorDebugProcess5::GetGCHeapInformation` method must be called before enumerating the heap or individual heap regions to ensure that the garbage collection structures in the process are currently valid.</span></span> <span data-ttu-id="d7cb1-109">가비지 컬렉션 힙에 컬렉션이 진행 중인 동안 진행할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="d7cb1-109">The garbage collection heap cannot be walked while a collection is in progress.</span></span> <span data-ttu-id="d7cb1-110">이 고, 그렇지 열거형 유효 하지 않은 가비지 수집 구조를 캡처할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d7cb1-110">Otherwise, the enumeration may capture garbage collection structures that are invalid.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d03d9-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d03d9-111">Requirements</span></span>  
- <span data-ttu-id="d03d9-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="d03d9-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d7cb1-111">요구 사항</span><span class="sxs-lookup"><span data-stu-id="d7cb1-111">Requirements</span></span>  
+ <span data-ttu-id="d7cb1-112">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="d7cb1-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d03d9-113">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d03d9-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d7cb1-113">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d7cb1-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d03d9-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d03d9-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d7cb1-114">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d7cb1-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d03d9-115">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d03d9-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="d7cb1-115">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d7cb1-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d03d9-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="d03d9-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d7cb1-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="d7cb1-116">See also</span></span>
 
-- [<span data-ttu-id="d03d9-117">ICorDebugProcess5 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d03d9-117">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [<span data-ttu-id="d03d9-118">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d03d9-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="d7cb1-117">ICorDebugProcess5 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d7cb1-117">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [<span data-ttu-id="d7cb1-118">디버깅 인터페이스</span><span class="sxs-lookup"><span data-stu-id="d7cb1-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

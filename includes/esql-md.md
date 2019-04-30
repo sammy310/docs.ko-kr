@@ -1,1 +1,9 @@
-<span data-ttu-id="b2caf-101">Entity SQL</span><span class="sxs-lookup"><span data-stu-id="b2caf-101">Entity SQL</span></span>
+---
+ms.openlocfilehash: 8758e5c8cba58ace097606f18dbf3bbbf0afb61b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760238"
+---
+<span data-ttu-id="ed000-101">Entity SQL</span><span class="sxs-lookup"><span data-stu-id="ed000-101">Entity SQL</span></span>

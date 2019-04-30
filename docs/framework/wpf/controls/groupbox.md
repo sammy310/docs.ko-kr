@@ -8,23 +8,23 @@ helpviewer_keywords:
 - GroupBox control [WPF]
 ms.assetid: 1f4ed3d9-a171-4623-bc4f-3314e3576271
 ms.openlocfilehash: 6baee12c04e93a94736acacb1e4774b3cc20a3ac
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008733"
 ---
-# <a name="groupbox"></a><span data-ttu-id="597ff-102">GroupBox</span><span class="sxs-lookup"><span data-stu-id="597ff-102">GroupBox</span></span>
-<span data-ttu-id="597ff-103"><xref:System.Windows.Controls.GroupBox> 컨트롤을 <xref:System.Windows.Controls.HeaderedContentControl> 에 대 한 제목이 지정된 된 컨테이너를 제공 하는 [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] 콘텐츠.</span><span class="sxs-lookup"><span data-stu-id="597ff-103">The <xref:System.Windows.Controls.GroupBox> control is a <xref:System.Windows.Controls.HeaderedContentControl> that provides a titled container for [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] content.</span></span>  
+# <a name="groupbox"></a><span data-ttu-id="9e642-102">GroupBox</span><span class="sxs-lookup"><span data-stu-id="9e642-102">GroupBox</span></span>
+<span data-ttu-id="9e642-103"><xref:System.Windows.Controls.GroupBox> 컨트롤을 <xref:System.Windows.Controls.HeaderedContentControl> 에 대 한 제목이 지정된 된 컨테이너를 제공 하는 [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] 콘텐츠.</span><span class="sxs-lookup"><span data-stu-id="9e642-103">The <xref:System.Windows.Controls.GroupBox> control is a <xref:System.Windows.Controls.HeaderedContentControl> that provides a titled container for [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] content.</span></span>  
   
- <span data-ttu-id="597ff-104">다음 그림에 표시를 <xref:System.Windows.Controls.GroupBox> 를 포함 하는 <xref:System.Windows.Controls.TabControl> 및 <xref:System.Windows.Controls.Button> 에 포함 된를 <xref:System.Windows.Controls.StackPanel>입니다.</span><span class="sxs-lookup"><span data-stu-id="597ff-104">The following illustration shows a <xref:System.Windows.Controls.GroupBox> that contains a <xref:System.Windows.Controls.TabControl> and a <xref:System.Windows.Controls.Button> that are enclosed in a <xref:System.Windows.Controls.StackPanel>.</span></span>  
+ <span data-ttu-id="9e642-104">다음 그림에 표시를 <xref:System.Windows.Controls.GroupBox> 를 포함 하는 <xref:System.Windows.Controls.TabControl> 및 <xref:System.Windows.Controls.Button> 에 포함 된를 <xref:System.Windows.Controls.StackPanel>입니다.</span><span class="sxs-lookup"><span data-stu-id="9e642-104">The following illustration shows a <xref:System.Windows.Controls.GroupBox> that contains a <xref:System.Windows.Controls.TabControl> and a <xref:System.Windows.Controls.Button> that are enclosed in a <xref:System.Windows.Controls.StackPanel>.</span></span>  
   
  ![Groupbox를 보여주는 스크린샷.](./media/groupbox/groupbox-tab-button-stackpanel.jpg)  
   
-## <a name="in-this-section"></a><span data-ttu-id="597ff-106">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="597ff-106">In This Section</span></span>  
- [<span data-ttu-id="597ff-107">GruopBox 템플릿 정의</span><span class="sxs-lookup"><span data-stu-id="597ff-107">Define a GroupBox Template</span></span>](how-to-define-a-groupbox-template.md)  
+## <a name="in-this-section"></a><span data-ttu-id="9e642-106">섹션 내용</span><span class="sxs-lookup"><span data-stu-id="9e642-106">In This Section</span></span>  
+ [<span data-ttu-id="9e642-107">GruopBox 템플릿 정의</span><span class="sxs-lookup"><span data-stu-id="9e642-107">Define a GroupBox Template</span></span>](how-to-define-a-groupbox-template.md)  
   
-## <a name="reference"></a><span data-ttu-id="597ff-108">참조</span><span class="sxs-lookup"><span data-stu-id="597ff-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="9e642-108">참조</span><span class="sxs-lookup"><span data-stu-id="9e642-108">Reference</span></span>  
  <xref:System.Windows.Controls.GroupBox>  
   
-## <a name="related-sections"></a><span data-ttu-id="597ff-109">관련 단원</span><span class="sxs-lookup"><span data-stu-id="597ff-109">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="9e642-109">관련 단원</span><span class="sxs-lookup"><span data-stu-id="9e642-109">Related Sections</span></span>
