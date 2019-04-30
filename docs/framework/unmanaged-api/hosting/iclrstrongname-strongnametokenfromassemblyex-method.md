@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 203c8647366952b1d58799b97dfd53aea22859ed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59127870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992799"
 ---
-# <a name="iclrstrongnamestrongnametokenfromassemblyex-method"></a><span data-ttu-id="fb6c8-102">ICLRStrongName::StrongNameTokenFromAssemblyEx 메서드</span><span class="sxs-lookup"><span data-stu-id="fb6c8-102">ICLRStrongName::StrongNameTokenFromAssemblyEx Method</span></span>
-<span data-ttu-id="fb6c8-103">지정 된 어셈블리 파일에서 강력한 이름 토큰을 만들고 공개 키 토큰이 나타내는 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="fb6c8-103">Creates a strong name token from the specified assembly file, and returns the public key that the token represents.</span></span>  
+# <a name="iclrstrongnamestrongnametokenfromassemblyex-method"></a><span data-ttu-id="3c587-102">ICLRStrongName::StrongNameTokenFromAssemblyEx 메서드</span><span class="sxs-lookup"><span data-stu-id="3c587-102">ICLRStrongName::StrongNameTokenFromAssemblyEx Method</span></span>
+<span data-ttu-id="3c587-103">지정 된 어셈블리 파일에서 강력한 이름 토큰을 만들고 공개 키 토큰이 나타내는 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="3c587-103">Creates a strong name token from the specified assembly file, and returns the public key that the token represents.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fb6c8-104">구문</span><span class="sxs-lookup"><span data-stu-id="fb6c8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3c587-104">구문</span><span class="sxs-lookup"><span data-stu-id="3c587-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameTokenFromAssemblyEx (  
@@ -39,40 +39,40 @@ HRESULT StrongNameTokenFromAssemblyEx (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fb6c8-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="fb6c8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3c587-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="3c587-105">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="fb6c8-106">[in] 어셈블리의 pe (이식 가능) 파일 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="fb6c8-106">[in] The path to the portable executable (PE) file for the assembly.</span></span>  
+ <span data-ttu-id="3c587-106">[in] 어셈블리의 pe (이식 가능) 파일 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="3c587-106">[in] The path to the portable executable (PE) file for the assembly.</span></span>  
   
  `ppbStrongNameToken`  
- <span data-ttu-id="fb6c8-107">[out] 반환 된 강력한 이름 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="fb6c8-107">[out] The returned strong name token.</span></span>  
+ <span data-ttu-id="3c587-107">[out] 반환 된 강력한 이름 토큰입니다.</span><span class="sxs-lookup"><span data-stu-id="3c587-107">[out] The returned strong name token.</span></span>  
   
  `pcbStrongNameToken`  
- <span data-ttu-id="fb6c8-108">[out] 강력한 이름 토큰의 바이트 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="fb6c8-108">[out] The size, in bytes, of the strong name token.</span></span>  
+ <span data-ttu-id="3c587-108">[out] 강력한 이름 토큰의 바이트 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="3c587-108">[out] The size, in bytes, of the strong name token.</span></span>  
   
  `ppbPublicKeyBlob`  
- <span data-ttu-id="fb6c8-109">[out] 반환 된 공개 키입니다.</span><span class="sxs-lookup"><span data-stu-id="fb6c8-109">[out] The returned public key.</span></span>  
+ <span data-ttu-id="3c587-109">[out] 반환 된 공개 키입니다.</span><span class="sxs-lookup"><span data-stu-id="3c587-109">[out] The returned public key.</span></span>  
   
  `pcbPublicKeyBlob`  
- <span data-ttu-id="fb6c8-110">[out] 공개 키의 바이트 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="fb6c8-110">[out] The size, in bytes, of the public key.</span></span>  
+ <span data-ttu-id="3c587-110">[out] 공개 키의 바이트 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="3c587-110">[out] The size, in bytes, of the public key.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="fb6c8-111">반환 값</span><span class="sxs-lookup"><span data-stu-id="fb6c8-111">Return Value</span></span>  
- <span data-ttu-id="fb6c8-112">`S_OK` 메서드가 성공적으로 완료 하는 경우 그렇지 않으면 실패를 나타내는 HRESULT 값을 (참조 [일반적인 HRESULT 값](https://go.microsoft.com/fwlink/?LinkId=213878) 목록에 대 한).</span><span class="sxs-lookup"><span data-stu-id="fb6c8-112">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3c587-111">반환 값</span><span class="sxs-lookup"><span data-stu-id="3c587-111">Return Value</span></span>  
+ <span data-ttu-id="3c587-112">`S_OK` 메서드가 성공적으로 완료 하는 경우 그렇지 않으면 실패를 나타내는 HRESULT 값을 (참조 [일반적인 HRESULT 값](https://go.microsoft.com/fwlink/?LinkId=213878) 목록에 대 한).</span><span class="sxs-lookup"><span data-stu-id="3c587-112">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="fb6c8-113">설명</span><span class="sxs-lookup"><span data-stu-id="fb6c8-113">Remarks</span></span>  
- <span data-ttu-id="fb6c8-114">강력한 이름 토큰은 공개 키의 축약 형태입니다.</span><span class="sxs-lookup"><span data-stu-id="fb6c8-114">A strong name token is the shortened form of a public key.</span></span> <span data-ttu-id="fb6c8-115">토큰은 어셈블리 서명에 사용 된 공개 키에서 생성 되는 64 비트 해시입니다.</span><span class="sxs-lookup"><span data-stu-id="fb6c8-115">The token is a 64-bit hash that is created from the public key used to sign the assembly.</span></span> <span data-ttu-id="fb6c8-116">토큰에는 어셈블리에 대 한 강력한 이름의 일부인 되며 어셈블리 메타 데이터에서 읽을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fb6c8-116">The token is a part of the strong name for the assembly, and can be read from the assembly metadata.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3c587-113">설명</span><span class="sxs-lookup"><span data-stu-id="3c587-113">Remarks</span></span>  
+ <span data-ttu-id="3c587-114">강력한 이름 토큰은 공개 키의 축약 형태입니다.</span><span class="sxs-lookup"><span data-stu-id="3c587-114">A strong name token is the shortened form of a public key.</span></span> <span data-ttu-id="3c587-115">토큰은 어셈블리 서명에 사용 된 공개 키에서 생성 되는 64 비트 해시입니다.</span><span class="sxs-lookup"><span data-stu-id="3c587-115">The token is a 64-bit hash that is created from the public key used to sign the assembly.</span></span> <span data-ttu-id="3c587-116">토큰에는 어셈블리에 대 한 강력한 이름의 일부인 되며 어셈블리 메타 데이터에서 읽을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3c587-116">The token is a part of the strong name for the assembly, and can be read from the assembly metadata.</span></span>  
   
- <span data-ttu-id="fb6c8-117">키가 검색 후 토큰이 만들어지기 호출 해야 합니다 [iclrstrongname:: Strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) 할당 된 메모리를 해제 하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="fb6c8-117">After the key is retrieved and the token is created, you should call the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method to release the allocated memory.</span></span>  
+ <span data-ttu-id="3c587-117">키가 검색 후 토큰이 만들어지기 호출 해야 합니다 [iclrstrongname:: Strongnamefreebuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) 할당 된 메모리를 해제 하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="3c587-117">After the key is retrieved and the token is created, you should call the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method to release the allocated memory.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fb6c8-118">요구 사항</span><span class="sxs-lookup"><span data-stu-id="fb6c8-118">Requirements</span></span>  
- <span data-ttu-id="fb6c8-119">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="fb6c8-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3c587-118">요구 사항</span><span class="sxs-lookup"><span data-stu-id="3c587-118">Requirements</span></span>  
+ <span data-ttu-id="3c587-119">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="3c587-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fb6c8-120">**헤더:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="fb6c8-120">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="3c587-120">**헤더:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="3c587-120">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="fb6c8-121">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="fb6c8-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="3c587-121">**라이브러리:** MSCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="3c587-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="fb6c8-122">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fb6c8-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="3c587-122">**.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3c587-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fb6c8-123">참고자료</span><span class="sxs-lookup"><span data-stu-id="fb6c8-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3c587-123">참고자료</span><span class="sxs-lookup"><span data-stu-id="3c587-123">See also</span></span>
 
-- [<span data-ttu-id="fb6c8-124">StrongNameTokenFromAssembly 메서드</span><span class="sxs-lookup"><span data-stu-id="fb6c8-124">StrongNameTokenFromAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassembly-method.md)
-- [<span data-ttu-id="fb6c8-125">ICLRStrongName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="fb6c8-125">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="3c587-124">StrongNameTokenFromAssembly 메서드</span><span class="sxs-lookup"><span data-stu-id="3c587-124">StrongNameTokenFromAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassembly-method.md)
+- [<span data-ttu-id="3c587-125">ICLRStrongName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="3c587-125">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

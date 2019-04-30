@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e23232b55a841672ee193b980c310995ba688e00
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049364"
 ---
-# <a name="strongnamegetblob-function"></a><span data-ttu-id="8cd2e-102">StrongNameGetBlob 함수</span><span class="sxs-lookup"><span data-stu-id="8cd2e-102">StrongNameGetBlob Function</span></span>
-<span data-ttu-id="8cd2e-103">지정된 주소에 있는 실행 파일의 이진 표현으로 지정된 버퍼를 채웁니다.</span><span class="sxs-lookup"><span data-stu-id="8cd2e-103">Fills the specified buffer with the binary representation of the executable file at the specified address.</span></span>  
+# <a name="strongnamegetblob-function"></a><span data-ttu-id="f8b3e-102">StrongNameGetBlob 함수</span><span class="sxs-lookup"><span data-stu-id="f8b3e-102">StrongNameGetBlob Function</span></span>
+<span data-ttu-id="f8b3e-103">지정된 주소에 있는 실행 파일의 이진 표현으로 지정된 버퍼를 채웁니다.</span><span class="sxs-lookup"><span data-stu-id="f8b3e-103">Fills the specified buffer with the binary representation of the executable file at the specified address.</span></span>  
   
- <span data-ttu-id="8cd2e-104">이 함수는 더 이상 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8cd2e-104">This function has been deprecated.</span></span> <span data-ttu-id="8cd2e-105">사용 된 [iclrstrongname:: Strongnamegetblob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md) 메서드 대신 합니다.</span><span class="sxs-lookup"><span data-stu-id="8cd2e-105">Use the [ICLRStrongName::StrongNameGetBLob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md) method instead.</span></span>  
+ <span data-ttu-id="f8b3e-104">이 함수는 더 이상 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f8b3e-104">This function has been deprecated.</span></span> <span data-ttu-id="f8b3e-105">사용 된 [iclrstrongname:: Strongnamegetblob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md) 메서드 대신 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8b3e-105">Use the [ICLRStrongName::StrongNameGetBLob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8cd2e-106">구문</span><span class="sxs-lookup"><span data-stu-id="8cd2e-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f8b3e-106">구문</span><span class="sxs-lookup"><span data-stu-id="f8b3e-106">Syntax</span></span>  
   
 ```  
 BOOLEAN StrongNameGetBlob (  
@@ -38,33 +38,33 @@ BOOLEAN StrongNameGetBlob (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8cd2e-107">매개 변수</span><span class="sxs-lookup"><span data-stu-id="8cd2e-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f8b3e-107">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f8b3e-107">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="8cd2e-108">[in] 유효한 경로 로드 되도록 실행 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="8cd2e-108">[in] A valid path to the executable file to be loaded.</span></span>  
+ <span data-ttu-id="f8b3e-108">[in] 유효한 경로 로드 되도록 실행 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="f8b3e-108">[in] A valid path to the executable file to be loaded.</span></span>  
   
  `pbBlob`  
- <span data-ttu-id="8cd2e-109">[in] 실행 파일을 로드 하는 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="8cd2e-109">[in] The buffer into which to load the executable file.</span></span>  
+ <span data-ttu-id="f8b3e-109">[in] 실행 파일을 로드 하는 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="f8b3e-109">[in] The buffer into which to load the executable file.</span></span>  
   
  `pcbBlob`  
- <span data-ttu-id="8cd2e-110">[out에서] 최대 크기 (바이트), 요청한 `pbBlob`합니다.</span><span class="sxs-lookup"><span data-stu-id="8cd2e-110">[in, out] The requested maximum size, in bytes, of `pbBlob`.</span></span> <span data-ttu-id="8cd2e-111">실제 크기를 바이트 단위로 반환 될 때의 `pbBlob`합니다.</span><span class="sxs-lookup"><span data-stu-id="8cd2e-111">Upon return, the actual size, in bytes, of `pbBlob`.</span></span>  
+ <span data-ttu-id="f8b3e-110">[out에서] 최대 크기 (바이트), 요청한 `pbBlob`합니다.</span><span class="sxs-lookup"><span data-stu-id="f8b3e-110">[in, out] The requested maximum size, in bytes, of `pbBlob`.</span></span> <span data-ttu-id="f8b3e-111">실제 크기를 바이트 단위로 반환 될 때의 `pbBlob`합니다.</span><span class="sxs-lookup"><span data-stu-id="f8b3e-111">Upon return, the actual size, in bytes, of `pbBlob`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="8cd2e-112">반환 값</span><span class="sxs-lookup"><span data-stu-id="8cd2e-112">Return Value</span></span>  
- <span data-ttu-id="8cd2e-113">`true` 성공적으로 완료 됩니다. 그렇지 않으면 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="8cd2e-113">`true` on successful completion; otherwise, `false`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f8b3e-112">반환 값</span><span class="sxs-lookup"><span data-stu-id="f8b3e-112">Return Value</span></span>  
+ <span data-ttu-id="f8b3e-113">`true` 성공적으로 완료 됩니다. 그렇지 않으면 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="f8b3e-113">`true` on successful completion; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8cd2e-114">설명</span><span class="sxs-lookup"><span data-stu-id="8cd2e-114">Remarks</span></span>  
- <span data-ttu-id="8cd2e-115">경우는 `StrongNameGetBlob` 함수가 성공적으로 완료으로 호출 되지 않으면 합니다 [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) 마지막 생성 된 오류를 검색 하는 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="8cd2e-115">If the `StrongNameGetBlob` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f8b3e-114">설명</span><span class="sxs-lookup"><span data-stu-id="f8b3e-114">Remarks</span></span>  
+ <span data-ttu-id="f8b3e-115">경우는 `StrongNameGetBlob` 함수가 성공적으로 완료으로 호출 되지 않으면 합니다 [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) 마지막 생성 된 오류를 검색 하는 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="f8b3e-115">If the `StrongNameGetBlob` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8cd2e-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="8cd2e-116">Requirements</span></span>  
- <span data-ttu-id="8cd2e-117">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="8cd2e-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f8b3e-116">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f8b3e-116">Requirements</span></span>  
+ <span data-ttu-id="f8b3e-117">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="f8b3e-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8cd2e-118">**헤더:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="8cd2e-118">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="f8b3e-118">**헤더:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="f8b3e-118">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="8cd2e-119">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="8cd2e-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="f8b3e-119">**라이브러리:** MsCorEE.dll에 리소스로 포함</span><span class="sxs-lookup"><span data-stu-id="f8b3e-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="8cd2e-120">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8cd2e-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f8b3e-120">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f8b3e-120">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8cd2e-121">참고자료</span><span class="sxs-lookup"><span data-stu-id="8cd2e-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f8b3e-121">참고자료</span><span class="sxs-lookup"><span data-stu-id="f8b3e-121">See also</span></span>
 
-- [<span data-ttu-id="8cd2e-122">StrongNameGetBlob 메서드</span><span class="sxs-lookup"><span data-stu-id="8cd2e-122">StrongNameGetBlob Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)
-- [<span data-ttu-id="8cd2e-123">StrongNameGetBlobFromImage 메서드</span><span class="sxs-lookup"><span data-stu-id="8cd2e-123">StrongNameGetBlobFromImage Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)
-- [<span data-ttu-id="8cd2e-124">ICLRStrongName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="8cd2e-124">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="f8b3e-122">StrongNameGetBlob 메서드</span><span class="sxs-lookup"><span data-stu-id="f8b3e-122">StrongNameGetBlob Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)
+- [<span data-ttu-id="f8b3e-123">StrongNameGetBlobFromImage 메서드</span><span class="sxs-lookup"><span data-stu-id="f8b3e-123">StrongNameGetBlobFromImage Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)
+- [<span data-ttu-id="f8b3e-124">ICLRStrongName 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f8b3e-124">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

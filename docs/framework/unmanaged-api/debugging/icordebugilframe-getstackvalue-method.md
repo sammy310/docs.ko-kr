@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 859abdd713fb19bbb3698d0da72cbff33cfbc6fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995589"
 ---
-# <a name="icordebugilframegetstackvalue-method"></a><span data-ttu-id="db966-102">ICorDebugILFrame::GetStackValue 메서드</span><span class="sxs-lookup"><span data-stu-id="db966-102">ICorDebugILFrame::GetStackValue Method</span></span>
-<span data-ttu-id="db966-103">이 메서드는 구현되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="db966-103">This method has not been implemented.</span></span>  
+# <a name="icordebugilframegetstackvalue-method"></a><span data-ttu-id="94deb-102">ICorDebugILFrame::GetStackValue 메서드</span><span class="sxs-lookup"><span data-stu-id="94deb-102">ICorDebugILFrame::GetStackValue Method</span></span>
+<span data-ttu-id="94deb-103">이 메서드는 구현되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="94deb-103">This method has not been implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="db966-104">구문</span><span class="sxs-lookup"><span data-stu-id="db966-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="94deb-104">구문</span><span class="sxs-lookup"><span data-stu-id="94deb-104">Syntax</span></span>  
   
 ```  
 HRESULT GetStackValue (  
@@ -36,5 +36,5 @@ HRESULT GetStackValue (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="db966-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="db966-105">Requirements</span></span>  
- <span data-ttu-id="db966-106">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="db966-106">**Header:** CorDebug.idl, CorDebug.h</span></span>
+## <a name="requirements"></a><span data-ttu-id="94deb-105">요구 사항</span><span class="sxs-lookup"><span data-stu-id="94deb-105">Requirements</span></span>  
+ <span data-ttu-id="94deb-106">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="94deb-106">**Header:** CorDebug.idl, CorDebug.h</span></span>

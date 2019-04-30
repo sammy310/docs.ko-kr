@@ -18,39 +18,39 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d4c45290b1ef4360e51b5ed8e1b0fac3dcdde727
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62041628"
 ---
-# <a name="icorprofilercallbackthreaddestroyed-method"></a><span data-ttu-id="1ba84-102">ICorProfilerCallback::ThreadDestroyed 메서드</span><span class="sxs-lookup"><span data-stu-id="1ba84-102">ICorProfilerCallback::ThreadDestroyed Method</span></span>
-<span data-ttu-id="1ba84-103">스레드 소멸 된 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="1ba84-103">Notifies the profiler that a thread has been destroyed.</span></span>  
+# <a name="icorprofilercallbackthreaddestroyed-method"></a><span data-ttu-id="f3f49-102">ICorProfilerCallback::ThreadDestroyed 메서드</span><span class="sxs-lookup"><span data-stu-id="f3f49-102">ICorProfilerCallback::ThreadDestroyed Method</span></span>
+<span data-ttu-id="f3f49-103">스레드 소멸 된 프로파일러에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="f3f49-103">Notifies the profiler that a thread has been destroyed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1ba84-104">구문</span><span class="sxs-lookup"><span data-stu-id="1ba84-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f3f49-104">구문</span><span class="sxs-lookup"><span data-stu-id="f3f49-104">Syntax</span></span>  
   
 ```  
 HRESULT ThreadDestroyed(  
     [in] ThreadID threadId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1ba84-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="1ba84-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f3f49-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="f3f49-105">Parameters</span></span>  
  `threadId`  
- <span data-ttu-id="1ba84-106">[in] 소멸 된 스레드의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="1ba84-106">[in] The ID of the thread that has been destroyed.</span></span>  
+ <span data-ttu-id="f3f49-106">[in] 소멸 된 스레드의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="f3f49-106">[in] The ID of the thread that has been destroyed.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1ba84-107">설명</span><span class="sxs-lookup"><span data-stu-id="1ba84-107">Remarks</span></span>  
- <span data-ttu-id="1ba84-108">`threadId` 이 호출 시 값이 유효한 이상.</span><span class="sxs-lookup"><span data-stu-id="1ba84-108">The `threadId` value is no longer valid at the time of this call.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f3f49-107">설명</span><span class="sxs-lookup"><span data-stu-id="f3f49-107">Remarks</span></span>  
+ <span data-ttu-id="f3f49-108">`threadId` 이 호출 시 값이 유효한 이상.</span><span class="sxs-lookup"><span data-stu-id="f3f49-108">The `threadId` value is no longer valid at the time of this call.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1ba84-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="1ba84-109">Requirements</span></span>  
- <span data-ttu-id="1ba84-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="1ba84-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f3f49-109">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f3f49-109">Requirements</span></span>  
+ <span data-ttu-id="f3f49-110">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="f3f49-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1ba84-111">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="1ba84-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="f3f49-111">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f3f49-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="1ba84-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1ba84-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f3f49-112">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f3f49-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1ba84-113">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1ba84-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f3f49-113">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f3f49-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1ba84-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="1ba84-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f3f49-114">참고자료</span><span class="sxs-lookup"><span data-stu-id="f3f49-114">See also</span></span>
 
-- [<span data-ttu-id="1ba84-115">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="1ba84-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="1ba84-116">ThreadCreated 메서드</span><span class="sxs-lookup"><span data-stu-id="1ba84-116">ThreadCreated Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadcreated-method.md)
+- [<span data-ttu-id="f3f49-115">ICorProfilerCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="f3f49-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="f3f49-116">ThreadCreated 메서드</span><span class="sxs-lookup"><span data-stu-id="f3f49-116">ThreadCreated Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadcreated-method.md)

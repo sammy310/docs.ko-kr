@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b36439dd6fb882bb41c38e953cb7b1c5f2b93d30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62041381"
 ---
-# <a name="icorprofilerfunctioncontrolsetilinstrumentedcodemap-method"></a><span data-ttu-id="b6dab-102">ICorProfilerFunctionControl::SetILInstrumentedCodeMap 메서드</span><span class="sxs-lookup"><span data-stu-id="b6dab-102">ICorProfilerFunctionControl::SetILInstrumentedCodeMap Method</span></span>
-<span data-ttu-id="b6dab-103">지정한 CIL(공용 중간 언어) 맵 엔트리를 사용하여 지정된 함수에 대한 코드 맵을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="b6dab-103">Sets a code map for the specified function by using the specified Common Intermediate Language (CIL) map entries.</span></span>  
+# <a name="icorprofilerfunctioncontrolsetilinstrumentedcodemap-method"></a><span data-ttu-id="e601b-102">ICorProfilerFunctionControl::SetILInstrumentedCodeMap 메서드</span><span class="sxs-lookup"><span data-stu-id="e601b-102">ICorProfilerFunctionControl::SetILInstrumentedCodeMap Method</span></span>
+<span data-ttu-id="e601b-103">지정한 CIL(공용 중간 언어) 맵 엔트리를 사용하여 지정된 함수에 대한 코드 맵을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="e601b-103">Sets a code map for the specified function by using the specified Common Intermediate Language (CIL) map entries.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b6dab-104">구문</span><span class="sxs-lookup"><span data-stu-id="b6dab-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e601b-104">구문</span><span class="sxs-lookup"><span data-stu-id="e601b-104">Syntax</span></span>  
   
 ```  
 HRESULT SetILInstrumentedCodeMap(  
@@ -35,25 +35,25 @@ HRESULT SetILInstrumentedCodeMap(
     [in, size_is(cILMapEntries)] COR_IL_MAP rgILMapEntries[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b6dab-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="b6dab-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e601b-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="e601b-105">Parameters</span></span>  
  `cILMapEntries`  
- <span data-ttu-id="b6dab-106">[in] 맵의 엔트리 수입니다.</span><span class="sxs-lookup"><span data-stu-id="b6dab-106">[in] The number of entries in the map.</span></span>  
+ <span data-ttu-id="e601b-106">[in] 맵의 엔트리 수입니다.</span><span class="sxs-lookup"><span data-stu-id="e601b-106">[in] The number of entries in the map.</span></span>  
   
  `rgILMapEntries`  
- <span data-ttu-id="b6dab-107">[in] COR_IL_MAP 항목 배열을 호출자가 할당 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b6dab-107">[in] The caller-allocated array of COR_IL_MAP  entries.</span></span> <span data-ttu-id="b6dab-108">이러한 항목의 해석의 경우와 동일 합니다 [icorprofilerinfo:: Setilinstrumentedcodemap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="b6dab-108">The interpretation of these entries is the same as for the [ICorProfilerInfo::SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) method.</span></span>  
+ <span data-ttu-id="e601b-107">[in] COR_IL_MAP 항목 배열을 호출자가 할당 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e601b-107">[in] The caller-allocated array of COR_IL_MAP  entries.</span></span> <span data-ttu-id="e601b-108">이러한 항목의 해석의 경우와 동일 합니다 [icorprofilerinfo:: Setilinstrumentedcodemap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) 메서드.</span><span class="sxs-lookup"><span data-stu-id="e601b-108">The interpretation of these entries is the same as for the [ICorProfilerInfo::SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) method.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b6dab-109">설명</span><span class="sxs-lookup"><span data-stu-id="b6dab-109">Remarks</span></span>  
- <span data-ttu-id="b6dab-110">이 메서드를 호출 하 여 매핑을 설정 디버거를 호출 하 여 매핑을 검색할 수 있습니다. [ICorDebugILCode2::GetInstrumentedILMap](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b6dab-110">Setting the mapping by calling this method allows the debugger to retrieve the mapping by calling [ICorDebugILCode2::GetInstrumentedILMap](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md).</span></span> <span data-ttu-id="b6dab-111">또한 스택 추적 및 변수 수명에 대한 IL 오프셋을 계산할 때 디버거가 내부적으로 매핑을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b6dab-111">It also allows the debugger to use the mapping internally when calculating IL offsets for stack traces and variable lifetimes.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e601b-109">설명</span><span class="sxs-lookup"><span data-stu-id="e601b-109">Remarks</span></span>  
+ <span data-ttu-id="e601b-110">이 메서드를 호출 하 여 매핑을 설정 디버거를 호출 하 여 매핑을 검색할 수 있습니다. [ICorDebugILCode2::GetInstrumentedILMap](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="e601b-110">Setting the mapping by calling this method allows the debugger to retrieve the mapping by calling [ICorDebugILCode2::GetInstrumentedILMap](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md).</span></span> <span data-ttu-id="e601b-111">또한 스택 추적 및 변수 수명에 대한 IL 오프셋을 계산할 때 디버거가 내부적으로 매핑을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e601b-111">It also allows the debugger to use the mapping internally when calculating IL offsets for stack traces and variable lifetimes.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b6dab-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="b6dab-112">Requirements</span></span>  
- <span data-ttu-id="b6dab-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="b6dab-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e601b-112">요구 사항</span><span class="sxs-lookup"><span data-stu-id="e601b-112">Requirements</span></span>  
+ <span data-ttu-id="e601b-113">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="e601b-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b6dab-114">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b6dab-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="e601b-114">**헤더:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e601b-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="b6dab-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b6dab-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e601b-115">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e601b-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b6dab-116">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b6dab-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="e601b-116">**.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e601b-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b6dab-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="b6dab-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e601b-117">참고자료</span><span class="sxs-lookup"><span data-stu-id="e601b-117">See also</span></span>
 
-- [<span data-ttu-id="b6dab-118">ICorProfilerInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="b6dab-118">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="e601b-118">ICorProfilerInfo 인터페이스</span><span class="sxs-lookup"><span data-stu-id="e601b-118">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

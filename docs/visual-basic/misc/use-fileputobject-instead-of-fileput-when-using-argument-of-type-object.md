@@ -5,24 +5,24 @@ f1_keywords:
 - vbrUseFilePutObject
 ms.assetid: d207b9b7-5898-4c13-8b03-9feefac5f726
 ms.openlocfilehash: 3d793151905c61ee12eccdfdb5e9567a4924bb35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022521"
 ---
-# <a name="use-fileputobject-instead-of-fileput-when-using-argument-of-type-object"></a><span data-ttu-id="e826f-102">'Object' 형식의 인수를 사용하는 경우 'FilePut' 대신 'FilePutObject'를 사용하세요.</span><span class="sxs-lookup"><span data-stu-id="e826f-102">Use 'FilePutObject' instead of 'FilePut' when using argument of type 'Object'</span></span>
-<span data-ttu-id="e826f-103">`FilePut` 메서드는 `Object`형식의 인수를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="e826f-103">The `FilePut` method includes an argument of type `Object`.</span></span> <span data-ttu-id="e826f-104">모호성을 피하기 위해`FilePutObject` 대신 `FilePut` 를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e826f-104">`FilePutObject` should be used in place of `FilePut` to avoid ambiguities.</span></span>  
+# <a name="use-fileputobject-instead-of-fileput-when-using-argument-of-type-object"></a><span data-ttu-id="2a8a4-102">'Object' 형식의 인수를 사용하는 경우 'FilePut' 대신 'FilePutObject'를 사용하세요.</span><span class="sxs-lookup"><span data-stu-id="2a8a4-102">Use 'FilePutObject' instead of 'FilePut' when using argument of type 'Object'</span></span>
+<span data-ttu-id="2a8a4-103">`FilePut` 메서드는 `Object`형식의 인수를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="2a8a4-103">The `FilePut` method includes an argument of type `Object`.</span></span> <span data-ttu-id="2a8a4-104">모호성을 피하기 위해`FilePutObject` 대신 `FilePut` 를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2a8a4-104">`FilePutObject` should be used in place of `FilePut` to avoid ambiguities.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="e826f-105">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="e826f-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="2a8a4-105">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="2a8a4-105">To correct this error</span></span>  
   
--   <span data-ttu-id="e826f-106">`FilePut` 을 `FilePutObject`로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="e826f-106">Replace `FilePut` with `FilePutObject`.</span></span>  
+- <span data-ttu-id="2a8a4-106">`FilePut` 을 `FilePutObject`로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="2a8a4-106">Replace `FilePut` with `FilePutObject`.</span></span>  
   
--   <span data-ttu-id="e826f-107">`Object` 인수를 더 구체적인 형식으로 캐스트합니다.</span><span class="sxs-lookup"><span data-stu-id="e826f-107">Cast the `Object` argument to a more specific type.</span></span>  
+- <span data-ttu-id="2a8a4-107">`Object` 인수를 더 구체적인 형식으로 캐스트합니다.</span><span class="sxs-lookup"><span data-stu-id="2a8a4-107">Cast the `Object` argument to a more specific type.</span></span>  
   
--   <span data-ttu-id="e826f-108">`My.Computer.FileSystem` 개체에서 사용할 수 있는 기능을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="e826f-108">Use the functionality available in the `My.Computer.FileSystem` object.</span></span>  
+- <span data-ttu-id="2a8a4-108">`My.Computer.FileSystem` 개체에서 사용할 수 있는 기능을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="2a8a4-108">Use the functionality available in the `My.Computer.FileSystem` object.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e826f-109">참고자료</span><span class="sxs-lookup"><span data-stu-id="e826f-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2a8a4-109">참고자료</span><span class="sxs-lookup"><span data-stu-id="2a8a4-109">See also</span></span>
 
-- [<span data-ttu-id="e826f-110">My.Computer.FileSystem</span><span class="sxs-lookup"><span data-stu-id="e826f-110">My.Computer.FileSystem</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem)
-- [<span data-ttu-id="e826f-111">My.Computer.FileSystem.WriteAllBytes</span><span class="sxs-lookup"><span data-stu-id="e826f-111">My.Computer.FileSystem.WriteAllBytes</span></span>](xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.WriteAllBytes%2A)
+- [<span data-ttu-id="2a8a4-110">My.Computer.FileSystem</span><span class="sxs-lookup"><span data-stu-id="2a8a4-110">My.Computer.FileSystem</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem)
+- [<span data-ttu-id="2a8a4-111">My.Computer.FileSystem.WriteAllBytes</span><span class="sxs-lookup"><span data-stu-id="2a8a4-111">My.Computer.FileSystem.WriteAllBytes</span></span>](xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.WriteAllBytes%2A)
