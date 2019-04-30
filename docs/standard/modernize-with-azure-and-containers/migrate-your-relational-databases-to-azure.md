@@ -23,15 +23,15 @@ Azure에서 IaaS VM(순수한 리프트 앤 시프트)에 직접 데이터베이
 
 ## <a name="when-to-migrate-to-azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance로 마이그레이션할 시기
 
-대부분의 경우 Azure로 데이터를 마이그레이션 할 때 Azure SQL Database Managed Instance는 생각할 수 있는 가장 좋은 선택입니다. SQL Server 데이터베이스를 마이그레이션 할 때 응용 프로그램을 다시 작성하거나 데이터 또는 데이터에 액세스하는 코드를 거의 변경하지 않아도 된다는 것을 100% 보장해야하는 경우 Azure SQL Database의 Managed Instance 기능을 선택하십시오.
+대부분의 경우 Azure로 데이터를 마이그레이션할 때 Azure SQL Database Managed Instance는 생각할 수 있는 가장 좋은 선택입니다. SQL Server 데이터베이스를 마이그레이션할 때 응용 프로그램을 다시 작성하거나 데이터 또는 데이터에 액세스하는 코드를 거의 변경하지 않아도 된다는 것을 100% 보장해야 하는 경우 Azure SQL Database의 Managed Instance 기능을 선택하십시오.
 
-Azure SQL Database Managed Instance는 표준 Azure SQL 데이터베이스 (단일 데이터베이스 모델)에서 제공되는 기능을 넘어선 격리 요구 사항이나 SQL Server 인스턴스 수준의 기능에 대한 추가적인 요구 사항이 있는 경우 최상의 옵션입니다. 마지막은 PaaS 중심의 선택이지만 기존 SQL 서버와 동일한 기능을 제공하지는 않습니다. 마이그레이션은 마찰을 일으킬 수 있습니다.
+Azure SQL Database Managed Instance는 표준 Azure SQL 데이터베이스(단일 데이터베이스 모델)에서 제공되는 기능을 넘어선 격리 요구 사항이나 SQL Server 인스턴스 수준의 기능에 대한 추가적인 요구 사항이 있는 경우 최상의 옵션입니다. 마지막은 PaaS 중심의 선택이지만 기존 SQL 서버와 동일한 기능을 제공하지는 않습니다. 마이그레이션은 마찰을 일으킬 수 있습니다.
 
-예를 들어 인스턴스 수준의 SQL Server 기능에 많은 투자를 한 조직은 SQL Managed Instance로 마이그레이션 할 때 이점을 얻을 수 있습니다. 인스턴스 수준 SQL Server 기능의 예로는 SQL 공용 언어 런타임(CLR) 통합과 SQL Server 에이전트, 크로스 데이터베이스 쿼리가 있습니다. 이러한 기능에 대한 지원은 표준 Azure SQL 데이터베이스 (단일 데이터베이스 모델)에서 사용할 수 없습니다.
+예를 들어 인스턴스 수준의 SQL Server 기능에 많은 투자를 한 조직은 SQL Managed Instance로 마이그레이션할 때 이점을 얻을 수 있습니다. 인스턴스 수준 SQL Server 기능의 예로는 SQL 공용 언어 런타임(CLR) 통합과 SQL Server 에이전트, 크로스 데이터베이스 쿼리가 있습니다. 이러한 기능에 대한 지원은 표준 Azure SQL 데이터베이스(단일 데이터베이스 모델)에서 사용할 수 없습니다.
 
 규제가 엄격한 산업에서 운영되고 보안 목적으로 격리를 유지해야하는 조직은 SQL Managed Instance 모델을 선택하면 도움이 될 수 있습니다.
 
-Azure SQL Database에서 Managed Instance는 다음과 같은 특징이 있습니다.
+Azure SQL Database에서 관리되는 인스턴스는 다음과 같은 특징이 있습니다.
 
 - Azure Virtual Network를 통한 보안 격리
 
@@ -39,7 +39,7 @@ Azure SQL Database에서 Managed Instance는 다음과 같은 특징이 있습�
 
   - SQL Server 에이전트 및 SQL Server Profiler
 
-  - 크로스 데이터베이스 참조와 쿼리, SQL CLR, 복제, 변경 데이터 캡처 (CDC) 및 Service Broker
+  - 크로스 데이터베이스 참조와 쿼리, SQL CLR, 복제, 변경 데이터 캡처(CDC) 및 Service Broker
 
 - 최대 35TB 데이터베이스 크기 
 
