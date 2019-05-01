@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
 ms.openlocfilehash: ad5a14ed3baab5b25cb1ed15271474580faaf176
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033152"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>자동화된 테스트를 위해 UI 자동화 사용
 > [!NOTE]
@@ -61,15 +61,15 @@ ms.locfileid: "59183978"
 ### <a name="programmatic-access"></a>프로그래밍 방식 액세스  
  프로그래밍 방식의 액세스는 기존의 마우스 및 키보드 입력으로 노출되는 모든 상호 작용 및 환경을 코드를 통해 모방할 수 있는 기능을 제공합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 을 사용하면 5개의 구성 요소를 통해 프로그래밍 방식의 액세스를 사용할 수 있습니다.  
   
--   [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리는 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]구조를 통해 탐색을 용이하게 합니다. 트리는 hWnd의 컬렉션에서 빌드됩니다. 자세한 내용은 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)을 참조하세요.  
+- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리는 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]구조를 통해 탐색을 용이하게 합니다. 트리는 hWnd의 컬렉션에서 빌드됩니다. 자세한 내용은 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)을 참조하세요.  
   
--   자동화 요소는 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]의 개별 구성 요소입니다. 이러한 요소는 hWnd보다 더 세부적인 경우가 많습니다. 자세한 내용은 [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)을 참조하세요.  
+- 자동화 요소는 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]의 개별 구성 요소입니다. 이러한 요소는 hWnd보다 더 세부적인 경우가 많습니다. 자세한 내용은 [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)을 참조하세요.  
   
--   자동화 속성은 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 요소에 대한 특정 정보를 제공합니다. 자세한 내용은 [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)을 참조하십시오.  
+- 자동화 속성은 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 요소에 대한 특정 정보를 제공합니다. 자세한 내용은 [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)을 참조하십시오.  
   
--   컨트롤 패턴은 컨트롤 기능의 특정 측면을 정의하며 속성, 메서드, 이벤트 및 구조 정보로 구성될 수 있습니다. 자세한 내용은 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)을 참조하세요.  
+- 컨트롤 패턴은 컨트롤 기능의 특정 측면을 정의하며 속성, 메서드, 이벤트 및 구조 정보로 구성될 수 있습니다. 자세한 내용은 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)을 참조하세요.  
   
--   자동화 이벤트는 이벤트 알림 및 정보를 제공합니다. 자세한 내용은 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)을 참조하세요.  
+- 자동화 이벤트는 이벤트 알림 및 정보를 제공합니다. 자세한 내용은 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)을 참조하세요.  
   
 <a name="Key_properties_critical_to_test_automation"></a>   
 ### <a name="key-properties-for-test-automation"></a>테스트 자동화에 대한 키 속성  
@@ -103,9 +103,9 @@ ms.locfileid: "59183978"
 ## <a name="related-tools-and-technologies"></a>관련 도구 및 기술  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]을 통해 자동화된 테스트를 지원하는 다양한 관련 도구 및 기술이 있습니다.  
   
--   Inspect.exe은는 [!INCLUDE[TLA#tla_gui](../../../includes/tlasharptla-gui-md.md)] 수집 하는 응용 프로그램 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 공급자 및 클라이언트 개발 및 디버깅에 대 한 정보입니다. Inspect.exe에 포함 된 [!INCLUDE[TLA#tla_winfxsdk](../../../includes/tlasharptla-winfxsdk-md.md)]합니다.  
+- Inspect.exe은는 [!INCLUDE[TLA#tla_gui](../../../includes/tlasharptla-gui-md.md)] 수집 하는 응용 프로그램 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 공급자 및 클라이언트 개발 및 디버깅에 대 한 정보입니다. Inspect.exe에 포함 된 [!INCLUDE[TLA#tla_winfxsdk](../../../includes/tlasharptla-winfxsdk-md.md)]합니다.  
   
--   MSAABridge는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 정보를 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 클라이언트에 노출합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 을 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 에 브리징하는 주요 목표는 기존 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 클라이언트가 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]을 구현한 모든 프레임워크와 상호 작용하도록 하는 것입니다.  
+- MSAABridge는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 정보를 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 클라이언트에 노출합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 을 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 에 브리징하는 주요 목표는 기존 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 클라이언트가 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]을 구현한 모든 프레임워크와 상호 작용하도록 하는 것입니다.  
   
 <a name="Security"></a>   
 ## <a name="security"></a>보안  
