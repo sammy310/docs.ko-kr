@@ -9,38 +9,38 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-ms.openlocfilehash: 3c477923387e5a28dcc14b44b0f77bb6acb686e5
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
-ms.translationtype: MT
+ms.openlocfilehash: 04e9dd3c135c516fa5554b9b547306337fb6a668
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47176736"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807816"
 ---
-# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a><span data-ttu-id="d79c8-102">방법: XML 요소 및 XML 특성 이름 한정</span><span class="sxs-lookup"><span data-stu-id="d79c8-102">How to: Qualify XML Element and XML Attribute Names</span></span>
+# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a><span data-ttu-id="131d2-102">방법: XML 요소 및 XML 특성 이름 한정</span><span class="sxs-lookup"><span data-stu-id="131d2-102">How to: Qualify XML Element and XML Attribute Names</span></span>
 
-<span data-ttu-id="d79c8-103">인스턴스가 포함 된 XML 네임 스페이스는 <xref:System.Xml.Serialization.XmlSerializerNamespaces> 클래스 이라는 World Wide Web Consortium (W3C) 사양을 따라야 [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/)합니다.</span><span class="sxs-lookup"><span data-stu-id="d79c8-103">XML namespaces contained by instances of the <xref:System.Xml.Serialization.XmlSerializerNamespaces> class must conform to the World Wide Web Consortium (W3C) specification called [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/).</span></span>
+<span data-ttu-id="131d2-103">인스턴스가 포함 된 XML 네임 스페이스는 <xref:System.Xml.Serialization.XmlSerializerNamespaces> 클래스 이라는 World Wide Web Consortium (W3C) 사양을 따라야 [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/)합니다.</span><span class="sxs-lookup"><span data-stu-id="131d2-103">XML namespaces contained by instances of the <xref:System.Xml.Serialization.XmlSerializerNamespaces> class must conform to the World Wide Web Consortium (W3C) specification called [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/).</span></span>
 
-<span data-ttu-id="d79c8-104">XML 네임스페이스는 XML 문서에서 XML 요소 및 XML 특성의 이름을 정규화하는 메서드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="d79c8-104">XML namespaces provide a method for qualifying the names of XML elements and XML attributes in XML documents.</span></span> <span data-ttu-id="d79c8-105">정규화된 이름은 콜론으로 구분된 접두사와 로컬 이름으로 이루어집니다.</span><span class="sxs-lookup"><span data-stu-id="d79c8-105">A qualified name consists of a prefix and a local name, separated by a colon.</span></span> <span data-ttu-id="d79c8-106">접두사는 자리 표시자로만 사용되며 네임스페이스를 지정하는 URI에 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="d79c8-106">The prefix functions only as a placeholder; it is mapped to a URI that specifies a namespace.</span></span> <span data-ttu-id="d79c8-107">보편적으로 관리되는 URI 네임스페이스와 로컬 이름을 조합하면 보편적으로 고유한 이름이 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="d79c8-107">The combination of the universally managed URI namespace and the local name produces a name that is guaranteed to be universally unique.</span></span>
+<span data-ttu-id="131d2-104">XML 네임스페이스는 XML 문서에서 XML 요소 및 XML 특성의 이름을 정규화하는 메서드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="131d2-104">XML namespaces provide a method for qualifying the names of XML elements and XML attributes in XML documents.</span></span> <span data-ttu-id="131d2-105">정규화된 이름은 콜론으로 구분된 접두사와 로컬 이름으로 이루어집니다.</span><span class="sxs-lookup"><span data-stu-id="131d2-105">A qualified name consists of a prefix and a local name, separated by a colon.</span></span> <span data-ttu-id="131d2-106">접두사는 자리 표시자로만 사용되며 네임스페이스를 지정하는 URI에 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="131d2-106">The prefix functions only as a placeholder; it is mapped to a URI that specifies a namespace.</span></span> <span data-ttu-id="131d2-107">보편적으로 관리되는 URI 네임스페이스와 로컬 이름을 조합하면 보편적으로 고유한 이름이 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="131d2-107">The combination of the universally managed URI namespace and the local name produces a name that is guaranteed to be universally unique.</span></span>
 
-<span data-ttu-id="d79c8-108">`XmlSerializerNamespaces`의 인스턴스를 만들고 네임스페이스 쌍을 개체에 추가하면 XML 문서에 사용되는 접두사를 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d79c8-108">By creating an instance of `XmlSerializerNamespaces` and adding the namespace pairs to the object, you can specify the prefixes used in an XML document.</span></span>
+<span data-ttu-id="131d2-108">`XmlSerializerNamespaces`의 인스턴스를 만들고 네임스페이스 쌍을 개체에 추가하면 XML 문서에 사용되는 접두사를 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="131d2-108">By creating an instance of `XmlSerializerNamespaces` and adding the namespace pairs to the object, you can specify the prefixes used in an XML document.</span></span>
 
-## <a name="to-create-qualified-names-in-an-xml-document"></a><span data-ttu-id="d79c8-109">XML 문서에서 정규화된 이름을 만들려면</span><span class="sxs-lookup"><span data-stu-id="d79c8-109">To create qualified names in an XML document</span></span>
+## <a name="to-create-qualified-names-in-an-xml-document"></a><span data-ttu-id="131d2-109">XML 문서에서 정규화된 이름을 만들려면</span><span class="sxs-lookup"><span data-stu-id="131d2-109">To create qualified names in an XML document</span></span>
 
-1. <span data-ttu-id="d79c8-110">`XmlSerializerNamespaces` 클래스의 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="d79c8-110">Create an instance of the `XmlSerializerNamespaces` class.</span></span>
+1. <span data-ttu-id="131d2-110">`XmlSerializerNamespaces` 클래스의 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="131d2-110">Create an instance of the `XmlSerializerNamespaces` class.</span></span>
 
-2. <span data-ttu-id="d79c8-111">모든 접두사와 네임스페이스 쌍을 `XmlSerializerNamespaces`에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="d79c8-111">Add all prefixes and namespace pairs to the `XmlSerializerNamespaces`.</span></span>
+2. <span data-ttu-id="131d2-111">모든 접두사와 네임스페이스 쌍을 `XmlSerializerNamespaces`에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="131d2-111">Add all prefixes and namespace pairs to the `XmlSerializerNamespaces`.</span></span>
 
-3. <span data-ttu-id="d79c8-112">적절한 `System.Xml.Serialization` 특성을 <xref:System.Xml.Serialization.XmlSerializer>가 XML 문서로 serialize할 각 멤버나 클래스에 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="d79c8-112">Apply the appropriate `System.Xml.Serialization` attribute to each member or class that the <xref:System.Xml.Serialization.XmlSerializer> is to serialize into an XML document.</span></span>
+3. <span data-ttu-id="131d2-112">적절한 `System.Xml.Serialization` 특성을 <xref:System.Xml.Serialization.XmlSerializer>가 XML 문서로 serialize할 각 멤버나 클래스에 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="131d2-112">Apply the appropriate `System.Xml.Serialization` attribute to each member or class that the <xref:System.Xml.Serialization.XmlSerializer> is to serialize into an XML document.</span></span>
 
-  <span data-ttu-id="d79c8-113">사용할 수 있는 특성은 <xref:System.Xml.Serialization.XmlAnyElementAttribute>, <xref:System.Xml.Serialization.XmlArrayAttribute>, <xref:System.Xml.Serialization.XmlArrayItemAttribute>, <xref:System.Xml.Serialization.XmlAttributeAttribute>, <xref:System.Xml.Serialization.XmlElementAttribute>, <xref:System.Xml.Serialization.XmlRootAttribute> 및 <xref:System.Xml.Serialization.XmlTypeAttribute>입니다.</span><span class="sxs-lookup"><span data-stu-id="d79c8-113">The available attributes are: <xref:System.Xml.Serialization.XmlAnyElementAttribute>, <xref:System.Xml.Serialization.XmlArrayAttribute>, <xref:System.Xml.Serialization.XmlArrayItemAttribute>, <xref:System.Xml.Serialization.XmlAttributeAttribute>, <xref:System.Xml.Serialization.XmlElementAttribute>, <xref:System.Xml.Serialization.XmlRootAttribute>, and <xref:System.Xml.Serialization.XmlTypeAttribute>.</span></span>
+    <span data-ttu-id="131d2-113">사용할 수 있는 특성은 <xref:System.Xml.Serialization.XmlAnyElementAttribute>, <xref:System.Xml.Serialization.XmlArrayAttribute>, <xref:System.Xml.Serialization.XmlArrayItemAttribute>, <xref:System.Xml.Serialization.XmlAttributeAttribute>, <xref:System.Xml.Serialization.XmlElementAttribute>, <xref:System.Xml.Serialization.XmlRootAttribute> 및 <xref:System.Xml.Serialization.XmlTypeAttribute>입니다.</span><span class="sxs-lookup"><span data-stu-id="131d2-113">The available attributes are: <xref:System.Xml.Serialization.XmlAnyElementAttribute>, <xref:System.Xml.Serialization.XmlArrayAttribute>, <xref:System.Xml.Serialization.XmlArrayItemAttribute>, <xref:System.Xml.Serialization.XmlAttributeAttribute>, <xref:System.Xml.Serialization.XmlElementAttribute>, <xref:System.Xml.Serialization.XmlRootAttribute>, and <xref:System.Xml.Serialization.XmlTypeAttribute>.</span></span>
 
-4. <span data-ttu-id="d79c8-114">각 특성의 `Namespace` 속성을 `XmlSerializerNamespaces`의 네임스페이스 값 중 하나로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="d79c8-114">Set the `Namespace` property of each attribute to one of the namespace values from the `XmlSerializerNamespaces`.</span></span>
+4. <span data-ttu-id="131d2-114">각 특성의 `Namespace` 속성을 `XmlSerializerNamespaces`의 네임스페이스 값 중 하나로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="131d2-114">Set the `Namespace` property of each attribute to one of the namespace values from the `XmlSerializerNamespaces`.</span></span>
 
-5. <span data-ttu-id="d79c8-115">`XmlSerializerNamespaces`의 `Serialize` 메서드에 `XmlSerializer`를 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="d79c8-115">Pass the `XmlSerializerNamespaces` to the `Serialize` method of the `XmlSerializer`.</span></span>
+5. <span data-ttu-id="131d2-115">`XmlSerializerNamespaces`의 `Serialize` 메서드에 `XmlSerializer`를 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="131d2-115">Pass the `XmlSerializerNamespaces` to the `Serialize` method of the `XmlSerializer`.</span></span>
 
-## <a name="example"></a><span data-ttu-id="d79c8-116">예제</span><span class="sxs-lookup"><span data-stu-id="d79c8-116">Example</span></span>
+## <a name="example"></a><span data-ttu-id="131d2-116">예제</span><span class="sxs-lookup"><span data-stu-id="131d2-116">Example</span></span>
 
-<span data-ttu-id="d79c8-117">다음 예제에서는 `XmlSerializerNamespaces`를 만들고 두 개의 접두사와 네임스페이스 쌍을 개체에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="d79c8-117">The following example creates an `XmlSerializerNamespaces`, and adds two prefix and namespace pairs to the object.</span></span> <span data-ttu-id="d79c8-118">코드에서는 `XmlSerializer` 클래스의 인스턴스를 serialize하는 데 사용되는 `Books`를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="d79c8-118">The code creates an `XmlSerializer` that is used to serialize an instance of the `Books` class.</span></span> <span data-ttu-id="d79c8-119">코드는 `Serialize`를 사용하여 `XmlSerializerNamespaces` 메서드를 호출하여 XML이 접두사가 지정된 네임스페이스를 포함할 수 있게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d79c8-119">The code calls the `Serialize` method with the `XmlSerializerNamespaces`, allowing the XML to contain prefixed namespaces.</span></span>
+<span data-ttu-id="131d2-117">다음 예제에서는 `XmlSerializerNamespaces`를 만들고 두 개의 접두사와 네임스페이스 쌍을 개체에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="131d2-117">The following example creates an `XmlSerializerNamespaces`, and adds two prefix and namespace pairs to the object.</span></span> <span data-ttu-id="131d2-118">코드에서는 `XmlSerializer` 클래스의 인스턴스를 serialize하는 데 사용되는 `Books`를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="131d2-118">The code creates an `XmlSerializer` that is used to serialize an instance of the `Books` class.</span></span> <span data-ttu-id="131d2-119">코드는 `Serialize`를 사용하여 `XmlSerializerNamespaces` 메서드를 호출하여 XML이 접두사가 지정된 네임스페이스를 포함할 수 있게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="131d2-119">The code calls the `Serialize` method with the `XmlSerializerNamespaces`, allowing the XML to contain prefixed namespaces.</span></span>
 
 ```vb
 Option Explicit
@@ -169,13 +169,13 @@ public class Book
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="d79c8-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="d79c8-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="131d2-120">참고자료</span><span class="sxs-lookup"><span data-stu-id="131d2-120">See also</span></span>
 
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [<span data-ttu-id="d79c8-121">XML 스키마 정의 도구 및 XML serialization</span><span class="sxs-lookup"><span data-stu-id="d79c8-121">The XML Schema Definition Tool and XML Serialization</span></span>](the-xml-schema-definition-tool-and-xml-serialization.md)
-- [<span data-ttu-id="d79c8-122">XML serialization 소개</span><span class="sxs-lookup"><span data-stu-id="d79c8-122">Introducing XML Serialization</span></span>](introducing-xml-serialization.md)
-- [<span data-ttu-id="d79c8-123">XmlSerializer 클래스</span><span class="sxs-lookup"><span data-stu-id="d79c8-123">XmlSerializer Class</span></span>](xref:System.Xml.Serialization.XmlSerializer)
-- [<span data-ttu-id="d79c8-124">XML serialization을 제어하는 특성</span><span class="sxs-lookup"><span data-stu-id="d79c8-124">Attributes That Control XML Serialization</span></span>](attributes-that-control-xml-serialization.md)
-- [<span data-ttu-id="d79c8-125">방법: XML 스트림의 대체 요소 이름 지정</span><span class="sxs-lookup"><span data-stu-id="d79c8-125">How to: Specify an Alternate Element Name for an XML Stream</span></span>](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-- [<span data-ttu-id="d79c8-126">방법: 개체 직렬화</span><span class="sxs-lookup"><span data-stu-id="d79c8-126">How to: Serialize an Object</span></span>](how-to-serialize-an-object.md)
-- [<span data-ttu-id="d79c8-127">방법: 개체 deserialize</span><span class="sxs-lookup"><span data-stu-id="d79c8-127">How to: Deserialize an Object</span></span>](how-to-deserialize-an-object.md)
+- [<span data-ttu-id="131d2-121">XML 스키마 정의 도구 및 XML serialization</span><span class="sxs-lookup"><span data-stu-id="131d2-121">The XML Schema Definition Tool and XML Serialization</span></span>](the-xml-schema-definition-tool-and-xml-serialization.md)
+- [<span data-ttu-id="131d2-122">XML serialization 소개</span><span class="sxs-lookup"><span data-stu-id="131d2-122">Introducing XML Serialization</span></span>](introducing-xml-serialization.md)
+- [<span data-ttu-id="131d2-123">XmlSerializer 클래스</span><span class="sxs-lookup"><span data-stu-id="131d2-123">XmlSerializer Class</span></span>](xref:System.Xml.Serialization.XmlSerializer)
+- [<span data-ttu-id="131d2-124">XML serialization을 제어하는 특성</span><span class="sxs-lookup"><span data-stu-id="131d2-124">Attributes That Control XML Serialization</span></span>](attributes-that-control-xml-serialization.md)
+- [<span data-ttu-id="131d2-125">방법: XML Stream에 대 한 대체 요소 이름 지정</span><span class="sxs-lookup"><span data-stu-id="131d2-125">How to: Specify an Alternate Element Name for an XML Stream</span></span>](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [<span data-ttu-id="131d2-126">방법: 개체 serialize</span><span class="sxs-lookup"><span data-stu-id="131d2-126">How to: Serialize an Object</span></span>](how-to-serialize-an-object.md)
+- [<span data-ttu-id="131d2-127">방법: 개체 deserialize</span><span class="sxs-lookup"><span data-stu-id="131d2-127">How to: Deserialize an Object</span></span>](how-to-deserialize-an-object.md)
