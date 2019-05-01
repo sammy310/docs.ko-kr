@@ -6,12 +6,12 @@ helpviewer_keywords:
 - binding properties of two controls [WPF]
 - controls [WPF], binding properties of
 ms.assetid: 06318fac-6afd-4c7d-a277-6d7ef50f47bc
-ms.openlocfilehash: 0dd7b817b632758cfca8b5c45d88e333510485f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 332e8e0dfa30ff7aff27c95652f07446baf6511a
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222070"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63809537"
 ---
 # <a name="how-to-bind-the-properties-of-two-controls"></a>방법: 두 가지 컨트롤의 속성 바인딩
 사용 하 여 다른의 인스턴스화된 한 컨트롤의 속성을 바인딩하는 방법을 보여 주는이 예제는 <xref:System.Windows.Data.Binding.ElementName%2A> 속성입니다.  
@@ -23,9 +23,10 @@ ms.locfileid: "59222070"
   
  이 예를 렌더링하면 다음과 같이 표시됩니다.  
   
- ![녹색 배경이 있는 캔버스](./media/databindingbindingdpssample.PNG "DataBindingBindingDPsSample")  
-  
- **참고** 바인딩 대상 속성 (이 예는 <xref:System.Windows.Controls.Panel.Background%2A> 속성) 종속성 속성 이어야 합니다. 자세한 내용은 [데이터 바인딩 개요](data-binding-overview.md)를 참조하세요.  
+![녹색 값을 사용 하 여 상자를 선택 하 고 녹색 사각형 콤보를 보여주는 스크린샷.](./media/how-to-bind-the-properties-of-two-controls/data-binding-bind-background-canvas.png)
+
+> [!NOTE]
+> 바인딩 대상 속성 (이 예는 <xref:System.Windows.Controls.Panel.Background%2A> 속성) 종속성 속성 이어야 합니다. 자세한 내용은 [데이터 바인딩 개요](data-binding-overview.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고자료
 

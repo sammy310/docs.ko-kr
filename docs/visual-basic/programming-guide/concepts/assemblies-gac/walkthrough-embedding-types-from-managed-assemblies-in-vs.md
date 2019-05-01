@@ -1,15 +1,15 @@
 ---
-title: '연습: Visual Studio (Visual Basic)에서 관리 되는 어셈블리의 형식 포함'
+title: '연습: Visual Studio에서 관리형 어셈블리의 형식 포함(Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
-ms.openlocfilehash: 836d035aab06f18c13e3675fbd72c5ab9879a3d2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 18f22a771ab7279f177fe39d8c372a8517056890
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359466"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63809132"
 ---
-# <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>연습: Visual Studio (Visual Basic)에서 관리 되는 어셈블리의 형식 포함
+# <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>연습: Visual Studio에서 관리형 어셈블리의 형식 포함(Visual Basic)
 
 강력한 이름의 관리되는 어셈블리에서 형식 정보를 포함하는 경우 애플리케이션에서 유형을 느슨하게 연결하여 버전 독립성을 확보할 수 있습니다. 즉, 각 버전에 대해 컴파일하지 않고도 관리되는 라이브러리의 여러 버전에서 형식을 사용하도록 프로그램을 작성할 수 있습니다.
 
@@ -209,13 +209,13 @@ ms.locfileid: "57359466"
 
 3. SampleClass.vb 파일을 엽니다. SampleClass 클래스에 다음 코드 줄을 추가합니다.
 
-```vb
-Public Function GetDate() As DateTime Implements ISampleInterface.GetDate
-    Return Now
-End Function
-```
+    ```vb
+    Public Function GetDate() As DateTime Implements ISampleInterface.GetDate
+        Return Now
+    End Function
+    ```
 
-    Save the file.
+    파일을 저장합니다.
 
 4. 프로젝트를 저장합니다.
 

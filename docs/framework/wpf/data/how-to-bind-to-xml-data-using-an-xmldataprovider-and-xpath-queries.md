@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: f6cd09279cf23d3273e7a4083950a5f42714c8bf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.openlocfilehash: 3a3df65f0c20cff49f9bd2a8790e8d9ae0032391
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097228"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63809590"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>방법: XMLDataProvider 및 XPath 쿼리를 사용하여 XML 데이터에 바인딩
 이 예제에 바인딩하는 방법을 보여 줍니다 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 사용 하 여 데이터를 <xref:System.Windows.Data.XmlDataProvider>입니다.  
@@ -30,19 +30,19 @@ ms.locfileid: "59097228"
   
  <xref:System.Windows.Controls.ListBox> 이 예제를 실행 하는 경우 다음 항목이 표시 됩니다. *재고* 값이 “*out*”이거나 *숫자* 값이 3이상 또는 8과 동일한 *책* 아래에 있는 모든 요소의 *제목*입니다. 없습니다 *CD* 항목이 반환 되지를 <xref:System.Windows.Data.XmlDataProvider.XPath%2A> 값이 설정에는 <xref:System.Windows.Data.XmlDataProvider> 됨을 나타냅니다는 *책* (기본적으로 필터 설정) 요소에 노출 되어야 합니다.  
   
- ![XPath 예제](./media/xpathexample.PNG "XPathExample")  
+ ![XPath 예제 4 책의 제목을 보여 주는 스크린샷.](./media/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries/xpath-example-listbox-details.png)  
   
  이 예제에서는 때문에 책 제목이 표시 됩니다는 <xref:System.Windows.Data.Binding.XPath%2A> 의 <xref:System.Windows.Controls.TextBlock> 바인딩를 <xref:System.Windows.DataTemplate> 로 설정 된 "*제목*". 와 같은 특성의 값을 표시 하려는 경우는 *ISBN*를 설정할 수 있습니다 <xref:System.Windows.Data.Binding.XPath%2A> 값을 "`@ISBN`"입니다.  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 **XPath** 속성은 XmlNode.SelectNodes 메서드를 통해 처리됩니다. **XPath** 쿼리를 수정하여 다른 결과를 얻을 수 있습니다. 다음은 몇 가지 예는 <xref:System.Windows.Data.Binding.XPath%2A> 바인딩된 쿼리 <xref:System.Windows.Controls.ListBox> 이전 예제에서:  
   
--   `XPath="Book[1]"`은 첫 번째 책 요소를 반환합니다(“작동 중인 XML”). **XPath** 색인은 0이 아니라 1을 기반으로 합니다.  
+- `XPath="Book[1]"`은 첫 번째 책 요소를 반환합니다(“작동 중인 XML”). **XPath** 색인은 0이 아니라 1을 기반으로 합니다.  
   
--   `XPath="Book[@*]"`에서는 모든 특성이 있는 모든 책 요소를 반환합니다.  
+- `XPath="Book[@*]"`에서는 모든 특성이 있는 모든 책 요소를 반환합니다.  
   
--   `XPath="Book[last()-1]"`은 끝에서 두 번째인 책 요소를 반환합니다(“Microsoft .NET 소개”).  
+- `XPath="Book[last()-1]"`은 끝에서 두 번째인 책 요소를 반환합니다(“Microsoft .NET 소개”).  
   
--   `XPath="*[position()>3]"`에서는 처음 3개를 제외한 모든 책 요소를 반환합니다.  
+- `XPath="*[position()>3]"`에서는 처음 3개를 제외한 모든 책 요소를 반환합니다.  
   
  실행 하는 경우는 **XPath** 반환 쿼리는 <xref:System.Xml.XmlNode> 또는 XmlNodes 목록을 합니다. <xref:System.Xml.XmlNode> [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 개체를 사용할 수 있습니다 합니다 <xref:System.Windows.Data.Binding.Path%2A> 바인딩할 속성은 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 속성. 이전 예를 다시 살펴보겠습니다. 예제의 나머지 동일 하 게 유지 하 고 변경 하면 합니다 <xref:System.Windows.Controls.TextBlock> 바인딩을 다음과 같이 표시 됩니다에 반환된 된 XmlNodes의 이름을 합니다 <xref:System.Windows.Controls.ListBox>합니다. 이 경우 반환된 모든 노드의 이름은 "*Book*"입니다.  
   

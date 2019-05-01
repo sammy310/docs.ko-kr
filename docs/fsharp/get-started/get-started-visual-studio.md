@@ -2,12 +2,12 @@
 title: Visual Studio에서 F# 시작
 description: Visual Studio에서 F#을 사용하는 방법을 알아봅니다.
 ms.date: 07/03/2018
-ms.openlocfilehash: 020e5d32b3aa5d5a2195c19d70d8fe684fbd56ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9b02a5d295f982b1911dab567213fa9a2b6c4304
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331912"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808011"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Visual Studio에서 F# 시작
 
@@ -25,7 +25,7 @@ Visual Studio에서 가장 기본적인 프로젝트 중 하나가 콘솔 응용
 
 3. **.NET Core 콘솔 앱**이나 **콘솔 앱**을 선택합니다.
 
-3. F# 프로젝트를 만들기 위해 **확인** 버튼을 클릭힙니다.  이제 솔루션 탐색기에서 F# 프로젝트를 확인할 수 있습니다.
+4. F# 프로젝트를 만들기 위해 **확인** 버튼을 클릭힙니다.  이제 솔루션 탐색기에서 F# 프로젝트를 확인할 수 있습니다.
 
 ## <a name="writing-your-code"></a>코드 작성
 
@@ -35,11 +35,11 @@ Visual Studio에서 가장 기본적인 프로젝트 중 하나가 콘솔 응용
 
 이 코드 샘플에서는 입력으로 `x`를 가져와 자신과 곱셈하도록 정의된 `square`함수가 정의되어 있습니다.  F#에서는 [Typeinference](../language-reference/type-inference.md)를 사용하기 때문에 `x`의 형식을 지정할 필요가 없습니다.  F# 컴파일러는 곱셈에서 유효한 형식을 이해하고 `square`가 호출되는 방식에 따라 `x`의 형식을 할당합니다.  `square` 위로 마우스를 가져가면 다음과 같이 표시됩니다.
 
-```
+```fsharp
 val square: x:int -> int
 ```
 
-이것을 함수 형식 시그니처라고 합니다.  다음과 같이 "square는 정수 x를 사용하고 정수를 생성하는 함수"라고 읽을 수 있습니다.  컴파일러가 `square`를 `int`형식으로 지정한 것에 주목합니다. 곱셈은 *모든* 형식에서 제네릭이 아니라, 폐쇄형 집합 형식에서 제네릭이기 때문입니다.  F# 컴파일러에서 지금은 `int`를 선택하지만, `float` 같은 다른 입력 형식으로 `square`를 호출하는 경우 형식 시그니처가 조정됩니다.
+이것을 함수 형식 시그니처라고 합니다.  다음과 같이 "square는 정수 x를 사용하고 정수를 생성하는 함수"라고 읽을 수 있습니다.  컴파일러가 `square`를 `int`형식으로 지정한 것에 주목하십시오. 곱셈은 *모든* 형식에서 제네릭이 아니라, 폐쇄형 집합 형식에서 제네릭이기 때문입니다.  F# 컴파일러에서 지금은 `int`를 선택하지만, `float` 같은 다른 입력 형식으로 `square`를 호출 하는 경우는 형식 시그니처가 조정됩니다.
 
 그 밖에 `main` 함수가 정의되고 F# 컴파일러에게 프로그램 수행이 시작되는 곳이라는 것을 알려주는 `EntryPoint`속성이 데코레이트되었습니다.  함수에 명령줄 인수를 전달하고 정수 코드(일반적으로 `0`)를 반환하는 [C 스타일 프로그래밍 언어](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B)와 동일한 규칙을 따릅니다.
 
@@ -59,7 +59,7 @@ val square: x:int -> int
 
 ## <a name="next-steps"></a>다음 단계
 
-않았다면, 체크 아웃 합니다 [둘러보기 F# ](../tour.md)의 핵심 기능 중 일부를 포함 합니다 F# 언어.  기능 중 몇 가지를 간략하게 제공 합니다 F#, Visual Studio로 복사 하 고 실행할 수 있는 충분 한 코드 샘플을 제공 합니다.  도 유용한 외부 리소스 사용할 수 있습니다에 표시 된 [ F# 가이드](../index.md)합니다.
+아직 확인하지 않았다면 F# 언어의 핵심 기능 중 일부를 다루는 [F# 둘러보기](../tour.md)를 확인해보세요.  기능 중 몇 가지를 간략하게 제공 합니다 F#, Visual Studio로 복사 하 고 실행할 수 있는 충분 한 코드 샘플을 제공 합니다.  [F# 가이드](../index.md)에서 소개된 훌륭한 외부 리소스도 있습니다.
 
 ## <a name="see-also"></a>참고자료
 

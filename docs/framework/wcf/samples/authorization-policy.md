@@ -2,12 +2,12 @@
 title: 권한 부여 정책
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: 87deedb2bd28cd86619eb48d0ff9c3e566174d31
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
-ms.translationtype: MT
+ms.openlocfilehash: 50e868645d7e7ccbcf4be697f8bdb1814dd90e9c
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332678"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807975"
 ---
 # <a name="authorization-policy"></a>권한 부여 정책
 
@@ -18,17 +18,17 @@ ms.locfileid: "56332678"
 
  즉, 이 샘플에서는 다음 방법을 보여 줍니다.
 
--   사용자 이름 및 암호를 사용하여 클라이언트를 인증하는 방법.
+- 사용자 이름 및 암호를 사용하여 클라이언트를 인증하는 방법.
 
--   X.509 인증서를 사용하여 클라이언트를 인증하는 방법.
+- X.509 인증서를 사용하여 클라이언트를 인증하는 방법.
 
--   서버에서 사용자 지정 `UsernamePassword` 유효성 검사기를 기준으로 클라이언트의 유효성을 검증하는 방법.
+- 서버에서 사용자 지정 `UsernamePassword` 유효성 검사기를 기준으로 클라이언트의 유효성을 검증하는 방법.
 
--   서버의 X.509 인증서를 사용하여 서버를 인증하는 방법
+- 서버의 X.509 인증서를 사용하여 서버를 인증하는 방법
 
--   서버에서 <xref:System.ServiceModel.ServiceAuthorizationManager>를 사용하여 서비스에 있는 특정 메서드에 대한 액세스를 제어하는 방법.
+- 서버에서 <xref:System.ServiceModel.ServiceAuthorizationManager>를 사용하여 서비스에 있는 특정 메서드에 대한 액세스를 제어하는 방법.
 
--   <xref:System.IdentityModel.Policy.IAuthorizationPolicy>를 구현하는 방법.
+- <xref:System.IdentityModel.Policy.IAuthorizationPolicy>를 구현하는 방법.
 
 서비스는 App.config 구성 파일을 사용하여 정의된, 서비스와의 통신에 사용되는 두 개의 엔드포인트를 노출합니다. 각 엔드포인트는 하나의 주소, 바인딩 및 계약으로 구성됩니다. 한 바인딩은 WS-Security 및 클라이언트 사용자 이름 인증을 사용하는 표준 `wsHttpBinding` 바인딩으로 구성됩니다. 다른 바인딩은 WS-Security 및 클라이언트 인증서 인증을 사용하는 표준 `wsHttpBinding` 바인딩으로 구성됩니다. 합니다 [ \<동작 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) 서비스 인증에 사용할 사용자 자격 증명이 지정 합니다. 서버 인증서에 대해 동일한 값을 포함 해야 합니다는 `SubjectName` 속성으로는 `findValue` 특성을 [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
 
@@ -397,9 +397,9 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 다음 부분에는 적절한 구성으로 실행되게 수정할 수 있도록 배치 파일의 다양한 섹션에 대한 간략한 개요가 소개되어 있습니다.
 
--   서버 인증서 만들기
+- 서버 인증서 만들기
 
-     Setup.bat 배치 파일에서 다음 행은 사용할 서버 인증서를 만듭니다. %SERVER_NAME% 변수는 서버 이름을 지정합니다. 이 변수를 변경하여 고유의 서버 이름을 지정합니다. 기본값은 localhost입니다.
+    Setup.bat 배치 파일에서 다음 행은 사용할 서버 인증서를 만듭니다. %SERVER_NAME% 변수는 서버 이름을 지정합니다. 이 변수를 변경하여 고유의 서버 이름을 지정합니다. 기본값은 localhost입니다.
 
     ```
     echo ************
@@ -411,19 +411,19 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   클라이언트의 신뢰할 수 있는 인증서 저장소에 서버 인증서 설치
+- 클라이언트의 신뢰할 수 있는 인증서 저장소에 서버 인증서 설치
 
-     Setup.bat 배치 파일에서 다음 행은 클라이언트의 신뢰할 수 있는 사용자 저장소로 서버 인증서를 복사합니다. 이 단계는 Makecert.exe에서 생성한 인증서를 클라이언트 시스템에서 암시적으로 신뢰하지는 않기 때문에 필요합니다. Microsoft에서 발급한 인증서와 같이 클라이언트가 신뢰할 수 있는 루트 인증서를 기반으로 하는 인증서가 이미 있는 경우 클라이언트 인증서 저장소를 서버 인증서로 채우는 이 단계를 수행할 필요가 없습니다.
+    Setup.bat 배치 파일에서 다음 행은 클라이언트의 신뢰할 수 있는 사용자 저장소로 서버 인증서를 복사합니다. 이 단계는 Makecert.exe에서 생성한 인증서를 클라이언트 시스템에서 암시적으로 신뢰하지는 않기 때문에 필요합니다. Microsoft에서 발급한 인증서와 같이 클라이언트가 신뢰할 수 있는 루트 인증서를 기반으로 하는 인증서가 이미 있는 경우 클라이언트 인증서 저장소를 서버 인증서로 채우는 이 단계를 수행할 필요가 없습니다.
 
     ```
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
--   클라이언트 인증서 만들기
+- 클라이언트 인증서 만들기
 
-     Setup.bat 배치 파일에서 다음 줄은 사용할 클라이언트 인증서를 만듭니다. %USER_NAME% 변수는 서버 이름을 지정합니다. 이 값은 `IAuthorizationPolicy`에서 찾는 이름이기 때문에 "test1"으로 설정됩니다. %USER_NAME% 값을 변경하는 경우 `IAuthorizationPolicy.Evaluate` 메서드에서 해당 값을 변경해야 합니다.
+    Setup.bat 배치 파일에서 다음 줄은 사용할 클라이언트 인증서를 만듭니다. %USER_NAME% 변수는 서버 이름을 지정합니다. 이 값은 `IAuthorizationPolicy`에서 찾는 이름이기 때문에 "test1"으로 설정됩니다. %USER_NAME% 값을 변경하는 경우 `IAuthorizationPolicy.Evaluate` 메서드에서 해당 값을 변경해야 합니다.
 
-     인증서는 CurrentUser 저장소 위치에 있는 My (Personal) 저장소에 저장됩니다.
+    인증서는 CurrentUser 저장소 위치에 있는 My (Personal) 저장소에 저장됩니다.
 
     ```
     echo ************
@@ -432,9 +432,9 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe
     ```
 
--   서버의 신뢰할 수 있는 인증서 저장소에 클라이언트 인증서 설치
+- 서버의 신뢰할 수 있는 인증서 저장소에 클라이언트 인증서 설치
 
-     Setup.bat 배치 파일에서 다음 줄은 신뢰할 수 있는 사용자 저장소로 클라이언트 인증서를 복사합니다. 이 단계는 Makecert.exe에서 생성한 인증서를 서버 시스템에서 암시적으로 신뢰하지는 않기 때문에 필요합니다. Microsoft에서 발급한 인증서와 같이 신뢰할 수 있는 루트 인증서를 기반으로 하는 인증서가 이미 있는 경우 서버 인증서 저장소를 클라이언트 인증서로 채우는 이 단계는 필요하지 않습니다.
+    Setup.bat 배치 파일에서 다음 줄은 신뢰할 수 있는 사용자 저장소로 클라이언트 인증서를 복사합니다. 이 단계는 Makecert.exe에서 생성한 인증서를 서버 시스템에서 암시적으로 신뢰하지는 않기 때문에 필요합니다. Microsoft에서 발급한 인증서와 같이 신뢰할 수 있는 루트 인증서를 기반으로 하는 인증서가 이미 있는 경우 서버 인증서 저장소를 클라이언트 인증서로 채우는 이 단계는 필요하지 않습니다.
 
     ```
     certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople
@@ -460,7 +460,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 1. Client.exe를 실행 *\client\bin*합니다. 클라이언트 콘솔 애플리케이션에 클라이언트 동작이 표시됩니다.
 
-  클라이언트와 서비스가 통신할 수 없는 경우 참조 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))합니다.
+클라이언트와 서비스가 통신할 수 없는 경우 참조 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))합니다.
 
 ### <a name="to-run-the-sample-across-computers"></a>다중 컴퓨터 구성에서 샘플을 실행하려면
 
@@ -474,7 +474,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 5. 서버에서 실행 `setup.bat service` 관리자 권한으로 연 Visual Studio 용 개발자 명령 프롬프트에서.
 
-   실행 중인 `setup.bat` 사용 하 여 합니다 `service` 인수가 컴퓨터의 정규화 된 도메인 이름 서비스 인증서를 만들고 라는 파일에 서비스 인증서를 내보냅니다 *Service.cer*합니다.
+    실행 중인 `setup.bat` 사용 하 여 합니다 `service` 인수가 컴퓨터의 정규화 된 도메인 이름 서비스 인증서를 만들고 라는 파일에 서비스 인증서를 내보냅니다 *Service.cer*합니다.
 
 6. 편집 *Service.exe.config* 새 인증서 이름을 반영 하도록 (에 `findValue` 특성을 [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) 정규화 된 도메인 이름과 같습니다 컴퓨터입니다. 변경할 수도 합니다 **computername** 에 \<서비스 > /\<baseAddresses > localhost에서 서비스 컴퓨터의 정규화 된 이름으로 요소입니다.
 
@@ -482,7 +482,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 8. 클라이언트에서 실행 `setup.bat client` 관리자 권한으로 연 Visual Studio 용 개발자 명령 프롬프트에서.
 
-   실행 중인 `setup.bat` 사용 하 여는 `client` 인수 이라는 클라이언트 인증서를 만듭니다 **test1** 라는 파일에 클라이언트 인증서를 내보냅니다 *Client.cer*합니다.
+    실행 중인 `setup.bat` 사용 하 여는 `client` 인수 이라는 클라이언트 인증서를 만듭니다 **test1** 라는 파일에 클라이언트 인증서를 내보냅니다 *Client.cer*합니다.
 
 9. 에 *Client.exe.config* 클라이언트 컴퓨터의 파일, 서비스의 새 주소와 일치 하도록 끝점의 주소 값을 변경 합니다. 대체 하 여이 작업을 수행할 **localhost** 서버의 정규화 된 도메인 이름입니다.
 
@@ -490,17 +490,17 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 11. 클라이언트에서 실행할 *ImportServiceCert.bat* 관리자 권한으로 연 Visual Studio 용 개발자 명령 프롬프트에서.
 
-   Service.cer 파일에서 서비스 인증서를 가져오고이 **CurrentUser-TrustedPeople** 저장 합니다.
+    Service.cer 파일에서 서비스 인증서를 가져오고이 **CurrentUser-TrustedPeople** 저장 합니다.
 
 12. 서버에서 실행 *ImportClientCert.bat* 관리자 권한으로 연 Visual Studio 용 개발자 명령 프롬프트에서.
 
-   클라이언트 인증서를 Client.cer 파일에서 가져옵니다 합니다 **LocalMachine-TrustedPeople** 저장 합니다.
+    클라이언트 인증서를 Client.cer 파일에서 가져옵니다 합니다 **LocalMachine-TrustedPeople** 저장 합니다.
 
 13. 서버 컴퓨터의 명령 프롬프트 창에서 Service.exe를 실행합니다.
 
 14. 클라이언트 컴퓨터의 명령 프롬프트 창에서 Client.exe를 실행합니다.
 
-   클라이언트와 서비스가 통신할 수 없는 경우 참조 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))합니다.
+    클라이언트와 서비스가 통신할 수 없는 경우 참조 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))합니다.
 
 ### <a name="clean-up-after-the-sample"></a>샘플 실행 후 정리
 

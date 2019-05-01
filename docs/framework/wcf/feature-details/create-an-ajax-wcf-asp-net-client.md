@@ -2,14 +2,14 @@
 title: AJAX 사용 WCF 서비스를 만들고 Visual Studio에서 ASP.NET 클라이언트
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 954ee0409f370c3fa28814a70d51334fd75f7b79
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: MT
+ms.openlocfilehash: 06fa3a9d0151f3b4b865c421f9960854ef471377
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024612"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807882"
 ---
-# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>방법: AJAX 사용 WCF 서비스 및 해당 서비스에 액세스하는 ASP.NET 클라이언트 만들기
+# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>방법: 서비스에 액세스 하는 AJAX 사용 WCF 서비스와 ASP.NET 클라이언트 만들기
 
 이 항목에서는 Visual Studio AJAX 지원 Windows Communication Foundation (WCF) 서비스를 만들고 서비스에 액세스 하는 ASP.NET 클라이언트를 사용 하는 방법을 보여 줍니다.
 
@@ -77,15 +77,15 @@ ms.locfileid: "48024612"
 
 4. **소스** 보기로 돌아가, **\<ScriptManager >** 태그 사이에 다음 코드를 추가하여 WCF 서비스의 경로를 지정하십시오.
 
-    ```html
+    ```xml
     <Services>
        <asp:ServiceReference Path="~/CostService.svc" />
     </Services>
     ```
 
-1. Javascript 함수에 대 한 코드를 추가 `Calculate()`합니다. 다음 코드를 추가 합니다 **head** web form의 섹션:
+5. Javascript 함수에 대 한 코드를 추가 `Calculate()`합니다. 다음 코드를 추가 합니다 **head** web form의 섹션:
 
-    ```javascript
+    ```html
     <script type="text/javascript">
 
         function Calculate() {

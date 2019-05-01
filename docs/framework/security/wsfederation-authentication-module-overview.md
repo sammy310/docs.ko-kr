@@ -3,20 +3,20 @@ title: WSFederation 인증 모듈 개요
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: b13536acf71018eb21b6930d7542a9911add8261
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c64bbfc868268fea77d2d17317bfea43aa413b3f
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310254"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808258"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation 인증 모듈 개요
 WIF(Windows Identity Foundation)에는 WS-FAM( WS-Federated Authentication Module)을 통한 ASP.NET 애플리케이션의 페더레이션된 인증 지원이 포함되어 있습니다. 이 항목은 페더레이션된 인증의 작동 방식과 사용 방법을 이해하는 데 도움이 됩니다.  
   
 ### <a name="overview-of-federated-authentication"></a>페더레이션된 인증 개요  
- 페더레이션된 인증을 사용하면 두 도메인 간에 트러스트 관계가 있는 경우 한 트러스트 도메인의 STS(보안 토큰 서비스)에서 다른 트러스트 도메인의 STS에 인증 정보를 제공할 수 있습니다. 다음 그림에는 이러한 예제가 나와 있습니다.  
+ 페더레이션된 인증을 사용하면 두 도메인 간에 트러스트 관계가 있는 경우 한 트러스트 도메인의 STS(보안 토큰 서비스)에서 다른 트러스트 도메인의 STS에 인증 정보를 제공할 수 있습니다. 이 예제는 다음 그림에 표시 됩니다.  
   
- ![페더레이션 인증 시나리오](../../../docs/framework/security/media/federatedauthentication.gif "FederatedAuthentication")  
+ ![페더레이션된 인증 시나리오를 보여 주는 다이어그램입니다.](./media/wsfederation-authentication-module-overview/federated-authentication.gif)  
   
 1. Fabrikam 트러스트 도메인의 클라이언트는 Contoso 트러스트 도메인의 RP(신뢰 당사자) 애플리케이션에 요청을 보냅니다.  
   
@@ -50,7 +50,7 @@ WIF(Windows Identity Foundation)에는 WS-FAM( WS-Federated Authentication Modul
   
  다음 다이어그램은 수동 리디렉션 사례에서 정보의 전반적인 흐름을 보여 줍니다. STS를 통해 요청이 자동으로 리디렉션되어 로그인 페이지 없이 자격 증명을 설정합니다.  
   
- ![수동 리디렉션을 사용한 로그인 타이밍 다이어그램](../../../docs/framework/security/media/signinusingpassiveredirect.gif "SignInUsingPassiveRedirect")  
+ ![수동 리디렉션을 사용한 로그인을 보여 주는 다이어그램입니다.](./media/wsfederation-authentication-module-overview/sign-in-using-passive-redirect.gif)  
   
  다음 다이어그램은 사용자가 STS에 인증했으며 해당 보안 토큰이 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>에 의해 처리될 때 발생하는 사항을 자세히 보여 줍니다.  
   
@@ -63,9 +63,9 @@ WIF(Windows Identity Foundation)에는 WS-FAM( WS-Federated Authentication Modul
 ### <a name="events"></a>이벤트  
  <xref:System.IdentityModel.Services.WSFederationAuthenticationModule><xref:System.IdentityModel.Services.SessionAuthenticationModule> 및 해당 부모 클래스인 <xref:System.IdentityModel.Services.HttpModuleBase>는 HTTP 요청의 여러 처리 단계에서 이벤트를 발생시킵니다. [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 응용 프로그램의 `global.asax` 파일에서 이러한 이벤트를 처리할 수 있습니다.  
   
--   ASP.NET 인프라는 모듈의 <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> 메서드를 호출하여 모듈을 초기화합니다.  
+- ASP.NET 인프라는 모듈의 <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> 메서드를 호출하여 모듈을 초기화합니다.  
   
--   ASP.NET 인프라가 <xref:System.IdentityModel.Services.HttpModuleBase>에서 파생되는 애플리케이션의 모듈 중 하나에서 <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> 메서드를 처음 호출할 때 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType> 이벤트가 발생합니다. 이 메서드는 정적 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> 속성에 액세스하여 Web.config 파일에서 구성이 로드되도록 합니다. 이 이벤트는 이 속성에 처음 액세스할 때만 발생합니다. 구성에서 초기화된 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 개체는 이벤트 처리기의 <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> 속성을 통해 액세스할 수 있습니다. 이 이벤트를 사용하여 모듈에 적용되기 전에 구성을 수정할 수 있습니다. Application_Start 메서드에 이 이벤트에 대한 처리기를 추가할 수 있습니다.  
+- ASP.NET 인프라가 <xref:System.IdentityModel.Services.HttpModuleBase>에서 파생되는 애플리케이션의 모듈 중 하나에서 <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> 메서드를 처음 호출할 때 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType> 이벤트가 발생합니다. 이 메서드는 정적 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> 속성에 액세스하여 Web.config 파일에서 구성이 로드되도록 합니다. 이 이벤트는 이 속성에 처음 액세스할 때만 발생합니다. 구성에서 초기화된 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 개체는 이벤트 처리기의 <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> 속성을 통해 액세스할 수 있습니다. 이 이벤트를 사용하여 모듈에 적용되기 전에 구성을 수정할 수 있습니다. Application_Start 메서드에 이 이벤트에 대한 처리기를 추가할 수 있습니다.  
   
     ```  
     void Application_Start(object sender, EventArgs e)  
@@ -76,19 +76,19 @@ WIF(Windows Identity Foundation)에는 WS-FAM( WS-Federated Authentication Modul
   
      각 모듈은 <xref:System.IdentityModel.Services.HttpModuleBase.InitializeModule%2A?displayProperty=nameWithType> 및 <xref:System.IdentityModel.Services.HttpModuleBase.InitializePropertiesFromConfiguration%2A?displayProperty=nameWithType> 추상 메서드를 재정의합니다. 첫 번째 메서드는 모듈에 관련된 ASP.NET 파이프라인 이벤트에 대한 처리기를 추가합니다. 대부분의 경우 모듈의 기본 구현만으로 충분합니다. 두 번째 메서드는 해당 <xref:System.IdentityModel.Services.HttpModuleBase.FederationConfiguration%2A?displayProperty=nameWithType> 속성에서 모듈의 속성을 초기화합니다. 이전에 로드된 구성의 복사본입니다. <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 또는 <xref:System.IdentityModel.Services.SessionAuthenticationModule>에서 파생하는 클래스의 구성에서 새 속성의 초기화를 지원하려는 경우 이 두 번째 메서드를 재정의해야 할 수도 있습니다. 이러한 경우 <xref:System.IdentityModel.Configuration.IdentityConfiguration>, <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> 또는 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 등에서 추가된 구성 속성을 지원하기 위해 적절한 구성 개체에서 파생해야 합니다.  
   
--   WS-FAM은 STS에서 발급된 보안 토큰을 가로챌 때 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenReceived> 이벤트를 발생시킵니다.  
+- WS-FAM은 STS에서 발급된 보안 토큰을 가로챌 때 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenReceived> 이벤트를 발생시킵니다.  
   
--   WS-FAM은 토큰의 유효성을 검사한 후 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenValidated> 이벤트를 발생시킵니다.  
+- WS-FAM은 토큰의 유효성을 검사한 후 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenValidated> 이벤트를 발생시킵니다.  
   
--   <xref:System.IdentityModel.Services.SessionAuthenticationModule> 모듈은 사용자에 대한 세션 보안 토큰을 만들 때 <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenCreated> 이벤트를 발생시킵니다.  
+- <xref:System.IdentityModel.Services.SessionAuthenticationModule> 모듈은 사용자에 대한 세션 보안 토큰을 만들 때 <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenCreated> 이벤트를 발생시킵니다.  
   
--   <xref:System.IdentityModel.Services.SessionAuthenticationModule>은 세션 보안 토큰을 포함하는 쿠키를 사용하여 후속 요청을 가로챌 때 <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenReceived> 이벤트를 발생시킵니다.  
+- <xref:System.IdentityModel.Services.SessionAuthenticationModule>은 세션 보안 토큰을 포함하는 쿠키를 사용하여 후속 요청을 가로챌 때 <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenReceived> 이벤트를 발생시킵니다.  
   
--   WS-FAM은 사용자를 발급자로 리디렉션하기 전에 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider> 이벤트를 발생시킵니다. WS-Federation 로그인 요청은 이벤트에 전달된 <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs>의 <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs.SignInRequestMessage%2A> 속성을 통해 사용할 수 있습니다. 이 요청을 발급자에게 보내기 전에 수정할 수 있습니다.  
+- WS-FAM은 사용자를 발급자로 리디렉션하기 전에 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider> 이벤트를 발생시킵니다. WS-Federation 로그인 요청은 이벤트에 전달된 <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs>의 <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs.SignInRequestMessage%2A> 속성을 통해 사용할 수 있습니다. 이 요청을 발급자에게 보내기 전에 수정할 수 있습니다.  
   
--   쿠키가 성공적으로 작성되고 사용자가 로그인하면 WS-FAM이 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignedIn>을 발생시킵니다.  
+- 쿠키가 성공적으로 작성되고 사용자가 로그인하면 WS-FAM이 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignedIn>을 발생시킵니다.  
   
--   각 사용자에 대해 세션이 닫히기 때문에 WS-FAM은 세션당 한 번 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SigningOut> 이벤트를 발생시킵니다. 클라이언트 쪽에서 세션이 닫힌 경우(예: 세션 쿠키 삭제)에는 이벤트가 발생하지 않습니다. SSO 환경에서는 IP-STS가 각 RP에 로그아웃하도록 요청할 수도 있습니다. 이 경우에도 <xref:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated%2A>가 `true`로 설정되어 이 이벤트가 발생합니다.  
+- 각 사용자에 대해 세션이 닫히기 때문에 WS-FAM은 세션당 한 번 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SigningOut> 이벤트를 발생시킵니다. 클라이언트 쪽에서 세션이 닫힌 경우(예: 세션 쿠키 삭제)에는 이벤트가 발생하지 않습니다. SSO 환경에서는 IP-STS가 각 RP에 로그아웃하도록 요청할 수도 있습니다. 이 경우에도 <xref:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated%2A>가 `true`로 설정되어 이 이벤트가 발생합니다.  
   
 > [!NOTE]
 >  <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 또는 <xref:System.IdentityModel.Services.SessionAuthenticationModule>에서 발생하는 이벤트 중에는 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> 속성을 사용하면 안 됩니다. 이는 인증 프로세스 중 이벤트가 발생하는 반면 <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType>은 인증 프로세스 후에 설정되기 때문입니다.  

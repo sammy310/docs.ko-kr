@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: a13e21281a4bdb365c3a0541d88cd94b6476492e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.openlocfilehash: 4001c34f6673e036bdbf731baed782c6dc0a16b0
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494950"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808035"
 ---
 # <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>연습: Win32에서 WPF 시계 호스팅
 
@@ -29,13 +29,13 @@ ms.locfileid: "57494950"
 
 다음 그래픽에서는 이 자습서의 의도된 최종 제품을 보여 줍니다.
 
-![날짜 및 시간 속성 대화 상자](./media/interoparch06.PNG "InteropArch06")
+![날짜 및 시간 속성 대화 상자를 보여 주는 스크린샷.](./media/walkthrough-hosting-a-wpf-clock-in-win32/date-time-properties-dialog.png)
 
-C + +를 만들어이 대화 상자를 다시 만들 수 있습니다 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 프로젝트에서 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], 및 대화 상자 편집기를 사용 하 여 다음을 만들려면:
+이 대화 상자를 만들어 다시 만들 수 있습니다는 C++ 대화 상자 편집기를 사용 하 여 다음을 만들려면 Visual Studio에서 Win32 프로젝트:
 
-![날짜 및 시간 속성 대화 상자](./media/interoparch07.PNG "InteropArch07")
+![다시 만들어진된 날짜 및 시간 속성 대화 상자](./media/walkthrough-hosting-a-wpf-clock-in-win32/recreated-date-time-properties-dialog.png)
 
-(사용할 필요가 없습니다 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 데 <xref:System.Windows.Interop.HwndSource>, 및 c + +를 사용 하 여 쓸 필요가 없습니다 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 프로그램 이지만이 수행 하는 일반적인 방식 이며 단계별 자습서 설명에 적합).
+(사용할 필요가 없습니다 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 데 <xref:System.Windows.Interop.HwndSource>를 사용할 필요가 없습니다 C++ 쓸 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 프로그램 이지만이 수행 하는 일반적인 방식 이며 단계별 자습서 설명에 적합).
 
 넣으려면 5 개의 배치 하기 위해 수행 해야 할는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 시계를 대화 상자:
 
@@ -53,7 +53,7 @@ C + +를 만들어이 대화 상자를 다시 만들 수 있습니다 [!INCLUDE[
 
 이 관리 되지 않는 첫 번째 단계는 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 관리 코드를 호출할 수 있는 프로젝트입니다. 사용 및 사용에 대 한 기본 메서드를 조정 하려면 필요한 Dll에 연결 하는 /clr 컴파일러 옵션을 사용 하면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]합니다.
 
-C + + 프로젝트 내에서 관리 코드의 사용할 수 있도록 합니다. Win32clock 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **속성**합니다. 에 **일반적인** 속성 페이지 (기본값), 공용 언어 런타임 지원 변경 `/clr`합니다.
+관리 코드 내에서 사용할 수 있도록 합니다 C++ 프로젝트: Win32clock 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **속성**합니다. 에 **일반적인** 속성 페이지 (기본값), 공용 언어 런타임 지원 변경 `/clr`합니다.
 
 그런 다음에 대 한 필요한 Dll에 대 한 참조를 추가 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]: PresentationCore.dll, PresentationFramework.dll, System.dll, WindowsBase.dll, UIAutomationProvider.dll 및 UIAutomationTypes.dll 합니다. 다음 지침에서는 운영 체제가 C: 드라이브에 설치되어 있다고 가정합니다.
 
@@ -229,7 +229,7 @@ HWND clock = ManagedCode::GetHwnd(hDlg, point.x, point.y, width, height);
 
 최종 결과는 다음과 같습니다.
 
-![날짜 및 시간 속성 대화 상자](./media/interoparch08.PNG "InteropArch08")
+![최종 결과 날짜 및 시간 속성 대화 상자](./media/walkthrough-hosting-a-wpf-clock-in-win32/final-result-date-time-properties-dialog.png)
 
 이 스크린샷에서 생성 하는 코드를 최종 결과 비교 하려면 참조 [Win32 시계 상호 운용 샘플](https://go.microsoft.com/fwlink/?LinkID=160051)합니다.
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: 78e8c3cacd89f88cbfa062cb30e5b3474c2614ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 74c31c748dd3483aa87afb2c9a7d926965c9f1ed
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517840"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63773938"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>방법: IIS에서 실행 되는 WCF 데이터 서비스 개발
 
@@ -23,9 +23,9 @@ ms.locfileid: "59517840"
 > [!NOTE]
 > Northwind 데이터 서비스를 만들려면 로컬 컴퓨터에 Northwind 샘플 데이터베이스를 설치해야 합니다. 이 샘플 데이터베이스를 다운로드하려면 [SQL Server용 샘플 데이터베이스](https://go.microsoft.com/fwlink/?linkid=24758)다운로드 페이지를 참조하세요.
 
- 이 항목에서는 Entity Framework 공급자를 사용하여 데이터 서비스를 만드는 방법을 보여 줍니다. 다른 데이터 서비스 공급자를 사용할 수 있습니다. 자세한 내용은 [데이터 서비스 공급자](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)합니다.
+이 항목에서는 Entity Framework 공급자를 사용하여 데이터 서비스를 만드는 방법을 보여 줍니다. 다른 데이터 서비스 공급자를 사용할 수 있습니다. 자세한 내용은 [데이터 서비스 공급자](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)합니다.
 
- 서비스를 만든 후 데이터 서비스 리소스에 대한 액세스 권한을 명시적으로 부여해야 합니다. 자세한 내용은 [방법: 데이터 서비스에 액세스할 수 있도록](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md)입니다.
+서비스를 만든 후 데이터 서비스 리소스에 대한 액세스 권한을 명시적으로 부여해야 합니다. 자세한 내용은 [방법: 데이터 서비스에 액세스할 수 있도록](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md)입니다.
 
 ## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a>IIS에서 실행 되는 ASP.NET 웹 응용 프로그램 만들기
 
@@ -35,7 +35,7 @@ ms.locfileid: "59517840"
 
 3. 선택 된 **ASP.NET 웹 응용 프로그램** 템플릿.
 
-1. 입력 `NorthwindService` 프로젝트의 이름으로 합니다.
+4. 입력 `NorthwindService` 프로젝트의 이름으로 합니다.
 
 5. **확인**을 클릭합니다.
 
@@ -47,13 +47,13 @@ ms.locfileid: "59517840"
 
 9. 관리자 권한으로 실행되는 명령 프롬프트에서 운영 체제에 따라 다음 명령 중 하나를 실행합니다.
 
-    -   32비트 시스템:
+    - 32비트 시스템:
 
         ```console
         "%windir%\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModelReg.exe" -i
         ```
 
-    -   64비트 시스템:
+    - 64비트 시스템:
 
         ```console
         "%windir%\Microsoft.NET\Framework64\v3.0\Windows Communication Foundation\ServiceModelReg.exe" -i
@@ -63,13 +63,13 @@ ms.locfileid: "59517840"
 
 10. 관리자 권한으로 실행되는 명령 프롬프트에서 운영 체제에 따라 다음 명령 중 하나를 실행합니다.
 
-    -   32비트 시스템:
+    - 32비트 시스템:
 
         ```console
         "%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_regiis.exe" -i -enable
         ```
 
-    -   64비트 시스템:
+    - 64비트 시스템:
 
         ```console
         "%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe" -i -enable
@@ -132,11 +132,11 @@ ms.locfileid: "59517840"
 
 5. 다음 단계 중 하나를 수행 하 여 데이터 모델 데이터베이스에 연결 하 고 클릭 **다음**:
 
-    -   데이터베이스 연결이 이미 구성 되어 없으면 클릭 **새 연결** 새 연결을 만듭니다. 자세한 내용은 [방법: SQL Server 데이터베이스에 연결을 만들](https://go.microsoft.com/fwlink/?LinkId=123631)합니다. 이 SQL Server 인스턴스에는 Northwind 샘플 데이터베이스가 연결되어 있어야 합니다.
+    - 데이터베이스 연결이 이미 구성 되어 없으면 클릭 **새 연결** 새 연결을 만듭니다. 자세한 내용은 [방법: SQL Server 데이터베이스에 연결을 만들](https://go.microsoft.com/fwlink/?LinkId=123631)합니다. 이 SQL Server 인스턴스에는 Northwind 샘플 데이터베이스가 연결되어 있어야 합니다.
 
          \- 또는 -
 
-    -   Northwind 데이터베이스에 연결할 수 있도록 데이터베이스 연결이 이미 구성되어 있는 경우 연결 목록에서 해당 연결을 선택합니다.
+    - Northwind 데이터베이스에 연결할 수 있도록 데이터베이스 연결이 이미 구성되어 있는 경우 연결 목록에서 해당 연결을 선택합니다.
 
 6. 마법사의 마지막 페이지에서 데이터베이스의 모든 테이블에 대한 확인란을 선택하고 뷰 및 저장 프로시저에 대한 확인란의 선택을 취소합니다.
 

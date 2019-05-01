@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: 4309b1108b2ea96eb298ff3bb876a0f63b80dc32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d633111c5abc572b0fc27c1a5b32050681504073
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343599"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807952"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>Wpf에서 잉크 시작
 
@@ -104,7 +104,7 @@ XAML을 사용 하면 매우 쉽게 사용자 인터페이스를 디자인, 실�
 
 1. 마우스 오른쪽 단추로 클릭 하 여 PresentationCore, PresentationFramework, 및 WindowsBase 어셈블리에 대 한 참조를 추가 **참조가** 에 **솔루션 탐색기** 선택 하 고 **참조추가**.
 
-   ![참조 관리자 PresentationCore 및 PresentationFramework 표시](./media/getting-started-with-ink/references.png)
+   ![참조 관리자 PresentationCore 및 PresentationFramework 표시](./media/getting-started-with-ink/reference-manager-presentationcore-presentationframework.png)
 
 1. 키를 눌러 응용 프로그램을 빌드합니다 **F5**합니다.
 

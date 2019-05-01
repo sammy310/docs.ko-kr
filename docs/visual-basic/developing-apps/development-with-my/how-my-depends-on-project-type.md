@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - _MYTYPE
 ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
-ms.openlocfilehash: 743160889c4f24a9edb2d0f9799662a74c5061fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.openlocfilehash: 72b9799d1f5ba7efa37d5f8f2a633e6806a58607
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842085"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808089"
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>My가 프로젝트 형식에 의존하는 방식(Visual Basic)
 `My` 특정 프로젝트 형식에 필요한 개체만 표시 합니다. 예를 들어를 `My.Forms` 개체가 Windows Forms 응용 프로그램에서 사용할 수 있지만 콘솔 응용 프로그램에서 사용할 수 없습니다. 이 항목에서는 설명 하는 `My` 개체는 다른 프로젝트 형식에서 사용할 수 있습니다.  
@@ -17,11 +17,11 @@ ms.locfileid: "58842085"
 ## <a name="my-in-windows-applications-and-web-sites"></a>내에서 Windows 응용 프로그램 및 웹 사이트  
  `My` 현재 프로젝트 형식에 유용한 개체에만 노출 합니다. 적용할 수 없는 개체를 표시 하지 않습니다. 예를 들어, 다음 이미지는 `My` Windows Forms 프로젝트의 개체 모델입니다.  
   
- ![모양의 내 Windows Forms 응용 프로그램에서](../../../visual-basic/developing-apps/development-with-my/media/myinwinform.png "MyInWinForm")  
+ ![보여 주는 다이어그램은 Windows Forms 응용 프로그램에서 내 개체 모델입니다.](./media/how-my-depends-on-project-type/my-object-model-windows-forms.png)  
   
  웹 사이트 프로젝트에서 `My` 웹 개발자에 게 관련 된 개체를 노출 (같은 합니다 `My.Request` 및 `My.Response` 개체) 관련 되지 않은 개체를 억제 하는 동안 (같은 `My.Forms` 개체). 다음 이미지는 `My` 웹 사이트 프로젝트의 개체 모델:  
   
- ![모양의 내 웹 응용 프로그램에서](../../../visual-basic/developing-apps/development-with-my/media/myinweb.png "MyInWeb")  
+ ![보여 주는 다이어그램은 웹 응용 프로그램에서 내 개체 모델입니다.](./media/how-my-depends-on-project-type/my-object-model-web.png)  
   
 ## <a name="project-details"></a>프로젝트 세부 정보  
  다음 표에 나와 있는 `My` 8 프로젝트 형식에 대 한 개체 기본적으로 사용할 수 있습니다. Windows 응용 프로그램, 클래스 라이브러리, 콘솔 응용 프로그램, Windows 컨트롤 라이브러리, 웹 컨트롤 라이브러리, Windows 서비스, 비어 있거나, 및 웹 사이트입니다.  
