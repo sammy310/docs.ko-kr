@@ -9,11 +9,11 @@ helpviewer_keywords:
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
 ms.openlocfilehash: 530f6cb8fbe80df3ad374f8ad0e4836be82830a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054330"
 ---
 # <a name="animation-overview"></a>애니메이션 개요
 <a name="introduction"></a>
@@ -27,13 +27,13 @@ ms.locfileid: "59337736"
   
  컴퓨터의 애니메이션도 유사합니다. 예를 들어 사각형 그림을 보기에서 페이드 아웃하는 프로그램은 다음과 같이 작동할 수 있습니다.  
   
--   프로그램이 타이머를 만듭니다.  
+- 프로그램이 타이머를 만듭니다.  
   
--   프로그램이 설정된 간격으로 타이머를 확인하여 경과된 시간을 파악합니다.  
+- 프로그램이 설정된 간격으로 타이머를 확인하여 경과된 시간을 파악합니다.  
   
--   프로그램이 타이머를 확인할 때마다 경과된 시간에 따라 사각형의 현재 불투명도 값을 계산합니다.  
+- 프로그램이 타이머를 확인할 때마다 경과된 시간에 따라 사각형의 현재 불투명도 값을 계산합니다.  
   
--   그런 다음 새 값으로 사각형을 업데이트한 후 그립니다.  
+- 그런 다음 새 값으로 사각형을 업데이트한 후 그립니다.  
   
  이전 버전 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 개발자가 만들고가 자체 타이밍 시스템을 관리 하거나 특수 한 사용자 지정 라이브러리를 사용 해야 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 관리 되는 코드를 통해 노출 되는 효율적인 타이밍 시스템이 포함 하 고 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 에 긴밀히 통합 되 고는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 프레임 워크입니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션을 사용하면 쉽게 컨트롤 및 기타 그래픽 개체에 애니메이션 효과를 줄 수 있습니다.  
   
@@ -45,11 +45,11 @@ ms.locfileid: "59337736"
   
  속성에 애니메이션 기능을 부여하려면 다음 세 가지 요구 사항을 충족해야 합니다.  
   
--   종속성 속성이어야 합니다.  
+- 종속성 속성이어야 합니다.  
   
--   상속 된 클래스에 속해 있어야 <xref:System.Windows.DependencyObject> 하 고 구현 합니다 <xref:System.Windows.Media.Animation.IAnimatable> 인터페이스입니다.  
+- 상속 된 클래스에 속해 있어야 <xref:System.Windows.DependencyObject> 하 고 구현 합니다 <xref:System.Windows.Media.Animation.IAnimatable> 인터페이스입니다.  
   
--   사용 가능한 호환되는 애니메이션 형식이어야 합니다. (경우 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 제공 하지 않으면, 직접 만들 수 있습니다. 참조 된 [사용자 지정 애니메이션 개요](custom-animations-overview.md).)  
+- 사용 가능한 호환되는 애니메이션 형식이어야 합니다. (경우 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 제공 하지 않으면, 직접 만들 수 있습니다. 참조 된 [사용자 지정 애니메이션 개요](custom-animations-overview.md).)  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 갖는 많은 개체가 포함 <xref:System.Windows.Media.Animation.IAnimatable> 속성입니다. 와 같은 컨트롤 <xref:System.Windows.Controls.Button> 하 고 <xref:System.Windows.Controls.TabControl>, 그리고 <xref:System.Windows.Controls.Panel> 및 <xref:System.Windows.Shapes.Shape> 개체에서 상속 <xref:System.Windows.DependencyObject>합니다. 해당 속성 대부분은 종속성 속성입니다.  
   
@@ -183,27 +183,27 @@ ms.locfileid: "59337736"
 ## <a name="animation-types"></a>애니메이션 형식  
  애니메이션은 속성 값을 생성하므로 속성 형식마다 다양한 애니메이션 형식이 존재합니다. 사용 하는 속성에 애니메이션 효과 <xref:System.Double>와 같은 합니다 <xref:System.Windows.FrameworkElement.Width%2A> 요소의 속성을 생성 하는 애니메이션을 사용 <xref:System.Double> 값입니다. 사용 하는 속성에 애니메이션 효과 <xref:System.Windows.Point>를 생성 하는 애니메이션을 사용 하 여 <xref:System.Windows.Point> 값 및 등입니다. 다른 속성 유형의 수, 때문에 몇 가지 애니메이션 클래스가 <xref:System.Windows.Media.Animation> 네임 스페이스입니다. 다행스럽게도 쉬운 구분을 위해 엄격한 명명 규칙을 따릅니다.  
   
--   \<*형식*> 애니메이션  
+- \<*형식*> 애니메이션  
   
      "From/To/By" 또는 "basic" 애니메이션으로도 알려져 있는 이러한 클래스는 시작 값과 대상 값 사이에 애니메이션 효과를 주거나 시작 값에 오프셋 값을 추가하여 애니메이션 효과를 줍니다.  
   
-    -   시작 값을 지정하려면 애니메이션의 From 속성을 설정합니다.  
+    - 시작 값을 지정하려면 애니메이션의 From 속성을 설정합니다.  
   
-    -   끝 값을 지정하려면 애니메이션의 To 속성을 설정합니다.  
+    - 끝 값을 지정하려면 애니메이션의 To 속성을 설정합니다.  
   
-    -   오프셋 값을 지정하려면 애니메이션의 By 속성을 설정합니다.  
+    - 오프셋 값을 지정하려면 애니메이션의 By 속성을 설정합니다.  
   
      이러한 애니메이션이 가장 사용하기 쉬우므로 이 개요의 예제에서도 사용됩니다. From/To/By 애니메이션 From/To/By 애니메이션 개요에서 자세히 설명 되어 있습니다.  
   
--   \<*Type*>AnimationUsingKeyFrames  
+- \<*Type*>AnimationUsingKeyFrames  
   
      키 프레임 애니메이션은 원하는 수의 대상 값을 지정하고 보간 방법을 제어할 수 있으므로 From/To/By 애니메이션보다 훨씬 더 강력합니다. 일부 형식은 키 프레임 애니메이션으로만 애니메이션 효과를 줄 수 있습니다. 키 프레임 애니메이션에 자세히 설명 합니다 [키 프레임 애니메이션 개요](key-frame-animations-overview.md)합니다.  
   
--   \<*Type*>AnimationUsingPath  
+- \<*Type*>AnimationUsingPath  
   
      경로 애니메이션에서는 기하학적 경로를 사용하여 애니메이션 사용 값을 생성할 수 있습니다.  
   
--   \<*Type*>AnimationBase  
+- \<*Type*>AnimationBase  
   
      구현 하는 경우 애니메이션을 적용 하는 추상 클래스는 \< *형식*> 값입니다. 이 클래스에 대 한 기본 클래스로 사용 됩니다 \< *형식을*> 애니메이션 및 \< *형식*> AnimationUsingKeyFrames 클래스입니다. 사용자 고유의 사용자 지정 애니메이션을 만들려는 경우에만 이러한 클래스를 직접 처리해야 합니다. 그렇지 않은 경우 사용을 \< *형식*> 또는 KeyFrame\<*형식*> 애니메이션 합니다.  
   
@@ -264,9 +264,9 @@ ms.locfileid: "59337736"
   
  에 이름을 할당 한 <xref:System.Windows.FrameworkElement> 에 이름을 할당에서 다른는 <xref:System.Windows.Freezable> 개체. 대부분의 컨트롤 및 패널은 프레임워크 요소입니다. 그러나 브러시, 변환, 기 하 도형 등의 순수한 그래픽 개체 대부분은 Freezable 개체입니다. 형식 인지 확실 하지 않은 경우는 <xref:System.Windows.FrameworkElement> 또는 <xref:System.Windows.Freezable>를 참조 합니다 **상속 계층 구조** 해당 참조 설명서의 섹션입니다.  
   
--   확인 하는 <xref:System.Windows.FrameworkElement> 애니메이션 대상으로 사용자 이름을 설정 하 여 해당 <xref:System.Windows.FrameworkElement.Name%2A> 속성입니다. 코드에서 사용 해야는 <xref:System.Windows.FrameworkElement.RegisterName%2A> 속해 있는 페이지를 사용 하 여 요소 이름을 등록 하는 방법입니다.  
+- 확인 하는 <xref:System.Windows.FrameworkElement> 애니메이션 대상으로 사용자 이름을 설정 하 여 해당 <xref:System.Windows.FrameworkElement.Name%2A> 속성입니다. 코드에서 사용 해야는 <xref:System.Windows.FrameworkElement.RegisterName%2A> 속해 있는 페이지를 사용 하 여 요소 이름을 등록 하는 방법입니다.  
   
--   있도록를 <xref:System.Windows.Freezable> 개체를 애니메이션 대상에 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], 사용할 합니다 [X:name 지시문](../../xaml-services/x-name-directive.md) 이름을 할당할 합니다. 코드에서 바로 사용을 <xref:System.Windows.FrameworkElement.RegisterName%2A> 속해 있는 페이지를 사용 하 여 개체를 등록 하는 방법입니다.  
+- 있도록를 <xref:System.Windows.Freezable> 개체를 애니메이션 대상에 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], 사용할 합니다 [X:name 지시문](../../xaml-services/x-name-directive.md) 이름을 할당할 합니다. 코드에서 바로 사용을 <xref:System.Windows.FrameworkElement.RegisterName%2A> 속해 있는 페이지를 사용 하 여 개체를 등록 하는 방법입니다.  
   
  요소 이름 지정의 예제를 제공 하는 이어지는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 및 코드입니다. 이름 및 대상 지정에 대 한 자세한 내용은 참조는 [스토리 보드 개요](storyboards-overview.md)합니다.  
   
@@ -318,11 +318,11 @@ ms.locfileid: "59337736"
 ## <a name="animation-samples"></a>애니메이션 샘플  
  다음 샘플은 애플리케이션에 애니메이션을 추가하는 데 도움이 될 수 있습니다.  
   
--   [From, To 및 By 애니메이션 대상 값 샘플](https://go.microsoft.com/fwlink/?LinkID=159988)  
+- [From, To 및 By 애니메이션 대상 값 샘플](https://go.microsoft.com/fwlink/?LinkID=159988)  
   
      다른 From/To/By 설정을 보여 줍니다.  
   
--   [애니메이션 타이밍 동작 샘플](https://go.microsoft.com/fwlink/?LinkID=159970)  
+- [애니메이션 타이밍 동작 샘플](https://go.microsoft.com/fwlink/?LinkID=159970)  
   
      애니메이션의 타이밍 동작을 제어할 수는 여러 가지 방법을 보여 줍니다. 또한 이 샘플은 애니메이션의 대상 값에 대해 데이터 바인딩을 수행하는 방법을 보여 줍니다.  
   

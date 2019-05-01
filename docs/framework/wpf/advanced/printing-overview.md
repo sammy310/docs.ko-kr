@@ -16,11 +16,11 @@ helpviewer_keywords:
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
 ms.openlocfilehash: 2aeafa7065b587497fb6f3b23605c21dca291cd1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051262"
 ---
 # <a name="printing-overview"></a>인쇄 개요
 Microsoft.NET Framework를 사용 하 여 Windows Presentation Foundation (WPF)를 사용 하 여 응용 프로그램 개발자가 새로운 풍부한 인쇄 및 인쇄 시스템 관리 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]합니다. [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]에서는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 응용 프로그램을 만드는 개발자와 비관리 코드를 사용하는 개발자도 이러한 인쇄 시스템 향상 기능을 일부 사용할 수 있습니다. 이 새로운 기능의 핵심은 새 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 파일 형식과 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 인쇄 경로입니다.  
@@ -43,21 +43,21 @@ Microsoft.NET Framework를 사용 하 여 Windows Presentation Foundation (WPF)�
   
  [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 인쇄 경로에는 다음과 같은 중요한 장점이 있습니다.  
   
--   [!INCLUDE[TLA2#tla_wys](../../../../includes/tla2sharptla-wys-md.md)] 인쇄 지원  
+- [!INCLUDE[TLA2#tla_wys](../../../../includes/tla2sharptla-wys-md.md)] 인쇄 지원  
   
--   32bpc(채널당 비트), CMYK, 명명된 색, n-잉크 및 투명도와 그라데이션 기본 지원을 포함하는 고급 색 프로필에 대한 기본 지원입니다.  
+- 32bpc(채널당 비트), CMYK, 명명된 색, n-잉크 및 투명도와 그라데이션 기본 지원을 포함하는 고급 색 프로필에 대한 기본 지원입니다.  
   
--   두.NET Framework에 대 한 인쇄 성능 향상 및 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 기반 응용 프로그램입니다.  
+- 두.NET Framework에 대 한 인쇄 성능 향상 및 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 기반 응용 프로그램입니다.  
   
--   산업 표준 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 형식  
+- 산업 표준 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 형식  
   
  기본 인쇄 시나리오에서는 사용자 인터페이스, 구성 및 작업 제출을 위한 단일 진입점으로 간단하고 직관적인 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]를 사용할 수 있습니다. 고급 시나리오에서는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 사용자 지정(또는 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 없음), 동기 또는 비동기 인쇄 및 일괄 처리 인쇄 기능을 위한 추가 지원이 추가됩니다. 두 옵션 모두 완전 신뢰 또는 부분 신뢰 모드로 인쇄 지원을 제공합니다.  
   
  [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]는 확장성을 염두에 두고 설계되었습니다. 확장성 프레임워크를 사용하여 모듈형 방식으로 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]에 기능 및 특성을 추가할 수 있습니다. 확장성 기능은 다음과 같습니다.  
   
--   인쇄 스키마. 공용 스키마는 정기적으로 업데이트되며 디바이스 기능을 빠르게 확장할 수 있게 해줍니다. 아래의 **PrintTicket 및 PrintCapabilities**를 참조하세요.  
+- 인쇄 스키마. 공용 스키마는 정기적으로 업데이트되며 디바이스 기능을 빠르게 확장할 수 있게 해줍니다. 아래의 **PrintTicket 및 PrintCapabilities**를 참조하세요.  
   
--   확장 가능한 필터 파이프라인. [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 프린터 드라이버(XPSDrv) 필터 파이프라인은 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 문서의 직접 인쇄와 확장 가능한 인쇄를 둘 다 사용할 수 있도록 설계되었습니다. 자세한 내용은 [XPSDrv 프린터 드라이버](/windows-hardware/drivers/print/xpsdrv-printer-drivers)합니다. 
+- 확장 가능한 필터 파이프라인. [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 프린터 드라이버(XPSDrv) 필터 파이프라인은 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 문서의 직접 인쇄와 확장 가능한 인쇄를 둘 다 사용할 수 있도록 설계되었습니다. 자세한 내용은 [XPSDrv 프린터 드라이버](/windows-hardware/drivers/print/xpsdrv-printer-drivers)합니다. 
   
 ### <a name="print-path-architecture"></a>인쇄 경로 아키텍처  
  반면 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 및.NET Framework 응용 프로그램 지원 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 사용 하 여 Windows Forms 응용 프로그램을 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 에 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 변환을 만들기 위해 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 합니다 에대한콘텐츠형식[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]프린터 드라이버 (XPSDrv). 이러한 애플리케이션은 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 인쇄 경로를 사용할 필요가 없으며 [!INCLUDE[TLA#tla_emf](../../../../includes/tlasharptla-emf-md.md)] 기반 인쇄를 계속 사용할 수 있습니다. 그러나 대부분의 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 기능과 향상된 기능은 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 인쇄 경로를 대상으로 하는 애플리케이션만 사용할 수 있습니다.  
@@ -110,7 +110,7 @@ Microsoft.NET Framework를 사용 하 여 Windows Presentation Foundation (WPF)�
 
 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 기능이나 지원이 필요하지 않은 응용 프로그램의 경우 현재 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 인쇄 경로가 변경되지 않고 유지됩니다.  
   
--   대 한 추가 참조 자료에 대 한 합니다 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 인쇄 경로 및 다양 한 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 변환 옵션을 참조 하세요 [Microsoft XPS 문서 변환기 (MXDC)](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-) 하 고 [XPSDrv 프린터 드라이버](/windows-hardware/drivers/print/xpsdrv-printer-drivers)합니다.  
+- 대 한 추가 참조 자료에 대 한 합니다 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 인쇄 경로 및 다양 한 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 변환 옵션을 참조 하세요 [Microsoft XPS 문서 변환기 (MXDC)](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-) 하 고 [XPSDrv 프린터 드라이버](/windows-hardware/drivers/print/xpsdrv-printer-drivers)합니다.  
   
 <a name="XPS_Driver_Model_intro"></a>   
 ## <a name="xpsdrv-driver-model"></a>XPSDrv 드라이버 모델  
@@ -120,19 +120,19 @@ Microsoft.NET Framework를 사용 하 여 Windows Presentation Foundation (WPF)�
   
  일반적으로 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 프린터 드라이버(XPSDrv)를 대상으로 하는 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 문서를 사용하는 경우 해당 [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)]에 비해 스풀 파일 크기가 감소하지만 다음과 같은 예외도 있습니다.  
   
--   매우 복잡하거나 다중 계층이거나 비효율적으로 작성된 벡터 그래픽은 동일한 그래픽의 비트맵 버전보다 클 수 있습니다.  
+- 매우 복잡하거나 다중 계층이거나 비효율적으로 작성된 벡터 그래픽은 동일한 그래픽의 비트맵 버전보다 클 수 있습니다.  
   
--   화면 표시를 위해 XPS 파일은 디바이스 글꼴과 컴퓨터 기반 글꼴을 포함하는 반면 GDI 스풀 파일은 디바이스 글꼴을 포함하지 않습니다. 그러나 두 종류의 글꼴은 모두 하위 집합으로 지정되며(아래 참조), 프린터 드라이버가 파일을 프린터로 전송하기 전에 디바이스 글꼴을 제거할 수 있습니다.  
+- 화면 표시를 위해 XPS 파일은 디바이스 글꼴과 컴퓨터 기반 글꼴을 포함하는 반면 GDI 스풀 파일은 디바이스 글꼴을 포함하지 않습니다. 그러나 두 종류의 글꼴은 모두 하위 집합으로 지정되며(아래 참조), 프린터 드라이버가 파일을 프린터로 전송하기 전에 디바이스 글꼴을 제거할 수 있습니다.  
   
  스풀 크기 감소는 다음과 같은 여러 메커니즘을 통해 수행됩니다.  
   
--   **글꼴 하위 집합**. 실제 문서 내에서 사용되는 문자만 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 파일에 저장됩니다.  
+- **글꼴 하위 집합**. 실제 문서 내에서 사용되는 문자만 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 파일에 저장됩니다.  
   
--   **고급 그래픽 지원**. 투명도 및 그라데이션 기본 형식에 대한 기본 지원을 통해 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 문서에서 콘텐츠의 래스터화를 방지합니다.  
+- **고급 그래픽 지원**. 투명도 및 그라데이션 기본 형식에 대한 기본 지원을 통해 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 문서에서 콘텐츠의 래스터화를 방지합니다.  
   
--   **공용 리소스 식별**. 여러 번 사용되는 리소스(예: 회사 로고를 나타내는 이미지)는 공유 리소스로 처리되며 한 번만 로드됩니다.  
+- **공용 리소스 식별**. 여러 번 사용되는 리소스(예: 회사 로고를 나타내는 이미지)는 공유 리소스로 처리되며 한 번만 로드됩니다.  
   
--   **ZIP 압축**. 모든 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 문서가 ZIP 압축을 사용합니다.  
+- **ZIP 압축**. 모든 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 문서가 ZIP 압축을 사용합니다.  
   
 ## <a name="see-also"></a>참고자료
 
