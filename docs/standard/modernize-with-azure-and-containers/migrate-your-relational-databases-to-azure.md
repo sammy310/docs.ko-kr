@@ -96,11 +96,11 @@ Azure SQL Database는 다음과 같은 이점을 제공합니다.
 
 Azure SQL Database, Azure SQL Database 관리 되는 인스턴스 또는 Azure VM에서 SQL Server 대상 데이터베이스 인지를 Azure로 SQL Server, Oracle 및 MySQL 등의 관계형 데이터베이스를 마이그레이션하려면 Azure Database Migration Service를 사용할 수 있습니다.
 
-평가보고 기능이 있는 자동화된 워크플로는 데이터베이스를 마이그레이션하기 전에 변경해야 할 사항을 안내합니다. 준비가 되면 서비스는 원본 데이터베이스를 Azure로 마이그레이션합니다.
+평가 보고 기능이 있는 자동화된 워크플로는 데이터베이스를 마이그레이션하기 전에 변경해야 할 사항을 안내합니다. 준비가 되면 서비스는 원본 데이터베이스를 Azure로 마이그레이션합니다.
 
-원래의 RDBMS를 변경할 때마다 다시 테스트해야 할 수 있습니다. 테스트 결과에 따라 응용 프로그램에서 SQL 문장이나 ORM (Object-Relational Mapping) 코드를 변경해야 할 수도 있습니다.
+원래의 RDBMS를 변경할 때마다 다시 테스트해야 할 수 있습니다. 테스트 결과에 따라 응용 프로그램에서 SQL 문장이나 ORM(Object-Relational Mapping) 코드를 변경해야 할 수도 있습니다.
 
-다른 데이터베이스 (예 : IBM DB2)가 있고 리프트 엔 시프트 방식을 선택하는 경우, 보다 복잡한 데이터 마이그레이션을 수행하려는 경우가 아니면 Azure에서 이러한 데이터베이스를 IaaS VM으로 계속 사용할 수 있습니다. 더 복잡한 데이터 마이그레이션은 새로운 스키마와 다양한 프로그래밍 라이브러리를 사용하여 다양한 데이터베이스 유형으로 마이그레이션하기 때문에 추가적인 노력이 필요합니다.
+다른 데이터베이스(예: IBM DB2)가 있고 리프트 앤 시프트 방식을 선택하는 경우, 보다 복잡한 데이터 마이그레이션을 수행하려는 경우가 아니면 Azure에서 이러한 데이터베이스를 IaaS VM으로 계속 사용할 수 있습니다. 더 복잡한 데이터 마이그레이션은 새로운 스키마와 다양한 프로그래밍 라이브러리를 사용하여 다양한 데이터베이스 유형으로 마이그레이션하기 때문에 추가적인 노력이 필요합니다.
 
 Azure Database Migration Service를 사용하여 데이터베이스를 마이그레이션하는 방법에 알아보려면 [Azure SQL Database Managed Instance와 Azure Database Migration Service를 사용하여 클라우드로 신속하게 이동하기](https://channel9.msdn.com/Events/Build/2017/P4008)를 참조합니다.
 
