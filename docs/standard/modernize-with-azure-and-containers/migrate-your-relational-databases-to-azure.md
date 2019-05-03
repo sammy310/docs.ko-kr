@@ -90,11 +90,11 @@ Azure SQL Database는 다음과 같은 이점을 제공합니다.
 
 ## <a name="when-to-migrate-to-sql-server-as-a-vm-iaas"></a>VM (IaaS)으로 SQL Server로 마이그레이션할 시기
 
-일반 VM의 SQL Server로 마이그레이션해야하는 경우가 있습니다. 예를 들면 SQL Server Reporting Services를 사용해야하는 경우입니다. 하지만 대부분의 경우 Azure SQL Database Managed Instance는 온-프레미스 SQL 서버에서 마이그레이션하는 데 필요한 모든 것을 제공할 수 있으므로 SQL Server VM으로 마이그레이션은 마지막 수단으로 사용해야합니다.
+일반 VM의 SQL Server로 마이그레이션해야 하는 경우가 있습니다. 예를 들면 SQL Server Reporting Services를 사용해야하는 경우입니다. 하지만 대부분의 경우 Azure SQL Database Managed Instance는 온-프레미스 SQL 서버에서 마이그레이션하는 데 필요한 모든 것을 제공할 수 있으므로 SQL Server VM으로의 마이그레이션은 마지막 수단으로 사용해야 합니다.
 
 ## <a name="use-azure-database-migration-service-to-migrate-your-relational-databases-to-azure"></a>Azure Database Migration Service를 사용하여 Azure에 관계형 데이터베이스 마이그레이션 
 
-대상 데이터베이스가 Azure SQL Database나 Azure SQL Database Managed Instance, Azure VM의 SQL Server 중 어느 것이나 관계없이, Azure Database Migration Service를 사용하여 SQL Server와 Oracle, MySQL과 같은 관계형 데이터베이스를 Azure로 마이그레이션 할 수 있습니다.
+대상 데이터베이스가 Azure SQL Database나 Azure SQL Database Managed Instance, Azure VM의 SQL Server 중 어느 것이든, Azure Database Migration Service를 사용하여 SQL Server와 Oracle, MySQL과 같은 관계형 데이터베이스를 Azure로 마이그레이션할 수 있습니다.
 
 평가 보고를 사용 하면 자동화 된 워크플로 데이터베이스를 마이그레이션할 수 있도록 원하는 변경 작업을 안내 합니다. 준비가 될 때 서비스에서 Azure로 원본 데이터베이스를 마이그레이션합니다.
 
