@@ -99,7 +99,7 @@ Docker 컨테이너는 고유한 Linux 또는 Windows 인프라나 [Azure Kubern
 
 ### <a name="a-need-to-use-a-platform-that-doesnt-support-net-core"></a>.NET Core를 지원하지 않는 플랫폼을 사용하는 필요성
 
-일부 Microsoft 또는 타사 플랫폼에서는 .NET Core를 지원하지 않습니다. 일부 Azure 서비스에서는 .NET Core에서 사용할 수 없는 SDK를 제공합니다. 현재 Azure Services는 모두 .NET Core를 사용하므로 이 상황은 전환되고 있습니다. 그 동안에는 클라이언트 SDK 대신 상응하는 REST API를 항상 사용할 수 있습니다.
+일부 Microsoft 또는 타사 플랫폼에서는 .NET Core를 지원하지 않습니다. 일부 Azure 서비스에서는 .NET Core에서 사용할 수 없는 SDK를 제공합니다. 현재 Azure Services는 모두 .NET Core를 사용하므로 이 상황은 전환되고 있습니다. 그동안에는 클라이언트 SDK 대신 상응하는 REST API를 항상 사용할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 
