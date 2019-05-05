@@ -169,20 +169,20 @@ All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 �
 
 ### <a name="additional-resources"></a>추가 자료
 
-- **Microsoft 플랫폼 및 도구를 사용 하 여 Docker 응용 프로그램 수명 주기를 컨테이너 화 된** (다운로드 가능한 전자책) \
+- **Microsoft 플랫폼 및 도구를 활용한 컨테이너화 Docker 응용 프로그램의 생명 주기** (다운로드 가능한 전자책) \
   <https://aka.ms/dockerlifecycleebook>
 
-- **.NET 마이크로 서비스: 컨테이너 화 된.NET 응용 프로그램에 대 한 아키텍처** (다운로드 가능한 전자책) \
+- **.NET 마이크로 서비스: 컨테이너화 .NET 응용 프로그램 아키텍처** (다운로드 가능한 전자책) \
   <https://aka.ms/microservicesebook>
 
-- **ASP.NET Core 및 Azure를 사용 하 여 현대식 웹 응용 프로그램 설계** (다운로드 가능한 전자책) \
+- **ASP.NET Core 및 Azure를 사용하여 최신 웹 응용 프로그램 설계** (다운로드 가능한 전자책) \
   <https://aka.ms/webappebook>
 
 ## <a name="who-should-use-this-guide"></a>이 가이드의 대상 사용자
 
-이 가이드는 개발자와 배송 및 응용 프로그램 출시 민첩성 향상된을 위해.NET Framework를 기반으로 하는 WCF 서비스 또는 기존 ASP.NET 웹 응용 프로그램을 현대화 하려는 솔루션 설계자를 위한 작성 되었습니다.
+이 가이드는 배포 및 응용 프로그램 출시의 민첩성을 향상시키기 위해 .NET Framework를 기반으로하는 기존 ASP.NET 웹 응용 프로그램 또는 WCF 서비스를 최신화하려는 개발자 및 솔루션 설계자를 대상으로 작성되었습니다.
 
-또한 Windows 컨테이너를 사용하고, Microsoft Azure 사용 시 클라우드로 배포하여 얻을 수 있는 이점을 간략히 살펴보고자 하는 기업 설계자 또는 개발 책임자/이사와 같은 기술 의사 결정권자일 경우 이 가이드가 유용할 수 있습니다.
+또한 Microsoft Azure를 사용하여 클라우드로 배포하고, Windows 컨테이너를 사용하여 얻을 수 있는 이점을 간략히 살펴보고자 하는 엔터프라이즈 설계자 또는 개발 리더, 개발 책임자와 같은 기술에 대한 의사 결정의 권한이 있는 경우라면 이 가이드가 유용할 수 있습니다.
 
 ## <a name="how-to-use-this-guide"></a>이 가이드를 사용하는 방법
 
