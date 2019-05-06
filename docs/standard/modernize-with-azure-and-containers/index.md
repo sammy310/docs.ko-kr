@@ -192,13 +192,15 @@ All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 �
 
 ## <a name="sample-apps-for-modernizing-legacy-apps-eshopmodernizing"></a>레거시 앱 현대화에 대한 샘플 앱: eShopModernizing
 
-GitHub의 [eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing) 리포지토리는 레거시 모놀리식 웹 애플리케이션을 시뮬레이션하는 두 가지 샘플 애플리케이션을 제공합니다. ASP.NET MVC;를 사용 하 여 하나의 웹 앱 개발 ASP.NET Web Forms를 사용 하 여 두 번째 웹 앱을 개발 하 고 세 번째 앱은 WCF 서비스 백 엔드를 사용 하는 WinForms 클라이언트 데스크톱 앱을 사용 하 여 N 계층 앱입니다. 이러한 모든 앱은 기존.NET Framework를 기반으로 합니다. 이러한 샘플은 현대화해야 하는 기존/레거시 .NET Framework 애플리케이션이어야 하기 때문에 .NET Core 또는 ASP.NET Core를 사용하지 않습니다.
+GitHub의 [eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing) 리포지토리에서는 레거시 모놀리식 웹 응용 프로그램을 시뮬레이션하는 두 가지 샘플 응용 프로그램을 제공합니다. 하나의 응용 프로그램은 ASP.NET MVC를 사용하여 개발되었습니다. 또 다른 웹 응용 프로그램은 ASP.NET Web Forms를 사용하여 개발되었고, 세 번째 응용 프로그램은 WCF 서비스 백 엔드를 사용하는 WinForms 클라이언트 데스크톱 응용 프로그램의 N-계층 앱입니다. 이러한 모든 앱은 기존 .NET Framework를 기반으로 합니다. 이러한 샘플은 최신화가 필요한 기존/레거시 .NET Framework 응용 프로그램이어야 하기 때문에 .NET Core 또는 ASP.NET Core를 사용하지 않습니다.
 
-이러한 샘플 앱 현대화 된 코드를 사용 하 여 두 번째 버전이 매우 간단 합니다. 앱 버전 간의 가장 중요한 차이점은 두 번째 버전에서 배포 옵션으로 Windows 컨테이너를 사용한다는 것입니다. 또한 두 번째 버전에는 이미지 관리를 위한 Azure Storage Blob, 보안 관리를 위한 Azure Active Directory, 애플리케이션 모니터링 및 감사를 위한 Azure Application Insights 같은 몇 가지 기능이 추가되었습니다.
+이 샘플 응용 프로그램은 최신 코드가 포함된 두 번째 버전으로, 매우 간단합니다. 응용 프로그램 버전 사이의 가장 중요한 차이점은 두 번째 버전에서는 Windows Containers를 배포 옵션으로 사용한다는 것입니다. 또한 두 번째 버전에는 이미지 관리를 위한 Azure Storage Blob과 보안 관리를 위한 Azure Active Directory, 응용 프로그램 모니터링 및 감사를 위한 Azure Application Insights 등이 몇가지 기능이 추가되었습니다.
+.
 
 ## <a name="send-your-feedback"></a>피드백 보내기
 
-이 가이드는 개선 하 고 기존.NET 웹 응용 프로그램을 현대화 하기 위한 옵션을 이해할 수 있도록 작성 되었습니다. 가이드와 관련 샘플 애플리케이션은 개선되고 있습니다. 사용자 의견을 보내주세요! 이 가이드의 개선 방향에 대한 의견이 있으시면 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)으로 보내 주세요.
+
+이 가이드는 기존 .NET 웹 응용 프로그램을 향상시키고 최신화하기 위한 선택사항을 이해할 수 있도록 작성되었습니다. 가이드와 관련 샘플 응용 프로그램은 개선되고 있습니다. 사용자 의견을 보내주세요! 이 가이드의 개선 방향에 대한 의견이 있으시면 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)으로 보내 주세요.
 
 >[!div class="step-by-step"]
 >[다음](lift-and-shift-existing-apps-azure-iaas.md)
