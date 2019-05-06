@@ -9,7 +9,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62017022"
 ---
-# <a name="install-f"></a>F를 설치 합니다.\#
+# <a name="install-f"></a>F# 설치
 
 F#을 환경에 따라 여러 가지 방법으로 설치할 수 있습니다.
 
@@ -17,7 +17,7 @@ F#을 환경에 따라 여러 가지 방법으로 설치할 수 있습니다.
 
 처음으로 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)를 다운로드하는 경우 Visual Studio 설치 관리자가 먼저 설치됩니다. 설치 관리자에서 적절한 SKU의 Visual Studio를 설치합니다. 이미 설치되어 있는 경우 **변경**을 클릭합니다.
 
-다음 워크 로드의 목록이 표시 됩니다. 선택 **ASP.NET 및 웹 개발** 가 설치 하는 F# ASP.NET Core 프로젝트에 대 한 지원 및.NET Core를 지원 합니다.
+다음으로 워크로드의 목록이 표시됩니다. ASP.NET Core 프로젝트에 대한 F# 지원 및 .NET Core 지원을 설치하기 위해 **ASP.NET 및 웹 개발**을 선택합니다.
 
 다음으로 오른쪽 아래에 있는 **변경**을 클릭합니다.  그러면 선택한 모든 항목이 설치됩니다. **시작**을 클릭하면 F#언어를 지원하는 Visual Studio 2017을 열 수 있습니다.
 
@@ -33,7 +33,7 @@ F#을 환경에 따라 여러 가지 방법으로 설치할 수 있습니다.
 
 ### <a name="macostabmacos"></a>[macOS](#tab/macos)
 
-[Mono](https://www.mono-project.com) 되 [ F# 대화형](../tutorials/fsharp-interactive/index.md) 지원 합니다. MacOS에서 Mono를 설치 하는 가장 쉬운 방법은 Homebrew 통해 됩니다. 터미널에 다음을 입력 하기만 하면 됩니다.
+[F# 대화형](../tutorials/fsharp-interactive/index.md)을 지원하기 위해 [Mono](https://www.mono-project.com)를 사용합니다. MacOS에서 Mono를 설치하는 가장 쉬운 방법은 Homebrew를 사용하는 것입니다. 터미널에 다음 명령어를 입력하면 됩니다.
 
 ```console
 brew install mono
@@ -43,7 +43,7 @@ brew install mono
 
 ### <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
-[Mono](https://www.mono-project.com) 되 [ F# 대화형](../tutorials/fsharp-interactive/index.md) 지원 합니다. Debian 또는 Ubuntu의 경우 다음을 사용할 수 있습니다.
+[F# 대화형](../tutorials/fsharp-interactive/index.md)을 지원하기 위해 [Mono](https://www.mono-project.com)를 사용합니다. Debian 또는 Ubuntu의 경우 다음과 같이 사용할 수 있습니다.
 
 ```console
 sudo apt-get update
