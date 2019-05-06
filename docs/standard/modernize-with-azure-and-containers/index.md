@@ -186,11 +186,11 @@ All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 �
 
 ## <a name="how-to-use-this-guide"></a>이 가이드를 사용하는 방법
 
-이 가이드에서는 "이유"를 설명합니다. 기존 애플리케이션을 현대화하려는 이유, 클라우드로 앱 이동 시 Windows 컨테이너 사용으로 얻을 수 있는 구체적인 이점을 설명합니다. 이 가이드에서 처음 몇 챕터의 내용은 개요를 알고 싶지만 구현과 기술적인 단계별 세부 정보에 대해 중점을 둘 필요가 없는 설계자와 기술 의사 결정권자를 위해 고안되었습니다.
+이 가이드에서는 "이유"를 설명합니다. 기존 애플리케이션을 현대화하는 이유와 클라우드로 앱 이동 시 Windows 컨테이너를 사용하여 얻을 수 있는 구체적인 이점을 설명합니다. 이 가이드에서 처음 몇 챕터의 내용은 전반적인 내용를 알고 싶지만 단계별 세부적인 구현과 기술적인 정보에 중점을 둘 필요가 없는 설계자와 기술 의사 결정권자를 위해 만들었습니다.
 
-이 가이드의 마지막 챕터에서는 특정 배포 시나리오에 초점을 맞춘 여러 안내를 소개합니다. 이 가이드에서는 시나리오를 요약 하 고 해당 이점을 중점적 짧은 버전의 안내를 제공 합니다. 자세한 안내는 설치 및 구현에 대한 세부 정보를 설명하고, 관련 샘플 앱이 있는 동일한 공개 [GitHub 리포지토리](https://github.com/dotnet-architecture/eShopModernizing)에 일련의 [Wiki 게시물](https://github.com/dotnet-architecture/eShopModernizing/wiki)로 게시되어 있습니다(다음 섹션에서 설명). 마지막 챕터와 GitHub의 단계별 Wiki 안내는 구현 세부 정보를 중점적으로 파악하고자 하는 개발자와 설계자에게 더 많은 관심을 받을 것입니다.
+이 가이드의 마지막 챕터에서는 특정 배포 시나리오에 초점을 맞춘 다양한 도움말을 소개합니다. 이 가이드에서는 해당 시나리오 요약과 이점에 중점을 둔 짧은 버전의 도움말을 제공 합니다. 자세한 도움말에서는 설치 및 구현에 대한 세부 정보를 설명하고, 관련 샘플 앱(다음 섹션에서 설명)이 있는 위치와 동일한 공개 [GitHub 리포지토리](https://github.com/dotnet-architecture/eShopModernizing)에 [Wiki 게시물](https://github.com/dotnet-architecture/eShopModernizing/wiki)로 게시되어 있습니다. 마지막 챕터와 GitHub의 단계별 Wiki 도움말은 세부 구현사항을 중점적으로 파악하려는 개발자와 설계자에게 더 많은 관심을 받게 될것입니다.
 
-## <a name="sample-apps-for-modernizing-legacy-apps-eshopmodernizing"></a>레거시 앱 현대화에 대한 샘플 앱: eShopModernizing
+## <a name="sample-apps-for-modernizing-legacy-apps-eshopmodernizing"></a>레거시 앱의 최신화 샘플 앱: eShopModernizing
 
 GitHub의 [eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing) 리포지토리는 레거시 모놀리식 웹 애플리케이션을 시뮬레이션하는 두 가지 샘플 애플리케이션을 제공합니다. ASP.NET MVC;를 사용 하 여 하나의 웹 앱 개발 ASP.NET Web Forms를 사용 하 여 두 번째 웹 앱을 개발 하 고 세 번째 앱은 WCF 서비스 백 엔드를 사용 하는 WinForms 클라이언트 데스크톱 앱을 사용 하 여 N 계층 앱입니다. 이러한 모든 앱은 기존.NET Framework를 기반으로 합니다. 이러한 샘플은 현대화해야 하는 기존/레거시 .NET Framework 애플리케이션이어야 하기 때문에 .NET Core 또는 ASP.NET Core를 사용하지 않습니다.
 
