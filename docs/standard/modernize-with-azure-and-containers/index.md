@@ -123,7 +123,7 @@ All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 �
 
 - **클라우드 최적화** (관리 서비스와 Windows 컨테이너): 이 모델은 응용 프로그램의 핵심 아키텍처를 변경 하지 않고 클라우드에서 상당한 이점을 얻는 몇 가지 중요 한 배포 최적화 합니다. 여기서 기본 단계는 기존의 .NET Framework 애플리케이션에 [Windows 컨테이너](https://docs.microsoft.com/virtualization/windowscontainers/about/) 지원을 추가하는 것입니다. 이 중요 한 단계 (컨테이너 화)는 전반적인 리프트 앤 시프트 작업 light 이므로 코드를 건드리지 필요 하지 않습니다. [Image2Docker](https://github.com/docker/communitytools-image2docker-win) 또는 Visual Studio 같은 도구와 [Docker](https://www.docker.com/)용 도구를 사용할 수 있습니다. Visual Studio는 ASP.NET 애플리케이션 및 Windows 컨테이너 이미지에 대한 스마트 기본값을 자동으로 선택합니다. 이러한 도구는 신속한 내부 루프와 Azure로 컨테이너를 가져올 수 있는 빠른 경로를 제공합니다. 여러 환경에 배포할 때 민첩성이 향상됩니다. 그런 다음 프로덕션으로 전환, 배포할 수 있습니다 하 여 Windows 컨테이너에 [Azure Web App for Containers](https://azure.microsoft.com/services/app-service/containers/), [Azure ACI (Container Instances), 및 Windows Server 2016 및 IaaS 방식이 선호 하는 경우 컨테이너를 사용 하 여 Azure Vm입니다. 같은 오 케 스트레이 터에 약간 더 복잡 한 다중 컨테이너 응용 프로그램에 대 한 [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) 하거나 [Azure Kubernetes Service (AKS/ACS)](https://azure.microsoft.com/services/container-service/)합니다. 이 초기 현대화 중 추가할 수도 있습니다 자산와 같은 도구를 사용 하 여 모니터링 하는 등 클라우드에서 [Azure Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview); CI/CD 파이프라인을 사용 하 여 앱 수명 주기에 [Azure DevOps 서비스](https://azure.microsoft.com/services/devops/); 및 Azure에서 사용할 수 있는 많은 추가 데이터 리소스 서비스입니다. 예를 들어 원래 기존의 [ASP.NET Web Forms](https://www.asp.net/web-forms) 또는 [ASP.NET MVC](https://www.asp.net/mvc)를 사용하여 개발되었지만 이제 Windows 컨테이너를 사용하여 배포할 모놀리식 웹앱을 수정할 수 있습니다. Windows 컨테이너를 사용할 경우 애플리케이션의 핵심 아키텍처를 변경하지 않고 데이터도 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/)의 데이터베이스로 마이그레이션해야 합니다.
 
-- **클라우드 네이티브**: 에 도입 된 설계 고려해 야 [클라우드 네이티브](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) 수 있는 다른 마이크로 서비스에서 작업 하는 여러 독립 개발 팀을 사용 하 여 크고 복잡 한 응용 프로그램을 대상으로 할 때 응용 프로그램 개발 하 고 자율적으로 배포 합니다. 또한 마이크로 서비스 마다 granularized와 확장성 인해 이러한 아키텍처 접근 방법을 매우 중요 한 과제와 복잡 한 직면 하 고 있지만 클라우드 PaaS를 사용 하 여 크게 간소화할 수 있습니다 및 오 케 스트레이 터 [Azure Kubernetes Service (AKS/ACS)](https://azure.microsoft.com/services/container-service/) (managed Kubernetes), [Azure 서비스 패브릭 및 [Azure Functions](https://azure.microsoft.com/services/functions/) 서버 리스 방식에 대 한 합니다. 클라우드 용 설계 하 고 새 코드를 작성 하는 (예: 마이크로 서비스 및 서버) 이러한 모든 접근이 방법은 일반적으로 필요-특정 PaaS 플랫폼에 적용 되는 코드 또는 마이크로 서비스 같은 특정 아키텍처에 부합 하는 코드입니다.
+- **클라우드 네이티브**: 소개한 것처럼, 자율적으로 개발 및 배포할 수 있는 다양한 마이크로서비스로 작업하는 여러 독립 개발 팀과 크고 복잡한 애플리케이션을 대상으로 하는 경우, [클라우드 네이티브](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) 설계를 고려해야 합니다. 또한 마이크로서비스마다 세분화되고 독립적인 확장성으로 인해 이러한 아키텍처 접근 방식은 매우 중대한 도전 과제와 복잡성에 직면하겠지만, [Azure Kubernetes Service (AKS/ACS)](https://azure.microsoft.com/services/container-service/) (관리 Kubernetes)와 Azure Service Fabric, 서버리스 방식의 [Azure Functions](https://azure.microsoft.com/services/functions/)와 같은 클라우드 PaaS와 오케스트레이션을 사용하여 크게 단순화할 수 있습니다. 이러한 모든 접근 방식(마이크로 서비스 및 서버리스)은 일반적으로 클라우드를 설계하고 특정 PaaS 플랫폼에 맞게 수정된 새로운 코드를 작성하거나, 마이크로서비스와 같은 특정 아키텍처와 일치하는 코드를 작성해야 합니다.
 
 다음 그림 1-3에서는 성숙도별로 사용할 수 있는 내부 기술을 보여줍니다.
 
@@ -147,21 +147,21 @@ All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 �
 
 > **그림 1-5.** IaaS와 DevOps, 컨테이너화 자산에 있는 데이터베이스를 사용하는 "pick and choose" 시나리오의 예
 
-다음으로 마이그레이션하려면 여러 기존.NET Framework 응용 프로그램에 이상적인 시나리오로 클라우드에 최적화 된 응용 프로그램에 약간의 작업에 상당한 이점을 활용 하려면 마이그레이션할 수 있습니다. 이 접근법은 하면 클라우드 네이티브에 대해 가능한 향후 발전 과정으로 합니다. 그림 1-6에 그 예가 나와 있습니다.
+다음으로, 기존의 .NET Framework 응용 프로그램을 마이그레이션하는 이상적인 시나리오는 약간의 작업으로 상당한 이점을 얻을 수 있는 Cloud-Optimized 응용 프로그램으로 마이그레이션하는 것입니다. 이 접근 방식은 Cloud-Native를 가능한 미래 진화로 설정합니다. 그림 1-6에 예가 나와 있습니다.
 
-![Windows 컨테이너 및 관리 되는 서비스를 사용 하 여 예제 클라우드 최적화 앱 시나리오](./media/image1-6.png)
+![Windows 컨테이너와 관리 서비스를 사용한 Cloud Optimized 앱 시나리오 예시](./media/image1-6.png)
 
-> **그림 1-6.** Windows 컨테이너 및 관리 되는 서비스를 사용 하 여 예제 클라우드 최적화 앱 시나리오
+> **그림 1-6.** Windows 컨테이너와 관리 서비스를 사용한 Cloud Optimized 앱 시나리오 예시
 
-더 나아가서 특정 시나리오에 대 한 몇 가지 마이크로 서비스를 추가 하 여 기존 클라우드 액세스에 최적화 된 응용 프로그램을 확장할 수 있습니다. 이 이동 하면 부분적으로 현재 지침에서는의 주요 초점은 없는 클라우드 네이티브 모델 수준입니다.
+더 나아가 특정 시나리오에 대해 몇 가지 마이크로 서비스를 추가하여 기존 Cloud Optimized 애플리케이션을 확장할 수 있습니다. 이렇게 하면 현재 가이드에서 주로 다루는 내용을 벗어나 Cloud-Native 모델 수준으로 일부분 넘어가게 됩니다.
 
 ## <a name="what-this-guide-does-not-cover"></a>이 가이드에서 다루지 않는 내용
 
-이 가이드에서는 그림 1-7에 나와 있는 시나리오 예를 몇 가지 다룹니다. 이 가이드 및 궁극적으로 클라우드 최적화 모델을 리프트 앤 시프트 시나리오에만 중점을 둡니다. 클라우드 최적화 모델에서 Windows 컨테이너와 모니터링과 같은 추가 구성 요소를 사용 하 여.NET Framework 응용 프로그램을 현대화 됩니다 및 CI/CD 파이프라인. 각 구성 요소는 클라우드로 애플리케이션을 더 빨리, 민첩하게 배포하는 데 핵심적입니다.
+이 가이드에서는 그림 1-7에 나와 있는 시나리오의 예를 몇 가지 다룹니다. 이 가이드에서는 리프트 앤 시프트 시나리오에 중점을 두고 있으며 궁극적으로 Cloud Optimized 모델을 다룹니다. Cloud Optimized 모델에서 .NET Framework 응용 프로그램은 모니터링 및 CI/CD 파이프라인 같은 추가 구성 요소와 Windows 컨테이너를 사용하여 최신화됩니다. 각 구성 요소는 클라우드에 애플리케이션을 더 빠르고 민첩하게 배포하는 데 있어 핵심적입니다.
 
-![클라우드 네이티브가이 가이드에서는 다루지 않습니다.](./media/image1-7.png)
+![Cloud-Native는 이 가이드에서 다루지 않습니다.](./media/image1-7.png)
 
-> **그림 1-7.** 클라우드 네이티브가이 가이드에서는 다루지 않습니다.
+> **그림 1-7.** Cloud-Native는 이 가이드에서 다루지 않습니다.
 
 이 가이드는 특정 부분에 중점을 둡니다. 경로의 아키텍처를 변경 하지 않고 코드 변경 없이 리프트 앤 시프트 기존.NET 응용 프로그램을 달성 하기 위해 취할 수를 보여줍니다. 궁극적으로 하는 방법을 보여 줍니다 응용 프로그램을 쉽게 클라우드에 최적화 합니다.
 

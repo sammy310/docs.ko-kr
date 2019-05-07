@@ -1,5 +1,5 @@
 ---
-title: Windows 컨테이너를 Azure ACI (Container Instances)에 배포하는 경우
+title: Windows 컨테이너를 Azure ACI(Container Instances)에 배포하는 경우
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | Windows 컨테이너를 Azure ACI(Container Instances)에 배포하는 경우
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,9 +11,9 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62011985"
 ---
-# <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a>Windows 컨테이너를 Azure ACI (Container Instances)에 배포하는 경우
+# <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a>Windows 컨테이너를 Azure ACI(Container Instances)에 배포하는 경우
 
-Azure Container Instances에 컨테이너를 즉시 배포할 수 있습니다 하는 환경을 유지 관리할 필요가 없습니다 기본 가치는, 필요가 기본 운영 체제 또는 Vm에 투명 하는 모든 업그레이드/패치 및 배포 하기만 하면 됩니다. 즉시 사용 환경에 대 한 컨테이너입니다.
+Azure Container Instances에 주된 가치는 바로 컨테이너를 ACI에 배포할 수 있으며 환경을 유지할 필요가 없다는 것입니다. 기본 운영 체제나 VM을 업그레이드하거나 패치할 필요가 없습니다. 모든 것이 투명하며 즉시 사용할 수 있는 환경에 컨테이너를 배포하면 됩니다.
 
 ACI를 사용하는 이유와 시나리오는 Azure VM을 컨테이너와 함께 사용할 때의 주요 시나리오와 유사하며, 기본적으로 Azure 컨테이너 인스턴스를 사용하는 주요 시나리오는 다음과 같습니다.
 

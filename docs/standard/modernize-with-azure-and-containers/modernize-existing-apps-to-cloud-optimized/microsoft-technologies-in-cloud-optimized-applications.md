@@ -15,7 +15,7 @@ ms.locfileid: "62012050"
 
 다음 목록은 클라우드에 최적화된 앱의 요구 사항으로 인식되는 도구와 기술, 솔루션을 설명합니다. 우선 순위에 따라 클라우드 최적화 요소를 단계적 또는 선택적으로 채택할 수 있습니다.
 
-- **클라우드 인프라**: 계산 플랫폼, 운영 체제, 네트워크 및 저장소를 제공 하는 인프라입니다. Microsoft Azure는이 수준에 배치 됩니다.
+- **클라우드 인프라**: 계산 플랫폼과 운영 체제, 네트워크, 저장소를 제공하는 인프라입니다. Microsoft Azure는 이 수준에 위치합니다.
 
 - **런타임**: 이 계층에는 응용 프로그램 실행을 위한 환경을 제공 합니다. 이 계층에 기반 일반적으로 컨테이너를 사용 하는 경우 [Docker 엔진](https://docs.docker.com/engine/), Windows 호스트 또는 Linux 호스트에서 실행 중입니다. ([Windows 컨테이너](https://docs.microsoft.com/virtualization/windowscontainers/about/) 은 Windows Server 2016부터 지원 합니다. Windows 컨테이너는 Windows에서 실행 되는 기존.NET Framework 응용 프로그램에 적합 합니다.)
 
