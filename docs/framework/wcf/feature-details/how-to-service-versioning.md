@@ -2,12 +2,12 @@
 title: '방법: 서비스 버전 관리'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: afc1a690cae020ded3988cfd41f0e926a2e86f1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4e2f5cb01ac2c7f49bf93538b3c4b1f0fb4fab2b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047479"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654535"
 ---
 # <a name="how-to-service-versioning"></a>방법: 서비스 버전 관리
 이 항목에서는 메시지를 동일한 서비스의 여러 버전에 라우트하는 라우팅 구성을 만드는 데 필요한 기본 단계에 대해 간략하게 설명합니다. 이 예제에서 메시지는 계산기 서비스의 서로 다른 두 버전인 `roundingCalc`(v1)와 `regularCalc`(v2)에 라우트됩니다. 두 구현 모두 같은 연산을 지원하지만 이전 버전인 `roundingCalc` 서비스에서는 반환 전에 가장 가까운 정수 값으로 모든 계산을 반올림합니다. 클라이언트 응용 프로그램에서는 새 버전인 `regularCalc` 서비스를 사용할지 여부를 나타낼 수 있어야 합니다.  

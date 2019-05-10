@@ -2,12 +2,12 @@
 title: 배포 고려 사항(Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 3a847a22-4eb8-4565-b18b-453bbca070db
-ms.openlocfilehash: 7ab3827a9f2072f6f4b0c34f3801ee5dff2821d3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 736de555c5731d08227c558115cb235650761cc8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606630"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633564"
 ---
 # <a name="deployment-considerations-entity-framework"></a>배포 고려 사항(Entity Framework)
 이 항목에서는 데이터 액세스를 위해 ADO.NET Entity Framework를 사용하는 응용 프로그램 배포에 대한 정보를 제공합니다. Entity Framework에 대 한 자세한 내용은 참조 하세요. [Getting Started](../../../../../docs/framework/data/adonet/ef/getting-started.md)합니다.  

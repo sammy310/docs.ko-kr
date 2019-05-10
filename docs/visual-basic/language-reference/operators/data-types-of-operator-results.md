@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data types [Visual Basic], ranges
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
-ms.openlocfilehash: 45dcc80ee791da1c2731ba32f0ebd34564faf806
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1169a30f25db6084b8d232c0696991b040e7ea59
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778562"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662529"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>연산자 결과의 데이터 형식(Visual Basic)
 Visual Basic에는 피연산자의 데이터 형식을 기반으로 하는 작업의 결과 데이터 형식이 결정 합니다. 일부 경우에이 피연산자 중 하나가 보다 큰 범위의 데이터 형식일 수 있습니다.  

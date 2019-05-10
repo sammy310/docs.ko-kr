@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: 56b97170884ef31004b06b0eb50a8d79ad1d041c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 403bd881f6e6349a91fc952a80441b0cec0c08fd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757223"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662241"
 ---
 # <a name="xaml-overview-wpf"></a>XAML 개요 (WPF)
 이 항목에서는 XAML 언어의 기능을 설명하고 XAML을 사용하여 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 애플리케이션을 작성하는 방법을 보여 줍니다. 이 항목에서는 특히 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 구현된 XAML에 대해 자세히 설명합니다. XAML 자체는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]보다 큰 언어 개념입니다.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - professional appearance [Windows Forms], applying to elements of Windows Forms applications
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a207781b-1baa-4ce9-b788-1e951bd4b5df
-ms.openlocfilehash: 57c2bc5722f77338225d70b514345344211656dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a2b9524b6a3e3c77d3c68c4d9e138b8c0e2a9373
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913122"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662302"
 ---
 # <a name="how-to-render-a-visual-style-element"></a>방법: 비주얼 스타일 요소 렌더링
 합니다 <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 네임 스페이스는 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> Windows 사용자를 나타내는 개체 인터페이스 (UI) 요소 비주얼 스타일에서 지원 합니다. 이 항목에서는 사용 하는 방법에 설명 합니다 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 렌더링 하는 클래스를 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 나타내는 **로그 오프** 및 **종료** 시작 메뉴의 단추입니다.  
@@ -37,11 +37,11 @@ ms.locfileid: "61913122"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   파생 되는 사용자 지정 컨트롤을 <xref:System.Windows.Forms.Control> 클래스입니다.  
+- 파생 되는 사용자 지정 컨트롤을 <xref:System.Windows.Forms.Control> 클래스입니다.  
   
--   <xref:System.Windows.Forms.Form> 사용자 지정 컨트롤을 호스팅하는 합니다.  
+- <xref:System.Windows.Forms.Form> 사용자 지정 컨트롤을 호스팅하는 합니다.  
   
--   에 대 한 참조를 <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>를 <xref:System.Windows.Forms?displayProperty=nameWithType>, 및 <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 네임 스페이스입니다.  
+- 에 대 한 참조를 <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>를 <xref:System.Windows.Forms?displayProperty=nameWithType>, 및 <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 네임 스페이스입니다.  
   
 ## <a name="see-also"></a>참고자료
 

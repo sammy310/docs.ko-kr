@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40035
 ms.assetid: 50a66dbe-2c1e-41bf-96bc-369301c891ac
-ms.openlocfilehash: 0bda4ad6a4d5368d93e2ca603b78bf9db6aca858
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9006e12838581a98c7e7945278c7d767a3074259
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920915"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661791"
 ---
 # <a name="proceduresignature1-is-not-cls-compliant-because-it-overloads-proceduresignature2-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a>\<proceduresignature1 > 오버 로드 하므로 CLS 규격이 아닙니다 \<proceduresignature2 > 배열 매개 변수 형식의 배열 또는 배열 매개 변수 형식의 차수만에서 달리
 프로시저 또는 속성으로 표시 되어 `<CLSCompliant(True)>` 때 다른 프로시저 또는 속성을 재정의 하 고 해당 매개 변수 목록 간의 유일한 차이점은 가변 배열의 중첩 수준 또는 배열 차수입니다.  
@@ -37,9 +37,9 @@ ms.locfileid: "61920915"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   CLS 규격이 필요 하면,이 도움말 페이지에 언급 된 변경 내용만 보다 많은 방법으로 서로 다를 오버 로드를 정의 합니다.  
+- CLS 규격이 필요 하면,이 도움말 페이지에 언급 된 변경 내용만 보다 많은 방법으로 서로 다를 오버 로드를 정의 합니다.  
   
--   오버 로드 다는 필요한 경우이 도움말에 언급 된 변경에 의해서만 페이지에서 제거 합니다 <xref:System.CLSCompliantAttribute> 해당 정의에서 그대로 표시 또는 `<CLSCompliant(False)>`합니다.  
+- 오버 로드 다는 필요한 경우이 도움말에 언급 된 변경에 의해서만 페이지에서 제거 합니다 <xref:System.CLSCompliantAttribute> 해당 정의에서 그대로 표시 또는 `<CLSCompliant(False)>`합니다.  
   
 ## <a name="see-also"></a>참고자료
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bd015722-d88d-408d-8ca8-e4e475c441ed
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 72e5f1e72d3ce7ec954d61216bbac2e0e1b5a428
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4d033911151ef5cdf8143ad9d64f9c21897fc975
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795124"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654103"
 ---
 # <a name="how-to-decrypt-xml-elements-with-x509-certificates"></a>방법: X.509 인증서로 XML 요소 해독
 <xref:System.Security.Cryptography.Xml> 네임스페이스의 클래스를 사용하여 XML 문서 내의 요소를 암호화 및 암호 해독할 수 있습니다.  XML 암호화는 데이터가 쉽게 읽혀질 염려 없이 암호화된 XML 데이터를 교환하거나 저장하는 표준 방법입니다.  XML 암호화 표준에 대 한 자세한 내용은 World Wide Web Consortium (W3C) 사양을 참조에 있는 XML 암호화에 대 한 <https://www.w3.org/TR/xmldsig-core/>합니다.  

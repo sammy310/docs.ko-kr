@@ -6,12 +6,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding tooltips
 - tooltips [Windows Forms], adding
 ms.assetid: c5d86024-a7c5-44ee-8b3f-2daf53d80d3e
-ms.openlocfilehash: ffaf859fafc87131de525f7bf2f52db421a208c0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b009d19ed949edbd52ec02252ba1e2271e4cb738
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785751"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750563"
 ---
 # <a name="how-to-use-tooltips-in-toolstrip-controls"></a>방법: ToolStrip 컨트롤에서 도구 설명 사용
 표시할 수 있습니다는 <xref:System.Windows.Forms.ToolTip> 에 대 한 합니다 <xref:System.Windows.Forms.ToolStrip> 컨트롤을 설정 하 여 원하는 컨트롤 <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> 속성을 `true`입니다.  

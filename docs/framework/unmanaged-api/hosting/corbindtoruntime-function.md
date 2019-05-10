@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb5c05a88c12b5124c77b0d0a7f834b405dd289f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 93300ba84dea17b52303a78d3729cbf4f761ba4f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697422"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634861"
 ---
 # <a name="corbindtoruntime-function"></a>CorBindToRuntime 함수
 관리 되지 않는 호스트의 CLR (공용 언어 런타임)을 프로세스로 로드할 수 있도록 합니다.  

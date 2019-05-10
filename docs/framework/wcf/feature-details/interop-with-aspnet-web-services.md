@@ -2,12 +2,12 @@
 title: ASP.NET 웹 서비스와의 상호 운용성
 ms.date: 03/30/2017
 ms.assetid: 622422f8-6651-442f-b8be-e654a4aabcac
-ms.openlocfilehash: c6fec1d520cd251473d8840b7b1afe879002a04c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 16e22a091b88d12abccb063d2407db82460458c6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972567"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638603"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>ASP.NET 웹 서비스와의 상호 운용성
 간의 상호 운용성 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 두 기술을 사용 하 여 구현 된 서비스는 WS에 따르는지 확인 하 여 웹 서비스와 Windows Communication Foundation (WCF) 웹 서비스를 달성할 수-Basic Profile 1.1 사양입니다. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 서비스 따르는-는 WCF 시스템 제공 바인딩을 사용 하 여 WCF 클라이언트와 상호 운용 가능한 Basic Profile 1.1 <xref:System.ServiceModel.BasicHttpBinding>합니다.  

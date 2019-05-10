@@ -11,12 +11,12 @@ helpviewer_keywords:
 - drop and drag [Windows Forms], insertion marks
 - insertion marks
 ms.assetid: 88d0a15b-25fd-4dc3-a685-297351311940
-ms.openlocfilehash: 60b775408f5c43ff08fc5c7de72a8302b20b2264
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2c98b0c76fcf7bbc67263b049b8c962f8b20358c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969728"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625404"
 ---
 # <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a>방법: Windows Forms ListView 컨트롤에서 삽입 표시 보기
 <xref:System.Windows.Forms.ListView> 컨트롤에 있는 삽입 표시는 끌어온 항목이 삽입되는 지점을 사용자에게 표시합니다. 사용자가 다른 두 항목 사이의 지점으로 항목을 끌면 삽입 표시가 항목의 새 예상 위치를 보여 줍니다.  

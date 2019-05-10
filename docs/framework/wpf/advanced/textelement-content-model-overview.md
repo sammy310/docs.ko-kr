@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TextElement content model [WPF]
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
-ms.openlocfilehash: 990642d288481fff8eeef900a86070d54790f151
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1e1f67440377db95a5e0896b8fd31b1ab720b188
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981879"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630648"
 ---
 # <a name="textelement-content-model-overview"></a>TextElement 콘텐츠 모델 개요
 에 대 한 지원 되는 콘텐츠를 설명 하는이 콘텐츠 모델 개요를 <xref:System.Windows.Documents.TextElement>입니다. 합니다 <xref:System.Windows.Documents.Paragraph> 클래스의 형식인 <xref:System.Windows.Documents.TextElement>합니다. 콘텐츠 모델은 어떤 개체/요소가 다른 개체/요소에 포함될 수 있는지를 설명합니다. 이 개요에서 파생 된 개체에 사용 된 콘텐츠 모델 요약 <xref:System.Windows.Documents.TextElement>합니다. 자세한 내용은 [유동 문서 개요](flow-document-overview.md)합니다.  

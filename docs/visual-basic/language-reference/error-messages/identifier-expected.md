@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30203
 ms.assetid: c05162ee-55d0-4d7f-84bb-e7758d4c5081
-ms.openlocfilehash: 11a305581ba498715f7f24ecb75f737acdf12bfb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 619b1c55ef035530c6854fa15763fb9c187565a6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936320"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662023"
 ---
 # <a name="identifier-expected"></a>식별자가 필요합니다.
 요소 이름이 필요한 위치에 인식할 수 있는 선언 된 요소 이름이 없는 프로그래밍 요소에 발생 합니다. 한 가지 가능한 원인은 이외의 특성 위치 지정 된 문의 시작 부분에 있습니다.  

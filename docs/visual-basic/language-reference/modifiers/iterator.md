@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Iterator keyword [Visual Basic]
 ms.assetid: 69cb0b04-ac87-49d0-bcfe-810c0d60daff
-ms.openlocfilehash: 499949d1f4c20e1f465355bd076ba39f1496779b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f42cf864e836c53cff5e7d620f4bdfa43c4c7ec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920720"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661278"
 ---
 # <a name="iterator-visual-basic"></a>반복기(Visual Basic)
 지정 된 함수 또는 `Get` 접근자가 반복기입니다.  
@@ -34,9 +34,9 @@ ms.locfileid: "61920720"
 ## <a name="usage"></a>사용법  
  `Iterator` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.  
   
--   [Function 문](../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Function 문](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Property 문](../../../visual-basic/language-reference/statements/property-statement.md)  
+- [Property 문](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 반복기 함수를 보여 줍니다. 반복기 함수에는 `Yield` 문 내에 있는 [에 대 한 중... 다음](../../../visual-basic/language-reference/statements/for-next-statement.md) 루프입니다. 각 반복 합니다 [각각에 대 한](../../../visual-basic/language-reference/statements/for-each-next-statement.md) 문의 본문 `Main` 대 한 호출이 생성를 `Power` 반복기 함수입니다. 반복기 함수를 호출할 때마다 다음에 `Yield` 루프를 반복하는 도중에 `For…Next` 문이 실행됩니다.  

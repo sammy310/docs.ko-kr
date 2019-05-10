@@ -2,12 +2,12 @@
 title: 지정된 레지스트리 경로가 유효한 하이브 이름으로 시작되지 않습니다.
 ms.date: 07/20/2015
 ms.assetid: afb1a03b-4516-450b-aab1-827a93f9e99d
-ms.openlocfilehash: 52a075257f91e469552c85b425a88bdaee635689
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9686ade2043e48bebceb53fadc647b9229aeb660
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61594726"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660973"
 ---
 # <a name="specified-registry-path-does-not-start-with-a-valid-hive-name"></a>지정된 레지스트리 경로가 유효한 하이브 이름으로 시작되지 않습니다.
 지정된 레지스트리 경로가 유효한 하이브 이름으로 시작되지 않습니다. 유효한 하이브 이름은 다음과 같습니다.  

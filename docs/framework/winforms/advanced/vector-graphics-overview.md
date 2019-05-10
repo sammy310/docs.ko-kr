@@ -9,12 +9,12 @@ helpviewer_keywords:
 - coordinate systems
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
-ms.openlocfilehash: d424254839db6c403bafe779f475c0e344918a5e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9c854d8742e50a7136455da72a239623fb0c0d91
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61748448"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639753"
 ---
 # <a name="vector-graphics-overview"></a>벡터 그래픽 개요
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 좌표계에 선, 사각형 및 기타 도형을 그립니다. 다양 한 좌표 시스템에서에서 선택할 수 있지만 기본 좌표계 원점 왼쪽 위 모퉁이의 x 축이 오른쪽 y 축은 아래쪽을 가리키는 합니다. 기본 좌표계의 측정 단위는 픽셀입니다.  

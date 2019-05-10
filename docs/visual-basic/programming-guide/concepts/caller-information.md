@@ -2,12 +2,12 @@
 title: 호출자 정보 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: 004cb003b6cf980f902d7625694e3d2fbfa5ee42
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d9dc542ee9b800cfe6342f868ff9c2b170a4beec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61951954"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642361"
 ---
 # <a name="caller-information-visual-basic"></a>호출자 정보 (Visual Basic)
 호출자 정보 특성을 사용하여 메서드 호출자에 대한 정보를 얻을 수 있습니다. 소스 코드 파일 경로, 소스 코드 줄 번호 및 호출자의 멤버 이름을 얻을 수 있습니다. 이 정보는 추적, 디버깅 및 진단 도구를 만드는 데 도움이 됩니다.  

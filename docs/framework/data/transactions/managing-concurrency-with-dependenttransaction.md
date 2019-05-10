@@ -2,12 +2,12 @@
 title: DependentTransaction으로 동시성 관리
 ms.date: 03/30/2017
 ms.assetid: b85a97d8-8e02-4555-95df-34c8af095148
-ms.openlocfilehash: b06470ed76c15208f019874db8573d0ed4778d33
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 62cbb8825171628b29a5519ca9e3ae31c2058a03
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793642"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662955"
 ---
 # <a name="managing-concurrency-with-dependenttransaction"></a>DependentTransaction으로 동시성 관리
 <xref:System.Transactions.Transaction> 개체는 <xref:System.Transactions.Transaction.DependentClone%2A> 메서드를 사용하여 만듭니다. 이 개체는 다른 코드 부분(예: 작업자 스레드)이 여전히 트랜잭션에서 작업을 수행하는 동안 트랜잭션이 커밋되지 않도록 하는 용도로만 사용됩니다. 복제된 트랜잭션에서 수행한 작업이 완료되어 커밋할 준비가 되면 <xref:System.Transactions.DependentTransaction.Complete%2A> 메서드를 사용하여 트랜잭션 작성자에게 알릴 수 있습니다. 따라서 데이터의 일관성과 정확성을 유지할 수 있습니다.  

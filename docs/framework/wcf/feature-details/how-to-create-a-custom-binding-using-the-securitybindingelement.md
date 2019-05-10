@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-ms.openlocfilehash: 7966c1fe4cd94408455c6bb146fdd3ea55757702
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 76fd6ad954b2cf004c6fdfcf51ef0c619e8c3892
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787857"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662781"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기
 Windows Communication Foundation (WCF)를 구성할 수 있지만 WCF 지 원하는 모든 보안 옵션을 구성할 때 완전 한 유연성을 제공 하지 않습니다는 여러 시스템 제공 바인딩이 포함 되어 있습니다. 이 항목에서는 개별 바인딩 요소에서 직접 사용자 지정 바인딩을 만드는 방법에 대해 설명하고, 이와 같은 바인딩을 만들 때 지정할 수 있는 일부 보안 설정에 대해 강조합니다. 사용자 지정 바인딩을 만드는 방법에 대 한 자세한 내용은 참조 하세요. [바인딩 확장](../../../../docs/framework/wcf/extending/extending-bindings.md)합니다.  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-ms.openlocfilehash: 5c2ff8ac3b424a2541ba7604b5952b2a3ed0a21a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5cbe6ce6e8e36fc9460295c454014d6f3fbf3983
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933058"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64635126"
 ---
 # <a name="transport-security-with-basic-authentication"></a>기본 인증을 사용하는 전송 보안
 다음 그림에는 Windows Communication Foundation (WCF) 서비스 및 클라이언트를 보여 줍니다. 서버에 SSL(Secure Sockets Layer)에 사용할 유효한 X.509 인증서가 있어야 하며 클라이언트에서 서버의 인증서를 신뢰해야 합니다. 또한 웹 서비스에는 이미 사용할 수 있는 SSL 구현이 있습니다. 자세한 내용은 기본 인증을 사용 하는 방법에 대 한 인터넷 정보 서비스 (IIS)를 참조 하세요. <https://go.microsoft.com/fwlink/?LinkId=83822>합니다.  

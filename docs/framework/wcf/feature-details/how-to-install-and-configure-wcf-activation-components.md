@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 2677c57c825675c884d057827e065f05d7c8bf30
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 96607a1c744b928b340fe33c2b57a25a59f306dd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62039145"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64635263"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>방법: WCF 활성화 구성 요소 설치 및 구성
 이 항목에서는에 Windows Process Activation Service (WAS 라고도 함)을 설정 하는 데 필요한 단계를 설명 [!INCLUDE[wv](../../../../includes/wv-md.md)] HTTP를 통해 통신 하지 않는 서비스 네트워크 프로토콜을 Windows Communication Foundation (WCF)를 호스트 합니다. 다음 단원에서는 이 구성 단계에 대해 간략히 설명합니다.  

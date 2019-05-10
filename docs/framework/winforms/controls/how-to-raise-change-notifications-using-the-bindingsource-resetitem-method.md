@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], detecting changes
 - change notifications
 ms.assetid: ab8b4096-37ff-4e30-aabc-de79a2f2e972
-ms.openlocfilehash: 68073f245e1a2eb18a277d7011ca0183dabb3724
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: bb5c05d22dd9fa47f4d1abe46acccdee19dfa38e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913148"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662309"
 ---
 # <a name="how-to-raise-change-notifications-using-the-bindingsource-resetitem-method"></a>방법: BindingSource ResetItem 메서드를 사용하여 변경 알림 발생
 컨트롤에 대한 일부 데이터 소스는 항목이 변경, 추가 또는 삭제될 때 변경 알림을 발생시키지 않습니다. <xref:System.Windows.Forms.BindingSource> 구성 요소를 사용하여 이러한 데이터 소스에 바인딩하고 코드에서 변경 알림을 발생시킬 수 있습니다.  

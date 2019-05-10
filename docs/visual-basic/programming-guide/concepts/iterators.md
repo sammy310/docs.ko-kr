@@ -2,12 +2,12 @@
 title: 반복기 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-ms.openlocfilehash: 313ce0c79a71af1b602ecd4ccc9bd0ebceb5696e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 73561cf5bed583e2dbf853b7771b9e949a5c0267
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966181"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642277"
 ---
 # <a name="iterators-visual-basic"></a>반복기 (Visual Basic)
 *반복기*는 목록 및 배열과 같은 컬렉션을 단계별로 실행하는 데 사용할 수 있습니다.  

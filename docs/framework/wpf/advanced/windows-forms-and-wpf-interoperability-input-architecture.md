@@ -13,12 +13,12 @@ helpviewer_keywords:
 - WindowsFormsHost keyboard and messages [WPF]
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
-ms.openlocfilehash: 2df754c0c47ea99c0892e0b9365da5589f2eab76
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 10c3ced3bc69f12c107b8d49139f829fab4e312a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007099"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662217"
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Windows Forms 및 WPF 상호 운용성 입력 아키텍처
 간에 상호 운용 합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 두 기술 모두에서 해당 하는 키보드 입력된 처리 해야 합니다. 이 항목에서는 이러한 기술을 키보드 및 하이브리드 응용 프로그램에 원활한 상호 운용성을 사용 하도록 설정 하기 위해 메시지 처리를 구현 하는 방법을 설명 합니다.  

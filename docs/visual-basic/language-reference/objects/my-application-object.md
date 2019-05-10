@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application object
 ms.assetid: a0ecfccf-acf7-49ec-a08b-72e6458c5c8d
-ms.openlocfilehash: c88e9da85357df5b0bbbb5957ed2f7ca8276a04b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1de3696226185d483b7c6bb1d9460949b2df2f5a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61751466"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633294"
 ---
 # <a name="myapplication-object"></a>My.Application 개체
-속성, 메서드 및 현재 응용 프로그램에 관련 된 이벤트를 제공 합니다.  
+현재 애플리케이션과 관련된 속성, 메서드 및 이벤트를 제공합니다.  
   
 ## <a name="remarks"></a>설명  
  메서드 및 속성에 대 한 자세한는 `My.Application` 개체 다음 리소스를 참조 하십시오.  

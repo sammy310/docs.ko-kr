@@ -11,12 +11,12 @@ helpviewer_keywords:
 - methods [Visual Basic], partial methods
 - inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
-ms.openlocfilehash: 765a667f18340c53909c3ff1e9fcc5f2ffc0f9bc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 50d7f24fd9f854d36bb2ed48c2e41a996c29dfe8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791939"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638880"
 ---
 # <a name="partial-methods-visual-basic"></a>부분 메서드(Visual Basic)
 부분 메서드는 개발자가 코드에 사용자 지정 논리를 삽입할 수를 사용 합니다. 일반적으로 코드는 디자이너에서 생성 된 클래스의 일부입니다. 부분 메서드는 코드 생성기에서 만든 partial 클래스에 정의 되어 있고 변경 된 내용이 알림을 제공 되는 일반적으로 합니다. 개발자가 변경에 대 한 응답으로 사용자 지정 동작을 지정할 수 있도록 합니다.  

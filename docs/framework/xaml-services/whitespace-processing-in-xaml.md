@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: dadfab948aff73714a2cf253100f89de3b4a2d57
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 81d8cdb8d2dfc593d37322b70c070bc0b9f10b25
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62025444"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64659683"
 ---
 # <a name="white-space-processing-in-xaml"></a>XAML의 공백 처리
 XAML에 대 한 언어 규칙에 따르면 해당 유효 공백에서 처리 되어야 합니다는 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 프로세서 구현 합니다. 이 항목에서는 이들 XAML 언어 규칙에 대해 설명합니다. 정의한 추가 공백 처리도 문서화 된 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] XAML 프로세서 및 serialization에 대 한 XAML 작성기 구현의 합니다.  

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: d1aa402ec28fc22654d8f1513366c091215fa4d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ff0c9ab4c4257e39b0d0ae0f9f3799e2847e7068
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757614"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662163"
 ---
 # <a name="building-a-wpf-application-wpf"></a>WPF 애플리케이션 빌드(WPF)
 Windows Presentation Foundation (WPF) 응용 프로그램으로 빌드할 수 있습니다 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 실행 파일 (.exe), 라이브러리 (.dll) 또는 두 어셈블리 형식의 조합입니다. 이 항목에서는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 애플리케이션을 빌드하는 방법과 빌드 프로세스의 주요 단계에 대해 설명합니다.  

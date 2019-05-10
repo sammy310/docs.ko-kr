@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Configuration file
 - configuration file schema
 ms.assetid: 2db21a57-5f64-426f-89df-fb0dc2d2def5
-ms.openlocfilehash: e4b54026c71e18e4011661c5cad2ca95dfcb733e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e2b28ae65c7c5769f3be5c294fc3667b5ba4a651
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608855"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64652119"
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>Configuration Editor 도구(SvcConfigEditor.exe)
 WCF(Windows Communication Foundation) 서비스 구성 편집기(SvcConfigEditor.exe)를 사용하면 관리자와 개발자가 그래픽 사용자 인터페이스를 사용하여 WCF 서비스에 대한 구성 설정을 만들고 수정할 수 있습니다. 이 도구를 사용하면 XML 구성 파일을 직접 편집하지 않고도 WCF 바인딩, 동작, 서비스 및 진단에 대한 설정을 관리할 수 있습니다.  

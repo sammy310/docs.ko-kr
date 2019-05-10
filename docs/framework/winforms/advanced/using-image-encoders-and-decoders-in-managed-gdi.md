@@ -5,12 +5,12 @@ helpviewer_keywords:
 - image encoders [Windows Forms], using
 - image decoders [Windows Forms], using
 ms.assetid: 0e838ea1-4e7e-4334-b882-ab25df607b8b
-ms.openlocfilehash: bf0d3a64ce8860d67f0dcfd37c780f03fbd7471a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e56bc20eb55d694d19b25d9e94e5c9d9e3952628
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650520"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64666441"
 ---
 # <a name="using-image-encoders-and-decoders-in-managed-gdi"></a>관리형 GDI+에서 이미지 인코더 및 디코더 사용
 합니다 <xref:System.Drawing> 네임 스페이스를 제공 합니다 <xref:System.Drawing.Image> 및 <xref:System.Drawing.Bitmap> 저장 및 이미지 조작을 위한 클래스입니다. 이미지 인코더를 사용 하 여 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]를 디스크에 메모리에서 이미지를 작성할 수 있습니다. 이미지 디코더를 사용 하 여 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]을 메모리로 디스크에서 이미지를 로드할 수 있습니다. 데이터를 해석 하는 인코더를 <xref:System.Drawing.Image> 또는 <xref:System.Drawing.Bitmap> 지정 된 디스크 파일 형식으로 개체입니다. 필요한 형식으로 디스크 파일에 데이터를 해석 하는 디코더를 <xref:System.Drawing.Image> 및 <xref:System.Drawing.Bitmap> 개체입니다.  

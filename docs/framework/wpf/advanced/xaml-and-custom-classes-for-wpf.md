@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: e71946ec06eb1b4c75f30084dfdb863d8e3b093e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2f59e7479c856de9b00592d570ca89d2539b0ec4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61759936"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662227"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>WPF에 대한 XAML 및 사용자 지정 클래스
 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 프레임워크에서 구현된 XAML은 모든 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 언어로 사용자 지정 클래스 또는 구조체를 정의한 다음 XAML 태그를 사용하여 해당 클래스에 액세스하는 기능을 지원합니다. 일반적으로 사용자 지정 형식을 XAML 네임스페이스 접두사에 매핑하여 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 정의 형식과 사용자 지정 형식의 혼합을 동일한 태그 파일에서 함께 사용할 수 있습니다. 이 항목에서는 사용자 지정 클래스를 XAML 요소로 사용 가능하기 위해 만족해야 하는 요구 사항을 설명합니다.  
