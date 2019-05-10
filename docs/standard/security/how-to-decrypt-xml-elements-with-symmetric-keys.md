@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6038aff0-f92c-4e29-a618-d793410410d8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c569407bac247e60075834e67fde9327ce6bc4a0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f45ba28a4c2d4ab56abf15f8e8b5ba4c6cb7d611
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795137"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64602722"
 ---
 # <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>방법: 대칭 키를 사용하여 XML 요소 해독
 <xref:System.Security.Cryptography.Xml> 네임스페이스의 클래스를 사용하여 XML 문서 내의 요소를 암호화할 수 있습니다.  XML 암호화를 사용하면 데이터가 쉽게 읽혀질 염려 없이 중요한 XML을 저장하거나 전송할 수 있습니다.  이 코드 예제에서는 Rijndael이라고도 하는 AES(고급 암호화 표준) 알고리즘을 사용하여 XML 요소를 암호 해독합니다.  

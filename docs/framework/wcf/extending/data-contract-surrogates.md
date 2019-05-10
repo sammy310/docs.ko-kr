@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: f97826cb5154035b535b5eac3a8818d8b366d639
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7b1e8585755bbbff900bd621d8bc3a25fd23961c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858028"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587499"
 ---
 # <a name="data-contract-surrogates"></a>데이터 계약 서로게이트
 데이터 계약 *서로게이트* 데이터 계약 모델을 기반으로 하는 고급 기능입니다. 이 기능은 사용자가 형식을 메타데이터에 나타내거나 serialize 또는 deserialize하는 방식을 변경하려는 경우 형식 사용자 지정 및 대체에 사용하도록 디자인되었습니다. 서로게이트는 데이터 계약이 형식에 대해 지정되지 않은 경우, 필드와 속성에 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성이 표시되지 않은 경우 또는 사용자가 스키마 변형을 동적으로 만들려는 경우 사용할 수 있습니다.  

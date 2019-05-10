@@ -2,25 +2,25 @@
 title: 디자이너 재호스팅
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: b2a51014e34bf27d6f016db71d2c2eaabb906c6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c67bdc5715a95e3f4252fc9ab0c7b151ddddc6cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005235"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583704"
 ---
 # <a name="designer-rehosting"></a>디자이너 재호스팅
 디자이너 재호스팅은 사용자 지정 응용 프로그램 내에 워크플로 디자인 캔버스를 호스트하는 방식을 가리키는 일반적인 시나리오입니다. 대부분의 사람들이 가장 잘 알고 있는 호스팅 응용 프로그램은 Visual Studio이지만, 응용 프로그램에 Workflow Designer를 표시하는 것이 유용할 수 있는 시나리오는 그 밖에도 여러 가지가 있습니다.  
   
--   최종 사용자가 현재 활성 상태 등 프로세스에 대한 런타임 데이터와 프로세스를 시각화하고 실행 시간 데이터 또는 워크플로 인스턴스에 대한 기타 정보를 집계하는 데 사용할 수 있는 모니터링 응용 프로그램  
+- 최종 사용자가 현재 활성 상태 등 프로세스에 대한 런타임 데이터와 프로세스를 시각화하고 실행 시간 데이터 또는 워크플로 인스턴스에 대한 기타 정보를 집계하는 데 사용할 수 있는 모니터링 응용 프로그램  
   
--   한정된 활동 집합으로 프로세스를 사용자 지정하는 데 사용할 수 있는 응용 프로그램  
+- 한정된 활동 집합으로 프로세스를 사용자 지정하는 데 사용할 수 있는 응용 프로그램  
   
  이러한 유형의 응용 프로그램을 지원하기 위해 .NET Framework 내에 Workflow Designer가 함께 제공되며, 이 Workflow Designer를 WPF 응용 프로그램 내에 호스트하거나 적절한 WPF 호스팅 코드를 사용하여 WinForms 응용 프로그램에 호스트할 수 있습니다. 이 샘플에서는 다음 작업을 수행하는 방법을 보여 줍니다.  
   
--   WF 디자이너 재호스팅  
+- WF 디자이너 재호스팅  
   
--   재호스트된 도구 상자 및 속성 표 사용  
+- 재호스트된 도구 상자 및 속성 표 사용  
   
 ## <a name="rehosting-the-designer"></a>디자이너 재호스팅  
  이 샘플에서는 다음과 같은 표 레이아웃에 표시되는 디자이너를 포함할 WPF 레이아웃을 만드는 방법을 보여 줍니다. (공간의 제약 때문에 도구 상자 코드는 생략했습니다.) 여기에서는 디자이너와 속성 표가 포함되는 테두리의 이름에 주목할 필요가 있습니다.  

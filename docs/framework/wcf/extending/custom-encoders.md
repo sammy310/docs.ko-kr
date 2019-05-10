@@ -2,12 +2,12 @@
 title: 사용자 지정 인코더
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: 7602e18a03f73f66dfd028d810c003db0b6653bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d553859ed622cefffc946bca94796204b2fe6456
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996907"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587280"
 ---
 # <a name="custom-encoders"></a>사용자 지정 인코더
 이 항목에서는 사용자 지정 인코더를 만드는 방법을 설명합니다.  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: 12c266a473aa7c20ab35d6047fedafbfa04dac4a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a40fa9beec1eabeb02c6ccc4e2ab8179aa49288c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050716"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64585780"
 ---
 # <a name="transport-quotas"></a>전송 할당량
 전송 할당량은 연결이 과도한 리소스를 사용하는 경우를 결정하는 정책 메커니즘입니다. 할당량은 할당량 값을 초과하면 추가 리소스를 사용하지 못하도록 설정된 절대 한계입니다. 전송 할당량은 악의적이거나 의도하지 않은 서비스 거부 공격을 방지합니다.  

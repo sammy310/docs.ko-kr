@@ -2,12 +2,12 @@
 title: 메시지 큐에 대한 메시지 보안
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-ms.openlocfilehash: 9e9067c38d86bb74c569b6d648d84c7c9ff6fac6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 50f1e8f3a31b58306265b107016a979835f18ad9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989817"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664842"
 ---
 # <a name="message-security-over-message-queuing"></a>메시지 큐에 대한 메시지 보안
 이 샘플에서는 클라이언트에 대해 X.509v3 인증서를 통한 WS-Security 인증을 사용하며 MSMQ를 통해 서버의 X.509v3 인증서를 사용한 서버 인증을 수행해야 하는 응용 프로그램의 구현 방법을 보여 줍니다. 메시지 보안에서는 MSMQ 저장소에 있는 메시지의 암호화가 유지되며 응용 프로그램에서 메시지의 자체 인증을 수행할 수 있도록 하는 것이 더 좋습니다.

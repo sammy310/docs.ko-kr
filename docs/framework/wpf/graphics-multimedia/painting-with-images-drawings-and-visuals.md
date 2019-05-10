@@ -12,12 +12,12 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-ms.openlocfilehash: 826c5a0656a9a7e7cff0e96fc6755c5c9c717993
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 304499a6d6dd9d9f5fd51fc84044de5e50393762
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002287"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584740"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>이미지, 그림 및 시각적 표시로 그리기
 이 항목에서는 사용 하는 방법을 설명 <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, 및 <xref:System.Windows.Media.VisualBrush> 이미지를 사용 하 여 영역을 그릴 개체를 <xref:System.Windows.Media.Drawing>, 또는 <xref:System.Windows.Media.Visual>합니다.  

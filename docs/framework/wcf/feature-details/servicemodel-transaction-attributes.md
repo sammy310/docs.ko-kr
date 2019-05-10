@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transactions [WCF], ServiceModel attributes
 ms.assetid: 1e0d2436-6ae5-439b-9765-a448d6f60000
-ms.openlocfilehash: 79d97eee328d816281348b5b15cf779e1ee65893
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8f8a50dc82c073c9357209a4dbeeed6c8b075695
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747671"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586139"
 ---
 # <a name="servicemodel-transaction-attributes"></a>ServiceModel 트랜잭션 특성
 세 가지 표준에 속성을 제공 하는 Windows Communication Foundation (WCF) <xref:System.ServiceModel> WCF 서비스에 대 한 트랜잭션의 동작을 구성할 수 있도록 하는 특성:  

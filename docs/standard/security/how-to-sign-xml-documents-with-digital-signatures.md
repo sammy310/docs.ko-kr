@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 39e053ea9ca0b2fdc548a4b9447d34e852816a61
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0928f6091a80877609b545a25c8ac014f011d0b2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795072"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64602613"
 ---
 # <a name="how-to-sign-xml-documents-with-digital-signatures"></a>방법: 디지털 서명으로 XML 문서 서명
 <xref:System.Security.Cryptography.Xml> 네임스페이스의 클래스를 사용하여 XML 문서 또는 XML 문서의 일부를 디지털 서명으로 서명할 수 있습니다.  XML 디지털 서명(XMLDSIG)을 사용하면 서명된 후 데이터가 변경되지 않았음을 확인할 수 있습니다.  XMLDSIG 표준에 대 한 자세한 내용은 World Wide Web Consortium (W3C) 권장 사항을 참조 하세요 [XML 서명 구문 및 처리](https://www.w3.org/TR/xmldsig-core/)합니다.  
@@ -72,7 +72,7 @@ ms.locfileid: "61795072"
      [!code-csharp[HowToSignXMLDocumentRSA#9](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#9)]
      [!code-vb[HowToSignXMLDocumentRSA#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#9)]  
   
-9. <xref:System.Security.Cryptography.Xml.SignedXml.ComputeSignature%2A> 메서드를 호출하여 서명을 계산합니다.  
+9. <xref:System.Security.Cryptography.Xml.SignedXml.ComputeSignature%2A> 메서드를 호출하여 서명을 컴퓨팅합니다.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#10)]
      [!code-vb[HowToSignXMLDocumentRSA#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#10)]  

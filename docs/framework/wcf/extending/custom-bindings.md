@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-ms.openlocfilehash: 314409f5ac4ecb4b18f3b8d3f2aeb08a507ec9e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9998daad2d44ff564061a4f73dde4b75648c33d1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696173"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587316"
 ---
 # <a name="custom-bindings"></a>사용자 지정 바인딩
 시스템에서 제공하는 바인딩 중 하나가 사용자의 서비스 요구 사항을 충족하지 않을 때 <xref:System.ServiceModel.Channels.CustomBinding> 클래스를 사용할 수 있습니다. 모든 바인딩은 정렬된 바인딩 요소 집합으로부터 생성됩니다. 사용자 지정 바인딩은 시스템 제공 바인딩 요소로부터 만들거나 사용자 정의 사용자 지정 바인딩 요소를 포함할 수 있습니다. 예를 들어 사용자 지정 바인딩 요소를 사용하여 서비스 엔드포인트에서 새 전송 또는 새 인코더를 사용하도록 설정할 수 있습니다. 작업 예제를 보려면 [사용자 지정 바인딩 샘플](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90))합니다. 자세한 내용은 [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)합니다.  

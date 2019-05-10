@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, transactions
 - Windows Communication Foundation, transactions
 ms.assetid: c7757854-1207-4019-8b31-552578b7d570
-ms.openlocfilehash: 42276a9b450b6f0664901747239195ab13f7c44d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1c3589b336ee8982cd6d694112e4c1f784f59ad2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933655"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64585792"
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a>Windows Communication Foundation 트랜잭션 개요
 트랜잭션은 동작 또는 작업 집합을 하나의 개별 실행 단위로 그룹화하는 방법을 제공합니다. 트랜잭션은 다음 속성을 가진 작업 컬렉션입니다.  

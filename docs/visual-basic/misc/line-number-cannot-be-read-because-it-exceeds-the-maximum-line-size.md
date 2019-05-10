@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_MaxLineSizeExceeded
 ms.assetid: c59116d9-9856-47af-b32d-616d8f2d10d3
-ms.openlocfilehash: 26739ce4e6e188b71f3af9435d53105807aede92
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d716d7dcaaf338489c952615622f70f9d384ccd7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945004"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64604143"
 ---
 # <a name="line-number-cannot-be-read-because-it-exceeds-the-maximum-line-size"></a>줄 \<수 > 최대 줄 크기를 초과 하기 때문에 읽을 수 없습니다.
 최대 줄 크기를 초과하기 때문에 줄을 읽을 수 없습니다. 일반적으로 파일에 여는 따옴표가 있지만 닫는 따옴표가 없음을 의미합니다.  

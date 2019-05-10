@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 14e3d095d50f41e5b20a79d76c464bcf28c99327
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a0de8aee53c5db63952e4baa72827a92c47ccce0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053095"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593386"
 ---
 # <a name="wpf-brushes-overview"></a>WPF 브러시 개요
 모든 화면에 표시 되는 브러시 그려 졌 기 때문에 표시 됩니다. 예를 들어, 단추, 텍스트, 전경색 및 도형의 채우기의 배경을 설명 하는 브러시를 사용 됩니다. 이 항목에서는 사용 하 여 그리기의 개념을 소개 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 브러시 및 예제를 제공 합니다. 브러시를 사용하여 간단한 단색부터 복잡한 패턴 및 이미지 집합에 이르는 모든 방식으로 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 개체를 그릴 수 있습니다.  

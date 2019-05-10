@@ -2,12 +2,12 @@
 title: 부분 신뢰 기능 호환성
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: b0d9b7bd8bd5f33ca344ea5674d08507ced209f5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1ff3b6e4d54dcbc6cc884c9bcd1bf5aa4fb3a526
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62039067"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64603685"
 ---
 # <a name="partial-trust-feature-compatibility"></a>부분 신뢰 기능 호환성
 Windows Communication Foundation (WCF) 부분 신뢰 환경에서 실행 하는 경우 기능의 제한 된 하위 집합을 지원 합니다. 부분 신뢰에서 지원되는 기능은 [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) 항목에서 설명한 대로 특정 시나리오 집합을 바탕으로 설계되었습니다.  

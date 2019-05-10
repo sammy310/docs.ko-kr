@@ -2,12 +2,12 @@
 title: 연습으로 학습
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: 611644ce9d6f95bc4113b81bfff36ecaf9cf0b4a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d5c8457bc1e484d3c7c2b57225261a3ef74023d1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033537"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64582913"
 ---
 # <a name="learning-by-walkthroughs"></a>연습으로 학습
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 설명서에서는 여러 연습이 제공 됩니다. 이 항목에서는 몇 가지 일반적인 연습 문제와 해결 방법을 살펴보고 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]을 배울 수 있는 여러 초급 수준 연습에 대한 링크를 제공합니다.  

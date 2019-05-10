@@ -2,12 +2,12 @@
 title: '방법: WCF 웹 HTTP 프로그래밍 모델을 사용하여 임의의 데이터를 반환하는 서비스 만들기'
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 55fdc6824ab82bdf3b5913cd600815ed05bd909c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6c7dd0debb5c491bca84ea9a4845f46b6b57b4a3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747851"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586239"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>방법: WCF 웹 HTTP 프로그래밍 모델을 사용하여 임의의 데이터를 반환하는 서비스 만들기
 서비스 작업에서 데이터가 반환되는 방법을 개발자가 완전히 제어해야 하는 경우가 있습니다. 이 경우 서비스 작업을 WCF에서 지원 되지 않습니다 형식으로 데이터를 반환 해야 합니다. 이 항목에서는 이러한 서비스를 만들려면 WCF 웹 HTTP 프로그래밍 모델을 사용 하 여 설명 합니다. 이 서비스에는 스트림을 반환하는 하나의 작업이 있습니다.  

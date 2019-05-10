@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
-ms.openlocfilehash: 1d4964cf0379b35c4955bf45d8a7c0fd40477c9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 39c54c5d91c38e43fd7d0b1205537948e84a0782
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787675"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587526"
 ---
 # <a name="how-to-create-a-security-token-service"></a>방법: 보안 토큰 서비스 만들기
 보안 토큰 서비스에서는 WS-Trust 사양에 정의된 프로토콜을 구현합니다. 이 프로토콜은 보안 토큰의 발행, 갱신, 취소 및 유효성 검사를 위한 메시지 형식 및 메시지 교환 패턴을 정의합니다. 지정된 보안 토큰 서비스에서는 하나 이상의 이러한 기능을 제공합니다. 이 항목에서는 가장 일반적인 시나리오인 토큰 발급 구현에 대해 살펴봅니다.  

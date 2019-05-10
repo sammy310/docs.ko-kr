@@ -13,12 +13,12 @@ helpviewer_keywords:
 - sounds [Windows Forms], playing
 - examples [Windows Forms], sounds
 ms.assetid: afb206ff-4824-4804-a8d4-185bf5ad8e7c
-ms.openlocfilehash: d85d8cd40ff2b32cb3f2a79cf9a8221964f186c0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 765021875767a754e62e3ec11e56487e4de91e93
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913291"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64602773"
 ---
 # <a name="how-to-play-a-system-sound-from-a-windows-form"></a>방법: Windows Form에서 시스템 소리 재생
 다음 코드 예제에서는 런타임에 `Exclamation` 시스템 소리를 재생합니다. 시스템 소리에 대 한 자세한 내용은 참조 하세요. <xref:System.Media.SystemSounds>합니다.  
@@ -41,7 +41,7 @@ public void playExclamation()
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   <xref:System.Media?displayProperty=nameWithType> 네임스페이스에 대한 참조  
+- <xref:System.Media?displayProperty=nameWithType> 네임스페이스에 대한 참조  
   
 ## <a name="see-also"></a>참고자료
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - certificates [WCF], specifying the certificate authority certificate chain
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
-ms.openlocfilehash: 43296fad9519a08db5facdd220492ac70dffeca2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 664d0e1a3f59ce391bb055dcded5cfc1b8fff115
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747643"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586159"
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>방법: (WCF) 서명을 확인 하는 데 인증서 기관 인증서 체인 지정
 Windows Communication Foundation (WCF)는 X.509 인증서를 사용 하 여 서명 된 SOAP 메시지를 받으면 기본적으로 확인 신뢰할 수 있는 인증 기관에서 X.509 인증서를 발행 하 합니다. 이렇게 하려면 인증서 저장소를 찾고 해당 인증 기관의 인증서가 신뢰할 수 있는 것으로 지정되었는지 확인합니다. 이 확인 하기 위해 WCF에 대 한 순서로 인증 기관 인증서 체인을 올바른 인증서 저장소에 설치 되어야 합니다.  

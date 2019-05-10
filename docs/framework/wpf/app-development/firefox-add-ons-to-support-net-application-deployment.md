@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET application deployment [WPF], deploying with Firefox add-ons
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
-ms.openlocfilehash: 4b0552ab9f565d9118415bc2da2823762f34fe2c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ea42710f7963f485675279f25623f26bfd5d4f48
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007411"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64582957"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>.NET 응용 프로그램 배포를 지원하기 위한 Firefox 추가 기능
 Windows Presentation Foundation (WPF) Firefox 및 Firefox에 대 한.NET Framework Assistant에 대 한 플러그 인을 사용 하도록 설정 [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]느슨한, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], 및 Mozilla Firefox 브라우저를 사용 하 여 ClickOnce 응용 프로그램입니다.  

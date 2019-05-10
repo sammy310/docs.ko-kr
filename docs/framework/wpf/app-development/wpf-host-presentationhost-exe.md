@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF Host application [WPF]
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-ms.openlocfilehash: 586d306d0f375241c9382e1e24cf1af75b990ba9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cdd2b451324b1a0edd7aa76494da72623b8326ad
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62019165"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591258"
 ---
 # <a name="wpf-host-presentationhostexe"></a>WPF 호스트(PresentationHost.exe)
 Windows Presentation Foundation (WPF) 호스트 (PresentationHost.exe)은 응용 프로그램입니다 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 호환 브라우저에서 호스팅 되도록 응용 프로그램 (포함 하 여 [!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)] 이상). 기본적으로 Windows Presentation Foundation (WPF) 호스트 셸로 등록 하 고 [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] 처리기에 대 한 브라우저에서 호스팅된 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 콘텐츠를 포함 하는:  

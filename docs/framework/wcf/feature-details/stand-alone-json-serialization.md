@@ -2,12 +2,12 @@
 title: 독립 실행형 JSON Serialization
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 29c7dd6ebde07632ef7742b5e9bdd846fc632258
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 701ad05b7432c36950ff514ad8c7c18a54c7f020
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747591"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586190"
 ---
 # <a name="stand-alone-json-serialization"></a>독립 실행형 JSON Serialization
 JSON (JavaScript Object Notation)은 브라우저 내의 웹 페이지에서 실행되는 JavaScript 코드에 의해 사용되도록 특별히 디자인된 데이터 형식이며 Windows Communication Foundation (WCF)에서 만든 ASP.NET AJAX 서비스에서 사용 하는 기본 데이터 형식입니다.  
