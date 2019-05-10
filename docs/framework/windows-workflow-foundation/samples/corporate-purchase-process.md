@@ -2,12 +2,12 @@
 title: 기업 구매 프로세스
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 346d4b58d8d59c416fbdd51f5fbe02b54f9e078f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eaf77fc8b1697d0e337d8c4823ca2184cb9c545c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005396"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665933"
 ---
 # <a name="corporate-purchase-process"></a>기업 구매 프로세스
 이 샘플에서는 최상의 제안을 자동으로 선택하는 구매 프로세스를 기반으로 매우 기본적인 RFP(제안 요청서)를 만드는 방법을 보여 줍니다. 여기에서는 <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> 및 <xref:System.Activities.Statements.ForEach%601>과 사용자 지정 활동을 결합하여 이 프로세스를 나타내는 워크플로를 만듭니다.
@@ -16,27 +16,27 @@ ms.locfileid: "62005396"
 
 ## <a name="requirements"></a>요구 사항
 
--   Visual Studio 2012.
+- Visual Studio 2012.
 
--   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
+- [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
 
 ## <a name="demonstrates"></a>세부 항목
 
--   사용자 지정 활동
+- 사용자 지정 활동
 
--   활동의 컴퍼지션
+- 활동의 컴퍼지션
 
--   책갈피
+- 책갈피
 
--   지속성
+- 지속성
 
--   스키마화된 지속성
+- 스키마화된 지속성
 
--   추적(Tracing)
+- 추적(Tracing)
 
--   추적(Tracking)
+- 추적(Tracking)
 
--   서로 다른 클라이언트([!INCLUDE[wf1](../../../../includes/wf1-md.md)] 웹 응용 프로그램 및 WinForms 응용 프로그램)에 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 호스팅
+- 서로 다른 클라이언트([!INCLUDE[wf1](../../../../includes/wf1-md.md)] 웹 응용 프로그램 및 WinForms 응용 프로그램)에 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 호스팅
 
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
@@ -52,21 +52,21 @@ ms.locfileid: "62005396"
   
 1. X라는 회사의 직원이 RFP(제안 요청서)를 만듭니다.  
   
-    1.  이 직원이 RFP 제목과 설명을 입력합니다.  
+    1. 이 직원이 RFP 제목과 설명을 입력합니다.  
   
-    2.  제안서를 제출하도록 요청할 공급업체를 선택합니다.  
+    2. 제안서를 제출하도록 요청할 공급업체를 선택합니다.  
   
 2. 직원이 제안서를 제출합니다.  
   
-    1.  워크플로의 인스턴스가 만들어집니다.  
+    1. 워크플로의 인스턴스가 만들어집니다.  
   
-    2.  모든 공급업체에서 제안서를 제출할 때까지 워크플로가 대기 상태를 유지합니다.  
+    2. 모든 공급업체에서 제안서를 제출할 때까지 워크플로가 대기 상태를 유지합니다.  
   
 3. 제안서를 모두 받고 나면 접수된 모든 제안서를 하나씩 돌아가며 워크플로를 실행하고 최상의 제안서 하나를 선택합니다.  
   
-    1.  각 공급업체에는 저마다의 평판이 있습니다. 이 샘플에서는 평판 목록을 VendorRepository.cs에 저장합니다.  
+    1. 각 공급업체에는 저마다의 평판이 있습니다. 이 샘플에서는 평판 목록을 VendorRepository.cs에 저장합니다.  
   
-    2.  제안서의 최종 금액은 (공급업체가 제시한 금액) * (공급업체에 대해 기록된 평판) / 100으로 계산됩니다.  
+    2. 제안서의 최종 금액은 (공급업체가 제시한 금액) * (공급업체에 대해 기록된 평판) / 100으로 계산됩니다.  
   
 4. 맨 처음 요청자는 제출된 제안서를 모두 볼 수 있습니다. 최상의 제안이 보고서의 특정 섹션에 표시됩니다.  
   
@@ -155,20 +155,20 @@ ms.locfileid: "62005396"
   
 ### <a name="web-client-options"></a>웹 클라이언트 옵션  
   
--   **만들 새 RFP**: 새 요청 RFP (제안)을 만들고 구매 프로세스 워크플로 시작 합니다.  
+- **만들 새 RFP**: 새 요청 RFP (제안)을 만들고 구매 프로세스 워크플로 시작 합니다.  
   
--   **새로 고침**: 활성 및 주 창에서 완료 된 Rfp의 목록을 새로 고칩니다.  
+- **새로 고침**: 활성 및 주 창에서 완료 된 Rfp의 목록을 새로 고칩니다.  
   
--   **보기**: 기존 RFP의 내용을 보여 줍니다. RFP가 완료되지 않았거나 공급업체가 요청을 받은 경우 공급업체에서 제안서를 제출할 수 있습니다.  
+- **보기**: 기존 RFP의 내용을 보여 줍니다. RFP가 완료되지 않았거나 공급업체가 요청을 받은 경우 공급업체에서 제안서를 제출할 수 있습니다.  
   
--   표시 방법: 사용자에 참가자를 선택 하 여 다른 id로 RFP에 액세스할 수는 **보기** 활성 Rfp 표의 콤보 상자입니다.  
+- 표시 방법: 사용자에 참가자를 선택 하 여 다른 id로 RFP에 액세스할 수는 **보기** 활성 Rfp 표의 콤보 상자입니다.  
   
 ### <a name="winforms-client-options"></a>WinForms 클라이언트 옵션  
   
--   **Create RFP**: 새 요청 RFP (제안)을 만들고 구매 프로세스 워크플로 시작 합니다.  
+- **Create RFP**: 새 요청 RFP (제안)을 만들고 구매 프로세스 워크플로 시작 합니다.  
   
--   **새로 고침**: 활성 및 주 창에서 완료 된 Rfp의 목록을 새로 고칩니다.  
+- **새로 고침**: 활성 및 주 창에서 완료 된 Rfp의 목록을 새로 고칩니다.  
   
--   **View RFP**: 기존 RFP의 내용을 보여 줍니다. RFP가 완료되지 않았거나 공급업체가 요청을 받은 경우 공급업체에서 제안서를 제출할 수 있습니다.  
+- **View RFP**: 기존 RFP의 내용을 보여 줍니다. RFP가 완료되지 않았거나 공급업체가 요청을 받은 경우 공급업체에서 제안서를 제출할 수 있습니다.  
   
--   **연결 계정**: 사용자에 참가자를 선택 하 여 다른 id로 RFP에 액세스할 수는 **보기** 활성 Rfp 표의 콤보 상자입니다.
+- **연결 계정**: 사용자에 참가자를 선택 하 여 다른 id로 RFP에 액세스할 수는 **보기** 활성 Rfp 표의 콤보 상자입니다.

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 6987263854b0d0372bc08bb7e4d6efb498e265f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d9af75474f6b0aec2bdf6aa2f550c280209f91e2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61781006"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633494"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Visual Basic의 LINQ 소개
 언어 통합 쿼리 (LINQ)는 Visual basic 쿼리 기능을 추가 하 고 모든 종류의 데이터를 사용 하 여 작업할 때 간단 하 고 강력한 기능을 제공 합니다. 쿼리 처리 될 때 데이터베이스에 보내거나 검색 하는 데이터의 각 형식에 대 한 다른 쿼리 구문을 사용 하 여 작업을 하는 대신 LINQ에서는 Visual Basic 언어의 일부로 쿼리를 소개 합니다. LINQ는 데이터의 형식에 관계없이 통합된 구문을 사용합니다.  

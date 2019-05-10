@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40007
 ms.assetid: 692ccf76-5715-4f11-a972-84cf9de30bc1
-ms.openlocfilehash: ab45278b2e1199282e3066c34828b9bda716e162
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c964003217e7b96cf25288e2ae6ae6a2fb07a6c3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803690"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651385"
 ---
 # <a name="default-property-propertyname1-conflicts-with-default-property-propertyname2-in-classname-and-so-should-be-declared-shadows"></a>기본 속성 '\<propertyname1 >' 기본 속성과 충돌 '\<propertyname2 >'에서 '\<classname >' h'로 선언 해야 하므로
 기본 클래스에 정의 된 속성과 동일한 이름을 가진 속성이 선언 됩니다. 이 이런 경우이 클래스의 속성이 기본 클래스 속성을 숨겨야 합니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "61803690"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   추가 된 `Shadows` 속성의 이름을 선언 되는 선언 또는 변경 하는 키워드입니다.  
+- 추가 된 `Shadows` 속성의 이름을 선언 되는 선언 또는 변경 하는 키워드입니다.  
   
 ## <a name="see-also"></a>참고자료
 

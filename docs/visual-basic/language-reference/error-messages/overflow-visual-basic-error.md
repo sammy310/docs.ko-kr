@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30036
 ms.assetid: b2c83de9-a132-449a-870b-e7c409d4d7ee
-ms.openlocfilehash: b4a5cb5ec0d1d4b3ad72ad6ccbced44fbef3f8d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f2d7a025fd18c5655caea4ae45477798425d9ece
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946577"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661781"
 ---
 # <a name="overflow-visual-basic-error"></a>오버플로가 발생했습니다(Visual Basic 오류).
 리터럴 할당 되는 데이터 형식의 범위를 벗어나는 값을 나타냅니다.  

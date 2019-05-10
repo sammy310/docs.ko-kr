@@ -2,12 +2,12 @@
 title: SQL Server에서 권한 부여 및 권한
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: 398041d678ba3e4ae5a36dd7714fd2a9bfee1b40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 35aa26ed1afb0006802b703fa0fa3a6076f03ddf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663962"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649558"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>SQL Server에서 권한 부여 및 권한
 데이터베이스 개체를 만들 때는 사용자가 해당 개체에 액세스할 수 있도록 권한을 명시적으로 부여해야 합니다. 모든 보안 개체에는 권한 문을 통해 보안 주체에게 부여할 수 있는 권한이 있습니다.  

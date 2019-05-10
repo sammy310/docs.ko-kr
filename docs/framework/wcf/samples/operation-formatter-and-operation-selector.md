@@ -2,12 +2,12 @@
 title: 작업 포맷터와 작업 선택기
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-ms.openlocfilehash: 45b489aeb88f57fe442cef9ffed1a2ee079b75e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 94daefbc05bf69cf7fa03c5ce4c2988f3b7db91a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989692"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664790"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>작업 포맷터와 작업 선택기
 이 샘플에서는 WCF에 필요한 것에서 다른 형식으로 메시지 데이터를 허용 하도록 Windows Communication Foundation (WCF) 확장성 요소를 사용할 수 있는 방법을 보여 줍니다. 기본적으로 WCF 포맷터는 메서드 매개 변수 아래에 포함 되도록 예상 합니다 `soap:body` 요소입니다. 이 샘플에서는 대신 HTTP GET 쿼리 문자열의 매개 변수 데이터를 구문 분석하고 이 데이터를 사용하여 메서드를 호출하는 사용자 지정 작업 포맷터를 구현하는 방법을 보여 줍니다.  

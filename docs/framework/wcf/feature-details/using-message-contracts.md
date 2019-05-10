@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 4c5f1ab0b6fa56e4836a950ca3f2bbad19cfbff2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 829bdda3f3302d8d3c41e704dc8caf88720d1ebc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932797"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637586"
 ---
 # <a name="using-message-contracts"></a>메시지 계약 사용
 일반적으로 Windows Communication Foundation (WCF) 응용 프로그램을 빌드하는 경우 개발자는 데이터 구조 및 serialization 문제에 주의 기울여야 및 데이터 전달 되는 메시지의 구조를 사용 하 여 고려할 필요가 없습니다. 이러한 응용 프로그램의 경우 매개 변수 또는 반환 값에 대한 데이터 계약을 만드는 과정은 간단합니다. (자세한 내용은 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  

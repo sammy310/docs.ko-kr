@@ -2,12 +2,12 @@
 title: 클라이언트 아키텍처
 ms.date: 03/30/2017
 ms.assetid: 02624403-0d77-41cb-9a86-ab55e98c7966
-ms.openlocfilehash: 4ced24f370e2ab54528c6adb2b3617d3d849e745
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6ed00054de45abc23fdd9ad69f61c758f567b973
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61781526"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64656052"
 ---
 # <a name="client-architecture"></a>클라이언트 아키텍처
 응용 프로그램 Windows Communication Foundation (WCF) 클라이언트 개체를 사용 하 여 서비스 작업을 호출 합니다. 이 항목에서는 WCF 클라이언트 개체, WCF 클라이언트 채널 및 기본 채널 아키텍처 간의 관계를 설명합니다. WCF 클라이언트 개체의 기본 개요를 참조 하세요 [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md)합니다. 채널 계층에 대 한 자세한 내용은 참조 하세요. [채널 계층 확장](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md)합니다.  

@@ -2,12 +2,12 @@
 title: 지원되지 않는 시나리오
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 12012f3e0c0c3b0d10c5faebfb2de881f5de3917
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 48ed292b3bb22ae4966680805a74b40b249d8a32
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050755"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637753"
 ---
 # <a name="unsupported-scenarios"></a>지원되지 않는 시나리오
 다양 한 이유로 Windows Communication Foundation (WCF)는 일부 특정 보안 시나리오를 지원 하지 않습니다. 예를 들어 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition SSPI 또는 Kerberos 인증 프로토콜을 구현 하지 않으며 WCF 지원 하지 않습니다 해당 플랫폼에서 Windows 인증을 사용 하 여 서비스를 실행 합니다. Windows XP Home Edition에서 WCF를 실행 하는 경우 사용자 이름/암호 및 HTTP/HTTPS 통합된 인증과 같은 다른 인증 메커니즘이 지원 됩니다.  

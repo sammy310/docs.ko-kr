@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 43404ba24f6308d8da17b03df9997e893799c8d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1a0e2a6c7851b261baa3e02f6431e7a4ff697e4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875006"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660319"
 ---
 # <a name="contextswitchdeadlock-mda"></a>contextSwitchDeadlock MDA
 
@@ -39,11 +39,11 @@ ms.locfileid: "61875006"
 
 다음 조건이 모두 충족되면 이 MDA가 잘못 활성화될 수 있습니다.
 
--   응용 프로그램이 직접적으로 또는 라이브러리를 통해 간접적으로 STA 스레드에서 COM 구성 요소를 만듭니다.
+- 응용 프로그램이 직접적으로 또는 라이브러리를 통해 간접적으로 STA 스레드에서 COM 구성 요소를 만듭니다.
 
--   응용 프로그램이 디버거에서 중지되었고 사용자가 응용 프로그램을 계속했거나 단계 작업을 수행했습니다.
+- 응용 프로그램이 디버거에서 중지되었고 사용자가 응용 프로그램을 계속했거나 단계 작업을 수행했습니다.
 
--   관리되지 않는 디버깅이 사용하도록 설정되지 않았습니다.
+- 관리되지 않는 디버깅이 사용하도록 설정되지 않았습니다.
 
 MDA가 잘못 활성화되었는지 확인하려면 모든 중단점을 사용하지 않도록 설정하고 응용 프로그램을 다시 시작한 후 응용 프로그램이 중지되지 않고 실행되도록 허용합니다. MDA가 활성화되지 않으면 초기 활성화가 잘못된 것입니다. 이 경우 MDA를 사용하지 않도록 설정하여 디버깅 세션의 방해를 방지합니다.
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30007
 ms.assetid: 5f34cf47-6c6e-4954-bd8e-d6b020b75fb7
-ms.openlocfilehash: 54848fdbd2547fe021f0386843f9666760396cb0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8218a3325d5d47bf85aacab1724221d233d92ba4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013779"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661700"
 ---
 # <a name="reference-required-to-assembly-assemblyname-containing-the-base-class-classname"></a>참조 어셈블리에 필요한 '\<assemblyname >' 기본 클래스의 포함 된\<응용 프로그램 이름 >'
 참조 어셈블리에 필요한 '\<assemblyname >' 기본 클래스의 포함 된\<classname >'입니다. 하나를 프로젝트에 추가합니다.  

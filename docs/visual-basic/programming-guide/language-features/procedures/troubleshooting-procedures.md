@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting procedures
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-ms.openlocfilehash: 492a7474a38a7e41b7e3b3f59dfa118c30256ea4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1a8cd568f1a9a05721f311cc72a22bfc2b6bcfc9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791796"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625465"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>프로시저 문제 해결(Visual Basic)
 이 페이지는 프로시저를 사용 하 여 작업할 때 발생할 수 있는 몇 가지 일반적인 문제를 나열 합니다.  

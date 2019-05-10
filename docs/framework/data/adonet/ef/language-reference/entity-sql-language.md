@@ -2,12 +2,12 @@
 title: Entity SQL 언어
 ms.date: 03/30/2017
 ms.assetid: 9e7d8837-28c5-429d-a824-7bafb59724cf
-ms.openlocfilehash: 09ec1a5518ec0847b54394449f32b3068c811577
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ecbf9bc555594d205281237559037ac2a0e1cdb0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785193"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64631700"
 ---
 # <a name="entity-sql-language"></a>Entity SQL 언어
 Entity SQL은 SQL과 유사한 저장소 독립적 쿼리 언어입니다. Entity SQL을 사용하면 엔터티 데이터를 개체 또는 테이블 형식으로 쿼리할 수 있습니다. Entity SQL은 다음의 경우에 사용해야 합니다.  

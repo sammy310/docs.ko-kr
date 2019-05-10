@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31f975b45ee854c73e6d502ece69bee24a7fcc3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 501e23656b3a31dc14e0b2213252ef52c598140f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683134"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622637"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>.NET 애플리케이션 전역화 및 지역화
 
@@ -38,9 +38,9 @@ ms.locfileid: "61683134"
 
 다음 세 단계에는 두 가지 장점이 있습니다.
 
--   미국 영어와 같은 단일 문화권을 지원하도록 설계된 애플리케이션을 추가 문화권을 지원하기 위해 수정할 필요가 없습니다.
+- 미국 영어와 같은 단일 문화권을 지원하도록 설계된 애플리케이션을 추가 문화권을 지원하기 위해 수정할 필요가 없습니다.
 
--   그 결과, 보다 안정적이며 버그 발생이 적은 지역화된 애플리케이션이 구현됩니다.
+- 그 결과, 보다 안정적이며 버그 발생이 적은 지역화된 애플리케이션이 구현됩니다.
 
 .NET에서는 전 세계를 대상으로 지역화되는 애플리케이션 개발을 위해 광범위한 지원을 제공합니다. 특히 .NET 클래스 라이브러리의 많은 형식 멤버는 현재 사용자의 문화권 또는 지정된 문화권의 규약을 반영하는 값을 반환함으로써 전역화를 지원합니다. 또한 .NET은 애플리케이션 지역화 프로세스를 용이하게 하는 위성 어셈블리를 지원합니다.
 

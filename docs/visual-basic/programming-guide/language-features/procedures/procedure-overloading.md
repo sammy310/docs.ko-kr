@@ -17,12 +17,12 @@ helpviewer_keywords:
 - procedure overloading
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-ms.openlocfilehash: 6e8d1fa72c60c4fa3d2237ad24c2d1b4891a7bf2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 14a31c440861cdc2296bcd02357e5fe0004bf359
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791874"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638850"
 ---
 # <a name="procedure-overloading-visual-basic"></a>프로시저 오버로딩(Visual Basic)
 *오버 로드* 프로시저 이름은 같지만 다른 매개 변수 목록을 사용 하 여 여러 버전에서 정의 의미 합니다. 오버 로드의 용도 이름으로 구분할 필요 없이 프로시저의 밀접 한 관련이 있는 여러 버전을 정의 하는 것입니다. 매개 변수 목록 변경 하 여이 작업을 수행 합니다.  

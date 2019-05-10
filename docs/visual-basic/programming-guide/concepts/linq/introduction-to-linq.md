@@ -2,12 +2,12 @@
 title: LINQ (Visual Basic) 소개
 ms.date: 07/20/2015
 ms.assetid: c6339c12-9b2d-433e-961c-0d2b7f0091c2
-ms.openlocfilehash: 2900cade8bc4166cccb62baf4381cb926cdff5f8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 95c1d99604ba9f87e34b5bb423d42bf97c0cd29e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614537"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648794"
 ---
 # <a name="introduction-to-linq-visual-basic"></a>LINQ (Visual Basic) 소개
 LINQ(Language-Integrated Query)는 개체 환경과 데이터 환경 간의 간격을 연결하는 .NET Framework 버전 3.5에서 도입된 혁신입니다.  

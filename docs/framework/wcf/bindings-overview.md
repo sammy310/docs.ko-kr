@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: 90da8f4a2b4efeb684cbe9e5513084e6d1c6f515
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a8593c5dce30fc71750515ccedb4fc9cce9a4868
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703688"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64652109"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation 바인딩 개요
 바인딩에 Windows Communication Foundation (WCF) 서비스의 끝점에 연결 하는 데 필요한 통신 세부 정보를 지정 하는 데 사용 되는 개체입니다. WCF 서비스에서 각 끝점에 대해 바인딩을 올바로 지정 필요 합니다. 이 항목에서는 통신 세부 정보 바인딩을 정의 하는 바인딩, 바인딩 종류는 WCF에 포함 된 및 끝점에 대 한 바인딩을 지정할 수 있습니다 하는 방법의 요소 형식에 설명 합니다.  

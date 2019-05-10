@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: 9b2719ca000ab86b9ca40f9e78af46cbf598d16e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9a02a912c170bfc4d997f1d8a0fe4f4d5bedb147
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640532"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665802"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>관리되는 HTML 문서 개체 모델의 프레임에 액세스
 일부 HTML 문서도 구성 됩니다 *프레임*, 또는 자신의 고유 HTML 문서를 포함할 수 있는 창입니다. 프레임을 사용하면 탐색 모음과 같이 페이지 조각 하나 이상이 정적으로 유지되지만 다른 프레임의 콘텐츠가 지속적으로 바뀌는 HTML 페이지를 쉽게 만들 수 있습니다.  

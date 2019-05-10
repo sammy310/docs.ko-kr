@@ -5,48 +5,48 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a5333e19-8e55-4aa9-82dc-ca8745e516ed
-ms.openlocfilehash: a2227b33c7caacdd04c7bf50082bb0cfab7f3302
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0c377e02d5be7cb4de41d62b1e3734f790115086
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877619"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651224"
 ---
 # <a name="enabling-query-notifications"></a>쿼리 알림 사용
 쿼리 알림을 사용하는 응용 프로그램에는 공통적인 요구 사항이 적용됩니다. SQL 쿼리 알림을 지원하도록 데이터 소스를 올바르게 구성해야 하며, 사용자는 올바른 클라이언트측 및 서버측 권한을 가지고 있어야 합니다.  
   
  쿼리 알림을 사용하려면 다음을 수행해야 합니다.  
   
--   데이터베이스에 대해 쿼리 알림을 활성화합니다.  
+- 데이터베이스에 대해 쿼리 알림을 활성화합니다.  
   
--   데이터베이스 연결에 사용되는 사용자 ID에 필요한 권한이 있는지 확인합니다.  
+- 데이터베이스 연결에 사용되는 사용자 ID에 필요한 권한이 있는지 확인합니다.  
   
--   <xref:System.Data.SqlClient.SqlCommand> 개체를 사용하여 <xref:System.Data.SqlClient.SqlDependency> 또는 <xref:System.Data.Sql.SqlNotificationRequest>와 같은 관련된 알림 개체로 올바른 SELECT 문을 실행합니다.  
+- <xref:System.Data.SqlClient.SqlCommand> 개체를 사용하여 <xref:System.Data.SqlClient.SqlDependency> 또는 <xref:System.Data.Sql.SqlNotificationRequest>와 같은 관련된 알림 개체로 올바른 SELECT 문을 실행합니다.  
   
--   모니터링하는 데이터가 변경될 경우 알림을 처리하는 코드를 제공합니다.  
+- 모니터링하는 데이터가 변경될 경우 알림을 처리하는 코드를 제공합니다.  
   
 ## <a name="query-notifications-requirements"></a>쿼리 알림 요구 사항  
  다음과 같은 요구 사항을 충족하는 SELECT 문에 대해 쿼리 알림을 사용할 수 있습니다. 다음 표에는 SQL Server 온라인 설명서의 Service Broker 및 쿼리 알림 문서에 대한 링크가 나와 있습니다.  
   
  **SQL Server 설명서**  
   
--   [알림에 대 한 쿼리 만들기](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
+- [알림에 대 한 쿼리 만들기](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
--   [Service Broker에 대 한 보안 고려 사항](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166059(v=sql.90))  
+- [Service Broker에 대 한 보안 고려 사항](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166059(v=sql.90))  
   
--   [보안 및 보호 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522911(v=sql.105))  
+- [보안 및 보호 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522911(v=sql.105))  
   
--   [Notifications Services에 대 한 보안 고려 사항](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms172604(v=sql.90))  
+- [Notifications Services에 대 한 보안 고려 사항](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms172604(v=sql.90))  
   
--   [쿼리 알림 권한](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188311(v=sql.105))  
+- [쿼리 알림 권한](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188311(v=sql.105))  
   
--   [Service Broker에 대 한 국가별 고려 사항](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166028(v=sql.90))  
+- [Service Broker에 대 한 국가별 고려 사항](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166028(v=sql.90))  
   
--   [솔루션 디자인 고려 사항 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522899(v=sql.105))  
+- [솔루션 디자인 고려 사항 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522899(v=sql.105))  
   
--   [Service Broker 개발자 정보 센터](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
+- [Service Broker 개발자 정보 센터](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
--   [Developer's Guide (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
+- [Developer's Guide (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="enabling-query-notifications-to-run-sample-code"></a>쿼리 알림 활성화 샘플 코드  
  Service Broker를 사용 하도록 설정 합니다 **AdventureWorks** SQL Server Management Studio를 사용 하 여 데이터베이스에서 다음 TRANSACT-SQL 문을 실행 합니다.  

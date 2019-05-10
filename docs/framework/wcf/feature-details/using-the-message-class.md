@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-ms.openlocfilehash: d9b1c1242fe2686a66e41b777f904a71898159ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 00b64bdd3795cf282847a3bbaa0940f76faa1c2e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050651"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637533"
 ---
 # <a name="using-the-message-class"></a>Message 클래스 사용
 <xref:System.ServiceModel.Channels.Message> Windows Communication Foundation (WCF)에 기본 클래스입니다. 클라이언트와 서비스 간의 모든 통신에서 결국 <xref:System.ServiceModel.Channels.Message> 인스턴스의 전송과 수신이 발생합니다.  

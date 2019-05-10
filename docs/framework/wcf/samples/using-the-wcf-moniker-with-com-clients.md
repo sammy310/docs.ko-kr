@@ -2,12 +2,12 @@
 title: Using the WCF Moniker with COM Clients
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: 14907dd3df66478e8f84b7735a84dd500855448b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 827ea3295bc052f7272eeff241ece10caf5a9704
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051613"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624250"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Using the WCF Moniker with COM Clients
 이 샘플에는 Windows Communication Foundation (WCF) 서비스 모니커를 사용 하 여 웹 서비스를 응용 프로그램 (Office VBA)에 대 한 Microsoft Office Visual Basic 또는 Visual Basic 6.0과 같은 COM 기반 개발 환경에 통합 하는 방법을 보여 줍니다. 이 샘플은 IIS(인터넷 정보 서비스)에서 호스트되는 Windows 스크립트 호스트 클라이언트(.vbs), 지원 클라이언트 라이브러리(.dll) 및 서비스 라이브러리(.dll)로 구성됩니다. 서비스는 계산기 서비스이고 COM 클라이언트는 서비스에서 수학 작업인 Add, Subtract, Multiply 및 Divide를 호출합니다. 클라이언트 동작이 메시지 상자 창에 표시됩니다.  

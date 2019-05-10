@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed32fe643a7722eaf1af38e6079096194690e950
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: da22cbfe06245d915bed6db9cba220fc32b38942
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771895"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627138"
 ---
 # <a name="iclrruntimehost-interface"></a>ICLRRuntimeHost 인터페이스
 유사한 기능을 제공 합니다 [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) 버전 1에서는 다음과 같이 변경을 사용 하 여.NET Framework에서 제공 하는 인터페이스:  

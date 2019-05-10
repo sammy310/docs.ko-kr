@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae3b72cb5a1281899cdfdb514bbf5a1dc289c949
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e40f52a6b6b8ea7a77f4e38a291621dab486cc72
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61872848"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648503"
 ---
 # <a name="managed-extensibility-framework-mef"></a>MEF(Managed Extensibility Framework)
 
@@ -475,11 +475,11 @@ public class Mod : SimpleCalculator.IOperation
 ## <a name="conclusion"></a>결론
  이 항목에서는 MEF의 기본 개념에 대해 설명했습니다.
 
--   파트, 카탈로그 및 컴퍼지션 컨테이너
+- 파트, 카탈로그 및 컴퍼지션 컨테이너
 
      파트와 컴퍼지션은 MEF 응용 프로그램의 기본 구성 요소입니다. 파트는 값을 가져오거나 내보내는 모든 개체(자기 자신 포함)입니다. 카탈로그는 특정 소스의 파트 컬렉션을 제공합니다. 컴퍼지션 컨테이너는 카탈로그에서 제공하는 파트를 사용하여 컴퍼지션(Import와 Export의 바인딩)을 수행합니다.
 
--   Import 및 Export
+- Import 및 Export
 
      구성 요소는 Import와 Export를 사용하여 통신합니다. 구성 요소는 Import를 통해 특정 값이나 개체의 요구 사항을 지정하고 Export를 통해 값 사용 가능 여부를 지정합니다. 계약을 통해 Export 목록에서 각 Import와 일치하는 항목을 찾습니다.
 

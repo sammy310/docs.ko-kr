@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 0cf2a37eaa812d27dc3d111b1459c9daae72dc5a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8092289d6adc6a017999d14dc7439323a7fc0d37
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788832"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750998"
 ---
 # <a name="structured-navigation-overview"></a>구조적 탐색 개요
 호스팅될 수 있는 콘텐츠를 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame>, 또는 <xref:System.Windows.Navigation.NavigationWindow> 팩에서 식별할 수 있는 페이지로 구성 됩니다 [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] 하이퍼링크 탐색 하 고 있습니다. 하이퍼링크를 통해 정의되는 페이지 및 페이지 탐색 방법의 구조를 탐색 토폴로지라고 합니다. 이 토폴로지는 다양한 애플리케이션 형식, 특히 문서를 탐색하는 애플리케이션에 적합합니다. 해당 애플리케이션의 경우 한쪽 페이지가 다른 페이지에 대해 아무것도 알 필요 없이 사용자가 페이지 사이에서 이동할 수 있습니다.  

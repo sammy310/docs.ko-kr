@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 104a0018896eb95255cf4054f9402ce5160b95f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6a8792698d78b37fa42721f0ad82c0e0d3f7c8dd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683303"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622806"
 ---
 # <a name="generics-in-net"></a>.NET의 제네릭
 
@@ -41,17 +41,17 @@ ms.locfileid: "61683303"
   
  이 항목에서는 .NET 제네릭에 대해 간략하게 설명하고 제네릭 형식이나 메서드의 요약을 제공합니다. 여기에는 다음 단원이 포함되어 있습니다.  
   
--   [제네릭 정의 및 사용](#defining_and_using_generics)  
+- [제네릭 정의 및 사용](#defining_and_using_generics)  
   
--   [제네릭 관련 용어](#generics_terminology)  
+- [제네릭 관련 용어](#generics_terminology)  
   
--   [클래스 라이브러리 및 언어 지원](#class_library_and_language_support)  
+- [클래스 라이브러리 및 언어 지원](#class_library_and_language_support)  
   
--   [중첩 형식 및 제네릭](#nested_types_and_generics)  
+- [중첩 형식 및 제네릭](#nested_types_and_generics)  
   
--   [관련 항목](#related_topics)  
+- [관련 항목](#related_topics)  
   
--   [참조](#reference)  
+- [참조](#reference)  
   
 <a name="defining_and_using_generics"></a>   
 ## <a name="defining-and-using-generics"></a>제네릭 정의 및 사용  
@@ -71,21 +71,21 @@ ms.locfileid: "61683303"
 ### <a name="generics-terminology"></a>제네릭 관련 용어  
  .NET에서 제네릭을 설명하는 데 사용되는 용어는 다음과 같습니다.  
   
--   *제네릭 형식 정의* 는 포함하거나 사용할 수 있는 형식에 대한 자리 표시자를 포함하며 템플릿으로 작동하는 클래스, 구조체 또는 인터페이스 선언입니다. 예를 들어 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 클래스는 키와 값의 두 형식을 포함할 수 있습니다. 제네릭 형식 정의는 템플릿일 뿐이므로 제네릭 형식 정의인 클래스, 구조체 또는 인터페이스의 인스턴스를 만들 수는 없습니다.  
+- *제네릭 형식 정의* 는 포함하거나 사용할 수 있는 형식에 대한 자리 표시자를 포함하며 템플릿으로 작동하는 클래스, 구조체 또는 인터페이스 선언입니다. 예를 들어 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 클래스는 키와 값의 두 형식을 포함할 수 있습니다. 제네릭 형식 정의는 템플릿일 뿐이므로 제네릭 형식 정의인 클래스, 구조체 또는 인터페이스의 인스턴스를 만들 수는 없습니다.  
   
--   *제네릭 형식 매개 변수*( *형식 매개 변수*)는 제네릭 형식 또는 메서드 정의의 자리 표시자입니다. <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 제네릭 형식에는 키와 값의 형식을 나타내는 두 형식 매개 변수 `TKey` 및 `TValue`가 포함되어 있습니다.  
+- *제네릭 형식 매개 변수*( *형식 매개 변수*)는 제네릭 형식 또는 메서드 정의의 자리 표시자입니다. <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 제네릭 형식에는 키와 값의 형식을 나타내는 두 형식 매개 변수 `TKey` 및 `TValue`가 포함되어 있습니다.  
   
--   *생성된 제네릭 형식*( *생성된 형식*)은 제네릭 형식 정의의 제네릭 형식 매개 변수에 대한 형식을 지정한 결과로 생성된 형식입니다.  
+- *생성된 제네릭 형식*( *생성된 형식*)은 제네릭 형식 정의의 제네릭 형식 매개 변수에 대한 형식을 지정한 결과로 생성된 형식입니다.  
   
--   *제네릭 형식 인수* 는 제네릭 형식 매개 변수에 대해 대체되는 모든 형식입니다.  
+- *제네릭 형식 인수* 는 제네릭 형식 매개 변수에 대해 대체되는 모든 형식입니다.  
   
--   일반 용어인 *제네릭 형식* 에는 생성된 형식과 제네릭 형식 정의가 모두 포함됩니다.  
+- 일반 용어인 *제네릭 형식* 에는 생성된 형식과 제네릭 형식 정의가 모두 포함됩니다.  
   
--   *공변성(covariance)* 및 *반공변성(contravariance)* 제네릭 형식 매개 변수를 사용하면 형식 인수가 생성된 대상 형식보다 더 많이 파생(공변성)되거나 더 적게 파생(반공변성)된 생성된 제네릭 형식을 사용할 수 있습니다. 공 분산과 반공 분산을 통칭하여 *가변성(variance)* 이라고 합니다. 자세한 내용은 [공변성(Covariance) 및 반공변성(Contravariance)](../../../docs/standard/generics/covariance-and-contravariance.md)을 참조하세요.  
+- *공변성(covariance)* 및 *반공변성(contravariance)* 제네릭 형식 매개 변수를 사용하면 형식 인수가 생성된 대상 형식보다 더 많이 파생(공변성)되거나 더 적게 파생(반공변성)된 생성된 제네릭 형식을 사용할 수 있습니다. 공 분산과 반공 분산을 통칭하여 *가변성(variance)* 이라고 합니다. 자세한 내용은 [공변성(Covariance) 및 반공변성(Contravariance)](../../../docs/standard/generics/covariance-and-contravariance.md)을 참조하세요.  
   
--   *제약 조건*은 제네릭 형식 매개 변수에 대해 적용되는 제한 사항입니다. 예를 들어 형식 인스턴스의 순서를 지정할 수 있도록 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 제네릭 인터페이스를 구현하는 형식으로 형식 매개 변수를 제한할 수 있습니다. 또한 참조 형식 또는 값 형식이거나 특정 기본 클래스 또는 기본 생성자를 포함하는 형식으로 형식 매개 변수를 제한할 수도 있습니다. 제네릭 형식의 사용자는 제약 조건을 충족하지 않는 형식 인수를 대체할 수 없습니다.  
+- *제약 조건*은 제네릭 형식 매개 변수에 대해 적용되는 제한 사항입니다. 예를 들어 형식 인스턴스의 순서를 지정할 수 있도록 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 제네릭 인터페이스를 구현하는 형식으로 형식 매개 변수를 제한할 수 있습니다. 또한 참조 형식 또는 값 형식이거나 특정 기본 클래스 또는 기본 생성자를 포함하는 형식으로 형식 매개 변수를 제한할 수도 있습니다. 제네릭 형식의 사용자는 제약 조건을 충족하지 않는 형식 인수를 대체할 수 없습니다.  
   
--   *제네릭 메서드 정의* 는 두 개의 매개 변수 목록(제네릭 형식 매개 변수 목록 및 정식 매개 변수 목록)을 포함하는 메서드입니다. 형식 매개 변수는 다음 코드에 나와 있는 것처럼 정식 매개 변수의 형식 또는 반환 형식으로 표시될 수 있습니다.  
+- *제네릭 메서드 정의* 는 두 개의 매개 변수 목록(제네릭 형식 매개 변수 목록 및 정식 매개 변수 목록)을 포함하는 메서드입니다. 형식 매개 변수는 다음 코드에 나와 있는 것처럼 정식 매개 변수의 형식 또는 반환 형식으로 표시될 수 있습니다.  
   
  [!code-cpp[Conceptual.Generics.Overview#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#4)]
  [!code-csharp[Conceptual.Generics.Overview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#4)]
@@ -103,29 +103,29 @@ ms.locfileid: "61683303"
 ## <a name="advantages-and-disadvantages-of-generics"></a>제네릭의 장점 및 단점  
  제네릭 컬렉션과 대리자를 사용하는 경우의 장점은 다음과 같습니다.  
   
--   형식 안전성. 제네릭을 사용하면 컴파일러에서 형식 안전성을 보장해야 하는 부담이 없어집니다. 컴파일 타임에 올바른 데이터 형식이 적용되므로 코드를 작성하여 데이터 형식을 테스트할 필요가 없습니다. 형식 캐스팅의 필요성과 런타임 오류 발생 가능성도 감소합니다.  
+- 형식 안전성. 제네릭을 사용하면 컴파일러에서 형식 안전성을 보장해야 하는 부담이 없어집니다. 컴파일 타임에 올바른 데이터 형식이 적용되므로 코드를 작성하여 데이터 형식을 테스트할 필요가 없습니다. 형식 캐스팅의 필요성과 런타임 오류 발생 가능성도 감소합니다.  
   
--   코드의 양이 감소하며 코드를 보다 쉽게 다시 사용할 수 있습니다. 기본 형식에서 상속하고 멤버를 재정의할 필요가 없습니다. 예를 들어 <xref:System.Collections.Generic.LinkedList%601> 은 즉시 사용할 수 있습니다. 다음 변수 선언을 사용하면 문자열의 연결된 목록을 만들 수 있습니다.  
+- 코드의 양이 감소하며 코드를 보다 쉽게 다시 사용할 수 있습니다. 기본 형식에서 상속하고 멤버를 재정의할 필요가 없습니다. 예를 들어 <xref:System.Collections.Generic.LinkedList%601> 은 즉시 사용할 수 있습니다. 다음 변수 선언을 사용하면 문자열의 연결된 목록을 만들 수 있습니다.  
   
      [!code-cpp[HowToGeneric#24](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/source2.cpp#24)]
      [!code-csharp[HowToGeneric#24](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/source2.cs#24)]
      [!code-vb[HowToGeneric#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/source2.vb#24)]  
   
--   성능 향상. 제네릭 컬렉션 형식은 값 형식을 boxing할 필요가 없기 때문에 일반적으로 값 형식 저장 및 조작 시 성능이 보다 우수합니다.  
+- 성능 향상. 제네릭 컬렉션 형식은 값 형식을 boxing할 필요가 없기 때문에 일반적으로 값 형식 저장 및 조작 시 성능이 보다 우수합니다.  
   
--   제네릭 대리자를 사용하면 여러 대리자 클래스를 만들지 않고도 형식이 안전한 콜백을 사용할 수 있습니다. 예를 들어 <xref:System.Predicate%601> 제네릭 대리자를 사용하면 특정 형식에 대해 고유한 검색 기준을 구현하는 메서드를 만든 다음 <xref:System.Array> , <xref:System.Array.Find%2A>, <xref:System.Array.FindLast%2A>등의 <xref:System.Array.FindAll%2A>형식 메서드와 함께 사용할 수 있습니다.  
+- 제네릭 대리자를 사용하면 여러 대리자 클래스를 만들지 않고도 형식이 안전한 콜백을 사용할 수 있습니다. 예를 들어 <xref:System.Predicate%601> 제네릭 대리자를 사용하면 특정 형식에 대해 고유한 검색 기준을 구현하는 메서드를 만든 다음 <xref:System.Array> , <xref:System.Array.Find%2A>, <xref:System.Array.FindLast%2A>등의 <xref:System.Array.FindAll%2A>형식 메서드와 함께 사용할 수 있습니다.  
   
--   제네릭을 통해 동적으로 생성된 코드를 원활하게 실행. 동적으로 생성된 코드에서 제네릭을 사용하는 경우 형식을 생성할 필요가 없습니다. 이로 인해 전체 어셈블리를 생성하는 대신 간단한 동적 메서드를 사용할 수 있는 시나리오의 수가 증가합니다. 자세한 내용은 [방법: 동적 메서드 ](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md) 및 <xref:System.Reflection.Emit.DynamicMethod>를 정의하고 실행합니다.  
+- 제네릭을 통해 동적으로 생성된 코드를 원활하게 실행. 동적으로 생성된 코드에서 제네릭을 사용하는 경우 형식을 생성할 필요가 없습니다. 이로 인해 전체 어셈블리를 생성하는 대신 간단한 동적 메서드를 사용할 수 있는 시나리오의 수가 증가합니다. 자세한 내용은 [방법: 동적 메서드 ](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md) 및 <xref:System.Reflection.Emit.DynamicMethod>를 정의하고 실행합니다.  
   
  아래에는 제네릭의 몇 가지 제한이 나와 있습니다.  
   
--   제네릭 형식은 <xref:System.MarshalByRefObject> 와 같은 대부분의 기본 클래스에서 파생될 수 있으며, 제약 조건을 사용하면 제네릭 형식 매개 변수가 <xref:System.MarshalByRefObject>와 같은 기본 클래스에서 파생되어야 하도록 지정할 수 있습니다. 그러나 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 에서는 컨텍스트에 바인딩된 제네릭 형식을 지원하지 않습니다. 제네릭 형식이 <xref:System.ContextBoundObject>에서 파생될 수는 있지만 해당 형식의 인스턴스를 만들려고 하면 <xref:System.TypeLoadException>이 발생합니다.  
+- 제네릭 형식은 <xref:System.MarshalByRefObject> 와 같은 대부분의 기본 클래스에서 파생될 수 있으며, 제약 조건을 사용하면 제네릭 형식 매개 변수가 <xref:System.MarshalByRefObject>와 같은 기본 클래스에서 파생되어야 하도록 지정할 수 있습니다. 그러나 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 에서는 컨텍스트에 바인딩된 제네릭 형식을 지원하지 않습니다. 제네릭 형식이 <xref:System.ContextBoundObject>에서 파생될 수는 있지만 해당 형식의 인스턴스를 만들려고 하면 <xref:System.TypeLoadException>이 발생합니다.  
   
--   열거형은 제네릭 형식 매개 변수를 포함할 수 없습니다. 열거형은 Visual Basic, C# 또는 C++를 사용하여 정의되는 제네릭 형식에 중첩되는 경우 부수적으로만 제네릭이 될 수 있습니다. 자세한 내용은 [Common Type System](../../../docs/standard/base-types/common-type-system.md)에서 “열거”를 참조하세요.  
+- 열거형은 제네릭 형식 매개 변수를 포함할 수 없습니다. 열거형은 Visual Basic, C# 또는 C++를 사용하여 정의되는 제네릭 형식에 중첩되는 경우 부수적으로만 제네릭이 될 수 있습니다. 자세한 내용은 [Common Type System](../../../docs/standard/base-types/common-type-system.md)에서 “열거”를 참조하세요.  
   
--   경량의 동적 메서드는 제네릭이 될 수 없습니다.  
+- 경량의 동적 메서드는 제네릭이 될 수 없습니다.  
   
--   Visual Basic, C# 및 C++에서는 모든 바깥쪽 형식의 형식 매개 변수에 형식이 할당된 경우가 아니면 제네릭 형식으로 묶인 중첩 형식을 인스턴스화할 수 없습니다. 다시 말해서, 리플렉션에서 이러한 언어를 사용하여 정의되는 중첩 형식은 모든 바깥쪽 형식의 형식 매개 변수를 포함합니다. 따라서 바깥쪽 형식의 형식 매개 변수를 중첩 형식의 멤버 정의에서 사용할 수 있습니다. 자세한 내용은 <xref:System.Type.MakeGenericType%2A>의 "중첩 형식"을 참조하세요.  
+- Visual Basic, C# 및 C++에서는 모든 바깥쪽 형식의 형식 매개 변수에 형식이 할당된 경우가 아니면 제네릭 형식으로 묶인 중첩 형식을 인스턴스화할 수 없습니다. 다시 말해서, 리플렉션에서 이러한 언어를 사용하여 정의되는 중첩 형식은 모든 바깥쪽 형식의 형식 매개 변수를 포함합니다. 따라서 바깥쪽 형식의 형식 매개 변수를 중첩 형식의 멤버 정의에서 사용할 수 있습니다. 자세한 내용은 <xref:System.Type.MakeGenericType%2A>의 "중첩 형식"을 참조하세요.  
   
     > [!NOTE]
     >  동적 어셈블리에서 코드를 내보내거나 [Ilasm.exe(IL 어셈블러)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)를 사용하여 정의되는 중첩 형식은 바깥쪽 형식의 형식 매개 변수를 포함하지 않아도 됩니다. 그러나 형식 매개 변수를 포함하지 않는 경우에는 중첩 클래스의 범위 내에 형식 매개 변수가 포함되지 않습니다.  
@@ -138,9 +138,9 @@ ms.locfileid: "61683303"
 ## <a name="class-library-and-language-support"></a>클래스 라이브러리 및 언어 지원  
  .NET에서는 다음 네임스페이스에서 다양한 제네릭 컬렉션 클래스를 제공합니다.  
   
--   <xref:System.Collections.Generic> 네임스페이스에는 <xref:System.Collections.Generic.List%601> 및 <xref:System.Collections.Generic.Dictionary%602> 제네릭 클래스와 같이 .NET에서 제공하는 대부분의 제네릭 컬렉션 형식이 포함되어 있습니다.  
+- <xref:System.Collections.Generic> 네임스페이스에는 <xref:System.Collections.Generic.List%601> 및 <xref:System.Collections.Generic.Dictionary%602> 제네릭 클래스와 같이 .NET에서 제공하는 대부분의 제네릭 컬렉션 형식이 포함되어 있습니다.  
   
--   <xref:System.Collections.ObjectModel> 네임스페이스에는 클래스 사용자에게 개체 모델을 노출하는 데 유용한 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 제네릭 클래스와 같은 추가 제네릭 컬렉션 형식이 포함되어 있습니다.  
+- <xref:System.Collections.ObjectModel> 네임스페이스에는 클래스 사용자에게 개체 모델을 노출하는 데 유용한 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 제네릭 클래스와 같은 추가 제네릭 컬렉션 형식이 포함되어 있습니다.  
   
  정렬 및 같음 비교를 구현하는 제네릭 인터페이스는 이벤트 처리기, 변환 및 검색 조건자용 제네릭 대리자 형식과 함께 <xref:System> 네임스페이스에서 제공됩니다.  
   

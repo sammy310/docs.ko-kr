@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5d60b9a9ae566b5bd686b27b2e09861a8414979
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 059dadcaf7a55074e30c59873a8c1e7016b0a33e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000235"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64666001"
 ---
 # <a name="strongnamesignaturegenerationex-function"></a>StrongNameSignatureGenerationEx 함수
 지정된 된 플래그에 따라 지정된 된 어셈블리의 강력한 이름 시그니처를 생성합니다.  

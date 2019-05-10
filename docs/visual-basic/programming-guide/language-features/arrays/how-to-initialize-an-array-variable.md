@@ -7,12 +7,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], initializing
 - arrays [Visual Basic], declaring
 ms.assetid: aadd7a60-7ca4-4608-b986-091f19e7fc10
-ms.openlocfilehash: 4aa783d6179c72760a12d0259d587b5b38bb9140
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0e450a370c27de4690105231847de25ce5a90553
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053662"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627448"
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>방법: Visual Basic에서 배열 변수 초기화
 에 배열 리터럴 포함 하 여 배열 변수 초기화는 `New` 절 및 배열의 초기 값을 지정 합니다. 형식을 지정 하거나 배열 리터럴의 값에서 유추 하도록 허용 합니다. 형식 유추는 방법에 대 한 자세한 내용은 "채우기는 배열에 초기 값"를 참조 하세요 [배열](../../../../visual-basic/programming-guide/language-features/arrays/index.md)합니다.  

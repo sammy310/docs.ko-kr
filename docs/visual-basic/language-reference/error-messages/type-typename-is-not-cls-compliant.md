@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40041
 ms.assetid: 634132c2-5646-44aa-98c6-f773e2e63882
-ms.openlocfilehash: 243f51b3e6c798c82fdbe7b28557c4f96c728bf2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4adbf38e448dad7634a4336d20b3fce8702be1db
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764376"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664280"
 ---
 # <a name="type-typename-is-not-cls-compliant"></a>형식 \<typename > CLS 규격이 아님
 변수, 속성 또는 함수 반환 CLS와 호환 되지 않는 데이터 형식으로 선언 됩니다.  

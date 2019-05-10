@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 61a36ff23bf9deac25983f06387b2bbbfd49546b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 62c2774701b0bb4bc322d689fec43e312bc776a3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62041901"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662911"
 ---
 # <a name="icorprofilercallbackremotingclientsendingmessage-method"></a>ICorProfilerCallback::RemotingClientSendingMessage 메서드
 클라이언트가 서버 요청을 보내는 지 프로파일러에 알립니다.  

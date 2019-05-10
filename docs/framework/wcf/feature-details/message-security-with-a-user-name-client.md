@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-ms.openlocfilehash: 73e984193f87b20e0e00d8ab92a7c0fd67f7968f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a5e3e96ce8c8bb3304c8abcc93a881998382c6ec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046578"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638007"
 ---
 # <a name="message-security-with-a-user-name-client"></a>사용자 이름 클라이언트를 사용하는 메시지 보안
 다음 그림에는 Windows Communication Foundation (WCF) 서비스 및 메시지 수준 보안을 사용 하 여 보호 하는 클라이언트를 보여 줍니다. 서비스는 X.509 인증서를 사용하여 인증됩니다. 클라이언트는 사용자 이름 및 암호를 사용하여 인증합니다.  

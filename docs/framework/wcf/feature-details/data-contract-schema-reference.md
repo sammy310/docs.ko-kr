@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: a4ddaaea2133a8adf5271628f442644194a7f453
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7797b7a8786a89671175bccb501b7fe69c021d7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857183"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627068"
 ---
 # <a name="data-contract-schema-reference"></a>데이터 계약 스키마 참조
 이 항목에서는 XML serialization에 대한 CLR(공용 언어 런타임) 형식을 설명하기 위해 <xref:System.Runtime.Serialization.DataContractSerializer> 에서 사용하는 XSD(XML 스키마) 하위 집합에 대해 설명합니다.  
@@ -24,19 +24,19 @@ ms.locfileid: "61857183"
 ### <a name="support-levels"></a>지원 수준  
  `DataContractSerializer` 는 지정된 XML 스키마 기능에 대해 다음과 같은 수준의 지원을 제공합니다.  
   
--   **지원**. `DataContractSerializer`를 사용하여 이 기능에서 CLR 형식 또는 특성(또는 둘 다)으로 명시적 매핑이 지원됩니다.  
+- **지원**. `DataContractSerializer`를 사용하여 이 기능에서 CLR 형식 또는 특성(또는 둘 다)으로 명시적 매핑이 지원됩니다.  
   
--   **무시**. `DataContractSerializer`가 가져온 스키마에 이 기능을 사용할 수 있지만 코드 생성에 영향을 주지는 않습니다.  
+- **무시**. `DataContractSerializer`가 가져온 스키마에 이 기능을 사용할 수 있지만 코드 생성에 영향을 주지는 않습니다.  
   
--   **사용할 수 없음**. `DataContractSerializer` 는 이 기능을 사용하여 스키마 가져오기 작업을 지원하지 않습니다. 예를 들어, 이러한 기능을 사용하는 스키마를 통해 WSDL에 액세스하는 경우 Svcutil.exe는 대신 <xref:System.Xml.Serialization.XmlSerializer> 로 대체됩니다. 이 기능은 기본적으로 설정됩니다.  
+- **사용할 수 없음**. `DataContractSerializer` 는 이 기능을 사용하여 스키마 가져오기 작업을 지원하지 않습니다. 예를 들어, 이러한 기능을 사용하는 스키마를 통해 WSDL에 액세스하는 경우 Svcutil.exe는 대신 <xref:System.Xml.Serialization.XmlSerializer> 로 대체됩니다. 이 기능은 기본적으로 설정됩니다.  
   
 ## <a name="general-information"></a>일반 정보  
   
--   스키마 네임스페이스에 대해서는 [XML Schema](https://go.microsoft.com/fwlink/?LinkId=95475)에서 설명합니다. 이 문서에서는 접두사 "xs"가 사용됩니다.  
+- 스키마 네임스페이스에 대해서는 [XML Schema](https://go.microsoft.com/fwlink/?LinkId=95475)에서 설명합니다. 이 문서에서는 접두사 "xs"가 사용됩니다.  
   
--   스키마 네임스페이스가 아닌 네임스페이스를 가진 특성은 무시됩니다.  
+- 스키마 네임스페이스가 아닌 네임스페이스를 가진 특성은 무시됩니다.  
   
--   이 문서에서 설명한 주석을 제외한 모든 주석이 무시됩니다.  
+- 이 문서에서 설명한 주석을 제외한 모든 주석이 무시됩니다.  
   
 ### <a name="xsschema-attributes"></a>\<xs: schema >: 특성  
   
@@ -120,11 +120,11 @@ ms.locfileid: "61857183"
 ### <a name="general-information"></a>일반 정보  
  `<xs:element>` 는 다음과 같은 컨텍스트에서 발생할 수 있습니다.  
   
--   이 요소는 `<xs:sequence>`내에서 발생할 수 있으며, 일반(비컬렉션) 데이터 계약의 데이터 멤버에 대해 설명합니다. 이 경우 `maxOccurs` 특성은 1이어야 합니다. (값 0이 허용되지 않는 경우).  
+- 이 요소는 `<xs:sequence>`내에서 발생할 수 있으며, 일반(비컬렉션) 데이터 계약의 데이터 멤버에 대해 설명합니다. 이 경우 `maxOccurs` 특성은 1이어야 합니다. (값 0이 허용되지 않는 경우).  
   
--   이 요소는 `<xs:sequence>`내에서 발생할 수 있으며, 컬렉션 데이터 계약의 데이터 멤버에 대해 설명합니다. 이 경우 `maxOccurs` 특성은 1보다 크거나 "unbounded"여야 합니다.  
+- 이 요소는 `<xs:sequence>`내에서 발생할 수 있으며, 컬렉션 데이터 계약의 데이터 멤버에 대해 설명합니다. 이 경우 `maxOccurs` 특성은 1보다 크거나 "unbounded"여야 합니다.  
   
--   이 요소는 `<xs:schema>` 내에서 GED(전역 요소 선언)로 발생할 수 있습니다.  
+- 이 요소는 `<xs:schema>` 내에서 GED(전역 요소 선언)로 발생할 수 있습니다.  
   
 ### <a name="xselement-with-maxoccurs1-within-an-xssequence-data-members"></a>\<xs: element > maxoccurs=1 내는 \<나타나는 > (데이터 멤버)  
   
@@ -144,17 +144,17 @@ ms.locfileid: "61857183"
   
 ### <a name="xselement-with-maxoccurs1-within-an-xssequence-collections"></a>\<xs: element > maxOccurs를 사용 하 여 > 내에서 1을 \<나타나는 > (컬렉션)  
   
--   <xref:System.Runtime.Serialization.CollectionDataContractAttribute>에 매핑됩니다.  
+- <xref:System.Runtime.Serialization.CollectionDataContractAttribute>에 매핑됩니다.  
   
--   컬렉션 형식에서 하나의 xs:element만 xs:sequence 내에 허용됩니다.  
+- 컬렉션 형식에서 하나의 xs:element만 xs:sequence 내에 허용됩니다.  
   
  컬렉션은 다음 형식 중 하나일 수 있습니다.  
   
--   정규 컬렉션(예: 배열)  
+- 정규 컬렉션(예: 배열)  
   
--   사전 컬렉션(값을 다른 값에 매핑. 예: <xref:System.Collections.Hashtable>)  
+- 사전 컬렉션(값을 다른 값에 매핑. 예: <xref:System.Collections.Hashtable>)  
   
--   사전과 키/값 쌍 형식의 배열 간 유일한 차이는 생성된 프로그래밍 모델에 있습니다. 지정된 형식이 사전 컬렉션임을 나타내는 데 사용할 수 있는 스키마 주석 메커니즘이 있습니다.  
+- 사전과 키/값 쌍 형식의 배열 간 유일한 차이는 생성된 프로그래밍 모델에 있습니다. 지정된 형식이 사전 컬렉션임을 나타내는 데 사용할 수 있는 스키마 주석 메커니즘이 있습니다.  
   
  `ref`, `block`, `default`, `fixed`, `form`및 `id` 특성에 대한 규칙이 비컬렉션의 경우와 동일합니다. 기타 특성은 다음 표에 포함되어 있습니다.  
   
@@ -168,13 +168,13 @@ ms.locfileid: "61857183"
   
 ### <a name="xselement-within-an-xsschema-global-element-declaration"></a>\<xs: element > 내는 \<xs: schema > 전역 요소 선언  
   
--   스키마의 형식과 동일한 이름 및 네임스페이스가 있거나 익명 형식을 정의하는 GED(전역 요소 선언)가 형식과 연결된 것으로 간주합니다.  
+- 스키마의 형식과 동일한 이름 및 네임스페이스가 있거나 익명 형식을 정의하는 GED(전역 요소 선언)가 형식과 연결된 것으로 간주합니다.  
   
--   스키마 내보내기: 연결된 GED가 생성된 모든 단순 및 복합 형식에 대해 생성됩니다.  
+- 스키마 내보내기: 연결된 GED가 생성된 모든 단순 및 복합 형식에 대해 생성됩니다.  
   
--   Deserialization/serialization: 연결된 GED가 형식에 대해 루트 요소로 사용됩니다.  
+- Deserialization/serialization: 연결된 GED가 형식에 대해 루트 요소로 사용됩니다.  
   
--   스키마 가져오기: 다음 규칙을 따르는 경우(형식을 정의하지 않는 한) 연결된 GED가 필요 없으며 무시됩니다.  
+- 스키마 가져오기: 다음 규칙을 따르는 경우(형식을 정의하지 않는 한) 연결된 GED가 필요 없으며 무시됩니다.  
   
 |특성|스키마|  
 |---------------|------------|  
@@ -202,11 +202,11 @@ ms.locfileid: "61857183"
   
  \* 사용 하는 경우는 `simpleType` 고 `complexType,` 요소 이름에서 파생 된 생성 된 이름을 사용 하 여 명명 된 데이터 계약이 작성 되 고 익명 데이터 계약이 없는 없다는 점을 제외 하면 익명 형식에 대 한 매핑을 익명이 아닌 형식에서와 동일 합니다. 다음 목록에는 익명 형식에 대한 규칙이 포함되어 있습니다.  
   
--   WCF 구현 세부 정보: 경우는 `xs:element` 이름에 마침표가 없는, 익명 형식은 외부 데이터 계약 형식의 내부 형식에 매핑됩니다. 이름에 마침표가 있는 경우 결과 데이터 계약 형식은 내부 형식이 아닌 독립적입니다.  
+- WCF 구현 세부 정보: 경우는 `xs:element` 이름에 마침표가 없는, 익명 형식은 외부 데이터 계약 형식의 내부 형식에 매핑됩니다. 이름에 마침표가 있는 경우 결과 데이터 계약 형식은 내부 형식이 아닌 독립적입니다.  
   
--   내부 형식의 생성된 데이터 계약 이름은 외부 형식의 데이터 계약 이름 다음에 마침표, 요소 이름 및 문자열 "Type"이 옵니다.  
+- 내부 형식의 생성된 데이터 계약 이름은 외부 형식의 데이터 계약 이름 다음에 마침표, 요소 이름 및 문자열 "Type"이 옵니다.  
   
--   이러한 이름을 가진 데이터 계약이 이미 존재하는 경우 이름에 "1", "2", "3" 등을 추가하여 고유 이름으로 만듭니다.  
+- 이러한 이름을 가진 데이터 계약이 이미 존재하는 경우 이름에 "1", "2", "3" 등을 추가하여 고유 이름으로 만듭니다.  
   
 ## <a name="simple-types---xssimpletype"></a>단순 형식- \<xs:simpleType >  
   
@@ -228,11 +228,11 @@ ms.locfileid: "61857183"
   
 ### <a name="xsrestriction"></a>\<xs:restriction>  
   
--   복합 형식 제한은 base="`xs:anyType`"에만 지원됩니다.  
+- 복합 형식 제한은 base="`xs:anyType`"에만 지원됩니다.  
   
--   `xs:string` 이외의 제한 패싯이 없는 `xs:enumeration` 의 단순 형식 제한은 열거형 데이터 계약에 매핑됩니다.  
+- `xs:string` 이외의 제한 패싯이 없는 `xs:enumeration` 의 단순 형식 제한은 열거형 데이터 계약에 매핑됩니다.  
   
--   다른 모든 단순 형식 제한은 형식이 제한하는 형식에 매핑됩니다. 예를 들어, `xs:int` 제한은 `xs:int` 자체와 마찬가지로 정수로 매핑됩니다. 기본 형식 매핑에 대 한 자세한 내용은 형식/기본 매핑을 참조 하십시오.  
+- 다른 모든 단순 형식 제한은 형식이 제한하는 형식에 매핑됩니다. 예를 들어, `xs:int` 제한은 `xs:int` 자체와 마찬가지로 정수로 매핑됩니다. 기본 형식 매핑에 대 한 자세한 내용은 형식/기본 매핑을 참조 하십시오.  
   
 ### <a name="xsrestriction-attributes"></a>\<xs: restriction >: 특성  
   
@@ -464,9 +464,9 @@ public class Employee : Person
   
  파생된 형식에 기본 형식의 요소와 동일한 이름을 가진 요소가 포함된 경우 중복 요소 선언이 고유하게 생성된 이름을 가진 데이터 멤버에 매핑됩니다. 고유한 이름을 찾을 때까지 양의 정수가 데이터 멤버 이름("member1", "member2" 등)에 추가됩니다. 반대의 경우는 다음과 같습니다.  
   
--   파생된 데이터 계약에 기본 데이터 계약의 데이터 멤버와 동일한 이름을 가진 데이터 멤버가 있는 경우 `DataContractSerializer` 는 이 해당 요소를 파생된 형식으로 생성합니다.  
+- 파생된 데이터 계약에 기본 데이터 계약의 데이터 멤버와 동일한 이름을 가진 데이터 멤버가 있는 경우 `DataContractSerializer` 는 이 해당 요소를 파생된 형식으로 생성합니다.  
   
--   파생된 데이터 계약에 기본 데이터 계약의 데이터 멤버와 동일한 이름을 가졌지만 형식은 다른 데이터 멤버가 포함된 경우 `DataContractSerializer` 는 기본 형식 및 파생된 형식 선언 모두에서 `xs:anyType` 형식의 요소와 함께 스키마를 가져옵니다. 원래 형식 이름은 `xs:annotations/xs:appInfo/ser:ActualType/@Name`에 유지됩니다.  
+- 파생된 데이터 계약에 기본 데이터 계약의 데이터 멤버와 동일한 이름을 가졌지만 형식은 다른 데이터 멤버가 포함된 경우 `DataContractSerializer` 는 기본 형식 및 파생된 형식 선언 모두에서 `xs:anyType` 형식의 요소와 함께 스키마를 가져옵니다. 원래 형식 이름은 `xs:annotations/xs:appInfo/ser:ActualType/@Name`에 유지됩니다.  
   
  이 두 변형을 통해 스키마는 모호한 콘텐츠 모델을 가질 수 있으며 각 데이터 멤버의 순서에 따라 달라집니다.  
   
@@ -609,11 +609,11 @@ public class Employee : Person
   
  다음 항목에 주의해야 합니다.  
   
--   `ser:char` 은 <xref:System.Char>형식의 유니코드 문자를 표시하기 위해 도입됩니다.  
+- `ser:char` 은 <xref:System.Char>형식의 유니코드 문자를 표시하기 위해 도입됩니다.  
   
--   `valuespace` 의 `xs:duration` 는 <xref:System.TimeSpan>에 매핑될 수 있도록 정렬된 집합으로 축소됩니다.  
+- `valuespace` 의 `xs:duration` 는 <xref:System.TimeSpan>에 매핑될 수 있도록 정렬된 집합으로 축소됩니다.  
   
--   `FactoryType` 은 <xref:System.Runtime.Serialization.ISerializable>에서 파생된 형식에서 내보낸 스키마에서 사용됩니다.  
+- `FactoryType` 은 <xref:System.Runtime.Serialization.ISerializable>에서 파생된 형식에서 내보낸 스키마에서 사용됩니다.  
   
 ## <a name="importing-non-datacontract-schemas"></a>DataContract가 아닌 스키마 가져오기  
  `DataContractSerializer` 에는 `ImportXmlTypes` XSD 프로필을 준수하지 않는 스키마를 가져올 수 있는 `DataContractSerializer` 옵션이 포함되어 있습니다. <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> 속성을 참조하십시오. 이 옵션을 `true` 로 설정하면 맞지 않는 스키마 형식을 허용하고, 이러한 형식을 다음 구현에 매핑하고, <xref:System.Xml.Serialization.IXmlSerializable> 이 <xref:System.Xml.XmlNode> 의 배열을 래핑할 수 있습니다(클래스 이름만 다름).  

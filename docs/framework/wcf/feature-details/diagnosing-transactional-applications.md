@@ -2,12 +2,12 @@
 title: 트랜잭션 응용 프로그램 진단
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-ms.openlocfilehash: aca5f95e2085dfadf06da35dfd86af72c0b6092d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9a4f064d903092b04f8885fb00b56e18c9cfeb74
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856741"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751123"
 ---
 # <a name="diagnosing-transactional-applications"></a>트랜잭션 응용 프로그램 진단
 이 항목에서는 트랜잭션 응용 프로그램 문제를 해결 하려면 Windows Communication Foundation (WCF) 관리 및 진단 기능을 사용 하는 방법을 설명 합니다.  

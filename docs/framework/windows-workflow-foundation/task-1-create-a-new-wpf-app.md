@@ -2,12 +2,12 @@
 title: '작업 1: 새 Windows Presentation Foundation 애플리케이션 만들기'
 ms.date: 03/30/2017
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
-ms.openlocfilehash: 63b84e4fd2c88d98fbf417ee1f55ec203d295116
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 44152f0af73b134218cd975d93e186166b1e57ae
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641638"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665317"
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>작업 1: 새 Windows Presentation Foundation 애플리케이션 만들기
 이 태스크에서는 빈 Windows Presentation Foundation (WPF) 응용 프로그램을 WPF 응용 프로그램에 대 한 Visual Studio 템플릿을 사용 하 여 만들고 적절 한 참조를 추가 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 워크플로 어셈블리입니다.  

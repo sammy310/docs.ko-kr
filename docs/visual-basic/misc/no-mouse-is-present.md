@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrMouse_NoMouseIsPresent
 ms.assetid: 4472fd57-4217-4463-9d3c-dc4a8fe88f1b
-ms.openlocfilehash: c0e4e2a8cb0aa641b179d8b2608af384d7d4181e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5493cea8c87a40b0c9663aaa7f36ce6cb423d346
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944939"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624859"
 ---
 # <a name="no-mouse-is-present"></a>마우스가 없습니다.
 `My.Computer.Mouse` 개체의 속성 중 하나를 호출했지만 컴퓨터에 마우스 또는 마우스 포트가 설치되어 있지 않습니다.  

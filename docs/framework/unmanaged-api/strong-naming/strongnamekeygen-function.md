@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a8ebecce4078ba6c2b59e6bfba2d54300ba0c4ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 95c1d8171d2d76ecf085252e7973c0da851b3225
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000261"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64666024"
 ---
 # <a name="strongnamekeygen-function"></a>StrongNameKeyGen 함수
 강력한 이름 사용을 위한 새 공개/개인 키 쌍을 만듭니다.  

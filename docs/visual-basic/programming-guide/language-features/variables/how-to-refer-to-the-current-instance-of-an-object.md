@@ -8,12 +8,12 @@ helpviewer_keywords:
 - current instance
 - object variables [Visual Basic]
 ms.assetid: 7f9b2c77-03cd-428f-adc2-b18070226e7c
-ms.openlocfilehash: 3c44748798d5ed554fc9fbded9c3a4d981a66d2f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 70955cd55dfb91d4111e59ae58bfe409a4470433
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769033"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663537"
 ---
 # <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>방법: 개체 (Visual Basic)의 현재 인스턴스 참조
 합니다 *현재 인스턴스* 는 코드가 현재 실행 중인 개체의 합니다.  

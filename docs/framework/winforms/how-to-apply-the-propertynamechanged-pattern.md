@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], custom controls
 - PropertyNameChanged pattern [Windows Forms], applying
 ms.assetid: aa47ddf6-5223-40c4-833f-a78992194836
-ms.openlocfilehash: 36670eee6235277a7fe98770192df9ae05d3dd03
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 01afa713e97206ea192ba55dc2affad20163f872
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966818"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665257"
 ---
 # <a name="how-to-apply-the-propertynamechanged-pattern"></a>방법: PropertyNameChanged 패턴 적용
 다음 코드 예제를 적용 하는 방법에 설명 합니다 *PropertyName*패턴을 사용자 지정 컨트롤을 합니다. Windows Forms 데이터 바인딩 엔진에서 사용 되는 사용자 지정 컨트롤을 구현 하는 경우이 패턴을 적용 합니다.  

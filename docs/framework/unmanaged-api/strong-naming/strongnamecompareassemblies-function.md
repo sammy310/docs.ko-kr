@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2a49252d00f75b4d0b6325aeae0aab22f8ada5e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fe99a00ca96270d1f35812d48e78cc6bd0a051ef
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000326"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64666042"
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies 함수
 두 어셈블리가 강력한 이름 서명에 의해서만 다른지 여부를 결정합니다.  

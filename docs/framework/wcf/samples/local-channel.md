@@ -2,12 +2,12 @@
 title: 로컬 채널
 ms.date: 03/30/2017
 ms.assetid: fa1917a4-f701-4e82-a439-14a16282c7cc
-ms.openlocfilehash: 1711909ada4756dd2723f62160eef0ad12c03174
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 11f3e4fe07ffa285f72ba8fd92224a3ba78d238b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989835"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64656033"
 ---
 # <a name="local-channel"></a>로컬 채널
 로컬 채널은 동일한 응용 프로그램 도메인 내에서 통신에 사용 되는 Windows Communication Foundation (WCF) 전송 채널입니다. 로컬 채널은 클라이언트와 서비스가 동일한 응용 프로그램 도메인에서 실행 중이고 일반적인 WCF 채널 스택(메시지의 serialization 및 deserialization)의 오버헤드를 방지해야 하는 경우에 유용합니다.  

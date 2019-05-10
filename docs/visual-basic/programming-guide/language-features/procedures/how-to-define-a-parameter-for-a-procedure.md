@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: 55925b0f007b1be2f5d46ffc0854601f483b2e2d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf57d4dbd7e8596396fb2e9099d5984759d6e90d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863703"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665375"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>방법: 프로시저 (Visual Basic)에 대 한 매개 변수를 정의 합니다.
 A *매개 변수* 호출 코드를 호출할 때 프로시저에 값을 전달할 수 있습니다. 동일한 방식으로 변수를 선언 하면 해당 이름 및 데이터 형식을 지정 하는 프로시저에 대 한 각 매개 변수를 선언 합니다. 전달 메커니즘을 지정할 수도 있습니다 및 선택적 매개 변수 인지 합니다.  
@@ -46,11 +46,11 @@ A *매개 변수* 호출 코드를 호출할 때 프로시저에 값을 전달�
   
      모든 프로그래밍 요소에 대 한 데이터 형식을 지정 하는 이라고 *강력한 형식화*합니다. 설정한 경우 `Option Strict On`, Visual Basic 강력한 형식 지정을 적용 합니다. 이 것이 좋습니다 다음과 같은 이유로:  
   
-    -   프로그램 변수 및 매개 변수에 대 한 IntelliSense 지원도를 수 있습니다. 이렇게 하면 코드에서 입력할 때 해당 속성 및 기타 멤버를 볼 수 있습니다.  
+    - 프로그램 변수 및 매개 변수에 대 한 IntelliSense 지원도를 수 있습니다. 이렇게 하면 코드에서 입력할 때 해당 속성 및 기타 멤버를 볼 수 있습니다.  
   
-    -   컴파일러를에 형식 검사를 수행할 수 있습니다. 이렇게 하면 런타임에 오버플로 같은 오류로 인해 실패할 수 있는 문을 catch 합니다. 또한 지원 하지 않는 개체에 메서드 호출을 catch 합니다.  
+    - 컴파일러를에 형식 검사를 수행할 수 있습니다. 이렇게 하면 런타임에 오버플로 같은 오류로 인해 실패할 수 있는 문을 catch 합니다. 또한 지원 하지 않는 개체에 메서드 호출을 catch 합니다.  
   
-    -   코드의 더 빠른 실행에서 발생합니다. 그 이유 중 하나는 프로그래밍 요소에 대 한 데이터 형식을 지정 하지 않으면, Visual Basic 컴파일러를 할당 하는 `Object` 형식입니다. 컴파일된 코드 사이 변환 해야 할 수 `Object` 및 다른 데이터 형식을 사용 하면 성능이 저하 됩니다.  
+    - 코드의 더 빠른 실행에서 발생합니다. 그 이유 중 하나는 프로그래밍 요소에 대 한 데이터 형식을 지정 하지 않으면, Visual Basic 컴파일러를 할당 하는 `Object` 형식입니다. 컴파일된 코드 사이 변환 해야 할 수 `Object` 및 다른 데이터 형식을 사용 하면 성능이 저하 됩니다.  
   
 ## <a name="see-also"></a>참고자료
 

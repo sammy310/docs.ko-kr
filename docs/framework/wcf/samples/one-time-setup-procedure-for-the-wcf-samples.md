@@ -2,12 +2,12 @@
 title: Windows Communication Foundation 샘플의 일회 설치 절차
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 2b9d84089cdd987f2e2b1e3d23354505520a80f8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a34c2ee7cb98c6120e23114674712de0ba5b8162
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052107"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664802"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 샘플의 일회 설치 절차
 대부분의 Windows Communication Foundation (WCF) 샘플 인터넷 정보 서비스 (IIS)에서 호스팅되고 공용 가상 디렉터리에서 실행 됩니다. 이 일회 설치 절차에서는 디스크에 폴더를 만듭니다. 또한 이라는 iis 가상 디렉터리 추가 **ServiceModelSamples**합니다.

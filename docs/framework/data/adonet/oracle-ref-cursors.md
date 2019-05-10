@@ -2,12 +2,12 @@
 title: Oracle REF CURSOR
 ms.date: 03/30/2017
 ms.assetid: c6b25b8b-0bdd-41b2-9c7c-661f070c2247
-ms.openlocfilehash: b23b0f07d7755fed820481a3ad1fe831ae3f5224
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0a98bfd401aaabfb754c422cc753bc5092f9f76c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771861"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633334"
 ---
 # <a name="oracle-ref-cursors"></a>Oracle REF CURSOR
 .NET Framework Data Provider for Oracle은 Oracle 지원 **REF CURSOR** 데이터 형식입니다. Oracle REF CURSOR를 사용하는 데이터 공급자를 사용할 경우 다음 동작을 고려해야 합니다.  

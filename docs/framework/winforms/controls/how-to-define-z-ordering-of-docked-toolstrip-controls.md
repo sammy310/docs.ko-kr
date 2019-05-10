@@ -10,12 +10,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], specifying z-order
 - z-order
 ms.assetid: 8b595429-ba9f-46af-9c55-3d5cc53f7fff
-ms.openlocfilehash: 3347722383b7388c00335683537e00851e642bb6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b7643c9599ceeba08cbe9f5580739043f6d89edc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054239"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64666334"
 ---
 # <a name="how-to-define-z-ordering-of-docked-toolstrip-controls"></a>방법: 도킹된 ToolStrip 컨트롤의 Z 순서 정의
 도킹을 사용하여 <xref:System.Windows.Forms.ToolStrip> 컨트롤을 올바르게 배치하려면 폼의 z 순서에 컨트롤을 올바르게 배치해야 합니다.  

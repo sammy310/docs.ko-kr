@@ -2,12 +2,12 @@
 title: Message Security 샘플
 ms.date: 03/30/2017
 ms.assetid: 82444166-6288-493a-85d4-85f43f134d19
-ms.openlocfilehash: ad579705fa30e9b5179f2de4b829bd7f4a5817c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1da6c73c8cb0e5bf7837e2445eae72c906472d07
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756054"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664857"
 ---
 # <a name="message-security-sample"></a>Message Security 샘플
 이 샘플에서는 `basicHttpBinding` 및 메시지 보안을 사용하는 응용 프로그램을 구현하는 방법을 보여 줍니다. 이 샘플은 기반 합니다 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) 계산기 서비스를 구현 하는 합니다.  

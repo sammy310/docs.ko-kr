@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-ms.openlocfilehash: a94864563491b5bd2d50a6df59858f4b7235fd75
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9a38ec444c51560cab48db1b39ae331f728fba30
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696225"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64635663"
 ---
 # <a name="accessing-services-using-a-client"></a>클라이언트를 사용하여 서비스 액세스
 클라이언트 응용 프로그램 만들기, 구성 및 서비스와 통신 하려면 WCF 클라이언트 또는 채널 개체를 사용 해야 합니다. 합니다 [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md) 항목에서는 개체 및 기본 클라이언트 및 채널 개체를 만들고 사용 하는 단계를 간략하게 설명 합니다.  

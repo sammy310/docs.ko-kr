@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 750bddce508a72c6aaac659feac90b7c17e53137
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: eb2b082393656e84cedb293c3f3857e6680ed2ab
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921864"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664334"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]는 [!INCLUDE[wrt](../../../includes/wrt-md.md)]와 함께 다양한 소프트웨어 개발 시나리오를 지원합니다. 이러한 시나리오는 다음 세 가지 범주로 구분됩니다.

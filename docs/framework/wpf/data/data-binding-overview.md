@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: f849cf306f4de0cbaa7623ded4ab7045bb5112a6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3e4438b309d4e443d07a6c2db2310733927fd38b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024270"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625342"
 ---
 # <a name="data-binding-overview"></a>데이터 바인딩 개요
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 데이터 바인딩은 응용 프로그램이 데이터를 제공하고 상호 작용할 수 있는 간단하고 일관된 방법을 제공합니다. 다양한 데이터 소스에서 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 개체 및 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]의 형태로 데이터에 요소를 바인딩할 수 있습니다. <xref:System.Windows.Controls.ContentControl>같은 <xref:System.Windows.Controls.Button> 하 고 <xref:System.Windows.Controls.ItemsControl>같은 <xref:System.Windows.Controls.ListBox> 고 <xref:System.Windows.Controls.ListView> 단일 데이터 항목의 유연한 스타일 또는 데이터 항목의 컬렉션을 사용 하도록 설정 하는 기본 제공 기능이 있습니다. 데이터를 기반으로 정렬, 필터 및 그룹 보기를 생성할 수 있습니다.  

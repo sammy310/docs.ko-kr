@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data validation [Windows Forms], Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: a4f1d015-2969-430c-8ea2-b612d179c290
-ms.openlocfilehash: a4bf0850b28b7101ba76f1c1fedc6633eccb81a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c14edebb7fd5ee133ce60769327e6b32dac1c7af
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61759858"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623702"
 ---
 # <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>연습: Windows Forms DataGridView 컨트롤에서 데이터 유효성 검사
 데이터 항목 기능을 사용자에 게 표시할 때 자주를 양식에 입력 된 데이터의 유효성을 검사 해야 합니다. <xref:System.Windows.Forms.DataGridView> 클래스는 데이터는 데이터 저장소에 커밋되기 전에 유효성 검사를 수행 하는 편리한 방법을 제공 합니다. 처리 하 여 데이터를 확인할 수 있습니다는 <xref:System.Windows.Forms.DataGridView.CellValidating> 이벤트에 의해 발생 하는 <xref:System.Windows.Forms.DataGridView> 현재 셀이 변경 되는 경우.  
