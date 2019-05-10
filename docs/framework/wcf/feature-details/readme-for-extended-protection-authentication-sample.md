@@ -2,12 +2,12 @@
 title: 인증에 대한 확장된 보호 ReadMe 샘플
 ms.date: 03/30/2017
 ms.assetid: 80bf2e97-398d-4db5-9040-d96478a2ccab
-ms.openlocfilehash: 53592db03c88e673d529ef04f2fbc6e182897457
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 38f1c7e27162f79b436135be7fa9a499259ada9b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946668"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64643518"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>인증에 대한 확장된 보호 ReadMe 샘플
 확장 된 보호는 공격자 ("man-에-the-중간")는 클라이언트의 자격 증명을 가로채 고 하는 클라이언트의 의도 한 서버의 보안 리소스에 액세스 하는 데 사용 중간자 개입 (mitm 메시지 가로채기) 공격 으로부터 보호 하기 위해 보안 이니셔티브입니다.  

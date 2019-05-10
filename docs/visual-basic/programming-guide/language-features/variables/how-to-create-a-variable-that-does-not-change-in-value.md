@@ -5,12 +5,12 @@ helpviewer_keywords:
 - variables [Visual Basic], read-only
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
-ms.openlocfilehash: 7180e5141572d219ed02c57103e9d4b80cde536e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3a9fa93b69c9abb42b2dd7eae623048f3628999e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938231"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663566"
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>방법: (Visual Basic) 값이 변경 되지 않는 변수 만들기
 해당 값을 변경 하지 않는 변수의 개념 모순 되 게 나타날 수 있습니다. 상수 불가능 한 경우에 있고 변수를 fixed 값을 가진 것이 유용 합니다. 이러한 경우에 사용 하 여 멤버 변수를 정의할 수 있습니다 합니다 [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) 키워드입니다.  

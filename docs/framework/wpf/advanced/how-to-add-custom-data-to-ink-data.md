@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ink data [WPF], adding custom data
 - InkCanvas [WPF], displaying
 ms.assetid: f02aac6f-3436-4f7c-b6ea-0452cba5332c
-ms.openlocfilehash: c524e30943a21426e2e5e8fe6ae009999924fead
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7c59a205df5358daec101339cc6a308c8e38a9d6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777054"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64640862"
 ---
 # <a name="how-to-add-custom-data-to-ink-data"></a>방법: 잉크 데이터에 사용자 지정 데이터 추가
 Serialize 된 잉크 형식 (ISF)으로 잉크를 저장할 때 저장 되는 잉크를 사용자 지정 데이터를 추가할 수 있습니다.  사용자 지정 데이터를 저장할 수 있습니다 합니다 <xref:System.Windows.Ink.DrawingAttributes>는 <xref:System.Windows.Ink.StrokeCollection>, 또는 <xref:System.Windows.Ink.Stroke>합니다.  객체에 사용자 지정 데이터를 저장할 수 있는 데이터를 저장할 최적의 위치를 선택할 수가 있습니다.  세 클래스 모두 저장 하 고 사용자 지정 데이터 액세스 이와 유사한 메서드를 사용 합니다.  

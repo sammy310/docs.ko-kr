@@ -9,12 +9,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], passing by value or by reference
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
-ms.openlocfilehash: c23ca51322f57dc13a85c3ea94e0d335dc50ca13
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: eb2260c6547d4f1cd7d9c23445ac38ac600e3535
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791926"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638862"
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>값 및 참조로 인수 전달(Visual Basic)
 Visual Basic의 프로시저에 인수를 전달할 수 있습니다 *값별로* 하거나 *참조별*합니다. 이 *전달 메커니즘*, 프로시저가 호출 코드에서 인수를 기본 프로그래밍 요소를 수정할 수 있는지 여부를 결정 합니다. 프로시저 선언을 지정 하 여 각 매개 변수의 전달 메커니즘을 결정 합니다 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) 하거나 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) 키워드입니다.  

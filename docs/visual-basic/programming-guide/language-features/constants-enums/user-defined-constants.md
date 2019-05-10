@@ -9,12 +9,12 @@ helpviewer_keywords:
 - constants [Visual Basic], user-defined
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
-ms.openlocfilehash: f0196457235ad77df545a367573f62b43209269d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d4fe5d1b9048f4a8ae22a84e14456318ca38f0f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906986"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645855"
 ---
 # <a name="user-defined-constants-visual-basic"></a>사용자 정의 상수(Visual Basic)
 상수는 숫자 또는 변경 되지 않는 문자열의 발생 하는 의미 있는 이름입니다. 상수는 애플리케이션 실행 중 변함없이 유지되는 값을 저장합니다. 컨트롤 또는 구성 요소를 사용 하 여 작업에 의해 정의 된 상수를 사용할 수 있습니다 하거나 직접 만들 수 있습니다. 사용자가 직접 만든 상수 상수 라고 *사용자 정의*합니다.  
@@ -37,13 +37,13 @@ ms.locfileid: "61906986"
 ## <a name="scope-of-user-defined-constants"></a>사용자 정의 상수 범위  
  `Const` 문의 범위는 같은 위치에 선언 된 변수의 것과 동일 합니다. 다음 방법 중 하나에서 범위를 지정할 수 있습니다.  
   
--   프로시저 내에 존재 하는 상수를 만들려면 해당 절차 내에서 선언 합니다.  
+- 프로시저 내에 존재 하는 상수를 만들려면 해당 절차 내에서 선언 합니다.  
   
--   모듈 외부 코드 아니라 클래스 내의 모든 프로시저에 사용할 수 있는 상수를 만들려면 클래스의 선언 섹션에서 선언 합니다.  
+- 모듈 외부 코드 아니라 클래스 내의 모든 프로시저에 사용할 수 있는 상수를 만들려면 클래스의 선언 섹션에서 선언 합니다.  
   
--   어셈블리의 외부 클라이언트가 아니라 어셈블리의 모든 멤버에 사용할 수 있는 상수를 만들려면 사용 하 여 선언 된 `Friend` 클래스의 선언 섹션에는 키워드입니다.  
+- 어셈블리의 외부 클라이언트가 아니라 어셈블리의 모든 멤버에 사용할 수 있는 상수를 만들려면 사용 하 여 선언 된 `Friend` 클래스의 선언 섹션에는 키워드입니다.  
   
--   응용 프로그램 전체에서 사용할 수 있는 상수를 만들려면 사용 하 여 선언 된 `Public` 선언에서 키워드 섹션 클래스입니다.  
+- 응용 프로그램 전체에서 사용할 수 있는 상수를 만들려면 사용 하 여 선언 된 `Public` 선언에서 키워드 섹션 클래스입니다.  
   
  자세한 내용은 [방법: 상수 선언](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)합니다.  
   

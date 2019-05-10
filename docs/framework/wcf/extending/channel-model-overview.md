@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - channel model [WCF]
 ms.assetid: 07a81e11-3911-4632-90d2-cca99825b5bd
-ms.openlocfilehash: 13fe07d1521832ed12ba5770e0bd069ff9b917d2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c29b3e3d5eff426ac573ddf5224259f0a6c28e53
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043586"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664923"
 ---
 # <a name="channel-model-overview"></a>채널 모델 개요
 Windows Communication Foundation (WCF) 채널 스택은 메시지를 처리 하는 하나 이상의 채널로 계층화 된 통신 스택을입니다. 스택의 맨 아래에는 채널 스택을 TCP, HTTP, SMTP 및 기타 다른 유형의 전송과 같은 기본 전송에 적용하는 전송 채널이 있습니다. 채널은 메시지를 보내고 받기 위한 하위 수준의 프로그래밍 모델을 제공합니다. 몇 가지 인터페이스와 다른 형식 WCF 채널 모델 이라고 통칭를 의존 하는이 프로그래밍 모델입니다. 이 항목에서는 채널 셰이프, 서비스에서의 기본 채널 수신기 생성 및 클라이언트에서의 채널 팩터리 생성에 대해 설명합니다.  

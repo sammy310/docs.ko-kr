@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: 5f058c8e7d480b9145452ae85f186a6ac2ed0d56
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 99d5dc2e0f8389f8c9e90786c4d9d0fa037eb828
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803732"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651428"
 ---
 # <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>기본 속성 액세스가 상속 된 인터페이스 멤버 사이 모호\<defaultpropertyname >' 인터페이스의 '\<interfacename1 >' 및 '\<defaultpropertyname >' 인터페이스의 '\< interfacename2 >'
 인터페이스는 각각 같은 이름의 기본 속성을 선언 하는 두 인터페이스에서 상속 됩니다. 컴파일러는 한정자 없이이 기본 속성에 대 한 액세스를 확인할 수 없습니다. 다음은 이에 대한 예입니다.  
@@ -41,7 +41,7 @@ End Class
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   동일한 이름 가진 모든 멤버를 상속 하지 않습니다. 앞의 예제에서 경우 `testObj` 의 멤버는 필요 하지 않습니다 예를 들어, `Iface2`를 다음과 같이 선언 합니다.  
+- 동일한 이름 가진 모든 멤버를 상속 하지 않습니다. 앞의 예제에서 경우 `testObj` 의 멤버는 필요 하지 않습니다 예를 들어, `Iface2`를 다음과 같이 선언 합니다.  
   
     ```  
     Dim testObj As Iface1  
@@ -49,7 +49,7 @@ End Class
   
      또는  
   
--   클래스에서 상속 하는 인터페이스를 구현 합니다. 그런 다음 각 다른 이름의 상속 된 속성을 구현할 수 있습니다. 그러나 그 중 하나만 구현 하는 클래스의 기본 속성을 수 있습니다. 다음은 이에 대한 예입니다.  
+- 클래스에서 상속 하는 인터페이스를 구현 합니다. 그런 다음 각 다른 이름의 상속 된 속성을 구현할 수 있습니다. 그러나 그 중 하나만 구현 하는 클래스의 기본 속성을 수 있습니다. 다음은 이에 대한 예입니다.  
   
     ```  
     Public Class useIface3  

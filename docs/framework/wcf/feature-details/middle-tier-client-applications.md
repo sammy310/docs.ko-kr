@@ -2,12 +2,12 @@
 title: 중간 계층 클라이언트 응용 프로그램
 ms.date: 03/30/2017
 ms.assetid: f9714a64-d0ae-4a98-bca0-5d370fdbd631
-ms.openlocfilehash: 667cc98f46b131fe91e17f3b1b16af429dc597ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c7934f6d0d34992db229244373b5a170180f51e6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948150"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649452"
 ---
 # <a name="middle-tier-client-applications"></a>중간 계층 클라이언트 응용 프로그램
 이 항목에서는 Windows Communication Foundation (WCF)를 사용 하는 중간 계층 클라이언트 응용 프로그램에 관련 된 다양 한 문제를 설명 합니다.  

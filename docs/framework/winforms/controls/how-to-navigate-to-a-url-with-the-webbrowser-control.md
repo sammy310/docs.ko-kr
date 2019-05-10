@@ -12,12 +12,12 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], navigating to URLs
 - examples [Windows Forms], WebBrowser control
 ms.assetid: b3ec38cb-f509-4d0b-bd79-9f3611259c62
-ms.openlocfilehash: a174b6ae60f87e91e6f97e8fa7f8ad3892ef017a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bee16a388d823f74bc9c88bc34b510d2a5907393
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913473"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649230"
 ---
 # <a name="how-to-navigate-to-a-url-with-the-webbrowser-control"></a>방법: WebBrowser 컨트롤을 사용하여 URL로 이동
 다음 코드 예제를 탐색 하는 방법에 설명 합니다 <xref:System.Windows.Forms.WebBrowser> 특정 URL 제어 합니다.  
@@ -37,9 +37,9 @@ this.webBrowser1.Navigate("http://www.microsoft.com");
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   `webBrowser1`이라는 <xref:System.Windows.Forms.WebBrowser> 컨트롤  
+- `webBrowser1`이라는 <xref:System.Windows.Forms.WebBrowser> 컨트롤  
   
--   `System` 및 `System.Windows.Forms` 어셈블리에 대한 참조  
+- `System` 및 `System.Windows.Forms` 어셈블리에 대한 참조  
   
 ## <a name="see-also"></a>참고자료
 

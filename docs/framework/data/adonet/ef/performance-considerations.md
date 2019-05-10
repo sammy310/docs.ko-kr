@@ -2,12 +2,12 @@
 title: 성능 고려 사항(Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: ec7f3571f60dc7f10816cad90911e50d271a9ce1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6cd12948d16eea66efb6ee4b427a2c979e0aab3d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879400"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641278"
 ---
 # <a name="performance-considerations-entity-framework"></a>성능 고려 사항(Entity Framework)
 이 항목에서는 ADO.NET Entity Framework의 성능 특징에 대해 설명하고, Entity Framework 응용 프로그램의 성능 개선을 위해 고려해야 할 몇 가지 사항을 알려 줍니다.  
@@ -55,12 +55,12 @@ ms.locfileid: "61879400"
 #### <a name="query-complexity"></a>쿼리 복잡성  
  데이터 소스에 대해 실행되는 명령에 많은 수의 조인이 필요하거나 많은 양의 데이터를 반환하는 쿼리는 다음 방식으로 성능에 영향을 줄 수 있습니다.  
   
--   간단해 보이는 개념적 모델의 쿼리로 인해 데이터 소스에 대해 보다 복잡한 쿼리가 실행될 수 있습니다. 이는 Entity Framework에서 개념적 모델에 대한 쿼리를 데이터 소스에 대한 동등한 쿼리로 변환하기 때문에 발생합니다. 개념적 모델의 단일 엔터티 집합이 데이터 소스에 있는 둘 이상의 테이블에 매핑되거나 엔터티 간 관계가 조인 테이블에 매핑되면 데이터 소스 쿼리에 대해 실행되는 쿼리 명령에서 하나 이상의 조인을 필요로 할 수 있습니다.  
+- 간단해 보이는 개념적 모델의 쿼리로 인해 데이터 소스에 대해 보다 복잡한 쿼리가 실행될 수 있습니다. 이는 Entity Framework에서 개념적 모델에 대한 쿼리를 데이터 소스에 대한 동등한 쿼리로 변환하기 때문에 발생합니다. 개념적 모델의 단일 엔터티 집합이 데이터 소스에 있는 둘 이상의 테이블에 매핑되거나 엔터티 간 관계가 조인 테이블에 매핑되면 데이터 소스 쿼리에 대해 실행되는 쿼리 명령에서 하나 이상의 조인을 필요로 할 수 있습니다.  
   
     > [!NOTE]
     >  <xref:System.Data.Objects.ObjectQuery.ToTraceString%2A> 또는 <xref:System.Data.Objects.ObjectQuery%601> 클래스의 <xref:System.Data.EntityClient.EntityCommand> 메서드를 사용하여 제공된 쿼리의 데이터 소스에 대해 실행된 명령을 볼 수 있습니다. 자세한 내용은 [방법: 저장소 명령 보기](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896348(v=vs.100))합니다.  
   
--   중첩 Entity SQL 쿼리는 서버에서 조인을 만들고 많은 수의 행을 반환할 수 있습니다.  
+- 중첩 Entity SQL 쿼리는 서버에서 조인을 만들고 많은 수의 행을 반환할 수 있습니다.  
   
      다음은 프로젝션 절의 중첩 쿼리 예제입니다.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "61879400"
   
      또한 이러한 쿼리로 인해 쿼리 파이프라인이 중첩 쿼리에 대해 개체가 중복된 단일 쿼리를 생성할 수 있습니다. 이에 따라 단일 열이 여러 번 중복될 수 있습니다. SLQ Server를 비롯한 일부 데이터베이스에서는 이로 인해 TempDB 테이블 크기가 과도하게 커질 수 있으므로 서버 성능이 저하될 수 있습니다. 중첩 쿼리를 실행할 때는 주의를 기울여야 합니다.  
   
--   많은 양의 데이터를 반환하는 쿼리는 클라이언트가 결과 집합의 크기에 비례하여 리소스를 사용하는 작업을 수행할 경우 성능이 저하될 수 있습니다. 그러므로 쿼리에서 반환되는 데이터 양을 제한하는 것이 좋습니다. 자세한 내용은 [방법: 쿼리 결과 페이징](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))합니다.  
+- 많은 양의 데이터를 반환하는 쿼리는 클라이언트가 결과 집합의 크기에 비례하여 리소스를 사용하는 작업을 수행할 경우 성능이 저하될 수 있습니다. 그러므로 쿼리에서 반환되는 데이터 양을 제한하는 것이 좋습니다. 자세한 내용은 [방법: 쿼리 결과 페이징](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))합니다.  
   
  Entity Framework에 의해 자동으로 생성된 명령은 데이터베이스 개발자가 명시적으로 작성한 유사 명령보다 복잡할 수 있습니다. 데이터 소스에 대해 실행된 명령에 명시적 제어가 필요한 경우 테이블 반환 함수 또는 저장 프로시저에 대한 매핑을 정의하는 것이 좋습니다.  
   
@@ -114,9 +114,9 @@ ms.locfileid: "61879400"
 ### <a name="distributed-transactions"></a>분산 트랜잭션  
  DTC(Distributed Transaction Coordinator)에 의해 관리되는 리소스가 필요한 명시적 트랜잭션에서의 작업은 DTC가 필요하지 않은 유사한 작업보다 비용이 훨씬 많이 듭니다. DTC로의 승격은 다음 상황에 발생할 수 있습니다.  
   
--   항상 명시적 트랜잭션을 DTC로 승격하는 SQL Server 2000 데이터베이스 또는 기타 데이터 소스에 대한 작업을 포함하는 명시적 트랜잭션  
+- 항상 명시적 트랜잭션을 DTC로 승격하는 SQL Server 2000 데이터베이스 또는 기타 데이터 소스에 대한 작업을 포함하는 명시적 트랜잭션  
   
--   [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에서 연결을 관리하는 경우 SQL Server 2005에 대한 작업을 포함하는 명시적 트랜잭션. 이 트랜잭션은 단일 트랜잭션 내에서 연결이 닫히고 다시 열리는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]의 기본 동작이 수행될 때마다 SQL Server 2005가 DTC로 승격되기 때문에 발생합니다. 이 DTC 승격은 SQL Server 2008 사용 시 발생하지 않습니다. SQL Server 2005를 사용할 때 이러한 승격이 발생하지 않도록 하려면 트랜잭션 내에서 연결을 명시적으로 열고 닫아야 합니다. 자세한 내용은 [트랜잭션과 연결 관리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))합니다.  
+- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]에서 연결을 관리하는 경우 SQL Server 2005에 대한 작업을 포함하는 명시적 트랜잭션. 이 트랜잭션은 단일 트랜잭션 내에서 연결이 닫히고 다시 열리는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]의 기본 동작이 수행될 때마다 SQL Server 2005가 DTC로 승격되기 때문에 발생합니다. 이 DTC 승격은 SQL Server 2008 사용 시 발생하지 않습니다. SQL Server 2005를 사용할 때 이러한 승격이 발생하지 않도록 하려면 트랜잭션 내에서 연결을 명시적으로 열고 닫아야 합니다. 자세한 내용은 [트랜잭션과 연결 관리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))합니다.  
   
  <xref:System.Transactions> 트랜잭션 내에서 하나 이상의 작업이 실행될 때 명시적 트랜잭션이 사용됩니다. 자세한 내용은 [트랜잭션과 연결 관리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))합니다.  
   
@@ -147,11 +147,11 @@ ms.locfileid: "61879400"
 ## <a name="performance-data"></a>성능 데이터  
  Entity Framework에 대 한 일부 성능 데이터에 다음 포스트에 게시 되는 [ADO.NET 팀 블로그](https://go.microsoft.com/fwlink/?LinkId=91905):  
   
--   [ADO.NET Entity Framework-1 부의 성능 알아보기](https://go.microsoft.com/fwlink/?LinkId=123907)  
+- [ADO.NET Entity Framework-1 부의 성능 알아보기](https://go.microsoft.com/fwlink/?LinkId=123907)  
   
--   [ADO.NET Entity Framework – 2 부의 성능 알아보기](https://go.microsoft.com/fwlink/?LinkId=123909)  
+- [ADO.NET Entity Framework – 2 부의 성능 알아보기](https://go.microsoft.com/fwlink/?LinkId=123909)  
   
--   [ADO.NET Entity Framework 성능 비교](https://go.microsoft.com/fwlink/?LinkID=123913)  
+- [ADO.NET Entity Framework 성능 비교](https://go.microsoft.com/fwlink/?LinkID=123913)  
   
 ## <a name="see-also"></a>참고자료
 

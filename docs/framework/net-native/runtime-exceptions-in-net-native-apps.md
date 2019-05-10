@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06e07c41d398c0792094b4481a38c69b2ba73004
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b682d4b43ece406ee320d6d4f96ed5cda5f17c3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866784"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650361"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>.NET 네이티브 앱의 런타임 예외
 디버그 및 릴리스 구성이 완전히 다르므로 해당 대상 플랫폼에서 유니버설 Windows 플랫폼 앱의 릴리스 빌드를 테스트하는 것이 중요합니다. 기본적으로 디버그 구성에서는 .NET 핵심 런타임을 사용하여 앱을 컴파일하지만 릴리스 구성에서는 .NET 네이티브를 사용하여 앱을 네이티브 코드로 컴파일합니다.  
@@ -24,11 +24,11 @@ ms.locfileid: "61866784"
   
  .NET 네이티브를 사용하여 컴파일된 릴리스 빌드를 디버깅하는 경우:  
   
--   기본 .NET 디버깅 도구와는 다른 .NET 네이티브 디버그 엔진을 사용합니다.  
+- 기본 .NET 디버깅 도구와는 다른 .NET 네이티브 디버그 엔진을 사용합니다.  
   
--   실행 파일의 크기가 가능한 만큼 줄어듭니다. .NET 네이티브에서 실행 파일의 크기를 줄이는 방법 중 하나는 런타임 예외 메시지를 크게 잘라내는 것입니다. 자세한 내용은 [Runtime exception messages](#Messages) 섹션을 참조하세요.  
+- 실행 파일의 크기가 가능한 만큼 줄어듭니다. .NET 네이티브에서 실행 파일의 크기를 줄이는 방법 중 하나는 런타임 예외 메시지를 크게 잘라내는 것입니다. 자세한 내용은 [Runtime exception messages](#Messages) 섹션을 참조하세요.  
   
--   코드가 매우 최적화됩니다. 이는 가능할 때마다 인라인 처리가 사용된다는 의미입니다. 인라인 처리는 외부 루틴에서 호출 루틴으로 코드를 이동합니다.   .NET 네이티브가 특수 런타임을 제공하고 적극적인 인라인 처리를 구현한다는 사실은 디버깅 시 표시되는 호출 스택에 영향을 줍니다.  자세한 내용은 [Runtime call stack](#CallStack) 섹션을 참조하세요.  
+- 코드가 매우 최적화됩니다. 이는 가능할 때마다 인라인 처리가 사용된다는 의미입니다. 인라인 처리는 외부 루틴에서 호출 루틴으로 코드를 이동합니다.   .NET 네이티브가 특수 런타임을 제공하고 적극적인 인라인 처리를 구현한다는 사실은 디버깅 시 표시되는 호출 스택에 영향을 줍니다.  자세한 내용은 [Runtime call stack](#CallStack) 섹션을 참조하세요.  
   
 > [!NOTE]
 >  **.NET 네이티브 도구 체인을 사용하여 컴파일** 상자를 선택하거나 선택을 취소하여 디버그 및 릴리스 빌드가 .NET 네이티브 도구 체인을 사용하여 컴파일되는지 제어할 수 있습니다.   단, Windows 스토어는 항상 .NET 네이티브 도구 체인을 사용하여 프로덕션 버전의 앱을 컴파일합니다.  

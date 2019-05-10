@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 652000367c19572f73296c704047830ce1c74574
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f0bbc2a63f0324db50008637827eb63125ee5813
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61914526"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662946"
 ---
 # <a name="compareassemblyidentity-function"></a>CompareAssemblyIdentity 함수
 동일한 지 여부를 확인 하려면 두 개의 어셈블리 id를 비교 합니다.  
@@ -65,11 +65,11 @@ STDAPI CompareAssemblyIdentity (
 ## <a name="remarks"></a>설명  
  `CompareAssemblyIdentity` 확인 여부 `pwzAssemblyIdentity1` 및 `pwzAssemblyIdentity2` 동일 합니다. `pfEquivalent` 로 설정 된 `true` 다음 조건 중 하나 이상:  
   
--   두 어셈블리 id는 동일 합니다. 강력한 이름의 어셈블리 어셈블리일 어셈블리 이름, 버전, 공개 키 토큰 및 문화권 동일 하 게 됩니다. 단순한 이름의 어셈블리에 대 한 어셈블리일 경우 어셈블리 이름 및 문화권입니다.  
+- 두 어셈블리 id는 동일 합니다. 강력한 이름의 어셈블리 어셈블리일 어셈블리 이름, 버전, 공개 키 토큰 및 문화권 동일 하 게 됩니다. 단순한 이름의 어셈블리에 대 한 어셈블리일 경우 어셈블리 이름 및 문화권입니다.  
   
--   두 어셈블리 id는.NET Framework에서 실행 되는 어셈블리를 참조 하십시오. 이 반환 `true` 어셈블리 버전 번호가 일치 하지 않는 경우에 합니다.  
+- 두 어셈블리 id는.NET Framework에서 실행 되는 어셈블리를 참조 하십시오. 이 반환 `true` 어셈블리 버전 번호가 일치 하지 않는 경우에 합니다.  
   
--   두 어셈블리는 관리 되는 어셈블리 하지만 `fUnified1` 나 `fUnified2` 로 설정 된 `true`합니다.  
+- 두 어셈블리는 관리 되는 어셈블리 하지만 `fUnified1` 나 `fUnified2` 로 설정 된 `true`합니다.  
   
  `fUnified` 플래그는 강력한 이름의 어셈블리의 버전 번호까지 모든 버전 번호가 동일 하다 고 간주 강력한 이름의 어셈블리를 나타냅니다. 예를 들어 경우 값 `pwzAssemblyIndentity1` 가 "MyAssembly, 버전 3.0.0.0, culture = neutral, publicKeyToken = =...", 값 `fUnified1` 는 `true`, 모든 버전의 MyAssembly 버전 3.0.0.0에 0.0.0.0 함을 나타냅니다 동등한 것으로 처리 합니다. 이러한 경우의 경우 `pwzAssemblyIndentity2` 와 동일한 어셈블리를 가리킵니다 `pwzAssemblyIndentity1`낮은 버전 번호에 있는 점을 제외 하 고, `pfEquivalent` 로 설정 되어 `true`합니다. 하는 경우 `pwzAssemblyIdentity2` 더 높은 버전 번호를 가리킵니다 `pfEquivalent` 로 설정 된 `true` 경우에만 값 `fUnified2` 는 `true`합니다.  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-ms.openlocfilehash: c14aa35ce15549ad9eccabe2330a7c43b6795140
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5eb6bd5b5e7b2f0c3692c0fa2431a0b8f295299
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864704"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649721"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>방법: (Visual Basic) 패턴에 대해 문자열 비교
 식을 확인 하려는 경우는 [문자열 데이터 형식](../../../../visual-basic/language-reference/data-types/string-data-type.md) 사용 하 여 패턴을 만족 합니다 [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md)합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "61864704"
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a>특정 문자에서 문자열 식의 문자를 검색 하려면  
   
--   특정 문자 패턴 문자열에 직접 배치 합니다. 특수 문자를 대괄호로 묶어야 합니다 (`[ ]`). 자세한 내용은 [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md)합니다.  
+- 특정 문자 패턴 문자열에 직접 배치 합니다. 특수 문자를 대괄호로 묶어야 합니다 (`[ ]`). 자세한 내용은 [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md)합니다.  
   
      다음 예제에서는 테스트 하는지 여부를 `myString` 단일 문자를 정확히 이루어져 `H`합니다.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "61864704"
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a>와일드 카드 문자는 문자열 식의 문자를 검색 하려면  
   
--   물음표 (`?`) 패턴 문자열에 있습니다. 이 위치에서 모든 유효한 문자일 성공한 일치 항목을 만듭니다.  
+- 물음표 (`?`) 패턴 문자열에 있습니다. 이 위치에서 모든 유효한 문자일 성공한 일치 항목을 만듭니다.  
   
      다음 예제에서는 테스트 하는지 여부를 `myString` 단일 문자로 `W` 뒤에 정확히 두 문자의 값입니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "61864704"
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a>문자 목록에서 문자열 식의 문자를 검색 하려면  
   
--   대괄호 (`[ ]`) 패턴 문자열에 문자의 목록을 저장 하는 대괄호 안에 있습니다. 쉼표 또는 다른 구분 기호를 사용 하 여 문자를 구분 하지 않습니다. 목록에서 단일 문자와 일치 하는 항목 수 있습니다.  
+- 대괄호 (`[ ]`) 패턴 문자열에 문자의 목록을 저장 하는 대괄호 안에 있습니다. 쉼표 또는 다른 구분 기호를 사용 하 여 문자를 구분 하지 않습니다. 목록에서 단일 문자와 일치 하는 항목 수 있습니다.  
   
      다음 예제에서는 테스트 하는지 여부를 `myString` 뒤에 문자 중 하나만 모든 유효한 문자일 이루어져 `A`, `C`, 또는 `E`.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "61864704"
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-range-of-characters"></a>문자 범위에서 문자열 식의 문자를 검색 하려면  
   
--   대괄호 (`[ ]`) 하이픈으로 구분 된 패턴 문자열 및 최저 및 최고 문자 범위를 넣을 대괄호 (`–`). 범위 내 모든 단일 문자를 일치 하는 항목을 만듭니다.  
+- 대괄호 (`[ ]`) 하이픈으로 구분 된 패턴 문자열 및 최저 및 최고 문자 범위를 넣을 대괄호 (`–`). 범위 내 모든 단일 문자를 일치 하는 항목을 만듭니다.  
   
      다음 예제에서는 테스트 하는지 여부를 `myString` 문자로 구성 `num` 뒤에 문자 중 하나만 `i`, `j`, `k`, `l`, `m`, 또는 `n`합니다.  
   

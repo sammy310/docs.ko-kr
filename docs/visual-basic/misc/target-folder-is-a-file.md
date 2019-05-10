@@ -2,12 +2,12 @@
 title: 대상 폴더가 파일입니다.
 ms.date: 07/20/2015
 ms.assetid: c5e40bcb-2414-4484-b2b9-a9c391ad0029
-ms.openlocfilehash: 3189b6284939fabaaff923b80e6e767b89df50b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8a80a6699d7f1d5226c39c29a9853e83051e0cd0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61593933"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660907"
 ---
 # <a name="target-folder-is-a-file"></a>대상 폴더가 파일입니다.
 폴더 관련 작업을 수행하려는 동안 파일을 지정합니다.  

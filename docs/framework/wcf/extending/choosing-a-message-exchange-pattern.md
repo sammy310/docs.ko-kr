@@ -2,12 +2,12 @@
 title: 메시지 교환 패턴 선택
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 98788fb89fc68dc1220d9bf8d9ad89df5ca69e6e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2d39164944207d73fdfe418a30326fb40462db72
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922857"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664916"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>메시지 교환 패턴 선택
 사용자 지정 전송을 작성 하는 첫 번째 단계를 결정 하는 것 *메시지 교환 패턴* (즉, Mep)을 개발 하는 채널에 대 한 필요 합니다. 이 항목에서는 사용 가능한 옵션과 여러 가지 요구 사항에 대해 설명합니다. 에 설명 된 채널 개발 작업 목록에서 첫 번째 작업 이것이 [개발 채널](../../../../docs/framework/wcf/extending/developing-channels.md)합니다.  

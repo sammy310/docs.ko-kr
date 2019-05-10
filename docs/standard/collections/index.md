@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d6b9e3d3f5ebc122e2031dac5999a80445ee03a8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba780692d59157438da1e04f3bdc3577a3eaef65
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909140"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664570"
 ---
 # <a name="collections-and-data-structures"></a>컬렉션 및 데이터 구조
 비슷한 데이터는 컬렉션으로 저장 및 조작하면 보다 효율적으로 처리할 수 있는 경우가 많습니다. <xref:System.Array?displayProperty=nameWithType> 클래스 또는 <xref:System.Collections>, <xref:System.Collections.Generic> 및 <xref:System.Collections.Concurrent>, System.Collections.Immutable 네임스페이스의 클래스를 사용하여 컬렉션의 개별 요소 또는 일정 범위의 요소를 추가, 제거 및 수정할 수 있습니다.  
@@ -30,17 +30,17 @@ ms.locfileid: "61909140"
 ## <a name="common-collection-features"></a>일반 컬렉션 기능  
  모든 컬렉션은 컬렉션의 항목 추가, 제거 또는 찾기를 위한 방법을 제공합니다. 또한 직접/간접적으로 <xref:System.Collections.ICollection> 인터페이스 또는 <xref:System.Collections.Generic.ICollection%601> 인터페이스 공유를 구현하는 모든 컬렉션은 다음 기능을 공유합니다.  
   
--   **컬렉션을 열거하는 기능**  
+- **컬렉션을 열거하는 기능**  
   
      .NET Framework 컬렉션은 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 또는 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>을 구현하므로 컬렉션을 반복할 수 있습니다. 열거자는 컬렉션의 모든 요소에 대한 이동 가능 포인터라고 할 수 있습니다. [foreach, in](../../csharp/language-reference/keywords/foreach-in.md) 문과 [For Each...Next 문](../../visual-basic/language-reference/statements/for-each-next-statement.md)은 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 메서드가 노출하는 열거자를 사용하며 해당 열거자를 조작하는 복잡한 작업을 숨깁니다. 또한 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>을 구현하는 모든 컬렉션은 *쿼리 가능 형식*으로 간주할 수 있으며 LINQ를 사용하여 쿼리할 수 있습니다. LINQ 쿼리는 데이터 액세스를 위한 일반 패턴을 제공합니다. 이러한 쿼리는 대개 표준 `foreach` 루프보다 간결하고 읽기 쉬우며 필터링, 순서 지정 및 그룹화 기능을 제공합니다. 또한 LINQ 쿼리를 통해 성능을 향상시킬 수도 있습니다. 자세한 내용은 [LINQ to Objects(C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects(Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md), [PLINQ (병렬 LINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md), [LINQ 쿼리 소개(C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) 및 [기본 쿼리 작업(Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)을 참조하세요.  
   
--   **컬렉션의 내용을 배열에 복사하는 기능**  
+- **컬렉션의 내용을 배열에 복사하는 기능**  
   
      **CopyTo** 메서드를 사용하면 컬렉션을 배열에 복사할 수 있습니다. 그러나 새 배열의 요소 순서는 열거자가 요소를 반환하는 순서를 기준으로 합니다. 결과 배열은 항상 1차원이며 하한은 0입니다.  
   
  또한 다수의 컬렉션 클래스에는 다음 기능도 포함되어 있습니다.  
   
--   **Capacity 및 Count 속성**  
+- **Capacity 및 Count 속성**  
   
      컬렉션의 용량은 컬렉션에 포함할 수 있는 요소의 수이고, 컬렉션의 카운트는 컬렉션에 실제로 포함되어 있는 요소의 수입니다. 용량이나 카운트 중 하나 또는 둘 다를 숨기는 컬렉션도 있습니다.  
   
@@ -48,11 +48,11 @@ ms.locfileid: "61909140"
   
      <xref:System.Collections.BitArray>는 해당 용량과 길이 및 카운트가 모두 같은 특수한 경우입니다.  
   
--   **일관된 하한**  
+- **일관된 하한**  
   
      컬렉션의 하한은 첫 번째 요소의 인덱스입니다. <xref:System.Collections> 네임스페이스의 모든 인덱싱된 컬렉션은 하한이 0입니다(0부터 인덱싱됨). <xref:System.Array>의 기본 하한은 0이지만 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType>를 사용하여 **Array** 클래스의 인스턴스를 만들 때 다른 하한을 정의할 수 있습니다.  
   
--   **여러 스레드로부터의 액세스를 위한 동기화**(<xref:System.Collections> 클래스에만 해당됨).  
+- **여러 스레드로부터의 액세스를 위한 동기화**(<xref:System.Collections> 클래스에만 해당됨).  
   
      <xref:System.Collections> 네임스페이스의 제네릭이 아닌 컬렉션 형식은 동기화와 관련하여 어느 정도의 스레드 보안을 제공합니다(일반적으로 <xref:System.Collections.ICollection.SyncRoot%2A> 및 <xref:System.Collections.ICollection.IsSynchronized%2A> 멤버를 통해 노출됨). 이러한 컬렉션은 기본적으로 스레드로부터 안전하지 않습니다. 확장 가능하며 효율적인 다중 스레드 방식으로 컬렉션에 액세스해야 하는 경우에는 <xref:System.Collections.Concurrent> 네임스페이스의 클래스 중 하나를 사용하거나 변경할 수 없는 컬렉션을 사용하는 것이 좋습니다. 자세한 내용은 [스레드로부터 안전한 컬렉션](../../../docs/standard/collections/thread-safe/index.md)을 참조하세요.  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], adding tooltips
 - data grids [Windows Forms], adding tooltips
 ms.assetid: 2a81f9de-d58b-4ea8-bc0b-8d93c2f4cf78
-ms.openlocfilehash: 3307c92a13e5730de6dce0fe45b924e44b7af554
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d0e9b3ad742633b135a2fe1c00af3fa72af7b44a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640298"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663449"
 ---
 # <a name="how-to-add-tooltips-to-individual-cells-in-a-windows-forms-datagridview-control"></a>방법: Windows Forms DataGridView 컨트롤에서 개별 셀에 도구 설명 추가
 기본적으로 도구 설명의 값을 표시 하 되 <xref:System.Windows.Forms.DataGridView> 너무 작아서 전체 내용을 표시할 수 없는 셀입니다. 그러나에 개별 셀에 대 한 도구 설명 텍스트 값을 설정 하려면이 동작을 재정의할 수 있습니다. 셀에 대 한 추가 정보를 표시 하거나 셀 내용에 대 한 대체 설명을 사용자에 게 제공할 수에 유용 합니다. 예를 들어 상태 아이콘을 표시 하는 행에 있는 경우 도구 설명을 사용 하 여 텍스트 설명을 제공 하는 것이 좋습니다.  

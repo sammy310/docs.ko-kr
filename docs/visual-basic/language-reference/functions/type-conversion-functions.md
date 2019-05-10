@@ -81,12 +81,12 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-ms.openlocfilehash: 56dad921b2900061dbe2db0d8f1faaf759641f87
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3321a9a290e6ba49be289848e4d16907ad9edbda
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802299"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662587"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>형식 변환 함수(Visual Basic)
 이러한 함수는 변환 코드가 식을 계산 하는 코드의 일부인 즉 인라인으로 컴파일됩니다. 때때로 성능을 향상 시키는 변환을 수행 하는 프로시저에 대 한 호출이 있습니다. 각 함수는 식에서 특정 데이터 형식으로 강제 변환합니다.  
@@ -171,21 +171,21 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
 
 ## <a name="behavior"></a>동작  
   
--   **강제 변환 합니다.** 일반적으로 기본 데이터 형식 보다는 특정 데이터 형식 작업의 결과 강제 하는 데이터 형식 변환 함수를 사용할 수 있습니다. 사용 예를 들어 `CDec` 10 진수 연산을 경우는 단 정밀도, 배정밀도 정수 산술 연산은 일반적으로 수행 됩니다.  
+- **강제 변환 합니다.** 일반적으로 기본 데이터 형식 보다는 특정 데이터 형식 작업의 결과 강제 하는 데이터 형식 변환 함수를 사용할 수 있습니다. 사용 예를 들어 `CDec` 10 진수 연산을 경우는 단 정밀도, 배정밀도 정수 산술 연산은 일반적으로 수행 됩니다.  
   
--   **변환 실패입니다.** 경우는 `expression` 함수에 전달 되는 데이터 형식의 범위를 벗어난 하는 변환할는 <xref:System.OverflowException> 발생 합니다.  
+- **변환 실패입니다.** 경우는 `expression` 함수에 전달 되는 데이터 형식의 범위를 벗어난 하는 변환할는 <xref:System.OverflowException> 발생 합니다.  
   
--   **소수 부분입니다.** 정수가 아닌 값을 정수 계열 변환 하는 경우 입력에서 정수 변환 함수 (`CByte`, `CInt`, `CLng`, `CSByte`를 `CShort`를 `CUInt`, `CULng`, 및 `CUShort`) 제거 합니다 소수 부분 및 값을 가장 가까운 정수로 반올림 합니다.  
+- **소수 부분입니다.** 정수가 아닌 값을 정수 계열 변환 하는 경우 입력에서 정수 변환 함수 (`CByte`, `CInt`, `CLng`, `CSByte`를 `CShort`를 `CUInt`, `CULng`, 및 `CUShort`) 제거 합니다 소수 부분 및 값을 가장 가까운 정수로 반올림 합니다.  
   
      소수 부분이 정확 하 게 하는 경우 0.5 정수 변환 함수를 반올림 하는 가장 근사한 짝수 정수로 합니다. 예를 들어 0.5 0 및 1.5와 2.5는 2로 반올림으로 반올림 합니다. 이 라고도 *은행원의 반올림*, 및 이러한 많은 숫자를 함께 추가 하는 경우 누적 될 수 있습니다를 보완 하기 위한 것입니다.  
   
      `CInt` 및 `CLng` 에서 다를 <xref:Microsoft.VisualBasic.Conversion.Int%2A> 및 <xref:Microsoft.VisualBasic.Conversion.Fix%2A> 함수는 숫자의 소수 부분을 반올림 하는 것이 아니라, truncate입니다. 또한 `Fix` 고 `Int` 에 통과할 때 항상 동일한 데이터 형식의 값을 반환 합니다.  
   
--   **변환 날짜/시간입니다.** 사용 된 <xref:Microsoft.VisualBasic.Information.IsDate%2A> 날짜 및 시간 값을 변환할 수 있는지를 결정 하는 함수입니다. `CDate` 리터럴 날짜 및 시간 리터럴 하지만 숫자가 아닌 값을 인식합니다. Visual Basic 6.0을 변환할 `Date` 값을 `Date` Visual Basic 2005의에서 값 또는 이상 버전을 사용할 수는 <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> 메서드.  
+- **변환 날짜/시간입니다.** 사용 된 <xref:Microsoft.VisualBasic.Information.IsDate%2A> 날짜 및 시간 값을 변환할 수 있는지를 결정 하는 함수입니다. `CDate` 리터럴 날짜 및 시간 리터럴 하지만 숫자가 아닌 값을 인식합니다. Visual Basic 6.0을 변환할 `Date` 값을 `Date` Visual Basic 2005의에서 값 또는 이상 버전을 사용할 수는 <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> 메서드.  
   
--   **중립 날짜/시간 값입니다.** 합니다 [날짜 데이터 형식](../../../visual-basic/language-reference/data-types/date-data-type.md) 항상 날짜 및 시간 정보를 포함 합니다. 형식 변환 목적으로, Visual Basic은 간주 1/1/0001 (1 년 1 월 1 일) 수를 *중립 값* 시간에 대 한 중립 값으로 날짜 및 00시: 00 (자정)에 대 한 합니다. 변환 하는 경우는 `Date` 값을 문자열로 `CStr` 기본값이 결과 문자열에 포함 되지 않습니다. 예를 들어, 변환 하는 경우 `#January 1, 0001 9:30:00#` 문자열로 결과 "오전 9시 30분: 00"은 날짜 정보를 표시 하지 않습니다. 그러나 날짜 정보는 여전히 원래 `Date` 값과 같은 함수를 사용 하 여 복구할 수 있습니다 <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> 함수입니다.  
+- **중립 날짜/시간 값입니다.** 합니다 [날짜 데이터 형식](../../../visual-basic/language-reference/data-types/date-data-type.md) 항상 날짜 및 시간 정보를 포함 합니다. 형식 변환 목적으로, Visual Basic은 간주 1/1/0001 (1 년 1 월 1 일) 수를 *중립 값* 시간에 대 한 중립 값으로 날짜 및 00시: 00 (자정)에 대 한 합니다. 변환 하는 경우는 `Date` 값을 문자열로 `CStr` 기본값이 결과 문자열에 포함 되지 않습니다. 예를 들어, 변환 하는 경우 `#January 1, 0001 9:30:00#` 문자열로 결과 "오전 9시 30분: 00"은 날짜 정보를 표시 하지 않습니다. 그러나 날짜 정보는 여전히 원래 `Date` 값과 같은 함수를 사용 하 여 복구할 수 있습니다 <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> 함수입니다.  
   
--   **문화권 구분 합니다.** 응용 프로그램에 대 한 현재 문화권 설정에 따라 변환을 수행 하는 문자열을 포함 하는 형식 변환 함수입니다. 예를 들어 `CDate` 시스템의 로캘 설정에 따라 날짜 형식을 인식 합니다. 일, 월 및 연도 로캘에 대 한 올바른 순서로 제공 해야 합니다 또는 날짜를 올바르게 해석 될 수 있습니다. 자세한 날짜 형식은 "Wednesday" 등의 주 날짜 문자열을 포함 하는 경우 인식 되지 않습니다.  
+- **문화권 구분 합니다.** 응용 프로그램에 대 한 현재 문화권 설정에 따라 변환을 수행 하는 문자열을 포함 하는 형식 변환 함수입니다. 예를 들어 `CDate` 시스템의 로캘 설정에 따라 날짜 형식을 인식 합니다. 일, 월 및 연도 로캘에 대 한 올바른 순서로 제공 해야 합니다 또는 날짜를 올바르게 해석 될 수 있습니다. 자세한 날짜 형식은 "Wednesday" 등의 주 날짜 문자열을 포함 하는 경우 인식 되지 않습니다.  
   
      로캘에 지정 된 것과 다른 형식으로 값의 문자열 표현에서 변환 해야 할 경우 Visual Basic 형식 변환 함수를 사용할 수 없습니다. 이 위해 사용 합니다 `ToString(IFormatProvider)` 및 `Parse(String, IFormatProvider)` 메서드는 값의 형식입니다. 사용 예를 들어 <xref:System.Double.Parse%2A?displayProperty=nameWithType> 문자열을 변환 하는 경우는 `Double`를 사용 하 여 <xref:System.Double.ToString%2A?displayProperty=nameWithType> 형식의 값을 변환 하는 경우 `Double` 문자열로 합니다.  
   

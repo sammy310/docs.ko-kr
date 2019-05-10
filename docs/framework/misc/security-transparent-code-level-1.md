@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: afec37a6510e445f1fe2c430684099af967be0ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 01f9784cc2263c282d75251556a1f000027ca2ae
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868760"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639783"
 ---
 # <a name="security-transparent-code-level-1"></a>보안 투명 코드, 수준 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -28,11 +28,11 @@ ms.locfileid: "61868760"
   
  이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   
--   [수준 1 투명도 모델](#the_level_1_transparency_model)  
+- [수준 1 투명도 모델](#the_level_1_transparency_model)  
   
--   [투명도 특성](#transparency_attributes)  
+- [투명도 특성](#transparency_attributes)  
   
--   [보안 투명도 예제](#security_transparency_examples)  
+- [보안 투명도 예제](#security_transparency_examples)  
   
 <a name="the_level_1_transparency_model"></a>   
 ## <a name="the-level-1-transparency-model"></a>수준 1 투명도 모델  
@@ -40,11 +40,11 @@ ms.locfileid: "61868760"
   
  전체 어셈블리, 어셈블리의 일부 클래스 또는 클래스의 일부 메서드를 보안 투명으로 표시할 수 있습니다. 보안 투명 코드는 권한을 높일 수 없습니다. 이 제한에 따라 다음 세 가지 결과가 발생합니다.  
   
--   보안 투명 코드는 <xref:System.Security.Permissions.SecurityAction.Assert> 작업을 수행할 수 없습니다.  
+- 보안 투명 코드는 <xref:System.Security.Permissions.SecurityAction.Assert> 작업을 수행할 수 없습니다.  
   
--   보안 투명 코드로 충족되는 링크 요청은 전체 요청이 됩니다.  
+- 보안 투명 코드로 충족되는 링크 요청은 전체 요청이 됩니다.  
   
--   보안 투명 코드에서 실행되어야 하는 안전하지 않은(확인할 수 없는) 코드로 인해 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> 보안 권한에 대한 전체 요청이 발생합니다.  
+- 보안 투명 코드에서 실행되어야 하는 안전하지 않은(확인할 수 없는) 코드로 인해 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> 보안 권한에 대한 전체 요청이 발생합니다.  
   
  이들 규칙은 CLR(공용 언어 런타임)에서 실행 중에 적용됩니다. 보안 투명 코드는 호출하는 코드의 모든 보안 요구 사항을 다시 호출자에게 전달합니다. 보안 투명 코드를 통해 전달되는 요청은 권한을 높일 수 없습니다. 조금 신뢰 응용 프로그램이 보안 투명 코드를 호출하고 높은 권한에 대한 요청이 발생하면 요청이 다시 조금 신뢰 코드로 전달되고 실패합니다. 보안 투명 코드는 자산 작업을 수행할 수 없으므로 요청을 중지할 수 없습니다. 완전 신뢰 코드에서 같은 보안 투명 코드를 호출하면 요청이 성공합니다.  
   
