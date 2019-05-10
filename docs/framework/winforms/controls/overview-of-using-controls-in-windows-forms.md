@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
-ms.openlocfilehash: 247ec4fc11f33587e77c49244b239a574c8f3cfc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 16a28db6477ea86a8bc853fbf506cf6d6d4fa5e0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012713"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654584"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>Windows Forms에서 컨트롤 사용 개요
 이 항목에서는 Windows Forms 응용 프로그램의 필수 요소에 설명 하 고 컨트롤을 사용 하 여 Windows Forms 응용 프로그램에서 이벤트를 처리 하는 간단한 예제를 제공 합니다.  

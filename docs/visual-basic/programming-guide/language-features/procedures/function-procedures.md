@@ -9,12 +9,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], Function procedures
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
-ms.openlocfilehash: 568489d6034316e895cd999801241fa995aadefa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4fd24369380e5f8ccf8de939c36ba72a12dc872e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864405"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649611"
 ---
 # <a name="function-procedures-visual-basic"></a>Function 프로시저(Visual Basic)
 A `Function` 절차는 일련의 Visual Basic 문으로 둘러싸인 합니다 `Function` 및 `End Function` 문. `Function` 프로시저는 작업을 수행한 다음 호출 코드에 제어를 반환 합니다. 제어를 반환 하기 호출 코드에도 값을 반환 합니다.  
@@ -54,7 +54,7 @@ End Function
 ## <a name="returning-values"></a>반환 값  
  값을 `Function` 프로시저에서 전송 하는 호출 코드에 다시 반환 값 이라고 합니다. 프로시저는 두 가지 방법 중 하나에서이 값을 반환합니다.  
   
--   사용 된 `Return` 반환 값 및 반환을 지정 하는 문을 호출 프로그램에 즉시 제어 합니다. 다음은 이에 대한 예입니다.  
+- 사용 된 `Return` 반환 값 및 반환을 지정 하는 문을 호출 프로그램에 즉시 제어 합니다. 다음은 이에 대한 예입니다.  
   
 ```vb  
 Function FunctionName [(ParameterList)] As ReturnType  
@@ -64,7 +64,7 @@ Function FunctionName [(ParameterList)] As ReturnType
 End Function  
 ```  
   
--   프로시저의 하나 이상의 문에서 함수 이름에 값을 할당합니다. 될 때까지 호출 프로그램에 제어를 반환 하지 않습니다는 `Exit Function` 또는 `End Function` 문이 실행 됩니다. 다음은 이에 대한 예입니다.  
+- 프로시저의 하나 이상의 문에서 함수 이름에 값을 할당합니다. 될 때까지 호출 프로그램에 제어를 반환 하지 않습니다는 `Exit Function` 또는 `End Function` 문이 실행 됩니다. 다음은 이에 대한 예입니다.  
   
 ```vb  
 Function FunctionName [(ParameterList)] As ReturnType  

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_StrConvSCandTC
 ms.assetid: d8e6a11b-f549-43b5-8337-0594340e1325
-ms.openlocfilehash: a209a83ce5bd3ecd9580abab330f1e09ecc3864e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 06fa5efdc36dd4501192838394b9bc63b1b959c5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61594843"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648870"
 ---
 # <a name="simplifiedchinese-and-vbstrconvtraditionalchinese-cannot-be-combined"></a>SimplifiedChinese와 VbStrConv.TraditionalChinese는 함께 사용할 수 없습니다.
 애플리케이션에서 함께 사용할 수 없는 `VbStrConv` 열거형 멤버 `SimplifiedChinese` 및 `TraditionalChinese`를 결합하려고 합니다.  

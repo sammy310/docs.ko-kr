@@ -2,12 +2,12 @@
 title: '전송: UDP 샘플에의 한 사용자 지정 트랜잭션'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: e257c987d93fc7a5b5e8e7f51d79dd8399b45d72
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ff53890da73d81165da6b0e845360424ec869a87
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760048"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637117"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>전송: UDP 샘플에의 한 사용자 지정 트랜잭션
 이 샘플은 기반는 [전송 합니다. UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Windows Communication Foundation (WCF)에서 샘플[전송 확장성](../../../../docs/framework/wcf/samples/transport-extensibility.md)합니다. 이 샘플은 사용자 지정 트랜잭션 흐름을 지원하도록 UDP 전송 샘플을 확장하고 <xref:System.ServiceModel.Channels.TransactionMessageProperty> 속성의 사용 방법을 보여 줍니다.  

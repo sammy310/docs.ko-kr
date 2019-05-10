@@ -2,12 +2,12 @@
 title: WCF 서비스 이름 바꾸기
 ms.date: 03/30/2017
 ms.assetid: 14235a65-b1c5-409d-b6cc-a979acd54bbd
-ms.openlocfilehash: a215523b92757e3bde1dae2e50de22169020e870
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8cb86621972423f55bfa18c60c1d4eb60cacb205
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61955144"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651059"
 ---
 # <a name="renaming-a-wcf-service"></a>WCF 서비스 이름 바꾸기
 이 항목에서는 Windows Communication Foundation (WCF) 서비스 이름을 바꿀 수는 방법을 설명 합니다.  

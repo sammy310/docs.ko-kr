@@ -2,12 +2,12 @@
 title: 순수 함수 (Visual Basic)를 사용 하 여 리팩터링
 ms.date: 07/20/2015
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
-ms.openlocfilehash: ac14385b87899490099dd0664264daef538319a8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 96e8534280d560502b04b1880273cf7254f36e20
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787116"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64666093"
 ---
 # <a name="refactoring-using-a-pure-function-visual-basic"></a>순수 함수 (Visual Basic)를 사용 하 여 리팩터링
 다음 예제에서는 이전 예제를 리팩터링하여 [확장 메서드 (Visual Basic)를 사용 하 여 리팩터링](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)는 순수 정적 메서드 이동할단락의텍스트를찾기위해코드를이예제에서는순수함수를사용하려면`ParagraphText`.  

@@ -2,12 +2,12 @@
 title: Fundamental Windows Workflow 개념
 ms.date: 03/30/2017
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
-ms.openlocfilehash: ce17e5436ecff1937db605450d187184df9104a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 730679c892d96ff6de2d02ee1e1afdd52e452439
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945667"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650943"
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Fundamental Windows Workflow 개념
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]의 워크플로 개발에는 일부 개발자들에게 생소한 개념이 사용됩니다. 이 항목에서는 이러한 몇 가지 개념과 그 구현 방법에 대해 설명합니다.  

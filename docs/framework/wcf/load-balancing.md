@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: a43546b9cbb95cd16c1d94372e786acd103ea0bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d3b24ef892e1fe3dd28fee4ce8fa44f7373c7c01
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921955"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645487"
 ---
 # <a name="load-balancing"></a>부하 분산
 Windows Communication Foundation (WCF) 응용 프로그램의 용량을 늘리려면 하나의 방법은 부하 분산 된 서버 팜에 배포 하 여 확장할 것입니다. WCF 응용 프로그램으로 표준 부하 분산 기술을 Windows 네트워크 부하 분산과 같은 소프트웨어 부하 분산 장치를 포함 하 여 하드웨어 기반 부하 분산을 사용 하 여 부하가 분산 될 수 있습니다.  

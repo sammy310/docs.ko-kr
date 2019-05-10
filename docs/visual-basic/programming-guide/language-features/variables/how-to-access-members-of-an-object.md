@@ -5,12 +5,12 @@ helpviewer_keywords:
 - members [Visual Basic], accessing
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
-ms.openlocfilehash: de00e428cc3d9d7a5688e853b0ff4295fec5b3e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 46c5eb9bc79b3a408a5a4fc9f40fee7391937c58
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052133"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663596"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>방법: 개체 (Visual Basic)의 멤버에 액세스
 개체 변수에 개체를 참조 하는 경우, 해당 메서드, 속성, 필드 및 이벤트와 같은 경우 해당 개체의 멤버를 사용 하려는 경우가 많습니다. 예를 들어 만든 후 새 <xref:System.Windows.Forms.Form> 개체를 설정 하려는 경우 해당 <xref:System.Windows.Forms.Control.Text%2A> 속성 또는 호출 해당 <xref:System.Windows.Forms.Control.Focus%2A> 메서드.  

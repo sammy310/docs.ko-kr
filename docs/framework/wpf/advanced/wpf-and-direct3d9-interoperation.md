@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
-ms.openlocfilehash: 38f5eb36e3e5c055c5a354a67e15cde8049a2967
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d04278cd2814106dacad53f268ef03227083274e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669205"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650816"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>WPF 및 Direct3D9 상호 운용성
 Windows Presentation Foundation (WPF) 응용 프로그램에서 호스팅할 Direct3D9 콘텐츠를 포함할 수 있습니다. 이 항목에서는 WPF를 사용 하 여 효율적으로 상호 운용 되도록 Direct3D9 콘텐츠를 만드는 방법을 설명 합니다.  
@@ -80,13 +80,13 @@ Windows Presentation Foundation (WPF) 응용 프로그램에서 호스팅할 Dir
  Windows Vista 이상 운영 체제를 WDDM을 사용 하도록 구성 된 대상에 렌더링 대상 질감을 만들를 수준 0 화면을 전달 합니다 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 메서드. 잠글 수 있는 렌더링 대상 질감을 만들 수 없습니다. 성능은 저하 됩니다 때문에 Windows xp에서는이 방법은 권장 되지 않습니다.  
   
 ## <a name="handling-device-state"></a>장치 상태 처리  
- <xref:System.Windows.Interop.D3DImage> 클래스 라고 하는 두 디스플레이 버퍼를 관리 합니다 *백 버퍼* 하며 *프런트 버퍼가*. 백 버퍼는 프로그램 Direct3D 화면입니다.  백 버퍼에 대 한 변경 내용에 복사 됩니다 프런트 버퍼가 호출할 때를 <xref:System.Windows.Interop.D3DImage.Unlock%2A> 메서드를 하드웨어에 표시 됩니다. 경우에 따라 프런트 버퍼가 수 없게 됩니다. 화면 잠금, Direct3D 응용 프로그램을 제외 하는 전체 화면, 사용자 전환 또는 기타 시스템 활동과이 부족 한 가용성을 발생할 수 있습니다. WPF 응용 프로그램을 처리 하 여 알려집니다 이런 경우는 <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> 이벤트입니다.  응용 프로그램이 사용할 수 없게 되는 프런트 버퍼가에 반응 하는 방법을 소프트웨어 렌더링으로 대체 WPF 사용 여부에 따라 달라 집니다. <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 메서드 소프트웨어 렌더링으로 WPF 다시 속하는지 여부를 지정 하는 매개 변수를 받아들이는 오버 로드가 있습니다.  
+ <xref:System.Windows.Interop.D3DImage> 클래스 라고 하는 두 디스플레이 버퍼를 관리 합니다 *백 버퍼* 하며 *프런트 버퍼가*. 백 버퍼는 프로그램 Direct3D 화면입니다.  백 버퍼에 대 한 변경 내용에 복사 됩니다 프런트 버퍼가 호출할 때를 <xref:System.Windows.Interop.D3DImage.Unlock%2A> 메서드를 하드웨어에 표시 됩니다. 경우에 따라 프런트 버퍼가 수 없게 됩니다. 화면 잠금, Direct3D 애플리케이션을 제외 하는 전체 화면, 사용자 전환 또는 기타 시스템 활동과이 부족 한 가용성을 발생할 수 있습니다. WPF 애플리케이션을 처리 하 여 알려집니다 이런 경우는 <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> 이벤트입니다.  애플리케이션이 사용할 수 없게 되는 프런트 버퍼가에 반응 하는 방법을 소프트웨어 렌더링으로 대체 WPF 사용 여부에 따라 달라 집니다. <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 메서드 소프트웨어 렌더링으로 WPF 다시 속하는지 여부를 지정 하는 매개 변수를 받아들이는 오버 로드가 있습니다.  
   
- 호출 하는 경우는 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%29> 오버 로드 하거나 호출 합니다 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%2CSystem.Boolean%29> 오버 로드는 `enableSoftwareFallback` 매개 변수 설정 `false`, 프런트 버퍼를 사용할 수 없게 하 고 아무 것도 렌더링 시스템 백 버퍼에 대 한 참조를 해제 표시 됩니다. 프런트 버퍼가 다시 제공 되 면 렌더링 발생을 <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> WPF 응용 프로그램에 알리는 이벤트입니다.  에 대 한 이벤트 처리기를 만들 수는 <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> 유효한 Direct3D 화면을 사용 하 여 다시 렌더링을 다시 시작 하는 이벤트입니다. 렌더링을 다시 시작 하려면 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A>합니다.  
+ 호출 하는 경우는 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%29> 오버 로드 하거나 호출 합니다 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%2CSystem.Boolean%29> 오버 로드는 `enableSoftwareFallback` 매개 변수 설정 `false`, 프런트 버퍼를 사용할 수 없게 하 고 아무 것도 렌더링 시스템 백 버퍼에 대 한 참조를 해제 표시 됩니다. 프런트 버퍼가 다시 제공 되 면 렌더링 발생을 <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> WPF 애플리케이션에 알리는 이벤트입니다.  에 대 한 이벤트 처리기를 만들 수는 <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> 유효한 Direct3D 화면을 사용 하 여 다시 렌더링을 다시 시작 하는 이벤트입니다. 렌더링을 다시 시작 하려면 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A>합니다.  
   
  호출 하는 경우는 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%2CSystem.Boolean%29> 오버 로드는 `enableSoftwareFallback` 매개 변수 설정 `true`를 호출 하지 않아도 되므로 프런트 버퍼를 사용할 수 없을 때 렌더링 시스템은 백 버퍼에 대 한 참조를 유지 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 때 앞 버퍼를 다시 사용할 수 있습니다.  
   
- 소프트웨어 렌더링을 사용 하는 경우 여기서 사용자의 장치를 사용할 수 없지만 렌더링 시스템은 Direct3D 화면에 대 한 참조를 유지 하는 경우 있을 수 있습니다. Direct3D9 장치를 사용할 수 있는지를 확인 하려면 호출을 `TestCooperativeLevel` 메서드. Direct3D9Ex 장치 호출을 확인 하는 `CheckDeviceState` 메서드를 때문에 `TestCooperativeLevel` 메서드는 사용 되지 않으며 항상 성공 반환 합니다. 사용자 장치를 사용할 경우 호출 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 백 버퍼에 대 한 WPF의 참조를 해제 합니다.  장치를 재설정 해야 할 경우 호출 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 사용 하 여는 `backBuffer` 매개 변수 설정 `null`, 다음 호출 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 사용 하 여 다시 `backBuffer` 유효한 Direct3D 화면을로 설정 합니다.  
+ 소프트웨어 렌더링을 사용 하는 경우 여기서 사용자의 장치를 사용할 수 없지만 렌더링 시스템은 Direct3D 화면에 대 한 참조를 유지 하는 경우 있을 수 있습니다. Direct3D9 장치를 사용할 수 있는지를 확인 하려면 호출을 `TestCooperativeLevel` 메서드. Direct3D9Ex 장치 호출을 확인 하는 `CheckDeviceState` 메서드를 때문에 `TestCooperativeLevel` 메서드는 사용 되지 않으며 항상 성공 반환 합니다. 사용자 장치를 사용할 경우 호출 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 백 버퍼에 대 한 WPF의 참조를 해제 합니다.  디바이스를 재설정 해야 할 경우 호출 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 사용 하 여는 `backBuffer` 매개 변수 설정 `null`, 다음 호출 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 사용 하 여 다시 `backBuffer` 유효한 Direct3D 화면을로 설정 합니다.  
   
  호출 된 `Reset` 다중 어댑터 지원을 구현 하는 경우에 잘못 된 장치에서 복구 하는 방법입니다. 아니면 모든 Direct3D9 인터페이스를 해제 하 고 전체적으로 다시 만듭니다. 어댑터 레이아웃 변경 된 경우에 변경 전에 만들어진 Direct3D9 개체 업데이트 되지 않습니다.  
   

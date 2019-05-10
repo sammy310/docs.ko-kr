@@ -6,12 +6,12 @@ helpviewer_keywords:
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: f73648888b28c349104a70e78c29eb208d438b78
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fe07b01cfa62d8d1cbc2e4a61cac814425af7da0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761691"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639844"
 ---
 # <a name="visual-basic-coding-conventions"></a>Visual Basic 코딩 규칙
 Microsoft는 이 항목의 지침에 따라 예제와 설명서를 개발합니다. 사용자가 동일한 코딩 규칙을 따른다면, 다음과 같은 이점을 얻을 수 있습니다.  

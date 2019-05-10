@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Private keyword [Visual Basic]
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
-ms.openlocfilehash: d6e28e5e87c3a88e4db3fc81177894683dbb0908
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ddb2d165de330758f58fbbcb5872e820e639808f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920447"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642787"
 ---
 # <a name="private-visual-basic"></a>Private(Visual Basic)
 하나 이상의 선언 된 프로그래밍 요소를 포함 된 모든 형식을 포함 하 여 해당 선언 컨텍스트 내 에서만 액세스할 수 있도록 지정 합니다.  
@@ -25,13 +25,13 @@ ms.locfileid: "61920447"
 
 ## <a name="rules"></a>규칙  
 
--   **선언 컨텍스트입니다.** `Private`는 모듈 수준에서만 사용할 수 있습니다. 즉, 선언 컨텍스트는 `Private` 요소 모듈, 클래스 또는 구조 여야 하며 소스 파일, 네임 스페이스, 인터페이스 또는 프로시저 일 수 없습니다.  
+- **선언 컨텍스트입니다.** `Private`는 모듈 수준에서만 사용할 수 있습니다. 즉, 선언 컨텍스트는 `Private` 요소 모듈, 클래스 또는 구조 여야 하며 소스 파일, 네임 스페이스, 인터페이스 또는 프로시저 일 수 없습니다.  
   
 ## <a name="behavior"></a>동작  
   
--   **액세스 수준입니다.** 선언 컨텍스트 내에서 모든 코드에 액세스할 수는 `Private` 요소입니다. 이 중첩된 된 클래스 또는 열거형에 대입 식을 같은 포함 된 형식에 코드를 포함합니다. 액세스할 수 없는 코드 선언 컨텍스트 외부에서 해당 `Private` 요소입니다.  
+- **액세스 수준입니다.** 선언 컨텍스트 내에서 모든 코드에 액세스할 수는 `Private` 요소입니다. 이 중첩된 된 클래스 또는 열거형에 대입 식을 같은 포함 된 형식에 코드를 포함합니다. 액세스할 수 없는 코드 선언 컨텍스트 외부에서 해당 `Private` 요소입니다.  
   
--   **액세스 한정자입니다.** 액세스 수준을 지정 하는 키워드 라고 *액세스 한정자*합니다. 액세스 한정자와 비교 [액세스 수준을 Visual Basic의](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)합니다.  
+- **액세스 한정자입니다.** 액세스 수준을 지정 하는 키워드 라고 *액세스 한정자*합니다. 액세스 한정자와 비교 [액세스 수준을 Visual Basic의](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)합니다.  
   
  `Private` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.  
   

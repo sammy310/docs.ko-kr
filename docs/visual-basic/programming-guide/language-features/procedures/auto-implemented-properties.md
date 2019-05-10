@@ -9,12 +9,12 @@ helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: aa045dd5454819a37ad81c76d97fd3e61e7d0420
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4577609c78271ac91e011b20ef6a8b4066072428
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864315"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649661"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>자동 구현 속성(Visual Basic)
 *자동 구현 속성* 신속 하 게 코드를 작성 하지 않고도 클래스의 속성을 지정할 수 있도록 `Get` 고 `Set` 속성입니다. 자동 구현 속성에 대한 코드를 작성하면 Visual Basic 컴파일러에서 관련 `Get` 및 `Set` 프로시저가 생성될 뿐만 아니라 속성 변수를 저장하는 전용 필드가 자동으로 만들어집니다.  
@@ -52,13 +52,13 @@ End Class
   
  지원 필드에는 또한 다음과 같은 특징이 있습니다.  
   
--   속성 자체에 `Public`과 같은 다른 액세스 수준이 있는 경우에도, 지원 필드에 대한 액세스 한정자는 항상 `Private`입니다.  
+- 속성 자체에 `Public`과 같은 다른 액세스 수준이 있는 경우에도, 지원 필드에 대한 액세스 한정자는 항상 `Private`입니다.  
   
--   속성이 `Shared`로 표시된 경우 지원 필드도 공유됩니다.  
+- 속성이 `Shared`로 표시된 경우 지원 필드도 공유됩니다.  
   
--   속성에 대해 지정된 특성은 지원 필드에 적용되지 않습니다.  
+- 속성에 대해 지정된 특성은 지원 필드에 적용되지 않습니다.  
   
--   클래스 내의 코드에서, 그리고 조사식 창과 같은 디버깅 도구에서 지원 필드에 액세스할 수 있습니다. 그러나 지원 필드는 IntelliSense 단어 완성 목록에 표시되지 않습니다.  
+- 클래스 내의 코드에서, 그리고 조사식 창과 같은 디버깅 도구에서 지원 필드에 액세스할 수 있습니다. 그러나 지원 필드는 IntelliSense 단어 완성 목록에 표시되지 않습니다.  
   
 ## <a name="initializing-an-auto-implemented-property"></a>자동 구현 속성 초기화  
  필드를 초기화하는 데 사용할 수 있는 모든 식이 자동 구현 속성을 초기화하는 데 유효합니다. 자동 구현 속성을 초기화하면 식이 계산되어 속성에 대한 `Set` 프로시저에 전달됩니다. 다음 코드 예제에서는 초기 값이 포함된 일부 자동 구현 속성을 보여 줍니다.  
@@ -78,17 +78,17 @@ End Class
   
  다음 중 하나를 수행하려는 경우 확장된 속성 정의 구문을 사용해야 합니다.  
   
--   속성의 `Get` 또는 `Set` 프로시저에 추가합니다. 예를 들어 `Set` 프로시저에 들어오는 값의 유효성을 검사하는 코드를 추가합니다. 예를 들어 해당 속성 값을 설정하기 전에 전화번호를 나타내는 문자열에 필요한 수의 숫자가 포함되었는지 확인해야 할 수 있습니다.  
+- 속성의 `Get` 또는 `Set` 프로시저에 추가합니다. 예를 들어 `Set` 프로시저에 들어오는 값의 유효성을 검사하는 코드를 추가합니다. 예를 들어 해당 속성 값을 설정하기 전에 전화번호를 나타내는 문자열에 필요한 수의 숫자가 포함되었는지 확인해야 할 수 있습니다.  
   
--   `Get` 및 `Set` 프로시저에 대해 다른 접근성을 지정합니다. `Set` 프로시저를 `Private`으로, `Get` 프로시저를 `Public`으로 만들려는 경우를 예로 들 수 있습니다.  
+- `Get` 및 `Set` 프로시저에 대해 다른 접근성을 지정합니다. `Set` 프로시저를 `Private`으로, `Get` 프로시저를 `Public`으로 만들려는 경우를 예로 들 수 있습니다.  
   
--   `WriteOnly`인 속성을 만듭니다.  
+- `WriteOnly`인 속성을 만듭니다.  
   
--   매개 변수가 있는 속성을 사용합니다(`Default` 속성 포함). 속성에 대한 매개 변수를 지정하기 위해, 또는 `Set` 프로시저에 대해 추가 매개 변수를 지정하기 위해서는 확장된 속성을 선언해야 합니다.  
+- 매개 변수가 있는 속성을 사용합니다(`Default` 속성 포함). 속성에 대한 매개 변수를 지정하기 위해, 또는 `Set` 프로시저에 대해 추가 매개 변수를 지정하기 위해서는 확장된 속성을 선언해야 합니다.  
   
--   지원 필드에 특성을 배치하거나 지원 필드의 액세스 수준을 변경합니다.  
+- 지원 필드에 특성을 배치하거나 지원 필드의 액세스 수준을 변경합니다.  
   
--   지원 필드에 대한 XML 주석을 제공합니다.  
+- 지원 필드에 대한 XML 주석을 제공합니다.  
   
 ## <a name="expanding-an-auto-implemented-property"></a>자동 구현 속성 확장명  
  자동 구현 속성을 `Get` 또는 `Set` 프로시저가 포함된 확장된 속성으로 변환해야 하는 경우 Visual Basic 코드 편집기는 속성에 대한 `Get` 및 `Set` 프로시저와 `End Property` 문을 자동으로 생성할 수 있습니다. 코드를 다음 빈 줄에 커서를 놓고 하는 경우에 생성 되는 `Property` 문을 입력 `G` (에 대 한 `Get`) 또는 `S` (에 대 한 `Set`) ENTER 키를 누릅니다. `Property` 문 끝에서 Enter 키를 누르면 Visual Basic 코드 편집기에서 읽기 전용 및 쓰기 전용 속성에 대한 `Get` 또는 `Set` 프로시저가 자동으로 생성됩니다.  

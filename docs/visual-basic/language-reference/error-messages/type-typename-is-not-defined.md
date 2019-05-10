@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30002
 ms.assetid: b0faf204-57fd-44de-8c05-9db027eea663
-ms.openlocfilehash: c2675d61307d92da1710368668f43af3559060a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1f66b86a61fb0344a449bf0aa46b7655813c7c30
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032099"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664249"
 ---
 # <a name="type-typename-is-not-defined"></a>형식 '\<typename >'가 정의 되지 않은
 문에 정의 되지 않은 형식에 대 한 참조를 만들었습니다. 선언문의 형식 같은 정의 `Enum`, `Structure`를 `Class`, 또는 `Interface`합니다.  

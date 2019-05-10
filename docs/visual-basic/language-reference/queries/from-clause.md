@@ -10,12 +10,12 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: b18ef2f291e20d8a150972a980ba063377b0bc3a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 23b277b2eb14ea6722295aab8d7190d78def6f36
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945342"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639629"
 ---
 # <a name="from-clause-visual-basic"></a>From 절(Visual Basic)
 하나 이상의 범위 변수 및 쿼리 하는 컬렉션을 지정합니다.  

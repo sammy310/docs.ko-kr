@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: 635c791f81107a1800e2ef381f6bea78cbc18e18
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9f1d77ac27def556d94fac12dbde2f36d5b139de
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61830364"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649754"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Visual Basic의 산술 연산자
 산술 연산자는 리터럴, 변수, 다른 식, 함수 및 속성 호출 및 상수를 나타내는 숫자 값의 계산을 포함 하는 친숙 한 산술 연산을 수행 하도록 사용 됩니다. 피연산자의 개별 비트 수준에서 역할 및를 왼쪽 또는 오른쪽의 비트 패턴을 이동할 비트 시프트 연산자는 산술 연산자를 사용 하 여 분류 합니다.  

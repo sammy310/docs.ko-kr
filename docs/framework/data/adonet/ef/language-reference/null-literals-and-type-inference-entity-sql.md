@@ -2,12 +2,12 @@
 title: Null 리터럴 및 형식 유추(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: edd56afb-af1b-4e7d-b210-cb8998143426
-ms.openlocfilehash: 22b548f2fc889b20f76a41001438f75c25f99c00
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3fea03146549f3d42bf08bbd5e7ce355d25bd4eb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760404"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641819"
 ---
 # <a name="null-literals-and-type-inference-entity-sql"></a>Null 리터럴 및 형식 유추(Entity SQL)
 null 리터럴은 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 형식 시스템의 모든 형식과 호환됩니다. 하지만 null 리터럴의 형식을 올바르게 유추할 수 있도록 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 null 리터럴을 사용할 수 있는 위치에 대한 특정 제약 조건을 설정합니다.  

@@ -2,41 +2,41 @@
 title: WCF 웹 HTTP 프로그래밍 개체 모델
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: f1772220ed5f425ec603fd8927f4617446d106eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f8bda6292506b64057dee006fa59b7723fa406b2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096012"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648404"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>WCF 웹 HTTP 프로그래밍 개체 모델
 WCF 웹 HTTP 프로그래밍 모델을 통해 SOAP 없이 기본 HTTP 요청을 통해 Windows Communication Foundation (WCF) 웹 서비스를 노출 하는 개발자. WCF WEB HTTP 프로그래밍 모델은 기존 WCF 확장성 모델 위에 빌드됩니다. 다음과 같은 클래스를 정의합니다.  
   
  **프로그래밍 모델:**  
   
--   <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>  
+- <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>  
   
--   <xref:System.ServiceModel.Web.WebGetAttribute>  
+- <xref:System.ServiceModel.Web.WebGetAttribute>  
   
--   <xref:System.ServiceModel.Web.WebInvokeAttribute>  
+- <xref:System.ServiceModel.Web.WebInvokeAttribute>  
   
--   <xref:System.ServiceModel.Web.WebServiceHost>  
+- <xref:System.ServiceModel.Web.WebServiceHost>  
   
  **채널 및 디스패처 인프라:**  
   
--   <xref:System.ServiceModel.WebHttpBinding>  
+- <xref:System.ServiceModel.WebHttpBinding>  
   
--   <xref:System.ServiceModel.Description.WebHttpBehavior>  
+- <xref:System.ServiceModel.Description.WebHttpBehavior>  
   
  **유틸리티 클래스 및 확장 지점:**  
   
--   <xref:System.UriTemplate>  
+- <xref:System.UriTemplate>  
   
--   <xref:System.UriTemplateTable>  
+- <xref:System.UriTemplateTable>  
   
--   <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
+- <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
   
--   <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>  
+- <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>  
   
 ## <a name="aspnetcacheprofileattribute"></a>AspNetCacheProfileAttribute  
  서비스 작업에 적용된 경우 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>는 작업의 응답을 ASP .NET 출력 캐시에 캐시하는 데 사용해야 하는 구성 파일의 ASP.NET 출력 캐시 프로필을 나타냅니다. 이 속성은 하나의 매개 변수, 즉 구성 파일에서 캐시 설정을 지정하는 캐시 프로필 이름만 사용합니다.  

@@ -2,12 +2,12 @@
 title: SQL Server에서 가장으로 권한 사용자 지정
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: dd7fb4c94c5a0a9bca0cd36b8d76864158072d4e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d44e410727924260640f0f50aea5ea41f264f3af
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877906"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650339"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>SQL Server에서 가장으로 권한 사용자 지정
 많은 수의 응용 프로그램에서 저장 프로시저를 사용하여 데이터에 액세스하며, 이 경우 소유권 체인을 사용하여 액세스를 기본 테이블로 제한합니다. 저장 프로시저에 EXECUTE 권한을 부여하고 기본 테이블에 대한 권한을 취소하거나 거부할 수 있습니다. SQL Server에서는 저장 프로시저 및 테이블의 소유자가 동일한 경우 호출자의 권한을 확인하지 않습니다. 그러나 개체의 소유자가 다른 경우 또는 동적 SQL의 경우에는 소유권 체인이 작동하지 않습니다.  
@@ -59,11 +59,11 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 ### <a name="specifying-the-execution-context"></a>실행 컨텍스트 지정  
  사용자 지정 외에도 EXECUTE AS는 다음 키워드와 함께 사용할 수 있습니다.  
   
--   CALLER. 기본적으로 CALLER로 실행됩니다. 다른 옵션을 지정하지 않으면 프로시저는 호출자의 보안 컨텍스트에서 실행됩니다.  
+- CALLER. 기본적으로 CALLER로 실행됩니다. 다른 옵션을 지정하지 않으면 프로시저는 호출자의 보안 컨텍스트에서 실행됩니다.  
   
--   OWNER. OWNER로 실행할 경우 프로시저는 프로시저 소유자의 컨텍스트에서 실행됩니다. `dbo` 또는 데이터베이스 소유자가 소유한 스키마에서 만들어진 프로시저는 무제한 권한으로 실행됩니다.  
+- OWNER. OWNER로 실행할 경우 프로시저는 프로시저 소유자의 컨텍스트에서 실행됩니다. `dbo` 또는 데이터베이스 소유자가 소유한 스키마에서 만들어진 프로시저는 무제한 권한으로 실행됩니다.  
   
--   SELF. SELF로 실행할 경우 저장 프로시저 작성자의 보안 컨텍스트에서 실행됩니다. 지정된 사용자로 실행하는 것과 같으며, 여기서 지정된 사용자는 프로시저를 만들거나 변경하는 사용자입니다.  
+- SELF. SELF로 실행할 경우 저장 프로시저 작성자의 보안 컨텍스트에서 실행됩니다. 지정된 사용자로 실행하는 것과 같으며, 여기서 지정된 사용자는 프로시저를 만들거나 변경하는 사용자입니다.  
   
 ## <a name="see-also"></a>참고자료
 

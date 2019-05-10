@@ -2,12 +2,12 @@
 title: 모델 선언 함수
 ms.date: 03/30/2017
 ms.assetid: aba87f13-5685-4f6b-ad14-918e8a7d5c2a
-ms.openlocfilehash: c9abf9a3340cd22ab5d654588b1d22e10b5c05fa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a0bea36693122c77d9c1abdf4484ee8e68627a0c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772114"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645869"
 ---
 # <a name="model-declared-function"></a>모델 선언 함수
 A *모델 선언 함수* 함수 개념적 모델에서 선언 되었지만 해당 개념적 모델에 정의 되지 않은입니다. 호스팅 또는 저장소 환경에서 함수를 정의할 수도 있습니다. 예를 들어, 모델 선언 함수를 데이터베이스에 정의된 함수에 매핑하여 개념적 모델에 서버 쪽 기능을 노출할 수 있습니다.  

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - OrElse operator [Visual Basic]
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
-ms.openlocfilehash: ac47b6d7fa4861d18646a23f442caccc4062852f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 23f3758527b787551ad83cbd4e19076b788c9dd8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864497"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649689"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Visual Basic의 논리 및 비트 연산자
 논리 연산자 비교 `Boolean` 식 및 반환 된 `Boolean` 결과입니다. 합니다 `And`, `Or`, `AndAlso`, `OrElse`, 및 `Xor` 연산자는 *이진* 하는 동안 두 개의 피연산자를 고려 하기 때문에 `Not` 연산자는 *단항* 단일 피연산자 걸리기 때문에 있습니다. 이러한 연산자 중 일부에 정수 계열 값의 비트 논리 연산을 수행할 수도 있습니다.  

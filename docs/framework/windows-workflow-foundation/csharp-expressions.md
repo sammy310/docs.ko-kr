@@ -2,12 +2,12 @@
 title: C# 식
 ms.date: 03/30/2017
 ms.assetid: 29110be7-f4e3-407e-8dbe-78102eb21115
-ms.openlocfilehash: 2ffc380d9c65ec398084bfcbeadfe0fd2c3d6720
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 23c5ee0e0d1408f19e87615008ee95266176d27b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009814"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650949"
 ---
 # <a name="c-expressions"></a>C# 식
 부터 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], C# 식의 Windows WF (Workflow Foundation) 지원 됩니다. 새 C# 워크플로 프로젝트 대상으로 하는 Visual Studio 2012에서 만든 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 사용 하 여 C# 식 및 Visual Basic 워크플로 프로젝트를 Visual Basic 식을 사용 합니다. Visual Basic 식을 사용하는 기존 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 워크플로 프로젝트는 프로젝트 언어에 관계없이 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]로 마이그레이션할 수 있으며 지원됩니다. 이 항목에서는 [!INCLUDE[wf1](../../../includes/wf1-md.md)]의 C# 식에 대해 간략하게 설명합니다.

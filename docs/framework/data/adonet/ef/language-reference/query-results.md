@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: bcd7b699-4e50-4523-8c33-2f54a103d94e
-ms.openlocfilehash: 70aa2ad6385ec4791b05b202dc5dc6d4fe9e57b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 98dbb0185de88c6fd69c6daf1540e997c14cc9e2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797841"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641423"
 ---
 # <a name="query-results"></a>쿼리 결과
 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 쿼리가 명령 트리로 변환되어 실행되고 나면 일반적으로 쿼리 결과가 다음 중 하나의 형태로 반환됩니다.  

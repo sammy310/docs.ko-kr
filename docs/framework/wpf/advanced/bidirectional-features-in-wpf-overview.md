@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 575598f48b3cfdf636be78a9de6e0c9a7fd9c208
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 16cf232ccbdcca496aaa18fc2cfac280072ca24f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032021"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655482"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF의 양방향 기능 개요
 다른 개발 플랫폼과 달리 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 혼합된 왼쪽에서 오른쪽을 오른쪽으로 동일한 문서에 데이터를 유지 하는 예를 들어, 양방향 콘텐츠의 신속한 개발을 지 원하는 많은 기능이 있습니다. 동시에, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 아랍어 및 히브리어 사용자와 같은 양방향 기능이 필요한 사용자를 위한 뛰어난 경험을 만듭니다.  

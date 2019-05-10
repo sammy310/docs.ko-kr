@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-ms.openlocfilehash: 33184d9be275f5e777ffd79c6dd4e3182d865de7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3e367a10a3e703241c7417d3ea17068018becb5a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864684"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649730"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>방법: 숫자 값 (Visual Basic)를 계산 합니다.
 숫자 식 사용 하 여 숫자 값을 계산할 수 있습니다. A *숫자 식* 리터럴, 상수 및 숫자 값을 나타내는 변수를 포함 하는 식과 해당 값에 대해 작동 하는 연산자가 있습니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "61864684"
   
 #### <a name="to-calculate-a-numeric-value"></a>숫자 값을 계산 하기  
   
--   숫자 식에 하나 이상의 숫자 리터럴, 상수 및 변수를 결합 합니다. 다음 예에서는 유효한 숫자 식을 보여 줍니다.  
+- 숫자 식에 하나 이상의 숫자 리터럴, 상수 및 변수를 결합 합니다. 다음 예에서는 유효한 숫자 식을 보여 줍니다.  
   
      `93.217`  
   
@@ -41,7 +41,7 @@ ms.locfileid: "61864684"
   
 #### <a name="to-store-a-numeric-value"></a>숫자 값을 저장 하려면  
   
--   다음 예제에서는 숫자 식에 변수를 나타내는 값을 할당 하는 대입문을 사용할 수 있습니다.  
+- 다음 예제에서는 숫자 식에 변수를 나타내는 값을 할당 하는 대입문을 사용할 수 있습니다.  
   
      [!code-vb[VbVbalrOperators#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#82)]  
   
@@ -54,7 +54,7 @@ ms.locfileid: "61864684"
   
 #### <a name="to-override-normal-operator-precedence"></a>일반 연산자 우선 순위를 재정의 하려면  
   
--   괄호를 사용 하 여 먼저 수행 하려는 작업을 묶습니다. 다음 예제에서는 피연산자와 연산자를 사용 하 여 두 개의 서로 다른 결과 보여 줍니다.  
+- 괄호를 사용 하 여 먼저 수행 하려는 작업을 묶습니다. 다음 예제에서는 피연산자와 연산자를 사용 하 여 두 개의 서로 다른 결과 보여 줍니다.  
   
      [!code-vb[VbVbalrOperators#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#83)]  
   

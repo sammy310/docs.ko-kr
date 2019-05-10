@@ -2,12 +2,12 @@
 title: 확장된 보호 정책
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
-ms.openlocfilehash: 645b48b3c7ce3daaaedac372ba5ba6fd5edfc8f8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c2a79798569e308c37bd66bf0bdf8dee0cfa6951
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990173"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650061"
 ---
 # <a name="extended-protection-policy"></a>확장된 보호 정책
 확장된 보호는 MITM(Man-In-The-Middle, 메시지 가로채기) 공격을 방지하기 위한 보안 이니셔티브입니다. MITM 공격은 공격자가 클라이언트의 자격 증명을 가로채 서버로 전달하는 보안 위협입니다.  
@@ -34,9 +34,9 @@ ms.locfileid: "61990173"
   
 4. 이 샘플을 사용하려면 클라이언트에서 서버와의 보안 채널을 설정해야 하므로, IIS(인터넷 정보 서비스) 관리자에서 설치할 수 있는 서버 인증서가 있어야 합니다.  
   
-    1.  IIS 관리자를 엽니다. 열기 **서버 인증서**에 표시 되는 **기능 보기** 루트 노드 (컴퓨터 이름)를 선택한 경우를 탭 합니다.  
+    1. IIS 관리자를 엽니다. 열기 **서버 인증서**에 표시 되는 **기능 보기** 루트 노드 (컴퓨터 이름)를 선택한 경우를 탭 합니다.  
   
-    2.  이 샘플을 테스트하기 위해 자체 서명된 인증서를 만듭니다. Internet Explorer에서 인증서가 안전하지 않다는 메시지가 표시되지 않도록 하려면 인증서를 신뢰할 수 있는 인증서 루트 인증 기관 저장소에 설치합니다.  
+    2. 이 샘플을 테스트하기 위해 자체 서명된 인증서를 만듭니다. Internet Explorer에서 인증서가 안전하지 않다는 메시지가 표시되지 않도록 하려면 인증서를 신뢰할 수 있는 인증서 루트 인증 기관 저장소에 설치합니다.  
   
 5. 엽니다는 **작업** 기본 웹 사이트에 대 한 창. 클릭 **사이트를 편집**하십시오 **바인딩**합니다. HTTPS가 아직 없으면 포트 번호 443을 사용하여 HTTPS를 형식으로 추가합니다. 이전 단계에서 만든 SSL 인증서를 할당합니다.  
   

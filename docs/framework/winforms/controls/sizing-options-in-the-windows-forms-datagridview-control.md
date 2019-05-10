@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], row sizing
 - data grids [Windows Forms], sizing options
 ms.assetid: a5620a9c-0d06-41e3-8934-c25ddb16c9e6
-ms.openlocfilehash: 2f76bbca3d4b6e642c0eec2129c4a2abee752655
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1da98dfa58651eca2052f7d180912d1aa2898385
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903164"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651968"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView 컨트롤의 크기 조정 옵션
 <xref:System.Windows.Forms.DataGridView> 행, 열 및 헤더는 여러 가지 동작의 결과로 크기를 변경할 수 있습니다. 다음 표에서 이러한 상황을 보여 줍니다.  
@@ -46,13 +46,13 @@ ms.locfileid: "61903164"
 ## <a name="resizing-with-the-mouse"></a>마우스를 사용 하 여 크기 조정  
  사용자는 기본적으로 행, 열 및 셀 값에 따라 자동 크기 조정 모드를 사용 하지 않는 헤더를 조정할 수 있습니다. 열 채우기 모드와 같은 다른 모드를 사용 하 여 크기를 조정 하지 못하게 하려면 다음 중 하나 이상을 설정 <xref:System.Windows.Forms.DataGridView> 속성:  
   
--   <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A>  
+- <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A>  
+- <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
   
  설정 하 여 개별 행 이나 열 크기 조정에서 사용자를 방지할 수도 있습니다는 <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> 속성입니다. 기본적으로 <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> 속성 값은 기반으로 합니다 <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A> 열에 대 한 속성 값 및 <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A> 행에 대 한 속성 값입니다. 명시적으로 설정 하면 <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> 하 <xref:System.Windows.Forms.DataGridViewTriState.True> 또는 <xref:System.Windows.Forms.DataGridViewTriState.False>그러나 컨트롤 값이 해당 행 또는 열에 대해 지정 된 값이 재정의 합니다. 설정 <xref:System.Windows.Forms.DataGridViewBand.Resizable%2A> 에 <xref:System.Windows.Forms.DataGridViewTriState.NotSet> 상속을 복원 합니다.  
   
@@ -74,13 +74,13 @@ ms.locfileid: "61903164"
   
  컨트롤 값을 재정의 하지 않는 열 및 머리글 및 행에 대 한 크기 조정 모드를 구성 하려면 다음 중 하나 이상을 설정 <xref:System.Windows.Forms.DataGridView> 속성:  
   
--   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoSizeRowsMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoSizeRowsMode%2A>  
   
  개별 열에 대 한 컨트롤의 열 크기 조정 모드를 재정의 하려면 해당 <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> 이외의 값으로 속성 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet>합니다. 열에 대 한 크기 조정 모드에 따른 실제로 해당 <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> 속성입니다. 이 속성의 값은 열에 기반 <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> 속성 값이 아닌 값 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet>있으며이 경우 컨트롤의 <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> 값은 상속 됩니다.  
   
@@ -93,27 +93,27 @@ ms.locfileid: "61903164"
 ## <a name="programmatic-resizing"></a>프로그래밍 방식의 크기 조정  
  자동 크기 조정을 비활성화 되 면 정확한 너비 또는 높이 행, 열 또는 다음 속성을 통해 헤더의 프로그래밍 방식으로 설정할 수 있습니다.  
   
--   <xref:System.Windows.Forms.DataGridView.RowHeadersWidth%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridView.RowHeadersWidth%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeight%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeight%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridViewRow.Height%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridViewRow.Height%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>  
   
  또한 프로그래밍 방식으로 행, 열 및 헤더는 다음 메서드를 사용 하 여 해당 내용에 맞게 조정할 수 있습니다.  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeColumnHeadersHeight%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeColumnHeadersHeight%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeRow%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeRow%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeRows%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeRows%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeRowHeadersWidth%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeRowHeadersWidth%2A>  
   
  이러한 메서드는 행, 열 또는 헤더를 한 번 구성 하지 않고 연속 크기 조정에 대 한 크기가 조정 됩니다. 새 크기 클리핑 없이 모든 셀 내용을 표시 하도록 자동으로 계산 됩니다. 그러나이 있는 열을 프로그래밍 방식으로 조정 <xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A> 속성 값이 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill>를 내용에 따라 계산된 된 너비 열 크기를 비례적으로 조정 되는 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 속성 값 및 실제 열 너비 그런 다음 모든 열에서 사용 가능한 표시 영역의 컨트롤을 채울 수 있도록 이러한 새 비율에 따라 계산 합니다.  
   

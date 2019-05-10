@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c2ce8461-3c15-4c41-8c81-1cb78f5b59a6
-ms.openlocfilehash: 1053a543a23ed36a5c06c45044c8fdbe25a60538
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0d052c0f178c2dc6e2eb5a740faa42239fb91068
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929521"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637226"
 ---
 # <a name="xml-and-adonet-types-in-data-contracts"></a>데이터 계약의 XML 및 ADO.NET 형식
 Windows Communication Foundation (WCF) 데이터 계약 모델에는 직접 XML을 나타내는 특정 형식을 지원 합니다. 이러한 형식이 XML에 serialize되면 serializer는 추가 처리 없이 이러한 형식의 XML 콘텐츠를 씁니다. 지원되는 형식에는 <xref:System.Xml.XmlElement>을 구현하는 형식, <xref:System.Xml.XmlNode> 및 `XmlNode`의 배열이 있습니다. 단, <xref:System.Xml.Serialization.IXmlSerializable> 형식 자체는 지원되지 않습니다. <xref:System.Data.DataSet> 및 <xref:System.Data.DataTable> 형식은 형식화된 데이터 집합과 마찬가지로 데이터베이스 프로그래밍에 자주 사용됩니다. 이러한 형식은 `IXmlSerializable` 인터페이스를 구현하므로 데이터 계약 모델에서 serialize할 수 있습니다. 이러한 형식에 대한 몇 가지 특별한 고려 사항은 이 항목의 끝부분에 나와 있습니다.  

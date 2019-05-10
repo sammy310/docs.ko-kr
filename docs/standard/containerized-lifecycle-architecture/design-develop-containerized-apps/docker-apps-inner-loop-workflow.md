@@ -4,12 +4,12 @@ description: Docker 응용 프로그램의 개발에 대 한 "내부 루프" 워
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 36fcf5769376375854c2a2631e26e8b136df0de6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: dda75e120b0f17a591fadc22944c78d1174ca156
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050570"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664374"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 앱을 위한 내부 루프 개발 워크플로
 
@@ -21,11 +21,11 @@ ms.locfileid: "62050570"
 
 Docker 이미지의 인스턴스를 컨테이너에 이러한 구성 요소를 포함 됩니다.
 
--   운영 체제 선택 (예: Linux 배포 또는 Windows)
+- 운영 체제 선택 (예: Linux 배포 또는 Windows)
 
 - 개발자 (예: 응용 프로그램 이진 파일)가 추가 된 파일
 
--   구성 (예: 환경 설정 및 종속성)
+- 구성 (예: 환경 설정 및 종속성)
 
 - Docker에서 실행을 처리 하는 것에 대 한 지침
 
@@ -115,7 +115,7 @@ Docker 확장을 설치 하려면 Ctrl + Shift + P를 눌러 입력 `ext install
 
 ```Dockerfile
 # Base Docker image to use  
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.1
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
   
 # Set the Working Directory and files to be copied to the image  
 ARG source  
@@ -129,7 +129,7 @@ EXPOSE 80
 ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 ```
 
-이 경우에 기준으로 이미지 줄에 따라 공식 ASP.NET Core Docker 이미지 (Linux 및 Windows 용 다중 아키텍처)의 버전 2.1 `FROM mcr.microsoft.com/dotnet/core/aspnet:2.1`합니다. (이 항목에 대 한 자세한 내용은 참조는 [ASP.NET Core Docker 이미지](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) 페이지와 [.NET Core Docker 이미지](https://hub.docker.com/_/microsoft-dotnet-core/) 페이지).
+이 경우에 기준으로 이미지 줄에 따라 공식 ASP.NET Core Docker 이미지 (Linux 및 Windows 용 다중 아키텍처)의 버전 2.2 `FROM mcr.microsoft.com/dotnet/core/aspnet:2.2`합니다. (이 항목에 대 한 자세한 내용은 참조는 [ASP.NET Core Docker 이미지](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) 페이지와 [.NET Core Docker 이미지](https://hub.docker.com/_/microsoft-dotnet-core/) 페이지).
 
 DockerFile에서 Docker (예: 포트 80) 런타임 시 사용 하는 TCP 포트로 수신 하도록 지시할 수 있습니다.
 

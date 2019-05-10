@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
 ms.openlocfilehash: 766b95163f164ec76135b964115069b6855ceebf
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63807866"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750684"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>Object 변수 또는 With 블록 변수가 설정되지 않았습니다.
 잘못 된 개체 변수는 참조 됩니다.   여러 가지 원인에 의해 이런 오류가 발생할 수 있습니다.

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-ms.openlocfilehash: f750978eaa617a5505bb27a1535797320a76b0d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 738aadf93b726569eb59fc281cca2e482bace0bc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935462"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645179"
 ---
 # <a name="specifying-client-run-time-behavior"></a>클라이언트 런타임 동작 지정
 클라이언트 응용 프로그램에 맞게 런타임 동작을 수정 하려면 Windows Communication Foundation (WCF) 서비스와 마찬가지로 Windows Communication Foundation (WCF) 클라이언트를 구성할 수 있습니다. 세 가지 특성을 사용하여 클라이언트 런타임 동작을 지정할 수 있습니다. 이중 클라이언트 콜백 개체는 <xref:System.ServiceModel.CallbackBehaviorAttribute> 및 <xref:System.ServiceModel.Description.CallbackDebugBehavior> 특성을 사용하여 런타임 동작을 수정할 수 있습니다. 다른 특성인 <xref:System.ServiceModel.Description.ClientViaBehavior>는 논리 대상과 직접 네트워크 대상을 구분하는 데 사용할 수 있습니다. 또한 이중 클라이언트 콜백 형식은 서비스측 동작 중 일부를 사용할 수 있습니다. 자세한 내용은 [서비스 런타임 동작 지정](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)합니다.  
