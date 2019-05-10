@@ -10,12 +10,12 @@ helpviewer_keywords:
 - properties [WPF], Blocks [WPF], manipulating flow content elements
 - Blocks property [WPF], manipulating flow content elements
 ms.assetid: aeda4ece-b979-4818-a093-ef938e908751
-ms.openlocfilehash: e0e1e1333a54946f3bdf474e353de0301eb42447
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3ca05590bd1adf7f9c486382a08cb334b4731ac9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942833"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614611"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>방법: Blocks 속성을 통해 유동 콘텐츠 요소 조작
 이러한 예제를 보여 줍니다을 통한 유동 콘텐츠 요소에서 수행할 수 있는 보다 일반적인 작업 중 일부는 **블록** 속성입니다. 이 속성에서 항목 추가 및 제거 하는 <xref:System.Windows.Documents.BlockCollection>합니다. 유동 콘텐츠 요소를 **블록** 속성을 포함 합니다.  

@@ -2,12 +2,12 @@
 title: (Visual Basic)의 기본 단락 스타일 찾기
 ms.date: 07/20/2015
 ms.assetid: 9d094a4a-ec8c-41b0-b7ab-a3deb2a01d45
-ms.openlocfilehash: 0694c9144e44e4a5de262f97581eb18943937243
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f874033b9a070b951d27f37aae36f738ab1fd222
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61931315"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64618372"
 ---
 # <a name="finding-the-default-paragraph-style-visual-basic"></a>(Visual Basic)의 기본 단락 스타일 찾기
 WordprocessingML 문서에서 정보 조작 자습서의 첫 번째 작업은 문서에 있는 단락의 기본 스타일을 찾는 것입니다.  

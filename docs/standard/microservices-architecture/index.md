@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 애플리케이션에 대한 .NET 마이크
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 8497f5cbd15fae6e289791393ea779833be27be6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e1b36f5a6ddc2176e344dfe2a216429190dcc1dc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61818310"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615137"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 마이크로 서비스: 컨테이너화된 .NET 애플리케이션을 위한 아키텍처
 
@@ -57,7 +57,7 @@ Windows 및 Linux 에코시스템에서 가장 중요한 공급업체가 지원�
 
 ### <a name="additional-resources"></a>추가 자료
 
--   **Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 애플리케이션 수명 주기**(다운로드 가능한 전자책)  
+- **Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 애플리케이션 수명 주기**(다운로드 가능한 전자책)  
     <https://aka.ms/dockerlifecycleebook>
 
 ## <a name="who-should-use-this-guide"></a>이 가이드의 대상 사용자

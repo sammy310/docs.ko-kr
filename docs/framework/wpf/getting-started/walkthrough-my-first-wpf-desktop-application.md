@@ -1,6 +1,6 @@
 ---
 title: Visual Studio에서 WPF 응용 프로그램 만들기
-ms.date: 10/26/2018
+ms.date: 03/20/2019
 dev_langs:
 - csharp
 - vb
@@ -11,16 +11,16 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: dbfc40bd1fcc97810ea1397731bd8c232297cbd1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9d0abd18b2242ab21e8a915caac1ff9e3216acd0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922963"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617269"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>연습: 내 첫 WPF 데스크톱 애플리케이션
 
-이 문서에서는 대부분의 WPF 응용 프로그램에 공통 된 요소를 포함 하는 간단한 Windows Presentation Foundation (WPF) 응용 프로그램을 개발 하는 방법을 보여 줍니다. Extensible Application Markup Language (XAML) 태그, 코드 숨김, 응용 프로그램 정의 컨트롤, 레이아웃, 데이터 바인딩 및 스타일.
+이 문서에서는 대부분의 WPF 응용 프로그램에 공통 된 요소가 포함 된 Windows Presentation Foundation (WPF) 데스크톱 응용 프로그램을 개발 하는 방법을 보여 줍니다. Extensible Application Markup Language (XAML) 태그, 코드 숨김, 응용 프로그램 정의 컨트롤, 레이아웃, 데이터 바인딩 및 스타일. 응용 프로그램을 개발 하려면 Visual Studio를 사용 합니다. 
 
 이 연습에는 다음 단계가 포함 됩니다.
 
@@ -34,18 +34,20 @@ ms.locfileid: "61922963"
 
 - 응용 프로그램의 UI 전체에서 일관 된 모양을 위해 스타일을 만듭니다.
 
-- 둘 다 UI 데이터를 채우고 데이터와 동기화 하는 UI를 보존 하는 데이터에 UI를 바인딩하십시오.
+- UI를 채우는 데이터에서 UI 및 데이터 유지 하기 위해 데이터를 바인딩하고 UI 동기화 합니다.
 
 연습의 끝에서 독립 실행형 Windows 응용 프로그램 사용자가 선택한 사용자에 대 한 경비 보고서를 볼 수 있도록 작성 됩니다. 응용 프로그램은 브라우저 스타일 창에서 호스트 되는 여러 WPF 페이지로 구성 됩니다.
 
 > [!TIP]
-> 이 연습을 빌드하는 데 사용 하는 샘플 코드는 Visual Basic 및 C#에서 사용할 수 있습니다 [WPF 응용 프로그램 빌드 소개](https://go.microsoft.com/fwlink/?LinkID=160008)합니다.
+> 이 연습을 빌드하는 데 사용 하는 샘플 코드는 Visual Basic 모두에 사용할 수 있는 및 C# 에 [WPF 앱 샘플 코드 연습](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/WalkthroughFirstWPFApp)합니다.
+>
+> 사이 샘플 코드의 코드 언어를 전환할 수 있습니다 C# 및 사용 하 여 Visual Basic의 **\< />** 이 문서의 상단 오른쪽에 드롭다운 합니다.
 
 ## <a name="prerequisites"></a>전제 조건
 
 - Visual Studio 2017 이상
 
-   Visual Studio의 최신 버전을 설치 하는 방법에 대 한 자세한 내용은 참조 하세요. [Visual Studio 설치](/visualstudio/install/install-visual-studio)합니다.
+   Visual Studio의 최신 버전을 설치 하는 방법에 대 한 자세한 내용은 참조 하세요. [Visual Studio 설치](/visualstudio/install/install-visual-studio)합니다. 이 문서에서는 Visual Studio 2019 합니다.
 
 ## <a name="create-the-application-project"></a>응용 프로그램 프로젝트 만들기
 
@@ -55,28 +57,33 @@ ms.locfileid: "61922963"
 
    1. Visual Studio를 열고 선택 **파일** > **새로 만들기** > **프로젝트**합니다.
 
-      합니다 **새 프로젝트** 대화 상자가 열립니다.
+      합니다 **새 프로젝트를 만들** 대화 상자가 열립니다.
 
-   2. 아래는 **설치 됨** 범주를 확장 합니다 **Visual C#**  또는 **Visual Basic** 노드를 선택한 후 **Windows 데스크톱**.
+      ![새 프로젝트 대화 상자 만들기](./media/gettingstartedfigure0a.png)
 
-   3. 선택 된 **WPF 앱 (.NET Framework)** 템플릿. 이름을 입력 **`ExpenseIt`** 선택한 후 **확인**합니다.
+   2. 에 **언어** 드롭다운에서 선택 **C#** 또는 **Visual Basic**.
 
-      ![WPF 앱이 선택 된 새 프로젝트 대화 상자](./media/new-project-dialog.png)
+   3. 선택 된 **WPF 앱 (.NET Framework)** 템플릿을 선택한 후 **다음**합니다. 
+    
+   4. 선택 **새 프로젝트를 만들**합니다.
+
+      합니다 **새 프로젝트를 구성** 대화 상자가 열립니다.
+
+      ![새 프로젝트 대화 상자를 구성 합니다.](./media/gettingstartedfigure0c.png)
+
+   5. 프로젝트 이름을 입력 **`ExpenseIt`** 선택한 후 **Create**합니다.
 
       Visual Studio 프로젝트를 만들고 이라는 기본 응용 프로그램 창에 대 한 디자이너를 엽니다 **MainWindow.xaml**합니다.
 
-   > [!NOTE]
-   > 이 연습에서는 <xref:System.Windows.Controls.DataGrid> 컨트롤 이상.NET Framework 4에서 사용할 수 있습니다. 프로젝트가.NET Framework 4를 대상으로 하는지 이상 이어야 합니다. 자세한 내용은 [방법: 한 버전의 .NET Framework를 대상으로 지정](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
-
 2. 오픈 *Application.xaml* (Visual Basic) 또는 *App.xaml* (C#).
 
-    이 XAML 파일이 WPF 응용 프로그램 및 모든 응용 프로그램 리소스를 정의합니다. 또한 자동으로 표시 하는 UI를 지정 하려면이 파일을 사용 응용 프로그램을 시작 합니다. 이 예에서 *MainWindow.xaml*합니다.
+    이 XAML 파일이 WPF 응용 프로그램 및 모든 응용 프로그램 리소스를 정의합니다. 또한이 경우 UI를 지정 하려면이 파일을 사용 *MainWindow.xaml*, 응용 프로그램을 시작할 때는 자동으로 표시 합니다.
 
-    에 XAML Visual Basic에서 다음과 같이 표시 됩니다.
+    Visual Basic에서 다음과 같은 XAML에 표시 됩니다.
 
     [!code-xaml[ExpenseIt#1_A](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/Application.xaml#1_a)]
 
-    C#에서는 다음과 같이 나타납니다.
+    및에서 다음과 같은 C#:
 
     [!code-xaml[ExpenseIt#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/App.xaml#1)]
 
@@ -96,43 +103,37 @@ ms.locfileid: "61922963"
 
    이 앱은 사용자 입력에 따라 다른 콘텐츠를 탐색 합니다. 이 인해 주 <xref:System.Windows.Window> 로 변경 해야 하는 경우는 <xref:System.Windows.Navigation.NavigationWindow>합니다. <xref:System.Windows.Navigation.NavigationWindow> 모든 속성을 상속 <xref:System.Windows.Window>합니다. <xref:System.Windows.Navigation.NavigationWindow> 의 인스턴스를 만들고 XAML 파일의 요소를 <xref:System.Windows.Navigation.NavigationWindow> 클래스입니다. 자세한 내용은 [탐색 개요](../app-development/navigation-overview.md)합니다.
 
-5. 다음 속성을 변경 합니다 <xref:System.Windows.Navigation.NavigationWindow> 요소:
+5. 제거 된 <xref:System.Windows.Controls.Grid> 사이 요소를 <xref:System.Windows.Navigation.NavigationWindow> 태그입니다.
+
+6. XAML 코드에서 다음 속성을 변경 합니다 <xref:System.Windows.Navigation.NavigationWindow> 요소:
 
     - 설정 된 <xref:System.Windows.Window.Title%2A> 속성을 "`ExpenseIt`"입니다.
 
-    - 설정 된 <xref:System.Windows.FrameworkElement.Width%2A> 속성을 500 픽셀로 합니다.
-
     - 설정 된 <xref:System.Windows.FrameworkElement.Height%2A> 속성을 350 픽셀로 합니다.
 
-    - 제거 된 <xref:System.Windows.Controls.Grid> 사이의 요소를 <xref:System.Windows.Navigation.NavigationWindow> 태그입니다.
+    - 설정 된 <xref:System.Windows.FrameworkElement.Width%2A> 속성을 500 픽셀로 합니다.
 
-    에 XAML Visual Basic에서 다음과 같이 표시 됩니다.
+    에 XAML Visual basic의 경우 다음과 같이 표시 됩니다.
 
     [!code-xaml[ExpenseIt#2_A](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt/MainWindow.xaml#2_a)]
 
-    C#에서는 다음과 같이 나타납니다.
+    및에 대 한 다음과 같은 C#:
 
     [!code-xaml[ExpenseIt#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/MainWindow.xaml#2)]
 
-6. 오픈 *MainWindow.xaml.vb* 하거나 *MainWindow.xaml.cs*합니다.
+7. 오픈 *MainWindow.xaml.vb* 하거나 *MainWindow.xaml.cs*합니다.
 
     이 파일에 선언 된 이벤트를 처리 하는 코드를 포함 하는 코드 숨김 파일은 *MainWindow.xaml*합니다. 이 파일에는 XAML에 정의된 창의 부분 클래스가 포함되어 있습니다.
 
-7. C#을 사용 하는 경우 변경 합니다 `MainWindow` 에서 파생 된 클래스 <xref:System.Windows.Navigation.NavigationWindow>합니다. (Visual basic에서는 자동으로 이루어집니다 XAML에서 창을 변경 하면 됩니다.)
+8. 사용 중인 경우 C#를 변경 합니다 `MainWindow` 클래스를 파생할 <xref:System.Windows.Navigation.NavigationWindow>. (Visual basic에서는 자동으로 이루어집니다 XAML에서 창을 변경 하면 됩니다.) 에 C# 코드에 이제이 처럼 보여야 합니다.
 
-   코드는 다음과 같습니다.
-
-   [!code-csharp[ExpenseIt#3](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/MainWindow.xaml.cs#3)]
-   [!code-vb[ExpenseIt#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/MainWindow.xaml.vb#3)]
-
-   > [!TIP]
-   > C#과 Visual Basic에서 샘플 코드의 코드 언어를 전환할 수 있습니다 합니다 **언어** 이 문서의 상단 오른쪽에 드롭다운 합니다.
+   [!code-csharp[ExpenseIt#3](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/MainWindow.xaml.cs?highlight=21)]
 
 ## <a name="add-files-to-the-application"></a>응용 프로그램에 파일 추가
 
 이 섹션에서는 애플리케이션에 두 페이지와 이미지를 추가합니다.
 
-1. 프로젝트에 새 WPF 페이지를 추가 하 고 이름을 *`ExpenseItHome.xaml`*:
+1. 프로젝트에 새 페이지를 추가 하 고 이름을 *`ExpenseItHome.xaml`*:
 
    1. **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 합니다 **`ExpenseIt`** 선택한 프로젝트 노드 **추가** > **페이지**합니다.
 
@@ -140,27 +141,31 @@ ms.locfileid: "61922963"
 
     이 페이지에는 응용 프로그램을 시작할 때 표시 되는 첫 번째 페이지가입니다. 비용 보고서를 표시 하려면를 선택 하 게 목록이 표시 됩니다.
 
-2. 오픈 *`ExpenseItHome.xaml`* 합니다.
+1. 오픈 *`ExpenseItHome.xaml`* 합니다.
 
-3. 설정 된 <xref:System.Windows.Controls.Page.Title%2A> 에 "`ExpenseIt - Home`"입니다.
+1. 설정 된 <xref:System.Windows.Controls.Page.Title%2A> 에 "`ExpenseIt - Home`"입니다.
 
-    에 XAML Visual Basic에서 다음과 같이 표시 됩니다.
+1. 설정 된 `DesignHeight` 및 `DesignWidth` 300 픽셀로 요소 값입니다.
+
+    또한 Visual basic의 XAML 이제 다음과 같이 나타납니다.
 
     [!code-xaml[ExpenseIt#6_A](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseItHome.xaml#6_a)]
 
-    C#에서는 다음과 같이 나타납니다.
+    및에 대 한 다음과 같은 C#:
 
     [!code-xaml[ExpenseIt#6](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/ExpenseItHome.xaml#6)]
 
-4. 오픈 *MainWindow.xaml*합니다.
+1. 오픈 *MainWindow.xaml*합니다.
 
-5. 설정 합니다 <xref:System.Windows.Navigation.NavigationWindow.Source%2A> 속성에는 <xref:System.Windows.Navigation.NavigationWindow> 에 "`ExpenseItHome.xaml`"입니다.
+1. 추가 <xref:System.Windows.Navigation.NavigationWindow.Source%2A> 속성을 합니다 <xref:System.Windows.Navigation.NavigationWindow> 요소 설정 하 고 "`ExpenseItHome.xaml`".
 
-    이 설정 *`ExpenseItHome.xaml`* 응용 프로그램을 시작할 때 열리는 첫 번째 페이지 수입니다. 에 XAML Visual Basic에서 다음과 같이 표시 됩니다.
+    이 설정 *`ExpenseItHome.xaml`* 응용 프로그램을 시작할 때 열리는 첫 번째 페이지 수입니다. 
+
+    Visual Basic에서는 XAML 예제:
 
     [!code-xaml[ExpenseIt#7_A](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/MainWindow.xaml#7_a)]
 
-    C#에서는 다음과 같이 나타납니다.
+    및 C#:
 
     [!code-xaml[ExpenseIt#7](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/MainWindow.xaml#7)]
 
@@ -169,45 +174,49 @@ ms.locfileid: "61922963"
    >
    > ![속성 창에서 source 속성](./media/properties-source.png)
 
-6. 프로젝트에 새 WPF의 다른 페이지를 추가 하 고 이름을 *ExpenseReportPage.xaml*::
+1. 프로젝트에 새 WPF의 다른 페이지를 추가 하 고 이름을 *ExpenseReportPage.xaml*::
 
    1. **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 합니다 **`ExpenseIt`** 선택한 프로젝트 노드 **추가** > **페이지**합니다.
 
-   1. 에 **새 항목 추가** 대화 상자에서를 **페이지 (WPF)** 템플릿을 이미 선택 되어 있습니다. 이름을 입력 **ExpenseReportPage**를 선택한 후 **추가**합니다.
+   1. 에 **새 항목 추가** 대화 상자에서 선택 합니다 **페이지 (WPF)** 템플릿. 이름을 입력 **ExpenseReportPage**를 선택한 후 **추가**합니다.
 
     이 페이지에서 선택 된 사람의 비용 보고서에 표시 됩니다는 **`ExpenseItHome`** 페이지입니다.
 
-7. *ExpenseReportPage.xaml*을 엽니다.
+1. *ExpenseReportPage.xaml*을 엽니다.
 
-8. 설정 된 <xref:System.Windows.Controls.Page.Title%2A> 에 "`ExpenseIt - View Expense`"입니다.
+1. 설정 된 <xref:System.Windows.Controls.Page.Title%2A> 에 "`ExpenseIt - View Expense`"입니다.
 
-    에 XAML Visual Basic에서 다음과 같이 표시 됩니다.
+1. 설정 된 `DesignHeight` 및 `DesignWidth` 300 픽셀로 요소 값입니다.
+
+    *ExpenseReportPage.xaml* 이제 Visual Basic에서 다음과 같이 보입니다.
 
     [!code-xaml[ExpenseIt#4_A](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseReportPage.xaml#4_a)]
 
-    C#에서는 다음과 같이 나타납니다.
+    및에서 다음과 같은 C#:
 
     [!code-xaml[ExpenseIt#4](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/ExpenseReportPage.xaml#4)]
 
-9. 오픈 *ExpenseItHome.xaml.vb* 하 고 *ExpenseReportPage.xaml.vb*, 또는 *ExpenseItHome.xaml.cs* 및 *ExpenseReportPage.xaml.cs*.
+1. 오픈 *ExpenseItHome.xaml.vb* 하 고 *ExpenseReportPage.xaml.vb*, 또는 *ExpenseItHome.xaml.cs* 및 *ExpenseReportPage.xaml.cs*.
 
-    새 페이지 파일을 만들려면 Visual Studio 자동으로 만듭니다는 *코드 숨김* 파일입니다. 이러한 코드 숨김 파일은 사용자 입력에 응답하기 위한 논리를 처리합니다.
+    새 페이지 파일을 만들면 자동으로 만들어지고 해당 *코드 숨김* 파일입니다. 이러한 코드 숨김 파일은 사용자 입력에 응답하기 위한 논리를 처리합니다.
 
-    코드에 대 한 다음과 같아야 **`ExpenseItHome`**:
+    코드에 대 한 다음과 같은 같아야 **`ExpenseItHome`**:
 
     [!code-csharp[ExpenseIt#2_5](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/ExpenseItHome.xaml.cs#2_5)]
+
     [!code-vb[ExpenseIt#2_5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseItHome.xaml.vb#2_5)]
 
-    이 개체와 마찬가지로 **ExpenseReportPage**:
+    및에 대 한 다음과 같은 **ExpenseReportPage**:
 
     [!code-csharp[ExpenseIt#5](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/ExpenseReportPage.xaml.cs#5)]
+
     [!code-vb[ExpenseIt#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseReportPage.xaml.vb#5)]
 
-10. 명명 된 이미지를 추가할 *watermark.png* 프로젝트입니다. 사용자 고유의 이미지를 만들기, 샘플 코드에서 파일을 복사 하거나 가져올 수 있습니다 [여기](https://github.com/dotnet/docs/blob/master/docs/framework/wpf/getting-started/./media/watermark.png)합니다.
+1. 명명 된 이미지를 추가할 *watermark.png* 프로젝트입니다. 사용자 고유의 이미지를 만들기, 샘플 코드에서 파일을 복사 하거나 가져올 수 있습니다 [여기](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/WalkthroughFirstWPFApp)합니다.
 
     1. 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 선택 **추가** > **기존 항목**를 누르거나 **Shift**+**Alt** + **는**합니다.
 
-    2. 에 **기존 항목 추가** 대화 상자를 사용 하 고 선택한 이미지 파일을 찾은 **추가**합니다.
+    2. 에 **기존 항목 추가** 대화 상자에서 파일 필터를 설정 **모든 파일** 하거나 **이미지 파일**를 사용 하 고 선택한 이미지 파일을 찾습니다 **추가** .
 
 ## <a name="build-and-run-the-application"></a>응용 프로그램 빌드 및 실행
 
@@ -223,23 +232,21 @@ ms.locfileid: "61922963"
 
 레이아웃 UI 요소를 배치 하는 순서가 지정 된 방법을 제공 하 고 UI의 크기를 조정할 때의 크기와 해당 요소의 위치를 관리 합니다. 일반적으로 다음 레이아웃 컨트롤 중 하나를 사용하여 레이아웃을 만듭니다.
 
-- <xref:System.Windows.Controls.Canvas>
-- <xref:System.Windows.Controls.DockPanel>
-- <xref:System.Windows.Controls.Grid>
-- <xref:System.Windows.Controls.StackPanel>
-- <xref:System.Windows.Controls.VirtualizingStackPanel>
-- <xref:System.Windows.Controls.WrapPanel>
+- <xref:System.Windows.Controls.Canvas> -는 명시적으로 요소를 배치할 수 자식 캔버스 영역에 상대적인 좌표를 사용 하 여 영역을 정의 합니다.
+- <xref:System.Windows.Controls.DockPanel> -위치 수 자식 요소를 정렬 가로 또는 세로로 서로 기준으로 영역을 정의 합니다.
+- <xref:System.Windows.Controls.Grid> -열과 행으로 구성 되는 유연한 모눈 영역을 정의 합니다.
+- <xref:System.Windows.Controls.StackPanel> -방향으로 가로 또는 세로로 한 줄으로 자식 요소를 정렬 합니다.
+- <xref:System.Windows.Controls.VirtualizingStackPanel> -정렬 하 고 가로 또는 세로 방향으로 한 줄에 콘텐츠를 가상화 합니다.
+- <xref:System.Windows.Controls.WrapPanel> -에서 자식 요소의 위치 왼쪽에서 오른쪽으로 포함 하는 상자의 가장자리에 다음 줄으로 콘텐츠를 분리 합니다. 후속 정렬을 위에서 아래로 또는 오른쪽에서 왼쪽으로 Orientation 속성의 값에 따라 순차적으로 발생합니다.
 
-이러한 레이아웃 컨트롤은 각각 자식 요소의 특수 레이아웃 형식을 지원합니다. `ExpenseIt` 페이지 크기를 조정할 수, 하 고 각 페이지의 다른 요소와 함께 가로 및 세로로 정렬 된 요소입니다. 결과적으로 <xref:System.Windows.Controls.Grid> 응용 프로그램에 대 한 적합 한 레이아웃 요소입니다.
+이러한 레이아웃 컨트롤의 각 자식 요소에 대 한 특정 형식의 레이아웃을 지원합니다. `ExpenseIt` 페이지 크기를 조정할 수, 하 고 각 페이지의 다른 요소와 함께 가로 및 세로로 정렬 된 요소입니다. 이 예제는 <xref:System.Windows.Controls.Grid> 응용 프로그램에 레이아웃 요소로 사용 됩니다.
 
 > [!TIP]
 > 에 대 한 자세한 내용은 <xref:System.Windows.Controls.Panel> 요소를 참조 하세요 [Panel 개요](../controls/panels-overview.md)합니다. 레이아웃에 대 한 자세한 내용은 참조 하세요. [레이아웃](../advanced/layout.md)합니다.
 
-섹션에서 만든 단일 열 테이블을 세 개의 행과를 10-여백 (픽셀)를 사용 하 여 행 및 열 정의를 추가 하 여 합니다 <xref:System.Windows.Controls.Grid> 에 *`ExpenseItHome.xaml`* 합니다.
+이 섹션에서는 만든 단일 열 테이블을 세 개의 행과를 10-여백 (픽셀)를 사용 하 여 행 및 열 정의를 추가 하 여 합니다 <xref:System.Windows.Controls.Grid> 에 *`ExpenseItHome.xaml`* 합니다.
 
-1. 오픈 *`ExpenseItHome.xaml`* 합니다.
-
-2. 설정 합니다 <xref:System.Windows.FrameworkElement.Margin%2A> 속성에는 <xref:System.Windows.Controls.Grid> "10,0,10,10" 왼쪽, 위쪽, 오른쪽 및 아래쪽 여백에 해당 하는 요소:
+1. *`ExpenseItHome.xaml`* 설정 합니다 <xref:System.Windows.FrameworkElement.Margin%2A> 속성에는 <xref:System.Windows.Controls.Grid> "10,0,10,10" 왼쪽, 위쪽, 오른쪽 및 아래쪽 여백에 해당 하는 요소:
 
    ```xaml
    <Grid Margin="10,0,10,10">
@@ -250,74 +257,72 @@ ms.locfileid: "61922963"
    >
    > ![속성 창의 여백 값](./media/properties-margin.png)
 
-3. 간에 다음 XAML을 추가 합니다 <xref:System.Windows.Controls.Grid> 태그의 행 및 열 정의 만들려면:
+2. 간에 다음 XAML을 추가 합니다 <xref:System.Windows.Controls.Grid> 태그의 행 및 열 정의 만들려면:
 
     [!code-xaml[ExpenseIt#8](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt3/ExpenseItHome.xaml#8)]
 
     합니다 <xref:System.Windows.Controls.RowDefinition.Height%2A> 로 설정 되어 두 행의 <xref:System.Windows.GridLength.Auto%2A>, 행의 내용에 따라 행 크기는 의미입니다. 기본값 <xref:System.Windows.Controls.RowDefinition.Height%2A> 는 <xref:System.Windows.GridUnitType.Star> 행 높이가 사용 가능한 공간에 대 한 가중치 임을 의미 하는 크기 조정 합니다. 예를 들어 두 행을 <xref:System.Windows.Controls.RowDefinition.Height%2A> 의 "*"를 사용 가능한 공간의 절반는 높이가 각각.
 
-    프로그램 <xref:System.Windows.Controls.Grid> 다음 XAML 다음과 같아집니다.
+    프로그램 <xref:System.Windows.Controls.Grid> 이제 다음 XAML을 포함 해야 합니다.
 
     [!code-xaml[ExpenseIt#9](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt3/ExpenseItHome.xaml#9)]
 
 ## <a name="add-controls"></a>컨트롤 추가
 
-이 섹션에서는 홈 페이지 UI 사용자에 대 한 경비 보고서를 표시 하도록 선택할 수 있는 사람의 목록을 표시 하려면를 업데이트 합니다. 컨트롤은 사용자가 애플리케이션과 상호 작용할 수 있게 하는 UI 개체입니다. 자세한 내용은 [컨트롤](../controls/index.md)을 참조하세요.
+이 섹션에서는 홈페이지 명이 비용 보고서를 표시 하려면 선택 하는 사용자의 목록을 표시 하는 UI를 업데이트 하겠습니다. 컨트롤은 사용자가 애플리케이션과 상호 작용할 수 있게 하는 UI 개체입니다. 자세한 내용은 [컨트롤](../controls/index.md)을 참조하세요.
 
 이 UI를 만들려면 다음 요소를 추가할 *`ExpenseItHome.xaml`*:
 
-- <xref:System.Windows.Controls.ListBox> (목록에 대해 사용자).
-- <xref:System.Windows.Controls.Label> (예: 목록 헤더의 경우)입니다.
-- <xref:System.Windows.Controls.Button> (클릭 하 목록에서 선택한 사람의 비용 보고서를 보려는).
+- <xref:System.Windows.Controls.ListBox> (사용자 목록)에 대 한 합니다.
+- <xref:System.Windows.Controls.Label> (예: 목록 헤더).
+- <xref:System.Windows.Controls.Button> (에: 목록에서 선택한 사람의 비용 보고서를 보려면 클릭).
 
 각 컨트롤의 행에 배치 되는 <xref:System.Windows.Controls.Grid> 설정 하 여는 <xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType> 연결 된 속성입니다. 연결 된 속성에 대 한 자세한 내용은 참조 하세요. [연결 된 속성 개요](../advanced/attached-properties-overview.md)합니다.
 
-1. 오픈 *`ExpenseItHome.xaml`* 합니다.
-
-2. 사이 어딘가에 다음 XAML을 추가 합니다 <xref:System.Windows.Controls.Grid> 태그:
+1. *`ExpenseItHome.xaml`*, 사이 어딘가에 다음 XAML을 추가 합니다 <xref:System.Windows.Controls.Grid> 태그:
 
    [!code-xaml[ExpenseIt#10](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt4/ExpenseItHome.xaml#10)]
 
    > [!TIP]
    > 끌어서 컨트롤을 만들 수도 있습니다는 **도구 상자** 창에서 디자인 창 및 다음에서 해당 속성을 설정 합니다 **속성** 창입니다.
 
-3. 애플리케이션을 빌드 및 실행합니다.
+2. 애플리케이션을 빌드 및 실행합니다.
 
-다음 그림에서는 방금 만든 컨트롤을 보여 줍니다.
+    다음 그림에서는 사용자가 만든 컨트롤을 보여 줍니다.
 
-![ExpenseIt 샘플 스크린샷](./media/gettingstartedfigure2.png)
+    ![ExpenseIt 샘플 스크린샷](./media/gettingstartedfigure2.png)
+
+3. Visual Studio로 돌아가서 응용 프로그램을 닫습니다.
 
 ## <a name="add-an-image-and-a-title"></a>이미지 및 제목 추가
 
 이 섹션에서는 이미지와 페이지 제목이 홈 페이지 UI를 업데이트 합니다.
 
-1. 오픈 *`ExpenseItHome.xaml`* 합니다.
+1. *`ExpenseItHome.xaml`*, 다른 열을 추가 합니다 <xref:System.Windows.Controls.Grid.ColumnDefinitions%2A> 고정 <xref:System.Windows.Controls.ColumnDefinition.Width%2A> 230 픽셀인:
 
-2. 다른 열을 추가 합니다 <xref:System.Windows.Controls.Grid.ColumnDefinitions%2A> 고정 <xref:System.Windows.Controls.ColumnDefinition.Width%2A> 230 픽셀인:
+    [!code-xaml[ExpenseIt#11](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=52-55)]
 
-    [!code-xaml[ExpenseIt#11](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt5/ExpenseItHome.xaml#11)]
+2. 다른 행을 추가 하는 <xref:System.Windows.Controls.Grid.RowDefinitions%2A>, 총 4 개의 행에 대 한 합니다.
 
-3. 다른 행을 추가 하는 <xref:System.Windows.Controls.Grid.RowDefinitions%2A>, 총 4 개의 행에 대 한 합니다.
+    [!code-xaml[ExpenseIt#11b](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=57-62)]
 
-    [!code-xaml[ExpenseIt#11b](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt5/ExpenseItHome.xaml#11b)]
+3. 컨트롤을 설정 하 여 두 번째 열으로 이동 합니다 <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> 각 세 가지 컨트롤 (테두리, 목록 상자 및 단추)에서 1로 속성입니다.
 
-4. 컨트롤을 설정 하 여 두 번째 열으로 이동 합니다 <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> 각 세 가지 컨트롤 (테두리, 목록 상자 및 단추)에서 1로 속성입니다.
-
-5. 증가 시켜 각 컨트롤을 한 행 아래로 이동 해당 <xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType> 1만 값입니다.
+4. 증가 시켜 각 컨트롤을 한 행 아래로 이동 해당 <xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType> 1 Border 요소 및 각 세 가지 컨트롤 (테두리, 목록 상자 및 단추)에 대 한 값입니다.
 
    이제 세 가지 컨트롤에 대 한 XAML은 다음과 같습니다.
 
     [!code-xaml[ExpenseIt#12](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt5/ExpenseItHome.xaml#12)]
 
-6. 설정 합니다 <xref:System.Windows.Controls.Panel.Background%2A> 의 <xref:System.Windows.Controls.Grid> 되도록 합니다 *watermark.png* 사이 어딘가에 다음 XAML을 추가 하 여 이미지 파일을는 `<Grid>` 및 `</Grid>` 태그:
+5. 설정 합니다 <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType> 속성을 합니다 *watermark.png* 사이의 아무 곳 이나 다음 XAML을 추가 하 여 이미지 파일을는 `<Grid>` 및 `</Grid>` 태그:
 
     [!code-xaml[ExpenseIt#14](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt5/ExpenseItHome.xaml#14)]
 
-7. 전에 <xref:System.Windows.Controls.Border> 요소를 추가 <xref:System.Windows.Controls.Label> 콘텐츠가 "View Expense Report"를 사용 하 여 합니다. 페이지의 제목입니다.
+6. 전에 <xref:System.Windows.Controls.Border> 요소를 추가 <xref:System.Windows.Controls.Label> 콘텐츠가 "View Expense Report"를 사용 하 여 합니다. 이 레이블은 페이지의 제목입니다.
 
     [!code-xaml[ExpenseIt#13](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt5/ExpenseItHome.xaml#13)]
 
-8. 애플리케이션을 빌드 및 실행합니다.
+7. 애플리케이션을 빌드 및 실행합니다.
 
 다음 그림에서는 방금 추가한 새로운 결과 보여 줍니다.
 
@@ -325,15 +330,13 @@ ms.locfileid: "61922963"
 
 ## <a name="add-code-to-handle-events"></a>이벤트를 처리 하는 코드를 추가 합니다.
 
-1. 오픈 *`ExpenseItHome.xaml`* 합니다.
-
-2. 추가 된 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트 처리기를는 <xref:System.Windows.Controls.Button> 요소입니다. 자세한 내용은 [방법: 단순 이벤트 처리기를 만들고](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100))합니다.
+1. *`ExpenseItHome.xaml`*, 추가 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트 처리기는 <xref:System.Windows.Controls.Button> 요소입니다. 자세한 내용은 [방법: 단순 이벤트 처리기를 만들고](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100))합니다.
 
     [!code-xaml[ExpenseIt#15](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]
 
-3. 오픈 *`ExpenseItHome.xaml.vb`* 하거나 *`ExpenseItHome.xaml.cs`* 합니다.
+2. 오픈 *`ExpenseItHome.xaml.vb`* 하거나 *`ExpenseItHome.xaml.cs`* 합니다.
 
-4. 다음 코드를 추가 합니다 `ExpenseItHome` 단추를 추가 하는 클래스 이벤트 처리기를 클릭 합니다. 이벤트 처리기 열립니다는 **ExpenseReportPage** 페이지입니다.
+3. 다음 코드를 추가 합니다 `ExpenseItHome` 단추를 추가 하는 클래스 이벤트 처리기를 클릭 합니다. 이벤트 처리기 열립니다는 **ExpenseReportPage** 페이지입니다.
 
     [!code-csharp[ExpenseIt#16](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml.cs#16)]
     [!code-vb[ExpenseIt#16](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt6/ExpenseItHome.xaml.vb#16)]
@@ -351,9 +354,6 @@ ms.locfileid: "61922963"
     이 UI는 비슷합니다 *`ExpenseItHome.xaml`* 에서 보고서 데이터는 제외 하 고는 <xref:System.Windows.Controls.DataGrid>합니다.
 
 3. 애플리케이션을 빌드 및 실행합니다.
-
-    > [!NOTE]
-    > 오류가 발생 하는 경우는 <xref:System.Windows.Controls.DataGrid> 찾을 수 없습니다 또는 존재 하지 않거나, 프로젝트가.NET Framework 4 이상을 대상으로 하는지 확인 합니다. 자세한 내용은 [방법: 한 버전의 .NET Framework를 대상으로 지정](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
 
 4. 선택 된 **보기** 단추입니다.
 
@@ -387,47 +387,45 @@ ms.locfileid: "61922963"
 
     - `buttonStyle`: 형식을 지정 하는 <xref:System.Windows.Controls.Button> 에서 `ExpenseItHome.xaml`합니다.
 
-    스타일의 자식 이며 리소스는는 <xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType> 속성 요소입니다. 이 위치에서 스타일은 애플리케이션의 모든 요소에 적용됩니다. .NET Framework 응용 프로그램에서 리소스를 사용 하 여 예제를 참조 하세요 [사용 하 여 응용 프로그램 리소스](../advanced/how-to-use-application-resources.md)합니다.
+    스타일의 자식 이며 리소스는는 <xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType> 속성 요소입니다. 이 위치에서 스타일은 애플리케이션의 모든 요소에 적용됩니다. .NET 앱에서 리소스를 사용 하 여 예제를 보려면 [사용 하 여 응용 프로그램 리소스](../advanced/how-to-use-application-resources.md)합니다.
 
-3. 오픈 *`ExpenseItHome.xaml`* 합니다.
-
-4. 간의 대체는 <xref:System.Windows.Controls.Grid> 다음 XAML 사용 하 여 요소:
+3. *`ExpenseItHome.xaml`*, 간의 대체는 <xref:System.Windows.Controls.Grid> 다음 XAML 사용 하 여 요소:
 
     [!code-xaml[ExpenseIt#19](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt7/ExpenseItHome.xaml#19)]
 
     스타일을 적용하면 각 컨트롤의 모양을 정의하는 <xref:System.Windows.VerticalAlignment> 및 <xref:System.Windows.Media.FontFamily> 와 같은 속성이 제거되고 바뀝니다. 예를 들어 합니다 `headerTextStyle` "View Expense Report" 적용할 <xref:System.Windows.Controls.Label>합니다.
 
-5. *ExpenseReportPage.xaml*을 엽니다.
+4. *ExpenseReportPage.xaml*을 엽니다.
 
-6. 간의 대체는 <xref:System.Windows.Controls.Grid> 다음 XAML 사용 하 여 요소:
+5. 간의 대체는 <xref:System.Windows.Controls.Grid> 다음 XAML 사용 하 여 요소:
 
     [!code-xaml[ExpenseIt#20](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt7/ExpenseReportPage.xaml#20)]
 
-    이렇게 하면 <xref:System.Windows.Controls.Label> 및 <xref:System.Windows.Controls.Border> 요소에 스타일이 추가됩니다.
+    이 XAML 스타일을 추가 합니다 <xref:System.Windows.Controls.Label> 고 <xref:System.Windows.Controls.Border> 요소입니다.
+
+6. 애플리케이션을 빌드 및 실행합니다. 창 모양 이전과 동일합니다.
+
+    ![ExpenseIt 샘플 스크린샷](./media/gettingstartedfigure4.png)
+
+7. Visual Studio로 돌아가서 응용 프로그램을 닫습니다.
 
 ## <a name="bind-data-to-a-control"></a>컨트롤에 데이터 바인딩
 
 이 섹션에서는 다양 한 컨트롤에 바인딩된 XML 데이터를 만들어야 합니다.
 
-1. 오픈 *`ExpenseItHome.xaml`* 합니다.
+1. *`ExpenseItHome.xaml`*, 뒤 <xref:System.Windows.Controls.Grid> 요소를 만들려면 다음 XAML을 추가 <xref:System.Windows.Data.XmlDataProvider> 각 사용자에 대 한 데이터가 포함 된:
 
-2. 연 후 <xref:System.Windows.Controls.Grid> 요소를 만들려면 다음 XAML을 추가 <xref:System.Windows.Data.XmlDataProvider> 각 사용자에 대 한 데이터가 포함 된:
+    [!code-xaml[ExpenseIt#23](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt8/ExpenseItHome.xaml?range=13,16-40,49)]
 
-    [!code-xaml[ExpenseIt#21](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt8/ExpenseItHome.xaml#21)]
-    [!code-xaml[ExpenseIt#23](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt8/ExpenseItHome.xaml#23)]
-    [!code-xaml[ExpenseIt#22](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt8/ExpenseItHome.xaml#22)]
+    으로 데이터가 생성 되었는지는 <xref:System.Windows.Controls.Grid> 리소스입니다. 이 데이터를 로드 하는 파일로 일반적으로 되지만 편의상 데이터가 인라인으로 추가 됩니다.
 
-    으로 데이터가 생성 되었는지는 <xref:System.Windows.Controls.Grid> 리소스입니다. 일반적으로 파일로 로드되지만 편의상 데이터가 인라인으로 추가됩니다.
+2. 내에서 `<Grid.Resources>` 요소를 다음을 추가 합니다 `<xref:System.Windows.DataTemplate>` 데이터를 표시 하는 방법을 정의 하는 요소를 합니다 <xref:System.Windows.Controls.ListBox>뒤를 `<XmlDataProvider>` 요소:
 
-3. 내 합니다 `<Grid.Resources>` 요소를 다음을 추가 합니다 <xref:System.Windows.DataTemplate>, 데이터를 표시 하는 방법을 정의 하는 <xref:System.Windows.Controls.ListBox>:
-
-    [!code-xaml[ExpenseIt#21](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt8/ExpenseItHome.xaml#21)]
-    [!code-xaml[ExpenseIt#24](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt8/ExpenseItHome.xaml#24)]
-    [!code-xaml[ExpenseIt#22](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt8/ExpenseItHome.xaml#22)]
+    [!code-xaml[ExpenseIt#24](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt8/ExpenseItHome.xaml?range=13,43-46,49)]
 
     데이터 템플릿에 대 한 자세한 내용은 참조 하세요. [데이터 템플릿 개요](../data/data-templating-overview.md)합니다.
 
-4. 기존 대체 <xref:System.Windows.Controls.ListBox> 다음 XAML을 사용 하 여:
+3. 기존 대체 <xref:System.Windows.Controls.ListBox> 다음 XAML을 사용 하 여:
 
     [!code-xaml[ExpenseIt#25](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt8/ExpenseItHome.xaml#25)]
 
@@ -478,7 +476,7 @@ ms.locfileid: "61922963"
 ![ExpenseIt 샘플 스크린샷](./media/gettingstartedfigure5.png)
 
 > [!NOTE]
-> 이 샘플은 WPF의 특정 기능을 보여 줍니다 및 보안, 지역화, 접근성 등을 위해 모든 모범 사례를 따르지 않습니다. 포괄적인 WPF 및.NET Framework 응용 프로그램 개발 모범 사례, 다음 항목을 참조 하세요.
+> 이 샘플은 WPF의 특정 기능을 보여 줍니다 및 보안, 지역화, 접근성 등을 위해 모든 모범 사례를 따르지 않습니다. 포괄적인 WPF 및.NET 앱 개발 모범 사례, 다음 항목을 참조 하세요.
 >
 > - [액세스 가능성](../../ui-automation/accessibility-best-practices.md)
 >
@@ -490,7 +488,7 @@ ms.locfileid: "61922963"
 
 ## <a name="next-steps"></a>다음 단계
 
-이 연습에서는 다양 한 Windows Presentation Foundation (WPF)를 사용 하 여 UI 만들기에 대 한 기술 배웠습니다. 이제 데이터 바인딩된.NET Framework 응용 프로그램의 구성 요소에 대 한 기본적인 지식이 있어야 합니다. WPF 아키텍처 및 프로그래밍 모델에 대한 자세한 내용은 다음 항목을 참조하세요.
+이 연습에서는 다양 한 Windows Presentation Foundation (WPF)를 사용 하 여 UI 만들기에 대 한 기술 배웠습니다. 이제 데이터 바인딩된.NET 앱의 구성 요소에 대 한 기본적인 지식이 있어야 합니다. WPF 아키텍처 및 프로그래밍 모델에 대한 자세한 내용은 다음 항목을 참조하세요.
 
 - [WPF 아키텍처](../advanced/wpf-architecture.md)
 - [XAML 개요(WPF)](../advanced/xaml-overview-wpf.md)

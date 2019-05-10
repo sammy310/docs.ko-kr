@@ -2,12 +2,12 @@
 title: XML (Visual Basic)의 함수 변환
 ms.date: 07/20/2015
 ms.assetid: fdbe5b91-f457-4b4e-a11b-def4bdd77bab
-ms.openlocfilehash: 62edd7adf425f8a36128497a6dae445a3e9cbfc0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 147f36241fd2b8cec03adfac3273d2155af82922
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968482"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64618268"
 ---
 # <a name="functional-transformation-of-xml-visual-basic"></a>XML (Visual Basic)의 함수 변환
 이 항목에서는 XML 문서를 수정하는 순수 함수 변환 방법에 대해 설명하고 이 방법을 절차적 방법과 대조합니다.  
