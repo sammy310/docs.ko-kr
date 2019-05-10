@@ -7,32 +7,32 @@ f1_keywords:
 helpviewer_keywords:
 - BC30638
 ms.assetid: 93b654f4-70fa-4a48-baed-ffae42075550
-ms.openlocfilehash: f20ed883005641082eb89e2effa5221594910ffe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 50e1cd0e41da467a9e816c8e5d64d09a36923d65
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935358"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665744"
 ---
-# <a name="array-bounds-cannot-appear-in-type-specifiers"></a><span data-ttu-id="dde32-102">배열 범위는 형식 지정자에 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="dde32-102">Array bounds cannot appear in type specifiers</span></span>
-<span data-ttu-id="dde32-103">배열 크기는 데이터 형식 지정자의 일부로 선언할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="dde32-103">Array sizes cannot be declared as part of a data type specifier.</span></span>  
+# <a name="array-bounds-cannot-appear-in-type-specifiers"></a><span data-ttu-id="fad66-102">배열 범위는 형식 지정자에 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="fad66-102">Array bounds cannot appear in type specifiers</span></span>
+<span data-ttu-id="fad66-103">배열 크기는 데이터 형식 지정자의 일부로 선언할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="fad66-103">Array sizes cannot be declared as part of a data type specifier.</span></span>  
   
- <span data-ttu-id="dde32-104">**오류 ID:** BC30638</span><span class="sxs-lookup"><span data-stu-id="dde32-104">**Error ID:** BC30638</span></span>  
+ <span data-ttu-id="fad66-104">**오류 ID:** BC30638</span><span class="sxs-lookup"><span data-stu-id="fad66-104">**Error ID:** BC30638</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="dde32-105">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="dde32-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="fad66-105">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="fad66-105">To correct this error</span></span>  
   
-- <span data-ttu-id="dde32-106">이름 바로 뒤에 변수 형식, 배열 크기를 배치 하는 대신 다음 예와에서 같이 배열 크기를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="dde32-106">Specify the size of the array immediately following the variable name instead of placing the array size after the type, as shown in the following example.</span></span>  
+- <span data-ttu-id="fad66-106">이름 바로 뒤에 변수 형식, 배열 크기를 배치 하는 대신 다음 예와에서 같이 배열 크기를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="fad66-106">Specify the size of the array immediately following the variable name instead of placing the array size after the type, as shown in the following example.</span></span>  
   
     ```  
     Dim Array(8) As Integer   
     ```  
   
-- <span data-ttu-id="dde32-107">배열을 정의 하 고 다음 예와에서 같이 원하는 수의 요소를 초기화 합니다.</span><span class="sxs-lookup"><span data-stu-id="dde32-107">Define an array and initialize it with the desired number of elements, as shown in the following example.</span></span>  
+- <span data-ttu-id="fad66-107">배열을 정의 하 고 다음 예와에서 같이 원하는 수의 요소를 초기화 합니다.</span><span class="sxs-lookup"><span data-stu-id="fad66-107">Define an array and initialize it with the desired number of elements, as shown in the following example.</span></span>  
   
     ```  
     Dim Array2() As Integer = New Integer(8) {}  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="dde32-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="dde32-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fad66-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="fad66-108">See also</span></span>
 
-- [<span data-ttu-id="dde32-109">배열(C++)</span><span class="sxs-lookup"><span data-stu-id="dde32-109">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [<span data-ttu-id="fad66-109">배열(C++)</span><span class="sxs-lookup"><span data-stu-id="fad66-109">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)

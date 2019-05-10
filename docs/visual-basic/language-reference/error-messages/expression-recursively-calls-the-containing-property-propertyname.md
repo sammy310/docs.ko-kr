@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: a758d05cca5ca71943b0ef08184aef5b2c457739
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93d02618ff19f431b3602e74478337f6918df289
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802351"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665154"
 ---
-# <a name="expression-recursively-calls-the-containing-property-propertyname"></a><span data-ttu-id="4c515-102">식이 재귀적으로 호출을 포함 하는 속성 '\<propertyname >'</span><span class="sxs-lookup"><span data-stu-id="4c515-102">Expression recursively calls the containing property '\<propertyname>'</span></span>
-<span data-ttu-id="4c515-103">문과 `Set` 프로시저 속성 정의의 값을 속성의 이름에 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c515-103">A statement in the `Set` procedure of a property definition stores a value into the name of the property.</span></span>  
+# <a name="expression-recursively-calls-the-containing-property-propertyname"></a><span data-ttu-id="8fd79-102">식이 재귀적으로 호출을 포함 하는 속성 '\<propertyname >'</span><span class="sxs-lookup"><span data-stu-id="8fd79-102">Expression recursively calls the containing property '\<propertyname>'</span></span>
+<span data-ttu-id="8fd79-103">문과 `Set` 프로시저 속성 정의의 값을 속성의 이름에 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="8fd79-103">A statement in the `Set` procedure of a property definition stores a value into the name of the property.</span></span>  
   
- <span data-ttu-id="4c515-104">정의 하는 속성의 값을 보관 하는 것이 좋습니다는 `Private` 속성의 컨테이너에 변수 둘 다에서 사용 하는 `Get` 및 `Set` 프로시저입니다.</span><span class="sxs-lookup"><span data-stu-id="4c515-104">The recommended approach to holding the value of a property is to define a `Private` variable in the property's container and use it in both the `Get` and `Set` procedures.</span></span> <span data-ttu-id="4c515-105">합니다 `Set` 프로시저는이 들어오는 값을 저장 한 다음 `Private` 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="4c515-105">The `Set` procedure should then store the incoming value in this `Private` variable.</span></span>  
+ <span data-ttu-id="8fd79-104">정의 하는 속성의 값을 보관 하는 것이 좋습니다는 `Private` 속성의 컨테이너에 변수 둘 다에서 사용 하는 `Get` 및 `Set` 프로시저입니다.</span><span class="sxs-lookup"><span data-stu-id="8fd79-104">The recommended approach to holding the value of a property is to define a `Private` variable in the property's container and use it in both the `Get` and `Set` procedures.</span></span> <span data-ttu-id="8fd79-105">합니다 `Set` 프로시저는이 들어오는 값을 저장 한 다음 `Private` 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="8fd79-105">The `Set` procedure should then store the incoming value in this `Private` variable.</span></span>  
   
- <span data-ttu-id="4c515-106">합니다 `Get` 프로시저 처럼 동작을 `Function` 프로시저, 속성 이름에 값을 할당 하 고 발생 하 여 컨트롤을 반환할 수 있도록는 `End Get` 문.</span><span class="sxs-lookup"><span data-stu-id="4c515-106">The `Get` procedure behaves like a `Function` procedure, so it can assign a value to the property name and return control by encountering the `End Get` statement.</span></span> <span data-ttu-id="4c515-107">하지만 포함 것이 좋습니다, 합니다 `Private` 의 값으로 변수를 [Return 문이](../../../visual-basic/language-reference/statements/return-statement.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="4c515-107">The recommended approach, however, is to include the `Private` variable as the value in a [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md).</span></span>  
+ <span data-ttu-id="8fd79-106">합니다 `Get` 프로시저 처럼 동작을 `Function` 프로시저, 속성 이름에 값을 할당 하 고 발생 하 여 컨트롤을 반환할 수 있도록는 `End Get` 문.</span><span class="sxs-lookup"><span data-stu-id="8fd79-106">The `Get` procedure behaves like a `Function` procedure, so it can assign a value to the property name and return control by encountering the `End Get` statement.</span></span> <span data-ttu-id="8fd79-107">하지만 포함 것이 좋습니다, 합니다 `Private` 의 값으로 변수를 [Return 문이](../../../visual-basic/language-reference/statements/return-statement.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="8fd79-107">The recommended approach, however, is to include the `Private` variable as the value in a [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md).</span></span>  
   
- <span data-ttu-id="4c515-108">`Set` 프로시저 처럼를 `Sub` 프로시저에 값을 반환 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4c515-108">The `Set` procedure behaves like a `Sub` procedure, which does not return a value.</span></span> <span data-ttu-id="4c515-109">따라서 프로시저 또는 속성 이름을 특별 한 의미가 없으며 내는 `Set` 프로시저에 값을 저장할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4c515-109">Therefore, the procedure or property name has no special meaning within a `Set` procedure, and you cannot store a value into it.</span></span>  
+ <span data-ttu-id="8fd79-108">`Set` 프로시저 처럼를 `Sub` 프로시저에 값을 반환 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="8fd79-108">The `Set` procedure behaves like a `Sub` procedure, which does not return a value.</span></span> <span data-ttu-id="8fd79-109">따라서 프로시저 또는 속성 이름을 특별 한 의미가 없으며 내는 `Set` 프로시저에 값을 저장할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="8fd79-109">Therefore, the procedure or property name has no special meaning within a `Set` procedure, and you cannot store a value into it.</span></span>  
   
- <span data-ttu-id="4c515-110">다음 예에서는 권장 되는 방법은 뒤에이 오류를 일으킬 수 있는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4c515-110">The following example illustrates the approach that can cause this error, followed by the recommended approach.</span></span>  
+ <span data-ttu-id="8fd79-110">다음 예에서는 권장 되는 방법은 뒤에이 오류를 일으킬 수 있는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8fd79-110">The following example illustrates the approach that can cause this error, followed by the recommended approach.</span></span>  
   
 ```  
 Public Class illustrateProperties  
@@ -55,16 +55,16 @@ Public Class illustrateProperties
 End Class  
 ```  
   
- <span data-ttu-id="4c515-111">이 메시지는 기본적으로 경고입니다.</span><span class="sxs-lookup"><span data-stu-id="4c515-111">By default, this message is a warning.</span></span> <span data-ttu-id="4c515-112">경고를 숨기거나 오류로 처리하는 방법에 대한 자세한 내용은 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="4c515-112">For more information about hiding warnings or treating warnings as errors, please see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
+ <span data-ttu-id="8fd79-111">이 메시지는 기본적으로 경고입니다.</span><span class="sxs-lookup"><span data-stu-id="8fd79-111">By default, this message is a warning.</span></span> <span data-ttu-id="8fd79-112">경고를 숨기거나 오류로 처리하는 방법에 대한 자세한 내용은 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="8fd79-112">For more information about hiding warnings or treating warnings as errors, please see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
- <span data-ttu-id="4c515-113">**오류 ID:** BC42026</span><span class="sxs-lookup"><span data-stu-id="4c515-113">**Error ID:** BC42026</span></span>  
+ <span data-ttu-id="8fd79-113">**오류 ID:** BC42026</span><span class="sxs-lookup"><span data-stu-id="8fd79-113">**Error ID:** BC42026</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="4c515-114">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="4c515-114">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="8fd79-114">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="8fd79-114">To correct this error</span></span>  
   
--   <span data-ttu-id="4c515-115">앞의 예제와 같이 권장된 접근 방식을 사용 하 여 속성 정의 다시 작성 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c515-115">Rewrite the property definition to use the recommended approach as illustrated in the preceding example.</span></span>  
+- <span data-ttu-id="8fd79-115">앞의 예제와 같이 권장된 접근 방식을 사용 하 여 속성 정의 다시 작성 합니다.</span><span class="sxs-lookup"><span data-stu-id="8fd79-115">Rewrite the property definition to use the recommended approach as illustrated in the preceding example.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4c515-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="4c515-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8fd79-116">참고자료</span><span class="sxs-lookup"><span data-stu-id="8fd79-116">See also</span></span>
 
-- [<span data-ttu-id="4c515-117">속성 프로시저</span><span class="sxs-lookup"><span data-stu-id="4c515-117">Property Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
-- [<span data-ttu-id="4c515-118">Property 문</span><span class="sxs-lookup"><span data-stu-id="4c515-118">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)
-- [<span data-ttu-id="4c515-119">Set 문</span><span class="sxs-lookup"><span data-stu-id="4c515-119">Set Statement</span></span>](../../../visual-basic/language-reference/statements/set-statement.md)
+- [<span data-ttu-id="8fd79-117">속성 프로시저</span><span class="sxs-lookup"><span data-stu-id="8fd79-117">Property Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
+- [<span data-ttu-id="8fd79-118">Property 문</span><span class="sxs-lookup"><span data-stu-id="8fd79-118">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)
+- [<span data-ttu-id="8fd79-119">Set 문</span><span class="sxs-lookup"><span data-stu-id="8fd79-119">Set Statement</span></span>](../../../visual-basic/language-reference/statements/set-statement.md)

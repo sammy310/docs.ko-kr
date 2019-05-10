@@ -2,49 +2,49 @@
 title: 비동기 작업 또는 (Visual Basic) 작업 목록 취소
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 62321a5fc011f71ed6125fbaa315573d13667488
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6422a7352e79f0f6de563ea08ba41d1803a2f377
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022066"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624716"
 ---
-# <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a><span data-ttu-id="3b16e-102">비동기 작업 또는 (Visual Basic) 작업 목록 취소</span><span class="sxs-lookup"><span data-stu-id="3b16e-102">Cancel an Async Task or a List of Tasks (Visual Basic)</span></span>
-<span data-ttu-id="3b16e-103">작업이 완료될 때까지 기다리지 않으려면 비동기 애플리케이션을 취소할 때 사용하는 단추를 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-103">You can set up a button that you can use to cancel an async application if you don't want to wait for it to finish.</span></span> <span data-ttu-id="3b16e-104">이 항목의 예제에 따라 한 웹 사이트 또는 웹 사이트 목록의 콘텐츠를 다운로드하는 애플리케이션에 취소 단추를 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-104">By following the examples in this topic, you can add a cancellation button to an application that downloads the contents of one website or a list of websites.</span></span>  
+# <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a><span data-ttu-id="0a36c-102">비동기 작업 또는 (Visual Basic) 작업 목록 취소</span><span class="sxs-lookup"><span data-stu-id="0a36c-102">Cancel an Async Task or a List of Tasks (Visual Basic)</span></span>
+<span data-ttu-id="0a36c-103">작업이 완료될 때까지 기다리지 않으려면 비동기 애플리케이션을 취소할 때 사용하는 단추를 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-103">You can set up a button that you can use to cancel an async application if you don't want to wait for it to finish.</span></span> <span data-ttu-id="0a36c-104">이 항목의 예제에 따라 한 웹 사이트 또는 웹 사이트 목록의 콘텐츠를 다운로드하는 애플리케이션에 취소 단추를 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-104">By following the examples in this topic, you can add a cancellation button to an application that downloads the contents of one website or a list of websites.</span></span>  
   
- <span data-ttu-id="3b16e-105">예제에서는 UI를 사용 하는 [미세 조정 Your 비동기 응용 프로그램 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) 에 대해 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-105">The examples use the UI that [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) describes.</span></span>  
+ <span data-ttu-id="0a36c-105">예제에서는 UI를 사용 하는 [미세 조정 Your 비동기 응용 프로그램 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) 에 대해 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-105">The examples use the UI that [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) describes.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="3b16e-106">예제를 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-106">To run the examples, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>  
+>  <span data-ttu-id="0a36c-106">예제를 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-106">To run the examples, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>  
   
-## <a name="BKMK_CancelaTask"></a> <span data-ttu-id="3b16e-107">작업 취소</span><span class="sxs-lookup"><span data-stu-id="3b16e-107">Cancel a Task</span></span>  
- <span data-ttu-id="3b16e-108">첫 번째 예제에서는 **취소** 단추를 단일 다운로드 작업에 연결합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-108">The first example associates the **Cancel** button with a single download task.</span></span> <span data-ttu-id="3b16e-109">애플리케이션이 콘텐츠를 다운로드하는 동안 단추를 선택하면 다운로드가 취소됩니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-109">If you choose the button while the application is downloading content, the download is canceled.</span></span>  
+## <a name="BKMK_CancelaTask"></a> <span data-ttu-id="0a36c-107">작업 취소</span><span class="sxs-lookup"><span data-stu-id="0a36c-107">Cancel a Task</span></span>  
+ <span data-ttu-id="0a36c-108">첫 번째 예제에서는 **취소** 단추를 단일 다운로드 작업에 연결합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-108">The first example associates the **Cancel** button with a single download task.</span></span> <span data-ttu-id="0a36c-109">애플리케이션이 콘텐츠를 다운로드하는 동안 단추를 선택하면 다운로드가 취소됩니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-109">If you choose the button while the application is downloading content, the download is canceled.</span></span>  
   
-### <a name="downloading-the-example"></a><span data-ttu-id="3b16e-110">예제 다운로드</span><span class="sxs-lookup"><span data-stu-id="3b16e-110">Downloading the Example</span></span>  
- <span data-ttu-id="3b16e-111">[Async 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후, 다음 단계를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-111">You can download the complete Windows Presentation Foundation (WPF) project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) and then follow these steps.</span></span>  
+### <a name="downloading-the-example"></a><span data-ttu-id="0a36c-110">예제 다운로드</span><span class="sxs-lookup"><span data-stu-id="0a36c-110">Downloading the Example</span></span>  
+ <span data-ttu-id="0a36c-111">[Async 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후, 다음 단계를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-111">You can download the complete Windows Presentation Foundation (WPF) project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) and then follow these steps.</span></span>  
   
-1. <span data-ttu-id="3b16e-112">다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-112">Decompress the file that you downloaded, and then start Visual Studio.</span></span>  
+1. <span data-ttu-id="0a36c-112">다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-112">Decompress the file that you downloaded, and then start Visual Studio.</span></span>  
   
-2. <span data-ttu-id="3b16e-113">메뉴 모음에서 **파일**, **열기**, **프로젝트/솔루션**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-113">On the menu bar, choose **File**, **Open**, **Project/Solution**.</span></span>  
+2. <span data-ttu-id="0a36c-113">메뉴 모음에서 **파일**, **열기**, **프로젝트/솔루션**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-113">On the menu bar, choose **File**, **Open**, **Project/Solution**.</span></span>  
   
-3. <span data-ttu-id="3b16e-114">**프로젝트 열기** 대화 상자에서 압축을 해제한 샘플 코드가 포함된 폴더를 열고 AsyncFineTuningVB에 대한 솔루션(.sln) 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-114">In the **Open Project** dialog box, open the folder that holds the sample code that you decompressed, and then open the solution (.sln) file for AsyncFineTuningVB.</span></span>  
+3. <span data-ttu-id="0a36c-114">**프로젝트 열기** 대화 상자에서 압축을 해제한 샘플 코드가 포함된 폴더를 열고 AsyncFineTuningVB에 대한 솔루션(.sln) 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-114">In the **Open Project** dialog box, open the folder that holds the sample code that you decompressed, and then open the solution (.sln) file for AsyncFineTuningVB.</span></span>  
   
-4. <span data-ttu-id="3b16e-115">**솔루션 탐색기**에서 **CancelATask** 프로젝트에 대한 바로 가기 메뉴를 열고 **시작 프로젝트로 설정**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-115">In **Solution Explorer**, open the shortcut menu for the **CancelATask** project, and then choose **Set as StartUp Project**.</span></span>  
+4. <span data-ttu-id="0a36c-115">**솔루션 탐색기**에서 **CancelATask** 프로젝트에 대한 바로 가기 메뉴를 열고 **시작 프로젝트로 설정**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-115">In **Solution Explorer**, open the shortcut menu for the **CancelATask** project, and then choose **Set as StartUp Project**.</span></span>  
   
-5. <span data-ttu-id="3b16e-116">F5 키를 선택하여 프로젝트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-116">Choose the F5 key to run the project.</span></span>  
+5. <span data-ttu-id="0a36c-116">F5 키를 선택하여 프로젝트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-116">Choose the F5 key to run the project.</span></span>  
   
-     <span data-ttu-id="3b16e-117">디버그하지 않고 프로젝트를 실행하려면 Ctrl+F5를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-117">Choose the Ctrl+F5 keys to run the project without debugging it.</span></span>  
+     <span data-ttu-id="0a36c-117">디버그하지 않고 프로젝트를 실행하려면 Ctrl+F5를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-117">Choose the Ctrl+F5 keys to run the project without debugging it.</span></span>  
   
- <span data-ttu-id="3b16e-118">프로젝트를 다운로드 하지 않으려는 경우에이 항목의 끝에서 MainWindow.xaml.vb 파일을 검토할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-118">If you don't want to download the project, you can review the MainWindow.xaml.vb files at the end of this topic.</span></span>  
+ <span data-ttu-id="0a36c-118">프로젝트를 다운로드 하지 않으려는 경우에이 항목의 끝에서 MainWindow.xaml.vb 파일을 검토할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-118">If you don't want to download the project, you can review the MainWindow.xaml.vb files at the end of this topic.</span></span>  
   
-### <a name="building-the-example"></a><span data-ttu-id="3b16e-119">예제 빌드</span><span class="sxs-lookup"><span data-stu-id="3b16e-119">Building the Example</span></span>  
- <span data-ttu-id="3b16e-120">다음 변경 내용은 웹 사이트를 다운로드하는 애플리케이션에 **취소** 단추를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-120">The following changes add a **Cancel** button to an application that downloads a website.</span></span> <span data-ttu-id="3b16e-121">예제를 다운로드하거나 빌드하지 않으려면 이 항목의 끝에 있는 “전체 예제” 섹션에서 최종 결과를 검토할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-121">If you don't want to download or build the example, you can review the final product in the "Complete Examples" section at the end of this topic.</span></span> <span data-ttu-id="3b16e-122">코드에서 변경 내용에는 별표가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-122">Asterisks mark the changes in the code.</span></span>  
+### <a name="building-the-example"></a><span data-ttu-id="0a36c-119">예제 빌드</span><span class="sxs-lookup"><span data-stu-id="0a36c-119">Building the Example</span></span>  
+ <span data-ttu-id="0a36c-120">다음 변경 내용은 웹 사이트를 다운로드하는 애플리케이션에 **취소** 단추를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-120">The following changes add a **Cancel** button to an application that downloads a website.</span></span> <span data-ttu-id="0a36c-121">예제를 다운로드하거나 빌드하지 않으려면 이 항목의 끝에 있는 “전체 예제” 섹션에서 최종 결과를 검토할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-121">If you don't want to download or build the example, you can review the final product in the "Complete Examples" section at the end of this topic.</span></span> <span data-ttu-id="0a36c-122">코드에서 변경 내용에는 별표가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-122">Asterisks mark the changes in the code.</span></span>  
   
- <span data-ttu-id="3b16e-123">직접 예제를 빌드하려면 "예제 다운로드" 섹션의 지침을 단계별로 따르지만 **시작 프로젝트**로 **CancelATask** 대신 **StarterCode**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-123">To build the example yourself, step by step, follow the instructions in the "Downloading the Example" section, but choose **StarterCode** as the **StartUp Project** instead of **CancelATask**.</span></span>  
+ <span data-ttu-id="0a36c-123">직접 예제를 빌드하려면 "예제 다운로드" 섹션의 지침을 단계별로 따르지만 **시작 프로젝트**로 **CancelATask** 대신 **StarterCode**를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-123">To build the example yourself, step by step, follow the instructions in the "Downloading the Example" section, but choose **StarterCode** as the **StartUp Project** instead of **CancelATask**.</span></span>  
   
- <span data-ttu-id="3b16e-124">그런 다음 해당 프로젝트의 MainWindow.xaml.vb 파일에 다음 변경 내용의 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-124">Then add the following changes to the MainWindow.xaml.vb file of that project.</span></span>  
+ <span data-ttu-id="0a36c-124">그런 다음 해당 프로젝트의 MainWindow.xaml.vb 파일에 다음 변경 내용의 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-124">Then add the following changes to the MainWindow.xaml.vb file of that project.</span></span>  
   
-1. <span data-ttu-id="3b16e-125">액세스하는 모든 메서드에 대한 범위 내에 있는 `CancellationTokenSource` 변수 `cts`를 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-125">Declare a `CancellationTokenSource` variable, `cts`, that’s in scope for all methods that access it.</span></span>  
+1. <span data-ttu-id="0a36c-125">액세스하는 모든 메서드에 대한 범위 내에 있는 `CancellationTokenSource` 변수 `cts`를 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-125">Declare a `CancellationTokenSource` variable, `cts`, that’s in scope for all methods that access it.</span></span>  
   
     ```vb  
     Class MainWindow  
@@ -53,7 +53,7 @@ ms.locfileid: "62022066"
         Dim cts As CancellationTokenSource  
     ```  
   
-2. <span data-ttu-id="3b16e-126">**취소** 단추에 대한 다음 이벤트 처리기를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-126">Add the following event handler for the **Cancel** button.</span></span> <span data-ttu-id="3b16e-127">이벤트 처리기는 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 메서드를 사용하여 사용자가 취소를 요청할 때 `cts`에 알려줍니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-127">The event handler uses the <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> method to notify `cts` when the user requests cancellation.</span></span>  
+2. <span data-ttu-id="0a36c-126">**취소** 단추에 대한 다음 이벤트 처리기를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-126">Add the following event handler for the **Cancel** button.</span></span> <span data-ttu-id="0a36c-127">이벤트 처리기는 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 메서드를 사용하여 사용자가 취소를 요청할 때 `cts`에 알려줍니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-127">The event handler uses the <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> method to notify `cts` when the user requests cancellation.</span></span>  
   
     ```vb  
     ' ***Add an event handler for the Cancel button.  
@@ -65,16 +65,16 @@ ms.locfileid: "62022066"
     End Sub  
     ```  
   
-3. <span data-ttu-id="3b16e-128">이벤트 처리기에서 **시작** 단추 `startButton_Click`을 다음과 같이 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-128">Make the following changes in the event handler for the **Start** button, `startButton_Click`.</span></span>  
+3. <span data-ttu-id="0a36c-128">이벤트 처리기에서 **시작** 단추 `startButton_Click`을 다음과 같이 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-128">Make the following changes in the event handler for the **Start** button, `startButton_Click`.</span></span>  
   
-    - <span data-ttu-id="3b16e-129">`CancellationTokenSource`, `cts`를 인스턴스화합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-129">Instantiate the `CancellationTokenSource`, `cts`.</span></span>  
+    - <span data-ttu-id="0a36c-129">`CancellationTokenSource`, `cts`를 인스턴스화합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-129">Instantiate the `CancellationTokenSource`, `cts`.</span></span>  
   
         ```vb  
         ' ***Instantiate the CancellationTokenSource.  
         cts = New CancellationTokenSource()  
         ```  
   
-    - <span data-ttu-id="3b16e-130">지정된 웹 사이트의 콘텐츠를 다운로드하는 `AccessTheWebAsync` 호출에서 `cts`의 <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> 속성을 인수로 전송합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-130">In the call to `AccessTheWebAsync`, which downloads the contents of a specified website, send the <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> property of `cts` as an argument.</span></span> <span data-ttu-id="3b16e-131">취소가 요청되면 `Token` 속성은 메시지를 전파합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-131">The `Token` property propagates the message if cancellation is requested.</span></span> <span data-ttu-id="3b16e-132">사용자가 다운로드 작업을 취소하도록 선택할 경우 메시지를 표시하는 catch 블록을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-132">Add a catch block that displays a message if the user chooses to cancel the download operation.</span></span> <span data-ttu-id="3b16e-133">다음 코드는 변경 내용을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-133">The following code shows the changes.</span></span>  
+    - <span data-ttu-id="0a36c-130">지정된 웹 사이트의 콘텐츠를 다운로드하는 `AccessTheWebAsync` 호출에서 `cts`의 <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> 속성을 인수로 전송합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-130">In the call to `AccessTheWebAsync`, which downloads the contents of a specified website, send the <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> property of `cts` as an argument.</span></span> <span data-ttu-id="0a36c-131">취소가 요청되면 `Token` 속성은 메시지를 전파합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-131">The `Token` property propagates the message if cancellation is requested.</span></span> <span data-ttu-id="0a36c-132">사용자가 다운로드 작업을 취소하도록 선택할 경우 메시지를 표시하는 catch 블록을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-132">Add a catch block that displays a message if the user chooses to cancel the download operation.</span></span> <span data-ttu-id="0a36c-133">다음 코드는 변경 내용을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-133">The following code shows the changes.</span></span>  
   
         ```vb  
         Try  
@@ -93,9 +93,9 @@ ms.locfileid: "62022066"
         End Try  
         ```  
   
-4. <span data-ttu-id="3b16e-134">`AccessTheWebAsync`에서 <xref:System.Net.Http.HttpClient> 형식에 있는 `GetAsync` 메서드의 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> 오버로드를 사용하여 웹 사이트의 콘텐츠를 다운로드합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-134">In `AccessTheWebAsync`, use the  <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> overload of the `GetAsync` method in the <xref:System.Net.Http.HttpClient> type to download the contents of a website.</span></span> <span data-ttu-id="3b16e-135">`AccessTheWebAsync`의 <xref:System.Threading.CancellationToken> 매개 변수인 `ct`를 두 번째 인수로 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-135">Pass `ct`, the <xref:System.Threading.CancellationToken> parameter of `AccessTheWebAsync`, as the second argument.</span></span> <span data-ttu-id="3b16e-136">사용자가 **취소** 단추를 선택하면 토큰이 메시지를 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-136">The token carries the message if the user chooses the **Cancel** button.</span></span>  
+4. <span data-ttu-id="0a36c-134">`AccessTheWebAsync`에서 <xref:System.Net.Http.HttpClient> 형식에 있는 `GetAsync` 메서드의 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> 오버로드를 사용하여 웹 사이트의 콘텐츠를 다운로드합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-134">In `AccessTheWebAsync`, use the  <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> overload of the `GetAsync` method in the <xref:System.Net.Http.HttpClient> type to download the contents of a website.</span></span> <span data-ttu-id="0a36c-135">`AccessTheWebAsync`의 <xref:System.Threading.CancellationToken> 매개 변수인 `ct`를 두 번째 인수로 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-135">Pass `ct`, the <xref:System.Threading.CancellationToken> parameter of `AccessTheWebAsync`, as the second argument.</span></span> <span data-ttu-id="0a36c-136">사용자가 **취소** 단추를 선택하면 토큰이 메시지를 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-136">The token carries the message if the user chooses the **Cancel** button.</span></span>  
   
-     <span data-ttu-id="3b16e-137">다음 코드는 `AccessTheWebAsync`의 변경 내용을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-137">The following code shows the changes in `AccessTheWebAsync`.</span></span>  
+     <span data-ttu-id="0a36c-137">다음 코드는 `AccessTheWebAsync`의 변경 내용을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-137">The following code shows the changes in `AccessTheWebAsync`.</span></span>  
   
     ```vb  
     ' ***Provide a parameter for the CancellationToken.  
@@ -121,44 +121,44 @@ ms.locfileid: "62022066"
     End Function  
     ```  
   
-5. <span data-ttu-id="3b16e-138">프로그램을 취소하지 않으면 다음 출력이 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-138">If you don’t cancel the program, it produces the following output.</span></span>  
+5. <span data-ttu-id="0a36c-138">프로그램을 취소하지 않으면 다음 출력이 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-138">If you don’t cancel the program, it produces the following output.</span></span>  
   
     ```  
     Ready to download.  
     Length of the downloaded string: 158125.  
     ```  
   
-     <span data-ttu-id="3b16e-139">프로그램이 다운로드를 완료하기 전에 **취소** 단추를 선택하면 다음 출력이 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-139">If you choose the **Cancel** button before the program finishes downloading the content, the program produces the following output.</span></span>  
+     <span data-ttu-id="0a36c-139">프로그램이 다운로드를 완료하기 전에 **취소** 단추를 선택하면 다음 출력이 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-139">If you choose the **Cancel** button before the program finishes downloading the content, the program produces the following output.</span></span>  
   
     ```  
     Ready to download.  
     Download canceled.  
     ```  
   
-## <a name="BKMK_CancelaListofTasks"></a> <span data-ttu-id="3b16e-140">작업 목록 취소</span><span class="sxs-lookup"><span data-stu-id="3b16e-140">Cancel a List of Tasks</span></span>  
- <span data-ttu-id="3b16e-141">이전 예제를 확장하여 같은 `CancellationTokenSource` 인스턴스를 각 작업과 연결하는 방식으로 여러 작업을 취소할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-141">You can extend the previous example to cancel many tasks by associating the same `CancellationTokenSource` instance with each task.</span></span> <span data-ttu-id="3b16e-142">**취소** 단추를 선택하면 아직 완료되지 않은 모든 작업이 취소됩니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-142">If you choose the **Cancel** button, you cancel all tasks that aren’t yet complete.</span></span>  
+## <a name="BKMK_CancelaListofTasks"></a> <span data-ttu-id="0a36c-140">작업 목록 취소</span><span class="sxs-lookup"><span data-stu-id="0a36c-140">Cancel a List of Tasks</span></span>  
+ <span data-ttu-id="0a36c-141">이전 예제를 확장하여 같은 `CancellationTokenSource` 인스턴스를 각 작업과 연결하는 방식으로 여러 작업을 취소할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-141">You can extend the previous example to cancel many tasks by associating the same `CancellationTokenSource` instance with each task.</span></span> <span data-ttu-id="0a36c-142">**취소** 단추를 선택하면 아직 완료되지 않은 모든 작업이 취소됩니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-142">If you choose the **Cancel** button, you cancel all tasks that aren’t yet complete.</span></span>  
   
-### <a name="downloading-the-example"></a><span data-ttu-id="3b16e-143">예제 다운로드</span><span class="sxs-lookup"><span data-stu-id="3b16e-143">Downloading the Example</span></span>  
- <span data-ttu-id="3b16e-144">[Async 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후, 다음 단계를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-144">You can download the complete Windows Presentation Foundation (WPF) project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) and then follow these steps.</span></span>  
+### <a name="downloading-the-example"></a><span data-ttu-id="0a36c-143">예제 다운로드</span><span class="sxs-lookup"><span data-stu-id="0a36c-143">Downloading the Example</span></span>  
+ <span data-ttu-id="0a36c-144">[Async 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후, 다음 단계를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-144">You can download the complete Windows Presentation Foundation (WPF) project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) and then follow these steps.</span></span>  
   
-1. <span data-ttu-id="3b16e-145">다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-145">Decompress the file that you downloaded, and then start Visual Studio.</span></span>  
+1. <span data-ttu-id="0a36c-145">다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-145">Decompress the file that you downloaded, and then start Visual Studio.</span></span>  
   
-2. <span data-ttu-id="3b16e-146">메뉴 모음에서 **파일**, **열기**, **프로젝트/솔루션**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-146">On the menu bar, choose **File**, **Open**, **Project/Solution**.</span></span>  
+2. <span data-ttu-id="0a36c-146">메뉴 모음에서 **파일**, **열기**, **프로젝트/솔루션**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-146">On the menu bar, choose **File**, **Open**, **Project/Solution**.</span></span>  
   
-3. <span data-ttu-id="3b16e-147">**프로젝트 열기** 대화 상자에서 압축을 해제한 샘플 코드가 포함된 폴더를 열고 AsyncFineTuningVB에 대한 솔루션(.sln) 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-147">In the **Open Project** dialog box, open the folder that holds the sample code that you decompressed, and then open the solution (.sln) file for AsyncFineTuningVB.</span></span>  
+3. <span data-ttu-id="0a36c-147">**프로젝트 열기** 대화 상자에서 압축을 해제한 샘플 코드가 포함된 폴더를 열고 AsyncFineTuningVB에 대한 솔루션(.sln) 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-147">In the **Open Project** dialog box, open the folder that holds the sample code that you decompressed, and then open the solution (.sln) file for AsyncFineTuningVB.</span></span>  
   
-4. <span data-ttu-id="3b16e-148">**솔루션 탐색기**에서 **CancelAListOfTasks** 프로젝트에 대한 바로 가기 메뉴를 열고 **시작 프로젝트로 설정**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-148">In **Solution Explorer**, open the shortcut menu for the **CancelAListOfTasks** project, and then choose **Set as StartUp Project**.</span></span>  
+4. <span data-ttu-id="0a36c-148">**솔루션 탐색기**에서 **CancelAListOfTasks** 프로젝트에 대한 바로 가기 메뉴를 열고 **시작 프로젝트로 설정**을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-148">In **Solution Explorer**, open the shortcut menu for the **CancelAListOfTasks** project, and then choose **Set as StartUp Project**.</span></span>  
   
-5. <span data-ttu-id="3b16e-149">F5 키를 선택하여 프로젝트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-149">Choose the F5 key to run the project.</span></span>  
+5. <span data-ttu-id="0a36c-149">F5 키를 선택하여 프로젝트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-149">Choose the F5 key to run the project.</span></span>  
   
-     <span data-ttu-id="3b16e-150">디버그하지 않고 프로젝트를 실행하려면 Ctrl+F5를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-150">Choose the Ctrl+F5 keys to run the project without debugging it.</span></span>  
+     <span data-ttu-id="0a36c-150">디버그하지 않고 프로젝트를 실행하려면 Ctrl+F5를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-150">Choose the Ctrl+F5 keys to run the project without debugging it.</span></span>  
   
- <span data-ttu-id="3b16e-151">프로젝트를 다운로드 하지 않으려는 경우에이 항목의 끝에서 MainWindow.xaml.vb 파일을 검토할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-151">If you don't want to download the project, you can review the MainWindow.xaml.vb files at the end of this topic.</span></span>  
+ <span data-ttu-id="0a36c-151">프로젝트를 다운로드 하지 않으려는 경우에이 항목의 끝에서 MainWindow.xaml.vb 파일을 검토할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-151">If you don't want to download the project, you can review the MainWindow.xaml.vb files at the end of this topic.</span></span>  
   
-### <a name="building-the-example"></a><span data-ttu-id="3b16e-152">예제 빌드</span><span class="sxs-lookup"><span data-stu-id="3b16e-152">Building the Example</span></span>  
- <span data-ttu-id="3b16e-153">직접 예제를 확장하려면 "예제 다운로드" 섹션의 지침을 단계별로 따르되, **CancelATask**를 **시작 프로젝트**로 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-153">To extend the example yourself, step by step, follow the instructions in the "Downloading the Example" section, but choose **CancelATask** as the **StartUp Project**.</span></span> <span data-ttu-id="3b16e-154">해당 프로젝트에 다음 변경 내용을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-154">Add the following changes to that project.</span></span> <span data-ttu-id="3b16e-155">프로그램에서 변경 내용에는 별표가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-155">Asterisks mark the changes in the program.</span></span>  
+### <a name="building-the-example"></a><span data-ttu-id="0a36c-152">예제 빌드</span><span class="sxs-lookup"><span data-stu-id="0a36c-152">Building the Example</span></span>  
+ <span data-ttu-id="0a36c-153">직접 예제를 확장하려면 "예제 다운로드" 섹션의 지침을 단계별로 따르되, **CancelATask**를 **시작 프로젝트**로 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-153">To extend the example yourself, step by step, follow the instructions in the "Downloading the Example" section, but choose **CancelATask** as the **StartUp Project**.</span></span> <span data-ttu-id="0a36c-154">해당 프로젝트에 다음 변경 내용을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-154">Add the following changes to that project.</span></span> <span data-ttu-id="0a36c-155">프로그램에서 변경 내용에는 별표가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-155">Asterisks mark the changes in the program.</span></span>  
   
-1. <span data-ttu-id="3b16e-156">웹 주소 목록에 메서드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-156">Add a method to create a list of web addresses.</span></span>  
+1. <span data-ttu-id="0a36c-156">웹 주소 목록에 메서드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-156">Add a method to create a list of web addresses.</span></span>  
   
     ```vb  
     ' ***Add a method that creates a list of web addresses.  
@@ -178,14 +178,14 @@ ms.locfileid: "62022066"
     End Function  
     ```  
   
-2. <span data-ttu-id="3b16e-157">`AccessTheWebAsync`에서 메서드를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-157">Call the method in `AccessTheWebAsync`.</span></span>  
+2. <span data-ttu-id="0a36c-157">`AccessTheWebAsync`에서 메서드를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-157">Call the method in `AccessTheWebAsync`.</span></span>  
   
     ```vb  
     ' ***Call SetUpURLList to make a list of web addresses.  
     Dim urlList As List(Of String) = SetUpURLList()  
     ```  
   
-3. <span data-ttu-id="3b16e-158">`AccessTheWebAsync`에서 다음 루프를 추가하여 목록에 있는 각 웹 주소를 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-158">Add the following loop in `AccessTheWebAsync` to process each web address in the list.</span></span>  
+3. <span data-ttu-id="0a36c-158">`AccessTheWebAsync`에서 다음 루프를 추가하여 목록에 있는 각 웹 주소를 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-158">Add the following loop in `AccessTheWebAsync` to process each web address in the list.</span></span>  
   
     ```vb  
     ' ***Add a loop to process the list of web addresses.  
@@ -203,19 +203,19 @@ ms.locfileid: "62022066"
     Next  
     ```  
   
-4. <span data-ttu-id="3b16e-159">`AccessTheWebAsync`는 길이를 표시하므로 메서드가 아무것도 반환할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-159">Because `AccessTheWebAsync` displays the lengths, the method doesn't need to return anything.</span></span> <span data-ttu-id="3b16e-160">return 문을 제거하고 메서드의 반환 형식을 <xref:System.Threading.Tasks.Task%601> 대신 <xref:System.Threading.Tasks.Task>로 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-160">Remove the return statement, and change the return type of the method to <xref:System.Threading.Tasks.Task> instead of <xref:System.Threading.Tasks.Task%601>.</span></span>  
+4. <span data-ttu-id="0a36c-159">`AccessTheWebAsync`는 길이를 표시하므로 메서드가 아무것도 반환할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-159">Because `AccessTheWebAsync` displays the lengths, the method doesn't need to return anything.</span></span> <span data-ttu-id="0a36c-160">return 문을 제거하고 메서드의 반환 형식을 <xref:System.Threading.Tasks.Task%601> 대신 <xref:System.Threading.Tasks.Task>로 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-160">Remove the return statement, and change the return type of the method to <xref:System.Threading.Tasks.Task> instead of <xref:System.Threading.Tasks.Task%601>.</span></span>  
   
     ```vb  
     Async Function AccessTheWebAsync(ct As CancellationToken) As Task  
     ```  
   
-     <span data-ttu-id="3b16e-161">식 대신 문을 사용하여 `startButton_Click`에서 메서드를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-161">Call the method from `startButton_Click` by using a statement instead of an expression.</span></span>  
+     <span data-ttu-id="0a36c-161">식 대신 문을 사용하여 `startButton_Click`에서 메서드를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-161">Call the method from `startButton_Click` by using a statement instead of an expression.</span></span>  
   
     ```vb  
     Await AccessTheWebAsync(cts.Token)  
     ```  
   
-5. <span data-ttu-id="3b16e-162">프로그램을 취소하지 않으면 다음 출력이 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-162">If you don’t cancel the program, it produces the following output.</span></span>  
+5. <span data-ttu-id="0a36c-162">프로그램을 취소하지 않으면 다음 출력이 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-162">If you don’t cancel the program, it produces the following output.</span></span>  
   
     ```  
     Length of the downloaded string: 35939.  
@@ -235,7 +235,7 @@ ms.locfileid: "62022066"
     Downloads complete.  
     ```  
   
-     <span data-ttu-id="3b16e-163">다운로드가 완료되기 전에 **취소** 단추를 선택하면 취소하기 전에 완료된 다운로드의 길이가 출력에 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-163">If you choose the **Cancel** button before the downloads are complete, the output contains the lengths of the downloads that completed before the cancellation.</span></span>  
+     <span data-ttu-id="0a36c-163">다운로드가 완료되기 전에 **취소** 단추를 선택하면 취소하기 전에 완료된 다운로드의 길이가 출력에 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-163">If you choose the **Cancel** button before the downloads are complete, the output contains the lengths of the downloads that completed before the cancellation.</span></span>  
   
     ```  
     Length of the downloaded string: 35939.  
@@ -247,13 +247,13 @@ ms.locfileid: "62022066"
     Downloads canceled.  
     ```  
   
-## <a name="BKMK_CompleteExamples"></a> <span data-ttu-id="3b16e-164">전체 예제</span><span class="sxs-lookup"><span data-stu-id="3b16e-164">Complete Examples</span></span>  
- <span data-ttu-id="3b16e-165">다음 섹션에는 각각의 이전 예제에 대한 코드가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-165">The following sections contain the code for each of the previous examples.</span></span> <span data-ttu-id="3b16e-166"><xref:System.Net.Http>에 대한 참조를 추가해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-166">Notice that you must add a reference for <xref:System.Net.Http>.</span></span>  
+## <a name="BKMK_CompleteExamples"></a> <span data-ttu-id="0a36c-164">전체 예제</span><span class="sxs-lookup"><span data-stu-id="0a36c-164">Complete Examples</span></span>  
+ <span data-ttu-id="0a36c-165">다음 섹션에는 각각의 이전 예제에 대한 코드가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-165">The following sections contain the code for each of the previous examples.</span></span> <span data-ttu-id="0a36c-166"><xref:System.Net.Http>에 대한 참조를 추가해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-166">Notice that you must add a reference for <xref:System.Net.Http>.</span></span>  
   
- <span data-ttu-id="3b16e-167">[비동기 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 프로젝트를 다운로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-167">You can download the projects from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).</span></span>  
+ <span data-ttu-id="0a36c-167">[비동기 샘플: 애플리케이션 미세 조정](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)에서 프로젝트를 다운로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-167">You can download the projects from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).</span></span>  
   
-### <a name="cancel-a-task-example"></a><span data-ttu-id="3b16e-168">작업 취소 예제</span><span class="sxs-lookup"><span data-stu-id="3b16e-168">Cancel a Task Example</span></span>  
- <span data-ttu-id="3b16e-169">다음 코드는 단일 작업을 취소 하는 예제의 전체 MainWindow.xaml.vb 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-169">The following code is the complete MainWindow.xaml.vb file for the example that cancels a single task.</span></span>  
+### <a name="cancel-a-task-example"></a><span data-ttu-id="0a36c-168">작업 취소 예제</span><span class="sxs-lookup"><span data-stu-id="0a36c-168">Cancel a Task Example</span></span>  
+ <span data-ttu-id="0a36c-169">다음 코드는 단일 작업을 취소 하는 예제의 전체 MainWindow.xaml.vb 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-169">The following code is the complete MainWindow.xaml.vb file for the example that cancels a single task.</span></span>  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -336,8 +336,8 @@ End Class
 ' Download canceled.  
 ```  
   
-### <a name="cancel-a-list-of-tasks-example"></a><span data-ttu-id="3b16e-170">작업 목록 취소 예제</span><span class="sxs-lookup"><span data-stu-id="3b16e-170">Cancel a List of Tasks Example</span></span>  
- <span data-ttu-id="3b16e-171">다음 코드는 작업 목록을 취소 하는 예제의 전체 MainWindow.xaml.vb 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="3b16e-171">The following code is the complete MainWindow.xaml.vb file for the example that cancels a list of tasks.</span></span>  
+### <a name="cancel-a-list-of-tasks-example"></a><span data-ttu-id="0a36c-170">작업 목록 취소 예제</span><span class="sxs-lookup"><span data-stu-id="0a36c-170">Cancel a List of Tasks Example</span></span>  
+ <span data-ttu-id="0a36c-171">다음 코드는 작업 목록을 취소 하는 예제의 전체 MainWindow.xaml.vb 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="0a36c-171">The following code is the complete MainWindow.xaml.vb file for the example that cancels a list of tasks.</span></span>  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -454,10 +454,10 @@ End Class
 ' Downloads canceled.  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="3b16e-172">참고자료</span><span class="sxs-lookup"><span data-stu-id="3b16e-172">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0a36c-172">참고자료</span><span class="sxs-lookup"><span data-stu-id="0a36c-172">See also</span></span>
 
 - <xref:System.Threading.CancellationTokenSource>
 - <xref:System.Threading.CancellationToken>
-- [<span data-ttu-id="3b16e-173">Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3b16e-173">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [<span data-ttu-id="3b16e-174">Async 응용 프로그램 미세 조정(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3b16e-174">Fine-Tuning Your Async Application (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [<span data-ttu-id="3b16e-175">비동기 샘플: 애플리케이션 미세 조정</span><span class="sxs-lookup"><span data-stu-id="3b16e-175">Async Sample: Fine Tuning Your Application</span></span>](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [<span data-ttu-id="0a36c-173">Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0a36c-173">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [<span data-ttu-id="0a36c-174">Async 응용 프로그램 미세 조정(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0a36c-174">Fine-Tuning Your Async Application (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [<span data-ttu-id="0a36c-175">비동기 샘플: 애플리케이션 미세 조정</span><span class="sxs-lookup"><span data-stu-id="0a36c-175">Async Sample: Fine Tuning Your Application</span></span>](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
