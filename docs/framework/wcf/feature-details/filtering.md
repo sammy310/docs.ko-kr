@@ -2,12 +2,12 @@
 title: 필터링
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-ms.openlocfilehash: 7051e69f6a38d536251c26365a634d4ffbc46f1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 46716d1a96da6ddc729992b546be56c2aec0bf5d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856702"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593498"
 ---
 # <a name="filtering"></a>필터링
 Windows Communication Foundation (WCF) 필터링 시스템 선언적 필터를 사용 메시지를 일치 시키고 운영 결정을 내릴 수 있습니다. 필터를 사용하여 메시지 일부를 검사하고 메시지를 통해 수행할 작업을 결정할 수 있습니다. 예를 들어, 큐 프로세스에서는 XPath 1.0 쿼리를 사용하여 알려진 헤더의 우선 순위 요소를 검사함으로써 메시지를 큐의 앞으로 이동할지 여부를 결정할 수 있습니다.  
@@ -36,9 +36,9 @@ Windows Communication Foundation (WCF) 필터링 시스템 선언적 필터를 �
 ### <a name="endpoint-address-filters"></a>엔드포인트 주소 필터  
  <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>는 헤더 컬렉션에 표시된 대로 엔드포인트 주소를 기준으로 메시지 및 메시지 버퍼를 필터링합니다. 메시지가 이러한 필터를 통과하려면 다음 조건을 충족해야 합니다.  
   
--   필터 주소 URI(Uniform Resource Identifier)가 메시지 받는 사람 헤더의 URI와 동일해야 합니다.  
+- 필터 주소 URI(Uniform Resource Identifier)가 메시지 받는 사람 헤더의 URI와 동일해야 합니다.  
   
--   필터 주소의 각 엔드포인트 매개 변수(`address.Headers` 컬렉션)가 매핑할 메시지에서 헤더를 찾아야 합니다. 메시지 또는 메시지 버퍼의 추가 헤더는 `true`를 유지하기 위해 일치에 사용할 수 있습니다.  
+- 필터 주소의 각 엔드포인트 매개 변수(`address.Headers` 컬렉션)가 매핑할 메시지에서 헤더를 찾아야 합니다. 메시지 또는 메시지 버퍼의 추가 헤더는 `true`를 유지하기 위해 일치에 사용할 수 있습니다.  
   
 ### <a name="prefix-endpoint-address-filters"></a>접두사 엔드포인트 주소 필터  
   
@@ -79,9 +79,9 @@ Windows Communication Foundation (WCF) 필터링 시스템 선언적 필터를 �
 ### <a name="de-multiplexing"></a>역 멀티플렉싱  
  여러 개의 엔드포인트가 동일한 `ServiceListener`에서 분리되어 연결이 끊어진 경우 메시지를 역 멀티플렉싱하고 특정 엔드포인트 주소에 속하는지 여부를 확인하는 유일한 방법은 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>를 사용하는 것입니다. 여기서 헤더에 저장된 정보를 조회하여 등록된 엔드포인트 쪽에 있는 메시지를 선택합니다. 이러한 필터의 경우 전달된 메시지에만 다음 두 가지 모두에 해당하는 필요한 모든 헤더가 포함됩니다.  
   
--   `EndpointAddress`의 URI.  
+- `EndpointAddress`의 URI.  
   
--   `EndpointAddress`에 지정된 대로 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>의 나머지 엔드포인트 매개 변수.  
+- `EndpointAddress`에 지정된 대로 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>의 나머지 엔드포인트 매개 변수.  
   
 ## <a name="see-also"></a>참고자료
 

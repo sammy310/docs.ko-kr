@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: c06ecd8626b148c4f2143efdfa1e143d6ab3d6bc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ff89f2d5ffa177b9413f6a2925bb05729e053a3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876358"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592903"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>SQL Server의 스냅숏 격리
 스냅숏 격리를 통해 OLTP 응용 프로그램의 동시성이 향상됩니다.  
@@ -41,35 +41,35 @@ SET READ_COMMITTED_SNAPSHOT ON
   
  이전 버전의 SQL Server에서는 SQL-92 표준에 정의된 네 가지 격리 수준이 지원되었습니다.  
   
--   READ UNCOMMITTED는 다른 트랜잭션에 의한 잠금을 무시하기 때문에 가장 제한이 적은 격리 수준입니다. READ UNCOMMITTED에서 실행되는 트랜잭션은 다른 트랜잭션에서 커밋하지 않은 수정된 데이터 값을 읽을 수 있습니다. 이를 "더티" 읽기라고 합니다.  
+- READ UNCOMMITTED는 다른 트랜잭션에 의한 잠금을 무시하기 때문에 가장 제한이 적은 격리 수준입니다. READ UNCOMMITTED에서 실행되는 트랜잭션은 다른 트랜잭션에서 커밋하지 않은 수정된 데이터 값을 읽을 수 있습니다. 이를 "더티" 읽기라고 합니다.  
   
--   READ COMMITTED는 SQL Server의 기본 격리 수준입니다. 이 격리 수준은 문에서 다른 트랜잭션에 의해 수정되었지만 아직 커밋되지 않은 데이터 값을 읽을 수 없도록 지정하여 더티 읽기를 방지합니다. 다른 트랜잭션에서 현재 트랜잭션 내에 있는 개별 문이 실행되는 사이에 데이터를 계속해서 수정하거나 삽입 또는 삭제할 수 있기 때문에 결과적으로 반복되지 않은 읽기 또는 "팬텀" 데이터가 발생합니다.  
+- READ COMMITTED는 SQL Server의 기본 격리 수준입니다. 이 격리 수준은 문에서 다른 트랜잭션에 의해 수정되었지만 아직 커밋되지 않은 데이터 값을 읽을 수 없도록 지정하여 더티 읽기를 방지합니다. 다른 트랜잭션에서 현재 트랜잭션 내에 있는 개별 문이 실행되는 사이에 데이터를 계속해서 수정하거나 삽입 또는 삭제할 수 있기 때문에 결과적으로 반복되지 않은 읽기 또는 "팬텀" 데이터가 발생합니다.  
   
--   REPEATABLE READ는 READ COMMITTED보다 좀 더 제한적인 격리 수준입니다. 이 수준은 READ COMMITTED를 포함할 뿐만 아니라 현재 트랜잭션이 커밋될 때까지 현재 트랜잭션에서 읽은 데이터를 다른 트랜잭션에서 수정하거나 삭제할 수 없도록 지정합니다. 읽은 데이터에 대한 공유 잠금이 각 문이 끝날 때 해제되지 않고 트랜잭션 기간 동안 유지되기 때문에 동시성이 READ COMMITTED의 경우보다 낮습니다.  
+- REPEATABLE READ는 READ COMMITTED보다 좀 더 제한적인 격리 수준입니다. 이 수준은 READ COMMITTED를 포함할 뿐만 아니라 현재 트랜잭션이 커밋될 때까지 현재 트랜잭션에서 읽은 데이터를 다른 트랜잭션에서 수정하거나 삭제할 수 없도록 지정합니다. 읽은 데이터에 대한 공유 잠금이 각 문이 끝날 때 해제되지 않고 트랜잭션 기간 동안 유지되기 때문에 동시성이 READ COMMITTED의 경우보다 낮습니다.  
   
--   SERIALIZABLE은 전체 키를 잠그고 트랜잭션이 완료될 때까지 잠금을 유지하기 때문에 가장 제한적인 격리 수준입니다. 이 격리 수준은 REPEATABLE READ를 포함하며 트랜잭션이 완료될 때까지 다른 트랜잭션이 해당 트랜잭션에서 읽은 범위 내에 새 행을 삽입할 수 없도록 하는 제한을 추가합니다.  
+- SERIALIZABLE은 전체 키를 잠그고 트랜잭션이 완료될 때까지 잠금을 유지하기 때문에 가장 제한적인 격리 수준입니다. 이 격리 수준은 REPEATABLE READ를 포함하며 트랜잭션이 완료될 때까지 다른 트랜잭션이 해당 트랜잭션에서 읽은 범위 내에 새 행을 삽입할 수 없도록 하는 제한을 추가합니다.  
   
  자세한 내용은 참조는 [트랜잭션 잠금 및 행 버전 관리 지침](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)합니다.  
   
 ### <a name="snapshot-isolation-level-extensions"></a>스냅샷 격리 수준 확장명  
  SQL Server에서는 SNAPSHOT 격리 수준을 도입하고 READ COMMITTED를 추가로 구현함으로써 SQL-92 격리 수준이 확장되었습니다. READ_COMMITTED_SNAPSHOT 격리 수준은 모든 트랜잭션에 대해 READ COMMITTED를 투명하게 대체할 수 있습니다.  
   
--   SNAPSHOT 격리는 트랜잭션 내에서 읽은 데이터에 다른 동시 트랜잭션에서 발생한 변경 내용이 반영되지 않도록 지정합니다. 트랜잭션은 트랜잭션이 시작될 때 존재하는 데이터 행 버전을 사용합니다. 데이터를 읽을 때 데이터가 잠기지 않으므로 SNAPSHOT 트랜잭션이 다른 트랜잭션의 데이터 쓰기 동작을 차단하지 않습니다. 데이터를 쓰는 트랜잭션은 스냅샷 트랜잭션의 데이터 읽기 동작을 차단하지 않습니다. 스냅샷 격리를 사용하려면 ALLOW_SNAPSHOT_ISOLATION 데이터베이스 옵션을 설정하여 스냅샷 격리를 활성화해야 합니다.  
+- SNAPSHOT 격리는 트랜잭션 내에서 읽은 데이터에 다른 동시 트랜잭션에서 발생한 변경 내용이 반영되지 않도록 지정합니다. 트랜잭션은 트랜잭션이 시작될 때 존재하는 데이터 행 버전을 사용합니다. 데이터를 읽을 때 데이터가 잠기지 않으므로 SNAPSHOT 트랜잭션이 다른 트랜잭션의 데이터 쓰기 동작을 차단하지 않습니다. 데이터를 쓰는 트랜잭션은 스냅샷 트랜잭션의 데이터 읽기 동작을 차단하지 않습니다. 스냅샷 격리를 사용하려면 ALLOW_SNAPSHOT_ISOLATION 데이터베이스 옵션을 설정하여 스냅샷 격리를 활성화해야 합니다.  
   
--   READ_COMMITTED_SNAPSHOT 데이터베이스 옵션은 데이터베이스에서 스냅샷 격리를 활성화한 경우 기본 READ COMMITTED 격리 수준의 동작을 결정합니다. READ_COMMITTED_SNAPSHOT ON을 명시적으로 지정하지 않은 경우 READ COMMITTED가 모든 암시적 트랜잭션에 적용됩니다. 따라서 READ_COMMITTED_SNAPSHOT OFF(기본값)를 설정할 때와 똑같이 작동합니다. READ_COMMITTED_SNAPSHOT OFF가 적용되는 경우 데이터베이스 엔진에서 공유 잠금을 사용하여 기본 격리 수준을 적용합니다. READ_COMMITTED_SNAPSHOT 데이터베이스 옵션을 ON으로 설정하면 데이터베이스 엔진에서 잠금을 사용하는 대신에 행 버전 관리 및 스냅샷 격리를 기본값으로 사용하여 데이터를 보호합니다.  
+- READ_COMMITTED_SNAPSHOT 데이터베이스 옵션은 데이터베이스에서 스냅샷 격리를 활성화한 경우 기본 READ COMMITTED 격리 수준의 동작을 결정합니다. READ_COMMITTED_SNAPSHOT ON을 명시적으로 지정하지 않은 경우 READ COMMITTED가 모든 암시적 트랜잭션에 적용됩니다. 따라서 READ_COMMITTED_SNAPSHOT OFF(기본값)를 설정할 때와 똑같이 작동합니다. READ_COMMITTED_SNAPSHOT OFF가 적용되는 경우 데이터베이스 엔진에서 공유 잠금을 사용하여 기본 격리 수준을 적용합니다. READ_COMMITTED_SNAPSHOT 데이터베이스 옵션을 ON으로 설정하면 데이터베이스 엔진에서 잠금을 사용하는 대신에 행 버전 관리 및 스냅샷 격리를 기본값으로 사용하여 데이터를 보호합니다.  
   
 ## <a name="how-snapshot-isolation-and-row-versioning-work"></a>스냅샷 격리 및 행 버전 관리의 작동 방법  
  SQL Server 데이터베이스 엔진의 원래 행의 복사본을 저장 SNAPSHOT 격리 수준을 사용 하는 경우 행이 업데이트 될 때마다 **tempdb**를 행에 트랜잭션 시퀀스 번호를 추가 합니다. 발생하는 이벤트 시퀀스는 다음과 같습니다.  
   
--   새 트랜잭션이 시작되고 트랜잭션 시퀀스 번호가 할당됩니다.  
+- 새 트랜잭션이 시작되고 트랜잭션 시퀀스 번호가 할당됩니다.  
   
--   데이터베이스 엔진이 트랜잭션 내에서 행을 읽고에서 행 버전을 검색 **tempdb** 시퀀스 번호에 근접 한 트랜잭션 시퀀스 번호 보다 낮으면서 가장 합니다.  
+- 데이터베이스 엔진이 트랜잭션 내에서 행을 읽고에서 행 버전을 검색 **tempdb** 시퀀스 번호에 근접 한 트랜잭션 시퀀스 번호 보다 낮으면서 가장 합니다.  
   
--   데이터베이스 엔진에서 스냅샷 트랜잭션이 시작되었을 때 커밋되지 않은 활성 트랜잭션의 트랜잭션 시퀀스 번호 목록에 트랜잭션 시퀀스 번호가 들어 있지 않은지 확인합니다.  
+- 데이터베이스 엔진에서 스냅샷 트랜잭션이 시작되었을 때 커밋되지 않은 활성 트랜잭션의 트랜잭션 시퀀스 번호 목록에 트랜잭션 시퀀스 번호가 들어 있지 않은지 확인합니다.  
   
--   트랜잭션이에서 행의 버전을 읽습니다 **tempdb** 트랜잭션 시작 당시의 합니다. 트랜잭션이 시작된 후 삽입된 새 행은 해당 시퀀스 번호 값이 트랜잭션 시퀀스 번호 값보다 높으므로 표시되지 않습니다.  
+- 트랜잭션이에서 행의 버전을 읽습니다 **tempdb** 트랜잭션 시작 당시의 합니다. 트랜잭션이 시작된 후 삽입된 새 행은 해당 시퀀스 번호 값이 트랜잭션 시퀀스 번호 값보다 높으므로 표시되지 않습니다.  
   
--   현재 트랜잭션에서 행 버전이 있을 것 때문에 트랜잭션이 시작 된 후 삭제 된 행이 나타납니다 **tempdb** 낮은 시퀀스 번호 값입니다.  
+- 현재 트랜잭션에서 행 버전이 있을 것 때문에 트랜잭션이 시작 된 후 삭제 된 행이 나타납니다 **tempdb** 낮은 시퀀스 번호 값입니다.  
   
  스냅샷 격리의 결과로 트랜잭션에서 기본 테이블에 잠금을 고려하거나 배치하지 않고 트랜잭션을 시작할 때 존재했던 그대로 모든 데이터를 표시합니다. 따라서 경합이 있는 상황에서는 성능이 향상될 수 있습니다.  
   
@@ -93,15 +93,15 @@ SqlTransaction sqlTran =
   
  코드에 연결 합니다 **AdventureWorks** 라는 테이블을 만들고 샘플 데이터베이스에 SQL Server **TestSnapshot** 데이터의 한 행을 삽입 합니다. 이 코드에서는 ALTER DATABASE Transact-SQL 문을 사용하여 데이터베이스에 스냅샷 격리 기능을 설정하지만 READ_COMMITTED_SNAPSHOT 옵션을 설정하지 않으므로 기본 READ COMMITTED 격리 수준 동작이 그대로 적용됩니다. 그런 다음 이 코드에서는 다음 작업을 수행합니다.  
   
--   sqlTransaction1을 시작하지만 완료하지는 않습니다. 이 트랜잭션은 SERIALIZABLE 격리 수준을 사용하여 업데이트 트랜잭션을 시작합니다. 이렇게 하면 테이블이 잠깁니다.  
+- sqlTransaction1을 시작하지만 완료하지는 않습니다. 이 트랜잭션은 SERIALIZABLE 격리 수준을 사용하여 업데이트 트랜잭션을 시작합니다. 이렇게 하면 테이블이 잠깁니다.  
   
--   두 번째 연결이 열리고의 데이터를 읽을 SNAPSHOT 격리 수준을 사용 하 여 두 번째 트랜잭션을 시작 합니다 **TestSnapshot** 테이블입니다. 스냅샷 격리가 활성화되므로 이 트랜잭션에서 sqlTransaction1이 시작되기 전에 존재하는 데이터를 읽을 수 있습니다.  
+- 두 번째 연결이 열리고의 데이터를 읽을 SNAPSHOT 격리 수준을 사용 하 여 두 번째 트랜잭션을 시작 합니다 **TestSnapshot** 테이블입니다. 스냅샷 격리가 활성화되므로 이 트랜잭션에서 sqlTransaction1이 시작되기 전에 존재하는 데이터를 읽을 수 있습니다.  
   
--   세 번째 연결을 열고 READ COMMITTED 격리 수준을 사용하여 트랜잭션을 시작함으로써 테이블의 데이터를 읽으려고 합니다. 이 경우 첫 번째 트랜잭션에서 테이블에 있는 잠금을 통과하여 읽을 수 없기 때문에 코드에서 데이터를 읽을 수 없으며 제한 시간이 초과됩니다. REPEATABLE READ 및 SERIALIZABLE 격리 수준에서도 첫 번째 트랜잭션에 있는 잠금을 통과하여 읽을 수 없으므로 이러한 격리 수준이 사용되는 경우 동일한 결과가 발생합니다.  
+- 세 번째 연결을 열고 READ COMMITTED 격리 수준을 사용하여 트랜잭션을 시작함으로써 테이블의 데이터를 읽으려고 합니다. 이 경우 첫 번째 트랜잭션에서 테이블에 있는 잠금을 통과하여 읽을 수 없기 때문에 코드에서 데이터를 읽을 수 없으며 제한 시간이 초과됩니다. REPEATABLE READ 및 SERIALIZABLE 격리 수준에서도 첫 번째 트랜잭션에 있는 잠금을 통과하여 읽을 수 없으므로 이러한 격리 수준이 사용되는 경우 동일한 결과가 발생합니다.  
   
--   네 번째 연결을 열고 READ UNCOMMITTED 격리 수준을 사용하여 트랜잭션을 시작합니다. 이 격리 수준은 sqlTransaction1에서 커밋되지 않은 값의 더티 읽기를 수행합니다. 첫 번째 트랜잭션이 커밋되지 않는 경우 이 값은 데이터베이스에 실제로 존재하지 않습니다.  
+- 네 번째 연결을 열고 READ UNCOMMITTED 격리 수준을 사용하여 트랜잭션을 시작합니다. 이 격리 수준은 sqlTransaction1에서 커밋되지 않은 값의 더티 읽기를 수행합니다. 첫 번째 트랜잭션이 커밋되지 않는 경우 이 값은 데이터베이스에 실제로 존재하지 않습니다.  
   
--   첫 번째 트랜잭션을 롤백하고 고 삭제 하 여 정리 합니다 **TestSnapshot** 테이블과 해제 스냅샷 격리를 **AdventureWorks** 데이터베이스입니다.  
+- 첫 번째 트랜잭션을 롤백하고 고 삭제 하 여 정리 합니다 **TestSnapshot** 테이블과 해제 스냅샷 격리를 **AdventureWorks** 데이터베이스입니다.  
   
 > [!NOTE]
 >  다음 예제에서는 연결 풀링을 해제한 상태에서 동일한 연결 문자열을 사용합니다. 연결이 풀링된 경우, 연결의 격리 수준을 재설정하더라도 서버에서는 격리 수준이 재설정되지 않습니다. 따라서 풀링된 동일한 내부 연결을 사용하는 후속 연결은 풀링된 연결의 격리 수준으로 설정된 각각의 격리 수준에서 시작됩니다. 연결 풀링을 해제하는 대신 각 연결에 대해 명시적으로 격리 수준을 설정할 수도 있습니다.  
@@ -112,19 +112,19 @@ SqlTransaction sqlTran =
 ### <a name="example"></a>예제  
  다음 예제에서는 데이터가 수정될 때 나타나는 스냅샷 격리의 동작을 보여 줍니다. 이 코드에서는 다음 작업을 수행합니다.  
   
--   에 연결 합니다 **AdventureWorks** 샘플 데이터베이스 및 하면 스냅숏 격리 합니다.  
+- 에 연결 합니다 **AdventureWorks** 샘플 데이터베이스 및 하면 스냅숏 격리 합니다.  
   
--   라는 테이블을 만듭니다 **TestSnapshotUpdate** 세 개의 샘플 데이터 행을 삽입 합니다.  
+- 라는 테이블을 만듭니다 **TestSnapshotUpdate** 세 개의 샘플 데이터 행을 삽입 합니다.  
   
--   SNAPSHOT 격리를 사용하여 sqlTransaction1을 시작하지만 완료하지는 않습니다. 트랜잭션에서 데이터 행 세 개가 선택됩니다.  
+- SNAPSHOT 격리를 사용하여 sqlTransaction1을 시작하지만 완료하지는 않습니다. 트랜잭션에서 데이터 행 세 개가 선택됩니다.  
   
--   두 번째를 만듭니다 **SqlConnection** 하 **AdventureWorks** sqlTransaction1에서 선택한 행 중 하나에 값을 업데이트 하는 READ COMMITTED 격리 수준을 사용 하 여 두 번째 트랜잭션을 만듭니다.  
+- 두 번째를 만듭니다 **SqlConnection** 하 **AdventureWorks** sqlTransaction1에서 선택한 행 중 하나에 값을 업데이트 하는 READ COMMITTED 격리 수준을 사용 하 여 두 번째 트랜잭션을 만듭니다.  
   
--   sqlTransaction2를 커밋합니다.  
+- sqlTransaction2를 커밋합니다.  
   
--   sqlTransaction1로 돌아가서 sqlTransaction1이 커밋된 동일한 행에 대한 업데이트를 시도합니다. 오류 3960이 발생하고 sqlTransaction1이 자동으로 롤백됩니다. 합니다 **SqlException.Number** 하 고 **SqlException.Message** 콘솔 창에 표시 됩니다.  
+- sqlTransaction1로 돌아가서 sqlTransaction1이 커밋된 동일한 행에 대한 업데이트를 시도합니다. 오류 3960이 발생하고 sqlTransaction1이 자동으로 롤백됩니다. 합니다 **SqlException.Number** 하 고 **SqlException.Message** 콘솔 창에 표시 됩니다.  
   
--   스냅숏 격리를 해제 하려면 정리 코드를 실행 **AdventureWorks** 하 고 삭제 합니다 **TestSnapshotUpdate** 테이블.  
+- 스냅숏 격리를 해제 하려면 정리 코드를 실행 **AdventureWorks** 하 고 삭제 합니다 **TestSnapshotUpdate** 테이블.  
   
  [!code-csharp[DataWorks SnapshotIsolation.DemoUpdate#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.DemoUpdate/CS/source.cs#1)]
  [!code-vb[DataWorks SnapshotIsolation.DemoUpdate#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.DemoUpdate/VB/source.vb#1)]  

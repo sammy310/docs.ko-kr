@@ -2,12 +2,12 @@
 title: 엔터프라이즈 서비스 및 COM+ 트랜잭션과의 상호 운용성
 ms.date: 03/30/2017
 ms.assetid: d0fd0d26-fe86-443b-b208-4d57d39fa4aa
-ms.openlocfilehash: 8b86a032e7cbc27332864c9cc96009f12b72c53d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 98890c4c054a5063f91e429b13cfd6bab9f3dc15
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793655"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596865"
 ---
 # <a name="interoperability-with-enterprise-services-and-com-transactions"></a>엔터프라이즈 서비스 및 COM+ 트랜잭션과의 상호 운용성
 <xref:System.Transactions> 네임스페이스는 이 네임스페이스를 사용하여 만든 트랜잭션 개체와 COM+를 통해 만든 트랜잭션 간의 상호 운용성을 지원합니다.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-ms.openlocfilehash: 4e0831a045da5eb5798d10aeb977981ecae20040
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f823d9e80eb644487eab1ed84345dd8bdc10efc2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61869669"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64600937"
 ---
 # <a name="value-types-and-reference-types"></a>Value Types and Reference Types
 Visual Basic의 경우 데이터 형식은 분류에 따라 구현 됩니다. Visual Basic 데이터 형식 특정 형식의 변수는 자체 데이터 또는 데이터에 대 한 포인터를 저장 하는 여부에 따라 분류할 수 있습니다. 자체 데이터를 저장 하는 경우는 *값 형식*데이터는 메모리에 다른 곳에서 포인터를 보유 하는 경우를 *참조 형식*합니다.  
@@ -23,13 +23,13 @@ Visual Basic의 경우 데이터 형식은 분류에 따라 구현 됩니다. Vi
 ## <a name="value-types"></a>값 형식  
  데이터 형식은 *값 형식* 자신의 메모리 할당 데이터 보유 하는 경우. 값 형식은 다음과 같습니다.  
   
--   모든 숫자 데이터 형식  
+- 모든 숫자 데이터 형식  
   
--   `Boolean`, `Char`및 `Date`  
+- `Boolean`, `Char`및 `Date`  
   
--   해당 멤버 참조 형식인 경우에 모든 구조  
+- 해당 멤버 참조 형식인 경우에 모든 구조  
   
--   해당 기본 형식이 항상 이므로 열거형 `SByte`, `Short`를 `Integer`, `Long`를 `Byte`를 `UShort`, `UInteger`, 또는 `ULong`  
+- 해당 기본 형식이 항상 이므로 열거형 `SByte`, `Short`를 `Integer`, `Long`를 `Byte`를 `UShort`, `UInteger`, 또는 `ULong`  
   
  모든 구조체가 값 형식이 참조 형식 멤버를 포함 하는 경우에 합니다. 이 따라서가에 대 한 값과 같은 형식이 `Char` 고 `Integer` .net 구조체에서 구현 됩니다.  
   
@@ -38,13 +38,13 @@ Visual Basic의 경우 데이터 형식은 분류에 따라 구현 됩니다. Vi
 ## <a name="reference-types"></a>참조 형식  
  A *유형을 참조* 데이터를 보유 하는 다른 메모리 위치에 대 한 포인터를 포함 합니다. 참조 형식은 다음과 같습니다.  
   
--   `String`  
+- `String`  
   
--   모든 배열의 해당 요소 값 형식인 경우에  
+- 모든 배열의 해당 요소 값 형식인 경우에  
   
--   클래스 형식 <xref:System.Windows.Forms.Form>  
+- 클래스 형식 <xref:System.Windows.Forms.Form>  
   
--   대리자  
+- 대리자  
   
  클래스는 *유형을 참조*합니다. 이러한 이유로 같은 참조 형식이 `Object` 하 고 `String` 지 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 클래스입니다. 모든 배열은 참조 형식 인지, 해당 멤버 값 형식인 경우에 참고 합니다.  
   
@@ -57,15 +57,15 @@ Dim totals() As Single = New Single(8) {}
 ## <a name="elements-that-are-not-types"></a>형식 없는 요소  
  그 중 하나에서 선언 된 요소에 대 한 데이터 형식으로 지정할 수 없으므로 다음 프로그래밍 요소 형식으로 적합 하지 않습니다.  
   
--   네임스페이스  
+- 네임스페이스  
   
--   모듈  
+- 모듈  
   
--   이벤트  
+- 이벤트  
   
--   속성 및 절차  
+- 속성 및 절차  
   
--   변수, 상수 및 필드  
+- 변수, 상수 및 필드  
   
 ## <a name="working-with-the-object-data-type"></a>개체 데이터 형식 사용  
  참조 형식 또는 값 형식 변수에 할당할 수 있습니다는 `Object` 데이터 형식입니다. `Object` 변수 항상 데이터를 데이터 자체에 대 한 포인터를 보유 합니다. 그러나 값 형식을 할당 하는 경우는 `Object` 변수인 것 처럼 동작 자체 데이터를 보유 합니다. 자세한 내용은 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)합니다.  

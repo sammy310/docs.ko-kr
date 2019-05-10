@@ -11,12 +11,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: e2e1648ea508ecdd744adb8d2a4f7fdbc1e586c4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c3df9873d184ead2de3f82b89a081955ade93b3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906492"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64601131"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>방법: 변수에 둘 이상의 값 (Visual Basic)
 변수를 선언 하면 둘 이상의 값을 보유 한 *복합 데이터 형식*합니다.  
@@ -29,11 +29,11 @@ ms.locfileid: "61906492"
   
 2. 복합 데이터 형식이 이미 정의 되어 있지 않으면 정의 변수에서 사용할 수 있도록 합니다.  
   
-    -   정의 하는 구조체를 [Structure 문을](../../../../visual-basic/language-reference/statements/structure-statement.md)합니다.  
+    - 정의 하는 구조체를 [Structure 문을](../../../../visual-basic/language-reference/statements/structure-statement.md)합니다.  
   
-    -   배열을 사용 하 여 정의 된 [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md)합니다.  
+    - 배열을 사용 하 여 정의 된 [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md)합니다.  
   
-    -   클래스 정의 [Class 문](../../../../visual-basic/language-reference/statements/class-statement.md)합니다.  
+    - 클래스 정의 [Class 문](../../../../visual-basic/language-reference/statements/class-statement.md)합니다.  
   
 3. 사용 하 여 변수를 선언 된 `Dim` 문입니다.  
   
