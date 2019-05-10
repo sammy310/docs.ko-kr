@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6888f9be-c65b-4b03-a07b-df7ebdee2436
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf8a5a7c97969fb0018bb1dba4ea027fe7afd2c9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c50132be2755119b19e38d94919eb4b0ab28d994
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775858"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614316"
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>성능 카운터 및 In-Process Side-By-Side 응용 프로그램
 성능 모니터(Perfmon.exe)를 사용하면 런타임별로 성능 카운터를 구분할 수 있습니다. 이 항목에서는 이 기능을 사용하는 데 필요한 레지스트리 변경 사항에 대해 설명합니다.  

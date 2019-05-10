@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: 0b013cff36fc9063f30aaa4356e9e8249dd960d8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 0dd70eb5d3b3ad56a8597ce0658a296a03d5f4a7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306497"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64618056"
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>연습: 데이터 조작(Visual Basic)
 이 연습에서는 데이터베이스의 데이터를 추가, 수정 및 삭제하기 위한 기본 종단 간 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 시나리오를 제공합니다. Northwind 샘플 데이터베이스의 복사본을 사용하여 고객을 추가하고, 고객의 이름을 변경하고, 주문을 삭제합니다.  
@@ -21,13 +21,13 @@ ms.locfileid: "59306497"
 ## <a name="prerequisites"></a>전제 조건  
  이 연습에서는 다음 사항이 필요합니다.  
   
--   이 연습에서는 전용 폴더("c:\linqtest2")를 사용하여 파일을 저장합니다. 연습을 시작하기 전에 먼저 이 폴더를 만듭니다.  
+- 이 연습에서는 전용 폴더("c:\linqtest2")를 사용하여 파일을 저장합니다. 연습을 시작하기 전에 먼저 이 폴더를 만듭니다.  
   
--   Northwind 샘플 데이터베이스  
+- Northwind 샘플 데이터베이스  
   
      이 데이터베이스가 개발 컴퓨터에 없는 경우 Microsoft 다운로드 사이트에서 다운로드할 수 있습니다. 자세한 내용은 [샘플 데이터베이스 다운로드](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)합니다. 이 데이터베이스를 다운로드한 후 northwnd.mdf 파일을 c:\linqtest2 폴더에 복사합니다.  
   
--   Northwind 데이터베이스에서 생성된 Visual Basic 코드 파일  
+- Northwind 데이터베이스에서 생성된 Visual Basic 코드 파일  
   
      [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] 또는 SQLMetal을 사용하여 이 파일을 생성할 수 있습니다. 이 연습은 다음 명령줄을 사용하여 SQLMetal 도구를 통해 작성했습니다.  
   
@@ -38,17 +38,17 @@ ms.locfileid: "59306497"
 ## <a name="overview"></a>개요  
  이 연습은 다음과 같은 여섯 가지 주요 작업으로 구성됩니다.  
   
--   만들기는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio에서 솔루션입니다.  
+- 만들기는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio에서 솔루션입니다.  
   
--   데이터베이스 코드 파일을 프로젝트에 추가  
+- 데이터베이스 코드 파일을 프로젝트에 추가  
   
--   새 Customer 개체 만들기  
+- 새 Customer 개체 만들기  
   
--   고객의 연락처 이름 수정  
+- 고객의 연락처 이름 수정  
   
--   주문 삭제  
+- 주문 삭제  
   
--   이러한 변경 내용을 Northwind 데이터베이스로 전송  
+- 이러한 변경 내용을 Northwind 데이터베이스로 전송  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>LINQ to SQL 솔루션 만들기  
  빌드 및 실행에 필요한 참조를 포함 하는 Visual Studio 솔루션을 만든이 첫 번째 태스크는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 프로젝트입니다.  
@@ -136,7 +136,7 @@ ms.locfileid: "59306497"
   
 #### <a name="to-change-the-name-of-a-customer"></a>Customer 이름을 변경하려면  
   
--   `Console.ReadLine()` 위에 다음 코드를 추가합니다.  
+- `Console.ReadLine()` 위에 다음 코드를 추가합니다.  
   
      [!code-vb[DLinqWalk3VB#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#4)]  
   
@@ -147,7 +147,7 @@ ms.locfileid: "59306497"
   
 #### <a name="to-delete-a-row"></a>행을 삭제하려면  
   
--   `Console.ReadLine()` 바로 위에 다음 코드를 추가합니다.  
+- `Console.ReadLine()` 바로 위에 다음 코드를 추가합니다.  
   
      [!code-vb[DLinqWalk3VB#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#5)]  
   

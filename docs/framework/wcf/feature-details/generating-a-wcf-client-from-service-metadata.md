@@ -2,23 +2,23 @@
 title: 서비스 메타데이터에서 WCF 클라이언트 생성
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: 5cfbfc1e4be0003b3699f818212fbcd959f3ad91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c9a72228ddb32786f39585083d62e1f3f028763c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856000"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613375"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>서비스 메타데이터에서 WCF 클라이언트 생성
 이 항목에서는 Svcutil.exe의 여러 가지 스위치를 사용하여 메타데이터 문서에서 클라이언트를 생성하는 방법에 대해 설명합니다.  
   
  메타데이터 문서는 지속적인 저장소에 있거나 온라인으로 검색할 수 있습니다. 온라인 검색은 WS-MetadataExchange 프로토콜이나 Microsoft Discovery(DISCO) 프로토콜을 따릅니다. Svcutil.exe는 다음 메타데이터 요청을 생성하고 동시에 메타데이터를 검색합니다.  
   
--   제공된 주소에 대한 WS-MetadataExchange(MEX) 요청  
+- 제공된 주소에 대한 WS-MetadataExchange(MEX) 요청  
   
--   `/mex`가 추가된 제공된 주소에 대한 MEX 요청  
+- `/mex`가 추가된 제공된 주소에 대한 MEX 요청  
   
--   DISCO 요청 (사용 하는 [DiscoveryClientProtocol](https://go.microsoft.com/fwlink/?LinkId=94777) ASP.NET 웹 서비스에서) 제공 된 주소입니다.  
+- DISCO 요청 (사용 하는 [DiscoveryClientProtocol](https://go.microsoft.com/fwlink/?LinkId=94777) ASP.NET 웹 서비스에서) 제공 된 주소입니다.  
   
  Svcutil.exe는 WSDL(웹 서비스 기술 언어)을 기반으로 하는 클라이언트 또는 서비스로부터 받은 정책 파일을 생성합니다. 사용자 계정 이름 (UPN) 사용자 이름 앞에 연결 하 여 생성 됩니다 "\@" 다음 정규화 된 도메인 이름 (FQDN)을 추가 합니다. 그러나 Active Directory에 등록 된 사용자에 대 한이 형식이 올바르지 않습니다 하 고 다음 오류 메시지와 함께 Kerberos 인증에 오류가 발생 하는 도구를 생성 하는 UPN: **로그온 하지 못했습니다.** 이 문제를 해결하려면 이 도구에서 생성한 클라이언트 파일을 수동으로 수정합니다.  
   

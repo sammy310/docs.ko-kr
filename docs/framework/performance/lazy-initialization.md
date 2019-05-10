@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7b19fbeb0144698c5091a9bbe6bce45c21c4f0d8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949944"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616380"
 ---
 # <a name="lazy-initialization"></a>초기화 지연
 개체 *초기화 지연*은 개체를 처음 사용할 때까지 생성이 지연된다는 의미입니다. (이 항목의 경우 *초기화 지연*과 *인스턴스화 지연*은 동의어임). 초기화 지연은 기본적으로 성능을 향상시키는 데 사용하며, 불필요한 계산을 방지하고, 프로그램 메모리 요구 사항을 줄입니다. 다음은 가장 일반적인 시나리오입니다.  

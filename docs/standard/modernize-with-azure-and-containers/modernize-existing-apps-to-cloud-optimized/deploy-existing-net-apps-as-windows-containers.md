@@ -4,12 +4,12 @@ description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/29/2018
-ms.openlocfilehash: ad0da9f7f0412c14b5362e3f631a7aa4af1f8260
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0bdab6d8aaaaa9bdddb9e9d55df8bb4850bc2b81
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61812061"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614472"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>기존 .NET 앱을 Windows 컨테이너로 배포
 
@@ -39,13 +39,13 @@ Windows 컨테이너에서 응용 프로그램 패키징 프로세스 자동화 
 
 대부분의 조직에서는 다음과 같은 이유로 모놀리식 기존 응용 프로그램을 컨테이너 화 됩니다.
 
--   **향상 된 배포를 통해 민첩성을 릴리스**합니다. 컨테이너는 개발 및 운영 간의 일관 된 배포 계약을 제공합니다. 컨테이너를 사용 하면 예를 들어 개발자 들리지 않습니다에서는 "작동 내 컴퓨터에서 없습니까 프로덕션 환경에서?" 이러한 수 예를 들어 "실행을 컨테이너로 되므로 프로덕션 환경에서 실행 됩니다." 모든 지원 되는 컨테이너 기반 환경에서 모든 종속 항목과 함께 패키지 된 응용 프로그램을 실행할 수 있습니다. 모든 배포 대상 (개발, QA, 스테이징, 프로덕션)에서 실행 되도록 의도 된 방식으로 실행 됩니다. 컨테이너 배포를 크게 향상 하는 다음 한 단계에서 벗어날 경우 대부분의 마찰을 제거 하 고 더 빠르게 제공할 수 있습니다.
+- **향상 된 배포를 통해 민첩성을 릴리스**합니다. 컨테이너는 개발 및 운영 간의 일관 된 배포 계약을 제공합니다. 컨테이너를 사용 하면 예를 들어 개발자 들리지 않습니다에서는 "작동 내 컴퓨터에서 없습니까 프로덕션 환경에서?" 이러한 수 예를 들어 "실행을 컨테이너로 되므로 프로덕션 환경에서 실행 됩니다." 모든 지원 되는 컨테이너 기반 환경에서 모든 종속 항목과 함께 패키지 된 응용 프로그램을 실행할 수 있습니다. 모든 배포 대상 (개발, QA, 스테이징, 프로덕션)에서 실행 되도록 의도 된 방식으로 실행 됩니다. 컨테이너 배포를 크게 향상 하는 다음 한 단계에서 벗어날 경우 대부분의 마찰을 제거 하 고 더 빠르게 제공할 수 있습니다.
 
--   **비용 절감**합니다. 컨테이너를 통합 하 고 기존 하드웨어 또는 하드웨어 단위당 높은 밀도로 실행 중인 응용 프로그램에서 제거 하거나 비용 절감 시킬 했습니다.
+- **비용 절감**합니다. 컨테이너를 통합 하 고 기존 하드웨어 또는 하드웨어 단위당 높은 밀도로 실행 중인 응용 프로그램에서 제거 하거나 비용 절감 시킬 했습니다.
 
--   **이식성**합니다. 컨테이너는 모듈식 및 이식 가능한입니다. Docker 컨테이너는 모든 서버 운영 체제 (Linux 및 Windows) (Microsoft Azure, Amazon AWS, Google, IBM) 모든 메이저 공용 클라우드 및 온-프레미스에서에 개인 또는 하이브리드 클라우드 환경에서 지원 됩니다.
+- **이식성**합니다. 컨테이너는 모듈식 및 이식 가능한입니다. Docker 컨테이너는 모든 서버 운영 체제 (Linux 및 Windows) (Microsoft Azure, Amazon AWS, Google, IBM) 모든 메이저 공용 클라우드 및 온-프레미스에서에 개인 또는 하이브리드 클라우드 환경에서 지원 됩니다.
 
--   **컨트롤**합니다. 컨테이너는 컨테이너 수준에서 제어 되는 유연한 보안 환경을 제공 합니다. 컨테이너 보안 격리, 고도 컨테이너에서 실행 제약 조건 정책을 설정 하 여 제한 될 수 있습니다. Windows 컨테이너에 대 한 섹션에서 자세히 설명, Windows Server 2016 및 Hyper-v 컨테이너 추가 엔터프라이즈 지원 옵션을 제공합니다.
+- **컨트롤**합니다. 컨테이너는 컨테이너 수준에서 제어 되는 유연한 보안 환경을 제공 합니다. 컨테이너 보안 격리, 고도 컨테이너에서 실행 제약 조건 정책을 설정 하 여 제한 될 수 있습니다. Windows 컨테이너에 대 한 섹션에서 자세히 설명, Windows Server 2016 및 Hyper-v 컨테이너 추가 엔터프라이즈 지원 옵션을 제공합니다.
 
 민첩성, 이식성 및 컨트롤에서 상당한 개선 사항을 궁극적으로 비용을 상당히 절감 컨테이너를 사용 하 여 개발 하 고 응용 프로그램을 관리 하는 경우.
 
@@ -123,15 +123,15 @@ Hyper-v 격리 없이 Windows 컨테이너를 실행 하는 것은 런타임에 
 
 ### <a name="additional-resources"></a>추가 자료
 
--   **Windows 컨테이너 설명서**
+- **Windows 컨테이너 설명서**
 
     <https://docs.microsoft.com/virtualization/windowscontainers/>
 
--   **Windows 컨테이너 기본 사항**
+- **Windows 컨테이너 기본 사항**
 
     <https://docs.microsoft.com/virtualization/windowscontainers/about/>
 
--   **인포 그래픽: Microsoft 및 컨테이너**
+- **인포 그래픽: Microsoft 및 컨테이너**
 
     <https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf>
 
@@ -145,18 +145,18 @@ Hyper-v 격리 없이 Windows 컨테이너를 실행 하는 것은 런타임에 
 > **그림 4-7.5입니다.** Azure에서 컨테이너 에코 시스템
 
 인프라를 간주 되는 컨테이너를 지 원하는 다음 제품을 Azure에서 컨테이너 에코 시스템:
--   **Azure Container Instances (ACI)**
--   **Azure Virtual Machines** (지원과 컨테이너의)
--   **Azure Virtual Machine Scale Sets** (지원과 컨테이너의)
+- **Azure Container Instances (ACI)**
+- **Azure Virtual Machines** (지원과 컨테이너의)
+- **Azure Virtual Machine Scale Sets** (지원과 컨테이너의)
 
 세 가지 해당에서 ACI 사실은 기본 OS 필요가 없습니다를 업그레이드/패치 등을 유지 하기 위해 필요는 없지만 여전히 ACI 향상이 가이드의 다음 섹션에 설명 된 대로, 인프라 수준에 배치 되는 훌륭한 혜택을 제공 합니다.
 
 Azure 지원 컨테이너 수준 동시에 보다 PaaS (Platform as a Service)에 배치 되는 제품은 다음과 같습니다.
 
--   **Azure App Service**
--   **Azure Kubernetes Service (AKS 및 ACS)**
--   **Azure Service Fabric** 
--   **Azure Batch** 
+- **Azure App Service**
+- **Azure Kubernetes Service (AKS 및 ACS)**
+- **Azure Service Fabric** 
+- **Azure Batch** 
 
 그런 다음 Azure Container Registry는 모든 이전 제품의 등록 및 사용자 지정 컨테이너 이미지를 배포할 때 사용할 수 있는 Azure에서 호스트 되는 높은 확장성이 뛰어난 컨테이너 레지스트리입니다.
 

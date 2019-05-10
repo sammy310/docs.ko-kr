@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: 7db435e45ddc55346af5ea5fdbcce611173c774b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 346ce5d92fafb4d4c2c814deaa0c2b35821dc435
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053537"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64611823"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath XAML 구문
 합니다 <xref:System.Windows.PropertyPath> 개체가 지원 복잡 한 인라인 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 구문을 사용 하는 다양 한 속성을 설정 하기 위한는 <xref:System.Windows.PropertyPath> 형식을 값으로. 이 항목 문서는 <xref:System.Windows.PropertyPath> 구문 바인딩 및 애니메이션 구문에 적용 합니다.  

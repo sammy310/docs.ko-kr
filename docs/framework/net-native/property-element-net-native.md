@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20657e0a583890b851ab8e15c50bce791a3641b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 374ace4ec5e25731e4a7e958be145a660ff2ef7f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866771"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614864"
 ---
 # <a name="property-element-net-native"></a>\<속성 > 요소 (.NET 네이티브)
 런타임 리플렉션 정책을 속성에 적용합니다.  
@@ -81,9 +81,9 @@ ms.locfileid: "61866771"
   
  그러나 이 예제를 컴파일하고 실행하면 [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 예외가 throw됩니다. `Book` 형식에 대해 메타데이터는 제공했지만 속성 getter의 구현은 동적으로 제공하지 못했기 때문입니다. 두 가지 방법 중 하나를 사용하여 이 오류를 해결할 수 있습니다.  
   
--   `Book` 형식에 대해 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 요소에서 `Dynamic` 정책을 정의합니다.  
+- `Book` 형식에 대해 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 요소에서 `Dynamic` 정책을 정의합니다.  
   
--   다음 default.rd.xml 파일에서와 같이 getter를 호출할 각 속성에 대해 중첩된 [\<Property>](../../../docs/framework/net-native/property-element-net-native.md) 요소를 추가합니다.  
+- 다음 default.rd.xml 파일에서와 같이 getter를 호출할 각 속성에 대해 중첩된 [\<Property>](../../../docs/framework/net-native/property-element-net-native.md) 요소를 추가합니다.  
   
     ```xml  
     <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

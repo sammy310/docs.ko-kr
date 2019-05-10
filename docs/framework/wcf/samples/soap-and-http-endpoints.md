@@ -2,12 +2,12 @@
 title: SOAP 및 HTTP 엔드포인트
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
-ms.openlocfilehash: 07f0c5a5a66683cf636595824b2ccaeaf1ab6a63
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c07391ccd1f8db6e5d2cb6e0c24fc06152d7517f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007822"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617515"
 ---
 # <a name="soap-and-http-endpoints"></a>SOAP 및 HTTP 엔드포인트
 이 샘플에는 RPC 기반 서비스를 구현 하 고 SOAP 형식 및 WCF 웹 프로그래밍 모델을 사용 하 여 "Plain Old XML" (POX) 형식으로 노출 하는 방법을 보여 줍니다. 참조 된 [기본 HTTP 서비스](../../../../docs/framework/wcf/samples/basic-http-service.md) 서비스의 HTTP 바인딩에 대 한 자세한 내용은 샘플입니다. 이 샘플에서는 서로 다른 바인딩을 사용하는 SOAP 및 HTTP를 통해 동일한 서비스를 노출하는 데 관련된 세부 정보를 중점적으로 다룹니다.  

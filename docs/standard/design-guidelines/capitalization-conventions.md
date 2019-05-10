@@ -10,12 +10,12 @@ helpviewer_keywords:
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
 author: KrzysztofCwalina
-ms.openlocfilehash: 9a4cf94ca7fcada7dfc0886422b373abc807a0fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e0da4cd747846921d170d9c07d6f1fb91dbd4ed7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966480"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615260"
 ---
 # <a name="capitalization-conventions"></a>대/소문자 표기법
 형식, 멤버 및 매개 변수를 읽기 쉽게 확인 식별자를 일관 되 게 적용 하는 경우의 지침에는 간단한 방법 사용 하 여이 장 레이아웃을 만드는 경우는입니다.  

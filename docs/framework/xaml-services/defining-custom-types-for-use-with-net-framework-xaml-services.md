@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
-ms.openlocfilehash: be9c0e26574a15279ce89af2c7862abaa8713360
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fea5c656cf5e793ca0717cf3ef60016128a942be
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971953"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617300"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>.NET Framework XAML 서비스에서 사용할 사용자 지정 형식 정의
 비즈니스 개체는 사용자 지정 형식을 정의 하거나 특정 프레임 워크에서 종속성을 갖지 않는 형식은 따르면 XAML에 대 한 몇 가지 최상의 방법이 있습니다. 이러한 사례를 따르는 경우.NET Framework XAML 서비스 XAML 판독기 및 XAML 작성기 수 형식의 XAML 특성을 검색 하 고 XAML 노드 스트림의 XAML 형식 시스템을 사용 하 여 적절 한 표현 합니다. 이 항목에서는 형식 정의 멤버 정의 및 CLR 형식 또는 멤버의 특성에 대 한 모범 사례를 설명 합니다.  

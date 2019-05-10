@@ -2,12 +2,12 @@
 title: WCF 서비스 호스트(WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: d9a086b3a6ae0ece3b1b45161402ce058e1fb447
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7174cac4c07d9011ad4c0744ff7ad6550d832d8b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052614"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613253"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF 서비스 호스트(WcfSvcHost.exe)
 Windows Communication Foundation (WCF) 서비스 호스트 (WcfSvcHost.exe)를 사용 하면 Visual Studio 디버거 (F5) 자동으로 호스팅하고 테스트할 구현한 서비스를 시작할 수 있습니다. 다음 찾기 및 잠재적인 오류를 해결 하려면 WCF 테스트 클라이언트 (WcfTestClient.exe) 또는 사용자 고유의 클라이언트를 사용 하는 서비스를 테스트할 수 있습니다.  

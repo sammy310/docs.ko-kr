@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: 31c5b386d707aa49cd36d536f1c8b419eb74a658
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2f4c62ff551ac66c4b7192a4e978db0a9f443f3f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916411"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613692"
 ---
 # <a name="wcf-performance-counters"></a>WCF 성능 카운터
 Windows Communication Foundation (WCF)에 다양 한 응용 프로그램의 성능을 측정할 수 있도록 성능 카운터가 포함 됩니다.  
@@ -27,11 +27,11 @@ Windows Communication Foundation (WCF)에 다양 한 응용 프로그램의 성�
   
  특정 유형의 성능 카운터를 활성화하도록 `performanceCounters` 특성을 설정할 수 있습니다. 유효한 값은 다음과 같습니다.  
   
--   모든: 모든 범주 카운터 (ServiceModelService, ServiceModelEndpoint 및 ServiceModelOperation)가 활성화 됩니다.  
+- 모든: 모든 범주 카운터 (ServiceModelService, ServiceModelEndpoint 및 ServiceModelOperation)가 활성화 됩니다.  
   
--   ServiceOnly: ServiceModelService 범주 카운터만 활성화 됩니다. 기본값입니다.  
+- ServiceOnly: ServiceModelService 범주 카운터만 활성화 됩니다. 기본값입니다.  
   
--   Off: ServiceModel * 성능 카운터가 비활성화 되었습니다.  
+- Off: ServiceModel * 성능 카운터가 비활성화 되었습니다.  
   
  모든 WCF 응용 프로그램에 대 한 성능 카운터를 사용 하도록 설정 하려는 경우 구성 설정을 합니다 Machine.config 파일에 배치할 수 있습니다.  참조 하십시오 합니다 **성능 카운터에 대 한 메모리 크기 늘리기** 컴퓨터에서 성능 카운터에 대 한 충분 한 메모리를 구성 하는 방법은 아래 섹션입니다.  
   
@@ -63,11 +63,11 @@ config.Save();
   
  레지스트리에서 WCF 범주에 대 한 성능 카운터 메모리 양을 변경할 수 있습니다. 그렇게 하려면 다음 세 위치에 `FileMappingSize`라는 새로운 DWORD 값을 추가하여 원하는 값(바이트)으로 설정해야 합니다. 컴퓨터를 다시 부팅하여 변경 내용을 적용합니다.  
   
--   HKLM\System\CurrentControlSet\Services\ServiceModelEndpoint 4.0.0.0\Performance  
+- HKLM\System\CurrentControlSet\Services\ServiceModelEndpoint 4.0.0.0\Performance  
   
--   HKLM\System\CurrentControlSet\Services\ServiceModelOperation 4.0.0.0\Performance  
+- HKLM\System\CurrentControlSet\Services\ServiceModelOperation 4.0.0.0\Performance  
   
--   HKLM\System\CurrentControlSet\Services\ServiceModelService 4.0.0.0\Performance  
+- HKLM\System\CurrentControlSet\Services\ServiceModelService 4.0.0.0\Performance  
   
  많은 수의 개체(예: ServiceHost)를 삭제할 때 가비지가 수집되기를 대기 중인 경우 `PrivateBytes` 성능 카운터는 매우 높은 수를 등록합니다. 이 문제를 해결하려면 응용 프로그램 관련 카운터를 추가하거나 `performanceCounters` 특성을 사용하여 서비스 수준 카운터만 활성화할 수 있습니다.  
   
@@ -76,11 +76,11 @@ config.Save();
   
  WMI를 사용하여 성능 카운터 인스턴스의 이름을 검색할 수 있습니다. 예를 들면 다음과 같습니다.  
   
--   WMI를 통해 서비스 카운터 인스턴스 이름을 가져올 수 있습니다 [서비스](../../../../../docs/framework/wcf/diagnostics/wmi/service.md) 인스턴스의 "CounterInstanceName" 속성입니다.  
+- WMI를 통해 서비스 카운터 인스턴스 이름을 가져올 수 있습니다 [서비스](../../../../../docs/framework/wcf/diagnostics/wmi/service.md) 인스턴스의 "CounterInstanceName" 속성입니다.  
   
--   WMI를 통해 끝점 카운터 인스턴스 이름을 가져올 수 있습니다 [끝점](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) 인스턴스의 "CounterInstanceName" 속성입니다.  
+- WMI를 통해 끝점 카운터 인스턴스 이름을 가져올 수 있습니다 [끝점](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) 인스턴스의 "CounterInstanceName" 속성입니다.  
   
--   WMI를 통해 작업 카운터 인스턴스 이름을 가져올 수 있습니다 [끝점](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) 인스턴스의 "GetOperationCounterInstanceName" 메서드.  
+- WMI를 통해 작업 카운터 인스턴스 이름을 가져올 수 있습니다 [끝점](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) 인스턴스의 "GetOperationCounterInstanceName" 메서드.  
   
  WMI에 대 한 자세한 내용은 참조 하세요. [진단에 대 한 Windows Management Instrumentation를 사용 하 여](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)입니다.  
   
@@ -126,15 +126,15 @@ ServiceName@ServiceBaseAddress
 ## <a name="programming-the-wcf-performance-counters"></a>WCF 성능 카운터 프로그래밍  
  여러 파일은 WCF 성능 카운터를 프로그래밍 방식으로 액세스할 수 있도록 SDK 설치 폴더에 설치 됩니다. 설치되는 파일은 다음과 같습니다.  
   
--   _ServiceModelEndpointPerfCounters.vrg  
+- _ServiceModelEndpointPerfCounters.vrg  
   
--   _ServiceModelOperationPerfCounters.vrg  
+- _ServiceModelOperationPerfCounters.vrg  
   
--   _ServiceModelServicePerfCounters.vrg  
+- _ServiceModelServicePerfCounters.vrg  
   
--   _SMSvcHostPerfCounters.vrg  
+- _SMSvcHostPerfCounters.vrg  
   
--   _TransactionBridgePerfCounters.vrg  
+- _TransactionBridgePerfCounters.vrg  
   
  카운터를 프로그래밍 방식으로 액세스 하는 방법에 대 한 자세한 내용은 참조 하세요. [성능 카운터 프로그래밍 아키텍처](https://go.microsoft.com/fwlink/?LinkId=95179)합니다.  
   

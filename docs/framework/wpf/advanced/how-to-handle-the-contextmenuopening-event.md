@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
-ms.openlocfilehash: 65a1e34d5b078c49bf59c2d9787812940c9a7494
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: b3d0f5c77ebf8527e4854d4edf12d6fa8a4b5f0c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340401"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614638"
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>방법: ContextMenuOpening 이벤트 처리
 합니다 <xref:System.Windows.FrameworkElement.ContextMenuOpening> 는 기존 상황에 맞는 메뉴 표시 하기 전에 설정 하 여 표시 되는 메뉴를 표시 하지 않으려면를 조정 하거나 응용 프로그램에서 이벤트를 처리할 수 있습니다 합니다 <xref:System.Windows.RoutedEventArgs.Handled%2A> 속성을 `true` 이벤트 데이터의 합니다. 설정에 대 한 일반적인 이유 <xref:System.Windows.RoutedEventArgs.Handled%2A> 하 `true` 전적으로 사용 하 여 새 메뉴를 바꾸려면 데이터가 이벤트 <xref:System.Windows.Controls.ContextMenu> 개체, 경우에 따라 요구 하는 작업을 취소 하 고 새로운 열기를 시작 합니다. 에 대 한 처리기를 작성 하는 경우를 <xref:System.Windows.FrameworkElement.ContextMenuOpening> 이벤트 알아야 사이의 타이밍 문제에 대 한 <xref:System.Windows.Controls.ContextMenu> 컨트롤과 열고 일반적 컨트롤에 대 한 상황에 맞는 메뉴의 위치를 지정 하는 일을 담당 하는 서비스. 이 항목에서는 다양 한 상황에 맞는 메뉴 열기 시나리오에 대 한 코드 기술 중 일부를 보여 줍니다 및 타이밍 문제를 고려해 야 하는 있는 경우를 보여 줍니다.  
   
  일부의 시나리오 처리에 대 한는 <xref:System.Windows.FrameworkElement.ContextMenuOpening> 이벤트:  
   
--   메뉴 항목을 먼저 호출한 다음 표시를 조정합니다.  
+- 메뉴 항목을 먼저 호출한 다음 표시를 조정합니다.  
   
--   표시 하기 전에 전체 메뉴를 대체합니다.  
+- 표시 하기 전에 전체 메뉴를 대체합니다.  
   
--   완전히 모든 기존 상황에 맞는 메뉴를 표시 안 함 및 없는 상황에 맞는 메뉴를 표시 합니다.  
+- 완전히 모든 기존 상황에 맞는 메뉴를 표시 안 함 및 없는 상황에 맞는 메뉴를 표시 합니다.  
   
 ## <a name="example"></a>예제  
   

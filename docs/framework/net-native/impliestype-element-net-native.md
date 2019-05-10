@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ef238a2cb852ecd7fa3f0e2dbe4048ff03a4139
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1cd2177707edfd29dc393e2bcfd6bbacb749b30
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868630"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616684"
 ---
 # <a name="impliestype-element-net-native"></a>\<ImpliesType > 요소 (.NET 네이티브)
 포함 형식 또는 메서드에 정책이 적용된 경우 해당 정책을 형식에 적용합니다.  
@@ -75,9 +75,9 @@ ms.locfileid: "61868630"
 ## <a name="remarks"></a>설명  
  `<ImpliesType>` 요소는 주로 라이브러리에서 사용되며 다음과 같은 시나리오를 해결합니다.  
   
--   형식 하나에 대해 루틴을 리플렉션해야 하면 두 번째 형식에 대해서도 루틴을 리플렉션해야 하는 경우  
+- 형식 하나에 대해 루틴을 리플렉션해야 하면 두 번째 형식에 대해서도 루틴을 리플렉션해야 하는 경우  
   
--   정적 분석에서 필요한 것으로 표시하지 않았기 때문에 두 번째 형식의 암시적 인스턴스화에 대한 메타데이터를 사용할 수 없는 경우  
+- 정적 분석에서 필요한 것으로 표시하지 않았기 때문에 두 번째 형식의 암시적 인스턴스화에 대한 메타데이터를 사용할 수 없는 경우  
   
  가장 일반적인 두 가지 형식은 공유 형식 인수가 있는 제네릭 인스턴스화입니다.  
   

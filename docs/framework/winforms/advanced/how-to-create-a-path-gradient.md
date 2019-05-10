@@ -9,12 +9,12 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: a04465c31b160f97568ed88c434e7e3a5126ebb6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c37a42a5905e34a995efbd73d332b7ef8f90e51d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938064"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64603253"
 ---
 # <a name="how-to-create-a-path-gradient"></a>방법: 경로 그라데이션 만들기
 <xref:System.Drawing.Drawing2D.PathGradientBrush> 클래스 점진적으로 색을 변경 하 여 셰이프를 입력 하는 방식을 사용자 지정할 수 있습니다. 예를 들어 경로의 센터에 대 한 한 가지 색 및 경로 경계에 다른 색을 지정할 수 있습니다. 또한 각 패스의 경계를 따라 여러 지점에 대 한 별도 색을 지정할 수 있습니다.  

@@ -4,31 +4,31 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - endpoints [WCF]
 ms.assetid: bd0c310f-dd9f-4081-9be2-3db5909850b6
-ms.openlocfilehash: b55abe937701f8708643efa2ea4cb62514b3521b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1a18e2ab31998b7759803e023151892694757119
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923190"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613390"
 ---
 # <a name="windows-communication-foundation-endpoints"></a>Windows Communication Foundation 엔드포인트
 Windows Communication Foundation (WCF) 서비스와 모든 통신을 통해 발생 합니다 *끝점* 서비스입니다. 끝점 클라이언트는 WCF 서비스를 제공 하는 기능에 대 한 액세스를 제공 합니다.  
   
  끝점을 만드는 방법에 대 한 개요를 보려면 [끝점 만들기 개요](../../../docs/framework/wcf/endpoint-creation-overview.md)합니다. 각 엔드포인트에는 다음이 포함되어 있습니다.  
   
--   엔드포인트를 찾을 위치를 나타내는 주소  
+- 엔드포인트를 찾을 위치를 나타내는 주소  
   
--   클라이언트가 엔드포인트와 통신할 수 있는 방법을 지정하는 바인딩  
+- 클라이언트가 엔드포인트와 통신할 수 있는 방법을 지정하는 바인딩  
   
--   사용 가능한 메서드를 식별하는 계약  
+- 사용 가능한 메서드를 식별하는 계약  
   
  엔드포인트의 개별 부분을 지정하는 방법에 대한 자세한 내용은 다음을 참조하세요.  
   
--   [엔드포인트 주소 지정](../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
+- [엔드포인트 주소 지정](../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
   
--   [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
+- [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
   
--   [서비스 디자인 및 구현](../../../docs/framework/wcf/designing-and-implementing-services.md)  
+- [서비스 디자인 및 구현](../../../docs/framework/wcf/designing-and-implementing-services.md)  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [엔드포인트 만들기 개요](../../../docs/framework/wcf/endpoint-creation-overview.md)  
