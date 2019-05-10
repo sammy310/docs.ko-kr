@@ -2,12 +2,12 @@
 title: 속성
 ms.date: 03/30/2017
 ms.assetid: a941c53f-fc97-42c2-8832-0fb9f1d55c06
-ms.openlocfilehash: 71a04f334ec465b0f11cc8f18f2680df651081eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 97bb41305bd9b736fd67b51d77ee15ad9efa3f29
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879045"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645239"
 ---
 # <a name="property"></a>속성
 *속성* 의 기본 구성 요소는 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md) 하 고 [복합 형식](../../../../docs/framework/data/adonet/complex-type.md)합니다. 속성은 엔터티 형식 인스턴스 또는 복합 형식 인스턴스에 포함될 데이터의 모양과 특징을 정의합니다. 개념적 모델의 속성은 클래스에 정의된 속성과 유사합니다. 클래스의 속성이 클래스의 모양을 정의하고 개체에 대한 정보를 전달하는 것과 동일한 방식으로, 개념적 모델의 속성은 엔터티 형식의 모양을 정의하고 엔터티 형식 인스턴스에 대한 정보를 전달합니다.  
@@ -17,11 +17,11 @@ ms.locfileid: "61879045"
   
  속성 정의에는 다음 정보가 들어 있습니다.  
   
--   속성 이름 (필수)  
+- 속성 이름 (필수)  
   
--   속성 형식 (필수)  
+- 속성 형식 (필수)  
   
--   집합이 [패싯](../../../../docs/framework/data/adonet/facet.md)합니다. 이 매개 변수는 선택 사항입니다.  
+- 집합이 [패싯](../../../../docs/framework/data/adonet/facet.md)합니다. 이 매개 변수는 선택 사항입니다.  
   
  속성에는 기본 데이터(예: 문자열, 정수 또는 부울 값) 또는 구조적 데이터(예: 복합 형식)가 포함될 수 있습니다. 기본 형식인 속성을 스칼라 속성이라고도 합니다. 자세한 내용은 참조 하세요. [엔터티 데이터 모델: 기본 데이터 형식을](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)합니다.  
   
