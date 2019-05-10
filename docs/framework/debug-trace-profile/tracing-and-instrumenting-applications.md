@@ -15,25 +15,25 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6749f54db106bffaba57b7cb77cb13808175af3a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: ad2c41cc99422217b9f85acbd32f91ac78a9a7c2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876150"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614234"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>응용 프로그램 추적 및 조율
 추적은 실행되는 동안 응용 프로그램의 실행을 모니터링할 수 있는 방법입니다. 개발할 때 .NET Framework 응용 프로그램에 추적 및 디버깅 계측을 추가할 수 있으며, 응용 프로그램을 개발하는 동안 및 배포한 후에 해당 계측을 모두 사용할 수 있습니다. <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 및 <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> 클래스를 사용하여 나중에 분석할 수 있도록 오류 및 응용 프로그램 실행 정보를 로그, 텍스트 파일 또는 다른 장치에 기록할 수 있습니다.  
   
  *계측*이란 용어는 제품의 성능 수준을 모니터링하거나 측정하고 오류를 진단하는 기능을 가리킵니다. 프로그래밍에서 이 용어는 다음을 통합하는 응용 프로그램 기능을 의미합니다.  
   
--   **코드 추적** - 런타임에 응용 프로그램의 실행에 대한 정보 메시지를 받습니다.  
+- **코드 추적** - 런타임에 응용 프로그램의 실행에 대한 정보 메시지를 받습니다.  
   
--   **디버깅** - 개발 중인 응용 프로그램에서 프로그래밍 오류를 추적하고 수정합니다. 자세한 내용은 [디버깅](/visualstudio/debugger/debugging-in-visual-studio)을 참조하세요.  
+- **디버깅** - 개발 중인 응용 프로그램에서 프로그래밍 오류를 추적하고 수정합니다. 자세한 내용은 [디버깅](/visualstudio/debugger/debugging-in-visual-studio)을 참조하세요.  
   
--   **성능 카운터** - 응용 프로그램의 성능을 추적할 수 있게 해주는 구성 요소입니다. 자세한 내용은 [성능 카운터](../../../docs/framework/debug-trace-profile/performance-counters.md)를 참조하세요.  
+- **성능 카운터** - 응용 프로그램의 성능을 추적할 수 있게 해주는 구성 요소입니다. 자세한 내용은 [성능 카운터](../../../docs/framework/debug-trace-profile/performance-counters.md)를 참조하세요.  
   
--   **이벤트 로그** - 응용 프로그램의 실행에서 주요 이벤트를 수신하고 추적할 수 있게 해주는 구성 요소입니다. 자세한 내용은 <xref:System.Diagnostics.EventLog> 클래스를 참조하세요.  
+- **이벤트 로그** - 응용 프로그램의 실행에서 주요 이벤트를 수신하고 추적할 수 있게 해주는 구성 요소입니다. 자세한 내용은 <xref:System.Diagnostics.EventLog> 클래스를 참조하세요.  
   
  분산 응용 프로그램에서는 코드의 전략적 위치에 trace 문을 배치하여 응용 프로그램을 계측하는 것이 특히 유용합니다. trace 문을 통해 응용 프로그램을 계측하여 문제가 발생할 때 정보를 표시하는 것은 물론 응용 프로그램의 성능을 모니터링할 수 있습니다.  
   
@@ -91,11 +91,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 6. 다음 절차 중 하나를 사용하여 응용 프로그램을 실행 코드로 컴파일합니다.  
   
-    -   **솔루션 탐색기**에서 **속성 페이지** 대화 상자의 **디버그** 페이지와 함께 **빌드** 메뉴를 사용합니다. 이 절차는 Visual Studio에서 컴파일할 때 사용합니다.  
+    - **솔루션 탐색기**에서 **속성 페이지** 대화 상자의 **디버그** 페이지와 함께 **빌드** 메뉴를 사용합니다. 이 절차는 Visual Studio에서 컴파일할 때 사용합니다.  
   
          \- 또는 -  
   
-    -   컴파일의 명령줄 메서드에 대한 **추적** 및 **디버그** 컴파일러 지시문을 사용합니다. 자세한 내용은 [추적 및 디버그를 사용한 조건부 컴파일](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)을 참조하세요. 이 절차는 명령줄에서 컴파일할 때 사용합니다.  
+    - 컴파일의 명령줄 메서드에 대한 **추적** 및 **디버그** 컴파일러 지시문을 사용합니다. 자세한 내용은 [추적 및 디버그를 사용한 조건부 컴파일](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)을 참조하세요. 이 절차는 명령줄에서 컴파일할 때 사용합니다.  
   
 7. 런타임 중에 문제가 발생하는 경우 적절한 추적 스위치를 설정합니다. 자세한 내용은 [추적 스위치 구성](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)을 참조하세요.  
   

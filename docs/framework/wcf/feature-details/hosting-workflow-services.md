@@ -2,12 +2,12 @@
 title: 워크플로 서비스 호스팅
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: c933fd2bd46588ccd5c6115fbc2efca72bfadca4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dbb5e9b687a735376d720b83607fc67350cd429f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855870"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613333"
 ---
 # <a name="hosting-workflow-services"></a>워크플로 서비스 호스팅
 워크플로 서비스가 들어오는 메시지에 응답하기 위해서는 해당 워크플로 서비스를 호스팅해야 합니다. 워크플로 서비스는 WCF 메시징 인프라를 사용하기 때문에 WCF 서비스와 비슷한 방식으로 호스팅됩니다. WCF 서비스와 마찬가지로 워크플로 서비스는 모든 관리 되는 응용 프로그램에서 인터넷 정보 서비스 (IIS), 또는 Windows 프로세스 활성화 서비스 (WAS)에서 호스팅할 수 있습니다. 또한 Windows Server Appfabric에서 워크플로 서비스를 호스트할 수 있습니다. Windows Server Appfabric에 대 한 자세한 내용은 참조 하세요. [Windows Server App Fabric 설명서](https://go.microsoft.com/fwlink/?LinkId=193037)하십시오 [AppFabric 호스팅 기능](https://go.microsoft.com/fwlink/?LinkId=196494), 및 [AppFabric 호스팅 개념](https://go.microsoft.com/fwlink/?LinkId=196495)합니다. WCF 호스트는 다양 한 방법에 대 한 자세한 내용은 참조 서비스용 [호스팅 서비스](../../../../docs/framework/wcf/hosting-services.md)합니다.
@@ -18,9 +18,9 @@ ms.locfileid: "61855870"
 ## <a name="hosting-under-iis-or-was"></a>IIS 또는 WAS에서 호스팅
  IIS 또는 WAS에서 워크플로 서비스를 호스팅하는 작업에는 가상 디렉터리를 만들고 이 가상 디렉터리에 서비스와 해당 동작을 정의하는 파일을 저장하는 작업이 포함됩니다. IIS 또는 WAS에서는 다음과 같은 여러 가지 방법으로 워크플로 서비스를 호스팅할 수 있습니다.
 
--   워크플로 서비스를 정의하는 .xamlx 파일을 서비스 동작, 엔드포인트 및 기타 구성 요소를 지정하는 Web.config 파일과 함께 IIS/WAS 가상 디렉터리에 저장합니다.
+- 워크플로 서비스를 정의하는 .xamlx 파일을 서비스 동작, 엔드포인트 및 기타 구성 요소를 지정하는 Web.config 파일과 함께 IIS/WAS 가상 디렉터리에 저장합니다.
 
--   워크플로 서비스를 정의하는 .xamlx 파일을 IIS/WAS 가상 디렉터리에 저장합니다. .xamlx 파일을 사용하면 노출할 엔드포인트를 지정할 수 있습니다. 엔드포인트는 다음 예제와 같이 `WorkflowService.Endpoints` 요소에 지정됩니다.
+- 워크플로 서비스를 정의하는 .xamlx 파일을 IIS/WAS 가상 디렉터리에 저장합니다. .xamlx 파일을 사용하면 노출할 엔드포인트를 지정할 수 있습니다. 엔드포인트는 다음 예제와 같이 `WorkflowService.Endpoints` 요소에 지정됩니다.
 
     ```xml
     <WorkflowService xmlns="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel"  xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:sad="clr-namespace:System.Activities.Debugger;assembly=System.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
@@ -38,9 +38,9 @@ ms.locfileid: "61855870"
     > [!NOTE]
     > .xamlx 파일에는 동작을 지정할 수 없으므로 동작 설정을 지정해야 하는 경우에는 Web.config를 사용해야 합니다.
 
--   워크플로 서비스를 정의하는 .xamlx 파일을 IIS/WAS 가상 디렉터리에 저장합니다. 또한 .svc 파일도 IIS/WAS 가상 디렉터리에 저장합니다. .svc 파일을 사용하면 사용자 지정 웹 서비스 호스트 팩터리를 지정하거나, 사용자 지정 동작을 적용하거나, 사용자 지정 위치에서 구성을 로드할 수 있습니다.
+- 워크플로 서비스를 정의하는 .xamlx 파일을 IIS/WAS 가상 디렉터리에 저장합니다. 또한 .svc 파일도 IIS/WAS 가상 디렉터리에 저장합니다. .svc 파일을 사용하면 사용자 지정 웹 서비스 호스트 팩터리를 지정하거나, 사용자 지정 동작을 적용하거나, 사용자 지정 위치에서 구성을 로드할 수 있습니다.
 
--   IIS/WAS 가상 디렉터리에 WCF 메시징 작업을 사용하는 작업이 포함된 어셈블리를 저장합니다.
+- IIS/WAS 가상 디렉터리에 WCF 메시징 작업을 사용하는 작업이 포함된 어셈블리를 저장합니다.
 
  워크플로 서비스를 정의 하는.xamlx 파일을 포함 해야 합니다는 <`Service`> 루트 요소나에서 파생 된 형식을 포함 하는 루트 요소를 <xref:System.Workflow.ComponentModel.Activity>입니다. Visual Studio 작업 템플릿을 사용 하는.xamlx 파일이 만들어집니다. WCF Workflow Service 템플릿을 사용 하는.xamlx 파일이 만들어집니다.
 

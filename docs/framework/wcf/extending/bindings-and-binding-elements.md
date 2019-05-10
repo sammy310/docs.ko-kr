@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding elements [WCF]
 ms.assetid: 765ff77b-7682-4ea3-90eb-e4d751e37379
-ms.openlocfilehash: 33ebb07e350dbbbdd324b442f52dfb6287322bd8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eae78220196395ba3002141f01d554f2335a1f28
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858379"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613354"
 ---
 # <a name="bindings-and-binding-elements"></a>바인딩 및 바인딩 요소
 바인딩에 라는 특수 한 구성 요소의 모음 *바인딩 요소*때마다 클라이언트 서비스 런타임에 의해 평가 되, 서비스 끝점이 생성 될 합니다. 한 바인딩 내에 있는 바인딩 요소의 형식과 순서는 엔드포인트 채널 스택에서 프로토콜 및 전송 채널의 선택 및 스택 순서를 결정합니다.  
@@ -21,13 +21,13 @@ ms.locfileid: "61858379"
 ## <a name="extending-bindings-and-binding-elements"></a>바인딩 및 바인딩 요소 확장명  
  Windows Communication Foundation (WCF)에 다양 한 시나리오를 다루는 시스템 제공 바인딩이 포함 되어 있습니다. (자세한 내용은 참조 하세요 [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md).) 그러나 있을 시간 만들고 WCF에 포함 되지 않은 바인딩을 사용 해야 할 경우. 다음 시나리오에서는 새 바인딩을 만들어야 합니다.  
   
--   새 전송, 인코딩 또는 프로토콜 바인딩 요소와 같은 새 바인딩 요소를 사용하려면 해당 바인딩 요소를 포함하는 새 바인딩을 만들어야 합니다. 예를 들어 UDP 전송용 사용자 지정 `UdpTransportBindingElement`를 추가한 경우 새 바인딩을 만들어 사용해야 합니다. 사용 하 여이 동작을 수행 하는 방법에 대 한 정보에 대 한 합니다 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> 입력을 참조 하십시오 [사용자 지정 바인딩](../../../../docs/framework/wcf/extending/custom-bindings.md)합니다.  
+- 새 전송, 인코딩 또는 프로토콜 바인딩 요소와 같은 새 바인딩 요소를 사용하려면 해당 바인딩 요소를 포함하는 새 바인딩을 만들어야 합니다. 예를 들어 UDP 전송용 사용자 지정 `UdpTransportBindingElement`를 추가한 경우 새 바인딩을 만들어 사용해야 합니다. 사용 하 여이 동작을 수행 하는 방법에 대 한 정보에 대 한 합니다 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> 입력을 참조 하십시오 [사용자 지정 바인딩](../../../../docs/framework/wcf/extending/custom-bindings.md)합니다.  
   
--   시스템 제공 바인딩이 public 속성에 노출되지 않는 방식으로 기존 바인딩 요소를 구성합니다. 예를 들어 서명 및 암호화 작업이 수행되는 순서를 변경하려면 새 바인딩을 만들어야 합니다. 이 동작을 수행 하는 방법에 대 한 내용은 [방법: 시스템 제공 바인딩 사용자 지정](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)합니다.  
+- 시스템 제공 바인딩이 public 속성에 노출되지 않는 방식으로 기존 바인딩 요소를 구성합니다. 예를 들어 서명 및 암호화 작업이 수행되는 순서를 변경하려면 새 바인딩을 만들어야 합니다. 이 동작을 수행 하는 방법에 대 한 내용은 [방법: 시스템 제공 바인딩 사용자 지정](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)합니다.  
   
--   특정 구성 옵션만 노출하는 회사 표준 바인딩을 설정합니다. 예를 들어 보안을 비활성화할 수 없는 회사의 <xref:System.ServiceModel.WSHttpBinding> 변수를 만들려면 보안은 항상 설정된 상태에서 <xref:System.ServiceModel.WSHttpBinding>처럼 동작하는 새 바인딩을 만듭니다. 자세한 내용은 참조 하세요 [Creating User-Defined 바인딩](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)합니다.  
+- 특정 구성 옵션만 노출하는 회사 표준 바인딩을 설정합니다. 예를 들어 보안을 비활성화할 수 없는 회사의 <xref:System.ServiceModel.WSHttpBinding> 변수를 만들려면 보안은 항상 설정된 상태에서 <xref:System.ServiceModel.WSHttpBinding>처럼 동작하는 새 바인딩을 만듭니다. 자세한 내용은 참조 하세요 [Creating User-Defined 바인딩](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)합니다.  
   
--   일부 메타데이터를 사용자 지정하지만 일반적으로 일부 사용자 지정 바인딩 요소를 반드시 구성하거나 사용하지 않습니다. 바인딩 및 바인딩 요소에 메타 데이터 지원을 제공 하는 방법에 대 한 자세한 내용은 참조 하세요. [구성 및 메타 데이터 지원을](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)합니다.  
+- 일부 메타데이터를 사용자 지정하지만 일반적으로 일부 사용자 지정 바인딩 요소를 반드시 구성하거나 사용하지 않습니다. 바인딩 및 바인딩 요소에 메타 데이터 지원을 제공 하는 방법에 대 한 자세한 내용은 참조 하세요. [구성 및 메타 데이터 지원을](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)합니다.  
 
 ## <a name="channels-bindings-and-binding-elements"></a>채널, 바인딩 및 바인딩 요소  
  바인딩 및 바인딩 요소는 특성 및 동작을 포함하는 응용 프로그램 프로그래밍 모델과 팩터리 및 수신기, 메시지 인코더, 전송 및 프로토콜 구현을 포함하는 채널 모델 사이를 연결합니다. 일반적으로, 바인딩 요소와 바인딩이 구현되면 응용 프로그램 계층에서 채널을 사용할 수 있습니다.  

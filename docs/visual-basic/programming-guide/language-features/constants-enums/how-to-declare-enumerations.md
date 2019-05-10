@@ -6,12 +6,12 @@ helpviewer_keywords:
 - enumerations [Visual Basic], declaring
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
-ms.openlocfilehash: f168d6d9cd6970353e75fa35a7e52cc7156fda72
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c74b75adf0f56dd198375cb1ff24656d39ec074c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907649"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610574"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>방법: 열거형 (Visual Basic)를 선언 합니다.
 사용 하 여 열거형을 만듭니다는 `Enum` 클래스 또는 모듈을 선언 섹션에서 설명 합니다. 메서드 내에서 열거형을 선언할 수 없습니다. 적절 한 수준의 액세스를 지정 하려면 `Private`, `Protected`를 `Friend`, 또는 `Public`합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "61907649"
   
 ### <a name="to-declare-an-enumeration-as-an-explicit-type"></a>명시적 형식으로 열거형 선언  
   
--   열거형 형식을 사용 하 여 지정 된 `As` 절을 다음과 같이 합니다.  
+- 열거형 형식을 사용 하 여 지정 된 `As` 절을 다음과 같이 합니다.  
   
      [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: d3c7ae9da9c18e53da393928e34dcfbf04fc891c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c498ae0a9d39240e715e6ba66e57c5e1d3ebbfbc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024692"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610426"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Visual Basic에서 문화권이 문자열에 영향을 주는 방식
 이 도움말 페이지는 Visual Basic 문자열 변환과 비교를 수행 하려면 문화권 정보를 사용 하는 방법을 설명 합니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "62024692"
 |`InvariantCulture` 또는 `InvariantCultureIgnoreCase`|고정 문화권에서 문자열 해석에 따라 비교 합니다.<br /><br /> 이 다른 합니다 `Ordinal` 및 `OrdinalIgnoreCase`고정 문화권은 허용 된 범위를 벗어나는 문자가 해당 고정 문자로 취급 하므로, 합니다.|고정된 정렬 순서가 필요한 비교 데이터를 유지 하거나 언어적으로 관련 된 데이터를 표시 하는 경우에 이러한 값을 사용 합니다.|  
   
 ### <a name="security-considerations"></a>보안 고려 사항  
- 응용 프로그램에서 비교 또는 대/소문자 변경 작업의 결과에 따라 보안 결정 다음 작업을 사용 해야 합니다 <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드를 통과 `Ordinal` 또는 `OrdinalIgnoreCase` 에 대 한는 `comparisonType` 인수입니다.  
+ 애플리케이션에서 비교 또는 대/소문자 변경 작업의 결과에 따라 보안 결정 다음 작업을 사용 해야 합니다 <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드를 통과 `Ordinal` 또는 `OrdinalIgnoreCase` 에 대 한는 `comparisonType` 인수입니다.  
   
 ## <a name="see-also"></a>참고자료
 

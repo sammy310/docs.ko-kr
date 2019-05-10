@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sealed classes
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
 author: KrzysztofCwalina
-ms.openlocfilehash: c8aeb5ce3d93755f30bf68732592a08d7af54957
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f25573c0fef29ef54dc04c5287757903429d89d4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762065"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615209"
 ---
 # <a name="sealing"></a>봉인
 개체 지향 프레임 워크의 기능 중 하나에 개발자가 확장 하 고 프레임 워크 디자이너에서 예기치 않은 방식으로 사용자 지정할 수 있는 것입니다. 이 기능과 확장 가능한 디자인 하는 위험 합니다. 프레임 워크를 디자인할 때, 따라서, 원할 경우 신중 하 게 확장성에 대 한 디자인 및 위험한 경우 확장성 제한에 매우 중요 합니다.  

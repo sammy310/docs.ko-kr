@@ -2,12 +2,12 @@
 title: 개체 상태 및 변경 내용 추적
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
-ms.openlocfilehash: 63b04d3a4b6e48594e9664833a6e539d62bbab0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 704c5271f71c3709bbf48cf6a5af0a60828e6244
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794396"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610092"
 ---
 # <a name="object-states-and-change-tracking"></a>개체 상태 및 변경 내용 추적
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개체는 항상 일부에 참여할 *상태*합니다. 예를 들어, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 새 개체를 만들 경우 개체는 `Unchanged` 상태입니다. 직접 만든 새 개체는 <xref:System.Data.Linq.DataContext>에 알려져 있지 않으며 `Untracked` 상태입니다. <xref:System.Data.Linq.DataContext.SubmitChanges%2A>를 실행하고 나면 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에 알려진 모든 개체는 `Unchanged` 상태가 됩니다. 유일한 예외는 데이터베이스에서 삭제된 개체로 이러한 개체는 `Deleted` 상태이고 해당 <xref:System.Data.Linq.DataContext> 인스턴스에서 사용할 수 없습니다.  
@@ -19,7 +19,7 @@ ms.locfileid: "61794396"
 |-----------|-----------------|  
 |`Untracked`|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에 의해 추적되지 않는 개체입니다. 여기에는 다음과 같은 예가 포함됩니다.<br /><br /> -현재 통해 쿼리되지 않은 개체 <xref:System.Data.Linq.DataContext> (예: 새로 만든된 개체).<br />Deserialization을 통해 만든-개체<br />-다른 통해 쿼리할 개체 <xref:System.Data.Linq.DataContext>합니다.|  
 |`Unchanged`|현재 <xref:System.Data.Linq.DataContext>를 사용하여 검색되었으며 만들어진 이후 수정된 것으로 알려지지 않은 개체입니다.|  
-|`PossiblyModified`|상태인 개체 *연결 된* 에 <xref:System.Data.Linq.DataContext>합니다. 자세한 내용은 [데이터 검색 및 CUD 작업에서 N 계층 응용 프로그램 (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md)합니다.|  
+|`PossiblyModified`|상태인 개체 *연결 된* 에 <xref:System.Data.Linq.DataContext>합니다. 자세한 내용은 [데이터 검색 및 CUD 작업에서 N 계층 애플리케이션 (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md)합니다.|  
 |`ToBeInserted`|현재 <xref:System.Data.Linq.DataContext>를 사용하여 검색되지 않은 개체입니다. 이로 인해 `INSERT` 동안 데이터베이스에 <xref:System.Data.Linq.DataContext.SubmitChanges%2A>가 발생합니다.|  
 |`ToBeUpdated`|검색된 이후로 수정되었다는 것이 알려진 개체입니다. 이로 인해 `UPDATE` 동안 데이터베이스에 <xref:System.Data.Linq.DataContext.SubmitChanges%2A>가 발생합니다.|  
 |`ToBeDeleted`|삭제되도록 표시된 개체이며 이로 인해 `DELETE` 동안 데이터베이스에 <xref:System.Data.Linq.DataContext.SubmitChanges%2A>가 발생합니다.|  

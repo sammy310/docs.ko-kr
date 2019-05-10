@@ -4,12 +4,12 @@ description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 801d017457d1cdc3c8a495c8127b203380cb1d9e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7af5e189ea930f9eac8aadab2ba1497f43f8d2b1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61811836"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614520"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>클라우드에 대한 복원력 있는 서비스 구축: 클라우드에서 일시적 오류 포용
 
@@ -43,19 +43,19 @@ HTTP 리소스와 데이터베이스 리소스에서 이러한 기술을 사용�
 
 ### <a name="additional-resources"></a>추가 자료
 
--   **복원 력 있는 통신 부분 실패 처리 구현**
+- **복원 력 있는 통신 부분 실패 처리 구현**
 
     [https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies](../../microservices-architecture/implement-resilient-applications/partial-failure-strategies.md)
 
--   **Entity Framework 연결 복원 력 및 재시도 논리 (버전 6 이상)**
+- **Entity Framework 연결 복원 력 및 재시도 논리 (버전 6 이상)**
 
     [https://docs.microsoft.com/ef/ef6/fundamentals/connection-resiliency/retry-logic](/ef/ef6/fundamentals/connection-resiliency/retry-logic)
 
--   **일시적인 오류 처리 응용 프로그램 블록**
+- **일시적인 오류 처리 응용 프로그램 블록**
 
--   <https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)>
+- <https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)>
 
--   **복원 력 있는 HTTP 통신에 Polly 라이브러리**
+- **복원 력 있는 HTTP 통신에 Polly 라이브러리**
 
     https://github.com/App-vNext/Polly
 

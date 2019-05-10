@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: b0b301bca33842dfb68de9143b665bed73f17b74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b97ce0e4ce32e272ff884240b566c1c1c0e0d271
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903437"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614655"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>비주얼 스타일을 사용하여 컨트롤 렌더링
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 는 지원되는 운영 체제에서 비주얼 스타일을 사용하여 컨트롤 및 기타 Windows UI(사용자 인터페이스) 요소를 렌더링하는 것을 지원합니다. 이 항목에서는 운영 체제의 현재 비주얼 스타일로 컨트롤 및 기타 UI 요소를 렌더링하는 작업에 대한 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 의 몇 가지 지원 수준에 대해 설명합니다.  
@@ -27,27 +27,27 @@ ms.locfileid: "61903437"
   
  이러한 클래스 중 일부는 비주얼 스타일의 사용 가능 여부와 상관없이 관련 컨트롤을 그리도록 설계되어 있습니다. 비주얼 스타일을 사용할 수 있는 경우 클래스 멤버는 비주얼 스타일로 관련 컨트롤을 그립니다. 비주얼 스타일을 사용할 수 없는 경우 클래스 멤버는 Windows 클래식 스타일로 컨트롤을 그립니다. 이러한 클래스에는 다음이 포함됩니다.  
   
--   <xref:System.Windows.Forms.ButtonRenderer>  
+- <xref:System.Windows.Forms.ButtonRenderer>  
   
--   <xref:System.Windows.Forms.CheckBoxRenderer>  
+- <xref:System.Windows.Forms.CheckBoxRenderer>  
   
--   <xref:System.Windows.Forms.GroupBoxRenderer>  
+- <xref:System.Windows.Forms.GroupBoxRenderer>  
   
--   <xref:System.Windows.Forms.RadioButtonRenderer>  
+- <xref:System.Windows.Forms.RadioButtonRenderer>  
   
  다른 클래스는 비주얼 스타일을 사용할 수 있을 때에만 관련 컨트롤을 그릴 수 있으며, 비주얼 스타일을 사용할 수 없는 경우 해당 멤버는 예외를 throw합니다. 이러한 클래스에는 다음이 포함됩니다.  
   
--   <xref:System.Windows.Forms.ComboBoxRenderer>  
+- <xref:System.Windows.Forms.ComboBoxRenderer>  
   
--   <xref:System.Windows.Forms.ProgressBarRenderer>  
+- <xref:System.Windows.Forms.ProgressBarRenderer>  
   
--   <xref:System.Windows.Forms.ScrollBarRenderer>  
+- <xref:System.Windows.Forms.ScrollBarRenderer>  
   
--   <xref:System.Windows.Forms.TabRenderer>  
+- <xref:System.Windows.Forms.TabRenderer>  
   
--   <xref:System.Windows.Forms.TextBoxRenderer>  
+- <xref:System.Windows.Forms.TextBoxRenderer>  
   
--   <xref:System.Windows.Forms.TrackBarRenderer>  
+- <xref:System.Windows.Forms.TrackBarRenderer>  
   
  이러한 클래스를 사용 하 여 컨트롤 그리기에 대 한 자세한 내용은 참조 하세요. [방법: 컨트롤 렌더링 클래스를 사용 하 여](how-to-use-a-control-rendering-class.md)입니다.  
   

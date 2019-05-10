@@ -2,12 +2,12 @@
 title: 데이터 집합 제약 조건에 keyref XSD(XML 스키마) 제약 조건 매핑
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
-ms.openlocfilehash: dcb295aef6d93222e682ef7f720c83963036e795
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4cc4cb530b7252f35469fd4bb43bf6da9c1a3e24
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607501"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64604031"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>데이터 집합 제약 조건에 keyref XSD(XML 스키마) 제약 조건 매핑
 합니다 **keyref** 요소는 문서 내의 요소 간의 연결을 설정할 수 있습니다. 이 링크는 관계형 데이터베이스의 외래 키 관계와 유사합니다. 스키마를 지정 하는 경우는 **keyref** 요소가 요소는 해당 외래 키 제약 조건 테이블의 열에 스키마 매핑 프로세스 중 변환 되는 <xref:System.Data.DataSet>합니다. 기본적으로 **keyref** 도 요소와의 관계를 생성 합니다 **ParentTable**를 **ChildTable**, **ParentColumn**, 및  **ChildColumn** 관계에서 지정 된 속성입니다.  

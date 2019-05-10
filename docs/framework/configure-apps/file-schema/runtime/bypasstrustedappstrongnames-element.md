@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c39d9a1e3da9cccb2f027e9597a6f2272d187ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c70a03e1ad443739f43dc50ab34021652017713d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674209"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607418"
 ---
 # <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames> 요소
 완전 신뢰에 로드 되는 완전 신뢰 어셈블리에 강력한 이름의 유효성 검사를 건너뛸지 여부를 지정 <xref:System.AppDomain>합니다.  
@@ -61,13 +61,13 @@ ms.locfileid: "61674209"
   
  건너뛰기 기능은 강력한 이름으로 서명되었으며 다음과 같은 특징이 있는 모든 어셈블리에 적용됩니다.  
   
--   없이 완전 신뢰를 <xref:System.Security.Policy.StrongName> 증거 (예를 들어에 `MyComputer` 영역 증거가).  
+- 없이 완전 신뢰를 <xref:System.Security.Policy.StrongName> 증거 (예를 들어에 `MyComputer` 영역 증거가).  
   
--   완전히 신뢰할 수 있는 <xref:System.AppDomain>에 로드됨  
+- 완전히 신뢰할 수 있는 <xref:System.AppDomain>에 로드됨  
   
--   해당 <xref:System.AppDomain>의 <xref:System.AppDomainSetup.ApplicationBase%2A> 속성 아래에 있는 위치에서 로드됨  
+- 해당 <xref:System.AppDomain>의 <xref:System.AppDomainSetup.ApplicationBase%2A> 속성 아래에 있는 위치에서 로드됨  
   
--   서명이 연기되지 않음  
+- 서명이 연기되지 않음  
   
 > [!NOTE]
 >  건너뛰기 기능은 껐습니다 컴퓨터의 모든 응용 프로그램에 대 한 레지스트리 키를 사용 하 여,이 구성 파일 설정은 효과가 없습니다. 자세한 내용은 [방법: 강력한 이름 건너뛰기 기능 비활성화](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)  

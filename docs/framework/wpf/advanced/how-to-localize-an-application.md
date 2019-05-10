@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: d08f991204b2d74899cbd1aee82c0cc23e175dd4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 8f1251195fdb21ac57030056abc7b5657edb49fa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298320"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614616"
 ---
 # <a name="how-to-localize-an-application"></a>방법: 애플리케이션 지역화
 이 자습서에서는 LocBaml 도구를 사용하여 지역화된 애플리케이션을 만드는 방법을 설명합니다.  
@@ -91,21 +91,21 @@ ms.locfileid: "59298320"
   
 4. LocBaml을 실행할 때 지정할 수 있는 옵션은 다음과 같습니다.  
   
-    -   **구문 분석할** 또는 **-p:** Baml, 리소스를 구문 분석 또는 [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] .csv 또는.txt 파일을 생성 하는 파일입니다.  
+    - **구문 분석할** 또는 **-p:** Baml, 리소스를 구문 분석 또는 [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] .csv 또는.txt 파일을 생성 하는 파일입니다.  
   
-    -   **생성할** 또는 **-g:** 번역 된 파일을 사용 하 여 지역화 된 이진 파일을 생성 합니다.  
+    - **생성할** 또는 **-g:** 번역 된 파일을 사용 하 여 지역화 된 이진 파일을 생성 합니다.  
   
-    -   **out** 나 **-o** {0}*filedirectory*] **:** 출력 파일 이름입니다.  
+    - **out** 나 **-o** {0}*filedirectory*] **:** 출력 파일 이름입니다.  
   
-    -   **문화권** 나 **-cul** {0}*문화권*] **:** 출력 어셈블리의 로캘입니다.  
+    - **문화권** 나 **-cul** {0}*문화권*] **:** 출력 어셈블리의 로캘입니다.  
   
-    -   **번역** 나 **-trans** {0}*translation.csv*] **:** 번역 또는 지역화 된 파일입니다.  
+    - **번역** 나 **-trans** {0}*translation.csv*] **:** 번역 또는 지역화 된 파일입니다.  
   
-    -   **asmpath** or **-asmpath:** {*filedirectory*] **:** 경우에 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 사용자 지정 컨트롤을 포함 하는 코드를 제공 해야 합니다 **asmpath** 사용자 지정 컨트롤 어셈블리에 합니다.  
+    - **asmpath** or **-asmpath:** {*filedirectory*] **:** 경우에 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 사용자 지정 컨트롤을 포함 하는 코드를 제공 해야 합니다 **asmpath** 사용자 지정 컨트롤 어셈블리에 합니다.  
   
-    -   **nologo:** 없는 로고 또는 저작권 정보를 표시합니다.  
+    - **nologo:** 없는 로고 또는 저작권 정보를 표시합니다.  
   
-    -   **자세한 정보:** 자세한 정보 표시 모드 정보를 표시합니다.  
+    - **자세한 정보:** 자세한 정보 표시 모드 정보를 표시합니다.  
   
     > [!NOTE]
     >  이 도구를 실행 하는 경우 옵션 목록이 해야 하는 경우 입력 **LocBaml.exe** ENTER 키를 누릅니다.  
@@ -133,19 +133,19 @@ ms.locfileid: "59298320"
 
    7개 필드는 다음과 같습니다.  
   
-   1.  **BAML 이름**. 소스 언어 위성 어셈블리와 관련된 BAML 리소스의 이름입니다.  
+   1. **BAML 이름**. 소스 언어 위성 어셈블리와 관련된 BAML 리소스의 이름입니다.  
   
-   2.  **리소스 키**. 지역화된 리소스 식별자입니다.  
+   2. **리소스 키**. 지역화된 리소스 식별자입니다.  
   
-   3.  **범주**. 값 형식입니다. 참조 [지역화 특성과 주석을](localization-attributes-and-comments.md)합니다.  
+   3. **범주**. 값 형식입니다. 참조 [지역화 특성과 주석을](localization-attributes-and-comments.md)합니다.  
   
-   4.  **가독성**. 로컬라이저가 값을 읽을 수 있는지 여부입니다. 참조 [지역화 특성과 주석을](localization-attributes-and-comments.md)합니다.  
+   4. **가독성**. 로컬라이저가 값을 읽을 수 있는지 여부입니다. 참조 [지역화 특성과 주석을](localization-attributes-and-comments.md)합니다.  
   
-   5.  **수정 가능성**. 로컬라이저가 값을 수정할 수 있는지 여부입니다. 참조 [지역화 특성과 주석을](localization-attributes-and-comments.md)합니다.  
+   5. **수정 가능성**. 로컬라이저가 값을 수정할 수 있는지 여부입니다. 참조 [지역화 특성과 주석을](localization-attributes-and-comments.md)합니다.  
   
-   6.  **설명**. 값은 지역화하는 방법을 확인하는 데 도움이 되는 값에 대한 추가 설명입니다. 참조 [지역화 특성과 주석을](localization-attributes-and-comments.md)합니다.  
+   6. **설명**. 값은 지역화하는 방법을 확인하는 데 도움이 되는 값에 대한 추가 설명입니다. 참조 [지역화 특성과 주석을](localization-attributes-and-comments.md)합니다.  
   
-   7.  **값**. 원하는 문화권으로 번역할 텍스트 값입니다.  
+   7. **값**. 원하는 문화권으로 번역할 텍스트 값입니다.  
   
    다음 표에서는 이러한 필드가 .csv 파일의 구분된 값에 매핑되는 방법을 보여 줍니다.  
   
@@ -188,9 +188,9 @@ ms.locfileid: "59298320"
   
 7. 새 위성 어셈블리를 테스트하려면 애플리케이션이 실행되는 문화권을 변경해야 합니다. 이 작업은 다음 두 가지 방법 중 하나로 수행할 수 있습니다.  
   
-    -   운영 체제의 국가별 설정 변경 (**시작** &#124; **제어판** &#124; **국가 및 언어 옵션**).  
+    - 운영 체제의 국가별 설정 변경 (**시작** &#124; **제어판** &#124; **국가 및 언어 옵션**).  
   
-    -   애플리케이션에서 다음 코드를 App.xaml.cs에 추가합니다.  
+    - 애플리케이션에서 다음 코드를 App.xaml.cs에 추가합니다.  
   
    [!code-xaml[LocBamlChangeCultureSnippets#LocBamlChangeCultureMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml#locbamlchangeculturemarkup)]
    [!code-csharp[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml.cs#locbamlchangeculturecodebehind)]
@@ -199,11 +199,11 @@ ms.locfileid: "59298320"
 <a name="Some_Tips_for_Using_LocBaml"></a>   
 ## <a name="some-tips-for-using-locbaml"></a>LocBaml 사용과 관련된 몇 가지 팁  
   
--   사용자 지정 컨트롤을 정의하는 모든 종속 어셈블리를 LocBaml의 로컬 디렉터리에 복사하거나 GAC에 설치해야 합니다. 이 작업은 지역화 API가 [!INCLUDE[TLA#tla_baml](../../../../includes/tlasharptla-baml-md.md)]을 읽을 때 종속 어셈블리에 액세스할 수 있어야 하기 때문에 필요합니다.  
+- 사용자 지정 컨트롤을 정의하는 모든 종속 어셈블리를 LocBaml의 로컬 디렉터리에 복사하거나 GAC에 설치해야 합니다. 이 작업은 지역화 API가 [!INCLUDE[TLA#tla_baml](../../../../includes/tlasharptla-baml-md.md)]을 읽을 때 종속 어셈블리에 액세스할 수 있어야 하기 때문에 필요합니다.  
   
--   주 어셈블리가 서명된 경우 생성된 리소스 DLL도 서명되어야 로드됩니다.  
+- 주 어셈블리가 서명된 경우 생성된 리소스 DLL도 서명되어야 로드됩니다.  
   
--   지역화된 리소스 DLL 버전을 주 어셈블리와 동기화해야 합니다.  
+- 지역화된 리소스 DLL 버전을 주 어셈블리와 동기화해야 합니다.  
   
 <a name="Whats_Next"></a>   
 ## <a name="whats-next"></a>새로운 기능  
