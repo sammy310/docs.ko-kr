@@ -9,12 +9,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
-ms.openlocfilehash: 3e532b040d3c7859220b7f73958b63e7208b988c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 75df256f852b45af4bc6cf519c13ccd62ae1d689
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009528"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654766"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>ToolStrip 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ToolStrip> 컨트롤 및 해당 관련된 클래스 도구 모음, 상태 표시줄 및 메뉴를 사용자 인터페이스 요소를 결합 하는 것에 대 한 일반적인 프레임 워크를 제공 합니다. <xref:System.Windows.Forms.ToolStrip> 컨트롤 도구 모음의 가로 또는 세로 공간을 공유할 수 있는 내부 활성화와 편집, 사용자 지정 레이아웃 및 래프팅 (rafting)를 비롯 한 다양 한 디자인 타임 환경을 제공 합니다.  

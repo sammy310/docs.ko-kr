@@ -2,12 +2,12 @@
 title: '사용자 지정 메시지 인코더: 압축 인코더'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: e19894a685f511d22252d0b3a79f77b83b7fda99
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d5ec330fb4aa0a136c4a0e4c8d249d7ebb9d0692
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62003095"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650196"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>사용자 지정 메시지 인코더: 압축 인코더
 이 샘플에는 Windows Communication Foundation (WCF) 플랫폼을 사용 하 여 사용자 지정 인코더를 구현 하는 방법을 보여 줍니다.  

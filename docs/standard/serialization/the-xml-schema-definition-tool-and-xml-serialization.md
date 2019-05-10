@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML Schema Definition tool
 - serialization, XML Schema Definition tool
 ms.assetid: 3c03f855-f931-47ff-bbc6-50c0367a16e4
-ms.openlocfilehash: 4c950d84cc95c20c2ae85340a2987ea51bed9570
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e855d3fdee5e8f37af8eaa362ecfdeea6e054bf6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62028293"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645032"
 ---
 # <a name="the-xml-schema-definition-tool-and-xml-serialization"></a>XML 스키마 정의 도구 및 XML Serialization
 XML 스키마 정의 도구([XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md))는 Windows® SDK(소프트웨어 개발 키트)의 일부로 .NET Framework 도구와 함께 설치됩니다. 이 도구는 주로 다음 두 가지 목적으로 디자인되었습니다.  

@@ -2,12 +2,12 @@
 title: System.Transactions에서 제공하는 기능
 ms.date: 03/30/2017
 ms.assetid: e458cef9-63b5-4401-b448-1536dcd9d9e5
-ms.openlocfilehash: 6fc20f8249f37f69689fb3fc6b3144792badad3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 75277090652cd439d3466a307790f4b918ddb090
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793694"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645721"
 ---
 # <a name="features-provided-by-systemtransactions"></a>System.Transactions에서 제공하는 기능
 이 섹션에서는 <xref:System.Transactions> 네임스페이스에서 제공하는 기능을 사용하여 고유한 트랜잭션 응용 프로그램과 리소스 관리자를 작성하는 방법에 대해 설명합니다. 특히 이 섹션에서는 하나 또는 여러 참석자가 있는 트랜잭션(로컬 또는 분산)을 만들고 이에 참여하는 방법에 대해 설명합니다.  

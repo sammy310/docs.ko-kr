@@ -8,19 +8,19 @@ helpviewer_keywords:
 - controls [Windows Forms], binding multiple
 - controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
-ms.openlocfilehash: 8f7e59720420a845fa195b8c0fb078a8699a9bc3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8a39c50bfc452c807a18a9bf0a65e56cb75d20aa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800779"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655625"
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>방법: 동일한 데이터 소스에 바인딩된 여러 컨트롤의 동기화 상태가 유지되도록 설정
 Windows Forms에서 데이터 바인딩을 사용 하 여 작업을 하는 경우에 종종 여러 컨트롤은 동일한 데이터 소스에 바인딩됩니다. 일부 경우에는 컨트롤의 바인딩된 속성이 서로 데이터 소스를 사용 하 여 동기화 된 상태로 유지 되도록 추가 단계를 수행 해야 할 수도 있습니다. 이러한 단계는 두 가지 상황에서 필요 합니다.  
   
--   데이터 소스를 구현 하지 않는 경우 <xref:System.ComponentModel.IBindingList>를 생성 하므로 <xref:System.ComponentModel.IBindingList.ListChanged> 유형의 이벤트 <xref:System.ComponentModel.ListChangedType.ItemChanged>합니다.  
+- 데이터 소스를 구현 하지 않는 경우 <xref:System.ComponentModel.IBindingList>를 생성 하므로 <xref:System.ComponentModel.IBindingList.ListChanged> 유형의 이벤트 <xref:System.ComponentModel.ListChangedType.ItemChanged>합니다.  
   
--   데이터 원본 구현 <xref:System.ComponentModel.IEditableObject>합니다.  
+- 데이터 원본 구현 <xref:System.ComponentModel.IEditableObject>합니다.  
   
  전자의 경우에 사용할 수는 <xref:System.Windows.Forms.BindingSource> 데이터 소스 컨트롤에 바인딩할 합니다. 후자의 경우 사용 하 여는 <xref:System.Windows.Forms.BindingSource> 하 고 처리 합니다 <xref:System.Windows.Forms.BindingSource.BindingComplete> 이벤트 및 호출 <xref:System.Windows.Forms.BindingManagerBase.EndCurrentEdit%2A> 연결 된 <xref:System.Windows.Forms.BindingManagerBase>합니다.  
   
@@ -34,11 +34,11 @@ Windows Forms에서 데이터 바인딩을 사용 하 여 작업을 하는 경�
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
   
--   이 코드 예제에서는  
+- 이 코드 예제에서는  
   
--   <xref:System>, <xref:System.Windows.Forms> 및 <xref:System.Drawing> 어셈블리에 대한 참조  
+- <xref:System>, <xref:System.Windows.Forms> 및 <xref:System.Drawing> 어셈블리에 대한 참조  
   
--   사용 하 여 폼을 <xref:System.Windows.Forms.Form.Load> 이벤트를 처리 하 고 호출 하는 `InitializeControlsAndDataSource` 폼의 예제에서 메서드 <xref:System.Windows.Forms.Form.Load> 이벤트 처리기입니다.  
+- 사용 하 여 폼을 <xref:System.Windows.Forms.Form.Load> 이벤트를 처리 하 고 호출 하는 `InitializeControlsAndDataSource` 폼의 예제에서 메서드 <xref:System.Windows.Forms.Form.Load> 이벤트 처리기입니다.  
   
 ## <a name="see-also"></a>참고자료
 

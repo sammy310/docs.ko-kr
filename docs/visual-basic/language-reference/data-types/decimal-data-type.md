@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ identifier type character'
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
-ms.openlocfilehash: 4d530a8c1f85d2f0045184c05df63849047a8204
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 00945e0f3cd4e605bf625068ab6693101ae3b164
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971772"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647053"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Decimal 데이터 형식(Visual Basic)
 부호 있는 10의 거듭제곱으로 조정 된 96 비트 (12 바이트) 정수 숫자를 나타내는 128 비트 (16 바이트) 값을 저장 합니다. 배율은 소수점의 오른쪽에 자릿수를 지정합니다. 이 범위는 0에서 28입니다. 가장 큰 가능한 값은 소수 자릿수가 0 (소수 자릿수 없이)를 사용 하 여 + /-79228162514264337593543950335 (7 + /-.9228162514264337593543950335E + 28). 소수 자릿수가 28 + /-7.9228162514264337593543950335 사이, 가장 큰 값은와 0.0000000000000000000000000001 1E-28) (+ + /-0이 아닌 가장 작은 값입니다.  

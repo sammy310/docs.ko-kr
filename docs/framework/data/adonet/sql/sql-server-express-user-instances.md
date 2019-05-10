@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: b456549daefa0fdf67524b0b039a091652cf41ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb9b61f0c0b787a2de0a39a0d47c5767acad9cc5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876280"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645888"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express 사용자 인스턴스
 Microsoft SQL Server Express Edition(SQL Server Express)은 .NET Framework Data Provider for SQL Server(`SqlClient`)를 사용하는 경우에만 사용 가능한 기능인 사용자 인스턴스를 지원합니다. 사용자 인스턴스는 부모 인스턴스에서 생성된 별도의 SQL Server Express 데이터베이스 엔진 인스턴스입니다. 로컬 컴퓨터에서 관리자가 아닌 사용자는 사용자 인스턴스를 사용하여 SQL Server Express 데이터베이스에 연결할 수 있습니다. 각 인스턴스는 사용자당 하나의 인스턴스를 기준으로 개인 사용자의 보안 컨텍스트 내에서 실행됩니다.  
@@ -41,15 +41,15 @@ sp_configure 'user instances enabled','0'
   
  아래 표시된 샘플 연결 문자열을 참조하세요.  
   
--   `Data Source` 키워드는 사용자 인스턴스를 생성하는 SQL Server Express의 부모 인스턴스를 참조합니다. 기본 인스턴스는 .\sqlexpress입니다.  
+- `Data Source` 키워드는 사용자 인스턴스를 생성하는 SQL Server Express의 부모 인스턴스를 참조합니다. 기본 인스턴스는 .\sqlexpress입니다.  
   
--   `Integrated Security`이 `true`로 설정됩니다. 사용자 인스턴스에 연결하려면 Windows 인증이 필요합니다. SQL Server 로그인은 지원되지 않습니다.  
+- `Integrated Security`이 `true`로 설정됩니다. 사용자 인스턴스에 연결하려면 Windows 인증이 필요합니다. SQL Server 로그인은 지원되지 않습니다.  
   
--   `User Instance`가 `true`로 설정되면 사용자 인스턴스를 호출합니다. 기본값은 `false`입니다.  
+- `User Instance`가 `true`로 설정되면 사용자 인스턴스를 호출합니다. 기본값은 `false`입니다.  
   
--   `AttachDbFileName` 연결 문자열 키워드를 사용하여 전체 경로 이름을 포함하는 기본 데이터베이스 파일(.mdf)에 연결할 수 있습니다. `AttachDbFileName`은 또한 <xref:System.Data.SqlClient.SqlConnection> 연결 문자열 내의 "확장 속성" 및 "초기 파일 이름" 키에 해당합니다.  
+- `AttachDbFileName` 연결 문자열 키워드를 사용하여 전체 경로 이름을 포함하는 기본 데이터베이스 파일(.mdf)에 연결할 수 있습니다. `AttachDbFileName`은 또한 <xref:System.Data.SqlClient.SqlConnection> 연결 문자열 내의 "확장 속성" 및 "초기 파일 이름" 키에 해당합니다.  
   
--   파이프 기호 안에 포함된 `|DataDirectory|` 대체 문자열은 연결을 여는 응용 프로그램의 데이터 디렉터리를 참조하며 .mdf 및 .ldf 데이터베이스 및 로그 파일의 위치를 나타내는 상대 경로를 제공합니다. 이러한 파일의 위치를 찾으려면 파일에 대한 전체 경로를 제공해야 합니다.  
+- 파이프 기호 안에 포함된 `|DataDirectory|` 대체 문자열은 연결을 여는 응용 프로그램의 데이터 디렉터리를 참조하며 .mdf 및 .ldf 데이터베이스 및 로그 파일의 위치를 나타내는 상대 경로를 제공합니다. 이러한 파일의 위치를 찾으려면 파일에 대한 전체 경로를 제공해야 합니다.  
   
 ```  
 Data Source=.\\SQLExpress;Integrated Security=true;  
@@ -144,11 +144,11 @@ private static void OpenSqlConnection()
   
  사용자 인스턴스 시나리오에는 다음과 같은 경우가 포함됩니다.  
   
--   공유 데이터가 필요하지 않은 단일 사용자 응용 프로그램.  
+- 공유 데이터가 필요하지 않은 단일 사용자 응용 프로그램.  
   
--   ClickOnce 배포. .NET Framework 2.0 이상 및 SQL Server Express가 이미 대상 컴퓨터에 설치되어 있는 경우, ClickOnce 동작의 결과로 다운로드된 설치 패키지를 관리자가 아닌 사용자가 설치하여 사용할 수 있습니다. SQL Server Express가 설치의 일부인 경우 관리자는 SQL Server Express를 설치해야 합니다. 자세한 내용은 [Windows Forms에 대 한 ClickOnce 배포](../../../winforms/clickonce-deployment-for-windows-forms.md)합니다.
+- ClickOnce 배포. .NET Framework 2.0 이상 및 SQL Server Express가 이미 대상 컴퓨터에 설치되어 있는 경우, ClickOnce 동작의 결과로 다운로드된 설치 패키지를 관리자가 아닌 사용자가 설치하여 사용할 수 있습니다. SQL Server Express가 설치의 일부인 경우 관리자는 SQL Server Express를 설치해야 합니다. 자세한 내용은 [Windows Forms에 대 한 ClickOnce 배포](../../../winforms/clickonce-deployment-for-windows-forms.md)합니다.
   
--   Windows 인증을 사용하는 전용 ASP.NET 호스팅. 단일 SQL Server Express 인스턴스를 인트라넷에 호스트할 수 있습니다. 응용 프로그램에서는 가장이 아닌 ASPNET Windows 계정을 사용하여 연결합니다. 모든 응용 프로그램이 동일한 사용자 인스턴스를 공유하여 각 사용자에 대해 격리되지 않는 타사 또는 공유 호스팅 시나리오에서는 사용자 인스턴스를 사용하면 안 됩니다.  
+- Windows 인증을 사용하는 전용 ASP.NET 호스팅. 단일 SQL Server Express 인스턴스를 인트라넷에 호스트할 수 있습니다. 응용 프로그램에서는 가장이 아닌 ASPNET Windows 계정을 사용하여 연결합니다. 모든 응용 프로그램이 동일한 사용자 인스턴스를 공유하여 각 사용자에 대해 격리되지 않는 타사 또는 공유 호스팅 시나리오에서는 사용자 인스턴스를 사용하면 안 됩니다.  
   
 ## <a name="see-also"></a>참고자료
 

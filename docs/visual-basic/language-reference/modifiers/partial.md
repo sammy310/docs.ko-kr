@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-ms.openlocfilehash: 0f74935d58d47e65b5eb614abc86a3fc9c8e6c42
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: da5679c3e69a938e9735922bcf4f912428024610
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920616"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642777"
 ---
 # <a name="partial-visual-basic"></a>Partial(Visual Basic)
 형식 선언이 해당 형식에 대한 부분 정의임을 나타냅니다.  
@@ -68,15 +68,15 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 ## <a name="best-practices"></a>모범 사례  
   
--   일반적인 상황에서는 단일 형식의 개발을 두 개 이상의 선언으로 분할해서는 안 됩니다. 따라서 대부분의 경우 `Partial` 키워드가 필요 없습니다.  
+- 일반적인 상황에서는 단일 형식의 개발을 두 개 이상의 선언으로 분할해서는 안 됩니다. 따라서 대부분의 경우 `Partial` 키워드가 필요 없습니다.  
   
--   가독성을 위해, 형식에 대한 모든 partial 선언에는 `Partial` 키워드를 포함해야 합니다. 컴파일러는 최대 하나의 partial 선언에서 이 키워드가 생략되는 것을 허용합니다. 두 개 이상의 partial 선언에서 이를 생략하는 경우 컴파일러에서 오류를 알립니다.  
+- 가독성을 위해, 형식에 대한 모든 partial 선언에는 `Partial` 키워드를 포함해야 합니다. 컴파일러는 최대 하나의 partial 선언에서 이 키워드가 생략되는 것을 허용합니다. 두 개 이상의 partial 선언에서 이를 생략하는 경우 컴파일러에서 오류를 알립니다.  
   
 ## <a name="behavior"></a>동작  
   
--   **선언의 합집합입니다.** 컴파일러는 이 형식을 모든 partial 선언의 공용 구조체로 처리합니다. 모든 부분 정의의 모든 한정자는 전체 형식에 적용되며, 모든 부분 정의의 모든 멤버를 전체 형식에 사용할 수 있습니다.  
+- **선언의 합집합입니다.** 컴파일러는 이 형식을 모든 partial 선언의 공용 구조체로 처리합니다. 모든 부분 정의의 모든 한정자는 전체 형식에 적용되며, 모든 부분 정의의 모든 멤버를 전체 형식에 사용할 수 있습니다.  
   
--   **형식 승격 부분 형식 모듈에 대 한 허용 되지 않습니다.** 모듈 내부에 부분 정의가 있는 경우 해당 형식의 형식 승격은 자동으로 무효화됩니다. 이러한 경우 일련의 부분 정의로 인해 예기치 않은 결과뿐만 아니라 컴파일러 오류도 발생할 수 있습니다. 자세한 내용은 [형식 승격](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)합니다.  
+- **형식 승격 부분 형식 모듈에 대 한 허용 되지 않습니다.** 모듈 내부에 부분 정의가 있는 경우 해당 형식의 형식 승격은 자동으로 무효화됩니다. 이러한 경우 일련의 부분 정의로 인해 예기치 않은 결과뿐만 아니라 컴파일러 오류도 발생할 수 있습니다. 자세한 내용은 [형식 승격](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)합니다.  
   
      컴파일러는 정규화된 경로가 동일한 경우에만 부분 정의를 병합합니다.  
   

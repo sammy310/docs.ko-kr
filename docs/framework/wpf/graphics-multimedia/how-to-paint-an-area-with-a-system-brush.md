@@ -6,31 +6,31 @@ helpviewer_keywords:
 - painting [WPF], with system brushes
 - brushes [WPF], painting with system brushes [WPF]
 ms.assetid: 5141a763-9235-42cb-a6bb-afc75513eac7
-ms.openlocfilehash: e713903e2cfbb63cb64ceb94621317f9e76dea70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26511c577bf06b016dfc69cedc7fce2bafb35f32
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921721"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645372"
 ---
 # <a name="how-to-paint-an-area-with-a-system-brush"></a>방법: 시스템 브러시로 영역 칠하기
 합니다 <xref:System.Windows.SystemColors> 클래스와 같은 시스템 브러시 및 색에 대 한 액세스를 제공 합니다 <xref:System.Windows.SystemColors.ControlBrush%2A>를 <xref:System.Windows.SystemColors.ControlBrushKey%2A>, 및 <xref:System.Windows.SystemColors.DesktopBrush%2A>합니다. 시스템 브러시는는 <xref:System.Windows.Media.SolidColorBrush> 개체는 지정된 된 시스템 색으로 영역을 그립니다. 시스템 브러시는 항상 단색을 생성하므로 그라데이션을 만드는 데는 사용할 수 없습니다.  
   
  시스템 브러시는 정적 또는 동적 리소스로 사용할 수 있습니다. 사용자 애플리케이션이 실행될 때 사용자가 시스템 브러시를 변경하는 경우 브러시가 자동으로 업데이트되게 하려면 동적 리소스를 사용하고, 그렇지 않으면 정적 리소스를 사용합니다. SystemColors 클래스는 엄격한 명명 규칙을 따르는 다양한 정적 속성을 포함합니다.  
   
--   *\<SystemColor>* Brush  
+- *\<SystemColor>* Brush  
   
      정적 참조를 가져옵니다는 <xref:System.Windows.Media.SolidColorBrush> 지정된 된 시스템 색입니다.  
   
--   *\<SystemColor>* BrushKey  
+- *\<SystemColor>* BrushKey  
   
      동적 참조를 가져옵니다는 <xref:System.Windows.Media.SolidColorBrush> 지정된 된 시스템 색입니다.  
   
--   *\<SystemColor>* Color  
+- *\<SystemColor>* Color  
   
      정적 참조를 가져옵니다는 <xref:System.Windows.Media.Color> 지정된 된 시스템 색의 구조입니다.  
   
--   *\<SystemColor>* ColorKey  
+- *\<SystemColor>* ColorKey  
   
      동적 참조를 가져옵니다는 <xref:System.Windows.Media.Color> 지정된 된 시스템 색의 구조입니다.  
   

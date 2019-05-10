@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 745742df-0eda-479b-83f8-29bd8a80db96
-ms.openlocfilehash: e1f7a7da1ab2ce0ad7d7908ecd1f896d229b8e1a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: adf854429f2b13fd2421252a6281ad96d9d88500
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037910"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655562"
 ---
 # <a name="formulate-projections"></a>프로젝션 작성
 다음 예제에서는 표시 하는 방법을 `select` 문에서 C# 하 고 `Select` Visual Basic의 문 쿼리 프로젝션 구성 하는 기타 기능을 사용 하 여 결합할 수 있습니다.  

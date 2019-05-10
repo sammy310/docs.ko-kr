@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
-ms.openlocfilehash: 3027be6ee4ed3664b81c661b6a086a3604573833
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c7fb92c963ea7fa4129cddf060fe7c0b0261fc7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802611"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665150"
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>식이 값이므로 할당 대상일 수 없습니다.
 문에서 식에 값을 할당 하려고 합니다. 런타임 시 쓰기 가능한 변수, 속성 또는 배열 요소에만 값을 할당할 수 있습니다. 다음 예제에서는이 오류는 발생 하는 방법을 보여 줍니다.  
@@ -49,13 +49,13 @@ exitButton.Location = exitLocation
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   문 값 식에 할당 하는 경우 쓰기 가능한 단일 변수, 속성 또는 배열 요소를 사용 하 여 식을 대체 합니다.  
+- 문 값 식에 할당 하는 경우 쓰기 가능한 단일 변수, 속성 또는 배열 요소를 사용 하 여 식을 대체 합니다.  
   
--   문이 값 형식 (일반적으로 구조)를 통해 간접적으로 액세스 하는 경우 값 형식을 저장할 변수를 만듭니다.  
+- 문이 값 형식 (일반적으로 구조)를 통해 간접적으로 액세스 하는 경우 값 형식을 저장할 변수를 만듭니다.  
   
--   변수에 적절 한 구조 (또는 다른 값 형식)를 할당 합니다.  
+- 변수에 적절 한 구조 (또는 다른 값 형식)를 할당 합니다.  
   
--   값을 할당 하는 속성에 액세스 하려면 변수를 사용 합니다.  
+- 값을 할당 하는 속성에 액세스 하려면 변수를 사용 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

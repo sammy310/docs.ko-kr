@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-ms.openlocfilehash: e34f2033ec0f7dac784634d06712d65786503299
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 548594379f95952c79363759b8570cf5e2709cff
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991265"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64643555"
 ---
 # <a name="queues-overview"></a>큐 개요
 이 단원에서는 큐를 사용하는 통신의 일반 개념과 핵심 개념을 소개합니다. 다음 섹션에서는 여기에 설명 된 큐 개념 Windows Communication Foundation (WCF)를 명시 되는 방법에 대 한 세부 정보로 이동 합니다.  

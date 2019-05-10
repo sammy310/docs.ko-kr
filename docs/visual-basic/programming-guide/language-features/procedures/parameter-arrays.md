@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], indefinite number of argument values
 - arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
-ms.openlocfilehash: 8ea4c77056701b8f61c1ed5a53cf20d98ae913bc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 372d5fdd2702d6f85f784ee5addea91abe46d3bd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791953"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639006"
 ---
 # <a name="parameter-arrays-visual-basic"></a>매개 변수 배열(Visual Basic)
 일반적으로 프로시저 선언에 지정 하는 보다 많은 인수를 사용 하 여 프로시저를 호출할 수 없습니다. 불특정 개수의 인수를 해야 하는 경우 선언 수를 *매개 변수 배열*, 프로시저 매개 변수에 대해 값의 배열에 적용할 수 있습니다. 프로시저를 정의 하는 경우 매개 변수 배열의 요소 수를 알 필요가 없습니다. 배열 크기는 개별적으로 각 프로시저를 호출 하 여 결정 됩니다.  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 1527e3b4b614d4e700ae0c2c0fc555e14c7bc8d2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 22db347afb45b981602d5a92516271f75b8e4359
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876735"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648675"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>연습: 저장 프로시저만 사용(Visual Basic)
 이 연습에서는 저장 프로시저만 사용하여 데이터에 액세스하기 위한 기본 종단 간 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 시나리오를 제공합니다. 일반적으로 데이터베이스 관리자는 데이터 저장소에 액세스하는 방법을 제한하기 위해 이 방법을 사용합니다.  
@@ -28,13 +28,13 @@ ms.locfileid: "61876735"
 ## <a name="prerequisites"></a>전제 조건  
  이 연습에서는 다음 사항이 필요합니다.  
   
--   이 연습에서는 파일을 보유하기 위해 전용 폴더("c:\linqtest3")가 사용됩니다. 연습을 시작하기 전에 먼저 이 폴더를 만듭니다.  
+- 이 연습에서는 파일을 보유하기 위해 전용 폴더("c:\linqtest3")가 사용됩니다. 연습을 시작하기 전에 먼저 이 폴더를 만듭니다.  
   
--   Northwind 샘플 데이터베이스  
+- Northwind 샘플 데이터베이스  
   
      이 데이터베이스가 개발 컴퓨터에 없는 경우 Microsoft 다운로드 사이트에서 다운로드할 수 있습니다. 자세한 내용은 [샘플 데이터베이스 다운로드](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)합니다. 이 데이터베이스를 다운로드한 후 northwnd.mdf 파일을 c:\linqtest3 폴더에 복사합니다.  
   
--   Northwind 데이터베이스에서 생성된 Visual Basic 코드 파일  
+- Northwind 데이터베이스에서 생성된 Visual Basic 코드 파일  
   
      이 연습은 다음 명령줄을 사용하여 SqlMetal 도구를 통해 작성했습니다.  
   
@@ -45,17 +45,17 @@ ms.locfileid: "61876735"
 ## <a name="overview"></a>개요  
  이 연습은 다음과 같은 여섯 가지 주요 작업으로 구성됩니다.  
   
--   설정 된 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio에서 솔루션입니다.  
+- 설정 된 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio에서 솔루션입니다.  
   
--   System.Data.Linq 어셈블리를 프로젝트에 추가  
+- System.Data.Linq 어셈블리를 프로젝트에 추가  
   
--   데이터베이스 코드 파일을 프로젝트에 추가  
+- 데이터베이스 코드 파일을 프로젝트에 추가  
   
--   데이터베이스 연결 만들기  
+- 데이터베이스 연결 만들기  
   
--   사용자 인터페이스 설정  
+- 사용자 인터페이스 설정  
   
--   응용 프로그램 실행 및 테스트  
+- 응용 프로그램 실행 및 테스트  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>LINQ to SQL 솔루션 만들기  
  빌드 및 실행에 필요한 참조를 포함 하는 Visual Studio 솔루션을 만든이 첫 번째 태스크는 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 프로젝트입니다.  

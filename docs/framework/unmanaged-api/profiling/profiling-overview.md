@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 598722c44d8d20adab9ce7d624edb820f67c0fa4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 889a9b74bf0b2f2ef029dd622c7ddbbd9b844fa0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757557"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651183"
 ---
 # <a name="profiling-overview"></a>프로파일링 개요
 <a name="top"></a> 프로파일러는 다른 응용 프로그램의 실행을 모니터링 하는 도구입니다. CLR(공용 언어 런타임) 프로파일러는 프로 파일링 API를 사용하여 CLR에서 메시지를 받고 보내는 함수로 구성된 DLL(동적 연결 라이브러리)입니다. 프로파일러 DLL은 런타임에 CLR에 의해 로드됩니다.  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - String literals [Visual Basic]
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
-ms.openlocfilehash: 3e87dc6527b4351467b1155439ee8266157c16ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 11c4f119360af386fa2c5609ea7815b9ae7a64f3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971719"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64646998"
 ---
 # <a name="string-data-type-visual-basic"></a>String 데이터 형식(Visual Basic)
 0에서 65535 사이의 값의 부호 없는 16 비트 (2 바이트) 코드 포인트 순서 범위를 가집니다. 각 *코드 포인트*, 또는 문자 코드를 단일 유니코드 문자를 나타냅니다. 0에서 약 두 십억 문자열을 포함할 수 있습니다 (2 ^31) 유니코드 문자입니다.  

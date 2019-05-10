@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c0e6cf23-63ac-47dd-bfe9-d5bdca826fac
-ms.openlocfilehash: f152146e7483c6b3c162fd81f20f359e6c82123a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ee63b6df4f99415e5d36f0717ff325d9fbabd9e3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614962"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641603"
 ---
 # <a name="query-execution"></a>쿼리 실행
 LINQ 쿼리가 사용자에 의해 작성되고 나면 명령 트리로 변환됩니다. 명령 트리란 Entity Framework에 호환되는 쿼리 표현입니다. 변환된 명령 트리는 데이터 소스에 대해 실행됩니다. 쿼리 실행 시 모든 쿼리 식, 다시 말해서 쿼리의 모든 구성 요소가 계산되며 여기에는 결과 구체화에서 사용되는 식도 포함됩니다.  

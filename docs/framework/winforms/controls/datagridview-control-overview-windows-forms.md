@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to DataGridView control
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 0a45c661-89dc-4390-9cc6-c47eee501488
-ms.openlocfilehash: 095c89fd305b1eeb73e2919760abe48e848c6aa0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4db2a8b0e30a6bb3db0c5c629d868bc01dc15a8c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902319"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648077"
 ---
 # <a name="datagridview-control-overview-windows-forms"></a>DataGridView 컨트롤 개요(Windows Forms)
 > [!NOTE]
@@ -36,13 +36,13 @@ ms.locfileid: "61902319"
   
  <xref:System.Windows.Forms.DataGridView> 컨트롤은 표준 Windows Forms 데이터 바인딩 모델을 지원 하므로 다음 목록에 설명 된 클래스의 인스턴스에 바인딩합니다.  
   
--   구현 하는 클래스는 <xref:System.Collections.IList> 인터페이스를 1 차원 배열을 포함 합니다.  
+- 구현 하는 클래스는 <xref:System.Collections.IList> 인터페이스를 1 차원 배열을 포함 합니다.  
   
--   구현 하는 클래스를 <xref:System.ComponentModel.IListSource> 와 같은 인터페이스를 <xref:System.Data.DataTable> 및 <xref:System.Data.DataSet> 클래스입니다.  
+- 구현 하는 클래스를 <xref:System.ComponentModel.IListSource> 와 같은 인터페이스를 <xref:System.Data.DataTable> 및 <xref:System.Data.DataSet> 클래스입니다.  
   
--   구현 하는 클래스를 <xref:System.ComponentModel.IBindingList> 와 같은 인터페이스를 <xref:System.ComponentModel.BindingList%601> 클래스입니다.  
+- 구현 하는 클래스를 <xref:System.ComponentModel.IBindingList> 와 같은 인터페이스를 <xref:System.ComponentModel.BindingList%601> 클래스입니다.  
   
--   구현 하는 클래스를 <xref:System.ComponentModel.IBindingListView> 와 같은 인터페이스를 <xref:System.Windows.Forms.BindingSource> 클래스입니다.  
+- 구현 하는 클래스를 <xref:System.ComponentModel.IBindingListView> 와 같은 인터페이스를 <xref:System.Windows.Forms.BindingSource> 클래스입니다.  
   
  합니다 <xref:System.Windows.Forms.DataGridView> 컨트롤에는 이러한 인터페이스에서 반환한 개체의 공용 속성 또는 속성 컬렉션에서 반환 된 데이터 바인딩을 지 원하는 <xref:System.ComponentModel.ICustomTypeDescriptor> 인터페이스 반환된 된 개체에 구현 된 경우.  
   

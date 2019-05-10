@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: fc7b86f3f2c2c6276681c324dbe9a390fdfdafd4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fc0bfec95e625c1433636fbe5e0fdb6cc1112b14
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791458"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645153"
 ---
 # <a name="using-sessions"></a>세션 사용
 Windows Communication Foundation (WCF) 응용 프로그램에는 *세션* 메시지 그룹을 대화에 연결 합니다. WCF 세션에서 사용할 수 있는 세션 개체에 다릅니다. [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 응용 프로그램을 다른 동작을 지원 하 고 다양 한 방법으로 제어 됩니다. 세션 WCF에서 사용 하도록 설정 하는 기능에 설명 응용 프로그램 및 사용 하는 방법입니다.  

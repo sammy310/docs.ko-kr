@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic, code hiding
 - Visual Basic code, collapsing and hiding
 ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
-ms.openlocfilehash: bf2a7188456097ac227039e4d902a14eb182664c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 367527fd638f6855077caf8ff5911edb333dfcbf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758277"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648774"
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>방법: (Visual Basic) 코드 섹션 축소 및 숨기기
 `#Region` 지시문을 사용 하면 Visual Basic 파일에서 코드 섹션 축소 및 숨기기 수 있습니다. `#Region` 지시문을 사용 하면 Visual Studio 코드 편집기를 사용 하는 경우 축소 또는 확장할 수 있는 코드 블록을 지정할 수 있습니다. 코드를 선택적으로 숨길 수 있습니다 파일을 보다 관리 가능 하 고 쉽게 읽을 수 있습니다. 자세한 내용은 [개요](/visualstudio/ide/outlining)를 참조하세요.  

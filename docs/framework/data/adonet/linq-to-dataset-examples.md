@@ -2,12 +2,12 @@
 title: LINQ to DataSet 예제
 ms.date: 03/30/2017
 ms.assetid: dfd91658-8d8a-45a4-a356-e327e809f21d
-ms.openlocfilehash: 07ad4a993187c91babb74fae9d05f17b66c2098b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 484b4fcf39ef70fd0ec23c86b320d7f57f4f3eb5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033945"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645939"
 ---
 # <a name="linq-to-dataset-examples"></a>LINQ to DataSet 예제
 이 섹션에서는 표준 쿼리 연산자를 사용 하는 데이터 집합 프로그래밍 예제를 LINQ를 제공 합니다. <xref:System.Data.DataSet> 이러한 예제에 사용를 사용 하 여 채워집니다 합니다 `FillDataSet` 에 설명 된 메서드를 [로드 데이터에는 데이터 집합](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)합니다. 자세한 내용은 [표준 쿼리 연산자 개요 (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) 하거나 [표준 쿼리 연산자 개요 (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)합니다.  

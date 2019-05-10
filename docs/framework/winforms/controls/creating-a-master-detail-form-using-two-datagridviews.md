@@ -10,12 +10,12 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], displaying on Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: c5fa29e8-47f7-4691-829b-0e697a691f36
-ms.openlocfilehash: a887dacfcb83b4b6ea4cb2690ab09b0d1b20b4fa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 774151efb136207a1c4f7a2f8f812bbbaefbf9e1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772894"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648216"
 ---
 # <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>연습: 두 개의 Windows Forms DataGridView 컨트롤을 사용하여 마스터/세부 양식 만들기
 사용에 대 한 가장 일반적인 시나리오 중 하나를 <xref:System.Windows.Forms.DataGridView> 컨트롤은 합니다 *마스터/세부 정보* 두 데이터베이스 테이블 간의 부모/자식 관계를 표시 되는 폼입니다. 마스터 테이블에서 행을 선택 하면 해당 자식 데이터를 사용 하 여 업데이트 세부 정보 테이블.  

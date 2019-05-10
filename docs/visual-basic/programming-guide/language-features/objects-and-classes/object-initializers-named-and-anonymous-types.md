@@ -10,12 +10,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: 6602a68555e37bf793ba41076ba8f484b4a0dbc3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: bf608ebb36a2e8f29e8429b77e023eced67273e1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760755"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649767"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>개체 이니셜라이저: 명명 된 형식과 익명 형식 (Visual Basic)
 개체 이니셜라이저를 사용 하는 단일 식을 사용 하 여 복잡 한 개체에 대 한 속성을 지정할 수 있습니다. 명명 된 형식 및 무명 형식의 인스턴스를 만드는 데 사용할 수 있습니다.  

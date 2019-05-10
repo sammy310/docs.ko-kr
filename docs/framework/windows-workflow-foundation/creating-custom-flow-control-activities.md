@@ -2,12 +2,12 @@
 title: 사용자 지정 흐름 제어 작업 만들기
 ms.date: 03/30/2017
 ms.assetid: 27f409f6-2d1d-4cfb-9765-93eb2ad667d5
-ms.openlocfilehash: 2be47281335066def5c1d267cd709db5a8ff1187
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f457e6f8cefd7183ca20cb449adf1ac15d7bde79
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774064"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647140"
 ---
 # <a name="creating-custom-flow-control-activities"></a>사용자 지정 흐름 제어 작업 만들기
 다양 한 프로그래밍 구조를 추상화 하는 비슷하게 작동 하는 흐름 제어 활동을 포함 하는.NET Framework (같은 <xref:System.Activities.Statements.Flowchart>) 또는 표준 프로그래밍 문 (같은 <xref:System.Activities.Statements.If>). 이 항목에서는 샘플 프로젝트 중 하나의 아키텍처를 설명 [제네릭이 아닌 ForEach](./samples/non-generic-foreach.md)합니다.  

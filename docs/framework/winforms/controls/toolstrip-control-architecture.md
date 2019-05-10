@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
-ms.openlocfilehash: 91813928344f9210ce1383daa9ba7f765117833a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e02b9daa40a5f8a2f8bfd8874d006550628a70b3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009619"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654717"
 ---
 # <a name="toolstrip-control-architecture"></a>ToolStrip 컨트롤 아키텍처
 합니다 <xref:System.Windows.Forms.ToolStrip> 고 <xref:System.Windows.Forms.ToolStripItem> 클래스 도구 모음, 상태 및 메뉴 항목을 표시 하기 위한 유연 하 고 확장 가능한 시스템을 제공 합니다. 이러한 클래스에 포함 된 모든 합니다 <xref:System.Windows.Forms> 네임 스페이스 및 이러한 모든 이름은 일반적으로 "ToolStrip" 접두사를 사용 하 여 (같은 <xref:System.Windows.Forms.ToolStripOverflow>) 또는 "제거" 접미사를 사용 하 여 (같은 <xref:System.Windows.Forms.MenuStrip>).  
@@ -364,13 +364,13 @@ ms.locfileid: "62009619"
 ## <a name="accessory-classes"></a>액세서리 클래스  
  기타 다양 한 기능을 제공 하는 클래스는 다음과 같습니다.  
   
-- <xref:System.Windows.Forms.ToolStripManager> 지원 <xref:System.Windows.Forms.ToolStrip>-관련 병합, 설정 및 렌더러 옵션 등의 전체 응용 프로그램에 대 한 작업입니다.  
+- <xref:System.Windows.Forms.ToolStripManager> 지원 <xref:System.Windows.Forms.ToolStrip>-관련 병합, 설정 및 렌더러 옵션 등의 전체 애플리케이션에 대 한 작업입니다.  
   
 - <xref:System.Windows.Forms.ToolStripRenderer> 특정 스타일 또는 테마를 적용할 수 있습니다는 <xref:System.Windows.Forms.ToolStrip> 쉽게 합니다.  
   
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 펜과 대체할 수 있는 색 테이블을 기반으로 하는 브러시를 만듭니다 (<xref:System.Windows.Forms.ProfessionalColorTable>).  
   
-- <xref:System.Windows.Forms.ToolStripSystemRenderer> 시스템 색과 평면 비주얼 스타일을 적용 <xref:System.Windows.Forms.ToolStrip> 응용 프로그램입니다.  
+- <xref:System.Windows.Forms.ToolStripSystemRenderer> 시스템 색과 평면 비주얼 스타일을 적용 <xref:System.Windows.Forms.ToolStrip> 애플리케이션입니다.  
   
 - <xref:System.Windows.Forms.ToolStripContainer> 비슷합니다 <xref:System.Windows.Forms.SplitContainer>합니다. 도킹 된 쪽 패널 네 개 사용 하 여 (인스턴스의 <xref:System.Windows.Forms.ToolStripPanel>) 및 중앙 패널이 하나 (인스턴스의 <xref:System.Windows.Forms.ToolStripContentPanel>) 일반적인 배열을 만드는 데 있습니다. 왼쪽 패널에 제거할 수 없지만 숨길 수 있습니다. 제거 아니고 중앙 패널을 숨길 수 있습니다. 하나 이상의 정렬할 수 있습니다 <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, 또는 <xref:System.Windows.Forms.StatusStrip> 측면 패널에서 컨트롤 다른 컨트롤에 대 한 중앙 패널을 사용할 수 있습니다. <xref:System.Windows.Forms.ToolStripContentPanel> 또한 일관 된 모양을 위해 폼의 본문으로 렌더러 지원을 받는 방법을 제공 합니다. <xref:System.Windows.Forms.ToolStripContainer> 다중 문서 인터페이스 MDI ()를 지원 하지 않습니다.  
   

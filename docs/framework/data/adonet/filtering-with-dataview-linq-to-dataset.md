@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
-ms.openlocfilehash: 41e099cdca4f02231fd4b1cc8bce2c4b1e511c71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b41b95ba06f031dc45c0267432d0d6afb7f3a7d9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878828"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645685"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>DataView로 필터링(LINQ to DataSet)
 특정 조건을 사용하여 데이터를 필터링한 다음 UI 컨트롤을 통해 클라이언트에 데이터를 제공하는 기능은 데이터 바인딩의 중요한 기능입니다. <xref:System.Data.DataView>에서는 데이터를 필터링하여 특정 필터 조건을 충족하는 데이터 행의 하위 집합을 반환하는 여러 가지 방법을 제공합니다. 문자열 기반 하는 것 외에도 필터링 기능도 <xref:System.Data.DataView> 사용 하는 기능도 제공 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 식을 필터링 조건에 대 한 합니다. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 식은 문자열 기반 필터링에 비해 훨씬 더 복잡 하 고 강력한 필터링 작업을 허용 합니다.  
   
  <xref:System.Data.DataView>를 사용하여 데이터를 필터링하는 방법에는 두 가지가 있습니다.  
   
--   Where 절이 있는 <xref:System.Data.DataView> 쿼리에서 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]를 만듭니다.  
+- Where 절이 있는 <xref:System.Data.DataView> 쿼리에서 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]를 만듭니다.  
   
--   <xref:System.Data.DataView>의 기존 문자열 기반 필터링 기능을 사용합니다.  
+- <xref:System.Data.DataView>의 기존 문자열 기반 필터링 기능을 사용합니다.  
   
 ## <a name="creating-dataview-from-a-query-with-filtering-information"></a>필터링 정보가 있는 쿼리에서 DataView 만들기  
  <xref:System.Data.DataView> 개체는 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리에서 만들 수 있습니다. 해당 쿼리에 `Where` 절이 있으면 쿼리의 필터링 정보를 사용하여 <xref:System.Data.DataView>를 만듭니다. `Where` 절의 식은 <xref:System.Data.DataView>에 포함되는 데이터 행을 확인하는 데 사용되며 필터의 기본 요소입니다.  
@@ -76,9 +76,9 @@ ms.locfileid: "61878828"
 ## <a name="clearing-the-filter"></a>필터 지우기  
  필터링이 설정된 후 <xref:System.Data.DataView> 속성을 사용하여 <xref:System.Data.DataView.RowFilter%2A>의 필터를 지울 수 있습니다. <xref:System.Data.DataView>의 필터는 두 가지 방법으로 지울 수 있습니다.  
   
--   <xref:System.Data.DataView.RowFilter%2A> 속성을 `null`으로 설정합니다.  
+- <xref:System.Data.DataView.RowFilter%2A> 속성을 `null`으로 설정합니다.  
   
--   <xref:System.Data.DataView.RowFilter%2A> 속성을 빈 문자열로 설정합니다.  
+- <xref:System.Data.DataView.RowFilter%2A> 속성을 빈 문자열로 설정합니다.  
   
 ### <a name="example"></a>예제  
  다음 예제에서는 쿼리에서 <xref:System.Data.DataView>를 만든 다음 <xref:System.Data.DataView.RowFilter%2A> 속성을 `null`로 설정하여 필터를 지웁니다.  
