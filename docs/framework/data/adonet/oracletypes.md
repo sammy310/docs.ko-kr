@@ -2,12 +2,12 @@
 title: OracleType
 ms.date: 03/30/2017
 ms.assetid: 18143304-d5c7-4c95-9995-678088d0c142
-ms.openlocfilehash: 3762fdaee1312a7cb008386bb1f6b7bf7cb4316e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb45bc5b7bc317d04f5275afadbb1879117e3af0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878425"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586950"
 ---
 # <a name="oracletypes"></a>OracleType
 .NET Framework Data Provider for Oracle에는 Oracle 데이터 형식으로 작업하는 데 사용할 수 있는 여러 가지 구조가 들어 있습니다. 여기에는 <xref:System.Data.OracleClient.OracleNumber> 및 <xref:System.Data.OracleClient.OracleString>이 포함됩니다.  
@@ -17,9 +17,9 @@ ms.locfileid: "61878425"
   
  다음은 C# 예제입니다.  
   
--   Oracle 테이블을 만들고 데이터와 함께 로드합니다.  
+- Oracle 테이블을 만들고 데이터와 함께 로드합니다.  
   
--   <xref:System.Data.OracleClient.OracleDataReader>를 사용하여 데이터에 액세스하고 여러 가지 <xref:System.Data.OracleClient.OracleType> 구조를 사용하여 데이터를 표시합니다.  
+- <xref:System.Data.OracleClient.OracleDataReader>를 사용하여 데이터에 액세스하고 여러 가지 <xref:System.Data.OracleClient.OracleType> 구조를 사용하여 데이터를 표시합니다.  
   
 ## <a name="creating-an-oracle-table"></a>Oracle 테이블 만들기  
  이 예제에서는 Oracle 테이블을 만들고 데이터와 함께 로드합니다. 반드시 이 예제를 실행한 후 다음 예제를 실행해야 합니다.  

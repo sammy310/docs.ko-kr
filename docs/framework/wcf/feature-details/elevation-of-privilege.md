@@ -5,12 +5,12 @@ helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-ms.openlocfilehash: fd5829d2dbb1853bf65f1f6e402b918137bd59e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e42e2726b54464d479398c023c3e7caecf9b054
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856408"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753043"
 ---
 # <a name="elevation-of-privilege"></a>권한 높이기
 *권한 상승* 결과에서 공격자가 권한 부여 이상의 처음 부여 된 권한을 제공 합니다. 예를 들어 "읽기 전용" 권한의 권한 집합을 갖는 공격자는 권한 집합이 "읽기 및 쓰기"를 포함하도록 권한을 상승시킵니다.  
@@ -25,13 +25,13 @@ ms.locfileid: "61856408"
   
  클라이언트와 서버, 클라이언트의 id 간의 연결이 설정 되는 경우 변경 되지 않는 한 경우를 제외 하 고: 다음 조건을 모두 만족 하면 WCF 클라이언트를 연 후:  
   
--   (전송 보안 세션 또는 메시지 보안 세션을 사용 하 여) 보안 컨텍스트를 설정 하는 절차가 해제 됩니다 (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> 속성이 `false` 메시지 보안 또는 전송 보안을 설정할 수 없는 경우 세션은 전송 보안 사례에 사용 됩니다. HTTPS는 그러한 전송의 한 예제입니다.  
+- (전송 보안 세션 또는 메시지 보안 세션을 사용 하 여) 보안 컨텍스트를 설정 하는 절차가 해제 됩니다 (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> 속성이 `false` 메시지 보안 또는 전송 보안을 설정할 수 없는 경우 세션은 전송 보안 사례에 사용 됩니다. HTTPS는 그러한 전송의 한 예제입니다.  
   
--   Windows 인증을 사용합니다.  
+- Windows 인증을 사용합니다.  
   
--   자격 증명을 명시적으로 설정하지 않습니다.  
+- 자격 증명을 명시적으로 설정하지 않습니다.  
   
--   가장된 보안 컨텍스트에서 서비스를 호출합니다.  
+- 가장된 보안 컨텍스트에서 서비스를 호출합니다.  
   
  이러한 조건에 해당 서비스에 클라이언트를 인증 하는 데 id 변경 될 수 있습니다 (하지 것이 가장 된 id가 아니라 프로세스 id 대신) WCF 클라이언트를 열면 됩니다. 이러한 동작은 클라이언트를 서비스에 인증하는 데 사용된 Windows 자격 증명이 모든 메시지와 함께 전송되고 인증에 사용된 자격 증명을 현재 스레드의 Windows ID에서 가져오기 때문에 발생합니다. 현재 스레드의 Windows ID가 변경되면(예: 다른 호출자 가장으로 인해 변경됨) 메시지에 첨부되고 클라이언트를 서비스로 인증하는 데 사용된 자격 증명도 변경될 수 있습니다.  
   
@@ -59,13 +59,13 @@ ms.locfileid: "61856408"
   
  또한 다음 메서드 중 하나를 사용하여 사용자 지정 바인딩을 만들 때 발생합니다.  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenBindingElement%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForCertificateBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForCertificateBindingElement%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForSslBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForSslBindingElement%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenOverTransportBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenOverTransportBindingElement%2A>  
   
  이러한 문제가 발생할 가능성을 줄이려면 권한 부여 정책이 각 권한 부여 정책의 작업 및 만료 시간을 확인해야 합니다.  
   
@@ -74,11 +74,11 @@ ms.locfileid: "61856408"
   
  이러한 상황은 다음과 같은 경우에 발생할 수 있습니다.  
   
--   클라이언트가 X.509 인증서를 사용하여 메시지에 디지털 서명을 하고 X.509 인증서를 메시지에 첨부하지 않으며 해당 주체 키 식별자를 사용하여 인증서를 참조합니다.  
+- 클라이언트가 X.509 인증서를 사용하여 메시지에 디지털 서명을 하고 X.509 인증서를 메시지에 첨부하지 않으며 해당 주체 키 식별자를 사용하여 인증서를 참조합니다.  
   
--   서비스의 컴퓨터에는 공개 키가 같지만 다른 정보가 들어 있는 인증서가 두 개 이상 있습니다.  
+- 서비스의 컴퓨터에는 공개 키가 같지만 다른 정보가 들어 있는 인증서가 두 개 이상 있습니다.  
   
--   서비스에서는 주체 키 식별자와 일치하는 인증서를 검색하지만 클라이언트가 사용하려고 했던 인증서는 아닙니다. WCF 메시지를 수신 하는 서명을 확인 하는 경우 WCF는 클라이언트에서 예상 하는 결과에서 다른과 다르며 권한이 상승 된 클레임 집합에 의도 하지 않은 X.509 인증서의 정보를 매핑합니다.  
+- 서비스에서는 주체 키 식별자와 일치하는 인증서를 검색하지만 클라이언트가 사용하려고 했던 인증서는 아닙니다. WCF 메시지를 수신 하는 서명을 확인 하는 경우 WCF는 클라이언트에서 예상 하는 결과에서 다른과 다르며 권한이 상승 된 클레임 집합에 의도 하지 않은 X.509 인증서의 정보를 매핑합니다.  
   
  이 가능성을 줄이려면 <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial> 사용 등의 방식으로 X.509 인증서를 참조합니다.  
   

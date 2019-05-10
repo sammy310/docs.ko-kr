@@ -2,12 +2,12 @@
 title: 인수 BasePath는 폴더에 대한 경로여야 합니다.
 ms.date: 07/20/2015
 ms.assetid: b180ce60-ad57-41a6-a313-491d86d84cc7
-ms.openlocfilehash: 30f84bd1a903ae7c6e5e370cea3de0468091b9f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9c15e2a7135ef3453e514735f7091097eeaa96c6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61977186"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64659108"
 ---
 # <a name="argument-basepath-must-be-a-path-to-a-folder"></a>인수 BasePath는 폴더에 대한 경로여야 합니다.
 인수 `BasePath` 는 폴더의 경로로 구성되어야 합니다. 문자열을 잘못 구문 분석하고 올바른 경로로 인식되지 않는 값을 제공할 수 있습니다.  

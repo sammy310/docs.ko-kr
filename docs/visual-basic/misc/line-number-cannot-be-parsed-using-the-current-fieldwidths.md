@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_MalFormedFixedWidthLine
 ms.assetid: 84e14245-dfdf-4b62-8b84-e83a31608899
-ms.openlocfilehash: f3184f023ab4663d5616e3878420e3a75a7f3cde
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dc6253dc925ed004fbbeb64547054461c39adffc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922384"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64604156"
 ---
 # <a name="line-number-cannot-be-parsed-using-the-current-fieldwidths"></a>줄 \<수 > 현재 FieldWidths를 사용 하 여 구문 분석할 수 없습니다
 해당 필드의 너비가 지정된 것과 다르기 때문에 지정한 줄을 구문 분석할 수 없습니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   줄을 올바르게 구문 분석할 수 있도록 `FieldWidths` 를 조정하거나 줄을 처리하도록 예외 처리 코드를 삽입합니다.  
+- 줄을 올바르게 구문 분석할 수 있도록 `FieldWidths` 를 조정하거나 줄을 처리하도록 예외 처리 코드를 삽입합니다.  
   
 ## <a name="see-also"></a>참고자료
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WF [WF], guide to
 - Windows Workflow Foundation [WF], guide to
 ms.assetid: a75025be-f225-430f-90cf-98f7022db436
-ms.openlocfilehash: 1f36ca516995c625b55f771a6a49e62f2d9d6efa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7697b5ab61d4be19223dc912900595f5431109fd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773479"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753821"
 ---
 # <a name="guide-to-the-windows-workflow-documentation"></a>Windows Workflow 설명서에 대한 안내
 이 항목에서는 Windows Workflow Foundation 설명서를 사용하는 방법을 설명합니다. 구체적인 관심사와 지식 수준에 따라 그룹화된 링크 문서부터 보시는 것이 좋습니다.  

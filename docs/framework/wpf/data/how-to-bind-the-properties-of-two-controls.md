@@ -7,11 +7,11 @@ helpviewer_keywords:
 - controls [WPF], binding properties of
 ms.assetid: 06318fac-6afd-4c7d-a277-6d7ef50f47bc
 ms.openlocfilehash: 332e8e0dfa30ff7aff27c95652f07446baf6511a
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63809537"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754044"
 ---
 # <a name="how-to-bind-the-properties-of-two-controls"></a>방법: 두 가지 컨트롤의 속성 바인딩
 사용 하 여 다른의 인스턴스화된 한 컨트롤의 속성을 바인딩하는 방법을 보여 주는이 예제는 <xref:System.Windows.Data.Binding.ElementName%2A> 속성입니다.  

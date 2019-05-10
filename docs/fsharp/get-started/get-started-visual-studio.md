@@ -3,11 +3,11 @@ title: Visual Studio에서 F# 시작
 description: Visual Studio에서 F#을 사용하는 방법을 알아봅니다.
 ms.date: 07/03/2018
 ms.openlocfilehash: 9b02a5d295f982b1911dab567213fa9a2b6c4304
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63808011"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754870"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Visual Studio에서 F# 시작
 
@@ -64,6 +64,6 @@ val square: x:int -> int
 ## <a name="see-also"></a>참고자료
 
 - [F# 둘러보기](../tour.md)
-- [F#언어 참조](../language-reference/index.md)
+- [F# 언어 참조](../language-reference/index.md)
 - [형식 유추](../language-reference/type-inference.md)
 - [기호 및 연산자 참조](../language-reference/symbol-and-operator-reference/index.md)

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - gradients [Windows Forms], gamma correction
 ms.assetid: da4690e7-5fac-4fd2-b3f0-5cb35c165b92
 ms.openlocfilehash: e812e441233c1d29a67dac639048e20a659549f0
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63809485"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753561"
 ---
 # <a name="how-to-apply-gamma-correction-to-a-gradient"></a>방법: 그라데이션에 감마 보정 적용
 브러시의을 설정 하 여 선형 그라데이션 브러시에 대 한 감마 보정을 사용할 수 있습니다 <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> 속성을 `true`입니다. 감마 보정을 사용 하지 않도록 설정 하 여 수를 <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> 속성을 `false`입니다. 감마 보정은 기본적으로 비활성화 됩니다.  

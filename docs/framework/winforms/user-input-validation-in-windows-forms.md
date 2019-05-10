@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: c8a40706df4274728b438cff2539173a0e94b767
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: caaf641f919c10751f59df8972af9d95fa930d88
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800128"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655582"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Windows Forms에서 사용자 입력 유효성 검사
 사용자가 응용 프로그램에 데이터를 입력 하면 응용 프로그램에서 사용 하기 전에 데이터가 유효한 지 확인 하는 것이 좋습니다. 텍스트 필드에 특정 되지 않음을 길이가 0 인 필드는 전화 번호 또는 잘 구성 된 데이터의 다른 형식으로 지정 하거나, 또는 문자열에 데이터베이스의 보안을 손상 시킬 수 있는 모든 안전 하지 않은 문자가 포함 되지 않도록 해야 합니다. Windows Forms 응용 프로그램에서 입력의 유효성을 검사 하는 여러 가지 방법을 제공 합니다.  
@@ -27,11 +27,11 @@ ms.locfileid: "61800128"
 ## <a name="event-driven-validation"></a>이벤트 기반 유효성 검사  
  완전 한 프로그래밍 방식의 제어 유효성 검사를 하려면 하거나 복잡 한 유효성 검사를 수행 해야 하는 경우 대부분의 Windows Forms 컨트롤에 기본 제공 유효성 검사 이벤트를 사용 해야 합니다. 자유 형식 사용자 입력을 허용 하는 각 컨트롤에는 <xref:System.Windows.Forms.Control.Validating> 컨트롤에 필요한 데이터 유효성 검사 될 때마다 발생 하는 이벤트입니다. 에 <xref:System.Windows.Forms.Control.Validating> 이벤트 처리 메서드를 여러 가지 방법으로 입력 하는 사용자를 확인할 수 있습니다. 예를 들어 우편 번호를 포함 해야 하는 텍스트 상자에 있는 경우 다음과 같은 방법으로 유효성 검사를 수행할 수 있습니다.  
   
--   우편 번호는 우편 번호의 특정 그룹에 속해야 합니다, 하는 경우 사용자가 입력 데이터 유효성 검사에 대 한 입력으로 문자열 비교를 수행할 수 있습니다. 예를 들어 우편 번호는 {10001, 10002 10003} 집합의 수 있어야 하면 문자열 비교를 사용 하 여 데이터 유효성 검사 수 있습니다.  
+- 우편 번호는 우편 번호의 특정 그룹에 속해야 합니다, 하는 경우 사용자가 입력 데이터 유효성 검사에 대 한 입력으로 문자열 비교를 수행할 수 있습니다. 예를 들어 우편 번호는 {10001, 10002 10003} 집합의 수 있어야 하면 문자열 비교를 사용 하 여 데이터 유효성 검사 수 있습니다.  
   
--   우편 번호가 특정 형식 이어야 합니다 하는 경우에 사용자가 입력 데이터 유효성 검사에 정규식을 사용할 수 있습니다. 예를 들어 유효성을 검사할 폼 `#####` 또는 `#####-####`, 일반 식을 사용할 수 있습니다 `^(\d{5})(-\d{4})?$`합니다. 유효성을 검사할 폼 `A#A #A#`, 일반 식을 사용할 수 있습니다 `[A-Z]\d[A-Z] \d[A-Z]\d`합니다. 정규식에 대 한 자세한 내용은 참조 하세요. [.NET Framework 정규식](../../standard/base-types/regular-expressions.md) 하 고 [정규식 예제](../../standard/base-types/regular-expression-examples.md)합니다.  
+- 우편 번호가 특정 형식 이어야 합니다 하는 경우에 사용자가 입력 데이터 유효성 검사에 정규식을 사용할 수 있습니다. 예를 들어 유효성을 검사할 폼 `#####` 또는 `#####-####`, 일반 식을 사용할 수 있습니다 `^(\d{5})(-\d{4})?$`합니다. 유효성을 검사할 폼 `A#A #A#`, 일반 식을 사용할 수 있습니다 `[A-Z]\d[A-Z] \d[A-Z]\d`합니다. 정규식에 대 한 자세한 내용은 참조 하세요. [.NET Framework 정규식](../../standard/base-types/regular-expressions.md) 하 고 [정규식 예제](../../standard/base-types/regular-expression-examples.md)합니다.  
   
--   우편 번호에 유효한 미국 우편 번호 수 있어야 하면 사용자가 입력 한 데이터의 유효성을 검사 하는 우편 번호 웹 서비스를 호출할 수 있습니다.  
+- 우편 번호에 유효한 미국 우편 번호 수 있어야 하면 사용자가 입력 한 데이터의 유효성을 검사 하는 우편 번호 웹 서비스를 호출할 수 있습니다.  
   
  합니다 <xref:System.Windows.Forms.Control.Validating> 이벤트 제공 형식의 개체 <xref:System.ComponentModel.CancelEventArgs>합니다. 컨트롤의 데이터가 유효한 지를 확인 하는 경우 취소할 수 있습니다 합니다 <xref:System.Windows.Forms.Control.Validating> 이 개체를 설정 하 여 이벤트 <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> 속성을 `true`입니다. 설정 하지 않은 경우는 <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> 속성에 Windows Forms는 해당 컨트롤에 대 한 성공 유효성 검사를 가정 시키고는 <xref:System.Windows.Forms.Control.Validated> 이벤트입니다.  
   
@@ -58,11 +58,11 @@ ms.locfileid: "61800128"
 #### <a name="explicit-validation"></a>명시적 유효성 검사  
  명시적 유효성 검사 방법은 한 번에 데이터를 확인합니다. 저장 단추 또는 다음 링크를 클릭과 같은 사용자 작업에 대 한 응답으로 데이터를 확인할 수 있습니다. 사용자 작업이 발생 하는 경우에 다음 방법 중 하나로 명시적 유효성 검사를 트리거할 수 있습니다.  
   
--   호출 <xref:System.Windows.Forms.ContainerControl.Validate%2A> 에 포커스를 잃은 마지막 컨트롤의 유효성을 검사 합니다.  
+- 호출 <xref:System.Windows.Forms.ContainerControl.Validate%2A> 에 포커스를 잃은 마지막 컨트롤의 유효성을 검사 합니다.  
   
--   호출 <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A> 를 폼 이나 컨테이너 컨트롤의 모든 자식 컨트롤의 유효성을 검사 합니다.  
+- 호출 <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A> 를 폼 이나 컨테이너 컨트롤의 모든 자식 컨트롤의 유효성을 검사 합니다.  
   
--   수동으로 컨트롤의 데이터 유효성을 검사 하는 사용자 지정 메서드를 호출 합니다.  
+- 수동으로 컨트롤의 데이터 유효성을 검사 하는 사용자 지정 메서드를 호출 합니다.  
   
 #### <a name="default-implicit-validation-behavior-for-windows-forms-controls"></a>암시적 유효성 검사가 기본적 Windows Forms 컨트롤  
  다른 Windows Forms 컨트롤에 대 한 기본값은 다를 해당 <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> 속성입니다. 다음 표에서 가장 일반적인 컨트롤 및 해당 기본값을 보여 줍니다.  
@@ -79,11 +79,11 @@ ms.locfileid: "61800128"
 ## <a name="closing-the-form-and-overriding-validation"></a>폼 및 유효성 검사 재정의  
  컨트롤에서 포함 된 데이터가 유효 하지 않으므로 포커스가, 경우 일반적인 방법 중 하나에서 부모 폼을 닫을 수 없습니다.  
   
--   클릭 하 여 합니다 **닫기** 단추입니다.  
+- 클릭 하 여 합니다 **닫기** 단추입니다.  
   
--   선택 하 여 **닫습니다** 에 **시스템** 메뉴.  
+- 선택 하 여 **닫습니다** 에 **시스템** 메뉴.  
   
--   호출 하 여는 <xref:System.Windows.Forms.Form.Close%2A> 메서드 프로그래밍 방식으로 합니다.  
+- 호출 하 여는 <xref:System.Windows.Forms.Form.Close%2A> 메서드 프로그래밍 방식으로 합니다.  
   
  그러나 경우에 따라 하려는 사용자가 컨트롤의 값이 유효한 지 여부에 관계 없이 폼을 닫을 수 있도록 합니다. 유효성 검사 재정의 폼에 대 한 처리기를 만들어 계속에 잘못 된 데이터가 있는 폼을 닫을 <xref:System.Windows.Forms.Form.Closing> 이벤트입니다. 이벤트를 설정 합니다 <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> 속성을 `false`입니다. 이렇게 하면 폼을 닫습니다. 자세한 내용과 예제는 <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>를 참조하세요.  
   

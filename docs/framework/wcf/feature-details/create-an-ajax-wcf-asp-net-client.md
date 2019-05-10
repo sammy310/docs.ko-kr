@@ -3,11 +3,11 @@ title: AJAX 사용 WCF 서비스를 만들고 Visual Studio에서 ASP.NET 클라
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
 ms.openlocfilehash: 06fa3a9d0151f3b4b865c421f9960854ef471377
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63807882"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754611"
 ---
 # <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>방법: 서비스에 액세스 하는 AJAX 사용 WCF 서비스와 ASP.NET 클라이언트 만들기
 

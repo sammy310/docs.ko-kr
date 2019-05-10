@@ -2,12 +2,12 @@
 title: 부분 신뢰를 위한 최선의 방법
 ms.date: 03/30/2017
 ms.assetid: 0d052bc0-5b98-4c50-8bb5-270cc8a8b145
-ms.openlocfilehash: c83c36020cfd5b41e99ff9eeb7968d0b5df909a6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6c01824ef3d86600fd946e7f510b854b5138ec00
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769462"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64603878"
 ---
 # <a name="partial-trust-best-practices"></a>부분 신뢰를 위한 최선의 방법
 이 항목에서는 부분 신뢰 환경에서 Windows Communication Foundation (WCF)를 실행 하는 경우 모범 사례를 설명 합니다.  

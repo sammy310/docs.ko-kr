@@ -6,21 +6,21 @@ helpviewer_keywords:
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-ms.openlocfilehash: 0dc213c2d25558dc447b49d2b2378f9aa72f80a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49aacdc7db6bc9e8b951f69bcd880835bb9182f2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857417"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654517"
 ---
 # <a name="configuring-system-provided-bindings"></a>시스템 제공 바인딩 구성
 바인딩은 엔드포인트와 통신할 때 사용할 통신 메커니즘을 지정하고 엔드포인트에 연결하는 방법을 나타냅니다. 바인딩 필수 통신 기능을 제공 하기 위해 Windows Communication Foundation (WCF) 채널 계층화 되는 방식을 정의 하는 요소로 구성 됩니다. 바인딩에는 다음 세 가지 형식의 요소가 있습니다.  
   
--   프로토콜 채널 바인딩 요소. 엔드포인트에 보내는 메시지에 사용할 보안, 안정성, 컨텍스트 흐름 설정 또는 사용자 정의 프로토콜을 결정합니다.  
+- 프로토콜 채널 바인딩 요소. 엔드포인트에 보내는 메시지에 사용할 보안, 안정성, 컨텍스트 흐름 설정 또는 사용자 정의 프로토콜을 결정합니다.  
   
--   전송 채널 바인딩 요소. TCP 또는 HTTP 등의 엔드포인트에 메시지를 보낼 때 사용할 기존 전송 프로토콜을 결정합니다.  
+- 전송 채널 바인딩 요소. TCP 또는 HTTP 등의 엔드포인트에 메시지를 보낼 때 사용할 기존 전송 프로토콜을 결정합니다.  
   
--   메시지 인코딩 바인딩 요소. 엔드포인트에 보내는 메시지에 사용할 텍스트/XML, 이진 또는 MTOM(Message Transmission Optimization Mechanism) 등의 연결 인코딩을 결정합니다.  
+- 메시지 인코딩 바인딩 요소. 엔드포인트에 보내는 메시지에 사용할 텍스트/XML, 이진 또는 MTOM(Message Transmission Optimization Mechanism) 등의 연결 인코딩을 결정합니다.  
   
  이 항목에서는 모든 시스템에서 제공한 Windows Communication Foundation (WCF) 바인딩을 제공 합니다. 이러한 바인딩이 모두 응용 프로그램에 대한 정확한 요구 사항을 충족하지 않을 경우 <xref:System.ServiceModel.Channels.CustomBinding> 클래스를 사용하여 바인딩을 만들 수 있습니다. 사용자 지정 바인딩을 만드는 방법에 대한 자세한 내용은 [사용자 지정 바인딩](../../../../docs/framework/wcf/extending/custom-bindings.md)을 참조하십시오.  
   

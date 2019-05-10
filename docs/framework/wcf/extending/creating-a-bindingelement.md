@@ -2,12 +2,12 @@
 title: BindingElement 만들기
 ms.date: 03/30/2017
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
-ms.openlocfilehash: 600bf9b394078ffc1b1bc97390bd0de406d64338
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0c08494315f43f35f60d70abf643f596a013c302
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858353"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587329"
 ---
 # <a name="creating-a-bindingelement"></a>BindingElement 만들기
 바인딩 및 바인딩 요소 (확장 하는 개체 <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> 및 <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>각각)은 Windows Communication Foundation (WCF) 응용 프로그램 모델이 채널 팩터리 및 채널 수신기와 연결 되는 장소입니다. 바인딩 없이 사용자 지정 채널을 사용 하 여 필요한 채널 수준 프로그래밍에 설명 된 대로 [서비스 채널 수준 프로그래밍](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) 하 고 [클라이언트 채널 수준 프로그래밍](../../../../docs/framework/wcf/extending/client-channel-level-programming.md)합니다. 이 항목에서는 wcf에서의 개발 채널을 사용 하도록 설정 하려면 최소 요구 사항을 설명 된 <xref:System.ServiceModel.Channels.BindingElement> 채널 및 4 단계에 설명 된 대로 응용 프로그램에서 사용 [개발 채널](../../../../docs/framework/wcf/extending/developing-channels.md)합니다.  
@@ -59,11 +59,11 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
 #### <a name="encoding-binding-elements"></a>인코딩 바인딩 요소  
  새 인코딩 바인딩 요소를 만들려면 먼저 <xref:System.ServiceModel.Channels.BindingElement> 클래스를 확장하고 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement?displayProperty=nameWithType> 클래스를 구현합니다. 그런 다음 최소한 <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>, <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A?displayProperty=nameWithType> 메서드와 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A?displayProperty=nameWithType> 속성을 구현해야 합니다.  
   
--   <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>. 이 바인딩 요소의 새 복사본을 반환합니다. 바인딩 요소 작성자는 기본 복사 생성자를 호출한 다음 이 클래스의 추가 필드를 복제하는 복사 생성자를 사용하여 <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>을 구현하는 것이 좋습니다.  
+- <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>. 이 바인딩 요소의 새 복사본을 반환합니다. 바인딩 요소 작성자는 기본 복사 생성자를 호출한 다음 이 클래스의 추가 필드를 복제하는 복사 생성자를 사용하여 <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>을 구현하는 것이 좋습니다.  
   
--   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A>. 새 인코더를 구현하는 실제 클래스에 핸들을 제공하고 <xref:System.ServiceModel.Channels.MessageEncoderFactory>를 확장하는 <xref:System.ServiceModel.Channels.MessageEncoder>를 반환합니다. 자세한 내용은 <xref:System.ServiceModel.Channels.MessageEncoderFactory> 및 <xref:System.ServiceModel.Channels.MessageEncoder>를 참조하세요.  
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A>. 새 인코더를 구현하는 실제 클래스에 핸들을 제공하고 <xref:System.ServiceModel.Channels.MessageEncoderFactory>를 확장하는 <xref:System.ServiceModel.Channels.MessageEncoder>를 반환합니다. 자세한 내용은 <xref:System.ServiceModel.Channels.MessageEncoderFactory> 및 <xref:System.ServiceModel.Channels.MessageEncoder>를 참조하세요.  
   
--   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A>. 이 인코딩에 사용되는 <xref:System.ServiceModel.Channels.MessageVersion>을 반환합니다. 이는 사용 중인 SOAP 및 WS-Addressing 버전을 나타냅니다.  
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A>. 이 인코딩에 사용되는 <xref:System.ServiceModel.Channels.MessageVersion>을 반환합니다. 이는 사용 중인 SOAP 및 WS-Addressing 버전을 나타냅니다.  
   
  사용자 정의 인코딩 바인딩 요소에 대한 선택적 메서드 및 속성의 전체 목록은 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>를 참조하십시오.  
   

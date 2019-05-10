@@ -3,11 +3,11 @@ title: 비동기 프로그래밍
 description: 에 대해 알아봅니다 하는 방법 F# 는 사용 하기 쉬운 및 언어에 자연 스러운 언어 수준 프로그래밍 모델을 통해 비동기 프로그래밍이 수행 됩니다.
 ms.date: 06/20/2016
 ms.openlocfilehash: 8cd7d7bcecabe8ea2c33a4787fe9ebbadd67fe67
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63808230"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753598"
 ---
 # <a name="async-programming-in-f"></a>F #의 비동기 프로그래밍\#
 

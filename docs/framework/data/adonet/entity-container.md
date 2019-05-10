@@ -2,12 +2,12 @@
 title: 엔터티 컨테이너(entity container)
 ms.date: 03/30/2017
 ms.assetid: 16e80405-2c75-42fc-b0e4-b1df53b1c584
-ms.openlocfilehash: 4a629a800df63c67dc17d3fc1531a9862861e9c4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 58642c6cc794f931387ac7a76dd64d368957f14b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667242"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586958"
 ---
 # <a name="entity-container"></a>엔터티 컨테이너(entity container)
 *엔터티 컨테이너* 의 논리적 그룹인 [엔터티 집합](../../../../docs/framework/data/adonet/entity-set.md), [연결 집합](../../../../docs/framework/data/adonet/association-set.md), 및 [imports 함수](../../../../docs/framework/data/adonet/model-declared-function.md)합니다.  

@@ -2,12 +2,12 @@
 title: 피어 메시
 ms.date: 03/30/2017
 ms.assetid: d93e312e-ac04-40f8-baea-5da1cacb546e
-ms.openlocfilehash: afd9eae36f28c28b33b74c4456feb4ba8c91314d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9113fab13da8503e6ce0335e5bb19a2634973dad
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766794"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654486"
 ---
 # <a name="peer-meshes"></a>피어 메시
 A *메시* 은 서로 간에 통신 하 고 각자 고유한 메시 ID로 식별 된 피어 노드의 명명된 된 컬렉션 (상호 연결 된 그래프) 각 노드는 다른 여러 노드에 연결됩니다. 잘 연결된 메시에서는 모든 두 노드 간에 경로가 있으며 메시의 가장 바깥쪽 가장자리에 있는 노드 사이에 홉 수가 상대적으로 적습니다. 또한 일부 노드 또는 연결이 끊어지는 경우에도 메시가 연결된 상태로 유지됩니다. 메시의 활성 노드는 다른 피어가 찾을 수 있도록 해당 메시 ID를 사용하여 엔드포인트 정보를 게시합니다.  
