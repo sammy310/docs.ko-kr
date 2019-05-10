@@ -2,12 +2,12 @@
 title: 채용 프로세스
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: c6f542cef8e1417ed9c8d3a185252a91062e2161
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87e49613214a6a608bd8e22dc9470250c90e220a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005058"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622479"
 ---
 # <a name="hiring-process"></a>채용 프로세스
 이 샘플에서는 워크플로 서비스로 호스트되는 두 개의 워크플로와 메시징 활동을 사용하여 비즈니스 프로세스를 구현하는 방법을 보여 줍니다. 이 워크플로는 Contoso, Inc라는 가상 회사의 IT 인프라 중 일부입니다.  
@@ -18,35 +18,35 @@ ms.locfileid: "62005058"
   
  이 샘플에서는 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]의 다음과 같은 기능을 보여 줍니다.  
   
--   비즈니스 프로세스를 모델링하기 위한 <xref:System.Activities.Statements.Flowchart> 및 <xref:System.Activities.Statements.Sequence> 워크플로  
+- 비즈니스 프로세스를 모델링하기 위한 <xref:System.Activities.Statements.Flowchart> 및 <xref:System.Activities.Statements.Sequence> 워크플로  
   
--   워크플로 서비스  
+- 워크플로 서비스  
   
--   메시징 활동  
+- 메시징 활동  
   
--   내용 기반 상관 관계  
+- 내용 기반 상관 관계  
   
--   사용자 지정 활동(선언적 및 코드 기반)  
+- 사용자 지정 활동(선언적 및 코드 기반)  
   
--   시스템 제공 SQL Server 지속성  
+- 시스템 제공 SQL Server 지속성  
   
--   사용자 지정 <xref:System.Activities.Persistence.PersistenceParticipant>  
+- 사용자 지정 <xref:System.Activities.Persistence.PersistenceParticipant>  
   
--   사용자 지정 추적  
+- 사용자 지정 추적  
   
--   ETW(Windows용 이벤트 추적) 추적  
+- ETW(Windows용 이벤트 추적) 추적  
   
--   활동의 컴퍼지션  
+- 활동의 컴퍼지션  
   
--   <xref:System.Activities.Statements.Parallel> 활동  
+- <xref:System.Activities.Statements.Parallel> 활동  
   
--   <xref:System.Activities.Statements.CancellationScope> 활동  
+- <xref:System.Activities.Statements.CancellationScope> 활동  
   
--   지속적인 타이머(<xref:System.Activities.Statements.Delay> 활동)  
+- 지속적인 타이머(<xref:System.Activities.Statements.Delay> 활동)  
   
--   트랜잭션  
+- 트랜잭션  
   
--   같은 솔루션에 있는 두 개 이상의 워크플로  
+- 같은 솔루션에 있는 두 개 이상의 워크플로  
   
 > [!IMPORTANT]
 >  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
@@ -64,25 +64,25 @@ ms.locfileid: "62005058"
   
 2. 요청자의 관리자가 요청을 승인해야 합니다.  
   
-    1.  관리자는 요청을 거부할 수 있습니다.  
+    1. 관리자는 요청을 거부할 수 있습니다.  
   
-    2.  관리자는 요청자에게 요청을 반환하여 추가 정보를 요구할 수 있습니다.  
+    2. 관리자는 요청자에게 요청을 반환하여 추가 정보를 요구할 수 있습니다.  
   
-        1.  요청자가 요청을 검토한 후 관리자에게 다시 보냅니다.  
+        1. 요청자가 요청을 검토한 후 관리자에게 다시 보냅니다.  
   
-    3.  관리자는 승인할 수 있습니다.  
+    3. 관리자는 승인할 수 있습니다.  
   
 3. 요청자의 관리자가 승인한 후 부서 소유자가 요청을 승인해야 합니다.  
   
-    1.  부서 소유자는 거부할 수 있습니다.  
+    1. 부서 소유자는 거부할 수 있습니다.  
   
-    2.  부서 소유자는 승인할 수 있습니다.  
+    2. 부서 소유자는 승인할 수 있습니다.  
   
 4. 부서 소유자가 승인하면 두 명의 HR 관리자나 CEO가 프로세스를 승인해야 합니다.  
   
-    1.  프로세스는 수락 또는 거부 상태로 전환될 수 있습니다.  
+    1. 프로세스는 수락 또는 거부 상태로 전환될 수 있습니다.  
   
-    2.  프로세스가 수락되면 `ResumeRequest` 워크플로의 새 인스턴스가 시작되고 `ResumeRequest`가 서비스 참조를 통해 HiringRequest.csproj에 연결됩니다.  
+    2. 프로세스가 수락되면 `ResumeRequest` 워크플로의 새 인스턴스가 시작되고 `ResumeRequest`가 서비스 참조를 통해 HiringRequest.csproj에 연결됩니다.  
   
  관리자가 신입 직원 채용을 승인하면 HR에서 적합한 후보를 찾아야 합니다. 이 프로세스는 두 번째 워크플로(ResumeRequestService.csproj에 정의된`ResumeRequest`)에 의해 수행됩니다. 이 워크플로는 채용 내용을 명시한 직원 모집 공고를 Contoso의 외부 채용 웹 사이트에 전송하는 프로세스를 정의하고, 지원자의 이력서를 받고, 직원 모집 상태를 모니터링합니다. 지원자는 마감 시한이 되거나 Contoso의 담당자가 삭제할 때까지 일정 기간 동안 지원할 수 있습니다. `ResumeRequest` 워크플로는 다음 단계로 구성됩니다.  
   
@@ -215,19 +215,19 @@ ms.locfileid: "62005058"
   
 2. 솔루션이 제대로 빌드되지 않으면 다음 내용을 확인합니다.  
   
-    -   에 대 한 참조가 `ContosoHR` 에서 누락 되지 않았는지 여부는 `InternalClient` 또는 `CareersWebSite` 프로젝트입니다.  
+    - 에 대 한 참조가 `ContosoHR` 에서 누락 되지 않았는지 여부는 `InternalClient` 또는 `CareersWebSite` 프로젝트입니다.  
   
 3. 솔루션이 제대로 실행되지 않으면 다음 내용을 확인합니다.  
   
-    1.  모든 서비스가 실행되고 있는지 여부  
+    1. 모든 서비스가 실행되고 있는지 여부  
   
-    2.  서비스 참조가 업데이트되었는지 여부  
+    2. 서비스 참조가 업데이트되었는지 여부  
   
-        1.  App_WebReferences 폴더를 엽니다.  
+        1. App_WebReferences 폴더를 엽니다.  
   
-        2.  마우스 오른쪽 단추로 클릭 **Contoso** 선택한 **웹/서비스 참조 업데이트**합니다.  
+        2. 마우스 오른쪽 단추로 클릭 **Contoso** 선택한 **웹/서비스 참조 업데이트**합니다.  
   
-        3.  Visual Studio에서 CTRL + SHIFT + B를 눌러 솔루션을 다시 빌드하십시오.  
+        3. Visual Studio에서 CTRL + SHIFT + B를 눌러 솔루션을 다시 빌드하십시오.  
   
 ## <a name="uninstalling"></a>제거  
   

@@ -2,12 +2,12 @@
 title: 원본 폴더와 대상 폴더가 동일합니다.
 ms.date: 07/20/2015
 ms.assetid: d4e6f996-8bbe-45f2-b662-f26b4474f44d
-ms.openlocfilehash: a3739afd25971433d78d84bb183c51ab674ecd9a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f631e3a349c049960963227fcd954b46ae4fbeaa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61594765"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619097"
 ---
 # <a name="source-folder-and-target-folder-are-the-same"></a>원본 폴더와 대상 폴더가 동일합니다.
 파일을 복사 또는 이동하려고 했으나 지정된 소스 디렉터리와 대상 디렉터리가 동일합니다. 파일 경로가 올바르게 구문 분석되지 않은 것 같습니다.  

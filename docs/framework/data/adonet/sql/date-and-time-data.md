@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 80b7df4922e1398c7290e769e53627a1d46ebc83
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f93f215f7be27196217fd506796fd58c4e11d796
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877749"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619181"
 ---
 # <a name="date-and-time-data"></a>날짜 및 시간 데이터
 SQL Server 2008에서는 날짜 및 시간 정보를 처리하기 위한 새로운 데이터 형식을 지원합니다. 새로운 데이터 형식에는 개별 날짜 형식과 시간 형식을 비롯하여 보다 큰 범위의 확장된 데이터 형식, 정밀도 및 표준 시간대 인식 기능이 포함됩니다. .NET Framework 버전 3.5 SP(서비스 팩) 1부터는 .NET Framework Data Provider for SQL Server(<xref:System.Data.SqlClient>)에 SQL Server 2008 데이터베이스 엔진의 새로운 모든 기능이 완벽하게 지원됩니다. SqlClient에서 이러한 새 기능을 사용하려면 .NET Framework 3.5 SP1 이상을 설치해야 합니다.  
@@ -51,13 +51,13 @@ SQL Server 2008에서는 날짜 및 시간 정보를 처리하기 위한 새로�
 ## <a name="datetime-data-types-and-parameters"></a>날짜/시간 데이터 형식 및 매개 변수  
  새 날짜 및 시간 데이터 형식을 지원하기 위해 다음 열거형이 <xref:System.Data.SqlDbType>에 추가되었습니다.  
   
--   `SqlDbType.Date`  
+- `SqlDbType.Date`  
   
--   `SqlDbType.Time`  
+- `SqlDbType.Time`  
   
--   `SqlDbType.DateTime2`  
+- `SqlDbType.DateTime2`  
   
--   `SqlDbType.DateTimeOffSet`  
+- `SqlDbType.DateTimeOffSet`  
 
 데이터 형식을 지정할 수 있습니다는 <xref:System.Data.SqlClient.SqlParameter> 위의 중 하나를 사용 하 여 <xref:System.Data.SqlDbType> 열거형입니다. 
 
@@ -66,9 +66,9 @@ SQL Server 2008에서는 날짜 및 시간 정보를 처리하기 위한 새로�
 
  또한 <xref:System.Data.SqlClient.SqlParameter> 개체의 <xref:System.Data.SqlClient.SqlParameter.DbType%2A> 속성을 특정 `SqlParameter` 열거형 값으로 설정하면 일반적인 방식으로 <xref:System.Data.DbType>의 형식을 지정할 수 있습니다. <xref:System.Data.DbType> 및 `datetime2` 데이터 형식을 지원하기 위해 다음 열거형 값이 `datetimeoffset`에 추가되었습니다.  
   
--   DbType.DateTime2  
+- DbType.DateTime2  
   
--   DbType.DateTimeOffset  
+- DbType.DateTimeOffset  
   
  이러한 새 열거형은 이전 버전의 .NET Framework에서 사용할 수 있는 `Date`, `Time` 및 `DateTime` 열거형을 보완합니다.  
   
@@ -219,11 +219,11 @@ command.Parameters.AddWithValue( _
 ## <a name="specifying-date-and-time-values-as-literals"></a>날짜 및 시간 값을 리터럴로 지정  
  여러 가지 리터럴 문자열 형식을 사용하여 날짜 및 시간 데이터 형식을 지정할 수 있습니다. 이렇게 하면 SQL Server에서는 이러한 리터럴 문자열 형식을 런타임에 평가하여 내부 날짜/시간 구조체로 변환합니다. SQL Server에서는 작은따옴표(')로 묶인 날짜 및 시간 데이터를 인식합니다. 다음 예제에서는 몇 가지 형식을 보여 줍니다.  
   
--   `'October 15, 2006'`과 같은 알파벳 날짜 형식  
+- `'October 15, 2006'`과 같은 알파벳 날짜 형식  
   
--   `'10/15/2006'`과 같은 숫자 날짜 형식  
+- `'10/15/2006'`과 같은 숫자 날짜 형식  
   
--   `'20061015'`(ISO 표준 날짜 형식을 사용할 경우 2006년 10월 15일로 해석됨)와 같은 구분되지 않은 문자열 형식  
+- `'20061015'`(ISO 표준 날짜 형식을 사용할 경우 2006년 10월 15일로 해석됨)와 같은 구분되지 않은 문자열 형식  
   
 > [!NOTE]
 >  날짜 및 시간 데이터 형식의 모든 리터럴 문자열 형식 및 기타 기능에 대한 자세한 내용은 SQL Server 온라인 설명서를 참조하세요.  

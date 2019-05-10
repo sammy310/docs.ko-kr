@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrFinancial_PeriodLELife
 ms.assetid: dc575d41-b376-4b05-bbbe-6de1e98385f1
-ms.openlocfilehash: fcf343a224efd7fac3767dd37d93136c95242b08
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 2de503f345ff27311019c492712ac3bd3adef5be
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61977121"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64659053"
 ---
 # <a name="argument-period-must-be-less-than-or-equal-to-argument-life"></a>'Period' 인수는 'Life' 인수보다 작거나 같아야 합니다.
 자산 감가상각이 계산되는 기간을 지정하는 `Period` 인수 값이 `Life` 인수 값보다 큽니다.  

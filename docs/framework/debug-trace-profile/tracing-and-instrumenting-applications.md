@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad2c41cc99422217b9f85acbd32f91ac78a9a7c2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 84af29aa169710f8de86c383429bf391fbc20bd3
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614234"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469525"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>응용 프로그램 추적 및 조율
 추적은 실행되는 동안 응용 프로그램의 실행을 모니터링할 수 있는 방법입니다. 개발할 때 .NET Framework 응용 프로그램에 추적 및 디버깅 계측을 추가할 수 있으며, 응용 프로그램을 개발하는 동안 및 배포한 후에 해당 계측을 모두 사용할 수 있습니다. <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 및 <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> 클래스를 사용하여 나중에 분석할 수 있도록 오류 및 응용 프로그램 실행 정보를 로그, 텍스트 파일 또는 다른 장치에 기록할 수 있습니다.  
@@ -134,7 +134,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  고유한 수신기를 구현하여 사용자 지정 결과를 생성할 수 있습니다. 예를 들어 사용자 지정 추적 수신기는 메시지 상자에 메시지를 표시하거나 데이터베이스에 연결하여 테이블에 메시지를 추가할 수 있습니다. 모든 사용자 지정 수신기는 위에서 언급한 6가지 메서드를 지원해야 합니다. 개발자 정의 수신기를 만드는 방법에 대한 자세한 내용은 .NET Framework 참조에서 <xref:System.Diagnostics.TraceListener>를 참조하세요.  
   
 > [!NOTE]
->  [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]에서는 **Debug.Write**, **Debug.WriteIf**, **Debug.WriteLine** 및 **Debug.WriteLineIf** 메서드가 이전 버전의 Visual Basic에서 사용할 수 있었던 **Debug.Print** 메서드를 대체했습니다.  
+>  Visual Basic의 경우에 **Debug.Write**, **Debug.WriteIf**, **Debug.WriteLine**, 및 **Debug.WriteLineIf** 메서드가 **Debug.Print** 이전 버전의 Visual Basic에서 사용할 수 있는 메서드.  
   
  **Write** 및 **WriteLine** 메서드는 항상 지정된 텍스트를 씁니다. **Assert**, **WriteIf** 및 **WriteLineIf**에는 지정된 텍스트를 쓸지 여부를 제어하는 부울 인수를 사용해야 합니다. 이들 메서드는 식이 **true**(**WriteIf** 및 **WriteLineIf**) 또는 **false**(**Assert**)인 경우에만 지정된 텍스트를 씁니다. **Fail** 메서드는 항상 지정된 텍스트를 씁니다. 자세한 내용은 [방법: 응용 프로그램 코드에 Trace 문 추가](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md) 및.NET Framework 참조 합니다.  
   

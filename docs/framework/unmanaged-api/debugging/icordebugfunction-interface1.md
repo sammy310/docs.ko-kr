@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca21911f3d16b79887b9d6d8185f8fab17651321
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 550b85474c1ccd7e125549e86df906439caf410e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672993"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621494"
 ---
 # <a name="icordebugfunction-interface"></a>ICorDebugFunction 인터페이스
 
@@ -45,9 +45,9 @@ ms.locfileid: "61672993"
   
  메서드의 메타 데이터 토큰 간의 관계 `mdMethodDef`, 및 메서드의 `ICorDebugFunction` 개체가 함수에서 편집 하며 계속 하기는 허용 하는 여부에 따라 달라 집니다.  
   
--   사이 한 일 관계가 있습니다 편집 하며 계속 하기 함수에 대해 허용 되지 않는 경우는 `ICorDebugFunction` 개체 및 `mdMethodDef` 토큰입니다. 즉, 함수에 하나 `ICorDebugFunction` 개체와 `mdMethodDef` 토큰입니다.  
+- 사이 한 일 관계가 있습니다 편집 하며 계속 하기 함수에 대해 허용 되지 않는 경우는 `ICorDebugFunction` 개체 및 `mdMethodDef` 토큰입니다. 즉, 함수에 하나 `ICorDebugFunction` 개체와 `mdMethodDef` 토큰입니다.  
   
--   사이 다 대 일 관계가 편집 하며 계속 하기는 함수에 대해 허용 되 면 합니다 `ICorDebugFunction` 개체 및 `mdMethodDef` 토큰입니다. 즉, 함수가 대부분의 있을 `ICorDebugFunction`, 함수의 각 버전에 대 한 있지만 하나만 `mdMethodDef` 토큰입니다.  
+- 사이 다 대 일 관계가 편집 하며 계속 하기는 함수에 대해 허용 되 면 합니다 `ICorDebugFunction` 개체 및 `mdMethodDef` 토큰입니다. 즉, 함수가 대부분의 있을 `ICorDebugFunction`, 함수의 각 버전에 대 한 있지만 하나만 `mdMethodDef` 토큰입니다.  
   
 > [!NOTE]
 >  이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  

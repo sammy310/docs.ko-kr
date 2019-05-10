@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 431a0f34ba913c18c35e28ca45660495403bf688
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d361b0c471402c097dfac799eb58ef08209d4343
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795596"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664368"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>Windows의 Visual Studio 2017에서 사용 하 여 Docker 도구
 
@@ -79,7 +79,7 @@ Docker에 대 한 Windows의 최신 버전을 계속 하려면 Docker 응용 프
 | 프로젝트 로드 시 필요한 Docker 이미지를 자동으로 풀 | 켜기 | Docker Compose | 성능 향상된을 위한 프로젝트를 로드할 때 Visual Studio는 Docker 가져오기 작업을 백그라운드에서 시작 이미지가 이미 다운로드 될 때 코드를 실행할 준비가 되도록 또는 다운로드 프로세스. 방금 프로젝트를 로드 하 고 코드를 검색, 경우 해제할 수 있습니다이 필요 하지 않습니다 하는 컨테이너 이미지 다운로드를 방지 합니다. |
 | 백그라운드에서 컨테이너를 자동으로 시작 합니다. | 켜기 | Docker Compose | 다시 성능 향상된을 위해 Visual Studio 컨테이너를 만듭니다 볼륨 탑재를 사용 하 여 빌드하고 컨테이너를 실행 하는 데 적합 합니다. 컨테이너를 만들 때 제어 하려는 경우이 해제 합니다. |
 | Kill 컨테이너 솔루션에 자동으로 닫기 | 켜기 | Docker Compose | 이 기능을 끌 솔루션을 닫기 또는 Visual Studio를 닫은 후에 계속 실행 하기 위해 솔루션에 대 한 컨테이너를 하려는 경우. |
-| Localhost SSL 인증서 신뢰에 대 한 확인 안 함 | 끄기 | ASP.NET Core 2.1 프로젝트 | Localhost SSL 인증서를 신뢰할 수 없는 경우 Visual Studio 묻는 프로젝트를 실행할 때마다이 확인란을 선택 하지 않으면. |
+| Localhost SSL 인증서 신뢰에 대 한 확인 안 함 | 끄기 | ASP.NET Core 2.2 프로젝트 | Localhost SSL 인증서를 신뢰할 수 없는 경우 Visual Studio 묻는 프로젝트를 실행할 때마다이 확인란을 선택 하지 않으면. |
 
 > [!WARNING]
 > Localhost SSL 인증서가 신뢰할 수 있는 메시지를 표시 하지 않으려면 확인란을 HTTPS 요청을 웹 앱 또는 서비스에서 런타임에 실패할 수 있습니다. 이런 경우의 선택을 취소 합니다 **표시 안 함** 확인란 프로젝트를 실행 하 고 신뢰 프롬프트를 표시 합니다.

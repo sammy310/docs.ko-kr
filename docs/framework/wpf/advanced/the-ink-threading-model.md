@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-ms.openlocfilehash: 80e7ef202c46a23069766512cf4e67bb21a49564
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b753fcffbdaa1cc9ba960a774077457dd0263e0a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007390"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621367"
 ---
 # <a name="the-ink-threading-model"></a>잉크 스레딩 모델
 Tablet pc 잉크의 이점 중 하나는 마치 많은 쓰기와 같은 일반 펜과 종이 사용 하 여 것입니다.  태블릿 펜이를 위해 마우스 않으며 사용자가 쓸 때 잉크를 렌더링 하는 보다 훨씬 빠른 속도로 입력된 데이터를 수집 합니다.  차단 될 수 있으므로 응용 프로그램의 사용자 인터페이스 (UI) 스레드에서 펜 데이터와 렌더링 잉크를 수집 하기 위한 충분 하지 않습니다.  이 해결 하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 사용자 잉크를 쓸 때 응용 프로그램에서는 두 개의 추가 스레드를 사용 합니다.  

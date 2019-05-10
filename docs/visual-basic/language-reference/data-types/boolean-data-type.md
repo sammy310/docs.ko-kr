@@ -12,12 +12,12 @@ helpviewer_keywords:
 - True keyword [Visual Basic]
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
-ms.openlocfilehash: 7b64302d801a08f976de0ec969983c821f7a8471
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 03497136ec53d89ac944fdd90301a4c590be326a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796996"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622534"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boolean 데이터 형식(Visual Basic)
 만 될 수 있는 값을 포함 `True` 또는 `False`합니다. 키워드 `True` 하 고 `False` 의 두 가지 상태에 해당 `Boolean` 변수입니다.  

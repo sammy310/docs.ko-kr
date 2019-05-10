@@ -14,12 +14,12 @@ helpviewer_keywords:
 - procedure arguments [Visual Basic], in parentheses
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
-ms.openlocfilehash: 497ae11b858b7d164ba3b5607ff2109254a154de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 540271c414ac295c419533a4622657d60d123796
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863625"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665390"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>방법: (Visual Basic) 값으로 전달 될 인수가 설정
 프로시저 선언 전달 메커니즘을 결정 합니다. 매개 변수 선언 되 면 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic는 해당 인수가 참조로 전달 하려면 필요 합니다. 이렇게 하면 인수의 기반이 되는 호출 코드에서 프로그래밍 요소의 값을 변경 하는 절차입니다. 이러한 변경에 대 한 내부 요소를 보호 하려는 경우 재정의할 수 있습니다는 `ByRef` 인수 이름을 괄호로 묶어 전달 메커니즘 프로시저에서 호출 합니다. 이 괄호는 호출의 인수 목록을 묶는 괄호는 별개입니다.  
@@ -28,9 +28,9 @@ ms.locfileid: "61863625"
   
 ### <a name="to-force-an-argument-to-be-passed-by-value"></a>인수가 값으로 전달 되도록 설정 하려면  
   
--   해당 매개 변수가 선언 된 경우 `ByVal` 절차에서는 않아도 모든 추가 단계를 수행 합니다. Visual Basic은 이미 인수를 값별로 전달 하려면 필요 합니다.  
+- 해당 매개 변수가 선언 된 경우 `ByVal` 절차에서는 않아도 모든 추가 단계를 수행 합니다. Visual Basic은 이미 인수를 값별로 전달 하려면 필요 합니다.  
   
--   해당 매개 변수가 선언 된 경우 `ByRef` 절차에서는 프로시저 호출에서 괄호 안에 인수를 묶습니다.  
+- 해당 매개 변수가 선언 된 경우 `ByRef` 절차에서는 프로시저 호출에서 괄호 안에 인수를 묶습니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 재정의 `ByRef` 매개 변수를 선언 합니다. 인하도록 강제 하는 호출에서 `ByVal`를 중첩 괄호 유의 합니다.  

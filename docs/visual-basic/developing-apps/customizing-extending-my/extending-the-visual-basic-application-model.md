@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: bb87879fdf584a439e09839bf4321b85e7dd6a43
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: f4857d410b16c3bbcb2129cec0d753a1c3d7a726
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602455"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469491"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Visual Basic 애플리케이션 모델 확장
 재정의 하 여 응용 프로그램 모델 기능을 추가할 수 있습니다 합니다 `Overridable` 의 멤버는 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> 클래스입니다. 이 기술은 응용 프로그램 시작 및 종료 하는 대로 사용자 고유의 메서드 호출을 추가 및 응용 프로그램 모델의 동작을 사용자 지정할 수 있습니다.  
@@ -76,10 +76,10 @@ ms.locfileid: "64602455"
   
  응용 프로그램은 단일 인스턴스 응용 프로그램을 이미 실행 중인 응용 프로그램을 응용 프로그램의 후속 인스턴스가 호출을 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A> 메서드 원래 인스턴스의 응용 프로그램을 한 다음 종료 됩니다.  
  
- 합니다 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)> 생성자 호출을 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> 응용 프로그램의 폼에 사용할 텍스트 렌더링 엔진을 결정 하는 속성입니다. 기본적으로 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> 속성이 반환 `False`, GDI 텍스트 렌더링 엔진을 사용 하는 것을 나타내는, 기본값인에서 [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]합니다. 재정의할 수 있습니다는 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> 반환할 속성 `True`, GDI + 텍스트 렌더링 엔진을 사용 함을 나타냅니다는 Visual Basic.NET 2002 및 Visual Basic.NET 2003 기본값.  
+ 합니다 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)> 생성자 호출을 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> 응용 프로그램의 폼에 사용할 텍스트 렌더링 엔진을 결정 하는 속성입니다. 기본적으로 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> 속성이 반환 `False`, GDI 텍스트 렌더링 엔진을 사용 하는 것을 나타내는, 기본값인 Visual Basic 2005 및 이후 버전입니다. 재정의할 수 있습니다는 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> 반환할 속성 `True`, GDI + 텍스트 렌더링 엔진을 사용 함을 나타냅니다는 Visual Basic.NET 2002 및 Visual Basic.NET 2003 기본값.  
   
 ## <a name="configuring-the-application"></a>응용 프로그램 구성  
- Visual Basic 응용 프로그램 모델의 일부로 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering> 클래스는 응용 프로그램을 구성 하는 보호 되는 속성을 제공 합니다. 이러한 속성을 구현 하는 클래스의 생성자에서 설정 되어야 합니다.  
+ Visual Basic 응용 프로그램 모델의 일부로 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> 클래스는 응용 프로그램을 구성 하는 보호 되는 속성을 제공 합니다. 이러한 속성을 구현 하는 클래스의 생성자에서 설정 되어야 합니다.  
   
  기본 Windows Forms 프로젝트에는 **프로젝트 디자이너** 디자이너 설정 사용 하 여 속성을 설정 하는 코드를 만듭니다. 속성은 응용 프로그램입니다; 시작 하는 경우에 사용 됩니다. 응용 프로그램이 시작 된 이후에 설정 해도 효과가 없습니다.  
   

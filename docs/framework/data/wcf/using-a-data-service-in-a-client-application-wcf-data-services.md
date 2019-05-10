@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: c2923a1940e3d58b6e3434f5b02edfb02995a202
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fc14b6a2b3782ae7ed3d26f9878646f004504d1c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875314"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660552"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>클라이언트 응용 프로그램에서 데이터 서비스 사용(WCF Data Services)
 노출 하는 서비스에 액세스할 수 있습니다는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 웹 브라우저에 URI를 제공 하 여 피드 합니다. URI는 리소스의 주소를 제공하고 요청 메시지는 해당 리소스가 나타내는 기본 데이터에 액세스하거나 변경하기 위해 이러한 주소로 전송됩니다. 브라우저는 HTTP GET 명령을 실행하고 요청된 리소스를 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드로 반환합니다. 자세한 내용은 [웹 브라우저에서 서비스 액세스](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)합니다.  
@@ -23,24 +23,24 @@ ms.locfileid: "61875314"
 ### <a name="http-actions"></a>HTTP 작업  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]에서는 주소가 지정된 리소스가 나타내는 엔터티 데이터에 대해 만들기, 읽기, 업데이트 및 삭제 작업을 수행하는 다음 HTTP 작업을 지원합니다.  
   
--   **HTTP GET** -브라우저에서 리소스에 액세스할 때 이것이 기본 동작입니다. 페이로드는 요청 메시지에 제공되지 않으며 요청한 데이터가 포함된 페이로드가 있는 응답 메서드가 반환됩니다.  
+- **HTTP GET** -브라우저에서 리소스에 액세스할 때 이것이 기본 동작입니다. 페이로드는 요청 메시지에 제공되지 않으며 요청한 데이터가 포함된 페이로드가 있는 응답 메서드가 반환됩니다.  
   
--   **HTTP POST** -제공된 된 리소스에 새 엔터티 데이터를 삽입 합니다. 삽입할 데이터가 요청 메시지의 페이로드에 제공됩니다. 응답 메시지의 페이로드에는 새로 만든 엔터티의 데이터가 들어 있습니다. 여기에는 자동으로 생성된 모든 키 값이 포함됩니다. 헤더에는 새 엔터티 리소스의 주소를 지정하는 URI도 포함됩니다.  
+- **HTTP POST** -제공된 된 리소스에 새 엔터티 데이터를 삽입 합니다. 삽입할 데이터가 요청 메시지의 페이로드에 제공됩니다. 응답 메시지의 페이로드에는 새로 만든 엔터티의 데이터가 들어 있습니다. 여기에는 자동으로 생성된 모든 키 값이 포함됩니다. 헤더에는 새 엔터티 리소스의 주소를 지정하는 URI도 포함됩니다.  
   
--   **HTTP DELETE** -지정한 리소스가 나타내는 엔터티 데이터를 삭제 합니다. 요청 또는 응답 메시지에 페이로드가 없습니다.  
+- **HTTP DELETE** -지정한 리소스가 나타내는 엔터티 데이터를 삭제 합니다. 요청 또는 응답 메시지에 페이로드가 없습니다.  
   
--   **HTTP PUT** -기존 엔터티 데이터를 요청된 된 리소스에서 요청 메시지의 페이로드에 제공 되는 새 데이터로 바꿉니다.  
+- **HTTP PUT** -기존 엔터티 데이터를 요청된 된 리소스에서 요청 메시지의 페이로드에 제공 되는 새 데이터로 바꿉니다.  
   
--   **HTTP MERGE** -삭제 엔터티 데이터를 변경 하기 위해 데이터 소스에서 삽입 후 실행은 비효율적 이기 때문 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 새 HTTP MERGE 작업이 추가 되었습니다. 요청 메시지의 페이로드에는 주소가 지정된 엔터티 리소스에서 변경되어야 하는 속성이 포함되어 있습니다. HTTP MERGE는 HTTP 사양에 정의되어 있지 않으므로 비[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 인식 서버를 통해 HTTP MERGE 요청을 라우트하려면 추가 처리가 필요할 수 있습니다.  
+- **HTTP MERGE** -삭제 엔터티 데이터를 변경 하기 위해 데이터 소스에서 삽입 후 실행은 비효율적 이기 때문 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 새 HTTP MERGE 작업이 추가 되었습니다. 요청 메시지의 페이로드에는 주소가 지정된 엔터티 리소스에서 변경되어야 하는 속성이 포함되어 있습니다. HTTP MERGE는 HTTP 사양에 정의되어 있지 않으므로 비[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 인식 서버를 통해 HTTP MERGE 요청을 라우트하려면 추가 처리가 필요할 수 있습니다.  
   
  자세한 내용은 참조 하세요. [OData: 작업](https://go.microsoft.com/fwlink/?LinkId=185792)합니다.  
   
 ### <a name="payload-formats"></a>페이로드 형식  
  HTTP PUT, HTTP POST 또는 HTTP MERGE 요청의 경우 요청 메시지의 페이로드에 데이터 서비스로 보내는 엔터티 데이터가 포함되어 있습니다. 페이로드의 내용은 메시지의 데이터 형식에 따라 달라집니다. DELETE를 제외한 모든 작업에 대한 HTTP 응답에도 이러한 페이로드가 들어 있습니다. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 액세스 및 서비스를 사용 하 여 데이터 변경을 위해 다음 페이로드 형식을 지원 합니다.  
   
--   **Atom** -에서 정의 된 XML 기반 메시지 인코딩으로 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 웹 피드, 팟캐스트, wiki에 대 한 HTTP를 통해 데이터를 교환할 수 있도록 Atom Publishing Protocol (AtomPub) 및 XML 기반 인터넷 기능에 대 한 확장으로 합니다. 자세한 내용은 참조 하세요. [OData: Atom 형식](https://go.microsoft.com/fwlink/?LinkId=185794)합니다.  
+- **Atom** -에서 정의 된 XML 기반 메시지 인코딩으로 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 웹 피드, 팟캐스트, wiki에 대 한 HTTP를 통해 데이터를 교환할 수 있도록 Atom Publishing Protocol (AtomPub) 및 XML 기반 인터넷 기능에 대 한 확장으로 합니다. 자세한 내용은 참조 하세요. [OData: Atom 형식](https://go.microsoft.com/fwlink/?LinkId=185794)합니다.  
   
--   **JSON** -개체 JSON (JavaScript Notation)은 JavaScript 프로그래밍 언어의 하위 집합을 기반으로 하는 경량 데이터 교환 형식입니다. 자세한 내용은 참조 하세요. [OData: JSON 형식으로](https://go.microsoft.com/fwlink/?LinkId=185795)입니다.  
+- **JSON** -개체 JSON (JavaScript Notation)은 JavaScript 프로그래밍 언어의 하위 집합을 기반으로 하는 경량 데이터 교환 형식입니다. 자세한 내용은 참조 하세요. [OData: JSON 형식으로](https://go.microsoft.com/fwlink/?LinkId=185795)입니다.  
   
  페이로드의 메시지 형식은 HTTP 요청 메시지의 헤더에서 요청됩니다. 자세한 내용은 참조 하세요. [OData: 작업](https://go.microsoft.com/fwlink/?LinkID=185792)합니다.  
   

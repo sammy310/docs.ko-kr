@@ -4,12 +4,12 @@ description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: ed9b64927372837c3ecf9377261150d4ee29d323
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: bcfc4990a261b8675c36358c5188a8d26d76479d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011998"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621025"
 ---
 # <a name="when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure"></a>온-프레미스 IaaS VM 인프라에 Windows 컨테이너를 배포하는 경우
 

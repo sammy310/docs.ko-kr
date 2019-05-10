@@ -7,12 +7,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-ms.openlocfilehash: 42e366a844f9c5e80a8f617bf73dfd869608540d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f4136a2c8fb7ca98ff22aa6a5fc676f30cd1c5d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61839409"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624307"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Visual Basic 프로그램의 구조
 Visual Basic 프로그램은 표준 구성 요소에서 빌드됩니다. A *솔루션* 하나 이상의 프로젝트를 구성 합니다. A *프로젝트* 에 하나 이상의 어셈블리를 포함할 수 있습니다. 각 *어셈블리* 하나 이상의 소스 파일에서 컴파일됩니다. A *소스 파일* 정의와 클래스, 구조체, 모듈 및 궁극적으로 모든 코드를 포함 하는 인터페이스의 구현을 제공 합니다.  
@@ -47,30 +47,30 @@ Visual Basic 프로그램은 표준 구성 요소에서 빌드됩니다. A *솔�
 ## <a name="namespace-level-programming-elements"></a>Namespace 수준 프로그래밍 요소  
  클래스, 구조체 및 모듈 원본 파일의 모든 코드를 포함 합니다. 이들은 *네임 스페이스 수준* 요소 네임 스페이스 내에서 또는 소스 파일 수준에서 표시 될 수 있습니다. 다른 모든 프로그래밍 요소 선언을 포함 됩니다. 인터페이스 요소 서명을 정의 하지만 구현이 제공 하는 모듈 수준에서도 나타납니다. 모듈 수준 요소에 대 한 자세한 내용은 다음을 참조 하세요.  
   
--   [Class 문](../../../visual-basic/language-reference/statements/class-statement.md)  
+- [Class 문](../../../visual-basic/language-reference/statements/class-statement.md)  
   
--   [Structure 문](../../../visual-basic/language-reference/statements/structure-statement.md)  
+- [Structure 문](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
--   [Module 문](../../../visual-basic/language-reference/statements/module-statement.md)  
+- [Module 문](../../../visual-basic/language-reference/statements/module-statement.md)  
   
--   [Interface 문](../../../visual-basic/language-reference/statements/interface-statement.md)  
+- [Interface 문](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
  네임 스페이스 수준에서 데이터 요소는 열거형 및 대리자입니다.  
   
 ## <a name="module-level-programming-elements"></a>모듈 수준 프로그래밍 요소  
  프로시저, 연산자, 속성 및 이벤트는 실행 코드 (런타임 시 작업을 수행 하는 문)을 보유할 수 있는 유일한 프로그래밍 요소입니다. 이들은 합니다 *모듈 수준* 프로그램의 요소입니다. 프로시저 수준 요소에 대 한 자세한 내용은 다음을 참조 하세요.  
   
--   [Function 문](../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Function 문](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)  
+- [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
--   [Declare 문](../../../visual-basic/language-reference/statements/declare-statement.md)  
+- [Declare 문](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Operator 문](../../../visual-basic/language-reference/statements/operator-statement.md)  
+- [Operator 문](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
--   [Property 문](../../../visual-basic/language-reference/statements/property-statement.md)  
+- [Property 문](../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Event 문](../../../visual-basic/language-reference/statements/event-statement.md)  
+- [Event 문](../../../visual-basic/language-reference/statements/event-statement.md)  
   
  모듈 수준에서 데이터 요소에는 변수, 상수, 열거형 및 대리자는입니다.  
   
@@ -82,13 +82,13 @@ Visual Basic 프로그램은 표준 구성 요소에서 빌드됩니다. A *솔�
 ## <a name="the-main-procedure"></a>Main 프로시저  
  `Main` 프로시저는 응용 프로그램 로드 되었을 때 실행할 첫 번째 코드입니다. `Main` 시작 지점 및 응용 프로그램에 대 한 전체 제어 사용 됩니다. 네 가지가 있습니다 `Main`:  
   
--   `Sub Main()`  
+- `Sub Main()`  
   
--   `Sub Main(ByVal cmdArgs() As String)`  
+- `Sub Main(ByVal cmdArgs() As String)`  
   
--   `Function Main() As Integer`  
+- `Function Main() As Integer`  
   
--   `Function Main(ByVal cmdArgs() As String) As Integer`  
+- `Function Main(ByVal cmdArgs() As String) As Integer`  
   
  이 절차의 가장 일반적인 것은 `Sub Main()`합니다. 자세한 내용은 [Visual Basic의 Main 프로시저](../../../visual-basic/programming-guide/program-structure/main-procedure.md)합니다.  
   

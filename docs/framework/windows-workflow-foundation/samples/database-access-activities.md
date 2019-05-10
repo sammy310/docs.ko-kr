@@ -2,12 +2,12 @@
 title: Database Access Activities
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: 2463c3a87be7f7e248572d45e018b72661f4f8c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a7c6fa6664acee8000c100513b2cc955ffa3392
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005214"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622464"
 ---
 # <a name="database-access-activities"></a>Database Access Activities
 데이터베이스 액세스 활동을 사용하여 워크플로 내에서 데이터베이스에 액세스할 수 있습니다. 이러한 활동을 검색 하거나 정보를 수정 하 고 사용 하 여 데이터베이스에 액세스 허용 [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081) 데이터베이스에 액세스할 수 있습니다.  
@@ -247,7 +247,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 ## <a name="configuring-connection-information"></a>연결 정보 구성
  모든 DbActivity는 동일한 구성 매개 변수를 공유합니다. 다음과 같은 두 가지 방법으로 DbActivity를 구성할 수 있습니다.
 
--   `ConnectionString + InvariantName`: ADO.NET 공급자 고정 이름과 연결 문자열을 설정 합니다.
+- `ConnectionString + InvariantName`: ADO.NET 공급자 고정 이름과 연결 문자열을 설정 합니다.
 
     ```
     Activity dbSelectCount = new DbQueryScalar<DateTime>()
@@ -260,7 +260,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
     };
     ```
 
--   `ConfigName`: 연결 정보를 포함 하는 구성 섹션의 이름을 설정 합니다.
+- `ConfigName`: 연결 정보를 포함 하는 구성 섹션의 이름을 설정 합니다.
 
     ```xml
     <connectionStrings>
@@ -270,7 +270,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
       </connectionStrings>
     ```
 
--   활동에서는 다음과 같이 구성합니다.
+- 활동에서는 다음과 같이 구성합니다.
 
     ```
     Activity dbSelectCount = new DbQueryScalar<int>()
@@ -287,15 +287,15 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 
  Setup.cmd 스크립트는 다음을 수행하는 SQL 명령이 포함된 CreateDb.sql 스크립트 파일을 호출합니다.
 
--   DbActivitiesSample이라는 데이터베이스를 만듭니다.
+- DbActivitiesSample이라는 데이터베이스를 만듭니다.
 
--   Roles 테이블을 만듭니다.
+- Roles 테이블을 만듭니다.
 
--   Employees 테이블을 만듭니다.
+- Employees 테이블을 만듭니다.
 
--   Roles 테이블에 3개의 레코드를 삽입합니다.
+- Roles 테이블에 3개의 레코드를 삽입합니다.
 
--   Employees 테이블에 12개의 레코드를 삽입합니다.
+- Employees 테이블에 12개의 레코드를 삽입합니다.
 
 ##### <a name="to-run-setupcmd"></a>Setup.cmd를 실행하려면
 

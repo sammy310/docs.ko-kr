@@ -4,6 +4,12 @@ description: Docker 응용 프로그램 수명 주기를 지원 하기 위해 Mi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
+ms.openlocfilehash: cdaac06ffd907783c7ebe9b62ecd726158a02484
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664390"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Microsoft 플랫폼 및 컨테이너 화 된 앱에 대 한 도구를 소개
 
@@ -25,7 +31,7 @@ ms.date: 02/15/2019
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
 | Docker 앱용 플랫폼   | • Microsoft Visual Studio 및 Visual Studio Code<br /> • .NET<br /> • Microsoft Azure Container Service<br /> • Azure Service Fabric<br /> • Azure Container Registry<br /> | • 모든 코드 편집기(예: Sublime)<br /> • 모든 언어(Node.js, Java, Go 등)<br /> • 모든 오케스트레이터 및 스케줄러<br /> • 모든 Docker 레지스트리<br /> |
 | Docker 앱용 DevOps     | • Azure DevOps 서비스<br /> • Microsoft Team Foundation Server<br /> • Azure Container Service<br /> • Azure Service Fabric<br /> | • GitHub, Git, Subversion 등<br /> • Jenkins, Chef, Puppet, Velocity, CircleCI, TravisCI 등<br /> • 온-프레미스 Docker Datacenter, Docker Swarm, Mesos DC/OS, Kubernetes 등<br /> |
-| 관리 및 모니터링  | • Operations Management Suite<br /> • Applications Insights<br /> | • Marathon, Chronos 등<br />
+| 관리 및 모니터링  | • Azure Monitor | • Marathon, Chronos 등<br />|
 
 표 3-1에 정의된 컨테이너화된 Docker 앱을 위한 Microsoft 플랫폼 및 도구는 다음과 같은 구성 요소로 이루어집니다.
 

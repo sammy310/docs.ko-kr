@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-ms.openlocfilehash: 7ce759de004d479f5162d2ce3a965f5c40afa450
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: beb76f18a55d6e197c1c6bcfc91e3a8ef0f8119b
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917604"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063090"
 ---
 # <a name="the-linq-to-sql-object-model"></a>LINQ to SQL 개체 모델
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], 개발자의 프로그래밍 언어로 표현 되는 개체 모델을 관계형 데이터베이스의 데이터 모델에 매핑되어 있습니다. 그런 다음 개체 모델에 따라 데이터 작업이 수행됩니다.  
   
  이 시나리오에서는 데이터베이스에 대해 `INSERT`와 같은 데이터베이스 명령을 실행하지 않습니다. 대신 개체 모델 내에서 값을 변경하고 메서드를 실행합니다. 데이터베이스를 쿼리하거나 데이터베이스에 변경 내용을 보내려는 경우 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]은 사용자의 요청을 올바른 SQL 명령으로 변환하고 이러한 명령을 데이터베이스에 보냅니다.  
   
- ![DLinqObjectModel](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinqobjectmodel.png "DLinqObjectModel")  
+ ![Linq 개체 모델을 보여 주는 스크린샷.](./media/the-linq-to-sql-object-model/linq-object-model-two-tier.png)  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 개체 모델의 가장 기본적인 요소와 관계형 데이터 모델의 요소 간의 관계가 다음 표에 요약되어 있습니다.  
   

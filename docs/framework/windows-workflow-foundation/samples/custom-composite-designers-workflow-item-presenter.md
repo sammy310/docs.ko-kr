@@ -2,12 +2,12 @@
 title: 사용자 지정 복합 디자이너 - 워크플로 항목 프리젠터
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-ms.openlocfilehash: f3c7620f719b8412b6b34bda7be5d607dccda75f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0eb2ce0ca7e5d2ffd7ddd9a3d582783b4610427a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005239"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622620"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>사용자 지정 복합 디자이너 - 워크플로 항목 프리젠터
 <xref:System.Activities.Presentation.WorkflowItemPresenter> 임의의 활동을 배치할 수 있는 "끌어 놓기 영역"을 만들 수 있도록 하는 WF 디자이너 프로그래밍 모델의 키 형식입니다. 이 샘플에서는 표시 이러한 "드롭 영역". "를 사용 하는 활동 디자이너를 빌드하는 방법을 보여 줍니다.
@@ -16,18 +16,18 @@ ms.locfileid: "62005239"
 
 ## <a name="demonstrates"></a>세부 항목
 
--   <xref:System.Activities.Presentation.WorkflowItemPresenter>를 사용하여 사용자 지정 활동 디자이너 만들기
+- <xref:System.Activities.Presentation.WorkflowItemPresenter>를 사용하여 사용자 지정 활동 디자이너 만들기
 
--   메타데이터 저장소를 사용하여 사용자 지정 디자이너 등록
+- 메타데이터 저장소를 사용하여 사용자 지정 디자이너 등록
 
--   다시 호스트된 도구 상자를 선언적으로 또는 명령적으로 프로그래밍
+- 다시 호스트된 도구 상자를 선언적으로 또는 명령적으로 프로그래밍
 
 ## <a name="sample-details"></a>샘플 세부 정보
  이 샘플의 코드는 다음을 보여 줍니다.
 
--   `SimpleNativeActivity` 클래스에 대해 사용자 지정 활동 디자이너가 빌드됩니다.
+- `SimpleNativeActivity` 클래스에 대해 사용자 지정 활동 디자이너가 빌드됩니다.
 
--   <xref:System.Activities.Presentation.WorkflowItemPresenter>를 사용하여 사용자 지정 활동 디자이너를 만드는 방법
+- <xref:System.Activities.Presentation.WorkflowItemPresenter>를 사용하여 사용자 지정 활동 디자이너를 만드는 방법
 
 ```xaml
 <sap:ActivityDesigner x:Class="Microsoft.Samples.UsingWorkflowItemPresenter.SimpleNativeDesigner"

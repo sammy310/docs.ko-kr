@@ -13,12 +13,12 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-ms.openlocfilehash: a5d7c06502b66298d530d0180ffaf63862b9fc28
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 279f7932d38885331b69616afa719ad782d7244b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017791"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64659910"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>사용자 지정 가능한 모양이 있는 컨트롤 만들기
 <a name="introduction"></a>
@@ -37,17 +37,17 @@ ms.locfileid: "62017791"
   
  이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   
--   [필수 조건](#prerequisites)  
+- [필수 조건](#prerequisites)  
   
--   [파트 및 상태 모델](#parts_and_states_model)  
+- [파트 및 상태 모델](#parts_and_states_model)  
   
--   [ControlTemplate에서 시각적 구조 및 컨트롤의 시각적 동작 정의](#defining_the_visual_structure_and_visual_behavior_of_a_control_in_a_controltemplate)  
+- [ControlTemplate에서 시각적 구조 및 컨트롤의 시각적 동작 정의](#defining_the_visual_structure_and_visual_behavior_of_a_control_in_a_controltemplate)  
   
--   [코드에서 ControlTemplate의 부분을 사용 하 여](#using_parts_of_the_controltemplate_in_code)  
+- [코드에서 ControlTemplate의 부분을 사용 하 여](#using_parts_of_the_controltemplate_in_code)  
   
--   [컨트롤 계약을 제공합니다.](#providing_the_control_contract)  
+- [컨트롤 계약을 제공합니다.](#providing_the_control_contract)  
   
--   [전체 예제](#complete_example)  
+- [전체 예제](#complete_example)  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>전제 조건  
@@ -60,11 +60,11 @@ ms.locfileid: "62017791"
 ## <a name="parts-and-states-model"></a>파트 및 상태 모델  
  파트 및 상태 모델이 표시 구조 및 컨트롤의 시각적 동작을 정의 하는 방법을 지정 합니다. 파트 및 상태 모델을 수행 하려면 다음을 수행 해야 합니다.  
   
--   표시 구조 및 시각적 동작을 정의 합니다 <xref:System.Windows.Controls.ControlTemplate> 컨트롤의 합니다.  
+- 표시 구조 및 시각적 동작을 정의 합니다 <xref:System.Windows.Controls.ControlTemplate> 컨트롤의 합니다.  
   
--   컨트롤의 논리 컨트롤 템플릿의 구성 요소와 상호 작용 하는 경우 특정 모범 사례를 따릅니다.  
+- 컨트롤의 논리 컨트롤 템플릿의 구성 요소와 상호 작용 하는 경우 특정 모범 사례를 따릅니다.  
   
--   컨트롤 계약에 포함 해야 하는 항목을 지정 하려면 제공 된 <xref:System.Windows.Controls.ControlTemplate>합니다.  
+- 컨트롤 계약에 포함 해야 하는 항목을 지정 하려면 제공 된 <xref:System.Windows.Controls.ControlTemplate>합니다.  
   
  표시 구조 및 시각적 동작을 정의 하는 경우는 <xref:System.Windows.Controls.ControlTemplate> 컨트롤의 응용 프로그램 작성자가 만들어 변경할 수 시각적 구조 및 컨트롤의 시각적 동작 새 <xref:System.Windows.Controls.ControlTemplate> 코드를 작성 하는 대신 합니다.   작성자에 게 응용 프로그램에 알려 주는 컨트롤 계약을 제공 해야 합니다 <xref:System.Windows.FrameworkElement> 개체 및 상태에 정의 되어야 합니다는 <xref:System.Windows.Controls.ControlTemplate>합니다. 파트를 사용 하 여 상호 작용할 때 몇 가지 모범 사례를 따라야 합니다 <xref:System.Windows.Controls.ControlTemplate> 컨트롤이 제대로 불완전 처리 되도록 <xref:System.Windows.Controls.ControlTemplate>합니다.  이러한 세 가지 원칙을 따르는 경우 응용 프로그램 작성자는 만들 수는 <xref:System.Windows.Controls.ControlTemplate> 만 컨트롤에 대 한 것 처럼 쉽게 컨트롤에 대 한는으로 제공할 수 있다는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]합니다.  다음 섹션에서는 이러한 권장 사항 세부 정보에서 설명합니다.  
   
@@ -134,18 +134,18 @@ ms.locfileid: "62017791"
   
  <xref:System.Windows.VisualStateManager.GoToState%2A> 메서드 시작 및 스토리 보드를 적절 하 게 중지 하는 데 필요한 논리를 수행 합니다. 컨트롤을 호출 하는 경우 <xref:System.Windows.VisualStateManager.GoToState%2A> 해당 상태를 변경 하는 <xref:System.Windows.VisualStateManager> 다음을 수행 합니다.  
   
--   경우는 <xref:System.Windows.VisualState> 에 컨트롤 것임을 <xref:System.Windows.Media.Animation.Storyboard>, 스토리 보드를 시작 합니다. 그런 다음 경우는 <xref:System.Windows.VisualState> 가 컨트롤에서 제공 되는 <xref:System.Windows.Media.Animation.Storyboard>, 스토리 보드 끝입니다.  
+- 경우는 <xref:System.Windows.VisualState> 에 컨트롤 것임을 <xref:System.Windows.Media.Animation.Storyboard>, 스토리 보드를 시작 합니다. 그런 다음 경우는 <xref:System.Windows.VisualState> 가 컨트롤에서 제공 되는 <xref:System.Windows.Media.Animation.Storyboard>, 스토리 보드 끝입니다.  
   
--   지정 된 상태의 컨트롤이 이미 있으면 <xref:System.Windows.VisualStateManager.GoToState%2A> 조치가 받아서 반환 `true`합니다.  
+- 지정 된 상태의 컨트롤이 이미 있으면 <xref:System.Windows.VisualStateManager.GoToState%2A> 조치가 받아서 반환 `true`합니다.  
   
--   지정 된 상태에 없는 경우는 <xref:System.Windows.Controls.ControlTemplate> 의 `control`, <xref:System.Windows.VisualStateManager.GoToState%2A> 아무 작업도 수행 하 고 반환 `false`합니다.  
+- 지정 된 상태에 없는 경우는 <xref:System.Windows.Controls.ControlTemplate> 의 `control`, <xref:System.Windows.VisualStateManager.GoToState%2A> 아무 작업도 수행 하 고 반환 `false`합니다.  
   
 #### <a name="best-practices-for-working-with-the-visualstatemanager"></a>VisualStateManager를 사용 하기 위한 모범 사례  
  컨트롤의 상태를 유지 하기 위해 다음을 수행 하는 것이 좋습니다.  
   
--   속성을 사용 하 여 해당 상태를 추적 합니다.  
+- 속성을 사용 하 여 해당 상태를 추적 합니다.  
   
--   상태 간 전환 도우미 메서드를 만듭니다.  
+- 상태 간 전환 도우미 메서드를 만듭니다.  
   
  합니다 `NumericUpDown` 컨트롤이 사용 하 해당 `Value` 인지 여부를 추적 하는 속성을 `Positive` 또는 `Negative` 상태입니다.  `NumericUpDown` 컨트롤 정의 `Focused` 및 `UnFocused` 상태에 추적을 <xref:System.Windows.UIElement.IsFocused%2A> 속성. 컨트롤의 속성에 자연스럽 게 일치 하지 않는 상태를 사용 하는 경우에 상태를 추적 하는 개인 속성을 정의할 수 있습니다.  
   
@@ -160,11 +160,11 @@ ms.locfileid: "62017791"
   
  세 가지 일반적인 위치는 컨트롤의 상태는 변경 될 수 있습니다.  
   
--   경우는 <xref:System.Windows.Controls.ControlTemplate> 에 적용 되는 <xref:System.Windows.Controls.Control>합니다.  
+- 경우는 <xref:System.Windows.Controls.ControlTemplate> 에 적용 되는 <xref:System.Windows.Controls.Control>합니다.  
   
--   속성을 변경 하는 경우.  
+- 속성을 변경 하는 경우.  
   
--   이벤트가 발생 합니다.  
+- 이벤트가 발생 합니다.  
   
  다음 예에서는 설명의 상태를 업데이트 합니다 `NumericUpDown` 이러한 경우에는 컨트롤입니다.  
   
@@ -189,33 +189,33 @@ ms.locfileid: "62017791"
 ## <a name="providing-the-control-contract"></a>컨트롤 계약을 제공합니다.  
  컨트롤 계약을 제공 하도록 <xref:System.Windows.Controls.ControlTemplate> 작성자 서식 파일에 배치 하 게 알 수 있습니다. 컨트롤 계약에는 세 가지 요소가 있습니다.  
   
--   컨트롤 논리가 사용하는 시각적 요소  
+- 컨트롤 논리가 사용하는 시각적 요소  
   
--   컨트롤의 상태 및 각 상태가 속해 있는 그룹  
+- 컨트롤의 상태 및 각 상태가 속해 있는 그룹  
   
--   컨트롤에 시각적으로 영향을 미치는 공용 속성  
+- 컨트롤에 시각적으로 영향을 미치는 공용 속성  
   
  새 사람 <xref:System.Windows.Controls.ControlTemplate> 알고 <xref:System.Windows.FrameworkElement> 개체를 사용 하 여 컨트롤의 논리를 각 개체 유형을 이며, 어떤 이름은. A <xref:System.Windows.Controls.ControlTemplate> 작성자는 또한 컨트롤의 가능한 가능한 각 상태와만 이름을 알고 해야 <xref:System.Windows.VisualStateGroup> 상태는 합니다.  
   
  반환 합니다 `NumericUpDown` 예제에서는 컨트롤이 예상 합니다 <xref:System.Windows.Controls.ControlTemplate> 다음 사항이 <xref:System.Windows.FrameworkElement> 개체:  
   
--   A <xref:System.Windows.Controls.Primitives.RepeatButton> 호출 `UpButton`합니다.  
+- A <xref:System.Windows.Controls.Primitives.RepeatButton> 호출 `UpButton`합니다.  
   
--   <xref:System.Windows.Controls.Primitives.RepeatButton> 호출 `DownButton.`  
+- <xref:System.Windows.Controls.Primitives.RepeatButton> 호출 `DownButton.`  
   
  컨트롤 상태에서 수 있습니다.  
   
--   안에 `ValueStates`<xref:System.Windows.VisualStateGroup>  
+- 안에 `ValueStates`<xref:System.Windows.VisualStateGroup>  
   
-    -   `Positive`  
+    - `Positive`  
   
-    -   `Negative`  
+    - `Negative`  
   
--   안에 `FocusStates`<xref:System.Windows.VisualStateGroup>  
+- 안에 `FocusStates`<xref:System.Windows.VisualStateGroup>  
   
-    -   `Focused`  
+    - `Focused`  
   
-    -   `Unfocused`  
+    - `Unfocused`  
   
  동작을 지정 하 <xref:System.Windows.FrameworkElement> 개체 컨트롤, 사용를 <xref:System.Windows.TemplatePartAttribute>, 이름과 예상 되는 요소의 형식을 지정 합니다.  컨트롤의 가능한 상태를 지정 하려면 사용 합니다 <xref:System.Windows.TemplateVisualStateAttribute>, 및 상태의 이름을 지정 하는 <xref:System.Windows.VisualStateGroup> 에 속합니다.  배치 된 <xref:System.Windows.TemplatePartAttribute> 및 <xref:System.Windows.TemplateVisualStateAttribute> 컨트롤의 클래스 정의에 있습니다.  
   

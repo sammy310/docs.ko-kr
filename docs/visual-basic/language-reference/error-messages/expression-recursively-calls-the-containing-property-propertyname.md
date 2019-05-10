@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: a758d05cca5ca71943b0ef08184aef5b2c457739
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93d02618ff19f431b3602e74478337f6918df289
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802351"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665154"
 ---
 # <a name="expression-recursively-calls-the-containing-property-propertyname"></a>식이 재귀적으로 호출을 포함 하는 속성 '\<propertyname >'
 문과 `Set` 프로시저 속성 정의의 값을 속성의 이름에 저장 합니다.  
@@ -61,7 +61,7 @@ End Class
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   앞의 예제와 같이 권장된 접근 방식을 사용 하 여 속성 정의 다시 작성 합니다.  
+- 앞의 예제와 같이 권장된 접근 방식을 사용 하 여 속성 정의 다시 작성 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

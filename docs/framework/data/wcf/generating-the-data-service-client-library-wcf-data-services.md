@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
-ms.openlocfilehash: 96b7bfabef589464e99e808d19f0dee6cfb23536
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: bf0a74bd010a188f38cf1a2088a449d97405fa0f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765663"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626381"
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>데이터 서비스 클라이언트 라이브러리 생성(WCF Data Services)
 구현 하는 데이터 서비스를 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 에 의해 노출 되는 데이터 모델을 설명 하는 서비스 메타 데이터 문서를 반환할 수는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드 합니다. 자세한 내용은 참조 하세요. [OData: 서비스 메타 데이터 문서](https://go.microsoft.com/fwlink/?LinkId=186070)합니다. 사용할 수는 **서비스 참조 추가** 에 대 한 참조를 추가 하려면 Visual Studio에서 대화를 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-기반 서비스입니다. 반환 된 메타 데이터에 대 한 참조를 추가 하려면이 도구를 사용 하는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 다음 작업을 수행 클라이언트 프로젝트에서 피드:  

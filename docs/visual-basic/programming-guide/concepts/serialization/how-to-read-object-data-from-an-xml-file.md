@@ -2,12 +2,12 @@
 title: '방법: XML 파일 (Visual Basic)에서 개체 데이터 읽기'
 ms.date: 07/20/2015
 ms.assetid: 1e1423bf-74a4-4dde-a3bb-ae1bfc0a68ed
-ms.openlocfilehash: f6233fc7ce74cbd39237bab07cfd2ed22b9c2240
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1e9033d7aba8b4f423f29cd4fb4f7efbbe17a29
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907350"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624354"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>방법: XML 파일 (Visual Basic)에서 개체 데이터 읽기
 이 예제에서는 <xref:System.Xml.Serialization.XmlSerializer> 클래스를 사용하여 이전에 XML 파일에 기록된 개체 데이터를 읽습니다.  
@@ -39,11 +39,11 @@ End Sub
 ## <a name="robust-programming"></a>강력한 프로그래밍  
  다음 조건에서 예외가 발생합니다.  
   
--   serialize되는 클래스에 매개 변수가 없는 public 생성자가 없는 경우  
+- serialize되는 클래스에 매개 변수가 없는 public 생성자가 없는 경우  
   
--   파일의 데이터가 deserialize할 클래스의 데이터를 나타내지 않는 경우  
+- 파일의 데이터가 deserialize할 클래스의 데이터를 나타내지 않는 경우  
   
--   파일이 없는 경우(<xref:System.IO.IOException>)  
+- 파일이 없는 경우(<xref:System.IO.IOException>)  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
  항상 입력을 확인하고, 신뢰할 수 없는 소스의 데이터를 deserialize하지 마세요. 다시 생성된 개체는 deserialize한 코드의 사용 권한으로 로컬 컴퓨터에서 실행됩니다. 애플리케이션에서 데이터를 사용하기 전에 모든 입력을 확인해야 합니다.  

@@ -2,12 +2,12 @@
 title: 방화벽 지침
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-ms.openlocfilehash: f1b576b4e413fa3bae70ef1eb8f8ed768e28e309
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 06e5ba64ab0ec3558e4c773c9cb21f961384e0c9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051938"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650049"
 ---
 # <a name="firewall-instructions"></a>방화벽 지침
 Windows Communication Foundation (WCF) 샘플이 작동할 수 있도록 여러 포트 또는 방화벽에서 프로그램을 활성화 해야 합니다. 대부분의 샘플은 8000-8003 범위의 포트와 포트 9000을 사용하여 통신합니다. 방화벽은 기본적으로 켜져 있어 이러한 포트에 액세스하지 못하도록 합니다. 샘플에 대해 방화벽을 사용하려면 요구 사항 및 보안 환경에 따라 다음 절차 중 하나를 완료합니다.  

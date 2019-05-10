@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: 11790e14ed1fde9a42e642400161cfb92bf33293
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a05ddd714e85491d29aa5de574b4cdc36165c224
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011764"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469522"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Windows Forms에 사용할 수 있는 컨트롤
 다음은 사전순 목록 컨트롤 및 Windows Forms에서 사용할 수 있는 구성 요소입니다. 이 섹션에서 다루는 Windows Forms 컨트롤 외에 Windows Forms에 ActiveX 및 사용자 지정 컨트롤을 추가할 수 있습니다. 여기에 나열된 목록에서 사용자가 필요한 컨트롤을 찾을 수 없는 경우 직접 만들 수도 있습니다. 자세한 내용은 [디자인할 때 Windows Forms 컨트롤 개발](developing-windows-forms-controls-at-design-time.md)을 참조하십시오. 필요한 컨트롤을 선택하는 방법에 대한 자세한 내용은 [기능별 Windows Forms 컨트롤](windows-forms-controls-by-function.md)을 참조하십시오.  
@@ -229,7 +229,7 @@ ms.locfileid: "62011764"
  단계별 작업 항목에 대한 링크, 만들 컨트롤 종류에 대한 권장 사항 및 사용자 지정 컨트롤에 대한 기타 정보를 제공합니다.  
   
  [여러 언어 및 라이브러리에서 사용되는 컨트롤 및 프로그래밍 가능한 개체 비교](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))  
- Visual Basic 6.0의 컨트롤을 [!INCLUDE[vbprvblong](../../../../includes/vbprvblong-md.md)]의 해당 컨트롤로 맵핑하는 테이블을 제공합니다. 컨트롤은 이제 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 클래스입니다.  
+ Visual Basic 6.0의 컨트롤을 Visual Basic의 해당 컨트롤로 매핑되는 테이블을 제공 합니다. 컨트롤은 이제.NET Framework의 클래스를 참고 합니다.  
   
  [방법: Windows Forms에 ActiveX 컨트롤 추가](how-to-add-activex-controls-to-windows-forms.md)  
  Windows Forms에서 ActiveX 컨트롤을 사용하는 방법을 설명합니다.

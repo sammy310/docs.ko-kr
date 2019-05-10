@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
-ms.openlocfilehash: 829d6485acdca22fbf10160c734e5c7f931dd855
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ff0ac933be917b5604966240ff1fbd331a34ba77
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938257"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663622"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>연습: 암호의 복합성 검사 (Visual Basic)
 이 메서드는 몇 가지 강력한 암호 특성에 대 한 확인 하 고 실패에 대 한 암호를 확인 하는 정보를 사용 하 여 문자열 매개 변수를 업데이트 합니다.  

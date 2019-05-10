@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 553868ae82501e479acadd04b3d5e4447bcea36e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 430041f5f4315c5ad20cd2495f01a6f776f239c7
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61867143"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469702"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>개체 수명: 개체 생성 되 고 (Visual Basic)를 제거 하는 방법
 `New` 키워드를 사용하여 클래스의 인스턴스인 개체를 만듭니다. 새 개체를 사용하기 전에 초기화 작업을 수행해야 하는 경우가 많습니다. 일반적인 초기화 작업으로는 파일 열기, 데이터베이스에 연결, 레지스트리 키의 값 읽기 등이 포함됩니다. 호출 하는 절차를 사용 하 여 새 개체의 초기화를 제어 하는 Visual Basic *생성자* (초기화에 대 한 제어를 허용 하는 특수 메서드).  
@@ -38,7 +38,7 @@ ms.locfileid: "61867143"
  생성자와 소멸자는 개체 만들기 및 소멸을 제어합니다. 합니다 `Sub New` 및 `Sub Finalize` Visual Basic의 프로시저 초기화 개체를 삭제 하 고 대체 합니다 `Class_Initialize` 및 `Class_Terminate` Visual Basic 6.0 및 이전 버전에서 사용 되는 메서드.  
   
 ### <a name="sub-new"></a>Sub New  
- `Sub New` 생성자는 클래스를 만들 때 한 번만 실행할 수 있으며, 같은 클래스나 파생 클래스에서 다른 생성자의 첫 번째 코드 줄이 아닌 위치에서 명시적으로 호출할 수는 없습니다. 또한 `Sub New` 메서드의 코드는 항상 클래스의 다른 코드보다 먼저 실행됩니다. [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] 이상 버전에서 암시적으로 만듭니다는 `Sub New` 생성자를 명시적으로 정의 하지 않는 경우에 런타임에 `Sub New` 클래스에 대 한 절차입니다.  
+ `Sub New` 생성자는 클래스를 만들 때 한 번만 실행할 수 있으며, 같은 클래스나 파생 클래스에서 다른 생성자의 첫 번째 코드 줄이 아닌 위치에서 명시적으로 호출할 수는 없습니다. 또한 `Sub New` 메서드의 코드는 항상 클래스의 다른 코드보다 먼저 실행됩니다. Visual Basic 이상 암시적으로 만듭니다.는 `Sub New` 생성자를 명시적으로 정의 하지 않는 경우에 런타임에 `Sub New` 클래스에 대 한 절차입니다.  
   
  클래스의 생성자를 만들려면 클래스 정의 내 임의의 위치에 `Sub New` 프로시저를 만듭니다. 매개 변수화된 생성자를 만들려면 다음 코드에 나와 있는 것처럼 다른 프로시저에 인수를 지정할 때와 마찬가지로 `Sub New`에 인수의 이름과 데이터 형식을 지정합니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "61867143"
   
  `Finalize` 소멸자는 소멸자가 속한 클래스나 파생 클래스에서만 호출할 수 있는 보호된 메서드입니다. 시스템은 개체 소멸 시 `Finalize`를 자동으로 호출하므로 파생 클래스의 `Finalize` 구현 외부에서 `Finalize`를 명시적으로 호출해서는 안 됩니다.  
   
- 개체가 nothing으로 설정되는 즉시 실행되는 `Class_Terminate`와는 달리, 개체 범위가 손실되는 시점과 Visual Basic에서 `Finalize` 소멸자를 호출하는 시점 사이에는 대개 지연 시간이 생깁니다. [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] 이상 버전에서는 언제든지 명시적으로 호출하여 리소스를 즉시 해제할 수 있는 두 번째 종류의 소멸자인 <xref:System.IDisposable.Dispose%2A>를 사용할 수 있습니다.  
+ 개체가 nothing으로 설정되는 즉시 실행되는 `Class_Terminate`와는 달리, 개체 범위가 손실되는 시점과 Visual Basic에서 `Finalize` 소멸자를 호출하는 시점 사이에는 대개 지연 시간이 생깁니다. Visual Basic 및 이후 버전의 소멸자 인 두 번째 종류에 대 한 허용 <xref:System.IDisposable.Dispose%2A>, 언제 든 지 즉시 리소스를 해제 하려면 명시적으로 호출할 수 있습니다.  
   
 > [!NOTE]
 >  `Finalize` 소멸자는 예외를 throw해서는 안 됩니다. 이러한 예외는 응용 프로그램에서 처리할 수 없으며 throw되는 경우 응용 프로그램이 종료되기 때문입니다.  
@@ -84,13 +84,13 @@ ms.locfileid: "61867143"
 ### <a name="implementing-idisposable"></a>IDisposable 구현  
  <xref:System.IDisposable> 인터페이스를 구현하는 클래스는 다음 코드 섹션을 포함해야 합니다.  
   
--   개체가 삭제되었는지 여부를 추적하는 필드  
+- 개체가 삭제되었는지 여부를 추적하는 필드  
   
     ```  
     Protected disposed As Boolean = False  
     ```  
   
--   클래스 리소스를 해제하는 <xref:System.IDisposable.Dispose%2A>의 오버로드. 기본 클래스의 <xref:System.IDisposable.Dispose%2A> 및 `Finalize` 메서드가 이 메서드를 호출해야 합니다.  
+- 클래스 리소스를 해제하는 <xref:System.IDisposable.Dispose%2A>의 오버로드. 기본 클래스의 <xref:System.IDisposable.Dispose%2A> 및 `Finalize` 메서드가 이 메서드를 호출해야 합니다.  
   
     ```  
     Protected Overridable Sub Dispose(ByVal disposing As Boolean)  
@@ -104,7 +104,7 @@ ms.locfileid: "61867143"
     End Sub  
     ```  
   
--   다음 코드만 포함하는 <xref:System.IDisposable.Dispose%2A>의 구현  
+- 다음 코드만 포함하는 <xref:System.IDisposable.Dispose%2A>의 구현  
   
     ```  
     Public Sub Dispose() Implements IDisposable.Dispose  
@@ -113,7 +113,7 @@ ms.locfileid: "61867143"
     End Sub  
     ```  
   
--   다음 코드만 포함하는 `Finalize` 메서드의 재정의  
+- 다음 코드만 포함하는 `Finalize` 메서드의 재정의  
   
     ```  
     Protected Overrides Sub Finalize()  

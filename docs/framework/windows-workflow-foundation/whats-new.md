@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Workflow Foundation [WF], what's new
 - WF [WF], what's new
 ms.assetid: 11f96014-001e-41a0-bcc2-d0684a52fa43
-ms.openlocfilehash: 5ab1419a29dd77ac276681bb49dc529fc05d5b15
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5c08ec3f5618abc601c17cf0d32d583bf21db683
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669552"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64656105"
 ---
 # <a name="whats-new-in-windows-workflow-foundation"></a>Windows Workflow Foundation의 새로운 기능
 Windows WF (Workflow Foundation)에서 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 여러 개발 패러다임이 이전 버전에서 변경 합니다. 이제 워크플로에서 많은 새로운 기능을 보다 쉽게 작성, 실행, 유지 관리 및 구현할 수 있습니다. 마이그레이션.NET 3.0 및.NET 3.5 워크플로 응용 프로그램을 최신 버전을 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [마이그레이션 지침](migration-guidance.md)합니다.  

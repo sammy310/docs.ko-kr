@@ -8,12 +8,12 @@ helpviewer_keywords:
 - private font collections [Windows Forms], creating
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
-ms.openlocfilehash: f78d48c88b72388676f5e7ae963b98d8f1b4beac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1aa3030d9daea57bb9b8970baa78f8117a07bd1a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937837"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624198"
 ---
 # <a name="how-to-create-a-private-font-collection"></a>방법: 개인 글꼴 컬렉션 만들기
 합니다 <xref:System.Drawing.Text.PrivateFontCollection> 클래스에서 상속 된 <xref:System.Drawing.Text.FontCollection> 추상 기본 클래스입니다. 사용할 수는 <xref:System.Drawing.Text.PrivateFontCollection> 응용 프로그램에 맞게 글꼴 집합도 유지 관리 하는 개체입니다. 개인 글꼴 컬렉션 컴퓨터에 설치 되지 않은 글꼴 뿐만 아니라 설치 된 시스템 글꼴을 포함할 수 있습니다. 글꼴 파일을 개인 글꼴 컬렉션에 추가할 호출을 <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> 메서드를 <xref:System.Drawing.Text.PrivateFontCollection> 개체입니다.  

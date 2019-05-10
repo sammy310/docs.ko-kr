@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ': separator character'
 - Visual Basic code, labeling statements
 ms.assetid: 38f1ff43-2054-42cb-963b-1998e60c6ed4
-ms.openlocfilehash: 69ec8c7625410f140c59ba8dd492dca76857eb96
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cbb80d94dc8280aa67859c89daad1520ce4e9669
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050439"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648742"
 ---
 # <a name="how-to-label-statements-visual-basic"></a>방법: 레이블 문 (Visual Basic)
 문 블록은 콜론으로 구분 하는 코드 줄으로 이루어져 있습니다. 코드를 식별 하는 문자열 또는 정수 앞에 줄 수 있다고 *레이블이 지정 된*합니다. 문 레이블은 사용에 대 한 문을 사용 하 여 같은 식별 하는 코드 줄을 표시 하 되 `On Error Goto`합니다.  

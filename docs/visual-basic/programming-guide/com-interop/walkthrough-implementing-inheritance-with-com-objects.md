@@ -7,12 +7,12 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-ms.openlocfilehash: 0b3977e73e3b2aa9e80e2dab08d15035283b8387
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 79d80a1a91911a361bd21f1f3f74424f4f656a18
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022326"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620050"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>연습: COM 개체 (Visual Basic)를 사용한 상속 구현
 Visual Basic 클래스를 파생 시킬 수 있습니다 `Public` 이전 버전의 Visual Basic에서 생성 된 COM 개체의 클래스입니다. 속성 및 COM 개체에서 상속 된 클래스의 메서드를 재정의 하거나 속성 처럼 오버 로드 및 다른 기본 클래스의 메서드를 재정의 또는 오버 로드 될 수 있습니다. COM 개체에서 상속 다시 컴파일하지 않으려는 기존 클래스 라이브러리가 있는 경우에 유용 합니다.  
@@ -69,7 +69,7 @@ Visual Basic 클래스를 파생 시킬 수 있습니다 `Public` 이전 버전�
 10. 만들기 및 COM 개체를 클릭 하 여 등록 **확인 ComObject1.dll** 에 **파일** 메뉴.  
   
     > [!NOTE]
-    >  COM 개체로 Visual Basic을 사용 하 여 만든 클래스를 노출할 수도 있지만 실제 COM 개체 아니며이 연습에서 사용할 수 없습니다. 자세한 내용은 참조 하세요 [.NET Framework 응용 프로그램의 COM 상호 운용성](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)합니다.  
+    >  COM 개체로 Visual Basic을 사용 하 여 만든 클래스를 노출할 수도 있지만 실제 COM 개체 아니며이 연습에서 사용할 수 없습니다. 자세한 내용은 참조 하세요 [.NET Framework 애플리케이션의 COM 상호 운용성](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)합니다.  
   
 ## <a name="interop-assemblies"></a>Interop 어셈블리  
  다음 절차에서는 관리 되지 않는 코드 (예: COM 개체) 및 Visual Studio를 사용 하 여 관리 코드 사이의 연결 다리 역할을 하는 interop 어셈블리를 만들게 됩니다. Visual Basic에서 만든 interop 어셈블리를이 처리와 같은 COM 개체를 사용 하 여 작업의 세부 정보 *interop 마샬링*, 패키징 매개 변수 및 반환 값에 해당 하는 데이터의 프로세스를 채택할 때 형식 및 COM 개체입니다. Visual Basic 응용 프로그램에 대 한 참조는 interop 어셈블리를 실제 COM 개체를 가리킵니다.  

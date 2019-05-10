@@ -2,12 +2,12 @@
 title: 파일이 없으면 파일 정보를 쿼리할 수 없습니다.
 ms.date: 07/20/2015
 ms.assetid: 2bf50d79-2a74-403f-833c-6cabd2c213ce
-ms.openlocfilehash: 93161b823f87e0c5cbfa1f8a8f72ef0bfeb0c534
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3259afc0e371bf00753cef927049ca826ad82848
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971576"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624939"
 ---
 # <a name="file-information-cannot-be-queried-if-the-file-does-not-exist"></a>파일이 없으면 파일 정보를 쿼리할 수 없습니다.
 <xref:System.IO.FileInfo> 개체에서 존재하지 않는 파일 정보를 쿼리하려고 했습니다. 이는 일반적으로 파일 이름을 제공할 때 생긴 실수 때문입니다.  

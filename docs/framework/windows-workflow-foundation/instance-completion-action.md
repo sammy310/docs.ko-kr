@@ -2,12 +2,12 @@
 title: 인스턴스 완료 동작
 ms.date: 03/30/2017
 ms.assetid: 90cc99d2-9fef-42fd-bcbf-a56917993721
-ms.openlocfilehash: 646015fbcdb7c734ae8584c7ca3979d64b81339f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d68f41a586e44f96c9ca26cf8a142a2782adaa36
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791120"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662972"
 ---
 # <a name="instance-completion-action"></a>인스턴스 완료 동작
 합니다 **인스턴스 완료 동작** 속성은 SQL 워크플로 인스턴스 저장소의 삭제 여부를 데이터와 워크플로 인스턴스 메타 데이터는 지 속성 데이터베이스에서 하면 인스턴스가 완료 된 후를 지정할 수 있습니다. 이 속성에 대 한 허용 된 값은 **DeleteAll** 하 고 **DeleteNothing**합니다. 다음 목록에서는 이러한 옵션에 대해 설명합니다.  

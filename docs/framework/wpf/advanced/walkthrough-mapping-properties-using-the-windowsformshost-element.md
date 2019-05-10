@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
-ms.openlocfilehash: edd9d6f698ba27cacb5e9a5eecab43f58d47b8e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a7c36e8fc150fe3268120ed728f1bed87d24e800
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007129"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623595"
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>연습: WindowsFormsHost 요소를 사용하여 속성 매핑
 
@@ -21,17 +21,17 @@ ms.locfileid: "62007129"
 
 이 연습에서 설명하는 작업은 다음과 같습니다.
 
--   프로젝트 만들기.
+- 프로젝트 만들기.
 
--   애플리케이션 레이아웃 정의.
+- 애플리케이션 레이아웃 정의.
 
--   새 속성 매핑 정의.
+- 새 속성 매핑 정의.
 
--   기본 속성 매핑 제거.
+- 기본 속성 매핑 제거.
 
--   기본 속성 매핑 바꾸기.
+- 기본 속성 매핑 바꾸기.
 
--   기본 속성 매핑 확장.
+- 기본 속성 매핑 확장.
 
 이 연습에 설명 된 작업의 전체 코드 목록은 참조 하세요 [WindowsFormsHost 요소 샘플을 사용 하 여 속성 매핑](https://go.microsoft.com/fwlink/?LinkID=160019)합니다.
 
@@ -41,7 +41,7 @@ ms.locfileid: "62007129"
 
 이 연습을 완료하려면 다음 구성 요소가 필요합니다.
 
--   Visual Studio 2017
+- Visual Studio 2017
 
 ## <a name="create-and-set-up-the-project"></a>만들고 프로젝트 설정
 
@@ -76,7 +76,7 @@ ms.locfileid: "62007129"
 
 ### <a name="to-define-a-new-property-mapping"></a>새 속성 매핑을 정의하려면
 
--   다음 코드에 대 한 정의를 복사 합니다 `Window1` 클래스입니다.
+- 다음 코드에 대 한 정의를 복사 합니다 `Window1` 클래스입니다.
 
      [!code-csharp[PropertyMappingWithWfhSample#14](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#14)]
      [!code-vb[PropertyMappingWithWfhSample#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#14)]
@@ -93,7 +93,7 @@ ms.locfileid: "62007129"
 
 ### <a name="to-remove-a-default-property-mapping"></a>기본 속성 매핑을 제거하려면
 
--   다음 코드에 대 한 정의를 복사 합니다 `Window1` 클래스입니다.
+- 다음 코드에 대 한 정의를 복사 합니다 `Window1` 클래스입니다.
 
      [!code-csharp[PropertyMappingWithWfhSample#13](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#13)]
      [!code-vb[PropertyMappingWithWfhSample#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#13)]
@@ -106,7 +106,7 @@ ms.locfileid: "62007129"
 
 ### <a name="to-replace-a-default-property-mapping"></a>기본 속성 매핑을 바꾸려면
 
--   다음 코드에 대 한 정의를 복사 합니다 `Window1` 클래스입니다.
+- 다음 코드에 대 한 정의를 복사 합니다 `Window1` 클래스입니다.
 
      [!code-csharp[PropertyMappingWithWfhSample#12](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#12)]
      [!code-vb[PropertyMappingWithWfhSample#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#12)]
@@ -123,7 +123,7 @@ ms.locfileid: "62007129"
 
 ### <a name="to-extend-a-default-property-mapping"></a>기본 속성 매핑을 확장하려면
 
--   다음 코드에 대 한 정의를 복사 합니다 `Window1` 클래스입니다.
+- 다음 코드에 대 한 정의를 복사 합니다 `Window1` 클래스입니다.
 
      [!code-csharp[PropertyMappingWithWfhSample#15](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#15)]
      [!code-vb[PropertyMappingWithWfhSample#15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#15)]
@@ -145,11 +145,11 @@ ms.locfileid: "62007129"
 
      `WindowLoaded` 메서드 핸들을 <xref:System.Windows.FrameworkElement.Loaded> 이벤트 하 고 다음과 같은 초기화를 수행 합니다.
 
-    -   만듭니다는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.CheckBox> 제어 합니다.
+    - 만듭니다는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.CheckBox> 제어 합니다.
 
-    -   연습에서 이전에 정의한 메서드를 호출하여 속성 매핑을 설정합니다.
+    - 연습에서 이전에 정의한 메서드를 호출하여 속성 매핑을 설정합니다.
 
-    -   매핑된 속성에 초기 값을 할당합니다.
+    - 매핑된 속성에 초기 값을 할당합니다.
 
 2. **F5** 키를 눌러 응용 프로그램을 빌드하고 실행합니다. 효과 확인 하려면이 확인란을 클릭 합니다 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 매핑. 확인란을 클릭하면 레이아웃이 왼쪽에서 오른쪽으로의 방향을 반대로 바꿉니다.
 

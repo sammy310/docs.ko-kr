@@ -6,27 +6,27 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: e7bc996c3d64c0ea3ac8fca5fef759ad309f2967
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c324e4956d6db29e4de12bd7639a69daaf65d872
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747547"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665920"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>연습: 내게 필요한 옵션이 지원되는 Windows 기반 애플리케이션 만들기
 액세스할 수 있는 애플리케이션을 만드는 것은 비즈니스에 중요한 영향을 줍니다. 많은 정부 기관에는 소프트웨어 구매와 관련된 접근성 규정이 있습니다. Certified for Windows 로고에는 접근성 요구 사항이 포함됩니다. 미국에만 3천만 명이 거주하는 것으로 추정되는 잠재 고객 중 많은 사람이 소프트웨어의 내게 필요한 옵션 기능에 따른 영향을 받습니다.  
   
  이 연습에서는 Certified for Windows 로고를 위한 5가지 접근성 요구 사항을 다룹니다. 이러한 요구 사항에 따라 액세스할 수 있는 애플리케이션은 다음을 수행합니다.  
   
--   제어판 크기, 색, 글꼴 및 입력 설정을 지원합니다. 사용자가 제어판 설정을 변경하면 메뉴 모음, 제목 표시줄, 테두리 및 상태 표시줄의 크기가 자동으로 모두 조정됩니다. 이 애플리케이션에서 컨트롤 또는 코드를 추가로 변경할 필요가 없습니다.  
+- 제어판 크기, 색, 글꼴 및 입력 설정을 지원합니다. 사용자가 제어판 설정을 변경하면 메뉴 모음, 제목 표시줄, 테두리 및 상태 표시줄의 크기가 자동으로 모두 조정됩니다. 이 애플리케이션에서 컨트롤 또는 코드를 추가로 변경할 필요가 없습니다.  
   
--   고대비 모드를 지원합니다.  
+- 고대비 모드를 지원합니다.  
   
--   모든 기능에 대한 문서화된 키보드 액세스를 제공합니다.  
+- 모든 기능에 대한 문서화된 키보드 액세스를 제공합니다.  
   
--   키보드 포커스의 위치를 시각적으로 및 프로그래밍 방식으로 노출합니다.  
+- 키보드 포커스의 위치를 시각적으로 및 프로그래밍 방식으로 노출합니다.  
   
--   중요한 정보를 소리로만 전달하지 마세요.  
+- 중요한 정보를 소리로만 전달하지 마세요.  
   
  자세한 내용은 [내게 필요한 옵션을 제공하는 애플리케이션 설계를 위한 리소스](/visualstudio/ide/reference/resources-for-designing-accessible-applications)를 참조하세요.  
   
@@ -41,29 +41,29 @@ ms.locfileid: "61747547"
   
 #### <a name="to-begin-making-the-application"></a>애플리케이션 만들기를 시작하려면  
   
--   Visual Basic 또는 시각적 개체에서 새 Windows 응용 프로그램 만들기 C#입니다. 프로젝트 이름을 **PizzaOrder**로 지정합니다. 자세한 내용은 [새 솔루션 및 프로젝트 만들기](/visualstudio/ide/creating-solutions-and-projects)를 참조하세요.  
+- Visual Basic 또는 시각적 개체에서 새 Windows 응용 프로그램 만들기 C#입니다. 프로젝트 이름을 **PizzaOrder**로 지정합니다. 자세한 내용은 [새 솔루션 및 프로젝트 만들기](/visualstudio/ide/creating-solutions-and-projects)를 참조하세요.  
   
 ## <a name="adding-the-controls-to-the-form"></a>폼에 컨트롤 추가  
  폼에 컨트롤을 추가하는 경우 액세스할 수 있는 애플리케이션을 만들기 위한 다음 지침을 고려하세요.  
   
--   <xref:System.Windows.Forms.Control.AccessibleDescription%2A> 및 <xref:System.Windows.Forms.Control.AccessibleName%2A> 속성을 설정합니다. 이 예제에서는 <xref:System.Windows.Forms.Control.AccessibleRole%2A>에 대한 기본 설정만으로도 충분합니다. 내게 필요한 옵션 속성에 대한 자세한 내용은 [Windows Form의 컨트롤에 내게 필요한 옵션 정보 제공](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md)을 참조하세요.  
+- <xref:System.Windows.Forms.Control.AccessibleDescription%2A> 및 <xref:System.Windows.Forms.Control.AccessibleName%2A> 속성을 설정합니다. 이 예제에서는 <xref:System.Windows.Forms.Control.AccessibleRole%2A>에 대한 기본 설정만으로도 충분합니다. 내게 필요한 옵션 속성에 대한 자세한 내용은 [Windows Form의 컨트롤에 내게 필요한 옵션 정보 제공](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md)을 참조하세요.  
   
--   글꼴 크기를 10포인트 이상으로 설정합니다.  
+- 글꼴 크기를 10포인트 이상으로 설정합니다.  
   
     > [!NOTE]
     >  시작할 때 폼의 글꼴 크기를 10으로 설정하면 이후에 폼에 추가된 모든 컨트롤도 글꼴 크기가 10입니다.  
   
--   TextBox 컨트롤을 설명하는 Label 컨트롤은 탭 순서에서 TextBox 컨트롤 바로 앞에 와야 합니다.  
+- TextBox 컨트롤을 설명하는 Label 컨트롤은 탭 순서에서 TextBox 컨트롤 바로 앞에 와야 합니다.  
   
--   사용자가 탐색할 수 있는 모든 컨트롤의 <xref:System.Windows.Forms.Control.Text%2A> 속성에 "&" 문자를 사용하여 액세스 키를 추가합니다.  
+- 사용자가 탐색할 수 있는 모든 컨트롤의 <xref:System.Windows.Forms.Control.Text%2A> 속성에 "&" 문자를 사용하여 액세스 키를 추가합니다.  
   
--   사용자가 탐색할 수 있는 컨트롤 앞에 오는 레이블의 <xref:System.Windows.Forms.Control.Text%2A> 속성에 "&" 문자를 사용하여 액세스 키를 추가합니다. 사용자가 액세스 키를 누를 때 포커스가 탭 순서의 다음 컨트롤로 설정되도록 레이블의 <xref:System.Windows.Forms.Label.UseMnemonic%2A> 속성을 `true`로 설정합니다.  
+- 사용자가 탐색할 수 있는 컨트롤 앞에 오는 레이블의 <xref:System.Windows.Forms.Control.Text%2A> 속성에 "&" 문자를 사용하여 액세스 키를 추가합니다. 사용자가 액세스 키를 누를 때 포커스가 탭 순서의 다음 컨트롤로 설정되도록 레이블의 <xref:System.Windows.Forms.Label.UseMnemonic%2A> 속성을 `true`로 설정합니다.  
   
--   모든 메뉴 항목에 액세스 키를 추가합니다.  
+- 모든 메뉴 항목에 액세스 키를 추가합니다.  
   
 #### <a name="to-make-your-windows-application-accessible"></a>Windows 애플리케이션을 액세스할 수 있게 하려면  
   
--   폼에 컨트롤을 추가하고 아래에 설명된 대로 속성을 설정합니다. 폼에 컨트롤을 정렬하는 방법에 대한 모델은 표 끝에 있는 그림을 참조하세요.  
+- 폼에 컨트롤을 추가하고 아래에 설명된 대로 속성을 설정합니다. 폼에 컨트롤을 정렬하는 방법에 대한 모델은 표 끝에 있는 그림을 참조하세요.  
   
     |개체|속성|값|  
     |------------|--------------|-----------|  
@@ -137,20 +137,20 @@ ms.locfileid: "61747547"
     |MenuItem|이름|exitApp|  
     ||텍스트|끝내기(&X)|
     
-      폼은 다음 이미지와 같이 표시 됩니다.
+      Your form will look something like the following image:
     
-      ![이름 텍스트 상자 및 크기와 토 핑 선택 하 여 피자 주문 양식입니다.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
+      ![The pizza order form with a name textbox, and size and toppings selection.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
 
 ## <a name="supporting-high-contrast-mode"></a>고대비 모드 지원  
  고대비 모드는 시각 장애가 있는 사용자에게 도움이 되는 대비 색과 글꼴 크기를 사용하여 가독성을 향상시키는 Windows 시스템 설정입니다. <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> 속성 고대비 모드가 설정 되어 있는지 확인 하기 위해 제공 됩니다.  
   
  SystemInformation.HighContrast가 `true`이면 애플리케이션에서 다음을 수행해야 합니다.  
   
--   시스템 색 구성표를 사용하여 모든 사용자 인터페이스 요소 표시  
+- 시스템 색 구성표를 사용하여 모든 사용자 인터페이스 요소 표시  
   
--   색을 통해 전달되는 모든 정보를 시각 신호나 소리로 전달합니다. 예를 들어 빨강 글꼴을 사용하여 특정 목록 항목이 강조 표시된 경우 해당 글꼴에 굵게 표시를 추가하여 항목이 강조 표시되었다는 색이 아닌 신호를 사용자에게 제공할 수도 있습니다.  
+- 색을 통해 전달되는 모든 정보를 시각 신호나 소리로 전달합니다. 예를 들어 빨강 글꼴을 사용하여 특정 목록 항목이 강조 표시된 경우 해당 글꼴에 굵게 표시를 추가하여 항목이 강조 표시되었다는 색이 아닌 신호를 사용자에게 제공할 수도 있습니다.  
   
--   텍스트 뒤에 있는 모든 이미지 또는 패턴 생략  
+- 텍스트 뒤에 있는 모든 이미지 또는 패턴 생략  
   
  응용 프로그램이 시작되고 시스템 이벤트 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>에 응답할 때 응용 프로그램에서 <xref:System.Windows.Forms.SystemInformation.HighContrast%2A>의 설정을 확인해야 합니다. <xref:System.Windows.Forms.SystemInformation.HighContrast%2A>의 값이 변경되면 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 이벤트가 발생합니다.  
   
