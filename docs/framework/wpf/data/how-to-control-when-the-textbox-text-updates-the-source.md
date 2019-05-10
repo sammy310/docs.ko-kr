@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], timing of source updates
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
-ms.openlocfilehash: 5272a19f69b3caf80fd7d5187c9a6a386cd44621
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f7770db59c346f0981dd89a9995f11e41d17a1d
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052003"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063486"
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>방법: TextBox 텍스트가 소스를 업데이트하는 시점 제어
 이 항목에서는 사용 하는 방법을 설명 합니다 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 바인딩 소스 업데이트의 타이밍을 제어 하는 속성입니다. 항목을 사용 하는 <xref:System.Windows.Controls.TextBox> 예를 들어 제어 합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "62052003"
   
  결과적으로 <xref:System.Windows.Controls.TextBlock> 사용자가 텍스트 (소스가 변경) 하므로 같은 텍스트가 표시는 <xref:System.Windows.Controls.TextBox>샘플의 다음 스크린샷에 표시 된 대로:  
   
- ![단순 데이터 바인딩 샘플 스크린 샷](./media/databindingsimplebindingsample2.png "DataBindingSimpleBindingSample2")  
+ ![단순 데이터 바인딩을 보여 주는 스크린샷.](./media/how-to-control-when-the-textbox-text-updates-the-source/data-binding-simple-binding-sample.png)  
   
  대화 상자 또는 사용자가 편집 가능한 폼 및 사용자가 필드 편집을 마치고 "확인"을 클릭할 때까지 소스 업데이트를 지연 하려는 설정할 수 있습니다 하는 경우는 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 값에 대 한 바인딩 <xref:System.Windows.Data.UpdateSourceTrigger.Explicit>다음 예제와 같이:  
   

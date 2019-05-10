@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pens [Windows Forms], setting width
 - pens [Windows Forms], setting alignment
 ms.assetid: a202af36-4d31-4401-a126-b232f51db581
-ms.openlocfilehash: bc2ac2587554215ef3b2c2580413fbbb894aa687
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1f1ea6e8ef0b94aa46a4bf8177d59e59297d6e3f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967301"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64605829"
 ---
 # <a name="how-to-set-pen-width-and-alignment"></a>방법: 펜 굵기 및 맞춤 설정
 만들 때를 <xref:System.Drawing.Pen>를 생성자에 인수 중 하나로 펜 굵기를 제공할 수 있습니다. 펜 너비를 변경할 수도 있습니다는 <xref:System.Drawing.Pen.Width%2A> 의 속성을 <xref:System.Drawing.Pen> 클래스입니다.  

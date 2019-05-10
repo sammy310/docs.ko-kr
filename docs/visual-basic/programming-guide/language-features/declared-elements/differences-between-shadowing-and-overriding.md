@@ -5,12 +5,12 @@ helpviewer_keywords:
 - shadowing, vs. overriding
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
-ms.openlocfilehash: b935184f0e4d0378bfea69811aa4e6c068a9776f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8fcf43040e9cbbcb2a59b1e1cf8c1f58951d5d87
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61827946"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610471"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>숨기기와 재정의의 차이점(Visual Basic)
 기본 클래스에서 상속 되는 클래스를 정의 하는 경우 하나 이상의 파생된 클래스에서 기본 클래스 요소를 다시 정의 하려는 경우가 있습니다. 숨기기와 재정의이 목적을 위해는 둘 다 사용할 수 있습니다.  
@@ -41,15 +41,15 @@ ms.locfileid: "61827946"
 ## <a name="guidelines"></a>지침  
  일반적으로 다음과 같은 경우 재정의 사용 합니다.  
   
--   파생된 클래스 다형 정의 됩니다.  
+- 파생된 클래스 다형 정의 됩니다.  
   
--   안전을 컴파일러는 동일한 요소 형식 및 호출 시퀀스를 적용 해야 합니다.  
+- 안전을 컴파일러는 동일한 요소 형식 및 호출 시퀀스를 적용 해야 합니다.  
   
  일반적으로 다음과 같은 경우 숨기기를 사용 합니다.  
   
--   기본 클래스 수정 될 수 있으며이 사용자와 동일한 이름을 사용 하는 요소를 정의 하는 예상 합니다.  
+- 기본 클래스 수정 될 수 있으며이 사용자와 동일한 이름을 사용 하는 요소를 정의 하는 예상 합니다.  
   
--   요소 형식을 변경 하거나 호출 시퀀스의 자유를 원하고 있습니다.  
+- 요소 형식을 변경 하거나 호출 시퀀스의 자유를 원하고 있습니다.  
   
 ## <a name="see-also"></a>참고자료
 

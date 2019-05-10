@@ -15,12 +15,12 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-ms.openlocfilehash: 6139af65958cefe43578f436204fa6836a71de0b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 806e4605411304f58d0428f2588454ba9652946e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917841"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610365"
 ---
 # <a name="scope-in-visual-basic"></a>Visual Basic의 범위
 합니다 *범위* 선언 된 요소의 이름을 한정 하거나 통하지 않고를 참조할 수 있는 모든 코드의 집합입니다는 [Imports 문 (.NET Namespace 및 형식)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)합니다. 요소는 다음 수준 중 하나에서 범위를 포함할 수 있습니다.  
@@ -37,11 +37,11 @@ ms.locfileid: "61917841"
 ## <a name="specifying-scope-and-defining-variables"></a>범위를 지정 하 고 변수를 정의 합니다.  
  선언할 때 요소의 범위를 지정 합니다. 범위는 다음 요인에 따라 달라질 수 있습니다.  
   
--   요소를 선언한 지역 (블록, 절차, 모듈, 클래스 또는 구조체)  
+- 요소를 선언한 지역 (블록, 절차, 모듈, 클래스 또는 구조체)  
   
--   요소 선언을 포함 하는 네임 스페이스  
+- 요소 선언을 포함 하는 네임 스페이스  
   
--   요소에 대 한 선언 하는 액세스 수준  
+- 요소에 대 한 선언 하는 액세스 수준  
   
  이렇게 하기 때문에 이름은 같지만 다른 범위를 사용 하 여 변수를 정의 하는 경우 주의 예기치 않은 결과가 발생할 수 있습니다. 자세한 내용은 [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)을 참조하세요.  
   
@@ -51,21 +51,21 @@ ms.locfileid: "61917841"
 ### <a name="block-scope"></a>블록 범위  
  블록의 시작 및 종료 같은 선언문에 묶인 문 집합 같습니다.  
   
--   `Do` 및 `Loop`  
+- `Do` 및 `Loop`  
   
--   `For` [`Each`] 및 `Next`  
+- `For` [`Each`] 및 `Next`  
   
--   `If` 및 `End If`  
+- `If` 및 `End If`  
   
--   `Select` 및 `End Select`  
+- `Select` 및 `End Select`  
   
--   `SyncLock` 및 `End SyncLock`  
+- `SyncLock` 및 `End SyncLock`  
   
--   `Try` 및 `End Try`  
+- `Try` 및 `End Try`  
   
--   `While` 및 `End While`  
+- `While` 및 `End While`  
   
--   `With` 및 `End With`  
+- `With` 및 `End With`  
   
  블록 내에서 변수를 선언 하는 경우 해당 블록 내 에서만 사용할 수 있습니다. 다음 예제에서는 정수 변수의 범위에에서 `cube` 간에 블록입니다 `If` 하 고 `End If`를 더 이상 참조할 수 없습니다 및 `cube` 실행 블록 밖으로 전달 하는 경우.  
   
@@ -127,9 +127,9 @@ Public strMsg As String
 ### <a name="advantages-of-local-variables"></a>지역 변수의 장점  
  지역 변수는 다음과 같은 이유로 적합 한 모든 종류의 임시 계산은:  
   
--   **이름 충돌 방지 합니다.** 지역 변수 이름 충돌을 쉽게 받지 않습니다. 예를 들어 라는 변수를 포함 하는 몇 가지 다른 프로시저를 만들 수 있습니다 `intTemp`합니다. 각 `intTemp` 지역 변수로 선언 된 각 프로시저 자체 버전에만 인식의 `intTemp`합니다. 하나의 프로시저는 로컬 값을 변경할 수 있습니다 `intTemp` 영향을 주지 않고 `intTemp` 다른 프로시저에서 변수입니다.  
+- **이름 충돌 방지 합니다.** 지역 변수 이름 충돌을 쉽게 받지 않습니다. 예를 들어 라는 변수를 포함 하는 몇 가지 다른 프로시저를 만들 수 있습니다 `intTemp`합니다. 각 `intTemp` 지역 변수로 선언 된 각 프로시저 자체 버전에만 인식의 `intTemp`합니다. 하나의 프로시저는 로컬 값을 변경할 수 있습니다 `intTemp` 영향을 주지 않고 `intTemp` 다른 프로시저에서 변수입니다.  
   
--   **메모리 사용량** 지역 변수는 해당 프로시저가 실행 되는 동안에 메모리를 사용 합니다. 프로시저가 호출 코드에 반환 되는 메모리 해제 됩니다. 이와 반대로 [공유](../../../../visual-basic/language-reference/modifiers/shared.md) 하 고 [정적](../../../../visual-basic/language-reference/modifiers/static.md) 변수 응용 프로그램 실행이 중지 될 때까지 메모리 리소스를 소비, 따라서 필요한 경우에 사용 합니다. *인스턴스 변수* 는 로컬 변수를 보다 효율적이 지 않지만 보다 효율적 해당 인스턴스는 계속 존재 하는 동안 메모리 소비 `Shared` 또는 `Static` 변수입니다.  
+- **메모리 사용량** 지역 변수는 해당 프로시저가 실행 되는 동안에 메모리를 사용 합니다. 프로시저가 호출 코드에 반환 되는 메모리 해제 됩니다. 이와 반대로 [공유](../../../../visual-basic/language-reference/modifiers/shared.md) 하 고 [정적](../../../../visual-basic/language-reference/modifiers/static.md) 변수 응용 프로그램 실행이 중지 될 때까지 메모리 리소스를 소비, 따라서 필요한 경우에 사용 합니다. *인스턴스 변수* 는 로컬 변수를 보다 효율적이 지 않지만 보다 효율적 해당 인스턴스는 계속 존재 하는 동안 메모리 소비 `Shared` 또는 `Static` 변수입니다.  
   
 ### <a name="minimizing-scope"></a>범위를 최소화합니다.  
  일반적으로 변수 또는 상수를 선언할 때 최대한으로 좁은 범위를 확인 하려면이 좋은 프로그래밍 방법 (블록 범위는 좁음). 이 메모리를 절약 하는 데 도움이 됩니다 하 고 변수를 잘못 참조 코드의 가능성을 최소화 합니다. 변수를 선언 해야 마찬가지로 [정적](../../../../visual-basic/language-reference/modifiers/static.md) 경우에 프로시저 호출 하는 동안 값을 유지 해야 합니다.  

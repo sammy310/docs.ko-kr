@@ -2,12 +2,12 @@
 title: 트랜잭션 프로토콜
 ms.date: 03/30/2017
 ms.assetid: 2820b0ec-2f32-430c-b299-1f0e95e1f2dc
-ms.openlocfilehash: 3f4824ac6098f33b7bde4f29d3e0950783dfd213
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31fa6a776cc69c09f030c4de857085b30bf2edba
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918894"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64585758"
 ---
 # <a name="transaction-protocols"></a>트랜잭션 프로토콜
 Windows Communication Foundation (WCF) Ws-atomic Transaction 및 Ws-coordination 프로토콜을 구현 합니다.  
@@ -45,13 +45,13 @@ Windows Communication Foundation (WCF) Ws-atomic Transaction 및 Ws-coordination
   
  그림과 표에서는 보안의 관점에서 메시지에 대한 4가지 클래스를 보여 줍니다.  
   
--   활성화 메시지(CreateCoordinationContext 및 CreateCoordinationContextResponse)  
+- 활성화 메시지(CreateCoordinationContext 및 CreateCoordinationContextResponse)  
   
--   등록 메시지(Register 및 RegisterResponse)  
+- 등록 메시지(Register 및 RegisterResponse)  
   
--   프로토콜 메시지(준비, 롤백, 커밋, 중단 등)  
+- 프로토콜 메시지(준비, 롤백, 커밋, 중단 등)  
   
--   응용 프로그램 메시지  
+- 응용 프로그램 메시지  
   
  처음 세 개의 메시지 클래스는 트랜잭션 관리자 메시지로 간주되며, 해당 바인딩 구성은 이 항목의 뒷부분에 있는 "응용 프로그램 메시지 교환"에서 설명합니다. 네 번째 메시지는 응용 프로그램 간 메시지이며, 이 항목의 뒷부분에 있는 "메시지 예제" 단원에서 설명합니다. 이 섹션에서는 이러한 각 클래스에 대 한 WCF에서 사용 된 프로토콜 바인딩을 설명 합니다.  
   
@@ -80,9 +80,9 @@ Windows Communication Foundation (WCF) Ws-atomic Transaction 및 Ws-coordination
 #### <a name="https-transport-configuration"></a>HTTPS 전송 구성  
  X.509 인증서는 트랜잭션 관리자 ID를 설정하는 데 사용합니다. 클라이언트/서버 인증이 필요하며, 클라이언트/서버 권한 부여는 구현 정보로 유지됩니다.  
   
--   R1111: 네트워크를 통해 표시 되는 X.509 인증서는 원래 컴퓨터의 정규화 된 도메인 이름 (FQDN)과 일치 하는 주체 이름이 있어야 합니다.  
+- R1111: 네트워크를 통해 표시 되는 X.509 인증서는 원래 컴퓨터의 정규화 된 도메인 이름 (FQDN)과 일치 하는 주체 이름이 있어야 합니다.  
   
--   B1112: DNS 되려면 X.509 주체 이름 확인에 대 한 시스템에서 각 발신자-수신자 쌍 간에 작동 해야 합니다.  
+- B1112: DNS 되려면 X.509 주체 이름 확인에 대 한 시스템에서 각 발신자-수신자 쌍 간에 작동 해야 합니다.  
   
 #### <a name="activation-and-registration-binding-configuration"></a>바인딩 구성 활성화 및 등록  
  WCF는 HTTPS를 통해 상관 관계를 사용 하 여 요청/회신 이중 바인딩이 필요합니다. 요청/회신 메시지 교환 패턴의 상관 관계 및 설명에 대한 자세한 내용은 8단원 WS-Atomic Transaction을 참조하십시오.  
@@ -105,9 +105,9 @@ Windows Communication Foundation (WCF) Ws-atomic Transaction 및 Ws-coordination
   
  8단원 WS-Atomic Transaction 사양에서는 상관 관계 및 메시지 교환 패턴에 대해 좀 더 자세히 설명합니다.  
   
--   R1222: 수신 시를 `CreateCoordinationContext`, 코디네이터가 실행 해야 합니다는 `SecurityContextToken` 연관 된 비밀을 사용 하 여 `STx`입니다. 이 토큰은 WS-Trust 사양을 따르는 `t:IssuedTokens` 헤더의 내부로 반환됩니다.  
+- R1222: 수신 시를 `CreateCoordinationContext`, 코디네이터가 실행 해야 합니다는 `SecurityContextToken` 연관 된 비밀을 사용 하 여 `STx`입니다. 이 토큰은 WS-Trust 사양을 따르는 `t:IssuedTokens` 헤더의 내부로 반환됩니다.  
   
--   R1223: 활성화는 기존 코디 네이션 컨텍스트 내에서 발생 하는 경우는 `t:IssuedTokens` 헤더를 `SecurityContextToken` 기존 연결에서 상황에 맞는 이동 해야 합니다는 `CreateCoordinationContext` 메시지입니다.  
+- R1223: 활성화는 기존 코디 네이션 컨텍스트 내에서 발생 하는 경우는 `t:IssuedTokens` 헤더를 `SecurityContextToken` 기존 연결에서 상황에 맞는 이동 해야 합니다는 `CreateCoordinationContext` 메시지입니다.  
   
  새 `t:IssuedTokens` 나가는 연결에 대 한 헤더를 생성 해야 `wscoor:CreateCoordinationContextResponse` 메시지입니다.  
   
@@ -128,9 +128,9 @@ Windows Communication Foundation (WCF) Ws-atomic Transaction 및 Ws-coordination
 ## <a name="application-message-exchange"></a>응용 프로그램 메시지 교환  
  바인딩이 다음 보안 요구 사항을 만족하는 경우, 응용 프로그램에서는 응용 프로그램 간 메시지에 대해 특정 바인딩을 자유롭게 사용할 수 있습니다.  
   
--   R2001: 응용 프로그램 간 메시지 전달 해야 합니다 `t:IssuedTokens` 헤더와 함께 `CoordinationContext` 메시지의 헤더에 합니다.  
+- R2001: 응용 프로그램 간 메시지 전달 해야 합니다 `t:IssuedTokens` 헤더와 함께 `CoordinationContext` 메시지의 헤더에 합니다.  
   
--   R2002: 무결성 및 기밀성 `t:IssuedToken` 제공 해야 합니다.  
+- R2002: 무결성 및 기밀성 `t:IssuedToken` 제공 해야 합니다.  
   
  `CoordinationContext` 헤더에는 `wscoor:Identifier`가 포함됩니다. 정의 하는 동안 `xsd:AnyURI` 절대 및 상대 Uri 사용할 수 있도록 WCF 지원 `wscoor:Identifiers`는 절대 Uri입니다.  
   

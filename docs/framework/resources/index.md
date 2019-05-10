@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86efc3a9d9eab5c1529804769af413dd88e71f1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aabf2ad437ee8a50614ca27978aa0a031f5d7e55
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792903"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592240"
 ---
 # <a name="resources-in-net-apps"></a>.NET 앱의 리소스
 거의 모든 프로덕션 수준 응용 프로그램은 리소스를 사용해야 합니다. 리소스는 응용 프로그램과 함께 논리적으로 배포되는 실행 불가능한 데이터입니다. 리소스는 응용 프로그램에서 오류 메시지로 표시되거나 사용자 인터페이스의 일부로 표시될 수 있습니다. 리소스는 문자열, 이미지, 지속된 개체 등을 포함하여 수많은 형식의 데이터를 포함할 수 있습니다. (지속된 개체를 리소스 파일에 쓰려면 해당 개체를 serialize할 수 있어야 합니다.) 리소스 파일에 데이터를 저장하면 전체 응용 프로그램을 다시 컴파일하지 않고 데이터를 변경할 수 있습니다. 또한 단일 위치에 데이터를 저장할 수 있고, 여러 위치에 저장되어 있는 하드 코딩된 데이터를 사용하지 않아도 됩니다.  
@@ -43,23 +43,23 @@ ms.locfileid: "61792903"
 ## <a name="retrieving-resources"></a>리소스 검색  
  실행 시, 응용 프로그램은 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> 속성으로 지정된 문화권에 따라 적절한 지역화된 리소스를 스레드별로 로드합니다. 이 속성 값은 다음과 같이 파생됩니다.  
   
--   지역화된 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 개체를 <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> 속성에 직접 할당합니다.  
+- 지역화된 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 개체를 <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> 속성에 직접 할당합니다.  
   
--   문화권이 명시적으로 할당되지 않은 경우에는 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> 속성에서 기본 스레드 UI 문화권을 검색합니다.  
+- 문화권이 명시적으로 할당되지 않은 경우에는 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> 속성에서 기본 스레드 UI 문화권을 검색합니다.  
   
--   기본 스레드 UI 문화권이 명시적으로 할당되지 않은 경우 로컬 컴퓨터의 현재 사용자에 대한 문화권을 검색합니다. Windows에서 실행되는 .NET 구현은 Windows [`GetUserDefaultUILanguage`](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage) 함수를 호출하여 수행합니다.  
+- 기본 스레드 UI 문화권이 명시적으로 할당되지 않은 경우 로컬 컴퓨터의 현재 사용자에 대한 문화권을 검색합니다. Windows에서 실행되는 .NET 구현은 Windows [`GetUserDefaultUILanguage`](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage) 함수를 호출하여 수행합니다.  
   
  현재 UI 문화권을 설정하는 방법에 대한 자세한 내용은 <xref:System.Globalization.CultureInfo> 및 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> 참조 페이지를 참조하십시오.  
   
  <xref:System.Resources.ResourceManager?displayProperty=nameWithType> 클래스를 사용하여 현재 UI 문화권 또는 특정 문화권에 대한 리소스를 검색할 수도 있습니다. <xref:System.Resources.ResourceManager> 클래스가 리소스를 검색하는 데 가장 일반적으로 사용되지만, <xref:System.Resources?displayProperty=nameWithType> 네임스페이스는 리소스를 검색하는 데 사용할 수 있는 추가 형식을 포함합니다. 여기에는 다음이 포함됩니다.  
   
--   <xref:System.Resources.ResourceReader> 클래스를 사용하면 어셈블리에 포함되거나 독립 실행형 이진 .resources 파일에 저장된 리소스를 열거할 수 있습니다. 런타임에 사용할 수 있는 리소스의 정확한 이름을 모르는 경우에 유용합니다.  
+- <xref:System.Resources.ResourceReader> 클래스를 사용하면 어셈블리에 포함되거나 독립 실행형 이진 .resources 파일에 저장된 리소스를 열거할 수 있습니다. 런타임에 사용할 수 있는 리소스의 정확한 이름을 모르는 경우에 유용합니다.  
   
--   <xref:System.Resources.ResXResourceReader> 클래스를 사용하면 XML(.resx) 파일에서 리소스를 검색할 수 있습니다.  
+- <xref:System.Resources.ResXResourceReader> 클래스를 사용하면 XML(.resx) 파일에서 리소스를 검색할 수 있습니다.  
   
--   <xref:System.Resources.ResourceSet> 클래스를 사용하면 대체 규칙을 준수하지 않고 특정 문화권의 리소스를 검색할 수 있습니다. 리소스는 어셈블리 또는 독립 실행형 이진 .resources 파일에 저장할 수 있습니다. 또한 <xref:System.Resources.IResourceReader> 클래스를 사용하여 다른 소스에서 리소스를 검색할 수 있도록 하는 <xref:System.Resources.ResourceSet> 구현을 개발할 수 있습니다.  
+- <xref:System.Resources.ResourceSet> 클래스를 사용하면 대체 규칙을 준수하지 않고 특정 문화권의 리소스를 검색할 수 있습니다. 리소스는 어셈블리 또는 독립 실행형 이진 .resources 파일에 저장할 수 있습니다. 또한 <xref:System.Resources.IResourceReader> 클래스를 사용하여 다른 소스에서 리소스를 검색할 수 있도록 하는 <xref:System.Resources.ResourceSet> 구현을 개발할 수 있습니다.  
   
--   <xref:System.Resources.ResXResourceSet> 클래스를 사용하면 메모리에서 XML 리소스 파일에 있는 모든 항목을 검색할 수 있습니다.  
+- <xref:System.Resources.ResXResourceSet> 클래스를 사용하면 메모리에서 XML 리소스 파일에 있는 모든 항목을 검색할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목
 

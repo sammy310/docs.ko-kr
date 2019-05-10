@@ -2,12 +2,12 @@
 title: "'ReDim' Preserve 피연산자는 Nothing이 될 수 없습니다."
 ms.date: 07/20/2015
 ms.assetid: b857f313-3fc2-4262-a577-88df1718b811
-ms.openlocfilehash: 0f2354cdf52c65eb3ce387933ebfc825c80e6bad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 17f89270c524d4a2e16d44523e72b9eebc9895ca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61613343"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591863"
 ---
 # <a name="redim-preserve-operand-cannot-be-nothing"></a>'ReDim' Preserve 피연산자는 Nothing이 될 수 없습니다.
 `ReDim` 문에서 `Preserve` 키워드를 사용하여 마지막 차원이 아닌 배열의 차원을 변경하려고 했지만, 해당 피연산자에 대한 올바른 값을 제공하지 않았습니다.  

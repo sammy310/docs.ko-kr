@@ -2,12 +2,12 @@
 title: 연결 End
 ms.date: 03/30/2017
 ms.assetid: 2c345213-0296-4d90-ac6d-cef179798a75
-ms.openlocfilehash: e549254533f8362ce3475fb3aa5dbaffb3e900e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 085188969b0daf5153b40361d4b15d696920c829
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769613"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592583"
 ---
 # <a name="association-end"></a>연결 End
 *연결 end* 하 게 식별 하는 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md) 한쪽 끝에는 [연결](../../../../docs/framework/data/adonet/association-type.md) 및 연결의 해당 end에 있을 수 있는 인스턴스를 입력 하는 엔터티의 수입니다. 연결 End는 연결의 일부로 정의되고 연결에는 정확히 두 개의 연결 End가 있어야 합니다. [탐색 속성](../../../../docs/framework/data/adonet/navigation-property.md) 다른 끝에서 탐색을 허용 합니다.  

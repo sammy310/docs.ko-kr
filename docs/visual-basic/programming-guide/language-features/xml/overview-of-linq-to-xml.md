@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], about LINQ to XML
 - LINQ [Visual Basic], LINQ to XML
 ms.assetid: 01c62a79-6d58-468e-84fb-039c05947701
-ms.openlocfilehash: 91f622b9eecdd1aec8b9361493095e92a851988e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8695e94797c297154db9597c6e9938ed9aecfef
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761842"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063029"
 ---
 # <a name="overview-of-linq-to-xml-in-visual-basic"></a>Visual Basic의 LINQ to XML 개요
 Visual Basic에 대 한 지원을 제공 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] XML 리터럴과 XML 축 속성을 통해. 이 옵션을 사용 하면 Visual Basic 코드에서 XML을 사용 하 여 작업에 대 한 친숙 하 고 편리한 구문을 사용할 수 있습니다. *XML 리터럴* 코드에서 직접 XML을 포함할 수 있도록 합니다. *XML 축 속성* 액세스 자식 노드, 하위 노드 및 XML 리터럴의 특성 수입니다. 자세한 내용은 [XML 리터럴 개요](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md) 하 고 [Visual Basic의 XML에 액세스](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)합니다.  
@@ -20,7 +20,7 @@ Visual Basic에 대 한 지원을 제공 [!INCLUDE[sqltecxlinq](~/includes/sqlte
 > [!NOTE]
 >  XML 리터럴과 XML 축 속성은 ASP.NET 페이지의 선언적 코드에서 지원 되지 않습니다. Visual Basic XML 기능을 사용 하려면 ASP.NET 응용 프로그램에서 코드 숨김 페이지에 코드를 입력 합니다.  
   
- ![비디오 링크](../../../../visual-basic/programming-guide/language-features/xml/media/playvideo.gif "PlayVideo") 관련된 비디오 데모를 참조 하세요. [하는 LINQ to XML 시작 하는 방법?](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-get-started-with-linq-to-xml) 하 고 [LINQ to XML 사용 하 여 Excel 스프레드시트 만들기 구성 방법?](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-create-excel-spreadsheets-using-linq-to-xml)합니다.  
+ [재생 단추](./media/overview-of-linq-to-xml/play-video-icon-example.gif) 관련된 비디오 데모를 참조 하세요. [하는 LINQ to XML 시작 하는 방법?](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-get-started-with-linq-to-xml) 하 고 [LINQ to XML 사용 하 여 Excel 스프레드시트 만들기 구성 방법?](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-create-excel-spreadsheets-using-linq-to-xml)합니다.   
   
 ## <a name="creating-xml"></a>XML 만들기  
  Visual Basic에서 XML 트리를 만드는 두 가지가 있습니다. 코드에서 직접 리터럴 XML를 선언할 수 있습니다 하거나 사용할 수 있습니다는 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Api 트리를 만들 수 있습니다. 두 프로세스 모두 XML 트리의 최종 구조를 반영 하는 코드를 사용 합니다. 예를 들어, 다음 코드 예제는 XML 요소를 만듭니다.  

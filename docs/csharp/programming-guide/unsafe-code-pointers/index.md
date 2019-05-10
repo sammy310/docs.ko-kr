@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, pointers
 - pointers [C#], about pointers
 ms.assetid: b0fcca10-a92d-4f2a-835b-b0ccae6739ee
-ms.openlocfilehash: 3712e04d4496d13178843564b5d0753f62e28fa0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f4e74e1e8fa71d1492a10162191822c1edfb635
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61678105"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608045"
 ---
 # <a name="unsafe-code-and-pointers-c-programming-guide"></a>안전하지 않은 코드 및 포인터(C# 프로그래밍 가이드)
 형식 안전성 및 보안을 유지하기 위해 C#에서는 포인터 산술 연산을 기본적으로 지원하지 않습니다. 그러나 [unsafe](../../../csharp/language-reference/keywords/unsafe.md) 키워드를 사용하여 포인터를 사용할 수 있는 안전하지 않은 컨텍스트를 정의할 수 있습니다. 포인터에 대한 자세한 내용은 [포인터 형식](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md) 항목을 참조하세요.  
@@ -27,26 +27,26 @@ ms.locfileid: "61678105"
 ## <a name="unsafe-code-overview"></a>안전하지 않은 코드 개요  
  안전하지 않은 코드에는 다음과 같은 속성이 있습니다.  
   
--   메서드, 형식 및 코드 블록은 안전하지 않은 것으로 정의할 수 있습니다.  
+- 메서드, 형식 및 코드 블록은 안전하지 않은 것으로 정의할 수 있습니다.  
   
--   경우에 따라 안전하지 않은 코드는 배열 범위 검사를 제거하여 애플리케이션의 성능을 향상할 수 있습니다.  
+- 경우에 따라 안전하지 않은 코드는 배열 범위 검사를 제거하여 애플리케이션의 성능을 향상할 수 있습니다.  
   
--   포인터가 필요한 네이티브 함수를 호출하는 경우 안전하지 않은 코드가 필요합니다.  
+- 포인터가 필요한 네이티브 함수를 호출하는 경우 안전하지 않은 코드가 필요합니다.  
   
--   안전하지 않은 코드를 사용하면 보안 및 안정성 위험이 발생합니다.  
+- 안전하지 않은 코드를 사용하면 보안 및 안정성 위험이 발생합니다.  
   
--   C#에서 안전하지 않은 코드를 컴파일하기 위해 애플리케이션을 [/unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md)를 사용하여 컴파일해야 합니다.  
+- C#에서 안전하지 않은 코드를 컴파일하기 위해 애플리케이션을 [/unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md)를 사용하여 컴파일해야 합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
  자세한 내용은 다음을 참조하세요.  
   
--   [포인터 형식](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
+- [포인터 형식](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
   
--   [고정 크기 버퍼](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md)  
+- [고정 크기 버퍼](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md)  
   
--   [방법: 포인터를 사용하여 바이트 배열 복사](../../../csharp/programming-guide/unsafe-code-pointers/how-to-use-pointers-to-copy-an-array-of-bytes.md)  
+- [방법: 포인터를 사용하여 바이트 배열 복사](../../../csharp/programming-guide/unsafe-code-pointers/how-to-use-pointers-to-copy-an-array-of-bytes.md)  
   
--   [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
+- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

@@ -2,12 +2,12 @@
 title: 동작을 사용하여 서버 쪽 동작 구현
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: 4467d52df5dbb134947111e96782e257eef253e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23a01b7221fcfcbfc3cceb82123c68879eba98a3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875254"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063171"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>동작을 사용하여 서버 쪽 동작 구현
 
@@ -46,7 +46,7 @@ OData 동작을 통해 OData 서비스에서 검색한 리소스에 따른 동�
   
 3. GetResult()를 사용하여 결과를 검색할 수 있도록 Invoke()에서 결과를 저장합니다.  
   
- 매개 변수를 토큰으로 전달할 수 있습니다. 이는 실제 동작에 디스패치하기 전에 이러한 토큰을 실제 리소스로 변환(마샬링)해야 할 수 있는 경우 리소스를 나타내는 토큰과 함께 작동하는 데이터 서비스 공급자를 쓸 수 있기 때문입니다. 매개 변수를 마샬링한 후 동작이 호출될 때 발생하는 리소스에 대한 변경 내용을 디스크에 저장하고 쓸 수 있도록 매개 변수가 편집 가능한 상태여야 합니다.  
+ 매개 변수를 토큰으로 전달할 수 있습니다. 이는 실제 동작에 디스패치하기 전에 이러한 토큰을 실제 리소스로 변환(마샬링)해야 할 수 있는 경우 리소스를 나타내는 토큰과 함께 작동하는 데이터 서비스 공급자를 쓸 수 있기 때문입니다. 매개 변수를 마샬링 한 후 작업을 호출할 때 발생 하는 리소스에 내용을 저장 하 고 쓸 디스크 되도록 편집 가능한 상태 여야 합니다 것입니다.  
   
  이 인터페이스에는 두 메서드가 필요합니다. 호출 및 GetResult 합니다. Invoke는 동작의 동작을 구현하는 대리자를 호출하고 GetResult는 동작의 결과를 반환합니다.  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: a6baf073e25635f0a6dd666d681d8bc641128ea0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7712ed02d20d692842267464a645bfc93ca8fd73
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982373"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063887"
 ---
 # <a name="routed-events-overview"></a>라우트된 이벤트 개요
 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 라우트된 이벤트의 개념을 설명합니다. 이 항목에서는 라우트된 이벤트 용어를 정의하고, 라우트된 이벤트가 요소 트리를 통해 라우트되는 방식을 설명하고, 라우트된 이벤트를 처리하는 방법을 요약하고, 자체 사용자 지정 라우트된 이벤트를 만드는 방법을 소개합니다.
@@ -197,10 +197,9 @@ ms.locfileid: "61982373"
   
  쌍으로 제공되는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 입력 이벤트는 마우스 단추 누르기와 같은 입력의 단일 사용자 작업이 해당 쌍의 라우트된 이벤트를 둘 다 순차적으로 발생시키도록 구현됩니다. 먼저 터널링 이벤트가 발생하고 경로를 이동합니다. 그 다음에 버블링 이벤트가 발생하고 경로를 이동합니다. 두 이벤트는 문자 그대로 동일한 이벤트 데이터 인스턴스를 공유 하기 때문에 <xref:System.Windows.UIElement.RaiseEvent%2A> 버블링 이벤트를 발생 시키는 구현 클래스에서 메서드 호출이 터널링 이벤트의 이벤트 데이터를 수신 대기 하 고 발생된 한 새 이벤트에서이 다시 사용 합니다. 터널링 이벤트에 대한 처리기가 있는 수신기는 우선적으로 라우트된 이벤트를 처리됨으로 표시할 수 있습니다(클래스 처리기 우선, 그 다음에 인스턴스 처리기). 터널링 경로에 따라 있는 요소가 라우트된 이벤트를 처리됨으로 표시한 경우 버블링 이벤트에 대한 이미 처리된 이벤트 데이터가 전송되고 해당하는 버블링 입력 이벤트에 대한 일반 연결된 처리기는 호출되지 않습니다. 표면적으로는 처리된 버블링 이벤트가 발생하지 않은 경우처럼 보입니다. 이 처리 동작은 컨트롤 합치기에 유용합니다. 이 경우 모든 적중 테스트 기반 입력 이벤트나 포커스 기반 입력 이벤트를 복합 부분이 아닌 최종 컨트롤이 보고하도록 할 수 있습니다. 최종 컨트롤 요소는 합치기에서 루트에 더 근접하므로 터널링 이벤트를 먼저 클래스에서 처리하고 라우트된 이벤트를 컨트롤에 대한 관련성이 더 높은 이벤트(컨트롤 클래스를 지원하는 코드의 일부)로 “대체”할 수 있습니다.  
   
- 입력 이벤트 처리가 적용되는 방식에 대한 그림으로 다음 입력 이벤트 예제를 살펴보겠습니다. 다음 트리 그림에서 `leaf element #2`는 `PreviewMouseDown` 및 `MouseDown` 이벤트의 소스입니다.  
+ 입력 이벤트 처리가 적용되는 방식에 대한 그림으로 다음 입력 이벤트 예제를 살펴보겠습니다. 다음 트리 그림에서 `leaf element #2` 둘 다의 원본인를 `PreviewMouseDown` 차례로 `MouseDown` 이벤트:  
   
- ![이벤트 라우팅 다이어그램](./media/wcsdkcoreinputevents.png "wcsdkCoreInputEvents")  
-입력 이벤트 버블링 및 터널링  
+ ![이벤트 라우팅 다이어그램](./media/routed-events-overview/input-event-routing.png)  
   
  이벤트 처리 순서는 다음과 같습니다.  
   

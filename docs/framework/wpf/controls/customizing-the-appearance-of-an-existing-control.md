@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-ms.openlocfilehash: b52a63a0531d71c784ef12f29049754f4a9efddb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 563f4a9fefe86b58f0dc6f0a4aec5cb285630616
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017839"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593401"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정
 <a name="introduction"></a> <xref:System.Windows.Controls.ControlTemplate> 시각적 구조 및 컨트롤의 시각적 동작을 지정 합니다. 새 제공 하 여 컨트롤의 모양을 사용자 지정할 수 있습니다 <xref:System.Windows.Controls.ControlTemplate>합니다. 만들 때는 <xref:System.Windows.Controls.ControlTemplate>, 해당 기능을 변경 하지 않고 기존 컨트롤의 모양을 바꿉니다. 예를 들어, 만들 수 단추 응용 프로그램에서 기본 사각형 모양 대신 둥근 있지만 단추에서 여전히 발생을 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다.  
@@ -64,11 +64,11 @@ ms.locfileid: "62017839"
   
  이 예제에서 시각적 구조는 다음 부분으로 구성되어 있습니다.  
   
--   A <xref:System.Windows.Controls.Border> 라는 `RootElement` 는 역할을 템플릿의 루트 <xref:System.Windows.FrameworkElement>입니다.  
+- A <xref:System.Windows.Controls.Border> 라는 `RootElement` 는 역할을 템플릿의 루트 <xref:System.Windows.FrameworkElement>입니다.  
   
--   A <xref:System.Windows.Controls.Grid> 의 자식인 `RootElement`합니다.  
+- A <xref:System.Windows.Controls.Grid> 의 자식인 `RootElement`합니다.  
   
--   <xref:System.Windows.Controls.ContentPresenter> 단추의 콘텐츠를 표시 하는 합니다. <xref:System.Windows.Controls.ContentPresenter> 모든 형식의 개체를 표시할 수 있습니다.  
+- <xref:System.Windows.Controls.ContentPresenter> 단추의 콘텐츠를 표시 하는 합니다. <xref:System.Windows.Controls.ContentPresenter> 모든 형식의 개체를 표시할 수 있습니다.  
   
  [!code-xaml[VSMButtonTemplate#BasicTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#basictemplate)]  
   
@@ -85,9 +85,9 @@ ms.locfileid: "62017839"
   
  <xref:System.Windows.Controls.Control> 클래스 설정 된 경우 컨트롤에 영향을 주도록 컨트롤 템플릿에서 사용 해야 하는 몇 가지 속성을 정의 합니다. 방법을 <xref:System.Windows.Controls.ControlTemplate> 사용 하 여 속성을 속성에 따라 달라 집니다. <xref:System.Windows.Controls.ControlTemplate> 다음 방법 중 하나에서 속성을 사용 해야 합니다.  
   
--   요소는 <xref:System.Windows.Controls.ControlTemplate> 템플릿 속성에 바인딩합니다.  
+- 요소는 <xref:System.Windows.Controls.ControlTemplate> 템플릿 속성에 바인딩합니다.  
   
--   요소를 <xref:System.Windows.Controls.ControlTemplate> 속성은 부모 로부터 상속 <xref:System.Windows.FrameworkElement>합니다.  
+- 요소를 <xref:System.Windows.Controls.ControlTemplate> 속성은 부모 로부터 상속 <xref:System.Windows.FrameworkElement>합니다.  
   
  다음 표에서 로부터 컨트롤이 상속 받는 시각적 속성을 <xref:System.Windows.Controls.Control> 클래스입니다. 또한 컨트롤의 기본 컨트롤 템플릿이 상속받은 속성 값을 사용하는지 또는 템플릿 바인딩되어야 하는지를 나타냅니다.  
   
@@ -167,11 +167,11 @@ ms.locfileid: "62017839"
   
  원활 하 게 하나의 상태에서 컨트롤을 추가 하 여 전환 되도록 애니메이션 소요 되는 기간을 지정할 수 있습니다 <xref:System.Windows.VisualTransition> 개체는 <xref:System.Windows.Controls.ControlTemplate>합니다. 만들 때는 <xref:System.Windows.VisualTransition>, 다음 중 하나 이상을 지정:  
   
--   적용할 상태 간에 전환되는 데 소요되는 시간  
+- 적용할 상태 간에 전환되는 데 소요되는 시간  
   
--   컨트롤의 모양에 전환 시 적용되는 추가 변경 내용  
+- 컨트롤의 모양에 전환 시 적용되는 추가 변경 내용  
   
--   상태는 <xref:System.Windows.VisualTransition> 에 적용 됩니다.  
+- 상태는 <xref:System.Windows.VisualTransition> 에 적용 됩니다.  
   
 ### <a name="specifying-the-duration-of-a-transition"></a>전환 기간 지정  
  전환 하는 걸리는 시간을 설정 하 여 지정할 수 있습니다는 <xref:System.Windows.VisualTransition.GeneratedDuration%2A> 속성입니다. 앞의 예제에는 <xref:System.Windows.VisualState> 를 지정 하는 애니메이션 단추를 신속 하 게 눌렀다 하는 경우에 너무 오래 걸리는 단추를 누를 때 단추의 테두리가 투명해 집니다. 사용할 수는 <xref:System.Windows.VisualTransition> 기간을 지정 하려면 걸리는 컨트롤이 누른 상태로 전환 합니다. 다음 예제에서는 컨트롤이 누른 상태로 전환되는 데 1/100초가 걸리도록 지정합니다.  
@@ -201,13 +201,13 @@ ms.locfileid: "62017839"
   
  다음 예제에서는 합니다 <xref:System.Windows.VisualStateGroup> 에 대 한는 `CommonStates`합니다. 이 예제에서는 정의 <xref:System.Windows.VisualTransition> 단추의 다음의 각 전환에 대 한 합니다.  
   
--   `Pressed` 상태로 전환  
+- `Pressed` 상태로 전환  
   
--   `MouseOver` 상태로 전환  
+- `MouseOver` 상태로 전환  
   
--   `Pressed` 상태에서 `MouseOver` 상태로 전환  
+- `Pressed` 상태에서 `MouseOver` 상태로 전환  
   
--   `MouseOver` 상태에서 `Normal` 상태로 전환  
+- `MouseOver` 상태에서 `Normal` 상태로 전환  
   
  [!code-xaml[VSMButtonTemplate#VisualTransitions](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualtransitions)]  
   
@@ -217,11 +217,11 @@ ms.locfileid: "62017839"
   
  컨트롤 계약에는 세 가지 요소가 있습니다.  
   
--   컨트롤 논리가 사용하는 시각적 요소  
+- 컨트롤 논리가 사용하는 시각적 요소  
   
--   컨트롤의 상태 및 각 상태가 속해 있는 그룹  
+- 컨트롤의 상태 및 각 상태가 속해 있는 그룹  
   
--   컨트롤에 시각적으로 영향을 미치는 공용 속성  
+- 컨트롤에 시각적으로 영향을 미치는 공용 속성  
   
 ### <a name="visual-elements-in-the-control-contract"></a>컨트롤 계약의 시각적 요소  
  컨트롤의 논리와 상호 작용 하는 경우에 따라을 <xref:System.Windows.FrameworkElement> 에 <xref:System.Windows.Controls.ControlTemplate>합니다. 예를 들어 컨트롤에서 해당 요소 중 하나의 이벤트를 처리할 수 있습니다. 컨트롤을 특정을 찾으려고 시도 하는 경우 <xref:System.Windows.FrameworkElement> 에 <xref:System.Windows.Controls.ControlTemplate>, 해당 정보를 전달 해야 하는 <xref:System.Windows.Controls.ControlTemplate> 작성자입니다. 컨트롤에서 사용을 <xref:System.Windows.TemplatePartAttribute> 예상 되는 요소의 유형과 해야 하는 요소의 이름을 전달 합니다. 합니다 <xref:System.Windows.Controls.Button> 되지 않은 <xref:System.Windows.FrameworkElement> 와 같은 다른 컨트롤을 해당 컨트롤 계약에 파트를 <xref:System.Windows.Controls.ComboBox>를 수행 합니다.  
@@ -250,9 +250,9 @@ ms.locfileid: "62017839"
   
  만들 때를 <xref:System.Windows.Controls.ControlTemplate>, 기존 시작 쉬운 경우가 <xref:System.Windows.Controls.ControlTemplate> 변경 하 고 있습니다. 기존 변경 하려면 다음 중 하나를 수행할 수 있습니다 <xref:System.Windows.Controls.ControlTemplate>:  
   
--   컨트롤 템플릿을 만들기 위한 그래픽 사용자 인터페이스를 제공하는 Expression Blend 등의 디자이너를 사용합니다. 자세한 내용은 [템플릿을 지원하는 컨트롤의 스타일 지정](https://go.microsoft.com/fwlink/?LinkId=161153)을 참조하세요.  
+- 컨트롤 템플릿을 만들기 위한 그래픽 사용자 인터페이스를 제공하는 Expression Blend 등의 디자이너를 사용합니다. 자세한 내용은 [템플릿을 지원하는 컨트롤의 스타일 지정](https://go.microsoft.com/fwlink/?LinkId=161153)을 참조하세요.  
   
--   기본 가져오기 <xref:System.Windows.Controls.ControlTemplate> 하 고 편집 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]와 함께 제공되는 기본 컨트롤 템플릿을 찾으려면 [기본 WPF 테마](https://go.microsoft.com/fwlink/?LinkID=158252)를 참조하세요.  
+- 기본 가져오기 <xref:System.Windows.Controls.ControlTemplate> 하 고 편집 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]와 함께 제공되는 기본 컨트롤 템플릿을 찾으려면 [기본 WPF 테마](https://go.microsoft.com/fwlink/?LinkID=158252)를 참조하세요.  
   
 <a name="complete_example"></a>   
 ## <a name="complete-example"></a>완성된 예제  

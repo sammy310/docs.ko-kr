@@ -2,12 +2,12 @@
 title: 연결 집합 End
 ms.date: 03/30/2017
 ms.assetid: fe4bf1d3-047a-4a37-98c5-a66e70811346
-ms.openlocfilehash: 7b6c646592c1878ea30396d98b4976dc8fa0be12
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ea750e9f381de92233f4c9389ec6676847b56d01
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769592"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592605"
 ---
 # <a name="association-set-end"></a>연결 집합 End
 *연결 집합 end* 하 게 식별 하는 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md) 하며 [엔터티 집합](../../../../docs/framework/data/adonet/entity-set.md) 끝에 [연결 집합](../../../../docs/framework/data/adonet/association-set.md). 연결 집합 End는 연결 집합의 일부로 정의되고 연결 집합에는 정확히 두 개의 연결 집합 End가 있어야 합니다.  

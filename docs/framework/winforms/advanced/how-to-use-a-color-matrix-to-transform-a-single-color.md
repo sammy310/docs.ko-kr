@@ -8,12 +8,12 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-ms.openlocfilehash: 78fc498b0689026fb74ec0c422948c1879495560
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9cff13cabb0cd496ee4e628664e4b92bd9e60808
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954834"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063729"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>방법: 색 매트릭스를 사용하여 단색으로 변환
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 제공 된 <xref:System.Drawing.Image> 고 <xref:System.Drawing.Bitmap> 저장 및 이미지 조작을 위한 클래스입니다. <xref:System.Drawing.Image> 및 <xref:System.Drawing.Bitmap> 개체는 32 비트 숫자도 각 픽셀의 색을 저장 합니다. 각각 8 비트가 빨간색, 녹색, 파랑 및 알파에 대 한 합니다. 각 네 가지 구성 요소에는 0부터 농도가 없음을 나타내고 255 전체 강도 나타내는 0부터 255 까지의 숫자입니다. 색의 투명도 지정 하는 알파 구성 요소: 0은 완전히 투명 하 고 255는 완전히 불투명 한 합니다.  
@@ -32,13 +32,13 @@ ms.locfileid: "61954834"
   
  나열 된 순서로 다음 행렬 곱셈 변환이 수행 합니다.  
   
- ![Recoloring](./media/recoloring01.gif "recoloring01")  
+ ![곱하기 변환 행렬의 스크린샷입니다.](./media/how-to-use-a-color-matrix-to-transform-a-single-color/multiplication-color-matrix.gif)
   
  색 매트릭스의 요소는 행과 열으로 (0부터 시작) 인덱싱됩니다. 예를 들어, 다섯 번째 행과 M 행렬의 세 번째 열에 있는 항목은 M [4] [2]에 의해 표시 됩니다.  
   
  (다음 그림에 표시) 5 × 5 항등 매트릭스 대각선에는 1 및 0으로 다른 곳에 있습니다. 항등 매트릭스를 색 벡터를 곱하면 색 벡터 변경 되지 않습니다. 색 변환 행렬을 형성 하는 편리한 방법을 항등 매트릭스로 시작 하 여 필요한 변환을 생성 하는 약간 변경 됩니다.  
   
- ![Recoloring](./media/recoloring02.gif "recoloring02")  
+ ![색 변환에 대 한 5x5 항등 매트릭스의 스크린샷.](./media/how-to-use-a-color-matrix-to-transform-a-single-color/5x5-identity-matrix-color-transformation.gif)  
   
  행렬 및 변환의 자세한 내용은 참조 하세요. [좌표계 및 변형](coordinate-systems-and-transformations.md)합니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "61954834"
   
  다음 그림에서는 오른쪽에서 왼쪽의 원래 이미지와 변환 된 이미지를 보여 줍니다.  
   
- ![색](./media/colortrans1.png "colortrans1")  
+ ![왼쪽 및 오른쪽에 밝은 자홍 사각형에 자주색 사각형입니다.](./media/how-to-use-a-color-matrix-to-transform-a-single-color/color-transformation.png)  
   
  다음 예제 코드에서는 다음 단계를 사용 하 여 다시 칠하기는 수행:  
   

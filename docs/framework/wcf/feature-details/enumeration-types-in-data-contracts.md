@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: 1837a3630424ff2a9ee4a84e9ed63f44a06bbecf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e793fc130252caf91d9b1c15b41beba1cc8ae1f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856442"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587606"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>데이터 계약의 열거형 형식
 데이터 계약 모델에 열거형을 표현할 수 있습니다. 이 항목에서는 프로그래밍 모델을 설명하는 여러 예를 살펴봅니다.  
@@ -43,9 +43,9 @@ ms.locfileid: "61856442"
   
  여기에는 두 가지 예외 사항이 있습니다.  
   
--   플래그 열거형(이 항목의 뒷부분에서 설명).  
+- 플래그 열거형(이 항목의 뒷부분에서 설명).  
   
--   <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> 속성이 `false`로 설정된 열거형 데이터 멤버. 이 경우 값이 0인 열거형은 serialize할 데이터에서 생략됩니다.  
+- <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> 속성이 `false`로 설정된 열거형 데이터 멤버. 이 경우 값이 0인 열거형은 serialize할 데이터에서 생략됩니다.  
   
 ### <a name="customizing-enumeration-member-values"></a>열거형 멤버 값 사용자 지정  
  <xref:System.Runtime.Serialization.EnumMemberAttribute.Value%2A> 특성의 <xref:System.Runtime.Serialization.EnumMemberAttribute> 속성을 사용하여 데이터 계약의 일부를 구성하는 열거형 멤버 값을 사용자 지정할 수 있습니다.  

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
-ms.openlocfilehash: e51ba4ad0910d0db2b927f84303e5c55515f4b84
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9bf248da980705f070be878208c55b0cc6dae01
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921279"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589731"
 ---
 # <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-select-case-statement"></a>람다 식은 'Select Case' 문의 첫 번째 식에 사용할 수 없습니다.
 테스트 식에 람다 식을 사용할 수 없습니다는 `Select Case` 문입니다. 람다 식 정의는 함수를 테스트 식의 반환을 `Select Case` 문은 기본 데이터 형식 이어야 합니다.  
@@ -29,9 +29,9 @@ ms.locfileid: "61921279"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   코드를 검사하여 `If...Then...Else` 문과 같은 다른 조건부 생성이 적합한지 결정합니다.  
+- 코드를 검사하여 `If...Then...Else` 문과 같은 다른 조건부 생성이 적합한지 결정합니다.  
   
--   계획 했던 함수를 호출 하려면 다음 코드 에서처럼:  
+- 계획 했던 함수를 호출 하려면 다음 코드 에서처럼:  
   
 ```vb  
 Dim num? As Integer  

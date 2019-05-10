@@ -2,12 +2,12 @@
 title: F#코드 서식 지정 지침
 description: 서식 지정에 대 한 지침을 알아보려면 F# 코드입니다.
 ms.date: 02/08/2019
-ms.openlocfilehash: 259d4bb2147d1fc8bc5d35d7ff2e3c34ec2185d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce07bd800984ec082a522bc62cb487f786fa0510
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902592"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063602"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#코드 서식 지정 지침
 
@@ -86,6 +86,46 @@ type MyFun = int -> int -> string
 
 // Bad
 type MyFunBad = int->int->string
+```
+
+### <a name="surround-function-arguments-with-white-space"></a>공백 문자를 사용 하 여 서라운드 함수 인수
+
+함수를 정의할 때 각 인수 주위의 공백을 사용 합니다.
+
+```fsharp
+// OK
+let myFun (a: decimal) b c = a + b + c
+
+// Bad
+let myFunBad (a:decimal)(b)c = a + b + c
+```
+
+### <a name="type-annotations"></a>형식 주석
+
+#### <a name="right-pad-function-argument-type-annotations"></a>오른쪽 채움 함수 인수 형식 주석
+
+형식 주석 사용 하 여 인수를 정의할 때 사용할 공백 뒤의 `:` 기호:
+
+```fsharp
+// OK
+let complexFunction (a: int) (b: int) c = a + b + c
+
+// Bad
+let complexFunctionBad (a :int) (b :int) (c:int) = a + b + c
+```
+
+#### <a name="surround-return-type-annotations-with-white-space"></a>공백 문자를 사용 하 여 반환 형식 주석을 포함
+
+Let 바인딩된 함수 또는 값 형식 주석이 (함수의 경우 반환 형식)를 사용 하 여 공백 문자 앞과 뒤는 `:` 기호:
+
+```fsharp
+// OK
+let expensiveToCompute : int = 0 // Type annotation for let-bound value
+let myFun (a: decimal) b c : decimal = a + b + c // Type annotation for the return type of a function
+// Bad
+let expensiveToComputeBad1:int = 1
+let expensiveToComputeBad2 :int = 2
+let myFunBad (a: decimal) b c:decimal = a + b + c
 ```
 
 ## <a name="formatting-blank-lines"></a>빈 줄을 서식 지정

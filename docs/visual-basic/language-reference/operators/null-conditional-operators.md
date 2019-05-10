@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ?. operator [Visual Basic]
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
-ms.openlocfilehash: b83435b8448b53eca63aac0519e9eed2f7dfa9f3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4815fe7ad337634cfb56127fbd24a47a37fdd74b
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62028693"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062936"
 ---
 # <a name="-and--null-conditional-operators-visual-basic"></a>?. 및? null 조건부 연산자 () (Visual Basic)
 
@@ -37,6 +37,24 @@ Dim length As Integer
 If customers IsNot Nothing Then
    length = customers.Length
 End If
+```
+
+Null 일 수를 해당 개체에 대해 부울 멤버의 값을 기반으로 하는 개체에 대 한 작업을 수행 해야 하는 경우에 따라 (부울 속성을 같은 `IsAllowedFreeShipping` 다음 예제의):
+
+```vb
+  Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
+  
+  If customer IsNot Nothing AndAlso customer.IsAllowedFreeShipping Then
+   ApplyFreeShippingToOrders(customer)
+  End If
+```
+
+코드 단축 하 고 수동으로 다음과 같이 null 조건부 연산자를 사용 하 여 null 검사를 방지할 수 있습니다.
+
+```vb
+ Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
+ 
+ If customer?.IsAllowedFreeShipping Then ApplyFreeShippingToOrders(customer)
 ```
 
 Null 조건부 연산자는 단락 연산자입니다.  조건부 멤버 액세스 및 인덱스 작업의 체인에 하나의 작업에서 반환 하는 경우 `Nothing`, 나머지 체인의 실행이 중지 됩니다.  다음 예에서 `C(E)` 하는 경우 평가 되지 않습니다 `A`를 `B`, 또는 `C` 로 `Nothing`합니다.

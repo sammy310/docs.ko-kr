@@ -8,12 +8,12 @@ helpviewer_keywords:
 - regions [Windows Forms], clipping
 - regions [Windows Forms], restricting drawing surface
 ms.assetid: 43d121b4-e14c-4901-b25c-2d6c25ba4e29
-ms.openlocfilehash: cf60b32df805a49f8da2760332dc32e34209f6dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e62be137b36a2f369c02151466154f6b3bab090b
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954518"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063845"
 ---
 # <a name="how-to-use-clipping-with-a-region"></a>방법: 영역에 클리핑 사용
 속성 중 하나는 <xref:System.Drawing.Graphics> 클래스의 클립 영역입니다. 수행한 모든 그리기는 주어진 <xref:System.Drawing.Graphics> 개체의 클립 영역으로 제한 됩니다 <xref:System.Drawing.Graphics> 개체입니다. 호출 하 여 클립 영역을 설정할 수 있습니다는 <xref:System.Drawing.Graphics.SetClip%2A> 메서드.  
@@ -21,9 +21,9 @@ ms.locfileid: "61954518"
 ## <a name="example"></a>예제  
  다음 예제에서는 단일 다각형으로 구성 된 경로 생성 합니다. 다음 코드를 해당 경로 기반으로 영역을 생성 합니다. 지역에 전달 되는 <xref:System.Drawing.Graphics.SetClip%2A> 메서드는 <xref:System.Drawing.Graphics> 개체와 다음 두 문자열을 그릴 합니다.  
   
- 다음 그림은 잘린된 문자열을 나타냅니다.  
+ 다음 그림은 잘린된 문자열을 보여 줍니다.  
   
- ![클립](./media/clip1.png "clip1")  
+ ![잘린된 문자열을 보여 주는 스크린샷.](./media/how-to-use-clipping-with-a-region/clipped-strings-polygon.png)  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.MiscLegacyTopics#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#41)]  

@@ -4,44 +4,44 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1d14e4ad45a4d5805187b993f2fc622a16dac09
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4e4d3d7bc574dd27aaea0d43ee6f507dd0c413f2
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61867107"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063810"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Windows 스토어 앱을 .NET 네이티브로 마이그레이션
 .NET 네이티브 개발자의 컴퓨터 또는 Windows 스토어에서 앱의 정적 컴파일을 제공합니다. 이 기능은 디바이스의 [네이티브 이미지 생성기(Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 또는 JIT(Just-In-Time) 컴파일러가 Windows 스토어 앱에 대해 수행하는 동적 컴파일과는 다릅니다. 다르기는 하지만.NET 네이티브 호환성을 유지 하려고 사용 하 여 합니다 [Windows 스토어 앱 용.NET](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)합니다. 대부분의 경우.NET 네이티브를 사용 하 여.NET에 대 한 Windows 스토어 앱에서 작동 하는 것도 작동 합니다.  그러나 동작이 변경되는 경우도 있습니다. 이 문서는 다음 영역에서 표준 Windows 스토어 앱 용.NET 및.NET 네이티브 이러한 차이점에 설명 합니다.  
   
--   [일반 런타임 차이점](#Runtime)  
+- [일반 런타임 차이점](#Runtime)  
   
--   [동적 프로그래밍 차이점](#Dynamic)  
+- [동적 프로그래밍 차이점](#Dynamic)  
   
--   [기타 리플렉션 관련 차이점](#Reflection)  
+- [기타 리플렉션 관련 차이점](#Reflection)  
   
--   [지원되지 않는 시나리오 및 API](#Unsupported)  
+- [지원되지 않는 시나리오 및 API](#Unsupported)  
   
--   [Visual Studio의 차이점](#VS)  
+- [Visual Studio의 차이점](#VS)  
   
 <a name="Runtime"></a>   
 ## <a name="general-runtime-differences"></a>일반 런타임 차이점  
   
--   예외와 같은 <xref:System.TypeLoadException>, 일반적인에서 앱 실행 될 때 JIT 컴파일러에 의해 throw 되는 언어 런타임 (CLR)는 일반적으로.NET 네이티브에서 처리 하는 경우 컴파일 타임 오류가 발생 합니다.  
+- 예외와 같은 <xref:System.TypeLoadException>, 일반적인에서 앱 실행 될 때 JIT 컴파일러에 의해 throw 되는 언어 런타임 (CLR)는 일반적으로.NET 네이티브에서 처리 하는 경우 컴파일 타임 오류가 발생 합니다.  
   
--   앱 UI 스레드에서 <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> 메서드를 호출해서는 안 됩니다. 이 인해.NET 네이티브에서 교착 상태가 발생할 수 있습니다.  
+- 앱 UI 스레드에서 <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> 메서드를 호출해서는 안 됩니다. 이 인해.NET 네이티브에서 교착 상태가 발생할 수 있습니다.  
   
--   정적 클래스 생성자 호출 순서를 따라서는 안 됩니다. .NET 네이티브 호출 순서는 표준 런타임의 순서와 다릅니다. 표준 런타임을 사용하는 경우에도 정적 클래스 생성자 실행 순서를 따라서는 안 됩니다.  
+- 정적 클래스 생성자 호출 순서를 따라서는 안 됩니다. .NET 네이티브 호출 순서는 표준 런타임의 순서와 다릅니다. 표준 런타임을 사용하는 경우에도 정적 클래스 생성자 실행 순서를 따라서는 안 됩니다.  
   
--   스레드에서 호출을 하지 않고 무한 루프(예: `while(true);`)를 사용하면 앱이 중지될 수 있습니다. 마찬가지로 대기 시간이 길어지거나 무한히 계속되어도 앱이 중지될 수 있습니다.  
+- 스레드에서 호출을 하지 않고 무한 루프(예: `while(true);`)를 사용하면 앱이 중지될 수 있습니다. 마찬가지로 대기 시간이 길어지거나 무한히 계속되어도 앱이 중지될 수 있습니다.  
   
--   특정 제네릭 초기화 주기의.NET 네이티브에서 예외를 throw 하지 않습니다. 예를 들어 다음 코드는 표준 CLR에서는 <xref:System.TypeLoadException> 예외를 throw하지만 .NET 네이티브에서 그렇지 않습니다.  
+- 특정 제네릭 초기화 주기의.NET 네이티브에서 예외를 throw 하지 않습니다. 예를 들어 다음 코드는 표준 CLR에서는 <xref:System.TypeLoadException> 예외를 throw하지만 .NET 네이티브에서 그렇지 않습니다.  
   
      [!code-csharp[ProjectN#8](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat1.cs#8)]  
   
--   경우에 따라.NET Framework 클래스 라이브러리의 다른 구현을.NET 네이티브 제공합니다. 메서드에서 반환된 개체는 항상 반환된 형식의 멤버를 구현합니다. 그러나 지원 구현이 다르므로 기타 .NET Framework 플랫폼에서와 같이 해당 개체를 동일한 형식 집합으로 캐스팅하지 못할 수도 있습니다. 예를 들어 <xref:System.Collections.Generic.IEnumerable%601> , <xref:System.Reflection.TypeInfo.DeclaredMembers%2A?displayProperty=nameWithType> 등의 메서드가 반환한 <xref:System.Reflection.TypeInfo.DeclaredProperties%2A?displayProperty=nameWithType> 인터페이스 개체는 `T[]`로 캐스팅할 수 없습니다.  
+- 경우에 따라.NET Framework 클래스 라이브러리의 다른 구현을.NET 네이티브 제공합니다. 메서드에서 반환된 개체는 항상 반환된 형식의 멤버를 구현합니다. 그러나 지원 구현이 다르므로 기타 .NET Framework 플랫폼에서와 같이 해당 개체를 동일한 형식 집합으로 캐스팅하지 못할 수도 있습니다. 예를 들어 <xref:System.Collections.Generic.IEnumerable%601> , <xref:System.Reflection.TypeInfo.DeclaredMembers%2A?displayProperty=nameWithType> 등의 메서드가 반환한 <xref:System.Reflection.TypeInfo.DeclaredProperties%2A?displayProperty=nameWithType> 인터페이스 개체는 `T[]`로 캐스팅할 수 없습니다.  
   
--   WinInet 캐시는.NET에 대 한 Windows 스토어 앱에서 기본적으로 활성화 되어 있지 않으면 이지만.NET 네이티브에 있습니다. 이로 인해 성능은 향상되지만 작업 집합이 영향을 받습니다. 개발자가 작업을 수행할 필요는 없습니다.  
+- WinInet 캐시는.NET에 대 한 Windows 스토어 앱에서 기본적으로 활성화 되어 있지 않으면 이지만.NET 네이티브에 있습니다. 이로 인해 성능은 향상되지만 작업 집합이 영향을 받습니다. 개발자가 작업을 수행할 필요는 없습니다.  
   
 <a name="Dynamic"></a>   
 ## <a name="dynamic-programming-differences"></a>동적 프로그래밍 차이점  
@@ -58,9 +58,9 @@ ms.locfileid: "61867107"
   
  .NET 네이티브에 대 한 기본 구성은 대부분의 개발자를 위한 충분 하지만 일부 개발자가 구성의 런타임 지시문을 사용 하 여 미세 조정 하려고 합니다. (. rd.xml) 파일입니다. 또한 경우에 따라.NET 네이티브 컴파일러가 메타 데이터 리플렉션에 사용할 수 있어야 하며 다음과 같은 경우에 특히 힌트에 의존을 결정할 수 없습니다.  
   
--   <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> , <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> 등의 일부 구문은 정적으로 확인할 수 없습니다.  
+- <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> , <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> 등의 일부 구문은 정적으로 확인할 수 없습니다.  
   
--   컴파일러는 인스턴스화를 확인할 수 없으므로 런타임 지시문을 사용하여 리플렉션을 수행하려는 제네릭 형식을 지정해야 합니다. 이는 단순히 모든 코드를 포함해야 하기 때문이 아니라, 제네릭 형식에 대해 리플렉션을 수행하면 무한 주기가 생성될 수 있기 때문입니다(예: 제네릭 형식에 대해 제네릭 메서드를 호출하는 경우).  
+- 컴파일러는 인스턴스화를 확인할 수 없으므로 런타임 지시문을 사용하여 리플렉션을 수행하려는 제네릭 형식을 지정해야 합니다. 이는 단순히 모든 코드를 포함해야 하기 때문이 아니라, 제네릭 형식에 대해 리플렉션을 수행하면 무한 주기가 생성될 수 있기 때문입니다(예: 제네릭 형식에 대해 제네릭 메서드를 호출하는 경우).  
   
 > [!NOTE]
 >  런타임 지시문은 런타임 지시문(.rd.xml) 파일에서 정의합니다. 이 파일의 사용 방법에 대한 일반 정보는 [시작](../../../docs/framework/net-native/getting-started-with-net-native.md)을 참조하세요. 런타임 지시문에 대한 자세한 내용은 [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)를 참조하세요.  
@@ -73,67 +73,67 @@ ms.locfileid: "61867107"
   
  .NET 네이티브:  
   
--   .NET Framework 클래스 라이브러리의 형식 및 멤버에 대한 개인 리플렉션은 지원되지 않습니다. 그러나 고유한 개인 형식과 멤버 및 타사 라이브러리의 형식과 멤버에 대해서는 리플렉션을 수행할 수 있습니다.  
+- .NET Framework 클래스 라이브러리의 형식 및 멤버에 대한 개인 리플렉션은 지원되지 않습니다. 그러나 고유한 개인 형식과 멤버 및 타사 라이브러리의 형식과 멤버에 대해서는 리플렉션을 수행할 수 있습니다.  
   
--   <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> 속성은 반환 값을 나타내는 `false` 개체에 대해 <xref:System.Reflection.ParameterInfo>를 올바르게 반환합니다. 그러나 Windows 스토어 앱용 .NET에서는 `true`가 반환됩니다. IL(중간 언어)은 이러한 반환을 직접 지원하지 않으며 해석은 언어에 따라 달라집니다.  
+- <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> 속성은 반환 값을 나타내는 `false` 개체에 대해 <xref:System.Reflection.ParameterInfo>를 올바르게 반환합니다. 그러나 Windows 스토어 앱용 .NET에서는 `true`가 반환됩니다. IL(중간 언어)은 이러한 반환을 직접 지원하지 않으며 해석은 언어에 따라 달라집니다.  
   
--   <xref:System.RuntimeFieldHandle> 및 <xref:System.RuntimeMethodHandle> 구조체에서는 public 멤버를 사용할 수 없습니다. 이러한 형식은 LINQ, 식 트리 및 정적 배열 초기화에서만 지원됩니다.  
+- <xref:System.RuntimeFieldHandle> 및 <xref:System.RuntimeMethodHandle> 구조체에서는 public 멤버를 사용할 수 없습니다. 이러한 형식은 LINQ, 식 트리 및 정적 배열 초기화에서만 지원됩니다.  
   
--   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> 및 <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> 의 기본 클래스는 숨겨진 멤버를 포함하므로 명시적으로 재정의하지 않아도 재정의될 수 있습니다. 이는 다른 [RuntimeReflectionExtensions.GetRuntime*](xref:System.Reflection.RuntimeReflectionExtensions) 메서드에서도 마찬가지입니다.  
+- <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> 및 <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> 의 기본 클래스는 숨겨진 멤버를 포함하므로 명시적으로 재정의하지 않아도 재정의될 수 있습니다. 이는 다른 [RuntimeReflectionExtensions.GetRuntime*](xref:System.Reflection.RuntimeReflectionExtensions) 메서드에서도 마찬가지입니다.  
   
--   byref 배열과 같은 특정 조합을 만들 때<xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> 및 <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> 에서 오류가 발생하지 않습니다.  
+- byref 배열과 같은 특정 조합을 만들 때<xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> 및 <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> 에서 오류가 발생하지 않습니다.  
   
--   리플렉션을 사용하여 포인터 매개 변수가 있는 멤버를 호출할 수는 없습니다.  
+- 리플렉션을 사용하여 포인터 매개 변수가 있는 멤버를 호출할 수는 없습니다.  
   
--   리플렉션을 사용하여 포인터 필드를 가져오거나 설정할 수는 없습니다.  
+- 리플렉션을 사용하여 포인터 필드를 가져오거나 설정할 수는 없습니다.  
   
--   인수 개수가 잘못 되었습니다. 인수 중 하나의 형식이 잘못 되었습니다.을.NET 네이티브를 throw 하는 <xref:System.ArgumentException> of를 <xref:System.Reflection.TargetParameterCountException>입니다.  
+- 인수 개수가 잘못 되었습니다. 인수 중 하나의 형식이 잘못 되었습니다.을.NET 네이티브를 throw 하는 <xref:System.ArgumentException> of를 <xref:System.Reflection.TargetParameterCountException>입니다.  
   
--   예외의 이진 serialization은 일반적으로 지원되지 않습니다. 그러므로 serialize할 수 없는 개체를 <xref:System.Exception.Data%2A?displayProperty=nameWithType> 사전에 추가할 수 있습니다.  
+- 예외의 이진 serialization은 일반적으로 지원되지 않습니다. 그러므로 serialize할 수 없는 개체를 <xref:System.Exception.Data%2A?displayProperty=nameWithType> 사전에 추가할 수 있습니다.  
   
 <a name="Unsupported"></a>   
 ## <a name="unsupported-scenarios-and-apis"></a>지원되지 않는 시나리오 및 API  
  다음 섹션에서는 일반 개발, interop 및 HTTPClient, WCF(Windows Communication Foundation) 등의 기술에 대해 지원되지 않는 시나리오와 API에 대해 설명합니다.  
   
--   [일반 개발](#General)  
+- [일반 개발](#General)  
   
--   [HttpClient](#HttpClient)  
+- [HttpClient](#HttpClient)  
   
--   [Interop](#Interop)  
+- [Interop](#Interop)  
   
--   [지원되지 않는 API](#APIs)  
+- [지원되지 않는 API](#APIs)  
   
 <a name="General"></a>   
 ### <a name="general-development-differences"></a>일반 개발 관련 차이점  
  **값 형식**  
   
--   값 형식에 대해 <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> 및 <xref:System.ValueType.GetHashCode%2A?displayProperty=nameWithType> 메서드를 재정의하는 경우 기본 클래스 구현을 호출하지 마세요. Windows 스토어 앱용 .NET에서 이러한 메서드는 리플렉션을 사용합니다. 컴파일 타임에.NET 네이티브 않는 구현을 생성 런타임 리플렉션을 사용 하지 않습니다. 이 이러한 두 메서드를 재정의 하지 않는 경우는 예상 대로 작동 하는지,.NET 네이티브 컴파일 타임에 구현을 생성 하기 때문에 의미 합니다. 그러나 이러한 메서드를 재정의하고 기본 클래스 구현을 호출하면 예외가 발생합니다.  
+- 값 형식에 대해 <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> 및 <xref:System.ValueType.GetHashCode%2A?displayProperty=nameWithType> 메서드를 재정의하는 경우 기본 클래스 구현을 호출하지 마세요. Windows 스토어 앱용 .NET에서 이러한 메서드는 리플렉션을 사용합니다. 컴파일 타임에.NET 네이티브 않는 구현을 생성 런타임 리플렉션을 사용 하지 않습니다. 이 이러한 두 메서드를 재정의 하지 않는 경우는 예상 대로 작동 하는지,.NET 네이티브 컴파일 타임에 구현을 생성 하기 때문에 의미 합니다. 그러나 이러한 메서드를 재정의하고 기본 클래스 구현을 호출하면 예외가 발생합니다.  
   
--   1MB보다 큰 값 형식은 지원되지 않습니다.  
+- 1MB보다 큰 값 형식은 지원되지 않습니다.  
   
--   .NET 네이티브 값 형식에 기본 생성자가 없습니다. C# 및 Visual Basic에서는 값 형식에 대해 기본 생성자를 사용할 수 없지만 IL에서는 기본 생성자를 만들 수 있습니다.  
+- .NET 네이티브 값 형식에 기본 생성자가 없습니다. C# 및 Visual Basic에서는 값 형식에 대해 기본 생성자를 사용할 수 없지만 IL에서는 기본 생성자를 만들 수 있습니다.  
   
  **배열**  
   
--   하한이 0이 아닌 배열은 지원되지 않습니다. 이러한 배열은 대개 <xref:System.Array.CreateInstance%28System.Type%2CSystem.Int32%5B%5D%2CSystem.Int32%5B%5D%29?displayProperty=nameWithType> 오버로드를 호출하여 만듭니다.  
+- 하한이 0이 아닌 배열은 지원되지 않습니다. 이러한 배열은 대개 <xref:System.Array.CreateInstance%28System.Type%2CSystem.Int32%5B%5D%2CSystem.Int32%5B%5D%29?displayProperty=nameWithType> 오버로드를 호출하여 만듭니다.  
   
--   동적으로 다차원 배열을 만들 수 없습니다. 이러한 배열은 대개 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 매개 변수를 포함하는 `lengths` 메서드의 오버로드 또는 <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType> 메서드를 호출하여 만듭니다.  
+- 동적으로 다차원 배열을 만들 수 없습니다. 이러한 배열은 대개 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 매개 변수를 포함하는 `lengths` 메서드의 오버로드 또는 <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType> 메서드를 호출하여 만듭니다.  
   
--   차원이 4개 이상(해당 <xref:System.Array.Rank%2A?displayProperty=nameWithType> 속성 값이 4 이상)인 다차원 배열은 지원되지 않습니다. 이러한 경우에는 [가변 배열](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) (배열의 배열)을 대신 사용합니다. 예를 들어 `array[x,y,z]` 는 유효하지 않지만 `array[x][y][z]` 는 유효합니다.  
+- 차원이 4개 이상(해당 <xref:System.Array.Rank%2A?displayProperty=nameWithType> 속성 값이 4 이상)인 다차원 배열은 지원되지 않습니다. 이러한 경우에는 [가변 배열](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) (배열의 배열)을 대신 사용합니다. 예를 들어 `array[x,y,z]` 는 유효하지 않지만 `array[x][y][z]` 는 유효합니다.  
   
--   다차원 배열에는 가변성(variance)이 지원되지 않으며, 가변성(variance)을 적용하는 경우 런타임에 <xref:System.InvalidCastException> 예외가 발생합니다.  
+- 다차원 배열에는 가변성(variance)이 지원되지 않으며, 가변성(variance)을 적용하는 경우 런타임에 <xref:System.InvalidCastException> 예외가 발생합니다.  
   
  **제네릭**  
   
--   무한 제네릭 형식을 확장하면 컴파일러 오류가 발생합니다. 예를 들어 다음 코드는 컴파일되지 않습니다.  
+- 무한 제네릭 형식을 확장하면 컴파일러 오류가 발생합니다. 예를 들어 다음 코드는 컴파일되지 않습니다.  
   
      [!code-csharp[ProjectN#9](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat2.cs#9)]  
   
  **포인터**  
   
--   포인터 배열은 지원되지 않습니다.  
+- 포인터 배열은 지원되지 않습니다.  
   
--   리플렉션을 사용하여 포인터 필드를 가져오거나 설정할 수는 없습니다.  
+- 리플렉션을 사용하여 포인터 필드를 가져오거나 설정할 수는 없습니다.  
   
  **serialization**  
   
@@ -149,19 +149,19 @@ ms.locfileid: "61867107"
   
  **기타 API**  
   
--   합니다 [TypeInfo.GUID](xref:System.Type.GUID) 속성을 <xref:System.PlatformNotSupportedException> 예외 경우는 <xref:System.Runtime.InteropServices.GuidAttribute> 특성 형식에 적용 되지 않습니다. GUID는 주로 COM 지원을 위해 사용됩니다.  
+- 합니다 [TypeInfo.GUID](xref:System.Type.GUID) 속성을 <xref:System.PlatformNotSupportedException> 예외 경우는 <xref:System.Runtime.InteropServices.GuidAttribute> 특성 형식에 적용 되지 않습니다. GUID는 주로 COM 지원을 위해 사용됩니다.  
   
--   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 메서드.NET 네이티브의 간단한 날짜를 포함 하는 문자열을 올바르게 구문 분석 합니다. 그러나 Microsoft 기술 자료 문서 [KB2803771](https://support.microsoft.com/kb/2803771) 및 [KB2803755](https://support.microsoft.com/kb/2803755)에서 설명하는 날짜 및 시간 구문 분석 변경 내용과의 호환성은 유지되지 않습니다.  
+- <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 메서드.NET 네이티브의 간단한 날짜를 포함 하는 문자열을 올바르게 구문 분석 합니다. 그러나 Microsoft 기술 자료 문서 [KB2803771](https://support.microsoft.com/kb/2803771) 및 [KB2803755](https://support.microsoft.com/kb/2803755)에서 설명하는 날짜 및 시간 구문 분석 변경 내용과의 호환성은 유지되지 않습니다.  
   
--   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` .NET 네이티브에서 올바르게 반올림 됩니다. 일부 CLR 버전에서는 결과 문자열이 반올림되는 대신 잘립니다.  
+- <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` .NET 네이티브에서 올바르게 반올림 됩니다. 일부 CLR 버전에서는 결과 문자열이 반올림되는 대신 잘립니다.  
   
 <a name="HttpClient"></a>   
 ### <a name="httpclient-differences"></a>HttpClient의 차이점  
  .NET 네이티브를 <xref:System.Net.Http.HttpClientHandler> 클래스는 내부적으로 WinINet을 사용 (통해 합니다 <xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter> 클래스) 대신를 <xref:System.Net.WebRequest> 및 <xref:System.Net.WebResponse> 표준.NET에 대 한 Windows 스토어 앱에서 사용 되는 클래스입니다.  WinINet은 <xref:System.Net.Http.HttpClientHandler> 클래스에서 지원하는 구성 옵션 중 일부만 지원합니다.  그 결과는 다음과 같습니다.  
   
--   기능 속성 중 일부 <xref:System.Net.Http.HttpClientHandler> 반환 `false` .NET 네이티브에서 반환 하는 반면 `true` .NET에 대 한 Windows 스토어 앱 용 표준입니다.  
+- 기능 속성 중 일부 <xref:System.Net.Http.HttpClientHandler> 반환 `false` .NET 네이티브에서 반환 하는 반면 `true` .NET에 대 한 Windows 스토어 앱 용 표준입니다.  
   
--   구성 속성의 일부 `get` 항상 접근자에서.NET 네이티브 Windows 스토어 앱 용.NET의에서 기본 구성 가능한 값과 다른 고정된 값을 반환 합니다.  
+- 구성 속성의 일부 `get` 항상 접근자에서.NET 네이티브 Windows 스토어 앱 용.NET의에서 기본 구성 가능한 값과 다른 고정된 값을 반환 합니다.  
   
  다음 하위 섹션에서 몇 가지 추가적인 동작 차이점에 대해 설명합니다.  
   
@@ -189,13 +189,13 @@ ms.locfileid: "61867107"
   
  .NET 네이티브:  
   
--   <xref:System.Net.Http.HttpClientHandler.ClientCertificateOptions%2A?displayProperty=nameWithType> 속성의 값은 항상 <xref:System.Net.Http.ClientCertificateOption.Automatic>입니다.  Windows 스토어 앱용 .NET에서는 기본값이 <xref:System.Net.Http.ClientCertificateOption.Manual>입니다.  
+- <xref:System.Net.Http.HttpClientHandler.ClientCertificateOptions%2A?displayProperty=nameWithType> 속성의 값은 항상 <xref:System.Net.Http.ClientCertificateOption.Automatic>입니다.  Windows 스토어 앱용 .NET에서는 기본값이 <xref:System.Net.Http.ClientCertificateOption.Manual>입니다.  
   
--   <xref:System.Net.Http.HttpClientHandler.MaxRequestContentBufferSize%2A?displayProperty=nameWithType> 속성은 구성할 수 없습니다.  
+- <xref:System.Net.Http.HttpClientHandler.MaxRequestContentBufferSize%2A?displayProperty=nameWithType> 속성은 구성할 수 없습니다.  
   
--   <xref:System.Net.Http.HttpClientHandler.PreAuthenticate%2A?displayProperty=nameWithType> 속성은 항상 `true`입니다.  Windows 스토어 앱용 .NET에서는 기본값이 `false`입니다.  
+- <xref:System.Net.Http.HttpClientHandler.PreAuthenticate%2A?displayProperty=nameWithType> 속성은 항상 `true`입니다.  Windows 스토어 앱용 .NET에서는 기본값이 `false`입니다.  
   
--   응답의 `SetCookie2` 헤더는 사용되지 않는 항목으로 간주되어 무시됩니다.  
+- 응답의 `SetCookie2` 헤더는 사용되지 않는 항목으로 간주되어 무시됩니다.  
   
 <a name="Interop"></a>   
 ### <a name="interop-differences"></a>interop 차이점  
@@ -245,7 +245,7 @@ ms.locfileid: "61867107"
 - <xref:System.Runtime.InteropServices.UnmanagedType.AsAny?displayProperty=fullName>  
 - <xref:System.Runtime.InteropServices.UnmanagedType.CustomMarshaler?displayProperty=fullName>  
   
- 거의 사용되지 않는 마샬링 API는 다음과 같습니다.  
+ 거의 마샬링 Api를 사용 합니다.  
   
 - <xref:System.Runtime.InteropServices.Marshal.ReadByte%28System.Object%2CSystem.Int32%29?displayProperty=fullName>  
 - <xref:System.Runtime.InteropServices.Marshal.ReadInt16%28System.Object%2CSystem.Int32%29?displayProperty=fullName>  
@@ -262,59 +262,59 @@ ms.locfileid: "61867107"
   
  대부분의 플랫폼 호출 및 COM interop 시나리오는.NET 네이티브에서 계속 지원 됩니다. 특히 WinRT(Windows 런타임) API와의 모든 상호 운용성 및 Windows 런타임에 필요한 모든 마샬링은 지원됩니다. 여기에는 다음에 대한 마샬링 지원이 포함됩니다.  
   
--   배열(<xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType> 포함)  
+- 배열(<xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType> 포함)  
   
--   `BStr`  
+- `BStr`  
   
--   대리자  
+- 대리자  
   
--   문자열(유니코드, ANSI 및 HSTRING)  
+- 문자열(유니코드, ANSI 및 HSTRING)  
   
--   구조체(`byref` 및 `byval`)  
+- 구조체(`byref` 및 `byval`)  
   
--   Unions  
+- Unions  
   
--   Win32 핸들  
+- Win32 핸들  
   
--   모든 WinRT 구문  
+- 모든 WinRT 구문  
   
--   Variant 형식 마샬링에 대한 부분 지원. 지원되는 형식은 다음과 같습니다.  
+- Variant 형식 마샬링에 대한 부분 지원. 지원되는 형식은 다음과 같습니다.  
   
-    -   <xref:System.Boolean>  
+    - <xref:System.Boolean>  
   
-    -   <xref:System.Byte>  
+    - <xref:System.Byte>  
   
-    -   <xref:System.Decimal>  
+    - <xref:System.Decimal>  
   
-    -   <xref:System.Double>  
+    - <xref:System.Double>  
   
-    -   <xref:System.Int16>  
+    - <xref:System.Int16>  
   
-    -   <xref:System.Int32>  
+    - <xref:System.Int32>  
   
-    -   <xref:System.Int64>  
+    - <xref:System.Int64>  
   
-    -   <xref:System.SByte>  
+    - <xref:System.SByte>  
   
-    -   <xref:System.Single>  
+    - <xref:System.Single>  
   
-    -   <xref:System.UInt16>  
+    - <xref:System.UInt16>  
   
-    -   <xref:System.UInt32>  
+    - <xref:System.UInt32>  
   
-    -   <xref:System.UInt64>  
+    - <xref:System.UInt64>  
   
-    -   `BStr`  
+    - `BStr`  
   
-    -   [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)  
+    - [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)  
   
  그러나.NET 네이티브 지원 하지 않습니다 다음.  
   
--   기본 COM 이벤트 사용  
+- 기본 COM 이벤트 사용  
   
--   관리되는 형식에서 <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> 인터페이스 구현  
+- 관리되는 형식에서 <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> 인터페이스 구현  
   
--   [특성을 통해 관리되는 형식에서](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) IDispatch <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> 인터페이스 구현. 그러나 `IDispatch`를 통해 COM 개체를 호출할 수는 없으며 관리되는 개체는 `IDispatch`를 구현할 수 없습니다.  
+- [특성을 통해 관리되는 형식에서](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) IDispatch <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> 인터페이스 구현. 그러나 `IDispatch`를 통해 COM 개체를 호출할 수는 없으며 관리되는 개체는 `IDispatch`를 구현할 수 없습니다.  
   
  리플렉션을 사용하여 플랫폼 호출 메서드를 호출할 수는 없습니다. 대신 다른 메서드에서 메서드 호출을 래핑하고 리플렉션을 사용해 래퍼를 호출하여 이 제한을 해결할 수 있습니다.  
   
@@ -568,57 +568,57 @@ ms.locfileid: "61867107"
 ### <a name="differences-in-serializers"></a>serializer의 차이점  
  <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>및 <xref:System.Xml.Serialization.XmlSerializer> 클래스의 serialization 및 deserialization에는 다음과 같은 차이점이 있습니다.  
   
--   .NET 네이티브 <xref:System.Runtime.Serialization.DataContractSerializer> 고 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> serialize 하거나 형식이 루트 serialization 형식이 아닌 기본 클래스 멤버가 파생된 클래스를 deserialize 하지 못했습니다. 예를 들어 다음 코드에서 `Y` 를 serialize 또는 deserialize하려고 하면 오류가 발생합니다.  
+- .NET 네이티브 <xref:System.Runtime.Serialization.DataContractSerializer> 고 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> serialize 하거나 형식이 루트 serialization 형식이 아닌 기본 클래스 멤버가 파생된 클래스를 deserialize 하지 못했습니다. 예를 들어 다음 코드에서 `Y` 를 serialize 또는 deserialize하려고 하면 오류가 발생합니다.  
   
      [!code-csharp[ProjectN#10](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat3.cs#10)]  
   
      기본 클래스의 멤버가 serialization 중에 트래버스되지 않으므로 serializer가 `InnerType` 형식을 인식하지 못합니다.  
   
--   <xref:System.Runtime.Serialization.DataContractSerializer> 및 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 가 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스를 구현하는 클래스나 구조체를 serialize하지 못합니다. 예를 들어 다음과 같은 형식은 serialize 또는 deserialize할 수 없습니다.  
+- <xref:System.Runtime.Serialization.DataContractSerializer> 및 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 가 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스를 구현하는 클래스나 구조체를 serialize하지 못합니다. 예를 들어 다음과 같은 형식은 serialize 또는 deserialize할 수 없습니다.  
 
--   <xref:System.Xml.Serialization.XmlSerializer> 가 다음 개체 값을 serialize하지 못합니다. serialize할 정확한 개체 형식을 알 수 없기 때문입니다.  
+- <xref:System.Xml.Serialization.XmlSerializer> 가 다음 개체 값을 serialize하지 못합니다. serialize할 정확한 개체 형식을 알 수 없기 때문입니다.  
 
--   <xref:System.Xml.Serialization.XmlSerializer> 는 serialize된 개체의 형식이 <xref:System.Xml.XmlQualifiedName>이면 해당 개체를 serialize 또는 deserialize할 수 없습니다.  
+- <xref:System.Xml.Serialization.XmlSerializer> 는 serialize된 개체의 형식이 <xref:System.Xml.XmlQualifiedName>이면 해당 개체를 serialize 또는 deserialize할 수 없습니다.  
   
--   모든 serializer(<xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>및 <xref:System.Xml.Serialization.XmlSerializer>)는 <xref:System.Xml.Linq.XElement?displayProperty=nameWithType> 를 포함하는 형식 또는 <xref:System.Xml.Linq.XElement>형식에 대해 serialization 코드를 생성하지 못하며, 대신 빌드 시간 오류가 표시됩니다.  
+- 모든 serializer(<xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>및 <xref:System.Xml.Serialization.XmlSerializer>)는 <xref:System.Xml.Linq.XElement?displayProperty=nameWithType> 를 포함하는 형식 또는 <xref:System.Xml.Linq.XElement>형식에 대해 serialization 코드를 생성하지 못하며, 대신 빌드 시간 오류가 표시됩니다.  
   
--   serialization 형식의 다음 생성자에 대해서는 정상적인 작동이 보장되지 않습니다.  
+- serialization 형식의 다음 생성자에 대해서는 정상적인 작동이 보장되지 않습니다.  
   
-    -   <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
+    - <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Runtime.Serialization.DataContractSerializerSettings%29?displayProperty=nameWithType>  
+    - <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Runtime.Serialization.DataContractSerializerSettings%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
+    - <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Xml.XmlDictionaryString%2CSystem.Xml.XmlDictionaryString%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
+    - <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Xml.XmlDictionaryString%2CSystem.Xml.XmlDictionaryString%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.%23ctor%28System.Type%2CSystem.Runtime.Serialization.Json.DataContractJsonSerializerSettings%29?displayProperty=nameWithType>  
+    - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.%23ctor%28System.Type%2CSystem.Runtime.Serialization.Json.DataContractJsonSerializerSettings%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.%23ctor%28System.Type%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
+    - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.%23ctor%28System.Type%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.String%29?displayProperty=nameWithType>  
+    - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.String%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType>  
+    - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%29?displayProperty=nameWithType>  
+    - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlRootAttribute%29?displayProperty=nameWithType>  
+    - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlRootAttribute%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%2CSystem.Type%5B%5D%2CSystem.Xml.Serialization.XmlRootAttribute%2CSystem.String%29?displayProperty=nameWithType>  
+    - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%2CSystem.Type%5B%5D%2CSystem.Xml.Serialization.XmlRootAttribute%2CSystem.String%29?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Serialization.XmlSerializer> 는 메서드에 다음 특성이 포함된 형식에 대해 코드를 생성하지 못합니다.  
+- <xref:System.Xml.Serialization.XmlSerializer> 는 메서드에 다음 특성이 포함된 형식에 대해 코드를 생성하지 못합니다.  
   
-    -   <xref:System.Runtime.Serialization.OnSerializingAttribute>  
+    - <xref:System.Runtime.Serialization.OnSerializingAttribute>  
   
-    -   <xref:System.Runtime.Serialization.OnSerializedAttribute>  
+    - <xref:System.Runtime.Serialization.OnSerializedAttribute>  
   
-    -   <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
+    - <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
   
-    -   <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
+    - <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
   
--   <xref:System.Xml.Serialization.XmlSerializer> 는 <xref:System.Xml.Serialization.IXmlSerializable> 사용자 지정 serialization 인터페이스를 따르지 않습니다. 이 인터페이스를 구현하는 클래스가 있는 경우 <xref:System.Xml.Serialization.XmlSerializer> 는 해당 형식을 POCO(Plain Old CLR 개체) 형식으로 간주하여 public 속성만 serialize합니다.  
+- <xref:System.Xml.Serialization.XmlSerializer> 는 <xref:System.Xml.Serialization.IXmlSerializable> 사용자 지정 serialization 인터페이스를 따르지 않습니다. 이 인터페이스를 구현하는 클래스가 있는 경우 <xref:System.Xml.Serialization.XmlSerializer> 는 해당 형식을 POCO(Plain Old CLR 개체) 형식으로 간주하여 public 속성만 serialize합니다.  
   
--   일반 직렬화 <xref:System.Exception> 개체에서 잘 작동 하지 않습니다 <xref:System.Runtime.Serialization.DataContractSerializer> 및 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>합니다.
+- 일반 직렬화 <xref:System.Exception> 개체에서 잘 작동 하지 않습니다 <xref:System.Runtime.Serialization.DataContractSerializer> 및 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>합니다.
 
 <a name="VS"></a>   
 ## <a name="visual-studio-differences"></a>Visual Studio의 차이점  
@@ -626,9 +626,9 @@ ms.locfileid: "61867107"
   
  디버거에서.NET 네이티브를 사용 하 여 컴파일한 앱을 실행 하는 경우 다음 예외 형식에 대 한 첫 번째 예외 활성화 됩니다.  
   
--   <xref:System.MemberAccessException>  
+- <xref:System.MemberAccessException>  
   
--   <xref:System.TypeAccessException>  
+- <xref:System.TypeAccessException>  
   
  **앱 빌드**  
   
@@ -636,11 +636,11 @@ ms.locfileid: "61867107"
   
  **프로파일러**  
   
--   Visual Studio CPU 프로파일러 및 XAML 메모리 프로파일러에 내 코드만 옵션이 올바르게 표시되지 않습니다.  
+- Visual Studio CPU 프로파일러 및 XAML 메모리 프로파일러에 내 코드만 옵션이 올바르게 표시되지 않습니다.  
   
--   XAML 메모리 프로파일러에 관리되는 힙 데이터가 정확하게 표시되지 않습니다.  
+- XAML 메모리 프로파일러에 관리되는 힙 데이터가 정확하게 표시되지 않습니다.  
   
--   CPU 프로파일러가 모듈을 올바르게 식별하지 않으며 접두사가 붙은 함수 이름을 표시합니다.  
+- CPU 프로파일러가 모듈을 올바르게 식별하지 않으며 접두사가 붙은 함수 이름을 표시합니다.  
   
  **단위 테스트 라이브러리 프로젝트**  
   

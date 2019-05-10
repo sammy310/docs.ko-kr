@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_FieldWidthsMustPositive
 ms.assetid: 41d8c661-a749-4c89-be56-905c6e7c3c9d
-ms.openlocfilehash: 806dcef7b7a29afa8804a581659023c817662434
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c1537133300ac4de33d0d7ebc3ea0ad6768e8ec9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940662"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64609143"
 ---
 # <a name="all-field-widths-except-the-last-element-must-be-greater-than-zero"></a>마지막 요소를 제외한 모든 필드 너비는 0보다 커야 합니다.
 마지막 요소를 제외한 모든 필드 너비는 0보다 커야 합니다. 마지막 요소의 0보다 작거나 같은 필드 너비는 마지막 필드가 가변 길이임을 나타냅니다.  

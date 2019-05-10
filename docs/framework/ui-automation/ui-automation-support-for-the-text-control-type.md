@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Text control type
 - control types, Text
 ms.assetid: ab0d0ada-8a71-4547-9c03-aadf675938f2
-ms.openlocfilehash: f98477117981504b9c4df43626c7bcb8c4088922
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad1173c1a1f533657ad3a68a2acdbc82dd297837
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996556"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610021"
 ---
 # <a name="ui-automation-support-for-the-text-control-type"></a>Text 컨트롤 형식에 대한 UI 자동화 지원
 > [!NOTE]
@@ -33,11 +33,11 @@ ms.locfileid: "61996556"
   
  텍스트 컨트롤을 폼의 레이블 또는 정적 텍스트로 사용할 수 있습니다. 또한 텍스트 컨트롤은 다음 구조 내에 포함될 수 있습니다.  
   
--   ListItem  
+- ListItem  
   
--   TreeItem  
+- TreeItem  
   
--   DataItem  
+- DataItem  
   
  텍스트는 종종 다른 컨트롤의 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 를 통해 표시되기 때문에 텍스트 컨트롤이 `NameProperty` 트리의 콘텐츠 뷰에 표시되지 않을 수도 있습니다. 예를 들어, 콤보 상자 컨트롤의 레이블을 지정하는 데 사용되는 텍스트는 컨트롤의 `NameProperty` 값을 통해 노출됩니다. 콤보 상자 컨트롤이 UI 자동화 트리의 콘텐츠 뷰에 있기 때문에 텍스트 컨트롤이 콘텐츠 뷰에 있을 필요는 없습니다. 텍스트 컨트롤의 콘텐츠 뷰에는 항상 자식 항목이 없습니다.  
   
