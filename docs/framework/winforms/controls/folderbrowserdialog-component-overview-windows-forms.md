@@ -8,25 +8,26 @@ helpviewer_keywords:
 - directories [Windows Forms], enabling browsing in applications
 - folders [Windows Forms], enabling browsing in applications
 ms.assetid: 796b622c-3ba9-4356-93bb-e217fc52f2c7
-ms.openlocfilehash: aae18167b29c71ad692cc6ba447457cd079374b4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cd89980ccad7e6c73094c1fb462d93cee8094959
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651469"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65210405"
 ---
-# <a name="folderbrowserdialog-component-overview-windows-forms"></a><span data-ttu-id="fd66f-102">FolderBrowserDialog 구성 요소 개요(Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="fd66f-102">FolderBrowserDialog Component Overview (Windows Forms)</span></span>
-<span data-ttu-id="fd66f-103">Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> 구성 요소는 폴더를 선택 하 고 검색에 사용 되는 모달 대화 상자.</span><span class="sxs-lookup"><span data-stu-id="fd66f-103">The Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> component is a modal dialog box that is used for browsing and selecting folders.</span></span> <span data-ttu-id="fd66f-104">내에서 새 폴더를 만들 수도 있습니다는 <xref:System.Windows.Forms.FolderBrowserDialog> 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="fd66f-104">New folders can also be created from within the <xref:System.Windows.Forms.FolderBrowserDialog> component.</span></span>  
-  
+# <a name="folderbrowserdialog-component-overview-windows-forms"></a><span data-ttu-id="5fae8-102">FolderBrowserDialog 구성 요소 개요(Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="5fae8-102">FolderBrowserDialog Component Overview (Windows Forms)</span></span>
+
+<span data-ttu-id="5fae8-103">Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> 구성 요소는 폴더를 선택 하 고 검색에 사용 되는 모달 대화 상자.</span><span class="sxs-lookup"><span data-stu-id="5fae8-103">The Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> component is a modal dialog box that is used for browsing and selecting folders.</span></span> <span data-ttu-id="5fae8-104">내에서 새 폴더를 만들 수도 있습니다는 <xref:System.Windows.Forms.FolderBrowserDialog> 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="5fae8-104">New folders can also be created from within the <xref:System.Windows.Forms.FolderBrowserDialog> component.</span></span>
+
 > [!NOTE]
->  <span data-ttu-id="fd66f-105">폴더 대신 파일을 선택 하려면 사용 합니다 [OpenFileDialog](openfiledialog-component-windows-forms.md) 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="fd66f-105">To select files, instead of folders, use the [OpenFileDialog](openfiledialog-component-windows-forms.md) component.</span></span>  
-  
- <span data-ttu-id="fd66f-106">합니다 <xref:System.Windows.Forms.FolderBrowserDialog> 사용 하 여 런타임 구성 요소가 표시 되는 <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="fd66f-106">The <xref:System.Windows.Forms.FolderBrowserDialog> component is displayed at run time using the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method.</span></span> <span data-ttu-id="fd66f-107">설정 된 <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> 최상위 폴더 및 대화 상자의 트리 보기에서 표시 되는 모든 하위 폴더를 확인 하는 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="fd66f-107">Set the <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> property to determine the top-most folder and any subfolders that will appear within the tree view of the dialog box.</span></span> <span data-ttu-id="fd66f-108">대화 상자 표시 되 면 사용할 수 있습니다는 <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> 선택 된 폴더의 경로 가져올 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="fd66f-108">Once the dialog box has been shown, you can use the <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> property to get the path of the folder that was selected.</span></span>  
-  
- <span data-ttu-id="fd66f-109">폼에 추가 될 때를 <xref:System.Windows.Forms.FolderBrowserDialog> 구성 요소가 Windows Forms 디자이너 아래쪽에 있는 트레이에 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="fd66f-109">When it is added to a form, the <xref:System.Windows.Forms.FolderBrowserDialog> component appears in the tray at the bottom of the Windows Forms Designer.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="fd66f-110">참고자료</span><span class="sxs-lookup"><span data-stu-id="fd66f-110">See also</span></span>
+> <span data-ttu-id="5fae8-105">폴더 대신 파일을 선택 하려면 사용 합니다 [OpenFileDialog](openfiledialog-component-windows-forms.md) 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="5fae8-105">To select files, instead of folders, use the [OpenFileDialog](openfiledialog-component-windows-forms.md) component.</span></span>
+
+<span data-ttu-id="5fae8-106">합니다 <xref:System.Windows.Forms.FolderBrowserDialog> 사용 하 여 런타임 구성 요소가 표시 되는 <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="5fae8-106">The <xref:System.Windows.Forms.FolderBrowserDialog> component is displayed at run time using the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method.</span></span> <span data-ttu-id="5fae8-107">설정 된 <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> 최상위 폴더 및 대화 상자의 트리 보기에서 표시 되는 모든 하위 폴더를 확인 하는 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="5fae8-107">Set the <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> property to determine the top-most folder and any subfolders that will appear within the tree view of the dialog box.</span></span> <span data-ttu-id="5fae8-108">대화 상자 표시 되 면 사용할 수 있습니다는 <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> 선택 된 폴더의 경로 가져올 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="5fae8-108">Once the dialog box has been shown, you can use the <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> property to get the path of the folder that was selected.</span></span>
+
+<span data-ttu-id="5fae8-109">폼에 추가 될 때를 <xref:System.Windows.Forms.FolderBrowserDialog> 구성 요소가 Visual Studio에서 Windows Forms 디자이너 아래쪽에 있는 트레이에 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="5fae8-109">When it is added to a form, the <xref:System.Windows.Forms.FolderBrowserDialog> component appears in the tray at the bottom of the Windows Forms Designer in Visual Studio.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="5fae8-110">참고자료</span><span class="sxs-lookup"><span data-stu-id="5fae8-110">See also</span></span>
 
 - <xref:System.Windows.Forms.FolderBrowserDialog>
-- [<span data-ttu-id="fd66f-111">방법: Windows Forms FolderBrowserDialog 구성 요소를 사용 하 여 폴더를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="fd66f-111">How to: Choose Folders with the Windows Forms FolderBrowserDialog Component</span></span>](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)
-- [<span data-ttu-id="fd66f-112">FolderBrowserDialog 구성 요소</span><span class="sxs-lookup"><span data-stu-id="fd66f-112">FolderBrowserDialog Component</span></span>](folderbrowserdialog-component-windows-forms.md)
+- [<span data-ttu-id="5fae8-111">방법: Windows Forms FolderBrowserDialog 구성 요소를 사용 하 여 폴더를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="5fae8-111">How to: Choose Folders with the Windows Forms FolderBrowserDialog Component</span></span>](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)
+- [<span data-ttu-id="5fae8-112">FolderBrowserDialog 구성 요소</span><span class="sxs-lookup"><span data-stu-id="5fae8-112">FolderBrowserDialog Component</span></span>](folderbrowserdialog-component-windows-forms.md)
