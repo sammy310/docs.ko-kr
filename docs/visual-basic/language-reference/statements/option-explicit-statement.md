@@ -11,12 +11,12 @@ helpviewer_keywords:
 - explicit variable declaration
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
-ms.openlocfilehash: 0a319ba4259e66ed9a37aa2de9e97d2335b78663
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8374cdf6526061dfd463574887c2e98d25010910
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784048"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64582781"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit 문(Visual Basic)
 파일에서 모든 변수에 명시적으로 강제 또는 암시적 변수 선언을 허용 합니다.  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - queues [WCF], best practices
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
-ms.openlocfilehash: 27b9c6e117b6ba809daae87d376b03e27bc2b0f5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b2f64faab6df678182fb39174c8a558b298a8748
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858080"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584981"
 ---
 # <a name="best-practices-for-queued-communication"></a>대기 중인 통신을 위한 최선의 방법
 이 항목에서는 Windows Communication Foundation (WCF)에서 대기 중인된 통신에 대 한 모범 사례를 제공합니다. 다음 단원에서는 시나리오 측면에서 권장되는 방법에 대해 설명합니다.  
@@ -48,11 +48,11 @@ ms.locfileid: "61858080"
 ## <a name="achieving-high-throughput"></a>높은 처리량 달성  
  단일 엔드포인트에서 높은 처리량을 달성하려면 다음을 사용합니다.  
   
--   트랜잭션된 일괄 처리. 트랜잭션된 일괄처리를 사용하면 많은 메시지를 단일 트랜잭션으로 읽을 수 있습니다. 이를 통해 트랜잭션 커밋이 최적화되어 전체 성능이 향상됩니다. 일괄 처리 비용은 일괄 처리 내의 단일 메시지에 오류가 발생하는 경우 발생하며 이러한 경우 전체 일괄 처리가 롤백되고, 일괄 처리가 다시 안전할 때까지 메시지를 한 번에 하나씩 처리해야 합니다. 대부분의 경우 포이즌 메시지가 발생하는 경우는 드물기 때문에 일괄 처리는 특히 트랜잭션에 참여하는 다른 리소스 관리자가 있는 경우 시스템 성능 향상을 위한 기본적인 방법입니다. 자세한 내용은 [트랜잭션에서 메시지 일괄 처리](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)합니다.  
+- 트랜잭션된 일괄 처리. 트랜잭션된 일괄처리를 사용하면 많은 메시지를 단일 트랜잭션으로 읽을 수 있습니다. 이를 통해 트랜잭션 커밋이 최적화되어 전체 성능이 향상됩니다. 일괄 처리 비용은 일괄 처리 내의 단일 메시지에 오류가 발생하는 경우 발생하며 이러한 경우 전체 일괄 처리가 롤백되고, 일괄 처리가 다시 안전할 때까지 메시지를 한 번에 하나씩 처리해야 합니다. 대부분의 경우 포이즌 메시지가 발생하는 경우는 드물기 때문에 일괄 처리는 특히 트랜잭션에 참여하는 다른 리소스 관리자가 있는 경우 시스템 성능 향상을 위한 기본적인 방법입니다. 자세한 내용은 [트랜잭션에서 메시지 일괄 처리](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)합니다.  
   
--   동시성. 동시성은 처리량을 증가시키지만 또한 공유 리소스를 사용하는 데 영향을 줍니다. 자세한 내용은 [동시성](../../../../docs/framework/wcf/samples/concurrency.md)합니다.  
+- 동시성. 동시성은 처리량을 증가시키지만 또한 공유 리소스를 사용하는 데 영향을 줍니다. 자세한 내용은 [동시성](../../../../docs/framework/wcf/samples/concurrency.md)합니다.  
   
--   스로틀. 최적의 성능을 위해 디스패처 파이프라인의 메시지 수를 조절합니다. 이 작업을 수행 하는 방법의 예제를 참조 하세요 [제한](../../../../docs/framework/wcf/samples/throttling.md)합니다.  
+- 스로틀. 최적의 성능을 위해 디스패처 파이프라인의 메시지 수를 조절합니다. 이 작업을 수행 하는 방법의 예제를 참조 하세요 [제한](../../../../docs/framework/wcf/samples/throttling.md)합니다.  
   
  일괄 처리를 사용하는 경우 동시성 및 스로틀이 동시 일괄 처리로 변환됩니다.  
   
@@ -75,11 +75,11 @@ ms.locfileid: "61858080"
   
  `MsmqIntegrationBinding`을 사용하는 경우 다음 사항에 주의하십시오.  
   
--   WCF 메시지 본문은 MSMQ 메시지 본문과 같습니다. 대기 중인된 바인딩을 사용 하 여 WCF 메시지를 보낼 때 WCF 메시지 본문은 MSMQ 메시지 내부에 배치 됩니다. MSMQ 인프라는 이러한 추가 정보를 인식하지 못하고 MSMQ 메시지만 확인합니다.  
+- WCF 메시지 본문은 MSMQ 메시지 본문과 같습니다. 대기 중인된 바인딩을 사용 하 여 WCF 메시지를 보낼 때 WCF 메시지 본문은 MSMQ 메시지 내부에 배치 됩니다. MSMQ 인프라는 이러한 추가 정보를 인식하지 못하고 MSMQ 메시지만 확인합니다.  
   
--   `MsmqIntegrationBinding`은 가장 많이 사용하는 serialization 형식을 지원합니다. serialization 형식에 기반한 일반 메시지의 본문 형식인 <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>은 다른 형식의 매개 변수를 가져옵니다. 예를 들어 <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray>는 `MsmqMessage\<byte[]>`가 필요하고 <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream>은 `MsmqMessage<Stream>`이 필요합니다.  
+- `MsmqIntegrationBinding`은 가장 많이 사용하는 serialization 형식을 지원합니다. serialization 형식에 기반한 일반 메시지의 본문 형식인 <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>은 다른 형식의 매개 변수를 가져옵니다. 예를 들어 <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray>는 `MsmqMessage\<byte[]>`가 필요하고 <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream>은 `MsmqMessage<Stream>`이 필요합니다.  
   
--   XML serialization을 통해 지정할 수 있습니다 사용 하 여 알려진된 형식을 합니다 `KnownTypes` 특성을 [ \<동작 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) XML 메시지를 deserialize 하는 방법을 결정 한 후 사용 되는 요소.  
+- XML serialization을 통해 지정할 수 있습니다 사용 하 여 알려진된 형식을 합니다 `KnownTypes` 특성을 [ \<동작 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) XML 메시지를 deserialize 하는 방법을 결정 한 후 사용 되는 요소.  
   
 ## <a name="see-also"></a>참고자료
 

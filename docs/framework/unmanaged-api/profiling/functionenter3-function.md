@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a731df84af0991f80c560db417df0ffe053a5e2b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d05475f06a206dcb88d198c713767618453d742e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598937"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586906"
 ---
 # <a name="functionenter3-function"></a>FunctionEnter3 함수
 컨트롤이 함수에 전달 되 고 있음을 프로파일러에 알립니다.  

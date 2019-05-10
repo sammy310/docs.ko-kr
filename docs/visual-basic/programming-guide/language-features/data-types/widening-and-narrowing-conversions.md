@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: 9f1a71e8e2e3e4ebb9b412be74b5ea8702eb164f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98702f2fb8f912b9503f3ccdad74e61ef097f617
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61827160"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64600886"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>확대 변환과 축소 변환(Visual Basic)
 형식 변환 사용 하 여 중요 한 고려 대상 데이터 형식의 범위 내에서 변환의 결과 인지 됩니다.  
@@ -68,15 +68,15 @@ ms.locfileid: "61827160"
 ## <a name="narrowing-conversions"></a>축소 변환  
  표준 축소 변환에는 다음과 같습니다.  
   
--   앞의 확대 변환의 역방향 테이블 (한다는 점을 제외 하면 모든 형식은 자신에 게 확대)  
+- 앞의 확대 변환의 역방향 테이블 (한다는 점을 제외 하면 모든 형식은 자신에 게 확대)  
   
--   사이 변환 [부울](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) 및 숫자 형식  
+- 사이 변환 [부울](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) 및 숫자 형식  
   
--   열거 형식에 임의의 숫자 형식에서 변환 (`Enum`)  
+- 열거 형식에 임의의 숫자 형식에서 변환 (`Enum`)  
   
--   사이 변환 [문자열](../../../../visual-basic/language-reference/data-types/string-data-type.md) 모든 숫자 형식 `Boolean`, 또는 [날짜](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
+- 사이 변환 [문자열](../../../../visual-basic/language-reference/data-types/string-data-type.md) 모든 숫자 형식 `Boolean`, 또는 [날짜](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
   
--   파생 된 형식으로 입력 데이터 형식 또는 개체에서 변환  
+- 파생 된 형식으로 입력 데이터 형식 또는 개체에서 변환  
   
  축소 변환 수행 항상 런타임에 성공 및 실패 하거나 하 데이터 손실이 발생할 합니다. 대상 데이터 형식 변환 되는 값을 받을 수 없는 경우 오류가 발생 했습니다. 예를 들어 숫자 변환 오버플로가 발생할 수 있습니다. 컴파일러 없도록 하지 않은 경우 암시적 축소 변환을 수행 하는 [Option Strict 문](../../../../visual-basic/language-reference/statements/option-strict-statement.md) 형식 검사 스위치를 설정 하는 `Off`합니다.  
   
@@ -89,9 +89,9 @@ ms.locfileid: "61827160"
 ## <a name="exceptions-during-conversion"></a>변환 중 예외  
  확대 변환은 항상 때문에 성공 하 고 예외를 throw 하지 않습니다. 가장 일반적으로 축소 변환에 실패 하는 경우 다음 예외를 throw 합니다.  
   
--   <xref:System.InvalidCastException> -두 형식 간의 변환 작업 없이 정의 된 경우  
+- <xref:System.InvalidCastException> -두 형식 간의 변환 작업 없이 정의 된 경우  
   
--   <xref:System.OverflowException> -(정수 계열 형식만) 변환 된 값이 너무 커서 대상 유형에 적합 하지  
+- <xref:System.OverflowException> -(정수 계열 형식만) 변환 된 값이 너무 커서 대상 유형에 적합 하지  
   
  클래스 또는 구조를 정의 하는 경우는 [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) 변환 연산자와 해당 클래스 또는 구조체에서 역할을 하는 `CType` 적절 하다 고 판단 되는 모든 예외를 throw 할 수 있습니다. 또한 하는 `CType` Visual Basic 함수를 호출할 수 있습니다 또는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 메서드를 다양 한 예외를 throw 할 수 있습니다.  
   

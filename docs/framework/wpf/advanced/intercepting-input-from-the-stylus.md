@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
-ms.openlocfilehash: 5c22c2862ae8b948787fd5e6ca16109aa2f52aef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 76976f1599ecbbaf7405d7941f66aa2c5f955565
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62031254"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598948"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>스타일러스에서 입력 가로채기
 합니다 <xref:System.Windows.Input.StylusPlugIns> 아키텍처를 통해 하위 수준 제어를 구현 하기 위한 메커니즘을 제공 <xref:System.Windows.Input.Stylus> 입력과 디지털 잉크 생성 <xref:System.Windows.Ink.Stroke> 개체입니다. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 클래스는 사용자 지정 동작을 구현 하 고 최적의 성능을 위해 스타일러스 장치에서 가져온 데이터의 스트림으로 적용 메커니즘을 제공 합니다.  

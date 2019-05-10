@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 6c26ae82939a3d011ecb7ecd97e162ab2f45cd48
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: ee633e2488611417f72a9d51ab6b0fe2d9ddfa27
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174111"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583562"
 ---
 # <a name="code-access-security-and-adonet"></a>코드 액세스 보안 및 ADO.NET
 .NET Framework는 역할 기반 보안과 CAS(코드 액세스 보안)를 제공합니다. 두 보안 기능 모두 CLR(공용 언어 런타임)이 제공하는 공용 인프라를 사용하여 구현되었습니다. 비관리 코드의 경우 대부분의 응용 프로그램은 사용자 또는 보안 주체 권한으로 실행됩니다. 결과적으로 높은 권한을 가진 사용자가 악의적이거나 오류가 많은 소프트웨어를 실행하면 컴퓨터 시스템과 개인 데이터가 손상될 수 있습니다.  
@@ -27,11 +27,11 @@ ms.locfileid: "59174111"
   
  코드 액세스 권한에는 다음 세 가지 형식이 있습니다.  
   
--   `Code access permissions` 클래스에서 파생된 <xref:System.Security.CodeAccessPermission>. 파일 및 환경 변수와 같은 보호된 리소스에 액세스하고, 비관리 코드에 액세스하는 등의 보호된 작업을 수행하는 데 필요한 권한입니다.  
+- `Code access permissions` 클래스에서 파생된 <xref:System.Security.CodeAccessPermission>. 파일 및 환경 변수와 같은 보호된 리소스에 액세스하고, 비관리 코드에 액세스하는 등의 보호된 작업을 수행하는 데 필요한 권한입니다.  
   
--   `Identity permissions`은 어셈블리를 식별하는 특성을 나타냅니다. 디지털 서명이나 코드 출처와 같은 항목을 포함하는 증명 정보를 기준으로 어셈블리에 권한이 부여됩니다. <xref:System.Security.CodeAccessPermission> 기본 클래스에서 ID 권한이 파생되는 경우도 있습니다.  
+- `Identity permissions`은 어셈블리를 식별하는 특성을 나타냅니다. 디지털 서명이나 코드 출처와 같은 항목을 포함하는 증명 정보를 기준으로 어셈블리에 권한이 부여됩니다. <xref:System.Security.CodeAccessPermission> 기본 클래스에서 ID 권한이 파생되는 경우도 있습니다.  
   
--   `Role-based security permissions`은 보안 주체가 지정된 ID를 가지고 있거나 지정된 역할의 멤버인지에 따라 결정됩니다. <xref:System.Security.Permissions.PrincipalPermission> 클래스를 사용하면 활성 보안 주체에 대해 선언적 권한 검사와 필수 권한 검사를 모두 수행할 수 있습니다.  
+- `Role-based security permissions`은 보안 주체가 지정된 ID를 가지고 있거나 지정된 역할의 멤버인지에 따라 결정됩니다. <xref:System.Security.Permissions.PrincipalPermission> 클래스를 사용하면 활성 보안 주체에 대해 선언적 권한 검사와 필수 권한 검사를 모두 수행할 수 있습니다.  
   
  리소스에 액세스하거나 작업을 수행할 수 있는 권한이 코드에 있는지 확인하기 위해서 런타임 보안 시스템은 호출 스택을 검색하여 각 호출자에게 부여된 권한과 요청된 권한을 비교합니다. 호출 스택의 호출자에게 요청된 권한이 없는 경우 <xref:System.Security.SecurityException>이 throw되고 액세스가 거부됩니다.  
   

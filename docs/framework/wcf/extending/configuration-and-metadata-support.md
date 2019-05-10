@@ -2,12 +2,12 @@
 title: 구성 및 메타데이터 지원
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
-ms.openlocfilehash: abc9177fcc7b338a365d61721b63041ddcd68ab9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 74dab4528ae11b60fc930a826962b71595073a7f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858366"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587719"
 ---
 # <a name="configuration-and-metadata-support"></a>구성 및 메타데이터 지원
 이 항목에서는 바인딩 및 바인딩 요소에 대한 구성 및 메타데이터 지원을 사용하도록 설정하는 방법에 대해 설명합니다.  
@@ -15,13 +15,13 @@ ms.locfileid: "61858366"
 ## <a name="overview-of-configuration-and-metadata"></a>구성 및 메타데이터 개요  
  이 항목에서는 선택적 항목 1, 2 및 4는 다음 작업을 설명에 [개발 채널](../../../../docs/framework/wcf/extending/developing-channels.md) 작업 목록입니다.  
   
--   바인딩 요소에 대해 구성 파일 지원을 사용하도록 설정합니다.  
+- 바인딩 요소에 대해 구성 파일 지원을 사용하도록 설정합니다.  
   
--   바인딩에 대해 구성 파일 지원을 사용하도록 설정합니다.  
+- 바인딩에 대해 구성 파일 지원을 사용하도록 설정합니다.  
   
--   바인딩 요소에 대해 WSDL 및 정책 어설션을 내보냅니다.  
+- 바인딩 요소에 대해 WSDL 및 정책 어설션을 내보냅니다.  
   
--   바인딩 또는 바인딩 요소를 삽입하고 구성하기 위해 WSDL 및 정책 어설션을 식별합니다.  
+- 바인딩 또는 바인딩 요소를 삽입하고 구성하기 위해 WSDL 및 정책 어설션을 식별합니다.  
   
  사용자 정의 바인딩 및 바인딩 요소를 만드는 방법에 대 한 자세한 내용은 [Creating User-Defined 바인딩을](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md) 하 고 [BindingElement 만들기](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md), 각각.  
   

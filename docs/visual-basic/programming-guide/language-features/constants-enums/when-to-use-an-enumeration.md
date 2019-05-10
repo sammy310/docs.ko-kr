@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - enumerations [Visual Basic]
 ms.assetid: e6e47b5b-3ed9-452d-a481-9c3fed88519a
-ms.openlocfilehash: ff2d8c324aee8bbccef050c020e5392368b05b1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a43c55d4ad6a895957b53ae18c3641c5383a24ce
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907311"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64585070"
 ---
 # <a name="when-to-use-an-enumeration-visual-basic"></a>열거형을 사용하는 경우(Visual Basic)
 열거형에는 관련 된 상수 집합을 사용 하는 간편한 방법은 제공 합니다. 열거형, 또는 `Enum`, 기호화 된 이름 값의 집합입니다. 열거형 데이터 형식으로 처리 됩니다 하 고 변수 및 속성과 함께 사용할 상수 집합을 사용할 수 있습니다.  

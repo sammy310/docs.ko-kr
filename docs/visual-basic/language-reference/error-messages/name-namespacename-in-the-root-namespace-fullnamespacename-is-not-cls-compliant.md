@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40039
 ms.assetid: c5bd5914-ae71-416a-8bed-f76f644f78be
-ms.openlocfilehash: 84706719d151ea8df478f88610df34842f6f8702
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: faed46eaf21513945ef4eb0c76d36780e960d380
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918361"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592033"
 ---
 # <a name="name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant"></a>이름을 \<namespacename > 루트 네임 스페이스에서 \<fullnamespacename > CLS 규격이 아님
 로 어셈블리 표시 됩니다 `<CLSCompliant(True)>`에 요소의 루트 네임 스페이스 이름 밑줄로 시작 하지만 (`_`).  
