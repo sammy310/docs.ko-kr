@@ -14,8 +14,6 @@
           href: foreground-and-background-threads.md
         - name: Windows에서 관리되는 스레딩 및 관리되지 않는 스레딩
           href: managed-and-unmanaged-threading-in-windows.md
-        - name: 'Thread.Suspend, 가비지 컬렉션, 안전한 시점'
-          href: thread-suspend-garbage-collection-and-safe-points.md
         - name: '스레드 로컬 스토리지: 스레드 상대 정적 필드 및 데이터 슬롯'
           href: thread-local-storage-thread-relative-static-fields-and-data-slots.md
     - name: 스레드 및 스레딩 사용
