@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC36556
 ms.assetid: e3ba1f33-3a71-4f03-9b04-ed5ec17de17c
-ms.openlocfilehash: b798f296b62b51de34a7ec5ce5a8b608273f5748
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f657048a8aa9748104e40503e727a5e6d90a87ad
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61751529"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64646865"
 ---
-# <a name="anonymous-type-member-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a><span data-ttu-id="8b12f-102">익명 형식 멤버 이름은 인수가 없는 단순한 이름 또는 정규화된 이름에서만 유추할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8b12f-102">Anonymous type member name can be inferred only from a simple or qualified name with no arguments</span></span>
-<span data-ttu-id="8b12f-103">복잡 한 식에서 무명 형식 멤버 이름은 유추할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="8b12f-103">You cannot infer an anonymous type member name from a complex expression.</span></span>  
+# <a name="anonymous-type-member-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a><span data-ttu-id="a7089-102">익명 형식 멤버 이름은 인수가 없는 단순한 이름 또는 정규화된 이름에서만 유추할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a7089-102">Anonymous type member name can be inferred only from a simple or qualified name with no arguments</span></span>
+<span data-ttu-id="a7089-103">복잡 한 식에서 무명 형식 멤버 이름은 유추할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="a7089-103">You cannot infer an anonymous type member name from a complex expression.</span></span>  
   
 ```vb  
 Dim numbers() As Integer = {1, 2, 3, 4, 5}  
@@ -23,19 +23,19 @@ Dim numbers() As Integer = {1, 2, 3, 4, 5}
 ' Dim instanceName1 = New With {numbers(3)}  
 ```  
   
- <span data-ttu-id="8b12f-104">익명 형식 및 멤버 이름 및 형식을 유추할 수 없습니다. 원본에 대 한 자세한 내용은 참조 하세요. [방법: 무명 형식 선언에서 속성 이름 및 형식 유추](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="8b12f-104">For more information about sources from which anonymous types can and cannot infer member names and types, see [How to: Infer Property Names and Types in Anonymous Type Declarations](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).</span></span>  
+ <span data-ttu-id="a7089-104">익명 형식 및 멤버 이름 및 형식을 유추할 수 없습니다. 원본에 대 한 자세한 내용은 참조 하세요. [방법: 무명 형식 선언에서 속성 이름 및 형식 유추](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a7089-104">For more information about sources from which anonymous types can and cannot infer member names and types, see [How to: Infer Property Names and Types in Anonymous Type Declarations](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).</span></span>  
   
- <span data-ttu-id="8b12f-105">**오류 ID:** BC36556</span><span class="sxs-lookup"><span data-stu-id="8b12f-105">**Error ID:** BC36556</span></span>  
+ <span data-ttu-id="a7089-105">**오류 ID:** BC36556</span><span class="sxs-lookup"><span data-stu-id="a7089-105">**Error ID:** BC36556</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="8b12f-106">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="8b12f-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="a7089-106">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="a7089-106">To correct this error</span></span>  
   
-- <span data-ttu-id="8b12f-107">다음 코드와 같이 식을 멤버 이름으로 할당 합니다.</span><span class="sxs-lookup"><span data-stu-id="8b12f-107">Assign the expression to a member name, as shown in the following code:</span></span>  
+- <span data-ttu-id="a7089-107">다음 코드와 같이 식을 멤버 이름으로 할당 합니다.</span><span class="sxs-lookup"><span data-stu-id="a7089-107">Assign the expression to a member name, as shown in the following code:</span></span>  
   
     ```  
     Dim instanceName2 = New With {.number = numbers(3)}  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="8b12f-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="8b12f-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a7089-108">참고자료</span><span class="sxs-lookup"><span data-stu-id="a7089-108">See also</span></span>
 
-- [<span data-ttu-id="8b12f-109">익명 형식</span><span class="sxs-lookup"><span data-stu-id="8b12f-109">Anonymous Types</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
-- [<span data-ttu-id="8b12f-110">방법: 무명 형식 선언에서 속성 이름 및 형식 유추</span><span class="sxs-lookup"><span data-stu-id="8b12f-110">How to: Infer Property Names and Types in Anonymous Type Declarations</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+- [<span data-ttu-id="a7089-109">익명 형식</span><span class="sxs-lookup"><span data-stu-id="a7089-109">Anonymous Types</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [<span data-ttu-id="a7089-110">방법: 무명 형식 선언에서 속성 이름 및 형식 유추</span><span class="sxs-lookup"><span data-stu-id="a7089-110">How to: Infer Property Names and Types in Anonymous Type Declarations</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
