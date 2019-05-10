@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-ms.openlocfilehash: b50c902f69f7602dbad4663dc35bf0a2b932973f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6600b3b2945120f2f24e14d4cc898cd814366045
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796983"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647069"
 ---
 # <a name="char-data-type-visual-basic"></a>Char 데이터 형식(Visual Basic)
 0에서 65535 까지의 부호 없는 16 비트 (2 바이트) 코드 포인트를 저장 합니다. 각 *코드 포인트*, 또는 문자 코드를 단일 유니코드 문자를 나타냅니다.  

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42025
 ms.assetid: db3337e5-c349-42bf-86df-d9c1e00952a5
-ms.openlocfilehash: 8e6ddab16c59d7ce95d96b377e3f372f6ebe5278
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 311f4c025072162e0cfb6b87587f8602d33fcd19
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61751607"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64646873"
 ---
 # <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a>인스턴스를 통한 공유 멤버 액세스입니다. 정규화 식을 계산하지 않습니다.
 클래스 또는 구조체의 인스턴스 변수는 액세스 하는 `Shared` 변수, 속성, 프로시저 또는 해당 클래스 또는 구조체에 정의 된 이벤트입니다. 이 경고는 인스턴스 변수를 사용 하 여 클래스 또는 상수 또는 열거형 또는 중첩 된 클래스 또는 구조체와 같은 구조체의 멤버를 암시적으로 공유를 액세스 하는 경우에 발생할 수 있습니다.  
