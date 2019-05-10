@@ -11,12 +11,12 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-ms.openlocfilehash: 7b85940f8ce64139d056497a8007379f1658010d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c26b8deb6036c13a9a61d8929b4cabba5f3ef67
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646334"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584525"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>클래스 및 구조체(C# 프로그래밍 가이드)
 클래스와 구조체는 .NET Framework의 공용 형식 시스템의 기본 구문 중 두 가지입니다. 각각은 기본적으로 하나의 논리 단위에 속하는 데이터 및 동작 집합을 캡슐화하는 데이터 구조입니다. 데이터 및 동작은 클래스 또는 구조체의 *멤버*로, 이 항목의 뒷부분에 나오는 것처럼 메서드, 속성 및 이벤트 등을 포함합니다.  
@@ -44,25 +44,25 @@ ms.locfileid: "61646334"
 ### <a name="members"></a>멤버  
  모든 메서드, 필드, 상수, 속성 및 이벤트는 형식 내에서 선언되어야 합니다. 이것을 형식의 *멤버*라고 합니다. 다른 언어에는 있지만 C#에는 전역 변수 또는 메서드가 없습니다. 프로그램의 진입점인 `Main` 메서드까지도 클래스 또는 구조체 내에서 선언되어야 합니다. 다음은 클래스 또는 구조체에서 선언될 수 있는 모든 다양한 종류의 멤버입니다.  
   
--   [필드](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+- [필드](../../../csharp/programming-guide/classes-and-structs/fields.md)  
   
--   [상수](../../../csharp/programming-guide/classes-and-structs/constants.md)  
+- [상수](../../../csharp/programming-guide/classes-and-structs/constants.md)  
   
--   [속성](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [속성](../../../csharp/programming-guide/classes-and-structs/properties.md)  
   
--   [메서드](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [메서드](../../../csharp/programming-guide/classes-and-structs/methods.md)  
   
--   [생성자](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [생성자](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
   
--   [이벤트](../../../csharp/programming-guide/events/index.md)  
+- [이벤트](../../../csharp/programming-guide/events/index.md)  
   
--   [종료자](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [종료자](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
   
--   [인덱서](../../../csharp/programming-guide/indexers/index.md)  
+- [인덱서](../../../csharp/programming-guide/indexers/index.md)  
   
--   [연산자](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [연산자](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
   
--   [중첩 형식](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
+- [중첩 형식](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
   
 ### <a name="accessibility"></a>액세스 가능성  
  일부 메서드 및 속성은 *클라이언트 코드*라고 하는 클래스 또는 구조체 외부의 코드에서 호출하거나 액세스할 수 있습니다. 다른 메서드 및 속성은 클래스 또는 구조체 자체에서만 사용할 수 있습니다. 의도된 클라이언트 코드에서만 연결될 수 있도록 코드의 액세스 가능성을 제한하는 것이 중요합니다. 형식 및 해당 멤버가 클라이언트 코드에 액세스하는 방법은 액세스 한정자 [public](../../../csharp/language-reference/keywords/public.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [protected internal](../../../csharp/language-reference/keywords/protected-internal.md), [private](../../../csharp/language-reference/keywords/private.md) 및 [private protected](../../../csharp/language-reference/keywords/private-protected.md)를 사용하여 지정합니다. 기본 액세스 가능성은 `private`입니다. 자세한 내용은 [액세스 한정자](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)를 참조하세요.  

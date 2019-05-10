@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
-ms.openlocfilehash: 95bc9beed9965bad32118dfafa4a5aa76902ca10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7baf358d9cdabe8cadf6b297a1d0d63d64282525
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607828"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583538"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>DataView 개체 만들기(LINQ to DataSet)
 <xref:System.Data.DataView> 컨텍스트에서 두 가지 방법으로 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]를 만들 수 있습니다. <xref:System.Data.DataView>에 대한 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 쿼리를 사용하거나 형식화되었거나 형식화되지 않은 <xref:System.Data.DataTable>을 사용하여 <xref:System.Data.DataTable>를 만들 수 있습니다. 만든 두 경우 모두를 <xref:System.Data.DataView> 중 하나를 사용 하 여는 <xref:System.Data.DataTableExtensions.AsDataView%2A> 확장명 메서드 <xref:System.Data.DataView> 만들게 되며 직접 아닙니다는 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 컨텍스트.  

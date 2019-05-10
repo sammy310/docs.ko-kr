@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Object data type
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
-ms.openlocfilehash: 616110145db2796e05509094b1c023daacd68f03
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 593fda6a4949a55d77ae70edd19159a618cc6b6d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61751678"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592075"
 ---
 # <a name="object-data-type"></a>Object Data Type
 개체를 참조 하는 주소를 저장 합니다. 참조 형식 (문자열, 배열, 클래스 또는 인터페이스)를 할당할 수 있습니다는 `Object` 변수입니다. `Object` 변수 값 형식의 데이터도 참조할 수 있습니다 (숫자 `Boolean`를 `Char`, `Date`, 구조체 또는 열거형)입니다.  

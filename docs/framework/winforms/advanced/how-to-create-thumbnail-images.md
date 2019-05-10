@@ -8,12 +8,12 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: b9afbac85dee90938e2bd55ebe19d3b02c0d66d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 275041372bd5e7da5dd0b32dc0a3d70a38bd0dcd
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937642"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063762"
 ---
 # <a name="how-to-create-thumbnail-images"></a>방법: 썸네일 이미지 만들기
 축소판 그림 이미지를 이미지의 작은 버전이 있습니다. 호출 하 여 썸네일 이미지를 만들 수 있습니다 합니다 <xref:System.Drawing.Image.GetThumbnailImage%2A> 메서드는 <xref:System.Drawing.Image> 개체입니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "61937642"
   
  다음 그림에서는 미리 보기 이미지를 보여 줍니다.  
   
- ![축소판 그림 이미지](./media/thumbnail1.png "Thumbnail1")  
+ ![출력 미리 보기를 보여 주는 스크린샷.](./media/how-to-create-thumbnail-images/construct-thumbnail-image.png)  
   
 > [!NOTE]
 >  이 예제에서는 콜백 메서드를 선언 되었지만 사용 되지 않습니다. 이 GDI +의 모든 버전을 지원합니다.  

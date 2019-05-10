@@ -6,19 +6,19 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: f7d09e315f2ccc7ecdcf22719ca6dce1ee1411b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 1bfa0ddbeba7546044a0d1ed15f4c2ff303b1491
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186292"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583626"
 ---
 # <a name="specifying-an-assemblys-location"></a>어셈블리 위치 지정
 두 가지 방법으로 어셈블리의 위치를 지정할 수 있습니다.  
   
--   사용 하는 [ \<codeBase >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 요소입니다.  
+- 사용 하는 [ \<codeBase >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 요소입니다.  
   
--   사용 하 여 [ \<검색 >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 요소입니다.  
+- 사용 하 여 [ \<검색 >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 요소입니다.  
   
  사용할 수도 있습니다는 [.NET Framework 구성 도구 (Mscorcfg.msc)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100)) 어셈블리 위치를 지정 하거나 어셈블리를 조사 하려면 공용 언어 런타임에 대 한 위치를 지정 합니다.  
   

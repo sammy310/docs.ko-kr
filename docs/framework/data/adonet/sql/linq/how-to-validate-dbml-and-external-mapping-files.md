@@ -2,12 +2,12 @@
 title: '방법: DBML 및 외부 매핑 파일 유효성 검사'
 ms.date: 03/30/2017
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-ms.openlocfilehash: 83a26f22495c849aa00143ca36b63fa147120c28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 9e80f41e05fb78b7a6c1ef9ce47ef611cfe3e57d
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310241"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64910648"
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>방법: DBML 및 외부 매핑 파일 유효성 검사
 수정한 외부 매핑 파일 및 .dbml 파일은 해당 스키마 정의에 대해 유효성이 검사되어야 합니다. 이 항목에서는 유효성 검사 프로세스를 구현 하는 단계를 사용 하 여 Visual Studio 사용자를 제공 합니다.  
@@ -30,9 +30,9 @@ ms.locfileid: "59310241"
   
 5. 원하는 목적에 맞는 적절한 스키마 정의를 확인합니다.  
   
-    -   DbmlSchema.xsd는 .dbml 파일의 유효성 검사를 위한 스키마 정의입니다. 자세한 내용은 [LINQ to SQL에서에서 코드 생성](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)합니다.  
+    - DbmlSchema.xsd는 .dbml 파일의 유효성 검사를 위한 스키마 정의입니다. 자세한 내용은 [LINQ to SQL에서에서 코드 생성](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)합니다.  
   
-    -   LinqToSqlMapping.xsd는 외부 XML 매핑 파일의 유효성 검사를 위한 스키마 정의입니다. 자세한 내용은 [외부 매핑](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)합니다.  
+    - LinqToSqlMapping.xsd는 외부 XML 매핑 파일의 유효성 검사를 위한 스키마 정의입니다. 자세한 내용은 [외부 매핑](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)합니다.  
   
 6. 에 **사용 하 여** 클릭 드롭다운 상자를 연 다음을 클릭 하 여 원하는 스키마 정의 행의 열 **이 스키마를 사용 하 여**입니다.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "59310241"
   
 1. 이 항목의 앞부분에서 설명한 대로 스키마 정의가 포함된 도움말 항목을 찾습니다.  
   
-    -   .Dbml 파일을 참조 하세요 [LINQ to SQL에서에서 코드 생성](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)합니다.  
+    - .Dbml 파일을 참조 하세요 [LINQ to SQL에서에서 코드 생성](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)합니다.  
   
-    -   외부 매핑 파일을 참조 하세요 [외부 매핑](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)합니다.  
+    - 외부 매핑 파일을 참조 하세요 [외부 매핑](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)합니다.  
   
 2. 클릭 **코드 복사** 코드 파일을 클립보드에 복사 합니다.  
   

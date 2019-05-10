@@ -2,12 +2,12 @@
 title: 직렬화 가능 형식
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-ms.openlocfilehash: 44fc538ccb69296b91c94d2b9ae497be599c0c7e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: df00623ba45b356561d4d80d970fdf36ee6a377f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61748215"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586142"
 ---
 # <a name="serializable-types"></a>직렬화 가능 형식
 기본적으로 <xref:System.Runtime.Serialization.DataContractSerializer>는 모든 공개 형식을 serialize합니다. 이 경우 형식의 모든 공개 읽기/쓰기 속성과 필드가 serialize됩니다.  

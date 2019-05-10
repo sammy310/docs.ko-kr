@@ -2,12 +2,12 @@
 title: 장기 실행 워크플로 서비스 만들기
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: ac0cb83ad428ce98a05fd0626fff835162ad0e41
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 10a2c568f14c3f3c1818fd8b3240279b798777b8
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048145"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063808"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>장기 실행 워크플로 서비스 만들기
 이 항목에서는 장기 실행 워크플로 서비스를 만드는 방법에 대해 설명합니다. 장기 실행 워크플로 서비스는 장기간 실행될 수 있습니다. 특정 지점에서 워크플로는 추가 정보를 기다리며 유휴 상태가 될 수 있습니다. 이 경우 워크플로는 SQL 데이터베이스에 유지되고 메모리에서 제거됩니다. 추가 정보를 사용할 수 있으면 워크플로 인스턴스가 다시 메모리에 로드되어 계속 실행됩니다.  이 시나리오에서는 매우 간단한 주문 시스템을 구현합니다.  클라이언트가 워크플로 서비스에 초기 메시지를 보내 주문을 시작하고, 워크플로 서비스는 주문 ID를 클라이언트에 반환합니다. 이 시점에서 워크플로 서비스가 클라이언트에서 다른 메시지를 기다리며 유휴 상태가 되고 SQL Server 데이터베이스에 유지됩니다.  클라이언트가 품목을 주문하기 위해 다음 메시지를 보내면 워크플로 서비스는 메모리에 다시 로드되고 주문 처리를 마칩니다. 코드 샘플에서 워크플로 서비스는 품목이 주문에 추가되었음을 나타내는 문자열을 반환합니다. 코드 샘플은 이 기술의 실제 응용 프로그램이라기보다는 장기 실행 워크플로 서비스를 보여 주는 간단한 샘플입니다. 이 항목을 Visual Studio 2012 프로젝트 및 솔루션을 만드는 방법을 알고 있다고 가정 합니다.
@@ -100,10 +100,15 @@ ms.locfileid: "62048145"
     1. 선택 된 **시퀀스** 포함 하는 새로 추가 된 **수신** 및 **SendReply** 활동 하 고를 **변수** 단추. 다음 그림에 강조 표시된 변수를 추가합니다.
 
          ![새 변수를 추가](./media/creating-a-long-running-workflow-service/add-the-itemid-variable.png "ItemId 변수를 추가 합니다.")
+         
+         추가할 수도 `orderResult` 으로 **문자열** 에 `Sequence` 범위입니다.
 
     2. 선택 된 **수신** 활동 하 고 다음 그림에 표시 되는 속성을 설정:
 
          ![Receive 활동 속성 설정](./media/creating-a-long-running-workflow-service/set-receive-activities-properties.png "Receive 활동 속성을 설정 합니다.")
+         
+         > [!NOTE]
+         >  변경할 것을 잊지 마세요 **ServiceContractName** 필드와 `../IAddItem`합니다.
 
     3. 클릭 된 **정의 하는 중...**  링크를 **ReceiveAddItem** 활동 하 고 다음 그림에 나와 있는 매개 변수를 추가:이 두 매개 변수를 주문 ID와 주문 되는 항목의 ID를 수락 하도록 수신 작업을 구성 합니다.
 

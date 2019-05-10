@@ -2,12 +2,12 @@
 title: LINQ to SQL 원본 코드 분석
 ms.date: 03/30/2017
 ms.assetid: cba3eef8-e108-4478-b588-ad59580e133e
-ms.openlocfilehash: 2d8c5a89cbf09ef3829669a3d5272f742fa6582c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 35bc4988b8b9845ce6f45bab6849cd4b53a858ec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033854"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592481"
 ---
 # <a name="analyzing-linq-to-sql-source-code"></a>LINQ to SQL 원본 코드 분석
 다음 단계에 따라 Northwind 샘플 데이터베이스에서 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 소스 코드를 생성할 수 있습니다. 개체 모델 요소와 데이터베이스 요소를 비교하여 다른 항목이 매핑되는 방법을 보다 명확하게 볼 수 있습니다.  

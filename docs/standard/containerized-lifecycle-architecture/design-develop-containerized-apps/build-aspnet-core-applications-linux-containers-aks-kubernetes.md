@@ -1,17 +1,17 @@
 ---
-title: Linux 컨테이너와 AKS/Kubernetes 클러스터에 배포 하는 ASP.NET Core 2.1 응용 프로그램 빌드
+title: Linux 컨테이너와 AKS/Kubernetes 클러스터에 배포 하는 ASP.NET Core 2.2 응용 프로그램 빌드
 description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 애플리케이션 수명 주기
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/25/2019
-ms.openlocfilehash: c6d778d345466b1b852d06bc01ce40ccfdebf964
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 28d2f557e4434ef7e5c2c3f8d17d6d3d6a80ce2a
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052755"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452778"
 ---
-# <a name="build-aspnet-core-21-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Linux 컨테이너와 AKS/Kubernetes 오 케 스트레이 터에 배포 하는 ASP.NET Core 2.1 응용 프로그램 빌드
+# <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Linux 컨테이너와 AKS/Kubernetes 오 케 스트레이 터에 배포 하는 ASP.NET Core 2.2 응용 프로그램 빌드
 
 Azure Kubernetes 서비스 (AKS)는 Azure의 관리 되는 Kubernetes 오케스트레이션 서비스 컨테이너 배포 및 관리를 간소화 하는입니다.
 
@@ -23,13 +23,13 @@ AKS 주요 기능은 다음과 같습니다.
 - 사용자 구성 가능한 크기 조정
 - 개발자와 클러스터 운영자 모두에 대 한 간단한 사용자 환경.
 
-Linux에서 실행 되 고 개발은 수행 하는 동안 Azure에서 AKS 클러스터를 배포 하는 ASP.NET Core 2.1 응용 프로그램 만들기를 탐색 하는 다음 예제에서는 Visual Studio 2017을 사용 합니다.
+Linux에서 실행 되 고 개발은 수행 하는 동안 Azure에서 AKS 클러스터를 배포 하는 ASP.NET Core 2.2 응용 프로그램 만들기를 탐색 하는 다음 예제에서는 Visual Studio 2017을 사용 합니다.
 
-## <a name="creating-the-aspnet-core-21-project-using-visual-studio-2017"></a>Visual Studio 2017을 사용 하 여 ASP.NET Core 2.1 프로젝트 만들기
+## <a name="creating-the-aspnet-core-22-project-using-visual-studio-2017"></a>Visual Studio 2017을 사용 하 여 ASP.NET Core 2.2 프로젝트 만들기
 
 ASP.NET Core는 Microsoft 및 GitHub의.NET 커뮤니티에서 유지 관리 하는 범용 개발 플랫폼입니다. 플랫폼 간, Windows, macOS 및 Linux를 지원 하며 장치, 클라우드 및 포함 된 IoT 시나리오에서 사용할 수 있습니다.
 
-이 예제에서는 샘플을 만드는 모든 추가 정보를 표시 하지 않아도 되므로 Visual Studio Web API 템플릿을 기반으로 하는 간단한 프로젝트를 사용 합니다. ASP.NET Core 2.1 기술을 사용 하 여 REST API를 사용 하 여 작은 프로젝트를 실행 하려면 모든 요소를 포함 하는 표준 템플릿을 사용 하 여 프로젝트를 만들려면 해야 합니다.
+이 예제에서는 샘플을 만드는 모든 추가 정보를 표시 하지 않아도 되므로 Visual Studio Web API 템플릿을 기반으로 하는 간단한 프로젝트를 사용 합니다. ASP.NET Core 2.2 기술을 사용 하 여 REST API를 사용 하 여 작은 프로젝트를 실행 하려면 모든 요소를 포함 하는 표준 템플릿을 사용 하 여 프로젝트를 만들려면 해야 합니다.
 
 ![ASP.NET Core 웹 응용 프로그램을 선택 하면 Visual Studio에서 새 프로젝트 창을 추가 합니다.](media/create-aspnet-core-application.png)
 
@@ -39,13 +39,13 @@ Visual Studio에서 샘플 프로젝트를 만들려면 **파일** > **새로 �
 
 Visual Studio 웹 프로젝트에 대 한 템플릿을 나열합니다. 예를 들어 선택 **API** ASP.NET 웹 API 응용 프로그램을 만들려고 합니다.
 
-ASP.NET Core 2.1 프레임 워크로 선택 했는지 확인 합니다. .NET core 2.1 Visual Studio 2017의 마지막 버전에 포함 되어 및 자동으로 설치 되며 Visual Studio 2017을 설치할 때 구성 합니다.
+ASP.NET Core 2.2 프레임 워크로 선택 했는지 확인 합니다. .NET core 2.2 Visual Studio 2017의 마지막 버전에 포함 되어 및 자동으로 설치 되며 Visual Studio 2017을 설치할 때 구성 합니다.
 
 ![Visual Studio 대화 상자 API 옵션이 선택 된 ASP.NET Core 웹 응용 프로그램의 유형을 선택 합니다.](media/create-web-api-application.png)
 
-**그림 4-37**합니다. ASP.NET CORE 2.1을 선택 하 고 Web API 프로젝트 형식
+**그림 4-37**합니다. ASP.NET CORE 2.2를 선택 하 고 Web API 프로젝트 형식
 
-이전 버전의.NET Core를 사용 하는 경우 다운로드 하 고에서 2.1 버전을 설치할 수 <https://www.microsoft.com/net/download/core#/sdk>입니다.
+이전 버전의.NET Core를 사용 하는 경우 다운로드를 통해 2.2 버전을 설치할 <https://www.microsoft.com/net/download/core#/sdk>합니다.
 
 프로젝트를 만들 때 Docker 지원을 추가할 수 있습니다 하거나 나중에 따라서 있습니다 수 "docker 화" 프로젝트가 언제 든 지 합니다. 프로젝트를 만든 후에 Docker 지원을 추가 하려면 솔루션 탐색기에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 선택 **추가** > **Docker 지원** 상황에 맞는 메뉴입니다.
 
@@ -59,7 +59,7 @@ Docker 지원 추가 완료 하려면 Windows 또는 Linux를 선택할 수 있�
 
 **그림 4-39**합니다. Linux 컨테이너를 선택합니다.
 
-이러한 간단한 단계를 사용 하 여 ASP.NET Core 2.1 응용 프로그램을 Linux 컨테이너에서 실행 해야 합니다.
+이러한 간단한 단계를 사용 하 여 ASP.NET Core 2.2 응용 프로그램을 Linux 컨테이너에서 실행 해야 합니다.
 
 알 수 있듯이 Visual Studio 2017 및 Docker 간의 통합은 개발자의 생산성을 완전히 방향인 합니다.
 
@@ -125,6 +125,12 @@ docker tag mssampleaksapplication:latest mssampleacr.azurecr.io/mssampleaksappli
 
 ### <a name="push-the-image-into-the-azure-acr"></a>Azure ACR에 이미지 푸시
 
+Azure Container Registry에 로그인
+
+```console
+az acr login --name mssampleacr
+```
+
 다음 명령을 사용 하 여 Azure ACR에 이미지를 푸시하십시오.
 
 ```console
@@ -158,7 +164,7 @@ spec:
         app: mssample-kub-app
     spec:
       containers:
-        - mane: mssample-services-app
+        - name: mssample-services-app
           image: mssampleacr.azurecr.io/mssampleaksapplication:v1
           ports:
             - containerPort: 80

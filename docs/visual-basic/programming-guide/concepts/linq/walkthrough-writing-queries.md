@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: 8e3d893a21b36868f59d132bd8ba9a6f634cac62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: daf4ef0032ef8bfcce02ec925cc957abdecb3643
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907610"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64910708"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>연습: Visual Basic에서 쿼리 작성
 이 연습에서는 쓸 Visual Basic 언어 기능을 사용 하는 방법을 보여 줍니다. [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 쿼리 식입니다. 이 연습에서는 학생 개체의 목록에 쿼리를 만드는 방법, 쿼리를 실행 하는 방법 및 수정 하는 방법을 보여 줍니다. 쿼리 개체 이니셜라이저, 지역 형식 유추 및 익명 형식을 비롯 한 여러 기능을 통합 합니다.  
@@ -40,14 +40,14 @@ ms.locfileid: "61907610"
   
 #### <a name="to-add-the-data-source"></a>데이터 소스를 추가하려면  
   
--   정의 `Student` 클래스 및 클래스의 인스턴스 목록을 만듭니다.  
+- 정의 `Student` 클래스 및 클래스의 인스턴스 목록을 만듭니다.  
   
     > [!IMPORTANT]
     >  정의 하는 데 필요한 코드를 `Student` 사용 되는 목록을 만들어 클래스 연습 예제는에서 제공 되는 [방법: 항목 목록을 만드는](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)합니다. 여기에서 복사를 프로젝트에 붙여 넣습니다. 새 코드를 프로젝트를 만들 때 표시 되는 코드를 바꿉니다.  
   
 #### <a name="to-add-a-new-student-to-the-students-list"></a>학생 목록에 새 학생을 추가 하려면  
   
--   패턴에 따라 합니다 `getStudents` 의 다른 인스턴스를 추가 하는 방법의 `Student` 목록에 클래스. 학생을 추가 개체 이니셜라이저를 소개 합니다. 자세한 내용은 참조 하세요. [개체 이니셜라이저: 명명 된 형식과 익명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)합니다.  
+- 패턴에 따라 합니다 `getStudents` 의 다른 인스턴스를 추가 하는 방법의 `Student` 목록에 클래스. 학생을 추가 개체 이니셜라이저를 소개 합니다. 자세한 내용은 참조 하세요. [개체 이니셜라이저: 명명 된 형식과 익명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)합니다.  
   
 ## <a name="create-a-query"></a>쿼리 만들기  
  를 실행 하면이 섹션에 추가한 쿼리 academic 차수가 상위 10 개를 배치 하는 학생의 목록을 생성 합니다. 쿼리는 전체 선택 되므로 `Student` 개체가 될 때마다 쿼리 결과의 형식 `IEnumerable(Of Student)`합니다. 그러나 쿼리 형식이 일반적으로 지정 하지 않았습니다 쿼리 정의에서. 대신, 컴파일러는 형식을 확인 하려면 지역 형식 유추를 사용 합니다. 자세한 내용은 [로컬 형식 유추](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)합니다. 쿼리의 범위 변수 `currentStudent`, 각각에 대 한 참조로 사용 `Student` 원본에는 인스턴스 `students`에서 각 개체의 속성에 대 한 액세스를 제공 `students`합니다.  

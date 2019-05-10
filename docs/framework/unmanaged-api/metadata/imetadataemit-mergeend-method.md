@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 277e7e57ae01128039c3a280158110acde3363a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b4e3045476fc68dbeb545b7394b373be4ff881c8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944549"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584284"
 ---
 # <a name="imetadataemitmergeend-method"></a>IMetaDataEmit::MergeEnd 메서드
 병합 현재 범위에 하나 이상의 이전 호출에 의해 지정 된 모든 메타 데이터 범위가 [imetadataemit:: 병합](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)입니다.  

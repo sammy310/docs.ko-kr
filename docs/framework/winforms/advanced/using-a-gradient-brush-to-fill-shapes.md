@@ -6,12 +6,12 @@ helpviewer_keywords:
 - gradient brushes
 - examples [Windows Forms], gradient brushes
 ms.assetid: 2c6037b9-05bd-44c0-a22a-19584b722524
-ms.openlocfilehash: 5771aaabd283d71f5fa6934f86a1c24a57f38dca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ff555ba4fd81e9123e5f9e9feed38a0ec9d0a08
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954466"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063612"
 ---
 # <a name="using-a-gradient-brush-to-fill-shapes"></a>그라데이션 브러시를 사용하여 도형 채우기
 그라데이션 브러시 효과 사용 하 여 도형 채우기를 사용할 수 있습니다. 예를 들어, 오른쪽 가장자리에 모양의 왼쪽된 가장자리에서 이동 하면 점진적으로 변경 하는 색으로 모양을 채울 가로 그라데이션을 사용할 수 있습니다. 사각형 왼쪽된 가장자리는 검정을 사용 하 여 imagine (0, 0, 0 빨강, 녹색 및 파랑 구성 요소에 의해 표현 됨) 및 오른쪽 가장자리 빨강 (255, 0, 0)입니다. 256 픽셀 사각형의 면이 지정 된 픽셀의 빨강 구성 요소는 왼쪽에 있는 픽셀의 빨강 구성 요소 보다 큰 하나가 됩니다. 행에서 가장 왼쪽 픽셀의 색 구성 요소 (0, 0, 0), 두 번째 픽셀 (1, 0, 0)에 세 번째 픽셀 (2, 0, 0)에 등에 오른쪽에 있는 픽셀의 색 구성 요소 (255, 0, 0)에 도달할 때까지 합니다. 이러한 방식된으로 색 값 색 그라데이션을 구성 합니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "61954466"
   
  다음 그림에서는 선형 그라데이션 브러시를 사용 하 여 채워진 사각형 및 타원 경로 그라데이션 브러시를 사용 하 여 입력을 보여 줍니다.  
   
- ![Gradient](./media/gradient2.png "gradient2")  
+ ![타원 사용 하는 그라데이션 브러시가 채워진 사각형입니다.](./media/using-a-gradient-brush-to-fill-shapes/rectangle-ellipse-gradient-brush.png)  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [방법: 선형 그라데이션 만들기](how-to-create-a-linear-gradient.md)  

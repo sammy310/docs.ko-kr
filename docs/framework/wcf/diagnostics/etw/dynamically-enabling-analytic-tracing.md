@@ -2,12 +2,12 @@
 title: 동적으로 분석 추적을 사용하도록 설정
 ms.date: 03/30/2017
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-ms.openlocfilehash: 219561b1acd2259daad4c984dcf0b15517166c3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fc157e6612a59640aef557b57e5e2dd9e91cb529
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999470"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584327"
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>동적으로 분석 추적을 사용하도록 설정
 Windows 운영 체제에 포함된 도구와 함께 ETW(Event Tracing for Windows)를 사용하여 추적을 동적으로 사용하거나 사용하지 않도록 설정할 수 있습니다. 모든 [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] Windows Communication Foundation (WCF) 서비스 분석 추적 활성화 및 비활성화 없이 동적으로 응용 프로그램의 Web.config 파일을 수정 하거나 서비스를 다시 시작 수 있습니다. 그러면 애플리케이션을 중지하지 않고도 추적 이벤트를 내보낼 수 있습니다.  

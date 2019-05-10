@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: bbc77c0074b35a95140b35d71e89c51ad8abac62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5eee8b4b046bd4d3f9c71b692f4bac3dd6bcea2c
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800180"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211778"
 ---
 # <a name="windows-forms-overview"></a>Windows Forms 개요
 
@@ -32,7 +32,7 @@ ms.locfileid: "61800180"
 
  Windows Forms에는 Microsoft Office와 같은 고급 애플리케이션의 기능을 에뮬레이트하는 풍부한 UI 컨트롤이 있습니다. <xref:System.Windows.Forms.ToolStrip> 및 <xref:System.Windows.Forms.MenuStrip> 컨트롤을 사용하는 경우 텍스트와 이미지를 포함하고, 하위 메뉴를 표시하며, 텍스트 상자 및 콤보 상자와 같은 기타 컨트롤을 호스트하는 도구 모음과 메뉴를 만들 수 있습니다.
 
- Visual Studio 끌어서 놓기를 사용 하 여 **Windows Forms 디자이너**, Windows Forms 응용 프로그램을 쉽게 만들 수 있습니다. 커서를 사용하여 컨트롤을 선택하고 폼에서 원하는 위치에 추가하면 됩니다. 디자이너는 컨트롤을 쉽게 배치하기 위한 모눈선 및 맞춤선과 같은 도구를 제공합니다. 사용할 수 있는지를 Visual Studio를 사용 하거나 명령줄에서 컴파일 및 합니다 <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> 및 <xref:System.Windows.Forms.SplitContainer> 짧은 시간 내에 컨트롤을 만드는 고급 폼 레이아웃 합니다.
+ 끌어서 놓기를 사용 하 여 **Windows Forms 디자이너** Visual Studio에서 쉽게 만들 수 있습니다 Windows Forms 응용 프로그램입니다. 커서를 사용하여 컨트롤을 선택하고 폼에서 원하는 위치에 추가하면 됩니다. 디자이너는 컨트롤을 쉽게 배치하기 위한 모눈선 및 맞춤선과 같은 도구를 제공합니다. 사용할 수 있는지를 Visual Studio를 사용 하거나 명령줄에서 컴파일 및 합니다 <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> 및 <xref:System.Windows.Forms.SplitContainer> 짧은 시간 내에 컨트롤을 만드는 고급 폼 레이아웃 합니다.
 
  끝으로, 고유한 사용자 지정 UI 요소를 만들어야 하는 경우 <xref:System.Drawing> 네임스페이스에는 선, 원 및 기타 도형을 폼에 직접 렌더링하는 다양한 클래스가 포함되어 있습니다.
 

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d93c55cec3d35fd4208a4a8a7c9b235dd10fb9ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 82d81be7a9e0843dfe382767de582f93371acb4c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59156171"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584486"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>IMetaDataEmit::DefineTypeRefByName 메서드
 현재 범위 외부에 지정된 된 범위에 정의 된 형식에 대 한 메타 데이터를 토큰을 가져옵니다.  
@@ -41,15 +41,15 @@ HRESULT DefineTypeRefByName (
  `tkResolutionScope`  
  [in] 결정 범위를 지정 하는 토큰입니다. 유효한 토큰 형식은 같습니다.  
   
--   `mdModuleRef`호출자가 정의 된 동일한 어셈블리에서 형식 정의 된 경우.  
+- `mdModuleRef`호출자가 정의 된 동일한 어셈블리에서 형식 정의 된 경우.  
   
--   `mdAssemblyRef`호출자가 정의 된 것 이외의 어셈블리에서 형식 정의 된 경우.  
+- `mdAssemblyRef`호출자가 정의 된 것 이외의 어셈블리에서 형식 정의 된 경우.  
   
--   `mdTypeRef`에 형식이 중첩된 형식이 면 합니다.  
+- `mdTypeRef`에 형식이 중첩된 형식이 면 합니다.  
   
--   `mdModule`호출자가 정의 된 동일한 모듈에는 형식이 정의 된 경우.  
+- `mdModule`호출자가 정의 된 동일한 모듈에는 형식이 정의 된 경우.  
   
--   전역적으로 정의 된 경우 null입니다.  
+- 전역적으로 정의 된 경우 null입니다.  
   
  `szName`  
  [in] 유니코드에 대상 형식의 이름입니다.  

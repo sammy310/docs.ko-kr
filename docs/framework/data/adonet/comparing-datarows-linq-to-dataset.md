@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8fe0eadf-297b-487c-8d4b-7816753c2883
-ms.openlocfilehash: 2b45a4629474c394c8e49c41a7a98fc1181e124b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0903aac366426e8b4d271ae4bfaa54c79a198e5c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077175"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583745"
 ---
 # <a name="comparing-datarows-linq-to-dataset"></a>DataRow 비교(LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]에는 소스 요소가 같은지 여부를 확인하는 다양한 집합 연산자가 정의되어 있습니다. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]에서는 다음과 같은 집합 연산자를 제공합니다.  
   
--   <xref:System.Linq.Enumerable.Distinct%2A>  
+- <xref:System.Linq.Enumerable.Distinct%2A>  
   
--   <xref:System.Linq.Enumerable.Union%2A>  
+- <xref:System.Linq.Enumerable.Union%2A>  
   
--   <xref:System.Linq.Enumerable.Intersect%2A>  
+- <xref:System.Linq.Enumerable.Intersect%2A>  
   
--   <xref:System.Linq.Enumerable.Except%2A>  
+- <xref:System.Linq.Enumerable.Except%2A>  
   
  이러한 연산자는 각 요소 컬렉션에 대해 <xref:System.Collections.Generic.IEqualityComparer%601.GetHashCode%2A> 및 <xref:System.Collections.Generic.IEqualityComparer%601.Equals%2A> 메서드를 호출하여 소스 요소를 비교합니다. <xref:System.Data.DataRow>의 경우 이러한 연산자는 참조 비교를 수행합니다. 참조 비교는 일반적으로 표 형식의 데이터에 대한 집합 연산에는 적합하지 않습니다. 집합 연산에서는 일반적으로 요소 값이 같은지 여부와 요소 값이 요소 참조가 아닌지 여부를 확인합니다. 따라서 <xref:System.Data.DataRowComparer> 클래스가 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]에 추가되었습니다. 이 클래스는 행 값을 비교하는 데 사용할 수 있습니다.  
   

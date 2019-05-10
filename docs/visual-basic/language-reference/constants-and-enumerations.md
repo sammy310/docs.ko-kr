@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-ms.openlocfilehash: 0a9c01269e12c2d84be4f30c236c439012a88153
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e51d2d5c34a501368ed77d6ceef73b57c6bd79be
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013909"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469507"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>상수 및 열거형(Visual Basic)
 Visual Basic은 다양 한 미리 정의 된 상수 및 개발자를 위한 열거형을 제공합니다. 상수는 응용 프로그램의 실행 하는 동안 일정 하 게 유지 하는 값을 저장 합니다. 열거형은 관련된 상수 집합으로 작업하고 이름과 상수 값을 연결하는 편리한 방법을 제공합니다.  
@@ -27,7 +27,7 @@ Visual Basic은 다양 한 미리 정의 된 상수 및 개발자를 위한 열�
 |`DEBUG`|A `Boolean` 에서 설정할 수 있는 값을 **프로젝트 속성** 대화 상자. 기본적으로 프로젝트의 디버그 구성을 정의 `DEBUG`합니다. 때 `DEBUG` 정의 된 <xref:System.Diagnostics.Debug> 클래스 메서드는 출력을 생성 합니다 **출력** 창입니다. 정의 되지 않은 경우 <xref:System.Diagnostics.Debug> 클래스 메서드가 컴파일되지 않으므로 및 디버그 출력이 생성 되지 않습니다.|  
 |`TARGET`|프로젝트 또는 명령줄의 설정에 대 한 출력 형식을 나타내는 문자열로 **대상/** 옵션입니다. 가능한 값 `TARGET` 됩니다.<br /><br /> -"winexe" Windows 응용 프로그램입니다.<br />-"exe" 콘솔 응용 프로그램에 대 한 합니다.<br />-"라이브러리" 클래스 라이브러리에 대 한 합니다.<br />-"모듈의 경우" 모듈입니다.<br />- **대상/** Visual Studio 통합된 개발 환경에서 옵션을 설정할 수 있습니다. 자세한 내용은 [/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md)합니다.|  
 |`TRACE`|A `Boolean` 에서 설정할 수 있는 값을 **프로젝트 속성** 대화 상자. 기본적으로 프로젝트에 대 한 모든 구성을 정의 `TRACE`합니다. 때 `TRACE` 정의 된 <xref:System.Diagnostics.Trace> 클래스 메서드는 출력을 생성 합니다 **출력** 창입니다. 정의 되지 않은 경우 <xref:System.Diagnostics.Trace> 클래스 메서드가 컴파일되지 않으므로 고 `Trace` 출력이 생성 됩니다.|  
-|`VBC_VER`|Visual Basic 버전을 나타내는 숫자로 *주요*. *사소한* 형식입니다. 버전 번호를 [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] 8.0 됩니다.|  
+|`VBC_VER`|Visual Basic 버전을 나타내는 숫자로 *주요*. *사소한* 형식입니다.|  
   
 ### <a name="print-and-display-constants"></a>인쇄 및 표시 상수  
  인쇄 호출 함수를 표시 하는 경우에 실제 값 대신 코드에서 다음 상수를 사용할 수 있습니다.  

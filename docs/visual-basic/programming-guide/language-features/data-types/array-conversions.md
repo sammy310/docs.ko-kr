@@ -12,21 +12,21 @@ helpviewer_keywords:
 - conversions [Visual Basic], array types
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
-ms.openlocfilehash: 88002e2c099ed9503beddb190d243aadcc1087fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f69ed6e0040f33f810d324a76859d448e9dc7632
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61908026"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64601137"
 ---
 # <a name="array-conversions-visual-basic"></a>배열 변환(Visual Basic)
 다음 조건이 충족 되는 배열 형식 다른 배열 형식으로 변환할 수 있습니다.  
   
--   **동일한 차수입니다.** 두 배열의 차수가 동일 해야, 즉, 동일한 차원 수 있어야 합니다. 그러나 각 차원의 길이 같이 필요가 없습니다.  
+- **동일한 차수입니다.** 두 배열의 차수가 동일 해야, 즉, 동일한 차원 수 있어야 합니다. 그러나 각 차원의 길이 같이 필요가 없습니다.  
   
--   **요소 데이터 형식입니다.** 두 배열 요소의 데이터 형식에는 참조 형식 이어야 합니다. 변환할 수 없습니다는 `Integer` 배열을 `Long` 배열 또는 심지어는 `Object` 하나 이상의 값 형식이 포함 되어 있으므로 배열입니다. 자세한 내용은 [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)을 참조하세요.  
+- **요소 데이터 형식입니다.** 두 배열 요소의 데이터 형식에는 참조 형식 이어야 합니다. 변환할 수 없습니다는 `Integer` 배열을 `Long` 배열 또는 심지어는 `Object` 하나 이상의 값 형식이 포함 되어 있으므로 배열입니다. 자세한 내용은 [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)을 참조하세요.  
   
--   **변환 가능성입니다.** 두 배열의 요소 형식 간에 변환, 확대 또는 축소 수 있어야 합니다. 이 요구 사항은 실패 하는 예제는 간의 변환 된 `String` 에서 파생 된 클래스의 배열 및 배열 <xref:System.Attribute?displayProperty=nameWithType>합니다. 이러한 두 형식 nothing 공통적으로 있고 어떤 종류의 변환 작업 없이 서로 간에 존재 합니다.  
+- **변환 가능성입니다.** 두 배열의 요소 형식 간에 변환, 확대 또는 축소 수 있어야 합니다. 이 요구 사항은 실패 하는 예제는 간의 변환 된 `String` 에서 파생 된 클래스의 배열 및 배열 <xref:System.Attribute?displayProperty=nameWithType>합니다. 이러한 두 형식 nothing 공통적으로 있고 어떤 종류의 변환 작업 없이 서로 간에 존재 합니다.  
   
  다른 배열 형식 변환을 확대 되었거나 해당 요소의 변환을 확대 또는 축소 하는 여부에 따라 축소 됩니다. 자세한 내용은 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)을 참조하세요.  
   
