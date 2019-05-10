@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5035cd22ed099cec5e327c6957b13bcee52c766
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d69ffa05cff534609f8f6b3addc657664b09decb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995064"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624485"
 ---
-# <a name="icordebugmanagedcallback2createconnection-method"></a><span data-ttu-id="86173-102">ICorDebugManagedCallback2::CreateConnection 메서드</span><span class="sxs-lookup"><span data-stu-id="86173-102">ICorDebugManagedCallback2::CreateConnection Method</span></span>
-<span data-ttu-id="86173-103">새 연결을 만들어졌는지 디버거에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="86173-103">Notifies the debugger that a new connection has been created.</span></span>  
+# <a name="icordebugmanagedcallback2createconnection-method"></a><span data-ttu-id="09722-102">ICorDebugManagedCallback2::CreateConnection 메서드</span><span class="sxs-lookup"><span data-stu-id="09722-102">ICorDebugManagedCallback2::CreateConnection Method</span></span>
+<span data-ttu-id="09722-103">새 연결을 만들어졌는지 디버거에 알립니다.</span><span class="sxs-lookup"><span data-stu-id="09722-103">Notifies the debugger that a new connection has been created.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="86173-104">구문</span><span class="sxs-lookup"><span data-stu-id="86173-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="09722-104">구문</span><span class="sxs-lookup"><span data-stu-id="09722-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateConnection (  
@@ -37,33 +37,33 @@ HRESULT CreateConnection (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="86173-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="86173-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="09722-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="09722-105">Parameters</span></span>  
  `pProcess`  
- <span data-ttu-id="86173-106">[in] 연결을 만든 프로세스를 나타내는 "ICorDebugProcess" 개체에 대 한 포인터</span><span class="sxs-lookup"><span data-stu-id="86173-106">[in] A pointer to an "ICorDebugProcess" object that represents the process in which the connection was created</span></span>  
+ <span data-ttu-id="09722-106">[in] 연결을 만든 프로세스를 나타내는 "ICorDebugProcess" 개체에 대 한 포인터</span><span class="sxs-lookup"><span data-stu-id="09722-106">[in] A pointer to an "ICorDebugProcess" object that represents the process in which the connection was created</span></span>  
   
  `dwConnectionId`  
- <span data-ttu-id="86173-107">[in] 새 연결의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="86173-107">[in] The ID of the new connection.</span></span>  
+ <span data-ttu-id="09722-107">[in] 새 연결의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="09722-107">[in] The ID of the new connection.</span></span>  
   
  `pConnName`  
- <span data-ttu-id="86173-108">[in] 새 연결의 이름에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="86173-108">[in] A pointer to the name of the new connection.</span></span>  
+ <span data-ttu-id="09722-108">[in] 새 연결의 이름에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="09722-108">[in] A pointer to the name of the new connection.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="86173-109">설명</span><span class="sxs-lookup"><span data-stu-id="86173-109">Remarks</span></span>  
- <span data-ttu-id="86173-110">`CreateConnection` 콜백 중 다음과 같은 경우에 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="86173-110">A `CreateConnection` callback will be fired in either of the following cases:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="09722-109">설명</span><span class="sxs-lookup"><span data-stu-id="09722-109">Remarks</span></span>  
+ <span data-ttu-id="09722-110">`CreateConnection` 콜백 중 다음과 같은 경우에 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="09722-110">A `CreateConnection` callback will be fired in either of the following cases:</span></span>  
   
-- <span data-ttu-id="86173-111">때 디버거 연결을 포함 하는 프로세스에 연결 합니다.</span><span class="sxs-lookup"><span data-stu-id="86173-111">When a debugger attaches to a process that contains connections.</span></span> <span data-ttu-id="86173-112">이 경우 런타임은 생성 되며 디스패치를 `CreateConnection` 이벤트와 [ICorDebugManagedCallback2::ChangeConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-changeconnection-method.md) 프로세스의 각 연결에 대 한 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="86173-112">In this case, the runtime will generate and dispatch a `CreateConnection` event and a [ICorDebugManagedCallback2::ChangeConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-changeconnection-method.md) event for each connection in the process.</span></span>  
+- <span data-ttu-id="09722-111">때 디버거 연결을 포함 하는 프로세스에 연결 합니다.</span><span class="sxs-lookup"><span data-stu-id="09722-111">When a debugger attaches to a process that contains connections.</span></span> <span data-ttu-id="09722-112">이 경우 런타임은 생성 되며 디스패치를 `CreateConnection` 이벤트와 [ICorDebugManagedCallback2::ChangeConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-changeconnection-method.md) 프로세스의 각 연결에 대 한 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="09722-112">In this case, the runtime will generate and dispatch a `CreateConnection` event and a [ICorDebugManagedCallback2::ChangeConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-changeconnection-method.md) event for each connection in the process.</span></span>  
   
-- <span data-ttu-id="86173-113">호스트를 호출 하는 경우 [iclrdebugmanager:: Beginconnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) 에 [호스팅 API](../../../../docs/framework/unmanaged-api/hosting/index.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="86173-113">When a host calls [ICLRDebugManager::BeginConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) in the [Hosting API](../../../../docs/framework/unmanaged-api/hosting/index.md).</span></span>  
+- <span data-ttu-id="09722-113">호스트를 호출 하는 경우 [iclrdebugmanager:: Beginconnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) 에 [호스팅 API](../../../../docs/framework/unmanaged-api/hosting/index.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="09722-113">When a host calls [ICLRDebugManager::BeginConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) in the [Hosting API](../../../../docs/framework/unmanaged-api/hosting/index.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="86173-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="86173-114">Requirements</span></span>  
- <span data-ttu-id="86173-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="86173-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="09722-114">요구 사항</span><span class="sxs-lookup"><span data-stu-id="09722-114">Requirements</span></span>  
+ <span data-ttu-id="09722-115">**플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="09722-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="86173-116">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="86173-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="09722-116">**헤더:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="09722-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="86173-117">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="86173-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="09722-117">**라이브러리:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="09722-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="86173-118">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="86173-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="09722-118">**.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="09722-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="86173-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="86173-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="09722-119">참고자료</span><span class="sxs-lookup"><span data-stu-id="09722-119">See also</span></span>
 
-- [<span data-ttu-id="86173-120">ICorDebugManagedCallback2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="86173-120">ICorDebugManagedCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [<span data-ttu-id="86173-121">ICorDebugManagedCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="86173-121">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="09722-120">ICorDebugManagedCallback2 인터페이스</span><span class="sxs-lookup"><span data-stu-id="09722-120">ICorDebugManagedCallback2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [<span data-ttu-id="09722-121">ICorDebugManagedCallback 인터페이스</span><span class="sxs-lookup"><span data-stu-id="09722-121">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
