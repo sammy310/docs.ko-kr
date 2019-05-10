@@ -9,33 +9,33 @@ helpviewer_keywords:
 - menus [Windows Forms], setting margins
 - MenuStrip control [Windows Forms], configuring check and image margins
 ms.assetid: 45a9075d-4bea-4ce2-9b2c-7619aa39f8ce
-ms.openlocfilehash: 09de1a9ca4be1c4ebfb0e13e800c09753bd04f11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5db4b3546b6c15af916d53b1a53c347174f1f30b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747011"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64643123"
 ---
-# <a name="how-to-configure-menustrip-check-margins-and-image-margins"></a><span data-ttu-id="43f89-102">방법: MenuStrip 선택 여백 및 이미지 여백 구성</span><span class="sxs-lookup"><span data-stu-id="43f89-102">How to: Configure MenuStrip Check Margins and Image Margins</span></span>
-<span data-ttu-id="43f89-103"><xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> 및 <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> 속성을 다양한 조합으로 설정하여 <xref:System.Windows.Forms.MenuStrip>을 사용자 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="43f89-103">You can customize a <xref:System.Windows.Forms.MenuStrip> by setting the <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> and <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> properties in various combinations.</span></span>  
+# <a name="how-to-configure-menustrip-check-margins-and-image-margins"></a><span data-ttu-id="c8e6f-102">방법: MenuStrip 선택 여백 및 이미지 여백 구성</span><span class="sxs-lookup"><span data-stu-id="c8e6f-102">How to: Configure MenuStrip Check Margins and Image Margins</span></span>
+<span data-ttu-id="c8e6f-103"><xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> 및 <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> 속성을 다양한 조합으로 설정하여 <xref:System.Windows.Forms.MenuStrip>을 사용자 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c8e6f-103">You can customize a <xref:System.Windows.Forms.MenuStrip> by setting the <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> and <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> properties in various combinations.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="43f89-104">예제</span><span class="sxs-lookup"><span data-stu-id="43f89-104">Example</span></span>  
- <span data-ttu-id="43f89-105">다음 코드 예제에서는 <xref:System.Windows.Forms.ContextMenuStrip> 검사 여백 및 이미지 여백을 설정하고 사용자 지정하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="43f89-105">The following code example demonstrates how to set and customize the <xref:System.Windows.Forms.ContextMenuStrip> check margins and image margins.</span></span> <span data-ttu-id="43f89-106">절차는 <xref:System.Windows.Forms.ContextMenuStrip> 또는 <xref:System.Windows.Forms.MenuStrip>에서 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="43f89-106">The procedure is the same for a <xref:System.Windows.Forms.ContextMenuStrip> or a <xref:System.Windows.Forms.MenuStrip>.</span></span>  
+## <a name="example"></a><span data-ttu-id="c8e6f-104">예제</span><span class="sxs-lookup"><span data-stu-id="c8e6f-104">Example</span></span>  
+ <span data-ttu-id="c8e6f-105">다음 코드 예제에서는 <xref:System.Windows.Forms.ContextMenuStrip> 검사 여백 및 이미지 여백을 설정하고 사용자 지정하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c8e6f-105">The following code example demonstrates how to set and customize the <xref:System.Windows.Forms.ContextMenuStrip> check margins and image margins.</span></span> <span data-ttu-id="c8e6f-106">절차는 <xref:System.Windows.Forms.ContextMenuStrip> 또는 <xref:System.Windows.Forms.MenuStrip>에서 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="c8e6f-106">The procedure is the same for a <xref:System.Windows.Forms.ContextMenuStrip> or a <xref:System.Windows.Forms.MenuStrip>.</span></span>  
   
  [!code-csharp[System.Windows.Forms.ToolStrip.Misc#60](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#60)]
  [!code-vb[System.Windows.Forms.ToolStrip.Misc#60](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#60)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="43f89-107">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="43f89-107">Compiling the Code</span></span>  
- <span data-ttu-id="43f89-108">이 예제에는 다음 사항이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="43f89-108">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="c8e6f-107">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="c8e6f-107">Compiling the Code</span></span>  
+ <span data-ttu-id="c8e6f-108">이 예제에는 다음 사항이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="c8e6f-108">This example requires:</span></span>  
   
-- <span data-ttu-id="43f89-109">System, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조</span><span class="sxs-lookup"><span data-stu-id="43f89-109">References to the System, System.Drawing and System.Windows.Forms assemblies.</span></span>  
+- <span data-ttu-id="c8e6f-109">System, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조</span><span class="sxs-lookup"><span data-stu-id="c8e6f-109">References to the System, System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="43f89-110">Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 내용은 [명령줄에서 빌드](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 하거나 [csc.exe를 사용한 명령줄 빌드](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="43f89-110">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="43f89-111">또한 새 프로젝트에 코드를 붙여 넣어 Visual Studio에서이 예제를 빌드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="43f89-111">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
+ <span data-ttu-id="c8e6f-110">Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 내용은 [명령줄에서 빌드](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 하거나 [csc.exe를 사용한 명령줄 빌드](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="c8e6f-110">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="c8e6f-111">또한 새 프로젝트에 코드를 붙여 넣어 Visual Studio에서이 예제를 빌드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c8e6f-111">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="43f89-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="43f89-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c8e6f-112">참고자료</span><span class="sxs-lookup"><span data-stu-id="c8e6f-112">See also</span></span>
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>
 - <xref:System.Windows.Forms.ToolStripDropDown>
-- [<span data-ttu-id="43f89-113">ToolStrip 컨트롤</span><span class="sxs-lookup"><span data-stu-id="43f89-113">ToolStrip Control</span></span>](toolstrip-control-windows-forms.md)
-- [<span data-ttu-id="43f89-114">방법: 선택 여백 및 ContextMenuStrip 컨트롤에서 이미지 여백 사용</span><span class="sxs-lookup"><span data-stu-id="43f89-114">How to: Enable Check Margins and Image Margins in ContextMenuStrip Controls</span></span>](how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)
+- [<span data-ttu-id="c8e6f-113">ToolStrip 컨트롤</span><span class="sxs-lookup"><span data-stu-id="c8e6f-113">ToolStrip Control</span></span>](toolstrip-control-windows-forms.md)
+- [<span data-ttu-id="c8e6f-114">방법: 선택 여백 및 ContextMenuStrip 컨트롤에서 이미지 여백 사용</span><span class="sxs-lookup"><span data-stu-id="c8e6f-114">How to: Enable Check Margins and Image Margins in ContextMenuStrip Controls</span></span>](how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)
