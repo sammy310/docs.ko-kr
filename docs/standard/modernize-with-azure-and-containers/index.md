@@ -127,7 +127,7 @@ All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 �
 
 다음 그림 1-3에서는 성숙도별로 사용할 수 있는 내부 기술을 보여줍니다.
 
-![최신화 성숙도별 해당하는 내부 기술](./media/image1-3.png)
+![최신화 성숙도별 내부 기술](./media/image1-3.png)
 
 > **그림 1-3.** 최신화 성숙도별 내부 기술
 
@@ -169,36 +169,36 @@ All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 �
 
 ### <a name="additional-resources"></a>추가 자료
 
-- **Microsoft 플랫폼 및 도구를 사용 하 여 Docker 응용 프로그램 수명 주기를 컨테이너 화 된** (다운로드 가능한 전자책) \
+- **Microsoft 플랫폼 및 도구를 활용한 컨테이너화 Docker 응용 프로그램의 생명 주기** (다운로드 가능한 전자책) \
   <https://aka.ms/dockerlifecycleebook>
 
-- **.NET 마이크로 서비스: 컨테이너 화 된.NET 응용 프로그램에 대 한 아키텍처** (다운로드 가능한 전자책) \
+- **.NET 마이크로 서비스: 컨테이너화된 .NET 응용 프로그램 아키텍처** (다운로드 가능한 전자책) \
   <https://aka.ms/microservicesebook>
 
-- **ASP.NET Core 및 Azure를 사용 하 여 현대식 웹 응용 프로그램 설계** (다운로드 가능한 전자책) \
+- **ASP.NET Core 및 Azure를 사용하여 최신 웹 응용 프로그램 설계** (다운로드 가능한 전자책) \
   <https://aka.ms/webappebook>
 
 ## <a name="who-should-use-this-guide"></a>이 가이드의 대상 사용자
 
-이 가이드는 개발자와 배송 및 응용 프로그램 출시 민첩성 향상된을 위해.NET Framework를 기반으로 하는 WCF 서비스 또는 기존 ASP.NET 웹 응용 프로그램을 현대화 하려는 솔루션 설계자를 위한 작성 되었습니다.
+이 가이드는 배포 및 응용 프로그램 출시의 민첩성을 향상시키기 위해 .NET Framework를 기반으로하는 기존 ASP.NET 웹 응용 프로그램 또는 WCF 서비스를 최신화하려는 개발자 및 솔루션 설계자를 대상으로 작성되었습니다.
 
-또한 Windows 컨테이너를 사용하고, Microsoft Azure 사용 시 클라우드로 배포하여 얻을 수 있는 이점을 간략히 살펴보고자 하는 기업 설계자 또는 개발 책임자/이사와 같은 기술 의사 결정권자일 경우 이 가이드가 유용할 수 있습니다.
+또한 Microsoft Azure를 사용하여 클라우드로 배포하고, Windows 컨테이너를 사용하여 얻을 수 있는 이점을 간략히 살펴보고자 하는 엔터프라이즈 설계자 또는 개발 리더, 개발 책임자와 같은 기술에 대한 의사 결정의 권한이 있는 경우라면 이 가이드가 유용할 수 있습니다.
 
 ## <a name="how-to-use-this-guide"></a>이 가이드를 사용하는 방법
 
-이 가이드에서는 "이유"를 설명합니다. 기존 애플리케이션을 현대화하려는 이유, 클라우드로 앱 이동 시 Windows 컨테이너 사용으로 얻을 수 있는 구체적인 이점을 설명합니다. 이 가이드에서 처음 몇 챕터의 내용은 개요를 알고 싶지만 구현과 기술적인 단계별 세부 정보에 대해 중점을 둘 필요가 없는 설계자와 기술 의사 결정권자를 위해 고안되었습니다.
+이 가이드에서는 "이유"를 설명합니다. 기존 애플리케이션을 최신화하는 이유와 클라우드로 앱 이동 시 Windows 컨테이너를 사용하여 얻을 수 있는 구체적인 이점을 설명합니다. 이 가이드에서 처음 몇 챕터의 내용은 전반적인 내용를 알고 싶지만 단계별 세부적인 구현과 기술적인 정보에 중점을 둘 필요가 없는 설계자와 기술 의사 결정권자를 위해 만들었습니다.
 
-이 가이드의 마지막 챕터에서는 특정 배포 시나리오에 초점을 맞춘 여러 안내를 소개합니다. 이 가이드에서는 시나리오를 요약 하 고 해당 이점을 중점적 짧은 버전의 안내를 제공 합니다. 자세한 안내는 설치 및 구현에 대한 세부 정보를 설명하고, 관련 샘플 앱이 있는 동일한 공개 [GitHub 리포지토리](https://github.com/dotnet-architecture/eShopModernizing)에 일련의 [Wiki 게시물](https://github.com/dotnet-architecture/eShopModernizing/wiki)로 게시되어 있습니다(다음 섹션에서 설명). 마지막 챕터와 GitHub의 단계별 Wiki 안내는 구현 세부 정보를 중점적으로 파악하고자 하는 개발자와 설계자에게 더 많은 관심을 받을 것입니다.
+이 가이드의 마지막 챕터에서는 특정 배포 시나리오에 초점을 맞춘 다양한 도움말을 소개합니다. 이 가이드에서는 해당 시나리오 요약과 이점에 중점을 둔 짧은 버전의 도움말을 제공합니다. 자세한 도움말에서는 설치 및 구현에 대한 세부 정보를 설명하고, 공개 [GitHub 리포지토리](https://github.com/dotnet-architecture/eShopModernizing)에 [Wiki 게시물](https://github.com/dotnet-architecture/eShopModernizing/wiki)로 게시되어 있으며 관련 샘플 앱(다음 섹션에서 설명)도 함께 있습니다. 마지막 챕터와 GitHub의 단계별 Wiki 도움말은 세부 구현사항을 중점적으로 파악하려는 개발자와 설계자에게 더 많은 관심을 받게 될 것입니다.
 
-## <a name="sample-apps-for-modernizing-legacy-apps-eshopmodernizing"></a>레거시 앱 현대화에 대한 샘플 앱: eShopModernizing
+## <a name="sample-apps-for-modernizing-legacy-apps-eshopmodernizing"></a>레거시 앱의 최신화 샘플 앱: eShopModernizing
 
-GitHub의 [eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing) 리포지토리는 레거시 모놀리식 웹 애플리케이션을 시뮬레이션하는 두 가지 샘플 애플리케이션을 제공합니다. ASP.NET MVC;를 사용 하 여 하나의 웹 앱 개발 ASP.NET Web Forms를 사용 하 여 두 번째 웹 앱을 개발 하 고 세 번째 앱은 WCF 서비스 백 엔드를 사용 하는 WinForms 클라이언트 데스크톱 앱을 사용 하 여 N 계층 앱입니다. 이러한 모든 앱은 기존.NET Framework를 기반으로 합니다. 이러한 샘플은 현대화해야 하는 기존/레거시 .NET Framework 애플리케이션이어야 하기 때문에 .NET Core 또는 ASP.NET Core를 사용하지 않습니다.
+GitHub의 [eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing) 리포지토리에서는 레거시 모놀리식 웹 응용 프로그램을 시뮬레이션하는 두 가지 샘플 응용 프로그램을 제공합니다. 하나의 응용 프로그램은 ASP.NET MVC를 사용하여 개발되었습니다. 또 다른 웹 응용 프로그램은 ASP.NET Web Forms를 사용하여 개발되었고, 세 번째 응용 프로그램은 WCF 서비스 백 엔드를 사용하는 WinForms 클라이언트 데스크톱 응용 프로그램의 N-계층 앱입니다. 이러한 모든 앱은 기존 .NET Framework를 기반으로 합니다. 이러한 샘플은 최신화가 필요한 기존/레거시 .NET Framework 응용 프로그램이어야 하기 때문에 .NET Core 또는 ASP.NET Core를 사용하지 않습니다.
 
-이러한 샘플 앱 현대화 된 코드를 사용 하 여 두 번째 버전이 매우 간단 합니다. 앱 버전 간의 가장 중요한 차이점은 두 번째 버전에서 배포 옵션으로 Windows 컨테이너를 사용한다는 것입니다. 또한 두 번째 버전에는 이미지 관리를 위한 Azure Storage Blob, 보안 관리를 위한 Azure Active Directory, 애플리케이션 모니터링 및 감사를 위한 Azure Application Insights 같은 몇 가지 기능이 추가되었습니다.
+이 샘플 응용 프로그램은 최신 코드가 포함된 두 번째 버전으로, 매우 간단합니다. 응용 프로그램 버전 사이의 가장 중요한 차이점은 두 번째 버전에서는 Windows Containers를 배포 옵션으로 사용한다는 것입니다. 또한 두 번째 버전에는 이미지 관리를 위한 Azure Storage Blob과 보안 관리를 위한 Azure Active Directory, 응용 프로그램 모니터링 및 감사를 위한 Azure Application Insights 등의 몇 가지 기능이 추가되었습니다.
 
 ## <a name="send-your-feedback"></a>피드백 보내기
 
-이 가이드는 개선 하 고 기존.NET 웹 응용 프로그램을 현대화 하기 위한 옵션을 이해할 수 있도록 작성 되었습니다. 가이드와 관련 샘플 애플리케이션은 개선되고 있습니다. 사용자 의견을 보내주세요! 이 가이드의 개선 방향에 대한 의견이 있으시면 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)으로 보내 주세요.
+이 가이드는 기존 .NET 웹 응용 프로그램을 향상시키고 최신화하기 위한 선택사항을 이해할 수 있도록 작성되었습니다. 가이드와 관련 샘플 응용 프로그램은 개선되고 있습니다. 사용자 의견을 보내주세요! 이 가이드의 개선 방향에 대한 의견이 있으시면 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)으로 보내 주세요.
 
 >[!div class="step-by-step"]
 >[다음](lift-and-shift-existing-apps-azure-iaas.md)

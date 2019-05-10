@@ -11,12 +11,12 @@ helpviewer_keywords:
 - classes [Visual Basic], composite types
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
-ms.openlocfilehash: ea719b60a6bcd40494666d4923fad296a8ddae70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 65ee23c59958eefb94c7ab0c6bef4a7e992a121c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907389"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64601176"
 ---
 # <a name="composite-data-types-visual-basic"></a>복합 데이터 형식(Visual Basic)
 기본 데이터 형식 Visual Basic에서 제공 하는 것 외에도 수 조합 하 여 만들려는 다른 형식의 항목 *복합 데이터 형식* 클래스, 구조체 및 배열 등입니다. 기본 형식에서 다른 복합 형식의 복합 데이터 형식을 빌드할 수 있습니다. 예를 들어, 배열 멤버를 사용 하 여 한 구조 요소, 배열 또는 구조를 정의할 수 있습니다.  
@@ -36,11 +36,11 @@ ms.locfileid: "61907389"
 ## <a name="array-types"></a>배열 형식  
  모든 배열을 포함 하는 단일 데이터 형식은 없습니다. 데이터 형식의 배열의 특정 인스턴스를 다음에 의해 결정 됩니다.  
   
--   배열 이라는 사실  
+- 배열 이라는 사실  
   
--   배열의 차수 (차원 수)  
+- 배열의 차수 (차원 수)  
   
--   배열의 요소 형식  
+- 배열의 요소 형식  
   
  특히 지정 된 차원의 길이 인스턴스의 데이터 형식의 일부가 아닙니다. 다음은 이에 대한 예입니다.  
   

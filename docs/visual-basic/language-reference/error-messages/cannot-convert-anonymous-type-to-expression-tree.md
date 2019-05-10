@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36548
 ms.assetid: 27de068f-080e-4160-86bf-1ec23fd1925a
-ms.openlocfilehash: a6ddbaa358709fe306f1529112d1f2bd0a715a91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 045061f403b301d460bc85d161c1d6dee9c7d9f1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649961"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64602394"
 ---
 # <a name="cannot-convert-anonymous-type-to-expression-tree-because-it-contains-a-field-that-is-used-in-the-initialization-of-another-field"></a>익명 형식이 다른 필드를 초기화하는 데 사용되는 필드를 포함하고 있으므로 식 트리로 변환할 수 없습니다.
 컴파일러를 익명 형식의 다른 속성을 초기화 하려면 익명 형식의 속성을 하나 사용 하는 경우에 익명의 식 트리로 변환할을 사용할 수 없습니다. 예를 들어, 다음 코드에서에서 `Prop1` 초기화 목록에서 선언 되 고 그런 다음에 대 한 초기 값으로 사용 `Prop2`합니다.  

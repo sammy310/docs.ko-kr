@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: ec34c19da9cd642f5de51166bef0264c2e75c58c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f86636cd244ce53ed00f80b38777e78a3278d6f
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856715"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912502"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>WCF를 통한 위임 및 가장
 *가장* 은 서비스에서 서비스 도메인 리소스에 대한 클라이언트 액세스를 제한하는 데 사용하는 일반적인 기술 서비스입니다. 서비스 도메인 리소스는 로컬 파일(가장)과 같은 시스템 리소스이거나 파일 공유(위임)와 같은 다른 시스템의 리소스일 수 있습니다. 샘플 응용 프로그램을 보려면 [클라이언트 가장](../../../../docs/framework/wcf/samples/impersonating-the-client.md)을 참조하세요. 가장을 사용 하는 방법의 예제를 참조 하세요. [방법: 서비스에서 클라이언트 가장](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)합니다.  
@@ -37,22 +37,22 @@ ms.locfileid: "61856715"
 ### <a name="cached-token-impersonation"></a>캐시된 토큰 가장  
  다음과 같은 바인딩을 통해 캐시된 토큰 가장을 수행할 수 있습니다.  
   
--   Windows 클라이언트 자격 증명이 있는<xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>및 <xref:System.ServiceModel.NetTcpBinding>   
+- Windows 클라이언트 자격 증명이 있는<xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>및 <xref:System.ServiceModel.NetTcpBinding>   
   
--   <xref:System.ServiceModel.BasicHttpBinding> 가 <xref:System.ServiceModel.BasicHttpSecurityMode> 자격 증명으로 설정된 <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> 또는 서비스를 통해 올바른 Windows 계정으로 매핑할 수 있는 사용자 이름 자격 증명을 클라이언트에서 제공하는 기타 표준 바인딩  
+- <xref:System.ServiceModel.BasicHttpBinding> 가 <xref:System.ServiceModel.BasicHttpSecurityMode> 자격 증명으로 설정된 <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> 또는 서비스를 통해 올바른 Windows 계정으로 매핑할 수 있는 사용자 이름 자격 증명을 클라이언트에서 제공하는 기타 표준 바인딩  
   
--   <xref:System.ServiceModel.Channels.CustomBinding> 속성이 `requireCancellation`로 설정된 Windows 클라이언트 자격 증명을 사용하는 모든 `true`. 이 속성은 <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>, <xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters> 및 <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters> 클래스에서 사용할 수 있습니다. 바인딩에 보안 대화가 사용되는 경우에도 `requireCancellation` 속성이 `true`로 설정되어야 합니다.  
+- <xref:System.ServiceModel.Channels.CustomBinding> 속성이 `requireCancellation`로 설정된 Windows 클라이언트 자격 증명을 사용하는 모든 `true`. 이 속성은 <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>, <xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters> 및 <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters> 클래스에서 사용할 수 있습니다. 바인딩에 보안 대화가 사용되는 경우에도 `requireCancellation` 속성이 `true`로 설정되어야 합니다.  
   
--   클라이언트에서 사용자 이름 자격 증명을 제공하는 <xref:System.ServiceModel.Channels.CustomBinding>. 바인딩에 보안 대화가 사용되는 경우에도 `requireCancellation` 속성이 `true`로 설정되어야 합니다.  
+- 클라이언트에서 사용자 이름 자격 증명을 제공하는 <xref:System.ServiceModel.Channels.CustomBinding>. 바인딩에 보안 대화가 사용되는 경우에도 `requireCancellation` 속성이 `true`로 설정되어야 합니다.  
   
 ### <a name="s4u-based-impersonation"></a>S4U 기반 가장  
  다음과 같은 바인딩을 통해 S4U 기반 가장을 수행할 수 있습니다.  
   
--   서비스를 통해 올바른Windows 계정으로 매핑될 수 있는 인증서 클라이언트 자격 증명을 가진<xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>및 <xref:System.ServiceModel.NetTcpBinding>   
+- 서비스를 통해 올바른Windows 계정으로 매핑될 수 있는 인증서 클라이언트 자격 증명을 가진<xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>및 <xref:System.ServiceModel.NetTcpBinding>   
   
--   <xref:System.ServiceModel.Channels.CustomBinding> 속성이 `requireCancellation` 로 설정된 Windows 클라이언트 자격 증명을 사용하는 `false`  
+- <xref:System.ServiceModel.Channels.CustomBinding> 속성이 `requireCancellation` 로 설정된 Windows 클라이언트 자격 증명을 사용하는 `false`  
   
--   <xref:System.ServiceModel.Channels.CustomBinding> 속성이 `requireCancellation` 로 설정된 보안 대화 및 Windows 클라이언트 자격 증명 또는 사용자 이름을 사용하는 `false`  
+- <xref:System.ServiceModel.Channels.CustomBinding> 속성이 `requireCancellation` 로 설정된 보안 대화 및 Windows 클라이언트 자격 증명 또는 사용자 이름을 사용하는 `false`  
   
  서비스를 통해 클라이언트를 가장할 수 있는 범위는 서비스를 통해 가장을 시도할 때의 서비스 계정 권한, 사용되는 가장 형식 및 클라이언트에서 허용하는 가장 범위에 따라 다릅니다.  
   
@@ -201,9 +201,9 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
   
  한정된 위임 구성에 대한 자세한 내용은 MSDN의 다음 항목을 참조하십시오.  
   
--   [Troubleshooting Kerberos Delegation](https://go.microsoft.com/fwlink/?LinkId=36724)  
+- [Troubleshooting Kerberos Delegation](https://go.microsoft.com/fwlink/?LinkId=36724)  
   
--   [Kerberos Protocol Transition and Constrained Delegation](https://go.microsoft.com/fwlink/?LinkId=36725)  
+- [Kerberos Protocol Transition and Constrained Delegation](https://go.microsoft.com/fwlink/?LinkId=36725)  
   
 ## <a name="see-also"></a>참고자료
 

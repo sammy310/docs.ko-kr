@@ -9,12 +9,12 @@ helpviewer_keywords:
 - decision structures [Visual Basic]
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
-ms.openlocfilehash: 4a76b2565c343e69ac3c11441035a7682a8f08ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f8b653b941c5959036256cde097a41f8c6251c7a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907008"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64601238"
 ---
 # <a name="decision-structures-visual-basic"></a>판단 구조(Visual Basic)
 Visual Basic을 사용 하 여 조건을 테스트 하 고 해당 테스트의 결과 따라 다른 작업을 수행할 수 있습니다. True 또는 false 이면 식의 다양 한 값 또는 일련의 문 실행할 때 생성 되는 다양 한 예외에 대 한 조건을 테스트할 수 있습니다.  

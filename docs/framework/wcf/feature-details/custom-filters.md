@@ -2,12 +2,12 @@
 title: 사용자 지정 필터
 ms.date: 03/30/2017
 ms.assetid: 97cf247d-be0a-4057-bba9-3be5c45029d5
-ms.openlocfilehash: 4140a944ed195e1defc1a0677d8e26ff4ff85beb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9ef94d95737fb743af56f411bcc0f39ceea679a0
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857222"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912683"
 ---
 # <a name="custom-filters"></a>사용자 지정 필터
 사용자 지정 필터를 사용하면 시스템 제공 메시지 필터를 사용하여 정의할 수 없는 일치 논리를 정의할 수 있습니다. 예를 들어 특정 메시지 요소를 해시한 다음 값을 검사하여 필터가 true를 반환하는지 아니면 false를 반환하는지를 확인하는 사용자 지정 필터를 만들 수 있습니다.  
@@ -46,11 +46,11 @@ public class MyMessageFilter: MessageFilter
   
  일반적으로 사용자 지정 필터를 구현할 때는 다음 사항을 피해야 합니다.  
   
--   IO(예: 디스크 또는 데이터베이스에 데이터 저장)  
+- IO(예: 디스크 또는 데이터베이스에 데이터 저장)  
   
--   불필요한 처리(예: 문서의 여러 레코드 반복)  
+- 불필요한 처리(예: 문서의 여러 레코드 반복)  
   
--   차단 작업(예: 공유 리소스에 대한 잠금 확보 또는 데이터베이스에 대한 조회 수행이 필요한 호출)  
+- 차단 작업(예: 공유 리소스에 대한 잠금 확보 또는 데이터베이스에 대한 조회 수행이 필요한 호출)  
   
  프로덕션 환경에서 사용자 지정 필터를 사용하기 전에 성능 테스트를 실행하여 필터에서 메시지를 평가하는 데 소요되는 평균 시간을 확인해야 합니다. 필터 테이블에 사용되는 다른 필터의 평균 처리 시간을 조합하면 클라이언트 응용 프로그램에서 지정하는 최대 제한 시간 값을 정확하게 확인할 수 있습니다.  
   

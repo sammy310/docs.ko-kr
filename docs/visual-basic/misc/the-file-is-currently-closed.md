@@ -2,12 +2,12 @@
 title: 파일이 현재 닫혀 있습니다.
 ms.date: 07/20/2015
 ms.assetid: 095c38ae-a741-4b46-b099-bc6826a49c83
-ms.openlocfilehash: 28b60005dc4002ff1016df79a4cd3ed1f88d0057
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 79d08fc8f970ded7a616e576f73c295ab8414bb8
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62023093"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912627"
 ---
 # <a name="the-file-is-currently-closed"></a>파일이 현재 닫혀 있습니다.
 파일이 현재 닫혀 있는데 열려 있는 파일에서만 가능한 작업을 수행하려고 했습니다.  

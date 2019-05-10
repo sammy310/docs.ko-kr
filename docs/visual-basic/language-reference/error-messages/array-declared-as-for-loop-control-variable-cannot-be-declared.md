@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32039
 ms.assetid: 1d8b6560-c9eb-4b71-a038-24c6f5a5ce46
-ms.openlocfilehash: bee3bcd3701945f5cf77f6761defc8be77acf49f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9f24dd2a20dc3a4935cd288a20a0e12c1d47bee1
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935384"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912349"
 ---
 # <a name="array-declared-as-for-loop-control-variable-cannot-be-declared-with-an-initial-size"></a>For 루프 제어 변수를 통해 선언되는 배열은 초기 크기를 지정하여 선언할 수 없습니다.
 A `For Each` 루프에으로 배열을 사용 하 여 해당 *요소* 반복 변수는 하지만 해당 배열을 초기화 합니다.  

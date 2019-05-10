@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: 94f1284e864bc63c321e004ac4a20843b191711d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5e2b81a3ca7ab2c266218c3e32d22e0ebf67bf6a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61748540"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586777"
 ---
 # <a name="security-overview"></a>보안 개요
 Windows Communication Foundation (WCF)는 SOAP 메시지 기반의 분산된 프로그래밍 플랫폼 이며 클라이언트와 서비스 간의 메시지 보안 데이터를 보호 하는 데 중요 합니다. WCF는 기존 보안 인프라와 SOAP 메시지에 대 한 보안 표준에 따라 보안 메시지를 교환 하기 위한 융통성과 상호 운용 가능한 플랫폼을 제공 합니다.  

@@ -2,12 +2,12 @@
 title: SQL Server에서 응용 프로그램 역할 만들기
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-ms.openlocfilehash: f836fd239eca30d0a1f4a667cddc844446d1d951
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7934c58f837cd5a4b01f823701025190be3dfe6d
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878022"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64910718"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>SQL Server에서 응용 프로그램 역할 만들기
 응용 프로그램 역할을 사용하면 데이터베이스 역할이나 사용자 대신 응용 프로그램에 권한을 할당할 수 있습니다. 사용자는 데이터베이스에 연결한 후 응용 프로그램 역할을 활성화하여 응용 프로그램에 부여된 권한을 사용할 수 있습니다. 응용 프로그램 역할에 부여된 권한은 연결되어 있는 동안 유효합니다.  

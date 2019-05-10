@@ -2,12 +2,12 @@
 title: 루트 폴더의 이름을 바꿀 수 없습니다.
 ms.date: 07/20/2015
 ms.assetid: 325eb73c-d5fe-4b65-8926-5dabff007277
-ms.openlocfilehash: 0482a6eccf587a18be05f263949b65cda743d1f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7d673776042e6e68018d24ce2566f108f1994a76
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62023034"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592378"
 ---
 # <a name="root-folder-cannot-be-renamed"></a>루트 폴더의 이름을 바꿀 수 없습니다.
 루트 디렉터리의 이름을 바꾸려고 했습니다. 파일 경로가 올바르게 구문 분석되지 않은 것 같습니다.  

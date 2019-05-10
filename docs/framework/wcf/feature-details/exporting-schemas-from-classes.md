@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
-ms.openlocfilehash: dcbccbea279796fdaec1227b7575cf39e47f9e4f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5c11ebf87f68a87c410c87fd860ba58f4f63a35
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856679"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587578"
 ---
 # <a name="exporting-schemas-from-classes"></a>클래스에서 스키마 내보내기
 데이터 계약 모델에 사용되는 클래스에서 XSD(XML 스키마 정의 언어) 스키마를 생성하려면 <xref:System.Runtime.Serialization.XsdDataContractExporter> 클래스를 사용합니다. 이 항목에서는 스키마를 만드는 프로세스에 대해 설명합니다.  
@@ -43,18 +43,18 @@ ms.locfileid: "61856679"
 ## <a name="export-options"></a>내보내기 옵션  
  <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> 의 <xref:System.Runtime.Serialization.XsdDataContractExporter> 속성을 <xref:System.Runtime.Serialization.ExportOptions> 클래스로 설정하여 내보내기 프로세스의 다양한 측면을 제어할 수 있습니다. 특히 다음 옵션을 설정할 수 있습니다.  
   
--   <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>. 이 `Type` 컬렉션은 내보내는 형식의 알려진 형식을 나타냅니다. (자세한 내용은 [데이터 계약 알려진 형식을](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).) `Export` 메서드에 전달된 형식 외에도 이러한 알려진 형식이 모든 `Export` 호출 시 내보내집니다.  
+- <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>. 이 `Type` 컬렉션은 내보내는 형식의 알려진 형식을 나타냅니다. (자세한 내용은 [데이터 계약 알려진 형식을](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).) `Export` 메서드에 전달된 형식 외에도 이러한 알려진 형식이 모든 `Export` 호출 시 내보내집니다.  
   
--   <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>. 이 속성을 통해 내보내기 프로세스를 사용자 지정하는 <xref:System.Runtime.Serialization.IDataContractSurrogate> 를 제공할 수 있습니다. 자세한 내용은 [데이터 계약 서로게이트](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)합니다. 기본적으로 서로게이트는 사용되지 않습니다.  
+- <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>. 이 속성을 통해 내보내기 프로세스를 사용자 지정하는 <xref:System.Runtime.Serialization.IDataContractSurrogate> 를 제공할 수 있습니다. 자세한 내용은 [데이터 계약 서로게이트](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)합니다. 기본적으로 서로게이트는 사용되지 않습니다.  
   
 ## <a name="helper-methods"></a>도우미 메서드  
  스키마를 내보내는 기본 역할 외에도 `XsdDataContractExporter` 는 형식에 대한 정보를 제공하는 몇 가지 유용한 도우미 메서드를 제공합니다. 여기에는 다음이 포함됩니다.  
   
--   <xref:System.Runtime.Serialization.XsdDataContractExporter.GetRootElementName%2A> 메서드를 호출하여 생성됩니다. 이 메서드는 `Type` 을 받아서 이 형식이 루트 개체로 serialize된 경우에 사용되는 루트 요소 이름과 네임스페이스를 나타내는 <xref:System.Xml.XmlQualifiedName> 을 반환합니다.  
+- <xref:System.Runtime.Serialization.XsdDataContractExporter.GetRootElementName%2A> 메서드를 호출하여 생성됩니다. 이 메서드는 `Type` 을 받아서 이 형식이 루트 개체로 serialize된 경우에 사용되는 루트 요소 이름과 네임스페이스를 나타내는 <xref:System.Xml.XmlQualifiedName> 을 반환합니다.  
   
--   <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaTypeName%2A> 메서드를 호출하여 생성됩니다. 이 메서드는 `Type` 을 받아서 이 형식을 스키마로 내보낸 경우에 사용되는 XSD 스키마 형식의 이름을 나타내는 <xref:System.Xml.XmlQualifiedName> 을 반환합니다. 스키마에 익명 형식으로 나타나는 <xref:System.Xml.Serialization.IXmlSerializable> 형식에 대해 이 메서드는 `null`을 반환합니다.  
+- <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaTypeName%2A> 메서드를 호출하여 생성됩니다. 이 메서드는 `Type` 을 받아서 이 형식을 스키마로 내보낸 경우에 사용되는 XSD 스키마 형식의 이름을 나타내는 <xref:System.Xml.XmlQualifiedName> 을 반환합니다. 스키마에 익명 형식으로 나타나는 <xref:System.Xml.Serialization.IXmlSerializable> 형식에 대해 이 메서드는 `null`을 반환합니다.  
   
--   <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaType%2A> 메서드를 호출하여 생성됩니다. 이 메서드는 스키마에 익명 형식으로 나타나는 <xref:System.Xml.Serialization.IXmlSerializable> 형식에서만 작동하고 다른 모든 형식에 대해 `null` 을 반환합니다. 익명 형식의 경우 이 메서드는 지정된 <xref:System.Xml.Schema.XmlSchemaType> 을 나타내는 `Type`을 반환합니다.  
+- <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaType%2A> 메서드를 호출하여 생성됩니다. 이 메서드는 스키마에 익명 형식으로 나타나는 <xref:System.Xml.Serialization.IXmlSerializable> 형식에서만 작동하고 다른 모든 형식에 대해 `null` 을 반환합니다. 익명 형식의 경우 이 메서드는 지정된 <xref:System.Xml.Schema.XmlSchemaType> 을 나타내는 `Type`을 반환합니다.  
   
  내보내기 옵션은 이러한 모든 메서드에 영향을 줍니다.  
   

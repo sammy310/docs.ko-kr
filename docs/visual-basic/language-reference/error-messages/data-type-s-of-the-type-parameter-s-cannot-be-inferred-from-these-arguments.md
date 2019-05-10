@@ -10,12 +10,12 @@ helpviewer_keywords:
 - BC36644
 - BC36647
 ms.assetid: 0e0050f2-2039-4311-b260-f0ebfde84189
-ms.openlocfilehash: 91ee4bf9242df822890b0a171061f375a3b24cbc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4167905ca6ddab66b2cbc6c8c40dc7c984e94b8b
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803872"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64913187"
 ---
 # <a name="data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a>이 인수에서 형식 매개 변수의 데이터 형식을 유추할 수 없습니다.
 이 인수에서 형식 매개 변수의 데이터 형식을 유추할 수 없습니다. 데이터 형식을 명시적으로 지정하면 이 오류를 해결할 수 있습니다.  
@@ -55,7 +55,7 @@ End Interface
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   형식 유추를 사용하지 않고 형식 매개 변수에 대한 데이터 형식을 지정할 수 있습니다.  
+- 형식 유추를 사용하지 않고 형식 매개 변수에 대한 데이터 형식을 지정할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
 

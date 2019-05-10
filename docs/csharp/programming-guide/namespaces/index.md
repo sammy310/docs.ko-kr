@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 3e05e18225b198e9e34b4b96717cc813dab836c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6d3b77a506186166c9ad76490ef47f8759c704eb
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61710110"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452723"
 ---
 # <a name="namespaces-c-programming-guide"></a>네임스페이스(C# 프로그래밍 가이드)
 
@@ -48,12 +48,11 @@ ms.locfileid: "61710110"
   
 ## <a name="see-also"></a>참고 항목
 
+- [C# 프로그래밍 가이드](../index.md)
 - [네임스페이스 사용](using-namespaces.md)
 - [방법: 전역 네임스페이스 별칭 사용](how-to-use-the-global-namespace-alias.md)
 - [방법: My 네임스페이스 사용](how-to-use-the-my-namespace.md)
-- [C# 프로그래밍 가이드](../index.md)
 - [식별자 이름](../inside-a-program/identifier-names.md)
 - [네임스페이스 키워드](../../language-reference/keywords/namespace-keywords.md)
 - [using 지시문](../../language-reference/keywords/using-directive.md)
 - [:: 연산자](../../language-reference/operators/namespace-alias-qualifer.md)
-- [. 연산자](../../language-reference/operators/member-access-operator.md)

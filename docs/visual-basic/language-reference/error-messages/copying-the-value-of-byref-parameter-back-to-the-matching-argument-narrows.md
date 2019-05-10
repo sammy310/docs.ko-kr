@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
-ms.openlocfilehash: fa8607bf72dfb344048ec82514182dcb6810274d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6d238e9c426b5ae7df0cde745b51eace1cae5d87
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803859"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64913200"
 ---
 # <a name="copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument-narrows-from-type-typename1-to-type-typename2"></a>'ByRef' 매개 변수의 값을 복사 '\<parametername >' 인수에 다시 축소 됩니다. 형식에서 '\<typename1 >' 형식으로 '\<typename2 >'
 해당 매개 변수 형식으로 확대 되는 인수를 사용 하 여 프로시저 호출 및 매개 변수에서 인수 변환을 축소 됩니다.  
@@ -27,11 +27,11 @@ ms.locfileid: "61803859"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   가능 하면 Visual Basic 모든 변환을 수행 하지 않아도 되므로 프로시저 매개 변수와 동일한 형식의 호출 인수를 사용 합니다.  
+- 가능 하면 Visual Basic 모든 변환을 수행 하지 않아도 되므로 프로시저 매개 변수와 동일한 형식의 호출 인수를 사용 합니다.  
   
--   매개 변수 형식과 다른 인수 형식을 사용하여 프로시저를 호출해야 하지만 호출 인수에 값을 반환할 필요가 없는 경우 매개 변수를 [ByRef](../../../visual-basic/language-reference/modifiers/byval.md) 가 아니라 `ByRef`로 정의합니다.  
+- 매개 변수 형식과 다른 인수 형식을 사용하여 프로시저를 호출해야 하지만 호출 인수에 값을 반환할 필요가 없는 경우 매개 변수를 [ByRef](../../../visual-basic/language-reference/modifiers/byval.md) 가 아니라 `ByRef`로 정의합니다.  
   
--   호출 인수에 값을 반환 해야 할 경우 역방향 변환 연산자를 정의할 [Widening](../../../visual-basic/language-reference/modifiers/widening.md)가능한 경우.  
+- 호출 인수에 값을 반환 해야 할 경우 역방향 변환 연산자를 정의할 [Widening](../../../visual-basic/language-reference/modifiers/widening.md)가능한 경우.  
   
 ## <a name="see-also"></a>참고자료
 

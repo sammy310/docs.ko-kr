@@ -2,12 +2,12 @@
 title: ConfigurationCodeGenerator
 ms.date: 03/30/2017
 ms.assetid: 3913aae8-165f-4014-9262-7fe426f90cb2
-ms.openlocfilehash: 97197926db0b44f1ad36e2eba6ab6bec42eced33
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a01300024f89a0a189045d80622121f7db739a39
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61943925"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912407"
 ---
 # <a name="configurationcodegenerator"></a>ConfigurationCodeGenerator
 ConfigurationCodeGenerator는 구성 시스템에 사용자 지정 채널 구현을 노출하는 데 사용할 수 있는 도구입니다. 이를 통해 사용자 지정 채널의 사용자가 `NetTcpBinding`을 사용하여 `TcpTransportBindingElement` 등의 시스템 제공 바인딩이나 사용자 지정 바인딩을 구성하는 것과 같은 방법으로 .config 파일을 사용하여 채널을 구성할 수 있습니다.  

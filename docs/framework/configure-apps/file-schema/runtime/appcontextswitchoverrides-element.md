@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e887747a3f036d10e5e5fec6c0cadaf9f34050df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 79a8d378f69ced0bc22926b066e76dc515b06559
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674300"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65210437"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > 요소
 <xref:System.AppContext> 클래스에 사용되는 스위치를 하나 이상 정의하여 새 기능의 옵트아웃 메커니즘을 제공합니다.  
@@ -90,15 +90,17 @@ ms.locfileid: "61674300"
 |`Switch.System.Net.`<br/>`DontEnableSchUseStrongCrypto`|컨트롤 여부는 <xref:System.Net.ServicePointManager?displayProperty=nameWithType> 및 <xref:System.Net.Security.SslStream?displayProperty=nameWithType> 클래스는 SSL 3.0 프로토콜을 사용할 수 있습니다. 자세한 내용은 [완화: TLS 프로토콜](../../../migration-guide/mitigation-tls-protocols.md)을 참조하세요.|.NET Framework 4.6|
 |`Switch.System.Net.`<br/>`DontEnableSystemDefaultTlsVersions`|Tls11, Tls12, Tls 기본값으로 다시 되돌리기 SystemDefault TLS 버전을 사용 하지 않도록 설정 합니다.|.NET Framework 4.7|
 |`Switch.System.Net.`<br/>`DontEnableTlsAlerts`|SslStream TLS 서버 쪽 경고를 사용 하지 않도록 설정 합니다.|.NET Framework 4.7|
+|`Switch.System.Runtime.InteropServices.`<br/>`DoNotMarshalOutByrefSafeArrayOnInvoke`|COM interop 이벤트에 ByRef SafeArray 매개 변수를 네이티브 코드로 다시 마샬링하 여부를 제어 (`false`) 또는 네이티브 코드를 다시 마샬링 비활성화 여부 (`true`).|.NET Framework 4.8|
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseECMAScriptV6EscapeControlCharacter` |컨트롤 여부는 [DataContractJsonSerializer](xref:System.Runtime.Serialization.Json.DataContractJsonSerializer) ECMAScript V6 및 V8 표준에 따라 일부 제어 문자를 serialize 합니다. 자세한 내용은 [완화: DataContractJsonSerializer로 제어 문자 serialization](../../../migration-guide/mitigation-serialization-control-characters.md)| .NET Framework 4.7 |
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseTimeZoneInfo`|컨트롤 여부는 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 시간대에 대해 여러 조정 또는 하나의 조정만 지원 합니다. 경우 `true`를 사용 하 여 합니다 <xref:System.TimeZoneInfo> serialize 할 입력 날짜 및 시간 데이터를 deserialize 하 고 사용 하 여이 고, 그렇지는 <xref:System.TimeZone> 여러 조정 규칙을 지원 하지 않는 형식입니다.|.NET Framework 4.6.2|
 |`Switch.System.Runtime.Serialization.UseNewMaxArraySize`|컨트롤 여부 <xref:System.Runtime.Serialization.ObjectManager?displayProperty=nameWithType> 개체 serialization 및 deserialization 중 더 큰 배열 크기를 사용 합니다. 이 스위치를 설정 `true` 와 같은 serialization의 성능 및 형식에서 큰 개체 그래프의 deserialization을 개선 하기 위해 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>합니다. |.NET Framework 4.7.2|
 |`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|컨트롤 여부는 <xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType> 새 개체를 설정 하는 생성자 <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType> 기존 개체 참조를 사용 하 여 속성입니다. 자세한 내용은 [완화: ClaimsIdentity 생성자](../../../migration-guide/mitigation-claimsidentity-constructor.md)합니다.|.NET Framework 4.6.2|  
 |`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|컨트롤 여부를 다시 사용 하려고 합니다는 <xref:System.Security.Cryptography.AesCryptoServiceProvider> decryptor throw를 <xref:System.Security.Cryptography.CryptographicException>입니다. 자세한 내용은 [AesCryptoServiceProvider 암호 해독 기가 재사용 가능 변환을 제공](../../../migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform)합니다.|.NET Framework 4.6.2|
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|컨트롤 여부를 값을 [cspparameters.parentwindowhandle에](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle) 속성은는 [IntPtr](xref:System.IntPtr) 나타내는 창에 메모리 위치 처리 또는 창 핸들 (HWND) 인지는. 자세한 내용은 [완화: Cspparameters.parentwindowhandle에 HWND 필요](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value)합니다. |.NET Framework 4.7|   
-|`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|일부 SignedCMS 작업에 대 한 기본값은 SHA1 또는 SHA256 여부를 결정 합니다.<br>SHA1 관련 충돌 문제로 인해 SHA256을 사용하는 것이 좋습니다.|.NET Framework 4.7.1|
-|`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|일부 SignedXML 작업에 대 한 기본값은 SHA1 또는 SHA256 여부를 결정 합니다.<br>SHA1 관련 충돌 문제로 인해 SHA256을 사용하는 것이 좋습니다.|.NET Framework 4.7.1|
 |`Switch.System.Security.Cryptography.`<br/>`UseLegacyFipsThrow`|FIPS 모드 throw의 클래스를 관리 되는 암호화를 사용 하는지 여부를 제어를 <xref:System.Security.Cryptography.CryptographicException> (`true`) 또는 시스템 라이브러리의 구현을 사용 (`false`).|.NET Framework 4.8|
+|`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|일부 SignedCMS 작업에 대 한 기본값은 SHA1 또는 SHA256 여부를 결정 합니다.<br>SHA1 관련 충돌 문제로 인해 SHA256을 사용하는 것이 좋습니다.|.NET Framework 4.7.1|
+|`Switch.System.Security.Cryptography.X509Certificates.`<br/>`ECDsaCertificateExtensions.UseLegacyPublicKeyReader`|컨트롤 여부는 <xref:System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPublicKey%2A?displayProperty=nameWithtype> 메서드는 운영 체제에서 지 원하는 모든 명명 된 곡선을 올바르게 처리 (`false`) 또는 레거시 동작으로 돌아갑니다.|.NET Framework 4.8|
+|`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|일부 SignedXML 작업에 대 한 기본값은 SHA1 또는 SHA256 여부를 결정 합니다.<br>SHA1 관련 충돌 문제로 인해 SHA256을 사용하는 것이 좋습니다.|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|결정 하는지 여부를 `TransportWithMessageCredential` 보안 모드에서는 메시지를 부호 없는 "to" 헤더가 합니다. 이 옵트인 스위치입니다. 자세한 내용은 [.NET Framework 4.6.1의에서 런타임 변경 내용](../../../migration-guide/runtime/4.5.2-4.6.1.md#windows-communication-foundation-wcf)합니다.|.NET Framework 4.6.1| 
 |`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|컨트롤 여부를 합니다 <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})> 생성자에서 throw를 <xref:System.ArgumentException> 요소 중 하나 이면 `null`합니다.|.NET Framework 4.7.1| 
 |`Switch.System.ServiceModel.`<br />`DisableCngCertificates`|CSG 키 저장소 공급자를 예외를 throw X509를 사용 하려고 인증서를 사용 하 여 여부를 결정 합니다. 자세한 내용은 [WCF 전송 보안에서 CNG를 사용 하 여 저장 한 인증서 지원](../../../migration-guide/retargeting/4.6.1-4.6.2.md#wcf-transport-security-supports-certificates-stored-using-cng)합니다.|.NET Framework 4.6.1|

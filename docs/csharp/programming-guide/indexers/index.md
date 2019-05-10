@@ -8,12 +8,12 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 5ab0a5e524979110c355391cf800cc82e6d6244f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 43cc051eda8c3458d3dc5c529b52104bcd9b807a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61680163"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596119"
 ---
 # <a name="indexers-c-programming-guide"></a>인덱서(C# 프로그래밍 가이드)
 
@@ -40,29 +40,29 @@ C# 7.0부터 get 및 set 접근자 모두를 식 본문 멤버로 구현할 수 
   
 ## <a name="indexers-overview"></a>인덱서 개요  
   
--   인덱서를 사용하면 배열과 유사한 방식으로 개체를 인덱싱할 수 있습니다.  
+- 인덱서를 사용하면 배열과 유사한 방식으로 개체를 인덱싱할 수 있습니다.  
   
--   `get` 접근자는 값을 반환합니다. `set` 접근자는 값을 할당합니다.  
+- `get` 접근자는 값을 반환합니다. `set` 접근자는 값을 할당합니다.  
   
--   [this](../../../csharp/language-reference/keywords/this.md) 키워드는 인덱서를 정의하는 데 사용됩니다.  
+- [this](../../../csharp/language-reference/keywords/this.md) 키워드는 인덱서를 정의하는 데 사용됩니다.  
   
--   [value](../../../csharp/language-reference/keywords/value.md) 키워드는 `set` 인덱서에서 할당하는 값을 정의하는 데 사용됩니다.  
+- [value](../../../csharp/language-reference/keywords/value.md) 키워드는 `set` 인덱서에서 할당하는 값을 정의하는 데 사용됩니다.  
   
--   인덱서는 정수 값으로 인덱싱될 필요가 없으며, 특정 조회 메커니즘을 정의하는 방법을 결정해야 합니다.  
+- 인덱서는 정수 값으로 인덱싱될 필요가 없으며, 특정 조회 메커니즘을 정의하는 방법을 결정해야 합니다.  
   
--   인덱서는 오버로드될 수 있습니다.  
+- 인덱서는 오버로드될 수 있습니다.  
   
--   예를 들어 인덱서는 2차원 배열에 액세스하는 경우 둘 이상의 정식 매개 변수를 사용할 수 있습니다.  
+- 예를 들어 인덱서는 2차원 배열에 액세스하는 경우 둘 이상의 정식 매개 변수를 사용할 수 있습니다.  
   
 ## <a name="BKMK_RelatedSections"></a> 관련 섹션  
   
--   [인덱서 사용](../../../csharp/programming-guide/indexers/using-indexers.md)  
+- [인덱서 사용](../../../csharp/programming-guide/indexers/using-indexers.md)  
   
--   [인터페이스의 인덱서](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
+- [인터페이스의 인덱서](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
   
--   [속성 및 인덱서 비교](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [속성 및 인덱서 비교](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
   
--   [접근자 접근성 제한](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [접근자 접근성 제한](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
 
