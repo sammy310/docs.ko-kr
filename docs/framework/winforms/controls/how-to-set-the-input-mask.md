@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
-ms.openlocfilehash: 06eaf68fef167d63e6f8404dd5049f5445881d24
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: dd156f9e5bf6519363f66ca61687f1e9f2bfc6ab
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912875"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630422"
 ---
 # <a name="how-to-set-the-input-mask"></a>방법: 입력 마스크 설정
 마스킹된 텍스트 상자 컨트롤에는 수락 하거나 거부 하는 사용자 입력에 대 한 선언적 구문을 지 원하는 향상 된 텍스트 상자 컨트롤이입니다. 마스크 속성을 설정 하면 응용 프로그램에 사용자 지정 유효성 검사 논리를 작성 하지 않고 허용 되는 사용자 입력을 지정할 수 있습니다. 자세한 내용은의 설명 섹션을 참조 하십시오.는 <xref:System.Windows.Forms.MaskedTextBox> 클래스입니다.  

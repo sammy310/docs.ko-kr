@@ -10,12 +10,12 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-ms.openlocfilehash: 806cb2b69d83fae2f73583111d0094c7e86e3c61
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4a247bdb90780a22d90bf338eef52830c82907fb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785855"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630673"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>방법: 백그라운드 스레드를 사용하여 파일 검색
 합니다 <xref:System.ComponentModel.BackgroundWorker> 대체 하 고 기능을 추가 하는 구성 요소를 <xref:System.Threading> 네임 스페이스 하지만 <xref:System.Threading> 네임 스페이스 선택 하면 이전 버전과 호환성 및 향후 사용을 위해 유지 됩니다. 자세한 내용은 [BackgroundWorker 구성 요소 개요](backgroundworker-component-overview.md)합니다.  

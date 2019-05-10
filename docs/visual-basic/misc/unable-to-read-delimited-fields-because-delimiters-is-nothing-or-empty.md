@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_DelimitersNothing
 ms.assetid: 94f64c48-8e17-449d-b92a-0426efec879c
-ms.openlocfilehash: a431c8df582a3d02c8bfc9ac259725087aacb05e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 83e5c460f4395f2effe190e7d83299f9f7ab986d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668941"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619954"
 ---
 # <a name="unable-to-read-delimited-fields-because-delimiters-is-nothing-or-empty"></a>구분 기호가 Nothing이거나 비어 있기 때문에 구분된 필드를 읽을 수 없습니다.
 `TextFieldParser` 가 `Delimiters` 속성이 `Nothing` 으로 설정되어 있거나 비어 있기 때문에 파일에서 읽을 수 없습니다.  

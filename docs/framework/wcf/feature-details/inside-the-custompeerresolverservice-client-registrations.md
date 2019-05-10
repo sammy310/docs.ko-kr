@@ -2,12 +2,12 @@
 title: 'CustomPeerResolverService 내: 클라이언트 등록'
 ms.date: 03/30/2017
 ms.assetid: 40236953-a916-4236-84a6-928859e1331a
-ms.openlocfilehash: b3b5e22ad29f465d82e3d925f7168745fc5d04a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3d1e1c6493da54bc3ae0e74a33985da59382ea52
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972551"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619774"
 ---
 # <a name="inside-the-custompeerresolverservice-client-registrations"></a>CustomPeerResolverService 내: 클라이언트 등록
 메시의 각 노드는 `Register` 함수를 통해 해당 엔드포인트 정보를 확인자 서비스에 게시합니다. 확인자 서비스는 이 정보를 등록 레코드로 저장합니다. 이 레코드에는 노드의 고유 식별자(RegistrationID) 및 엔드포인트 정보(PeerNodeAddress)가 포함됩니다.  

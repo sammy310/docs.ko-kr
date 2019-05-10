@@ -13,21 +13,21 @@ helpviewer_keywords:
 - Visual Basic code
 - programming [Visual Basic], Visual Basic coding conventions
 ms.assetid: dd9be76f-6944-4e78-ad72-0b6084a3fc13
-ms.openlocfilehash: b79e339ebe81a7228a02837e5c0c23c80a8132e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9dbe8fe977b2aa11573ab7a1ac1d79be0b5204af
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916944"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624327"
 ---
 # <a name="program-structure-and-code-conventions-visual-basic"></a>프로그램 구조 및 코드 규칙(Visual Basic)
 이 섹션에서는 일반적인 Visual Basic 프로그램 구조를 소개 하 고, "Hello, World" 간단한 Visual Basic 프로그램을 제공, Visual Basic 코드 규칙을 설명 합니다. 코드 규칙은 프로그램의 논리에 있지만 해당 물리적 구조 및 모양에 중점을 둔 제안 사항입니다. 그 뒤에 더 쉽게 코드를 읽고, 이해 하며 관리 합니다. 특히 코드 규칙 포함할 수 있습니다.  
   
--   레이블 지정 및 코드 주석 처리에 대 한 표준화 된 형식입니다.  
+- 레이블 지정 및 코드 주석 처리에 대 한 표준화 된 형식입니다.  
   
--   간격, 형식 및 코드 들여쓰기에 대 한 지침입니다.  
+- 간격, 형식 및 코드 들여쓰기에 대 한 지침입니다.  
   
--   개체, 변수 및 프로시저에 대 한 명명 규칙  
+- 개체, 변수 및 프로시저에 대 한 명명 규칙  
   
  다음 항목에는 일련의 올바른 사용의 예제와 함께 Visual Basic 프로그램에 대 한 프로그래밍 지침을 제공합니다.  
   

@@ -2,12 +2,12 @@
 title: WCF 테스트 클라이언트(WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: cd6f0d7a98ca5bc5f6bee45ad296341a5b91b2a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ee40ca7a07729cac284ef8c634d63d673be3fbd0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791198"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613086"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF 테스트 클라이언트(WcfTestClient.exe)
 Windows Communication Foundation (WCF) 테스트 클라이언트 (WcfTestClient.exe)는 테스트 매개 변수를 입력 하 여 해당 서비스에 입력을 사용 하면 서비스가 다시 보낸 응답을 확인 하는 GUI 도구입니다. 서비스를 매끄럽게 테스트할 WCF 서비스 호스트를 함께 사용 하면 환경을 제공 합니다.  

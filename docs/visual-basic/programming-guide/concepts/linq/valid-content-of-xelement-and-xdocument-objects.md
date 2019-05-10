@@ -2,12 +2,12 @@
 title: XElement 및 XDocument Objects2의 올바른 콘텐츠
 ms.date: 07/20/2015
 ms.assetid: 400bb692-478a-40b6-ac1b-4ccbb4cbbd02
-ms.openlocfilehash: bb5dda6bee0863a2ef951975e92c55184df9d516
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5e9b5ec54b3005d18a1a0da10d78d3c8ad5300ea
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907584"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614356"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>XElement 및 XDocument 개체의 올바른 콘텐츠
 이 항목에서는 생성자에 전달될 수 있는 유효한 인수에 대해 설명하고 내용을 요소와 문서에 추가하는 데 사용하는 메서드에 대한 정보를 제공합니다.  
@@ -17,35 +17,35 @@ ms.locfileid: "61907584"
   
  간단한 내용을 추가할 때 다양한 형식이 이 메서드에 전달될 수 있습니다. 유효한 형식은 다음과 같습니다.  
   
--   <xref:System.String>  
+- <xref:System.String>  
   
--   <xref:System.Double>  
+- <xref:System.Double>  
   
--   <xref:System.Single>  
+- <xref:System.Single>  
   
--   <xref:System.Decimal>  
+- <xref:System.Decimal>  
   
--   <xref:System.Boolean>  
+- <xref:System.Boolean>  
   
--   <xref:System.DateTime>  
+- <xref:System.DateTime>  
   
--   <xref:System.TimeSpan>  
+- <xref:System.TimeSpan>  
   
--   <xref:System.DateTimeOffset>  
+- <xref:System.DateTimeOffset>  
   
--   `Object.ToString`을 구현하는 임의의 형식  
+- `Object.ToString`을 구현하는 임의의 형식  
   
--   <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 임의의 형식  
+- <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 임의의 형식  
   
  복잡한 내용을 추가할 때 다양한 형식이 이 메서드에 전달될 수 있습니다.  
   
--   <xref:System.Xml.Linq.XObject>  
+- <xref:System.Xml.Linq.XObject>  
   
--   <xref:System.Xml.Linq.XNode>  
+- <xref:System.Xml.Linq.XNode>  
   
--   <xref:System.Xml.Linq.XAttribute>  
+- <xref:System.Xml.Linq.XAttribute>  
   
--   <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 임의의 형식  
+- <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 임의의 형식  
   
  개체가 <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 경우 개체의 컬렉션이 열거되고 컬렉션의 모든 항목이 추가됩니다. 컬렉션에 <xref:System.Xml.Linq.XNode> 또는 <xref:System.Xml.Linq.XAttribute> 개체가 포함되어 있으면 컬렉션의 각 항목이 개별적으로 추가됩니다. 컬렉션에 텍스트(또는 텍스트로 변환된 개체)가 포함되어 있으면 컬렉션의 텍스트가 연결되어 단일 텍스트 노드로 추가됩니다.  
   
@@ -62,15 +62,15 @@ ms.locfileid: "61907584"
   
  문서의 유효한 내용은 다음과 같습니다.  
   
--   0개나 1개의 <xref:System.Xml.Linq.XDocumentType> 개체. 문서 형식이 요소 앞에 나와야 합니다.  
+- 0개나 1개의 <xref:System.Xml.Linq.XDocumentType> 개체. 문서 형식이 요소 앞에 나와야 합니다.  
   
--   0개나 1개의 요소  
+- 0개나 1개의 요소  
   
--   0개 이상의 주석  
+- 0개 이상의 주석  
   
--   0개 이상의 처리 명령  
+- 0개 이상의 처리 명령  
   
--   공백만 포함된 0개 이상의 텍스트 노드  
+- 공백만 포함된 0개 이상의 텍스트 노드  
   
 ## <a name="constructors-and-functions-that-allow-adding-content"></a>내용 추가를 허용하는 생성자 및 함수  
  다음 메서드를 사용하여 자식 내용을 <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XDocument>에 추가할 수 있습니다.  

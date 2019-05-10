@@ -10,19 +10,19 @@ helpviewer_keywords:
 - Windows Forms, modifying keyboard input
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 626d3712-d866-4988-bcda-a2d5b36ec0ba
-ms.openlocfilehash: 81d33234670fb8ae5445cc86a79f5c3b6a647a03
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 175296a904a6aed70147f513959fce74b3288abc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802337"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630496"
 ---
 # <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>방법: 표준 컨트롤로 키보드 입력 수정
 Windows Forms는 키보드 입력을 사용 및 수정할 수 있는 기능을 제공합니다. 키 사용은 메시지 큐 아래의 다른 메서드 및 이벤트가 키 값을 수신하지 않도록 메서드 또는 이벤트 처리기 내에서 키를 처리하는 것을 가리킵니다. 키 수정은 메시지 큐 아래의 메서드 및 이벤트 처리기가 다른 키 값을 수신하도록 키 값을 수정하는 것을 가리킵니다. 이 항목에서는 이러한 작업을 수행하는 방법을 보여 줍니다.  
   
 ### <a name="to-consume-a-key"></a>키를 사용하려면  
   
--   <xref:System.Windows.Forms.Control.KeyPress> 이벤트 처리기에서 <xref:System.Windows.Forms.KeyPressEventArgs> 클래스의 <xref:System.Windows.Forms.KeyPressEventArgs.Handled%2A> 속성을 `true`로 설정합니다.  
+- <xref:System.Windows.Forms.Control.KeyPress> 이벤트 처리기에서 <xref:System.Windows.Forms.KeyPressEventArgs> 클래스의 <xref:System.Windows.Forms.KeyPressEventArgs.Handled%2A> 속성을 `true`로 설정합니다.  
   
      또는  
   
@@ -38,7 +38,7 @@ Windows Forms는 키보드 입력을 사용 및 수정할 수 있는 기능을 �
   
 ### <a name="to-modify-a-standard-character-key"></a>표준 문자 키를 수정하려면  
   
--   <xref:System.Windows.Forms.Control.KeyPress> 이벤트 처리기에서 <xref:System.Windows.Forms.KeyPressEventArgs> 클래스의 <xref:System.Windows.Forms.KeyPressEventArgs.KeyChar%2A> 속성을 새 문자 키의 값으로 설정합니다.  
+- <xref:System.Windows.Forms.Control.KeyPress> 이벤트 처리기에서 <xref:System.Windows.Forms.KeyPressEventArgs> 클래스의 <xref:System.Windows.Forms.KeyPressEventArgs.KeyChar%2A> 속성을 새 문자 키의 값으로 설정합니다.  
   
      다음 예제는 'B'를 'A’로 수정하고 'b'를 'a'로 수정하는 `switch` 문에서 발췌한 내용입니다. 새로운 키 값이 메시지 큐의 다른 메서드 및 이벤트에 전파되도록 <xref:System.Windows.Forms.KeyPressEventArgs> 매개 변수의 <xref:System.Windows.Forms.KeyPressEventArgs.Handled%2A> 속성은 `false`로 설정됩니다.  
   
@@ -47,7 +47,7 @@ Windows Forms는 키보드 입력을 사용 및 수정할 수 있는 기능을 �
   
 ### <a name="to-modify-a-noncharacter-key"></a>문자가 아닌 키를 수정하려면  
   
--   Windows 메시지를 처리하는 <xref:System.Windows.Forms.Control> 메서드를 재정의하고, WM_KEYDOWN 또는 WM_SYSKEYDOWN 메시지를 검색하고, <xref:System.Windows.Forms.Message> 매개 변수의 <xref:System.Windows.Forms.Message.WParam%2A> 속성을 문자가 아닌 새 키를 나타내는 <xref:System.Windows.Forms.Keys> 값으로 설정합니다.  
+- Windows 메시지를 처리하는 <xref:System.Windows.Forms.Control> 메서드를 재정의하고, WM_KEYDOWN 또는 WM_SYSKEYDOWN 메시지를 검색하고, <xref:System.Windows.Forms.Message> 매개 변수의 <xref:System.Windows.Forms.Message.WParam%2A> 속성을 문자가 아닌 새 키를 나타내는 <xref:System.Windows.Forms.Keys> 값으로 설정합니다.  
   
      다음 코드 예제에서는 컨트롤의 <xref:System.Windows.Forms.Control.PreProcessMessage%2A> 메서드를 재정의하여 F1-F9 키를 검색하고 F3 키 누름을 F1로 수정하는 방법을 보여 줍니다. 에 대 한 자세한 <xref:System.Windows.Forms.Control> 키보드 메시지를 가로채기 위해 재정의할 수 있는 메서드를 참조 하세요 [Windows Forms 응용 프로그램에서 사용자 입력](user-input-in-a-windows-forms-application.md) 하 고 [키보드 입력 작동 방식](how-keyboard-input-works.md)합니다.  
   
@@ -63,7 +63,7 @@ Windows Forms는 키보드 입력을 사용 및 수정할 수 있는 기능을 �
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   System, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조  
+- System, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조  
   
  Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 내용은 [명령줄에서 빌드](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 하거나 [csc.exe를 사용한 명령줄 빌드](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다. 또한 새 프로젝트에 코드를 붙여 넣어 Visual Studio에서이 예제를 빌드할 수 있습니다.  
   

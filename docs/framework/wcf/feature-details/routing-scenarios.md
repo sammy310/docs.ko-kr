@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
-ms.openlocfilehash: fa5d588211cfe40cde9e9db3161a931e3287cd39
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cab683c11c20f3373a1140a9fd5ad499b2e696e5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991064"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626041"
 ---
 # <a name="routing-scenarios"></a>라우팅 시나리오
 라우팅 서비스는 폭넓은 사용자 지정이 가능하지만 새 구성을 처음부터 만드는 경우 효율적인 라우팅 논리를 디자인하기란 어려운 일입니다.  다만 대부분의 라우팅 서비스 구성에 해당되는 몇 가지 일반적인 시나리오는 있습니다. 이러한 시나리오가 사용자의 특정 구성에 바로 적용되지는 않겠지만 이러한 시나리오를 처리하도록 라우팅 서비스를 구성하는 방법을 이해하면 라우팅 서비스를 더 잘 이해할 수 있습니다.  

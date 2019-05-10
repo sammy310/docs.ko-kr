@@ -14,12 +14,12 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-ms.openlocfilehash: 568927eb4759c214311ad34a5b45e28094dd80be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 95505fd593881ff27418c69550952d072b4e3949
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013532"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628867"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Visual Basic에서의 연산자 우선 순위
 각 파트 평가 되 고 호출 하는 미리 결정 된 순서 대로 확인 식에서 여러 작업 발생 *연산자 우선 순위*합니다.  

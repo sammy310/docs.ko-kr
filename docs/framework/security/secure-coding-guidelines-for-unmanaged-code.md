@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 138713c4a1397369ea18792a3b2742389b107a6b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 59a25eb9b854f0f303d8b1d97db40406c2818df8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61951712"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626286"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>비관리 코드에 대한 보안 코딩 지침
 일부 라이브러리 코드는 비관리 코드(예: Win32와 같은 네이티브 코드 API)를 호출해야 합니다. 이는 관리 코드에 대한 보안 경계를 벗어나야 함을 의미하므로 주의해야 합니다. 코드가 보안 중립적인 경우 코드와 코드를 호출하는 다른 코드 둘 다에 비관리 코드 권한(<xref:System.Security.Permissions.SecurityPermission> 플래그가 지정된 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> )이 있어야 합니다.  

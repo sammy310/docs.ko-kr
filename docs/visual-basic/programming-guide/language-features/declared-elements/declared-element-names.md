@@ -23,12 +23,12 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
-ms.openlocfilehash: 5b1f8ccc402f7f5928a33f434664b0f28d108e6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7642aea72ddaa3789dba3b2328f271afcb92a16a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61828622"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610547"
 ---
 # <a name="declared-element-names-visual-basic"></a>선언된 요소 이름(Visual Basic)
 선언 된 모든 요소에 이름이 라고도 *식별자*, 코드를 참조 하는 데 사용 하는 하는 합니다.  

@@ -3,12 +3,12 @@ title: Visual Studio 2012용 ID 및 액세스 도구
 ms.date: 03/30/2017
 ms.assetid: 87b8f8f2-4074-44fd-9fd6-08278e877390
 author: BrucePerlerMS
-ms.openlocfilehash: 65d771b87cd3198848ffac387446abb17df18250
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 999b85576c52d065075cad105c3212c1b034084f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940415"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626027"
 ---
 # <a name="identity-and-access-tool-for-visual-studio-2012"></a>Visual Studio 2012용 ID 및 액세스 도구
 이 항목에서는 Visual Studio 11에 대한 새로운 ID 및 액세스 도구에 대해 설명합니다. 다음 URL에서이 도구를 다운로드할 수 있습니다: <https://go.microsoft.com/fwlink/?LinkID=245849> 에서 직접 또는 확장 관리자에서 직접 "id"를 검색 하 여 Visual Studio 11 내에서.  

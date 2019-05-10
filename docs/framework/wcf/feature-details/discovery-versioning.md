@@ -2,12 +2,12 @@
 title: 검색 버전 관리
 ms.date: 03/30/2017
 ms.assetid: f91c6d0a-3af2-45c5-9a5c-e75390619836
-ms.openlocfilehash: 18c160e5e08ed9b6733bed9d5e40a4dde00dfd1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3f90fc5183e974b9045c156e0ae74099abfbc41a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856650"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626958"
 ---
 # <a name="discovery-versioning"></a>검색 버전 관리
 이 항목에서는 일부 새 검색 기능의 구현에 대해 간략하게 설명하고 사용할 검색 버전을 선택하는 방법에 대해서도 간략하게 설명합니다.  
@@ -17,13 +17,13 @@ ms.locfileid: "61856650"
   
  다음은 <xref:System.ServiceModel.Discovery.DiscoveryVersion> 속성을 포함하고 있고 해당 생성자에 <xref:System.ServiceModel.Discovery.DiscoveryVersion> 인수를 사용하는 검색 클래스입니다.  
   
--   <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>  
+- <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>  
+- <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
+- <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
+- <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
   
 ### <a name="discoveryversionwsdiscoveryapril2005"></a>DiscoveryVersion.WSDiscoveryApril2005  
  제공 <xref:System.ServiceModel.Discovery.DiscoveryVersion.WSDiscoveryApril2005> 생성자 매개 변수는 Ws-discovery 프로토콜의 April2005 버전을 사용 하 여 구현 합니다. 이 버전은 WS-Discovery 프로토콜 사양의 게시된 버전에 해당합니다. WS-Discovery의 April2005 버전을 사용하는 레거시 응용 프로그램과 상호 운용하려면 이 버전을 사용해야 합니다.  

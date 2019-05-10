@@ -16,29 +16,29 @@ helpviewer_keywords:
 ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 35aec3a311680e398d9f2bba94bf4c9a274c8a04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5657e55856845404c5f8f063bd69d51614a234c9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61873823"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614278"
 ---
 # <a name="trace-listeners"></a>추적 수신기
 **Trace**, **Debug** 및 <xref:System.Diagnostics.TraceSource>를 사용하는 경우 전송된 메시지를 수집 및 기록하는 메커니즘이 있어야 합니다. *수신기*가 추적 메시지를 수신합니다. 수신기의 목적은 추적 메시지를 수집, 저장 및 라우팅하는 것입니다. 수신기는 추적 출력을 로그, 창 또는 텍스트 파일과 같은 적절한 대상에 보냅니다.  
   
  각각 출력을 다양한 수신기 개체에 전송할 수 있는 **Debug**, **Trace** 및 <xref:System.Diagnostics.TraceSource> 클래스에서 수신기를 사용할 수 있습니다. 일반적으로 사용되는 미리 정의된 수신기는 다음과 같습니다.  
   
--   <xref:System.Diagnostics.TextWriterTraceListener>는 출력을 <xref:System.IO.TextWriter> 클래스 인스턴스 또는 <xref:System.IO.Stream> 클래스에 해당하는 항목에 전달합니다. 콘솔과 파일은 <xref:System.IO.Stream> 클래스이므로 이 수신기가 콘솔이나 파일에 쓸 수도 있습니다.  
+- <xref:System.Diagnostics.TextWriterTraceListener>는 출력을 <xref:System.IO.TextWriter> 클래스 인스턴스 또는 <xref:System.IO.Stream> 클래스에 해당하는 항목에 전달합니다. 콘솔과 파일은 <xref:System.IO.Stream> 클래스이므로 이 수신기가 콘솔이나 파일에 쓸 수도 있습니다.  
   
--   <xref:System.Diagnostics.EventLogTraceListener>는 출력을 이벤트 로그에 전달합니다.  
+- <xref:System.Diagnostics.EventLogTraceListener>는 출력을 이벤트 로그에 전달합니다.  
   
--   <xref:System.Diagnostics.DefaultTraceListener>는 **Write** 및 **WriteLine** 메시지를 **OutputDebugString** 및 **Debugger.Log** 메서드에 내보냅니다. Visual Studio에서는 이를 통해 디버깅 메시지가 출력 창에 표시됩니다. **Fail** 및 실패한 **Assert** 메시지도 **OutputDebugString** Windows API 및 **Debugger.Log** 메서드에 내보내고 이를 통해 메시지 상자가 표시됩니다. 이 동작은 **Debug** 및 **Trace** 메시지에 대한 기본 동작입니다. 이는 **DefaultTraceListener**가 모든 `Listeners` 컬렉션에 자동으로 포함되고 자동으로 포함되는 유일한 수신기이기 때문입니다.  
+- <xref:System.Diagnostics.DefaultTraceListener>는 **Write** 및 **WriteLine** 메시지를 **OutputDebugString** 및 **Debugger.Log** 메서드에 내보냅니다. Visual Studio에서는 이를 통해 디버깅 메시지가 출력 창에 표시됩니다. **Fail** 및 실패한 **Assert** 메시지도 **OutputDebugString** Windows API 및 **Debugger.Log** 메서드에 내보내고 이를 통해 메시지 상자가 표시됩니다. 이 동작은 **Debug** 및 **Trace** 메시지에 대한 기본 동작입니다. 이는 **DefaultTraceListener**가 모든 `Listeners` 컬렉션에 자동으로 포함되고 자동으로 포함되는 유일한 수신기이기 때문입니다.  
   
--   <xref:System.Diagnostics.ConsoleTraceListener>는 추적 또는 디버깅 출력을 표준 출력이나 표준 오류 스트림에 전달합니다.  
+- <xref:System.Diagnostics.ConsoleTraceListener>는 추적 또는 디버깅 출력을 표준 출력이나 표준 오류 스트림에 전달합니다.  
   
--   <xref:System.Diagnostics.DelimitedListTraceListener>는 추적 또는 디버깅 출력을 스트림 작성기와 같은 텍스트 작성기 또는 파일 스트림과 같은 스트림으로 보냅니다. 추적 출력은 <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> 속성으로 지정된 구분 기호를 사용하는 구분된 텍스트 형식입니다.  
+- <xref:System.Diagnostics.DelimitedListTraceListener>는 추적 또는 디버깅 출력을 스트림 작성기와 같은 텍스트 작성기 또는 파일 스트림과 같은 스트림으로 보냅니다. 추적 출력은 <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> 속성으로 지정된 구분 기호를 사용하는 구분된 텍스트 형식입니다.  
   
--   <xref:System.Diagnostics.XmlWriterTraceListener>는 추적 및 디버깅 출력을 XML로 인코딩된 데이터로 <xref:System.IO.TextWriter> 또는 <xref:System.IO.Stream>(예: <xref:System.IO.FileStream>)에 전달합니다.  
+- <xref:System.Diagnostics.XmlWriterTraceListener>는 추적 및 디버깅 출력을 XML로 인코딩된 데이터로 <xref:System.IO.TextWriter> 또는 <xref:System.IO.Stream>(예: <xref:System.IO.FileStream>)에 전달합니다.  
   
  <xref:System.Diagnostics.DefaultTraceListener> 이외의 수신기가 **Debug**, **Trace** 및 <xref:System.Diagnostics.TraceSource> 출력을 수신하게 하려면 수신기를 `Listeners` 컬렉션에 추가해야 합니다. 자세한 내용은 [방법: 추적 수신기 만들기 및 초기화](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md) 고 [방법: 추적 수신기와 함께 TraceSource 및 필터를 사용 하 여](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)입니다. **Listeners** 컬렉션의 모든 수신기는 추적 출력 메서드에서 같은 메시지를 가져옵니다. 예를 들어 두 가지 수신기인 **TextWriterTraceListener** 및 **EventLogTraceListener**를 설정한다고 가정합니다. 각 수신기는 같은 메시지를 수신합니다. **TextWriterTraceListener**는 출력을 스트림에 전달하고 **EventLogTraceListener**는 출력을 이벤트 로그에 전달합니다.  
   

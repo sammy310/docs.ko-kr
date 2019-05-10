@@ -2,12 +2,12 @@
 title: 트랜잭션 관리 에스컬레이션
 ms.date: 03/30/2017
 ms.assetid: 1e96331e-31b6-4272-bbbd-29ed1e110460
-ms.openlocfilehash: 2a5592cc9ebf0ddfc49f38da9404c81d11a29cf8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1e40244e1f6b5ffd7b52584a5da121d1203f8376
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793554"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630566"
 ---
 # <a name="transaction-management-escalation"></a>트랜잭션 관리 에스컬레이션
 Windows는 트랜잭션 관리자를 구성하는 서비스 및 모듈 집합을 호스팅합니다. 트랜잭션 관리 에스컬레이션은 트랜잭션 관리자의 구성 요소 중 하나에서 다른 구성 요소로 트랜잭션을 마이그레이션하는 프로세스에 대해 설명합니다.  

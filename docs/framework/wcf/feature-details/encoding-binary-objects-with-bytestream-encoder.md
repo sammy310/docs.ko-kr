@@ -2,12 +2,12 @@
 title: ByteStream 인코더를 사용하여 이진 개체 인코딩
 ms.date: 03/30/2017
 ms.assetid: 020ee981-c889-4b12-a3ea-91823ef46444
-ms.openlocfilehash: 9619fdf6979833c30159e1ea02b3f8d6b98a6629
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 09a919e11971f81bc76dca0e45a7eb0e70ef749e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856507"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626934"
 ---
 # <a name="encoding-binary-objects-with-bytestream-encoder"></a>ByteStream 인코더를 사용하여 이진 개체 인코딩
 Windows Communication Foundation (WCF)를 사용 하 여 원시 이진 데이터 보내기 및 받기 사용 하 여 구성 된 <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>합니다.  
@@ -39,8 +39,8 @@ void ProcessMessage(Message message) ;
 ## <a name="scenarios"></a>시나리오  
  바이트 스트림 인코더는 다음과 같은 시나리오에서 유용합니다.  
   
--   WCF를 사용 하 여 컴퓨터 간에 JPEG 이미지를 전송 합니다. 이 시나리오에서는 이미지가 외부 소스에서의 전송을 통해 도착하며 전송된 데이터는 이미지를 구성하는 원시 바이트입니다. 서비스는 이진 데이터를 받고 이미지를 표시합니다.  
+- WCF를 사용 하 여 컴퓨터 간에 JPEG 이미지를 전송 합니다. 이 시나리오에서는 이미지가 외부 소스에서의 전송을 통해 도착하며 전송된 데이터는 이미지를 구성하는 원시 바이트입니다. 서비스는 이진 데이터를 받고 이미지를 표시합니다.  
   
--   메시지 큐에서 정보를 읽고 처리하는 경우. 메시지 큐 관리자에서 메시지를 읽으며 이 메시지는 처리되기 위해 메시지 큐 채널 위로 전달됩니다. 메시지 큐 채널은 WCF 채널 스택에서 큐 관리자 처럼 작동 합니다.  
+- 메시지 큐에서 정보를 읽고 처리하는 경우. 메시지 큐 관리자에서 메시지를 읽으며 이 메시지는 처리되기 위해 메시지 큐 채널 위로 전달됩니다. 메시지 큐 채널은 WCF 채널 스택에서 큐 관리자 처럼 작동 합니다.  
   
  메시지 큐 채널을 통해 메시지를 보내는 경우 보낸 사람은 큐 관리자에서 받은 바이트를 제어할 수 없습니다. 받는 프로세스에 원시 바이트를 읽는 기능이 없는 경우 메시지가 잘못된 형식으로 수신되고 처리되지 않습니다. 받는 프로세스에는 받은 바이트를 사용 가능한 형식으로 다시 변환하는 기능이 있다고 간주됩니다.

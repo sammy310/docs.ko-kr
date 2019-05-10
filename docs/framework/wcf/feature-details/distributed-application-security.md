@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: e447cd5ccf84e49ff384bd3591884404736d04f8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 70ed0fe9191c18e88198871319b3c3ee3c0b4ab4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856546"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626965"
 ---
 # <a name="distributed-application-security"></a>분산 응용 프로그램 보안
 Windows Communication Foundation (WCF) 보안 세 가지 주요 기능 영역으로 나뉩니다: 전송 보안, 액세스 제어 및 감사 합니다. 전송 보안은 무결성, 기밀성 및 인증을 제공합니다. 전송 보안은 전송 보안, 메시지 보안, `TransportWithMessageCredential` 중 하나를 통해 제공됩니다.  
@@ -20,11 +20,11 @@ Windows Communication Foundation (WCF) 보안 세 가지 주요 기능 영역으
 ## <a name="transfer-security-scenarios"></a>전송 보안 시나리오  
  WCF 전송 보안을 사용 하는 일반적인 시나리오는 다음과 같습니다.  
   
--   Windows를 사용하여 전송을 보안합니다. WCF 클라이언트 및 서비스를 Windows 도메인 (또는 Windows 포리스트에)에 배포 됩니다. 메시지에 개인 데이터가 포함되므로 클라이언트와 서비스 간의 상호 인증, 메시지 무결성 및 메시지 기밀성이 요구됩니다. 또한 특정 트랜잭션이 발생했다는 증명이 필요합니다. 예를 들어 메시지 수신자가 서명 정보를 기록해야 합니다.  
+- Windows를 사용하여 전송을 보안합니다. WCF 클라이언트 및 서비스를 Windows 도메인 (또는 Windows 포리스트에)에 배포 됩니다. 메시지에 개인 데이터가 포함되므로 클라이언트와 서비스 간의 상호 인증, 메시지 무결성 및 메시지 기밀성이 요구됩니다. 또한 특정 트랜잭션이 발생했다는 증명이 필요합니다. 예를 들어 메시지 수신자가 서명 정보를 기록해야 합니다.  
   
--   `UserName` 및 HTTPS를 사용하여 전송을 보안합니다. WCF 클라이언트 및 서비스를 인터넷을 통해 작업을 개발 해야 합니다. 클라이언트 자격 증명은 사용자 이름/암호 쌍 데이터베이스를 기준으로 인증합니다. 서비스는 신뢰할 수 있는 SSL(Secure Sockets Layer) 인증서를 사용하여 HTTPS 주소에 배포됩니다. 메시지가 인터넷을 통해 이동하기 때문에 클라이언트와 서비스를 상호 인증하고 전송 중에 메시지의 기밀성과 무결성을 유지해야 합니다.  
+- `UserName` 및 HTTPS를 사용하여 전송을 보안합니다. WCF 클라이언트 및 서비스를 인터넷을 통해 작업을 개발 해야 합니다. 클라이언트 자격 증명은 사용자 이름/암호 쌍 데이터베이스를 기준으로 인증합니다. 서비스는 신뢰할 수 있는 SSL(Secure Sockets Layer) 인증서를 사용하여 HTTPS 주소에 배포됩니다. 메시지가 인터넷을 통해 이동하기 때문에 클라이언트와 서비스를 상호 인증하고 전송 중에 메시지의 기밀성과 무결성을 유지해야 합니다.  
   
--   인증서를 사용하여 전송을 보안합니다. WCF 클라이언트 및 서비스를 공용 인터넷을 통해 작동 하도록 개발 해야 합니다. 클라이언트와 서비스에는 모두 메시지를 보안하는 데 사용되는 인증서가 있습니다. 클라이언트와 서비스는 인터넷을 사용하여 서로 통신하고 메시지 무결성, 기밀성 및 상호 인증을 필요로 하는 높은 가치의 트랜잭션을 수행합니다.  
+- 인증서를 사용하여 전송을 보안합니다. WCF 클라이언트 및 서비스를 공용 인터넷을 통해 작동 하도록 개발 해야 합니다. 클라이언트와 서비스에는 모두 메시지를 보안하는 데 사용되는 인증서가 있습니다. 클라이언트와 서비스는 인터넷을 사용하여 서로 통신하고 메시지 무결성, 기밀성 및 상호 인증을 필요로 하는 높은 가치의 트랜잭션을 수행합니다.  
   
 ## <a name="integrity-confidentiality-and-authentication"></a>무결성, 기밀성 및 인증  
  세 함수(무결성, 기밀성, 인증)를 총칭하여 전송 보안이라고 합니다. 전송 보안은 분산 응용 프로그램에 대한 위협을 줄이는 데 도움이 되는 함수를 제공합니다. 다음 표에서는 전송 보안을 구성하는 세 함수에 대해 간략하게 설명합니다.  

@@ -2,12 +2,12 @@
 title: 동일한 경로에 파일이 이미 있으므로 폴더를 만들 수 없습니다.
 ms.date: 07/20/2015
 ms.assetid: 1085c60d-4d38-4d67-a149-d3923eef0cfd
-ms.openlocfilehash: 640c4b5e34f46711c35e635116839452e1666b7c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f78fb7ad68dfbfc8980584bda17ec52f63425cab
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942729"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620194"
 ---
 # <a name="the-folder-cannot-be-created-since-a-file-already-exists-with-the-same-path"></a>동일한 경로에 파일이 이미 있으므로 폴더를 만들 수 없습니다.
 해당 경로에 파일이 이미 있는데 디렉터리를 만들려고 했습니다. 특히 상대 경로를 사용할 때 경로가 잘못 구문 분석된 것 같습니다.  

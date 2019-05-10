@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 4c49e721ce4934c041b6636776c72db7839a1b1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 426429eefd038008340a956ab3fa3cba21906c84
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857092"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627021"
 ---
 # <a name="denial-of-service"></a>서비스 거부
 서비스 거부는 시스템을 가득 채워 메시지를 처리할 수 없거나 메시지가 매우 느리게 처리되는 경우에 발생합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "61857092"
   
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>: `SecurityContextTokens` 또는 `SPNego` 협상 후에 서버에서 발급하는 `SSL`의 수명을 제어합니다. 서버는 이 기간 동안 `SecurityContextToken`을 캐시합니다.  
   
-- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>: 서버에서 설정되었지만 응용 프로그램 메시지가 처리되지 않은 보안 대화의 최대 개수를 제어합니다. 이 할당량은 클라이언트가 서비스에서 보안 대화를 설정할 수 없도록 하여 서비스가 클라이언트별 상태를 유지 관리하게 하지만 사용하지는 않습니다.  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>: 서버에서 설정되었지만 애플리케이션 메시지가 처리되지 않은 보안 대화의 최대 개수를 제어합니다. 이 할당량은 클라이언트가 서비스에서 보안 대화를 설정할 수 없도록 하여 서비스가 클라이언트별 상태를 유지 관리하게 하지만 사용하지는 않습니다.  
   
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>: 서비스가 대화를 위해 클라이언트로부터 응용 프로그램 메시지를 받지 않고 보안 대화를 활성 상태로 유지하는 최대 시간을 제어합니다. 이 할당량은 클라이언트가 서비스에서 보안 대화를 설정할 수 없도록 하여 서비스가 클라이언트별 상태를 유지 관리하게 하지만 사용하지는 않습니다.  
   

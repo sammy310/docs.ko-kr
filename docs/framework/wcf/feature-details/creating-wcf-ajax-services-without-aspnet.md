@@ -2,12 +2,12 @@
 title: ASP.NET을 사용하지 않고 WCF AJAX 서비스 만들기
 ms.date: 03/30/2017
 ms.assetid: ba4a7d1b-e277-4978-9f62-37684e6dc934
-ms.openlocfilehash: 77a850408c3d952dbd4f682ea704d3248ae17c3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: de7e5dc075a821518928514be532ea1940c1ff17
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857209"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627125"
 ---
 # <a name="creating-wcf-ajax-services-without-aspnet"></a>ASP.NET을 사용하지 않고 WCF AJAX 서비스 만들기
 Windows Communication Foundation (WCF) AJAX 서비스는 ASP.NET AJAX가 없어도 모든 JavaScript 사용 웹 페이지에서 액세스할 수 있습니다. 이 항목에서는 이러한 WCF 서비스를 만드는 방법을 설명 합니다.  

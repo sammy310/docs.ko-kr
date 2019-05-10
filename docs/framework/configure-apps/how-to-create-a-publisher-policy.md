@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: ce2df9d4cea601652ebde2032758137b01faacdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: b37b00cfbeee10f217d1dbe1c754c50b65e31de9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344665"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625861"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>방법: 게시자 정책 만들기
 어셈블리 공급 업체는 응용 프로그램 업그레이드 된 어셈블리를 사용 하 여 게시자 정책 파일을 포함 하 여 최신 버전의 어셈블리를 사용할지는 상태 수입니다. 게시자 정책 파일 어셈블리 리디렉션 및 코드 베이스 설정을 지정 하 고 응용 프로그램 구성 파일로 동일한 형식을 사용 합니다. 게시자 정책 파일을 어셈블리로 컴파일되고 전역 어셈블리 캐시에 배치 됩니다.  
@@ -57,15 +57,15 @@ ms.locfileid: "59344665"
   
      이 명령:  
   
-    -   합니다 *publisherPolicyFile* 인수는 게시자 정책 파일의 이름입니다.  
+    - 합니다 *publisherPolicyFile* 인수는 게시자 정책 파일의 이름입니다.  
   
-    -   합니다 *publisherPolicyAssemblyFile* 인수는이 명령에서 발생 하는 게시자 정책 어셈블리의 이름입니다. 어셈블리 파일 이름 형식을 따라야 합니다.  
+    - 합니다 *publisherPolicyAssemblyFile* 인수는이 명령에서 발생 하는 게시자 정책 어셈블리의 이름입니다. 어셈블리 파일 이름 형식을 따라야 합니다.  
   
          **policy.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
   
-    -   합니다 *keyPairFile* 인수는 키 쌍을 포함 하는 파일의 이름입니다. 어셈블리와 동일한 키 쌍을 사용 하 여 게시자 정책 어셈블리에 서명 해야 합니다.  
+    - 합니다 *keyPairFile* 인수는 키 쌍을 포함 하는 파일의 이름입니다. 어셈블리와 동일한 키 쌍을 사용 하 여 게시자 정책 어셈블리에 서명 해야 합니다.  
   
-    -   합니다 *processorArchitecture* 인수 프로세서 특정 어셈블리의 대상 플랫폼을 식별 합니다.  
+    - 합니다 *processorArchitecture* 인수 프로세서 특정 어셈블리의 대상 플랫폼을 식별 합니다.  
   
         > [!NOTE]
         >  특정 프로세서 아키텍처를 대상으로 하는 기능은.NET Framework 버전 2.0의에서 새로운 기능입니다.  

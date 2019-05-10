@@ -9,25 +9,25 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-ms.openlocfilehash: bedf35544454a32ff13856a072779cd70723e989
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 01257847956f22c895b00c6055ec1cdd1e89eaf3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857170"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627082"
 ---
 # <a name="data-contract-known-types"></a>데이터 계약 알려진 형식
 <xref:System.Runtime.Serialization.KnownTypeAttribute> 클래스를 사용하면 고려 사항에 포함해야 하는 형식을 deserialization을 수행하는 동안 미리 지정할 수 있습니다. 작업 예제는 [Known Types](../../../../docs/framework/wcf/samples/known-types.md) 예제를 참조하십시오.  
   
  일반적으로 클라이언트와 서비스 간에 매개 변수와 반환 값을 전달할 때 두 끝점은 전송할 데이터의 모든 데이터 계약을 공유합니다. 그러나 다음과 같은 경우는 그렇지 않습니다.  
   
--   보낸 데이터 계약은 필요한 데이터 계약에서 파생됩니다. 자세한 내용은의 상속에 대 한 섹션을 참조 하세요. [데이터 계약 동등성](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)). 이 경우 전송한 데이터에는 수신하는 끝점에서 필요한 것과 동일한 데이터 계약이 없습니다.  
+- 보낸 데이터 계약은 필요한 데이터 계약에서 파생됩니다. 자세한 내용은의 상속에 대 한 섹션을 참조 하세요. [데이터 계약 동등성](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)). 이 경우 전송한 데이터에는 수신하는 끝점에서 필요한 것과 동일한 데이터 계약이 없습니다.  
   
--   전송할 정보에 대해 선언된 형식은 클래스, 구조체 또는 열거형이 아니라 인터페이스입니다. 따라서 인터페이스를 구현하는 형식을 실제로 보냈는지 미리 알 수 없으므로 수신하는 끝점에서 전송된 데이터에 대한 데이터 계약을 미리 확인할 수 없습니다.  
+- 전송할 정보에 대해 선언된 형식은 클래스, 구조체 또는 열거형이 아니라 인터페이스입니다. 따라서 인터페이스를 구현하는 형식을 실제로 보냈는지 미리 알 수 없으므로 수신하는 끝점에서 전송된 데이터에 대한 데이터 계약을 미리 확인할 수 없습니다.  
   
--   전송할 정보에 대해 선언된 형식은 <xref:System.Object>입니다. 모든 형식은 <xref:System.Object>에서 상속되며 실제로 보낸 형식을 미리 알 수 없으므로 수신하는 끝점에서 전송된 데이터에 대한 데이터 계약을 미리 확인할 수 없습니다. 첫 번째 항목의 특별 한 경우 다음과 같습니다. 에 대해 생성 된 빈 데이터 계약인 기본값에서 파생 되는 모든 데이터 계약은 <xref:System.Object>합니다.  
+- 전송할 정보에 대해 선언된 형식은 <xref:System.Object>입니다. 모든 형식은 <xref:System.Object>에서 상속되며 실제로 보낸 형식을 미리 알 수 없으므로 수신하는 끝점에서 전송된 데이터에 대한 데이터 계약을 미리 확인할 수 없습니다. 첫 번째 항목의 특별 한 경우 다음과 같습니다. 에 대해 생성 된 빈 데이터 계약인 기본값에서 파생 되는 모든 데이터 계약은 <xref:System.Object>합니다.  
   
--   [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식을 비롯한 일부 형식에는 앞의 세 범주 중 하나에 있는 멤버가 포함됩니다. 예를 들어 <xref:System.Collections.Hashtable> 은 <xref:System.Object> 를 사용하여 해시 테이블에 실제 개체를 저장합니다. 이러한 형식을 serialize할 때 받는 쪽에서 이러한 멤버에 대한 데이터 계약을 미리 확인할 수 없습니다.  
+- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식을 비롯한 일부 형식에는 앞의 세 범주 중 하나에 있는 멤버가 포함됩니다. 예를 들어 <xref:System.Collections.Hashtable> 은 <xref:System.Object> 를 사용하여 해시 테이블에 실제 개체를 저장합니다. 이러한 형식을 serialize할 때 받는 쪽에서 이러한 멤버에 대한 데이터 계약을 미리 확인할 수 없습니다.  
   
 ## <a name="the-knowntypeattribute-class"></a>KnownTypeAttribute 클래스  
  데이터를 수신 하는 끝점에 도착 하는 경우 WCF 런타임은 데이터의 공용 언어 런타임 (CLR) 형식 인스턴스를 deserialize 하려고 시도 합니다. deserialization을 위해 인스턴스화되는 형식은 메시지 내용이 따르는 데이터 계약을 확인하도록 들어오는 메시지를 먼저 검사하여 선택됩니다. 그런 다음 deserialization 엔진은 메시지 내용과 호환되는 데이터 계약을 구현하는 CLR 형식을 찾습니다. 이 프로세스 중에 deserialization 엔진에서 허용하는 후보 형식 집합을 deserializer의 "알려진 형식" 집합이라고 합니다.  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-ms.openlocfilehash: 53080975c03430a6c05bf72f58610b328430a3c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b2bfe253011e24e6792fc60221d05fd60555e87c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857157"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627042"
 ---
 # <a name="data-contract-versioning"></a>데이터 계약 버전 관리
 응용 프로그램이 발전하면서 서비스가 사용하는 데이터 계약을 변경해야 할 수도 있습니다. 이 항목에서는 데이터 계약의 버전 관리 방법에 대해 설명합니다. 이 항목에서는 데이터 계약 버전 관리 메커니즘에 대해 설명합니다. 전체 개요 및 규정적 버전 관리 지침에 대 한 참조 [모범 사례: Data Contract Versioning](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)합니다.  
@@ -34,13 +34,13 @@ ms.locfileid: "61857157"
   
  일부 변경은 전송된 데이터를 수정할 수 있지만 주요 변경 사항이거나 아닐 수 있습니다. 다음 변경은 항상 주요 변경 사항입니다.  
   
--   데이터 계약의 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 또는 <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> 값 변경.  
+- 데이터 계약의 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 또는 <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> 값 변경.  
   
--   <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>의 <xref:System.Runtime.Serialization.DataMemberAttribute> 속성을 사용하여 데이터 멤버 순서 변경.  
+- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>의 <xref:System.Runtime.Serialization.DataMemberAttribute> 속성을 사용하여 데이터 멤버 순서 변경.  
   
--   데이터 멤버 이름 바꾸기.  
+- 데이터 멤버 이름 바꾸기.  
   
--   데이터 멤버의 데이터 계약 변경. 예를 들어 데이터 멤버의 형식을 정수에서 문자열로 변경하거나 "Customer"라는 이름의 데이터 계약 형식을 "Person"이라는 이름의 데이터 계약 형식으로 변경을 말합니다.  
+- 데이터 멤버의 데이터 계약 변경. 예를 들어 데이터 멤버의 형식을 정수에서 문자열로 변경하거나 "Customer"라는 이름의 데이터 계약 형식을 "Person"이라는 이름의 데이터 계약 형식으로 변경을 말합니다.  
   
  또한 다음 변경도 가능합니다.  
   
@@ -90,9 +90,9 @@ ms.locfileid: "61857157"
 ## <a name="omitted-default-values"></a>생략된 기본값  
  것이 수 있습니다 (권장 하지 않음)을 설정 하는 `EmitDefaultValue` DataMemberAttribute 특성을 속성 `false`에 설명 된 대로 [데이터 멤버 기본값](../../../../docs/framework/wcf/feature-details/data-member-default-values.md)합니다. 이 설정이 `false`인 경우 데이터 멤버가 기본값(일반적으로 null 또는 0)으로 설정되면 내보내지 않습니다. 이것은 다음 두 가지 방법으로 서로 다른 버전에서 필수 데이터 멤버와 호환되지 않습니다.  
   
--   특정 버전에서 필요한 데이터 멤버를 가진 데이터 계약은 다른 버전에서 `EmitDefaultValue`가 `false`로 설정된 데이터 멤버의 기본(null 또는 0) 데이터를 받을 수 없습니다.  
+- 특정 버전에서 필요한 데이터 멤버를 가진 데이터 계약은 다른 버전에서 `EmitDefaultValue`가 `false`로 설정된 데이터 멤버의 기본(null 또는 0) 데이터를 받을 수 없습니다.  
   
--   `EmitDefaultValue`가 `false`로 설정된 필수 데이터 멤버는 기본(null 또는 0) 값을 serialize하는 데 사용할 수 없지만 deserialization 시 이러한 값을 받을 수 있습니다. 이 경우 라운드트립 문제가 발생합니다(데이터를 읽을 수 있지만 동일한 데이터를 작성할 수 없음). 따라서 특정 버전에서 `IsRequired`가 `true`이고 `EmitDefaultValue`가 `false`인 경우, 특정 버전의 데이터 계약이 라운드트립이 발생되지 않는 값을 생성할 수 없도록 다른 모든 버전에 대해 동일한 조합이 적용되어야 합니다.  
+- `EmitDefaultValue`가 `false`로 설정된 필수 데이터 멤버는 기본(null 또는 0) 값을 serialize하는 데 사용할 수 없지만 deserialization 시 이러한 값을 받을 수 있습니다. 이 경우 라운드트립 문제가 발생합니다(데이터를 읽을 수 있지만 동일한 데이터를 작성할 수 없음). 따라서 특정 버전에서 `IsRequired`가 `true`이고 `EmitDefaultValue`가 `false`인 경우, 특정 버전의 데이터 계약이 라운드트립이 발생되지 않는 값을 생성할 수 없도록 다른 모든 버전에 대해 동일한 조합이 적용되어야 합니다.  
   
 ## <a name="schema-considerations"></a>스키마 고려 사항  
  에 대 한 설명은 데이터 계약 형식에 대해 생성 되는 스키마를 참조 하세요 [데이터 계약 스키마 참조](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)합니다.  

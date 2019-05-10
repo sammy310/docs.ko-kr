@@ -11,12 +11,12 @@ helpviewer_keywords:
 - properties [WPF], RenderTransform
 - LayoutTransform property [WPF]
 ms.assetid: 71e4327e-ca57-444c-a3cf-09fb381491a0
-ms.openlocfilehash: 973b9267eaef5d55176633ee80a1dc7f8b043909
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8f04db274432c0e89c6839bef825976c8a2f853c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698995"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630748"
 ---
 # <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a>방법: 이벤트 발생 시 요소에 변환 적용
 적용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.ScaleTransform> 이벤트가 발생 합니다. 여기에 표시된 개념은 다른 유형의 변환을 적용할 때 사용하는 것과 같습니다. 변환의 사용 가능한 형식에 대 한 자세한 내용은 참조는 <xref:System.Windows.Media.Transform> 클래스 또는 [변환 개요](transforms-overview.md)합니다.  

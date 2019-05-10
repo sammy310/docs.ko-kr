@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: 22d2ce71d850fc799304cadf7e8d7d8af2670d5d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 401803229c54a2b38af08c0418b9efd4c64d9d60
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856603"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627038"
 ---
 # <a name="data-transfer-architectural-overview"></a>데이터 전송 아키텍처 개요
 Windows Communication Foundation (WCF) 메시징 인프라로 생각할 수 있습니다. WCF는 메시지를 받고, 처리하고, 추가 작업을 위해 사용자 코드로 디스패치하거나, 사용자 코드에서 제공된 데이터로부터 메시지를 생성하고 이 메시지를 대상에 전달할 수 있습니다. 고급 개발자를 대상으로 한 이 항목에서는 메시지 및 포함된 데이터를 처리하기 위한 아키텍처에 대해 설명합니다. 데이터를 주고 받는 방법을 보다 간단하게, 작업에 초점을 두고 설명하는 내용은 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)을 참조하십시오.  
@@ -66,9 +66,9 @@ Windows Communication Foundation (WCF) 메시징 인프라로 생각할 수 있�
 ### <a name="getting-data-from-a-message-body"></a>메시지 본문에서 데이터 가져오기  
  메시지 본문에 저장된 데이터를 추출하는 방법으로는 다음 두 가지가 있습니다.  
   
--   <xref:System.ServiceModel.Channels.Message.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29> 메서드를 호출하고 XML 작성기에서 전달하면 한 번에 메시지 본문 전체를 가져올 수 있습니다. 전체 메시지 본문이 이 작성기에 작성되어 있습니다. 전체 메시지 본문을 한 번에 가져오는 것을 *메시지 쓰기*라고도 합니다. 쓰기는 주로 메시지를 보낼 때 채널 스택에서 수행합니다. 채널 스택의 일부는 일반적으로 전체 메시지 본문에 대한 액세스 권한, 인코딩 권한, 전송 권한을 가집니다.  
+- <xref:System.ServiceModel.Channels.Message.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29> 메서드를 호출하고 XML 작성기에서 전달하면 한 번에 메시지 본문 전체를 가져올 수 있습니다. 전체 메시지 본문이 이 작성기에 작성되어 있습니다. 전체 메시지 본문을 한 번에 가져오는 것을 *메시지 쓰기*라고도 합니다. 쓰기는 주로 메시지를 보낼 때 채널 스택에서 수행합니다. 채널 스택의 일부는 일반적으로 전체 메시지 본문에 대한 액세스 권한, 인코딩 권한, 전송 권한을 가집니다.  
   
--   메시지 본문에서 정보를 가져오는 또 다른 방법은 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents> 를 호출하고 XML 판독기를 가져오는 것입니다. 그런 다음 필요에 따라 판독기에서 메서드를 호출하여 메시지 본문에 순차적으로 액세스할 수 있습니다. 메시지 본문을 하나씩 가져오는 것을 *메시지 읽기*라고도 합니다. 메시지 읽기는 주로 메시지를 받을 때 서비스 프레임워크에서 사용합니다. 예를 들어 <xref:System.Runtime.Serialization.DataContractSerializer> 를 사용 중일 때 서비스 프레임워크는 본문에 대해 XML 판독기를 가져오고 이를 deserialization 엔진에 전달합니다. 그러면 이 엔진은 메시지를 요소별로 읽기 시작하고 해당 개체 그래프를 생성합니다.  
+- 메시지 본문에서 정보를 가져오는 또 다른 방법은 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents> 를 호출하고 XML 판독기를 가져오는 것입니다. 그런 다음 필요에 따라 판독기에서 메서드를 호출하여 메시지 본문에 순차적으로 액세스할 수 있습니다. 메시지 본문을 하나씩 가져오는 것을 *메시지 읽기*라고도 합니다. 메시지 읽기는 주로 메시지를 받을 때 서비스 프레임워크에서 사용합니다. 예를 들어 <xref:System.Runtime.Serialization.DataContractSerializer> 를 사용 중일 때 서비스 프레임워크는 본문에 대해 XML 판독기를 가져오고 이를 deserialization 엔진에 전달합니다. 그러면 이 엔진은 메시지를 요소별로 읽기 시작하고 해당 개체 그래프를 생성합니다.  
   
  메시지 본문은 한 번만 검색할 수 있습니다. 이를 통해 정방향 스트림을 사용할 수 있습니다. 예를 들어 <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> 으로부터 읽은 <xref:System.IO.FileStream> 재정의를 쓰고, 결과를 XML Infoset으로 반환할 수 있습니다. 파일의 시작 부분으로 "되돌아갈" 필요가 없습니다.  
   
@@ -160,11 +160,11 @@ Windows Communication Foundation (WCF) 메시징 인프라로 생각할 수 있�
 ### <a name="the-istreamprovider-interface"></a>IStreamProvider 인터페이스  
  스트리밍된 본문을 포함하고 있는 보내는 메시지를 XML 작성기에 쓸 때 <xref:System.ServiceModel.Channels.Message> 는 <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> 구현에서 다음과 유사한 호출의 시퀀스를 사용합니다.  
   
--   스트림 앞에 필요한 정보를 씁니다(예: 여는 XML 태그).  
+- 스트림 앞에 필요한 정보를 씁니다(예: 여는 XML 태그).  
   
--   스트림을 씁니다.  
+- 스트림을 씁니다.  
   
--   스트림 뒤에 필요한 정보를 씁니다(예: 닫는 XML 태그).  
+- 스트림 뒤에 필요한 정보를 씁니다(예: 닫는 XML 태그).  
   
  이는 텍스트 XML 인코딩과 유사한 인코딩을 사용하여 작동합니다. 그러나 일부 인코딩은 XML infoset 정보(예: XML 요소의 시작 및 끝 태그)를 요소 내에 포함된 데이터와 함께 사용하지 않습니다. 예를 들어 MTOM 인코딩에서 메시지는 여러 부분으로 나누어집니다. 하나의 부분에는 실제 요소 콘텐츠의 다른 부분에 대한 참조가 포함될 수 있는 XML infoset이 포함됩니다. XML Infoset이 일반적으로 스트리밍된 콘텐츠와 비교하여 작으므로 Infoset을 버퍼링하고 쓴 다음 스트리밍된 방법으로 콘텐츠를 쓰는 것이 좋습니다. 즉, 이는 닫는 요소 태그가 작성될 때까지는 스트림을 쓰면 안 된다는 것을 의미합니다.  
   

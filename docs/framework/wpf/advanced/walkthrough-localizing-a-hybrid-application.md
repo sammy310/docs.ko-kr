@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: 01530d4ae9779934948bbaff60fbbd392de6e701
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 86779197004f2a8e84d44aaeff2df2dacb05fb01
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007130"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621208"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>연습: 하이브리드 애플리케이션 지역화
 
@@ -18,15 +18,15 @@ ms.locfileid: "62007130"
 
 이 연습에서 설명하는 작업은 다음과 같습니다.
 
--   만들기는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 호스트 프로젝트입니다.
+- 만들기는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 호스트 프로젝트입니다.
 
--   지역화 가능한 콘텐츠 추가.
+- 지역화 가능한 콘텐츠 추가.
 
--   지역화 사용.
+- 지역화 사용.
 
--   리소스 식별자 할당.
+- 리소스 식별자 할당.
 
--   LocBaml 도구를 사용하여 위성 어셈블리 생성.
+- LocBaml 도구를 사용하여 위성 어셈블리 생성.
 
 이 연습에 설명 된 작업의 전체 코드 목록은 참조 하세요 [하이브리드 응용 프로그램 샘플을 지역화](https://go.microsoft.com/fwlink/?LinkID=160015)합니다.
 
@@ -36,7 +36,7 @@ ms.locfileid: "62007130"
 
 이 연습을 완료하려면 다음 구성 요소가 필요합니다.
 
--   Visual Studio 2017
+- Visual Studio 2017
 
 ## <a name="creating-the-windows-forms-host-project"></a>Windows Forms 호스트 프로젝트 만들기
 

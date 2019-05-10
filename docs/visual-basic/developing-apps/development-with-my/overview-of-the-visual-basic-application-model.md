@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-ms.openlocfilehash: 02cc71dbda47d078284d9a2ec07538dfa063ac75
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0144c92e01e617081ae05003e6a7175c63166891
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014154"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622801"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Visual Basic 애플리케이션 모델 개요
 Visual Basic Windows Forms 응용 프로그램의 동작을 제어 하기 위한 잘 정의 된 모델을 제공 합니다: Visual Basic 응용 프로그램 모델입니다. 이 모델에는 catch 하면 처리 되지 않은 예외에 대 한 이벤트 뿐만 아니라 응용 프로그램의 시작 및 종료를 처리 하는 것에 대 한 이벤트가 포함 됩니다. 단일 인스턴스 응용 프로그램 개발에 대 한 지원 기능을 제공 합니다. 응용 프로그램 모델 확장 가능 하며 이므로 더 많은 제어가 필요한 개발자는 재정의 가능한 메서드를 사용자 지정할 수 있습니다.  
@@ -18,7 +18,7 @@ Visual Basic Windows Forms 응용 프로그램의 동작을 제어 하기 위한
 ## <a name="uses-for-the-application-model"></a>응용 프로그램 모델 사용  
  일반적인 응용 프로그램을 시작 하 고 종료 하는 경우 작업을 수행 해야 합니다. 예를 들어 시작 될 때 응용 프로그램 수 시작 화면을 표시, 데이터베이스 연결을 확인, 저장된 된 상태를 로드 등에입니다. 응용 프로그램을 종료 하는 경우이 수 데이터베이스 연결 닫기, 현재 상태를 저장 등에입니다. 또한를 통해 응용 프로그램 종료 될 때 특정 코드를 실행할 수 아래로 예기치 않게 등 처리 되지 않은 예외가 발생 한 경우 처럼 합니다.  
   
- Visual Basic 응용 프로그램 모델을 사용 하면 쉽게 만들 수는 *단일 인스턴스* 응용 프로그램입니다. 단일 인스턴스 응용 프로그램을 하는 일반적인 응용 프로그램에서 응용 프로그램의 인스턴스 하나만 실행할 수 있습니다 번 다릅니다. 단일 인스턴스 응용 프로그램의 다른 인스턴스를 시작 하려고 알리지 원래 인스턴스에서 결과-이용 하 여는 `StartupNextInstance` 이벤트-다른 실행이 시도 되었습니다. 알림을 후속 인스턴스가 명령줄 인수를 포함합니다. 초기화가 실행 되기 전에 응용 프로그램의 후속 인스턴스가 닫힙니다.  
+ Visual Basic 응용 프로그램 모델을 사용 하면 쉽게 만들 수는 *단일 인스턴스* 응용 프로그램입니다. 단일 인스턴스 애플리케이션을 하는 일반적인 애플리케이션에서 애플리케이션의 인스턴스 하나만 실행할 수 있습니다 번 다릅니다. 단일 인스턴스 응용 프로그램의 다른 인스턴스를 시작 하려고 알리지 원래 인스턴스에서 결과-이용 하 여는 `StartupNextInstance` 이벤트-다른 실행이 시도 되었습니다. 알림을 후속 인스턴스가 명령줄 인수를 포함합니다. 초기화가 실행 되기 전에 응용 프로그램의 후속 인스턴스가 닫힙니다.  
   
  단일 인스턴스 응용 프로그램을 시작 및 첫 번째 인스턴스 또는 응용 프로그램의 후속 인스턴스가 인지 확인 합니다.  
   

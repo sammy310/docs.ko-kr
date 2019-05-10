@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e7ec1280f3b7ba25367fac21d5160046915636a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a32e12b593f273c8b812390306c81b311da7c2a4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868981"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624690"
 ---
 # <a name="apis-that-rely-on-reflection"></a>리플렉션을 사용하는 API
 코드에서 리플렉션이 사용되는지 여부가 확실치 않아 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 도구 체인이 런타임에 필요한 메타데이터를 보존하지 않는 경우가 있습니다. 이 항목에서는 리플렉션 API의 일부로는 간주되지 않지만 리플렉션을 사용해야 정상적으로 실행되는 몇 가지 일반적인 API 또는 프로그래밍 패턴에 대해 설명합니다. 소스 코드에서 이러한 API를 사용하는 경우 해당 API 호출 시 런타임에 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 예외 또는 일부 기타 예외가 발생하지 않도록 API에 대한 정보를 런타임 지시문(.rd.xml) 파일에 추가할 수 있습니다.  
@@ -51,11 +51,11 @@ App1.AppClass`1<System.Int32>.
   
  이 코드를 정상적으로 실행하려면 다음과 같은 여러 메타데이터 항목이 필요합니다.  
   
--   해당 메서드를 호출할 형식에 대한 `Browse` 메타데이터  
+- 해당 메서드를 호출할 형식에 대한 `Browse` 메타데이터  
   
--   호출하려는 메서드에 대한 `Browse` 메타데이터.  public 메서드의 경우 포함 형식에 대한 public `Browse` 메타데이터를 추가하면 메서드도 포함됩니다.  
+- 호출하려는 메서드에 대한 `Browse` 메타데이터.  public 메서드의 경우 포함 형식에 대한 public `Browse` 메타데이터를 추가하면 메서드도 포함됩니다.  
   
--   호출하려는 메서드에 대한 동적 메타데이터([!INCLUDE[net_native](../../../includes/net-native-md.md)] 도구 체인에 의해 리플렉션 호출 대리자가 제거되지 않도록 함). 메서드에 대한 동적 메타데이터가 누락되면 <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> 메서드 호출 시 다음 예외가 throw됩니다.  
+- 호출하려는 메서드에 대한 동적 메타데이터([!INCLUDE[net_native](../../../includes/net-native-md.md)] 도구 체인에 의해 리플렉션 호출 대리자가 제거되지 않도록 함). 메서드에 대한 동적 메타데이터가 누락되면 <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> 메서드 호출 시 다음 예외가 throw됩니다.  
   
     ```  
     MakeGenericMethod() cannot create this generic method instantiation because the instantiation was not metadata-enabled: 'App1.Class1.GenMethod<Int32>(Int32)'.  

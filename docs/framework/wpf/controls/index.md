@@ -2,11 +2,17 @@
 title: 컨트롤
 ms.date: 03/30/2017
 dev_langs:
-  - csharp
-  - vb
+- csharp
+- vb
 helpviewer_keywords:
-  - 'controls [WPF], about WPF controls'
+- controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
+ms.openlocfilehash: 0727bb8ac4f0ff25640ae6f8e292d89f903e4eb5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627317"
 ---
 # <a name="controls"></a>컨트롤
 <a name="introduction"></a>

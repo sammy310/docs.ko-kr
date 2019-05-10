@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability [WPF], airspace
 - Win32 code [WPF], window regions
 ms.assetid: b7cc350f-b9e2-48b1-be14-60f3d853222e
-ms.openlocfilehash: 40ec8d033852bba5cb5ccb0739309cfe988a3ce5
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.openlocfilehash: afea62dfe7ba26375cb23b661c6682bf1b59a19d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63808358"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621038"
 ---
 # <a name="technology-regions-overview"></a>기술 영역 개요
 애플리케이션에 WPF, Win32 또는 DirectX와 같은 여러 프레젠테이션 기술이 사용되는 경우 이러한 기술은 공통 최상위 창에서 렌더링 영역을 공유해야 합니다. 이 항목에서는 WPF 상호 운용 애플리케이션에 대한 프레젠테이션과 입력에 영향을 미칠 수 있는 문제를 설명합니다.  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - drawing [Windows Forms], cardinal splines
 - graphics [Windows Forms], cardinal splines
 ms.assetid: a4a41e80-4461-4b47-b6bd-2c5e68881994
-ms.openlocfilehash: 2f03177bf97936a2ca9558972d4d82fa3e07463c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 12e938567d529b33ead93e081d380a650a803f23
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703731"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626213"
 ---
 # <a name="how-to-draw-cardinal-splines"></a>방법: 카디널 스플라인 그리기
 카디널 스플라인 곡선이 요소의 지정 된 집합을 통해 원활 하 게 전달 합니다. 카디널 스플라인 그리기를 만들려면를 <xref:System.Drawing.Graphics> 개체 및 배열 요소의 주소를 전달 합니다 <xref:System.Drawing.Graphics.DrawCurve%2A> 메서드.  

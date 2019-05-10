@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2159199fc12ef83a6bf4a44841d71799e0dad4dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d9d423ef71b76b2dcbbf2812e13850922fb50ac0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868968"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625888"
 ---
 # <a name="securing-method-access"></a>메서드 액세스 보안
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -28,17 +28,17 @@ ms.locfileid: "61868968"
   
  관리 코드는 메서드 액세스를 제한하는 여러 가지 방법을 제공합니다.  
   
--   액세스 가능성 범위를 신뢰할 수 있는 클래스, 어셈블리 또는 파생 클래스로 제한합니다. 이는 메서드 액세스를 제한하는 가장 간단한 방법입니다. 일반적으로 파생 클래스는 자신이 파생된 소스 클래스보다 신뢰도가 더 낮지만 경우에 따라 부모 클래스의 ID를 공유할 수 있습니다. 특히 키워드에서 신뢰를 유추 하지 마세요 **보호**, 보안 컨텍스트에서 반드시 사용 되지 않는 합니다.  
+- 액세스 가능성 범위를 신뢰할 수 있는 클래스, 어셈블리 또는 파생 클래스로 제한합니다. 이는 메서드 액세스를 제한하는 가장 간단한 방법입니다. 일반적으로 파생 클래스는 자신이 파생된 소스 클래스보다 신뢰도가 더 낮지만 경우에 따라 부모 클래스의 ID를 공유할 수 있습니다. 특히 키워드에서 신뢰를 유추 하지 마세요 **보호**, 보안 컨텍스트에서 반드시 사용 되지 않는 합니다.  
   
--   지정된 된 id, 기본적으로, 특정의 호출자에 게 메서드 액세스를 제한 [증거](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29) 선택 (강력한 이름, 게시자, 영역 및 등).  
+- 지정된 된 id, 기본적으로, 특정의 호출자에 게 메서드 액세스를 제한 [증거](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29) 선택 (강력한 이름, 게시자, 영역 및 등).  
   
--   메서드 액세스를 선택한 권한을 가진 호출자로 제한합니다.  
+- 메서드 액세스를 선택한 권한을 가진 호출자로 제한합니다.  
   
  마찬가지로 선언적 보안을 통해 클래스 상속을 제어할 수 있습니다. 사용할 수 있습니다 **InheritanceDemand** 다음을 수행 합니다.  
   
--   지정된 ID 또는 권한을 포함할 파생 클래스가 필요합니다.  
+- 지정된 ID 또는 권한을 포함할 파생 클래스가 필요합니다.  
   
--   지정된 ID 또는 권한을 포함하도록 특정 메서드를 재정의하는 파생 클래스가 필요합니다.  
+- 지정된 ID 또는 권한을 포함하도록 특정 메서드를 재정의하는 파생 클래스가 필요합니다.  
   
  다음 예제에서는 특정 강력한 이름을 통해 호출자에 서명하도록 요구하여 제한된 액세스용 공용 클래스를 보호하도록 도와주는 방법을 보여 줍니다. 이 예제에서는 합니다 <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> 사용 하 여는 **수요** 강력한 이름에 대 한 합니다. 강력한 이름의 어셈블리에 서명 하는 방법에 작업 기반 정보를 참조 하세요. [강력한 어셈블리 만들기 및 사용](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)합니다.  
   
