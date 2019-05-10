@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: 6d4a6c19dc0af8a2950754f32890ae9c3bcbad21
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0148ded31f1c637f533f8e80427672a79ef05e02
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769535"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621274"
 ---
 # <a name="listview-overview"></a>ListView 개요
 <xref:System.Windows.Controls.ListView> 컨트롤은 데이터 항목 집합을 다른 레이아웃 보기에 표시 하기 위한 인프라를 제공 합니다. 예를 들어 사용자가 데이터 항목을 표에 표시하고 해당 열을 정렬해야 할 수도 있습니다.  
