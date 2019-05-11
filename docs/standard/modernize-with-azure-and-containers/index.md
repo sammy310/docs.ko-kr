@@ -172,7 +172,7 @@ All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 �
 - **Microsoft 플랫폼 및 도구를 활용한 컨테이너화 Docker 응용 프로그램의 생명 주기** (다운로드 가능한 전자책) \
   <https://aka.ms/dockerlifecycleebook>
 
-- **.NET 마이크로 서비스: 컨테이너화 .NET 응용 프로그램 아키텍처** (다운로드 가능한 전자책) \
+- **.NET 마이크로 서비스: 컨테이너화된 .NET 응용 프로그램 아키텍처** (다운로드 가능한 전자책) \
   <https://aka.ms/microservicesebook>
 
 - **ASP.NET Core 및 Azure를 사용하여 최신 웹 응용 프로그램 설계** (다운로드 가능한 전자책) \
