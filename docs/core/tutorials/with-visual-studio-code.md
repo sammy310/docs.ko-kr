@@ -4,12 +4,12 @@ description: Visual Studio Code를 사용하여 C#에서 첫 번째 .NET Core �
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: d23f095454a24d67c2b9fb7a0f090fb08ff9e8bb
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 7ea2aed3b340b7ae7a6dcd83df30f9453380af15
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613449"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750875"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 및 Visual Studio Code 시작
 
@@ -94,45 +94,45 @@ ms.locfileid: "59613449"
 2. 파일 이름을 `MyClass.cs`로 지정합니다. csharp 파일로 인식되도록 끝에 `.cs` 확장명을 추가해서 저장해야 합니다.
 3. 아래 코드를 추가하여 첫 번째 클래스를 만듭니다. `Program.cs` 파일에서 참조할 수 있도록 올바른 네임스페이스를 포함해야 합니다.
 
-``` csharp
-using System;
+    ``` csharp
+    using System;
 
-namespace HelloWorld
-{
-    public class MyClass
+    namespace HelloWorld
     {
-        public string ReturnMessage()
+        public class MyClass
         {
-            return "Happy coding!";
+            public string ReturnMessage()
+            {
+                return "Happy coding!";
+            }
         }
     }
-}
-```
+    ```
 
 4. 아래 코드를 추가하여 `Program.cs`의 main 메서드에서 새 클래스를 호출합니다.
 
-```csharp
-using System;
-
-namespace HelloWorld
-{
-    class Program
+    ```csharp
+    using System;
+    
+    namespace HelloWorld
     {
-        static void Main(string[] args)
+        class Program
         {
-            MyClass c1 = new MyClass();
-            Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
+            static void Main(string[] args)
+            {
+                MyClass c1 = new MyClass();
+                Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
+            }
         }
     }
-}
-```
+    ```
 
 5. 변경 내용을 저장하고 프로그램을 다시 실행합니다. 추가된 문자열을 포함하는 새 메시지가 표시됩니다.
 
-```console
-> dotnet run
-Hello World! Happy coding!
-```
+    ```console
+    > dotnet run
+    Hello World! Happy coding!
+    ```
 
 ## <a name="faq"></a>FAQ
 

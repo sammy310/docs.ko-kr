@@ -3,16 +3,16 @@ title: Visual Studio 2017을 사용하여 Hello World .NET Core 애플리케이�
 description: Visual Studio 2017에서 C# 또는 Visual Basic으로 작성된 Hello World 앱을 디버그하는 방법을 알아봅니다.
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 9b2375443c9947a32fcccea062642103601d5010
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 4c6a9fe46e29addf53319adf2351af3a7af05119
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59610719"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063064"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Visual Studio 2017을 사용하여 C# 또는 Visual Basic .NET Core Hello World 애플리케이션 디버그
 
-지금까지 [Visual Studio 2017에서 .NET Core를 사용하여 C# Hello World 애플리케이션 빌드](with-visual-studio.md) 또는 [Visual Studio 2017에서 .NET Core를 사용하여 Visual Basic Hello World 애플리케이션 빌드](vb-with-visual-studio.md)의 단계에 따라 간단한 콘솔 애플리케이션을 만들고 실행했습니다. 애플리케이션을 작성하고 컴파일했으면 테스트를 시작할 수 있습니다. Visual Studio에는 애플리케이션을 테스트하고 문제를 해결하는 데 사용할 수 있는 포괄적인 디버깅 도구 집합이 포함되어 있습니다.
+지금까지 [Visual Studio 2017에서 .NET Core를 사용하여 C# Hello World 애플리케이션 빌드](with-visual-studio.md) 또는 [Visual Studio 2017에서 .NET Core를 사용하여 Visual Basic Hello World 애플리케이션 빌드](vb-with-visual-studio.md)의 단계에 따라 간단한 콘솔 애플리케이션을 만들고 실행했습니다. 애플리케이션을 작성하고 컴파일했으면 테스트를 시작할 수 있습니다. Visual Studio에는 애플리케이션을 테스트하고 문제를 해결하는 데 사용할 수 있는 포괄적인 디버깅 도구 집합이 포함되어 있습니다. 
 
 ## <a name="debugging-in-debug-mode"></a>디버그 모드에서 디버깅
 
