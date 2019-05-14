@@ -4,14 +4,14 @@ description: 컨테이너화된 .NET 애플리케이션용 .NET 마이크로 서
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: ec56a02e27f4218b3abc5839d1265815e188d2ea
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: eb07f11e4c123ed04232e41d5d50d4ef59b76bbd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363022"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621217"
 ---
-# <a name="implement-a-microservice-domain-model-with-net-core"></a>.NET Core를 사용하여 마이크로 서비스 도메인 모델 구현 
+# <a name="implement-a-microservice-domain-model-with-net-core"></a>.NET Core를 사용하여 마이크로 서비스 도메인 모델 구현
 
 이전 섹션에서는 도메인 모델 설계을 위한 기본 설계 원칙과 패턴을 설명했습니다. 이제.NET Core 및 EF Core(일반 C\# 코드)를 사용하여 도메인 모델을 구현할 수 있는 방법을 탐색할 차례입니다. 도메인 모델은 코드를 통해 간단하게 구성됩니다. EF Core 모델 요구 사항은 있지만 실제로 EF에 대한 종속성은 아닙니다. EF Core나 도메인 모델의 다른 ORM에 대한 강도 높은 종속성이나 참조는 없어야 합니다.
 
@@ -60,7 +60,7 @@ public class Order : Entity, IAggregateRoot
 
     private readonly List<OrderItem> _orderItems;
     public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
-  
+
     public Order(string userId, Address address, int cardTypeId, string cardNumber, string cardSecurityNumber,
             string cardHolderName, DateTime cardExpiration, int? buyerId = null, int? paymentMethodId = null)
     {
@@ -74,8 +74,8 @@ public class Order : Entity, IAggregateRoot
         // ...Additional code ...
     }
 
-    public void AddOrderItem(int productId, string productName, 
-                            decimal unitPrice, decimal discount, 
+    public void AddOrderItem(int productId, string productName,
+                            decimal unitPrice, decimal discount,
                             string pictureUrl, int units = 1)
     {
         //...
@@ -83,9 +83,9 @@ public class Order : Entity, IAggregateRoot
         // ...
 
         var orderItem = new OrderItem(productId, productName, unitPrice, discount, pictureUrl, units);
-        
+
         _orderItems.Add(orderItem);
-  
+
     }
     // ...
     // Additional methods with domain rules/logic related to the Order aggregate
@@ -117,7 +117,7 @@ public class Order : Entity, IAggregateRoot
 OrderItem myNewOrderItem = new OrderItem(orderId, productId, productName,
     pictureUrl, unitPrice, discount, units);
 
-//... (WRONG) Accessing the OrderItems colletion directly from the application layer // or command handlers
+//... (WRONG) Accessing the OrderItems collection directly from the application layer // or command handlers
 myOrder.OrderItems.Add(myNewOrderItem);
 //...
 ```
@@ -177,6 +177,6 @@ EF Core 1.1 이상의 기능을 사용하여 열을 필드에 매핑하면 속�
 - **Udi Dahan. 완벽하게 캡슐화된 도메인 모델을 만드는 방법** \
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
->[!div class="step-by-step"]
->[이전](microservice-domain-model.md)
->[다음](seedwork-domain-model-base-classes-interfaces.md)
+> [!div class="step-by-step"]
+> [이전](microservice-domain-model.md)
+> [다음](seedwork-domain-model-base-classes-interfaces.md)

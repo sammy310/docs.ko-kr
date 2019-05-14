@@ -2,12 +2,12 @@
 title: PNRP 캐시
 ms.date: 03/30/2017
 ms.assetid: 270068d9-1b6b-4eb9-9e14-e02326bb88df
-ms.openlocfilehash: 9cd1901e716cab9f1b47825a5d3ecdb071a58440
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3ed3e11e702c8933b500421de5654b212cdd80d8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59182483"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622985"
 ---
 # <a name="pnrp-caches"></a>PNRP 캐시
 PNRP(피어 이름 확인 프로토콜) 캐시는 한 피어에서 유지 관리되며 알고리즘 방식으로 선택된 피어 엔드포인트의 로컬 컬렉션입니다.  
@@ -15,9 +15,9 @@ PNRP(피어 이름 확인 프로토콜) 캐시는 한 피어에서 유지 관리
 ## <a name="pnrp-cache-initialization"></a>PNRP 캐시 초기화  
  PNRP 캐시 또는 Peer Name Reord Collection을 초기화하려면 피어 노드가 시작될 때 노드에서 다음 메서드를 사용할 수 있습니다.  
   
--   노드가 종료될 때 캐시에 포함되어 있던 영구적 캐시 항목은 하드 디스크 스토리지에서 로드됩니다.  
+- 노드가 종료될 때 캐시에 포함되어 있던 영구적 캐시 항목은 하드 디스크 스토리지에서 로드됩니다.  
   
--   애플리케이션에서 P2P 공동 작업 인프라를 사용하는 경우 공동 작업 정보는 해당 노드의 연락처 관리자에 있습니다.  
+- 애플리케이션에서 P2P 공동 작업 인프라를 사용하는 경우 공동 작업 정보는 해당 노드의 연락처 관리자에 있습니다.  
   
 ## <a name="scaling-peer-name-resolution-with-a-multi-level-cache"></a>다중 수준 캐시로 피어 이름 확인 확장  
  피어 노드에서는 PNRP 캐시의 크기를 작게 유지하기 위해 다중 수준 캐시를 사용합니다. 이러한 다중 수준 캐시의 각 수준에는 최대 개수의 항목이 들어 있습니다. 캐시의 각 수준은 PNRP ID 번호 공간(2<sup>256</sup>)의 1/10에 해당하는 부분을 나타냅니다. 캐시의 최하위 수준에는 로컬로 등록된 PNRP ID와 수치상 해당 PNRP ID에 가까운 다른 PNRP ID가 들어 있습니다. 캐시의 특정 수준이 최대 항목 수인 20개의 항목으로 채워지면 새로운 하위 수준이 생성됩니다. 캐시에 생성될 수 있는 수준의 최대 수는 log10(클라우드의 총 PNRP ID 수)의 차수에 해당합니다. 예를 들어 PNRP ID가 1억개 포함된 글로벌 클라우드의 경우 캐시에 수준이 8개(=log10(100,000,000))까지만 생성될 수 있으며 이름 확인 작업을 수행하는 동안 PNRP ID를 확인하는 홉의 개수도 이와 비슷하게 됩니다. 이러한 메커니즘을 활용하면 해당 CPA가 있는 피어를 찾을 때까지 PNRP 요청 메시지를 다음으로 가까운 피어에 전달함으로써 임의 PNRP ID를 확인할 수 있는 분산된 해시 테이블을 만들 수 있습니다.  

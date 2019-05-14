@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3eb5c9686f54bcaacef8d593f0ace4804d4ae60
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1f29420038276739623c534656a94e13080637c6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098223"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626360"
 ---
 # <a name="default-marshaling-for-arrays"></a>배열에 대한 기본 마샬링
 전체적으로 관리 코드로 구성된 애플리케이션에서는 공용 언어 런타임이 배열 형식을 In/Out 매개 변수로 전달합니다. 반면 interop 마샬러는 기본적으로 배열을 In 매개 변수로 전달합니다.  
@@ -146,7 +146,7 @@ void New3(ref String ar);
   
  Tlbimp.exe에서 생성된 MSIL(Microsoft Intermediate Language) 코드를 편집하고 다시 컴파일하여 마샬러에 배열을 제공할 수 있습니다. MSIL 코드를 수정하는 방법에 대한 자세한 내용은 [런타임 호출 가능 래퍼 사용자 지정](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))을 참조하세요. 배열의 요소 수를 지정하려면 다음 방법 중 하나로 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 형식을 관리되는 메서드 정의의 배열 매개 변수에 적용합니다.  
   
--   배열의 요소 수가 포함된 또 다른 매개 변수를 식별합니다. 매개 변수는 위치로 식별되고 첫 번째 매개 변수는 0입니다.     
+- 배열의 요소 수가 포함된 또 다른 매개 변수를 식별합니다. 매개 변수는 위치로 식별되고 첫 번째 매개 변수는 0입니다.     
   
     ```vb  
     Sub [New](ElemCnt As Integer, _  
@@ -160,7 +160,7 @@ void New3(ref String ar);
        [MarshalAs(UnmanagedType.LPArray, SizeParamIndex=0)] int[] ar );  
     ```  
   
--   배열 크기를 상수로 정의합니다. 예:  
+- 배열 크기를 상수로 정의합니다. 예:  
   
     ```vb  
     Sub [New](\<MarshalAs(UnmanagedType.LPArray, SizeConst:=128)> _  

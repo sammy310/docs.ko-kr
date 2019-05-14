@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f7bda02e1862740e6a6328835367a6a5e9929033
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bd1ced48847739318f22ec77b17a83a36fd36ee0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328311"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647764"
 ---
 # <a name="memory-mapped-files"></a>메모리 매핑된 파일
 메모리 매핑된 파일에는 가상 메모리에 있는 파일의 내용이 포함됩니다. 파일과 메모리 공간 사이의 매핑을 사용하면 여러 프로세스를 포함한 애플리케이션이 메모리에 직접 읽고 쓰는 방식으로 파일을 수정할 수 있습니다. [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터는 네이티브 Windows 함수가 메모리 매핑된 파일에 액세스할 때와 같은 방식으로 관리 코드를 사용하여 메모리 매핑된 파일에 액세스할 수 있습니다. 이에 대해서는 [메모리 매핑된 파일 관리](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10))에 설명되어 있습니다.  
   
  메모리 매핑된 파일에는 다음과 같은 두 가지 형식이 있습니다.  
   
--   지속되는 메모리 매핑된 파일  
+- 지속되는 메모리 매핑된 파일  
   
      지속되는 파일은 디스크에서 소스 파일과 연결된 메모리 매핑된 파일입니다. 마지막 프로세스가 파일에 대한 작업을 완료하면 데이터가 디스크의 소스 파일에 저장됩니다. 이러한 메모리 매핑된 파일은 매우 큰 소스 파일에 대한 작업에 적합합니다.  
   
--   지속되지 않는 메모리 매핑된 파일  
+- 지속되지 않는 메모리 매핑된 파일  
   
      지속되지 않는 파일은 디스크에서 파일과 연결되지 않은 메모리 매핑된 파일입니다. 마지막 프로세스가 파일에 대한 작업을 완료하면 데이터가 손실되고 파일이 가비지 수집에 의해 회수됩니다. 이러한 파일은 IPC(프로세스 간 통신)에 대한 공유 메모리를 만드는 데 적합합니다.  
   
@@ -64,11 +64,11 @@ ms.locfileid: "59328311"
 ### <a name="security"></a>보안  
  <xref:System.IO.MemoryMappedFiles.MemoryMappedFileAccess> 열거형을 매개 변수로 사용하는 다음 메서드를 사용하여 메모리 매핑된 파일을 만들 때 액세스 권한을 적용할 수 있습니다.  
   
--   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>  
+- <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>  
   
--   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType>  
+- <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType>  
   
--   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType>  
+- <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType>  
   
  <xref:System.IO.MemoryMappedFiles.MemoryMappedFileRights>를 매개 변수로 사용하는 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A> 메서드를 사용하여 기존 메모리 매핑된 파일을 열기 위한 액세스 권한을 지정할 수 있습니다.  
   

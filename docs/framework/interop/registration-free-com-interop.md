@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24e7eed539898c511250a1a09a187448e9424890
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4a3de327001f987b6c35d547b7cf3cbe7feeac49
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300998"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648519"
 ---
 # <a name="registration-free-com-interop"></a>등록이 필요 없는 COM Interop
 등록이 필요 없는 COM interop는 Windows 레지스트리를 사용하여 어셈블리 정보를 저장하지 않고 구성 요소를 활성화합니다. 배포 중 컴퓨터에 구성 요소를 등록하는 대신 바인딩 및 활성화 정보를 포함하는 Win32 스타일의 매니페스트 파일을 디자인 타임에 만듭니다. 레지스트리 키 대신 이러한 매니페스트 파일에서 개체 활성화를 지시합니다.  
   
  배포 중에 등록하는 대신 어셈블리에 대해 등록이 필요 없는 활성화를 사용하면 다음 두 가지 이점이 있습니다.  
   
--   컴퓨터에 둘 이상의 버전을 설치할 때 활성화되는 DLL 버전을 제어할 수 있습니다.  
+- 컴퓨터에 둘 이상의 버전을 설치할 때 활성화되는 DLL 버전을 제어할 수 있습니다.  
   
--   최종 사용자는 XCOPY 또는 FTP를 사용하여 해당 컴퓨터의 적절한 디렉터리에 응용 프로그램을 복사할 수 있습니다. 그런 다음 해당 디렉터리에서 애플리케이션을 실행할 수 있습니다.  
+- 최종 사용자는 XCOPY 또는 FTP를 사용하여 해당 컴퓨터의 적절한 디렉터리에 응용 프로그램을 복사할 수 있습니다. 그런 다음 해당 디렉터리에서 애플리케이션을 실행할 수 있습니다.  
   
  이 섹션에서는 등록이 필요 없는 COM interop에 필요한 두 가지 매니페스트 유형인 응용 프로그램 및 구성 요소 매니페스트를 설명합니다. 이러한 매니페스트는 XML 파일입니다. 응용 프로그램 개발자가 만드는 응용 프로그램 매니페스트에는 어셈블리와 어셈블리 종속성을 설명하는 메타데이터가 포함됩니다. 구성 요소 개발자가 만드는 구성 요소 매니페스트에는 그러지 않은 경우 Windows 레지스트리에 있는 정보가 포함됩니다.  
   

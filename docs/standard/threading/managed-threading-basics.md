@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e053a04ba0587a4eca166fa710bc465094feca80
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: b352c35a327ed4736a1f41816d3f15c1a0f559f5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479570"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644816"
 ---
 # <a name="managed-threading-basics"></a>관리형 스레딩 기본 사항
 
@@ -42,9 +42,6 @@ ms.locfileid: "55479570"
   
  [Windows에서 관리되는 스레딩 및 관리되지 않는 스레딩](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)  
  관리되는 스레딩과 관리되지 않는 스레딩, 간의 관계에 대해 설명하고, Windows 스레딩 API에 대해 관리되는 스레딩을 나열하고, COM 아파트 및 관리되는 스레드의 상호 작용에 대해 설명합니다.  
-  
- [Thread.Suspend, 가비지 컬렉션, 안전한 시점](../../../docs/standard/threading/thread-suspend-garbage-collection-and-safe-points.md)  
- 스레드 일시중단 및 가비지 수집에 대해 설명합니다.  
   
  [스레드 로컬 스토리지: 스레드 관련 정적 필드 및 데이터 슬롯](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  스레드 관련 스토리지 메커니즘을 설명합니다.  
