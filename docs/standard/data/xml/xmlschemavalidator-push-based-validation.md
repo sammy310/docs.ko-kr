@@ -1,5 +1,5 @@
 ---
-title: XmlSchemaValidator 밀어넣기 기반 유효성 검사
+title: XmlSchemaValidator 푸시 기반 유효성 검사
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4d1d5602ff224c1c8f3e0948fc93c9200b9661e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 8e2b6ca8ef04ad6ff637a59f03f3b4cf04cb06ad
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44189078"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615361"
 ---
-# <a name="xmlschemavalidator-push-based-validation"></a>XmlSchemaValidator 밀어넣기 기반 유효성 검사
+# <a name="xmlschemavalidator-push-based-validation"></a>XmlSchemaValidator 푸시 기반 유효성 검사
 <xref:System.Xml.Schema.XmlSchemaValidator> 클래스는 밀어넣기 기반 방식으로 XML 스키마에 대해 XML 데이터의 유효성을 검사할 수 있는 효과적인 고성능 메커니즘을 제공합니다. 예를 들어, <xref:System.Xml.Schema.XmlSchemaValidator> 클래스를 사용하면 XML 문서로 serialize한 다음 유효성 검사 XML 판독기를 사용하여 문서를 다시 구문 분석할 필요 없이 내부에서 직접 XML Infoset의 유효성을 검사할 수 있습니다.  
   
  사용자 지정 XML 데이터 소스에 대한 유효성 검사 엔진을 만드는 등의 고급 시나리오에서 또는 유효성 검사 XML 작성기를 만드는 방법으로 <xref:System.Xml.Schema.XmlSchemaValidator> 클래스를 사용할 수 있습니다.  
@@ -76,9 +76,9 @@ ms.locfileid: "44189078"
 ### <a name="initializing-validation"></a>유효성 검사 초기화  
  <xref:System.Xml.Schema.XmlSchemaValidator> 개체를 생성한 후 <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> 개체 상태를 초기화하는 데 사용하는 오버로드된 <xref:System.Xml.Schema.XmlSchemaValidator> 메서드 두 개가 있습니다. 다음은 이 두 <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> 메서드입니다.  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType>  
   
  기본 <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType> 메서드는 <xref:System.Xml.Schema.XmlSchemaValidator> 개체를 시작 상태로 초기화하며 <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType>를 매개 변수로 사용하는 오버로드된 <xref:System.Xml.Schema.XmlSchemaObject> 메서드는 부분 유효성 검사를 위해 <xref:System.Xml.Schema.XmlSchemaValidator> 개체를 시작 상태로 초기화합니다.  
   
@@ -171,11 +171,11 @@ validator.ValidateEndElement(null);
   
  <xref:System.Xml.Schema.XmlSchemaValidator> 클래스의 다음 메서드에서는 <xref:System.Xml.Schema.XmlValueGetter>`delegate`를 매개 변수로 허용합니다.  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A>  
   
  다음은 소개 단원의 <xref:System.Xml.Schema.XmlValueGetter> 클래스 예제에서 가져온 `delegate`<xref:System.Xml.Schema.XmlSchemaValidator> 예제입니다. <xref:System.Xml.Schema.XmlValueGetter>`delegate`는 특성 값을 <xref:System.DateTime> 개체로 반환합니다. <xref:System.DateTime>에서 반환된 이 <xref:System.Xml.Schema.XmlValueGetter> 개체의 유효성을 검사하기 위해 <xref:System.Xml.Schema.XmlSchemaValidator> 개체는 먼저 이 개체를 특성의 데이터 형식에 대한 ValueType으로 변환하고 변환된 값에서 패싯을 확인합니다. 여기서 ValueType은 XSD 형식에 대한 기본 CLR 매핑입니다.  
   
@@ -216,21 +216,21 @@ static XmlValueGetter dateTimeGetter(DateTime dateTime)
   
  다음 <xref:System.Xml.Schema.XmlSchemaValidator> 클래스 메서드에서는 <xref:System.Xml.Schema.XmlSchemaInfo> 개체를 out 매개 변수로 허용합니다.  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A>  
   
  <xref:System.Xml.Schema.XmlSchemaInfo> 클래스의 전체 예제는 소개 단원의 예제를 참조하세요. <xref:System.Xml.Schema.XmlSchemaInfo> 클래스에 대한 자세한 내용은 <xref:System.Xml.Schema.XmlSchemaInfo> 클래스 참조 문서를 참조하세요.  
   
