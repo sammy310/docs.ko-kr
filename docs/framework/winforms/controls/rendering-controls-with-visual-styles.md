@@ -10,15 +10,15 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: b97ce0e4ce32e272ff884240b566c1c1c0e0d271
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4dbccfc881e777309394aed9711a93b8a25315be
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614655"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592610"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>비주얼 스타일을 사용하여 컨트롤 렌더링
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 는 지원되는 운영 체제에서 비주얼 스타일을 사용하여 컨트롤 및 기타 Windows UI(사용자 인터페이스) 요소를 렌더링하는 것을 지원합니다. 이 항목에서는 운영 체제의 현재 비주얼 스타일로 컨트롤 및 기타 UI 요소를 렌더링하는 작업에 대한 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 의 몇 가지 지원 수준에 대해 설명합니다.  
+.NET Framework 지원을 제공 렌더링 컨트롤 및 기타 Windows 사용자 인터페이스 (UI) 요소를 지 원하는 운영 체제에서 비주얼 스타일을 사용 하 여 합니다. 이 항목에서는 운영 체제의 현재 비주얼 스타일을 사용 하 여 여러 수준의 렌더링 컨트롤 및 기타 UI 요소에 대 한.NET framework 지원 설명합니다.  
   
 ## <a name="rendering-classes-for-common-controls"></a>공용 컨트롤의 클래스 렌더링  
  컨트롤 렌더링이란 컨트롤의 사용자 인터페이스를 그리는 것을 말합니다. <xref:System.Windows.Forms?displayProperty=nameWithType> 네임스페이스는 몇 가지 일반적인 Windows Forms 컨트롤 렌더링을 위한 <xref:System.Windows.Forms.ControlPaint> 클래스를 제공합니다. 그러나 이 클래스는 Windows 클래식 스타일로 컨트롤을 그립니다. 따라서 비주얼 스타일이 사용되는 애플리케이션에서 사용자 지정 컨트롤을 그릴 때 일관된 UI 환경을 유지하기가 어려울 수 있습니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "64614655"
  사용에 대 한 자세한 내용은 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 하 고 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>를 참조 하세요 [방법: 비주얼 스타일 요소 렌더링](how-to-render-a-visual-style-element.md)합니다.  
   
 ## <a name="enabling-visual-styles"></a>비주얼 스타일 사용  
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 버전 1.0용으로 작성된 응용 프로그램에 대해 비주얼 스타일을 사용하도록 설정하려면 프로그래머는 컨트롤 그리기에 ComCtl32.dll 버전 6 이상을 사용하도록 지정하는 응용 프로그램 매니페스트를 포함해야 합니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 버전 1.1 이상으로 빌드된 응용 프로그램은 <xref:System.Windows.Forms.Application> 클래스의 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> 메서드를 사용할 수 있습니다.  
+ .NET Framework 버전 1.0 용으로 작성 된 응용 프로그램에 대 한 비주얼 스타일을 사용 하려면 프로그래머는 컨트롤 그리기에 ComCtl32.dll 버전 6 이상을 사용할지를 지정 하는 응용 프로그램 매니페스트를 포함 해야 합니다. .NET Framework 버전 1.1 이상으로 빌드된 응용 프로그램에서 사용할 수는 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> 메서드는 <xref:System.Windows.Forms.Application> 클래스입니다.  
   
 ## <a name="checking-for-visual-styles-support"></a>비주얼 스타일 지원 확인  
  <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> 클래스의 <xref:System.Windows.Forms.Application> 속성은 현재 응용 프로그램이 비주얼 스타일로 컨트롤을 그리는지 여부를 나타냅니다. 사용자 지정 컨트롤을 그릴 때 비주얼 스타일을 사용하거나 사용하지 않으면서 컨트롤을 렌더링할 지 여부를 판단하려면 <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> 의 값을 확인할 수 있습니다. 다음 표에는 <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> 를 반환하기 위해 `true`에 필요한 네 가지 조건이 나열되어 있습니다.  

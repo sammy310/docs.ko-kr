@@ -11,12 +11,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: c6b3808a2d73070cc07b31eb0fca7ca9d6af8cdb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 328f67c5afe22f336aa6337903b6569fb6ecc359
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200547"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623055"
 ---
 # <a name="proxy-configuration"></a>프록시 구성
 프록시 서버는 리소스에 대한 클라이언트 요청을 처리합니다. 프록시는 해당 캐시에서 요청한 리소스를 반환하거나 리소스가 있는 서버로 요청을 전달할 수 있으며, 원격 서버로 전송되는 요청 수를 줄여 네트워크 성능을 개선할 수 있습니다. 프록시를 사용하여 리소스에 대한 액세스를 제한할 수도 있습니다.  
@@ -45,11 +45,11 @@ ms.locfileid: "59200547"
   
  정적 프록시 작동 방식은 여러 옵션으로 제어됩니다. 다음을 지정할 수 있습니다.  
   
--   프록시의 주소  
+- 프록시의 주소  
   
--   로컬 주소에 대해 프록시를 바이패스해야 하는지 여부  
+- 로컬 주소에 대해 프록시를 바이패스해야 하는지 여부  
   
--   주소 집합에 대해 프록시를 바이패스해야 하는지 여부  
+- 주소 집합에 대해 프록시를 바이패스해야 하는지 여부  
   
  다음 테이블에는 정적 프록시의 구성 옵션이 나와 있습니다.  
   

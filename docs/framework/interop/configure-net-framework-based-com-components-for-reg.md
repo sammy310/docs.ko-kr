@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea62f7dc5c47f52f94567857427e7add929b8b1c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c8f78e926835e86fdc20da5e4e1bc66c4b6ab1a2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336579"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625446"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>방법: 등록이 필요 없는 활성화를 위한 .NET Framework 기반 COM 구성 요소 구성
 .NET Framework 기반 구성 요소에 대한 등록 없는 활성화는 COM 구성 요소보다 약간 더 복잡합니다. 설치 프로그램에 다음 두 개의 매니페스트가 필요합니다.  
   
--   COM 애플리케이션이 관리되는 구성 요소를 식별하려면 Win32 스타일 애플리케이션 매니페스트가 있어야 합니다.  
+- COM 애플리케이션이 관리되는 구성 요소를 식별하려면 Win32 스타일 애플리케이션 매니페스트가 있어야 합니다.  
   
--   .NET Framework 기반 구성 요소에는 런타임에 필요한 활성화 정보를 위해 구성 요소 매니페스트가 있어야 합니다.  
+- .NET Framework 기반 구성 요소에는 런타임에 필요한 활성화 정보를 위해 구성 요소 매니페스트가 있어야 합니다.  
   
  이 항목에서는 애플리케이션 매니페스트를 애플리케이션에 연결하고, 구성 요소 매니페스트를 구성 요소에 연결하며, 구성 요소 매니페스트를 어셈블리에 포함하는 방법을 설명합니다.  
   

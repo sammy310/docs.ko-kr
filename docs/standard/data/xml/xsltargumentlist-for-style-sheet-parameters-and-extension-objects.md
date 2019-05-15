@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6209df7d226d7e3acb938801d1fb77afbe1249b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3afbffcbbaa5e8398a9ab10c762e60305cfc164b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322410"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615228"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>스타일시트 매개 변수 및 확장 개체의 XsltArgumentList
 <xref:System.Xml.Xsl.XsltArgumentList> 클래스에는 XSLT(Extensible Stylesheet Language for Transformations) 매개 변수와 XSLT 확장 개체가 포함되어 있습니다. 이러한 매개 변수와 확장명 개체는 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드에 전달될 경우 스타일시트에서 호출할 수 있습니다.  
@@ -25,13 +25,13 @@ ms.locfileid: "59322410"
   
  포함 스크립트를 사용하는 대신 개체를 전달하면 다음과 같은 이점을 활용할 수 있습니다.  
   
--   클래스의 캡슐화 및 재사용에 효과적입니다.  
+- 클래스의 캡슐화 및 재사용에 효과적입니다.  
   
--   스타일시트를 더 작게 유지하고 보다 쉽게 관리할 수 있습니다.  
+- 스타일시트를 더 작게 유지하고 보다 쉽게 관리할 수 있습니다.  
   
--   지원되는 <xref:System> 네임스페이스의 집합 내에 정의된 네임스페이스 이외의 다른 네임스페이스에 속하는 클래스에서 메서드를 호출할 수 있습니다.  
+- 지원되는 <xref:System> 네임스페이스의 집합 내에 정의된 네임스페이스 이외의 다른 네임스페이스에 속하는 클래스에서 메서드를 호출할 수 있습니다.  
   
--   <xref:System.Xml.XPath.XPathNodeIterator>를 사용하여 스타일시트에 결과 트리 조각을 전달할 수 있습니다.  
+- <xref:System.Xml.XPath.XPathNodeIterator>를 사용하여 스타일시트에 결과 트리 조각을 전달할 수 있습니다.  
   
 ## <a name="xslt-style-sheet-parameters"></a>XSLT 스타일시트 매개 변수  
  <xref:System.Xml.Xsl.XsltArgumentList> 메서드를 사용하여 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>에 XSLT 매개 변수를 추가합니다. 그러면 정규화된 이름과 네임스페이스 URI(Uniform Resource Identifier)가 매개 변수 개체와 연결됩니다.  

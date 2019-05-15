@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b022c70f7ed1707e27de7cac6ce08c53ee0878d0
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: a89739b92d64e8774080d82f9e39af24c269223e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836567"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615166"
 ---
 # <a name="observer-design-pattern"></a>관찰자 디자인 패턴
 관찰자 디자인 패턴은 구독자가 공급자에 등록하고 공급자로부터 알림을 받을 수 있게 합니다. 이는 푸시 기반 알림이 필요한 시나리오에 적합합니다. 이 패턴은 ‘공급자’(‘주체’ 또는 ‘관찰 가능 대상’이라고도 함) 및 0개 이상의 ‘관찰자’를 정의합니다. 관찰자는 공급자에 등록하며 미리 정의된 조건, 이벤트 또는 상태 변경이 발생할 때마다 공급자가 해당 메서드 중 하나를 호출하여 자동으로 모든 관찰자에게 알립니다. 이 메서드 호출에서 공급자는 관찰자에게 현재 상태 정보를 제공할 수도 있습니다. .NET Framework에서는 제네릭 <xref:System.IObservable%601?displayProperty=nameWithType> 및 <xref:System.IObserver%601?displayProperty=nameWithType> 인터페이스를 구현하여 관찰자 디자인 패턴을 적용합니다. 제네릭 형식 매개 변수는 알림 정보를 제공하는 형식을 나타냅니다.  
@@ -29,21 +29,21 @@ ms.locfileid: "56836567"
   
  패턴을 구현하려면 다음을 제공해야 합니다.  
   
--   관찰자에게 알림을 전송하는 개체인 공급자 또는 주체. 공급자는 <xref:System.IObservable%601> 인터페이스를 구현하는 클래스 또는 구조체입니다. 공급자는 공급자로부터 알림을 수신하려는 관찰자가 호출하는 단일 메서드 <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType>를 구현해야 합니다.  
+- 관찰자에게 알림을 전송하는 개체인 공급자 또는 주체. 공급자는 <xref:System.IObservable%601> 인터페이스를 구현하는 클래스 또는 구조체입니다. 공급자는 공급자로부터 알림을 수신하려는 관찰자가 호출하는 단일 메서드 <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType>를 구현해야 합니다.  
   
--   공급자로부터 알림을 수신하는 개체인 관찰자. 관찰자는 <xref:System.IObserver%601> 인터페이스를 구현하는 클래스 또는 구조체입니다. 관찰자는 모두 공급자에 의해 호출되는 다음 세 개의 메서드를 구현해야 합니다.  
+- 공급자로부터 알림을 수신하는 개체인 관찰자. 관찰자는 <xref:System.IObserver%601> 인터페이스를 구현하는 클래스 또는 구조체입니다. 관찰자는 모두 공급자에 의해 호출되는 다음 세 개의 메서드를 구현해야 합니다.  
   
-    -   <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType> - 관찰자에게 새 정보나 현재 정보를 제공합니다.  
+    - <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType> - 관찰자에게 새 정보나 현재 정보를 제공합니다.  
   
-    -   <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType> - 오류가 발생했음을 관찰자에게 알립니다.  
+    - <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType> - 오류가 발생했음을 관찰자에게 알립니다.  
   
-    -   <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> - 공급자가 알림 전송을 완료했음을 나타냅니다.  
+    - <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> - 공급자가 알림 전송을 완료했음을 나타냅니다.  
   
--   공급자가 관찰자를 추적할 수 있게 해주는 메커니즘. 일반적으로 공급자는 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 개체와 같은 컨테이너 개체를 사용하여 알림을 구독한 <xref:System.IObserver%601> 구현에 대한 참조를 보유합니다. 이 목적으로 저장소 컨테이너를 사용하면 공급자가 0개에서 무한대 개수까지 관찰자를 처리할 수 있습니다. 관찰자가 알림을 수신하는 순서는 정의되지 않습니다. 공급자가 임의 메서드를 사용하여 순서를 결정할 수 있습니다.  
+- 공급자가 관찰자를 추적할 수 있게 해주는 메커니즘. 일반적으로 공급자는 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 개체와 같은 컨테이너 개체를 사용하여 알림을 구독한 <xref:System.IObserver%601> 구현에 대한 참조를 보유합니다. 이 목적으로 저장소 컨테이너를 사용하면 공급자가 0개에서 무한대 개수까지 관찰자를 처리할 수 있습니다. 관찰자가 알림을 수신하는 순서는 정의되지 않습니다. 공급자가 임의 메서드를 사용하여 순서를 결정할 수 있습니다.  
   
--   알림이 완료될 때 공급자가 관찰자를 제거할 수 있도록 하는 <xref:System.IDisposable> 구현. 관찰자는 <xref:System.IObservable%601.Subscribe%2A> 메서드로부터 <xref:System.IDisposable> 구현에 대한 참조를 수신하므로 공급자가 알림 전송을 완료하기 전에 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 메서드를 호출하여 구독을 취소할 수도 있습니다.  
+- 알림이 완료될 때 공급자가 관찰자를 제거할 수 있도록 하는 <xref:System.IDisposable> 구현. 관찰자는 <xref:System.IObservable%601.Subscribe%2A> 메서드로부터 <xref:System.IDisposable> 구현에 대한 참조를 수신하므로 공급자가 알림 전송을 완료하기 전에 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 메서드를 호출하여 구독을 취소할 수도 있습니다.  
   
--   공급자가 해당 관찰자에게 전송하는 데이터를 포함하는 개체. 이 개체의 형식은 <xref:System.IObservable%601> 및 <xref:System.IObserver%601> 인터페이스의 제네릭 형식 매개 변수에 해당합니다. 이 개체는 <xref:System.IObservable%601> 구현과 동일할 수도 있지만 일반적으로 별도 형식입니다.  
+- 공급자가 해당 관찰자에게 전송하는 데이터를 포함하는 개체. 이 개체의 형식은 <xref:System.IObservable%601> 및 <xref:System.IObserver%601> 인터페이스의 제네릭 형식 매개 변수에 해당합니다. 이 개체는 <xref:System.IObservable%601> 구현과 동일할 수도 있지만 일반적으로 별도 형식입니다.  
   
 > [!NOTE]
 >  관찰자 디자인 패턴 구현 외에도 <xref:System.IObservable%601> 및 <xref:System.IObserver%601> 인터페이스를 사용하여 빌드된 라이브러리 탐색에 관심이 있을 수 있습니다. 예를 들어 [.NET용 사후 확장(Rx)](https://docs.microsoft.com/previous-versions/dotnet/reactive-extensions/hh242985(v=vs.103))은 비동기 프로그래밍을 지원하기 위해 일련의 확장 메서드와 LINQ 표준 시퀀스 연산자로 구성됩니다.  
@@ -56,9 +56,9 @@ ms.locfileid: "56836567"
   
  `BaggageHandler` 클래스는 도착 항공편 및 수하물을 찾을 수 있는 컨베이어 벨트에 대한 정보를 받아야 합니다. 내부적으로 다음 두 개의 컬렉션을 유지 관리합니다.  
   
--   `observers` - 업데이트된 정보를 수신할 클라이언트 컬렉션입니다.  
+- `observers` - 업데이트된 정보를 수신할 클라이언트 컬렉션입니다.  
   
--   `flights` - 항공편 및 할당된 컨베이어 벨트 컬렉션입니다.  
+- `flights` - 항공편 및 할당된 컨베이어 벨트 컬렉션입니다.  
   
  두 컬렉션 모두 `BaggageHandler` 클래스 생성자에서 인스턴스화되는 제네릭 <xref:System.Collections.Generic.List%601> 개체로 표시됩니다. `BaggageHandler` 클래스의 소스 코드는 다음 예제에 나와 있습니다.  
   

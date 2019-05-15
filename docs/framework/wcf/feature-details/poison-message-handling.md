@@ -2,12 +2,12 @@
 title: 포이즌 메시지 처리
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 1a7ab0afa982508f07256f090a13692174b5fb0b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b1f01714d2b4587659682661c05b341d0f50254e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638418"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592856"
 ---
 # <a name="poison-message-handling"></a>포이즌 메시지 처리
 A *포이즌 메시지* 응용 프로그램에 배달 시도 최대 횟수를 초과한 메시지입니다. 큐 기반 응용 프로그램에서 오류로 인해 메시지를 처리할 수 없는 경우 이러한 상황이 발생할 수 있습니다. 안정성 요청을 충족하려면 대기 중인 응용 프로그램이 트랜잭션에서 메시지를 받습니다. 대기 중인 메시지를 받은 트랜잭션을 중단하면 메시지가 큐에 남으므로 새 트랜잭션에서 해당 메시지가 다시 시도됩니다. 트랜잭션의 중단 문제가 해결되지 않은 경우에는 수신 응용 프로그램이 최대 전달 시도 횟수를 초과할 때까지 같은 메시지를 받고 중단하는 루프에 갇히고, 포이즌 메시지가 발생합니다.  
@@ -52,7 +52,7 @@ A *포이즌 메시지* 응용 프로그램에 배달 시도 최대 횟수를 �
   
  WCF는 두 개의 표준 큐에 대기 중인된 바인딩을 제공합니다.  
   
-- <xref:System.ServiceModel.NetMsmqBinding>. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 다른 WCF 끝점과 큐 기반 통신을 수행 하는 데 적합 한 바인딩입니다.  
+- <xref:System.ServiceModel.NetMsmqBinding>. 다른 WCF 끝점과 큐 기반 통신을 수행 하는 데 적합 한.NET Framework 바인딩.  
   
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. 기존 메시지 큐 응용 프로그램과 통신하는 데 적합한 바인딩입니다.  
   

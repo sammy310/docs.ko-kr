@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7eb79aaf1f207d8d5ec175f32dc9a47170d604f8
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 87ea2cbb46aca87af15b2c12321322c1b048df56
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479700"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625592"
 ---
 # <a name="data-structures-for-parallel-programming"></a>병렬 프로그래밍을 위한 데이터 구조
 .NET Framework 버전 4에서는 동시 컬렉션 클래스, 간단한 동기화 기본 요소 및 초기화 지연 관련 형식을 포함하여 병렬 프로그래밍에서 유용한 여러 가지 새로운 형식을 소개합니다. 이러한 형식을 작업 병렬 라이브러리 및 PLINQ를 포함한 다중 스레드 애플리케이션 코드와 함께 사용할 수 있습니다.  
@@ -48,9 +48,9 @@ ms.locfileid: "55479700"
   
  자세한 내용은 다음을 참조하세요.  
   
--   [방법: 낮은 수준의 동기화에 SpinLock 사용](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
+- [방법: 낮은 수준의 동기화에 SpinLock 사용](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
   
--   [방법: 동시 작업을 배리어와 동기화](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
+- [방법: 동시 작업을 배리어와 동기화](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
   
 ## <a name="lazy-initialization-classes"></a>초기화 지연 클래스  
  초기화 지연을 사용하면 필요할 때까지 개체용 메모리가 할당되지 않습니다. 초기화 지연을 통해 개체 할당을 프로그램 수명에 균등하게 분산하여 성능을 향상시킬 수 있습니다. <xref:System.Lazy%601> 형식을 래핑하여 모든 사용자 지정 형식에 대한 초기화 지연을 사용하도록 설정할 수 있습니다.  

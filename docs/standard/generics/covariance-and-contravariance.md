@@ -13,29 +13,29 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 931edf3610d083f6821ec87d3e05db855e88c6f9
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: fa4b8fdd56ed8a1304b6ee436ce3391c52ae7b9d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836424"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622732"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>제네릭의 공 분산과 반공 분산
 <a name="top"></a> 공변성(Covariance)과 반공변성(Contravariance)은 원래 지정된 것보다 더 많이 파생되거나(더 구체적인) 더 적게 파생된 형식(덜 구체적인)을 사용할 수 있는 능력을 지칭하는 용어입니다. 제네릭 형식 매개 변수는 더욱 유연하게 제네릭 형식을 할당하고 사용할 수 있도록 공변성과 반공변성을 지원합니다. 형식 시스템을 참조할 때 공변성, 반공변성 및 불변성의 정의는 다음과 같습니다. 이 예제에서는 `Base` 라는 기본 클래스와 `Derived`라는 파생 클래스가 있는 것으로 가정합니다.  
   
--   `Covariance`  
+- `Covariance`  
   
      원래 지정된 것보다 더 많이 파생된 형식을 사용할 수 있습니다.  
   
      `IEnumerable<Derived>`의 인스턴스(Visual Basic의 `IEnumerable(Of Derived)`)를 `IEnumerable<Base>` 형식의 변수에 할당할 수 있습니다.  
   
--   `Contravariance`  
+- `Contravariance`  
   
      원래 지정된 것보다 더 제네릭한(덜 파생적인) 형식을 사용할 수 있습니다.  
   
      `Action<Base>` 의 인스턴스(Visual Basic의`Action(Of Base)` )를 `Action<Derived>`형식의 변수에 할당할 수 있습니다.  
   
--   `Invariance`  
+- `Invariance`  
   
      원래 지정된 형식만 사용할 수 있다는 의미이므로, 불변하는 제네릭 형식 매개 변수는 공변성도, 반공변성도 아닙니다.  
   
@@ -59,25 +59,25 @@ ms.locfileid: "56836424"
   
  공변성(Covariance) 및 반공변성(Contravariance)을 전체적으로 *차이*라고 합니다. 공변 또는 반공변 여부가 표시되지 않은 제네릭 형식 매개 변수를 *고정(invariant)* 매개 변수라고 합니다. 다음은 공용 언어 런타임의 가변성에 대한 간략한 설명입니다.  
   
--   [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]에서는 variant 형식 매개 변수가 제네릭 인터페이스와 제네릭 대리자 형식에만 사용됩니다.  
+- [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]에서는 variant 형식 매개 변수가 제네릭 인터페이스와 제네릭 대리자 형식에만 사용됩니다.  
   
--   제네릭 인터페이스 또는 제네릭 대리자 형식은 공변 및 반공변 형식 매개 변수를 둘 다 가질 수 있습니다.  
+- 제네릭 인터페이스 또는 제네릭 대리자 형식은 공변 및 반공변 형식 매개 변수를 둘 다 가질 수 있습니다.  
   
--   가변성은 참조 형식에만 적용되므로 variant 형식 매개 변수에 대한 값 형식을 지정하면 이 형식 매개 변수는 결과로 생성되는 형식에 대해 invariant가 됩니다.  
+- 가변성은 참조 형식에만 적용되므로 variant 형식 매개 변수에 대한 값 형식을 지정하면 이 형식 매개 변수는 결과로 생성되는 형식에 대해 invariant가 됩니다.  
   
--   대리자 결합에는 가변성이 적용되지 않습니다. 즉, 두 대리자의 형식이 `Action<Derived>` 및 `Action<Base>` (Visual Basic의 경우`Action(Of Derived)` 및 `Action(Of Base)` )라고 할 때 결과의 형식이 안전하더라도 둘째 대리자를 첫째 대리자와 결합할 수 없습니다. 가변성을 통해 둘째 대리자를 `Action<Derived>`형식의 변수에 할당할 수 있지만, 대리자를 결합하기 위해서는 해당 형식이 정확하게 일치해야 합니다.  
+- 대리자 결합에는 가변성이 적용되지 않습니다. 즉, 두 대리자의 형식이 `Action<Derived>` 및 `Action<Base>` (Visual Basic의 경우`Action(Of Derived)` 및 `Action(Of Base)` )라고 할 때 결과의 형식이 안전하더라도 둘째 대리자를 첫째 대리자와 결합할 수 없습니다. 가변성을 통해 둘째 대리자를 `Action<Derived>`형식의 변수에 할당할 수 있지만, 대리자를 결합하기 위해서는 해당 형식이 정확하게 일치해야 합니다.  
   
  다음 하위 단원에서는 공변 및 반공변 형식 매개 변수에 대해 자세히 설명합니다.  
   
--   [공변 형식 매개 변수가 있는 제네릭 인터페이스](#InterfaceCovariantTypeParameters)  
+- [공변 형식 매개 변수가 있는 제네릭 인터페이스](#InterfaceCovariantTypeParameters)  
   
--   [반공변 제네릭 형식 매개 변수가 있는 제네릭 인터페이스](#InterfaceCovariantTypeParameters)  
+- [반공변 제네릭 형식 매개 변수가 있는 제네릭 인터페이스](#InterfaceCovariantTypeParameters)  
   
--   [variant 형식 매개 변수가 있는 제네릭 대리자](#DelegateVariantTypeParameters)  
+- [variant 형식 매개 변수가 있는 제네릭 대리자](#DelegateVariantTypeParameters)  
   
--   [variant 제네릭 인터페이스 및 대리자 정의](#DefiningVariantTypeParameters)  
+- [variant 제네릭 인터페이스 및 대리자 정의](#DefiningVariantTypeParameters)  
   
--   [variant 제네릭 인터페이스 및 대리자 형식의 목록](#VariantList)  
+- [variant 제네릭 인터페이스 및 대리자 형식의 목록](#VariantList)  
   
 <a name="InterfaceCovariantTypeParameters"></a>   
 ## <a name="generic-interfaces-with-covariant-type-parameters"></a>공변 형식 매개 변수가 있는 제네릭 인터페이스  

@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 74acea566e4b0e407e86cb67d3f521f18c2d68af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fad8a73c41379cac7523db6266951b8abab26e27
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307719"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626291"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>방법: 관리 코드 DCOM을 WCF로 마이그레이션
 WCF(Windows Communication Foundation)는 분산 환경에서 서버와 클라이언트 간에 관리 코드 호출에 대해 DCOM(Distributed Component Object Model)보다 권장되는 안전한 선택 항목입니다. 이 문서에서는 다음과 같은 시나리오에 대해 코드를 DCOM에서 WCF로 마이그레이션하는 방법을 보여 줍니다.  
   
--   원격 서비스에서 값 방식으로 클라이언트에 개체를 반환합니다.  
+- 원격 서비스에서 값 방식으로 클라이언트에 개체를 반환합니다.  
   
--   클라이언트에서 값 방식으로 원격 서비스에 개체를 전송합니다.  
+- 클라이언트에서 값 방식으로 원격 서비스에 개체를 전송합니다.  
   
--   보안상 클라이언트에서 값 방식으로 서비스에 개체를 전송하는 기능은 WCF에서 허용되지 않습니다.  
+- 보안상 클라이언트에서 값 방식으로 서비스에 개체를 전송하는 기능은 WCF에서 허용되지 않습니다.  
   
  보안상 클라이언트에서 참조 방식으로 서비스에 개체를 전송하는 기능은 WCF에서 허용되지 않습니다. 클라이언트와 서버 간에 서로 대화하는 데 필요한 시나리오는 WCF에서 이중 서비스를 사용하여 수행할 수 있습니다.  이중 서비스에 대한 자세한 내용은 [이중 서비스](../../../docs/framework/wcf/feature-details/duplex-services.md)를 참조하세요.  
   

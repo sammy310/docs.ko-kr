@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 399ad6649016e53d91d5d9d30ecc031ae8a97a4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6b204eacd43db2c562fbe6d519b5fa91df3466cc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149359"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626407"
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>DLL 함수가 포함된 클래스 만들기
 자주 사용되는 DLL 함수를 관리되는 클래스로 래핑하는 것은 플랫폼 기능을 캡슐화하는 효과적인 방법입니다. 매번 래핑할 필요는 없지만 DLL 함수 정의는 번거롭고 오류가 발생할 수 있으므로 클래스 래퍼를 제공하는 것이 편리합니다. Visual Basic 또는 C#으로 프로그래밍할 경우 클래스 또는 Visual Basic 모듈 내에서 DLL 함수를 선언해야 합니다.  
@@ -28,11 +28,11 @@ ms.locfileid: "59149359"
   
  플랫폼 호출에 대한 관리되는 클래스를 디자인할 때 클래스와 DLL 함수 간 관계를 고려하세요. 예를 들어 다음 작업을 할 수 있습니다.  
   
--   기존 클래스 내에서 DLL 함수를 선언합니다.  
+- 기존 클래스 내에서 DLL 함수를 선언합니다.  
   
--   각 DLL 함수에 대한 개별 클래스를 만들어 함수를 격리하고 찾기 쉽게 유지합니다.  
+- 각 DLL 함수에 대한 개별 클래스를 만들어 함수를 격리하고 찾기 쉽게 유지합니다.  
   
--   관련 DLL 함수 집합에 대한 클래스 하나를 만들어 논리적 그룹화를 구성하고 오버헤드를 줄입니다.  
+- 관련 DLL 함수 집합에 대한 클래스 하나를 만들어 논리적 그룹화를 구성하고 오버헤드를 줄입니다.  
   
  원하는 대로 클래스 및 해당 메서드의 이름을 지정할 수 있습니다. 플랫폼 호출에서 사용되는 .NET 기반 선언을 생성하는 방법을 보여 주는 예제는 [플랫폼 호출을 사용하여 데이터 마샬링](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)을 참조하세요.  
   

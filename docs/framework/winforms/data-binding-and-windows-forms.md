@@ -12,17 +12,17 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-ms.openlocfilehash: e8a3011828fd3b3f7aaaa062e837570c86f4fd65
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 240b68f901f819313fcae7aab0474abd5535c30d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626846"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592313"
 ---
 # <a name="data-binding-and-windows-forms"></a>데이터 바인딩 및 Windows Forms
 Windows Forms에서는 기존의 데이터 소스뿐 아니라 데이터를 포함하는 거의 모든 구조에 바인딩할 수 있습니다. 런타임에 계산하거나 파일에서 읽거나 다른 컨트롤의 값에서 파생하는 값 배열에 바인딩할 수 있습니다.  
   
- 또한 컨트롤의 속성을 데이터 소스에 바인딩할 수도 있습니다. 일반적인 데이터 바인딩에서는 대개 표시 속성(예: <xref:System.Windows.Forms.Control.Text%2A> 컨트롤의 <xref:System.Windows.Forms.TextBox> 속성)을 데이터 소스에 바인딩합니다. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]를 사용하면 바인딩을 통해 다른 속성도 설정할 수 있습니다. 바인딩을 사용하여 수행할 수 있는 작업은 다음과 같습니다.  
+ 또한 컨트롤의 속성을 데이터 소스에 바인딩할 수도 있습니다. 일반적인 데이터 바인딩에서는 대개 표시 속성(예: <xref:System.Windows.Forms.Control.Text%2A> 컨트롤의 <xref:System.Windows.Forms.TextBox> 속성)을 데이터 소스에 바인딩합니다. .NET Framework를 사용 하 여 바인딩을 통해 다른 속성을 설정 하는 옵션을 있어야 합니다. 바인딩을 사용하여 수행할 수 있는 작업은 다음과 같습니다.  
   
 - 이미지 컨트롤의 그래픽 설정  
   

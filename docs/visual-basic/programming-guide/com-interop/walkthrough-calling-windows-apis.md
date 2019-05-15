@@ -11,21 +11,21 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: 8fd63c2abedcd416937e2c281486bdc1716a275f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 70914d63773c6a94ad92cf6301a8e2bc1368e7a1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022404"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592716"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>연습: Windows Api 호출 (Visual Basic)
 Windows Api는 Windows 운영 체제의 일부인 동적 연결 라이브러리 (Dll)입니다. 프로시저를 직접 작성 하기 어려운 경우 작업을 수행 하려면 사용할 수 있습니다. Windows 라는 함수를 제공 하는 예를 들어 `FlashWindowEx` 밝은 영역과 어두운 음영을 교대로 응용 프로그램의 제목 표시줄을 만들 수 있습니다.  
   
  Windows Api를 사용 하 여 코드에서의 장점은 여러 가지 유용한 함수가 이미 작성 된 되어 대기 중인 사용할 수 있기 때문에 개발 시간을 절약할 수 있습니다. 단점은 Windows Api와 철 문제가 발생할 때 작업이 어려울 수 있습니다.  
   
- Windows Api의 상호 운용성 특수 범주를 나타냅니다. Windows Api는 관리 되는 코드를 사용 하지, 기본 제공 라이브러리를 입력 하 고 Visual Studio와 함께 사용 되는 것과 다른 데이터 형식을 사용할 필요가 없습니다. 이러한 차이점 때문 이므로 Windows Api는 COM 개체를 Windows Api와의 상호 운용성 및 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 플랫폼을 사용 하 여 수행 됩니다 호출 또는 PInvoke입니다. 플랫폼 호출 서비스는 관리 되는 Dll로 구현 되는 관리 되지 않는 함수를 호출 하는 코드입니다. 자세한 내용은 [관리 되지 않는 DLL 함수 사용](../../../framework/interop/consuming-unmanaged-dll-functions.md)합니다. 하나를 사용 하 여 Visual Basic에서 PInvoke를 사용할 수 있습니다는 `Declare` 문 또는 적용을 `DllImport` 빈 프로시저에 특성입니다.  
+ Windows Api의 상호 운용성 특수 범주를 나타냅니다. Windows Api는 관리 되는 코드를 사용 하지, 기본 제공 라이브러리를 입력 하 고 Visual Studio와 함께 사용 되는 것과 다른 데이터 형식을 사용할 필요가 없습니다. 때문에 이러한 차이점과 Windows Api는 COM 개체를 Windows Api와의 상호 운용성 및.NET Framework를 사용 하 여 수행 됩니다 때문에 플랫폼 호출을 pinvoke입니다. 플랫폼 호출 서비스는 관리 되는 Dll로 구현 되는 관리 되지 않는 함수를 호출 하는 코드입니다. 자세한 내용은 [관리 되지 않는 DLL 함수 사용](../../../framework/interop/consuming-unmanaged-dll-functions.md)합니다. 하나를 사용 하 여 Visual Basic에서 PInvoke를 사용할 수 있습니다는 `Declare` 문 또는 적용을 `DllImport` 빈 프로시저에 특성입니다.  
   
- Windows API 호출에서 중요 한 부분은 Visual Basic 이전에 프로그래밍 된 되지만 Visual Basic.NET을 사용 하 여 필요한 거의 없습니다. 가능 하면에서 관리 되는 코드를 사용 해야는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Windows API를 호출 하는 대신 작업을 수행 합니다. 이 연습에서 사용 하는 경우에 대 한 정보를 제공 합니다. Windows Api가 필요 합니다.  
+ Windows API 호출에서 중요 한 부분은 Visual Basic 이전에 프로그래밍 된 되지만 Visual Basic.NET을 사용 하 여 필요한 거의 없습니다. 가능 하면 Windows API를 호출 하는 대신 작업을 수행 하려면.NET Framework에서 관리 되는 코드를 사용 해야 합니다. 이 연습에서 사용 하는 경우에 대 한 정보를 제공 합니다. Windows Api가 필요 합니다.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   

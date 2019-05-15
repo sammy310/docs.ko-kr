@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: ef6402be-2f8e-4be2-8d3e-a80891cdef8b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5f35725f5e1a08f2fcb1d6bc87765f50308c963f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0704e78a0e7fbf3987b3bc75bb46e135f00110e9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566322"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615345"
 ---
 # <a name="xpath-queries-and-namespaces"></a>XPath 쿼리 및 네임스페이스
 XPath 쿼리는 XML 문서에서 네임스페이스를 인식하며 네임스페이스 접두사를 사용하여 요소 및 특성 이름을 정규화할 수 있습니다. 네임스페이스 접두사로 요소 및 특성 이름을 정규화하면 XPath 쿼리에 의해 반환되는 노드가 특정 네임스페이스에 속한 노드로만 제한됩니다.  
@@ -25,17 +25,17 @@ XPath 쿼리는 XML 문서에서 네임스페이스를 인식하며 네임스페
   
  다음과 같은 방법으로 쿼리에서 <xref:System.Xml.XmlNamespaceManager> 개체를 사용할 수 있습니다.  
   
--   <xref:System.Xml.XmlNamespaceManager> 개체의 <xref:System.Xml.XPath.XPathExpression> 메서드를 사용하여 <xref:System.Xml.XPath.XPathExpression.SetContext%2A> 개체를 기존 <xref:System.Xml.XPath.XPathExpression> 개체와 연결합니다. 또한 XPath 식을 나타내는 문자열과 <xref:System.Xml.XPath.XPathExpression> 개체를 매개 변수로 사용하며 새 <xref:System.Xml.XPath.XPathExpression.Compile%2A> 개체를 반환하는 정적<xref:System.Xml.XmlNamespaceManager> 메서드를 사용하여 새 <xref:System.Xml.XPath.XPathExpression> 개체를 컴파일할 수 있습니다.  
+- <xref:System.Xml.XmlNamespaceManager> 개체의 <xref:System.Xml.XPath.XPathExpression> 메서드를 사용하여 <xref:System.Xml.XPath.XPathExpression.SetContext%2A> 개체를 기존 <xref:System.Xml.XPath.XPathExpression> 개체와 연결합니다. 또한 XPath 식을 나타내는 문자열과 <xref:System.Xml.XPath.XPathExpression> 개체를 매개 변수로 사용하며 새 <xref:System.Xml.XPath.XPathExpression.Compile%2A> 개체를 반환하는 정적<xref:System.Xml.XmlNamespaceManager> 메서드를 사용하여 새 <xref:System.Xml.XPath.XPathExpression> 개체를 컴파일할 수 있습니다.  
   
--   <xref:System.Xml.XmlNamespaceManager> 개체 자체는 XPath 식을 나타내는 문자열과 함께 허용되는 <xref:System.Xml.XPath.XPathNavigator> 클래스 메서드에 매개 변수로 전달됩니다.  
+- <xref:System.Xml.XmlNamespaceManager> 개체 자체는 XPath 식을 나타내는 문자열과 함께 허용되는 <xref:System.Xml.XPath.XPathNavigator> 클래스 메서드에 매개 변수로 전달됩니다.  
   
  다음은 <xref:System.Xml.XPath.XPathNavigator> 인터페이스에서 파생된 개체를 매개 변수로 사용할 수 있는 <xref:System.Xml.IXmlNamespaceResolver> 클래스의 메서드입니다.  
   
--   <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
 ### <a name="the-default-namespace"></a>기본 네임스페이스  
  다음 XML 문서에서는 빈 접두사가 있는 기본 네임스페이스를 사용하여 `http://www.contoso.com/books` 네임스페이스를 선언합니다.  

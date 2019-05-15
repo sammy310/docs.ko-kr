@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: 81727adbf985986a71cc9f9e2d42a1de0cb1fd76
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8ac62809b1269ae810f026c003c7611b3ec548c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608534"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593319"
 ---
 # <a name="configuring-wcf-services"></a>WCF 서비스 구성
 
@@ -22,7 +22,7 @@ ms.locfileid: "61608534"
  부터 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF WCF 구성 요구 사항을 간소화 하는 새로운 기본 구성 모델이 함께 제공 됩니다. 특정 서비스에 대 한 모든 WCF 구성을 얻을 수 없는 경우 런타임에서 기본 끝점, 바인딩 및 동작을 사용 하 여 서비스를 자동으로 구성 합니다.  
   
  [구성 파일을 사용하여 서비스 구성](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- Windows Communication Foundation (WCF) 서비스를 구성할 수 있습니다는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 기술 구성 합니다. 가장 일반적으로 XML 요소는 WCF 서비스를 호스팅하는 인터넷 정보 서비스 (IIS) 사이트의 Web.config 파일에 추가 됩니다. 이 요소를 사용하여 엔드포인트 주소(서비스와의 통신에 사용되는 실제 주소) 등의 세부 사항을 컴퓨터별로 변경할 수 있습니다.  
+ Windows Communication Foundation (WCF) 서비스는.NET Framework 구성 기술을 사용 하 여 구성할 수 있습니다. 가장 일반적으로 XML 요소는 WCF 서비스를 호스팅하는 인터넷 정보 서비스 (IIS) 사이트의 Web.config 파일에 추가 됩니다. 이 요소를 사용하여 엔드포인트 주소(서비스와의 통신에 사용되는 실제 주소) 등의 세부 사항을 컴퓨터별로 변경할 수 있습니다.  
   
  [바인딩](../../../docs/framework/wcf/bindings.md)  
  또한 WCF 클라이언트와 서비스가 통신 하는 방법에 대 한, 전송, 보안 및 인코딩을 사용 하는 메시지와 같은 가장 기본적인 기능을 빠르게 선택할 수 있도록 하는 바인딩 형태로 여러 시스템 제공 일반적인 구성을 포함 합니다.  

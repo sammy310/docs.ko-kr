@@ -8,25 +8,25 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9aa04051a8aad56c653eaee1a79fb48a849cf377
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: da29bd6bc53b59f1f20e2272a8293b49e230bff0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310566"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622875"
 ---
 # <a name="garbage-collection-and-performance"></a>가비지 컬렉션 및 성능
 <a name="top"></a> 이 항목에서는 가비지 컬렉션 및 메모리 사용과 관련된 문제를 설명합니다. 관리되는 힙과 관련된 문제를 해결하고 애플리케이션에 미치는 가비지 컬렉션의 영향을 최소화하는 방법을 설명합니다. 각 문제에는 문제를 조사하는 데 사용할 수 있는 절차 링크가 있습니다.  
   
  이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   
--   [성능 분석 도구](#performance_analysis_tools)  
+- [성능 분석 도구](#performance_analysis_tools)  
   
--   [성능 문제 해결](#troubleshooting_performance_issues)  
+- [성능 문제 해결](#troubleshooting_performance_issues)  
   
--   [문제 해결 지침](#troubleshooting_guidelines)  
+- [문제 해결 지침](#troubleshooting_guidelines)  
   
--   [성능 검사 절차](#performance_check_procedures)  
+- [성능 검사 절차](#performance_check_procedures)  
   
 <a name="performance_analysis_tools"></a>   
 ## <a name="performance-analysis-tools"></a>성능 분석 도구  
@@ -46,11 +46,11 @@ ms.locfileid: "59310566"
 ### <a name="garbage-collection-etw-events"></a>가비지 컬렉션 ETW 이벤트  
  ETW(Windows용 이벤트 추적)는 .NET Framework에서 제공하는 프로파일링 및 디버깅 지원을 보완하는 추적 시스템입니다. [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터 [가비지 컬렉션 ETW 이벤트](../../../docs/framework/performance/garbage-collection-etw-events.md)는 통계 관점에서 관리되는 힙을 분석하는 데 유용한 정보를 캡처합니다. 예를 들어 가비지 수집이 수행되려고 할 때 발생하는 `GCStart_V1` 이벤트는 다음과 같은 정보를 제공합니다.  
   
--   수집되는 개체 세대  
+- 수집되는 개체 세대  
   
--   가비지 수집 트리거  
+- 가비지 수집 트리거  
   
--   가비지 수집 유형(동시 수집 또는 비동시 수집)  
+- 가비지 수집 유형(동시 수집 또는 비동시 수집)  
   
  ETW 이벤트 로깅은 효율적이며 가비지 수집과 관련된 성능 문제를 숨기지 않습니다. 프로세스에서 ETW 이벤트와 함께 고유한 이벤트를 제공할 수 있습니다. 기록된 경우 애플리케이션 이벤트와 가비지 수집 이벤트를 서로 연결하여 힙 문제가 발생하는 방법 및 시기를 확인할 수 있습니다. 예를 들어 서버 애플리케이션은 클라이언트 요청이 시작되고 끝날 때 이벤트를 제공할 수 있습니다.  
   
@@ -69,29 +69,29 @@ ms.locfileid: "59310566"
 ## <a name="troubleshooting-performance-issues"></a>성능 문제 해결  
  첫 번째 단계에서는 [문제가 실제로 가비지 컬렉션인지 여부를 확인](#IsGC)합니다. 확인되었으면 다음 목록에서 선택하여 문제를 해결합니다.  
   
--   [메모리 부족 예외가 발생합니다.](#Issue_OOM)  
+- [메모리 부족 예외가 발생합니다.](#Issue_OOM)  
   
--   [프로세스에서 메모리를 너무 많이 사용합니다.](#Issue_TooMuchMemory)  
+- [프로세스에서 메모리를 너무 많이 사용합니다.](#Issue_TooMuchMemory)  
   
--   [가비지 수집기가 개체를 충분히 빠르게 회수하지 않습니다.](#Issue_NotFastEnough)  
+- [가비지 수집기가 개체를 충분히 빠르게 회수하지 않습니다.](#Issue_NotFastEnough)  
   
--   [관리되는 힙이 너무 조각화되었습니다.](#Issue_Fragmentation)  
+- [관리되는 힙이 너무 조각화되었습니다.](#Issue_Fragmentation)  
   
--   [가비지 컬렉션 일시 중지가 너무 깁니다.](#Issue_LongPauses)  
+- [가비지 컬렉션 일시 중지가 너무 깁니다.](#Issue_LongPauses)  
   
--   [0세대가 너무 큽니다.](#Issue_Gen0)  
+- [0세대가 너무 큽니다.](#Issue_Gen0)  
   
--   [가비지 컬렉션 중 CPU 사용량이 너무 많습니다.](#Issue_HighCPU)  
+- [가비지 컬렉션 중 CPU 사용량이 너무 많습니다.](#Issue_HighCPU)  
   
 <a name="Issue_OOM"></a>   
 ### <a name="issue-an-out-of-memory-exception-is-thrown"></a>문제: 메모리 부족 예외가 발생합니다.  
  관리되는 <xref:System.OutOfMemoryException>이 발생하는 다음 두 가지 정당한 경우가 있습니다.  
   
--   가상 메모리 부족.  
+- 가상 메모리 부족.  
   
      가비지 수집기는 미리 결정된 크기의 세그먼트로 시스템의 메모리를 할당합니다. 할당에 추가 세그먼트가 필요하지만 프로세스의 가상 메모리 공간에 연속된 여유 블록이 남지 않은 경우 관리되는 힙에 대한 할당이 실패합니다.  
   
--   할당할 실제 메모리 부족  
+- 할당할 실제 메모리 부족  
   
 |성능 검사|  
 |------------------------|  
@@ -99,11 +99,11 @@ ms.locfileid: "59310566"
   
  예외가 정당하지 않다고 확인되면 다음 정보와 함께 Microsoft 고객 지원 담당자에게 문의하세요.  
   
--   관리되는 메모리 부족 예외가 발생한 스택  
+- 관리되는 메모리 부족 예외가 발생한 스택  
   
--   전체 메모리 덤프  
+- 전체 메모리 덤프  
   
--   가상 메모리 또는 실제 메모리가 문제가 아님을 보여 주는 데이터를 포함하여 정당한 메모리 부족 예외가 아님을 입증하는 데이터  
+- 가상 메모리 또는 실제 메모리가 문제가 아님을 보여 주는 데이터를 포함하여 정당한 메모리 부족 예외가 아님을 입증하는 데이터  
   
 <a name="Issue_TooMuchMemory"></a>   
 ### <a name="issue-the-process-uses-too-much-memory"></a>문제: 프로세스에서 메모리를 너무 많이 사용합니다.  
@@ -141,11 +141,11 @@ ms.locfileid: "59310566"
   
  가상 메모리의 조각화로 인해 가비지 수집기에서 세그먼트를 추가할 수 없는 경우 원인은 다음 중 하나일 수 있습니다.  
   
--   다수의 작은 어셈블리를 자주 로드 및 언로드  
+- 다수의 작은 어셈블리를 자주 로드 및 언로드  
   
--   비관리 코드와 상호 운용할 때 COM 개체에 대한 참조를 너무 많이 보유  
+- 비관리 코드와 상호 운용할 때 COM 개체에 대한 참조를 너무 많이 보유  
   
--   대형 임시 개체를 만들어 대형 개체 힙이 힙 세그먼트를 자주 할당 및 해제  
+- 대형 임시 개체를 만들어 대형 개체 힙이 힙 세그먼트를 자주 할당 및 해제  
   
      CLR을 호스트하는 경우 애플리케이션에서 가비지 수집기가 해당 세그먼트를 유지하도록 요청할 수 있습니다. 이 경우 세그먼트 할당 빈도가 감소합니다. 이 작업을 수행하려면 [STARTUP_FLAGS 열거형](../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)의 STARTUP_HOARD_GC_VM 플래그를 사용합니다.  
   
@@ -201,24 +201,24 @@ ms.locfileid: "59310566"
 ### <a name="when-to-measure-the-managed-heap-size"></a>관리되는 힙 크기를 측정하는 시기  
  프로파일러를 사용하지 않는 한 효과적으로 성능 문제를 진단하려면 일관된 측정 패턴을 설정해야 합니다. 일정을 설정하려면 다음 사항을 고려합니다.  
   
--   2세대 가비지 수집 후에 측정하는 경우 전체 관리되는 힙의 가비지(비활성 개체)가 제거됩니다.  
+- 2세대 가비지 수집 후에 측정하는 경우 전체 관리되는 힙의 가비지(비활성 개체)가 제거됩니다.  
   
--   0세대 가비지 수집 직후에 측정하는 경우 1세대 및 2세대의 개체는 아직 수집되지 않습니다.  
+- 0세대 가비지 수집 직후에 측정하는 경우 1세대 및 2세대의 개체는 아직 수집되지 않습니다.  
   
--   가비지 수집 직전에 측정하는 경우 가비지 수집이 시작되기 전에 가능한 한 많은 할당을 측정합니다.  
+- 가비지 수집 직전에 측정하는 경우 가비지 수집이 시작되기 전에 가능한 한 많은 할당을 측정합니다.  
   
--   가비지 수집기 데이터 구조는 순회에 유효한 상태가 아니며 완전한 결과를 제공할 수 없으므로 가비지 수집 중에 측정하는 것은 문제가 됩니다. 이것은 의도적인 것입니다.  
+- 가비지 수집기 데이터 구조는 순회에 유효한 상태가 아니며 완전한 결과를 제공할 수 없으므로 가비지 수집 중에 측정하는 것은 문제가 됩니다. 이것은 의도적인 것입니다.  
   
--   동시 가비지 수집과 함께 워크스테이션 가비지 수집을 사용하는 경우 회수된 개체가 압축되지 않으므로 힙 크기가 동일하거나 더 클 수 있습니다(조각화로 인해 더 크게 보일 수 있음).  
+- 동시 가비지 수집과 함께 워크스테이션 가비지 수집을 사용하는 경우 회수된 개체가 압축되지 않으므로 힙 크기가 동일하거나 더 클 수 있습니다(조각화로 인해 더 크게 보일 수 있음).  
   
--   실제 메모리 부하가 너무 높으면 2세대의 동시 가비지 수집이 지연됩니다.  
+- 실제 메모리 부하가 너무 높으면 2세대의 동시 가비지 수집이 지연됩니다.  
   
  다음 절차에서는 관리되는 힙을 측정할 수 있도록 중단점을 설정하는 방법을 설명합니다.  
   
 <a name="GenBreak"></a>   
 ##### <a name="to-set-a-breakpoint-at-the-end-of-garbage-collection"></a>가비지 수집의 끝에 중단점을 설정하려면  
   
--   SOS 디버거 확장이 로드된 WinDbg에서 다음 명령을 입력합니다.  
+- SOS 디버거 확장이 로드된 WinDbg에서 다음 명령을 입력합니다.  
   
      **bp mscorwks!WKS::GCHeap::RestartEE "j (dwo(mscorwks!WKS::GCHeap::GcCondemnedGeneration)==2) 'kb';'g'"**  
   
@@ -234,44 +234,44 @@ ms.locfileid: "59310566"
 ## <a name="performance-check-procedures"></a>성능 검사 절차  
  이 섹션에서는 성능 문제의 원인을 격리시키는 다음 절차를 설명합니다.  
   
--   [문제가 가비지 컬렉션에 의해 발생한 것인지 여부를 확인합니다.](#IsGC)  
+- [문제가 가비지 컬렉션에 의해 발생한 것인지 여부를 확인합니다.](#IsGC)  
   
--   [메모리 부족 예외가 관리되는지 여부를 확인합니다.](#OOMIsManaged)  
+- [메모리 부족 예외가 관리되는지 여부를 확인합니다.](#OOMIsManaged)  
   
--   [예약할 수 있는 가상 메모리 양을 확인합니다.](#GetVM)  
+- [예약할 수 있는 가상 메모리 양을 확인합니다.](#GetVM)  
   
--   [실제 메모리가 충분한지 확인합니다.](#Physical)  
+- [실제 메모리가 충분한지 확인합니다.](#Physical)  
   
--   [관리되는 힙이 커밋 중인 메모리 양을 확인합니다.](#ManagedHeapCommit)  
+- [관리되는 힙이 커밋 중인 메모리 양을 확인합니다.](#ManagedHeapCommit)  
   
--   [관리되는 힙이 예약하는 메모리 양을 확인합니다.](#ManagedHeapReserve)  
+- [관리되는 힙이 예약하는 메모리 양을 확인합니다.](#ManagedHeapReserve)  
   
--   [2세대의 대형 개체를 확인합니다.](#ExamineGen2)  
+- [2세대의 대형 개체를 확인합니다.](#ExamineGen2)  
   
--   [개체에 대한 참조를 확인합니다.](#ObjRef)  
+- [개체에 대한 참조를 확인합니다.](#ObjRef)  
   
--   [종료자가 실행되었는지 여부를 확인합니다.](#Induce)  
+- [종료자가 실행되었는지 여부를 확인합니다.](#Induce)  
   
--   [종료 대기 중인 개체가 있는지 여부를 확인합니다.](#Finalize)  
+- [종료 대기 중인 개체가 있는지 여부를 확인합니다.](#Finalize)  
   
--   [관리되는 힙의 여유 공간 크기를 확인합니다.](#Fragmented)  
+- [관리되는 힙의 여유 공간 크기를 확인합니다.](#Fragmented)  
   
--   [고정된 개체 수를 확인합니다.](#Pinned)  
+- [고정된 개체 수를 확인합니다.](#Pinned)  
   
--   [가비지 컬렉션 기간을 확인합니다.](#TimeInGC)  
+- [가비지 컬렉션 기간을 확인합니다.](#TimeInGC)  
   
--   [가비지 컬렉션 트리거를 확인합니다.](#Triggered)  
+- [가비지 컬렉션 트리거를 확인합니다.](#Triggered)  
   
--   [높은 CPU 사용량이 가비지 컬렉션에 의해 발생한 것인지 여부를 확인합니다.](#HighCPU)  
+- [높은 CPU 사용량이 가비지 컬렉션에 의해 발생한 것인지 여부를 확인합니다.](#HighCPU)  
   
 <a name="IsGC"></a>   
 ##### <a name="to-determine-whether-the-problem-is-caused-by-garbage-collection"></a>문제가 가비지 컬렉션에 의해 발생한 것인지 여부를 확인하려면  
   
--   다음 두 개의 메모리 성능 카운터를 검사합니다.  
+- 다음 두 개의 메모리 성능 카운터를 검사합니다.  
   
-    -   **% Time in GC**. 마지막 가비지 컬렉션 주기 이후 가비지 컬렉션을 수행하는 데 소요된 경과 시간의 백분율을 표시합니다. 이 카운터를 사용하여 가비지 수집기가 관리되는 힙 공간을 사용할 수 있도록 하는 데 너무 많은 시간을 소비하고 있는지 여부를 확인할 수 있습니다. 가비지 수집에 소요된 시간이 비교적 적은 경우 관리되는 힙 외부의 리소스 문제를 나타낼 수 있습니다. 이 카운터는 동시 또는 백그라운드 가비지 컬렉션이 관련된 경우 정확하지 않을 수 있습니다.  
+    - **% Time in GC**. 마지막 가비지 컬렉션 주기 이후 가비지 컬렉션을 수행하는 데 소요된 경과 시간의 백분율을 표시합니다. 이 카운터를 사용하여 가비지 수집기가 관리되는 힙 공간을 사용할 수 있도록 하는 데 너무 많은 시간을 소비하고 있는지 여부를 확인할 수 있습니다. 가비지 수집에 소요된 시간이 비교적 적은 경우 관리되는 힙 외부의 리소스 문제를 나타낼 수 있습니다. 이 카운터는 동시 또는 백그라운드 가비지 컬렉션이 관련된 경우 정확하지 않을 수 있습니다.  
   
-    -   **# Total committed Bytes**. 가비지 컬렉션기에서 현재 커밋한 가상 메모리 크기를 표시합니다. 이 카운터를 사용하여 가비지 수집기에서 사용되는 메모리가 애플리케이션에서 사용되는 메모리에 비해 과도하게 많은지 여부를 확인할 수 있습니다.  
+    - **# Total committed Bytes**. 가비지 컬렉션기에서 현재 커밋한 가상 메모리 크기를 표시합니다. 이 카운터를 사용하여 가비지 수집기에서 사용되는 메모리가 애플리케이션에서 사용되는 메모리에 비해 과도하게 많은지 여부를 확인할 수 있습니다.  
   
      대부분의 메모리 성능 카운터는 각 가비지 수집이 끝날 때 업데이트됩니다. 따라서 정보를 확인하려는 현재 상태가 반영되지 않을 수 있습니다.  
   
@@ -311,7 +311,7 @@ ms.locfileid: "59310566"
 <a name="GetVM"></a>   
 ##### <a name="to-determine-how-much-virtual-memory-can-be-reserved"></a>예약할 수 있는 가상 메모리 양을 확인하려면  
   
--   SOS 디버거 확장이 로드된 WinDbg에서 다음 명령을 입력하여 최대 여유 영역을 가져옵니다.  
+- SOS 디버거 확장이 로드된 WinDbg에서 다음 명령을 입력하여 최대 여유 영역을 가져옵니다.  
   
      **!address -summary**  
   
@@ -325,7 +325,7 @@ ms.locfileid: "59310566"
   
      또는  
   
--   다음 **vmstat** 명령을 사용합니다.  
+- 다음 **vmstat** 명령을 사용합니다.  
   
      **!vmstat**  
   
@@ -353,7 +353,7 @@ ms.locfileid: "59310566"
 <a name="ManagedHeapCommit"></a>   
 ##### <a name="to-determine-how-much-memory-the-managed-heap-is-committing"></a>관리되는 힙이 커밋 중인 메모리 양을 확인하려면  
   
--   `# Total committed bytes` 메모리 성능 카운터를 사용하여 관리되는 힙에서 커밋 중인 바이트 수를 가져올 수 있습니다. 가비지 수집기는 동시에 모두 커밋하지 않고 필요에 따라 세그먼트의 청크를 커밋합니다.  
+- `# Total committed bytes` 메모리 성능 카운터를 사용하여 관리되는 힙에서 커밋 중인 바이트 수를 가져올 수 있습니다. 가비지 수집기는 동시에 모두 커밋하지 않고 필요에 따라 세그먼트의 청크를 커밋합니다.  
   
     > [!NOTE]
     >  `# Bytes in all Heaps` 성능 카운터는 관리되는 힙의 실제 메모리 사용량을 나타내지 않으므로 사용하지 마세요. 세대 크기가 이 값에 포함되며 실제로 해당 임계값 크기, 즉 세대가 개체로 채워진 경우 가비지 수집을 실행하는 크기입니다. 따라서 이 값은 일반적으로 0입니다.  
@@ -361,14 +361,14 @@ ms.locfileid: "59310566"
 <a name="ManagedHeapReserve"></a>   
 ##### <a name="to-determine-how-much-memory-the-managed-heap-reserves"></a>관리되는 힙이 예약하는 메모리 양을 확인하려면  
   
--   `# Total reserved bytes` 메모리 성능 카운터를 사용합니다.  
+- `# Total reserved bytes` 메모리 성능 카운터를 사용합니다.  
   
      가비지 수집기는 세그먼트의 메모리를 예약하고, **eeheap** 명령을 사용하여 세그먼트가 시작되는 위치를 확인할 수 있습니다.  
   
     > [!IMPORTANT]
     >  가비지 수집기가 각 세그먼트에 대해 할당하는 메모리 양은 확인할 수 있지만 세그먼트 크기는 구현마다 다르며 정기 업데이트를 포함하여 언제든지 변경될 수 있습니다. 앱에서 특정 세그먼트 크기를 가정하거나 의존해서는 안 되며, 세그먼트 할당에 사용할 수 있는 메모리 크기를 구성하려고 해서도 안 됩니다.  
   
--   SOS 디버거 확장이 로드된 WinDbg 또는 Visual Studio 디버거에서 다음 명령을 입력합니다.  
+- SOS 디버거 확장이 로드된 WinDbg 또는 Visual Studio 디버거에서 다음 명령을 입력합니다.  
   
      **!eeheap -gc**  
   
@@ -409,7 +409,7 @@ ms.locfileid: "59310566"
 <a name="ExamineGen2"></a>   
 ##### <a name="to-determine-large-objects-in-generation-2"></a>2세대의 대형 개체를 확인하려면  
   
--   SOS 디버거 확장이 로드된 WinDbg 또는 Visual Studio 디버거에서 다음 명령을 입력합니다.  
+- SOS 디버거 확장이 로드된 WinDbg 또는 Visual Studio 디버거에서 다음 명령을 입력합니다.  
   
      **!dumpheap –stat**  
   
@@ -448,13 +448,13 @@ ms.locfileid: "59310566"
 <a name="ObjRef"></a>   
 ##### <a name="to-determine-references-to-objects"></a>개체에 대한 참조를 확인하려면  
   
--   SOS 디버거 확장이 로드된 WinDbg에서 다음 명령을 입력하여 개체에 대한 참조를 나열합니다.  
+- SOS 디버거 확장이 로드된 WinDbg에서 다음 명령을 입력하여 개체에 대한 참조를 나열합니다.  
   
      **!gcroot**  
   
      `-or-`  
   
--   특정 개체에 대한 참조를 확인하려면 다음과 같이 주소를 포함합니다.  
+- 특정 개체에 대한 참조를 확인하려면 다음과 같이 주소를 포함합니다.  
   
      **!gcroot 1c37b2ac**  
   
@@ -481,7 +481,7 @@ ms.locfileid: "59310566"
 <a name="Induce"></a>   
 ##### <a name="to-determine-whether-a-finalizer-has-been-run"></a>종료자가 실행되었는지 여부를 확인하려면  
   
--   다음 코드가 포함된 테스트 프로그램을 실행합니다.  
+- 다음 코드가 포함된 테스트 프로그램을 실행합니다.  
   
     ```  
     GC.Collect();  
@@ -518,7 +518,7 @@ ms.locfileid: "59310566"
 <a name="Fragmented"></a>   
 ##### <a name="to-determine-the-amount-of-free-space-in-the-managed-heap"></a>관리되는 힙의 여유 공간 크기를 확인하려면  
   
--   SOS 디버거 확장이 로드된 WinDbg 또는 Visual Studio 디버거에서 다음 명령을 입력합니다.  
+- SOS 디버거 확장이 로드된 WinDbg 또는 Visual Studio 디버거에서 다음 명령을 입력합니다.  
   
      **!dumpheap -type Free -stat**  
   
@@ -532,7 +532,7 @@ ms.locfileid: "59310566"
     Total 230 objects  
     ```  
   
--   0세대의 여유 공간을 확인하려면 세대별 메모리 소비 정보를 위해 다음 명령을 입력합니다.  
+- 0세대의 여유 공간을 확인하려면 세대별 메모리 소비 정보를 위해 다음 명령을 입력합니다.  
   
      **!eeheap -gc**  
   
@@ -552,7 +552,7 @@ ms.locfileid: "59310566"
     46120000 46120038  49e05d04   0x03ce5ccc(63855820)  
     ```  
   
--   0세대에서 사용되는 공간을 계산합니다.  
+- 0세대에서 사용되는 공간을 계산합니다.  
   
      **? 49e05d04-0x49521f8c**  
   
@@ -562,7 +562,7 @@ ms.locfileid: "59310566"
     Evaluate expression: 9321848 = 008e3d78  
     ```  
   
--   다음 명령은 0세대 범위 내의 여유 공간을 덤프합니다.  
+- 다음 명령은 0세대 범위 내의 여유 공간을 덤프합니다.  
   
      **!dumpheap -type Free -stat 0x49521f8c 49e05d04**  
   
@@ -594,7 +594,7 @@ ms.locfileid: "59310566"
 <a name="Pinned"></a>   
 ##### <a name="to-determine-the-number-of-pinned-objects"></a>고정된 개체 수를 확인하려면  
   
--   SOS 디버거 확장이 로드된 WinDbg 또는 Visual Studio 디버거에서 다음 명령을 입력합니다.  
+- SOS 디버거 확장이 로드된 WinDbg 또는 Visual Studio 디버거에서 다음 명령을 입력합니다.  
   
      **!gchandles**  
   
@@ -609,7 +609,7 @@ ms.locfileid: "59310566"
 <a name="TimeInGC"></a>   
 ##### <a name="to-determine-the-length-of-time-in-a-garbage-collection"></a>가비지 수집 기간을 확인하려면  
   
--   `% Time in GC` 메모리 성능 카운터를 검사합니다.  
+- `% Time in GC` 메모리 성능 카운터를 검사합니다.  
   
      값은 샘플 간격 시간을 사용하여 계산됩니다. 각 가비지 수집이 끝날 때 카운터가 업데이트되므로 간격 중에 수집이 발생하지 않은 경우 현재 샘플은 이전 샘플과 동일한 값을 갖습니다.  
   
@@ -640,7 +640,7 @@ ms.locfileid: "59310566"
   
      2번째 2세대 가비지 수집은 3번째 간격 중에 시작되고 5번째 간격에 완료되었습니다. 최악의 경우를 가정하여 0세대에 대한 마지막 수집은 2번째 간격이 시작될 때 완료된 수집이었으며 5번째 간격이 끝날 때 2세대 가비지 수집이 완료되었습니다. 따라서 0세대 가비지 수집의 끝과 2세대 가비지 수집의 끝 사이의 시간은 4초입니다. `% Time in GC` 카운터는 20%이므로 2세대 가비지 수집에 소요되었을 수 있는 최대 시간은 (4초 * 20% = 800ms)입니다.  
   
--   또는 [가비지 컬렉션 ETW 이벤트](../../../docs/framework/performance/garbage-collection-etw-events.md)를 사용하여 가비지 컬렉션 길이를 결정하고 정보를 분석하여 가비지 컬렉션 기간을 확인할 수 있습니다.  
+- 또는 [가비지 컬렉션 ETW 이벤트](../../../docs/framework/performance/garbage-collection-etw-events.md)를 사용하여 가비지 컬렉션 길이를 결정하고 정보를 분석하여 가비지 컬렉션 기간을 확인할 수 있습니다.  
   
      예를 들어 다음 데이터는 비 동시 가비지 컬렉션 중에 발생한 이벤트 시퀀스를 보여 줍니다.  
   
@@ -696,7 +696,7 @@ ms.locfileid: "59310566"
 <a name="Triggered"></a>   
 ##### <a name="to-determine-what-triggered-a-garbage-collection"></a>가비지 수집 트리거를 확인하려면  
   
--   SOS 디버거 확장이 로드된 WinDbg 또는 Visual Studio 디버거에서 다음 명령을 입력하여 호출 스택과 함께 모든 스레드를 표시합니다.  
+- SOS 디버거 확장이 로드된 WinDbg 또는 Visual Studio 디버거에서 다음 명령을 입력하여 호출 스택과 함께 모든 스레드를 표시합니다.  
   
      **~\*kb**  
   
@@ -774,7 +774,7 @@ ms.locfileid: "59310566"
 <a name="HighCPU"></a>   
 ##### <a name="to-determine-whether-high-cpu-usage-is-caused-by-garbage-collection"></a>높은 CPU 사용량이 가비지 컬렉션에 의해 발생한 것인지 여부를 확인하려면  
   
--   `% Time in GC` 메모리 성능 카운터 값을 프로세스 시간과 상호 연결합니다.  
+- `% Time in GC` 메모리 성능 카운터 값을 프로세스 시간과 상호 연결합니다.  
   
      `% Time in GC` 값이 프로세스 시간과 동시에 급증하는 경우 가비지 수집으로 인해 CPU 사용량이 증가한 것입니다. 그러지 않으면 애플리케이션을 프로파일링하여 높은 사용량이 발생하는 위치를 찾습니다.  
   

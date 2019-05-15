@@ -5,21 +5,21 @@ ms.technology: dotnet-standard
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b10ab992089e2e9280162c4cd2273bc1d9dc35e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2efe31ce8ece241bdfeb95687c5496c7ba0fd626
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320420"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615298"
 ---
 # <a name="xslt-extension-objects"></a>XSLT 확장명 개체
 확장 개체를 사용하여 스타일시트의 기능을 확장할 수 있습니다. 확장명 개체는 <xref:System.Xml.Xsl.XsltArgumentList> 클래스를 사용하여 유지 관리합니다.  
   
  포함 스크립트를 사용하는 대신 확장명 개체를 사용하면 다음과 같은 이점을 활용할 수 있습니다.  
   
--   클래스의 캡슐화 및 재사용에 효과적입니다.  
+- 클래스의 캡슐화 및 재사용에 효과적입니다.  
   
--   스타일시트를 더 작게 유지하고 보다 쉽게 관리할 수 있습니다.  
+- 스타일시트를 더 작게 유지하고 보다 쉽게 관리할 수 있습니다.  
   
  <xref:System.Xml.Xsl.XsltArgumentList> 메서드를 사용하여 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 개체에 XSLT 확장 개체를 추가합니다. 이 때 정규화된 이름과 네임스페이스 URI가 확장 개체와 연결됩니다.  
   

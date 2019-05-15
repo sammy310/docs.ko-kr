@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: d815311a89ba09ade7e3092ca4eeab67cbe20bd0
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: b689bb7299d541708db7ae786bff62a1007608e5
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211255"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557883"
 ---
 # <a name="walkthrough-style-wpf-content"></a>연습: WPF 콘텐츠 스타일
 
@@ -58,15 +58,15 @@ WPF 컨트롤에 다른 스타일을 적용하여 모양과 동작을 변경할 
 
 1. Windows Forms 디자이너에서 `Form1`을 엽니다.
 
-2. 에 **도구 상자**를 두 번 클릭 `UserControl1` 의 인스턴스를 만드는 `UserControl1` 양식의 합니다.
+1. 에 **도구 상자**를 두 번 클릭 `UserControl1` 의 인스턴스를 만드는 `UserControl1` 양식의 합니다.
 
      `UserControl1` 인스턴스가 `elementHost1`이라는 새 <xref:System.Windows.Forms.Integration.ElementHost> 컨트롤에서 호스트됩니다.
 
-3. 에 대 한 스마트 태그 패널에서 `elementHost1`, 클릭 **호스팅된 콘텐츠 편집** 드롭 다운 목록에서.
+1. 에 대 한 스마트 태그 패널에서 `elementHost1`, 클릭 **호스팅된 콘텐츠 편집** 드롭 다운 목록에서.
 
      `UserControl1`이 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]에서 열립니다.
 
-4. XAML 뷰에서 `<UserControl>` 여는 태그 뒤에 다음 XAML을 삽입합니다.
+1. XAML 뷰에서 `<UserControl>` 여는 태그 뒤에 다음 XAML을 삽입합니다.
 
      이 XAML은 대비되는 그라데이션 테두리가 있는 그라데이션을 만듭니다. 컨트롤을 클릭하면 그라데이션이 변경되어 눌린 단추 모양을 생성합니다. 자세한 내용은 [스타일 지정 및 템플릿](../../wpf/controls/styling-and-templating.md)을 참조하세요.
 
@@ -118,7 +118,7 @@ WPF 컨트롤에 다른 스타일을 적용하여 모양과 동작을 변경할 
    </UserControl.Resources>
    ```
 
-4. 다음 XAML을 취소 단추의 `<Button>` 태그에 삽입하여 이전 단계에서 정의된 `SimpleButton` 스타일을 취소 단추에 적용합니다.
+1. 다음 XAML을 취소 단추의 `<Button>` 태그에 삽입하여 이전 단계에서 정의된 `SimpleButton` 스타일을 취소 단추에 적용합니다.
 
    ```xaml
    Style="{StaticResource SimpleButton}
@@ -131,15 +131,15 @@ WPF 컨트롤에 다른 스타일을 적용하여 모양과 동작을 변경할 
                 Style="{StaticResource SimpleButton}">Cancel</Button>
    ```
 
-5. 프로젝트를 빌드합니다.
+1. 프로젝트를 빌드합니다.
 
-6. Windows Forms 디자이너에서 `Form1`을 엽니다.
+1. Windows Forms 디자이너에서 `Form1`을 엽니다.
 
-7. 단추 컨트롤에 새 스타일이 적용됩니다.
+1. 단추 컨트롤에 새 스타일이 적용됩니다.
 
-8. **디버그** 메뉴에서 **디버깅 시작** 응용 프로그램을 실행 합니다.
+1. **디버그** 메뉴에서 **디버깅 시작** 응용 프로그램을 실행 합니다.
 
-9. 확인 및 취소 단추를 클릭하고 차이점을 확인합니다.
+1. 확인 및 취소 단추를 클릭하고 차이점을 확인합니다.
 
 ## <a name="see-also"></a>참고자료
 

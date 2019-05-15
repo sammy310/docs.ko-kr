@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73c745fbbdb66777b50478623d969c125f92474b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d08be327d4c6bf6dd1add3c7ea40ed491619a9ca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698893"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625615"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>PLINQ 및 TPL에 대한 사용자 지정 파티셔너
 데이터 소스에 대한 작업을 병렬화하기 위한 필수 단계 중 하나는 다중 스레드에서 동시에 액세스 가능한 여러 섹션으로 소스를 ‘분할’하는 것입니다. PLINQ 및 TPL(작업 병렬 라이브러리)은 병렬 쿼리 또는 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 루프를 쓸 때 투명하게 작동하는 기본 파티셔너를 제공합니다. 더 높은 수준의 시나리오에서는 고유한 파티셔너를 연결할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "54698893"
   
 |오버로드|부하 분산 사용|  
 |--------------|-------------------------|  
-|<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>|Always|  
+|<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>|항상|  
 |<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28%60%600%5B%5D%2CSystem.Boolean%29>|부울 인수가 true로 지정될 경우|  
 |<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28System.Collections.Generic.IList%7B%60%600%7D%2CSystem.Boolean%29>|부울 인수가 true로 지정될 경우|  
 |<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int32%2CSystem.Int32%29>|Never|  
@@ -100,25 +100,25 @@ ms.locfileid: "54698893"
 ### <a name="contract-for-partitioners"></a>파티셔너에 대한 계약  
  사용자 지정 파티셔너를 구현할 경우 다음 지침에 따르면 TPL에서 PLINQ 및 <xref:System.Threading.Tasks.Parallel.ForEach%2A>를 올바르게 조작할 수 있습니다.  
   
--   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>가 `partitionsCount`에 대해 0보다 작거나 같은 인수를 사용하여 호출되면 <xref:System.ArgumentOutOfRangeException>을 throw합니다. PLINQ 및 TPL이 0과 같은 `partitionCount`로는 전달되지 않더라도 가능성을 방지하는 것이 좋습니다.  
+- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>가 `partitionsCount`에 대해 0보다 작거나 같은 인수를 사용하여 호출되면 <xref:System.ArgumentOutOfRangeException>을 throw합니다. PLINQ 및 TPL이 0과 같은 `partitionCount`로는 전달되지 않더라도 가능성을 방지하는 것이 좋습니다.  
   
--   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> 및 <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>는 항상 `partitionsCount`개의 파티션을 반환해야 합니다. 파티셔너가 데이터를 모두 사용해서 요청한 만큼 파티션을 만들 수 없는 경우 메서드는 나머지 파티션에 대해 각각 빈 열거자를 반환해야 합니다. 그렇지 않으면 PLINQ 및 TPL이 둘 다 <xref:System.InvalidOperationException>을 throw합니다.  
+- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> 및 <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>는 항상 `partitionsCount`개의 파티션을 반환해야 합니다. 파티셔너가 데이터를 모두 사용해서 요청한 만큼 파티션을 만들 수 없는 경우 메서드는 나머지 파티션에 대해 각각 빈 열거자를 반환해야 합니다. 그렇지 않으면 PLINQ 및 TPL이 둘 다 <xref:System.InvalidOperationException>을 throw합니다.  
   
--   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>, <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>, <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A> 및 <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A>는 `null`(Visual Basic의 `Nothing`)을 반환하면 안 됩니다. 반환할 경우 PLINQ/TPL이 <xref:System.InvalidOperationException>을 throw합니다.  
+- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>, <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>, <xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A> 및 <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A>는 `null`(Visual Basic의 `Nothing`)을 반환하면 안 됩니다. 반환할 경우 PLINQ/TPL이 <xref:System.InvalidOperationException>을 throw합니다.  
   
--   파티션을 반환하는 메서드는 항상 데이터 소스를 완전히 고유하게 열거할 수 있는 파티션을 반환해야 합니다. 파티셔너의 디자인에 특별히 필요한 경우가 아니면 데이터 소스 또는 건너뛴 항목에는 중복이 없어야 합니다. 이 규칙을 따르지 않으면 출력 순서가 변경될 수 있습니다.  
+- 파티션을 반환하는 메서드는 항상 데이터 소스를 완전히 고유하게 열거할 수 있는 파티션을 반환해야 합니다. 파티셔너의 디자인에 특별히 필요한 경우가 아니면 데이터 소스 또는 건너뛴 항목에는 중복이 없어야 합니다. 이 규칙을 따르지 않으면 출력 순서가 변경될 수 있습니다.  
   
--   다음 부울 getter는 출력 순서가 변경되지 않도록 항상 다음 값을 정확하게 반환해야 합니다.  
+- 다음 부울 getter는 출력 순서가 변경되지 않도록 항상 다음 값을 정확하게 반환해야 합니다.  
   
-    -   `KeysOrderedInEachPartition`: 각 파티션이 키 인덱스가 증가하는 요소를 반환합니다.  
+    - `KeysOrderedInEachPartition`: 각 파티션이 키 인덱스가 증가하는 요소를 반환합니다.  
   
-    -   `KeysOrderedAcrossPartitions`: 반환되는 모든 파티션에서 파티션의 키 인덱스 *i*는 파티션의 키 인덱스 *i*-1보다 큽니다.  
+    - `KeysOrderedAcrossPartitions`: 반환되는 모든 파티션에서 파티션의 키 인덱스 *i*는 파티션의 키 인덱스 *i*-1보다 큽니다.  
   
-    -   `KeysNormalized`: 모든 키 인덱스는 0부터 시작하여 공백 없이 순차적으로 증가합니다.  
+    - `KeysNormalized`: 모든 키 인덱스는 0부터 시작하여 공백 없이 순차적으로 증가합니다.  
   
--   모든 인덱스는 고유해야 합니다. 중복 인덱스가 없어야 합니다. 이 규칙을 따르지 않으면 출력 순서가 변경될 수 있습니다.  
+- 모든 인덱스는 고유해야 합니다. 중복 인덱스가 없어야 합니다. 이 규칙을 따르지 않으면 출력 순서가 변경될 수 있습니다.  
   
--   모든 인덱스는 음수가 아니어야 합니다. 이 규칙을 따르지 않으면 PLINQ/TPL이 예외를 throw할 수 있습니다.  
+- 모든 인덱스는 음수가 아니어야 합니다. 이 규칙을 따르지 않으면 PLINQ/TPL이 예외를 throw할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목
 

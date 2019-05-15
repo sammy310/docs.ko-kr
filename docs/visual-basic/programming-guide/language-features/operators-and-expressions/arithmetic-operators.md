@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: 9f1d77ac27def556d94fac12dbde2f36d5b139de
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a1854e35e32a31dbf531e6705a7968434dd02e44
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649754"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593245"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Visual Basic의 산술 연산자
 산술 연산자는 리터럴, 변수, 다른 식, 함수 및 속성 호출 및 상수를 나타내는 숫자 값의 계산을 포함 하는 친숙 한 산술 연산을 수행 하도록 사용 됩니다. 피연산자의 개별 비트 수준에서 역할 및를 왼쪽 또는 오른쪽의 비트 패턴을 이동할 비트 시프트 연산자는 산술 연산자를 사용 하 여 분류 합니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "64649754"
  [!code-vb[VbVbalrOperators#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#63)]  
   
 ### <a name="attempted-division-by-zero"></a>0으로 나누기  
- 0으로 나누기는 관련 된 데이터 형식에 따라 다른 결과입니다. 정수 계열 사업부의 (`SByte`, `Byte`, `Short`, `UShort`, `Integer`를 `UInteger`, `Long`, `ULong`), [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] throw를 <xref:System.DivideByZeroException> 예외입니다. 나누기 작업에 `Decimal` 또는 `Single` 데이터 형식으로는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 도 throw를 <xref:System.DivideByZeroException> 예외.  
+ 0으로 나누기는 관련 된 데이터 형식에 따라 다른 결과입니다. 정수 계열 사업부의 (`SByte`, `Byte`, `Short`, `UShort`, `Integer`를 `UInteger`, `Long`, `ULong`),.NET Framework에서를 <xref:System.DivideByZeroException> 예외입니다. 나누기 작업에 `Decimal` 또는 `Single` 데이터 형식을.NET Framework도 throw를 <xref:System.DivideByZeroException> 예외입니다.  
   
  부동 소수점 나누기에서 합니다 `Double` 데이터 형식 예외가 throw 되지 및 결과 나타내는 클래스 멤버는 <xref:System.Double.NaN>를 <xref:System.Double.PositiveInfinity>, 또는 <xref:System.Double.NegativeInfinity>피제수에 따라 합니다. 다음 표에서 나누기의 다양 한 결과 `Double` 값을 0으로 합니다.  
   

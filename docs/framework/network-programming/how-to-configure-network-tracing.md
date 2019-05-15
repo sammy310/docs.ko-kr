@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-ms.openlocfilehash: cc08faba7edede3dd527b7c05fe47f6408e18a04
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2c2c2718d79ce9aa4fed343cf368bbf541e493d0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151556"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613706"
 ---
 # <a name="how-to-configure-network-tracing"></a>방법: 네트워크 추적 구성
 애플리케이션 또는 컴퓨터 구성 파일은 형식과 네트워크 추적의 내용을 결정하는 설정을 유지합니다. 이 절차를 수행하기 전에 추적이 활성화되어야 합니다. 추적을 사용하는 방법에 대한 자세한 내용은 [네트워크 추적 사용](../../../docs/framework/network-programming/enabling-network-tracing.md)을 참조하세요.  
@@ -27,7 +27,7 @@ ms.locfileid: "59151556"
   
 ### <a name="to-configure-network-tracing"></a>네트워크 추적을 구성하려면  
   
--   알맞은 구성 파일에 다음 줄을 추가합니다. 이런 설정을 위한 값과 옵션은 아래 표에 설명되어 있습니다.  
+- 알맞은 구성 파일에 다음 줄을 추가합니다. 이런 설정을 위한 값과 옵션은 아래 표에 설명되어 있습니다.  
   
     ```xml  
     <configuration>  

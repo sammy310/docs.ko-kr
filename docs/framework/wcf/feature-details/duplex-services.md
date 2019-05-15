@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: 33cfcb765b93309d365a85e679107405a55a91f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8197dfc877842be824a5b10c742ef4fb7792858
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858041"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592754"
 ---
 # <a name="duplex-services"></a>이중 서비스
 
@@ -87,10 +87,10 @@ binding.ClientBaseAddress = New Uri("http://localhost:8000/DuplexTestUsingCode/C
 ```
 
 > [!WARNING]
-> 이중 모델에서는 서비스나 클라이언트가 채널을 닫을 때를 자동으로 감지하지 않습니다. 따라서 클라이언트가 예기치 않게 종료되는 경우 기본적으로 클라이언트가 알림을 받지 못하고, 클라이언트가 예기치 않게 종료되는 경우에는 서비스가 알림을 받지 못합니다. 클라이언트와 서비스는 선택하는 경우 서로에게 알리도록 자체 프로토콜을 구현할 수 있습니다.
+> 이중 모델에서는 서비스나 클라이언트가 채널을 닫을 때를 자동으로 감지하지 않습니다. 따라서 클라이언트가 예기치 않게 종료 되 면 기본적으로 서비스를 알리지 않습니다, 또는 서비스를 예기치 않게 종료 되 면 클라이언트가 알림을 받지 못합니다. 클라이언트와 서비스는 선택하는 경우 서로에게 알리도록 자체 프로토콜을 구현할 수 있습니다. 오류 처리에 대 한 자세한 내용은 참조 하세요. [WCF 오류 처리](../wcf-error-handling.md)
 
 ## <a name="see-also"></a>참고자료
 
-- [이중](../../../../docs/framework/wcf/samples/duplex.md)
-- [클라이언트 런타임 동작 지정](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
-- [방법: 채널 팩터리를 만들고 관리 채널을 만들고 사용](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
+- [이중](../samples/duplex.md)
+- [클라이언트 런타임 동작 지정](../specifying-client-run-time-behavior.md)
+- [방법: 채널 팩터리를 만들고 관리 채널을 만들고 사용](how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)

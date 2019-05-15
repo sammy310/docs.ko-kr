@@ -630,3 +630,6 @@
             - name: 자습서
               tocHref: /dotnet/machine-learning/tutorials/
               topicHref: /dotnet/machine-learning/tutorials/index
+        - name: Apache Spark 가이드용 .NET
+          tocHref: /dotnet/spark/
+          topicHref: /dotnet/spark/index
