@@ -2,12 +2,12 @@
 title: 인터넷 정보 서비스 호스팅 지침
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
-ms.openlocfilehash: a537f37132e5014901d415cd96bc72a55ae0b750
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 92ee270426dbb7fdd166964c1b10e37f280e28f3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600257"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591883"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>인터넷 정보 서비스 호스팅 지침
 IIS(인터넷 정보 서비스)에서 호스팅하는 샘플을 실행하려면 IIS가 올바르게 설치되어 있고 실행 중인지 확인해야 합니다.  
@@ -163,7 +163,7 @@ IIS(인터넷 정보 서비스)에서 호스팅하는 샘플을 실행하려면 
 4. "Hello World"라는 텍스트가 포함된 웹 페이지가 나타납니다.  
   
 > [!NOTE]
->  새 버전의 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]를 설치할 때마다 aspnet_isapi를 IIS의 웹 서비스 확장으로 다시 등록해야 합니다. 이렇게 하려면 `aspnet_regiis –I –enable` 명령을 실행합니다.  
+>  .NET Framework의 새 버전을 설치할 때마다 다시 등록 해야 aspnet_isapi 웹 서비스 확장으로 IIS에 대 한 합니다. 이렇게 하려면 `aspnet_regiis –I –enable` 명령을 실행합니다.  
   
 ## <a name="sample-code"></a>샘플 코드  
   

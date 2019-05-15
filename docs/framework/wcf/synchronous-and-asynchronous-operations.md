@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 3f76d51ce5cc167e71e2f3f5e7944dae2e3265d7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c2e6a955a151e0e11bcf189085dc24e7815fb747
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645194"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582734"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>동기 및 비동기 작업
 이 항목에서는 비동기 서비스 작업의 구현 및 호출에 대해 설명합니다.  
@@ -110,7 +110,7 @@ public class AsyncExample
  이벤트 기반 비동기 패턴에 대한 자세한 내용은 [이벤트 기반 비동기 패턴](https://go.microsoft.com/fwlink/?LinkId=232515)을 참조하세요.  
   
 #### <a name="iasyncresult-asynchronous-pattern"></a>IAsyncResult 비동기 패턴  
- [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 비동기 프로그래밍 패턴을 사용하고 `<Begin>` 속성이 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A>로 설정된 `true` 메서드를 표시하여 서비스 작업을 비동기 방식으로 구현할 수 있습니다. 이 경우 비동기 작업은 동기 작업으로 동일한 형태로 메타 데이터에 노출 됩니다. 이 요청 메시지 및 상관 관계가 지정 된 응답 메시지를 사용 하 여 단일 작업으로 노출 됩니다. 그런 다음 클라이언트 프로그래밍 모델에서는 둘 중 하나를 선택할 수 있습니다. 즉, 서비스가 호출될 때 요청-응답 메시지 교환이 발생하는 한 이 패턴을 동기 작업이나 비동기 작업으로 나타낼 수 있습니다.  
+ 서비스 작업을 비동기 방식으로 표시 및.NET Framework 비동기 프로그래밍 패턴을 사용 하 여 구현할 수 있습니다 합니다 `<Begin>` 메서드를 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> 속성이로 설정 `true`합니다. 이 경우 비동기 작업은 동기 작업으로 동일한 형태로 메타 데이터에 노출 됩니다. 이 요청 메시지 및 상관 관계가 지정 된 응답 메시지를 사용 하 여 단일 작업으로 노출 됩니다. 그런 다음 클라이언트 프로그래밍 모델에서는 둘 중 하나를 선택할 수 있습니다. 즉, 서비스가 호출될 때 요청-응답 메시지 교환이 발생하는 한 이 패턴을 동기 작업이나 비동기 작업으로 나타낼 수 있습니다.  
   
  일반적으로 시스템의 비동기 특성을 사용하는 경우 스레드에 대한 종속성을 사용하지 않아야 합니다.  작업 디스패치 처리의 다양한 단계에 데이터를 전달하는 가장 안정적인 방법은 확장을 사용하는 것입니다.  
   

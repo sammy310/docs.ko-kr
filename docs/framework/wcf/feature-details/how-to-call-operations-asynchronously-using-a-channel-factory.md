@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cc17dd47-b9ad-451c-a362-e36e0aac7ba0
-ms.openlocfilehash: 17b6dd979f7554cd433cc1abcf2a4da8dd9b83cb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac5817c5c1cfcf88be3f85836749eed53004dd43
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779342"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591139"
 ---
 # <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>방법: 채널 팩터리를 사용하여 비동기적으로 작업 호출
 이 항목에서는 <xref:System.ServiceModel.ChannelFactory%601> 기반 클라이언트 응용 프로그램을 사용하여 클라이언트에서 서비스 작업에 비동기적으로 액세스하는 방법에 대해 설명합니다. 서비스를 호출하기 위해 <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> 개체를 사용하는 경우 이벤트 구동 비동기 호출 모델을 사용할 수 있습니다. 자세한 내용은 [방법: 서비스 작업을 비동기적으로 호출](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)합니다. 이벤트 기반 비동기 호출 모델에 대 한 자세한 내용은 참조 하세요. [이벤트 기반 비동기 패턴 (EAP)](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).)  
@@ -42,7 +42,7 @@ ms.locfileid: "61779342"
      콜백 함수가 실행될 때 클라이언트는 결과를 검색하기 위해 `End<operation>`(예: `EndAdd`)을 호출합니다.  
   
 ## <a name="example"></a>예제  
- 이전 절차에 사용된 클라이언트 코드와 함께 사용되는 서비스는 다음 코드에서와 같이 `ICalculator` 인터페이스를 구현합니다. 서비스 쪽에는 `Add` 및 `Subtract` 계약의 작업은 동기적으로 호출 런타임 Windows Communication Foundation (WCF)에서 이전 클라이언트 단계는 클라이언트에서 비동기적으로 호출 하는 경우에 합니다. 클라이언트가 `Multiply` 및 `Divide` 작업을 비동기적으로 호출하더라도 서비스 쪽에서는 이 작업을 사용하여 비동기적으로 서비스를 호출합니다. 다음 예제에서는 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> 속성을 `true`로 설정합니다. 이 속성 설정을 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 비동기 패턴 구현과 함께 사용하면 런타임에서 작업이 비동기적으로 호출됩니다.  
+ 이전 절차에 사용된 클라이언트 코드와 함께 사용되는 서비스는 다음 코드에서와 같이 `ICalculator` 인터페이스를 구현합니다. 서비스 쪽에는 `Add` 및 `Subtract` 계약의 작업은 동기적으로 호출 런타임 Windows Communication Foundation (WCF)에서 이전 클라이언트 단계는 클라이언트에서 비동기적으로 호출 하는 경우에 합니다. 클라이언트가 `Multiply` 및 `Divide` 작업을 비동기적으로 호출하더라도 서비스 쪽에서는 이 작업을 사용하여 비동기적으로 서비스를 호출합니다. 다음 예제에서는 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> 속성을 `true`로 설정합니다. 이 속성 설정을.NET Framework 비동기 패턴의 구현이 함께 작업을 비동기적으로 호출 하려면 런타임에 지시 합니다.  
   
  [!code-csharp[C_How_To_CF_Async#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_how_to_cf_async/cs/service.cs#4)]
  [!code-vb[C_How_To_CF_Async#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_how_to_cf_async/vb/service.vb#4)]  
