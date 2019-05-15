@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: b4634465159714743644cce08bfe91e022811fd2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 658ffe2b9e41efb0ae648ea4540490303fd26573
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699351"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65669513"
 ---
-<span data-ttu-id="15565-101">Microsoft ActiveX</span><span class="sxs-lookup"><span data-stu-id="15565-101">Microsoft ActiveX</span></span>
+<span data-ttu-id="2bd0b-101">Microsoft ActiveX</span><span class="sxs-lookup"><span data-stu-id="2bd0b-101">Microsoft ActiveX</span></span>
