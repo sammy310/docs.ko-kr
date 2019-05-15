@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Ping
 ms.assetid: bbf20f5b-eca1-4661-af04-cb8837f9af05
-ms.openlocfilehash: bca8fc1cb3a54be9c329dc02aa27057ad839b3d3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c4efe358147c10ac31d42b83f6f4a65c274fe8dc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127864"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624569"
 ---
-# <a name="how-to-ping-a-host"></a><span data-ttu-id="87f1f-102">방법: 호스트 Ping</span><span class="sxs-lookup"><span data-stu-id="87f1f-102">How to: Ping a Host</span></span>
-<span data-ttu-id="87f1f-103">이 샘플에서는 원격 호스트를 ping하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="87f1f-103">This sample shows how to ping a remote host.</span></span>  
+# <a name="how-to-ping-a-host"></a><span data-ttu-id="6cce1-102">방법: 호스트 Ping</span><span class="sxs-lookup"><span data-stu-id="6cce1-102">How to: Ping a Host</span></span>
+<span data-ttu-id="6cce1-103">이 샘플에서는 원격 호스트를 ping하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6cce1-103">This sample shows how to ping a remote host.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="87f1f-104">예제</span><span class="sxs-lookup"><span data-stu-id="87f1f-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="6cce1-104">예제</span><span class="sxs-lookup"><span data-stu-id="6cce1-104">Example</span></span>  
   
 ```csharp
 using System;  
@@ -120,7 +120,7 @@ namespace Examples.System.Net.NetworkInformation.PingTest
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="87f1f-105">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="87f1f-105">Compiling the Code</span></span>  
- <span data-ttu-id="87f1f-106">이 예제에는 다음 사항이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="87f1f-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="6cce1-105">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="6cce1-105">Compiling the Code</span></span>  
+ <span data-ttu-id="6cce1-106">이 예제에는 다음 사항이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="6cce1-106">This example requires:</span></span>  
   
--   <span data-ttu-id="87f1f-107">**System.Net** 네임스페이스에 대한 참조.</span><span class="sxs-lookup"><span data-stu-id="87f1f-107">References to the **System.Net** namespace.</span></span>
+- <span data-ttu-id="6cce1-107">**System.Net** 네임스페이스에 대한 참조.</span><span class="sxs-lookup"><span data-stu-id="6cce1-107">References to the **System.Net** namespace.</span></span>

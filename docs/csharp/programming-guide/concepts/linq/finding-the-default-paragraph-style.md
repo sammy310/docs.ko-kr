@@ -2,26 +2,26 @@
 title: 기본 단락 스타일 찾기(C#)
 ms.date: 07/20/2015
 ms.assetid: be102177-8ab0-444a-b671-7023e555ffdb
-ms.openlocfilehash: 052accf31007001c0fa0d46870ee6e4cd30f6bb8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 89c70fcbc9d5286e2c9381250b30d525ebb1eb36
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674078"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596690"
 ---
-# <a name="finding-the-default-paragraph-style-c"></a><span data-ttu-id="07802-102">기본 단락 스타일 찾기(C#)</span><span class="sxs-lookup"><span data-stu-id="07802-102">Finding the Default Paragraph Style (C#)</span></span>
-<span data-ttu-id="07802-103">WordprocessingML 문서에서 정보 조작 자습서의 첫 번째 작업은 문서에 있는 단락의 기본 스타일을 찾는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="07802-103">The first task in the Manipulating Information in a WordprocessingML Document tutorial is to find the default style of paragraphs in the document.</span></span>  
+# <a name="finding-the-default-paragraph-style-c"></a><span data-ttu-id="4e1b1-102">기본 단락 스타일 찾기(C#)</span><span class="sxs-lookup"><span data-stu-id="4e1b1-102">Finding the Default Paragraph Style (C#)</span></span>
+<span data-ttu-id="4e1b1-103">WordprocessingML 문서에서 정보 조작 자습서의 첫 번째 작업은 문서에 있는 단락의 기본 스타일을 찾는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="4e1b1-103">The first task in the Manipulating Information in a WordprocessingML Document tutorial is to find the default style of paragraphs in the document.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="07802-104">예제</span><span class="sxs-lookup"><span data-stu-id="07802-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="4e1b1-104">예제</span><span class="sxs-lookup"><span data-stu-id="4e1b1-104">Example</span></span>  
   
-### <a name="description"></a><span data-ttu-id="07802-105">설명</span><span class="sxs-lookup"><span data-stu-id="07802-105">Description</span></span>  
- <span data-ttu-id="07802-106">다음 예제에서는 Office Open XML WordprocessingML 문서를 열고 패키지의 문서 및 스타일 부분을 찾은 다음 기본 스타일 이름을 찾는 쿼리를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="07802-106">The following example opens an Office Open XML WordprocessingML document, finds the document and style parts of the package, and then executes a query that finds the default style name.</span></span> <span data-ttu-id="07802-107">Office Open XML 문서 패키지와 패키지를 구성하는 부분에 대한 자세한 내용은 [Office Open XML WordprocessingML 문서 정보(C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="07802-107">For information about Office Open XML document packages, and the parts they consist of, see [Details of Office Open XML WordprocessingML Documents (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md).</span></span>  
+### <a name="description"></a><span data-ttu-id="4e1b1-105">설명</span><span class="sxs-lookup"><span data-stu-id="4e1b1-105">Description</span></span>  
+ <span data-ttu-id="4e1b1-106">다음 예제에서는 Office Open XML WordprocessingML 문서를 열고 패키지의 문서 및 스타일 부분을 찾은 다음 기본 스타일 이름을 찾는 쿼리를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="4e1b1-106">The following example opens an Office Open XML WordprocessingML document, finds the document and style parts of the package, and then executes a query that finds the default style name.</span></span> <span data-ttu-id="4e1b1-107">Office Open XML 문서 패키지와 패키지를 구성하는 부분에 대한 자세한 내용은 [Office Open XML WordprocessingML 문서 정보(C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="4e1b1-107">For information about Office Open XML document packages, and the parts they consist of, see [Details of Office Open XML WordprocessingML Documents (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md).</span></span>  
   
- <span data-ttu-id="07802-108">쿼리에서는 값이 "paragraph"인 `w:style` 특성과 값이 "1"인 `w:type` 특성을 가진 `w:default`이라는 노드를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="07802-108">The query finds a node named `w:style` that has an attribute named `w:type` with a value of "paragraph", and also has an attribute named `w:default` with a value of "1".</span></span> <span data-ttu-id="07802-109">이러한 특성을 가진 XML 노드는 하나뿐이기 때문에 쿼리에서는 <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> 연산자를 사용하여 컬렉션을 singleton으로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="07802-109">Because there will be only one XML node with these attributes, the query uses the <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> operator to convert a collection to a singleton.</span></span> <span data-ttu-id="07802-110">그런 다음 이름이 `w:styleId`인 특성의 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="07802-110">It then gets the value of the attribute with the name `w:styleId`.</span></span>  
+ <span data-ttu-id="4e1b1-108">쿼리에서는 값이 "paragraph"인 `w:style` 특성과 값이 "1"인 `w:type` 특성을 가진 `w:default`이라는 노드를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="4e1b1-108">The query finds a node named `w:style` that has an attribute named `w:type` with a value of "paragraph", and also has an attribute named `w:default` with a value of "1".</span></span> <span data-ttu-id="4e1b1-109">이러한 특성을 가진 XML 노드는 하나뿐이기 때문에 쿼리에서는 <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> 연산자를 사용하여 컬렉션을 singleton으로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="4e1b1-109">Because there will be only one XML node with these attributes, the query uses the <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> operator to convert a collection to a singleton.</span></span> <span data-ttu-id="4e1b1-110">그런 다음 이름이 `w:styleId`인 특성의 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="4e1b1-110">It then gets the value of the attribute with the name `w:styleId`.</span></span>  
   
- <span data-ttu-id="07802-111">이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고</span><span class="sxs-lookup"><span data-stu-id="07802-111">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="07802-112"><xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="07802-112">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="4e1b1-111">이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고</span><span class="sxs-lookup"><span data-stu-id="4e1b1-111">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="4e1b1-112"><xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="4e1b1-112">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="07802-113">코드</span><span class="sxs-lookup"><span data-stu-id="07802-113">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="4e1b1-113">코드</span><span class="sxs-lookup"><span data-stu-id="4e1b1-113">Code</span></span>  
   
 ```csharp  
 const string fileName = "SampleDoc.docx";  
@@ -76,18 +76,18 @@ string defaultStyle =
 Console.WriteLine("The default style is: {0}", defaultStyle);  
 ```  
   
-### <a name="comments"></a><span data-ttu-id="07802-114">설명</span><span class="sxs-lookup"><span data-stu-id="07802-114">Comments</span></span>  
- <span data-ttu-id="07802-115">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="07802-115">This example produces the following output:</span></span>  
+### <a name="comments"></a><span data-ttu-id="4e1b1-114">설명</span><span class="sxs-lookup"><span data-stu-id="4e1b1-114">Comments</span></span>  
+ <span data-ttu-id="4e1b1-115">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="4e1b1-115">This example produces the following output:</span></span>  
   
 ```  
 The default style is: Normal  
 ```  
   
-## <a name="next-steps"></a><span data-ttu-id="07802-116">다음 단계</span><span class="sxs-lookup"><span data-stu-id="07802-116">Next Steps</span></span>  
- <span data-ttu-id="07802-117">다음 예제에서는 문서의 모든 단락과 단락의 스타일을 찾는 유사한 쿼리를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="07802-117">In the next example, you'll create a similar query that finds all the paragraphs in a document and their styles:</span></span>  
+## <a name="next-steps"></a><span data-ttu-id="4e1b1-116">다음 단계</span><span class="sxs-lookup"><span data-stu-id="4e1b1-116">Next Steps</span></span>  
+ <span data-ttu-id="4e1b1-117">다음 예제에서는 문서의 모든 단락과 단락의 스타일을 찾는 유사한 쿼리를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="4e1b1-117">In the next example, you'll create a similar query that finds all the paragraphs in a document and their styles:</span></span>  
   
--   [<span data-ttu-id="07802-118">단락 및 해당 스타일 검색(C#)</span><span class="sxs-lookup"><span data-stu-id="07802-118">Retrieving the Paragraphs and Their Styles (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
+- [<span data-ttu-id="4e1b1-118">단락 및 해당 스타일 검색(C#)</span><span class="sxs-lookup"><span data-stu-id="4e1b1-118">Retrieving the Paragraphs and Their Styles (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
   
-## <a name="see-also"></a><span data-ttu-id="07802-119">참고 항목</span><span class="sxs-lookup"><span data-stu-id="07802-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4e1b1-119">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4e1b1-119">See also</span></span>
 
-- [<span data-ttu-id="07802-120">자습서: WordprocessingML 문서에서 내용 조작</span><span class="sxs-lookup"><span data-stu-id="07802-120">Tutorial: Manipulating Content in a WordprocessingML Document</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [<span data-ttu-id="4e1b1-120">자습서: WordprocessingML 문서에서 내용 조작</span><span class="sxs-lookup"><span data-stu-id="4e1b1-120">Tutorial: Manipulating Content in a WordprocessingML Document</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
