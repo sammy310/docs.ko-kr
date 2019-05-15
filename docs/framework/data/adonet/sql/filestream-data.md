@@ -2,12 +2,12 @@
 title: FILESTREAM 데이터
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: 1dea5d1e2f40c44e8f24bdbc9742288429d9933a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8521a9de3037ae759b0b0ea5bcbe84830f8629e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032489"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582714"
 ---
 # <a name="filestream-data"></a>FILESTREAM 데이터
 
@@ -20,7 +20,7 @@ varbinary(max) 열에 FILESTREAM 특성을 지정하면 SQL Server에서는 데�
 
 ## <a name="sqlclient-support-for-filestream"></a>FILESTREAM에 대한 SqlClient 지원
 
-[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server <xref:System.Data.SqlClient>, 읽기 및 쓰기 사용 하 여 FILESTREAM 데이터를 지원 합니다 <xref:System.Data.SqlTypes.SqlFileStream> 에 정의 된 클래스는 <xref:System.Data.SqlTypes> 네임 스페이스입니다. `SqlFileStream`은 데이터 스트림에 대한 읽기 및 쓰기 메서드를 제공하는 <xref:System.IO.Stream> 클래스에서 상속됩니다. 스트림에서 읽으면 바이트 배열과 같은 데이터가 스트림에서 데이터 구조로 전송되고, 데이터를 쓰면 데이터가 데이터 구조에서 스트림으로 전송됩니다.
+.NET Framework Data Provider for SQL Server <xref:System.Data.SqlClient>, 읽기 및 쓰기 사용 하 여 FILESTREAM 데이터를 지원 합니다 <xref:System.Data.SqlTypes.SqlFileStream> 에 정의 된 클래스는 <xref:System.Data.SqlTypes> 네임 스페이스입니다. `SqlFileStream`은 데이터 스트림에 대한 읽기 및 쓰기 메서드를 제공하는 <xref:System.IO.Stream> 클래스에서 상속됩니다. 스트림에서 읽으면 바이트 배열과 같은 데이터가 스트림에서 데이터 구조로 전송되고, 데이터를 쓰면 데이터가 데이터 구조에서 스트림으로 전송됩니다.
 
 ### <a name="creating-the-sql-server-table"></a>SQL Server 테이블 만들기
 

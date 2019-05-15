@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c0fcf9bd1c1e8df19458f681497b77348279915
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3dec3cea200f388a904296542776a02d838b3e19
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61914842"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063863"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework의 새로운 기능
 
@@ -35,7 +35,7 @@ ms.locfileid: "61914842"
 이 문서는 각 새로운 기능에 대한 포괄적인 정보를 제공하지 않으며 변경될 수 있습니다. .NET Framework에 대한 일반적인 내용은 [시작](../get-started/index.md)을 참조하십시오. 지원되는 플랫폼은 [시스템 요구 사항](~/docs/framework/get-started/system-requirements.md)을 참조하십시오. 다운로드 링크와 설치 지침은 [설치 가이드](../install/guide-for-developers.md)를 참조하십시오.
 
 > [!NOTE]
-> .NET Framework 팀에서는 플랫폼 지원을 확장하고 새로운 기능(예: 변경할 수 없는 컬렉션 및 SIMD 사용 벡터 형식)을 도입하기 위한 NuGet이 있는 번외 기능도 릴리스했습니다. 자세한 내용은 [추가 클래스 라이브러리 및 API](../additional-apis/index.md) 및 [.NET Framework 및 번외 릴리스](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)를 참조하십시오. .NET Framework에 대해서는 [NuGet 패키지의 전체 목록](https://blogs.msdn.microsoft.com/dotnet/p/nugetpackages/)을 참조하거나 [피드](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/)를 구독하십시오.
+> .NET Framework 팀에서는 플랫폼 지원을 확장하고 새로운 기능(예: 변경할 수 없는 컬렉션 및 SIMD 사용 벡터 형식)을 도입하기 위한 NuGet이 있는 번외 기능도 릴리스했습니다. 자세한 내용은 [추가 클래스 라이브러리 및 API](../additional-apis/index.md) 및 [.NET Framework 및 번외 릴리스](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)를 참조하십시오. .NET Framework에 대해서는 [NuGet 패키지의 전체 목록](https://www.nuget.org/profiles/dotnetframework)을 참조하세요.
 
 <a name="v48" />
 
@@ -115,6 +115,17 @@ ms.locfileid: "61914842"
      healthBehavior = new ServiceHealthBehavior();
   }
    host.Description.Behaviors.Add(healthBehavior);
+  ```
+
+  ```vb
+  Dim host As New ServiceHost(GetType(Service1),
+              New Uri("http://contoso:81/Service1"))
+  Dim healthBehavior As ServiceHealthBehavior = 
+     host.Description.Behaviors.Find(Of ServiceHealthBehavior)()
+  If healthBehavior Is Nothing Then
+     healthBehavior = New ServiceHealthBehavior()
+  End If
+  host.Description.Behaviors.Add(healthBehavior) 
   ```
 
 - 구성 파일 사용. 예:
@@ -551,6 +562,15 @@ public class StaticResourceResolvedEventArgs : EventArgs
 }
 ```
 
+```vb
+Public Class StaticResourceResolvedEvcentArgs : Inherits EventArgs
+   Public ReadOnly Property TargetObject As Object
+   Public ReadOnly Property TargetProperty As Object
+   Public ReadOnly Property ResourceDictionary As ResourceDictionary
+   Public ReadOnly Property ResourceKey As Object
+End Class
+```
+
 이벤트는  <xref:System.Windows.Diagnostics.VisualDiagnostics>가 활성화되고 [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A)  환경 변수가 설정된 경우 외에는 발생하지 않고 해당 `add` 접근자는 무시됩니다.
 
 #### <a name="clickonce"></a>ClickOnce
@@ -840,6 +860,13 @@ public interface ISessionStateModule : IHttpModule {
     void ReleaseSessionState(HttpContext context);
     Task ReleaseSessionStateAsync(HttpContext context);
 }
+```
+
+```vb
+Public Interface ISessionStateModule : Inherits IHttpModule
+   Sub ReleaseSessionState(context As HttpContext)
+   Function ReleaseSessionStateAsync(context As HttpContext) As Task
+End Interface
 ```
 
  또한 <xref:System.Web.SessionState.SessionStateUtility> 클래스는 비동기 작업을 지원하는 데 사용할 수 있는 두 개의 새로운 메서드 <xref:System.Web.SessionState.SessionStateUtility.IsSessionStateReadOnly%2A> 및 <xref:System.Web.SessionState.SessionStateUtility.IsSessionStateRequired%2A>를 포함합니다.
@@ -1515,6 +1542,10 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
         AppContext.SetSwitch("Switch.AmazingLib.ThrowOnException", true);
         ```
 
+        ```vb
+        AppContext.SetSwitch("Switch.AmazingLib.ThrowOnException", True)
+        ```
+
          라이브러리는 소비자가 스위치 값을 선언했는지 확인한 다음 적절하게 동작해야 합니다.
 
         ```csharp
@@ -1526,15 +1557,31 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
            // A false value implies the latest behavior.
         }
 
-           // The library can use the value of shouldThrow to throw exceptions or not.
-           if (shouldThrow)
-           {
-              // old code
-           }
-           else {
-              // new code
-           }
+        // The library can use the value of shouldThrow to throw exceptions or not.
+        if (shouldThrow)
+        {
+           // old code
         }
+        else 
+        {
+           // new code
+        }
+        ```
+
+        ```vb
+        If Not AppContext.TryGetSwitch("Switch.AmazingLib.ThrowOnException", shouldThrow) Then
+           ' This is the case where the switch value was not set by the application.
+           ' The library can choose to get the value of shouldThrow by other means.
+           ' If no overrides nor default values are specified, the value should be 'false'.
+           ' A false value implies the latest behavior.
+        End If
+
+        ' The library can use the value of shouldThrow to throw exceptions or not.
+        If shouldThrow Then
+           ' old code
+        Else 
+           ' new code
+        End If
         ```
 
          라이브러리에 의해 노출되는 공식 계약이므로 스위치에 대해 일관된 형식을 사용하는 것이 좋습니다. 다음은 두 가지 명확한 형식입니다.
@@ -1783,6 +1830,14 @@ Ngen PDB를 사용하면 NGen이 IL PDB에 대한 종속성 없이 IL-네이티�
                                               EnlistmentOptions enlistmentOptions)
     ```
 
+    ```vb
+    <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name:="FullTrust")>
+    public Function PromoteAndEnlistDurable(GresourceManagerIdentifier As Guid,
+                                            promotableNotification As IPromotableSinglePhaseNotification,
+                                            enlistmentNotification As ISinglePhaseNotification,
+                                            enlistmentOptions As EnlistmentOptions) As Enlistment
+    ```
+
      이 메서드는 <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> 메서드에 대한 응답으로 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType>가 이전에 만든 인리스트먼트에 의해 사용될 수 있습니다. 트랜잭션에서 MSDTC 트랜잭션으로 수준을 올리고, 수준을 올릴 수 있는 인리스트먼트를 지속적인 인리스트먼트로 “변환”하도록 `System.Transactions`에게 요청합니다. 이 메서드가 성공적으로 완료되면 `System.Transactions`이 <xref:System.Transactions.IPromotableSinglePhaseNotification> 인터페이스를 더 이상 참조하지 않습니다. 향후 모든 알림은 제공된 <xref:System.Transactions.ISinglePhaseNotification> 인터페이스에 도착하게 됩니다. 해당 인리스트먼트는 지속적인 인리스트먼트로 작동해야 하며 트랜잭션 로깅 및 복구를 지원합니다. 자세한 내용은 <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType>을 참조하세요. 또한 인리스트먼트는 <xref:System.Transactions.ISinglePhaseNotification>을 지원해야 합니다.  이 메서드는 <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> 호출을 처리하는 동안에*만* 호출할 수 있습니다. 그렇지 않은 경우 <xref:System.Transactions.TransactionException> 예외가 발생합니다.
 
 <a name="v451" />
@@ -1879,7 +1934,7 @@ ASP.NET 4.5.1의 새로운 기능은 [Visual Studio 2013용 ASP.NET 및 Web Tool
 
 - .NET Framework가 [!INCLUDE[win8](../../../includes/win8-md.md)]에서 사용되면 유니코드 6.0을 구현하는 문자열 비교가 운영 체제에 위임됨. 다른 플랫폼에서 실행되는 경우 유니코드 5.x를 구현하는 자체 문자열 비교 데이터가 .NET Framework에 포함됩니다. <xref:System.String> 클래스 및 <xref:System.Globalization.SortVersion> 클래스의 설명 섹션을 참조하세요.
 
-- 애플리케이션 도메인에 따라 문자열에 대한 해시 코드를 컴퓨팅하는 기능입니다. [\<<UseRandomizedStringHashAlgorithm> 요소](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)를 참조하십시오.
+- 애플리케이션 도메인 단위로 문자열에 대한 해시 코드를 계산하는 기능. [\<<UseRandomizedStringHashAlgorithm> 요소](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)를 참조하십시오.
 
 - 형식 리플렉션이 <xref:System.Type> 및 <xref:System.Reflection.TypeInfo> 클래스 사이의 분할 지원. [Windows 스토어 앱에 대한 .NET Framework의 리플렉션](../reflection-and-codedom/reflection-for-windows-store-apps.md)을 참조하십시오.
 

@@ -2,12 +2,12 @@
 title: '방법: 요소 (LINQ to XML)의 값을 검색 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 76b9b2a5-b3ba-49da-ba74-82100e1bd21c
-ms.openlocfilehash: 490e98134497836e0751e48949d4dceda41bcbf3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a52ebf437b8c1254b3a8c30558e14a254bb1fe5d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61851918"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592495"
 ---
 # <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>방법: 요소 (LINQ to XML)의 값을 검색 (Visual Basic)
 이 항목에서는 요소의 값을 가져오는 방법을 보여 줍니다. 두 가지 주요 방법으로 요소의 값을 가져올 수 있습니다. 한 가지 방법은 <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XAttribute>를 원하는 형식으로 캐스팅하는 것입니다. 명시적 변환 연산자는 요소나 특성의 내용을 지정된 형식으로 변환하고 변수에 할당합니다. 또는 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 속성이나 <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> 속성을 사용할 수 있습니다.  
@@ -67,7 +67,7 @@ Value of e:abcde
 ```  
   
 ## <a name="example"></a>예제  
- 요소가 있는지 확실하지 않은 경우에도 요소의 값을 검색하려는 경우가 있습니다. 이 경우 캐스팅된 요소를 nullable 형식(`string` 또는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]의 nullable 형식 중 하나)에 할당할 때 요소가 없으면 할당된 변수가 `Nothing`로 설정됩니다. 다음 코드에서는 요소가 존재하지 않을 수도 있을 때 <xref:System.Xml.Linq.XElement.Value%2A> 속성을 사용하는 것보다 캐스팅을 사용하는 것이 더 쉽다는 사실을 보여 줍니다.  
+ 요소가 있는지 확실하지 않은 경우에도 요소의 값을 검색하려는 경우가 있습니다. 이 경우에 할당 하는 경우 캐스팅 된 요소를 nullable 형식 (중 하나 `string` 또는.NET Framework의 nullable 형식 중 하나) 요소는 할당 된 없는 경우, 변수로 설정 됩니다 `Nothing`합니다. 다음 코드에서는 요소가 존재하지 않을 수도 있을 때 <xref:System.Xml.Linq.XElement.Value%2A> 속성을 사용하는 것보다 캐스팅을 사용하는 것이 더 쉽다는 사실을 보여 줍니다.  
   
 ```vb  
 Dim root As XElement = <Root>  

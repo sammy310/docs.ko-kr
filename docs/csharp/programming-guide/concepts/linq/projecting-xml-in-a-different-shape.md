@@ -2,12 +2,12 @@
 title: 여러 모양으로 XML 프로젝션(C#)
 ms.date: 07/20/2015
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
-ms.openlocfilehash: 381d674c420128f75d27394c21a7b622b2d78402
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ac9c6e05b366c9d34f82c6da9bf154d741840b3d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723786"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596805"
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a>여러 모양으로 XML 프로젝션(C#)
 이 항목에서는 소스 XML과 다른 모양으로 XML을 프로젝션하는 예제를 보여 줍니다.  
@@ -233,7 +233,7 @@ class Program
 ## <a name="next-steps"></a>다음 단계  
  다음 예제에서는 Word 문서에서 텍스트를 모두 찾기 위해 쿼리합니다.  
   
--   [Word 문서에서 텍스트 찾기(C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [Word 문서에서 텍스트 찾기(C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
 ## <a name="see-also"></a>참고 항목
 

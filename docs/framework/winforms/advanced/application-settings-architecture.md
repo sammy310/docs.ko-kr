@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: c9cb40cb318bd044cb9204ba2ed384b41b475d57
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d0ca890e384fc1f282cfbb62562090ee858bd33f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625770"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592770"
 ---
 # <a name="application-settings-architecture"></a>애플리케이션 설정 아키텍처
 이 항목에서는 애플리케이션 설정 아키텍처가 작동하는 방식과 그룹화된 설정 및 설정 키와 같은 고급 아키텍처 기능에 대해 설명합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "64625770"
 ## <a name="settings-persistence"></a>설정 지속성  
  합니다 <xref:System.Configuration.ApplicationSettingsBase> ; 클래스에서 파생 되는 설정 공급자에 게 이러한 작업은 클래스 자체를 유지 하거나 하지 설정을 로드할 <xref:System.Configuration.SettingsProvider>합니다. 파생 클래스가 <xref:System.Configuration.ApplicationSettingsBase> 를 통해 설정 공급자를 지정 하지 않습니다를 <xref:System.Configuration.SettingsProviderAttribute>, 다음 기본 공급자를 <xref:System.Configuration.LocalFileSettingsProvider>, 사용 됩니다.  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]에서 처음 출시된 구성 시스템은 로컬 컴퓨터의 machine.config 파일 또는 응용 프로그램과 함께 배포되는 `app.`exe.config 파일을 통해 정적 응용 프로그램 구성 데이터를 제공할 수 있습니다. <xref:System.Configuration.LocalFileSettingsProvider> 클래스는 다음과 같은 방법으로이 기본 지원을 확장 합니다.  
+ .NET Framework를 사용 하 여 원래 릴리스된 구성 시스템 지원 또는 로컬 컴퓨터의 machine.config 파일을 통해 정적 응용 프로그램 구성 데이터를 제공 하는 `app.`exe.config 파일을 사용 하 여 배포 응용 프로그램입니다. <xref:System.Configuration.LocalFileSettingsProvider> 클래스는 다음과 같은 방법으로이 기본 지원을 확장 합니다.  
   
 - 애플리케이션 범위 설정은 machine.config 또는 `app.`exe.config 파일에 저장될 수 있습니다. Machine.config는 항상 읽기 전용이지만, `app`.exe.config는 보안 고려 사항에 따라 대부분의 애플리케이션에서 읽기 전용으로 제한됩니다.  
   

@@ -2,12 +2,12 @@
 title: 순수 함수로 리팩터링(C#)
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
-ms.openlocfilehash: 3e856c1e32d4b0dc16291e1b913e9a5cc19717c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a498588e9ca1ab85602946b75b593804fa0953a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497133"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596886"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>순수 함수로 리팩터링(C#)
 
@@ -18,9 +18,9 @@ ms.locfileid: "54497133"
   
  이 단원의 앞 부분에서 설명한 것처럼 순수 함수에는 두 가지 유용한 특징이 있습니다.  
   
--   순수 함수는 의도하지 않은 결과를 발생시키지 않습니다. 함수는 함수 외부에 있는 형식의 데이터나 변수를 변경하지 않습니다.  
+- 순수 함수는 의도하지 않은 결과를 발생시키지 않습니다. 함수는 함수 외부에 있는 형식의 데이터나 변수를 변경하지 않습니다.  
   
--   순수 함수는 일관성이 있습니다. 동일한 입력 데이터의 집합이 제공되는 경우 항상 동일한 출력 값을 반환합니다.  
+- 순수 함수는 일관성이 있습니다. 동일한 입력 데이터의 집합이 제공되는 경우 항상 동일한 출력 값을 반환합니다.  
   
  함수형 프로그래밍으로 전환하는 한 가지 방법은 기존 코드를 리팩터링하여 의도하지 않은 불필요한 결과와 외부 종속성을 없애는 것입니다. 이런 식으로 기존 코드의 순수 함수 버전을 만들 수 있습니다.  
   

@@ -6,15 +6,15 @@ helpviewer_keywords:
 - user interface
 - user interface [Windows Forms], forms
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
-ms.openlocfilehash: aa3f3d8adc34d8c51cd2cfa6b087d01e9af1ad82
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00e359e7c2440b6d88f2c42fd0267fc1f12b7bb7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801181"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583430"
 ---
 # <a name="windows-forms"></a>Windows Forms
-폼은 애플리케이션의 기본 단위이므로 폼의 기능과 디자인을 고려해야 합니다. 폼은 기본적으로 개발자가 컨트롤을 통해 향상시켜 사용자 인터페이스를 만들고 코드를 통해 향상시켜 데이터를 조작하는 빈 슬레이트입니다. 이 위해서는 Visual Studio에서는 다양 한 컨트롤 집합로 작성 된 뿐만 아니라 통합된 개발 환경 (IDE) 코드를 작성 하는 데 도움이 되는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]합니다. 이러한 컨트롤의 기능을 코드로 보완하면 필요한 솔루션을 쉽고 빠르게 개발할 수 있습니다.  
+폼은 애플리케이션의 기본 단위이므로 폼의 기능과 디자인을 고려해야 합니다. 폼은 기본적으로 개발자가 컨트롤을 통해 향상시켜 사용자 인터페이스를 만들고 코드를 통해 향상시켜 데이터를 조작하는 빈 슬레이트입니다. 이 위해서는 Visual Studio 통합된 개발 환경 (IDE) 코드 작성을 돕는 뿐만 아니라 다양 한 컨트롤.NET Framework로 작성 된 집합을 사용 하 여 제공 합니다. 이러한 컨트롤의 기능을 코드로 보완하면 필요한 솔루션을 쉽고 빠르게 개발할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [Windows Forms 시작](getting-started-with-windows-forms.md)  

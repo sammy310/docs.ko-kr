@@ -2,12 +2,12 @@
 title: LINQ to XML 클래스 개요(C#)
 ms.date: 07/20/2015
 ms.assetid: bf666100-5392-4968-97f4-f6b9d3287d7b
-ms.openlocfilehash: a50b58ad3e8f375d80701f454e74fef00e4d2203
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f93e3a791bfd56095df12ebf070f72540a8b21dc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509664"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597055"
 ---
 # <a name="linq-to-xml-classes-overview-c"></a>LINQ to XML 클래스 개요(C#)
 이 항목에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 네임스페이스의 <xref:System.Xml.Linq> 클래스 목록을 제공하며 각 클래스에 대한 간략한 설명을 제공합니다.  
@@ -26,9 +26,9 @@ ms.locfileid: "54509664"
 ### <a name="xcontainer-class"></a>XContainer 클래스  
  <xref:System.Xml.Linq.XContainer>는 자식 노드를 가질 수 있는 모든 노드의 추상 기본 클래스입니다. 다음 클래스는 <xref:System.Xml.Linq.XContainer> 클래스에서 파생됩니다.  
   
--   <xref:System.Xml.Linq.XElement>  
+- <xref:System.Xml.Linq.XElement>  
   
--   <xref:System.Xml.Linq.XDocument>  
+- <xref:System.Xml.Linq.XDocument>  
   
 ### <a name="xdeclaration-class"></a>XDeclaration 클래스  
  <xref:System.Xml.Linq.XDeclaration>은 XML 선언을 나타냅니다. XML 선언은 XML 버전과 문서의 인코딩을 선언하는 데 사용됩니다. 또한 XML 선언은 XML 문서가 독립 실행형인지 여부를 지정합니다. XML 문서가 독립 실행형인 경우 외부 DTD나 내부 하위 집합에서 참조된 외부 매개 변수 엔터티에 외부 태그 선언이 없습니다.  
@@ -55,15 +55,15 @@ ms.locfileid: "54509664"
 ### <a name="xnode-class"></a>XNode 클래스  
  <xref:System.Xml.Linq.XNode>는 XML 트리의 노드를 나타내는 추상 클래스입니다. 다음 클래스는 <xref:System.Xml.Linq.XNode> 클래스에서 파생됩니다.  
   
--   <xref:System.Xml.Linq.XText>  
+- <xref:System.Xml.Linq.XText>  
   
--   <xref:System.Xml.Linq.XContainer>  
+- <xref:System.Xml.Linq.XContainer>  
   
--   <xref:System.Xml.Linq.XComment>  
+- <xref:System.Xml.Linq.XComment>  
   
--   <xref:System.Xml.Linq.XProcessingInstruction>  
+- <xref:System.Xml.Linq.XProcessingInstruction>  
   
--   <xref:System.Xml.Linq.XDocumentType>  
+- <xref:System.Xml.Linq.XDocumentType>  
   
 ### <a name="xnodedocumentordercomparer-class"></a>XNodeDocumentOrderComparer 클래스  
  <xref:System.Xml.Linq.XNodeDocumentOrderComparer>는 노드의 문서 순서를 비교하는 기능을 제공합니다.  

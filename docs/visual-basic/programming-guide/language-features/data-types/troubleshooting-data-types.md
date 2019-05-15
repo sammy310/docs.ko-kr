@@ -19,12 +19,12 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: 851be5bdf4a3adced724dc2df33657a84226270d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 837022cf1675097af5ebce63441cad1ce63eaabb
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906960"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591103"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>데이터 형식 문제 해결(Visual Basic)
 이 페이지는 기본 데이터 형식에 대 한 작업을 수행할 때 발생할 수 있는 몇 가지 일반적인 문제를 나열 합니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "61906960"
  선언 하는 데 충분 하지는 `decimalRemainder` 으로 `Decimal`입니다. 리터럴을 해야 할 `Decimal`, 또는 사용 하 여 `Double` 기본적으로 및 `decimalRemainder` 와 같은 부정확 한 값을 받는 `doubleRemainder`합니다.  
   
 ## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>부울 형식 숫자 형식으로 정확 하 게 변환 되지 않습니다.  
- [Boolean 데이터 형식](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) 값은 숫자로 저장 되지 않으며 저장 된 값은 숫자에 해당 되지 않아야 합니다. 이전 버전과 호환성을 위해 Visual Basic 변환 키워드를 제공 ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)를 `CBool`, `CInt`등) 간에 변환할 `Boolean` 및 숫자 형식입니다. 그러나 기타 언어 경우에 따라 이러한 변환을 수행 마찬가지로 다르게는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 메서드.  
+ [Boolean 데이터 형식](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) 값은 숫자로 저장 되지 않으며 저장 된 값은 숫자에 해당 되지 않아야 합니다. 이전 버전과 호환성을 위해 Visual Basic 변환 키워드를 제공 ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)를 `CBool`, `CInt`등) 간에 변환할 `Boolean` 및 숫자 형식입니다. 그러나 다른 언어 경우에 따라 이러한 변환을 수행할 다르게 마찬가지로.NET Framework 메서드.  
   
  에 해당 하는 숫자 값을 사용 하는 코드를 작성 하지 말아야 `True` 고 `False`입니다. 사용을 제한 해야 가능 하면 `Boolean` 변수는 설계 하는 논리 값입니다. 혼합 해야 하는 경우 `Boolean` 숫자 값을 선택 하는 변환 메서드를 알고 있는지 확인 합니다.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "61906960"
 ## <a name="string-conversion-fails-at-run-time"></a>런타임 시 문자열 변환이 실패  
  합니다 [문자열 데이터 형식](../../../../visual-basic/language-reference/data-types/string-data-type.md) 거의 확대 변환에 참여 합니다. `String` 자체에 확대 및 `Object`, 및 전용 `Char` 및 `Char()` (을 `Char` 배열)으로 확장 `String`합니다. 왜냐하면 `String` 변수 및 상수 다른 데이터 형식을 포함할 수 없는 값을 포함할 수 있습니다.  
   
- 형식 검사 스위치 ([Option Strict 문](../../../../visual-basic/language-reference/statements/option-strict-statement.md))은 `On`, 컴파일러가 모든 암시적 축소 변환을 허용 하지 않습니다. 여기에 관련 된 이러한 `String`합니다. 코드 변환 키워드와 같은 사용할 여전히 수 `CStr` 및 [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)에 직접은 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 변환 하려고 합니다.  
+ 형식 검사 스위치 ([Option Strict 문](../../../../visual-basic/language-reference/statements/option-strict-statement.md))은 `On`, 컴파일러가 모든 암시적 축소 변환을 허용 하지 않습니다. 여기에 관련 된 이러한 `String`합니다. 코드 변환 키워드와 같은 사용할 여전히 수 `CStr` 및 [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)를 변환 하려는.NET Framework를 직접입니다.  
   
 > [!NOTE]
 >  축소 변환 오류 요소에서 변환에 대 한 표시 되지 않는지를 `For Each…Next` 루프 제어 변수 컬렉션입니다. 자세한 내용 및 예제에 "Narrowing Conversions" 섹션을 참조 [각각에 대 한 중... 다음 문을](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)합니다.  

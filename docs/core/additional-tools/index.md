@@ -4,12 +4,12 @@ description: .NET Core 기능을 지원하고 확장하는, 설치 가능한 추
 author: mlacouture
 ms.date: 11/27/2018
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 5f42cddc31204bba2aafaee0b909bbf92d232fde
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75c74c16367bacf66fa2fb56d7666a07f7274aff
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644308"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631964"
 ---
 # <a name="net-core-additional-tools-overview"></a>.NET Core 추가 도구 개요
 

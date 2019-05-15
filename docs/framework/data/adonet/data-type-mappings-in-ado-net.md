@@ -2,22 +2,22 @@
 title: ADO.NET에서 데이터 형식 매핑
 ms.date: 03/30/2017
 ms.assetid: d4afab94-ada6-4c77-a73c-41f17bae6b5a
-ms.openlocfilehash: 1db427424e48d5b94e6c158e1d9967626297f4aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4e85db4732da664848cee2ef48f9a880a86fef18
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607472"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583765"
 ---
 # <a name="data-type-mappings-in-adonet"></a>ADO.NET에서 데이터 형식 매핑
-.NET Framework는 런타임에 형식이 선언, 사용 및 관리되는 방법을 정의하는 공용 형식 시스템을 기반으로 합니다. .NET Framework는 값 형식과 참조 형식으로 구성되며, 두 형식 모두 <xref:System.Object> 기본 형식에서 파생됩니다. 데이터 소스로 작업할 경우 데이터 형식을 명시적으로 지정하지 않으면 데이터 공급자에서 데이터 형식이 유추됩니다. 예를 들어 <xref:System.Data.DataSet> 개체는 모든 데이터 소스에 대해 독립적입니다. `DataSet`의 데이터는 데이터 소스에서 검색되며 변경 내용은 `DataAdapter`를 사용하여 데이터 소스에 다시 적용됩니다. 즉, `DataAdapter`가 <xref:System.Data.DataTable>의 `DataSet`을 데이터 소스의 값으로 채울 때 `DataTable` 열의 결과 데이터 형식은 데이터 소스에 연결하는 데 사용되는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자별 형식이 아닌, [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식입니다.  
+.NET Framework는 런타임에 형식이 선언, 사용 및 관리되는 방법을 정의하는 공용 형식 시스템을 기반으로 합니다. .NET Framework는 값 형식과 참조 형식으로 구성되며, 두 형식 모두 <xref:System.Object> 기본 형식에서 파생됩니다. 데이터 소스로 작업할 경우 데이터 형식을 명시적으로 지정하지 않으면 데이터 공급자에서 데이터 형식이 유추됩니다. 예를 들어 <xref:System.Data.DataSet> 개체는 모든 데이터 소스에 대해 독립적입니다. `DataSet`의 데이터는 데이터 소스에서 검색되며 변경 내용은 `DataAdapter`를 사용하여 데이터 소스에 다시 적용됩니다. 즉를 `DataAdapter` 채웁니다를 <xref:System.Data.DataTable> 에 `DataSet` 결과 데이터 형식의 열에는 데이터 소스의 값을 사용 하 여를 `DataTable` .NET Framework 데이터 공급자에 게 특정 형식 대신.NET Framework 형식는 데이터 원본에 연결 됩니다.  
   
- 마찬가지로 `DataReader`가 데이터 소스의 값을 반환할 때 결과 값은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식의 지역 변수에 저장됩니다. `Fill`의 `DataAdapter` 작업과 `Get`의 `DataReader` 메서드 모두에서 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자로부터 반환된 값에서 유추됩니다.  
+ 마찬가지로,는 `DataReader` 반환 결과 값을 데이터 원본에서 값은.NET Framework 형식을 갖는 로컬 변수에 저장 됩니다. 둘 다에 대 한는 `Fill` 의 작업을 `DataAdapter` 및 `Get` 의 메서드는 `DataReader`,.NET Framework 형식은.NET Framework 데이터 공급자 로부터 반환 된 값에서 유추 됩니다.  
   
- 반환되는 값의 형식을 알고 있는 경우에는 유추되는 데이터 형식을 사용하는 대신 `DataReader`의 형식화된 접근자 메서드를 사용할 수 있습니다. 형식화된 접근자 메서드는 값을 특정 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식으로 반환하여 추가로 형식을 변환할 필요가 없도록 하므로 더 나은 성능을 얻을 수 있습니다.  
+ 반환되는 값의 형식을 알고 있는 경우에는 유추되는 데이터 형식을 사용하는 대신 `DataReader`의 형식화된 접근자 메서드를 사용할 수 있습니다. 형식화 된 접근자 메서드도 추가 형식 변환에 대 한 필요성을 없애 주는 특정.NET Framework 형식으로 값을 반환 하 여 더 나은 성능을 제공 합니다.  
   
 > [!NOTE]
->  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자 데이터 형식의 Null 값은 `DBNull.Value`로 표시됩니다.  
+>  .NET Framework 데이터 공급자 데이터 형식에 대해 null 값으로 표시 됩니다 `DBNull.Value`합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [SQL Server 데이터 형식 매핑](../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  

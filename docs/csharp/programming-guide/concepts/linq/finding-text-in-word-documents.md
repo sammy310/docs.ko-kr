@@ -2,12 +2,12 @@
 title: Word 문서에서 텍스트 찾기(C#)
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: 59d224307808edefbbb7e7ffc848f40fbe2880ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d421916335f4cf163a449bc7b0c7c7bb30179a5c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720787"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596625"
 ---
 # <a name="finding-text-in-word-documents-c"></a>Word 문서에서 텍스트 찾기(C#)
 이 항목에서는 이전 쿼리를 확장하여 문서에 있는 문자열을 모두 찾습니다.  
@@ -325,7 +325,7 @@ StyleName:Code ><
 ## <a name="next-steps"></a>다음 단계  
  다음 단원에서는 WordprocessingML 문서에 대해 자세히 설명합니다.  
   
--   [Office Open XML WordprocessingML 문서 정보(C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
+- [Office Open XML WordprocessingML 문서 정보(C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
   
 ## <a name="see-also"></a>참고 항목
 

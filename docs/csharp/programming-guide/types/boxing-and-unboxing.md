@@ -10,12 +10,12 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: da4aabbd0529ee239dacd2dff7c7825d41110b44
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5db3d759daec273a29dccfeff9879d0edcc9a269
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835169"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595013"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Boxing 및 Unboxing(C# 프로그래밍 가이드)
 Boxing은 [값 형식](../../../csharp/language-reference/keywords/value-types.md)을 `object` 형식 또는 이 값 형식에서 구현된 임의의 인터페이스 형식으로 변환하는 프로세스입니다. CLR은 값 형식을 boxing할 때 값을 System.Object 내부에 래핑하고 관리되는 힙에 저장합니다. unboxing하면 개체에서 값 형식이 추출됩니다. Boxing은 암시적이며 unboxing은 명시적입니다. Boxing 및 unboxing의 개념은 개체로 처리할 수 있는 모든 값 형식에서 형식 시스템의 C#에 통합된 뷰의 기반이 됩니다.  
@@ -63,9 +63,9 @@ Boxing은 [값 형식](../../../csharp/language-reference/keywords/value-types.m
 ## <a name="unboxing"></a>unboxing  
  Unboxing은 `object` 형식에서 [값 형식](../../../csharp/language-reference/keywords/value-types.md)으로, 또는 인터페이스 형식에서 해당 인터페이스를 구현하는 값 형식으로 명시적으로 변환하는 프로세스입니다. unboxing 연산 과정은 다음과 같습니다.  
   
--   개체 인스턴스가 지정한 값 형식을 boxing한 값인지 확인합니다.  
+- 개체 인스턴스가 지정한 값 형식을 boxing한 값인지 확인합니다.  
   
--   인스턴스의 값을 값 형식 변수에 복사합니다.  
+- 인스턴스의 값을 값 형식 변수에 복사합니다.  
   
  다음 문은 boxing 및 unboxing 연산을 모두 보여 줍니다.  
   
@@ -108,9 +108,9 @@ int j = (int) o;
 ## <a name="related-sections"></a>관련 단원  
  추가 정보  
   
--   [참조 형식](../../../csharp/language-reference/keywords/reference-types.md)  
+- [참조 형식](../../../csharp/language-reference/keywords/reference-types.md)  
   
--   [값 형식](../../../csharp/language-reference/keywords/value-types.md)  
+- [값 형식](../../../csharp/language-reference/keywords/value-types.md)  
   
 ## <a name="see-also"></a>참고 항목
 

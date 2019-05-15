@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: 5f898bf342c8596d9dd4cc0b03396aec4dcf545c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1e5a8d221468f5028f7b44af1c634b4c988063a4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970222"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596284"
 ---
 # <a name="generic-classes-c-programming-guide"></a>제네릭 클래스(C# 프로그래밍 가이드)
 제네릭 클래스는 특정 데이터 형식과 관련이 없는 작업을 캡슐화합니다. 제네릭 클래스는 연결된 목록, 해시 테이블, 스택, 큐, 트리 등의 컬렉션에 가장 일반적으로 사용됩니다. 컬렉션에서 항목을 추가하고 제거하는 등의 작업은 저장되는 데이터의 형식과 관계없이 기본적으로 동일한 방식으로 수행됩니다.  
@@ -20,19 +20,19 @@ ms.locfileid: "56970222"
   
  일반적으로 기존의 구체적인 클래스로 시작하여 일반성과 편의성의 균형이 맞을 때까지 형식을 하나씩 형식 매개 변수로 변경하여 제네릭 클래스를 만듭니다. 고유한 제네릭 클래스를 만들 때 중요한 고려 사항은 다음과 같습니다.  
   
--   형식 매개 변수로 일반화할 형식  
+- 형식 매개 변수로 일반화할 형식  
   
      일반적으로 매개 변수화할 수 있는 형식이 많을수록 코드의 유용성과 재사용 가능성이 향상됩니다. 그러나 지나친 일반화는 다른 개발자가 읽거나 이해하기 어려운 코드를 만들어낼 소지가 있습니다.  
   
--   형식 매개 변수에 적용할 제약 조건([형식 매개 변수에 대한 제약 조건](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md) 참조)  
+- 형식 매개 변수에 적용할 제약 조건([형식 매개 변수에 대한 제약 조건](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md) 참조)  
   
      필요한 형식을 처리할 수 있는 범위 내에서 최대한 많은 제약 조건을 적용하는 것이 좋습니다. 예를 들어 제네릭 클래스를 참조 형식으로만 사용하려는 경우에는 클래스 제약 조건을 적용합니다. 이렇게 하면 클래스를 값 형식으로 잘못 사용하는 것을 막을 수 있고, `as` 연산자를 `T`에 적용하여 null 값 여부를 확인할 수 있습니다.  
   
--   제네릭 동작을 기본 클래스와 서브클래스로 분할할지 여부  
+- 제네릭 동작을 기본 클래스와 서브클래스로 분할할지 여부  
   
      제네릭 클래스는 기본 클래스가 될 수 있으므로 제네릭이 아닌 클래스에 적용되는 디자인 고려 사항이 동일하게 적용됩니다. 자세한 내용은 이 항목의 뒷부분에서 설명하는 제네릭 기본 클래스에서 상속하는 데 대한 규칙을 참조하세요.  
   
--   제네릭 인터페이스를 하나 이상 구현할지 여부  
+- 제네릭 인터페이스를 하나 이상 구현할지 여부  
   
      예를 들어 제네릭 기반 컬렉션에 항목을 만드는 데 사용될 클래스를 디자인할 경우 클래스 형식이 `T`인 <xref:System.IComparable%601>와 같은 인터페이스를 구현해야 할 수 있습니다.  
   

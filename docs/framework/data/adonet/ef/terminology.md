@@ -2,12 +2,12 @@
 title: Entity Framework 용어
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: a4befe4c45f11a59982edc9f976258f795a18cde
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9272740bef21dbe8b28bd6e58354a342fb799002
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764337"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583537"
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework 용어
 이 항목에서는 자주 참조 되는 용어를 정의 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 설명서. 추가 정보를 볼 수 있는 관련 항목에 대한 링크가 제공됩니다.  
@@ -18,7 +18,7 @@ ms.locfileid: "61764337"
 |연결 집합(association set)|같은 형식의 연결 인스턴스를 위한 논리 컨테이너입니다.<br /><br /> 자세한 내용은 [AssociationSet 요소 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#associationset-element-csdl) 하 고 [연결 집합](../../../../../docs/framework/data/adonet/association-set.md)합니다.|  
 |Code First|Entity Framework 4.1부터는 Code First 개발을 통해 모델을 프로그램 방식으로 만들 수 있습니다. Code First 개발에는 두 가지 다른 시나리오가 있습니다. 두 경우 모두 개발자는 .NET Framewor 클래스 정의를 코딩하여 모델을 정의한 후 데이터 주석 또는 fluent API를 사용하여 추가 매핑 또는 구성을 선택적으로 지정합니다.<br /><br /> Code First 개발에 포함 되어 있는지를 확인 합니다 [Entity Framework 5.0](https://go.microsoft.com/fwlink/?LinkId=234900)합니다. Entity Framework 5.0은 .NET Framework의 일부가 아니지만 .NET Framework 4.5에 빌드되어 있습니다. Entity Framework 5.0은로 제공 합니다 [' Entity Framework'](https://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](https://go.microsoft.com/fwlink/?LinkId=232488) 패키지 있습니다. 자세한 내용은 [Entity Framework 릴리스 및 버전 관리](https://go.microsoft.com/fwlink/?LinkId=234899)합니다.|  
 |명령 트리|모든 일반적인 프로그래밍 방식 표현 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 하나 이상의 식으로 구성 되는 쿼리.<br /><br /> 자세한 내용은 [Entity Framework 개요](../../../../../docs/framework/data/adonet/ef/overview.md)합니다.|  
-|복합 형식|개념적 모델에서 정의된 복합 속성을 나타내는 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 클래스입니다. 복합 형식을 사용하면 엔터티 내에 스칼라 속성을 구성할 수 있습니다. 복합 개체는 복합 형식의 인스턴스입니다. 자세한 내용은 [ComplexType 요소 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#complextype-element-csdl) 하 고 [복합 형식](../../../../../docs/framework/data/adonet/complex-type.md)합니다.|  
+|복합 형식|개념적 모델에서 정의된 복합 속성을 나타내는 .NET Framework 클래스입니다. 복합 형식을 사용하면 엔터티 내에 스칼라 속성을 구성할 수 있습니다. 복합 개체는 복합 형식의 인스턴스입니다. 자세한 내용은 [ComplexType 요소 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#complextype-element-csdl) 하 고 [복합 형식](../../../../../docs/framework/data/adonet/complex-type.md)합니다.|  
 |ComplexType|키 속성이 없는, 엔터티 형식의 스칼라가 아닌 속성을 나타내는 데이터 형식의 지정입니다.<br /><br /> 자세한 내용은 [ComplexType 요소 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#complextype-element-csdl) 하 고 [복합 형식](../../../../../docs/framework/data/adonet/complex-type.md)합니다.|  
 |개념 모델(conceptual model)|[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]의 응용 프로그램 도메인에 있는 엔터티 형식, 복합 형식, 연결, 엔터티 컨테이너, 엔터티 집합 및 연결 집합의 추상 지정입니다. 개념적 모델은 .csdl 파일에 CSDL로 정의됩니다.<br /><br /> 자세한 내용은 [모델링 및 매핑](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)합니다.|  
 |.csdl 파일|CSDL로 표현된 개념적 모델이 포함된 XML 파일입니다.|  
@@ -36,7 +36,7 @@ ms.locfileid: "61764337"
 |Entity Framework|개발자가 데이터 소스의 논리 스키마에 매핑된 개념적 모델을 사용할 수 있도록 하여 데이터 지향 소프트웨어 응용 프로그램의 개발을 지원하는 기술 집합입니다.<br /><br /> 자세한 내용은 [Entity Framework 개요](../../../../../docs/framework/data/adonet/ef/overview.md)합니다.|  
 |엔터티 집합|지정된 형식 및 해당 하위 형식의 엔터티를 위한 논리적 컨테이너입니다. 엔터티 집합은 데이터베이스 테이블에 매핑됩니다.<br /><br /> 자세한 내용은 [EntitySet 요소 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entityset-element-csdl) 하 고 [엔터티 집합](../../../../../docs/framework/data/adonet/entity-set.md)합니다.|  
 |Entity SQL|개념적 엔터티 스키마를 직접 사용하며 상속 및 관계와 같은 개념적 모델 개념을 지원하는, 저장소에 독립적인 SQL 언어입니다.<br /><br /> 자세한 내용은 [Entity SQL 언어](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)합니다.|  
-|엔터티 형식(entity type)|개념적 모델에서 정의된 엔터티를 나타내는 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 클래스입니다. 엔터티 형식은 스칼라, 복합 및 탐색 속성을 가질 수 있습니다. 개체는 엔터티 형식의 인스턴스입니다. 자세한 내용은 [개체를 사용 하 여 작업](../../../../../docs/framework/data/adonet/ef/working-with-objects.md)합니다.|  
+|엔터티 형식(entity type)|개념적 모델에 정의 된 대로 엔터티를 나타내는.NET Framework 클래스입니다. 엔터티 형식은 스칼라, 복합 및 탐색 속성을 가질 수 있습니다. 개체는 엔터티 형식의 인스턴스입니다. 자세한 내용은 [개체를 사용 하 여 작업](../../../../../docs/framework/data/adonet/ef/working-with-objects.md)합니다.|  
 |EntityType|키와 명명된 속성 집합을 포함하고 개념적 모델 또는 저장소 모델의 최상위 항목을 나타내는 데이터 형식의 지정입니다.<br /><br /> 자세한 내용은 [EntityType 요소 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entitytype-element-csdl) 하 고 [엔터티 형식](../../../../../docs/framework/data/adonet/entity-type.md)합니다.|  
 |명시적 로드(explicit loading)|개체가 쿼리에서 반환될 때 관련 개체가 동시에 로드되지 않습니다. 기본적으로 탐색 속성의 `Load` 메서드를 사용하여 명시적으로 요청할 때까지 관련 개체는 로드되지 않습니다.|  
 |외래 키 연결|외래 키 속성을 통해 관리되는 엔터티 간의 연결입니다.|  
@@ -57,7 +57,7 @@ ms.locfileid: "61764337"
 |개체 계층|Entity Framework에서 사용되는 엔터티 형식 및 개체 컨텍스트 정의입니다.|  
 |개체 쿼리|개체 컨텍스트 내에서 개념적 모델에 대해 실행되어 데이터를 개체로 반환하는 쿼리입니다.<br /><br /> 자세한 내용은 [개체 쿼리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100))합니다.|  
 |개체-관계형 매핑|관계형 데이터베이스의 데이터를 개체 지향 소프트웨어 응용 프로그램에서 사용할 수 있는 데이터 형식으로 변형하기 위한 기술입니다.<br /><br /> [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]는 저장소 모델에 정의된 관계형 데이터를 개념적 모델에 정의된 데이터 형식에 매핑하여 개체-관계형 매핑 서비스를 제공합니다.<br /><br /> 자세한 내용은 [모델링 및 매핑](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)합니다.|  
-|개체 서비스(Object Services)|제공 하는 서비스를 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 응용 프로그램 코드와 같은 엔터티에서 작동할 수 있도록 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 개체입니다.|  
+|개체 서비스(Object Services)|제공 하는 서비스는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 응용 프로그램 코드를.NET Framework 개체와 같은 엔터티에서 작동할 수 있도록 합니다.|  
 |지속성 무시 개체|데이터 저장소와 관련된 논리가 포함되지 않은 개체입니다. POCO 엔터티라고도 합니다.|  
 |POCO|Plain Old CLR Object입니다. 다른 클래스에서 상속하거나 인터페이스를 구현하지 않는 개체입니다.|  
 |POCO 엔터티|[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 또는 <xref:System.Data.Objects.DataClasses.EntityObject>에서 상속하지 않고 <xref:System.Data.Objects.DataClasses.ComplexObject> 인터페이스를 구현하지 않는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]의 엔터티입니다. 대부분의 경우 POCO 엔터티는 기존 도메인 개체에서 사용 하는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 응용 프로그램입니다. 이러한 엔터티는 지속성 무시를 지원합니다. 자세한 내용은 [POCO 엔터티 작업](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100))합니다.|  

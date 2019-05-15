@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bf6acc719b4697534e845f64890ddcd9cac550f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4a057f872d15ca1fcd49d86d08606776a0c0bea0
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315766"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063326"
 ---
 # <a name="default-marshaling-behavior"></a>기본 마샬링 동작
 Interop 마샬링은 메서드 매개 변수와 연결된 데이터가 관리되는 메모리와 관리되지 않는 메모리 간에 전달될 때 동작하는 방식을 제어하는 규칙에 따라 작동합니다. 이러한 기본 제공 규칙은 데이터 형식 변형, 호출 수신자가 전달된 데이터를 변경하고 해당 변경 내용을 호출자에게 반환할 수 있는지 여부 및 마샬러가 성능 최적화를 제공하는 상황과 같은 마샬링 작업을 제어합니다.  
@@ -58,9 +58,9 @@ BSTR MethodOne (BSTR b) {
   
  예를 들어 마샬러는 클래스 래퍼를 사용하여 관리 코드에 전달된 인터페이스를 래핑해야 한다고 결정합니다. 인터페이스는 마샬러를 통해 처음 전달될 때 마샬러는 인터페이스가 알려진 개체에서 제공되는지 여부를 확인합니다. 이 검사는 다음 두 가지 상황에서 발생합니다.  
   
--   다른 곳에서 COM에 전달된 다른 관리되는 개체에 의해 인터페이스가 구현되는 경우. 마샬러는 관리되는 개체에 의해 노출된 인터페이스를 쉽게 식별할 수 있으며, 구현을 제공하는 관리되는 개체와 인터페이스를 일치시킬 수 있습니다. 그런 다음 관리되는 개체가 메서드에 전달되며 래퍼는 필요하지 않습니다.  
+- 다른 곳에서 COM에 전달된 다른 관리되는 개체에 의해 인터페이스가 구현되는 경우. 마샬러는 관리되는 개체에 의해 노출된 인터페이스를 쉽게 식별할 수 있으며, 구현을 제공하는 관리되는 개체와 인터페이스를 일치시킬 수 있습니다. 그런 다음 관리되는 개체가 메서드에 전달되며 래퍼는 필요하지 않습니다.  
   
--   이미 래핑된 개체가 인터페이스를 구현하는 경우. 이러한 경우인지 확인하기 위해 마샬러는 해당 **IUnknown** 인터페이스에 대해 개체를 쿼리하고 반환된 인터페이스를 이미 래핑된 다른 개체의 인터페이스와 비교합니다. 인터페이스가 다른 래퍼의 인터페이스와 같으면 개체 ID가 동일하고 기존 래퍼가 메서드에 전달됩니다.  
+- 이미 래핑된 개체가 인터페이스를 구현하는 경우. 이러한 경우인지 확인하기 위해 마샬러는 해당 **IUnknown** 인터페이스에 대해 개체를 쿼리하고 반환된 인터페이스를 이미 래핑된 다른 개체의 인터페이스와 비교합니다. 인터페이스가 다른 래퍼의 인터페이스와 같으면 개체 ID가 동일하고 기존 래퍼가 메서드에 전달됩니다.  
   
  알려진 개체의 인터페이스가 아닌 경우 마샬러는 다음을 수행합니다.  
   
@@ -73,9 +73,9 @@ BSTR MethodOne (BSTR b) {
 ## <a name="default-marshaling-for-delegates"></a>대리자에 대한 기본 마샬링  
  관리되는 대리자는 호출 메커니즘에 따라 COM 인터페이스 또는 함수 포인터로 마샬링됩니다.  
   
--   플랫폼 호출의 경우 대리자는 기본적으로 관리되지 않는 함수 포인터로 마샬링됩니다.  
+- 플랫폼 호출의 경우 대리자는 기본적으로 관리되지 않는 함수 포인터로 마샬링됩니다.  
   
--   COM interop의 경우 대리자는 기본적으로 **_Delegate** 형식의 COM 인터페이스로 마샬링됩니다. **_Delegate** 인터페이스는 Mscorlib.tlb 형식 라이브러리에서 정의되며 대리자가 참조하는 메서드를 호출할 수 있게 해주는 <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType> 메서드를 포함합니다.  
+- COM interop의 경우 대리자는 기본적으로 **_Delegate** 형식의 COM 인터페이스로 마샬링됩니다. **_Delegate** 인터페이스는 Mscorlib.tlb 형식 라이브러리에서 정의되며 대리자가 참조하는 메서드를 호출할 수 있게 해주는 <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType> 메서드를 포함합니다.  
   
  다음 표에서는 관리되는 대리자 데이터 형식에 대한 마샬링 옵션을 보여 줍니다. <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성은 대리자를 마샬링하기 위한 여러 <xref:System.Runtime.InteropServices.UnmanagedType> 열거형 값을 제공합니다.  
   
@@ -166,23 +166,23 @@ internal class DelegateTest {
   
  이 섹션에서는 다음과 같은 서식이 지정된 값 형식에 대한 정보를 제공합니다.  
   
--   [플랫폼 호출에서 사용되는 값 형식](#value-types-used-in-platform-invoke)  
+- [플랫폼 호출에서 사용되는 값 형식](#value-types-used-in-platform-invoke)  
   
--   [COM Interop에서 사용되는 값 형식](#value-types-used-in-com-interop)  
+- [COM Interop에서 사용되는 값 형식](#value-types-used-in-com-interop)  
   
  이 항목에서는 형식이 지정된 형식을 설명할 뿐 아니라 특별한 마샬링 동작이 있는 [시스템 값 형식](#system-value-types)을 식별합니다.  
   
  형식이 지정된 형식은 메모리에서 해당 멤버의 레이아웃을 명시적으로 제어하는 정보가 포함된 복합 형식입니다. 멤버 레이아웃 정보는 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 특성을 사용하여 제공됩니다. 레이아웃은 다음 <xref:System.Runtime.InteropServices.LayoutKind> 열거형 값 중 하나일 수 있습니다.  
   
--   **LayoutKind.Automatic**  
+- **LayoutKind.Automatic**  
   
      공용 언어 런타임이 효율성을 위해 형식의 멤버 순서를 자유롭게 조정할 수 있음을 나타냅니다. 그러나 값 형식이 비관리 코드에 전달될 때는 멤버의 레이아웃을 예측할 수 있습니다. 이러한 구조체를 자동으로 마샬링하려고 하면 예외가 발생합니다.  
   
--   **LayoutKind.Sequential**  
+- **LayoutKind.Sequential**  
   
      형식의 멤버가 관리되는 형식 정의에 나타나는 순서대로 관리되지 않는 메모리에 배치됨을 나타냅니다.  
   
--   **LayoutKind.Explicit**  
+- **LayoutKind.Explicit**  
   
      각 필드에 제공된 <xref:System.Runtime.InteropServices.FieldOffsetAttribute>에 따라 멤버가 배치됨을 나타냅니다.  
   
@@ -229,14 +229,14 @@ BOOL PtInRect(const RECT *lprc, POINT pt);
  다음과 같은 플랫폼 호출 정의를 사용하여 구조체를 전달할 수 있습니다.  
   
 ```vb
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Function PtInRect Lib "User32.dll" (
+Friend Class NativeMethods
+    Friend Declare Auto Function PtInRect Lib "User32.dll" (
         ByRef r As Rect, p As Point) As Boolean
 End Class
 ```
   
 ```csharp
-internal static class WindowsAPI
+internal static class NativeMethods
 {
    [DllImport("User32.dll")]
    internal static extern bool PtInRect(ref Rect r, Point p);
@@ -291,14 +291,14 @@ void GetSystemTime(SYSTEMTIME* SystemTime);
  **GetSystemTime**에 해당하는 플랫폼 호출 정의는 다음과 같습니다.  
   
 ```vb
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
+Friend Class NativeMethods
+    Friend Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
         ByVal sysTime As SystemTime)
 End Class
 ```
   
 ```csharp
-internal static class WindowsAPI
+internal static class NativeMethods
 {
    [DllImport("Kernel32.dll", CharSet = CharSet.Auto)]
    internal static extern void GetSystemTime(SystemTime st);

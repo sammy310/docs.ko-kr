@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f1f9a88a347650474c7a63b41984e3346e0ce205
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 00dc191d53d01d33a5dce3ed2d012942e2672dae
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204564"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607521"
 ---
 # <a name="shadow-copying-assemblies"></a>어셈블리 섀도 복사
 섀도 복사를 사용하면 애플리케이션 도메인을 언로드하지 않고 애플리케이션 도메인에서 사용되는 어셈블리를 업데이트할 수 있습니다. 특히 이 기능은 ASP.NET 사이트와 같이 지속적으로 제공되어야 하는 애플리케이션에 유용합니다.  
@@ -30,21 +30,21 @@ ms.locfileid: "59204564"
   
  이 자료에는 다음과 같은 섹션이 포함되어 있습니다.  
   
--   [섀도 복사 설정 및 사용](#EnablingAndUsing)에서는 섀도 복사에 대해 사용할 수 있는 기본 사용 및 옵션에 대해 설명합니다.  
+- [섀도 복사 설정 및 사용](#EnablingAndUsing)에서는 섀도 복사에 대해 사용할 수 있는 기본 사용 및 옵션에 대해 설명합니다.  
   
--   [시작 성능](#StartupPerformance)에서는 시작 성능을 개선하려고 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]에서 섀도 복사에 적용된 변경 내용과 이전 버전의 동작으로 되돌리는 방법을 설명합니다.  
+- [시작 성능](#StartupPerformance)에서는 시작 성능을 개선하려고 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]에서 섀도 복사에 적용된 변경 내용과 이전 버전의 동작으로 되돌리는 방법을 설명합니다.  
   
--   [사용되지 않는 메서드](#ObsoleteMethods)에서는 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]에서 섀도 복사를 제어하는 속성 및 메서드의 변경 내용을 설명합니다.  
+- [사용되지 않는 메서드](#ObsoleteMethods)에서는 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]에서 섀도 복사를 제어하는 속성 및 메서드의 변경 내용을 설명합니다.  
   
 <a name="EnablingAndUsing"></a>   
 ## <a name="enabling-and-using-shadow-copying"></a>섀도 복사 설정 및 사용  
  다음과 같이 <xref:System.AppDomainSetup> 클래스의 속성을 사용하여 섀도 복사를 사용하도록 애플리케이션을 구성할 수 있습니다.  
   
--   <xref:System.AppDomainSetup.ShadowCopyFiles%2A> 속성을 `"true"` 문자열 값으로 설정하여 섀도 복사를 사용하도록 설정합니다.  
+- <xref:System.AppDomainSetup.ShadowCopyFiles%2A> 속성을 `"true"` 문자열 값으로 설정하여 섀도 복사를 사용하도록 설정합니다.  
   
      기본적으로 이렇게 설정하면 애플리케이션 경로의 모든 어셈블리가 로드되기 전에 다운로드 캐시로 복사됩니다. 이는 다른 컴퓨터에서 다운로드된 파일을 저장하도록 공용 언어 런타임에서 유지 관리되는 것과 같은 캐시이고, 공용 언어 런타임에서는 더 이상 필요하지 않을 때 자동으로 파일을 삭제합니다.  
   
--   선택적으로 <xref:System.AppDomainSetup.CachePath%2A> 속성과 <xref:System.AppDomainSetup.ApplicationName%2A> 속성을 사용하여 섀도 복사된 파일의 사용자 지정 위치를 설정합니다.  
+- 선택적으로 <xref:System.AppDomainSetup.CachePath%2A> 속성과 <xref:System.AppDomainSetup.ApplicationName%2A> 속성을 사용하여 섀도 복사된 파일의 사용자 지정 위치를 설정합니다.  
   
      위치의 기본 경로는 <xref:System.AppDomainSetup.ApplicationName%2A> 속성을 <xref:System.AppDomainSetup.CachePath%2A> 속성에 연결하여 하위 디렉터리로 생성됩니다. 어셈블리는 기본 경로 자체가 아니라 이 경로의 하위 디렉터리로 섀도 복사됩니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "59204564"
   
      섀도 복사된 파일의 사용자 지정 위치를 설정해야 하는 할 수 있는 몇 가지 이유가 있습니다. 애플리케이션에서 많은 복사본을 생성하면 섀도 복사된 파일의 사용자 지정 위치를 설정해야 할 수 있습니다. 다운로드 캐시는 수명이 아니라 크기별로 제한되므로 공용 언어 런타임이 사용 중인 파일을 삭제하려고 시도할 수 있습니다. 사용자 지정 위치를 설정하는 또 다른 이유는 애플리케이션을 실행하는 사용자가 공용 언어 런타임에서 다운로드 캐시에 사용하는 디렉터리 위치에 대한 쓰기 권한이 없는 경우입니다.  
   
--   선택적으로 <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> 속성을 사용하여 섀도 복사되는 어셈블리를 제한합니다.  
+- 선택적으로 <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> 속성을 사용하여 섀도 복사되는 어셈블리를 제한합니다.  
   
      애플리케이션 도메인에 대해 섀도 복사를 사용하도록 설정하면 기본적으로 애플리케이션 경로(<xref:System.AppDomainSetup.ApplicationBase%2A> 및 <xref:System.AppDomainSetup.PrivateBinPath%2A> 속성을 통해 지정된 디렉터리)의 모든 어셈블리가 복사됩니다. 섀도 복사할 디렉터리만 포함된 문자열을 만들고 문자열을 <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> 속성에 할당하여 복사를 선택된 디렉터리로 제한할 수 있습니다. 디렉터리는 세미콜론으로 구분합니다. 선택된 디렉터리의 어셈블리만 섀도 복사됩니다.  
   

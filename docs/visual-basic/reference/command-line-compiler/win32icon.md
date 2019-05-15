@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -win32icon compiler option [Visual Basic]
 - /win32icon compiler option [Visual Basic]
 ms.assetid: aecaab01-9353-46c5-941c-6edabd4eff92
-ms.openlocfilehash: e36e9187ab8c9c2b4950a66ff8ff3fc93adbd9c4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dc48a8f79aa04892c514917da00b8fd6489695b1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774831"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593090"
 ---
 # <a name="-win32icon"></a>-win32icon
 출력 파일에.ico 파일을 삽입합니다. 이.ico 파일에 출력 파일을 나타내는 **파일 탐색기**합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "61774831"
 ## <a name="remarks"></a>설명  
  Microsoft Windows 리소스 컴파일러 (RC) 사용 하 여.ico 파일을 만들 수 있습니다. 리소스 컴파일러를 호출 하는 시각적 개체를 컴파일할 때 C++ 프로그램; .ico 파일은.rc 파일에서 생성 됩니다. 합니다 `-win32icon` 고 `-win32resource` 옵션은 상호 배타적입니다.  
   
- 참조 [-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) 참조를 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 리소스 파일 또는 [-리소스 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) 연결 하는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 리소스 파일입니다. 참조 [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) .res 파일을 가져옵니다.  
+ 참조 [-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) .NET Framework 리소스 파일을 참조 하 또는 [-리소스 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) .NET Framework 리소스 파일을 연결 합니다. 참조 [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) .res 파일을 가져옵니다.  
   
 |설정-Visual Studio IDE에서 win32icon|  
 |---|  
