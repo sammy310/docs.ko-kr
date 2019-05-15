@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: 4553a81fcd15426bf09d2f293cb35dbe831aeb07
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b14dd600526612b6af8b9fad15f65a748eb0b368
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655810"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637532"
 ---
 # <a name="workflow-security"></a>워크플로 보안
 Windows WF (Workflow Foundation)는 Microsoft SQL Server 및 Windows Communication Foundation (WCF)와 같은 몇 가지 다른 기술과 통합 되어 있습니다. 이러한 기술과 잘못 상호 작용하면 워크플로에 보안 문제가 발생할 수 있습니다.

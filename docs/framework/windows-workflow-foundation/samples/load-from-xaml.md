@@ -2,12 +2,12 @@
 title: Load From XAML
 ms.date: 03/30/2017
 ms.assetid: 1f103ef6-7bed-4f16-ae52-9e665c5a43d7
-ms.openlocfilehash: 5a3b3673812c0b5500a13ae9ce79ce8206aa4834
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e0cac1b6dfb9568ba08079cf5194b3432eea856f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004889"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637708"
 ---
 # <a name="load-from-xaml"></a>Load From XAML
 이 샘플에서는 XamlBuildTask 도구를 실행할 필요 없이 XAML 워크플로를 동적으로 로드하는 방법을 보여 줍니다. 이 샘플에서는 대신 <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A> 메서드를 호출합니다. 샘플은 Windows Presentation Foundation (WPF) 클라이언트 응용 프로그램을 사용 하 여 XAML 워크플로 로드 합니다 <xref:System.Activities.XamlIntegration.ActivityXamlServices> 클래스 및 실행 합니다. <xref:System.Activities.XamlIntegration.ActivityXamlServices> 클래스를 사용하여 XAML 워크플로를 로드한 후에는 실행할 수 있는 <xref:System.Activities.DynamicActivity%601>가 반환됩니다.

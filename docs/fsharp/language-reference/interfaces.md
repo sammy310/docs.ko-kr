@@ -2,12 +2,12 @@
 title: 인터페이스
 description: 에 대해 알아봅니다 하는 방법 F# 인터페이스는 다른 클래스에서 구현 관련된 멤버의 집합을 지정 합니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 85b5506d96c26be5e52670c0c62d27cae047d1a6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b57769af6c05b83b3a112635033abf4efaca772
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666380"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645370"
 ---
 # <a name="interfaces"></a>인터페이스
 

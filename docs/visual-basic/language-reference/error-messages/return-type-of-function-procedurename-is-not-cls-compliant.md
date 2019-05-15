@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40027
 ms.assetid: 33c088c7-48e7-400c-920e-6d8967e1f3fc
-ms.openlocfilehash: 8d6ac07b653a27a7c4c5534f441b9d673592124c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 881726ea2cfb23493d85097635adb15608ed741d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592250"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65642250"
 ---
 # <a name="return-type-of-function-procedurename-is-not-cls-compliant"></a>함수의 반환 형식이 '\<procedurename >' CLS 규격이 아님
 A `Function` 절차로 표시 됩니다 `<CLSCompliant(True)>` 로 표시 된 형식을 반환 하지만 `<CLSCompliant(False)>`는 표시 되지 않았거나, 비규격 형식 이므로 적합 하지 않습니다.  

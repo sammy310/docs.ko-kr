@@ -2,12 +2,12 @@
 title: '조건식: if... then... else'
 description: 조건 식에서 작성 하는 방법을 알아봅니다 F# 코드의 다른 분기를 실행 합니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: eade8c20c1b62a2e9a54700550d832798308f368
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: db2d5ce5b75ecda171f2623c986878dcee1cf4d9
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766041"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641985"
 ---
 # <a name="conditional-expressions-ifthenelse"></a>조건식: `if...then...else`
 

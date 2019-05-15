@@ -2,12 +2,12 @@
 title: 유연한 형식
 description: 사용 하는 방법을 알아봅니다 F# 유연한 형식 주석은 매개 변수, 변수 또는 값에 지정 된 형식과 호환 되는 형식을 나타냅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 32857cc317bc6b4b7baf53b623b551e8e0733e41
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8edae671c54971862a35f03da8663c8567e2261
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981385"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641920"
 ---
 # <a name="flexible-types"></a>유연한 형식
 

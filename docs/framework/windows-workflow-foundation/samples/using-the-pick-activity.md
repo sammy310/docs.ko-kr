@@ -2,12 +2,12 @@
 title: Pick 활동 사용
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
-ms.openlocfilehash: 2f85ef9cb813034ad0fea9e51afa39b73ac7ef3d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 50946571c1ca3b3fb66d7da11e402f61739c9962
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623610"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637774"
 ---
 # <a name="using-the-pick-activity"></a>Pick 활동 사용
 이 샘플에서는 <xref:System.Activities.Statements.Pick> 활동을 사용하는 방법을 보여 줍니다.

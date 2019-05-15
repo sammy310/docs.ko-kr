@@ -2,12 +2,12 @@
 title: 자동 일반화
 description: 에 대해 알아봅니다 하는 방법 F# 자동으로 인수 및 함수의 유형은 일반화 하 여 가능한 경우 여러 형식으로 작동 합니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 15ecf8e6f07da19bb015fd028a7465ba8b837190
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8fc61b5e0c227474a5e913b37f4c0dad9b235a6f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937542"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641865"
 ---
 # <a name="automatic-generalization"></a>자동 일반화
 

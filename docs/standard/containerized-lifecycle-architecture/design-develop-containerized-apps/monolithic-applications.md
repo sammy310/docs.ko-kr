@@ -1,15 +1,13 @@
 ---
 title: 모놀리식 애플리케이션
 description: 컨테이너 화 된 모놀리식 응용 프로그램에 대 한 핵심 개념을 이해 합니다.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: e7454100b09f602e1e103c38685609e1dab62fe9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e577f9a8d9ce4f9d2c8180318b1df181db730e2f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644988"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641315"
 ---
 # <a name="monolithic-applications"></a>모놀리식 애플리케이션
 
