@@ -2,28 +2,28 @@
 title: '방법: 두 폴더의 내용 비교(LINQ)(C#)'
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: c6a44070e251a1521e7ea94c47a3c0c9360df1b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aec333fd3a54927f39569173db4e30999f632513
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543044"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597103"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a><span data-ttu-id="a9599-102">방법: 두 폴더의 내용 비교(LINQ)(C#)</span><span class="sxs-lookup"><span data-stu-id="a9599-102">How to: Compare the Contents of Two Folders (LINQ) (C#)</span></span>
-<span data-ttu-id="a9599-103">이 예제에서는 두 파일 목록을 비교하는 세 가지 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a9599-103">This example demonstrates three ways to compare two file listings:</span></span>  
+# <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a><span data-ttu-id="31506-102">방법: 두 폴더의 내용 비교(LINQ)(C#)</span><span class="sxs-lookup"><span data-stu-id="31506-102">How to: Compare the Contents of Two Folders (LINQ) (C#)</span></span>
+<span data-ttu-id="31506-103">이 예제에서는 두 파일 목록을 비교하는 세 가지 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="31506-103">This example demonstrates three ways to compare two file listings:</span></span>  
   
--   <span data-ttu-id="a9599-104">두 파일 목록이 똑같은지 여부를 지정하는 부울 값 쿼리.</span><span class="sxs-lookup"><span data-stu-id="a9599-104">By querying for a Boolean value that specifies whether the two file lists are identical.</span></span>  
+- <span data-ttu-id="31506-104">두 파일 목록이 똑같은지 여부를 지정하는 부울 값 쿼리.</span><span class="sxs-lookup"><span data-stu-id="31506-104">By querying for a Boolean value that specifies whether the two file lists are identical.</span></span>  
   
--   <span data-ttu-id="a9599-105">양쪽 폴더에 있는 파일을 검색하기 위해 교집합 쿼리.</span><span class="sxs-lookup"><span data-stu-id="a9599-105">By querying for the intersection to retrieve the files that are in both folders.</span></span>  
+- <span data-ttu-id="31506-105">양쪽 폴더에 있는 파일을 검색하기 위해 교집합 쿼리.</span><span class="sxs-lookup"><span data-stu-id="31506-105">By querying for the intersection to retrieve the files that are in both folders.</span></span>  
   
--   <span data-ttu-id="a9599-106">두 개 중 한 폴더에만 있는 파일을 검색하기 위해 차집합 쿼리.</span><span class="sxs-lookup"><span data-stu-id="a9599-106">By querying for the set difference to retrieve the files that are in one folder but not the other.</span></span>  
+- <span data-ttu-id="31506-106">두 개 중 한 폴더에만 있는 파일을 검색하기 위해 차집합 쿼리.</span><span class="sxs-lookup"><span data-stu-id="31506-106">By querying for the set difference to retrieve the files that are in one folder but not the other.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="a9599-107">여기 표시된 방법은 형식에 관계없이 개체의 시퀀스를 비교하도록 조정될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a9599-107">The techniques shown here can be adapted to compare sequences of objects of any type.</span></span>  
+    >  <span data-ttu-id="31506-107">여기 표시된 방법은 형식에 관계없이 개체의 시퀀스를 비교하도록 조정될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="31506-107">The techniques shown here can be adapted to compare sequences of objects of any type.</span></span>  
   
- <span data-ttu-id="a9599-108">여기 표시된 `FileComparer` 클래스는 표준 쿼리 연산자와 함께 사용자 지정 비교자 클래스를 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a9599-108">The `FileComparer` class shown here demonstrates how to use a custom comparer class together with the Standard Query Operators.</span></span> <span data-ttu-id="a9599-109">이 클래스는 실제 시나리오에서 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="a9599-109">The class is not intended for use in real-world scenarios.</span></span> <span data-ttu-id="a9599-110">단지 각 파일의 이름 및 길이(바이트)를 사용하여 각 폴더의 내용이 똑같은지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="a9599-110">It just uses the name and length in bytes of each file to determine whether the contents of each folder are identical or not.</span></span> <span data-ttu-id="a9599-111">실제 시나리오에서는 더 엄격한 일치 검사를 수행하도록 이 비교자를 수정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a9599-111">In a real-world scenario, you should modify this comparer to perform a more rigorous equality check.</span></span>  
+ <span data-ttu-id="31506-108">여기 표시된 `FileComparer` 클래스는 표준 쿼리 연산자와 함께 사용자 지정 비교자 클래스를 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="31506-108">The `FileComparer` class shown here demonstrates how to use a custom comparer class together with the Standard Query Operators.</span></span> <span data-ttu-id="31506-109">이 클래스는 실제 시나리오에서 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="31506-109">The class is not intended for use in real-world scenarios.</span></span> <span data-ttu-id="31506-110">단지 각 파일의 이름 및 길이(바이트)를 사용하여 각 폴더의 내용이 똑같은지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="31506-110">It just uses the name and length in bytes of each file to determine whether the contents of each folder are identical or not.</span></span> <span data-ttu-id="31506-111">실제 시나리오에서는 더 엄격한 일치 검사를 수행하도록 이 비교자를 수정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="31506-111">In a real-world scenario, you should modify this comparer to perform a more rigorous equality check.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a9599-112">예제</span><span class="sxs-lookup"><span data-stu-id="a9599-112">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="31506-112">예제</span><span class="sxs-lookup"><span data-stu-id="31506-112">Example</span></span>  
   
 ```csharp  
 namespace QueryCompareTwoDirs  
@@ -125,10 +125,10 @@ namespace QueryCompareTwoDirs
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="a9599-113">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="a9599-113">Compiling the Code</span></span>  
- <span data-ttu-id="a9599-114">System.Core.dll에 대한 참조와 System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 사용하여 .NET Framework 버전 3.5 이상을 대상으로 하는 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="a9599-114">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="31506-113">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="31506-113">Compiling the Code</span></span>  
+ <span data-ttu-id="31506-114">System.Core.dll에 대한 참조와 System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 사용하여 .NET Framework 버전 3.5 이상을 대상으로 하는 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="31506-114">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a9599-115">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a9599-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="31506-115">참고 항목</span><span class="sxs-lookup"><span data-stu-id="31506-115">See also</span></span>
 
-- [<span data-ttu-id="a9599-116">LINQ to Objects(C#)</span><span class="sxs-lookup"><span data-stu-id="a9599-116">LINQ to Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-- [<span data-ttu-id="a9599-117">LINQ 및 파일 디렉터리(C#)</span><span class="sxs-lookup"><span data-stu-id="a9599-117">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="31506-116">LINQ to Objects(C#)</span><span class="sxs-lookup"><span data-stu-id="31506-116">LINQ to Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [<span data-ttu-id="31506-117">LINQ 및 파일 디렉터리(C#)</span><span class="sxs-lookup"><span data-stu-id="31506-117">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
