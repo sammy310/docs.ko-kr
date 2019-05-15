@@ -10,46 +10,46 @@ helpviewer_keywords:
 - pausing Windows Service applications
 ms.assetid: eddb9409-942b-46b6-a2ce-fbd4c65f2790
 author: ghogen
-ms.openlocfilehash: f0b0ad1b18a57ca9a2c069ab172966730b62e84e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8a75c6a03f130e0a141107c81c946fc6a33b9f6c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136188"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592533"
 ---
-# <a name="how-to-pause-a-windows-service-visual-basic"></a><span data-ttu-id="748a6-102">방법: Windows 서비스 일시 중지(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="748a6-102">How to: Pause a Windows Service (Visual Basic)</span></span>
-<span data-ttu-id="748a6-103">이 예제에서는 <xref:System.ServiceProcess.ServiceController> 구성 요소를 사용하여 로컬 컴퓨터에서 IIS 관리 서비스를 일시 중지합니다.</span><span class="sxs-lookup"><span data-stu-id="748a6-103">This example uses the <xref:System.ServiceProcess.ServiceController> component to pause the IIS Admin service on the local computer.</span></span>  
+# <a name="how-to-pause-a-windows-service-visual-basic"></a><span data-ttu-id="a4b8c-102">방법: Windows 서비스 일시 중지(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a4b8c-102">How to: Pause a Windows Service (Visual Basic)</span></span>
+<span data-ttu-id="a4b8c-103">이 예제에서는 <xref:System.ServiceProcess.ServiceController> 구성 요소를 사용하여 로컬 컴퓨터에서 IIS 관리 서비스를 일시 중지합니다.</span><span class="sxs-lookup"><span data-stu-id="a4b8c-103">This example uses the <xref:System.ServiceProcess.ServiceController> component to pause the IIS Admin service on the local computer.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="748a6-104">예제</span><span class="sxs-lookup"><span data-stu-id="748a6-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="a4b8c-104">예제</span><span class="sxs-lookup"><span data-stu-id="a4b8c-104">Example</span></span>  
  [!code-vb[VbRadconService#11](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#11)]  
 [!code-vb[VbRadconService#12](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#12)]  
   
- <span data-ttu-id="748a6-105">이 코드 예제는 IntelliSense 코드 조각으로 사용할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="748a6-105">This code example is also available as an IntelliSense code snippet.</span></span> <span data-ttu-id="748a6-106">코드 조각 선택에서 **Windows 운영 체제 > Windows 서비스**에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="748a6-106">In the code snippet picker, it is located in **Windows Operating System > Windows Services**.</span></span> <span data-ttu-id="748a6-107">자세한 내용은 [코드 조각](/visualstudio/ide/code-snippets)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="748a6-107">For more information, see [Code Snippets](/visualstudio/ide/code-snippets).</span></span>  
+ <span data-ttu-id="a4b8c-105">이 코드 예제는 IntelliSense 코드 조각으로 사용할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a4b8c-105">This code example is also available as an IntelliSense code snippet.</span></span> <span data-ttu-id="a4b8c-106">코드 조각 선택에서 **Windows 운영 체제 > Windows 서비스**에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a4b8c-106">In the code snippet picker, it is located in **Windows Operating System > Windows Services**.</span></span> <span data-ttu-id="a4b8c-107">자세한 내용은 [코드 조각](/visualstudio/ide/code-snippets)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="a4b8c-107">For more information, see [Code Snippets](/visualstudio/ide/code-snippets).</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="748a6-108">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="748a6-108">Compiling the Code</span></span>  
- <span data-ttu-id="748a6-109">이 예제에는 다음 사항이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="748a6-109">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="a4b8c-108">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="a4b8c-108">Compiling the Code</span></span>  
+ <span data-ttu-id="a4b8c-109">이 예제에는 다음 사항이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="a4b8c-109">This example requires:</span></span>  
   
--   <span data-ttu-id="748a6-110">System.serviceprocess.dll에 대한 프로젝트 참조.</span><span class="sxs-lookup"><span data-stu-id="748a6-110">A project reference to System.serviceprocess.dll.</span></span>  
+- <span data-ttu-id="a4b8c-110">System.serviceprocess.dll에 대한 프로젝트 참조.</span><span class="sxs-lookup"><span data-stu-id="a4b8c-110">A project reference to System.serviceprocess.dll.</span></span>  
   
--   <span data-ttu-id="748a6-111"><xref:System.ServiceProcess> 네임스페이스의 멤버에 대한 액세스 권한.</span><span class="sxs-lookup"><span data-stu-id="748a6-111">Access to the members of the <xref:System.ServiceProcess> namespace.</span></span> <span data-ttu-id="748a6-112">코드에서 멤버 이름을 정규화하지 않는 경우 `Imports` 문을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="748a6-112">Add an `Imports` statement if you are not fully qualifying member names in your code.</span></span> <span data-ttu-id="748a6-113">자세한 내용은 [Imports 문(.NET 네임스페이스 및 형식)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="748a6-113">For more information, see [Imports Statement (.NET Namespace and Type)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).</span></span>  
+- <span data-ttu-id="a4b8c-111"><xref:System.ServiceProcess> 네임스페이스의 멤버에 대한 액세스 권한.</span><span class="sxs-lookup"><span data-stu-id="a4b8c-111">Access to the members of the <xref:System.ServiceProcess> namespace.</span></span> <span data-ttu-id="a4b8c-112">코드에서 멤버 이름을 정규화하지 않는 경우 `Imports` 문을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="a4b8c-112">Add an `Imports` statement if you are not fully qualifying member names in your code.</span></span> <span data-ttu-id="a4b8c-113">자세한 내용은 [Imports 문(.NET 네임스페이스 및 형식)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="a4b8c-113">For more information, see [Imports Statement (.NET Namespace and Type)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="748a6-114">강력한 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="748a6-114">Robust Programming</span></span>  
- <span data-ttu-id="748a6-115"><xref:System.ServiceProcess.ServiceController> 클래스의 <xref:System.ServiceProcess.ServiceController.MachineName%2A> 속성은 기본적으로 로컬 컴퓨터입니다.</span><span class="sxs-lookup"><span data-stu-id="748a6-115">The <xref:System.ServiceProcess.ServiceController.MachineName%2A> property of the <xref:System.ServiceProcess.ServiceController> class is the local computer by default.</span></span> <span data-ttu-id="748a6-116">다른 컴퓨터에서 Windows 서비스를 참조하려면 <xref:System.ServiceProcess.ServiceController.MachineName%2A> 속성을 해당 컴퓨터의 이름으로 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="748a6-116">To reference Windows services on another computer, change the <xref:System.ServiceProcess.ServiceController.MachineName%2A> property to the name of that computer.</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="a4b8c-114">강력한 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="a4b8c-114">Robust Programming</span></span>  
+ <span data-ttu-id="a4b8c-115"><xref:System.ServiceProcess.ServiceController> 클래스의 <xref:System.ServiceProcess.ServiceController.MachineName%2A> 속성은 기본적으로 로컬 컴퓨터입니다.</span><span class="sxs-lookup"><span data-stu-id="a4b8c-115">The <xref:System.ServiceProcess.ServiceController.MachineName%2A> property of the <xref:System.ServiceProcess.ServiceController> class is the local computer by default.</span></span> <span data-ttu-id="a4b8c-116">다른 컴퓨터에서 Windows 서비스를 참조하려면 <xref:System.ServiceProcess.ServiceController.MachineName%2A> 속성을 해당 컴퓨터의 이름으로 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="a4b8c-116">To reference Windows services on another computer, change the <xref:System.ServiceProcess.ServiceController.MachineName%2A> property to the name of that computer.</span></span>  
   
- <span data-ttu-id="748a6-117">다음 조건에서 예외가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="748a6-117">The following conditions may cause an exception:</span></span>  
+ <span data-ttu-id="a4b8c-117">다음 조건에서 예외가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="a4b8c-117">The following conditions may cause an exception:</span></span>  
   
--   <span data-ttu-id="748a6-118">서비스를 일시 중지할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="748a6-118">The service cannot be paused.</span></span> <span data-ttu-id="748a6-119">(<xref:System.InvalidOperationException>)</span><span class="sxs-lookup"><span data-stu-id="748a6-119">(<xref:System.InvalidOperationException>)</span></span>  
+- <span data-ttu-id="a4b8c-118">서비스를 일시 중지할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="a4b8c-118">The service cannot be paused.</span></span> <span data-ttu-id="a4b8c-119">(<xref:System.InvalidOperationException>)</span><span class="sxs-lookup"><span data-stu-id="a4b8c-119">(<xref:System.InvalidOperationException>)</span></span>  
   
--   <span data-ttu-id="748a6-120">시스템 API에 액세스할 때 오류가 발생했습니다.</span><span class="sxs-lookup"><span data-stu-id="748a6-120">An error occurred when accessing a system API.</span></span> <span data-ttu-id="748a6-121">(<xref:System.ComponentModel.Win32Exception>)</span><span class="sxs-lookup"><span data-stu-id="748a6-121">(<xref:System.ComponentModel.Win32Exception>)</span></span>  
+- <span data-ttu-id="a4b8c-120">시스템 API에 액세스할 때 오류가 발생했습니다.</span><span class="sxs-lookup"><span data-stu-id="a4b8c-120">An error occurred when accessing a system API.</span></span> <span data-ttu-id="a4b8c-121">(<xref:System.ComponentModel.Win32Exception>)</span><span class="sxs-lookup"><span data-stu-id="a4b8c-121">(<xref:System.ComponentModel.Win32Exception>)</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="748a6-122">.NET Framework 보안</span><span class="sxs-lookup"><span data-stu-id="748a6-122">.NET Framework Security</span></span>  
- <span data-ttu-id="748a6-123"><xref:System.ServiceProcess.ServiceControllerPermission>에서 <xref:System.ServiceProcess.ServiceControllerPermissionAccess>를 사용하여 권한을 설정하면 컴퓨터에서 서비스 제어가 제한될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="748a6-123">Control of services on the computer may be restricted by using the <xref:System.ServiceProcess.ServiceControllerPermissionAccess> to set permissions in the <xref:System.ServiceProcess.ServiceControllerPermission>.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="a4b8c-122">.NET Framework 보안</span><span class="sxs-lookup"><span data-stu-id="a4b8c-122">.NET Framework Security</span></span>  
+ <span data-ttu-id="a4b8c-123"><xref:System.ServiceProcess.ServiceControllerPermission>에서 <xref:System.ServiceProcess.ServiceControllerPermissionAccess>를 사용하여 권한을 설정하면 컴퓨터에서 서비스 제어가 제한될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a4b8c-123">Control of services on the computer may be restricted by using the <xref:System.ServiceProcess.ServiceControllerPermissionAccess> to set permissions in the <xref:System.ServiceProcess.ServiceControllerPermission>.</span></span>  
   
- <span data-ttu-id="748a6-124"><xref:System.Security.Permissions.PermissionState>를 사용하여 <xref:System.Security.Permissions.SecurityPermission>에서 권한을 설정하면 서비스 정보에 대한 액세스가 제한될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="748a6-124">Access to service information may be restricted by using the <xref:System.Security.Permissions.PermissionState> to set permissions in the <xref:System.Security.Permissions.SecurityPermission>.</span></span>  
+ <span data-ttu-id="a4b8c-124"><xref:System.Security.Permissions.PermissionState>를 사용하여 <xref:System.Security.Permissions.SecurityPermission>에서 권한을 설정하면 서비스 정보에 대한 액세스가 제한될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a4b8c-124">Access to service information may be restricted by using the <xref:System.Security.Permissions.PermissionState> to set permissions in the <xref:System.Security.Permissions.SecurityPermission>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="748a6-125">참고 항목</span><span class="sxs-lookup"><span data-stu-id="748a6-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a4b8c-125">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a4b8c-125">See also</span></span>
 
 - <xref:System.ServiceProcess.ServiceController>
 - <xref:System.ServiceProcess.ServiceControllerStatus>
 - <xref:System.ServiceProcess.ServiceController.WaitForStatus%2A>
-- [<span data-ttu-id="748a6-126">방법: Windows 서비스 계속(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="748a6-126">How to: Continue a Windows Service (Visual Basic)</span></span>](../../../docs/framework/windows-services/how-to-continue-a-windows-service-visual-basic.md)
+- [<span data-ttu-id="a4b8c-126">방법: Windows 서비스 계속(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a4b8c-126">How to: Continue a Windows Service (Visual Basic)</span></span>](../../../docs/framework/windows-services/how-to-continue-a-windows-service-visual-basic.md)
