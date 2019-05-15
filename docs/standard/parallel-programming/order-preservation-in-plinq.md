@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b44ff3f460d2f33903f7f083cd1bb59c7bf83e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ddb6a5534eb7ef2dc823ac05e03d3b2d3d0cee7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648703"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623964"
 ---
 # <a name="order-preservation-in-plinq"></a>PLINQ에서 순서 유지
 PLINQ에서 목표는 정확성을 유지하면서 성능을 최대화하는 것입니다. 쿼리는 가능한 한 빠르게 실행되지만 올바른 결과를 생성해야 합니다. 경우에 따라 정확성을 위해 소스 시퀀스의 순서를 유지해야 하지만 순서 지정의 계산 비용이 높을 수 있습니다. 따라서 기본적으로 PLINQ는 소스 시퀀스의 순서를 유지하지 않습니다. 이와 관련하여 PLINQ는 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)]과 비슷하지만 순서를 유지하는 LINQ to Objects와는 다릅니다.  
@@ -44,25 +44,25 @@ PLINQ에서 목표는 정확성을 유지하면서 성능을 최대화하는 것
 ## <a name="query-operators-and-ordering"></a>쿼리 연산자 및 순서 지정  
  다음 쿼리 연산자는 순서 유지를 쿼리의 모든 후속 작업에 포함하거나 <xref:System.Linq.ParallelEnumerable.AsUnordered%2A>가 호출될 때까지 포함합니다.  
   
--   <xref:System.Linq.ParallelEnumerable.OrderBy%2A>  
+- <xref:System.Linq.ParallelEnumerable.OrderBy%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.OrderByDescending%2A>  
+- <xref:System.Linq.ParallelEnumerable.OrderByDescending%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.ThenBy%2A>  
+- <xref:System.Linq.ParallelEnumerable.ThenBy%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.ThenByDescending%2A>  
+- <xref:System.Linq.ParallelEnumerable.ThenByDescending%2A>  
   
  다음 PLINQ 쿼리 연산자는 올바른 결과를 생성하기 위해 경우에 따라 순서가 지정된 소스 시퀀스가 필요할 수 있습니다.  
   
--   <xref:System.Linq.ParallelEnumerable.Reverse%2A>  
+- <xref:System.Linq.ParallelEnumerable.Reverse%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.SequenceEqual%2A>  
+- <xref:System.Linq.ParallelEnumerable.SequenceEqual%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.TakeWhile%2A>  
+- <xref:System.Linq.ParallelEnumerable.TakeWhile%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.SkipWhile%2A>  
+- <xref:System.Linq.ParallelEnumerable.SkipWhile%2A>  
   
--   <xref:System.Linq.ParallelEnumerable.Zip%2A>  
+- <xref:System.Linq.ParallelEnumerable.Zip%2A>  
   
  일부 PLINQ 쿼리 연산자는 소스 시퀀스의 순서가 지정되거나 순서가 지정되지 않았는지에 따라 다르게 동작합니다. 다음 표에 이러한 연산자가 나와 있습니다.  
   

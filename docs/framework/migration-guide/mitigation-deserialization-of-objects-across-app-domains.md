@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fbde11672dc17f80a45defc0a55bcf841e83c324
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fd0cbd4c688815139d83a742bb75c54eebbe55b7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325074"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648472"
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>완화: 애플리케이션 도메인 간 개체의 deserialization
 경우에 따라 앱이 다양한 애플리케이션을 기반으로 하여 두 개 이상의 애플리케이션 도메인을 사용하면 여러 애플리케이션 도메인 간에 논리 호출 컨텍스트의 개체를 deserialize하려는 시도로 인해 예외가 throw됩니다.  
@@ -27,13 +27,13 @@ ms.locfileid: "59325074"
   
 5. 구성 시스템이 아직 초기화되지 않은 경우, 초기화를 완료해야 합니다. 즉, 런타임은 실제로 다음과 같이 구성 시스템에 대한 안정적인 경로를 만들어야 합니다.  
   
-    1.  기본이 아닌 응용 프로그램 도메인의 증명 정보를 찾습니다.  
+    1. 기본이 아닌 응용 프로그램 도메인의 증명 정보를 찾습니다.  
   
-    2.  기본 응용 프로그램 도메인을 기반으로 하여 기본이 아닌 응용 프로그램 도메인의 증명 정보를 계산하려고 합니다.  
+    2. 기본 응용 프로그램 도메인을 기반으로 하여 기본이 아닌 응용 프로그램 도메인의 증명 정보를 계산하려고 합니다.  
   
-    3.  기본 응용 프로그램 도메인의 증명 정보를 가져오기 위한 호출은 기본이 아닌 응용 프로그램 도메인에서 기본 응용 프로그램 도메인으로 응용 프로그램 간 도메인 호출을 트리거합니다.  
+    3. 기본 응용 프로그램 도메인의 증명 정보를 가져오기 위한 호출은 기본이 아닌 응용 프로그램 도메인에서 기본 응용 프로그램 도메인으로 응용 프로그램 간 도메인 호출을 트리거합니다.  
   
-    4.  .NET Framework에서 응용 프로그램 간 도메인 계약의 일부로서 논리 호출 컨텍스트의 내용 또한 응용 프로그램 도메인 경계를 넘어 마샬링해야 합니다.  
+    4. .NET Framework에서 응용 프로그램 간 도메인 계약의 일부로서 논리 호출 컨텍스트의 내용 또한 응용 프로그램 도메인 경계를 넘어 마샬링해야 합니다.  
   
 6. 기본 응용 프로그램 도메인에서 논리 호출 컨텍스트에 있는 형식을 확인할 수 없으므로 예외가 throw됩니다.  
   

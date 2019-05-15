@@ -2,12 +2,12 @@
 title: XML의 함수 변환(C#)
 ms.date: 07/20/2015
 ms.assetid: 0ccb9251-38d7-44e3-9b84-1b5fe25e4b59
-ms.openlocfilehash: 75ad909994d75387648dbfa72f827cf63b85739e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 237a96e3cc1a2e2cb231b23954613f6a0ad0761c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643037"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596657"
 ---
 # <a name="functional-transformation-of-xml-c"></a>XML의 함수 변환(C#)
 이 항목에서는 XML 문서를 수정하는 순수 함수 변환 방법에 대해 설명하고 이 방법을 절차적 방법과 대조합니다.  
@@ -15,11 +15,11 @@ ms.locfileid: "54643037"
 ## <a name="modifying-an-xml-document"></a>XML 문서 수정  
  XML 프로그래머의 가장 일반적인 작업 중 하나는 XML의 모양을 변환하는 것입니다. XML 문서의 모양은 다음이 포함된 문서의 구조입니다.  
   
--   문서로 표현되는 계층 구조  
+- 문서로 표현되는 계층 구조  
   
--   요소 및 특성의 이름  
+- 요소 및 특성의 이름  
   
--   요소 및 특성의 데이터 형식  
+- 요소 및 특성의 데이터 형식  
   
  일반적으로 XML의 모양을 변환하는 가장 효과적인 방법은 순수 함수 변환 방법입니다. 이 방법에서 프로그래머의 주요 작업은 전체 XML 문서나 엄격하게 정의된 하나 이상의 노드에 적용되는 변환을 만드는 것입니다. 함수 변환은 프로그래머가 방법을 익히고 나면 코딩하기가 가장 쉽고 유지 관리가 가장 쉬운 코드를 생성하며 다른 방법보다 간단한 경우가 많습니다.  
   

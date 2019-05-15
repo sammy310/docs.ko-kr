@@ -8,12 +8,12 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: d94c3624b84b2fea6760ac8f36fc592928a55834
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3163598de5d03bf1691379cddae031841b9865d6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970716"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595633"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>방법: 파일 또는 폴더 만들기(C# 프로그래밍 가이드)
 프로그래밍 방식으로 컴퓨터에 폴더를 만들고, 하위 폴더를 만들고, 하위 폴더에 파일을 만들고, 파일에 데이터를 쓸 수 있습니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "56970716"
   
  예제에서 다음을 변경하여 특정 이름의 파일이 이미 있는지 여부에 따라 다른 결과를 지정할 수 있습니다. 파일이 없는 경우 코드에서 파일을 만듭니다. 파일이 있는 경우 코드에서 해당 파일에 데이터를 추가합니다.  
   
--   임의가 아닌 파일 이름을 지정합니다.  
+- 임의가 아닌 파일 이름을 지정합니다.  
   
     ```csharp  
     // Comment out the following line.  
@@ -35,7 +35,7 @@ ms.locfileid: "56970716"
     string fileName = "MyNewFile.txt";  
     ```  
   
--   다음 코드를 사용하여 `if`-`else` 문을 `using` 문으로 바꿉니다.  
+- 다음 코드를 사용하여 `if`-`else` 문을 `using` 문으로 바꿉니다.  
   
     ```csharp  
     using (System.IO.FileStream fs = new System.IO.FileStream(pathString, FileMode.Append))   
@@ -53,15 +53,15 @@ ms.locfileid: "56970716"
   
  다음 조건에서 예외가 발생합니다.  
   
--   폴더 이름 형식이 잘못된 경우. 예를 들어 잘못된 문자를 포함하거나 공백만으로 이루어져 있습니다(<xref:System.ArgumentException> 클래스). <xref:System.IO.Path> 클래스를 사용하여 유효한 경로 이름을 만듭니다.  
+- 폴더 이름 형식이 잘못된 경우. 예를 들어 잘못된 문자를 포함하거나 공백만으로 이루어져 있습니다(<xref:System.ArgumentException> 클래스). <xref:System.IO.Path> 클래스를 사용하여 유효한 경로 이름을 만듭니다.  
   
--   만들 폴더의 부모 폴더가 읽기 전용입니다(<xref:System.IO.IOException> 클래스).  
+- 만들 폴더의 부모 폴더가 읽기 전용입니다(<xref:System.IO.IOException> 클래스).  
   
--   폴더 이름이 `null`입니다(<xref:System.ArgumentNullException> 클래스).  
+- 폴더 이름이 `null`입니다(<xref:System.ArgumentNullException> 클래스).  
   
--   폴더 이름이 너무 깁니다(<xref:System.IO.PathTooLongException> 클래스).  
+- 폴더 이름이 너무 깁니다(<xref:System.IO.PathTooLongException> 클래스).  
   
--   폴더 이름이 콜론(“:”)뿐입니다(<xref:System.IO.PathTooLongException> 클래스).  
+- 폴더 이름이 콜론(“:”)뿐입니다(<xref:System.IO.PathTooLongException> 클래스).  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
  부분 신뢰 상황에서는 <xref:System.Security.SecurityException> 클래스의 인스턴스가 throw될 수 있습니다.  

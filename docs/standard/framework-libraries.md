@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: b3cfc44c430a02ec9ffce75ebff5c8f9cc46505c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3e4fed8ddde007eb9ce233eea942d6c052f0f2c4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143378"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615172"
 ---
 # <a name="framework-libraries"></a>프레임워크 라이브러리
 
@@ -41,23 +41,23 @@ BCL은 가장 기본적인 형식과 유틸리티 기능을 제공하며 다른 
 
 .NET에는 거의 모든 .NET 앱의 원동력인 데이터 구조 집합이 포함되어 있습니다. 대부분 컬렉션이지만 다른 형식도 있습니다.
 
-*   <xref:System.Array> - 인덱스로 액세스할 수 있는 강력한 형식의 개체 배열을 나타냅니다. 구성별로 고정 크기가 있습니다.
-*   <xref:System.Collections.Generic.List%601> - 인덱스로 액세스할 수 있는 강력한 형식의 개체 목록을 나타냅니다. 필요에 따라 크기가 자동으로 조정됩니다.
-*   <xref:System.Collections.Generic.Dictionary%602> - 키로 인덱싱된 값의 컬렉션을 나타냅니다. 키를 통해 값에 액세스할 수 있습니다. 필요에 따라 크기가 자동으로 조정됩니다.
-*   <xref:System.Uri> - URI(Uniform Resource Identifier)의 개체 표현을 제공하며 URI 부분에 쉽게 액세스할 수 있도록 합니다.
-*   <xref:System.DateTime> - 일반적으로 날짜와 시간으로 표시된 시간을 나타냅니다.
+* <xref:System.Array> - 인덱스로 액세스할 수 있는 강력한 형식의 개체 배열을 나타냅니다. 구성별로 고정 크기가 있습니다.
+* <xref:System.Collections.Generic.List%601> - 인덱스로 액세스할 수 있는 강력한 형식의 개체 목록을 나타냅니다. 필요에 따라 크기가 자동으로 조정됩니다.
+* <xref:System.Collections.Generic.Dictionary%602> - 키로 인덱싱된 값의 컬렉션을 나타냅니다. 키를 통해 값에 액세스할 수 있습니다. 필요에 따라 크기가 자동으로 조정됩니다.
+* <xref:System.Uri> - URI(Uniform Resource Identifier)의 개체 표현을 제공하며 URI 부분에 쉽게 액세스할 수 있도록 합니다.
+* <xref:System.DateTime> - 일반적으로 날짜와 시간으로 표시된 시간을 나타냅니다.
 
 ## <a name="utility-apis"></a>유틸리티 API
 
 .NET에는 여러 중요한 작업에 대한 기능을 제공하는 유틸리티 API 집합이 포함되어 있습니다.
 
-*   <xref:System.Net.Http.HttpClient> - URI로 식별되는 리소스에서 HTTP 요청을 보내고 HTTP 응답을 받기 위한 API입니다.
-*   <xref:System.Xml.Linq.XDocument> - XML 문서를 로드하고 LINQ를 사용하여 쿼리하기 위한 API입니다.
-*   <xref:System.IO.StreamReader> - 파일을 읽기 위한 API. 
-*   <xref:System.IO.StreamWriter> - 파일을 쓰기 위한 API.
+* <xref:System.Net.Http.HttpClient> - URI로 식별되는 리소스에서 HTTP 요청을 보내고 HTTP 응답을 받기 위한 API입니다.
+* <xref:System.Xml.Linq.XDocument> - XML 문서를 로드하고 LINQ를 사용하여 쿼리하기 위한 API입니다.
+* <xref:System.IO.StreamReader> - 파일을 읽기 위한 API. 
+* <xref:System.IO.StreamWriter> - 파일을 쓰기 위한 API.
 
 ## <a name="app-model-apis"></a>앱 모델 API
 
 여러 회사에서 제공하는, .NET에 사용할 수 있는 많은 앱 모델이 있습니다.
 
-*   [ASP.NET](https://www.asp.net) - 웹 사이트와 서비스를 구축하기 위한 웹 프레임워크를 제공합니다. Windows, Linux 및 macOS에서 지원됩니다(ASP.NET 버전에 따라 다름).
+* [ASP.NET](https://www.asp.net) - 웹 사이트와 서비스를 구축하기 위한 웹 프레임워크를 제공합니다. Windows, Linux 및 macOS에서 지원됩니다(ASP.NET 버전에 따라 다름).

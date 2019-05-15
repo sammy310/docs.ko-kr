@@ -2,12 +2,12 @@
 title: 지연된 실행 예제(C#)
 ms.date: 07/20/2015
 ms.assetid: 50f4fbac-81fe-4f26-aedf-506e21419b19
-ms.openlocfilehash: 9697f3e4c120c7d8bc184181ad99df08634e791e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 08125f8da54db18423f90564a51fcffad8db44c2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54598882"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598012"
 ---
 # <a name="deferred-execution-example-c"></a>지연된 실행 예제(C#)
 이 항목에서는 지연된 실행과 지연 계산이 LINQ to XML 쿼리의 실행에 미치는 영향을 보여 줍니다.  
@@ -61,7 +61,7 @@ Main: str GHI
   
  이 자습서의 다음 항목에서는 쿼리를 연결하는 방법을 보여 줍니다.  
   
--   [연결 쿼리 예제(C#)](../../../../csharp/programming-guide/concepts/linq/chaining-queries-example.md)  
+- [연결 쿼리 예제(C#)](../../../../csharp/programming-guide/concepts/linq/chaining-queries-example.md)  
   
 ## <a name="see-also"></a>참고 항목
 

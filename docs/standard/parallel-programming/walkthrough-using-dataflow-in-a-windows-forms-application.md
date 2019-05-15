@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd75bd14b2393d9b316d90070894f214dfa60c88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d0c9447e53a874da856eb59932ec3871a9a1371d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344379"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654421"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>연습: Windows Forms 애플리케이션에서 데이터 흐름 사용
 이 문서에서는 Windows Forms 애플리케이션에서 이미지 처리를 수행하는 데이터 흐름 블록의 네트워크를 만드는 방법을 보여 줍니다.  
@@ -29,13 +29,13 @@ ms.locfileid: "59344379"
 ## <a name="sections"></a>섹션  
  이 연습에는 다음과 같은 섹션이 있습니다.  
   
--   [Windows Forms 애플리케이션 만들기](#winforms)  
+- [Windows Forms 애플리케이션 만들기](#winforms)  
   
--   [데이터 흐름 네트워크 만들기](#network)  
+- [데이터 흐름 네트워크 만들기](#network)  
   
--   [사용자 인터페이스에 데이터 흐름 네트워크 연결](#ui)  
+- [사용자 인터페이스에 데이터 흐름 네트워크 연결](#ui)  
   
--   [전체 예제](#complete)  
+- [전체 예제](#complete)  
   
 <a name="winforms"></a>   
 ## <a name="creating-the-windows-forms-application"></a>Windows Forms 애플리케이션 만들기  

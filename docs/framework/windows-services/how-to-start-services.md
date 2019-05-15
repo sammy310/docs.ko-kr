@@ -6,12 +6,12 @@ helpviewer_keywords:
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: db66e8a264bc0381a2ff4689c4427047a158eb32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8ad61eaa292ec4cce17ba029186caf1536afacdb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336839"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591454"
 ---
 # <a name="how-to-start-services"></a>방법: 서비스 시작
 서비스가 설치되면 서비스를 시작해야 합니다. 시작하면 서비스 클래스의 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 메서드가 호출됩니다. 일반적으로 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 메서드는 서비스가 수행할 유용한 정의합니다. 시작된 후 서비스는 수동으로 일시 중지하거나 중지할 때까지 활성 상태로 유지됩니다.  
@@ -58,11 +58,11 @@ ms.locfileid: "59336839"
   
 1. 다음 중 하나를 수행하여 **서비스 제어 관리자**를 엽니다.  
   
-    -   Windows XP 및 2000 Professional의 경우 바탕 화면에서 **내 컴퓨터**를 마우스 오른쪽 단추로 클릭한 다음, **관리**를 클릭합니다. 대화 상자가 나타나면 **서비스 및 애플리케이션** 노드를 확장합니다.  
+    - Windows XP 및 2000 Professional의 경우 바탕 화면에서 **내 컴퓨터**를 마우스 오른쪽 단추로 클릭한 다음, **관리**를 클릭합니다. 대화 상자가 나타나면 **서비스 및 애플리케이션** 노드를 확장합니다.  
   
          \- 또는 -  
   
-    -   Windows Server 2003 및 Windows 2000 Server에서 **시작**을 클릭하여 **프로그램**을 가리키고 **관리 도구**를 클릭한 다음, **서비스**를 클릭합니다.  
+    - Windows Server 2003 및 Windows 2000 Server에서 **시작**을 클릭하여 **프로그램**을 가리키고 **관리 도구**를 클릭한 다음, **서비스**를 클릭합니다.  
   
         > [!NOTE]
         >  Windows NT 버전 4.0의 경우 **제어판**에서 이 대화 상자를 열 수 있습니다.  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: accb06421b8a697b0ee89adab0a9dffa23cffb05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4c40e2150bf56540fc95281f07bd14c60e138abc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193111"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607666"
 ---
 # <a name="resolving-assembly-loads"></a>어셈블리 로드 해결
 .NET Framework에서는 어셈블리 로드를 보다 효율적으로 제어해야 하는 애플리케이션에 대해 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 이벤트를 제공합니다. 이 이벤트를 처리하면 애플리케이션이 정상적인 검색 경로 외부에서 로드 컨텍스트에 어셈블리를 로드하고, 여러 어셈블리 버전 중에서 로드할 버전을 선택하고, 동적 어셈블리를 내보내 반환하는 작업 등을 수행할 수 있습니다. 이 항목에서는 <xref:System.AppDomain.AssemblyResolve> 이벤트 처리 지침을 제공합니다.  
@@ -30,24 +30,24 @@ ms.locfileid: "59193111"
 ## <a name="how-the-assemblyresolve-event-works"></a>AssemblyResolve 이벤트 작동 방식  
  <xref:System.AppDomain.AssemblyResolve> 이벤트 처리기를 등록하면 런타임에 이름으로 어셈블리에 바인딩하지 못할 때마다 처리기가 호출됩니다. 예를 들어 사용자 코드에서 다음 메서드를 호출하면 <xref:System.AppDomain.AssemblyResolve> 이벤트가 발생할 수 있습니다.  
   
--   첫 번째 인수가 로드할 어셈블리의 표시 이름을 나타내는 문자열(즉, <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> 속성에서 반환되는 문자열)인 <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> 메서드 오버로드 또는 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 메서드 오버로드  
+- 첫 번째 인수가 로드할 어셈블리의 표시 이름을 나타내는 문자열(즉, <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> 속성에서 반환되는 문자열)인 <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> 메서드 오버로드 또는 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 메서드 오버로드  
   
--   첫 번째 인수가 로드할 어셈블리를 식별하는 <xref:System.Reflection.AssemblyName> 개체인 <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> 메서드 오버로드 또는 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 메서드 오버로드  
+- 첫 번째 인수가 로드할 어셈블리를 식별하는 <xref:System.Reflection.AssemblyName> 개체인 <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> 메서드 오버로드 또는 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 메서드 오버로드  
   
--   <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> 메서드 오버로드  
+- <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> 메서드 오버로드  
   
--   다른 애플리케이션 도메인의 개체를 인스턴스화하는 <xref:System.AppDomain.CreateInstance%2A?displayProperty=nameWithType> 또는 <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=nameWithType> 메서드 오버로드  
+- 다른 애플리케이션 도메인의 개체를 인스턴스화하는 <xref:System.AppDomain.CreateInstance%2A?displayProperty=nameWithType> 또는 <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=nameWithType> 메서드 오버로드  
   
 ### <a name="what-the-event-handler-does"></a>이벤트 처리기의 용도  
  <xref:System.AppDomain.AssemblyResolve> 이벤트 처리기는 <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> 속성을 통해 로드할 어셈블리의 표시 이름을 받습니다. 처리기가 어셈블리 이름을 인식하지 못하는 경우 null(Visual Basic에서는 `Nothing`, Visual C++에서는 `nullptr`)이 반환됩니다.  
   
  처리기가 어셈블리 이름을 인식하면 요청을 충족하는 어셈블리를 로드하고 반환할 수 있습니다. 다음 목록에서는 몇 가지 샘플 시나리오를 설명합니다.  
   
--   처리기가 어셈블리 버전의 위치를 알고 있다면 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 또는 <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType> 메서드를 사용하여 어셈블리를 로드할 수 있으며, 성공할 경우 로드된 어셈블리를 반환할 수 있습니다.  
+- 처리기가 어셈블리 버전의 위치를 알고 있다면 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 또는 <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType> 메서드를 사용하여 어셈블리를 로드할 수 있으며, 성공할 경우 로드된 어셈블리를 반환할 수 있습니다.  
   
--   처리기가 바이트 배열로 저장된 어셈블리 데이터베이스에 액세스할 수 있는 경우 바이트 배열을 사용하는 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 메서드 오버로드 중 하나를 사용하여 바이트 배열을 로드할 수 있습니다.  
+- 처리기가 바이트 배열로 저장된 어셈블리 데이터베이스에 액세스할 수 있는 경우 바이트 배열을 사용하는 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 메서드 오버로드 중 하나를 사용하여 바이트 배열을 로드할 수 있습니다.  
   
--   처리기는 동적 어셈블리를 생성하고 반환할 수 있습니다.  
+- 처리기는 동적 어셈블리를 생성하고 반환할 수 있습니다.  
   
 > [!NOTE]
 >  처리기는 어셈블리를 로드 소스 컨텍스트에 로드하거나, 로드 컨텍스트에 로드하거나, 컨텍스트 없이 로드해야 합니다. 처리기가 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> 또는 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> 메서드를 사용하여 어셈블리를 리플렉션 전용 컨텍스트에 로드하는 경우 <xref:System.AppDomain.AssemblyResolve> 이벤트를 발생시킨 로드 시도가 실패합니다.  
@@ -58,11 +58,11 @@ ms.locfileid: "59193111"
   
  대부분의 경우 처리기에서 반환되는 어셈블리는 처리기가 로드하는 컨텍스트에 관계없이 로드 컨텍스트에 나타납니다. 예를 들어 처리기가 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 메서드를 사용하여 어셈블리를 로드 소스 컨텍스트에 로드하는 경우 처리기에서 반환되는 어셈블리는 로드 컨텍스트에 표시됩니다. 그러나 다음과 같은 경우에는 처리기에서 반환되는 어셈블리가 컨텍스트 없이 나타납니다.  
   
--   즉, 처리기가 컨텍스트 없이 어셈블리를 로드합니다.  
+- 즉, 처리기가 컨텍스트 없이 어셈블리를 로드합니다.  
   
--   <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> 속성이 null이 아닌 경우.  
+- <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> 속성이 null이 아닌 경우.  
   
--   요청하는 어셈블리(즉, <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> 속성에서 반환되는 어셈블리)가 컨텍스트 없이 로드된 경우.  
+- 요청하는 어셈블리(즉, <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> 속성에서 반환되는 어셈블리)가 컨텍스트 없이 로드된 경우.  
   
  컨텍스트에 대한 자세한 내용은 <xref:System.Reflection.Assembly.LoadFrom%28System.String%29?displayProperty=nameWithType> 메서드 오버로드를 참조하세요.  
   

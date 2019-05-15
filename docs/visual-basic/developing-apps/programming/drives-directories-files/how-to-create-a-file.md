@@ -5,12 +5,12 @@ helpviewer_keywords:
 - text files [Visual Basic], creating
 - files [Visual Basic], creating
 ms.assetid: 0253bb6d-5519-4a50-b882-b93ef5cca0d9
-ms.openlocfilehash: a05e73a2096c82c9299e4483bbaf69e560fc2e45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f24fdd6ce1fea7540c33e4a2fdfc06885825f76a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839420"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628989"
 ---
 # <a name="how-to-create-a-file-in-visual-basic"></a>방법: Visual Basic에서 파일 만들기
 이 예제에서는 <xref:System.IO.File> 클래스의 <xref:System.IO.File.Create%2A> 메서드를 사용하여 지정된 경로에 빈 텍스트 파일을 만듭니다.  
@@ -26,17 +26,17 @@ ms.locfileid: "58839420"
   
  다음 조건에서 예외가 발생합니다.  
   
--   경로 이름 형식이 잘못되었습니다. 예를 들어 잘못된 문자를 포함하거나 공백만으로 이루어져 있습니다(<xref:System.ArgumentException>).  
+- 경로 이름 형식이 잘못되었습니다. 예를 들어 잘못된 문자를 포함하거나 공백만으로 이루어져 있습니다(<xref:System.ArgumentException>).  
   
--   경로가 읽기 전용인 경우(<xref:System.IO.IOException>)  
+- 경로가 읽기 전용인 경우(<xref:System.IO.IOException>)  
   
--   경로 이름이 `Nothing`인 경우(<xref:System.ArgumentNullException>)  
+- 경로 이름이 `Nothing`인 경우(<xref:System.ArgumentNullException>)  
   
--   경로 이름이 너무 긴 경우(<xref:System.IO.PathTooLongException>)  
+- 경로 이름이 너무 긴 경우(<xref:System.IO.PathTooLongException>)  
   
--   경로가 잘못된 경우(<xref:System.IO.DirectoryNotFoundException>)  
+- 경로가 잘못된 경우(<xref:System.IO.DirectoryNotFoundException>)  
   
--   경로가 콜론 ":"뿐인 경우(<xref:System.NotSupportedException>)  
+- 경로가 콜론 ":"뿐인 경우(<xref:System.NotSupportedException>)  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
  부분 신뢰 환경에서는 <xref:System.Security.SecurityException>이 throw될 수 있습니다.  

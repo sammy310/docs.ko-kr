@@ -9,21 +9,21 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: 80e0bcd341f9059fc6787756f8e743aedc5dc43e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e91859d4aa6e30877bfdae5da9063a1e2a6b3b44
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206423"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647257"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe(코드 생성 도구)
 SqlMetal 명령줄 도구는 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] 의 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]구성 요소에 사용할 코드 및 매핑을 생성합니다. 이 항목의 뒷부분에 나오는 옵션을 적용하면 SqlMetal을 통해 다음을 포함하는 다양한 작업을 수행할 수 있습니다.  
   
--   데이터베이스에서 소스 코드 및 매핑 특성이나 매핑 파일 생성  
+- 데이터베이스에서 소스 코드 및 매핑 특성이나 매핑 파일 생성  
   
--   데이터베이스에서 사용자 지정에 사용할 중간 데이터베이스 태그 언어(.dbml) 파일 생성  
+- 데이터베이스에서 사용자 지정에 사용할 중간 데이터베이스 태그 언어(.dbml) 파일 생성  
   
--   .dbml 파일에서 코드 및 매핑 특성이나 매핑 파일 생성  
+- .dbml 파일에서 코드 및 매핑 특성이나 매핑 파일 생성  
   
  이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 기본적으로 이 파일은 `drive`:\Program Files\Microsoft SDKs\Windows\v`n.nn`\bin에 있습니다. Visual Studio를 설치하지 않으면 [Windows SDK](https://go.microsoft.com/fwlink/?LinkId=142225)를 다운로드하여 SQLMetal 파일도 가져올 수 있습니다.  
   
@@ -88,9 +88,9 @@ sqlmetal [options] [<input file>]
 ## <a name="remarks"></a>주의  
  실제로 SqlMetal 기능에는 다음과 같은 두 단계가 포함됩니다.  
   
--   데이터베이스의 메타데이터를 .dbml 파일에 추출  
+- 데이터베이스의 메타데이터를 .dbml 파일에 추출  
   
--   코드 출력 파일 생성  
+- 코드 출력 파일 생성  
   
      적절한 명령줄 옵션을 사용하면 Visual Basic 또는 C# 소스 코드를 생성하거나 XML 매핑 파일을 생성할 수 있습니다.  
   
@@ -100,9 +100,9 @@ sqlmetal [options] [<input file>]
   
  다음 조건 중 하나 이상이 true이면[!INCLUDE[sqprsqext](../../../includes/sqprsqext-md.md)] 는 예외를 throw합니다.  
   
--   SqlMetal이 자기 자신을 호출하는 저장 프로시저의 추출을 시도합니다.  
+- SqlMetal이 자기 자신을 호출하는 저장 프로시저의 추출을 시도합니다.  
   
--   저장 프로시저, 함수 또는 뷰의 중첩 수준이 32를 초과합니다.  
+- 저장 프로시저, 함수 또는 뷰의 중첩 수준이 32를 초과합니다.  
   
      SqlMetal이 이 예외를 catch하여 경고로 보고합니다.  
   

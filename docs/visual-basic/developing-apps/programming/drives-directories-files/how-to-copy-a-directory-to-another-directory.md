@@ -7,12 +7,12 @@ helpviewer_keywords:
 - folders [Visual Basic], copying
 - directories [Visual Basic], copying
 ms.assetid: 2a370bd7-10ba-4219-afc4-4519d031eb6c
-ms.openlocfilehash: e45de705eb25d58857239cc549125c524765aaa5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9a02407ea805db4ae23f001de49ed6610f807b8c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816579"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628877"
 ---
 # <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>방법: Visual Basic에서 디렉터리를 다른 디렉터리에 복사
 <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> 메서드를 사용하여 디렉터리를 다른 디렉터리에 복사합니다. 이 메서드는 디렉터리 자체뿐만 아니라 디렉터리 내용을 복사합니다. 대상 디렉터리가 없는 경우 새로 만듭니다. 같은 이름의 디렉터리가 대상 위치에 있고 `overwrite`가 `False`로 설정된 경우 두 디렉터리의 내용이 병합됩니다. 작업 중에 디렉터리의 새 이름을 지정할 수 있습니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "58816579"
   
 ### <a name="to-copy-a-directory-to-another-directory"></a>디렉터리를 다른 디렉터리에 복사하려면  
   
--   소스 및 대상 디렉터리 이름을 지정하여 `CopyDirectory` 메서드를 사용합니다. 다음 예제에서는 `TestDirectory1`이라는 디렉터리를 `TestDirectory2`에 복사하고 기존 파일을 덮어씁니다.  
+- 소스 및 대상 디렉터리 이름을 지정하여 `CopyDirectory` 메서드를 사용합니다. 다음 예제에서는 `TestDirectory1`이라는 디렉터리를 `TestDirectory2`에 복사하고 기존 파일을 덮어씁니다.  
   
      [!code-vb[VbVbcnMyFileSystem#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#16)]  
   
@@ -30,35 +30,35 @@ ms.locfileid: "58816579"
 ## <a name="robust-programming"></a>강력한 프로그래밍  
  다음 조건에서 예외가 발생합니다.  
   
--   디렉터리에 대해 지정된 새 이름이 콜론(:) 또는 슬래시(\ 또는 /)를 포함하는 경우(<xref:System.ArgumentException>)  
+- 디렉터리에 대해 지정된 새 이름이 콜론(:) 또는 슬래시(\ 또는 /)를 포함하는 경우(<xref:System.ArgumentException>)  
   
--   길이가 0인 문자열이거나, 공백만 포함하거나, 잘못된 문자를 포함하거나, 경로가 디바이스 경로인 경우(\\\\.\\로 시작됨)와 같은 여러 가지 이유 중 하나로 경로가 올바르지 않은 경우(<xref:System.ArgumentException>)  
+- 길이가 0인 문자열이거나, 공백만 포함하거나, 잘못된 문자를 포함하거나, 경로가 디바이스 경로인 경우(\\\\.\\로 시작됨)와 같은 여러 가지 이유 중 하나로 경로가 올바르지 않은 경우(<xref:System.ArgumentException>)  
   
--   경로가 `Nothing`이기 때문에 올바르지 않은 경우(<xref:System.ArgumentNullException>)  
+- 경로가 `Nothing`이기 때문에 올바르지 않은 경우(<xref:System.ArgumentNullException>)  
   
--   `destinationDirectoryName`이 `Nothing` 또는 빈 문자열인 경우(<xref:System.ArgumentNullException>)  
+- `destinationDirectoryName`이 `Nothing` 또는 빈 문자열인 경우(<xref:System.ArgumentNullException>)  
   
--   소스 디렉터리가 없는 경우(<xref:System.IO.DirectoryNotFoundException>)  
+- 소스 디렉터리가 없는 경우(<xref:System.IO.DirectoryNotFoundException>)  
   
--   소스 디렉터리가 루트 디렉터리인 경우(<xref:System.IO.IOException>)  
+- 소스 디렉터리가 루트 디렉터리인 경우(<xref:System.IO.IOException>)  
   
--   조합된 경로가 기존 파일을 가리키는 경우(<xref:System.IO.IOException>)  
+- 조합된 경로가 기존 파일을 가리키는 경우(<xref:System.IO.IOException>)  
   
--   소스 경로 및 대상 경로가 동일한 경우(<xref:System.IO.IOException>)  
+- 소스 경로 및 대상 경로가 동일한 경우(<xref:System.IO.IOException>)  
   
--   `ShowUI`가 `UIOption.AllDialogs`로 설정되었으며 사용자가 작업을 취소하거나 디렉터리에 있는 하나 이상의 파일을 복사할 수 없는 경우(<xref:System.OperationCanceledException>)  
+- `ShowUI`가 `UIOption.AllDialogs`로 설정되었으며 사용자가 작업을 취소하거나 디렉터리에 있는 하나 이상의 파일을 복사할 수 없는 경우(<xref:System.OperationCanceledException>)  
   
--   작업이 순환 방식인 경우(<xref:System.InvalidOperationException>)  
+- 작업이 순환 방식인 경우(<xref:System.InvalidOperationException>)  
   
--   경로에 콜론(:)이 포함된 경우(<xref:System.NotSupportedException>)  
+- 경로에 콜론(:)이 포함된 경우(<xref:System.NotSupportedException>)  
   
--   경로가 시스템 정의 최대 길이를 초과하는 경우(<xref:System.IO.PathTooLongException>)  
+- 경로가 시스템 정의 최대 길이를 초과하는 경우(<xref:System.IO.PathTooLongException>)  
   
--   경로의 파일 이름이나 폴더 이름에 콜론(:)이 있거나 이름의 형식이 잘못된 경우(<xref:System.NotSupportedException>)  
+- 경로의 파일 이름이나 폴더 이름에 콜론(:)이 있거나 이름의 형식이 잘못된 경우(<xref:System.NotSupportedException>)  
   
--   경로를 보는 데 필요한 권한이 사용자에게 없는 경우(<xref:System.Security.SecurityException>)  
+- 경로를 보는 데 필요한 권한이 사용자에게 없는 경우(<xref:System.Security.SecurityException>)  
   
--   대상 파일이 있지만 액세스할 수 없는 경우(<xref:System.UnauthorizedAccessException>)  
+- 대상 파일이 있지만 액세스할 수 없는 경우(<xref:System.UnauthorizedAccessException>)  
   
 ## <a name="see-also"></a>참고 항목
 

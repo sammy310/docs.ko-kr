@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7ccee788a00e56da16d1e78597815553d3c6212
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 788229053f5702b44c6ac351b59ad1c464e4e133
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678267"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633634"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>정규식의 수량자
 수량자는 찾을 일치 항목의 입력에 있어야 하는 문자, 그룹 또는 문자 클래스의 인스턴스 수를 지정합니다.  다음 테이블에서는 .NET에서 지원하는 수량자를 보여 줍니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "54678267"
 |`?`|`??`|0번 또는 1번 일치합니다.|  
 |`{` *n* `}`|`{` *n* `}?`|정확히 *n*번 일치합니다.|  
 |`{` *n* `,}`|`{` *n* `,}?`|적어도 *n*번 일치합니다.|  
-|`{` *n* `,` *분* `}`|`{` *n* `,` *분* `}?`|*n*번에서 *m*번까지 일치합니다.|  
+|`{` *n* `,` *m* `}`|`{` *n* `,` *m* `}?`|*n*번에서 *m*번까지 일치합니다.|  
   
  수량 `n` 및 `m`은 정수 상수입니다. 일반적으로 수량자는 탐욕적입니다. 그러면 최대한의 정규식 엔진이 특정 패턴과 일치하게 됩니다. `?` 문자를 수량자에 추가하면 게으른 수량자로 만들 수 있습니다. 그러면 최소한의 정규식 엔진이 일치하게 됩니다. 탐욕적 수량자와 게으른 수량자 간의 차이에 대한 설명은 이 항목의 뒷부분에 나오는 [탐욕적 및 게으른 수량자](#Greedy) 섹션을 참조하세요.  
   
@@ -228,11 +228,11 @@ ms.locfileid: "54678267"
 ## <a name="greedy-and-lazy-quantifiers"></a>탐욕적 및 게으른 수량자  
  여러 수량자에는 두 가지 버전이 있습니다.  
   
--   탐욕적 버전  
+- 탐욕적 버전  
   
      탐욕적 수량자는 요소를 최대한 많이 찾으려고 합니다.  
   
--   욕심 없는 (또는 게으른) 버전.  
+- 욕심 없는 (또는 게으른) 버전.  
   
      탐욕적이 아닌 수량자는 요소를 최대한 적게 찾으려고 합니다. `?`를 추가하기만 하면 탐욕적 수량자를 게으른 수량자로 설정할 수 있습니다.  
   

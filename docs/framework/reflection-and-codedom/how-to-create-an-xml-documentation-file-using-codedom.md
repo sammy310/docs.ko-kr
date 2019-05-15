@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4088fe35d919cd579ed9f9a6275db8bb88300fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9ae041ae278dc6f2423a679dab8982f4ccc35620
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297527"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592500"
 ---
 # <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>방법: CodeDOM을 사용하여 XML 문서 파일 만들기
 CodeDOM을 사용하여 XML 문서를 생성하는 코드를 만들 수 있습니다. 이 프로세스에서는 XML 문서 주석이 포함된 CodeDOM 그래프를 생성하고, 코드를 생성하고, XML 문서 출력을 만드는 컴파일러 옵션을 사용하여 생성된 코드를 컴파일해야 합니다.  
@@ -77,7 +77,7 @@ CodeDOM을 사용하여 XML 문서를 생성하는 코드를 만들 수 있습�
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
   
--   이 코드 예제를 성공적으로 실행하려면 `FullTrust` 권한이 설정되어 있어야 합니다.  
+- 이 코드 예제를 성공적으로 실행하려면 `FullTrust` 권한이 설정되어 있어야 합니다.  
   
 ## <a name="see-also"></a>참고 항목
 

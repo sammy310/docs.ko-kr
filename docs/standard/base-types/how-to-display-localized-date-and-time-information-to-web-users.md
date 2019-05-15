@@ -15,12 +15,12 @@ dev_langs:
 - vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e97bc095332e626d79561ab5fdc7bad531e3ba31
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b6bb41ad3743e19ae3f6ded48dd491542926010d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320160"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633880"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>방법: 웹 사용자에게 지역화된 날짜 및 시간 정보 표시
 웹 페이지는 전 세계 어디에서든 표시될 수 있으므로 날짜 및 시간 값의 구문 분석 및 서식 지정 작업은 사용자와 상호 작용할 때 기본 형식(대체로 웹 서버의 현지 문화권 형식임)을 사용해서는 안 됩니다. 대신 사용자가 입력한 날짜 및 시간 문자열을 처리하는 Web Forms는 사용자의 기본 설정 문화권을 사용하여 문자열을 구문 분석해야 합니다. 마찬가지로 날짜 및 시간 데이터는 사용자의 문화권을 따르는 형식으로 사용자에게 표시되어야 합니다. 이 항목에서는 프로젝션의 형식을 제어하는 방법을 보여 줍니다.  
@@ -35,9 +35,9 @@ ms.locfileid: "59320160"
   
 4. <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 형식의 `TryParse` 또는 `Parse` 메서드를 호출하여 변환을 시도합니다. `TryParse` 또는 `Parse` 메서드의 오버로드를 `provider` 매개 변수와 함께 사용하고, 다음 중 하나를 전달합니다.  
   
-    -   3단계에서 생성한 <xref:System.Globalization.CultureInfo> 개체  
+    - 3단계에서 생성한 <xref:System.Globalization.CultureInfo> 개체  
   
-    -   3단계에서 생성한 <xref:System.Globalization.CultureInfo> 개체의 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> 속성에서 반환하는 <xref:System.Globalization.DateTimeFormatInfo> 개체  
+    - 3단계에서 생성한 <xref:System.Globalization.CultureInfo> 개체의 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> 속성에서 반환하는 <xref:System.Globalization.DateTimeFormatInfo> 개체  
   
 5. 변환에 실패하는 경우 <xref:System.Web.HttpRequest.UserLanguages%2A> 속성에서 반환한 문자열 배열의 나머지 요소 각각에 대해 2~4단계를 반복합니다.  
   
@@ -65,9 +65,9 @@ ms.locfileid: "59320160"
   
 10. <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 또는 <xref:System.DateTime.TryParse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%2CSystem.DateTime%40%29?displayProperty=nameWithType> 메서드를 호출하여 사용자 요청의 날짜 및 시간을 <xref:System.DateTime> 값으로 변환합니다. 메서드의 오버로드를 `provider` 매개 변수와 함께 사용하고, 다음 중 하나를 전달합니다.  
   
-    -   8단계에서 생성한 <xref:System.Globalization.CultureInfo> 개체  
+    - 8단계에서 생성한 <xref:System.Globalization.CultureInfo> 개체  
   
-    -   8단계에서 생성한 <xref:System.Globalization.CultureInfo> 개체의 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> 속성에서 반환하는 <xref:System.Globalization.DateTimeFormatInfo> 개체  
+    - 8단계에서 생성한 <xref:System.Globalization.CultureInfo> 개체의 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> 속성에서 반환하는 <xref:System.Globalization.DateTimeFormatInfo> 개체  
   
 11. 10단계의 구문 분석 작업이 실패하는 경우 13단계로 이동합니다. 구문 분석에 성공한 경우 <xref:System.UInt32.Parse%28System.String%29?displayProperty=nameWithType> 메서드를 호출하여 사용자 표준 시간대 오프셋의 문자열 표현을 정수로 변환합니다.  
   
@@ -100,13 +100,13 @@ ms.locfileid: "59320160"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  코드를 컴파일하려면 코드 숨김을 사용하지 않고 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 웹 페이지를 만듭니다. 그런 다음, 예제를 웹 페이지에 복사하여 기존의 모든 코드를 대체합니다. [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 웹 페이지에는 다음과 같은 컨트롤이 있어야 합니다.  
   
--   코드에서 참조되지 않는 <xref:System.Web.UI.WebControls.Label> 컨트롤. 해당 <xref:System.Web.UI.WebControls.TextBox.Text%2A> 속성을 “Enter a Number:”로 설정합니다.  
+- 코드에서 참조되지 않는 <xref:System.Web.UI.WebControls.Label> 컨트롤. 해당 <xref:System.Web.UI.WebControls.TextBox.Text%2A> 속성을 “Enter a Number:”로 설정합니다.  
   
--   `DateString`이라는 <xref:System.Web.UI.WebControls.TextBox> 컨트롤  
+- `DateString`이라는 <xref:System.Web.UI.WebControls.TextBox> 컨트롤  
   
--   `OKButton`이라는 <xref:System.Web.UI.WebControls.Button> 컨트롤 해당 <xref:System.Web.UI.WebControls.Button.Text%2A> 속성을 “OK”로 설정합니다.  
+- `OKButton`이라는 <xref:System.Web.UI.WebControls.Button> 컨트롤 해당 <xref:System.Web.UI.WebControls.Button.Text%2A> 속성을 “OK”로 설정합니다.  
   
--   `DateInfo`이라는 <xref:System.Web.UI.WebControls.HiddenField> 컨트롤  
+- `DateInfo`이라는 <xref:System.Web.UI.WebControls.HiddenField> 컨트롤  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
  사용자가 HTML 스트림에 스크립트를 삽입하지 못하게 하려면 서버 응답에서 사용자 입력을 곧바로 다시 에코해서는 안 됩니다. 대신 <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType> 메서드를 사용하여 인코딩해야 합니다.  

@@ -2,12 +2,12 @@
 title: 연결 쿼리 예제(C#)
 ms.date: 07/20/2015
 ms.assetid: abbca162-d95e-43af-b92c-e46e6aa2540e
-ms.openlocfilehash: b77de6b1e5bd81ac70165640aecf0d4ce89be03d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8564a2ece7dc09bd3330dc9bdad31689408089cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677351"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598549"
 ---
 # <a name="chaining-queries-example-c"></a>연결 쿼리 예제(C#)
 이 예제에서는 이전 예제를 기반으로 하며 지연된 실행과 지연 계산을 모두 사용하는 두 쿼리를 연결할 때 발생하는 상황을 보여 줍니다.  
@@ -84,7 +84,7 @@ Main: str >GHI!!!<
   
  이 자습서의 다음 항목에서는 중간 구체화를 보여 줍니다.  
   
--   [중간 구체화(C#)](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)  
+- [중간 구체화(C#)](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)  
   
 ## <a name="see-also"></a>참고 항목
 

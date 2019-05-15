@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93abf6e91c2e13173184faee281de52eb83e17f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8d0574c7e0910a658f1dc80d8394f55b472c31a3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314011"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634566"
 ---
 # <a name="composite-formatting"></a>복합 형식 지정
 
@@ -126,11 +126,11 @@ ms.locfileid: "59314011"
   
 3. 값이 <xref:System.IFormattable> 인터페이스를 구현하면 인터페이스의 <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> 메서드가 호출됩니다. *formatString* 값(형식 항목에 있는 경우) 또는 `null`(없는 경우)이 메서드에 전달됩니다. <xref:System.IFormatProvider> 인수는 다음과 같이 결정됩니다.  
   
-    -   숫자 값의 경우, null이 아닌 <xref:System.IFormatProvider> 인수가 있는 합성 서식 지정 메서드가 호출되면 런타임이 <xref:System.Globalization.NumberFormatInfo> 메서드에서 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 개체를 요청합니다. 값을 제공할 수 없거나, 인수 값이 `null`이거나, 합성 서식 지정 메서드에 <xref:System.IFormatProvider> 매개 변수가 없는 경우, 현재 스레드 문화권에 대한 <xref:System.Globalization.NumberFormatInfo> 개체가 사용됩니다.  
+    - 숫자 값의 경우, null이 아닌 <xref:System.IFormatProvider> 인수가 있는 합성 서식 지정 메서드가 호출되면 런타임이 <xref:System.Globalization.NumberFormatInfo> 메서드에서 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 개체를 요청합니다. 값을 제공할 수 없거나, 인수 값이 `null`이거나, 합성 서식 지정 메서드에 <xref:System.IFormatProvider> 매개 변수가 없는 경우, 현재 스레드 문화권에 대한 <xref:System.Globalization.NumberFormatInfo> 개체가 사용됩니다.  
   
-    -   날짜 및 시간 값의 경우, null이 아닌 <xref:System.IFormatProvider> 인수가 있는 합성 서식 지정 메서드가 호출되면 런타임이 <xref:System.Globalization.DateTimeFormatInfo> 메서드에서 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 개체를 요청합니다. 값을 제공할 수 없거나, 인수 값이 `null`이거나, 합성 서식 지정 메서드에 <xref:System.IFormatProvider> 매개 변수가 없는 경우, 현재 스레드 문화권에 대한 <xref:System.Globalization.DateTimeFormatInfo> 개체가 사용됩니다.  
+    - 날짜 및 시간 값의 경우, null이 아닌 <xref:System.IFormatProvider> 인수가 있는 합성 서식 지정 메서드가 호출되면 런타임이 <xref:System.Globalization.DateTimeFormatInfo> 메서드에서 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 개체를 요청합니다. 값을 제공할 수 없거나, 인수 값이 `null`이거나, 합성 서식 지정 메서드에 <xref:System.IFormatProvider> 매개 변수가 없는 경우, 현재 스레드 문화권에 대한 <xref:System.Globalization.DateTimeFormatInfo> 개체가 사용됩니다.  
   
-    -   다른 형식의 개체에 대해, 복합 형식 지정 메서드가 <xref:System.IFormatProvider> 인수와 함께 호출되는 경우 그 값은 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 구현으로 직접 전달됩니다. 그렇지 않으면 `null`이 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 구현으로 전달됩니다.  
+    - 다른 형식의 개체에 대해, 복합 형식 지정 메서드가 <xref:System.IFormatProvider> 인수와 함께 호출되는 경우 그 값은 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 구현으로 직접 전달됩니다. 그렇지 않으면 `null`이 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 구현으로 전달됩니다.  
   
 4. `ToString`을 재정의하거나 기본 클래스의 동작을 상속하는, 형식의 매개 변수 없는 <xref:System.Object.ToString?displayProperty=nameWithType> 메서드가 호출됩니다. 이 경우, 형식 항목에서 *formatString* 구성 요소로 지정된 형식 문자열(있는 경우)은 무시됩니다.  
   

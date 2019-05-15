@@ -18,21 +18,21 @@ ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 6d9761d2e9904e865e7f6a17526327e1b04a1597
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 756d63be456dce10ca9e95963ed25602e6f4aec1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53142933"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634783"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>정규식의 교체 구문
 <a name="top"></a> 교체 구문은 either/or 또는 조건부 일치를 허용하도록 정규식을 수정합니다. .NET에서는 다음 세 가지 교체 구문을 지원합니다.  
   
--   [&#124;를 사용한 패턴 일치](#Either_Or)  
+- [&#124;를 사용한 패턴 일치](#Either_Or)  
   
--   [(?(expression)yes&#124;no)를 사용한 조건부 일치](#Conditional_Expr)  
+- [(?(expression)yes&#124;no)를 사용한 조건부 일치](#Conditional_Expr)  
   
--   [유효한 캡처 그룹을 기준으로 조건부 일치](#Conditional_Group)  
+- [유효한 캡처 그룹을 기준으로 조건부 일치](#Conditional_Group)  
   
 <a name="Either_Or"></a>   
 ## <a name="pattern-matching-with-124"></a>&#124;를 사용한 패턴 일치  
@@ -87,9 +87,9 @@ ms.locfileid: "53142933"
  [!code-csharp[RegularExpressions.Language.Alternation#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation3.cs#3)]
  [!code-vb[RegularExpressions.Language.Alternation#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation3.vb#3)]  
   
- 정규식 패턴 `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b`는 다음 테이블과 같이 해석됩니다.  
+ 정규식 패턴 `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` 는 다음 테이블과 같이 해석됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계를 시작합니다.|  
 |`(?(\d{2}-)`|다음 문자 3개가 숫자 2개, 하이픈 순으로 구성되는지를 확인합니다.|  
@@ -118,9 +118,9 @@ ms.locfileid: "53142933"
  [!code-csharp[RegularExpressions.Language.Alternation#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation4.cs#4)]
  [!code-vb[RegularExpressions.Language.Alternation#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation4.vb#4)]  
   
- 정규식 패턴 `\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b`는 다음 테이블과 같이 해석됩니다.  
+ 정규식 패턴 `\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` 는 다음 테이블과 같이 해석됩니다.  
   
-|패턴|설명|  
+|무늬|설명|  
 |-------------|-----------------|  
 |`\b`|단어 경계를 시작합니다.|  
 |`(?<n2>\d{2}-)?`|숫자 2개, 하이픈 순의 일치 항목 0개 또는 1개를 찾습니다. 이 캡처링 그룹의 이름을 `n2`로 지정합니다.|  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - win32manifest compiler option [C#]
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
-ms.openlocfilehash: 9718febfe5aefba75decc133ad2113b64e4547de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4cdab8c818cf3278c829e2486e89be32bb4ba277
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618080"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593033"
 ---
 # <a name="-win32manifest-c-compiler-options"></a>-win32manifest(C# 컴파일러 옵션)
 프로젝트의 PE(포팅 가능한 실행 파일) 파일에 포함할 사용자 정의 Win32 애플리케이션 매니페스트 파일을 식별하려면 **-win32manifest** 옵션을 사용합니다.  
@@ -38,9 +38,9 @@ ms.locfileid: "54618080"
   
  다음 조건 중 하나라도 참인 경우 애플리케이션에 가상화가 적용됩니다.  
   
--   사용자는 **-nowin32manifest** 옵션을 사용하며, **-win32res** 옵션을 사용하여 나중 빌드 단계 또는 Windows Resource(.res) 파일의 일부로 매니페스트를 제공하지 않습니다.  
+- 사용자는 **-nowin32manifest** 옵션을 사용하며, **-win32res** 옵션을 사용하여 나중 빌드 단계 또는 Windows Resource(.res) 파일의 일부로 매니페스트를 제공하지 않습니다.  
   
--   요청한 실행 수준을 지정하지 않는 사용자 지정 매니페스트를 제공합니다.  
+- 요청한 실행 수준을 지정하지 않는 사용자 지정 매니페스트를 제공합니다.  
   
  Visual Studio는 기본 .manifest 파일을 만들고 이를 실행 파일과 함께 debug 및 release 디렉터리에 저장합니다. 텍스트 편집기에서 파일을 만들고 프로젝트에 파일을 추가하여 사용자 지정 매니페스트를 추가할 수 있습니다. 또는 **솔루션 탐색기**에서 **프로젝트** 아이콘을 마우스 오른쪽 단추로 클릭하고, **새 항목 추가**와 **애플리케이션 매니페스트 파일**을 차례로 클릭합니다. 신규 또는 기존 매니페스트 파일을 추가하면 **매니페스트** 드롭다운 목록에 나타납니다. 자세한 내용은 [프로젝트 디자이너, 애플리케이션 페이지(C#)](/visualstudio/ide/reference/application-page-project-designer-csharp)를 참조하세요.  
   
