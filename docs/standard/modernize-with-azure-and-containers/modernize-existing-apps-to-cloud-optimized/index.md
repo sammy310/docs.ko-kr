@@ -1,15 +1,13 @@
 ---
 title: 기존.NET 앱을 클라우드 액세스에 최적화된 응용 프로그램으로 최신화
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: edbffe45a2a1652ff477f9785b3afb5b0e493bc3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00385ac1e2f41d2005606fa7f943618ec253ffc2
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61811680"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638938"
 ---
 # <a name="modernize-existing-net-apps-to-cloud-optimized-applications"></a>기존.NET 앱을 클라우드 액세스에 최적화된 응용 프로그램으로 최신화
 
