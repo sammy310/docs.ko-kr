@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ContextMenuStrips [Windows Forms], configuring check and image margins
 - margins [Windows Forms], setting check and image in Windows Forms ContextMenuStrips
 ms.assetid: 3391c4c2-0c9e-4aa4-9492-13ff7644bdf2
-ms.openlocfilehash: 767f27b4e76cd14d4a189e79a720a5ff2a45ebcd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cc50256bd170ccd21b16831734208c531f3f8a4b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614721"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586721"
 ---
 # <a name="how-to-configure-contextmenustrip-check-margins-and-image-margins"></a>방법: ContextMenuStrip 선택 여백 및 이미지 여백 구성
 <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> 및 <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> 속성을 다양한 조합으로 설정하여 <xref:System.Windows.Forms.ContextMenuStrip>을 사용자 지정할 수 있습니다.  
@@ -31,8 +31,6 @@ ms.locfileid: "64614721"
  이 예제에는 다음 사항이 필요합니다.  
   
 - System.Design, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조  
-  
- Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 내용은 [명령줄에서 빌드](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 하거나 [csc.exe를 사용한 명령줄 빌드](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다. 또한 새 프로젝트에 코드를 붙여 넣어 Visual Studio에서이 예제를 빌드할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
 

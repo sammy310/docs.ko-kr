@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /nowarn compiler option [C#]
 - -nowarn compiler option [C#]
 ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
-ms.openlocfilehash: 13bb50366d9c19751ef3387baf809ab69e27b5dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b455a2f719e7350c51cf4a1f095d4669529d0e5e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324151"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592807"
 ---
 # <a name="-nowarn-c-compiler-options"></a>-nowarn(C# 컴파일러 옵션)
 **-nowarn** 옵션을 사용하면 컴파일러에서 하나 이상의 경고를 표시하지 않을 수 있습니다. 여러 경고 번호를 쉼표로 구분합니다.  
@@ -35,11 +35,11 @@ ms.locfileid: "59324151"
   
  다음 경고는 `-nowarn` 옵션으로 표시되지 않도록 설정할 수 없습니다.  
   
--   컴파일러 경고(수준 1) CS2002  
+- 컴파일러 경고(수준 1) CS2002  
   
--   컴파일러 경고(수준 1) CS2023  
+- 컴파일러 경고(수준 1) CS2023  
   
--   컴파일러 경고(수준 1) CS2029  
+- 컴파일러 경고(수준 1) CS2029  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   

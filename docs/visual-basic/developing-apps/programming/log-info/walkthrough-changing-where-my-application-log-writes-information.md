@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-ms.openlocfilehash: 56fef77448f3523732e755f57e8cdabe6ad71379
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cba90119fa6f26946e72ce097074f275178ff33b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327648"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593347"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>연습: My.Application.Log가 정보를 기록하는 위치 변경(Visual Basic)
 `My.Application.Log` 및 `My.Log` 개체를 사용하여 애플리케이션에서 발생하는 이벤트에 대한 정보를 기록할 수 있습니다. 이 연습에서는 기본 설정을 재정의하고 `Log` 개체가 다른 로그 수신기에 쓰도록 만드는 방법을 보여 줍니다.  
@@ -28,11 +28,11 @@ ms.locfileid: "59327648"
   
      app.config 파일이 없는 경우  
   
-    1.  **프로젝트** 메뉴에서 **새 항목 추가**를 선택합니다.  
+    1. **프로젝트** 메뉴에서 **새 항목 추가**를 선택합니다.  
   
-    2.  **새 항목 추가** 대화 상자에서 **애플리케이션 구성 파일**을 선택합니다.  
+    2. **새 항목 추가** 대화 상자에서 **애플리케이션 구성 파일**을 선택합니다.  
   
-    3.  **추가**를 클릭합니다.  
+    3. **추가**를 클릭합니다.  
   
 2. `<listeners>` 섹션에서 `<source>` 특성이 "DefaultSource"인 `name` 섹션 아래에 있는 `<sources>` 섹션을 찾습니다. `<sources>` 섹션은 최상위 `<system.diagnostics>` 섹션의 `<configuration>` 섹션에 있습니다.  
   
@@ -153,13 +153,13 @@ ms.locfileid: "59327648"
   
      다음 형식을 사용할 수 있습니다.  
   
-    -   파일 로그에 쓰는 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> 수신기  
+    - 파일 로그에 쓰는 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> 수신기  
   
-    -   `initializeData` 매개 변수로 지정된 컴퓨터 이벤트 로그에 정보를 쓰는 <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> 수신기  
+    - `initializeData` 매개 변수로 지정된 컴퓨터 이벤트 로그에 정보를 쓰는 <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> 수신기  
   
-    -   `initializeData` 매개 변수에 지정된 파일에 쓰는 <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> 및 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> 수신기  
+    - `initializeData` 매개 변수에 지정된 파일에 쓰는 <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> 및 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> 수신기  
   
-    -   명령줄 콘솔에 쓰는 <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> 수신기  
+    - 명령줄 콘솔에 쓰는 <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> 수신기  
   
      다른 형식의 로그 수신기가 정보를 쓰는 위치에 대한 자세한 내용은 해당 형식의 설명서를 참조하세요.  
   

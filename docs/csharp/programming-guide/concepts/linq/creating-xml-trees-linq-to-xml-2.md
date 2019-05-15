@@ -2,12 +2,12 @@
 title: C#에서 XML 트리 만들기(LINQ to XML)
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-ms.openlocfilehash: 3bac7b62d04c9690cdd08d1993b64db33c4e6ab8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00f528bca00b2c2316d949ceb3b6c4bba2499146
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503172"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597669"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>C#에서 XML 트리 만들기(LINQ to XML)
 이 단원에서는 C#에서 XML 트리를 만드는 방법에 대해 설명합니다.  
@@ -50,17 +50,17 @@ XElement contacts =
   
  `content` 매개 변수는 융통성이 매우 크기 때문에 <xref:System.Xml.Linq.XElement>의 유효한 자식인 모든 형식의 개체를 지원합니다. 이 매개 변수로 전달되는 개체의 형식에 따라 다음과 같은 규칙이 적용됩니다.  
   
--   문자열은 텍스트 내용으로 추가됩니다.  
+- 문자열은 텍스트 내용으로 추가됩니다.  
   
--   <xref:System.Xml.Linq.XElement>는 자식 요소로 추가됩니다.  
+- <xref:System.Xml.Linq.XElement>는 자식 요소로 추가됩니다.  
   
--   <xref:System.Xml.Linq.XAttribute>는 특성으로 추가됩니다.  
+- <xref:System.Xml.Linq.XAttribute>는 특성으로 추가됩니다.  
   
--   <xref:System.Xml.Linq.XProcessingInstruction>, <xref:System.Xml.Linq.XComment> 또는 <xref:System.Xml.Linq.XText>는 자식 내용으로 추가됩니다.  
+- <xref:System.Xml.Linq.XProcessingInstruction>, <xref:System.Xml.Linq.XComment> 또는 <xref:System.Xml.Linq.XText>는 자식 내용으로 추가됩니다.  
   
--   <xref:System.Collections.IEnumerable>이 열거되고 이러한 규칙이 결과에 재귀적으로 적용됩니다.  
+- <xref:System.Collections.IEnumerable>이 열거되고 이러한 규칙이 결과에 재귀적으로 적용됩니다.  
   
--   다른 모든 형식의 경우 `ToString` 메서드가 호출되고 결과가 텍스트 내용으로 추가됩니다.  
+- 다른 모든 형식의 경우 `ToString` 메서드가 호출되고 결과가 텍스트 내용으로 추가됩니다.  
   
 ### <a name="creating-an-xelement-with-content"></a>콘텐츠를 사용하여 XElement 만들기  
  메서드를 한 번 호출하여 간단한 내용이 포함된 <xref:System.Xml.Linq.XElement>를 만들 수 있습니다. 이렇게 하려면 다음과 같이 내용을 두 번째 매개 변수로 지정합니다.  

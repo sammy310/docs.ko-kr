@@ -9,22 +9,22 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 65dfe906276912b5f6dc8d49af6a2662e3a09157
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8f37431279cc22b8e9c131f860b5de82f35af2e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630778"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591197"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>연습: WPF 애플리케이션에서 애플리케이션 데이터 캐싱
 캐싱을 사용하면 빠른 액세스를 위해 데이터를 메모리에 저장할 수 있습니다. 데이터에 다시 액세스할 때 애플리케이션은 원래 소스에서 검색하는 대신 캐시에서 데이터를 가져올 수 있습니다. 이 경우 성능과 확장성이 향상됩니다. 또한 캐싱을 사용하면 데이터 소스를 일시적으로 사용할 수 없는 경우에도 데이터를 사용할 수 있습니다.
 
- 합니다 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 에서 캐싱을 사용할 수 있도록 하는 클래스를 제공 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 응용 프로그램입니다. 이러한 클래스에는 <xref:System.Runtime.Caching> 네임 스페이스입니다.
+ .NET Framework는.NET Framework 응용 프로그램에서 캐싱을 사용할 수 있도록 하는 클래스를 제공 합니다. 이러한 클래스에는 <xref:System.Runtime.Caching> 네임 스페이스입니다.
 
 > [!NOTE]
->  합니다 <xref:System.Runtime.Caching> 네임 스페이스의 새로운는 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]합니다. 이 네임 스페이스는 모든 사용 가능한 캐싱은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 응용 프로그램입니다. 이전 버전의 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]에서는 캐싱을 <xref:System.Web> 네임스페이스에서만 사용할 수 있었기 때문에 ASP.NET 클래스에 대한 종속성이 필요했습니다.
+>  합니다 <xref:System.Runtime.Caching> 네임 스페이스의 새로운는 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]합니다. 이 네임 스페이스는 캐싱은 모든.NET Framework 응용 프로그램에 사용할 수 있습니다. 이전 버전의.NET Framework에서는 캐시 된 에서만 사용할 수 있습니다를 <xref:System.Web> 네임 스페이스 및 따라서 ASP.NET 클래스에 대 한 종속성이 필요 합니다.
 
- 이 연습에서 사용할 수 있는 캐싱 기능을 사용 하는 방법을 보여 줍니다.는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 의 일부로 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램입니다. 이 연습에서는 텍스트 파일의 내용을 캐시 합니다.
+ 이 연습 일부로.NET Framework에서 사용할 수 있는 캐싱 기능을 사용 하는 방법을 보여 줍니다.는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램입니다. 이 연습에서는 텍스트 파일의 내용을 캐시 합니다.
 
  이 연습에서 수행할 작업은 다음과 같습니다.
 
@@ -67,7 +67,7 @@ ms.locfileid: "64630778"
 4. 에 **새 프로젝트** 대화 상자에서 **WPF 응용 프로그램**합니다.
 
     > [!NOTE]
-    >  표시 되지 않으면 합니다 **WPF 응용 프로그램** 템플릿을 버전을 대상으로 하는 있는지 확인 합니다 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] WPF를 지 원하는. 에 **새 프로젝트** 대화 상자에서 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 목록에서.
+    >  표시 되지 않으면 합니다 **WPF 응용 프로그램** 템플릿을 WPF를 지 원하는.NET Framework의 버전을 대상으로 하는 있는지 확인 합니다. 에 **새 프로젝트** 대화 상자에서 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 목록에서.
 
 5. 에 **이름을** 텍스트 상자에 프로젝트의 이름을 입력 합니다. 예를 들어 입력할 수 있습니다 **WPFCaching**합니다.
 

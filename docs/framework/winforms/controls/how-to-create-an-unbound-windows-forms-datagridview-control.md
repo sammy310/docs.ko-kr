@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], displaying data without binding to a data source
 - data [Windows Forms], unbound
 ms.assetid: b5d4b47d-9a28-4d88-9dba-0a3c90fba71d
-ms.openlocfilehash: 193e5228df8587dfc384d8ed97ee5e4e6c005215
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c488d0221080454a82e4c80f89964df0ee62f068
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611990"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591646"
 ---
 # <a name="how-to-create-an-unbound-windows-forms-datagridview-control"></a>방법: 바인딩되지 않은 Windows Forms DataGridView 컨트롤 만들기
 다음 코드 예제에서는 데이터 소스에 바인딩하지 않고 프로그래밍 방식으로 <xref:System.Windows.Forms.DataGridView> 컨트롤을 채우는 방법을 보여 줍니다. 적은 양의 데이터를 테이블 형식으로 표시하려는 경우에 유용합니다.  
@@ -30,8 +30,6 @@ ms.locfileid: "64611990"
   
 - System, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조  
   
- Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 내용은 [명령줄에서 빌드](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 하거나 [csc.exe를 사용한 명령줄 빌드](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다. 또한 새 프로젝트에 코드를 붙여 넣어 Visual Studio에서이 예제를 빌드할 수 있습니다.  
-
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.Forms.DataGridView>

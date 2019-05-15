@@ -2,12 +2,12 @@
 title: '방법: (LINQ) (Visual Basic) 폴더의 파일 내용 쿼리'
 ms.date: 07/20/2015
 ms.assetid: edacbcd3-f3e4-4429-a8be-28a58dc0dd70
-ms.openlocfilehash: 04909de9fe3898600b127f1f7a5ba46834bc239a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8af6653c3cffe846082606de81d4bbefedaa30e9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794721"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592131"
 ---
 # <a name="how-to-query-the-contents-of-files-in-a-folder-linq-visual-basic"></a>방법: (LINQ) (Visual Basic) 폴더의 파일 내용 쿼리
 이 예제에서는 지정된 디렉터리 트리에 있는 모든 파일을 쿼리하고 각 파일을 연 다음 내용을 검사하는 방법을 보여 줍니다. 이러한 유형의 기술을 사용하여 디렉터리 트리 내용의 인덱스 또는 역방향 인덱스를 만들 수 있습니다. 이 예제에서는 단순 문자열 검색이 수행됩니다. 그러나 정규식을 사용하면 더 복잡한 유형의 패턴 일치를 수행할 수 있습니다. 자세한 내용은 [방법: 정규식 (Visual Basic)를 사용 하 여 LINQ 쿼리 결합](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)합니다.  
@@ -71,7 +71,7 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- System.Core.dll에 대한 참조와 System.Linq 네임스페이스에 대한 `Imports` 문을 사용하여 .NET Framework 버전 3.5 이상을 대상으로 하는 프로젝트를 만듭니다.  
+VB.NET 콘솔 응용 프로그램 프로젝트를 만듭니다는 `Imports` System.Linq 네임 스페이스에 대 한 문입니다.
   
 ## <a name="see-also"></a>참고자료
 

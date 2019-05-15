@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 29c24d9920bff38beced8f5995ec328571e6b5d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 345acd17a6357f71f5c047475a4494a1fa793a58
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309227"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595786"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>연습: C#에서 쿼리 작성(LINQ)
 이 연습에서는 LINQ 쿼리 식을 작성하는 데 사용되는 C # 언어 기능을 보여 줍니다.  
@@ -41,17 +41,17 @@ ms.locfileid: "59309227"
 ## <a name="create-an-in-memory-data-source"></a>메모리 내 데이터 소스 만들기  
  쿼리의 데이터 소스는 간단한 `Student` 개체 목록입니다. 각 `Student` 레코드에는 이름, 성 및 클래스의 테스트 점수를 나타내는 정수 배열이 있습니다. 프로젝트에 이 코드를 복사합니다. 다음 특성에 주의합니다.  
   
--   `Student` 클래스는 자동으로 구현된 속성으로 구성됩니다.  
+- `Student` 클래스는 자동으로 구현된 속성으로 구성됩니다.  
   
--   목록의 각 학생은 개체 이니셜라이저로 초기화됩니다.  
+- 목록의 각 학생은 개체 이니셜라이저로 초기화됩니다.  
   
--   목록 자체는 컬렉션 이니셜라이저로 초기화됩니다.  
+- 목록 자체는 컬렉션 이니셜라이저로 초기화됩니다.  
   
  이 전체 데이터 구조는 생성자 또는 명시적 멤버 액세스에 대한 명시적 호출 없이 초기화되고 인스턴스화됩니다. 이러한 새로운 기능에 대한 자세한 내용은 [자동으로 구현된 속성](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md) 및 [개체 및 컬렉션 이니셜라이저](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)를 참조하세요.  
   
 #### <a name="to-add-the-data-source"></a>데이터 소스를 추가하려면  
   
--   `Student` 클래스 및 초기화된 학생 목록을 프로젝트의 `Program` 클래스에 추가합니다.  
+- `Student` 클래스 및 초기화된 학생 목록을 프로젝트의 `Program` 클래스에 추가합니다.  
   
      [!code-csharp[CsLinqGettingStarted#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#11)]  
   
@@ -63,7 +63,7 @@ ms.locfileid: "59309227"
   
 #### <a name="to-create-a-simple-query"></a>단순 쿼리를 작성하려면  
   
--   애플리케이션의 `Main` 메서드에서, 실행 시 첫 번째 테스트의 점수가 90보다 큰 모든 학생의 목록을 생성하는 간단한 쿼리를 만듭니다. 전체 `Student` 개체가 선택되므로 쿼리의 형식은 `IEnumerable<Student>`입니다. [var](../../../../csharp/language-reference/keywords/var.md) 키워드를 사용하여 코드에서 암시적 형식을 사용할 수도 있지만, 결과를 명확하게 설명하기 위해 명시적 형식이 사용됩니다. `var`에 대한 자세한 내용은 [암시적으로 형식화된 지역 변수](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)를 참조하세요.  
+- 애플리케이션의 `Main` 메서드에서, 실행 시 첫 번째 테스트의 점수가 90보다 큰 모든 학생의 목록을 생성하는 간단한 쿼리를 만듭니다. 전체 `Student` 개체가 선택되므로 쿼리의 형식은 `IEnumerable<Student>`입니다. [var](../../../../csharp/language-reference/keywords/var.md) 키워드를 사용하여 코드에서 암시적 형식을 사용할 수도 있지만, 결과를 명확하게 설명하기 위해 명시적 형식이 사용됩니다. `var`에 대한 자세한 내용은 [암시적으로 형식화된 지역 변수](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)를 참조하세요.  
   
      또한 쿼리의 범위 변수 `student`는 소스의 각 `Student`에 대한 참조로 사용되며, 각 개체에 대한 멤버 액세스를 제공합니다.  
   
@@ -75,9 +75,9 @@ ms.locfileid: "59309227"
   
 1. 이제 쿼리를 실행하도록 할 `foreach` 루프를 작성합니다. 다음은 코드에 대한 유의 사항입니다.  
   
-    -   반환된 시퀀스의 각 요소는 `foreach` 루프의 반복 변수를 통해 액세스됩니다.  
+    - 반환된 시퀀스의 각 요소는 `foreach` 루프의 반복 변수를 통해 액세스됩니다.  
   
-    -   이 변수의 형식은 `Student`이며, 쿼리 변수 형식은 `IEnumerable<Student>`과 호환됩니다.  
+    - 이 변수의 형식은 `Student`이며, 쿼리 변수 형식은 `IEnumerable<Student>`과 호환됩니다.  
   
 2. 이 코드를 추가한 후 애플리케이션을 빌드하고 실행하고 **콘솔** 창에서 결과를 확인하세요.  
   

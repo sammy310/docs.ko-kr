@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 9f1ddf7691c9c00c3a4a7a20fc81d2f42f5830f3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8f1392a6ee2e8f5b3f85650ee91e20e7ec3436fa
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652097"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592217"
 ---
 # <a name="configuring-services-using-configuration-files"></a>구성 파일을 사용하여 서비스 구성
 디자인 타임에 대신 배포 지점에서 서비스 동작 데이터 및 끝점을 제공 하는 유연성을 제공 구성 파일을 사용 하 여 Windows Communication Foundation (WCF) 서비스를 구성 합니다. 이 항목에서는 사용할 수 있는 기본 기술에 대해 간략하게 설명합니다.  
   
- WCF 서비스를 구성할 수 있습니다는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 기술 구성 합니다. 가장 일반적으로 XML 요소는 WCF 서비스를 호스팅하는 인터넷 정보 서비스 (IIS) 사이트의 Web.config 파일에 추가 됩니다. 이 요소를 사용하여 엔드포인트 주소(서비스와의 통신에 사용되는 실제 주소)와 같은 세부 사항을 컴퓨터별로 변경할 수 있습니다. 또한 WCF 서비스에 대 한 가장 기본적인 기능을 신속 하 게 선택할 수 있도록 하는 여러 시스템 제공 요소가 포함 되어 있습니다. 부터 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF WCF 구성 요구 사항을 간소화 하는 새로운 기본 구성 모델이 함께 제공 됩니다. 모든 WCF 구성 특정 서비스를 제공 하지 않으면 런타임이 일부 표준 끝점 및 기본 바인딩/동작을 사용 하 여 서비스 자동으로 구성 합니다. 실제로 구성 작성은 주요 WCF 응용 프로그램 프로그래밍의 일부입니다.  
+ WCF 서비스는.NET Framework 구성 기술을 사용 하 여 구성할 수 있습니다. 가장 일반적으로 XML 요소는 WCF 서비스를 호스팅하는 인터넷 정보 서비스 (IIS) 사이트의 Web.config 파일에 추가 됩니다. 이 요소를 사용하여 엔드포인트 주소(서비스와의 통신에 사용되는 실제 주소)와 같은 세부 사항을 컴퓨터별로 변경할 수 있습니다. 또한 WCF 서비스에 대 한 가장 기본적인 기능을 신속 하 게 선택할 수 있도록 하는 여러 시스템 제공 요소가 포함 되어 있습니다. 부터 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF WCF 구성 요구 사항을 간소화 하는 새로운 기본 구성 모델이 함께 제공 됩니다. 모든 WCF 구성 특정 서비스를 제공 하지 않으면 런타임이 일부 표준 끝점 및 기본 바인딩/동작을 사용 하 여 서비스 자동으로 구성 합니다. 실제로 구성 작성은 주요 WCF 응용 프로그램 프로그래밍의 일부입니다.  
   
  자세한 내용은 [서비스에 대 한 바인딩을 구성](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)합니다. 가장 목록 요소에 일반적으로 사용 되는, 참조 [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)합니다. 기본 엔드포인트, 바인딩 및 동작에 대한 자세한 내용은 [단순화된 구성](../../../docs/framework/wcf/simplified-configuration.md) 및 [WCF 서비스를 위한 단순화된 구성](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)을 참조하세요.  
   
@@ -22,7 +22,7 @@ ms.locfileid: "64652097"
 >  서로 다른 두 버전의 서비스가 배포되는 병렬 배포 시나리오에서는 구성 파일에서 참조되는 어셈블리의 부분 이름을 지정해야 합니다. 이는 구성 파일이 모든 버전의 서비스에서 공유되며 이러한 서비스가 여러 가지 버전의 .NET Framework에서 실행될 수 있기 때문입니다.  
   
 ## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration: Web.config 및 App.config  
- WCF의 System.Configuration 구성 시스템을 사용 하 여 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]입니다.  
+ WCF는.NET Framework의 System.Configuration 구성 시스템을 사용합니다.  
   
  Visual Studio에서 서비스를 구성할 때 설정을 지정 하는 web.config 또는 App.config 파일을 사용 합니다. 구성 파일 이름은 서비스에 대해 선택한 호스팅 환경에 따라 결정됩니다. IIS를 사용하여 서비스를 호스트하는 경우에는 Web.config 파일을 사용합니다. 다른 호스팅 환경을 사용하는 경우에는 App.config 파일을 사용합니다.  
   

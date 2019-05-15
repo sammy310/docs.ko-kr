@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-ms.openlocfilehash: d7b5cb57e921fa802207d2ad606ba3535b78a77b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 986f8c2d1eec91ee9a68d2b6068f5b38dfdf14f1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587021"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591253"
 ---
 # <a name="importing-schema-to-generate-classes"></a>스키마를 가져와 클래스 생성
 Windows Communication Foundation (WCF)를 사용 하 여 사용할 수 있는 스키마에서 클래스를 생성 하려면 사용 된 <xref:System.Runtime.Serialization.XsdDataContractImporter> 클래스입니다. 이 항목에서는 프로세스와 변형에 대해 설명합니다.  
@@ -21,9 +21,9 @@ Windows Communication Foundation (WCF)를 사용 하 여 사용할 수 있는 �
 ## <a name="the-import-process"></a>가져오기 프로세스
  스키마 가져오기 프로세스는 <xref:System.Xml.Schema.XmlSchemaSet>로 시작되고 <xref:System.CodeDom.CodeCompileUnit>을 생성합니다.  
   
- `XmlSchemaSet`은 XSD(XML 스키마 정의 언어) 스키마 문서 집합을 나타내는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SOM(스키마 개체 모델)의 일부입니다. XSD 문서 집합에서 `XmlSchemaSet` 개체를 만들려면 <xref:System.Xml.Schema.XmlSchema>를 사용하여 각 문서를 <xref:System.Xml.Serialization.XmlSerializer> 개체로 deserialize하고 이러한 개체를 새 `XmlSchemaSet`에 추가합니다.  
+ `XmlSchemaSet` 일부인의.NET Framework의 SOM 스키마 개체 모델 ()는 XML 스키마 정의 언어 (XSD) 스키마 문서 집합을 나타냅니다. XSD 문서 집합에서 `XmlSchemaSet` 개체를 만들려면 <xref:System.Xml.Schema.XmlSchema>를 사용하여 각 문서를 <xref:System.Xml.Serialization.XmlSerializer> 개체로 deserialize하고 이러한 개체를 새 `XmlSchemaSet`에 추가합니다.  
   
- `CodeCompileUnit`은 추상적인 방식으로 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 코드를 나타내는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] CodeDOM(코드 문서 개체 모델)의 일부입니다. `CodeCompileUnit`에서 실제 코드를 생성하려면 <xref:System.CodeDom.Compiler.CodeDomProvider> 또는 <xref:Microsoft.CSharp.CSharpCodeProvider> 클래스 같은 <xref:Microsoft.VisualBasic.VBCodeProvider> 클래스의 하위 클래스를 사용합니다.  
+ `CodeCompileUnit` .NET Framework의 코드 문서 개체 모델 (CodeDOM) 추상 방식으로.NET Framework 코드를 나타내는 부분입니다. `CodeCompileUnit`에서 실제 코드를 생성하려면 <xref:System.CodeDom.Compiler.CodeDomProvider> 또는 <xref:Microsoft.CSharp.CSharpCodeProvider> 클래스 같은 <xref:Microsoft.VisualBasic.VBCodeProvider> 클래스의 하위 클래스를 사용합니다.  
   
 ### <a name="to-import-a-schema"></a>스키마를 가져오려면  
   
@@ -60,7 +60,7 @@ Windows Communication Foundation (WCF)를 사용 하 여 사용할 수 있는 �
 #### <a name="controlling-namespaces-namespaces-or-the-namespace-switch"></a>네임스페이스 제어(Namespaces 또는 /namespace 스위치)  
  이에 해당 합니다 **/namespace** 스위치에 `Svcutil.exe` 도구입니다.  
   
- 스키마에서 생성 된 형식에 일반적으로 일정표 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 각 XSD 네임 스페이스에 해당 하는 특정 네임 스페이스 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 네임 스페이스에 설명 된 매핑에 따라 [데이터 계약 스키마 참조](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). <xref:System.Runtime.Serialization.ImportOptions.Namespaces%2A>에 대한 <xref:System.Collections.Generic.Dictionary%602> 속성으로 이 매핑을 사용자 지정할 수 있습니다. 지정된 XSD 네임스페이스가 사전에 있으면 일치하는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 네임스페이스도 사전에서 가져옵니다.  
+ 일반적으로 스키마에서 생성 된 형식에 해당 하는 특정.NET Framework 네임 스페이스에 설명 된 매핑에 따라 각 XSD 네임 스페이스를 사용 하 여.NET Framework 네임 스페이스에 생성 됩니다 [데이터 계약 스키마 참조](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). <xref:System.Runtime.Serialization.ImportOptions.Namespaces%2A>에 대한 <xref:System.Collections.Generic.Dictionary%602> 속성으로 이 매핑을 사용자 지정할 수 있습니다. 지정된 된 XSD 네임 스페이스 사전에 있으면 일치 하는.NET Framework 네임 스페이스는 사전에서도 수행 됩니다.  
   
  예를 들어 다음 스키마를 생각해 볼 수 있습니다.  
   
@@ -74,7 +74,7 @@ Windows Communication Foundation (WCF)를 사용 하 여 사용할 수 있는 �
 #### <a name="adding-the-serializableattribute-generateserializable-or-the-serializable-switch"></a>SerializableAttribute 추가(GenerateSerializable 또는 /serializable 스위치)  
  이에 해당 합니다 **/serializable** 스위치에 `Svcutil.exe` 도구.  
   
- 경우에 따라 스키마에서 생성된 형식을 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 런타임 serialization 엔진(예: <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=nameWithType> 및 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 클래스)에서 사용할 수 있는 기능이 중요합니다. 이 기능은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Remoting의 형식을 사용하는 경우 유용합니다. 이 기능을 사용하려면 일반적인 <xref:System.SerializableAttribute> 특성 외에도 <xref:System.Runtime.Serialization.DataContractAttribute> 특성을 생성된 형식에 적용해야 합니다. `GenerateSerializable` 가져오기 옵션이 `true`로 설정되어 있으면 이 특성이 자동으로 생성됩니다.  
+ .NET Framework 런타임 serialization 엔진을 사용 하 여 사용할 수 있으려면 스키마에서 생성 된 형식에 대 한 중요 하는 경우에 따라 (예를 들어 합니다 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=nameWithType> 하며 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 클래스). .NET Framework remoting에 대 한 형식을 사용 하는 경우에 유용 합니다. 이 기능을 사용하려면 일반적인 <xref:System.SerializableAttribute> 특성 외에도 <xref:System.Runtime.Serialization.DataContractAttribute> 특성을 생성된 형식에 적용해야 합니다. `GenerateSerializable` 가져오기 옵션이 `true`로 설정되어 있으면 이 특성이 자동으로 생성됩니다.  
   
  다음 예제에서는 `Vehicle` 가져오기 옵션을 `GenerateSerializable`로 설정하여 생성된 `true` 클래스를 보여 줍니다.  
   
@@ -103,7 +103,7 @@ Windows Communication Foundation (WCF)를 사용 하 여 사용할 수 있는 �
 > [!NOTE]
 >  모든 연결을 목록으로 간주할 수도 있습니다. 예를 들어 앞의 연결을 두 개의 필드(문자열 필드 및 정수 필드)가 있는 복잡한 `city` 개체 목록으로 간주할 수 있습니다. 두 패턴은 모두 XSD 스키마에서 하나로 표현됩니다. 이러한 패턴은 항상 목록으로 처리 스키마에 있는 WCF 관련 된 특별 한 주석이 아닌 있으므로 목록 및 연결을 구분할 방법이 없습니다. 주석은 지정된 패턴이 연결을 나타냄을 가리킵니다. 자세한 내용은 [데이터 계약 스키마 참조](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)합니다.  
   
- 일반적으로 목록은 스키마가 컬렉션의 표준 명명 패턴을 따르는지 여부에 따라 제네릭 목록에서 파생된 컬렉션 데이터 계약이나 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 배열로 가져옵니다. 이에 자세히 설명 되어 [데이터 계약의 컬렉션 형식](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)합니다. 연결은 일반적으로 <xref:System.Collections.Generic.Dictionary%602> 또는 사전 개체에서 파생된 컬렉션 데이터 계약으로 가져옵니다. 예를 들어 다음 스키마를 생각해 볼 수 있습니다.  
+ 일반적으로 제네릭 목록에서 파생 되는 컬렉션 데이터 계약 또는 스키마 컬렉션에 대 한 표준 명명 패턴을 따릅니다. 여부에 따라.NET Framework 배열로 목록을 가져옵니다. 이에 자세히 설명 되어 [데이터 계약의 컬렉션 형식](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)합니다. 연결은 일반적으로 <xref:System.Collections.Generic.Dictionary%602> 또는 사전 개체에서 파생된 컬렉션 데이터 계약으로 가져옵니다. 예를 들어 다음 스키마를 생각해 볼 수 있습니다.  
   
  [!code-xml[c_SchemaImportExport#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#13)]  
   
@@ -130,11 +130,11 @@ Windows Communication Foundation (WCF)를 사용 하 여 사용할 수 있는 �
  `ReferencedCollectionTypes` 속성에 해당 하는 **/collectionType** 스위치 SvcUtil.exe 도구에 있습니다. 여러 컬렉션 형식을 참조 하는 합니다 **/collectionType** 스위치는 여러 번 지정 해야 합니다. 형식이 MsCorLib.dll에 없으면 해당 어셈블리 참조 해야 합니다도 사용 하는 **/참조** 전환 합니다.  
   
 #### <a name="import-options-referencing-existing-types"></a>가져오기 옵션: 기존 형식 참조  
- 경우에 따라 스키마의 형식은 기존 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식과 일치하며 이러한 형식은 처음부터 생성할 필요가 없습니다. 이 단원의 내용은 비컬렉션 형식에만 적용됩니다. 컬렉션 형식에 대해서는 이전 단원을 참조하세요.  
+ 경우에 따라 기존.NET Framework 형식에 해당 하는 스키마의 형식 및 이러한 형식을 처음부터 생성할 필요가 없습니다. 이 단원의 내용은 비컬렉션 형식에만 적용됩니다. 컬렉션 형식에 대해서는 이전 단원을 참조하세요.  
   
  예를 들어 개인을 나타낼 때 항상 사용할 회사 수준의 표준 "Person" 데이터 계약 형식이 있을 수 있습니다. 일부 서비스에서 이 형식을 사용하고 서비스 메타데이터에 해당 스키마가 나타날 때마다 각 서비스에 대해 새 형식을 생성하는 대신 이 스키마를 가져올 때 기존 `Person` 형식을 다시 사용할 수 있습니다.  
   
- 이렇게 하려면 다시 사용할 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식 목록을 <xref:System.Runtime.Serialization.ImportOptions.ReferencedTypes%2A> 속성이 <xref:System.Runtime.Serialization.ImportOptions> 클래스에서 반환하는 컬렉션으로 전달합니다. 이러한 형식에 스키마 형식의 이름 및 네임스페이스와 일치하는 데이터 계약 이름 및 네임스페이스가 있으면 구조 비교가 수행됩니다. 형식에 일치하는 이름과 일치하는 구조가 모두 있는 경우 새 형식을 생성하는 대신 기존 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식이 다시 사용됩니다. 이름만 일치하고 구조가 일치하지 않으면 예외가 throw됩니다. 형식을 참조할 때(예: 새 선택적 데이터 멤버를 추가할 때) 버전 관리는 허용되지 않습니다. 구조는 정확하게 일치해야 합니다.  
+ 이 위해 컬렉션에 다시 사용 하려는.NET Framework 형식의 목록을 전달 합니다 <xref:System.Runtime.Serialization.ImportOptions.ReferencedTypes%2A> 속성의 반환을 <xref:System.Runtime.Serialization.ImportOptions> 클래스입니다. 이러한 형식에 스키마 형식의 이름 및 네임스페이스와 일치하는 데이터 계약 이름 및 네임스페이스가 있으면 구조 비교가 수행됩니다. 형식을 일치 하는 이름과 일치 하는 구조 모두 있는지를 판단 될 경우 새로 생성 하는 대신 기존.NET Framework 형식 다시 사용 됩니다. 이름만 일치하고 구조가 일치하지 않으면 예외가 throw됩니다. 형식을 참조할 때(예: 새 선택적 데이터 멤버를 추가할 때) 버전 관리는 허용되지 않습니다. 구조는 정확하게 일치해야 합니다.  
   
  해당 이름과 네임스페이스를 가진 스키마 형식을 가져오지 않는 한 동일한 데이터 계약 이름과 네임스페이스를 가진 여러 형식을 참조된 형식 컬렉션에 추가할 수 있습니다. 이렇게 하면 실제로 스키마에서 발생하지 않는 형식의 중복에 대해 염려하지 않고 어셈블리의 모든 형식을 쉽게 컬렉션에 추가할 수 있습니다.  
   
@@ -175,7 +175,7 @@ Windows Communication Foundation (WCF)를 사용 하 여 사용할 수 있는 �
 #### <a name="import-options-advanced-options"></a>가져오기 옵션: 고급 옵션  
  다음은 고급 가져오기 옵션입니다.  
   
-- <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> 속성 생성된 클래스에 대한 코드를 생성하는 데 사용할 <xref:System.CodeDom.Compiler.CodeDomProvider>를 지정합니다. 가져오기 메커니즘은 <xref:System.CodeDom.Compiler.CodeDomProvider>에서 지원하지 않는 기능을 피하려고 합니다. <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>를 설정하지 않으면 전체 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 기능 집합이 제한 없이 사용됩니다.  
+- <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> 속성 생성된 클래스에 대한 코드를 생성하는 데 사용할 <xref:System.CodeDom.Compiler.CodeDomProvider>를 지정합니다. 가져오기 메커니즘은 <xref:System.CodeDom.Compiler.CodeDomProvider>에서 지원하지 않는 기능을 피하려고 합니다. 경우는 <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> 설정,.NET Framework 기능의 전체 집합을 제한 없이 아닙니다.  
   
 - <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> 속성 이 속성을 사용하여 <xref:System.Runtime.Serialization.IDataContractSurrogate> 구현을 지정할 수 있습니다. <xref:System.Runtime.Serialization.IDataContractSurrogate>는 가져오기 프로세스를 사용자 지정합니다. 자세한 내용은 [데이터 계약 서로게이트](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)합니다. 기본적으로 서로게이트는 사용되지 않습니다.  
   

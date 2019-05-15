@@ -8,12 +8,12 @@ helpviewer_keywords:
 - font families [Windows Forms], constructing
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
-ms.openlocfilehash: 84c3cd07ec27c7ce000962e14801ac171a6bba8c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d3c4b5b4293b62cfec0f8471f90be673854e9009
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648287"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590353"
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>방법: 글꼴 패밀리 및 글꼴 만들기
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 글꼴 서체 하지만 다양 한 스타일을 사용 하 여 글꼴 패밀리로 그룹화합니다. 예를 들어, 굴림 글꼴 패밀리에는 다음 글꼴을 포함 되어 있습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "64648287"
  [!code-vb[System.Drawing.FontsAndText#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#61)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- 앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.PaintEventArgs>의 매개 변수인 `e`<xref:System.Windows.Forms.PaintEventHandler>가 필요합니다.  
+ 앞의 예제는 Windows Forms에서 사용 하도록 설계 되었으며 필요 <xref:System.Windows.Forms.PaintEventArgs> `e`의 매개 변수인 <xref:System.Windows.Forms.PaintEventHandler>합니다.  
   
 ## <a name="see-also"></a>참고자료
 

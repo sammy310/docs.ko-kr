@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 8deb151572b8a83396e4204378783304b66216c3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7c9442635bb193c13ca30fd1e271631a43b33e55
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648139"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589023"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid 컨트롤 개요(Windows Forms)
 > [!NOTE]
@@ -41,7 +41,7 @@ ms.locfileid: "64648139"
   
  <xref:System.Windows.Forms.DataGrid>에서는 데이터 집합, 관련 테이블 간의 탐색, 풍부한 형식 지정 및 편집 기능을 위한 사용자 인터페이스를 제공할 수 있습니다.  
   
- 표시 및 조작은 데이터는 별도 함수: 컨트롤 사용자 인터페이스를 처리 하는 데이터 업데이트는 Windows Forms 데이터 바인딩 아키텍처에서 처리 되는 반면 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자입니다. 따라서 동일한 데이터 소스에 바인딩된 여러 컨트롤이 동기화 상태로 유지됩니다.  
+ 표시 및 조작은 데이터는 별도 함수: 컨트롤이는 데이터 업데이트는 Windows Forms 데이터 바인딩 아키텍처 및.NET Framework 데이터 공급자에 의해 처리 되는 반면 사용자 인터페이스를 처리 합니다. 따라서 동일한 데이터 소스에 바인딩된 여러 컨트롤이 동기화 상태로 유지됩니다.  
   
 > [!NOTE]
 >  Visual Basic 6.0의 DataGrid 컨트롤에 익숙한 경우 Windows Forms <xref:System.Windows.Forms.DataGrid> 컨트롤에서 몇 가지 중요한 차이점을 발견할 것입니다.  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
-ms.openlocfilehash: 9918f07d9c26c1779a1eedfbc423c31e61659334
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8241485d75932cd0b8be85d231897b0bc199f0a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048745"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592107"
 ---
 # <a name="analytic-tracing-overview"></a>분석 추적 개요
 [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] 의 분석 추적은 ETW(Event Tracing for Windows)를 기반으로 하는 고성능의 간단한 추적 기능 집합입니다. ETW는 커널 수준에서 실행되기 때문에 추적 작업의 오버헤드를 크게 줄이며, 사용자 및 커널 모드 이벤트를 효율적으로 버퍼링하고 서비스를 다시 시작하지 않고도 동적으로 로깅을 사용하도록 설정할 수 있습니다. 추적 데이터는 내보내기와 받기 과정을 거친 후 이벤트 로그에 제공됩니다.  
@@ -47,4 +47,4 @@ ms.locfileid: "62048745"
  메시지 흐름 추적을 사용 하도록 설정 하는 방법에 대 한 자세한 내용은 참조 하십시오 [Configuring Message Flow Tracing](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md)합니다.  
   
 ### <a name="keywords"></a>키워드  
- 키워드는 추적 메시지를 필터링하고 이벤트를 내보낸 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 구성 요소를 정의하는 데 사용됩니다. 자세한 내용은 [동적으로 사용 하도록 설정 하면 분석 추적](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md)합니다.
+ 키워드는 추적 메시지를 필터링 하 고.NET Framework의 구성 요소 이벤트를 내보내는 정의에 사용 됩니다. 자세한 내용은 [동적으로 사용 하도록 설정 하면 분석 추적](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md)합니다.

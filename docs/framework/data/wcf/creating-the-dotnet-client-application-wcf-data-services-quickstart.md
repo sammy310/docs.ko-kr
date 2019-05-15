@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-ms.openlocfilehash: 19506d051442dc841a28c14f212addf66af71cf5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 50e8d24698bd8451b90da05ffe52b473a13b3a20
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750819"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583584"
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>.NET Framework 클라이언트 응용 프로그램 만들기(WCF Data Services 빠른 시작)
 
@@ -84,7 +84,7 @@ WCF Data Services 빠른 시작의 최종 작업입니다. 이 태스크에서�
 
 샘플 Northwind OData 피드에서 액세스 하는 클라이언트 응용 프로그램을 만들었습니다. WCF Data Services 퀵 스타트도 완료 했습니다.
 
-OData에 액세스 하는 방법에 대 한 자세한 내용은에서 피드를 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 응용 프로그램을 참조 하세요 [WCF Data Services 클라이언트 라이브러리](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)합니다.
+OData에 액세스 하는 방법에 대 한 자세한 내용은.NET Framework 응용 프로그램에서 피드를 참조 하세요 [WCF Data Services 클라이언트 라이브러리](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)합니다.
 
 ## <a name="see-also"></a>참고자료
 

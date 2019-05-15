@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-ms.openlocfilehash: 4afdd764b2f6ef7f15e8bd26459f0fa4c7d345e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6dcdbde480c1900ea488c6db3cc320b20f9f182
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971992"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591490"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>SplitContainer 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.SplitContainer> 컨트롤은 복합으로 간주될 수 있습니다. 이동 가능한 막대로 구분된 두 개의 패널입니다. 마우스 포인터가 막대 위에 있으면 포인터 모양이 변경되어 막대를 이동할 수 있음을 표시합니다.  
   
 > [!IMPORTANT]
->  에 **도구 상자**, <xref:System.Windows.Forms.SplitContainer> 대체를 제어 합니다 <xref:System.Windows.Forms.Splitter> 이전 버전의 Visual Studio에 있던 컨트롤입니다. <xref:System.Windows.Forms.SplitContainer> 컨트롤이 <xref:System.Windows.Forms.Splitter> 컨트롤보다 훨씬 선호됩니다. 합니다 <xref:System.Windows.Forms.Splitter> 클래스에 여전히 포함 되어 합니다 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 기존 응용 프로그램과 호환성에 대 한 좋습니다 사용할 수 있지만 <xref:System.Windows.Forms.SplitContainer> 새 프로젝트에 대 한 제어 합니다.  
+>  에 **도구 상자**, <xref:System.Windows.Forms.SplitContainer> 대체를 제어 합니다 <xref:System.Windows.Forms.Splitter> 이전 버전의 Visual Studio에 있던 컨트롤입니다. <xref:System.Windows.Forms.SplitContainer> 컨트롤이 <xref:System.Windows.Forms.Splitter> 컨트롤보다 훨씬 선호됩니다. 기존 응용 프로그램과의 호환성을 위해 <xref:System.Windows.Forms.Splitter> 클래스도 .NET Framework에 여전히 포함되어 있지만 새 프로젝트에는 <xref:System.Windows.Forms.SplitContainer> 컨트롤을 사용하는 것이 좋습니다.  
   
  사용 하 여는 <xref:System.Windows.Forms.SplitContainer> 컨트롤, 복잡 한 사용자 인터페이스를 만들 수 있습니다, 다른 패널에 표시 되는 개체가 하나의 패널에서 선택 항목을 결정 하는 경우가 많습니다. 이 정렬은 정보를 표시하고 찾는 데 매우 효율적입니다. 두 개의 패널 수 있는 영역에 정보를 집계 하 고 막대 또는 "분할자"를 통해 사용자가 쉽게 패널 크기 조정 수 있습니다.  
   

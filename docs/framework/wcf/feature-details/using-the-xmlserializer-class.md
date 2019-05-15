@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: 18674a5410cd411ff78e2d3f768b02687cd13f6d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b618d0c153501885fe8c42a04d0723eaa5bcd9af
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637356"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586242"
 ---
 # <a name="using-the-xmlserializer-class"></a>XmlSerializer 클래스 사용
 Windows Communication Foundation (WCF) 두 가지 다른 serialization 기술을 사용 하 여 클라이언트 및 서비스, 프로세스를 serialization 이라고 간에 전송 되는 XML로 응용 프로그램에서 데이터를 변환할 수 있습니다.  
@@ -30,12 +30,12 @@ Windows Communication Foundation (WCF) 두 가지 다른 serialization 기술을
   
 - 많은 제네릭 컬렉션 형식을 비롯한 많은 일반 컬렉션 형식  
   
- 많은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식은 끝의 두 범주에 해당하므로 serialize할 수 있습니다. serialize할 수 있는 형식의 배열도 serialize할 수 있습니다. 전체 목록을 참조 하세요 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)합니다.  
+ 많은.NET Framework 형식 후자의 두 가지 범주로 나뉩니다 및 직렬화 되므로 합니다. serialize할 수 있는 형식의 배열도 serialize할 수 있습니다. 전체 목록을 참조 하세요 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)합니다.  
   
  <xref:System.Runtime.Serialization.DataContractSerializer>계약 형식 데이터와 함께 사용 되는, 새 WCF 서비스를 작성 하는 방법이 권장된 됩니다. 자세한 내용은 [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)합니다.  
   
 ## <a name="when-to-use-the-xmlserializer-class"></a>XmlSerializer 클래스 사용 시기  
- WCF도 지원 합니다 <xref:System.Xml.Serialization.XmlSerializer> 클래스입니다. <xref:System.Xml.Serialization.XmlSerializer> 클래스를 WCF 고유 하지 않습니다. 이는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 서비스에서 사용되는 serialization 엔진과 동일합니다. <xref:System.Xml.Serialization.XmlSerializer> 클래스는 <xref:System.Runtime.Serialization.DataContractSerializer> 클래스보다 훨씬 더 제한된 형식 집합을 지원하지만 결과 XML을 보다 강력하게 제어할 수 있으며 XSD(XML 스키마 정의 언어) 표준의 더 많은 부분을 지원합니다. 또한 이 클래스에는 serialize할 수 있는 형식의 선언적 특성이 필요 없습니다. 자세한 내용은 XML Serialization 항목을 참조 합니다 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 설명서. <xref:System.Xml.Serialization.XmlSerializer> 클래스는 데이터 계약 형식을 지원하지 않습니다.  
+ WCF도 지원 합니다 <xref:System.Xml.Serialization.XmlSerializer> 클래스입니다. <xref:System.Xml.Serialization.XmlSerializer> 클래스를 WCF 고유 하지 않습니다. 이는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 웹 서비스에서 사용되는 serialization 엔진과 동일합니다. <xref:System.Xml.Serialization.XmlSerializer> 클래스는 <xref:System.Runtime.Serialization.DataContractSerializer> 클래스보다 훨씬 더 제한된 형식 집합을 지원하지만 결과 XML을 보다 강력하게 제어할 수 있으며 XSD(XML 스키마 정의 언어) 표준의 더 많은 부분을 지원합니다. 또한 이 클래스에는 serialize할 수 있는 형식의 선언적 특성이 필요 없습니다. 자세한 내용은.NET Framework 설명서의 XML Serialization 항목을 참조 하세요. <xref:System.Xml.Serialization.XmlSerializer> 클래스는 데이터 계약 형식을 지원하지 않습니다.  
   
  Svcutil.exe를 사용 하는 경우 또는 **서비스 참조 추가** 타사 서비스에 대 한 클라이언트 코드를 생성 하거나 타사 스키마에 적절 한 직렬 변환기를 액세스 하려면 Visual Studio의 기능 수에 대 한 자동으로 선택 됩니다. 스키마가 <xref:System.Runtime.Serialization.DataContractSerializer>와 호환되지 않으면 <xref:System.Xml.Serialization.XmlSerializer>가 선택됩니다.  
   

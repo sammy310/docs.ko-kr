@@ -9,17 +9,17 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: ee6de112dcf92b1780fd331b581e6794d61f9406
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6425b0df5735c2469079e1c5a07a1ddd3be414a1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654445"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588811"
 ---
 # <a name="collection-types-in-data-contracts"></a>데이터 계약의 컬렉션 형식
-*컬렉션* 은 특정 형식의 항목으로 구성된 목록입니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 경우 이러한 목록은 배열이나 여러 형식(제네릭 목록, 제네릭 <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>또는 <xref:System.Collections.ArrayList>)을 사용하여 나타낼 수 있습니다. 예를 들어, 컬렉션은 지정된 고객에 대한 주소 목록을 보유할 수 있습니다. 실제 형식에 관계없이 이러한 컬렉션을 *목록 컬렉션*이라고 합니다.  
+*컬렉션* 은 특정 형식의 항목으로 구성된 목록입니다. .NET Framework에서 이러한 목록을 표현 될 수 있는 배열 또는 다양 한 다른 형식 사용 하 여 (제네릭 목록, 제네릭 <xref:System.ComponentModel.BindingList%601>하십시오 <xref:System.Collections.Specialized.StringCollection>, 또는 <xref:System.Collections.ArrayList>). 예를 들어, 컬렉션은 지정된 고객에 대한 주소 목록을 보유할 수 있습니다. 실제 형식에 관계없이 이러한 컬렉션을 *목록 컬렉션*이라고 합니다.  
   
- 하나의 항목("키")과 다른 항목("값") 간의 연결을 나타내는 특별한 형태의 컬렉션이 있습니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]에서 해당 컬렉션은 <xref:System.Collections.Hashtable> 및 제네릭 사전과 같은 형식으로 표시됩니다. 예를 들어, 연결 컬렉션은 도시("키")를 해당 도시의 인구("값")에 매핑할 수 있습니다. 실제 형식에 관계없이 이러한 컬렉션을 *사전 컬렉션*이라고 합니다.  
+ 하나의 항목("키")과 다른 항목("값") 간의 연결을 나타내는 특별한 형태의 컬렉션이 있습니다. .NET framework에서는 이러한 형식으로 표시 됩니다와 같은 <xref:System.Collections.Hashtable> 및 제네릭 사전과 합니다. 예를 들어, 연결 컬렉션은 도시("키")를 해당 도시의 인구("값")에 매핑할 수 있습니다. 실제 형식에 관계없이 이러한 컬렉션을 *사전 컬렉션*이라고 합니다.  
   
  데이터 계약 모델에서 컬렉션은 별도로 처리됩니다.  
   

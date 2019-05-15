@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
-ms.openlocfilehash: 364d3924d9db2c85959c1e41011c6d659823774c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1b98b6b3da08ba7a0a37e0c26f58dd4d3ef115b1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614825"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592207"
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>데이터 계약 Serializer에서 지원하는 형식
 Windows Communication Foundation (WCF)를 사용 하 여 <xref:System.Runtime.Serialization.DataContractSerializer> XML로 데이터를 변환 하 고 XML 데이터를 다시 변환할 기본 serialization 엔진으로. <xref:System.Runtime.Serialization.DataContractSerializer> 는 *데이터 계약* 형식을 serialize하도록 디자인되었습니다. 그러나 암시적 데이터 계약이 있는 것으로 간주될 수 있는 여러 가지 다른 형식을 지원합니다. 다음은 serialize할 수 있는 형식의 전체 목록입니다.  
@@ -29,7 +29,7 @@ Windows Communication Foundation (WCF)를 사용 하 여 <xref:System.Runtime.Se
     > [!NOTE]
     >  다른 기본 형식과 달리 <xref:System.DateTimeOffset> 은 기본적으로 알려진 형식이 아닙니다. 자세한 내용은 [데이터 계약 알려진 형식을](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)).  
   
-- <xref:System.SerializableAttribute> 특성으로 표시된 형식입니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 기본 클래스 라이브러리에 포함된 여러 형식이 이 범주에 해당합니다. <xref:System.Runtime.Serialization.DataContractSerializer> 는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>인터페이스 지원을 비롯하여 .NET Framework Remoting, <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>및 <xref:System.Runtime.Serialization.ISerializable> 에서 사용된 이 serialization 프로그래밍 모델을 완전히 지원합니다.  
+- <xref:System.SerializableAttribute> 특성으로 표시된 형식입니다. .NET Framework 기본 클래스 라이브러리에 포함 된 여러 형식이이 범주에 속합니다. <xref:System.Runtime.Serialization.DataContractSerializer> 는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>인터페이스 지원을 비롯하여 .NET Framework Remoting, <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>및 <xref:System.Runtime.Serialization.ISerializable> 에서 사용된 이 serialization 프로그래밍 모델을 완전히 지원합니다.  
   
 - 원시 XML을 나타내는 형식이거나 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 관계형 데이터를 나타내는 형식입니다. <xref:System.Xml.XmlElement> 및 <xref:System.Xml.XmlNode> 형식의 배열은 XML을 직접 나타내는 방식으로 지원됩니다. 또한, 관련된 <xref:System.Xml.Serialization.IXmlSerializable> 특성, <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 및 <xref:System.Xml.Linq.XDocument> 형식을 비롯하여 <xref:System.Xml.Linq.XElement> 인터페이스를 구현하는 형식이 지원됩니다. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataTable> 형식과 <xref:System.Data.DataSet> 형식 및 형식화된 파생 클래스는 모두 <xref:System.Xml.Serialization.IXmlSerializable> 인터페이스를 구현하므로 이 범주에 속합니다. 자세한 내용은 [XML 및 ADO.NET 형식 데이터 계약의](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)합니다.  
   

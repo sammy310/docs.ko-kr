@@ -2,21 +2,21 @@
 title: '방법: 두 폴더의 내용 비교(LINQ)(C#)'
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: c6a44070e251a1521e7ea94c47a3c0c9360df1b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aec333fd3a54927f39569173db4e30999f632513
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543044"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597103"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>방법: 두 폴더의 내용 비교(LINQ)(C#)
 이 예제에서는 두 파일 목록을 비교하는 세 가지 방법을 보여 줍니다.  
   
--   두 파일 목록이 똑같은지 여부를 지정하는 부울 값 쿼리.  
+- 두 파일 목록이 똑같은지 여부를 지정하는 부울 값 쿼리.  
   
--   양쪽 폴더에 있는 파일을 검색하기 위해 교집합 쿼리.  
+- 양쪽 폴더에 있는 파일을 검색하기 위해 교집합 쿼리.  
   
--   두 개 중 한 폴더에만 있는 파일을 검색하기 위해 차집합 쿼리.  
+- 두 개 중 한 폴더에만 있는 파일을 검색하기 위해 차집합 쿼리.  
   
     > [!NOTE]
     >  여기 표시된 방법은 형식에 관계없이 개체의 시퀀스를 비교하도록 조정될 수 있습니다.  

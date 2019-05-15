@@ -9,22 +9,22 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: ce019e97e54781976736dd5bd6e6d7e134322f65
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c2eb6d8f8bb7886e4615438e463aeea3c3825662
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916866"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582639"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>데이터 서비스 쿼리(WCF Data Services)
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 라이브러리를 사용하면 LINQ(Language-Integrated Query) 사용을 비롯한 익숙한 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 프로그래밍 패턴을 사용하여 데이터 서비스에 대해 쿼리를 실행할 수 있습니다. 클라이언트 라이브러리는 클라이언트에서 <xref:System.Data.Services.Client.DataServiceQuery%601> 클래스의 인스턴스로 정의된 쿼리를 HTTP GET 요청 메시지로 변환합니다. 라이브러리는 응답 메시지를 받고 클라이언트 데이터 서비스 클래스의 인스턴스로 변환 합니다. 이러한 클래스는 <xref:System.Data.Services.Client.DataServiceContext>가 속해 있는 <xref:System.Data.Services.Client.DataServiceQuery%601>에 의해 추적됩니다.
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 클라이언트 라이브러리를 사용하면 LINQ(Language-Integrated Query) 사용을 비롯한 익숙한 .NET Framework 프로그래밍 패턴을 사용하여 데이터 서비스에 대해 쿼리를 실행할 수 있습니다. 클라이언트 라이브러리는 클라이언트에서 <xref:System.Data.Services.Client.DataServiceQuery%601> 클래스의 인스턴스로 정의된 쿼리를 HTTP GET 요청 메시지로 변환합니다. 라이브러리는 응답 메시지를 받고 클라이언트 데이터 서비스 클래스의 인스턴스로 변환 합니다. 이러한 클래스는 <xref:System.Data.Services.Client.DataServiceContext>가 속해 있는 <xref:System.Data.Services.Client.DataServiceQuery%601>에 의해 추적됩니다.
 
 ## <a name="data-service-queries"></a>데이터 서비스 쿼리
 
 <xref:System.Data.Services.Client.DataServiceQuery%601> 제네릭 클래스는 0개 이상의 엔터티 형식 인스턴스의 컬렉션을 반환하는 쿼리를 나타냅니다. 데이터 서비스 쿼리는 항상 기존 데이터 서비스 컨텍스트에 속합니다. 이 컨텍스트는 쿼리를 작성하고 실행하는 데 필요한 서비스 URI 및 메타데이터 정보를 유지 관리합니다.
 
-사용 하는 경우는 **서비스 참조 추가** 데이터 서비스를 추가 하는 대화 상자를 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-에서 상속 되는 기반된 클라이언트 응용 프로그램에서 엔터티 컨테이너 클래스가 만들어집니다는 <xref:System.Data.Services.Client.DataServiceContext> 클래스입니다. 이 클래스에는 형식화된 <xref:System.Data.Services.Client.DataServiceQuery%601> 인스턴스를 반환하는 속성이 포함됩니다. 데이터 서비스에서 노출하는 엔터티 집합마다 속성이 하나씩 있습니다. 이러한 속성을 사용하면 형식화된 <xref:System.Data.Services.Client.DataServiceQuery%601> 인스턴스를 보다 쉽게 만들 수 있습니다.
+사용 하는 경우는 **서비스 참조 추가** 에서 상속 되는.NET Framework 기반 클라이언트 응용 프로그램에 엔터티 컨테이너 클래스가 데이터 서비스를 추가 하려면 만들어집니다는 <xref:System.Data.Services.Client.DataServiceContext> 클래스입니다. 이 클래스에는 형식화된 <xref:System.Data.Services.Client.DataServiceQuery%601> 인스턴스를 반환하는 속성이 포함됩니다. 데이터 서비스에서 노출하는 엔터티 집합마다 속성이 하나씩 있습니다. 이러한 속성을 사용하면 형식화된 <xref:System.Data.Services.Client.DataServiceQuery%601> 인스턴스를 보다 쉽게 만들 수 있습니다.
 
 쿼리는 다음 시나리오에서 실행됩니다.
 

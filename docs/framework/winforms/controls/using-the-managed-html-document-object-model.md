@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - managed HTML DOM
 ms.assetid: a017dd5c-cd7b-47e4-952c-f4f54cb48409
-ms.openlocfilehash: c18c6df29f79e9bde8474fa38e45dea03d4e0020
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe84cabfaabdc14c7dec6cb69653d41b4c6f6416
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009172"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590161"
 ---
 # <a name="using-the-managed-html-document-object-model"></a>관리되는 HTML 문서 개체 모델 사용
-관리 되는 HTML DOM (문서 개체 모델) 기반으로 래퍼를 제공 합니다 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Internet Explorer에서 노출 하는 HTML 클래스에 대 한 합니다. 이러한 클래스를 사용 하 여 HTML 페이지에서 호스트를 조작할는 <xref:System.Windows.Forms.WebBrowser> 컨트롤 또는 처음부터 새 페이지를 만들 수 있습니다.  
+관리 되는 HTML 문서 개체 모델 (DOM) Internet Explorer에서 노출 하는 HTML 클래스에 대 한.NET Framework를 기반으로 하는 래퍼를 제공 합니다. 이러한 클래스를 사용 하 여 HTML 페이지에서 호스트를 조작할는 <xref:System.Windows.Forms.WebBrowser> 컨트롤 또는 처음부터 새 페이지를 만들 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [방법: 관리 되는 HTML 문서 개체 모델에 액세스](how-to-access-the-managed-html-document-object-model.md)  

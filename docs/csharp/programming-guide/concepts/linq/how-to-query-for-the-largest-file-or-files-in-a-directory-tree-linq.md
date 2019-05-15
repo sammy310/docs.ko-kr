@@ -2,25 +2,25 @@
 title: '방법: 디렉터리 트리에서 가장 큰 파일을 하나 이상 쿼리(LINQ)(C#)'
 ms.date: 07/20/2015
 ms.assetid: 20c8a917-0552-4514-b489-0b8b6a4c3b4c
-ms.openlocfilehash: 20453c754c792d4f5c59fde481e1fec56dcd0e09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 134183da58b490635284699de2f1721dda5422dd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564131"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597068"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>방법: 디렉터리 트리에서 가장 큰 파일을 하나 이상 쿼리(LINQ)(C#)
 이 예제에서는 파일 크기(바이트)와 관련된 다섯 개의 쿼리를 보여 줍니다.  
   
--   가장 큰 파일의 크기(바이트)를 검색하는 방법입니다.  
+- 가장 큰 파일의 크기(바이트)를 검색하는 방법입니다.  
   
--   가장 작은 파일의 크기(바이트)를 검색하는 방법입니다.  
+- 가장 작은 파일의 크기(바이트)를 검색하는 방법입니다.  
   
--   지정된 루트 폴더 아래의 하나 이상 폴더에서 <xref:System.IO.FileInfo> 개체의 가장 큰 파일이나 가장 작은 파일을 검색하는 방법입니다.  
+- 지정된 루트 폴더 아래의 하나 이상 폴더에서 <xref:System.IO.FileInfo> 개체의 가장 큰 파일이나 가장 작은 파일을 검색하는 방법입니다.  
   
--   가장 큰 파일 10개 등의 시퀀스를 검색하는 방법입니다.  
+- 가장 큰 파일 10개 등의 시퀀스를 검색하는 방법입니다.  
   
--   지정된 크기보다 작은 파일을 무시하고 해당 파일 크기(바이트)에 따라 파일을 그룹으로 정렬하는 방법입니다.  
+- 지정된 크기보다 작은 파일을 무시하고 해당 파일 크기(바이트)에 따라 파일을 그룹으로 정렬하는 방법입니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 파일 크기(바이트)에 따라 파일을 쿼리 및 그룹화하는 방법을 보여 주는 5개의 개별 쿼리가 포함되어 있습니다. 쿼리가 <xref:System.IO.FileInfo> 개체의 다른 일부 속성을 기반으로 하도록 이러한 예제를 쉽게 수정할 수 있습니다.  

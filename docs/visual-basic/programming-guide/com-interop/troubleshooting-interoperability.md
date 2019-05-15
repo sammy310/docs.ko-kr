@@ -16,18 +16,18 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: af28ba1a167415a59b8e2a4db860497122a5c2c9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 60a61dfa7302611800c0b808a31a386e46304756
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624795"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592159"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>상호 운용성 문제 해결(Visual Basic)
-COM 및 관리 코드의 상호 운용 하는 경우는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], 다음과 같은 일반적인 문제 중 하나 이상을 발생할 수 있습니다.  
+COM 및.NET Framework의 관리 코드 간에 운용할 때 다음과 같은 일반적인 문제 중 하나 이상을 발생할 수 있습니다.  
   
 ## <a name="vbconinteroperabilitymarshalinganchor1"></a> Interop 마샬링  
- 되지 않는 데이터 형식을 사용 해야 하는 경우의 일부는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]합니다. Interop 어셈블리를 COM 개체에 대 한 작업의 대부분을 처리 하지만 관리 되는 개체가 COM에 노출 되는 경우 사용 되는 데이터 형식을 제어 해야 할 수 있습니다. 예를 들어, 클래스 라이브러리의 구조 지정 해야 합니다는 `BStr` 관리 되지 않는 Visual Basic 6.0 및 이전 버전에서 만든 COM 개체에 전송 되는 문자열의 형식입니다. 이러한 경우에 사용할 수 있습니다는 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성을 관리 되는 형식을 관리 되지 않는 형식으로 노출 되어야 합니다.  
+ 때때로.NET Framework의 일부가 아닌 데이터 형식을 사용 해야 합니다. Interop 어셈블리를 COM 개체에 대 한 작업의 대부분을 처리 하지만 관리 되는 개체가 COM에 노출 되는 경우 사용 되는 데이터 형식을 제어 해야 할 수 있습니다. 예를 들어, 클래스 라이브러리의 구조 지정 해야 합니다는 `BStr` 관리 되지 않는 Visual Basic 6.0 및 이전 버전에서 만든 COM 개체에 전송 되는 문자열의 형식입니다. 이러한 경우에 사용할 수 있습니다는 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성을 관리 되는 형식을 관리 되지 않는 형식으로 노출 되어야 합니다.  
   
 ## <a name="vbconinteroperabilitymarshalinganchor2"></a> 고정 길이 문자열 비관리 코드 내보내기  
  Visual Basic 6.0 및 이전 버전에서는 문자열 내보낸 COM 개체에 null 종결 문자를 제외한 바이트 시퀀스로 합니다. 다른 언어와 호환성을 위해 문자열을 내보낼 때 Visual Basic.NET 종결 문자를 포함 합니다. 이 호환성 문제를 해결 하는 가장 좋은 방법은 배열로 종결 문자가 없는 문자열을 내보내려면 `Byte` 또는 `Char`합니다.  
@@ -55,7 +55,7 @@ COM 및 관리 코드의 상호 운용 하는 경우는 [!INCLUDE[dnprdnshort](~
  표준 어셈블리의 클래스와 달리 COM 클래스는 COM 클래스를 나타내는 클래스 및 인터페이스 interop 어셈블리에서 노출 됩니다. 인터페이스의 이름 COM 클래스의 동일합니다. Interop 클래스의 이름을 원래 COM 클래스와 동일 하지만 "Class" 라는 단어를 사용 하 여 추가 합니다. 예를 들어, COM 개체에 대 한 interop 어셈블리에 대 한 참조를 사용 하 여 프로젝트를 있다고 가정 합니다. COM 클래스 이름이 `MyComClass`, IntelliSense 및 개체 브라우저 표시 라는 인터페이스가 `MyComClass` 라는 클래스 및 `MyComClassClass`합니다.  
   
 ## <a name="vbconinteroperabilitymarshalinganchor6"></a> .NET Framework 클래스의 인스턴스 만들기  
- 인스턴스를 만들 수는 일반적으로 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 를 사용 하 여 클래스를 `New` 클래스 이름으로 문을 합니다. COM 클래스를 interop 어셈블리에서 표시 하는 것이 사용할 수 있는 유일한 경우는 `New` 인터페이스를 사용 하 여 문을 합니다. 사용 하 여 COM 클래스를 사용 하는 경우는 `Inherits` 문을 클래스와 마찬가지로 인터페이스를 사용할 수 있습니다. 다음 코드를 만드는 방법을 보여 줍니다는 `Command` Microsoft ActiveX 데이터 개체 2.8 라이브러리 COM 개체에 대 한 참조가 있는 프로젝트의 개체:  
+ 일반적으로 사용 하 여.NET Framework 클래스의 인스턴스를 만들는 `New` 클래스 이름으로 문의 합니다. COM 클래스를 interop 어셈블리에서 표시 하는 것이 사용할 수 있는 유일한 경우는 `New` 인터페이스를 사용 하 여 문을 합니다. 사용 하 여 COM 클래스를 사용 하는 경우는 `Inherits` 문을 클래스와 마찬가지로 인터페이스를 사용할 수 있습니다. 다음 코드를 만드는 방법을 보여 줍니다는 `Command` Microsoft ActiveX 데이터 개체 2.8 라이브러리 COM 개체에 대 한 참조가 있는 프로젝트의 개체:  
   
  [!code-vb[VbVbalrInterop#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#20)]  
   
@@ -67,7 +67,7 @@ COM 및 관리 코드의 상호 운용 하는 경우는 [!INCLUDE[dnprdnshort](~
 >  Interop 어셈블리는 암시적으로 COM 클래스를 나타내는 인터페이스를 구현 합니다. 사용 하지 않아야 합니다 `Implements` 오류나 이러한 인터페이스를 구현 하는 문이 생성 됩니다.  
   
 ## <a name="vbconinteroperabilitymarshalinganchor7"></a> 매개 변수 및 반환 값에 대 한 데이터 형식  
- 표준 어셈블리의 멤버와 달리 interop 어셈블리 멤버 개체의 원래 선언에서 사용 되는 데이터 형식이 있을 수 있습니다. Interop 어셈블리는 호환 공용 언어 런타임 형식 COM 형식을 암시적으로 변환, 있지만 런타임 오류를 방지 하려면 양쪽 모두에서 사용 되는 데이터 형식에는 주의 기울여야 합니다. Visual Basic 6.0 및 이전 버전에서는 값 형식에서 생성 된 COM 개체의 예를 들어 `Integer` 가정 합니다 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 해당 하는 형식을 `Short`합니다. 개체 브라우저를 사용 하 여 사용 하기 전에 가져온된 멤버의 특성을 검토 하는 것이 좋습니다.  
+ 표준 어셈블리의 멤버와 달리 interop 어셈블리 멤버 개체의 원래 선언에서 사용 되는 데이터 형식이 있을 수 있습니다. Interop 어셈블리는 호환 공용 언어 런타임 형식 COM 형식을 암시적으로 변환, 있지만 런타임 오류를 방지 하려면 양쪽 모두에서 사용 되는 데이터 형식에는 주의 기울여야 합니다. Visual Basic 6.0 및 이전 버전에서는 값 형식에서 생성 된 COM 개체의 예를 들어 `Integer` .NET Framework의 해당 형식으로 가정 `Short`합니다. 개체 브라우저를 사용 하 여 사용 하기 전에 가져온된 멤버의 특성을 검토 하는 것이 좋습니다.  
   
 ## <a name="vbconinteroperabilitymarshalinganchor8"></a> 모듈 수준 COM 메서드  
  대부분의 COM 개체를 사용 하 여 COM 클래스의 인스턴스를 만들어 사용 합니다 `New` 키워드 및 다음 개체의 메서드를 호출 합니다. 이 규칙의 한 가지 예외 포함 하는 COM 개체를 포함 `AppObj` 또는 `GlobalMultiUse` COM 클래스입니다. 이러한 클래스에는 모듈 수준 메서드 Visual Basic.NET 클래스에서와 유사합니다. Visual Basic 6.0 및 이전 버전 암시적으로 만듭니다 이러한 개체의 인스턴스를 처음 해당 메서드 중 하나를 호출 합니다. 예를 들어, Visual Basic 6.0에서 추가할 수 있습니다 Microsoft DAO 3.6 개체 라이브러리 호출에 대 한 참조를 `DBEngine` 첫 번째 인스턴스를 만들지 않고 메서드:  

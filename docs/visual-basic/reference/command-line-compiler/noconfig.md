@@ -6,15 +6,15 @@ helpviewer_keywords:
 - -noconfig compiler option [Visual Basic]
 - /noconfig compiler option [Visual Basic]
 ms.assetid: a7405067-bd21-4171-adf4-a126fa3ad6c3
-ms.openlocfilehash: 44bc619c489fdff36f0b595f7d8934689b859adb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b707899c845b6b08e008fe229497f682c930044a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789027"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588851"
 ---
 # <a name="-noconfig"></a>-noconfig
-컴파일러는 자동으로 참조 하지는 일반적으로 사용 되는 지정 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 어셈블리 또는 가져오기 합니다 `System` 고 `Microsoft.VisualBasic` 네임 스페이스입니다.  
+컴파일러를 자동으로 자주 사용 되는.NET Framework 어셈블리 참조, 가져오기 지정 합니다 `System` 고 `Microsoft.VisualBasic` 네임 스페이스입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -23,7 +23,7 @@ ms.locfileid: "61789027"
 ```  
   
 ## <a name="remarks"></a>설명  
- `-noconfig` 옵션 하 Vbc.exe 파일과 동일한 디렉터리에 위치한 Vbc.rsp 파일을 컴파일하지 않도록 컴파일러에 지시 합니다. Vbc.rsp 파일 참조는 일반적으로 사용 되는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 어셈블리 및 가져오기는 `System` 고 `Microsoft.VisualBasic` 네임 스페이스입니다. 컴파일러는 암시적으로 System.dll 어셈블리를 참조 하지 않는 한는 `-nostdlib` 옵션을 지정 합니다. `-nostdlib` 옵션은 Vbc.rsp로 컴파일하지 또는 System.dll 어셈블리를 자동으로 참조 하지 않도록 컴파일러 지시 합니다.  
+ `-noconfig` 옵션 하 Vbc.exe 파일과 동일한 디렉터리에 위치한 Vbc.rsp 파일을 컴파일하지 않도록 컴파일러에 지시 합니다. Vbc.rsp 파일을 자주 사용 되는.NET Framework 어셈블리를 참조 하 고 가져옵니다 합니다 `System` 고 `Microsoft.VisualBasic` 네임 스페이스입니다. 컴파일러는 암시적으로 System.dll 어셈블리를 참조 하지 않는 한는 `-nostdlib` 옵션을 지정 합니다. `-nostdlib` 옵션은 Vbc.rsp로 컴파일하지 또는 System.dll 어셈블리를 자동으로 참조 하지 않도록 컴파일러 지시 합니다.  
   
 > [!NOTE]
 >  Mscorlib.dll 및 Microsoft.VisualBasic.dll 어셈블리는 항상 참조 합니다.  
