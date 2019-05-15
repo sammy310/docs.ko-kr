@@ -1,15 +1,13 @@
 ---
 title: 클라우드에서 DevOps 도구와 CI/CD 파이프라인을 사용하여 앱의 수명 주기 최신화
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 클라우드에서 DevOps 도구와 CI/CD 파이프라인를 사용하여 앱의 수명 주기 최신화
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 7f2637db3ed43f98d5b3b0cac43f7221388770fc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7a0005da56e2d8ab7a2348f9032f887451132558
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611664"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638948"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>클라우드에서 DevOps 도구와 CI/CD 파이프라인을 사용하여 앱의 수명 주기 최신화
 

@@ -2,12 +2,12 @@
 title: 함수
 description: 함수에 대 한 자세한 F# 방법과 F# 일반적인 함수형 프로그래밍 구문도 지원 합니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6e9ef916388745d2dd6874295d06dca656971b3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f68a36de7af2bdb803b0b633929aa472806f61aa
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996790"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645396"
 ---
 # <a name="functions"></a>함수
 

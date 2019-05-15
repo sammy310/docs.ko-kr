@@ -2,12 +2,12 @@
 title: '람다 식: Fun 키워드'
 description: 사용 하는 방법을 알아봅니다는 F# 는 익명 함수는 람다 식 정의에 '재미' 키워드입니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6ad15173bb8643bff330e3ca3823cba5d43ad445
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c59d32bd4226384213453f1a9d362209e68a6fb5
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941026"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645386"
 ---
 # <a name="lambda-expressions-the-fun-keyword-f"></a>람다 식: Fun 키워드 (F#)
 

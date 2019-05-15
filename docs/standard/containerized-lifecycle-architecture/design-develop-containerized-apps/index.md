@@ -1,11 +1,14 @@
 ---
 title: Docker 및 Microsoft Azure를 사용하는 컨테이너화된 앱 설계 및 개발
 description: Docker 응용 프로그램 수명 주기에서 개발/디자인 작업에 알아보겠습니다.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
+ms.openlocfilehash: ad7f635feab21cd6e6b31c0b5d43fb2598ffa16c
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641128"
 ---
-
 # <a name="designing-and-developing-containerized-apps-using-docker-and-microsoft-azure"></a>Docker 및 Microsoft Azure를 사용하는 컨테이너화된 앱 설계 및 개발
 
 *Vision: 디자인 및 염두에서 Docker 사용 하 여 확장 가능한 솔루션을 개발 합니다.*

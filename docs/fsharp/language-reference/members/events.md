@@ -2,12 +2,12 @@
 title: 이벤트
 description: 에 대해 알아봅니다 하는 방법 F# 이벤트를 사용 하면 GUI 프로그래밍에서 중요 한 사용자 작업을 사용 하 여 함수 호출을 연결할 수 있습니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8972d9ab358ff9ff903e8bbbe42b74beea683233
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad2e8001b81f48fdeb783bee2423a3dc9e22ac79
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903931"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645217"
 ---
 # <a name="events"></a>이벤트
 

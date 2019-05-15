@@ -1,15 +1,13 @@
 ---
 title: Docker 애플리케이션 설계
 description: 여기에서 찾을 하 여 마이크로 서비스 아키텍처에 대 한 참조 항목 이므로이 가이드에서 자세히 설명 하지 것입니다.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 1d49f7509c0a12edfe375486429147e8fd240b2d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 535b6cefb7371014527032972ec27ebfe4b67ebc
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61799348"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644628"
 ---
 # <a name="design-docker-applications"></a>Docker 애플리케이션 설계
 

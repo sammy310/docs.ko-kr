@@ -2,12 +2,12 @@
 title: 클래스의 do 바인딩
 description: 사용 하는 방법을 알아봅니다는 F# 개체가 생성 될 때나 형식을 처음 사용할 때 작업을 수행 하는 클래스 정의 바인딩 ' do'.
 ms.date: 05/16/2016
-ms.openlocfilehash: 0ddf2b5ca458d0950c2e07bf2c37c205877e2173
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c924c882974989436d8ea404ebee0a7ef3c54fd3
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904594"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641793"
 ---
 # <a name="do-bindings-in-classes"></a>클래스의 do 바인딩
 

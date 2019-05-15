@@ -2,12 +2,12 @@
 title: '리소스 관리: Use 키워드'
 description: 알아봅니다는 F# 키워드 'use' 및 'using' 함수를 초기화 및 리소스의 해제를 제어할 수 있습니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 127877a3823faade9bc3c6aefea655c86cc348e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3389f84713ec7cf5459dd0132249970f0e2ef3e0
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770489"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641701"
 ---
 # <a name="resource-management-the-use-keyword"></a>리소스 관리: Use 키워드
 

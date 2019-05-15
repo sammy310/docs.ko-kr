@@ -2,12 +2,12 @@
 title: WF는 XAML 파일에 추가 된 디자이너 뷰 상태 제거
 ms.date: 03/30/2017
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
-ms.openlocfilehash: 71a2aadeefd53b391f4589ed9dc32d9cd6e3183a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af57f838ea12d7199268988bf01baa0b61447650
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004941"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637852"
 ---
 # <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>XAML 파일에 추가 하는 디자이너 뷰 상태 제거
 

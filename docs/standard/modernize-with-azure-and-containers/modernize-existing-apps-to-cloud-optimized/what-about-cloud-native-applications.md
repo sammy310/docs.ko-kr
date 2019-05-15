@@ -1,15 +1,13 @@
 ---
 title: 클라우드 네이티브 애플리케이션은 어떻습니까?
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 클라우드 네이티브 응용 프로그램의 경우는 어떨까요?
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 10f7761b7c0d2ddd8cb9247b1a02aa49cdc4e5d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d459b4ab3e015bb328699aa1d53159593e06da0
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012128"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65643655"
 ---
 # <a name="what-about-cloud-native-applications"></a>클라우드 네이티브 애플리케이션은 어떻습니까?
 
@@ -43,7 +41,7 @@ ms.locfileid: "62012128"
 
 합니다 [클라우드 네이티브 컴퓨팅 Foundation (CNCF)](https://www.cncf.io/) 클라우드 네이티브 원칙의 기본 프로모터 됩니다. Microsoft는 한 [소속 된 CNCF](https://azure.microsoft.com/blog/announcing-cncf/)합니다.
 
-샘플 정의 및 클라우드 네이티브 응용 프로그램의 특징에 대 한 자세한 정보에 대 한 Gartner 문서를 참조 하세요 [설계 하 고 클라우드 네이티브 응용 프로그램을 디자인 하는 방법을](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)합니다. 클라우드 네이티브 응용 프로그램을 구현 하는 방법에 대 한 Microsoft의 특정 지침을 참조 하세요. [.NET 마이크로 서비스: 컨테이너 화 된.NET 응용 프로그램에 대 한 아키텍처](https://aka.ms/microservicesebook)합니다.
+샘플 정의 및 클라우드 네이티브 응용 프로그램의 특징에 대 한 자세한 정보에 대 한 Gartner 문서를 참조 하세요 [설계 하 고 클라우드 네이티브 응용 프로그램을 디자인 하는 방법을](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)합니다. 클라우드 네이티브 응용 프로그램을 구현 하는 방법에 대 한 Microsoft의 특정 지침을 참조 하세요. [.NET 마이크로 서비스: 컨테이너화된 .NET 응용 프로그램용 아키텍처](https://aka.ms/microservicesebook) 전자 문서를 참조합니다.
 
 클라우드 네이티브 모델에 전체 응용 프로그램을 마이그레이션하는 경우 고려해 야 할 가장 중요 한 요소는 마이크로 서비스 기반 아키텍처는 아키텍처 변경 해야 합니다. 이 관련 된 많은 리팩터링 프로세스로 인해 개발에 상당한 투자를 명확 하 게 필요합니다. 이 옵션은 일반적으로 새로운 수준의 장기적인 민첩성 및 확장성을 필요로 하는 업무용 응용 프로그램에 대 한 선택 됩니다. 그러나 몇 가지 새로운 시나리오를 위해 마이크로 서비스를 추가 하 여 클라우드 네이티브 쪽으로 이동 합니다. 시작 하 고 결국 마이크로 서비스로 완벽 하 게 응용 프로그램을 리팩터링 수 없습니다. 이 증분 방법 몇 가지 시나리오에 대 한 최상의 옵션입니다.
 
@@ -57,7 +55,7 @@ ms.locfileid: "62012128"
 
 마이크로 서비스 아키텍처는 자치 서비스 형태로 여러 독립적인 하위 시스템을 기반으로 하는 중요 업무용 응용 프로그램의 분산 된 대규모 또는 복잡 한 가장 좋은 방법으로 되 고 있습니다. 마이크로 서비스 기반 아키텍처에서 응용 프로그램 배포 및 확장 독립적으로 개발, 테스트, 버전이 지정 될 수 있는 서비스 컬렉션으로 빌드됩니다. 이 마이크로 서비스 마다 자치 모든 관련된 데이터베이스를 포함할 수 있습니다.
 
-.NET Core를 사용 하 여 구현할 수 있는 마이크로 서비스 아키텍처를 자세히 살펴보고, 다운로드 가능한 PDF 전자책을 참조 하세요. [.NET 마이크로 서비스: 컨테이너 화 된.NET 응용 프로그램에 대 한 아키텍처](https://aka.ms/microservicesebook)합니다. 이 가이드에도 사용할 수 있습니다 [온라인](../../microservices-architecture/index.md)합니다.
+.NET Core를 사용 하 여 구현할 수 있는 마이크로 서비스 아키텍처를 자세히 살펴보고, 다운로드 가능한 PDF 전자책을 참조 하세요. [.NET 마이크로 서비스: 컨테이너화된 .NET 응용 프로그램용 아키텍처](https://aka.ms/microservicesebook) 전자 문서를 참조합니다. 이 가이드에도 사용할 수 있습니다 [온라인](../../microservices-architecture/index.md)합니다.
 
 하지만 마이크로 서비스 제공 강력한 기능에 관계 없이 배포, 강력한 하위 시스템 경계 및 기술 다양 성과 시나리오 에서도-많은 새로운 문제 역시 발생 합니다. 조각화 되 고 독립적 데이터 모델을 같은 분산된 응용 프로그램 개발에 관련 된 문제 마이크로 서비스 간 복원 력 있는 통신을 실현 최종 일관성; 필요 및 운영 복잡성을 추가 합니다. 마이크로 서비스는 높은 수준의 기존의 모놀리식 응용 프로그램에 비해 복잡성을 소개 합니다.
 

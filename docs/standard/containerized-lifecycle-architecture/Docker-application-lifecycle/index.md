@@ -1,9 +1,13 @@
 ---
 title: Docker 애플리케이션 수명 주기 소개
 description: 컨테이너 화 된 응용 프로그램 개발 경험을 여기서 시작 됩니다.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 11/23/2018
+ms.openlocfilehash: 825226e0004af16deccfe1418596d91d6438b076
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644806"
 ---
 # <a name="introduction-tothe-docker-application-life-cycle"></a>Docker 응용 프로그램 수명 주기 소개
 

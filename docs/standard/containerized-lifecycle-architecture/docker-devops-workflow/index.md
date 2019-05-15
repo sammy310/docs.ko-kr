@@ -1,11 +1,14 @@
 ---
 title: Microsoft 도구를 사용하는 Docker 애플리케이션 DevOps 워크플로
 description: Microsoft 도구를 사용 하 여 Microsoft 플랫폼 및 도구 DevOps 워크플로 사용 하 여 컨테이너 화 된 Docker 응용 프로그램 수명 주기
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
+ms.openlocfilehash: 6b138301a7e6794ce0a7b15957684b3b73e9f89f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644812"
 ---
-
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Microsoft 도구를 사용하는 Docker 애플리케이션 DevOps 워크플로
 
 *Microsoft Visual Studio, Azure DevOps 서비스, Team Foundation Server 및 Azure Monitor는 포괄적인 에코 시스템 개발 및 IT 운영 팀 프로젝트를 관리 하 고 신속 하 게 구축 하는 도구를 제공 하는 테스트 및 배포에 대 한 컨테이너 화 된 제공 응용 프로그램입니다.*

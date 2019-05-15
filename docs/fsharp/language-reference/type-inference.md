@@ -2,12 +2,12 @@
 title: 형식 유추
 description: 설명 하는 방법을 F# 컴파일러가 값, 변수, 매개 변수 및 반환 값의 형식을 유추 합니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 3e61d5c81fde0a48af66a47745123a842dc04cb1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab1a4aa8df4312287df749d5d6d0ea2858091152
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666237"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641673"
 ---
 # <a name="type-inference"></a>형식 유추
 

@@ -1,15 +1,13 @@
 ---
 title: Docker 용어
 description: Docker를 사용 하 여 작업할 때 매일 사용에 몇 가지 기본 용어에 알아봅니다.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: d465065341bc58295c965853f4178b05b12a3d9b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c352bf7235e8a3dc2d52bbbfe4390863fff9991f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591217"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644744"
 ---
 # <a name="docker-terminology"></a>Docker 용어
 

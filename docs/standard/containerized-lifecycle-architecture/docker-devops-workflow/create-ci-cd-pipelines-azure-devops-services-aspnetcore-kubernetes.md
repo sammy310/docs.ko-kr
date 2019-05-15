@@ -1,15 +1,13 @@
 ---
 title: Docker 애플리케이션에 대한 외부 루프 DevOps 워크플로의 단계
 description: Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 애플리케이션 수명 주기
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: e11c9ec61ea7d5131595f01ce76b5bb810bb70c0
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 9fdc5acfd375e4f2266859f061ef1c854286b914
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063308"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644979"
 ---
 # <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-20-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>Azure DevOps 서비스에서 컨테이너의 .NET Core 2.0 애플리케이션에 대한 CI/CD 파이프라인 만들기 및 Kubernetes 클러스터에 배포
 

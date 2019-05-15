@@ -2,12 +2,12 @@
 title: 정적으로 확인된 형식 매개 변수
 description: 사용 하는 방법을 알아봅니다는 F# 런타임 대신 컴파일 시간에 실제 형식으로 대체 되는 정적으로 확인 된 형식 매개 변수입니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 9ad23a881e644dfe2bccd56fa04d3c219b51cf7d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 337d4f40418ee76cb18397add27acba75f756091
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937490"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645252"
 ---
 # <a name="statically-resolved-type-parameters"></a>정적으로 확인된 형식 매개 변수
 

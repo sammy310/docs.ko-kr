@@ -1,15 +1,13 @@
 ---
 title: Docker 앱을 위한 개발 환경
 description: Docker 개발 수명 주기를 지 원하는 가장 중요 한 개발 도구 옵션 익히기.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 3a2fcbe3b9380083622b6ce72cea4bab17d7c2ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f71ffa5e6870f45908e4def6577120a17ec744c
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61799322"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641412"
 ---
 # <a name="development-environment-for-docker-apps"></a>Docker 앱을 위한 개발 환경
 

@@ -1,15 +1,13 @@
 ---
 title: 하이브리드 클라우드로 마이그레이션 시나리오
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 하이브리드 클라우드 시나리오로 마이그레이션
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 6cba29ad654b09b01f9b6969fa6688dd5f165fbb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 04c618681c61f5584e641e0a4735e1261ab34fa3
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64636583"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65643726"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>하이브리드 클라우드로 마이그레이션 시나리오
 

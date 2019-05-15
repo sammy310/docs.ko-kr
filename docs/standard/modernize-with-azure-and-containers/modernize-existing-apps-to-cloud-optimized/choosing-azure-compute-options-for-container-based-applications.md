@@ -1,15 +1,13 @@
 ---
 title: 컨테이너 기반 응용 프로그램용 Azure 계산 플랫폼 선택
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 컨테이너 기반 응용 프로그램용 Azure 계산 플랫폼 선택
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 05/04/2018
-ms.openlocfilehash: f251aecfeaf2421a5cecf218577369963bc736fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 28e103c67f47d63582384c9ab468a5f631b5ce9e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61811759"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638987"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>컨테이너 기반 응용 프로그램용 Azure 계산 플랫폼 선택
 

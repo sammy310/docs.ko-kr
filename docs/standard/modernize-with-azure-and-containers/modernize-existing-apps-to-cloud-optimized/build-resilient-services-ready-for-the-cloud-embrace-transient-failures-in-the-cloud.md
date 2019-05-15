@@ -1,15 +1,13 @@
 ---
 title: '클라우드에 대한 복원력 있는 서비스 구축: 클라우드에서 일시적 오류 포용'
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 클라우드에 대한 복원력 있는 서비스를 구축하십시오. 클라우드에서 일시적 오류 포용
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 7af5e189ea930f9eac8aadab2ba1497f43f8d2b1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca5d5e0c3af772ac52a02894c96889c776cf7d48
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614520"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65643731"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>클라우드에 대한 복원력 있는 서비스 구축: 클라우드에서 일시적 오류 포용
 

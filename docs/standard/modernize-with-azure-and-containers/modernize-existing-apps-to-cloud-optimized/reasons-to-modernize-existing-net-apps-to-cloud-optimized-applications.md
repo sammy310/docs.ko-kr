@@ -1,15 +1,13 @@
 ---
 title: 기존 .NET 앱을 클라우드 최적화된 응용 프로그램으로 최신화하는 이유
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | 기존 .NET 앱을 클라우드 최적화된 응용 프로그램으로 최신화하는 이유
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 896162116d2c6e92fa3038405c5f3bf40a956ad9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e09d8066e883aaef55408336e3817158e2c14be6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611560"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639054"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>기존 .NET 앱을 클라우드 최적화된 응용 프로그램으로 최신화하는 이유
 

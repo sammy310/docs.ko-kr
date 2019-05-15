@@ -2,12 +2,12 @@
 title: 측정 단위
 description: 어떻게 부동 소수점을 알아보고 부호 있는 정수 값 F# , 측정 단위 길이, 볼륨 및 대용량을 나타내기 위해 일반적으로 사용 되는 연결 될 수 있습니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 935dbff3545f92736ce8c51de86a168429dc194f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 217ef67912625c0a4b187a7ee13a739de811cfcb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982542"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641641"
 ---
 # <a name="units-of-measure"></a>측정 단위
 

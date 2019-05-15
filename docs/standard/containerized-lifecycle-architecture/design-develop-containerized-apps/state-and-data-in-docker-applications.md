@@ -1,15 +1,13 @@
 ---
 title: Docker 애플리케이션의 상태 및 데이터
 description: 컨테이너 화 된 응용 프로그램의 상태를 저장 하는 사용 가능한 옵션에 알아봅니다.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 30dde3ce44aa61fff3fad1841ae4a8b941573877
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc171a419632f2ac61c7c9bf6b201b84e0691c3a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795444"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641269"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker 애플리케이션의 상태 및 데이터
 

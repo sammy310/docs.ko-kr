@@ -1,15 +1,13 @@
 ---
 title: 컨테이너에 기반한 최신 애플리케이션으로 전환
 description: Docker, 컨테이너 및 마이크로 서비스 아키텍처는 모든 상황에 맞는 솔루션을 이해 합니다. 여기서 결정 하는 데 도움이 되는 일부 참조를 찾을 수 있습니다.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 11/23/2018
-ms.openlocfilehash: 94f7bc27409048ec80a4e485cea4a16d30e7c1e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bd5a53ec557b7dd90733a93d0cb03f19e3bc2940
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922618"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641257"
 ---
 # <a name="road-to-modern-applications-based-on-containers"></a>컨테이너에 기반한 최신 애플리케이션으로 전환
 

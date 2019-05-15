@@ -2,12 +2,12 @@
 title: 열거형
 description: 사용 하는 방법을 알아봅니다 F# 코드를 더 읽기 쉽고 쉽게 리터럴 대신 열거형입니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: a8839b73de074f62606b70ffe969a53b3db753bf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ff62b1c0a6ab0fda58a30de9387acbb547f6b81
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921578"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645537"
 ---
 # <a name="enumerations"></a>열거형
 

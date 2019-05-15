@@ -2,12 +2,12 @@
 title: '예외: try...finally 식'
 description: 에 대해 알아봅니다 하는 방법을 F# ' try... 마지막 ' 식을 사용 하면 코드 블록에 예외가 발생 하는 경우에 정리 코드를 실행할 수 있습니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 24613185818c8ea30b27dcf639b22af320c4b401
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d246bce52b5f30d5e8d7e3c36e9f7d7c48627913
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772699"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645458"
 ---
 # <a name="exceptions-the-tryfinally-expression"></a>예외: try...finally 식
 

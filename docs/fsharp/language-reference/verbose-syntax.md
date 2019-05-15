@@ -2,12 +2,12 @@
 title: 자세한 구문
 description: 자세한 정보 및 간단한 구문 차이점에 알아봅니다는 F# 프로그래밍 언어입니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: c770f2843276619cb2878198a537dcfb9c054b6b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c95965d7d9d18a0fca11663a474dbbc9375a9494
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902306"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641659"
 ---
 # <a name="verbose-syntax"></a>자세한 구문
 

@@ -1,16 +1,14 @@
 ---
 title: Visual Studio Tools for Windows의 Docker
 description: Visual Studio 2017 버전 15.7 이상에서 사용할 수 있는 Docker 도구를 가져옵니다.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: d361b0c471402c097dfac799eb58ef08209d4343
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2b6fdc33f9cf850cf9e52fca4a1a9754cd412567
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664368"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644683"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>Windows의 Visual Studio 2017에서 사용 하 여 Docker 도구
 

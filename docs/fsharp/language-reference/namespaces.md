@@ -2,12 +2,12 @@
 title: 네임스페이스
 description: 에 대해 알아봅니다 어떻게는 F# 네임 스페이스를 사용 하면 프로그램 요소의 그룹에 이름을 연결 하 여 관련 기능 영역으로 코드를 구성할 수 있습니다.
 ms.date: 12/08/2018
-ms.openlocfilehash: 526d7a07e4804751811c15fa91b0c74c1954d591
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b315d654dad0d36e3584564ad027c68fb3c94cce
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666393"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645266"
 ---
 # <a name="namespaces"></a>네임스페이스
 

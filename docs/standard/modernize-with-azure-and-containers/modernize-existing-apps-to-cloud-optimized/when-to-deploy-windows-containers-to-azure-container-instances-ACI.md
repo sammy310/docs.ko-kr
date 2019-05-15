@@ -1,15 +1,13 @@
 ---
 title: Windows 컨테이너를 Azure ACI(Container Instances)에 배포하는 경우
 description: Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 응용 프로그램 최신화 | Windows 컨테이너를 Azure ACI(Container Instances)에 배포하는 경우
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/29/2018
-ms.openlocfilehash: 03ee7c8b65e1a92dcc7fd40b44e9ba081f571487
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9bfa0688d07bd04964a1b28f688f125b5bcd2299
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011985"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638931"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a>Windows 컨테이너를 Azure ACI(Container Instances)에 배포하는 경우
 

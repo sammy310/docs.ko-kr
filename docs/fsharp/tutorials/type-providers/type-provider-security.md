@@ -2,12 +2,12 @@
 title: 형식 공급자 보안
 description: 형식 공급자 보안에 대 한 자세한 F#, 형식 공급자의 신뢰 설정을 변경 하는 방법을 포함 합니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 9ccb33d7298736c3d6b54980b6fe09bc9f2e0259
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26f95ad3950b37a668c497f293b9941ed13a18c7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968235"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641844"
 ---
 # <a name="type-provider-security"></a>형식 공급자 보안
 

@@ -2,12 +2,12 @@
 title: Visual Workflow Tracking
 ms.date: 03/30/2017
 ms.assetid: 0143448f-2044-40a0-8a3d-941f6d12468b
-ms.openlocfilehash: 6e87b0ef5a0d6fa97c87c99a63fe0e23c389140c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: abd9f294018f6aa1fd2020314688258ac00792f7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004716"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637792"
 ---
 # <a name="visual-workflow-tracking"></a>Visual Workflow Tracking
 이 샘플에서는 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]을 통해 사용할 수 있는 디버그 기능을 사용하여 시각적 워크플로 추적 응용 프로그램을 작성하는 방법을 보여 줍니다.

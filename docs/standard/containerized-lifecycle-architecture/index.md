@@ -1,9 +1,13 @@
 ---
 title: 컨테이너 및 Docker 소개
 description: Docker를 사용 하는 주요 이점은의 높은 수준의 개요를 가져옵니다.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
+ms.openlocfilehash: a03c67ed4fbc55c84e69fba5b7978863c8305e00
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644950"
 ---
 # <a name="introduction-to-containers-and-docker"></a>컨테이너 및 Docker 소개
 

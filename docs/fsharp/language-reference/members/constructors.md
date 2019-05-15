@@ -2,12 +2,12 @@
 title: 생성자
 description: 정의에서 생성자를 사용 하는 방법을 알아봅니다 F# 를 만들고 클래스 및 구조체 개체를 초기화 합니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 34989e2877b29f6f9fe1f6cc05e3fd7c90a1306a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 47fb6e77ce369d7aa4fce3aa2c97ecf7df280c03
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903970"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645224"
 ---
 # <a name="constructors"></a>생성자
 

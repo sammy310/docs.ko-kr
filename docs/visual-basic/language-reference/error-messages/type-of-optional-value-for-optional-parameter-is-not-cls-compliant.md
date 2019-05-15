@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40042
 ms.assetid: 1d6eae29-4ad3-4434-bde4-a53b6051adf5
-ms.openlocfilehash: 35ddf1d42efae20be477c20b89775de64ceee176
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 88f8b7ea1e0a9b4cb115646f40abbf8a567a2b1d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589841"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641386"
 ---
 # <a name="type-of-optional-value-for-optional-parameter-parametername-is-not-cls-compliant"></a>선택적 매개 변수에 대 한 선택적 값의 형식이 \<parametername > CLS 규격이 아님
 프로시저는 `<CLSCompliant(True)>`로 표시되지만 비규격 형식의 기본값을 가진 [선택적](../../../visual-basic/language-reference/modifiers/optional.md) 매개 변수를 선언합니다.  

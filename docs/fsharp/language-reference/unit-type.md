@@ -2,12 +2,12 @@
 title: 단위 형식
 description: 에 대해 알아봅니다 하는 방법을 F# 'unit' 유형은 자리를 값이 필요한 언어 구문을 사용 하 여 필요한 되었거나 필요한 값이 없는 경우에 자주 사용 됩니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: f1866ff12f36f4f8d3eaa1275551c42fc4ade216
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d515e19489bfa7de6f17194fd74176cfa0bcd7c9
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982529"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645129"
 ---
 # <a name="unit-type"></a>단위 형식
 

@@ -2,12 +2,12 @@
 title: 구조체
 description: 에 대 한 자세한는 F# 구조체, 종종 간단한 개체 형식으로 적은 양의 데이터 적고 동작이 단순한 형식에 대해 클래스 보다 더 효율적입니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: c091dc91765d6e828426de21e9bc5f79bfdebc6c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dc302b975604bebcd145a385fb59b21417547c5e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925881"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645340"
 ---
 # <a name="structures"></a>구조체
 

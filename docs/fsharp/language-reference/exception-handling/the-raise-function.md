@@ -2,12 +2,12 @@
 title: '예외: raise 함수'
 description: 설명 하는 방법을 F# 'raise' 함수는 오류 또는 예외 조건이 발생 했음을 알리는 데 합니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 87773ead7773c62a325c7e7ff105c729e10dd69c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9e2515ad7b85c1025bc3aa0aa2a6929a8d35436d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772673"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641959"
 ---
 # <a name="exceptions-the-raise-function"></a>예외: raise 함수
 

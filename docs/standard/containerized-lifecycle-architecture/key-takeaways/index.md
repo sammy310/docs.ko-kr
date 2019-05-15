@@ -1,9 +1,13 @@
 ---
 title: 핵심 내용
 description: 이 가이드에 대 한 핵심 내용 검토 합니다.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
+ms.openlocfilehash: d28739a87e5c7c7e6c9304c36e1ec2a73cf0d0db
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644714"
 ---
 # <a name="key-takeaways"></a>핵심 내용
 
@@ -11,7 +15,7 @@ ms.date: 02/15/2019
 
 - Docker는 컨테이너 업계의 사실상 표준이 되 고 있으며 Linux 및 Windows 에코 시스템에서 Microsoft를 포함 하는 가장 중요 한 공급 업체에서 지원 됩니다. 향후에는 아마도 클라우드 또는 온-프레미스의 어떤 데이터 센터에서나 Docker를 아주 흔히 보게 될 것입니다.
 
-- Docker 컨테이너는 서버 기반 애플리케이션 또는 서비스 배포의 표준 단위가 되고 있습니다.
+- Docker 컨테이너는 서버 기반 응용 프로그램이나 서비스 배포의 표준 단위가 되고 있습니다.
 
 - Azure Kubernetes Service (AKS) 및 Azure Service Fabric에서 제공 하는 것과 같은 docker 오 케 스트레이 터는 기본 및 중요 한 복잡성 및 확장성 요구 사항이 마이크로 서비스 기반 또는 다중 컨테이너 응용 프로그램에 대 한 필수적인입니다.
 

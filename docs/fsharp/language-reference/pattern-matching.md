@@ -2,12 +2,12 @@
 title: 패턴 일치
 description: 패턴을 사용 하는 방법을 알아봅니다 F# 논리 구조를 사용 하 여 데이터를 비교 하려면 데이터를 구성 부분으로 분해 하거나 데이터에서 정보를 추출 합니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: bb6b41f6d15612e4a65abd4a3d5d7291d84a8f3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f76a5fb675f83df87dd896f471a3552495f39e7e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795462"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641752"
 ---
 # <a name="pattern-matching"></a>패턴 일치
 

@@ -2,12 +2,12 @@
 title: 클래스
 description: 설명 하는 방법 F# 클래스는 속성, 메서드 및 이벤트를 가질 수 있는 개체를 나타내는 형식입니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6bf838e98acecb89436d3e87809d9eb6da0c66d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a233fea538274216db3c6751f6fbabbf70cc2841
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61870294"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645523"
 ---
 # <a name="classes"></a>클래스
 

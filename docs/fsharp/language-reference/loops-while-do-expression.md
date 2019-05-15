@@ -2,12 +2,12 @@
 title: '루프: while...do 식'
 description: 참조 하는 방법을... 하는 동안 수행 식은 지정된 된 테스트 조건이 참인 동안 반복 실행 (루프)를 수행 하는데 사용 됩니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: d2a77e0bfefe3b6b026012e6b2938ba670326bcf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5823ace27348ff4d4397a726bf2254f8fa0ee09b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904022"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641826"
 ---
 # <a name="loops-whiledo-expression"></a>루프: while...do 식
 

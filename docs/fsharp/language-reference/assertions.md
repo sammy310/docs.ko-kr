@@ -2,12 +2,12 @@
 title: 어설션
 description: 식에서 테스트에 대 한 디버깅 기능으로 'assert' 식을 사용 하는 방법을 알아봅니다는 F# 프로그래밍 언어입니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: c2d97386e87e9b915da490a78fff9aedb9def616
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5fe24195c7548e9fbb927e4b95b752c7a963c6b3
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703220"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65642047"
 ---
 # <a name="assertions"></a>어설션
 

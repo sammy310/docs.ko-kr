@@ -2,12 +2,12 @@
 title: 진입점
 description: 진입점으로 설정 하는 방법을 알아봅니다는 F# 실행 공식적으로 시작 하는 실행 파일로 컴파일된 프로그램입니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 915ab17b9a4fc7fd4d0ae344cb273b1d348a02f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c7aedda5834fb224507bfcecd4688978efa26547
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996829"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645447"
 ---
 # <a name="entry-point"></a>진입점
 

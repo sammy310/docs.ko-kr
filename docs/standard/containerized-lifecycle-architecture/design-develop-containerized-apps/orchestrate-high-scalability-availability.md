@@ -1,15 +1,13 @@
 ---
 title: 높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 description: 실제 프로덕션 응용 프로그램 배포 및 상태, 작업 및 모든 컨테이너의 수명 주기를 처리 하는 오 케 스트레이 터를 사용 하 여 관리 해야 합니다.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 148eab941644667c803c5613b8815f50263fc0fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6cb41e632db7c7c6b9412bf54d2efeb44deee80f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644900"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644717"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
 

@@ -2,12 +2,12 @@
 title: 컴파일러 지시문
 description: 에 대해 알아봅니다 F# 언어 전처리기 지시문, 조건부 컴파일 지시문, 줄 지시문 및 컴파일러 지시문입니다.
 ms.date: 12/10/2018
-ms.openlocfilehash: 3fade7407f84b00163bd5b3d7774104bce8a25af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b62fb930a3b0c55103d6b0edbe20ae056ba86bd
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766105"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645507"
 ---
 # <a name="compiler-directives"></a>컴파일러 지시문
 
