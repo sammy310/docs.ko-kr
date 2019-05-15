@@ -2,18 +2,18 @@
 title: 연결 쿼리 예제(C#)
 ms.date: 07/20/2015
 ms.assetid: abbca162-d95e-43af-b92c-e46e6aa2540e
-ms.openlocfilehash: b77de6b1e5bd81ac70165640aecf0d4ce89be03d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8564a2ece7dc09bd3330dc9bdad31689408089cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677351"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598549"
 ---
-# <a name="chaining-queries-example-c"></a><span data-ttu-id="67b0c-102">연결 쿼리 예제(C#)</span><span class="sxs-lookup"><span data-stu-id="67b0c-102">Chaining Queries Example (C#)</span></span>
-<span data-ttu-id="67b0c-103">이 예제에서는 이전 예제를 기반으로 하며 지연된 실행과 지연 계산을 모두 사용하는 두 쿼리를 연결할 때 발생하는 상황을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="67b0c-103">This example builds on the previous example and shows what happens when you chain together two queries that both use deferred execution and lazy evaluation.</span></span>  
+# <a name="chaining-queries-example-c"></a><span data-ttu-id="a54c1-102">연결 쿼리 예제(C#)</span><span class="sxs-lookup"><span data-stu-id="a54c1-102">Chaining Queries Example (C#)</span></span>
+<span data-ttu-id="a54c1-103">이 예제에서는 이전 예제를 기반으로 하며 지연된 실행과 지연 계산을 모두 사용하는 두 쿼리를 연결할 때 발생하는 상황을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a54c1-103">This example builds on the previous example and shows what happens when you chain together two queries that both use deferred execution and lazy evaluation.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="67b0c-104">예제</span><span class="sxs-lookup"><span data-stu-id="67b0c-104">Example</span></span>  
- <span data-ttu-id="67b0c-105">이 예제에는 지정된 문자열을 소스 컬렉션의 모든 문자열에 추가한 다음 새 문자열을 생성하는 `AppendString` 확장 메서드가 추가로 도입되었습니다.</span><span class="sxs-lookup"><span data-stu-id="67b0c-105">In this example, another extension method is introduced, `AppendString`, which appends a specified string onto every string in the source collection, and then yields the new strings.</span></span>  
+## <a name="example"></a><span data-ttu-id="a54c1-104">예제</span><span class="sxs-lookup"><span data-stu-id="a54c1-104">Example</span></span>  
+ <span data-ttu-id="a54c1-105">이 예제에는 지정된 문자열을 소스 컬렉션의 모든 문자열에 추가한 다음 새 문자열을 생성하는 `AppendString` 확장 메서드가 추가로 도입되었습니다.</span><span class="sxs-lookup"><span data-stu-id="a54c1-105">In this example, another extension method is introduced, `AppendString`, which appends a specified string onto every string in the source collection, and then yields the new strings.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -62,7 +62,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="67b0c-106">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="67b0c-106">This example produces the following output:</span></span>  
+ <span data-ttu-id="a54c1-106">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="a54c1-106">This example produces the following output:</span></span>  
   
 ```  
 ToUpper: source >abc<  
@@ -78,14 +78,14 @@ AppendString: source >GHI<
 Main: str >GHI!!!<  
 ```  
   
- <span data-ttu-id="67b0c-107">이 예제에서 각 확장 메서드가 소스 컬렉션의 항목마다 한 번씩 작동하는 것을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="67b0c-107">In this example, you can see that each extension method operates one at a time for each item in the source collection.</span></span>  
+ <span data-ttu-id="a54c1-107">이 예제에서 각 확장 메서드가 소스 컬렉션의 항목마다 한 번씩 작동하는 것을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a54c1-107">In this example, you can see that each extension method operates one at a time for each item in the source collection.</span></span>  
   
- <span data-ttu-id="67b0c-108">이 예제에서 알아 두어야 할 점은 컬렉션을 생성하는 쿼리를 연결했지만 중간 컬렉션이 구체화되지 않는다는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="67b0c-108">What should be clear from this example is that even though we have chained together queries that yield collections, no intermediate collections are materialized.</span></span> <span data-ttu-id="67b0c-109">대신 각 항목이 한 지연 메서드에서 다음 지연 메서드로 전달됩니다.</span><span class="sxs-lookup"><span data-stu-id="67b0c-109">Instead, each item is passed from one lazy method to the next.</span></span> <span data-ttu-id="67b0c-110">이렇게 하면 먼저 문자열 배열을 하나 가져온 다음 대문자로 변환된 두 번째 문자열 배열을 만들고 마지막으로 각 문자열 끝에 느낌표가 추가된 세 번째 문자열 배열을 만드는 방법보다 훨씬 적은 메모리를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="67b0c-110">This results in a much smaller memory footprint than an approach that would first take one array of strings, then create a second array of strings that have been converted to uppercase, and finally create a third array of strings where each string has the exclamation points appended to it.</span></span>  
+ <span data-ttu-id="a54c1-108">이 예제에서 알아 두어야 할 점은 컬렉션을 생성하는 쿼리를 연결했지만 중간 컬렉션이 구체화되지 않는다는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="a54c1-108">What should be clear from this example is that even though we have chained together queries that yield collections, no intermediate collections are materialized.</span></span> <span data-ttu-id="a54c1-109">대신 각 항목이 한 지연 메서드에서 다음 지연 메서드로 전달됩니다.</span><span class="sxs-lookup"><span data-stu-id="a54c1-109">Instead, each item is passed from one lazy method to the next.</span></span> <span data-ttu-id="a54c1-110">이렇게 하면 먼저 문자열 배열을 하나 가져온 다음 대문자로 변환된 두 번째 문자열 배열을 만들고 마지막으로 각 문자열 끝에 느낌표가 추가된 세 번째 문자열 배열을 만드는 방법보다 훨씬 적은 메모리를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="a54c1-110">This results in a much smaller memory footprint than an approach that would first take one array of strings, then create a second array of strings that have been converted to uppercase, and finally create a third array of strings where each string has the exclamation points appended to it.</span></span>  
   
- <span data-ttu-id="67b0c-111">이 자습서의 다음 항목에서는 중간 구체화를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="67b0c-111">The next topic in this tutorial illustrates intermediate materialization:</span></span>  
+ <span data-ttu-id="a54c1-111">이 자습서의 다음 항목에서는 중간 구체화를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a54c1-111">The next topic in this tutorial illustrates intermediate materialization:</span></span>  
   
--   [<span data-ttu-id="67b0c-112">중간 구체화(C#)</span><span class="sxs-lookup"><span data-stu-id="67b0c-112">Intermediate Materialization (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)  
+- [<span data-ttu-id="a54c1-112">중간 구체화(C#)</span><span class="sxs-lookup"><span data-stu-id="a54c1-112">Intermediate Materialization (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)  
   
-## <a name="see-also"></a><span data-ttu-id="67b0c-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="67b0c-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a54c1-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a54c1-113">See also</span></span>
 
-- [<span data-ttu-id="67b0c-114">자습서: 여러 쿼리 연결(C#)</span><span class="sxs-lookup"><span data-stu-id="67b0c-114">Tutorial: Chaining Queries Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+- [<span data-ttu-id="a54c1-114">자습서: 여러 쿼리 연결(C#)</span><span class="sxs-lookup"><span data-stu-id="a54c1-114">Tutorial: Chaining Queries Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)

@@ -2,18 +2,18 @@
 title: 지연된 실행 예제(C#)
 ms.date: 07/20/2015
 ms.assetid: 50f4fbac-81fe-4f26-aedf-506e21419b19
-ms.openlocfilehash: 9697f3e4c120c7d8bc184181ad99df08634e791e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 08125f8da54db18423f90564a51fcffad8db44c2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54598882"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598012"
 ---
-# <a name="deferred-execution-example-c"></a><span data-ttu-id="c8fde-102">지연된 실행 예제(C#)</span><span class="sxs-lookup"><span data-stu-id="c8fde-102">Deferred Execution Example (C#)</span></span>
-<span data-ttu-id="c8fde-103">이 항목에서는 지연된 실행과 지연 계산이 LINQ to XML 쿼리의 실행에 미치는 영향을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c8fde-103">This topic shows how deferred execution and lazy evaluation affect the execution of your LINQ to XML queries.</span></span>  
+# <a name="deferred-execution-example-c"></a><span data-ttu-id="fd27b-102">지연된 실행 예제(C#)</span><span class="sxs-lookup"><span data-stu-id="fd27b-102">Deferred Execution Example (C#)</span></span>
+<span data-ttu-id="fd27b-103">이 항목에서는 지연된 실행과 지연 계산이 LINQ to XML 쿼리의 실행에 미치는 영향을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="fd27b-103">This topic shows how deferred execution and lazy evaluation affect the execution of your LINQ to XML queries.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c8fde-104">예제</span><span class="sxs-lookup"><span data-stu-id="c8fde-104">Example</span></span>  
- <span data-ttu-id="c8fde-105">다음 예제에서는 지연된 실행을 사용하는 확장 메서드를 사용하는 경우의 실행 순서를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c8fde-105">The following example shows the order of execution when using an extension method that uses deferred execution.</span></span> <span data-ttu-id="c8fde-106">이 예제에서는 세 문자열의 배열을 선언한 다음</span><span class="sxs-lookup"><span data-stu-id="c8fde-106">The example declares an array of three strings.</span></span> <span data-ttu-id="c8fde-107">`ConvertCollectionToUpperCase`에서 반환하는 컬렉션을 반복합니다.</span><span class="sxs-lookup"><span data-stu-id="c8fde-107">It then iterates through the collection returned by `ConvertCollectionToUpperCase`.</span></span>  
+## <a name="example"></a><span data-ttu-id="fd27b-104">예제</span><span class="sxs-lookup"><span data-stu-id="fd27b-104">Example</span></span>  
+ <span data-ttu-id="fd27b-105">다음 예제에서는 지연된 실행을 사용하는 확장 메서드를 사용하는 경우의 실행 순서를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="fd27b-105">The following example shows the order of execution when using an extension method that uses deferred execution.</span></span> <span data-ttu-id="fd27b-106">이 예제에서는 세 문자열의 배열을 선언한 다음</span><span class="sxs-lookup"><span data-stu-id="fd27b-106">The example declares an array of three strings.</span></span> <span data-ttu-id="fd27b-107">`ConvertCollectionToUpperCase`에서 반환하는 컬렉션을 반복합니다.</span><span class="sxs-lookup"><span data-stu-id="fd27b-107">It then iterates through the collection returned by `ConvertCollectionToUpperCase`.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -44,7 +44,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="c8fde-108">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="c8fde-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="fd27b-108">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="fd27b-108">This example produces the following output:</span></span>  
   
 ```  
 ToUpper: source abc  
@@ -55,14 +55,14 @@ ToUpper: source ghi
 Main: str GHI  
 ```  
   
- <span data-ttu-id="c8fde-109">`ConvertCollectionToUpperCase`에서 반환하는 컬렉션을 반복할 때 각 항목이 소스 문자열 배열에서 검색되어 대문자로 변환된 후 다음 항목이 소스 문자열 배열에서 검색됩니다.</span><span class="sxs-lookup"><span data-stu-id="c8fde-109">Notice that when iterating through the collection returned by `ConvertCollectionToUpperCase`, each item is retrieved from the source string array and converted to uppercase before the next item is retrieved from the source string array.</span></span>  
+ <span data-ttu-id="fd27b-109">`ConvertCollectionToUpperCase`에서 반환하는 컬렉션을 반복할 때 각 항목이 소스 문자열 배열에서 검색되어 대문자로 변환된 후 다음 항목이 소스 문자열 배열에서 검색됩니다.</span><span class="sxs-lookup"><span data-stu-id="fd27b-109">Notice that when iterating through the collection returned by `ConvertCollectionToUpperCase`, each item is retrieved from the source string array and converted to uppercase before the next item is retrieved from the source string array.</span></span>  
   
- <span data-ttu-id="c8fde-110">반환된 컬렉션의 각 항목이 `foreach`의 `Main` 루프에서 처리되기 전에는 문자열의 전체 배열이 대문자로 변환되지 않는 것을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c8fde-110">You can see that the entire array of strings is not converted to uppercase before each item in the returned collection is processed in the `foreach` loop in `Main`.</span></span>  
+ <span data-ttu-id="fd27b-110">반환된 컬렉션의 각 항목이 `foreach`의 `Main` 루프에서 처리되기 전에는 문자열의 전체 배열이 대문자로 변환되지 않는 것을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fd27b-110">You can see that the entire array of strings is not converted to uppercase before each item in the returned collection is processed in the `foreach` loop in `Main`.</span></span>  
   
- <span data-ttu-id="c8fde-111">이 자습서의 다음 항목에서는 쿼리를 연결하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="c8fde-111">The next topic in this tutorial illustrates chaining queries together:</span></span>  
+ <span data-ttu-id="fd27b-111">이 자습서의 다음 항목에서는 쿼리를 연결하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="fd27b-111">The next topic in this tutorial illustrates chaining queries together:</span></span>  
   
--   [<span data-ttu-id="c8fde-112">연결 쿼리 예제(C#)</span><span class="sxs-lookup"><span data-stu-id="c8fde-112">Chaining Queries Example (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/chaining-queries-example.md)  
+- [<span data-ttu-id="fd27b-112">연결 쿼리 예제(C#)</span><span class="sxs-lookup"><span data-stu-id="fd27b-112">Chaining Queries Example (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/chaining-queries-example.md)  
   
-## <a name="see-also"></a><span data-ttu-id="c8fde-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c8fde-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fd27b-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="fd27b-113">See also</span></span>
 
-- [<span data-ttu-id="c8fde-114">자습서: 여러 쿼리 연결(C#)</span><span class="sxs-lookup"><span data-stu-id="c8fde-114">Tutorial: Chaining Queries Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+- [<span data-ttu-id="fd27b-114">자습서: 여러 쿼리 연결(C#)</span><span class="sxs-lookup"><span data-stu-id="fd27b-114">Tutorial: Chaining Queries Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
