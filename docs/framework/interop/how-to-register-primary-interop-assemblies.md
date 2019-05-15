@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29f29da6f5a95181abfd4540b017561115d59284
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a394aea0e5f8081f2be3b91422e29a251cef918e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314752"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626272"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>방법: 주 Interop 어셈블리 등록
 
@@ -28,9 +28,9 @@ ms.locfileid: "59314752"
 
  Visual Studio를 사용하려는 경우가 아니면 주 interop 어셈블리를 등록할 필요는 없지만 등록 시 다음과 같은 두 가지 이점이 있습니다.
 
--   등록된 주 interop 어셈블리가 원래 형식 라이브러리의 레지스트리 키 아래에 명확하게 표시됩니다. 등록이 컴퓨터에서 주 interop 어셈블리를 찾는 최상의 방법입니다.
+- 등록된 주 interop 어셈블리가 원래 형식 라이브러리의 레지스트리 키 아래에 명확하게 표시됩니다. 등록이 컴퓨터에서 주 interop 어셈블리를 찾는 최상의 방법입니다.
 
--   나중에 Visual Studio를 사용하여 등록되지 않은 주 interop 어셈블리가 있는 형식을 참조할 경우 실수로 새 interop 어셈블리를 생성 및 사용하는 것을 방지할 수 있습니다.
+- 나중에 Visual Studio를 사용하여 등록되지 않은 주 interop 어셈블리가 있는 형식을 참조할 경우 실수로 새 interop 어셈블리를 생성 및 사용하는 것을 방지할 수 있습니다.
 
 [어셈블리 등록 도구(Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)를 사용하여 주 interop 어셈블리를 등록할 수 있습니다.
 

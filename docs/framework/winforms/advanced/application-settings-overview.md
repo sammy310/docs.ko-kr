@@ -8,19 +8,19 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: b603e81a342652a6639f54a78fb998cda5fdc35a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49c7ceb431e9ab59b47e3b8b912e2881aeeef6c2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972424"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583557"
 ---
 # <a name="application-settings-overview"></a>애플리케이션 설정 개요
 이 항목은 애플리케이션 및 사용자를 대신하여 설정 데이터를 만들고 저장하는 방법을 설명합니다.  
   
  Windows Forms의 애플리케이션 설정 기능을 사용하면 클라이언트 컴퓨터에서 사용자 지정 애플리케이션과 사용자 기본 설정을 쉽게 만들고 저장 및 유지 관리할 수 있습니다. Windows Forms 애플리케이션 설정을 통해 데이터베이스 연결 문자열과 같은 애플리케이션 데이터뿐 아니라 사용자 애플리케이션 기본 설정과 같은 사용자별 데이터도 저장할 수 있습니다. Visual Studio 또는 사용자 지정 관리 코드를 사용하여 새 설정을 만들고, 디스크에서 읽거나 쓰고, 폼의 속성에 바인딩하고, 설정 데이터를 로드 및 저장하기 전에 유효성을 검사할 수 있습니다.  
   
- 애플리케이션 설정은 개발자가 사용자 지정 코드를 거의 사용하지 않고 애플리케이션에 상태를 저장할 수 있게 해주며 이전 버전의 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]에서 사용된 동적 속성을 대체합니다. 애플리케이션 설정은 읽기 전용이고 런타임에 바인딩되며 더 많은 사용자 지정 프로그래밍을 요구하는 동적 속성보다 많은 향상된 기능을 포함합니다. 동적 속성 클래스는 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]에서 유지되었지만 애플리케이션 설정 클래스를 씬 래핑하는 셸 클래스일 뿐입니다.  
+ 응용 프로그램 설정을 사용 하면 거의 사용자 지정 코드를 사용 하 여 해당 응용 프로그램에서 상태를 저장 하는 개발자를 이전 버전의.NET Framework의 동적 속성에 대 한 대체 합니다. 애플리케이션 설정은 읽기 전용이고 런타임에 바인딩되며 더 많은 사용자 지정 프로그래밍을 요구하는 동적 속성보다 많은 향상된 기능을 포함합니다. 동적 속성 클래스는 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]에서 유지되었지만 애플리케이션 설정 클래스를 씬 래핑하는 셸 클래스일 뿐입니다.  
   
 ## <a name="what-are-application-settings"></a>애플리케이션 설정이란?  
  Windows Forms 애플리케이션은 애플리케이션 실행에 중요하지만 애플리케이션 코드에 직접 포함되지 않는 데이터를 요구하는 경우가 많습니다. 애플리케이션이 웹 서비스나 데이터베이스 서버를 사용하는 경우 나중에 다시 컴파일하지 않고 변경할 수 있도록 이 정보를 별도 파일에 저장할 수 있습니다. 마찬가지로, 애플리케이션에서 현재 사용자와 관련된 데이터를 저장해야 할 수도 있습니다. 예를 들어 대부분의 애플리케이션에는 애플리케이션의 모양과 동작을 사용자 지정하는 사용자 기본 설정이 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "61972424"
  사용자 지정 컨트롤은 <xref:System.Configuration.IPersistComponentSettings> 메서드를 노출하는 <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> 인터페이스를 구현하여 고유한 설정을 저장할 수도 있습니다. Windows Forms <xref:System.Windows.Forms.ToolStrip> 컨트롤은 이 인터페이스를 구현하여 애플리케이션 세션 간에 도구 모음 위치와 도구 모음 항목을 저장합니다. 사용자 지정 컨트롤과 애플리케이션 설정에 대한 자세한 내용은 [Application Settings for Custom Controls](application-settings-for-custom-controls.md)을 참조하세요.  
   
 ## <a name="limitations-of-application-settings"></a>애플리케이션 설정의 제한 사항  
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]를 호스트하는 관리되지 않는 응용 프로그램에서는 응용 프로그램 설정을 사용할 수 없습니다. Visual Studio 추가 기능, Microsoft Office용 C++, Internet Explorer에 호스트되는 컨트롤 또는 Microsoft Outlook 추가 기능 및 프로젝트와 같은 환경에서는 설정이 작동하지 않습니다.  
+ .NET Framework를 호스트 하는 관리 되지 않는 응용 프로그램에서 응용 프로그램 설정에 사용할 수 없습니다. Visual Studio 추가 기능, Microsoft Office용 C++, Internet Explorer에 호스트되는 컨트롤 또는 Microsoft Outlook 추가 기능 및 프로젝트와 같은 환경에서는 설정이 작동하지 않습니다.  
   
  현재 Windows Forms의 일부 속성에는 바인딩할 수 없습니다. 가장 두드러진 예로 <xref:System.Windows.Forms.Form.ClientSize%2A> 속성이 있습니다. 이 속성에 바인딩하면 런타임에 예측할 수 없는 동작이 발생합니다. 일반적으로 이러한 설정을 프로그래밍 방식으로 저장하고 로드하면 문제를 해결할 수 있습니다.  
   

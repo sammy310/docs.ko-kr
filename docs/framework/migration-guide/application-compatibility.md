@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dcbcced47cfb2031e4a35a7437ec875a20354eed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 154640499e99767f73a148c6980e6a2a4cfbce2f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176256"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623782"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>.NET Framework의 애플리케이션 호환성
 
@@ -42,11 +42,11 @@ ms.locfileid: "59176256"
 
 각 문제는 다음과 같은 정보를 포함합니다.
 
--   이전 버전에서 변경된 내용에 대한 설명입니다.
+- 이전 버전에서 변경된 내용에 대한 설명입니다.
 
--   변경 내용이 고객에 미치는 영향 및 버전 간 호환성을 유지하기 위한 사용할 수 있는 해결 방법의 여부를 나타냅니다.
+- 변경 내용이 고객에 미치는 영향 및 버전 간 호환성을 유지하기 위한 사용할 수 있는 해결 방법의 여부를 나타냅니다.
 
--   변경 내용의 중요성에 대한 평가입니다. 애플리케이션 호환성 문제는 다음과 같이 분류됩니다.
+- 변경 내용의 중요성에 대한 평가입니다. 애플리케이션 호환성 문제는 다음과 같이 분류됩니다.
 
     |   |   |
     |---|---|
@@ -55,18 +55,18 @@ ms.locfileid: "59176256"
     |특별한 경우|매우 특별하고 일반적이지 않은 시나리오의 앱에 영향을 주는 변경 내용입니다.|
     |투명|애플리케이션 개발자나 사용자에게 뚜렷한 영향을 주지 않는 변경 내용입니다.|
 
--   버전은 변경 내용이 프레임워크에 처음 표시될 때를 나타냅니다. 일부 변경 내용이 특정 버전에 소개되고 이후 버전에서 되돌려지면 되돌려진 내용도 표시됩니다.
+- 버전은 변경 내용이 프레임워크에 처음 표시될 때를 나타냅니다. 일부 변경 내용이 특정 버전에 소개되고 이후 버전에서 되돌려지면 되돌려진 내용도 표시됩니다.
 
--   변경 형식:
+- 변경 형식:
 
     |   |   |
     |---|---|
     |대상 변경|새 버전의 .NET Framework를 대상으로 다시 컴파일되는 앱에 변경 내용이 적용됩니다.|
     |런타임|이전 버전의 .NET Framework를 대상으로 하지만 이후 버전에서 실행되는 기존 앱에 변경 내용이 적용됩니다.|
 
--   영향을 받는 API입니다(있는 경우).
+- 영향을 받는 API입니다(있는 경우).
 
--   사용 가능한 진단의 ID
+- 사용 가능한 진단의 ID
 
 ## <a name="usage"></a>사용법
 시작하려면 아래에서 호환성 변경 형식을 선택합니다.

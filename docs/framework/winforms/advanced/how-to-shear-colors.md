@@ -8,12 +8,12 @@ helpviewer_keywords:
 - colors [Windows Forms], transforming with color matrices
 - colors [Windows Forms], shearing
 ms.assetid: 0a424171-5b8b-45c4-afef-e9720a6c3e22
-ms.openlocfilehash: bf645cf88c4905cd5cf47c2a6c7af088fa428c8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b390caf644b86de0001387b2c3f41503fd34759a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954669"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593199"
 ---
 # <a name="how-to-shear-colors"></a>방법: 색 전단
 기울이기 증가 또는 색 구성 요소를 다른 색 구성 요소에 비례 하는 양을 감소 합니다. 예를 들어 빨강 구성 요소를 0.5 파랑 구성 요소 값 만큼 늘리는 변환입니다. 이러한 변환에서 (0.2, 0.5, 1) 색 (0.7, 0.5, 1) 될 것입니다. 새 빨강 구성 요소는 0.2 + (1/2)(1) 0.7입니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "61954669"
  [!code-vb[System.Drawing.Misc3#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#9)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- 앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.PaintEventArgs> 이벤트 처리기의 매개 변수인 `e`<xref:System.Windows.Forms.Control.Paint>가 필요합니다. 대체 `ColorBars.bmp` 있는 이미지 이름 및 경로 시스템에서 사용할 합니다.  
+ 앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`가 필요합니다. 대체 `ColorBars.bmp` 있는 이미지 이름 및 경로 시스템에서 사용할 합니다.  
   
 ## <a name="see-also"></a>참고자료
 

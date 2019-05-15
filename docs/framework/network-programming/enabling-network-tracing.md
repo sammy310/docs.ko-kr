@@ -11,21 +11,21 @@ helpviewer_keywords:
 - logs, trace
 - destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
-ms.openlocfilehash: 50ad01376f3de9cda26f6b00e2d32fc8d3dabdcd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5145b013db1a86ef1b3128ab1c4495dddaaaf987
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169717"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624628"
 ---
 # <a name="enabling-network-tracing"></a>네트워크 추적 사용
 네트워크 추적은 메서드 호출에 대한 정보와 관리되는 애플리케이션에서 생성된 네트워크 트래픽 정보에 대한 액세스를 제공합니다. 애플리케이션에서 네트워크 추적을 사용하도록 설정하려면 다음 작업을 완료해야 합니다.  
   
--   추적을 사용하도록 설정하고 코드를 컴파일합니다. [방법: 추적을 사용하도록 설정하는 데 필요한 컴파일러 스위치에 대한 자세한 내용은 추적 및 디버그를 사용한 조건부 컴파일](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)을 참조하세요.  
+- 추적을 사용하도록 설정하고 코드를 컴파일합니다. [방법: 추적을 사용하도록 설정하는 데 필요한 컴파일러 스위치에 대한 자세한 내용은 추적 및 디버그를 사용한 조건부 컴파일](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)을 참조하세요.  
   
--   추적 출력 대상을 지정합니다.  
+- 추적 출력 대상을 지정합니다.  
   
--   네트워크 추적 동작을 구성합니다. [방법: 자세한 내용은 네트워크 추적 구성](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)을 참조하세요.  
+- 네트워크 추적 동작을 구성합니다. [방법: 자세한 내용은 네트워크 추적 구성](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)을 참조하세요.  
   
  추적 수신기라고도 하는 가장 일반적인 추적 대상은 기본 수신기 및 로그 파일입니다.  
   

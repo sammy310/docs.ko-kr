@@ -17,12 +17,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: 76c7b9fa9ef103fc5fc62830932cc724ba50baca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 41303bf548502fe319cbcfb8a152179863902817
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333374"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623572"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>이벤트 기반 비동기 패턴 구현
 상당한 지연을 일으킬 수 있는 몇 가지 작업을 사용하여 클래스를 작성하는 경우 [이벤트 기반 비동기 패턴 개요](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)를 구현하여 비동기 기능을 부여하는 것을 고려할 수 있습니다.  
@@ -35,26 +35,26 @@ ms.locfileid: "59333374"
   
  다음 목록에서는 이 항목에서 설명하는 이벤트 기반 비동기 패턴의 기능에 대해 설명합니다.  
   
--   이벤트 기반 비동기 패턴 구현 기회  
+- 이벤트 기반 비동기 패턴 구현 기회  
   
--   비동기 메서드 명명  
+- 비동기 메서드 명명  
   
--   선택적으로 취소 지원  
+- 선택적으로 취소 지원  
   
--   선택적으로 IsBusy 속성 지원  
+- 선택적으로 IsBusy 속성 지원  
   
--   선택적으로 진행률 보고 지원 제공  
+- 선택적으로 진행률 보고 지원 제공  
   
--   선택적으로 증분 결과를 반환하기 위한 지원 제공  
+- 선택적으로 증분 결과를 반환하기 위한 지원 제공  
   
--   메서드의 Out 및 Ref 매개 변수 처리  
+- 메서드의 Out 및 Ref 매개 변수 처리  
   
 ## <a name="opportunities-for-implementing-the-event-based-asynchronous-pattern"></a>이벤트 기반 비동기 패턴 구현 기회  
  다음과 같은 경우에 이벤트 기반 비동기 패턴의 구현을 고려하세요.  
   
--   클래스의 클라이언트에 비동기 작업에 사용할 수 있는 <xref:System.Threading.WaitHandle> 및 <xref:System.IAsyncResult> 개체가 필요하지 않습니다. 즉, 폴링 및 <xref:System.Threading.WaitHandle.WaitAll%2A> 또는 <xref:System.Threading.WaitHandle.WaitAny%2A>가 클라이언트에서 빌드되어야 합니다.  
+- 클래스의 클라이언트에 비동기 작업에 사용할 수 있는 <xref:System.Threading.WaitHandle> 및 <xref:System.IAsyncResult> 개체가 필요하지 않습니다. 즉, 폴링 및 <xref:System.Threading.WaitHandle.WaitAll%2A> 또는 <xref:System.Threading.WaitHandle.WaitAny%2A>가 클라이언트에서 빌드되어야 합니다.  
   
--   익숙한 이벤트/대리자 모델을 사용하여 클라이언트에서 비동기 작업이 관리되기를 원할 것입니다.  
+- 익숙한 이벤트/대리자 모델을 사용하여 클라이언트에서 비동기 작업이 관리되기를 원할 것입니다.  
   
  모든 작업은 비동기 구현의 후보가 될 수 있지만 긴 대기 시간을 발생시키는 작업을 비동기 방식으로 구현해야 합니다. 클라이언트가 메서드를 호출하며 추가 개입 없이도 완료 시 알림이 제공되는 작업이 특히 적합할 것입니다. 또한 연속적으로 실행되고, 클라이언트에 주기적으로 진행 상황, 증분 결과 또는 상태 변경을 알리는 작업이 적합할 것입니다.  
   
@@ -65,11 +65,11 @@ ms.locfileid: "59333374"
   
  다음 작업을 수행하는 _MethodName_**Async** 메서드를 정의합니다.  
   
--   `void`을 반환합니다.  
+- `void`을 반환합니다.  
   
--   *MethodName* 메서드와 동일한 매개 변수를 사용합니다.  
+- *MethodName* 메서드와 동일한 매개 변수를 사용합니다.  
   
--   여러 호출을 허용합니다.  
+- 여러 호출을 허용합니다.  
   
  필요에 따라 _MethodName_**Async**와 동일하지만 `userState`라는 추가 개체 값 매개 변수가 있는 _MethodName_**Async** 오버로드를 정의합니다. 메서드의 여러 동시 호출을 관리할 준비가 되었으면 이 작업을 수행합니다. 그러면 메서드 호출을 구분하기 위해 모든 이벤트 처리기에 `userState` 값이 다시 전달됩니다. 나중에 검색할 수 있게 사용자 상태를 저장하기 위한 장소로 이 작업을 수행하도록 선택할 수도 있습니다.  
   
@@ -108,9 +108,9 @@ ms.locfileid: "59333374"
     }  
     ```  
   
-    -   필드에서는 데이터 바인딩이 불가능하므로 _MethodName_**CompletedEventArgs** 클래스가 해당 멤버를 필드가 아닌 읽기 전용 속성으로 노출하도록 합니다.  
+    - 필드에서는 데이터 바인딩이 불가능하므로 _MethodName_**CompletedEventArgs** 클래스가 해당 멤버를 필드가 아닌 읽기 전용 속성으로 노출하도록 합니다.  
   
-    -   결과를 생성하지 않는 메서드에 대해서는 어떤 <xref:System.ComponentModel.AsyncCompletedEventArgs> 파생 클래스도 정의하지 마세요. <xref:System.ComponentModel.AsyncCompletedEventArgs> 자체의 인스턴스를 사용하세요.  
+    - 결과를 생성하지 않는 메서드에 대해서는 어떤 <xref:System.ComponentModel.AsyncCompletedEventArgs> 파생 클래스도 정의하지 마세요. <xref:System.ComponentModel.AsyncCompletedEventArgs> 자체의 인스턴스를 사용하세요.  
   
         > [!NOTE]
         >  적절한 경우 대리자 및 <xref:System.ComponentModel.AsyncCompletedEventArgs> 형식을 얼마든지 다시 사용할 수 있습니다. 이 경우 지정된 대리자 및 <xref:System.ComponentModel.AsyncCompletedEventArgs>가 단일 메서드에 연결되지 않으므로 해당 명명 체계가 메서드 이름과 일치하지 않게 됩니다.  
@@ -118,9 +118,9 @@ ms.locfileid: "59333374"
 ## <a name="optionally-support-cancellation"></a>선택적으로 취소 지원  
  클래스가 비동기 작업 취소를 지원하는 경우 아래 설명된 대로 취소가 클라이언트에 노출되어야 합니다. 취소 지원을 정의하기 전에 도달해야 하는 두 가지 의사 결정 지점이 있습니다.  
   
--   예상되는 추가 항목을 포함하여 클래스에 취소를 지원하는 비동기 작업이 하나만 포함되나요?  
+- 예상되는 추가 항목을 포함하여 클래스에 취소를 지원하는 비동기 작업이 하나만 포함되나요?  
   
--   취소를 지원하는 비동기 작업이 보류 중인 여러 작업을 취소할 수 있나요? 즉, _MethodName_**Async** 메서드가 `userState` 매개 변수를 사용하며 하나의 호출이 끝나기를 기다리지 않고 여러 번 호출할 수 있도록 허용하나요?  
+- 취소를 지원하는 비동기 작업이 보류 중인 여러 작업을 취소할 수 있나요? 즉, _MethodName_**Async** 메서드가 `userState` 매개 변수를 사용하며 하나의 호출이 끝나기를 기다리지 않고 여러 번 호출할 수 있도록 허용하나요?  
   
  아래 표에 나오는 이러한 두 가지 질문에 대한 답변을 사용하여 취소 메서드의 시그니처를 확인하세요.  
   
@@ -156,13 +156,13 @@ ms.locfileid: "59333374"
 ## <a name="optionally-provide-support-for-progress-reporting"></a>선택적으로 진행률 보고 지원 제공  
  일반적으로 비동기 작업이 작업 중에 진행률을 보고하는 것이 유용할 수 있습니다. 이벤트 기반 비동기 패턴은 이러한 작업에 대한 지침을 제공합니다.  
   
--   필요에 따라 비동기 작업에서 발생되고 적절한 스레드에 대해 호출될 이벤트를 정의합니다. <xref:System.ComponentModel.ProgressChangedEventArgs> 개체는 0에서 100 사이여야 하는 정수 값 진행률 표시기를 제공합니다.  
+- 필요에 따라 비동기 작업에서 발생되고 적절한 스레드에 대해 호출될 이벤트를 정의합니다. <xref:System.ComponentModel.ProgressChangedEventArgs> 개체는 0에서 100 사이여야 하는 정수 값 진행률 표시기를 제공합니다.  
   
--   다음과 같이 이벤트에 이름을 지정합니다.  
+- 다음과 같이 이벤트에 이름을 지정합니다.  
   
-    -   `ProgressChanged`: 클래스에 비동기 작업이 여러 개 있는 경우(또는 이후 버전에서 여러 비동기 작업을 포함하도록 확장될 예정임)  
+    - `ProgressChanged`: 클래스에 비동기 작업이 여러 개 있는 경우(또는 이후 버전에서 여러 비동기 작업을 포함하도록 확장될 예정임)  
   
-    -   _MethodName_**ProgressChanged**: 클래스에 비동기 작업이 하나만 있는 경우.  
+    - _MethodName_**ProgressChanged**: 클래스에 비동기 작업이 하나만 있는 경우.  
   
      이 명명 옵션은 선택적으로 취소 지원 섹션에 설명된 대로 취소 메서드의 경우와 비슷합니다.  
   
@@ -180,9 +180,9 @@ ms.locfileid: "59333374"
 ### <a name="single-operation-class"></a>단일 작업 클래스  
  클래스가 단일 비동기 작업만 지원하며 해당 작업이 증분 결과를 반환할 수 있으면 다음을 수행합니다.  
   
--   증분 결과 데이터를 전달하도록 <xref:System.ComponentModel.ProgressChangedEventArgs> 형식을 확장하고 확장된 데이터로 _MethodName_**ProgressChanged** 이벤트를 정의합니다.  
+- 증분 결과 데이터를 전달하도록 <xref:System.ComponentModel.ProgressChangedEventArgs> 형식을 확장하고 확장된 데이터로 _MethodName_**ProgressChanged** 이벤트를 정의합니다.  
   
--   보고할 증분 결과가 있을 때 이 _MethodName_**ProgressChanged** 이벤트를 발생시킵니다.  
+- 보고할 증분 결과가 있을 때 이 _MethodName_**ProgressChanged** 이벤트를 발생시킵니다.  
   
  이 솔루션은 _MethodName_**ProgressChanged** 이벤트처럼 “모든 작업”에 대한 증분 결과를 반환하기 위해 동일한 이벤트가 발생하는 문제가 없으므로 단일 비동기 작업 클래스에 특수하게 적용됩니다.  
   
@@ -194,9 +194,9 @@ ms.locfileid: "59333374"
 ### <a name="multiple-operation-class-with-heterogeneous-incremental-results"></a>유형이 다른 증분 결과를 갖는 다중 작업 클래스  
  클래스가 각각이 다른 데이터 형식을 반환하는 여러 비동기 메서드를 지원하는 경우 다음을 수행해야 합니다.  
   
--   진행률 보고에서 증분 결과 보고를 구분합니다.  
+- 진행률 보고에서 증분 결과 보고를 구분합니다.  
   
--   각 비동기 메서드가 해당 메서드의 증분 결과 데이터를 처리할 수 있도록 적절한 <xref:System.EventArgs>를 사용하여 별도의 _MethodName_**ProgressChanged** 이벤트를 정의합니다.  
+- 각 비동기 메서드가 해당 메서드의 증분 결과 데이터를 처리할 수 있도록 적절한 <xref:System.EventArgs>를 사용하여 별도의 _MethodName_**ProgressChanged** 이벤트를 정의합니다.  
   
  [최선의 이벤트 기반 비동기 패턴 구현 방법](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)에 설명된 대로 적절한 스레드에서 해당 이벤트 처리기를 호출합니다.  
   
@@ -205,9 +205,9 @@ ms.locfileid: "59333374"
   
  동기 메서드를 *MethodName*으로 명명한 경우:  
   
--   *MethodName*에 대한 `out` 매개 변수는 _MethodName_**Async**에 속하지 않아야 합니다. 좀 더 적절한 이름이 없는 경우 *MethodName*의 동일한 매개 변수와 이름이 같은 _MethodName_**CompletedEventArgs**에 속해야 합니다.  
+- *MethodName*에 대한 `out` 매개 변수는 _MethodName_**Async**에 속하지 않아야 합니다. 좀 더 적절한 이름이 없는 경우 *MethodName*의 동일한 매개 변수와 이름이 같은 _MethodName_**CompletedEventArgs**에 속해야 합니다.  
   
--   *MethodName*에 대한 `ref` 매개 변수가 _MethodName_**Async**에 속해야 하고 좀 더 적절한 이름이 없는 경우 *MethodName*의 동일한 매개 변수와 이름이 같은 _MethodName_**CompletedEventArgs**에 속해야 합니다.  
+- *MethodName*에 대한 `ref` 매개 변수가 _MethodName_**Async**에 속해야 하고 좀 더 적절한 이름이 없는 경우 *MethodName*의 동일한 매개 변수와 이름이 같은 _MethodName_**CompletedEventArgs**에 속해야 합니다.  
   
  예를 들어 다음이 지정될 경우  
   

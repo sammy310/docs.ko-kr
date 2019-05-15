@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f7aa8a57fce9382cb67327e69048c2b05bb99da
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: 53ad8f6187b4e9b1754094dae0ebfe6e05a1b78b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53397048"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614134"
 ---
 # <a name="best-practices-for-assembly-loading"></a>최선의 어셈블리 로드 방법
 이 문서에서는 <xref:System.InvalidCastException>, <xref:System.MissingMethodException> 및 다른 오류를 발생시킬 수 있는 형식 ID 문제를 방지하는 방법을 설명합니다. 이 문서에서는 다음 권장 사항을 설명합니다.  
   
--   [로드 컨텍스트의 장점 및 단점 이해](#load_contexts)  
+- [로드 컨텍스트의 장점 및 단점 이해](#load_contexts)  
   
--   [부분 어셈블리 이름에 대한 바인딩 방지](#avoid_partial_names)  
+- [부분 어셈블리 이름에 대한 바인딩 방지](#avoid_partial_names)  
   
--   [여러 컨텍스트에 어셈블리 로드 방지](#avoid_loading_into_multiple_contexts)  
+- [여러 컨텍스트에 어셈블리 로드 방지](#avoid_loading_into_multiple_contexts)  
   
--   [같은 컨텍스트에 어셈블리의 여러 버전 로드 방지](#avoid_loading_multiple_versions)  
+- [같은 컨텍스트에 어셈블리의 여러 버전 로드 방지](#avoid_loading_multiple_versions)  
   
--   [기본 로드 컨텍스트로 전환 고려](#switch_to_default)  
+- [기본 로드 컨텍스트로 전환 고려](#switch_to_default)  
   
  첫 번째 권장 사항인 [로드 컨텍스트의 장점 및 단점 이해](#load_contexts)에서는 다른 권장 사항에 대한 배경 정보를 제공합니다. 그 이유는 권장 사항은 모두 로드 컨텍스트의 지식에 의존하기 때문입니다.  
   
@@ -40,13 +40,13 @@ ms.locfileid: "53397048"
 ## <a name="understand-the-advantages-and-disadvantages-of-load-contexts"></a>로드 컨텍스트의 장점 및 단점 이해  
  애플리케이션 도메인 내에서 어셈블리는 세 개의 컨텍스트 중 하나로 로드되거나 컨텍스트 없이 로드될 수 있습니다.  
   
--   기본 로드 컨텍스트에는 전역 어셈블리 캐시, 런타임이 호스트된 경우 호스트 어셈블리 저장소(예: SQL Server에서), 애플리케이션 도메인의 <xref:System.AppDomainSetup.ApplicationBase%2A> 및 <xref:System.AppDomainSetup.PrivateBinPath%2A>를 검색하여 찾은 어셈블리가 포함됩니다. <xref:System.Reflection.Assembly.Load%2A> 메서드의 대부분 오버로드는 어셈블리 이 컨텍스트에 로드합니다.  
+- 기본 로드 컨텍스트에는 전역 어셈블리 캐시, 런타임이 호스트된 경우 호스트 어셈블리 저장소(예: SQL Server에서), 애플리케이션 도메인의 <xref:System.AppDomainSetup.ApplicationBase%2A> 및 <xref:System.AppDomainSetup.PrivateBinPath%2A>를 검색하여 찾은 어셈블리가 포함됩니다. <xref:System.Reflection.Assembly.Load%2A> 메서드의 대부분 오버로드는 어셈블리 이 컨텍스트에 로드합니다.  
   
--   로드 소스 컨텍스트에는 로더를 통해 검색되지 않은 위치에서 로드된 어셈블리가 포함됩니다. 예를 들어 추가 기능은 애플리케이션 경로 아래에 없는 디렉터리에 설치될 수 있습니다. <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType> 및 <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType>는 경로로 로드되는 메서드의 예제입니다.  
+- 로드 소스 컨텍스트에는 로더를 통해 검색되지 않은 위치에서 로드된 어셈블리가 포함됩니다. 예를 들어 추가 기능은 애플리케이션 경로 아래에 없는 디렉터리에 설치될 수 있습니다. <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType> 및 <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType>는 경로로 로드되는 메서드의 예제입니다.  
   
--   리플렉션 전용 컨텍스트에는 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> 및 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> 메서드를 사용하여 로드되는 어셈블리가 포함됩니다. 이 컨텍스트의 코드는 실행될 수 없으므로 여기서 설명하지 않습니다. 자세한 내용은 [방법: 리플렉션 전용 컨텍스트에 어셈블리 로드](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)를 참조하세요.  
+- 리플렉션 전용 컨텍스트에는 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> 및 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> 메서드를 사용하여 로드되는 어셈블리가 포함됩니다. 이 컨텍스트의 코드는 실행될 수 없으므로 여기서 설명하지 않습니다. 자세한 내용은 [방법: 리플렉션 전용 컨텍스트에 어셈블리 로드](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)를 참조하세요.  
   
--   리플렉션 내보내기를 사용하여 임시 동적 어셈블리를 생성한 경우 이 어셈블리는 컨텍스트에 포함되지 않습니다. 또한 <xref:System.Reflection.Assembly.LoadFile%2A> 메서드를 사용하여 로드된 대부분 어셈블리는 컨텍스트 없이 로드되고, 바이트 배열에서 로드된 어셈블리는 전역 어셈블리 캐시에 포함되도록 해당 ID(정책이 적용된 후)에 설정된 경우가 아니면 컨텍스트 없이 로드됩니다.  
+- 리플렉션 내보내기를 사용하여 임시 동적 어셈블리를 생성한 경우 이 어셈블리는 컨텍스트에 포함되지 않습니다. 또한 <xref:System.Reflection.Assembly.LoadFile%2A> 메서드를 사용하여 로드된 대부분 어셈블리는 컨텍스트 없이 로드되고, 바이트 배열에서 로드된 어셈블리는 전역 어셈블리 캐시에 포함되도록 해당 ID(정책이 적용된 후)에 설정된 경우가 아니면 컨텍스트 없이 로드됩니다.  
   
  실행 컨텍스트에는 다음 섹션에서 설명된 장점과 단점이 있습니다.  
   
@@ -55,28 +55,28 @@ ms.locfileid: "53397048"
   
  기본 로드 컨텍스트 사용에는 다음과 같은 단점이 있습니다.  
   
--   다른 컨텍스트에 로드된 종속성은 사용할 수 없습니다.  
+- 다른 컨텍스트에 로드된 종속성은 사용할 수 없습니다.  
   
--   검색 경로 외부의 위치에서 기본 로드 컨텍스트로 어셈블리를 로드할 수는 없습니다.  
+- 검색 경로 외부의 위치에서 기본 로드 컨텍스트로 어셈블리를 로드할 수는 없습니다.  
   
 ### <a name="load-from-context"></a>로드 소스 컨텍스트  
  로드 소스 컨텍스트를 통해 애플리케이션 경로 아래에 없는 경로에서 어셈블리를 로드할 수 있으므로 검색에 포함되지 않습니다. 경로 정보는 컨텍스트에서 유지 관리되므로 이 컨텍스트를 사용하여 해당 경로에서 종속성을 찾고 로드할 수 있습니다. 또한 이 컨텍스트의 어셈블리는 기본 로드 컨텍스트에 로드되는 종속성을 사용할 수 있습니다.  
   
  <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 메서드나 경로로 로드되는 다른 메서드 중 하나를 사용하여 어셈블리를 로드하면 다음과 같은 단점이 있습니다.  
   
--   같은 ID를 가진 어셈블리가 이미 로드되어 있으면 다른 경로가 지정된 경우에도 <xref:System.Reflection.Assembly.LoadFrom%2A>은 로드된 어셈블리를 반환합니다.  
+- 같은 ID를 가진 어셈블리가 이미 로드되어 있으면 다른 경로가 지정된 경우에도 <xref:System.Reflection.Assembly.LoadFrom%2A>은 로드된 어셈블리를 반환합니다.  
   
--   어셈블리가 <xref:System.Reflection.Assembly.LoadFrom%2A>을 사용하여 로드되고 나중에 기본 로드 컨텍스트의 어셈블리가 표시 이름으로 같은 어셈블리를 로드하려고 하면 로드 시도가 실패합니다. 어셈블리가 deserialize되면 이 문제가 발생할 수 있습니다.  
+- 어셈블리가 <xref:System.Reflection.Assembly.LoadFrom%2A>을 사용하여 로드되고 나중에 기본 로드 컨텍스트의 어셈블리가 표시 이름으로 같은 어셈블리를 로드하려고 하면 로드 시도가 실패합니다. 어셈블리가 deserialize되면 이 문제가 발생할 수 있습니다.  
   
--   어셈블리가 <xref:System.Reflection.Assembly.LoadFrom%2A>을 사용하여 로드되고 검색 경로에 ID가 같지만 위치가 다른 어셈블리가 포함되면 <xref:System.InvalidCastException>, <xref:System.MissingMethodException> 또는 기타 예기치 않은 동작이 발생할 수 있습니다.  
+- 어셈블리가 <xref:System.Reflection.Assembly.LoadFrom%2A>을 사용하여 로드되고 검색 경로에 ID가 같지만 위치가 다른 어셈블리가 포함되면 <xref:System.InvalidCastException>, <xref:System.MissingMethodException> 또는 기타 예기치 않은 동작이 발생할 수 있습니다.  
   
--   <xref:System.Reflection.Assembly.LoadFrom%2A>은 지정된 경로에서 <xref:System.Security.Permissions.FileIOPermissionAccess.Read?displayProperty=nameWithType>와 <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery?displayProperty=nameWithType> 또는 <xref:System.Net.WebPermission>을 요구합니다.  
+- <xref:System.Reflection.Assembly.LoadFrom%2A>은 지정된 경로에서 <xref:System.Security.Permissions.FileIOPermissionAccess.Read?displayProperty=nameWithType>와 <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery?displayProperty=nameWithType> 또는 <xref:System.Net.WebPermission>을 요구합니다.  
   
--   어셈블리에 대한 네이티브 이미지가 있는 경우 이 이미지가 사용되지 않습니다.  
+- 어셈블리에 대한 네이티브 이미지가 있는 경우 이 이미지가 사용되지 않습니다.  
   
--   어셈블리는 도메인 중립적으로 로드될 수 없습니다.  
+- 어셈블리는 도메인 중립적으로 로드될 수 없습니다.  
   
--   .NET Framework 버전 1.0 및 1.1에서는 정책이 적용되지 않습니다.  
+- .NET Framework 버전 1.0 및 1.1에서는 정책이 적용되지 않습니다.  
   
 ### <a name="no-context"></a>컨텍스트 없음  
  리플렉션 내보내기를 사용하여 생성된 임시 어셈블리의 경우 컨텍스트 없이 로드해야 합니다. 같은 ID를 가진 여러 어셈블리를 하나의 애플리케이션 도메인에 로드하려면 컨텍스트 없이 로드해야 합니다. 검색 비용이 발생하지 않습니다.  
@@ -85,17 +85,17 @@ ms.locfileid: "53397048"
   
  컨텍스트 없이 어셈블리를 로드하는 방법에는 다음과 같은 단점이 있습니다.  
   
--   <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 이벤트를 처리하는 경우가 아니면 컨텍스트 없이 로드된 어셈블리에 다른 어셈블리를 바인딩할 수 없습니다.  
+- <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 이벤트를 처리하는 경우가 아니면 컨텍스트 없이 로드된 어셈블리에 다른 어셈블리를 바인딩할 수 없습니다.  
   
--   종속성은 자동으로 로드되지 않습니다. 어셈블리를 컨텍스트 없이 미리 로드하거나, 기본 로드 컨텍스트에 미리 로드하거나, <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 이벤트를 처리하여 로드할 수 있습니다.  
+- 종속성은 자동으로 로드되지 않습니다. 어셈블리를 컨텍스트 없이 미리 로드하거나, 기본 로드 컨텍스트에 미리 로드하거나, <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 이벤트를 처리하여 로드할 수 있습니다.  
   
--   컨텍스트 없이 같은 ID를 가진 여러 어셈블리를 로드하면 같은 ID를 가진 어셈블리를 여러 컨텍스트에 로드하는 경우 발생한 문제와 비슷한 형식 ID 문제가 발생할 수 있습니다. [여러 컨텍스트에 어셈블리 로드 방지](#avoid_loading_into_multiple_contexts)를 참조하세요.  
+- 컨텍스트 없이 같은 ID를 가진 여러 어셈블리를 로드하면 같은 ID를 가진 어셈블리를 여러 컨텍스트에 로드하는 경우 발생한 문제와 비슷한 형식 ID 문제가 발생할 수 있습니다. [여러 컨텍스트에 어셈블리 로드 방지](#avoid_loading_into_multiple_contexts)를 참조하세요.  
   
--   어셈블리에 대한 네이티브 이미지가 있는 경우 이 이미지가 사용되지 않습니다.  
+- 어셈블리에 대한 네이티브 이미지가 있는 경우 이 이미지가 사용되지 않습니다.  
   
--   어셈블리는 도메인 중립적으로 로드될 수 없습니다.  
+- 어셈블리는 도메인 중립적으로 로드될 수 없습니다.  
   
--   .NET Framework 버전 1.0 및 1.1에서는 정책이 적용되지 않습니다.  
+- .NET Framework 버전 1.0 및 1.1에서는 정책이 적용되지 않습니다.  
   
 <a name="avoid_partial_names"></a>   
 ## <a name="avoid-binding-on-partial-assembly-names"></a>부분 어셈블리 이름에 대한 바인딩 방지  
@@ -103,15 +103,15 @@ ms.locfileid: "53397048"
   
  부분 이름 바인딩을 사용하면 다음과 같은 여러 문제가 발생할 수 있습니다.  
   
--   <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> 메서드는 같은 간단한 이름을 가진 다른 어셈블리를 로드할 수 있습니다. 예를 들어 두 개의 애플리케이션이 둘 다 간단한 이름 `GraphicsLibrary`를 가진 두 개의 완전히 다른 어셈블리를 전역 어셈블리 캐시에 설치할 수 있습니다.  
+- <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> 메서드는 같은 간단한 이름을 가진 다른 어셈블리를 로드할 수 있습니다. 예를 들어 두 개의 애플리케이션이 둘 다 간단한 이름 `GraphicsLibrary`를 가진 두 개의 완전히 다른 어셈블리를 전역 어셈블리 캐시에 설치할 수 있습니다.  
   
--   실제로 로드되는 어셈블리가 이전 버전과 호환되지 않을 수 있습니다. 예를 들어 버전을 지정하지 않으면 프로그램이 원래 사용하도록 기록된 버전보다 훨씬 이후 버전이 로드될 수 있습니다. 이후 버전의 변경 내용으로 인해 애플리케이션에서 오류가 발생할 수 있습니다.  
+- 실제로 로드되는 어셈블리가 이전 버전과 호환되지 않을 수 있습니다. 예를 들어 버전을 지정하지 않으면 프로그램이 원래 사용하도록 기록된 버전보다 훨씬 이후 버전이 로드될 수 있습니다. 이후 버전의 변경 내용으로 인해 애플리케이션에서 오류가 발생할 수 있습니다.  
   
--   실제로 로드되는 어셈블리가 이후 버전과 호환되지 않을 수 있습니다. 예를 들어 최신 버전의 어셈블리를 사용하여 애플리케이션을 빌드하고 테스트했을 수 있지만 부분 바인딩은 애플리케이션에서 사용하는 기능이 없는 훨씬 이전 버전을 로드할 수 있습니다.  
+- 실제로 로드되는 어셈블리가 이후 버전과 호환되지 않을 수 있습니다. 예를 들어 최신 버전의 어셈블리를 사용하여 애플리케이션을 빌드하고 테스트했을 수 있지만 부분 바인딩은 애플리케이션에서 사용하는 기능이 없는 훨씬 이전 버전을 로드할 수 있습니다.  
   
--   새 애플리케이션을 설치하면 기존 애플리케이션이 중단됩니다. 공유 어셈블리의 더 새로운 호환되지 않는 버전을 설치하면 <xref:System.Reflection.Assembly.LoadWithPartialName%2A> 메서드를 사용하는 애플리케이션이 중단될 수 있습니다.  
+- 새 애플리케이션을 설치하면 기존 애플리케이션이 중단됩니다. 공유 어셈블리의 더 새로운 호환되지 않는 버전을 설치하면 <xref:System.Reflection.Assembly.LoadWithPartialName%2A> 메서드를 사용하는 애플리케이션이 중단될 수 있습니다.  
   
--   예기치 않은 종속성 로드가 발생할 수 있습니다. 종속성을 공유하는 두 개의 어셈블리를 로드할 경우 부분 바인딩을 사용하여 로드하면 빌드 또는 테스트에 사용되지 않은 구성 요소를 사용하는 하나의 어셈블리가 생성될 수 있습니다.  
+- 예기치 않은 종속성 로드가 발생할 수 있습니다. 종속성을 공유하는 두 개의 어셈블리를 로드할 경우 부분 바인딩을 사용하여 로드하면 빌드 또는 테스트에 사용되지 않은 구성 요소를 사용하는 하나의 어셈블리가 생성될 수 있습니다.  
   
  이로 인해 발생할 수 있는 문제 때문에 <xref:System.Reflection.Assembly.LoadWithPartialName%2A> 메서드는 obsolete로 표시되었습니다. 대신에 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 메서드를 사용하고 전체 어셈블리 표시 이름을 지정하는 것이 좋습니다. [로드 컨텍스트의 장점 및 단점 이해](#load_contexts) 및 [기본 로드 컨텍스트로 전환 고려](#switch_to_default)를 참조하세요.  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
-ms.openlocfilehash: 06bf058fe51c59b6619a296ab3d6093224ab8937
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bf812f45e4a4090becd8dfafe035d39d1d851860
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660527"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583651"
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>WCF Data Services 클라이언트 유틸리티(DataSvcUtil.exe)
 
@@ -25,7 +25,7 @@ DataSvcUtil.exe는를 사용 하는 WCF Data Services에서 제공 하는 명령
 
 자세한 내용은 [방법: 수동으로 클라이언트 데이터 서비스 클래스 생성](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)합니다.
 
-DataSvcUtil.exe 도구는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 디렉터리에 설치됩니다. 대부분의 경우에서이에 위치한 *C:\Windows\Microsoft.NET\Framework\v4.0*합니다. 64 비트 시스템의 경우이에 위치한 *C:\Windows\Microsoft.NET\Framework64\v4.0*합니다. 작업을 Visual Studio 용 개발자 명령 프롬프트에서 DataSvcUtil.exe 도구도 액세스할 수도 있습니다.
+DataSvcUtil.exe 도구는.NET Framework 디렉터리에 설치 됩니다. 대부분의 경우에서이에 위치한 *C:\Windows\Microsoft.NET\Framework\v4.0*합니다. 64 비트 시스템의 경우이에 위치한 *C:\Windows\Microsoft.NET\Framework64\v4.0*합니다. 작업을 Visual Studio 용 개발자 명령 프롬프트에서 DataSvcUtil.exe 도구도 액세스할 수도 있습니다.
 
 ## <a name="syntax"></a>구문
 

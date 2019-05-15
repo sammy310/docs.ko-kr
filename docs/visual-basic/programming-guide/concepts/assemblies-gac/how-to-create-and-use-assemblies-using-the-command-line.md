@@ -2,12 +2,12 @@
 title: '방법: 명령줄 (Visual Basic)를 사용 하 여 어셈블리 만들기 및 사용'
 ms.date: 03/14/2018
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
-ms.openlocfilehash: d58109dfbb03b752f4a46f895fa1093e4f37df71
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a30d4b3ea203a8b4d3ba621fc7b0310477ddf10d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624772"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592691"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>방법: 명령줄 (Visual Basic)를 사용 하 여 어셈블리 만들기 및 사용
 어셈블리 또는 DLL(동적 연결 라이브러리)은 런타임 시 프로그램에 연결됩니다. DLL 빌드 및 사용을 보여 주려면 다음 시나리오를 고려합니다.  
@@ -97,25 +97,6 @@ UtilityMethods.MultiplyClass.Multiply(num1, num2)
  프로그램을 실행하려면 다음과 같이 EXE 파일의 이름과 두 개의 숫자를 차례로 입력합니다.  
   
  `TestCode 1234 5678`  
-  
-## <a name="compiling-the-code"></a>코드 컴파일  
- `MathLibrary.DLL` 파일을 빌드하려면 다음 명령줄을 사용하여 두 개의 파일 `Add` 및 `Mult`를 컴파일합니다.  
-  
-```console  
-vbc -target:library -out:MathLibrary.DLL Add.vb Mult.vb  
-```  
-  
- 합니다 [-대상 (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) 컴파일러 옵션은 EXE 파일 대신 DLL을 출력 하도록 컴파일러에 지시 합니다. 합니다 [-(Visual Basic) out](../../../../visual-basic/reference/command-line-compiler/out.md) 파일 이름은 컴파일러 옵션은 DLL 파일 이름을 지정 하는 데 사용 됩니다. 사용하지 않을 경우 컴파일러는 첫 번째 파일(`Add.vb`)을 DLL의 이름으로 사용합니다.  
-  
- 실행 파일 `TestCode.exe`를 빌드하려면 다음 명령줄을 사용합니다.  
-  
-```console  
-vbc -out:TestCode.exe -reference:MathLibrary.DLL TestCode.vb  
-```  
-  
- 합니다 **-아웃** EXE 파일을 출력 하도록 컴파일러에 지시 하 고 출력 파일의 이름을 지정 하는 컴파일러 옵션 (`TestCode.exe`). 이 컴파일러 옵션은 선택 사항입니다. 합니다 [-참조 (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) DLL 파일에이 프로그램이 사용 하는 컴파일러 옵션을 지정 합니다.  
-  
- 명령줄에서 빌드에 대 한 자세한 내용은 참조 하 고 [명령줄에서 빌드](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
 

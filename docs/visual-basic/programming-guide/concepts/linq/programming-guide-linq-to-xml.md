@@ -2,18 +2,18 @@
 title: 프로그래밍 가이드 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1f942bf-3404-4354-b4c5-4fe35e37a02b
-ms.openlocfilehash: 608ed431009c033de39cc38748bcbf173cf47cd4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf8dbaf5991d1991267ad31125029298cffcfcd3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785582"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592915"
 ---
 # <a name="programming-guide-linq-to-xml-visual-basic"></a>프로그래밍 가이드 (LINQ to XML) (Visual Basic)
 이 단원에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]을 사용한 프로그래밍의 개념과 방법에 대해 설명합니다.  
   
 ## <a name="who-should-read-this-documentation"></a>이 설명서를 읽을 대상  
- Visual Basic 및 몇 가지 기본 기능을 이미 이해 하는 개발자를 대상으로이 설명서는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]합니다.  
+ 이 설명서는 Visual Basic 및.NET Framework의 기본적인 내용을 알고 있는 개발자를 대상으로 합니다.  
   
  이 설명서의 목표는 모든 개발자가 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]을 쉽게 사용할 수 있도록 하는 것입니다. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]을 사용하면 XML을 쉽게 프로그래밍할 수 있습니다. 전문 개발자가 아니어도 LINQ to XML을 사용할 수 있습니다.  
   

@@ -2,18 +2,18 @@
 title: Entity Framework 개요
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: a6649744c4ad719c760ebc6ce5d97b51815c8ee6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8c870c1990da9b86515dc933716cd628f63eb0a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034060"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583840"
 ---
 # <a name="entity-framework-overview"></a>Entity Framework 개요
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]는 데이터 지향 소프트웨어 응용 프로그램의 개발을 지원하는 ADO.NET의 기술 집합입니다. 데이터 지향 응용 프로그램의 설계자와 개발자는 두 가지 다른 목적을 달성하기 위해 노력해 왔습니다. 해결 중인 비즈니스 문제의 엔터티, 관계 및 논리를 모델링해야 하며, 데이터를 저장 및 검색하는 데 사용되는 데이터 엔진도 사용해야 합니다. 데이터는 각각 해당 프로토콜을 가진 여러 개의 저장소 시스템에 걸쳐 있을 수 있습니다. 단일 저장소 시스템에서 작동하는 응용 프로그램도 저장소 시스템의 요구 사항 및 효율적이고 유지 가능한 응용 프로그램 코드를 작성하기 위한 요구 사항의 균형을 조정해야 합니다.
 
-그러나 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]를 사용하면 개발자가 기본 데이터베이스 테이블과 해당 데이터가 저장된 열을 고려할 필요 없이 고객이나 고객 주소와 같은 데이터를 도메인 특정 개체 및 속성의 형태로 다룰 수 있습니다. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]를 사용하면 개발자가 데이터를 처리할 때 보다 높은 추상 수준에서 작업할 수 있으며, 기존의 응용 프로그램에서보다 적은 코드로 데이터 지향 응용 프로그램을 만들고 유지 관리할 수 있습니다. 때문에 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 의 구성 요소인 합니다 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)], [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 응용 프로그램에는 모든 컴퓨터에서 실행할 수는 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 설치 된 버전 3.5 SP1부터.
+그러나 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]를 사용하면 개발자가 기본 데이터베이스 테이블과 해당 데이터가 저장된 열을 고려할 필요 없이 고객이나 고객 주소와 같은 데이터를 도메인 특정 개체 및 속성의 형태로 다룰 수 있습니다. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]를 사용하면 개발자가 데이터를 처리할 때 보다 높은 추상 수준에서 작업할 수 있으며, 기존의 응용 프로그램에서보다 적은 코드로 데이터 지향 응용 프로그램을 만들고 유지 관리할 수 있습니다. 때문에 합니다 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] .NET Framework의 구성 요소인 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 응용 프로그램 버전 3.5 SP1부터.NET Framework가 설치 된 모든 컴퓨터에서 실행할 수 있습니다.
 
 ## <a name="give-life-to-models"></a>모델을 사용 하 여 수명 게
  응용 프로그램 또는 서비스를 만들 때의 오랫동안 지속된 일반적인 디자인 방법은 응용 프로그램 또는 서비스를 도메인 모델, 논리 모델 및 실제 모델의 세 부분으로 나누는 것입니다. 도메인 모델은 모델링되는 시스템의 엔터티 및 관계를 정의합니다. 관계형 데이터베이스에 대한 논리 모델은 FOREIGN KEY 제약 조건이 있는 테이블로 엔터티와 관계를 정규화합니다. 실제 모델은 분할 및 인덱싱과 같은 저장소 세부 정보를 지정하여 특정 데이터 엔진의 기능을 다룹니다.

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 250e1764084ba3f7750867f2eea89e87cc7239eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b967e6441ae3f3d43e5a6276cfcf79e3c44f74cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342348"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613970"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>런타임에서 어셈블리를 찾는 방법
 .NET Framework 애플리케이션을 성공적으로 배포하려면 공용 언어 런타임이 애플리케이션을 구성하는 어셈블리를 찾아서 바인딩하는 방법을 이해해야 합니다. 기본적으로 런타임은 애플리케이션 빌드 시 사용된 정확한 버전의 어셈블리로 바인딩을 시도합니다. 이 기본 동작은 구성 파일 설정으로 재정의할 수 있습니다.  
@@ -51,11 +51,11 @@ ms.locfileid: "59342348"
   
 4. 다음 단계를 사용하여[어셈블리를 검색](#step4) 합니다.  
   
-    1.  구성 및 게시자 정책이 원래 참조 영향을 주지 않고 바인딩 요청이 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 메서드를 사용하여 만들어진 경우 런타임에서 위치 힌트를 확인합니다.  
+    1. 구성 및 게시자 정책이 원래 참조 영향을 주지 않고 바인딩 요청이 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 메서드를 사용하여 만들어진 경우 런타임에서 위치 힌트를 확인합니다.  
   
-    2.  구성 파일에 코드베이스가 있을 경우 런타임에서 이 위치만 확인합니다. 이 검색이 실패하면 런타임에서 바인딩 요청이 실패했다고 결정하며 다른 검색이 수행되지 않습니다.  
+    2. 구성 파일에 코드베이스가 있을 경우 런타임에서 이 위치만 확인합니다. 이 검색이 실패하면 런타임에서 바인딩 요청이 실패했다고 결정하며 다른 검색이 수행되지 않습니다.  
   
-    3.  [검색 섹션](#step4)에서 설명한 추론을 사용하여 어셈블리를 검색합니다. 검색 후에도 어셈블리가 발견되지 않으면 런타임에서 Windows Installer에 어셈블리를 제공하도록 요청합니다. 이는 주문형 설치 기능으로 작동합니다.  
+    3. [검색 섹션](#step4)에서 설명한 추론을 사용하여 어셈블리를 검색합니다. 검색 후에도 어셈블리가 발견되지 않으면 런타임에서 Windows Installer에 어셈블리를 제공하도록 요청합니다. 이는 주문형 설치 기능으로 작동합니다.  
   
         > [!NOTE]
         >  강력한 이름이 없는 어셈블리에 대한 버전 검사는 없으며, 강력한 이름이 없는 어셈블리에 대한 런타임 검사도 전역 어셈블리 캐시에 없습니다.  
@@ -64,11 +64,11 @@ ms.locfileid: "59342348"
 ## <a name="step-1-examining-the-configuration-files"></a>1단계: 구성 파일 검토  
  세 개의 XML 파일을 기준으로 다양한 수준에서 어셈블리 바인딩 동작을 구성할 수 있습니다.  
   
--   애플리케이션 구성 파일  
+- 애플리케이션 구성 파일  
   
--   게시자 정책 파일  
+- 게시자 정책 파일  
   
--   컴퓨터 구성 파일  
+- 컴퓨터 구성 파일  
   
  이러한 파일은 동일한 구문을 따르며 바인딩 리디렉션, 코드 위치 및 특정 어셈블리에 대한 바인딩 모드와 같은 정보를 제공합니다. 각 구성 파일에는 바인딩 프로세스를 리디렉션하는 [\<assemblyBinding> 요소](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)가 포함될 수 있습니다. [\<assemblyBinding> 요소](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)의 자식 요소에는 [\<dependentAssembly> 요소](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)가 포함됩니다. [\<dependentAssembly> 요소](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)의 자식 요소에는 [\<assemblyIdentity> 요소](/visualstudio/deployment/assemblyidentity-element-clickonce-deployment), [\<bindingRedirect> 요소](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md) 및 [\<codeBase> 요소](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)가 포함됩니다.  
   
@@ -130,7 +130,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  게시자 정책 파일은 공유 구성 요소가 업데이트되고 해당 구성 요소를 사용하는 모든 애플리케이션이 새 버전의 공유 구성 요소를 선택할 때 사용됩니다. 애플리케이션 구성 파일이 안전 모드를 적용하지 않는 한 게시자 정책 파일의 설정이 애플리케이션 구성 파일의 설정을 재정의합니다.  
   
 #### <a name="safe-mode"></a>안전 모드  
- 게시자 정책 파일은 일반적으로 서비스 팩이나 프로그램 업데이트의 일부로 명시적으로 설치됩니다. 업그레이드된 공유 구성 요소에 문제가 있는 경우 안전 모드를 사용하여 게시자 정책 파일의 재정의를 무시할 수 있습니다. 안전 모드는 **\<publisherPolicy apply="yes**&#124;**no"/&amp;gt;** 요소에 의해 결정되며, 이 요소는 애플리케이션 구성 파일에만 있습니다. 바인딩 프로세스에서 게시자 정책 구성 정보를 제거할지 여부를 지정합니다.  
+ 게시자 정책 파일은 일반적으로 서비스 팩이나 프로그램 업데이트의 일부로 명시적으로 설치됩니다. 업그레이드된 공유 구성 요소에 문제가 있는 경우 안전 모드를 사용하여 게시자 정책 파일의 재정의를 무시할 수 있습니다. 안전 모드는 **\<publisherPolicy apply="yes**&amp;#124;**no"/&gt;** 요소에 의해 결정되며, 이 요소는 애플리케이션 구성 파일에만 있습니다. 바인딩 프로세스에서 게시자 정책 구성 정보를 제거할지 여부를 지정합니다.  
   
  전체 애플리케이션이나 선택한 어셈블리에 대해 안전 모드를 설정할 수 있습니다. 즉, 애플리케이션을 구성하는 모든 어셈블리에 대해 정책을 해제하거나 다른 어셈블리는 제외하고 일부 어셈블리에 대해서만 설정할 수 있습니다. 애플리케이션을 구성하는 어셈블리에 게시자 정책을 선택적으로 적용하려면, **\<publisherPolicy apply\=no/&gt;** 를 설정한 다음 \<**dependentAssembly**&gt; 요소를 사용하여 정책을 적용하려는 어셈블리를 지정합니다. 애플리케이션을 구성하는 모든 어셈블리에 게시자 정책을 적용하려면 종속 어셈블리 요소 없이 **\<publisherPolicy apply\=no/&gt;** 를 설정합니다. 구성에 대한 자세한 내용은 [구성 파일을 사용하여 앱 구성](../../../docs/framework/configure-apps/index.md)을 참조하세요.  
   
@@ -172,13 +172,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ### <a name="locating-the-assembly-through-probing"></a>검색을 통해 어셈블리 찾기  
  애플리케이션 구성 파일에 [\<codeBase&gt;](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 요소가 없을 경우 런타임에서는 다음 네 가지 기준을 사용하여 어셈블리를 조사합니다.  
   
--   애플리케이션이 실행되는 루트 위치인 애플리케이션 기준 위치  
+- 애플리케이션이 실행되는 루트 위치인 애플리케이션 기준 위치  
   
--   참조되는 어셈블리의 문화권 특성인 문화권  
+- 참조되는 어셈블리의 문화권 특성인 문화권  
   
--   참조되는 어셈블리의 이름인 이름  
+- 참조되는 어셈블리의 이름인 이름  
   
--   [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 요소의 `privatePath` 특성으로서, 루트 위치 아래의 하위 디렉터리에 대해 사용자가 정의한 목록입니다. 이 위치는 애플리케이션 구성 파일과 관리 코드에서 애플리케이션 도메인에 대한 <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> 속성을 사용하여 지정할 수 있습니다. 관리 코드에서 지정된 경우 관리 코드 `privatePath` 가 먼저 검색된 다음 애플리케이션 구성 파일에 지정된 경로가 검색됩니다.  
+- [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 요소의 `privatePath` 특성으로서, 루트 위치 아래의 하위 디렉터리에 대해 사용자가 정의한 목록입니다. 이 위치는 애플리케이션 구성 파일과 관리 코드에서 애플리케이션 도메인에 대한 <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> 속성을 사용하여 지정할 수 있습니다. 관리 코드에서 지정된 경우 관리 코드 `privatePath` 가 먼저 검색된 다음 애플리케이션 구성 파일에 지정된 경로가 검색됩니다.  
   
 #### <a name="probing-the-application-base-and-culture-directories"></a>애플리케이션 기준 위치 및 문화권 디렉터리 검색  
  런타임은 항상 URL이나 컴퓨터의 애플리케이션 루트 디렉터리일 수 있는 애플리케이션 기준 위치에서 검색을 시작합니다. 참조된 어셈블리가 애플리케이션 기준 위치에 없고 문화권 정보가 제공되지 않은 경우 런타임은 어셈블리 이름을 사용하여 하위 디렉터리를 모두 검색합니다. 검색되는 디렉터리는 다음과 같습니다.  
@@ -213,13 +213,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 #### <a name="probing-examples"></a>검색 예제  
  다음과 같은 정보가 제공됩니다.  
   
--   참조된 어셈블리 이름: myAssembly  
+- 참조된 어셈블리 이름: myAssembly  
   
--   애플리케이션 루트 디렉터리: `http://www.code.microsoft.com`  
+- 애플리케이션 루트 디렉터리: `http://www.code.microsoft.com`  
   
--   구성 파일의 [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 요소가 지정하는 것: bin  
+- 구성 파일의 [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 요소가 지정하는 것: bin  
   
--   문화권: de  
+- 문화권: de  
   
  이 경우 런타임은 다음과 같은 URL을 검색합니다.  
   

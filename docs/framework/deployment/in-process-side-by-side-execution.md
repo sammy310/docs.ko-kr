@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 37c2ad92af938c1816c275ce217e48652b0628d6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 30d9517c404dc76cdc0f8206599cacdb430a1ae9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141260"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613986"
 ---
 # <a name="in-process-side-by-side-execution"></a>In-Process Side-by-Side 실행
 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터 In-Process Side-By-Side 호스팅을 사용하여 단일 프로세스에서 여러 버전의 CLR(공용 언어 런타임)을 실행할 수 있습니다. 기본적으로 관리되는 COM 구성 요소는 프로세스에 대해 로드된 .NET Framework 버전에 관계없이 빌드 시 사용된 .NET Framework 버전을 사용하여 실행됩니다.  
@@ -22,19 +22,19 @@ ms.locfileid: "59141260"
   
  [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서는 다음을 보장하는 병렬 호스팅에 대한 새로운 접근 방법을 제공합니다.  
   
--   새로운 버전의 .NET Framework를 설치해도 기존 애플리케이션에는 영향이 없습니다.  
+- 새로운 버전의 .NET Framework를 설치해도 기존 애플리케이션에는 영향이 없습니다.  
   
--   빌드 시 사용된 .NET Framework 버전에 대해 애플리케이션이 실행됩니다. 명시적으로 지정되지 않은 경우 새로운 버전의 .NET Framework를 사용하지 않습니다. 그러나 애플리케이션이 새로운 버전의 .NET Framework 사용으로 전환하는 것이 더 편리합니다.  
+- 빌드 시 사용된 .NET Framework 버전에 대해 애플리케이션이 실행됩니다. 명시적으로 지정되지 않은 경우 새로운 버전의 .NET Framework를 사용하지 않습니다. 그러나 애플리케이션이 새로운 버전의 .NET Framework 사용으로 전환하는 것이 더 편리합니다.  
   
 ## <a name="effects-on-users-and-developers"></a>사용자와 개발자에 대한 영향  
   
--   **최종 사용자 및 시스템 관리자**. 이제 이러한 사용자가 독립적으로 또는 애플리케이션을 사용하여 새로운 버전의 런타임을 설치할 때 컴퓨터에 영향을 주지 않을 것을 확신할 수 있습니다. 기존 애플리케이션은 예전과 같이 계속 실행됩니다.  
+- **최종 사용자 및 시스템 관리자**. 이제 이러한 사용자가 독립적으로 또는 애플리케이션을 사용하여 새로운 버전의 런타임을 설치할 때 컴퓨터에 영향을 주지 않을 것을 확신할 수 있습니다. 기존 애플리케이션은 예전과 같이 계속 실행됩니다.  
   
--   **애플리케이션 개발자**. 병렬 호스팅은 애플리케이션 개발자에게 거의 영향을 주지 않습니다. 기본적으로 애플리케이션은 항상 빌드 시 사용된 .NET Framework 버전에서 실행되며, 이 동작은 변경되지 않았습니다. 그러나 개발자가 이 동작을 재정의하고 애플리케이션이 최신 버전의 .NET Framework에서 실행되도록 지정할 수 있습니다([시나리오 2](#scenarios) 참조).  
+- **애플리케이션 개발자**. 병렬 호스팅은 애플리케이션 개발자에게 거의 영향을 주지 않습니다. 기본적으로 애플리케이션은 항상 빌드 시 사용된 .NET Framework 버전에서 실행되며, 이 동작은 변경되지 않았습니다. 그러나 개발자가 이 동작을 재정의하고 애플리케이션이 최신 버전의 .NET Framework에서 실행되도록 지정할 수 있습니다([시나리오 2](#scenarios) 참조).  
   
--   **라이브러리 개발자 및 소비자**. 병렬 호스팅은 라이브러리 개발자가 직면하는 호환성 문제를 해결하지 않습니다. 직접 참조를 통해 또는 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 호출을 통해 애플리케이션에서 직접 로드하는 라이브러리는 로드된 <xref:System.AppDomain>의 런타임을 계속 사용합니다. 지원하려는 모든 버전의 .NET Framework에 대해 라이브러리를 테스트해야 합니다. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 런타임을 사용하여 애플리케이션이 컴파일되었지만 이전 런타임을 사용하여 빌드된 라이브러리를 포함하는 경우 해당 라이브러리는 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 런타임도 사용합니다. 그러나 이전 런타임을 사용하여 빌드된 애플리케이션과 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]을 사용하여 빌드된 라이브러리가 있는 경우 애플리케이션이 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]도 사용하도록 강제 적용해야 합니다([시나리오 3](#scenarios) 참조).  
+- **라이브러리 개발자 및 소비자**. 병렬 호스팅은 라이브러리 개발자가 직면하는 호환성 문제를 해결하지 않습니다. 직접 참조를 통해 또는 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 호출을 통해 애플리케이션에서 직접 로드하는 라이브러리는 로드된 <xref:System.AppDomain>의 런타임을 계속 사용합니다. 지원하려는 모든 버전의 .NET Framework에 대해 라이브러리를 테스트해야 합니다. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 런타임을 사용하여 애플리케이션이 컴파일되었지만 이전 런타임을 사용하여 빌드된 라이브러리를 포함하는 경우 해당 라이브러리는 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 런타임도 사용합니다. 그러나 이전 런타임을 사용하여 빌드된 애플리케이션과 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]을 사용하여 빌드된 라이브러리가 있는 경우 애플리케이션이 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]도 사용하도록 강제 적용해야 합니다([시나리오 3](#scenarios) 참조).  
   
--   **관리되는 COM 구성 요소 개발자**. 과거에는 관리되는 COM 구성 요소가 자동으로 컴퓨터에 설치된 최신 버전의 런타임을 사용하여 실행되었습니다. 이제 빌드 시 사용된 런타임 버전에서 COM 구성 요소를 실행할 수 있습니다.  
+- **관리되는 COM 구성 요소 개발자**. 과거에는 관리되는 COM 구성 요소가 자동으로 컴퓨터에 설치된 최신 버전의 런타임을 사용하여 실행되었습니다. 이제 빌드 시 사용된 런타임 버전에서 COM 구성 요소를 실행할 수 있습니다.  
   
      다음 표와 같이 .NET Framework 버전 1.1로 빌드된 구성 요소를 버전 4 구성 요소와 함께 나란히 실행할 수 있지만 버전 2.0, 3.0 또는 3.5 구성 요소의 경우 해당 버전에 병렬 호스팅을 사용할 수 없기 때문에 병렬 실행할 수 없습니다.  
   
@@ -50,13 +50,13 @@ ms.locfileid: "59141260"
 <a name="scenarios"></a>   
 ## <a name="common-side-by-side-hosting-scenarios"></a>일반적인 병렬 호스팅 시나리오  
   
--   **시나리오 1:** 이전 버전의 .NET Framework를 사용하여 빌드된 COM 구성 요소를 사용하는 네이티브 애플리케이션.  
+- **시나리오 1:** 이전 버전의 .NET Framework를 사용하여 빌드된 COM 구성 요소를 사용하는 네이티브 애플리케이션.  
   
      설치된 .NET Framework 버전: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 및 COM 구성 요소에서 사용하는 다른 모든 버전의 .NET Framework.  
   
      할 일: 이 시나리오에서는 수행할 작업이 없습니다. COM 구성 요소는 등록된 .NET Framework 버전과 함께 실행됩니다.  
   
--   **시나리오 2**: [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)]로 빌드된 관리 애플리케이션은 [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)]에서 실행하는 것이 좋지만 버전 2.0이 없는 경우 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서 실행하려고 합니다.  
+- **시나리오 2**: [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)]로 빌드된 관리 애플리케이션은 [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)]에서 실행하는 것이 좋지만 버전 2.0이 없는 경우 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서 실행하려고 합니다.  
   
      설치된 .NET Framework 버전: .NET Framework 및 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]의 이전 버전.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "59141260"
     </configuration>  
     ```  
   
--   **시나리오 3:** [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서 실행하려는, 이전 버전의 .NET Framework를 사용하여 빌드된 COM 구성 요소를 사용하는 네이티브 애플리케이션.  
+- **시나리오 3:** [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서 실행하려는, 이전 버전의 .NET Framework를 사용하여 빌드된 COM 구성 요소를 사용하는 네이티브 애플리케이션.  
   
      설치된 .NET Framework 버전: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]  
   

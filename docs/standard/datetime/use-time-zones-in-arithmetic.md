@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 83dd898d-1338-415d-8cd6-445377ab7871
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 053ca2d10deadf58d5bb8b4628fb5dee815d82c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d504aa9ad7d6e4084192a2434ac408e8fa7a041
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026499"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588532"
 ---
 # <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>방법: 날짜 및 시간 산술 연산에서 표준 시간대 사용
 
@@ -59,8 +59,6 @@ ms.locfileid: "62026499"
 ## <a name="compiling-the-code"></a>코드 컴파일
 
 이 예제에는 다음 사항이 필요합니다.
-
-* System.Core.dll에 대 한 참조를 프로젝트에 추가할 수 있습니다.
 
 * 합니다 <xref:System> 네임 스페이스를 사용 하 여 가져와야 합니다 `using` 문 (C# 코드에 필요).
 

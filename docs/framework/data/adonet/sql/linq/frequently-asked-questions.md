@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: ba943a54fdfc71dc1eb2ee2ce9548dfb86070712
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4a41eac3d5b51936ebbae8d9e3dcf623da676bce
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64657055"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583502"
 ---
 # <a name="frequently-asked-questions"></a>질문과 대답
 다음 단원에서는 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]를 구현할 때 발생할 수 있는 일반적인 문제에 대한 해결 방법을 제시합니다.  
@@ -168,7 +168,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="aptca"></a>APTCA  
  질문. 부분적으로 신뢰할 수 있는 코드에서 System.Data.Linq를 사용할 수 있습니까?  
   
- 대답: 예, System.Data.Linq.dll 어셈블리도 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 특성이 표시된 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 어셈블리 중 하나입니다. [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]에서 이 특성이 표시되지 않은 어셈블리는 완전히 신뢰할 수 있는 코드에서만 사용할 수 있습니다.  
+ 대답: 예, system.data.linq.dll가 표시 된 해당.NET Framework 어셈블리는 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 특성입니다. 이 특성이 표시 하지 않고.NET framework에서 어셈블리는 완전히 신뢰할 수 있는 코드에 의해서만 용도로 적합 합니다.  
   
  주 시나리오 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 허용 부분적으로 신뢰할 수 있는 호출자가 사용할 수 있도록를 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 어셈블리에 웹 응용 프로그램에서 액세스할 수 있는 *신뢰* 가 보통 합니다.  
   

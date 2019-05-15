@@ -5,12 +5,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], about DataGridView control
 - data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
-ms.openlocfilehash: ca8268137f2a154c782388d0f13cdd02504cbb64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8898f76971b6088fa8ca831961ea7f12e1ab4e6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909276"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588843"
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>DataGridView 컨트롤 기술 요약(Windows Forms)
 이 항목에서는 `DataGridView` 제어 및 이를 사용하도록 지원하는 클래스에 대한 정보를 요약하여 설명합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "61909276"
  `BindingSource`  
   
 ## <a name="background"></a>배경  
- 사용자 인터페이스 (UI) 디자이너 자주 해야 할 사용자에 게 테이블 형식 데이터를 표시 합니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 테이블 또는 그리드에서 데이터를 표시 하는 여러 방법을 제공 합니다. `DataGridView` 컨트롤은 Windows Forms 응용 프로그램에 대 한이 기술의 최신 진화를 나타냅니다.  
+ 사용자 인터페이스 (UI) 디자이너 자주 해야 할 사용자에 게 테이블 형식 데이터를 표시 합니다. .NET Framework에는 테이블 또는 그리드에서 데이터를 표시 하는 여러 방법을 제공 합니다. `DataGridView` 컨트롤은 Windows Forms 응용 프로그램에 대 한이 기술의 최신 진화를 나타냅니다.  
   
  `DataGridView` 컨트롤에서 행의 데이터 저장소에서 데이터를 표시할 수 있습니다. 다양 한 유형의 데이터 저장소 지원 됩니다. 데이터 저장소는 1 차원 배열과 같이 간단 하 고 형식화 되지 않은 데이터를 포함할 수 있거나 같은 형식화 된 데이터를 저장할 수는 <xref:System.Data.DataSet>합니다. 자세한 내용은 [방법: 바인딩 데이터는 Windows Forms DataGridView 컨트롤](how-to-bind-data-to-the-windows-forms-datagridview-control.md)합니다.  
   

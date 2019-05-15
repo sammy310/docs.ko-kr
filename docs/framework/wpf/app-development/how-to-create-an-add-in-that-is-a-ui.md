@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: e12769eca2d3c963e2d7a19e50c67814bcff3152
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0464d87aef3d4e88d9340af2ac1db93c13ba26e2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625366"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592653"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>방법: UI인 추가 기능 만들기
 이 예제에서는 WPF 독립 실행형 응용 프로그램에서 호스팅되는 Windows Presentation Foundation (WPF)는 추가 기능을 만드는 방법을 보여 줍니다.  
@@ -81,7 +81,7 @@ ms.locfileid: "64625366"
   
 <a name="HostApp"></a>   
 ## <a name="implementing-the-host-application"></a>호스트 애플리케이션 구현  
- 호스트 쪽 어댑터와 호스트 뷰가 만들어지면 호스트 응용 프로그램이 사용할 수는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 추가 기능 모델을 파이프라인을 열고 추가 기능의 호스트 뷰를 획득 합니다. 이러한 단계는 다음 코드에 나와 있습니다.  
+ 호스트 쪽 어댑터와 호스트 뷰가 만들어지면 호스트 응용 프로그램 파이프라인을 열고 추가 기능의 호스트 뷰를 가져오고.NET Framework 추가 기능 모델을 사용할 수 있습니다. 이러한 단계는 다음 코드에 나와 있습니다.  
 
  호스트 응용 프로그램을 활성화 하는 추가-암시적으로 호스트 응용 프로그램 호스트 뷰를 반환 하는 일반적인.NET Framework 추가 기능 모델 코드를 사용 합니다. 호스트 응용 프로그램에는 이후에 호스트 뷰가 표시 됩니다 (되는 <xref:System.Windows.Controls.UserControl>)에서 <xref:System.Windows.Controls.Grid>합니다.  
   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: 98702f2fb8f912b9503f3ccdad74e61ef097f617
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e2dbbd63be07a19c6e05c7ec8f94bdcd8f50c902
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600886"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586308"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>확대 변환과 축소 변환(Visual Basic)
 형식 변환 사용 하 여 중요 한 고려 대상 데이터 형식의 범위 내에서 변환의 결과 인지 됩니다.  
@@ -93,7 +93,7 @@ ms.locfileid: "64600886"
   
 - <xref:System.OverflowException> -(정수 계열 형식만) 변환 된 값이 너무 커서 대상 유형에 적합 하지  
   
- 클래스 또는 구조를 정의 하는 경우는 [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) 변환 연산자와 해당 클래스 또는 구조체에서 역할을 하는 `CType` 적절 하다 고 판단 되는 모든 예외를 throw 할 수 있습니다. 또한 하는 `CType` Visual Basic 함수를 호출할 수 있습니다 또는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 메서드를 다양 한 예외를 throw 할 수 있습니다.  
+ 클래스 또는 구조를 정의 하는 경우는 [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) 변환 연산자와 해당 클래스 또는 구조체에서 역할을 하는 `CType` 적절 하다 고 판단 되는 모든 예외를 throw 할 수 있습니다. 또한는 `CType` Visual Basic 함수 또는 다양 한 예외를 throw 할 수 있는.NET Framework 메서드를 호출할 수 있습니다.  
   
 ## <a name="changes-during-reference-type-conversions"></a>참조 형식 변환 중에 변경  
  변환을 *유형을 참조* 포인터만 값을 복사 합니다. 값 자체 복사 아니고 어떤 방식으로 변경 합니다. 변경할 수 있는 유일한 항목은 포인터를가지고 있는 변수의 데이터 형식. 다음 예제에서는 데이터 형식에서 파생된 클래스에서 클래스의 기본 클래스로 변환 됩니다 있지만 두 변수가 가리키는 개체는 변경 되지 않습니다.  

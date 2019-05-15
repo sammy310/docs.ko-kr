@@ -11,21 +11,21 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b529ccd8c5e0cf0563adf556a7d316372ac4d0e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0dc05294ae762b4f896bb7f514df102c1f948fe0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215042"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623404"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe(.NET 서비스 설치 도구)
 .NET 서비스 설치 도구를 사용하면 다음과 같은 작업을 수행할 수 있습니다.  
   
--   어셈블리를 로드 및 등록합니다.  
+- 어셈블리를 로드 및 등록합니다.  
   
--   형식 라이브러리를 지정된 COM+ 애플리케이션에 생성, 등록 및 설치합니다.  
+- 형식 라이브러리를 지정된 COM+ 애플리케이션에 생성, 등록 및 설치합니다.  
   
--   프로그래밍 방식으로 클래스에 추가한 서비스를 구성합니다.  
+- 프로그래밍 방식으로 클래스에 추가한 서비스를 구성합니다.  
   
  이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)를 참조하세요.  
   

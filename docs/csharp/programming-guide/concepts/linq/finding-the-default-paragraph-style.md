@@ -2,12 +2,12 @@
 title: 기본 단락 스타일 찾기(C#)
 ms.date: 07/20/2015
 ms.assetid: be102177-8ab0-444a-b671-7023e555ffdb
-ms.openlocfilehash: 052accf31007001c0fa0d46870ee6e4cd30f6bb8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 89c70fcbc9d5286e2c9381250b30d525ebb1eb36
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674078"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596690"
 ---
 # <a name="finding-the-default-paragraph-style-c"></a>기본 단락 스타일 찾기(C#)
 WordprocessingML 문서에서 정보 조작 자습서의 첫 번째 작업은 문서에 있는 단락의 기본 스타일을 찾는 것입니다.  
@@ -86,7 +86,7 @@ The default style is: Normal
 ## <a name="next-steps"></a>다음 단계  
  다음 예제에서는 문서의 모든 단락과 단락의 스타일을 찾는 유사한 쿼리를 만듭니다.  
   
--   [단락 및 해당 스타일 검색(C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
+- [단락 및 해당 스타일 검색(C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
   
 ## <a name="see-also"></a>참고 항목
 

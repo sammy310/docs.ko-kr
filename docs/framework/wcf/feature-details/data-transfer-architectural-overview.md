@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: 401803229c54a2b38af08c0418b9efd4c64d9d60
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b6e77dea17d71b74c2c06534fd3a941e3e867a8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627038"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592559"
 ---
 # <a name="data-transfer-architectural-overview"></a>데이터 전송 아키텍처 개요
 Windows Communication Foundation (WCF) 메시징 인프라로 생각할 수 있습니다. WCF는 메시지를 받고, 처리하고, 추가 작업을 위해 사용자 코드로 디스패치하거나, 사용자 코드에서 제공된 데이터로부터 메시지를 생성하고 이 메시지를 대상에 전달할 수 있습니다. 고급 개발자를 대상으로 한 이 항목에서는 메시지 및 포함된 데이터를 처리하기 위한 아키텍처에 대해 설명합니다. 데이터를 주고 받는 방법을 보다 간단하게, 작업에 초점을 두고 설명하는 내용은 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)을 참조하십시오.  
@@ -27,7 +27,7 @@ Windows Communication Foundation (WCF) 메시징 인프라로 생각할 수 있�
   
  WCF를 사용 하 여 사용 하 여는 <xref:System.ServiceModel.Channels.Message> 클래스 및 채널 스택을 직접. 그러나 이 방법은 어렵고 시간이 많이 걸립니다. 또한는 <xref:System.ServiceModel.Channels.Message> 개체 지원을 제공 하지 메타 데이터를 이러한 방식으로 WCF를 사용 하는 경우 강력한 형식의 WCF 클라이언트를 생성할 수 없습니다.  
   
- WCF에서 생성 하 고 수신 하는 데 사용할 수 있는 사용 하기 쉬운 프로그래밍 모델을 제공 하는 서비스 프레임 워크를 포함 하는 따라서 `Message` 개체입니다. 서비스 프레임워크는 서비스 계약의 개념을 통해 서비스를 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식으로 매핑하고, [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 특성으로 표시된 단순한 <xref:System.ServiceModel.OperationContractAttribute> 메서드인 사용자 작업으로 메시지를 디스패치합니다. 자세한 내용은 [Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md)을 참조하십시오. 이러한 메서드에는 매개 변수와 반환 값이 있을 수 있습니다. 서비스 쪽에서는 서비스 프레임워크가 들어오는 <xref:System.ServiceModel.Channels.Message> 인스턴스를 매개 변수로 변환하고, 반환 값을 나가는 <xref:System.ServiceModel.Channels.Message> 인스턴스로 변환합니다. 클라이언트 쪽에서는 반대로 수행됩니다. 예를 들어 아래의 `FindAirfare` 작업을 살펴 봅니다.  
+ WCF에서 생성 하 고 수신 하는 데 사용할 수 있는 사용 하기 쉬운 프로그래밍 모델을 제공 하는 서비스 프레임 워크를 포함 하는 따라서 `Message` 개체입니다. 서비스 프레임 워크 서비스 서비스 계약의 개념을 통해.NET Framework 형식으로 매핑하고 단순히.NET Framework로 표시 된 메서드는 사용자 작업 메시지를 발송 합니다 <xref:System.ServiceModel.OperationContractAttribute> 특성 (자세한 내용은 참조 하세요. [ 서비스 계약 디자인](../../../../docs/framework/wcf/designing-service-contracts.md)). 이러한 메서드에는 매개 변수와 반환 값이 있을 수 있습니다. 서비스 쪽에서는 서비스 프레임워크가 들어오는 <xref:System.ServiceModel.Channels.Message> 인스턴스를 매개 변수로 변환하고, 반환 값을 나가는 <xref:System.ServiceModel.Channels.Message> 인스턴스로 변환합니다. 클라이언트 쪽에서는 반대로 수행됩니다. 예를 들어 아래의 `FindAirfare` 작업을 살펴 봅니다.  
   
  [!code-csharp[c_DataArchitecture#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_dataarchitecture/cs/source.cs#1)]
  [!code-vb[c_DataArchitecture#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_dataarchitecture/vb/source.vb#1)]  
@@ -94,7 +94,7 @@ Windows Communication Foundation (WCF) 메시징 인프라로 생각할 수 있�
  자세한 내용은 [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)합니다.  
   
 ## <a name="message-properties"></a>메시지 속성  
- 메시지에는 속성이 포함될 수 있습니다. *속성* 은 문자열 이름과 관련된 모든 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 개체입니다. `Properties` 의 `Message`속성을 통해 속성에 액세스합니다.  
+ 메시지에는 속성이 포함될 수 있습니다. A *속성* 있는.NET Framework 개체를 문자열 이름과 관련 된입니다. `Properties` 의 `Message`속성을 통해 속성에 액세스합니다.  
   
  일반적으로 각각 SOAP 본문과 SOAP 헤더로 매핑되는 메시지 본문과 메시지 헤더와는 달리, 메시지 속성은 일반적으로 메시지와 함께 보내거나 받지 않습니다. 메시지 속성은 주로 채널 스택의 다양한 채널 간이나 채널 스택과 서비스 모델 간에 메시지에 대한 데이터를 전달하기 위한 통신 메커니즘으로 존재합니다.  
   
@@ -179,7 +179,7 @@ Windows Communication Foundation (WCF) 메시징 인프라로 생각할 수 있�
  이 방법을 사용하면 <xref:System.Xml.IStreamProvider.GetStream> 을 호출하고 스트리밍된 데이터를 작성할 때 XML 작성기를 선택할 수 있습니다. 예를 들어 텍스트 및 이진 XML 작성기는 이를 즉각 호출하고 시작 및 끝 태그 사이에서 스트리밍된 콘텐츠를 작성합니다. MTOM 작성기는 메시지의 적절한 일부를 쓸 준비가 되면 나중에 <xref:System.Xml.IStreamProvider.GetStream> 을 호출할지 결정할 수 있습니다.  
   
 ## <a name="representing-data-in-the-service-framework"></a>서비스 프레임워크에서 데이터 표시  
- 서비스 프레임 워크는 무엇 보다도 메시지 데이터에 대 한 친숙 한 프로그래밍 모델 간의 변환을 담당 하 고 실제 WCF의 일부인이 항목의 "기본 아키텍처" 섹션에서 설명 했 듯이 `Message` 인스턴스. 일반적으로 메시지 교환은 서비스 프레임워크에서 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 특성과 함께 표시된 <xref:System.ServiceModel.OperationContractAttribute> 메서드로 나타납니다. 메서드는 일부 매개 변수에서 사용할 수 있으며, 반환 값 또는 out 매개 변수(또는 둘 다)를 반환할 수 있습니다. 서비스 쪽에서는 입력 매개 변수가 들어오는 메시지를 나타내며, 반환 값 및 out 매개 변수는 나가는 메시지를 나타냅니다. 클라이언트 쪽에서는 그 반대입니다. 매개 변수 및 해당 반환 값을 사용하여 메시지를 설명하는 프로그래밍 모델은 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)에서 자세하게 설명합니다. 이 단원에서는 간략한 개요만 제공합니다.  
+ 서비스 프레임 워크는 무엇 보다도 메시지 데이터에 대 한 친숙 한 프로그래밍 모델 간의 변환을 담당 하 고 실제 WCF의 일부인이 항목의 "기본 아키텍처" 섹션에서 설명 했 듯이 `Message` 인스턴스. .NET Framework 메서드를 사용 하 여 표시 된 대로 메시지 교환은 서비스 프레임 워크에 표시 됩니다는 일반적으로 <xref:System.ServiceModel.OperationContractAttribute> 특성입니다. 메서드는 일부 매개 변수에서 사용할 수 있으며, 반환 값 또는 out 매개 변수(또는 둘 다)를 반환할 수 있습니다. 서비스 쪽에서는 입력 매개 변수가 들어오는 메시지를 나타내며, 반환 값 및 out 매개 변수는 나가는 메시지를 나타냅니다. 클라이언트 쪽에서는 그 반대입니다. 매개 변수 및 해당 반환 값을 사용하여 메시지를 설명하는 프로그래밍 모델은 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)에서 자세하게 설명합니다. 이 단원에서는 간략한 개요만 제공합니다.  
   
 ## <a name="programming-models"></a>프로그래밍 모델  
  WCF 서비스 프레임 워크는 메시지를 설명 하는 5 개의 서로 다른 프로그래밍 모델을 지원 합니다.  
@@ -218,7 +218,7 @@ Windows Communication Foundation (WCF) 메시징 인프라로 생각할 수 있�
  작업 = "*" 줄에서 효과적으로 메시지 디스패치를 해제 하 고 모든 메시지를 전송 하므로 합니다 `IForwardingService` 계약 확인에 대해 자체 방식을 `ForwardMessage` 작업 합니다. (일반적으로 디스패처는 검사 작업에 대 한 것을 확인 하는 메시지의 "Action" 헤더입니다. 작업 = "\*" "Action 헤더의 모든 가능한 값"을 의미 합니다.) 작업의 조합을 = "\*" 및 모든 가능한 메시지를 받을 수 있기 때문에 매개 변수 "유니버설 계약" 라고 하는 대로 메시지를 사용 합니다. 가능한 모든 메시지를 보낼 수를 반환 값으로 메시지를 사용 하 고 설정 `ReplyAction` 에 "\*"입니다. 이렇게 하면 사용자가 반환하는 `Message` 개체를 사용하여 이 헤더를 제어할 수 있으므로 서비스 프레임워크가 자체 Action 헤더에 추가되지 않도록 할 수 있습니다.  
   
 ### <a name="3-message-contracts"></a>3. 메시지 계약  
- 이라는 메시지를 설명 하는 선언적 프로그래밍 모델을 제공 하는 WCF *메시지 계약*합니다. 이 모델은 [Using Message Contracts](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)에 자세히 설명되어 있습니다. 기본적으로 전체 메시지는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 및 <xref:System.ServiceModel.MessageBodyMemberAttribute> 같은 특성을 사용하는 단일 <xref:System.ServiceModel.MessageHeaderAttribute> 형식으로 표시되어, 메시지 계약 클래스의 어떤 부분이 메시지의 어떤 부분에 매핑되는지 설명합니다.  
+ 이라는 메시지를 설명 하는 선언적 프로그래밍 모델을 제공 하는 WCF *메시지 계약*합니다. 이 모델은 [Using Message Contracts](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)에 자세히 설명되어 있습니다. 전체 메시지 같은 특성을 사용 하는 단일.NET Framework 형식으로 표시 됩니다는 기본적으로 <xref:System.ServiceModel.MessageBodyMemberAttribute> 및 <xref:System.ServiceModel.MessageHeaderAttribute> 설명 메시지 계약 클래스의 어떤 부분이 메시지의 어느 부분에 매핑해야 하 합니다.  
   
  `Message` 클래스를 직접 사용하는 것만큼 많은 제어를 할 수는 없지만, 메시지 계약을 사용하여 결과 `Message` 인스턴스에 대해 여러 가지 제어를 할 수 있습니다. 예를 들어 메시지 본문은 종종 여러 가지 정보로 구성되며, 이러한 정보는 각각 자체 XML 요소로 표시됩니다. 이러한 요소는 본문에서 직접 발생할 수도 있고(*bare* 모드), 포함된 XML 요소에서 *wrapped* 가 될 수도 있습니다. 메시지 계약 프로그래밍 모델을 사용하면 bare-wrapped 모드를 결정하고 래퍼 이름과 네임스페이스를 제어할 수 있게 됩니다.  
   
@@ -264,7 +264,7 @@ Windows Communication Foundation (WCF) 메시징 인프라로 생각할 수 있�
 |<xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>|<xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.DeserializeReply%28System.ServiceModel.Channels.Message%2CSystem.Object%5B%5D%29>|들어오는 `Message` 를 반환 값/출력 매개 변수로 변환|  
   
 ## <a name="serialization"></a>Serialization  
- 메시지 내용을 설명하기 위해 메시지 계약 또는 매개 변수를 사용하는 경우에는 항상 serialization을 사용하여 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식과 XML Infoset 표현 간의 변환을 수행해야 합니다. 예를 들어 serialization WCF의 다른 위치에서 사용 됩니다 <xref:System.ServiceModel.Channels.Message> 제네릭에 <xref:System.ServiceModel.Channels.Message.GetBody%2A> 개체로 deserialize 된 메시지의 전체 본문을 읽는 데 사용할 수 있는 메서드.  
+ 메시지 계약 또는 매개 변수를 사용 하 여 메시지 내용을 설명 하 때마다.NET Framework 형식과 XML Infoset 표현 간의 변환에 serialization을 사용 해야 합니다. 예를 들어 serialization WCF의 다른 위치에서 사용 됩니다 <xref:System.ServiceModel.Channels.Message> 제네릭에 <xref:System.ServiceModel.Channels.Message.GetBody%2A> 개체로 deserialize 된 메시지의 전체 본문을 읽는 데 사용할 수 있는 메서드.  
   
  WCF 직렬화 및 역직렬화 매개 변수 및 메시지 파트에 대 한 "기본" 두 가지의 serialization 기술을 지원: 합니다 <xref:System.Runtime.Serialization.DataContractSerializer> 하며 `XmlSerializer`합니다. 그뿐 아니라 사용자 지정 serializer도 작성할 수 있습니다. 그러나 WCF의 다른 부분 (예: 제네릭 `GetBody` 메서드 또는 SOAP 오류 serialization)만 사용 하도록 제한 될 수 있습니다 합니다 <xref:System.Runtime.Serialization.XmlObjectSerializer> 서브 클래스 (<xref:System.Runtime.Serialization.DataContractSerializer> 및 <xref:System.Runtime.Serialization.NetDataContractSerializer>, 아닌는 <xref:System.Xml.Serialization.XmlSerializer>), 또는 사용 하도록 하드 코드 된 있을 수도 있습니다 <xref:System.Runtime.Serialization.DataContractSerializer>합니다.  
   

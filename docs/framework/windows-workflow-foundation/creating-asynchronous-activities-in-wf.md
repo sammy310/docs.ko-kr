@@ -2,12 +2,12 @@
 title: WF에서 비동기 활동 만들기
 ms.date: 03/30/2017
 ms.assetid: 497e81ed-5eef-460c-ba55-fae73c05824f
-ms.openlocfilehash: 5d8659ee57f9bb576cd7066652a294717811432f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b990631d6efdb4644274c8a4606af07495b1979c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945888"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592968"
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>WF에서 비동기 활동 만들기
 <xref:System.Activities.AsyncCodeActivity>는 활동 작성자가 파생 활동에서 비동기 실행 논리를 구현하는 데 사용할 수 있는 기본 클래스를 제공합니다. 이 기능은 워크플로 스케줄러 스레드를 유지하지 않고 병렬로 실행 가능한 활동을 차단하지 않으면서 비동기 작업을 수행해야 하는 사용자 지정 활동에 유용합니다. 이 항목에서는 <xref:System.Activities.AsyncCodeActivity>를 사용하여 사용자 지정 비동기 활동을 만드는 방법을 간략하게 설명합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "61945888"
  [!code-csharp[CFX_ActivityExample#10](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#10)]  
   
 ### <a name="invoking-asynchronous-methods-on-a-class"></a>클래스에 대한 비동기 메서드 호출  
- [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]의 많은 클래스는 비동기 기능을 제공합니다. 이 기능은 <xref:System.Activities.AsyncCodeActivity> 기반 활동을 사용하여 비동기적으로 호출할 수 있습니다. 다음 예제에서는 활동 만들어집니다 비동기적으로 파일을 사용 하 여 만드는 <xref:System.IO.FileStream> 클래스입니다.  
+ 다양 한.NET Framework의 클래스는 비동기 기능을 제공이 기능을 사용 하 여 비동기적으로 호출할 수 있습니다는 <xref:System.Activities.AsyncCodeActivity> 활동을 기반으로 합니다. 다음 예제에서는 활동 만들어집니다 비동기적으로 파일을 사용 하 여 만드는 <xref:System.IO.FileStream> 클래스입니다.  
   
  [!code-csharp[CFX_ActivityExample#12](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#12)]  
   
