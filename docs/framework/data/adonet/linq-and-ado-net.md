@@ -2,12 +2,12 @@
 title: LINQ 및 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: f57d50e6c76b3d95c1d87b6beafe345f9a251e04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 79d6c52656e545c07260f3a97b089c238a74db3c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878746"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583511"
 ---
 # <a name="linq-and-adonet"></a>LINQ 및 ADO.NET
 오늘날 많은 비즈니스 개발자 두 개 (이상) 프로그래밍 언어를 사용 해야 합니다. (예: Visual C# 또는 Visual Basic), 비즈니스 논리와 프레젠테이션 계층에 대 한 상위 수준 언어 및 데이터베이스와 상호 작용 하는 쿼리 언어 (같은 [!INCLUDE[tsql](../../../../includes/tsql-md.md)]). 따라서 효과적으로 작업을 수행하려면 여러 언어에 능숙해야 하며 개발 환경에서 언어 불일치 문제도 발생하게 됩니다. 예를 들어, 데이터 액세스 API를 사용하여 데이터베이스에 대한 쿼리를 실행하는 응용 프로그램에서는 따옴표를 사용하여 쿼리를 문자열 리터럴로 지정합니다. 이 쿼리 문자열은 컴파일러에서 인식되지 않으므로 잘못된 구문, 참조되는 열이나 행이 실제로 있는지 여부 등의 오류가 검사되지 않습니다. 쿼리 매개 변수에 대한 형식 검사뿐 아니라 `IntelliSense` 지원도 제공되지 않습니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "61878746"
  The <xref:System.Data.DataSet>은 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]의 기반이 되는 연결되지 않은 프로그래밍 모델의 핵심 요소이며 널리 사용되고 있습니다. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]에서는 다른 많은 데이터 소스에 사용할 수 있는 것과 동일한 쿼리 구성 메커니즘을 사용하여 다양한 쿼리 기능을 <xref:System.Data.DataSet>에 구현할 수 있습니다. 자세한 내용은 [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)을 참조하세요.  
   
 ## <a name="linq-to-sql"></a>LINQ to SQL  
- [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]은 개념적 모델에 매핑할 필요가 없는 개발자에게 유용한 도구입니다. [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]을 사용하면 기존 데이터베이스 스키마에 대해 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 프로그래밍 모델을 직접 사용할 수 있습니다. [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]에서는 데이터를 나타내는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 클래스를 생성할 수 있습니다. 이렇게 생성된 클래스는 개념적 데이터 모델에 매핑되는 대신 데이터베이스 테이블, 뷰, 저장 프로시저 및 사용자 정의 함수에 직접 매핑됩니다.  
+ [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]은 개념적 모델에 매핑할 필요가 없는 개발자에게 유용한 도구입니다. [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]을 사용하면 기존 데이터베이스 스키마에 대해 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 프로그래밍 모델을 직접 사용할 수 있습니다. [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] 개발자가 데이터를 나타내는.NET Framework 클래스를 생성할 수 있습니다. 이렇게 생성된 클래스는 개념적 데이터 모델에 매핑되는 대신 데이터베이스 테이블, 뷰, 저장 프로시저 및 사용자 정의 함수에 직접 매핑됩니다.  
   
  [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]을 사용하는 개발자는 XML과 같은 다른 데이터 소스뿐 아니라 메모리 내 컬렉션 및 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]과 동일한 <xref:System.Data.DataSet> 프로그래밍 패턴을 사용하는 저장소 스키마에 대해 코드를 직접 작성할 수 있습니다. 자세한 내용은 [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)을 참조하세요.  
   

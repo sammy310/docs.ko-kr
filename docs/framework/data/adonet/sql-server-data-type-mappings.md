@@ -2,17 +2,17 @@
 title: SQL Server 데이터 형식 매핑
 ms.date: 03/30/2017
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
-ms.openlocfilehash: f90f44666fa5843ccf9bd1cd9ccb5c20b812f494
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 04a3bbd9ba18b30a24b425888cce78597deb068a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664092"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583727"
 ---
 # <a name="sql-server-data-type-mappings"></a>SQL Server 데이터 형식 매핑
 SQL Server와 .NET Framework는 서로 다른 형식 시스템을 기반으로 합니다. 예를 들어 .NET Framework <xref:System.Decimal> 구조의 최대 자릿수는 28인 반면 SQL Server decimal 및 숫자 데이터 형식의 최대 자릿수는 38입니다. 데이터를 읽거나 쓸 때 데이터 무결성을 유지하기 위해 <xref:System.Data.SqlClient.SqlDataReader>는 <xref:System.Data.SqlTypes>의 개체를 반환하는 SQL Server 관련 형식화된 접근자 메서드 및 .NET Framework 형식을 반환하는 접근자 메서드를 노출합니다. SQL Server 형식 및 .NET Framework 형식 모두 <xref:System.Data.DbType> 데이터 형식을 지정할 때 사용할 수 있는 <xref:System.Data.SqlDbType> 및 <xref:System.Data.SqlClient.SqlParameter> 클래스에 열거형으로 표시됩니다.  
   
- 다음 표에서는 유추된 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식, <xref:System.Data.DbType>과 <xref:System.Data.SqlDbType> 열거형 및 <xref:System.Data.SqlClient.SqlDataReader>의 접근자 메서드를 보여 줍니다.  
+ 다음 표에서 유추 된.NET Framework 형식에는 <xref:System.Data.DbType> 및 <xref:System.Data.SqlDbType> 열거형과에 대 한 접근자 메서드는 <xref:System.Data.SqlClient.SqlDataReader>합니다.  
   
 |SQL Server 데이터베이스 엔진 형식|.NET Framework 형식|SqlDbType 열거형|SqlDataReader SqlTypes 형식화된 접근자|DbType 열거형|SqlDataReader DbType 형식화된 접근자|  
 |-------------------------------------|-------------------------|---------------------------|-------------------------------------------|------------------------|-----------------------------------------|  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 05e61a33005cd0458c5bcdde758f3b1a9cc3869c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 429e019d87800c9487f73ebf37c4d7870835b323
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637264"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591944"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>기본적인 Windows Communication Foundation 개념
 이 문서에서는 Windows Communication Foundation (WCF) 아키텍처의 상위 수준 보기를 제공 합니다. 또한 핵심 개념 및 이러한 개념이 서로 어떻게 연결되는지에 대해 설명합니다. WCF 서비스 및 클라이언트의 가장 간단한 버전을 만드는 방법에 대 한 자습서를 참조 하세요 [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md)합니다. WCF 프로그래밍에 알아보려면 [기본 WCF 프로그래밍](../../../docs/framework/wcf/basic-wcf-programming.md)합니다.  
@@ -126,7 +126,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  바인딩 요소의 구체적인 구현입니다. 바인딩은 구성을 나타내고 채널은 해당 구성과 관련된 구현입니다. 따라서 각 바인딩 요소마다 관련된 채널이 있습니다. 채널은 다른 채널 맨 위에 스택되어 바인딩의 구체적인 구현인 채널 스택을 만듭니다.  
   
  WCF 클라이언트(WCF client)  
- 서비스 작업을 메서드로 노출하는 클라이언트 응용 프로그램 구문입니다(Visual Basic 또는 Visual C#와 같이 선택한 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 프로그래밍 언어로 표시). 모든 응용 프로그램은 서비스를 호스트하는 응용 프로그램을 포함하여 WCF 클라이언트를 호스트할 수 있습니다. 따라서 다른 서비스의 WCF 클라이언트를 포함하는 서비스를 만들 수 있습니다.  
+ 서비스 작업을 메서드로 노출 하는 클라이언트 응용 프로그램 구문 (Visual Basic 또는 시각적 개체와 같은 원하는 언어를 프로그래밍 하는.NET Framework에서 C#). 모든 응용 프로그램은 서비스를 호스트하는 응용 프로그램을 포함하여 WCF 클라이언트를 호스트할 수 있습니다. 따라서 다른 서비스의 WCF 클라이언트를 포함하는 서비스를 만들 수 있습니다.  
   
  사용 하 여 WCF 클라이언트를 자동으로 생성할 수는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 및 메타 데이터를 게시 하는 실행 중인 서비스에서 선택 합니다.  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-ms.openlocfilehash: 13d8d68140b68652b5e059ae9fb106f32142f698
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e51d999d5fcaf8180b4ea5189a3db9b6143a57db
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876865"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582724"
 ---
 # <a name="sql-clr-type-mismatches"></a>SQL-CLR 형식 불일치
 
@@ -39,7 +39,7 @@ SQL Server에서 쿼리를 실행하기 전에 Transact-SQL 매개 변수 값을
   - **TimeSpan**. 이 형식은 두 `DateTime` 값의 차이를 나타내며 SQL Server의 `timestamp`에 대응되지 않습니다. 일부 경우에는 CLR의 <xref:System.TimeSpan?displayProperty=nameWithType>이 SQL Server의 `TIME` 형식에 매핑될 수 있습니다. SQL Server의 `TIME` 형식은 24시간 미만의 양수 값을 나타낼 때만 사용되지만 CLR의 <xref:System.TimeSpan>은 나타낼 수 있는 범위가 넓습니다.
 
   > [!NOTE]
-  > [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]의 SQL Server 관련 <xref:System.Data.SqlTypes> 형식은 이러한 비교에 포함되지 않습니다.
+  > SQL Server 관련.NET Framework 형식 <xref:System.Data.SqlTypes> 이 비교에 포함 되지 않습니다.
 
 - SQL Server의 불일치
 
@@ -167,7 +167,7 @@ Where Col1 = Col2
 
   - 느슨하게 변환 `AND` / `OR` 연산자 경우 예기치 않은 오류가 발생할 수는 C# 식을 첫 번째 피연산자의 계산 결과 기반으로 하는 두 번째 피연산자 평가에 의존 합니다.
 
-- `Round()` 함수는 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 및 T-SQL에서 의미 체계가 다릅니다.
+- `Round()` 함수는 T-SQL 및.NET Framework에서 서로 다른 의미 체계를 있습니다.
 
 - 문자열의 시작 인덱스가 CLR에서는 0이지만 SQL에서는 1입니다. 따라서 인덱스가 있는 모든 함수에 인덱스 변환이 필요합니다.
 
@@ -194,7 +194,7 @@ Where Col1 = Col2
 [!code-csharp[DLinqMismatch#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqMismatch/cs/Program.cs#5)]
 [!code-vb[DLinqMismatch#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqMismatch/vb/Module1.vb#5)]
 
-- SQL은 대칭 산술 반올림을 수행하는 반면 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]는 banker’s rounding을 사용합니다. 자세한 내용은 기술 자료 문서 196652를 참조하세요.
+- SQL은.NET Framework는 은행원의 반올림을 사용 하는 동안 대칭 산술 반올림을 수행 합니다. 자세한 내용은 기술 자료 문서 196652를 참조하세요.
 
 - 기본적으로 일반 로캘의 경우 SQL에서 문자열 비교는 대/소문자를 구분하지 않습니다. Visual Basic 및 C#에서는 대/소문자를 구분합니다. 예를 들어 `s == "Food"` (`s = "Food"` Visual basic에서) 및 `s == "Food"` 하는 경우 다른 결과가 나타날 수 있습니다 `s` 는 `food`합니다.
 

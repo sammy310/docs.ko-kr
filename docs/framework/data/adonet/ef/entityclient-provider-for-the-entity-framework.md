@@ -2,12 +2,12 @@
 title: Entity Framework용 EntityClient 공급자
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: b8de4e36351a93858104a99045c5aeecce9d2997
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 268608c82070e60007bc09f97a775918e0d950f3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607076"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583700"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>Entity Framework용 EntityClient 공급자
 EntityClient 공급자는 Entity Framework 응용 프로그램에서 개념적 모델에 설명된 데이터에 액세스하는 데 사용하는 데이터 공급자입니다. 개념적 모델에 대 한 자세한 내용은 [모델링 및 매핑](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)합니다. EntityClient는 다른 .NET Framework 데이터 공급자를 사용하여 데이터 소스에 액세스합니다. 예를 들어, EntityClient는 SQL Server 데이터베이스에 액세스할 때 .NET Framework Data Provider for SQL Server(SqlClient)를 사용합니다. SqlClient 공급자에 대 한 자세한 내용은 [Entity Framework 용 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)합니다. EntityClient 공급자는 <xref:System.Data.EntityClient> 네임스페이스에 구현되어 있습니다.  
@@ -32,7 +32,7 @@ cmd.CommandText = @"SELECT VALUE p
 ```
   
 ## <a name="executing-queries"></a>쿼리 실행  
- 쿼리를 실행하면 쿼리에 대한 구문 분석이 수행되고 정식 명령 트리로 변환됩니다. 이후 모든 처리는 정식 명령 트리에서 수행됩니다. 명령 트리는 <xref:System.Data.EntityClient>와 기본 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 데이터 공급자(예: <xref:System.Data.SqlClient>) 간의 통신 수단입니다.  
+ 쿼리를 실행하면 쿼리에 대한 구문 분석이 수행되고 정식 명령 트리로 변환됩니다. 이후 모든 처리는 정식 명령 트리에서 수행됩니다. 명령 트리는 간의 통신 수단을 <xref:System.Data.EntityClient> 및 기본.NET Framework 데이터 공급자와 같은 <xref:System.Data.SqlClient>합니다.  
   
  <xref:System.Data.EntityClient.EntityDataReader>는 개념적 모델에 대한 <xref:System.Data.EntityClient.EntityCommand> 실행 결과를 노출합니다. <xref:System.Data.EntityClient.EntityDataReader>를 반환하는 명령을 실행하려면 <xref:System.Data.EntityClient.EntityCommand.ExecuteReader%2A>를 호출합니다. <xref:System.Data.EntityClient.EntityDataReader>는 결과를 다양한 구조로 보여 주는 <xref:System.Data.IExtendedDataRecord>를 구현합니다.  
   

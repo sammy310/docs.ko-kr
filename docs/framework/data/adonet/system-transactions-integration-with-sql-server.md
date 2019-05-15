@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 4ff415adf57bf72cb4da6d405f652a4a50c19041
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b59f9a1895b06cbc102afdceccb373a22ddafc1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033373"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583506"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>SQL Server와의 System.Transactions 통합
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 버전 2.0에는 <xref:System.Transactions> 네임스페이스를 통해 액세스할 수 있는 트랜잭션 프레임워크가 추가되었습니다. 이 프레임워크는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]을 포함하여 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]에 완전히 통합된 방식으로 트랜잭션을 노출시킵니다.  
+.NET Framework 버전 2.0 통해 액세스할 수 있는 트랜잭션 프레임 워크를 도입 합니다 <xref:System.Transactions> 네임 스페이스입니다. 이 프레임 워크는.NET Framework에 완전히 통합 되는 방식으로 트랜잭션을 노출 등 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]합니다.  
   
  프로그래밍 기능이 향상된 것 외에도 <xref:System.Transactions> 및 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 이 함께 작동하여 트랜잭션 사용 시 최적화되도록 조정할 수 있습니다. 승격 가능한 트랜잭션이란 필요에 따라 완전 분산 트랜잭션으로 자동 승격될 수 있는 간단한(로컬) 트랜잭션입니다.  
   
  부터는 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 <xref:System.Data.SqlClient> SQL Server를 사용 하 여 작업할 때 승격 가능한 트랜잭션을 지원 합니다. 승격 가능한 트랜잭션은 추가 오버헤드가 필요한 경우를 제외하고 분산 트랜잭션의 추가 오버헤드를 호출하지 않습니다. 승격 가능한 트랜잭션은 자동 이며 개발자의 개입 없이 필요 합니다.  
   
- 승격 가능한 트랜잭션을 사용 하는 경우에 사용할 수는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server (`SqlClient`) SQL Server를 사용 하 여 합니다.  
+ 승격 가능한 트랜잭션은 사용할 수 있는 SQL Server에 대 한.NET Framework Data Provider를 사용 하는 경우 (`SqlClient`) SQL Server를 사용 하 여 합니다.  
   
 ## <a name="creating-promotable-transactions"></a>승격 가능한 트랜잭션 만들기  
-  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider for SQL Server는 승격 가능한 트랜잭션을 지원합니다. 승격 가능한 트랜잭션은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] <xref:System.Transactions> 네임스페이스에서 클래스를 통해 처리됩니다. 승격 가능한 트랜잭션은 필요할 때까지 분산 트랜잭션 만들기를 연기하여 분산 트랜잭션을 최적화합니다. 리소스 관리자만 필요할 경우 분산 트랜잭션은 발생하지 않습니다.  
+ .NET Framework Provider for SQL Server는.NET Framework의 클래스를 통해 처리 되는 승격 가능한 트랜잭션을 지원 <xref:System.Transactions> 네임 스페이스입니다. 승격 가능한 트랜잭션은 필요할 때까지 분산 트랜잭션 만들기를 연기하여 분산 트랜잭션을 최적화합니다. 리소스 관리자만 필요할 경우 분산 트랜잭션은 발생하지 않습니다.  
   
 > [!NOTE]
 >  부분적으로 신뢰할 수 있는 시나리오에서 트랜잭션을 분산 트랜잭션으로 승격시키려면 <xref:System.Transactions.DistributedTransactionPermission> 이 필요합니다.  

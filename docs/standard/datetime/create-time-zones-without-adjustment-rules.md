@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a6af8647-7893-4f29-95a9-d94c65a6e8dd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb3ffc7b6f1f7baec7ce6beb5a50b706ff78bfa1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff4cfe2b492b676c061043f018390844f1807440
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026551"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586404"
 ---
 # <a name="how-to-create-time-zones-without-adjustment-rules"></a>방법: 조정 규칙을 사용하지 않고 표준 시간대 만들기
 
@@ -62,8 +62,6 @@ ms.locfileid: "62026551"
 ## <a name="compiling-the-code"></a>코드 컴파일
 
 이 예제에는 다음 사항이 필요합니다.
-
-* System.Core.dll에 대 한 참조를 프로젝트에 추가할 수 있습니다.
 
 * 다음 네임 스페이스를 가져와야 합니다.
 

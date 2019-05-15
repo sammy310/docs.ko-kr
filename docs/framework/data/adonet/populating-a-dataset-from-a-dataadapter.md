@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3fa0ac7d-e266-4954-bfac-3fbe2f913153
-ms.openlocfilehash: 0d9f349bf4e7e2a2a698dc988e5c366291169200
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: c49e810b830ecb7327f400d9ef183f4db9c7d736
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211449"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584563"
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>DataAdapter에서 DataSet 채우기
 합니다 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.DataSet> 독립적으로 일관성 있는 관계형 프로그래밍 모델의 데이터 소스를 제공 하는 데이터는 메모리 상주 표현입니다. `DataSet` 은 테이블 및 제약 조건과 테이블 간의 관계를 포함하는 완전한 데이터 집합을 나타냅니다. `DataSet` 은 데이터 소스에 독립적입니다. 따라서 `DataSet` 은 응용 프로그램에 대해 로컬인 데이터뿐 아니라 여러 데이터 소스의 데이터도 포함할 수 있습니다. 기존 데이터 소스와의 상호 작용은 `DataAdapter`를 통해 제어됩니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "65211449"
 > [!NOTE]
 >  `DataAdapter` 를 사용하여 모든 테이블을 검색하는 경우 시간이 많이 걸리며, 특히 테이블에 많은 행이 있는 경우 더욱 그렇습니다. 이는 데이터베이스에 액세스하여 데이터를 찾아서 처리한 다음 클라이언트로 데이터를 전송하는 데 많은 시간이 걸리기 때문입니다. 모든 테이블을 클라이언트로 가져오는 경우 서버의 모든 행이 잠기는 문제도 있습니다. 이 경우 `WHERE` 절을 사용하여 클라이언트에 반환되는 행 수를 대폭 줄이면 성능을 개선할 수 있습니다. `SELECT` 문에 필요한 열을 명시적으로 나열하여 클라이언트에 반환되는 데이터의 양을 줄일 수도 있습니다. 한 번에 몇 백 개씩 행을 일괄적으로 검색함으로써 클라이언트에서 현재 일괄 검색 작업이 완료되면 다음 일괄 검색 작업을 시작하는 것도 좋은 방법입니다.  
   
- `Fill` 메서드는 `DataReader` 개체를 암시적으로 사용하여 `DataSet`의 테이블 행을 채울 데이터와 `DataSet`에 테이블을 만드는 데 사용되는 열 이름 및 형식을 반환합니다. 테이블과 열은 없는 경우에만 만들어지고 있는 경우 `Fill` 에서 기존의 `DataSet` 스키마를 사용합니다. 열 형식으로 생성 됩니다 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 의 테이블에 따라 형식 [ADO.NET에서 데이터 형식 매핑](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)합니다. 기본 키가 데이터 소스에 없으면 기본 키는 만들어지지 않고 `DataAdapter`**를 통해 제어됩니다.**`MissingSchemaAction` 이 `MissingSchemaAction`**를 통해 제어됩니다.**`AddWithKey`를 통해 제어됩니다. `Fill` 에서 테이블의 기본 키가 있음을 발견하면 기본 키 열 값이 데이터 소스에서 반환된 행의 값과 일치하는 행의 데이터 소스 데이터로 `DataSet` 의 데이터를 덮어씁니다. 기본 키가 없으면 해당 데이터가 `DataSet`의 테이블에 추가됩니다. `Fill` 채울 때 있을 수 있는 모든 매핑을 사용 합니다 `DataSet` (참조 [DataAdapter DataTable 및 DataColumn 매핑](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md)).  
+ `Fill` 메서드는 `DataReader` 개체를 암시적으로 사용하여 `DataSet`의 테이블 행을 채울 데이터와 `DataSet`에 테이블을 만드는 데 사용되는 열 이름 및 형식을 반환합니다. 테이블과 열은 없는 경우에만 만들어지고 있는 경우 `Fill` 에서 기존의 `DataSet` 스키마를 사용합니다. 테이블에 따라.NET Framework 형식으로 열 유형이 만들어집니다 [ADO.NET의 데이터 형식 매핑을](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)합니다. 기본 키가 데이터 소스에 없으면 기본 키는 만들어지지 않고 `DataAdapter`**를 통해 제어됩니다.**`MissingSchemaAction` 이 `MissingSchemaAction`**를 통해 제어됩니다.**`AddWithKey`를 통해 제어됩니다. `Fill` 에서 테이블의 기본 키가 있음을 발견하면 기본 키 열 값이 데이터 소스에서 반환된 행의 값과 일치하는 행의 데이터 소스 데이터로 `DataSet` 의 데이터를 덮어씁니다. 기본 키가 없으면 해당 데이터가 `DataSet`의 테이블에 추가됩니다. `Fill` 채울 때 있을 수 있는 모든 매핑을 사용 합니다 `DataSet` (참조 [DataAdapter DataTable 및 DataColumn 매핑](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md)).  
   
 > [!NOTE]
 >  `SelectCommand` 가 OUTER JOIN의 결과를 반환하면 `DataAdapter` 는 결과 `PrimaryKey` 에 대해 `DataTable`값을 설정하지 않습니다. 행 중복 문제를 해결하려면 `PrimaryKey` 를 직접 정의해야 합니다. 자세한 내용은 [기본 키 정의](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)합니다.  
@@ -118,7 +118,7 @@ foreach (DataRow pRow in customerOrders.Tables["Customers"].Rows)
 ```  
   
 ## <a name="sql-server-decimal-type"></a>SQL Server Decimal 형식  
- 기본적으로 `DataSet` 에서는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 형식을 사용하여 데이터를 저장합니다. 대부분의 애플리케이션에서 이 형식을 사용하면 데이터 소스 정보를 간편하게 나타낼 수 있습니다. 그러나 이 표현은 데이터 소스의 데이터 형식이 SQL Server decimal 또는 숫자 데이터 형식인 경우 문제를 일으킬 수 있습니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] `decimal` 데이터 형식은 최대 28개의 유효 숫자를 허용하는 반면 SQL Server `decimal` 데이터 형식은 38개의 유효 숫자를 허용합니다. `SqlDataAdapter` 작업 중에 `Fill` 에서 SQL Server `decimal` 필드의 정밀도가 28자보다 크다고 판단하면 현재 행은 `DataTable`에 추가되지 않습니다. 대신 `FillError` 이벤트가 발생하므로 정밀도가 손실되는지 여부를 확인하여 적절하게 대응할 수 있습니다. 에 대 한 자세한 내용은 합니다 `FillError` 이벤트를 참조 하세요 [DataAdapter 이벤트 처리](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)합니다. `decimal` 개체를 사용하고 <xref:System.Data.SqlClient.SqlDataReader> 메서드를 호출하여 SQL Server <xref:System.Data.SqlClient.SqlDataReader.GetSqlDecimal%2A> 값을 확인할 수도 있습니다.  
+ 기본적으로 `DataSet` .NET Framework 데이터 형식을 사용 하 여 데이터를 저장 합니다. 대부분의 애플리케이션에서 이 형식을 사용하면 데이터 소스 정보를 간편하게 나타낼 수 있습니다. 그러나 이 표현은 데이터 소스의 데이터 형식이 SQL Server decimal 또는 숫자 데이터 형식인 경우 문제를 일으킬 수 있습니다. .NET Framework `decimal` 데이터 형식 최대 28 개의 유효 숫자를 허용 하는 반면 SQL Server `decimal` 38 개의 유효 숫자를 허용 합니다. `SqlDataAdapter` 작업 중에 `Fill` 에서 SQL Server `decimal` 필드의 정밀도가 28자보다 크다고 판단하면 현재 행은 `DataTable`에 추가되지 않습니다. 대신 `FillError` 이벤트가 발생하므로 정밀도가 손실되는지 여부를 확인하여 적절하게 대응할 수 있습니다. 에 대 한 자세한 내용은 합니다 `FillError` 이벤트를 참조 하세요 [DataAdapter 이벤트 처리](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)합니다. `decimal` 개체를 사용하고 <xref:System.Data.SqlClient.SqlDataReader> 메서드를 호출하여 SQL Server <xref:System.Data.SqlClient.SqlDataReader.GetSqlDecimal%2A> 값을 확인할 수도 있습니다.  
   
  [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0에서는 <xref:System.Data.SqlTypes> 의 `DataSet`에 대한 지원이 향상되었습니다. 자세한 내용은 [SqlTypes and the DataSet](../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)을 참조하세요.  
   

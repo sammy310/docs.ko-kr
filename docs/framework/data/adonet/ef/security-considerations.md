@@ -2,15 +2,15 @@
 title: 보안 고려 사항(Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 14d07fcb1d97a4e71747d6517f63fbc4108493da
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5a985cfcd4834efd7bbab04d30c86787dfb90955
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641179"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583500"
 ---
 # <a name="security-considerations-entity-framework"></a>보안 고려 사항(Entity Framework)
-이 항목에서는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 응용 프로그램의 개발, 배포 및 실행과 관련된 보안 고려 사항에 대해 설명합니다. 또한 보안 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 응용 프로그램을 만들기 위한 권장 사항도 따라야 합니다. 자세한 내용은 [보안 개요](../../../../../docs/framework/data/adonet/security-overview.md)합니다.  
+이 항목에서는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 응용 프로그램의 개발, 배포 및 실행과 관련된 보안 고려 사항에 대해 설명합니다. 또한 안전한.NET Framework 응용 프로그램을 만들기 위한 권장 사항을 따라야 합니다. 자세한 내용은 [보안 개요](../../../../../docs/framework/data/adonet/security-overview.md)합니다.  
   
 ## <a name="general-security-considerations"></a>일반적인 보안 고려 사항  
  다음 보안 고려 사항은 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]를 사용하는 모든 응용 프로그램에 적용됩니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "64641179"
  데이터 소스 관리자는 필요한 권한만 사용자에게 부여해야 합니다. [!INCLUDE[esql](../../../../../includes/esql-md.md)]에서 데이터를 수정하는 DML 문(예: INSERT, UPDATE 또는 DELETE)을 지원하지 않는 경우에도 사용자가 데이터 소스에 대한 연결에 액세스할 수 있습니다. 악의적인 사용자는 이 연결을 사용하여 데이터 소스의 기본 언어로 DML 문을 실행할 수 있습니다.  
   
 #### <a name="run-applications-with-the-minimum-permissions"></a>최소 권한으로 응용 프로그램을 실행합니다.  
- 관리되는 응용 프로그램이 완전 신뢰 권한으로 실행될 수 있도록 하면 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]에서 응용 프로그램의 컴퓨터 액세스를 제한하지 않습니다. 이로 인해 응용 프로그램에서 전체 시스템을 손상시키는 보안상 취약한 부분이 생길 수 있습니다. [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]에서 코드 액세스 보안 및 다른 보안 메커니즘을 사용하려면 부분 신뢰 권한 및 응용 프로그램 작동에 필요한 최소 권한 집합으로 응용 프로그램을 실행해야 합니다. 다음 코드 액세스 권한은 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 응용 프로그램에 필요한 최소 권한입니다.  
+ 완전 신뢰 권한으로 실행 하는 관리 되는 응용 프로그램을 허용 하는 경우.NET Framework는 컴퓨터에 대 한 응용 프로그램의 액세스를 제한 하지 않습니다. 이로 인해 응용 프로그램에서 전체 시스템을 손상시키는 보안상 취약한 부분이 생길 수 있습니다. .NET Framework의 코드 액세스 보안 및 다른 보안 메커니즘을 사용 하려면 부분 신뢰 권한을 사용 하 여 및 최소 함수에 응용 프로그램을 사용 하도록 설정 하는 데 필요한 사용 권한 집합을 사용 하 여 응용 프로그램 실행 해야 합니다. 다음 코드 액세스 권한은 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 응용 프로그램에 필요한 최소 권한입니다.  
   
 - <xref:System.Security.Permissions.FileIOPermission>: 지정한 메타데이터 파일을 열 수 있는 <xref:System.Security.Permissions.FileIOPermissionAccess.Write> 또는 디렉터리에서 메타데이터 파일을 검색할 수 있는 <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery>  
   
