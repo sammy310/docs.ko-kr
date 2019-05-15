@@ -6,12 +6,12 @@ helpviewer_keywords:
 - bugreport compiler option [Visual Basic]
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
-ms.openlocfilehash: 6ff9aa23fb6d7dee5c245ed174318f6589e7d245
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 440e583b55765d680ee72f8574f929e335e10cdb
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624314"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590636"
 ---
 # <a name="-bugreport"></a>-bugreport
 버그 보고서를 파일로 작성할 때는 사용할 수 있는 파일을 만듭니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "64624314"
  모든 소스 코드 파일의 복사본에 포함 되어 있으므로 `file`을 최대한 짧은 프로그램에 코드 결함을 재현 하는 것이 좋습니다.  
   
 > [!IMPORTANT]
->  `-bugreport` 옵션은 잠재적으로 중요 한 정보가 포함 된 파일을 생성 합니다. 현재 컴파일러 버전을 여기에 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 버전, OS 버전, 사용자 이름, 명령줄 인수는 컴파일러가 실행 된 모든 소스 코드와 참조 된 어셈블리의 이진 형식입니다. 이 옵션의 서버 쪽 컴파일에 Web.config 파일에서 명령줄 옵션을 지정 하 여 액세스할 수는 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] 응용 프로그램입니다. 이 방지 하려면 사용자가 서버에서 컴파일하지 합니다 Machine.config 파일을 수정 합니다.  
+>  `-bugreport` 옵션은 잠재적으로 중요 한 정보가 포함 된 파일을 생성 합니다. 이 현재 시간, 컴파일러 버전,.NET Framework 버전, OS 버전, 사용자 이름, 명령줄 인수는 컴파일러를 실행 하면서 모든 소스 코드 및 모든 참조 된 어셈블리의 이진 형식을 포함 합니다. 이 옵션은 ASP.NET 응용 프로그램의 서버 쪽 컴파일에 Web.config 파일에서 명령줄 옵션을 지정 하 여 액세스할 수 있습니다. 이 방지 하려면 사용자가 서버에서 컴파일하지 합니다 Machine.config 파일을 수정 합니다.  
   
  이 옵션을 사용 하 여 사용 하는 경우 `-errorreport:prompt`, `-errorreport:queue`, 또는 `-errorreport:send`, 응용 프로그램에서 정보를 내부 컴파일러 오류를 발견 한 `file` Microsoft Corporation에 전송 됩니다. 이 정보는 Microsoft 엔지니어가 오류의 원인을 파악 하는 데 도움이 되며 Visual Basic의 다음 릴리스를 개선 하는 데 도움이 될 수 있습니다. 기본적으로 정보가 Microsoft로 전송 됩니다. 그러나 컴파일하는 경우 응용 프로그램 사용 하 여 `-errorreport:queue`기본적으로 설정 되는, 응용 프로그램은 해당 오류 보고서를 수집 합니다. 그런 다음 컴퓨터의 관리자가 로그인 할 때 오류 보고 시스템 관리자 로그온 이후 발생 한 모든 오류를 보고 하는 Microsoft로 전달할 수 있도록 하는 팝업 창을 표시 합니다.  
   

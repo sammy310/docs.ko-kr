@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 697cd40482aee73fd150359acb710ffc258c3df2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82898e80f5acb2cb0dcab65390701efc8d48115b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61908676"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586569"
 ---
 # <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>방법: 컴퓨터에 있는 표준 시간대 열거
 
@@ -62,8 +62,6 @@ ms.locfileid: "61908676"
 ## <a name="compiling-the-code"></a>코드 컴파일
 
 이 예제에는 다음 사항이 필요합니다.
-
-* System.Core.dll에 대 한 참조를 프로젝트에 추가할 수 있습니다.
 
 * 다음 네임 스페이스를 가져와야 합니다.
 

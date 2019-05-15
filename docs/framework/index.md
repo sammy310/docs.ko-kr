@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6e21d2514ad357c906885750d9320575bdb75b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d93dea42dbb854d8d52bd5cf3e54d1ce0d892d6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643935"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635527"
 ---
 # <a name="net-framework-guide"></a>.NET Framework 가이드
 
@@ -28,7 +28,7 @@ ms.locfileid: "61643935"
 
 사용자와 개발자 모두를 위한 .NET Framework에 대한 일반적인 소개는 [시작](./get-started/index.md)을 참조하십시오. .NET Framework의 아키텍처 및 주요 기능에 대한 소개는 [개요](./get-started/overview.md)를 참조하세요.
 
-[Windows 컨테이너](/virtualization/windowscontainers/about/)를 통해 Docker와 함께 .NET Framework를 사용할 수 있습니다. [Docker를 통해 .NET Framework 애플리케이션 배포](./docker/index.md)를 참조하여 Docker 컨테이너에서 애플리케이션을 실행하는 방법을 알아봅니다.
+[Windows 컨테이너](/virtualization/windowscontainers/about/)를 통해 Docker와 함께 .NET Framework를 사용할 수 있습니다.
 
 ## <a name="installation"></a>설치
 
@@ -51,9 +51,6 @@ Windows와 함께 .NET Framework를 사용하면 .NET Framework 애플리케이�
 
 * [마이그레이션 가이드](./migration-guide/index.md)  
 애플리케이션을 새 버전의 .NET Framework로 마이그레이션하는 경우 고려해야 할 리소스 및 변경 내용 목록을 제공합니다.
-
-* [Docker 가이드의 .NET Framework](./docker/index.md)  
-Windows 컨테이너를 사용하여 Docker를 통해 .NET Framework 애플리케이션을 실행할 리소스를 제공합니다.
 
 * [개발 가이드](./development-guide.md)  
 만들기, 구성, 디버깅, 보안, 애플리케이션 배포, 동적 프로그래밍에 대한 정보, 상호 운용성, 확장성, 메모리 관리 및 스레딩을 포함하여 애플리케이션 개발에 대한 모든 주요 기술 분야 및 작업에 대한 지침을 제공합니다.

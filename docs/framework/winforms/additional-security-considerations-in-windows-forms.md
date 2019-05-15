@@ -7,15 +7,15 @@ helpviewer_keywords:
 - security [Windows Forms], calling APIs
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
-ms.openlocfilehash: a101b5838b843f0130d16aab6eb199c7a54ca6b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3049b56589b2cd7f5e6cab462955a67289315b35
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669318"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588768"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Windows Forms의 추가 보안 고려 사항
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 보안 설정으로 인해 부분적으로 신뢰할 수 있는 환경에서는 로컬 컴퓨터에서와는 다르게 응용 프로그램이 실행될 수 있습니다. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 여러 가지 중에서도 파일 시스템, 네트워크 및 관리되지 않는 API와 같은 중요한 로컬 리소스에 대한 액세스를 제한합니다. 보안 설정을 Microsoft Windows API 또는 보안 시스템에서 확인할 수 없는 기타 Api를 호출 하는 기능을 영향을 줍니다. 또한 파일, 데이터 액세스, 인쇄를 비롯한 애플리케이션의 다른 측면에도 영향을 줍니다. 부분 신뢰 환경에서의 파일 및 데이터 액세스에 대한 자세한 내용은 [Windows Forms의 파일 및 데이터 액세스 추가 보안](more-secure-file-and-data-access-in-windows-forms.md)을 참조하세요. 부분 신뢰 환경에서의 인쇄에 대한 자세한 내용은 [Windows Forms의 인쇄 추가 보안](more-secure-printing-in-windows-forms.md)을 참조하세요.  
+.NET framework 보안 설정을 보다 부분 신뢰 환경에서 로컬 컴퓨터에서 서로 다르게 실행 되도록 응용 프로그램에 발생할 수 있습니다. .NET Framework는 파일 시스템, 네트워크 및 관리 되지 않는 Api와 같은 중요 한 로컬 리소스에 액세스를 제한합니다. 보안 설정을 Microsoft Windows API 또는 보안 시스템에서 확인할 수 없는 기타 Api를 호출 하는 기능을 영향을 줍니다. 또한 파일, 데이터 액세스, 인쇄를 비롯한 애플리케이션의 다른 측면에도 영향을 줍니다. 부분 신뢰 환경에서의 파일 및 데이터 액세스에 대한 자세한 내용은 [Windows Forms의 파일 및 데이터 액세스 추가 보안](more-secure-file-and-data-access-in-windows-forms.md)을 참조하세요. 부분 신뢰 환경에서의 인쇄에 대한 자세한 내용은 [Windows Forms의 인쇄 추가 보안](more-secure-printing-in-windows-forms.md)을 참조하세요.  
   
  다음 섹션에는 클립보드를 사용 하 여 작업, 창 조작 수행, 부분 신뢰 환경에서 실행 되는 응용 프로그램에서 Windows API를 호출 하는 방법을 설명 합니다.  
   

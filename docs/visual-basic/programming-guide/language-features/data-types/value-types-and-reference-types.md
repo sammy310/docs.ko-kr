@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-ms.openlocfilehash: f823d9e80eb644487eab1ed84345dd8bdc10efc2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 541fe9f176a6210372b58753254692142f086992
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600937"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589828"
 ---
 # <a name="value-types-and-reference-types"></a>Value Types and Reference Types
 Visual Basic의 경우 데이터 형식은 분류에 따라 구현 됩니다. Visual Basic 데이터 형식 특정 형식의 변수는 자체 데이터 또는 데이터에 대 한 포인터를 저장 하는 여부에 따라 분류할 수 있습니다. 자체 데이터를 저장 하는 경우는 *값 형식*데이터는 메모리에 다른 곳에서 포인터를 보유 하는 경우를 *참조 형식*합니다.  
@@ -46,7 +46,7 @@ Visual Basic의 경우 데이터 형식은 분류에 따라 구현 됩니다. Vi
   
 - 대리자  
   
- 클래스는 *유형을 참조*합니다. 이러한 이유로 같은 참조 형식이 `Object` 하 고 `String` 지 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 클래스입니다. 모든 배열은 참조 형식 인지, 해당 멤버 값 형식인 경우에 참고 합니다.  
+ 클래스는 *유형을 참조*합니다. 이러한 이유로 같은 참조 형식이 `Object` 및 `String` .NET Framework 클래스에 의해 지원 됩니다. 모든 배열은 참조 형식 인지, 해당 멤버 값 형식인 경우에 참고 합니다.  
   
  모든 참조 형식을 나타내므로 기본.NET Framework 클래스를 사용 해야 합니다 [New 연산자](../../../../visual-basic/language-reference/operators/new-operator.md) 초기화할 때 키워드입니다. 다음 문은 배열을 초기화합니다.  
   

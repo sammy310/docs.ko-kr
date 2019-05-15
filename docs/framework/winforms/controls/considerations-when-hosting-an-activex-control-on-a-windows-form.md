@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, hosting ActiveX controls
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 2509302d-a74e-484f-9890-2acdbfa67a68
-ms.openlocfilehash: 9b037dfbb3a82b8df4c91468eeb8b2dea24e2a37
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b604502e0fea591460f30cae28b64ff1703da65
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625418"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589437"
 ---
 # <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a>Windows Form에서 ActiveX 컨트롤을 호스팅할 때의 고려 사항
 Windows Forms는 Windows Forms 컨트롤을 호스팅하도록 최적화되어 있지만 ActiveX 컨트롤을 사용할 수도 있습니다. ActiveX 컨트롤을 사용하는 애플리케이션을 계획할 때 다음 사항을 고려하세요.  
@@ -26,7 +26,7 @@ Windows Forms는 Windows Forms 컨트롤을 호스팅하도록 최적화되어 �
     >  ActiveX 컨트롤을 사용하려면 COM interop 래퍼를 사용해야 합니다. 자세한 내용은 [Visual Basic 및 Visual C#의 COM 상호 운용성](~/docs/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)을 참조하세요.  
   
     > [!NOTE]
-    >  ActiveX 컨트롤의 멤버 이름에 정의 된 이름과 일치 하는 경우는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], ActiveX 컨트롤 가져오기에서 멤버 이름의 접두사는 다음 **Ctl** 를 만들 때의 <xref:System.Windows.Forms.AxHost> 클래스를 파생 합니다. 예를 들어 ActiveX 컨트롤에 **Layout**이라는 멤버가 있으면 **Layout** 이벤트가 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]에 이미 정의되어 있으므로 AxHost 파생 클래스에서 이 멤버의 이름이 **CtlLayout**으로 변경됩니다.  
+    >  ActiveX 컨트롤 가져오기에서 멤버 이름의 접두사는 경우 ActiveX 컨트롤의 멤버 이름에는.NET Framework에 정의 된 이름과 일치 하 **Ctl** 를 만들 때의 <xref:System.Windows.Forms.AxHost> 클래스를 파생 합니다. 예를 들어, ActiveX 컨트롤 이라는 멤버가 있으면 **레이아웃**, 이름이 **CtlLayout** AxHost 파생 클래스에서 때문에 **레이아웃** 이벤트 내에 정의 되어 합니다. NET 프레임 워크입니다.  
   
 ## <a name="see-also"></a>참고자료
 

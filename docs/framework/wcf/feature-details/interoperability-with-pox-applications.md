@@ -2,19 +2,19 @@
 title: POX 응용 프로그램과 상호 운용
 ms.date: 03/30/2017
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
-ms.openlocfilehash: b7fdb4e16bce52025515ced065d0f48cffb7fa3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 17b85ab41589a130e950cd52c759305cc17e92b7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046894"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591053"
 ---
 # <a name="interoperability-with-pox-applications"></a>POX 응용 프로그램과 상호 운용
 
 "Plain Old XML" (POX) 응용 프로그램은 SOAP 봉투 내에 포함 되지 않은 XML 응용 프로그램 데이터만 포함 하는 원시 HTTP 메시지를 교환 하 여 통신 합니다. Windows Communication Foundation (WCF) 서비스 및 POX 메시지를 사용 하는 클라이언트에 제공할 수 있습니다. 서비스에서 WCF 웹 브라우저 같은 클라이언트에 끝점을 노출 하는 서비스 및 POX 메시지를 송수신 하는 스크립팅 언어 구현 하기 위해 사용할 수 있습니다. 클라이언트에서 WCF 프로그래밍 모델을 POX 기반 서비스와 통신 하는 클라이언트 구현에 사용할 수 있습니다.  
   
 > [!NOTE]
-> 이 문서는 원래 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0용으로 작성되었습니다.  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.5는 POX 응용 프로그램 작업에 대한 지원을 기본적으로 제공합니다. 참조에 대 한 자세한 내용은 [WCF 웹 HTTP 프로그래밍 모델](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)합니다.
+> 이 문서는.NET Framework 3.0에 대 한 원래 작성 되었습니다.  .NET framework 3.5는 POX 응용 프로그램을 사용 하 여 작업에 대 한 기본 제공 지원 합니다. 참조에 대 한 자세한 내용은 [WCF 웹 HTTP 프로그래밍 모델](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)합니다.
   
 ## <a name="pox-programming-with-wcf"></a>WCF 사용한 POX 프로그래밍
 

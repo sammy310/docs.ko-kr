@@ -5,22 +5,22 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: a05ddd714e85491d29aa5de574b4cdc36165c224
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 3d8e6d37a5c27eac6af303819fb50b28acd225c6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469522"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589049"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Windows Forms에 사용할 수 있는 컨트롤
 다음은 사전순 목록 컨트롤 및 Windows Forms에서 사용할 수 있는 구성 요소입니다. 이 섹션에서 다루는 Windows Forms 컨트롤 외에 Windows Forms에 ActiveX 및 사용자 지정 컨트롤을 추가할 수 있습니다. 여기에 나열된 목록에서 사용자가 필요한 컨트롤을 찾을 수 없는 경우 직접 만들 수도 있습니다. 자세한 내용은 [디자인할 때 Windows Forms 컨트롤 개발](developing-windows-forms-controls-at-design-time.md)을 참조하십시오. 필요한 컨트롤을 선택하는 방법에 대한 자세한 내용은 [기능별 Windows Forms 컨트롤](windows-forms-controls-by-function.md)을 참조하십시오.  
   
 > [!NOTE]
->  Visual Basic 컨트롤 클래스를 기반으로 하 여 제공 된 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]합니다.  
+>  Visual Basic 컨트롤은.NET Framework에서 제공 하는 클래스를 기반으로 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [기능별 Windows Forms 컨트롤](windows-forms-controls-by-function.md)  
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]을 기반으로 Windows Forms 컨트롤을 나열하고 설명합니다.  
+ 나열 하 고.NET Framework를 기반으로 하는 Windows Forms 컨트롤에 설명 합니다.  
   
  [소유자 그리기 지원이 기본 제공되는 컨트롤](controls-with-built-in-owner-drawing-support.md)  
  속성을 통해 사용할 수 없는 컨트롤의 모양의 측면을 변경하는 방법을 설명합니다.  
@@ -168,7 +168,7 @@ ms.locfileid: "65469522"
  사용자가 고정된 컨트롤의 크기를 조정할 수 있습니다.  
   
  [Splitter 컨트롤](splitter-control-windows-forms.md)  
- 사용자가 고정된 컨트롤의 크기를 조정할 수 있습니다([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 버전 1.x).  
+ 도킹된 된 컨트롤의 크기를 조정할 수 있습니다 (.NET Framework 버전 1.x).  
   
  [StatusBar 컨트롤](statusbar-control-windows-forms.md)  
  포커스가 있는 컨트롤에 관련된 상태 정보를 표시합니다. <xref:System.Windows.Forms.StatusStrip>은 이전 버전의 <xref:System.Windows.Forms.StatusBar> 컨트롤을 대체하고 확장하지만 이전 버전과의 호환성 및 앞으로의 사용 가능성을 고려하여 <xref:System.Windows.Forms.StatusBar>를 유지하도록 선택할 수 있습니다.  

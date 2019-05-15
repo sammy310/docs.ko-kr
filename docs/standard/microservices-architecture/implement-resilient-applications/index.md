@@ -1,15 +1,13 @@
 ---
 title: 복원력 있는 애플리케이션 구현
 description: 마이크로 서비스 아키텍처의 핵심 개념인 복원력에 대해 알아봅니다. 일시적 오류가 발생하기 때문에 일시적 오류를 적절하게 처리하는 방법을 알아야 합니다.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/16/2018
-ms.openlocfilehash: 00724509ba6e027ef73f72bfb6f85b8ec0aa9d25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 766349e72389f848b0a741b020707cc7acf3410d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61977717"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639850"
 ---
 # <a name="implement-resilient-applications"></a>복원력 있는 애플리케이션 구현
 

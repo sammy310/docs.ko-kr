@@ -2,12 +2,12 @@
 title: 추적 프로필
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: 2fa4d65a6f0056824b2fc9dd67b93608777fc75d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c934ec9fd0524506577ab4457a2ec194d4d0cba7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699675"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589940"
 ---
 # <a name="tracking-profiles"></a>추적 프로필
 
@@ -17,7 +17,7 @@ ms.locfileid: "61699675"
 
 워크플로 인스턴스에 내보낼 추적 정보를 지정하는 데 사용되는 추적 프로필입니다. 프로필을 지정하지 않으면 모든 추적 이벤트를 내보냅니다. 프로필을 지정하면 프로필에 지정된 추적 이벤트를 내보냅니다. 모니터링 요구 사항에 따라 워크플로에서 상위 수준의 상태 변경 내용 중 작은 부분만 구독하는 매우 개괄적인 프로필을 작성할 수 있습니다. 이와 반대로 이후에 세부 실행 흐름을 다시 작성할 수 있을 정도로 상세한 결과 이벤트를 포함하는 아주 자세한 프로필을 만들 수도 있습니다.
 
-추적 프로필은 표준 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 구성 파일 내에 XML 요소로 표시되거나 코드로 지정됩니다. 다음 예제에서는 추적 참가자가 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 및 `Started` 워크플로 이벤트를 구독할 수 있도록 하는 구성 파일의 `Completed` 추적 프로필을 보여 줍니다.
+추적 프로필을 표준.NET Framework 구성 파일 내에서 XML 요소로 나타날 하거나 코드에서 지정 합니다. 다음 예제에서는 추적 참가자가 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 및 `Started` 워크플로 이벤트를 구독할 수 있도록 하는 구성 파일의 `Completed` 추적 프로필을 보여 줍니다.
 
 ```xml
 <system.serviceModel>

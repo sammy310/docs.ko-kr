@@ -17,12 +17,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: a4c9ae12f2ec30d471c6e73af17567547e4dc421
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4706f306e8db252b35148f8e6a0f8c42122f5482
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598433"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583381"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Visual Basic의 변수 선언
 이름 및 특성을 지정 하려면 변수를 선언 하면 됩니다. 변수에 대 한 선언문이 합니다 [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md)합니다. 해당 위치 및 내용을 변수의 특성을 결정 합니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "64598433"
   
 - 개체 유형 또는 응용 프로그램 또는 다른 응용 프로그램에 정의 된 클래스  
   
-- A [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 클래스와 같이 <xref:System.Windows.Forms.Label> 또는 <xref:System.Windows.Forms.TextBox>  
+- .NET Framework 클래스와 같이 <xref:System.Windows.Forms.Label> 또는 <xref:System.Windows.Forms.TextBox>  
   
 - 인터페이스와 같은 입력 <xref:System.IComparable> 또는 <xref:System.IDisposable>  
   

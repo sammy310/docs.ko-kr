@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-ms.openlocfilehash: 00b64bdd3795cf282847a3bbaa0940f76faa1c2e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1db509d8f1c672bf51cac7f1ca6b1af91b34fa4d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637533"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591268"
 ---
 # <a name="using-the-message-class"></a>Message 클래스 사용
 <xref:System.ServiceModel.Channels.Message> Windows Communication Foundation (WCF)에 기본 클래스입니다. 클라이언트와 서비스 간의 모든 통신에서 결국 <xref:System.ServiceModel.Channels.Message> 인스턴스의 전송과 수신이 발생합니다.  
   
  일반적으로 <xref:System.ServiceModel.Channels.Message> 클래스와 직접 상호 작용하지는 않습니다. 대신 데이터 계약, 메시지 계약 및 작업 계약과 같은 WCF 서비스 모델 구문에 들어오고 나가는 메시지를 설명 하기 위해 사용 됩니다. 그러나 일부 고급 시나리오에서는 <xref:System.ServiceModel.Channels.Message> 클래스를 직접 사용하여 프로그래밍할 수 있습니다. 예를 들어 다음과 같은 경우 <xref:System.ServiceModel.Channels.Message> 클래스를 사용할 수 있습니다.  
   
-- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 개체를 serialize하는 대신 보내는 메시지 내용을 만드는 대체 방법이 필요한 경우(예: 디스크의 파일에서 직접 메시지 생성).  
+- .NET Framework 개체를 직렬화 하는 대신 보내는 메시지 내용 (예: 디스크의 파일에서 직접 메시지 만들기)를 만드는 대체 방법이 필요한 경우.  
   
-- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 개체로 deserialize하는 대신 들어오는 메시지 내용을 사용하는 대체 방법이 필요한 경우(예: 원시 XML 콘텐츠에 XSLT 변환을 적용하려는 경우)  
+- 경우 (예: 원시 XML 콘텐츠에 XSLT 변형을 적용 하려는 경우) 들어오는 메시지 콘텐츠를 사용 하 여.NET Framework 개체로 역직렬화 하는 대신 하는 또 다른 방법은 해야 합니다.  
   
 - 메시지 내용에 관계없이 일반적인 방법으로 메시지를 처리해야 하는 경우(예: 라우터, 부하 분산 장치 또는 게시-구독 시스템을 구축할 때 메시지를 라우팅 또는 전달하는 경우)  
   

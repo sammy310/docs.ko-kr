@@ -12,12 +12,12 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: e267c0c4d1d3e8f986348863d933c984f686b33b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92430f23b3d4d6237d0b6ec606ce2cb9b945f6f8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973344"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590035"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>문자열 이름을 사용하여 속성 또는 메서드 호출(Visual Basic)
 대부분의 경우에서 디자인 타임에 개체의 메서드와 속성을 검색 하 고 처리 하는 코드를 작성할 수 있습니다. 그러나 경우에 따라 모르고 개체의 속성 및 메서드에 대 한 사전에 또는 속성을 지정 하거나 런타임에 메서드를 실행 하려면 최종 사용자의 유연성 할 수 있습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "61973344"
   
  첫 번째 인수 *개체*, 취할 하려는 개체의 이름을 사용 합니다. 합니다 *ProcedureName* 인수가 호출할 메서드 또는 속성 프로시저의 이름을 포함 하는 문자열을 사용 합니다. *CallType* 를 호출 하는 프로시저의 유형을 나타내는 상수를 사용 하는 인수: 메서드 (`Microsoft.VisualBasic.CallType.Method`), 속성 읽기 (`Microsoft.VisualBasic.CallType.Get`), 또는 속성 설정 (`Microsoft.VisualBasic.CallType.Set`). 합니다 *인수* 인수는 선택 사항인 형식의 배열을 사용 `Object` 프로시저에 인수를 포함 하는 합니다.  
   
- 사용할 수 있습니다 `CallByName` 현재 솔루션에 클래스를 사용 하 여는 주로 COM 개체에 액세스할 수 또는 개체에서 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 어셈블리입니다.  
+ 사용할 수 있습니다 `CallByName` 하지만 현재 솔루션의 클래스는 주로.NET Framework 어셈블리에서 COM 개체 또는 개체를 액세스할 수 있습니다.  
   
  클래스를 포함 하는 어셈블리에 대 한 참조를 추가 한다고 가정 `MathClass`, 라는 새 함수를 있는 `SquareRoot`다음 코드 에서처럼:  
   

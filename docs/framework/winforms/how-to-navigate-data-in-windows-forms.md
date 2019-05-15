@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CurrencyManager class [Windows Forms], navigating Windows Forms data
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
-ms.openlocfilehash: 2ba33f9ecb3a12a62c41af17d3f9ad6f6e3f8a5d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 452aacab4580a3b07168daa6b7c03740dc98620b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801714"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583735"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>방법: Windows Forms에서 데이터 탐색
 Windows 응용 프로그램에서 데이터 원본에서 레코드를 탐색 하는 가장 쉬운 방법은에 바인딩하는 것을 <xref:System.Windows.Forms.BindingSource> 데이터 원본 및 다음 바인딩 컨트롤을 구성 요소는 <xref:System.Windows.Forms.BindingSource>합니다. 기본 제공 탐색 메서드를 사용 합니다는 <xref:System.Windows.Forms.BindingSource> 이러한를 <xref:System.Windows.Forms.BindingSource.MoveNext%2A>를 <xref:System.Windows.Forms.BindingSource.MoveLast%2A>를 <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> 및 <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>합니다. 이러한 메서드를 사용 하 여 조정 됩니다 합니다 <xref:System.Windows.Forms.BindingSource.Position%2A> 및 <xref:System.Windows.Forms.BindingSource.Current%2A> 의 속성을 <xref:System.Windows.Forms.BindingSource> 적절 하 게 합니다. 또한 항목을 찾을 설정 하 여 현재 항목으로 설정 된 <xref:System.Windows.Forms.BindingSource.Position%2A> 속성입니다.  
@@ -26,7 +26,7 @@ Windows 응용 프로그램에서 데이터 원본에서 레코드를 탐색 하
 1. 설정 합니다 <xref:System.Windows.Forms.BindingSource.Position%2A> 의 속성을 <xref:System.Windows.Forms.BindingSource> 이동할 레코드 위치에 바인딩된 데이터에 대 한 합니다. 다음 예제를 사용 하 여를 <xref:System.Windows.Forms.BindingSource.MoveNext%2A> 메서드의 <xref:System.Windows.Forms.BindingSource> 증가 시 키를 <xref:System.Windows.Forms.BindingSource.Position%2A> 속성 때는 `nextButton` 를 클릭 합니다. 합니다 <xref:System.Windows.Forms.BindingSource> 연관 된 합니다 `Customers` 데이터 집합의 테이블 `Northwind`합니다.  
   
     > [!NOTE]
-    >  설정 합니다 <xref:System.Windows.Forms.BindingSource.Position%2A> 속성의 첫 번째 또는 마지막 레코드 보다 큰 값을 얻지 오류가로 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 목록의 범위를 벗어난 값으로 위치를 설정 하는 데 하면 합니다. 첫 번째 또는 마지막 레코드를 지난를 벗어났는지 여부를 알아야 응용 프로그램에서 중요 한 경우에 데이터 요소 수를 초과 했는지 여부를 테스트 하는 논리가 포함 됩니다.  
+    >  설정 된 <xref:System.Windows.Forms.BindingSource.Position%2A> .NET Framework 위치 목록의 범위를 벗어난 값으로 설정 하는 데 허용 되지 것입니다 속성의 첫 번째 또는 마지막 레코드 보다 큰 값을 오류가 발생 하지 않습니다. 첫 번째 또는 마지막 레코드를 지난를 벗어났는지 여부를 알아야 응용 프로그램에서 중요 한 경우에 데이터 요소 수를 초과 했는지 여부를 테스트 하는 논리가 포함 됩니다.  
   
      [!code-csharp[System.Windows.Forms.NavigatingData#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.NavigatingData#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#4)]  

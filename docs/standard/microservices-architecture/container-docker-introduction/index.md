@@ -1,15 +1,13 @@
 ---
 title: 컨테이너 및 Docker 소개
 description: 컨테이너화된 .NET 애플리케이션을 위한 .NET 마이크로 서비스 아키텍처 | 컨테이너 및 Docker 소개
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: cf86640456af03d4c44f537fe1ff3282521f2200
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb6244939f6ae89ba1dc824b55a21d1e010cef5e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62025509"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644511"
 ---
 # <a name="introduction-to-containers-and-docker"></a>컨테이너 및 Docker 소개
 

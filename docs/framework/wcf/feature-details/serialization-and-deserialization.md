@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: cf68834c5612ed51fb3e6c0ed18667cbc13482bc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 87788906cfbf5b230c3b976395d9a40c655ae41a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586214"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591652"
 ---
 # <a name="serialization-and-deserialization"></a>Serialization 및 Deserialization
-Windows Communication Foundation (WCF)는 새 serialization 엔진을 포함 합니다 <xref:System.Runtime.Serialization.DataContractSerializer>합니다. <xref:System.Runtime.Serialization.DataContractSerializer> 는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 개체를 XML로, XML을 .NET Framework 개체로 변환합니다. 이 항목에서는 serializer가 작동하는 방식에 대해 설명합니다.  
+Windows Communication Foundation (WCF)는 새 serialization 엔진을 포함 합니다 <xref:System.Runtime.Serialization.DataContractSerializer>합니다. <xref:System.Runtime.Serialization.DataContractSerializer> .NET Framework 개체와 XML을 양방향으로 변환 합니다. 이 항목에서는 serializer가 작동하는 방식에 대해 설명합니다.  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 개체를 serialize할 때 serializer에서는 새 *데이터 계약* 모델을 포함하여 다양한 serialization 프로그래밍 모델을 인식합니다. 지원되는 형식의 전체 목록은 [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)을 참조하십시오. 데이터 계약에 대한 소개는 [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)을 참조하십시오.  
+ Serializer가 인식 다양 한 serialization 프로그래밍 모델을 포함 하 여 새.NET Framework 개체를 직렬화 할 때 *데이터 계약* 모델입니다. 지원되는 형식의 전체 목록은 [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)을 참조하십시오. 데이터 계약에 대한 소개는 [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)을 참조하십시오.  
   
  XML을 deserialize할 때 serializer에서는 <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XmlWriter> 클래스를 사용합니다. 또한 지원 합니다 <xref:System.Xml.XmlDictionaryReader> 및 <xref:System.Xml.XmlDictionaryWriter> WCF 이진 XML을 사용 하 여이 형식을 지정 하는 등의 일부 경우에 최적화 된 XML을 생성할 수 있도록 하는 클래스입니다.  
   
- WCF에는 또한는 도우미 serializer는 <xref:System.Runtime.Serialization.NetDataContractSerializer>합니다. <xref:System.Runtime.Serialization.NetDataContractSerializer> 는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 형식 이름을 serialize된 데이터의 일부로 내보내므로 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 및 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] serializer와 유사합니다. 그리고 serialize 측과 deserialize 측에서 동일한 형식을 공유할 때 사용됩니다. <xref:System.Runtime.Serialization.DataContractSerializer> 및 <xref:System.Runtime.Serialization.NetDataContractSerializer> 는 모두 공통 기본 클래스인 <xref:System.Runtime.Serialization.XmlObjectSerializer>에서 파생됩니다.  
+ WCF에는 또한는 도우미 serializer는 <xref:System.Runtime.Serialization.NetDataContractSerializer>합니다. 합니다 <xref:System.Runtime.Serialization.NetDataContractSerializer> 비슷합니다는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 및 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> serializer 내보내므로.NET Framework 형식 이름을 serialize 된 데이터의 일부로. 그리고 serialize 측과 deserialize 측에서 동일한 형식을 공유할 때 사용됩니다. <xref:System.Runtime.Serialization.DataContractSerializer> 및 <xref:System.Runtime.Serialization.NetDataContractSerializer> 는 모두 공통 기본 클래스인 <xref:System.Runtime.Serialization.XmlObjectSerializer>에서 파생됩니다.  
   
 > [!WARNING]
 >  <xref:System.Runtime.Serialization.DataContractSerializer> 는 20 미만의 16진수 값이 있는 제어 문자를 포함하는 문자열을 XML 엔터티로 serialize합니다. WCF 서비스에 이러한 데이터를 보낼 때 WCF 이외의 클라이언트를 사용 하 여 문제를 일으킬 수이 있습니다.  
@@ -226,7 +226,7 @@ Windows Communication Foundation (WCF)는 새 serialization 엔진을 포함 합
  이 래퍼 요소 이름을 확인하지 않도록 설정하는 방법이 있습니다. `ReadObject` 메서드의 일부 오버로드는 기본적으로 `verifyObjectName`로 설정된 부울 매개 변수 `true` 을 가져옵니다. `false`로 설정하면 래퍼 요소의 이름과 네임스페이스를 무시합니다. 이는 이전에 설명한 단계별 serialization 메커니즘을 사용하여 작성된 XML을 읽을 때 유용합니다.  
   
 ## <a name="using-the-netdatacontractserializer"></a>NetDataContractSerializer 사용  
- `DataContractSerializer` 와 <xref:System.Runtime.Serialization.NetDataContractSerializer> 의 주요 차이점은 `DataContractSerializer` 는 데이터 계약 이름을 사용하는 반면, `NetDataContractSerializer` 는 serialize된 XML로 전체 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 어셈블리와 형식 이름을 출력합니다. 즉, 정확히 동일한 형식은 serialization 엔드포인트와 deserialization 엔드포인트 간에 공유되어야 합니다. 다시 말하면 deserialize할 정확한 형식을 이미 알고 있으므로 알려진 형식 메커니즘은 `NetDataContractSerializer` 에 필요하지 않습니다.  
+ 사이의 주요 차이점은 `DataContractSerializer` 및 <xref:System.Runtime.Serialization.NetDataContractSerializer> 는 `DataContractSerializer` 사용 하지만 데이터 계약 이름는 `NetDataContractSerializer` 전체.NET Framework 어셈블리와 형식 이름을 serialize 된 xml에서 출력. 즉, 정확히 동일한 형식은 serialization 엔드포인트와 deserialization 엔드포인트 간에 공유되어야 합니다. 다시 말하면 deserialize할 정확한 형식을 이미 알고 있으므로 알려진 형식 메커니즘은 `NetDataContractSerializer` 에 필요하지 않습니다.  
   
  그러나 여러 가지 문제가 발생할 수 있습니다.  
   
@@ -234,11 +234,11 @@ Windows Communication Foundation (WCF)는 새 serialization 엔진을 포함 합
   
 - 버전 관리. XML에 전체 형식 및 어셈블리 이름을 사용하면 형식 버전을 관리할 수 있는 방식이 제한됩니다. 형식 이름, 네임스페이스, 어셈블리 이름 및 어셈블리 버전은 변경할 수 없습니다. <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> 속성이나 생성자 매개 변수를 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple> 의 기본값 대신 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Full> 로 설정하면, 어셈블리 버전을 변경할 수 있지만 일반 매개 변수의 형식 버전은 변경할 수 없습니다.  
   
-- 상호 운용성. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식 및 어셈블리 이름은 XML에 포함되어 있기 때문에 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 이외의 다른 플랫폼에서는 결과 데이터에 액세스할 수 없습니다.  
+- 상호 운용성. .NET Framework 형식 및 어셈블리 이름은 XML에 포함 된, 때문에.NET Framework 이외의 플랫폼에는 결과 데이터를 액세스할 수 없습니다.  
   
 - 성능. 형식 및 어셈블리 이름을 작성하면 생성되는 XML의 크기가 크게 늘어납니다.  
   
- 이 메커니즘은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 원격 서비스에서 사용하는 이진 또는 SOAP serialization과 비슷합니다(특히 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 및 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>).  
+ 이 메커니즘은 이진 또는 SOAP serialization을 사용 하 여.NET Framework remoting 비슷합니다 (특히 합니다 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 및 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>).  
   
  `NetDataContractSerializer` 사용 방식은 `DataContractSerializer`사용 방식과 비슷하지만 다음과 같은 차이점이 있습니다.  
   
@@ -258,7 +258,7 @@ Windows Communication Foundation (WCF)는 새 serialization 엔진을 포함 합
   
  `NetDataContractSerializer` 및 `DataContractSerializer` 에서 사용하는 XML 형식은 일반적으로 호환되지 않습니다. 즉, 이러한 serializer 중 하나로 serialize하고 다른 serializer로 deserialize를 시도할 수 없습니다.  
   
- 또한 `NetDataContractSerializer` 는 개체 그래프에 각 노드에 대한 전체 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식 및 어셈블리 이름을 출력하지 않습니다. 모호한 정보만을 출력하는데, 즉, 루트 개체 수준에서 다형적 경우에 대해 출력합니다.  
+ 또한는 `NetDataContractSerializer` 개체 그래프의 각 노드에 대해 전체.NET Framework 형식 및 어셈블리 이름을 출력 하지 않습니다. 모호한 정보만을 출력하는데, 즉, 루트 개체 수준에서 다형적 경우에 대해 출력합니다.  
   
 ## <a name="see-also"></a>참고자료
 

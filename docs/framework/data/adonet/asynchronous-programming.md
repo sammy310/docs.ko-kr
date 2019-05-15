@@ -2,16 +2,16 @@
 title: 비동기 프로그래밍
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: b13ff7f67e7a62e071a27a77e72b7844dcb74d73
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: c41a231959536f4bd558fcd3e94d0d58c2375021
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846131"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584501"
 ---
 # <a name="asynchronous-programming"></a>비동기 프로그래밍
 
-이 항목에서는의 비동기 프로그래밍에 대 한 지원을 설명 합니다 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 에 도입 된 비동기 프로그래밍 기능을 지원 하려고 하는 향상 된 기능을 비롯 하 여 SQL Server (SqlClient)에 대 한 데이터 공급자 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]합니다.
+이 항목에서는 비동기 프로그래밍에.NET Framework Data Provider for SQL Server (SqlClient)에 도입 된 비동기 프로그래밍 기능을 지원 하려고 하는 향상 된 기능을 포함 하 여에 대 한 지원을 설명 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]합니다.
 
 ## <a name="legacy-asynchronous-programming"></a>레거시 비동기 프로그래밍
 

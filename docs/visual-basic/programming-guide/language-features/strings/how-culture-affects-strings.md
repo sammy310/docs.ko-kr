@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: c498ae0a9d39240e715e6ba66e57c5e1d3ebbfbc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7301d52cf2c55394f731a8b7af5427e5fa66ba88
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610426"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591952"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Visual Basic에서 문화권이 문자열에 영향을 주는 방식
 이 도움말 페이지는 Visual Basic 문자열 변환과 비교를 수행 하려면 문화권 정보를 사용 하는 방법을 설명 합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "64610426"
 ## <a name="using-a-specific-culture"></a>특정 문화권을 사용 하 여  
  웹 서비스 (문자열로 서식이 지정 된) 날짜를 전송 하는 응용 프로그램을 개발 하는 경우를 가정해 보겠습니다. 이 경우 응용 프로그램에서는 문자열 변환에 대 한 특정 문화권을 사용 해야 합니다. 이유를 보여 주기 위해 날짜의를 사용 하 여 결과 고려해 보십시오. <xref:System.DateTime.ToString> 메서드: 응용 프로그램에서 2005 년 7 월 4 일 날짜를 해당 메서드를 사용 하는 경우 반환 "2005 년 7 월 4 일 오전 12시: 00" 미국 영어 (EN-US) 문화권을 사용 하 여 실행 하는 경우 반환 되지만 "04.07.2005 00시: 00" 독일어 (DE-DE) 문화권을 사용 하 여 실행 하는 경우.  
   
- 특정 문화권 형태로 문자열 변환을 수행 해야 하는 경우 사용 해야 합니다 `CultureInfo` 클래스에 기본 제공 되는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]합니다. 새로 만들 수 있습니다 `CultureInfo` 문화권의 이름을 전달 하 여 특정 문화권에 대 한 개체는 <xref:System.Globalization.CultureInfo.%23ctor%2A> 생성자입니다. 지원 되는 문화권 이름에 나열 됩니다는 <xref:System.Globalization.CultureInfo> 클래스 도움말 페이지입니다.  
+ 특정 문화권 형태로 문자열 변환을 수행 해야 하는 경우 사용 해야는 `CultureInfo` .NET Framework에 기본 제공 되는 클래스입니다. 새로 만들 수 있습니다 `CultureInfo` 문화권의 이름을 전달 하 여 특정 문화권에 대 한 개체는 <xref:System.Globalization.CultureInfo.%23ctor%2A> 생성자입니다. 지원 되는 문화권 이름에 나열 됩니다는 <xref:System.Globalization.CultureInfo> 클래스 도움말 페이지입니다.  
   
  인스턴스를 가져올 수 있습니다 또는 합니다 *고정 문화권* 에서 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 속성입니다. 고정 문화권은 영어 문화권을 기반으로 하지만 일부의 차이점이 있습니다. 예를 들어, 고정 문화권 12 시간제를 대신 24 시간 시계를 지정합니다.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "64610426"
   
  [!code-vb[VbVbalrStrings#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#22)]  
   
- 사용할 수도 있습니다는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 의 파트너는 `StrComp` 함수를 <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드. 이것이 기본 string 클래스의 정적, 오버 로드 된 방법입니다. 다음 예제에서는이 메서드를 사용 하는 방법을 보여 줍니다.  
+ .NET Framework 파트너를 사용할 수도 있습니다는 `StrComp` 함수는 <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드. 이것이 기본 string 클래스의 정적, 오버 로드 된 방법입니다. 다음 예제에서는이 메서드를 사용 하는 방법을 보여 줍니다.  
   
  [!code-vb[VbVbalrStrings#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#48)]  
   

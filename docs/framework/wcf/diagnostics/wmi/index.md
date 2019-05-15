@@ -2,12 +2,12 @@
 title: 진단에 Windows Management Instrumentation 사용
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: 47aece36368be12a2a63283367e95dcaa64ef484
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ecc5c754a51a8e1a52797dfd0af0891704eaad1f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662464"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591244"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>진단에 Windows Management Instrumentation 사용
 Windows Communication Foundation (WCF) WCF Windows Management Instrumentation (WMI) 공급자를 통해 런타임으로 서비스 검사 데이터를 노출 합니다.  
@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF) WCF Windows Management Instrumentation (W
  이 구성 항목은 WMI 인터페이스를 노출합니다. 관리 응용 프로그램이 이 인터페이스를 통해 연결하여 응용 프로그램의 관리 계측에 액세스할 수 있습니다.  
   
 ## <a name="accessing-wmi-data"></a>WMI 데이터 액세스  
- 다양한 방식으로 WMI 데이터에 액세스할 수 있습니다. 스크립트를 Visual Basic 응용 프로그램에 대 한 WMI Api를 제공 하는 Microsoft C++ 응용 프로그램 및 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]합니다. 자세한 내용은 [WMI를 사용 하 여](https://go.microsoft.com/fwlink/?LinkId=95183)입니다.  
+ 다양한 방식으로 WMI 데이터에 액세스할 수 있습니다. 스크립트를 Visual Basic 응용 프로그램에 대 한 WMI Api를 제공 하는 Microsoft C++ 응용 프로그램 및.NET Framework입니다. 자세한 내용은 [WMI를 사용 하 여](https://go.microsoft.com/fwlink/?LinkId=95183)입니다.  
   
 > [!CAUTION]
 >  .NET Framework에서 제공한 메서드를 사용하여 WMI 데이터를 프로그래밍 방식으로 액세스하는 경우 그와 같은 메서드는 연결이 설정될 때 예외를 throw할 수 있습니다. 연결은 <xref:System.Management.ManagementObject> 인스턴스를 구성하는 동안에는 설정되지 않고, 실제 데이터 교환을 포함하는 첫 번째 요청에서 설정됩니다. 따라서 `try..catch` 블록을 사용하여 가능한 예외를 catch해야 합니다.  

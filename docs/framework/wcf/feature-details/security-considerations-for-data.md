@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 13e596ea64fc62ed6280e74636243619178ce069
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4114c974da9c108f641aebdb69f32fb3b0c484c9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990888"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591523"
 ---
 # <a name="security-considerations-for-data"></a>데이터에 대한 보안 고려 사항
 
@@ -28,7 +28,7 @@ Windows Communication Foundation (WCF) 인프라의 자릿수는 사용자가 �
 
 코드를 작성할 때는 보안상 취약한 부분이 없도록 해야 합니다. 예를 들어, 데이터 멤버 속성이 정수 형식인 데이터 계약 형식을 만들고 `set` 접근자 구현에서 속성 값을 기반으로 배열을 할당하는 경우 악의적인 메시지에 이 데이터 멤버에 대한 매우 큰 값이 포함되어 있으면 서비스 거부 공격을 받을 가능성이 있습니다. 일반적으로 들어오는 데이터를 기반으로 할당을 수행하거나 사용자 제공 코드에서 시간이 오래 걸리는 처리를 수행하는 것은 피해야 합니다(특히 들어오는 데이터의 양이 적어도 처리 시간이 오래 걸릴 수 있는 경우). 사용자 제공 코드의 보안 분석을 수행할 때는 모든 실패의 경우(즉, 예외가 throw되는 모든 코드 분기)도 고려해야 합니다.
 
-사용자 제공 코드의 한 예로 각 작업에 대한 서비스 구현 내에 있는 코드를 들 수 있습니다. 이 경우 서비스 구현의 보안에 대해서도 신경을 써야 합니다. 작업을 구현할 때 실수로 보안을 설정하지 않아서 서비스 거부 공격에 노출되는 경우도 많습니다. 문자열을 받아서 데이터베이스에서 이름이 해당 문자열로 시작하는 고객의 목록을 반환하는 작업을 예로 들 수 있습니다. 용량이 큰 데이터베이스로 작업하는 경우 전달되는 문자열이 단지 한 글자인 경우 사용자 코드가 사용 가능한 메모리 전체 크기보다 큰 메시지를 만들려고 해서 전체 서비스가 실패할 수 있습니다. <xref:System.OutOfMemoryException> 은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 에서 복구할 수 없으며 항상 응용 프로그램의 종료를 야기합니다.
+사용자 제공 코드의 한 예로 각 작업에 대한 서비스 구현 내에 있는 코드를 들 수 있습니다. 이 경우 서비스 구현의 보안에 대해서도 신경을 써야 합니다. 작업을 구현할 때 실수로 보안을 설정하지 않아서 서비스 거부 공격에 노출되는 경우도 많습니다. 문자열을 받아서 데이터베이스에서 이름이 해당 문자열로 시작하는 고객의 목록을 반환하는 작업을 예로 들 수 있습니다. 용량이 큰 데이터베이스로 작업하는 경우 전달되는 문자열이 단지 한 글자인 경우 사용자 코드가 사용 가능한 메모리 전체 크기보다 큰 메시지를 만들려고 해서 전체 서비스가 실패할 수 있습니다. (한 <xref:System.OutOfMemoryException> .NET Framework에서 복구할 수 없는 및 항상 응용 프로그램의 종료를 야기 합니다.)
 
 다양한 확장 지점에 악의적인 코드가 들어가지 않도록 해야 합니다. 부분 신뢰에서 실행하거나, 부분적으로 신뢰할 수 있는 어셈블리의 형식을 처리하거나, 부분적으로 신뢰할 수 있는 코드에서 사용할 수 있는 구성 요소를 만드는 경우 특히 그렇습니다. 자세한 내용은 뒷부분의 "부분 신뢰 위협"을 참조하십시오.
 
@@ -54,7 +54,7 @@ Windows Communication Foundation (WCF) 인프라의 자릿수는 사용자가 �
 
 서비스 거부 공격은 주로 할당량을 사용하여 완화시킬 수 있습니다. 할당량을 초과하면 대개 <xref:System.ServiceModel.QuotaExceededException> 예외가 throw됩니다. 할당량이 없는 경우에는 악의적인 메시지가 사용 가능한 모든 메모리에 액세스하여 <xref:System.OutOfMemoryException> 예외가 발생하거나 사용 가능한 모든 스택에 액세스하여 <xref:System.StackOverflowException>이 발생할 수 있습니다.
 
-할당량 초과 시나리오는 복구가 가능합니다. 실행 중인 서비스에서 발생한 경우 현재 처리 중인 메시지를 삭제하면 서비스를 계속 실행하면서 메시지를 더 처리할 수 있습니다. 그러나 메모리 부족 및 스택 오버플로 시나리오는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]에서 복구할 수 없습니다. 이러한 예외가 발생하면 서비스가 종료됩니다.
+할당량 초과 시나리오는 복구가 가능합니다. 실행 중인 서비스에서 발생한 경우 현재 처리 중인 메시지를 삭제하면 서비스를 계속 실행하면서 메시지를 더 처리할 수 있습니다. 그러나 메모리 부족 및 스택 오버플로 시나리오 되지 않으며.NET Framework에서 복구할 수 이러한 예외가 발생 하면 서비스가 종료 합니다.
 
 WCF에서 할당량은 사전 할당과 관계가 하지 않습니다. 예를 들어, 다양한 클래스에 있는 <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> 할당량이 128KB로 설정된 경우 각 메시지에 자동으로 128KB가 할당되는 것은 아닙니다. 실제로 할당되는 양은 실제로 들어오는 메시지 크기에 따라 다릅니다.
 
@@ -274,7 +274,7 @@ XML 판독기를 사용 하 여 직접 작업 하는 경우 (같은 또는 직�
 
 - 속성 setter의 특정 호출 순서를 사용하도록 데이터 계약 형식을 디자인하지 마십시오.
 
-- <xref:System.SerializableAttribute> 특성으로 표시된 레거시 형식은 주의해서 사용해야 합니다. 이 중에는 신뢰할 수 있는 데이터용으로만 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Remoting에 사용하도록 디자인된 것이 많습니다. 이 특성으로 표시된 기존 형식은 상태 안전을 고려하지 않은 디자인일 가능성이 있습니다.
+- <xref:System.SerializableAttribute> 특성으로 표시된 레거시 형식은 주의해서 사용해야 합니다. 이들 중 다 수는 신뢰할 수 있는 데이터만 사용에 대 한.NET Framework remoting과 함께 작동 하도록 설계 되었습니다. 이 특성으로 표시된 기존 형식은 상태 안전을 고려하지 않은 디자인일 가능성이 있습니다.
 
 - 상태 안전에 관해서는 데이터의 존재를 보장하기 위해 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 특성의 <xref:System.Runtime.Serialization.DataMemberAttribute> 속성을 사용하지 마십시오. 데이터는 항상 `null`, `zero` 또는 `invalid`일 수 있습니다.
 
@@ -282,7 +282,7 @@ XML 판독기를 사용 하 여 직접 작업 하는 경우 (같은 또는 직�
 
 ### <a name="using-the-netdatacontractserializer-securely"></a>안전한 NetDataContractSerializer 사용
 
-<xref:System.Runtime.Serialization.NetDataContractSerializer> 는 형식에 대한 밀접한 결합을 사용하는 serialization 엔진입니다. 이는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 및 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>와 비슷합니다. 즉, 들어오는 데이터로부터 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 어셈블리 및 형식 이름을 읽어 인스턴스화할 형식을 결정합니다. 이 serialization 엔진;에서 연결의 제공 된 방법이 없기 WCF의 일부는 아니지만 사용자 지정 코드를 작성 해야 합니다. 합니다 `NetDataContractSerializer` 에서 마이그레이션을 위해 기본적으로 제공 됩니다 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] remoting과 WCF입니다. 자세한 내용은의 관련 섹션을 참조 하세요 [Serialization 및 Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)합니다.
+<xref:System.Runtime.Serialization.NetDataContractSerializer> 는 형식에 대한 밀접한 결합을 사용하는 serialization 엔진입니다. 이는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 및 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>와 비슷합니다. 즉, 들어오는 데이터에서.NET Framework 어셈블리 및 형식 이름을 읽어 인스턴스화할 형식을 결정 합니다. 이 serialization 엔진;에서 연결의 제공 된 방법이 없기 WCF의 일부는 아니지만 사용자 지정 코드를 작성 해야 합니다. `NetDataContractSerializer` .NET Framework remoting에서 WCF로의 마이그레이션을 용이 하 게 기본적으로 제공 됩니다. 자세한 내용은의 관련 섹션을 참조 하세요 [Serialization 및 Deserialization](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)합니다.
 
 메시지 자체에서 로드할 형식을 지정할 수 있기 때문에 <xref:System.Runtime.Serialization.NetDataContractSerializer> 메커니즘은 본질적으로 안전하지 않으며 신뢰할 수 있는 데이터에만 사용해야 합니다. 형식을 제한하는 안전한 형식 바인더를 작성하여 안전한 형식만 로드할 수도 있습니다( <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> 속성 사용).
 

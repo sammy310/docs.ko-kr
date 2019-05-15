@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: a8593c5dce30fc71750515ccedb4fc9cce9a4868
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e78616acc56e75dd06445f7a569ab94e65e20cc0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652109"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592236"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation 바인딩 개요
 바인딩에 Windows Communication Foundation (WCF) 서비스의 끝점에 연결 하는 데 필요한 통신 세부 정보를 지정 하는 데 사용 되는 개체입니다. WCF 서비스에서 각 끝점에 대해 바인딩을 올바로 지정 필요 합니다. 이 항목에서는 통신 세부 정보 바인딩을 정의 하는 바인딩, 바인딩 종류는 WCF에 포함 된 및 끝점에 대 한 바인딩을 지정할 수 있습니다 하는 방법의 요소 형식에 설명 합니다.  
@@ -36,9 +36,9 @@ ms.locfileid: "64652109"
   
 - <xref:System.ServiceModel.WSHttpBinding>: WS-를 준수 하는 끝점에 연결 하는 데 적합 하는 상호 운용 가능한 바인딩을 * 프로토콜입니다.  
   
-- <xref:System.ServiceModel.NetNamedPipeBinding>: 사용 하 여는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 다른 WCF 끝점을 동일한 컴퓨터에 연결 합니다.  
+- <xref:System.ServiceModel.NetNamedPipeBinding>: .NET Framework를 사용 하 여 동일한 컴퓨터에서 다른 WCF 끝점에 연결.  
   
-- <xref:System.ServiceModel.NetMsmqBinding>: 사용 하 여 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 다른 WCF 끝점을 사용 하 여 대기 중인된 메시지 연결을 만들 합니다.  
+- <xref:System.ServiceModel.NetMsmqBinding>: 큐를 만들기 위해.NET Framework를 사용 하 여 메시지 다른 WCF 끝점을 사용 하 여 연결 합니다.  
 
 - <xref:System.ServiceModel.NetTcpBinding>: 이 바인딩은 HTTP 바인딩 보다 더 높은 성능을 제공 하며 로컬 네트워크에서 사용 하기 위해 이상적입니다.
   

@@ -4,12 +4,12 @@ description: .NET에서 네이티브 구성 요소와 상호 작용하는 방법
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 29aacc9210b4103f379b7776c36fc3c29b9e6dec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b01ea9c17db6da32755309d9c1c2359cecaa1155
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973565"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062718"
 ---
 # <a name="native-interoperability"></a>기본 상호 운용성
 
@@ -29,5 +29,5 @@ ms.locfileid: "61973565"
 ## <a name="see-also"></a>참고 항목
 
 - [P/Invoke(플랫폼 호출)](pinvoke.md)
-- [형식 마샬링](type-marshalling.md)
+- [형식 마샬링](type-marshaling.md)
 - [기본 상호 운용성 모범 사례](best-practices.md)

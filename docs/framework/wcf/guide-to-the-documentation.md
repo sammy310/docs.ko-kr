@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-ms.openlocfilehash: b0758cf1381b5a6e24067fdd64288d0f7e2b0d5d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7458caee29d576d8a9d38f01027c106d39a1daf2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637164"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591925"
 ---
 # <a name="guide-to-the-documentation"></a>설명서에 대한 안내
 제공한 Windows Communication Foundation (WCF) 설명서에 대 한 지침은 다음과 같습니다. 구체적인 관심사와 지식 수준에 따라 그룹화된 링크 문서부터 보시는 것이 좋습니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "64637164"
   
 - ASP.NET 클라이언트와 통신 하는 서비스를 만들려면 참조 [방법: ASP.NET 웹 서비스 클라이언트와 상호 운용 하도록 WCF 서비스 구성](../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md)합니다.  
   
-- 와 통합 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] remoting 방법은 [마이그레이션.NET Remoting 응용 프로그램을 WCF](../../../docs/framework/wcf/feature-details/migrating-net-remoting-applications-to-wcf.md)합니다.  
+- .NET Framework remoting 사용 하 여 통합에 대해서는 설명 [마이그레이션.NET Remoting 응용 프로그램을 WCF](../../../docs/framework/wcf/feature-details/migrating-net-remoting-applications-to-wcf.md)합니다.  
   
 - WCF 서비스 또는 클라이언트를 사용 하 여 기존 COM + 응용 프로그램 통합을 참조 하세요 [COM + 응용 프로그램 개요 통합](../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)합니다.  
   

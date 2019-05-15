@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 701086c76d4e7b811ca67a9dd2112e69a45ba254
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a31b1dc01fe1f9d9dd97775ae3c65f762b167079
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61679949"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635272"
 ---
 # <a name="c-programming-guide"></a>C# 프로그래밍 가이드
 이 섹션에서는 핵심 C# 언어 기능과 .NET Framework를 통해 C#에서 액세스할 수 있는 기능에 대한 자세한 정보를 제공합니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "61679949"
   
  [안전하지 않은 코드 및 포인터](../../csharp/programming-guide/unsafe-code-pointers/index.md)  
   
- [XML 문서 주석](../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
+ [XML 문서 주석](../../csharp/programming-guide/xmldoc/index.md)  
   
 ## <a name="platform-sections"></a>플랫폼 섹션  
  [애플리케이션 도메인](../../framework/app-domains/application-domains.md)  

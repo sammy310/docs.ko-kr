@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 125c577710ed9c2b8a53e367cd22924a3ccb483c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cc40d7e10243f63040d7e4ad457aac0f9122b6ad
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615119"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590789"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Forms 응용 프로그램 기초(Visual Basic)
 사용자의 컴퓨터에서 로컬로 실행 되는 Windows Forms 응용 프로그램을 만드는 기능은 Visual Basic의 중요 한 부분입니다. Windows Forms를 사용 하 여 응용 프로그램 및 사용자 인터페이스를 만들려면 Visual Studio를 사용할 수 있습니다. Windows Forms 응용 프로그램의 클래스에 빌드되는 <xref:System.Windows.Forms> 네임 스페이스입니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "64615119"
 - [Windows 서비스 응용 프로그램](../../../framework/windows-services/index.md)합니다. Windows 서비스를 만드는 방법을 설명 하는 항목을 나열 합니다.  
   
 ## <a name="building-rich-interactive-user-interfaces"></a>풍부한 대화형 사용자 인터페이스 빌드  
- Windows Forms의 스마트 클라이언트 구성 요소는 여 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], 읽기 및 쓰기 파일 시스템에 같은 일반적인 응용 프로그램 작업을 사용 하도록 설정 하는 관리 되는 라이브러리 집합입니다. Visual Studio와 같은 개발 환경을 사용 하 여, Windows Forms 응용 프로그램 정보를 표시 하 고 사용자 로부터 입력을 요청 하 고 전달 하는 원격 컴퓨터와 네트워크를 통해 만들 수 있습니다.  
+ Windows Forms는.NET Framework에서 읽기 및 쓰기 파일 시스템에 같은 일반적인 응용 프로그램 작업을 사용 하도록 설정 하는 관리 되는 라이브러리 집합의 스마트 클라이언트 구성 요소입니다. Visual Studio와 같은 개발 환경을 사용 하 여, Windows Forms 응용 프로그램 정보를 표시 하 고 사용자 로부터 입력을 요청 하 고 전달 하는 원격 컴퓨터와 네트워크를 통해 만들 수 있습니다.  
   
  Windows Forms 폼의는 정보는 사용자를 표시 하는 비주얼 화면입니다. 일반적으로 폼에 컨트롤을 배치 하 고 마우스 클릭 이나 키 누름과 같은 사용자 작업에 대 한 응답을 개발 하 여 Windows Forms 응용 프로그램을 빌드합니다. *컨트롤*은 데이터를 표시하거나 데이터 입력을 수락하는 고유한 UI(사용자 인터페이스) 요소입니다.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "64615119"
 |사용 하 여 보안 관리 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[방법: ClickOnce 보안 설정 사용](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
 ## <a name="other-controls-and-features"></a>기타 컨트롤 및 기능  
- Windows Forms에는 대화 상자 만들기, 인쇄, 도움말 및 설명서 추가 및 여러 언어로 애플리케이션 지역화 지원과 같이 일반적인 작업을 쉽고 빠르게 구현할 수 있게 해주는 다른 여러 기능이 있습니다. Windows Forms의 강력한 보안 시스템에 의존 하는 또한는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], 고객에 게 보다 안전한 응용 프로그램을 릴리스 하는 데 사용할 수 있습니다.  
+ Windows Forms에는 대화 상자 만들기, 인쇄, 도움말 및 설명서 추가 및 여러 언어로 애플리케이션 지역화 지원과 같이 일반적인 작업을 쉽고 빠르게 구현할 수 있게 해주는 다른 여러 기능이 있습니다. 또한 Windows Forms는 고객에 게 보다 안전한 응용 프로그램을 릴리스 하는 데 사용할.NET Framework의 강력한 보안 시스템에 의존 합니다.  
   
  이러한 기능을 사용 하는 방법에 대 한 단계별 정보를 다음 도움말 항목을 참조 하세요.  
   

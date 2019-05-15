@@ -2,12 +2,12 @@
 title: ADO.NET의 새로운 기능
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: 76ded71e7fa5ece382d0b0947eefa05682dc0f8e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b54f7ab6505f86d0447654f21b197644d68254c0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673101"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583442"
 ---
 # <a name="whats-new-in-adonet"></a>ADO.NET의 새로운 기능
 
@@ -15,7 +15,7 @@ ms.locfileid: "61673101"
 
 ## <a name="sqlclient-data-provider"></a>SqlClient Data Provider
 
-다음 기능은의 새로운 기능을 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server에서 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:
+다음 기능은 SQL Server에 대 한.NET Framework Data Provider에서 새 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:
 
 - ConnectRetryCount 및 ConnectRetryInterval 연결 문자열 키워드(<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>)를 사용하면 유휴 연결 복원 기능을 제어할 수 있습니다.
 

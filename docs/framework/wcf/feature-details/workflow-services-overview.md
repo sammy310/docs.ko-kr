@@ -2,12 +2,12 @@
 title: WCF 워크플로 서비스 개요-
 ms.date: 03/30/2017
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
-ms.openlocfilehash: 1461ef545c4b31f84e62d82453320179d9aa74e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d5f8636bec57cee1cb72c2796fc4bafc6b9c044
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050339"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590079"
 ---
 # <a name="workflow-services-overview"></a>워크플로 서비스 개요
 
@@ -48,7 +48,7 @@ WCF에서는 두 개의 MSMQ 기반 바인딩, <xref:System.ServiceModel.NetMsmq
 
 WCF 서비스와 마찬가지로 워크플로 서비스 호스트 되어야 합니다. 사용 WCF 서비스를 <xref:System.ServiceModel.ServiceHost> 클래스에서 서비스를 호스트 및 워크플로를 사용 하 여 서비스 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 서비스를 호스트 합니다. WCF 서비스와 마찬가지로 워크플로 서비스에서 다양 한 방법으로 예를 들어 호스팅할 수 있습니다.
 
-- 관리되는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 응용 프로그램에서 호스팅
+- 관리 되는.NET Framework 응용 프로그램입니다.
 
 - IIS(인터넷 정보 서비스)에서 호스팅
 
@@ -56,7 +56,7 @@ WCF 서비스와 마찬가지로 워크플로 서비스 호스트 되어야 합�
 
 - 관리되는 Windows 서비스에서 호스팅
 
-관리되는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 응용 프로그램 또는 관리되는 Windows 서비스에서 호스트되는 워크플로 서비스는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 클래스의 인스턴스를 만들어 <xref:System.ServiceModel.Activities.WorkflowService> 속성 내의 워크플로 정의를 포함하는 <xref:System.ServiceModel.Activities.WorkflowService.Body%2A>의 인스턴스에 전달합니다. 메시징 작업을 포함하는 워크플로 정의는 워크플로 서비스로 노출됩니다.
+관리 되는.NET Framework 응용 프로그램에서 호스팅되는 워크플로 서비스 또는 관리 되는 Windows 서비스의 인스턴스를 만듭니다는 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 클래스의 인스턴스로 전달 하는 <xref:System.ServiceModel.Activities.WorkflowService> 내에서 워크플로 정의 포함 하는 <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> 속성. 메시징 작업을 포함하는 워크플로 정의는 워크플로 서비스로 노출됩니다.
 
 IIS 또는 WAS에서 워크플로 서비스를 호스트하려면 워크플로 서비스 정의를 포함하는 .xamlx 파일을 가상 디렉터리에 저장합니다. 기본 끝점 (사용 하 여 <xref:System.ServiceModel.BasicHttpBinding>)는 참조에 대 한 자세한 내용은 자동으로 만들어지면 [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md). 또한 Web.config 파일을 가상 디렉터리에 저장하여 사용자 고유의 엔드포인트를 지정할 수도 있습니다. 워크플로 정의가 어셈블리에 있을 경우 가상 디렉터리와 App_Code 디렉터리에 각각 .svc 파일과 워크플로 어셈블리를 저장할 수 있습니다. .svc 파일에서는 서비스 호스트 팩터리를 지정하고 워크플로 서비스를 구현하는 클래스도 지정해야 합니다. 다음 예제에서는 서비스 호스트 팩터리를 지정하고 워크플로 서비스를 구현하는 클래스도 지정하는 방법을 보여 줍니다.
 
