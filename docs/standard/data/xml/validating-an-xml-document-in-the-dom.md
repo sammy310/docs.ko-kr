@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd60916302877692ac011e6c0743fae40a10dd34
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fabd95d8fee6f6d8590036001ce2b0c7c23b12da
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298424"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589858"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>DOM에서의 XML 문서 유효성 검사
 기본적으로 <xref:System.Xml.XmlDocument> 클래스는 기본적으로 DOM(문서 개체 모델)에서 XSD(XML 스키마 정의 언어) 스키마 또는 DTD(문서 종류 정의)에 대해 XML의 유효성을 검사하지 않으며 XML이 제대로 구성되었는지만 확인합니다.  
@@ -56,9 +56,9 @@ ms.locfileid: "59298424"
   
  XML 데이터를 DOM에 로드할 때 유효성을 검사하는 경우 다음을 고려해야 합니다.  
   
--   위 예제에서 잘못된 형식이 발견될 때마다 <xref:System.Xml.XmlReaderSettings.ValidationEventHandler>가 호출됩니다. <xref:System.Xml.XmlReaderSettings.ValidationEventHandler>가 유효성을 검사하는 <xref:System.Xml.XmlReader>에 대해 설정되어 있지 않으면 특성 또는 요소 형식이 유효성 검사 스키마에 지정된 해당 형식과 일치하지 않은 경우 <xref:System.Xml.Schema.XmlSchemaValidationException>가 호출될 때 <xref:System.Xml.XmlDocument.Load%2A>이 throw됩니다.  
+- 위 예제에서 잘못된 형식이 발견될 때마다 <xref:System.Xml.XmlReaderSettings.ValidationEventHandler>가 호출됩니다. <xref:System.Xml.XmlReaderSettings.ValidationEventHandler>가 유효성을 검사하는 <xref:System.Xml.XmlReader>에 대해 설정되어 있지 않으면 특성 또는 요소 형식이 유효성 검사 스키마에 지정된 해당 형식과 일치하지 않은 경우 <xref:System.Xml.Schema.XmlSchemaValidationException>가 호출될 때 <xref:System.Xml.XmlDocument.Load%2A>이 throw됩니다.  
   
--   기본값을 정의하는 스키마가 연결되어 있는 XML 문서를 <xref:System.Xml.XmlDocument> 개체에 로드하면 <xref:System.Xml.XmlDocument>는 이 기본값이 XML 문서에 나타난 것처럼 처리합니다. 그러므로 <xref:System.Xml.XmlReader.IsEmptyElement%2A> 속성은 항상 스키마의 기본값으로 설정된 요소에 대해 `false`를 반환합니다. XML 문서에서도 빈 요소로 작성됩니다.  
+- 기본값을 정의하는 스키마가 연결되어 있는 XML 문서를 <xref:System.Xml.XmlDocument> 개체에 로드하면 <xref:System.Xml.XmlDocument>는 이 기본값이 XML 문서에 나타난 것처럼 처리합니다. 그러므로 <xref:System.Xml.XmlReader.IsEmptyElement%2A> 속성은 항상 스키마의 기본값으로 설정된 요소에 대해 `false`를 반환합니다. XML 문서에서도 빈 요소로 작성됩니다.  
   
 ## <a name="validating-an-xml-document-in-the-dom"></a>DOM에서의 XML 문서 유효성 검사  
  <xref:System.Xml.XmlDocument.Validate%2A> 클래스의 <xref:System.Xml.XmlDocument> 메서드는 <xref:System.Xml.XmlDocument> 개체의 <xref:System.Xml.XmlDocument.Schemas%2A> 속성에 있는 스키마에 대해 DOM에 로드된 XML 데이터의 유효성을 검사합니다. 유효성 검사를 수행한 후에는 스키마 기본값이 적용되고 필요한 경우 텍스트 값이 atomic 값으로 변환되며 형식 정보는 유효성이 검사된 정보 항목과 연결됩니다. 그 결과, 형식화된 XML 데이터가 이전에 형식화되지 않은 XML 데이터를 대체합니다.  

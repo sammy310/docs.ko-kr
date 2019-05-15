@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddddc746eb29c526adb8a15fc6ac40acc22954cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 949760026bc965fbb9a94d1f40eb0996a1ce7e92
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337229"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592391"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>방법: 리플렉션을 사용하여 제네릭 형식 검사 및 인스턴스화
 다른 형식에 대한 정보와 동일한 방식으로 제네릭 형식에 대한 정보를 가져올 수 있습니다. 제네릭 형식을 나타내는 <xref:System.Type> 개체를 검사하면 됩니다. 원칙의 차이점은 제네릭 형식에는 제네릭 형식 매개 변수를 나타내는 <xref:System.Type> 개체 목록이 있다는 것입니다. 이 섹션의 첫 번째 절차에서는 제네릭 형식을 검사합니다.  
@@ -117,11 +117,11 @@ ms.locfileid: "59337229"
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
   
--   코드에는 컴파일하는 데 필요한 C# `using` 문(Visual Basic에서는 `Imports`)이 포함되어 있습니다.  
+- 코드에는 컴파일하는 데 필요한 C# `using` 문(Visual Basic에서는 `Imports`)이 포함되어 있습니다.  
   
--   추가 어셈블리 참조는 필요하지 않습니다.  
+- 추가 어셈블리 참조는 필요하지 않습니다.  
   
--   csc.exe, vbc.exe 또는 cl.exe를 사용하여 명령줄에서 코드를 컴파일합니다. Visual Studio에서 코드를 컴파일하려면 콘솔 애플리케이션 프로젝트 템플릿에 배치합니다.  
+- csc.exe, vbc.exe 또는 cl.exe를 사용하여 명령줄에서 코드를 컴파일합니다. Visual Studio에서 코드를 컴파일하려면 콘솔 애플리케이션 프로젝트 템플릿에 배치합니다.  
   
 ## <a name="see-also"></a>참고 항목
 

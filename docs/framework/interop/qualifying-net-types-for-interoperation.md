@@ -11,37 +11,37 @@ helpviewer_keywords:
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cad67f52a4ca977606d7b5a307868ff129570e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2e57ec1a70aaae384f73b1ffdbf92e93fc0a7bdd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097979"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648557"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>상호 운용할 .NET 형식의 정규화
 어셈블리에서 형식을 COM 애플리케이션으로 노출하려는 경우 디자인 타임에 COM interop의 요구 사항을 고려하세요. 다음 지침을 준수하면 관리되는 형식(클래스, 인터페이스, 구조체 및 열거형)이 COM 형식과 원활하게 통합됩니다.  
   
--   클래스에서 인터페이스를 명시적으로 구현해야 합니다.  
+- 클래스에서 인터페이스를 명시적으로 구현해야 합니다.  
   
      COM interop에서 클래스의 모든 멤버와 기본 클래스의 멤버를 포함하는 인터페이스를 자동으로 생성하는 메커니즘을 제공하지만 명시적 인터페이스를 제공하는 것이 훨씬 좋습니다. 자동으로 생성된 인터페이스는 클래스 인터페이스라고 합니다. 지침은 [클래스 인터페이스 소개](com-callable-wrapper.md#introducing-the-class-interface)를 참조하세요.  
   
      IDL(Interface Definition Language) 또는 이와 동등한 사항을 사용할 필요 없이 Visual Basic, C# 및 C++를 사용하여 코드에 인터페이스 정의를 통합할 수 있습니다. 구문에 대한 세부 정보는 언어 문서를 참조하세요.  
   
--   관리되는 형식은 public이어야 합니다.  
+- 관리되는 형식은 public이어야 합니다.  
   
      어셈블리의 public 형식만 등록하고 형식 라이브러리로 내보냅니다. 결과적으로 public 형식만 COM에 표시됩니다.  
   
      관리되는 형식은 COM에 노출되지 않을 수 있는 기타 관리 코드에 기능을 공개합니다. 예를 들어 매개 변수화된 생성자, 정적 메서드 및 상수 필드는 COM 클라이언트에 노출되지 않습니다. 또한 런타임 시 데이터를 형식에 대해 마샬링할 때 데이터가 복사되거나 변환될 수 있습니다.  
   
--   메서드, 속성, 필드 및 이벤트는 public이어야 합니다.  
+- 메서드, 속성, 필드 및 이벤트는 public이어야 합니다.  
   
      public 형식의 멤버를 COM에 표시하려는 경우 해당 멤버도 public이어야 합니다. <xref:System.Runtime.InteropServices.ComVisibleAttribute>를 적용하여 어셈블리의 가시성, public 형식 또는 public 형식의 공용 멤버를 제한할 수 있습니다. 기본적으로 모든 public 형식 및 멤버만 표시됩니다.  
   
--   형식에는 COM에서 활성화될 public 기본 생성자가 있어야 합니다.  
+- 형식에는 COM에서 활성화될 public 기본 생성자가 있어야 합니다.  
   
      관리되는 public 형식만 COM에 표시됩니다. 그러나 public 기본 생성자(인수 없는 생성자)가 없으면 COM 클라이언트에서 형식을 만들 수 없습니다. 다른 방법으로 활성화된 경우에도 COM 클라이언트에서 여전히 형식을 사용할 수 있습니다.  
   
--   형식은 추상일 수 없습니다.  
+- 형식은 추상일 수 없습니다.  
   
      COM 클라이언트와 .NET 클라이언트 모두 추상 형식을 만들 수 없습니다.  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f732f5bf61ed65fe7e62d110494d874262e30fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 29141cb43d914dd3781e9307b6a553361152a645
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296162"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634169"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>방법: 웹 컨트롤의 숫자 사용자 입력을 숫자로 변환
 전 세계 어디서든 웹 페이지를 표시할 수 있으므로 사용자가 거의 무제한의 형식으로 숫자 데이터를 <xref:System.Web.UI.WebControls.TextBox> 컨트롤에 입력할 수 있습니다. 따라서 웹 페이지 사용자의 로캘 및 문화권을 확인하는 것이 매우 중요합니다. 사용자 입력을 구문 분석할 때 사용자의 로캘 및 문화권에 의해 정의된 서식 지정 규칙을 적용할 수 있습니다.  
@@ -35,9 +35,9 @@ ms.locfileid: "59296162"
   
 4. 사용자 입력을 변환하려는 숫자 형식의 `TryParse` 또는 `Parse` 메서드를 호출합니다. `TryParse` 또는 `Parse` 메서드의 오버로드를 `provider` 매개 변수와 함께 사용하고, 다음 중 하나를 전달합니다.  
   
-    -   3단계에서 생성한 <xref:System.Globalization.CultureInfo> 개체  
+    - 3단계에서 생성한 <xref:System.Globalization.CultureInfo> 개체  
   
-    -   3단계에서 생성한 <xref:System.Globalization.CultureInfo> 개체의 <xref:System.Globalization.CultureInfo.NumberFormat%2A> 속성에서 반환하는 <xref:System.Globalization.NumberFormatInfo> 개체  
+    - 3단계에서 생성한 <xref:System.Globalization.CultureInfo> 개체의 <xref:System.Globalization.CultureInfo.NumberFormat%2A> 속성에서 반환하는 <xref:System.Globalization.NumberFormatInfo> 개체  
   
 5. 변환에 실패하는 경우 <xref:System.Web.HttpRequest.UserLanguages%2A> 속성에서 반환한 문자열 배열의 나머지 요소 각각에 대해 2~4단계를 반복합니다.  
   
@@ -60,11 +60,11 @@ ms.locfileid: "59296162"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  코드를 컴파일하려면 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 코드 숨김 페이지로 코드를 복사하여 기존 코드를 모두 대체합니다. [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 웹 페이지에는 다음과 같은 컨트롤이 있어야 합니다.  
   
--   코드에서 참조되지 않는 <xref:System.Web.UI.WebControls.Label> 컨트롤. 해당 <xref:System.Web.UI.WebControls.TextBox.Text%2A> 속성을 “Enter a Number:”로 설정합니다.  
+- 코드에서 참조되지 않는 <xref:System.Web.UI.WebControls.Label> 컨트롤. 해당 <xref:System.Web.UI.WebControls.TextBox.Text%2A> 속성을 “Enter a Number:”로 설정합니다.  
   
--   `NumericString`이라는 <xref:System.Web.UI.WebControls.TextBox> 컨트롤  
+- `NumericString`이라는 <xref:System.Web.UI.WebControls.TextBox> 컨트롤  
   
--   `OKButton`이라는 <xref:System.Web.UI.WebControls.Button> 컨트롤 해당 <xref:System.Web.UI.WebControls.Button.Text%2A> 속성을 “OK”로 설정합니다.  
+- `OKButton`이라는 <xref:System.Web.UI.WebControls.Button> 컨트롤 해당 <xref:System.Web.UI.WebControls.Button.Text%2A> 속성을 “OK”로 설정합니다.  
   
  클래스 이름을 `NumericUserInput`에서 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 페이지에 있는 `Page` 지시문의 `Inherits` 특성으로 정의되는 클래스 이름으로 변경합니다. `NumericInput` 개체 참조의 이름을 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 페이지에 있는 `form` 태그의 `id` 특성으로 정의된 이름으로 변경합니다.  
   

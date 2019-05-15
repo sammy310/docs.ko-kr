@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 93d87dc98284fad6b8159f681f7d99ce460d60d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 59b33c24c2821d0aef17f5feb67c1178810b939e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524197"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647779"
 ---
 # <a name="how-to-write-text-to-a-file"></a>방법: 파일에 텍스트 쓰기
 이 항목에서는 .NET 앱의 파일에 텍스트를 작성하는 다양한 방법을 보여줍니다. 
 
 파일에 텍스트를 쓸 때는 일반적으로 다음 클래스 및 메서드가 사용됩니다.  
   
--   <xref:System.IO.StreamWriter>에는 동기식(<xref:System.IO.StreamWriter.Write%2A> 및 <xref:System.IO.TextWriter.WriteLine%2A>) 또는 비동기식(<xref:System.IO.StreamWriter.WriteAsync%2A> 및 <xref:System.IO.StreamWriter.WriteLineAsync%2A>)으로 파일에 쓰는 메서드가 포함되어 있습니다.  
+- <xref:System.IO.StreamWriter>에는 동기식(<xref:System.IO.StreamWriter.Write%2A> 및 <xref:System.IO.TextWriter.WriteLine%2A>) 또는 비동기식(<xref:System.IO.StreamWriter.WriteAsync%2A> 및 <xref:System.IO.StreamWriter.WriteLineAsync%2A>)으로 파일에 쓰는 메서드가 포함되어 있습니다.  
   
--   <xref:System.IO.File>은 <xref:System.IO.File.WriteAllLines%2A> 및 <xref:System.IO.File.WriteAllText%2A>와 같은 파일에 텍스트를 쓰거나 <xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A> 및 <xref:System.IO.File.AppendText%2A>와 같은 파일에 텍스트를 추가하는 정적 메서드를 제공합니다.  
+- <xref:System.IO.File>은 <xref:System.IO.File.WriteAllLines%2A> 및 <xref:System.IO.File.WriteAllText%2A>와 같은 파일에 텍스트를 쓰거나 <xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A> 및 <xref:System.IO.File.AppendText%2A>와 같은 파일에 텍스트를 추가하는 정적 메서드를 제공합니다.  
   
 - <xref:System.IO.Path>는 파일 또는 디렉터리 경로 정보가 포함된 문자열에 대한 것입니다. 파일이나 디렉터리 경로를 빌드하기 위해 문자열의 연결을 허용하는 <xref:System.IO.Path.Combine%2A> 메서드 및 .NET Core 2.1 이상에서는 <xref:System.IO.Path.Join%2A> 및 <xref:System.IO.Path.TryJoin%2A> 메서드가 포함되어 있습니다.
 

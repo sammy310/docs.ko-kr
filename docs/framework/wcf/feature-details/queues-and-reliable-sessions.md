@@ -2,12 +2,12 @@
 title: 큐 및 신뢰할 수 있는 세션
 ms.date: 03/30/2017
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
-ms.openlocfilehash: d6b1e62e2b0f91856867128c2c0695ab0bdf1c8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7a60e6f92f6875b6fb446d29abc7d858bfdefe73
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643528"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557165"
 ---
 # <a name="queues-and-reliable-sessions"></a>큐 및 신뢰할 수 있는 세션
 큐 및 신뢰할 수 있는 세션은 신뢰할 수 있는 메시징을 구현 하는 Windows Communication Foundation (WCF) 기능. 이 단원의 항목에서는 WCF 신뢰할 수 있는 메시징 기능을 설명 합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "64643528"
   
  신뢰할 수 있는 세션은 대기 시간이 짧은 안전한 메시지 전송을 제공하며, TCP가 IP 브리지를 통해 패킷을 지원하는 것과 같이, 프록시나 매개자를 통해 SOAP 메시지를 지원합니다. 신뢰할 수 있는 세션에 대 한 자세한 내용은 참조 하세요. [신뢰할 수 있는 세션](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)합니다.  
   
-### <a name="queues"></a>큐  
+## <a name="queues"></a>큐  
  WCF에서에서 큐에 안전 하 게 전송할 메시지와 분리의 소스와 대상을 분리할 수 있지만 높은 대기 시간을 제공합니다. 큐에 대기 되는 WCF 통신은 메시지 큐 (MSMQ 라고도 함)를 기반으로 빌드됩니다.  
   
  MSMQ는 NT 서비스로 실행되는 Windows의 옵션으로 제공됩니다. 소스 대신 전송 큐에서 전송할 메시지를 캡처하여 대상 큐로 배달합니다. 대상 큐는 대상을 대신해 메시지를 수락하고 나중에 대상에서 메시지를 요청할 때 배달합니다. MSMQ 큐 관리자는 전송 중에 메시지가 손실되지 않도록 신뢰할 수 있는 메시지 전송 프로토콜을 구현합니다. 이러한 프로토콜에는 네이티브 프로토콜 또는 SRMP(SOAP Reliable Messaging Protocol)와 같은 SOAP 기반 프로토콜이 해당됩니다.  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - registry keys [Visual Basic], reading from
 - registry [Visual Basic], reading
 ms.assetid: 775d0a57-68c9-464e-8949-9a39bd29cc64
-ms.openlocfilehash: bc71dd2e3a78454236b2f6f30c2d51aa596e5b8c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 36183290a1ffdf4216eb845625aa38d63739eff6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840187"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662747"
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>방법: Visual Basic에서 레지스트리 키 값 읽기
 `My.Computer.Registry` 개체의 `GetValue` 메서드를 사용하여 Windows 레지스트리의 값을 읽을 수 있습니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "58840187"
   
 ### <a name="to-read-a-value-from-a-registry-key"></a>레지스트리 키에서 값을 읽으려면  
   
--   `GetValue` 메서드를 사용하고 경로 및 이름을 지정하여 레지스트리 키에서 값을 읽습니다. 다음 예제에서는 `HKEY_CURRENT_USER\Software\MyApp`에서 `Name` 값을 읽고 메시지 상자에 표시합니다.  
+- `GetValue` 메서드를 사용하고 경로 및 이름을 지정하여 레지스트리 키에서 값을 읽습니다. 다음 예제에서는 `HKEY_CURRENT_USER\Software\MyApp`에서 `Name` 값을 읽고 메시지 상자에 표시합니다.  
   
      [!code-vb[VbResourceTasks#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#4)]  
   
@@ -34,7 +34,7 @@ ms.locfileid: "58840187"
   
 ### <a name="to-determine-whether-a-value-exists-in-a-registry-key"></a>레지스트리 키에 값이 있는지 확인하려면  
   
--   `GetValue` 메서드를 사용하여 값을 검색합니다. 다음 코드는 값이 있는지 확인하고, 값이 없는 경우 메시지를 반환합니다.  
+- `GetValue` 메서드를 사용하여 값을 검색합니다. 다음 코드는 값이 있는지 확인하고, 값이 없는 경우 메시지를 반환합니다.  
   
      [!code-vb[VbResourceTasks#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#12)]  
   
@@ -43,11 +43,11 @@ ms.locfileid: "58840187"
   
  다음 조건에서 예외가 발생합니다.  
   
--   키의 이름이 `Nothing`인 경우(<xref:System.ArgumentNullException>)  
+- 키의 이름이 `Nothing`인 경우(<xref:System.ArgumentNullException>)  
   
--   사용자에게 레지스트리 키에서 읽을 수 있는 권한이 없는 경우(<xref:System.Security.SecurityException>)  
+- 사용자에게 레지스트리 키에서 읽을 수 있는 권한이 없는 경우(<xref:System.Security.SecurityException>)  
   
--   키 이름이 255자 제한을 초과하는 경우(<xref:System.ArgumentException>)  
+- 키 이름이 255자 제한을 초과하는 경우(<xref:System.ArgumentException>)  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
  이 프로세스를 실행하려면 어셈블리에 <xref:System.Security.Permissions.RegistryPermission> 클래스에서 부여한 권한 수준이 필요합니다. 부분 신뢰 컨텍스트에서 실행하는 경우 프로세스가 권한 부족으로 인해 예외를 throw할 수 있습니다. 마찬가지로, 사용자에게 설정을 만들거나 쓸 수 있는 올바른 ACL이 있어야 합니다. 예를 들어 코드 액세스 보안 권한이 있는 로컬 애플리케이션에는 운영 체제 권한이 없을 수 있습니다. 자세한 내용은 [코드 액세스 보안 기본 사항](../../../../framework/misc/code-access-security-basics.md)을 참조하세요.  

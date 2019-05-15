@@ -4,12 +4,12 @@ description: Docker 기반 애플리케이션 개발 워크플로의 세부 정�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: f23a2352d86d5c77d2f05af2a2452fb3c944e049
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 3d2a57c7dda722bcc39895b41c35a3a29ddd17e2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613371"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751461"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 앱에 대한 개발 워크플로
 
@@ -181,7 +181,7 @@ Dockerfile은 배치 스크립트와 비슷합니다. 명령줄에서 머신을 
  5  FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
  6  WORKDIR /src
  7  COPY src/Services/Catalog/Catalog.API/Catalog.API.csproj …
- 8  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.AspNetCore.HealthChecks … 
+ 8  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.AspNetCore.HealthChecks …
  9  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.Extensions.HealthChecks …
 10  COPY src/BuildingBlocks/EventBus/IntegrationEventLogEF/ …
 11  COPY src/BuildingBlocks/EventBus/EventBus/EventBus.csproj …
@@ -206,6 +206,7 @@ Dockerfile은 배치 스크립트와 비슷합니다. 명령줄에서 머신을 
 
 이를 한 줄씩 자세히 설명하면 다음과 같습니다.
 
+<!-- markdownlint-disable MD029-->
 1. "작은" 런타임 전용 기본 이미지로 단계를 시작하고 참조를 위해 이를 **base**라고 명명합니다.
 2. 이미지에 **/app** 디렉터리를 만듭니다.
 3. 포트 **80**을 공개합니다.
@@ -226,6 +227,7 @@ Dockerfile은 배치 스크립트와 비슷합니다. 명령줄에서 머신을 
 26. 현재 디렉터리를 **/app**으로 변경합니다.
 27. **publish** 단계에서 현재 디렉터리로 **/app** 디렉터리를 복사합니다.
 28. 컨테이너가 시작될 때 실행할 명령을 정의합니다.
+<!-- markdownlint-enable MD029-->
 
 이제 전체 프로세스 성능을 높이는 몇 가지 최적화를 살펴보겠습니다. eShopOnContainers의 경우 Linux 컨테이너의 전체 솔루션을 빌드하는 데 약 22분 정도 걸립니다.
 
@@ -233,7 +235,7 @@ Dockerfile은 배치 스크립트와 비슷합니다. 명령줄에서 머신을 
 
 그러면 **build** 단계를 중점적으로 살펴보겠습니다. 5-6줄은 거의 동일하지만 7-17줄은 eShopOnContainers의 각 서비스마다 다르므로 매번 실행해야 합니다. 하지만 7-16줄을 다음과 같이 변경할 경우
 
-```
+```Dockerfile
 COPY . .
 ```
 
@@ -245,7 +247,7 @@ COPY . .
 
 다음으로 중요한 최적화는 17줄에서 실행된 `restore` 명령과 관련이 있습니다. 이 명령도 역시 eShopOnContainers의 각 서비스마다 다릅니다. 이 줄을 다음과 같이 변경할 경우
 
-```console
+```Dockerfile
 RUN dotnet restore
 ```
 
@@ -253,13 +255,13 @@ RUN dotnet restore
 
 하지만 `dotnet restore`는 폴더에 단일 프로젝트나 솔루션 파일이 있을 경우에만 실행되므로 이 방법은 약간 복잡하며 너무 세세한 부분까지 접근하지 않고 이 작업을 처리하는 방법은 다음과 같습니다.
 
-1) **.dockerignore**에 다음 줄을 추가합니다.
+1. **.dockerignore**에 다음 줄을 추가합니다.
 
    - `*.sln` - 기본 폴더 트리의 모든 솔루션 파일 무시
 
    - `!eShopOnContainers-ServicesAndWebApps.sln` - 이 솔루션 파일만 포함
 
-2) `dotnet restore`에 `/ignoreprojectextensions:.dcproj` 인수를 포함하여 docker-compose 프로젝트를 무시하고 eShopOnContainers-ServicesAndWebApps 솔루션의 패키지만 복원하도록 합니다.
+2. `dotnet restore`에 `/ignoreprojectextensions:.dcproj` 인수를 포함하여 docker-compose 프로젝트를 무시하고 eShopOnContainers-ServicesAndWebApps 솔루션의 패키지만 복원하도록 합니다.
 
 마지막 최적화를 보겠습니다. 20줄 바로 다음에 오는 23줄에서 애플리케이션을 빌드하므로 20줄은 불필요하며 시간이 오래 걸리는 명령을 또 한 번 실행해야 합니다.
 
@@ -542,7 +544,7 @@ Visual Studio를 사용하면 편집기/CLI 방식을 사용할 때보다 워크
 - **Steve Lasker. Visual Studio 2017을 사용한 .NET Docker 개발** \
   <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111>
 
-## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>DockerFile에서 PowerShell 명령을 사용하여 Windows 컨테이너 설정 
+## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>DockerFile에서 PowerShell 명령을 사용하여 Windows 컨테이너 설정
 
 [Windows 컨테이너](https://docs.microsoft.com/virtualization/windowscontainers/about/index)를 사용하면 Docker 생태계의 나머지 부분과 동일한 도구로 기존 Windows 애플리케이션을 Docker 이미지로 변환하고 배포할 수 있습니다. Windows 컨테이너를 사용하려면 다음 예제와 같이 Dockerfile에서 PowerShell 명령을 실행합니다.
 

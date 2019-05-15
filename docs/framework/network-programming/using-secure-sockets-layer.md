@@ -15,12 +15,12 @@ helpviewer_keywords:
 - receiving data, Secure Sockets Layer
 - Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
-ms.openlocfilehash: a0af2fa8bbe2efb2dc4fb3d1177c4950dcec87cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9cfa8d6a71898a1d1ea91825ffc9a37f4654ebd5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135806"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583530"
 ---
 # <a name="using-secure-sockets-layer"></a>SSL(Secure Sockets Layer) 사용
 <xref:System.Net> 클래스는 SSL(Secure Sockets Layer)을 사용하여 여러 네트워크 프로토콜에 대한 연결을 암호화합니다.  
@@ -60,7 +60,7 @@ FtpWebResponse response = (FtpWebResponse)request.GetResponse();
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   **System.Net** 네임스페이스에 대한 참조.  
+- **System.Net** 네임스페이스에 대한 참조.  
   
 ## <a name="see-also"></a>참고 항목
 

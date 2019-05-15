@@ -1,6 +1,6 @@
 ---
 title: C# 연산자
-ms.date: 04/04/2018
+ms.date: 04/30/2019
 f1_keywords:
 - cs.operators
 helpviewer_keywords:
@@ -18,34 +18,34 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: f4267caeb6301950b9f6a8b9545a47b9f48e7920
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fbbc0a5accf021df0675192deb040476bc97968d
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61689816"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452377"
 ---
 # <a name="c-operators"></a>C# 연산자
 
-C#에서는 많은 연산자를 제공하며, 이러한 연산자는 식에서 수행할 연산(수학, 인덱싱, 함수 호출 등)을 지정하는 기호입니다. 많은 연산자를 [오버로드](../../programming-guide/statements-expressions-operators/overloadable-operators.md)하여 사용자 정의 형식에 적용되는 경우의 의미를 변경할 수 있습니다.
+C#은 기본 제공 형식에서 지원되는 미리 정의된 여러 연산자를 제공합니다. 예를 들어 [산술 연산자](arithmetic-operators.md)는 기본 제공 숫자 형식의 피연산자를 사용하여 산술 연산을 수행하고 [부울 논리 연산자](boolean-logical-operators.md)는 [bool](../keywords/bool.md) 피연산자를 사용하여 논리 연산을 수행합니다.
 
-정수 계열 형식에 대한 연산(예: `==`, `!=`, `<`, `>`, `&`, `|`)은 일반적으로 열거형(`enum`에서 허용됩니다.
+사용자 정의 형식은 특정 연산자를 오버로드하여 해당 형식의 피연산자에 대한 해당 동작을 정의할 수 있습니다. 자세한 내용은 [연산자](../keywords/operator.md) 키워드 문서를 참조하세요.
 
-아래 섹션에서는 우선 순위가 가장 높은 것부터 시작하여 순서대로 C# 연산자를 나열합니다. 각 섹션 내의 연산자는 동일한 우선 순위 수준을 공유합니다.
+다음 섹션에서는 우선순위가 가장 높은 것부터 시작하여 순서대로 C# 연산자를 나열합니다. 각 섹션 내의 연산자는 동일한 우선 순위 수준을 공유합니다.
 
 ## <a name="primary-operators"></a>기본 연산자
 
 우선 순위가 가장 높은 연산자입니다.
 
-[x.y](member-access-operator.md) – 멤버 액세스
+[x.y](member-access-operators.md#member-access-operator-) – 멤버 액세스
 
-[x?.y](null-conditional-operators.md) – null 조건부 멤버 액세스 왼쪽 피연산자가 `null`로 확인되면 `null`을 반환합니다.
+[x?.y](member-access-operators.md#null-conditional-operators--and-) – null 조건부 멤버 액세스 왼쪽 피연산자가 `null`로 확인되면 `null`을 반환합니다.
 
-[x?[y]](null-conditional-operators.md) - null 조건부 인덱스 액세스 왼쪽 피연산자가 `null`로 확인되면 `null`을 반환합니다.
+[x?[y]](member-access-operators.md#null-conditional-operators--and-) - null 조건부 배열 요소 또는 형식 인덱서 액세스. 왼쪽 피연산자가 `null`로 확인되면 `null`을 반환합니다.
 
-[f(x)](invocation-operator.md) – 함수 호출
+[f (x)](member-access-operators.md#invocation-operator-) - 메서드 호출 또는 대리자 호출.
 
-[a&#91;x&#93;](index-operator.md) – 집계 개체 인덱싱
+[&#91;x&#93;](member-access-operators.md#indexer-operator-) – 배열 요소 또는 형식 인덱서 액세스.
 
 [x++](arithmetic-operators.md#increment-operator-) – 후위 증가. x의 값을 반환하고 1보다 큰 x 값(일반적으로 정수 1을 더함)으로 스토리지 위치를 업데이트합니다.
 
@@ -61,9 +61,13 @@ C#에서는 많은 연산자를 제공하며, 이러한 연산자는 식에서 �
 
 [default(T)](../../programming-guide/statements-expressions-operators/default-value-expressions.md) – T 형식의 기본값을 생성합니다.
 
+[nameof](../keywords/nameof.md) - 변수, 형식 또는 멤버의 단순(정규화되지 않은) 이름을 상수 문자열로 가져옵니다.
+
 [delegate](../../programming-guide/statements-expressions-operators/anonymous-methods.md) – 대리자 인스턴스를 선언하고 반환합니다.
 
 [sizeof](../keywords/sizeof.md) – 형식 피연산자의 크기(바이트)를 반환합니다.
+
+[stackalloc](../keywords/stackalloc.md) - 스택의 메모리 블록을 할당합니다.
 
 [->](dereference-operator.md) – 멤버 액세스와 결합된 포인터 역참조입니다.
 
@@ -125,13 +129,13 @@ C#에서는 많은 연산자를 제공하며, 이러한 연산자는 식에서 �
 
 이러한 연산자는 다음 섹션보다 우선 순위가 높고 이전 섹션보다 우선 순위가 낮습니다.
 
-[x \< y](less-than-operator.md) –보다 작음(x가 y보다 작은 경우 true)
+[x \< y](comparison-operators.md#less-than-operator-) –보다 작음(x가 y보다 작은 경우 true)
 
-[x > y](greater-than-operator.md) – 보다 큼(x가 y보다 큰 경우 true)
+[x > y](comparison-operators.md#greater-than-operator-) – 보다 큼(x가 y보다 큰 경우 true)
 
-[x \<= y](less-than-equal-operator.md) – 크거나 같음
+[x \<= y](comparison-operators.md#less-than-or-equal-operator-) – 크거나 같음
 
-[x >= y](greater-than-equal-operator.md) – 보다 크거나 같음
+[x >= y](comparison-operators.md#greater-than-or-equal-operator-) – 보다 크거나 같음
 
 [is](../keywords/is.md) – 형식 호환성. 계산된 왼쪽 피연산자를 오른쪽 피연산자에 지정된 형식(정적 형식)으로 캐스팅할 수 있는 경우 true를 반환합니다.
 

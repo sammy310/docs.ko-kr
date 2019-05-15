@@ -1,21 +1,16 @@
 ---
 title: Infer.NET 및 확률적 프로그래밍을 사용하여 게임 대전 목록 앱 만들기
 description: Infer.NET과 함께 확률적 프로그래밍을 사용하여 TrueSkill의 간소화된 버전을 기반으로 게임 대전 목록 앱을 만드는 방법을 알아봅니다.
-ms.date: 03/05/2019
+ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 06538ec9de26f5aeabe474fbcae69f0a313c8d32
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 85cb3753ae19e7ca64002eb7c26b44b6f7d41e4f
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679136"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211432"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Infer.NET 및 확률적 프로그래밍을 사용하여 게임 대전 목록 앱 만들기
-
-> [!NOTE]
-> 이 항목은 현재 미리 보기로 제공되는 ML.NET을 참조하며, 자료는 변경될 수 있습니다. 자세한 내용은 [ML.NET 소개](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)를 참조하세요.
-
-이 방법과 관련 샘플에서는 현재 **ML.NET 버전 0.10**을 사용하고 있습니다. 자세한 내용은 [dotnet/machinelearning GitHub 리포지토리](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)에서 릴리스 정보를 참조하세요.
 
 이 방법 가이드에서는 Infer.NET을 사용하는 확률적 프로그래밍을 설명합니다. 확률적 프로그래밍은 사용자 지정 모델을 컴퓨터 프로그램으로 표현하는 기계 학습 접근 방식입니다. 이를 통해 모델의 도메인 정보를 통합할 수 있고 기계 학습 시스템이 더 쉽게 해석할 수 있습니다. 새 데이터가 도착할 때 수행되는 학습 프로세스인 온라인 유추도 지원합니다. Infer.NET은 Azure, Xbox 및 Bing에서 Microsoft의 다양한 제품에 사용됩니다.
 

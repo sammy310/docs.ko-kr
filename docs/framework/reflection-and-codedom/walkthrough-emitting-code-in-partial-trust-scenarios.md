@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0483f1477ee215537d1081fde791d0742d5aec50
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 54a6a1cda604cb9cdeecd9587af81dbdb810965c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299477"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592450"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>연습: 부분 신뢰 시나리오에서 코드 내보내기
 리플렉션 내보내기에는 완전 또는 부분 신뢰에서 동일한 API 집합이 사용되지만 일부 기능의 경우 부분적으로 신뢰할 수 있는 코드에 특수 권한이 필요합니다. 또한 리플렉션 내보내기에는 부분 신뢰와 함께 보안 투명 어셈블리에서 사용되도록 디자인된 익명으로 호스트되는 동적 메서드의 기능이 있습니다.  
@@ -31,14 +31,14 @@ ms.locfileid: "59299477"
   
  이 연습에서는 다음 작업을 수행합니다.  
   
--   [부분적으로 신뢰할 수 있는 코드를 테스트하기 위한 간단한 샌드박스 설정](#Setting_up).  
+- [부분적으로 신뢰할 수 있는 코드를 테스트하기 위한 간단한 샌드박스 설정](#Setting_up).  
   
     > [!IMPORTANT]
     >  부분 신뢰에서 코드를 간단하게 실험하는 방법입니다. 실제로 신뢰할 수 없는 위치에서 나오는 코드를 실행하려면 [방법: 샌드박스에서 부분적으로 신뢰할 수 있는 코드 실행](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)을 참조하세요.  
   
--   [부분적으로 신뢰할 수 있는 애플리케이션 도메인에서 코드 실행](#Running_code).  
+- [부분적으로 신뢰할 수 있는 애플리케이션 도메인에서 코드 실행](#Running_code).  
   
--   [익명으로 호스트된 동적 메서드를 사용하여 부분 신뢰에서 코드 내보내기 및 실행](#Using_methods).  
+- [익명으로 호스트된 동적 메서드를 사용하여 부분 신뢰에서 코드 내보내기 및 실행](#Using_methods).  
   
  부분 신뢰 시나리오의 코드 내보내기에 대한 자세한 내용은 [리플렉션 내보내기의 보안 문제점](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)을 참조하세요.  
   
@@ -48,9 +48,9 @@ ms.locfileid: "59299477"
 ## <a name="setting-up-partially-trusted-locations"></a>부분적으로 신뢰할 수 있는 위치 설정  
  다음 두 절차는 부분 신뢰를 사용하여 코드를 테스트할 수 있는 위치를 설정하는 방법을 보여 줍니다.  
   
--   첫 번째 절차는 코드에 인터넷 권한이 부여되는 샌드박스가 적용된 애플리케이션 도메인을 만드는 방법을 보여 줍니다.  
+- 첫 번째 절차는 코드에 인터넷 권한이 부여되는 샌드박스가 적용된 애플리케이션 도메인을 만드는 방법을 보여 줍니다.  
   
--   두 번째 절차는 동일하거나 낮은 신뢰 수준 어셈블리의 전용 데이터에 액세스할 수 있도록 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 플래그와 함께 <xref:System.Security.Permissions.ReflectionPermission>을 부분적으로 신뢰할 수 있는 애플리케이션 도메인에 추가하는 방법을 보여 줍니다.  
+- 두 번째 절차는 동일하거나 낮은 신뢰 수준 어셈블리의 전용 데이터에 액세스할 수 있도록 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 플래그와 함께 <xref:System.Security.Permissions.ReflectionPermission>을 부분적으로 신뢰할 수 있는 애플리케이션 도메인에 추가하는 방법을 보여 줍니다.  
   
 ### <a name="creating-sandboxed-application-domains"></a>샌드박스가 적용된 애플리케이션 도메인 만들기  
  어셈블리가 부분 신뢰로 실행되는 애플리케이션 도메인을 만들려면 <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> 메서드 오버로드를 사용하여 애플리케이션 도메인을 만드는 방식으로 어셈블리에 부여되는 권한 집합을 지정해야 합니다. 권한 집합을 지정하는 가장 쉬운 방법은 보안 정책에서 명명된 권한 집합을 검색하는 것입니다.  
@@ -155,7 +155,7 @@ ms.locfileid: "59299477"
   
 #### <a name="to-use-anonymously-hosted-dynamic-methods"></a>익명으로 호스트된 동적 메서드를 사용하려면  
   
--   연결된 모듈 또는 형식을 지정하지 않는 생성자를 사용하여 익명으로 호스트된 동적 메서드를 만듭니다.  
+- 연결된 모듈 또는 형식을 지정하지 않는 생성자를 사용하여 익명으로 호스트된 동적 메서드를 만듭니다.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#15](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#15)]
      [!code-vb[HowToEmitCodeInPartialTrust#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#15)]  
@@ -164,7 +164,7 @@ ms.locfileid: "59299477"
   
      동적 메서드를 내보내기 위한 특수 권한이 필요하지 않지만, 내보낸 코드에는 코드에서 사용하는 형식 및 메서드에 필요한 권한이 있어야 합니다. 예를 들어 내보낸 코드가 파일에 액세스하는 메서드를 호출할 경우 <xref:System.Security.Permissions.FileIOPermission>이 필요합니다. 신뢰 수준에 권한이 포함되지 않은 경우 내보낸 코드가 실행될 때 보안 예외가 throw됩니다. 여기 표시된 코드는 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 메서드만 사용하는 동적 메서드를 내보냅니다. 따라서 코드는 부분적으로 신뢰할 수 있는 위치에서 실행할 수 있습니다.  
   
--   또는 <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Boolean%29> 생성자를 사용하고 `restrictedSkipVisibility` 매개 변수를 `true`로 지정하여 JIT 표시 유형 확인을 건너뛰는 제한된 기능을 가진 익명으로 호스트된 동적 메서드를 만듭니다.  
+- 또는 <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Boolean%29> 생성자를 사용하고 `restrictedSkipVisibility` 매개 변수를 `true`로 지정하여 JIT 표시 유형 확인을 건너뛰는 제한된 기능을 가진 익명으로 호스트된 동적 메서드를 만듭니다.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#16)]
      [!code-vb[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#16)]  
@@ -191,15 +191,15 @@ ms.locfileid: "59299477"
   
  예제에서는 도우미 메서드를 사용하여 `Internet` 권한으로 제한된 권한 집합을 만들고 나서 <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> 메서드 오버로드로 애플리케이션 도메인을 만들어 도메인에서 실행되는 모든 코드가 이 권한 집합을 사용하도록 지정합니다. 예제에서는 애플리케이션 도메인에서 `Worker` 클래스 인스턴스를 만들고 `AccessPrivateMethod` 메서드를 두 번 실행합니다.  
   
--   `AccessPrivateMethod` 메서드가 처음 실행될 때 JIT 표시 유형 확인이 실행됩니다. JIT 표시 유형 확인을 실행하면 동적 메서드가 private 메서드에 액세스할 수 없으므로 동적 메서드는 호출 시 실패합니다.  
+- `AccessPrivateMethod` 메서드가 처음 실행될 때 JIT 표시 유형 확인이 실행됩니다. JIT 표시 유형 확인을 실행하면 동적 메서드가 private 메서드에 액세스할 수 없으므로 동적 메서드는 호출 시 실패합니다.  
   
--   `AccessPrivateMethod` 메서드가 두 번째로 실행될 때는 JIT 표시 유형 확인을 건너뜁니다. `Internet` 권한 집합은 표시 유형 확인을 건너뛸 충분한 권한을 부여하지 않으므로 동적 메서드는 컴파일 시 실패합니다.  
+- `AccessPrivateMethod` 메서드가 두 번째로 실행될 때는 JIT 표시 유형 확인을 건너뜁니다. `Internet` 권한 집합은 표시 유형 확인을 건너뛸 충분한 권한을 부여하지 않으므로 동적 메서드는 컴파일 시 실패합니다.  
   
  예제에서는 <xref:System.Security.Permissions.ReflectionPermission>을 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>와 함께 권한 집합에 추가합니다. 예제에서는 그다음에 두 번째 도메인을 만들어 도메인에서 실행되는 모든 코드에 새 권한 집합의 권한이 부여되도록 지정합니다. 예제에서는 새 애플리케이션 도메인에서 `Worker` 클래스 인스턴스를 만들고 `AccessPrivateMethod` 메서드의 오버로드를 둘 다 실행합니다.  
   
--   `AccessPrivateMethod` 메서드의 첫 번째 오버로드가 실행되고 JIT 표시 유형 확인을 건너뜁니다. 코드를 내보내는 어셈블리가 private 메서드를 포함하는 어셈블리와 같기 때문에 동적 메서드가 성공적으로 컴파일 및 실행됩니다. 따라서 신뢰 수준이 같습니다. `Worker` 클래스를 포함하는 애플리케이션에 여러 어셈블리가 있는 경우에는 모든 어셈블리의 신뢰 수준이 같으므로 모든 해당 어셈블리에 대해 동일한 프로세스가 성공합니다.  
+- `AccessPrivateMethod` 메서드의 첫 번째 오버로드가 실행되고 JIT 표시 유형 확인을 건너뜁니다. 코드를 내보내는 어셈블리가 private 메서드를 포함하는 어셈블리와 같기 때문에 동적 메서드가 성공적으로 컴파일 및 실행됩니다. 따라서 신뢰 수준이 같습니다. `Worker` 클래스를 포함하는 애플리케이션에 여러 어셈블리가 있는 경우에는 모든 어셈블리의 신뢰 수준이 같으므로 모든 해당 어셈블리에 대해 동일한 프로세스가 성공합니다.  
   
--   `AccessPrivateMethod` 메서드의 두 번째 오버로드가 실행되고 다시 JIT 표시 유형 확인을 건너뜁니다. 이때 동적 메서드는 <xref:System.String> 클래스의 `internal` `FirstChar` 속성에 액세스하려고 하므로 동적 메서드가 컴파일 시 실패합니다. <xref:System.String> 클래스를 포함하는 어셈블리는 완전히 신뢰할 수 있습니다. 따라서 이 어셈블리는 코드를 내보내는 어셈블리보다 신뢰 수준이 높습니다.  
+- `AccessPrivateMethod` 메서드의 두 번째 오버로드가 실행되고 다시 JIT 표시 유형 확인을 건너뜁니다. 이때 동적 메서드는 <xref:System.String> 클래스의 `internal` `FirstChar` 속성에 액세스하려고 하므로 동적 메서드가 컴파일 시 실패합니다. <xref:System.String> 클래스를 포함하는 어셈블리는 완전히 신뢰할 수 있습니다. 따라서 이 어셈블리는 코드를 내보내는 어셈블리보다 신뢰 수준이 높습니다.  
   
  이 비교는 신뢰할 수 있는 코드의 보안을 손상시키지 않고 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>를 사용하여 부분적으로 신뢰할 수 있는 코드가 다른 부분적으로 신뢰할 수 있는 코드의 표시 유형 확인을 건너뛰는 방법을 보여 줍니다.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "59299477"
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
   
--   Visual Studio에서 이 코드 예제를 빌드하는 경우 <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> 메서드에 클래스를 전달할 때 네임스페이스를 포함하도록 해당 클래스의 이름을 변경해야 합니다. 기본적으로 네임스페이스는 프로젝트의 이름입니다. 예를 들어 프로젝트가 "PartialTrust"이면 클래스 이름은 "PartialTrust.Worker"입니다.  
+- Visual Studio에서 이 코드 예제를 빌드하는 경우 <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> 메서드에 클래스를 전달할 때 네임스페이스를 포함하도록 해당 클래스의 이름을 변경해야 합니다. 기본적으로 네임스페이스는 프로젝트의 이름입니다. 예를 들어 프로젝트가 "PartialTrust"이면 클래스 이름은 "PartialTrust.Worker"입니다.  
   
 ## <a name="see-also"></a>참고 항목
 

@@ -19,12 +19,12 @@ ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: f0e42c0032dc6f9dac0895a29db9de79547c0a49
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85e971d3464b6f2a073288e7f8b5406563598f79
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675369"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634746"
 ---
 # <a name="anchors-in-regular-expressions"></a>정규식의 앵커
 <a name="top"></a> 앵커 또는 원자성 너비가 0인 어설션은 문자열에서 일치 항목이 나타나야 하는 위치를 지정합니다. 검색 식에서 앵커를 사용하면 정규식 엔진은 문자열을 통과하거나 문자를 사용하지 않고, 지정된 위치에서만 일치 항목을 검색합니다. 예를 들어 `^` 기호는 줄이나 문자열의 시작 부분에서 일치 항목 찾기를 시작하도록 지정합니다. 따라서 정규식 `^http:` 은 줄의 시작 부분에 나타날 때만 "http:"을 찾습니다. 다음 표에서는 .NET의 정규식에서 지원하는 앵커를 보여 줍니다.  
@@ -46,9 +46,9 @@ ms.locfileid: "54675369"
   
  다음 예제에서는 일부 전문 야구팀이 있던 기간(년)에 대한 정보를 추출하는 정규식에서 `^` 앵커를 사용합니다. 이 예제에서는 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 메서드의 오버로드 두 개를 호출합니다.  
   
--   <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29> 오버로드에 대한 호출은 입력 문자열에서 정규식 패턴과 일치하는 첫 번째 하위 문자열만 찾습니다.  
+- <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29> 오버로드에 대한 호출은 입력 문자열에서 정규식 패턴과 일치하는 첫 번째 하위 문자열만 찾습니다.  
   
--   <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29> 매개 변수를 `options` 으로 설정한 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 오버로드에 대한 호출은 모든 하위 문자열 5개를 찾습니다.  
+- <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29> 매개 변수를 `options` 으로 설정한 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 오버로드에 대한 호출은 모든 하위 문자열 5개를 찾습니다.  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/startofstring1.cs#1)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/startofstring1.vb#1)]  

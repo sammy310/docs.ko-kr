@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0aef9a1c81172cda9b6df4574edb331e0ed137ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9eb9eabe006dd10b0c36d0fb477637a519853ef2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340609"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633831"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>방법: 날짜 및 시간 값 라운드트립
 많은 애플리케이션에서 날짜 및 시간 값은 단일 시점을 명확하게 식별하는 데 사용됩니다. 이 항목에서는 복원된 값이 저장된 값과 같은 시간을 식별할 수 있도록 <xref:System.DateTime> 값, <xref:System.DateTimeOffset> 값 그리고 표준 시간대 정보가 있는 날짜 및 시간 값을 저장하고 복원하는 방법을 보여줍니다.  
@@ -83,21 +83,21 @@ ms.locfileid: "59340609"
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이러한 예제에는 다음이 필요합니다.  
   
--   C# `using` 문 또는 Visual Basic `Imports` 문을 사용하여 다음 네임스페이스를 가져와야 합니다.  
+- C# `using` 문 또는 Visual Basic `Imports` 문을 사용하여 다음 네임스페이스를 가져와야 합니다.  
   
-    -   <xref:System>(C#만 해당).  
+    - <xref:System>(C#만 해당).  
   
-    -   <xref:System.Globalization?displayProperty=nameWithType>.  
+    - <xref:System.Globalization?displayProperty=nameWithType>.  
   
-    -   <xref:System.IO?displayProperty=nameWithType>.  
+    - <xref:System.IO?displayProperty=nameWithType>.  
   
-    -   <xref:System.Runtime.Serialization?displayProperty=nameWithType>.  
+    - <xref:System.Runtime.Serialization?displayProperty=nameWithType>.  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>.  
+    - <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>.  
   
--   System.Core.dll에 대한 참조가 필요합니다.  
+- System.Core.dll에 대한 참조가 필요합니다.  
   
--   `DateInTimeZone` 클래스 이외의 각 코드 예제가 클래스 또는 Visual Basic 모듈에 포함되어야 하며, 메서드에 래핑되고, `Main` 메서드에서 호출되어야 합니다.  
+- `DateInTimeZone` 클래스 이외의 각 코드 예제가 클래스 또는 Visual Basic 모듈에 포함되어야 하며, 메서드에 래핑되고, `Main` 메서드에서 호출되어야 합니다.  
   
 ## <a name="see-also"></a>참고 항목
 

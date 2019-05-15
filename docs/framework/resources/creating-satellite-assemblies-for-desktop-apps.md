@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1aecd8e6dcec73ba4dc45d4bf8f365503888687e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 843b61257229bb3bf8c3852554f19c34dccc7496
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295993"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592359"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>데스크톱 응용 프로그램용 위성 어셈블리 만들기
 리소스 파일은 지역화된 애플리케이션에서 중요한 역할을 합니다. 애플리케이션을 사용하여 사용자의 언어 및 문화권에서 문자열, 이미지 및 기타 데이터를 표시하고 사용자의 언어 또는 문화권에 대한 리소스를 사용할 수 없는 경우 대체 데이터를 제공할 수 있습니다. .NET Framework에서는 허브 및 스포크 모델을 사용하여 지역화된 리소스를 찾고 검색합니다. 허브는 지역화할 수 없는 실행 코드와 중립 또는 기본 문화권이라고 하는 단일 문화권의 리소스를 포함하는 주 어셈블리입니다. 기본 문화권은 애플리케이션의 대체 문화권으로, 지역화된 리소스를 사용할 수 없는 경우 사용됩니다. <xref:System.Resources.NeutralResourcesLanguageAttribute> 특성을 사용하여 애플리케이션의 기본 문화권의 문화를 지정합니다. 각 스포크는 지역화된 단일 문화권의 리소스를 포함하지만 코드는 포함하지 않는 위성 어셈블리에 연결됩니다. 위성 어셈블리는 주 어셈블리의 일부가 아니므로 애플리케이션의 주 어셈블리를 바꾸지 않고도 특정 문화권에 해당하는 리소스를 손쉽게 업데이트하거나 바꿀 수 있습니다.  
@@ -41,16 +41,16 @@ ms.locfileid: "59295993"
 ## <a name="satellite-assembly-name-and-location"></a>위성 어셈블리의 이름 및 위치  
  허브 및 스포크 모델을 사용하려면 리소스를 쉽게 찾아서 사용할 수 있도록 특정 위치에 두어야 합니다. 리소스 컴파일과 이름 지정을 제대로 하지 않거나 리소스를 정확한 위치에 두지 않으면 공용 언어 런타임에서는 이 리소스를 찾을 수 없으며 대신 기본 문화권의 리소스를 사용합니다. <xref:System.Resources.ResourceManager> 개체로 표현되는 .NET Framework 리소스 관리자는 지역화된 리소스에 자동으로 액세스하는 데 사용됩니다. 리소스 관리자에는 다음 사항이 필요합니다.  
   
--   단일 위성 어셈블리는 특정 문화권에 대한 모든 리소스를 포함해야 합니다. 즉, 여러 .txt 또는 .resx 파일을 단일 이진 .resources 파일로 컴파일해야 합니다.  
+- 단일 위성 어셈블리는 특정 문화권에 대한 모든 리소스를 포함해야 합니다. 즉, 여러 .txt 또는 .resx 파일을 단일 이진 .resources 파일로 컴파일해야 합니다.  
   
--   해당 문화권의 리소스를 저장하는 각 지역화된 문화권에 대한 애플리케이션 디렉터리에 있는 별도의 하위 디렉터리가 있어야 합니다. 하위 디렉터리 이름은 문화권 이름과 동일해야 합니다. 또는 위성 어셈블리를 전역 어셈블리 캐시에 저장할 수 있습니다. 이 경우 어셈블리의 강력한 이름의 문화권 정보 구성 요소는 해당 문화권을 나타내야 합니다. 이 항목의 뒷부분에 있는 [위성 어셈블리를 전역 어셈블리 캐시에 설치](#SN)를 참조하세요.  
+- 해당 문화권의 리소스를 저장하는 각 지역화된 문화권에 대한 애플리케이션 디렉터리에 있는 별도의 하위 디렉터리가 있어야 합니다. 하위 디렉터리 이름은 문화권 이름과 동일해야 합니다. 또는 위성 어셈블리를 전역 어셈블리 캐시에 저장할 수 있습니다. 이 경우 어셈블리의 강력한 이름의 문화권 정보 구성 요소는 해당 문화권을 나타내야 합니다. 이 항목의 뒷부분에 있는 [위성 어셈블리를 전역 어셈블리 캐시에 설치](#SN)를 참조하세요.  
   
     > [!NOTE]
     >  애플리케이션에 하위 문화권의 리소스가 들어 있는 경우 각 하위 문화권을 애플리케이션 디렉터리 아래 별도의 하위 디렉터리에 둡니다. 주 문화권의 디렉터리 아래 하위 디렉터리에 하위 문화권을 두면 안 됩니다.  
   
--   위성 어셈블리는 애플리케이션과 동일한 이름을 가져야 하고 ".resources.dll"을 파일 이름 확장명으로 사용해야 합니다. 예를 들어, 애플리케이션의 이름이 Example.exe인 경우, 각 위성 어셈블리의 이름은 Example.resources.dll이어야 합니다. 위성 어셈블리 이름이 해당 리소스 파일의 문화권을 나타내지 않는다는 것에 주의합니다. 그러나, 위성 어셈블리는 문화권을 지정하는 디렉터리에 나타납니다.  
+- 위성 어셈블리는 애플리케이션과 동일한 이름을 가져야 하고 ".resources.dll"을 파일 이름 확장명으로 사용해야 합니다. 예를 들어, 애플리케이션의 이름이 Example.exe인 경우, 각 위성 어셈블리의 이름은 Example.resources.dll이어야 합니다. 위성 어셈블리 이름이 해당 리소스 파일의 문화권을 나타내지 않는다는 것에 주의합니다. 그러나, 위성 어셈블리는 문화권을 지정하는 디렉터리에 나타납니다.  
   
--   위성 어셈블리의 문화권에 대한 정보는 어셈블리의 메타데이터에 포함되어야 합니다. 문화권 이름을 위성 어셈블리의 메타데이터에 저장하려면 [어셈블리 링커](../../../docs/framework/tools/al-exe-assembly-linker.md)를 사용하여 리소스를 위성 어셈블리에 포함할 때 `/culture` 옵션을 지정합니다.  
+- 위성 어셈블리의 문화권에 대한 정보는 어셈블리의 메타데이터에 포함되어야 합니다. 문화권 이름을 위성 어셈블리의 메타데이터에 저장하려면 [어셈블리 링커](../../../docs/framework/tools/al-exe-assembly-linker.md)를 사용하여 리소스를 위성 어셈블리에 포함할 때 `/culture` 옵션을 지정합니다.  
   
  다음 그림은 [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)에 설치하지 않는 애플리케이션에 대한 샘플 디렉터리 구조 및 위치 요구 사항을 보여 줍니다. .txt 및 .resources 확장명을 가진 항목은 최종 애플리케이션과 함께 제공되지 않습니다. 이러한 중간 리소스 파일은 최종 위성 리소스 어셈블리를 만드는 데 사용됩니다. 이 예제에서는 .resx 파일을 .txt 파일로 대체할 수 있습니다. 자세한 내용은 [리소스 패키지 및 배포](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)를 참조하세요. 
  
@@ -97,11 +97,11 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
 3. 추가 문화권(en-US, fr-FR 및 ru-RU)에 대한 지원을 애플리케이션에 다음과 같이 추가할 수 있습니다.  
   
-    -   "en-US" 또는 영어(미국) 문화권을 지원하려면 Greeting.en-US.resx 또는 Greeting.en-US.txt라는 리소스 파일을 만들어 값이 "Hi world!"인 `HelloString`이라는 단일 문자열에 저장합니다.  
+    - "en-US" 또는 영어(미국) 문화권을 지원하려면 Greeting.en-US.resx 또는 Greeting.en-US.txt라는 리소스 파일을 만들어 값이 "Hi world!"인 `HelloString`이라는 단일 문자열에 저장합니다.  
   
-    -   "fr-FR" 또는 프랑스어(프랑스) 문화권을 지원하려면 Greeting.fr-FR.resx 또는 Greeting.fr-FR.txt라는 리소스 파일을 만들어 값이 "Salut tout le monde!"인 `HelloString`이라는 단일 문자열에 저장합니다.  
+    - "fr-FR" 또는 프랑스어(프랑스) 문화권을 지원하려면 Greeting.fr-FR.resx 또는 Greeting.fr-FR.txt라는 리소스 파일을 만들어 값이 "Salut tout le monde!"인 `HelloString`이라는 단일 문자열에 저장합니다.  
   
-    -   ru-RU 또는 러시아어(러시아) 문화권을 지원하려면 Greeting.ru-RU.resx 또는 Greeting.ru-RU.txt라는 리소스 파일을 만들어 값이 "Всем привет!"인 `HelloString`이라는 단일 문자열에 저장합니다.  
+    - ru-RU 또는 러시아어(러시아) 문화권을 지원하려면 Greeting.ru-RU.resx 또는 Greeting.ru-RU.txt라는 리소스 파일을 만들어 값이 "Всем привет!"인 `HelloString`이라는 단일 문자열에 저장합니다.  
   
 4. [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)를 사용하여 각 텍스트 또는 XML 리소스 파일을 이진 .resources 파일로 컴파일합니다. 출력은 .resx 또는 .txt 파일과 동일한 루트 파일 이름을 가지고 있지만 .resources 확장명과는 다른 파일의 집합입니다. Visual Studio를 사용하여 예제를 만들면 컴파일 프로세스는 자동으로 처리됩니다. Visual Studio를 사용하지 않는 경우, .resx 파일을 .resources 파일로 컴파일하는 데 다음 명령을 실행합니다.  
   
@@ -226,11 +226,11 @@ gacutil -i:StringLibrary.resources.dll
   
 5. 추가 문화권(en-US, fr-FR 및 ru-RU 문화권)에 대한 지원을 애플리케이션에 다음과 같이 추가합니다.  
   
-    -   "en-US" 또는 영어(미국) 문화권을 지원하려면 Strings.en-US.resx 또는 Strings.en-US.txt라는 리소스 파일을 만들어 값이 "Hello!"인 `Greeting`이라는 단일 문자열에 저장합니다.  
+    - "en-US" 또는 영어(미국) 문화권을 지원하려면 Strings.en-US.resx 또는 Strings.en-US.txt라는 리소스 파일을 만들어 값이 "Hello!"인 `Greeting`이라는 단일 문자열에 저장합니다.  
   
-    -   "fr-FR" 또는 프랑스어(프랑스) 문화권을 지원하려면 Strings.fr-FR.resx 또는 Strings.fr-FR.txt라는 리소스 파일을 만들어 값이 ""Bon jour!"인 `Greeting`이라는 단일 문자열에 저장합니다.  
+    - "fr-FR" 또는 프랑스어(프랑스) 문화권을 지원하려면 Strings.fr-FR.resx 또는 Strings.fr-FR.txt라는 리소스 파일을 만들어 값이 ""Bon jour!"인 `Greeting`이라는 단일 문자열에 저장합니다.  
   
-    -   "ru-RU" 또는 러시아어(러시아) 문화권을 지원하려면 Strings.ru-RU.resx 또는 Strings.ru-RU.txt라는 리소스 파일을 만들어 값이 "Привет!"인 `Greeting`이라는 단일 문자열에 저장합니다.  
+    - "ru-RU" 또는 러시아어(러시아) 문화권을 지원하려면 Strings.ru-RU.resx 또는 Strings.ru-RU.txt라는 리소스 파일을 만들어 값이 "Привет!"인 `Greeting`이라는 단일 문자열에 저장합니다.  
   
 6. [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)를 사용하여 각 텍스트 또는 XML 리소스 파일을 이진 .resources 파일로 컴파일합니다. 출력은 .resx 또는 .txt 파일과 동일한 루트 파일 이름을 가지고 있지만 .resources 확장명과는 다른 파일의 집합입니다. Visual Studio를 사용하여 예제를 만들면 컴파일 프로세스는 자동으로 처리됩니다. Visual Studio를 사용하지 않는 경우, .resx 파일을 .resources 파일로 컴파일하는 데 다음 명령을 실행합니다.  
   

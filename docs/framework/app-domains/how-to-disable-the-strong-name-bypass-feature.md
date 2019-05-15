@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86fc35ae20211bd32a21d60b7313074361aef671
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 20b482ee94446ffa863697d8c25276658a4bb122
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296175"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593608"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>방법: 강력한 이름 건너뛰기 기능 비활성화
 .NET Framework 버전 3.5 SP1(서비스 팩 1)부터는 어셈블리가 완전 신뢰 <xref:System.AppDomain> 개체(예: `MyComputer` 영역의 기본 <xref:System.AppDomain>)에 로드될 때 강력한 이름 시그니처의 유효성을 검사하지 않습니다. 이를 강력한 이름 건너뛰기 기능이라고 합니다. 완전 신뢰 환경에서는 <xref:System.Security.Permissions.StrongNameIdentityPermission>에 대한 요청이 해당 시그니처와 관계없이 서명된 완전 신뢰 어셈블리에 대해 항상 성공합니다. 유일한 제한 사항은 어셈블리 영역이 완전히 신뢰되므로 어셈블리도 완전히 신뢰할 수 있어야 한다는 것입니다. 강력한 이름은 이러한 조건에서 결정적인 요소가 아니므로 유효성을 검사할 이유가 없습니다. 강력한 이름 시그니처의 유효성 검사를 건너뛰면 상당한 성능 개선 효과가 있습니다.  
@@ -28,9 +28,9 @@ ms.locfileid: "59296175"
   
 ### <a name="to-disable-the-strong-name-bypass-feature-for-all-applications"></a>모든 애플리케이션에 대해 강력한 이름 건너뛰기 기능을 사용하지 않도록 설정하려면  
   
--   32비트 컴퓨터에서는 시스템 레지스트리의 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework 키 아래에 값이 0인 `AllowStrongNameBypass`라는 DWORD 항목을 만듭니다.  
+- 32비트 컴퓨터에서는 시스템 레지스트리의 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework 키 아래에 값이 0인 `AllowStrongNameBypass`라는 DWORD 항목을 만듭니다.  
   
--   64비트 컴퓨터에서는 시스템 레지스트리의 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework 및 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework 아래에 값이 0인 `AllowStrongNameBypass`라는 DWORD 항목을 만듭니다.  
+- 64비트 컴퓨터에서는 시스템 레지스트리의 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework 및 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework 아래에 값이 0인 `AllowStrongNameBypass`라는 DWORD 항목을 만듭니다.  
   
 ### <a name="to-disable-the-strong-name-bypass-feature-for-a-single-application"></a>단일 애플리케이션에 대해 강력한 이름 건너뛰기 기능을 사용하지 않도록 설정하려면  
   

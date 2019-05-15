@@ -2,15 +2,15 @@
 title: '방법: Task.WhenAll을 사용하여 비동기 연습 확장(C#)'
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-ms.openlocfilehash: 9710e5f31b9d01c5151b548c1b642293122d44b3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8e1f617040bd902ab53500fbfeeafff35677280a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297956"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583420"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>방법: Task.WhenAll을 사용하여 비동기 연습 확장(C#)
- 메서드를 사용하여 [연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)에서 비동기 솔루션의 성능을 개선할 수 있습니다. 이 메서드는 작업 컬렉션으로 표시되는 여러 개의 비동기 작업을 비동기적으로 기다립니다.  
+<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 메서드를 사용하여 [연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)에서 비동기 솔루션의 성능을 개선할 수 있습니다. 이 메서드는 작업 컬렉션으로 표시되는 여러 개의 비동기 작업을 비동기적으로 기다립니다.  
   
  연습에서 웹 사이트 다운로드 속도가 각기 다른 것을 보셨을 것입니다. 때로는 웹 사이트 중 하나가 매우 느려 나머지 다운로드가 모두 지연됩니다. 연습에서 빌드하는 비동기 솔루션을 실행하는 경우 대기하지 않으려면 프로그램을 쉽게 종료할 수 있지만, 동시에 모든 다운로드를 시작한 후 더 빠른 다운로드는 지연되는 다운로드를 기다리지 않고 계속되도록 하는 것이 더 낫습니다.  
   
@@ -25,9 +25,9 @@ ms.locfileid: "59297956"
   
 1. `ProcessURLAsync` 메서드를 [연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)에서 개발된 첫 번째 애플리케이션에 추가합니다.  
   
-    -   [개발자 코드 샘플](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)에서 코드를 다운로드한 경우 AsyncWalkthrough 프로젝트를 열고 MainWindow.xaml.cs 파일에 `ProcessURLAsync`를 추가합니다.  
+    - [개발자 코드 샘플](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)에서 코드를 다운로드한 경우 AsyncWalkthrough 프로젝트를 열고 MainWindow.xaml.cs 파일에 `ProcessURLAsync`를 추가합니다.  
   
-    -   연습을 완료하여 코드를 개발한 경우 `GetURLContentsAsync` 메서드를 포함하는 애플리케이션에 `ProcessURLAsync`를 추가합니다. 이 애플리케이션에 대한 MainWindow.xaml.cs 파일은 "연습의 전체 코드 예제" 섹션에서 첫 번째 예제입니다.  
+    - 연습을 완료하여 코드를 개발한 경우 `GetURLContentsAsync` 메서드를 포함하는 애플리케이션에 `ProcessURLAsync`를 추가합니다. 이 애플리케이션에 대한 MainWindow.xaml.cs 파일은 "연습의 전체 코드 예제" 섹션에서 첫 번째 예제입니다.  
   
      `ProcessURLAsync` 메서드는 원래 연습의 `SumPageSizesAsync`에 `foreach` 루프 본문의 작업을 통합합니다. 이 메서드는 비동기적으로 지정된 웹 사이트의 내용을 바이트 배열로 다운로드한 다음 바이트 배열의 길이를 표시하고 반환합니다.  
   
@@ -97,9 +97,9 @@ ms.locfileid: "59297956"
   
 1. `ProcessURLAsync`의 다음 버전을 [연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)에서 개발된 두 번째 애플리케이션에 추가합니다.  
   
-    -   [개발자 코드 샘플](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)에서 코드를 다운로드한 경우 AsyncWalkthrough_HttpClient 프로젝트를 열고 MainWindow.xaml.cs 파일에 `ProcessURLAsync`를 추가합니다.  
+    - [개발자 코드 샘플](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)에서 코드를 다운로드한 경우 AsyncWalkthrough_HttpClient 프로젝트를 열고 MainWindow.xaml.cs 파일에 `ProcessURLAsync`를 추가합니다.  
   
-    -   연습을 완료하여 코드를 개발한 경우 `HttpClient.GetByteArrayAsync` 메서드를 사용하는 애플리케이션에 `ProcessURLAsync`를 추가합니다. 이 애플리케이션에 대한 MainWindow.xaml.cs 파일은 "연습의 전체 코드 예제" 섹션에서 두 번째 예제입니다.  
+    - 연습을 완료하여 코드를 개발한 경우 `HttpClient.GetByteArrayAsync` 메서드를 사용하는 애플리케이션에 `ProcessURLAsync`를 추가합니다. 이 애플리케이션에 대한 MainWindow.xaml.cs 파일은 "연습의 전체 코드 예제" 섹션에서 두 번째 예제입니다.  
   
      `ProcessURLAsync` 메서드는 원래 연습의 `SumPageSizesAsync`에 `foreach` 루프 본문의 작업을 통합합니다. 이 메서드는 비동기적으로 지정된 웹 사이트의 내용을 바이트 배열로 다운로드한 다음 바이트 배열의 길이를 표시하고 반환합니다.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "59297956"
   
 ### <a name="to-test-the-taskwhenall-solutions"></a>Task.WhenAll 솔루션을 테스트하려면  
   
--   두 솔루션 중 하나에 대해 F5 키를 선택하여 프로그램을 실행한 다음 **시작** 단추를 선택합니다. 출력은 [연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)의 비동기 솔루션 출력과 유사해야 합니다. 그러나 웹 사이트가 매번 다른 순서로 나타납니다.  
+- 두 솔루션 중 하나에 대해 F5 키를 선택하여 프로그램을 실행한 다음 **시작** 단추를 선택합니다. 출력은 [연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)의 비동기 솔루션 출력과 유사해야 합니다. 그러나 웹 사이트가 매번 다른 순서로 나타납니다.  
   
 ## <a name="example"></a>예  
  다음 코드에서는 `GetURLContentsAsync` 메서드를 사용하여 웹에서 콘텐츠를 다운로드하는 프로젝트에 대한 확장을 보여 줍니다.  

@@ -9,33 +9,33 @@ helpviewer_keywords:
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
 author: ghogen
-ms.openlocfilehash: baa7655481c24ebe96b76a0accbff63b6965a021
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e709db257c839dc7e583412a87af6d25b80de969
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328428"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591430"
 ---
 # <a name="how-to-write-services-programmatically"></a>방법: 프로그래밍 방식으로 서비스 작성
 Windows 서비스 프로젝트 템플릿을 사용하지 않으려는 경우 상속 및 기타 인프라 요소를 직접 설정하여 고유한 서비스를 작성할 수 있습니다. 서비스를 프로그래밍 방식으로 만드는 경우 템플릿을 사용할 경우 자동으로 처리되는 다음과 같은 여러 단계를 직접 수행해야 합니다.  
   
--   <xref:System.ServiceProcess.ServiceBase> 클래스에서 상속하도록 서비스 클래스를 설정해야 합니다.  
+- <xref:System.ServiceProcess.ServiceBase> 클래스에서 상속하도록 서비스 클래스를 설정해야 합니다.  
   
--   서비스 프로젝트에 대한 `Main` 메서드를 만들어야 합니다. 이 메서드는 실행할 서비스를 정의하고 해당 서비스에 대해 <xref:System.ServiceProcess.ServiceBase.Run%2A> 메서드를 호출합니다.  
+- 서비스 프로젝트에 대한 `Main` 메서드를 만들어야 합니다. 이 메서드는 실행할 서비스를 정의하고 해당 서비스에 대해 <xref:System.ServiceProcess.ServiceBase.Run%2A> 메서드를 호출합니다.  
   
--   <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 및 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 프로시저를 재정의하고 이들 프로시저에서 실행할 코드를 입력해야 합니다.  
+- <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 및 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 프로시저를 재정의하고 이들 프로시저에서 실행할 코드를 입력해야 합니다.  
   
 ### <a name="to-write-a-service-programmatically"></a>서비스를 프로그래밍 방식으로 작성하려면  
   
 1. 빈 프로젝트를 만들고 다음 단계에 따라 필요한 네임스페이스에 대한 참조를 만듭니다.  
   
-    1.  **솔루션 탐색기**에서 **참조** 노드를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 클릭합니다.  
+    1. **솔루션 탐색기**에서 **참조** 노드를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 클릭합니다.  
   
-    2.  **.NET Framework** 탭에서 **System.dll**로 스크롤하고 **선택**을 클릭합니다.  
+    2. **.NET Framework** 탭에서 **System.dll**로 스크롤하고 **선택**을 클릭합니다.  
   
-    3.  **System.ServiceProcess.dll**로 스크롤하고 **선택**을 클릭합니다.  
+    3. **System.ServiceProcess.dll**로 스크롤하고 **선택**을 클릭합니다.  
   
-    4.  **확인**을 클릭합니다.  
+    4. **확인**을 클릭합니다.  
   
 2. 클래스를 추가하고 <xref:System.ServiceProcess.ServiceBase>에서 상속하도록 클래스를 구성합니다.  
   

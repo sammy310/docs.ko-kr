@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20dd6f9ab601277161079230effdaeeabd1bb13a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7cd9fb96f69da977efd2eee6f740cc93ad58e6ea
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101577"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591479"
 ---
 # <a name="reflection-in-the-net-framework"></a>.NET Framework의 리플렉션
 <xref:System.Reflection> 네임스페이스의 클래스와 <xref:System.Type?displayProperty=nameWithType>을 함께 사용하여 로드된 [어셈블리](../app-domains/assemblies-in-the-common-language-runtime.md) 및 어셈블리 내에 정의된 형식(예: [클래스](../../standard/base-types/common-type-system.md#classes), [인터페이스](../../standard/base-types/common-type-system.md#interfaces), [값 형식](../../csharp/language-reference/keywords/value-types.md))에 대한 정보를 가져올 수 있습니다. 리플렉션을 사용하여 런타임에 형식 인스턴스를 만들고 이 인스턴스를 호출 및 액세스할 수도 있습니다. 리플렉션의 특정 측면에 대한 항목은 이 개요의 끝부분에서 [관련 항목](#related_topics)을 참조하세요.
@@ -37,23 +37,23 @@ ms.locfileid: "59101577"
   
  [어셈블리](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)에는 모듈이 포함되고, 모듈에는 형식이 포함되고, 형식에는 멤버가 포함됩니다. 리플렉션은 어셈블리, 모듈 및 형식을 캡슐화하는 개체를 제공합니다. 리플렉션을 사용하여 동적으로 형식 인스턴스를 만들거나, 형식을 기존 개체에 바인딩하거나, 기존 개체에서 형식을 가져올 수 있습니다. 그리고 나서 해당 형식의 메서드를 호출하거나 필드 및 속성에 액세스할 수 있습니다. 리플렉션의 일반적인 용도는 다음과 같습니다.  
   
--   <xref:System.Reflection.Assembly>를 사용하여 어셈블리를 정의 및 로드하고, 어셈블리 매니페스트에 나열된 모듈을 로드하고, 이 어셈블리에서 형식을 찾아 해당 인스턴스를 만듭니다.  
+- <xref:System.Reflection.Assembly>를 사용하여 어셈블리를 정의 및 로드하고, 어셈블리 매니페스트에 나열된 모듈을 로드하고, 이 어셈블리에서 형식을 찾아 해당 인스턴스를 만듭니다.  
   
--   <xref:System.Reflection.Module>을 사용하여 모듈 및 모듈의 클래스가 포함된 어셈블리와 같은 정보를 검색합니다. 모듈에 정의된 모든 전역 메서드나 기타 특정 비전역 메서드를 가져올 수도 있습니다.  
+- <xref:System.Reflection.Module>을 사용하여 모듈 및 모듈의 클래스가 포함된 어셈블리와 같은 정보를 검색합니다. 모듈에 정의된 모든 전역 메서드나 기타 특정 비전역 메서드를 가져올 수도 있습니다.  
   
--   <xref:System.Reflection.ConstructorInfo>를 사용하여 생성자의 이름, 매개 변수, 액세스 한정자(예: `public` 또는 `private`), 구현 세부 정보(예: `abstract` 또는 `virtual`)와 같은 정보를 검색합니다. <xref:System.Type>의 <xref:System.Type.GetConstructors%2A> 또는 <xref:System.Type.GetConstructor%2A> 메서드를 사용하여 특정 생성자를 호출합니다.  
+- <xref:System.Reflection.ConstructorInfo>를 사용하여 생성자의 이름, 매개 변수, 액세스 한정자(예: `public` 또는 `private`), 구현 세부 정보(예: `abstract` 또는 `virtual`)와 같은 정보를 검색합니다. <xref:System.Type>의 <xref:System.Type.GetConstructors%2A> 또는 <xref:System.Type.GetConstructor%2A> 메서드를 사용하여 특정 생성자를 호출합니다.  
   
--   <xref:System.Reflection.MethodInfo>를 사용하여 메서드의 이름, 반환 형식, 매개 변수, 액세스 한정자(예: `public` 또는 `private`), 구현 세부 정보(예: `abstract` 또는 `virtual`)와 같은 정보를 검색합니다. <xref:System.Type>의 <xref:System.Type.GetMethods%2A> 또는 <xref:System.Type.GetMethod%2A> 메서드를 사용하여 특정 메서드를 호출합니다.  
+- <xref:System.Reflection.MethodInfo>를 사용하여 메서드의 이름, 반환 형식, 매개 변수, 액세스 한정자(예: `public` 또는 `private`), 구현 세부 정보(예: `abstract` 또는 `virtual`)와 같은 정보를 검색합니다. <xref:System.Type>의 <xref:System.Type.GetMethods%2A> 또는 <xref:System.Type.GetMethod%2A> 메서드를 사용하여 특정 메서드를 호출합니다.  
   
--   <xref:System.Reflection.FieldInfo>를 사용하여 필드의 이름, 액세스 한정자(예: `public` 또는 `private`), 구현 세부 정보(예: `static`)를 검색하고 필드 값을 가져오거나 설정합니다.  
+- <xref:System.Reflection.FieldInfo>를 사용하여 필드의 이름, 액세스 한정자(예: `public` 또는 `private`), 구현 세부 정보(예: `static`)를 검색하고 필드 값을 가져오거나 설정합니다.  
   
--   <xref:System.Reflection.EventInfo>를 사용하여 이벤트의 이름, 이벤트 처리기 데이터 형식, 사용자 지정 특성, 선언 형식, 리플렉션 형식과 같은 정보를 검색하고 이벤트 처리기를 추가하거나 제거합니다.  
+- <xref:System.Reflection.EventInfo>를 사용하여 이벤트의 이름, 이벤트 처리기 데이터 형식, 사용자 지정 특성, 선언 형식, 리플렉션 형식과 같은 정보를 검색하고 이벤트 처리기를 추가하거나 제거합니다.  
   
--   <xref:System.Reflection.PropertyInfo>를 사용하여 속성의 이름, 데이터 형식, 선언 형식, 리플렉션 형식, 읽기 전용/쓰기 가능 상태와 같은 정보를 검색하고 속성 값을 가져오거나 설정합니다.  
+- <xref:System.Reflection.PropertyInfo>를 사용하여 속성의 이름, 데이터 형식, 선언 형식, 리플렉션 형식, 읽기 전용/쓰기 가능 상태와 같은 정보를 검색하고 속성 값을 가져오거나 설정합니다.  
   
--   <xref:System.Reflection.ParameterInfo>를 사용하여 매개 변수 이름, 데이터 형식, 매개 변수가 입력 또는 출력 매개 변수인지 여부, 메서드 서명에서 매개 변수의 위치와 같은 정보를 검색합니다.  
+- <xref:System.Reflection.ParameterInfo>를 사용하여 매개 변수 이름, 데이터 형식, 매개 변수가 입력 또는 출력 매개 변수인지 여부, 메서드 서명에서 매개 변수의 위치와 같은 정보를 검색합니다.  
   
--   <xref:System.Reflection.CustomAttributeData>를 사용하여 애플리케이션 도메인의 리플렉션 전용 컨텍스트에서 작업할 때 사용자 지정 특성에 대한 정보를 검색합니다. <xref:System.Reflection.CustomAttributeData>를 사용하면 특성 인스턴스를 만들지 않고 특성을 검사할 수 있습니다.  
+- <xref:System.Reflection.CustomAttributeData>를 사용하여 애플리케이션 도메인의 리플렉션 전용 컨텍스트에서 작업할 때 사용자 지정 특성에 대한 정보를 검색합니다. <xref:System.Reflection.CustomAttributeData>를 사용하면 특성 인스턴스를 만들지 않고 특성을 검사할 수 있습니다.  
   
  <xref:System.Reflection.Emit> 네임스페이스의 클래스는 런타임에 빌드할 수 있는 특수한 형태의 리플렉션을 제공합니다.  
   

@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 9e0edff6-cc0d-4d5c-a445-aecf283d9c3a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b88a07115871e48a7981bbb868ff2ef4ce8cf85
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0c4100bb3bafdfe141dc746a64ebd8172ebe3bce
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59127701"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648584"
 ---
 # <a name="msgbox-sample"></a>MsgBox 샘플
 이 샘플에서는 In 매개 변수로 값 형식 문자열 형식을 전달하는 방법과 <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>, <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> 및 <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> 필드 사용 시기를 보여 줍니다.  
   
  MsgBox 샘플에서는 원래 함수 선언과 함께 표시되는 다음과 같은 관리되지 않는 함수를 사용합니다.  
   
--   User32.dll에서 내보낸 **MessageBox**.  
+- User32.dll에서 내보낸 **MessageBox**.  
   
     ```  
     int MessageBox(HWND hWnd, LPCTSTR lpText, LPCTSTR lpCaption,   

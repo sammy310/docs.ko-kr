@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1716488f6e072b09469dfbe5cc8fb4965e5db44c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a75534bdfb1eef5902d3cd5071b4f5b4bfba8caa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605246"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647949"
 ---
 # <a name="compiled-xpath-expressions"></a>컴파일된 XPath 식
 <xref:System.Xml.XPath.XPathExpression> 개체는 <xref:System.Xml.XPath.XPathExpression.Compile%2A> 클래스의 정적 <xref:System.Xml.XPath.XPathExpression> 메서드 또는 <xref:System.Xml.XPath.XPathNavigator.Compile%2A> 클래스의 <xref:System.Xml.XPath.XPathNavigator> 메서드 중 하나에서 반환된 컴파일된 XPath 쿼리를 나타냅니다.  
@@ -25,15 +25,15 @@ ms.locfileid: "54605246"
   
  컴파일한 후에는 XPath 쿼리에서 반환되는 형식에 따라 <xref:System.Xml.XPath.XPathExpression> 개체를 다음 <xref:System.Xml.XPath.XPathNavigator> 클래스 메서드에 대한 입력으로 사용할 수 있습니다.  
   
--   <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.XPath.XPathNavigator.Matches%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Matches%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
  다음 표에서는 각 W3C XPath 반환 형식, 해당 Microsoft .NET Framework 형식 및 반환 형식을 기준으로 <xref:System.Xml.XPath.XPathExpression> 개체와 함께 사용할 수 있는 메서드에 대해 설명합니다.  
   
@@ -52,19 +52,19 @@ ms.locfileid: "54605246"
   
  <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> 속성은 W3C XPath 반환 형식을 나타내는 다음 <xref:System.Xml.XPath.XPathResultType> 열거형 값 중 하나를 반환합니다.  
   
--   <xref:System.Xml.XPath.XPathResultType.Any>  
+- <xref:System.Xml.XPath.XPathResultType.Any>  
   
--   <xref:System.Xml.XPath.XPathResultType.Boolean>  
+- <xref:System.Xml.XPath.XPathResultType.Boolean>  
   
--   <xref:System.Xml.XPath.XPathResultType.Error>  
+- <xref:System.Xml.XPath.XPathResultType.Error>  
   
--   <xref:System.Xml.XPath.XPathResultType.Navigator>  
+- <xref:System.Xml.XPath.XPathResultType.Navigator>  
   
--   <xref:System.Xml.XPath.XPathResultType.NodeSet>  
+- <xref:System.Xml.XPath.XPathResultType.NodeSet>  
   
--   <xref:System.Xml.XPath.XPathResultType.Number>  
+- <xref:System.Xml.XPath.XPathResultType.Number>  
   
--   <xref:System.Xml.XPath.XPathResultType.String>  
+- <xref:System.Xml.XPath.XPathResultType.String>  
   
  다음 예제에서는 <xref:System.Xml.XPath.XPathExpression> 개체를 사용하여 `books.xml` 파일에서 숫자 및 노드 집합을 반환합니다. 각 <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> 개체의 <xref:System.Xml.XPath.XPathExpression> 속성과 <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> 및 <xref:System.Xml.XPath.XPathNavigator.Select%2A> 메서드의 결과가 콘솔에 나타납니다.  
   

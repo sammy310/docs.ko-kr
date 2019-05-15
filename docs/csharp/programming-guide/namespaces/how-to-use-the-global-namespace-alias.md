@@ -7,12 +7,12 @@ helpviewer_keywords:
 - namespaces [C#], global namespace qualifier
 - global namespace [C#]
 ms.assetid: 98a1d89b-3c5a-44f7-8400-c4a3c0ec22a9
-ms.openlocfilehash: 268d40e8d6eb5f5f2a82a5ce3a3346179c886c14
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6d3e0740a472f74116712e737e49f86d4202dea5
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969044"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452798"
 ---
 # <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>방법: 전역 네임스페이스 별칭 사용(C# 프로그래밍 가이드)
 전역 [네임스페이스](../../../csharp/language-reference/keywords/namespace.md)의 멤버에 액세스하는 기능은 멤버가 동일한 이름의 다른 엔터티에 의해 숨겨질 수 있는 경우에 유용합니다.  
@@ -50,6 +50,5 @@ ms.locfileid: "56969044"
 
 - [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
 - [네임스페이스](../../../csharp/programming-guide/namespaces/index.md)
-- [. 연산자](../../../csharp/language-reference/operators/member-access-operator.md)
 - [:: 연산자](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
 - [extern](../../../csharp/language-reference/keywords/extern.md)

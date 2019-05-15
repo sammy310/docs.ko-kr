@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 ms.assetid: 59218cce-e90e-42f6-a6bb-30300981b86a
-ms.openlocfilehash: cdc052da4457a59cc66848780e944ccf203acf39
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 47ce91c343092ac2f7555c1edf3418527776e131
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235598"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754765"
 ---
 # <a name="operator-c-reference"></a>연산자(C# 참조)
 
@@ -30,7 +30,7 @@ ms.locfileid: "53235598"
 
 오버로드할 수 있는 C# 연산자에 대한 개요는 [오버로드할 수 있는 연산자](../../programming-guide/statements-expressions-operators/overloadable-operators.md) 문서를 참조하세요.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 소수를 나타내는 `Fraction` 형식을 정의합니다. `+` 및 `*` 연산자를 오버로드하여 소수 더하기 및 곱하기를 수행하고 `Fraction` 형식을 `double` 형식으로 변환하는 변환 연산자도 제공합니다.
 

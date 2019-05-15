@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8c070f043d306cfc67cc2a05cb474d92c1d382ae
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bdb74259d7b034511722b1d2992b4ec16adb551e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355638"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750433"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>방법: .NET Framework 4.5 설치 관리자에서 진행률 가져오기
 
@@ -40,13 +40,13 @@ ms.locfileid: "57355638"
 
 - **종료 코드**. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 재배포 가능 프로그램을 호출하는 명령의 다음 종료 코드는 설치에 성공했는지 아니면 실패했는지를 나타냅니다.
 
-    - 0 - 설치가 완료되었습니다.
+  - 0 - 설치가 완료되었습니다.
 
-    - 3010 – 설치가 완료되었습니다. 시스템 다시 시작해야 합니다.
+  - 3010 – 설치가 완료되었습니다. 시스템 다시 시작해야 합니다.
 
-    - 1602 – 설치가 취소되었습니다.
+  - 1602 – 설치가 취소되었습니다.
 
-    - 기타 모든 코드 - 설치 중 오류가 발생했습니다. 자세한 내용을 보려면 %temp%에 생성된 로그 파일을 검사하세요.
+  - 기타 모든 코드 - 설치 중 오류가 발생했습니다. 자세한 내용을 보려면 %temp%에 생성된 로그 파일을 검사하세요.
 
 - **설치 취소**. 언제든지 `Abort` 메서드를 통해 MMIO 섹션에 `m_downloadAbort` 및 `m_ installAbort` 플래그를 설정하여 설치를 취소할 수 있습니다.
 

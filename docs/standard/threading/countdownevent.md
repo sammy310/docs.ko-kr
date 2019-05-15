@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d3825ef73a6ec312ff51d1bddf5360f3de6cc69
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 3f25ffb16fa5feb382bb42c737440317cfb777b1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758923"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64666315"
 ---
 # <a name="countdownevent"></a>CountdownEvent
 <xref:System.Threading.CountdownEvent?displayProperty=nameWithType>는 특정 횟수만큼 신호를 받은 후 대기 스레드를 차단 해제하는 동기화 기본 형식입니다. <xref:System.Threading.CountdownEvent>는 <xref:System.Threading.ManualResetEvent> 또는 <xref:System.Threading.ManualResetEventSlim>을 사용하여 이벤트에 신호를 보내기 전에 변수를 수동으로 감소시켜야 하는 시나리오를 위해 설계되었습니다. 예를 들어, 포크/조인 시나리오에서 신호 수가 5인 <xref:System.Threading.CountdownEvent>을 생성한 다음, 스레드 풀에서 5개의 작업 항목을 시작하고 완료될 때 각 작업 항목이 <xref:System.Threading.CountdownEvent.Signal%2A>을 호출하도록 할 수 있습니다. <xref:System.Threading.CountdownEvent.Signal%2A>을 호출할 때마다 신호 수가 1씩 감소됩니다. 주 스레드에서 <xref:System.Threading.CountdownEvent.Wait%2A>에 대한 호출은 신호 수가 0일 때까지 차단됩니다.  
@@ -25,13 +25,13 @@ ms.locfileid: "55758923"
   
  <xref:System.Threading.CountdownEvent>에는 다음과 같은 추가 기능이 있습니다.  
   
--   취소 토큰을 사용하여 대기 작업을 취소할 수 있습니다.  
+- 취소 토큰을 사용하여 대기 작업을 취소할 수 있습니다.  
   
--   인스턴스가 생성된 후에는 신호 수가 증가할 수 있습니다.  
+- 인스턴스가 생성된 후에는 신호 수가 증가할 수 있습니다.  
   
--   <xref:System.Threading.CountdownEvent.Wait%2A>가 <xref:System.Threading.CountdownEvent.Reset%2A> 메서드를 호출하여 반환한 후 인스턴스를 재사용할 수 있습니다.  
+- <xref:System.Threading.CountdownEvent.Wait%2A>가 <xref:System.Threading.CountdownEvent.Reset%2A> 메서드를 호출하여 반환한 후 인스턴스를 재사용할 수 있습니다.  
   
--   인스턴스는 <xref:System.Threading.WaitHandle.WaitAll%2A>와 같은 다른 .NET Framework 동기화 API와의 통합을 위해 <xref:System.Threading.WaitHandle>을 표시합니다.  
+- 인스턴스는 <xref:System.Threading.WaitHandle.WaitAll%2A>와 같은 다른 .NET Framework 동기화 API와의 통합을 위해 <xref:System.Threading.WaitHandle>을 표시합니다.  
   
 ## <a name="basic-usage"></a>기본 사용  
  다음 예제는 <xref:System.Threading.ThreadPool> 작업 항목에 <xref:System.Threading.CountdownEvent>를 사용하는 방법을 보여줍니다.  

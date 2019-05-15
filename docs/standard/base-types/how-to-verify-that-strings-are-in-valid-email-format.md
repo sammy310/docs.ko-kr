@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78210f9f007060551130812fcb5a9cd5b4728adc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: ddd8b0e7965ca734865e83373af2f7ee45d62c05
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58890503"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633449"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>방법: 문자열이 올바른 이메일 형식인지 확인
 다음 예제에서는 정규식을 사용하여 문자열이 올바른 전자 메일 형식인지 확인합니다.  
@@ -91,9 +91,9 @@ vbc /t:library RegexUtilities.vb
   
  메일 유효성 검사 정규식을 포함하는 클래스 라이브러리 RegexUtilities.dll을 만들었다고 가정할 때 다음 방법 중 하나로 이 예제를 컴파일할 수 있습니다.  
   
--   Visual Studio에서 콘솔 애플리케이션을 만들고 프로젝트에 RegexUtilities.dll에 대한 참조를 추가합니다.  
+- Visual Studio에서 콘솔 애플리케이션을 만들고 프로젝트에 RegexUtilities.dll에 대한 참조를 추가합니다.  
   
--   명령줄에서 소스 코드를 복사한 다음 텍스트 파일에 붙여넣고 다음과 같은 명령을 사용하여 컴파일합니다. 이때 소스 코드 파일의 이름이 Example.cs 또는 Example.vb라고 가정합니다.  
+- 명령줄에서 소스 코드를 복사한 다음 텍스트 파일에 붙여넣고 다음과 같은 명령을 사용하여 컴파일합니다. 이때 소스 코드 파일의 이름이 Example.cs 또는 Example.vb라고 가정합니다.  
   
     ```csharp  
     csc Example.cs /r:RegexUtilities.dll  

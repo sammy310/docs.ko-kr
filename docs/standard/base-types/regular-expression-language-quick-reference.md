@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9224e78a422b20f33f19d05e43ed1e2ec8d1c5ce
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 053df7eeba10938f1d1d749e856f64d179d471d4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410526"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664671"
 ---
 # <a name="regular-expression-language---quick-reference"></a>정규식 언어 - 빠른 참조
  정규식은 정규식 엔진이 입력 텍스트에서 찾으려고 하는 패턴입니다. 패턴은 하나 이상의 문자 리터럴, 연산자 또는 구문으로 구성됩니다.  간략하게 살펴보려면 [.NET 정규식](../../../docs/standard/base-types/regular-expressions.md)을 참조하세요.  
@@ -170,9 +170,9 @@ ms.locfileid: "58410526"
   
  인라인 옵션을 두 가지 방법으로 지정할 수 있습니다.  
   
--   [기타 구문](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`을 사용하여 옵션이나 옵션 집합 앞에 빼기 기호(-)를 추가해 해당 옵션을 해제할 수 있습니다. 예를 들어 `(?i-mn)`은 대/소문자를 구분하지 않는 일치 조건(`i`)을 설정하고 여러 줄 모드(`m`)를 해제하고 명명되지 않은 그룹 캡처(`n`)를 해제합니다. 이 옵션은 옵션이 정의되는 지점부터 정규식 패턴에 적용되고, 패턴 끝 또는 다른 구문이 옵션을 되돌리는 지점까지 유효합니다.  
+- [기타 구문](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`을 사용하여 옵션이나 옵션 집합 앞에 빼기 기호(-)를 추가해 해당 옵션을 해제할 수 있습니다. 예를 들어 `(?i-mn)`은 대/소문자를 구분하지 않는 일치 조건(`i`)을 설정하고 여러 줄 모드(`m`)를 해제하고 명명되지 않은 그룹 캡처(`n`)를 해제합니다. 이 옵션은 옵션이 정의되는 지점부터 정규식 패턴에 적용되고, 패턴 끝 또는 다른 구문이 옵션을 되돌리는 지점까지 유효합니다.  
   
--   [그룹화 구문](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*subexpression*`)`을 사용하여 지정된 그룹에 대해서만 옵션을 정의할 수 있습니다.  
+- [그룹화 구문](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*subexpression*`)`을 사용하여 지정된 그룹에 대해서만 옵션을 정의할 수 있습니다.  
   
  .NET 정규식 엔진은 다음 인라인 옵션을 지원합니다.  
   
