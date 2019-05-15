@@ -9,12 +9,12 @@ helpviewer_keywords:
 - printing [Windows Forms], with print preview
 - print preview
 ms.assetid: 4a16f7e2-ae10-4485-b0ae-3d558334d0fe
-ms.openlocfilehash: c07e3cc2f5985c05271e21ea77a7c7056045a891
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d803c9bec180f45c80e362af49c8eaa12bb9d985
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621232"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592962"
 ---
 # <a name="how-to-print-in-windows-forms-using-print-preview"></a>방법: Windows Forms에서 인쇄 미리 보기를 사용하여 인쇄
 Windows Forms 프로그래밍에서는 인쇄 서비스 외에 인쇄 미리 보기를 제공하는 것이 일반적입니다. 인쇄 미리 보기 서비스를 애플리케이션에 추가하는 편리한 방법은 파일 인쇄에 대한 <xref:System.Windows.Forms.PrintPreviewDialog> 이벤트 처리 논리와 함께 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 컨트롤을 사용하는 것입니다.  
@@ -61,8 +61,6 @@ Windows Forms 프로그래밍에서는 인쇄 서비스 외에 인쇄 미리 보
  이 예제에는 다음 사항이 필요합니다.  
   
 - System, System.Windows.Forms, System.Drawing 어셈블리에 대한 참조  
-  
-- Visual Basic 또는 Visual C#에 대 한 명령줄에서이 예제를 빌드하는 방법에 대 한 내용은 [명령줄에서 빌드](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) 하거나 [csc.exe를 사용한 명령줄 빌드](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)합니다. 또한 새 프로젝트에 코드를 붙여 넣어 Visual Studio에서이 예제를 빌드할 수 있습니다.  
   
 ## <a name="see-also"></a>참고자료
 

@@ -2,12 +2,12 @@
 title: 구별된 공용 구조체
 description: 사용 하는 방법을 알아봅니다 F# 구별 된 공용 구조체입니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 9d3f423d068df1c43791919b0d71ca82304ae85e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 27fb9205f3f216adc435483fd1dcc839a6e13e03
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766022"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557965"
 ---
 # <a name="discriminated-unions"></a>구별된 공용 구조체
 
@@ -80,7 +80,7 @@ let getShapeHeight shape =
     | Prism(height = h) -> h
 ```
 
-일반적으로 케이스 식별자는 공용 구조체의 이름으로 정규화 하지 않고도 사용할 수 있습니다. 공용 구조체의 이름이 항상 정규화 하려면 이름, 원하는 경우 적용할 수 있습니다 합니다 [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15) 공용 구조체 형식 정의에 대 한 특성입니다.
+일반적으로 케이스 식별자는 공용 구조체의 이름으로 정규화 하지 않고도 사용할 수 있습니다. 공용 구조체의 이름이 항상 정규화 하려면 이름, 원하는 경우 적용할 수 있습니다 합니다 [RequireQualifiedAccess](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-[fsharp]) 공용 구조체 형식 정의에 대 한 특성입니다.
 
 ### <a name="unwrapping-discriminated-unions"></a>래핑 해제 구별 된 공용 구조체
 

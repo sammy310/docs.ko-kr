@@ -6,19 +6,19 @@ helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: c56369b28f8e1bab1ca8e8c13ebd9710c8f1d9fb
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: f277758a10b045a6365adfe931ce95d64eb8e445
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200106"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608571"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>인터페이스의 인덱서(C# 프로그래밍 가이드)
 [interface](../../../csharp/language-reference/keywords/interface.md)에 인덱서를 선언할 수 있습니다. 인터페이스 인덱서 접근자와 [class](../../../csharp/language-reference/keywords/class.md) 인덱서 접근자 간에는 다음과 같은 차이점이 있습니다.  
   
--   인터페이스 접근자는 한정자를 사용하지 않습니다.  
+- 인터페이스 접근자는 한정자를 사용하지 않습니다.  
   
--   인터페이스 접근자에는 본문이 없습니다.  
+- 인터페이스 접근자에는 본문이 없습니다.  
   
  따라서 접근자의 목적은 인덱서가 읽기/쓰기인지, 읽기 전용인지, 쓰기 전용인지를 지정하는 것입니다.  
   

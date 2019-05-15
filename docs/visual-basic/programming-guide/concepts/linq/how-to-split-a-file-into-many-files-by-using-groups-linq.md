@@ -2,12 +2,12 @@
 title: '방법: 그룹 (LINQ) (Visual Basic)를 사용 하 여 여러 파일로 분합니다'
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: 578b4921ac8ae3ea0fe8c871996e1a5dce3fbf39
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c3d0d4d8c45ba2d7016636f0272ace0fdc6ffa3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614472"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592474"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>방법: 그룹 (LINQ) (Visual Basic)를 사용 하 여 여러 파일로 분합니다
 이 예제에서는 두 파일의 내용을 병합한 다음 새로운 방식으로 데이터를 구성하는 새 파일 집합을 만드는 한 가지 방법을 보여 줍니다.  
@@ -116,7 +116,7 @@ End Class
  프로그램에서 데이터 파일과 동일한 폴더에 각 그룹에 대한 별도 파일을 작성합니다.  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- System.Core.dll에 대한 참조와 System.Linq 네임스페이스에 대한 `Imports` 문을 사용하여 .NET Framework 버전 3.5 이상을 대상으로 하는 프로젝트를 만듭니다.  
+VB.NET 콘솔 응용 프로그램 프로젝트를 만듭니다는 `Imports` System.Linq 네임 스페이스에 대 한 문입니다.
   
 ## <a name="see-also"></a>참고자료
 

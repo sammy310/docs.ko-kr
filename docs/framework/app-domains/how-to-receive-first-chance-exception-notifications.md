@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6f70b4c67de892c3b66a0099dae9f618a99b3f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3009bf9eb24c44cedc4021f3d09f1707ae2e40d8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770492"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593601"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>방법: 첫째 예외 알림 받기
 <xref:System.AppDomain> 클래스의 <xref:System.AppDomain.FirstChanceException> 이벤트를 사용하면 공용 언어 런타임이 예외 처리기 검색을 시작하기 전에 예외가 throw되었다는 알림을 받을 수 있습니다.
@@ -100,7 +100,7 @@ ms.locfileid: "59770492"
 
 ## <a name="compiling-the-code"></a>코드 컴파일
 
--   이 예제는 명령줄 애플리케이션입니다. Visual Studio에서 이 코드를 컴파일하고 실행하려면 `Main()`의 끝에 C# 코드 `Console.ReadLine();`(Visual Basic에서는 `Console.ReadLine()`)을 추가하여 출력을 읽기 전에 명령 창이 닫히지 않도록 합니다.
+- 이 예제는 명령줄 애플리케이션입니다. Visual Studio에서 이 코드를 컴파일하고 실행하려면 `Main()`의 끝에 C# 코드 `Console.ReadLine();`(Visual Basic에서는 `Console.ReadLine()`)을 추가하여 출력을 읽기 전에 명령 창이 닫히지 않도록 합니다.
 
 ## <a name="see-also"></a>참고 항목
 

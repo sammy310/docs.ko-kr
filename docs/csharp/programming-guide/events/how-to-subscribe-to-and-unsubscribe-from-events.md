@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: d1442e02d651cd283e5ff63d28f3cfe80e99cc7d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 56c236e2e061b473f0b188b24d3ebdd98e013aa8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306601"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595987"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>방법: 이벤트 구독 및 구독 취소(C# 프로그래밍 가이드)
 해당 이벤트가 발생할 때 호출되는 사용자 지정 코드를 작성하려는 경우 다른 클래스에 의해 게시되는 이벤트를 구독합니다. 예를 들어 사용자가 단추를 클릭할 때 애플리케이션에서 유용한 작업을 수행하도록 하려면 단추의 `click` 이벤트를 구독할 수 있습니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "59306601"
   
 ### <a name="to-subscribe-to-events-by-using-an-anonymous-method"></a>무명 메서드를 사용하여 이벤트를 구독하려면  
   
--   나중에 이벤트 구독을 취소할 필요가 없는 경우 더하기 대입 연산자(`+=`)를 사용하여 이벤트에 무명 메서드를 연결할 수 있습니다. 다음 예제에서는 `publisher` 개체에 `RaiseCustomEvent`라는 이벤트가 있고 일종의 특수 이벤트 정보를 전달하도록 `CustomEventArgs` 클래스도 정의되었다고 가정합니다. 구독자 클래스가 해당 이벤트를 구독하려면 `publisher`에 대한 참조가 필요합니다.  
+- 나중에 이벤트 구독을 취소할 필요가 없는 경우 더하기 대입 연산자(`+=`)를 사용하여 이벤트에 무명 메서드를 연결할 수 있습니다. 다음 예제에서는 `publisher` 개체에 `RaiseCustomEvent`라는 이벤트가 있고 일종의 특수 이벤트 정보를 전달하도록 `CustomEventArgs` 클래스도 정의되었다고 가정합니다. 구독자 클래스가 해당 이벤트를 구독하려면 `publisher`에 대한 참조가 필요합니다.  
   
     ```csharp
     publisher.RaiseCustomEvent += delegate(object o, CustomEventArgs e)  
@@ -91,7 +91,7 @@ ms.locfileid: "59306601"
   
 #### <a name="to-unsubscribe-from-an-event"></a>이벤트 구독을 취소하려면  
   
--   빼기 대입 연산자(`-=`)를 사용하여 이벤트 구독을 취소합니다.  
+- 빼기 대입 연산자(`-=`)를 사용하여 이벤트 구독을 취소합니다.  
   
     ```csharp
     publisher.RaiseCustomEvent -= HandleCustomEvent;  

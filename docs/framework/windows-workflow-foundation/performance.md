@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 4 성능
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 4351955eeed722cfd10db79b9dbe5ec6692ed2ec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 701e05301e82537aa6119ab3ec894483daee41f3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592155"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592539"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 성능
 
@@ -18,7 +18,7 @@ ms.locfileid: "64592155"
 ## <a name="terminology"></a>용어
  이 항목의 나머지 부분에서는 [!INCLUDE[wf1](../../../includes/wf1-md.md)]에 도입된 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 버전을 WF4라고 지칭합니다.  [!INCLUDE[wf1](../../../includes/wf1-md.md)] .NET 3.0에서 도입 되었으며를 통해 몇 가지 사소한 수정 내용이 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] SP1. 이 항목의 나머지 부분에서는 Workflow Foundation의 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 버전을 WF3이라고 지칭합니다. WF3은 WF4와 함께 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]에 포함되어 있습니다. WF3 아티팩트를 WF4 마이그레이션에 대 한 자세한 내용은 다음을 참조 하세요. [Windows Workflow Foundation 4 마이그레이션 가이드](https://go.microsoft.com/fwlink/?LinkID=153313)
 
- Windows Communication Foundation (WCF)는 서비스 지향 응용 프로그램을 빌드하기 위한 Microsoft의 통합된 프로그래밍 모델. WF3과 함께.NET 3.0의 일부로 처음 도입 하 고 이제의 주요 구성 요소 중 하나인는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]합니다.
+ Windows Communication Foundation (WCF)는 서비스 지향 응용 프로그램을 빌드하기 위한 Microsoft의 통합된 프로그래밍 모델. WF3과 함께.NET 3.0의 일부로 처음 도입 하 고 이제는.NET Framework의 주요 구성 요소 중 하나입니다.
 
  Windows Server AppFabric은 IIS에서 실행되는 웹 응용 프로그램 및 복합 응용 프로그램을 쉽게 빌드하고, 확장 및 관리할 수 있게 하는 통합 기술 집합입니다. 서비스와 워크플로를 모니터링 및 관리하기 위한 도구를 제공합니다. 자세한 내용은 [Windows Server AppFabric 1.0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10))합니다.
 
@@ -401,7 +401,7 @@ public class Workflow1 : Activity
 
  WF3에는 SQL 기반 추적 서비스가 포함되어 있었습니다.  이 서비스는 일괄 처리 모드와 비일괄 처리 모드로 작동할 수 있었습니다.  비일괄 처리 모드에서는 추적 이벤트가 데이터베이스에 직접 기록됩니다.  일괄 처리 모드에서는 추적 이벤트가 동일한 일괄 처리에 워크플로 인스턴스 상태로 수집됩니다.  일괄 처리 모드는 광범위한 워크플로 디자인에서 최고 성능을 제공합니다.  그러나 워크플로에서 많은 작업을 유지하지 않고 실행하며 이러한 작업이 추적되는 경우 일괄 처리 시 성능이 저하될 수 있습니다.  이 문제는 대체로 루프에서 발생하며, 이 시나리오를 방지하는 가장 좋은 방법은 지속성 지점이 포함될 큰 루프를 디자인하는 것입니다.  지속성 지점을 루프에 포함하는 경우에도 성능이 저하될 수 있으므로 각 루프의 비용을 측정하고 균형을 이루는 것이 중요합니다.
 
- WF4에는 SQL 추적 서비스가 포함되어 있지 않습니다.  SQL 데이터베이스에 추적 정보를 기록하는 기능은 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에 기본 제공하는 대신 응용 프로그램 서버에서 보다 효율적으로 처리할 수 있습니다. 따라서 이제 AppFabric에서 SQL 추적을 처리합니다.  WF4의 기본 제공 추적 공급자는 ETW(Windows용 이벤트 추적)를 기반으로 합니다.
+ WF4에는 SQL 추적 서비스가 포함되어 있지 않습니다.  SQL 데이터베이스에 추적 정보 기록 수 수 응용 프로그램 서버에서 보다 효율적으로 처리할 보다는.NET Framework에 기본 제공 합니다. 따라서 이제 AppFabric에서 SQL 추적을 처리합니다.  WF4의 기본 제공 추적 공급자는 ETW(Windows용 이벤트 추적)를 기반으로 합니다.
 
  ETW는 Windows에 기본 제공되며 대기 시간이 짧은 커널 수준의 이벤트 시스템입니다.  ETW는 실제로 소비자가 있는 경우에만 이벤트 추적 비용을 발생시키는 공급자/소비자 모델을 사용합니다.  프로세서, 디스크, 메모리, 네트워크 사용 등의 커널 이벤트뿐 아니라 많은 응용 프로그램이 ETW도 활용합니다.  응용 프로그램에 맞게 이벤트를 사용자 지정할 수 있다는 점에서 ETW 이벤트는 성능 카운터보다 더 강력합니다.  이벤트에는 워크플로 ID, 정보 메시지 등의 텍스트가 포함될 수 있습니다.  또한 특정 이벤트 하위 집합을 사용할 경우 모든 이벤트를 캡처할 때보다 성능에 미치는 영향이 감소하도록 이벤트가 비트 마스크로 분류됩니다.
 

@@ -4,12 +4,12 @@ ms.date: 10/10/2018
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6bf92e118d2ef02c0dc3a550c084e2a0a8e0e3d7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3aaf64c2f0738d2db607a2476890b033ff9d06a2
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330446"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063022"
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework 및 번외 릴리스
 
@@ -52,8 +52,6 @@ ms.locfileid: "59330446"
  일반적으로 OOB 패키지에는 하나 이상의 시험판 버전 및 안정적인 버전이 있습니다. 시험판과 함께 제공되는 라이선스는 일반적으로 재배포할 수 없지만 패키지를 사용해 보고 피드백을 제공할 수 있습니다. 피드백이 패키지의 모든 업데이트에 통합됩니다. 최종 릴리스는 NuGet과 함께 안정적인 패키지로 분산되며 응용 프로그램과 함께 NuGet 패키지를 재배포할 수 있는 라이선스를 포함합니다. 안정적인 패키지가 Microsoft에서 지원됩니다. Microsoft는 모든 패키지에 대한 블로그 게시물 및 포럼 답변과 같은 다른 유형의 문서는 물론 IntelliSense 지원도 제공합니다. 또한 소스 코드는 전부는 아니지만 일부 패키지에서 제공될 수 있습니다. [.NET Framework 블로그](https://devblogs.microsoft.com/dotnet/)를 구독하면 새 패키지 및 업데이트된 패키지에 대한 알림을 받아볼 수 있습니다.
 
  시험판과 안정적인 패키지를 둘 다 찾아보려면 NuGet 패키지 관리자에서 **시험판 포함**을 선택합니다.
-
- 안정적인 패키지 릴리스에 대한 알림을 받아보려면 [.NET Framework 피드](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/)를 구독하세요.
 
 ## <a name="see-also"></a>참고 항목
 

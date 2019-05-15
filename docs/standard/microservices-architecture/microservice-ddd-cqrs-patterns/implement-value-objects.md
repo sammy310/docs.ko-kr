@@ -1,15 +1,13 @@
 ---
 title: 값 개체 구현
 description: 컨테이너화된 .NET 애플리케이션의 .NET 마이크로 서비스 아키텍처 | 새로운 Entity Framework 기능을 사용하여 값 개체를 구현하는 세부 정보 및 옵션을 가져옵니다.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 64ffd600468124439986b0d1949dc048ef245c78
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: bd165ac2511476a5041e7d09126647546c632ba6
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611382"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063082"
 ---
 # <a name="implement-value-objects"></a>값 개체 구현
 
@@ -324,7 +322,7 @@ public class Address
 - **복합 형식 및/또는 값 개체**. EF Core GitHub 리포지토리에서 토론(문제 탭) \
   <https://github.com/aspnet/EntityFramework/issues/246>
 
-- **ValueObject.cs.** eShopOnContainers의 기준 값 개체 클래스.**  \
+- **ValueObject.cs.** eShopOnContainers의 기준 값 개체 클래스. \
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs>
 
 - **주소 클래스.** eShopOnContainers의 동일한 값 개체 클래스. \

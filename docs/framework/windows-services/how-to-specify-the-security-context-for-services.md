@@ -11,25 +11,25 @@ helpviewer_keywords:
 - ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
 author: ghogen
-ms.openlocfilehash: 68fd5d705cb2f38e00e90c211111ff34d23f3b10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 633d378b2336b3ee166375a923252e0477e75127
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335812"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591663"
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>방법: 서비스에 대한 보안 컨텍스트 지정
 기본적으로 서비스는 로그인한 사용자와 다른 보안 컨텍스트에서 실행됩니다. 서비스는 기본 시스템 계정 `LocalSystem`의 컨텍스트에서 실행되므로, 시스템 리소스에 대해 사용자와는 다른 액세스 권한을 받습니다. 이 동작을 변경하여 서비스를 실행할 다른 사용자 계정을 지정할 수 있습니다.  
   
  보안 컨텍스트는 서비스가 실행되는 프로세스에 대한 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> 속성을 조작하여 설정합니다. 이 속성을 사용하면 서비스를 다음 네 가지 계정 유형 중 하나로 설정할 수 있습니다.  
   
--   `User` - 네트워크의 단일 사용자가 지정한 계정의 컨텐스트에서 서비스가 설치 및 실행될 때 시스템에서 유효한 사용자 이름과 암호를 묻는 메시지를 표시합니다.  
+- `User` - 네트워크의 단일 사용자가 지정한 계정의 컨텐스트에서 서비스가 설치 및 실행될 때 시스템에서 유효한 사용자 이름과 암호를 묻는 메시지를 표시합니다.  
   
--   `LocalService` - 로컬 컴퓨터에서 권한 없는 사용자의 역할을 하며 원격 서버에 익명 자격 증명을 제공하는 계정의 컨텍스트에서 실행됩니다.  
+- `LocalService` - 로컬 컴퓨터에서 권한 없는 사용자의 역할을 하며 원격 서버에 익명 자격 증명을 제공하는 계정의 컨텍스트에서 실행됩니다.  
   
--   `LocalSystem` - 광범위한 로컬 권한을 제공하며 원격 서버에 컴퓨터의 자격 증명을 제공하는 계정의 컨텍스트에서 실행됩니다.  
+- `LocalSystem` - 광범위한 로컬 권한을 제공하며 원격 서버에 컴퓨터의 자격 증명을 제공하는 계정의 컨텍스트에서 실행됩니다.  
   
--   `NetworkService` - 로컬 컴퓨터에서 권한 없는 사용자 역할을 하며 원격 서버에 컴퓨터의 자격 증명을 제공하는 계정의 컨텍스트에서 실행됩니다.  
+- `NetworkService` - 로컬 컴퓨터에서 권한 없는 사용자 역할을 하며 원격 서버에 컴퓨터의 자격 증명을 제공하는 계정의 컨텍스트에서 실행됩니다.  
   
  자세한 내용은 <xref:System.ServiceProcess.ServiceAccount> 열거형을 참조하세요.  
   

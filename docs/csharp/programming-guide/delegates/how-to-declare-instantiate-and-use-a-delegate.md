@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: 7166c27a946fb76c9351647ac6465c151866a2ad
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 3e62dd4b4e1b1eb4586dcb3ce0e3f39c54a5686c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202563"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608745"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>방법: 대리자 선언, 인스턴스화 및 사용(C# 프로그래밍 가이드)
 C# 1.0 이상 버전에서는 다음 예제와 같이 대리자를 선언할 수 있습니다.  
@@ -42,7 +42,7 @@ C# 1.0 이상 버전에서는 다음 예제와 같이 대리자를 선언할 수
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
   
--   대리자 선언  
+- 대리자 선언  
   
      다음 문은 새 대리자 형식을 선언합니다.  
   
@@ -50,7 +50,7 @@ C# 1.0 이상 버전에서는 다음 예제와 같이 대리자를 선언할 수
   
      각 대리자 형식은 인수의 수와 형식 및 캡슐화 가능한 메서드의 형식과 반환 값을 설명합니다. 새 인수 형식 또는 반환 값 형식 집합이 필요할 때마다 새 대리자 형식을 선언해야 합니다.  
   
--   대리자 인스턴스화  
+- 대리자 인스턴스화  
   
      대리자 형식을 선언한 후에는 대리자 개체를 생성하여 특정 메서드와 연결해야 합니다. 이전 예제의 경우 다음 예제와 같이 `PrintTitle` 메서드를 `ProcessPaperbackBooks` 메서드에 전달하여 이 작업을 수행합니다.  
   
@@ -64,7 +64,7 @@ C# 1.0 이상 버전에서는 다음 예제와 같이 대리자를 선언할 수
   
      대리자를 만든 후에도 대리자가 연결된 메서드는 변경되지 않습니다. 대리자 개체는 변경이 불가능합니다.  
   
--   대리자 호출  
+- 대리자 호출  
   
      생성된 대리자 개체는 대개 대리자를 호출하는 다른 코드로 전달됩니다. 대리자 개체의 이름 뒤에 대리자로 전달할 인수를 괄호로 묶어 추가한 형식을 사용하여 대리자 개체를 호출합니다. 아래에 대리자 호출의 예가 나와 있습니다.  
   

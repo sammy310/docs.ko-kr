@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 5eee8b4b046bd4d3f9c71b692f4bac3dd6bcea2c
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: e9d117b272cea8ebb96dc579fa1d8faf65d42c45
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211778"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583469"
 ---
 # <a name="windows-forms-overview"></a>Windows Forms 개요
 
@@ -22,7 +22,7 @@ ms.locfileid: "65211778"
 
 ### <a name="build-rich-interactive-user-interfaces"></a>다양 한 대화형 사용자 인터페이스 빌드
 
- Windows Forms는 파일 시스템 읽기 및 쓰기와 같은 일반적인 애플리케이션 작업을 간소화하는 관리되는 라이브러리 집합인 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]용 스마트 클라이언트 기술입니다. Visual Studio와 같은 개발 환경에서 사용 하는 경우 네트워크를 통해 원격 컴퓨터와 정보를 표시 하 고 사용자 로부터 입력을 요청 하 고 전달 하는 Windows Forms 스마트 클라이언트 응용 프로그램을 만들 수 있습니다.
+ Windows Forms는.NET Framework에서 읽기 및 쓰기 파일 시스템에 같은 일반적인 응용 프로그램 작업을 간소화 하는 관리 되는 라이브러리 집합에 대 한 스마트 클라이언트 기술입니다. Visual Studio와 같은 개발 환경에서 사용 하는 경우 네트워크를 통해 원격 컴퓨터와 정보를 표시 하 고 사용자 로부터 입력을 요청 하 고 전달 하는 Windows Forms 스마트 클라이언트 응용 프로그램을 만들 수 있습니다.
 
  Windows Forms에서 *폼*은 정보를 사용자에게 표시하는 비주얼 화면입니다. 일반적으로 폼에 컨트롤을 추가하고 마우스 클릭이나 키 누름과 같은 사용자 동작에 대한 응답을 개발하여 Windows Forms 애플리케이션을 빌드합니다. *컨트롤*은 데이터를 표시하거나 데이터 입력을 수락하는 고유한 UI(사용자 인터페이스) 요소입니다.
 
@@ -90,7 +90,7 @@ ms.locfileid: "65211778"
 
 ### <a name="other-controls-and-features"></a>기타 컨트롤 및 기능
 
-Windows Forms에는 대화 상자 만들기, 인쇄, 도움말 및 설명서 추가 및 여러 언어로 애플리케이션 지역화 지원과 같이 일반적인 작업을 쉽고 빠르게 구현할 수 있게 해주는 다른 여러 기능이 있습니다. 또한 Windows Forms는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]의 강력한 보안 시스템을 사용합니다. 이 시스템을 통해 보다 안전한 애플리케이션을 고객에게 릴리스할 수 있습니다.
+Windows Forms에는 대화 상자 만들기, 인쇄, 도움말 및 설명서 추가 및 여러 언어로 애플리케이션 지역화 지원과 같이 일반적인 작업을 쉽고 빠르게 구현할 수 있게 해주는 다른 여러 기능이 있습니다. 또한 Windows Forms는.NET Framework의 강력한 보안 시스템에 의존합니다. 이 시스템을 통해 보다 안전한 애플리케이션을 고객에게 릴리스할 수 있습니다.
 
 #### <a name="implement-other-controls-and-features"></a>기타 컨트롤 및 기능 구현
 

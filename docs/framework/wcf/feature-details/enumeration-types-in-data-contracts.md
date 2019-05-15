@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: 8e793fc130252caf91d9b1c15b41beba1cc8ae1f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f8d399859e4f861158ab74db9ed410aec280dbe2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587606"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586681"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>데이터 계약의 열거형 형식
 데이터 계약 모델에 열거형을 표현할 수 있습니다. 이 항목에서는 프로그래밍 모델을 설명하는 여러 예를 살펴봅니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "64587606"
   
  예를 들어, 보내는 쪽에 `CarConditionEnum`을 사용하고 받는 쪽에 `CarConditionWithNumbers`를 사용할 수 있습니다. 보내는 쪽에서는 `Used`에 값 "1"을 사용하고 받는 쪽에서는 값 "20"을 사용하지만 XML 표현은 양쪽 모두 `<condition>Used</condition>`입니다.  
   
- 데이터 계약에 포함되려면 <xref:System.Runtime.Serialization.EnumMemberAttribute> 특성을 적용해야 합니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]에서는 항상 열거형에 모든 열거형의 기본값인 특수 값 0을 적용할 수 있습니다. 하지만 이 특수 값 0도 <xref:System.Runtime.Serialization.EnumMemberAttribute> 특성으로 표시하지 않으면 serialize할 수 없습니다.  
+ 데이터 계약에 포함되려면 <xref:System.Runtime.Serialization.EnumMemberAttribute> 특성을 적용해야 합니다. 항상.NET Framework는 모든 열거형에 대 한 기본 값을 열거형에 특수 값 0 (영)을 적용할 수 있습니다. 하지만 이 특수 값 0도 <xref:System.Runtime.Serialization.EnumMemberAttribute> 특성으로 표시하지 않으면 serialize할 수 없습니다.  
   
  여기에는 두 가지 예외 사항이 있습니다.  
   

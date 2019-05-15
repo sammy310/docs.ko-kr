@@ -8,25 +8,25 @@ helpviewer_keywords:
 - strings [C#], converting hexadecimal strings
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: ed943948888110b76df9c9ce22b4e9b6f4bb679f
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 99d30d6c2b50569312ff2d732a34020ab29ce81c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200379"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595067"
 ---
 # <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>방법: 16진수 문자열과 숫자 형식 간 변환(C# 프로그래밍 가이드)
 이 예제에서는 다음 작업을 수행하는 방법을 보여 줍니다.  
   
--   [string](../../../csharp/language-reference/keywords/string.md)에 있는 각 문자의 16진수 값을 가져옵니다.  
+- [string](../../../csharp/language-reference/keywords/string.md)에 있는 각 문자의 16진수 값을 가져옵니다.  
   
--   16진수 문자열의 각 값에 해당하는 [char](../../../csharp/language-reference/keywords/char.md)을 가져옵니다.  
+- 16진수 문자열의 각 값에 해당하는 [char](../../../csharp/language-reference/keywords/char.md)을 가져옵니다.  
   
--   16진수 `string`을 [int](../../../csharp/language-reference/keywords/int.md)로 변환합니다.  
+- 16진수 `string`을 [int](../../../csharp/language-reference/keywords/int.md)로 변환합니다.  
   
--   16진수 `string`을 [float](../../../csharp/language-reference/keywords/float.md)로 변환합니다.  
+- 16진수 `string`을 [float](../../../csharp/language-reference/keywords/float.md)로 변환합니다.  
   
--   [byte](../../../csharp/language-reference/keywords/byte.md) 배열을 16진수 `string`으로 변환합니다.  
+- [byte](../../../csharp/language-reference/keywords/byte.md) 배열을 16진수 `string`으로 변환합니다.  
   
 ## <a name="example"></a>예제  
  이 예제에서는 `string`에 있는 각 문자의 16진수 값을 출력합니다. 먼저 `string`을 문자 배열로 구문 분석합니다. 그런 다음 각 문자에서 <xref:System.Convert.ToInt32%28System.Char%29>를 호출하여 해당 숫자 값을 가져옵니다. 마지막으로, `string`에서 숫자의 형식을 16진수 표현으로 지정합니다.  

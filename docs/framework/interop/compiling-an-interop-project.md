@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b9f0cd44e5ab9a33db4dd2ef52681f40ca54080
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: db6630a6c1e68a776641db7ec7960f47fd260552
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835163"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64603278"
 ---
 # <a name="compiling-an-interop-project"></a>Interop 프로젝트 컴파일
 
@@ -24,9 +24,9 @@ ms.locfileid: "56835163"
 
  Interop 어셈블리를 참조하는 방법에는 다음 두 가지가 있습니다.
 
--   포함 interop 형식: [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 및 Visual Studio 2010부터 interop 어셈블리의 형식 정보를 실행 파일에 포함하도록 컴파일러에 지시할 수 있습니다. 이것이 권장되는 방법입니다.
+- 포함 interop 형식: [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 및 Visual Studio 2010부터 interop 어셈블리의 형식 정보를 실행 파일에 포함하도록 컴파일러에 지시할 수 있습니다. 이것이 권장되는 방법입니다.
 
--   interop 어셈블리 배포: interop 어셈블리에 대한 표준 참조를 만들 수 있습니다. 이 경우 interop 어셈블리를 애플리케이션에 배포해야 합니다.
+- interop 어셈블리 배포: interop 어셈블리에 대한 표준 참조를 만들 수 있습니다. 이 경우 interop 어셈블리를 애플리케이션에 배포해야 합니다.
 
  이러한 두 방법 간의 차이점은 [관리 코드에서 COM 형식 사용](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))에서 자세히 설명합니다.
 

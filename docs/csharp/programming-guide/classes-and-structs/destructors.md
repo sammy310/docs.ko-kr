@@ -7,27 +7,27 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 19c1f754aaef66197b033a68bc215255511cd618
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 87755eadeaebb72c5a8ce147ba2e6faf109e6c12
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202888"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584382"
 ---
 # <a name="finalizers-c-programming-guide"></a>종료자(C# 프로그래밍 가이드)
 종료자(**소멸자**라고도 함)는 가비지 수집기에서 클래스 인스턴스를 수집할 때 필요한 최종 정리를 수행하는 데 사용됩니다.  
   
 ## <a name="remarks"></a>주의  
   
--   종료자는 구조체에서 정의할 수 없으며, 클래스에서만 사용됩니다.  
+- 종료자는 구조체에서 정의할 수 없으며, 클래스에서만 사용됩니다.  
   
--   클래스에는 종료자가 하나만 있을 수 있습니다.  
+- 클래스에는 종료자가 하나만 있을 수 있습니다.  
   
--   종료자는 상속하거나 오버로드할 수 없습니다.  
+- 종료자는 상속하거나 오버로드할 수 없습니다.  
   
--   종료자를 호출할 수 없습니다. 자동으로 호출됩니다.  
+- 종료자를 호출할 수 없습니다. 자동으로 호출됩니다.  
   
--   종료자는 한정자를 사용하거나 매개 변수를 갖지 않습니다.  
+- 종료자는 한정자를 사용하거나 매개 변수를 갖지 않습니다.  
   
  예를 들어 다음은 `Car` 클래스에 대한 종료자의 선언입니다.
   
@@ -72,11 +72,11 @@ protected override void Finalize()
   
  리소스 정리에 대한 자세한 내용은 다음 항목을 참조하세요.  
   
--   [관리되지 않는 리소스 정리](../../../standard/garbage-collection/unmanaged.md)  
+- [관리되지 않는 리소스 정리](../../../standard/garbage-collection/unmanaged.md)  
   
--   [Dispose 메서드 구현](../../../standard/garbage-collection/implementing-dispose.md)  
+- [Dispose 메서드 구현](../../../standard/garbage-collection/implementing-dispose.md)  
   
--   [using 문](../../../csharp/language-reference/keywords/using-statement.md)  
+- [using 문](../../../csharp/language-reference/keywords/using-statement.md)  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 상속 체인을 구성하는 세 가지 클래스를 만듭니다. `First` 클래스는 기본 클래스이고, `Second`는 `First`에서 파생되며, `Third`는 `Second`에서 파생됩니다. 세 클래스 모두 종료자가 있습니다. `Main`에서 최다 파생 클래스의 인스턴스가 만들어집니다. 프로그램이 실행되면 세 클래스에 대한 종료자가 최다 파생부터 최소 파생까지 순서대로 자동으로 호출됩니다.  

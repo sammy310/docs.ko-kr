@@ -5,25 +5,25 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - keywords [C#], exception handling
 ms.assetid: 6d0323a3-3164-411c-9b84-a3606bd0e13c
-ms.openlocfilehash: afacb21eb54c97f5108772f37f313f5ef7403142
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ecb4b09e46df2159de5e68d94b588f32e621fa52
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659594"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596667"
 ---
 # <a name="exception-handling-statements-c-reference"></a>예외 처리문(C# 참조)
 C#은 프로그램 실행 중에 발생할 수 있는 비정상적인 상황(예외) 처리를 기본적으로 지원합니다. 이러한 예외는 정상적인 제어 흐름 외부에 있는 코드에 의해 처리됩니다.  
   
  다음 예외 처리 항목은 이 섹션에서 설명됩니다.  
   
--   [throw](../../../csharp/language-reference/keywords/throw.md)  
+- [throw](../../../csharp/language-reference/keywords/throw.md)  
   
--   [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
+- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
   
--   [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
+- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
   
--   [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)  
+- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)  
   
 ## <a name="see-also"></a>참고 항목
 

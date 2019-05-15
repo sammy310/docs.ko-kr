@@ -22,21 +22,21 @@ helpviewer_keywords:
 ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73810330c1ec44aa3a5edf47b3062bc2df267008
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 336a0fb5bc0fca5dd6ef917a2eeaf0908680d12b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219596"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591496"
 ---
 # <a name="using-the-codedom"></a>CodeDOM 사용
 CodeDOM은 소스 코드 요소의 다양한 일반적인 형식을 나타내는 형식을 제공합니다. 개체 그래프를 어셈블하는 데 CodeDOM 요소를 사용하는 소스 코드 모델을 빌드하는 프로그램을 디자인할 수 있습니다. 이 개체 그래프는 CodeDOM 코드 생성기를 사용하여 지원되는 프로그래밍 언어에 대한 소스 코드로 렌더링할 수 있습니다. CodeDOM은 소스 코드를 이진 어셈블리로 컴파일하는 데도 사용할 수 있습니다.  
   
  CodeDOM의 몇 가지 일반적인 용도는 다음과 같습니다.  
   
--   템플릿 기반 코드 생성: ASP.NET, XML Web services 클라이언트 프록시, 코드 마법사, 디자이너 또는 기타 코드 내보내기 메커니즘에 대한 코드를 생성합니다.  
+- 템플릿 기반 코드 생성: ASP.NET, XML Web services 클라이언트 프록시, 코드 마법사, 디자이너 또는 기타 코드 내보내기 메커니즘에 대한 코드를 생성합니다.  
   
--   동적 컴파일: 단일 또는 여러 언어로 코드 컴파일을 지원합니다.  
+- 동적 컴파일: 단일 또는 여러 언어로 코드 컴파일을 지원합니다.  
   
 ## <a name="building-a-codedom-graph"></a>CodeDOM 그래프 빌드  
  <xref:System.CodeDom> 네임스페이스는 언어 구문에 관계없이 소스 코드의 논리 구조를 나타내기 위한 클래스를 제공합니다.  

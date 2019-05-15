@@ -8,15 +8,15 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing by manually managing graphics
 - graphics [Windows Forms], managing buffered
 ms.assetid: 4c2a90ee-bbbe-4ff6-9170-1b06c195c918
-ms.openlocfilehash: a2c45e45421f8b03f592bf6e1e53cad97a4ef9ee
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2cdcebd4e47996841ad58213d9c6252a6a3dd7b6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648280"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591841"
 ---
 # <a name="how-to-manually-manage-buffered-graphics"></a>방법: 버퍼링된 그래픽 수동 관리
-고급 이중 버퍼링 시나리오에서는 사용할 수 있습니다는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 고유의 이중 버퍼링 논리를 구현 하는 클래스입니다. 클래스가 할당 하 고 개별 그래픽 버퍼를 관리 하는 일을 담당 합니다 <xref:System.Drawing.BufferedGraphicsContext> 클래스입니다. 모든 응용 프로그램에는 자체 기본 <xref:System.Drawing.BufferedGraphicsContext> 관리 하는 모든 기본 이중 버퍼링 해당 응용 프로그램에 대 한 합니다. 호출 하 여이 인스턴스에 대 한 참조를 검색할 수 있습니다는 <xref:System.Drawing.BufferedGraphicsManager.Current%2A>합니다.  
+고급 이중 버퍼링 시나리오에 대 한 사용자 고유의 이중 버퍼링 논리를 구현 하는.NET Framework 클래스를 사용할 수 있습니다. 클래스가 할당 하 고 개별 그래픽 버퍼를 관리 하는 일을 담당 합니다 <xref:System.Drawing.BufferedGraphicsContext> 클래스입니다. 모든 응용 프로그램에는 자체 기본 <xref:System.Drawing.BufferedGraphicsContext> 관리 하는 모든 기본 이중 버퍼링 해당 응용 프로그램에 대 한 합니다. 호출 하 여이 인스턴스에 대 한 참조를 검색할 수 있습니다는 <xref:System.Drawing.BufferedGraphicsManager.Current%2A>합니다.  
   
 ### <a name="to-obtain-a-reference-to-the-default-bufferedgraphicscontext"></a>BufferedGraphicsContext 기본값에 대 한 참조를 가져오려면  
   

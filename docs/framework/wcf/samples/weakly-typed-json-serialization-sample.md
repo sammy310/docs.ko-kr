@@ -2,12 +2,12 @@
 title: 약한형 JSON Serialization 샘플
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: b0e9617ad5d616e8921fbf142085f2758f3e0cd4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a9be679b26e395e8fed0938567184a2e5d4a8f07
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62006358"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589219"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>약한형 JSON Serialization 샘플
 사용자 정의 형식을 지정된 통신 형식으로 serialize하거나 통신 형식을 사용자 정의 형식으로 다시 deserialize할 경우 서비스와 클라이언트 모두에서 지정된 사용자 정의 형식을 사용할 수 있어야 합니다. 보통 이렇게 하기 위해 이 사용자 정의 형식에 <xref:System.Runtime.Serialization.DataContractAttribute> 특성을 적용하고 해당 멤버에 <xref:System.Runtime.Serialization.DataMemberAttribute> 특성을 적용합니다. 이 메커니즘 경우에 개체 JSON (JavaScript Notation) 개체로 작업 하는 항목에 설명 된 대로 [방법: 직렬화 및 역직렬화 JSON 데이터](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "62006358"
   
  이 과정이 부담이 될 수 있으며, 클라이언트에서 두 개 이상의 JSON 개체를 처리해야 하는 경우 특히 그렇습니다.  
   
- 이 샘플에서 제공하는 `JsonObject` 형식은 deserialize된 JSON 개체의 약한 형식의 표현을 소개합니다. `JsonObject` 는 JSON 개체와 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 사전 간의 자연 매핑 및 JSON 배열과 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 배열 간의 매핑에 의존합니다. 다음 코드에서는 `JsonObject` 형식을 보여 줍니다.  
+ 이 샘플에서 제공하는 `JsonObject` 형식은 deserialize된 JSON 개체의 약한 형식의 표현을 소개합니다. `JsonObject` JSON 개체 및.NET Framework 사전 간의 자연 매핑 및 JSON 배열 및.NET Framework 배열 간의 매핑에 의존합니다. 다음 코드에서는 `JsonObject` 형식을 보여 줍니다.  
   
 ```  
 // Instantiation of JsonObject json omitted  

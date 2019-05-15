@@ -7,12 +7,12 @@ dev_langs:
 ms.assetid: b73dd4f4-f2dc-47a2-9425-3896e92321fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5c0087412a53177a7c43df838266f6d896c1bd9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fc0232e0187c795fe20e6a99d4a710ba6244e34e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59220476"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599667"
 ---
 # <a name="mitigation-xml-schema-validation"></a>완화: XML 스키마 유효성 검사
 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]에서 복합 키를 사용하고 한 개의 키가 비어 있는 경우 XSD 스키마 유효성 검사가 고유한 제약 조건 위반을 검색합니다.  
@@ -23,9 +23,9 @@ ms.locfileid: "59220476"
 ## <a name="mitigation"></a>완화  
  복합 키에 한 개의 빈 키가 있는 경우 스키마 유효성 검사 오류 검색 여부는 구성 가능한 기능입니다.  
   
--   [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]을 대상으로 하는 앱부터 스키마 유효성 검사 오류 검색은 기본적으로 사용하도록 설정되어 있습니다. 그러나 스키마 유효성 검사 오류가 검색되지 않도록 이 기능을 옵트아웃(opt out)할 수 있습니다.  
+- [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]을 대상으로 하는 앱부터 스키마 유효성 검사 오류 검색은 기본적으로 사용하도록 설정되어 있습니다. 그러나 스키마 유효성 검사 오류가 검색되지 않도록 이 기능을 옵트아웃(opt out)할 수 있습니다.  
   
--   [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]에서 실행되지만 [!INCLUDE[net_v452](../../../includes/net-v452-md.md)] 및 이전 버전을 대상으로 하는 앱에서는 스키마 유효성 검사 오류가 기본적으로 검색되지 않습니다. 그러나 스키마 유효성 검사 오류가 검색되도록 이 기능을 옵트인(opt in)할 수 있습니다.  
+- [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]에서 실행되지만 [!INCLUDE[net_v452](../../../includes/net-v452-md.md)] 및 이전 버전을 대상으로 하는 앱에서는 스키마 유효성 검사 오류가 기본적으로 검색되지 않습니다. 그러나 스키마 유효성 검사 오류가 검색되도록 이 기능을 옵트인(opt in)할 수 있습니다.  
   
  이 동작은 <xref:System.AppContext> 클래스를 사용하여 `System.Xml.IgnoreEmptyKeySequences` 스위치의 값을 정의하도록 구성할 수 있습니다. 스위치의 기본값은 `false`(빈 키 시퀀스가 무시되지 않음)이기 때문에 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]을 대상으로 하는 앱은 다음 코드를 사용하여 스위치의 값을 `true`로 설정하면 해당 동작을 옵트아웃(opt out)할 수 있습니다.  
   

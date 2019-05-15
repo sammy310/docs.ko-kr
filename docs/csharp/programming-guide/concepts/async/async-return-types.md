@@ -2,19 +2,19 @@
 title: 비동기 반환 형식(C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: c2a15b87e97dea43c37f720856be2892ad6966a3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 327168e3ac77ab1ed7c9841d592781c704839660
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368183"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599781"
 ---
 # <a name="async-return-types-c"></a>비동기 반환 형식(C#)
 비동기 메서드의 반환 형식은 다음과 같을 수 있습니다.
 
 - <xref:System.Threading.Tasks.Task%601> - 값을 반환하는 비동기 메서드의 경우 
  
--  <xref:System.Threading.Tasks.Task> - 작업을 수행하지만 아무 값도 반환하지 않는 비동기 메서드의 경우
+- <xref:System.Threading.Tasks.Task> - 작업을 수행하지만 아무 값도 반환하지 않는 비동기 메서드의 경우
 
 - `void` - 이벤트 처리기의 경우 
 

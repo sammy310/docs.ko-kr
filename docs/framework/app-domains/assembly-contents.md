@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 25594c55a5462c42611df7119dad37bd8a61cc2e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: dd41051bd770d3579137aa158e70cef41aed49f8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149346"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607837"
 ---
 # <a name="assembly-contents"></a>어셈블리 콘텐츠
 일반적으로 정적 어셈블리는 네 가지 요소로 구성됩니다.  
   
--   어셈블리 메타데이터를 포함하는 [어셈블리 매니페스트](../../../docs/framework/app-domains/assembly-manifest.md)  
+- 어셈블리 메타데이터를 포함하는 [어셈블리 매니페스트](../../../docs/framework/app-domains/assembly-manifest.md)  
   
--   형식 메타데이터  
+- 형식 메타데이터  
   
--   형식을 구현하는 MSIL(Microsoft Intermediate Language) 코드  
+- 형식을 구현하는 MSIL(Microsoft Intermediate Language) 코드  
   
--   리소스 집합  
+- 리소스 집합  
   
  어셈블리 매니페스트만 있으면 되지만, 어셈블리에 의미 있는 기능을 부여하려면 형식 또는 리소스가 필요합니다.  
   

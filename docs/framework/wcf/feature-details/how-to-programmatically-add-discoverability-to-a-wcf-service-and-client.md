@@ -2,12 +2,12 @@
 title: '방법: 프로그래밍 방식으로 WCF 서비스 및 클라이언트에 검색 기능 추가'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: 54d838967fcc19501ff7385aba29e8d79025ce70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de227e8df895dd4c031aadce16102559c43e47ce
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761548"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586616"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>방법: 프로그래밍 방식으로 WCF 서비스 및 클라이언트에 검색 기능 추가
 이 항목에서는 Windows Communication Foundation (WCF) 서비스를 검색할 수 있도록 설정 하는 방법에 설명 합니다. 기반이 되는 [Self-host](https://go.microsoft.com/fwlink/?LinkId=145523) 샘플입니다.  
@@ -16,7 +16,7 @@ ms.locfileid: "61761548"
   
 1. Visual Studio 2012에서 자체 호스트 솔루션을 엽니다. 샘플은 TechnologySamples\Basic\Service\Hosting\SelfHost 디렉터리에 있습니다.  
   
-2. 서비스 프로젝트에 `System.ServiceModel.Discovery.dll`에 대한 참조를 추가합니다. "System 라는 오류 메시지가 표시 될 수 있습니다. 나타나면 또는 해당 종속성 중 하나 이상 버전이 필요 합니다 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ... 프로젝트에서 지정한 것 보다 " 이 메시지를 표시 하는 경우 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **속성**합니다. 에 **프로젝트 속성** 창 있는지 확인 합니다 **대상 프레임 워크** 는 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+2. 서비스 프로젝트에 `System.ServiceModel.Discovery.dll`에 대한 참조를 추가합니다. "System 라는 오류 메시지가 표시 될 수 있습니다. 나타나면 또는 해당 종속성 중 하나... 프로젝트에서 지정한 것 보다 최신 버전의.NET Framework 필요 " 이 메시지를 표시 하는 경우 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **속성**합니다. 에 **프로젝트 속성** 창 있는지 확인 합니다 **대상 프레임 워크** 는 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
 3. Service.cs 파일을 열고 다음 `using` 문을 추가합니다.  
   

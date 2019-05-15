@@ -8,20 +8,20 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: 97e917d568b31860979e54598350d1ae7a6fdb25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 465f1d8141f51de179dbb4e963a8fcac8c09fa33
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022313"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592699"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>연습: Visual Basic을 사용 하 여 COM 개체 만들기
-새 응용 프로그램 또는 구성 요소를 만들 때.NET Framework 어셈블리를 만드는 것이 좋습니다. 그러나 Visual Basic도 쉽게 COM에.NET Framework 구성 요소 노출 이 옵션을 사용 하면 COM 구성 요소를 필요로 하는 이전 응용 프로그램 도구 모음에 대 한 새 구성 요소를 제공할 수 있습니다. 이 연습에는 Visual Basic 노출을 사용 하는 방법을 보여 줍니다. [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] COM 개체를 사용 하 여 및 COM 클래스 템플릿을 사용 하지 않고 개체입니다.  
+새 응용 프로그램 또는 구성 요소를 만들 때.NET Framework 어셈블리를 만드는 것이 좋습니다. 그러나 Visual Basic도 쉽게 COM에.NET Framework 구성 요소 노출 이 옵션을 사용 하면 COM 구성 요소를 필요로 하는 이전 응용 프로그램 도구 모음에 대 한 새 구성 요소를 제공할 수 있습니다. 이 연습에서는 Visual Basic을 사용 하 여 COM 개체를 사용 하 여 및 COM 클래스 템플릿을 사용 하지 않고으로.NET Framework 개체를 노출 하는 방법에 설명 합니다.  
   
  COM 클래스 템플릿을 사용 하 여 COM 개체를 노출 하는 가장 쉬운 방법은 됩니다. COM 클래스 템플릿을 새 클래스를 만들고 COM 개체로 클래스 및 상호 운용성 계층을 생성 하 고 운영 체제를 사용 하 여 등록 하려면 프로젝트를 구성 합니다.  
   
 > [!NOTE]
->  Visual Basic에서 사용 하 여 비관리 코드를 COM 개체로 만든 클래스를 노출할 수도 있습니다, 있지만 실제 COM 개체 아니며 Visual Basic에서 사용할 수 없습니다. 자세한 내용은 [.NET Framework 응용 프로그램의 COM 상호 운용성](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)합니다.  
+>  Visual Basic에서 사용 하 여 비관리 코드를 COM 개체로 만든 클래스를 노출할 수도 있습니다, 있지만 실제 COM 개체 아니며 Visual Basic에서 사용할 수 없습니다. 자세한 내용은 [.NET Framework 애플리케이션의 COM 상호 운용성](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)합니다.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -88,7 +88,7 @@ ms.locfileid: "62022313"
 9. 속성, 메서드 및 이벤트 클래스를 추가, 사용 하 여 종료를 `End Class` 문입니다. 선택 **솔루션 빌드** 에서 합니다 **빌드** 메뉴. Visual Basic 어셈블리를 빌드하고 운영 체제를 사용 하 여 COM 개체를 등록 합니다.  
   
     > [!NOTE]
-    >  True 이면 COM 개체 하지 않기 때문에 다른 Visual Basic 응용 프로그램에서 Visual Basic을 사용 하 여 생성 하는 COM 개체를 사용할 수 없습니다. 이러한 COM 개체에 대 한 참조를 추가 하려는 시도 오류가 발생 합니다. 자세한 내용은 참조 하세요 [.NET Framework 응용 프로그램의 COM 상호 운용성](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)합니다.  
+    >  True 이면 COM 개체 하지 않기 때문에 다른 Visual Basic 응용 프로그램에서 Visual Basic을 사용 하 여 생성 하는 COM 개체를 사용할 수 없습니다. 이러한 COM 개체에 대 한 참조를 추가 하려는 시도 오류가 발생 합니다. 자세한 내용은 참조 하세요 [.NET Framework 애플리케이션의 COM 상호 운용성](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)합니다.  
   
 ## <a name="see-also"></a>참고자료
 

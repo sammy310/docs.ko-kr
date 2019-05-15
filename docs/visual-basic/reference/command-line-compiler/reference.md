@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: a205682bb15b5d25ba0a2df895533d3443a41409
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2394a23ddd59d09ce53c78fc4486fc5bae9e8516
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663463"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583367"
 ---
 # <a name="-reference-visual-basic"></a>-참조 (Visual Basic)
 컴파일러가 지정된 된 어셈블리의 형식 정보 현재 컴파일 중인 프로젝트에서 사용할 수 있게 합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "64663463"
   
  어셈블리 (모듈 아님)의 형식을 인식할 수 컴파일러의 경우 해당 형식을 확인할 강제 해야 합니다. 이 수행할 수 있는 방법의 예로 형식의 인스턴스를 정의 하는 것입니다. 다른 방법으로 컴파일러에 대 한 어셈블리의 형식 이름을 확인 하기 위해 사용할 수 있습니다. 예를 들어, 어셈블리의 형식에서 상속 하는 경우 형식 이름에 알려집니다 컴파일러.  
   
- 참조 일반적으로 Vbc.rsp 지시 파일이 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 어셈블리의 경우 기본적으로 사용 됩니다. 사용 하 여 `-noconfig` Vbc.rsp 사용 하도록 컴파일러에 원하지 않는 경우.  
+ 기본적으로 참조 하는 일반적으로 사용 되는.NET Framework 어셈블리를 Vbc.rsp 지시 파일이 사용 됩니다. 사용 하 여 `-noconfig` Vbc.rsp 사용 하도록 컴파일러에 원하지 않는 경우.  
   
  `-reference`의 약식은 `/r`입니다.  
   

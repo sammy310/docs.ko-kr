@@ -2,12 +2,12 @@
 title: '방법: 서명된 Friend 어셈블리 만들기(C#)'
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: b80d22aa68a969a5468aa1395195058e47f300c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: df04f6f5a006c7eea7984004e20578c85e51efe0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325204"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64582978"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>방법: 서명된 Friend 어셈블리 만들기(C#)
 이 예제에서는 강력한 이름을 가진 어셈블리와 함께 friend 어셈블리를 사용하는 방법을 보여 줍니다. 두 어셈블리에 모두 강력한 이름을 지정해야 합니다. 이 예제의 두 어셈블리는 모두 동일한 키를 사용하지만 두 어셈블리에 서로 다른 키를 사용할 수 있습니다.  
@@ -18,15 +18,15 @@ ms.locfileid: "59325204"
   
 2. 강력한 이름 도구와 함께 다음 명령 시퀀스를 사용하여 키 파일을 생성하고 해당 공개 키를 표시합니다. 자세한 내용은 [Sn.exe(강력한 이름 도구)](../../../../framework/tools/sn-exe-strong-name-tool.md)를 참조하세요.  
   
-    1.  이 예제에 대한 강력한 이름 키를 생성하고 FriendAssemblies.snk 파일에 저장합니다.  
+    1. 이 예제에 대한 강력한 이름 키를 생성하고 FriendAssemblies.snk 파일에 저장합니다.  
   
          `sn -k FriendAssemblies.snk`  
   
-    2.  FriendAssemblies.snk에서 공개 키를 추출하고 FriendAssemblies.publickey에 넣습니다.  
+    2. FriendAssemblies.snk에서 공개 키를 추출하고 FriendAssemblies.publickey에 넣습니다.  
   
          `sn -p FriendAssemblies.snk FriendAssemblies.publickey`  
   
-    3.  FriendAssemblies.publickey 파일에 저장된 공개 키를 표시합니다.  
+    3. FriendAssemblies.publickey 파일에 저장된 공개 키를 표시합니다.  
   
          `sn -tp FriendAssemblies.publickey`  
   

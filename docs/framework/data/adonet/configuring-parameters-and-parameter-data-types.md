@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-ms.openlocfilehash: e4414e33efb077e00e4b38e3e53d218ecd7343a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d35e2775c6c6912d2a36c550202b309ebdeaa32
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034556"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583833"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>매개 변수 및 매개 변수 데이터 형식 구성
 
@@ -33,7 +33,7 @@ Command 개체는 매개 변수를 통해 SQL 문이나 저장 프로시저에 �
 
 ## <a name="working-with-parameter-placeholders"></a>매개 변수 자리 표시자를 사용 하 여 작업
 
-매개 변수 자리 표시자의 구문은 데이터 소스에 따라 다릅니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자는 매개 변수와 매개 변수 자리 표시자를 다르게 지정하여 명명 작업을 처리합니다. 이 구문은 다음 표에서 설명하는 것과 같이 특정 데이터 소스에 맞게 사용자 지정됩니다.
+매개 변수 자리 표시자의 구문은 데이터 소스에 따라 다릅니다. .NET Framework 데이터 공급자는 매개 변수와 매개 변수 자리 표시자를 다르게 지정하여 명명 작업을 처리합니다. 이 구문은 다음 표에서 설명하는 것과 같이 특정 데이터 소스에 맞게 사용자 지정됩니다.
 
 |데이터 공급자|매개 변수 명명 구문|
 |-------------------|-----------------------------|
@@ -44,9 +44,9 @@ Command 개체는 매개 변수를 통해 SQL 문이나 저장 프로시저에 �
 
 ## <a name="specifying-parameter-data-types"></a>매개 변수 데이터 형식 지정
 
-매개 변수의 데이터 형식은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자에 따라 다릅니다. 형식을 지정하면 데이터 소스에 값이 전달되기 전에 `Parameter` 의 값이 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자 형식으로 변환됩니다. `Parameter` 개체의 `DbType` 속성을 특정 `Parameter` 으로 설정하면 일반적인 방식으로 <xref:System.Data.DbType>의 형식을 지정할 수도 있습니다.
+매개 변수의 데이터 형식을.NET Framework 데이터 공급자와 관련이 있습니다. 값 변환 유형을 지정 하는 `Parameter` 데이터 원본에 값을 전달 하기 전에.NET Framework 데이터 공급자 형식입니다. `Parameter` 개체의 `DbType` 속성을 특정 `Parameter` 으로 설정하면 일반적인 방식으로 <xref:System.Data.DbType>의 형식을 지정할 수도 있습니다.
 
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 개체의 `Parameter` 데이터 공급자 형식은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 개체 `Value` 의 `Parameter` 형식이나 `DbType` 개체의 `Parameter` 에서 유추됩니다. 다음 표에서는 `Parameter` 값으로 전달되는 개체 또는 지정한 `Parameter` 을 기반으로 유추한 `DbType`형식을 보여 줍니다.
+.NET Framework 데이터 공급자 형식을 `Parameter` 개체의.NET Framework 형식에서 유추 됩니다는 `Value` 의 `Parameter` 개체를 또는 `DbType` 의 `Parameter` 개체입니다. 다음 표에서는 `Parameter` 값으로 전달되는 개체 또는 지정한 `Parameter` 을 기반으로 유추한 `DbType`형식을 보여 줍니다.
 
 |.NET Framework 형식|DbType|SqlDbType|OleDbType|OdbcType|OracleType|
 |-------------------------|------------|---------------|---------------|--------------|----------------|
@@ -101,7 +101,7 @@ Command 개체는 매개 변수를 통해 SQL 문이나 저장 프로시저에 �
 > [!NOTE]
 > 매개 변수화된 문은 `sp_executesql,` 을 사용하여 서버에서 실행되므로 쿼리 계획을 다시 사용할 수 있습니다. `sp_executesql` 일괄 처리의 로컬 커서 또는 변수는 `sp_executesql`을 호출하는 일괄 처리에 표시되지 않습니다. 데이터베이스 컨텍스트의 변경은 `sp_executesql` 문의 실행이 끝날 때까지만 지속됩니다. 자세한 내용은 [sp_executesql (TRANSACT-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql)합니다.
 
-<xref:System.Data.SqlClient.SqlCommand> 에 매개 변수를 사용하여 SQL Server 저장 프로시저를 실행할 때는 <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> 컬렉션에 추가된 매개 변수 이름이 저장 프로시저에 있는 매개 변수 마커 이름과 일치해야 합니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server는 SQL 문이나 저장 프로시저에 매개 변수를 전달할 때 물음표(?) 자리 표시자를 지원하지 않습니다. 대신 저장 프로시저의 매개 변수를 명명된 매개 변수로 처리하여 일치하는 매개 변수 마커를 검색합니다. 예를 들어 `CustOrderHist` 저장 프로시저는 `@CustomerID`라는 매개 변수를 사용하여 정의됩니다. 따라서 코드에서 이 저장 프로시저를 실행하는 경우 `@CustomerID`라는 매개 변수도 함께 사용해야 합니다.
+<xref:System.Data.SqlClient.SqlCommand> 에 매개 변수를 사용하여 SQL Server 저장 프로시저를 실행할 때는 <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> 컬렉션에 추가된 매개 변수 이름이 저장 프로시저에 있는 매개 변수 마커 이름과 일치해야 합니다. .NET Framework Data Provider for SQL Server는 SQL 문이나 저장된 프로시저에 매개 변수를 전달 하기 위한 물음표 (?) 자리 표시자를 지원 하지 않습니다. 대신 저장 프로시저의 매개 변수를 명명된 매개 변수로 처리하여 일치하는 매개 변수 마커를 검색합니다. 예를 들어 `CustOrderHist` 저장 프로시저는 `@CustomerID`라는 매개 변수를 사용하여 정의됩니다. 따라서 코드에서 이 저장 프로시저를 실행하는 경우 `@CustomerID`라는 매개 변수도 함께 사용해야 합니다.
 
 ```sql
 CREATE PROCEDURE dbo.CustOrderHist @CustomerID varchar(5)
@@ -119,9 +119,9 @@ CREATE PROCEDURE dbo.CustOrderHist @CustomerID varchar(5)
 
 ## <a name="using-parameters-with-an-oledbcommand-or-odbccommand"></a>OleDbCommand 또는 OdbcCommand에 매개 변수 사용
 
-<xref:System.Data.OleDb.OleDbCommand> 또는 <xref:System.Data.Odbc.OdbcCommand>에 매개 변수를 사용할 때는 `Parameters` 컬렉션에 추가된 매개 변수의 순서가 저장 프로시저에 정의된 매개 변수의 순서와 일치해야 합니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB 및 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC에서는 저장 프로시저의 매개 변수가 자리 표시자로 처리되며 매개 변수 값은 순서대로 적용됩니다. 또한 반환 값 매개 변수는 `Parameters` 컬렉션에 첫 번째 매개 변수로 추가되어야 합니다.
+<xref:System.Data.OleDb.OleDbCommand> 또는 <xref:System.Data.Odbc.OdbcCommand>에 매개 변수를 사용할 때는 `Parameters` 컬렉션에 추가된 매개 변수의 순서가 저장 프로시저에 정의된 매개 변수의 순서와 일치해야 합니다. .NET Framework Data Provider for OLE DB 및.NET Framework Data Provider for ODBC 자리 표시자로 저장된 프로시저에서 매개 변수를 처리 하 고 순서 대로 매개 변수 값을 적용 합니다. 또한 반환 값 매개 변수는 `Parameters` 컬렉션에 첫 번째 매개 변수로 추가되어야 합니다.
 
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB 및 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC에서는 SQL 문 또는 저장 프로시저에 매개 변수를 전달하는 이름 지정 매개 변수가 지원되지 않습니다. 이 경우 다음 예제와 같이 물음표(?) 자리 표시자를 사용해야 합니다.
+.NET Framework Data Provider for OLE DB 및.NET Framework Data Provider for ODBC는 SQL 문이나 저장된 프로시저에 매개 변수 전달에 대 한 명명 된 매개 변수를 지원 하지 않습니다. 이 경우 다음 예제와 같이 물음표(?) 자리 표시자를 사용해야 합니다.
 
 ```sql
 SELECT * FROM Customers WHERE CustomerID = ?

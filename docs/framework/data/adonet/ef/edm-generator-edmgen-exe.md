@@ -2,12 +2,12 @@
 title: EDM 생성기(EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: 7f06b393cd7e7ccf3d3637d6fb46eb6d983d943a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9c75cd7589b1c5fb28112a22390acf90f46e465
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607673"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584582"
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM 생성기(EdmGen.exe)
 
@@ -21,7 +21,7 @@ EdmGen.exe는 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 모
 
 - 기존 모델에 대해 미리 생성된 뷰가 들어 있는 C# 또는 Visual Basic 코드 파일을 생성합니다. 자세한 내용은 [방법: 쿼리 성능을 개선 하는 뷰를 미리 생성](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))합니다.
 
-EdmGen.exe 도구는 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 디렉터리에 설치됩니다. 대체로 이 도구는 C:\windows\Microsoft.NET\Framework\v4.0에 있으며 64비트 시스템의 경우 C:\windows\Microsoft.NET\Framework64\v4.0에 있습니다. Visual Studio 명령 프롬프트에서 EdmGen.exe 도구에 액세스할 수도 있습니다 (클릭 **시작**, 가리킨 **모든 프로그램**를 가리키고 **Microsoft Visual Studio 2010**, 가리킵니다 **Visual Studio Tools**를 클릭 하 고 **Visual Studio 2010 명령 프롬프트**).
+EdmGen.exe 도구는.NET Framework 디렉터리에 설치 됩니다. 대체로 이 도구는 C:\windows\Microsoft.NET\Framework\v4.0에 있으며 64비트 시스템의 경우 C:\windows\Microsoft.NET\Framework64\v4.0에 있습니다. Visual Studio 명령 프롬프트에서 EdmGen.exe 도구에 액세스할 수도 있습니다 (클릭 **시작**, 가리킨 **모든 프로그램**를 가리키고 **Microsoft Visual Studio 2010**, 가리킵니다 **Visual Studio Tools**를 클릭 하 고 **Visual Studio 2010 명령 프롬프트**).
 
 ## <a name="syntax"></a>구문
 
@@ -46,7 +46,7 @@ EdmGen.exe 도구를 사용하는 경우 다음 모드 중 하나를 지정해�
 |옵션|설명|
 |------------|-----------------|
 |`/p[roject]:`\<string>|사용할 프로젝트 이름을 지정합니다. 프로젝트 이름은 네임스페이스 설정, 모델 및 매핑 파일 이름, 개체 소스 파일 이름, 뷰 생성 소스 파일 이름의 기본값으로 사용됩니다. 엔터티 컨테이너 이름 설정 되어 \<프로젝트 > 컨텍스트.|
-|`/prov[ider]:`\<string>|저장소 모델(.ssdl) 파일을 생성하는 데 사용할 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 데이터 공급자의 이름입니다. 기본 공급자는 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>).|
+|`/prov[ider]:`\<string>|저장소 모델(.ssdl) 파일을 생성하는 데 사용할 .NET Framework 데이터 공급자의 이름입니다. 기본 공급자는 .NET Framework Data Provider for SQL Server(<xref:System.Data.SqlClient?displayProperty=nameWithType>)입니다.|
 |`/c[onnectionstring]:`\<연결 문자열 >|데이터 소스에 연결하는 데 사용되는 문자열을 지정합니다.|
 |`/incsdl:`\<file>|.csdl 파일 또는 .csdl 파일이 있는 디렉터리를 지정합니다. 몇 개의 디렉터리나 .csdl 파일을 지정할 수 있도록 이 인수를 여러 번 지정할 수 있습니다. 여러 디렉터리를 지정하면 개념적 모델이 몇 개의 파일에 분할되어 있을 때 클래스(`/mode:EntityClassGeneration`) 또는 뷰(`/mode:ViewGeneration`)를 생성하는 데 유용할 수 있습니다. 여러 모델(`/mode:ValidateArtifacts`)의 유효성을 검사하려는 경우에도 유용할 수 있습니다.|
 |`/refcsdl:`\<file>|소스 .csdl 파일의 참조를 확인하는 데 사용되는 추가 .csdl 파일을 지정합니다. 소스 .csdl 파일은 `/incsdl` 옵션으로 지정된 파일입니다. `/refcsdl` 파일에는 소스 .csdl 파일이 종속된 형식이 들어 있습니다. 이 인수를 여러 번 지정할 수 있습니다.|

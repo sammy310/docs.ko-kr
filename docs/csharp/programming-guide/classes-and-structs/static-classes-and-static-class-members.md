@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: bcf4cd9d4ac4e4de3174cb57d83c8cab7de86c21
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 28253a46e8da48cfc2812d7f3fef1a2dd3d1cf87
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202407"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599847"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>정적 클래스 및 정적 클래스 멤버(C# 프로그래밍 가이드)
 [정적](../../../csharp/language-reference/keywords/static.md) 클래스는 기본적으로 비정적 클래스와 동일하지만, 정적 클래스는 인스턴스화할 수 없다는 한 가지 차이점이 있습니다. 즉, [new](../../../csharp/language-reference/keywords/new.md) 키워드를 사용하여 클래스 형식의 변수를 만들 수 없습니다. 인스턴스 변수가 없기 때문에 클래스 이름 자체를 사용하여 정적 클래스의 멤버에 액세스합니다. 예를 들어 public static 메서드 `MethodA`를 포함하는 `UtilityClass`라는 정적 클래스가 있는 경우 다음 예제와 같이 메서드를 호출합니다.  
@@ -44,13 +44,13 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  다음 목록은 정적 클래스의 주요 기능을 제공합니다.  
   
--   정적 멤버만 포함합니다.  
+- 정적 멤버만 포함합니다.  
   
--   인스턴스화할 수 없습니다.  
+- 인스턴스화할 수 없습니다.  
   
--   봉인되어 있습니다.  
+- 봉인되어 있습니다.  
   
--   [인스턴스 생성자](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)를 포함할 수 없습니다.  
+- [인스턴스 생성자](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)를 포함할 수 없습니다.  
   
  따라서 정적 클래스를 만드는 것은 기본적으로 정적 멤버와 private 생성자만 포함된 클래스를 만드는 것과 동일합니다. private 생성자는 클래스가 인스턴스화되지 않도록 합니다. 정적 클래스를 사용하면 컴파일러에서 인스턴스 멤버가 실수로 추가되지 않도록 확인할 수 있다는 장점이 있습니다. 컴파일러는 이 클래스의 인스턴스를 만들 수 없도록 합니다.  
   
@@ -86,7 +86,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
 
-자세한 내용은 [C# 언어 사양](../../language-reference/language-specification/index.md)에서 [정적 클래스](~/_csharplang/spec/classes.md#static-classes) 및 [정적 및 인스턴스 멤버](~/_csharplang/spec/classes.md#static-and-instance-members)를 참조하세요. C# 언어 사양은 C# 구문 및 사용법에 대한 신뢰할 수 있는 소스입니다.
+자세한 내용은 [C# 언어 사양](../../language-reference/language-specification/index.md)에서 [정적 클래스](~/_csharplang/spec/classes.md#static-classes) 및 [정적 및 인스턴스 멤버](~/_csharplang/spec/classes.md#static-and-instance-members)를 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
   
 ## <a name="see-also"></a>참고 항목
 

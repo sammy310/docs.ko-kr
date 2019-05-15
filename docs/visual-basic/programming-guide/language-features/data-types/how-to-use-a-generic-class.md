@@ -21,19 +21,19 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 242dd2a6-86c4-4ce7-83f2-f2661803f752
-ms.openlocfilehash: c7fb4c95b6ef09508df57b3a0c08a651b122e251
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b069d3a0249f6aff2f9f09c5a560e5708bd60aa6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906479"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593364"
 ---
 # <a name="how-to-use-a-generic-class-visual-basic"></a>방법: 제네릭 클래스 (Visual Basic)를 사용 합니다.
 *형식 매개 변수* 를 사용하는 클래스를 *제네릭 클래스*라고 합니다. 제네릭 클래스를 사용 중인 경우 이러한 각 매개 변수에 대해 *형식 인수* 를 제공하여, 여기에서 *생성된 클래스* 를 만들 수 있습니다. 그런 다음 생성된 클래스 형식의 변수를 선언하고, 생성된 클래스의 인스턴스를 만들어 해당 변수에 할당할 수 있습니다.  
   
  클래스 이외에도 제네릭 구조체, 인터페이스, 프로시저 및 대리자도 정의할 수 있습니다.  
   
- 다음 절차에서는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 에서 정의한 제네릭 클래스를 가져오고 여기에서 인스턴스를 만듭니다.  
+ 다음 절차는.NET Framework에 정의 된 제네릭 클래스를 사용 하 고에서 인스턴스를 만듭니다.  
   
 ### <a name="to-use-a-class-that-takes-a-type-parameter"></a>형식 매개 변수를 가져오는 클래스를 사용하려면  
   

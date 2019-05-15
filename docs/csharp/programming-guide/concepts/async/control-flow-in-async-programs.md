@@ -2,12 +2,12 @@
 title: 비동기 프로그램의 제어 흐름(C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-ms.openlocfilehash: 6a7b8f3f41b2096e3e7524d03217bdc123f26f10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d8d9f1dd0963ee9074122473e0eeab9254866660
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326205"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599749"
 ---
 # <a name="control-flow-in-async-programs-c"></a>비동기 프로그램의 제어 흐름(C#)
 
@@ -17,9 +17,9 @@ ms.locfileid: "59326205"
 
 다음 예제에서는 비동기 메서드를 사용하여 지정된 웹 사이트의 콘텐츠를 문자열로 다운로드하고 문자열 길이를 표시합니다. 예제에는 다음 두 가지 메서드가 포함됩니다.
 
--   `startButton_Click` - `AccessTheWebAsync`를 호출하고 결과를 표시합니다.
+- `startButton_Click` - `AccessTheWebAsync`를 호출하고 결과를 표시합니다.
 
--   `AccessTheWebAsync` - 웹 사이트의 콘텐츠를 문자열로 다운로드하고 문자열의 길이를 반환합니다. `AccessTheWebAsync`는 비동기 <xref:System.Net.Http.HttpClient> 메서드인 <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>을 사용하여 콘텐츠를 다운로드합니다.
+- `AccessTheWebAsync` - 웹 사이트의 콘텐츠를 문자열로 다운로드하고 문자열의 길이를 반환합니다. `AccessTheWebAsync`는 비동기 <xref:System.Net.Http.HttpClient> 메서드인 <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>을 사용하여 콘텐츠를 다운로드합니다.
 
 전체 프로그램에서 전략적 지점에 번호가 매겨진 표시 줄이 나타나 프로그램 실행 방식을 이해하도록 도와주고 표시된 각 지점에서 수행되는 작업을 설명합니다. 표시 줄에는 "ONE"~"SIX"의 레이블이 지정됩니다. 레이블은 프로그램이 이러한 코드 줄에 도달하는 순서를 나타냅니다.
 

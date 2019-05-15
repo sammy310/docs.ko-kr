@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 07c13d22235f1198188d26122c137db1d91e64e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 50eb1bc1588602bf562efc31b0f4dd01bc29cad0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342458"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593323"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>연습: 사용자 지정 로그 수신기 만들기(Visual Basic)
 이 연습에서는 사용자 지정 로그 수신기를 만들고 `My.Application.Log` 개체의 출력을 수신 대기하도록 구성하는 방법을 보여 줍니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "59342458"
   
 #### <a name="to-create-the-listener"></a>수신기를 만들려면  
   
--   <xref:System.Diagnostics.TraceListener>에서 상속하는 이름이 `SimpleListener`인 클래스를 애플리케이션에서 만듭니다.  
+- <xref:System.Diagnostics.TraceListener>에서 상속하는 이름이 `SimpleListener`인 클래스를 애플리케이션에서 만듭니다.  
   
      [!code-vb[VbVbalrMyApplicationLog#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#16)]  
   
@@ -64,7 +64,7 @@ ms.locfileid: "59342458"
   
 #### <a name="to-determine-the-strong-name-of-the-listener"></a>수신기의 강력한 이름을 결정하려면  
   
--   다음 코드에서는 `SimpleListener`에 대해 강력한 형식의 이름을 결정하는 방법을 보여 줍니다.  
+- 다음 코드에서는 `SimpleListener`에 대해 강력한 형식의 이름을 결정하는 방법을 보여 줍니다.  
   
      [!code-vb[VbVbalrMyApplicationLog#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#17)]  
   
@@ -80,11 +80,11 @@ ms.locfileid: "59342458"
   
      app.config 파일이 있는 경우:  
   
-    1.  **프로젝트** 메뉴에서 **새 항목 추가**를 선택합니다.  
+    1. **프로젝트** 메뉴에서 **새 항목 추가**를 선택합니다.  
   
-    2.  **새 항목 추가** 대화 상자에서 **애플리케이션 구성 파일**을 선택합니다.  
+    2. **새 항목 추가** 대화 상자에서 **애플리케이션 구성 파일**을 선택합니다.  
   
-    3.  **추가**를 클릭합니다.  
+    3. **추가**를 클릭합니다.  
   
 2. `<listeners>` 특성이 "DefaultSource"인 `<source>` 섹션에서 `name` 섹션에 있는 `<sources>` 섹션을 찾습니다. `<sources>` 섹션은 최상위 `<system.diagnostics>` 섹션의 `<configuration>` 섹션에 있습니다.  
   

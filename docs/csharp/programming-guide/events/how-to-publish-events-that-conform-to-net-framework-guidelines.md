@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 3ea5f5fb3b94c3edfd129a08a57c4c584b1412aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f67789159cee64e928ae88cede9f4dbf33df1b40
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306588"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608690"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>방법: .NET Framework 지침을 따르는 이벤트 게시(C# 프로그래밍 가이드)
 다음 절차에서는 표준 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 패턴을 따르는 이벤트를 클래스와 구조체에 추가하는 방법을 보여 줍니다. [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 클래스 라이브러리의 모든 이벤트는 다음과 같이 정의된 <xref:System.EventHandler> 대리자를 기반으로 합니다.  
@@ -51,19 +51,19 @@ public delegate void EventHandler(object sender, EventArgs e);
   
 3. 다음 단계 중 하나를 사용하여 게시 클래스에서 이벤트를 선언합니다.  
   
-    1.  사용자 지정 EventArgs 클래스가 없는 경우 이벤트 유형은 제네릭이 아닌 EventHandler 대리자가 됩니다. C# 프로젝트를 만들 때 포함된 <xref:System> 네임스페이스에서 이미 선언되었기 때문에 대리자를 선언할 필요는 없습니다. 게시자 클래스에 다음 코드를 추가합니다.  
+    1. 사용자 지정 EventArgs 클래스가 없는 경우 이벤트 유형은 제네릭이 아닌 EventHandler 대리자가 됩니다. C# 프로젝트를 만들 때 포함된 <xref:System> 네임스페이스에서 이미 선언되었기 때문에 대리자를 선언할 필요는 없습니다. 게시자 클래스에 다음 코드를 추가합니다.  
   
         ```csharp  
         public event EventHandler RaiseCustomEvent;  
         ```  
   
-    2.  제네릭이 아닌 버전의 <xref:System.EventHandler>를 사용 중이고 <xref:System.EventArgs>에서 파생된 사용자 지정 클래스가 있는 경우 게시 클래스 내에서 이벤트를 선언하고 2단계의 대리자를 형식으로 사용합니다.  
+    2. 제네릭이 아닌 버전의 <xref:System.EventHandler>를 사용 중이고 <xref:System.EventArgs>에서 파생된 사용자 지정 클래스가 있는 경우 게시 클래스 내에서 이벤트를 선언하고 2단계의 대리자를 형식으로 사용합니다.  
   
         ```csharp  
         public event CustomEventHandler RaiseCustomEvent;  
         ```  
   
-    3.  제네릭 버전을 사용하는 경우에는 사용자 지정 대리자가 필요하지 않습니다. 대신, 게시 클래스에서 이벤트 유형을 `EventHandler<CustomEventArgs>`로 지정하고 고유한 클래스 이름을 꺾쇠 괄호로 묶어 대체합니다.  
+    3. 제네릭 버전을 사용하는 경우에는 사용자 지정 대리자가 필요하지 않습니다. 대신, 게시 클래스에서 이벤트 유형을 `EventHandler<CustomEventArgs>`로 지정하고 고유한 클래스 이름을 꺾쇠 괄호로 묶어 대체합니다.  
   
         ```csharp  
         public event EventHandler<CustomEventArgs> RaiseCustomEvent;  

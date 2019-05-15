@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], about ActiveX controls
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
-ms.openlocfilehash: fc8e55d8f3824ca11c575479863491d7f949efa3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 02f3224a8069fd091833bb09744389592c769818
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665858"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592505"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Windows Forms 및 관리되지 않는 애플리케이션 개요
 Windows Forms 애플리케이션과 컨트롤은 관리되지 않는 애플리케이션과 상호 운용될 수 있지만 몇 가지 주의할 사항이 있습니다. 다음 섹션에서는 Windows Forms 애플리케이션과 컨트롤이 지원하는 시나리오 및 구성과 지원하지 않는 시나리오 및 구성을 설명합니다.  
@@ -47,7 +47,7 @@ Windows Forms 애플리케이션과 컨트롤은 관리되지 않는 애플리�
  애플리케이션의 메시지 루프는 스레드의 메시지 큐에서 메시지를 검색하고 변환한 다음 처리되도록 애플리케이션에 보내는 내부 프로그램 루프입니다. Windows Form의 메시지 루프에는 Visual Basic 6.0 애플리케이션 및 MFC 애플리케이션과 같은 이전 애플리케이션이 제공하는 메시지 루프와 동일한 아키텍처가 없습니다. 메시지 루프에 게시된 창 메시지가 Windows Form의 예상과 다르게 처리될 수 있습니다. 따라서 예기치 않은 동작이 발생할 수 있습니다. 일부 키 입력 조합이 작동하지 않거나, 일부 마우스 활동이 작동하지 않거나, 일부 이벤트가 예상대로 발생하지 않을 수 있습니다.  
   
 ## <a name="resolving-interoperability-issues"></a>상호 운용성 문제 해결  
- <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> 메서드를 사용하여 만든 폼을 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 메시지 루프에 표시하여 이러한 문제를 해결할 수 있습니다.  
+ 사용 하 여 생성 된.NET Framework 메시지 루프에 폼을 표시 하 여 이러한 문제를 해결할 수 있습니다는 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> 메서드.  
   
  Windows Form이 COM 클라이언트 애플리케이션에서 제대로 작동하게 하려면 Windows Forms 메시지 루프에서 실행해야 합니다. 이렇게 하려면 다음 접근 방식 중 하나를 사용합니다.  
   

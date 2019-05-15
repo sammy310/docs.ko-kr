@@ -8,25 +8,25 @@ helpviewer_keywords:
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15a441ea7b0b16c83c590289d04cf0c10623fb85
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6065e06fa4fb51cd0cd746a1619f8a611f2fc30b
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086067"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65064093"
 ---
 # <a name="specifying-an-entry-point"></a>진입점 지정
 진입점은 DLL에서 함수의 위치를 식별합니다. 관리되는 프로젝트 내에서 대상 함수의 원래 이름이나 서수 진입점은 상호 운용 경계 간에 해당 함수를 식별합니다. 또한 진입점을 다른 이름에 매핑하여 효과적으로 함수 이름을 바꿀 수 있습니다.  
   
  다음은 DLL 함수 이름을 바꿀 수 있는 이유 목록입니다.  
   
--   대/소문자를 구분하는 API 함수 이름을 사용하지 않도록 하기 위해  
+- 대/소문자를 구분하는 API 함수 이름을 사용하지 않도록 하기 위해  
   
--   기존 명명 표준을 준수하기 위해  
+- 기존 명명 표준을 준수하기 위해  
   
--   동일한 DLL 함수의 여러 버전을 선언하여 다른 데이터 형식을 사용하는 함수를 수용하기 위해  
+- 동일한 DLL 함수의 여러 버전을 선언하여 다른 데이터 형식을 사용하는 함수를 수용하기 위해  
   
--   ANSI 및 유니코드 버전을 포함하는 API 사용을 간소화하기 위해  
+- ANSI 및 유니코드 버전을 포함하는 API 사용을 간소화하기 위해  
   
  이 항목에는 관리 코드에서 DLL 함수 이름을 바꾸는 방법을 보여 줍니다.  
   
@@ -34,10 +34,8 @@ ms.locfileid: "59086067"
  Visual Basic에서는 **Declare** 문에 **Function** 키워드를 사용하여 <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> 필드를 설정합니다. 다음 예제에서는 기본 선언을 보여 줍니다.  
   
 ```vb
-Imports System
-
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Function MessageBox Lib "user32.dll" (
+Friend Class NativeMethods
+    Friend Declare Auto Function MessageBox Lib "user32.dll" (
         ByVal hWnd As IntPtr,
         ByVal lpText As String,
         ByVal lpCaption As String,
@@ -48,10 +46,8 @@ End Class
  다음 예제와 같이 정의에 **Alias** 키워드를 포함하여 **MessageBox** 진입점을 **MsgBox**로 바꿀 수 있습니다. 두 예제에서 모두 **Auto** 키워드를 사용하면 진입점의 문자 집합 버전을 지정할 필요가 없습니다. 문자 집합을 선택하는 방법에 대한 자세한 내용은 [문자 집합 지정](../../../docs/framework/interop/specifying-a-character-set.md)을 참조하세요.  
   
 ```vb
-Imports System
-
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Function MsgBox _
+Friend Class NativeMethods
+    Friend Declare Auto Function MsgBox _
         Lib "user32.dll" Alias "MessageBox" (
         ByVal hWnd As IntPtr,
         ByVal lpText As String,
@@ -76,7 +72,7 @@ End Class
 using System;
 using System.Runtime.InteropServices;
 
-internal static class WindowsAPI
+internal static class NativeMethods
 {
     [DllImport("user32.dll", EntryPoint = "MessageBoxA")]
     internal static extern int MessageBox(

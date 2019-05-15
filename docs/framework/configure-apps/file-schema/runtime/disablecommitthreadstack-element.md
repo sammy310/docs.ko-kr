@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3559d46a-7640-4c72-9a11-7e980768929e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 08ffd6ffcb9a8fa356d486f6d2ae1113de0fa682
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a5852579758e85bb033af9b6d036fe76444bb8e4
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674222"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583861"
 ---
 # <a name="disablecommitthreadstack-element"></a>\<disableCommitThreadStack> Element
 스레드가 시작될 때 전체 스레드 스택을 커밋할지 여부를 지정합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "61674222"
   
 |요소|설명|  
 |-------------|-----------------|  
-|`configuration`|공용 언어 런타임 및 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
+|`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|  
   
 ## <a name="remarks"></a>설명  

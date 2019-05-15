@@ -2,15 +2,15 @@
 title: 네임스페이스(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 83991c21-60db-4af9-aca3-b416f6cae98e
-ms.openlocfilehash: bef2fa96ce090a600155d68ecc3daea55b675840
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7bcd7a72df8afbd598a15ccd9a259ed11b5b9ef7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760443"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583818"
 ---
 # <a name="namespaces-entity-sql"></a>네임스페이스(Entity SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 형식 이름, 엔터티 집합, 함수 등의 전역 식별자에 대한 이름 충돌을 피하기 위해 네임스페이스가 도입되었습니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]의 네임스페이스 지원은 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]의 네임스페이스 지원과 유사합니다.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 형식 이름, 엔터티 집합, 함수 등의 전역 식별자에 대한 이름 충돌을 피하기 위해 네임스페이스가 도입되었습니다. 네임 스페이스 지원 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] .NET Framework의 네임 스페이스 지원과 유사 합니다.  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)]은 다음 예제와 같이 정규화된 네임스페이스(네임스페이스에 대해 짧은 별칭이 제공됨)와 비정규화된 네임스페이스라는 두 가지 형태의 USING 절을 제공합니다.  
   
@@ -30,7 +30,7 @@ WHERE p IS OF (NamespaceName.Employee)
 ```  
   
 ## <a name="differences-from-the-net-framework"></a>.NET Framework와의 차이점  
- [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]에서는 부분적으로 정규화된 네임스페이스를 사용할 수 있지만 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 사용할 수 없습니다.  
+ .NET framework에서 부분적으로 정규화 된 네임 스페이스를 사용할 수 있습니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 사용할 수 없습니다.  
   
 ## <a name="adonet-usage"></a>ADO.NET 사용  
  쿼리는 ADO.NET <xref:System.Data.Common.DbCommand> 개체를 통해 표현됩니다. <xref:System.Data.Common.DbCommand> 개체를 통해 <xref:System.Data.Common.DbConnection> 개체를 작성할 수 있습니다. 네임스페이스는 <xref:System.Data.Common.DbCommand> 및 <xref:System.Data.Common.DbConnection> 개체의 일부로 지정할 수도 있습니다. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 쿼리 자체 내에서 식별자를 확인할 수 없는 경우 외부 네임스페이스를 검색합니다(비슷한 규칙이 사용됨).  

@@ -16,24 +16,24 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: 792741dc4df7b65ddef124615032c06a7ff1bcb8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bbd8d901f018d95b8a1f5c81c813853838c4a4cd
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050467"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586290"
 ---
 # <a name="namespaces-in-visual-basic"></a>Visual Basic의 네임스페이스
 네임스페이스는 어셈블리에 정의된 개체를 구성합니다. 어셈블리는 여러 네임스페이스를 포함할 수 있으며, 이러한 각 네임스페이스는 다른 네임스페이스를 포함할 수 있습니다. 클래스 라이브러리와 같은 대규모 개체 그룹을 사용할 때 네임스페이스는 모호성을 방지하고 참조를 단순화합니다.  
   
- 예를 들어 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 는 <xref:System.Windows.Forms.ListBox> 네임스페이스에서 <xref:System.Windows.Forms?displayProperty=nameWithType> 클래스를 정의합니다. 다음 코드 조각은 이 클래스의 정규화된 이름을 사용하여 변수를 선언하는 방법을 보여 줍니다.  
+ 예를 들어.NET Framework를 정의 합니다 <xref:System.Windows.Forms.ListBox> 클래스는 <xref:System.Windows.Forms?displayProperty=nameWithType> 네임 스페이스입니다. 다음 코드 조각은 이 클래스의 정규화된 이름을 사용하여 변수를 선언하는 방법을 보여 줍니다.  
   
  [!code-vb[VbVbalrApplication#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#6)]  
   
 ## <a name="avoiding-name-collisions"></a>이름 충돌 방지  
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 네임스페이스는 클래스 라이브러리의 개발자가 또 다른 라이브러리에서 유사한 이름을 사용하여 방해를 받는 *네임스페이스 공해*라고도 하는 문제를 해결합니다. 기존 구성 요소와의 이러한 충돌을 *이름 충돌*이라고도 합니다.  
+ .NET framework 네임 스페이스 라고도 하는 문제 해결 *네임 스페이스 공해*, 클래스 라이브러리의 개발자가 또 다른 라이브러리에서 유사한 이름을 사용 하 여 방해 합니다. 기존 구성 요소와의 이러한 충돌을 *이름 충돌*이라고도 합니다.  
   
- 예를 들어 `ListBox`라는 새 클래스를 만드는 경우, 프로젝트 내부에서 한정자 없이 사용할 수 있습니다. 그러나 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox> 클래스를 같은 프로젝트에서 사용하려는 경우, 참조를 고유하게 지정하기 위해 정규화된 참조를 사용해야 합니다. 참조가 고유 하지 않으면 Visual Basic 모호한 이름을 않다는 오류를 생성 합니다. 다음 코드 예제에서는 이러한 개체를 선언하는 방법을 보여 줍니다.  
+ 예를 들어 `ListBox`라는 새 클래스를 만드는 경우, 프로젝트 내부에서 한정자 없이 사용할 수 있습니다. 그러나.NET Framework를 사용 하려는 경우 <xref:System.Windows.Forms.ListBox> 클래스 동일한 프로젝트에 대 한 참조를 고유 하 게 정규화 된 참조를 사용 해야 합니다. 참조가 고유 하지 않으면 Visual Basic 모호한 이름을 않다는 오류를 생성 합니다. 다음 코드 예제에서는 이러한 개체를 선언하는 방법을 보여 줍니다.  
   
  [!code-vb[VbVbalrApplication#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#7)]  
   

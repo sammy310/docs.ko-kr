@@ -13,12 +13,12 @@ helpviewer_keywords:
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
 author: ghogen
-ms.openlocfilehash: dfcfb7370ffd59a50cf6d0b01e84e581ddc6fc52
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c8a744337803a7a26397c999a6d9c6d10f69a1c5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306523"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591645"
 ---
 # <a name="how-to-log-information-about-services"></a>방법: 서비스에 대한 정보 로깅
 기본적으로 모든 Windows 서비스 프로젝트는 애플리케이션 이벤트 로그와 상호 작용하고 이 로그에 정보 및 예외를 작성할 수 있습니다. <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 속성을 사용하여 애플리케이션에서 이 기능을 표시할지 여부를 나타냅니다. 기본적으로, 로깅은 Windows 서비스 프로젝트 템플릿으로 만드는 모든 서비스에 대해 사용 설정됩니다. <xref:System.Diagnostics.EventLog> 클래스의 정적 형식을 사용하면 <xref:System.Diagnostics.EventLog> 구성 요소의 인스턴스를 만들거나 소스를 수동으로 등록하지 않고도 로그에 서비스 정보를 작성할 수 있습니다.  
@@ -32,14 +32,14 @@ ms.locfileid: "59306523"
   
 ### <a name="to-enable-default-event-logging-for-your-service"></a>서비스에 대해 기본 이벤트 로깅을 활성화하려면  
   
--   구성 요소의 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 속성을 `true`로 설정합니다.  
+- 구성 요소의 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 속성을 `true`로 설정합니다.  
   
     > [!NOTE]
     >  기본적으로 이 속성은 `true`로 설정됩니다. 조건을 평가한 다음 조건의 결과를 기반으로 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 속성을 설정하는 것과 같이 복잡한 프로세스를 구축하는 경우가 아니라면 이 속성을 명시적으로 설정할 필요가 없습니다.  
   
 ### <a name="to-disable-event-logging-for-your-service"></a>서비스에 대해 이벤트 로깅을 비활성화하려면  
   
--   구성 요소의 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 속성을 `false`로 설정합니다.  
+- 구성 요소의 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 속성을 `false`로 설정합니다.  
   
      [!code-csharp[VbRadconService#17](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#17)]
      [!code-vb[VbRadconService#17](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#17)]  

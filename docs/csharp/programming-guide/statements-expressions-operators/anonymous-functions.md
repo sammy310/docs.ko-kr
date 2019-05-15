@@ -7,21 +7,21 @@ helpviewer_keywords:
 - anonymous functions [C#]
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
-ms.openlocfilehash: f7ab471514cd437b7b1816d7e0bde30459f281a9
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: c949bf5af441728b311391ecb42623951d0145ab
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203326"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608143"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>익명 함수(C# 프로그래밍 가이드)
 익명 함수는 대리자 형식이 예상되는 곳에서 항상 사용할 수 있는 “인라인” 문 또는 식입니다. 이를 사용하여 명명된 대리자를 초기화하거나 명명된 대리자 형식 대신 이를 메서드 매개 변수로 전달할 수 있습니다.  
   
  익명 함수에는 두 가지가 있고 각각 다음 항목에서 설명합니다.  
   
--   [람다 식](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
+- [람다 식](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
--   [무명 메서드](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
+- [무명 메서드](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
   
     > [!NOTE]
     >  람다 식은 식 트리 및 대리자에 바인딩될 수 있습니다.  

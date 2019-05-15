@@ -17,27 +17,27 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e74d7a4a72b9595d6a280a16ad9bbc4118648404
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0f6f6fa8afe2e4aaea6e9f2b96329542b7fe5292
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218072"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607691"
 ---
 # <a name="assembly-security-considerations"></a>어셈블리 보안 고려 사항
 <a name="top"></a> 어셈블리를 빌드할 때 어셈블리를 실행하는 데 필요한 권한을 지정할 수 있습니다. 어셈블리에 대한 특정 권한 부여 여부는 증명 정보를 바탕으로 합니다.  
   
  증명 정보를 사용하는 두 가지 방법은 다음과 같습니다.  
   
--   먼저 입력된 증명 정보를 로더에 의해 수집된 증명 정보와 결합하여 정책 결정에 사용할 최종 증명 정보를 만듭니다. 이 의미 체계를 사용하는 메서드로는 **Assembly.Load**, **Assembly.LoadFrom** 및 **Activator.CreateInstance**가 있습니다.  
+- 먼저 입력된 증명 정보를 로더에 의해 수집된 증명 정보와 결합하여 정책 결정에 사용할 최종 증명 정보를 만듭니다. 이 의미 체계를 사용하는 메서드로는 **Assembly.Load**, **Assembly.LoadFrom** 및 **Activator.CreateInstance**가 있습니다.  
   
--   또 다른 방법은 입력된 증명 정보를 바꾸지 않고 정책 결정을 위한 최종 증명 정보로 사용하는 것입니다. 이 의미 체계를 사용하는 메서드로는 **Assembly.Load(byte[])** 및 **AppDomain.DefineDynamicAssembly()** 가 있습니다.  
+- 또 다른 방법은 입력된 증명 정보를 바꾸지 않고 정책 결정을 위한 최종 증명 정보로 사용하는 것입니다. 이 의미 체계를 사용하는 메서드로는 **Assembly.Load(byte[])** 및 **AppDomain.DefineDynamicAssembly()** 가 있습니다.  
   
  선택적 권한은 어셈블리가 실행될 컴퓨터에 설정한 [보안 정책](../../../docs/framework/misc/code-access-security-basics.md)으로 부여될 수 있습니다. 코드에서 모든 가능한 보안 예외를 처리하게 하려면 다음 중 하나를 수행해야 합니다.  
   
--   코드에 필요한 모든 권한에 대해 권한 요청을 삽입하고 권한이 부여되지 않았을 때 발생하는 로드 시간 오류를 먼저 처리합니다.  
+- 코드에 필요한 모든 권한에 대해 권한 요청을 삽입하고 권한이 부여되지 않았을 때 발생하는 로드 시간 오류를 먼저 처리합니다.  
   
--   코드에 필요할 수 있는 권한을 얻기 위한 권한 요청을 사용하지 않고, 대신 권한이 부여되지 않을 경우를 대비하여 보안 예외를 처리할 수 있도록 준비합니다.  
+- 코드에 필요할 수 있는 권한을 얻기 위한 권한 요청을 사용하지 않고, 대신 권한이 부여되지 않을 경우를 대비하여 보안 예외를 처리할 수 있도록 준비합니다.  
   
     > [!NOTE]
     >  보안은 매우 복잡한 영역이기 때문에 선택할 수 있는 옵션도 다양합니다. 자세한 내용은 [주요 보안 개념](../../../docs/standard/security/key-security-concepts.md)을 참조하세요.  

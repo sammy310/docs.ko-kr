@@ -2,16 +2,16 @@
 title: FileName에 지정된 파일은 유효한 XML 파일이 아닙니다.
 ms.date: 07/20/2015
 ms.assetid: c4c30bf3-e0ad-4bc8-89e0-2c3e49e9793b
-ms.openlocfilehash: 89499b07e767bd0b3a777db4e5155f64a4357f0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1615722d19e1a24ee4e72bc702dbce3fe30411a4
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052315"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592899"
 ---
 # <a name="file-specified-in-filename-is-not-a-valid-xml-file"></a>FileName에 지정된 파일은 유효한 XML 파일이 아닙니다.
 
-제공한 파일 이름이 유효한 XML 파일이 아닙니다. XML 문서의 허용된 구조와 내용을 지정하려면 DTD(문서 종류 정의), Microsoft XDR(XML-Data Reduced) 스키마 또는 XSD(XML 스키마 정의 언어) 스키마를 사용하면 됩니다. XSD 스키마는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]에서 XML 문법을 지정하는 기본 방법입니다.
+제공한 파일 이름이 유효한 XML 파일이 아닙니다. XML 문서의 허용된 구조와 내용을 지정하려면 DTD(문서 종류 정의), Microsoft XDR(XML-Data Reduced) 스키마 또는 XSD(XML 스키마 정의 언어) 스키마를 사용하면 됩니다. XSD 스키마는.NET Framework에서 XML 문법을 지정 하는 기본 방법입니다.
 
 > [!NOTE]
 > 일부 이전 버전의 Visual Studio에서 **XML 디자이너**는 입력된 데이터 세트 및 XML 스키마용 디자이너입니다. **XML 디자이너** 는 XML 스키마 파일을 만들고 편집하는 데 계속 사용할 수 있습니다. 그러나 Visual Studio 2012에서는 만들고 형식화 된 데이터 집합 편집을 합니다 **데이터 집합 디자이너**합니다. 자세한 내용은 [만들기 및 형식화 된 데이터 집합 편집](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/314t4see(v=vs.120))합니다.

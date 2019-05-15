@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 805ffd7f-8d1e-427e-a648-601ca8ec37a5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f81af76ed305fb614202c240e449adc62b310933
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c261a025548b2d22f6df3051dbcdb637723d4324
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189939"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599465"
 ---
 # <a name="mitigation-wpf-layout"></a>완화: WPF 레이아웃
 WPF 컨트롤의 레이아웃은 약간 변경될 수 있습니다.  
@@ -17,11 +17,11 @@ WPF 컨트롤의 레이아웃은 약간 변경될 수 있습니다.
 ## <a name="impact"></a>영향  
  레이아웃을 변경한 결과는 다음과 같습니다.  
   
--   요소의 너비나 높이가 최대 1픽셀씩 늘어나거나 줄어들 수 있습니다.  
+- 요소의 너비나 높이가 최대 1픽셀씩 늘어나거나 줄어들 수 있습니다.  
   
--   개체의 배치가 최대 1픽셀씩 이동할 수 있습니다.  
+- 개체의 배치가 최대 1픽셀씩 이동할 수 있습니다.  
   
--   가운데 맞춤 요소가 가로 또는 세로로 최대 1픽셀씩 가운데에서 벗어날 수 있습니다.  
+- 가운데 맞춤 요소가 가로 또는 세로로 최대 1픽셀씩 가운데에서 벗어날 수 있습니다.  
   
  기본적으로 이 새 레이아웃은 .NET Framework 4.6을 대상으로 하는 앱에 대해서만 사용할 수 있습니다.  
   

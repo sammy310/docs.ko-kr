@@ -2,12 +2,12 @@
 title: 완료되면 비동기 작업 처리
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 335eb5dce74a7f0a2b8af550250105d460212b6a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 562da04b48af6f6cbaaca8ea8eccf062b470696e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304860"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64600277"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>비동기 작업을 여러 개 시작하고 완료될 때마다 처리(C#)
 
@@ -51,27 +51,27 @@ IEnumerable<Task<int>> downloadTasksQuery = from url in urlList select ProcessUR
 
 프로젝트의 MainWindow.xaml.cs 파일에서 `AccessTheWebAsync` 메서드를 다음과 같이 변경합니다.
 
--   <xref:System.Linq.Enumerable.ToArray%2A> 대신 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>를 적용하여 쿼리를 실행합니다.
+- <xref:System.Linq.Enumerable.ToArray%2A> 대신 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>를 적용하여 쿼리를 실행합니다.
 
     ```csharp
     List<Task<int>> downloadTasks = downloadTasksQuery.ToList();
     ```
 
--   컬렉션의 각 작업에 대해 다음 단계를 수행하는 `while` 루프를 추가합니다.
+- 컬렉션의 각 작업에 대해 다음 단계를 수행하는 `while` 루프를 추가합니다.
 
-    1.  컬렉션의 첫 번째 작업을 식별하여 다운로드를 완료하기 위해 `WhenAny` 호출을 대기합니다.
+    1. 컬렉션의 첫 번째 작업을 식별하여 다운로드를 완료하기 위해 `WhenAny` 호출을 대기합니다.
 
         ```csharp
         Task<int> firstFinishedTask = await Task.WhenAny(downloadTasks);
         ```
 
-    2.  컬렉션에서 해당 작업을 제거합니다.
+    2. 컬렉션에서 해당 작업을 제거합니다.
 
         ```csharp
         downloadTasks.Remove(firstFinishedTask);
         ```
 
-    3.  `ProcessURLAsync` 호출에서 반환된 `firstFinishedTask`를 대기합니다. `firstFinishedTask` 변수는 <xref:System.Threading.Tasks.Task%601>입니다. 여기서 `TReturn`은 정수입니다. 작업은 이미 완료되었지만, 다음 예제와 같이 다운로드한 웹 사이트의 길이를 검색하도록 기다립니다.
+    3. `ProcessURLAsync` 호출에서 반환된 `firstFinishedTask`를 대기합니다. `firstFinishedTask` 변수는 <xref:System.Threading.Tasks.Task%601>입니다. 여기서 `TReturn`은 정수입니다. 작업은 이미 완료되었지만, 다음 예제와 같이 다운로드한 웹 사이트의 길이를 검색하도록 기다립니다.
 
         ```csharp
         int length = await firstFinishedTask;

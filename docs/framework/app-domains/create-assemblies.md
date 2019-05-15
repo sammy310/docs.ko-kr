@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2713011d61b41dfa4d72a635c656c0c00cb42f8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 993c7f590f30b44f45e4833b4364b40ad9748b58
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643613"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607773"
 ---
 # <a name="creating-assemblies"></a>어셈블리 만들기
 
@@ -24,23 +24,23 @@ ms.locfileid: "54643613"
 
 코드 모듈 및 리소스를 어셈블리로 그룹화할 경우 다음 요소에 따라 여러 가지 옵션이 있습니다.
 
--   버전 관리
+- 버전 관리
 
      같은 버전 정보를 포함해야 하는 모듈을 그룹화합니다.
 
--   배포
+- 배포
 
      배포 모델을 지원하는 코드 모듈 및 리소스를 그룹화합니다.
 
--   재사용
+- 재사용
 
      몇 가지 목적으로 모듈이 논리적으로 함께 사용될 수 있는 경우 모듈을 그룹화합니다. 예를 들어 가끔 프로그램 유지 관리에 사용되는 형식 및 클래스로 구성되는 어셈블리는 같은 어셈블리에 포함될 수 있습니다. 또한 여러 애플리케이션과 공유하려는 형식은 어셈블리로 그룹화되어야 하고 해당 어셈블리는 강력한 이름으로 서명되어야 합니다.
 
--   보안
+- 보안
 
      같은 보안 권한이 필요한 형식이 포함된 모듈을 그룹화합니다.
 
--   범위 지정
+- 범위 지정
 
      표시 유형을 같은 어셈블리로 제한해야 하는 형식이 포함된 모듈을 그룹화합니다.
 

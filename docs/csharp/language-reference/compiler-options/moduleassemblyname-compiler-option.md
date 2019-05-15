@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: 7d39840f3b12df621a0e8d5fae5725065c295e59
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9e4768b598f6046ffb7a0ac014d8594eac40309f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361267"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593049"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname(C# 컴파일러 옵션)
 .netmodule에서 public이 아닌 형식에 액세스할 수 있는 어셈블리를 지정합니다.  
@@ -31,11 +31,11 @@ ms.locfileid: "57361267"
 ## <a name="remarks"></a>주의  
  **-moduleassemblyname**은 .netmodule을 빌드할 때와 다음 조건이 충족되는 경우 사용해야 합니다.  
   
--   .netmodule은 기존 어셈블리의 public이 아닌 형식에 액세스해야 합니다.  
+- .netmodule은 기존 어셈블리의 public이 아닌 형식에 액세스해야 합니다.  
   
--   .netmodule을 빌드할 어셈블리의 이름을 알아야 합니다.  
+- .netmodule을 빌드할 어셈블리의 이름을 알아야 합니다.  
   
--   기존 어셈블리는 friend 어셈블리(friend assembly)에 .netmodule을 빌드할 어셈블리에 대한 액세스를 부여합니다.  
+- 기존 어셈블리는 friend 어셈블리(friend assembly)에 .netmodule을 빌드할 어셈블리에 대한 액세스를 부여합니다.  
   
  .netmodule 빌드 방법에 대한 자세한 내용은 [-target:module(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)을 참조하세요.  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - files [C#], text files
 - text, writing to files [C#]
 ms.assetid: 2e99f184-d88b-4719-a7f1-d9ec482aa809
-ms.openlocfilehash: da1526afe48a0d4bda63274380dcf59ee30c480e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e3fa0eb12c9259629ff8151ff2d057f2744e9e36
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968805"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595624"
 ---
 # <a name="how-to-write-to-a-text-file-c-programming-guide"></a>방법: 텍스트 파일에 쓰기(C# 프로그래밍 가이드)
 다음 코드 예제에서는 파일에 텍스트를 쓰는 여러 가지 방법을 보여 줍니다. 처음 두 예에서는 <xref:System.IO.File?displayProperty=nameWithType> 클래스의 정적 편의 메서드를 사용하여 `IEnumerable<string>`의 각 요소와 문자열을 텍스트 파일에 씁니다. 예제 3에서는 파일에 쓸 때 각 줄을 개별적으로 처리해야 하는 경우 파일에 텍스트를 추가하는 방법을 보여 줍니다. 예제 1-3에서는 파일의 기존 내용을 모두 덮어쓰지만 예제 4에서는 기존 파일에 텍스트를 추가하는 방법을 보여 줍니다.  
@@ -27,11 +27,11 @@ ms.locfileid: "56968805"
 ## <a name="robust-programming"></a>강력한 프로그래밍  
  다음 조건에서 예외가 발생합니다.  
   
--   파일이 있지만 읽기 전용인 경우  
+- 파일이 있지만 읽기 전용인 경우  
   
--   경로 이름이 너무 긴 경우  
+- 경로 이름이 너무 긴 경우  
   
--   디스크가 꽉 찬 경우  
+- 디스크가 꽉 찬 경우  
   
 ## <a name="see-also"></a>참고 항목
 

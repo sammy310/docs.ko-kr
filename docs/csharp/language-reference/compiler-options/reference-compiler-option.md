@@ -13,12 +13,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 7965dd2682591cc0840030dfbc9f28401e2a15b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbf93a87cede753ebd41c148f4fb4bb761846954
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679437"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593076"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference(C# 컴파일러 옵션)
 **-reference** 옵션을 사용하면 컴파일러가 지정된 파일의 [public](../../../csharp/language-reference/keywords/public.md) 형식 정보를 현재 프로젝트로 가져오므로 지정된 어셈블리 파일의 메타데이터를 참조할 수 있습니다.  
@@ -48,9 +48,9 @@ ms.locfileid: "54679437"
   
  다른 어셈블리(어셈블리 B)를 참조하는 어셈블리(어셈블리 A)를 참조하면 다음과 같은 경우 어셈블리 B를 참조해야 합니다.  
   
--   어셈블리 A에서 사용하는 형식이 형식에서 상속되거나 어셈블리 B의 인터페이스를 구현하는 경우  
+- 어셈블리 A에서 사용하는 형식이 형식에서 상속되거나 어셈블리 B의 인터페이스를 구현하는 경우  
   
--   어셈블리 B의 반환 형식이나 매개 변수 형식을 사용하는 필드, 속성, 이벤트 또는 메서드를 호출하는 경우  
+- 어셈블리 B의 반환 형식이나 매개 변수 형식을 사용하는 필드, 속성, 이벤트 또는 메서드를 호출하는 경우  
   
  [-lib](../../../csharp/language-reference/compiler-options/lib-compiler-option.md)를 사용하여 어셈블리 참조 중 하나 이상이 있는 디렉터리를 지정합니다. **-lib** 항목에서는 컴파일러가 어셈블리를 검색하는 디렉터리에 대해서도 설명합니다.  
   

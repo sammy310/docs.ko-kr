@@ -7,12 +7,12 @@ helpviewer_keywords:
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: b1d99b0c5241a99ba7f621faff7c39d20776b2ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d653761236cae580eb78a35f9697764f600ec6ee
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496259"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583106"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Override 및 New 키워드를 사용해야 하는 경우(C# 프로그래밍 가이드)
 C#에서는 파생 클래스의 메서드가 기본 클래스의 메서드와 동일한 이름을 사용할 수 있습니다. [new](../../../csharp/language-reference/keywords/new.md) 및 [override](../../../csharp/language-reference/keywords/override.md) 키워드를 사용하여 메서드가 상호 작용하는 방식을 지정할 수 있습니다. `override` 한정자는 기본 클래스 메서드를 *확장*하고, `new` 한정자는 기본 클래스 메서드를 *숨깁니다*. 이 항목의 예제에서는 차이점을 보여 줍니다.  
@@ -39,11 +39,11 @@ class DerivedClass : BaseClass
   
  `Main` 메서드에서 `bc`, `dc` 및 `bcdc` 변수를 선언합니다.  
   
--   `bc`는 `BaseClass` 형식이고, 해당 값은 `BaseClass` 형식입니다.  
+- `bc`는 `BaseClass` 형식이고, 해당 값은 `BaseClass` 형식입니다.  
   
--   `dc`는 `DerivedClass` 형식이고, 해당 값은 `DerivedClass` 형식입니다.  
+- `dc`는 `DerivedClass` 형식이고, 해당 값은 `DerivedClass` 형식입니다.  
   
--   `bcdc`는 `BaseClass` 형식이고, 해당 값은 `DerivedClass` 형식입니다. 이 변수에 주의해야 합니다.  
+- `bcdc`는 `BaseClass` 형식이고, 해당 값은 `DerivedClass` 형식입니다. 이 변수에 주의해야 합니다.  
   
  `bc` 및 `bcdc`는 `BaseClass` 형식이기 때문에 캐스팅을 사용하지 않는 경우 `Method1`에 직접 액세스할 수만 있습니다. `dc` 변수는 `Method1` 및 `Method2` 둘 다에 액세스할 수 있습니다. 이러한 관계는 다음 코드에 나와 있습니다.  
   

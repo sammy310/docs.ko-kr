@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: f4458639aa2c78e7c78bdae66fa2b20d5546743c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: deb8f4396700086627aaef35ead7f15f38d9320c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878776"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583874"
 ---
 # <a name="queries-in-linq-to-dataset"></a>LINQ to DataSet에서 쿼리
 쿼리는 데이터 소스에서 데이터를 검색하는 식입니다. 관계형 데이터베이스에는 SQL이 사용되고 XML에는 XQuery가 사용되는 것과 같이 쿼리는 일반적으로 특수화된 쿼리 언어로 표현됩니다. 따라서 개발자는 쿼리하는 데이터 소스나 데이터 형식에 따라 새로운 쿼리 언어를 배워야 했습니다. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]는 다양한 데이터 소스 및 형식에 사용할 수 있는 간단하고 일관된 모델을 제공합니다. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 쿼리에서는 항상 프로그래밍 개체를 사용합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "61878776"
 ### <a name="query-expression-syntax"></a>쿼리 식 구문  
  쿼리 식은 선언적 쿼리 구문입니다. 이 구문을 사용하면 C# 또는 Visual Basic에서 SQL에서와 비슷한 형식으로 쿼리를 작성할 수 있습니다. 쿼리 식 구문을 사용하면 최소한의 코드로 데이터 소스에 대해 복잡한 필터링, 정렬 및 그룹화 작업을 수행할 수 있습니다. 자세한 내용은 [LINQ 쿼리 식](../../../csharp/linq/index.md#query-expression-overview) 하 고 [기본 쿼리 작업 (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)합니다.
   
- 쿼리 식 구문은 C# 3.0과 [!INCLUDE[vb_orcas_long](../../../../includes/vb-orcas-long-md.md)]의 새로운 기능입니다. 그러나 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] CLR(공용 언어 런타임)에서는 쿼리 식 구문을 자체적으로 인식하지 못합니다. 따라서 컴파일 타임에 쿼리 식은 CLR에서 인식할 수 있는 메서드 호출로 변환됩니다. 이러한 메서드는 라고 합니다 *표준 쿼리 연산자*합니다. 개발자는 쿼리 구문을 사용하는 대신 메서드 구문을 사용하여 표준 쿼리 연산자를 직접 호출할 수도 있습니다. 자세한 내용은 [LINQ의 쿼리 구문 및 메서드 구문](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)을 참조하세요. 표준 쿼리 연산자에 대 한 자세한 내용은 참조 하세요. [표준 쿼리 연산자 개요](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)합니다.  
+ 쿼리 식 구문은 C# 3.0과 [!INCLUDE[vb_orcas_long](../../../../includes/vb-orcas-long-md.md)]의 새로운 기능입니다. 그러나는.NET Framework CLR (공용 언어 런타임)에 쿼리 식 구문을 자체적으로 인식 읽을 수 없습니다. 따라서 컴파일 타임에 쿼리 식은 CLR에서 인식할 수 있는 메서드 호출로 변환됩니다. 이러한 메서드는 라고 합니다 *표준 쿼리 연산자*합니다. 개발자는 쿼리 구문을 사용하는 대신 메서드 구문을 사용하여 표준 쿼리 연산자를 직접 호출할 수도 있습니다. 자세한 내용은 [LINQ의 쿼리 구문 및 메서드 구문](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)을 참조하세요. 표준 쿼리 연산자에 대 한 자세한 내용은 참조 하세요. [표준 쿼리 연산자 개요](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)합니다.  
   
  다음 예제에서는 <xref:System.Linq.Enumerable.Select%2A>를 사용하여 `Product` 테이블의 모든 행을 반환하고 제품 이름을 표시합니다.  
   

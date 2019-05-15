@@ -6,25 +6,25 @@ helpviewer_keywords:
 - examples [C#], COM classes
 - COM, exposing Visual C# objects to
 ms.assetid: 6504dea9-ad1c-4993-a794-830fec5270af
-ms.openlocfilehash: e36dfe1117cc724f5388e3486a81310f2326ab7e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d4ea445339057bc65c3597d30a46f46d58b6e696
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978698"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595540"
 ---
 # <a name="example-com-class-c-programming-guide"></a>COM 클래스 예제(C# 프로그래밍 가이드)
 다음은 COM 개체로 노출되는 클래스의 예제입니다. 이 코드를 .cs 파일에 배치하고 프로젝트에 추가한 후 **COM Interop 등록** 속성을 **True**로 설정합니다. 자세한 내용은 [방법: COM Interop에 대한 구성 요소 등록](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w29wacsy(v=vs.100))을 참조하세요.
   
  Visual C# 개체를 COM에 노출하려면 클래스 인터페이스, 필요한 경우 이벤트 인터페이스 및 클래스 자체를 선언해야 합니다. 클래스 멤버가 COM에 표시되려면 다음 규칙을 따라야 합니다.  
   
--   클래스는 public이어야 합니다.  
+- 클래스는 public이어야 합니다.  
   
--   속성, 메서드 및 이벤트는 public이어야 합니다.  
+- 속성, 메서드 및 이벤트는 public이어야 합니다.  
   
--   속성 및 메서드는 클래스 인터페이스에서 선언되어야 합니다.  
+- 속성 및 메서드는 클래스 인터페이스에서 선언되어야 합니다.  
   
--   이벤트는 이벤트 인터페이스에서 선언되어야 합니다.  
+- 이벤트는 이벤트 인터페이스에서 선언되어야 합니다.  
   
  이러한 인터페이스에 선언되지 않은 다른 public 멤버는 COM에 표시되지 않지만 다른 .NET Framework 개체에 표시됩니다.  
   

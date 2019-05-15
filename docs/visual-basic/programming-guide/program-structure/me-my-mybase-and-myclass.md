@@ -21,12 +21,12 @@ helpviewer_keywords:
 - current instance [Visual Basic], Me keyword
 - MyBase keyword [Visual Basic], relationship to similar programming elements
 ms.assetid: f8e241ae-b1ed-4886-9aa0-08c632154029
-ms.openlocfilehash: a8df6e48fd5bce9bb28d8aef7e031f36741ad0ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3eca756429c5fec8f324a17350844b59baf9ccf7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050482"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586258"
 ---
 # <a name="me-my-mybase-and-myclass-in-visual-basic"></a>Visual Basic의 Me, My, MyBase 및 MyClass
 `Me`를 `My`, `MyBase`, 및 `MyClass` Visual Basic에는 비슷한 이름 이지만 다른 목적으로 합니다. 이 항목에서는 구별할 수 있도록 이러한 각 엔터티를 설명 합니다.  
@@ -50,7 +50,7 @@ ChangeFormColor(Me)
 ```  
   
 ## <a name="my"></a>My  
- 합니다 `My` 다양 한 쉽고 직관적인 액세스를 제공 하는 기능 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 클래스, Visual Basic 사용자의 컴퓨터, 응용 프로그램, 설정, 리소스 및 등을 사용 하 여 상호 작용 하도록 허용 합니다.  
+ `My` 기능은 다양 한 Visual Basic 사용자의 컴퓨터, 응용 프로그램, 설정, 리소스 및 등을 사용 하 여 상호 작용 허용 되는.NET Framework 클래스에 대 한 쉽고 직관적인 액세스를 제공 합니다.  
   
 ## <a name="mybase"></a>MyBase  
  `MyBase` 키워드는 클래스의 현재 인스턴스의 기본 클래스를 참조 하는 개체 변수 처럼 동작 합니다. `MyBase` 파생된 클래스에서 섀도 처리 되거나 재정의 되는 기본 클래스 멤버 액세스를 주로 사용 됩니다. `MyBase.New` 파생된 클래스 생성자에서 기본 클래스 생성자를 명시적으로 호출 됩니다.  

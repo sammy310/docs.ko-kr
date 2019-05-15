@@ -6,19 +6,19 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 9bb87115f4649a890d1fb2aab1595c3b6848bc74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9bce692c767169536d762a36ea2b9343655680c7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322084"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583059"
 ---
 # <a name="polymorphism-c-programming-guide"></a>다형성(C# 프로그래밍 가이드)
 다형성은 흔히 캡슐화와 상속의 뒤를 이어 개체 지향 프로그래밍의 세 번째 특징으로 일컬어집니다. 다형성은 "여러 형태"를 의미하는 그리스어 단어이며 다음과 같은 두 가지 고유한 측면을 가집니다.  
   
--   런타임에 파생 클래스의 개체가 메서드 매개 변수 및 컬렉션 또는 배열과 같은 위치에서 기본 클래스의 개체로 처리될 수 있습니다. 이 경우 개체의 선언된 형식이 더 이상 해당 런타임 형식과 같지 않습니다.  
+- 런타임에 파생 클래스의 개체가 메서드 매개 변수 및 컬렉션 또는 배열과 같은 위치에서 기본 클래스의 개체로 처리될 수 있습니다. 이 경우 개체의 선언된 형식이 더 이상 해당 런타임 형식과 같지 않습니다.  
   
--   기본 클래스는 [가상](../../../csharp/language-reference/keywords/virtual.md) *메서드*를 정의 및 구현할 수 있으며, 파생 클래스는 이러한 가상 메서드를 [재정의](../../../csharp/language-reference/keywords/override.md)할 수 있습니다. 즉, 파생 클래스는 고유한 정의 및 구현을 제공합니다. 런타임에 클라이언트 코드에서 메서드를 호출하면 CLR은 개체의 런타임 형식을 조회하고 가상 메서드의 해당 재정의를 호출합니다. 따라서 소스 코드에서 기본 클래스에 대한 메서드를 호출하여 메서드의 파생 클래스 버전이 실행되도록 할 수 있습니다.  
+- 기본 클래스는 [가상](../../../csharp/language-reference/keywords/virtual.md) *메서드*를 정의 및 구현할 수 있으며, 파생 클래스는 이러한 가상 메서드를 [재정의](../../../csharp/language-reference/keywords/override.md)할 수 있습니다. 즉, 파생 클래스는 고유한 정의 및 구현을 제공합니다. 런타임에 클라이언트 코드에서 메서드를 호출하면 CLR은 개체의 런타임 형식을 조회하고 가상 메서드의 해당 재정의를 호출합니다. 따라서 소스 코드에서 기본 클래스에 대한 메서드를 호출하여 메서드의 파생 클래스 버전이 실행되도록 할 수 있습니다.  
   
  가상 메서드를 사용하면 동일한 방식으로 관련 개체 그룹에 대한 작업을 수행할 수 있습니다. 예를 들어, 사용자가 그리기 화면에서 다양한 종류의 도형을 만들 수 있는 그리기 응용 프로그램이 있다고 가정합니다. 컴파일 타임에는 사용자가 어떤 특정 형식의 도형을 만들지 알 수 없습니다. 그러나 응용 프로그램은 만들어지는 다양한 모든 형식의 도형을 추적해야 하며, 사용자의 마우스 작업에 따라 이러한 도형을 업데이트해야 합니다. 다음과 같은 기본 두 단계로 다형성을 사용하여 이 문제를 해결할 수 있습니다.  
   
@@ -37,11 +37,11 @@ ms.locfileid: "59322084"
 ### <a name="virtual-members"></a>가상 멤버  
  기본 클래스에서 파생 클래스가 상속되면 파생 클래스는 기본 클래스의 모든 메서드, 필드, 속성 및 이벤트를 얻습니다. 파생 클래스의 디자이너는 다음의 여부를 선택할 수 있습니다.  
   
--   기본 클래스의 가상 멤버 재정의  
+- 기본 클래스의 가상 멤버 재정의  
   
--   가장 가까운 기본 클래스 메서드를 재정의하지 않고 상속  
+- 가장 가까운 기본 클래스 메서드를 재정의하지 않고 상속  
   
--   기본 클래스 구현을 숨기는 해당 멤버의 새 비가상 구현 정의  
+- 기본 클래스 구현을 숨기는 해당 멤버의 새 비가상 구현 정의  
   
  파생 클래스는 기본 클래스 멤버가 [virtual](../../../csharp/language-reference/keywords/virtual.md) 또는 [abstract](../../../csharp/language-reference/keywords/abstract.md)로 선언된 경우에만 기본 클래스 멤버를 재정의할 수 있습니다. 파생 멤버는 [override](../../../csharp/language-reference/keywords/override.md) 키워드를 사용하여 메서드가 가상 호출에 참여하도록 되어 있음을 명시적으로 나타내야 합니다. 다음 코드는 예제를 제공합니다.  
   
@@ -89,11 +89,11 @@ ms.locfileid: "59322084"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [Override 및 New 키워드를 사용하여 버전 관리](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
+- [Override 및 New 키워드를 사용하여 버전 관리](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
   
--   [Override 및 New 키워드를 사용해야 하는 경우](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
+- [Override 및 New 키워드를 사용해야 하는 경우](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
   
--   [방법: ToString 메서드 재정의](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
+- [방법: ToString 메서드 재정의](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
   
 ## <a name="see-also"></a>참고 항목
 

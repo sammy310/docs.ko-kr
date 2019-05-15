@@ -2,16 +2,16 @@
 title: OData 피드 사용에서 WF는 워크플로
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-ms.openlocfilehash: aec23667e7388d6bc31d122617795ff5dfdefa5f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7d5230bb15474d63b2381d3906e07e48ac0134d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946066"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592989"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>OData 피드 사용 하는 워크플로
 
-WCF Data Services는 REST(Representational State Transfer)의 의미 체계를 사용하여 웹 또는 인트라넷을 통해 데이터를 노출하고 사용하기 위해 Open Data Protocol(OData)을 사용하는 서비스를 만들 수 있도록 하는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 의 구성 요소입니다. OData는 URI로 주소를 지정할 수 있는 리소스로 데이터를 노출합니다. HTTP 요청을 보내고 데이터 서비스에서 반환하는 OData 피드를 처리할 수 있는 애플리케이션은 모두 OData 기반 데이터 서비스와 상호 작용할 수 있습니다. 또한 WCF Data Services에는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 애플리케이션에서 OData 피드를 사용할 때 보다 다양한 기능을 갖춘 프로그래밍 환경을 제공하는 클라이언트 라이브러리가 포함되어 있습니다. 이 항목에서는 클라이언트 라이브러리를 사용하거나 사용하지 않고 워크플로에서 OData 피드를 사용하는 방법에 대해 간략하게 설명합니다.
+WCF Data Services는 Open Data Protocol (OData)을 사용 하 여 노출 하 고 representational state transfer (REST)의 의미 체계를 사용 하 여 웹 또는 인트라넷을 통해 데이터를 사용 하는 서비스를 만들 수 있도록.NET Framework의 구성 요소입니다. OData는 URI로 주소를 지정할 수 있는 리소스로 데이터를 노출합니다. HTTP 요청을 보내고 데이터 서비스에서 반환하는 OData 피드를 처리할 수 있는 애플리케이션은 모두 OData 기반 데이터 서비스와 상호 작용할 수 있습니다. 또한 WCF Data Services에는.NET Framework 응용 프로그램에서 OData 피드를 사용할 때 보다 풍부한 프로그래밍 환경을 제공 하는 클라이언트 라이브러리가 포함 되어 있습니다. 이 항목에서는 클라이언트 라이브러리를 사용하거나 사용하지 않고 워크플로에서 OData 피드를 사용하는 방법에 대해 간략하게 설명합니다.
 
 ## <a name="using-the-sample-northwind-odata-service"></a>샘플 Northwind OData 서비스를 사용 하 여
 
@@ -19,7 +19,7 @@ WCF Data Services는 REST(Representational State Transfer)의 의미 체계를 �
 
 ## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>클라이언트 라이브러리를 사용 하 여 피드는 OData를 사용 합니다.
 
-WCF Data Services에는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 및 클라이언트 애플리케이션에서 OData 피드를 보다 쉽게 사용할 수 있도록 클라이언트 라이브러리가 포함되어 있습니다. 이러한 라이브러리는 HTTP 메시지를 보내고 받는 작업을 단순화합니다. 또한 엔터티 데이터를 나타내는 CLR 개체로 메시지 페이로드를 변환합니다. 클라이언트 라이브러리는 두 가지 핵심 클래스인 <xref:System.Data.Services.Client.DataServiceContext> 및 <xref:System.Data.Services.Client.DataServiceQuery%601>를 제공합니다. 이러한 클래스를 사용하면 데이터 서비스를 쿼리한 다음 반환된 엔터티 데이터를 CLR 개체로 사용하여 작업할 수 있습니다. 이 단원에서는 클라이언트 라이브러리를 사용하는 활동을 만드는 두 가지 방법에 대해 설명합니다.
+WCF Data Services는.NET Framework 및 클라이언트 응용 프로그램에서 OData 피드에 쉽게 사용할 수 있도록 하는 클라이언트 라이브러리가 포함 되어 있습니다. 이러한 라이브러리는 HTTP 메시지를 보내고 받는 작업을 단순화합니다. 또한 엔터티 데이터를 나타내는 CLR 개체로 메시지 페이로드를 변환합니다. 클라이언트 라이브러리는 두 가지 핵심 클래스인 <xref:System.Data.Services.Client.DataServiceContext> 및 <xref:System.Data.Services.Client.DataServiceQuery%601>를 제공합니다. 이러한 클래스를 사용하면 데이터 서비스를 쿼리한 다음 반환된 엔터티 데이터를 CLR 개체로 사용하여 작업할 수 있습니다. 이 단원에서는 클라이언트 라이브러리를 사용하는 활동을 만드는 두 가지 방법에 대해 설명합니다.
 
 ### <a name="adding-a-service-reference-to-the-wcf-data-service"></a>WCF 데이터 서비스에 대 한 서비스 참조 추가
 
@@ -34,7 +34,7 @@ Northwind 클라이언트 라이브러리를 생성 하려면 사용 합니다 *
 
 ### <a name="using-asynchronous-methods"></a>비동기 메서드 사용
 
-웹을 통해 리소스에 액세스할 때 발생할 수 있는 지연 문제를 해결하려면 WCF Data Services에 비동기적으로 액세스하는 것이 좋습니다. 쿼리를 호출 하는 것에 대 한 비동기 메서드를 포함 하는 WCF Data Services 클라이언트 라이브러리 및 Windows WF (Workflow Foundation)를 제공 합니다 <xref:System.Activities.AsyncCodeActivity> 비동기 활동을 작성 하는 것에 대 한 클래스입니다. <xref:System.Activities.AsyncCodeActivity> 파생 동작은 비동기 메서드가 있는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 클래스를 사용하여 기록될 수 있거나, 비동기적으로 실행되는 코드는 메서드에 넣어 대리자를 사용하여 호출할 수 있습니다. 이 단원에서는 <xref:System.Activities.AsyncCodeActivity> 파생 활동의 두 가지 예제를 제공합니다. 한 예제에서는 WCF Data Services 클라이언트 라이브러리의 비동기 메서드를 사용하고 다른 예제에서는 대리자를 사용합니다.
+웹을 통해 리소스에 액세스할 때 발생할 수 있는 지연 문제를 해결하려면 WCF Data Services에 비동기적으로 액세스하는 것이 좋습니다. 쿼리를 호출 하는 것에 대 한 비동기 메서드를 포함 하는 WCF Data Services 클라이언트 라이브러리 및 Windows WF (Workflow Foundation)를 제공 합니다 <xref:System.Activities.AsyncCodeActivity> 비동기 활동을 작성 하는 것에 대 한 클래스입니다. <xref:System.Activities.AsyncCodeActivity> 파생된 활동에 쓸 수 비동기 메서드가 있는.NET Framework 클래스를 활용 하거나 코드를 비동기적으로 실행 하는 메서드에 넣어 대리자를 사용 하 여 호출 합니다. 이 단원에서는 <xref:System.Activities.AsyncCodeActivity> 파생 활동의 두 가지 예제를 제공합니다. 한 예제에서는 WCF Data Services 클라이언트 라이브러리의 비동기 메서드를 사용하고 다른 예제에서는 대리자를 사용합니다.
 
 > [!NOTE]
 > 자세한 내용은 [비동기 작업 (WCF Data Services)](../data/wcf/asynchronous-operations-wcf-data-services.md) 하 고 [비동기 활동 만들기](creating-asynchronous-activities-in-wf.md)합니다.
@@ -72,7 +72,7 @@ Calling WCF Data Service...
 
 ### <a name="using-a-delegate"></a>대리자 사용
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 기반 활동은 <xref:System.Activities.AsyncCodeActivity>클래스의 비동기 메서드를 호출할 뿐만 아니라 해당 메서드 중 하나에서 비동기 논리도 정의할 수 있습니다. 이 메서드는 활동의 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 재정의에서 대리자를 사용하여 지정됩니다. 메서드가 반환될 때 런타임에서 활동의 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 재정의를 호출합니다. 워크플로에서 OData 서비스를 호출할 때 이 메서드를 사용하여 서비스를 쿼리하고 추가 처리를 제공할 수 있습니다.
+.NET Framework 클래스의 비동기 메서드를 호출 하는 것 외에도 <xref:System.Activities.AsyncCodeActivity>-기반된 활동의 메서드 중 하나에서 비동기 논리도 정의할 수도 있습니다. 이 메서드는 활동의 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 재정의에서 대리자를 사용하여 지정됩니다. 메서드가 반환될 때 런타임에서 활동의 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 재정의를 호출합니다. 워크플로에서 OData 서비스를 호출할 때 이 메서드를 사용하여 서비스를 쿼리하고 추가 처리를 제공할 수 있습니다.
 
 다음 예제에서는 `ListCustomers` 활동을 정의합니다. 이 활동은 샘플 Northwind 데이터 서비스를 쿼리하고 Northwind 데이터베이스의 모든 고객이 포함된 `List<Customer>` 를 반환합니다. 비동기 작업은 `GetCustomers` 메서드에서 수행됩니다. 이 메서드는 서비스에서 모든 고객을 쿼리하여 `List<Customer>`에 복사합니다. 그런 다음 결과가 페이징되는지 확인하고 페이징되면 서비스에서 결과의 다음 페이지를 쿼리하여 목록에 추가하고 모든 고객 데이터가 검색될 때까지 계속합니다.
 

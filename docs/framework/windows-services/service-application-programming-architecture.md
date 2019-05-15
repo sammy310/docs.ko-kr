@@ -15,21 +15,21 @@ helpviewer_keywords:
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
-ms.openlocfilehash: 17e16cec34b381cdfe46e1066c3219a93c3780e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: df969a634c84a7bccb048542cb768c920203e423
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216394"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599275"
 ---
 # <a name="service-application-programming-architecture"></a>서비스 응용 프로그램 프로그래밍 아키텍처
 Windows 서비스 애플리케이션은 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 클래스에서 상속되는 클래스를 기반으로 합니다. 이 클래스의 메서드를 재정의하고 이 메서드에서 서비스 동작 방식을 결정하는 기능을 정의합니다.  
   
  서비스 만들기와 관련된 기본 클래스는 다음과 같습니다.  
   
--   <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> - 서비스를 만들 때 <xref:System.ServiceProcess.ServiceBase> 클래스의 메서드를 재정의하고 이 상속된 클래스에서 서비스가 작동하는 방식을 결정하는 코드를 정의합니다.  
+- <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> - 서비스를 만들 때 <xref:System.ServiceProcess.ServiceBase> 클래스의 메서드를 재정의하고 이 상속된 클래스에서 서비스가 작동하는 방식을 결정하는 코드를 정의합니다.  
   
--   <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType> 및 <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType> - 이러한 클래스를 사용하여 서비스를 설치 및 제거합니다.  
+- <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType> 및 <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType> - 이러한 클래스를 사용하여 서비스를 설치 및 제거합니다.  
   
  또한 <xref:System.ServiceProcess.ServiceController>라는 클래스를 사용하여 서비스 자체를 조작할 수 있습니다. 이 클래스는 서비스 만들기와는 관련이 없지만 서비스를 시작 및 중지하고 서비스에 명령을 전달하고 일련의 열거형을 반환하는 데 사용할 수 있습니다.  
   
@@ -51,7 +51,7 @@ Windows 서비스 애플리케이션은 <xref:System.ServiceProcess.ServiceBase?
   
  중요한 여러 다른 속성 및 메서드가 있습니다. 여기에는 다음이 포함됩니다.  
   
--   <xref:System.ServiceProcess.ServiceBase> 클래스의 <xref:System.ServiceProcess.ServiceBase.Run%2A> 메서드. 서비스의 주 진입점입니다. Windows 서비스 템플릿을 사용하여 서비스를 만드는 경우 애플리케이션의 `Main` 메서드에 코드를 삽입하여 서비스를 실행합니다. 이 코드는 다음과 같습니다.  
+- <xref:System.ServiceProcess.ServiceBase> 클래스의 <xref:System.ServiceProcess.ServiceBase.Run%2A> 메서드. 서비스의 주 진입점입니다. Windows 서비스 템플릿을 사용하여 서비스를 만드는 경우 애플리케이션의 `Main` 메서드에 코드를 삽입하여 서비스를 실행합니다. 이 코드는 다음과 같습니다.  
   
      [!code-csharp[VbRadconService#6](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#6)]
      [!code-vb[VbRadconService#6](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#6)]  
@@ -59,7 +59,7 @@ Windows 서비스 애플리케이션은 <xref:System.ServiceProcess.ServiceBase?
     > [!NOTE]
     >  이러한 예제에서는 <xref:System.ServiceProcess.ServiceBase> 형식의 배열을 사용합니다. 이 배열에 애플리케이션에 포함되는 각 서비스를 추가한 다음, 모든 서비스를 함께 실행할 수 있습니다. 하지만 단일 서비스만 만드는 경우에는 배열을 사용하지 않고 <xref:System.ServiceProcess.ServiceBase>에서 상속되는 새 개체를 선언하고 실행하기만 하면 됩니다. 예는 [방법: 프로그래밍 방식으로 서비스 작성](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)을 참조하세요.  
   
--   <xref:System.ServiceProcess.ServiceBase> 클래스에 대한 일련의 속성. 이러한 속성은 서비스에서 호출할 수 있는 메서드를 결정합니다. 예를 들어 <xref:System.ServiceProcess.ServiceBase.CanStop%2A> 속성을 `true`로 설정하면 서비스의 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 메서드를 호출할 수 있습니다. <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> 속성을 `true`로 설정하면 <xref:System.ServiceProcess.ServiceBase.OnPause%2A> 및 <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> 메서드를 호출할 수 있습니다. 이러한 속성 중 하나를 `true`로 설정하는 경우 관련 메서드에 대한 처리를 재정의 및 정의해야 합니다.  
+- <xref:System.ServiceProcess.ServiceBase> 클래스에 대한 일련의 속성. 이러한 속성은 서비스에서 호출할 수 있는 메서드를 결정합니다. 예를 들어 <xref:System.ServiceProcess.ServiceBase.CanStop%2A> 속성을 `true`로 설정하면 서비스의 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 메서드를 호출할 수 있습니다. <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> 속성을 `true`로 설정하면 <xref:System.ServiceProcess.ServiceBase.OnPause%2A> 및 <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> 메서드를 호출할 수 있습니다. 이러한 속성 중 하나를 `true`로 설정하는 경우 관련 메서드에 대한 처리를 재정의 및 정의해야 합니다.  
   
     > [!NOTE]
     >  서비스가 유용하려면 적어도 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 및 <xref:System.ServiceProcess.ServiceBase.OnStop%2A>을 재정의해야 합니다.  

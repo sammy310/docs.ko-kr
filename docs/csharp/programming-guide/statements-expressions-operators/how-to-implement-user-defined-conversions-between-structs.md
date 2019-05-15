@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - user-defined conversions [C#]
 ms.assetid: 97839aef-8fbc-40d5-9769-6b569bc2710b
-ms.openlocfilehash: bc792562b4849d402e03328e50dedac030520011
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: f33d8791791543704c8a49a44167b94c0f0c86b8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201146"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608169"
 ---
 # <a name="how-to-implement-user-defined-conversions-between-structs-c-programming-guide"></a>방법: 구조체 간의 사용자 정의 변환 구현(C# 프로그래밍 가이드)
 이 예제에서는 두 개의 구조체 `RomanNumeral` 및 `BinaryNumeral`을 정의하고 두 구조체 간의 변환을 보여 줍니다.  
@@ -20,13 +20,13 @@ ms.locfileid: "57201146"
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
   
--   앞의 예제에는 아래 문이 있습니다.  
+- 앞의 예제에는 아래 문이 있습니다.  
   
      [!code-csharp[csProgGuideStatements#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#14)]  
   
      위 문은 `RomanNumeral`에서 `BinaryNumeral`로의 변환을 수행합니다. `RomanNumeral`에서 `BinaryNumeral`로의 직접 변환이 없으므로 캐스트를 사용하여 `RomanNumeral`에서 `int`로 변환한 후 다른 캐스트를 사용하여 `int`에서 `BinaryNumeral`로 변환합니다.  
   
--   또한 아래 문이 있습니다.  
+- 또한 아래 문이 있습니다.  
   
      [!code-csharp[csProgGuideStatements#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#15)]  
   

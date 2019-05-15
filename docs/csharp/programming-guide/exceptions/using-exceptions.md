@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-ms.openlocfilehash: 2edaf8c823f228ecb50a256961fe78980826d7f2
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9ab6c5029518cbe5deb0f2c5a16c99992022d7a3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203719"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595476"
 ---
 # <a name="using-exceptions-c-programming-guide"></a>예외 사용(C# 프로그래밍 가이드)
 C#에서는 런타임 시 프로그램의 오류가 예외라는 메커니즘을 사용하여 프로그램 전체에 전파됩니다. 오류가 발생하는 코드에서 예외를 throw하고, 오류를 수정할 수 있는 코드에서 예외를 catch합니다. .NET Framework CLR(공용 언어 런타임) 또는 프로그램의 코드에서 예외를 throw할 수 있습니다. 예외가 throw되면 예외에 대한 `catch` 문이 발견될 때까지 호출 스택이 전파됩니다. Catch되지 않은 예외는 대화 상자를 표시하는 시스템에서 제공하는 제네릭 예외 처리기에 의해 처리됩니다.  
@@ -38,11 +38,11 @@ C#에서는 런타임 시 프로그램의 오류가 예외라는 메커니즘을
   
  예외가 throw된 후 호출 스택에서 호환되는 `catch` 블록을 찾지 못하면 다음 세 가지 중 하나가 발생합니다.  
   
--   예외가 종료자 내부에 있으면 종료자가 중단되고 기본 종료자(있는 경우)가 호출됩니다.  
+- 예외가 종료자 내부에 있으면 종료자가 중단되고 기본 종료자(있는 경우)가 호출됩니다.  
   
--   호출 스택에 정적 생성자 또는 정적 필드 이니셜라이저가 포함된 경우 새 예외의 <xref:System.Exception.InnerException%2A> 속성에 할당된 원래 예외와 함께 <xref:System.TypeInitializationException>이 throw됩니다.  
+- 호출 스택에 정적 생성자 또는 정적 필드 이니셜라이저가 포함된 경우 새 예외의 <xref:System.Exception.InnerException%2A> 속성에 할당된 원래 예외와 함께 <xref:System.TypeInitializationException>이 throw됩니다.  
   
--   스레드의 시작에 도달하면 스레드가 종료됩니다.  
+- 스레드의 시작에 도달하면 스레드가 종료됩니다.  
   
 ## <a name="see-also"></a>참고 항목
 
