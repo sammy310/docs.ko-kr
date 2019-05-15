@@ -2,12 +2,12 @@
 title: System.Uri의 국가별 리소스 식별자 지원
 ms.date: 03/30/2017
 ms.assetid: b5e994c3-3535-4aff-8e1b-b69be22e9a22
-ms.openlocfilehash: 589c49859592cba55cb5110fe65fdc49e451f478
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f78fff250aae177b5f0360e77a1c41a2f2bb0527
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769114"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647346"
 ---
 # <a name="international-resource-identifier-support-in-systemuri"></a>System.Uri의 국가별 리소스 식별자 지원
 <xref:System.Uri?displayProperty=nameWithType> 클래스는 IRI(International Resource Identifier) 및 IDN(Internationalized Domain Names)을 통해 확장되었습니다. 이러한 향상된 기능은 .NET Framework 3.5, 3.0 SP1 및 2.0 SP1에서 사용할 수 있습니다.  
@@ -15,11 +15,11 @@ ms.locfileid: "59769114"
 ## <a name="iri-and-idn-support"></a>IRI 및 IDN 지원  
  웹 주소는 대개 매우 제한적인 문자 집합으로 구성된 URI(Uniform Resource Identifier)를 사용하여 표현됩니다.  
   
--   영문자의 대문자 및 소문자 ASCII 문자.  
+- 영문자의 대문자 및 소문자 ASCII 문자.  
   
--   0~9의 숫자.  
+- 0~9의 숫자.  
   
--   일부 기타 ASCII 기호.  
+- 일부 기타 ASCII 기호.  
   
  URI 사양은 IETF(Internet Engineering Task Force)에서 게시한 RFC 2396 및 RFC 3986에 설명되어 있습니다.  
   

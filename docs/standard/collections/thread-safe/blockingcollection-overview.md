@@ -10,35 +10,35 @@ helpviewer_keywords:
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: abf6f193f97319db0cdff7e2a33846cdf011fbdb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 07dbffff9f3d93a33fa458fb9c2f16e64aeaf977
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674000"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664544"
 ---
 # <a name="blockingcollection-overview"></a>BlockingCollection 개요
 <xref:System.Collections.Concurrent.BlockingCollection%601>는 스레드로부터 안전한 컬렉션 클래스이며 제공하는 기능은 다음과 같습니다.  
   
--   공급자-소비자 패턴 구현  
+- 공급자-소비자 패턴 구현  
   
--   여러 스레드에서 동시에 항목 추가 및 가져오기  
+- 여러 스레드에서 동시에 항목 추가 및 가져오기  
   
--   선택적 최대 용량  
+- 선택적 최대 용량  
   
--   컬렉션이 비어 있거나 가득 찬 경우 차단할 작업 삽입 및 제거  
+- 컬렉션이 비어 있거나 가득 찬 경우 차단할 작업 삽입 및 제거  
   
--   지정된 시간까지 차단하지 않거나 차단할 “시도” 작업 삽입 및 제거  
+- 지정된 시간까지 차단하지 않거나 차단할 “시도” 작업 삽입 및 제거  
   
--   <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>를 구현하는 모든 컬렉션 형식의 캡슐화  
+- <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>를 구현하는 모든 컬렉션 형식의 캡슐화  
   
--   취소 토큰으로 취소  
+- 취소 토큰으로 취소  
   
--   `foreach`(Visual Basic의 `For Each`)를 사용하는 다음 두 가지 유형의 열거  
+- `foreach`(Visual Basic의 `For Each`)를 사용하는 다음 두 가지 유형의 열거  
   
-    1.  읽기 전용 열거  
+    1. 읽기 전용 열거  
   
-    2.  열거된 항목을 제거하는 열거  
+    2. 열거된 항목을 제거하는 열거  
   
 ## <a name="bounding-and-blocking-support"></a>한계 지정 및 차단 지원  
  <xref:System.Collections.Concurrent.BlockingCollection%601>는 한계 지정 및 차단을 지원합니다. 한계 지정이란 컬렉션의 최대 용량을 설정하는 것을 의미합니다. 메모리에서 컬렉션의 최대 크기를 제어할 수 있고 공급자 스레드가 소비자 스레드와 보조를 맞춰 실행되도록 할 수 있기 때문에 특정 시나리오에서 한계 지정은 중요한 의미를 가집니다.  
