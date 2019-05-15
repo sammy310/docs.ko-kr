@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91d4e5bf3846dc2859c519227c0dee2c9d36343c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31143e17eec097cc67dff0cfffeb628f8a0b2127
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609462"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590074"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>외부 XSLT 스타일시트 및 문서 확인
 다음과 같이 변환 중에 외부 리소스를 확인해야 하는 몇 가지 경우가 있습니다.  
@@ -18,13 +18,13 @@ ms.locfileid: "54609462"
 > [!NOTE]
 >  <xref:System.Xml.Xsl.XslTransform> 클래스는 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]에서 사용되지 않습니다. <xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 XSLT(Extensible Stylesheet Language for Transformations) 변환을 수행할 수 있습니다.  
   
- 다음과 같이 변환 중에 외부 리소스를 확인해야 하는 몇 가지 경우가 있습니다.  
+ 다음과 같이 변형 중에 외부 리소스를 확인해야 하는 몇 가지 경우가 있습니다.  
   
--   <xref:System.Xml.Xsl.XslTransform.Load%2A> 중에 외부 스타일시트를 찾는 경우  
+- <xref:System.Xml.Xsl.XslTransform.Load%2A> 중에 외부 스타일시트를 찾는 경우  
   
--   <xref:System.Xml.Xsl.XslTransform.Load%2A> 중에 스타일시트에 있는 모든 `<xsl:include>` 또는 `<xsl:import>` 요소를 확인하는 경우  
+- <xref:System.Xml.Xsl.XslTransform.Load%2A> 중에 스타일시트에 있는 모든 `<xsl:include>` 또는 `<xsl:import>` 요소를 확인하는 경우  
   
--   <xref:System.Xml.Xsl.XslTransform.Transform%2A> 중에 `document()` 함수를 확인하는 경우  
+- <xref:System.Xml.Xsl.XslTransform.Transform%2A> 중에 `document()` 함수를 확인하는 경우  
   
 ## <a name="using-the-xmlresolver-class"></a>XmlResolver 클래스 사용  
  네트워크 리소스에 액세스하기 위해 인증이 필요한 경우 <xref:System.Xml.Xsl.XslTransform.Load%2A> 매개 변수를 사용하여 필요한 자격 증명 속성 집합을 갖는 <xref:System.Xml.XmlResolver> 개체를 전달할 수 있는 <xref:System.Xml.XmlResolver> 메서드를 사용합니다.  

@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: c268c49e-32b9-4171-b782-dcb7b065fa73
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a7aebc98627a079d08870b59e4a848a51dbfaaf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ab2dbe79e1b4b89070d07e0f2c966cb54f6e500
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520115"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589984"
 ---
 # <a name="select-xml-data-using-xpathnavigator"></a>XPathNavigator를 사용하여 XML 데이터 선택
 <xref:System.Xml.XPath.XPathNavigator> 클래스는 XPath 식을 사용하여 <xref:System.Xml.XPath.XPathDocument> 또는 <xref:System.Xml.XmlDocument> 개체의 노드 집합을 선택하는 데 사용되는 메서드 집합을 제공합니다. 선택한 후에는 선택한 노드 집합을 반복할 수 있습니다.  
@@ -24,9 +24,9 @@ ms.locfileid: "54520115"
 ### <a name="selecting-nodes-using-xpath-expressions"></a>XPath 식을 사용하여 노드 선택  
  XPath 식을 사용하여 노드 집합을 선택하려면 다음 선택 메서드 중 하나를 사용합니다.  
   
--   <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
  이러한 메서드를 호출하면 <xref:System.Xml.XPath.XPathNodeIterator> 개체 또는 <xref:System.Xml.XPath.XPathNavigator> 개체(선택한 노드가 하나일 경우)를 사용하여 자유롭게 탐색할 수 있는 노드 집합이 반환됩니다.  
   

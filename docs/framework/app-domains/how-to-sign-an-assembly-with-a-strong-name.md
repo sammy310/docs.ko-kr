@@ -13,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5580b6d8af7319397ad7eb6416941c2be0dcdb76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 458b18ad34cfff6ab136408ab8e8b2e7953b35cb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303435"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593560"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>방법: 강력한 이름으로 어셈블리 서명
 강력한 이름으로 어셈블리에 서명하는 여러 가지 방법이 있습니다.  
   
--   Visual Studio에서 프로젝트의 **속성** 대화 상자에서 **서명** 탭을 사용하는 방법. 이는 가장 쉽고 편리하게 강력한 이름으로 어셈블리에 서명하는 방법입니다.  
+- Visual Studio에서 프로젝트의 **속성** 대화 상자에서 **서명** 탭을 사용하는 방법. 이는 가장 쉽고 편리하게 강력한 이름으로 어셈블리에 서명하는 방법입니다.  
   
--   [어셈블리 링커(Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) 를 사용하여 .NET Framework 코드 모듈(.netmodule 파일)을 키 파일과 연결하는 방법.  
+- [어셈블리 링커(Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) 를 사용하여 .NET Framework 코드 모듈(.netmodule 파일)을 키 파일과 연결하는 방법.  
   
--   어셈블리 특성을 사용하여 강력한 이름 정보를 코드에 삽입하는 방법. 사용할 키 파일의 위치에 따라 <xref:System.Reflection.AssemblyKeyFileAttribute> 또는 <xref:System.Reflection.AssemblyKeyNameAttribute> 특성을 사용할 수 있습니다.  
+- 어셈블리 특성을 사용하여 강력한 이름 정보를 코드에 삽입하는 방법. 사용할 키 파일의 위치에 따라 <xref:System.Reflection.AssemblyKeyFileAttribute> 또는 <xref:System.Reflection.AssemblyKeyNameAttribute> 특성을 사용할 수 있습니다.  
   
--   컴파일러 옵션을 사용하는 방법.  
+- 컴파일러 옵션을 사용하는 방법.  
   
  강력한 이름으로 어셈블리를 서명하려면 암호화 키 쌍이 있어야 합니다. 키 쌍을 만드는 방법에 대한 자세한 내용은 [방법: 공개/개인 키 쌍 만들기](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)를 참조하세요.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "59303435"
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>어셈블리 링커를 사용하여 강력한 이름으로 어셈블리를 만들고 서명하려면  
   
--   [Visual Studio용 개발자 명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)에서 다음 명령을 입력합니다.  
+- [Visual Studio용 개발자 명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)에서 다음 명령을 입력합니다.  
   
      **al** **/out:**\<*assemblyName*> *\<moduleName>* **/keyfile:**\<*keyfileName*>  
   
@@ -90,7 +90,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
   
 ### <a name="to-sign-an-assembly-with-a-strong-name-by-using-the-compiler"></a>컴파일러를 사용하여 강력한 이름으로 어셈블리를 서명하려면  
   
--   C# 및 Visual Basic 컴파일러에서 `/keyfile` 또는 `/delaysign` 컴파일러 옵션을 사용하거나 C++에서 `/KEYFILE` 또는 `/DELAYSIGN` 링커 옵션을 사용하여 소스 코드 파일을 컴파일합니다. 옵션 이름 다음에 콜론과 키 파일의 이름을 추가합니다. 명령줄 컴파일러를 사용할 때, 소스 코드 파일이 포함된 디렉터리에 키 파일을 복사할 수 있습니다.  
+- C# 및 Visual Basic 컴파일러에서 `/keyfile` 또는 `/delaysign` 컴파일러 옵션을 사용하거나 C++에서 `/KEYFILE` 또는 `/DELAYSIGN` 링커 옵션을 사용하여 소스 코드 파일을 컴파일합니다. 옵션 이름 다음에 콜론과 키 파일의 이름을 추가합니다. 명령줄 컴파일러를 사용할 때, 소스 코드 파일이 포함된 디렉터리에 키 파일을 복사할 수 있습니다.  
   
      서명 연기에 대한 자세한 내용은 [Delay Signing an Assembly](../../../docs/framework/app-domains/delay-sign-assembly.md)를 참조하세요.  
   

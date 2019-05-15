@@ -7,12 +7,12 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: f10f9aa17adf9a03b9b8905245983bdd9d865e39
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 6a929957a0bb512ae4af503ad4b80c9d081764dc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200392"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64582970"
 ---
 # <a name="using-properties-c-programming-guide"></a>속성 사용(C# 프로그래밍 가이드)
 속성은 필드 및 메서드 모두의 측면을 결합합니다. 개체의 사용자에게 속성은 필드로 표시되며, 속성에 액세스하려면 동일한 구문이 필요합니다. 클래스의 구현자에게 속성은 [get](../../../csharp/language-reference/keywords/get.md) 접근자 및/또는 [set](../../../csharp/language-reference/keywords/set.md) 접근자를 나타내는 하나 또는 두 개의 코드 블록입니다. `get` 접근자에 대한 코드 블록은 속성을 읽을 때 실행되고, `set` 접근자에 대한 코드 블록은 속성에 새 값을 할당할 때 실행됩니다. `set` 접근자가 없는 속성은 읽기 전용으로 간주됩니다. `get` 접근자가 없는 속성은 쓰기 전용으로 간주됩니다. 두 접근자가 모두 있는 속성은 읽기/쓰기입니다.  
@@ -85,11 +85,11 @@ ms.locfileid: "57200392"
   
  다음은 앞의 예제에서 중요한 사항입니다.  
   
--   파생 클래스의 `Name` 속성은 기본 클래스의 `Name` 속성을 숨깁니다. 이러한 경우 `new` 한정자는 파생 클래스의 속성 선언에 사용됩니다.  
+- 파생 클래스의 `Name` 속성은 기본 클래스의 `Name` 속성을 숨깁니다. 이러한 경우 `new` 한정자는 파생 클래스의 속성 선언에 사용됩니다.  
   
      [!code-csharp[csProgGuideProperties#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#4)]  
   
--   `(Employee)` 캐스트는 기본 클래스의 숨겨진 속성에 액세스하는 데 사용됩니다.  
+- `(Employee)` 캐스트는 기본 클래스의 숨겨진 속성에 액세스하는 데 사용됩니다.  
   
      [!code-csharp[csProgGuideProperties#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#5)]  
   

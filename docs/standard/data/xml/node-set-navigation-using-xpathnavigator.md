@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 1a954b41-7173-40bc-8544-d430f209b1e5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 58adf0251fdc7427f493e8bf9947c081bfccd2a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44b102cf160dcc4b3f188451d42d3b8dbefa5d1f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618125"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590194"
 ---
 # <a name="node-set-navigation-using-xpathnavigator"></a>XPathNavigator를 사용하여 노드 집합 탐색
 <xref:System.Xml.XPath.XPathDocument> 클래스의 노드 집합 탐색 메서드를 사용하여 <xref:System.Xml.XmlDocument> 또는 <xref:System.Xml.XPath.XPathNavigator> 개체에서 노드를 탐색할 수 있습니다. 모든 노드를 탐색하거나 <xref:System.Xml.XPath.XPathNavigator> 클래스의 선택 메서드에서 하나가 반환한 노드 중 선택한 노드 집합을 탐색할 수 있습니다.  
@@ -36,21 +36,21 @@ ms.locfileid: "54618125"
 ## <a name="comments-and-processing-instruction-node-navigation"></a>주석 및 처리 명령 노드 탐색  
  다음 <xref:System.Xml.XPath.XPathNavigator> 클래스 메서드를 XML 문서의 다른 노드에서 주석 또는 처리 명령으로 이동할 수 있습니다.  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>  
   
 ## <a name="see-also"></a>참고 항목
 

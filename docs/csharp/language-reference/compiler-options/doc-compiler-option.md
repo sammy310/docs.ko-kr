@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: c46118a9b02df653844a0ca04f9e8f9952a957c4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7c8fc11c8799912ea6340940ccd254ae82519591
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333602"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591688"
 ---
 # <a name="-doc-c-compiler-options"></a>/doc(C# 컴파일러 옵션)
 **-doc** 옵션을 사용하면 XML 파일에 문서 주석을 삽입할 수 있습니다.  
@@ -35,9 +35,9 @@ ms.locfileid: "59333602"
 ## <a name="remarks"></a>주의  
  소스 코드 파일에서 다음 항목 앞에 나오는 문서 주석을 처리하여 XML 파일에 추가할 수 있습니다.  
   
--   [class](../../../csharp/language-reference/keywords/class.md), [delegate](../../../csharp/language-reference/keywords/delegate.md) 또는 [interface](../../../csharp/language-reference/keywords/interface.md) 같은 사용자 정의 형식  
+- [class](../../../csharp/language-reference/keywords/class.md), [delegate](../../../csharp/language-reference/keywords/delegate.md) 또는 [interface](../../../csharp/language-reference/keywords/interface.md) 같은 사용자 정의 형식  
   
--   필드, [이벤트](../../../csharp/language-reference/keywords/event.md), [속성](../../../csharp/programming-guide/classes-and-structs/using-properties.md) 또는 메서드 같은 멤버  
+- 필드, [이벤트](../../../csharp/language-reference/keywords/event.md), [속성](../../../csharp/programming-guide/classes-and-structs/using-properties.md) 또는 메서드 같은 멤버  
   
  Main을 포함하는 소스 코드 파일이 먼저 XML로 출력됩니다.  
   

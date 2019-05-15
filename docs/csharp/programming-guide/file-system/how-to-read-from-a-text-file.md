@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: 560453a81124a3ee52a2ffd794ddac026c7394a5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 236e730eaae0bc73c715e9b1c2c71d6c870d78e3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978022"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608528"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>방법: 텍스트 파일에서 읽기(C# 프로그래밍 가이드)
 이 예제에서는 <xref:System.IO.File?displayProperty=nameWithType> 클래스의 정적 메서드 <xref:System.IO.File.ReadAllText%2A> 및 <xref:System.IO.File.ReadAllLines%2A>를 사용하여 텍스트 파일의 내용을 읽습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "56978022"
 ## <a name="robust-programming"></a>강력한 프로그래밍  
  다음 조건에서 예외가 발생합니다.  
   
--   파일이 없거나 지정된 위치에 없는 경우. 경로와 파일 이름의 철자를 확인합니다.  
+- 파일이 없거나 지정된 위치에 없는 경우. 경로와 파일 이름의 철자를 확인합니다.  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
  파일 이름을 사용하여 파일 내용을 확인하지 마세요. 예를 들어 `myFile.cs` 파일이 C# 소스 파일이 아닐 수도 있습니다.  

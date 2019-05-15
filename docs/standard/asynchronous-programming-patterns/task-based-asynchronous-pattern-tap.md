@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9dd8e49ad3270fe62b65469470485fcb169a4e7
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: 96499d2a3d74deb7208fa49f9fc0927109d93a69
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788546"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623801"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>TAP(작업 기반 비동기 패턴)
 TAP(작업 기반 비동기 패턴)은 임의 비동기 작업을 나타내는 데 사용되는 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 네임스페이스의 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks?displayProperty=nameWithType> 형식을 기준으로 합니다. TAP은 새로운 개발을 위해 비동기 디자인 패턴을 권장합니다.  
@@ -39,9 +39,9 @@ TAP은 단일 메서드를 사용하여 비동기 작업의 시작과 완료를 
 ## <a name="initiating-an-asynchronous-operation"></a>비동기 작업 시작  
  TAP을 기반으로 하는 비동기 메서드는 인수 유효성 검사 및 결과 작업을 반환하기 전에 비동기 작업 시작 등 적은 양의 작업을 동기적으로 수행할 수 있습니다. 동기 작업은 비동기 메서드가 신속하게 반환할 수 있도록 최소한으로 유지해야 합니다. 빠르게 반환되는 이유는 다음과 같습니다.  
   
--   비동기 메서드는 사용자 인터페이스(UI) 스레드에서 호출할 수 있으며, 모든 장기 실행 동기 작업에서 응용 프로그램의 응답에 문제가 발생할 수 있습니다  
+- 비동기 메서드는 사용자 인터페이스(UI) 스레드에서 호출할 수 있으며, 모든 장기 실행 동기 작업에서 응용 프로그램의 응답에 문제가 발생할 수 있습니다  
   
--   여러 비동기 메서드를 동시에 실행할 수 있습니다. 따라서 비동기 메서드의 동기 부분에서 모든 장기 실행 작업은 다른 비동기 작업의 시작을 지연시켜 동시성의 이점을 감소시킬 수 있습니다.  
+- 여러 비동기 메서드를 동시에 실행할 수 있습니다. 따라서 비동기 메서드의 동기 부분에서 모든 장기 실행 작업은 다른 비동기 작업의 시작을 지연시켜 동시성의 이점을 감소시킬 수 있습니다.  
   
  경우에 따라 작업을 완료하는 데 필요한 작업 시간이 비동기적으로 작업을 실행하는 데 필요한 작업 시간보다 적을 수 있습니다. 이미 메모리에 버퍼링된 데이터로 읽기 작업을 충족할 수 있는 스트림에서 읽기는 이러한 시나리오의 예입니다. 경우에 따라 작업을 동기적으로 완료하고 이미 완료된 작업을 반환할 수 있습니다.  
   

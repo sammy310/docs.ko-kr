@@ -17,27 +17,27 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2cb07389ad68985362993e76f82e58d2a59e237
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bb2aabfd083a71d8d083d08e9bc7e2a7ad065e7f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178882"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623282"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe(리소스 파일 생성기)
 리소스 파일 생성기(Resgen.exe)를 사용하면 텍스트 파일(.txt 또는 .restext)과 XML 기반 리소스 형식 파일(.resx)을 런타임 이진 실행 파일에 포함하거나 위성 어셈블리에 포함할 수 있는 공용 언어 런타임의 이진 파일(.resources)로 변환할 수 있습니다. [리소스 파일 만들기](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)를 참조하세요.  
   
  Resgen.exe는 다음 작업을 수행하는 범용 리소스 변환 유틸리티입니다.  
   
--   .txt 또는 .restext 파일을 .resources 또는 .resx 파일로 변환합니다. .restext 파일의 형식은 .txt 파일의 형식과 동일합니다. 그러나 .restext 확장명을 통해 리소스 정의를 포함하고 있는 텍스트 파일을 보다 쉽게 확인할 수 있습니다.  
+- .txt 또는 .restext 파일을 .resources 또는 .resx 파일로 변환합니다. .restext 파일의 형식은 .txt 파일의 형식과 동일합니다. 그러나 .restext 확장명을 통해 리소스 정의를 포함하고 있는 텍스트 파일을 보다 쉽게 확인할 수 있습니다.  
   
--   .resources 파일을 텍스트 또는 .resx 파일로 변환합니다.  
+- .resources 파일을 텍스트 또는 .resx 파일로 변환합니다.  
   
--   .resx 파일을 텍스트 또는 .resources 파일로 변환합니다.  
+- .resx 파일을 텍스트 또는 .resources 파일로 변환합니다.  
   
--   어셈블리로부터 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 사용하기 적합한 .resw 파일로 문자열 리소스를 추출합니다.  
+- 어셈블리로부터 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 사용하기 적합한 .resw 파일로 문자열 리소스를 추출합니다.  
   
--   개별 명명된 리소스와 <xref:System.Resources.ResourceManager> 인스턴스에 대한 액세스를 제공하는 강력한 형식의 클래스를 만듭니다.  
+- 개별 명명된 리소스와 <xref:System.Resources.ResourceManager> 인스턴스에 대한 액세스를 제공하는 강력한 형식의 클래스를 만듭니다.  
   
  Resgen.exe에서 어떤 이유로든 오류가 발생하면 –1 값이 반환됩니다.  
   
@@ -116,17 +116,17 @@ resgen filename.extension [outputDirectory]
 ## <a name="performing-specific-resgenexe-tasks"></a>특정 Resgen.exe 작업을 수행합니다.  
  텍스트 기반 또는 XML 기반 리소스 파일을 바이너리 파일로 컴파일, <xref:System.Resources.ResourceManager> 기능 래핑, 리소스로의 액세스를 제공하는 클래스 생성 등 다양한 방법으로 Resgen.exe를 사용할 수 있습니다. 이 단원에서는 각 작업에 대해 자세하게 설명합니다.  
   
--   [이진 파일에 리소스 컴파일](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling)  
+- [이진 파일에 리소스 컴파일](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling)  
   
--   [리소스 파일 형식 간 변환](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Convert)  
+- [리소스 파일 형식 간 변환](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Convert)  
   
--   [다중 파일 컴파일 또는 변환](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Multiple)  
+- [다중 파일 컴파일 또는 변환](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Multiple)  
   
--   [.resw 파일에 리소스 내보내기](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Exporting)  
+- [.resw 파일에 리소스 내보내기](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Exporting)  
   
--   [리소스 조건부 컴파일](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Conditional)  
+- [리소스 조건부 컴파일](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Conditional)  
   
--   [강력한 형식의 리소스 클래스 생성](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Strong)  
+- [강력한 형식의 리소스 클래스 생성](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Strong)  
   
 <a name="Compiling"></a>   
 ### <a name="compiling-resources-into-a-binary-file"></a>이진 파일에 리소스 컴파일  
@@ -170,13 +170,13 @@ resgen Resources.resx Resources.resources
 ### <a name="converting-between-resource-file-types"></a>리소스 파일 형식 간 변환  
  텍스트 기반 또는 XML 기반 리소스 파일을 이진 .resources 파일로 컴파일하는 것 이외에, Resgen.exe는 지원되는 모든 파일 형식을 지원되는 다른 파일 형식으로 변환할 수 있습니다. 이것은 다음과 변환을 수행할 수 있음을 의미합니다.  
   
--   .txt 및 .restext 파일을 .resx 파일로 변환합니다.  
+- .txt 및 .restext 파일을 .resx 파일로 변환합니다.  
   
--   .resx 파일을 .txt 및 .restext 파일로 변환합니다.  
+- .resx 파일을 .txt 및 .restext 파일로 변환합니다.  
   
--   .resources 파일을 .txt 및 .restext 파일로 변환합니다.  
+- .resources 파일을 .txt 및 .restext 파일로 변환합니다.  
   
--   .resources 파일을 .resx 파일로 변환합니다.  
+- .resources 파일을 .resx 파일로 변환합니다.  
   
  구문은 이전 단원에 나와 있는 것과 동일합니다.  
   
@@ -315,13 +315,13 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
   
  강력한 형식의 리소스 클래스에는 다음과 같은 구성원이 있습니다.  
   
--   강력한 형식의 리소스 클래스를 인스턴스화하는 데 사용할 수 있는 매개 변수 없는 생성자입니다.  
+- 강력한 형식의 리소스 클래스를 인스턴스화하는 데 사용할 수 있는 매개 변수 없는 생성자입니다.  
   
--   강력한 형식의 리소스를 관리하는 `static` 인스턴스를 반환하는 `Shared`(C#) 또는 `ResourceManager`(Visual Basic) 및 읽기 전용 <xref:System.Resources.ResourceManager> 속성입니다.  
+- 강력한 형식의 리소스를 관리하는 `static` 인스턴스를 반환하는 `Shared`(C#) 또는 `ResourceManager`(Visual Basic) 및 읽기 전용 <xref:System.Resources.ResourceManager> 속성입니다.  
   
--   리소스 검색에 사용되는 문화권을 설정할 수 있도록 하는 정적 `Culture` 속성입니다. 기본적으로 값은 현재 UI 문화권이 사용됨을 의미하는 `null`입니다.  
+- 리소스 검색에 사용되는 문화권을 설정할 수 있도록 하는 정적 `Culture` 속성입니다. 기본적으로 값은 현재 UI 문화권이 사용됨을 의미하는 `null`입니다.  
   
--   하나의 `static`(C#) 또는 `Shared`(Visual Basic) 및 .resources 파일의 각 리소스에 대한 읽기 전용 속성입니다. 속성 이름은 리소스 이름입니다.  
+- 하나의 `static`(C#) 또는 `Shared`(Visual Basic) 및 .resources 파일의 각 리소스에 대한 읽기 전용 속성입니다. 속성 이름은 리소스 이름입니다.  
   
  예를 들어, 다음 명령은 StringResources.txt라는 리소스 파일을 StringResources.resources로 컴파일하고 리소스 관리자에 액세스하는 데 사용할 수 있는 StringResources.vb라는 Visual Basic 소스 코드 파일에서 `StringResources`라는 클래스를 생성합니다.  
   

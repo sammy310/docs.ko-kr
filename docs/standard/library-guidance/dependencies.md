@@ -5,11 +5,11 @@ author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
 ms.openlocfilehash: 5566ab83040ce5dc23520401e3fc4bb619af4ec4
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "49400553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909962"
 ---
 # <a name="dependencies"></a>종속성
 
@@ -21,7 +21,7 @@ ms.locfileid: "49400553"
 
 ![다이아몬드 종속성](./media/dependencies/diamond-dependency.png "다이아몬드 종속성")
 
-빌드 시 NuGet은 종속성의 종속성을 포함하여 프로젝트가 종속된 모든 패키지를 분석합니다. 패키지의 여러 버전이 검색되면 규칙을 평가하여 하나를 선택합니다. .NET에서 동일한 응용 프로그램에 있는 어셈블리의 병렬 버전을 실행하면 문제가 발생하기 때문에 패키지를 통합해야 합니다.
+빌드 시 NuGet은 종속성의 종속성을 포함하여 프로젝트가 종속된 모든 패키지를 분석합니다. 패키지의 여러 버전이 검색되면 규칙을 평가하여 하나를 선택합니다. .NET에서 동일한 애플리케이션에 있는 어셈블리의 병렬 버전을 실행하면 문제가 발생하기 때문에 패키지를 통합해야 합니다.
 
 대부분의 다이아몬드 종속성은 쉽게 확인되지만 다음과 같은 특정 상황에서 문제가 발생할 수 있습니다.
 
@@ -94,7 +94,7 @@ NuGet의 적용 가능한 가장 낮은 버전 규칙 때문에 최신 버전을
 
 **❌** 공유 소스 패키지를 NuGet.org에 게시하지 마세요.
 
-> 공유 소스 패키지에는 소스 코드가 들어 있으며 동일한 언어 형식의 프로젝트에서만 사용할 수 있습니다. 예를 들어 C# 공유 소스 패키지는 F# 응용 프로그램에서 사용할 수 없습니다.
+> 공유 소스 패키지에는 소스 코드가 들어 있으며 동일한 언어 형식의 프로젝트에서만 사용할 수 있습니다. 예를 들어 C# 공유 소스 패키지는 F# 애플리케이션에서 사용할 수 없습니다.
 >
 > 공유 소스 패키지를 [로컬 피드 또는 MyGet](./publish-nuget-package.md)에 게시하여 프로젝트 내에서 내부적으로 사용합니다.
 

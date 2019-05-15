@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14dc09ff8ceaa5e754c2a8ee64846fbcac55e37f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 12415c6d461f3c8040aaa407edf9567633c5b108
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221103"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591562"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe(인증서 관리자 도구)
 인증서 관리자 도구(Certmgr.exe)를 사용하면 인증서, CTL(인증서 신뢰 목록) 및 CRL(인증서 해지 목록)을 관리할 수 있습니다.  
@@ -75,13 +75,13 @@ ms.locfileid: "59221103"
 ## <a name="remarks"></a>주의  
  Certmgr.exe를 사용하여 다음과 같은 기본 기능을 수행할 수 있습니다.  
   
--   인증서, CTL 및 CRL을 콘솔에 표시합니다.  
+- 인증서, CTL 및 CRL을 콘솔에 표시합니다.  
   
--   인증서, CTL 및 CRL을 인증서 저장소에 추가합니다.  
+- 인증서, CTL 및 CRL을 인증서 저장소에 추가합니다.  
   
--   인증서, CTL 및 CRL을 인증서 저장소에서 삭제합니다.  
+- 인증서, CTL 및 CRL을 인증서 저장소에서 삭제합니다.  
   
--   인증서 저장소의 X.509 인증서, CTL 또는 CRL을 파일에 저장합니다.  
+- 인증서 저장소의 X.509 인증서, CTL 또는 CRL을 파일에 저장합니다.  
   
  Certmgr.exe를 사용하면 다음과 같은 두 가지 형식의 인증서 저장소를 사용하여 작업할 수 있습니다. **StoreFile** 및 시스템 저장소. 그러나 Certmgr.exe로 저장소 형식을 식별한 다음 적합한 작업을 수행할 수 있으므로 인증서 저장소 형식을 지정할 필요는 없습니다.  
   

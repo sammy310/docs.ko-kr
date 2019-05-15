@@ -2,12 +2,12 @@
 title: LINQ 소개(C#)
 ms.date: 07/20/2015
 ms.assetid: 54874feb-55e5-4ca8-a9d6-1c1127fd7fb1
-ms.openlocfilehash: ea17de41bbbc03158179f207aa0bc9fc9cceb863
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: b8a577c7f1cb89df5534ae0eca893f4db434301e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410695"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596579"
 ---
 # <a name="introduction-to-linq-c"></a>LINQ 소개(C#)
 LINQ(Language-Integrated Query)는 개체 환경과 데이터 환경 간의 간격을 연결하는 .NET Framework 버전 3.5에서 도입된 혁신입니다.  
@@ -25,13 +25,13 @@ LINQ(Language-Integrated Query)는 개체 환경과 데이터 환경 간의 간�
 ## <a name="next-steps"></a>다음 단계  
  LINQ에 대한 자세한 내용을 알아보려면 [C#에서 LINQ 시작](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)의 시작 섹션에서 몇 가지 기본 개념을 익힌 후 관심 있는 LINQ 기술에 대한 설명서를 읽어보세요.  
   
--   SQL Server 데이터베이스: [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+- SQL Server 데이터베이스: [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
   
--   XML 문서: [LINQ to XML(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
+- XML 문서: [LINQ to XML(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
   
--   ADO.NET 데이터 세트: [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
+- ADO.NET 데이터 세트: [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
--   .NET 컬렉션, 파일, 문자열 등: [LINQ to Objects(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+- .NET 컬렉션, 파일, 문자열 등: [LINQ to Objects(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
   
 ## <a name="see-also"></a>참고 항목
 

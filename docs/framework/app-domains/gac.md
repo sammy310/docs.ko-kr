@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d19410bd83605e6c7325a61e64a32a828846b7df
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2ae9470020449719ccb9760fef992898674ba696
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222577"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593624"
 ---
 # <a name="global-assembly-cache"></a>전역 어셈블리 캐시
 공용 언어 런타임이 설치된 각 컴퓨터에는 전역 어셈블리 캐시라는 컴퓨터 수준의 코드 캐시가 있습니다. 전역 어셈블리 캐시에는 컴퓨터의 여러 애플리케이션에서 공유하도록 특별히 지정된 어셈블리가 저장됩니다.  
@@ -29,9 +29,9 @@ ms.locfileid: "59222577"
   
  어셈블리를 전역 어셈블리 캐시에 배포하는 다음 두 가지 방법이 있습니다.  
   
--   전역 어셈블리 캐시와 함께 사용하도록 디자인된 설치 관리자를 사용합니다. 이것은 어셈블리를 전역 어셈블리 캐시에 설치하기 위한 기본 설정된 옵션입니다.  
+- 전역 어셈블리 캐시와 함께 사용하도록 디자인된 설치 관리자를 사용합니다. 이것은 어셈블리를 전역 어셈블리 캐시에 설치하기 위한 기본 설정된 옵션입니다.  
   
--   [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]에서 제공된 [전역 어셈블리 캐시 도구(Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)라는 개발자 도구를 사용합니다.  
+- [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]에서 제공된 [전역 어셈블리 캐시 도구(Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)라는 개발자 도구를 사용합니다.  
   
     > [!NOTE]
     >  배포 시나리오에서는 전역 어셈블리 캐시에 어셈블리를 설치할 때 Windows Installer를 사용해야 합니다. 전역 어셈블리 캐시 도구는 개발 시나리오에서만 사용합니다. 그 이유는 이 도구가 어셈블리 참조 계산 및 Windows Installer를 사용할 때 제공되는 기타 기능을 제공하지 않기 때문입니다.  

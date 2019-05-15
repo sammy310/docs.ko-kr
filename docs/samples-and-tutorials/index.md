@@ -4,12 +4,12 @@ description: .NET Core, ASP.NET Core 및 .NET에 대해 배우는 데 도움이 
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 265ac7aa996014ea24e9c128076e12c937de0857
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba0d7e4163a1c4afe08ea3f871c2bccc2335ac48
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61950854"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469462"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET 샘플 및 자습서
 
@@ -60,6 +60,10 @@ ms.locfileid: "61950854"
 **LINQ 샘플**
 
 이러한 일련의 샘플에서는 LINQ(Language-Integrated Query)의 여러 가지 기능을 보여 줍니다. [완료된 샘플](https://github.com/dotnet/samples/tree/master/core/linq/csharp)은 GitHub의 dotnet/samples 리포지토리에서 사용 가능합니다.
+
+**관리형 COM 서버 샘플**
+
+[COM 서버](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo) 샘플은 관리형 COM 서버를 만들고 전역적으로 등록하는 방법을 보여줍니다.
 
 **Microsoft Office PIA 샘플**
 

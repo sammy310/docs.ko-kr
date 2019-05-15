@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -bugreport compiler option [C#]
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
-ms.openlocfilehash: 63d64acc0d0a1ed90a722db75b467bd3ce5f260e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f25455fac84903f9c39861e1f6863f6b2f6928f3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560341"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587383"
 ---
 # <a name="-bugreport-c-compiler-options"></a>-bugreport(C# 컴파일러 옵션)
 나중에 분석하기 위해 파일에 디버그 정보를 포함하도록 지정합니다.  
@@ -31,19 +31,19 @@ ms.locfileid: "54560341"
 ## <a name="remarks"></a>주의  
  **-bugreport** 옵션은 `file`에 다음 정보를 포함하도록 지정합니다:  
   
--   컴파일에 포함된 모든 소스 코드 파일의 복사본입니다.  
+- 컴파일에 포함된 모든 소스 코드 파일의 복사본입니다.  
   
--   컴파일에 사용된 컴파일러 옵션 목록입니다.  
+- 컴파일에 사용된 컴파일러 옵션 목록입니다.  
   
--   컴파일러, 런타임 및 운영 체제에 대한 버전 정보입니다.  
+- 컴파일러, 런타임 및 운영 체제에 대한 버전 정보입니다.  
   
--   .NET Framework 및 SDK와 함께 제공되는 어셈블리를 제외하고 16진수로 저장된 참조된 어셈블리 및 모듈입니다.  
+- .NET Framework 및 SDK와 함께 제공되는 어셈블리를 제외하고 16진수로 저장된 참조된 어셈블리 및 모듈입니다.  
   
--   컴파일러 출력입니다(있는 경우).  
+- 컴파일러 출력입니다(있는 경우).  
   
--   메시지가 표시되는 문제에 대한 설명입니다.  
+- 메시지가 표시되는 문제에 대한 설명입니다.  
   
--   메시지가 표시되는 문제 해결 방법에 대한 설명입니다.  
+- 메시지가 표시되는 문제 해결 방법에 대한 설명입니다.  
   
  **-errorreport:prompt** 또는 **-errorreport:send**와 함께 이 옵션을 사용할 경우 파일의 정보가 Microsoft Corporation에 전송됩니다.  
   

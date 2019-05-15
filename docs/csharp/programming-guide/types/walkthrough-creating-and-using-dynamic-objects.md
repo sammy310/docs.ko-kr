@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: 71330714658729ed82ba111e9384e6cd9d5ae116
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 658fc0ef797e941e33e1d03f0e492b4cf2ef0801
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339426"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608026"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>연습: 동적 개체 만들기 및 사용(C# 및 Visual Basic)
 
@@ -28,9 +28,9 @@ ms.locfileid: "59339426"
   
  이 연습에서는 다음 작업을 수행합니다.  
   
--   텍스트 파일의 내용을 개체의 속성으로서 동적으로 노출하는 사용자 지정 개체를 만듭니다.  
+- 텍스트 파일의 내용을 개체의 속성으로서 동적으로 노출하는 사용자 지정 개체를 만듭니다.  
   
--   `IronPython` 라이브러리를 사용하는 프로젝트를 만듭니다.  
+- `IronPython` 라이브러리를 사용하는 프로젝트를 만듭니다.  
   
 ## <a name="prerequisites"></a>전제 조건  
 

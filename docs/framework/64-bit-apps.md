@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc90bedeee2d04c28a3860713ca5952a4564d3bd
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 8bad0abdba4c14659fdfa9b8064ebb8203100b33
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674739"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607881"
 ---
 # <a name="64-bit-applications"></a>64비트 애플리케이션
 애플리케이션을 컴파일할 때 Windows 64비트 운영 체제에서 네이티브 애플리케이션으로 실행되거나 WOW64(Windows 64비트 기반 Windows 32비트)를 통해 실행되도록 지정할 수 있습니다. WOW64는 32비트 애플리케이션이 64비트 시스템에서 실행되도록 하는 호환성 환경입니다. WOW64는 Windows 운영 체제의 모든 64비트 버전에 포함됩니다.  
@@ -30,26 +30,26 @@ ms.locfileid: "55674739"
   
  대부분 어셈블리는 32비트 CLR 및 64비트 CLR에서 둘 다 똑같이 실행됩니다. 그러나 일부 응용 프로그램은 다음의 하나 이상을 포함할 경우 CLR에 따라 다르게 동작할 수 있습니다.  
   
--   포인터 형식과 같이 플랫폼에 따라 크기가 달라지는 멤버를 포함하는 구조체.  
+- 포인터 형식과 같이 플랫폼에 따라 크기가 달라지는 멤버를 포함하는 구조체.  
   
--   상수 크기를 포함하는 포인터 산술 연산  
+- 상수 크기를 포함하는 포인터 산술 연산  
   
--   핸들에 대해 `Int32` 대신 `IntPtr`를 사용하는 잘못된 플랫폼 호출 또는 COM 선언  
+- 핸들에 대해 `Int32` 대신 `IntPtr`를 사용하는 잘못된 플랫폼 호출 또는 COM 선언  
   
--   `IntPtr`을 `Int32`로 캐스팅하는 코드.  
+- `IntPtr`을 `Int32`로 캐스팅하는 코드.  
   
  64비트 CLR에서 실행되도록 32비트 애플리케이션을 이식하는 방법에 대한 자세한 내용은 [32비트 관리 코드를 64비트로 마이그레이션](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973190(v=msdn.10))을 참조하세요.  
   
 ## <a name="general-64-bit-programming-information"></a>일반 64비트 프로그래밍 정보  
  64비트 프로그래밍에 대한 일반적인 정보는 다음 문서를 참조하세요.  
   
--   64비트 Windows 컴퓨터의 64비트 버전 CLR에 대한 자세한 내용은 MSDN 웹 사이트에서 [.NET Framework 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=37079)를 참조하세요.  
+- 64비트 Windows 컴퓨터의 64비트 버전 CLR에 대한 자세한 내용은 MSDN 웹 사이트에서 [.NET Framework 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=37079)를 참조하세요.  
   
--   [!INCLUDE[winsdkshort](../../includes/winsdkshort-md.md)] 문서에서 [64비트 Windows에 대한 프로그래밍 가이드](https://go.microsoft.com/fwlink/p/?LinkId=253512)를 참조하세요.  
+- [!INCLUDE[winsdkshort](../../includes/winsdkshort-md.md)] 문서에서 [64비트 Windows에 대한 프로그래밍 가이드](https://go.microsoft.com/fwlink/p/?LinkId=253512)를 참조하세요.  
   
--   64비트 버전 CLR을 다운로드하는 방법에 대한 자세한 내용은 MSDN 웹 사이트에서 [.NET Framework 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=50953)를 참조하세요.  
+- 64비트 버전 CLR을 다운로드하는 방법에 대한 자세한 내용은 MSDN 웹 사이트에서 [.NET Framework 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=50953)를 참조하세요.  
   
--   64비트 애플리케이션을 만들기 위한 Visual Studio 지원에 대한 자세한 내용은 [Visual Studio 개발 환경 64비트 지원](/visualstudio/ide/visual-studio-ide-64-bit-support)을 참조하세요.  
+- 64비트 애플리케이션을 만들기 위한 Visual Studio 지원에 대한 자세한 내용은 [Visual Studio 개발 환경 64비트 지원](/visualstudio/ide/visual-studio-ide-64-bit-support)을 참조하세요.  
   
 ## <a name="compiler-support-for-creating-64-bit-applications"></a>64비트 애플리케이션을 만들기 위한 컴파일러 지원  
  기본적으로 .NET Framework를 사용하여 32비트 또는 64비트 컴퓨터에서 애플리케이션을 빌드할 때 애플리케이션은 64비트 컴퓨터에서 WOW64를 통해서가 아니라 네이티브 애플리케이션으로 실행됩니다. 다음 표에는 Visual Studio 컴파일러를 사용하여 네이티브로 실행되거나, WOW64를 통해 실행되거나, 실행에 두 방법을 모두 사용하는 64비트 애플리케이션을 만드는 방법을 설명하는 문서가 나와 있습니다.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - asymmetric accessor accessibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-ms.openlocfilehash: c15b4939306b79f843b22dc808d88bf3d20ed555
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: cde196c2bf0b40443c6b497a6a73863e5f89dd0a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203706"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64582998"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>접근자 액세스 가능성 제한(C# 프로그래밍 가이드)
 속성 또는 인덱서의 [get](../../../csharp/language-reference/keywords/get.md) 및 [set](../../../csharp/language-reference/keywords/set.md) 부분을 *접근자*라고 합니다. 기본적으로 이러한 접근자는 속하는 속성 또는 인덱서와 동일한 표시 유형 또는 액세스 수준을 갖습니다. 자세한 내용은 [접근성 수준](../../../csharp/language-reference/keywords/accessibility-levels.md)을 참조하세요. 그러나 이러한 접근자 중 하나에 대한 액세스를 제한하는 것이 유용한 경우도 있습니다. 이렇게 하려면 일반적으로 `set` 접근자의 접근성을 제한하는 동시에 `get` 접근자를 공개적으로 액세스할 수 있도록 유지해야 합니다. 예:  
@@ -27,13 +27,13 @@ ms.locfileid: "57203706"
 ## <a name="restrictions-on-access-modifiers-on-accessors"></a>접근자의 액세스 한정자에 대한 제한 사항  
  속성 또는 인덱서의 접근자 한정자 사용에는 다음과 같은 조건이 적용됩니다.  
   
--   인터페이스 또는 명시적 [interface](../../../csharp/language-reference/keywords/interface.md) 멤버 구현에는 접근자 한정자를 사용할 수 없습니다.  
+- 인터페이스 또는 명시적 [interface](../../../csharp/language-reference/keywords/interface.md) 멤버 구현에는 접근자 한정자를 사용할 수 없습니다.  
   
--   속성 또는 인덱서에 `set` 및 `get` 접근자가 모두 포함된 경우에만 접근자 한정자를 사용할 수 있습니다. 이 경우 두 접근자 중 하나에서만 한정자가 허용됩니다.  
+- 속성 또는 인덱서에 `set` 및 `get` 접근자가 모두 포함된 경우에만 접근자 한정자를 사용할 수 있습니다. 이 경우 두 접근자 중 하나에서만 한정자가 허용됩니다.  
   
--   속성 또는 인덱서에 [override](../../../csharp/language-reference/keywords/override.md) 한정자가 있는 경우 접근자 한정자가 재정의된 접근자의 한정자와 일치해야 합니다(있는 경우).  
+- 속성 또는 인덱서에 [override](../../../csharp/language-reference/keywords/override.md) 한정자가 있는 경우 접근자 한정자가 재정의된 접근자의 한정자와 일치해야 합니다(있는 경우).  
   
--   접근자의 접근성 수준은 속성 또는 인덱서 자체의 접근성 수준보다 더 제한적이어야 합니다.  
+- 접근자의 접근성 수준은 속성 또는 인덱서 자체의 접근성 수준보다 더 제한적이어야 합니다.  
   
 ## <a name="access-modifiers-on-overriding-accessors"></a>재정의 접근자의 액세스 한정자  
  속성 또는 인덱서를 재정의하는 경우 재정의 코드에서 재정의된 접근자에 액세스할 수 있어야 합니다. 또한 속성/인덱서 및 접근자의 접근성이 재정의된 속성/인덱서 및 해당 접근자와 일치해야 합니다. 예:  

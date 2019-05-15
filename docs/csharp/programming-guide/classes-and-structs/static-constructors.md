@@ -6,12 +6,12 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 6a990dbf26ac1a6bdc642442b9f4b75c05ee9635
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 87a7b16d3e096f6a5bf05475ccc7c43862324ae3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200119"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583363"
 ---
 # <a name="static-constructors-c-programming-guide"></a>정적 생성자(C# 프로그래밍 가이드)
 정적 생성자는 [정적](../../../csharp/language-reference/keywords/static.md) 데이터를 초기화하거나 한 번만 수행해야 하는 특정 작업을 수행하는 데 사용됩니다. 첫 번째 인스턴스가 만들어지거나 정적 멤버가 참조되기 전에 자동으로 호출됩니다.  
@@ -20,19 +20,19 @@ ms.locfileid: "57200119"
   
  정적 생성자에는 다음과 같은 속성이 있습니다.  
   
--   정적 생성자는 액세스 한정자를 사용하거나 매개 변수를 갖지 않습니다.  
+- 정적 생성자는 액세스 한정자를 사용하거나 매개 변수를 갖지 않습니다.  
   
--   정적 생성자는 첫 번째 인스턴스가 만들어지거나 정적 멤버가 참조되기 전에 자동으로 호출되어 [클래스](../../../csharp/language-reference/keywords/class.md)를 초기화합니다.  
+- 정적 생성자는 첫 번째 인스턴스가 만들어지거나 정적 멤버가 참조되기 전에 자동으로 호출되어 [클래스](../../../csharp/language-reference/keywords/class.md)를 초기화합니다.  
   
--   정적 생성자는 직접 호출할 수 없습니다.  
+- 정적 생성자는 직접 호출할 수 없습니다.  
   
--   사용자는 프로그램에서 정적 생성자가 실행되는 시기를 제어할 수 없습니다.  
+- 사용자는 프로그램에서 정적 생성자가 실행되는 시기를 제어할 수 없습니다.  
   
--   정적 생성자는 일반적으로 클래스가 로그 파일을 사용하고, 생성자를 사용하여 이 파일에 항목을 쓰는 경우에 사용됩니다.  
+- 정적 생성자는 일반적으로 클래스가 로그 파일을 사용하고, 생성자를 사용하여 이 파일에 항목을 쓰는 경우에 사용됩니다.  
   
--   정적 생성자는 생성자가 `LoadLibrary` 메서드를 호출할 수 있을 때 비관리 코드에 대한 래퍼 클래스를 만드는 경우에도 유용합니다.  
+- 정적 생성자는 생성자가 `LoadLibrary` 메서드를 호출할 수 있을 때 비관리 코드에 대한 래퍼 클래스를 만드는 경우에도 유용합니다.  
   
--   정적 생성자가 예외를 throw하는 경우 런타임에서 생성자를 다시 호출하지 않으며, 프로그램을 실행 중인 애플리케이션 도메인의 수명 동안 형식이 초기화되지 않은 상태로 유지됩니다.  
+- 정적 생성자가 예외를 throw하는 경우 런타임에서 생성자를 다시 호출하지 않으며, 프로그램을 실행 중인 애플리케이션 도메인의 수명 동안 형식이 초기화되지 않은 상태로 유지됩니다.  
   
 ## <a name="example"></a>예제  
  이 예제에서 `Bus` 클래스에는 정적 생성자가 있습니다. `Bus`의 첫 번째 인스턴스를 만들 때(`bus1`) 정적 생성자가 호출되어 클래스를 초기화합니다. 샘플 출력은 `Bus`의 두 인스턴스가 생성된 경우에도 정적 생성자가 한 번만 실행되고, 인스턴스 생성자를 실행하기 전에 실행되는지 확인합니다.  

@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6d07fe8ec61ee4515696eb3cf3d808483b50dfb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 638ea8c1f01c62075fc4399cada282128e07422d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186565"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607552"
 ---
 # <a name="setting-assembly-attributes"></a>어셈블리 특성 설정
 어셈블리 특성은 어셈블리에 대한 정보를 제공하는 값입니다. 특성은 다음과 같은 정보 집합으로 나뉩니다.  
   
--   어셈블리 ID 특성  
+- 어셈블리 ID 특성  
   
--   정보 특성  
+- 정보 특성  
   
--   어셈블리 매니페스트 특성  
+- 어셈블리 매니페스트 특성  
   
--   강력한 이름 특성  
+- 강력한 이름 특성  
   
 ## <a name="assembly-identity-attributes"></a>어셈블리 ID 특성  
  강력한 이름(해당하는 경우)과 더불어 name, version 및 culture의 세 가지 특성이 어셈블리의 ID를 결정합니다. 이러한 특성은 어셈블리의 전체 이름을 구성하며 코드에서 어셈블리를 참조할 때 필요합니다. 특성을 사용하여 어셈블리의 버전 및 문화권을 설정할 수 있습니다. 컴파일러 또는 [어셈블리 링커(Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) 는 어셈블리 매니페스트를 포함하는 파일에 따라 어셈블리가 만들어질 때 이름 값을 설정합니다.  

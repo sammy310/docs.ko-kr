@@ -2,12 +2,12 @@
 title: 동적으로 분석 추적을 사용하도록 설정
 ms.date: 03/30/2017
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-ms.openlocfilehash: fc157e6612a59640aef557b57e5e2dd9e91cb529
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 677a97cedc766393a113f64554ce498547d4a231
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584327"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592104"
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>동적으로 분석 추적을 사용하도록 설정
 Windows 운영 체제에 포함된 도구와 함께 ETW(Event Tracing for Windows)를 사용하여 추적을 동적으로 사용하거나 사용하지 않도록 설정할 수 있습니다. 모든 [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] Windows Communication Foundation (WCF) 서비스 분석 추적 활성화 및 비활성화 없이 동적으로 응용 프로그램의 Web.config 파일을 수정 하거나 서비스를 다시 시작 수 있습니다. 그러면 애플리케이션을 중지하지 않고도 추적 이벤트를 내보낼 수 있습니다.  
@@ -31,11 +31,11 @@ Windows 운영 체제에 포함된 도구와 함께 ETW(Event Tracing for Window
 |`EndToEndMonitoring`|메시지 흐름 추적을 지원하는 데 사용되는 이벤트입니다.|  
 |`Troubleshooting`|보다 세부적인 이벤트의 WCF 확장성 지점입니다.|  
   
- 키워드의 두 번째 그룹은 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 의 구성 요소 중 이벤트를 내보내는 구성 요소를 정의합니다.  
+ 키워드의 두 번째 그룹은 이벤트를 발생 하는.NET Framework의 구성 요소를 정의 합니다.  
   
 |키워드|설명|  
 |-------------|-----------------|  
-|`UserEvents`|[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]가 아닌 사용자 코드에서 내보내는 이벤트입니다.|  
+|`UserEvents`|사용자 코드와.NET 프레임 워크가 아닌에서 내보내는 이벤트입니다.|  
 |`ServiceModel`|WCF 런타임에서 내보내는 이벤트입니다.|  
 |`ServiceHost`|서비스 호스트에서 내보내는 이벤트입니다.|  
 |`WCFMessageLogging`|WCF 메시지 로깅 이벤트입니다.|  

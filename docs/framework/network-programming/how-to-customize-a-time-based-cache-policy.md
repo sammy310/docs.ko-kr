@@ -9,19 +9,19 @@ helpviewer_keywords:
 - customizing time-based cache policies
 - cache [.NET Framework], time-based policies
 ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
-ms.openlocfilehash: d4a35882d99a87ca5bf22fb386a87158e3c2d664
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 457de16337fd2a37dad9042c770680ba5ad27a0d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154572"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624600"
 ---
 # <a name="how-to-customize-a-time-based-cache-policy"></a>방법: 시간 기반 캐시 정책 사용자 지정
 시간 기반 캐시 정책을 만들 경우 최대 기간, 최소 새로 고침, 최대 부실 또는 캐시 동기화 날짜에 대한 값을 지정하여 캐싱 동작을 사용자 지정할 수 있습니다. <xref:System.Net.Cache.HttpRequestCachePolicy> 개체는 이러한 값의 유효한 조합을 지정할 수 있는 여러 가지 생성자를 제공합니다.  
   
 ### <a name="to-create-a-time-based-cache-policy-that-uses-a-cache-synchronization-date"></a>캐시 동기화 날짜를 사용하는 시간 기반 캐시 정책을 만들려면  
   
--   <xref:System.DateTime> 개체를 <xref:System.Net.Cache.HttpRequestCachePolicy> 생성자에 전달하여 캐시 동기화 날짜를 사용하는 시간 기반 캐시 정책을 만듭니다.  
+- <xref:System.DateTime> 개체를 <xref:System.Net.Cache.HttpRequestCachePolicy> 생성자에 전달하여 캐시 동기화 날짜를 사용하는 시간 기반 캐시 정책을 만듭니다.  
   
     ```csharp  
     public static HttpRequestCachePolicy CreateLastSyncPolicy(DateTime when)  
@@ -52,7 +52,7 @@ Level:Default CacheSyncDate:1/14/2004 8:07:30 AM
   
 ### <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness"></a>최소 새로 고침을 기반으로 하는 시간 기반 캐시 정책을 만들려면  
   
--   <xref:System.Net.Cache.HttpCacheAgeControl.MinFresh>를 `cacheAgeControl` 매개 변수 값으로 지정하고 <xref:System.TimeSpan> 개체를 <xref:System.Net.Cache.HttpRequestCachePolicy> 생성자에 전달하여 최소 새로 고침을 기반으로 하는 시간 기반 캐시 정책을 만듭니다.  
+- <xref:System.Net.Cache.HttpCacheAgeControl.MinFresh>를 `cacheAgeControl` 매개 변수 값으로 지정하고 <xref:System.TimeSpan> 개체를 <xref:System.Net.Cache.HttpRequestCachePolicy> 생성자에 전달하여 최소 새로 고침을 기반으로 하는 시간 기반 캐시 정책을 만듭니다.  
   
     ```csharp  
     public static HttpRequestCachePolicy CreateMinFreshPolicy(TimeSpan span)  
@@ -84,7 +84,7 @@ Level:Default MinFresh:3600
   
 ### <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness-and-maximum-age"></a>최소 새로 고침 및 최대 기간을 기반으로 하는 시간 기반 캐시 정책을 만들려면  
   
--   <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh>를 `cacheAgeControl` 매개 변수 값으로 지정하고 두 개의 <xref:System.TimeSpan> 개체를 <xref:System.Net.Cache.HttpRequestCachePolicy> 생성자에 전달하여 최소 새로 고침 및 최대 기간을 기반으로 하는 시간 기반 캐시 정책을 만듭니다. 하나의 개체는 리소스의 최대 기간을 지정하고 두 번째 개체는 캐시에서 반환된 개체에 허용되는 최소 새로 고침을 지정합니다.  
+- <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh>를 `cacheAgeControl` 매개 변수 값으로 지정하고 두 개의 <xref:System.TimeSpan> 개체를 <xref:System.Net.Cache.HttpRequestCachePolicy> 생성자에 전달하여 최소 새로 고침 및 최대 기간을 기반으로 하는 시간 기반 캐시 정책을 만듭니다. 하나의 개체는 리소스의 최대 기간을 지정하고 두 번째 개체는 캐시에서 반환된 개체에 허용되는 최소 새로 고침을 지정합니다.  
   
     ```csharp  
     public static HttpRequestCachePolicy CreateFreshAndAgePolicy(TimeSpan freshMinimum, TimeSpan ageMaximum)  

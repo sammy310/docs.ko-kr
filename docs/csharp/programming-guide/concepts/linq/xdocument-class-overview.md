@@ -2,12 +2,12 @@
 title: XDocument 클래스 개요(C#)
 ms.date: 07/20/2015
 ms.assetid: 63305603-ab54-49fc-84e4-f76eecc59549
-ms.openlocfilehash: e3ef7d66cb9759bd71e69c1a0db3614a02f785b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a2b2e7490116cfd7ff3cff783a4a3a985a39d0a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604199"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595345"
 ---
 # <a name="xdocument-class-overview-c"></a>XDocument 클래스 개요(C#)
 이 항목에서는 <xref:System.Xml.Linq.XDocument> 클래스에 대해 소개합니다.  
@@ -22,15 +22,15 @@ ms.locfileid: "54604199"
 ## <a name="components-of-xdocument"></a>XDocument의 구성 요소  
  <xref:System.Xml.Linq.XDocument>에는 다음과 같은 요소가 포함될 수 있습니다.  
   
--   <xref:System.Xml.Linq.XDeclaration> 개체 하나. <xref:System.Xml.Linq.XDeclaration>을 통해 XML 선언의 관련 부분인 XML 버전, 문서의 인코딩 및 XML 문서가 독립 실행형인지 여부를 지정할 수 있습니다.  
+- <xref:System.Xml.Linq.XDeclaration> 개체 하나. <xref:System.Xml.Linq.XDeclaration>을 통해 XML 선언의 관련 부분인 XML 버전, 문서의 인코딩 및 XML 문서가 독립 실행형인지 여부를 지정할 수 있습니다.  
   
--   <xref:System.Xml.Linq.XElement> 개체 하나. 이 개체는 XML 문서의 루트 노드입니다.  
+- <xref:System.Xml.Linq.XElement> 개체 하나. 이 개체는 XML 문서의 루트 노드입니다.  
   
--   <xref:System.Xml.Linq.XProcessingInstruction> 개체(수에 제한 없음). 처리 명령은 XML을 처리하는 정보를 애플리케이션에 전달합니다.  
+- <xref:System.Xml.Linq.XProcessingInstruction> 개체(수에 제한 없음). 처리 명령은 XML을 처리하는 정보를 애플리케이션에 전달합니다.  
   
--   <xref:System.Xml.Linq.XComment> 개체(수에 제한 없음). 주석은 루트 요소의 형제입니다. XML 문서는 주석으로 시작될 수 없으므로 <xref:System.Xml.Linq.XComment> 개체는 목록의 첫 번째 인수일 수 없습니다.  
+- <xref:System.Xml.Linq.XComment> 개체(수에 제한 없음). 주석은 루트 요소의 형제입니다. XML 문서는 주석으로 시작될 수 없으므로 <xref:System.Xml.Linq.XComment> 개체는 목록의 첫 번째 인수일 수 없습니다.  
   
--   DTD에 대한 <xref:System.Xml.Linq.XDocumentType> 하나  
+- DTD에 대한 <xref:System.Xml.Linq.XDocumentType> 하나  
   
  <xref:System.Xml.Linq.XDocument>를 serialize할 때 `XDocument.Declaration`이 `null`인 경우에도 작성기의 `Writer.Settings.OmitXmlDeclaration`이 `false`(기본값)로 설정되어 있으면 출력에 XML 선언이 포함됩니다.  
   

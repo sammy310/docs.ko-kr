@@ -2,12 +2,12 @@
 title: '방법: (LINQ) (Visual Basic) 문자열 컬렉션 결합 및 비교'
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: a0083c49c344a45a977793254d8062f2a6aa155a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4515fd3f96bfe94e46c2a090d75468a7e5b18939
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855233"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593038"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>방법: (LINQ) (Visual Basic) 문자열 컬렉션 결합 및 비교
 이 예제에서는 텍스트 줄이 포함된 파일을 병합하고 결과를 정렬하는 방법을 보여 줍니다. 특히, 두 개의 텍스트 줄 집합에 대한 단순 연결, 합집합 및 교집합을 수행하는 방법을 보여 줍니다.  
@@ -163,7 +163,7 @@ End Class
 ```  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- System.Core.dll에 대한 참조와 System.Linq 네임스페이스에 대한 `Imports` 문을 사용하여 .NET Framework 버전 3.5 이상을 대상으로 하는 프로젝트를 만듭니다.  
+VB.NET 콘솔 응용 프로그램 프로젝트를 만듭니다는 `Imports` System.Linq 네임 스페이스에 대 한 문입니다.
   
 ## <a name="see-also"></a>참고자료
 

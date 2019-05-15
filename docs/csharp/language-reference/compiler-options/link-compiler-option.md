@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -link compiler option [C#]
 - link compiler option [C#]
 ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
-ms.openlocfilehash: 9dcb79a3310c4c814879501e2723560a84c9b48c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5c5f3337d1c1ff2d58d3876ed0d4ede11d22b6bb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969351"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593066"
 ---
 # <a name="-link-c-compiler-options"></a>-link(C# 컴파일러 옵션)
 컴파일러에서 지정된 어셈블리의 COM 형식 정보를 현재 컴파일하고 있는 프로젝트에 사용할 수 있도록 합니다.  
@@ -47,9 +47,9 @@ ms.locfileid: "56969351"
   
  COM 어셈블리 자체가 또 다른 COM 어셈블리(어셈블리 B)를 참조하는 COM 어셈블리(어셈블리 A)에 연결하는 경우 다음 중 하나에 해당되면 어셈블리 B에도 연결해야 합니다.  
   
--   어셈블리 A의 형식은 형식에서 상속되거나 어셈블리 B의 인터페이스를 구현합니다.  
+- 어셈블리 A의 형식은 형식에서 상속되거나 어셈블리 B의 인터페이스를 구현합니다.  
   
--   어셈블리 B의 반환 형식이나 매개 변수 형식을 사용하는 필드, 속성, 이벤트 또는 메서드가 호출됩니다.  
+- 어셈블리 B의 반환 형식이나 매개 변수 형식을 사용하는 필드, 속성, 이벤트 또는 메서드가 호출됩니다.  
   
  [-reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 컴파일러 옵션과 마찬가지로 `-link` 컴파일러 옵션은 Csc.rsp 지시 파일을 사용하며, 자주 사용되는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 어셈블리를 참조합니다. 컴파일러에서 Csc.rsp 파일을 사용하지 않도록 하려면 [-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) 컴파일러 옵션을 사용하세요.  
   

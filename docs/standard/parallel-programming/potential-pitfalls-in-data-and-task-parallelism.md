@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c251bfc15ce588d426dd30f2ff1634a1f2a01336
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f6cf6120af21c6b8fcaf09203fcb3b77e4dcdfac
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971951"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621007"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>데이터 및 작업 병렬 처리에서 발생할 수 있는 문제
 대부분의 경우 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>는 일반 순차적 루프에 대해 상당한 성능 향상을 제공할 수 있습니다. 그러나 루프를 병렬화하는 작업은 순차적 코드에서 일반적이지 않거나 전혀 발생하지 않는 문제를 일으킬 수 있는 복잡성을 도입합니다. 이 항목에서는 병렬 루프를 작성할 때 주의해야 할 사항을 나열합니다.  
@@ -31,11 +31,11 @@ ms.locfileid: "56971951"
   
  과도한 병렬화가 발생할 수 있는 가장 일반적인 시나리오는 중첩된 루프에 있습니다. 대부분의 경우에서 다음 조건 중 하나 이상이 적용되지 않는 한 외부 루프만을 병렬화하는 것이 가장 좋습니다.  
   
--   내부 루프가 매우 긴 것으로 알려져 있습니다.  
+- 내부 루프가 매우 긴 것으로 알려져 있습니다.  
   
--   각 순서에서 비용이 많이 드는 계산을 수행하고 있습니다. (이 예제에 나와 있는 작업은 비용이 많이 들지 않습니다.)  
+- 각 순서에서 비용이 많이 드는 계산을 수행하고 있습니다. (이 예제에 나와 있는 작업은 비용이 많이 들지 않습니다.)  
   
--   대상 시스템은 `cust.Orders`에서 쿼리를 병렬화하여 생성될 스레드의 수를 처리할 충분한 프로세서를 가진 것으로 알려져 있습니다.  
+- 대상 시스템은 `cust.Orders`에서 쿼리를 병렬화하여 생성될 스레드의 수를 처리할 충분한 프로세서를 가진 것으로 알려져 있습니다.  
   
  모든 경우에서 최적의 쿼리 형태를 결정하는 가장 좋은 방법은 테스트하고 측정하는 것입니다.  
   

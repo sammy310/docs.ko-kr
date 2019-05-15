@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2717655ac73cac6635aba563f008feb460a5f788
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7609c88b088b9386201f5ac5725d16f4c5f11071
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074523"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591374"
 ---
 # <a name="security-issues-in-reflection-emit"></a>리플렉션 내보내기의 보안 문제점
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 MSIL(Microsoft Intermediate Language)을 내보내는 세 가지 방법을 제공하며, 각각 고유한 보안 문제가 있습니다.  
   
--   [동적 어셈블리](#Dynamic_Assemblies)  
+- [동적 어셈블리](#Dynamic_Assemblies)  
   
--   [익명으로 호스트된 동적 메서드](#Anonymously_Hosted_Dynamic_Methods)  
+- [익명으로 호스트된 동적 메서드](#Anonymously_Hosted_Dynamic_Methods)  
   
--   [기존 어셈블리와 연결된 동적 메서드](#Dynamic_Methods_Associated_with_Existing_Assemblies)  
+- [기존 어셈블리와 연결된 동적 메서드](#Dynamic_Methods_Associated_with_Existing_Assemblies)  
   
  동적 코드를 생성하는 방법에 관계없이 생성된 코드를 실행하려면 생성된 코드가 사용하는 형식 및 메서드에 필요한 모든 권한이 있어야 합니다.  
   
@@ -51,13 +51,13 @@ ms.locfileid: "59074523"
 ### <a name="generating-dynamic-assemblies-from-partially-trusted-code"></a>부분적으로 신뢰할 수 있는 코드에서 동적 어셈블리 생성  
  인터넷 권한이 있는 어셈블리가 임시 동적 어셈블리를 생성하고 해당 코드를 실행할 수 있는 다음 조건을 고려합니다.  
   
--   동적 어셈블리가 다른 어셈블리의 public 형식 및 멤버만 사용합니다.  
+- 동적 어셈블리가 다른 어셈블리의 public 형식 및 멤버만 사용합니다.  
   
--   이러한 형식과 멤버가 요구하는 권한이 부분적으로 신뢰할 수 있는 어셈블리의 권한 부여 집합에 포함되어 있습니다.  
+- 이러한 형식과 멤버가 요구하는 권한이 부분적으로 신뢰할 수 있는 어셈블리의 권한 부여 집합에 포함되어 있습니다.  
   
--   어셈블리가 디스크에 저장되지 않습니다.  
+- 어셈블리가 디스크에 저장되지 않습니다.  
   
--   디버그 기호가 생성되지 않습니다. `Internet` 및 `LocalIntranet` 권한 집합에는 필요한 권한이 포함되지 않습니다.  
+- 디버그 기호가 생성되지 않습니다. `Internet` 및 `LocalIntranet` 권한 집합에는 필요한 권한이 포함되지 않습니다.  
   
 <a name="Anonymously_Hosted_Dynamic_Methods"></a>   
 ## <a name="anonymously-hosted-dynamic-methods"></a>익명으로 호스트된 동적 메서드  
@@ -70,9 +70,9 @@ ms.locfileid: "59074523"
   
  애플리케이션 도메인에서 허용하는 경우, 익명으로 호스트되는 동적 메서드는 다음 제한 사항에 따라 JIT 가시성 검사를 건너뛸 수 있습니다. 익명으로 호스트되는 동적 메서드로 액세스되는 비공개 형식과 멤버는 내보내기 호출 스택의 해당 권한 부여 집합과 같거나 하위 집합인 어셈블리에 있어야 합니다. JIT 가시성 검사를 건너뛸 수 있는 이 제한된 기능은 애플리케이션 도메인에서 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 플래그로 <xref:System.Security.Permissions.ReflectionPermission> 권한을 부여하는 경우에 사용할 수 있습니다.  
   
--   메서드가 public 형식 및 멤버만 사용하는 경우에는 생성 중 권한이 필요하지 않습니다.  
+- 메서드가 public 형식 및 멤버만 사용하는 경우에는 생성 중 권한이 필요하지 않습니다.  
   
--   JIT 가시성 검사를 건너뛰도록 지정하면 메서드를 생성할 때 수행되는 요구에 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.ReflectionPermission> 및 액세스되는 public이 아닌 멤버를 포함하는 어셈블리의 권한 부여 집합이 포함됩니다.  
+- JIT 가시성 검사를 건너뛰도록 지정하면 메서드를 생성할 때 수행되는 요구에 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.ReflectionPermission> 및 액세스되는 public이 아닌 멤버를 포함하는 어셈블리의 권한 부여 집합이 포함됩니다.  
   
  public이 아닌 멤버의 권한 부여 집합을 고려하기 때문에 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 권한이 부여된 부분적으로 신뢰할 수 있는 코드는 신뢰할 수 있는 어셈블리의 public이 아닌 멤버를 실행하여 권한을 높일 수 없습니다.  
   
@@ -85,9 +85,9 @@ ms.locfileid: "59074523"
 ### <a name="generating-anonymously-hosted-dynamic-methods-from-partially-trusted-code"></a>부분적으로 신뢰할 수 있는 코드에서 익명으로 호스트된 동적 메서드 생성  
  인터넷 권한이 있는 어셈블리가 익명으로 호스트된 동적 메서드를 생성하고 실행할 수 있는 다음 조건을 고려합니다.  
   
--   동적 메서드가 public 형식 및 멤버만 사용합니다. 권한 부여 집합에 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>가 포함된 경우 권한 부여 집합이 내보내는 어셈블리의 권한 부여 집합과 같거나 하위 집합인 어셈블리의 public이 아닌 형식 및 멤버를 사용할 수 있습니다.  
+- 동적 메서드가 public 형식 및 멤버만 사용합니다. 권한 부여 집합에 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>가 포함된 경우 권한 부여 집합이 내보내는 어셈블리의 권한 부여 집합과 같거나 하위 집합인 어셈블리의 public이 아닌 형식 및 멤버를 사용할 수 있습니다.  
   
--   동적 메서드가 사용하는 모든 형식과 멤버에 필요한 권한이 부분적으로 신뢰할 수 있는 어셈블리의 권한 부여 집합에 포함되어 있습니다.  
+- 동적 메서드가 사용하는 모든 형식과 멤버에 필요한 권한이 부분적으로 신뢰할 수 있는 어셈블리의 권한 부여 집합에 포함되어 있습니다.  
   
 > [!NOTE]
 >  동적 메서드가 디버그 기호를 지원하지 않습니다.  
@@ -96,21 +96,21 @@ ms.locfileid: "59074523"
 ## <a name="dynamic-methods-associated-with-existing-assemblies"></a>기존 어셈블리와 연결된 동적 메서드  
  동적 메서드를 기존 어셈블리의 형식이나 모듈에 연결하려면 연결된 형식이나 모듈을 지정하는 <xref:System.Reflection.Emit.DynamicMethod> 생성자 중 하나를 사용합니다. 동적 메서드를 기존 형식이나 모듈에 연결하면 동적 메서드가 public이 아닌 형식과 멤버에 액세스할 수 있으므로 이 생성자를 호출하는 데 필요한 권한은 경우에 따라 다릅니다.  
   
--   형식과 연결된 동적 메서드는 private 멤버를 비롯한 해당 형식의 모든 멤버와 연결된 형식을 포함하는 어셈블리의 모든 내부 형식과 멤버에 액세스할 수 있습니다.  
+- 형식과 연결된 동적 메서드는 private 멤버를 비롯한 해당 형식의 모든 멤버와 연결된 형식을 포함하는 어셈블리의 모든 내부 형식과 멤버에 액세스할 수 있습니다.  
   
--   모듈과 연결된 동적 메서드는 모듈의 모든 `internal` 형식과 멤버(Visual Basic에서는 `Friend`, 공용 언어 런타임 메타데이터에서는 `assembly`)에 액세스할 수 있습니다.  
+- 모듈과 연결된 동적 메서드는 모듈의 모든 `internal` 형식과 멤버(Visual Basic에서는 `Friend`, 공용 언어 런타임 메타데이터에서는 `assembly`)에 액세스할 수 있습니다.  
   
  또한 JIT 컴파일러의 가시성 검사를 건너뛰는 기능을 지정하는 생성자를 사용할 수 있습니다. 이렇게 하면 동적 메서드가 액세스 수준에 관계없이 모든 어셈블리의 모든 형식과 멤버에 액세스할 수 있습니다.  
   
  생성자가 요구하는 권한은 동적 메서드에 제공할 액세스 권한에 따라 달라집니다.  
   
--   메서드가 public 형식과 멤버만 사용하고 메서드를 고유한 형식이나 모듈에 연결하는 경우에는 권한이 필요하지 않습니다.  
+- 메서드가 public 형식과 멤버만 사용하고 메서드를 고유한 형식이나 모듈에 연결하는 경우에는 권한이 필요하지 않습니다.  
   
--   JIT 가시성 검사를 건너뛰도록 지정하는 경우 생성자는 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.ReflectionPermission>을 요구합니다.  
+- JIT 가시성 검사를 건너뛰도록 지정하는 경우 생성자는 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.ReflectionPermission>을 요구합니다.  
   
--   고유한 어셈블리의 다른 형식을 포함하여 다른 형식에 동적 메서드를 연결하는 경우 생성자는 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.ReflectionPermission> 및 <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.SecurityPermission>을 요구합니다.  
+- 고유한 어셈블리의 다른 형식을 포함하여 다른 형식에 동적 메서드를 연결하는 경우 생성자는 <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.ReflectionPermission> 및 <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.SecurityPermission>을 요구합니다.  
   
--   다른 어셈블리의 형식이나 모듈에 동적 메서드를 연결하는 경우 생성자는 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.ReflectionPermission> 및 다른 모듈을 포함하는 어셈블리의 권한 부여 집합을 요구합니다. 즉, 호출 스택에 대상 모듈의 권한 부여 집합에 있는 모든 권한과 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>가 포함되어야 합니다.  
+- 다른 어셈블리의 형식이나 모듈에 동적 메서드를 연결하는 경우 생성자는 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.ReflectionPermission> 및 다른 모듈을 포함하는 어셈블리의 권한 부여 집합을 요구합니다. 즉, 호출 스택에 대상 모듈의 권한 부여 집합에 있는 모든 권한과 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>가 포함되어야 합니다.  
   
     > [!NOTE]
     >  대상 권한 부여 집합 및 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 요구가 실패할 경우 생성자는 이전 버전과의 호환성을 위해 <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType> 플래그가 있는 <xref:System.Security.Permissions.SecurityPermission>을 요구합니다.  
@@ -126,13 +126,13 @@ ms.locfileid: "59074523"
   
  인터넷 권한이 있는 어셈블리가 동적 메서드를 생성하고 실행할 수 있는 다음 조건을 고려합니다.  
   
--   동적 메서드가 메서드를 내보내는 모듈 또는 형식과 연결되어 있거나, 해당 권한 부여 집합이 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>를 포함하며 권한 부여 집합이 내보내는 어셈블리의 권한 부여 집합과 같거나 하위 집합인 어셈블리의 모듈과 연결되어 있습니다.  
+- 동적 메서드가 메서드를 내보내는 모듈 또는 형식과 연결되어 있거나, 해당 권한 부여 집합이 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>를 포함하며 권한 부여 집합이 내보내는 어셈블리의 권한 부여 집합과 같거나 하위 집합인 어셈블리의 모듈과 연결되어 있습니다.  
   
--   동적 메서드가 public 형식 및 멤버만 사용합니다. 해당 권한 부여 집합이 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>를 포함하며 권한 부여 집합이 내보내는 어셈블리의 권한 부여 집합과 같거나 하위 집합인 어셈블리의 모듈과 연결된 경우 연결된 모듈에서 `internal`(Visual Basic에서는 `Friend`, 공용 언어 런타임 메타데이터에서는 `assembly`)로 표시된 형식과 멤버를 사용할 수 있습니다.  
+- 동적 메서드가 public 형식 및 멤버만 사용합니다. 해당 권한 부여 집합이 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>를 포함하며 권한 부여 집합이 내보내는 어셈블리의 권한 부여 집합과 같거나 하위 집합인 어셈블리의 모듈과 연결된 경우 연결된 모듈에서 `internal`(Visual Basic에서는 `Friend`, 공용 언어 런타임 메타데이터에서는 `assembly`)로 표시된 형식과 멤버를 사용할 수 있습니다.  
   
--   동적 메서드가 사용하는 모든 형식과 멤버가 요구하는 권한이 부분적으로 신뢰할 수 있는 어셈블리의 권한 부여 집합에 포함되어 있습니다.  
+- 동적 메서드가 사용하는 모든 형식과 멤버가 요구하는 권한이 부분적으로 신뢰할 수 있는 어셈블리의 권한 부여 집합에 포함되어 있습니다.  
   
--   동적 메서드가 JIT 가시성 검사를 건너뛰지 않습니다.  
+- 동적 메서드가 JIT 가시성 검사를 건너뛰지 않습니다.  
   
 > [!NOTE]
 >  동적 메서드가 디버그 기호를 지원하지 않습니다.  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: fbe27403920d8c85665e585ca461602131574038
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fbe1617aa8ade89258bb7f4b46180b5e18805e3a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638648"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590545"
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM+ 응용 프로그램과 통합 개요
 Windows Communication Foundation (WCF)는 분산된 응용 프로그램을 만들기 위한 풍부한 환경을 제공 합니다. COM +에서 호스팅되는 구성 요소 기반 응용 프로그램 논리를 이미 사용 하는 경우에 다시 작성 하지 않고 기존 논리를 확장 하려면 WCF를 사용할 수 있습니다. 일반 시나리오는 웹 서비스를 통해 기존 COM+ 또는 엔터프라이즈 서비스 비즈니스 논리를 노출하려는 경우입니다.  
@@ -49,7 +49,7 @@ Windows Communication Foundation (WCF)는 분산된 응용 프로그램을 만�
   
 - 개체 참조를 매개 변수로 전달하는 인터페이스 - 다음 제한된 개체 참조 방법에 대해서는 제한된 개체 참조 지원 단원에서 설명합니다.  
   
-- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] COM 상호 운용성 변환과 호환되지 않는 형식을 전달하는 인터페이스  
+- .NET Framework COM 운용성 변환과 호환 되지 않는 형식을 전달 하는 인터페이스입니다.  
   
 - COM+에서 호스트될 때 응용 프로그램 풀링을 사용하는 응용 프로그램의 인터페이스  
   

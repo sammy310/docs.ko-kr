@@ -8,12 +8,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 459f83ee52d0ab6421fe7be4a597d8e5174b4fd9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0cb0b78396731a9b8e127430cd06a9e71812d4fd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331301"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593029"
 ---
 # <a name="-out-c-compiler-options"></a>-out(C# 컴파일러 옵션)
 **-out** 옵션은 출력 파일의 이름을 지정합니다.  
@@ -35,9 +35,9 @@ ms.locfileid: "59331301"
   
  출력 파일의 이름을 지정하지 않을 경우  
   
--   .exe는 **Main** 메서드가 포함된 소스 코드 파일에서 해당 이름을 가져옵니다.  
+- .exe는 **Main** 메서드가 포함된 소스 코드 파일에서 해당 이름을 가져옵니다.  
   
--   .dll 또는 netmodule은 첫 번째 소스 코드 파일에서 해당 이름을 가져옵니다.  
+- .dll 또는 netmodule은 첫 번째 소스 코드 파일에서 해당 이름을 가져옵니다.  
   
  한 출력 파일을 컴파일하는 데 사용되는 소스 코드 파일을 동일한 컴파일에서 다른 출력 파일의 컴파일에 사용할 수 없습니다.  
   
