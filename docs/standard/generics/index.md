@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6a8792698d78b37fa42721f0ad82c0e0d3f7c8dd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8170dd2e2941be3a73f7a4fd8c37d4fb2ef96235
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622806"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592243"
 ---
 # <a name="generics-in-net"></a>.NET의 제네릭
 
@@ -119,7 +119,7 @@ ms.locfileid: "64622806"
   
  아래에는 제네릭의 몇 가지 제한이 나와 있습니다.  
   
-- 제네릭 형식은 <xref:System.MarshalByRefObject> 와 같은 대부분의 기본 클래스에서 파생될 수 있으며, 제약 조건을 사용하면 제네릭 형식 매개 변수가 <xref:System.MarshalByRefObject>와 같은 기본 클래스에서 파생되어야 하도록 지정할 수 있습니다. 그러나 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 에서는 컨텍스트에 바인딩된 제네릭 형식을 지원하지 않습니다. 제네릭 형식이 <xref:System.ContextBoundObject>에서 파생될 수는 있지만 해당 형식의 인스턴스를 만들려고 하면 <xref:System.TypeLoadException>이 발생합니다.  
+- 제네릭 형식은 <xref:System.MarshalByRefObject> 와 같은 대부분의 기본 클래스에서 파생될 수 있으며, 제약 조건을 사용하면 제네릭 형식 매개 변수가 <xref:System.MarshalByRefObject>와 같은 기본 클래스에서 파생되어야 하도록 지정할 수 있습니다. 그러나 .NET Framework에서는 컨텍스트에 바인딩된 제네릭 형식을 지원하지 않습니다. 제네릭 형식이 <xref:System.ContextBoundObject>에서 파생될 수는 있지만 해당 형식의 인스턴스를 만들려고 하면 <xref:System.TypeLoadException>이 발생합니다.  
   
 - 열거형은 제네릭 형식 매개 변수를 포함할 수 없습니다. 열거형은 Visual Basic, C# 또는 C++를 사용하여 정의되는 제네릭 형식에 중첩되는 경우 부수적으로만 제네릭이 될 수 있습니다. 자세한 내용은 [Common Type System](../../../docs/standard/base-types/common-type-system.md)에서 “열거”를 참조하세요.  
   

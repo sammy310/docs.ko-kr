@@ -8,17 +8,17 @@ helpviewer_keywords:
 - platform invoke, accessing APIs with C#
 - C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
-ms.openlocfilehash: 50f2a72bf4981a49d5597a9bc8922db81197d810
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b568bdc149123b490f3b058afc668aabcf558d55
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61710227"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585469"
 ---
 # <a name="interoperability-c-programming-guide"></a>상호 운용성(C# 프로그래밍 가이드)
 상호 운용성은 비관리 코드에 대한 기존 투자를 보존하고 활용할 수 있도록 합니다. CLR(공용 언어 런타임)의 제어 하에서 실행되는 코드를 *관리 코드*라고 하고, CLR 외부에서 실행되는 코드를 *비관리 코드*라고 합니다. COM, COM+, C++ 구성 요소, ActiveX 구성 요소 및 Microsoft Windows API는 비관리 코드의 예입니다.  
   
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]에서는 플랫폼 호출 서비스, <xref:System.Runtime.InteropServices> 네임스페이스, C++ 상호 운용성 및 COM 상호 운용성(COM interop)을 통해 비관리 코드와의 상호 운용이 가능합니다.  
+ .NET Framework에서는 플랫폼 호출 서비스, <xref:System.Runtime.InteropServices> 네임스페이스, C++ 상호 운용성 및 COM 상호 운용성(COM interop)을 통해 비관리 코드와의 상호 운용이 가능합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [상호 운용성 개요](../../../csharp/programming-guide/interop/interoperability-overview.md)  

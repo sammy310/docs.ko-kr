@@ -4,12 +4,12 @@ ms.date: 03/28/2018
 helpviewer_keywords:
 - programming, Visual Basic
 - Visual Basic
-ms.openlocfilehash: b10c520c1940b150566ab5766ca5afd2e0f03e08
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 13b887d6d01d3dc0f2018539a5893b261a3f5de3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797087"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590391"
 ---
 # <a name="visual-basic-guide"></a>Visual Basic 가이드
 
@@ -37,7 +37,7 @@ LINQ 및 XML 리터럴을 비롯한 Visual Basic의 중요 기능을 소개하�
 Visual Basic 언어 및 컴파일러 정보를 포함합니다.  
 
 [Visual Basic을 사용한 애플리케이션 개발](../visual-basic/developing-apps/index.md)\
-보안, 예외 처리, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]클래스 라이브러리 사용 등과 같이 Visual Basic을 사용한 개발의 다양한 측면을 설명합니다.
+보안, 예외 처리, .NET Framework 클래스 라이브러리 사용 등과 같이 Visual Basic을 사용한 개발의 다양한 측면을 설명합니다.
 
 [COM Interop](../visual-basic/programming-guide/com-interop/index.md)\
 Visual Basic을 사용하여 COM(구성 요소 개체 모델)을 만들고 사용하는 작업과 관련된 상호 운용성 문제에 대해 설명합니다.  
@@ -54,4 +54,4 @@ Visual Basic을 사용하여 COM(구성 요소 개체 모델)을 만들고 사�
 Visual Studio의 기본에 대해 알아보는 데 도움이 되는 항목의 링크를 제공합니다.  
   
 [.NET API 브라우저](../../api/index.md)\
-Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK에 포함된 클래스, 인터페이스, 값 형식 라이브러리에 대한 입문 정보를 제공합니다.
+Microsoft .NET Framework SDK에 포함된 클래스, 인터페이스, 값 형식 라이브러리에 대한 입문 정보를 제공합니다.
