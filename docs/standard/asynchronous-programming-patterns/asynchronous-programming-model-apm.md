@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cff235fe45c75fda51e04d5b0b54bb3ee03051b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16e500a645df2b58fb2d2fd402120556922d1800
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654310"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628952"
 ---
 # <a name="asynchronous-programming-model-apm"></a>APM(비동기 프로그래밍 모델)
 <xref:System.IAsyncResult> 디자인 패턴을 사용하는 비동기 작업은 각각 비동기 작업 *OperationName*을 시작하고 종료하는 `BeginOperationName` 및 `EndOperationName`이라는 두 개의 메서드로 구현됩니다. 예를 들어 <xref:System.IO.FileStream> 클래스는 파일에서 바이트를 비동기적으로 읽는 <xref:System.IO.FileStream.BeginRead%2A> 및 <xref:System.IO.FileStream.EndRead%2A> 메서드를 제공합니다. 이러한 메서드는 비동기 버전의 <xref:System.IO.FileStream.Read%2A> 메서드를 구현합니다.  
@@ -55,15 +55,15 @@ ms.locfileid: "54654310"
   
  애플리케이션 개발자는 비동기 작업의 결과에 액세스하기 위해 여러 디자인을 선택할 수 있습니다. 어떤 선택이 올바른 선택인지는 애플리케이션에 작업이 완료되는 동안 실행할 수 있는 지침이 있는지 여부에 따라 달라집니다. 비동기 작업의 결과를 받을 때까지 애플리케이션이 추가 작업을 수행할 수 없는 경우 결과를 사용할 수 있을 때까지 애플리케이션을 차단해야 합니다. 비동기 작업이 완료될 때까지 차단하려면 다음 방법 중 하나를 사용하면 됩니다.  
   
--   애플리케이션의 주 스레드에서 `EndOperationName`을 호출하여 작업이 완료될 때까지 애플리케이션 실행을 차단합니다. 이 기술을 설명하는 예제는 [비동기 작업을 종료하여 애플리케이션 실행 차단](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md)을 참조하세요.  
+- 애플리케이션의 주 스레드에서 `EndOperationName`을 호출하여 작업이 완료될 때까지 애플리케이션 실행을 차단합니다. 이 기술을 설명하는 예제는 [비동기 작업을 종료하여 애플리케이션 실행 차단](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md)을 참조하세요.  
   
--   <xref:System.IAsyncResult.AsyncWaitHandle%2A> 을 사용하여 하나 이상의 작업이 완료될 때까지 애플리케이션 실행을 차단할 수 있습니다. 이 방법을 설명하는 예제는 [Blocking Application Execution Using an AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md)을 참조하세요.  
+- <xref:System.IAsyncResult.AsyncWaitHandle%2A> 을 사용하여 하나 이상의 작업이 완료될 때까지 애플리케이션 실행을 차단할 수 있습니다. 이 방법을 설명하는 예제는 [Blocking Application Execution Using an AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md)을 참조하세요.  
   
  비동기 작업이 완료되는 동안 차단할 필요가 없는 애플리케이션은 다음 방법 중 하나를 사용할 수 있습니다.  
   
--   주기적으로 <xref:System.IAsyncResult.IsCompleted%2A> 속성을 확인하고 작업이 완료되면 `EndOperationName`을 호출하여 작업 완료 상태를 폴링합니다. 이 방법을 설명하는 예제는 [Polling for the Status of an Asynchronous Operation](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md)을 참조하세요.  
+- 주기적으로 <xref:System.IAsyncResult.IsCompleted%2A> 속성을 확인하고 작업이 완료되면 `EndOperationName`을 호출하여 작업 완료 상태를 폴링합니다. 이 방법을 설명하는 예제는 [Polling for the Status of an Asynchronous Operation](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md)을 참조하세요.  
   
--   <xref:System.AsyncCallback> 대리자를 사용하여 작업이 완료될 때 호출할 메서드를 지정합니다. 이 방법을 설명하는 예제는 [Using an AsyncCallback Delegate to End an Asynchronous Operation](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md)을 참조하세요.  
+- <xref:System.AsyncCallback> 대리자를 사용하여 작업이 완료될 때 호출할 메서드를 지정합니다. 이 방법을 설명하는 예제는 [Using an AsyncCallback Delegate to End an Asynchronous Operation](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 

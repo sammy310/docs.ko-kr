@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ba1ded1757d71a2b7839ae8b45489da53763b8e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 73440f2ed689bdad56bb1f05025f826da9c409e2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603614"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633331"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>.NET에서 숫자 문자열 구문 분석
 모든 숫자 형식에는 두 개의 정적 구문 분석 메서드인 `Parse` 및 `TryParse`가 있습니다. 이를 사용하여 숫자의 문자열 표현을 숫자 형식으로 변환할 수 있습니다. 이러한 메서드를 사용하면 [표준 숫자 서식 문자열](../../../docs/standard/base-types/standard-numeric-format-strings.md) 및 [사용자 지정 숫자 서식 문자열](../../../docs/standard/base-types/custom-numeric-format-strings.md)에서 설명하는 서식 문자열을 사용하여 생성된 문자열을 구문 분석할 수 있습니다. 기본적으로 `Parse` 및 `TryParse` 메서드는 정수 소수 자릿수를 포함하는 문자열을 정수 값으로 변환할 수 있습니다. 정수 및 소수 10진수 숫자, 그룹 구분 기호 및 소수 구분 기호를 포함하는 문자열을 부동 소수점 값으로 성공적으로 변환할 수 있습니다. 작업에 실패하면 `Parse` 메서드는 예외를 throw하지만 `TryParse` 메서드는 `false`를 반환합니다.  
@@ -28,9 +28,9 @@ ms.locfileid: "54603614"
   
  형식 공급자는 <xref:System.IFormatProvider> 구현으로 나타납니다. 이 인터페이스에는 단일 멤버인 <xref:System.IFormatProvider.GetFormat%2A> 메서드가 있으며, 이 메서드의 단일 매개 변수는 서식을 지정할 형식을 나타내는 <xref:System.Type> 개체입니다. 이 메서드는 서식 지정 정보를 제공하는 개체를 반환합니다. .NET에서는 숫자 문자열을 구문 분석하기 위해 다음과 같은 두 가지 <xref:System.IFormatProvider> 구현을 지원합니다.  
   
--   <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> 메서드가 문화권별 서식 지정 정보를 제공하는 <xref:System.Globalization.NumberFormatInfo> 개체를 반환하는 <xref:System.Globalization.CultureInfo> 개체.  
+- <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> 메서드가 문화권별 서식 지정 정보를 제공하는 <xref:System.Globalization.NumberFormatInfo> 개체를 반환하는 <xref:System.Globalization.CultureInfo> 개체.  
   
--   <xref:System.Globalization.NumberFormatInfo.GetFormat%2A?displayProperty=nameWithType> 메서드가 그 자체를 반환하는 <xref:System.Globalization.NumberFormatInfo> 개체.  
+- <xref:System.Globalization.NumberFormatInfo.GetFormat%2A?displayProperty=nameWithType> 메서드가 그 자체를 반환하는 <xref:System.Globalization.NumberFormatInfo> 개체.  
   
  다음 예제에서는 배열의 각 문자열을 <xref:System.Double> 값으로 변환하려고 합니다. 먼저 영어(미국) 문화권의 규칙을 반영하는 서식 공급자를 사용하여 문자열을 구문 분석하려고 합니다. 이 작업에서 <xref:System.FormatException>을 throw하는 경우 프랑스어(프랑스) 문화권의 규칙을 반영하는 형식 공급자를 사용하여 문자열을 구문 분석하려고 합니다.  
   

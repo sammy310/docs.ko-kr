@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce1855027e89f21d96e6cf761afcaaabb9b5138f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b39f91c5fabcfb5d7929a645b438b5db77f70956
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648221"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644927"
 ---
 # <a name="pausing-and-interrupting-threads"></a>스레드 일시 중지 및 중단
 
@@ -45,9 +45,9 @@ ms.locfileid: "54648221"
   
  대기가 관리되는 대기인 경우 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 둘 다 스레드를 즉시 깨웁니다. 대기가 관리되지 않는 대기인 경우(예: Win32 [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) 함수에 대한 플랫폼 호출) 스레드가 관리 코드로 반환되거나 호출할 때까지 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>는 스레드를 제어할 수 없습니다. 관리 코드에서 동작은 다음과 같습니다.  
   
--   <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>는 대기 상태에서 스레드를 깨우고 대상 스레드에서 <xref:System.Threading.ThreadInterruptedException>이 발생하게 합니다.  
+- <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>는 대기 상태에서 스레드를 깨우고 대상 스레드에서 <xref:System.Threading.ThreadInterruptedException>이 발생하게 합니다.  
   
--   <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>는 대기 상태에서 스레드를 깨우고 스레드에서 <xref:System.Threading.ThreadAbortException>을 throw합니다. 자세한 내용은 [스레드 제거](../../../docs/standard/threading/destroying-threads.md)를 참조하세요.  
+- <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>는 대기 상태에서 스레드를 깨우고 스레드에서 <xref:System.Threading.ThreadAbortException>을 throw합니다. 자세한 내용은 [스레드 제거](../../../docs/standard/threading/destroying-threads.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 

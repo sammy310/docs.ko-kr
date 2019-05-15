@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ca01234bf7adaca1337053bbc2bbba0731be3cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c4c56712460d772426a2d8d6d328cba9bb03373d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132043"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648672"
 ---
 # <a name="identifying-functions-in-dlls"></a>DLL 함수 식별
 DLL 함수 ID는 다음 요소로 구성됩니다.  
   
--   함수 이름 또는 서수  
+- 함수 이름 또는 서수  
   
--   구현을 찾을 수 있는 DLL 파일의 이름  
+- 구현을 찾을 수 있는 DLL 파일의 이름  
   
  예를 들어 User32.dll의 **MessageBox**함수는 함수(**MessageBox**) 및 해당 위치(User32.dll, User32 또는 user32)를 식별합니다. Microsoft Windows 애플리케이션 프로그래밍 인터페이스(Windows API)에는 문자와 문자열을 처리하는 각 함수의 두 가지 버전인 1바이트 문자 ANSI 버전 및 2바이트 문자 유니코드 버전이 포함될 수 있습니다. 지정하지 않을 경우 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> 필드로 표현되는 문자 집합은 기본적으로 ANSI로 설정됩니다. 일부 함수에는 버전이 세 개 이상 있을 수 있습니다.  
   

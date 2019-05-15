@@ -8,29 +8,29 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a944cf87783c59c21bffc9c48a18237c9fe6cdec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7b3b1ae2734715c4204ac1887921505b5592e79e
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295499"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64910764"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>방법: Tlbimp.exe를 사용하여 주 Interop 어셈블리 생성
 주 interop 어셈블리를 생성하는 다음 두 가지 방법이 있습니다.  
   
--   [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]에서 제공하는 [형식 라이브러리 가져오기(Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) 사용.  
+- [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]에서 제공하는 [형식 라이브러리 가져오기(Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) 사용.  
   
      주 interop 어셈블리를 생성하는 가장 간단한 방법은 [Tlbimp.exe(형식 라이브러리 가져오기)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)를 사용하는 것입니다. Tlbimp.exe는 다음과 같은 보호 기능을 제공합니다.  
   
-    -   중첩된 형식 라이브러리 참조에 대한 새 interop 어셈블리를 만들기 전에 등록된 다른 주 interop 어셈블리를 확인합니다.  
+    - 중첩된 형식 라이브러리 참조에 대한 새 interop 어셈블리를 만들기 전에 등록된 다른 주 interop 어셈블리를 확인합니다.  
   
-    -   컨테이너 또는 파일 이름을 지정하여 주 interop 어셈블리에 강력한 이름을 제공하지 않으면 주 interop 어셈블리를 내보내지 못합니다.  
+    - 컨테이너 또는 파일 이름을 지정하여 주 interop 어셈블리에 강력한 이름을 제공하지 않으면 주 interop 어셈블리를 내보내지 못합니다.  
   
-    -   종속 어셈블리에 대한 참조를 생략하면 주 interop 어셈블리를 내보내지 못합니다.  
+    - 종속 어셈블리에 대한 참조를 생략하면 주 interop 어셈블리를 내보내지 못합니다.  
   
-    -   주 interop 어셈블리가 아닌 종속 어셈블리에 대한 참조를 추가하면 주 interop 어셈블리를 내보내지 못합니다.  
+    - 주 interop 어셈블리가 아닌 종속 어셈블리에 대한 참조를 추가하면 주 interop 어셈블리를 내보내지 못합니다.  
   
--   C#과 같은 CLS(공용 언어 사양)를 준수하는 언어를 사용하여 소스 코드에서 수동으로 주 interop 어셈블리 만들기. 이 접근 방식은 형식 라이브러리를 사용할 수 없는 경우에 유용합니다.  
+- C#과 같은 CLS(공용 언어 사양)를 준수하는 언어를 사용하여 소스 코드에서 수동으로 주 interop 어셈블리 만들기. 이 접근 방식은 형식 라이브러리를 사용할 수 없는 경우에 유용합니다.  
   
  강력한 이름으로 어셈블리에 서명하려면 암호화 키 쌍이 있어야 합니다. 자세한 내용은 [키 쌍 만들기](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)를 참조하세요.  
   

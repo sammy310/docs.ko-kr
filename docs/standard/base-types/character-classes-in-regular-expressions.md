@@ -15,37 +15,37 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 079cb3e969ee2c6d4e0163106769765cd96e96b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54d190bfa3f13ccfc78dd2501018442afb281d37
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622951"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634704"
 ---
 # <a name="character-classes-in-regular-expressions"></a>정규식의 문자 클래스
 <a name="Top"></a> 문자 클래스는 문자 집합을 정의하며, 이 중 하나가 입력 문자열에서 발생하면 일치하는 것으로 판정할 수 있습니다. .NET의 정규식 언어는 다음과 같은 문자 클래스를 지원합니다.  
   
--   긍정 문자 그룹. 입력 문자열의 문자는 지정된 문자 집합 중 하나와 일치해야 합니다. 자세한 내용은 [긍정 문자 그룹](#PositiveGroup)을 참조하세요.  
+- 긍정 문자 그룹. 입력 문자열의 문자는 지정된 문자 집합 중 하나와 일치해야 합니다. 자세한 내용은 [긍정 문자 그룹](#PositiveGroup)을 참조하세요.  
   
--   부정 문자 그룹. 입력 문자열의 문자는 지정된 문자 집합 중 하나와 일치하면 안 됩니다. 자세한 내용은 [부정 문자 그룹](#NegativeGroup)을 참조하세요.  
+- 부정 문자 그룹. 입력 문자열의 문자는 지정된 문자 집합 중 하나와 일치하면 안 됩니다. 자세한 내용은 [부정 문자 그룹](#NegativeGroup)을 참조하세요.  
   
--   임의의 문자. 정규식의 `.`(점 또는 마침표) 문자는 `\n`을 제외한 모든 문자와 일치하는 와일드카드 문자입니다. 자세한 내용은 [임의의 문자](#AnyCharacter)를 참조하세요.  
+- 임의의 문자. 정규식의 `.`(점 또는 마침표) 문자는 `\n`을 제외한 모든 문자와 일치하는 와일드카드 문자입니다. 자세한 내용은 [임의의 문자](#AnyCharacter)를 참조하세요.  
   
--   일반 유니코드 범주 또는 명명된 블록입니다. 입력 문자열의 문자는 일치하는 것으로 판정하려면 특정 유니코드 범주의 멤버이거나 유니코드 문자의 연속된 범위 내에 있어야 합니다. 자세한 내용은 [유니코드 범주 또는 유니코드 블록](#CategoryOrBlock)을 참조하세요.  
+- 일반 유니코드 범주 또는 명명된 블록입니다. 입력 문자열의 문자는 일치하는 것으로 판정하려면 특정 유니코드 범주의 멤버이거나 유니코드 문자의 연속된 범위 내에 있어야 합니다. 자세한 내용은 [유니코드 범주 또는 유니코드 블록](#CategoryOrBlock)을 참조하세요.  
   
--   부정 일반 유니코드 범주 또는 명명된 블록입니다. 입력 문자열의 문자는 일치하는 것으로 판정하려면 특정 유니코드 범주의 멤버가 아니거나 유니코드 문자의 연속된 범위 내에 있으면 안 됩니다. 자세한 내용은 [부정 유니코드 범주 또는 유니코드 블록](#NegativeCategoryOrBlock)을 참조하세요.  
+- 부정 일반 유니코드 범주 또는 명명된 블록입니다. 입력 문자열의 문자는 일치하는 것으로 판정하려면 특정 유니코드 범주의 멤버가 아니거나 유니코드 문자의 연속된 범위 내에 있으면 안 됩니다. 자세한 내용은 [부정 유니코드 범주 또는 유니코드 블록](#NegativeCategoryOrBlock)을 참조하세요.  
   
--   단어 문자입니다. 입력 문자열의 문자는 단어에 있는 문자에 적합한 유니코드 범주에 속할 수 있습니다. 자세한 내용은 [단어 문자](#WordCharacter)를 참조하세요.  
+- 단어 문자입니다. 입력 문자열의 문자는 단어에 있는 문자에 적합한 유니코드 범주에 속할 수 있습니다. 자세한 내용은 [단어 문자](#WordCharacter)를 참조하세요.  
   
--   비단어 문자입니다. 입력 문자열의 문자는 단어 문자가 아닌 유니코드 범주에 속할 수 있습니다. 자세한 내용은 [단어가 아닌 문자](#NonWordCharacter)를 참조하세요.  
+- 비단어 문자입니다. 입력 문자열의 문자는 단어 문자가 아닌 유니코드 범주에 속할 수 있습니다. 자세한 내용은 [단어가 아닌 문자](#NonWordCharacter)를 참조하세요.  
   
--   공백 문자. 입력 문자열의 문자는 유니코드 구분 문자뿐만 아니라 많은 제어 문자 중 하나가 될 수 있습니다. 자세한 내용은 [공백 문자](#WhitespaceCharacter)를 참조하세요.  
+- 공백 문자. 입력 문자열의 문자는 유니코드 구분 문자뿐만 아니라 많은 제어 문자 중 하나가 될 수 있습니다. 자세한 내용은 [공백 문자](#WhitespaceCharacter)를 참조하세요.  
   
--   공백이 아닌 문자. 입력 문자열의 문자는 공백 문자가 아닌 문자를 사용할 수 있습니다. 자세한 내용은 [공백이 아닌 문자](#NonWhitespaceCharacter)를 참조하세요.  
+- 공백이 아닌 문자. 입력 문자열의 문자는 공백 문자가 아닌 문자를 사용할 수 있습니다. 자세한 내용은 [공백이 아닌 문자](#NonWhitespaceCharacter)를 참조하세요.  
   
--   10진수입니다. 입력 문자열의 문자는 유니코드 10진 자릿수로 분류된 모든 문자가 될 수 있습니다. 자세한 내용은 [10진수 숫자 문자](#DigitCharacter)를 참조하세요.  
+- 10진수입니다. 입력 문자열의 문자는 유니코드 10진 자릿수로 분류된 모든 문자가 될 수 있습니다. 자세한 내용은 [10진수 숫자 문자](#DigitCharacter)를 참조하세요.  
   
--   10진수가 아닙니다. 입력 문자열의 문자는 유니코드 10진수 이외의 문자는 모두 사용할 수 있습니다. 자세한 내용은 [10진수 숫자 문자](#NonDigitCharacter)를 참조하세요.  
+- 10진수가 아닙니다. 입력 문자열의 문자는 유니코드 10진수 이외의 문자는 모두 사용할 수 있습니다. 자세한 내용은 [10진수 숫자 문자](#NonDigitCharacter)를 참조하세요.  
   
  .NET에서는 한 문자 클래스에서 다른 문자 클래스를 제외한 결과로 문자 집합을 정의하는 데 사용할 수 있는 문자 클래스 빼기 식을 지원합니다. 자세한 내용은 [문자 클래스 빼기](#CharacterClassSubtraction)를 참조하세요.  
   
@@ -160,9 +160,9 @@ ms.locfileid: "54622951"
 ## <a name="any-character-"></a>임의의 문자: .  
  마침표 문자(.)는 `\n`(줄바꿈 문자, \u000A)를 제외하고 다음 두 한정자가 있는 모든 문자를 찾습니다.  
   
--   정규식 패턴이 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 옵션에 의해 수정되거나 `.` 문자 클래스를 포함하는 패턴의 일부가 `s` 옵션에 의해 수정되는 경우 `.`가 문자를 일치시킵니다. 자세한 내용은 [정규식 옵션](../../../docs/standard/base-types/regular-expression-options.md)을 참조하세요.  
+- 정규식 패턴이 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 옵션에 의해 수정되거나 `.` 문자 클래스를 포함하는 패턴의 일부가 `s` 옵션에 의해 수정되는 경우 `.`가 문자를 일치시킵니다. 자세한 내용은 [정규식 옵션](../../../docs/standard/base-types/regular-expression-options.md)을 참조하세요.  
   
-     다음 예제에서는 기본 및 `.` 옵션으로 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 문자 클래스의 다른 동작을 보여 줍니다. 정규식 `^.+`는 문자열의 시작 부분에서 시작하여 모든 문자를 찾습니다. 기본적으로 일치는 첫 번째 줄의 끝 부분에서 끝납니다. 정규식 패턴은 캐리지 리턴 문자, `\r` 또는 \u000D와 일치하지만 `\n`과는 일치하지 않습니다. <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 옵션은 전체 입력 문자열을 한 줄로 해석하기 때문에 `\n`을 포함하여 입력 문자열의 모든 문자와 일치합니다.  
+     다음 예제에서는 기본 및 `.` 옵션으로 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 문자 클래스의 다른 동작을 보여줍니다. 정규식 `^.+`는 문자열의 시작 부분에서 시작하여 모든 문자를 찾습니다. 기본적으로 일치는 첫 번째 줄의 끝 부분에서 끝납니다. 정규식 패턴은 캐리지 리턴 문자, `\r` 또는 \u000D와 일치하지만 `\n`과는 일치하지 않습니다. <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 옵션은 전체 입력 문자열을 한 줄로 해석하기 때문에 `\n`을 포함하여 입력 문자열의 모든 문자와 일치합니다.  
   
      [!code-csharp[Conceptual.Regex.Language.CharacterClasses#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/any2.cs#5)]
      [!code-vb[Conceptual.Regex.Language.CharacterClasses#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any2.vb#5)]  
@@ -170,7 +170,7 @@ ms.locfileid: "54622951"
 > [!NOTE]
 >  `\n`을 제외한 모든 문자와 일치하기 때문에 `.` 문자 클래스가 `\r`(캐리지 리턴 문자, \u000D)과도 일치합니다.  
   
--   긍정 또는 부정 문자 그룹의 마침표는 문자 클래스가 아니라 리터럴 마침표 문자로 처리됩니다. 자세한 내용은 이 항목 앞부분의 [긍정 문자 그룹](#PositiveGroup) 및 [부정 문자 그룹](#NegativeGroup)을 참조하세요. 다음 예제는 문자 클래스와 긍정 문자 그룹으로 마침표 문자(`.`)를 포함하는 정규식을 정의하는 그림을 제공합니다. `\b.*[.?!;:](\s|\z)` 정규식은 단어 경계에서 시작하여 마침표를 포함하여 다섯 가지 문장 부호 중 하나와 만날 때까지 임의의 문자를 찾은 다음 공백 문자 또는 문자열 끝을 찾습니다.  
+- 긍정 또는 부정 문자 그룹의 마침표는 문자 클래스가 아니라 리터럴 마침표 문자로 처리됩니다. 자세한 내용은 이 항목 앞부분의 [긍정 문자 그룹](#PositiveGroup) 및 [부정 문자 그룹](#NegativeGroup)을 참조하세요. 다음 예제는 문자 클래스와 긍정 문자 그룹으로 마침표 문자(`.`)를 포함하는 정규식을 정의하는 그림을 제공합니다. `\b.*[.?!;:](\s|\z)` 정규식은 단어 경계에서 시작하여 마침표를 포함하여 다섯 가지 문장 부호 중 하나와 만날 때까지 임의의 문자를 찾은 다음 공백 문자 또는 문자열 끝을 찾습니다.  
   
      [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/any1.cs#4)]
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
@@ -326,7 +326,7 @@ ms.locfileid: "54622951"
 |\b|단어 경계에서 일치 항목 찾기를 시작합니다.|  
 |\w+|하나 이상의 단어 문자를 찾습니다.|  
 |(e)?|"e"를 0개 또는 한 개 찾습니다.|  
-|s|"s"를 찾습니다.|  
+|초|"s"를 찾습니다.|  
 |(\s&#124;$)|공백 문자 또는 입력 문자열의 끝을 찾습니다.|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/whitespace1.cs#10)]

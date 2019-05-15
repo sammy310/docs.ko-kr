@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cafb15f691daa8d0d0e6c1ebab3cb89f7c811612
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fadccdf35429babce6e101d336c9ea1de150b276
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095102"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648604"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>여러 형식의 배열 마샬링
 배열은 동일한 형식의 요소를 하나 이상 포함하는 관리 코드의 참조 형식입니다. 배열은 참조 형식이지만 관리되지 않는 함수에 In 매개 변수로 전달됩니다. 이 동작은 관리되는 배열이 관리되는 개체에 전달되는 방식(In/Out 매개 변수로)과 일치하지 않습니다. 자세한 내용은 [복사 및 고정](copying-and-pinning.md)을 참조하세요.  
@@ -34,53 +34,53 @@ ms.locfileid: "59095102"
 ## <a name="example"></a>예제  
  이 샘플에서는 다음 형식의 배열을 전달하는 방법을 보여 줍니다.  
   
--   값 형식 정수 배열  
+- 값 형식 정수 배열  
   
--   크기를 조정할 수 있는 참조 형식 정수 배열  
+- 크기를 조정할 수 있는 참조 형식 정수 배열  
   
--   값 형식 정수의 다차원 배열(행렬)  
+- 값 형식 정수의 다차원 배열(행렬)  
   
--   값 형식 문자열 배열  
+- 값 형식 문자열 배열  
   
--   정수를 포함하는 구조체 배열  
+- 정수를 포함하는 구조체 배열  
   
--   문자열을 포함하는 구조체 배열  
+- 문자열을 포함하는 구조체 배열  
   
  배열이 참조에 의해 명시적으로 마샬링되지 않은 한 기본 동작은 배열을 In 매개 변수로 마샬링합니다. <xref:System.Runtime.InteropServices.InAttribute> 및 <xref:System.Runtime.InteropServices.OutAttribute> 특성을 명시적으로 적용하면 이 동작을 변경할 수 있습니다.  
   
  Arrays 샘플에서는 원래 함수 선언과 함께 표시되는 다음과 같은 관리되지 않는 함수를 사용합니다.  
   
--   PinvokeLib.dll에서 내보낸**TestArrayOfInts**   
+- PinvokeLib.dll에서 내보낸**TestArrayOfInts**   
   
     ```  
     int TestArrayOfInts(int* pArray, int pSize);  
     ```  
   
--   PinvokeLib.dll에서 내보낸**TestRefArrayOfInts**   
+- PinvokeLib.dll에서 내보낸**TestRefArrayOfInts**   
   
     ```  
     int TestRefArrayOfInts(int** ppArray, int* pSize);  
     ```  
   
--   PinvokeLib.dll에서 내보낸**TestMatrixOfInts**   
+- PinvokeLib.dll에서 내보낸**TestMatrixOfInts**   
   
     ```  
     int TestMatrixOfInts(int pMatrix[][COL_DIM], int row);  
     ```  
   
--   PinvokeLib.dll에서 내보낸**TestArrayOfStrings**   
+- PinvokeLib.dll에서 내보낸**TestArrayOfStrings**   
   
     ```  
     int TestArrayOfStrings(char** ppStrArray, int size);  
     ```  
   
--   PinvokeLib.dll에서 내보낸**TestArrayOfStructs**   
+- PinvokeLib.dll에서 내보낸**TestArrayOfStructs**   
   
     ```  
     int TestArrayOfStructs(MYPOINT* pPointArray, int size);  
     ```  
   
--   PinvokeLib.dll에서 내보낸**TestArrayOfStructs2**   
+- PinvokeLib.dll에서 내보낸**TestArrayOfStructs2**   
   
     ```  
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  

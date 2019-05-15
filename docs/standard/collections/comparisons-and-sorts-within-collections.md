@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 45f0e30efac32dec42cf0687fa0da40f4d6dca4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1a5fa5113afdfb94a0b035b83cb59946d0970c9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551828"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664590"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>컬렉션 내에서 비교 및 정렬
 <xref:System.Collections> 클래스는 제거할 요소 검색, 키-값 쌍의 값 반환 등 컬렉션 관리와 관련된 거의 모든 프로세스에서 비교를 수행합니다.  
@@ -30,9 +30,9 @@ ms.locfileid: "54551828"
 ## <a name="checking-for-equality"></a>같음 확인  
  `Contains`, <xref:System.Collections.IList.IndexOf%2A>, <xref:System.Collections.Generic.List%601.LastIndexOf%2A>, `Remove` 등의 메서드는 컬렉션 요소에 대해 같음 비교자를 사용합니다. 제네릭 컬렉션의 경우 다음 지침에 따라 항목이 같은지를 비교합니다.  
   
--   T 형식이 <xref:System.IEquatable%601> 제네릭 인터페이스를 구현하는 경우 같음 비교자는 해당 인터페이스의 <xref:System.IEquatable%601.Equals%2A> 메서드입니다.  
+- T 형식이 <xref:System.IEquatable%601> 제네릭 인터페이스를 구현하는 경우 같음 비교자는 해당 인터페이스의 <xref:System.IEquatable%601.Equals%2A> 메서드입니다.  
   
--   T 형식이 <xref:System.IEquatable%601>을 구현하지 않는 경우에는 <xref:System.Object.Equals%2A?displayProperty=nameWithType> 가 사용됩니다.  
+- T 형식이 <xref:System.IEquatable%601>을 구현하지 않는 경우에는 <xref:System.Object.Equals%2A?displayProperty=nameWithType> 가 사용됩니다.  
   
  또한 사전 컬렉션의 일부 생성자 오버로드는 키가 같은지를 비교하는 데 사용되는 <xref:System.Collections.Generic.IEqualityComparer%601> 구현을 허용합니다. 예제를 보려면 <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A?displayProperty=nameWithType> 생성자를 참조하세요.  
   
@@ -42,11 +42,11 @@ ms.locfileid: "54551828"
   
  기본 비교자는 비교 대상 개체 중 하나 이상을 사용하여 **IComparable** 인터페이스를 구현합니다. 사용되는 모든 클래스에 대해 **IComparable** 을 목록 컬렉션의 값 또는 사전 컬렉션의 키로 구현하는 것이 좋습니다. 제네릭 컬렉션의 경우 다음 기준에 따라 같음 비교를 결정합니다.  
   
--   T 형식이 <xref:System.IComparable%601?displayProperty=nameWithType> 제네릭 인터페이스를 구현하는 경우 기본 비교자는 해당 인터페이스의 <xref:System.IComparable%601.CompareTo%28%600%29?displayProperty=nameWithType> 메서드입니다.  
+- T 형식이 <xref:System.IComparable%601?displayProperty=nameWithType> 제네릭 인터페이스를 구현하는 경우 기본 비교자는 해당 인터페이스의 <xref:System.IComparable%601.CompareTo%28%600%29?displayProperty=nameWithType> 메서드입니다.  
   
--   T 형식이 제네릭이 아닌 <xref:System.IComparable?displayProperty=nameWithType> 인터페이스를 구현하는 경우 기본 비교자는 해당 인터페이스의 <xref:System.IComparable.CompareTo%28System.Object%29?displayProperty=nameWithType> 메서드입니다.  
+- T 형식이 제네릭이 아닌 <xref:System.IComparable?displayProperty=nameWithType> 인터페이스를 구현하는 경우 기본 비교자는 해당 인터페이스의 <xref:System.IComparable.CompareTo%28System.Object%29?displayProperty=nameWithType> 메서드입니다.  
   
--   T 형식이 두 인터페이스를 모두 구현하지 않는 경우에는 기본 비교자가 없으며 비교자 또는 비교 대리자를 명시적으로 제공해야 합니다.  
+- T 형식이 두 인터페이스를 모두 구현하지 않는 경우에는 기본 비교자가 없으며 비교자 또는 비교 대리자를 명시적으로 제공해야 합니다.  
   
  명시적 비교를 제공할 수 있도록 일부 메서드는 매개 변수로 **IComparer** 구현을 허용합니다. 예를 들어 <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> 메서드는 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 구현을 허용합니다.  
   

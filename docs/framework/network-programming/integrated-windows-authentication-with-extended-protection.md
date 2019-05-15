@@ -2,12 +2,12 @@
 title: 확장된 보호를 사용하는 Windows 통합 인증
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-ms.openlocfilehash: 3088d59a91b5caa75cda3e40a5203874c24325cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 672737471c7c73e7ddd03d26d00d30cff3e23ec4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325724"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647401"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>확장된 보호를 사용하는 Windows 통합 인증
 <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream>, 그리고 <xref:System.Net> 및 관련 네임스페이스의 관련 클래스에 의해 Windows 통합 인증이 처리되는 방식에 영향을 미치는 기능이 향상되었습니다. 보안을 강화하기 위한 확장된 보호에 대한 지원이 추가되었습니다.  
@@ -39,21 +39,21 @@ ms.locfileid: "59325724"
   
  서비스 바인딩 정보는 특정 서비스 엔드포인트에 대해 인증하고자 하는 클라이언트의 의도를 나타냅니다. 다음 속성을 사용하여 클라이언트에서 서버로 전달합니다.  
   
--   분명한 텍스트 형식으로 클라이언트 인증을 수행하는 서버에서 SPN 값을 사용할 수 있어야 합니다.  
+- 분명한 텍스트 형식으로 클라이언트 인증을 수행하는 서버에서 SPN 값을 사용할 수 있어야 합니다.  
   
--   SPN 값은 공용입니다.  
+- SPN 값은 공용입니다.  
   
--   메시지 가로채기(man-in-the-middle) 공격이 값을 삽입, 제거 또는 수정할 수 없도록 SPN은 이동 중에 암호로 보호되어야 합니다.  
+- 메시지 가로채기(man-in-the-middle) 공격이 값을 삽입, 제거 또는 수정할 수 없도록 SPN은 이동 중에 암호로 보호되어야 합니다.  
   
  CBT는 내부 클라이언트 인증 채널을 통해 대화에 연결(바인딩)하는 데 사용되는 외부 보안 채널(예: TLS)의 속성입니다. CBT에는 다음 속성이 있어야 합니다(IETF RFC 5056에서도 정의됨).  
   
--   외부 채널이 있는 경우 CBT 값은 대화의 클라이언트 및 서버 쪽에서 개별적으로 도착하는 외부 채널 또는 서버 엔드포인트를 식별하는 속성이어야 합니다.  
+- 외부 채널이 있는 경우 CBT 값은 대화의 클라이언트 및 서버 쪽에서 개별적으로 도착하는 외부 채널 또는 서버 엔드포인트를 식별하는 속성이어야 합니다.  
   
--   클라이언트에서 보낸 CBT의 값은 공격자가 영향을 미칠 수 있는 것이 아니어야 합니다.  
+- 클라이언트에서 보낸 CBT의 값은 공격자가 영향을 미칠 수 있는 것이 아니어야 합니다.  
   
--   CBT 값의 기밀성은 보장되지 않습니다. 그러나 이것은 서비스 바인딩 및 채널 바인딩 정보의 값이 항상 인증을 수행하는 서버를 제외한 다른 서버에서 검사될 수 있음을 의미하지 않습니다. CBT를 전달하는 프로토콜이 값을 암호화 중일 수 있기 때문입니다.  
+- CBT 값의 기밀성은 보장되지 않습니다. 그러나 이것은 서비스 바인딩 및 채널 바인딩 정보의 값이 항상 인증을 수행하는 서버를 제외한 다른 서버에서 검사될 수 있음을 의미하지 않습니다. CBT를 전달하는 프로토콜이 값을 암호화 중일 수 있기 때문입니다.  
   
--   공격자가 값을 삽입, 제거 또는 수정할 수 없도록 CBT는 이동 중에 무결성이 암호로 보호되어야 합니다.  
+- 공격자가 값을 삽입, 제거 또는 수정할 수 없도록 CBT는 이동 중에 무결성이 암호로 보호되어야 합니다.  
   
  채널 바인딩은 조작 방지 방식으로 SPN 및 CBT를 서버에 전송하는 클라이언트에서 수행됩니다. 서버는 정책에 따라 채널 바인딩 정보의 유효성을 검사하고 의도된 대상인지 확신할 수 없는 인증 시도를 거부합니다. 이 방식으로 두 개의 채널이 함께 암호로 바인딩됩니다.  
   
@@ -72,37 +72,37 @@ ms.locfileid: "59325724"
   
  다음 요소가 포함된 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>:  
   
--   운영 체제에서 확장된 보호를 사용하는 Windows 통합 인증을 지원하는지 여부를 나타내는 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.OSSupportsExtendedProtection%2A> 속성.  
+- 운영 체제에서 확장된 보호를 사용하는 Windows 통합 인증을 지원하는지 여부를 나타내는 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.OSSupportsExtendedProtection%2A> 속성.  
   
--   확장된 보호 정책을 적용할 시기를 나타내는 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> 값입니다.  
+- 확장된 보호 정책을 적용할 시기를 나타내는 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> 값입니다.  
   
--   배포 시나리오를 나타내는 <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> 값. 이 값은 확장된 보호를 확인하는 방법에 영향을 줍니다.  
+- 배포 시나리오를 나타내는 <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> 값. 이 값은 확장된 보호를 확인하는 방법에 영향을 줍니다.  
   
--   인증의 의도된 대상인 클라이언트 제공 SPN과 일치하는지 확인하는 데 사용되는 사용자 지정 SPN 목록이 포함된 선택적 <xref:System.Security.Authentication.ExtendedProtection.ServiceNameCollection>.  
+- 인증의 의도된 대상인 클라이언트 제공 SPN과 일치하는지 확인하는 데 사용되는 사용자 지정 SPN 목록이 포함된 선택적 <xref:System.Security.Authentication.ExtendedProtection.ServiceNameCollection>.  
   
--   유효성 검사에 사용할 사용자 지정 채널 바인딩이 포함된 선택적 <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding>. 이 시나리오는 일반적인 경우가 아닙니다.  
+- 유효성 검사에 사용할 사용자 지정 채널 바인딩이 포함된 선택적 <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding>. 이 시나리오는 일반적인 경우가 아닙니다.  
   
  <xref:System.Security.Authentication.ExtendedProtection.Configuration> 네임스페이스는 애플리케이션의 확장된 보호를 사용하여 인증 구성을 지원합니다.  
   
  기존 <xref:System.Net> 네임스페이스에서 확장된 보호를 지원하기 위해 다양한 기능이 변경되었습니다. 변경 내용은 다음과 같습니다.  
   
--   <xref:System.Net> 네임스페이스에 전송 컨텍스트를 나타내는 새로운 <xref:System.Net.TransportContext> 클래스가 추가되었습니다.  
+- <xref:System.Net> 네임스페이스에 전송 컨텍스트를 나타내는 새로운 <xref:System.Net.TransportContext> 클래스가 추가되었습니다.  
   
--   클라이언트 애플리케이션에 대한 확장된 보호를 지원하기 위해 <xref:System.Net.TransportContext>를 검색할 수 있는 <xref:System.Net.HttpWebRequest> 클래스의 새로운 <xref:System.Net.HttpWebRequest.EndGetRequestStream%2A> 및 <xref:System.Net.HttpWebRequest.GetRequestStream%2A> 오버로드 메서드가 추가되었습니다.  
+- 클라이언트 애플리케이션에 대한 확장된 보호를 지원하기 위해 <xref:System.Net.TransportContext>를 검색할 수 있는 <xref:System.Net.HttpWebRequest> 클래스의 새로운 <xref:System.Net.HttpWebRequest.EndGetRequestStream%2A> 및 <xref:System.Net.HttpWebRequest.GetRequestStream%2A> 오버로드 메서드가 추가되었습니다.  
   
--   서버 애플리케이션을 지원하기 위해 <xref:System.Net.HttpListener> 및 <xref:System.Net.HttpListenerRequest> 클래스가 추가되었습니다.  
+- 서버 애플리케이션을 지원하기 위해 <xref:System.Net.HttpListener> 및 <xref:System.Net.HttpListenerRequest> 클래스가 추가되었습니다.  
   
  기존 <xref:System.Net.Mail> 네임스페이스에서 SMTP 클라이언트 애플리케이션에 대한 확장된 보호를 지원하기 위해 기능이 다음과 같이 변경되었습니다.  
   
--   SMTP 클라이언트 애플리케이션에 대한 확장된 보호를 사용할 때 인증에 사용할 SPN을 나타내는 <xref:System.Net.Mail.SmtpClient> 클래스의 <xref:System.Net.Mail.SmtpClient.TargetName%2A> 속성이 추가되었습니다.  
+- SMTP 클라이언트 애플리케이션에 대한 확장된 보호를 사용할 때 인증에 사용할 SPN을 나타내는 <xref:System.Net.Mail.SmtpClient> 클래스의 <xref:System.Net.Mail.SmtpClient.TargetName%2A> 속성이 추가되었습니다.  
   
  기존 <xref:System.Net.Security> 네임스페이스에서 확장된 보호를 지원하기 위해 다양한 기능이 변경되었습니다. 변경 내용은 다음과 같습니다.  
   
--   클라이언트 애플리케이션에 대한 확장된 보호를 지원하기 위해 CBT를 전달할 수 있는 <xref:System.Net.Security.NegotiateStream> 클래스의 새로운 <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient%2A> 및 <xref:System.Net.Security.NegotiateStream.AuthenticateAsClient%2A> 오버로드 메서드가 추가되었습니다.  
+- 클라이언트 애플리케이션에 대한 확장된 보호를 지원하기 위해 CBT를 전달할 수 있는 <xref:System.Net.Security.NegotiateStream> 클래스의 새로운 <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient%2A> 및 <xref:System.Net.Security.NegotiateStream.AuthenticateAsClient%2A> 오버로드 메서드가 추가되었습니다.  
   
--   서버 애플리케이션에 대한 확장된 보호를 지원하기 위해 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>를 전달할 수 있는 <xref:System.Net.Security.NegotiateStream> 클래스의 새로운 <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsServer%2A> 및 <xref:System.Net.Security.NegotiateStream.AuthenticateAsServer%2A> 오버로드 메서드가 추가되었습니다.  
+- 서버 애플리케이션에 대한 확장된 보호를 지원하기 위해 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>를 전달할 수 있는 <xref:System.Net.Security.NegotiateStream> 클래스의 새로운 <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsServer%2A> 및 <xref:System.Net.Security.NegotiateStream.AuthenticateAsServer%2A> 오버로드 메서드가 추가되었습니다.  
   
--   클라이언트 및 서버 애플리케이션에 대한 확장된 보호를 지원하기 위해 <xref:System.Net.Security.SslStream> 클래스의 새로운 <xref:System.Net.Security.SslStream.TransportContext%2A> 속성이 추가되었습니다.  
+- 클라이언트 및 서버 애플리케이션에 대한 확장된 보호를 지원하기 위해 <xref:System.Net.Security.SslStream> 클래스의 새로운 <xref:System.Net.Security.SslStream.TransportContext%2A> 속성이 추가되었습니다.  
   
  <xref:System.Net.Security> 네임스페이스에서 SMTP 클라이언트에 대한 확장된 보호 구성을 지원하기 위해 <xref:System.Net.Configuration.SmtpNetworkElement> 속성이 추가되었습니다.  
   

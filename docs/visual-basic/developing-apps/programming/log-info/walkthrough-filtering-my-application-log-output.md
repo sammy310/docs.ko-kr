@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: 25d2177eed9ef83ba8f2575668e72dc21c2cd43f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e32f36a0490a198078f8357f3603c91cc50cb3b8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298398"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647089"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>연습: My.Application.Log 출력 필터링(Visual Basic)
 이 연습에서는 `My.Application.Log` 개체에 대한 기본 로그 필터링을 변경하여 `Log` 개체에서 수신기로 전달되는 정보 및 수신기가 작성하는 정보를 제어하는 방법을 보여 줍니다. 구성 정보가 애플리케이션의 구성 파일에 저장되므로 애플리케이션을 빌드한 후에도 로깅 동작을 변경할 수 있습니다.  
@@ -77,11 +77,11 @@ ms.locfileid: "59298398"
   
      app.config 파일이 없는 경우  
   
-    1.  **프로젝트** 메뉴에서 **새 항목 추가**를 선택합니다.  
+    1. **프로젝트** 메뉴에서 **새 항목 추가**를 선택합니다.  
   
-    2.  **새 항목 추가** 대화 상자에서 **애플리케이션 구성 파일**을 선택합니다.  
+    2. **새 항목 추가** 대화 상자에서 **애플리케이션 구성 파일**을 선택합니다.  
   
-    3.  **추가**를 클릭합니다.  
+    3. **추가**를 클릭합니다.  
   
 2. 최상위 `<configuration>` 섹션의 `<system.diagnostics>` 섹션에 있는 `<switches>` 섹션으로 이동합니다.  
   
@@ -152,11 +152,11 @@ ms.locfileid: "59298398"
   
      app.config 파일이 없는 경우  
   
-    1.  **프로젝트** 메뉴에서 **새 항목 추가**를 선택합니다.  
+    1. **프로젝트** 메뉴에서 **새 항목 추가**를 선택합니다.  
   
-    2.  **새 항목 추가** 대화 상자에서 **애플리케이션 구성 파일**을 선택합니다.  
+    2. **새 항목 추가** 대화 상자에서 **애플리케이션 구성 파일**을 선택합니다.  
   
-    3.  **추가**를 클릭합니다.  
+    3. **추가**를 클릭합니다.  
   
 2. **솔루션 탐색기**에서 app.config를 마우스 오른쪽 단추로 클릭합니다. **열기**를 선택합니다.  
   

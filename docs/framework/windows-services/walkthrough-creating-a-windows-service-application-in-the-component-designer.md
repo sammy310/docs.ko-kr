@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 35ef113acffbebdcd4cb585970e575f17959f75b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8d30b7b98648e36a3008ac015f9560620f77b363
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59518034"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751828"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>자습서: Windows 서비스 앱 만들기
 
@@ -32,13 +32,13 @@ ms.locfileid: "59518034"
 
    > [!NOTE]
    > **Windows 서비스** 템플릿이 표시되지 않는 경우 **.NET 데스크톱 개발** 워크로드를 설치해야 할 수 있습니다.
-   >  
+   >
    > **새 프로젝트** 대화 상자의 왼쪽 하단에서 **Visual Studio 설치 관리자 열기**를 선택합니다. **.NET 데스크톱 개발** 워크로드를 선택한 다음, **수정**을 선택합니다.
 
 3. **이름**에서 *MyNewService*를 입력한 다음, **확인**을 선택합니다.
 
    **디자인** 탭이 표시됩니다(**Service1.cs [디자인]** 또는 **Service1.vb [디자인]**).
-   
+
    프로젝트 템플릿은 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>에서 상속된 `Service1`이라는 구성 요소 클래스를 포함합니다. 여기에는 서비스를 시작하는 코드 등의 많은 기본 서비스 코드가 포함됩니다.
 
 ## <a name="rename-the-service"></a>서비스 이름 바꾸기
@@ -53,11 +53,11 @@ ms.locfileid: "59518034"
 
     ![이름 바꾸기 프롬프트](media/windows-service-rename.png "Windows 서비스 이름 바꾸기 프롬프트")
 
-2. **디자인** 탭의 바로 가기 메뉴에서 **속성**을 선택합니다. **속성** 창에서 **ServiceName** 값을 *MyNewService*로 변경합니다.
+3. **디자인** 탭의 바로 가기 메뉴에서 **속성**을 선택합니다. **속성** 창에서 **ServiceName** 값을 *MyNewService*로 변경합니다.
 
     ![서비스 속성](media/windows-service-properties.png "Windows 서비스 속성")
 
-3. **파일** 메뉴에서 **모두 저장**을 선택합니다.
+4. **파일** 메뉴에서 **모두 저장**을 선택합니다.
 
 ## <a name="add-features-to-the-service"></a>서비스에 기능 추가
 
@@ -97,7 +97,7 @@ ms.locfileid: "59518034"
 
 #### <a name="polling"></a>폴링
 
-서비스 애플리케이션은 오랫동안 실행되도록 설계되므로 대개 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 메서드에서 설정한 시스템을 폴링하거나 모니터링합니다. 서비스의 작업이 시작되고 나면 `OnStart` 메서드가 운영 체제에 반환되어야 시스템이 차단되지 않습니다. 
+서비스 애플리케이션은 오랫동안 실행되도록 설계되므로 대개 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 메서드에서 설정한 시스템을 폴링하거나 모니터링합니다. 서비스의 작업이 시작되고 나면 `OnStart` 메서드가 운영 체제에 반환되어야 시스템이 차단되지 않습니다.
 
 간단한 폴링 메커니즘을 설정하려면 <xref:System.Timers.Timer?displayProperty=nameWithType> 구성 요소를 사용합니다. 타이머가 일정 간격으로 <xref:System.Timers.Timer.Elapsed> 이벤트를 발생시키며 서비스는 이벤트가 발생했을 때 모니터링을 수행할 수 있습니다. <xref:System.Timers.Timer> 구성 요소는 다음과 같이 사용합니다.
 
@@ -173,7 +173,7 @@ ms.locfileid: "59518034"
 
 ### <a name="define-other-actions-for-the-service"></a>서비스의 다른 동작 정의
 
-<xref:System.ServiceProcess.ServiceBase.OnPause%2A>, <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> 및 <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> 메서드를 재정의하여 구성 요소에 대한 처리 작업을 추가로 정의할 수 있습니다. 
+<xref:System.ServiceProcess.ServiceBase.OnPause%2A>, <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> 및 <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> 메서드를 재정의하여 구성 요소에 대한 처리 작업을 추가로 정의할 수 있습니다.
 
 다음 코드에서는 `MyNewService` 클래스에서 <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> 메서드를 재정의하는 방법을 보여 줍니다.
 
@@ -182,7 +182,7 @@ ms.locfileid: "59518034"
 
 ## <a name="set-service-status"></a>서비스 상태 설정
 
-서비스는 [서비스 제어 관리자](/windows/desktop/Services/service-control-manager)에 상태를 보고합니다. 따라서 사용자는 서비스가 정상적으로 작동 중인지를 확인할 수 있습니다. 기본적으로 <xref:System.ServiceProcess.ServiceBase>에서 상속되는 서비스는 SERVICE_STOPPED, SERVICE_PAUSED 및 SERVICE_RUNNING을 포함하여 제한된 상태 설정 세트를 보고합니다. 서비스를 시작하는 데 시간이 걸리는 경우에는 SERVICE_START_PENDING 상태를 보고하면 도움이 됩니다. 
+서비스는 [서비스 제어 관리자](/windows/desktop/Services/service-control-manager)에 상태를 보고합니다. 따라서 사용자는 서비스가 정상적으로 작동 중인지를 확인할 수 있습니다. 기본적으로 <xref:System.ServiceProcess.ServiceBase>에서 상속되는 서비스는 SERVICE_STOPPED, SERVICE_PAUSED 및 SERVICE_RUNNING을 포함하여 제한된 상태 설정 세트를 보고합니다. 서비스를 시작하는 데 시간이 걸리는 경우에는 SERVICE_START_PENDING 상태를 보고하면 도움이 됩니다.
 
 또한 Windows [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) 함수를 호출하는 코드를 추가하여 SERVICE_START_PENDING 및 SERVICE_STOP_PENDING 상태 설정을 구현할 수 있습니다.
 
@@ -319,7 +319,7 @@ ms.locfileid: "59518034"
 
     ' Update the service state to Stopped.
     serviceStatus.dwCurrentState = ServiceState.SERVICE_STOPPED
-    SetServiceStatus(Me.ServiceHandle, serviceStatus)    
+    SetServiceStatus(Me.ServiceHandle, serviceStatus)
     ```
 
 ## <a name="add-installers-to-the-service"></a>서비스에 설치 관리자 추가
@@ -332,27 +332,27 @@ Windows 서비스를 실행하려면 해당 서비스를 설치해야 합니다.
 
      기본적으로 Visual Studio는 이름이 `ProjectInstaller`인 구성 요소 클래스를 추가하고 여기에는 프로젝트에 대한 두 개의 설치 관리자가 포함되어 있습니다. 이러한 설치 관리자는 서비스 및 서비스에 연결된 프로세스에 사용됩니다.
 
-4. **ProjectInstaller**의 **디자인**뷰에서 Visual C# 프로젝트의 경우 **serviceInstaller1**을 선택하고 Visual Basic 프로젝트의 경우 **ServiceInstaller1**을 선택한 다음, 바로 가기 메뉴에서 **속성**을 선택합니다.
+3. **ProjectInstaller**의 **디자인**뷰에서 Visual C# 프로젝트의 경우 **serviceInstaller1**을 선택하고 Visual Basic 프로젝트의 경우 **ServiceInstaller1**을 선택한 다음, 바로 가기 메뉴에서 **속성**을 선택합니다.
 
-5. **속성** 창에서 <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> 속성이 **MyNewService**로 설정되어 있는지 확인합니다.
+4. **속성** 창에서 <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> 속성이 **MyNewService**로 설정되어 있는지 확인합니다.
 
-6. <xref:System.ServiceProcess.ServiceInstaller.Description%2A> 속성에 *샘플 서비스*와 같은 텍스트를 추가합니다. 
+5. <xref:System.ServiceProcess.ServiceInstaller.Description%2A> 속성에 *샘플 서비스*와 같은 텍스트를 추가합니다.
 
      이 텍스트는 **서비스** 창의 **설명** 열에 표시되어 사용자에게 서비스를 설명합니다.
 
     ![서비스 창의 서비스 설명입니다.](media/windows-service-description.png "서비스 설명")
 
-7. <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> 속성에 텍스트를 추가합니다. 예를 들어 *MyNewService 표시 이름*을 입력할 수 있습니다. 
+6. <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> 속성에 텍스트를 추가합니다. 예를 들어 *MyNewService 표시 이름*을 입력할 수 있습니다.
 
      이 텍스트는 **서비스** 창의 **표시 이름** 열에 표시됩니다. 이 이름은 시스템에서 사용하는 이름인 <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> 속성과 다를 수 있습니다(예: 시스템을 시작하는 `net start` 명령에 사용하는 이름).
 
-8. 드롭 다운 목록에서 <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> 속성을 <xref:System.ServiceProcess.ServiceStartMode.Automatic>(으)로 설정합니다.
+7. 드롭 다운 목록에서 <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> 속성을 <xref:System.ServiceProcess.ServiceStartMode.Automatic>(으)로 설정합니다.
 
-9. 완료되면 **속성** 창이 다름 그림과 같아야 합니다.
+8. 완료되면 **속성** 창이 다름 그림과 같아야 합니다.
 
      ![Windows 서비스에 대한 설치 관리자 속성](media/windows-service-installer-properties.png "Windows 서비스 설치 관리자 속성")
 
-9. **ProjectInstaller**의 **디자인**뷰에서 Visual C# 프로젝트의 경우 **serviceProcessInstaller1**을 선택하고 Visual Basic 프로젝트의 경우 **ServiceProcessInstaller1**을 선택한 다음, 바로 가기 메뉴에서 **속성**을 선택합니다. 드롭 다운 목록에서 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> 속성을 <xref:System.ServiceProcess.ServiceAccount.LocalSystem>(으)로 설정합니다. 
+9. **ProjectInstaller**의 **디자인**뷰에서 Visual C# 프로젝트의 경우 **serviceProcessInstaller1**을 선택하고 Visual Basic 프로젝트의 경우 **ServiceProcessInstaller1**을 선택한 다음, 바로 가기 메뉴에서 **속성**을 선택합니다. 드롭 다운 목록에서 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> 속성을 <xref:System.ServiceProcess.ServiceAccount.LocalSystem>(으)로 설정합니다.
 
      이 설정은 서비스를 설치하고 로컬 시스템 계정을 사용하여 실행합니다.
 
@@ -364,7 +364,7 @@ Windows 서비스를 실행하려면 해당 서비스를 설치해야 합니다.
 ## <a name="optional-set-startup-parameters"></a>(선택 사항) 시작 매개 변수 설정
 
 > [!NOTE]
-> 시작 매개 변수 추가를 결정하기 전에 시작 매개 변수가 서비스로 정보를 전달하는 가장 효율적인 방법인지를 고려합니다. 시작 매개 변수는 쉽게 사용하고 구문 분석할 수 있으며 사용자가 쉽게 재정의할 수 있지만 설명서가 없으면 사용자가 검색하고 사용하기가 어려울 수 있습니다. 일반적으로 서비스에 많은 시작 매개 변수가 필요한 경우에는 레지스트리나 구성 파일을 대신 사용해야 합니다. 
+> 시작 매개 변수 추가를 결정하기 전에 시작 매개 변수가 서비스로 정보를 전달하는 가장 효율적인 방법인지를 고려합니다. 시작 매개 변수는 쉽게 사용하고 구문 분석할 수 있으며 사용자가 쉽게 재정의할 수 있지만 설명서가 없으면 사용자가 검색하고 사용하기가 어려울 수 있습니다. 일반적으로 서비스에 많은 시작 매개 변수가 필요한 경우에는 레지스트리나 구성 파일을 대신 사용해야 합니다.
 
 Windows 서비스에는 명령줄 인수나 시작 매개 변수를 사용할 수 있습니다. 프로세스 시작 매개 변수에 코드를 추가하면 사용자가 서비스 속성 창에서 고유한 사용자 지정 시작 매개 변수로 서비스를 시작할 수 있습니다. 그러나 이러한 시작 매개 변수는 다음 번에 서비스를 시작할 때 유지되지 않습니다. 시작 매개 변수를 영구적으로 설정하려면 레지스트리에서 설정합니다.
 
@@ -480,13 +480,13 @@ Windows 서비스에는 명령줄 인수나 시작 매개 변수를 사용할 �
     installutil MyNewService.exe
     ```
 
-    서비스를 성공적으로 설치한 경우 명령이 설치에 성공했음을 보고합니다. 
+    서비스를 성공적으로 설치한 경우 명령이 설치에 성공했음을 보고합니다.
 
     시스템에서 *installutil.exe*를 찾을 수 없는 경우 해당 파일이 컴퓨터에 있는지 확인합니다. 이 도구는 *%windir%\Microsoft.NET\Framework[64]\\&lt;프레임워크 버전&gt;* 폴더에 .NET Framework와 함께 설치됩니다. 예를 들어 64비트 버전의 기본 경로는 *%windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*입니다.
 
-    **installutil.exe** 프로세스가 실패한 경우 설치 로그를 확인하여 이유를 찾아보세요. 기본적으로 로그는 서비스 실행 파일과 동일한 폴더에 있습니다. 다음과 같은 경우 설치에 실패할 수 있습니다. 
+    **installutil.exe** 프로세스가 실패한 경우 설치 로그를 확인하여 이유를 찾아보세요. 기본적으로 로그는 서비스 실행 파일과 동일한 폴더에 있습니다. 다음과 같은 경우 설치에 실패할 수 있습니다.
     - <xref:System.ComponentModel.RunInstallerAttribute> 클래스가 `ProjectInstaller` 클래스에 없습니다.
-    -  특성이 `true`(으)로 설정되지 않았습니다. 
+    - 특성이 `true`(으)로 설정되지 않았습니다.
     - `ProjectInstaller` 클래스가 `public`(으)로 정의되지 않았습니다.
 
 자세한 내용은 [방법: 서비스 설치 및 제거](how-to-install-and-uninstall-services.md)를 참조하세요.
@@ -520,7 +520,7 @@ Windows 서비스에는 명령줄 인수나 시작 매개 변수를 사용할 �
 
 ## <a name="clean-up-resources"></a>리소스 정리
 
-Windows 서비스 앱이 더 이상 필요 없는 경우 제거할 수 있습니다. 
+Windows 서비스 앱이 더 이상 필요 없는 경우 제거할 수 있습니다.
 
 1. 관리자 자격 증명을 사용하여 **Visual Studio에 대한 개발자 명령 프롬프트**를 엽니다.
 

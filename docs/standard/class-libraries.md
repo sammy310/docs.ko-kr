@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: d5b067f299d96b687d44b83e431d89667f2d84f8
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: c918883d8620513749826680f9f1b6d89ae87585
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745770"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664597"
 ---
 # <a name="net-class-libraries"></a>.NET 클래스 라이브러리
 
@@ -19,9 +19,9 @@ ms.locfileid: "56745770"
 
 사용할 수 있는 세 가지 유형의 클래스 라이브러리는 다음과 같습니다.
 
-*   **플랫폼별** 클래스 라이브러리는 지정된 플랫폼(예: .NET Framework, Xamarin iOS)의 모든 API에 액세스할 수 있지만 해당 플랫폼을 대상으로 하는 앱과 라이브러리만 사용할 수 있습니다.
-*   **이식 가능** 클래스 라이브러리는 API 하위 집합에 액세스할 수 있으며 여러 플랫폼을 대상으로 하는 앱과 라이브러리에서 사용할 수 있습니다.
-*   **.NET Standard** 클래스 라이브러리는 플랫폼별 및 이식 가능한 라이브러리 개념을 단일 모델로 병합하여 두 가지의 장점을 모두 제공합니다.
+* **플랫폼별** 클래스 라이브러리는 지정된 플랫폼(예: .NET Framework, Xamarin iOS)의 모든 API에 액세스할 수 있지만 해당 플랫폼을 대상으로 하는 앱과 라이브러리만 사용할 수 있습니다.
+* **이식 가능** 클래스 라이브러리는 API 하위 집합에 액세스할 수 있으며 여러 플랫폼을 대상으로 하는 앱과 라이브러리에서 사용할 수 있습니다.
+* **.NET Standard** 클래스 라이브러리는 플랫폼별 및 이식 가능한 라이브러리 개념을 단일 모델로 병합하여 두 가지의 장점을 모두 제공합니다.
 
 ## <a name="platform-specific-class-libraries"></a>플랫폼별 클래스 라이브러리
 

@@ -18,17 +18,16 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0793f3688f1f6ca66d92c5a22e158aa85e5470ae
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: ab06c2d87de9483d7a3e9eb810f4be1f3278ddc2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58133339"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634518"
 ---
 # <a name="custom-numeric-format-strings"></a>사용자 지정 숫자 형식 문자열
 
 하나 이상의 사용자 지정 숫자 서식 지정자로 구성된 사용자 지정 숫자 서식 문자열을 만들어 숫자 데이터의 서식을 지정하는 방법을 정의할 수 있습니다. 사용자 지정 숫자 서식 문자열은 [표준 숫자 서식 문자열](../../../docs/standard/base-types/standard-numeric-format-strings.md)이 아닌 모든 서식 문자열입니다.  
-  
 
  사용자 지정 숫자 서식 문자열은 모든 숫자 형식의 `ToString` 메서드를 오버로드하여 사용할 수 있습니다. 예를 들어 <xref:System.Int32.ToString%28System.String%29> 형식의 <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> 및 <xref:System.Int32> 메서드에 숫자 서식 문자열을 제공할 수 있습니다. <xref:System.Console> 및 <xref:System.IO.StreamWriter> 클래스의 일부 `Write` 및 `WriteLine` 메서드, <xref:System.String.Format%2A?displayProperty=nameWithType> 메서드, <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 메서드에 사용되는 .NET [복합 서식 지정 기능](../../../docs/standard/base-types/composite-formatting.md)을 통해서도 사용자 지정 숫자 형식 문자열을 사용할 수 있습니다. [문자열 보간](../../csharp/language-reference/tokens/interpolated.md) 기능은 사용자 지정 숫자 형식 문자열도 지원합니다.  
   
@@ -109,11 +108,11 @@ ms.locfileid: "58133339"
 ## <a name="the--custom-specifier"></a>"," 사용자 지정 지정자  
  "," 문자는 그룹 구분 기호 지정자와 숫자 배율 지정자로 사용됩니다.  
   
--   그룹 구분 기호: 두 개의 10진수 자리 표시자(0 또는 #) 사이에 정수 계열 자릿수의 서식을 지정하는 하나 이상의 쉼표 문자가 지정된 경우 정수 계열 출력 부분의 각 숫자 그룹 사이에 그룹 구분 문자가 삽입됩니다.  
+- 그룹 구분 기호: 두 개의 10진수 자리 표시자(0 또는 #) 사이에 정수 계열 자릿수의 서식을 지정하는 하나 이상의 쉼표 문자가 지정된 경우 정수 계열 출력 부분의 각 숫자 그룹 사이에 그룹 구분 문자가 삽입됩니다.  
   
      현재 <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A> 개체의 <xref:System.Globalization.NumberFormatInfo.NumberGroupSizes%2A> 및 <xref:System.Globalization.NumberFormatInfo> 속성은 숫자 그룹 구분 기호로 사용되는 문자와 각 숫자 그룹의 크기를 결정합니다. 예를 들어, 문자열 "#,#"과 고정 문화권을 사용하여 숫자 1000의 서식을 지정할 경우 "1,000"이 출력됩니다.  
   
--   숫자 배율 지정자: 명시적 또는 암시적 소수점의 바로 왼쪽에 하나 이상의 쉼표가 지정된 경우 서식이 지정될 숫자는 쉼표 단위로 끊어서 1000으로 나뉩니다. 예를 들어, 문자열 "0,,"을 사용하여 숫자 100000000의 서식을 지정할 경우 "100"이 출력됩니다.  
+- 숫자 배율 지정자: 명시적 또는 암시적 소수점의 바로 왼쪽에 하나 이상의 쉼표가 지정된 경우 서식이 지정될 숫자는 쉼표 단위로 끊어서 1000으로 나뉩니다. 예를 들어, 문자열 "0,,"을 사용하여 숫자 100000000의 서식을 지정할 경우 "100"이 출력됩니다.  
   
  동일한 서식 문자열에 그룹 구분 기호와 숫자 배율 지정자를 함께 사용할 수 있습니다. 예를 들어, 문자열 "#,0,,"과 고정 문화권을 사용하여 숫자 1000000000의 서식을 지정할 경우 "1,000"이 출력됩니다.  
   

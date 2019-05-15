@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 224e8e82b7e71d7efbfdf0ce26cc4bd783cce3c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1928980f24f08e0379639090cab8d2ac7ba014e4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313309"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634006"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>방법: 그레고리오력이 아닌 달력으로 날짜 표시
 <xref:System.DateTime> 및 <xref:System.DateTimeOffset> 형식은 양력을 기본 달력으로 사용합니다. 즉, 날짜 및 시간 값의 `ToString` 메서드를 호출하면 해당 날짜 및 시간이 다른 달력을 사용하여 생성된 경우에도 해당 날짜 및 시간의 문자열 표현을 양력 달력으로 표시합니다. 이 내용은 두 가지 방법을 사용하여 페르시아력으로 날짜 및 시간 값을 만들지만 <xref:System.DateTime.ToString%2A> 메서드를 호출할 때 해당 날짜 및 시간 값을 여전히 양력으로 표시하는 다음 예제에 설명되어 있습니다. 이 예제에서는 특정 달력의 날짜를 표시하기 위해 자주 사용되지만 잘못된 두 가지 방법을 보여 줍니다.  
@@ -51,19 +51,19 @@ ms.locfileid: "59313309"
   
 3. 표시할 각 날짜 및 시간 요소에 대해 달력 개체의 `Get` 메서드를 호출합니다. 메서드를 재정의합니다. 다음 메서드를 사용할 수 있습니다.  
   
-    -   <xref:System.Globalization.Calendar.GetYear%2A> - 해당 달력의 연도를 표시합니다.  
+    - <xref:System.Globalization.Calendar.GetYear%2A> - 해당 달력의 연도를 표시합니다.  
   
-    -   <xref:System.Globalization.Calendar.GetMonth%2A> - 해당 달력의 월을 표시합니다.  
+    - <xref:System.Globalization.Calendar.GetMonth%2A> - 해당 달력의 월을 표시합니다.  
   
-    -   <xref:System.Globalization.Calendar.GetDayOfMonth%2A> - 해당 달력의 일을 표시합니다.  
+    - <xref:System.Globalization.Calendar.GetDayOfMonth%2A> - 해당 달력의 일을 표시합니다.  
   
-    -   <xref:System.Globalization.Calendar.GetHour%2A> - 해당 달력의 시간을 표시합니다.  
+    - <xref:System.Globalization.Calendar.GetHour%2A> - 해당 달력의 시간을 표시합니다.  
   
-    -   <xref:System.Globalization.Calendar.GetMinute%2A> - 해당 달력의 분을 표시합니다.  
+    - <xref:System.Globalization.Calendar.GetMinute%2A> - 해당 달력의 분을 표시합니다.  
   
-    -   <xref:System.Globalization.Calendar.GetSecond%2A> - 해당 달력의 초를 표시합니다.  
+    - <xref:System.Globalization.Calendar.GetSecond%2A> - 해당 달력의 초를 표시합니다.  
   
-    -   <xref:System.Globalization.Calendar.GetMilliseconds%2A> - 해당 달력의 밀리초를 표시합니다.  
+    - <xref:System.Globalization.Calendar.GetMilliseconds%2A> - 해당 달력의 밀리초를 표시합니다.  
   
 ## <a name="example"></a>예제  
  예제에서는 두 가지 달력을 사용하여 날짜를 표시합니다. 회교식 달력을 ar-JO 문화권의 기본 달력으로 정의한 후 날짜를 표시하고, fa-IR 문화권에서 선택적 달력으로 지원되지 않는 페르시아력을 사용하여 날짜를 표시합니다.  
@@ -75,13 +75,13 @@ ms.locfileid: "59313309"
   
  예제에서는 다시 사용할 수 있는 달력 유틸리티 클래스인 `CalendarUtility`를 정의하여 날짜의 문자열 표현을 특정 달력으로 생성하는 작업의 많은 세부 정보를 처리합니다. `CalendarUtility` 클래스의 멤버는 다음과 같습니다.  
   
--   하나의 매개 변수가 날짜를 나타내는 <xref:System.Globalization.Calendar> 개체를 매개 변수로 사용하는 생성자 - 클래스의 전용 필드에 할당됩니다.  
+- 하나의 매개 변수가 날짜를 나타내는 <xref:System.Globalization.Calendar> 개체를 매개 변수로 사용하는 생성자 - 클래스의 전용 필드에 할당됩니다.  
   
--   `CalendarExists` - `CalendarUtility` 개체가 나타내는 달력이 메서드에 매개 변수로 전달되는 <xref:System.Globalization.CultureInfo> 개체에서 지원되는지 여부를 나타내는 부울 값을 반환하는 전용 메서드입니다. 이 메서드는 <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> 배열을 전달할 대상인 <xref:System.Array.Exists%2A?displayProperty=nameWithType> 메서드에 대한 호출을 래핑합니다.  
+- `CalendarExists` - `CalendarUtility` 개체가 나타내는 달력이 메서드에 매개 변수로 전달되는 <xref:System.Globalization.CultureInfo> 개체에서 지원되는지 여부를 나타내는 부울 값을 반환하는 전용 메서드입니다. 이 메서드는 <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> 배열을 전달할 대상인 <xref:System.Array.Exists%2A?displayProperty=nameWithType> 메서드에 대한 호출을 래핑합니다.  
   
--   `HasSameName` - <xref:System.Array.Exists%2A?displayProperty=nameWithType> 메서드에 매개 변수로 전달되는 <xref:System.Predicate%601> 대리자에 할당된 전용 메서드입니다. 메서드에서 `true`가 반환될 때까지 배열의 각 멤버가 메서드에 전달됩니다. 이 메서드는 선택적 달력의 이름이 `CalendarUtility` 개체가 나타내는 달력과 같은지 여부를 확인합니다.  
+- `HasSameName` - <xref:System.Array.Exists%2A?displayProperty=nameWithType> 메서드에 매개 변수로 전달되는 <xref:System.Predicate%601> 대리자에 할당된 전용 메서드입니다. 메서드에서 `true`가 반환될 때까지 배열의 각 멤버가 메서드에 전달됩니다. 이 메서드는 선택적 달력의 이름이 `CalendarUtility` 개체가 나타내는 달력과 같은지 여부를 확인합니다.  
   
--   `DisplayDate` - 두 매개 변수 즉, `CalendarUtility` 개체가 나타내는 달력에 표시할 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 값 및 서식 지정 규칙을 사용할 문화권이 전달되는 오버로드된 공용 메서드입니다. 날짜의 문자열 표현을 반환할 때의 해당 동작은 대상 달력이 사용할 형식 지정 규칙의 문화권에서 지원되는지 여부에 따라 달라집니다.  
+- `DisplayDate` - 두 매개 변수 즉, `CalendarUtility` 개체가 나타내는 달력에 표시할 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 값 및 서식 지정 규칙을 사용할 문화권이 전달되는 오버로드된 공용 메서드입니다. 날짜의 문자열 표현을 반환할 때의 해당 동작은 대상 달력이 사용할 형식 지정 규칙의 문화권에서 지원되는지 여부에 따라 달라집니다.  
   
  이 예제에서 <xref:System.DateTime> 또는 <xref:System.DateTimeOffset> 값을 만드는 데 사용된 달력과 관계없이 해당 값은 일반적으로 양력 날짜로 표시됩니다. 이는 <xref:System.DateTime> 및 <xref:System.DateTimeOffset> 형식이 달력 정보를 유지하지 않기 때문입니다. 내부적으로 두 값은 0001년 1월 1일 자정 이후에 경과된 틱 수로 표시됩니다. 해당 숫자의 해석은 달력에 따라 달라집니다. 대부분의 문화권에서 기본 달력은 양력입니다.  
   

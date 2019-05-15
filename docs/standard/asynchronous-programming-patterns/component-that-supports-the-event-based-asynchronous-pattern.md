@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: da6f21ba452c5c0413881759879cca371507a290
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bc19ee687b26025d3da4d66888902395b863f046
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334291"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628924"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>방법: 이벤트 기반 비동기 패턴을 지원하는 구성 요소 구현
 상당한 지연을 일으킬 수 있는 몇 가지 작업을 사용하여 클래스를 작성하는 경우 [이벤트 기반 비동기 패턴 개요](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)를 구현하여 비동기 기능을 부여하는 것을 고려할 수 있습니다.  
@@ -34,19 +34,19 @@ ms.locfileid: "59334291"
   
  이 연습에서 설명하는 작업은 다음과 같습니다.  
   
--   구성 요소 만들기  
+- 구성 요소 만들기  
   
--   공용 비동기 이벤트 및 대리자 정의  
+- 공용 비동기 이벤트 및 대리자 정의  
   
--   전용 대리자 정의  
+- 전용 대리자 정의  
   
--   공용 이벤트 구현  
+- 공용 이벤트 구현  
   
--   완료 메서드 구현  
+- 완료 메서드 구현  
   
--   작업자 메서드 구현  
+- 작업자 메서드 구현  
   
--   시작 및 취소 메서드 구현  
+- 시작 및 취소 메서드 구현  
   
  이 항목의 코드를 단일 목록으로 복사하려면 [방법: 이벤트 기반 비동기 패턴의 클라이언트 구현](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)을 참조하세요.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "59334291"
   
 #### <a name="to-create-the-component"></a>구성 요소를 만들려면  
   
--   <xref:System.ComponentModel.Component>에서 상속되는 `PrimeNumberCalculator`라는 클래스를 만듭니다.  
+- <xref:System.ComponentModel.Component>에서 상속되는 `PrimeNumberCalculator`라는 클래스를 만듭니다.  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>공용 비동기 이벤트 및 대리자 정의  
  구성 요소는 이벤트를 사용하는 클라이언트와 통신합니다. _MethodName_**Completed** 이벤트는 클라이언트에 비동기 작업의 완료를 알리고 _MethodName_**ProgressChanged** 이벤트는 클라이언트에 비동기 작업의 진행률을 알립니다.  
@@ -87,7 +87,7 @@ ms.locfileid: "59334291"
   
 #### <a name="to-test-your-component"></a>구성 요소를 테스트하려면  
   
--   구성 요소를 컴파일합니다.  
+- 구성 요소를 컴파일합니다.  
   
      두 개의 컴파일러 경고를 받게 됩니다.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "59334291"
   
 #### <a name="to-complete-an-asynchronous-operation"></a>비동기 작업을 완료하려면:  
   
--   완료 메서드를 구현합니다. 이 메서드는 클라이언트의 `CalculatePrimeCompletedEventHandler`를 통해 클라이언트로 반환되는 `CalculatePrimeCompletedEventArgs`를 채우는 데 사용할 6개의 매개 변수를 사용합니다. 이 메서드는 내부 컬렉션에서 클라이언트의 작업 ID 토큰을 제거하고 <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> 호출을 통해 비동기 작업 수명을 종료합니다. <xref:System.ComponentModel.AsyncOperation>은 애플리케이션 모델에 적합한 스레드 또는 컨텍스트에 대한 호출을 마샬링합니다.  
+- 완료 메서드를 구현합니다. 이 메서드는 클라이언트의 `CalculatePrimeCompletedEventHandler`를 통해 클라이언트로 반환되는 `CalculatePrimeCompletedEventArgs`를 채우는 데 사용할 6개의 매개 변수를 사용합니다. 이 메서드는 내부 컬렉션에서 클라이언트의 작업 ID 토큰을 제거하고 <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> 호출을 통해 비동기 작업 수명을 종료합니다. <xref:System.ComponentModel.AsyncOperation>은 애플리케이션 모델에 적합한 스레드 또는 컨텍스트에 대한 호출을 마샬링합니다.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#26)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#26)]  
@@ -158,7 +158,7 @@ ms.locfileid: "59334291"
   
 #### <a name="to-test-your-component"></a>구성 요소를 테스트하려면  
   
--   구성 요소를 컴파일합니다.  
+- 구성 요소를 컴파일합니다.  
   
      하나의 컴파일러 경고를 받게 됩니다.  
   
@@ -212,7 +212,7 @@ ms.locfileid: "59334291"
   
 #### <a name="to-test-your-component"></a>구성 요소를 테스트하려면  
   
--   구성 요소를 컴파일합니다.  
+- 구성 요소를 컴파일합니다.  
   
      계속해서 비동기 작업을 시작 및 취소하는 `CalculatePrimeAsync` 및 `CancelAsync` 메서드를 작성합니다.  
   
@@ -238,7 +238,7 @@ ms.locfileid: "59334291"
   
 #### <a name="to-test-your-component"></a>구성 요소를 테스트하려면  
   
--   구성 요소를 컴파일합니다.  
+- 구성 요소를 컴파일합니다.  
   
  이제 `PrimeNumberCalculator` 구성 요소가 완료되고 사용할 준비가 되었습니다.  
   

@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: eb1ba14bbcfe4e561fa575b9802126fab59d31fc
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 52b92048fa845725ce46740e36b96ed55af67c30
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968038"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644734"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ(Language-Integrated Query)
 
@@ -103,15 +103,15 @@ API 구문이 쿼리 구문보다 더 간결한 방법이 아닌가요?
 
 다음과 같은 경우 이 질문에 대한 대답은 **예**입니다.
 
-*   기존 코드베이스에서 이미 쿼리 구문을 사용하는 경우
-*   복잡성으로 인해 쿼리 내에서 변수 범위를 지정해야 하는 경우
-*   쿼리 구문을 선호하며 코드베이스에 방해가 되지 않는 경우
+* 기존 코드베이스에서 이미 쿼리 구문을 사용하는 경우
+* 복잡성으로 인해 쿼리 내에서 변수 범위를 지정해야 하는 경우
+* 쿼리 구문을 선호하며 코드베이스에 방해가 되지 않는 경우
 
 다음과 같은 경우 이 질문에 대한 대답은 **아니요**입니다.
 
-*   기존 코드베이스에서 이미 API 구문을 사용하는 경우
-*   쿼리 내에서 변수 범위를 지정할 필요가 없는 경우
-*   API 구문을 선호하며 코드베이스에 방해가 되지 않는 경우
+* 기존 코드베이스에서 이미 API 구문을 사용하는 경우
+* 쿼리 내에서 변수 범위를 지정할 필요가 없는 경우
+* API 구문을 선호하며 코드베이스에 방해가 되지 않는 경우
 
 ## <a name="essential-samples"></a>필수 샘플
 
@@ -119,7 +119,7 @@ LINQ 샘플의 포괄적인 목록은 [101 LINQ 샘플](https://code.msdn.micros
 
 다음은 일부 LINQ 핵심 부분의 간단한 데모입니다. LINQ는 여기에 설명된 것보다 훨씬 더 많은 기능을 제공하기 때문에 포괄적인 목록은 아닙니다.
 
-*   가장 중요한 요소 - `Where`, `Select` 및 `Aggregate`:
+* 가장 중요한 요소 - `Where`, `Select` 및 `Aggregate`:
 
 ```csharp
 // Filtering a list
@@ -142,14 +142,14 @@ int seed = 0;
 int sumOfStrings = strings.Aggregate(seed, (s1, s2) => s1.Length + s2.Length);
 ```
 
-*   목록의 목록 평면화:
+* 목록의 목록 평면화:
 
 ```csharp
 // Transforms the list of kennels into a list of all their dogs.
 var allDogsFromKennels = kennels.SelectMany(kennel => kennel.Dogs);
 ```
 
-*   두 집합 간의 합집합(사용자 지정 비교 연산자 사용):
+* 두 집합 간의 합집합(사용자 지정 비교 연산자 사용):
 
 ```csharp
 public class DogHairLengthComparer : IEqualityComparer<Dog>
@@ -184,7 +184,7 @@ public class DogHairLengthComparer : IEqualityComparer<Dog>
 var allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, new DogHairLengthComparer());
 ```
 
-*   두 집합 간의 교집합:
+* 두 집합 간의 교집합:
 
 ```csharp
 // Gets the volunteers who spend share time with two humane societies.
@@ -192,7 +192,7 @@ var volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
                                                      new VolunteerTimeComparer());
 ```
 
-*   순서:
+* 순서:
 
 ```csharp
 // Get driving directions, ordering by if it's toll-free before estimated driving time.
@@ -201,7 +201,7 @@ var results = DirectionsProcessor.GetDirections(start, end)
               .ThenBy(direction => direction.EstimatedTime);
 ```
 
-*   마지막으로, 고급 샘플: 동일한 형식을 가진 두 인스턴스의 속성 값이 같은지 확인([이 StackOverflow 게시물](https://stackoverflow.com/a/844855)에서 가져와 수정함):
+* 마지막으로, 고급 샘플: 동일한 형식을 가진 두 인스턴스의 속성 값이 같은지 확인([이 StackOverflow 게시물](https://stackoverflow.com/a/844855)에서 가져와 수정함):
 
 ```csharp
 public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params string[] ignore) where T : class
@@ -252,6 +252,6 @@ LINQ를 통해 쉽게 표현될 수 있는 병렬화 가능한 CPU 바인딩된 
 
 ## <a name="further-resources"></a>추가 리소스:
 
-*   [101 LINQ 샘플](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
-*   [Linqpad](https://www.linqpad.net/), 실습 환경 및 C#/F#/VB에 대한 데이터베이스 쿼리 엔진
-*   [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), LINQ-to-objects 구현 방법 학습을 위한 전자책
+* [101 LINQ 샘플](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
+* [Linqpad](https://www.linqpad.net/), 실습 환경 및 C#/F#/VB에 대한 데이터베이스 쿼리 엔진
+* [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), LINQ-to-objects 구현 방법 학습을 위한 전자책

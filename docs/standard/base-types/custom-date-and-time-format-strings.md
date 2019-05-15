@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8c9fe05049feff6e15c765212b72e35265fd844
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 90e9dbbd43751412c25dd5ca4dae2d503139db69
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59345432"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634544"
 ---
 # <a name="custom-date-and-time-format-strings"></a>사용자 지정 날짜 및 시간 서식 문자열
 
@@ -348,11 +348,11 @@ ms.locfileid: "59345432"
 
 "K" 사용자 지정 형식 지정자는 날짜 및 시간 값의 표준 시간대 정보를 나타냅니다. 이 형식 지정자를 <xref:System.DateTime> 값과 함께 사용할 경우 결과 문자열은 <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 속성 값에 의해 정의됩니다.
 
--   현지 표준 시간대(<xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 속성 값이 <xref:System.DateTimeKind.Local?displayProperty=nameWithType>임)의 경우 이 지정자는 "zzz" 지정자와 같으며 UTC(Coordinated Universal Time)에서의 로컬 오프셋(예: "-07:00")이 포함된 결과 문자열을 생성합니다.
+- 현지 표준 시간대(<xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 속성 값이 <xref:System.DateTimeKind.Local?displayProperty=nameWithType>임)의 경우 이 지정자는 "zzz" 지정자와 같으며 UTC(Coordinated Universal Time)에서의 로컬 오프셋(예: "-07:00")이 포함된 결과 문자열을 생성합니다.
 
--   UTC 시간(<xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 속성 값이 <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>임)의 경우 결과 문자열에 UTC 날짜를 나타내는 "Z" 문자가 포함됩니다.
+- UTC 시간(<xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 속성 값이 <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>임)의 경우 결과 문자열에 UTC 날짜를 나타내는 "Z" 문자가 포함됩니다.
 
--   지정되지 않은 표준 시간대(시간의 <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 속성이 <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>임)의 경우 결과가 <xref:System.String.Empty?displayProperty=nameWithType>와 같습니다.
+- 지정되지 않은 표준 시간대(시간의 <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 속성이 <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>임)의 경우 결과가 <xref:System.String.Empty?displayProperty=nameWithType>와 같습니다.
 
 <xref:System.DateTimeOffset> 값의 경우 “K” 형식 지정자는 “zzz” 형식 지정자와 같으며 UTC에서의 <xref:System.DateTimeOffset> 값 오프셋이 포함된 결과 문자열을 생성합니다.
 
@@ -698,6 +698,6 @@ ms.locfileid: "59345432"
 
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.IFormatProvider?displayProperty=nameWithType>
-- [형식의 서식 지정](../../../docs/standard/base-types/formatting-types.md)
+- [형식 서식 지정](../../../docs/standard/base-types/formatting-types.md)
 - [표준 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
 - [샘플: .NET Framework 4 서식 유틸리티](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

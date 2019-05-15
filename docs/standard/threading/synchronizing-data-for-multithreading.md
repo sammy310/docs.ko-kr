@@ -9,25 +9,25 @@ helpviewer_keywords:
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb44fad991c8184686fcda90878bae2ec53260c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 55b973e9eb795ef2f5bd69b4ec67c1c194f043a9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617917"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644753"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>다중 스레딩을 위한 데이터 동기화
 다중 스레드가 단일 개체의 속성 및 메서드에 대한 호출을 할 수 있는 경우 해당 호출을 동기화하는 것은 중요합니다. 그렇지 않으면 하나의 스레드는 다른 스레드가 수행하는 작업을 중단시킬 수 있으며 개체는 잘못된 상태로 남을 수 있습니다. 멤버가 그러한 중단으로부터 보호되는 클래스를 스레드로부터 안전하다고 합니다.  
   
  공용 언어 인프라는 인스턴스 및 정적 멤버에 대한 액세스를 동기화하는 여러 전략을 제공합니다.  
   
--   동기화된 코드 영역. <xref:System.Threading.Monitor> 클래스 또는 이 클래스에 대한 컴파일러 지원을 사용하여 성능을 향상시키는 필요한 코드 블록만을 동기화할 수 있습니다.  
+- 동기화된 코드 영역. <xref:System.Threading.Monitor> 클래스 또는 이 클래스에 대한 컴파일러 지원을 사용하여 성능을 향상시키는 필요한 코드 블록만을 동기화할 수 있습니다.  
   
--   수동 동기화. .NET Framework 클래스 라이브러리에서 제공하는 동기화 개체를 사용할 수 있습니다. <xref:System.Threading.Monitor> 클래스에 대한 설명을 포함하는 [동기화 기본 형식 개요](../../../docs/standard/threading/overview-of-synchronization-primitives.md)를 참조하세요.  
+- 수동 동기화. .NET Framework 클래스 라이브러리에서 제공하는 동기화 개체를 사용할 수 있습니다. <xref:System.Threading.Monitor> 클래스에 대한 설명을 포함하는 [동기화 기본 형식 개요](../../../docs/standard/threading/overview-of-synchronization-primitives.md)를 참조하세요.  
   
--   동기화된 컨텍스트. <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>를 사용하여 <xref:System.ContextBoundObject> 개체에 대한 간단한 자동 동기화를 사용하도록 설정할 수 있습니다.  
+- 동기화된 컨텍스트. <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>를 사용하여 <xref:System.ContextBoundObject> 개체에 대한 간단한 자동 동기화를 사용하도록 설정할 수 있습니다.  
   
--   <xref:System.Collections.Concurrent?displayProperty=nameWithType> 네임스페이스의 컬렉션 클래스. 이러한 클래스는 기본 제공 동기화된 추가 및 제거 작업을 제공합니다. 자세한 내용은 [스레드로부터 안전한 컬렉션](../../../docs/standard/collections/thread-safe/index.md)을 참조하세요.  
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType> 네임스페이스의 컬렉션 클래스. 이러한 클래스는 기본 제공 동기화된 추가 및 제거 작업을 제공합니다. 자세한 내용은 [스레드로부터 안전한 컬렉션](../../../docs/standard/collections/thread-safe/index.md)을 참조하세요.  
   
  공용 언어 런타임은 클래스가 요구 사항에 따라 다양한 서로 다른 방식으로 동기화될 수 있는 범주의 수로 나뉘는 스레드 모델을 제공합니다. 다음 표는 지정된 동기화 범주로 필드 및 메서드에 대해 제공되는 동기화 지원을 보여 줍니다.  
   

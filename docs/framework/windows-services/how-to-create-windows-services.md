@@ -6,12 +6,12 @@ helpviewer_keywords:
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
 author: ghogen
-ms.openlocfilehash: 469074336c8aa49fee1acf871360f8dbc1363247
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 124e8a0dff18f02c178b56167cd12faa1fc97992
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313270"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649408"
 ---
 # <a name="how-to-create-windows-services"></a>방법: Windows 서비스 만들기
 서비스를 만들 때는 **Windows 서비스**라는 Visual Studio 프로젝트 템플릿을 사용할 수 있습니다. 이 템플릿은 적절한 클래스 및 네임스페이스를 참조하고, 서비스의 기본 클래스에서 상속을 설정하고, 개발자가 재정의할 가능성이 높은 여러 메서드를 재정의하여 대부분의 작업을 자동으로 수행합니다.  
@@ -21,11 +21,11 @@ ms.locfileid: "59313270"
   
  작동하는 서비스를 만들려면 최소한 다음 작업을 수행해야 합니다.  
   
--   <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 속성을 설정합니다.  
+- <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 속성을 설정합니다.  
   
--   서비스 응용 프로그램에 필요한 설치 관리자를 만듭니다.  
+- 서비스 응용 프로그램에 필요한 설치 관리자를 만듭니다.  
   
--   <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 및 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 메서드의 코드를 재정의 및 지정하여 서비스 동작 방식을 사용자 지정합니다.  
+- <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 및 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 메서드의 코드를 재정의 및 지정하여 서비스 동작 방식을 사용자 지정합니다.  
   
 ### <a name="to-create-a-windows-service-application"></a>Windows 서비스 응용 프로그램을 만들려면  
   

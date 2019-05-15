@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c665cb590a090c546d50f780477c254344914a2f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8012d2898e9722d1cfb93f5c9dcacce291fe6e78
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327765"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633893"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>방법: 특정 날짜의 요일 추출
 .NET Framework를 사용하면 쉽게 특정 날짜가 일주일 중 몇 번째 날인지 확인하고, 특정 날짜의 지역화된 요일 이름을 표시할 수 있습니다. 특정 날짜에 해당하는 요일을 나타내는 열거형 값은 <xref:System.DateTime.DayOfWeek%2A> 또는 <xref:System.DateTimeOffset.DayOfWeek%2A> 속성에서 제공합니다. 이와 대조적으로 요일 이름을 검색하는 것은 날짜 및 시간 값의 `ToString` 메서드 또는 <xref:System.String.Format%2A?displayProperty=nameWithType> 메서드와 같은 서식 지정 메서드를 호출하여 수행할 수 있는 서식 지정 작업입니다. 이 항목에서는 이러한 서식 지정 작업을 수행하는 방법을 보여 줍니다.  
@@ -53,12 +53,12 @@ ms.locfileid: "59327765"
   
 2. 현재 문화권 또는 특정 문화권의 간략화된 요일 이름을 추출할 수 있습니다.  
   
-    1.  현재 문화권의 간략화된 요일 이름을 추출하려면 날짜 및 시간 값의 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 또는 <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> 인스턴스 메서드를 호출하고 문자열 "ddd"를 `format` 매개 변수로 전달합니다. 다음 예제에서는 <xref:System.DateTime.ToString%28System.String%29> 메서드를 호출하는 방법을 보여 줍니다.  
+    1. 현재 문화권의 간략화된 요일 이름을 추출하려면 날짜 및 시간 값의 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 또는 <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> 인스턴스 메서드를 호출하고 문자열 "ddd"를 `format` 매개 변수로 전달합니다. 다음 예제에서는 <xref:System.DateTime.ToString%28System.String%29> 메서드를 호출하는 방법을 보여 줍니다.  
   
          [!code-csharp[Formatting.Howto.WeekdayName#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/abbrname1.cs#1)]
          [!code-vb[Formatting.Howto.WeekdayName#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/abbrname1.vb#1)]  
   
-    2.  특정 문화권의 간략화된 요일 이름을 추출하려면 날짜 및 시간 값의 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 또는 <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 인스턴스 메서드를 호출합니다. 문자열 "ddd"를 `format` 매개 변수로 전달합니다. <xref:System.Globalization.CultureInfo> 또는 요일 이름을 <xref:System.Globalization.DateTimeFormatInfo> 매개 변수로 검색하려는 문화권을 나타내는 `provider` 개체를 전달합니다. 다음 코드에서는 fr-FR 문화권을 나타내는 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> 개체를 사용하여 <xref:System.Globalization.CultureInfo> 메서드에 대한 호출을 보여 줍니다.  
+    2. 특정 문화권의 간략화된 요일 이름을 추출하려면 날짜 및 시간 값의 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 또는 <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 인스턴스 메서드를 호출합니다. 문자열 "ddd"를 `format` 매개 변수로 전달합니다. <xref:System.Globalization.CultureInfo> 또는 요일 이름을 <xref:System.Globalization.DateTimeFormatInfo> 매개 변수로 검색하려는 문화권을 나타내는 `provider` 개체를 전달합니다. 다음 코드에서는 fr-FR 문화권을 나타내는 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> 개체를 사용하여 <xref:System.Globalization.CultureInfo> 메서드에 대한 호출을 보여 줍니다.  
   
          [!code-csharp[Formatting.Howto.WeekdayName#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/abbrname2.cs#2)]
          [!code-vb[Formatting.Howto.WeekdayName#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/abbrname2.vb#2)]  
@@ -69,12 +69,12 @@ ms.locfileid: "59327765"
   
 2. 현재 문화권 또는 특정 문화권의 전체 요일 이름을 추출할 수 있습니다.  
   
-    1.  현재 문화권의 요일 이름을 추출하려면 날짜 및 시간 값의 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 또는 <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> 인스턴스 메서드를 호출하고 문자열 "dddd"를 `format` 매개 변수로 전달합니다. 다음 예제에서는 <xref:System.DateTime.ToString%28System.String%29> 메서드를 호출하는 방법을 보여 줍니다.  
+    1. 현재 문화권의 요일 이름을 추출하려면 날짜 및 시간 값의 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 또는 <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> 인스턴스 메서드를 호출하고 문자열 "dddd"를 `format` 매개 변수로 전달합니다. 다음 예제에서는 <xref:System.DateTime.ToString%28System.String%29> 메서드를 호출하는 방법을 보여 줍니다.  
   
          [!code-csharp[Formatting.Howto.WeekdayName#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/fullname4.cs#4)]
          [!code-vb[Formatting.Howto.WeekdayName#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/fullname4.vb#4)]  
   
-    2.  특정 문화권의 요일 이름을 추출하려면 날짜 및 시간 값의 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 또는 <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 인스턴스 메서드를 호출합니다. 문자열 "dddd"를 `format` 매개 변수로 전달합니다. <xref:System.Globalization.CultureInfo> 또는 요일 이름을 <xref:System.Globalization.DateTimeFormatInfo> 매개 변수로 검색하려는 문화권을 나타내는 `provider` 개체를 전달합니다. 다음 코드에서는 es-ES 문화권을 나타내는 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> 개체를 사용하여 <xref:System.Globalization.CultureInfo> 메서드에 대한 호출을 보여 줍니다.  
+    2. 특정 문화권의 요일 이름을 추출하려면 날짜 및 시간 값의 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 또는 <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 인스턴스 메서드를 호출합니다. 문자열 "dddd"를 `format` 매개 변수로 전달합니다. <xref:System.Globalization.CultureInfo> 또는 요일 이름을 <xref:System.Globalization.DateTimeFormatInfo> 매개 변수로 검색하려는 문화권을 나타내는 `provider` 개체를 전달합니다. 다음 코드에서는 es-ES 문화권을 나타내는 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> 개체를 사용하여 <xref:System.Globalization.CultureInfo> 메서드에 대한 호출을 보여 줍니다.  
   
          [!code-csharp[Formatting.Howto.WeekdayName#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/fullname5.cs#5)]
          [!code-vb[Formatting.Howto.WeekdayName#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/fullname5.vb#5)]  
@@ -87,9 +87,9 @@ ms.locfileid: "59327765"
   
  개별 언어는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서 제공하는 기능과 중복되거나 이러한 기능을 보완하는 기능을 제공할 수 있습니다. 예를 들어, Visual Basic에는 다음과 같은 두 가지 함수가 포함되어 있습니다.  
   
--   `Weekday`: 특정 날짜의 요일을 나타내는 숫자를 반환합니다. 이 함수는 요일의 첫날 서수 값을 1로 간주하는 반면, <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> 속성은 이를 0으로 간주합니다.  
+- `Weekday`: 특정 날짜의 요일을 나타내는 숫자를 반환합니다. 이 함수는 요일의 첫날 서수 값을 1로 간주하는 반면, <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> 속성은 이를 0으로 간주합니다.  
   
--   `WeekdayName`: 현재 문화권에서 특정 요일 숫자에 해당하는 요일 이름을 반환합니다.  
+- `WeekdayName`: 현재 문화권에서 특정 요일 숫자에 해당하는 요일 이름을 반환합니다.  
   
  다음 예제에서는 Visual Basic `Weekday` 및 `WeekdayName` 함수의 사용 방법을 보여 줍니다.  
   

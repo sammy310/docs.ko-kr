@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37241dd666a5d10eeb35bcbb4c9e09a5bc56f620
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 51291fbc9ad2927bc3b9649074a6dbf374aaf7f1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176542"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648450"
 ---
 # <a name="mitigation-path-normalization"></a>완화: 경로 정규화
 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]을 대상으로 하는 앱부터, .NET Framework의 경로 정규화가 변경되었습니다.  
@@ -17,26 +17,26 @@ ms.locfileid: "59176542"
 ## <a name="what-is-path-normalization"></a>경로 정규화란?  
  경로 정규화 중에는 대상 운영 체제의 올바른 경로에 맞게 경로 또는 파일을 식별하는 문자열이 수정됩니다. 정규화에는 일반적으로 다음이 수행됩니다.  
   
--   구성 요소 및 디렉터리 구분 기호 정규화  
+- 구성 요소 및 디렉터리 구분 기호 정규화  
   
--   상대 경로에 현재 디렉터리 적용  
+- 상대 경로에 현재 디렉터리 적용  
   
--   경로의 상대 디렉터리(`.`) 또는 부모 디렉터리(`..`) 평가  
+- 경로의 상대 디렉터리(`.`) 또는 부모 디렉터리(`..`) 평가  
   
--   지정된 문자 자르기  
+- 지정된 문자 자르기  
   
 ## <a name="the-changes"></a>변경 내용  
  [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]를 대상으로 하는 앱부터, 경로 정규화가 다음과 같이 변경되었습니다.  
   
--   런타임은 운영 체제의 [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) 함수를 지연시켜 경로를 정규화합니다.  
+- 런타임은 운영 체제의 [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) 함수를 지연시켜 경로를 정규화합니다.  
   
--   정규화 중에 더 이상 디렉터리 세그먼트의 끝(예: 디렉터리 이름 끝의 공백)이 잘리지 않습니다.  
+- 정규화 중에 더 이상 디렉터리 세그먼트의 끝(예: 디렉터리 이름 끝의 공백)이 잘리지 않습니다.  
   
--   완전 신뢰의 디바이스 경로 구문(`\\.\` 포함) 지원 및 mscorlib.dll `\\?\`에서 파일 I/O API 지원  
+- 완전 신뢰의 디바이스 경로 구문(`\\.\` 포함) 지원 및 mscorlib.dll `\\?\`에서 파일 I/O API 지원  
   
--   런타임에서 디바이스 구문 경로가 유효한지 확인하지 않습니다.  
+- 런타임에서 디바이스 구문 경로가 유효한지 확인하지 않습니다.  
   
--   대체 데이터 스트림에 액세스하기 위해 디바이스 구문을 사용할 수 있습니다.  
+- 대체 데이터 스트림에 액세스하기 위해 디바이스 구문을 사용할 수 있습니다.  
   
 ## <a name="impact"></a>영향  
  [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 이상 버전을 대상으로 하는 앱의 경우 이러한 변경이 기본적으로 설정되어 있습니다. 이를 통해 메서드에서 이전에 액세스할 수 없는 경로에 액세스할 수 있게 되었으며 성능이 향상되었습니다.  

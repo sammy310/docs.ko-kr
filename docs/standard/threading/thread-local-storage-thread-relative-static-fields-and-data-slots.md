@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69107cd7f1f84fa402479bb8a76c4b9b8a825d69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 681a9e71dcfb139c364d750383f13cdabbf33366
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718262"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644902"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>스레드 로컬 스토리지: 스레드 상대 정적 필드 및 데이터 슬롯
-관리되는 TLS(스레드 로컬 스토리지)를 사용하여 스레드 및 애플리케이션 도메인에 고유한 데이터를 저장할 수 있습니다. .NET Framework는 관리되는 TLS를 사용하는 두 가지 방법인 스레드 관련 정적 필드 및 데이터 슬롯을 제공합니다.  
+관리되는 TLS(스레드 로컬 저장소)를 사용하여 스레드 및 애플리케이션 도메인에 고유한 데이터를 저장할 수 있습니다. .NET Framework는 관리되는 TLS를 사용하는 두 가지 방법인 스레드 관련 정적 필드 및 데이터 슬롯을 제공합니다.  
   
--   컴파일 시간에 정확한 요구 사항을 예상할 수 있는 경우에는 스레드 관련 정적 필드(Visual Basic의 스레드 관련 `Shared` 필드)를 사용합니다. 스레드 관련 정적 필드는 최고의 성능을 제공합니다. 또한 컴파일 시간 형식 검사의 이점을 제공합니다.  
+- 컴파일 시간에 정확한 요구 사항을 예상할 수 있는 경우에는 스레드 관련 정적 필드(Visual Basic의 스레드 관련 `Shared` 필드)를 사용합니다. 스레드 관련 정적 필드는 최고의 성능을 제공합니다. 또한 컴파일 시간 형식 검사의 이점을 제공합니다.  
   
--   실제 요구 사항이 런타임에만 검색될 수 있는 경우에는 데이터 슬롯을 사용합니다. 데이터 슬롯은 스레드 관련 정적 필드보다 사용하기에 더 느리고 더 불편하고 데이터는 <xref:System.Object> 형식으로 저장되므로 사용하기 전에 올바른 형식으로 캐스트해야 합니다.  
+- 실제 요구 사항이 런타임에만 검색될 수 있는 경우에는 데이터 슬롯을 사용합니다. 데이터 슬롯은 스레드 관련 정적 필드보다 사용하기에 더 느리고 더 불편하고 데이터는 <xref:System.Object> 형식으로 저장되므로 사용하기 전에 올바른 형식으로 캐스트해야 합니다.  
   
  관리되지 않는 C++에서 `TlsAlloc`를 사용하여 슬롯을 동적으로 할당하고 `__declspec(thread)`를 사용하여 변수가 스레드 관련 스토리지에서 할당되어야 함을 선언합니다. 스레드 관련 정적 필드 및 데이터 슬롯은 이 동작의 관리되는 버전을 제공합니다.  
   
@@ -31,9 +31,9 @@ ms.locfileid: "54718262"
 ## <a name="uniqueness-of-data-in-managed-tls"></a>관리되는 TLS의 데이터 고유성  
  스레드 관련 정적 필드 또는 데이터 슬롯을 사용할지 여부에 관계없이 관리되는 TLS의 데이터는 스레드 및 애플리케이션 도메인의 조합에 고유합니다.  
   
--   애플리케이션 도메인 내에서는 두 스레드가 동일한 필드 또는 슬롯을 사용하는 경우에도 한 스레드가 다른 스레드의 데이터를 수정할 수 없습니다.  
+- 애플리케이션 도메인 내에서는 두 스레드가 동일한 필드 또는 슬롯을 사용하는 경우에도 한 스레드가 다른 스레드의 데이터를 수정할 수 없습니다.  
   
--   스레드가 여러 애플리케이션 도메인에서 동일한 필드나 슬롯에 액세스하는 경우 개별 값은 각 애플리케이션 도메인에서 유지 관리됩니다.  
+- 스레드가 여러 애플리케이션 도메인에서 동일한 필드나 슬롯에 액세스하는 경우 개별 값은 각 애플리케이션 도메인에서 유지 관리됩니다.  
   
  예를 들어 스레드가 스레드 관련 정적 필드의 값을 설정하고, 다른 애플리케이션 도메인에 들어간 다음, 필드 값을 검색할 경우 두 번째 애플리케이션 도메인에서 검색된 값은 첫 번째 애플리케이션 도메인의 값과 다릅니다. 두 번째 애플리케이션 도메인에서 필드에 대한 새 값을 설정해도 첫 번째 애플리케이션 도메인의 필드 값에 영향을 주지 않습니다.  
   
@@ -49,9 +49,9 @@ ms.locfileid: "54718262"
 ## <a name="data-slots"></a>데이터 슬롯  
  .NET Framework는 스레드 및 애플리케이션 도메인의 조합에 고유한 동적 데이터 슬롯을 제공합니다. 두 가지 형식의 데이터 슬롯인 명명된 슬롯 및 명명되지 않은 슬롯이 있습니다. 둘 다 <xref:System.LocalDataStoreSlot> 구조체를 사용하여 구현됩니다.  
   
--   명명된 데이터 슬롯을 만들려면 <xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType> 또는 <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType> 메서드를 사용합니다. 기존 명명된 슬롯에 대한 참조를 가져오려면 해당 이름을 <xref:System.Threading.Thread.GetNamedDataSlot%2A> 메서드에 전달합니다.  
+- 명명된 데이터 슬롯을 만들려면 <xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType> 또는 <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType> 메서드를 사용합니다. 기존 명명된 슬롯에 대한 참조를 가져오려면 해당 이름을 <xref:System.Threading.Thread.GetNamedDataSlot%2A> 메서드에 전달합니다.  
   
--   명명되지 않은 데이터 슬롯을 만들려면 <xref:System.Threading.Thread.AllocateDataSlot%2A?displayProperty=nameWithType> 메서드를 사용합니다.  
+- 명명되지 않은 데이터 슬롯을 만들려면 <xref:System.Threading.Thread.AllocateDataSlot%2A?displayProperty=nameWithType> 메서드를 사용합니다.  
   
  명명된 슬롯과 명명되지 않은 슬롯 모두에 대해 <xref:System.Threading.Thread.SetData%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Thread.GetData%2A?displayProperty=nameWithType> 메서드를 사용하여 슬롯에서 정보를 설정하고 검색합니다. 이러한 정적 메서드는 현재 메서드를 실행 중인 스레드에 대한 데이터에서 항상 작동합니다.  
   

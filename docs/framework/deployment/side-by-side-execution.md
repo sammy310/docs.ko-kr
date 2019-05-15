@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ee17426e3ac8d5351490276a8c71cdfe996eb1a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7c500b9343bdfa3481e8e5d9b938ebec8a323bdb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341077"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641032"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>.NET Framework의 Side-by-Side 실행
 Side-by-side 실행은 동일한 컴퓨터에서 여러 버전의 애플리케이션 또는 구성 요소를 실행하는 기능입니다. 동일한 컴퓨터에서 여러 버전의 공용 언어 런타임과, 하나의 런타임 버전을 사용하는 여러 버전의 애플리케이션 및 구성 요소를 동시에 사용할 수 있습니다.  
@@ -33,15 +33,15 @@ Side-by-side 실행은 동일한 컴퓨터에서 여러 버전의 애플리케�
   
  Side-by-Side 실행 및 .NET Framework는 DLL 충돌을 없애기 위한 다음과 같은 기능을 제공합니다.  
   
--   강력한 이름의 어셈블리  
+- 강력한 이름의 어셈블리  
   
      Side-by-Side 실행은 강력한 이름의 어셈블리를 사용하여 형식 정보를 특정 버전의 어셈블리에 바인딩합니다. 이렇게 하면 애플리케이션이나 구성 요소가 잘못된 버전의 어셈블리에 바인딩되지 않도록 할 수 있습니다. 또한, 강력한 이름의 어셈블리를 사용하면 동일한 컴퓨터에 여러 버전의 파일이 함께 있을 수 있으며 애플리케이션에서 이러한 파일을 사용할 수 있습니다. 자세한 내용은 [강력한 이름의 어셈블리](../../../docs/framework/app-domains/strong-named-assemblies.md)를 참조하세요.  
   
--   버전 인식 코드 스토리지.  
+- 버전 인식 코드 스토리지.  
   
      .NET Framework에서는 글로벌 어셈블리 캐시에 버전 인식 코드 스토리지를 제공합니다. 전역 어셈블리 캐시는 .NET Framework가 설치된 모든 컴퓨터에 있는 컴퓨터 수준의 코드 캐시입니다. 이 캐시는 버전, 문화권 및 게시자 정보에 따라 어셈블리를 저장하며 여러 버전의 구성 요소와 애플리케이션을 지원합니다. 자세한 내용은 [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)를 참조하세요.  
   
--   격리.  
+- 격리.  
   
      .NET Framework를 사용하면 격리 상태로 실행되는 애플리케이션과 구성 요소를 만들 수 있습니다. 이러한 격리성은 Side-by-Side 실행의 필수 요소입니다. 격리성을 통해 사용 중인 리소스를 인식하고 여러 버전의 애플리케이션 또는 구성 요소 간에 리소스를 안전하게 공유할 수 있습니다. 또한 버전 고유의 방식으로 파일이 저장됩니다. 격리에 대한 자세한 내용은 [Side-by-Side 실행용 구성 요소를 만들기 위한 지침](../../../docs/framework/deployment/guidelines-for-creating-components-for-side-by-side-execution.md)을 참조하세요.  
   
@@ -66,9 +66,9 @@ Side-by-side 실행은 동일한 컴퓨터에서 여러 버전의 애플리케�
 ## <a name="determining-which-version-of-the-runtime-to-load"></a>로드할 런타임 버전 결정  
  공용 언어 런타임은 다음 정보를 사용하여 애플리케이션을 위해 로드할 런타임 버전을 확인합니다.  
   
--   사용할 수 있는 런타임 버전  
+- 사용할 수 있는 런타임 버전  
   
--   애플리케이션에서 지원하는 런타임 버전  
+- 애플리케이션에서 지원하는 런타임 버전  
   
 ### <a name="supported-runtime-versions"></a>지원되는 런타임 버전  
  런타임은 애플리케이션 구성 파일 및 PE(이식 가능한 실행 ) 파일 헤더를 사용하여 애플리케이션이 지원하는 런타임 버전을 확인합니다. 애플리케이션 구성 파일이 없으면 런타임은 해당 버전을 사용할 수 있는 경우 애플리케이션의 PE 파일 헤더에 지정된 런타임 버전을 로드합니다.  

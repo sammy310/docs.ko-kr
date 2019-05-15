@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4104ddba1942f9cb9bd860d53dc54968de5af891
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 23a05279615a589bca7bb61507caf8dcc3630020
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151270"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648698"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>형식 라이브러리를 어셈블리로 가져오기
 COM 형식 정의는 일반적으로 형식 라이브러리에 있습니다. 반면 CLS 규격 컴파일러는 어셈블리에서 형식 메타데이터를 생성합니다. 형식 정보의 두 가지 소스는 약간 다릅니다. 이 항목에서는 형식 라이브러리에서 메타데이터를 생성하기 위한 기술을 설명합니다. 결과 어셈블리를 interop 어셈블리라고 하고 포함된 형식 정보를 통해 .NET Framework 애플리케이션이 COM 형식을 사용할 수 있습니다.  
   
  이 형식 정보를 애플리케이션에서 사용할 수 있도록 설정하는 두 가지 방법이 있습니다.  
   
--   디자인 타임 전용 interop 어셈블리 사용: [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터 interop 어셈블리의 형식 정보를 실행 파일에 포함하도록 컴파일러에 지시할 수 있습니다. 컴파일러는 애플리케이션에서 사용하는 형식 정보만 포함합니다. Interop 어셈블리를 애플리케이션에 배포할 필요는 없습니다. 이것이 권장되는 방법입니다.  
+- 디자인 타임 전용 interop 어셈블리 사용: [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터 interop 어셈블리의 형식 정보를 실행 파일에 포함하도록 컴파일러에 지시할 수 있습니다. 컴파일러는 애플리케이션에서 사용하는 형식 정보만 포함합니다. Interop 어셈블리를 애플리케이션에 배포할 필요는 없습니다. 이것이 권장되는 방법입니다.  
   
--   interop 어셈블리 배포: interop 어셈블리에 대한 표준 참조를 만들 수 있습니다. 이 경우 interop 어셈블리를 애플리케이션에 배포해야 합니다. 이 방법을 적용하는데 전용 COM 구성 요소를 사용하지 않을 경우 관리 코드에 통합하려는 COM 구성 요소의 작성자가 게시한 PIA(주 interop 어셈블리)를 항상 참조하세요. 주 interop 어셈블리를 생성 및 사용하는 방법에 대한 자세한 내용은 [주 Interop 어셈블리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100))를 참조하세요.  
+- interop 어셈블리 배포: interop 어셈블리에 대한 표준 참조를 만들 수 있습니다. 이 경우 interop 어셈블리를 애플리케이션에 배포해야 합니다. 이 방법을 적용하는데 전용 COM 구성 요소를 사용하지 않을 경우 관리 코드에 통합하려는 COM 구성 요소의 작성자가 게시한 PIA(주 interop 어셈블리)를 항상 참조하세요. 주 interop 어셈블리를 생성 및 사용하는 방법에 대한 자세한 내용은 [주 Interop 어셈블리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100))를 참조하세요.  
   
  디자인 타임 전용 interop 어셈블리를 사용할 경우 COM 구성 요소의 작성자가 게시한 주 interop 어셈블리의 형식 정보를 포함할 수 있습니다. 그러나 주 interop 어셈블리를 애플리케이션에 배포할 필요는 없습니다.  
   
@@ -42,29 +42,29 @@ COM 형식 정의는 일반적으로 형식 라이브러리에 있습니다. 반
   
  대상 COM 형식의 구현이 포함된 형식 라이브러리를 찾은 후 다음 옵션을 사용하여 형식 메타데이터가 포함된 interop 어셈블리를 생성합니다.  
   
--   Visual Studio  
+- Visual Studio  
   
      Visual Studio는 형식 라이브러리의 COM 형식을 어셈블리의 메타데이터로 자동으로 변환합니다. 자세한 내용은 [방법: 형식 라이브러리에 참조 추가](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md).  
   
--   [형식 라이브러리 가져오기(Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
+- [형식 라이브러리 가져오기(Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
   
      형식 라이브러리 가져오기는 결과 interop 파일에서 메타데이터를 조정하고, 기존 형식 라이브러리에서 형식을 가져오고, interop 어셈블리 및 네임스페이스를 생성하기 위한 명령줄 옵션을 제공합니다. 자세한 내용은 [방법: 형식 라이브러리에서 Interop 어셈블리 생성](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)을 참조하세요.  
   
--   <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType> 클래스  
+- <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType> 클래스  
   
      이 클래스는 형식 라이브러리의 coclass 및 인터페이스를 어셈블리 내의 메타데이터로 변환하기 위한 메서드를 제공합니다. 이 클래스는 Tlbimp.exe와 동일한 메타데이터 출력을 생성합니다. 그러나 Tlbimp.exe와 달리 <xref:System.Runtime.InteropServices.TypeLibConverter> 클래스는 메모리 내 형식 라이브러리를 메타데이터로 변환할 수 있습니다.  
   
--   사용자 지정 래퍼  
+- 사용자 지정 래퍼  
   
      형식 라이브러리가 사용 불가능하거나 잘못된 경우 한 가지 옵션은 관리 소스 코드에서 클래스 또는 인터페이스에 대한 중복 정의를 만드는 것입니다. 그런 다음 런타임을 대상으로 하는 컴파일러로 소스 코드를 컴파일하여 어셈블리에서 메타데이터를 생성합니다.  
   
      COM 형식을 수동으로 정의하려면 다음 항목에 액세스할 수 있어야 합니다.  
   
-    -   정의되는 coclass 및 인터페이스에 대한 자세한 설명.  
+    - 정의되는 coclass 및 인터페이스에 대한 자세한 설명.  
   
-    -   해당하는 .NET Framework 클래스 정의를 생성할 수 있는 컴파일러(예: C# 컴파일러).  
+    - 해당하는 .NET Framework 클래스 정의를 생성할 수 있는 컴파일러(예: C# 컴파일러).  
   
-    -   형식 라이브러리-어셈블리 변환 규칙에 대한 이해.  
+    - 형식 라이브러리-어셈블리 변환 규칙에 대한 이해.  
   
      사용자 지정 래퍼를 작성하는 것은 고급 기술입니다. 사용자 지정 래퍼를 생성하는 방법에 대한 자세한 내용은 [표준 래퍼 사용자 지정](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))을 참조하세요.  
   

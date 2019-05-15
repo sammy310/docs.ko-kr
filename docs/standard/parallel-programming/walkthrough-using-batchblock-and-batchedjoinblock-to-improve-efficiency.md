@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79bbf33ff1b1e843836aa1b93188970b6a1c8ede
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 91520b8967445a70a7775b99faef0cefc5e01cc2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302982"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654411"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>연습: BatchBlock 및 BatchedJoinBlock을 사용하여 효율성 향상
 TPL 데이터 흐름 라이브러리는 하나 이상의 소스에서 데이터를 검색 및 버퍼링한 다음, 해당 버퍼링된 데이터를 하나의 컬렉션으로 전파할 수 있도록 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> 클래스를 제공합니다. 이 일괄 처리 메커니즘은 하나 이상의 소스에서 데이터를 수집한 다음, 여러 데이터 요소를 일괄 처리할 때 유용합니다. 예를 들어 데이터 흐름을 사용하여 레코드를 데이터베이스에 삽입하는 애플리케이션을 고려합니다. 이 작업은 순차적으로 한 번에 하나가 아니라 동시에 여러 항목이 삽입되는 경우 더 효율적일 수 있습니다. 이 문서에서는 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 클래스를 사용하여 이러한 데이터베이스 삽입 작업의 효율성을 개선하는 방법을 설명합니다. 또한 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> 클래스를 사용하여 프로그램이 데이터베이스에서 읽을 때 발생하는 모든 예외와 결과를 둘 다 캡처하는 방법을 설명합니다.
@@ -34,19 +34,19 @@ TPL 데이터 흐름 라이브러리는 하나 이상의 소스에서 데이터�
   
  이 연습에는 다음과 같은 섹션이 있습니다.  
   
--   [콘솔 애플리케이션 만들기](#creating)  
+- [콘솔 애플리케이션 만들기](#creating)  
   
--   [Employee 클래스 정의](#employeeClass)  
+- [Employee 클래스 정의](#employeeClass)  
   
--   [직원 데이터베이스 작업 정의](#operations)  
+- [직원 데이터베이스 작업 정의](#operations)  
   
--   [버퍼링을 사용하지 않고 직원 데이터를 데이터베이스에 추가](#nonBuffering)  
+- [버퍼링을 사용하지 않고 직원 데이터를 데이터베이스에 추가](#nonBuffering)  
   
--   [버퍼링을 사용하여 직원 데이터를 데이터베이스에 추가](#buffering)  
+- [버퍼링을 사용하여 직원 데이터를 데이터베이스에 추가](#buffering)  
   
--   [버퍼링된 조인을 사용하여 데이터베이스에서 직원 데이터 읽기](#bufferedJoin)  
+- [버퍼링된 조인을 사용하여 데이터베이스에서 직원 데이터 읽기](#bufferedJoin)  
   
--   [전체 예제](#complete)  
+- [전체 예제](#complete)  
   
 <a name="creating"></a>   
 ## <a name="creating-the-console-application"></a>콘솔 애플리케이션 만들기  

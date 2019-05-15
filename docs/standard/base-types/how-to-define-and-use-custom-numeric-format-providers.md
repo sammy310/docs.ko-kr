@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4fab94c85745bf17a632d04c563070d79b48aa95
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 37c9140db390c55c9cab4e8a3203287d2dd12725
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318379"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634234"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>방법: 사용자 지정 숫자 형식 공급 기업 정의 및 사용
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 숫자 값의 문자열 표현을 광범위하게 제어할 수 있습니다. 숫자 값의 형식을 사용자 지정하기 위한 다음과 같은 기능을 지원합니다.  
   
--   숫자를 해당 문자열 표현으로 변환하기 위한 미리 정의된 형식 집합을 제공하는 표준 숫자 형식 문자열입니다. `format` 매개 변수가 있는 숫자 서식 지정 메서드(예: <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>)와 함께 사용할 수 있습니다. 자세한 내용은 [표준 숫자 형식 문자열](../../../docs/standard/base-types/standard-numeric-format-strings.md)을 참조하세요.  
+- 숫자를 해당 문자열 표현으로 변환하기 위한 미리 정의된 형식 집합을 제공하는 표준 숫자 형식 문자열입니다. `format` 매개 변수가 있는 숫자 서식 지정 메서드(예: <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>)와 함께 사용할 수 있습니다. 자세한 내용은 [표준 숫자 형식 문자열](../../../docs/standard/base-types/standard-numeric-format-strings.md)을 참조하세요.  
   
--   함께 결합되어 사용자 지정 숫자 형식 지정자를 정의할 수 있는 기호 집합을 제공하는 사용자 지정 숫자 형식 문자열입니다. 또한 `format` 매개 변수가 있는 숫자 서식 지정 메서드(예: <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>)와 함께 사용할 수도 있습니다. 자세한 내용은 [사용자 지정 숫자 형식 문자열](../../../docs/standard/base-types/custom-numeric-format-strings.md)을 참조하세요.  
+- 함께 결합되어 사용자 지정 숫자 형식 지정자를 정의할 수 있는 기호 집합을 제공하는 사용자 지정 숫자 형식 문자열입니다. 또한 `format` 매개 변수가 있는 숫자 서식 지정 메서드(예: <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>)와 함께 사용할 수도 있습니다. 자세한 내용은 [사용자 지정 숫자 형식 문자열](../../../docs/standard/base-types/custom-numeric-format-strings.md)을 참조하세요.  
   
--   숫자 값의 문자열 표현을 표시하는 데 사용되는 기호 및 형식 패턴을 정의하는 사용자 지정 <xref:System.Globalization.CultureInfo> 또는 <xref:System.Globalization.NumberFormatInfo> 개체입니다. `provider` 매개 변수가 있는 숫자 서식 지정 메서드(예: <xref:System.Int32.ToString%2A>)와 함께 사용할 수 있습니다. 일반적으로 `provider` 매개 변수는 문화권별 서식 지정에 사용됩니다.  
+- 숫자 값의 문자열 표현을 표시하는 데 사용되는 기호 및 형식 패턴을 정의하는 사용자 지정 <xref:System.Globalization.CultureInfo> 또는 <xref:System.Globalization.NumberFormatInfo> 개체입니다. `provider` 매개 변수가 있는 숫자 서식 지정 메서드(예: <xref:System.Int32.ToString%2A>)와 함께 사용할 수 있습니다. 일반적으로 `provider` 매개 변수는 문화권별 서식 지정에 사용됩니다.  
   
  애플리케이션에서 형식이 지정된 계정 번호, ID 번호 또는 우편 번호를 표시해야 하는 경우와 같이 이 세 가지 방법이 부적절한 경우도 있습니다. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 <xref:System.Globalization.CultureInfo> 또는 <xref:System.Globalization.NumberFormatInfo> 개체가 아닌 서식 지정 개체를 정의하여 숫자 값의 서식 지정 방법을 결정할 수도 있습니다. 이 항목에서는 이러한 개체를 구현하기 위한 단계별 지침을 제공하고 전화 번호 형식을 지정하는 예제를 제공합니다.  
   
@@ -41,21 +41,21 @@ ms.locfileid: "59318379"
   
 2. <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 메서드를 구현합니다. <xref:System.IFormatProvider.GetFormat%2A>은 서식 지정 메서드(예: <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 메서드)가 실제로 사용자 지정 서식 지정을 수행하는 개체를 검색하기 위해 호출하는 콜백 메서드입니다. 일반적인 <xref:System.IFormatProvider.GetFormat%2A> 구현에서는 다음 작업을 수행합니다.  
   
-    1.  메서드 매개 변수로 전달되는 <xref:System.Type> 개체가 <xref:System.ICustomFormatter> 인터페이스를 나타내는지 여부를 결정합니다.  
+    1. 메서드 매개 변수로 전달되는 <xref:System.Type> 개체가 <xref:System.ICustomFormatter> 인터페이스를 나타내는지 여부를 결정합니다.  
   
-    2.  매개 변수가 <xref:System.ICustomFormatter> 인터페이스를 나타내지 않는 경우 <xref:System.IFormatProvider.GetFormat%2A>은 사용자 지정 서식 지정을 제공하는 <xref:System.ICustomFormatter> 인터페이스를 구현하는 개체를 반환합니다. 일반적으로 사용자 지정 형식 지정 개체 자체가 반환됩니다.  
+    2. 매개 변수가 <xref:System.ICustomFormatter> 인터페이스를 나타내지 않는 경우 <xref:System.IFormatProvider.GetFormat%2A>은 사용자 지정 서식 지정을 제공하는 <xref:System.ICustomFormatter> 인터페이스를 구현하는 개체를 반환합니다. 일반적으로 사용자 지정 형식 지정 개체 자체가 반환됩니다.  
   
-    3.  매개 변수가 <xref:System.ICustomFormatter> 인터페이스를 나타내지 않는 경우 <xref:System.IFormatProvider.GetFormat%2A>은 `null`을 반환합니다.  
+    3. 매개 변수가 <xref:System.ICustomFormatter> 인터페이스를 나타내지 않는 경우 <xref:System.IFormatProvider.GetFormat%2A>은 `null`을 반환합니다.  
   
 3. <xref:System.ICustomFormatter.Format%2A> 메서드를 구현합니다. 이 메서드는 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 메서드에 의해 호출되며 숫자의 문자열 표현을 반환합니다. 일반적으로 메서드를 구현하는 과정은 다음과 같습니다.  
   
-    1.  필요에 따라 `provider` 매개 변수를 검사하여 메서드가 서식 지정 서비스를 제공하기에 적합한지 확인합니다. <xref:System.IFormatProvider>와 <xref:System.ICustomFormatter>를 둘 다 구현하는 서식 지정 개체의 경우 `provider` 매개 변수가 현재 서식 지정 개체와 같은지 테스트해야 합니다.  
+    1. 필요에 따라 `provider` 매개 변수를 검사하여 메서드가 서식 지정 서비스를 제공하기에 적합한지 확인합니다. <xref:System.IFormatProvider>와 <xref:System.ICustomFormatter>를 둘 다 구현하는 서식 지정 개체의 경우 `provider` 매개 변수가 현재 서식 지정 개체와 같은지 테스트해야 합니다.  
   
-    2.  형식 지정 개체가 사용자 지정 형식 지정자를 지원해야 하는지 여부를 결정합니다. 예를 들어 "N" 형식 지정자는 미국 전화 번호가 NANP 형식으로, "I" 형식 지정자는 ITU-T 권장 E.123 형식으로 출력되어야 함을 나타낼 수 있습니다. 형식 지정자가 사용된 경우 메서드에서 특정 형식 지정자를 처리해야 합니다. 지정자는 `format` 매개 변수의 메서드에 전달됩니다. 지정자가 없는 경우 `format` 매개 변수의 값은 <xref:System.String.Empty?displayProperty=nameWithType>입니다.  
+    2. 형식 지정 개체가 사용자 지정 형식 지정자를 지원해야 하는지 여부를 결정합니다. 예를 들어 "N" 형식 지정자는 미국 전화 번호가 NANP 형식으로, "I" 형식 지정자는 ITU-T 권장 E.123 형식으로 출력되어야 함을 나타낼 수 있습니다. 형식 지정자가 사용된 경우 메서드에서 특정 형식 지정자를 처리해야 합니다. 지정자는 `format` 매개 변수의 메서드에 전달됩니다. 지정자가 없는 경우 `format` 매개 변수의 값은 <xref:System.String.Empty?displayProperty=nameWithType>입니다.  
   
-    3.  메서드에 `arg` 매개 변수로 전달된 숫자 값을 검색합니다. 문자열 표현으로 변환하는 데 필요한 조작을 수행합니다.  
+    3. 메서드에 `arg` 매개 변수로 전달된 숫자 값을 검색합니다. 문자열 표현으로 변환하는 데 필요한 조작을 수행합니다.  
   
-    4.  `arg` 매개 변수의 문자열 표현을 반환합니다.  
+    4. `arg` 매개 변수의 문자열 표현을 반환합니다.  
   
 ### <a name="to-use-a-custom-numeric-formatting-object"></a>사용자 지정 숫자 형식 지정 개체를 사용하려면  
   

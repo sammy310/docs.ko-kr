@@ -14,19 +14,19 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: e8edc747c003cd5527df509af83325816671ddfb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 735fedc5869ab82d49ef4d9068c67302bf825e2e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59346108"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634674"
 ---
 # <a name="character-encoding-in-net"></a>.NET의 문자 인코딩
 문자는 다양한 방법으로 표현할 수 있는 추상 엔터티입니다. 문자 인코딩은 지원되는 문자 집합의 각 문자와 해당 문자를 나타내는 일부 값의 쌍을 만드는 시스템입니다. 예를 들어 모르스 부호는 로마 알파벳의 각 문자와 전화선을 통한 전송에 적합한 점과 대시 패턴의 쌍을 만드는 문자 인코딩입니다. 컴퓨터의 문자 인코딩은 지원되는 문자 집합의 각 문자와 해당 문자를 나타내는 숫자 값의 쌍을 만듭니다. 문자 인코딩에는 다음 두 가지 구성 요소가 있습니다.  
   
--   인코더 - 문자 시퀀스를 숫자 값(바이트) 시퀀스로 변환합니다.  
+- 인코더 - 문자 시퀀스를 숫자 값(바이트) 시퀀스로 변환합니다.  
   
--   디코더 - 바이트 시퀀스를 문자 시퀀스로 변환합니다.  
+- 디코더 - 바이트 시퀀스를 문자 시퀀스로 변환합니다.  
   
  문자 인코딩은 인코더와 디코더가 작동하는 규칙을 설명합니다. 예를 들어 <xref:System.Text.UTF8Encoding> 클래스는 1-4바이트를 사용하여 단일 유니코드 문자를 나타내는 UTF-8(8비트 유니코드 변환 형식)으로 인코딩 및 디코딩하는 규칙을 설명합니다. 인코딩 및 디코딩에 유효성 검사가 포함될 수도 있습니다. 예를 들어 <xref:System.Text.UnicodeEncoding> 클래스는 모든 서로게이트를 검사하여 유효한 서로게이트 쌍을 구성하는지 확인합니다. 서로게이트 쌍은 코드 포인트가 U+D800에서 U+DBFF 사이의 범위인 문자와 코드 포인트가 U+DC00에서 U+DFFF 사이의 범위인 문자가 이 순서로 결합되어 구성됩니다.  대체(fallback) 전략은 인코더에서 잘못된 문자를 처리하는 방법 또는 디코더에서 잘못된 바이트를 처리하는 방법을 결정합니다.  
   
@@ -37,27 +37,27 @@ ms.locfileid: "59346108"
   
  이 항목은 다음 섹션으로 구성되어 있습니다.  
   
--   [.NET의 인코딩](../../../docs/standard/base-types/character-encoding.md#Encodings)  
+- [.NET의 인코딩](../../../docs/standard/base-types/character-encoding.md#Encodings)  
   
--   [인코딩 클래스 선택](../../../docs/standard/base-types/character-encoding.md#Selecting)  
+- [인코딩 클래스 선택](../../../docs/standard/base-types/character-encoding.md#Selecting)  
   
--   [인코딩 개체 사용](../../../docs/standard/base-types/character-encoding.md#Using)  
+- [인코딩 개체 사용](../../../docs/standard/base-types/character-encoding.md#Using)  
   
--   [대체(fallback) 전략 선택](../../../docs/standard/base-types/character-encoding.md#FallbackStrategy)  
+- [대체(fallback) 전략 선택](../../../docs/standard/base-types/character-encoding.md#FallbackStrategy)  
   
--   [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom)  
+- [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom)  
   
 <a name="Encodings"></a>   
 ## <a name="encodings-in-net"></a>.NET의 인코딩  
  .NET의 모든 문자 인코딩 클래스는 모든 문자 인코딩에 공통된 기능을 정의하는 추상 클래스인 <xref:System.Text.Encoding?displayProperty=nameWithType> 클래스에서 상속됩니다. .NET에서 구현된 개별 인코딩 개체에 액세스하려면 다음을 수행합니다.  
   
--   .NET에서 사용할 수 있는 표준 문자 인코딩(ASCII, UTF-7, UTF-8, UTF-16 및 UTF-32)을 나타내는 개체를 반환하는 <xref:System.Text.Encoding> 클래스의 정적 속성을 사용합니다. 예를 들어 <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> 속성은 <xref:System.Text.UnicodeEncoding> 개체를 반환합니다. 각 개체는 교체 대체(fallback)를 사용하여 인코딩할 수 없는 문자열과 디코딩할 수 없는 바이트를 처리합니다. 자세한 내용은 [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) 섹션을 참조하세요.  
+- .NET에서 사용할 수 있는 표준 문자 인코딩(ASCII, UTF-7, UTF-8, UTF-16 및 UTF-32)을 나타내는 개체를 반환하는 <xref:System.Text.Encoding> 클래스의 정적 속성을 사용합니다. 예를 들어 <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> 속성은 <xref:System.Text.UnicodeEncoding> 개체를 반환합니다. 각 개체는 교체 대체(fallback)를 사용하여 인코딩할 수 없는 문자열과 디코딩할 수 없는 바이트를 처리합니다. 자세한 내용은 [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) 섹션을 참조하세요.  
   
--   인코딩의 클래스 생성자를 호출합니다. 이런 방식으로 ASCII, UTF-7, UTF-8, UTF-16 및 UTF-32 인코딩에 대한 개체를 인스턴스화할 수 있습니다. 기본적으로 각 개체는 교체 대체(fallback)를 사용하여 인코딩할 수 없는 문자열과 디코딩할 수 없는 바이트를 처리하지만 대신 예외가 발생하도록 지정할 수 있습니다. 자세한 내용은 [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) 및 [Exception Fallback](../../../docs/standard/base-types/character-encoding.md#Exception) 섹션을 참조하세요.  
+- 인코딩의 클래스 생성자를 호출합니다. 이런 방식으로 ASCII, UTF-7, UTF-8, UTF-16 및 UTF-32 인코딩에 대한 개체를 인스턴스화할 수 있습니다. 기본적으로 각 개체는 교체 대체(fallback)를 사용하여 인코딩할 수 없는 문자열과 디코딩할 수 없는 바이트를 처리하지만 대신 예외가 발생하도록 지정할 수 있습니다. 자세한 내용은 [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) 및 [Exception Fallback](../../../docs/standard/base-types/character-encoding.md#Exception) 섹션을 참조하세요.  
   
--   <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=nameWithType> 생성자를 호출하고 인코딩을 나타내는 정수를 전달합니다. 표준 인코딩 개체는 교체 대체(fallback)를 사용하고, 코드 페이지와 DBCS(더블바이트 문자 집합) 인코딩 개체는 최적 맞춤 대체(fallback)를 사용하여 인코딩할 수 없는 문자열과 디코딩할 수 없는 바이트를 처리합니다. 자세한 내용은 [Best-Fit Fallback](../../../docs/standard/base-types/character-encoding.md#BestFit) 섹션을 참조하세요.  
+- <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=nameWithType> 생성자를 호출하고 인코딩을 나타내는 정수를 전달합니다. 표준 인코딩 개체는 교체 대체(fallback)를 사용하고, 코드 페이지와 DBCS(더블바이트 문자 집합) 인코딩 개체는 최적 맞춤 대체(fallback)를 사용하여 인코딩할 수 없는 문자열과 디코딩할 수 없는 바이트를 처리합니다. 자세한 내용은 [Best-Fit Fallback](../../../docs/standard/base-types/character-encoding.md#BestFit) 섹션을 참조하세요.  
   
--   .NET에서 사용할 수 있는 표준, 코드 페이지 또는 DBCS 인코딩을 반환하는 <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> 메서드를 호출합니다. 오버로드를 통해 인코더와 디코더 둘 다에 대체(fallback) 개체를 지정할 수 있습니다.  
+- .NET에서 사용할 수 있는 표준, 코드 페이지 또는 DBCS 인코딩을 반환하는 <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> 메서드를 호출합니다. 오버로드를 통해 인코더와 디코더 둘 다에 대체(fallback) 개체를 지정할 수 있습니다.  
   
 > [!NOTE]
 >  유니코드 표준은 지원되는 모든 스크립트의 각 문자에 코드 포인트(숫자)와 이름을 할당합니다. 예를 들어 "A" 문자는 코드 포인트 U+0041 및 이름 "LATIN CAPITAL LETTER A"로 표시됩니다. UTF(유니코드 변환 형식) 인코딩은 코드 포인트를 하나 이상의 바이트 시퀀스로 인코딩하는 방법을 정의합니다. 유니코드 인코딩 체계를 사용하면 모든 문자 집합의 문자를 단일 인코딩으로 나타낼 수 있으므로 국제 애플리케이션 개발이 간소화됩니다. 애플리케이션 개발자가 더 이상 특정 언어나 쓰기 시스템을 위한 문자를 생성하는 데 사용된 인코딩 체계를 추적할 필요가 없으며 손상 없이 전 세계 시스템 간에 데이터를 공유할 수 있습니다.  
@@ -87,17 +87,17 @@ ms.locfileid: "59346108"
   
  ASCII 인코딩(<xref:System.Text.ASCIIEncoding>)을 사용하려는 경우 <xref:System.Text.UTF8Encoding> 을 대신 사용합니다. 두 인코딩은 ASCII 문자 집합에서 동일하지만 <xref:System.Text.UTF8Encoding> 에는 다음과 같은 이점이 있습니다.  
   
--   <xref:System.Text.ASCIIEncoding> 은 U+0000에서 U+007F 사이의 유니코드 문자 값만 지원하는 반면, 모든 유니코드 문자를 나타낼 수 있습니다.  
+- <xref:System.Text.ASCIIEncoding> 은 U+0000에서 U+007F 사이의 유니코드 문자 값만 지원하는 반면, 모든 유니코드 문자를 나타낼 수 있습니다.  
   
--   오류 검색 및 향상된 보안을 제공합니다.  
+- 오류 검색 및 향상된 보안을 제공합니다.  
   
--   최대한 빠르도록 조정되었으며 다른 인코딩보다 더 빨라야 합니다. 완전히 ASCII인 콘텐츠의 경우에도 <xref:System.Text.UTF8Encoding> 으로 수행된 작업이 <xref:System.Text.ASCIIEncoding>으로 수행된 작업보다 더 빠릅니다.  
+- 최대한 빠르도록 조정되었으며 다른 인코딩보다 더 빨라야 합니다. 완전히 ASCII인 콘텐츠의 경우에도 <xref:System.Text.UTF8Encoding> 으로 수행된 작업이 <xref:System.Text.ASCIIEncoding>으로 수행된 작업보다 더 빠릅니다.  
   
  <xref:System.Text.ASCIIEncoding> 은 레거시 애플리케이션에만 사용해야 합니다. 그러나 레거시 애플리케이션의 경우에도 다음과 같은 이유로 <xref:System.Text.UTF8Encoding> 이 더 적합할 수 있습니다(기본 설정 가정).  
   
--   애플리케이션에 엄격하게 ASCII가 아닌 콘텐츠가 있고 <xref:System.Text.ASCIIEncoding>으로 인코딩하는 경우 각각의 비 ASCII 문자가 물음표(?)로 인코딩됩니다. 그런 후에 애플리케이션에서 이 데이터를 디코딩하면 정보가 손실됩니다.  
+- 애플리케이션에 엄격하게 ASCII가 아닌 콘텐츠가 있고 <xref:System.Text.ASCIIEncoding>으로 인코딩하는 경우 각각의 비 ASCII 문자가 물음표(?)로 인코딩됩니다. 그런 후에 애플리케이션에서 이 데이터를 디코딩하면 정보가 손실됩니다.  
   
--   애플리케이션에 엄격하게 ASCII가 아닌 콘텐츠가 있고 <xref:System.Text.UTF8Encoding>으로 인코딩하는 경우 결과를 ASCII로 해석하면 인식할 수 없는 것처럼 보입니다. 그러나 애플리케이션이 UTF-8 디코더를 사용하여 이 데이터를 디코딩하면 데이터가 성공적으로 라운드트립을 수행합니다.  
+- 애플리케이션에 엄격하게 ASCII가 아닌 콘텐츠가 있고 <xref:System.Text.UTF8Encoding>으로 인코딩하는 경우 결과를 ASCII로 해석하면 인식할 수 없는 것처럼 보입니다. 그러나 애플리케이션이 UTF-8 디코더를 사용하여 이 데이터를 디코딩하면 데이터가 성공적으로 라운드트립을 수행합니다.  
   
  웹 애플리케이션에서는 웹 요청에 대한 응답으로 클라이언트에 전송되는 문자가 클라이언트에서 사용되는 인코딩을 반영해야 합니다. 대부분의 경우 사용자에게 필요한 인코딩으로 텍스트를 표시하기 위해 <xref:System.Web.HttpResponse.ContentEncoding%2A?displayProperty=nameWithType> 속성을 <xref:System.Web.HttpRequest.ContentEncoding%2A?displayProperty=nameWithType> 속성에서 반환된 값으로 설정해야 합니다.  
   
@@ -130,11 +130,11 @@ ms.locfileid: "59346108"
 ## <a name="choosing-a-fallback-strategy"></a>대체(fallback) 전략 선택  
  메서드가 문자를 인코딩 또는 디코딩하려고 하는데 매핑이 없는 경우 실패한 매핑의 처리 방법을 결정하는 대체(fallback) 전략을 구현해야 합니다. 다음 세 가지 유형의 대체 (fallback) 전략이 있습니다.  
   
--   Best-Fit Fallback  
+- Best-Fit Fallback  
   
--   Replacement Fallback  
+- Replacement Fallback  
   
--   Exception Fallback  
+- Exception Fallback  
   
 > [!IMPORTANT]
 >  인코딩 작업의 가장 일반적인 문제는 유니코드 문자를 특정 코드 페이지 인코딩에 매핑할 수 없는 경우에 발생합니다. 디코딩 작업의 가장 일반적인 문제는 잘못된 바이트 시퀀스를 유효한 유니코드 문자로 변환할 수 없는 경우에 발생합니다. 이러한 이유로 특정 인코딩 개체에서 사용하는 대체(fallback) 전략을 알고 있어야 합니다. 가능하면 개체를 인스턴스화할 때 인코딩 개체에서 사용할 대체(fallback) 전략을 지정해야 합니다.  
@@ -195,9 +195,9 @@ ms.locfileid: "59346108"
   
  <xref:System.Text.EncoderFallbackException> 및 <xref:System.Text.DecoderFallbackException> 개체는 예외를 발생시킨 조건에 대한 다음 정보를 제공합니다.  
   
--   <xref:System.Text.EncoderFallbackException> 개체에는 인코딩할 수 없는 문자가 알 수 없는 서로게이트 쌍을 나타내는지(이 경우 메서드에서 <xref:System.Text.EncoderFallbackException.IsUnknownSurrogate%2A> 가 반환됨) 또는 알 수 없는 단일 문자를 나타내는지(이 경우 메서드에서 `true`가 반환됨)를 표시하는 `false`메서드가 포함됩니다. 서로게이트 쌍의 문자는 <xref:System.Text.EncoderFallbackException.CharUnknownHigh%2A?displayProperty=nameWithType> 및 <xref:System.Text.EncoderFallbackException.CharUnknownLow%2A?displayProperty=nameWithType> 속성에서 확인할 수 있습니다. 알 수 없는 단일 문자는 <xref:System.Text.EncoderFallbackException.CharUnknown%2A?displayProperty=nameWithType> 속성에서 확인할 수 있습니다. <xref:System.Text.EncoderFallbackException.Index%2A?displayProperty=nameWithType> 속성은 인코딩할 수 없는 첫 번째 문자가 발견된 문자열의 위치를 나타냅니다.  
+- <xref:System.Text.EncoderFallbackException> 개체에는 인코딩할 수 없는 문자가 알 수 없는 서로게이트 쌍을 나타내는지(이 경우 메서드에서 <xref:System.Text.EncoderFallbackException.IsUnknownSurrogate%2A> 가 반환됨) 또는 알 수 없는 단일 문자를 나타내는지(이 경우 메서드에서 `true`가 반환됨)를 표시하는 `false`메서드가 포함됩니다. 서로게이트 쌍의 문자는 <xref:System.Text.EncoderFallbackException.CharUnknownHigh%2A?displayProperty=nameWithType> 및 <xref:System.Text.EncoderFallbackException.CharUnknownLow%2A?displayProperty=nameWithType> 속성에서 확인할 수 있습니다. 알 수 없는 단일 문자는 <xref:System.Text.EncoderFallbackException.CharUnknown%2A?displayProperty=nameWithType> 속성에서 확인할 수 있습니다. <xref:System.Text.EncoderFallbackException.Index%2A?displayProperty=nameWithType> 속성은 인코딩할 수 없는 첫 번째 문자가 발견된 문자열의 위치를 나타냅니다.  
   
--   <xref:System.Text.DecoderFallbackException> 개체에는 디코딩할 수 없는 바이트 배열을 반환하는 <xref:System.Text.DecoderFallbackException.BytesUnknown%2A> 속성이 포함됩니다. <xref:System.Text.DecoderFallbackException.Index%2A?displayProperty=nameWithType> 속성은 알 수 없는 바이트의 시작 위치를 나타냅니다.  
+- <xref:System.Text.DecoderFallbackException> 개체에는 디코딩할 수 없는 바이트 배열을 반환하는 <xref:System.Text.DecoderFallbackException.BytesUnknown%2A> 속성이 포함됩니다. <xref:System.Text.DecoderFallbackException.Index%2A?displayProperty=nameWithType> 속성은 알 수 없는 바이트의 시작 위치를 나타냅니다.  
   
  <xref:System.Text.EncoderFallbackException> 및 <xref:System.Text.DecoderFallbackException> 개체는 예외에 대한 적절한 진단 정보를 제공하지만 인코딩 또는 디코딩 버퍼에 대한 액세스는 제공하지 않습니다. 따라서 인코딩 또는 디코딩 메서드 내에서 잘못된 데이터를 바꾸거나 수정할 수 있도록 허용하지 않습니다.  
   
@@ -205,13 +205,13 @@ ms.locfileid: "59346108"
 ## <a name="implementing-a-custom-fallback-strategy"></a>Implementing a Custom Fallback Strategy  
  코드 페이지에서 내부적으로 구현되는 최적 매핑 외에도 .NET에는 대체(fallback) 전략을 구현하기 위한 다음과 같은 클래스가 포함되어 있습니다.  
   
--   <xref:System.Text.EncoderReplacementFallback> 및 <xref:System.Text.EncoderReplacementFallbackBuffer> 를 사용하여 인코딩 작업에서 문자를 바꿉니다.  
+- <xref:System.Text.EncoderReplacementFallback> 및 <xref:System.Text.EncoderReplacementFallbackBuffer> 를 사용하여 인코딩 작업에서 문자를 바꿉니다.  
   
--   <xref:System.Text.DecoderReplacementFallback> 및 <xref:System.Text.DecoderReplacementFallbackBuffer> 를 사용하여 디코딩 작업에서 문자를 바꿉니다.  
+- <xref:System.Text.DecoderReplacementFallback> 및 <xref:System.Text.DecoderReplacementFallbackBuffer> 를 사용하여 디코딩 작업에서 문자를 바꿉니다.  
   
--   <xref:System.Text.EncoderExceptionFallback> 및 <xref:System.Text.EncoderExceptionFallbackBuffer> 를 사용하여 문자를 인코딩할 수 없는 경우 <xref:System.Text.EncoderFallbackException> 을 발생시킵니다.  
+- <xref:System.Text.EncoderExceptionFallback> 및 <xref:System.Text.EncoderExceptionFallbackBuffer> 를 사용하여 문자를 인코딩할 수 없는 경우 <xref:System.Text.EncoderFallbackException> 을 발생시킵니다.  
   
--   <xref:System.Text.DecoderExceptionFallback> 및 <xref:System.Text.DecoderExceptionFallbackBuffer> 를 사용하여 문자를 디코딩할 수 없는 경우 <xref:System.Text.DecoderFallbackException> 을 발생시킵니다.  
+- <xref:System.Text.DecoderExceptionFallback> 및 <xref:System.Text.DecoderExceptionFallbackBuffer> 를 사용하여 문자를 디코딩할 수 없는 경우 <xref:System.Text.DecoderFallbackException> 을 발생시킵니다.  
   
  또한 다음 단계를 수행하여 최적 대체(fallback), 교체 대체(fallback) 또는 예외 대체(fallback)를 사용하는 사용자 지정 솔루션을 구현할 수 있습니다.  
   
@@ -226,24 +226,24 @@ ms.locfileid: "59346108"
   
  인코더 또는 디코더에 대한 사용자 지정 대체(fallback) 솔루션을 만드는 경우 다음과 같은 멤버를 구현해야 합니다.  
   
--   최적, 교체 또는 예외 대체(fallback)가 단일 문자를 대체하기 위해 반환할 수 있는 최대 문자 수를 반환하는 <xref:System.Text.EncoderFallback.MaxCharCount%2A?displayProperty=nameWithType> 또는 <xref:System.Text.DecoderFallback.MaxCharCount%2A?displayProperty=nameWithType> 속성. 사용자 지정 예외 대체(fallback)의 경우 해당 값은 0입니다.  
+- 최적, 교체 또는 예외 대체(fallback)가 단일 문자를 대체하기 위해 반환할 수 있는 최대 문자 수를 반환하는 <xref:System.Text.EncoderFallback.MaxCharCount%2A?displayProperty=nameWithType> 또는 <xref:System.Text.DecoderFallback.MaxCharCount%2A?displayProperty=nameWithType> 속성. 사용자 지정 예외 대체(fallback)의 경우 해당 값은 0입니다.  
   
--   사용자 지정 <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> 또는 <xref:System.Text.DecoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> 구현을 반환하는 <xref:System.Text.EncoderFallbackBuffer> 또는 <xref:System.Text.DecoderFallbackBuffer> 메서드. 메서드는 성공적으로 인코딩할 수 없는 첫 번째 문자를 발견할 때 인코더에 의해 호출되거나 성공적으로 디코딩할 수 없는 첫 번째 바이트를 발견할 때 디코더에 의해 호출됩니다.  
+- 사용자 지정 <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> 또는 <xref:System.Text.DecoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> 구현을 반환하는 <xref:System.Text.EncoderFallbackBuffer> 또는 <xref:System.Text.DecoderFallbackBuffer> 메서드. 메서드는 성공적으로 인코딩할 수 없는 첫 번째 문자를 발견할 때 인코더에 의해 호출되거나 성공적으로 디코딩할 수 없는 첫 번째 바이트를 발견할 때 디코더에 의해 호출됩니다.  
   
 ### <a name="deriving-from-encoderfallbackbuffer-or-decoderfallbackbuffer"></a>EncoderFallbackBuffer 또는 DecoderFallbackBuffer에서 파생  
  사용자 지정 대체(fallback) 솔루션을 구현하려면 인코딩 작업의 경우 <xref:System.Text.EncoderFallbackBuffer> 에서 상속하고 디코딩 작업의 경우 <xref:System.Text.DecoderFallbackBuffer> 에서 상속하는 클래스도 만들어야 합니다. 이러한 클래스의 인스턴스는 <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A> 및 <xref:System.Text.EncoderFallback> 클래스의 <xref:System.Text.DecoderFallback> 메서드에서 반환됩니다. <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> 메서드는 인코딩할 수 없는 첫 번째 문자를 발견할 때 인코더에 의해 호출되고, <xref:System.Text.DecoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> 메서드는 디코딩할 수 없는 바이트를 하나 이상 발견할 때 디코더에 의해 호출됩니다. <xref:System.Text.EncoderFallbackBuffer> 및 <xref:System.Text.DecoderFallbackBuffer> 클래스는 대체(fallback) 구현을 제공합니다. 각 인스턴스는 인코딩할 수 없는 문자 또는 디코딩할 수 없는 바이트를 대체하는 대체(fallback) 문자가 포함된 버퍼를 나타냅니다.  
   
  인코더 또는 디코더에 대한 사용자 지정 대체(fallback) 솔루션을 만드는 경우 다음과 같은 멤버를 구현해야 합니다.  
   
--   <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 또는 <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 메서드. <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 은 인코딩할 수 없는 문자 정보를 대체(fallback) 버퍼에 제공하기 위해 인코더에서 호출됩니다. 인코딩할 문자가 서로게이트 쌍일 수 있으므로 이 메서드는 오버로드됩니다. 하나의 오버로드에는 인코딩할 문자 및 문자열에서 해당 인덱스가 전달됩니다. 두 번째 오버로드에는 상위 및 하위 서로게이트와 문자열에서 해당 인덱스가 전달됩니다. <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 메서드는 디코딩할 수 없는 바이트 정보를 대체(fallback) 버퍼에 제공하기 위해 디코더에서 호출됩니다. 이 메서드에는 디코딩할 수 없는 바이트 배열 및 첫 번째 바이트의 인덱스가 전달됩니다. 대체(fallback) 버퍼가 최적 또는 교체 문자를 제공할 수 있는 경우 대체(fallback) 메서드에서 `true` 를 반환해야 하고, 그러지 않으면 `false`를 반환해야 합니다. 예외 대체(fallback)의 경우 대체(fallback) 메서드에서 예외를 발생시켜야 합니다.  
+- <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 또는 <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 메서드. <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 은 인코딩할 수 없는 문자 정보를 대체(fallback) 버퍼에 제공하기 위해 인코더에서 호출됩니다. 인코딩할 문자가 서로게이트 쌍일 수 있으므로 이 메서드는 오버로드됩니다. 하나의 오버로드에는 인코딩할 문자 및 문자열에서 해당 인덱스가 전달됩니다. 두 번째 오버로드에는 상위 및 하위 서로게이트와 문자열에서 해당 인덱스가 전달됩니다. <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> 메서드는 디코딩할 수 없는 바이트 정보를 대체(fallback) 버퍼에 제공하기 위해 디코더에서 호출됩니다. 이 메서드에는 디코딩할 수 없는 바이트 배열 및 첫 번째 바이트의 인덱스가 전달됩니다. 대체(fallback) 버퍼가 최적 또는 교체 문자를 제공할 수 있는 경우 대체(fallback) 메서드에서 `true` 를 반환해야 하고, 그러지 않으면 `false`를 반환해야 합니다. 예외 대체(fallback)의 경우 대체(fallback) 메서드에서 예외를 발생시켜야 합니다.  
   
--   인코더 또는 디코더가 대체(fallback) 버퍼에서 다음 문자를 가져오기 위해 반복적으로 호출하는 <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> 또는 <xref:System.Text.DecoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> 메서드. 모든 대체(fallback) 문자가 반환되고 나면 메서드에서 U+0000을 반환해야 합니다.  
+- 인코더 또는 디코더가 대체(fallback) 버퍼에서 다음 문자를 가져오기 위해 반복적으로 호출하는 <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> 또는 <xref:System.Text.DecoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> 메서드. 모든 대체(fallback) 문자가 반환되고 나면 메서드에서 U+0000을 반환해야 합니다.  
   
--   대체(fallback) 버퍼에 남아 있는 문자 수를 반환하는 <xref:System.Text.EncoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> 또는 <xref:System.Text.DecoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> 속성  
+- 대체(fallback) 버퍼에 남아 있는 문자 수를 반환하는 <xref:System.Text.EncoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> 또는 <xref:System.Text.DecoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> 속성  
   
--   대체(fallback) 버퍼의 현재 위치를 이전 문자로 이동하는 <xref:System.Text.EncoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> 또는 <xref:System.Text.DecoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> 메서드  
+- 대체(fallback) 버퍼의 현재 위치를 이전 문자로 이동하는 <xref:System.Text.EncoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> 또는 <xref:System.Text.DecoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> 메서드  
   
--   대체(fallback) 버퍼를 다시 초기화하는 <xref:System.Text.EncoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> 또는 <xref:System.Text.DecoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> 메서드  
+- 대체(fallback) 버퍼를 다시 초기화하는 <xref:System.Text.EncoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> 또는 <xref:System.Text.DecoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> 메서드  
   
  대체(fallback) 구현이 최적 대체(fallback) 또는 교체 대체(fallback)인 경우 <xref:System.Text.EncoderFallbackBuffer> 및 <xref:System.Text.DecoderFallbackBuffer> 에서 파생된 클래스가 두 개의 전용 인스턴스 필드(버퍼의 정확한 문자 수 및 버퍼에서 반환할 다음 문자의 인덱스)도 유지 관리합니다.  
   

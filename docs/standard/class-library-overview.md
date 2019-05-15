@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82854b87f922f9937e593d0936fb1b29e6380ec0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5214ee83ab3009c3d2bb1360f46b39831c37c2ef
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970573"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664620"
 ---
 # <a name="net-class-library-overview"></a>.NET 클래스 라이브러리 개요
 
@@ -52,17 +52,17 @@ ms.locfileid: "56970573"
   
  .NET 형식은 .NET 애플리케이션, 구성 요소 및 컨트롤 빌드의 기초가 됩니다. .NET 구현에는 다음과 같은 기능을 수행하는 형식이 포함되어 있습니다.  
   
--   기본 데이터 형식 및 예외를 나타냅니다.  
+- 기본 데이터 형식 및 예외를 나타냅니다.  
   
--   데이터 구조를 캡슐화합니다.  
+- 데이터 구조를 캡슐화합니다.  
   
--   I/O를 수행합니다.  
+- I/O를 수행합니다.  
   
--   로드된 형식에 대한 정보에 액세스합니다.  
+- 로드된 형식에 대한 정보에 액세스합니다.  
   
--   .NET Framework 보안 검사를 호출합니다.  
+- .NET Framework 보안 검사를 호출합니다.  
   
--   데이터 액세스, 리치 클라이언트 쪽 GUI, 서버에서 제어 가능한 클라이언트 쪽 GUI를 제공합니다.  
+- 데이터 액세스, 리치 클라이언트 쪽 GUI, 서버에서 제어 가능한 클라이언트 쪽 GUI를 제공합니다.  
   
  .NET에서는 강력한 인터페이스 집합뿐만 아니라 추상 및 구체(비추상) 클래스도 제공합니다. 구체 클래스를 있는 그대로 사용할 수도 있고 여러 가지 경우에 구체 클래스에서 직접 클래스를 파생시켜 사용할 수도 있습니다. 인터페이스의 기능을 사용하려면 해당 인터페이스를 구현하는 클래스를 만들거나 해당 인터페이스를 구현하는 .NET 클래스 중 하나에서 클래스를 파생시킵니다.  
   

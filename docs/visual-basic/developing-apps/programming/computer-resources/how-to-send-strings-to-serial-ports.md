@@ -7,12 +7,12 @@ helpviewer_keywords:
 - My.Computer.Ports object
 - serial ports, sending strings to
 ms.assetid: 6ebf46cd-b2d0-4b2c-9a1f-be177b22ad52
-ms.openlocfilehash: e1f0c9d5ba428f5379f8025c0e733cdbeb5204e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 66f7d0b51e51f6d550a42cca55b3194c2e273969
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822859"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662722"
 ---
 # <a name="how-to-send-strings-to-serial-ports-in-visual-basic"></a>방법: Visual Basic에서 직렬 포트로 문자열 보내기
 이 항목에서는 Visual Basic에서 `My.Computer.Ports`를 사용하여 컴퓨터의 직렬 포트에 문자열을 보내는 방법을 설명합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "58822859"
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
   
--   이 예제에서는 컴퓨터가 `COM1`을 사용 중이라고 가정합니다.  
+- 이 예제에서는 컴퓨터가 `COM1`을 사용 중이라고 가정합니다.  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
  이 예제에서는 컴퓨터가 `COM1`을 사용 중이라고 가정합니다. 유연성 향상을 위해 코드에서 사용자가 사용 가능한 포트 목록에서 원하는 직렬 포트를 선택할 수 있도록 해야 합니다. 자세한 내용은 [방법: 사용 가능한 직렬 포트 표시](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)를 참조하세요.  

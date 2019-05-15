@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 3e32daf2-8161-4e8f-addd-9fd9ff101b03
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d667135b815dc5d47ba5f7de8d237796a6fd6e10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9c4dc2c14a8416b727d5b987b4dde109ba9506de
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729527"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64629138"
 ---
 # <a name="blocking-application-execution-using-an-asyncwaithandle"></a>AsyncWaitHandle을 사용하는 애플리케이션 실행 블로킹
 비동기 작업의 결과를 기다리는 동안 다른 작업을 계속 수행할 수 없는 애플리케이션은 작업이 완료될 때까지 차단되어야 합니다. 다음 옵션 중 하나를 사용하여 비동기 작업이 완료될 때까지 대기하는 동안 애플리케이션의 기본 스레드를 차단합니다.  
   
--   비동기 작업의 **Begin**_OperationName_ 메서드에 의해 반환된 <xref:System.IAsyncResult>의 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 속성을 사용합니다. 이 항목에서 이 방법을 설명합니다.  
+- 비동기 작업의 **Begin**_OperationName_ 메서드에 의해 반환된 <xref:System.IAsyncResult>의 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 속성을 사용합니다. 이 항목에서 이 방법을 설명합니다.  
   
--   비동기 작업의 **End**_OperationName_ 메서드를 호출합니다. 이 방법을 설명하는 예제는 [비동기 작업을 종료하여 애플리케이션 실행 블로킹](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md)을 참조하세요.  
+- 비동기 작업의 **End**_OperationName_ 메서드를 호출합니다. 이 방법을 설명하는 예제는 [비동기 작업을 종료하여 애플리케이션 실행 블로킹](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md)을 참조하세요.  
   
  비동기 작업이 완료될 때까지 하나 이상의 <xref:System.Threading.WaitHandle> 개체를 사용하여 차단하는 애플리케이션은 일반적으로 **Begin**_OperationName_ 메서드를 호출하고 작업의 결과 없이 완료할 수 있는 작업을 수행한 다음, 비동기 작업이 완료될 때까지 차단합니다. 애플리케이션은 <xref:System.IAsyncResult.AsyncWaitHandle%2A>를 사용하는 <xref:System.Threading.WaitHandle.WaitOne%2A> 메서드 중 하나를 호출하여 단일 작업을 차단할 수 있습니다. 비동기 작업 집합이 완료될 때까지 대기하는 동안 차단하려면 연관된 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 개체를 배열에 저장하고 <xref:System.Threading.WaitHandle.WaitAll%2A> 메서드 중 하나를 호출합니다. 일련의 비동기 작업 중 하나가 완료될 때까지 대기하는 동안 차단하려면 연관된 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 개체를 배열에 저장하고 <xref:System.Threading.WaitHandle.WaitAny%2A> 메서드 중 하나를 호출합니다.  
   

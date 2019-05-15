@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b1a72a2b2443b419ea4f4b036664fb5f8932096
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef107ae0dceb7ee937b21d65cba92cbcf6a9a96c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554246"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628995"
 ---
 # <a name="how-to-handle-exceptions-in-a-plinq-query"></a>방법: PLINQ 쿼리의 예외 처리
 이 항목의 첫 번째 예제에서는 실행될 때 PLINQ 쿼리에서 throw될 수 있는 <xref:System.AggregateException?displayProperty=nameWithType>을 처리하는 방법을 보여줍니다. 두 번째 예제에서는 대리자 내에서 예외가 throw될 위치에 가능한 한 가깝게 try-catch 블록을 넣는 방법을 보여줍니다. 이 방법으로 예외가 발생한 즉시 예외를 catch하고 쿼리 실행을 계속할 수 있습니다. 예외가 가입된 스레드로 다시 버블 업될 수 있는 경우 예외가 발생한 후에도 쿼리에서 일부 항목을 계속 처리할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "54554246"
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
   
--   이러한 예제를 컴파일하고 실행하려면 PLINQ 데이터 샘플 예제에 복사하고 Main에서 메서드를 호출합니다.  
+- 이러한 예제를 컴파일하고 실행하려면 PLINQ 데이터 샘플 예제에 복사하고 Main에서 메서드를 호출합니다.  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
  프로그램 상태를 손상시키지 않도록 처리 방법을 아는 경우가 아니면 예외를 catch하지 마세요.  

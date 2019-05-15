@@ -18,20 +18,20 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a11a9d18999bc7741e12af16d43fba8c03318da
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6d11e16f58b6da24d7df0ccd97c1d54050004ae1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979966"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664647"
 ---
 # <a name="standard-numeric-format-strings"></a>표준 숫자 형식 문자열
 
 표준 숫자 서식 문자열은 일반 숫자 형식의 서식을 지정하는 데 사용됩니다. 표준 숫자 서식 문자열은 `Axx` 형식을 취합니다. 여기서  
   
--   `A`는 *서식 지정자*라는 단일 영문자입니다. 공백을 포함하여 영문자가 두 개 이상 포함된 숫자 서식 문자열은 사용자 지정 숫자 서식 문자열로 해석됩니다. 자세한 내용은 [사용자 지정 숫자 서식 문자열](../../../docs/standard/base-types/custom-numeric-format-strings.md)을 참조하세요.  
+- `A`는 *서식 지정자*라는 단일 영문자입니다. 공백을 포함하여 영문자가 두 개 이상 포함된 숫자 서식 문자열은 사용자 지정 숫자 서식 문자열로 해석됩니다. 자세한 내용은 [사용자 지정 숫자 서식 문자열](../../../docs/standard/base-types/custom-numeric-format-strings.md)을 참조하세요.  
   
--   `xx`는 *전체 자릿수 지정자*라는 선택적 정수입니다. 전체 자릿수 지정자는 0에서 99 사이의 정수이며 결과의 자릿수에 영향을 줍니다. 전체 자릿수 지정자는 숫자의 문자열 표현에서 자릿수를 제어합니다. 숫자 자체는 반올림하지 않습니다. 반올림 연산을 수행하려면 <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType> 또는 <xref:System.Math.Round%2A?displayProperty=nameWithType> 메서드를 사용합니다.  
+- `xx`는 *전체 자릿수 지정자*라는 선택적 정수입니다. 전체 자릿수 지정자는 0에서 99 사이의 정수이며 결과의 자릿수에 영향을 줍니다. 전체 자릿수 지정자는 숫자의 문자열 표현에서 자릿수를 제어합니다. 숫자 자체는 반올림하지 않습니다. 반올림 연산을 수행하려면 <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType> 또는 <xref:System.Math.Round%2A?displayProperty=nameWithType> 메서드를 사용합니다.  
   
     *전체 자릿수 지정자*가 결과 문자열의 소수 자릿수를 제어할 때 결과 문자열은 무한 정밀도 결과에 가장 가까운 대표 결과로 반 올림된 숫자를 반영합니다. 동등하게 대표할 수 있는 결과가 두 개 있는 경우:
     - **.NET Framework 및.NET Core에서 .NET Core 2.0까지** 런타임은 최소 유효 숫자(즉, <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType> 사용)를 사용하여 결과를 선택합니다.
@@ -73,13 +73,13 @@ ms.locfileid: "56979966"
 
 표준 숫자 서식 문자열을 사용하여 다음 두 가지 방법 중 하나로 숫자 값의 서식을 정의할 수 있습니다.  
   
--   이 서식 문자열은 `ToString` 매개 변수가 있는 `format` 메서드의 오버로드에 전달될 수 있습니다. 다음 예제에서는 숫자 값의 서식을 현재 문화권(이 예제의 경우 en-US)의 통화 문자열로 지정합니다.  
+- 이 서식 문자열은 `ToString` 매개 변수가 있는 `format` 메서드의 오버로드에 전달될 수 있습니다. 다음 예제에서는 숫자 값의 서식을 현재 문화권(이 예제의 경우 en-US)의 통화 문자열로 지정합니다.  
   
      [!code-cpp[Formatting.Numeric.Standard#10](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#10)]
      [!code-csharp-interactive[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
      [!code-vb[Formatting.Numeric.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#10)]  
   
--   이 형식 문자열은 <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 및 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 같은 메서드와 함께 사용되는 서식 항목의 `formatString` 인수로 제공될 수 있습니다. 자세한 내용은 [복합 서식 지정](../../../docs/standard/base-types/composite-formatting.md)을 참조하세요. 다음 예제에서는 서식 항목을 사용하여 문자열에 통화 값을 삽입합니다.  
+- 이 형식 문자열은 <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 및 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 같은 메서드와 함께 사용되는 서식 항목의 `formatString` 인수로 제공될 수 있습니다. 자세한 내용은 [복합 서식 지정](../../../docs/standard/base-types/composite-formatting.md)을 참조하세요. 다음 예제에서는 서식 항목을 사용하여 문자열에 통화 값을 삽입합니다.  
   
      [!code-cpp[Formatting.Numeric.Standard#11](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#11)]
      [!code-csharp-interactive[Formatting.Numeric.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#11)]
@@ -91,7 +91,7 @@ ms.locfileid: "56979966"
      [!code-csharp-interactive[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
      [!code-vb[Formatting.Numeric.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#12)]  
   
--   보간된 문자열의 보간된 식 항목에서 `formatString` 인수로 제공될 수 있습니다. 자세한 내용은 C# 참조의 [문자열 보간](../../csharp/language-reference/tokens/interpolated.md) 토픽 또는 Visual Basic 참조의 [문자열 보간](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) 토픽을 참조하세요.  
+- 보간된 문자열의 보간된 식 항목에서 `formatString` 인수로 제공될 수 있습니다. 자세한 내용은 C# 참조의 [문자열 보간](../../csharp/language-reference/tokens/interpolated.md) 토픽 또는 Visual Basic 참조의 [문자열 보간](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) 토픽을 참조하세요.  
   
  다음 단원에서는 각 표준 숫자 서식 문자열에 대해 자세히 설명합니다.  
   

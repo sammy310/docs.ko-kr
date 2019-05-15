@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f8848c7e-f5c5-4d42-b86d-9951ff8f4146
-ms.openlocfilehash: 107e57ca947012f5e2f65835d684f5e6068b3681
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 044a48aaffbd2d4ef490405a65236b17ecca1fbf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176594"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645803"
 ---
 # <a name="how-to-access-http-specific-properties"></a>방법: HTTP 관련 속성에 액세스
 이 샘플은 HTTP **Keep-alive** 동작을 끄고 웹 서버에서 프로토콜 버전 번호를 가져오는 방법을 보여 줍니다.  
@@ -47,7 +47,7 @@ HttpWResp.Close();
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   **System.Net** 네임스페이스에 대한 참조.  
+- **System.Net** 네임스페이스에 대한 참조.  
   
 ## <a name="see-also"></a>참고 항목
 
